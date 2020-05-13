@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2889 2020/05/13 20:20:52 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.2890 2020/05/13 21:49:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4562,3 +4562,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rouge to 3.19.0 [fcambus 2020-05-13]
 	Updated converters/2vcard to 0.6 [fcambus 2020-05-13]
 	Updated devel/xa65 to 2.3.11 [fcambus 2020-05-13]
+	Updated security/py-cybox to 2.1.0.21 [adam 2020-05-13]
+	Updated security/py-stix to 1.2.0.10 [adam 2020-05-13]
