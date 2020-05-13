@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/09/05 10:39:50 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/05/13 14:53:29 adam Exp $
 
-SHA1 (ephem-3.7.7.0.tar.gz) = b8c61657aaafbac94ad810d7cbc6698a47af4382
-RMD160 (ephem-3.7.7.0.tar.gz) = ffd3edcf7b9c87e88b96b8c598526036c890ae42
-SHA512 (ephem-3.7.7.0.tar.gz) = daa6bc35d0095e8936593aab9d7cbc5602e81205fbf685cac8fc57d3ae40107789808e3784af433ef3e0e5eaaada7e1dfd8a8c0dcff24a859c289da0fb546c35
-Size (ephem-3.7.7.0.tar.gz) = 745041 bytes
+SHA1 (ephem-3.7.7.1.tar.gz) = 9928fb8f0e1a13ae627cdd86cb4ecc2bbeeb6edd
+RMD160 (ephem-3.7.7.1.tar.gz) = 2b6a4bb41d51697f17f3a1bdafe1a1dbee17c846
+SHA512 (ephem-3.7.7.1.tar.gz) = c3f489371febcb65da03da7ba0e08168320a6f5d81fd2355281f621074ecf2be694b2d0cc3ef7863cec617176751a34856bdd22beb66cd64129fbfb915b3dcae
+Size (ephem-3.7.7.1.tar.gz) = 745839 bytes
