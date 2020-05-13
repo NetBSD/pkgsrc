@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2020/04/25 19:53:13 gutteridge Exp $
+# $NetBSD: Makefile,v 1.80 2020/05/13 01:56:42 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.14.1
+VERSION=	4.14.2
 DISTNAME=	xfwm4-${VERSION}
 PKGNAME=	xfce4-wm-${VERSION}
 CATEGORIES=	wm
