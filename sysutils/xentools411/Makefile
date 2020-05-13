@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/03 08:54:28 bouyer Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/13 04:39:04 rillig Exp $
 #
 VERSION=	4.11.3
 VERSION_IPXE=	356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d
@@ -107,8 +107,6 @@ SUBST_SED.pathsvar=	-e "s|/var/lib|${VARBASE}/run|g"
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf+=	tools/ocaml/xenstored/define.ml
-SUBST_FILES.conf+=	tools/libxl/xl_cmdtable.c
 SUBST_FILES.conf+=	docs/misc/block-scripts.txt
 SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
