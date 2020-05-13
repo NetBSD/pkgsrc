@@ -1,4 +1,4 @@
-$NetBSD: patch-skkserv_skkserv.c,v 1.1 2013/03/10 18:53:32 hiramatsu Exp $
+$NetBSD: patch-skkserv_skkserv.c,v 1.2 2020/05/13 04:14:48 rillig Exp $
 
 Add IPv6 support and binary search capability.
 
@@ -18,8 +18,7 @@ Add IPv6 support and binary search capability.
   *	Global Variables
   */
  
--char	pgmver[] = "3.9.4 ";	/* version number */
-+char	pgmver[] = "3.9.4nb7 (binary search) ";	/* version number */
+ char	pgmver[] = "3.9.4 ";	/* version number */
  
  char	*pgmnm;		/* program name */
  char	*jname;		/* name of shared dictionary */
