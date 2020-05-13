@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/05/06 14:04:24 adam Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/13 03:26:22 rillig Exp $
 
 PKGNAME=		${DISTNAME:S/sqlrelay/sqlrelay-freetds/}
 PKGREVISION=		15
@@ -6,6 +6,7 @@ COMMENT=		FreeTDS support for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"
 
+CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--with-freetds-prefix=${BUILDLINK_PREFIX.freetds}
 CONFIGURE_ARGS+=	--disable-postgresql
 CONFIGURE_ARGS+=	--disable-sqlite
