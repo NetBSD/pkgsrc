@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/03/10 22:08:43 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2020/05/13 03:39:09 rillig Exp $
 
 DISTNAME=	libglademm-2.6.7
 PKGREVISION=	32
@@ -14,6 +14,7 @@ USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4 gmake pkg-config
+TOOLS_BROKEN+=		perl
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libglade/libglademm-2.4.pc.in
 GNU_CONFIGURE=		yes
 
