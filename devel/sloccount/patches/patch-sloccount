@@ -1,4 +1,4 @@
-$NetBSD: patch-sloccount,v 1.1 2017/09/04 11:00:36 khorben Exp $
+$NetBSD: patch-sloccount,v 1.2 2020/05/13 04:01:36 rillig Exp $
 
 Correct path to the helper binaries
 
@@ -8,7 +8,7 @@ Correct path to the helper binaries
  
  startingdir=`pwd`
  
-+prefix="/usr/pkg"
++prefix="@PREFIX@"
 +libexecdir="$prefix/libexec/sloccount"
  
  # "datadir" is some suitable safe place for the data; here's the default:
