@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/15 10:54:26 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/05/13 19:42:49 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -318,8 +318,9 @@ ${GEM_LIBDIR}/lib/rouge/lexers/liquid.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/literate_coffeescript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/literate_haskell.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/llvm.rb
+${GEM_LIBDIR}/lib/rouge/lexers/llvm/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/lua.rb
-${GEM_LIBDIR}/lib/rouge/lexers/lua/builtins.rb
+${GEM_LIBDIR}/lib/rouge/lexers/lua/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/lustre.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/lutin.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/m68k.rb
@@ -328,9 +329,10 @@ ${GEM_LIBDIR}/lib/rouge/lexers/make.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/markdown.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/mason.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/mathematica.rb
-${GEM_LIBDIR}/lib/rouge/lexers/mathematica/builtins.rb
+${GEM_LIBDIR}/lib/rouge/lexers/mathematica/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/matlab.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/matlab/builtins.rb
+${GEM_LIBDIR}/lib/rouge/lexers/matlab/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/minizinc.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/moonscript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/mosel.rb
@@ -351,7 +353,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/opentype_feature_file.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/pascal.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/perl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/php.rb
-${GEM_LIBDIR}/lib/rouge/lexers/php/builtins.rb
+${GEM_LIBDIR}/lib/rouge/lexers/php/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/plain_text.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/plist.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/pony.rb
@@ -389,7 +391,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/sml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/solidity.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sparql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sqf.rb
-${GEM_LIBDIR}/lib/rouge/lexers/sqf/commands.rb
+${GEM_LIBDIR}/lib/rouge/lexers/sqf/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/supercollider.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/swift.rb
