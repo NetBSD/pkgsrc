@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2879 2020/05/13 05:32:01 msaitoh Exp $
+$NetBSD: CHANGES-2020,v 1.2880 2020/05/13 06:50:36 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4545,3 +4545,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-jmespath to 0.10.0 [adam 2020-05-13]
 	Updated www/py-google-api-python-client to 1.8.3 [adam 2020-05-13]
 	Updated sysutils/dmidecode to 3.2nb7 [msaitoh 2020-10-29]
+	Updated www/davical to 1.1.9.3 [triaxx 2020-05-13]
