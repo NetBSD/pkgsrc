@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/09/13 09:53:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/13 14:43:28 adam Exp $
 bin/waitress-serve-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -34,6 +34,9 @@ ${PYSITELIB}/waitress/proxy_headers.pyo
 ${PYSITELIB}/waitress/receiver.py
 ${PYSITELIB}/waitress/receiver.pyc
 ${PYSITELIB}/waitress/receiver.pyo
+${PYSITELIB}/waitress/rfc7230.py
+${PYSITELIB}/waitress/rfc7230.pyc
+${PYSITELIB}/waitress/rfc7230.pyo
 ${PYSITELIB}/waitress/runner.py
 ${PYSITELIB}/waitress/runner.pyc
 ${PYSITELIB}/waitress/runner.pyo
