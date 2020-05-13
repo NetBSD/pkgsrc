@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.8 2020/05/08 19:20:33 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.9 2020/05/13 13:49:29 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -100,4 +100,23 @@ www/drupal8: security fix
 
 Pullup ticket #6185 - requested by taca
 mail/roundcube: security fix
+
+Pullup ticket #6186 - requested by adam
+databases/openldap: security fix
+databases/lmdb: dependent update
+
+Pullup ticket #6187 - requested by tnn
+devel/libffi: NetBSD/evbarm build fix
+
+Pullup ticket #6190 - requested by nia
+www/firefox68: security fix
+
+Pullup ticket #6191 - requested by nia
+www/firefox68-l10n: dependent update
+
+Pullup ticket #6192 - requested by leot
+net/youtube-dl: update for extractor changes
+
+Pullup ticket #6193 - requested by nia
+graphics/openjpeg: security fix
 
