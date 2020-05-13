@@ -1,0 +1,19 @@
+$NetBSD: patch-lib_src_Exception_c,v 1.1 2020/05/13 06:01:52 rillig Exp $
+
+Trying to build 2.0.11 on NetBSD 8.0 x86_64:
+> ./lib/src/Exception.c:32:13: warning: implicit declaration of function 'strlen'
+>    int len = strlen(td->name);
+>
+> lib/src/__libc.h:24:14: error: expected declaration specifiers or '...' before numeric constant
+>  extern void* memcpy(void* dest, const void* src, __typeof__(sizeof(int)) n);
+
+--- lib/src/Exception.c.orig	2003-08-01 15:17:27.000000000 +0000
++++ lib/src/Exception.c
+@@ -4,6 +4,7 @@
+ #include <setjmp.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #if HAVE_BACKTRACE_SYMBOLS
+ #  include <execinfo.h>
+ #endif
