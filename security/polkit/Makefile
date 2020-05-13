@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/05/04 02:11:00 gutteridge Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/13 04:36:41 rillig Exp $
 
 DISTNAME=	polkit-0.116
 PKGREVISION=	2
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 NOT_PAX_MPROTECT_SAFE=	lib/polkit-1/polkitd
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 USE_LANGUAGES=		c c++14
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
