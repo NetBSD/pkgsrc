@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2020/04/20 08:37:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2020/05/13 03:38:24 rillig Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -18,3 +18,4 @@ CONFLICTS=	gettext<=0.10.35
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures
