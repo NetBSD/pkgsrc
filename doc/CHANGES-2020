@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2877 2020/05/13 05:06:00 msaitoh Exp $
+$NetBSD: CHANGES-2020,v 1.2878 2020/05/13 05:16:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4542,3 +4542,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-notifyd to 0.6.1 [gutteridge 2020-05-13]
 	Updated wm/xfce4-wm to 4.14.2 [gutteridge 2020-05-13]
 	Updated sysutils/intel-microcode-netbsd to 20200508 [msaitoh 2020-05-08]
+	Updated textproc/py-jmespath to 0.10.0 [adam 2020-05-13]
+	Updated www/py-google-api-python-client to 1.8.3 [adam 2020-05-13]
