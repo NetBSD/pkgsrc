@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 10:39:10 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/13 03:37:30 rillig Exp $
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 .include "Makefile.common"
 
@@ -16,6 +16,6 @@ USE_LANGUAGES+=	c99
 USE_LANGUAGES+=	c++
 
 USE_TOOLS+=		pkg-config
-PKGCONFIG_OVERRIDE+=	fann.pc.in
+PKGCONFIG_OVERRIDE+=	cmake/fann.pc.cmake
 
 .include "../../mk/bsd.pkg.mk"
