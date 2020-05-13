@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/09/13 09:53:30 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/13 14:43:28 adam Exp $
 
-DISTNAME=	waitress-1.3.1
+DISTNAME=	waitress-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/waitress/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Pylons/waitress
 COMMENT=	Production-quality pure-Python WSGI server
 LICENSE=	zpl-2.1
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
