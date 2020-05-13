@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2888 2020/05/13 19:58:44 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.2889 2020/05/13 20:20:52 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-lmfit to 1.0.1 [adam 2020-05-13]
 	Updated www/ruby-rouge to 3.19.0 [fcambus 2020-05-13]
 	Updated converters/2vcard to 0.6 [fcambus 2020-05-13]
+	Updated devel/xa65 to 2.3.11 [fcambus 2020-05-13]
