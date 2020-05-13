@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2882 2020/05/13 14:54:45 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2883 2020/05/13 14:59:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4552,3 +4552,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-redis to 3.5.1 [adam 2020-05-13]
 	Updated misc/py-immutables to 0.12 [adam 2020-05-13]
 	Updated math/py-ephem to 3.7.7.1 [adam 2020-05-13]
+	Updated security/clamav to 0.102.3 [taca 2020-05-13]
