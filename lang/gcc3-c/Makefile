@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/11/03 19:03:58 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/05/13 05:02:08 rillig Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
 PKGREVISION=	1
@@ -7,6 +7,8 @@ COMMENT=	GNU Compiler Collection, v3 - C compiler
 INFO_FILES=	yes
 
 .include "../../lang/gcc3/Makefile.common"
+
+TOOLS_BROKEN+=	perl
 
 # The "gcc" frontend knows all languages (by patch)
 CONFIGURE_ARGS+=	--enable-languages=c
