@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:39 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/13 04:19:42 rillig Exp $
 
 DISTNAME=	pari-2.3.5
 PKGREVISION=	23
@@ -35,12 +35,6 @@ SUBST_STAGE.fix-cfg=	pre-configure
 SUBST_MESSAGE.fix-cfg=	Adding CFLAGS to Configure scripts.
 SUBST_FILES.fix-cfg=	config/get_*
 SUBST_SED.fix-cfg=	-e 's,$$CC $$extraflag,$$CC $$CFLAGS $$extraflag,g'
-
-SUBST_CLASSES+=		fix-wrap
-SUBST_STAGE.fix-wrap=	post-build
-SUBST_MESSAGE.fix-wrap=	Removing TOOLS_DIR references
-SUBST_FILES.fix-wrap=	*/pari.cfg
-SUBST_SED.fix-wrap=	-e "s,${TOOLS_DIR}/bin/,,g"
 
 .include "options.mk"
 
