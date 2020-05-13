@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/05/04 12:21:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2020/05/13 04:02:34 rillig Exp $
 
 DISTNAME=	swig-1.3.38
 PKGREVISION=	1
@@ -17,6 +17,7 @@ LICENSE=	2-clause-bsd
 CONFLICTS=		swig-build-[0-9]*
 
 CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/1.3
+CONFIGURE_ARGS+=	--without-perl5
 BUILD_TARGET=		swig
 
 USE_TOOLS+=		gmake pax
