@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1329 2020/05/08 09:33:30 fcambus Exp $
+# $NetBSD: Makefile,v 1.1330 2020/05/13 01:04:20 tnn Exp $
 #
 
 COMMENT=	Networking tools
@@ -39,6 +39,7 @@ SUBDIR+=	balance
 SUBDIR+=	bandcamp-dl
 SUBDIR+=	barnyard
 SUBDIR+=	batchftp
+SUBDIR+=	bbk_cli
 SUBDIR+=	bftpd
 SUBDIR+=	bind911
 SUBDIR+=	bind914
