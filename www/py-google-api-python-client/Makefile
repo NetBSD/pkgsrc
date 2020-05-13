@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/04/28 17:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/05/13 05:07:31 adam Exp $
 
-DISTNAME=	google-api-python-client-1.8.2
+DISTNAME=	google-api-python-client-1.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-python-client/}
@@ -20,9 +20,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-oauth2client-[0-9]*:../../security/py-oauth2client
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
