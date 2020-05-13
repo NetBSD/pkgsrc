@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/04/23 10:34:53 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/13 14:44:08 adam Exp $
 
-DISTNAME=	WebTest-2.0.34
+DISTNAME=	WebTest-2.0.35
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebTest/}
