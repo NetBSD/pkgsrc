@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2019/12/05 10:57:54 nros Exp $
+# $NetBSD: Makefile.common,v 1.32 2020/05/13 04:35:55 rillig Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -49,6 +49,7 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.cyrus-sasl}/include/sasl
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake
+TOOLS_BROKEN+=		perl
 
 USE_LIBTOOL=		yes
 
