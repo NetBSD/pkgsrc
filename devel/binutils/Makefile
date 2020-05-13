@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/05/05 10:06:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2020/05/13 03:32:38 rillig Exp $
 
 DISTNAME=	binutils-2.34
 PKGREVISION=	2
@@ -28,6 +28,7 @@ USE_TOOLS+=		ksh
 CONFIG_SHELL=		ksh
 .endif
 
+TOOLS_BROKEN+=		perl
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
 # Standard lib dirs on RHEL are named *lib64
