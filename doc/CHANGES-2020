@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2876 2020/05/13 01:57:12 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2877 2020/05/13 05:06:00 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4541,3 +4541,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/bbk_cli version 1.0 [tnn 2020-05-13]
 	Updated x11/xfce4-notifyd to 0.6.1 [gutteridge 2020-05-13]
 	Updated wm/xfce4-wm to 4.14.2 [gutteridge 2020-05-13]
+	Updated sysutils/intel-microcode-netbsd to 20200508 [msaitoh 2020-05-08]
