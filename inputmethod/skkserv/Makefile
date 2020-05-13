@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2019/11/02 22:56:55 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/13 04:14:48 rillig Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
-PKGREVISION=	7
-CATEGORIES=	japanese inputmethod
+PKGREVISION=	8
+CATEGORIES=	inputmethod japanese
 MASTER_SITES=	ftp://skk.kuis.kyoto-u.ac.jp/skk/9.6/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -44,6 +44,7 @@ SUBST_STAGE.ver-num=	pre-configure
 SUBST_MESSAGE.ver-num=	Fixing version number and its comments.
 SUBST_FILES.ver-num=	skkserv/skkserv.c
 SUBST_SED.ver-num=	-e 's,"${PKGVERSION_NOREV} ","${PKGVERSION} (binary search) ",g'
+SUBST_NOOP_OK.ver-num=	no # to prevent this from appearing in the patch
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
