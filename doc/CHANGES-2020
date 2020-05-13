@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2873 2020/05/12 19:29:17 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.2874 2020/05/13 01:04:20 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4538,3 +4538,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-onionbalance to 0.2.0 [adam 2020-05-12]
 	Updated devel/py-importlib-resources to 1.5.0 [adam 2020-05-12]
 	Updated multimedia/adobe-flash-player to 32.0.0.371 [tsutsui 2020-05-12]
+	Added net/bbk_cli version 1.0 [tnn 2020-05-13]
