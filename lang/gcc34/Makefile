@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/01/26 17:31:27 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2020/05/13 05:02:08 rillig Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -76,6 +76,7 @@ CONFIGURE_ARGS+=	--disable-threads
 .endif
 
 USE_TOOLS+=		gmake makeinfo
+TOOLS_BROKEN+=		perl
 HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
