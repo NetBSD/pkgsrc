@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.20 2020/04/16 12:28:36 manu Exp $
+$NetBSD: patch-af,v 1.21 2020/05/13 19:36:56 tnn Exp $
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 23:54:15.000000000 +0200
 +++ dialects/n+obsd/dlsof.h	2020-04-16 14:25:29.349520955 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.20 2020/04/16 12:28:36 manu Exp $
  #include <signal.h>
  #include <string.h>
  #include <unistd.h>
-+#if (!defined(NETBSDV) || __NetBSD_Version__<900000000)
++#if (!defined(NETBSDV) || __NetBSD_Version__>=999001900)
 +#include <sys/ptrace.h> /* pulled in by procfs.h, but needs to be pulled in before _KERNEL is defined */
 +#endif
  
