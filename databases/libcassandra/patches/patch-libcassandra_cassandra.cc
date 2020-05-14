@@ -1,22 +1,17 @@
-$NetBSD: patch-libcassandra_cassandra.cc,v 1.1 2013/05/30 15:36:29 joerg Exp $
+$NetBSD: patch-libcassandra_cassandra.cc,v 1.2 2020/05/14 19:09:10 joerg Exp $
 
---- libcassandra/cassandra.cc.orig	2013-05-30 10:33:52.000000000 +0000
+--- libcassandra/cassandra.cc.orig	2010-10-10 00:59:23.000000000 +0000
 +++ libcassandra/cassandra.cc
-@@ -17,6 +17,13 @@
+@@ -17,6 +17,8 @@
  #include "libcassandra/keyspace.h"
  #include "libcassandra/exception.h"
  
-+#if defined(_LIBCPP_VERSION) || __cplusplus >= 201103L
 +#include <memory>
-+#else
-+#include <tr1/memory>
-+using std::tr1::shared_ptr;
-+#endif
 +
  using namespace std;
  using namespace org::apache::cassandra;
  using namespace libcassandra;
-@@ -85,17 +92,17 @@ set<string> Cassandra::getKeyspaces()
+@@ -85,17 +87,17 @@ set<string> Cassandra::getKeyspaces()
  }
  
  
@@ -37,7 +32,7 @@ $NetBSD: patch-libcassandra_cassandra.cc,v 1.1 2013/05/30 15:36:29 joerg Exp $
    if (key_it == keyspace_map.end())
    {
      getKeyspaces();
-@@ -104,7 +111,7 @@ tr1::shared_ptr<Keyspace> Cassandra::get
+@@ -104,7 +106,7 @@ tr1::shared_ptr<Keyspace> Cassandra::get
      {
        map< string, map<string, string> > keyspace_desc;
        thrift_client->describe_keyspace(keyspace_desc, name);
@@ -46,7 +41,7 @@ $NetBSD: patch-libcassandra_cassandra.cc,v 1.1 2013/05/30 15:36:29 joerg Exp $
        keyspace_map[keymap_name]= ret;
      }
      else
-@@ -117,7 +124,7 @@ tr1::shared_ptr<Keyspace> Cassandra::get
+@@ -117,7 +119,7 @@ tr1::shared_ptr<Keyspace> Cassandra::get
  }
  
  
