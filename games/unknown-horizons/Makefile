@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/07 12:15:06 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/14 19:26:46 joerg Exp $
 
 DISTNAME=	unknown-horizons-2019.1
 CATEGORIES=	games
@@ -29,7 +29,7 @@ SUBST_VARS.paths+=	PREFIX PKGMANDIR
 
 # Misses generating these files sometimes somehow
 post-build:
-	cd ${WRKSRC} && ${PYTHONBIN} horizons/engine/generate_atlases.py 2048
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${PYTHONBIN} horizons/engine/generate_atlases.py 2048
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
