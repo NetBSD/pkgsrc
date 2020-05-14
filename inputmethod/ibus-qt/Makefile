@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2020/04/12 08:28:52 adam Exp $
+# $NetBSD: Makefile,v 1.58 2020/05/14 19:36:42 joerg Exp $
 
 DISTNAME=	ibus-qt-1.3.3-Source
 PKGNAME=	${DISTNAME:S/-Source//}
@@ -16,9 +16,7 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
-# optionally, but required by configure.
-#BUILD_DEPENDS+=	doxygen>=1.6:../../devel/doxygen
-TOOLS_NOOP=		doxygen
+BUILD_DEPENDS+=	doxygen>=1.6:../../devel/doxygen
 
 # avoid lib64
 CMAKE_ARGS+=		-DLIBDIR=lib
