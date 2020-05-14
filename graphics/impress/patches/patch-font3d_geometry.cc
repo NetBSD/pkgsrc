@@ -1,8 +1,8 @@
-$NetBSD: patch-font3d_geometry.cc,v 1.1 2011/11/25 21:57:36 joerg Exp $
+$NetBSD: patch-font3d_geometry.cc,v 1.2 2020/05/14 19:27:41 joerg Exp $
 
---- font3d/geometry.cc.orig	2011-11-25 18:27:42.000000000 +0000
+--- font3d/geometry.cc.orig	2000-07-16 02:37:31.000000000 +0000
 +++ font3d/geometry.cc
-@@ -31,7 +31,7 @@
+@@ -31,11 +31,12 @@
  #include <math.h>
  #include <stddef.h>
  #include <stdio.h>
@@ -11,3 +11,8 @@ $NetBSD: patch-font3d_geometry.cc,v 1.1 2011/11/25 21:57:36 joerg Exp $
  
  #include "vector.h"
  #include "geometry.h"
+ 
++using std::endl, std::cout;
+ 
+ //==============================================================================================
+ //  TRIANGLELIST::Empty()                                                             (PUBLIC)

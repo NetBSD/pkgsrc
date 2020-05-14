@@ -1,6 +1,6 @@
-$NetBSD: patch-font3d_font3d.cc,v 1.1 2011/11/25 21:57:36 joerg Exp $
+$NetBSD: patch-font3d_font3d.cc,v 1.2 2020/05/14 19:27:41 joerg Exp $
 
---- font3d/font3d.cc.orig	2011-11-25 18:27:38.000000000 +0000
+--- font3d/font3d.cc.orig	2000-07-16 02:37:31.000000000 +0000
 +++ font3d/font3d.cc
 @@ -30,8 +30,8 @@
  
@@ -13,3 +13,11 @@ $NetBSD: patch-font3d_font3d.cc,v 1.1 2011/11/25 21:57:36 joerg Exp $
  #include <stdio.h>
  #include <string.h>
  
+@@ -39,6 +39,7 @@
+ #include "build.h"
+ #include "font3d.h"
+ 
++using std::ios, std::ofstream, std::setprecision, std::ifstream, std::endl, std::cout;
+ 
+ //==============================================================================================
+ //  PrintGreeting()
