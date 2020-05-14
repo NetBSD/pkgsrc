@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2020/05/12 09:41:40 micha Exp $
+# $NetBSD: Makefile,v 1.48 2020/05/14 08:47:12 micha Exp $
 
 DISTNAME=	schily-2020-05-11
 PKGNAME=	star-1.6.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +14,9 @@ LICENSE=	cddl-1.0
 
 MAKE_JOBS_SAFE=	no
 
-USE_TOOLS+=	tbl
+# tbl(1) of NetBSD 9 can't process the man page, but man(1) can.
+# Install man page with unprocessed tables as workaround (may break other OS)
+#USE_TOOLS+=	tbl
 TOOL_DEPENDS+=	smake-[0-9]*:../../devel/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
@@ -65,15 +67,15 @@ do-build:
 	cd ${WRKSRC}/star && ${SMAKE} ${MAKE_FLAGS}
 
 # Process tables in manpage
-post-build:
-	cd ${WRKSRC} && if ${TEST} -f star/pkgsrc_tbl.done; then :;	\
-	else								\
-		${TBL} star/spax.1 >star/spax.1.tmp &&			\
-		${MV} -f star/spax.1.tmp star/spax.1 &&			\
-		${TBL} star/star.4 >star/star.4.tmp &&			\
-		${MV} -f star/star.4.tmp star/star.4 &&			\
-		${TOUCH} star/pkgsrc_tbl.done;				\
-	fi
+#post-build:
+#	cd ${WRKSRC} && if ${TEST} -f star/pkgsrc_tbl.done; then :;	\
+#	else								\
+#		${TBL} star/spax.1 >star/spax.1.tmp &&			\
+#		${MV} -f star/spax.1.tmp star/spax.1 &&			\
+#		${TBL} star/star.4 >star/star.4.tmp &&			\
+#		${MV} -f star/star.4.tmp star/star.4 &&			\
+#		${TOUCH} star/pkgsrc_tbl.done;				\
+#	fi
 
 do-test:
 	cd ${WRKSRC}/star && cd tests ; ${SMAKE} ${MAKE_FLAGS} tests
