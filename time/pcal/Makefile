@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/04/08 06:14:46 riastradh Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/14 18:59:15 joerg Exp $
 #
 
 DISTNAME=	pcal-4.11.0
@@ -16,7 +16,7 @@ WWWSERVER=	${HOSTNAME_CMD:sh}
 
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	CC=${CC:Q}
+MAKE_FLAGS+=	CC=${CC:Q}
 
 BUILD_TARGET=	exec/pcal
 
