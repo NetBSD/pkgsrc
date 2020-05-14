@@ -1,10 +1,12 @@
-$NetBSD: patch-Makefile.fip,v 1.3 2020/01/11 14:40:44 nia Exp $
+$NetBSD: patch-Makefile.gnu,v 1.1 2020/05/14 16:42:14 nia Exp $
 
-* use c++ for linking instead of linking with stdc++
+- Use pkgsrc directories.
+- Link with CXX for libstdc++.
+- Unbundle image libraries.
 
---- Makefile.fip.orig	2015-03-08 17:03:56.000000000 +0000
-+++ Makefile.fip
-@@ -5,8 +5,8 @@ include fipMakefile.srcs
+--- Makefile.gnu.orig	2015-03-10 09:04:00.000000000 +0000
++++ Makefile.gnu
+@@ -5,14 +5,17 @@ include Makefile.srcs
  
  # General configuration variables:
  DESTDIR ?= /
@@ -15,7 +17,16 @@ $NetBSD: patch-Makefile.fip,v 1.3 2020/01/11 14:40:44 nia Exp $
  
  # Converts cr/lf to just lf
  DOS2UNIX = dos2unix
-@@ -28,10 +28,8 @@ CXXFLAGS ?= -O3 -fPIC -fexceptions -fvis
+ 
+ LIBRARIES = -lstdc++
+ 
++INCLUDE += $(shell pkg-config --cflags libjpeg OpenEXR libopenjp2 libraw libpng libtiff-4 libwebp libwebpmux zlib)
++LDFLAGS += $(shell pkg-config --libs libjpeg OpenEXR libopenjp2 libraw libpng libtiff-4 libwebp libwebpmux zlib)
++
+ MODULES = $(SRCS:.c=.o)
+ MODULES := $(MODULES:.cpp=.o)
+ CFLAGS ?= -O3 -fPIC -fexceptions -fvisibility=hidden
+@@ -28,10 +31,8 @@ CXXFLAGS ?= -O3 -fPIC -fexceptions -fvis
  CXXFLAGS += -D__ANSI__
  CXXFLAGS += $(INCLUDE)
  
@@ -26,9 +37,18 @@ $NetBSD: patch-Makefile.fip,v 1.3 2020/01/11 14:40:44 nia Exp $
 +CFLAGS += -fPIC
 +CXXFLAGS += -fPIC
  
- TARGET  = freeimageplus
+ TARGET  = freeimage
  STATICLIB = lib$(TARGET).a
-@@ -68,14 +66,12 @@ $(STATICLIB): $(MODULES)
+@@ -40,8 +41,6 @@ LIBNAME	= lib$(TARGET).so
+ VERLIBNAME = $(LIBNAME).$(VER_MAJOR)
+ HEADER = Source/FreeImage.h
+ 
+-
+-
+ default: all
+ 
+ all: dist
+@@ -67,13 +66,12 @@ $(STATICLIB): $(MODULES)
  	$(AR) r $@ $(MODULES)
  
  $(SHAREDLIB): $(MODULES)
@@ -38,12 +58,11 @@ $NetBSD: patch-Makefile.fip,v 1.3 2020/01/11 14:40:44 nia Exp $
  install:
 -	install -d $(INCDIR) $(INSTALLDIR)
 -	install -m 644 -o root -g root $(HEADER) $(INCDIR)
--	install -m 644 -o root -g root $(HEADERFIP) $(INCDIR)
 -	install -m 644 -o root -g root $(STATICLIB) $(INSTALLDIR)
 -	install -m 755 -o root -g root $(SHAREDLIB) $(INSTALLDIR)
-+	$(BSD_INSTALL_DATA) $(HEADERFIP) $(INCDIR)
++	$(BSD_INSTALL_DATA) $(HEADER) $(INCDIR)
 +	$(BSD_INSTALL_DATA) $(STATICLIB) $(INSTALLDIR)
 +	$(BSD_INSTALL_LIB) $(SHAREDLIB) $(INSTALLDIR)
  	ln -sf $(SHAREDLIB) $(INSTALLDIR)/$(VERLIBNAME)
  	ln -sf $(VERLIBNAME) $(INSTALLDIR)/$(LIBNAME)	
- 
+ #	ldconfig

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:32:11 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/14 16:42:13 nia Exp $
 
 DISTNAME=	FreeImage3180
 PKGNAME=	freeimage-3.18.0
-CATEGORIES=	devel graphics
+PKGREVISION=	1
+CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeimage/}
 EXTRACT_SUFX=	.zip
 
@@ -11,33 +12,42 @@ HOMEPAGE=	https://freeimage.sf.net/
 COMMENT=	Library for supporting PNG, BMP, JPEG, and TIFF
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR mpl-1.0
 
-USE_LANGUAGES+=	c c++03
+USE_LANGUAGES+=	c c++11
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/FreeImage
 
+MAKE_FILE=	Makefile.gnu
+
 INSTALLATION_DIRS+=	include lib share/doc/${PKGBASE}
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/Source/LibJXR/LICENCE \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/LICENSE.LibJXR
-	${INSTALL_DATA} ${WRKSRC}/Source/LibOpenJPEG/LICENSE \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/LICENSE.OpenJPEG
-	${HEAD} -n 31 ${WRKSRC}/Source/LibRawLite/internal/libraw_x3f.cpp \
-		> ${WRKDIR}/LICENSE.x3f
-	${HEAD} -n 33 ${WRKSRC}/Source/LibRawLite/internal/dcb_demosaicing.c \
-		> ${WRKDIR}/LICENSE.dcb
-	${HEAD} -n 25 ${WRKSRC}/Source/LibTIFF4/tif_open.c \
-		> ${WRKDIR}/LICENSE.LibTIFF4
-	${INSTALL_DATA} ${WRKDIR}/LICENSE.* \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/Source/LibWebP/COPYING \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/LICENSE.LibWebP
-	${INSTALL_DATA} ${WRKSRC}/Source/OpenEXR/Copyrights/openexr/LICENSE \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/LICENSE.OpenEXR
+pre-configure:
+	# G3 and JPEGTransform can't be built,
+	# due to using private headers in bundled libs
+	cd ${WRKSRC} && ${RM} -r Source/Lib* \
+	    Source/ZLib \
+	    Source/OpenEXR \
+	    Source/FreeImage/PluginG3.cpp \
+	    Source/FreeImage/PluginJXR.cpp \
+	    Source/FreeImageToolkit/JPEGTransform.cpp
+	cd ${WRKSRC} && ${SH} gensrclist.sh
+	cd ${WRKSRC} && ${SH} genfipsrclist.sh
+	${SED} \
+	    -e 's| \./Source/FreeImage/PluginG3\.cpp||g' \
+	    -e 's| \./Source/FreeImage/PluginJXR\.cpp||g' \
+	    -e 's| \./Source/FreeImageToolkit/JPEGTransform\.cpp||g' \
+	    ${WRKSRC}/Makefile.srcs > ${WRKSRC}/Makefile.srcs.new
+	${MV} ${WRKSRC}/Makefile.srcs.new ${WRKSRC}/Makefile.srcs
 
 PLIST_SUBST+=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
+.include "../../graphics/libraw/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
