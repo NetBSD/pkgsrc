@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2906 2020/05/14 17:02:56 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2907 2020/05/14 17:45:56 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/guile-git to 0.3.0 [nikita 2020-05-14]
 	Removed mail/cyrus-imapd successor mail/cyrus-imapd24 [nia 2020-05-14]
 	Removed mail/cyrus-imapd23 successor mail/cyrus-imapd24 [nia 2020-05-14]
+	Updated devel/mk-configure to 0.34.2 [cheusov 2020-05-14]
