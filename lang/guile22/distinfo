@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2020/03/10 22:43:27 wiz Exp $
+$NetBSD: distinfo,v 1.10 2020/05/14 14:28:04 nikita Exp $
 
 SHA1 (guile-2.2.7.tar.gz) = 4e4a5b1d1ccfaee887dc4ff63c088e9452715ab2
 RMD160 (guile-2.2.7.tar.gz) = 8c3dba807c4d236da81373e593d61007812ae236
@@ -6,3 +6,4 @@ SHA512 (guile-2.2.7.tar.gz) = ad11885ffeb7655ef6c8543e67233992dc37bdcf91ed82188e
 Size (guile-2.2.7.tar.gz) = 18129833 bytes
 SHA1 (patch-lib_Makefile.in) = ae3428997a653d89cef9bd51f52b57b64431b753
 SHA1 (patch-libguile_loader.c) = 32b012d095c343995f93d0c8160411c4b0cfbee1
+SHA1 (patch-modules_system_base_target.scm) = 84b204ac5c739e7a85aab325901ace84c7ae061a
