@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2897 2020/05/14 11:39:11 micha Exp $
+$NetBSD: CHANGES-2020,v 1.2898 2020/05/14 12:15:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4574,3 +4574,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/mozjs68 to 68.6.0nb2 [rin 2020-05-14]
 	Added www/go-ffuf version 1.0.2 [nikita 2020-05-14]
 	Updated archivers/star to 1.6.1nb7 [micha 2020-05-14]
+	Updated mail/thunderbird to 68.8.0 [ryoon 2020-05-14]
