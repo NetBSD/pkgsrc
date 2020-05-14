@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/04/12 08:28:25 adam Exp $
+# $NetBSD: Makefile,v 1.81 2020/05/14 19:11:14 joerg Exp $
 
 DISTNAME=	mysql-workbench-gpl-5.2.33b-src
 PKGNAME=	${DISTNAME:S/-gpl//:S/b-src$//}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wb.mysql.com/
 COMMENT=	Cross-platform, visual database design tool
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Conflicting fork of MySQL parser"
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b-src$/-src/}
 
