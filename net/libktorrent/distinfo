@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:09 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/05/14 19:14:16 joerg Exp $
 
 SHA1 (libktorrent-1.3.1.tar.bz2) = 71b377c0cad01dca6061f1fe92f91c4cf05476b3
 RMD160 (libktorrent-1.3.1.tar.bz2) = 1fba9d388868345f623d30dd8d7f5bc2c7c68b4b
 SHA512 (libktorrent-1.3.1.tar.bz2) = 63dd4a642da4808cfe414bf4767185daf3233def5259c3f9ab899be58f263c16362eaa5e01383bf9acd78a381bc3915a84965d17f1bd10054cf94851294b622b
 Size (libktorrent-1.3.1.tar.bz2) = 863105 bytes
 SHA1 (patch-examples_ktcli_main.cpp) = 6ed9db8aa7701402d8784cb5209be9b433dc9680
+SHA1 (patch-src_diskio_chunkmanager.cpp) = 39e20760275ecd21d5769fc48200a6d317c5073f
 SHA1 (patch-src_net_address.h) = 0689a5efc34062868ffb6e0ebbfe3b00ffdc8c20
 SHA1 (patch-src_utp_connection.h) = c9a8f549fe053f6ebe31a2c0d620898f9b12b20e
 SHA1 (patch-src_utp_delaywindow.h) = 34854d352993b42836726d3db326661aa78c4aa7
