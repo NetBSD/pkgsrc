@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/03/08 16:42:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/14 21:43:11 tnn Exp $
 
 PKGREVISION= 2
 .include "dist.mk"
@@ -178,6 +178,7 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/libpython3.6.sl.1.0
 .endif
 
+# needed to make devel/py-readline pick up the correct readline implementation
 BUILDLINK_DEPMETHOD.readline=		build
 
 .include "../../archivers/bzip2/buildlink3.mk"
