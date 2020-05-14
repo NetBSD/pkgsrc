@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:56:13 agc Exp $
+$NetBSD: distinfo,v 1.9 2020/05/14 19:09:09 joerg Exp $
 
 SHA1 (libcassandra-20101010.tar.gz) = 457dcf1fd24ad310c63eefb3b532f58835f326ef
 RMD160 (libcassandra-20101010.tar.gz) = e3e05861d1c1173d2492d49442aa68ee429d7b8f
 SHA512 (libcassandra-20101010.tar.gz) = 22ae1d5fe2a3558dc9cda94fd4576957c6948f55a866558882db08d4abaf49ae63e41e450f7485280fc342033cdea640759f589453a9a819b6482c5fd2cd8296
 Size (libcassandra-20101010.tar.gz) = 873233 bytes
-SHA1 (patch-aa) = 9cfe12f0fe26514bd7216d49e83248073cf26f4c
-SHA1 (patch-libcassandra_cassandra.cc) = 88d78156cbdbf51e0bd59326e72ca230de3a7688
-SHA1 (patch-libcassandra_cassandra.h) = 751a4b2847e52c87bbd9ccbf05bdcd62dfbb9ae3
-SHA1 (patch-libcassandra_cassandra__factory.cc) = fb5daea713f9b6a2df05c1dd2a2a033f49360cbe
-SHA1 (patch-libcassandra_cassandra__factory.h) = 602752ecd9d692bef0c692ba54098a75df4047c6
-SHA1 (patch-libcassandra_keyspace__factory.cc) = 9ac440c383243fd11e13147e9375e62c48847ebc
-SHA1 (patch-libcassandra_keyspace__factory.h) = bd611da5e673ce38a5eb811e6196a903a5a80ff8
-SHA1 (patch-libgenthrift_Cassandra.cpp) = b8ab38d7e28f98ad84d0f2cd3459d564a8decfc7
-SHA1 (patch-libgenthrift_Cassandra.h) = 271f776e8a4ba898fccd66b951cb7227c7c72cad
+SHA1 (patch-aa) = 00c444efc76919e0742f44e8f782d93205182490
+SHA1 (patch-libcassandra_cassandra.cc) = 766f59afb3185dc96c1fc1b5199b79c759a83092
+SHA1 (patch-libcassandra_cassandra.h) = d832fb8c600fc2f70512c89ecc1119e57add9361
+SHA1 (patch-libcassandra_cassandra__factory.cc) = 5ef14b0455cc6a02b8f616e6c0a445795b60e70b
+SHA1 (patch-libcassandra_cassandra__factory.h) = 1f82cec5ad2d601bf26c9041cf1d140b9e5c7bff
+SHA1 (patch-libcassandra_keyspace__factory.cc) = 57d84d8908d1778bdbca2f8ff639c8357160c84f
+SHA1 (patch-libcassandra_keyspace__factory.h) = 2fdad06db1167ac39806f84edec61caa859a9c62
+SHA1 (patch-libgenthrift_Cassandra.cpp) = e4e78815e9bdae8f288d153c3521d2355b863b80
+SHA1 (patch-libgenthrift_Cassandra.h) = ee6b007d6c39ae80e6ebc5a4639cb9b4af26a483
