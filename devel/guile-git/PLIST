@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2019/12/21 22:43:45 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/14 14:54:33 nikita Exp $
+guile/2.2/info/guile-git.info
 guile/2.2/lib/guile/2.2/site-ccache/git.go
 guile/2.2/lib/guile/2.2/site-ccache/git/annotated.go
 guile/2.2/lib/guile/2.2/site-ccache/git/attr.go
+guile/2.2/lib/guile/2.2/site-ccache/git/auth.go
 guile/2.2/lib/guile/2.2/site-ccache/git/bindings.go
 guile/2.2/lib/guile/2.2/site-ccache/git/blame.go
 guile/2.2/lib/guile/2.2/site-ccache/git/blob.go
@@ -12,6 +14,7 @@ guile/2.2/lib/guile/2.2/site-ccache/git/clone.go
 guile/2.2/lib/guile/2.2/site-ccache/git/commit.go
 guile/2.2/lib/guile/2.2/site-ccache/git/config.go
 guile/2.2/lib/guile/2.2/site-ccache/git/cred.go
+guile/2.2/lib/guile/2.2/site-ccache/git/describe.go
 guile/2.2/lib/guile/2.2/site-ccache/git/errors.go
 guile/2.2/lib/guile/2.2/site-ccache/git/fetch.go
 guile/2.2/lib/guile/2.2/site-ccache/git/object.go
@@ -22,6 +25,7 @@ guile/2.2/lib/guile/2.2/site-ccache/git/repository.go
 guile/2.2/lib/guile/2.2/site-ccache/git/reset.go
 guile/2.2/lib/guile/2.2/site-ccache/git/rev-parse.go
 guile/2.2/lib/guile/2.2/site-ccache/git/settings.go
+guile/2.2/lib/guile/2.2/site-ccache/git/signature.go
 guile/2.2/lib/guile/2.2/site-ccache/git/status.go
 guile/2.2/lib/guile/2.2/site-ccache/git/structs.go
 guile/2.2/lib/guile/2.2/site-ccache/git/submodule.go
@@ -39,6 +43,7 @@ guile/2.2/lib/guile/2.2/site-ccache/git/web/template.go
 guile/2.2/share/guile/site/2.2/git.scm
 guile/2.2/share/guile/site/2.2/git/annotated.scm
 guile/2.2/share/guile/site/2.2/git/attr.scm
+guile/2.2/share/guile/site/2.2/git/auth.scm
 guile/2.2/share/guile/site/2.2/git/bindings.scm
 guile/2.2/share/guile/site/2.2/git/blame.scm
 guile/2.2/share/guile/site/2.2/git/blob.scm
@@ -49,6 +54,7 @@ guile/2.2/share/guile/site/2.2/git/clone.scm
 guile/2.2/share/guile/site/2.2/git/commit.scm
 guile/2.2/share/guile/site/2.2/git/config.scm
 guile/2.2/share/guile/site/2.2/git/cred.scm
+guile/2.2/share/guile/site/2.2/git/describe.scm
 guile/2.2/share/guile/site/2.2/git/errors.scm
 guile/2.2/share/guile/site/2.2/git/fetch.scm
 guile/2.2/share/guile/site/2.2/git/object.scm
@@ -59,6 +65,7 @@ guile/2.2/share/guile/site/2.2/git/repository.scm
 guile/2.2/share/guile/site/2.2/git/reset.scm
 guile/2.2/share/guile/site/2.2/git/rev-parse.scm
 guile/2.2/share/guile/site/2.2/git/settings.scm
+guile/2.2/share/guile/site/2.2/git/signature.scm
 guile/2.2/share/guile/site/2.2/git/status.scm
 guile/2.2/share/guile/site/2.2/git/structs.scm
 guile/2.2/share/guile/site/2.2/git/submodule.scm
@@ -73,4 +80,3 @@ guile/2.2/share/guile/site/2.2/git/web/mime-types.scm
 guile/2.2/share/guile/site/2.2/git/web/querystring.scm
 guile/2.2/share/guile/site/2.2/git/web/repository.scm
 guile/2.2/share/guile/site/2.2/git/web/template.scm
-guile/2.2/info/guile-git.info
