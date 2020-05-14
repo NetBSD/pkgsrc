@@ -1,6 +1,6 @@
-$NetBSD: patch-gcc_system.h,v 1.1 2014/09/10 12:20:00 joerg Exp $
+$NetBSD: patch-gcc_system.h,v 1.2 2020/05/14 19:18:54 joerg Exp $
 
---- gcc/system.h.orig	2013-04-29 18:37:29.000000000 +0000
+--- gcc/system.h.orig	2014-01-02 22:23:26.000000000 +0000
 +++ gcc/system.h
 @@ -72,18 +72,22 @@ along with GCC; see the file COPYING3.  
  
@@ -25,3 +25,12 @@ $NetBSD: patch-gcc_system.h,v 1.1 2014/09/10 12:20:00 joerg Exp $
  # ifdef HAVE_GETCHAR_UNLOCKED
  #  undef getchar
  #  define getchar() getchar_unlocked ()
+@@ -467,6 +471,8 @@ extern char *stpcpy (char *, const char 
+ #endif
+ 
+ #ifdef __cplusplus
++// Avoid messing with abort() use in libc++
++#include <exception>
+ extern "C" {
+ #endif
+ 
