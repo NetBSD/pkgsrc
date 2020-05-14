@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/04 12:20:42 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/14 13:27:08 mef Exp $
 
 DISTNAME=	Devel-CallParser-0.002
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Custom parsing attached to subroutines
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Devel-CallChecker-[0-9]*:../../devel/p5-Devel-CallChecker
+DEPENDS+=	p5-DynaLoader-Functions-[0-9]*:../../devel/p5-DynaLoader-Functions
 
 TEST_DEPENDS+=	p5-Data-Alias-[0-9]*:../../devel/p5-Data-Alias
 TEST_DEPENDS+=	p5-Devel-Declare-[0-9]*:../../devel/p5-Devel-Declare
