@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:40 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/14 19:31:40 joerg Exp $
 
 DISTNAME=	tables-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-mock>=2.0:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
