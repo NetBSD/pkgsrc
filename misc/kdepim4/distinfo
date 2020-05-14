@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2016/01/10 19:33:43 markd Exp $
+$NetBSD: distinfo,v 1.23 2020/05/14 19:19:56 joerg Exp $
 
 SHA1 (kdepim-4.14.10.tar.xz) = 6f74763dda68dbb44394e807eab9204777bddf0a
 RMD160 (kdepim-4.14.10.tar.xz) = a9ba786e76ad0fe44bff5298a413aca514dbca82
@@ -7,4 +7,6 @@ Size (kdepim-4.14.10.tar.xz) = 14585020 bytes
 SHA1 (patch-ad) = 9c7fbc7223b74cafc30626a024b0177d9e80ad8f
 SHA1 (patch-kleopatra_newcertificatewizard_newcertificatewizard.cpp) = 9769a802e6900f37d2720df35a5c9bc2beb0de79
 SHA1 (patch-kleopatra_smartcard_readerstatus.cpp) = a1e60b97f75f3490873df0dd53bed7d5302eba48
+SHA1 (patch-knode_knfiltermanager.cpp) = 417c1486fd25acc206ec977effeb48ed0f1b4703
+SHA1 (patch-korganizer_kodaymatrix.cpp) = 904cf60aace38ba618f33ab609b4bffa09fec1c2
 SHA1 (patch-libkleo_kleo_stl_util.h) = 3ea5fdeab6a323ca63ccbb7791f3020db04d9dfd
