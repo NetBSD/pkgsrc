@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/03/30 14:10:55 cheusov Exp $
+# $NetBSD: Makefile,v 1.34 2020/05/14 17:45:44 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.34.1
+DISTNAME=	mk-configure-0.34.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/}
 
@@ -46,6 +46,7 @@ post-install:
 CHECK_PERMS_SKIP=	*/foobar.in */hello_world3.in */prog1.awk.in
 
 .if ${OPSYS} != NetBSD && ${OPSYS} != FreeBSD && ${OPSYS} != OpenBSD && ${OPSYS} != DragonFly && ${OPSYS} != MirBSD
+# non-BSD system
 DEPENDS+=	bmkdep-[0-9]*:../../devel/bmkdep
 .endif
 
