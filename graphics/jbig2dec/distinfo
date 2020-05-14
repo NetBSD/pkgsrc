@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/12/10 10:35:59 leot Exp $
+$NetBSD: distinfo,v 1.11 2020/05/14 17:51:49 leot Exp $
 
-SHA1 (jbig2dec-0.17.tar.gz) = 8d2ba831bcf475da05a381df02020e0706322ccf
-RMD160 (jbig2dec-0.17.tar.gz) = 96aab09c5ce1a749b5aadc4644c038790ee4a00c
-SHA512 (jbig2dec-0.17.tar.gz) = 79b3957186a30fc304ecd571d31c5cc421364921eb4eba242c3ea941ea111f461773f86c975657fa2ce91f2f79ff9abf760ef9bed404c7a4f35c036e5642ba0f
-Size (jbig2dec-0.17.tar.gz) = 141195 bytes
-SHA1 (patch-autogen.sh) = 1d22310c07b10c0f7cddda387c363f17132bc83f
+SHA1 (jbig2dec-0.18.tar.gz) = f82ec522225b9b020c6f52ccae932829e1f0a310
+RMD160 (jbig2dec-0.18.tar.gz) = e4cc1bc20ef742d8cae5abb094619459390483d4
+SHA512 (jbig2dec-0.18.tar.gz) = 5931530ee3b811f9009c95d08ad65701564ef8ebf6511145acb969cc7c99dab5028daaee580dd83358b6bdc477cffe347712b9c9768c9b1a63395e366046267d
+Size (jbig2dec-0.18.tar.gz) = 148563 bytes
