@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2020/05/10 03:56:38 markd Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/14 17:33:20 rillig Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	dvipdfmx-20200315
+PKGREVISION=	1
 CATEGORIES=	print converters
 
 HOMEPAGE=	http://project.ktug.or.kr/dvipdfmx/
@@ -38,9 +39,9 @@ CONF_FILES=	${PREFIX}/share/texmf-dist/dvipdfmx/dvipdfmx.cfg \
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	data/dvipdfmx.cfg src/dvipdft
+SUBST_FILES.paths=	data/dvipdfmx.cfg dvipdft
 SUBST_SED.paths=	-e 's,@DVIPDFM@,${PREFIX}/bin/dvipdfm,g'
-SUBST_SED.paths+=	-e 's,@RUNGS@,${PREFIX}/bin/rungs,g'
+SUBST_SED.paths+=	-e 's,@RUNGS@,${PREFIX}/bin/rungs,'
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
