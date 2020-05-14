@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/04 21:12:52 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2020/05/14 14:31:16 nia Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cyrus-sasl
@@ -6,13 +6,13 @@ PKG_OPTIONS_REQUIRED_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	ndbm bdb gdbm
 
 .if defined(SASL_DBTYPE)
-PKG_OPTIONS_DEPRECATED_WARNINGS+=	"Deprecated SASL_DBTYPE variable used, use ${PKG_OPTIONS_VAR:Q} instead (${PKG_OPTIONS_GROUP.database:ts,:Q})."
+PKG_OPTIONS_DEPRECATED_WARNINGS+=	"Deprecated SASL_DBTYPE variable used, use ${PKG_OPTIONS_VAR} instead (${PKG_OPTIONS_GROUP.database:ts,})."
 .  if !empty(SASL_DBTYPE:Mndbm)
 PKG_SUGGESTED_OPTIONS+=	ndbm
 .  elif !empty(SASL_DBTYPE:Mberkeley)
 PKG_SUGGESTED_OPTIONS+=	bdb
 .  else
-PKG_FAIL_REASON+=	"Unknown SASL_DBTYPE: ${SASL_DBTYPE:Q}"
+PKG_FAIL_REASON+=	"Unknown SASL_DBTYPE: ${SASL_DBTYPE}"
 .  endif
 .elif exists(/usr/include/ndbm.h) && ${OPSYS} != "Linux"
 PKG_SUGGESTED_OPTIONS+=	ndbm
