@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/05/14 11:36:34 micha Exp $
+# $NetBSD: Makefile,v 1.50 2020/05/14 13:27:53 wiz Exp $
 
 DISTNAME=	schily-2020-05-11
 PKGNAME=	star-1.6.1
@@ -70,7 +70,7 @@ SUBST_SED.install+=	-e 's,STAR_CONF,${STAR_CONF:Q},'
 
 # Man pages with documentation of file formats should go to section 4 on
 # SysV based systems. All supported systems that are treated by schilytools
-# with "MANSTYLE= sysv" in the RULES/os-${OPSYS}.def" files must be catched
+# with "MANSTYLE= sysv" in the RULES/os-${OPSYS}.def" files must be caught
 # by this check (IRIX and OSF/1 are treated with BSD style by schilytools).
 PLIST_VARS+=	bsd sysv
 .if ${OPSYS} == "AIX" ||	\
