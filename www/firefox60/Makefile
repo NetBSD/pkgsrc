@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/04/24 13:24:21 nia Exp $
+# $NetBSD: Makefile,v 1.43 2020/05/14 16:54:54 rillig Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		60.9
@@ -66,12 +66,6 @@ MOZILLA_NAME=	Firefox
 .else
 MOZILLA_NAME=	Browser
 .endif
-
-SUBST_CLASSES+=		sys-dic
-SUBST_STAGE.sys-dic=	pre-configure
-SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
-SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/glue/mozHunspell.cpp
-SUBST_VARS.sys-dic=	PREFIX
 
 post-extract:
 	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
