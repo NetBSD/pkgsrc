@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/12 20:03:01 adam Exp $
+$NetBSD: distinfo,v 1.6 2020/05/14 06:06:41 adam Exp $
 
-SHA1 (w3lib-1.21.0.tar.gz) = a6ea609a660722ebac52012a09631c8889308481
-RMD160 (w3lib-1.21.0.tar.gz) = e9807d80e3d07caf226257d96f017b6325c1fd6b
-SHA512 (w3lib-1.21.0.tar.gz) = 7038d919d722857a32dc7a0a54287478bb7e713181efe7e37607ba174447b44d947c76dec5e1030ce159156f9d60bcc79cf2198313a7f2c2894d7a6d59c7a276
-Size (w3lib-1.21.0.tar.gz) = 38153 bytes
+SHA1 (w3lib-1.22.0.tar.gz) = 91499b8a0de9465b872ddccfd43cb8f4bdfee029
+RMD160 (w3lib-1.22.0.tar.gz) = 2e9b10b5770857025006216b7c4d3adc59e22576
+SHA512 (w3lib-1.22.0.tar.gz) = fbc2bbc06808ec5d28e300ce00e2a59cc07a3a15e4a3690d3b6a105b6f33e6e02fab057b27733d9ea69bc99ebc1e7e8e628e1408a00194991ea05f35dae8bf10
+Size (w3lib-1.22.0.tar.gz) = 39121 bytes
