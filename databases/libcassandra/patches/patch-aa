@@ -1,11 +1,38 @@
-$NetBSD: patch-aa,v 1.4 2013/05/30 15:36:29 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2020/05/14 19:09:10 joerg Exp $
 
 Remove the -pedantic flag from the configure script, it isn't terribly
 useful for C++0x code.
 
+Fix C++11 test case to actually work. The existing test fails with both
+GCC and Clang.
+
 --- configure.orig	2010-10-10 00:59:59.000000000 +0000
 +++ configure
-@@ -17972,7 +17972,7 @@ if test "${ac_cv_safe_to_use_wconversion
+@@ -15328,7 +15328,6 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+     typedef check<int> check_type;
+     check_type c;
+-    check_type&& cr = c;
+ int
+ main ()
+ {
+@@ -15384,7 +15383,6 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+     typedef check<int> check_type;
+     check_type c;
+-    check_type&& cr = c;
+ int
+ main ()
+ {
+@@ -15441,7 +15439,6 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+     typedef check<int> check_type;
+     check_type c;
+-    check_type&& cr = c;
+ int
+ main ()
+ {
+@@ -17972,7 +17969,7 @@ if test "${ac_cv_safe_to_use_wconversion
    $as_echo_n "(cached) " >&6
  else
    save_CFLAGS="$CFLAGS"
@@ -14,7 +41,7 @@ useful for C++0x code.
         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18011,7 +18011,7 @@ if test "${ac_cv_safe_to_use_Wconversion
+@@ -18011,7 +18008,7 @@ if test "${ac_cv_safe_to_use_Wconversion
    $as_echo_n "(cached) " >&6
  else
    save_CFLAGS="$CFLAGS"
@@ -23,7 +50,7 @@ useful for C++0x code.
           cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18071,7 +18071,7 @@ if test "${ac_cv_safe_to_use_Wextra_+set
+@@ -18071,7 +18068,7 @@ if test "${ac_cv_safe_to_use_Wextra_+set
    $as_echo_n "(cached) " >&6
  else
    save_CFLAGS="$CFLAGS"
@@ -32,7 +59,7 @@ useful for C++0x code.
           cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18098,7 +18098,7 @@ fi
+@@ -18098,7 +18095,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_safe_to_use_Wextra_" >&5
  $as_echo "$ac_cv_safe_to_use_Wextra_" >&6; }
  
@@ -41,7 +68,7 @@ useful for C++0x code.
        if test "$ac_cv_safe_to_use_Wextra_" = "yes"; then :
    BASE_WARNINGS="${BASE_WARNINGS} -Wextra"
  else
-@@ -18120,7 +18120,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
+@@ -18120,7 +18117,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
  ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
           save_CXXFLAGS="$CXXFLAGS"
@@ -50,7 +77,7 @@ useful for C++0x code.
           cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18163,7 +18163,7 @@ if test "${ac_cv_safe_to_use_Wlogical_op
+@@ -18163,7 +18160,7 @@ if test "${ac_cv_safe_to_use_Wlogical_op
    $as_echo_n "(cached) " >&6
  else
    save_CFLAGS="$CFLAGS"
@@ -59,7 +86,7 @@ useful for C++0x code.
           cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18205,7 +18205,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
+@@ -18205,7 +18202,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
  ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
           save_CXXFLAGS="${CXXFLAGS}"
@@ -68,7 +95,7 @@ useful for C++0x code.
           cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18255,7 +18255,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
+@@ -18255,7 +18252,7 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
  ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
           save_CXXFLAGS="${CXXFLAGS}"
@@ -77,7 +104,7 @@ useful for C++0x code.
           cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18313,7 +18313,7 @@ if test "${ac_cv_safe_to_use_Wno_attribu
+@@ -18313,7 +18310,7 @@ if test "${ac_cv_safe_to_use_Wno_attribu
    $as_echo_n "(cached) " >&6
  else
    save_CFLAGS="$CFLAGS"
@@ -86,7 +113,7 @@ useful for C++0x code.
           cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -21222,8 +21222,8 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+@@ -21222,8 +21219,8 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
       if test -z "$ac_cv_cxx_cinttypes"; then
         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
