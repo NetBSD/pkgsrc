@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1330 2020/05/13 01:04:20 tnn Exp $
+# $NetBSD: Makefile,v 1.1331 2020/05/14 19:38:45 joerg Exp $
 #
 
 COMMENT=	Networking tools
@@ -76,7 +76,7 @@ SUBDIR+=	cmu-dhcpd
 SUBDIR+=	cntlm
 SUBDIR+=	coda
 SUBDIR+=	coherence
-SUBDIR+=	coilmq
+#SUBDIR+=	coilmq
 SUBDIR+=	connect
 SUBDIR+=	corebird
 SUBDIR+=	corkscrew
