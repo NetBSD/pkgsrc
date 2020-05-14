@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2019/12/19 22:16:34 joerg Exp $
+$NetBSD: distinfo,v 1.4 2020/05/14 19:27:01 joerg Exp $
 
 SHA1 (widelands-build20.tar.bz2) = a2fdedf81c08fd08809b8556c955a6a7f32c1eed
 RMD160 (widelands-build20.tar.bz2) = 4adfa2f3ae2e4ceae7a04ca1162deed0f3e7632f
@@ -7,3 +7,4 @@ Size (widelands-build20.tar.bz2) = 232364340 bytes
 SHA1 (patch-CMakeLists.txt) = 8b400bc5554964378275d304943e6489c82d9915
 SHA1 (patch-src_CMakeLists.txt) = 3d06616eefa3145ff0062c39b4ce026e0acad8c1
 SHA1 (patch-src_base_i18n.cc) = ed25d4bafc90c9bc52bb1636824f91b5734ff742
+SHA1 (patch-src_editor_ui__menus_categorized__item__selection__menu.h) = 5f81ded849263f3569d243b952c97e639ac437e1
