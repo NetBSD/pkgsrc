@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2894 2020/05/14 06:06:59 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2895 2020/05/14 08:46:20 rin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4570,3 +4570,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-xandikos to 0.2.2 [adam 2020-05-14]
 	Updated misc/py-immutables to 0.13 [adam 2020-05-14]
 	Updated www/py-w3lib to 1.22.0 [adam 2020-05-14]
+	Updated lang/mozjs60 to 60.8.0nb5 [rin 2020-05-14]
+	Updated lang/mozjs68 to 68.6.0nb2 [rin 2020-05-14]
