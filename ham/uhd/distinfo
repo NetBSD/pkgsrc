@@ -1,8 +1,32 @@
-$NetBSD: distinfo,v 1.24 2020/04/08 08:07:17 adam Exp $
+$NetBSD: distinfo,v 1.25 2020/05/14 19:21:04 joerg Exp $
 
 SHA1 (uhd-3.15.0.0.tar.gz) = 17286a52a591038af16e870962c1767c5935ec2f
 RMD160 (uhd-3.15.0.0.tar.gz) = b05282c4b3f25bd201e9b91b3652fba9b150c7ae
 SHA512 (uhd-3.15.0.0.tar.gz) = ef62639d956adb5b4815b8e57bf4d6e62519bcaf509ce87af4f6091b79b4bb78c2bc079ec6f678777c24a146d5d5e1c8f225ad7ac5dba46bec6f8e1cc20309b0
 Size (uhd-3.15.0.0.tar.gz) = 12895934 bytes
 SHA1 (patch-CMakeLists.txt) = 5691ddd6a98f92e649a184cfc092a4eb721c6fe7
+SHA1 (patch-lib_rfnoc_dma__fifo__block__ctrl__impl.cpp) = 0dcc0ddc231f3f1c2a6a3a57ef88df5467170fc6
 SHA1 (patch-lib_transport_nirio_lvbitx_process-lvbitx.py) = 350af0f9ed999f64105a42195d2df037faef87c7
+SHA1 (patch-lib_usrp__clock_octoclock_octoclock__impl.cpp) = b77c91c7a202e3c93707dba67bedc9704f77ab56
+SHA1 (patch-lib_usrp_b100_b100__impl.cpp) = 9a53e41b45fdebaf0b56e3030f1c8f9790185046
+SHA1 (patch-lib_usrp_cores_rx__dsp__core__3000.cpp) = d63fd1ab1d48da7e9eb8a7deb33a3803fb6c219d
+SHA1 (patch-lib_usrp_cores_tx__dsp__core__3000.cpp) = 3812d190f830128046ab39b21ba63b6775f8c764
+SHA1 (patch-lib_usrp_dboard_db__cbx.cpp) = 3b8864f060acaeb262c91433f0dc0fd229f8c458
+SHA1 (patch-lib_usrp_dboard_db__dbsrx.cpp) = 55de5be387fbe59015c4e1c0861313740b9b3088
+SHA1 (patch-lib_usrp_dboard_db__dbsrx2.cpp) = a7b905d154ecfcfa72df8561b6ae98cd3f97fb08
+SHA1 (patch-lib_usrp_dboard_db__rfx.cpp) = c01c17ee5ba2ad877c1bdf4c940af529adeab8d6
+SHA1 (patch-lib_usrp_dboard_db__sbx__common.cpp) = 35345e22a714b67a35055f303aaa074ff3b637fa
+SHA1 (patch-lib_usrp_dboard_db__sbx__version3.cpp) = 8e243093fae46256dde8f8c531715dd2d88f2c9d
+SHA1 (patch-lib_usrp_dboard_db__sbx__version4.cpp) = 8ed4d05a98438a852f352c6db003d20b5886bd49
+SHA1 (patch-lib_usrp_dboard_db__tvrx.cpp) = 6b94d0a89558198340b75cd2d9b77c1fe0f04c5d
+SHA1 (patch-lib_usrp_dboard_db__tvrx2.cpp) = 5d3618a80d5ece89c2a4488b12613ca824ba7a19
+SHA1 (patch-lib_usrp_dboard_db__ubx.cpp) = c8bdfbe6b4494fc50f6b8229a5ee796cd9d85af5
+SHA1 (patch-lib_usrp_dboard_db__wbx__common.cpp) = 190619aaf7a93314e4d13cac28497b9af0011bf4
+SHA1 (patch-lib_usrp_dboard_db__wbx__simple.cpp) = e889a9fd77f610bf672b0e95ab6ab9178c14d7da
+SHA1 (patch-lib_usrp_dboard_db__wbx__version2.cpp) = 4285b334b32e246d54c53715da7a07f126ef6533
+SHA1 (patch-lib_usrp_dboard_db__wbx__version3.cpp) = e1d69f09f9f134a0c5aa2bbf772d8dd995cda681
+SHA1 (patch-lib_usrp_dboard_db__wbx__version4.cpp) = dbbe24a2a755031c06ff74045e2502d2ee646f59
+SHA1 (patch-lib_usrp_dboard_db__xcvr2450.cpp) = 90d2e4bfe072e84e20c35c256af036da696425c1
+SHA1 (patch-lib_usrp_dboard_eiscat_eiscat__radio__ctrl__impl.cpp) = 54e9e06fd37dd7cc5a9767519148266dd915f4a0
+SHA1 (patch-lib_usrp_multi__usrp.cpp) = ff711af0232cbe92dfe822411ab228b35fa63389
+SHA1 (patch-lib_usrp_x300_x300__radio__ctrl__impl.cpp) = 2f0c10f2443b6d2f361ee8a9f339b39c9498d2bb
