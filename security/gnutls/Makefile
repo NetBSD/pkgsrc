@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.210 2020/04/01 08:24:07 adam Exp $
+# $NetBSD: Makefile,v 1.211 2020/05/14 14:30:02 nikita Exp $
 
 DISTNAME=	gnutls-3.6.13
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +22,6 @@ USE_TOOLS+=			msgfmt msgmerge xgettext
 GNU_CONFIGURE=			yes
 # this library duplicates (and conflicts with) openssl
 CONFIGURE_ARGS+=		--disable-openssl-compatibility
-CONFIGURE_ARGS+=		--disable-guile
 CONFIGURE_ARGS+=		--disable-libdane
 CONFIGURE_ARGS+=		--without-idn
 CONFIGURE_ARGS+=		--without-tpm
