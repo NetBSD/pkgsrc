@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/03/29 02:18:56 manu Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/14 18:55:55 joerg Exp $
 #
 
 DISTNAME=	pam_p11-0.3.1
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config autoconf automake
+USE_TOOLS+=		gmake pkg-config autoconf automake autopoint
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 pre-configure:
