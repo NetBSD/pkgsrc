@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 17:30:47 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/14 19:16:48 joerg Exp $
 #
 
 V=		5.1.4
@@ -13,6 +13,8 @@ HOMEPAGE=	https://kicad-pcb.org/
 COMMENT=	3D models for rendering and the MCAD software
 LICENSE=	cc-by-sa-v4.0
 WRKSRC=		${WRKDIR}/kicad-packages3D-${V}
+
+UNLIMIT_RESOURCES=	cputime
 
 USE_CMAKE=	yes
 
