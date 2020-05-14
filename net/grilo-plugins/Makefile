@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/05/06 14:04:55 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/05/14 19:15:14 joerg Exp $
 
 DISTNAME=	grilo-plugins-0.3.10
 PKGREVISION=	3
@@ -11,12 +11,15 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Grilo
 COMMENT=	Plugins for grilo media browser
 LICENSE=	gnu-lgpl-v2
 
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+
 USE_TOOLS+=	pkg-config xgettext
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE+=	grilo-plugins-0.3.pc.in
 
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/lua53/buildlink3.mk"
