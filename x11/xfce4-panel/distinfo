@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.32 2020/01/29 04:55:21 gutteridge Exp $
+$NetBSD: distinfo,v 1.33 2020/05/14 00:11:24 gutteridge Exp $
 
-SHA1 (xfce4-panel-4.14.3.tar.bz2) = 78ca0e5260eba6341620df0d3f3d39d6d624ce7b
-RMD160 (xfce4-panel-4.14.3.tar.bz2) = 45060f1e604e101d5b917d85560cd6e6e202a848
-SHA512 (xfce4-panel-4.14.3.tar.bz2) = c317741df1196a9f8d675c87732155f973022d1cb30a8815393980747d1569e8348c386253fc9056068c35fbdc13faefb4a0bef6678d072d51461c4aae909940
-Size (xfce4-panel-4.14.3.tar.bz2) = 1304748 bytes
+SHA1 (xfce4-panel-4.14.4.tar.bz2) = 81dcbec0d22f95b4de554c819fdfd97e721faf55
+RMD160 (xfce4-panel-4.14.4.tar.bz2) = 4fdd08f9b1990f35a2fc5b55a597b96490d2e8f7
+SHA512 (xfce4-panel-4.14.4.tar.bz2) = 5ae7c7acf0254fdc3f5eaccf75d7c12699ab8147322f231af7bd17b1238b8c25a96d628dada9caa086fc8fde2b7dc4030a38eb7b863b290f9e069193b3728d85
+Size (xfce4-panel-4.14.4.tar.bz2) = 1307938 bytes
 SHA1 (patch-migrate_Makefile.in) = bf71d8ff41cfe4ce60e7e1887858b5474f1fe11c
