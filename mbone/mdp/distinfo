@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/02 23:54:08 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/05/14 19:26:01 joerg Exp $
 
 SHA1 (src-mdp-1.9a5.tgz) = 62d688cc7f570d4492d6e0839026b6a72a5c7163
 RMD160 (src-mdp-1.9a5.tgz) = ba9a614466995eff42ea14d2afdb442fff780284
@@ -11,3 +11,5 @@ Size (src-protolib-1.0a3d.tgz) = 59402 bytes
 SHA1 (patch-ab) = 6a958d89aa42c636e67a9989d8a94eba1d3816e6
 SHA1 (patch-ac) = 72ccea437882074279c887635deb1ad3acbcb3ed
 SHA1 (patch-ad) = b6ec185f71ee4bac3986739969f12395de591328
+SHA1 (patch-common_mdpApp.cpp) = 36d89f74b4c6d17a38ffb864f382d1dfb63301b0
+SHA1 (patch-common_mdpApp.h) = a308271cf84fa58ed437d72c302d712fd17ffd2b
