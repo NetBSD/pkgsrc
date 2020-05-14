@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.9 2019/10/18 18:33:18 nia Exp $
+$NetBSD: distinfo,v 1.10 2020/05/14 19:30:42 joerg Exp $
 
 SHA1 (subtitleeditor-0.54.0.tar.gz) = 23e455bc70adfd8761c0d1fe112e95f65fed6776
 RMD160 (subtitleeditor-0.54.0.tar.gz) = fffcbad1723d353d291fe6cde15efc3ed9205d7e
 SHA512 (subtitleeditor-0.54.0.tar.gz) = 4458d579775a504b22f955c41d0e95ed722c1cb6bcf715ef493988a85397d5e0d4c3327e129f49b160d398dc73257026a92bbe5104c30d2004c16b7e12dd113c
 Size (subtitleeditor-0.54.0.tar.gz) = 1783077 bytes
 SHA1 (patch-configure) = 582178786148b92ab20d19a1fdc8529b58e40242
+SHA1 (patch-plugins_subtitleformats_sami_sami.cc) = d9fffa01d4775c170df46c24c719a4f520e0f608
+SHA1 (patch-src_document.cc) = 278609130457e82a7a4f75c1941675475485b2fe
+SHA1 (patch-src_vp_gstplayer.cc) = aae33047650dd28013bafe27e205ad7b45761940
