@@ -1,6 +1,6 @@
-$NetBSD: patch-font3d_vector.h,v 1.1 2011/11/25 21:57:36 joerg Exp $
+$NetBSD: patch-font3d_vector.h,v 1.2 2020/05/14 19:27:41 joerg Exp $
 
---- font3d/vector.h.orig	2011-11-25 18:27:15.000000000 +0000
+--- font3d/vector.h.orig	2000-07-16 02:37:31.000000000 +0000
 +++ font3d/vector.h
 @@ -73,7 +73,9 @@
  #define __VECTOR_H__
@@ -9,7 +9,7 @@ $NetBSD: patch-font3d_vector.h,v 1.1 2011/11/25 21:57:36 joerg Exp $
 -#include <iostream.h>
 +#include <iostream>
 +
-+using namespace std;
++using std::ostream;
  
     class vector
     {
