@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2904 2020/05/14 14:45:07 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2905 2020/05/14 14:58:23 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4581,3 +4581,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/php72 to 7.2.31 [taca 2020-05-14]
 	Updated security/cyrus-sasl to 2.1.27nb1 [nia 2020-05-14]
 	Updated devel/SDL to 1.2.15nb31 [nia 2020-05-14]
+	Updated devel/guile-git to 0.3.0 [nikita 2020-05-14]
