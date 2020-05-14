@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:59 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/14 19:08:06 joerg Exp $
 #
 
 DISTNAME=	rlog-1.3.7
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://arg0.net/vgough/download/
 EXTRACT_SUFX=	.tgz
