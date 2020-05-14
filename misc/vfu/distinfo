@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2017/08/19 00:26:37 jlam Exp $
+$NetBSD: distinfo,v 1.15 2020/05/14 19:20:32 joerg Exp $
 
 SHA1 (vfu-3.04.src.tar.gz) = 75e87d102114dc08136420e7927e687f72a52dfd
 RMD160 (vfu-3.04.src.tar.gz) = a0d1ba84d9c66216b444226ceace190ada0e795a
@@ -21,7 +21,7 @@ SHA1 (patch-vfu_vfuopt.h) = d64d243deff488fad9c46fb022f20b303d80bd03
 SHA1 (patch-vfu_vfusys.cpp) = 3a4f57f381d10c6d4f66d84d8c57338a0e17b77c
 SHA1 (patch-vfu_vfuview.cpp) = 573c1df0d515d328de300ed1e418f065ac43887e
 SHA1 (patch-vslib_conmenu.h) = 8fbfc954abb7d713ef66ab565d66ecb285cd86f0
-SHA1 (patch-vslib_getopt2.cpp) = b5cb783a8660a267c5dca03ff29e37415ad6fb2b
+SHA1 (patch-vslib_getopt2.cpp) = d4f106eabc2abff53c52e0008967324466e2762c
 SHA1 (patch-vslib_regexp3.cpp) = 48017429d1f10559f37cbdc901fa247e6cd8e600
 SHA1 (patch-vslib_vstring.cpp) = 56fc269b175405821533e11c86e1c6a12cc5d7e7
 SHA1 (patch-vslib_vstring.h) = d93cb8362ad11d0a62acaf8ab56e4aace0fd4f7f
