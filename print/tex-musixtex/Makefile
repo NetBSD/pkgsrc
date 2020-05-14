@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/05/02 02:27:45 markd Exp $
+# $NetBSD: Makefile,v 1.44 2020/05/14 16:45:23 rillig Exp $
 
 DISTNAME=	musixtex
 PKGNAME=	tex-${DISTNAME}-1.30
@@ -14,12 +14,6 @@ DEPENDS+=	tex-musixtex-fonts-[0-9]*:../../fonts/tex-musixtex-fonts
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 USE_TOOLS+=	gs:run
-
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Setting paths to commands.
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	bin/musixtex
-SUBST_VARS.paths=	LOCALBASE
 
 REPLACE_TEXLUA=		bin/musixflx bin/musixtex
 
