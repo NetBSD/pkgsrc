@@ -1,13 +1,23 @@
-$NetBSD: distinfo,v 1.3 2018/01/18 19:19:41 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2020/05/14 18:59:47 joerg Exp $
 
 SHA1 (trafficserver-7.1.2.tar.bz2) = 4442890d1df6a6ae6e31e6bd4d86ce07f45b4173
 RMD160 (trafficserver-7.1.2.tar.bz2) = bd2181c8e3f42063c27cdf500f52d21f2cac0af7
 SHA512 (trafficserver-7.1.2.tar.bz2) = 5f7e7cf72c94bb2829f2ef0c7632c71feba5ec5eb76256548cfbdfc18bc6c8c88a7e7aeb5d90f990fd64e1a879e33cce312c702918a9fa1a8ca0fab8eee34305
 Size (trafficserver-7.1.2.tar.bz2) = 9040147 bytes
+SHA1 (patch-cmd_traffic__cop_traffic__cop.cc) = 8c6a3758223ae9fd51878fe0dbcaf63c933d1be6
 SHA1 (patch-cmd_traffic__wccp_wccp__client.cc) = 8acd84155a37bbc9aa83deb731b7ceb1a38db065
-SHA1 (patch-configure) = f603006f98a67c40c7df5958358c34e00c4edcb2
+SHA1 (patch-configure) = b900ff60b0d11ffaac5904de74cdb41ed8bede82
+SHA1 (patch-iocore_cache_CacheTest.cc) = d15b8020e7f3ea52d06ba4eae6ff267ae21ad9cd
+SHA1 (patch-iocore_eventsystem_UnixEventProcessor.cc) = 69288f45bc28fc34f5c9542634b30e95d18e9aa4
 SHA1 (patch-lib_ts_MemView.h) = 5d067b56a19bb5295a3877b7b05b543e1e599124
+SHA1 (patch-lib_ts_ink__defs.h) = 3f67c29732101976ecf0f49e998a5c8c442241f6
 SHA1 (patch-lib_wccp_wccp-test-router.cc) = 950014ed07186b4979eaf48f9f5d54441debe80b
+SHA1 (patch-mgmt_cluster_VMap.cc) = 167de593665025cfa350b7a5026171a9dc4d0427
+SHA1 (patch-mgmt_utils_MgmtUtils.cc) = e9902650ba1d180e3c9d8e173011bd7f86629fc5
+SHA1 (patch-plugins_tcpinfo_tcpinfo.cc) = 01ce3b46738b28b9e3d6e182260c95746a95e2fa
+SHA1 (patch-proxy_CoreUtils.cc) = 6c4df84ac808282fb7d3f056bd12886f97eb9f23
+SHA1 (patch-proxy_CoreUtils.h) = bc5cccb813922c9a116816a75bb63eeeb9e9e729
+SHA1 (patch-proxy_ICP.cc) = 64bc692c12bc3b30358202ae2fb96b3555d2e1ec
 SHA1 (patch-proxy_Makefile.in) = 00bc5c483107798054d46eb136e236a3e588963f
 SHA1 (patch-proxy_config_Makefile.in) = fc1fe7ae06db9147271bb4a2a422619f234f8f6d
 SHA1 (patch-rc_traffixserver.ml.in) = 1f0185ba67379aed11fd99e5696228a50063008d

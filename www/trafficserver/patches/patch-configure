@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2018/01/18 19:19:41 fhajny Exp $
+$NetBSD: patch-configure,v 1.3 2020/05/14 18:59:48 joerg Exp $
 
 Portability.
 Fix incorrect docs build arg.
@@ -49,7 +49,17 @@ Fix incorrect docs build arg.
    BUILD_DOCS_TRUE=
    BUILD_DOCS_FALSE='#'
  else
-@@ -21352,7 +21352,7 @@ cat >>confdefs.h <<_ACEOF
+@@ -8121,6 +8121,9 @@ case $host_os in
+   openbsd*)
+     host_os_def="openbsd"
+     ;;
++  netbsd*)
++    host_os_def="netbsd"
++    ;;
+   solaris*)
+     host_os_def="solaris"
+     case "`isalist`" in
+@@ -21352,7 +21355,7 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
  
@@ -58,7 +68,7 @@ Fix incorrect docs build arg.
    as_fn_error $? "Cannot determine size of void*" "$LINENO" 5
  fi
  
-@@ -25058,7 +25058,7 @@ $as_echo "could not find ${TCL_BIN_DIR}/
+@@ -25058,7 +25061,7 @@ $as_echo "could not find ${TCL_BIN_DIR}/
  
  
  # expect tclConfig.sh to populate TCL_LIB_FLAG and TCL_INCLUDE_SPEC
@@ -67,7 +77,7 @@ Fix incorrect docs build arg.
      TCL_LIB_SPEC="-ltcl" # OSX fails to populate this variable
  fi
  LIBTCL=$TCL_LIB_SPEC
-@@ -26111,7 +26111,7 @@ if test "x$ac_cv_lib_cap_cap_set_proc" =
+@@ -26111,7 +26114,7 @@ if test "x$ac_cv_lib_cap_cap_set_proc" =
  
  else
  
