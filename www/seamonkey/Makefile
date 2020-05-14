@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2020/05/07 19:47:11 nia Exp $
+# $NetBSD: Makefile,v 1.211 2020/05/14 16:53:31 rillig Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -48,12 +48,6 @@ CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpt.py
-
-SUBST_CLASSES+=		sys-dic
-SUBST_STAGE.sys-dic=	pre-configure
-SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
-SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp
-SUBST_VARS.sys-dic=	PREFIX
 
 CHECK_WRKREF_SKIP=	lib/seamonkey/chrome/toolkit/content/global/buildconfig.html
 
