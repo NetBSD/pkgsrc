@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:42:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/14 19:08:27 joerg Exp $
 
 DISTNAME=	jna-5.2.0
 PKGNAME=	java-${DISTNAME}
@@ -71,7 +71,7 @@ ANT_TARGET=	jar contrib-jars javadoc
 
 do-build:
 	cd ${WRKSRC} && \
-	    ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
+	    ${_ULIMIT_CMD}${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/build/native-*/${JNIPFX}jnidispatch.${JNISFX} \
