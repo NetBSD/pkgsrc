@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2019/01/02 13:24:29 nia Exp $
+$NetBSD: patch-Makefile,v 1.2 2020/05/14 19:35:59 joerg Exp $
 
 Avoid overriding build settings.
 
 --- Makefile.orig	2018-04-17 17:16:44.000000000 +0000
 +++ Makefile
-@@ -55,14 +55,9 @@ LIBS =
+@@ -55,14 +55,9 @@ LIBS = 
  #-------------------------------------------------
  
  # start with empties for everything
@@ -20,7 +20,7 @@ Avoid overriding build settings.
  
  GIT_VERSION ?= " $(shell git rev-parse --short HEAD || echo unknown)"
  ifneq ($(GIT_VERSION)," unknown")
-@@ -143,15 +138,6 @@ ifeq ($(VRENDER),opengl)
+@@ -143,15 +138,6 @@ ifeq ($(VRENDER),opengl)  
     LIBS += -lGL
  endif
  LDFLAGS += $(SHARED)
@@ -45,6 +45,15 @@ Avoid overriding build settings.
  
  # we compile C-only to C89 standard with GNU extensions
  # we compile C++ code to C++98 standard with GNU extensions
+@@ -578,7 +564,7 @@ CONLYFLAGS += -ansi
+ else
+ CONLYFLAGS += -std=gnu89
+ endif
+-CPPONLYFLAGS += -x c++ -std=gnu++98
++CPPONLYFLAGS += -x c++ -std=gnu++11 -Wno-c++11-narrowing
+ COBJFLAGS += -x objective-c++
+ 
+ # this speeds it up a bit by piping between the preprocessor/compiler/assembler
 @@ -588,7 +574,6 @@ ifeq ($(MDEBUG),1)
  CCOMFLAGS +=  -O0 -g
  else
