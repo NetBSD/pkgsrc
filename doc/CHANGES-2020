@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2895 2020/05/14 08:46:20 rin Exp $
+$NetBSD: CHANGES-2020,v 1.2896 2020/05/14 10:37:46 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4572,3 +4572,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-w3lib to 1.22.0 [adam 2020-05-14]
 	Updated lang/mozjs60 to 60.8.0nb5 [rin 2020-05-14]
 	Updated lang/mozjs68 to 68.6.0nb2 [rin 2020-05-14]
+	Added www/go-ffuf version 1.0.2 [nikita 2020-05-14]
