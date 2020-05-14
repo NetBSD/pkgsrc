@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2893 2020/05/14 05:39:07 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2894 2020/05/14 06:06:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4568,3 +4568,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-settings to 4.14.3 [gutteridge 2020-05-14]
 	Updated textproc/py-toml to 0.10.1 [adam 2020-05-14]
 	Updated net/py-xandikos to 0.2.2 [adam 2020-05-14]
+	Updated misc/py-immutables to 0.13 [adam 2020-05-14]
+	Updated www/py-w3lib to 1.22.0 [adam 2020-05-14]
