@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/14 14:25:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/14 18:58:53 joerg Exp $
 
 DISTNAME=	gnome-pomodoro-0.17.0
 CATEGORIES=	time
@@ -14,11 +14,18 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
 BUILD_DEPENDS+=		vala-[0-9]*:../../lang/vala
 
+# Requires --desktop in msgfmt.
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+
+# Broken generated code uses g_return_if_fail when g_return_val_if_fail
+# is necessary
+CFLAGS+=	-Wno-return-type
+
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
 
-USE_TOOLS+=		automake gmake pkg-config
+USE_TOOLS+=		automake autopoint gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	autogen.sh
 
