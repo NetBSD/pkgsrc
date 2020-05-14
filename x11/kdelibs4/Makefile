@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/05/06 14:04:16 adam Exp $
+# $NetBSD: Makefile,v 1.112 2020/05/14 18:04:44 rillig Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -57,7 +57,6 @@ SUBST_CLASSES+=			kdelibsfix
 SUBST_STAGE.kdelibsfix=		pre-configure
 SUBST_MESSAGE.kdelibsfix=	Fixing hardcoded paths.
 SUBST_FILES.kdelibsfix=		kde3support/kdeui/k3sconfig.cpp
-SUBST_FILES.kdelibsfix+=	kio/kssl/kopenssl.cpp
 SUBST_VARS.kdelibsfix=		LOCALBASE
 
 # Avoid the WRKDIR path in the installed cmake file
