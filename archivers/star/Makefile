@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/05/14 08:47:12 micha Exp $
+# $NetBSD: Makefile,v 1.49 2020/05/14 11:36:34 micha Exp $
 
 DISTNAME=	schily-2020-05-11
 PKGNAME=	star-1.6.1
@@ -14,16 +14,33 @@ LICENSE=	cddl-1.0
 
 MAKE_JOBS_SAFE=	no
 
-# tbl(1) of NetBSD 9 can't process the man page, but man(1) can.
-# Install man page with unprocessed tables as workaround (may break other OS)
-#USE_TOOLS+=	tbl
+.include "../../mk/bsd.prefs.mk"
+
+# tbl(1) of NetBSD 9 cannot be used and cripples the man pages, but man(1)
+# from mandoc uses a builtin tbl that is good enough.
+# This check should catch all supported OS that needs processed tables for
+# man pages and have a tbl that can be used to do that.
+.if ${OPSYS} == "AIX" ||	\
+    ${OPSYS} == "Cygwin" ||	\
+    ${OPSYS} == "Darwin" ||	\
+    ${OPSYS} == "DragonFly" ||	\
+    ${OPSYS} == "Haiku" ||	\
+    ${OPSYS} == "HPUX" ||	\
+    ${OPSYS} == "IRIX" ||	\
+    ${OPSYS} == "Linux" ||	\
+    ${OPSYS} == "Minix" ||	\
+    ${OPSYS} == "MirBSD" ||	\
+    ${OPSYS} == "OSF1" ||	\
+    ${OPSYS} == "QNX" ||	\
+    ${OPSYS} == "SunOS"
+USE_TOOLS+=	tbl
+.endif
+
 TOOL_DEPENDS+=	smake-[0-9]*:../../devel/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
 # Honor CPPFLAGS, CFLAGS and LDFLAGS
 MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
-
-.include "../../mk/bsd.prefs.mk"
 
 # The default location is /etc/default/star
 # We patch the documentation appropriately. Additionally, we also install
@@ -51,6 +68,19 @@ SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
 SUBST_SED.install=	-e 's,PKGNAME_NOREV,${PKGNAME_NOREV},'
 SUBST_SED.install+=	-e 's,STAR_CONF,${STAR_CONF:Q},'
 
+# Man pages with documentation of file formats should go to section 4 on
+# SysV based systems. All supported systems that are treated by schilytools
+# with "MANSTYLE= sysv" in the RULES/os-${OPSYS}.def" files must be catched
+# by this check (IRIX and OSF/1 are treated with BSD style by schilytools).
+PLIST_VARS+=	bsd sysv
+.if ${OPSYS} == "AIX" ||	\
+    ${OPSYS} == "HPUX" ||	\
+    ${OPSYS} == "SunOS"
+PLIST.sysv=	yes
+.else
+PLIST.bsd=	yes
+.endif
+
 # Shared platform specific code for schilytools (provided by smake package)
 .include "../../devel/smake/Makefile.common"
 
@@ -67,15 +97,17 @@ do-build:
 	cd ${WRKSRC}/star && ${SMAKE} ${MAKE_FLAGS}
 
 # Process tables in manpage
-#post-build:
-#	cd ${WRKSRC} && if ${TEST} -f star/pkgsrc_tbl.done; then :;	\
-#	else								\
-#		${TBL} star/spax.1 >star/spax.1.tmp &&			\
-#		${MV} -f star/spax.1.tmp star/spax.1 &&			\
-#		${TBL} star/star.4 >star/star.4.tmp &&			\
-#		${MV} -f star/star.4.tmp star/star.4 &&			\
-#		${TOUCH} star/pkgsrc_tbl.done;				\
-#	fi
+.if !empty(USE_TOOLS:Mtbl)
+post-build:
+	cd ${WRKSRC} && if ${TEST} -f star/pkgsrc_tbl.done; then :;	\
+	else								\
+		${TBL} star/spax.1 >star/spax.1.tmp &&			\
+		${MV} -f star/spax.1.tmp star/spax.1 &&			\
+		${TBL} star/star.4 >star/star.4.tmp &&			\
+		${MV} -f star/star.4.tmp star/star.4 &&			\
+		${TOUCH} star/pkgsrc_tbl.done;				\
+	fi
+.endif
 
 do-test:
 	cd ${WRKSRC}/star && cd tests ; ${SMAKE} ${MAKE_FLAGS} tests
