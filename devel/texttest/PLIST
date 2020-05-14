@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/18 19:42:18 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/14 19:07:31 joerg Exp $
 bin/filter_fpdiff.py
 bin/filter_rundependent.py
 bin/interpretcore
 bin/texttest
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/texttestlib/__init__.py
 ${PYSITELIB}/texttestlib/__init__.pyo
 ${PYSITELIB}/texttestlib/__init__.pyc
