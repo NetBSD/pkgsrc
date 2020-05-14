@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/03/10 22:09:47 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/05/14 17:51:22 nia Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -7,7 +7,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0ldsk00l.ca/nestopia/
 COMMENT=	Portable, very accurate NES emulator
 
-USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	autoreconf autoconf automake
