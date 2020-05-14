@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2892 2020/05/14 00:17:08 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2893 2020/05/14 05:39:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4566,3 +4566,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-stix to 1.2.0.10 [adam 2020-05-13]
 	Updated x11/xfce4-panel to 4.14.4 [gutteridge 2020-05-14]
 	Updated x11/xfce4-settings to 4.14.3 [gutteridge 2020-05-14]
+	Updated textproc/py-toml to 0.10.1 [adam 2020-05-14]
+	Updated net/py-xandikos to 0.2.2 [adam 2020-05-14]
