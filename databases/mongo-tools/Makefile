@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/01/18 21:48:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/14 19:09:40 joerg Exp $
 
 DISTNAME=	mongo-tools-3.4.23
 PKGREVISION=	1
@@ -37,10 +37,12 @@ post-extract:
 	${LN} -s ${WRKSRC}/vendor/${site} ${WRKSRC}/vendor/src/${site}
 .endfor
 
+MAKE_ENV+=	GOPATH=${WRKSRC}:${WRKSRC}/vendor:${PREFIX}/gopkg
+
 do-build:
 .for tool in ${MONGO_TOOLS}
 	cd ${WRKSRC} && \
-	  ${SETENV} GOPATH=${WRKSRC}:${WRKSRC}/vendor:${PREFIX}/gopkg \
+	  ${PKGSRC_SETENV} ${MAKE_ENV} \
 	  ${GO} build -tags "${MONGO_TAGS}" -o bin/${tool} ${tool}/main/${tool}.go
 .endfor
 
