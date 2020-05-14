@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/01/11 09:48:11 rillig Exp $
+# $NetBSD: options.mk,v 1.5 2020/05/14 19:19:13 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc9
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -42,6 +42,7 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 ###
 ### Don't install libgcc if it's older than the system one
 ###
+PLIST_VARS+=		libgcc
 .if !${PKG_OPTIONS:Malways-libgcc}
 
 .  for dir in ${_OPSYS_LIB_DIRS}
@@ -56,12 +57,20 @@ DELETE_INSTALLED_LIBGCC=	yes
 .    endif
 .  endfor
 
-.  if ${DELETE_INSTALLED_LIBGCC:Uno}
+.  if ${DELETE_INSTALLED_LIBGCC:Uno} == "yes"
 post-install: delete-installed-libgcc
 
 delete-installed-libgcc: .PHONY
 	${FIND} ${DESTDIR} -name 'libgcc_s.so*' -delete
+.  else
+PLIST.libgcc=		yes
 .  endif
+.else
+PLIST.libgcc=		yes
+.endif
+
+.if ${PLIST.libgcc:Uno} == "yes"
+LDFLAGS+=	-Wl,-rpath,${PREFIX}/gcc9/lib
 .endif
 
 ###
