@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/05/13 14:50:33 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/14 06:04:46 adam Exp $
 
-DISTNAME=	immutables-0.12
+DISTNAME=	immutables-0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/immutables/}
