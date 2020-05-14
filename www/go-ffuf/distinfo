@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/14 10:36:50 nikita Exp $
+
+SHA1 (go-fuff-1.0.2.tar.gz) = 92dd3053d36ff23e1b3be7439ec705a5a34ce904
+RMD160 (go-fuff-1.0.2.tar.gz) = 3f54a0de6f9440afb9e66fb01da7d5de6cf4dfbe
+SHA512 (go-fuff-1.0.2.tar.gz) = ac5248b99c65ee30647585d95c70b270f4dfdfba6e392f5633f54c1c077d4c8fab7e9e04b76a589ce315371c975f1f055e3ad19baab80782ff453f01897b9d32
+Size (go-fuff-1.0.2.tar.gz) = 30047 bytes
