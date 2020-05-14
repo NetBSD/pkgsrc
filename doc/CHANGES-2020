@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2900 2020/05/14 14:23:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2901 2020/05/14 14:25:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4577,3 +4577,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird to 68.8.0 [ryoon 2020-05-14]
 	Updated mail/thunderbird-l10n to 68.8.0 [ryoon 2020-05-14]
 	Updated lang/php73 to 7.3.18 [taca 2020-05-14]
+	Updated lang/php74 to 7.4.6 [taca 2020-05-14]
