@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/12/05 14:51:01 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/14 19:39:03 joerg Exp $
 
 DISTNAME=	python-daemon-2.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios>=0.4:../../devel/py-testscenarios
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2>=0.5.1:../../devel/py-unittest2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
