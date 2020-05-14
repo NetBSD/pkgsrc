@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 01:01:34 agc Exp $
+$NetBSD: distinfo,v 1.13 2020/05/14 19:01:26 joerg Exp $
 
 SHA1 (hpijs-2.1.4.tar.gz) = 8b8baa2d410f8918ae2b8381811983c923b29703
 RMD160 (hpijs-2.1.4.tar.gz) = b498a578d89bdd2dcc12d2df846f9950df67db8d
@@ -7,8 +7,10 @@ Size (hpijs-2.1.4.tar.gz) = 1928371 bytes
 SHA1 (patch-aa) = 1d89574d8f54cec6493304a663c0f546bd8df111
 SHA1 (patch-ab) = cf2224faf7bb81b6d656a3fe19c668413a54707c
 SHA1 (patch-ac) = b6bd6df7a30152df93d579e12d2b465f15c130c8
+SHA1 (patch-dj3320.cpp) = 5deed8cbad5f0b958632b68dd678d1dba2011ded
 SHA1 (patch-djgenericvip.cpp) = 1ad602d1086c7972e240646e5eaed199b60c63a5
 SHA1 (patch-hpijs.cpp) = 0be9dce9ba7470ff5ddf1d74a02e058aaea6605e
 SHA1 (patch-ldlencap.h) = e768093c0208f850ca0500259f8539dcf028be91
 SHA1 (patch-ljfastraster.cpp) = 34860e7daafcd47ae5a8506b477e320ee3f7eb2e
 SHA1 (patch-ljjetready.cpp) = 7a6ee8e7261a376e3ce53c4375ede2bb1b6f2b8c
+SHA1 (patch-registry.cpp) = 78038a093e124dbc156f871210d5c13b46a64c20
