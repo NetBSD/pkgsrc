@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.AIX,v 1.1 2020/05/14 19:05:49 joerg Exp $
+
+--- Makefile.AIX.orig	2020-05-13 20:32:55.508961293 +0000
++++ Makefile.AIX
+@@ -58,8 +58,6 @@ CFLAGS += $(GTK_CFLAGS) $(GLIB_CFLAGS) -
+           -DPREFIX=\"$(PREFIX)\" \
+           -DLOCALBASE=\"$(LOCALBASE)\" -DX11BASE=\"$(X11BASE)\"
+ 
+-CPPFLAGS = -D__cplusplus -Dc_plusplus
+-
+ 
+ # ########################################################################
+ # Dependant Libraries:
