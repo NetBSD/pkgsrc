@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 11:45:32 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/14 19:38:45 joerg Exp $
 
 DISTNAME=	CoilMQ-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.6.9:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-stompclient>=0.3.2:../../devel/py-stompclient
 DEPENDS+=	${PYPKGPREFIX}-daemon>=1.5.5:../../devel/py-daemon
 
+PYTHON_VERSIONS_ACCEPTED=	# conflict between py-stompclient and py-daemon
+
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	distribute_setup.py coilmq/start.py
@@ -25,8 +27,6 @@ SUBST_CLASSES+=		cfg
 SUBST_STAGE.cfg=	pre-configure
 SUBST_FILES.cfg=	coilmq/config/__init__.py
 SUBST_SED.cfg=		-e 's,/path/to/config.cfg,${PKG_SYSCONFDIR}/defaults.cfg,'
-
-PYTHON_VERSIONS_ACCEPTED=	27 # py-stompclient, py-daemon
 
 EGDIR=			${PREFIX}/share/examples/coilmq
 
