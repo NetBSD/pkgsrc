@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/05/11 19:08:59 nikita Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/14 19:18:23 joerg Exp $
 
 DISTNAME=	nim-1.2.0
 PKGREVISION=	1
@@ -14,13 +14,13 @@ LICENSE=	mit
 INSTALLATION_DIRS=	bin
 
 do-build:
-	cd ${WRKSRC} && sh ./build.sh
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} sh ./build.sh
 	printf '#! %s\nexec %s _=%s/nim/bin/nim %s/nim/bin/nim "$$@"\n' \
 		"${SH}" "${SETENV}" "${PREFIX}" "${PREFIX}" \
 		> ${WRKSRC}/nim-wrapper.sh
-	cd ${WRKSRC} && bin/nim c --skipUserCfg --skipParentCfg koch
-	cd ${WRKSRC} && ./koch boot -d:release --skipUserCfg --skipParentCfg
-	cd ${WRKSRC} && ./koch tools --skipUserCfg --skipParentCfg
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} bin/nim c --skipUserCfg --skipParentCfg koch
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch boot -d:release --skipUserCfg --skipParentCfg
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch tools --skipUserCfg --skipParentCfg
 
 do-install:
 	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
