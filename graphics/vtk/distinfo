@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 21:34:34 agc Exp $
+$NetBSD: distinfo,v 1.9 2020/05/14 19:28:08 joerg Exp $
 
 SHA1 (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 31ab01c16b3d44ce201d8180af431833cf6527d8
 RMD160 (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 71a092cf929cfaeeb8f297334cadb829209b9ad7
 SHA512 (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = f4c4ef36046ae17733ebca142f2182f9f091a891de7b3de878ff5637d50567dc924ed04de1f9261605ca5969c9a04dd561bf379ac8ce8e7c4f1ac98f39983bc3
 Size (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 6073644 bytes
+SHA1 (patch-Utilities_ftgl_src_FTGL.h) = ba6ccc0e543b78e01ddf39ba294e60192e77c959
 SHA1 (patch-aa) = dbda07f15a60a0e66ce50e50addcf85d4c2b840c
 SHA1 (patch-ab) = 83d063aaf1924daff17a45fb92316743fbb448f3
 SHA1 (patch-ac) = 59977568e92ba01344447c0c0b1c770d26e460bb
