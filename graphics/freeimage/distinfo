@@ -1,10 +1,26 @@
-$NetBSD: distinfo,v 1.8 2020/03/21 16:41:41 rillig Exp $
+$NetBSD: distinfo,v 1.9 2020/05/14 16:42:13 nia Exp $
 
 SHA1 (FreeImage3180.zip) = 38daa9d8f1bca2330a2eaa42ec66fbe6ede7dce9
 RMD160 (FreeImage3180.zip) = b791715fccf49355a3cb27b6250d8ed809c2454e
 SHA512 (FreeImage3180.zip) = 9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
 Size (FreeImage3180.zip) = 7415716 bytes
-SHA1 (patch-Makefile) = d453337cb2a34f4480d1bd3c2115cb93715170b8
-SHA1 (patch-Makefile.fip) = 466b82e70d06f9552a73d86a742aa1bd3450f881
-SHA1 (patch-Source_LibOpenJPEG_opj__malloc.h) = 7e8b65d17cf1f0ed295964d477b96acac56bd927
-SHA1 (patch-Source_LibRawLite_internal_dcraw__common.cpp) = 3f9a149c7294b3ed3f2c17f4c28fe5b7cc223838
+SHA1 (patch-Makefile.gnu) = 1aa31ec7566565e9e59d06bfa2cd729500a0d2cb
+SHA1 (patch-Source_FreeImage.h) = 9b648a8734a0c3391850e2dd7eaa501d29e99689
+SHA1 (patch-Source_FreeImageToolkit_JPEGTransform.cpp) = 4e7372c8947b4359de4d428bcfcfa2f55210f2e8
+SHA1 (patch-Source_FreeImage_J2KHelper.cpp) = a479a373f5a584978129c00d723251a784210603
+SHA1 (patch-Source_FreeImage_PSDParser.cpp) = ee4f3e1bb2b6644033a93ac58e12b9126d0dd060
+SHA1 (patch-Source_FreeImage_Plugin.cpp) = 58f5d7ca78a66ad7109b0e8dff219c26dfe50a86
+SHA1 (patch-Source_FreeImage_PluginEXR.cpp) = 6c4f6ea9a413d27dee940f24588bdf6f7ae38038
+SHA1 (patch-Source_FreeImage_PluginJ2K.cpp) = bbc44884aba8be3af2aa824da5cf788d91c27fb6
+SHA1 (patch-Source_FreeImage_PluginJP2.cpp) = 9a6d27e039b2050004a2d331389bdfa32dffe681
+SHA1 (patch-Source_FreeImage_PluginJPEG.cpp) = a3998454b11c2f73890828b24c0ea276bff7ee7f
+SHA1 (patch-Source_FreeImage_PluginPNG.cpp) = 0d9c71856a9355f56c3e9a571a414098d8af2e88
+SHA1 (patch-Source_FreeImage_PluginRAW.cpp) = 1d67ad2b634e2a5b1fa82be240a4d6edfad7c05d
+SHA1 (patch-Source_FreeImage_PluginTIFF.cpp) = 5fc6f4a9debf555ba41ff7bd4311ed76ec3f1b51
+SHA1 (patch-Source_FreeImage_PluginWebP.cpp) = d7b57cfcb1379c6a849edb219c8a59edae83ff5c
+SHA1 (patch-Source_FreeImage_ZLibInterface.cpp) = 73211e8ecefb7972f1fcb579dc4a17409c81c480
+SHA1 (patch-Source_Metadata_TagConversion.cpp) = 0785cc5dd395bca538e9a82cadbb7ef450eebe86
+SHA1 (patch-Source_Metadata_XTIFF.cpp) = bfcafc31b8407258c52f30fa0c62d062ce108c00
+SHA1 (patch-Source_Utilities.h) = bb9cdd7d72c46e72cd3a636beb27541783609191
+SHA1 (patch-genfipsrclist.sh) = 9b22593e0ca5ff869ea22ddb91f46785ae45d5cd
+SHA1 (patch-gensrclist.sh) = 2582848736654138b3ebdda9d8469046e992745b
