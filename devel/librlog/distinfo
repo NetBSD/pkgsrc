@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:27:44 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/05/14 19:08:06 joerg Exp $
 
 SHA1 (rlog-1.3.7.tgz) = 3a09d5d8526c7834bf58d533956cc91e135fbe1b
 RMD160 (rlog-1.3.7.tgz) = fd021b41dbac1d432aa6ec98f081d8fcfe686bce
 SHA512 (rlog-1.3.7.tgz) = d1f87b5c72c012b0ef7b20d411203b6fd994a5e96b874072529cdd0932095f42fc3f341ff4c077a55543161d60390a3ee741181be2ff79ae2e825f5bcebb7ecb
 Size (rlog-1.3.7.tgz) = 525396 bytes
-SHA1 (patch-rlog-RLogChannel.cpp) = 7fbc21f3226482f5c9ebcc161522f6af11f213ec
+SHA1 (patch-rlog-RLogChannel.cpp) = e558254d091a6223e8a03bea99e4fb6764207732
+SHA1 (patch-rlog_StdioNode.cpp) = 3a8612b78eb8efd0f2a1d88b33360d493891170a
