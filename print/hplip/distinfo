@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2020/01/04 04:27:01 khorben Exp $
+$NetBSD: distinfo,v 1.38 2020/05/14 19:01:47 joerg Exp $
 
 SHA1 (hplip-3.19.12.tar.gz) = 3d3cffb0808900ab4134df2acc246f22fb39aad7
 RMD160 (hplip-3.19.12.tar.gz) = c9e24b31dd51b2f1759e4f70c1c8617b49ace7c7
@@ -14,5 +14,6 @@ SHA1 (patch-prnt_hpcups_HPCupsFilter.cpp) = 19a26044ce24433b0188c243925b4028bc38
 SHA1 (patch-prnt_hpijs_context2.cpp) = f81148c1c334a9074453b27ac055833cd1669bd0
 SHA1 (patch-prnt_hpijs_foomatic-rip-hplip) = c37ed4beda5a84fac65484d11af55bf80b3f9f7c
 SHA1 (patch-prnt_hpijs_hjzjscolor.cpp) = 5ca9c828ba4aff17a54a803d79c2dc169975d50c
+SHA1 (patch-prnt_hpps_hppsfilter.c) = 5a3e7f3f5504fb88d58cf2b79fa138066859aa00
 SHA1 (patch-protocol_discovery_mdns.c) = e2ca43f6ab13fe2124a38bcc0eff292a57b34b06
 SHA1 (patch-scan.py) = b58ffdd4811b8b20973a07f3b9f60174a96beed4
