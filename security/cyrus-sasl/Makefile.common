@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2020/05/13 04:35:55 rillig Exp $
+# $NetBSD: Makefile.common,v 1.33 2020/05/14 14:31:16 nia Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -32,8 +32,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cyrusimap.org/sasl/
 LICENSE=	original-bsd # CMU version
 
-DISTINFO_FILE=		${.CURDIR}/../cyrus-sasl/distinfo
-PATCHDIR=		${.CURDIR}/../cyrus-sasl/patches
+DISTINFO_FILE=		${.CURDIR}/../../security/cyrus-sasl/distinfo
+PATCHDIR=		${.CURDIR}/../../security/cyrus-sasl/patches
 
 PKG_SYSCONFSUBDIR=	sasl2
 
