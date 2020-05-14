@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/10/04 14:27:51 micha Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/14 11:36:34 micha Exp $
 bin/gnutar
 bin/scpio
 bin/spax
@@ -12,7 +12,8 @@ man/man1/spax.1
 man/man1/star.1
 man/man1/suntar.1
 man/man1/ustar.1
-man/man5/star.5
+${PLIST.sysv}man/man4/star.4
+${PLIST.bsd}man/man5/star.5
 share/doc/star/INSTALL.pkgsrc
 share/doc/star/README
 share/doc/star/README.ACL
