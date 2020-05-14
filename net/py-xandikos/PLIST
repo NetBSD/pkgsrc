@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/05/04 06:18:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/05/14 05:38:50 adam Exp $
 bin/xandikos-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -110,3 +110,6 @@ ${PYSITELIB}/xandikos/webdav.pyo
 ${PYSITELIB}/xandikos/wsgi.py
 ${PYSITELIB}/xandikos/wsgi.pyc
 ${PYSITELIB}/xandikos/wsgi.pyo
+${PYSITELIB}/xandikos/wsgi_helpers.py
+${PYSITELIB}/xandikos/wsgi_helpers.pyc
+${PYSITELIB}/xandikos/wsgi_helpers.pyo
