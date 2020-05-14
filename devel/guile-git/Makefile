@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/04/28 11:46:28 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/14 14:54:33 nikita Exp $
 
-DISTNAME=	guile-git-0.2.0
-PKGREVISION=	3
+DISTNAME=	guile-git-0.3.0
 CATEGORIES=	devel
-MASTER_SITES=	https://gitlab.com/guile-git/guile-git/uploads/160f6a36c1be8d4fc1990a193081a04d/
+MASTER_SITES=	https://gitlab.com/guile-git/guile-git/uploads/4c563d8e7e1ff84396abe8ca7011bcaf/
 
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://gitlab.com/guile-git/guile-git/
@@ -22,5 +21,6 @@ INFO_FILES=	YES
 
 .include "../../lang/guile22/module.mk"
 .include "../../devel/libgit2/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
