@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2020/03/10 22:09:40 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/05/15 00:14:56 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.14.1
+VERSION=	4.14.3
 DISTNAME=	xfconf-${VERSION}
 PKGNAME=	xfce4-conf-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://archive.xfce.org/src/xfce/xfconf/${VERSION:R}/
+MASTER_SITES=	https://archive.xfce.org/src/xfce/xfconf/${VERSION:R}/
 
 HOMEPAGE=	https://docs.xfce.org/xfce/xfconf/start
 COMMENT=	Xfce client-server configuration storage and query system
@@ -17,6 +16,8 @@ PKGCONFIG_OVERRIDE=	xfconf/libxfconf-0.pc.in
 CONFIGURE_ARGS+=	--disable-perl-bindings
 
 MAKE_DIRS+=	${PREFIX}/include/xfce4
+
+CHECK_PORTABILITY_SKIP=	test-driver
 
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=1.0.0
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.72
