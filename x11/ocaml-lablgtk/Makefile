@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2020/04/12 08:28:13 adam Exp $
+# $NetBSD: Makefile,v 1.61 2020/05/15 10:32:59 nia Exp $
 
 GITHUB_PROJECT=	lablgtk
 DISTNAME=	${GITHUB_PROJECT}-2.18.10
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 
@@ -15,6 +15,10 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--without-gnomecanvas
+CONFIGURE_ARGS+=	--without-gnomeui
+CONFIGURE_ARGS+=	--without-gtksourceview
+CONFIGURE_ARGS+=	--without-panel
 USE_TOOLS+=		gmake pkg-config
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_DIRS=	lablgtk2
