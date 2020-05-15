@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2017/09/05 04:22:09 dholland Exp $
+# $NetBSD: options.mk,v 1.3 2020/05/15 10:32:59 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk
-PKG_SUPPORTED_OPTIONS=	glade gnomecanvas gtksourceview gtksourceview2 gtkspell svg gnome
-PKG_SUGGESTED_OPTIONS=	glade gnomecanvas gtksourceview gtksourceview2 gtkspell svg gnome
+PKG_SUPPORTED_OPTIONS=	glade gtksourceview2 gtkspell svg
+PKG_SUGGESTED_OPTIONS=	glade gtksourceview2 gtkspell svg
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,34 +20,6 @@ CONFIGURE_ARGS+=	--with-gtkspell
 PLIST_SRC+=		PLIST.gtkspell
 .else
 CONFIGURE_ARGS+=	--without-gtkspell
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnomecanvas)
-.include "../../graphics/libgnomecanvas/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gnomecanvas
-PLIST_SRC+=		PLIST.gnomecanvas
-.else
-CONFIGURE_ARGS+=	--without-gnomecanvas
-.endif
-
-# Note: it looks like it should work to split these, but I don't
-# want to build gnome-panel tonight to check.
-.if !empty(PKG_OPTIONS:Mgnome)
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../x11/gnome-panel/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gnomeui --with-panel
-PLIST_SRC+=		PLIST.gnome
-PLIST_SRC+=		PLIST.gnomepanel
-.else
-CONFIGURE_ARGS+=	--without-gnomeui --without-panel
-.endif
-
-.if !empty(PKG_OPTIONS:Mgtksourceview)
-.include "../../x11/gtksourceview/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gtksourceview
-PLIST_SRC+=		PLIST.gtksourceview
-.else
-CONFIGURE_ARGS+=	--without-gtksourceview
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtksourceview2)
