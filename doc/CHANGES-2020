@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2919 2020/05/15 11:56:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2920 2020/05/15 11:58:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4611,3 +4611,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed x11/gnome-panel successor x11/mate-panel [nia 2020-05-15]
 	Removed print/libgnomeprintui [nia 2020-05-15]
 	Removed x11/gtksourceview successor x11/gtksourceview4 [nia 2020-05-15]
+	Removed print/libgnomeprint [nia 2020-05-15]
