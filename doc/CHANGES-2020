@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2915 2020/05/15 09:47:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2916 2020/05/15 11:40:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4601,3 +4601,10 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/postgresql11 to 11.8 [adam 2020-05-15]
 	Updated databases/postgresql12 to 12.3 [adam 2020-05-15]
 	Removed inputmethod/imhangul_status_applet [nia 2020-05-15]
+	Removed x11/gnome-desktop-sharp [nia 2020-05-15]
+	Removed x11/gnome-sharp [nia 2020-05-15]
+	Removed x11/gtksourceview-sharp2 [nia 2020-05-15]
+	Removed devel/monodevelop [nia 2020-05-15]
+	Removed devel/monodevelop-database [nia 2020-05-15]
+	Removed devel/mono-tools [nia 2020-05-15]
+	Removed textproc/gnome-subtitles [nia 2020-05-15]
