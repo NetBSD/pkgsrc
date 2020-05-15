@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2921 2020/05/15 12:02:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2922 2020/05/15 12:08:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4613,3 +4613,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed x11/gtksourceview successor x11/gtksourceview4 [nia 2020-05-15]
 	Removed print/libgnomeprint [nia 2020-05-15]
 	Removed www/gtkhtml314 [nia 2020-05-15]
+	Removed audio/gnome-speech [nia 2020-05-15]
