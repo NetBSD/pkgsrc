@@ -1,0 +1,3 @@
+Strawberry is a music player and music collection organizer. It is a fork
+of Clementine, aimed at music collectors and audiophiles. It's written in
+C++ using the Qt 5 toolkit.
