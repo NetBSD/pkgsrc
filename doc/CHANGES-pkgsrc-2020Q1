@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.9 2020/05/13 13:49:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.10 2020/05/15 16:58:15 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -119,4 +119,25 @@ net/youtube-dl: update for extractor changes
 
 Pullup ticket #6193 - requested by nia
 graphics/openjpeg: security fix
+
+Pullup ticket #6195 - requested by taca
+security/clamav: security fix
+
+Pullup ticket #6196 - requested by nia
+security/cyrus-sasl: security fix
+
+Pullup ticket #6198 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6197 - requested by nia
+devel/SDL: security fix
+
+Pullup ticket #6199 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6200 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #6201 - requested by nia
+mail/mailman: security fix
 
