@@ -1,11 +1,11 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.18 2019/11/02 21:31:14 tnn Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.19 2020/05/15 10:15:49 jperkin Exp $
 
 BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386) and
 pkg/53223.
 
---- common/autoconf/generated-configure.sh.orig	2019-10-16 01:41:55.000000000 +0000
+--- common/autoconf/generated-configure.sh.orig	2020-04-15 02:42:06.000000000 +0000
 +++ common/autoconf/generated-configure.sh
-@@ -4185,7 +4185,7 @@ VALID_TOOLCHAINS_all="gcc clang solstudi
+@@ -4188,7 +4188,7 @@ VALID_TOOLCHAINS_all="gcc clang solstudi
  # These toolchains are valid on different platforms
  VALID_TOOLCHAINS_bsd="clang gcc"
  VALID_TOOLCHAINS_linux="gcc clang"
@@ -14,7 +14,7 @@ pkg/53223.
  VALID_TOOLCHAINS_macosx="gcc clang"
  VALID_TOOLCHAINS_aix="xlc"
  VALID_TOOLCHAINS_windows="microsoft"
-@@ -15479,9 +15479,6 @@ done
+@@ -15482,9 +15482,6 @@ done
    # We need to find a recent version of GNU make. Especially on Solaris, this can be tricky.
    if test "x$MAKE" != x; then
      # User has supplied a make, test it.
@@ -24,7 +24,7 @@ pkg/53223.
  
    MAKE_CANDIDATE=""$MAKE""
    DESCRIPTION="user supplied MAKE=$MAKE"
-@@ -20134,7 +20131,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -20135,7 +20132,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -33,7 +33,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -20466,7 +20463,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -20467,7 +20464,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -42,7 +42,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -20784,7 +20781,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -20785,7 +20782,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -51,7 +51,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -20972,7 +20969,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -20973,7 +20970,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -60,7 +60,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21250,7 +21247,7 @@ fi
+@@ -21251,7 +21248,7 @@ fi
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -69,7 +69,7 @@ pkg/53223.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -21300,7 +21297,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21301,7 +21298,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -78,7 +78,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21515,7 +21512,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21516,7 +21513,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -87,7 +87,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21695,7 +21692,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21696,7 +21693,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -96,7 +96,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21903,7 +21900,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21904,7 +21901,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -105,7 +105,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22083,7 +22080,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22084,7 +22081,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -114,7 +114,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22291,7 +22288,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22292,7 +22289,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -123,7 +123,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22471,7 +22468,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22472,7 +22469,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -132,7 +132,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22679,7 +22676,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22680,7 +22677,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -141,7 +141,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22859,7 +22856,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22860,7 +22857,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -150,7 +150,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23054,7 +23051,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23055,7 +23052,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -159,7 +159,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23232,7 +23229,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23233,7 +23230,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -168,7 +168,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23428,7 +23425,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23429,7 +23426,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -177,7 +177,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23606,7 +23603,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23607,7 +23604,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -186,7 +186,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23801,7 +23798,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23802,7 +23799,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -195,7 +195,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23979,7 +23976,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23980,7 +23977,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -204,7 +204,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24175,7 +24172,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24176,7 +24173,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -213,7 +213,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24353,7 +24350,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24354,7 +24351,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -222,7 +222,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24530,7 +24527,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24531,7 +24528,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -231,7 +231,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24936,16 +24933,15 @@ $as_echo_n "checking flags for boot jdk 
+@@ -24937,16 +24934,15 @@ $as_echo_n "checking flags for boot jdk
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BOOT_JDK_BITS" = x32; then
@@ -249,7 +249,7 @@ pkg/53223.
  
    $ECHO "Check if jvm arg is ok: -Xmx$JVM_MAX_HEAP" >&5
    $ECHO "Command: $JAVA -Xmx$JVM_MAX_HEAP -version" >&5
-@@ -27479,7 +27475,7 @@ $as_echo_n "checking resolved symbolic l
+@@ -27480,7 +27476,7 @@ $as_echo_n "checking resolved symbolic l
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -258,7 +258,7 @@ pkg/53223.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -27934,7 +27930,7 @@ $as_echo_n "checking for resolved symbol
+@@ -27935,7 +27931,7 @@ $as_echo_n "checking for resolved symbol
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -267,7 +267,7 @@ pkg/53223.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -29220,7 +29216,7 @@ $as_echo_n "checking resolved symbolic l
+@@ -29221,7 +29217,7 @@ $as_echo_n "checking resolved symbolic l
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -276,7 +276,7 @@ pkg/53223.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -29675,7 +29671,7 @@ $as_echo_n "checking for resolved symbol
+@@ -29676,7 +29672,7 @@ $as_echo_n "checking for resolved symbol
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -285,7 +285,7 @@ pkg/53223.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -41391,6 +41387,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -41393,6 +41389,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
        SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
        SET_SHARED_LIBRARY_NAME='-Xlinker -install_name -Xlinker @rpath/$1'
        SET_SHARED_LIBRARY_MAPFILE=''
@@ -298,7 +298,7 @@ pkg/53223.
      else
        # Default works for linux, might work on other platforms as well.
        SHARED_LIBRARY_FLAGS='-shared'
-@@ -41439,7 +41441,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -41444,7 +41446,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xsolaris; then
      CFLAGS_JDK="${CFLAGS_JDK} -D__solaris__"
      CXXFLAGS_JDK="${CXXFLAGS_JDK} -D__solaris__"
@@ -308,7 +308,7 @@ pkg/53223.
    fi
    # The (cross) compiler is now configured, we can now test capabilities
    # of the target platform.
-@@ -41580,7 +41584,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -41585,7 +41589,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
    elif test "x$TOOLCHAIN_TYPE" = xgcc; then
      LEGACY_EXTRA_CFLAGS="$LEGACY_EXTRA_CFLAGS -fstack-protector"
      LEGACY_EXTRA_CXXFLAGS="$LEGACY_EXTRA_CXXFLAGS -fstack-protector"
@@ -317,7 +317,17 @@ pkg/53223.
        LDFLAGS_JDK="$LDFLAGS_JDK -Wl,-z,relro"
        LEGACY_EXTRA_LDFLAGS="$LEGACY_EXTRA_LDFLAGS -Wl,-z,relro"
      fi
-@@ -42798,7 +42802,8 @@ $as_echo "alsa pulse x11" >&6; }
+@@ -42332,7 +42336,9 @@ $as_echo "$supports" >&6; }
+       # Enabling pie on 32 bit builds prevents the JVM from allocating a continuous
+       # java heap.
+       if test "x$OPENJDK_TARGET_CPU_BITS" != "x32"; then
++       if test "x$OPENJDK_TARGET_OS" != "xsolaris"; then
+         LDFLAGS_JDKEXE="$LDFLAGS_JDKEXE -pie"
++       fi
+       fi
+     fi
+   fi
+@@ -42825,7 +42831,8 @@ $as_echo "alsa pulse x11" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xbsd; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking what is not needed on BSD?" >&5
  $as_echo_n "checking what is not needed on BSD?... " >&6; }
@@ -327,7 +337,7 @@ pkg/53223.
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: alsa pulse" >&5
-@@ -44028,7 +44033,7 @@ $as_echo "$as_me: WARNING: Can't find pr
+@@ -44055,7 +44062,7 @@ $as_echo "$as_me: WARNING: Can't find pr
      BUILD_FREETYPE=no
    fi
    # Now check if configure found a version of 'msbuild.exe'
@@ -336,7 +346,7 @@ pkg/53223.
      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&5
  $as_echo "$as_me: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&2;}
      BUILD_FREETYPE=no
-@@ -44444,7 +44449,11 @@ $as_echo "$as_me: WARNING: --with-freety
+@@ -44471,7 +44478,11 @@ $as_echo "$as_me: WARNING: --with-freety
  
        # Allow --with-freetype-lib and --with-freetype-include to override
        if test "x$with_freetype_include" != x; then
@@ -349,7 +359,7 @@ pkg/53223.
        fi
        if test "x$with_freetype_lib" != x; then
          POTENTIAL_FREETYPE_LIB_PATH="$with_freetype_lib"
-@@ -47554,7 +47563,7 @@ $as_echo "$as_me: The path of FREETYPE_I
+@@ -47581,7 +47592,7 @@ $as_echo "$as_me: The path of FREETYPE_I
      FREETYPE_INCLUDE_PATH="`cd "$path"; $THEPWDCMD -L`"
    fi
  
@@ -358,7 +368,7 @@ pkg/53223.
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH/freetype2 -I$FREETYPE_INCLUDE_PATH"
        else
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH"
-@@ -47687,7 +47696,7 @@ $as_echo "$as_me: The path of FREETYPE_L
+@@ -47714,7 +47725,7 @@ $as_echo "$as_me: The path of FREETYPE_L
        if test "x$OPENJDK_TARGET_OS" = xwindows; then
          FREETYPE_LIBS="$FREETYPE_LIB_PATH/freetype.lib"
        else
@@ -367,7 +377,7 @@ pkg/53223.
        fi
      fi
  
-@@ -49024,9 +49033,6 @@ fi
+@@ -49051,9 +49062,6 @@ fi
  
  
  
@@ -377,7 +387,7 @@ pkg/53223.
  
      llvm_components="jit mcjit engine nativecodegen native"
      unset LLVM_CFLAGS
-@@ -49069,7 +49075,7 @@ fi
+@@ -49096,7 +49104,7 @@ fi
    fi
  
    # libCrun is the c++ runtime-library with SunStudio (roughly the equivalent of gcc's libstdc++.so)
