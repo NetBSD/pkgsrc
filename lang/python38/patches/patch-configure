@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.3 2020/01/06 22:54:51 leot Exp $
+$NetBSD: patch-configure,v 1.4 2020/05/15 08:24:50 adam Exp $
 
 Use gnu99 instead of c99 to avoid "alloca() undefined" problems.
 Fix linking on Darwin; don't use -stack_size.
 Changes for consistency across pkgsrc platforms.
 Simplify _sysconfigdata to include only platform name.
 
---- configure.orig	2019-12-18 17:21:23.000000000 +0000
+--- configure.orig	2020-05-13 17:31:54.000000000 +0000
 +++ configure
-@@ -6902,7 +6902,7 @@ UNIVERSAL_ARCH_FLAGS=
+@@ -6924,7 +6924,7 @@ UNIVERSAL_ARCH_FLAGS=
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -16,7 +16,7 @@ Simplify _sysconfigdata to include only platform name.
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -9514,7 +9514,6 @@ then
+@@ -9536,7 +9536,6 @@ then
  		# to ensure that tests don't crash
  		# Note: This matches the value of THREAD_STACK_SIZE in
  		# thread_pthread.h
@@ -24,20 +24,20 @@ Simplify _sysconfigdata to include only platform name.
  
  		if test "$enable_framework"
  		then
-@@ -14259,10 +14258,10 @@ _ACEOF
+@@ -14303,10 +14302,10 @@ _ACEOF
  if ac_fn_c_try_compile "$LINENO"; then :
  
  
--if grep noonsees conftest.$ac_objext >/dev/null ; then
+-if $GREP noonsees conftest.$ac_objext >/dev/null ; then
 +if strings -a conftest.$ac_objext | grep noonsees >/dev/null ; then
    ax_cv_c_float_words_bigendian=yes
  fi
--if grep seesnoon conftest.$ac_objext >/dev/null ; then
+-if $GREP seesnoon conftest.$ac_objext >/dev/null ; then
 +if strings -a conftest.$ac_objext | grep seesnoon >/dev/null ; then
    if test "$ax_cv_c_float_words_bigendian" = unknown; then
      ax_cv_c_float_words_bigendian=no
    else
-@@ -15148,8 +15147,6 @@ fi
+@@ -15192,8 +15191,6 @@ fi
  
  
  case $ac_sys_system in
@@ -46,7 +46,7 @@ Simplify _sysconfigdata to include only platform name.
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -15169,11 +15166,7 @@ else
+@@ -15213,11 +15210,7 @@ else
  fi
  
  
