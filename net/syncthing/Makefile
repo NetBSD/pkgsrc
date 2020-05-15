@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2020/04/17 00:16:56 gdt Exp $
+# $NetBSD: Makefile,v 1.109 2020/05/15 13:44:20 triaxx Exp $
 
 # Upstream used to frequently break protocol compatibility, but since
 # 2018 or so this has been much better.  While users of pkgsrc
@@ -17,7 +17,7 @@
 #
 # Minor version updates may be committed without asking.  Major
 # updates not following the above policy will be reverted.
-DISTNAME=	syncthing-source-v1.4.2
+DISTNAME=	syncthing-source-v1.5.0
 PKGNAME=	${DISTNAME:S,source-v,,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
