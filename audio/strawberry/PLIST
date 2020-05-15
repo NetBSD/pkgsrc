@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/15 17:38:35 nia Exp $
+bin/strawberry
+bin/strawberry-tagreader
+man/man1/strawberry-tagreader.1
+man/man1/strawberry.1
+share/applications/org.strawberrymusicplayer.strawberry.desktop
+share/icons/hicolor/128x128/apps/strawberry.png
+share/icons/hicolor/48x48/apps/strawberry.png
+share/icons/hicolor/64x64/apps/strawberry.png
+share/metainfo/org.strawberrymusicplayer.strawberry.appdata.xml
