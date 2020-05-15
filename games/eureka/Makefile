@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/04/27 18:38:44 micha Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/15 14:59:53 micha Exp $
 
 DISTNAME=	eureka-1.27b-source
 # Some macOS patches were added after the release of 1.27 but unfortunately
@@ -13,6 +13,17 @@ MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/eureka-editor/
 COMMENT=	Doom/Heretic/Hexen map editor
 LICENSE=	gnu-gpl-v2
+
+# Error on SmartOS 20200130T160054Z/x86_64:
+# [...]
+# src/e_basis.cc:1200:57: error: expected ',' or '...' before numeric constant
+#  1200 | static void ChecksumSector(crc32_c& crc, const Sector * SEC)
+#       |                                                         ^~~
+# src/e_basis.cc: In function 'void ChecksumSector(crc32_c&, const Sector*)':
+# src/e_basis.cc:1202:12: error: base operand of '->' is not a pointer
+#  1202 |  crc += SEC->floorh;
+#       |            ^~
+BROKEN_ON_PLATFORM=	SunOS-*-*
 
 # Makefile declares "-std=c++03"
 USE_LANGUAGES=	c++03
