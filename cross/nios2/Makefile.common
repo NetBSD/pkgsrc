@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2016/06/19 16:20:28 wiz Exp $ -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.6 2020/05/15 13:01:52 rillig Exp $ -*- Makefile -*-
 #
 # used by cross/nios2-binutils/Makefile
 # used by cross/nios2-gcc/Makefile
@@ -12,6 +12,7 @@ MASTER_SITES=		https://sourcery.mentor.com/GNUToolchain/package11649/public/nios
 EXTRACT_SUFX=           .tar.bz2
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 INFO_FILES=		yes
 
 NIOS2_TARGET?=		nios2-elf
