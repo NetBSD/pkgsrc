@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2909 2020/05/15 00:15:43 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2910 2020/05/15 07:17:00 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4587,3 +4587,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/mk-configure to 0.34.2 [cheusov 2020-05-14]
 	Updated graphics/jbig2dec to 0.18 [leot 2020-05-14]
 	Updated devel/xfce4-conf to 4.14.3 [gutteridge 2020-05-15]
+	Updated textproc/bat to 0.15.1 [fox 2020-05-15]
