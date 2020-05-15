@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2020/04/03 10:30:32 wiz Exp $
+# $NetBSD: Makefile,v 1.214 2020/05/15 06:02:55 rillig Exp $
 
 DISTNAME=	graphviz-2.40.1
 PKGREVISION=	47
@@ -19,6 +19,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake bison flex pkg-config
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-python
