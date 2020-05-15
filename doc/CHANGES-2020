@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2914 2020/05/15 09:46:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2915 2020/05/15 09:47:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4600,3 +4600,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/postgresql10 to 10.13 [adam 2020-05-15]
 	Updated databases/postgresql11 to 11.8 [adam 2020-05-15]
 	Updated databases/postgresql12 to 12.3 [adam 2020-05-15]
+	Removed inputmethod/imhangul_status_applet [nia 2020-05-15]
