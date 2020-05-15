@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2910 2020/05/15 07:17:00 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2911 2020/05/15 08:33:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4588,3 +4588,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/jbig2dec to 0.18 [leot 2020-05-14]
 	Updated devel/xfce4-conf to 4.14.3 [gutteridge 2020-05-15]
 	Updated textproc/bat to 0.15.1 [fox 2020-05-15]
+	Updated lang/python38 to 3.8.3 [adam 2020-05-15]
+	Updated lang/py38-html-docs to 3.8.3 [adam 2020-05-15]
+	Updated devel/py-setuptools to 44.1.0 [adam 2020-05-15]
+	Updated databases/py-multidict to 4.7.6 [adam 2020-05-15]
+	Updated www/py-sanic to 20.3.0 [adam 2020-05-15]
