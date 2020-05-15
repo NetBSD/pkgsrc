@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2923 2020/05/15 12:08:49 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2924 2020/05/15 12:19:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed www/gtkhtml314 [nia 2020-05-15]
 	Removed audio/gnome-speech [nia 2020-05-15]
 	Removed audio/gnome-speech-espeak [nia 2020-05-15]
+	Removed sysutils/gnometoaster [nia 2020-05-15]
