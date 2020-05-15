@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.23 2020/04/30 23:50:28 joerg Exp $
+# $NetBSD: metadata.mk,v 1.24 2020/05/15 22:13:39 maya Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -399,7 +399,7 @@ ${_DEPENDS_PLIST}: ${PLIST}
 	${AWK} '$$1 == "bootstrap" || $$1 == "build" { printf "@blddep %s\n", $$3; }' < ${_RDEPENDS_FILE}; \
 	${CAT} ${PLIST}; } > ${.TARGET}
 
-_PKG_CREATE_ARGS+=				-l -U
+_PKG_CREATE_ARGS+=				-l
 _PKG_CREATE_ARGS+=				-B ${_BUILD_INFO_FILE}
 _PKG_CREATE_ARGS+=				-b ${_BUILD_VERSION_FILE}
 _PKG_CREATE_ARGS+=				-c ${_COMMENT_FILE}
