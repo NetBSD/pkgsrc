@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2020/04/29 20:28:46 maya Exp $
+# $NetBSD: Makefile,v 1.46 2020/05/15 17:25:11 bsiegert Exp $
 
-DISTNAME=	alpine-2.21
-PKGREVISION=	1
+DISTNAME=	alpine-2.22
 CATEGORIES=	mail
 MASTER_SITES=	http://alpine.x10host.com/alpine/release/src/
 EXTRACT_SUFX=	.tar.xz
