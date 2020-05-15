@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1137 2020/05/12 06:08:18 adam Exp $
+# $NetBSD: Makefile,v 1.1138 2020/05/15 11:37:00 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -223,7 +223,6 @@ SUBDIR+=	freexl
 SUBDIR+=	gdome2
 SUBDIR+=	glimpse
 SUBDIR+=	gnome-doc-utils
-SUBDIR+=	gnome-subtitles
 SUBDIR+=	go-chroma
 SUBDIR+=	go-diff
 SUBDIR+=	go-glob
