@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2019/12/10 13:06:23 ng0 Exp $
+# $NetBSD: options.mk,v 1.11 2020/05/15 16:39:34 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	doc rust
@@ -41,6 +41,7 @@ BUILDLINK_API_DEPENDS.rust+=	rust>=1.34.0
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} -p src/rust/target/release
 
+.PHONY: show-tor-cargo-depends
 # \todo: Maybe we should add a path option to show-cargo-depends.
 show-tor-cargo-depends:
 	${RUN}${AWK} '/^\"checksum/ { print "CARGO_CRATE_DEPENDS+=\t" $$2 "-" $$3""; next } ' ${WRKSRC}/src/rust/Cargo.lock
