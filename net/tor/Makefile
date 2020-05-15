@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.152 2020/03/18 16:43:49 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2020/05/15 16:39:34 wiz Exp $
 
-DISTNAME=	tor-0.4.2.7
+DISTNAME=	tor-0.4.3.5
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -55,6 +55,8 @@ FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
+
+REPLACE_PERL+=		scripts/maint/checkSpace.pl
 
 .include "options.mk"
 
