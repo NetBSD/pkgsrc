@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3124 2020/05/07 06:07:33 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3125 2020/05/15 11:37:00 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -885,9 +885,6 @@ SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
 SUBDIR+=	mm-common
 SUBDIR+=	mono-addins
-SUBDIR+=	mono-tools
-SUBDIR+=	monodevelop
-SUBDIR+=	monodevelop-database
 SUBDIR+=	monotone
 SUBDIR+=	monotone-server
 SUBDIR+=	monotone-viz
