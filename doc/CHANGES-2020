@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2911 2020/05/15 08:33:14 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2912 2020/05/15 09:38:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4593,3 +4593,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-setuptools to 44.1.0 [adam 2020-05-15]
 	Updated databases/py-multidict to 4.7.6 [adam 2020-05-15]
 	Updated www/py-sanic to 20.3.0 [adam 2020-05-15]
+	Updated sysutils/u-boot-rockpro64-ayufan to 2020.01.2014 [tnn 2020-05-15]
