@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2020/05/15 19:12:46 maya Exp $
+bin/fio-btrace2fio
