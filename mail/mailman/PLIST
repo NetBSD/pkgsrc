@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/03/25 01:52:02 jklos Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/05/15 09:40:46 nia Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -2164,6 +2164,7 @@ lib/mailman/tests/bounces/dsn_14.txt
 lib/mailman/tests/bounces/dsn_15.txt
 lib/mailman/tests/bounces/dsn_16.txt
 lib/mailman/tests/bounces/dsn_17.txt
+lib/mailman/tests/bounces/dsn_18.txt
 lib/mailman/tests/bounces/dumbass_01.txt
 lib/mailman/tests/bounces/exim_01.txt
 lib/mailman/tests/bounces/groupwise_01.txt
@@ -2250,6 +2251,7 @@ lib/mailman/tests/bounces/yahoo_08.txt
 lib/mailman/tests/bounces/yahoo_09.txt
 lib/mailman/tests/bounces/yahoo_10.txt
 lib/mailman/tests/bounces/yahoo_11.txt
+lib/mailman/tests/bounces/yahoo_12.txt
 lib/mailman/tests/bounces/yale_01.txt
 lib/mailman/tests/fblast.py
 lib/mailman/tests/msgs/bad_01.txt
