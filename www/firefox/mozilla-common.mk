@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.166 2020/05/07 10:14:16 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.167 2020/05/15 06:59:25 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -51,7 +51,7 @@ BUILD_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-sqlite3-[0-9]*:../../databases/py-s
 BUILD_DEPENDS+=		py37-sqlite3-[0-9]*:../../databases/py-sqlite3
 .endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-TOOL_DEPENDS+=		nasm>=1.1:../../devel/nasm
+TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
