@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.875 2020/04/29 20:15:59 maya Exp $
+# $NetBSD: Makefile,v 1.876 2020/05/15 12:18:03 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -214,7 +214,6 @@ SUBDIR+=	gnome-nds-thumbnailer
 SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfs-monikers
 SUBDIR+=	gnome-vfsmm
-SUBDIR+=	gnometoaster
 SUBDIR+=	gnuit
 SUBDIR+=	goreman
 SUBDIR+=	gpart
