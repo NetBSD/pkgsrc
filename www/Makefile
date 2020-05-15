@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1456 2020/05/14 10:36:50 nikita Exp $
+# $NetBSD: Makefile,v 1.1457 2020/05/15 12:01:54 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -138,7 +138,6 @@ SUBDIR+=	go-webhooks
 SUBDIR+=	goaccess
 SUBDIR+=	grafana
 SUBDIR+=	gtkasp2php
-SUBDIR+=	gtkhtml314
 SUBDIR+=	guile-haunt
 SUBDIR+=	gwt
 SUBDIR+=	h2o
