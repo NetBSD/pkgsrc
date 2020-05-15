@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.90 2020/01/26 17:31:35 rillig Exp $
+# $NetBSD: Makefile,v 1.90.2.1 2020/05/15 16:57:56 bsiegert Exp $
 
-DISTNAME=	mailman-2.1.29
-PKGNAME=	mailman-2.1.29
-PKGREVISION=	1
+DISTNAME=	mailman-2.1.33
+PKGNAME=	mailman-2.1.33
 CATEGORIES=	mail www
-MASTER_SITES=	https://launchpad.net/mailman/2.1/2.1.29/+download/
+MASTER_SITES=	https://launchpad.net/mailman/2.1/2.1.33/+download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.list.org/
+HOMEPAGE=	http://www.list.org/
 COMMENT=	The GNU Mailing List Manager
 LICENSE=	gnu-gpl-v2
 
