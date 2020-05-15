@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2913 2020/05/15 09:41:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2914 2020/05/15 09:46:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4595,3 +4595,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-sanic to 20.3.0 [adam 2020-05-15]
 	Updated sysutils/u-boot-rockpro64-ayufan to 2020.01.2014 [tnn 2020-05-15]
 	Updated mail/mailman to 2.1.33 [nia 2020-05-15]
+	Updated databases/postgresql95 to 9.5.22 [adam 2020-05-15]
+	Updated databases/postgresql96 to 9.6.18 [adam 2020-05-15]
+	Updated databases/postgresql10 to 10.13 [adam 2020-05-15]
+	Updated databases/postgresql11 to 11.8 [adam 2020-05-15]
+	Updated databases/postgresql12 to 12.3 [adam 2020-05-15]
