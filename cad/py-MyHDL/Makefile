@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/05/16 08:41:53 adam Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/16 09:03:23 adam Exp $
 
 .include "Makefile.common"
 
@@ -8,7 +8,7 @@ PKGREVISION=	1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hardware description in Python
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 .include "../../lang/python/pyversion.mk"
 

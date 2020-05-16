@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/05/16 08:54:05 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/05/16 09:03:22 adam Exp $
 
 DISTNAME=	pytest-cov-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-coverage>=4.4:../../devel/py-coverage
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 USE_LANGUAGES=	# none
 

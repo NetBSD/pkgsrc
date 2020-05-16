@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/05/16 08:37:21 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/05/16 09:03:22 adam Exp $
 
 DISTNAME=	pytest-runner-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
