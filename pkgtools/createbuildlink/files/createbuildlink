@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.38 2018/08/22 20:48:37 maya Exp $
+#	$NetBSD: createbuildlink,v 1.39 2020/05/16 06:28:52 rillig Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -32,7 +32,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.38 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.39 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -97,7 +97,6 @@ echo >>$sedrules "s|@@PKGUPPER@@|$PKGUPPER|g"
 echo >>$sedrules "s|@@PKGVER@@|$PKGVER|g"
 echo >>$sedrules "s|@@PREFIX@@|$PREFIX|g"
 echo >>$sedrules "s|@@REV@@|$REV|g"
-echo >>$sedrules "s|@@PKGVERSION@@|@PKGVERSION@|g"
 
 #
 # buildlink header
