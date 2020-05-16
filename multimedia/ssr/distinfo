@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2019/08/27 23:02:18 markd Exp $
+$NetBSD: distinfo,v 1.6 2020/05/16 19:06:39 nia Exp $
 
-SHA1 (ssr-0.3.11.tar.gz) = 4cfd873d57b72e64ff8299a2da0ab9bfb0e054c4
-RMD160 (ssr-0.3.11.tar.gz) = 7013bc825c83a95f88062fedddbbf0271b50c671
-SHA512 (ssr-0.3.11.tar.gz) = 5919774a00cd7015cd7db40561efaea43809b9465508b7770db9eb0fc87f338746e5cd4a79a0ab6c09e516257fa80184c3dcb5ab400c0ef2c0a8cf50ea2a073f
-Size (ssr-0.3.11.tar.gz) = 1823944 bytes
+SHA1 (ssr-0.4.1.tar.gz) = e1ad0a98ba78aa6730c0e91bb6814bf281d4aec0
+RMD160 (ssr-0.4.1.tar.gz) = 9ea16862aab1a75fb02716782f130989786c3a58
+SHA512 (ssr-0.4.1.tar.gz) = b890fafb65a87c298562d25388384577408d7ccbb0b1280bb4fdad198c9b9581893e68b99aa9e478a61c59736689ae40be0f30132d56ee9a9796b8885541d8d5
+Size (ssr-0.4.1.tar.gz) = 1893293 bytes
 SHA1 (patch-glinject_elfhacks.c) = 4d416e0ea6b160d34583e737ba5bd1981a8a94ef
