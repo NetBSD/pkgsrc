@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/03/08 16:42:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.44 2020/05/16 09:09:04 adam Exp $
 
 DISTNAME=	cffi-1.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,8 @@ USE_LANGUAGES=	c c++ # c++ for testing only
 USE_TOOLS+=	pkg-config
 
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
@@ -29,4 +30,5 @@ do-test:
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
