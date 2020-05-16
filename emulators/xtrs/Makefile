@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/07/04 16:18:30 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/16 12:31:11 rillig Exp $
 #
 
 DISTNAME=	xtrs-4.9d
@@ -23,10 +23,10 @@ SUBST_SED.mf+=		-e 's|/usr/X11/|${X11BASE}/|g'
 SUBST_SED.mf+=		-e 's|/usr/include/X11|${X11BASE}/include|g'
 SUBST_SED.mf+=		-e 's|/share/man|/${PKGMANDIR}|g'
 
+.if ${OSS_TYPE} != none
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-configure
 SUBST_FILES.oss=	trs_cassette.c cassette
-.if ${OSS_TYPE} != none
 SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSSOUND}|g'
 SUBST_SED.oss+=		-e 's|if __linux|if 1|'
 .endif
