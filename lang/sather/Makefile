@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2020/01/18 23:32:45 rillig Exp $
+# $NetBSD: Makefile,v 1.70 2020/05/16 13:56:55 rillig Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		15
@@ -49,6 +49,7 @@ SUBST_SED.sather-configure+=	-e s:@TCL_PREFIX@:${BUILDLINK_PREFIX.tcl}:g
 SUBST_SED.sather-configure+=	-e s:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g
 SUBST_VARS.sather-configure+=	LINKER_RPATH_FLAG
 SUBST_VARS.sather-configure+=	COMPILER_RPATH_FLAG
+SUBST_NOOP_OK.sather-configure=	yes # because of ${LOWER_OPSYS}
 
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 share/doc/sather \
 			lib/sather lib/sather/Bin share/emacs/site-lisp
