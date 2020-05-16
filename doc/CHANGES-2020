@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2963 2020/05/16 20:02:17 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2964 2020/05/16 22:32:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4679,3 +4679,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/multimarkdown to 6.5.2 [nia 2020-05-16]
 	Updated graphics/viewnior to 1.7 [nia 2020-05-16]
 	Updated lang/chicken5 to 5.2.0 [nikita 2020-05-16]
+	Updated lang/clang-tools-extra to 10.0.0nb1 [wiz 2020-05-16]
