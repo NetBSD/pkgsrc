@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/05/16 08:43:24 adam Exp $
+# $NetBSD: Makefile,v 1.25 2020/05/16 08:43:55 adam Exp $
 
 DISTNAME=	chardet-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} chardetect chardetect-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
