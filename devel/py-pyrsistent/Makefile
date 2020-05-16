@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/12 21:16:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/16 16:35:24 adam Exp $
 
 DISTNAME=	pyrsistent-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

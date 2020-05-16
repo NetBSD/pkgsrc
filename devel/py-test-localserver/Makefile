@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/11/20 21:21:23 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/16 16:30:16 adam Exp $
 
 DISTNAME=	pytest-localserver-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,12 +12,14 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.10:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.0.0:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC}/tests && py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
