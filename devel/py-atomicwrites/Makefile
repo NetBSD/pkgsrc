@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/04/29 07:42:07 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/16 08:48:47 adam Exp $
 
 DISTNAME=	atomicwrites-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,14 +10,15 @@ HOMEPAGE=	https://github.com/untitaker/python-atomicwrites
 COMMENT=	Python module for atomic file writes on POSIX
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
 EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONED_DEPENDENCIES=	pytest:test
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
