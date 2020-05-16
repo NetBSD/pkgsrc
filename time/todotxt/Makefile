@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/04/25 15:23:55 leot Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/16 17:34:13 rillig Exp $
 
 DISTNAME=	todotxt-2.11.0
 CATEGORIES=	time
@@ -34,6 +34,7 @@ SUBST_STAGE.shebang=	pre-configure
 SUBST_MESSAGE.shebang=	Replace hardcoded /bin/bash in the middle of scripts
 SUBST_FILES.shebang+=	tests/actions-test-lib.sh
 SUBST_SED.shebang+=	-e '2,$$s;!/bin/bash;!${BASH};'
+SUBST_NOOP_OK.shebang=	yes
 
 REPLACE_BASH+=	todo.sh
 REPLACE_BASH+=	tests/*.sh
