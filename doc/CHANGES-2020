@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2932 2020/05/16 04:57:21 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2933 2020/05/16 06:29:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4627,3 +4627,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-crontab to 2.5.0 [adam 2020-05-16]
 	Updated devel/py-more-itertools to 8.3.0 [adam 2020-05-16]
 	Updated www/py-hstspreload to 2020.5.16 [adam 2020-05-16]
+	Updated pkgtools/createbuildlink to 3.18 [rillig 2020-05-16]
