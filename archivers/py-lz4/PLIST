@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/06/22 06:38:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/05/16 08:31:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,10 +15,11 @@ ${PYSITELIB}/lz4/block/_block.so
 ${PYSITELIB}/lz4/frame/__init__.py
 ${PYSITELIB}/lz4/frame/__init__.pyc
 ${PYSITELIB}/lz4/frame/__init__.pyo
-${PYSITELIB}/lz4/frame/_compression.py
-${PYSITELIB}/lz4/frame/_compression.pyc
-${PYSITELIB}/lz4/frame/_compression.pyo
 ${PYSITELIB}/lz4/frame/_frame.so
+${PYSITELIB}/lz4/stream/__init__.py
+${PYSITELIB}/lz4/stream/__init__.pyc
+${PYSITELIB}/lz4/stream/__init__.pyo
+${PYSITELIB}/lz4/stream/_stream.so
 ${PYSITELIB}/lz4/version.py
 ${PYSITELIB}/lz4/version.pyc
 ${PYSITELIB}/lz4/version.pyo
