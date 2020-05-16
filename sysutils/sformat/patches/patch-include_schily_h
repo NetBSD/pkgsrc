@@ -1,10 +1,19 @@
-$NetBSD: patch-include_schily_h,v 1.1 2012/06/16 08:55:55 dholland Exp $
+$NetBSD: patch-include_schily_h,v 1.2 2020/05/16 02:15:53 joerg Exp $
 
 Fix symbol name conflict with POSIX getline().
 
---- include/schily.h	Sat Jun 16 04:48:53 2012 -0400
-+++ include/schily.h	Sat Jun 16 04:50:37 2012 -0400
-@@ -153,7 +153,7 @@
+--- include/schily.h.orig	2001-02-23 16:28:17.000000000 +0000
++++ include/schily.h
+@@ -90,8 +90,6 @@ extern	int	fexecle __PR((const char *, F
+ 		/* 6th arg not const, fexecv forces av[ac] = NULL */
+ extern	int	fexecv __PR((const char *, FILE *, FILE *, FILE *, int,
+ 							char **));
+-extern	int	fexecve __PR((const char *, FILE *, FILE *, FILE *,
+-					char * const *, char * const *));
+ extern	int	fgetline __PR((FILE *, char *, int));
+ extern	int	fgetstr __PR((FILE *, char *, int));
+ extern	void	file_raise __PR((FILE *, int));
+@@ -153,7 +151,7 @@ extern	char	*fillbytes __PR((void *, int
  extern	char	*findbytes __PR((const void *, int, char));
  extern	int	findline __PR((const char *, char, const char *,
  							int, char **, int));
