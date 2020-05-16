@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/05/06 14:04:31 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/16 12:43:10 rillig Exp $
 
 DISTNAME=	bastet-0.43.2
 PKGREVISION=	2
@@ -22,7 +22,7 @@ SUBST_CLASSES+=		vardir
 SUBST_STAGE.vardir=	pre-configure
 SUBST_FILES.vardir=	Config.cpp
 SUBST_MESSAGE.vardir=	Fixing VARBASE.
-SUBST_SED.vardir=	-e "s|/var/games|${VARBASE}/games|1"
+SUBST_SED.vardir=	-e "s|/var/games|${VARBASE}/games|"
 
 REQD_FILES_PERMS+=	/dev/null ${VARBASE}/games/bastet.scores2 ${GAMEDATA_PERMS}
 

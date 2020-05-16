@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.40 2020/05/12 05:34:04 rillig Exp $
+# $NetBSD: subst.sh,v 1.41 2020/05/16 12:43:10 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1191,6 +1191,9 @@ if test_case_begin 'identity substitution implementation'; then
 	assert_identity 'yes'	-e 's,a^,a^,'
 	assert_identity 'no'	-e 's,^a,^a,'
 	assert_identity 'no'	-e 's,\(^aaa\)aaa,\(^aaa\)aaa,'
+
+	# Seen in games/bastet before 2020-05-16.
+	assert_identity 'yes'	-e 's,a,a,1'
 
 	test_case_end
 fi
