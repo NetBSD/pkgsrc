@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/10/02 16:37:48 kamil Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/16 11:59:45 rillig Exp $
 
 DISTNAME=		tcllib-1.19
 CATEGORIES=		devel
@@ -32,7 +32,6 @@ SUBST_FILES.tclsh+=	modules/pt/tools/bench-compare.tcl
 SUBST_FILES.tclsh+=	modules/pt/tools/regenerate_parsers.tcl
 SUBST_FILES.tclsh+=	modules/stringprep/tools/gen_stringprep_data.tcl
 SUBST_FILES.tclsh+=	modules/stringprep/tools/gen_unicode_data.tcl
-SUBST_FILES.tclsh+=	modules/zip/mkzip.tcl
 SUBST_FILES.tclsh+=	apps/dtplite
 SUBST_FILES.tclsh+=	apps/nns
 SUBST_FILES.tclsh+=	apps/nnsd
