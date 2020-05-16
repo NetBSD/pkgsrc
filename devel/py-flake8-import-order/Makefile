@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/03/05 12:48:17 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/16 17:13:40 adam Exp $
 
 DISTNAME=	flake8-import-order-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,10 +14,12 @@ DEPENDS+=	${PYPKGPREFIX}-asttokens-[0-9]*:../../lang/py-asttokens
 DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-lama-[0-9]*:../../devel/py-lama
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
