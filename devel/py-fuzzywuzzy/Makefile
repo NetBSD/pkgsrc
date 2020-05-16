@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/06 08:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/16 17:13:40 adam Exp $
 
 DISTNAME=	fuzzywuzzy-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,14 +13,11 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-Levenshtein-[0-9]*:../../textproc/py-Levenshtein
 TEST_DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
-#post-install:
-#	cd ${DESTDIR}${PREFIX}/bin && \
-#	${MV} futurize futurize-${PYVERSSUFFIX} && \
-#	${MV} pasteurize pasteurize-${PYVERSSUFFIX} || ${TRUE}
-
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
