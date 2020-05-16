@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/12/14 10:54:16 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/16 17:20:21 adam Exp $
 
-DISTNAME=	joblib-0.14.1
+DISTNAME=	joblib-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/joblib/}
@@ -10,12 +10,13 @@ HOMEPAGE=	https://joblib.readthedocs.io/
 COMMENT=	Set of tools to provide lightweight pipelining
 LICENSE=	modified-bsd
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC}/joblib && pytest-${PYVERSSUFFIX}
+PYSETUPTESTTARGET=	pytest
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
