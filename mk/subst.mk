@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.92 2020/05/02 05:52:09 rillig Exp $
+# $NetBSD: subst.mk,v 1.93 2020/05/16 19:02:32 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -22,23 +22,18 @@
 #	SUBST classes. Defaults to "no".
 #
 # SUBST_NOOP_OK
-#	Whether it is ok to list files in SUBST_FILES that don't contain
-#	any of the patterns from SUBST_SED or SUBST_VARS.  Such a
-#	situation often arises when a package is updated to a newer
-#	version, and the build instructions of the package have been
-#	made more portable or flexible.
+#	Whether it is ok to have patterns in SUBST_FILES that don't
+#	contain any of the patterns from SUBST_SED or SUBST_VARS and
+#	thus are not modified at all.
 #
-#	This setting only affects the filename patterns in SUBST_FILES.
-#	It does not (yet) affect the regular expressions in SUBST_SED.
+#	This setting only detects redundant filename patterns.  It does
+#	not detect redundant patterns in SUBST_SED.
 #
-#	From the viewpoint of sed(1), a pattern like s|man|man| may look
-#	redundant but it really isn't, because the second "man" probably
-#	comes from ${PKGMANDIR}, which may be configured to a different
-#	directory.  Patterns like these are therefore allowed, even if
-#	they are no-ops in the current configuration.
+#	Identity substitutions like s|man|man| do not count as no-ops
+#	since their replacement part usually comes from a variable, such
+#	as PKGMANDIR.
 #
-#	For backwards compatibility this defaults to "yes", but it
-#	should rather be set to "no".
+#	Defaults to no.  Will be removed after 2020Q3.
 #
 # Package-settable variables:
 #
@@ -93,11 +88,19 @@
 #	the actual changes as a unified diff.
 #
 # SUBST_NOOP_OK.<class>
-#	Whether to fail when a SUBST_FILES pattern has no effect.
-#	In most cases, "yes" is appropriate, to catch typos and outdated
-#	definitions.
+#	Whether to allow filename patterns in SUBST_FILES that don't
+#	contain any of the patterns from SUBST_SED.
 #
-#	Default: no (up to 2019Q4), yes (starting with 2020Q1)
+#	Defaults to no, since May 2020.
+#
+#	Typical reasons to change this to yes are:
+#
+#	1.  SUBST_FILES is generated dynamically and may include
+#	    unaffected files.
+#
+#	2.  There are multiple SUBST_SED patterns, and some of these
+#	    do not count as identity substitution since they contain
+#	    ".*" or similar parts.
 #
 # See also:
 #	PLIST_SUBST
@@ -106,7 +109,7 @@
 #
 
 SUBST_SHOW_DIFF?=	no
-SUBST_NOOP_OK?=		yes	# only for backwards compatibility
+SUBST_NOOP_OK?=		no	# since May 2020
 
 _VARGROUPS+=		subst
 _USER_VARS.subst=	SUBST_SHOW_DIFF SUBST_NOOP_OK
