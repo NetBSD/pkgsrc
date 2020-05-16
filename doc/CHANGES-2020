@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2959 2020/05/16 19:10:46 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2960 2020/05/16 19:17:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4675,3 +4675,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/sakura to 3.7.1 [nia 2020-05-16]
 	Updated multimedia/ssr to 0.4.1 [nia 2020-05-16]
 	Updated math/libnumbertext to 1.0.5 [nia 2020-05-16]
+	Updated textproc/uncrustify to 0.71.0 [nia 2020-05-16]
