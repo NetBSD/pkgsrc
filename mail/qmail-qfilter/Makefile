@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/26 17:31:36 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/16 15:25:11 rillig Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.1
@@ -28,6 +28,7 @@ INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
 BUILD_DEFS+=		QMAILDIR
 
 DJB_RESTRICTED=		NO
+DJB_ERRNO_HACK=		no
 DJB_MAKE_TARGETS=	NO
 
 .include "../../mk/bsd.prefs.mk"
