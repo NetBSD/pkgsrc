@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2964 2020/05/16 22:32:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2965 2020/05/16 22:54:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4680,3 +4680,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/viewnior to 1.7 [nia 2020-05-16]
 	Updated lang/chicken5 to 5.2.0 [nikita 2020-05-16]
 	Updated lang/clang-tools-extra to 10.0.0nb1 [wiz 2020-05-16]
+	Updated math/bc-gh to 2.7.2 [gdt 2020-05-16]
