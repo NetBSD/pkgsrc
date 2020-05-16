@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2941 2020/05/16 10:40:30 he Exp $
+$NetBSD: CHANGES-2020,v 1.2942 2020/05/16 14:01:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4641,3 +4641,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test-flake8 to 1.0.6 [adam 2020-05-16]
 	Updated devel/acr to 1.9.2 [rillig 2020-05-16]
 	Updated lang/rust to 1.43.0 [he 2020-05-16]
+	Updated devel/py-dogpile-cache to 0.9.2 [adam 2020-05-16]
+	Updated devel/py-test-asyncio to 0.12.0 [adam 2020-05-16]
