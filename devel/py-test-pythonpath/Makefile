@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/23 07:48:43 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/16 16:30:16 adam Exp $
 
 DISTNAME=	pytest-pythonpath-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/bigsassy/pytest-pythonpath
 COMMENT=	Pytest plugin for adding to the PYTHONPATH
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-test>=2.5.2:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 USE_LANGUAGES=	# none
 
@@ -18,4 +18,5 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

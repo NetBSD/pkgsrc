@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/29 21:43:02 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/16 16:30:16 adam Exp $
 
 DISTNAME=	pytest-random-order-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/jbasko/pytest-random-order
 COMMENT=	Randomise the order in which pytest tests are run
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-test>=3.0.0:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
