@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.109 2020/05/16 10:39:51 he Exp $
+$NetBSD: distinfo,v 1.110 2020/05/16 19:36:12 tnn Exp $
 
 SHA1 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 91517fa95f954427c627cf63eb7c518abd068f3e
 RMD160 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 06a3d922b27aac2deb570301542897a131b47cd0
@@ -120,6 +120,8 @@ SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = c5e74d0e8deb555
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = 7588a46aaa277ef04b33ac6d904b9d1d81579f2a
 SHA1 (patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h) = 977de4b2a9d37f7e7c782f2407c15591e032b6c6
 SHA1 (patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp) = 2675b93a1d636b297a3e1e84b915a15a3da67939
+SHA1 (patch-src_rustllvm_PassWrapper.cpp) = 057b21eb100613d24a496b72a0d6e22548101a96
+SHA1 (patch-src_rustllvm_RustWrapper.cpp) = 3440de7536d05ea93c1d5c01bb09f5472e830ca8
 SHA1 (patch-src_tools_cargo_src_cargo_core_profiles.rs) = 3aac5d54a6fe96b9559552e67e497488142d4e80
 SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 10e6c1253adac0262b000aec7636fa0d2ebb666c
 SHA1 (patch-src_tools_rls_rls_src_cmd.rs) = fade3e60fecac5c4e4d4ee5bee82659b4eb385b7
