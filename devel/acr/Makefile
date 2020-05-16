@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/05/16 05:34:15 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/16 09:41:13 rillig Exp $
 
-DISTNAME=		acr-1.7.2
-PKGREVISION=		1
+DISTNAME=		acr-1.9.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=radare/}
 EXTRACT_SUFX=		.zip
@@ -24,6 +23,11 @@ SUBST_STAGE.ver=	post-configure
 SUBST_FILES.ver=	src/acr-cat src/acr-sh
 SUBST_SED.ver=		-e s,@VERSION@,${PKGVERSION_NOREV},
 SUBST_SED.ver+=		-e s,@DATADIR@,${PREFIX}/share,
+
+SUBST_CLASSES+=		eqeq
+SUBST_STAGE.eqeq=	pre-configure
+SUBST_FILES.eqeq=	src/acr-sh
+SUBST_SED.eqeq=		-e '2125s, == , = ,'
 
 post-install:
 	${RUN} cd ${WRKSRC}; \
