@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/16 08:20:01 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/16 18:00:31 adam Exp $
 
 DISTNAME=	pypiserver-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,13 +16,14 @@ DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-watchdog-[0-9]*:../../sysutils/py-watchdog
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=7:../../devel/py-pip
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.3:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -31,4 +32,5 @@ post-install:
 	${MV} pypi-server pypi-server-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
