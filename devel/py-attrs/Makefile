@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/05/16 08:51:29 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/16 09:03:22 adam Exp $
 
 DISTNAME=	attrs-19.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 

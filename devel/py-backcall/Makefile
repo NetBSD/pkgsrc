@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/16 08:52:03 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/16 09:03:22 adam Exp $
 
 DISTNAME=	backcall-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/takluyver/backcall
 COMMENT=	Specifications for callback functions passed in to an API
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
