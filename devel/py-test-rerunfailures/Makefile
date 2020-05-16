@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/12/16 10:25:11 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/16 16:45:20 adam Exp $
 
-DISTNAME=	pytest-rerunfailures-8.0
+DISTNAME=	pytest-rerunfailures-9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-rerunfailures/}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-rerunfailures
 COMMENT=	Pytest plugin to re-run tests to eliminate flaky failures
 LICENSE=	mpl-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-test>=3.10:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-test>=5.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
