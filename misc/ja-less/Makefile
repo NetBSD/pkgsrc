@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/03 17:04:22 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/16 15:56:54 rillig Exp $
 
 DISTNAME=	less-382
 PKGNAME=	ja-${DISTNAME}.262.03
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 SUBST_CLASSES+=		cfgdir
 SUBST_STAGE.cfgdir=	post-configure
-SUBST_FILES.cfgdir=	less.nro lesskey.nro
+SUBST_FILES.cfgdir=	less.nro
 SUBST_SED.cfgdir=	-e 's|/usr/local/etc|${PKG_SYSCONFDIR}|'
 
 .include "../../mk/termcap.buildlink3.mk"
