@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.41 2020/05/16 12:43:10 rillig Exp $
+# $NetBSD: subst.sh,v 1.42 2020/05/16 19:02:32 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -141,7 +141,7 @@ if test_case_begin 'several files by pattern'; then
 fi
 
 
-if test_case_begin 'pattern with 1 noop'; then
+if test_case_begin 'pattern with 1 noop, no-op ok'; then
 
 	# Several files are given via a pattern.
 	# Most of the files are patched, but one stays the same.
@@ -155,6 +155,7 @@ if test_case_begin 'pattern with 1 noop'; then
 		SUBST_STAGE.class=	pre-configure
 		SUBST_FILES.class=	pattern-*
 		SUBST_SED.class=	-e 's,file,example,'
+		SUBST_NOOP_OK.class=	yes
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
@@ -166,12 +167,52 @@ if test_case_begin 'pattern with 1 noop'; then
 	create_file_lines 'pattern-second'	'the second is already an example'
 	create_file_lines 'pattern-third'	'the third file'
 
-	run_bmake 'testcase.mk' 1> "$tmpdir/output" \
+	run_bmake 'testcase.mk' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in pattern-*' \
 		'info: [subst.mk:class] Nothing changed in "pattern-second".'
+	assert_that 'pattern-first' --file-is-lines 'the first example'
+	assert_that 'pattern-second' --file-is-lines 'the second is already an example'
+	assert_that 'pattern-third' --file-is-lines 'the third example'
+
+	test_case_end
+fi
+
+
+if test_case_begin 'pattern with 1 noop, no-op not ok'; then
+
+	# Several files are given via a pattern.
+	# Most of the files are patched, but one stays the same.
+	# Since it is easier to give a too broad pattern like *.py
+	# than to exclude a few files from such a pattern,
+	# only a warning is logged.
+	# This is not an error.
+
+	create_file 'testcase.mk' <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	pattern-*
+		SUBST_SED.class=	-e 's,file,example,'
+		SUBST_NOOP_OK.class=	no
+
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+
+		all: subst-class
+	EOF
+
+	create_file_lines 'pattern-first'	'the first file'
+	create_file_lines 'pattern-second'	'the second is already an example'
+	create_file_lines 'pattern-third'	'the third file'
+
+	run_bmake 'testcase.mk' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$tmpdir/output" --file-is-lines \
+		'=> Substituting "class" in pattern-*' \
+		'warning: [subst.mk:class] Nothing changed in "pattern-second".'
 	assert_that 'pattern-first' --file-is-lines 'the first example'
 	assert_that 'pattern-second' --file-is-lines 'the second is already an example'
 	assert_that 'pattern-third' --file-is-lines 'the third example'
@@ -295,13 +336,14 @@ if test_case_begin 'single file nonexistent ok'; then
 fi
 
 
-if test_case_begin 'several patterns, 1 nonexistent'; then
+if test_case_begin 'several filename patterns, 1 nonexistent, no-op ok'; then
 
 	create_file 'testcase.mk' <<-EOF
 		SUBST_CLASSES+=		class
 		SUBST_STAGE.class=	pre-configure
 		SUBST_FILES.class=	*exist* *not-found*
 		SUBST_SED.class=	-e 's,file,example,'
+		SUBST_NOOP_OK.class=	yes
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
@@ -322,19 +364,85 @@ if test_case_begin 'several patterns, 1 nonexistent'; then
 fi
 
 
-if test_case_begin 'multiple missing files, all are reported at once'; then
+if test_case_begin 'several filename patterns, 1 nonexistent, no-op not ok'; then
+
+	create_file 'testcase.mk' <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	*exist* *not-found*
+		SUBST_SED.class=	-e 's,file,example,'
+		SUBST_NOOP_OK.class=	no
+
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
+
+	create_file_lines 'exists'	'this file exists'
+
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$tmpdir/output" --file-is-lines \
+		'=> Substituting "class" in *exist* *not-found*' \
+		'warning: [subst.mk:class] Ignoring nonexistent file "./*not-found*".' \
+		'fail: [subst.mk:class] The filename pattern "*not-found*" has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+	assert_that 'exists' --file-is-lines 'this example exists'
+	assert_that "$exitcode" --equals '1'
+
+	test_case_end
+fi
+
+
+if test_case_begin 'multiple missing files, all are reported at once, no-op not ok'; then
 
 	create_file 'testcase.mk' <<-EOF
 		SUBST_CLASSES+=		class
 		SUBST_STAGE.class=	pre-configure
 		SUBST_FILES.class=	does not exist
 		SUBST_SED.class=	-e 'sahara'
+		SUBST_NOOP_OK.class=	no
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
 	EOF
 
-	run_bmake 'testcase.mk' > "$tmpdir/output" \
+	run_bmake 'testcase.mk' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$tmpdir/output" --file-is-lines \
+		'=> Substituting "class" in does not exist' \
+		'warning: [subst.mk:class] Ignoring nonexistent file "does".' \
+		'warning: [subst.mk:class] Ignoring nonexistent file "not".' \
+		'warning: [subst.mk:class] Ignoring nonexistent file "exist".' \
+		'fail: [subst.mk:class] The filename patterns "does not exist" have no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+	assert_that "$exitcode" --equals '1'
+
+	test_case_end
+fi
+
+
+if test_case_begin 'multiple missing files, all are reported at once, no-op ok'; then
+
+	create_file 'testcase.mk' <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	does not exist
+		SUBST_SED.class=	-e 'sahara'
+		SUBST_NOOP_OK.class=	yes
+
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
+
+	run_bmake 'testcase.mk' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -348,13 +456,14 @@ if test_case_begin 'multiple missing files, all are reported at once'; then
 fi
 
 
-if test_case_begin 'multiple no-op files, all are reported at once'; then
+if test_case_begin 'multiple no-op files, all are reported at once, no-op not ok'; then
 
 	create_file 'testcase.mk' <<-EOF
 		SUBST_CLASSES+=		class
 		SUBST_STAGE.class=	pre-configure
 		SUBST_FILES.class=	first second third
 		SUBST_SED.class=	-e 's,from,to,'
+		SUBST_NOOP_OK.class=	no
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
@@ -363,7 +472,42 @@ if test_case_begin 'multiple no-op files, all are reported at once'; then
 	create_file_lines 'second'	'second'
 	create_file_lines 'third'	'third'
 
-	run_bmake 'testcase.mk' > "$tmpdir/output" \
+	run_bmake 'testcase.mk' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$tmpdir/output" --file-is-lines \
+		'=> Substituting "class" in first second third' \
+		'warning: [subst.mk:class] Nothing changed in "first".' \
+		'warning: [subst.mk:class] Nothing changed in "second".' \
+		'warning: [subst.mk:class] Nothing changed in "third".' \
+		'fail: [subst.mk:class] The filename patterns "first second third" have no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+	assert_that "$exitcode" --equals '1'
+
+	test_case_end
+fi
+
+
+if test_case_begin 'multiple no-op files, all are reported at once, no-op ok'; then
+
+	create_file 'testcase.mk' <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	first second third
+		SUBST_SED.class=	-e 's,from,to,'
+		SUBST_NOOP_OK.class=	yes
+
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
+	create_file_lines 'first'	'text'
+	create_file_lines 'second'	'second'
+	create_file_lines 'third'	'third'
+
+	run_bmake 'testcase.mk' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -1441,6 +1585,7 @@ if test_case_begin 'backtick in SUBST_SED'; then
 		'SUBST_CLASSES+=	id' \
 		'SUBST_FILES.id=	file' \
 		"SUBST_SED.id=		-e 's,\"\\\\\`,\"\\\\\`,'" \
+		'SUBST_NOOP_OK.id=	yes' \
 		'' \
 		'.include "prepare-subst.mk"' \
 		'.include "mk/subst.mk"'
