@@ -1,0 +1,2 @@
+bin/py.test @PREFIX@/bin/py.test-@PYVERSSUFFIX@
+bin/pytest @PREFIX@/bin/pytest-@PYVERSSUFFIX@
