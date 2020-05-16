@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/16 08:48:47 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/16 09:03:22 adam Exp $
 
 DISTNAME=	atomicwrites-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
