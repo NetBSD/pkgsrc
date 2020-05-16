@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2937 2020/05/16 08:01:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2938 2020/05/16 08:33:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4636,3 +4636,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-test4 version 4.6.10 [adam 2020-05-16]
 	Removed devel/py-test5 successor devel/py-test [adam 2020-05-16]
 	Updated devel/py-test to 5.4.2 [adam 2020-05-16]
+	Updated lang/go113 to 1.13.11 [bsiegert 2020-05-16]
