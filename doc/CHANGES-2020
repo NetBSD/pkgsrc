@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2961 2020/05/16 19:19:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2962 2020/05/16 19:38:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4677,3 +4677,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/libnumbertext to 1.0.5 [nia 2020-05-16]
 	Updated textproc/uncrustify to 0.71.0 [nia 2020-05-16]
 	Updated textproc/multimarkdown to 6.5.2 [nia 2020-05-16]
+	Updated graphics/viewnior to 1.7 [nia 2020-05-16]
