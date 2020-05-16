@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/01/19 00:22:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/05/16 19:18:44 nia Exp $
 
-SHA1 (multimarkdown-6.5.1.tar.gz) = 9aad4cdf34be93d0dcd79e91f2f2c9d2fd9515ba
-RMD160 (multimarkdown-6.5.1.tar.gz) = e5e21e82afad0ea51a5f44a7ebbfd185d0195c6c
-SHA512 (multimarkdown-6.5.1.tar.gz) = fd70fb3e2399c97ed505ab9185fecbe82b95fc1450370a2f37b3405c7f1f0f56bad96da33ff406f378ef51456916a15c9fd0821beb6c56ba3c640316830e6145
-Size (multimarkdown-6.5.1.tar.gz) = 3302767 bytes
+SHA1 (multimarkdown-6.5.2.tar.gz) = 9a3978725b1afe8f6a5c7f0cad946b4479bd507e
+RMD160 (multimarkdown-6.5.2.tar.gz) = be0691fc7a16860a903fc11b836b8a954e484502
+SHA512 (multimarkdown-6.5.2.tar.gz) = d7e4ff9e2b07f8bc1142e83fdf59dbe417ccdfab90e65f81fe4a11cbef8d5edd9893c97a4e0bc8f70d52cae28da0012679fc09fce183fe94d815645022ee4f63
+Size (multimarkdown-6.5.2.tar.gz) = 3359037 bytes
