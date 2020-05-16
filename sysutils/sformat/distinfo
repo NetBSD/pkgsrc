@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:32:31 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/05/16 02:15:53 joerg Exp $
 
 SHA1 (sformat-3.5.tar.gz) = 1ebde6c9d58f376ad2d82f6f8e3bb2e89da00920
 RMD160 (sformat-3.5.tar.gz) = 5dd3e15d1fca7dd961694996bd094e3f2abce28f
@@ -6,7 +6,7 @@ SHA512 (sformat-3.5.tar.gz) = 6dc90e16d396165625816cb5e7252772ed92e9a06aeac49e10
 Size (sformat-3.5.tar.gz) = 526375 bytes
 SHA1 (patch-RULES_rules1_dir) = 25b5f88d65b4d8265417bc97cee63f6346e3b008
 SHA1 (patch-aa) = e398bc734a7bc48668a0b61d3535c0d87b1a4ccf
-SHA1 (patch-include_schily_h) = 68bd5500c199edbbd48dba4d197ad70dc319bc84
+SHA1 (patch-include_schily_h) = 56eb9cf6f87623bcca5d4d83ab27deeee237bc07
 SHA1 (patch-lib_stdio_fgetline_c) = 0d9aacf5cebc70522b085d71ef90f9665d8c5d6a
 SHA1 (patch-libscg_scsitransp_c) = 889ec76b497782ffd42ef13214f0e1ab3187ceaf
 SHA1 (patch-sformat_defect_c) = 20ba1dfd1f671e216fd04e8dfbf02e6ca605ebf3
