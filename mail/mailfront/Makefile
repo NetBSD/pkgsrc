@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/05/10 07:10:39 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/16 14:51:14 rillig Exp $
 #
 
 DISTNAME=		mailfront-2.22
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}archive/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		https://untroubled.org/mailfront/
+HOMEPAGE=		https://untroubled.org/mailfront/?a=b&c=d
 COMMENT=		Mail server network protocol front-ends
 LICENSE=		gnu-gpl-v2
 
@@ -15,6 +15,7 @@ DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		qmail>=1.03nb8:../../mail/qmail
 
 DJB_RESTRICTED=		NO
+DJB_ERRNO_HACK=		no
 DJB_MAKE_TARGETS=	NO
 BUILD_TARGET=		all
 DJB_CONFIG_CMDS+=	${ECHO} ${PREFIX}/include > conf-include;	\
