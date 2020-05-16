@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/23 09:48:37 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/16 17:38:40 adam Exp $
 
 DISTNAME=	pytest-xprocess-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,9 +12,11 @@ LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
