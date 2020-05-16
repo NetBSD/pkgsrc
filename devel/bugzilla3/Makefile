@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/08/11 13:18:39 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2020/05/16 11:40:21 rillig Exp $
 
 DISTNAME=	bugzilla-3.6.8
 PKGREVISION=	2
@@ -48,7 +48,7 @@ REPLACE_PERL+=	*.pl *.cgi
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_MESSAGE.conf=	Fixing configuration files.
-SUBST_FILES.conf=	bugzilla.conf localconfig Bugzilla/BugMail.pm
+SUBST_FILES.conf=	bugzilla.conf localconfig
 SUBST_VARS.conf=	BZ_WEB_GROUP
 SUBST_VARS.conf+=	PREFIX
 SUBST_VARS.conf+=	BZDIR
