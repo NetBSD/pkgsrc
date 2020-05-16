@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2020/04/24 14:33:08 manu Exp $
+# $NetBSD: Makefile,v 1.138 2020/05/16 15:36:24 rillig Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
 PKGREVISION=	9
@@ -76,6 +76,7 @@ SUBST_SED.cf-paths+=	-e "s|/var/run|${VARBASE}/run|g"
 SUBST_SED.cf-paths+=	-e "s|/usr/libexec|${PREFIX}/libexec/sendmail|g"
 SUBST_SED.cf-paths+=	-e "s|/usr/lib|${PREFIX}/libexec/sendmail|g"
 SUBST_SED.cf-paths+=	-e "s|/system/volatile|${VARBASE}/run|g"
+SUBST_NOOP_OK.cf-paths=	yes # some files contain only /var
 
 REPLACE_PERL=		contrib/socketmapClient.pl contrib/socketmapServer.pl
 
