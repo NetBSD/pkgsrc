@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2018/02/05 08:51:25 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.3 2020/05/16 20:42:37 rillig Exp $
 # used by lang/php72/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php72-extensions/Makefile
@@ -24,4 +24,5 @@ CONFIGURE_ARGS+=	php_cv_cc_dashr=no
 # dependency only
 BUILDLINK_DEPMETHOD.pcre?=	build
 CONFIGURE_ARGS+=	--with-pcre-dir=${BUILDLINK_PREFIX.pcre}
+GNU_CONFIGURE_STRICT=	no
 .include "../../devel/pcre/buildlink3.mk"
