@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/12/15 14:49:38 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/05/16 07:08:08 adam Exp $
 
-SHA1 (guppy3-3.0.9.tar.gz) = 8be696276833ca83c6239126e68ef92797a90f57
-RMD160 (guppy3-3.0.9.tar.gz) = 735acfefda8425c436afd5234aae1e44bf0a620e
-SHA512 (guppy3-3.0.9.tar.gz) = da17ddb2e81c4187d0141422de8ad1c0195c2a6c73b54bf2a01461f48cc9429cd15c4fbe3a73c5ae283e222483060db7c3cc96a252d3b6d0dc449ff6f2ae3a5a
-Size (guppy3-3.0.9.tar.gz) = 333971 bytes
+SHA1 (guppy3-3.0.10.post1.tar.gz) = 831f633308ac2f72450133c2f60886c1645f4f38
+RMD160 (guppy3-3.0.10.post1.tar.gz) = 967fbb20f29dab51a808794b8da787e144693540
+SHA512 (guppy3-3.0.10.post1.tar.gz) = 9fc25775a26a6b8d0576c33eb02fb14d34139d23b44ef479df6af5a559012a15046c92a2156f2a8e5c22610c1e7f7217db201c0d6f6cda7d2492faf413305223
+Size (guppy3-3.0.10.post1.tar.gz) = 328698 bytes
