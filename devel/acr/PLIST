@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/08/07 23:20:46 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/16 09:41:13 rillig Exp $
 bin/acr
 bin/acr-cat
 bin/acr-install
@@ -26,6 +26,7 @@ share/doc/acr/developers/using_cvs
 share/doc/acr/endian
 share/doc/acr/examples/and.acr
 share/doc/acr/examples/chaos.acr
+share/doc/acr/examples/cflags.acr
 share/doc/acr/examples/check.acr
 share/doc/acr/examples/chklibdl.acr
 share/doc/acr/examples/contexts.acr
