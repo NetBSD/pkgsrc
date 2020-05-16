@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/09/08 06:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/16 18:14:20 nia Exp $
 
-DISTNAME=	ii-1.7
+DISTNAME=	ii-1.8
 CATEGORIES=	chat
 MASTER_SITES=	https://dl.suckless.org/tools/
 
@@ -9,13 +9,8 @@ HOMEPAGE=	https://dl.suckless.org/tools/
 COMMENT=	Minimalist FIFO and filesystem-based IRC client
 LICENSE=	mit
 
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-build
-SUBST_MESSAGE.makefile=	Fixing config.mk
-SUBST_FILES.makefile=	config.mk
-SUBST_SED.makefile=	-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
-SUBST_SED.makefile+=	-e 's,^LDFLAGS,\#LDFLAGS,g'
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
