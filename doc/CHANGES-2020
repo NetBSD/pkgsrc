@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2950 2020/05/16 17:57:09 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2951 2020/05/16 17:59:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4665,3 +4665,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-falcon to 2.0.0 [adam 2020-05-16]
 	Updated devel/py-joblib to 0.15.0 [adam 2020-05-16]
 	Updated audio/libdca to 0.0.7 [nia 2020-05-16]
+	Updated graphics/qiv to 2.3.2 [nia 2020-05-16]
