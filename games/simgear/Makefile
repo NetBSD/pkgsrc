@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/05/06 14:04:09 adam Exp $
+# $NetBSD: Makefile,v 1.105 2020/05/16 02:12:45 joerg Exp $
 
 DISTNAME=	simgear-2019.1.1
 PKGREVISION=	8
@@ -22,6 +22,9 @@ CMAKE_ARG_PATH=		..
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+post-extract:
+	${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
 
 # The cmake script warns against building in the source directory.
 pre-configure:
