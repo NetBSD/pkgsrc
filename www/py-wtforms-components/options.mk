@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/05/16 08:23:28 adam Exp $
+# $NetBSD: options.mk,v 1.5 2020/05/16 09:03:22 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-wtforms-components
 PKG_SUPPORTED_OPTIONS=	arrow babel color ipaddress password phone tests
@@ -32,8 +32,8 @@ DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
+PYTHON_VERSIONED_DEPENDENCIES=	test
 .include "../../lang/python/versioned_dependencies.mk"
-PYTHON_VERSIONED_DEPENDENCIES+=	pytest
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils
