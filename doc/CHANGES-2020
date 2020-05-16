@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2944 2020/05/16 14:27:06 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2945 2020/05/16 16:45:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4657,3 +4657,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-activestorage60 to 6.0.3 [taca 2020-05-16]
 	Updated textproc/ruby-actiontext60 to 6.0.3 [taca 2020-05-16]
 	Updated www/ruby-rails60 to 6.0.3 [taca 2020-05-16]
+	Updated devel/py-test-randomly to 3.3.1 [adam 2020-05-16]
+	Updated devel/py-test-rerunfailures to 9.0 [adam 2020-05-16]
