@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/09/04 07:57:08 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/16 09:16:57 adam Exp $
 
 DISTNAME=	pytest-shutil-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,9 +16,11 @@ DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-path.py-[0-9]*:../../devel/py-path.py
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-termcolor-[0-9]*:../../devel/py-termcolor
-DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

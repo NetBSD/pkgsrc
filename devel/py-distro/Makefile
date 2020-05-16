@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/04/06 09:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/16 09:10:42 adam Exp $
 
 DISTNAME=	distro-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/nir0s/distro
 COMMENT=	OS platform information API
 LICENSE=	apache-2.0
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -19,7 +19,8 @@ post-install:
 	${MV} distro distro-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
