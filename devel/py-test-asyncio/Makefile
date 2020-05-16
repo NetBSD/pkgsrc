@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/05/02 09:18:28 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/16 14:00:48 adam Exp $
 
-DISTNAME=	pytest-asyncio-0.10.0
+DISTNAME=	pytest-asyncio-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-asyncio/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-asyncio
 COMMENT=	Pytest support for asyncio
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-test>=3.0.6:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-test>=5.4.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
