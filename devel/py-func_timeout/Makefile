@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/12 07:32:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/16 17:13:41 adam Exp $
 
 DISTNAME=	func_timeout-4.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/kata198/func_timeout
 COMMENT=	Specify timeouts when calling any existing function
 LICENSE=	gnu-lgpl-v2
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -20,4 +20,5 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
