@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2020/05/01 20:19:23 rillig Exp $
+# $NetBSD: Makefile.common,v 1.32 2020/05/16 11:38:44 rillig Exp $
 #
 # used by graphics/dia-python/Makefile
 
@@ -24,7 +24,6 @@ USE_LANGUAGES=		c c++
 
 CHECK_PORTABILITY_SKIP+=	installer/macosx/dia
 
-CONFIGURE_ARGS+=	--disable-emf
 CONFIGURE_ARGS+=	--without-python
 
 SUBST_CLASSES+=		intl
