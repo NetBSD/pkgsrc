@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2020/04/05 22:41:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.85 2020/05/16 17:14:03 rillig Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -17,12 +17,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	ICEAUTH=${TOOLS_PATH.iceauth}
 
 USE_TOOLS+=		iceauth:run
-
-SUBST_CLASSES+=		xflock4
-SUBST_STAGE.xflock4=	pre-build
-SUBST_MESSAGE.xflock4=	Updating path in xflock4
-SUBST_FILES.xflock4=	scripts/xflock4
-SUBST_SED.xflock4=	-e 's,/bin:/usr/bin,${PREFIX}/bin,g'
 
 EGDIR=			${XFCE4_EGBASE}
 PKG_SYSCONFSUBDIR=	xdg
