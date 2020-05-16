@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2020/03/10 22:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2020/05/16 16:59:24 rillig Exp $
 
 DISTNAME=	hplip-3.19.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -76,7 +76,7 @@ PY_PATCHPLIST=		yes
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		post-configure
 SUBST_MESSAGE.fix-python=	Fixing python invocations in Python files.
-SUBST_FILES.fix-python=		check.py scan.py setup.py
+SUBST_FILES.fix-python=		check.py setup.py
 SUBST_FILES.fix-python+=	base/utils.py base/pkit.py
 SUBST_FILES.fix-python+=	installer/core_install.py
 SUBST_FILES.fix-python+=	ui/nodevicesform.py ui/devmgr4.py
@@ -104,14 +104,14 @@ SUBST_CLASSES+=			fix-paths-2
 SUBST_STAGE.fix-paths-2=	post-configure
 SUBST_MESSAGE.fix-paths-2=	Fixing /etc and /var paths in Python and C++ files.
 SUBST_FILES.fix-paths-2=	check.py base/codes.py base/g.py base/utils.py
-SUBST_FILES.fix-paths-2+=	base/codes.py base/g.py base/queues.py base/utils.py
-SUBST_FILES.fix-paths-2+=	installer/core_install.py
+SUBST_FILES.fix-paths-2+=	base/queues.py installer/core_install.py
 SUBST_FILES.fix-paths-2+=	fax/backend/hpfax.py prnt/cups.py
 SUBST_FILES.fix-paths-2+=	ui/devmgr4.py ui4/devmgr5.py
 SUBST_FILES.fix-paths-2+=	prnt/filters/hpps
-SUBST_FILES.fix-paths-2+=	prnt/hpcups/HPCupsFilter.cpp prnt/hpcups/Utils.cpp
 SUBST_FILES.fix-paths-2+=	prnt/hpijs/globals.cpp prnt/hpijs/hpcupsfax.cpp
 SUBST_FILES.fix-paths-2+=	prnt/hpijs/hpijs.cpp
+SUBST_FILES.fix-paths-2+=	prnt/hpps/hppsfilter.c	# /etc/cups/cupsd.conf
+SUBST_FILES.fix-paths-2+=	common/utils.c # /etc/cups/cupsd.conf
 SUBST_SED.fix-paths-2=		-e 's,\([ '\''"=]\)/etc/hp,\1${PKG_SYSCONFDIR}/hp,g'
 SUBST_SED.fix-paths-2+=		-e 's,\([ '\''"=]\)/etc/cups,\1${PKG_SYSCONFDIR}/cups,g'
 SUBST_SED.fix-paths-2+=		-e 's,\([ '\''"=]\)/etc/sane.d,\1${PKG_SYSCONFDIR}/sane.d,g'
