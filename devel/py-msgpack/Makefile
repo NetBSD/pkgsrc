@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/04/11 14:02:50 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/16 17:27:42 adam Exp $
 
 DISTNAME=	msgpack-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,13 +10,13 @@ HOMEPAGE=	https://msgpack.org/
 COMMENT=	MessagePack (de)serializer for Python
 LICENSE=	apache-2.0
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	c c++
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} test
 
-
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
