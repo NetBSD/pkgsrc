@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/10 23:53:49 rillig Exp $
-bin/mailquote
-bin/tclticker
-share/tclticker/finance.uk.yahoo.com.tcl
-share/tclticker/finance.yahoo.com.tcl
-share/tclticker/rebuild_tclIndex.sh
-share/tclticker/tclIndex
-share/tclticker/ticker.lib
-share/tclticker/www.quote.com.tcl
