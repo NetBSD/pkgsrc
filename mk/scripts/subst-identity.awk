@@ -1,5 +1,5 @@
 #! /usr/bin/awk -f
-# $NetBSD: subst-identity.awk,v 1.3 2020/05/11 19:52:14 rillig Exp $
+# $NetBSD: subst-identity.awk,v 1.4 2020/05/16 12:43:10 rillig Exp $
 #
 # Tests whether a sed(1) command line consists of only identity substitutions
 # like s,id,id,.
@@ -45,7 +45,7 @@ function is_identity_subst(s,   len, i, sep, pat_from, pat_to, ch, subst) {
 	pat_from = substr(s, 3, i - 3);
 
 	subst = "s" sep pat_from sep pat_to sep;
-	return s == subst || s == subst "g";
+	return s == subst || s == subst "g" || s == subst "1";
 }
 
 function main(   i) {
