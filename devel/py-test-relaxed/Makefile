@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/06/17 21:06:29 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/16 17:38:39 adam Exp $
 
 DISTNAME=	pytest-relaxed-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,11 +12,13 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-test>=3.0.0:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 USE_LANGUAGES=	# none
 
 PYSETUPTESTTARGET=	pytest
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
