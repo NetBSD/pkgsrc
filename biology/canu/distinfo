@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.1 2019/01/07 02:33:17 bacon Exp $
+$NetBSD: distinfo,v 1.2 2020/05/16 19:50:21 rillig Exp $
 
 SHA1 (canu-1.8.tar.gz) = 7dd79415aa5ecb95f05109f0d8d58f7cbfc336e9
 RMD160 (canu-1.8.tar.gz) = 78d4872b4034f526037ce225c699debd910bd586
 SHA512 (canu-1.8.tar.gz) = 650bc96675f371596f8e7748d4ab2d229f0262bf84cee8fed59af43d534d76095a72e4ba0b4a5ce9f561992268c317964cda2f6c89ee514f4920e2ba47fbc86c
 Size (canu-1.8.tar.gz) = 2465314 bytes
 SHA1 (patch-Makefile) = aa83003677cbb12558e438c776402ec48df0598d
+SHA1 (patch-fastq-utilities_fastqSimulate_C) = 959beef6e42c8158050958964924813b814b5a11
 SHA1 (patch-pipelines_canu_Defaults.pm) = 55a4631d86abb1881b0cc997514d44c536209ea6
 SHA1 (patch-pipelines_canu_Execution.pm) = fbb080c06ea5d2393d1835a61771715d2aef0274
 SHA1 (patch-utility_objectStore.C) = c8407de79abbaf296f027f704080cc7e878b85f4

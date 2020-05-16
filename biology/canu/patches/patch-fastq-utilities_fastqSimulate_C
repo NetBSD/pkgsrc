@@ -1,0 +1,19 @@
+$NetBSD: patch-fastq-utilities_fastqSimulate_C,v 1.1 2020/05/16 19:50:21 rillig Exp $
+
+fastq-utilities/fastqSimulate.C:796:31: error: 'UINT64_MAX' was not declared in this scope
+   uint64     numReads       = UINT64_MAX;  //  Number of reads to generate, constant
+
+AS_global.h must be included before the headers from the standard library
+to get the UINT64_MAX macro.
+
+--- fastq-utilities/fastqSimulate.C.orig	2018-10-22 16:47:31.000000000 +0000
++++ fastq-utilities/fastqSimulate.C
+@@ -35,6 +35,8 @@
+  *  full conditions and disclaimers for each license.
+  */
+ 
++#include "AS_global.H"
++
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <errno.h>
