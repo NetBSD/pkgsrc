@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2952 2020/05/16 18:04:33 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2953 2020/05/16 18:09:17 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4667,3 +4667,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/libdca to 0.0.7 [nia 2020-05-16]
 	Updated graphics/qiv to 2.3.2 [nia 2020-05-16]
 	Updated audio/mp3gain to 1.6.2 [nia 2020-05-16]
+	Added print/libcups version 2.3.3 [maya 2020-05-16]
+	Updated print/cups-base to 2.3.3nb2 [maya 2020-05-16]
