@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/02/13 12:22:16 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/16 16:16:10 rillig Exp $
 
 DISTNAME=	rabbitmq-c-0.10.0
 CATEGORIES=	net
@@ -19,12 +19,6 @@ CMAKE_ARGS+=		-DBUILD_TOOLS=ON
 CMAKE_ARGS+=		-DBUILD_TOOLS_DOCS=ON
 CMAKE_ARGS+=		-DENABLE_SSL_SUPPORT=ON
 TEST_TARGET=		test
-
-SUBST_CLASSES+=		man
-SUBST_STAGE.man=	pre-build
-SUBST_MESSAGE.man=	Fix man installation path
-SUBST_FILES.man+=	tools/CMakeLists.txt tools/cmake_install.cmake
-SUBST_SED.man=		-e "s|share/man|${PKGMANDIR}|g"
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
