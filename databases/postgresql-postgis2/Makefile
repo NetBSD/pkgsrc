@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2020/05/06 14:04:24 adam Exp $
+# $NetBSD: Makefile,v 1.74 2020/05/16 11:08:59 rillig Exp $
 
 MAJOR=		2.5
 DISTNAME=	postgis-${MAJOR}.3
@@ -12,9 +12,6 @@ HOMEPAGE=	https://postgis.net/
 COMMENT=	Spatial database capabilities for PostgreSQL
 
 LICENSE=	gnu-gpl-v2
-
-# Needs 9.4 or higher
-PGSQL_VERSIONS_ACCEPTED=	10 96 95 94
 
 DEPENDS+=		postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
