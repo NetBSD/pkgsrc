@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2019/08/31 14:32:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2020/05/16 19:00:13 nia Exp $
 
-SHA1 (sakura-3.7.0.tar.gz) = 4c04f2ad62ae7f13e51adf901154faea6967d3bb
-RMD160 (sakura-3.7.0.tar.gz) = 72377110b7ff3e17facb64fb52172c5c28dfe9a3
-SHA512 (sakura-3.7.0.tar.gz) = 1018ea952d491f68a05ee3b3d8ac70cbfb485687f76224f9a395ff6508e0e75ff58bfd12dcb534c86430da54803a3016619f441d8bd14e496df32f81e00ca72e
-Size (sakura-3.7.0.tar.gz) = 64728 bytes
+SHA1 (sakura-3.7.1.tar.bz2) = 1fc243a213d02a5adaf06d1a1858f2c934331e83
+RMD160 (sakura-3.7.1.tar.bz2) = b6a92cc700b8a64ca90ad1483686a7b029db09d3
+SHA512 (sakura-3.7.1.tar.bz2) = 69d3b14f455480e4515337b4a28daafc807f41653ed8d6b6f934a908305fcc28745796b0f290b3ec6e97f6572132664017f943e556cca69df7007e17fcd9b9df
+Size (sakura-3.7.1.tar.bz2) = 56315 bytes
 SHA1 (patch-CMakeLists.txt) = 86dbc6a6ae2cb0acdbbb2d3110270c47463ad4e4
