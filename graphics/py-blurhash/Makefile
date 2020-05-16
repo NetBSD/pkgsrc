@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/05 20:36:44 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/16 17:42:42 adam Exp $
 
 DISTNAME=	blurhash-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/halcy/blurhash-python
 COMMENT=	Implementation of the blurhash algorithm in pure python
 LICENSE=	mit
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+
 USE_LANGUAGES=	# none
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
-TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
