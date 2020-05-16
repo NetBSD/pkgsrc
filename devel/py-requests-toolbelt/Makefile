@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/02/06 11:09:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/16 16:35:24 adam Exp $
 
 DISTNAME=	requests-toolbelt-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +13,11 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0<3.0:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-betamax-[0-9]*:../../www/py-betamax
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
