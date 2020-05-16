@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2020/05/06 14:04:35 adam Exp $
+# $NetBSD: Makefile,v 1.44 2020/05/16 13:18:50 rillig Exp $
 
 DISTNAME=	OpenCPN-5.0.0
 PKGNAME=	${DISTNAME:S/OpenCPN/opencpn/}
-PKGREVISION=	9
-#PKGREVISION=	1
+PKGREVISION=	10
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenCPN/}
 GITHUB_PROJECT=	OpenCPN
@@ -34,8 +33,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	replace /usr/local with ${PREFIX}
 SUBST_FILES.prefix=	src/mygdal/cpl_csv.cpp			\
 			src/mygdal/cpl_findfile.cpp		\
-			data/doc/help_en_US.html		\
-			Findgps.cmake
+			cmake/Findgps.cmake
 SUBST_SED.prefix=	-e s,"/usr/local,"${PREFIX},g
 
 # Ensure we export symbols in the linked shared object.
