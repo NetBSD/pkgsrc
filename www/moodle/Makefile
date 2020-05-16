@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/05/09 02:29:13 wen Exp $
+# $NetBSD: Makefile,v 1.83 2020/05/16 17:26:13 rillig Exp $
 
 DISTNAME=	moodle-3.8.2
 CATEGORIES=	www
@@ -72,7 +72,7 @@ SUBST_FILES.php+=	admin/cli/reset_password.php admin/cli/automated_backups.php
 SUBST_FILES.php+=	admin/cli/install.php admin/cli/install_database.php admin/cli/upgrade.php
 SUBST_FILES.php+=	admin/mailout-debugger.php admin/process_email.php
 SUBST_FILES.php+=	auth/db/cli/sync_users.php
-SUBST_FILES.php+=	enrol/ldap/cli/sync.php enrol/database/cli/sync.php enrol/category/cli/sync.php
+SUBST_FILES.php+=	enrol/database/cli/sync.php enrol/category/cli/sync.php
 SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
 SUBST_CLASSES+=		perl
