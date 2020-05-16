@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 05:26:12 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/16 18:04:05 nia Exp $
 
-PKGNAME=		mp3gain-1.5.2
+PKGNAME=		mp3gain-1.6.2
 DISTNAME=		${PKGNAME:S/./_/g}-src
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mp3gain/}
@@ -18,4 +18,5 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mp3gain ${DESTDIR}${PREFIX}/bin
 
+.include "../../audio/mpg123/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
