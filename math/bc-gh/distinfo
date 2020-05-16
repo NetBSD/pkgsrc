@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/11/23 17:26:01 gdt Exp $
+$NetBSD: distinfo,v 1.4 2020/05/16 22:54:21 gdt Exp $
 
-SHA1 (bc-2.3.1.tar.xz) = c76d7e7509663e249cae9674981a91e868c4e8cc
-RMD160 (bc-2.3.1.tar.xz) = a1418b974933a70281315369cc352be626df8d78
-SHA512 (bc-2.3.1.tar.xz) = a704356dfba75d94a3db9ab30ccd4b5cea1ccd8866c20650026148f61e0d799760d04bb6fefec46b3ce93a4a575c81f0668064af498cf7b581edcb82d00eb22e
-Size (bc-2.3.1.tar.xz) = 161780 bytes
+SHA1 (bc-2.7.2.tar.xz) = 2332db5d8839202cc2b43e2bebe2654efc093bf1
+RMD160 (bc-2.7.2.tar.xz) = f7f6e4ca0f3befc7a064cc1d308857047af7cc15
+SHA512 (bc-2.7.2.tar.xz) = c2014b16165bf5f8bdadf42bb60ea967a060753c17e13a7c3569d16d218bb3fb644e6a46950e9e7b3aa5a9f6bee4da9b158694909a0ab1fe390b7bb4dc20b303
+Size (bc-2.7.2.tar.xz) = 189020 bytes
