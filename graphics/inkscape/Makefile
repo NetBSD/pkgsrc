@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.208 2020/05/06 14:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.209 2020/05/16 13:38:05 rillig Exp $
 
 DISTNAME=	inkscape-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -53,11 +53,7 @@ SUBST_VARS.pypath=	PYTHONBIN
 SUBST_CLASSES+=		pycmd
 SUBST_STAGE.pycmd=	pre-configure
 SUBST_MESSAGE.pycmd=	Replacing COMMAND python in CMakeFiles.
-SUBST_FILES.pycmd+=	share/filters/CMakeLists.txt
-SUBST_FILES.pycmd+=	share/palettes/CMakeLists.txt
-SUBST_FILES.pycmd+=	share/patterns/CMakeLists.txt
-SUBST_FILES.pycmd+=	share/symbols/CMakeLists.txt
-SUBST_FILES.pycmd+=	share/templates/CMakeLists.txt
+SUBST_FILES.pycmd+=	share/*/CMakeLists.txt
 SUBST_SED.pycmd=	-e "s,COMMAND python3,COMMAND ${PYTHONBIN},g"
 
 REPLACE_PYTHON+=	cxxtest/cxxtestgen.py
