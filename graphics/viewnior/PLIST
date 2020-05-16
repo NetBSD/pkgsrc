@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2012/11/03 13:54:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/16 19:37:46 nia Exp $
 bin/viewnior
 man/man1/viewnior.1
+share/appdata/viewnior.appdata.xml
 share/applications/viewnior.desktop
 share/icons/hicolor/16x16/apps/viewnior.png
 share/icons/hicolor/22x22/apps/viewnior.png
@@ -8,11 +9,16 @@ share/icons/hicolor/24x24/apps/viewnior.png
 share/icons/hicolor/32x32/apps/viewnior.png
 share/icons/hicolor/48x48/apps/viewnior.png
 share/icons/hicolor/scalable/apps/viewnior.svg
+share/locale/ar/LC_MESSAGES/viewnior.mo
 share/locale/bg/LC_MESSAGES/viewnior.mo
+share/locale/bs/LC_MESSAGES/viewnior.mo
+share/locale/ca/LC_MESSAGES/viewnior.mo
+share/locale/ca@valencia/LC_MESSAGES/viewnior.mo
 share/locale/cs/LC_MESSAGES/viewnior.mo
 share/locale/da/LC_MESSAGES/viewnior.mo
 share/locale/de/LC_MESSAGES/viewnior.mo
 share/locale/el/LC_MESSAGES/viewnior.mo
+share/locale/en_GB/LC_MESSAGES/viewnior.mo
 share/locale/es/LC_MESSAGES/viewnior.mo
 share/locale/fi/LC_MESSAGES/viewnior.mo
 share/locale/fr/LC_MESSAGES/viewnior.mo
@@ -34,6 +40,7 @@ share/locale/sv/LC_MESSAGES/viewnior.mo
 share/locale/tr/LC_MESSAGES/viewnior.mo
 share/locale/uk/LC_MESSAGES/viewnior.mo
 share/locale/zh_CN/LC_MESSAGES/viewnior.mo
+share/locale/zh_TW/LC_MESSAGES/viewnior.mo
 share/viewnior/pixmaps/object-flip-horizontal.png
 share/viewnior/pixmaps/object-flip-vertical.png
 share/viewnior/pixmaps/object-rotate-left.png
