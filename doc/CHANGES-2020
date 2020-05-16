@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2948 2020/05/16 17:44:34 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2949 2020/05/16 17:48:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4662,3 +4662,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/py-cairosvg to 2.4.2 [kleink 2020-05-16]
 	Updated graphics/gnome-icon-theme-extras to 3.12.0 [nia 2020-05-16]
 	Updated multimedia/xvidcore to 1.3.7 [nia 2020-05-16]
+	Updated devel/py-falcon to 2.0.0 [adam 2020-05-16]
+	Updated devel/py-joblib to 0.15.0 [adam 2020-05-16]
