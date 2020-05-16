@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/04/12 08:28:56 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/05/16 14:48:48 rillig Exp $
 
 DISTNAME=	dbmail-3.2.3
 PKGREVISION=	17
@@ -33,10 +33,7 @@ MESSAGE_SUBST+=		DATADIR=${DATADIR}
 
 SUBST_CLASSES+=		sysconf
 SUBST_STAGE.sysconf=	do-configure
-SUBST_FILES.sysconf=	man/dbmail-imapd.8 man/dbmail-lmtpd.8 man/dbmail-pop3d.8
-SUBST_FILES.sysconf+=	man/dbmail-smtp.1 man/dbmail-users.8 man/dbmail-util.8
-SUBST_FILES.sysconf+=	man/dbmail.1 man/dbmail.conf.5 man/dbmail-export.8
-SUBST_FILES.sysconf+=	man/dbmail-sievecmd.8 mail/dbmail-timsieved.8
+SUBST_FILES.sysconf=	man/commonopts.txt
 SUBST_SED.sysconf=	-e 's|/etc/dbmail\.conf|${PKG_SYSCONFDIR}/dbmail.conf|g'
 SUBST_MESSAGE.sysconf=	Fixing sysconf paths.
 
