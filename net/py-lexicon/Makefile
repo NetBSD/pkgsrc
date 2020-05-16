@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/05/07 10:51:42 adam Exp $
+# $NetBSD: Makefile,v 1.46 2020/05/16 18:00:31 adam Exp $
 
 DISTNAME=	dns-lexicon-3.3.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns-//}
@@ -16,8 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tldextract-[0-9]*:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.1.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.26.1:../../devel/py-test-xdist
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
@@ -30,4 +31,5 @@ do-test:
 	cd ${WRKSRC}/lexicon && pytest-${PYVERSSUFFIX} tests/test_*
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
