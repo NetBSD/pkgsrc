@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2954 2020/05/16 18:14:43 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2955 2020/05/16 18:52:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4670,3 +4670,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/libcups version 2.3.3 [maya 2020-05-16]
 	Updated print/cups-base to 2.3.3nb2 [maya 2020-05-16]
 	Updated chat/ii to 1.8 [nia 2020-05-16]
+	Updated audio/qmmp to 1.4.0 [nia 2020-05-16]
