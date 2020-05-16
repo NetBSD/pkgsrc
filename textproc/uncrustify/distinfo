@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2020/02/20 15:58:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/05/16 19:17:13 nia Exp $
 
-SHA1 (uncrustify-0.70.1.tar.gz) = 1caad0bcdaded2e9bb29130733727c718575f6a6
-RMD160 (uncrustify-0.70.1.tar.gz) = 354e1451ed20699bd8f1db51d31834de474937f2
-SHA512 (uncrustify-0.70.1.tar.gz) = d28f02d5c82e3b398fd0391fe49eb1260a905e525c7c4b513ccea68ffff480d96cd77936267dd7d6870a59903c72578efc0ff85696c877caf1f1c89160c79334
-Size (uncrustify-0.70.1.tar.gz) = 1644844 bytes
+SHA1 (uncrustify-0.71.0.tar.gz) = 8ab6a9cc081d8d3bfaecd6774829dc720cb7c71e
+RMD160 (uncrustify-0.71.0.tar.gz) = 33d44f956783e4dc76df8e31ca6d2fdb62bfd85a
+SHA512 (uncrustify-0.71.0.tar.gz) = 220ecbebb1c1d6abadb96c339e4ca9b264a04fa08bc83e9b0fabba5fae425efd1911d175d18b635521614ec9c33aa389fadaeec62ebf28a5d71e595900a92181
+Size (uncrustify-0.71.0.tar.gz) = 1704631 bytes
 SHA1 (patch-CMakeLists.txt) = 4715199cfdfceb60828d9996f91bf6a45cb46cd4
