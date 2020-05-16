@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2020/03/17 19:04:49 adam Exp $
+$NetBSD: distinfo,v 1.39 2020/05/16 02:14:47 joerg Exp $
 
 SHA1 (pdns-4.2.1.tar.bz2) = 81a4edb44f53f3f2c36793760ce30f81429fbc97
 RMD160 (pdns-4.2.1.tar.bz2) = 0efc805e4ed45ebdaf16cd97e2e797a37e000ca3
@@ -11,3 +11,5 @@ SHA1 (patch-pdns_iputils.cc) = fbd3bb210216bb98c3cd73b702b6dea486c51dec
 SHA1 (patch-pdns_iputils.hh) = 714277322ea721ea0439fc6aa0265bd290219e8b
 SHA1 (patch-pdns_qtype.hh) = 0f8bca4c0cafea9a5257a08077fa42b4c52127f5
 SHA1 (patch-pdns_version.cc) = 25917c329dafa34e657fa31c7a9abd99110bb4b0
+SHA1 (patch-pdns_webserver.cc) = b698338a168066f65a96313eab1bb1292192df94
+SHA1 (patch-pdns_ws-auth.cc) = fd68549574240a9e99b31f501e40461f0318d1ed
