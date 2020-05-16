@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:27 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/16 20:01:56 nikita Exp $
 
-DISTNAME=	chicken-5.1.0
-PKGREVISION=	1
+DISTNAME=	chicken-5.2.0
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 
