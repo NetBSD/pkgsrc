@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2019/06/08 20:01:58 leot Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/16 17:33:27 nia Exp $
 #
 
-DISTNAME=		gnome-icon-theme-extras-2.30.1
-PKGREVISION=		2
+DISTNAME=		gnome-icon-theme-extras-3.12.0
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-extras/2.30/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-extras/3.12/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnome.org/
