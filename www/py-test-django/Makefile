@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/04/06 16:55:46 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/16 18:02:59 adam Exp $
 
 DISTNAME=	pytest-django-3.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -10,10 +10,12 @@ HOMEPAGE=	https://pytest-django.readthedocs.io/
 COMMENT=	Django plugin for pytest
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-test>=3.6:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.11.1:../../devel/py-setuptools_scm
+
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
