@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/03/10 22:09:12 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2020/05/16 17:17:51 rillig Exp $
 
 VERSION=	2.8.12.0
 DISTNAME=	wxPython-src-${VERSION}
@@ -36,7 +36,6 @@ SUBST_FILES.fix-python+=	wx/lib/floatcanvas/Utilities/*.py
 SUBST_FILES.fix-python+=	wx/tools/Editra/*.py
 SUBST_FILES.fix-python+=	wx/tools/Editra/src/*.py
 SUBST_FILES.fix-python+=	wx/tools/Editra/src/extern/*.py
-SUBST_FILES.fix-python+=	wx/tools/Editra/tests/syntax/python.python
 SUBST_FILES.fix-python+=	wx/tools/Editra/Editra*
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 
