@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2019/12/29 15:31:22 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/16 22:31:50 wiz Exp $
 
 .include "../../lang/clang/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/clang/clang-tools-extra/:S/.src//}
+PKGREVISION=	1
 
 COMMENT=	Extra Clang tools
+
+DEPENDS+=	clang>=${LLVM_VERSION}:../../lang/clang
 
 _EXTRA_DIST=		${DISTNAME:S/clang/clang-tools-extra/}${EXTRACT_SUFX}
 SITES.${_EXTRA_DIST}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
