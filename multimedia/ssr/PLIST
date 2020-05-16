@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/27 23:02:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/16 19:06:39 nia Exp $
 bin/simplescreenrecorder
 bin/ssr-glinject
 lib/libssr-glinject.so
 man/man1/simplescreenrecorder.1
 man/man1/ssr-glinject.1
-share/appdata/simplescreenrecorder.appdata.xml
 share/applications/simplescreenrecorder.desktop
 share/icons/hicolor/128x128/apps/simplescreenrecorder-error.png
 share/icons/hicolor/128x128/apps/simplescreenrecorder-idle.png
@@ -61,6 +60,7 @@ share/icons/hicolor/scalable/apps/simplescreenrecorder-idle.svg
 share/icons/hicolor/scalable/apps/simplescreenrecorder-paused.svg
 share/icons/hicolor/scalable/apps/simplescreenrecorder-recording.svg
 share/icons/hicolor/scalable/apps/simplescreenrecorder.svg
+share/metainfo/simplescreenrecorder.metainfo.xml
 share/simplescreenrecorder/output-profiles/High%20Quality%20Intermediate.conf
 share/simplescreenrecorder/output-profiles/Live%20Stream%20%281000kbps%29.conf
 share/simplescreenrecorder/output-profiles/Live%20Stream%20%282000kbps%29.conf
@@ -73,6 +73,7 @@ share/simplescreenrecorder/translations/simplescreenrecorder_de.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_el.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_es.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_fr.qm
+share/simplescreenrecorder/translations/simplescreenrecorder_gl.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_he.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_hu.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_id.qm
@@ -83,6 +84,7 @@ share/simplescreenrecorder/translations/simplescreenrecorder_nl.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_pl.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_pt_BR.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_ru.qm
+share/simplescreenrecorder/translations/simplescreenrecorder_sr.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_sv.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_uk.qm
 share/simplescreenrecorder/translations/simplescreenrecorder_zh_CN.qm
