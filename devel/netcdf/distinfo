@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2018/05/16 06:32:58 wen Exp $
+$NetBSD: distinfo,v 1.21 2020/05/16 21:19:58 gdt Exp $
 
 SHA1 (netcdf-4.6.1.tar.gz) = 11912675530db61474b305b572e06f83d682aa2c
 RMD160 (netcdf-4.6.1.tar.gz) = aa70f9ca6b5fbd8c914420b3570ac4f316ed47e5
 SHA512 (netcdf-4.6.1.tar.gz) = a2d49b013ff1bcba748e4b1f55a14a25728bfdfce44001cbfacfd01d585ea39972950ea4db6fa6ec3531f8be8a3a3072a2338b6b211205719e81d0498fd8a502
 Size (netcdf-4.6.1.tar.gz) = 5693557 bytes
 SHA1 (patch-configure) = 74457173c01355cd0f99f136ae10bdc67e831489
-SHA1 (patch-ncdap__test_testauth.sh) = 2a92af8d23238815b8d6645f2d3c2376d2c2ff91
+SHA1 (patch-ncdap__test_testauth.sh) = ce9968762c7e0ba53ce32c3210cab621f35ea669
