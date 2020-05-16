@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/02/01 11:52:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/05/16 08:00:01 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -17,9 +17,6 @@ ${PYSITELIB}/_pytest/_argcomplete.pyo
 ${PYSITELIB}/_pytest/_code/__init__.py
 ${PYSITELIB}/_pytest/_code/__init__.pyc
 ${PYSITELIB}/_pytest/_code/__init__.pyo
-${PYSITELIB}/_pytest/_code/_py2traceback.py
-${PYSITELIB}/_pytest/_code/_py2traceback.pyc
-${PYSITELIB}/_pytest/_code/_py2traceback.pyo
 ${PYSITELIB}/_pytest/_code/code.py
 ${PYSITELIB}/_pytest/_code/code.pyc
 ${PYSITELIB}/_pytest/_code/code.pyo
@@ -77,6 +74,9 @@ ${PYSITELIB}/_pytest/deprecated.pyo
 ${PYSITELIB}/_pytest/doctest.py
 ${PYSITELIB}/_pytest/doctest.pyc
 ${PYSITELIB}/_pytest/doctest.pyo
+${PYSITELIB}/_pytest/faulthandler.py
+${PYSITELIB}/_pytest/faulthandler.pyc
+${PYSITELIB}/_pytest/faulthandler.pyo
 ${PYSITELIB}/_pytest/fixtures.py
 ${PYSITELIB}/_pytest/fixtures.pyc
 ${PYSITELIB}/_pytest/fixtures.pyo
@@ -161,6 +161,9 @@ ${PYSITELIB}/_pytest/skipping.pyo
 ${PYSITELIB}/_pytest/stepwise.py
 ${PYSITELIB}/_pytest/stepwise.pyc
 ${PYSITELIB}/_pytest/stepwise.pyo
+${PYSITELIB}/_pytest/store.py
+${PYSITELIB}/_pytest/store.pyc
+${PYSITELIB}/_pytest/store.pyo
 ${PYSITELIB}/_pytest/terminal.py
 ${PYSITELIB}/_pytest/terminal.pyc
 ${PYSITELIB}/_pytest/terminal.pyo
@@ -176,6 +179,9 @@ ${PYSITELIB}/_pytest/warning_types.pyo
 ${PYSITELIB}/_pytest/warnings.py
 ${PYSITELIB}/_pytest/warnings.pyc
 ${PYSITELIB}/_pytest/warnings.pyo
-${PYSITELIB}/pytest.py
-${PYSITELIB}/pytest.pyc
-${PYSITELIB}/pytest.pyo
+${PYSITELIB}/pytest/__init__.py
+${PYSITELIB}/pytest/__init__.pyc
+${PYSITELIB}/pytest/__init__.pyo
+${PYSITELIB}/pytest/__main__.py
+${PYSITELIB}/pytest/__main__.pyc
+${PYSITELIB}/pytest/__main__.pyo
