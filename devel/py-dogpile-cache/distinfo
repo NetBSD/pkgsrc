@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/12/18 11:24:45 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/05/16 13:56:47 adam Exp $
 
-SHA1 (dogpile.cache-0.7.1.tar.gz) = cdd519726d91b9f663f8da0594ee847209c525a0
-RMD160 (dogpile.cache-0.7.1.tar.gz) = 89ef16eee45fc8d9b61470ed7ce6732e601515a2
-SHA512 (dogpile.cache-0.7.1.tar.gz) = 39c0a1d3d5027bc61cc69eda46c846c72d09892b2de0ea2e9545b1f710911dce8726b4ee4a0daef0d3c409a16733920d437f6e833a5b3f55ccc80267bb0da39c
-Size (dogpile.cache-0.7.1.tar.gz) = 326127 bytes
+SHA1 (dogpile.cache-0.9.2.tar.gz) = 2807057a48080651ef7010d8b71d8d717bbdbf0f
+RMD160 (dogpile.cache-0.9.2.tar.gz) = af688c82d59972279974d4ab11f528f2fa2df474
+SHA512 (dogpile.cache-0.9.2.tar.gz) = e54b29b5f868ddb7d2cddae37033fd568e5d5b8305c76837a53a4252a4e45c5179ed9e5e3694f5b826ad57d87cb3b04a20f872952758dbf9139859dc4bde53f4
+Size (dogpile.cache-0.9.2.tar.gz) = 329503 bytes
