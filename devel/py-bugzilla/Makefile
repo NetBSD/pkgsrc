@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/01/04 08:49:33 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/16 09:09:04 adam Exp $
 
 DISTNAME=	python-bugzilla-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,8 @@ COMMENT=	Bugzilla XMLRPC access module
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -30,4 +31,5 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
