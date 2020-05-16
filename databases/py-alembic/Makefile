@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/05/16 08:45:23 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/16 08:47:10 adam Exp $
 
 DISTNAME=	alembic-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest
+PYTHON_VERSIONED_DEPENDENCIES=	pytest:test
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
