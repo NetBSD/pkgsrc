@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:30:16 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/16 10:50:49 rillig Exp $
 
 GCC_DIST_VERSION=	4.9.2
 GCC_PKGNAME=		gcc-mips-${GCC_DIST_VERSION}
@@ -32,12 +32,6 @@ INFO_FILES=		yes
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
-
-SUBST_CLASSES+=		vars
-SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
-SUBST_STAGE.vars=	pre-configure
-SUBST_FILES.vars=	gcc/Makefile.in
-SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
 
