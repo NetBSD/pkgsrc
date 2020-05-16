@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:36 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/16 15:23:05 rillig Exp $
 
 DISTNAME=		qmail-autoresponder-2.0
 CATEGORIES=		mail
@@ -15,6 +15,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
 
 DJB_RESTRICTED=		no
+DJB_ERRNO_HACK=		no
 DJB_MAKE_TARGETS=	no
 BUILD_TARGET=		all
 
