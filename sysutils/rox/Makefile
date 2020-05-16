@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2020/03/20 11:58:22 nia Exp $
+# $NetBSD: Makefile,v 1.96 2020/05/16 17:48:36 rillig Exp $
 #
 
 DISTNAME=	rox-filer-2.10
@@ -27,8 +27,7 @@ INSTALLATION_DIRS=	bin libexec/rox ${PKGMANDIR}/man1 \
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing hardcoded paths.
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	ROX-Filer/AppRun
-SUBST_FILES.path+=	ROX-Filer/src/choices.c
+SUBST_FILES.path=	ROX-Filer/src/choices.c
 SUBST_FILES.path+=	ROX-Filer/src/type.c
 SUBST_FILES.path+=	ROX-Filer/src/xdgmime.c
 SUBST_SED.path=		-e 's,/usr/local,${PREFIX},g'
