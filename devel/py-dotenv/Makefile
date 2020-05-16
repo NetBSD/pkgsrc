@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/04 15:37:01 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/16 17:13:40 adam Exp $
 
 DISTNAME=	python-dotenv-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-sh-[0-9]*:../../sysutils/py-sh
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 .include "../../lang/python/pyversion.mk"
