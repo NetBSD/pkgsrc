@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2930 2020/05/16 01:04:35 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.2931 2020/05/16 02:47:58 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4622,3 +4622,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/alpine to 2.22 [bsiegert 2020-05-15]
 	Added audio/strawberry version 0.6.10 [nia 2020-05-15]
 	Updated net/sayaka to 3.4.5 [tsutsui 2020-05-16]
+	Updated audio/fasttracker2 to 1.24 [fox 2020-05-16]
