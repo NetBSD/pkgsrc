@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/04/24 08:29:22 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/16 08:57:58 adam Exp $
 
-SHA1 (pytest-flake8-1.0.5.tar.gz) = b7dd0687d2ad4f20a1a53ce9a1e0f60116e70402
-RMD160 (pytest-flake8-1.0.5.tar.gz) = 50ff28a455ad209f860cfc5b7e030cd4a814188b
-SHA512 (pytest-flake8-1.0.5.tar.gz) = c7d598dbe0c8eb032b175231b2662d15f9f2bd349e83210269cdaa7aaed79e618beab4d07d04143a87fe00b50c20f803350006362326a7918c930618dad2c324
-Size (pytest-flake8-1.0.5.tar.gz) = 8317 bytes
+SHA1 (pytest-flake8-1.0.6.tar.gz) = e9a27bc98325f81b6801e74a12f8d4b71a8ba437
+RMD160 (pytest-flake8-1.0.6.tar.gz) = 5a43fd854a94601d065c9d156fb72140ec98da93
+SHA512 (pytest-flake8-1.0.6.tar.gz) = e1c76f4a170ca6fd94e27cf296b366a2a02f09e4216ded74b4724d8d19f50364caf245e4385b1cb644ead06b890df22400637773716190f673d3de254f5868f5
+Size (pytest-flake8-1.0.6.tar.gz) = 8451 bytes
