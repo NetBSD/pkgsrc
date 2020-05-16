@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/04/12 08:29:03 adam Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/16 19:06:39 nia Exp $
 #
 
-DISTNAME=	ssr-0.3.11
-PKGREVISION=	5
+DISTNAME=	ssr-0.4.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MaartenBaert/}
 
@@ -11,8 +10,10 @@ HOMEPAGE=	https://www.maartenbaert.be/simplescreenrecorder/
 COMMENT=	Screen recorder for Linux
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config gmake bash:run
+USE_TOOLS+=	pkg-config bash:run
 USE_LANGUAGES=	c c++
 
 REPLACE_BASH=	scripts/ssr-glinject
@@ -31,6 +32,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
+#.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
