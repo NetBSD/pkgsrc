@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2934 2020/05/16 06:51:03 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.2935 2020/05/16 07:10:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4629,3 +4629,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-hstspreload to 2020.5.16 [adam 2020-05-16]
 	Updated pkgtools/createbuildlink to 3.18 [rillig 2020-05-16]
 	Removed finance/tclticker [rillig 2020-05-16]
+	Updated devel/py-guppy3 to 3.0.10.1 [adam 2020-05-16]
+	Updated databases/py-redis to 3.5.2 [adam 2020-05-16]
