@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2020/04/14 20:08:38 js Exp $
+# $NetBSD: Makefile,v 1.76 2020/05/16 06:49:39 rillig Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -107,7 +107,6 @@ SUBDIR+=	py-trytond-stock-supply-production
 SUBDIR+=	py-vatnumber
 SUBDIR+=	ruby-activemerchant
 SUBDIR+=	ruby-braintree
-SUBDIR+=	tclticker
 SUBDIR+=	tex-euro
 SUBDIR+=	tex-euro-doc
 SUBDIR+=	xfinans
