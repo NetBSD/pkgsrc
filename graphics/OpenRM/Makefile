@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/05/05 18:37:37 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/16 07:58:17 rillig Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		csh perl
 REPLACE_PERL=		doc/sortlist.pl doc/source2html.pl
 
-CHECK_PORTABILITY_CHECK+=	bin/mklib.linux # uses [[, not used
+CHECK_PORTABILITY_SKIP+=	bin/mklib.linux # uses [[, not used
 
 ALL_ENV+=		REAL_CC=${CC}
 
