@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2956 2020/05/16 18:59:46 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2957 2020/05/16 19:00:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4672,3 +4672,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/ii to 1.8 [nia 2020-05-16]
 	Updated audio/qmmp to 1.4.0 [nia 2020-05-16]
 	Updated security/acmesh to 2.8.6 [nia 2020-05-16]
+	Updated x11/sakura to 3.7.1 [nia 2020-05-16]
