@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2020/05/16 11:08:59 rillig Exp $
+# $NetBSD: Makefile,v 1.75 2020/05/16 11:23:57 rillig Exp $
 
 MAJOR=		2.5
 DISTNAME=	postgis-${MAJOR}.3
@@ -52,14 +52,6 @@ DOCDIR=			${PREFIX}/share/doc/postgis
 PLIST_SUBST+=		MAJOR=${MAJOR}
 PRINT_PLIST_AWK+=	{ gsub(/postgis-${MAJOR:S|/|\\/|g}/, "postgis-$${MAJOR}") }
 PRINT_PLIST_AWK+=	{ gsub(/topology-${MAJOR:S|/|\\/|g}/, "topology-$${MAJOR}") }
-
-SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	extras/template_gis/profile \
-			extras/template_gis/createdb.postgis.1 \
-			extras/template_gis/mktemplate_gis.1 \
-			extras/template_gis/postgis_env.sh.in
-SUBST_VARS.paths+=	PKG_SYSCONFDIR
-SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
