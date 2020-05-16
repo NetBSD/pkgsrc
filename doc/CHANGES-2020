@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2958 2020/05/16 19:06:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2959 2020/05/16 19:10:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4674,3 +4674,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/acmesh to 2.8.6 [nia 2020-05-16]
 	Updated x11/sakura to 3.7.1 [nia 2020-05-16]
 	Updated multimedia/ssr to 0.4.1 [nia 2020-05-16]
+	Updated math/libnumbertext to 1.0.5 [nia 2020-05-16]
