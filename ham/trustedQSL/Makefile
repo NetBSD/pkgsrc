@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2020/05/06 14:04:43 adam Exp $
+# $NetBSD: Makefile,v 1.49 2020/05/16 14:26:53 gdt Exp $
 
 DISTNAME=		tqsl-2.5.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 
@@ -32,7 +32,7 @@ SUBST_CLASSES+=			lib-suffix
 SUBST_MESSAGE.lib-suffix=	Removing $$(LIB_SUFFIX) from src/CMakeLists.txt
 SUBST_STAGE.lib-suffix=		pre-configure
 SUBST_FILES.lib-suffix=		src/CMakeLists.txt
-SUBST_SED.lib-suffix=		-e s/\$$\(LIB_SUFFIX\)//
+SUBST_SED.lib-suffix=		-e s/\$${\LIB_SUFFIX\}//
 
 do-configure:
 	(cd ${WRKSRC} ; \
