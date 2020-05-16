@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2019/11/13 14:47:59 adam Exp $
+# $NetBSD: Makefile,v 1.72 2020/05/16 17:45:49 rillig Exp $
 
 DISTNAME=	salt-2019.2.2
 CATEGORIES=	sysutils
@@ -74,6 +74,7 @@ SUBST_SED.fix-path+=	-e 's,/opt/local/etc,${PKG_SYSCONFBASEDIR},g'
 SUBST_SED.fix-path+=	-e 's,/var/run,${VARBASE}/run,g'
 SUBST_SED.fix-path+=	-e 's,/var/cache,${VARBASE}/cache,g'
 SUBST_SED.fix-path+=	-e 's,/var/log,${VARBASE}/log,g'
+SUBST_NOOP_OK.fix-path=	yes
 
 # Contains hardcoded paths to find installed libraries.
 CHECK_WRKREF_SKIP+=	*/salt/utils/rsax931.py
