@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/04/25 07:27:55 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/16 17:27:42 adam Exp $
 
 DISTNAME=	pylama-7.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -17,13 +17,15 @@ DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.5.2:../../devel/py-mccabe
 # extensions
 DEPENDS+=	${PYPKGPREFIX}-eradicate-[0-9]*:../../textproc/py-eradicate
 DEPENDS+=	${PYPKGPREFIX}-radon>=1.4.2:../../devel/py-radon
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} pylama pylama-${PYVERSSUFFIX} || ${TRUE}
+	${MV} pylama pylama-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
