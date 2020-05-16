@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2018/05/23 17:45:23 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/05/16 17:56:53 nia Exp $
 
-SHA1 (libdca-0.0.6.tar.bz2) = d292ddb7b4d60c90274f9f0398fa61df0df9442c
-RMD160 (libdca-0.0.6.tar.bz2) = 9857d7b0379266d9400f271d6f8d788cfb2227ee
-SHA512 (libdca-0.0.6.tar.bz2) = d264128019e7fd295a35691636311f81960c17802dbbc67764c4e00b2fdf12ebc69b057a4947b57551a130e5cfd1fef3fe3558c7067216ea04a0b6bbb881b4f1
-Size (libdca-0.0.6.tar.bz2) = 454121 bytes
-SHA1 (patch-configure) = 334d86745a5ef3c6077b0c2f65198632181d35d5
+SHA1 (libdca-0.0.7.tar.bz2) = 1414a1c6b6cd49495f461a092fdb5da7b741fcdb
+RMD160 (libdca-0.0.7.tar.bz2) = 24a7ae60b93efaedeee7e2e0aa318ca6afcaaf39
+SHA512 (libdca-0.0.7.tar.bz2) = dae15d77d066687c882833d5bed8d65a585c1fc0277b7276563c89ddd5a83b35389ec94cca445f38af28a9b01430b72647e9afd1b08f030959e711de1a08924a
+Size (libdca-0.0.7.tar.bz2) = 158232 bytes
+SHA1 (patch-configure.ac) = 7f6e07f0d7526d481bdebc49a2dee95e79a2a02e
 SHA1 (patch-src_dcadec.c) = c60d59d5ed66c3525cbb1d92e02c3553b8a361b3
