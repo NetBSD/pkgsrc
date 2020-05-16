@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/11/11 21:53:06 maya Exp $
+# $NetBSD: Makefile,v 1.54 2020/05/16 11:31:34 rillig Exp $
 
 DISTNAME=	bugzilla-5.0.3
 PKGREVISION=	4
@@ -104,9 +104,10 @@ SUBST_SED.conf+=	-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
 
 SUBST_CLASSES+=		diff
 SUBST_STAGE.diff=	post-configure
-SUBST_MESSAGE.diff=	Fixing diff path used for Patch Viewer (Ignore depending on OS)
+SUBST_MESSAGE.diff=	Fixing diff path used for Patch Viewer
 SUBST_FILES.diff=	localconfig
 SUBST_SED.diff=		-e "s|\$$diffpath = .*|\$$diffpath = \'${DIFF:C,/[^/]+$,,}\';|"
+SUBST_NOOP_OK.diff=	yes
 
 INSTALLATION_DIRS+=	${DOCDIR} ${DOCDIR}/en ${EGDIR} ${BZDIR} ${BZDIR}/Bugzilla
 INSTALLATION_DIRS+=	${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins
