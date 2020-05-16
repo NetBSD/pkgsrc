@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/17 21:22:03 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/16 18:07:56 maya Exp $
 bin/cancel
-bin/cups-config
 bin/cupstestppd
 bin/ippeveprinter
 ${PLIST.ippfind}bin/ippfind
@@ -16,23 +15,6 @@ bin/ppdhtml
 bin/ppdi
 bin/ppdmerge
 bin/ppdpo
-include/cups/adminutil.h
-include/cups/array.h
-include/cups/backend.h
-include/cups/cups.h
-include/cups/dir.h
-include/cups/file.h
-include/cups/http.h
-include/cups/ipp.h
-include/cups/language.h
-include/cups/ppd.h
-include/cups/pwg.h
-include/cups/raster.h
-include/cups/sidechannel.h
-include/cups/transcode.h
-include/cups/versioning.h
-lib/libcups.la
-lib/libcupsimage.la
 ${PLIST.apple}libexec/cups/apple/http
 ${PLIST.apple}libexec/cups/apple/https
 ${PLIST.apple}libexec/cups/apple/ipp
@@ -781,14 +763,3 @@ share/examples/cups/cups-files.conf
 ${PLIST.pam}share/examples/cups/cups.pam
 share/examples/cups/cupsd.conf
 share/examples/cups/snmp.conf
-share/locale/ca/cups_ca.po
-share/locale/cs/cups_cs.po
-share/locale/de/cups_de.po
-share/locale/en/cups_en.po
-share/locale/es/cups_es.po
-share/locale/fr/cups_fr.po
-share/locale/it/cups_it.po
-share/locale/ja/cups_ja.po
-share/locale/pt_BR/cups_pt_BR.po
-share/locale/ru/cups_ru.po
-share/locale/zh_CN/cups_zh_CN.po

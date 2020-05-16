@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2020/03/10 22:08:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2020/05/16 18:07:56 maya Exp $
 
 BUILDLINK_TREE+=	cups-base
 
@@ -27,6 +27,7 @@ pkgbase := cups-base
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .endif # CUPS_BASE_BUILDLINK3_MK
 

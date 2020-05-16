@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.769 2020/05/15 11:57:35 nia Exp $
+# $NetBSD: Makefile,v 1.770 2020/05/16 18:07:56 maya Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -78,6 +78,7 @@ SUBDIR+=	lacheck
 SUBDIR+=	latex-mk
 SUBDIR+=	latexmk
 SUBDIR+=	lgrind
+SUBDIR+=	libcups
 SUBDIR+=	libgxps
 SUBDIR+=	libpaper
 SUBDIR+=	libspectre

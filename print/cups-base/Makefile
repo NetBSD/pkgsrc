@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2020/05/14 19:45:50 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2020/05/16 18:07:56 maya Exp $
 
 .include "../../print/cups/Makefile.common"
 
 DISTNAME=	cups-${CUPS_VERS}-source
 PKGNAME=	cups-base-${CUPS_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 
@@ -137,6 +137,11 @@ post-extract:
 	${CP} ${FILESDIR}/cups.pam ${WRKDIR}/cups.pam
 
 post-install:
+	# Delete files installed by libcups
+	${RM} ${DESTDIR}${PREFIX}/bin/cups-config
+	${RM} -rf ${DESTDIR}${PREFIX}/lib
+	${RM} -rf ${DESTDIR}${PREFIX}/include/cups
+	${RM} -rf ${DESTDIR}${PREFIX}/share/locale
 	set -e; for file in LICENSE README.md; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
@@ -157,6 +162,7 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
