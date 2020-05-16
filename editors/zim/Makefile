@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2020/03/10 22:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/05/16 11:57:07 rillig Exp $
 
 DISTNAME=	zim-0.59
-PKGREVISION=	19
+PKGREVISION=	20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
@@ -29,7 +29,7 @@ SUBST_SED.data-path=	-e 's,/usr/local/share/,${PREFIX}/share/,'
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure
 SUBST_MESSAGE.fix-python=	Fixing dynamic python
-SUBST_FILES.fix-python+=	zim/_lib/xdot.py
+SUBST_FILES.fix-python+=	zim/inc/xdot.py
 SUBST_FILES.fix-python+=	zim/_version.py
 SUBST_FILES.fix-python+=	zim/inc/xdot.py
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
