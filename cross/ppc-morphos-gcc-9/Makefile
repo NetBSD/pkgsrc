@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/14 22:02:21 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/16 18:39:10 js Exp $
 
 DISTNAME=	sdk-source-20191111
 PKGNAME=	ppc-morphos-gcc-9-9.2.0
@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--program-suffix=-9
 CONFIGURE_ARGS+=	--enable-threads=morphos
 CONFIGURE_ARGS+=	--disable-bootstrap
 CONFIGURE_ARGS+=	--enable-version-specific-runtime-libs
+
+CHECK_PORTABILITY_SKIP+=	contrib/download_prerequisites
 
 post-extract:
 	${RUN} cd ${WRKDIR}/sdk-source/gcc9 && \
