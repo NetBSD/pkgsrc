@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/16 08:46:42 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/16 09:03:22 adam Exp $
 
 DISTNAME=	mysqlclient-1.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/PyMySQL/mysqlclient-python
 COMMENT=	MySQL database connector for Python
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 # testing requires a running MySQL server
 do-test:

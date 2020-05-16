@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/05/16 08:47:54 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/16 09:03:22 adam Exp $
 
 DISTNAME=	redis-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +13,9 @@ LICENSE=	mit
 # testing requires a running redis-server
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
-USE_LANGUAGES=	# none
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
-PYTHON_VERSIONED_DEPENDENCIES=	pytest:test
+USE_LANGUAGES=	# none
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
