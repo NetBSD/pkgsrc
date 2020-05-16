@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/04/12 08:28:56 adam Exp $
+# $NetBSD: Makefile,v 1.54 2020/05/16 14:50:27 rillig Exp $
 #
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
@@ -25,6 +25,7 @@ DJB_CONFIG_CMDS+=	${ECHO} ${DESTDIR:Q} > conf-destdir;		\
 			${ECHO} ${EGDIR:Q} > conf-egdir;		\
 			${ECHO} ${PKG_SYSCONFDIR:Q} > conf-etc;		\
 			${ECHO} ${PREFIX:Q}/lib/ezmlm > conf-lib;
+DJB_ERRNO_HACK=		no
 
 LDFLAGS.Darwin+=	-Wl,-U,_FATAL -Wl,-U,_USAGE
 LDFLAGS.Linux+=		-Wl,--export-dynamic
