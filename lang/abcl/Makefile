@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/04/12 19:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/17 00:54:00 tnn Exp $
 
 DISTNAME=	abcl-src-1.5.0
 PKGNAME=	${DISTNAME:C/-src//}
@@ -9,7 +9,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://abcl.org/
 COMMENT=	Armed Bear Common Lisp
 
-PKG_JVMS_ACCEPTED=	openjdk8 oracle-jdk8 openjdk7 sun-jdk7 jdk16 jdk15 kaffe
+PKG_JVMS_ACCEPTED=	openjdk8 oracle-jdk8 sun-jdk7 jdk16 jdk15 kaffe
 
 BUILD_DEPENDS=	apache-ant>=1.7.1:../../devel/apache-ant
 
