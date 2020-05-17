@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/05/03 17:33:01 rillig Exp $
+# $NetBSD: Makefile,v 1.68 2020/05/17 15:52:18 rillig Exp $
 
 DISTNAME=	gdb-8.3.1
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ USE_LANGUAGES=		c c++11
 
 BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=			yes
+GNU_CONFIGURE_STRICT=		no # has sub-configures
 USE_PKGLOCALEDIR=		yes
 USE_LIBTOOL=			yes
 USE_TOOLS+=			gmake msgfmt makeinfo perl:build bash:run
