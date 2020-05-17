@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/22 12:28:28 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/17 20:18:36 adam Exp $
 
 DISTNAME=	raven-6.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,7 +29,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 # avoid circular dependency
 #TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-sanic>=0.7.0:../../www/py-sanic
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.2.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.5.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=1.0.0:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-pythonpath>=0.7.1:../../devel/py-test-pythonpath
@@ -41,6 +40,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zconfig-[0-9]*:../../devel/py-zconfig
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYPKGPREFIX} == py27
@@ -56,4 +57,5 @@ post-install:
 	${MV} raven raven-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
