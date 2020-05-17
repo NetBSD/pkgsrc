@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.25 2017/09/19 08:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2020/05/17 14:40:29 nia Exp $
 
-DISTNAME=	hsetroot-1.0.2
-PKGREVISION=	14
+DISTNAME=	hsetroot-1.0.5
 CATEGORIES=	x11
-MASTER_SITES=	http://thegraveyard.org/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=himdel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/himdel/hsetroot
 COMMENT=	Allows you to compose wallpapers for X
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
+USE_TOOLS+=	gmake pkg-config
 
-GNU_CONFIGURE=	yes
+INSTALLATION_DIRS+=	bin
 
-LDFLAGS.SunOS+=	-lX11
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/hsetroot ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/hsr-outputs ${DESTDIR}${PREFIX}/bin
 
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
