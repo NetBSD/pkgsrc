@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2020/05/17 15:24:48 nia Exp $
+# $NetBSD: Makefile,v 1.86 2020/05/17 23:53:59 nia Exp $
 
 DISTNAME=		libbonobo-2.32.1
 CATEGORIES=		devel gnome
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://developer.gnome.org/
 COMMENT=		GNOME2 Object activation framework library
-LICENSE=		gnu-gpl-v2
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 CONFLICTS=		bonobo-activation-[0-9]*
 
@@ -20,8 +20,8 @@ USE_TOOLS+=		bison flex gmake intltool msgfmt perl:run pkg-config
 PKGCONFIG_OVERRIDE=	bonobo/libbonobo-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	bonobo-activation/bonobo-activation-2.0.pc.in
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ENV+=		PERL_PATH=${TOOLS_PERL5:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		PERL_PATH=${TOOLS_PERL5}
 
 PKG_SYSCONFSUBDIR=	bonobo-activation
 EGDIR=			${PREFIX}/share/examples/bonobo-activation
