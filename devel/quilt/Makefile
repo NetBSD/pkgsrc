@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/18 23:30:39 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/17 22:16:40 rillig Exp $
 #
 
 DISTNAME=	quilt-0.66
@@ -51,16 +51,10 @@ REPLACE.conf-bash.old=		@BASH@
 REPLACE.conf-bash.new=		${BASH}
 REPLACE_FILES.conf-bash=	*.in */*.in */*/*.in
 
-SUBST_CLASSES+=		bash
-SUBST_MESSAGE.bash=	Fixing non-shellbang references to bash.
-SUBST_STAGE.bash=	pre-configure
-SUBST_VARS.bash=	BASH
-SUBST_FILES.bash=	quilt/scripts/inspect.in
-
 SUBST_CLASSES+=		etc
 SUBST_MESSAGE.etc=	Fixing path to configuration file.
 SUBST_STAGE.etc=	pre-configure
 SUBST_SED.etc=		-e 's,/etc/quilt,${PKG_SYSCONFDIR}/quilt,g'
-SUBST_FILES.etc=	bin/* doc/* po/*
+SUBST_FILES.etc=	doc/*
 
 .include "../../mk/bsd.pkg.mk"
