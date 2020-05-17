@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2996 2020/05/17 19:57:41 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2997 2020/05/17 20:37:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4715,3 +4715,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated parallel/py-billiard to 3.6.3.0 [adam 2020-05-17]
 	Updated net/py-celery to 4.4.2 [adam 2020-05-17]
 	Updated security/py-keyring to 21.2.1 [adam 2020-05-17]
+	Updated www/py-nbformat to 5.0.6 [adam 2020-05-17]
+	Updated www/py-parsel to 1.6.0 [adam 2020-05-17]
