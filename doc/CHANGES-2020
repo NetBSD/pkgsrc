@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2982 2020/05/17 15:10:09 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2983 2020/05/17 15:10:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4698,3 +4698,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/id3 to 1.1.2 [nia 2020-05-17]
 	Updated textproc/highlight to 3.57 [nia 2020-05-17]
 	Updated textproc/libhighlight to 3.57 [nia 2020-05-17]
+	Updated textproc/p5-highlight to 3.57 [nia 2020-05-17]
