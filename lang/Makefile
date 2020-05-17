@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.559 2020/05/10 15:02:44 maya Exp $
+# $NetBSD: Makefile,v 1.560 2020/05/17 00:47:06 tnn Exp $
 #
 
 COMMENT=	Programming languages
@@ -184,7 +184,6 @@ SUBDIR+=	open-cobol-ce
 SUBDIR+=	opencobol
 SUBDIR+=	openjdk-bin
 SUBDIR+=	openjdk11
-SUBDIR+=	openjdk7
 SUBDIR+=	openjdk8
 SUBDIR+=	opensource-cobol
 SUBDIR+=	oracle-jdk8
