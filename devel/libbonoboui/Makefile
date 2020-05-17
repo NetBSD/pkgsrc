@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2020/03/10 22:08:43 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2020/05/17 23:55:49 nia Exp $
 #
 
-DISTNAME=	libbonoboui-2.24.4
-PKGREVISION=	40
+DISTNAME=	libbonoboui-2.24.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libbonoboui/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME2 Object activation framework library (graphical version)
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
