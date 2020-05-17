@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/01/10 09:26:32 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/17 21:30:53 adam Exp $
 
-DISTNAME=	django-import-export-1.2.0
+DISTNAME=	django-import-export-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-import-export/}
@@ -11,10 +11,12 @@ COMMENT=	Django application and library for importing and exporting data
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-diff-match-patch-[0-9]*:../../textproc/py-diff-match-patch
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-DEPENDS+=	${PYPKGPREFIX}-tablib>=0.9:../../textproc/py-tablib
+DEPENDS+=	${PYPKGPREFIX}-django>=2.0:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-tablib>=0.14.0:../../textproc/py-tablib
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
