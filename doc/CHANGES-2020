@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2984 2020/05/17 15:25:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2985 2020/05/17 15:41:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4700,3 +4700,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libhighlight to 3.57 [nia 2020-05-17]
 	Updated textproc/p5-highlight to 3.57 [nia 2020-05-17]
 	Updated devel/libbonobo to 2.32.1 [nia 2020-05-17]
+	Updated www/ruby-crass to 1.0.6 [taca 2020-05-17]
