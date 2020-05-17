@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/07/14 17:02:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/17 09:33:03 kleink Exp $
 bin/cairosvg${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -6,9 +6,13 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cairosvg/VERSION
 ${PYSITELIB}/cairosvg/__init__.py
 ${PYSITELIB}/cairosvg/__init__.pyc
 ${PYSITELIB}/cairosvg/__init__.pyo
+${PYSITELIB}/cairosvg/__main__.py
+${PYSITELIB}/cairosvg/__main__.pyc
+${PYSITELIB}/cairosvg/__main__.pyo
 ${PYSITELIB}/cairosvg/bounding_box.py
 ${PYSITELIB}/cairosvg/bounding_box.pyc
 ${PYSITELIB}/cairosvg/bounding_box.pyo
