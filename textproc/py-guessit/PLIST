@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/06/15 19:04:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/17 21:07:03 adam Exp $
 bin/guessit-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -77,6 +77,9 @@ ${PYSITELIB}/guessit/rules/markers/groups.pyo
 ${PYSITELIB}/guessit/rules/markers/path.py
 ${PYSITELIB}/guessit/rules/markers/path.pyc
 ${PYSITELIB}/guessit/rules/markers/path.pyo
+${PYSITELIB}/guessit/rules/match_processors.py
+${PYSITELIB}/guessit/rules/match_processors.pyc
+${PYSITELIB}/guessit/rules/match_processors.pyo
 ${PYSITELIB}/guessit/rules/processors.py
 ${PYSITELIB}/guessit/rules/processors.pyc
 ${PYSITELIB}/guessit/rules/processors.pyo
