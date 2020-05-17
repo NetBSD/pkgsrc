@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/27 16:52:55 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/17 18:57:26 adam Exp $
 
 DISTNAME=	numpy-1.16.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,8 @@ COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=		c fortran
 MAKE_ENV+=		ATLAS=None
@@ -52,6 +53,7 @@ BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.29.2
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .if ${OPSYS} != "Darwin"
 # blas and lapack are not needed; numpy will use Accelerate.framework
 .include "../../math/blas/buildlink3.mk"
