@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:30:15 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/17 22:05:41 rillig Exp $
 #
 # GNU binutils snapshot, configured to target MIPS (NetBSD/playstation2)
 
@@ -23,7 +23,6 @@ USE_TOOLS+=		gm4 pod2man yacc gmake
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-64-bit-bfd
 CONFIGURE_ARGS+=	--target=${PLATFORM}
 
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
