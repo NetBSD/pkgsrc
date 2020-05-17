@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/01 15:24:02 nia Exp $
-bin/dmenu_run_hlwm
+@comment $NetBSD: PLIST,v 1.2 2020/05/17 14:56:42 nia Exp $
 bin/herbstclient
 bin/herbstluftwm
 man/man1/herbstclient.1
 man/man1/herbstluftwm.1
 man/man7/herbstluftwm-tutorial.7
+share/bash-completion/completions/herbstclient
 share/doc/herbstluftwm/BUGS
-share/doc/herbstluftwm/INSTALL
 share/doc/herbstluftwm/LICENSE
 share/doc/herbstluftwm/NEWS
 share/doc/herbstluftwm/examples/README
@@ -14,18 +13,23 @@ share/doc/herbstluftwm/examples/dmenu.sh
 share/doc/herbstluftwm/examples/dumpbeautify.sh
 share/doc/herbstluftwm/examples/exec_on_tag.sh
 share/doc/herbstluftwm/examples/execwith.sh
+share/doc/herbstluftwm/examples/float-maximize.sh
 share/doc/herbstluftwm/examples/floatmon.sh
 share/doc/herbstluftwm/examples/herbstcommander.sh
 share/doc/herbstluftwm/examples/keychain.sh
 share/doc/herbstluftwm/examples/lasttag.sh
 share/doc/herbstluftwm/examples/layout.sh
 share/doc/herbstluftwm/examples/loadstate.sh
+share/doc/herbstluftwm/examples/maximize.sh
 share/doc/herbstluftwm/examples/q3terminal.sh
 share/doc/herbstluftwm/examples/savestate.sh
 share/doc/herbstluftwm/examples/scratchpad.sh
+share/doc/herbstluftwm/examples/toggledualhead.sh
+share/doc/herbstluftwm/examples/windowmenu.sh
 share/doc/herbstluftwm/examples/wselect.sh
 share/doc/herbstluftwm/herbstclient.html
 share/doc/herbstluftwm/herbstluftwm-tutorial.html
 share/doc/herbstluftwm/herbstluftwm.html
+share/fish/vendor_completions.d/herbstclient.fish
 share/xsessions/herbstluftwm.desktop
-share/zsh/functions/Completion/X/_herbstclient
+share/zsh/site-functions/_herbstclient

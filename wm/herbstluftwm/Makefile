@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:51:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/17 14:56:42 nia Exp $
 
-DISTNAME=	herbstluftwm-0.7.2
-PKGREVISION=	1
+DISTNAME=	herbstluftwm-0.8.2
 CATEGORIES=	wm
 MASTER_SITES=	https://herbstluftwm.org/tarballs/
 
@@ -29,5 +28,6 @@ pre-configure:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
