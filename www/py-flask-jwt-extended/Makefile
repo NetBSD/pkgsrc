@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/10/25 09:34:08 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/17 20:18:35 adam Exp $
 
 DISTNAME=	Flask-JWT-Extended-3.24.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,7 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-flask>=1.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.3:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.14:../../www/py-werkzeug
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -23,4 +24,5 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
