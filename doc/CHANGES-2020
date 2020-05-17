@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2968 2020/05/17 08:46:05 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2969 2020/05/17 09:20:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed lang/openjdk7 successor lang/openjdk8 [tnn 2020-05-17]
 	Updated pkgtools/pkglint to 20.1.6 [rillig 2020-05-17]
 	Updated audio/din to 46.3 [fox 2020-05-17]
+	Updated databases/p5-DBI to 1.643 [wen 2020-05-17]
