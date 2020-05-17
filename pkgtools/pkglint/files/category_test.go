@@ -29,8 +29,8 @@ func (s *Suite) Test_CheckdirCategory__totally_broken(c *check.C) {
 		"NOTE: ~/archivers/Makefile:2: Empty line expected above this line.",
 		"WARN: ~/archivers/Makefile:3: \"aaaaa\" should come before \"pkg1\".",
 		"ERROR: ~/archivers/Makefile:4: SUBDIR+= line or empty line expected.",
-		"ERROR: ~/archivers/Makefile:2: \"pkg1\" exists in the Makefile but not in the file system.",
-		"ERROR: ~/archivers/Makefile:3: \"aaaaa\" exists in the Makefile but not in the file system.",
+		"ERROR: ~/archivers/Makefile:2: \"pkg1\" does not contain a package.",
+		"ERROR: ~/archivers/Makefile:3: \"aaaaa\" does not contain a package.",
 		"NOTE: ~/archivers/Makefile:4: Empty line expected above this line.",
 		"WARN: ~/archivers/Makefile:4: This line should contain the following text: .include \"../mk/misc/category.mk\"",
 		"ERROR: ~/archivers/Makefile:4: The file must end here.")
@@ -125,9 +125,9 @@ func (s *Suite) Test_CheckdirCategory__subdirs(c *check.C) {
 		"WARN: ~/category/Makefile:7: \"duplicate\" should come before \"in-wrong-order\".",
 		"WARN: ~/category/Makefile:10: \"commented-mk-and-fs\" should come before \"mk-only\".",
 		"WARN: ~/category/Makefile:12: \"commented-without-reason\" commented out without giving a reason.",
-		"ERROR: ~/category/Makefile:6: \"fs-only\" exists in the file system but not in the Makefile.",
-		"ERROR: ~/category/Makefile:9: \"mk-only\" exists in the Makefile but not in the file system.",
-		"ERROR: ~/category/Makefile:11: \"commented-mk-only\" exists in the Makefile but not in the file system.")
+		"ERROR: ~/category/Makefile:6: Package \"fs-only\" must be listed here.",
+		"ERROR: ~/category/Makefile:9: \"mk-only\" does not contain a package.",
+		"ERROR: ~/category/Makefile:11: \"commented-mk-only\" does not contain a package.")
 }
 
 func (s *Suite) Test_CheckdirCategory__only_in_Makefile(c *check.C) {
@@ -151,10 +151,10 @@ func (s *Suite) Test_CheckdirCategory__only_in_Makefile(c *check.C) {
 	CheckdirCategory(t.File("category"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/Makefile:5: \"above-only-in-makefile\" exists in the Makefile "+
-			"but not in the file system.",
-		"ERROR: ~/category/Makefile:7: \"only-in-makefile\" exists in the Makefile "+
-			"but not in the file system.")
+		"ERROR: ~/category/Makefile:5: "+
+			"\"above-only-in-makefile\" does not contain a package.",
+		"ERROR: ~/category/Makefile:7: "+
+			"\"only-in-makefile\" does not contain a package.")
 }
 
 func (s *Suite) Test_CheckdirCategory__only_in_file_system(c *check.C) {
@@ -178,10 +178,8 @@ func (s *Suite) Test_CheckdirCategory__only_in_file_system(c *check.C) {
 	CheckdirCategory(t.File("category"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/Makefile:5: \"above-only-in-fs\" exists in the file system "+
-			"but not in the Makefile.",
-		"ERROR: ~/category/Makefile:6: \"only-in-fs\" exists in the file system "+
-			"but not in the Makefile.")
+		"ERROR: ~/category/Makefile:5: Package \"above-only-in-fs\" must be listed here.",
+		"ERROR: ~/category/Makefile:6: Package \"only-in-fs\" must be listed here.")
 }
 
 func (s *Suite) Test_CheckdirCategory__recursive(c *check.C) {
@@ -245,7 +243,7 @@ func (s *Suite) Test_CheckdirCategory__subdirs_file_system_at_the_bottom(c *chec
 	CheckdirCategory(t.File("category"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/Makefile:6: \"zzz-fs-only\" exists in the file system but not in the Makefile.",
+		"ERROR: ~/category/Makefile:6: Package \"zzz-fs-only\" must be listed here.",
 		"AUTOFIX: ~/category/Makefile:6: Inserting a line \"SUBDIR+=\\tzzz-fs-only\" above this line.")
 }
 
@@ -303,7 +301,7 @@ func (s *Suite) Test_CheckdirCategory__comment_at_the_top(c *check.C) {
 		"ERROR: ~/category/Makefile:3: COMMENT= line expected.",
 		"NOTE: ~/category/Makefile:3: Empty line expected above this line.",
 		"ERROR: ~/category/Makefile:3: SUBDIR+= line or empty line expected.",
-		"ERROR: ~/category/Makefile:3: \"package\" exists in the file system but not in the Makefile.",
+		"ERROR: ~/category/Makefile:3: Package \"package\" must be listed here.",
 		"NOTE: ~/category/Makefile:3: Empty line expected above this line.",
 		"WARN: ~/category/Makefile:3: This line should contain the following text: .include \"../mk/misc/category.mk\"",
 		"ERROR: ~/category/Makefile:3: The file must end here.")
@@ -364,10 +362,10 @@ func (s *Suite) Test_CheckdirCategory__case_mismatch(c *check.C) {
 	G.Check(t.File("category"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/Makefile:5: \"p5-Net-DNS\" "+
-			"exists in the file system but not in the Makefile.",
-		"ERROR: ~/category/Makefile:5: \"p5-net-dns\" "+
-			"exists in the Makefile but not in the file system.")
+		"ERROR: ~/category/Makefile:5: "+
+			"Package \"p5-Net-DNS\" must be listed here.",
+		"ERROR: ~/category/Makefile:5: "+
+			"\"p5-net-dns\" does not contain a package.")
 }
 
 func (s *Suite) Test_CheckdirCategory__dot(c *check.C) {
@@ -389,8 +387,7 @@ func (s *Suite) Test_CheckdirCategory__dot(c *check.C) {
 	G.Check(".")
 
 	t.CheckOutputLines(
-		"ERROR: Makefile:5: \"package\" exists in the Makefile " +
-			"but not in the file system.")
+		"ERROR: Makefile:5: \"package\" does not contain a package.")
 }
 
 func (s *Suite) Test_CheckdirCategory__absolute(c *check.C) {
@@ -415,4 +412,28 @@ func (s *Suite) Test_CheckdirCategory__absolute(c *check.C) {
 		"WARN: Makefile:5: The filename \"/other\" "+
 			"contains the invalid character \"/\".",
 		"ERROR: Makefile:5: \"/other\" must be a relative path.")
+}
+
+func (s *Suite) Test_CheckdirCategory__subdir_that_is_not_a_package(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/misc/category.mk")
+	t.CreateFileLines("category/Makefile",
+		MkCvsID,
+		"",
+		"COMMENT=\tCategory comment",
+		"",
+		"SUBDIR+=\tsub2",
+		"",
+		".include \"../mk/misc/category.mk\"")
+	t.CreateFileLines("category/sub1/module.mk")
+	t.CreateFileLines("category/sub2/module.mk")
+	t.Chdir("category")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"ERROR: Makefile:5: \"sub2\" does not contain a package.")
 }

@@ -581,6 +581,9 @@ func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *P
 			CheckLinesBuildlink3Mk(mklines)
 		}
 
+	case p.Wip && basename == "COMMIT_MSG":
+		// https://mail-index.netbsd.org/pkgsrc-users/2020/05/10/msg031174.html
+
 	case hasPrefix(basename, "DESCR"):
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
 			CheckLinesDescr(lines)
