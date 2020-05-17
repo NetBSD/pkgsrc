@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2019/10/22 16:24:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/17 15:59:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/MIT-LICENSE.txt
@@ -26,19 +25,4 @@ ${GEM_LIBDIR}/lib/loofah/scrubber.rb
 ${GEM_LIBDIR}/lib/loofah/scrubbers.rb
 ${GEM_LIBDIR}/lib/loofah/xml/document.rb
 ${GEM_LIBDIR}/lib/loofah/xml/document_fragment.rb
-${GEM_LIBDIR}/test/assets/msword.html
-${GEM_LIBDIR}/test/assets/testdata_sanitizer_tests1.dat
-${GEM_LIBDIR}/test/helper.rb
-${GEM_LIBDIR}/test/html5/test_sanitizer.rb
-${GEM_LIBDIR}/test/html5/test_scrub.rb
-${GEM_LIBDIR}/test/integration/test_ad_hoc.rb
-${GEM_LIBDIR}/test/integration/test_helpers.rb
-${GEM_LIBDIR}/test/integration/test_html.rb
-${GEM_LIBDIR}/test/integration/test_scrubbers.rb
-${GEM_LIBDIR}/test/integration/test_xml.rb
-${GEM_LIBDIR}/test/unit/test_api.rb
-${GEM_LIBDIR}/test/unit/test_encoding.rb
-${GEM_LIBDIR}/test/unit/test_helpers.rb
-${GEM_LIBDIR}/test/unit/test_scrubber.rb
-${GEM_LIBDIR}/test/unit/test_scrubbers.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
