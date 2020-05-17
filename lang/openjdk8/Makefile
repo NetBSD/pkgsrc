@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/05/17 01:07:03 tnn Exp $
+# $NetBSD: Makefile,v 1.100 2020/05/17 01:17:18 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--openjdk-target=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
 CONFIGURE_ARGS+=	--with-zlib=system
 CONFIGURE_ARGS+=	--with-giflib=bundled
-CONFIGURE_ARGS+=	--with-cups-include=${BUILDLINK_PREFIX.cups-base}/include
+CONFIGURE_ARGS+=	--with-cups-include=${BUILDLINK_PREFIX.libcups}/include
 CONFIGURE_ARGS+=	--with-freetype-lib=${BUILDLINK_PREFIX.freetype2}/lib
 CONFIGURE_ARGS+=	--with-freetype-include=${BUILDLINK_PREFIX.freetype2}/include
 CONFIGURE_ARGS+=	--disable-freetype-bundling
