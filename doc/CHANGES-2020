@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2975 2020/05/17 14:43:28 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2976 2020/05/17 14:44:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4691,3 +4691,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/fish to 3.1.2 [nia 2020-05-17]
 	Updated x11/hsetroot to 1.0.5 [nia 2020-05-17]
 	Updated fonts/harfbuzz to 2.6.6 [nia 2020-05-17]
+	Updated lang/elixir to 1.10.3 [nia 2020-05-17]
