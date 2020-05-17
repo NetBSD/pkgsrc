@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/03/30 06:35:44 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/05/17 21:26:11 adam Exp $
 
-SHA1 (tablib-0.12.1.tar.gz) = d00fa84c5fd8d9d38c4ccc03dae6105342720b98
-RMD160 (tablib-0.12.1.tar.gz) = c81838594d30d82c6c912f57b409a56379892f82
-SHA512 (tablib-0.12.1.tar.gz) = 5207f59dab59f465584fc6c55d6322150f550c50f50a35d6901a39ed05a624a52dfdb5a9a9ddf0d6bc7285e5a3a4972c458895e4cc204a365c3df0d9ada0228a
-Size (tablib-0.12.1.tar.gz) = 63420 bytes
-SHA1 (patch-tablib_packages_dbfpy_dbfnew.py) = 688f06aea1f5ecf70f5a76e971cb193d65a424f9
+SHA1 (tablib-2.0.0.tar.gz) = 951a721aba46bfc8d04dfca7bcff8c5ae73ae679
+RMD160 (tablib-2.0.0.tar.gz) = 95fa1310979822e23634b7769405c7c0e517f20e
+SHA512 (tablib-2.0.0.tar.gz) = cfc4a8ac55a6a37644c3b23fceb1a45a78d52b18e76dd64c0a2e1ed82a710f559d4937c76a5803ad4f31ed0d3d49d0c95210a5b38ba380b24a488e56860c502d
+Size (tablib-2.0.0.tar.gz) = 86259 bytes
