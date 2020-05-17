@@ -1,1 +1,0 @@
-bin/jupyter-trust @PREFIX@/bin/jupyter-trust@PYVERSSUFFIX@
