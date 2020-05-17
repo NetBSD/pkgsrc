@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2020/05/17 19:47:19 rillig Exp $
+$NetBSD: distinfo,v 1.3 2020/05/17 19:49:18 rillig Exp $
 
 SHA1 (gcc-10.1.0.tar.xz) = 1af8d963e4a74d05a8f2d0f795ea52d2b91f6c50
 RMD160 (gcc-10.1.0.tar.xz) = eb9c7a9c10fbe5b4ff84818b280248ab97d17769
@@ -20,11 +20,11 @@ SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
 SHA1 (patch-libffi_configure) = 22006b20d7f655e2455a7ad613d676703b6c1ccc
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 27b84a11378fb648dfaad0c70abedd77a0a1c1a8
 SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
-SHA1 (patch-libgfortran_io_format.c) = cff0b1a3ad4357c15a5b28977887a80aa7e006f1
+SHA1 (patch-libgfortran_io_format.c) = 9bbc5e4f6277bdec785b3690fd08259939a2aa1a
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
-SHA1 (patch-libgfortran_io_list__read.c) = f141d8ad57ea4ca30727c2d31f745d95633efcd9
-SHA1 (patch-libgfortran_io_read.c) = a3f194f70bbba82283843f7ce2998a925ee207c4
-SHA1 (patch-libgfortran_runtime_environ.c) = 80d1cda03d2da1fac06242982fc6922bd75d622b
-SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 7c68f155cfb99c3bca625a1966a04c2c46b4d6fc
-SHA1 (patch-libquadmath_strtod_strtod__l.c) = 1d448aa1a149ff24742f87443d0da76278206025
+SHA1 (patch-libgfortran_io_list__read.c) = 589cdb8dcd180b781ededc086e8775224fca5779
+SHA1 (patch-libgfortran_io_read.c) = cf21493396d07a5e8ad0dfb70a8d25a11482fc98
+SHA1 (patch-libgfortran_runtime_environ.c) = c7217704a00f4c0314bbc1838ac6fc966cc854d0
+SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
+SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
 SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 4183b00a5ee6e61524da4755c825a0c08fd01ed6
