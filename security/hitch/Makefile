@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 21:50:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/17 15:01:41 nia Exp $
 
-DISTNAME=	hitch-1.5.0
-PKGREVISION=	2
+DISTNAME=	hitch-1.5.2
 CATEGORIES=	security
 MASTER_SITES=	https://hitch-tls.org/source/
 
