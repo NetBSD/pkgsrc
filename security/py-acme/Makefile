@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/10/02 17:36:43 adam Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/17 19:34:12 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -17,8 +17,10 @@ DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.3.0:../../devel/py-requests-toolbe
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/02/04 16:36:53 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/17 19:34:12 adam Exp $
 
 DISTNAME=	josepy-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,10 +17,11 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cache>=1.0:../../devel/py-test-cache
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=0.5:../../devel/py-test-flake8
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -29,4 +30,5 @@ post-install:
 	${MV} jws jws-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/06/20 11:15:18 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/17 19:34:12 adam Exp $
 
 DISTNAME=	bcrypt-3.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,9 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.1:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.4.0:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
