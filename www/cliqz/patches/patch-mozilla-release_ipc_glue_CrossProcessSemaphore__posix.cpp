@@ -1,14 +1,15 @@
-$NetBSD: patch-mozilla-release_ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.1 2019/04/19 14:02:03 fox Exp $
+$NetBSD: patch-mozilla-release_ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2020/05/17 10:10:19 fox Exp $
 
-Original patch from ryoon, imported from www/firefox
+Taken from www/firefox.
 
---- mozilla-release/ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2018-11-16 08:40:07.000000000 +0000
+--- mozilla-release/ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2019-01-18 00:20:30.000000000 +0000
 +++ mozilla-release/ipc/glue/CrossProcessSemaphore_posix.cpp
-@@ -9,6 +9,11 @@
+@@ -9,6 +9,12 @@
  #include "nsDebug.h"
  #include "nsISupportsImpl.h"
  #include <errno.h>
 +#if defined(__NetBSD__)
++#include <sys/param.h>
 +#include <iostream>
 +#include <unistd.h>
 +#include <limits>
@@ -16,11 +17,11 @@ Original patch from ryoon, imported from www/firefox
  
  static const uint64_t kNsPerMs = 1000000;
  static const uint64_t kNsPerSec = 1000000000;
-@@ -16,7 +21,13 @@ static const uint64_t kNsPerSec = 100000
+@@ -16,7 +22,13 @@ static const uint64_t kNsPerSec = 100000
  namespace {
  
  struct SemaphoreData {
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  pthread_mutex_t mMutex;
 +  pthread_cond_t mNotZero;
 +  uint32_t mValue;
@@ -30,11 +31,11 @@ Original patch from ryoon, imported from www/firefox
    mozilla::Atomic<int32_t> mRefCount;
    uint32_t mInitialValue;
  };
-@@ -42,13 +53,27 @@ namespace mozilla {
+@@ -43,13 +55,27 @@ CrossProcessSemaphore* CrossProcessSemap
      return nullptr;
    }
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  data->mValue = aInitialValue;
 +  if (pthread_mutex_init(&data->mMutex, NULL) ||
 +      pthread_cond_init(&data->mNotZero, NULL) ) {
@@ -48,7 +49,7 @@ Original patch from ryoon, imported from www/firefox
  
    CrossProcessSemaphore* sem = new CrossProcessSemaphore;
    sem->mSharedBuffer = sharedBuffer;
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  sem->mMutex = &data->mMutex;
 +  sem->mNotZero = &data->mNotZero;
 +  sem->mValue = &data->mValue;
@@ -58,11 +59,11 @@ Original patch from ryoon, imported from www/firefox
    sem->mRefCount = &data->mRefCount;
    *sem->mRefCount = 1;
  
-@@ -83,23 +108,44 @@ namespace mozilla {
+@@ -85,23 +111,44 @@ CrossProcessSemaphore* CrossProcessSemap
  
    int32_t oldCount = data->mRefCount++;
    if (oldCount == 0) {
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +    if (pthread_mutex_init(&data->mMutex, NULL) ||
 +        pthread_cond_init(&data->mNotZero, NULL) ) {
 +      data->mRefCount--;
@@ -80,7 +81,7 @@ Original patch from ryoon, imported from www/firefox
  
    CrossProcessSemaphore* sem = new CrossProcessSemaphore;
    sem->mSharedBuffer = sharedBuffer;
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  sem->mMutex = &data->mMutex;
 +  sem->mNotZero = &data->mNotZero;
 +  sem->mValue = &data->mValue;
@@ -93,7 +94,7 @@ Original patch from ryoon, imported from www/firefox
  
  CrossProcessSemaphore::CrossProcessSemaphore()
 -    : mSemaphore(nullptr), mRefCount(nullptr) {
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  : mMutex (nullptr)
 +  , mNotZero (nullptr)
 +  , mValue (nullptr)
@@ -104,11 +105,11 @@ Original patch from ryoon, imported from www/firefox
    MOZ_COUNT_CTOR(CrossProcessSemaphore);
  }
  
-@@ -108,16 +154,57 @@ CrossProcessSemaphore::~CrossProcessSema
+@@ -110,16 +157,57 @@ CrossProcessSemaphore::~CrossProcessSema
  
    if (oldCount == 0) {
      // Nothing can be done if the destroy fails so ignore return code.
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +    (void)pthread_cond_destroy(mNotZero);
 +    (void)pthread_mutex_destroy(mMutex);
 +#else
@@ -119,7 +120,7 @@ Original patch from ryoon, imported from www/firefox
    MOZ_COUNT_DTOR(CrossProcessSemaphore);
  }
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +static struct timespec
 +makeAbsTime(const Maybe<TimeDuration>& aWaitTime) {
 +  struct timespec ts;
@@ -141,7 +142,7 @@ Original patch from ryoon, imported from www/firefox
    MOZ_ASSERT(*mRefCount > 0,
               "Attempting to wait on a semaphore with zero ref count");
    int ret;
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  struct timespec ts = makeAbsTime(aWaitTime);
 +
 +  ret = pthread_mutex_lock(mMutex);
@@ -162,7 +163,7 @@ Original patch from ryoon, imported from www/firefox
    if (aWaitTime.isSome()) {
      struct timespec ts;
      if (clock_gettime(CLOCK_REALTIME, &ts) == -1) {
-@@ -134,13 +221,24 @@ bool CrossProcessSemaphore::Wait(const M
+@@ -136,13 +224,24 @@ bool CrossProcessSemaphore::Wait(const M
      while ((ret = sem_wait(mSemaphore)) == -1 && errno == EINTR) {
      }
    }
@@ -173,7 +174,7 @@ Original patch from ryoon, imported from www/firefox
  void CrossProcessSemaphore::Signal() {
    MOZ_ASSERT(*mRefCount > 0,
               "Attempting to signal a semaphore with zero ref count");
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  int ret;
 +  ret = pthread_mutex_lock(mMutex);
 +  if (ret == 0) {
