@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/10/07 11:07:39 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/17 21:38:46 adam Exp $
 
 DISTNAME=	Whoosh-2.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://bitbucket.org/mchaput/whoosh/wiki/Home
 COMMENT=	Fast, featureful full-text indexing and searching library implemented
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
