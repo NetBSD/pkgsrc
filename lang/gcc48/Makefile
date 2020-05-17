@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/05/03 17:37:47 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2020/05/17 20:07:00 rillig Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -141,6 +141,12 @@ BUILDLINK_DEPMETHOD.binutils=	full
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
 .endif
+
+# libgfortran/runtime/environ.c:119:5: error: array subscript has type 'char'
+# See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=95177
+# See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=95178
+# Not worth fixing though since nobody cared between 2014 and 2020.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 pre-configure:
 .if ${OPSYS} == "OpenBSD"
