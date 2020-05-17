@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/05/03 17:40:34 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/17 15:52:18 rillig Exp $
 
 DISTNAME=	gdb-7.11
 PKGREVISION=	6
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=			YES
+GNU_CONFIGURE_STRICT=		no # has sub-configures
 USE_PKGLOCALEDIR=		YES
 USE_LIBTOOL=			YES
 USE_TOOLS+=			gmake msgfmt makeinfo perl:build bash
