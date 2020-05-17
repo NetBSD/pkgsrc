@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/10/01 15:34:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/17 16:25:42 taca Exp $
 
-DISTNAME=	sassc-2.2.1
+DISTNAME=	sassc-2.3.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/01 15:34:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/17 16:25:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/sassc/libsass.${RUBY_DLEXT}
@@ -29,8 +29,11 @@ ${GEM_LIBDIR}/ext/libsass/src/ast2c.hpp
 ${GEM_LIBDIR}/ext/libsass/src/ast_def_macros.hpp
 ${GEM_LIBDIR}/ext/libsass/src/ast_fwd_decl.cpp
 ${GEM_LIBDIR}/ext/libsass/src/ast_fwd_decl.hpp
+${GEM_LIBDIR}/ext/libsass/src/ast_helpers.hpp
 ${GEM_LIBDIR}/ext/libsass/src/ast_sel_cmp.cpp
+${GEM_LIBDIR}/ext/libsass/src/ast_sel_super.cpp
 ${GEM_LIBDIR}/ext/libsass/src/ast_sel_unify.cpp
+${GEM_LIBDIR}/ext/libsass/src/ast_sel_weave.cpp
 ${GEM_LIBDIR}/ext/libsass/src/ast_selectors.cpp
 ${GEM_LIBDIR}/ext/libsass/src/ast_selectors.hpp
 ${GEM_LIBDIR}/ext/libsass/src/ast_supports.cpp
@@ -59,6 +62,7 @@ ${GEM_LIBDIR}/ext/libsass/src/context.cpp
 ${GEM_LIBDIR}/ext/libsass/src/context.hpp
 ${GEM_LIBDIR}/ext/libsass/src/cssize.cpp
 ${GEM_LIBDIR}/ext/libsass/src/cssize.hpp
+${GEM_LIBDIR}/ext/libsass/src/dart_helpers.hpp
 ${GEM_LIBDIR}/ext/libsass/src/debug.hpp
 ${GEM_LIBDIR}/ext/libsass/src/debugger.hpp
 ${GEM_LIBDIR}/ext/libsass/src/emitter.cpp
@@ -69,10 +73,13 @@ ${GEM_LIBDIR}/ext/libsass/src/error_handling.cpp
 ${GEM_LIBDIR}/ext/libsass/src/error_handling.hpp
 ${GEM_LIBDIR}/ext/libsass/src/eval.cpp
 ${GEM_LIBDIR}/ext/libsass/src/eval.hpp
+${GEM_LIBDIR}/ext/libsass/src/eval_selectors.cpp
 ${GEM_LIBDIR}/ext/libsass/src/expand.cpp
 ${GEM_LIBDIR}/ext/libsass/src/expand.hpp
-${GEM_LIBDIR}/ext/libsass/src/extend.cpp
-${GEM_LIBDIR}/ext/libsass/src/extend.hpp
+${GEM_LIBDIR}/ext/libsass/src/extender.cpp
+${GEM_LIBDIR}/ext/libsass/src/extender.hpp
+${GEM_LIBDIR}/ext/libsass/src/extension.cpp
+${GEM_LIBDIR}/ext/libsass/src/extension.hpp
 ${GEM_LIBDIR}/ext/libsass/src/file.cpp
 ${GEM_LIBDIR}/ext/libsass/src/file.hpp
 ${GEM_LIBDIR}/ext/libsass/src/fn_colors.cpp
@@ -103,16 +110,16 @@ ${GEM_LIBDIR}/ext/libsass/src/listize.hpp
 ${GEM_LIBDIR}/ext/libsass/src/mapping.hpp
 ${GEM_LIBDIR}/ext/libsass/src/memory/SharedPtr.cpp
 ${GEM_LIBDIR}/ext/libsass/src/memory/SharedPtr.hpp
-${GEM_LIBDIR}/ext/libsass/src/node.cpp
-${GEM_LIBDIR}/ext/libsass/src/node.hpp
 ${GEM_LIBDIR}/ext/libsass/src/operation.hpp
 ${GEM_LIBDIR}/ext/libsass/src/operators.cpp
 ${GEM_LIBDIR}/ext/libsass/src/operators.hpp
+${GEM_LIBDIR}/ext/libsass/src/ordered_map.hpp
 ${GEM_LIBDIR}/ext/libsass/src/output.cpp
 ${GEM_LIBDIR}/ext/libsass/src/output.hpp
 ${GEM_LIBDIR}/ext/libsass/src/parser.cpp
 ${GEM_LIBDIR}/ext/libsass/src/parser.hpp
-${GEM_LIBDIR}/ext/libsass/src/paths.hpp
+${GEM_LIBDIR}/ext/libsass/src/parser_selectors.cpp
+${GEM_LIBDIR}/ext/libsass/src/permutate.hpp
 ${GEM_LIBDIR}/ext/libsass/src/plugins.cpp
 ${GEM_LIBDIR}/ext/libsass/src/plugins.hpp
 ${GEM_LIBDIR}/ext/libsass/src/position.cpp
@@ -128,14 +135,12 @@ ${GEM_LIBDIR}/ext/libsass/src/sass_context.cpp
 ${GEM_LIBDIR}/ext/libsass/src/sass_context.hpp
 ${GEM_LIBDIR}/ext/libsass/src/sass_functions.cpp
 ${GEM_LIBDIR}/ext/libsass/src/sass_functions.hpp
-${GEM_LIBDIR}/ext/libsass/src/sass_util.cpp
-${GEM_LIBDIR}/ext/libsass/src/sass_util.hpp
 ${GEM_LIBDIR}/ext/libsass/src/sass_values.cpp
 ${GEM_LIBDIR}/ext/libsass/src/sass_values.hpp
 ${GEM_LIBDIR}/ext/libsass/src/source_map.cpp
 ${GEM_LIBDIR}/ext/libsass/src/source_map.hpp
-${GEM_LIBDIR}/ext/libsass/src/subset_map.cpp
-${GEM_LIBDIR}/ext/libsass/src/subset_map.hpp
+${GEM_LIBDIR}/ext/libsass/src/stylesheet.cpp
+${GEM_LIBDIR}/ext/libsass/src/stylesheet.hpp
 ${GEM_LIBDIR}/ext/libsass/src/to_value.cpp
 ${GEM_LIBDIR}/ext/libsass/src/to_value.hpp
 ${GEM_LIBDIR}/ext/libsass/src/units.cpp
