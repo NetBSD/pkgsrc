@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/22 19:20:32 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/17 19:34:13 adam Exp $
 
 DISTNAME=	trustme-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,8 @@ LICENSE=	apache-2.0 OR mit
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 TEST_DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
@@ -24,4 +25,5 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/05/07 10:53:44 adam Exp $
+# $NetBSD: Makefile,v 1.25 2020/05/17 19:34:12 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -23,9 +23,10 @@ DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 # Needed for the test target
 # https://github.com/certbot/certbot/issues/2956
 TEST_DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 BUILD_DEFS+=		VARBASE
 
@@ -50,4 +51,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/certbot-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
