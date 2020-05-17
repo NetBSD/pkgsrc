@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2969 2020/05/17 09:20:28 wen Exp $
+$NetBSD: CHANGES-2020,v 1.2970 2020/05/17 10:20:27 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4685,3 +4685,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.1.6 [rillig 2020-05-17]
 	Updated audio/din to 46.3 [fox 2020-05-17]
 	Updated databases/p5-DBI to 1.643 [wen 2020-05-17]
+	Updated www/cliqz to 1.36.0 [fox 2020-05-17]
