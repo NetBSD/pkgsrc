@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/23 05:53:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/17 21:38:46 adam Exp $
 
 DISTNAME=	readme_renderer-26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-bleach>=2.1.0:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.13.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.5.1:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -22,4 +23,5 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

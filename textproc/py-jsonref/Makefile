@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/11/20 11:52:43 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/17 21:38:46 adam Exp $
 
 DISTNAME=	jsonref-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,10 +10,11 @@ HOMEPAGE=	https://github.com/gazpachoking/jsonref
 COMMENT=	JSON References for Python
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX} tests.py
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests.py
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
