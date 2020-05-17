@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2997 2020/05/17 20:37:42 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2998 2020/05/17 21:26:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4717,3 +4717,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-keyring to 21.2.1 [adam 2020-05-17]
 	Updated www/py-nbformat to 5.0.6 [adam 2020-05-17]
 	Updated www/py-parsel to 1.6.0 [adam 2020-05-17]
+	Updated textproc/py-dominate to 2.5.1 [adam 2020-05-17]
+	Updated textproc/py-rebulk to 2.0.1 [adam 2020-05-17]
+	Updated textproc/py-guessit to 3.1.1 [adam 2020-05-17]
+	Updated textproc/py-tablib to 2.0.0 [adam 2020-05-17]
