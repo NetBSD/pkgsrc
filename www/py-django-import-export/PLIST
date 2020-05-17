@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/10 09:26:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/17 21:30:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,9 +11,6 @@ ${PYSITELIB}/import_export/__init__.pyo
 ${PYSITELIB}/import_export/admin.py
 ${PYSITELIB}/import_export/admin.pyc
 ${PYSITELIB}/import_export/admin.pyo
-${PYSITELIB}/import_export/django_compat.py
-${PYSITELIB}/import_export/django_compat.pyc
-${PYSITELIB}/import_export/django_compat.pyo
 ${PYSITELIB}/import_export/exceptions.py
 ${PYSITELIB}/import_export/exceptions.pyc
 ${PYSITELIB}/import_export/exceptions.pyo
@@ -52,6 +49,8 @@ ${PYSITELIB}/import_export/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/ja/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/ja/LC_MESSAGES/django.po
+${PYSITELIB}/import_export/locale/nl/LC_MESSAGES/django.mo
+${PYSITELIB}/import_export/locale/nl/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/pl/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/pl/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/pt_BR/LC_MESSAGES/django.mo
@@ -60,14 +59,13 @@ ${PYSITELIB}/import_export/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/ru/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/sk/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/sk/LC_MESSAGES/django.po
+${PYSITELIB}/import_export/locale/tr/LC_MESSAGES/django.mo
+${PYSITELIB}/import_export/locale/tr/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/mixins.py
 ${PYSITELIB}/import_export/mixins.pyc
 ${PYSITELIB}/import_export/mixins.pyo
-${PYSITELIB}/import_export/models.py
-${PYSITELIB}/import_export/models.pyc
-${PYSITELIB}/import_export/models.pyo
 ${PYSITELIB}/import_export/resources.py
 ${PYSITELIB}/import_export/resources.pyc
 ${PYSITELIB}/import_export/resources.pyo
