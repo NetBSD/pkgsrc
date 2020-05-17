@@ -1171,6 +1171,33 @@ func (s *Suite) Test_Pkglint_checkReg__options_mk(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_Pkglint_checkReg__main_commit_message(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileLines("COMMIT_MSG")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: COMMIT_MSG: Unexpected file found.")
+}
+
+func (s *Suite) Test_Pkglint_checkReg__wip_commit_message(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("wip/package")
+	t.Chdir("wip/package")
+	t.CreateFileLines("COMMIT_MSG")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Pkglint_checkRegCvsSubst(c *check.C) {
 	t := s.Init(c)
 
