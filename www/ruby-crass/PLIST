@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/13 16:10:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/17 15:40:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -15,34 +15,4 @@ ${GEM_LIBDIR}/lib/crass/scanner.rb
 ${GEM_LIBDIR}/lib/crass/token-scanner.rb
 ${GEM_LIBDIR}/lib/crass/tokenizer.rb
 ${GEM_LIBDIR}/lib/crass/version.rb
-${GEM_LIBDIR}/test/css-parsing-tests/An+B.json
-${GEM_LIBDIR}/test/css-parsing-tests/LICENSE
-${GEM_LIBDIR}/test/css-parsing-tests/README.rst
-${GEM_LIBDIR}/test/css-parsing-tests/color3.json
-${GEM_LIBDIR}/test/css-parsing-tests/color3_hsl.json
-${GEM_LIBDIR}/test/css-parsing-tests/color3_keywords.json
-${GEM_LIBDIR}/test/css-parsing-tests/component_value_list.json
-${GEM_LIBDIR}/test/css-parsing-tests/declaration_list.json
-${GEM_LIBDIR}/test/css-parsing-tests/make_color3_hsl.py
-${GEM_LIBDIR}/test/css-parsing-tests/make_color3_keywords.py
-${GEM_LIBDIR}/test/css-parsing-tests/one_component_value.json
-${GEM_LIBDIR}/test/css-parsing-tests/one_declaration.json
-${GEM_LIBDIR}/test/css-parsing-tests/one_rule.json
-${GEM_LIBDIR}/test/css-parsing-tests/rule_list.json
-${GEM_LIBDIR}/test/css-parsing-tests/stylesheet.json
-${GEM_LIBDIR}/test/css-parsing-tests/stylesheet_bytes.json
-${GEM_LIBDIR}/test/shared/parse_rules.rb
-${GEM_LIBDIR}/test/support/common.rb
-${GEM_LIBDIR}/test/support/serialization/animate.css
-${GEM_LIBDIR}/test/support/serialization/bootstrap-theme.css
-${GEM_LIBDIR}/test/support/serialization/bootstrap.css
-${GEM_LIBDIR}/test/support/serialization/html5-boilerplate.css
-${GEM_LIBDIR}/test/support/serialization/misc.css
-${GEM_LIBDIR}/test/support/serialization/pure.css
-${GEM_LIBDIR}/test/test_crass.rb
-${GEM_LIBDIR}/test/test_css_parsing_tests.rb
-${GEM_LIBDIR}/test/test_parse_properties.rb
-${GEM_LIBDIR}/test/test_parse_rules.rb
-${GEM_LIBDIR}/test/test_parse_stylesheet.rb
-${GEM_LIBDIR}/test/test_serialization.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
