@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.58 2020/02/09 19:06:12 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.59 2020/05/17 00:54:00 tnn Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -214,7 +214,7 @@ converters    games         mbone         print         x11
 
   <para>Some packages have different sets of distfiles depending on
   the platform, for example <filename
-  role="pkg">lang/openjdk7</filename>. These are kept in the same
+  role="pkg">lang/openjdk8</filename>. These are kept in the same
   <filename>distinfo</filename> file and care should be taken when
   upgrading such a package to ensure distfile information is not
   lost.</para>
