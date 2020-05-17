@@ -1,19 +1,19 @@
-$NetBSD: patch-src_configuration.c,v 1.2 2017/07/03 13:03:02 joerg Exp $
+$NetBSD: patch-src_configuration.c,v 1.3 2020/05/17 15:01:41 nia Exp $
 
 Sane default options.
 
---- src/configuration.c.orig	2016-12-15 10:34:22.000000000 +0000
+--- src/configuration.c.orig	2019-11-26 13:33:39.000000000 +0000
 +++ src/configuration.c
-@@ -193,7 +193,7 @@ config_new(void)
- 	fa->pspec = strdup("default");
- 	HASH_ADD_KEYPTR(hh, r->LISTEN_ARGS, fa->pspec, strlen(fa->pspec), fa);
- 	r->LISTEN_DEFAULT = fa;
--	r->OCSP_DIR           = strdup("/var/lib/hitch/");
-+	r->OCSP_DIR           = strdup("@HITCH_OCSP@/");
- 	r->OCSP_VFY = 0;
- 	r->OCSP_RESP_TMO = 10.0;
- 	r->OCSP_CONN_TMO = 4.0;
-@@ -1116,7 +1116,7 @@ create_alpn_callback_data(hitch_config *
+@@ -209,7 +209,7 @@ config_new(void)
+ 	r->CERT_FILES			= NULL;
+ 	r->LISTEN_ARGS			= NULL;
+ 	r->PEM_DIR			= NULL;
+-	r->OCSP_DIR			= strdup("/var/lib/hitch/");
++	r->OCSP_DIR			= strdup("@HITCH_OCSP@/");
+ 	AN(r->OCSP_DIR);
+ 	r->OCSP_VFY			= 0;
+ 	r->OCSP_RESP_TMO		= 10.0;
+@@ -1340,7 +1340,7 @@ create_alpn_callback_data(hitch_config *
  
  	// first remove spaces while copying to cfg->ALPN_PROTOS_LV
  	for(j = 0; j < l; j++)
