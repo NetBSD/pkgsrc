@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/11 07:11:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/17 20:18:36 adam Exp $
 
 DISTNAME=	rfc3986-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,8 @@ COMMENT=	Validating URI References per RFC 3986
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -19,4 +20,5 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
