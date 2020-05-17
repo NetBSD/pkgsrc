@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2977 2020/05/17 14:50:49 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2978 2020/05/17 14:56:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4693,3 +4693,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/harfbuzz to 2.6.6 [nia 2020-05-17]
 	Updated lang/elixir to 1.10.3 [nia 2020-05-17]
 	Updated www/gitea to 1.11.5 [nia 2020-05-17]
+	Updated wm/herbstluftwm to 0.8.2 [nia 2020-05-17]
