@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/04/05 12:55:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/17 19:36:41 adam Exp $
 bin/celery-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -229,6 +229,9 @@ ${PYSITELIB}/celery/concurrency/prefork.pyo
 ${PYSITELIB}/celery/concurrency/solo.py
 ${PYSITELIB}/celery/concurrency/solo.pyc
 ${PYSITELIB}/celery/concurrency/solo.pyo
+${PYSITELIB}/celery/concurrency/thread.py
+${PYSITELIB}/celery/concurrency/thread.pyc
+${PYSITELIB}/celery/concurrency/thread.pyo
 ${PYSITELIB}/celery/contrib/__init__.py
 ${PYSITELIB}/celery/contrib/__init__.pyc
 ${PYSITELIB}/celery/contrib/__init__.pyo
