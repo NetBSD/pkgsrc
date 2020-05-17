@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:22 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/17 00:54:00 tnn Exp $
 #
 
 DISTNAME=	apache-ivy-2.4.0-bin
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 .include "../../mk/java-vm.mk"
 
-.if ${PKG_JVM} == "openjdk7" || ${PKG_JVM} == "sun-jdk7"
+.if ${PKG_JVM} == "sun-jdk7"
 DEPENDS+=	apache-ant>=1.9<1.10:../../devel/apache-ant19
 .else
 DEPENDS+=	apache-ant>=1.10:../../devel/apache-ant
