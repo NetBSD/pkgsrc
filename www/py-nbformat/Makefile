@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/07/22 08:42:50 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/17 20:26:52 adam Exp $
 
-DISTNAME=	nbformat-4.4.0
+DISTNAME=	nbformat-5.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbformat/}
@@ -12,19 +12,18 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ipython_genutils-[0-9]*:../../devel/py-ipython_genutils
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core-[0-9]*:../../devel/py-jupyter_core
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.4:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.5.1:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1:../../devel/py-traitlets
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-BUILD_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} jupyter-trust jupyter-trust${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
