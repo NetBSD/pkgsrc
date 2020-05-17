@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/04/11 16:28:58 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/17 21:38:46 adam Exp $
 
 DISTNAME=	jsbeautifier-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-editorconfig-core>=0.12.2:../../devel/py-editorconfig-core
 DEPENDS+=	${PYPKGPREFIX}-six>=1.13.0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
@@ -21,4 +22,5 @@ post-install:
 	${MV} js-beautify js-beautify-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
