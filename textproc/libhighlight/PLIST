@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/05/12 09:56:44 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/05/17 15:09:41 nia Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
@@ -149,6 +149,7 @@ share/highlight/langDefs/gdb.lang
 share/highlight/langDefs/gdscript.lang
 share/highlight/langDefs/go.lang
 share/highlight/langDefs/graphviz.lang
+share/highlight/langDefs/haml.lang
 share/highlight/langDefs/haskell.lang
 share/highlight/langDefs/haxe.lang
 share/highlight/langDefs/hcl.lang
@@ -294,6 +295,7 @@ share/highlight/langDefs/vhd.lang
 share/highlight/langDefs/vimscript.lang
 share/highlight/langDefs/vue.lang
 share/highlight/langDefs/whiley.lang
+share/highlight/langDefs/wren.lang
 share/highlight/langDefs/xml.lang
 share/highlight/langDefs/xpp.lang
 share/highlight/langDefs/yaiff.lang
