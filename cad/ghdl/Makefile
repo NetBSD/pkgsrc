@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/06/08 11:04:28 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/17 15:54:04 rillig Exp $
 
 GCCVER=		4.9.2
 DISTNAME=	ghdl-0.32rc1
@@ -15,6 +15,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/p/ghdl-updates/wiki/Home/
 COMMENT=	Open-source simulator for the VHDL language
 LICENSE=	gnu-gpl-v2
+
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 # http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
