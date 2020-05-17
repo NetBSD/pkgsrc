@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/14 14:09:08 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/17 21:04:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/rebulk/__init__.pyo
 ${PYSITELIB}/rebulk/__version__.py
 ${PYSITELIB}/rebulk/__version__.pyc
 ${PYSITELIB}/rebulk/__version__.pyo
+${PYSITELIB}/rebulk/builder.py
+${PYSITELIB}/rebulk/builder.pyc
+${PYSITELIB}/rebulk/builder.pyo
 ${PYSITELIB}/rebulk/chain.py
 ${PYSITELIB}/rebulk/chain.pyc
 ${PYSITELIB}/rebulk/chain.pyo
