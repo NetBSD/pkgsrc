@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2020/05/06 14:04:51 adam Exp $
+# $NetBSD: Makefile,v 1.228 2020/05/17 21:17:27 rillig Exp $
 
 VERREL=		6.4.3
 VERRC=		2
@@ -20,7 +20,6 @@ SUBST_CLASSES+=			use-bash
 SUBST_STAGE.use-bash=		pre-configure
 SUBST_MESSAGE.use-bash=		Using bash for configure script
 SUBST_FILES.use-bash+=		autogen.sh
-SUBST_FILES.use-bash+=		configure.ac
 SUBST_VARS.use-bash+=		BASH
 SUBST_VARS.use-bash+=		PREFIX
 
