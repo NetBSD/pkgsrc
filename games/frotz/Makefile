@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2020/03/26 12:32:37 nia Exp $
+# $NetBSD: Makefile,v 1.38 2020/05/17 14:23:08 nia Exp $
 
-DISTNAME=	frotz-2.51
+DISTNAME=	frotz-2.52
 CATEGORIES=	games
 MASTER_SITES=	https://gitlab.com/DavidGriffith/frotz/-/archive/${PKGVERSION_NOREV}/
 
