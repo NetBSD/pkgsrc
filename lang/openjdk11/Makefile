@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/05/09 00:09:15 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2020/05/17 01:07:03 tnn Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -172,7 +172,7 @@ do-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 # Headers from CUPS are required to build the native implementation of
 # sun.print.* which is used by java.awt.print.
-BUILDLINK_DEPMETHOD.cups-base?=	build
-.include "../../print/cups-base/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libcups?=	build
+.include "../../print/libcups/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
