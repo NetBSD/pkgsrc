@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/05/16 18:07:56 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/17 00:25:42 tnn Exp $
 
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	libcups-${CUPS_VERS}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 
 MAINTAINER=	sbd@NetBSD.org
@@ -32,6 +33,7 @@ CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-components=libcups
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
