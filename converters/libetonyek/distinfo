@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2019/02/13 21:15:36 wiz Exp $
+$NetBSD: distinfo,v 1.9 2020/05/17 21:45:51 rillig Exp $
 
 SHA1 (libetonyek-0.1.9.tar.xz) = b98862359b44f6838246428a482c442ad3bb67e4
 RMD160 (libetonyek-0.1.9.tar.xz) = 05769e91a32fca98060a753ec265e54e9dcf0b6d
 SHA512 (libetonyek-0.1.9.tar.xz) = 3f439b369d450bb1a4bdb3fe92023bda234b323cf676570f1738318c56867a97910f536280b9b164c3fdaa423a3ee669c935df75a5c700bc1530ea5b9a00391e
 Size (libetonyek-0.1.9.tar.xz) = 1477064 bytes
+SHA1 (patch-src_lib_NUM3Parser.cpp) = e5cabaa4a4c776fc65d1988fc7ad064fb426470d
