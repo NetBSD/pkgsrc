@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2988 2020/05/17 15:59:53 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2989 2020/05/17 16:06:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4704,3 +4704,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-css-parser to 1.7.1 [taca 2020-05-17]
 	Updated www/ruby-jquery-rails to 4.4.0 [taca 2020-05-17]
 	Updated www/ruby-loofah to 2.5.0 [taca 2020-05-17]
+	Updated www/ruby-net-http-persistent to 4.0.0 [taca 2020-05-17]
