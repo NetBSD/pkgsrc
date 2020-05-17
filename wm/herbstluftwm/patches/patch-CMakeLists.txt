@@ -1,28 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2020/01/01 15:24:02 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2020/05/17 14:56:42 nia Exp $
 
-Do not clobber CFLAGS and set the correct MANDIR.
+Set the correct MANDIR.
 
---- CMakeLists.txt.orig	2019-05-09 09:04:33.000000000 +0000
+--- CMakeLists.txt.orig	2020-05-04 17:24:08.000000000 +0000
 +++ CMakeLists.txt
-@@ -34,12 +34,6 @@ set(SYSCONFDIR "${DESTDIR}/etc")
- set(CONFIGDIR "${SYSCONFDIR}/xdg/herbstluftwm")
- 
- 
--if(CMAKE_COMPILER_IS_GNUCC)
--    set(CMAKE_C_FLAGS "-pedantic -Wall")
--    set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wno-sign-compare -Wno-narrowing -Wno-deprecated-register")
--endif()
--
--
- # ----------------------------------------------------------------------------
- # Find Libraries
- 
-@@ -187,7 +181,7 @@ target_link_libraries(herbstclient ${LIB
- 
- set(BINDIR ${DESTDIR}${CMAKE_INSTALL_PREFIX}/bin)
- set(DATADIR ${DESTDIR}${CMAKE_INSTALL_PREFIX}/share)
+@@ -26,7 +26,7 @@ set(CMAKE_INSTALL_SYSCONF_PREFIX "/etc" 
+ set(CONFIGDIR "${CMAKE_INSTALL_SYSCONF_PREFIX}/xdg/herbstluftwm")
+ set(BINDIR bin)
+ set(DATADIR share)
 -set(MANDIR ${DATADIR}/man)
 +set(MANDIR ${DESTDIR}${CMAKE_INSTALL_MANDIR})
  set(DOCDIR ${DATADIR}/doc/herbstluftwm)
- set(EXAMPLESDIR ${DOCDIR}/examples)
- set(LICENSEDIR ${DOCDIR})
+ set(LICENSEDIR ${DOCDIR}
+     CACHE PATH "Install path for license file")
