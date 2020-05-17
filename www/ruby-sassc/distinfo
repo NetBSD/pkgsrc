@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2019/12/25 00:14:15 joerg Exp $
+$NetBSD: distinfo,v 1.3 2020/05/17 16:25:42 taca Exp $
 
-SHA1 (sassc-2.2.1.gem) = b496f902738b776c45bfda4e5331d46ab86f07a6
-RMD160 (sassc-2.2.1.gem) = 98f0f990019e1da97c2c37979c537e6e75b05d2b
-SHA512 (sassc-2.2.1.gem) = 728ad274363fd79aedee74fb6d4dbfc60f31b334e1a8054943ccf9cfa534fa3465abb00a2bd3020e198d287327058890411bb1983da6dc5dc3c4413b1936e2eb
-Size (sassc-2.2.1.gem) = 302080 bytes
-SHA1 (patch-ext_extconf.rb) = 541bee4de572121ba554be7975335102b699f0fa
+SHA1 (sassc-2.3.0.gem) = 53868c8146264e70c532ec5d683d014436eaf922
+RMD160 (sassc-2.3.0.gem) = 652acfcb675155f8aa77eac26b94b1ebaff986d2
+SHA512 (sassc-2.3.0.gem) = 370731adf12aeac11ed6568a60986a051f7f37e8b756a484a07ce8b13426bd81b33d8a87eb90d189298390cd4e465a7dc0786a1c7e2b86e1c77941284c80b900
+Size (sassc-2.3.0.gem) = 299008 bytes
+SHA1 (patch-ext_extconf.rb) = 57af96d62fa5d1faf154681b403242bfcfd0fa68
 SHA1 (patch-ext_libsass_src_units.hpp) = 4673a9f289bd41c03f184e30ece3ee6e1b2efdf8
-SHA1 (patch-ext_libsass_src_util.hpp) = 29f7d12577af9b6b81306c55558b491b6ee16d69
