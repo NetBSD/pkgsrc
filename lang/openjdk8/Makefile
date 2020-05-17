@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2020/05/09 20:47:26 tnn Exp $
+# $NetBSD: Makefile,v 1.99 2020/05/17 01:07:03 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -261,7 +261,7 @@ MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .include "../../graphics/freetype2/buildlink3.mk"
 # Headers from CUPS are required to build the native implementation of
 # sun.print.* which is used by java.awt.print.
-BUILDLINK_DEPMETHOD.cups-base?=	build
-.include "../../print/cups-base/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libcups?=	build
+.include "../../print/libcups/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
