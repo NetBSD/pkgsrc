@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/04/17 16:58:32 gutteridge Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/17 21:38:45 adam Exp $
 
 DISTNAME=	PyICU-2.4.3
 PKGREVISION=	3
@@ -15,8 +15,10 @@ USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 .include "../../lang/python/egg.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
