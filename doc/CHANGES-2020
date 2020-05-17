@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2991 2020/05/17 16:17:29 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2992 2020/05/17 16:26:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4707,3 +4707,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-net-http-persistent to 4.0.0 [taca 2020-05-17]
 	Updated www/ruby-rack-cache to 1.11.1 [taca 2020-05-17]
 	Updated www/ruby-rack-contrib to 2.2.0 [taca 2020-05-17]
+	Updated www/ruby-sassc to 2.3.0 [taca 2020-05-17]
