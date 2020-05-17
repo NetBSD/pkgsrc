@@ -1,8 +1,8 @@
-$NetBSD: patch-Modules___billiard_multiprocessing.h,v 1.1 2018/02/02 17:16:36 jperkin Exp $
+$NetBSD: patch-Modules___billiard_multiprocessing.h,v 1.2 2020/05/17 19:16:38 adam Exp $
 
 Set _XOPEN_SOURCE correctly.
 
---- Modules/_billiard/multiprocessing.h.orig	2017-07-16 20:03:49.000000000 +0000
+--- Modules/_billiard/multiprocessing.h.orig	2020-02-02 00:14:06.000000000 +0000
 +++ Modules/_billiard/multiprocessing.h
 @@ -3,10 +3,14 @@
  
@@ -10,7 +10,7 @@ Set _XOPEN_SOURCE correctly.
  
 -#ifdef __sun
 +#if defined(__sun) && !defined(_XOPEN_SOURCE)
- /* The control message API is only available on Solaris 
+ /* The control message API is only available on Solaris
     if XPG 4.2 or later is requested. */
 +# if (__STDC_VERSION__-0 < 199901L)
  #define _XOPEN_SOURCE 500
