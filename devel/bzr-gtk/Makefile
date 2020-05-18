@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/11/03 10:39:07 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/05/18 06:09:40 rillig Exp $
 
 DISTNAME=	bzr-gtk-${VER}
 PKGREVISION=	2
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_ACCEPTED= 27 # py-gtk2
-REPLACE_PYTHON=	create-credits.py info.py
+REPLACE_PYTHON=	info.py
 
 USE_TOOLS+=	msgfmt
 
