@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2020/03/26 12:08:47 nia Exp $
+# $NetBSD: Makefile,v 1.101 2020/05/18 10:59:35 nia Exp $
 
-DISTNAME=		snd-20.2
+DISTNAME=		snd-20.3
 CATEGORIES=		audio
 MASTER_SITES=		https://ccrma.stanford.edu/software/snd/
 
