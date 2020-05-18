@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/05/18 15:19:01 wiz Exp $
+
+SHA1 (cmake-language-server-0.1.1.tar.gz) = 7ef96ef8495e2a175747dbdb6fc0bcdff5abdc3e
+RMD160 (cmake-language-server-0.1.1.tar.gz) = 5f4d90ce71fb7777d552111fbeb1a27ed3867f6d
+SHA512 (cmake-language-server-0.1.1.tar.gz) = 9439c4f07fa8fb50ccfdaadf0776f4286c6afbd599e569088ec63f8878ada09052c1b3b466d6387ace9299978daa6ca363e811ee08cbb0862d971fb13e529597
+Size (cmake-language-server-0.1.1.tar.gz) = 9864 bytes
+SHA1 (patch-setup.py) = ddac0a36f315456fed69c8a4cfb9d3ac65c6b20c
