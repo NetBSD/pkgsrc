@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3128 2020/05/18 12:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3129 2020/05/18 13:28:18 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2321,7 +2321,6 @@ SUBDIR+=	py-libusb1
 SUBDIR+=	py-limits
 SUBDIR+=	py-line_profiler
 SUBDIR+=	py-linecache2
-SUBDIR+=	py-lint
 SUBDIR+=	py-llvmlite
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logan
