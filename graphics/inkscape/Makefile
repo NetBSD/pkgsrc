@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2020/05/17 00:38:47 tnn Exp $
+# $NetBSD: Makefile,v 1.211 2020/05/18 05:20:58 rillig Exp $
 
 DISTNAME=	inkscape-1.0
 PKGREVISION=	3
@@ -56,11 +56,7 @@ SUBST_MESSAGE.pycmd=	Replacing COMMAND python in CMakeFiles.
 SUBST_FILES.pycmd+=	share/*/CMakeLists.txt
 SUBST_SED.pycmd=	-e "s,COMMAND python3,COMMAND ${PYTHONBIN},g"
 
-REPLACE_PYTHON+=	cxxtest/cxxtestgen.py
 REPLACE_PYTHON+=	share/extensions/*.py
-REPLACE_PYTHON+=	share/extensions/Barcode/*.py
-REPLACE_PYTHON+=	share/extensions/ink2canvas/*.py
-REPLACE_PYTHON+=	share/extensions/test/*.test.py
 
 CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/genpofiles.sh
 CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/simplepath.rb
