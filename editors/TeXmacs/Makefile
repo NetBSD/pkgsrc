@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2020/04/12 08:28:35 adam Exp $
+# $NetBSD: Makefile,v 1.134 2020/05/18 22:01:32 mef Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -32,11 +32,6 @@ REPLACE_BASH+=		plugins/mupad/bin/tm_mupad_help
 REPLACE_BASH+=		plugins/texgraph/bin/tm_texgraph
 
 REPLACE_PERL+=		plugins/feynmf/bin/bbox_add.pl
-
-SUBST_CLASSES+=		init
-SUBST_STAGE.init=	pre-configure
-SUBST_FILES.init=	plugins/python/progs/init-python.scm
-SUBST_VARS.init=	PYTHONBIN
 
 SUBST_CLASSES+=		guile
 SUBST_STAGE.guile=	pre-configure
