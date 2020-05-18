@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3017 2020/05/18 12:27:46 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3018 2020/05/18 12:27:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4746,3 +4746,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/source-highlight to 3.1.9 [nia 2020-05-18]
 	Added sysutils/py-cpuinfo version 5.0.0 [wiz 2020-05-18]
 	Updated emulators/stella to 6.1.2 [nia 2020-05-18]
+	Updated emulators/libretro-stella to 6.1.2 [nia 2020-05-18]
