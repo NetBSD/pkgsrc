@@ -1143,13 +1143,16 @@ func (cv *VartypeCheck) PrefixPathname() {
 func (cv *VartypeCheck) PythonDependency() {
 	if cv.Value != cv.ValueNoVar {
 		cv.Warnf("Python dependencies should not contain variables.")
-	} else if !matches(cv.ValueNoVar, `^[+\-.0-9A-Z_a-z]+(?:|:link|:build)$`) {
+	} else if !matches(cv.ValueNoVar, `^[+\-.0-9A-Z_a-z]+(?:|:link|:build|:test|:tool)$`) {
 		cv.Warnf("Invalid Python dependency %q.", cv.Value)
 		cv.Explain(
 			"Python dependencies must be an identifier for a package, as",
 			"specified in lang/python/versioned_dependencies.mk.",
-			"This identifier may be followed by :build for a build-time only",
-			"dependency, or by :link for a run-time only dependency.")
+			"This identifier may be followed by:",
+			"\t:tool for a tool dependency,",
+			"\t:build for a build-time only dependency,",
+			"\t:test for a test-only dependency,",
+			"\t:link for a run-time dependency.")
 	}
 }
 
