@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3012 2020/05/18 11:00:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3013 2020/05/18 11:11:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4741,3 +4741,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-sqlalchemy-utils to 0.36.5 [adam 2020-05-18]
 	Updated misc/py-immutables to 0.14 [adam 2020-05-18]
 	Updated audio/snd to 20.3 [nia 2020-05-18]
+	Updated mail/rspamd to 2.5 [nia 2020-05-18]
