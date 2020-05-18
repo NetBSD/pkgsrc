@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/05/02 14:56:45 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/05/18 11:31:51 nia Exp $
 bin/check-regexp
 bin/cpp2html
 bin/java2html
@@ -224,6 +224,7 @@ share/source-highlight/bib.lang
 share/source-highlight/bison.lang
 share/source-highlight/c.lang
 share/source-highlight/c_comment.lang
+share/source-highlight/c_preprocessor.lang
 share/source-highlight/c_string.lang
 share/source-highlight/caml.lang
 share/source-highlight/changelog.lang
@@ -278,6 +279,7 @@ share/source-highlight/html_simple.lang
 share/source-highlight/htmlcss.outlang
 share/source-highlight/htmltable.outlang
 share/source-highlight/htmltablelinenum.outlang
+share/source-highlight/ipxe.lang
 share/source-highlight/islisp.lang
 share/source-highlight/java.lang
 share/source-highlight/javadoc.outlang
@@ -326,6 +328,7 @@ share/source-highlight/python.lang
 share/source-highlight/r.lang
 share/source-highlight/r.style
 share/source-highlight/ruby.lang
+share/source-highlight/rust.lang
 share/source-highlight/s.lang
 share/source-highlight/scala.lang
 share/source-highlight/scheme.lang
@@ -401,6 +404,7 @@ share/source-highlight/upc.lang
 share/source-highlight/url.lang
 share/source-highlight/vala.lang
 share/source-highlight/vbscript.lang
+share/source-highlight/vim.lang
 share/source-highlight/xhtml.css
 share/source-highlight/xhtml.outlang
 share/source-highlight/xhtml_common.outlang
