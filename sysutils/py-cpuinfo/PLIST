@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/18 12:22:49 wiz Exp $
+bin/cpuinfo-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cpuinfo/__init__.py
+${PYSITELIB}/cpuinfo/__init__.pyc
+${PYSITELIB}/cpuinfo/__init__.pyo
+${PYSITELIB}/cpuinfo/__main__.py
+${PYSITELIB}/cpuinfo/__main__.pyc
+${PYSITELIB}/cpuinfo/__main__.pyo
+${PYSITELIB}/cpuinfo/cpuinfo.py
+${PYSITELIB}/cpuinfo/cpuinfo.pyc
+${PYSITELIB}/cpuinfo/cpuinfo.pyo
