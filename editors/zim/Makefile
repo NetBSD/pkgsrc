@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/05/16 11:57:07 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/05/18 05:12:51 rillig Exp $
 
 DISTNAME=	zim-0.59
 PKGREVISION=	20
@@ -31,7 +31,6 @@ SUBST_STAGE.fix-python=		pre-configure
 SUBST_MESSAGE.fix-python=	Fixing dynamic python
 SUBST_FILES.fix-python+=	zim/inc/xdot.py
 SUBST_FILES.fix-python+=	zim/_version.py
-SUBST_FILES.fix-python+=	zim/inc/xdot.py
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 
 SUBST_CLASSES+=			man-path
