@@ -1,0 +1,2 @@
+bin/py.test-benchmark @PREFIX@/bin/py.test-benchmark-@PYVERSSUFFIX@
+bin/pytest-benchmark @PREFIX@/bin/pytest-benchmark-@PYVERSSUFFIX@
