@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/10/23 13:42:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/18 10:30:16 adam Exp $
 
 DISTNAME=	pyStrich-0.8
 PKGNAME=	${PYPKGPREFIX}-strich-0.8
@@ -10,12 +10,14 @@ HOMEPAGE=	https://github.com/mmulqueen/pyStrich
 COMMENT=	1D and 2D barcode generator
 LICENSE=	2-clause-bsd AND apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 do-test:
 	${MKDIR} ${WRKSRC}/pystrich/code128/test_img ${WRKSRC}/pystrich/ean13/test_img
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

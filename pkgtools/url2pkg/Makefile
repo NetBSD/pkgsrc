@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/01/18 23:33:27 rillig Exp $
+# $NetBSD: Makefile,v 1.112 2020/05/18 10:31:31 adam Exp $
 
 PKGNAME=	url2pkg-19.3.7
 CATEGORIES=	pkgtools
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run
 AUTO_MKDIRS=	yes
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 do-extract:
 	${RUN} cd ${FILESDIR} && cp *.* ${WRKSRC}/
@@ -44,4 +44,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/setuptools.py ${DESTDIR}${PREFIX}/lib/url2pkg/distutils/extension.py
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
