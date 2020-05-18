@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3009 2020/05/18 10:20:28 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3010 2020/05/18 10:26:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4735,3 +4735,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/py-jedi to 0.17.0 [wiz 2020-05-18]
 	Updated chat/unrealircd to 5.0.4 [nia 2020-05-18]
 	Updated sysutils/tree to 1.8.0 [nia 2020-05-18]
+	Updated textproc/serd to 0.30.4 [nia 2020-05-18]
