@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.563 2020/05/18 15:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.564 2020/05/18 16:17:20 nia Exp $
 #
 
 COMMENT=	Programming languages
@@ -262,6 +262,7 @@ SUBDIR+=	ruby27
 SUBDIR+=	ruby27-base
 SUBDIR+=	runawk
 SUBDIR+=	rust
+SUBDIR+=	rust-bin
 SUBDIR+=	sablevm
 SUBDIR+=	sablevm-classpath
 SUBDIR+=	sablevm-classpath-gui
