@@ -1,4 +1,0 @@
-bin/epylint @PREFIX@/bin/epylint-@PYVERSSUFFIX@
-bin/pylint @PREFIX@/bin/pylint-@PYVERSSUFFIX@
-bin/pyreverse @PREFIX@/bin/pyreverse-@PYVERSSUFFIX@
-bin/symilar @PREFIX@/bin/symilar-@PYVERSSUFFIX@
