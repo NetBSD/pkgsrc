@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3018 2020/05/18 12:27:58 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3019 2020/05/18 12:45:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4747,3 +4747,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/py-cpuinfo version 5.0.0 [wiz 2020-05-18]
 	Updated emulators/stella to 6.1.2 [nia 2020-05-18]
 	Updated emulators/libretro-stella to 6.1.2 [nia 2020-05-18]
+	Added devel/py-lint version 2.5.2 [wiz 2020-05-18]
