@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2020/05/06 14:04:34 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/18 13:40:41 nia Exp $
 
-PKGNAME=		supertux-0.6.1.1
-PKGREVISION=		2
+PKGNAME=		supertux-0.6.2
 DISTNAME=		SuperTux-v${PKGVERSION_NOREV}-Source
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GITHUB:=SuperTux/}
@@ -9,7 +8,7 @@ GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		https://www.supertux.org/
-COMMENT=		2D jump\'n run game in the style of the Super Mario ones
+COMMENT=		2D jump and run game in the style of the Super Mario ones
 LICENSE=		gnu-gpl-v2
 
 USE_CMAKE=		yes
