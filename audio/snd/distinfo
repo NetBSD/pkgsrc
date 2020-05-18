@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2020/03/22 08:58:17 nia Exp $
+$NetBSD: distinfo,v 1.24 2020/05/18 10:59:35 nia Exp $
 
-SHA1 (snd-20.2.tar.gz) = dd9406cac3feb2e2640d568961a2e5a873d3e9c7
-RMD160 (snd-20.2.tar.gz) = 63a89f8858b483a132ec2c4cb2307ab7cdba335d
-SHA512 (snd-20.2.tar.gz) = 790e679d66bae0719ec52cae8f860e31a92502565992de41f87ae087d43f30e1fd230cf74a8af9bcef5e15368e1d67d06fcc28e27b9a3f02072582c7fef1965f
-Size (snd-20.2.tar.gz) = 15526577 bytes
+SHA1 (snd-20.3.tar.gz) = ad20a59f1fe8c06fe6df8bb631e11c850c01e9a5
+RMD160 (snd-20.3.tar.gz) = f6ab67f25aca5bea41944cac60baf09b4e1e6837
+SHA512 (snd-20.3.tar.gz) = e55794bfc5ff078cb697681f84de91b7f65f8b848ecc552a495e0943632f097c66c0332526c51bd785a0a86f79495598a5f0079333dcd752d99217db0fc59772
+Size (snd-20.3.tar.gz) = 15510112 bytes
 SHA1 (patch-audio.c) = 13d4a78b2512c299c0cc0268ef4399abe015c880
