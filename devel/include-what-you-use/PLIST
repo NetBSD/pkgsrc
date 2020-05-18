@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/26 18:34:31 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/18 05:48:54 wiz Exp $
 bin/fix_includes.py
 bin/include-what-you-use
 bin/iwyu_tool.py
+man/man1/include-what-you-use.1
 share/include-what-you-use/boost-1.64-all-private.imp
 share/include-what-you-use/boost-1.64-all.imp
 share/include-what-you-use/boost-all-private.imp
