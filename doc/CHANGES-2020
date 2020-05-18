@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3004 2020/05/18 08:16:48 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3005 2020/05/18 08:24:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4728,3 +4728,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libbonoboui to 2.24.5 [nia 2020-05-17]
 	Updated devel/include-what-you-use to 0.14 [wiz 2020-05-18]
 	Added devel/py-yapf version 0.30.0 [wiz 2020-05-18]
+	Updated net/terraform to 0.12.25 [adam 2020-05-18]
+	Updated net/terraform-provider-aws to 2.62.0 [adam 2020-05-18]
