@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2019/11/26 18:34:31 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/18 05:48:54 wiz Exp $
 
-DISTNAME=	include-what-you-use-0.13.src
+DISTNAME=	include-what-you-use-0.14.src
 PKGNAME=	${DISTNAME:S/.src//1}
 CATEGORIES=	devel
 MASTER_SITES=	https://include-what-you-use.org/downloads/
