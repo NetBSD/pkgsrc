@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.25 2020/04/26 09:33:25 taca Exp $
+# $NetBSD: Makefile.common,v 1.26 2020/05/18 14:21:53 triaxx Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
-DISTNAME=	postfix-3.5.1
+DISTNAME=	postfix-3.5.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 MASTER_SITES+=	http://mirrors.isc.org/pub/postfix/official/
