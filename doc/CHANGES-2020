@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3015 2020/05/18 11:36:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3016 2020/05/18 12:23:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4744,3 +4744,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/rspamd to 2.5 [nia 2020-05-18]
 	Updated net/socat to 1.7.3.4 [nia 2020-05-18]
 	Updated textproc/source-highlight to 3.1.9 [nia 2020-05-18]
+	Added sysutils/py-cpuinfo version 5.0.0 [wiz 2020-05-18]
