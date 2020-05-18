@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2020/05/10 11:33:23 skrll Exp $
+# $NetBSD: Makefile,v 1.241 2020/05/18 17:07:38 leot Exp $
 
 DISTNAME=	qemu-5.0.0
 PKGREVISION=	2
@@ -21,12 +21,6 @@ HAS_CONFIGURE=		yes
 GMAKE_REQD=		4.1 # needed for docs
 
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
-
-SUBST_CLASSES+=			prefix
-SUBST_STAGE.prefix=		pre-configure
-SUBST_MESSAGE.prefix=		Setting PREFIX
-SUBST_FILES.prefix+=		configure
-SUBST_VARS.prefix+=		PREFIX
 
 SUBST_CLASSES+=			sphinx-build
 SUBST_STAGE.sphinx-build=	pre-configure
