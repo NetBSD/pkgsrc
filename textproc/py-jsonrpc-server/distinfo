@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/05/18 13:34:30 wiz Exp $
+
+SHA1 (python-jsonrpc-server-0.3.4.tar.gz) = ba831d36b8a7f6c6deb6a6f041121f2c0fd8f1f9
+RMD160 (python-jsonrpc-server-0.3.4.tar.gz) = 900bb755841932f6105be186d652aa82c6a7f54f
+SHA512 (python-jsonrpc-server-0.3.4.tar.gz) = a00af318baf89fe38ececc2080d7b3af8c2476280f9eb89670e5b0d3ceac046573be964bc2882c1b1894edc8ab4cb5fd69366980abe17bb1df857181821bcbd0
+Size (python-jsonrpc-server-0.3.4.tar.gz) = 26123 bytes
+SHA1 (patch-setup.py) = eb2dd2180683df93a65c3ab874edb9b40d4f7972
