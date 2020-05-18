@@ -1,0 +1,7 @@
+A Python 2.7 and 3.4+ server implementation of the JSON RPC 2.0
+protocol. This library has been pulled out of the Python Language
+Server project.
+
+Asynchronous request handling is supported using Python 3's
+concurrent.futures module and the Python 2 concurrent.futures
+backport.
