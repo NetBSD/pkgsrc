@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.561 2020/05/18 13:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.562 2020/05/18 15:11:18 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -219,6 +219,7 @@ SUBDIR+=	py-mypy
 SUBDIR+=	py-mypy_extensions
 SUBDIR+=	py-parso
 SUBDIR+=	py-paver
+SUBDIR+=	py-pygls
 SUBDIR+=	py-pyrex
 SUBDIR+=	py-python-language-server
 SUBDIR+=	py-python-lua
