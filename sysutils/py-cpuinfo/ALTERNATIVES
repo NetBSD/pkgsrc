@@ -1,0 +1,1 @@
+bin/cpuinfo @PREFIX@/bin/cpuinfo-@PYVERSSUFFIX@
