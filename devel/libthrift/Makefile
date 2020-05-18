@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/05/06 14:04:27 adam Exp $
+# $NetBSD: Makefile,v 1.83 2020/05/18 05:03:39 rillig Exp $
 
 PKGREVISION= 3
 .include "../../devel/thrift/Makefile.common"
@@ -8,6 +8,8 @@ COMMENT=	C++ bindings for the Apache Thrift RPC system
 
 DEPENDS+=	thrift-[0-9]*:../../devel/thrift
 BUILD_DIRS=	lib/cpp
+
+TOOLS_BROKEN+=	perl
 
 CONFIGURE_ENV+=		THRIFT=${PREFIX}/bin/thrift
 CONFIGURE_ENV+=		ac_cv_prog_PERL= # none, not needed
