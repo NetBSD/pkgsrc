@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/02/09 20:02:45 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/05/18 05:23:26 rillig Exp $
 #
 
 DISTNAME=	bonnie++-1.97.3
@@ -14,7 +14,7 @@ COMMENT=	Enhanced performance Test of Filesystem I/O
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run tee
-REPLACE_PERL+=		bon_csv2txt.in bon_csv2html.in
+REPLACE_PERL+=		bon_csv2txt.in
 
 INSTALLATION_DIRS=	bin share/doc/bonnie++ ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
