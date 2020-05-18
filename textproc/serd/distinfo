@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/12/14 17:31:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2020/05/18 10:26:13 nia Exp $
 
-SHA1 (serd-0.30.2.tar.bz2) = 5c3588e38c001e1ff7f5d31c7749ef16ece48dbb
-RMD160 (serd-0.30.2.tar.bz2) = 85b141a275e60410719ef8e04dbbe24304d18334
-SHA512 (serd-0.30.2.tar.bz2) = b1e18ac883aac2a8146ee0e1de553ac2b512deba5307e5c9fa2733d9011ed0777d67790aa6527e73b3f11c9da0d8c9a98227457bb412897296f4464228cac0f7
-Size (serd-0.30.2.tar.bz2) = 590337 bytes
+SHA1 (serd-0.30.4.tar.bz2) = 252a1fdb01f87813db3bb418808d98cb0cef6956
+RMD160 (serd-0.30.4.tar.bz2) = ab21e66681cc18573e1ead5c0d58773bec9aa356
+SHA512 (serd-0.30.4.tar.bz2) = 4cc032f826d891213c6db787b10a41ffb8f4b2a3357ffa536e34013755dc34db7109d1b42f550a0d559d8651f56c3a5dfb3654c3e2047ee6e609ff9a5fe803d6
+Size (serd-0.30.4.tar.bz2) = 605441 bytes
