@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2020/02/05 13:46:13 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2020/05/18 19:21:19 wiz Exp $
 
 SHA1 (libixion-0.15.0.tar.xz) = cdf61f14b9587620573b3e6e7d8b11c686419dc0
 RMD160 (libixion-0.15.0.tar.xz) = 96f24812a77611c5554e213788bb0633ecd1d5aa
@@ -7,4 +7,4 @@ Size (libixion-0.15.0.tar.xz) = 447388 bytes
 SHA1 (patch-configure) = 7931b66d933b3ffd932ddfad3494eb40424e6b0e
 SHA1 (patch-configure.ac) = 46c9d080102842d5edba6844a51d6b38063af220
 SHA1 (patch-include_ixion_model__context.hpp) = 89456eacf54deb95bf48a5836d674f97ff64eb37
-SHA1 (patch-src_python_Makefile.am) = f67180858a87e6a5af941642d1ffbfbc4610ad2a
+SHA1 (patch-src_python_Makefile.am) = c4811646fbe288f85070994234502f20d4cafc56
