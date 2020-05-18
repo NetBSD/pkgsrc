@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/05/18 05:48:54 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2020/05/18 16:45:36 wiz Exp $
 
 DISTNAME=	include-what-you-use-0.14.src
 PKGNAME=	${DISTNAME:S/.src//1}
@@ -12,9 +12,9 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/include-what-you-use
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++14
 
-GCC_REQD+=	4.8
+GCC_REQD+=	5
 
 CMAKE_ARGS=	-DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
 
