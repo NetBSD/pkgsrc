@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3014 2020/05/18 11:19:34 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3015 2020/05/18 11:36:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4743,3 +4743,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/snd to 20.3 [nia 2020-05-18]
 	Updated mail/rspamd to 2.5 [nia 2020-05-18]
 	Updated net/socat to 1.7.3.4 [nia 2020-05-18]
+	Updated textproc/source-highlight to 3.1.9 [nia 2020-05-18]
