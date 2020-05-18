@@ -1,4 +1,4 @@
-# $NetBSD: type.mk,v 1.1 2020/05/18 16:17:20 nia Exp $
+# $NetBSD: type.mk,v 1.2 2020/05/18 16:33:44 wiz Exp $
 # 
 # This file determines the type of rust package to use -
 # binary (as via rustup) or a source bootstrap.
@@ -20,9 +20,9 @@
 # The Rust bootstrapping process is often particularly slow
 # and unreliable on NetBSD due to ld.so bugs
 .  if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
-RUST_TYPE=	bin
+RUST_TYPE?=	bin
 .  else
-RUST_TYPE=	src
+RUST_TYPE?=	src
 .  endif
 
 .endif # !defined(RUST_TYPE)
