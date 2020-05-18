@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.19 2020/03/24 04:40:34 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.20 2020/05/18 06:06:34 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -31,7 +31,7 @@
 # variable, all identifiers starting with "sys-" are reserved for the
 # pkgsrc infrastructure. All others may be used freely.
 #
-# Keywords: replace_interpreter interpreter interp hashbang #!
+# Keywords: replace_interpreter interpreter interp hashbang #! shebang
 # Keywords: awk bash csh ksh perl sh
 
 ######################################################################
@@ -111,7 +111,7 @@ replace-interpreter:
 	${RUN} set -u; \
 	cd ${WRKSRC};							\
 	for f in ${REPLACE_FILES.${_lang_}}; do				\
-		if [ -f "$${f}" ]; then					\
+		if [ -f "$$f" ]; then					\
 			${SED} -e '1s|^#![[:space:]]*${REPLACE.optional-env-space}${REPLACE.${_lang_}.old}|#!${REPLACE.${_lang_}.new}|' \
 			< "$${f}" > "$${f}.new";			\
 			if [ -x "$${f}" ]; then				\
@@ -123,8 +123,8 @@ replace-interpreter:
 			else						\
 				${MV} -f "$${f}.new" "$${f}";		\
 			fi;						\
-		elif [ -d "$$f" ]; then					\
-			${SHCOMMENT} "Ignore it, most probably comes from shell globs"; \
+		elif [ -d "$$f" ] || [ -h "$$f" ]; then			\
+			: 'Ignore it, most probably comes from shell globs'; \
 		else							\
 			${WARNING_MSG} "[replace-interpreter] Skipping non-existent file \"$$f\"."; \
 		fi;							\
