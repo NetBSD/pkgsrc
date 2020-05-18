@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/18 16:17:21 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/18 16:22:25 nia Exp $
 
 DISTNAME=	rust-1.42.0
 CATEGORIES=	lang
@@ -6,7 +6,7 @@ MASTER_SITES=	https://static.rust-lang.org/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
-COMMENT=	Safe, concurrent, practical language
+COMMENT=	Safe, concurrent, practical language (official binaries)
 LICENSE=	mit OR apache-2.0
 
 ONLY_FOR_PLATFORM+=	Darwin-*-x86_64
