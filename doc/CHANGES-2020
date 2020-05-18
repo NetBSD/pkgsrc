@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3027 2020/05/18 15:02:56 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3028 2020/05/18 15:11:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-padrino-gen to 0.15.0 [taca 2020-05-18]
 	Updated www/ruby-padrino-mailer to 0.15.0 [taca 2020-05-18]
 	Updated www/ruby-padrino to 0.15.0 [taca 2020-05-18]
+	Added lang/py-pygls version 0.9.0 [wiz 2020-05-18]
