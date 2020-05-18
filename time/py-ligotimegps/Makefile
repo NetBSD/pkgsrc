@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/12/05 15:57:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/18 10:38:13 adam Exp $
 
-DISTNAME=	ligotimegps-2.0.0
+DISTNAME=	ligotimegps-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/ligotimegps/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/gwpy/ligotimegps
 COMMENT=	Pure-python version of lal.LIGOTimeGPS
 LICENSE=	gnu-lgpl-v3
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
