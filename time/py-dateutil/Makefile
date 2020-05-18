@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/06 20:49:22 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/18 10:40:11 adam Exp $
 
 DISTNAME=	python-dateutil-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -14,10 +14,12 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.5:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
