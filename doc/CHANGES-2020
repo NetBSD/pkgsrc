@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3005 2020/05/18 08:24:18 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3006 2020/05/18 08:32:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4730,3 +4730,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-yapf version 0.30.0 [wiz 2020-05-18]
 	Updated net/terraform to 0.12.25 [adam 2020-05-18]
 	Updated net/terraform-provider-aws to 2.62.0 [adam 2020-05-18]
+	Added net/terraform-provider-local version 1.4.0 [adam 2020-05-18]
+	Added net/terraform-provider-random version 2.2.1 [adam 2020-05-18]
