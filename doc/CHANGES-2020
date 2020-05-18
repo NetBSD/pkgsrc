@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3002 2020/05/17 23:56:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3003 2020/05/18 05:49:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4726,3 +4726,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/goffice0.10 to 0.10.47 [nia 2020-05-17]
 	Updated math/gnumeric112 to 1.12.47 [nia 2020-05-17]
 	Updated devel/libbonoboui to 2.24.5 [nia 2020-05-17]
+	Updated devel/include-what-you-use to 0.14 [wiz 2020-05-18]
