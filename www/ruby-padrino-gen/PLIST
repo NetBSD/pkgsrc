@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/03/20 16:17:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/05/18 14:57:28 taca Exp $
 bin/padrino-gen${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -50,6 +50,7 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/cucumber.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/minitest.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/rspec.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/shoulda.rb
+${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/testunit 2.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/testunit.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/controller.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/helper.rb
