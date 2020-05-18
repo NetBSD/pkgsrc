@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2020/05/18 18:38:31 maya Exp $
+# $NetBSD: Makefile,v 1.99 2020/05/18 19:15:38 maya Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		4
@@ -33,8 +33,6 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
 .include "options.mk"
 .include "../../devel/glib2/buildlink3.mk"
-
-SIGN=	ASDF%20asdf
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/irssi-config ${DESTDIR}${IRSSI_CONFIG}
