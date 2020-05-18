@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3026 2020/05/18 14:36:50 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.3027 2020/05/18 15:02:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4767,3 +4767,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/postfix-pcre to 3.5.2 [taca 2020-04-26]
 	Updated mail/postfix-pgsql to 3.5.2 [taca 2020-04-26]
 	Updated mail/postfix-sqlite to 3.5.2 [taca 2020-04-26]
+	Updated www/ruby-padrino-support to 0.15.0 [taca 2020-05-18]
+	Updated www/ruby-padrino-helpers to 0.15.0 [taca 2020-05-18]
+	Updated www/ruby-padrino-core to 0.15.0 [taca 2020-05-18]
+	Updated www/ruby-padrino-admin to 0.15.0 [taca 2020-05-18]
+	Updated www/ruby-padrino-cache to 0.15.0 [taca 2020-05-18]
+	Updated www/ruby-padrino-gen to 0.15.0 [taca 2020-05-18]
+	Updated www/ruby-padrino-mailer to 0.15.0 [taca 2020-05-18]
+	Updated www/ruby-padrino to 0.15.0 [taca 2020-05-18]
