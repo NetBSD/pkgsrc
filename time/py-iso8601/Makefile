@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/07/28 07:16:28 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/18 10:40:11 adam Exp $
 
 DISTNAME=	iso8601-0.1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,12 +10,13 @@ HOMEPAGE=	https://pypi.python.org/pypi/iso8601/
 COMMENT=	Simple Python module to parse ISO 8601 dates
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX} --verbose iso8601
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} iso8601/test_iso8601.py
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
