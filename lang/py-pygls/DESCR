@@ -1,0 +1,4 @@
+pygls (pronounced like "pie glass") is a pythonic generic implementation
+of the Language Server Protocol for use as a foundation for writing
+language servers using Python (e.g. Python, XML, etc.). It allows
+you to write your own language server in just a few lines of code.
