@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/18 08:16:24 wiz Exp $
+
+SHA1 (yapf-0.30.0.tar.gz) = 64c4e4125e82c328e9feecfe28d8798da88859c4
+RMD160 (yapf-0.30.0.tar.gz) = 659c90348056ad943b1eb7a56743ec1be493c942
+SHA512 (yapf-0.30.0.tar.gz) = 47070ccbae54d482499c5fcf594be09f47e64540141dac6fb7c4d8e0e596dc9d050a127a62d1a0468cc10fff8626bfe3c12a0f42794b817fade9463d1a1d6ab3
+Size (yapf-0.30.0.tar.gz) = 187854 bytes
