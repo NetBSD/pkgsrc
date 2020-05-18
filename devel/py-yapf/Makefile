@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/18 08:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/18 08:36:30 wiz Exp $
 
 DISTNAME=	yapf-0.30.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/yapf ${DESTDIR}${PREFIX}/bin/yapf${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/yapf ${DESTDIR}${PREFIX}/bin/yapf-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
