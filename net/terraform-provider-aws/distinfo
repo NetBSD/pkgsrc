@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/03/24 07:03:32 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2020/05/18 08:23:48 adam Exp $
 
-SHA1 (terraform-provider-aws-2.54.0.tar.gz) = 5c159c90e5994a20f0499a429527ccc6cb3fc422
-RMD160 (terraform-provider-aws-2.54.0.tar.gz) = 24fc890c8ecb838984fd07adc7a7ab4ca847cf7c
-SHA512 (terraform-provider-aws-2.54.0.tar.gz) = 3fbaaed0df987ba4cb70af2fd0e8d499cd35bb93f88c56514f847de0c3235cd5f541ee4a84d3f2ed5d47faeefe602c7c049d3021a88730fbf9640face0525df9
-Size (terraform-provider-aws-2.54.0.tar.gz) = 17623693 bytes
+SHA1 (terraform-provider-aws-2.62.0.tar.gz) = 68205a13617f196e3b4bc00137f287878a2971aa
+RMD160 (terraform-provider-aws-2.62.0.tar.gz) = 215ae0494c6637d1b0e5d0a892758dda27b2ece5
+SHA512 (terraform-provider-aws-2.62.0.tar.gz) = 3827077d334286098128e28aef250d5191919ecb81275e59c125b6de2dfeebdceebf3cc7a7f0dbf5e4a7b8ff4aa3d98127e2633e3397a76e2154d60aff86aba3
+Size (terraform-provider-aws-2.62.0.tar.gz) = 17587830 bytes
