@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/05/18 13:36:49 wiz Exp $
+
+SHA1 (python-language-server-0.32.0.tar.gz) = 7d99ff73ba5427ee93a1bc7cbc02439766fc64c0
+RMD160 (python-language-server-0.32.0.tar.gz) = a3f739c2099ffc038bd11b868c58839953394b24
+SHA512 (python-language-server-0.32.0.tar.gz) = 7c4a6de3998f7a09cca18530e0803629924b26eaec4f1a1a4001996c680fcf35195052013f390569b0f79da94000ec86f92e9d68215dff53018080567e28ca0f
+Size (python-language-server-0.32.0.tar.gz) = 67137 bytes
+SHA1 (patch-setup.py) = b2facb324413b2ce39a5dd753a4dbb122307c726
