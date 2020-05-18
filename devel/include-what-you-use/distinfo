@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2019/11/26 18:34:31 nia Exp $
+$NetBSD: distinfo,v 1.12 2020/05/18 05:48:54 wiz Exp $
 
-SHA1 (include-what-you-use-0.13.src.tar.gz) = 533f4c70a1bf1b0fd859242e416516a33914d981
-RMD160 (include-what-you-use-0.13.src.tar.gz) = e42ab3337a935b22211cc68f9f728f152b953439
-SHA512 (include-what-you-use-0.13.src.tar.gz) = b75a7cf076c74be0d8f21c35710be37d66911bfea0837bc1135d6782a745379e059e3efd09f278dd40545009d209b8c00d42a32f40efb31b876a9a3aa4607df9
-Size (include-what-you-use-0.13.src.tar.gz) = 589267 bytes
+SHA1 (include-what-you-use-0.14.src.tar.gz) = a67e9a48f18c70c6f3cb6fed5357a21c708187c6
+RMD160 (include-what-you-use-0.14.src.tar.gz) = 284cb5d5cfe20bf10f979db4aab036197971a12a
+SHA512 (include-what-you-use-0.14.src.tar.gz) = ac328c6bdf834fde58bbf14c662fdf97aac22a24a85bce4a6475c73027b3ec1c558925efb5f0ac3addf446f21d29e37a70a7c5773c178f9ab7f12e90be7d69b4
+Size (include-what-you-use-0.14.src.tar.gz) = 598485 bytes
 SHA1 (patch-iwyu__output.cc) = 55a8c7ad35613206ad01dd312afdabb5649e63c2
