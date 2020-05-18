@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/05/05 18:21:25 adam Exp $
+# $NetBSD: Makefile,v 1.41 2020/05/18 13:14:17 wiz Exp $
 
 DISTNAME=	pylint-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,8 +22,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-REPLACE_PYTHON+=	tests/data/ascript
-
 post-install:
 .for file in epylint pylint pyreverse symilar
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -33,8 +31,7 @@ post-install:
 .endfor
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} PYTHONPATH=. py.test-${PYVERSSUFFIX}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
