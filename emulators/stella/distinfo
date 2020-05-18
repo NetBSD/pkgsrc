@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.26 2020/03/23 12:01:15 nia Exp $
+$NetBSD: distinfo,v 1.27 2020/05/18 12:27:36 nia Exp $
 
-SHA1 (stella-6.1-src.tar.xz) = 150897e4184a6ad1eb00e786aef84a6732740927
-RMD160 (stella-6.1-src.tar.xz) = 614db20bdf700d3d44273f8056d6d8b0cbbbf318
-SHA512 (stella-6.1-src.tar.xz) = 46f1a562c7cdcc7e2e36d4cd6976be2cac1587969f66af89c00ac95a82de9b3420044c721e53c71fe4e5a8c50f27df1dd74a583d40723ef1e343cb3c1efcec8e
-Size (stella-6.1-src.tar.xz) = 2047380 bytes
+SHA1 (stella-6.1.2-src.tar.xz) = 7d8be0214e398bad21dc3e7e3b788f8c7b98a280
+RMD160 (stella-6.1.2-src.tar.xz) = 8dd3c3197bc6d80832aaed4e24a0539fb3fc60d5
+SHA512 (stella-6.1.2-src.tar.xz) = 48dcefd322ea27e90970c5b8b43dd6cf919a30674e75601ce5de5931f54c61e751b2d72b863be98ae3e332ce4f8db7a02f16dcb97b7eda2d5515989b0cd6a8c5
+Size (stella-6.1.2-src.tar.xz) = 2048220 bytes
 SHA1 (patch-configure) = 4818245fe59c6c73e6d7647e7d3aed1f3c938c90
