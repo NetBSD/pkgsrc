@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.11 2020/01/19 16:53:10 maya Exp $
+# $NetBSD: cargo.mk,v 1.12 2020/05/18 16:17:20 nia Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -22,7 +22,13 @@
 
 MASTER_SITES?=	-${MASTER_SITE_CRATESIO}${PKGBASE}/${PKGVERSION_NOREV}/download
 
+.include "type.mk"
+
+.if ${RUST_TYPE} != "bin"
 BUILD_DEPENDS+=	rust-[0-9]*:../../lang/rust
+.else
+BUILD_DEPENDS+=	rust-[0-9]*:../../lang/rust-bin
+.endif
 
 USE_TOOLS+=		bsdtar digest
 CARGO_VENDOR_DIR=	${WRKDIR}/vendor
