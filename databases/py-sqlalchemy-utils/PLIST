@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/11/01 13:01:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/18 10:45:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -126,6 +126,24 @@ ${PYSITELIB}/sqlalchemy_utils/types/encrypted/encrypted_type.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/encrypted/padding.py
 ${PYSITELIB}/sqlalchemy_utils/types/encrypted/padding.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/encrypted/padding.pyo
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/__init__.py
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/__init__.pyc
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/__init__.pyo
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/arrow_datetime.py
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/arrow_datetime.pyc
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/arrow_datetime.pyo
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/enriched_date_type.py
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/enriched_date_type.pyc
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/enriched_date_type.pyo
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/enriched_datetime_type.py
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/enriched_datetime_type.pyc
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/enriched_datetime_type.pyo
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/pendulum_date.py
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/pendulum_date.pyc
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/pendulum_date.pyo
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/pendulum_datetime.py
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/pendulum_datetime.pyc
+${PYSITELIB}/sqlalchemy_utils/types/enriched_datetime/pendulum_datetime.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.py
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.pyo
