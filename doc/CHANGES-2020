@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3049 2020/05/19 14:21:48 hauke Exp $
+$NetBSD: CHANGES-2020,v 1.3050 2020/05/19 14:32:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4800,3 +4800,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ImageMagick to 7.0.10.13 [nia 2020-05-19]
 	Updated devel/pcre2 to 10.35 [nia 2020-05-19]
 	Updated www/php-glpi to 9.4.6 [hauke 2020-05-19]
+	Added devel/p5-Class-Refresh version 0.07 [wiz 2020-05-19]
