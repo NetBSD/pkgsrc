@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/19 16:58:23 wiz Exp $
+
+SHA1 (filetype-1.0.7.tar.gz) = 879921eab760f802e95fbb6dbcdc38e0c1da692c
+RMD160 (filetype-1.0.7.tar.gz) = 23fa944a61ad168d58171b942b295501b08115b2
+SHA512 (filetype-1.0.7.tar.gz) = f6d861a9108ffb796858bfdfb26d1bdf6aa9704794fa86340cc36a2920b4f11e12faf4271d19bca9a89be76d8fcff43e8859c8def2525ddbadd52a18c7f68cac
+Size (filetype-1.0.7.tar.gz) = 667644 bytes
