@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3033 2020/05/19 09:22:06 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3034 2020/05/19 09:57:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/unbound to 1.10.1 [he 2020-05-19]
 	Updated databases/redis to 6.0.3 [adam 2020-05-19]
 	Updated devel/py-cython to 0.29.18 [adam 2020-05-19]
+	Updated mail/libetpan to 1.9.4 [nia 2020-05-19]
