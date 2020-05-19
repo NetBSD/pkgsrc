@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2020/05/14 18:04:44 rillig Exp $
+# $NetBSD: Makefile,v 1.113 2020/05/19 16:06:01 mef Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -60,12 +60,7 @@ SUBST_FILES.kdelibsfix=		kde3support/kdeui/k3sconfig.cpp
 SUBST_VARS.kdelibsfix=		LOCALBASE
 
 # Avoid the WRKDIR path in the installed cmake file
-SUBST_CLASSES+=			phononrelpath
-SUBST_STAGE.phononrelpath=	post-configure
-SUBST_MESSAGE.phononrelpath=	Fixing phonon RELWITHDEBINFO path
-SUBST_FILES.phononrelpath=	_KDE_build/CMakeFiles/Export/${LOCALBASE:S^/^_^}/share/kde/apps/cmake/modules/KDELibs4LibraryTargets-${TARGET_NAME}.cmake
-SUBST_FILES.phononrelpath+=	_KDE_build/experimental/libkdeclarative/CMakeFiles/Export/${LOCALBASE:S^/^_^}/lib/cmake/KDeclarative/KDeclarativeLibraryTargets-${TARGET_NAME}.cmake
-SUBST_SED.phononrelpath=	-e 's:${BUILDLINK_DIR}:${PREFIX}:'
+# SUBST BLOCK deleted
 
 USE_TOOLS+=	flex gmake
 PLIST_VARS+=	kgrantpty mac notmac
