@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/19 19:01:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/19 21:59:03 nia Exp $
 
 DISTNAME=	rust-1.42.0
 CATEGORIES=	lang
@@ -72,7 +72,9 @@ RUST_ARCH:=	x86_64-unknown-linux-musl
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+.  if empty(OS_VERSION:M[0-8].*)
 DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
+.  endif
 RUST_ARCH:=	x86_64-unknown-netbsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
@@ -121,6 +123,13 @@ fix-darwin-install-name:
 .else
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
+# The llvm utilities need a specific libstdc++ version from compat80
+.  if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-8].*)
+RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
+.  else
+RUST_LLVM_RPATH=	${PREFIX}/lib
+.  endif
+
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
@@ -130,8 +139,7 @@ fix-relative-rpath:
 .  endfor
 .  for bin in llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
 		llvm-readobj llvm-size llvm-strip
-	${PREFIX}/bin/patchelf --set-rpath \
-		${PREFIX}/lib/rustlib/${RUST_ARCH}/lib \
+	${PREFIX}/bin/patchelf --set-rpath ${RUST_LLVM_RPATH} \
 		${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .  endfor
 .  for lib in lib lib/rustlib/${RUST_ARCH}/lib \
