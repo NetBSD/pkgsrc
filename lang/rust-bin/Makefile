@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/18 16:22:25 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/19 19:01:10 wiz Exp $
 
 DISTNAME=	rust-1.42.0
 CATEGORIES=	lang
@@ -16,6 +16,15 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-aarch64
 ONLY_FOR_PLATFORM+=	Linux-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-x86_64
+
+CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-ar
+CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-nm
+CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-objcopy
+CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-objdump
+CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-profdata
+CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-readobj
+CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-size
+CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-strip
 
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
