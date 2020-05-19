@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:57:01 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/05/19 11:37:56 nia Exp $
 
-SHA1 (powermanga-0.90.tar.gz) = 50ca2844f8d3fa53af89e94aeb6dd10d7b320cc8
-RMD160 (powermanga-0.90.tar.gz) = 2f7e9cc50fd97de7131b726732acffcd5a0deaea
-SHA512 (powermanga-0.90.tar.gz) = eb0d363e60088ca9b849aa88e0e51667cd2e4519cdf04d851495ad03394e1ee58ad1b881ca3011652ea0fb23a8af7ee6e78943985511b6d66e0d33c43c734052
-Size (powermanga-0.90.tar.gz) = 11412193 bytes
-SHA1 (patch-ab) = 1173f73ac26a25402c31d771578a3ca188b367f6
-SHA1 (patch-ad) = 58c7089a05d7b23d929de1ff5eae1b5141c68553
+SHA1 (powermanga-0.93.1.tgz) = 1afed179a80eefe590887184f665a4c35c8b9dc6
+RMD160 (powermanga-0.93.1.tgz) = baebf0eafa772d6fc827855022bd27e68ba1c716
+SHA512 (powermanga-0.93.1.tgz) = 852c0b4550db6c9e4ecd380077d390327f6649b6e8ab4cad246f23e7335e8622008f9fc753e2f474bf9cf7a5654b071e3f117f6a2b5be72ea53709912f4a0f41
+Size (powermanga-0.93.1.tgz) = 11855703 bytes
+SHA1 (patch-src_Makefile.am) = cc4a9a19dd152d0a01989fe6e3b555fe19f19b0c
