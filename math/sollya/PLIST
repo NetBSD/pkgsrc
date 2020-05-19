@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/19 14:45:21 riastradh Exp $
+bin/sollya
+include/sollya-messages.h
+include/sollya.h
+lib/libsollya.la
+man/man1/sollya.1
+share/doc/sollya/sollya.pdf
