@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/19 14:44:42 riastradh Exp $
+
+SHA1 (fplll-5.3.2.tar.gz) = 418c0153be2d63657a5c83b65d39552cea4f6b35
+RMD160 (fplll-5.3.2.tar.gz) = 35c3c84fe45ff6f9b2677cbd207f4a80e8a32ba8
+SHA512 (fplll-5.3.2.tar.gz) = 6436aae93994e223260b5b6c28aa767796d6626988bf14baad51244ce7c3a329cdf48b7705781fdcf5ca8960064ff5a6b96c62a8d774b8563b9117c70c527708
+Size (fplll-5.3.2.tar.gz) = 1025192 bytes
