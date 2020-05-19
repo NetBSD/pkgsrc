@@ -1,0 +1,33 @@
+$NetBSD: patch-tests_Makefile.am,v 1.1 2020/05/19 14:44:04 riastradh Exp $
+
+Disable tests that are missing from the upstream distfile or fail to build.
+
+--- tests/Makefile.am.orig	2019-08-01 20:15:53.000000000 +0000
++++ tests/Makefile.am
+@@ -3,7 +3,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/src
+ 
+ check_LTLIBRARIES = libmpfi-tests.la
+ libmpfi_tests_la_SOURCES = mpfi-tests.h read_data.c random.c	\
+-    type_i.c type_ii.c type_iii.c type_iiii.c type_iu.c type_is.c		\
++    type_i.c type_ii.c type_iii.c type_iu.c type_is.c		\
+     type_id.c type_if.c type_il.c type_iz.c type_iq.c type_ir.c type_iiu.c		\
+     type_iis.c type_iid.c type_iiz.c type_iiq.c type_iir.c	\
+     type_iui.c type_isi.c type_idi.c type_izi.c type_iqi.c	\
+@@ -40,7 +40,7 @@ check_PROGRAMS = tabs tacos tacosh tadd 
+     tcmp_fr tcmp_q tcmp_si tcmp_ui tcmp_z tconst_catalan	\
+     tconst_euler tconst_log2 tconst_pi tcos tcosh tcot tcoth	\
+     tcsc tcsch td_div td_sub tdiam tdiam_abs tdiam_rel tdiv	\
+-    tdiv_2exp tdiv_2si tdiv_2ui tdiv_d tdiv_ext tdiv_fr tdiv_q	\
++    tdiv_2exp tdiv_2si tdiv_2ui tdiv_d tdiv_fr tdiv_q	\
+     tdiv_si tdiv_ui tdiv_z terror texp texp2 texpm1 tfr_div	\
+     tfr_sub tget_d tget_endpoints tget_fr thas_zero thypot	\
+     tincrease tinf_p tinit tinits tinit_set tintersect tinterv_d	\
+@@ -52,7 +52,7 @@ check_PROGRAMS = tabs tacos tacosh tadd 
+     tis_zero tlog tlog10 tlog1p tlog2 tmag tmid tmig tmul	\
+     tmul_2exp tmul_2si tmul_2ui tmul_d tmul_fr tmul_q		\
+     tmul_si tmul_ui tmul_z tnan_p tneg tput_d tput_fr tput_q	\
+-    tput_si tput_ui tput_z tq_div tq_sub trec_sqrt tround_prec	\
++    tput_si tput_ui tput_z tq_div tq_sub tround_prec	\
+     tsec tsech tset tset_d tset_flt tset_fr tset_ld tset_q	\
+     tset_si tset_str tset_ui tset_z tsi_div tsi_sub tsin tsinh	\
+     tsqr tsqrt							\
