@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.462 2020/05/19 14:45:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.463 2020/05/19 21:42:29 riastradh Exp $
 
 COMMENT=	Mathematics
 
@@ -165,6 +165,7 @@ SUBDIR+=	fplll
 SUBDIR+=	fricas
 SUBDIR+=	galculator
 SUBDIR+=	gap
+SUBDIR+=	gappa
 SUBDIR+=	gcalctool
 SUBDIR+=	geg
 SUBDIR+=	genius
