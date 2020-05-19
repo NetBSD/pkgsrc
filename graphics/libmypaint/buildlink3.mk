@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2019/10/06 12:23:03 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/05/19 12:09:08 nia Exp $
 
 BUILDLINK_TREE+=	libmypaint
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libmypaint
 LIBMYPAINT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmypaint+=	libmypaint>=1.4.0
+BUILDLINK_ABI_DEPENDS.libmypaint?=	libmypaint>=1.5.1nb1
 BUILDLINK_PKGSRCDIR.libmypaint?=	../../graphics/libmypaint
 
 .include "../../textproc/json-c/buildlink3.mk"
