@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2019/09/26 14:52:24 hauke Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/19 14:21:13 hauke Exp $
 share/examples/glpi/crontab.sample
 share/examples/glpi/httpd-glpi.conf
 share/examples/glpi/local_define.php
+share/examples/glpi/var_glpi.htaccess
 share/glpi/.htaccess
 share/glpi/CHANGELOG.md
 share/glpi/CONTRIBUTING.md
@@ -173,20 +174,26 @@ share/glpi/css/tiny_mce/skins/light/img/loader.gif
 share/glpi/css/tiny_mce/skins/light/img/object.gif
 share/glpi/css/tiny_mce/skins/light/img/trans.gif
 share/glpi/css/tiny_mce/skins/light/skin.min.css
+share/glpi/css/tiny_mce_custom.css
+share/glpi/css/tiny_mce_custom.min.css
 share/glpi/css/win_png.htc
-share/glpi/files/.htaccess
-share/glpi/files/_cache/remove.txt
-share/glpi/files/_cron/remove.txt
-share/glpi/files/_dumps/remove.txt
-share/glpi/files/_graphs/remove.txt
-share/glpi/files/_lock/remove.txt
-share/glpi/files/_log/remove.txt
-share/glpi/files/_pictures/remove.txt
-share/glpi/files/_plugins/remove.txt
-share/glpi/files/_rss/remove.txt
-share/glpi/files/_sessions/remove.txt
-share/glpi/files/_tmp/remove.txt
-share/glpi/files/_uploads/remove.txt
+share/glpi/css_compiled/css_highcontrast.min.css
+share/glpi/css_compiled/css_palettes_aerialgreen.min.css
+share/glpi/css_compiled/css_palettes_auror.min.css
+share/glpi/css_compiled/css_palettes_automn.min.css
+share/glpi/css_compiled/css_palettes_classic.min.css
+share/glpi/css_compiled/css_palettes_clockworkorange.min.css
+share/glpi/css_compiled/css_palettes_dark.min.css
+share/glpi/css_compiled/css_palettes_flood.min.css
+share/glpi/css_compiled/css_palettes_greenflat.min.css
+share/glpi/css_compiled/css_palettes_hipster.min.css
+share/glpi/css_compiled/css_palettes_icecream.min.css
+share/glpi/css_compiled/css_palettes_lightblue.min.css
+share/glpi/css_compiled/css_palettes_premiumred.min.css
+share/glpi/css_compiled/css_palettes_purplehaze.min.css
+share/glpi/css_compiled/css_palettes_teclib.min.css
+share/glpi/css_compiled/css_palettes_vintage.min.css
+share/glpi/css_compiled/css_styles.min.css
 share/glpi/front/allassets.php
 share/glpi/front/apiclient.form.php
 share/glpi/front/auth.others.php
@@ -197,7 +204,6 @@ share/glpi/front/authmail.form.php
 share/glpi/front/authmail.php
 share/glpi/front/autoupdatesystem.form.php
 share/glpi/front/autoupdatesystem.php
-share/glpi/front/backup.php
 share/glpi/front/blacklist.form.php
 share/glpi/front/blacklist.php
 share/glpi/front/blacklistedmailcontent.form.php
@@ -711,7 +717,6 @@ share/glpi/inc/authldapreplicate.class.php
 share/glpi/inc/authmail.class.php
 share/glpi/inc/autoload.function.php
 share/glpi/inc/autoupdatesystem.class.php
-share/glpi/inc/backup.class.php
 share/glpi/inc/based_config.php
 share/glpi/inc/blacklist.class.php
 share/glpi/inc/blacklistedmailcontent.class.php
@@ -779,6 +784,7 @@ share/glpi/inc/console/database/updatecommand.class.php
 share/glpi/inc/console/ldap/synchronizeuserscommand.class.php
 share/glpi/inc/console/migration/buildmissingtimestampscommand.class.php
 share/glpi/inc/console/migration/myisamtoinnodbcommand.class.php
+share/glpi/inc/console/security/changekeycommand.class.php
 share/glpi/inc/console/task/unlockcommand.class.php
 share/glpi/inc/consumable.class.php
 share/glpi/inc/consumableitem.class.php
@@ -866,6 +872,7 @@ share/glpi/inc/filesystem.class.php
 share/glpi/inc/fqdn.class.php
 share/glpi/inc/fqdnlabel.class.php
 share/glpi/inc/glpi.class.php
+share/glpi/inc/glpikey.class.php
 share/glpi/inc/glpimailer.class.php
 share/glpi/inc/glpinetwork.class.php
 share/glpi/inc/glpipdf.class.php
@@ -1258,6 +1265,8 @@ share/glpi/install/update_93_94.php
 share/glpi/install/update_940_941.php
 share/glpi/install/update_941_942.php
 share/glpi/install/update_942_943.php
+share/glpi/install/update_943_945.php
+share/glpi/install/update_945_946.php
 share/glpi/install/update_content.php
 share/glpi/install/update_to_031.php
 share/glpi/install/update_xx_xy.tpl.php
@@ -1287,6 +1296,7 @@ share/glpi/lib/chartist-plugin-tooltip-0.0.17/LICENSE
 share/glpi/lib/chartist-plugin-tooltip-0.0.17/chartist-plugin-tooltip.css
 share/glpi/lib/chartist-plugin-tooltip-0.0.17/chartist-plugin-tooltip.js
 share/glpi/lib/chartist-plugin-tooltip-0.0.17/chartist-plugin-tooltip.min.js
+share/glpi/lib/file-type.js
 share/glpi/lib/font-awesome/LICENSE.txt
 share/glpi/lib/font-awesome/css/all.css
 share/glpi/lib/font-awesome/css/all.min.css
@@ -2265,6 +2275,9 @@ share/glpi/vendor/leafo/scssphp/src/SourceMap/SourceMapGenerator.php
 share/glpi/vendor/leafo/scssphp/src/Type.php
 share/glpi/vendor/leafo/scssphp/src/Util.php
 share/glpi/vendor/leafo/scssphp/src/Version.php
+share/glpi/vendor/michelf/php-markdown/.editorconfig
+share/glpi/vendor/michelf/php-markdown/.scrutinizer.yml
+share/glpi/vendor/michelf/php-markdown/.travis.yml
 share/glpi/vendor/michelf/php-markdown/License.md
 share/glpi/vendor/michelf/php-markdown/Michelf/Markdown.inc.php
 share/glpi/vendor/michelf/php-markdown/Michelf/Markdown.php
@@ -2745,6 +2758,7 @@ share/glpi/vendor/symfony/console/Tests/CommandLoader/ContainerCommandLoaderTest
 share/glpi/vendor/symfony/console/Tests/CommandLoader/FactoryCommandLoaderTest.php
 share/glpi/vendor/symfony/console/Tests/DependencyInjection/AddConsoleCommandPassTest.php
 share/glpi/vendor/symfony/console/Tests/Descriptor/AbstractDescriptorTest.php
+share/glpi/vendor/symfony/console/Tests/Descriptor/ApplicationDescriptionTest.php
 share/glpi/vendor/symfony/console/Tests/Descriptor/JsonDescriptorTest.php
 share/glpi/vendor/symfony/console/Tests/Descriptor/MarkdownDescriptorTest.php
 share/glpi/vendor/symfony/console/Tests/Descriptor/ObjectsProvider.php
@@ -2768,6 +2782,7 @@ share/glpi/vendor/symfony/console/Tests/Fixtures/Foo4Command.php
 share/glpi/vendor/symfony/console/Tests/Fixtures/Foo5Command.php
 share/glpi/vendor/symfony/console/Tests/Fixtures/Foo6Command.php
 share/glpi/vendor/symfony/console/Tests/Fixtures/FooCommand.php
+share/glpi/vendor/symfony/console/Tests/Fixtures/FooHiddenCommand.php
 share/glpi/vendor/symfony/console/Tests/Fixtures/FooLock2Command.php
 share/glpi/vendor/symfony/console/Tests/Fixtures/FooLockCommand.php
 share/glpi/vendor/symfony/console/Tests/Fixtures/FooOptCommand.php
@@ -2814,9 +2829,9 @@ share/glpi/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/outpu
 share/glpi/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_7.txt
 share/glpi/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_8.txt
 share/glpi/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_9.txt
+share/glpi/vendor/symfony/console/Tests/Fixtures/TestAmbiguousCommandRegistering.php
+share/glpi/vendor/symfony/console/Tests/Fixtures/TestAmbiguousCommandRegistering2.php
 share/glpi/vendor/symfony/console/Tests/Fixtures/TestCommand.php
-share/glpi/vendor/symfony/console/Tests/Fixtures/TestTiti.php
-share/glpi/vendor/symfony/console/Tests/Fixtures/TestToto.php
 share/glpi/vendor/symfony/console/Tests/Fixtures/application_1.json
 share/glpi/vendor/symfony/console/Tests/Fixtures/application_1.md
 share/glpi/vendor/symfony/console/Tests/Fixtures/application_1.txt
@@ -2955,6 +2970,7 @@ share/glpi/vendor/symfony/console/Tests/Output/ConsoleOutputTest.php
 share/glpi/vendor/symfony/console/Tests/Output/NullOutputTest.php
 share/glpi/vendor/symfony/console/Tests/Output/OutputTest.php
 share/glpi/vendor/symfony/console/Tests/Output/StreamOutputTest.php
+share/glpi/vendor/symfony/console/Tests/Question/ChoiceQuestionTest.php
 share/glpi/vendor/symfony/console/Tests/Question/ConfirmationQuestionTest.php
 share/glpi/vendor/symfony/console/Tests/Style/SymfonyStyleTest.php
 share/glpi/vendor/symfony/console/Tests/TerminalTest.php
@@ -3032,6 +3048,7 @@ share/glpi/vendor/symfony/polyfill-mbstring/bootstrap.php
 share/glpi/vendor/tecnickcom/tcpdf/CHANGELOG.TXT
 share/glpi/vendor/tecnickcom/tcpdf/LICENSE.TXT
 share/glpi/vendor/tecnickcom/tcpdf/README.md
+share/glpi/vendor/tecnickcom/tcpdf/VERSION
 share/glpi/vendor/tecnickcom/tcpdf/config/tcpdf_config.php
 share/glpi/vendor/tecnickcom/tcpdf/fonts/ae_fonts_2.0/COPYING
 share/glpi/vendor/tecnickcom/tcpdf/fonts/ae_fonts_2.0/ChangeLog
@@ -3692,6 +3709,7 @@ share/glpi/vendor/zendframework/zend-i18n/src/View/Helper/Plural.php
 share/glpi/vendor/zendframework/zend-i18n/src/View/Helper/Translate.php
 share/glpi/vendor/zendframework/zend-i18n/src/View/Helper/TranslatePlural.php
 share/glpi/vendor/zendframework/zend-i18n/src/View/HelperConfig.php
+share/glpi/vendor/zendframework/zend-i18n/src/View/HelperTrait.php
 share/glpi/vendor/zendframework/zend-json/CHANGELOG.md
 share/glpi/vendor/zendframework/zend-json/LICENSE.md
 share/glpi/vendor/zendframework/zend-json/README.md
