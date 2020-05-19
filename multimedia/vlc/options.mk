@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.35 2020/05/01 13:51:54 nia Exp $
+# $NetBSD: options.mk,v 1.36 2020/05/19 08:45:36 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
 PKG_SUPPORTED_OPTIONS+=		vlc-skins qt5 x11
-PKG_SUGGESTED_OPTIONS=		dbus qt5 x11
+PKG_SUGGESTED_OPTIONS=		dbus qt5
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/bsd.fast.prefs.mk"
