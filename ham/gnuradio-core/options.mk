@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2019/11/03 19:32:07 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2020/05/19 13:58:24 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuradio
 PKG_SUPPORTED_OPTIONS=	ninja-build filter-design alsa
@@ -19,10 +19,10 @@ CMAKE_ARGS+=	-GNinja
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 do-build:
-	(cd ${WRKSRC}/build; ninja)
+	cd ${WRKSRC}/${BUILD_DIRS} && ${PKGSRC_SETENV} ${MAKE_ENV} ninja
 .else
 do-build:
-	(cd ${WRKSRC}/build; ${BUILD_MAKE_CMD})
+	cd ${WRKSRC}/${BUILD_DIRS} && ${BUILD_MAKE_CMD}
 .endif
 
 .if !empty(PKG_OPTIONS:Mfilter-design)
