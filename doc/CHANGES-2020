@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3062 2020/05/19 17:11:20 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3063 2020/05/19 17:17:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4824,3 +4824,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/py-filetype version 1.0.7 [wiz 2020-05-19]
 	Updated audio/lv2 to 1.18.0 [nia 2020-05-19]
 	Updated audio/lilv to 0.24.8 [nia 2020-05-19]
+	Updated devel/libwnck to 2.30.7 [nia 2020-05-19]
