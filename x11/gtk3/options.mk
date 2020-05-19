@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2020/03/05 09:37:30 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2020/05/19 19:53:14 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups debug
@@ -10,14 +10,13 @@ PKG_SUPPORTED_OPTIONS+=	quartz
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
 PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
-PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge x11
+PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge x11 cups
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-BUILDLINK_API_DEPENDS.cups-base+=	cups-base>=1.7
-.include "../../print/cups-base/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 PLIST.cups=		yes
 .else
 CONFIGURE_ENV+=		ac_cv_path_CUPS_CONFIG=no
