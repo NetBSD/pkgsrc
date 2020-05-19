@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 17:32:22 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/19 14:21:13 hauke Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
-GLPI_VERSION=	9.4.4
-PKGREVISION=	1
+GLPI_VERSION=	9.4.6
+#PKGREVISION=	1
 CATEGORIES=	www
 
 MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/
@@ -49,6 +49,7 @@ GLPI_DIR=	share/glpi
 .for ddd in local_define.php
 CONF_FILES+=	${EGDIR}/${ddd} ${PKG_SYSCONFDIR}/${ddd}
 .endfor
+CONF_FILES+=	${EGDIR}/var_glpi.htaccess ${VARBASE}/glpi/.htaccess
 
 MAKE_DIRS_PERMS+=	${VARBASE}/glpi ${APACHE_USER} ${APACHE_GROUP} 0700
 .for ddd in _cache _cron _dumps _graphs _lock _log _pictures _plugins \
@@ -101,6 +102,10 @@ post-extract:
 
 do-install:
 	cd ${WRKSRC}/config && ${PAX} -rw * ${DESTDIR}${PREFIX}/${EGDIR}
+	cd ${WRKSRC}/files && cp .htaccess \
+		${DESTDIR}${PREFIX}/${EGDIR}/var_glpi.htaccess
+	# Sub-tree will be re-created in VARBASE/glpi
+	cd ${WRKSRC} && rm -r files
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${GLPI_DIR}
 
 .include "../../mk/apache.mk"
