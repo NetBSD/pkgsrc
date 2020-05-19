@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3061 2020/05/19 17:05:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3062 2020/05/19 17:11:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4823,3 +4823,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/samba4 to 4.12.3 [adam 2020-05-19]
 	Added sysutils/py-filetype version 1.0.7 [wiz 2020-05-19]
 	Updated audio/lv2 to 1.18.0 [nia 2020-05-19]
+	Updated audio/lilv to 0.24.8 [nia 2020-05-19]
