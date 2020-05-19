@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3056 2020/05/19 15:42:47 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3057 2020/05/19 16:01:40 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4817,3 +4817,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/ruby-actionmailer52 to 5.2.4.3 [taca 2020-05-19]
 	Updated devel/ruby-railties52 to 5.2.4.3 [taca 2020-05-19]
 	Updated www/ruby-rails52 to 5.2.4.3 [taca 2020-05-19]
+	Updated news/libcanlock to 3.2.0 [micha 2020-05-19]
