@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/04/29 10:01:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/05/19 12:13:51 hauke Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -809,6 +809,7 @@ man/man1/vfstest.1
 man/man1/wbinfo.1
 man/man5/lmhosts.5
 man/man5/pam_winbind.conf.5
+man/man5/smb.conf.5
 man/man5/smbgetrc.5
 man/man5/smbpasswd.5
 man/man7/libsmbclient.7
