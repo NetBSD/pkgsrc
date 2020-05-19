@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2020/05/19 09:57:05 nia Exp $
+# $NetBSD: Makefile,v 1.64 2020/05/19 10:13:49 nia Exp $
 
 DISTNAME=	libetpan-1.9.4
 CATEGORIES=	mail
@@ -23,7 +23,7 @@ pre-configure:
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-PKGCONFIG_OVERRIDE+=	libetpan-config.in
+PKGCONFIG_OVERRIDE+=	libetpan.pc.in
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
