@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/18 15:19:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/19 05:14:01 wiz Exp $
 
 DISTNAME=	cmake-language-server-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-pygls-[0-9]*:../../lang/py-pygls
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pygls
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} cmake-format cmake-format-${PYVERSSUFFIX}
