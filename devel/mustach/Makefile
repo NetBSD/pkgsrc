@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/12/29 21:46:59 sjmulder Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/19 12:09:07 nia Exp $
 
 DISTNAME=	mustach-0.99
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.com/jobol/mustach/-/archive/${PKGVERSION_NOREV}/
 
