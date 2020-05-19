@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/05/19 16:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2020/05/19 19:01:57 wiz Exp $
 
 DISTNAME=	libspectre-0.2.9
 CATEGORIES=	print
@@ -14,6 +14,6 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	libspectre.pc.in
 
-BUILDLINK_API_DEPENDS.ghostscript-agpl+=	ghostscript-agpl>=9.24444
+BUILDLINK_API_DEPENDS.ghostscript-agpl+=	ghostscript-agpl>=9.24
 .include "../../print/ghostscript-agpl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
