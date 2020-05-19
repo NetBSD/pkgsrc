@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3044 2020/05/19 12:32:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3045 2020/05/19 12:41:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4793,3 +4793,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/powermanga to 0.93.1 [nia 2020-05-19]
 	Updated games/teeworlds to 0.7.5 [nia 2020-05-19]
 	Updated net/freerdp2 to 2.1.0 [nia 2020-05-19]
+	Updated net/py-ldapdomaindump to 0.9.2 [adam 2020-05-19]
+	Updated textproc/py-regex to 2020.5.14 [adam 2020-05-19]
