@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.877 2020/05/18 12:23:24 wiz Exp $
+# $NetBSD: Makefile,v 1.878 2020/05/19 16:58:45 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -480,6 +480,7 @@ SUBDIR+=	py-crontab
 SUBDIR+=	py-dbus
 SUBDIR+=	py-diffoscope
 SUBDIR+=	py-euca2ools
+SUBDIR+=	py-filetype
 SUBDIR+=	py-gnome-menus
 SUBDIR+=	py-google-compute-engine
 SUBDIR+=	py-kazoo
