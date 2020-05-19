@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/18 08:45:34 leot Exp $
-bin/ldapdomaindump
-bin/ldd2bloodhound
+@comment $NetBSD: PLIST,v 1.3 2020/05/19 12:39:04 adam Exp $
+bin/ldapdomaindump-${PYVERSSUFFIX}
+bin/ldd2bloodhound-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,13 +12,7 @@ ${PYSITELIB}/ldapdomaindump/__init__.pyo
 ${PYSITELIB}/ldapdomaindump/__main__.py
 ${PYSITELIB}/ldapdomaindump/__main__.pyc
 ${PYSITELIB}/ldapdomaindump/__main__.pyo
-${PYSITELIB}/ldapdomaindump/config.py
-${PYSITELIB}/ldapdomaindump/config.pyc
-${PYSITELIB}/ldapdomaindump/config.pyo
 ${PYSITELIB}/ldapdomaindump/convert.py
 ${PYSITELIB}/ldapdomaindump/convert.pyc
 ${PYSITELIB}/ldapdomaindump/convert.pyo
-${PYSITELIB}/ldapdomaindump/domaindumper.py
-${PYSITELIB}/ldapdomaindump/domaindumper.pyc
-${PYSITELIB}/ldapdomaindump/domaindumper.pyo
 ${PYSITELIB}/ldapdomaindump/style.css
