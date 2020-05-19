@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.17 2018/12/16 05:32:07 schmonz Exp $
+# $NetBSD: qmailsend.sh,v 1.18 2020/05/19 19:45:58 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
@@ -13,6 +13,7 @@ name="qmailsend"
 
 # User-settable rc.conf variables and their default values:
 : ${qmailsend_postenv:="QMAILREMOTE=@PREFIX@/bin/qmail-remote"}
+: ${qmailsend_datalimit:="540000000"}
 : ${qmailsend_defaultdelivery:="`@HEAD@ -1 @PKG_SYSCONFDIR@/control/defaultdelivery`"}
 : ${qmailsend_log:="YES"}
 : ${qmailsend_logcmd:="logger -t nbqmail/send -p mail.info"}
@@ -48,6 +49,7 @@ qmailsend_prestart() {
 	# qmail-start(8) starts the various qmail processes, then execs
 	# qmail-send(8). That's the process we want to signal later.
 	command="@PREFIX@/bin/pgrphack @SETENV@ - PATH=@PREFIX@/bin:$PATH ${qmailsend_postenv} \
+@PREFIX@/bin/softlimit -m ${qmailsend_datalimit} \
 qmail-start '$qmailsend_defaultdelivery' \
 ${qmailsend_logcmd}"
 	command_args="&"
