@@ -1,0 +1,10 @@
+MPFI (Multiple Precision Floating-Point Interval Library) is a library
+for arbitrary precision interval arithmetic with intervals represented
+using MPFR reliable floating-point numbers. It is based on the GNU MP
+library and on the MPFR library. The purpose of an arbitrary precision
+interval arithmetic is on the one hand to get guaranteed results,
+thanks to interval computation, and on the other hand to obtain
+accurate results, thanks to multiple precision arithmetic. The MPFI
+library is built upon MPFR to benefit from the correct roundings
+provided by MPFR, it portability, and its compliance with the IEEE 754
+standard for floating-point arithmetic.
