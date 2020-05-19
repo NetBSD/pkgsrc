@@ -1,0 +1,17 @@
+$NetBSD: patch-Remakefile.in,v 1.1 2020/05/19 21:42:29 riastradh Exp $
+
+Install to DESTDIR.
+
+--- Remakefile.in.orig	2019-05-24 12:52:39.000000000 +0000
++++ Remakefile.in
+@@ -136,8 +136,8 @@ testsuite/clean:
+ install:
+ 	prefix=@prefix@
+ 	exec_prefix=@exec_prefix@
+-	mkdir -p @bindir@
+-	cp src/gappa @bindir@
++	mkdir -p $(DESTDIR)@bindir@
++	cp src/gappa $(DESTDIR)@bindir@
+ 
+ EXTRA_DIST = \
+ 	configure \
