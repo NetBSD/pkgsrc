@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/31 22:57:37 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/19 14:35:25 nia Exp $
 bin/env_parallel
 bin/env_parallel.ash
 bin/env_parallel.bash
@@ -15,6 +15,7 @@ bin/niceload
 bin/parallel
 bin/parcat
 bin/parset
+bin/parsort
 bin/sem
 bin/sql
 man/man1/env_parallel.1
@@ -22,6 +23,7 @@ man/man1/niceload.1
 man/man1/parallel.1
 man/man1/parcat.1
 man/man1/parset.1
+man/man1/parsort.1
 man/man1/sem.1
 man/man1/sql.1
 man/man7/parallel_alternatives.7
@@ -46,7 +48,7 @@ share/doc/parallel/parallel_alternatives.texi
 share/doc/parallel/parallel_book.html
 share/doc/parallel/parallel_book.pdf
 share/doc/parallel/parallel_book.texi
-share/doc/parallel/parallel_cheat.pdf
+share/doc/parallel/parallel_cheat_bw.pdf
 share/doc/parallel/parallel_design.html
 share/doc/parallel/parallel_design.pdf
 share/doc/parallel/parallel_design.texi
@@ -59,6 +61,9 @@ share/doc/parallel/parcat.texi
 share/doc/parallel/parset.html
 share/doc/parallel/parset.pdf
 share/doc/parallel/parset.texi
+share/doc/parallel/parsort.html
+share/doc/parallel/parsort.pdf
+share/doc/parallel/parsort.texi
 share/doc/parallel/sem.html
 share/doc/parallel/sem.pdf
 share/doc/parallel/sem.texi
