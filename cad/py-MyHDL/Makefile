@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2020/05/16 09:03:23 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/19 13:59:02 joerg Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/myhdl/MyHDL/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hardware description in Python
@@ -23,6 +23,6 @@ do-test:
 		PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} \
 			py.test-${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
