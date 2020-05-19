@@ -1,4 +1,4 @@
-#	$NetBSD: u-boot-rockchip.mk,v 1.6 2020/04/02 09:12:54 tnn Exp $
+#	$NetBSD: u-boot-rockchip.mk,v 1.7 2020/05/19 20:02:51 rillig Exp $
 #
 # should be used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -30,11 +30,6 @@ post-build:
 		b=$$(expr $$b + 1); \
 	done < ${WRKSRC}/idbloader.img > ${WRKSRC}/rkspi_loader.img 2> /dev/null
 	dd if=${WRKSRC}/u-boot.itb seek=1024 conv=notrunc of=${WRKSRC}/rkspi_loader.img
-
-SUBST_CLASSES+=			makefitpath
-SUBST_STAGE.makefitpath=	pre-configure
-SUBST_FILES.makefitpath=	arch/arm/mach-rockchip/make_fit_atf.py
-SUBST_SED.makefitpath=		-e "s| python3| python|g"
 
 PYTHON_VERSIONS_ACCEPTED+=	37 38
 REPLACE_INTERPRETER+=	python3
