@@ -1,0 +1,36 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2020/05/19 11:37:56 nia Exp $
+
+- Install binaries to the usual location.
+- Fix setup for score directory.
+
+--- src/Makefile.am.orig	2014-10-18 20:06:20.000000000 +0000
++++ src/Makefile.am
+@@ -1,6 +1,6 @@
+ 
+-gamesdir = $(prefix)/games
+-scoredir = /var/games/powermanga
++gamesdir = $(bindir)
++scoredir = $(localstatedir)/games/powermanga
+ score = powermanga.hi
+ 
+ games_PROGRAMS = powermanga
+@@ -11,15 +11,10 @@ powermanga_CFLAGS = -DPREFIX=\"$(prefix)
+ powermanga_LDADD = @XLIB_LIBS@ @SDL_LIBS@ -lm
+ 
+ install-data-hook:
+-	-chown root:games "$(DESTDIR)/$(gamesdir)/powermanga"
+-	-chmod 2755 "$(DESTDIR)/$(gamesdir)/powermanga"
+-	$(INSTALL) -d $(DESTDIR)/$(scoredir)
+-	$(INSTALL) -d $(DESTDIR)/$(mandir)/fr/man6/
+-	$(INSTALL) -c -m 644 ../man/powermanga.fr.6 $(DESTDIR)/$(mandir)/fr/man6/powermanga.6
+-	-for suffix in "-easy" "" "-hard"; do \
+-	  touch "$(DESTDIR)/$(scoredir)/$(score)$$suffix"; \
+-	  chown root:games "$(DESTDIR)/$(scoredir)/$(score)$$suffix"; \
+-	  chmod 644 "$(DESTDIR)/$(scoredir)/$(score)$$suffix"; \
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(scoredir)
++	@for suffix in "-easy" "" "-hard"; do \
++	  $(TOUCH) "$(WRKSRC)/$(score)$$suffix" && \
++	  $(BSD_INSTALL_GAME_DATA) "$(WRKSRC)/$(score)$$suffix" $(DESTDIR)/$(scoredir)/; \
+ 	done
+ 
+ if ASSEMBLY
