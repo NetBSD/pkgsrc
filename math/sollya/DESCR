@@ -1,0 +1,5 @@
+Sollya is both a tool environment and a library for safe floating-point
+code development. It is particularily targeted to the automatized
+implementation of mathematical floating-point libraries (libm). Amongst
+other features, it offers a certified infinity (supremum) norm and a
+fast Remez algorithm.
