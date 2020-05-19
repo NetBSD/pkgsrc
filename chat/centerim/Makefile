@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/05/06 14:04:20 adam Exp $
+# $NetBSD: Makefile,v 1.55 2020/05/19 20:22:15 rillig Exp $
 #
 
 DISTNAME=	centerim-4.22.10
@@ -36,6 +36,9 @@ CPPFLAGS+=		-DAUDIO_PLAYER="\"/usr/bin/audioplay\""
 DEPENDS+=		sox>=12.17.4:../../audio/sox
 CPPFLAGS+=		-DAUDIO_PLAYER="\"${LOCALBASE}/bin/play\""
 .endif
+
+# 1 safe instance in xmltok.c:1494
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .if !empty(MACHINE_ARCH:Msparc64)
 GCC_REQD+=		3.0	# see PR 29185
