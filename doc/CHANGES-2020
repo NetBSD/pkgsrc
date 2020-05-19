@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3043 2020/05/19 11:46:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3044 2020/05/19 12:32:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4792,3 +4792,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/doomlegacy to 1.48.4 [micha 2020-05-19]
 	Updated games/powermanga to 0.93.1 [nia 2020-05-19]
 	Updated games/teeworlds to 0.7.5 [nia 2020-05-19]
+	Updated net/freerdp2 to 2.1.0 [nia 2020-05-19]
