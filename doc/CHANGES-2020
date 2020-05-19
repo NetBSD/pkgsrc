@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3047 2020/05/19 13:35:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3048 2020/05/19 14:19:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4798,3 +4798,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/repmgr to 5.1.0 [adam 2020-05-19]
 	Updated sysutils/ansible to 2.9.9 [adam 2020-05-19]
 	Updated graphics/ImageMagick to 7.0.10.13 [nia 2020-05-19]
+	Updated devel/pcre2 to 10.35 [nia 2020-05-19]
