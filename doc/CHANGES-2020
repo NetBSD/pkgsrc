@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3054 2020/05/19 15:33:19 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3055 2020/05/19 15:41:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4805,3 +4805,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/p5-Compiler-Lexer version 0.23 [wiz 2020-05-19]
 	Updated shells/mksh to 59b [nia 2020-05-19]
 	Updated time/libical to 3.0.8 [nia 2020-05-19]
+	Updated print/libspectre to 0.2.9 [nia 2020-05-19]
