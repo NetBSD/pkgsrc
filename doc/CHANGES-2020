@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3046 2020/05/19 12:59:06 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3047 2020/05/19 13:35:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4797,3 +4797,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-regex to 2020.5.14 [adam 2020-05-19]
 	Updated databases/repmgr to 5.1.0 [adam 2020-05-19]
 	Updated sysutils/ansible to 2.9.9 [adam 2020-05-19]
+	Updated graphics/ImageMagick to 7.0.10.13 [nia 2020-05-19]
