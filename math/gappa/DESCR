@@ -1,0 +1,3 @@
+Gappa is a tool intended to help verifying and formally proving
+properties on numerical programs dealing with floating-point or
+fixed-point arithmetic.
