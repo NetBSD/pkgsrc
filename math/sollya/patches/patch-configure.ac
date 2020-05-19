@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/05/19 14:45:21 riastradh Exp $
+
+Fix shell portability.
+
+--- configure.ac.orig	2018-09-20 11:11:30.000000000 +0000
++++ configure.ac
+@@ -63,7 +63,7 @@ then
+   AC_MSG_RESULT($HELP2MAN_SUPPORTS_LOCALE)
+   rm -rf .tmp_help2man
+ fi
+-AM_CONDITIONAL([HAVE_HELP2MAN_LOCALE], [test "x$HELP2MAN_SUPPORTS_LOCALE" == "xyes"])
++AM_CONDITIONAL([HAVE_HELP2MAN_LOCALE], [test "x$HELP2MAN_SUPPORTS_LOCALE" = "xyes"])
+ 
+ #Checking for pdflatex with the required packages
+ AC_PATH_PROG([PDFLATEX],[pdflatex],[no])
