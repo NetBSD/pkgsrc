@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: spec,v 1.2 2020/01/11 13:04:21 rillig Exp $
+# $NetBSD: spec,v 1.3 2020/05/19 05:02:42 rillig Exp $
 
 # This test demonstrates how the RCS Ids from the package files end up in
 # the +BUILD_VERSION file of the binary package.
@@ -26,7 +26,6 @@
 #	Same as mk/checksum/checksum.
 #
 # All these places must use the same patterns for extracting the RCS Ids.
-# As of January 2020, they don't.
 
 set -u
 
