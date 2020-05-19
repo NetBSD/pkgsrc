@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2019/07/02 12:23:41 hauke Exp $
+$NetBSD: MESSAGE,v 1.7 2020/05/19 14:39:56 hauke Exp $
 
 GLPI requires a web server set up to run PHP scripts;
 ${PREFIX}/share/examples/glpi/http-glpi.conf is a sample
 configuration for Apache.
 
-In addition, you need access to a MySQL server. Create a MySQL glpi user,
-and as that user create a database:
+In addition, you need access to a MySQL database server. Create a
+MySQL glpi user, and as that user create a database:
 
 # mysql -u root -p
 Enter password: <your_mysql_root_passwd>
@@ -20,7 +20,7 @@ mysql> EXIT
 Bye
 #
 
-To set up or upgrade GLPI, activate the setup page:
+To set up or upgrade GLPI with a web browser, activate the setup page:
 
 cd ${PREFIX}/share/glpi/install && mv install.php.disabled install.php
 
@@ -30,7 +30,7 @@ database.
 
 Rename install.php when you are done.
 
-To update from the commandline, run
+Alternatively, you can upgrade from the commandline, by running
 
 su -m ${APACHE_USER} -c '${PREFIX}/share/glpi/bin/console --config-dir=${PKG_SYSCONFDIR} db:update'
 
