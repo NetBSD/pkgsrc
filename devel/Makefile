@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3129 2020/05/18 13:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3130 2020/05/19 14:32:24 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1165,6 +1165,7 @@ SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-Mix
 SUBDIR+=	p5-Class-OOorNO
 SUBDIR+=	p5-Class-ObjectTemplate
+SUBDIR+=	p5-Class-Refresh
 SUBDIR+=	p5-Class-ReturnValue
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Class-Std
