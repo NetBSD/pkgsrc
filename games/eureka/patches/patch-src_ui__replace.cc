@@ -1,6 +1,7 @@
-$NetBSD: patch-src_ui__replace.cc,v 1.1 2020/05/15 15:20:50 jperkin Exp $
+$NetBSD: patch-src_ui__replace.cc,v 1.2 2020/05/19 16:54:04 micha Exp $
 
 Avoid sys/time.h SEC pollution.
+https://sourceforge.net/p/eureka-editor/tickets/44/
 
 --- src/ui_replace.cc.orig	2020-02-02 13:48:48.000000000 +0000
 +++ src/ui_replace.cc
