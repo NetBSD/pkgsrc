@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2015/04/19 22:54:55 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2020/05/19 17:05:44 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lv2
 PKG_SUPPORTED_OPTIONS=	debug doc tests valgrind
 PKG_SUGGESTED_OPTIONS+=	# blank
-PLIST_VARS+=		doc
 
 .include "../../mk/bsd.options.mk"
 
@@ -14,11 +13,11 @@ BUILD_DEBUG=		# blank
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
+PLIST_SRC+=		PLIST.doc
 BUILD_DOC=		--docs
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 BUILD_DEPENDS+=		${PYPKGPREFIX}-rdflib-[0-9]*:../../textproc/py-rdflib
-PLIST.doc=		yes
 .else
 BUILD_DOC=		# blank
 .endif
