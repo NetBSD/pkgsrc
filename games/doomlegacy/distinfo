@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.1 2019/06/17 13:53:22 micha Exp $
+$NetBSD: distinfo,v 1.2 2020/05/19 11:20:16 micha Exp $
 
-SHA1 (doomlegacy_1.47.2_common.zip) = 9e6faaea797b988565a078a47e80bbe2119d78b9
-RMD160 (doomlegacy_1.47.2_common.zip) = 1ac1f47563ad2c0d7c5c1bea93a2aaeb1c001c10
-SHA512 (doomlegacy_1.47.2_common.zip) = 7c7c2a0cbab5b9b4645a3fe166addd597de533db7ab41f8011c6c526a868bb04c8dd6b0d27b48765406fbab328bf64fc7827770b395e6c0e5d861d99c4d3865a
-Size (doomlegacy_1.47.2_common.zip) = 981654 bytes
-SHA1 (doomlegacy_1.47.2_source.tar.bz2) = afb1213eb8b228d9f131e4c63ead97afed2f599f
-RMD160 (doomlegacy_1.47.2_source.tar.bz2) = 661f0fa2bdc58a2f5f9582f36817ddd9d48df9bc
-SHA512 (doomlegacy_1.47.2_source.tar.bz2) = e2e182c18dd24c14e954f791c58e44119457bb74af4bb079c16219406176536f9fd414afd6c9fa0e956a6062b5a346bbf19ebf4c0d2d300e2e66b2eb01cf53fd
-Size (doomlegacy_1.47.2_source.tar.bz2) = 2276199 bytes
-SHA1 (patch-Makefile) = 03fc2f70c4a91ab6e7e3611f594eeaee4ac78b6b
-SHA1 (patch-src_Makefile) = 15cb6daa92f0d00eaf3b6956ef2813fa8358742c
+SHA1 (doomlegacy_1.48.4_common.zip) = 14aed4c0091e8c61f46a2303f9316659ab6c0483
+RMD160 (doomlegacy_1.48.4_common.zip) = cca61af6bdda1003032ee117129e07596c8bbfcf
+SHA512 (doomlegacy_1.48.4_common.zip) = f41830b6d3ba7f30d020e887193fedf502d9b0b260bb53f78e888ce4985dfc2a8b744b5add86813e135c9a0ed65c9be42da64437976b7a85992bcc45bbeeb462
+Size (doomlegacy_1.48.4_common.zip) = 1004978 bytes
+SHA1 (doomlegacy_1.48.4_source.tar.bz2) = f787c653ac4d097de702c72c9b30aed9b4b308a1
+RMD160 (doomlegacy_1.48.4_source.tar.bz2) = 1e2a435e28f84a1578041feec4b98770774b2287
+SHA512 (doomlegacy_1.48.4_source.tar.bz2) = a63a38135f902b7ddfedfbc117ccf9446dba5b1da918189de560722b4fe2afae5f5a0493f9571b5817f95aed96f52fecd32d46c101da5141596cf062d55cec57
+Size (doomlegacy_1.48.4_source.tar.bz2) = 2410187 bytes
+SHA1 (patch-src_Makefile) = 8ddbc1a86d2573dc1d4334d75638de31f1fecf6b
 SHA1 (patch-src_am__map.c) = 647bcba2374cfa7038646e0c053636b43caaf33a
-SHA1 (patch-src_d__main.c) = 89188e534d486d9cfbf2ad92f63b4eb7ab6c50f8
-SHA1 (patch-src_doomtype.h) = fefe08ca5fbe8d11325e32ca833a73d3acb36ea1
-SHA1 (patch-src_i__tcp.c) = 1c0c6017d24640217e29ed238e210850329d0e75
-SHA1 (patch-src_sdl_i__system.c) = 17524680559b81ae755d781f63f3c5d34e1f14b6
+SHA1 (patch-src_doomdata.h) = 2fd95b5db154b05ba88597b20c45146339db4622
+SHA1 (patch-src_dstrings.c) = e1fc8bdcb83efa18690d95c56e3ea7c94a388a50
+SHA1 (patch-src_p__local.h) = 0340c38a80ba4323e4fe7a8c314575a70a246708
+SHA1 (patch-src_p__setup.c) = 8536297175088112b57e87e179d12181c91a3bbf
+SHA1 (patch-src_r__defs.h) = 9211ae6db72f0288f38449b18c8c252f42686405

@@ -1,10 +1,10 @@
 .\"=============================================================================
 .\" Header
 .\"
-.\" Copyright (c) 2019 by Michael Baeuerle.
+.\" Copyright (c) 2019-2020 by Michael Baeuerle.
 .\" License: GNU Free Documentation License (GFDL)
 .\"
-.TH $NAME 1 2019-06-16 Unix "$NAME $VERSION manual"
+.TH $NAME 6 2020-05-14 Unix "$NAME $VERSION manual"
 .\"
 .\"
 .\"=============================================================================
@@ -82,6 +82,20 @@ Set the configfile to use.
 .br
 Default: config.cfg
 .TP
+.BI -blockmap
+Ignore BLOCKMAP lump in WAD file and create a new blockmap internally.
+.PP
+.RS 25
+Try this option if you encounter problems with collision detection
+(e.g. able to walk through a fence or unable to activate a switch).
+.PP
+Only available with pkgsrc blockmap patch.
+.RE
+.TP 25
+.BI -deh " file [file ...]
+Load one or more DEH (DeHackEd) files or BEX files, which can change monster
+abilities and game text.
+.TP
 .BI -file " file [file ...]
 Set PWAD (Patch WAD) files to use.
 .TP
@@ -105,7 +119,12 @@ This also determines the game mode when -game is not used.
 .BI -noendtext
 Suppress the game EndText screen, which could disrupt some terminal emulations
 because of the special character attributes used.
-.TP
+.PP
+.RS 25
+For encoding of EndText data see config.cfg file entry textout.
+Supported values: Off, Vanilla, UTF8.
+.RE
+.TP 25
 .BI -opengl
 Hardware accelerated rendering using the OpenGL library.
 Will use hardware acceleration for OpenGL if available.
