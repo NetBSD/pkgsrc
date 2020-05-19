@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/05/19 09:59:58 kleink Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/19 13:59:19 joerg Exp $
 
 DISTNAME=	CairoSVG-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -21,6 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
