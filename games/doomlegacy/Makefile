@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/03/20 11:57:40 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/19 11:20:16 micha Exp $
 
-VERS=			1.47.2
+VERS=			1.48.4
 PKGNAME=		doomlegacy-${VERS}
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
@@ -19,8 +19,8 @@ ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* \
 			NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
 USE_LANGUAGES+=		c99
-
 USE_TOOLS+=		gmake
+# Dependency generation fails with parallel build
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
@@ -35,21 +35,28 @@ MAKE_FLAGS+=		OS=MAC
 .else
 # Other Unix (should work for GNU/Linux, OpenBSD and SunOS)
 MAKE_FLAGS+=		OS=LINUX
+CFLAGS.SunOS+=		-DSOLARIS
 .endif
-MAKE_FLAGS+=		HAVE_MIXER=1
 
 .if ${MACHINE_ENDIAN} == "big"
 # Some compilers define this themselves (but maybe not all)
 CFLAGS+=		-D__BIG_ENDIAN__
 .endif
 
+# Required by extended node patch for ZDoom compressed node format
+CFLAGS+=		-DHAVE_ZLIB
+LDFLAGS+=		-lz
+
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/doomlegacy ${DOOMWADDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/doc/doomlegacy ${DOOMWADDIR}
 
-MESSAGE_SRC+=		MESSAGE.doomlegacy
-MESSAGE_SUBST+=		PKGNAME=${PKGNAME:C/-.*//}
-MESSAGE_SUBST+=		DOOMWADDIR_CONF="${PREFIX}/${DOOMWADDIR}"
+# Honor environment
+SUBST_CLASSES+=		makeopt
+SUBST_STAGE.makeopt=	do-configure
+SUBST_MESSAGE.makeopt=	Preparing make_options file ...
+SUBST_FILES.makeopt=	make_options
+SUBST_SED.makeopt=	-e 's,\#COMP_ENVIRONMENT,COMP_ENVIRONMENT,'
 
 # Configure defaults for LEGACYWADDIR and DOOMWADDIR
 SUBST_CLASSES+=		doomdef
@@ -59,34 +66,54 @@ SUBST_FILES.doomdef=	src/doomdef.h
 SUBST_SED.doomdef=	-e 's,LEGACYWADDIR  "/usr/local/share/games/doomlegacy",LEGACYWADDIR  "${PREFIX}/${DOOMWADDIR}",g'
 SUBST_SED.doomdef+=	-e 's,DEFWADS01  "~/games/doomlegacy/wads",DEFWADS01  "${PREFIX}/${DOOMWADDIR}",'
 
-pre-configure:
-	${CP} ${FILESDIR}/doomlegacy.in1 ${WRKDIR}
+# Process INSTALL.pkgsrc
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	do-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
+SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
-# Process manpage template
+pre-configure:
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
+	${CP} ${FILESDIR}/doomlegacy.sh ${WRKDIR}
+	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
+	${CP} ${FILESDIR}/p_blockmap.c ${WRKSRC}/src
+	${CP} ${FILESDIR}/p_blockmap.h ${WRKSRC}/src
+	${CP} ${FILESDIR}/p_extnodes.c ${WRKSRC}/src
+	${CP} ${FILESDIR}/p_extnodes.h ${WRKSRC}/src
+	cd ${WRKSRC} && ${CP} make_options_nix make_options
+
+# Process start script and manpage templates
 do-configure:
 	cd ${WRKDIR} &&							\
-		${SED} -e 's,$$NAME,doomlegacy,g'			\
+		${SED} -e 's,$$PREFIX,${PREFIX},'			\
+			doomlegacy.sh >doomlegacy
+	cd ${WRKDIR} &&							\
+		 ${SED} -e 's,$$NAME,doomlegacy,g'			\
 			-e 's,$$VERSION,${VERS},g'			\
 			-e 's,$$WADDIR,${PREFIX}/${DOOMWADDIR},g'	\
-			doomlegacy.in1 >doomlegacy.1
+			doomlegacy.6.in >doomlegacy.6
 
 do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/doomlegacy			\
+		${DESTDIR}${PREFIX}/bin/doomlegacy.bin
+	${INSTALL_SCRIPT} ${WRKDIR}/doomlegacy				\
+		${DESTDIR}${PREFIX}/bin/doomlegacy
+	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}/legacy.wad		\
+		${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
 	cd ${WRKSRC} &&							\
-		${INSTALL_PROGRAM} bin/doomlegacy			\
-			${DESTDIR}${PREFIX}/bin;			\
 		${INSTALL_DATA} docs/legacy.css docs/whatsnew.html	\
-			${DESTDIR}${PREFIX}/share/doc/doomlegacy;	\
-	cd ${WRKDIR}/doomlegacy_${VERS} &&				\
-		${INSTALL_DATA} legacy.wad				\
-			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad;	\
-	cd ${WRKDIR} &&							\
-		${INSTALL_MAN} ${WRKDIR}/doomlegacy.1			\
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+			${DESTDIR}${PREFIX}/share/doc/doomlegacy
+	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc			\
+		${DESTDIR}${PREFIX}/share/doc/doomlegacy/INSTALL.pkgsrc
+	${INSTALL_MAN} ${WRKDIR}/doomlegacy.6				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 # Ensure that at least the shareware Episode 1 of Doom is available
-# Note: The demos from games/doom1 are not compatible with the Legacy engine
 DEPENDS+=		doom1-[0-9]*:../../games/doom1
 
+BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.3
+.include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.7
 .include "../../audio/SDL_mixer/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.10
