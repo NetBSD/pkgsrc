@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/01/08 13:40:19 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/05/19 11:46:26 nia Exp $
 bin/teeworlds
 bin/teeworlds_srv
 share/appdata/teeworlds.appdata.xml
@@ -391,6 +391,7 @@ share/teeworlds/data/deadtee.png
 share/teeworlds/data/editor/automap/desert_main.json
 share/teeworlds/data/editor/automap/grass_doodads.json
 share/teeworlds/data/editor/automap/grass_main.json
+share/teeworlds/data/editor/automap/jungle_deathtiles.json
 share/teeworlds/data/editor/automap/jungle_main.json
 share/teeworlds/data/editor/automap/winter_main.json
 share/teeworlds/data/editor/background.png
