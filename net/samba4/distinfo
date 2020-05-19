@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2020/04/29 10:01:18 adam Exp $
+$NetBSD: distinfo,v 1.46 2020/05/19 12:13:51 hauke Exp $
 
 SHA1 (samba-4.12.2.tar.gz) = c7c5b42fbcba4d2cbb505d8827ae43544d978c32
 RMD160 (samba-4.12.2.tar.gz) = 0abe010cfe12b10583bbbfa37d9fdde224ac7801
@@ -9,7 +9,6 @@ SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = e4c0ed3dacfcf5613a5b397b3c6cf88509497da7
 SHA1 (patch-buildtools_wafsamba_samba__utils.py) = 0a587421870c1974175fadbb02dde215f35938f2
 SHA1 (patch-buildtools_wafsamba_wscript) = 0ca4c3a9d2e07f9165784e495f6f6b2b21db2758
-SHA1 (patch-docs-xml_wscript__build) = 5aa5cbf61882604b7ec9d19f0cd1537a23705ad0
 SHA1 (patch-dynconfig_wscript) = 1858e5fcca913f21aa3e7868d9760b9c40c9f5c4
 SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_pthreadpool_pthreadpool.c) = c29490473063d6bdbe5c50780a21bf2869ae959f
