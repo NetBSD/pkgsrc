@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/01/07 12:15:13 micha Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/19 16:00:13 micha Exp $
 
-DISTNAME=	libcanlock-3.1.1
+DISTNAME=	libcanlock-3.2.0
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +21,9 @@ TEST_TARGET=	test
 CFLAGS+=	-D_POSIX_C_SOURCE=200112L
 
 CONFIGURE_ARGS+=	--disable-legacy-api
-# The header parsers in the separate news/canlock-hp package
+CONFIGURE_ARGS+=	--enable-pc-files
+CONFIGURE_ARGS+=	--with-pkgconfigdir=${PREFIX}/lib/pkgconfig
+# The header parsers are available as a separate package news/canlock-hp
 CONFIGURE_ARGS+=	--disable-hp
 
 .include "../../mk/bsd.pkg.mk"
