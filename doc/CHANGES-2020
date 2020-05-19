@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3032 2020/05/19 08:40:13 he Exp $
+$NetBSD: CHANGES-2020,v 1.3033 2020/05/19 09:22:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4780,3 +4780,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/irssi to 1.2.2nb4 [maya 2020-05-18]
 	Updated pkgtools/pkglint to 20.1.7 [rillig 2020-05-18]
 	Updated net/unbound to 1.10.1 [he 2020-05-19]
+	Updated databases/redis to 6.0.3 [adam 2020-05-19]
+	Updated devel/py-cython to 0.29.18 [adam 2020-05-19]
