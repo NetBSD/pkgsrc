@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/19 21:59:03 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/19 22:23:16 nia Exp $
 
 DISTNAME=	rust-1.42.0
 CATEGORIES=	lang
@@ -137,7 +137,7 @@ fix-relative-rpath:
 	${PREFIX}/bin/patchelf --set-rpath \
 		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
 .  endfor
-.  for bin in llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
+.  for bin in llvm-ar llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
 		llvm-readobj llvm-size llvm-strip
 	${PREFIX}/bin/patchelf --set-rpath ${RUST_LLVM_RPATH} \
 		${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
