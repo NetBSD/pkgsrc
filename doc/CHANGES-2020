@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3048 2020/05/19 14:19:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3049 2020/05/19 14:21:48 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4799,3 +4799,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ansible to 2.9.9 [adam 2020-05-19]
 	Updated graphics/ImageMagick to 7.0.10.13 [nia 2020-05-19]
 	Updated devel/pcre2 to 10.35 [nia 2020-05-19]
+	Updated www/php-glpi to 9.4.6 [hauke 2020-05-19]
