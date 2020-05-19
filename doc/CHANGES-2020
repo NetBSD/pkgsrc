@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3041 2020/05/19 11:23:38 micha Exp $
+$NetBSD: CHANGES-2020,v 1.3042 2020/05/19 11:38:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4790,3 +4790,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/qsynth to 0.6.2 [nia 2020-05-19]
 	Updated graphics/libexif to 0.6.22 [nia 2020-05-19]
 	Updated games/doomlegacy to 1.48.4 [micha 2020-05-19]
+	Updated games/powermanga to 0.93.1 [nia 2020-05-19]
