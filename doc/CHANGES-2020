@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3051 2020/05/19 14:35:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3052 2020/05/19 14:49:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4802,3 +4802,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/php-glpi to 9.4.6 [hauke 2020-05-19]
 	Added devel/p5-Class-Refresh version 0.07 [wiz 2020-05-19]
 	Updated parallel/parallel to 20200422 [nia 2020-05-19]
+	Added devel/p5-Compiler-Lexer version 0.23 [wiz 2020-05-19]
