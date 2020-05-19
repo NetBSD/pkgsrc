@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/15 12:55:14 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/19 12:31:39 nia Exp $
+bin/freerdp-proxy
 bin/freerdp-shadow-cli
 bin/winpr-hash
 bin/winpr-makecert
@@ -20,6 +21,7 @@ include/freerdp2/freerdp/cache/pointer.h
 include/freerdp2/freerdp/channels/audin.h
 include/freerdp2/freerdp/channels/channels.h
 include/freerdp2/freerdp/channels/cliprdr.h
+include/freerdp2/freerdp/channels/disp.h
 include/freerdp2/freerdp/channels/encomsp.h
 include/freerdp2/freerdp/channels/geometry.h
 include/freerdp2/freerdp/channels/log.h
@@ -30,6 +32,7 @@ include/freerdp2/freerdp/channels/rdpgfx.h
 include/freerdp2/freerdp/channels/rdpsnd.h
 include/freerdp2/freerdp/channels/remdesk.h
 include/freerdp2/freerdp/channels/tsmf.h
+include/freerdp2/freerdp/channels/urbdrc.h
 include/freerdp2/freerdp/channels/video.h
 include/freerdp2/freerdp/channels/wtsvc.h
 include/freerdp2/freerdp/client.h
@@ -42,6 +45,7 @@ include/freerdp2/freerdp/client/drdynvc.h
 include/freerdp2/freerdp/client/encomsp.h
 include/freerdp2/freerdp/client/file.h
 include/freerdp2/freerdp/client/geometry.h
+include/freerdp2/freerdp/client/printer.h
 include/freerdp2/freerdp/client/rail.h
 include/freerdp2/freerdp/client/rdpei.h
 include/freerdp2/freerdp/client/rdpgfx.h
@@ -78,6 +82,7 @@ include/freerdp2/freerdp/crypto/der.h
 include/freerdp2/freerdp/crypto/er.h
 include/freerdp2/freerdp/crypto/per.h
 include/freerdp2/freerdp/crypto/tls.h
+include/freerdp2/freerdp/display.h
 include/freerdp2/freerdp/dvc.h
 include/freerdp2/freerdp/error.h
 include/freerdp2/freerdp/event.h
@@ -93,6 +98,7 @@ include/freerdp2/freerdp/gdi/shape.h
 include/freerdp2/freerdp/gdi/video.h
 include/freerdp2/freerdp/graphics.h
 include/freerdp2/freerdp/input.h
+include/freerdp2/freerdp/license.h
 include/freerdp2/freerdp/listener.h
 include/freerdp2/freerdp/locale/keyboard.h
 include/freerdp2/freerdp/locale/locale.h
@@ -109,9 +115,11 @@ include/freerdp2/freerdp/secondary.h
 include/freerdp2/freerdp/server/audin.h
 include/freerdp2/freerdp/server/channels.h
 include/freerdp2/freerdp/server/cliprdr.h
+include/freerdp2/freerdp/server/disp.h
 include/freerdp2/freerdp/server/drdynvc.h
 include/freerdp2/freerdp/server/echo.h
 include/freerdp2/freerdp/server/encomsp.h
+include/freerdp2/freerdp/server/rail.h
 include/freerdp2/freerdp/server/rdpdr.h
 include/freerdp2/freerdp/server/rdpei.h
 include/freerdp2/freerdp/server/rdpgfx.h
@@ -124,7 +132,6 @@ include/freerdp2/freerdp/settings.h
 include/freerdp2/freerdp/svc.h
 include/freerdp2/freerdp/types.h
 include/freerdp2/freerdp/update.h
-include/freerdp2/freerdp/utils/msusb.h
 include/freerdp2/freerdp/utils/passphrase.h
 include/freerdp2/freerdp/utils/pcap.h
 include/freerdp2/freerdp/utils/profiler.h
@@ -223,25 +230,25 @@ lib/cmake/WinPR2/WinPRTargets-release.cmake
 lib/cmake/WinPR2/WinPRTargets.cmake
 lib/libfreerdp-client2.so
 lib/libfreerdp-client2.so.2
-lib/libfreerdp-client2.so.2.0.0
+lib/libfreerdp-client2.so.${PKGVERSION}
 lib/libfreerdp-server2.so
 lib/libfreerdp-server2.so.2
-lib/libfreerdp-server2.so.2.0.0
+lib/libfreerdp-server2.so.${PKGVERSION}
 lib/libfreerdp-shadow-subsystem2.so
 lib/libfreerdp-shadow-subsystem2.so.2
-lib/libfreerdp-shadow-subsystem2.so.2.0.0
+lib/libfreerdp-shadow-subsystem2.so.${PKGVERSION}
 lib/libfreerdp-shadow2.so
 lib/libfreerdp-shadow2.so.2
-lib/libfreerdp-shadow2.so.2.0.0
+lib/libfreerdp-shadow2.so.${PKGVERSION}
 lib/libfreerdp2.so
 lib/libfreerdp2.so.2
-lib/libfreerdp2.so.2.0.0
+lib/libfreerdp2.so.${PKGVERSION}
 lib/libwinpr-tools2.so
 lib/libwinpr-tools2.so.2
-lib/libwinpr-tools2.so.2.0.0
+lib/libwinpr-tools2.so.${PKGVERSION}
 lib/libwinpr2.so
 lib/libwinpr2.so.2
-lib/libwinpr2.so.2.0.0
+lib/libwinpr2.so.${PKGVERSION}
 lib/pkgconfig/freerdp-client2.pc
 lib/pkgconfig/freerdp-server2.pc
 lib/pkgconfig/freerdp-shadow2.pc
