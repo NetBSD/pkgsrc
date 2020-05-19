@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2020/05/06 14:04:11 adam Exp $
+# $NetBSD: Makefile,v 1.63 2020/05/19 09:57:05 nia Exp $
 
-DISTNAME=	libetpan-1.9.1
-PKGREVISION=	8
+DISTNAME=	libetpan-1.9.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dinhviethoa/}
 EXTRACT_USING=	bsdtar
@@ -20,20 +19,11 @@ USE_TOOLS+=		autoconf automake
 TEST_TARGET=		check
 
 pre-configure:
-	cd ${WRKSRC} && \
-	libtoolize --force --copy && \
-	aclocal -I m4 && \
-	autoheader && \
-	autoconf && \
-	automake --add-missing --foreign --force --copy
-
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	libetpan-config.in
-SUBST_SED.conf=		-e "s|@COMPILERFLAGS@|${COMPILER_RPATH_FLAG}|g"
-SUBST_MESSAGE.conf=	Fixing libetpan-config.
+	cd ${WRKSRC} && NOCONFIGURE=1 ${SH} autogen.sh
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+PKGCONFIG_OVERRIDE+=	libetpan-config.in
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
