@@ -1,6 +1,7 @@
-$NetBSD: patch-src_e__basis.cc,v 1.1 2020/05/15 15:20:50 jperkin Exp $
+$NetBSD: patch-src_e__basis.cc,v 1.2 2020/05/19 16:54:04 micha Exp $
 
 Avoid sys/time.h SEC pollution.
+https://sourceforge.net/p/eureka-editor/tickets/44/
 
 --- src/e_basis.cc.orig	2020-02-14 01:04:52.000000000 +0000
 +++ src/e_basis.cc
