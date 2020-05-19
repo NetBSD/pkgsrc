@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/03/10 22:08:38 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/19 17:11:10 nia Exp $
 
-DISTNAME=	lilv-0.24.6
-PKGREVISION=	2
+DISTNAME=	lilv-0.24.8
 CATEGORIES=	audio
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,7 +31,7 @@ PKGCONFIG_OVERRIDE+=	lilv.pc.in
 .include "../../devel/waf/waf.mk"
 BUILDLINK_API_DEPENDS.sratom+=	sratom>=0.4.0
 .include "../../converters/sratom/buildlink3.mk"
-BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.14.0
+BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.18.0
 .include "../../audio/lv2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.sord+=	sord>=0.14.0
 .include "../../textproc/sord/buildlink3.mk"
