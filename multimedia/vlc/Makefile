@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.232 2020/05/01 13:51:54 nia Exp $
+# $NetBSD: Makefile,v 1.233 2020/05/19 22:21:51 tnn Exp $
 
 DISTNAME=		vlc-3.0.10
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		https://download.videolan.org/pub/videolan/vlc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tar.xz
@@ -162,7 +163,7 @@ SUBST_CLASSES+=		fnt
 SUBST_STAGE.fnt=	pre-configure
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_SED.fnt+=		-e "s,${ORIGMONOFNT},${DEFAULT_MONO_FONT},"
-SUBST_FILES.fnt=	modules/text_renderer/platform_fonts.h
+SUBST_FILES.fnt=	modules/text_renderer/freetype/platform_fonts.h
 SUBST_MESSAGE.fnt=	Fixing hardcoded font paths.
 
 # VLC embeds the build environment info to help debuging.
