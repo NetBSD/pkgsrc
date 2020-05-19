@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/02 11:38:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/19 11:37:56 nia Exp $
 bin/powermanga
 man/man6/powermanga.6
 share/powermanga/data/curves/bezier_curve_000.bin
@@ -384,9 +384,13 @@ share/powermanga/sounds/sound_upgrade_spaceship.wav
 share/powermanga/sounds/sound_yellow_gem.wav
 share/powermanga/texts/about_en.txt
 share/powermanga/texts/about_fr.txt
+share/powermanga/texts/about_it.txt
 share/powermanga/texts/order_en.txt
 share/powermanga/texts/order_fr.txt
+share/powermanga/texts/order_it.txt
 share/powermanga/texts/scroll_en.txt
 share/powermanga/texts/scroll_fr.txt
+share/powermanga/texts/scroll_it.txt
 share/powermanga/texts/text_en.txt
 share/powermanga/texts/text_fr.txt
+share/powermanga/texts/text_it.txt
