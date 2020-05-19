@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/08/04 09:53:05 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/19 12:08:31 nia Exp $
 
-SHA1 (json-c-0.13.1.tar.gz) = 00e049ffc9878b9c2e3c3dcb6b58c4ce9e65024b
-RMD160 (json-c-0.13.1.tar.gz) = ed417820adcb4151c2fd804e08afbb874af9b3c4
-SHA512 (json-c-0.13.1.tar.gz) = e984db2a42b9c95b52c798b2e8dd1b79951a8dcba27370af30c43b9549fbb00008dbcf052a535c528209aaee38e6d1f760168b706905ae72f3e704ed20f8a1a1
-Size (json-c-0.13.1.tar.gz) = 639425 bytes
+SHA1 (json-c-0.14.tar.gz) = 5a8ddc6d03f2b8be504f5f618eb75800cf887d51
+RMD160 (json-c-0.14.tar.gz) = 2f6dfc51a03205274c7b2da4351899b0a192f935
+SHA512 (json-c-0.14.tar.gz) = 75537c61d0632a01f94d2394d7a4387ef1eca0b68aa56c495d3d96dd29b38ed20eb0cc3f6e5e24dc6660c8939669f8954005d9c3ba20437f3fcc9f9dd896b00d
+Size (json-c-0.14.tar.gz) = 321677 bytes
