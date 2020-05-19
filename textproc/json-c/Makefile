@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/05/19 12:08:31 nia Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/19 12:24:33 nia Exp $
 
 DISTNAME=	json-c-0.14
 CATEGORIES=	textproc
@@ -12,6 +12,8 @@ LICENSE=	mit
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_ARGS+=	-DBUILD_DOCUMENTATION=OFF
+CMAKE_ARGS+=	-DDISABLE_WERROR=ON
 
 PKGCONFIG_OVERRIDE+=	json-c.pc.in
 
