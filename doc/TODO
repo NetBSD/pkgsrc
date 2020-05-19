@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19879 2020/05/19 13:35:06 nia Exp $
+$NetBSD: TODO,v 1.19880 2020/05/19 14:19:06 nia Exp $
 
 Suggested new packages
 ======================
@@ -914,7 +914,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o parrot-7.11.0
 	o pcc-1.1.0
 	o pcc-current-20160305
-	o pcre2-10.35
 	o pdmenu-1.2.87
 	o pessulus-2.30.3
 	o pgadmin4-1.0
