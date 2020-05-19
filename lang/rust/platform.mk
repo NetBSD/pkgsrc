@@ -1,10 +1,13 @@
-# $NetBSD: platform.mk,v 1.2 2019/11/03 19:04:07 rillig Exp $
+# $NetBSD: platform.mk,v 1.3 2020/05/19 22:29:05 nia Exp $
 
 .if !defined(PLATFORM_SUPPORTS_RUST)
 
+# Rust needs NetBSD>7
 .  for _rust_arch in aarch64 armv7 i386 powerpc sparc64 x86_64
 .    for _rust_os in Darwin FreeBSD Linux NetBSD SunOS
+.      if ${OPSYS} != "NetBSD" || empty(OS_VERSION:M[0-7].*)
 RUST_PLATFORMS+=	${_rust_os}-*-${_rust_arch}
+.      endif
 .    endfor
 .  endfor
 
