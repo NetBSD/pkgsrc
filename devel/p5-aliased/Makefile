@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:20:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/19 14:20:58 wiz Exp $
 
 DISTNAME=	aliased-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/aliased/.packlist
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
