@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3055 2020/05/19 15:41:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3056 2020/05/19 15:42:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4806,3 +4806,14 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/mksh to 59b [nia 2020-05-19]
 	Updated time/libical to 3.0.8 [nia 2020-05-19]
 	Updated print/libspectre to 0.2.9 [nia 2020-05-19]
+	Updated devel/ruby-activesupport52 to 5.2.4.3 [taca 2020-05-19]
+	Updated devel/ruby-activemodel52 to 5.2.4.3 [taca 2020-05-19]
+	Updated devel/ruby-activejob52 to 5.2.4.3 [taca 2020-05-19]
+	Updated www/ruby-actionview52 to 5.2.4.3 [taca 2020-05-19]
+	Updated www/ruby-actionpack52 to 5.2.4.3 [taca 2020-05-19]
+	Updated www/ruby-actioncable52 to 5.2.4.3 [taca 2020-05-19]
+	Updated databases/ruby-activerecord52 to 5.2.4.3 [taca 2020-05-19]
+	Updated devel/ruby-activestorage52 to 5.2.4.3 [taca 2020-05-19]
+	Updated mail/ruby-actionmailer52 to 5.2.4.3 [taca 2020-05-19]
+	Updated devel/ruby-railties52 to 5.2.4.3 [taca 2020-05-19]
+	Updated www/ruby-rails52 to 5.2.4.3 [taca 2020-05-19]
