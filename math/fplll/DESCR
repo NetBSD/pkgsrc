@@ -1,0 +1,10 @@
+The library contains implementations of several lattice algorithms.
+The implementation relies of floating-point orthogonalization, and
+LLL is central to the code, hence the name.
+
+Other algorithms provided by the library include
+
+ - BKZ/BKZ-2.0 with support of slide reduction and self dual BKZ.
+ - Kannan-Fincke-Pohst algorithm that finds the shortest non-zero
+   lattic vector.
+ - GaussSieve algorithm for the same problem as above.
