@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/12/10 16:28:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/05/19 10:31:57 nia Exp $
 bin/rox
 libexec/rox/ROX-Filer
 man/man1/rox.1
@@ -136,7 +136,7 @@ share/rox/ROX-Filer/ROX/MIME/video-mpeg.png
 share/rox/ROX-Filer/ROX/MIME/video-quicktime.png
 share/rox/ROX-Filer/ROX/MIME/video-x-generic.png
 share/rox/ROX-Filer/ROX/index.theme
-share/rox/ROX-Filer/Templates.glade
+share/rox/ROX-Filer/Templates.ui
 share/rox/ROX-Filer/images/application.png
 share/rox/ROX-Filer/images/dirs.png
 share/rox/ROX-Filer/images/iconified.png

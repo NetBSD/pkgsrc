@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2020/05/16 17:48:36 rillig Exp $
+# $NetBSD: Makefile,v 1.97 2020/05/19 10:31:57 nia Exp $
 #
 
-DISTNAME=	rox-filer-2.10
-PKGNAME=	rox-2.10
-PKGREVISION=	40
+DISTNAME=	rox-filer-2.11
+PKGNAME=	rox-2.11
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,10 +10,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	RISC OS-like filer for X
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	rox-base-[0-9]*
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
 DIST_SUBDIR=	rox
 
 USE_TOOLS+=		pax pkg-config
@@ -68,12 +67,11 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
