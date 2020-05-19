@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/05/19 14:44:04 riastradh Exp $
+
+SHA1 (mpfi-1.5.4.tgz) = 06c7dc6f13e67ab199fefcfdc15328ea9fc82dcb
+RMD160 (mpfi-1.5.4.tgz) = a03c5ac685f844badf95d7b006ca7ede8b7e2759
+SHA512 (mpfi-1.5.4.tgz) = 72ba7d8c950f4d4e2c7a3da8570cdcec08f75b73580cdf64c4cc3b24f8add23c46ccf78a6de2158e81bd77e6efabceebbae418988d536e7484356b8102e10ce1
+Size (mpfi-1.5.4.tgz) = 261696 bytes
+SHA1 (patch-tests_Makefile.am) = d0c41610b684c8d6e1862baed7157e40f551c469
