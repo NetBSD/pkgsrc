@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2020/01/18 23:32:39 rillig Exp $
+# $NetBSD: Makefile.common,v 1.24 2020/05/19 13:58:24 joerg Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -124,14 +124,14 @@ SUBST_MESSAGE.pyvers=	Fix SPHINX_EXECUTABLE NAMES(sphinx-build)
 SUBST_VARS.pyvers+=	PYVERSSUFFIX
 SUBST_STAGE.pyvers=	pre-configure
 
-# REPLACE_PYTHON is some 600 files
-.include	"../../ham/gnuradio-core/files/REPLACE_PYTHON"
+REPLACE_PYTHON = 	*/*.py */*/*.py */*/*/*.py */*/*/*/*.py */*/*/*/*/*.py \
+			*/*/*/*/*/*/*.py */*/*/*/*/*/*/*.py */*/*/*/*/*/*/*/*.py
 
 pre-configure:
-	(${MKDIR} ${WRKSRC}/build;)
+	${MKDIR} ${WRKSRC}/build
 
 do-install:
-	(cd ${WRKSRC}/build; ${GMAKE} DESTDIR=${DESTDIR} install)
+	cd ${WRKSRC}/${BUILD_DIRS} && ${GMAKE} DESTDIR=${DESTDIR} install
 
 .include	"../../audio/gsm/buildlink3.mk"
 .include	"../../audio/jack/buildlink3.mk"
