@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/05/19 14:45:21 riastradh Exp $
+
+Fix shell portability.
+
+--- configure.orig	2018-09-20 12:01:05.000000000 +0000
++++ configure
+@@ -16641,7 +16641,7 @@ $as_echo_n "checking whether help2man su
+ $as_echo "$HELP2MAN_SUPPORTS_LOCALE" >&6; }
+   rm -rf .tmp_help2man
+ fi
+- if test "x$HELP2MAN_SUPPORTS_LOCALE" == "xyes"; then
++ if test "x$HELP2MAN_SUPPORTS_LOCALE" = "xyes"; then
+   HAVE_HELP2MAN_LOCALE_TRUE=
+   HAVE_HELP2MAN_LOCALE_FALSE='#'
+ else
