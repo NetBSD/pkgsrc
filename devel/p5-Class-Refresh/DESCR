@@ -1,0 +1,9 @@
+During development, it is fairly common to cycle between writing
+code and testing that code. Generally the testing happens within
+the test suite, but frequently it is more convenient to test things
+by hand when tracking down a bug, or when doing some exploratory
+coding. In many situations, however, this becomes inconvenient -
+for instance, in a REPL, or in a stateful web application, restarting
+from the beginning after every code change can get pretty tedious.
+This module allows you to reload your application classes on the
+fly, so that the code/test cycle becomes a lot easier.
