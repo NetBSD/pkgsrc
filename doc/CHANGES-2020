@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3036 2020/05/19 10:23:26 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3037 2020/05/19 10:35:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4785,3 +4785,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/libetpan to 1.9.4 [nia 2020-05-19]
 	Updated net/bind911 to 9.11.19 [taca 2020-05-19]
 	Updated net/bind914 to 9.14.12 [taca 2020-05-19]
+	Updated sysutils/rox to 2.11 [nia 2020-05-19]
