@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2012/07/13 16:35:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/05/19 11:20:00 nia Exp $
 include/libexif/_stdint.h
 include/libexif/exif-byte-order.h
 include/libexif/exif-content.h
@@ -21,6 +21,7 @@ share/doc/libexif/COPYING
 share/doc/libexif/ChangeLog
 share/doc/libexif/NEWS
 share/doc/libexif/README
+share/doc/libexif/SECURITY.md
 share/locale/be/LC_MESSAGES/libexif-12.mo
 share/locale/bs/LC_MESSAGES/libexif-12.mo
 share/locale/cs/LC_MESSAGES/libexif-12.mo
@@ -33,6 +34,7 @@ share/locale/es/LC_MESSAGES/libexif-12.mo
 share/locale/fr/LC_MESSAGES/libexif-12.mo
 share/locale/it/LC_MESSAGES/libexif-12.mo
 share/locale/ja/LC_MESSAGES/libexif-12.mo
+share/locale/ms/LC_MESSAGES/libexif-12.mo
 share/locale/nl/LC_MESSAGES/libexif-12.mo
 share/locale/pl/LC_MESSAGES/libexif-12.mo
 share/locale/pt/LC_MESSAGES/libexif-12.mo
