@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3034 2020/05/19 09:57:47 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3035 2020/05/19 10:21:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4783,3 +4783,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/redis to 6.0.3 [adam 2020-05-19]
 	Updated devel/py-cython to 0.29.18 [adam 2020-05-19]
 	Updated mail/libetpan to 1.9.4 [nia 2020-05-19]
+	Updated net/bind911 to 9.11.19 [taca 2020-05-19]
