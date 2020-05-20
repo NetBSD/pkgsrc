@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/11 00:48:50 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/20 06:09:06 rillig Exp $
 
 DISTNAME=	libretro-craft-20180803
 CATEGORIES=	games
@@ -15,6 +15,12 @@ USE_TOOLS+=	gmake
 
 MAKE_FILE=	Makefile.libretro
 MAKE_FLAGS+=	GIT_VERSION=" \(pkgsrc\)"
+
+# src/main.c: In function 'char_width':
+# src/main.c:301:18: error: array subscript has type 'char' [-Werror=char-subscripts]
+#      return lookup[input];
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

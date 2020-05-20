@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/05/23 19:23:01 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/05/20 06:09:09 rillig Exp $
 
 DISTNAME=	xevilsrc2.02r2
 PKGNAME=	xevil-2.02
@@ -21,6 +21,13 @@ WRKSRC=		${WRKDIR}
 MAKE_ENV+=	HOSTTYPE="pkgsrc"
 
 USE_LANGUAGES=	c++03
+
+# draw.cpp: In member function 'void World::draw_square(Drawable, Xvars&, int, const Loc&, int, int, Boolean)':
+# draw.cpp:47:63: error: array subscript has type 'char' [-Werror=char-subscripts]
+#    int blockNum = themes[themeIndex].blockIndices[map[l.r][l.c]];
+#                                                                ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS=	bin
 

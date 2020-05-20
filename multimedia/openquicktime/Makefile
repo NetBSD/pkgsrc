@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/03/08 16:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/05/20 06:09:07 rillig Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -23,6 +23,12 @@ CONFIGURE_ENV+=		my_cv_comment=""
 # lots of non-printing characters.
 OPSYSVARS+=		USE_TOOLS
 USE_TOOLS.SunOS+=	gsed
+
+# udta.c: In function 'quicktime_write_udta':
+# util.c:213:6: error: array subscript has type 'char' [-Werror=char-subscripts]
+#   data[len] = 0;
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	bin lib
