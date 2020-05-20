@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/07/30 14:22:10 nia Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/05/20 16:48:41 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -233,9 +233,6 @@ lib/gnumeric/${PKGVERSION}/plugins/fn-tsa/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-tsa/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/glpk/glpk.la
 lib/gnumeric/${PKGVERSION}/plugins/glpk/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/glossary-po-header
-lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/gnome_glossary.py
-lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/html/html.la
 lib/gnumeric/${PKGVERSION}/plugins/html/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/lotus/lotus.la
@@ -256,11 +253,6 @@ lib/gnumeric/${PKGVERSION}/plugins/perl-loader/perl_loader.la
 lib/gnumeric/${PKGVERSION}/plugins/perl-loader/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plan_perfect.la
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/py-func/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/py-func/py_func.py
-lib/gnumeric/${PKGVERSION}/plugins/python-loader/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/python-loader/python_loader.la
-lib/gnumeric/${PKGVERSION}/plugins/python-loader/ui-console-menu.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/qpro.la
 lib/gnumeric/${PKGVERSION}/plugins/sample_datasource/plugin.xml
