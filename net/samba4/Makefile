@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/05/19 16:51:43 adam Exp $
+# $NetBSD: Makefile,v 1.100 2020/05/20 04:26:38 dogcow Exp $
 
 DISTNAME=	samba-4.12.3
 CATEGORIES=	net
@@ -16,7 +16,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 GCC_REQD+=	4.4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+BUILD_DEPENDS+=	docbook-xsl>=1.79.2:../../textproc/docbook-xsl
 DEPENDS+=	p5-Parse-Yapp>=1.05:../../devel/p5-Parse-Yapp
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
