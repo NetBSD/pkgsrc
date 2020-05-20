@@ -1,10 +1,11 @@
-$NetBSD: patch-src_p__setup.c,v 1.1 2020/05/19 11:20:16 micha Exp $
+$NetBSD: patch-src_p__setup.c,v 1.2 2020/05/20 16:04:12 micha Exp $
 
 Add support for DeeP and ZDoom extended nodes.
 Upstream feature request:
 https://sourceforge.net/p/doomlegacy/feature-requests/95/
 
 Add support to internally create blockmap.
+https://sourceforge.net/p/doomlegacy/feature-requests/96/
 
 --- src/p_setup.c.orig	2020-05-11 09:40:34.000000000 +0000
 +++ src/p_setup.c
