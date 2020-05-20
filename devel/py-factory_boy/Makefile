@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/19 18:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/20 07:04:37 wiz Exp $
 
 DISTNAME=	factory_boy-2.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Versatile test fixtures replacement
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-faker>=0.7.0:../../devel/py-faker
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-faker
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
