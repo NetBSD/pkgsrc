@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/11/02 16:25:23 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2020/05/20 06:09:07 rillig Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -41,6 +41,12 @@ SUBST_FILES.paths=	config.h-dist ${PLAT_MAKEFILE}
 SUBST_VARS.paths=	PREFIX
 SUBST_SED.paths+=	-e 's,@MANDIR@,${PREFIX}/${PKGMANDIR},g'
 SUBST_STAGE.paths=	pre-configure
+
+# strings.c: In function 'ctrl_strcpy':
+# strings.c:510:24: error: array subscript has type 'char' [-Werror=char-subscripts]
+#       *s_out++ = _unctrl[*s_in][1];
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 pre-configure:
 	${CP} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h

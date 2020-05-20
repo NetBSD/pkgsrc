@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/03/30 19:36:39 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/20 06:09:03 rillig Exp $
 
 DISTNAME=	devilutionx-1.0.1
 CATEGORIES=	games
@@ -36,6 +36,13 @@ CXXFLAGS+=	-DO_LARGEFILE=0 -Dstat64=stat -Dlstat64=lstat -Dlseek64=lseek -Doff64
 # /usr/include/g++/cstdio:176:11: error: '::vfscanf' has not been declared
 # No idea.
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+# 3rdParty/StormLib/src/SFileFindFile.cpp: In function 'int CheckWildCard(const char*, const char*)':
+# 3rdParty/StormLib/src/SFileFindFile.cpp:72:54: error: array subscript has type 'char' [-Werror=char-subscripts]
+#                  if(AsciiToUpperTable[szWildCardPtr[0]] == AsciiToUpperTable[szString[0]])
+#                                                       ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications

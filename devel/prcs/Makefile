@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/03/20 11:57:30 nia Exp $
+# $NetBSD: Makefile,v 1.61 2020/05/20 06:09:07 rillig Exp $
 
 DISTNAME=		prcs-1.3.3
 PKGREVISION=		14
@@ -27,5 +27,15 @@ REPLACE_INTERPRETER+=	perl5
 REPLACE.perl5.old=	.*perl[^[:space:]]*
 REPLACE.perl5.new=	${PERL5}
 REPLACE_FILES.perl5=	emacs/prcs-ediff emacs/prcs-emerge
+
+# attrs.cc: In function 'int is_file_attribute_hash(const char*, int)':
+# attrs.cc:36:39: error: array subscript has type 'char' [-Werror=char-subscripts]
+#    return len + hash_table[str[len - 1]] + hash_table[str[0]];
+#                                        ^
+# attrs.cc:36:60: error: array subscript has type 'char' [-Werror=char-subscripts]
+#    return len + hash_table[str[len - 1]] + hash_table[str[0]];
+#                                                             ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .include "../../mk/bsd.pkg.mk"

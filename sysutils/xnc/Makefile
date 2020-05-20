@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/07/18 00:06:23 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2020/05/20 06:09:09 rillig Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
@@ -18,6 +18,12 @@ USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt
 GNU_CONFIGURE=	yes
+
+# editor.cxx: In member function 'char Editor::trans(int, char)':
+# editor.cxx:624:15: error: array subscript has type 'char' [-Werror=char-subscripts]
+#    sym=rtbl[sym];
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

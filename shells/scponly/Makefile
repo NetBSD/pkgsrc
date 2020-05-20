@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/03/02 09:02:52 sborrill Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/20 06:09:08 rillig Exp $
 
 DISTNAME=	scponly-4.8
 PKGREVISION=	2
@@ -30,6 +30,12 @@ CONFIGURE_ENV+=		scponly_PROG_RM=${TOOLS_RM:Q}
 CONFIGURE_ENV+=		scponly_PROG_RMDIR=${TOOLS_RMDIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-scp-compat
+
+# helper.c: In function 'mysetenv':
+# helper.c:565:14: error: array subscript has type 'char' [-Werror=char-subscripts]
+#   if ((safeenv[count] = strdup(buff))) {
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 PKG_SHELL=		bin/scponly
 PKG_SYSCONFSUBDIR=	scponly

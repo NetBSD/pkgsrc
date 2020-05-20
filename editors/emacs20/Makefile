@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/01/26 17:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.62 2020/05/20 06:09:03 rillig Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -83,6 +83,13 @@ MAKEFILECPP=	${PREFIX}/bin/tradcpp
 MAKEFILECPP=	${CPP} -traditional-cpp
 .endif
 ALL_ENV+=	MAKEFILECPP=${MAKEFILECPP:Q}
+
+# emacs-20.7/lib-src/etags.c: In function 'init':
+# emacs-20.7/lib-src/etags.c:1208:35: error: array subscript has type 'char' [-Werror=char-subscripts]
+#    for (sp = white; *sp; sp++) _wht[*sp] = TRUE;    _wht[0] = _wht['\n'];
+#                                    ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INFO_FILES=	yes
 

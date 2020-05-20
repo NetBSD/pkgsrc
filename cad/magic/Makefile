@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/06/08 11:04:29 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2020/05/20 06:09:06 rillig Exp $
 #
 
 DISTNAME=	magic-7.5.188
@@ -33,6 +33,12 @@ CPPFLAGS+=	-DIS_BIG_ENDIAN
 .else
 CPPFLAGS+=	-DIS_LITTLE_ENDIAN
 .endif
+
+# DBundo.c: In function 'dbUndoPaintForw':
+# DBundo.c:268:42: error: array subscript has type 'char' [-Werror=char-subscripts]
+#         DBNMPaintPlane(dbUndoLastCell->cd_planes[up->pue_plane],
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 USE_TOOLS+=		awk:run
 REPLACE_INTERPRETER+=	awk
