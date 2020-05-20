@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/09/20 11:22:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2020/05/20 10:02:58 nia Exp $
 
-SHA1 (schismtracker-20190805.source.tar.gz) = 87133ebe20689be67284ffb574fc5d845caa1b15
-RMD160 (schismtracker-20190805.source.tar.gz) = e9e1307a54ce24921ef72d57929712326a5647a3
-SHA512 (schismtracker-20190805.source.tar.gz) = 89c5060e96f3cb60aa0a260cf4c71e8e30d77213a675f006bc98abc38f9227ebfb451d030e805b897f7240c897a38a23e4c912bbb95cfde989e26836063da60e
-Size (schismtracker-20190805.source.tar.gz) = 1315705 bytes
+SHA1 (schismtracker-20200412.source.tar.gz) = b8ae61d556d4c1a59ece6d264a64bffdc09b6915
+RMD160 (schismtracker-20200412.source.tar.gz) = a9f2383b8f6518020eac022af5ae5402b359487e
+SHA512 (schismtracker-20200412.source.tar.gz) = 0a1d857a772ab41c779ebb22b1f885654998cb4126cad2aaf35caf60a4275fca1163b4e35a770502fa4d7a07fc57cb77d539c5d54bd922646a53b4866e84a1c3
+Size (schismtracker-20200412.source.tar.gz) = 1316110 bytes
