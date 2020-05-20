@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/11/04 19:17:11 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2020/05/20 06:09:07 rillig Exp $
 
 DISTNAME=	nn-6.7.3
 PKGREVISION=	5
@@ -15,6 +15,12 @@ PKG_SYSCONFSUBDIR=	nntp
 TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 CPPFLAGS.IRIX+=	-DHAVE_TERMIO_H
+
+# decode.c: In function 'decode_line':
+# decode.c:132:22: error: array subscript has type 'char' [-Werror=char-subscripts]
+#      if ((blen = trtbl[buf[0]]) < 0) {
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 OPSYSVARS+=	SFILE
 SFILE.SunOS=	s-sunos5.h

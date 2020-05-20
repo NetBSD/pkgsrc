@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/03 08:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/20 06:09:06 rillig Exp $
 
 DISTNAME=	mcpp-2.7.2
 CATEGORIES=	devel
@@ -14,5 +14,11 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--enable-mcpplib
+
+# eval.c: In function 'eval_if':
+# eval.c:361:44: error: array subscript has type 'char' [-Werror=char-subscripts]
+#                  , opname[ op], prec, opname[ opp->op], opp->prec, opp->skip);
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .include "../../mk/bsd.pkg.mk"

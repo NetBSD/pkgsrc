@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/03/20 11:58:34 nia Exp $
+# $NetBSD: Makefile,v 1.47 2020/05/20 06:09:05 rillig Exp $
 
 DISTNAME=	htdig-3.2.0b6
 PKGREVISION=	1
@@ -23,6 +23,13 @@ CONFIGURE_ARGS+=	--with-image-dir=${PREFIX}/share/examples/htdig
 CONFIGURE_ARGS+=	--with-search-dir=${PREFIX}/share/examples/htdig
 CONFIGURE_ENV+=		PDF_PARSER="${LOCALBASE}/bin/acroread"
 CXXFLAGS+=		-Wno-deprecated
+
+# StringMatch.cc: In member function 'int StringMatch::Compare(const char*, int&, int&)':
+# StringMatch.cc:314:37: error: array subscript has type 'char' [-Werror=char-subscripts]
+#   new_state = table[trans[string[pos]]][state];
+#                                      ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 PKG_SYSCONFSUBDIR=	htdig
 INSTALLATION_DIRS+=	share/htdig/common

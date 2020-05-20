@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/29 16:04:04 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/20 06:09:08 rillig Exp $
 
 DISTNAME=	sgb-2007-03.28
 PKGNAME=	sgb-20070328
@@ -26,6 +26,12 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	Makefile
 SUBST_VARS.paths=	LOCALBASE
 SUBST_SED.paths+=	-e 's,@PREFIX@,$${DESTDIR}${PREFIX},g'
+
+# gb_io.w: In function 'icode_setup':
+# gb_io.w:217:34: error: array subscript has type 'char' [-Werror=char-subscripts]
+#    for (p=imap,k=0; *p; p++,k++) icode[*p]=k;
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/sgb
