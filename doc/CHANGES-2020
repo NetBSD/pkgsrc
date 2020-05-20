@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3068 2020/05/19 19:53:43 maya Exp $
+$NetBSD: CHANGES-2020,v 1.3069 2020/05/20 06:05:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4842,3 +4842,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/eyeD3 to 0.9.5 [wiz 2020-05-19]
 	Updated mail/qmail-run to 20200519 [schmonz 2020-05-19]
 	Updated x11/gtk3 to 3.24.18nb1 [maya 2020-05-19]
+	Updated devel/meson to 0.54.2 [adam 2020-05-20]
+	Updated x11/gtk3 to 3.24.20 [adam 2020-05-20]
