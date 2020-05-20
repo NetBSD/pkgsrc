@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3079 2020/05/20 16:31:59 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3080 2020/05/20 16:37:29 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4856,3 +4856,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-smbc to 1.0.22 [adam 2020-05-20]
 	Updated www/drupal7 to 7.70 [taca 2020-05-20]
 	Updated www/drupal8 to 8.7.14 [taca 2020-05-20]
+	Added games/doom2-pwad-lost-civilization version 15 [micha 2020-05-20]
