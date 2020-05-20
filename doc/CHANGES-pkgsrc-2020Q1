@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.10 2020/05/15 16:58:15 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.11 2020/05/20 19:42:41 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -140,4 +140,22 @@ lang/php72: security fix
 
 Pullup ticket #6201 - requested by nia
 mail/mailman: security fix
+
+Pullup ticket #6203 - requested by taca
+mail/dovecot2: security fix
+
+Pullup ticket #6204 - requested by he
+net/unbound: security fix
+
+Pullup ticket #6205 - requested by nia
+graphics/libexif: security fix
+
+Pullup ticket #6206 - requested by nia
+games/teeworlds: security fix
+
+Pullup ticket #6208 - requested by taca
+net/bind911: security fix
+
+Pullup ticket #6209 - requested by taca
+net/bind914: security fix
 
