@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/04/18 22:03:58 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2020/05/20 06:09:03 rillig Exp $
 #
 
 DISTNAME=		eboard-1.1.1
@@ -32,6 +32,15 @@ SUBST_SED.mf=		-e 's/^CXXFLAGS.*=/CXXFLAGS += $${CPPFLAGS} /'
 SUBST_SED.mf+=		-e 's/^LDFLAGS.*=/LDFLAGS += $${CXXFLAGS}/'
 
 BUILDLINK_TRANSFORM+=	rm:-O6
+
+# Can only handle ASCII characters in several places.
+# global.cc: In member function 'void Global::readRC()':
+# global.cc:466:46: error: array subscript has type 'char' [-Werror=char-subscripts]
+#   case  4: p=t.token(sep); TabPos=rev[p->at(0)]; break;
+#                                               ^
+# Also warns a lot about -Wwrite-strings and others.
+# Let's hope that nobody uses this for exploits.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

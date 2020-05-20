@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/11/03 12:04:12 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/05/20 06:09:03 rillig Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	2
@@ -31,6 +31,13 @@ CPPFLAGS+=	-DSOLARIS
 .else
 CPPFLAGS+=	-DFREEBSD
 .endif
+
+# str.cc: In function 'String ShowControls(const String&, unsigned int)':
+# str.cc:1145:57: error: array subscript has type 'char' [-Werror=char-subscripts]
+#                      T += (Style & ccOct)? OctCodes [*Str] : HexCodes [*Str];
+#                                                         ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS=	bin
 

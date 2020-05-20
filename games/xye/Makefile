@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/03/20 11:57:46 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/20 06:09:10 rillig Exp $
 #
 
 DISTNAME=	xye-0.12.1
@@ -19,6 +19,13 @@ SUBST_MESSAGE.crlf=	stripping EOL CR
 SUBST_STAGE.crlf=	post-extract
 SUBST_FILES.crlf=	*/*
 SUBST_FILTER_CMD.crlf=	${TR} -d '\r'
+
+# src/xye.cpp: In static member function 'static void game::start(bool)':
+# src/xye.cpp:1225:23: error: array subscript has type 'char' [-Werror=char-subscripts]
+#              sq=&grid[i][j];
+#                        ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
