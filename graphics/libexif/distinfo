@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.31 2020/03/25 11:47:23 nia Exp $
+$NetBSD: distinfo,v 1.31.2.1 2020/05/20 19:15:26 bsiegert Exp $
 
-SHA1 (libexif-0.6.21.tar.bz2) = a52219b12dbc8d33fc096468591170fda71316c0
-RMD160 (libexif-0.6.21.tar.bz2) = 979f06096b7271d8713c1766e0ad5dfabb06c531
-SHA512 (libexif-0.6.21.tar.bz2) = 4e0fe2abe85d1c95b41cb3abe1f6333dc3a9eb69dba106a674a78d74a4d5b9c5a19647118fa1cc2d72b98a29853394f1519eda9e2889eb28d3be26b21c7cfc35
-Size (libexif-0.6.21.tar.bz2) = 1368435 bytes
-SHA1 (patch-libexif_exif-data.c) = 3518902f95665b53a62ba4e7fdc0b146fb4480dc
+SHA1 (libexif-0.6.22.tar.xz) = b396c562dbf44567ef796f324e7760b15e657523
+RMD160 (libexif-0.6.22.tar.xz) = e34ce907a658d4883894655bd11c6dff2b06cf9d
+SHA512 (libexif-0.6.22.tar.xz) = 0a9e7bf0258ed98a794b667d45e8fc65299101a2a2d2e39c358715b20b003beff258782f0736cd5b53978428a2f878a989f303bee249a978850a065f33c534af
+Size (libexif-0.6.22.tar.xz) = 1347040 bytes
