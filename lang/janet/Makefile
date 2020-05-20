@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/04/05 13:36:27 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/20 09:44:22 nia Exp $
 
-DISTNAME=	janet-1.8.1
+DISTNAME=	janet-1.9.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janet-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -26,7 +26,7 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 REPLACE_INTERPRETER+=	janet
 REPLACE.janet.old=	.*
 REPLACE.janet.new=	${PREFIX}/bin/janet
-REPLACE_FILES.janet=	auxbin/jpm
+REPLACE_FILES.janet=	jpm
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		build/janet.pc
