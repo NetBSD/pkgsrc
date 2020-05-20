@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/18 20:01:03 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/20 23:14:33 mef Exp $
 
 DISTNAME=	fs-uae-launcher-3.0.2
 CATEGORIES=	emulators
@@ -31,14 +31,6 @@ PYSETUPINSTALLARGS+=		--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
 REPLACE_PYTHON+=	fs-uae-launcher
 
 INSTALLATION_DIRS+=	bin
-
-SUBST_CLASSES+=		prefix
-SUBST_MESSAGE.prefix=	Fixing installation prefix.
-SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	Makefile
-SUBST_FILES.prefix+=	fs_uae_launcher/FSUAELauncher.py
-SUBST_FILES.prefix+=	game_center/gamecenterutil.py
-SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
 post-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
