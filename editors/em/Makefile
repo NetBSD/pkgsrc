@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/12/24 09:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/20 06:09:03 rillig Exp $
 
 DISTNAME=	em-1.0.0
 CATEGORIES=	editors
@@ -11,5 +11,12 @@ LICENSE=	public-domain
 
 GNU_CONFIGURE=	yes
 AUTO_MKDIRS=	yes
+
+# em1.c: In function 'advance':
+# em1.c:1554:11: error: array subscript has type 'char' [-Werror=char-subscripts]
+#    braslist[*ep++] = lp;
+#            ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/04/26 06:38:17 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/05/20 06:09:06 rillig Exp $
 
 DISTNAME=	LibRaw-0.19.5
 PKGNAME=	${DISTNAME:tl}
@@ -18,6 +18,12 @@ CONFIGURE_ARGS+=	--disable-examples
 
 PKGCONFIG_OVERRIDE+=	libraw.pc.in
 PKGCONFIG_OVERRIDE+=	libraw_r.pc.in
+
+# internal/dcraw_common.cpp: In member function 'void LibRaw::xtrans_interpolate(int)':
+# internal/dcraw_common.cpp:5885:27: error: array subscript has type 'char' [-Werror=char-subscripts]
+#        cstat[fcol(row, col)]++;
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .include "options.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
