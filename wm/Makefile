@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2020/04/12 17:34:18 pin Exp $
+# $NetBSD: Makefile,v 1.149 2020/05/20 17:35:17 nia Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -8,7 +8,6 @@ SUBDIR+=	3ddesktop
 SUBDIR+=	9wm
 SUBDIR+=	aewm++
 SUBDIR+=	afterstep
-SUBDIR+=	amaterus
 SUBDIR+=	amiwm
 SUBDIR+=	awesome
 SUBDIR+=	bbkeys
