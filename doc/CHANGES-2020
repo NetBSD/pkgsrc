@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3070 2020/05/20 06:58:57 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3071 2020/05/20 09:44:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4846,3 +4846,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/gtk3 to 3.24.20 [adam 2020-05-20]
 	Updated net/wireshark to 3.2.4 [adam 2020-05-20]
 	Updated lang/nodejs to 14.3.0 [adam 2020-05-20]
+	Updated lang/janet to 1.9.1 [nia 2020-05-20]
