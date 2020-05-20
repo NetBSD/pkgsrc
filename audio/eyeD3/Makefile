@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/19 18:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/20 07:06:41 wiz Exp $
 
 DISTNAME=	eyeD3-0.9.5
 CATEGORIES=	audio
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-factory_boy-[0-9]*:../../devel/py-factory_boy
 DEPENDS+=	${PYPKGPREFIX}-filetype-[0-9]*:../../sysutils/py-filetype
 
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-faker via py-factory_boy
 
 USE_LANGUAGES=			# none
 
