@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.python,v 1.1 2020/05/20 16:48:41 wiz Exp $
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/glossary-po-header
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/gnome_glossary.py
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/py-func/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/py-func/py_func.py
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/python_loader.la
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/ui-console-menu.xml
