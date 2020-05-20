@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2020/03/06 09:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2020/05/20 06:09:03 rillig Exp $
 
 DISTNAME=	fltk-1.1.10-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -33,6 +33,14 @@ PLIST_VARS+=		cs	# case-sensitive
 CONFIGURE_ARGS+=	--with-links
 PLIST.cs=		yes
 .endif
+
+# Fl_Text_Buffer.cxx: In function 'char chooseNullSubsChar(char*)':
+# Fl_Text_Buffer.cxx:1338:34: error: array subscript has type 'char' [-Werror=char-subscripts]
+#      if ( hist[ replacements[ i ] ] == 0 )
+#                                   ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
+
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

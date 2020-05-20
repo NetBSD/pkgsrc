@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/05/06 14:04:34 adam Exp $
+# $NetBSD: Makefile,v 1.36 2020/05/20 06:09:08 rillig Exp $
 
 DISTNAME=	supertuxkart-1.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -28,6 +28,13 @@ CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
 # 64 bit atomic ops are required
 CXXFLAGS+=	-march=i586
 .endif
+
+# lib/mcpp/eval.c: In function 'eval_if':
+# lib/mcpp/eval.c:361:44: error: array subscript has type 'char' [-Werror=char-subscripts]
+#                  , opname[ op], prec, opname[ opp->op], opp->prec, opp->skip);
+#                                             ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

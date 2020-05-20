@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/01/14 17:33:59 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/20 06:09:04 rillig Exp $
 #
 
 DISTNAME=	golddigC3.1
@@ -9,6 +9,13 @@ MASTER_SITES=	http://www.NetBSD.org/~chuck/gz/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fast action game designed for use with X
+
+# badguy.c: In function 'move_badguys':
+# badguy.c:321:51: error: array subscript has type 'char' [-Werror=char-subscripts]
+#      if((x & 1) == 0 && (y & 1) == 0 && fast_lookup[below].code & STOPBAD) {
+#                                                    ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \

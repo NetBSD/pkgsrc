@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/09/07 21:18:50 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/20 06:09:06 rillig Exp $
 
 DISTNAME=	libretro-nxengine-20181126
 CATEGORIES=	games
@@ -23,6 +23,12 @@ CFLAGS+=	-DMSB_FIRST
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=nxengine/libretro/link.T
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
+
+# nxengine/graphics/font.cpp: In function 'bool font_init()':
+# nxengine/graphics/font.cpp:69:26: error: array subscript has type 'char' [-Werror=char-subscripts]
+#    if (whitefont.letters[c]->h > fontheight)
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
