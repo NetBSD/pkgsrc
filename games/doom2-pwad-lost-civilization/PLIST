@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/20 16:31:07 micha Exp $
+share/doc/doom2-pwad-lost-civilization/INSTALL.pkgsrc
+share/doom/Joi_lstcv.txt
+share/doom/Joi_lstcv.wad
