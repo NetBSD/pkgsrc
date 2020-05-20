@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3071 2020/05/20 09:44:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3072 2020/05/20 10:03:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4847,3 +4847,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/wireshark to 3.2.4 [adam 2020-05-20]
 	Updated lang/nodejs to 14.3.0 [adam 2020-05-20]
 	Updated lang/janet to 1.9.1 [nia 2020-05-20]
+	Updated audio/schismtracker to 20200412 [nia 2020-05-20]
