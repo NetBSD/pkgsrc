@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/18 08:35:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/20 16:19:22 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -254,8 +254,6 @@ ${PYSITELIB}/jedi/settings.py
 ${PYSITELIB}/jedi/settings.pyc
 ${PYSITELIB}/jedi/settings.pyo
 ${PYSITELIB}/jedi/third_party/typeshed/LICENSE
-${PYSITELIB}/jedi/third_party/typeshed/stdlib/${PYVERSSUFFIX}/contextvars.pyi
-${PYSITELIB}/jedi/third_party/typeshed/stdlib/${PYVERSSUFFIX}/dataclasses.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/2/BaseHTTPServer.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/2/CGIHTTPServer.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/2/ConfigParser.pyi
@@ -622,6 +620,8 @@ ${PYSITELIB}/jedi/third_party/typeshed/stdlib/2and3/zipfile.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/2and3/zipimport.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/2and3/zlib.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/3.6/secrets.pyi
+${PYSITELIB}/jedi/third_party/typeshed/stdlib/3.7/contextvars.pyi
+${PYSITELIB}/jedi/third_party/typeshed/stdlib/3.7/dataclasses.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/3/_ast.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/3/_compression.pyi
 ${PYSITELIB}/jedi/third_party/typeshed/stdlib/3/_dummy_thread.pyi
