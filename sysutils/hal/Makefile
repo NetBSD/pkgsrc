@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2020/04/29 19:50:02 maya Exp $
+# $NetBSD: Makefile,v 1.90 2020/05/20 06:09:04 rillig Exp $
 
 DISTNAME=		hal-0.5.14
 PKGREVISION=		23
@@ -24,6 +24,12 @@ USE_LIBTOOL=		YES
 MAKE_DIRS+=		/media
 MAKE_DIRS+=		${VARBASE}/cache/hald
 SPECIAL_PERMS+=		${VARBASE}/cache/hald ${HAL_USER} ${HAL_GROUP} 0644
+
+# devinfo_mass.c: In function 'devinfo_mass_disklabel_add':
+# devinfo_mass.c:340:28: error: array subscript has type 'char'
+#   part = &label.d_partitions[unit];
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 EGDIR=			${PREFIX}/share/examples/hal
 

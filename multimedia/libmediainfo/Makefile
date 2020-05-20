@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/01 13:30:26 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/20 06:09:05 rillig Exp $
 
 .include "../../multimedia/mediainfo/Makefile.common"
 
@@ -25,6 +25,12 @@ CONFIGURE_ARGS+=	--enable-shared
 .endif
 
 INSTALLATION_DIRS+=	bin lib/pkgconfig
+
+# ../../../Source/ThirdParty/base64/base64.h: In function 'std::string Base64::encode(const string&)':
+# ../../../Source/ThirdParty/base64/base64.h:53:41: error: array subscript has type 'char'
+#      sResult.append(1, sBase64Table[cCode]);
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 pre-configure:
 	cd ${WRKSRC}/${CONFIGURE_DIRS:Q} && autoreconf -i
