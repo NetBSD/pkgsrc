@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.15 2020/03/18 21:48:03 tnn Exp $
+# $NetBSD: options.mk,v 1.16 2020/05/20 11:52:58 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5
 PKG_SUPPORTED_OPTIONS+=	cups dbus gtk3
-PKG_SUGGESTED_OPTIONS+=	dbus
+PKG_SUGGESTED_OPTIONS+=	cups dbus
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-.  include "../../print/cups-base/buildlink3.mk"
+.  include "../../print/libcups/buildlink3.mk"
 CONFIGURE_ARGS+=	-cups
 PLIST.cups=		yes
 .else
