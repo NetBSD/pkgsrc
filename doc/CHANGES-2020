@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3088 2020/05/21 10:39:34 markd Exp $
+$NetBSD: CHANGES-2020,v 1.3089 2020/05/21 11:34:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4876,3 +4876,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/tex-mfware to 2020 [markd 2020-05-21]
 	Updated graphics/tex-pst-ovl to 0.07b [markd 2020-05-21]
 	Updated graphics/tex-pst-ovl-doc to 0.07b [markd 2020-05-21]
+	Removed print/tex-genmisc [markd 2020-05-21]
+	Added print/tex-compare version 2020 [markd 2020-05-21]
+	Added print/tex-letterspacing version 2020 [markd 2020-05-21]
+	Added print/tex-nth version 2020 [markd 2020-05-21]
+	Added print/tex-outerhbox version 1.2 [markd 2020-05-21]
+	Added print/tex-random version 0.2 [markd 2020-05-21]
+	Added print/tex-ruler version 1.1 [markd 2020-05-21]
+	Added print/tex-swrule version 2020 [markd 2020-05-21]
