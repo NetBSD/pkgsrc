@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/21 11:26:40 markd Exp $
+share/texmf-dist/tex/generic/compare/compare.tex

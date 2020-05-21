@@ -1,0 +1,4 @@
+Generates pseudo-random integers in the range 1 to 2^{31}.
+Macros are to provide random integers in a given range, or
+random dimensions which can be used to provide random `real'
+numbers, are also available.

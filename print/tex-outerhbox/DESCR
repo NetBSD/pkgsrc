@@ -1,0 +1,4 @@
+The package provides the \outerhbox command, which is similar
+to \hbox, except that material is set in outer horizontal mode.
+This prevents TeX from optimising away maths penalties and the
+like, that are needed when the material is \unhbox'ed.
