@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.24 2020/05/21 15:29:25 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.25 2020/05/21 20:50:54 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -8,6 +8,14 @@
 #
 #	Possible: yes no
 #	Default: undefined
+#
+# GNU_CONFIGURE_QUIET
+#	When set to "yes", runs the configure scripts in quiet mode,
+#	which does not print the typical "checking for ...".
+#
+#	By omitting these, any accidental output or other error messages
+#	are more easily visible in the log.  This can help find
+#	unportable use of tools like sed, awk, test.
 #
 # GNU_CONFIGURE_STRICT
 #	Whether unknown --enable/--disable/--with/--without options make
@@ -207,6 +215,10 @@ configure-scripts-osdep:
 GNU_CONFIGURE_STRICT?=	warn
 .if ${GNU_CONFIGURE_STRICT:tl} != no
 CONFIGURE_ARGS+=	--enable-option-checking=yes
+.endif
+
+.if ${GNU_CONFIGURE_QUIET:Uno:tl} == yes
+CONFIGURE_ARGS+=	--quiet
 .endif
 
 _SHOW_UNKNOWN_CONFIGURE_OPTIONS_CMD= \
