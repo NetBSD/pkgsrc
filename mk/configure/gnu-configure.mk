@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.25 2020/05/21 20:50:54 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.26 2020/05/21 21:05:51 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -25,11 +25,6 @@
 #	of a package are effectively ignored and should be replaced with
 #	their current equivalent (in case they have been renamed), or
 #	otherwise be removed.
-#
-#	This check may incorrectly report unknown options for packages
-#	that have multiple configure scripts, when one of these scripts
-#	recognizes the option and some other doesn't. To check this, run
-#	"bmake show-unknown-configure-options" after the package failed.
 #
 #	Possible: yes no warn
 #	Default: no
