@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3086 2020/05/21 08:43:39 plunky Exp $
+$NetBSD: CHANGES-2020,v 1.3087 2020/05/21 08:43:54 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4864,3 +4864,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/vile to 9.8u [wiz 2020-05-21]
 	Updated editors/xvile to 9.8u [wiz 2020-05-21]
 	Updated multimedia/sfml to 2.5.1 [plunky 2020-05-21]
+	Updated games/openhexagon to 2.0 [plunky 2020-05-21]
