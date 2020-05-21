@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/21 11:39:31 markd Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/21 11:51:20 markd Exp $
 
 DISTNAME=	collection-plaingeneric
 PKGNAME=	texlive-${DISTNAME}-2020pre2
@@ -87,7 +87,7 @@ DEPENDS+=	tex-present-[0-9]*:../../print/tex-present
 DEPENDS+=	tex-random-[0-9]*:../../print/tex-random
 # depend randomlist
 DEPENDS+=	tex-resumemac-[0-9]*:../../print/tex-resumemac
-# depend ruler
+DEPENDS+=	tex-ruler-[0-9]*:../../print/tex-ruler
 # depend schemata
 # depend shade
 # depend simplekv
