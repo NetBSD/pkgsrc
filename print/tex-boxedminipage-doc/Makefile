@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:02 markd Exp $
-# TeX Live Revision 17087
+# $NetBSD: Makefile,v 1.4 2020/05/21 10:18:45 markd Exp $
 
 DISTNAME=	boxedminipage.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2009
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.1
+TEXLIVE_REV=	54827
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/boxedminipage
 COMMENT=	Documentation for tex-boxedminipage
-LICENSE=	public-domain
+LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
