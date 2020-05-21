@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/03/10 22:11:11 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2020/05/21 13:17:45 mef Exp $
 #
 
 DISTNAME=	antiright-3.4
@@ -32,6 +32,7 @@ SUBST_MESSAGE.hpath=	Fixing hardcoded paths.
 SUBST_FILES.hpath=	configure
 SUBST_SED.hpath=	-e 's|^\(INSTALL[	 :]*=\).*|\1${INSTALL}|'
 SUBST_SED.hpath+=	-e 's|/usr/pkg|${PREFIX}|'
+SUBST_NOOP_OK.hpath=	yes
 
 TOOLS_DEPENDS.pkg-config=	pkg-config>=0.20:../../devel/pkg-config
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
