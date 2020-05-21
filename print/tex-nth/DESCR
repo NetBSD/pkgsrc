@@ -1,0 +1,6 @@
+The command \nth{<number>} generates English ordinal numbers of
+the form 1st, 2nd, 3rd, 4th, etc. LaTeX package options may
+specify that the ordinal mark be superscripted, and that
+negative numbers may be treated; Plain TeX users have no access
+to package options, so need to redefine macros for these
+changes.
