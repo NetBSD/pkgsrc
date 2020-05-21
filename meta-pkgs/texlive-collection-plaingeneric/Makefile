@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/05/10 04:13:28 markd Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/21 11:39:31 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54723
@@ -23,7 +23,7 @@ DEPENDS+=	tex-apnum>=1.1:../../math/tex-apnum
 # depend catcodes
 # depend chronosys
 # depend colorsep
-# depend compare
+DEPENDS+=	tex-compare-[0-9]*:../../print/tex-compare
 # depend cweb-old
 # depend dinat
 # depend dirtree
@@ -59,7 +59,7 @@ DEPENDS+=	tex-kastrup>=2010:../../math/tex-kastrup
 DEPENDS+=	tex-lambda-lists-[0-9]*:../../print/tex-lambda-lists
 # depend langcode
 # depend lecturer
-# depend letterspacing
+DEPENDS+=	tex-letterspacing-[0-9]*:../../print/tex-letterspacing
 # depend librarian
 DEPENDS+=	tex-listofitems-[0-9]*:../../print/tex-listofitems
 DEPENDS+=	tex-mathdots-[0-9]*:../../print/tex-mathdots
@@ -70,10 +70,10 @@ DEPENDS+=	tex-mkpattern-[0-9]*:../../print/tex-mkpattern
 DEPENDS+=	tex-multido>=1.42:../../devel/tex-multido
 # depend navigator
 DEPENDS+=	tex-newsletr-[0-9]*:../../print/tex-newsletr
-# depend nth
+DEPENDS+=	tex-nth-[0-9]*:../../print/tex-nth
 # depend ofs
 # depend olsak-misc
-# depend outerhbox
+DEPENDS+=	tex-outerhbox-[0-9]*:../../print/tex-outerhbox
 DEPENDS+=	tex-path>=3.05:../../print/tex-path
 # depend pdf-trans
 DEPENDS+=	tex-pitex-[0-9]*:../../print/tex-pitex
@@ -84,14 +84,14 @@ DEPENDS+=	tex-plnfss-[0-9]*:../../print/tex-plnfss
 DEPENDS+=	tex-plstmary-[0-9]*:../../print/tex-plstmary
 # depend poormanlog
 DEPENDS+=	tex-present-[0-9]*:../../print/tex-present
-# depend random
+DEPENDS+=	tex-random-[0-9]*:../../print/tex-random
 # depend randomlist
 DEPENDS+=	tex-resumemac-[0-9]*:../../print/tex-resumemac
 # depend ruler
 # depend schemata
 # depend shade
 # depend simplekv
-# depend swrule
+DEPENDS+=	tex-swrule-[0-9]*:../../print/tex-swrule
 # depend systeme
 # depend tabto-generic
 # depend termmenu
