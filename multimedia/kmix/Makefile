@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2020/05/06 14:04:53 adam Exp $
+# $NetBSD: Makefile,v 1.61 2020/05/21 20:53:46 ryoon Exp $
 
 DISTNAME=	kmix-${_KDE_VERSION}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	multimedia
 COMMENT=	KDE's soundcard mixer program
 
