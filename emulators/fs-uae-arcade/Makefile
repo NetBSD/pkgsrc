@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/18 20:01:03 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/21 09:42:43 mef Exp $
 
 DISTNAME=	fs-uae-arcade-3.0.2
 CATEGORIES=	emulators
@@ -35,8 +35,7 @@ SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing installation prefix.
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	Makefile
-SUBST_FILES.prefix+=	fs_uae_launcher/FSUAELauncher.py
-SUBST_FILES.prefix+=	game_center/gamecenterutil.py
+SUBST_FILES.prefix+=	launcher/ui/launcherwindow.py
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
 post-install:
