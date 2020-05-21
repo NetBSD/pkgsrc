@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2020/03/13 10:36:24 nia Exp $
+# $NetBSD: Makefile,v 1.65 2020/05/21 15:06:16 taca Exp $
 
-DISTNAME=	bulk-medium-20200313
+DISTNAME=	bulk-medium-20200521
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -76,9 +76,9 @@ BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 BUILD_DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 BUILD_DEPENDS+=	php>=7.3<7.4:../../lang/php73
-BUILD_DEPENDS+=	ruby24-base-[0-9]*:../../lang/ruby24-base
 BUILD_DEPENDS+=	ruby25-base-[0-9]*:../../lang/ruby25-base
 BUILD_DEPENDS+=	ruby26-base-[0-9]*:../../lang/ruby26-base
+BUILD_DEPENDS+=	ruby27-base-[0-9]*:../../lang/ruby27-base
 BUILD_DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 BUILD_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
 BUILD_DEPENDS+=	python37-[0-9]*:../../lang/python37
