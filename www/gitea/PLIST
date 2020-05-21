@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/03/09 11:06:16 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/05/21 13:36:12 jperkin Exp $
 sbin/gitea
 share/examples/gitea/app.ini.sample
 share/gitea/options/gitignore/Actionscript
@@ -660,6 +660,8 @@ share/gitea/options/locale/locale_zh-CN.ini
 share/gitea/options/locale/locale_zh-HK.ini
 share/gitea/options/locale/locale_zh-TW.ini
 share/gitea/options/readme/Default
+share/gitea/public/css/index.css
+share/gitea/public/css/theme-arc-green.css
 share/gitea/public/img/404.png
 share/gitea/public/img/500.png
 share/gitea/public/img/auth/bitbucket.png
@@ -690,6 +692,10 @@ share/gitea/public/img/openid-16x16.png
 share/gitea/public/img/repo_default.png
 share/gitea/public/img/slack.png
 share/gitea/public/img/telegram.png
+share/gitea/public/js/gitgraph.js
+share/gitea/public/js/gitgraph.js.map
+share/gitea/public/js/index.js
+share/gitea/public/js/index.js.map
 share/gitea/public/vendor/VERSIONS
 share/gitea/public/vendor/assets/font-awesome/LICENSE
 share/gitea/public/vendor/assets/font-awesome/css/LICENSE
