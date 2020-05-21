@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3091 2020/05/21 13:37:18 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.3092 2020/05/21 13:40:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4886,3 +4886,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-swrule version 2020 [markd 2020-05-21]
 	Updated net/knot to 2.9.4 [ryoon 2020-05-21]
 	Updated www/gitea to 1.11.5nb1 [jperkin 2020-05-21]
+	Updated audio/adplug to 2.3.2 [nia 2020-05-21]
