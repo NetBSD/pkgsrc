@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/03/10 22:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2020/05/21 14:56:32 rillig Exp $
 
 DISTNAME=	cinepaint-1.0-4
 PKGNAME=	cinepaint-1.0.4
@@ -17,7 +17,6 @@ USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config msgfmt gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--without-python
 
 PKGCONFIG_OVERRIDE=	cinepaint-gtk.pc.in
