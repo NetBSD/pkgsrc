@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2020/05/04 20:54:27 tsutsui Exp $
+# $NetBSD: Makefile,v 1.193 2020/05/21 16:04:23 taca Exp $
 #
 
 DISTNAME=	mikutter-4.0.5
@@ -10,8 +10,6 @@ MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://mikutter.hachune.net/
 COMMENT=	Simple, powerful, and moeful twitter client
 LICENSE=	mit AND cc-by-sa-v3.0
-
-RUBY_VERSIONS_INCOMPATIBLE=	24
 
 .include "../../lang/ruby/rubyversion.mk"
 
