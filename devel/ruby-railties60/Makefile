@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/03/21 23:51:41 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/21 16:04:22 taca Exp $
 
 DISTNAME=	railties-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-railties${RUBY_RAILS}-${RAILS_VERSION}
@@ -16,7 +16,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-method_source-[0-9]*:../../misc/ruby-method_source
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_INCOMPATIBLE=	24
 RUBY_RAILS_ACCEPTED=	60
 RUBY_RAILS_STRICT_DEP=	yes
 RUBYGEM_OPTIONS+=	--format-executable

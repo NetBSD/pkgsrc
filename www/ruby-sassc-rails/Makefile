@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/03/20 20:44:15 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/21 16:04:24 taca Exp $
 
 DISTNAME=	sassc-rails-2.1.2
 CATEGORIES=	www
@@ -15,7 +15,6 @@ DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_INCOMPATIBLE=	24
 RUBY_RAILS_ACCEPTED=	# yes
 
 .include "../../lang/ruby/gem.mk"
