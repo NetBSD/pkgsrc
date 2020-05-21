@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/11/02 16:25:20 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2020/05/21 00:00:46 rillig Exp $
 
 DISTNAME=		elm-2.4ME+93
 PKGNAME=		elm-me-2.4.93
@@ -27,13 +27,17 @@ INSTALLATION_DIRS=	share/nls/C
 CONF_FILES=		${PREFIX}/lib/elm.mimetypes-dist		\
 			${PREFIX}/lib/elm.mimetypes
 
-USE_TOOLS+=	ksh
+USE_TOOLS+=		ksh
 
 SUBST_CLASSES+=		errno
 SUBST_STAGE.errno=	pre-configure
 SUBST_MESSAGE.errno=	Fixing declaration of errno.
 SUBST_FILES.errno=	*/*.c
 SUBST_SED.errno=	-e 's,^extern int errno;,\#include <errno.h>,'
+
+# occurs in elmlib.h and is properly protected code:
+#  #define hex(c) ((((c) > 0) && ((c) < 127)) ? index_hex[ (c) ] : -1)
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 # currently not set in files/config.sh
 # (should probably be a package option)
