@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/05/19 11:37:56 nia Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/21 11:22:43 nia Exp $
 
 DISTNAME=	powermanga-0.93.1
 CATEGORIES=	games
@@ -39,7 +39,6 @@ SUBST_FILES.path+=	graphics/Makefile.am
 SUBST_FILES.path+=	src/Makefile.am
 SUBST_FILES.path+=	sounds/handheld_console/Makefile.am
 SUBST_FILES.path+=	sounds/Makefile.am
-SUBST_FILES.path+=	Makefile.am
 SUBST_FILES.path+=	powermanga.6
 SUBST_FILES.path+=	src/tools.c
 
