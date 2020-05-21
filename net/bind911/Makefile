@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/05/19 10:21:25 taca Exp $
+# $NetBSD: Makefile,v 1.25 2020/05/21 12:45:47 jperkin Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -22,7 +22,7 @@ BUILD_DEFS+=	BIND_DIR VARBASE
 
 .include "options.mk"
 
-USE_TOOLS+=		pax perl
+USE_TOOLS+=		pax perl pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
