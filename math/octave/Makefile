@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2020/05/06 14:04:48 adam Exp $
+# $NetBSD: Makefile,v 1.204 2020/05/21 11:22:02 mef Exp $
 
 DISTNAME=	octave-5.2.0
 PKGREVISION=	1
@@ -73,7 +73,7 @@ SUBST_VARS.fix-make=		GMAKE
 SUBST_CLASSES+=			qt5-pkg-config
 SUBST_STAGE.qt5-pkg-config=	pre-configure
 SUBST_MESSAGE.qt5-pkg-config=	Updating pkg-config calls for Qt5
-SUBST_FILES.qt5-pkg-config=	configure.ac configure
+SUBST_FILES.qt5-pkg-config=	configure
 SUBST_SED.qt5-pkg-config=	-e 's,QtCore,Qt5Core,g'
 SUBST_SED.qt5-pkg-config+=	-e 's,QtGui,Qt5Widgets,g'
 SUBST_SED.qt5-pkg-config+=	-e 's,QtNetwork,Qt5Network,g'
