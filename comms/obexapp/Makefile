@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/09/03 08:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/05/21 13:04:16 mef Exp $
 #
 
 DISTNAME=	obexapp-1.4.15
@@ -23,7 +23,7 @@ OWN_DIRS+=		${VARBASE}/spool/obex
 RCD_SCRIPTS+=		obexapp
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	Makefile obexapp.1 obexapp.h
+SUBST_FILES.paths=	Makefile
 SUBST_STAGE.paths=	post-configure
 SUBST_SED.paths+=	-e "s|/usr/local/man|${PREFIX}|"
 SUBST_SED.paths+=	-e "s|/usr/local|${PREFIX}|"
