@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2020/04/30 11:21:57 nia Exp $
+# $NetBSD: Makefile,v 1.259 2020/05/21 10:41:36 nia Exp $
 
 DISTNAME=	openssl-1.1.1g
 PKGREVISION=	1
@@ -19,6 +19,7 @@ TEST_TARGET=		tests
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	shared
 
