@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/05/16 21:35:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/05/21 14:54:08 nia Exp $
 bin/inkscape
 bin/inkview
 lib/inkscape/libinkscape_base.so
@@ -2390,6 +2390,7 @@ share/inkscape/templates/default.doi.svg
 share/inkscape/templates/default.el.svg
 share/inkscape/templates/default.eo.svg
 share/inkscape/templates/default.es.svg
+share/inkscape/templates/default.es_MX.svg
 share/inkscape/templates/default.et.svg
 share/inkscape/templates/default.eu.svg
 share/inkscape/templates/default.fi.svg
