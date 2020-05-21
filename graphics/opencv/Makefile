@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.91 2020/03/10 22:10:12 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2020/05/21 20:53:38 ryoon Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	opencv-${OPENCV_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 
 MAINTAINER=	anthony.mallet@laas.fr
 COMMENT=	Library for computer vision problems

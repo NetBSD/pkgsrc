@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/03/10 22:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/21 20:53:43 ryoon Exp $
 
 DISTNAME=	gmic_1.5.9.3
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gmic/}
 
