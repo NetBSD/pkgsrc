@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.770 2020/05/16 18:07:56 maya Exp $
+# $NetBSD: Makefile,v 1.771 2020/05/21 07:43:00 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -827,17 +827,17 @@ SUBDIR+=	tex-ifplatform-doc
 SUBDIR+=	tex-iftex
 SUBDIR+=	tex-iftex-doc
 SUBDIR+=	tex-igo
+SUBDIR+=	tex-impatient-doc
+SUBDIR+=	tex-import
+SUBDIR+=	tex-import-doc
+SUBDIR+=	tex-index
+SUBDIR+=	tex-index-doc
 SUBDIR+=	tex-infwarerr
 SUBDIR+=	tex-infwarerr-doc
 SUBDIR+=	tex-inputenx
 SUBDIR+=	tex-inputenx-doc
 SUBDIR+=	tex-intcalc
 SUBDIR+=	tex-intcalc-doc
-SUBDIR+=	tex-impatient-doc
-SUBDIR+=	tex-import
-SUBDIR+=	tex-import-doc
-SUBDIR+=	tex-index
-SUBDIR+=	tex-index-doc
 SUBDIR+=	tex-intro-scientific-doc
 SUBDIR+=	tex-jadetex
 SUBDIR+=	tex-jadetex-doc
