@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2019/06/19 13:19:03 mef Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/05/21 07:40:28 wiz Exp $
 bin/lxvile
 bin/lxvile-fonts
 bin/uxvile
-bin/vileget
 bin/xshell.sh
 bin/xvile
 bin/xvile-libdir-path
@@ -56,9 +55,11 @@ libexec/xvile/vile-manfilt
 libexec/xvile/vile-mcrl-filt
 libexec/xvile/vile-midl-filt
 libexec/xvile/vile-mms-filt
+libexec/xvile/vile-nmake-filt
 libexec/xvile/vile-nr-filt
 libexec/xvile/vile-pas-filt
 libexec/xvile/vile-perl-filt
+libexec/xvile/vile-perl6-filt
 libexec/xvile/vile-php-filt
 libexec/xvile/vile-pot-filt
 libexec/xvile/vile-ps-filt
@@ -84,6 +85,7 @@ libexec/xvile/vile-tc-filt
 libexec/xvile/vile-tcl-filt
 libexec/xvile/vile-texi-filt
 libexec/xvile/vile-ti-filt
+libexec/xvile/vile-tpu-filt
 libexec/xvile/vile-txt-filt
 libexec/xvile/vile-vile-filt
 libexec/xvile/vile-vlog-filt
@@ -147,6 +149,7 @@ share/xvile/est.keywords
 share/xvile/fdl.keywords
 share/xvile/filters.rc
 share/xvile/gnugpg.rc
+share/xvile/go.keywords
 share/xvile/hs.keywords
 share/xvile/html.keywords
 share/xvile/imake.keywords
@@ -170,6 +173,7 @@ share/xvile/mcrl.keywords
 share/xvile/midl.keywords
 share/xvile/modes.rc
 share/xvile/mvn.keywords
+share/xvile/nmake.keywords
 share/xvile/nr.keywords
 share/xvile/nsis.keywords
 share/xvile/objc.keywords
@@ -200,6 +204,7 @@ share/xvile/perl/search.pm
 share/xvile/perl/shell.pm
 share/xvile/perl/spell.pm
 share/xvile/perl/winops.pm
+share/xvile/perl6.keywords
 share/xvile/php.keywords
 share/xvile/pictmode.rc
 share/xvile/pixmaps/vile.xpm
@@ -233,6 +238,8 @@ share/xvile/tcl.keywords
 share/xvile/tex.keywords
 share/xvile/texi.keywords
 share/xvile/ti.keywords
+share/xvile/tpu.keywords
+share/xvile/ts.keywords
 share/xvile/vb.keywords
 share/xvile/vb6.keywords
 share/xvile/vbs.keywords
