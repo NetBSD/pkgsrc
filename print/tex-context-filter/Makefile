@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:33:52 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/21 10:21:50 markd Exp $
 
 DISTNAME=	context-filter
-PKGNAME=	tex-${DISTNAME}-2018.48390
-TEXLIVE_REV=	48390
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54912
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-filter
@@ -11,6 +11,5 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
