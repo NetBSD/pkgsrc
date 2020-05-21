@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/10/23 09:31:34 markd Exp $
+$NetBSD: distinfo,v 1.4 2020/05/21 10:37:38 markd Exp $
 
-SHA1 (tex-pst-ovl-45506/pst-ovl.tar.xz) = ade1a9f56cf1507ea47d7b224bda32e430ec53ad
-RMD160 (tex-pst-ovl-45506/pst-ovl.tar.xz) = 786e9c925efce05f3d5c5ca7c2bf8e794f80e0d3
-SHA512 (tex-pst-ovl-45506/pst-ovl.tar.xz) = ebc4a824dc10c4c9efaa2d5baf9f2023ae0bd4367566f8d7c93ab323c0ad8c989c9c22509532788c5f29632401e8380cb3c2dc2bf599f790ad21e2d8efd9c910
-Size (tex-pst-ovl-45506/pst-ovl.tar.xz) = 1952 bytes
+SHA1 (pst-ovl.r54963.tar.xz) = 113464edf7f82f062c07c6a5d1bfa8e1f133342f
+RMD160 (pst-ovl.r54963.tar.xz) = 8d8cbc62f682bf0c30052a0c17e4955343b45471
+SHA512 (pst-ovl.r54963.tar.xz) = e3349edf9643e5d9e370b5dbf1c4dc3078ec82520c943a81ae353e1ccd0e2476105813b0cbbbeb707de5419035edcc39748c7e86a69cb90f8bc0d61d70f553c5
+Size (pst-ovl.r54963.tar.xz) = 1932 bytes
