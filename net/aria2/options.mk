@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2020/01/01 16:21:02 leot Exp $
+# $NetBSD: options.mk,v 1.19 2020/05/21 07:56:37 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.aria2
 
@@ -38,7 +38,6 @@ USE_TOOLS+=		pkg-config
 ###
 .if !empty(PKG_OPTIONS:Msqlite)
 CONFIGURE_ARGS+=	--with-sqlite3
-CONFIGURE_ARGS+=	--with-sqlite3-prefix=${BUILDLINK_PREFIX.sqlite3}
 .  include "../../databases/sqlite3/buildlink3.mk"
 USE_TOOLS+=		pkg-config
 .else
