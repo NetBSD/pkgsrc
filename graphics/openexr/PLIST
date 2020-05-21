@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/02/13 21:13:16 nia Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/05/21 20:58:32 ryoon Exp $
 bin/exr2aces
 bin/exrenvmap
 bin/exrheader
@@ -99,7 +99,6 @@ include/OpenEXR/OpenEXRConfigInternal.h
 lib/libIlmImf.la
 lib/libIlmImfUtil.la
 lib/pkgconfig/OpenEXR.pc
-share/aclocal/openexr.m4
 share/doc/openexr/InterpretingDeepPixels.pdf
 share/doc/openexr/MultiViewOpenEXR.pdf
 share/doc/openexr/OpenEXRFileLayout.pdf
