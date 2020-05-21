@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/03/20 11:58:00 nia Exp $
+# $NetBSD: Makefile,v 1.56 2020/05/21 15:15:56 rillig Exp $
 
 DISTNAME=		maxima-5.41.0
 PKGREVISION=		4
@@ -15,7 +15,6 @@ DEPENDS+=		tk-[0-9]*:../../x11/tk
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake makeinfo perl
-REPLACE_SH=		doc/misc/grepforvariables.sh
 
 INFO_FILES=		yes
 TEST_TARGET=		check
