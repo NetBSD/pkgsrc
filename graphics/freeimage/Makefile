@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/05/16 02:13:02 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/21 20:53:42 ryoon Exp $
 
 DISTNAME=	FreeImage3180
 PKGNAME=	freeimage-3.18.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeimage/}
 EXTRACT_SUFX=	.zip
