@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:45:10 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/05/21 10:32:20 markd Exp $
 
-SHA1 (tex-mfware-36017/mfware.tar.xz) = 167c2236bc3bbabad7e15abe0850fdc92be3b792
-RMD160 (tex-mfware-36017/mfware.tar.xz) = 2f3145f5152ebc107422c788f32cb97ee70e16b0
-SHA512 (tex-mfware-36017/mfware.tar.xz) = 5898830f12485ad4b8d5c701b6a4717cfe81f326b3820be824ff3df3db286ae692f29105ce92cbe29515a3417bf3c90e7bc99bd1eece8111054261ac30cdaf6c
-Size (tex-mfware-36017/mfware.tar.xz) = 3116 bytes
+SHA1 (mfware.r54994.tar.xz) = 5755dde71c4bcf79e9eb2462fea2b95548c057e1
+RMD160 (mfware.r54994.tar.xz) = 0179cba27148d234c660834748a7f744162854c2
+SHA512 (mfware.r54994.tar.xz) = efde0ac3831be8e3aff20140856dd1ee4808bbe6488492d9866f0355e5dca8c5a53f6b3757cebb866abbf30537c8fd0c462f23123cfa583a7547f394b20fe286
+Size (mfware.r54994.tar.xz) = 3180 bytes
