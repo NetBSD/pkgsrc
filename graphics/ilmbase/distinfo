@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2020/02/13 21:13:16 nia Exp $
+$NetBSD: distinfo,v 1.20 2020/05/21 20:58:32 ryoon Exp $
 
-SHA1 (openexr-2.4.1.tar.gz) = 7a5fc26f7b383fec8bc5a3638ceb7d0b0d1913f7
-RMD160 (openexr-2.4.1.tar.gz) = 0c24bedb7adb3db54952a13962c12dec419c51c5
-SHA512 (openexr-2.4.1.tar.gz) = 23c0c07fafa42f832e67cbfeeeb12b6b9e373dd0a5b858f463bf5c4d0661c58fad662cef64ef6a3053f0db2f69aee46816568b814872d617284664d1effbbbab
-Size (openexr-2.4.1.tar.gz) = 26809861 bytes
+SHA1 (openexr-2.5.1.tar.gz) = c32ffdf5a2f11e588562c268c873f96fa5ab8c1c
+RMD160 (openexr-2.5.1.tar.gz) = 5a12003fda09e145964a9235a1a56767455aab1e
+SHA512 (openexr-2.5.1.tar.gz) = d7ff156481a0b0c26282b5b839e8d88e3f19a9d11c8d16113faa38409145670b379d8c5629efa2c6bd7719e095c07fe2bcd9fc8bedd15f48da77c1ce94705714
+Size (openexr-2.5.1.tar.gz) = 27522285 bytes
 SHA1 (patch-IlmBase_configure.ac) = 563b483c24c1fa75f7fd203082ff872266d48d50
+SHA1 (patch-IlmBase_m4_threads.m4) = 7b1f38dbc733a2f324fd5800e9def6f040f33393
