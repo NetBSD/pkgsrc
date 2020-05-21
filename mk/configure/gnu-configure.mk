@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.23 2020/05/21 13:42:10 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.24 2020/05/21 15:29:25 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -205,9 +205,7 @@ configure-scripts-osdep:
 .endif
 
 GNU_CONFIGURE_STRICT?=	warn
-.if ${GNU_CONFIGURE_STRICT:M[yY][eE][sS]}
-CONFIGURE_ARGS+=	--enable-option-checking=fatal
-.elif ${GNU_CONFIGURE_STRICT} == warn
+.if ${GNU_CONFIGURE_STRICT:tl} != no
 CONFIGURE_ARGS+=	--enable-option-checking=yes
 .endif
 
