@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2020/03/10 22:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2020/05/21 14:50:11 rillig Exp $
 
 DISTNAME=	celestia-1.6.1
 PKGREVISION=	23
@@ -29,7 +29,6 @@ CONF_FILES=	${EGDIR}/celestia.cfg.default ${PKG_SYSCONFDIR}/celestia.cfg
 
 .if exists(${X11BASE}/include/X11/extensions/Xinerama.h) || ${X11_TYPE} != "native"
 .include "../../x11/libXinerama/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-xinerama
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
