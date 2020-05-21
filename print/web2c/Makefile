@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.98 2020/05/10 03:56:39 markd Exp $
+# $NetBSD: Makefile,v 1.99 2020/05/21 03:32:14 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	web2c-2020
+PKGREVISION=	1
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/
@@ -23,6 +24,8 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/texk/web2c
 
 #CXXFLAGS+=		-fpermissive
 
+CONFIGURE_ENV+=		enable_texlive_build=yes
+CONFIGURE_ARGS+=	--with-banner-add="/pkgsrc"
 CONFIGURE_ARGS+=	--disable-luatex
 CONFIGURE_ARGS+=	--disable-luahbtex
 CONFIGURE_ARGS+=	--disable-luatex53
