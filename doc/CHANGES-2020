@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3097 2020/05/21 15:54:42 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3098 2020/05/21 16:09:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4892,3 +4892,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/bulk-medium to 20200521 [taca 2020-05-21]
 	Removed lang/ruby24 [taca 2020-05-21]
 	Removed lang/ruby24-base [taca 2020-05-21]
+	Updated databases/ruby-activeldap to 6.0.2 [taca 2020-05-21]
