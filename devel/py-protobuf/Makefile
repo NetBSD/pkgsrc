@@ -1,14 +1,20 @@
-# $NetBSD: Makefile,v 1.26 2020/02/06 15:57:41 adam Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/21 16:31:15 adam Exp $
 
-DISTNAME=	protobuf-3.11.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	protobuf-python-3.12.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/protobuf/}
+#MASTER_SITES=	${MASTER_SITE_PYPI:=p/protobuf/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
+GITHUB_PROJECT=	protobuf
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developers.google.com/protocol-buffers/
 COMMENT=	Python bindings for protobuf
 LICENSE=	modified-bsd
+
+EGG_NAME=	${DISTNAME:S/-python//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-python//}/python
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
