@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/07/18 00:06:18 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2020/05/21 06:55:30 rillig Exp $
 
 DISTNAME=		Coin-3.1.3
 PKGREVISION=		3
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-debug
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
-CONFIGURE_ARGS+=	--with-pthreads=yes
+CONFIGURE_ARGS+=	--with-pthread=yes
 CONFIGURE_ARGS+=	--enable-threadsafe
 .endif
 
