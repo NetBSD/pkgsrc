@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2020/05/19 10:13:49 nia Exp $
+# $NetBSD: Makefile,v 1.65 2020/05/21 10:07:03 nia Exp $
 
 DISTNAME=	libetpan-1.9.4
 CATEGORIES=	mail
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		autoconf automake
+USE_TOOLS+=		pkg-config
 TEST_TARGET=		check
 
 pre-configure:
