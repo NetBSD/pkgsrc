@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3087 2020/05/21 08:43:54 plunky Exp $
+$NetBSD: CHANGES-2020,v 1.3088 2020/05/21 10:39:34 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4865,3 +4865,14 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/xvile to 9.8u [wiz 2020-05-21]
 	Updated multimedia/sfml to 2.5.1 [plunky 2020-05-21]
 	Updated games/openhexagon to 2.0 [plunky 2020-05-21]
+	Updated print/tex-boxedminipage to 1.1 [markd 2020-05-21]
+	Updated print/tex-boxedminipage-doc to 1.1 [markd 2020-05-21]
+	Updated print/tex-context-filter to 2020 [markd 2020-05-21]
+	Updated print/tex-context-filter-doc to 2020 [markd 2020-05-21]
+	Updated print/tex-context-vim to 2020 [markd 2020-05-21]
+	Updated print/tex-context-vim-doc to 2020 [markd 2020-05-21]
+	Updated fonts/tex-fonts-tlwg to 0.7.2 [markd 2020-05-21]
+	Updated fonts/tex-fonts-tlwg-doc to 0.7.2 [markd 2020-05-21]
+	Updated fonts/tex-mfware to 2020 [markd 2020-05-21]
+	Updated graphics/tex-pst-ovl to 0.07b [markd 2020-05-21]
+	Updated graphics/tex-pst-ovl-doc to 0.07b [markd 2020-05-21]
