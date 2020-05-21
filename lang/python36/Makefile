@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/05/14 21:43:11 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/21 17:25:13 leot Exp $
 
 PKGREVISION= 2
 .include "dist.mk"
@@ -157,6 +157,7 @@ SUBST_FILES.findlib+=	Lib/ctypes/util.py
 SUBST_FILES.findlib+=	Lib/distutils/unixccompiler.py
 SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 SUBST_SED.findlib+=	-e "s!\('-Wl,-t'\)!'${COMPILER_RPATH_FLAG}${PREFIX}/lib', '-L${PREFIX}/lib', \1!"
+SUBST_NOOP_OK.findlib=	yes
 
 .include "options.mk"
 
