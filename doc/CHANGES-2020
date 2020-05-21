@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3098 2020/05/21 16:09:39 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3099 2020/05/21 16:31:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4893,3 +4893,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed lang/ruby24 [taca 2020-05-21]
 	Removed lang/ruby24-base [taca 2020-05-21]
 	Updated databases/ruby-activeldap to 6.0.2 [taca 2020-05-21]
+	Updated devel/protobuf to 3.12.1 [adam 2020-05-21]
+	Updated devel/py-protobuf to 3.12.1 [adam 2020-05-21]
