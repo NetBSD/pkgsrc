@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3096 2020/05/21 15:50:51 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3097 2020/05/21 15:54:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4891,3 +4891,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/balsa to 2.6.1 [nia 2020-05-21]
 	Updated meta-pkgs/bulk-medium to 20200521 [taca 2020-05-21]
 	Removed lang/ruby24 [taca 2020-05-21]
+	Removed lang/ruby24-base [taca 2020-05-21]
