@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/01/18 23:35:31 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/05/21 15:51:52 taca Exp $
 
 DISTNAME=	json-2.3.0
 CATEGORIES=	textproc
@@ -10,7 +10,7 @@ LICENSE=	ruby-license
 
 USE_GCC_RUNTIME=	yes
 
-RUBY_VERSIONS_ACCEPTED=	24 25 26
+RUBY_VERSIONS_ACCEPTED=	25 26
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -xdev -type f -print | ${XARGS} ${CHMOD} g-w
