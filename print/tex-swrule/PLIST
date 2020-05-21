@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/21 11:26:41 markd Exp $
+share/texmf-dist/tex/generic/swrule/swrule.sty

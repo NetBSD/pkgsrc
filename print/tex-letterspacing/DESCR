@@ -1,0 +1,6 @@
+Space out the letters of text; the command is
+\letterspace<\hbox modifier>{<text>}: the text is placed in an
+\hbox of the specified size, and space is inserted between each
+glyph to make the text fit the box. Note that letterspacing is
+not ordinarily considered acceptable in modern typesetting of
+English.
