@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/01/26 17:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/21 19:21:17 rillig Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/tcpd-/}
@@ -15,8 +15,6 @@ CONFLICTS=	courier-imap<4.1.1
 
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
-
-.include "options.mk"
 
 .include "../../mail/courier-mta/Makefile.common"
 
