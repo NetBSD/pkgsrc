@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1 2020/05/21 08:42:00 plunky Exp $
+
+SHA1 (SFML-2.5.1-sources.zip) = a2d9d8ceed52bcff27d11f21e814b51ba19cd116
+RMD160 (SFML-2.5.1-sources.zip) = 3b137887696a223f0c3576b16bae9f0e3535f16f
+SHA512 (SFML-2.5.1-sources.zip) = 75b4f3076d817388b78aa060fba6a4c67b2cde3393ec6d9dc66052d9770636572e9bfcd6b63fcb5dc7888e00cda2161cd84b55e07d463159da52ac1142d8d1af
+Size (SFML-2.5.1-sources.zip) = 23283095 bytes
+SHA1 (patch-CMakeLists.txt) = 235842ca31da0d886966e90877d705fd8ef0c5d3
+SHA1 (patch-cmake_Config.cmake) = af35cb044c2e6ab052678e97eb8a11cec5e1a5be
+SHA1 (patch-include_SFML_Config.hpp) = 38f37c8a0db031844810f6dcdc057a3778c17d8c
+SHA1 (patch-include_SFML_OpenGL.hpp) = f9e90d2bcdae186f3582720158f6afacc538172e
+SHA1 (patch-include_SFML_Window_WindowHandle.hpp) = 443dbc01e551d50f373d9c0572aefbd306753ff7
+SHA1 (patch-src_SFML_System_CMakeLists.txt) = b4f007c5b4d0334844a05ff342ecd717247472d8
+SHA1 (patch-src_SFML_Window_CMakeLists.txt) = 2d6cafc10d5ff2fc858f32d678165854724d67fe
+SHA1 (patch-src_SFML_Window_ClipboardImpl.hpp) = b201d1c2fe08dbf406105f68e026437fc5af3f1d
+SHA1 (patch-src_SFML_Window_CursorImpl.hpp) = 74cabc7fc2a4a03a76a4f88fe408c1416022d0e2
+SHA1 (patch-src_SFML_Window_FreeBSD_JoystickImpl.cpp) = 0266e719a77b48d7c6728cffa315764e7249d2ba
+SHA1 (patch-src_SFML_Window_FreeBSD_JoystickImpl.hpp) = 53d171b662e4413e2ea30840639b83966ec1c65e
+SHA1 (patch-src_SFML_Window_GlContext.cpp) = c0e87ccba4d8e20e5099106e6642631e98304e4b
+SHA1 (patch-src_SFML_Window_InputImpl.hpp) = 4a3a70632cfa0e792d9e0462d18071da557417a9
+SHA1 (patch-src_SFML_Window_JoystickImpl.hpp) = 3312a5a74085c9645b56d1f44a2b6fa90f373d06
+SHA1 (patch-src_SFML_Window_SensorImpl.hpp) = 4b78c150e5b6f75e29004568fb04151299f9b60e
+SHA1 (patch-src_SFML_Window_WindowImpl.cpp) = 2c53df52107a7a2317c8d3a515f198f491805550
