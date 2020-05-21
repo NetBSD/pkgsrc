@@ -1,0 +1,19 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/05/21 08:42:57 plunky Exp $
+
+install in pkgsrc dirs
+
+--- CMakeLists.txt.orig	2013-07-13 23:37:47.000000000 +0000
++++ CMakeLists.txt
+@@ -65,10 +65,8 @@ target_link_libraries(${PROJECT_NAME} ${
+ target_link_libraries(${PROJECT_NAME} ${LUA_LIBRARY})
+ 
+ if(UNIX)
+-	install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION /usr/local/games/${PROJECT_NAME}/)
+-	install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_SOURCE_DIR}/_RELEASE/)
+-	install(DIRECTORY _RELEASE/ DESTINATION /usr/local/games/SSVOpenHexagon/)
+-	install(PROGRAMS _RELEASE/${PROJECT_NAME} DESTINATION /usr/local/games/${PROJECT_NAME}/ PERMISSIONS WORLD_EXECUTE WORLD_READ)
++	install(DIRECTORY _RELEASE/ DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/${PKGBASE}/)
++	install(PROGRAMS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/${PKGBASE}/)
+ else(WIN32)
+ 	install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ./_RELEASE/)
+ endif()

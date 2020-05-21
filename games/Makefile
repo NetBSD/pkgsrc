@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.489 2020/05/20 16:34:22 micha Exp $
+# $NetBSD: Makefile,v 1.490 2020/05/21 08:42:57 plunky Exp $
 #
 
 COMMENT=	Games
@@ -300,6 +300,7 @@ SUBDIR+=	not_tetris
 SUBDIR+=	nudoku
 SUBDIR+=	omega
 SUBDIR+=	onscripter
+SUBDIR+=	openhexagon
 SUBDIR+=	openjk
 SUBDIR+=	openmortal
 SUBDIR+=	openmw
