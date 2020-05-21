@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/03/21 23:51:41 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/21 16:04:23 taca Exp $
 
 DISTNAME=	actioncable-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actioncable${RUBY_RAILS}-${RAILS_VERSION}
@@ -15,7 +15,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-websocket-driver>=0.6.1:../../www/ruby-websocket-dri
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_INCOMPATIBLE=	24
 RUBY_RAILS_ACCEPTED=	60
 RUBY_RAILS_STRICT_DEP=	yes
 
