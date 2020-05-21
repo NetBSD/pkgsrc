@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3093 2020/05/21 13:52:02 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3094 2020/05/21 14:19:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4888,3 +4888,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/gitea to 1.11.5nb1 [jperkin 2020-05-21]
 	Updated audio/adplug to 2.3.2 [nia 2020-05-21]
 	Updated devel/amtk to 5.0.2 [nia 2020-05-21]
+	Updated mail/balsa to 2.6.1 [nia 2020-05-21]
