@@ -1,9 +1,7 @@
-# $NetBSD: suppress_installation.mk,v 1.5 2020/05/21 11:14:29 nia Exp $
+# $NetBSD: suppress_installation.mk,v 1.6 2020/05/21 15:55:14 rillig Exp $
 
 # Makefile snippet to be included by freeciv-client and freeciv-server to
 # prevent files installed by freeciv-share from being installed again.
-
-CONFIGURE_ARGS+=		--without-freeciv-manual
 
 SUBST_CLASSES+=			installmanfix
 SUBST_STAGE.installmanfix=	pre-configure
