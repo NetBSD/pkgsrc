@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/18 08:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/21 13:24:53 adam Exp $
 
 DISTNAME=	jedi-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,14 +12,16 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-parso>=0.1.0:../../lang/py-parso
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+TEST_DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
+TEST_DEPENDS+=	${PYPKGPREFIX}-docopt-[0-9]*:../../devel/py-docopt
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
