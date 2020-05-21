@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/05/23 19:22:56 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2020/05/21 14:25:59 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		x11 unixodbc ilbc webvmail ldap spandsp
@@ -35,11 +35,9 @@ CONFIGURE_ARGS+=	--without-gtk2
 .if !empty(PKG_OPTIONS:Munixodbc)
 .  include "../../databases/unixodbc/buildlink3.mk"
 .  include "../../devel/libltdl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ltdl
 CONFIGURE_ARGS+=	--with-unixodbc
 PLIST.unixodbc=		yes
 .else
-CONFIGURE_ARGS+=	--without-ltdl
 CONFIGURE_ARGS+=	--without-unixodbc
 .endif
 
