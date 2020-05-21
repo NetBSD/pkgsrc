@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19882 2020/05/21 16:31:31 adam Exp $
+$NetBSD: TODO,v 1.19883 2020/05/21 20:59:41 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -708,7 +708,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ices-mp3-2.0.2
 	o icinga-base-2.11.2
 	o ike-2.0.1 [pkg/37032]
-	o ilmbase-2.5.1
 	o imapsync-1.678
 	o imp-6.2.12
 	o ingo-3.2.8
@@ -889,7 +888,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.16.2
 	o openafs-1.8
 	o opencsg-1.4.0
-	o openexr-2.5.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openoffice-4.1.7
