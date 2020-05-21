@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:53 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/05/21 10:18:45 markd Exp $
 
-SHA1 (tex-boxedminipage-2009/boxedminipage.tar.xz) = d9c35abd0faea0879d3786579694325b00fa535e
-RMD160 (tex-boxedminipage-2009/boxedminipage.tar.xz) = f3472bf44e60e44d6f43e65c7d01103e5f66cc66
-SHA512 (tex-boxedminipage-2009/boxedminipage.tar.xz) = bae40162234e6ba16930e2016cb714d714958c5e75c2596953a62925625def4ee61aa7ebea0f84ce8e2a30dce38d62c96ac39a8c93cbd05d4eb9ea8660916b8f
-Size (tex-boxedminipage-2009/boxedminipage.tar.xz) = 1304 bytes
+SHA1 (boxedminipage.r54827.tar.xz) = b43aeb0f59aac1759ddcf1866a0f05581709333f
+RMD160 (boxedminipage.r54827.tar.xz) = ba36b82b6fcc5dc3fb1ffab5c7b02c04b2dd9e29
+SHA512 (boxedminipage.r54827.tar.xz) = 697cc00b10468f515b5ebae838d623eec58085269c98897a5c2c4ea932ec52ae819110612feb84b6951ff391bff9309655abf6a41e13da156e5ecc52c015431b
+Size (boxedminipage.r54827.tar.xz) = 1460 bytes
