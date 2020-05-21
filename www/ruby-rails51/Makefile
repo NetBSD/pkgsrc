@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 15:30:32 taca Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/21 16:04:24 taca Exp $
 
 DISTNAME=	rails-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-rails${RUBY_RAILS}-${RAILS_VERSION}
@@ -22,7 +22,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sprockets-rails>2.0.0*:../../misc/ruby-sprockets-rai
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_INCOMPATIBLE=	24
 RUBY_RAILS_ACCEPTED=		51
 RUBY_RAILS_STRICT_DEP=		yes
 

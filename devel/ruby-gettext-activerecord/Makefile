@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/03/20 15:08:08 taca Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/21 16:04:22 taca Exp $
 
 DISTNAME=	gettext_activerecord-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,7 +15,6 @@ DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_INCOMPATIBLE=	24
 RUBY_RAILS_ACCEPTED=	# defined
 
 post-extract:
