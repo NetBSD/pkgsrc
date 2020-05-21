@@ -1,0 +1,4 @@
+SFML is a free multimedia C++ API that provides you low and high level access to
+graphics, input, audio, etc.
+
+This package contains the C++ language bindings of SFML.
