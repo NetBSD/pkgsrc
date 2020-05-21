@@ -1,0 +1,15 @@
+$NetBSD: patch-src_SFML_System_CMakeLists.txt,v 1.1 2020/05/21 08:42:00 plunky Exp $
+
+add NetBSD support
+
+--- src/SFML/System/CMakeLists.txt.orig	2018-10-15 19:41:39.000000000 +0000
++++ src/SFML/System/CMakeLists.txt
+@@ -90,7 +90,7 @@ sfml_add_library(sfml-system
+                  SOURCES ${SRC} ${PLATFORM_SRC})
+ 
+ # setup dependencies
+-if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_MACOSX)
++if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_NETBSD OR SFML_OS_MACOSX)
+     target_link_libraries(sfml-system PRIVATE pthread)
+ endif()
+ if(SFML_OS_LINUX)
