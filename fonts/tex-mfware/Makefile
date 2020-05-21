@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:31:43 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/21 10:32:20 markd Exp $
 
 DISTNAME=	mfware
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	36017
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54994
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mfware
-COMMENT=	Supporting tools for use with MetaFont
-#LICENSE=	knuth
+COMMENT=	Supporting tools for use with Metafont
+LICENSE=	public-domain
 
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
