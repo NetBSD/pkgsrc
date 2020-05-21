@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3084 2020/05/21 07:40:38 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3085 2020/05/21 07:40:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4862,3 +4862,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-cython to 0.29.19 [adam 2020-05-21]
 	Updated www/py-httplib2 to 0.18.1 [adam 2020-05-21]
 	Updated editors/vile to 9.8u [wiz 2020-05-21]
+	Updated editors/xvile to 9.8u [wiz 2020-05-21]
