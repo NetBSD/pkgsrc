@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2020/05/06 14:04:31 adam Exp $
+# $NetBSD: Makefile,v 1.76 2020/05/21 18:16:46 nia Exp $
 
-DISTNAME=	bzflag-2.4.18
-PKGREVISION=	8
-CATEGORIES=	games x11
+DISTNAME=	bzflag-2.4.20
+CATEGORIES=	games
 MASTER_SITES=	https://download.bzflag.org/bzflag/source/${PKGVERSION_NOREV}/
 
 MAINTAINER=	blymn@NetBSD.org
