@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/05/06 14:04:14 adam Exp $
+# $NetBSD: Makefile,v 1.61 2020/05/21 09:51:00 mef Exp $
 
 DISTNAME=	xmlrpc-c-1.51.04
 # the "super stable" branch
@@ -39,7 +39,7 @@ PTHREAD_LINKFLAGS=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
 SUBST_MESSAGE.pthread=	Fixing config scripts.
-SUBST_FILES.pthread=	xmlrpc-c-config.* xmlrpc-c-config.test.*
+SUBST_FILES.pthread=	xmlrpc-c-config.*
 SUBST_SED.pthread=	-e 's/-lpthread/${PTHREAD_LINKFLAGS:Q}/'
 SUBST_SED.pthread+=	-e 's/-L\(.\)libdir/-L\1libdir ${COMPILER_RPATH_FLAG}\1libdir/'
 
