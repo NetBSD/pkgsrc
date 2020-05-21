@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2014/08/22 11:24:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2020/05/21 20:58:32 ryoon Exp $
 
 BUILDLINK_TREE+=	ilmbase
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ilmbase
 ILMBASE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ilmbase+=	ilmbase>=1.0.1
-BUILDLINK_ABI_DEPENDS.ilmbase+=	ilmbase>=2.2.0nb1
+BUILDLINK_ABI_DEPENDS.ilmbase+=	ilmbase>=2.5.1
 BUILDLINK_PKGSRCDIR.ilmbase?=	../../graphics/ilmbase
 .endif # ILMBASE_BUILDLINK3_MK
 
