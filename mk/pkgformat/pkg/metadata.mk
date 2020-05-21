@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.24 2020/05/15 22:13:39 maya Exp $
+# $NetBSD: metadata.mk,v 1.25 2020/05/21 18:48:43 rillig Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -175,7 +175,7 @@ ${_BUILD_VERSION_FILE}:
 	${RUN}${RM} -f ${.TARGET}.tmp
 	${RUN}								\
 	exec 1>>${.TARGET}.tmp;						\
-	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
+	for f in ${.CURDIR}/Makefile ${FILESDIR:tA}/* ${PKGDIR:tA}/*; do \
 		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
 	done
 	${RUN}								\
@@ -185,7 +185,7 @@ ${_BUILD_VERSION_FILE}:
 	${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' | \
 	while read file; do						\
 		${TEST} ! -f "${PATCHDIR}/$$file" ||			\
-			${ECHO} "${PATCHDIR}/$$file";			\
+			${ECHO} "${PATCHDIR:tA}/$$file";		\
 	done
 	${RUN}								\
 	exec 1>>${.TARGET}.tmp;						\
@@ -193,7 +193,7 @@ ${_BUILD_VERSION_FILE}:
 	cd ${PATCHDIR}; for f in *; do					\
 		case "$$f" in						\
 		"*"|*.orig|*.rej|*~)	;;				\
-		patch-*)		${ECHO} "${PATCHDIR}/$$f" ;;	\
+		patch-*)		${ECHO} "${PATCHDIR:tA}/$$f" ;;	\
 		esac;							\
 	done
 	${RUN}								\

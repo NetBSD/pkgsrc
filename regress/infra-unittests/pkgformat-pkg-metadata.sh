@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: pkgformat-pkg-metadata.sh,v 1.1 2020/05/19 06:09:53 rillig Exp $
+# $NetBSD: pkgformat-pkg-metadata.sh,v 1.2 2020/05/21 18:48:43 rillig Exp $
 #
 # Demonstrates how mk/pkgformat/pkg/metadata.mk creates the versioning
 # information in +BUILD_VERSION.
@@ -74,7 +74,8 @@ fi
 
 if test_case_begin 'relative paths'; then
 
-	# As of May 2020, the +BUILD_VERSION contains corrupt data.
+	# Up to 2020-05-21, relative paths were stored wrong in the
+	# +BUILD_VERSION file.
 
 	wrkdir="$PWD"
 	pkgdir="$mocked_pkgsrcdir/category/package"
@@ -104,13 +105,10 @@ if test_case_begin 'relative paths'; then
 
 	assert_that "$exitcode" --equals '0'
 	assert_that "$tmpdir/output" --file-is-empty
-	# FIXME: All files listed here are supposed to be relative to
-	# the pkgsrc root directory.
 	assert_that "$wrkdir/.pkgdb/+BUILD_VERSION" --file-is-lines \
-		"./Makefile:	$cvsid" \
 		"category/package/Makefile:	$cvsid" \
-		"files/README:	$cvsid" \
-		"patches/patch-aa:	$cvsid"
+		"category/package/files/README:	$cvsid" \
+		"category/package/patches/patch-aa:	$cvsid"
 
 	test_case_end
 fi
