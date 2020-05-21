@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.22 2019/10/06 09:44:41 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.23 2020/05/21 13:42:10 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -211,20 +211,50 @@ CONFIGURE_ARGS+=	--enable-option-checking=fatal
 CONFIGURE_ARGS+=	--enable-option-checking=yes
 .endif
 
-# Inspects the configure scripts of a package to see whether there are
-# multiple configure scripts, and one of them reports an option as
-# unrecognized while some other still needs it.
-#
-# This target is expected to be called manually, after a package failed
-# to configure because of the GNU_CONFIGURE_STRICT check.
+_SHOW_UNKNOWN_CONFIGURE_OPTIONS_CMD= \
+	cd ${WRKSRC}; \
+	configures=$$( \
+		${FIND} ${CONFIGURE_DIRS} -name configure \
+		| ${SED} -e 's,^${WRKSRC}/,,' \
+		| LC_ALL=C ${SORT} -u \
+		| ${TR} '\n' ' ' \
+		| ${SED} 's, $$,,'); \
+	exitcode=0; \
+	for opt in "" \
+		${CONFIGURE_ARGS:M--enable-*} \
+		${CONFIGURE_ARGS:M--disable-*} \
+		${CONFIGURE_ARGS:M--with-*} \
+		${CONFIGURE_ARGS:M--without-*}; do \
+		[ "$$opt" ] || continue; \
+		optvar=$${opt%%=*}; \
+		optvar=$${optvar\#--}; \
+		optvar=$$(${ECHO} "$$optvar" \
+			| ${SED} -e 's/[-+.]/_/g' \
+				-e 's,^disable_,enable_,' \
+				-e 's,^without_,with_,'); \
+		[ "$$optvar" = 'enable_option_checking' ] && continue; \
+		${GREP} "^$$optvar$$" $$configures 1>/dev/null || { \
+			${ERROR_MSG} "[gnu-configure.mk] option $$opt not found in $$configures"; \
+			exitcode=1; \
+		}; \
+	done
+
+# Inspects the configure scripts of a package to see whether each option
+# of the form --enable-* or --disable-* or --with-* or --without-* is
+# known to at least one of the configure scripts.  If that is not the
+# case, the option is outdated in most cases, or it has a typo.
 #
 # See also: GNU_CONFIGURE_STRICT configure-help
 #
 # Keywords: GNU_CONFIGURE_STRICT configure-help
 show-unknown-configure-options: .PHONY
 	${RUN} ${MAKE} patch
-	${RUN} ${RM} -f ${_COOKIE.configure}
-	@${STEP_MSG} "Running configure scripts silently"
-	${RUN} ${MAKE} configure GNU_CONFIGURE_STRICT=warn 2>&1		\
-	| ${AWK} -f ${PKGSRCDIR}/mk/configure/gnu-configure-unknown.awk
-	${RUN} ${RM} -f ${_COOKIE.configure}
+	${RUN} ${_SHOW_UNKNOWN_CONFIGURE_OPTIONS_CMD}
+
+.if ${GNU_CONFIGURE_STRICT:tl} == yes
+USE_TOOLS+=	find grep sed sort tr
+
+pre-configure-checks-hook: _check-unknown-configure-options
+_check-unknown-configure-options: .PHONY
+	${RUN} ${_SHOW_UNKNOWN_CONFIGURE_OPTIONS_CMD}; exit $$exitcode
+.endif
