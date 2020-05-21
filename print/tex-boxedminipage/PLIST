@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/11 20:41:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/21 10:18:45 markd Exp $
 share/texmf-dist/tex/latex/boxedminipage/boxedminipage.sty
+share/texmf-dist/tex/latex/boxedminipage/boxedminipage2e.sty
