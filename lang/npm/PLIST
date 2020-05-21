@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/05/08 13:37:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/05/21 09:25:44 jperkin Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -4145,4 +4145,3 @@ man/man7/removal.7
 man/man7/scope.7
 man/man7/scripts.7
 man/man7/semver.7
-@pkgdir share
