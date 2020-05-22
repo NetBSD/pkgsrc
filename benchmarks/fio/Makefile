@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/04/17 17:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/22 05:53:36 rillig Exp $
 
 DISTNAME=	fio-3.19
 CATEGORIES=	benchmarks
@@ -19,7 +19,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 REPLACE_BASH+=		tools/genfio
 REPLACE_PYTHON+=	tools/fio_jsonplus_clat2csv
-REPLACE_PYTHON+=	tools/fio_latency2csv.py
 REPLACE_PYTHON+=	tools/fiologparser.py
 REPLACE_PYTHON+=	tools/hist/fiologparser_hist.py
 REPLACE_PYTHON+=	tools/plot/fio2gnuplot
