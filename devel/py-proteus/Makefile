@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/05/22 21:04:10 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/22 21:32:04 adam Exp $
 
 TRYTON_MODULE_NAME=	proteus
 PKGREVISION= 1
@@ -18,6 +18,5 @@ USE_LANGUAGES=	# none
 
 .include "options.mk"
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
