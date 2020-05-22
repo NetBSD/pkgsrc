@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/09/05 08:22:17 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/05/22 20:27:13 rillig Exp $
 
 DISTNAME=	Django-1.4.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
 USE_LANGUAGES=		# none
 REPLACE_PYTHON=		django/bin/*.py
 REPLACE_PYTHON+=	django/bin/profiling/*.py
-REPLACE_PYTHON+=	django/contrib/admin/bin/*.py
-REPLACE_PYTHON+=	django/contrib/admin/static/admin/js/*.py
 REPLACE_PYTHON+=	django/conf/project_template/*.py
 
 PYTHON_VERSIONS_ACCEPTED=	27 # use py-django if you want python-3.x support
