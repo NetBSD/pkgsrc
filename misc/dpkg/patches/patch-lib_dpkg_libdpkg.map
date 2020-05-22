@@ -1,0 +1,12 @@
+$NetBSD: patch-lib_dpkg_libdpkg.map,v 1.1 2020/05/22 01:24:36 joerg Exp $
+
+--- lib/dpkg/libdpkg.map.orig	2020-05-22 00:11:43.620737999 +0000
++++ lib/dpkg/libdpkg.map
+@@ -353,6 +353,7 @@ LIBDPKG_PRIVATE {
+ 	pkg_format_parse;
+ 	pkg_format_show;
+ 	pkg_format_free;
++	pkg_format_needs_db_fsys;
+ 
+ 	# Package specifiers
+ 	pkg_spec_is_illegal;
