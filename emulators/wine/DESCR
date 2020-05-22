@@ -5,5 +5,7 @@ API calls into POSIX calls on-the-fly, eliminating the performance and memory
 penalties of other methods and allowing you to cleanly integrate Windows
 applications into your desktop.
 
+This package tracks the Wine stable branch.
+
 On 32-bit systems this package supports only 32-bit applications, and on
 64-bit systems it supports only 64-bit applications.
