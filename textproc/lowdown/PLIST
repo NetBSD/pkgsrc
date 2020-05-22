@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/07 22:17:01 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/22 19:32:02 fcambus Exp $
 bin/lowdown
 bin/lowdown-diff
 include/lowdown.h
 lib/liblowdown.a
+lib/pkgconfig/lowdown.pc
 man/man1/lowdown.1
 man/man3/lowdown.3
 man/man3/lowdown_buf.3
