@@ -1,0 +1,2 @@
+This module provides the "romanian" style that can be set using
+\DTMsetstyle provided by datetime2.sty.

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 01:50:58 markd Exp $
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-AU.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-CA.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-GB.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-GG.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-IE.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-IM.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-JE.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-MT.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-NZ.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-en-US.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-english-base.ldf
+share/texmf-dist/tex/latex/datetime2-english/datetime2-english.ldf
