@@ -1,0 +1,4 @@
+The package allows nested endnotes, supports hyperref and
+provides means for easy customization of the list of notes. The
+package requires the expl3 bundle and packages from the LaTeX 3
+'package set'.
