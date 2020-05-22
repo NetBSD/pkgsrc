@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/04/11 07:40:34 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/05/22 08:08:23 adam Exp $
 
-SHA1 (aio-pika-6.6.0.tar.gz) = 1e21ed65512a7df3c97c0bb0d7534de949c825fa
-RMD160 (aio-pika-6.6.0.tar.gz) = 11eca90e7967cec5e6723ff16e3b9c955c47135b
-SHA512 (aio-pika-6.6.0.tar.gz) = cb9abc1cdfd487ff73dc9e18d1ffd2e08fc37373b2f778f7a0aaac42851566858d1cea4811654de9a332df5f9593000558d5a5193e7452610ee0a7726cf06810
-Size (aio-pika-6.6.0.tar.gz) = 31057 bytes
+SHA1 (aio-pika-6.6.1.tar.gz) = e1682ee4ae4465305656b13ac0ff46cbe71e29b8
+RMD160 (aio-pika-6.6.1.tar.gz) = 0a43bff4a4df56fda215bfd59e1697a22353b373
+SHA512 (aio-pika-6.6.1.tar.gz) = cff67478022352283cabdee948e2744f738c85753c95ed4269a25d212755558c204e7423ef8cc5c50bd20d6de7dec7ff41e240f8a6210edbf0ab9213a8995fac
+Size (aio-pika-6.6.1.tar.gz) = 32231 bytes
