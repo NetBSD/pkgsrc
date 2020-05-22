@@ -1,0 +1,16 @@
+$NetBSD: patch-programs_wineconsole_Makefile.in,v 1.1 2020/05/22 17:44:42 nia Exp $
+
+kludge: link against curses as build fails owing to _acs_char(curses)
+being extern.
+
+--- programs/wineconsole/Makefile.in.orig	2019-03-15 20:18:31.000000000 +0000
++++ programs/wineconsole/Makefile.in
+@@ -1,7 +1,7 @@
+ MODULE    = wineconsole.exe
+ APPMODE   = -mwindows
+ IMPORTS   = advapi32
+-DELAYIMPORTS = comctl32 user32 gdi32
++DELAYIMPORTS = comctl32 user32 gdi32 curses
+ 
+ C_SRCS = \
+ 	curses.c \
