@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2019/06/15 08:41:30 adam Exp $
+# $NetBSD: Makefile,v 1.37 2020/05/22 09:09:58 nia Exp $
 
-DISTNAME=	gsm-1.0.18
+DISTNAME=	gsm-1.0.19
 CATEGORIES=	audio
 MASTER_SITES=	http://www.quut.com/gsm/
 
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.quut.com/gsm/
 COMMENT=	Audio converter and library for converting u-law to gsm encoding
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/gsm-1.0-pl18
+WRKSRC=		${WRKDIR}/gsm-1.0-pl19
 USE_LIBTOOL=	yes
 NO_CONFIGURE=	yes
 MAKE_ENV+=	ROOT=${WRKSRC}
