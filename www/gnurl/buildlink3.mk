@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2020/03/08 16:48:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2020/05/22 10:55:52 adam Exp $
 
 BUILDLINK_TREE+=	gnurl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnurl
 GNURL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnurl+=	gnurl>=7.63.0
-BUILDLINK_ABI_DEPENDS.gnurl+=	gnurl>=7.67.0nb1
+BUILDLINK_ABI_DEPENDS.gnurl+=	gnurl>=7.70.0nb1
 BUILDLINK_PKGSRCDIR.gnurl?=	../../www/gnurl
 
 pkgbase:= gnurl

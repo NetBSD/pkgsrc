@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.136 2020/04/30 09:35:09 nia Exp $
+# $NetBSD: Makefile,v 1.137 2020/05/22 10:56:45 adam Exp $
 
 DISTNAME=	lynx2.8.9rel.1
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://invisible-mirror.net/archives/lynx/tarballs/
 MASTER_SITES+=	ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/
