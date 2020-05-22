@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/03 11:45:29 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/22 05:45:23 rillig Exp $
 
 DISTNAME=	argus-3.7
 PKGREVISION=	5
@@ -30,8 +30,6 @@ CONFIGURE_ARGS+=	--cgi_dir ${PREFIX}/libexec/cgi-bin
 CONFIGURE_ARGS+=	--data_dir ${VARBASE}/argus
 CONFIGURE_ARGS+=	--www_dir ${VARBASE}/argus/www/htdocs
 CONFIGURE_ENV+=		PERL=${TOOLS_PERL5:Q}
-
-REPLACE_PERL+=		${WRKSRC}/built/argus-config
 
 RCD_SCRIPTS=		argusd
 
