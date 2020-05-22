@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/05/22 20:47:22 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/05/22 21:31:15 adam Exp $
 
 DISTNAME=	Nevow-0.14.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -21,6 +21,5 @@ INSTALLATION_DIRS+=	share/doc
 post-install:
 	cd ${DESTDIR}${PREFIX} && ${MV} doc share/doc/py-nevow
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
