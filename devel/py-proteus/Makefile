@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:38 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/22 21:04:10 rillig Exp $
+
 TRYTON_MODULE_NAME=	proteus
 PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
@@ -16,9 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
 USE_LANGUAGES=	# none
 
 .include "options.mk"
-
-REPLACE_PYTHON+=	tests/test_wizard.py tests/test_report.py tests/test_model.py tests/test_context.py
-REPLACE_PYTHON+=	tests/test_config.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
