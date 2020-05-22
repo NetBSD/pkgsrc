@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 03:27:50 markd Exp $
+share/texmf-dist/tex/latex/translations/translations-basic-dictionary-catalan.trsl
+share/texmf-dist/tex/latex/translations/translations-basic-dictionary-dutch.trsl
+share/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+share/texmf-dist/tex/latex/translations/translations-basic-dictionary-french.trsl
+share/texmf-dist/tex/latex/translations/translations-basic-dictionary-german.trsl
+share/texmf-dist/tex/latex/translations/translations-basic-dictionary-spanish.trsl
+share/texmf-dist/tex/latex/translations/translations.sty
