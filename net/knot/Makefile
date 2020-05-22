@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/05/22 10:56:28 adam Exp $
+# $NetBSD: Makefile,v 1.55 2020/05/22 23:29:31 maya Exp $
 
 DISTNAME=	knot-2.9.4
 PKGREVISION=	1
@@ -23,9 +23,6 @@ CONFIGURE_ARGS+=	--with-urcu=${BUILDLINK_PREFIX.userspace-rcu}
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 
 CONFIGURE_ARGS.NetBSD+=	--enable-recvmmsg=no
-
-# -O? stops cc1 on NetBSD/amd64 9.99.47.
-BUILDLINK_TRANSFORM+=	rm:-O2
 
 .include "../../mk/bsd.prefs.mk"
 
