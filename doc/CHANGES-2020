@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3104 2020/05/22 05:29:26 markd Exp $
+$NetBSD: CHANGES-2020,v 1.3105 2020/05/22 08:00:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4960,3 +4960,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-xpatch version 0.3 [markd 2020-05-22]
 	Added print/tex-xpatch-doc version 0.3 [markd 2020-05-22]
 	Updated security/kstart to 4.2 [markd 2020-05-22]
+	Updated multimedia/ffmpeg4 to 4.2.3 [adam 2020-05-22]
+	Updated multimedia/ffplay4 to 4.2.3 [adam 2020-05-22]
