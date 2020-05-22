@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/22 03:10:33 markd Exp $
+
+SHA1 (minifp.r32559.tar.xz) = 1f00d8234672e1c72dccbd984f858efe16972c85
+RMD160 (minifp.r32559.tar.xz) = 2a7a1e78fd51179bfb3a31c47d3172803d808bfd
+SHA512 (minifp.r32559.tar.xz) = 412bbd3466eee82a99b43d6f4a5998a0a22b20c2d51621368ecba1084010a5333bda9e221b07dcfc6ddea8810edd0dcf60c2be6f926ca0da33071e6a812108d9
+Size (minifp.r32559.tar.xz) = 10000 bytes
