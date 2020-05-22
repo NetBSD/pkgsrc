@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.93 2020/05/22 17:44:41 nia Exp $
+$NetBSD: distinfo,v 1.94 2020/05/22 19:48:34 nia Exp $
 
-SHA1 (wine-4.0.tar.xz) = c3ebc9a01ee45036067742e56efb9c25db3fc815
-RMD160 (wine-4.0.tar.xz) = 617a42ed4719e6ea06b48866811c30629d8b2a0e
-SHA512 (wine-4.0.tar.xz) = 7607fa7a3d5f7bcd3d8c4c9e7bb6e1987466110bbfc672782ebe57c6d9da348c58e76abf40b0a70c725dfd703163db6e194ee0e3db11a47b6b60e225163308dd
-Size (wine-4.0.tar.xz) = 21644692 bytes
+SHA1 (wine-4.0.3.tar.xz) = c8d19a0ee0cb7b5f9b45ef4b8441990b8976dcf8
+RMD160 (wine-4.0.3.tar.xz) = 347dab2714272e4ef36f397cdbc52c5b95ea211a
+SHA512 (wine-4.0.3.tar.xz) = a8fde0bcf600eaec56c3ce58c9aa992386784c85cf1c93aa84d50aff4c842b12a6b099c23391d3ad9a0059f3dc9069c0f8e00fad293305ba8a33afc70bf26e14
+Size (wine-4.0.3.tar.xz) = 21680420 bytes
 SHA1 (patch-configure) = 5dda8249ec5533b4bbe5d735df33491452acc078
 SHA1 (patch-dlls_ntdll_thread.c) = 8a13e956e6622cc215fbe6e9943a704b3a926168
 SHA1 (patch-dlls_wininet_http.c) = 9e539ed70a5bf010e50c7beb1c3b3c877ed5e5d8
