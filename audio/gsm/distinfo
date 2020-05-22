@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.12 2019/06/15 08:41:30 adam Exp $
+$NetBSD: distinfo,v 1.13 2020/05/22 09:09:58 nia Exp $
 
-SHA1 (gsm-1.0.18.tar.gz) = d36580154ea21c1baa6772193365f31d496624b6
-RMD160 (gsm-1.0.18.tar.gz) = e268a667257aa42d5ddbb76c9a8b519f0a7cdb2d
-SHA512 (gsm-1.0.18.tar.gz) = c5b597f68d4a270e1d588f480dcde66fda8302564c687d753f2bd4fc41d246109243e567568da61eddce170f5232d869984743ddf1eea7696d673014a1a453b7
-Size (gsm-1.0.18.tar.gz) = 64549 bytes
+SHA1 (gsm-1.0.19.tar.gz) = 3ea15bf487593b589bec1b8d08b25e66c8a125f9
+RMD160 (gsm-1.0.19.tar.gz) = d8efbcb75aa9cc6a03d288fef1d7d703150d40cb
+SHA512 (gsm-1.0.19.tar.gz) = f69b4bf2d918b118b5de90b8ab88fd026008ac7432f07b872b81fe52cdc781f605dca8eedcdaebc8beb974cef388496c618f92a41961c62057009964159f8392
+Size (gsm-1.0.19.tar.gz) = 64665 bytes
 SHA1 (patch-Makefile) = 4e989df8ea5b9eded47fb8a6cd2f8bb4a1dca30f
-SHA1 (patch-inc_config.h) = b70b380be682bd8a1c8f5e98177776572cacf186
