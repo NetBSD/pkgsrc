@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/05/06 14:04:20 adam Exp $
+# $NetBSD: Makefile,v 1.68 2020/05/22 19:51:17 rillig Exp $
 
 VERSION=	2019.05
 DISTNAME=	openscad-${VERSION}
@@ -20,7 +20,6 @@ WRKSRC=		${WRKDIR}/${PKGBASE}-${DISTNAME}
 
 CHECK_PORTABILITY_SKIP+=	tests/compare-bitmaps.sh
 
-REPLACE_PYTHON=	libraries/MCAD/get_submodules.py
 .include "../../lang/python/application.mk"
 
 MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
