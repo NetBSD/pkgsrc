@@ -1,0 +1,63 @@
+$NetBSD: patch-configure,v 1.1 2020/05/22 13:45:11 joerg Exp $
+
+--- configure.orig	2020-05-22 12:07:27.587902025 +0000
++++ configure
+@@ -11346,7 +11346,7 @@ $as_echo_n "checking for BSD specific fe
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: " >&5
+ $as_echo "" >&6; }
+ 
+-		for ac_header in ifaddrs.h kinfo.h libproc.h net/if_media.h sys/dkstat.h sys/disk.h sys/iostat.h sys/resource.h sys/sched.h sys/ucred.h sys/user.h uvm/uvm.h sys/vmmeter.h vm/vm_param.h
++		for ac_header in ifaddrs.h kinfo.h libproc.h net/if_media.h sys/dkstat.h sys/disk.h sys/iostat.h sys/resource.h sys/sched.h sys/ucred.h sys/user.h uvm/uvm.h uvm/uvm_extern.h sys/vmmeter.h vm/vm_param.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
+@@ -12282,6 +12282,9 @@ $ac_includes_default
+ #ifdef HAVE_UVM_UVM_H
+ #include <uvm/uvm.h>
+ #endif
++#ifdef HAVE_UVM_UVM_EXTERN_H
++#include <uvm/uvm_extern.h>
++#endif
+ 
+ "
+ if test "x$ac_cv_type_struct_uvmexp_sysctl" = xyes; then :
+@@ -12307,6 +12310,9 @@ $ac_includes_default
+ #ifdef HAVE_UVM_UVM_H
+ #include <uvm/uvm.h>
+ #endif
++#ifdef HAVE_UVM_UVM_EXTERN_H
++#include <uvm/uvm_extern.h>
++#endif
+ 
+ "
+ if test "x$ac_cv_type_struct_uvmexp" = xyes; then :
+@@ -12332,6 +12338,9 @@ fi
+ #ifdef HAVE_UVM_UVM_H
+ #include <uvm/uvm.h>
+ #endif
++#ifdef HAVE_UVM_UVM_EXTERN_H
++#include <uvm/uvm_extern.h>
++#endif
+ 
+ 
+ "
+@@ -12353,6 +12362,9 @@ fi
+ #ifdef HAVE_UVM_UVM_H
+ #include <uvm/uvm.h>
+ #endif
++#ifdef HAVE_UVM_UVM_EXTERN_H
++#include <uvm/uvm_extern.h>
++#endif
+ 
+ 
+ "
+@@ -12374,6 +12386,9 @@ fi
+ #ifdef HAVE_UVM_UVM_H
+ #include <uvm/uvm.h>
+ #endif
++#ifdef HAVE_UVM_UVM_EXTERN_H
++#include <uvm/uvm_extern.h>
++#endif
+ 
+ 
+ "
