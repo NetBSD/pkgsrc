@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.27 2020/04/29 23:20:42 gutteridge Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.28 2020/05/22 18:50:08 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -187,6 +187,294 @@ temporary filesystems, others must survive a sudden reboot.</para>
 <listitem><para>5 GB for temporary files (read-write, local, temporary)</para></listitem>
 
 </itemizedlist>
+
+</sect1>
+
+<sect1 id="bulk.var">
+<title>Bulk build variants</title>
+
+<para>To ensure that pkgsrc packages work in different configurations, it
+makes sense to run non-default bulk builds from time to time. This
+section lists some ideas for bulk builds that intentionally let packages
+fail if they don't follow the pkgsrc style.</para>
+
+<sect2 id="bulk.var.subst_noop">
+<title>Strict SUBST blocks</title>
+
+<para>Up to May 2020, the SUBST blocks ignored files that didn't exist,
+as well as substitutions that didn't have any effect. There were quite a
+few SUBST blocks that were redundant, and these have been removed
+already.</para>
+
+<para>The next step would be to not only check that each filename pattern
+has an effect but also that each substitution in SUBST_SED or SUBST_VARS
+applies to at least one file.</para>
+
+<para>To do this, <filename>mk/subst.mk</filename> would have to be
+adjusted, in a similar way as the check for no-op SUBST_FILES. There are
+several regression tests in <filename>regress/infra-unittests</filename>
+that help to get all edge cases correct.</para>
+
+<para>When a package fails this additional check, there are various
+possible causes why the <varname>SUBST_SED</varname> became a
+no-op.</para>
+
+<orderedlist>
+
+<listitem><para>The pattern used to be found in a former version of the
+package, but is not needed anymore. In that case, just remove
+it.</para></listitem>
+
+<listitem><para>The pattern contains a typo. In that case, fix the typo
+and bump <varname>PKGREVISION</varname>, since the fixed typo will
+probably modify the resulting binary package.</para></listitem>
+
+<listitem><para>There is a patch that is applied before the SUBST block,
+and the patch accidentally contains the change that was intended for the
+SUBST block. In that case, remove the respective hunk from the
+patch.</para></listitem>
+
+</orderedlist>
+
+</sect2>
+
+<sect2 id="bulk.var.confopt">
+<title>Detect unknown configure options</title>
+
+<para>Add the following line to &mk.conf;.</para>
+
+<programlisting>
+GNU_CONFIGURE_STRICT=   yes
+</programlisting>
+
+<para>When a package fails this additional check, the most common cause
+is that the configure option was valid for an older version of the
+package but does not apply anymore. In that case, just remove it.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.comperr">
+<title>Detect classes of bugs by forcing compiler warnings</title>
+
+<para>The job of a compiler is not restricted to producing executable
+code, most compilers also detects typical mistakes.</para>
+
+<para>Add the following line to &mk.conf;.</para>
+
+<programlisting>
+CFLAGS+=        -Werror=char-subscripts
+</programlisting>
+
+<para>When a package fails this additional check, first document the
+circumstances in which the compiler produced the error message. This
+includes:</para>
+
+<itemizedlist>
+
+<listitem><para>The platform
+(<varname>MACHINE_PLATFORM</varname>)</para></listitem>
+
+<listitem><para>The source file</para></listitem>
+
+<listitem><para>An excerpt of the code. GCC and Clang already do this as
+part of the diagnostic.</para></listitem>
+
+<listitem><para>The error message from the compiler.</para></listitem>
+
+</itemizedlist>
+
+<para>If a package produces these error messages, but the package is
+fine, document this in the package Makefile, like this:</para>
+
+<programlisting>
+# Version ${VERSION} failed on ${MACHINE_PLATFORM}:
+# error message
+# code
+# reason why the code does not need to be fixed
+BUILDLINK_TRANSFORM+=   rm:-Werror=char-subscripts
+</programlisting>
+
+<para>If the error messages from the compiler are valid and the code
+needs to be fixed, prepare a patch for a single source file, or if it's a
+one-liner fix, add a SUBST block to the package Makefile. In any case,
+report it to the upstream authors of the package.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.dirs">
+<title>Use custom directories</title>
+
+<para>Some directories like <varname>PREFIX</varname>,
+<varname>VARBASE</varname>, <varname>PKG_SYSCONFDIR</varname>,
+<varname>PKGMANDIR</varname>, <varname>PKG_INFODIR</varname> can be
+configured in pkgsrc. Set these to arbitrary paths during bootstrap or
+afterwards in &mk.conf;.</para>
+
+<programlisting>
+PREFIX=         /a-random-uuid
+PKG_SYSCONFDIR= /a-random-uuid
+VARBASE=        /a-random-uuid
+PKGMANDIR=	a-random-uuid
+PKG_INFODIR=	a-random-uuid
+</programlisting>
+
+</sect2>
+
+<sect2 id="bulk.var.warn">
+<title>Turn warnings into errors</title>
+
+<para>When building a package, warnings are typically ignored since they
+just flow by and do not cause the build to fail immediately. To find
+these warnings, redefine them to errors in &mk.conf;.</para>
+
+<programlisting>
+DELAYED_WARNING_MSG=    ${DELAYED_ERROR_MSG} "(was warning)"
+WARNING_MSG=            ${FAIL_MSG} "(was warning)"
+</programlisting>
+
+<para>(There are many more classes of warnings in pkgsrc, and most of
+them can be redefined with a simple definition like above.</para>
+
+<para>If a package suggest to add <varname>USE_TOOLS+=perl</varname> to
+the package Makefile, research whether the package actually needs Perl.
+If it does, add <varname>USE_TOOLS+=perl</varname> to the package
+Makefile, and if it doesn't, add
+<varname>TOOLS_BROKEN+=perl</varname>.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.pkglint">
+<title>Reject packages for which pkglint reports errors</title>
+
+<para>Using pkglint as part of the regular build process is mostly a
+waste of time. If you want to fix some of the warnings, just run pkglint
+recursively on the whole pkgsrc tree. This will take a few minutes (up to
+10), which is much faster than a complete bulk build.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.strings">
+<title>Reject packages that contain forbidden strings</title>
+
+<para>To ensure that the binary packages don't contain references to the
+build directory, there is already <varname>CHECK_WRKREF</varname>. If
+that variable includes the item <literal>extra</literal>, it is
+possible to define additional patterns that must not appear in any
+installed file. This is specified in &mk.conf;.</para>
+
+<programlisting>
+CHECK_WRKREF=                   extra
+CHECK_WRKREF_EXTRA_DIRS+=       /usr/local
+CHECK_WRKREF_EXTRA_DIRS+=       /usr/pkg
+CHECK_WRKREF_EXTRA_DIRS+=	@[A-Z][A-Z]*@
+</programlisting>
+
+<para>The above patterns will probably generate many false positives,
+therefore the results need to be taken with a grain of salt.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.test">
+<title>Reject packages whose self-test fails</title>
+
+<para>To run the test suites that come with each package, add this line
+to &mk.conf;.</para>
+
+<programlisting>
+PKGSRC_RUN_TEST=        yes
+</programlisting>
+
+<para>Be prepared that even the most basic packages fail this test. When
+doing a bulk build with this, it will often abort in the early phase
+where the packages are scanned for their dependencies since there are
+cyclic dependencies. There is still a lot to do in this area.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.shvar">
+<title>Reject packages that use undefined shell variables</title>
+
+<para>To catch typos in the shell snippets from the Makefile fragments,
+add the <literal>-u</literal> flag to most of the commands by adding this
+line to &mk.conf;.</para>
+
+<programlisting>
+RUN=    @set -eu;
+</programlisting>
+
+<para>See <filename>mk/misc/common.mk</filename> for the existing
+definition.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.quiet">
+<title>Turn off verbose logging</title>
+
+<para>The build logs of a package are often quite long. This allows error
+messages or other interesting details to hide between the noise. To make
+the actual error message stand out more, add these lines to
+&mk.conf;.</para>
+
+<programlisting>
+GNU_CONFIGURE_QUIET=    yes
+MAKE_FLAGS+=            -s
+</programlisting>
+
+<para>The <literal>-s</literal> option works for both GNU Make and BSD
+Make. On exotic platforms with their own make, it may be a little
+different.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.options">
+<title>Select random sets of options</title>
+
+<para>Most bulk builds run with the default package options. This means
+that other combinations of options are not regularly tested. To do this,
+run a bulk build with these configurations.</para>
+
+<itemizedlist>
+<listitem><para>no options enabled</para></listitem>
+<listitem><para>all options enabled</para></listitem>
+<listitem><para>2n + 0</para></listitem>
+<listitem><para>2n + 1</para></listitem>
+<listitem><para>4n + 0..1</para></listitem>
+<listitem><para>4n + 2..3</para></listitem>
+<listitem><para>8n + 0..3</para></listitem>
+<listitem><para>8n + 4..7</para></listitem>
+<listitem><para>2048n + 0..1023</para></listitem>
+<listitem><para>2048n + 1024..2047</para></listitem>
+</itemizedlist>
+
+<para>Open questions are:</para>
+
+<itemizedlist>
+
+<listitem><para>how to collect all options from the entire
+pkgsrc</para></listitem>
+
+<listitem><para>how to handle mutually exclusive
+options</para></listitem>
+
+<listitem><para>the sets of mutually exclusive options are defined
+per-package</para></listitem>
+
+<listitem><para>the sets of nonempty sets are defined
+per-package</para></listitem>
+
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="bulk.var.build_defs">
+<title>Select random configurations of BUILD_DEFS</title>
+
+<para>Just like the <varname>PKG_OPTIONS</varname>, the
+<varname>BUILD_DEFS</varname> also allow different variants of pkgsrc to
+be created. The same ideas as in <xref linkend="bulk.var.options"/>
+apply.</para>
+
+</sect2>
 
 </sect1>
 
