@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2020/05/22 01:24:36 joerg Exp $
+
+For the obstack support
+
+--- src/Makefile.in.orig	2020-05-22 00:13:15.779186497 +0000
++++ src/Makefile.in
+@@ -430,6 +430,7 @@ AM_CPPFLAGS = \
+ 
+ LDADD = \
+ 	../lib/dpkg/libdpkg.la \
++	../lib/compat/libcompat.la \
+ 	$(LIBINTL)
+ 
+ EXTRA_DIST = \
