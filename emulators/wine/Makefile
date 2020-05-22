@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.213 2020/05/22 17:44:41 nia Exp $
+# $NetBSD: Makefile,v 1.214 2020/05/22 19:48:34 nia Exp $
 
-DISTNAME=	wine-4.0
+DISTNAME=	wine-4.0.3
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/4.0/
 MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/4.0/
@@ -22,6 +22,7 @@ ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
 
 UNLIMIT_RESOURCES=	datasize
 
+CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-capi
 CONFIGURE_ARGS+=	--without-gphoto
 CONFIGURE_ARGS+=	--without-gssapi
