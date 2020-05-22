@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/09/26 07:51:27 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2020/05/22 21:28:52 rillig Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -46,13 +46,12 @@ SUBST_MESSAGE.files=	Fixing configuration files.
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*/bin/php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	scripts/import_vcards.php \
-			scripts/upgrades/create_default_histories.php \
-			scripts/upgrades/public_to_horde_share.php \
-			scripts/import_squirrelmail_abook.php \
+REPLACE_FILES.php=	scripts/import_squirrelmail_file_abook.php \
+			scripts/import_squirrelmail_sql_abook.php \
+			scripts/import_vcards.php \
 			scripts/upgrades/2.1_to_2.2_sql_schema.php \
-			scripts/import_squirrelmail_file_abook.php \
-			scripts/import_squirrelmail_sql_abook.php
+			scripts/upgrades/create_default_histories.php \
+			scripts/upgrades/public_to_horde_share.php
 
 CONF_FILES=		${EGDIR}/turba.conf ${PKG_SYSCONFDIR}/turba.conf
 CONF_FILES_PERMS+=	${TURBADIR}/config/sources.php.dist \
