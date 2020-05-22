@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2020/05/22 02:28:23 markd Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/22 03:57:05 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2020pre2
+PKGNAME=	texlive-${DISTNAME}-2020pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	55060
@@ -256,7 +256,7 @@ DEPENDS+=	tex-cutwin-[0-9]*:../../print/tex-cutwin
 # depend cyber
 # depend cybercic
 DEPENDS+=	tex-dashbox-[0-9]*:../../print/tex-dashbox
-# depend dashrule
+DEPENDS+=	tex-dashrule-[0-9]*:../../print/tex-dashrule
 # depend dashundergaps
 # depend dataref
 DEPENDS+=	tex-datatool-[0-9]*:../../print/tex-datatool
@@ -382,7 +382,7 @@ DEPENDS+=	tex-endnotes-[0-9]*:../../print/tex-endnotes
 # depend endnotes-hy
 # depend engpron
 # depend engrec
-# depend enotez
+DEPENDS+=	tex-enotez-[0-9]*:../../print/tex-enotez
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 # depend enumitem-zref
 # depend envbig
@@ -768,7 +768,7 @@ DEPENDS+=	tex-mfirstuc-[0-9]*:../../print/tex-mfirstuc
 DEPENDS+=	tex-midpage-[0-9]*:../../print/tex-midpage
 # depend minibox
 # depend minidocument
-# depend minifp
+DEPENDS+=	tex-minifp-[0-9]*:../../math/tex-minifp
 # depend minipage-marginpar
 DEPENDS+=	tex-minitoc-[0-9]*:../../print/tex-minitoc
 # depend minorrevision
@@ -973,7 +973,7 @@ DEPENDS+=	tex-prosper-[0-9]*:../../print/tex-prosper
 # depend quicktype
 # depend quiz2socrative
 # depend quotchap
-# depend quoting
+DEPENDS+=	tex-quoting-[0-9]*:../../print/tex-quoting
 # depend quotmark
 # depend ran_toks
 # depend randtext
@@ -1021,7 +1021,7 @@ DEPENDS+=	tex-rotfloat-[0-9]*:../../print/tex-rotfloat
 # depend sanitize-umlaut
 DEPENDS+=	tex-sauerj-[0-9]*:../../print/tex-sauerj
 # depend savefnmark
-# depend savesym
+DEPENDS+=	tex-savesym-[0-9]*:../../print/tex-savesym
 # depend savetrees
 DEPENDS+=	tex-scale-[0-9]*:../../print/tex-scale
 # depend scalebar
@@ -1065,7 +1065,7 @@ DEPENDS+=	tex-showdim-[0-9]*:../../print/tex-showdim
 DEPENDS+=	tex-showlabels-[0-9]*:../../print/tex-showlabels
 DEPENDS+=	tex-sidecap-[0-9]*:../../print/tex-sidecap
 # depend sidenotes
-# depend silence
+DEPENDS+=	tex-silence-[0-9]*:../../print/tex-silence
 # depend simplecd
 # depend simplecv
 # depend simpleinvoice
@@ -1178,7 +1178,7 @@ DEPENDS+=	tex-textpos-[0-9]*:../../print/tex-textpos
 DEPENDS+=	tex-thmtools-[0-9]*:../../print/tex-thmtools
 # depend threadcol
 DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
-# depend threeparttablex
+DEPENDS+=	tex-threeparttablex-[0-9]*:../../print/tex-threeparttablex
 # depend thumb
 # depend thumbs
 # depend thumby
@@ -1202,7 +1202,7 @@ DEPENDS+=	tex-todonotes-[0-9]*:../../print/tex-todonotes
 # depend topiclongtable
 # depend totcount
 DEPENDS+=	tex-totpages-[0-9]*:../../print/tex-totpages
-# depend translations
+DEPENDS+=	tex-translations-[0-9]*:../../print/tex-translations
 DEPENDS+=	tex-transparent-[0-9]*:../../print/tex-transparent
 # depend trfsigns
 DEPENDS+=	tex-trimspaces-[0-9]*:../../print/tex-trimspaces
@@ -1294,7 +1294,7 @@ DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 # depend xmpincl
 # depend xnewcommand
 # depend xoptarg
-# depend xpatch
+DEPENDS+=	tex-xpatch-[0-9]*:../../print/tex-xpatch
 # depend xpeek
 # depend xprintlen
 # depend xpunctuate
