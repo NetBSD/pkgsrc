@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 01:51:01 markd Exp $
+share/texmf-dist/tex/latex/datetime2-samin/datetime2-samin-ascii.ldf
+share/texmf-dist/tex/latex/datetime2-samin/datetime2-samin-utf8.ldf
+share/texmf-dist/tex/latex/datetime2-samin/datetime2-samin.ldf
