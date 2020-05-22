@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/20 21:50:56 nils Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/22 05:47:52 rillig Exp $
 
 DISTNAME=	dehydrated-0.6.5
 CATEGORIES=	security
@@ -15,7 +15,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 NO_BUILD=	yes
 
 USE_TOOLS+=	bash:run sed:run awk:run curl:run pax openssl
-REPLACE_BASH=	dehydrated test.sh docs/examples/hook.sh
+REPLACE_BASH=	dehydrated docs/examples/hook.sh
 
 PKG_SYSCONFSUBDIR=	dehydrated
 EGDIR=			${PREFIX}/share/examples/dehydrated
