@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2020/05/06 14:04:19 adam Exp $
+# $NetBSD: Makefile,v 1.63 2020/05/22 10:55:56 adam Exp $
 
 DISTNAME=	terminatorX-4.0.1
 PKGNAME=	${DISTNAME:S/X/x/1}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	https://terminatorx.org/dist/
 

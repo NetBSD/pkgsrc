@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/03/08 01:28:14 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/22 10:56:48 adam Exp $
 
 DISTNAME=	xorg-server-1.17.2
 PKGNAME=	${DISTNAME:S/xorg-server/modular-xorg-xquartz/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	https://www.x.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
