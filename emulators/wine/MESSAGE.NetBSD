@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2020/05/22 17:44:41 nia Exp $
+
+If you are experiencing crashes, it may be due to a security measure
+blocking the mapping of the NULL page.
+
+You can disable this (at a security cost) with the following command:
+
+# sysctl -w vm.user_va0_disable=0
+
+===========================================================================
