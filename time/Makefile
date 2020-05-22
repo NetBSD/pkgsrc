@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2020/04/14 14:26:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.204 2020/05/22 01:58:50 markd Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -186,6 +186,50 @@ SUBDIR+=	taskwarrior
 SUBDIR+=	tdl
 SUBDIR+=	tex-datenumber
 SUBDIR+=	tex-datenumber-doc
+SUBDIR+=	tex-datetime2
+SUBDIR+=	tex-datetime2-bahasai
+SUBDIR+=	tex-datetime2-basque
+SUBDIR+=	tex-datetime2-breton
+SUBDIR+=	tex-datetime2-bulgarian
+SUBDIR+=	tex-datetime2-catalan
+SUBDIR+=	tex-datetime2-croatian
+SUBDIR+=	tex-datetime2-czech
+SUBDIR+=	tex-datetime2-danish
+SUBDIR+=	tex-datetime2-doc
+SUBDIR+=	tex-datetime2-dutch
+SUBDIR+=	tex-datetime2-en-fulltext
+SUBDIR+=	tex-datetime2-english
+SUBDIR+=	tex-datetime2-esperanto
+SUBDIR+=	tex-datetime2-estonian
+SUBDIR+=	tex-datetime2-finnish
+SUBDIR+=	tex-datetime2-french
+SUBDIR+=	tex-datetime2-galician
+SUBDIR+=	tex-datetime2-german
+SUBDIR+=	tex-datetime2-greek
+SUBDIR+=	tex-datetime2-hebrew
+SUBDIR+=	tex-datetime2-icelandic
+SUBDIR+=	tex-datetime2-irish
+SUBDIR+=	tex-datetime2-italian
+SUBDIR+=	tex-datetime2-it-fulltext
+SUBDIR+=	tex-datetime2-latin
+SUBDIR+=	tex-datetime2-lsorbian
+SUBDIR+=	tex-datetime2-magyar
+SUBDIR+=	tex-datetime2-norsk
+SUBDIR+=	tex-datetime2-polish
+SUBDIR+=	tex-datetime2-portuges
+SUBDIR+=	tex-datetime2-romanian
+SUBDIR+=	tex-datetime2-russian
+SUBDIR+=	tex-datetime2-samin
+SUBDIR+=	tex-datetime2-scottish
+SUBDIR+=	tex-datetime2-serbian
+SUBDIR+=	tex-datetime2-slovak
+SUBDIR+=	tex-datetime2-slovene
+SUBDIR+=	tex-datetime2-spanish
+SUBDIR+=	tex-datetime2-swedish
+SUBDIR+=	tex-datetime2-turkish
+SUBDIR+=	tex-datetime2-ukrainian
+SUBDIR+=	tex-datetime2-usorbian
+SUBDIR+=	tex-datetime2-welsh
 SUBDIR+=	titrax
 SUBDIR+=	todotxt
 SUBDIR+=	vixie-cron
