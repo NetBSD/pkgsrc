@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/02 11:23:04 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/22 19:46:34 rillig Exp $
 
 DISTNAME=	picom-8
 CATEGORIES=	x11
@@ -20,7 +20,6 @@ TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 MESON_ARGS+=	-Dwith_docs=true
 
-REPLACE_PYTHON+=	bin/compton-convgen.py
 REPLACE_SH+=		bin/picom-trans
 
 post-install:
