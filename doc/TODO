@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19884 2020/05/22 05:29:26 markd Exp $
+$NetBSD: TODO,v 1.19885 2020/05/22 08:08:44 adam Exp $
 
 Suggested new packages
 ======================
@@ -868,7 +868,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ncview-2.1.6
 	o netbt-hcidump-5.37
 	o netramet-50
-	o nettle-3.6
 	o newmail-1.0.2
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
