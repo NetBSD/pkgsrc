@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2019/06/08 10:40:54 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/05/22 05:51:19 rillig Exp $
 #
 # used by editors/emacs25/Makefile
 # used by editors/emacs25-nox11/Makefile
@@ -36,9 +36,6 @@ PLIST_SRC+=		../../editors/emacs25/PLIST
 BUILD_TARGET=		bootstrap
 EMACS_VERSION=		${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}
 PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
-
-REPLACE_PERL=		lib-src/grep-changelog
-CHECK_INTERPRETER_SKIP=	bin/grep-changelog
 
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
