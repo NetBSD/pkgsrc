@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/04/01 10:10:21 nikita Exp $
+# $NetBSD: Makefile,v 1.35 2020/05/22 21:35:03 rillig Exp $
 
 
 DISTNAME=	offlineimap-7.2.3
@@ -23,7 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 INSTALLATION_DIRS=	share/examples/offlineimap
 
 EGG_NAME=	${PKGNAME_NOREV}
-REPLACE_PYTHON=	offlineimap/imaplib2.py
 
 post-install:
 .for f in offlineimap.conf offlineimap.conf.minimal
