@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 01:50:58 markd Exp $
+share/texmf-dist/doc/latex/datetime2/CHANGES
+share/texmf-dist/doc/latex/datetime2/README
+share/texmf-dist/doc/latex/datetime2/datetime2.pdf
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-babel.pdf
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-babel.tex
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-calc.pdf
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-calc.tex
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-filedate.pdf
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-filedate.tex
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-hyperref.pdf
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-hyperref.tex
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-journal.pdf
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-journal.tex
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-styles.pdf
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-styles.tex
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-xe.pdf
+share/texmf-dist/doc/latex/datetime2/samples/datetime2-sample-xe.tex

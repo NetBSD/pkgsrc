@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 01:50:59 markd Exp $
+share/texmf-dist/tex/latex/datetime2-finnish/datetime2-finnish-ascii.ldf
+share/texmf-dist/tex/latex/datetime2-finnish/datetime2-finnish-utf8.ldf
+share/texmf-dist/tex/latex/datetime2-finnish/datetime2-finnish.ldf

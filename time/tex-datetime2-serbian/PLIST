@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 01:51:01 markd Exp $
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-serbian-base-ascii.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-serbian-base-utf8.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-serbian-base.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-serbian.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-serbianc.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-sr-Cyrl-BA.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-sr-Cyrl-ME.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-sr-Cyrl-RS.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-sr-Cyrl.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-sr-Latn-BA.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-sr-Latn-ME.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-sr-Latn-RS.ldf
+share/texmf-dist/tex/latex/datetime2-serbian/datetime2-sr-Latn.ldf

@@ -1,0 +1,7 @@
+Italian date and time styles that use words for the numbers and
+ordinals. This package provides the following date and time
+styles: "it-fulltext" and "it-fulltext-twenty-four". The first
+style uses a format "am pm", the second a format "24 hours".
+The necessary packages are datetime2, itnumpar, ifxetex, and
+ifluatex. This package is the translation and adaptation of
+datetime2-en-fulltext.

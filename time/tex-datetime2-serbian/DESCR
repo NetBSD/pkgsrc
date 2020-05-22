@@ -1,0 +1,4 @@
+This module provides the "serbian" style that can be set using
+\DTMsetstyle provided by datetime2.sty. It provides both
+Cyrillic and Latin, Ekavian and Ijekavian variants of Serbian
+date formats, regionalized and non-regionalized.
