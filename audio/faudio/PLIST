@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 09:02:30 nia Exp $
+include/F3DAudio.h
+include/FACT.h
+include/FACT3D.h
+include/FAPO.h
+include/FAPOBase.h
+include/FAPOFX.h
+include/FAudio.h
+include/FAudioFX.h
+lib/cmake/FAudio/FAudio-config.cmake
+lib/cmake/FAudio/FAudio-targets-release.cmake
+lib/cmake/FAudio/FAudio-targets.cmake
+lib/libFAudio.so
+lib/libFAudio.so.0
+lib/libFAudio.so.0.${PKGVERSION}
