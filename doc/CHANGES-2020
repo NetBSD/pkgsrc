@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3105 2020/05/22 08:00:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3106 2020/05/22 08:08:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4962,3 +4962,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/kstart to 4.2 [markd 2020-05-22]
 	Updated multimedia/ffmpeg4 to 4.2.3 [adam 2020-05-22]
 	Updated multimedia/ffplay4 to 4.2.3 [adam 2020-05-22]
+	Updated security/nettle to 3.6 [adam 2020-05-22]
+	Updated net/py-aio-pika to 6.6.1 [adam 2020-05-22]
