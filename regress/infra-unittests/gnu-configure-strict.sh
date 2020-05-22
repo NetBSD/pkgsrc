@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: gnu-configure-strict.sh,v 1.2 2020/05/22 15:10:17 rillig Exp $
+# $NetBSD: gnu-configure-strict.sh,v 1.3 2020/05/22 15:21:15 rillig Exp $
 #
 # Tests for GNU_CONFIGURE_STRICT handling in mk/configure/gnu-configure.mk.
 #
@@ -407,13 +407,18 @@ if test_case_begin 'configure script without enable_http variable'; then
 	#
 	# The word --enable-http appears twice in that file.  Once in the
 	# --help text, and once in a shell comment saying "Check whether
-	# --enable-http or --disable-http was given".  Therefore, detect
-	# the available options using the --help text.
+	# --enable-http or --disable-http was given".  The shell comment
+	# is too unreliable, and the help text only contains either enable
+	# or disable, but not both.  Therefore the simplest solution is to
+	# scan for the common pattern ${enable_http+set}.
 
 	create_file 'configure' <<-EOF
-		Optional features:
-		  --disable-nls            do not use Native Language Support
-		  --enable-http            include support for http
+		if test "\${enable_http+set}" = set; then
+			:
+		fi
+		if test "\${enable_nls+set}" = set; then
+			:
+		fi
 	EOF
 	create_file 'testcase.mk' <<-EOF
 		GNU_CONFIGURE_STRICT=	yes
@@ -430,14 +435,8 @@ if test_case_begin 'configure script without enable_http variable'; then
 		1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
-	assert_that "$exitcode" --equals '1'
-	assert_that "$tmpdir/output" --file-is-lines \
-		'error: [gnu-configure.mk] option --enable-http not found in ./configure' \
-		'error: [gnu-configure.mk] option --enable-nls not found in ./configure' \
-		'*** Error code 1' \
-		'' \
-		'Stop.' \
-		"$make: stopped in $PWD"
+	assert_that "$exitcode" --equals '0'
+	assert_that "$tmpdir/output" --file-is-empty
 
 	test_case_end
 fi
