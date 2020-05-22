@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2014/01/17 09:01:58 adam Exp $
-lib/wine/fakedlls/openal32.dll
-lib/wine/fakedlls/opencl.dll
+@comment $NetBSD: PLIST.Darwin,v 1.3 2020/05/22 17:44:41 nia Exp $
 lib/wine/fakedlls/winecoreaudio.drv
 lib/wine/fakedlls/winemp3.acm
 lib/wine/fakedlls/wineqtdecoder.dll
 lib/wine/fakedlls/winequartz.drv
-lib/wine/openal32.dll.so
-lib/wine/opencl.dll.so
 lib/wine/winecoreaudio.drv.so
 lib/wine/winemp3.acm.so
 lib/wine/wineqtdecoder.dll.so
