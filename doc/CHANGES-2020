@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3113 2020/05/22 19:48:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3114 2020/05/22 19:55:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4969,5 +4969,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed audio/amarok successor audio/strawberry [nia 2020-05-22]
 	Updated emulators/wine to 4.0 [nia 2020-05-22]
 	Updated textproc/lowdown to 0.6.5 [fcambus 2020-05-22]
-	Updated textproc/lowdown to 0.6.5 [fcambus 2020-05-22]
 	Updated emulators/wine to 4.0.3 [nia 2020-05-22]
+	Removed emulators/wine-devel successor emulators/wine [nia 2020-05-22]
