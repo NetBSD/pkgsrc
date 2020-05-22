@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/03/20 11:57:31 nia Exp $
+# $NetBSD: Makefile,v 1.60 2020/05/22 21:19:11 rillig Exp $
 
 DISTNAME=	roundup-1.4.19
 PKGREVISION=	3
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# empty
 USE_TOOLS+=	pax
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.4.19
-REPLACE_PYTHON+=		cgi-bin/roundup.cgi demo.py roundup/admin.py
+REPLACE_PYTHON+=		demo.py roundup/admin.py
 REPLACE_PYTHON+=		frontends/roundup.cgi
 REPLACE_PYTHON+=		roundup/backends/locking.py
 REPLACE_PYTHON+=		roundup/cgi/TAL/talgettext.py
