@@ -1,0 +1,10 @@
+The dashrule package makes it easy to draw a huge variety of
+dashed rules (i.e., lines) in LaTeX. dashrule provides a
+command, \hdashrule, which is a cross between LaTeX's \rule and
+PostScript's setdash command. \hdashrule draws horizontally
+dashed rules using the same syntax as \rule, but with an
+additional, setdash-like parameter that specifies the pattern
+of dash segments and the space between those segments. Because
+dashrule's rules are constructed internally using \rule (as
+opposed to, e.g., PostScript \specials) they are fully
+compatible with every LaTeX back-end processor.
