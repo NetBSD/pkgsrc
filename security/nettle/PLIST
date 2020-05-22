@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/07/20 22:01:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/05/22 08:01:51 adam Exp $
 bin/nettle-hash
 bin/nettle-lfib-stream
 bin/nettle-pbkdf2
@@ -23,6 +23,7 @@ include/nettle/chacha.h
 include/nettle/cmac.h
 include/nettle/ctr.h
 include/nettle/curve25519.h
+include/nettle/curve448.h
 include/nettle/des.h
 include/nettle/dsa-compat.h
 include/nettle/dsa.h
@@ -32,6 +33,7 @@ include/nettle/ecc.h
 include/nettle/ecdsa.h
 include/nettle/eddsa.h
 include/nettle/gcm.h
+include/nettle/gostdsa.h
 include/nettle/gosthash94.h
 include/nettle/hkdf.h
 include/nettle/hmac.h
@@ -61,6 +63,7 @@ include/nettle/sha.h
 include/nettle/sha1.h
 include/nettle/sha2.h
 include/nettle/sha3.h
+include/nettle/siv-cmac.h
 include/nettle/twofish.h
 include/nettle/umac.h
 include/nettle/version.h
