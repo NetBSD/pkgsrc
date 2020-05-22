@@ -1,9 +1,20 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2014/11/29 09:31:49 obache Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2020/05/22 13:45:28 joerg Exp $
 
-* No reason to restrct only for Linux. 
+* No reason to restrict only for Linux. 
+* Do not search for signals, it no longer exist. cmake doesn't support
+  signals2 as component, so just skip for now.
 
 --- CMakeLists.txt.orig	2013-11-10 10:20:21.000000000 +0000
 +++ CMakeLists.txt
+@@ -32,7 +32,7 @@ set(Boost_USE_MULTITHREADED ON)
+ if(MSVC)
+   set(Boost_USE_STATIC_RUNTIME ON)
+ endif(MSVC)
+-find_package(Boost 1.46.0 REQUIRED COMPONENTS filesystem regex signals system thread)
++find_package(Boost 1.46.0 REQUIRED COMPONENTS filesystem regex system thread)
+ if(Boost_FOUND)
+   include_directories(${Boost_INCLUDE_DIRS})
+   link_directories(${Boost_LIBRARY_DIRS})
 @@ -98,7 +98,7 @@ if(NOT DEFINED BIN_INSTALL_DIR)
      set(BIN_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/bin)
  endif()
