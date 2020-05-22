@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 01:51:02 markd Exp $
+share/texmf-dist/tex/latex/datetime2-spanish/datetime2-spanish-ascii.ldf
+share/texmf-dist/tex/latex/datetime2-spanish/datetime2-spanish-utf8.ldf
+share/texmf-dist/tex/latex/datetime2-spanish/datetime2-spanish.ldf

@@ -1,0 +1,11 @@
+This package provides commands for formatting dates, times and
+time zones and redefines \today to use the same formatting
+style. In addition to \today, you can also use \DTMcurrenttime
+(current time) or \DTMnow (current date and time). Dates and
+times can be saved for later use. The accompanying
+datetime2-calc package can be used to convert date-times to
+UTC+00:00. Language and regional support is provided by
+independently maintained and installed modules. The
+datetime2-calc package uses the pgfcalendar package (part of
+the PGF/TikZ bundle). This package replaces datetime.sty which
+is now obsolete.
