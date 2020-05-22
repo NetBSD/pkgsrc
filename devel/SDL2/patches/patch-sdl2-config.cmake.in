@@ -1,0 +1,15 @@
+$NetBSD: patch-sdl2-config.cmake.in,v 1.1 2020/05/22 23:18:09 adam Exp $
+
+Use correct shared library suffix.
+
+--- sdl2-config.cmake.in.orig	2020-05-22 23:10:38.000000000 +0000
++++ sdl2-config.cmake.in
+@@ -22,7 +22,7 @@ if(NOT TARGET SDL2::SDL2)
+   set_target_properties(SDL2::SDL2 PROPERTIES
+     INTERFACE_INCLUDE_DIRECTORIES "@includedir@/SDL2"
+     IMPORTED_LINK_INTERFACE_LANGUAGES "C"
+-    IMPORTED_LOCATION "@libdir@/libSDL2.so"
++    IMPORTED_LOCATION "@libdir@/libSDL2${CMAKE_SHARED_LIBRARY_SUFFIX}"
+     INTERFACE_LINK_LIBRARIES "${SDL2_EXTRA_LINK_FLAGS}")
+ 
+   add_library(SDL2::SDL2-static STATIC IMPORTED)
