@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.20 2019/03/01 13:30:52 leot Exp $
+$NetBSD: distinfo,v 1.21 2020/05/22 01:18:33 joerg Exp $
 
 SHA1 (ecl-16.1.3.tgz) = a0db6c435dcc33404b0a2a4a402e1f2edc169e95
 RMD160 (ecl-16.1.3.tgz) = 320e93e4abe62fa1fe9e36688ba040eef8ae8923
 SHA512 (ecl-16.1.3.tgz) = 5d743f422f6bc24671abf4c739cde8273d08f056906a1ef8aed5145c703b6d52c7fa4b5e0be8c125f32240c20ce053007786bb3ae81cc34d47791f6fae0819c1
 Size (ecl-16.1.3.tgz) = 7459212 bytes
+SHA1 (patch-src_c_ffi.d) = ae94ffc5b3ad70890b9d4f71d9c84a39f5526059
