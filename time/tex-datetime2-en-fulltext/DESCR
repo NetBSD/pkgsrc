@@ -1,0 +1,9 @@
+English date and time styles that use words for the numbers and
+ordinals. This package provides the following date and time
+styles: "en-fulltext", "en-FullText", "en-FULLTEXT", and the
+additional time style "en-Fulltext". (The date equivalent can
+be obtained through commands like \Today.) Unlike the base
+styles provided by datetime2.sty, these styles aren't
+expandable styles. This means that you can't use the date or
+time in PDF bookmarks or in the argument of certain commands,
+such as \MakeUppercase, while these styles are in use.

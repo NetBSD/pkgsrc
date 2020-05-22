@@ -1,0 +1,11 @@
+This module provides the following styles that can be set using
+\DTMsetstyle provided by datetime2.sty. The region not only
+determines the date/time format but also the time zone
+abbreviations if the zone mapping setting is on. english
+(English - no region) en-GB (English - United Kingdom of Great
+Britain and Northern Ireland) en-US (English - United States of
+America) en-CA (English - Canada) en-AU (English - Commonwealth
+of Australia) en-NZ (English - New Zealand) en-GG (English -
+Bailiwick of Guernsey) en-JE (English - Bailiwick of Jersey)
+en-IM (English - Isle of Man) en-MT (English - Republic of
+Malta) en-IE (English - Republic of Ireland)
