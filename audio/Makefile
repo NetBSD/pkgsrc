@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.601 2020/05/22 09:02:30 nia Exp $
+# $NetBSD: Makefile,v 1.602 2020/05/22 17:19:28 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -20,7 +20,6 @@ SUBDIR+=	alsa-plugins-pulse
 SUBDIR+=	alsa-utils
 SUBDIR+=	alure
 SUBDIR+=	amaroc
-SUBDIR+=	amarok
 SUBDIR+=	amp
 SUBDIR+=	ampache
 SUBDIR+=	amsynth
