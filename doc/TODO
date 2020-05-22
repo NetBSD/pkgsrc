@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19883 2020/05/21 20:59:41 ryoon Exp $
+$NetBSD: TODO,v 1.19884 2020/05/22 05:29:26 markd Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o konversation-1.6
 	o krita-4.2
 	o kronolith-4.2.14
-	o kstart-4.2
 	o ktorrent3-3.3.4
 	o labelnation-1.218
 	o labltk-8.06.7
