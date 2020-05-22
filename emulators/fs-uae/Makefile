@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/03/08 16:49:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/22 05:37:08 rillig Exp $
 
 DISTNAME=	fs-uae-3.0.2
 PKGREVISION=	1
@@ -16,6 +16,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libmpeg2
 
 NOT_PAX_MPROTECT_SAFE+=	bin/fs-uae
+
+# src/debug.cpp: In function 'void debug()':
+# src/debug.cpp:5361:188: error: array subscript has type 'char' [-Werror=char-subscripts]
+# ... processname[command[0]] == 0 ...
+#
+# command[0] is the length of a pascal-style string.
+# This may produce unexpected results with long process names.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
