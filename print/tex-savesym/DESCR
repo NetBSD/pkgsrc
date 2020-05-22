@@ -1,0 +1,7 @@
+There are a number of symbols (e.g., \Square) that are defined
+by several packages. In order to typeset all the variants in a
+document, we have to give the glyph a unique name. To do that,
+we define \savesymbol{XXX}, which renames a symbol from \XXX to
+\origXXX, and \restoresymbols{yyy}{XXX}, which renames \origXXX
+back to \XXX and defines a new command, \yyyXXX, which
+corresponds to the most recently loaded version of \XXX.
