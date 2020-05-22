@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/04/11 07:40:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/22 08:08:23 adam Exp $
 
-DISTNAME=	aio-pika-6.6.0
+DISTNAME=	aio-pika-6.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aio-pika/}
