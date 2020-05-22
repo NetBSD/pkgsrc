@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/22 21:06:23 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/22 21:33:36 adam Exp $
 
 TRYTON_MODULE_NAME=	trytond_account_invoice_history
 .include "../../devel/py-trytond/Makefile.common"
@@ -15,6 +15,5 @@ DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
