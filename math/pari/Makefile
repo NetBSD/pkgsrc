@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2020/05/02 13:37:08 rillig Exp $
+# $NetBSD: Makefile,v 1.79 2020/05/22 17:45:24 rillig Exp $
 
 DISTNAME=	pari-2.7.6
 PKGREVISION=	5
@@ -26,8 +26,6 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}/man1
 CONFIGURE_ARGS+=	--share-prefix=${PREFIX}/share
 
 REPLACE_PERL+=		src/desc/PARI/822.pm
-REPLACE_PERL+=		doc/gphelp
-REPLACE_PERL+=		misc/tex2mail
 
 BUILD_TARGET=		all
 TEST_TARGET=		test-compat bench
@@ -38,8 +36,6 @@ SUBST_STAGE.fix-cfg=	pre-configure
 SUBST_MESSAGE.fix-cfg=	Adding CFLAGS to Configure scripts.
 SUBST_FILES.fix-cfg=	config/get_*
 SUBST_SED.fix-cfg=	-e 's,$$CC $$extraflag,$$CC $$CFLAGS $$extraflag,g'
-
-pre-install: replace-interpreter
 
 .include "options.mk"
 
