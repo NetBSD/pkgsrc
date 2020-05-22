@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2020/03/08 16:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2020/05/22 10:56:38 adam Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.15
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/prelude-lml/
 
