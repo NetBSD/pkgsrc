@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3107 2020/05/22 08:28:02 plunky Exp $
+$NetBSD: CHANGES-2020,v 1.3108 2020/05/22 09:02:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4964,3 +4964,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/ffplay4 to 4.2.3 [adam 2020-05-22]
 	Updated security/nettle to 3.6 [adam 2020-05-22]
 	Updated net/py-aio-pika to 6.6.1 [adam 2020-05-22]
+	Added audio/faudio version 20.05 [nia 2020-05-22]
