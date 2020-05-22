@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3106 2020/05/22 08:08:44 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3107 2020/05/22 08:28:02 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4863,8 +4863,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-httplib2 to 0.18.1 [adam 2020-05-21]
 	Updated editors/vile to 9.8u [wiz 2020-05-21]
 	Updated editors/xvile to 9.8u [wiz 2020-05-21]
-	Updated multimedia/sfml to 2.5.1 [plunky 2020-05-21]
-	Updated games/openhexagon to 2.0 [plunky 2020-05-21]
+	Added multimedia/sfml version 2.5.1 [plunky 2020-05-21]
+	Added games/openhexagon version 2.0 [plunky 2020-05-21]
 	Updated print/tex-boxedminipage to 1.1 [markd 2020-05-21]
 	Updated print/tex-boxedminipage-doc to 1.1 [markd 2020-05-21]
 	Updated print/tex-context-filter to 2020 [markd 2020-05-21]
