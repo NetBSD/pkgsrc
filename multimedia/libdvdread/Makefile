@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/05/16 04:46:18 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/05/22 12:43:52 adam Exp $
 
 DISTNAME=	libdvdread-6.1.1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/libdvdread/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
