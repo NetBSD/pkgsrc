@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/22 03:28:49 markd Exp $
+
+SHA1 (xpatch.r54563.tar.xz) = 64245d854cdbf8ee7de9c3d3ef4180de6395d567
+RMD160 (xpatch.r54563.tar.xz) = aa1b8ef056eaf84c0eb9c1e295e33cbf2a0243fe
+SHA512 (xpatch.r54563.tar.xz) = d96d078066ee7cd39585754b0ed1aa2bd5680f90eb2a879bb2dcb47cfe834094f0b5fa1373ecd7f80f626c1a8a8fd4823525c33fa0e67f63b0beb4031a35956e
+Size (xpatch.r54563.tar.xz) = 1924 bytes
