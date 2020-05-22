@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/08/16 20:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/22 05:58:51 rillig Exp $
 #
 
 DISTNAME=	lmdbg-1.2.1
@@ -21,7 +21,7 @@ BROKEN_ON_PLATFORM=	Darwin-*-*
 
 TEST_TARGET=		test
 
-REPLACE_SH=		scripts/lmdbg*.in tests/test.sh
+REPLACE_SH=		scripts/lmdbg*.in test/test.sh
 
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
