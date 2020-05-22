@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/18 08:23:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/22 22:05:35 adam Exp $
 bin/awsproviderlint
 bin/terraform-provider-aws
 gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/aws.a
@@ -14,6 +14,7 @@ gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/a
 gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/kms/waiter.a
 gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/neptune/waiter.a
 gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/rds/waiter.a
+gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/secretsmanager/waiter.a
 gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/servicediscovery/waiter.a
 gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/awsproviderlint/helper/awsprovidertype/keyvaluetags.a
 gopkg/pkg/${GO_PLATFORM}/github.com/terraform-providers/terraform-provider-aws/awsproviderlint/passes.a
@@ -164,6 +165,8 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_ecs_service_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_ecs_task_definition.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_ecs_task_definition_test.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_efs_access_point.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_efs_access_point_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_efs_file_system.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_efs_file_system_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_efs_mount_target.go
@@ -375,6 +378,10 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_wafregional_rule_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_wafregional_web_acl.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_wafregional_web_acl_test.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_wafv2_ip_set.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_wafv2_ip_set_test.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_wafv2_regex_pattern_set.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_wafv2_regex_pattern_set_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_workspaces_bundle.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/data_source_aws_workspaces_bundle_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/datasync.go
@@ -395,7 +402,6 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/hosted_zones
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/iam_policy_model.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/import_aws_cloudfront_distribution.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/import_aws_db_event_subscription.go
-gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/import_aws_network_acl.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/import_aws_s3_bucket.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/import_aws_security_group.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/internal/flatmap/README.md
@@ -443,6 +449,7 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/internal/ser
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/neptune/waiter/waiter.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/rds/waiter/status.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/rds/waiter/waiter.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/secretsmanager/waiter/waiter.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/servicediscovery/waiter/status.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/internal/service/servicediscovery/waiter/waiter.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/media_convert_structure.go
@@ -897,7 +904,11 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_ecs_task_definition.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_ecs_task_definition_migrate.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_ecs_task_definition_test.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_efs_access_point.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_efs_access_point_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_efs_file_system.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_efs_file_system_policy.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_efs_file_system_policy_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_efs_file_system_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_efs_mount_target.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_efs_mount_target_test.go
@@ -1614,6 +1625,10 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_wafregional_web_acl_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_wafregional_xss_match_set.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_wafregional_xss_match_set_test.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_wafv2_ip_set.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_wafv2_ip_set_test.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_wafv2_regex_pattern_set.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_wafv2_regex_pattern_set_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_worklink_fleet.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_worklink_fleet_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_worklink_website_certificate_authority_association.go
@@ -1654,6 +1669,7 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/test-fixture
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/test-fixtures/transfer-ssh-rsa-key
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/test-fixtures/worklink-device-ca-certificate.pem
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/test-fixtures/worklink-website-certificate-authority-association.pem
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/testdata/mysql-5-6-xtrabackup.tar.gz
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/tls.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/tls_test.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/aws/utils.go
@@ -1809,7 +1825,6 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/examples/two-tie
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/examples/two-tier/terraform.template.tfvars
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/examples/two-tier/variables.tf
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/examples/workspaces/main.tf
-gopkg/src/github.com/terraform-providers/terraform-provider-aws/files/mysql-5-6-xtrabackup.tar.gz
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/go.mod
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/go.sum
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/infrastructure/README.md
@@ -2688,6 +2703,10 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.co
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/swf/doc.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/swf/errors.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/swf/service.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/synthetics/api.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/synthetics/doc.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/synthetics/errors.go
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/synthetics/service.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/transfer/api.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/transfer/doc.go
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/aws/aws-sdk-go/service/transfer/errors.go
@@ -6496,6 +6515,7 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/e
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/ecs_container_definition.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/ecs_service.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/ecs_task_definition.html.markdown
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/efs_access_point.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/efs_file_system.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/efs_mount_target.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/eip.html.markdown
@@ -6602,6 +6622,8 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/w
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/wafregional_rate_based_rule.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/wafregional_rule.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/wafregional_web_acl.html.markdown
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/wafv2_ip_set.html.markdown
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/wafv2_regex_pattern_set.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/d/workspaces_bundle.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/guides/custom-service-endpoints.html.md
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/guides/version-2-upgrade.html.md
@@ -6821,7 +6843,9 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/e
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/ecs_cluster.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/ecs_service.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/ecs_task_definition.html.markdown
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/efs_access_point.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/efs_file_system.html.markdown
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/efs_file_system_policy.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/efs_mount_target.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/egress_only_internet_gateway.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/eip.html.markdown
@@ -7164,6 +7188,8 @@ gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/w
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/wafregional_web_acl.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/wafregional_web_acl_association.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/wafregional_xss_match_set.html.markdown
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/wafv2_ip_set.html.markdown
+gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/wafv2_regex_pattern_set.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/worklink_fleet.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/worklink_website_certificate_authority_association.html.markdown
 gopkg/src/github.com/terraform-providers/terraform-provider-aws/website/docs/r/workspaces_directory.html.markdown
