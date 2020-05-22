@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/04/12 08:28:12 adam Exp $
+# $NetBSD: Makefile,v 1.30 2020/05/22 22:28:04 mef Exp $
 
 DISTNAME=	kxmlgui-${KF5VER}
 PKGREVISION=	3
@@ -15,7 +15,7 @@ USE_TOOLS+=	msgmerge
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	src/CMakeLists.txt CMakeLists.txt
+SUBST_FILES.xdg=	src/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}/ui:{KDE_INSTALL_DATAROOTDIR}/examples/kxmlgui:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/ui
