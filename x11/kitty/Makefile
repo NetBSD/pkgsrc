@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/05/16 17:20:54 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/22 05:57:10 rillig Exp $
 
 DISTNAME=	kitty-0.16.0
 PKGREVISION=	2
@@ -31,8 +31,6 @@ SUBST_STAGE.python=	pre-build
 SUBST_MESSAGE.python=	Replacing path to Sphinx.
 SUBST_FILES.python=	docs/Makefile
 SUBST_SED.python+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},g"
-
-REPLACE_PYTHON+=	kitty/launcher/kitty
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
