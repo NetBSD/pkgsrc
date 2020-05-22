@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.15 2020/04/11 11:53:43 adam Exp $
+$NetBSD: distinfo,v 1.16 2020/05/22 01:24:36 joerg Exp $
 
 SHA1 (dpkg_1.20.0.tar.xz) = eda82352ba507bc7d7749b44579983ace07064c8
 RMD160 (dpkg_1.20.0.tar.xz) = e0a2ca3232723d4e0927e6ae1a7f92648cc917da
 SHA512 (dpkg_1.20.0.tar.xz) = 5dd7961bde19ccc891fd5b77ca0085f7fc0308c20380e20b393397ff92e50d1c0f54e7b57676c05876021b44aa3788af8258c21ff2b672110ac92c7ce0b408f9
 Size (dpkg_1.20.0.tar.xz) = 4738556 bytes
+SHA1 (patch-lib_dpkg_libdpkg.map) = f2cf79ab4aa0bbe834a1d8d7183d08b7f6829fb3
+SHA1 (patch-src_Makefile.in) = 24e1ab4dcb73268ba84eec1072d813b5f0b7adf9
 SHA1 (patch-utils_start-stop-daemon.c) = 7927b364851b039e44279157aa783afde4508af9
