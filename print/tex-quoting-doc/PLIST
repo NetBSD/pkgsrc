@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 03:23:57 markd Exp $
+share/texmf-dist/doc/latex/quoting/README
+share/texmf-dist/doc/latex/quoting/quoting.pdf
