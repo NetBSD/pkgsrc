@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3109 2020/05/22 09:10:09 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3110 2020/05/22 17:21:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4966,3 +4966,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-aio-pika to 6.6.1 [adam 2020-05-22]
 	Added audio/faudio version 20.05 [nia 2020-05-22]
 	Updated audio/gsm to 1.0.19 [nia 2020-05-22]
+	Removed audio/amarok successor audio/strawberry [nia 2020-05-22]
