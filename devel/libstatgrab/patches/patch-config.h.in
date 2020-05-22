@@ -1,0 +1,14 @@
+$NetBSD: patch-config.h.in,v 1.1 2020/05/22 13:45:11 joerg Exp $
+
+--- config.h.in.orig	2020-05-22 12:08:49.505823625 +0000
++++ config.h.in
+@@ -791,6 +791,9 @@
+ /* Define to 1 if you have the <uvm/uvm.h> header file. */
+ #undef HAVE_UVM_UVM_H
+ 
++/* Define to 1 if you have the <uvm/uvm_extern.h> header file. */
++#undef HAVE_UVM_UVM_EXTERN_H
++
+ /* Define to 1 if the system has the type `vaddr_t'. */
+ #undef HAVE_VADDR_T
+ 
