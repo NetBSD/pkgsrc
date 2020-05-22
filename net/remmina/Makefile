@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2020/04/12 08:29:06 adam Exp $
+# $NetBSD: Makefile,v 1.52 2020/05/22 10:56:31 adam Exp $
 
 DISTNAME=	Remmina-v1.3.6
 PKGNAME=	${DISTNAME:S/^R/r/1:S/-v/-/1}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	https://gitlab.com/Remmina/Remmina/-/archive/v${PKGVERSION_NOREV}/
 

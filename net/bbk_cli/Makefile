@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/05/13 01:11:37 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/22 10:56:25 adam Exp $
 
 GITHUB_PROJECT=	bbk
 GITHUB_TAG=	7b810a696c78b746185c11282bdbe3fb7f8c5d4b
 DISTNAME=	bbk
 PKGNAME=	bbk_cli-1.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dotse/}
 

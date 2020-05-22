@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:11 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/22 10:56:40 adam Exp $
 
 DISTNAME=	rdfind-1.4.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://rdfind.pauldreik.se/
 

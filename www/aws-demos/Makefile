@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/03/08 16:51:35 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/22 10:56:44 adam Exp $
 
 DISTNAME=	aws-${AWS_VERSION}
 PKGNAME=	aws-demos-${AWS_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2

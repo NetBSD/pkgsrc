@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2020/05/06 14:04:23 adam Exp $
+# $NetBSD: Makefile,v 1.44 2020/05/22 10:55:59 adam Exp $
 #
 
 DISTNAME=	gammu-1.41.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	comms
 MASTER_SITES=	http://dl.cihar.com/gammu/releases/
 EXTRACT_SUFX=	.tar.bz2

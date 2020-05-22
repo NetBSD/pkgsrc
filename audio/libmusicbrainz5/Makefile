@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 17:30:43 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/22 10:55:43 adam Exp $
 
 DISTNAME=	libmusicbrainz-5.1.0
 PKGNAME=	${DISTNAME:S/brainz/brainz5/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=metabrainz/}
 GITHUB_PROJECT=	libmusicbrainz

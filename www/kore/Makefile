@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/05/06 14:05:06 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/22 10:56:45 adam Exp $
 
 DISTNAME=	kore-3.3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	https://kore.io/releases/
 

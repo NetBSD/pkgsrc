@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/05/06 14:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/22 10:56:12 adam Exp $
 
 DISTNAME=	jp2a-1.0.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cslarsen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
