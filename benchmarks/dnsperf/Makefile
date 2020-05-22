@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/05/22 05:49:18 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/22 15:53:05 rillig Exp $
 
 DISTNAME=	dnsperf-2.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	benchmarks net
 MASTER_SITES=	https://www.dns-oarc.net/files/dnsperf/
 
@@ -16,6 +16,8 @@ USE_TOOLS+=	sh:run pkg-config
 # This package needs "isc" include files and "isc-config.sh" to build.
 # The built-in check only considers "libbind".
 USE_BUILTIN.bind=	no
+
+REPLACE_SH+=	src/resperf-report
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
