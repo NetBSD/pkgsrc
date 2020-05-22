@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 00:34:59 agc Exp $
+$NetBSD: distinfo,v 1.13 2020/05/22 01:23:41 joerg Exp $
 
 SHA1 (entropy_rsa-0.9.1-439.tgz) = 264ffdfe976c154412abd4171fa8525c40414bbc
 RMD160 (entropy_rsa-0.9.1-439.tgz) = 3548ecb8374b512a365dfd388699ada6596d48f3
@@ -8,3 +8,4 @@ SHA1 (patch-aa) = f094ead71b69995d6a8a48ac954bddac22339982
 SHA1 (patch-ab) = 6e5ad3221243cb942b265d664e9833596c7f24c3
 SHA1 (patch-ac) = 356895fa6e9309ac1479ca52a1ec3164f6a1613a
 SHA1 (patch-ad) = 1ccc064bab8aa9d5d87a1f2b063a458a22bd36af
+SHA1 (patch-src_bignum.c) = 85f57372c8b7044dee5f6744c5ffe6fc99669c68
