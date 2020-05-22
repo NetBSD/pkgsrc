@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.50 2020/02/24 21:13:56 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.51 2020/05/22 20:57:15 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -13,7 +13,8 @@ and you can still use binary packages from someone else.</para>
 <sect1 id="using-pkg">
   <title>Using binary packages</title>
 
-  <para>On the <ulink url="https://cdn.NetBSD.org/">cdn.NetBSD.org</ulink>
+  <!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
+  <para>On the <ulink url="http://cdn.NetBSD.org/">cdn.NetBSD.org</ulink>
   site and mirrors, there are collections of binary packages,
   ready to be installed. These binary packages have been built using the
   default settings for the directories, that is:</para>
@@ -34,8 +35,9 @@ and you can still use binary packages from someone else.</para>
 
     <para>To install binary packages, you first need to know from where
     to get them. The first place where you should look is on the main
+    <!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
     pkgsrc FTP server in the directory <ulink
-    url="https://cdn.NetBSD.org/pub/pkgsrc/packages/"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
+    url="http://cdn.NetBSD.org/pub/pkgsrc/packages/"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
 
     <para>This directory contains binary packages for multiple
     platforms. First, select your operating system. (Ignore the
@@ -67,7 +69,8 @@ and you can still use binary packages from someone else.</para>
 
 <screen>
 &rprompt; <userinput>PATH="/usr/pkg/sbin:$PATH"</userinput>
-&rprompt; <userinput>PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages"</userinput>
+<!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
+&rprompt; <userinput>PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages"</userinput>
 &rprompt; <userinput>PKG_PATH="$PKG_PATH/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/"</userinput>
 &rprompt; <userinput>export PATH PKG_PATH</userinput>
 </screen>
@@ -143,7 +146,8 @@ and you can still use binary packages from someone else.</para>
       The pkgsrc Security Team and Packages Groups maintain a list of
       known security vulnerabilities to packages which are (or have been)
       included in pkgsrc.  The list is available from the NetBSD
-      FTP site at <ulink url="https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities"/>.
+      <!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
+      FTP site at <ulink url="http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities"/>.
     </para>
 
     <para>
@@ -168,7 +172,8 @@ and you can still use binary packages from someone else.</para>
 
     <para>
       You may wish to have the
-      <ulink url="https://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
+      <!-- this URL needs to be kept at http, not https, since pkg_add cannot use https. -->
+      <ulink url="http://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
       file downloaded daily so that
       it remains current.  This may be done by adding an appropriate entry
       to the root users &man.crontab.5; entry.  For example the entry
