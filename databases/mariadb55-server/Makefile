@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/04/16 09:08:46 manu Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/22 19:10:03 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	3
@@ -64,10 +64,8 @@ MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR}
 MESSAGE_SUBST+=		MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
 BUILD_DEFS+=		MYSQL_DATADIR
 
-REPLACE_PERL+=		mysql-test/lib/My/SafeProcess/safe_process.pl
 REPLACE_PERL+=		mysql-test/lib/process-purecov-annotations.pl
 REPLACE_PERL+=		mysql-test/lib/v1/mysql-test-run.pl
-REPLACE_PERL+=		mysql-test/mtr
 REPLACE_PERL+=		mysql-test/mysql-stress-test.pl
 REPLACE_PERL+=		mysql-test/mysql-test-run.pl
 REPLACE_PERL+=		mysql-test/std_data/checkDBI_DBD-mysql.pl
