@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 03:26:50 markd Exp $
+share/texmf-dist/doc/latex/threeparttablex/README
+share/texmf-dist/doc/latex/threeparttablex/threeparttablex.pdf
+share/texmf-dist/doc/latex/threeparttablex/threeparttablex.tex
