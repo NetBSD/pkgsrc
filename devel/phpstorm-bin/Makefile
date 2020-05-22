@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/09 15:13:15 mef Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/22 19:32:33 rillig Exp $
 
 
 VERSION=	2018.3.4
@@ -34,8 +34,6 @@ SUBST_STAGE.jdk=	pre-install
 SUBST_MESSAGE.jdk=	Adding JVM options
 SUBST_FILES.jdk=	bin/phpstorm.sh
 SUBST_VARS.jdk=		PKG_JAVA_HOME
-
-REPLACE_BASH+=	bin/gdb/linux/bin/gcore
 
 do-install:
 	cd ${WRKSRC} &&	\
