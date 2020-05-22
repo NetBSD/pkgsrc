@@ -1,0 +1,8 @@
+The package provides basic arithmetic operations to 8 decimal
+places for plain TeX or LaTeX. Results are exact when they fit
+within the digit limits. Along with the basic package is an
+optional extension that adds computation of sin, cos, log,
+sqrt, exp, powers and angles. These are also exact when
+theoretically possible and are otherwise accurate to at least 7
+decimal places. In addition, the package provides a stack-based
+programing environment.
