@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/05/19 12:31:39 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/22 10:56:26 adam Exp $
 
 DISTNAME=	freerdp-2.1.0
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FreeRDP/}
 GITHUB_PROJECT=	FreeRDP
