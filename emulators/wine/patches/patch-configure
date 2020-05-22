@@ -1,32 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2014/01/17 09:01:58 adam Exp $
+$NetBSD: patch-configure,v 1.2 2020/05/22 17:44:42 nia Exp $
 
-Configure for OSS v3 support for NetBSD.
+pkgsrc doesn't use lib64.
 
---- configure.orig	2013-11-15 19:30:24.000000000 +0000
+--- configure.orig	2019-03-15 20:18:31.000000000 +0000
 +++ configure
-@@ -11395,14 +11395,25 @@ then
- if test "x$ac_cv_header_sys_soundcard_h" = xyes; then :
-   ac_fn_c_check_member "$LINENO" "oss_sysinfo" "numaudioengines" "ac_cv_member_oss_sysinfo_numaudioengines" "#include <sys/soundcard.h>
- "
-+if test x`echo "$host_alias" | grep -iv netbsd` = x; then :
- if test "x$ac_cv_member_oss_sysinfo_numaudioengines" = xyes; then :
- 
- cat >>confdefs.h <<_ACEOF
- #define HAVE_OSS_SYSINFO_NUMAUDIOENGINES 1
-+#define HAVE_OSSv4 1
- _ACEOF
- 
- OSS4INCL="$ac_oss_incl"
- 
-+else
-+ac_cv_member_oss_sysinfo_numaudioengines=yes
-+cat >>confdefs.h <<_ACEOF
-+#define HAVE_OSS_SYSINFO_NUMAUDIOENGINES 1
-+_ACEOF
-+
-+OSS4INCL="$ac_oss_incl"
-+
-+fi
+@@ -5683,7 +5683,7 @@ if test "x$enable_win64" = "xyes"
+ then
+     test -z "$with_wine64" || as_fn_error $? "--enable-win64 and --with-wine64 are mutually exclusive.
+ --enable-win64 should be used in the 64-bit build tree, --with-wine64 in the 32-bit Wow64 build tree." "$LINENO" 5
+-    test "x$libdir" != "x\${exec_prefix}/lib" || libdir="\${exec_prefix}/lib64"
++    #test "x$libdir" != "x\${exec_prefix}/lib" || libdir="\${exec_prefix}/lib64"
  fi
  
- fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the directory containing the Wine tools" >&5
