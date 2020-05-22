@@ -1,0 +1,4 @@
+This module provides the "turkish" style that can be set using
+\DTMsetstyle provided by datetime2.sty. This package is
+currently unmaintained. Please see the README for the procedure
+to follow if you want to take over the maintenance.

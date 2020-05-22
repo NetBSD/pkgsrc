@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 01:50:57 markd Exp $
+share/texmf-dist/tex/latex/datetime2-breton/datetime2-breton-ascii.ldf
+share/texmf-dist/tex/latex/datetime2-breton/datetime2-breton-utf8.ldf
+share/texmf-dist/tex/latex/datetime2-breton/datetime2-breton.ldf

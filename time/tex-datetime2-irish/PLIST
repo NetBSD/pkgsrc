@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/22 01:51:00 markd Exp $
+share/texmf-dist/tex/latex/datetime2-irish/datetime2-ga-GB.ldf
+share/texmf-dist/tex/latex/datetime2-irish/datetime2-ga-IE.ldf
+share/texmf-dist/tex/latex/datetime2-irish/datetime2-irish-ascii.ldf
+share/texmf-dist/tex/latex/datetime2-irish/datetime2-irish-utf8.ldf
+share/texmf-dist/tex/latex/datetime2-irish/datetime2-irish.ldf
