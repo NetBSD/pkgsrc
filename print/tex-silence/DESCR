@@ -1,0 +1,7 @@
+The package allows the user to filter out unwanted warnings and
+error messages issued by LaTeX, packages and classes, so they
+won't pop out when there's nothing one can do about them.
+Filtering goes from the very broad ("avoid all messages by such
+and such") to the fine-grained ("avoid messages that begin
+with..."). Messages may be saved to an external file for later
+reference.
