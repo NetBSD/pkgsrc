@@ -1,0 +1,7 @@
+As an alternative to the LaTeX standard environments quotation
+and quote, the package provides a consolidated environment for
+displayed text. First-line indentation may be activated by
+adding a blank line before the quoting environment. A key-value
+interface (using kvoptions) allows the user to configure font
+properties and spacing and to control orphans within and after
+the environment.
