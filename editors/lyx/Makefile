@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2020/05/06 14:04:29 adam Exp $
+# $NetBSD: Makefile,v 1.91 2020/05/22 17:12:11 rillig Exp $
 
 DISTNAME=		lyx-2.3.2
 PKGREVISION=		12
@@ -104,12 +104,10 @@ PRINT_PLIST_AWK+=	{ sub(/bin\//, "$${BIN_DIR}/"); \
 REPLACE_PYTHON=	development/autotests/keytest.py \
 			development/cmake/doc/ReplaceValues.py \
 			development/cmake/po/cat.py \
-			development/cmake/po/dos2unix.py \
 			development/cmake/po/unix2dos.py \
 			development/keystest/cache-bisect.py \
 			development/keystest/make_screenshot_html.py \
 			development/keystest/keytest.py \
-			development/tools/convert_kmap.py \
 			development/tools/gen_lfuns.py \
 			development/tools/generate_symbols_images.py \
 			development/tools/generate_symbols_list.py \
@@ -123,6 +121,8 @@ REPLACE_PYTHON=	development/autotests/keytest.py \
 			po/postats.py \
 			src/tex2lyx/test/runtests.py
 
+# Replacing plain "python " with PYTHONBIN replaces a few instances too
+# many, but nothing critical. Set SUBST_SHOW_DIFF=yes to see them.
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	lib/configure.py
