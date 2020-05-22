@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:30:57 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/22 21:08:42 rillig Exp $
+
 TRYTON_MODULE_NAME=	trytond_product_cost_fifo
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
@@ -13,8 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-stock>=${TRYTON_BASEVER}:../../misc/py-trytond-
 DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
-
-REPLACE_PYTHON+=	tests/test_product_cost_fifo.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
