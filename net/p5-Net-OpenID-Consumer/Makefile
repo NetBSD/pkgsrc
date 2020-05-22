@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/22 19:36:34 rillig Exp $
 #
 
 DISTNAME=	Net-OpenID-Consumer-1.18
@@ -22,8 +22,6 @@ DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 
 PERL5_PACKLIST=		auto/Net/OpenID/Consumer/.packlist
 USE_LANGUAGES=		# none
-
-REPLACE_PERL+=		lib/Net/OpenID/URIFetch.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
