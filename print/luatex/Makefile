@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2020/05/13 11:14:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.97 2020/05/22 18:08:46 maya Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -87,7 +87,7 @@ do-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
+BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.3.2
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
