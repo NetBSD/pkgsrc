@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/02/27 13:46:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.100 2020/05/22 18:12:15 rillig Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
@@ -33,8 +33,6 @@ PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
-
-do-configure-post-hook: replace-interpreter
 
 REPLACE_INTERPRETER+=	escript
 REPLACE.escript.old=	.*escript
