@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/04/12 08:29:01 adam Exp $
+# $NetBSD: Makefile,v 1.48 2020/05/22 21:32:19 rillig Exp $
 #
 
 DISTNAME=		vym-2.7.1
@@ -19,9 +19,6 @@ DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
 USE_LANGUAGES=		c++
 USE_TOOLS+=		perl:run bash:run
 
-REPLACE_PERL+=		scripts/exportvym scripts/niceXML
-
-REPLACE_BASH+=		scripts/release-mac scripts/update-bookmarks
 REPLACE_BASH+=		scripts/makedist-vym scripts/vivym
 REPLACE_BASH+=		scripts/getbinaries scripts/screencast
 
