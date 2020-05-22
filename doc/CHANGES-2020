@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3102 2020/05/22 02:02:18 markd Exp $
+$NetBSD: CHANGES-2020,v 1.3103 2020/05/22 03:37:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4942,3 +4942,20 @@ Changes to the packages collection and infrastructure in 2020:
 	Added time/tex-datetime2-ukrainian version 1.2a [markd 2020-05-22]
 	Added time/tex-datetime2-usorbian version 1.1 [markd 2020-05-22]
 	Added time/tex-datetime2-welsh version 1.1 [markd 2020-05-22]
+	Added math/tex-minifp version 0.96 [markd 2020-05-22]
+	Added math/tex-minifp-doc version 0.96 [markd 2020-05-22]
+	Added print/tex-dashrule version 1.3 [markd 2020-05-22]
+	Added print/tex-dashrule-doc version 1.3 [markd 2020-05-22]
+	Added print/tex-enotez version 0.10b [markd 2020-05-22]
+	Added print/tex-enotez-doc version 0.10b [markd 2020-05-22]
+	Added print/tex-quoting version 0.1c [markd 2020-05-22]
+	Added print/tex-quoting-doc version 0.1c [markd 2020-05-22]
+	Added print/tex-savesym version 1.2 [markd 2020-05-22]
+	Added print/tex-silence version 1.5b [markd 2020-05-22]
+	Added print/tex-silence-doc version 1.5b [markd 2020-05-22]
+	Added print/tex-threeparttablex version 0.3 [markd 2020-05-22]
+	Added print/tex-threeparttablex-doc version 0.3 [markd 2020-05-22]
+	Added print/tex-translations version 1.8b [markd 2020-05-22]
+	Added print/tex-translations-doc version 1.8b [markd 2020-05-22]
+	Added print/tex-xpatch version 0.3 [markd 2020-05-22]
+	Added print/tex-xpatch-doc version 0.3 [markd 2020-05-22]
