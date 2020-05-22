@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/05/19 12:09:07 nia Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/22 05:49:18 rillig Exp $
 
 DISTNAME=	dnsperf-2.3.2
 PKGREVISION=	2
@@ -16,8 +16,6 @@ USE_TOOLS+=	sh:run pkg-config
 # This package needs "isc" include files and "isc-config.sh" to build.
 # The built-in check only considers "libbind".
 USE_BUILTIN.bind=	no
-
-REPLACE_SH+=	resperf-report
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
