@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/04/08 21:39:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.39 2020/05/22 19:49:13 rillig Exp $
 
 DISTNAME=	pkg_summary-utils-0.66.0
 CATEGORIES=	pkgtools
@@ -39,7 +39,7 @@ EGDIR=		${PREFIX}/share/examples/pkg_summary-utils
 
 CONF_FILES=	${EGDIR}/pkg_digger.conf ${PKG_SYSCONFDIR}/pkg_digger.conf
 
-REPLACE_SH=	tests/test.sh scripts/pkg_digger.in scripts/pkg_digger_backend.in \
+REPLACE_SH=	tests/test.sh scripts/pkg_digger.in \
 		scripts/pkg_summary2build_graph.in
 
 REPLACE_INTERPRETER+=	runawk
