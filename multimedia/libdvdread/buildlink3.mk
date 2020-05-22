@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/05/12 02:50:29 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2020/05/22 12:43:52 adam Exp $
 
 BUILDLINK_TREE+=	libdvdread
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdvdread
 LIBDVDREAD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdvdread+=	libdvdread>=4.1.3nb1
-BUILDLINK_ABI_DEPENDS.libdvdread+=	libdvdread>=4.1.3nb1
+BUILDLINK_ABI_DEPENDS.libdvdread+=	libdvdread>=6.1.1nb1
 BUILDLINK_PKGSRCDIR.libdvdread?=	../../multimedia/libdvdread
 
 pkgbase := libdvdread
