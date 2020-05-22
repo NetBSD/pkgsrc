@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/05/06 14:04:32 adam Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/22 05:46:26 rillig Exp $
 
 DISTNAME=	crossfire-1.71.0
 PKGNAME=	${DISTNAME:S/crossfire-/crossfire-server-/1}
@@ -50,7 +50,6 @@ REPLACE_PERL+=	lib/adm/archsearch.pl
 REPLACE_PERL+=	lib/adm/collect_images.pl
 REPLACE_PERL+=	lib/adm/map_expand.pl
 REPLACE_PERL+=	lib/adm/mapslitter.pl
-REPLACE_PERL+=	lib/checkarch.pl
 REPLACE_PERL+=	lib/collect.pl
 REPLACE_PERL+=	lib/util.pl
 REPLACE_PERL+=	utils/metaserver.pl
