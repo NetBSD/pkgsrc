@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/05/06 14:04:58 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/05/22 10:56:32 adam Exp $
 
 CONFLICTS+=	Transmission-[0-9]*
 
@@ -8,6 +8,6 @@ pre-configure:
 CONFIGURE_ARGS+=	--disable-mac
 CONFIGURE_ARGS+=	--without-gtk
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../net/transmission/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

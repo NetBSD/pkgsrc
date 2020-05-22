@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/03/08 16:51:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2020/05/22 10:56:38 adam Exp $
 #
 
 DISTNAME=	openvas-server-2.0.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/550/
 
