@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2020/03/08 16:50:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/22 12:43:53 adam Exp $
 
 GST_PLUGINS1_NAME=	resindvd
 GST_PLUGINS1_FLAGS=	dvdnav
 GST_PLUGINS1_DIRS=	ext/resindvd
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
 
 .include "../../multimedia/libdvdnav/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/03/28 17:43:37 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/22 12:43:52 adam Exp $
 
 DISTNAME=	libdvdnav-6.1.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://download.videolan.org/pub/videolan/libdvdnav/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

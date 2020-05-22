@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2017/08/16 20:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/22 12:43:53 adam Exp $
 
 DISTNAME=	lsdvd-0.17
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lsdvd/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
