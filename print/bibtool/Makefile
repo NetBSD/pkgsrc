@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/11/04 19:57:58 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/22 01:16:06 joerg Exp $
 
 DISTNAME=	BibTool-2.65
 PKGREVISION=	2
@@ -10,7 +10,9 @@ HOMEPAGE=	http://www.gerd-neugebauer.de/software/TeX/BibTool.en.html
 COMMENT=	Tool to manipulate BibTeX databases
 LICENSE=	gnu-gpl-v1
 
+BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+BUILD_DEPENDS+=	tex-bookmark-[0-9]*:../../print/tex-bookmark
 BUILD_DEPENDS+=	tex-booktabs-[0-9]*:../../print/tex-booktabs
 BUILD_DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 BUILD_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
@@ -46,8 +48,7 @@ INSTALLATION_DIRS=	${DOCDIR} ${EXAMPLEDIR}
 #	mv ${WRKSRC}/BibTcl/Makefile.in ${WRKSRC}/BibTcl/makefile.in
 
 post-build:
-	cd ${WRKSRC}/doc && ${MAKE}
-#	cd ${WRKSRC}/BibTcl && ${MAKE}
+	cd ${WRKSRC}/doc && ${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE}
 
 post-install:
 	set -e; for i in ${WRKSRC}/doc/*.pdf; do \
