@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3103 2020/05/22 03:37:35 markd Exp $
+$NetBSD: CHANGES-2020,v 1.3104 2020/05/22 05:29:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4959,3 +4959,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-translations-doc version 1.8b [markd 2020-05-22]
 	Added print/tex-xpatch version 0.3 [markd 2020-05-22]
 	Added print/tex-xpatch-doc version 0.3 [markd 2020-05-22]
+	Updated security/kstart to 4.2 [markd 2020-05-22]
