@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2020/05/12 17:05:33 rillig Exp $
+# $NetBSD: Makefile,v 1.87 2020/05/22 13:34:43 jperkin Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.5.7
@@ -64,8 +64,11 @@ SUBST_CLASSES+=			fix-bins
 SUBST_STAGE.fix-bins=		pre-configure
 SUBST_FILES.fix-bins=		src/runtime/Config.x86-64-sunos
 SUBST_FILES.fix-bins+=		src/runtime/Config.x86-sunos
+SUBST_FILES.fix-bins+=		contrib/asdf-module.mk
 SUBST_SED.fix-bins=		-e 's,nm ,/usr/bin/nm ,'
 SUBST_SED.fix-bins+=		-e 's,ggrep,grep,'
+SUBST_SED.fix-bins+=		-e 's,=199506L,=200112L,'
+SUBST_SED.fix-bins+=		-e 's,=500,=600,'
 
 .if defined(TOOLS_PLATFORM.paxctl)
 SBCL_PAXCTL=	${PAXCTL} +m
