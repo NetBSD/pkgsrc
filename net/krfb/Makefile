@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/04/12 08:29:05 adam Exp $
+# $NetBSD: Makefile,v 1.34 2020/05/22 10:56:28 adam Exp $
 
 DISTNAME=	krfb-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 
 HOMEPAGE=	https://kde.org/applications/system/krfb/
