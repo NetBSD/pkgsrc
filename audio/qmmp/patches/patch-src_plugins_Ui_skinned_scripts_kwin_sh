@@ -1,0 +1,20 @@
+$NetBSD: patch-src_plugins_Ui_skinned_scripts_kwin_sh,v 1.1 2020/05/23 20:11:23 rillig Exp $
+
+Fix shell portability.
+
+--- src/plugins/Ui/skinned/scripts/kwin.sh.orig	2020-01-14 17:06:24.000000000 +0000
++++ src/plugins/Ui/skinned/scripts/kwin.sh	2020-05-15 05:39:14.852611863 +0000
+@@ -19,10 +19,11 @@
+ do
+ 	# find qmmp window rule in KWin
+     match=`kreadconfig5 --file kwinrulesrc --group $i --key wmclass`
+-    if [[ "${match,,}" = *"qmmp"* ]]; then
++    case $match in
++    *[Qq][Mm][Mm][Pp]*)
+         found=$i
+         break
+-    fi
++    esac
+     i=$((i+1))
+ done
+ 
