@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/05/16 10:50:49 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/23 10:34:34 rillig Exp $
 
 GCC_DIST_VERSION=	4.9.2
 GCC_PKGNAME=		gcc-mips-${GCC_DIST_VERSION}
@@ -20,6 +20,8 @@ DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
+
+CHECK_PORTABILITY_SKIP=	contrib/*
 
 USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake makeinfo sed:run perl
