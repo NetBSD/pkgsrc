@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3128 2020/05/23 10:51:33 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3129 2020/05/23 12:30:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5009,3 +5009,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/gmic to 2.9.0 [ryoon 2020-05-23]
 	Updated misc/libreoffice to 6.4.4.2 [ryoon 2020-05-23]
 	Removed audio/amaroc [nia 2020-05-23]
+	Removed audio/squeezeboxserver [nia 2020-05-23]
