@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/05/22 05:37:08 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/23 09:12:57 adam Exp $
 
-DISTNAME=	fs-uae-3.0.2
-PKGREVISION=	1
+DISTNAME=	fs-uae-3.0.5
 CATEGORIES=	emulators
 MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
