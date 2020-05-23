@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2020/05/22 17:44:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.71 2020/05/23 21:20:38 adam Exp $
 bin/function_grep.pl
 bin/msiexec
 bin/notepad
@@ -2165,7 +2165,7 @@ lib/wine/fakedlls/winemapi.dll
 lib/wine/fakedlls/winemenubuilder.exe
 lib/wine/fakedlls/winemine.exe
 lib/wine/fakedlls/winemsibuilder.exe
-lib/wine/fakedlls/wineoss.drv
+${PLIST.oss}lib/wine/fakedlls/wineoss.drv
 lib/wine/fakedlls/winepath.exe
 lib/wine/fakedlls/wineps.drv
 ${PLIST.pulse}lib/wine/fakedlls/winepulse.drv
@@ -2780,7 +2780,7 @@ lib/wine/winemapi.dll.so
 lib/wine/winemenubuilder.exe.so
 lib/wine/winemine.exe.so
 lib/wine/winemsibuilder.exe.so
-lib/wine/wineoss.drv.so
+${PLIST.oss}lib/wine/wineoss.drv.so
 lib/wine/winepath.exe.so
 lib/wine/wineps.drv.so
 ${PLIST.pulse}lib/wine/winepulse.drv.so
@@ -2883,7 +2883,7 @@ man/man1/winepath.1
 man/man1/wineserver.1
 man/man1/wmc.1
 man/man1/wrc.1
-share/applications/wine.desktop
+${PLIST.desktop}share/applications/wine.desktop
 share/wine/fonts/coue1255.fon
 share/wine/fonts/coue1256.fon
 share/wine/fonts/coue1257.fon
