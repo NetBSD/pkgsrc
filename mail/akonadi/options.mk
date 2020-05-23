@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/03/13 10:13:04 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2020/05/23 13:08:51 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.akonadi
 
@@ -13,14 +13,12 @@ PKG_SUGGESTED_OPTIONS=		sqlite
 ### Use mysql backend
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-MYSQL_VERSIONS_ACCEPTED=	56 55
+MYSQL_VERSIONS_ACCEPTED=	56
 .include "../../mk/mysql.buildlink3.mk"
 DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
 CMAKE_ARGS+=	-DAKONADI_BUILD_QSQLITE=off
 .  if ${_MYSQL_VERSION} == "56"
 .    include "../../databases/mysql56-server/buildlink3.mk"
-.  elif ${_MYSQL_VERSION} == "55"
-.    include "../../databases/mysql55-server/buildlink3.mk"
 .  else
 PKG_FAIL_REASON+=	"Unknown MySQL version: ${_MYSQL_VERSION}"
 .  endif
