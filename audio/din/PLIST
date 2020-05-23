@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/02/12 12:13:19 fox Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/23 17:42:32 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -295,6 +295,7 @@ share/din/factory/d_circler
 share/din/factory/d_countries
 share/din/factory/d_curve_picker
 share/din/factory/d_dotter
+share/din/factory/d_dpeu
 share/din/factory/d_fft
 share/din/factory/d_fractaliser
 share/din/factory/d_lissajous
@@ -321,9 +322,12 @@ share/din/factory/din.hlp
 share/din/factory/din.osc
 share/din/factory/din_info
 share/din/factory/dot.crv
+share/din/factory/dp_bpm.crv
+share/din/factory/dp_depth.crv
 share/din/factory/drone-mod-am.crv
 share/din/factory/drone-mod-fm.crv
 share/din/factory/drone-modulation.ed
+share/din/factory/drone-pend.ed
 share/din/factory/drone.crv
 share/din/factory/drone.ed
 share/din/factory/droner.help.tcl
