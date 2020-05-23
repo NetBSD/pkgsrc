@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2019/03/17 18:02:26 gdt Exp $
+# $NetBSD: options.mk,v 1.7 2020/05/23 12:16:49 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits utf8
@@ -22,13 +22,13 @@ CONFIGURE_ARGS+=	--without-x
 .if !empty(PKG_OPTIONS:Mcups)
 CONFIGURE_ARGS+=	--enable-cups
 
-# Because nothing is installed, this is not necessary.  It remains in
-# case a later version does install something.
-SUBST_CLASSES+=		cupsetc
-SUBST_STAGE.cupsetc=	post-extract
-SUBST_MESSAGE.cupsetc=	Fixing CUPS etc directory path to install as example
-SUBST_FILES.cupsetc=	cups/cups.mak
-SUBST_SED.cupsetc=	-e 's|$$(CUPSSERVERROOT)|${CUPS_EGDIR}|g'
+# # Because nothing is installed, this is not necessary.  It remains in
+# # case a later version does install something.
+# SUBST_CLASSES+=		cupsetc
+# SUBST_STAGE.cupsetc=	post-extract
+# SUBST_MESSAGE.cupsetc=	Fixing CUPS etc directory path to install as example
+# SUBST_FILES.cupsetc=	cups/cups.mak
+# SUBST_SED.cupsetc=	-e 's|$$(CUPSSERVERROOT)|${CUPS_EGDIR}|g'
 
 .include "../../print/cups-base/buildlink3.mk"
 .else
