@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/05/16 14:48:48 rillig Exp $
+# $NetBSD: Makefile,v 1.68 2020/05/23 12:36:35 rillig Exp $
 
 DISTNAME=	dbmail-3.2.3
 PKGREVISION=	17
@@ -16,7 +16,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
-CONFIGURE_ARGS+=	--with-pkglibdir=${PREFIX}/lib/dbmail
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-zdb=${BUILDLINK_PREFIX.libzdb}
