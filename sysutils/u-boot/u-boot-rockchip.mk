@@ -1,4 +1,4 @@
-#	$NetBSD: u-boot-rockchip.mk,v 1.7 2020/05/19 20:02:51 rillig Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.8 2020/05/23 09:39:06 rillig Exp $
 #
 # should be used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -32,10 +32,6 @@ post-build:
 	dd if=${WRKSRC}/u-boot.itb seek=1024 conv=notrunc of=${WRKSRC}/rkspi_loader.img
 
 PYTHON_VERSIONS_ACCEPTED+=	37 38
-REPLACE_INTERPRETER+=	python3
-REPLACE.python3.old=	python3
-REPLACE.python3.new=	${PYTHON3BIN}
-REPLACE_FILES.python2=	arch/arm/mach-rockchip/make_fit_atf.py
 
 .include "../../sysutils/arm-trusted-firmware-${U_BOOT_IMAGE_TYPE}/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
