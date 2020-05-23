@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/02/08 19:54:24 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/23 07:03:49 adam Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
@@ -8,6 +8,8 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-QTKit/}
 
 COMMENT=	Bridge between Python and Objective-C (QTKit framework)
+
+NOT_FOR_PLATFORM=	Darwin-19.*-*
 
 USE_LANGUAGES=	c objc
 

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/18 17:03:09 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/23 07:03:42 adam Exp $
 
-SHA1 (pyobjc-framework-AppleScriptKit-6.1.tar.gz) = 00e8b3a4cc1aa5b383e9d51fed7ed8f5dab56013
-RMD160 (pyobjc-framework-AppleScriptKit-6.1.tar.gz) = 3892bec253612cd96257193b9bfa5e86816b787d
-SHA512 (pyobjc-framework-AppleScriptKit-6.1.tar.gz) = ba963a7bc63f178c20112c0fba2fdc03324d9751547549bd301027c5f22a57f540bf27910d598365adfb105981412f4f8e6bb5e19c672bd4414e8ae81584e247
-Size (pyobjc-framework-AppleScriptKit-6.1.tar.gz) = 10401 bytes
+SHA1 (pyobjc-framework-AppleScriptKit-6.2.tar.gz) = e307fd9b7f4758a2a0246ac8917ea49a2b75c7cc
+RMD160 (pyobjc-framework-AppleScriptKit-6.2.tar.gz) = 37deebd444be225f11a28d43685d3c0cbc90d410
+SHA512 (pyobjc-framework-AppleScriptKit-6.2.tar.gz) = 258d3f14ebd80d9ce0d390bb1f10dcb775a4835d620d9ee8072e4cf40d09b821b31f635dcdd759bd9ebd2bafa3f5c350c6eb96ff431024fc2fb942797857a9b0
+Size (pyobjc-framework-AppleScriptKit-6.2.tar.gz) = 10159 bytes

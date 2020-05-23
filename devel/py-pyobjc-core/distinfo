@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2019/11/18 17:04:55 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/05/23 07:03:41 adam Exp $
 
-SHA1 (pyobjc-core-6.1.tar.gz) = 15610efb13a8c4d7872115d609bf00edd690985c
-RMD160 (pyobjc-core-6.1.tar.gz) = dc2368d6c2bad5c7c64dfdffcb660df309aaba68
-SHA512 (pyobjc-core-6.1.tar.gz) = 5bd3dee43fdedb15f383f616e52750ca07b7dc8a52a51fbd695581eb106acb05591c667b5c0a11bac1409e148dd83db3d5a1ec14721b809c2b2cee234d506104
-Size (pyobjc-core-6.1.tar.gz) = 791075 bytes
-SHA1 (patch-setup.py) = d2e475029154413077380f8d9ddcfe357d5e9a3f
+SHA1 (pyobjc-core-6.2.tar.gz) = 0dd6cf5fd8ea21408536d2e91e0d59413d3b3d5e
+RMD160 (pyobjc-core-6.2.tar.gz) = ca19fc6ba540bc88571e390ee864a139c527e738
+SHA512 (pyobjc-core-6.2.tar.gz) = 5f6d241f9266ca77c8857c6b2b14c4ba26f55a69f87726cddd04fa20ea1758193de44e49bca74414e43728aa897e1f973074e3b32354b26e9b8086afb9963b16
+Size (pyobjc-core-6.2.tar.gz) = 775094 bytes
+SHA1 (patch-setup.py) = d718664138c441104c9be777d1d746e517b1f9a4

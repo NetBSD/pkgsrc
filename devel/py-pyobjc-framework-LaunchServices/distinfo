@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/18 17:03:13 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/23 07:03:46 adam Exp $
 
-SHA1 (pyobjc-framework-LaunchServices-6.1.tar.gz) = f9d4196920277ff957a6ac7b4e8040439f05c164
-RMD160 (pyobjc-framework-LaunchServices-6.1.tar.gz) = fd1acc63f8e873a92858448c85f9e36724b2100d
-SHA512 (pyobjc-framework-LaunchServices-6.1.tar.gz) = a23187b3a63d0d63cbf55e83414b3cee2a678234b5ec0dc8c29d147b6622a9243818c84de3b565138d9b7cbf242d72275ee8256b62b31e5e05f7a937a801c301
-Size (pyobjc-framework-LaunchServices-6.1.tar.gz) = 18943 bytes
+SHA1 (pyobjc-framework-LaunchServices-6.2.tar.gz) = 5f5586574ebc600621d983e6558d12e9fc8a71da
+RMD160 (pyobjc-framework-LaunchServices-6.2.tar.gz) = 69fd233b5030336b6219cef6a6fb76df2348afdd
+SHA512 (pyobjc-framework-LaunchServices-6.2.tar.gz) = 5830d0fab5f4a7711d5f61bf25fb645b0853e7f4ce96a869ed448ac742719556d0607d9ebaf0a34cdfe050c7ca28f702db3b2bb487ff61617a87c03ab3603d65
+Size (pyobjc-framework-LaunchServices-6.2.tar.gz) = 8791 bytes
