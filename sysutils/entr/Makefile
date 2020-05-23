@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/02/14 18:51:39 leot Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/23 10:26:54 rillig Exp $
 #
 
 DISTNAME=	entr-4.4
@@ -26,5 +26,9 @@ NOT_FOR_PLATFORM=	${MACHINE_PLATFORM}
 .endif
 
 TEST_TARGET=	test
+USE_TOOLS+=	bash:test
+.if ${PKGSRC_RUN_TEST:tl} == yes
+REPLACE_BASH+=	system_test.sh
+.endif
 
 .include "../../mk/bsd.pkg.mk"
