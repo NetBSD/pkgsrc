@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/05/21 20:53:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2020/05/23 10:59:33 markd Exp $
 
 DISTNAME=	kdepimlibs-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -8,12 +8,6 @@ COMMENT=	Support libraries for PIM for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.04.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
-
-SUBST_CLASSES+=			phononrelpath
-SUBST_STAGE.phononrelpath=	post-configure
-SUBST_MESSAGE.phononrelpath=	Fixing phonon RELWITHDEBINFO path
-SUBST_FILES.phononrelpath=	_KDE_build/CMakeFiles/Export/${LOCALBASE:S^/^_^}/lib/cmake/KdepimLibs/KDEPimLibsLibraryTargetsWithPrefix-${TARGET_NAME}.cmake
-SUBST_SED.phononrelpath=	-e 's:[^"]*/\.buildlink/lib/libphonon\.so::'
 
 CMAKE_DEPENDENCIES_REWRITE=	_KDE_build/KDEPimLibsDependencies.cmake
 
