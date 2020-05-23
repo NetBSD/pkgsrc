@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/16 15:23:05 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/23 21:32:15 schmonz Exp $
 
 DISTNAME=		qmail-autoresponder-2.0
 CATEGORIES=		mail
@@ -20,6 +20,8 @@ DJB_MAKE_TARGETS=	no
 BUILD_TARGET=		all
 
 LDFLAGS.SunOS+=		-lsocket
+
+.include "options.mk"
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/conf-bgincs ${WRKSRC}/conf-bglibs
