@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/23 08:22:40 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ciso8601.so
+${PYSITELIB}/ciso8601/__init__.pyi
+${PYSITELIB}/ciso8601/py.typed

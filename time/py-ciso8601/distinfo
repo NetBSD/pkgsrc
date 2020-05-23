@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/23 08:22:40 adam Exp $
+
+SHA1 (ciso8601-2.1.3.tar.gz) = 8c6b2cdcb5c684aa9b40fd3cd26c270745515424
+RMD160 (ciso8601-2.1.3.tar.gz) = e5c1b0e2455063de2577d955e63ce177e70190e0
+SHA512 (ciso8601-2.1.3.tar.gz) = 9342cf9b2ded1077a2c3906527ae4ac05dfc0e8104f1c85e041d636caa1180df390f01b2d87a33a4c197f4467a25bda1cd0136eb48585b127662cde7d0ffda7e
+Size (ciso8601-2.1.3.tar.gz) = 15726 bytes
