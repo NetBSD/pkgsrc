@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/12/17 04:54:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/23 13:06:37 rillig Exp $
 #
 
 DISTNAME=	gnucobol-2.2
@@ -21,8 +21,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-db
-CONFIGURE_ARGS+=	--with-lfs
-CONFIGURE_ARGS+=	--without-readline
 INFO_FILES=		yes
 
 SUBST_CLASSES+=		bdb
