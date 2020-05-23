@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/11/03 19:26:22 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/05/23 09:19:46 rillig Exp $
 
 DISTNAME=	tahoe-lafs-1.12.1
 PKGREVISION=	1
@@ -59,9 +59,7 @@ post-extract:
 	chmod -R +r ${WRKSRC}
 .endif
 
-REPLACE_PYTHON+=	src/allmydata/reliability.py
 REPLACE_PYTHON+=	src/allmydata/storage/shares.py
-REPLACE_PYTHON+=	src/buildtest/test_build_with_fake_dist.py
 
 PKG_GROUPS=		tahoes
 PKG_USERS=		tahoes:tahoes
