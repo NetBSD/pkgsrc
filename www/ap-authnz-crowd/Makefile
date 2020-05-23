@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/05/22 10:56:44 adam Exp $
+# $NetBSD: Makefile,v 1.31 2020/05/23 10:56:31 rillig Exp $
 
 DISTNAME=	mod_authnz_crowd-2.2.2
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
@@ -23,6 +23,8 @@ CONFIGURE_ENV+=	ac_cv_path_HTTPD=${BUILDLINK_PREFIX.apache}/sbin/httpd
 CONFIGURE_ENV+=	APXS=${APXS:Q}
 CONFIGURE_ENV+=	BUILDLINK_PREFIX_apache=${BUILDLINK_PREFIX.apache}
 CONFIGURE_ENV+=	BUILDLINK_PREFIX_subversion=${BUILDLINK_PREFIX.subversion-base}
+
+GNU_CONFIGURE_APXS2=	no
 
 BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 
