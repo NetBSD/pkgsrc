@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.599 2020/04/14 14:14:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.600 2020/05/23 07:25:08 adam Exp $
 
 COMMENT=	Databases
 
@@ -63,7 +63,6 @@ SUBDIR+=	java-tokyocabinet
 SUBDIR+=	jdbc-mysql31
 SUBDIR+=	jdbc-mysql5
 SUBDIR+=	jdbc-mysql51
-SUBDIR+=	jdbc-postgresql94
 SUBDIR+=	kldap
 SUBDIR+=	kyotocabinet
 SUBDIR+=	lbdb
@@ -105,8 +104,6 @@ SUBDIR+=	myodbc
 SUBDIR+=	mysql-cluster
 SUBDIR+=	mysql-connector-c++
 SUBDIR+=	mysql-workbench
-SUBDIR+=	mysql55-client
-SUBDIR+=	mysql55-server
 SUBDIR+=	mysql56-client
 SUBDIR+=	mysql56-server
 SUBDIR+=	mysql57-client
@@ -315,14 +312,6 @@ SUBDIR+=	postgresql12-plperl
 SUBDIR+=	postgresql12-plpython
 SUBDIR+=	postgresql12-pltcl
 SUBDIR+=	postgresql12-server
-SUBDIR+=	postgresql94
-SUBDIR+=	postgresql94-client
-SUBDIR+=	postgresql94-contrib
-SUBDIR+=	postgresql94-docs
-SUBDIR+=	postgresql94-plperl
-SUBDIR+=	postgresql94-plpython
-SUBDIR+=	postgresql94-pltcl
-SUBDIR+=	postgresql94-server
 SUBDIR+=	postgresql95
 SUBDIR+=	postgresql95-client
 SUBDIR+=	postgresql95-contrib
