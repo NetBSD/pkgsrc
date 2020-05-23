@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/11/18 17:03:10 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/05/23 07:03:43 adam Exp $
 
-SHA1 (pyobjc-framework-CoreML-6.1.tar.gz) = 9ab83f740f130a35ba567e41fad007028337d691
-RMD160 (pyobjc-framework-CoreML-6.1.tar.gz) = 6dc4dcd882ec95b9955f80a69b5df603e8f2bdc1
-SHA512 (pyobjc-framework-CoreML-6.1.tar.gz) = f1f5fe8fa2c97fbabde3cd9b7099cb868fff77bbe5a2c3264488d2f5be60f1209a04fde4f83465d7b37a106bd11f8ded56e644ca67674a74ad84856ed26fb60b
-Size (pyobjc-framework-CoreML-6.1.tar.gz) = 27962 bytes
+SHA1 (pyobjc-framework-CoreML-6.2.tar.gz) = 8ec6eb43326f136111bd2a11fcbe69a3ee2025be
+RMD160 (pyobjc-framework-CoreML-6.2.tar.gz) = 90b667a9457e6f2def360b007fa58c2c6afeaf27
+SHA512 (pyobjc-framework-CoreML-6.2.tar.gz) = 17440aaded81edb7de3bd0aa0014ebaf901739b9452eedca19892e5a517444bbe1b802b019ee9d6abca011e0323e7ca34995d293a449cf4342e7cdb57c1d2d6f
+Size (pyobjc-framework-CoreML-6.2.tar.gz) = 25918 bytes
