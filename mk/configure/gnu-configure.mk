@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.27 2020/05/22 15:21:15 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.28 2020/05/23 12:11:33 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -219,8 +219,11 @@ CONFIGURE_ARGS+=	--quiet
 _SHOW_UNKNOWN_CONFIGURE_OPTIONS_CMD= \
 	cd ${WRKSRC}; \
 	configures=$$( \
-		${FIND} ${CONFIGURE_DIRS} -name configure \
-		| ${SED} -e 's,^${WRKSRC}/,,' \
+		for dir in ${CONFIGURE_DIRS}; do \
+			cd ${WRKSRC} && cd "$$dir" && cd ${CONFIGURE_SCRIPT:H} \
+			&& ${FIND} "$$PWD" -name ${CONFIGURE_SCRIPT:T}; \
+		done \
+		| ${SED} -e 's,^${WRKSRC}/,./,' \
 		| LC_ALL=C ${SORT} -u \
 		| ${TR} '\n' ' ' \
 		| ${SED} 's, $$,,'); \

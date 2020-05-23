@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: gnu-configure-strict.sh,v 1.4 2020/05/23 07:30:18 rillig Exp $
+# $NetBSD: gnu-configure-strict.sh,v 1.5 2020/05/23 12:11:33 rillig Exp $
 #
 # Tests for GNU_CONFIGURE_STRICT handling in mk/configure/gnu-configure.mk.
 #
@@ -25,6 +25,8 @@ test_case_set_up() {
 		OPSYS=		NetBSD
 		WRKDIR=		$PWD
 		WRKSRC=		$PWD
+
+		CONFIGURE_SCRIPT?=	./configure
 	EOF
 }
 
@@ -443,6 +445,60 @@ if test_case_begin 'configure script without enable_http variable'; then
 		.include "mk/configure/gnu-configure.mk"
 	EOF
 
+
+	run_bmake 'testcase.mk' '_check-unknown-configure-options' \
+		1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$exitcode" --equals '0'
+	assert_that "$tmpdir/output" --file-is-empty
+
+	test_case_end
+fi
+
+
+if test_case_begin 'custom CONFIGURE_SCRIPT in relative directory'; then
+
+	create_file 'pkgname-1.0/configure.gnu' <<-EOF
+		if test "\${enable_option+set}" = set; then :; fi
+	EOF
+	mkdir 'build'
+	create_file 'testcase.mk' <<-EOF
+		GNU_CONFIGURE_STRICT=	yes
+		CONFIGURE_DIRS=		build
+		CONFIGURE_SCRIPT=	../pkgname-1.0/configure.gnu
+		CONFIGURE_ARGS=		--enable-option
+
+		.include "setup.mk"
+		.include "mk/configure/gnu-configure.mk"
+	EOF
+
+	run_bmake 'testcase.mk' '_check-unknown-configure-options' \
+		1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$exitcode" --equals '0'
+	assert_that "$tmpdir/output" --file-is-empty
+
+	test_case_end
+fi
+
+
+if test_case_begin 'custom CONFIGURE_SCRIPT in absolute directory'; then
+
+	create_file 'pkgname-1.0/configure.gnu' <<-EOF
+		if test "\${enable_option+set}" = set; then :; fi
+	EOF
+	mkdir 'build'
+	create_file 'testcase.mk' <<-EOF
+		GNU_CONFIGURE_STRICT=	yes
+		CONFIGURE_DIRS=		build
+		CONFIGURE_SCRIPT=	\${WRKDIR}/pkgname-1.0/configure.gnu
+		CONFIGURE_ARGS=		--enable-option
+
+		.include "setup.mk"
+		.include "mk/configure/gnu-configure.mk"
+	EOF
 
 	run_bmake 'testcase.mk' '_check-unknown-configure-options' \
 		1> "$tmpdir/output" 2>&1 \
