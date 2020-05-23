@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2020/05/21 20:53:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2020/05/23 12:38:42 rillig Exp $
 
 DISTNAME=	enblend-enfuse-4.2
 PKGREVISION=	19
@@ -21,7 +21,6 @@ BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	--with-x
 .include "../../graphics/freeglut/buildlink3.mk"
 .endif
 
