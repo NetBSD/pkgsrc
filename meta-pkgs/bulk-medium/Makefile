@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2020/05/21 15:06:16 taca Exp $
+# $NetBSD: Makefile,v 1.66 2020/05/23 00:07:56 nia Exp $
 
 DISTNAME=	bulk-medium-20200521
 CATEGORIES=	meta-pkgs
@@ -69,7 +69,7 @@ BUILD_DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 BUILD_DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 BUILD_DEPENDS+=	simh-[0-9]*:../../emulators/simh
 BUILD_DEPENDS+=	tme-[0-9]*:../../emulators/tme
-BUILD_DEPENDS+=	wine>=1.6<1.7:../../emulators/wine
+BUILD_DEPENDS+=	wine-[0-9]*:../../emulators/wine
 BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
