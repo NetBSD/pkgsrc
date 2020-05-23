@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.759 2020/05/02 13:35:39 taca Exp $
+# $NetBSD: Makefile,v 1.760 2020/05/23 09:06:19 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -410,7 +410,6 @@ SUBDIR+=	pwsafe
 SUBDIR+=	py-Des
 SUBDIR+=	py-OTXv2
 SUBDIR+=	py-OpenSSL
-SUBDIR+=	py-SSLCrypto
 SUBDIR+=	py-acme
 SUBDIR+=	py-acme-tiny
 SUBDIR+=	py-aes
