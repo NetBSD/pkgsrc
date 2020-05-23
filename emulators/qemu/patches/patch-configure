@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.27 2020/04/30 17:16:04 adam Exp $
+$NetBSD: patch-configure,v 1.28 2020/05/23 15:46:12 leot Exp $
 
 Add NVMM support.
 Fix jemalloc detection.
@@ -43,7 +43,7 @@ Fix jemalloc detection.
  NetBSD)
    bsd="yes"
    hax="yes"
-+  nvmm="yes"
++  nvmm=""
    make="${MAKE-gmake}"
    audio_drv_list="oss try-sdl"
    audio_possible_drivers="oss sdl"
