@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/23 07:03:41 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/23 11:07:21 adam Exp $
 
 META_PACKAGE=	yes
 
@@ -65,11 +65,8 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MapKit>=${PYOBJC_VERS}:../../devel/py-
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MediaAccessibility>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MediaAccessibility
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MediaLibrary>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MediaLibrary
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MediaPlayer>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MediaPlayer
-DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Metal>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-Metal
-DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MetalKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MetalKit
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-ModelIO>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-ModelIO
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MultipeerConnectivity>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MultipeerConnectivity
-DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-NaturalLanguage>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-NaturalLanguage
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-NetFS>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-NetFS
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-NetworkExtension>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-NetworkExtension
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-NotificationCenter>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-NotificationCenter
@@ -101,6 +98,12 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-libdispatch>=${PYOBJC_VERS}:../../deve
 .if empty(MACHINE_PLATFORM:MDarwin-19.*)
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-QTKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-QTKit
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-PubSub>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-PubSub
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-1[89].*)
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Metal>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-Metal
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MetalKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MetalKit
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-NaturalLanguage>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-NaturalLanguage
 .endif
 
 .include "../../lang/python/pyversion.mk"
