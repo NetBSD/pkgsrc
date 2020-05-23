@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 19:26:20 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/23 10:33:16 rillig Exp $
 
 DISTNAME=	fuse-ext2-0.0.7
 PKGREVISION=	2
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autoheader automake autoreconf gmake pkg-config
 USE_LANGUAGES=		c c++
 INSTALLATION_DIRS=	lib/umview/modules
+CHECK_PORTABILITY_SKIP=	tools/macosx/fuse-ext2.fs/fuse-ext2.util
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --verbose --install --force
