@@ -524,6 +524,10 @@ func (s *Suite) Test_CheckLinesOptionsMk__options_in_for_loop(c *check.C) {
 		"WARN: options.mk:4: Option \"other\" should be handled below in an .if block.")
 }
 
+// In this scenario, the evaluation of the PKG_OPTIONS takes place in a
+// loop over the PLIST_VARS, which is quite indirect, compared to a
+// direct ${PKG_OPTIONS:Mnetbsd}. In most practical cases, the identifiers
+// in PLIST_VARS are literals, which still allows that they are analyzed.
 func (s *Suite) Test_CheckLinesOptionsMk__indirect(c *check.C) {
 	t := s.Init(c)
 
@@ -533,7 +537,8 @@ func (s *Suite) Test_CheckLinesOptionsMk__indirect(c *check.C) {
 	t.CreateFileLines("mk/bsd.options.mk")
 	t.SetUpPackage("category/package",
 		".include \"options.mk\"")
-	t.CreateFileLines("category/package/options.mk",
+	t.Chdir("category/package")
+	t.CreateFileLines("options.mk",
 		MkCvsID,
 		"",
 		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
@@ -556,8 +561,12 @@ func (s *Suite) Test_CheckLinesOptionsMk__indirect(c *check.C) {
 		"PLIST.${option}=\tyes",
 		".  endif",
 		".endfor")
+	t.CreateFileLines("PLIST",
+		PlistCvsID,
+		"${PLIST.generic}bin/generic",
+		"${PLIST.netbsd}bin/netbsd",
+		"${PLIST.os}bin/os")
 	t.FinishSetUp()
-	t.Chdir("category/package")
 
 	G.Check(".")
 

@@ -450,6 +450,11 @@ func (t *Tester) SetUpCategory(name RelPath) {
 //
 // If the package path does not really matter for this test,
 // just use "category/package".
+//
+// To get short pathnames in the diagnostics, t.Chdir is often called
+// afterwards, if the test only sets up a single package.
+// In that case, the returned path is often not used since passing it
+// to Pkglint.Check would generate the long pathnames in the diagnostics.
 func (t *Tester) SetUpPackage(pkgpath RelPath, makefileLines ...string) CurrPath {
 	assertf(
 		matches(pkgpath.String(), `^[^/]+/[^/]+$`),

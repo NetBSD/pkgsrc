@@ -1091,21 +1091,23 @@ func (cv *VartypeCheck) Pkgrevision() {
 	}
 }
 
-// PlistIdentifier checks for valid identifiers in PLIST_VARS.
+// PlistIdentifier checks for valid condition identifiers in PLIST_VARS.
+//
 // These identifiers are interpreted as regular expressions by
 // mk/plist/plist-subst.mk, therefore they are limited to very
 // few characters.
 func (cv *VartypeCheck) PlistIdentifier() {
-	if cv.Value != cv.ValueNoVar {
+	cond := cv.Value
+	if cond != cv.ValueNoVar {
 		return
 	}
 
 	if cv.Op == opUseMatch {
 		invalidPatternChars := textproc.NewByteSet("A-Za-z0-9---_*?[]")
-		invalid := invalidCharacters(cv.Value, invalidPatternChars)
+		invalid := invalidCharacters(cond, invalidPatternChars)
 		if invalid != "" {
 			cv.Warnf("PLIST identifier pattern %q contains invalid characters (%s).",
-				cv.Value, invalid)
+				cond, invalid)
 			cv.Explain(
 				"PLIST identifiers must consist of [A-Za-z0-9-_] only.",
 				"In patterns, the characters *?[] are allowed additionally.")
@@ -1114,12 +1116,21 @@ func (cv *VartypeCheck) PlistIdentifier() {
 	}
 
 	invalidChars := textproc.NewByteSet("A-Za-z0-9---_")
-	invalid := invalidCharacters(cv.Value, invalidChars)
+	invalid := invalidCharacters(cond, invalidChars)
 	if invalid != "" {
 		cv.Errorf("PLIST identifier %q contains invalid characters (%s).",
-			cv.Value, invalid)
+			cond, invalid)
 		cv.Explain(
 			"PLIST identifiers must consist of [A-Za-z0-9-_] only.")
+		return
+	}
+
+	if cv.MkLines.pkg != nil && !cv.MkLines.pkg.Plist.Conditions[cond] {
+		cv.Warnf("PLIST identifier %q is not used in any PLIST file.", cond)
+		cv.Explain(
+			"For every identifier that is added to PLIST_VARS,",
+			"there should be a corresponding ${PLIST.identifier}",
+			"in any of the PLIST files of the package.")
 	}
 }
 
