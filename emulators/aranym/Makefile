@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/05/09 18:31:00 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2020/05/23 10:12:35 rillig Exp $
 
 DISTNAME=	aranym_1.1.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -26,7 +26,7 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 MANCOMPRESSED=	yes
 
-CHECK_PORTABILITY_CHECK=	src/Unix/MacOSX/scripts/gen_machfiles.sh
+CHECK_PORTABILITY_SKIP=	src/Unix/MacOSX/scripts/gen_machfiles.sh
 
 CONFIGURE_ARGS+=	--enable-fullmmu
 CONFIGURE_ARGS+=	--enable-atc=full
