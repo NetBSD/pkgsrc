@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/18 17:03:10 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/23 07:03:43 adam Exp $
 
-SHA1 (pyobjc-framework-CoreData-6.1.tar.gz) = cb9fd23c48515256616b91e555b3c4a9cbab134a
-RMD160 (pyobjc-framework-CoreData-6.1.tar.gz) = 2a01612acfb6aaddffd0bf7fc603d389b4695d0b
-SHA512 (pyobjc-framework-CoreData-6.1.tar.gz) = d27aaf4128329d19e67fd045ce17f76d2b296cb51a9b68f4c76a363c4e1a8bc25ee7782b53ada1da3ac662f64d9440bd97a2d8934c0e106212a89b8a0a38fbc4
-Size (pyobjc-framework-CoreData-6.1.tar.gz) = 157554 bytes
+SHA1 (pyobjc-framework-CoreData-6.2.tar.gz) = ad6b312722b599bbc59ea395d753f6acec20968a
+RMD160 (pyobjc-framework-CoreData-6.2.tar.gz) = b60b0074c6b5c409764ca420b6aa885f72446e34
+SHA512 (pyobjc-framework-CoreData-6.2.tar.gz) = 5e54e69f0f2a3b17417202602cad179379648fe46d988e86e8daa75fdb2bbfbeeb7a02116f0d721138214112e539a5f9cf1aeb8c91b5f7e67efea3a87cf8d832
+Size (pyobjc-framework-CoreData-6.2.tar.gz) = 150558 bytes
