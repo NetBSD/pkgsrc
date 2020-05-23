@@ -1084,22 +1084,27 @@ func (s *Suite) Test_PlistChecker_checkPathShareIcons__hicolor_ok(c *check.C) {
 func (s *Suite) Test_PlistChecker_checkPathCond(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetUpPackage("category/package",
+	t.SetUpPackage("category/package",
 		"PLIST_VARS+=\tmk-undefined mk-yes both",
 		"PLIST.mk-yes=\tyes",
 		"PLIST.both=\tyes")
-	t.CreateFileLines("category/package/PLIST",
+	t.Chdir("category/package")
+	t.CreateFileLines("PLIST",
 		PlistCvsID,
 		"${PLIST.both}${PLIST.plist}bin/program")
 	t.FinishSetUp()
 
-	G.Check(pkg)
+	G.Check(".")
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile:20: "+
+		"WARN: Makefile:20: "+
+			"PLIST identifier \"mk-undefined\" is not used in any PLIST file.",
+		"WARN: Makefile:20: "+
+			"PLIST identifier \"mk-yes\" is not used in any PLIST file.",
+		"WARN: Makefile:20: "+
 			"\"mk-undefined\" is added to PLIST_VARS, "+
 			"but PLIST.mk-undefined is not defined in this file.",
-		"WARN: ~/category/package/PLIST:2: "+
+		"WARN: PLIST:2: "+
 			"Condition \"plist\" should be added to PLIST_VARS "+
 			"in the package Makefile.")
 }
@@ -1120,14 +1125,17 @@ func (s *Suite) Test_PlistChecker_checkCond(c *check.C) {
 	G.Check(pkg)
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/PLIST:2: " +
-			"Condition \"plist\" should be added to PLIST_VARS " +
+		"WARN: ~/category/package/Makefile:20: "+
+			"PLIST identifier \"mk-yes\" is not used in any PLIST file.",
+		"WARN: ~/category/package/PLIST:2: "+
+			"Condition \"plist\" should be added to PLIST_VARS "+
 			"in the package Makefile.")
 }
 
 // Because of the unresolvable variable in the package Makefile,
 // pkglint cannot be absolutely sure about the possible PLIST
-// conditions. Therefore all such warnings are suppressed.
+// conditions. Even though ${PLIST.plist} is missing the corresponding
+// PLIST_VARS+=plist in the Makefile, there is no warning about this.
 //
 // As of January 2020, this case typically occurs when PLIST_VARS
 // is defined based on PKG_SUPPORTED_OPTIONS. Expanding that variable
@@ -1137,27 +1145,28 @@ func (s *Suite) Test_PlistChecker_checkCond(c *check.C) {
 func (s *Suite) Test_PlistChecker_checkCond__unresolvable_variable(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetUpPackage("category/package",
+	t.SetUpPackage("category/package",
 		"PLIST_VARS+=\tmk-only ${UNRESOLVABLE}",
 		"PLIST.mk-only=\tyes")
-	t.CreateFileLines("category/package/PLIST",
+	t.Chdir("category/package")
+	t.CreateFileLines("PLIST",
 		PlistCvsID,
 		"${PLIST.plist}bin/program")
 	t.FinishSetUp()
 
-	G.Check(pkg)
+	G.Check(".")
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile:20: " +
+		"WARN: Makefile:20: "+
+			"PLIST identifier \"mk-only\" is not used in any PLIST file.",
+		"WARN: Makefile:20: "+
 			"UNRESOLVABLE is used but not defined.")
 }
 
 func (s *Suite) Test_PlistChecker_checkCond__hacks_mk(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpPackage("category/package",
-		"PLIST_VARS+=\tmk", // To get past the mkline == nil condition.
-		"PLIST.mk=\tyes")
+	t.SetUpPackage("category/package")
 	t.Chdir("category/package")
 	t.CreateFileLines("hacks.mk",
 		MkCvsID,

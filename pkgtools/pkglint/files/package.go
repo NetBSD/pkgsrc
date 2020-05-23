@@ -543,6 +543,9 @@ func (pkg *Package) loadPlistDirs(plistFilename CurrPath) {
 			rank := NewPlistRank(plistLine.Basename)
 			pkg.PlistLines.Add(plistLine, rank)
 		}
+		for _, cond := range plistLine.conditions {
+			pkg.Plist.Conditions[strings.TrimPrefix(cond, "PLIST.")] = true
+		}
 	}
 }
 
@@ -1619,12 +1622,14 @@ func (pkg *Package) Includes(filename PackagePath) *MkLine {
 // 2. Ensure that the entries mentioned in the ALTERNATIVES file
 // also appear in the PLIST files.
 type PlistContent struct {
-	Dirs  map[RelPath]*PlistLine
-	Files map[RelPath]*PlistLine
+	Dirs       map[RelPath]*PlistLine
+	Files      map[RelPath]*PlistLine
+	Conditions map[string]bool // each ${PLIST.id} sets ["id"] = true.
 }
 
 func NewPlistContent() PlistContent {
 	return PlistContent{
 		make(map[RelPath]*PlistLine),
-		make(map[RelPath]*PlistLine)}
+		make(map[RelPath]*PlistLine),
+		make(map[string]bool)}
 }
