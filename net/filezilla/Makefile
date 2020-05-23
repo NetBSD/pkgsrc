@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2020/05/22 10:56:26 adam Exp $
+# $NetBSD: Makefile,v 1.127 2020/05/23 12:48:00 rillig Exp $
 
 VERSION=	3.47.2.1
 DISTNAME=	FileZilla_${VERSION}_src
@@ -21,6 +21,8 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-autoupdatecheck
 # avoid xdg-utils dependency
 CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
+
+GNU_CONFIGURE_WX_VERSION=	no
 
 # For C++17.
 GCC_REQD+=		7
