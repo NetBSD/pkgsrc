@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3122 2020/05/23 08:51:19 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3123 2020/05/23 09:08:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5000,3 +5000,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-xdis to 4.6.0 [adam 2020-05-23]
 	Updated lang/py-uncompyle6 to 3.7.0 [adam 2020-05-23]
 	Updated pkgtools/pkglint to 20.1.8 [rillig 2020-05-23]
+	Removed security/py-SSLCrypto [adam 2020-05-23]
+	Removed sysutils/py-attic [adam 2020-05-23]
