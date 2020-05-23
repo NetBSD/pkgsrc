@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.603 2020/05/23 10:51:00 nia Exp $
+# $NetBSD: Makefile,v 1.604 2020/05/23 12:30:19 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -430,7 +430,6 @@ SUBDIR+=	spiralloops
 SUBDIR+=	spiralsynth
 SUBDIR+=	splay
 SUBDIR+=	sptk
-SUBDIR+=	squeezeboxserver
 SUBDIR+=	strawberry
 SUBDIR+=	streamripper
 SUBDIR+=	streamtuner
