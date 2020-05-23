@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/11/18 17:03:13 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/05/23 07:03:47 adam Exp $
 
-SHA1 (pyobjc-framework-MapKit-6.1.tar.gz) = 605a546fa9c018d3a56c7cce8cc153c85c95823a
-RMD160 (pyobjc-framework-MapKit-6.1.tar.gz) = 9c4803b1e728f0adedad826941313948bbd0666a
-SHA512 (pyobjc-framework-MapKit-6.1.tar.gz) = 2b7b3a6465dc77537ec0c521ed32f3074a735c568ba5b81e903fde49399809d2aa20c4265c127dbc12d37380c4db7d90fd05c7833b497bc312ac6f60088b2efc
-Size (pyobjc-framework-MapKit-6.1.tar.gz) = 52888 bytes
+SHA1 (pyobjc-framework-MapKit-6.2.tar.gz) = 12013bf833ece6f0b0ae703ec712bfdcff030757
+RMD160 (pyobjc-framework-MapKit-6.2.tar.gz) = acb06a1878f9e3290de0991a2102d05338b07b26
+SHA512 (pyobjc-framework-MapKit-6.2.tar.gz) = 557b2de7243b89b11999ddcb378e876b6d2c0c94944d1403c7df25dc7d0c09f748fd8bb44a6a26cd5b0e9f301901c02c487a166c2d79070802caad9cc1a3dc46
+Size (pyobjc-framework-MapKit-6.2.tar.gz) = 47660 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2019/11/19 05:36:44 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2020/05/23 07:03:41 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AVFoundation/Makefile
 # used by devel/py-pyobjc-framework-AVKit/Makefile
@@ -16,10 +16,12 @@
 # used by devel/py-pyobjc-framework-ColorSync/Makefile
 # used by devel/py-pyobjc-framework-Contacts/Makefile
 # used by devel/py-pyobjc-framework-ContactsUI/Makefile
+# used by devel/py-pyobjc-framework-CoreAudio/Makefile
 # used by devel/py-pyobjc-framework-CoreBluetooth/Makefile
 # used by devel/py-pyobjc-framework-CoreData/Makefile
 # used by devel/py-pyobjc-framework-CoreLocation/Makefile
 # used by devel/py-pyobjc-framework-CoreML/Makefile
+# used by devel/py-pyobjc-framework-CoreMedia/Makefile
 # used by devel/py-pyobjc-framework-CoreServices/Makefile
 # used by devel/py-pyobjc-framework-CoreSpotlight/Makefile
 # used by devel/py-pyobjc-framework-CoreText/Makefile
@@ -49,8 +51,11 @@
 # used by devel/py-pyobjc-framework-MediaAccessibility/Makefile
 # used by devel/py-pyobjc-framework-MediaLibrary/Makefile
 # used by devel/py-pyobjc-framework-MediaPlayer/Makefile
+# used by devel/py-pyobjc-framework-Metal/Makefile
+# used by devel/py-pyobjc-framework-MetalKit/Makefile
 # used by devel/py-pyobjc-framework-ModelIO/Makefile
 # used by devel/py-pyobjc-framework-MultipeerConnectivity/Makefile
+# used by devel/py-pyobjc-framework-NaturalLanguage/Makefile
 # used by devel/py-pyobjc-framework-NetFS/Makefile
 # used by devel/py-pyobjc-framework-NetworkExtension/Makefile
 # used by devel/py-pyobjc-framework-NotificationCenter/Makefile
@@ -79,7 +84,7 @@
 # used by devel/py-pyobjc-framework-iTunesLibrary/Makefile
 # used by devel/py-pyobjc-framework-libdispatch/Makefile
 
-PYOBJC_VERS=	6.1
+PYOBJC_VERS=	6.2
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/
@@ -93,5 +98,4 @@ SUBST_CLASSES+=		pysetup
 SUBST_STAGE.pysetup=	pre-configure
 SUBST_MESSAGE.pysetup=	Avoiding hacks in pyobjc_setup.py.
 SUBST_FILES.pysetup=	pyobjc_setup.py
-SUBST_SED.pysetup=	-e 's,[a-z]*flags.extend.*-isysroot.*,pass,'
-SUBST_SED.pysetup+=	-e "s,del sys.modules\['PyObjCTools'\],pass,"
+SUBST_SED.pysetup=	-e 's,del sys.modules\["PyObjCTools"\],pass,'

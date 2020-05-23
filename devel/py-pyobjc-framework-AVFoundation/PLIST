@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/08 19:54:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/23 07:03:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/AVFoundation/_AVFoundation.so
+${PYSITELIB}/AVFoundation/_AVFoundation.abi3.so
 ${PYSITELIB}/AVFoundation/__init__.py
 ${PYSITELIB}/AVFoundation/__init__.pyc
 ${PYSITELIB}/AVFoundation/__init__.pyo
-${PYSITELIB}/AVFoundation/_inlines.so
+${PYSITELIB}/AVFoundation/_inlines.abi3.so
 ${PYSITELIB}/AVFoundation/_metadata.py
 ${PYSITELIB}/AVFoundation/_metadata.pyc
 ${PYSITELIB}/AVFoundation/_metadata.pyo

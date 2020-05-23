@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/11/18 17:03:12 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/05/23 07:03:45 adam Exp $
 
-SHA1 (pyobjc-framework-GameplayKit-6.1.tar.gz) = e3fe178e8305c374d496edf59e83216e08bbe686
-RMD160 (pyobjc-framework-GameplayKit-6.1.tar.gz) = eb761b345b930d78e43489357a79e3d023b37ed9
-SHA512 (pyobjc-framework-GameplayKit-6.1.tar.gz) = 1eea4dfb768697bba198ffe0ddfa778e544cdfe19e79c2e6cdffe7a3e3e4db217219ef8c65472fe330a33afbb300e11786136a8e7bde04f5c932d2cb48ce0d8c
-Size (pyobjc-framework-GameplayKit-6.1.tar.gz) = 28621 bytes
+SHA1 (pyobjc-framework-GameplayKit-6.2.tar.gz) = 930a47322bac22d0d894e0ac4b5a2cd6fbead80f
+RMD160 (pyobjc-framework-GameplayKit-6.2.tar.gz) = e879d6bd03cd78721f10b7a6c977fe2f2d84fea0
+SHA512 (pyobjc-framework-GameplayKit-6.2.tar.gz) = 8703c40bcbeea223f8acef36f50c28927df1ed07afdddbc1e71c9abbe1b2e053bd988921bc39064cc85a0649f913f0473eee2d0b5bd8f05c2396a66008201da5
+Size (pyobjc-framework-GameplayKit-6.2.tar.gz) = 26531 bytes

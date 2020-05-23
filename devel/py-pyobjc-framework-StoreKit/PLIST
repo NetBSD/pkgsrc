@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/08 19:54:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/23 07:03:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/StoreKit/_StoreKit.so
+${PYSITELIB}/StoreKit/_StoreKit.abi3.so
 ${PYSITELIB}/StoreKit/__init__.py
 ${PYSITELIB}/StoreKit/__init__.pyc
 ${PYSITELIB}/StoreKit/__init__.pyo

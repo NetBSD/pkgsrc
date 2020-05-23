@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/18 17:03:15 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/23 07:03:48 adam Exp $
 
-SHA1 (pyobjc-framework-PreferencePanes-6.1.tar.gz) = 4e085fb8e4f78559e1af65db45fede444fc7cc3e
-RMD160 (pyobjc-framework-PreferencePanes-6.1.tar.gz) = 7cde26d3beb8fb7e33b305c974aab6188473010c
-SHA512 (pyobjc-framework-PreferencePanes-6.1.tar.gz) = 7d67fc5236c56e9d342e072c8c0b081a0daf47ee447173d48b591de68d970128b07a2f2437f45e4975e9564f9ea4ceb63d920dc9801690730dd35fd7a547afb4
-Size (pyobjc-framework-PreferencePanes-6.1.tar.gz) = 23079 bytes
+SHA1 (pyobjc-framework-PreferencePanes-6.2.tar.gz) = 9b8788bbeb493a2348a30bad87ba9cbececbe00f
+RMD160 (pyobjc-framework-PreferencePanes-6.2.tar.gz) = 73398d45d59f15df6accd7fcedbd098359c89fd1
+SHA512 (pyobjc-framework-PreferencePanes-6.2.tar.gz) = 45f880c9d8cfe5bd7ec2bd52f16475fe1efd2a570156ece1de393d112aea173860f240d0b9ff4aa0f5b1cf1bb9089578d0056d56d200ea881dc3471b180490c8
+Size (pyobjc-framework-PreferencePanes-6.2.tar.gz) = 22478 bytes
