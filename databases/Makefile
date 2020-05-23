@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.601 2020/05/23 08:20:53 adam Exp $
+# $NetBSD: Makefile,v 1.602 2020/05/23 08:26:18 adam Exp $
 
 COMMENT=	Databases
 
@@ -382,6 +382,7 @@ SUBDIR+=	py-sqlsoup
 SUBDIR+=	py-sybase
 SUBDIR+=	py-table
 SUBDIR+=	py-tokyocabinet
+SUBDIR+=	py-tortoise-orm
 SUBDIR+=	py-trytond-ldap-authentication
 SUBDIR+=	py-unicodecsv
 SUBDIR+=	py-whisper
