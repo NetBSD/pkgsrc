@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3130 2020/05/23 15:51:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3131 2020/05/23 17:43:22 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5011,3 +5011,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed audio/amaroc [nia 2020-05-23]
 	Removed audio/squeezeboxserver [nia 2020-05-23]
 	Updated audio/audacity to 2.4.1 [nia 2020-05-23]
+	Updated audio/din to 47 [fox 2020-05-23]
