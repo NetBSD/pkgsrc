@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3133 2020/05/23 07:03:41 adam Exp $
+# $NetBSD: Makefile,v 1.3134 2020/05/23 08:19:22 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2123,6 +2123,7 @@ SUBDIR+=	py-ZopeTestrunner
 SUBDIR+=	py-absl-py
 SUBDIR+=	py-adb
 SUBDIR+=	py-aiofiles
+SUBDIR+=	py-aiounittest
 SUBDIR+=	py-angr
 SUBDIR+=	py-anytree
 SUBDIR+=	py-apipkg
