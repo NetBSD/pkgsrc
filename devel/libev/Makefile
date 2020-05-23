@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/03/22 16:01:46 nia Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/23 16:19:10 nia Exp $
 
 DISTNAME=	libev-4.33
 CATEGORIES=	devel
@@ -16,5 +16,12 @@ CONFIGURE_ARGS+=		--includedir=${PREFIX}/include/ev
 # Explicitly disable inotify on SunOS, assumes Linux statfs.
 CONFIGURE_ENV.SunOS+=		ac_cv_header_sys_inotify_h=no
 CONFIGURE_ENV.SunOS+=		ac_cv_header_sys_epoll_h=no
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
+# Prevent ev.c from using v9 memory barrier instructions
+CPPFLAGS+=	-D__sparc_v8__=1
+.endif
 
 .include "../../mk/bsd.pkg.mk"
