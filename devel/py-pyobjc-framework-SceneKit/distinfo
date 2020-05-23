@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/11/18 17:03:16 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/05/23 07:03:49 adam Exp $
 
-SHA1 (pyobjc-framework-SceneKit-6.1.tar.gz) = 3c677759252ba4cb1ca31d29a5ef1ab8c880bbaa
-RMD160 (pyobjc-framework-SceneKit-6.1.tar.gz) = 0462e2434e3fb32908c84871a0e43cc03249131d
-SHA512 (pyobjc-framework-SceneKit-6.1.tar.gz) = bfd11b631d16222b7489fb730939deaa76d9e6c927b92868adf3d8776471e1422b43bb4b456ad31b9fca865d8d9ac739b167f73edc6c2bf486e026e7f7e6f4e6
-Size (pyobjc-framework-SceneKit-6.1.tar.gz) = 100317 bytes
+SHA1 (pyobjc-framework-SceneKit-6.2.tar.gz) = 44adb08b13ae4c840eb163a5ea45c8fa099148df
+RMD160 (pyobjc-framework-SceneKit-6.2.tar.gz) = 293f7b24a65ad7e1f11a43e7f50783d23c67a013
+SHA512 (pyobjc-framework-SceneKit-6.2.tar.gz) = 246d3b6ecfab4680ba9489e552cf4c3e9bcf77f3233b7770f473b42138208607d15e46519978b696afc0e26bf4beff9097c692fd8f9dec370c8751482fcfed5e
+Size (pyobjc-framework-SceneKit-6.2.tar.gz) = 90095 bytes

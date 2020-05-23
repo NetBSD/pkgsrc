@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3132 2020/05/19 18:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3133 2020/05/23 07:03:41 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2410,10 +2410,12 @@ SUBDIR+=	py-pyobjc-framework-Collaboration
 SUBDIR+=	py-pyobjc-framework-ColorSync
 SUBDIR+=	py-pyobjc-framework-Contacts
 SUBDIR+=	py-pyobjc-framework-ContactsUI
+SUBDIR+=	py-pyobjc-framework-CoreAudio
 SUBDIR+=	py-pyobjc-framework-CoreBluetooth
 SUBDIR+=	py-pyobjc-framework-CoreData
 SUBDIR+=	py-pyobjc-framework-CoreLocation
 SUBDIR+=	py-pyobjc-framework-CoreML
+SUBDIR+=	py-pyobjc-framework-CoreMedia
 SUBDIR+=	py-pyobjc-framework-CoreServices
 SUBDIR+=	py-pyobjc-framework-CoreSpotlight
 SUBDIR+=	py-pyobjc-framework-CoreText
@@ -2443,9 +2445,11 @@ SUBDIR+=	py-pyobjc-framework-MapKit
 SUBDIR+=	py-pyobjc-framework-MediaAccessibility
 SUBDIR+=	py-pyobjc-framework-MediaLibrary
 SUBDIR+=	py-pyobjc-framework-MediaPlayer
+SUBDIR+=	py-pyobjc-framework-Metal
 SUBDIR+=	py-pyobjc-framework-MetalKit
 SUBDIR+=	py-pyobjc-framework-ModelIO
 SUBDIR+=	py-pyobjc-framework-MultipeerConnectivity
+SUBDIR+=	py-pyobjc-framework-NaturalLanguage
 SUBDIR+=	py-pyobjc-framework-NetFS
 SUBDIR+=	py-pyobjc-framework-NetworkExtension
 SUBDIR+=	py-pyobjc-framework-NotificationCenter

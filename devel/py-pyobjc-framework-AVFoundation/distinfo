@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/11/18 17:03:08 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/05/23 07:03:41 adam Exp $
 
-SHA1 (pyobjc-framework-AVFoundation-6.1.tar.gz) = 7573b0e26b7069a85ae407f12f0ea87644820816
-RMD160 (pyobjc-framework-AVFoundation-6.1.tar.gz) = cd5802a08ad409689a907682cb05f3b38dc35c9c
-SHA512 (pyobjc-framework-AVFoundation-6.1.tar.gz) = 764cd9f5ee023af31ce2bc87152af750f1b39f56a0c1eab8724ac436fbcc8f50309737c5723f2f2bbcea44cad0ff9d93ae83d276d3d2bfdc65f4f3ab31ae8b9b
-Size (pyobjc-framework-AVFoundation-6.1.tar.gz) = 338989 bytes
+SHA1 (pyobjc-framework-AVFoundation-6.2.tar.gz) = e5380b37b24594f7915c4278aa2c0d063ce2aea0
+RMD160 (pyobjc-framework-AVFoundation-6.2.tar.gz) = bf9b66a2bc394ff35347ce860c601fc576c23ca2
+SHA512 (pyobjc-framework-AVFoundation-6.2.tar.gz) = 08249c4f1432a526c2c36474bceae513953462e67ffb00931e0f6b9fea54fbd39a5089aa88c28f5f499d6e612e03bb4d310d739e1e7b22ce0ffea922b84f0db5
+Size (pyobjc-framework-AVFoundation-6.2.tar.gz) = 339503 bytes
