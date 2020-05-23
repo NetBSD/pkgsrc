@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2020/02/03 04:51:27 schmonz Exp $
+$NetBSD: distinfo,v 1.47 2020/05/23 20:50:02 schmonz Exp $
 
 SHA1 (netqmail-1.05-TAI-leapsecs.patch) = 2c21cd7e20b241c1a82b79379f2c7ee3da5519f7
 RMD160 (netqmail-1.05-TAI-leapsecs.patch) = 9fd59001be5a07d914c66127236ebe8c33f64675
@@ -12,18 +12,14 @@ SHA1 (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = 8aaa
 RMD160 (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = a3682ab33bb0e746ae214dbac91e0c8f92c780e2
 SHA512 (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = 8b9894d743f6ea7ceb72d34fedaa8afeb61afdfb5b6d929b5c76eb31da27232cb6f952a26b3733c244bfd430750d250bdc0fa92464c6a64f017abd97c84e8c77
 Size (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = 24175 bytes
-SHA1 (notqmail-1.07-tls-20190517-qmailremote-20190819.patch) = 2aa984625c439069a9c252186f989a51f48449ad
-RMD160 (notqmail-1.07-tls-20190517-qmailremote-20190819.patch) = 95622f1895c2909bc3a3c5f609bd1f116437f65a
-SHA512 (notqmail-1.07-tls-20190517-qmailremote-20190819.patch) = cf4f7dda23f90ffff26b3cb0ff4c5d7037ca70a43370e4bd9edd703a67ae0aa125bd5fe54aa97aea6b82054ac6819cc469a091e4cc7b39a48f61409420cfd516
-Size (notqmail-1.07-tls-20190517-qmailremote-20190819.patch) = 1643 bytes
 SHA1 (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = f08685e0b9784d5ac0e795f1bc806fde8de326e7
 RMD160 (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = a6aa94fe9eb306a2ee0a99011110eedce695c75b
 SHA512 (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = 786698a79c7e81349f1ecd12fd14fef03b0c873a0d98482dc506bb0c130214eda3a2f4f3a2c45f03c4ecc4721c6e7de3cf66f7e75f1b40a2f66ea22f53e30b28
 Size (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = 26972 bytes
-SHA1 (notqmail-1.07.tar.gz) = 7aebb1e4cebcdb248bd907f1a7949c5f0030665b
-RMD160 (notqmail-1.07.tar.gz) = 2f8b610a8ffb0829af071a91515626c83f58126c
-SHA512 (notqmail-1.07.tar.gz) = 586d1ebeba881ebbd5234c957e1bf599d0854eea9dea13f387790b3de3188d49ec1654590862c613894c588b7b0a140345e0d9849da2f4cd974963a485124f49
-Size (notqmail-1.07.tar.gz) = 227458 bytes
+SHA1 (notqmail-1.08.tar.gz) = 7647b9920134cd433b31c5e27563f0728fbd0056
+RMD160 (notqmail-1.08.tar.gz) = ea1417fe5aebc24cb1d06e9992d941e91045e3b0
+SHA512 (notqmail-1.08.tar.gz) = eca97f74a20522e85435fa76015a72adcc040e1acc401cbdbd7f55f41a720fabc6f251e606ff1d236e44de295f066538ec42aca415b4344c1cd15964f38c7085
+Size (notqmail-1.08.tar.gz) = 225713 bytes
 SHA1 (outgoingip.patch) = c37b50facc72f82cad6505d2db88d5eccc5418b2
 RMD160 (outgoingip.patch) = 032c653d395e5f599c0998e92debb09d84f90f0f
 SHA512 (outgoingip.patch) = 876eba3e65eba02f62838e5324cf64985254805ac5ec9417b168caa8c8d150a5185885d49a92d968690438289963bd6569e3de3330daf71a248206cd94227cd2
@@ -44,4 +40,3 @@ SHA1 (qmail-spp-0.42.tar.gz) = 76a94051b017dd331d8c791e466bb2a936ceba41
 RMD160 (qmail-spp-0.42.tar.gz) = 5511722c52346692488a63bca53106d580a004c7
 SHA512 (qmail-spp-0.42.tar.gz) = 03449862886a0ca20fbadab4c94b34b55d185f8df3261bd68aea99e9ded9edfab4477c6b38a8e0295e9b38b0045615da8b1a906a458f28745eadd3c4d882bcbf
 Size (qmail-spp-0.42.tar.gz) = 18689 bytes
-SHA1 (patch-Makefile) = ee82c0d6e64aaf617e3b2e69c577b6c4c23f62ca
