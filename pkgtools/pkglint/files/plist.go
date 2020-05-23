@@ -529,6 +529,7 @@ func (ck *PlistChecker) checkOmf(plines []*PlistLine) {
 
 type PlistLine struct {
 	*Line
+	// XXX: Why "PLIST.docs" and not simply "docs"?
 	conditions []string // e.g. PLIST.docs
 	text       string   // Line.Text without any conditions of the form ${PLIST.cond}
 }

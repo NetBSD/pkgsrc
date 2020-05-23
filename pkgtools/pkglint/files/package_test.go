@@ -1839,6 +1839,25 @@ func (s *Suite) Test_Package_checkPlist__PERL5_USE_PACKLIST_yes(c *check.C) {
 		"WARN: ~/category/p5-Packlist/Makefile:20: This package should not have a PLIST file.")
 }
 
+func (s *Suite) Test_Package_checkPlist__unused_PLIST_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"PLIST_VARS+=\tused unused",
+		"PLIST.used=\tyes",
+		"PLIST.unused=\tyes")
+	t.CreateFileLines("category/package/PLIST",
+		PlistCvsID,
+		"${PLIST.used}bin/a")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:20: PLIST identifier \"unused\" is not used in any PLIST file.")
+}
+
 func (s *Suite) Test_Package_CheckVarorder__only_required_variables(c *check.C) {
 	t := s.Init(c)
 
