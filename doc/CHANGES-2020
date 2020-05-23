@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3126 2020/05/23 10:44:41 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3127 2020/05/23 10:46:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5007,3 +5007,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/fs-uae-launcher to 3.0.5 [adam 2020-05-23]
 	Updated devel/libuv to 1.38.0 [adam 2020-05-23]
 	Updated graphics/gmic to 2.9.0 [ryoon 2020-05-23]
+	Updated misc/libreoffice to 6.4.4.2 [ryoon 2020-05-23]
