@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.90 2020/01/29 08:33:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.91 2020/05/23 07:38:01 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -15,6 +15,7 @@ share/doc/sqlite3/autoinc.html
 share/doc/sqlite3/backup.html
 share/doc/sqlite3/bindptr.html
 share/doc/sqlite3/books.html
+share/doc/sqlite3/bytecodevtab.html
 share/doc/sqlite3/c3ref/aggregate_context.html
 share/doc/sqlite3/c3ref/aggregate_count.html
 share/doc/sqlite3/c3ref/api_routines.html
@@ -88,10 +89,12 @@ share/doc/sqlite3/c3ref/constlist.html
 share/doc/sqlite3/c3ref/context.html
 share/doc/sqlite3/c3ref/context_db_handle.html
 share/doc/sqlite3/c3ref/create_collation.html
+share/doc/sqlite3/c3ref/create_filename.html
 share/doc/sqlite3/c3ref/create_function.html
 share/doc/sqlite3/c3ref/create_module.html
 share/doc/sqlite3/c3ref/data_count.html
 share/doc/sqlite3/c3ref/data_directory.html
+share/doc/sqlite3/c3ref/database_file_object.html
 share/doc/sqlite3/c3ref/db_cacheflush.html
 share/doc/sqlite3/c3ref/db_config.html
 share/doc/sqlite3/c3ref/db_filename.html
@@ -221,6 +224,7 @@ share/doc/sqlite3/carray.html
 share/doc/sqlite3/changes.html
 share/doc/sqlite3/chronology.html
 share/doc/sqlite3/cintro.html
+share/doc/sqlite3/cksumvfs.html
 share/doc/sqlite3/cli.html
 share/doc/sqlite3/codeofconduct.html
 share/doc/sqlite3/codeofethics.html
@@ -236,6 +240,7 @@ share/doc/sqlite3/cpu.html
 share/doc/sqlite3/crew.html
 share/doc/sqlite3/csv.html
 share/doc/sqlite3/custombuild.html
+share/doc/sqlite3/cves.html
 share/doc/sqlite3/cvstrac.css
 share/doc/sqlite3/datatype3.html
 share/doc/sqlite3/datatypes.html
@@ -244,7 +249,6 @@ share/doc/sqlite3/dbpage.html
 share/doc/sqlite3/dbstat.html
 share/doc/sqlite3/debugging.html
 share/doc/sqlite3/deterministic.html
-share/doc/sqlite3/dev.html
 share/doc/sqlite3/different.html
 share/doc/sqlite3/doc_backlink_crossref.html
 share/doc/sqlite3/doc_keyword_crossref.html
@@ -274,6 +278,7 @@ share/doc/sqlite3/gencol.html
 share/doc/sqlite3/geopoly.html
 share/doc/sqlite3/getthecode.html
 share/doc/sqlite3/hirely.html
+share/doc/sqlite3/howitworks.html
 share/doc/sqlite3/howtocompile.html
 share/doc/sqlite3/howtocorrupt.html
 share/doc/sqlite3/hp1.html
@@ -539,7 +544,6 @@ share/doc/sqlite3/isolation.html
 share/doc/sqlite3/json1.html
 share/doc/sqlite3/keyword_index.html
 share/doc/sqlite3/lang.html
-share/doc/sqlite3/lang_UPSERT.html
 share/doc/sqlite3/lang_aggfunc.html
 share/doc/sqlite3/lang_altertable.html
 share/doc/sqlite3/lang_analyze.html
@@ -571,6 +575,7 @@ share/doc/sqlite3/lang_savepoint.html
 share/doc/sqlite3/lang_select.html
 share/doc/sqlite3/lang_transaction.html
 share/doc/sqlite3/lang_update.html
+share/doc/sqlite3/lang_upsert.html
 share/doc/sqlite3/lang_vacuum.html
 share/doc/sqlite3/lang_with.html
 share/doc/sqlite3/lemon.html
@@ -586,6 +591,7 @@ share/doc/sqlite3/mmap.html
 share/doc/sqlite3/mostdeployed.html
 share/doc/sqlite3/news.html
 share/doc/sqlite3/np1queryprob.html
+share/doc/sqlite3/nulinstr.html
 share/doc/sqlite3/nulls.html
 share/doc/sqlite3/oldnews.html
 share/doc/sqlite3/omitted.html
@@ -678,6 +684,7 @@ share/doc/sqlite3/releaselog/3_30_0.html
 share/doc/sqlite3/releaselog/3_30_1.html
 share/doc/sqlite3/releaselog/3_31_0.html
 share/doc/sqlite3/releaselog/3_31_1.html
+share/doc/sqlite3/releaselog/3_32_0.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
@@ -952,6 +959,7 @@ share/doc/sqlite3/th3.html
 share/doc/sqlite3/threadsafe.html
 share/doc/sqlite3/toc.db
 share/doc/sqlite3/transactional.html
+share/doc/sqlite3/uintcseq.html
 share/doc/sqlite3/undoredo.html
 share/doc/sqlite3/unionvtab.html
 share/doc/sqlite3/unlock_notify.html
