@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/23 20:00:45 adam Exp $
+
+SHA1 (PyPika-0.37.6.tar.gz) = 5b121893efd8586887d238fe631d73965663183a
+RMD160 (PyPika-0.37.6.tar.gz) = cdc6c35a74ba0d4abb16c62026941be45db2f2e7
+SHA512 (PyPika-0.37.6.tar.gz) = 79f7843ff98a4833a2218f0c78812f63fdf995554b89d90deffcb7d887c00036dcc6e81552931b9c51545bb2c016a4ee991232fc45423f0364e2b2b5549ab765
+Size (PyPika-0.37.6.tar.gz) = 53450 bytes
