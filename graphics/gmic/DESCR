@@ -4,4 +4,4 @@ convert/manipulate/filter/visualize generic image datasets, from
 1d scalar signals to 3d+t sequences of multi-spectral volumetric
 images.
 
-The package contains a command line tool and a gimp plugin.
+The package contains command line tools and a gimp plugin.

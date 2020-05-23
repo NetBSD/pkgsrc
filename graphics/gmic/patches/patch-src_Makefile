@@ -1,99 +1,24 @@
-$NetBSD: patch-src_Makefile,v 1.4 2017/02/18 23:17:17 joerg Exp $
+$NetBSD: patch-src_Makefile,v 1.5 2020/05/23 10:44:02 ryoon Exp $
 
-Add NetBSD.
-Adapt installation paths.
-Add compiler rpath flag.
-Use X11BASE instead of hardcoding /usr/X11R6.
+* Install man pages for pkgsrc.
 
---- src/Makefile.orig	2014-06-20 13:02:38.000000000 +0000
+--- src/Makefile.orig	2020-03-28 13:25:12.000000000 +0000
 +++ src/Makefile
-@@ -51,6 +51,9 @@ CC = g++
- ifeq ($(OS),Linux)
- OS = Unix
- endif
-+ifeq ($(OS),NetBSD)
-+OS = Unix
-+endif
- ifeq ($(OS),GNU/kFreeBSD)
- OS = Unix
- endif
-@@ -62,7 +65,7 @@ PLUGINDIR = ~/Library/Application\ Suppo
- USR = /opt/local
- else
- PLUGINDIR = `gimptool-2.0 --gimpplugindir`/plug-ins
--USR = /usr
-+USR = ${PREFIX}
- endif
- ifeq ($(OSTYPE),msys)
- EXE = .exe
-@@ -77,7 +80,7 @@ IS_BETA_CFLAGS = 
- 
- # Flags that are mandatory to compile 'gmic'.
- MANDATORY_CFLAGS += -Dgmic_build -I$(USR)/include
--MANDATORY_LDFLAGS += -L$(USR)/lib
-+MANDATORY_LDFLAGS += ${COMPILER_RPATH_FLAG}$(USR)/lib -L$(USR)/lib
- ifeq ($(CC),g++)
- MANDATORY_CFLAGS += -Wall -W
- MANDATORY_LDFLAGS += -lm
-@@ -95,7 +98,7 @@ DEBUG_CFLAGS = -Dcimg_verbosity=3 -g
- 
- # Flags to enable optimizations.
- ifeq ($(CC),g++)
--OPT_CFLAGS = -O2 -fno-ipa-sra -mtune=generic # -fno-tree-pre # -ffast-math
-+OPT_CFLAGS = -O2
- endif
- ifeq ($(CC),clang++)
- OPT_CFLAGS = -O2
-@@ -124,14 +127,14 @@ OPENMP_CFLAGS = -fopenmp -Dcimg_use_open
- # (keep /usr/ dirname here since X11 is located in /usr/ on Mac too).
- # This requires the presence of the X11 include and library files.
- # (package 'libx11-dev' on Debian).
--X11_CFLAGS = -Dcimg_display=1 -Dcimg_appname=\\\"gmic\\\" -I/usr/X11R6/include #-Dcimg_use_xrandr
--X11_LDFLAGS = -L/usr/X11R6/lib -lX11 -lpthread #-lXrandr
-+X11_CFLAGS = -Dcimg_display=1 -Dcimg_appname=\\\"gmic\\\" -I$(X11BASE)/include #-Dcimg_use_xrandr
-+X11_LDFLAGS = -L$(X11BASE)/lib ${COMPILER_RPATH_FLAG}$(X11BASE)/lib -lX11 -lpthread #-lXrandr
- 
- # Flags to enable fast display, using XShm.
- # This requires the presence of the X11 extension include and library files.
- # (package 'libx11-dev' on Debian).
- XSHM_CFLAGS = -Dcimg_use_xshm
--XSHM_LDFLAGS = -L$(USR)/X11R6/lib -lXext
-+XSHM_LDFLAGS = -L$(X11BASE)/lib -lXext
- 
- # Flags to enable image display, using GDI32.
- # This requires the presence of the GDI32 include and library files.
-@@ -327,7 +330,7 @@ linux:
- 	$(MAKE) "CFLAGS=$(STD_UNIX_CFLAGS) $(OPT_CFLAGS)" "LDFLAGS=$(STD_UNIX_LDFLAGS)" "STRIP_EXE=1" gmic
- 
- solaris:
--	$(MAKE) "CFLAGS=$(STD_UNIX_CFLAGS) $(OPT_CFLAGS)" "LDFLAGS=$(STD_UNIX_LDFLAGS) -R$(USR)/X11R6/lib -lrt -lnsl -lsocket" "STRIP_EXE=1" gmic
-+	$(MAKE) "CFLAGS=$(STD_UNIX_CFLAGS) $(OPT_CFLAGS)" "LDFLAGS=$(STD_UNIX_LDFLAGS) -R$(X11BASE)/lib -lrt -lnsl -lsocket" "STRIP_EXE=1" gmic
- 
- macosx:
- 	$(MAKE) "CFLAGS=$(STD_MACOSX_CFLAGS) $(OPT_CFLAGS)" "LDFLAGS=$(STD_MACOSX_LDFLAGS) $(OPT_LDFLAGS)" gmic
-@@ -357,7 +360,7 @@ gmic_lib: gmic_lib.o
- 	ar rcs libgmic.a gmic_lib.o
- ifneq ($(OS),Darwin)
- 	$(CC) -shared -Wl,-soname,libgmic.so.1 -o libgmic.so gmic_lib.o $(LDFLAGS)
--	$(CC) -o gmic_use_lib gmic_use_lib.cpp -L. -lgmic $(OPENMP_CFLAGS) $(FFTW_LDFLAGS)
-+	$(CC) -o gmic_use_lib gmic_use_lib.cpp -L. -lgmic $(LDFLAGS) $(OPENMP_CFLAGS)
- else
- 	$(CC) -shared -o libgmic.so gmic_lib.o $(LDFLAGS)
- endif
-@@ -422,11 +425,11 @@ ifneq ($(OS),Darwin)
- 	ln -s libgmic.so.1.5.9 $(DESTDIR)$(USR)/lib/libgmic.so.1
- 	ln -s libgmic.so.1 $(DESTDIR)$(USR)/lib/libgmic.so
+@@ -727,12 +727,12 @@ ifneq ($(OS),Darwin)
+           ln -fs libcgmic.so.$(VERSION1) $(DESTDIR)$(USR)/$(LIB)/libcgmic.so; \
+         fi
  endif
 -	mkdir -p $(DESTDIR)$(USR)/share/man/
 -	mkdir -p $(DESTDIR)$(USR)/share/man/man1/
 -	mkdir -p $(DESTDIR)$(USR)/share/man/fr/man1/
--	cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/share/man/man1/gmic.1.gz
--	cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/share/man/fr/man1/gmic.1.gz
-+	mkdir -p $(DESTDIR)$(USR)/${PKGMANDIR}/
++	mkdir -p $(DESTDIR)$(USR)/${PKGMANDIR}
 +	mkdir -p $(DESTDIR)$(USR)/${PKGMANDIR}/man1/
 +	mkdir -p $(DESTDIR)$(USR)/${PKGMANDIR}/fr/man1/
-+	cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/${PKGMANDIR}/man1/gmic.1.gz
-+	cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/${PKGMANDIR}/fr/man1/gmic.1.gz
- 	if [ -d /etc/bash_completion.d/ ]; then mkdir -p $(DESTDIR)/etc/bash_completion.d/; cp -f ../resources/gmic_bashcompletion.sh $(DESTDIR)/etc/bash_completion.d/gmic; fi
- 	if [ -d /opt/local/etc/bash_completion.d/ ]; then mkdir -p $(DESTDIR)/opt/local/etc/bash_completion.d/; cp -f ../resources/gmic_bashcompletion.sh $(DESTDIR)/opt/local/etc/bash_completion.d/gmic; fi
- 
+ 	@if [ -f ../man/gmic.1.gz ]; then \
+-	  cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/share/man/man1/gmic.1.gz; \
+-	  cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/share/man/fr/man1/gmic.1.gz; \
++	  cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/${PKGMANDIR}/man1/gmic.1.gz; \
++	  cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/${PKGMANDIR}/fr/man1/gmic.1.gz; \
+ 	fi
+ 	@if [ -f ../resources/gmic_bashcompletion.sh ]; then \
+ 	  if [ -d /usr/share/bash-completion/completions ]; then \
