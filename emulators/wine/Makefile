@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2020/05/22 19:48:34 nia Exp $
+# $NetBSD: Makefile,v 1.215 2020/05/23 21:20:38 adam Exp $
 
 DISTNAME=	wine-4.0.3
 CATEGORIES=	emulators
@@ -36,7 +36,8 @@ CONFIGURE_ARGS+=	--without-vulkan
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		lp32 lp64
+PLIST_VARS+=		desktop lp32 lp64 oss
+
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.lp64=		yes
 CONFIGURE_ARGS+=	--enable-win64
@@ -57,7 +58,6 @@ CONFIGURE_ENV+=		wine_cv_linux_gethostbyname_r_6=no
 
 .include "../../mk/oss.buildlink3.mk"
 
-PLIST_VARS+=		oss
 .if ${OSS_TYPE} != "none"
 PLIST.oss=		yes
 LDFLAGS+=		${LIBOSSAUDIO}
@@ -73,6 +73,14 @@ CONFIGURE_ARGS+=	--without-oss
 # Fix warning due to _FORTIFY_SOURCE being redefined
 CONFIGURE_ENV+=		ac_cv_c_fortify_enabled=no
 
+# Wine will use system frameworks on Darwin.
+.if ${OPSYS} != "Darwin"
+PLIST.desktop=	yes
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.endif
+
 .include "options.mk"
 .include "../../audio/faudio/buildlink3.mk"
 .include "../../audio/gsm/buildlink3.mk"
@@ -81,9 +89,7 @@ CONFIGURE_ENV+=		ac_cv_c_fortify_enabled=no
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -91,7 +97,6 @@ CONFIGURE_ENV+=		ac_cv_c_fortify_enabled=no
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
