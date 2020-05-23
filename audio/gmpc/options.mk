@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/10/01 16:03:30 drochner Exp $
+# $NetBSD: options.mk,v 1.3 2020/05/23 13:05:19 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gmpc
 PKG_SUPPORTED_OPTIONS=	mac xspf
@@ -10,9 +10,6 @@ PKG_SUPPORTED_OPTIONS=	mac xspf
 ###
 .if !empty(PKG_OPTIONS:Mmac)
 .include "../../audio/mac/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-macige
-.else
-CONFIGURE_ARGS+=	--disable-macige
 .endif
 
 ###
