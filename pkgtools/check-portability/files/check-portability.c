@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.15 2020/05/23 22:12:31 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.16 2020/05/23 22:18:11 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -401,7 +401,7 @@ checkline_sh_test_eqeq_error(
 {
 	printf(
 	    "%s:%zu:%zu: found test ... == ...: %s\n",
-	    cstr_charptr(filename), lineno, column, cstr_charptr(line));
+	    cstr_charptr(filename), lineno, column + 1, cstr_charptr(line));
 	nerrors++;
 	explain(
 	    W_test_eqeq,
