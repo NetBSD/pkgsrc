@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2020/05/22 10:56:04 adam Exp $
+# $NetBSD: Makefile,v 1.136 2020/05/23 10:04:44 rillig Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -21,10 +21,10 @@ USE_CMAKE=		yes
 USE_TOOLS+=		gmake perl:run pkg-config bash
 USE_LANGUAGES=		c c++
 
-REPLACE_PYTHON=		plugins/python/bin/tm_python
-REPLACE_PYTHON+=	plugins/sage/bin/tm_sage
 REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 
+REPLACE_BASH+=		configure
+REPLACE_BASH+=		cmake/CreateBundle.sh.in
 REPLACE_BASH+=		plugins/dratex/bin/tm_dratex
 REPLACE_BASH+=		plugins/eukleides/bin/tm_eukleides
 REPLACE_BASH+=		plugins/eukleides/bin/tm_eukleides.old
