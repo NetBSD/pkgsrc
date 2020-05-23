@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3118 2020/05/23 07:38:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3119 2020/05/23 07:50:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4989,3 +4989,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/sqlite3-docs to 3.32.0 [adam 2020-05-23]
 	Updated databases/sqlite3-tcl to 3.32.0 [adam 2020-05-23]
 	Updated devel/lemon to 1.0.3.32.0 [adam 2020-05-23]
+	Updated textproc/py-elementpath to 1.4.5 [adam 2020-05-23]
+	Updated devel/py-flake8 to 3.8.2 [adam 2020-05-23]
+	Updated textproc/py-lxml to 4.5.1 [adam 2020-05-23]
+	Updated net/py-zeroconf to 0.26.2 [adam 2020-05-23]
