@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/05/31 01:44:09 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/23 12:35:47 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/emacs/emacs25/:S/-/-nox11-/}
 
@@ -10,7 +10,7 @@ PKGDIR=		${.CURDIR}/../../editors/emacs25
 
 .include "../../editors/emacs25/Makefile.common"
 
-CONFIGURE_ARGS+=	--without-dbus --without-m17n-flt --without-otf
+CONFIGURE_ARGS+=	--without-dbus --without-m17n-flt
 CONFIGURE_ARGS+=	--without-rsvg --without-x --without-xft
 CONFIGURE_ARGS+=	--without-gif --without-jpeg --without-png
 CONFIGURE_ARGS+=	--without-tiff --without-xpm
