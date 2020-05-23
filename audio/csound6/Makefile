@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/05/22 10:55:54 adam Exp $
+# $NetBSD: Makefile,v 1.51 2020/05/23 10:23:43 rillig Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
@@ -28,13 +28,15 @@ PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 5.01
 
 INSTALLATION_DIRS=	bin
 
-CHECK_PORTABILITY_SKIP+=	installer/misc/makedeb.sh \
-				installer/macosx/beta-build.sh \
-				installer/macosx/release-build.sh \
-				installer/macosx/release-build-10.8.sh \
-				installer/macosx/release-build-10.10.sh \
-				frontends/max_csound_tilde/installer/build-installer.sh \
-				frontends/max_csound_tilde/installer/build-installer-windows.sh
+CHECK_PORTABILITY_SKIP+= \
+	Android/build-all.sh \
+	installer/misc/makedeb.sh \
+	installer/macosx/beta-build.sh \
+	installer/macosx/release-build.sh \
+	installer/macosx/release-build-10.8.sh \
+	installer/macosx/release-build-10.10.sh \
+	frontends/max_csound_tilde/installer/build-installer.sh \
+	frontends/max_csound_tilde/installer/build-installer-windows.sh
 
 .include "../../mk/bsd.prefs.mk"
 
