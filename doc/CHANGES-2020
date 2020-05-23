@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3133 2020/05/23 20:07:07 schwarz Exp $
+$NetBSD: CHANGES-2020,v 1.3134 2020/05/23 20:50:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5014,3 +5014,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/din to 47 [fox 2020-05-23]
 	Added databases/py-pypika version 0.37.6 [adam 2020-05-23]
 	Updated editors/nano to 4.9.3 [schwarz 2020-05-23]
+	Updated mail/qmail to 1.03nb49 [schmonz 2020-05-23]
