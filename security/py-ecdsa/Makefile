@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/05/09 20:16:59 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/23 08:08:54 adam Exp $
 
 DISTNAME=	ecdsa-0.15
 PKGNAME=	${PYPKGPREFIX}-ecdsa-0.15
@@ -14,6 +14,5 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
