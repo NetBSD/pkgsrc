@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/05/16 19:06:39 nia Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/23 23:32:26 markd Exp $
 #
 
 DISTNAME=	ssr-0.4.1
@@ -31,6 +31,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 #.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
