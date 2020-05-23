@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: gnu-configure-strict.sh,v 1.3 2020/05/22 15:21:15 rillig Exp $
+# $NetBSD: gnu-configure-strict.sh,v 1.4 2020/05/23 07:30:18 rillig Exp $
 #
 # Tests for GNU_CONFIGURE_STRICT handling in mk/configure/gnu-configure.mk.
 #
@@ -411,6 +411,19 @@ if test_case_begin 'configure script without enable_http variable'; then
 	# is too unreliable, and the help text only contains either enable
 	# or disable, but not both.  Therefore the simplest solution is to
 	# scan for the common pattern ${enable_http+set}.
+
+	# In lang/mono4, the option name "libgc" creatively differs from
+	# the name "gc" that is mentioned in the help text:
+	#
+	# AC_ARG_WITH(libgc,
+	#   [  --with-gc=...],
+	#   [libgc=$with_gc],
+	#   [libgc=$libgc_default]
+	# )
+	#
+	# This way, even though --with-gc is documented in the help,
+	# specifying it triggers the "unrecognized options: --with-gc"
+	# warning 3 times, once for each configure script.
 
 	create_file 'configure' <<-EOF
 		if test "\${enable_http+set}" = set; then
