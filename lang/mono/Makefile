@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2020/05/12 16:46:27 rillig Exp $
+# $NetBSD: Makefile,v 1.191 2020/05/23 08:33:20 rillig Exp $
 
 DISTNAME=	mono-4.0.4.1
 PKGREVISION=	19
@@ -22,8 +22,8 @@ USE_LANGUAGES+=	c c99 c++
 EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} --with-icu=yes
-CONFIGURE_ARGS+=	--with-preview=yes --with-libgdiplus=installed
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-libgdiplus=installed
 CONFIGURE_ARGS+=	--disable-dtrace
 
 CTF_SUPPORTED=	no	# https://smartos.org/bugview/OS-6510
@@ -44,26 +44,27 @@ PKGCONFIG_OVERRIDE+=	data/system.web.extensions_1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/system.web.extensions.design_1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/system.web.mvc.pc.in data/wcf.pc.in
 
-REPLACE_PERL+=	mcs/errors/do-tests.pl mcs/tools/scan-tests.pl
+REPLACE_PERL+=	mcs/tools/scan-tests.pl
 REPLACE_PERL+=	msvc/create-windef.pl mono/benchmark/test-driver
 REPLACE_PERL+=	mono/cil/make-opcodes-def.pl mono/metadata/make-bundle.pl
 REPLACE_PERL+=	mono/mini/genmdesc.pl mono/tests/stress-runner.pl
 
 REPLACE_PYTHON+=	scripts/mono-heapviz
 
-REPLACE_BASH+=	build-mingw32.sh mono/arch/arm/dpiops.sh mono/arch/arm/fpaops.sh
-REPLACE_BASH+=	mono/arch/arm/vfpops.sh mono/tests/make_imt_test.sh
-REPLACE_BASH+=	scripts/mono-find-provides.in scripts/mono-find-requires.in
-REPLACE_BASH+=	scripts/mono-test-install web/mono-build-w32.sh
-REPLACE_BASH+=	mcs/class/Mono.WebBrowser/build-csproj2k5
-REPLACE_BASH+=	mcs/class/Managed.Windows.Forms/build-csproj
-REPLACE_BASH+=	mcs/class/Managed.Windows.Forms/build-csproj2k5
+REPLACE_BASH+=	build-mingw32.sh
+REPLACE_BASH+=	mono/arch/arm/dpiops.sh
+REPLACE_BASH+=	mono/arch/arm/vfpops.sh
+REPLACE_BASH+=	scripts/mono-find-provides.in
+REPLACE_BASH+=	scripts/mono-find-requires.in
+REPLACE_BASH+=	scripts/mono-test-install
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/gtk/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/png/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/win32/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/x11/compile.sh
-REPLACE_BASH+=	mcs/tools/tinderbox/tinderbox.sh libgc/mkinstalldirs
-REPLACE_BASH+=	mcs/mkinstalldirs mkinstalldirs
+REPLACE_BASH+=	mcs/tools/tinderbox/tinderbox.sh
+REPLACE_BASH+=	libgc/mkinstalldirs
+REPLACE_BASH+=	mcs/mkinstalldirs
+REPLACE_BASH+=	mkinstalldirs
 
 EGDIR=		${PREFIX}/share/examples/mono
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/mono/config
