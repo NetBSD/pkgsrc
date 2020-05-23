@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/05/20 23:14:33 mef Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/23 09:12:57 adam Exp $
 
-DISTNAME=	fs-uae-launcher-3.0.2
+DISTNAME=	fs-uae-launcher-3.0.5
 CATEGORIES=	emulators
 MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
@@ -25,12 +25,20 @@ INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYSETUPINSTALLARGS=		--install-lib=${PREFIX:Q}/share/fs-uae-launcher
-PYSETUPINSTALLARGS+=		--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
+
+PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-launcher
+PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
 
 REPLACE_PYTHON+=	fs-uae-launcher
 
 INSTALLATION_DIRS+=	bin
+
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing installation prefix.
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	Makefile
+SUBST_FILES.prefix+=	launcher/ui/launcherwindow.py
+SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
 post-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
