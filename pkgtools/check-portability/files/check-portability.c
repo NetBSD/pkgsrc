@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.14 2020/04/19 12:47:27 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.15 2020/05/23 22:12:31 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -65,17 +65,6 @@ cstr_charptr(cstr s)
 	assert(s.data[s.len] == '\0');
 	return s.data;
 }
-
-#if 0 /* unused */
-static bool
-cstr_ends_with(cstr s, cstr suffix)
-{
-	if (suffix.len > s.len)
-		return false;
-	const char *start = s.data + s.len - suffix.len;
-	return memcmp(start, suffix.data, suffix.len) == 0;
-}
-#endif
 
 static bool
 cstr_starts_with(cstr s, cstr prefix)
@@ -400,24 +389,6 @@ checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 	explain_how_to_fix();
 }
 
-typedef void (*foreach_3_fields_cb)(cstr f1, cstr f2, cstr f3, void *actiondata);
-
-static void
-foreach_3_fields_in_line(cstr line, foreach_3_fields_cb action, void *actiondata)
-{
-	size_t idx = 0;
-	cstr f1 = cstr_next_field(line, &idx);
-	cstr f2 = cstr_next_field(line, &idx);
-	cstr f3 = cstr_next_field(line, &idx);
-
-	while (f3.len > 0) {
-		action(f1, f2, f3, actiondata);
-		f1 = f2;
-		f2 = f3;
-		f3 = cstr_next_field(line, &idx);
-	}
-}
-
 struct checkline_sh_test_eqeq_actiondata {
 	cstr filename;
 	size_t lineno;
@@ -425,19 +396,12 @@ struct checkline_sh_test_eqeq_actiondata {
 };
 
 static void
-checkline_sh_test_eqeq_action(cstr f1, cstr f2, cstr f3, void *actiondata)
+checkline_sh_test_eqeq_error(
+    cstr filename, cstr line, size_t lineno, size_t column)
 {
-	if (!cstr_eq(f3, CSTR("==")))
-		return;
-	if (!cstr_eq(f1, CSTR("test")) && !cstr_eq(f1, CSTR("[")))
-		return;
-
-	struct checkline_sh_test_eqeq_actiondata *ad = actiondata;
 	printf(
 	    "%s:%zu:%zu: found test ... == ...: %s\n",
-	    cstr_charptr(ad->filename), ad->lineno,
-	    (size_t) (f3.data - ad->line.data),
-	    cstr_charptr(ad->line));
+	    cstr_charptr(filename), lineno, column, cstr_charptr(line));
 	nerrors++;
 	explain(
 	    W_test_eqeq,
@@ -458,8 +422,21 @@ checkline_sh_test_eqeq(cstr filename, size_t lineno, cstr line)
 	if (is_shell_comment(line))
 		return;
 
-	struct checkline_sh_test_eqeq_actiondata ad = { filename, lineno, line };
-	foreach_3_fields_in_line(line, checkline_sh_test_eqeq_action, &ad);
+	size_t idx = 0;
+	cstr f1 = cstr_next_field(line, &idx);
+	cstr f2 = cstr_next_field(line, &idx);
+	cstr f3 = cstr_next_field(line, &idx);
+
+	while (f3.len > 0) {
+		if (cstr_eq(f3, CSTR("=="))
+		    && (cstr_eq(f1, CSTR("test")) || cstr_eq(f1, CSTR("["))))
+			checkline_sh_test_eqeq_error(
+			    filename, line, lineno, f3.data - line.data);
+
+		f1 = f2;
+		f2 = f3;
+		f3 = cstr_next_field(line, &idx);
+	}
 }
 
 static bool
