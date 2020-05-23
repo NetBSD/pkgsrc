@@ -23,7 +23,7 @@ files/testdata/Makefile.am:8:5: double brackets: 	if [[ ${COND} ]] || [[ $(COND)
 files/testdata/double-brackets:8:4: double brackets: if [[ test ]]; then
 files/testdata/double-brackets:10:1: double brackets: [[ test ]]
 files/testdata/double-brackets:12:1: double brackets: [[ test ]] || echo
-files/testdata/env-sh:8:4: found test ... == ...: [ a == b ]
+files/testdata/env-sh:8:5: found test ... == ...: [ a == b ]
 
 	The "test" command, as well as the "[" command, are not required to know
 	the "==" operator. Only a few implementations like bash and some
@@ -40,6 +40,6 @@ files/testdata/random:7:1: $RANDOM: $RANDOM
 	not be used in shell programs that are meant to be portable across a
 	large number of POSIX-like systems.
 
-files/testdata/test-eqeq:7:7: found test ... == ...: test a == b	# bad
-files/testdata/test-eqeq:10:4: found test ... == ...: [ a == b ]	# bad
-files/testdata/test-eqeq:14:4: found test ... == ...: [ a == b -a c == d ]
+files/testdata/test-eqeq:7:8: found test ... == ...: test a == b	# bad
+files/testdata/test-eqeq:10:5: found test ... == ...: [ a == b ]	# bad
+files/testdata/test-eqeq:14:5: found test ... == ...: [ a == b -a c == d ]
