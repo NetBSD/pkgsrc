@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2020/05/22 10:56:05 adam Exp $
+# $NetBSD: Makefile,v 1.243 2020/05/23 15:46:12 leot Exp $
 
 DISTNAME=	qemu-5.0.0
 PKGREVISION=	3
@@ -50,12 +50,6 @@ CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 # do not add flags to everything
 PKGSRC_USE_SSP=		no
 CONFIGURE_ARGS+=	--enable-stack-protector
-.endif
-
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/nvmm.h)
-CONFIGURE_ARGS+=	--enable-nvmm
-.else
-CONFIGURE_ARGS+=	--disable-nvmm
 .endif
 
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-aarch64
