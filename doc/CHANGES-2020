@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3117 2020/05/23 07:28:54 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3118 2020/05/23 07:38:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4985,3 +4985,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed databases/postgresql94-plpython [adam 2020-05-23]
 	Removed databases/postgresql94-pltcl [adam 2020-05-23]
 	Removed databases/postgresql94-server [adam 2020-05-23]
+	Updated databases/sqlite3 to 3.32.0 [adam 2020-05-23]
+	Updated databases/sqlite3-docs to 3.32.0 [adam 2020-05-23]
+	Updated databases/sqlite3-tcl to 3.32.0 [adam 2020-05-23]
+	Updated devel/lemon to 1.0.3.32.0 [adam 2020-05-23]
