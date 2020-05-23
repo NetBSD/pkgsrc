@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2016/01/30 23:54:20 ryoon Exp $
+$NetBSD: MESSAGE,v 1.5 2020/05/23 13:08:51 nia Exp $
 
 To use RT 4, you will need to perform the following steps.
 
 1. Setup your postfix.
 
-2. If you want to use with MySQL server, install databases/mysql55-server
+2. If you want to use with MySQL server, install databases/mysql57-server
    and start it. You can use other supported database management system.
 
 3. If you want to use www/ap2-fcgid with apache24, install www/ap2-fcgid
