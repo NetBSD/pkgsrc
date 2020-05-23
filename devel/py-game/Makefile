@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/06/06 21:46:11 adam Exp $
+# $NetBSD: Makefile,v 1.39 2020/05/23 09:04:04 rillig Exp $
 
 DISTNAME=	pygame-1.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,11 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
 
-REPLACE_PYTHON+=	bundle_docs.py
-REPLACE_PYTHON+=	config.py
 REPLACE_PYTHON+=	examples/*.py
-REPLACE_PYTHON+=	makeref.py
-REPLACE_PYTHON+=	run_tests.py
 REPLACE_PYTHON+=	setup.py
 
 SUBST_CLASSES+=		fixpath
