@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3124 2020/05/23 09:13:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3125 2020/05/23 09:27:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5005,3 +5005,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/fs-uae to 3.0.5 [adam 2020-05-23]
 	Updated emulators/fs-uae-arcade to 3.0.5 [adam 2020-05-23]
 	Updated emulators/fs-uae-launcher to 3.0.5 [adam 2020-05-23]
+	Updated devel/libuv to 1.38.0 [adam 2020-05-23]
