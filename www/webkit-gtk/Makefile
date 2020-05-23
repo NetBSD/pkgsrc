@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.186 2020/04/24 11:06:46 leot Exp $
+# $NetBSD: Makefile,v 1.187 2020/05/23 09:51:42 rillig Exp $
 
 DISTNAME=	webkitgtk-2.28.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -68,7 +69,6 @@ REPLACE_PYTHON+=	Source/JavaScriptCore/yarr/create_regex_tables
 REPLACE_PYTHON+=	Source/JavaScriptCore/yarr/generateYarrCanonicalizeUnicode
 REPLACE_PYTHON+=	Source/ThirdParty/ANGLE/src/compiler/translator/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/ANGLE/src/libANGLE/*.py
-REPLACE_PYTHON+=	Source/ThirdParty/ANGLE/src/libGLESv2/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/gtest/scripts/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/gtest/test/*.py
 REPLACE_PYTHON+=	Source/ThirdParty/gtest/xcode/Scripts/*.py
@@ -79,10 +79,12 @@ REPLACE_PYTHON+=	Source/WebKit/Scripts/*.py
 REPLACE_PYTHON+=	Tools/glib/*.py
 REPLACE_PYTHON+=	Tools/gtkdoc/generate-gtkdoc
 
-REPLACE_BASH+=		Source/ThirdParty/ANGLE/src/compiler/preprocessor/generate_parser.sh
-REPLACE_BASH+=		Source/ThirdParty/ANGLE/src/compiler/translator/generate_parser.sh
+REPLACE_BASH+=		Source/JavaScriptCore/postprocess-headers.sh
+REPLACE_BASH+=		Source/ThirdParty/ANGLE/adjust-angle-include-paths-rule
 REPLACE_BASH+=		Source/ThirdParty/gtest/xcode/Samples/FrameworkSample/runtests.sh
 REPLACE_BASH+=		Source/ThirdParty/gtest/xcode/Scripts/runtests.sh
+REPLACE_BASH+=		Source/WebKit/Scripts/copy-webcontent-resources-to-private-headers.sh
+REPLACE_BASH+=		Source/WebKit/Scripts/generate-https-upgrade-database.sh
 REPLACE_BASH+=		Source/WebKit/Scripts/process-entitlements.sh
 REPLACE_BASH+=		Tools/gtk/install-dependencies
 
