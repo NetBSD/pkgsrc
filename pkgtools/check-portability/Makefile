@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/04/19 12:05:14 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/23 22:18:10 rillig Exp $
 
-PKGNAME=	check-portability-20.1.0
+PKGNAME=	check-portability-20.1.1
 CATEGORIES=	pkgtools
 DISTFILES=	# none
 
