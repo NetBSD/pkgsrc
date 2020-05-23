@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3123 2020/05/23 09:08:33 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3124 2020/05/23 09:13:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5002,3 +5002,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.1.8 [rillig 2020-05-23]
 	Removed security/py-SSLCrypto [adam 2020-05-23]
 	Removed sysutils/py-attic [adam 2020-05-23]
+	Updated emulators/fs-uae to 3.0.5 [adam 2020-05-23]
+	Updated emulators/fs-uae-arcade to 3.0.5 [adam 2020-05-23]
+	Updated emulators/fs-uae-launcher to 3.0.5 [adam 2020-05-23]
