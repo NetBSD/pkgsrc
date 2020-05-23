@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/05/21 15:15:56 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2020/05/23 19:02:12 rillig Exp $
 
 DISTNAME=		maxima-5.41.0
 PKGREVISION=		4
@@ -12,6 +12,8 @@ LICENSE=		gnu-gpl-v2
 
 # Note: lisp backend is depended and setup up for in options.mk
 DEPENDS+=		tk-[0-9]*:../../x11/tk
+
+CHECK_PORTABILITY_SKIP=	doc/info/fix_tab
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake makeinfo perl
