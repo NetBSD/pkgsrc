@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/18 17:03:15 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/23 07:03:48 adam Exp $
 
-SHA1 (pyobjc-framework-OpenDirectory-6.1.tar.gz) = 8b4c67eec5d400113feb8a18bf0fd55f70c3354e
-RMD160 (pyobjc-framework-OpenDirectory-6.1.tar.gz) = c4fdcc05af0a2220ec083a6041e28760aaa017ea
-SHA512 (pyobjc-framework-OpenDirectory-6.1.tar.gz) = 5a2e6fe5331580cdaa20110005a02e753b8dd81563a35fd2c222800c12ef14fb43ecc74b9f6ba4302c2393400e672b6b0d76882add6fc0fe280bb75fb972caa4
-Size (pyobjc-framework-OpenDirectory-6.1.tar.gz) = 129704 bytes
+SHA1 (pyobjc-framework-OpenDirectory-6.2.tar.gz) = 2162e20a9442711fb90cd31cd51aae8df232789c
+RMD160 (pyobjc-framework-OpenDirectory-6.2.tar.gz) = 585e6cbf500117046c2ca5548dae816ea79ffe74
+SHA512 (pyobjc-framework-OpenDirectory-6.2.tar.gz) = f4766dc917ff41ad97e0a1c8d89eabdf6bb3c9fc4ca75fe1e3169ae0754f86ae5392794a961c5dace4b0b235cfe32e4533e656e83ce1b1af1d470e6e523de25b
+Size (pyobjc-framework-OpenDirectory-6.2.tar.gz) = 121827 bytes

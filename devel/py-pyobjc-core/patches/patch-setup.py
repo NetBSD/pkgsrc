@@ -1,11 +1,12 @@
-$NetBSD: patch-setup.py,v 1.1 2019/11/18 17:05:06 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2020/05/23 07:03:41 adam Exp $
 
 Do not add debug symbols.
 Do not override compiler optimiztion flags.
+Avoid a hack.
 
---- setup.py.orig	2019-11-18 16:02:47.000000000 +0000
+--- setup.py.orig	2020-03-22 17:36:26.000000000 +0000
 +++ setup.py
-@@ -66,7 +66,6 @@ def get_sdk_level(sdk):
+@@ -56,7 +56,6 @@ def get_sdk_level(sdk):
  
  # CFLAGS for the objc._objc extension:
  CFLAGS = [
@@ -13,7 +14,7 @@ Do not override compiler optimiztion flags.
      "-fexceptions",
      # Loads of warning flags
      "-Wall",
-@@ -137,7 +136,7 @@ if get_config_var("Py_DEBUG"):
+@@ -126,7 +125,7 @@ if get_config_var("Py_DEBUG"):
          elif isinstance(cfg_vars[k], str) and "-O3" in cfg_vars[k]:
              cfg_vars[k] = cfg_vars[k].replace("-O3", "-O1 -g")
  
@@ -22,3 +23,12 @@ Do not override compiler optimiztion flags.
      # Enable -O4, which enables link-time optimization with
      # clang. This appears to have a positive effect on performance.
      cfg_vars = get_config_vars()
+@@ -247,8 +246,6 @@ class oc_test(test.test):
+         self.__old_path = sys.path[:]
+         self.__old_modules = sys.modules.copy()
+ 
+-        if "PyObjCTools" in sys.modules:
+-            del sys.modules["PyObjCTools"]
+ 
+         ei_cmd = self.get_finalized_command("egg_info")
+         sys.path.insert(0, normalize_path(ei_cmd.egg_base))
