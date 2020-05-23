@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/03/22 13:24:00 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/05/23 21:32:14 schmonz Exp $
 #
 
 DISTNAME=		libtai-0.60
@@ -27,6 +27,8 @@ SUBST_VARS.paths=	PKG_SYSCONFDIR
 
 INSTALLATION_DIRS=	bin include lib ${EGDIR}
 INSTALLATION_DIRS+=	${PKGMANDIR}/man3
+
+.include "options.mk"
 
 post-build:
 	cd ${WRKSRC} && ./leapsecs < leapsecs.txt > leapsecs.dat

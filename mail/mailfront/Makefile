@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/05/22 10:56:19 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/05/23 21:32:15 schmonz Exp $
 #
 
 DISTNAME=		mailfront-2.22
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}archive/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		https://untroubled.org/mailfront/?a=b&c=d
+HOMEPAGE=		https://untroubled.org/mailfront/
 COMMENT=		Mail server network protocol front-ends
 LICENSE=		gnu-gpl-v2
 
@@ -34,6 +34,8 @@ USE_LIBTOOL=		yes
 MAKE_JOBS_SAFE=		no # due to hacky libtoolization
 
 PKG_SYSCONFSUBDIR=	qmail
+
+.include "options.mk"
 
 post-install:
 	cd ${WRKSRC};							\

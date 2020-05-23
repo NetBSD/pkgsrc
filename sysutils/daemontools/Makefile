@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/03/22 10:36:39 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2020/05/23 21:32:15 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		3
@@ -37,6 +37,8 @@ SUBST_SED.paths=	-e 's|/usr/local/sbin:/bin|/usr/local/sbin:${PREFIX}/bin:${PREF
 SUBST_SED.paths+=	-e 's|/command/svc |${PREFIX}/bin/svc |g'
 
 MAKE_ENV+=		PKGSRC_SHELL=${TOOLS_PLATFORM.sh}
+
+.include "options.mk"
 
 do-install:
 	(while read cmd; do \
