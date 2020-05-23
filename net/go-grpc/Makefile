@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/04/12 11:01:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/23 10:37:56 rillig Exp $
 
 DISTNAME=		go-grpc-1.15.0
 PKGREVISION=		16
@@ -22,6 +22,7 @@ GO_BUILD_PATTERN+=	${GO_SRCPATH}/${godir}/...
 .endfor
 
 CHECK_PORTABILITY_SKIP+=	benchmark/run_bench.sh
+CHECK_PORTABILITY_SKIP+=	vet.sh
 
 REPLACE_SH+=	balancer/grpclb/regenerate.sh
 REPLACE_SH+=	benchmark/run_bench.sh
