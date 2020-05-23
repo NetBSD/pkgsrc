@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2020/05/23 15:51:28 nia Exp $
+# $NetBSD: Makefile,v 1.134 2020/05/23 15:52:24 nia Exp $
 
 DISTNAME=	audacity-2.4.1
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
 GITHUB_PROJECT=	Audacity
 GITHUB_TAG=	Audacity-${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.audacityteam.org/
 COMMENT=	Multi-track audio editor and recorder
 LICENSE=	gnu-gpl-v2 # AND cc-by-v3.0-license
