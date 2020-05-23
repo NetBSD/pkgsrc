@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3115 2020/05/22 22:05:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3116 2020/05/23 07:05:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4973,3 +4973,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed emulators/wine-devel successor emulators/wine [nia 2020-05-22]
 	Updated games/wesnoth to 1.14.12 [adam 2020-05-22]
 	Updated net/terraform-provider-aws to 2.63.0 [adam 2020-05-22]
+	Updated devel/py-pyobjc to 6.2 [adam 2020-05-23]
