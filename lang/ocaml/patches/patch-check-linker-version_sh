@@ -1,0 +1,19 @@
+$NetBSD: patch-check-linker-version_sh,v 1.1 2020/05/23 20:33:52 rillig Exp $
+
+Fix bashisms.
+
+--- testsuite/tests/unwind/check-linker-version.sh.orig	2020-03-18 15:02:03.000000000 +0000
++++ testsuite/tests/unwind/check-linker-version.sh	2020-05-02 15:40:01.333410019 +0000
+@@ -3,10 +3,10 @@
+ LDFULL="`ld -v 2>&1`"
+ LD="`echo $LDFULL | grep -o \"ld64-[0-9]*\"`"
+ LDVER="`echo $LD | sed \"s/ld64-//\"`"
+-if [[ -z "$LD" ]]; then
++if [ -z "$LD" ]; then
+   echo "unknown linker: pattern ld64-[0-9]* not found in 'ld -v' output";
+   test_result=${TEST_SKIP};
+-elif [[ $LDVER -lt 224 ]]; then
++elif [ $LDVER -lt 224 ]; then
+   echo "ld version is $LDVER, only 224 or above are supported";
+   test_result=${TEST_SKIP};
+ else
