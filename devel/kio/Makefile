@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/04/12 08:27:52 adam Exp $
+# $NetBSD: Makefile,v 1.41 2020/05/23 23:02:04 mef Exp $
 
 DISTNAME=	kio-${KF5VER}
 PKGREVISION=	3
@@ -19,7 +19,7 @@ LDFLAGS.SunOS+=	-lsocket
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	src/core/CMakeLists.txt CMakeLists.txt
+SUBST_FILES.xdg=	src/core/CMakeLists.txt
 SUBST_FILES.xdg+=	src/urifilters/shorturi/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
@@ -28,17 +28,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/accept-languages.codes \
 		${PKG_SYSCONFDIR}/xdg/accept-languages.codes
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kshorturifilterrc \
 		${PKG_SYSCONFDIR}/xdg/kshorturifilterrc
-
-# generation of kcookieserver.moc fails when ${PREFIX}/include in the moc include path
-SUBST_CLASSES+=		fix-moc
-SUBST_STAGE.fix-moc=	post-configure
-SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/src/ioslaves/http/kcookiejar/CMakeFiles/kded_kcookiejar_autogen.dir/AutogenInfo.json
-SUBST_FILES.fix-moc+=	_KDE_build/src/ioslaves/trash/CMakeFiles/kcm_trash_autogen.dir/AutogenInfo.json
-SUBST_FILES.fix-moc+=	_KDE_build/src/urifilters/ikws/CMakeFiles/kurisearchfilter_autogen.dir/AutogenInfo.json
-SUBST_FILES.fix-moc+=	_KDE_build/autotests/CMakeFiles/jobremotetest_autogen.dir/AutogenInfo.json
-SUBST_FILES.fix-moc+=	_KDE_build/src/kcms/kio/CMakeFiles/kcm_kio_autogen.dir/AutogenInfo.json
-SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
