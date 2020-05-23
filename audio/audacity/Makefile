@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.132 2020/04/16 21:54:06 nia Exp $
+# $NetBSD: Makefile,v 1.133 2020/05/23 15:51:28 nia Exp $
 
-DISTNAME=	audacity-2.3.3
-# XXX: Remove after updating!
-DIST_SUBDIR=	${DISTNAME}
-PKGREVISION=	3
+DISTNAME=	audacity-2.4.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
 GITHUB_PROJECT=	Audacity
@@ -16,8 +13,6 @@ LICENSE=	gnu-gpl-v2 # AND cc-by-v3.0-license
 
 WRKSRC=		${WRKDIR}/audacity-${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
-EXTRACT_USING=	bsdtar
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
@@ -25,10 +20,12 @@ USE_TOOLS+=	automake autoreconf bash
 USE_TOOLS+=	gmake intltool msgfmt msgmerge pkg-config
 USE_TOOLS+=	xgettext zip:run
 
-USE_LANGUAGES=	c gnu++11
+USE_LANGUAGES=	c c++
 
 # configure: error: Audacity requires at least GCC 4.9
 GCC_REQD+=	4.9
+
+CFLAGS+=	-DHAVE_VISIBILITY=1 # ???
 
 WRAPPER_SHELL=	${BASH}
 CONFIG_SHELL=	${BASH}
@@ -41,7 +38,8 @@ CONFIGURE_ARGS+=	--with-libsndfile="system"
 CONFIGURE_ARGS+=	--with-libsoxr="system"
 CONFIGURE_ARGS+=	--with-portaudio="system"
 CONFIGURE_ARGS+=	--with-sbsms="local" # system version doesn't work
-CONFIGURE_ARGS+=	--with-portmidi="local"
+CONFIGURE_ARGS+=	--with-midi="no"
+CONFIGURE_ARGS+=	--with-portmidi="no"
 CONFIGURE_ARGS+=	--with-ffmpeg="system"
 CONFIGURE_ARGS+=	--with-lame="system"
 CONFIGURE_ARGS+=	--with-libflac="system"
@@ -73,7 +71,6 @@ CONFIG_SUB_OVERRIDE= \
 	config.sub */config.sub */*/config.sub */*/*/config.sub
 
 PTHREAD_AUTO_VARS=	yes
-BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./build/vamp-plugin.map
 
 INSTALLATION_DIRS+=	lib
 
@@ -88,7 +85,6 @@ post-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/lilv/buildlink3.mk"
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../audio/soundtouch/buildlink3.mk"
