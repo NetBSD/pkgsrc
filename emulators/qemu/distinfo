@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.159 2020/05/10 11:33:23 skrll Exp $
+$NetBSD: distinfo,v 1.160 2020/05/23 15:46:12 leot Exp $
 
 SHA1 (qemu-5.0.0.tar.xz) = 52d1c0e6025a212d4fde471e4d9b5913f2615f86
 RMD160 (qemu-5.0.0.tar.xz) = 58a704960cd712cf6c218216e8426a05948f6526
@@ -9,7 +9,7 @@ SHA1 (patch-accel_stubs_Makefile.objs) = 92266dc400ac1e97013f7f19ee4b7a63b42c7fc
 SHA1 (patch-accel_stubs_nvmm-stub.c) = d66d47eabb8bb6728e777da7589b43d491adbcc8
 SHA1 (patch-accel_tcg_user-exec.c) = ec5f3882c78763b4072daa41fd67e55da291c065
 SHA1 (patch-capstone_Makefile) = f59870031de8c4385a591362749ec82f57fd4c27
-SHA1 (patch-configure) = 993ed55b8e63c3022c5afc3dbc3f0eacbebdd61b
+SHA1 (patch-configure) = ada3ddba78c4eacf2591e47d27d26bf3886e8d73
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
 SHA1 (patch-cpus.c) = a319b7533daf3036c44411c4b26270b1fbb96009
