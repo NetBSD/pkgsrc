@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/04/25 17:34:37 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/23 07:38:01 adam Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
@@ -12,7 +12,6 @@ LEMON_VERSION=	1.0
 # - reflect reality and make it human readable without checking the sources
 
 PKGNAME=	lemon-${LEMON_VERSION}.${SQLITE3_VERSION}
-PKGREVISION=	1
 DISTNAME=	sqlite-src-${SQLITE3_DISTVERSION}
 CATEGORIES=	devel
 EXTRACT_SUFX=	.zip
