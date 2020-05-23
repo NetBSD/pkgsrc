@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.119 2020/05/02 10:47:38 rillig Exp $
+# $NetBSD: Makefile,v 1.120 2020/05/23 20:50:02 schmonz Exp $
 #
 
-DISTNAME=		notqmail-1.07
+DISTNAME=		notqmail-1.08
 PKGNAME=		qmail-1.03
-PKGREVISION=		48
+PKGREVISION=		49
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=notqmail/}
 GITHUB_PROJECT=		notqmail
@@ -37,6 +37,9 @@ DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_NOFILES_GROUP:Q} >> conf-groups;
 DJB_BUILD_TARGETS=	man
 DJB_RESTRICTED=		no
 DJB_ERRNO_HACK=		no
+
+TEST_TARGET=		test
+#.include "../../devel/check/buildlink3.mk"
 
 PKG_SYSCONFSUBDIR=	qmail
 OWN_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias
@@ -82,6 +85,7 @@ PKG_FAIL_REASON+=	"QMAIL_QUEUE_DIR must not be under ${QMAILDIR}"
 .endif
 
 USE_TOOLS+=		tar
+MAKE_ENV+=		NROFF=${TRUE:Q}
 
 .if !empty(QMAIL_QUEUE_EXTRA)
 USE_TOOLS+=		expr
@@ -95,11 +99,10 @@ SUBST_SED.logging+=	-e 's|""|${QUEUE_EXTRA}|g'
 SUBST_MESSAGE.logging=	Setting QUEUE_EXTRA.
 .endif
 
-SUBST_CLASSES+=		catpages
-SUBST_STAGE.catpages=	do-configure
-SUBST_FILES.catpages=	hier.c
-SUBST_SED.catpages=	-e 's|.*"man/cat[0-9]".*||g'
-SUBST_SED.catpages+=	-e 's|.*"tcp-environ\.5".*||g'	# also in ucspi-tcp
+SUBST_CLASSES+=		manpages
+SUBST_STAGE.manpages=	do-configure
+SUBST_FILES.manpages=	hier.c
+SUBST_SED.manpages+=	-e 's|.*"tcp-environ\.5".*||g'	# also in ucspi-tcp
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
@@ -154,17 +157,17 @@ PATCH_DIST_STRIP.${MAILDIRUNIQ_PATCH}=	-p1
 PATCH_DIST_CAT.${MAILDIRUNIQ_PATCH}=	\
 				${SED} -e 's|"057"|"\\\\057"|' \
 				-e 's|"072"|"\\\\072"|' \
+				-e 's|hostname|temporaryothername|g' \
+				-e 's|host|myhost|g' \
+				-e 's|temporaryothername|hostname|g' \
+				-e 's|"readwrite\.h"|<stdlib.h>|' \
+				-e 's|"sig\.h"|"readwrite.h"|' \
 				< ${MAILDIRUNIQ_PATCH}
 
 QMAILPATCHES+=			outgoingip:${OUTGOINGIP_PATCH}
 OUTGOINGIP_PATCH=		outgoingip.patch
 PATCHFILES+=			${OUTGOINGIP_PATCH}
 SITES.${OUTGOINGIP_PATCH}=	http://qmailorg.schmonz.com/
-
-QMAILPATCHES+=			remote:${REMOTE_PATCH}
-REMOTE_PATCH=			notqmail-1.07-tls-20190517-qmailremote-20190819.patch
-PATCHFILES+=			${REMOTE_PATCH}
-SITES.${REMOTE_PATCH}=		https://schmonz.com/qmail/remote/
 
 QMAILPATCHES+=			spp:${SPP_PATCH}:${SPP_PATCHFILE_cmd:sh}
 SPP_PATCH=			qmail-spp-0.42.tar.gz
