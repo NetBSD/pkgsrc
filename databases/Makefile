@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2020/05/23 07:25:08 adam Exp $
+# $NetBSD: Makefile,v 1.601 2020/05/23 08:20:53 adam Exp $
 
 COMMENT=	Databases
 
@@ -331,6 +331,7 @@ SUBDIR+=	postgresql96-server
 SUBDIR+=	prometheus
 SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
+SUBDIR+=	py-aiosqlite
 SUBDIR+=	py-alembic
 SUBDIR+=	py-apsw
 SUBDIR+=	py-asyncpg
