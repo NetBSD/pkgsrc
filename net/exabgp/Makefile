@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/11/03 11:45:34 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/23 10:29:58 rillig Exp $
 
 VERSION=	3.4.23
 DISTNAME=	${VERSION}
@@ -55,6 +55,8 @@ REPLACE_PYTHON+=	qa/conf/api-vpls.run
 REPLACE_PYTHON+=	qa/conf/api-vpnv4.run
 REPLACE_PYTHON+=	qa/conf/manual-eor.run
 REPLACE_PYTHON+=	qa/conf/watchdog.run
+
+CHECK_PORTABILITY_SKIP+=	dev/release/google
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.2.19
 
