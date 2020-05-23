@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3131 2020/05/23 17:43:22 fox Exp $
+$NetBSD: CHANGES-2020,v 1.3132 2020/05/23 20:02:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5012,3 +5012,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed audio/squeezeboxserver [nia 2020-05-23]
 	Updated audio/audacity to 2.4.1 [nia 2020-05-23]
 	Updated audio/din to 47 [fox 2020-05-23]
+	Added databases/py-pypika version 0.37.6 [adam 2020-05-23]
