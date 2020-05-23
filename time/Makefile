@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2020/05/22 01:58:50 markd Exp $
+# $NetBSD: Makefile,v 1.205 2020/05/23 08:22:40 adam Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -137,6 +137,7 @@ SUBDIR+=	projclock
 SUBDIR+=	projectlibre
 SUBDIR+=	py-aniso8601
 SUBDIR+=	py-arrow
+SUBDIR+=	py-ciso8601
 SUBDIR+=	py-dateparser
 SUBDIR+=	py-dateutil
 SUBDIR+=	py-goocalendar
