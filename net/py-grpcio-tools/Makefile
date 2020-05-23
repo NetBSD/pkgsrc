@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/04/04 09:30:37 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/23 10:43:30 rillig Exp $
 
 DISTNAME=	grpcio-tools-1.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-grpcio>=${PKGVERSION_NOREV}:../../net/py-grpcio
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.5.1:../../devel/py-protobuf
+
+CHECK_PORTABILITY_SKIP=	third_party/protobuf/*.sh
 
 USE_LANGUAGES=	c c++11
 MAKE_ENV+=	GRPC_PYTHON_LDFLAGS="-lprotoc ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.protobuf}/lib"
