@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/04/24 21:51:54 nils Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/23 09:15:13 rillig Exp $
 
 DISTNAME=		pelican-4.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 GITHUB_PROJECT=		pelican
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		www textproc
@@ -25,19 +25,12 @@ DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
 
-USE_TOOLS+=		bash:run make:build sed:build
+USE_TOOLS+=		make:build sed:build
 
 REPLACE_PYTHON+=	pelican/tools/pelican_import.py
 REPLACE_PYTHON+=	pelican/tools/pelican_quickstart.py
 REPLACE_PYTHON+=	pelican/tools/pelican_themes.py
-REPLACE_PYTHON+=	pelican/tools/templates/pelicanconf.py.in
-REPLACE_PYTHON+=	pelican/tools/templates/publishconf.py.in
 REPLACE_PYTHON+=	pelican/tools/templates/publishconf.py.jinja2
-
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/usr/bin/env bash
-REPLACE.bash.new=	${TOOLS_PATH.bash}
-REPLACE_FILES.bash=	pelican/tools/templates/develop_server.sh.in
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-build
