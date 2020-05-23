@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.9 2020/03/29 01:07:01 joerg Exp $
+$NetBSD: distinfo,v 1.10 2020/05/23 20:30:20 rillig Exp $
 
 SHA1 (mono-6.8.0.105.tar.xz) = e39aa0ac15b3b73ecf0767462798a5acde0aed79
 RMD160 (mono-6.8.0.105.tar.xz) = 5a84c75f941d5a2a645999e13da8458fc87d3bac
 SHA512 (mono-6.8.0.105.tar.xz) = 8207082f6c538037a17dba5e22576d8e9b0aac946df270ff34daad0857e7b1cfd71c8cf4851e74dd5338397c9587540f11b23e71776bca6dc2a1b89dbed2fd7e
 Size (mono-6.8.0.105.tar.xz) = 243441900 bytes
 SHA1 (patch-acceptance-tests_Makefile.in) = 66866b180ccce299a0d492add5330351611ec5f2
+SHA1 (patch-acceptance-tests_microbench-perf_sh_in) = d46118c1685e3e48a5b8594bf7f77acd2bebaf94
 SHA1 (patch-data_Makefile.am) = 535480855e413750d5b6cab6351b1683ac911246
 SHA1 (patch-data_net__2__0_Browsers_Makefile.am) = 847fa7f5a54e7583a87c40749efe5a99e513c3c9
 SHA1 (patch-data_net__2__0_Makefile.am) = dffb23423381a9031587536ee5de2b34610329ee
@@ -17,7 +18,6 @@ SHA1 (patch-libgc_pthread__stop__world.c) = f5a12dc3f453136dabc0b93d57caa155a420
 SHA1 (patch-libgc_pthread__support.c) = b4fcf5ab1f5d5d06739891c1614ff870b8e4a4c5
 SHA1 (patch-mono_eglib_giconv.c) = 04d2559d3868605194efd6267da010870f53d961
 SHA1 (patch-mono_metadata_icall.c) = b326c16e9aa8f9ee154d937128e5e09fd31b235a
-SHA1 (patch-mono_metadata_mono-config.c) = d349721ff2b6b3b767208eacdc5882b9e6dc47b4
 SHA1 (patch-mono_metadata_w32mutex-unix.c) = c3d424fe4ae1079c9c664c876a087fb0134f2e22
 SHA1 (patch-mono_mini_Makefile.am.in) = 7f4555b53e74646d96c847862999e4eceaa86164
 SHA1 (patch-mono_mini_Makefile.in) = c8a96e8d9139b5f1c751abc2256af45c219e504e

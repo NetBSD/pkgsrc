@@ -1,0 +1,28 @@
+$NetBSD: patch-acceptance-tests_microbench-perf_sh_in,v 1.1 2020/05/23 20:30:21 rillig Exp $
+
+Shell portability.
+
+https://github.com/mono/mono/issues/19694
+
+--- acceptance-tests/microbench-perf.sh.in.orig	2020-02-04 17:00:30.000000000 +0000
++++ acceptance-tests/microbench-perf.sh.in	2020-05-03 13:09:59.908937340 +0000
+@@ -3,15 +3,13 @@
+ aotpattern="--aot="
+ 
+ # if this is an aot invoke
+-if [[ $@ =~ $aotpattern ]];
+-then
++case "$*" in *"$aotpattern"*)
+ # just aot the code
+ echo "$r/runtime/mono-wrapper $@"
+ exec $r/runtime/mono-wrapper $@
+-else
++;;
++*)
+ # else run it under perf
+ echo "$MONO_PERF_BINARY record -o $r/acceptance-tests/perf.data -v -s -g -- $r/mono/mini/mono-sgen $@"
+ exec $MONO_PERF_BINARY record -o $r/acceptance-tests/perf.data -v -s -g $r/mono/mini/mono-sgen $@
+-fi
+-
+-
++esac
