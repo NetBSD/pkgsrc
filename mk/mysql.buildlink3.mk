@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.26 2020/03/15 17:50:28 rillig Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.27 2020/05/23 07:35:56 adam Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -8,7 +8,7 @@
 # MYSQL_VERSION_DEFAULT
 #	The preferred MySQL version.
 #
-#	Possible: 57 56 55 MARIADB55
+#	Possible: 57 56 MARIADB55
 #	Default: 57
 #
 # Package-settable variables:
@@ -34,7 +34,7 @@ _SYS_VARS.mysql=	MYSQL_PKGSRCDIR
 .include "../../mk/bsd.prefs.mk"
 
 MYSQL_VERSION_DEFAULT?=		57
-MYSQL_VERSIONS_ACCEPTED?=	57 56 55 MARIADB55
+MYSQL_VERSIONS_ACCEPTED?=	57 56 MARIADB55
 
 # transform the list into individual variables
 .for mv in ${MYSQL_VERSIONS_ACCEPTED}
@@ -51,9 +51,6 @@ _MYSQL_VERSION_INSTALLED=	57
 .    if exists(${LOCALBASE}/include/mysql/mysql/client_authentication.h)
 _MYSQL_VERSION_56_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	56
-.    else
-_MYSQL_VERSION_55_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	55
 .    endif
 .  endif
 .else
@@ -68,9 +65,6 @@ _MYSQL_VERSION_INSTALLED=	56
 .    elif exists(${LOCALBASE}/share/mariadb)
 _MYSQL_VERSION_MARIADB55_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	MARIADB55
-.    else
-_MYSQL_VERSION_55_INSTALLED=	yes
-_MYSQL_VERSION_INSTALLED=	55
 .    endif
 .  endif
 .endif
@@ -119,8 +113,6 @@ MYSQL_PKGSRCDIR=	../../databases/mysql57-client
 MYSQL_PKGSRCDIR=	../../databases/mysql56-client
 .elif ${_MYSQL_VERSION} == "MARIADB55"
 MYSQL_PKGSRCDIR=	../../databases/mariadb55-client
-.elif ${_MYSQL_VERSION} == "55"
-MYSQL_PKGSRCDIR=	../../databases/mysql55-client
 .else
 # force an error
 PKG_FAIL_REASON+=	"[mysql.buildlink3.mk] ${_MYSQL_VERSION} is not a valid mysql package."
