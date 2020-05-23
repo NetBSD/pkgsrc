@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/18 17:03:16 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/23 07:03:49 adam Exp $
 
-SHA1 (pyobjc-framework-ScreenSaver-6.1.tar.gz) = b3bb21f250ddde6f6cefcc752b9433368e0ddac6
-RMD160 (pyobjc-framework-ScreenSaver-6.1.tar.gz) = 88b6e79f856deec3665e04d03cba24daeb0998ba
-SHA512 (pyobjc-framework-ScreenSaver-6.1.tar.gz) = ac93c32a3a2f36b29b42490b09816b0471aa7ecf0f11e1aff267e78a1cb7e227f0de86866d65e2ed36f75c5d69979df350146f574ee769dce4ac769bdc95cffa
-Size (pyobjc-framework-ScreenSaver-6.1.tar.gz) = 20823 bytes
+SHA1 (pyobjc-framework-ScreenSaver-6.2.tar.gz) = 925d161c81e76ad73ce2fbcb7774dcfa27660e55
+RMD160 (pyobjc-framework-ScreenSaver-6.2.tar.gz) = 48bc4d7fa6da62f393937b00e4f587074b69ba9c
+SHA512 (pyobjc-framework-ScreenSaver-6.2.tar.gz) = 861f702ff4688599af70ca634950858964c216a49ce67576fddc0fb5136462e70b0eb222d6b741e7041190da0b85e433350e098380d5972cb63f5531c933cf72
+Size (pyobjc-framework-ScreenSaver-6.2.tar.gz) = 20250 bytes

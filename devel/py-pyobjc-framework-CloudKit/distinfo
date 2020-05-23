@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/11/18 17:03:09 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/05/23 07:03:42 adam Exp $
 
-SHA1 (pyobjc-framework-CloudKit-6.1.tar.gz) = 53a89b68f9f5b0de97a9ddf5d5f1ceae95bdb08a
-RMD160 (pyobjc-framework-CloudKit-6.1.tar.gz) = 75800a60ea8854a2de0661d962aee20eb92d8e7a
-SHA512 (pyobjc-framework-CloudKit-6.1.tar.gz) = 7866c4a89034373ac56a538c33c42311d8f208aa913604b1503676504bf3bb9e82ab4f7ca241fd02c0bf7f24d6e5821bcbe3357b70a8aca95c4df0a00535b3a2
-Size (pyobjc-framework-CloudKit-6.1.tar.gz) = 26287 bytes
+SHA1 (pyobjc-framework-CloudKit-6.2.tar.gz) = 8e10515e7b96440d9655ffd0e29eaa28ff22bca4
+RMD160 (pyobjc-framework-CloudKit-6.2.tar.gz) = 63e7b89997c28b51b6bbd0f053a644b01547edbf
+SHA512 (pyobjc-framework-CloudKit-6.2.tar.gz) = 3e59933033f660ca2c8f55cfcb9cd303fe7a0eafd143c9656453e381664bde3d30aebfe09f08c9003f99ef5232aced035907b32767e7a08c064ff8eb419e8867
+Size (pyobjc-framework-CloudKit-6.2.tar.gz) = 26034 bytes
