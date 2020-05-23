@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/05/21 09:42:43 mef Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/23 09:12:57 adam Exp $
 
-DISTNAME=	fs-uae-arcade-3.0.2
+DISTNAME=	fs-uae-arcade-3.0.5
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
@@ -24,8 +24,9 @@ INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYSETUPINSTALLARGS=		--install-lib=${PREFIX:Q}/share/fs-uae-arcade
-PYSETUPINSTALLARGS+=		--install-scripts=${PREFIX:Q}/share/fs-uae-arcade
+
+PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-arcade
+PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-arcade
 
 REPLACE_PYTHON+=	fs-uae-arcade
 
