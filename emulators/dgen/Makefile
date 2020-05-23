@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/03/20 11:57:35 nia Exp $
+# $NetBSD: Makefile,v 1.31 2020/05/23 12:25:33 rillig Exp $
 #
 
 DISTNAME=	dgen-sdl-1.33
@@ -24,8 +24,6 @@ PLIST.arm=	yes
 USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
-
-CONFIGURE_ARGS+=	--with-extra-opt
 
 BUILDLINK_TRANSFORM+=	rm:-mpentium
 BUILDLINK_TRANSFORM+=	rm:-march=pentium
