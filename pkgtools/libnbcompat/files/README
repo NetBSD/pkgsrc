@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.24 2019/07/08 20:34:54 sevan Exp $
+$NetBSD: README,v 1.25 2020/05/24 21:51:54 nia Exp $
 
  0 Introduction
  ==============
@@ -117,6 +117,13 @@ on the following operating systems:
 	NetBSD/amd64 8.99.49		<sevan@NetBSD.org>
 	Darwin/powerpc 8.11.0		<sevan@NetBSD.org>
 	FreeBSD/amd64 13-CURRENT	<sevan@NetBSD.org>
+
+libnbcompat-20200524 has been tested to build and install correctly
+on the following operating systems:
+
+	NetBSD/amd64 9.0		<nia@NetBSD.org>
+	Alpine Linux 3.11.6 x86_64	<nia@NetBSD.org>
+	IRIX 6.5.22, mipspro 7.4.3	<ky0ko@disroot.org>	
 
  3 Usage
  =======
