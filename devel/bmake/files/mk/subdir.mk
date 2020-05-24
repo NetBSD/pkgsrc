@@ -1,7 +1,7 @@
-#	$Id: subdir.mk,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+#	$Id: subdir.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
 #	skip missing directories...
 
-#	$NetBSD: subdir.mk,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+#	$NetBSD: subdir.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
 #	@(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 
 .if ${.MAKE.LEVEL} == 0 && ${.MAKE.MODE:Uno:Mmeta*} != ""

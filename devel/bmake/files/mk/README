@@ -1,4 +1,4 @@
-#	$Id: README,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+#	$Id: README,v 1.2 2020/05/24 11:09:44 nia Exp $
 
 This directory contains some macro's derrived from the NetBSD bsd.*.mk
 macros.  They have the same names but without the bsd., separate macro
@@ -6,7 +6,7 @@ files are needed to ensure we can make them do what we want for
 builing things outside of /usr/src.  Nearly all the comments below
 apply. 
 
-#	$NetBSD: README,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+#	$NetBSD: README,v 1.2 2020/05/24 11:09:44 nia Exp $
 #	@(#)bsd.README	5.1 (Berkeley) 5/11/90
 
 This is the README file for the new make "include" files for the BSD
