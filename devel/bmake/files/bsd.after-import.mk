@@ -1,4 +1,4 @@
-# $Id: bsd.after-import.mk,v 1.4 2020/05/24 11:09:43 nia Exp $
+# $Id: bsd.after-import.mk,v 1.5 2020/05/24 21:10:17 nia Exp $
 
 # This makefile is for use when integrating bmake into a BSD build
 # system.  Use this makefile after importing bmake.

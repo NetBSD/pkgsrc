@@ -1,4 +1,4 @@
-/*	$NetBSD: dirname.c,v 1.3 2020/05/24 11:09:43 nia Exp $	*/
+/*	$NetBSD: dirname.c,v 1.4 2020/05/24 21:10:17 nia Exp $	*/
 
 /*-
  * Copyright (c) 1997, 2002 The NetBSD Foundation, Inc.
@@ -36,10 +36,9 @@
 
 #include <sys/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: dirname.c,v 1.3 2020/05/24 11:09:43 nia Exp $");
+__RCSID("$NetBSD: dirname.c,v 1.4 2020/05/24 21:10:17 nia Exp $");
 #endif /* !LIBC_SCCS && !lint */
 
-#include "namespace.h"
 #include <sys/param.h>
 #ifdef HAVE_LIBGEN_H
 #include <libgen.h>

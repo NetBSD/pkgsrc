@@ -1,4 +1,4 @@
-/*	$NetBSD: metachar.c,v 1.2 2020/05/24 11:09:43 nia Exp $	*/
+/*	$NetBSD: metachar.c,v 1.3 2020/05/24 21:10:17 nia Exp $	*/
 
 /*-
  * Copyright (c) 2015 The NetBSD Foundation, Inc.
@@ -38,7 +38,7 @@
 #endif
 
 #if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: metachar.c,v 1.2 2020/05/24 11:09:43 nia Exp $");
+__RCSID("$NetBSD: metachar.c,v 1.3 2020/05/24 21:10:17 nia Exp $");
 #endif
 
 #include "metachar.h"

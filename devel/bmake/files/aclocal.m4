@@ -1,5 +1,5 @@
 dnl RCSid:
-dnl	$Id: aclocal.m4,v 1.5 2020/05/24 11:09:43 nia Exp $
+dnl	$Id: aclocal.m4,v 1.6 2020/05/24 21:10:17 nia Exp $
 dnl
 
 dnl 
