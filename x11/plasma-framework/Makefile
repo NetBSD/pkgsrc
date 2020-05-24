@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/04/12 08:28:13 adam Exp $
+# $NetBSD: Makefile,v 1.37 2020/05/24 01:10:30 markd Exp $
 
 DISTNAME=	plasma-framework-${KF5VER}
 PKGREVISION=	3
@@ -18,6 +18,7 @@ SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/src/scriptengines/qml/CMakeFiles/plasma_appletscript_declarative_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/kdeclarative/buildlink3.mk"
