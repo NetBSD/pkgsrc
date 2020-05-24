@@ -1,4 +1,4 @@
-.\"	$NetBSD: bmake.1,v 1.11 2020/05/24 11:09:43 nia Exp $
+.\"	$NetBSD: bmake.1,v 1.12 2020/05/24 21:10:17 nia Exp $
 .\"
 .\" Copyright (c) 1990, 1993
 .\"	The Regents of the University of California.  All rights reserved.
@@ -29,7 +29,7 @@
 .\"
 .\"	from: @(#)make.1	8.4 (Berkeley) 3/19/94
 .\"
-.Dd April 27, 2020
+.Dd May 26, 2018
 .Dt BMAKE 1
 .Os
 .Sh NAME
@@ -272,7 +272,7 @@ that do not depend on the target whose creation caused the error.
 .It Fl m Ar directory
 Specify a directory in which to search for sys.mk and makefiles included
 via the
-.Li \&< Ns Ar file Ns Li \&> Ns -style
+.Ao Ar file Ac Ns -style
 include statement.
 The
 .Fl m
@@ -280,7 +280,7 @@ option can be used multiple times to form a search path.
 This path will override the default system include path: /usr/share/mk.
 Furthermore the system include path will be appended to the search path used
 for
-.Li \*q Ns Ar file Ns Li \*q Ns -style
+.Qo Ar file Qc Ns -style
 include statements (see the
 .Fl I
 option).
@@ -1234,7 +1234,7 @@ Quotes every shell meta-character in the variable, and also doubles
 characters so that it can be passed
 safely through recursive invocations of
 .Nm .
-This is equivalent to:
+This is equivalent to: 
 .Sq \&:S/\e\&$/&&/g:Q .
 .It Cm \&:R
 Replaces each word in the variable with everything but its suffix.
@@ -1429,29 +1429,6 @@ is the substring of
 .Ar old_string
 to be replaced in
 .Ar new_string .
-If only
-.Ar old_string
-contains the pattern matching character
-.Ar % ,
-and 
-.Ar old_string
-matches, then the result is the
-.Ar new_string .
-If only the
-.Ar new_string
-contains the pattern matching character
-.Ar % ,
-then it is not treated specially and it is printed as a literal
-.Ar %
-on match.
-If there is more than one pattern matching character
-.Ar ( % )
-in either the
-.Ar new_string
-or
-.Ar old_string ,
-only the first instance is treated specially (as the pattern character);
-all subsequent instances are treated as regular characters
 .Pp
 Variable expansion occurs in the normal fashion inside both
 .Ar old_string
@@ -1646,9 +1623,9 @@ dot
 .Pq Ql \&.
 character.
 Files are included with either
-.Cm \&.include \&< Ns Ar file Ns Cm \&>
+.Cm \&.include Aq Ar file
 or
-.Cm \&.include \&\*q Ns Ar file Ns Cm \&\*q .
+.Cm \&.include Pf \*q Ar file Ns \*q .
 Variables between the angle brackets or double quotes are expanded
 to form the file name.
 If angle brackets are used, the included makefile is expected to be in
@@ -2329,13 +2306,13 @@ An incomplete list of changes in older versions of
 .Nm :
 .Pp
 The way that .for loop variables are substituted changed after
-.Nx 5.0
+NetBSD 5.0
 so that they still appear to be variable expansions.
 In particular this stops them being treated as syntax, and removes some
 obscure problems using them in .if statements.
 .Pp
 The way that parallel makes are scheduled changed in
-.Nx 4.0
+NetBSD 4.0
 so that .ORDER and .WAIT apply recursively to the dependent nodes.
 The algorithms used may change again in the future.
 .Ss Other make dialects
@@ -2407,6 +2384,36 @@ portable.
 .Xr mkdep 1
 .Sh HISTORY
 .Nm
-is derived from NetBSD's
+is derived from NetBSD
 .Xr make 1 .
 It uses autoconf to facilitate portability to other platforms.
+.Pp
+A
+make
+command appeared in
+.At v7 .
+This
+make
+implementation is based on Adam De Boor's pmake program which was written
+for Sprite at Berkeley.
+It was designed to be a parallel distributed make running jobs on different
+machines using a daemon called
+.Dq customs .
+.Pp
+Historically the target/dependency
+.Dq FRC
+has been used to FoRCe rebuilding (since the target/dependency
+does not exist... unless someone creates an
+.Dq FRC
+file).
+.Sh BUGS
+The
+make
+syntax is difficult to parse without actually acting of the data.
+For instance finding the end of a variable use should involve scanning each
+the modifiers using the correct terminator for each field.
+In many places
+make
+just counts {} and () in order to find the end of a variable expansion.
+.Pp
+There is no way of escaping a space character in a filename.
