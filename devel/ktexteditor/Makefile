@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2020/04/12 08:27:53 adam Exp $
+# $NetBSD: Makefile,v 1.44 2020/05/24 06:30:24 markd Exp $
 
 DISTNAME=	ktexteditor-${KF5VER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -20,6 +20,7 @@ CONF_FILES+=	${PREFIX}/share/examples/ktexteditor/org.kde.ktexteditor.katetextbu
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 INSTALLATION_DIRS+=	share/examples/ktexteditor
 
+.include "../../devel/editorconfig-core/buildlink3.mk"
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/kparts/buildlink3.mk"
 .include "../../textproc/syntax-highlighting/buildlink3.mk"
