@@ -849,3 +849,47 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/distinfo:5: Patch patch-nonexistent does not exist.")
 }
+
+// The check for versioned distfiles only makes sense if the file
+// has the usual hashes for distfiles.
+func (s *Suite) Test_distinfoFileInfo_hasDistfileAlgorithms__code_coverage(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		CvsID,
+		"",
+		"other (dist-a.tar.gz) = 1234",
+		"RMD160 (dist-a.tar.gz) = 1234",
+		"SHA512 (dist-a.tar.gz) = 1234",
+		"Size (dist-a.tar.gz) = 1234",
+
+		"SHA1 (dist-b.tar.gz) = 1234",
+		"other (dist-b.tar.gz) = 1234",
+		"SHA512 (dist-b.tar.gz) = 1234",
+		"Size (dist-b.tar.gz) = 1234",
+
+		"SHA1 (dist-c.tar.gz) = 1234",
+		"RMD160 (dist-c.tar.gz) = 1234",
+		"other (dist-c.tar.gz) = 1234",
+		"Size (dist-c.tar.gz) = 1234",
+
+		"SHA1 (dist-d.tar.gz) = 1234",
+		"RMD160 (dist-d.tar.gz) = 1234",
+		"SHA512 (dist-d.tar.gz) = 1234",
+		"other (dist-d.tar.gz) = 1234")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"ERROR: distinfo:3: Expected SHA1, RMD160, SHA512, Size checksums for "+
+			"\"dist-a.tar.gz\", got other, RMD160, SHA512, Size.",
+		"ERROR: distinfo:7: Expected SHA1, RMD160, SHA512, Size checksums for "+
+			"\"dist-b.tar.gz\", got SHA1, other, SHA512, Size.",
+		"ERROR: distinfo:11: Expected SHA1, RMD160, SHA512, Size checksums for "+
+			"\"dist-c.tar.gz\", got SHA1, RMD160, other, Size.",
+		"ERROR: distinfo:15: Expected SHA1, RMD160, SHA512, Size checksums for "+
+			"\"dist-d.tar.gz\", got SHA1, RMD160, SHA512, other.")
+}
