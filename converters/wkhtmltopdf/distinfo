@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/04/24 09:35:16 manu Exp $
+$NetBSD: distinfo,v 1.4 2020/05/24 23:06:46 joerg Exp $
 
 SHA1 (wkhtmltox-0.12.4.tar.bz2) = 6a0ca9b01d5e37af3fb451bbd934afff43cf26ae
 RMD160 (wkhtmltox-0.12.4.tar.bz2) = 665abd76618cdfac27585e62caa52b33d09990fa
@@ -10,7 +10,7 @@ SHA1 (patch-qt_config.tests_unix_libjpeg_libjpeg.pro) = 5012c36257fb1f2cef7f086e
 SHA1 (patch-qt_config.tests_unix_libpng_libpng.pro) = be0dead445dbbfeef9bc2a816ef5efd85aba0411
 SHA1 (patch-qt_config.tests_x11_mitshm_mitshm.pro) = 5a411a67f6a99f87a9f22698a2a6e1e01b1a38e7
 SHA1 (patch-qt_config.tests_x11_xrender_xrender.pro) = a1120252f1f6b289caafa3835e2f2d42be69446c
-SHA1 (patch-qt_configure) = 823e039d8fc8da6d2518301413dcf8195021c3e2
+SHA1 (patch-qt_configure) = 50fca3b905a203d314bcc7fbb162fdc257d039af
 SHA1 (patch-qt_mkspecs_netbsd-g++_qmake.conf) = 508b1f25735d3a8f29a1da08a988f608186751bf
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_bytecompiler_BytecodeGenerator.cpp) = b8ef0623e9cd666d708295c006b5e72693ac715e
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_heap_MarkedSpace.cpp) = 79ad51f005e68156d2e339d0d925fc79ab79f059
@@ -19,7 +19,7 @@ SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_parser_JSParser.cpp) = 
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_runtime_Identifier.cpp) = a82582dd815b63cb7e6c15d3adb40cf1f216fde4
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_runtime_JSONObject.cpp) = e49fc03256fde8a615e984921874dda9b8f2f7a4
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_runtime_StringPrototype.cpp) = e5041f4cb61d57cc71b83be761b8b5f9402e92c9
-SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_Atomics.h) = 88580505164ab1b3961c70296a26f1dca4502728
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_Atomics.h) = fe13906014d059a4169c5dedb65d46819ca01130
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_HashSet.h) = 979b874cf3d47fe9568b82f78eb1dd66b065513e
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_ThreadSafeRefCounted.h) = 674e895fb9ae64376c2d88e62596db332cbf961a
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_text_AtomicString.cpp) = 5ec061aab070a3ac4d6680ccfe2f9cfcb0fbdf9a
