@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2020/04/17 00:22:28 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2020/05/24 01:22:42 mef Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -55,7 +55,7 @@ INSTALL_AM_MAKEFLAGS+=	htmldocdir=${DOCDIR:Q}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
 SUBST_CLASSES+=		courier
-SUBST_FILES.courier=	courier/doc/mkesmtpdcert.8.in			\
+SUBST_FILES.courier=	\
 			courier/doc/mkesmtpdcert.html.in		\
 			courier/filters/courierfilter.8.in		\
 			courier/filters/courierfilter.html.in		\
