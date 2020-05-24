@@ -544,6 +544,12 @@ func (src *Pkgsrc) loadToolsPlatform() {
 		scope.IsRelevant = func(*MkLine) bool { return false }
 		scope.Check(mklines)
 		scopes[opsys] = scope
+
+		mklines.ForEach(func(mkline *MkLine) {
+			if mkline.IsVarassign() && hasPrefix(mkline.Varname(), "TOOLS_PLATFORM.") {
+				src.Tools.Define(mkline.Varparam(), "", mkline)
+			}
+		})
 	}
 
 	// 0 = undefined, 1 = conditional, 2 = definitely assigned
