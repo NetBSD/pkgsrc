@@ -1,0 +1,129 @@
+$NetBSD: patch-D8574,v 1.1 2020/05/24 01:16:26 joerg Exp $
+
+# HG changeset patch
+# User Joerg Sonnenberger <joerg@bec.de>
+# Date 1589846232 -7200
+#      Tue May 19 01:57:12 2020 +0200
+# Branch stable
+# Node ID 423cb450e7220473e144dc6fb089bec01c8d9d44
+# Parent  d658f1dff315336db8525f987af799179a060cbe
+hooks: teach reject_new_heads about phase transitions
+
+Differential Revision: https://phab.mercurial-scm.org/D8574
+
+diff -r d658f1dff315 -r 423cb450e722 hgext/hooklib/reject_new_heads.py
+--- hgext/hooklib/reject_new_heads.py	Sun May 17 18:33:45 2020 -0400
++++ hgext/hooklib/reject_new_heads.py	Tue May 19 01:57:12 2020 +0200
+@@ -4,8 +4,8 @@
+ # GNU General Public License version 2 or any later version.
+ 
+ """reject_new_heads is a hook to check that branches touched by new changesets
+-have at most one open head. It can be used to enforce policies for
+-merge-before-push or rebase-before-push. It does not handle pre-existing
++or phase transitions have at most one open head. It can be used to enforce policies
++for merge-before-push or rebase-before-push. It does not handle pre-existing
+ hydras.
+ 
+ Usage:
+@@ -30,9 +30,14 @@
+         )
+     ctx = repo.unfiltered()[node]
+     branches = set()
+-    for rev in repo.changelog.revs(start=ctx.rev()):
+-        rev = repo[rev]
+-        branches.add(rev.branch())
++    if ctx.rev():
++        for rev in repo.changelog.revs(start=ctx.rev()):
++            rev = repo[rev]
++            branches.add(rev.branch())
++    for revs, (old, new) in kwargs.get('changes', {b'phases': []})[b'phases']:
++        for rev in revs:
++            branches.add(repo.unfiltered()[rev].branch())
++
+     for branch in branches:
+         if len(repo.revs("head() and not closed() and branch(%s)", branch)) > 1:
+             raise error.Abort(
+diff -r d658f1dff315 -r 423cb450e722 tests/test-hooklib-reject_new_heads.t
+--- tests/test-hooklib-reject_new_heads.t	Sun May 17 18:33:45 2020 -0400
++++ tests/test-hooklib-reject_new_heads.t	Tue May 19 01:57:12 2020 +0200
+@@ -5,6 +5,7 @@
+   > [phases]
+   > publish = False
+   > EOF
++
+   $ hg init a
+   $ hg --cwd a debugbuilddag '.:parent.*parent'
+   $ hg --cwd a log -G
+@@ -26,6 +27,7 @@
+      date:        Thu Jan 01 00:00:00 1970 +0000
+      summary:     r0
+   
++
+   $ hg init b
+   $ cat <<EOF >> b/.hg/hgrc
+   > [hooks]
+@@ -43,11 +45,61 @@
+   rollback completed
+   abort: Changes on branch 'default' resulted in multiple heads
+   [255]
+-  $ hg --cwd b pull ../a -r 1ea73414a91b
++  $ hg --cwd b pull ../a -r 66f7d451a68b
+   pulling from ../a
+   adding changesets
+   adding manifests
+   adding file changes
+-  added 1 changesets with 0 changes to 0 files
+-  new changesets 1ea73414a91b (1 drafts)
++  added 2 changesets with 0 changes to 0 files
++  new changesets 1ea73414a91b:66f7d451a68b (2 drafts)
+   (run 'hg update' to get a working copy)
++
++  $ hg --cwd b phase --public 66f7d451a68b
++  $ hg --cwd b --config hooks.pretxnclose.reject_new_heads= pull ../a
++  pulling from ../a
++  searching for changes
++  adding changesets
++  adding manifests
++  adding file changes
++  added 1 changesets with 0 changes to 0 files (+1 heads)
++  new changesets fa942426a6fd (1 drafts)
++  (run 'hg heads' to see heads, 'hg merge' to merge)
++
++Test that pushing a draft change to a publishing server having the same
++change already still triggers the check on the phase transition. The
++changeset should remain as draft.
++
++  $ cat <<EOF >> b/.hg/hgrc
++  > [serve]
++  > view = immutable
++  > 
++  > [phases]
++  > publish = True
++  > EOF
++
++  $ cat > web.conf << EOF
++  > [paths]
++  > / = *
++  > 
++  > [web]
++  > push_ssl = false
++  > allow_push = *
++  > EOF
++
++  $ hg --cwd b serve --web-conf ../web.conf -p $HGPORT -d --pid-file ../hg.pid
++  $ cat hg.pid >> $DAEMON_PIDS
++
++  $ hg --cwd a push -f http://localhost:$HGPORT
++  pushing to http://localhost:$HGPORT/
++  searching for changes
++  no changes found
++  remote: error: pretxnclose.reject_new_heads hook failed: Changes on branch 'default' resulted in multiple heads
++  remote: Changes on branch 'default' resulted in multiple heads
++  abort: push failed on remote
++  [255]
++  $ hg phase --cwd b fa942426a6fd
++  2: draft
++
++Cleanup.
++
++  $ killdaemons.py
