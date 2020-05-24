@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/05/21 17:25:13 leot Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/24 03:43:16 markd Exp $
 
+PKGREVISION=	1
 .include "dist.mk"
 
 PKGNAME=	python38-${PY_DISTVERSION}
@@ -28,7 +29,7 @@ CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-ensurepip
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
-PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
+PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
 
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
