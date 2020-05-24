@@ -715,11 +715,15 @@ func (s *Suite) Test_Scope_LastValue__append_in_multiple_files(c *check.C) {
 		".include \"Makefile.common\"",
 		"PLIST_VARS+=\ttwo",
 		"PLIST.two=\tyes")
-	t.CreateFileLines("category/package/Makefile.common",
+	t.Chdir("category/package")
+	t.CreateFileLines("PLIST",
+		PlistCvsID,
+		"${PLIST.one}${PLIST.two}bin/program")
+	t.CreateFileLines("Makefile.common",
 		MkCvsID,
 		"PLIST_VARS=\tone",
 		"PLIST.one=\tyes")
-	pkg := NewPackage(t.File("category/package"))
+	pkg := NewPackage(".")
 	t.FinishSetUp()
 
 	pkg.Check()
