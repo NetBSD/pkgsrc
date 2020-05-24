@@ -1,4 +1,4 @@
-#	$Id: Makefile,v 1.4 2020/05/24 11:09:43 nia Exp $
+#	$Id: Makefile,v 1.5 2020/05/24 21:10:17 nia Exp $
 
 PROG=	bmake
 
@@ -82,7 +82,7 @@ COPTS.main.c+= "-DMAKE_VERSION=\"${_MAKE_VERSION}\""
 # should be set by now
 USE_FILEMON ?= no
 .if ${USE_FILEMON:tl} != "no"
-.PATH:	${.CURDIR}/filemon
+.PATH:	${srcdir}/filemon
 SRCS+=	filemon_${USE_FILEMON}.c
 COPTS.meta.c+= -DUSE_FILEMON -DUSE_FILEMON_${USE_FILEMON:tu}
 COPTS.job.c+= ${COPTS.meta.c}

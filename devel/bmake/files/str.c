@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.6 2020/05/24 11:09:43 nia Exp $	*/
+/*	$NetBSD: str.c,v 1.7 2020/05/24 21:10:17 nia Exp $	*/
 
 /*-
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: str.c,v 1.6 2020/05/24 11:09:43 nia Exp $";
+static char rcsid[] = "$NetBSD: str.c,v 1.7 2020/05/24 21:10:17 nia Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char     sccsid[] = "@(#)str.c	5.8 (Berkeley) 6/1/90";
 #else
-__RCSID("$NetBSD: str.c,v 1.6 2020/05/24 11:09:43 nia Exp $");
+__RCSID("$NetBSD: str.c,v 1.7 2020/05/24 21:10:17 nia Exp $");
 #endif
 #endif				/* not lint */
 #endif

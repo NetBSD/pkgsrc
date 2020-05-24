@@ -1,4 +1,4 @@
-/*	$NetBSD: trace.h,v 1.6 2020/05/24 11:09:43 nia Exp $	*/
+/*	$NetBSD: trace.h,v 1.7 2020/05/24 21:10:17 nia Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
