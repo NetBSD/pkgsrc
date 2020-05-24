@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/05/22 10:56:34 adam Exp $
+# $NetBSD: Makefile,v 1.98 2020/05/24 01:45:31 markd Exp $
 
 DISTNAME=	okular-${KAPPSVER}
 PKGREVISION=	7
@@ -20,6 +20,7 @@ SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/generators/*/CMakeFiles/okularGenerator_*_autogen.dir/AutogenInfo.json
 SUBST_FILES.fix-moc+=	_KDE_build/CMakeFiles/okularpart_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/chmlib/buildlink3.mk"
