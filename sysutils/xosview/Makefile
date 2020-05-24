@@ -1,26 +1,39 @@
-# $NetBSD: Makefile,v 1.75 2020/01/26 17:32:12 rillig Exp $
+# $NetBSD: Makefile,v 1.76 2020/05/24 11:24:19 rillig Exp $
 
-DISTNAME=	xosview-1.8.3
-PKGREVISION=	2
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xosview/}
+DISTNAME=	xosview-1.22
+CATEGORIES=	sysutils x11
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hills/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pogo.org.uk/~mark/xosview/
 COMMENT=	X11 graphical display of OS statistics
 
-USE_LANGUAGES=		c gnu++03
+USE_TOOLS+=	gmake
+USE_LANGUAGES=	c gnu++03
 
-HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
-
-INSTALLATION_DIRS=	bin lib/X11/app-defaults ${PKGMANDIR}/man1
-INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-INSTALL_MAKE_FLAGS+=	PREFIX_TO_USE=${DESTDIR}${PREFIX}
+AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == Linux
+MAKE_FLAGS+=	PLATFORM=linux
+.elif ${OPSYS} == IRIX
+MAKE_FLAGS+=	PLATFORM=irix65
+.elif ${OPSYS:M*BSD} || ${OPSYS} == DragonFly
+MAKE_FLAGS+=	PLATFORM=bsd
+.elif ${OPSYS} == SunOS
+MAKE_FLAGS+=	PLATFORM=sunos5
+.else
+MAKE_FLAGS+=	PLATFORM=gnu
+.endif
+
+BUILD_TARGET=		xosview
+MAKE_ENV+=		LDLIBS=${LIBS:Q}
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
+LIBS.NetBSD+=		-lkvm -lprop
+LIBS.SunOS+=		-lsocket -lnsl
+CPPFLAGS.SunOS+=	-I${X11BASE}/include
+ICON_THEMES=		yes
 
 .if ${OPSYS} == "NetBSD"
 .  if !defined(UVM) && exists(/usr/include/uvm/uvm.h)
@@ -28,12 +41,6 @@ CFLAGS+=	-DUVM
 UVM=		yes
 BUILD_DEFS+=	UVM
 .  endif
-.elif ${OPSYS} == "SunOS"
-USE_TOOLS+=	gmake
-CPPFLAGS+=	-I${X11BASE}/include
-LIBS+=		-lsocket -lnsl
-.elif ${OPSYS} == "Linux"
-USE_TOOLS+=	gmake
 .endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
@@ -41,16 +48,9 @@ USE_TOOLS+=	gmake
 SPECIAL_PERMS+=	bin/xosview ${REAL_ROOT_USER} kmem 2555
 .endif
 
-SUBST_CLASSES+=		unpriv
-SUBST_STAGE.unpriv=	pre-configure
-SUBST_FILES.unpriv=	config/Makefile.top.in
-SUBST_SED.unpriv=	-e s,@INSTALL_ARGS@,,
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/Xdefaults ${DESTDIR}${PREFIX}/lib/X11/app-defaults/XOsview
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-configure
-SUBST_MESSAGE.paths=	Fixing manpage path.
-SUBST_FILES.paths=	Makefile
-SUBST_SED.paths=	-e s,share/man/man1,${PKGMANDIR}/man1,
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
