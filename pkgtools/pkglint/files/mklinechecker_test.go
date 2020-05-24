@@ -172,6 +172,20 @@ func (s *Suite) Test_MkLineChecker_checkText__WRKSRC(c *check.C) {
 		"WARN: ~/module.mk:3: WRKSRC is used but not defined.")
 }
 
+// In general, -Wl,-R should not appear in package Makefiles.
+// BUILDLINK_TRANSFORM is an exception to this since this command line option
+// is removed here from the compiler invocations.
+func (s *Suite) Test_MkLineChecker_checkTextRpath(c *check.C) {
+	t := s.Init(c)
+
+	t.NewMkLines("filename.mk",
+		MkCvsID,
+		"BUILDLINK_TRANSFORM+=\trm:-Wl,-R/usr/lib",
+		"BUILDLINK_TRANSFORM+=\trm:-Wl,-rpath,/usr/lib")
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_MkLineChecker_checkVartype__simple_type(c *check.C) {
 	t := s.Init(c)
 

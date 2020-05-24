@@ -110,8 +110,16 @@ func (ck MkLineChecker) checkTextWrksrcDotDot(text string) {
 //
 // Note: A simple -R is not detected, as the rate of false positives is too high.
 func (ck MkLineChecker) checkTextRpath(text string) {
+	mkline := ck.MkLine
+
+	if mkline.IsVarassign() && mkline.Varname() == "BUILDLINK_TRANSFORM" &&
+		hasPrefix(mkline.Value(), "rm:") {
+
+		return
+	}
+
 	if m, flag := match1(text, `(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R\b)`); m {
-		ck.MkLine.Warnf("Please use ${COMPILER_RPATH_FLAG} instead of %q.", flag)
+		mkline.Warnf("Please use ${COMPILER_RPATH_FLAG} instead of %q.", flag)
 	}
 }
 
