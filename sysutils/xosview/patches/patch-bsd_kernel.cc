@@ -1,6 +1,8 @@
-$NetBSD: patch-bsd_kernel.cc,v 1.1 2020/05/24 11:24:19 rillig Exp $
+$NetBSD: patch-bsd_kernel.cc,v 1.2 2020/05/24 11:29:13 rillig Exp $
 
 Don't fail for unprivileged users.
+
+https://github.com/hills/xosview/pull/15
 
 --- bsd/kernel.cc.orig	2020-02-22 19:33:08.000000000 +0000
 +++ bsd/kernel.cc
