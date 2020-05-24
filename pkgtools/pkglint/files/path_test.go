@@ -489,6 +489,8 @@ func (s *Suite) Test_Path_IsAbs(c *check.C) {
 	test("/a", true)
 	test("C:/", true)
 	test("c:/", true)
+	test("c::", false)
+	test("c:relative", false)
 }
 
 func (s *Suite) Test_Path_Rel(c *check.C) {

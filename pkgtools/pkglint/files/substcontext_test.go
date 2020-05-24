@@ -254,6 +254,33 @@ func (s *Suite) Test_SubstContext_varassign__interleaved(c *check.C) {
 			"Please add only one class at a time to SUBST_CLASSES.")
 }
 
+func (s *Suite) Test_SubstContext_varassign__noop_ok(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+=         id",
+		"SUBST_STAGE.id=         post-configure",
+		"SUBST_FILES.id=         setup.py",
+		"SUBST_VARS.id=          VAR",
+		"SUBST_NOOP_OK.id=       yes")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_SubstContext_varassign__other_variables(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+=         id",
+		"SUBST_STAGE.id=         post-configure",
+		"SUBST_FILES.id=         setup.py",
+		"SUBST_VARS.id=          VAR",
+		"SUBST_SKIP_TEXT_CHECK.id= yes",
+		"SUBST_SHOW_DIFF.id=     yes")
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_SubstContext_varassignClasses__OPSYSVARS(c *check.C) {
 	t := s.Init(c)
 

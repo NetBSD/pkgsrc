@@ -6,7 +6,7 @@ import (
 	"crypto/sha512"
 	"encoding/hex"
 	"golang.org/x/crypto/ripemd160"
-	"hash"
+	hashpkg "hash"
 	"io"
 	"strings"
 )
@@ -243,7 +243,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 		return
 	}
 
-	computeHash := func(hasher hash.Hash) string {
+	computeHash := func(hasher hashpkg.Hash) string {
 		f, err := distfile.Open()
 		assertNil(err, "Opening distfile")
 
