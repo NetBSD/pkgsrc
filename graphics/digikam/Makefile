@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.156 2020/05/21 20:53:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.157 2020/05/24 06:09:39 markd Exp $
 
 DISTNAME=	digikam-6.4.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/6.4.0/}
 
@@ -41,6 +41,7 @@ CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
 .include "../../misc/libkvkontakte/buildlink3.mk"
 .include "../../misc/marble/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/x265/buildlink3.mk"
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
