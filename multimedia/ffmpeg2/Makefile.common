@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2020/05/24 02:10:55 markd Exp $
+# $NetBSD: Makefile.common,v 1.61 2020/05/24 22:01:15 markd Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -78,8 +78,7 @@ REPLACE_SH+=	configure version.sh
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	ffserver.c
-SUBST_SED.conf=		-e 's,/etc/ffserver.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
-SUBST_NOOP_OK.conf=	yes
+SUBST_SED.conf=		-e 's,/etc/ffserver\.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
 SUBST_MESSAGE.conf=	Fixing configuration path.
 
 PLIST_SRC+=	${PKGDIR}/PLIST
