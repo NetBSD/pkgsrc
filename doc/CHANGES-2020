@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3139 2020/05/24 16:46:52 nat Exp $
+$NetBSD: CHANGES-2020,v 1.3140 2020/05/24 19:12:49 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5020,3 +5020,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/bmake to 20200517 [nia 2020-05-24]
 	Updated www/ruby-puma to 4.3.5 [taca 2020-05-24]
 	Added devel/diffbreaker [nat 2020-05-24]
+	Updated pkgtools/pkglint to 20.1.10 [rillig 2020-05-24]
