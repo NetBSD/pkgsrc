@@ -1,9 +1,90 @@
-$NetBSD: patch-configure,v 1.4 2019/09/02 14:45:37 nia Exp $
+$NetBSD: patch-configure,v 1.5 2020/05/24 12:00:51 markd Exp $
 
 Remove unsupported date argument.
+Python 3.8 requires different pkg_config call.
 
 --- configure.orig	2019-08-01 09:12:22.865001000 +0000
 +++ configure
+@@ -21315,11 +21315,11 @@ if test -n "$PYTHON_CFLAGS"; then
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"python-\"\${PYTHON_VERSION}\"\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "python-"${PYTHON_VERSION}"") 2>&5
++  ($PKG_CONFIG --exists --print-errors "python-"${PYTHON_VERSION}"@EMBED@") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_PYTHON_CFLAGS=`$PKG_CONFIG --cflags "python-"${PYTHON_VERSION}"" 2>/dev/null`
++  pkg_cv_PYTHON_CFLAGS=`$PKG_CONFIG --cflags "python-"${PYTHON_VERSION}"@EMBED@" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -21332,11 +21332,11 @@ if test -n "$PYTHON_LIBS"; then
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"python-\"\${PYTHON_VERSION}\"\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "python-"${PYTHON_VERSION}"") 2>&5
++  ($PKG_CONFIG --exists --print-errors "python-"${PYTHON_VERSION}"@EMBED@") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_PYTHON_LIBS=`$PKG_CONFIG --libs "python-"${PYTHON_VERSION}"" 2>/dev/null`
++  pkg_cv_PYTHON_LIBS=`$PKG_CONFIG --libs "python-"${PYTHON_VERSION}"@EMBED@" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -21357,9 +21357,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        PYTHON_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "python-"${PYTHON_VERSION}"" 2>&1`
++	        PYTHON_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "python-"${PYTHON_VERSION}"@EMBED@" 2>&1`
+         else
+-	        PYTHON_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "python-"${PYTHON_VERSION}"" 2>&1`
++	        PYTHON_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "python-"${PYTHON_VERSION}"@EMBED@" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$PYTHON_PKG_ERRORS" >&5
+@@ -21384,11 +21384,11 @@ if test -n "$PYTHONDEV_CFLAGS"; then
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"python-\"\${PYTHON_VERSION}\"\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "python-"${PYTHON_VERSION}"") 2>&5
++  ($PKG_CONFIG --exists --print-errors "python-"${PYTHON_VERSION}"@EMBED@") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_PYTHONDEV_CFLAGS=`$PKG_CONFIG --cflags "python-"${PYTHON_VERSION}"" 2>/dev/null`
++  pkg_cv_PYTHONDEV_CFLAGS=`$PKG_CONFIG --cflags "python-"${PYTHON_VERSION}"@EMBED@" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -21401,11 +21401,11 @@ if test -n "$PYTHONDEV_LIBS"; then
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"python-\"\${PYTHON_VERSION}\"\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "python-"${PYTHON_VERSION}"") 2>&5
++  ($PKG_CONFIG --exists --print-errors "python-"${PYTHON_VERSION}"@EMBED@") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_PYTHONDEV_LIBS=`$PKG_CONFIG --libs "python-"${PYTHON_VERSION}"" 2>/dev/null`
++  pkg_cv_PYTHONDEV_LIBS=`$PKG_CONFIG --libs "python-"${PYTHON_VERSION}"@EMBED@" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -21426,9 +21426,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        PYTHONDEV_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "python-"${PYTHON_VERSION}"" 2>&1`
++	        PYTHONDEV_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "python-"${PYTHON_VERSION}"@EMBED@" 2>&1`
+         else
+-	        PYTHONDEV_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "python-"${PYTHON_VERSION}"" 2>&1`
++	        PYTHONDEV_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "python-"${PYTHON_VERSION}"@EMBED@" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$PYTHONDEV_PKG_ERRORS" >&5
 @@ -26865,7 +26865,7 @@ FONTFORGE_DATE_NOW=${SOURCE_DATE_EPOCH:-
  FONTFORGE_DATE_OPTS="--date=@${FONTFORGE_DATE_NOW}"
  if ! date --version 2>/dev/null ; then
