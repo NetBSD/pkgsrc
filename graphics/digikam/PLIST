@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2020/02/02 03:11:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/05/24 06:09:39 markd Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -114,6 +114,7 @@ qt5/plugins/digikam/bqm/Bqm_ColorFX_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_Convert16To8_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_Convert8To16_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_ConvertToDNG_Plugin.so
+qt5/plugins/digikam/bqm/Bqm_ConvertToHEIF_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_ConvertToJP2lugin_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_ConvertToJPEG_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_ConvertToPGF_Plugin.so
