@@ -1,2 +1,2 @@
 regress/plus_build_version/files/010-only-first-line:	*NetBSD: 010-only-first-line,v 1.1 2020/01/11 12:24:32 rillig Exp *
-regress/plus_build_version/spec:	*NetBSD: spec,v 1.2 2020/01/11 13:04:21 rillig Exp *
+regress/plus_build_version/spec:	*NetBSD: spec,v 1.3 2020/05/19 05:02:42 rillig Exp *
