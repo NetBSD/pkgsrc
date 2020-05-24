@@ -1,4 +1,4 @@
-/*	$NetBSD: dir.h,v 1.5 2015/05/19 22:01:19 joerg Exp $	*/
+/*	$NetBSD: dir.h,v 1.6 2020/05/24 11:09:43 nia Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -75,8 +75,8 @@
 /* dir.h --
  */
 
-#ifndef	_DIR
-#define	_DIR
+#ifndef	MAKE_DIR_H
+#define	MAKE_DIR_H
 
 typedef struct Path {
     char         *name;	    	/* Name of directory */
@@ -105,4 +105,4 @@ void Dir_PrintPath(Lst);
 void Dir_Destroy(void *);
 void * Dir_CopyDir(void *);
 
-#endif /* _DIR */
+#endif /* MAKE_DIR_H */

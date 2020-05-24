@@ -1,4 +1,4 @@
-# $Id: escape.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
+# $Id: escape.mk,v 1.3 2020/05/24 11:09:44 nia Exp $
 #
 # Test backslash escaping.
 
@@ -35,8 +35,8 @@
 # Also, our practice is that an even number of backslashes before a
 # newline in a variable assignment simply stores the backslashes as part
 # of the value, and treats the newline as though it was not escaped.
-# Similarly, ann even number of backslashes before a newline in a
-# command simply uses the backslashes as part of the command test, but
+# Similarly, an even number of backslashes before a newline in a
+# command simply uses the backslashes as part of the command, but
 # does not escape the newline.  This is compatible with GNU make.
 
 all: .PHONY

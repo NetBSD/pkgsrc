@@ -1,9 +1,9 @@
-/*	$NetBSD: util.c,v 1.14 2015/07/04 07:12:08 ryoon Exp $	*/
+/*	$NetBSD: util.c,v 1.15 2020/05/24 11:09:43 nia Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.14 2015/07/04 07:12:08 ryoon Exp $
+ *	$Id: util.c,v 1.15 2020/05/24 11:09:43 nia Exp $
  */
 #if defined(__MINT__) || defined(__linux__)
 #include <signal.h>
@@ -12,10 +12,10 @@
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.14 2015/07/04 07:12:08 ryoon Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.15 2020/05/24 11:09:43 nia Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.14 2015/07/04 07:12:08 ryoon Exp $");
+__RCSID("$NetBSD: util.c,v 1.15 2020/05/24 11:09:43 nia Exp $");
 #endif
 #endif
 
@@ -229,32 +229,6 @@ killpg(int pid, int sig)
     return kill(-pid, sig);
 }
 
-#if !defined(__hpux__) && !defined(__hpux)
-void
-srandom(long seed)
-{
-    srand48(seed);
-}
-
-long
-random(void)
-{
-    return lrand48();
-}
-#endif
-
-#if !defined(__hpux__) && !defined(__hpux)
-int
-utimes(char *file, struct timeval tvp[2])
-{
-    struct utimbuf t;
-
-    t.actime  = tvp[0].tv_sec;
-    t.modtime = tvp[1].tv_sec;
-    return(utime(file, &t));
-}
-#endif
-
 #if !defined(BSD) && !defined(d_fileno)
 # define d_fileno d_ino
 #endif
@@ -383,11 +357,7 @@ bmake_signal(int s, void (*a)(int)))(int)
 
     sa.sa_handler = a;
     sigemptyset(&sa.sa_mask);
-#ifdef SA_RESTART
     sa.sa_flags = SA_RESTART;
-#else
-    sa.sa_flags = 0;
-#endif
 
     if (sigaction(s, &sa, &osa) == -1)
 	return SIG_ERR;

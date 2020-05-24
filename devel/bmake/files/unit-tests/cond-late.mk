@@ -1,4 +1,4 @@
-# $NetBSD: cond-late.mk,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+# $NetBSD: cond-late.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
 #
 # Using the :? modifier, variable expressions can contain conditional
 # expressions that are evaluated late.  Any variables appearing in these

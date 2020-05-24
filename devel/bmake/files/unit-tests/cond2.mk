@@ -1,4 +1,4 @@
-# $Id: cond2.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
+# $Id: cond2.mk,v 1.3 2020/05/24 11:09:44 nia Exp $
 
 TEST_UNAME_S= NetBSD
 
@@ -19,6 +19,10 @@ Y!= echo TEST_NOT_SET is empty or not defined >&2; echo
 # expect: Malformed conditional (${TEST_NOT_SET} == "empty")
 .if ${TEST_NOT_SET} == "empty"
 Y= oops
+.endif
+
+.if defined(.NDEF) && ${.NDEF} > 0
+Z= yes
 .endif
 
 all:

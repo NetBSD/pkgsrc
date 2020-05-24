@@ -1,4 +1,4 @@
-# $NetBSD: impsrc.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
+# $NetBSD: impsrc.mk,v 1.3 2020/05/24 11:09:44 nia Exp $
 
 # Does ${.IMPSRC} work properly?
 # It should be set, in order of precedence, to ${.TARGET} of:

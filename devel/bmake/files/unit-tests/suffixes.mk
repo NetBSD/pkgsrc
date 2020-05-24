@@ -1,4 +1,4 @@
-# $NetBSD: suffixes.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
+# $NetBSD: suffixes.mk,v 1.3 2020/05/24 11:09:44 nia Exp $
 
 # Issues from PR 49086
 

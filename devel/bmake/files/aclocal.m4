@@ -1,5 +1,5 @@
 dnl RCSid:
-dnl	$Id: aclocal.m4,v 1.4 2015/05/19 22:01:19 joerg Exp $
+dnl	$Id: aclocal.m4,v 1.5 2020/05/24 11:09:43 nia Exp $
 dnl
 
 dnl 
@@ -55,16 +55,21 @@ dnl
 AC_DEFUN(AC_C___ATTRIBUTE__, [
 AC_MSG_CHECKING(for __attribute__)
 AC_CACHE_VAL(ac_cv___attribute__, [
-AC_TRY_COMPILE([
+AC_LINK_IFELSE([
 #include <stdlib.h>
-],
-[
+
 static void foo(void) __attribute__ ((noreturn));
 
 static void
 foo(void)
 {
   exit(1);
+}
+
+int
+main(int argc, char **argv)
+{
+	foo();
 }
 ],
 ac_cv___attribute__=yes,
