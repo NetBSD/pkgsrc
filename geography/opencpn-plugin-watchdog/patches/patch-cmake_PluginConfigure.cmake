@@ -1,4 +1,5 @@
-$NetBSD: patch-cmake_PluginConfigure.cmake,v 1.3 2017/08/24 13:01:33 bouyer Exp $
+$NetBSD: patch-cmake_PluginConfigure.cmake,v 1.4 2020/05/24 09:19:41 rillig Exp $
+
 Do not overwrite CMAKE_SHARED_LINKER_FLAGS
 
 --- cmake/PluginConfigure.cmake.orig	2017-06-11 14:59:39.000000000 +0200
