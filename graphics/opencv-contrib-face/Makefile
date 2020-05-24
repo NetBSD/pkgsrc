@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/05/21 20:53:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/24 14:17:33 mef Exp $
 
 PKGREVISION= 1
 .include "../../graphics/opencv/Makefile.common"
@@ -11,15 +11,6 @@ MAINTAINER=	markd@NetBSD.org
 COMMENT=	OpenCV face recognition contributed module
 
 DISTFILES=	${DEFAULT_DISTFILES} opencv-${PKGVERSION_NOREV}${EXTRACT_SUFX}
-
-# This is ugly, but we shouldn't let optional code download
-# at configure time. Especially when it needs to be patched
-# because of lame coding.
-SUBST_CLASSES+=		tnn
-SUBST_FILES.tnn=	${WRKDIR}/${DISTNAME}/modules/dnn_modern/CMakeLists.txt
-SUBST_MESSAGE.tnn=	Disabling build-time fetch
-SUBST_STAGE.tnn=	pre-configure
-SUBST_SED.tnn=		-e 's,3.2,999,'
 
 INSTALL_DIRS=	build/modules/face build/modules/plot build/modules/tracking
 
