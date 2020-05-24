@@ -37,7 +37,7 @@ We only pay attention to a subset of the information in the
 
 """
 RCSid:
-	$Id: meta2deps.py,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+	$Id: meta2deps.py,v 1.2 2020/05/24 11:09:44 nia Exp $
 
 	Copyright (c) 2011-2019, Simon J. Gerraty
 	Copyright (c) 2011-2017, Juniper Networks, Inc.

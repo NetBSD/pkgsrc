@@ -1,4 +1,4 @@
-/*	$NetBSD: lstInt.h,v 1.7 2015/05/19 22:01:19 joerg Exp $	*/
+/*	$NetBSD: lstInt.h,v 1.8 2020/05/24 11:09:44 nia Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993

@@ -1,4 +1,4 @@
-# $Id: varcmd.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
+# $Id: varcmd.mk,v 1.3 2020/05/24 11:09:44 nia Exp $
 #
 # Test behaviour of recursive make and vars set on command line.
 
@@ -15,7 +15,7 @@ show:
 	@echo "${TAG} FU=<v>${FU}</v> FOO=<v>${FOO}</v> VAR=<v>${VAR}</v>"
 
 one:	show
-	@${.MAKE} -f ${MAKEFILE} FU=bar FOO=goo two
+	@${.MAKE} -f ${MAKEFILE} FU=bar FOO+=goo two
 
 two:	show
 	@${.MAKE} -f ${MAKEFILE} three
@@ -24,6 +24,17 @@ three:	show
 	@${.MAKE} -f ${MAKEFILE} four
 
 
+.ifmake two
+# this should not work
+FU+= oops
+FOO+= oops
+_FU:= ${FU}
+_FOO:= ${FOO}
+two: immutable
+immutable:
+	@echo "$@ FU='${_FU}'"
+	@echo "$@ FOO='${_FOO}'"
+.endif
 .ifmake four
 VAR=Internal
 .MAKEOVERRIDES+= VAR
