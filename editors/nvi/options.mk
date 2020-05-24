@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/02/21 21:17:45 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2020/05/24 05:00:36 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nvi
 PKG_SUPPORTED_OPTIONS=	# empty
@@ -17,6 +17,7 @@ NVI_NON_WIDE_PLATFORM=	yes
 #
 .if !defined(NVI_NON_WIDE_PLATFORM)
 PKG_SUPPORTED_OPTIONS+=	wide-curses
+PKG_SUGGESTED_OPTIONS+=	wide-curses
 PKG_LEGACY_OPTS+=	ncursesw:wide-curses
 .endif
 
