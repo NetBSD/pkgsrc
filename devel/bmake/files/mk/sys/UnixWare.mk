@@ -1,6 +1,6 @@
-#	$Id: UnixWare.mk,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+#	$Id: UnixWare.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
 #	based on "Id: SunOS.5.sys.mk,v 1.6 2003/09/30 16:42:23 sjg Exp "
-#	$NetBSD: UnixWare.mk,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+#	$NetBSD: UnixWare.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
 #	@(#)sys.mk	5.11 (Berkeley) 3/13/91
 
 OS?=		UnixWare

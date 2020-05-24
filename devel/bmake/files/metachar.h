@@ -1,4 +1,4 @@
-/*	$NetBSD: metachar.h,v 1.1.1.1 2020/05/24 05:35:52 nia Exp $	*/
+/*	$NetBSD: metachar.h,v 1.2 2020/05/24 11:09:43 nia Exp $	*/
 
 /*-
  * Copyright (c) 2015 The NetBSD Foundation, Inc.
