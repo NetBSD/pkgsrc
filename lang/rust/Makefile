@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2020/05/24 06:51:24 triaxx Exp $
+# $NetBSD: Makefile,v 1.170 2020/05/24 16:58:43 triaxx Exp $
 
 DISTNAME=	rustc-1.43.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -14,7 +14,7 @@ LICENSE=	mit OR apache-2.0
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bash grep gmake perl:build pkg-config
+USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
@@ -130,8 +130,8 @@ CONFIGURE_ARGS+=	--debuginfo-level-tests=0
 CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .endif
 
-.if (${OPSYS} == "NetBSD" && !empty(MACHINE_PLATFORM:MNetBSD-9.99.*) && \
-     !empty(MACHINE_PLATFORM:MNetBSD-[1-9][0-9].*)) || ${OPSYS} == "FreeBSD"
+.if ${OPSYS} == "NetBSD" && !empty(MACHINE_PLATFORM:MNetBSD-9.99.*) && \
+    !empty(MACHINE_PLATFORM:MNetBSD-[1-9][0-9].*)
 MAKE_JOBS_SAFE=	no
 .endif
 
