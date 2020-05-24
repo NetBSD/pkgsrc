@@ -1,4 +1,4 @@
-# $Id: bsd.after-import.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
+# $Id: bsd.after-import.mk,v 1.1.1.2 2020/05/24 05:35:51 nia Exp $
 
 # This makefile is for use when integrating bmake into a BSD build
 # system.  Use this makefile after importing bmake.
@@ -56,13 +56,14 @@ bootstrap:	${BMAKE_SRC}/boot-strap ${MAKEFILE}
 
 # Makefiles need a little more tweaking than say config.h
 MAKEFILE_SED = 	sed -e '/^MACHINE/d' \
+	-e '/include.*VERSION/d' \
 	-e '/^PROG/ { s,=,?=,;s,bmake,$${.CURDIR:T},; }' \
 	-e 's,^.-include,.sinclude,' \
 	-e '/^\..*include  *</ { s,<,<bsd.,;/autoconf/d; }' \
 	-e 's,${SRCTOP},$${SRCTOP},g'
 
 # These are the simple files we want to capture
-configured_files= config.h Makefile.config unit-tests/Makefile
+configured_files= config.h Makefile.config unit-tests/Makefile.config
 
 after-import: bootstrap ${MAKEFILE}
 .for f in ${configured_files:M*.[ch]}
@@ -86,7 +87,6 @@ _makefile:	bootstrap ${MAKEFILE}
 	@(echo '# This is a generated file, do NOT edit!'; \
 	echo '# See ${_this:S,${SRCTOP}/,,}'; \
 	echo '#'; echo '# $$${HOST_OS}$$'; \
-	echo; echo '.sinclude "Makefile.inc"'; \
 	echo; echo 'SRCTOP?= $${.CURDIR:${.CURDIR:S,${SRCTOP}/,,:C,[^/]+,H,g:S,/,:,g}}'; \
 	echo; echo '# look here first for config.h'; \
 	echo 'CFLAGS+= -I$${.CURDIR}'; echo; \
