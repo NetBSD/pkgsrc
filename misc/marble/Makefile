@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/04/12 08:28:01 adam Exp $
+# $NetBSD: Makefile,v 1.52 2020/05/24 02:00:28 markd Exp $
 
 DISTNAME=	marble-${KAPPSVER}
 PKGREVISION=	3
@@ -17,8 +17,8 @@ USE_TOOLS+=	msgmerge perl
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-#SUBST_FILES.fix-moc=	_KDE_build/src/plugins/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
 SUBST_FILES.fix-moc=	_KDE_build/src/apps/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 SUBST_CLASSES+=		xdg
