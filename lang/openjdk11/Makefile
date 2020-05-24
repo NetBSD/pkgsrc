@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/05/22 10:56:15 adam Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/24 21:04:57 rillig Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -24,6 +24,7 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jps jstack \
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # generates the configure script during the build
 USE_GNU_CONFIGURE_HOST=	no
 CONFIGURE_SCRIPT=	configure
 CONFIG_SHELL=		bash
