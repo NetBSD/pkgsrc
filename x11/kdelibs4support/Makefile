@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/04/12 08:28:11 adam Exp $
+# $NetBSD: Makefile,v 1.43 2020/05/24 01:17:57 markd Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
 PKGREVISION=	3
@@ -51,6 +51,7 @@ SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/src/solid-networkstatus/kded/CMakeFiles/kded_networkstatus_autogen.dir/AutogenInfo.json
 SUBST_FILES.fix-moc+=	_KDE_build/src/kssl/kcm/CMakeFiles/kcm_ssl_autogen.dir/AutogenInfo.json
 SUBST_FILES.fix-moc+=	_KDE_build/autotests/CMakeFiles/klibloadertestmodule5_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../misc/kemoticons/buildlink3.mk"
