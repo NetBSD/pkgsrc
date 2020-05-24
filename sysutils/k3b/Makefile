@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/05/23 10:31:04 markd Exp $
+# $NetBSD: Makefile,v 1.112 2020/05/24 01:38:27 markd Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
 PKGREVISION=	4
@@ -33,6 +33,7 @@ SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/plugins/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg
