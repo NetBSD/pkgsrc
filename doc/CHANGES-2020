@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3135 2020/05/23 22:18:22 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3136 2020/05/24 11:24:34 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5016,3 +5016,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/nano to 4.9.3 [schwarz 2020-05-23]
 	Updated mail/qmail to 1.03nb49 [schmonz 2020-05-23]
 	Updated pkgtools/check-portability to 20.1.1 [rillig 2020-05-23]
+	Updated sysutils/xosview to 1.22 [rillig 2020-05-24]
