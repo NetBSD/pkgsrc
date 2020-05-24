@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.87 2019/07/08 20:34:54 sevan Exp $
+dnl $NetBSD: configure.ac,v 1.88 2020/05/24 21:51:54 nia Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -14,7 +14,7 @@ AC_SUBST(INCLUDES)
 
 # Checks for programs.
 AC_PROG_MAKE_SET
-AC_PROG_CC
+AC_PROG_CC_C99
 AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_RANLIB
