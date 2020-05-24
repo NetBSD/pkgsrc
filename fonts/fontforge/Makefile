@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/03/10 22:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2020/05/24 12:00:51 markd Exp $
 
 DISTNAME=	fontforge-20190801
 PKGREVISION=	2
@@ -47,6 +47,18 @@ CHECK_INTERPRETER_SKIP+=	share/fontforge/python/simple/*
 _TOOLS_USE_PKGSRC.date=	yes
 .endif
 
+.include "../../lang/python/application.mk"
+# Python38 needs use of pkgconfig python-3.8-embed
+.if ${PYPKGPREFIX} == "py38"
+EMBED=-embed
+.else
+EMBED=
+.endif
+SUBST_CLASSES+=		pkgconf
+SUBST_STAGE.pkgconf=	pre-configure
+SUBST_FILES.pkgconf=	configure
+SUBST_VARS.pkgconf=	EMBED
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -63,7 +75,6 @@ _TOOLS_USE_PKGSRC.date=	yes
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/potrace/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libuninameslist/buildlink3.mk"
