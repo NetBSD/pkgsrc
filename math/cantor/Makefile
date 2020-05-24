@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/05/22 10:56:21 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/05/24 01:24:22 markd Exp $
 
 DISTNAME=	cantor-${KAPPSVER}
 PKGREVISION=	7
@@ -58,6 +58,7 @@ SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/src/backends/*/CMakeFiles/cantor_*backend_autogen.dir/AutogenInfo.json
 SUBST_FILES.fix-moc+=	_KDE_build/src/panelplugins/variablemgr/CMakeFiles/cantor_variablemanagerplugin_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/kpty/buildlink3.mk"
