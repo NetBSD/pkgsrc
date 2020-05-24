@@ -1,4 +1,4 @@
-/*	$NetBSD: strlist.c,v 1.2 2015/05/19 22:01:19 joerg Exp $	*/
+/*	$NetBSD: strlist.c,v 1.3 2020/05/24 11:09:43 nia Exp $	*/
 
 /*-
  * Copyright (c) 2008 - 2009 The NetBSD Foundation, Inc.
@@ -33,11 +33,11 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: strlist.c,v 1.2 2015/05/19 22:01:19 joerg Exp $";
+static char rcsid[] = "$NetBSD: strlist.c,v 1.3 2020/05/24 11:09:43 nia Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: strlist.c,v 1.2 2015/05/19 22:01:19 joerg Exp $");
+__RCSID("$NetBSD: strlist.c,v 1.3 2020/05/24 11:09:43 nia Exp $");
 #endif /* not lint */
 #endif
 

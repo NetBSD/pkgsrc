@@ -1,4 +1,4 @@
-/*	$NetBSD: lstDestroy.c,v 1.4 2015/05/19 22:01:19 joerg Exp $	*/
+/*	$NetBSD: lstDestroy.c,v 1.5 2020/05/24 11:09:44 nia Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -33,14 +33,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: lstDestroy.c,v 1.4 2015/05/19 22:01:19 joerg Exp $";
+static char rcsid[] = "$NetBSD: lstDestroy.c,v 1.5 2020/05/24 11:09:44 nia Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)lstDestroy.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: lstDestroy.c,v 1.4 2015/05/19 22:01:19 joerg Exp $");
+__RCSID("$NetBSD: lstDestroy.c,v 1.5 2020/05/24 11:09:44 nia Exp $");
 #endif
 #endif /* not lint */
 #endif
