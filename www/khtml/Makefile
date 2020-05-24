@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/04/12 08:28:08 adam Exp $
+# $NetBSD: Makefile,v 1.42 2020/05/24 00:55:17 markd Exp $
 
 DISTNAME=	khtml-${KF5VER}
 PKGREVISION=	3
@@ -20,12 +20,13 @@ SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/src/CMakeFiles/khtmlpart_autogen.dir/AutogenInfo.json 
 SUBST_FILES.fix-moc+=	_KDE_build/src/CMakeFiles/khtmlimagepart_autogen.dir/AutogenInfo.json 
 SUBST_FILES.fix-moc+=	_KDE_build/src/kmultipart/CMakeFiles/kmultipart_autogen.dir/AutogenInfo.json 
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt src/CMakeLists.txt
+SUBST_FILES.xdg=	src/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
