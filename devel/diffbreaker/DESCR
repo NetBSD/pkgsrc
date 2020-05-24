@@ -1,0 +1,2 @@
+Diffbreaker allows the user to create incremental patches
+from a single unified diff interactively using curses.
