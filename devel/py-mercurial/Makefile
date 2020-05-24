@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2020/05/05 12:12:47 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2020/05/24 01:16:26 joerg Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
