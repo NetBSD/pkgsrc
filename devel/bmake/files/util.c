@@ -1,9 +1,9 @@
-/*	$NetBSD: util.c,v 1.15 2020/05/24 11:09:43 nia Exp $	*/
+/*	$NetBSD: util.c,v 1.16 2020/05/24 21:10:17 nia Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.15 2020/05/24 11:09:43 nia Exp $
+ *	$Id: util.c,v 1.16 2020/05/24 21:10:17 nia Exp $
  */
 #if defined(__MINT__) || defined(__linux__)
 #include <signal.h>
@@ -12,10 +12,10 @@
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.15 2020/05/24 11:09:43 nia Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.16 2020/05/24 21:10:17 nia Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.15 2020/05/24 11:09:43 nia Exp $");
+__RCSID("$NetBSD: util.c,v 1.16 2020/05/24 21:10:17 nia Exp $");
 #endif
 #endif
 

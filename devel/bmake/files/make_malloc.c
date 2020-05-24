@@ -1,4 +1,4 @@
-/*	$NetBSD: make_malloc.c,v 1.3 2020/05/24 11:09:43 nia Exp $	*/
+/*	$NetBSD: make_malloc.c,v 1.4 2020/05/24 21:10:17 nia Exp $	*/
 
 /*-
  * Copyright (c) 2009 The NetBSD Foundation, Inc.
@@ -28,7 +28,7 @@
 
 #ifdef MAKE_NATIVE
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: make_malloc.c,v 1.3 2020/05/24 11:09:43 nia Exp $");
+__RCSID("$NetBSD: make_malloc.c,v 1.4 2020/05/24 21:10:17 nia Exp $");
 #endif
 
 #include <stdio.h>
