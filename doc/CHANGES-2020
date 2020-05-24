@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3138 2020/05/24 13:48:26 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3139 2020/05/24 16:46:52 nat Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5019,3 +5019,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xosview to 1.22 [rillig 2020-05-24]
 	Updated devel/bmake to 20200517 [nia 2020-05-24]
 	Updated www/ruby-puma to 4.3.5 [taca 2020-05-24]
+	Added devel/diffbreaker [nat 2020-05-24]
