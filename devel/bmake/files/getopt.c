@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt.c,v 1.4 2020/05/24 11:09:43 nia Exp $	*/
+/*	$NetBSD: getopt.c,v 1.5 2020/05/24 21:10:17 nia Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994
