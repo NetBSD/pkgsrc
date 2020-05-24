@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/04/12 08:28:06 adam Exp $
+# $NetBSD: Makefile,v 1.38 2020/05/24 01:30:21 markd Exp $
 
 DISTNAME=	baloo-${KF5VER}
 PKGNAME=	baloo5-${KF5VER}
@@ -20,7 +20,7 @@ USE_TOOLS+=	msgmerge
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt src/file/CMakeLists.txt
+SUBST_FILES.xdg=	src/file/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{AUTOSTART_INSTALL_DIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
@@ -34,6 +34,7 @@ SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/src/kioslaves/kded/CMakeFiles/baloosearchmodule_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../mk/bsd.prefs.mk"
