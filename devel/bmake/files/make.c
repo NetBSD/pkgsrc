@@ -1,4 +1,4 @@
-/*	$NetBSD: make.c,v 1.7 2020/05/24 11:09:43 nia Exp $	*/
+/*	$NetBSD: make.c,v 1.8 2020/05/24 21:10:17 nia Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: make.c,v 1.7 2020/05/24 11:09:43 nia Exp $";
+static char rcsid[] = "$NetBSD: make.c,v 1.8 2020/05/24 21:10:17 nia Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)make.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: make.c,v 1.7 2020/05/24 11:09:43 nia Exp $");
+__RCSID("$NetBSD: make.c,v 1.8 2020/05/24 21:10:17 nia Exp $");
 #endif
 #endif /* not lint */
 #endif
