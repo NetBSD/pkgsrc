@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/04/12 08:28:36 adam Exp $
+# $NetBSD: Makefile,v 1.55 2020/05/24 01:02:56 markd Exp $
 
 DISTNAME=	kate-${KAPPSVER}
 PKGREVISION=	3
@@ -20,6 +20,7 @@ SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/addons/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
 SUBST_FILES.fix-moc+=	_KDE_build/addons/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
