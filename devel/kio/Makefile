@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/05/23 23:02:04 mef Exp $
+# $NetBSD: Makefile,v 1.42 2020/05/24 00:32:50 markd Exp $
 
 DISTNAME=	kio-${KF5VER}
 PKGREVISION=	3
@@ -28,6 +28,17 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/accept-languages.codes \
 		${PKG_SYSCONFDIR}/xdg/accept-languages.codes
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kshorturifilterrc \
 		${PKG_SYSCONFDIR}/xdg/kshorturifilterrc
+
+# generation of kcookieserver.moc fails when ${PREFIX}/include in the moc include path
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/src/ioslaves/http/kcookiejar/CMakeFiles/kded_kcookiejar_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/src/ioslaves/trash/CMakeFiles/kcm_trash_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/src/urifilters/ikws/CMakeFiles/kurisearchfilter_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/src/kcms/kio/CMakeFiles/kcm_kio_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
