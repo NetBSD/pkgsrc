@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2020/05/24 05:00:36 nia Exp $
+# $NetBSD: Makefile,v 1.54 2020/05/24 05:22:01 nia Exp $
 
 DISTNAME=	nvi-1.81.6
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	editors
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.kotnet.org/~skimo/nvi/devel/
 COMMENT=	Berkeley nvi with additional features
+LICENSE=	modified-bsd
 
 .include "options.mk"
 
@@ -21,9 +22,6 @@ CONFIGURE_ARGS+=	--program-transform-name='s,^,n,'
 CONFIGURE_ENV+=		vi_cv_path_shell=${TOOLS_SH}
 
 .if ${OPSYS} == "NetBSD"
-.  if !empty(OS_VERSION:M[2-9].*) || !empty(OS_VERSION:M1.6[A-Z]*)
-CONFIGURE_ENV+=		vi_cv_include_sys_select=no
-.  endif
 # XXX ignore NetBSD 2.0F and later's granpt(2) and SysV pty for just now
 CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 # XXX also ignore it on Darwin (fixes Tiger build)
