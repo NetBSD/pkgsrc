@@ -1,4 +1,4 @@
-#	$NetBSD: AIX.mk,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+#	$NetBSD: AIX.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
 #	@(#)sys.mk	5.11 (Berkeley) 3/13/91
 
 OS=		AIX

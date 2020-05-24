@@ -1,4 +1,4 @@
-#	$Id: Generic.mk,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+#	$Id: Generic.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
 #
 
 # some reasonable defaults

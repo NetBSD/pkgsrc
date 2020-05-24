@@ -1,4 +1,4 @@
-# $Id: misc.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
+# $Id: misc.mk,v 1.3 2020/05/24 11:09:44 nia Exp $
 
 .if !exists(${.CURDIR}/)
 .warning ${.CURDIR}/ doesn't exist ?

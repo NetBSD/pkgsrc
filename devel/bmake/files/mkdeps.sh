@@ -40,7 +40,7 @@
 #
 
 # RCSid:
-#	$Id: mkdeps.sh,v 1.3 2015/05/19 22:01:19 joerg Exp $
+#	$Id: mkdeps.sh,v 1.4 2020/05/24 11:09:43 nia Exp $
 #
 #	@(#) Copyright (c) 1993 Simon J. Gerraty
 #

@@ -1,4 +1,4 @@
-# $Id: Makefile.config.in,v 1.1.1.1 2020/05/24 05:35:53 nia Exp $
+# $Id: Makefile.config.in,v 1.2 2020/05/24 11:09:44 nia Exp $
 
 srcdir= @srcdir@
 DIFF_FLAGS?= @diff_u@

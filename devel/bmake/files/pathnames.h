@@ -1,4 +1,4 @@
-/*	$NetBSD: pathnames.h,v 1.5 2015/05/19 22:01:19 joerg Exp $	*/
+/*	$NetBSD: pathnames.h,v 1.6 2020/05/24 11:09:43 nia Exp $	*/
 
 /*
  * Copyright (c) 1990, 1993
@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)pathnames.h	5.2 (Berkeley) 6/1/90
- *	$Id: pathnames.h,v 1.5 2015/05/19 22:01:19 joerg Exp $
+ *	$Id: pathnames.h,v 1.6 2020/05/24 11:09:43 nia Exp $
  */
 
 #if HAVE_CONFIG_H
