@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2019/11/03 10:39:18 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2020/05/25 06:47:40 plunky Exp $
 
 BUILTIN_PKG:=	libusb1
 
@@ -42,7 +42,7 @@ override-libusb-pkgconfig:
 	${ECHO} "Name: libusb-1.0";				\
 	${ECHO} "Description: library for USB access";	\
 	${ECHO} "Version: ${BUILTIN_VERSION.libusb1}";	\
-	${ECHO} "Libs: -Wl,-R\$${libdir} -L\$${libdir} -lusb";	\
+	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -lusb";	\
 	${ECHO} "Cflags: -I\$${includedir}";		\
 	} >> ${BLKDIR_PKGCFG}/${LIBUSB_PKGCFGF};
 .  endif
