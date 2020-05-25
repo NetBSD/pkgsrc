@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3150 2020/05/25 11:56:13 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3151 2020/05/25 13:22:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5031,3 +5031,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/adplay to 1.8.1 [fcambus 2020-05-25]
 	Removed mail/etpan [nia 2020-05-25]
 	Removed net/wu-ftpd [nia 2020-05-25]
+	Updated devel/ruby-backports to 3.17.2 [taca 2020-05-25]
