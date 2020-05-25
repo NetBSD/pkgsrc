@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 14:37:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/25 13:34:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/examples/palette.rb
 ${GEM_LIBDIR}/lib/pastel.rb
 ${GEM_LIBDIR}/lib/pastel/alias_importer.rb
 ${GEM_LIBDIR}/lib/pastel/ansi.rb
@@ -15,29 +13,4 @@ ${GEM_LIBDIR}/lib/pastel/decorator_chain.rb
 ${GEM_LIBDIR}/lib/pastel/delegator.rb
 ${GEM_LIBDIR}/lib/pastel/detached.rb
 ${GEM_LIBDIR}/lib/pastel/version.rb
-${GEM_LIBDIR}/pastel.gemspec
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/unit/alias_color_spec.rb
-${GEM_LIBDIR}/spec/unit/alias_importer_spec.rb
-${GEM_LIBDIR}/spec/unit/color/alias_color_spec.rb
-${GEM_LIBDIR}/spec/unit/color/code_spec.rb
-${GEM_LIBDIR}/spec/unit/color/colored_spec.rb
-${GEM_LIBDIR}/spec/unit/color/decorate_spec.rb
-${GEM_LIBDIR}/spec/unit/color/equal_spec.rb
-${GEM_LIBDIR}/spec/unit/color/lookup_spec.rb
-${GEM_LIBDIR}/spec/unit/color/new_spec.rb
-${GEM_LIBDIR}/spec/unit/color/strip_spec.rb
-${GEM_LIBDIR}/spec/unit/color/styles_spec.rb
-${GEM_LIBDIR}/spec/unit/color/valid_spec.rb
-${GEM_LIBDIR}/spec/unit/color_parser_spec.rb
-${GEM_LIBDIR}/spec/unit/decorate_dsl_spec.rb
-${GEM_LIBDIR}/spec/unit/decorator_chain_spec.rb
-${GEM_LIBDIR}/spec/unit/delegator_spec.rb
-${GEM_LIBDIR}/spec/unit/detach_spec.rb
-${GEM_LIBDIR}/spec/unit/new_spec.rb
-${GEM_LIBDIR}/spec/unit/respond_to_spec.rb
-${GEM_LIBDIR}/spec/unit/undecorate_spec.rb
-${GEM_LIBDIR}/tasks/console.rake
-${GEM_LIBDIR}/tasks/coverage.rake
-${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
