@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/03/24 18:01:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/05/25 15:11:18 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -60,6 +60,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/elixir.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/erlang.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/eucalyptus.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/filesystem.rb
+${GEM_LIBDIR}/lib/ohai/plugins/fips.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/freebsd/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/freebsd/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/freebsd/platform.rb
@@ -77,8 +78,9 @@ ${GEM_LIBDIR}/lib/ohai/plugins/languages.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/libvirt.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linode.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/block_device.rb
-${GEM_LIBDIR}/lib/ohai/plugins/linux/fips.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/hostnamectl.rb
+${GEM_LIBDIR}/lib/ohai/plugins/linux/interrupts.rb
+${GEM_LIBDIR}/lib/ohai/plugins/linux/ipc.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/lsb.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/lspci.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/machineid.rb
@@ -86,6 +88,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/linux/mdadm.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/platform.rb
+${GEM_LIBDIR}/lib/ohai/plugins/linux/selinux.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/sessions.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/sysctl.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/systemd_paths.rb
@@ -133,8 +136,8 @@ ${GEM_LIBDIR}/lib/ohai/plugins/timezone.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/uptime.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/virtualbox.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/vmware.rb
+${GEM_LIBDIR}/lib/ohai/plugins/windows/dmi.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/drivers.rb
-${GEM_LIBDIR}/lib/ohai/plugins/windows/fips.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/platform.rb
