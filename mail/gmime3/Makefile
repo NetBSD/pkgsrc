@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/03/22 18:17:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/25 05:34:49 rillig Exp $
 
 DISTNAME=	gmime-3.2.7
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
@@ -16,7 +16,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--disable-mono
 PKGCONFIG_OVERRIDE+=	gmime.pc.in
 # one test failure as of 3.2.6
 # test-filters:
