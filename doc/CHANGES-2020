@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3174 2020/05/25 15:13:28 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3175 2020/05/25 15:19:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5056,3 +5056,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-chef-config to 16.0.287 [taca 2020-05-25]
 	Updated misc/ruby-ohai to 16.0.20 [taca 2020-05-25]
 	Updated sysutils/ruby-chef to 16.0.287 [taca 2020-05-25]
+	Added textproc/ruby-actionpack-xml_parser version 2.0.1 [taca 2020-05-25]
