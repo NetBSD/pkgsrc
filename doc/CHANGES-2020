@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3170 2020/05/25 14:58:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3171 2020/05/25 15:07:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5052,3 +5052,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/ruby-request_store version 1.5.0 [taca 2020-05-25]
 	Updated sysutils/puppet to 6.15.0 [taca 2020-05-25]
 	Updated sysutils/capistrano to 3.14.0 [taca 2020-05-25]
+	Updated sysutils/ruby-chef-utils to 16.0.287 [taca 2020-05-25]
