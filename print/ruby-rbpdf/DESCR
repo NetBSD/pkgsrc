@@ -1,0 +1,11 @@
+A template plugin allowing the inclusion of ERB-enabled RBPDF template
+files.
+
+* Use UTF-8 encoding.
+* RTL (Right-To-Left) languages support.
+* HTML tag support.
+* CSS minimum support.
+* Image
+ - 8bit PNG image support without MiniMagick/RMagick library.
+ - PNG(with alpha channel)/JPEG/GIF image support. (use MiniMagick or
+   RMagick library)
