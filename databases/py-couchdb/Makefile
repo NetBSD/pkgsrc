@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/02 15:38:09 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/25 05:21:08 rillig Exp $
 
 DISTNAME=	CouchDB-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -22,8 +22,6 @@ INSTALLATION_DIRS+=	share/doc/py-couchdb
 REPLACE_PYTHON+=	couchdb/http.py couchdb/json.py
 REPLACE_PYTHON+=	couchdb/tests/couch_tests.py couchdb/tools/dump.py
 REPLACE_PYTHON+=	couchdb/tools/load.py couchdb/tools/replicate.py
-REPLACE_PYTHON+=	couchdb/tools/replication_helper.py
-REPLACE_PYTHON+=	couchdb/tools/replication_helper_test.py
 REPLACE_PYTHON+=	couchdb/view.py
 PY_PATCHPLIST=		yes
 
