@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/25 14:09:08 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Changelog.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/Upgrading.md
+${GEM_LIBDIR}/codecov.yml
+${GEM_LIBDIR}/lib/roadie-rails.rb
+${GEM_LIBDIR}/lib/roadie/rails.rb
+${GEM_LIBDIR}/lib/roadie/rails/asset_pipeline_provider.rb
+${GEM_LIBDIR}/lib/roadie/rails/automatic.rb
+${GEM_LIBDIR}/lib/roadie/rails/document_builder.rb
+${GEM_LIBDIR}/lib/roadie/rails/inline_on_delivery.rb
+${GEM_LIBDIR}/lib/roadie/rails/mail_inliner.rb
+${GEM_LIBDIR}/lib/roadie/rails/mailer.rb
+${GEM_LIBDIR}/lib/roadie/rails/options.rb
+${GEM_LIBDIR}/lib/roadie/rails/railtie.rb
+${GEM_LIBDIR}/lib/roadie/rails/utils.rb
+${GEM_LIBDIR}/lib/roadie/rails/version.rb
+${GEM_LIBDIR}/roadie-rails.gemspec
+${GEM_LIBDIR}/setup.sh
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
