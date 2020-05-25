@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3162 2020/05/25 14:10:41 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3163 2020/05/25 14:12:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5043,3 +5043,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/ruby-mime-types-data to 3.2020.0512 [taca 2020-05-25]
 	Added mail/ruby-roadie version 4.0.0 [taca 2020-05-25]
 	Added mail/ruby-roadie-rails version 2.1.1 [taca 2020-05-25]
+	Updated misc/ruby-mimemagic to 0.3.5 [taca 2020-05-25]
