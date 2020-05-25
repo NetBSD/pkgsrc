@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2010/11/10 10:37:48 adam Exp $
+# $NetBSD: options.mk,v 1.14 2020/05/25 05:44:49 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -127,5 +127,4 @@ CONFIGURE_ARGS+=	--without-authpgsql
 ###
 ### We never build the following modules (unsupported by author).
 ###
-CONFIGURE_ARGS+=	--without-authvchkpw
 CONFIGURE_ARGS+=	--without-authcustom
