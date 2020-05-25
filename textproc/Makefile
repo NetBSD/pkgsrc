@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1139 2020/05/18 13:35:05 wiz Exp $
+# $NetBSD: Makefile,v 1.1140 2020/05/25 14:23:05 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1003,6 +1003,7 @@ SUBDIR+=	ruby-haml
 SUBDIR+=	ruby-hikidoc
 SUBDIR+=	ruby-hpricot
 SUBDIR+=	ruby-html-parser
+SUBDIR+=	ruby-htmlentities
 SUBDIR+=	ruby-htree
 SUBDIR+=	ruby-inifile
 SUBDIR+=	ruby-itex2MML
