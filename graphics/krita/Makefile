@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2020/05/21 20:53:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2020/05/25 10:31:17 ryoon Exp $
 
-DISTNAME=		krita-4.1.3
-PKGREVISION=		27
-CATEGORIES=		misc kde
+DISTNAME=		krita-4.2.9
+CATEGORIES=		graphics misc kde
 MASTER_SITES=		${MASTER_SITE_KDE:=krita/${PKGVERSION_NOREV}/}
 
 MAINTAINER=		maya@NetBSD.org
@@ -36,6 +35,8 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kritarc \
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/application.mk"
+.include "../../archivers/quazip/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
