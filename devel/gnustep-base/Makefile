@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2020/05/22 10:56:03 adam Exp $
+# $NetBSD: Makefile,v 1.86 2020/05/25 05:23:43 rillig Exp $
 
 DISTNAME=	gnustep-base-1.27.0
 #PKGREVISION=	1
@@ -20,6 +20,11 @@ CONFIGURE_ARGS+=	--with-installation-domain=SYSTEM
 CONFIGURE_ARGS+=	--enable-stricticonv
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 MAKE_FILE=		GNUmakefile
+
+# GSMime.m:1098:7: error: array subscript is of type 'char' [-Werror,-Wchar-subscripts]
+# if (isxdigit(*src) && ctxt->pos < sizeof(ctxt->buf))
+# Looks suspicious, but ignore for now.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 pre-configure:
 	sed 's|@PREFIX@|${PREFIX}|g' <${FILESDIR}/openapp >${WRKDIR}/openapp
