@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/25 15:17:54 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/action_pack/xml_parser.rb
+${GEM_LIBDIR}/lib/action_pack/xml_parser/railtie.rb
+${GEM_LIBDIR}/lib/action_pack/xml_parser/version.rb
+${GEM_LIBDIR}/lib/actionpack-xml_parser.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
