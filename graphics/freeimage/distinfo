@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.9 2020/05/14 16:42:13 nia Exp $
+$NetBSD: distinfo,v 1.10 2020/05/25 12:24:37 nia Exp $
 
 SHA1 (FreeImage3180.zip) = 38daa9d8f1bca2330a2eaa42ec66fbe6ede7dce9
 RMD160 (FreeImage3180.zip) = b791715fccf49355a3cb27b6250d8ed809c2454e
 SHA512 (FreeImage3180.zip) = 9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
 Size (FreeImage3180.zip) = 7415716 bytes
-SHA1 (patch-Makefile.gnu) = 1aa31ec7566565e9e59d06bfa2cd729500a0d2cb
+SHA1 (patch-Makefile.fip) = f16e2f589f9433472cd67e5485f7c34ed30a887e
+SHA1 (patch-Makefile.gnu) = f3528c8004ccab5067d9957387f6686ea8cef58a
 SHA1 (patch-Source_FreeImage.h) = 9b648a8734a0c3391850e2dd7eaa501d29e99689
 SHA1 (patch-Source_FreeImageToolkit_JPEGTransform.cpp) = 4e7372c8947b4359de4d428bcfcfa2f55210f2e8
 SHA1 (patch-Source_FreeImage_J2KHelper.cpp) = a479a373f5a584978129c00d723251a784210603

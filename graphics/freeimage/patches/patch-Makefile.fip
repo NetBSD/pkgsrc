@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.gnu,v 1.2 2020/05/25 12:24:37 nia Exp $
+$NetBSD: patch-Makefile.fip,v 1.5 2020/05/25 12:24:37 nia Exp $
 
 - Unbundle image libraries.
 - Link with CXX for libstdc++.
 - Fix installation.
 
---- Makefile.gnu.orig	2015-03-10 09:04:00.000000000 +0000
-+++ Makefile.gnu
+--- Makefile.fip.orig	2015-03-10 09:03:56.000000000 +0000
++++ Makefile.fip
 @@ -13,6 +13,9 @@ DOS2UNIX = dos2unix
  
  LIBRARIES = -lstdc++
@@ -27,32 +27,24 @@ $NetBSD: patch-Makefile.gnu,v 1.2 2020/05/25 12:24:37 nia Exp $
 +CFLAGS += -fPIC
 +CXXFLAGS += -fPIC
  
- TARGET  = freeimage
+ TARGET  = freeimageplus
  STATICLIB = lib$(TARGET).a
-@@ -40,8 +41,6 @@ LIBNAME	= lib$(TARGET).so
- VERLIBNAME = $(LIBNAME).$(VER_MAJOR)
- HEADER = Source/FreeImage.h
- 
--
--
- default: all
- 
- all: dist
-@@ -67,13 +66,12 @@ $(STATICLIB): $(MODULES)
+@@ -68,14 +69,12 @@ $(STATICLIB): $(MODULES)
  	$(AR) r $@ $(MODULES)
  
  $(SHAREDLIB): $(MODULES)
 -	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
-+	$(CXX) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES)
++	$(CXX) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
  
  install:
 -	install -d $(INCDIR) $(INSTALLDIR)
 -	install -m 644 -o root -g root $(HEADER) $(INCDIR)
+-	install -m 644 -o root -g root $(HEADERFIP) $(INCDIR)
 -	install -m 644 -o root -g root $(STATICLIB) $(INSTALLDIR)
 -	install -m 755 -o root -g root $(SHAREDLIB) $(INSTALLDIR)
-+	$(BSD_INSTALL_DATA) $(HEADER) $(INCDIR)
-+	$(BSD_INSTALL_DATA) $(STATICLIB) $(INSTALLDIR)
++	$(BSD_INSTALL_DATA) $(HEADERFIP) $(INCDIR)
++	$(BSD_INSTALL_LIB) $(STATICLIB) $(INSTALLDIR)
 +	$(BSD_INSTALL_LIB) $(SHAREDLIB) $(INSTALLDIR)
  	ln -sf $(SHAREDLIB) $(INSTALLDIR)/$(VERLIBNAME)
  	ln -sf $(VERLIBNAME) $(INSTALLDIR)/$(LIBNAME)	
- #	ldconfig
+ 
