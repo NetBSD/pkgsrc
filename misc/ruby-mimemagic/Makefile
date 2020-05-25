@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/03/23 17:14:15 taca Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/25 14:12:03 taca Exp $
 
-DISTNAME=	mimemagic-0.3.4
+DISTNAME=	mimemagic-0.3.5
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
