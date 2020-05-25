@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3157 2020/05/25 13:51:56 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3158 2020/05/25 13:55:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5038,3 +5038,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-posix-spawn to 0.3.14 [taca 2020-05-25]
 	Updated devel/ruby-rspec-expectations to 3.9.2 [taca 2020-05-25]
 	Updated devel/ruby-rspec-rails to 4.0.1 [taca 2020-05-25]
+	Added devel/ruby-sync version 0.5.0 [taca 2020-05-25]
