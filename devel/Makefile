@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3135 2020/05/24 16:44:19 nat Exp $
+# $NetBSD: Makefile,v 1.3136 2020/05/25 09:22:26 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -2623,7 +2623,6 @@ SUBDIR+=	pythontidy
 SUBDIR+=	qbzr
 SUBDIR+=	qconf
 SUBDIR+=	qjson
-SUBDIR+=	qof
 SUBDIR+=	qore-uuid-module
 SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
