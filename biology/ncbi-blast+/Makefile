@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/05/22 10:55:57 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/25 05:19:06 rillig Exp $
 
 DISTNAME=	ncbi-blast-2.8.1+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
@@ -45,6 +45,12 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 # configure checks only for undefined reference, not for usability
 CONFIGURE_ENV+=		ac_cv_func_statfs=no
 .endif
+
+# c++/src/objtools/edit/seq_entry_edit.cpp: In member function 'void ncbi::objects::edit::{anonymous}::CSeqdescSortMap::Init()':
+# c++/src/objtools/edit/seq_entry_edit.cpp:172:44: error: array subscript has type 'char' [-Werror=char-subscripts]
+#              while (descr_insert_order[index] != 0)
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
