@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3159 2020/05/25 14:00:24 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3160 2020/05/25 14:01:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5040,3 +5040,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-rspec-rails to 4.0.1 [taca 2020-05-25]
 	Added devel/ruby-sync version 0.5.0 [taca 2020-05-25]
 	Updated devel/ruby-tins to 1.25.0 [taca 2020-05-25]
+	Updated mail/ruby-mime-types-data to 3.2020.0512 [taca 2020-05-25]
