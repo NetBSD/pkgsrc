@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3178 2020/05/25 17:09:21 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3179 2020/05/25 17:10:31 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5060,3 +5060,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-facter to 4.0.23 [taca 2020-05-25]
 	Updated textproc/ruby-libxml to 3.2.0 [taca 2020-05-25]
 	Updated graphics/libansilove to 1.2.3 [fcambus 2020-05-25]
+	Updated graphics/ansilove to 4.1.1 [fcambus 2020-05-25]
