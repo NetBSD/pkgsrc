@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3167 2020/05/25 14:37:10 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3168 2020/05/25 14:41:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5049,3 +5049,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/ruby-rbpdf-font version 1.19.1 [taca 2020-05-25]
 	Added print/ruby-rbpdf version 1.20.1 [taca 2020-05-25]
 	Added textproc/ruby-csv version 3.1.5 [taca 2020-05-25]
+	Added www/ruby-request_store version 1.5.0 [taca 2020-05-25]
