@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2020/01/10 12:47:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2020/05/25 05:02:11 rillig Exp $
 #
 # used by audio/gst-plugins1-flac/Makefile
 # used by audio/gst-plugins1-jack/Makefile
@@ -23,6 +23,9 @@ GST_PLUGINS1_TYPE=	good
 GST_PLUGINS1_VER=	1.16.2
 
 # Disable all drivers and features by default.
+#
+# 2020-05-25: Needs to be synced with ./configure, which
+# has many more options that can be disabled.
 .for driver in	aalib \
 		aalibtest \
 		cairo \
@@ -39,11 +42,8 @@ GST_PLUGINS1_VER=	1.16.2
 		pulse \
 		shout2 \
 		speex \
-		sunaudio \
 		vpx \
 		x \
-		xshm \
-		xvideo \
 		zlib
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
