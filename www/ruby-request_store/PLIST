@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/25 14:40:23 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/request_store.rb
+${GEM_LIBDIR}/lib/request_store/middleware.rb
+${GEM_LIBDIR}/lib/request_store/railtie.rb
+${GEM_LIBDIR}/lib/request_store/version.rb
+${GEM_LIBDIR}/request_store.gemspec
+${GEM_LIBDIR}/test/middleware_test.rb
+${GEM_LIBDIR}/test/request_store_test.rb
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
