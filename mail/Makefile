@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.550 2020/05/14 16:58:41 nia Exp $
+# $NetBSD: Makefile,v 1.551 2020/05/25 11:49:47 nia Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -79,7 +79,6 @@ SUBDIR+=	elmo
 SUBDIR+=	enma
 SUBDIR+=	esmtp
 SUBDIR+=	etach
-SUBDIR+=	etpan
 SUBDIR+=	evolution
 SUBDIR+=	evolution-data-server
 SUBDIR+=	exim
