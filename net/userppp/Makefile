@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/03/29 06:01:31 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/25 12:01:20 nia Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -18,6 +18,9 @@ MANCOMPRESSED_IF_MANZ=	YES
 PKG_SYSCONFSUBDIR=	ppp
 
 CFLAGS+=		-fno-strict-aliasing
+
+MAKE_ENV+=		NOCLANGERROR=1
+MAKE_ENV+=		NOGCCERROR=1
 
 SUBST_CLASSES+=		cfgdir
 SUBST_STAGE.cfgdir=	do-configure
