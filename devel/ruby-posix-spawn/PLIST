@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2015/03/08 15:17:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/25 13:43:16 taca Exp $
 bin/posix-spawn-benchmark${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/posix_spawn_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/HACKING
