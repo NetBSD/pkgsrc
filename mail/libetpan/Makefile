@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/05/22 10:55:46 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/05/25 05:58:40 rillig Exp $
 
 DISTNAME=	libetpan-1.9.4
 PKGREVISION=	1
@@ -24,6 +24,8 @@ pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=1 ${SH} autogen.sh
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+CHECK_PORTABILITY_SKIP+=	build-mac/update.sh
 
 PKGCONFIG_OVERRIDE+=	libetpan.pc.in
 
