@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/03/24 18:09:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/25 15:12:57 taca Exp $
 bin/knife${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -168,8 +168,8 @@ ${GEM_LIBDIR}/lib/chef/deprecation/warnings.rb
 ${GEM_LIBDIR}/lib/chef/digester.rb
 ${GEM_LIBDIR}/lib/chef/dist.rb
 ${GEM_LIBDIR}/lib/chef/dsl.rb
+${GEM_LIBDIR}/lib/chef/dsl/chef_vault.rb
 ${GEM_LIBDIR}/lib/chef/dsl/cheffish.rb
-${GEM_LIBDIR}/lib/chef/dsl/core.rb
 ${GEM_LIBDIR}/lib/chef/dsl/data_query.rb
 ${GEM_LIBDIR}/lib/chef/dsl/declare_resource.rb
 ${GEM_LIBDIR}/lib/chef/dsl/definitions.rb
@@ -253,6 +253,12 @@ ${GEM_LIBDIR}/lib/chef/http/validate_content_length.rb
 ${GEM_LIBDIR}/lib/chef/json_compat.rb
 ${GEM_LIBDIR}/lib/chef/key.rb
 ${GEM_LIBDIR}/lib/chef/knife.rb
+${GEM_LIBDIR}/lib/chef/knife/acl_add.rb
+${GEM_LIBDIR}/lib/chef/knife/acl_base.rb
+${GEM_LIBDIR}/lib/chef/knife/acl_bulk_add.rb
+${GEM_LIBDIR}/lib/chef/knife/acl_bulk_remove.rb
+${GEM_LIBDIR}/lib/chef/knife/acl_remove.rb
+${GEM_LIBDIR}/lib/chef/knife/acl_show.rb
 ${GEM_LIBDIR}/lib/chef/knife/bootstrap.rb
 ${GEM_LIBDIR}/lib/chef/knife/bootstrap/chef_vault_handler.rb
 ${GEM_LIBDIR}/lib/chef/knife/bootstrap/client_builder.rb
@@ -285,13 +291,6 @@ ${GEM_LIBDIR}/lib/chef/knife/cookbook_list.rb
 ${GEM_LIBDIR}/lib/chef/knife/cookbook_metadata.rb
 ${GEM_LIBDIR}/lib/chef/knife/cookbook_metadata_from_file.rb
 ${GEM_LIBDIR}/lib/chef/knife/cookbook_show.rb
-${GEM_LIBDIR}/lib/chef/knife/cookbook_site_download.rb
-${GEM_LIBDIR}/lib/chef/knife/cookbook_site_install.rb
-${GEM_LIBDIR}/lib/chef/knife/cookbook_site_list.rb
-${GEM_LIBDIR}/lib/chef/knife/cookbook_site_search.rb
-${GEM_LIBDIR}/lib/chef/knife/cookbook_site_share.rb
-${GEM_LIBDIR}/lib/chef/knife/cookbook_site_show.rb
-${GEM_LIBDIR}/lib/chef/knife/cookbook_site_unshare.rb
 ${GEM_LIBDIR}/lib/chef/knife/cookbook_upload.rb
 ${GEM_LIBDIR}/lib/chef/knife/core/bootstrap_context.rb
 ${GEM_LIBDIR}/lib/chef/knife/core/cookbook_scm_repo.rb
@@ -326,6 +325,12 @@ ${GEM_LIBDIR}/lib/chef/knife/environment_from_file.rb
 ${GEM_LIBDIR}/lib/chef/knife/environment_list.rb
 ${GEM_LIBDIR}/lib/chef/knife/environment_show.rb
 ${GEM_LIBDIR}/lib/chef/knife/exec.rb
+${GEM_LIBDIR}/lib/chef/knife/group_add.rb
+${GEM_LIBDIR}/lib/chef/knife/group_create.rb
+${GEM_LIBDIR}/lib/chef/knife/group_destroy.rb
+${GEM_LIBDIR}/lib/chef/knife/group_list.rb
+${GEM_LIBDIR}/lib/chef/knife/group_remove.rb
+${GEM_LIBDIR}/lib/chef/knife/group_show.rb
 ${GEM_LIBDIR}/lib/chef/knife/key_create.rb
 ${GEM_LIBDIR}/lib/chef/knife/key_create_base.rb
 ${GEM_LIBDIR}/lib/chef/knife/key_delete.rb
@@ -388,7 +393,11 @@ ${GEM_LIBDIR}/lib/chef/knife/tag_list.rb
 ${GEM_LIBDIR}/lib/chef/knife/upload.rb
 ${GEM_LIBDIR}/lib/chef/knife/user_create.rb
 ${GEM_LIBDIR}/lib/chef/knife/user_delete.rb
+${GEM_LIBDIR}/lib/chef/knife/user_dissociate.rb
 ${GEM_LIBDIR}/lib/chef/knife/user_edit.rb
+${GEM_LIBDIR}/lib/chef/knife/user_invite_add.rb
+${GEM_LIBDIR}/lib/chef/knife/user_invite_list.rb
+${GEM_LIBDIR}/lib/chef/knife/user_invite_rescind.rb
 ${GEM_LIBDIR}/lib/chef/knife/user_key_create.rb
 ${GEM_LIBDIR}/lib/chef/knife/user_key_delete.rb
 ${GEM_LIBDIR}/lib/chef/knife/user_key_edit.rb
@@ -398,6 +407,7 @@ ${GEM_LIBDIR}/lib/chef/knife/user_list.rb
 ${GEM_LIBDIR}/lib/chef/knife/user_reregister.rb
 ${GEM_LIBDIR}/lib/chef/knife/user_show.rb
 ${GEM_LIBDIR}/lib/chef/knife/xargs.rb
+${GEM_LIBDIR}/lib/chef/knife/yaml_convert.rb
 ${GEM_LIBDIR}/lib/chef/local_mode.rb
 ${GEM_LIBDIR}/lib/chef/log.rb
 ${GEM_LIBDIR}/lib/chef/log/syslog.rb
@@ -475,9 +485,6 @@ ${GEM_LIBDIR}/lib/chef/policy_builder/policyfile.rb
 ${GEM_LIBDIR}/lib/chef/powershell.rb
 ${GEM_LIBDIR}/lib/chef/property.rb
 ${GEM_LIBDIR}/lib/chef/provider.rb
-${GEM_LIBDIR}/lib/chef/provider/apt_preference.rb
-${GEM_LIBDIR}/lib/chef/provider/apt_repository.rb
-${GEM_LIBDIR}/lib/chef/provider/apt_update.rb
 ${GEM_LIBDIR}/lib/chef/provider/batch.rb
 ${GEM_LIBDIR}/lib/chef/provider/cookbook_file.rb
 ${GEM_LIBDIR}/lib/chef/provider/cookbook_file/content.rb
@@ -510,16 +517,13 @@ ${GEM_LIBDIR}/lib/chef/provider/ifconfig/debian.rb
 ${GEM_LIBDIR}/lib/chef/provider/ifconfig/redhat.rb
 ${GEM_LIBDIR}/lib/chef/provider/launchd.rb
 ${GEM_LIBDIR}/lib/chef/provider/link.rb
-${GEM_LIBDIR}/lib/chef/provider/log.rb
 ${GEM_LIBDIR}/lib/chef/provider/lwrp_base.rb
-${GEM_LIBDIR}/lib/chef/provider/mdadm.rb
 ${GEM_LIBDIR}/lib/chef/provider/mount.rb
 ${GEM_LIBDIR}/lib/chef/provider/mount/aix.rb
 ${GEM_LIBDIR}/lib/chef/provider/mount/mount.rb
 ${GEM_LIBDIR}/lib/chef/provider/mount/solaris.rb
 ${GEM_LIBDIR}/lib/chef/provider/mount/windows.rb
 ${GEM_LIBDIR}/lib/chef/provider/noop.rb
-${GEM_LIBDIR}/lib/chef/provider/ohai.rb
 ${GEM_LIBDIR}/lib/chef/provider/osx_profile.rb
 ${GEM_LIBDIR}/lib/chef/provider/package.rb
 ${GEM_LIBDIR}/lib/chef/provider/package/apt.rb
@@ -633,6 +637,7 @@ ${GEM_LIBDIR}/lib/chef/request_id.rb
 ${GEM_LIBDIR}/lib/chef/reserved_names.rb
 ${GEM_LIBDIR}/lib/chef/resource.rb
 ${GEM_LIBDIR}/lib/chef/resource/action_class.rb
+${GEM_LIBDIR}/lib/chef/resource/alternatives.rb
 ${GEM_LIBDIR}/lib/chef/resource/apt_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/apt_preference.rb
 ${GEM_LIBDIR}/lib/chef/resource/apt_repository.rb
@@ -644,9 +649,13 @@ ${GEM_LIBDIR}/lib/chef/resource/bff_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/breakpoint.rb
 ${GEM_LIBDIR}/lib/chef/resource/build_essential.rb
 ${GEM_LIBDIR}/lib/chef/resource/cab_package.rb
+${GEM_LIBDIR}/lib/chef/resource/chef_client_cron.rb
+${GEM_LIBDIR}/lib/chef/resource/chef_client_scheduled_task.rb
+${GEM_LIBDIR}/lib/chef/resource/chef_client_systemd_timer.rb
 ${GEM_LIBDIR}/lib/chef/resource/chef_gem.rb
 ${GEM_LIBDIR}/lib/chef/resource/chef_handler.rb
 ${GEM_LIBDIR}/lib/chef/resource/chef_sleep.rb
+${GEM_LIBDIR}/lib/chef/resource/chef_vault_secret.rb
 ${GEM_LIBDIR}/lib/chef/resource/chocolatey_config.rb
 ${GEM_LIBDIR}/lib/chef/resource/chocolatey_feature.rb
 ${GEM_LIBDIR}/lib/chef/resource/chocolatey_package.rb
@@ -670,8 +679,8 @@ ${GEM_LIBDIR}/lib/chef/resource/file/verification.rb
 ${GEM_LIBDIR}/lib/chef/resource/file/verification/systemd_unit.rb
 ${GEM_LIBDIR}/lib/chef/resource/freebsd_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/gem_package.rb
-${GEM_LIBDIR}/lib/chef/resource/git.rb
 ${GEM_LIBDIR}/lib/chef/resource/group.rb
+${GEM_LIBDIR}/lib/chef/resource/helpers/cron_validations.rb
 ${GEM_LIBDIR}/lib/chef/resource/homebrew_cask.rb
 ${GEM_LIBDIR}/lib/chef/resource/homebrew_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/homebrew_tap.rb
@@ -709,6 +718,7 @@ ${GEM_LIBDIR}/lib/chef/resource/package.rb
 ${GEM_LIBDIR}/lib/chef/resource/pacman_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/paludis_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/perl.rb
+${GEM_LIBDIR}/lib/chef/resource/plist.rb
 ${GEM_LIBDIR}/lib/chef/resource/portage_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/powershell_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/powershell_package_source.rb
@@ -728,19 +738,21 @@ ${GEM_LIBDIR}/lib/chef/resource/route.rb
 ${GEM_LIBDIR}/lib/chef/resource/rpm_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/ruby.rb
 ${GEM_LIBDIR}/lib/chef/resource/ruby_block.rb
-${GEM_LIBDIR}/lib/chef/resource/scm.rb
+${GEM_LIBDIR}/lib/chef/resource/scm/_scm.rb
+${GEM_LIBDIR}/lib/chef/resource/scm/git.rb
+${GEM_LIBDIR}/lib/chef/resource/scm/subversion.rb
 ${GEM_LIBDIR}/lib/chef/resource/script.rb
 ${GEM_LIBDIR}/lib/chef/resource/service.rb
 ${GEM_LIBDIR}/lib/chef/resource/smartos_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/snap_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/solaris_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/ssh_known_hosts_entry.rb
-${GEM_LIBDIR}/lib/chef/resource/subversion.rb
 ${GEM_LIBDIR}/lib/chef/resource/sudo.rb
 ${GEM_LIBDIR}/lib/chef/resource/support/cron.d.erb
 ${GEM_LIBDIR}/lib/chef/resource/support/cron_access.erb
 ${GEM_LIBDIR}/lib/chef/resource/support/ssh_known_hosts.erb
 ${GEM_LIBDIR}/lib/chef/resource/support/sudoer.erb
+${GEM_LIBDIR}/lib/chef/resource/support/ulimit.erb
 ${GEM_LIBDIR}/lib/chef/resource/swap_file.rb
 ${GEM_LIBDIR}/lib/chef/resource/sysctl.rb
 ${GEM_LIBDIR}/lib/chef/resource/systemd_unit.rb
@@ -754,6 +766,7 @@ ${GEM_LIBDIR}/lib/chef/resource/user/mac_user.rb
 ${GEM_LIBDIR}/lib/chef/resource/user/pw_user.rb
 ${GEM_LIBDIR}/lib/chef/resource/user/solaris_user.rb
 ${GEM_LIBDIR}/lib/chef/resource/user/windows_user.rb
+${GEM_LIBDIR}/lib/chef/resource/user_ulimit.rb
 ${GEM_LIBDIR}/lib/chef/resource/whyrun_safe_ruby_block.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_ad_join.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_auto_run.rb
@@ -775,11 +788,13 @@ ${GEM_LIBDIR}/lib/chef/resource/windows_path.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_printer.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_printer_port.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_script.rb
+${GEM_LIBDIR}/lib/chef/resource/windows_security_policy.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_service.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_share.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_shortcut.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_task.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_uac.rb
+${GEM_LIBDIR}/lib/chef/resource/windows_user_privilege.rb
 ${GEM_LIBDIR}/lib/chef/resource/windows_workgroup.rb
 ${GEM_LIBDIR}/lib/chef/resource/yum_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/yum_repository.rb
@@ -848,6 +863,7 @@ ${GEM_LIBDIR}/lib/chef/version_constraint/platform.rb
 ${GEM_LIBDIR}/lib/chef/version_string.rb
 ${GEM_LIBDIR}/lib/chef/whitelist.rb
 ${GEM_LIBDIR}/lib/chef/win32/api.rb
+${GEM_LIBDIR}/lib/chef/win32/api/command_line_helper.rb
 ${GEM_LIBDIR}/lib/chef/win32/api/crypto.rb
 ${GEM_LIBDIR}/lib/chef/win32/api/error.rb
 ${GEM_LIBDIR}/lib/chef/win32/api/file.rb
@@ -1362,8 +1378,10 @@ ${GEM_LIBDIR}/spec/functional/resource/windows_certificate_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/windows_env_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/windows_package_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/windows_path_spec.rb
+${GEM_LIBDIR}/spec/functional/resource/windows_security_policy_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/windows_service_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/windows_task_spec.rb
+${GEM_LIBDIR}/spec/functional/resource/windows_user_privilege_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/yum_package_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/zypper_package_spec.rb
 ${GEM_LIBDIR}/spec/functional/root_alias_spec.rb
@@ -1459,6 +1477,7 @@ ${GEM_LIBDIR}/spec/integration/recipes/resource_action_spec.rb
 ${GEM_LIBDIR}/spec/integration/recipes/resource_converge_if_changed_spec.rb
 ${GEM_LIBDIR}/spec/integration/recipes/resource_load_spec.rb
 ${GEM_LIBDIR}/spec/integration/recipes/unified_mode_spec.rb
+${GEM_LIBDIR}/spec/integration/recipes/use_partial_spec.rb
 ${GEM_LIBDIR}/spec/integration/solo/solo_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
 ${GEM_LIBDIR}/spec/scripts/ssl-serve.rb
@@ -1485,6 +1504,7 @@ ${GEM_LIBDIR}/spec/support/platform_helpers.rb
 ${GEM_LIBDIR}/spec/support/platforms/prof/gc.rb
 ${GEM_LIBDIR}/spec/support/platforms/prof/win32.rb
 ${GEM_LIBDIR}/spec/support/platforms/win32/spec_service.rb
+${GEM_LIBDIR}/spec/support/recipe_dsl_helper.rb
 ${GEM_LIBDIR}/spec/support/shared/context/config.rb
 ${GEM_LIBDIR}/spec/support/shared/context/win32.rb
 ${GEM_LIBDIR}/spec/support/shared/functional/diff_disabled.rb
@@ -1802,7 +1822,6 @@ ${GEM_LIBDIR}/spec/unit/provider/mount/mount_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/mount/solaris_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/mount/windows_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/mount_spec.rb
-${GEM_LIBDIR}/spec/unit/provider/ohai_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/osx_profile_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/package/apt_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider/package/bff_spec.rb
@@ -1890,6 +1909,7 @@ ${GEM_LIBDIR}/spec/unit/provider_resolver_spec.rb
 ${GEM_LIBDIR}/spec/unit/provider_spec.rb
 ${GEM_LIBDIR}/spec/unit/pure_application_spec.rb
 ${GEM_LIBDIR}/spec/unit/recipe_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/alternatives_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/apt_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/apt_preference_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/apt_repository_spec.rb
@@ -1901,9 +1921,13 @@ ${GEM_LIBDIR}/spec/unit/resource/bff_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/breakpoint_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/build_essential_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/cab_package_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/chef_client_cron_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/chef_client_scheduled_task_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/chef_client_systemd_timer_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/chef_gem_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/chef_handler_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/chef_sleep_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/chef_vault_secret_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/chocolatey_config_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/chocolatey_feature_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/chocolatey_package_spec.rb
@@ -1915,6 +1939,8 @@ ${GEM_LIBDIR}/spec/unit/resource/cron_access_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/cron_d_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/cron_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/csh_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/data/InstallHistory_with_CLT.plist
+${GEM_LIBDIR}/spec/unit/resource/data/InstallHistory_without_CLT.plist
 ${GEM_LIBDIR}/spec/unit/resource/directory_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/dmg_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/dnf_package_spec.rb
@@ -1927,8 +1953,8 @@ ${GEM_LIBDIR}/spec/unit/resource/file/verification_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/file_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/freebsd_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/gem_package_spec.rb
-${GEM_LIBDIR}/spec/unit/resource/git_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/group_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/helpers/cron_validations_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/homebrew_cask_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/homebrew_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/homebrew_tap_spec.rb
@@ -1965,6 +1991,7 @@ ${GEM_LIBDIR}/spec/unit/resource/package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/pacman_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/paludis_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/perl_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/plist_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/portage_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/powershell_package_source_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/powershell_package_spec.rb
@@ -1984,14 +2011,15 @@ ${GEM_LIBDIR}/spec/unit/resource/route_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/rpm_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/ruby_block_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/ruby_spec.rb
-${GEM_LIBDIR}/spec/unit/resource/scm_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/scm/git_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/scm/scm.rb
+${GEM_LIBDIR}/spec/unit/resource/scm/subversion_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/script_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/service_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/smartos_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/snap_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/solaris_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/ssh_known_hosts_entry_spec.rb
-${GEM_LIBDIR}/spec/unit/resource/subversion_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/sudo_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/swap_file_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/sysctl_spec.rb
@@ -1999,6 +2027,7 @@ ${GEM_LIBDIR}/spec/unit/resource/systemd_unit_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/template_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/timezone_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/user_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/user_ulimit_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/windows_ad_join_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/windows_auto_run_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/windows_certificate_spec.rb
