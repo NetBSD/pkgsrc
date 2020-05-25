@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/05/19 22:23:16 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/25 17:53:21 he Exp $
 
 DISTNAME=	rust-1.42.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
@@ -123,30 +124,33 @@ fix-darwin-install-name:
 .else
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
+# ld.elf_so in NetBSD 8.x only obeys RPATH, not RUNPATH, so force RPATH there.
+FORCE_RPATH=
 # The llvm utilities need a specific libstdc++ version from compat80
 .  if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-8].*)
 RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
 .  else
 RUST_LLVM_RPATH=	${PREFIX}/lib
+FORCE_RPATH=	--force-rpath
 .  endif
 
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
 .  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
-	${PREFIX}/bin/patchelf --set-rpath \
+	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
 		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
 .  endfor
 .  for bin in llvm-ar llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
 		llvm-readobj llvm-size llvm-strip
-	${PREFIX}/bin/patchelf --set-rpath ${RUST_LLVM_RPATH} \
+	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 		${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .  endfor
 .  for lib in lib lib/rustlib/${RUST_ARCH}/lib \
 		lib/rustlib/${RUST_ARCH}/codegen-backends
 	for f in ${DESTDIR}${PREFIX}/${lib}/lib*.so; do			\
 		[ ! -f $$f ] && continue;				\
-		${PREFIX}/bin/patchelf --set-rpath ${PREFIX}/lib $$f;	\
+		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${PREFIX}/lib $$f;	\
 	done
 .  endfor
 .endif
