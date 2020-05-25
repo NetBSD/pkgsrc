@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2019/04/25 07:50:40 maya Exp $
+# $NetBSD: Makefile.common,v 1.28 2020/05/25 05:30:31 rillig Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -64,6 +64,14 @@ OSDEST.Linux=	linux
 OSDEST.NetBSD=	bsd
 
 MOZC_BUILD_MODE=	Release # or Debug
+
+# In file included from src/dictionary/system/system_dictionary.h:43:0,
+#                  from ../../dictionary/system/system_dictionary.cc:47:
+# src/dictionary/system/key_expansion_table.h: In member function 'const mozc::dictionary::ExpandedKey mozc::dictionary::KeyExpansionTable::ExpandKey(char) const':
+# src/dictionary/system/key_expansion_table.h:83:34: error: array subscript has type 'char' [-Werror=char-subscripts]
+#      return ExpandedKey(table_[key]);
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
