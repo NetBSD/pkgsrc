@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/02/16 21:08:14 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/25 05:40:03 rillig Exp $
 
 DISTNAME=	gsutil-4.47
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://cloud.google.com/storage/docs/gsutil
 COMMENT=	Command line tool for interacting with cloud storage services
 LICENSE=	apache-2.0
 
-REPLACE_PYTHON+=	test/gsutil_measure_imports
 REPLACE_PYTHON+=	gslib/vendored/boto/boto/pyami/launch_ami.py
 REPLACE_PYTHON+=	gslib/vendored/boto/boto/services/bs.py
 REPLACE_PYTHON+=	gslib/vendored/boto/tests/fps/test.py
