@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1333 2020/05/21 07:33:33 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1334 2020/05/25 11:55:51 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -965,7 +965,6 @@ SUBDIR+=	wmpload
 SUBDIR+=	wol
 SUBDIR+=	wpa_gui
 SUBDIR+=	wpa_supplicant
-SUBDIR+=	wu-ftpd
 SUBDIR+=	x2vnc
 SUBDIR+=	xfce4-wavelan-plugin
 SUBDIR+=	xipdump
