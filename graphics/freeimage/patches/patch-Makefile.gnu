@@ -1,22 +1,12 @@
-$NetBSD: patch-Makefile.gnu,v 1.1 2020/05/14 16:42:14 nia Exp $
+$NetBSD: patch-Makefile.gnu,v 1.2 2020/05/25 12:24:37 nia Exp $
 
-- Use pkgsrc directories.
-- Link with CXX for libstdc++.
 - Unbundle image libraries.
+- Link with CXX for libstdc++.
+- Fix installation.
 
 --- Makefile.gnu.orig	2015-03-10 09:04:00.000000000 +0000
 +++ Makefile.gnu
-@@ -5,14 +5,17 @@ include Makefile.srcs
- 
- # General configuration variables:
- DESTDIR ?= /
--INCDIR ?= $(DESTDIR)/usr/include
--INSTALLDIR ?= $(DESTDIR)/usr/lib
-+INCDIR ?= $(DESTDIR)/$(PREFIX)/include
-+INSTALLDIR ?= $(DESTDIR)/$(PREFIX)/lib
- 
- # Converts cr/lf to just lf
- DOS2UNIX = dos2unix
+@@ -13,6 +13,9 @@ DOS2UNIX = dos2unix
  
  LIBRARIES = -lstdc++
  

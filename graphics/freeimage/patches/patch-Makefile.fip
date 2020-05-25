@@ -1,0 +1,50 @@
+$NetBSD: patch-Makefile.fip,v 1.5 2020/05/25 12:24:37 nia Exp $
+
+- Unbundle image libraries.
+- Link with CXX for libstdc++.
+- Fix installation.
+
+--- Makefile.fip.orig	2015-03-10 09:03:56.000000000 +0000
++++ Makefile.fip
+@@ -13,6 +13,9 @@ DOS2UNIX = dos2unix
+ 
+ LIBRARIES = -lstdc++
+ 
++INCLUDE += $(shell pkg-config --cflags libjpeg OpenEXR libopenjp2 libraw libpng libtiff-4 libwebp libwebpmux zlib)
++LDFLAGS += $(shell pkg-config --libs libjpeg OpenEXR libopenjp2 libraw libpng libtiff-4 libwebp libwebpmux zlib)
++
+ MODULES = $(SRCS:.c=.o)
+ MODULES := $(MODULES:.cpp=.o)
+ CFLAGS ?= -O3 -fPIC -fexceptions -fvisibility=hidden
+@@ -28,10 +31,8 @@ CXXFLAGS ?= -O3 -fPIC -fexceptions -fvis
+ CXXFLAGS += -D__ANSI__
+ CXXFLAGS += $(INCLUDE)
+ 
+-ifeq ($(shell sh -c 'uname -m 2>/dev/null || echo not'),x86_64)
+-	CFLAGS += -fPIC
+-	CXXFLAGS += -fPIC
+-endif
++CFLAGS += -fPIC
++CXXFLAGS += -fPIC
+ 
+ TARGET  = freeimageplus
+ STATICLIB = lib$(TARGET).a
+@@ -68,14 +69,12 @@ $(STATICLIB): $(MODULES)
+ 	$(AR) r $@ $(MODULES)
+ 
+ $(SHAREDLIB): $(MODULES)
+-	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
++	$(CXX) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
+ 
+ install:
+-	install -d $(INCDIR) $(INSTALLDIR)
+-	install -m 644 -o root -g root $(HEADER) $(INCDIR)
+-	install -m 644 -o root -g root $(HEADERFIP) $(INCDIR)
+-	install -m 644 -o root -g root $(STATICLIB) $(INSTALLDIR)
+-	install -m 755 -o root -g root $(SHAREDLIB) $(INSTALLDIR)
++	$(BSD_INSTALL_DATA) $(HEADERFIP) $(INCDIR)
++	$(BSD_INSTALL_LIB) $(STATICLIB) $(INSTALLDIR)
++	$(BSD_INSTALL_LIB) $(SHAREDLIB) $(INSTALLDIR)
+ 	ln -sf $(SHAREDLIB) $(INSTALLDIR)/$(VERLIBNAME)
+ 	ln -sf $(VERLIBNAME) $(INSTALLDIR)/$(LIBNAME)	
+ 
