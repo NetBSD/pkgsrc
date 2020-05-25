@@ -1,13 +1,13 @@
-$NetBSD: patch-configure.seed,v 1.4 2019/07/12 09:33:22 adam Exp $
+$NetBSD: patch-configure.seed,v 1.5 2020/05/25 20:26:51 adam Exp $
 
 Portability fix.
 Detect system hiredis.
 Link against dynamkc libndpi (-Bstatic is not portable).
 On Darwin, install into man/.
 
---- configure.seed.orig	2018-12-21 18:14:10.000000000 +0000
+--- configure.seed.orig	2020-03-27 16:51:24.000000000 +0000
 +++ configure.seed
-@@ -75,7 +75,7 @@ fi
+@@ -89,7 +89,7 @@ fi
  
  if [ test -f /usr/bin/lsb_release ]; then
     CODENAME=`/usr/bin/lsb_release -c|cut -f 2`
@@ -16,17 +16,17 @@ On Darwin, install into man/.
       CPPFLAGS="${CPPFLAGS} -DOLD_NETFILTER_INTERFACE=1"
     fi
  fi
-@@ -130,8 +130,7 @@ fi
+@@ -133,8 +133,7 @@ AC_ARG_WITH(ndpi-includes,
  
  PKG_CHECK_MODULES([NDPI], [libndpi >= 2.0], [
-    NDPI_INC=`echo $NDPI_CFLAGS | sed -e "s/[ ]*$//"`/libndpi
+    NDPI_INC=`echo $NDPI_CFLAGS | sed -e "s/[ ]*$//"`
 -   # Use static libndpi library as building against the dynamic library fails
 -   NDPI_LIB="-Wl,-Bstatic $NDPI_LIBS -Wl,-Bdynamic"
 +   NDPI_LIB="$NDPI_LIBS"
     NDPI_LIB_DEP=
     ], [
        AC_MSG_CHECKING(for nDPI source)
-@@ -285,7 +284,7 @@ fi
+@@ -332,7 +331,7 @@ fi
  
  DATE=`date +"%Y-%m-%d"`
  
@@ -35,7 +35,7 @@ On Darwin, install into man/.
   AC_DEFINE_UNQUOTED(HAVE_HIREDIS, 1, [Local hiredis package present])
   HIREDIS_INC="`pkg-config --cflags hiredis` -I/usr/include/hiredis"
   HIREDIS_LIB="`pkg-config --libs hiredis` -lhiredis"
-@@ -552,11 +551,7 @@ then
+@@ -629,11 +628,7 @@ then
   INSTALL_DIR=${ac_default_prefix}
  fi
  
