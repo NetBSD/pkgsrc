@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/02 16:25:22 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/25 05:35:35 rillig Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
@@ -34,6 +34,12 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/libexec/mh
 CONFIGURE_ARGS+=	--enable-jmandir=${PREFIX:Q}/${PKGMANDIR:Q}/ja_JP.EUC
 CONFIGURE_ARGS+=	--enable-apop=${PREFIX:Q}/etc/pop.auth
 CONFIGURE_ARGS+=	--enable-rpop
+
+# m_getfld.c: In function 'm_unknown':
+# m_getfld.c:683:9: error: array subscript has type 'char' [-Werror=char-subscripts]
+#   pat_map[*cp] = (unsigned char *)cp;
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS=	bin lib
 
