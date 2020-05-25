@@ -216,12 +216,12 @@ fd-small		Build smaller misc/fd package.
 ffcall			Support foreign function calls, to interface with other programming languages.
 ffi			Support foreign function interface, to interface with other programming languages.
 ffmpeg			Enable ffmpeg support.
+ffmpegthumbnailer	Enable ffmpeg thumbnailing support.
 fftw			Use the fftw library for Discrete Fourier Transforms.
 fftw-fortran		Enable Fortran support.
 filter-design		Adding filter_design capability.
 finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
-firefox3		Use firefox3 as gecko rendering engine.
 flac			Enable FLAC support.
 flambda			Enable Flambda optimisation passes
 floppyd			Use floppyd to access floppy device.
@@ -608,6 +608,7 @@ ocaml-tyxml		Enable OCaml-tyxml support
 ocamlgraph		Enable Ocamlgraph support.
 octave			Enable Octave support.
 odbc			Enable ODBC support.
+odf			Enable ODF support.
 official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
 ogg			Enable Ogg support.
 oggz			Enable Oggz support.
