@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3142 2020/05/24 21:52:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3143 2020/05/25 08:42:14 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5023,3 +5023,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.1.10 [rillig 2020-05-24]
 	Updated devel/bmake to 20200524 [nia 2020-05-24]
 	Updated pkgtools/libnbcompat to 20200524 [nia 2020-05-24]
+	Updated pkgtools/pkgin to 20.5.1 [jperkin 2020-05-25]
