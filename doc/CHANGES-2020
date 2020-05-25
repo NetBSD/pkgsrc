@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3149 2020/05/25 11:50:33 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3150 2020/05/25 11:56:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/krita to 4.2.9 [ryoon 2020-05-25]
 	Updated audio/adplay to 1.8.1 [fcambus 2020-05-25]
 	Removed mail/etpan [nia 2020-05-25]
+	Removed net/wu-ftpd [nia 2020-05-25]
