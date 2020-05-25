@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/30 19:46:01 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/25 05:36:38 rillig Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird60-${TB_VER}
@@ -17,6 +17,8 @@ USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
 MOZILLA_DIR=	# empty
 PLIST_SRC+=	${PLIST_SRC_DFLT}
+
+CHECK_PORTABILITY_SKIP+=	modules/pdfium/update.sh
 
 CONFIG_GUESS_OVERRIDE+=	comm/ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	comm/ldap/sdks/c-sdk/config/autoconf/config.sub
