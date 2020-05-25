@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3180 2020/05/25 17:48:49 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3181 2020/05/25 17:54:03 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5062,3 +5062,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libansilove to 1.2.3 [fcambus 2020-05-25]
 	Updated graphics/ansilove to 4.1.1 [fcambus 2020-05-25]
 	Updated www/netsurf to 3.10 [leot 2020-05-25]
+	Updated lang/rust-bin to 1.42.0nb1 [he 2020-05-25]
