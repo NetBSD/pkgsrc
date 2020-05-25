@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/25 14:28:41 taca Exp $
+
+SHA1 (rbpdf-font-1.19.1.gem) = 406a00ab229c382b429980dc6ff9904ac16196c4
+RMD160 (rbpdf-font-1.19.1.gem) = 8c8b00f49ded70c1f62848f5c45a7a7b59dd56a6
+SHA512 (rbpdf-font-1.19.1.gem) = e678df3b58f32f6670bd79e8ebed0856a5fdbab766c32c8667c80358f899625445e9f6829652f13b64d4c79c5af15dd3dde9849dfe86c4f14e45b8750e71e3b7
+Size (rbpdf-font-1.19.1.gem) = 9571840 bytes
