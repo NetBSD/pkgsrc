@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3177 2020/05/25 15:25:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3178 2020/05/25 17:09:21 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5059,3 +5059,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/ruby-actionpack-xml_parser version 2.0.1 [taca 2020-05-25]
 	Updated sysutils/ruby-facter to 4.0.23 [taca 2020-05-25]
 	Updated textproc/ruby-libxml to 3.2.0 [taca 2020-05-25]
+	Updated graphics/libansilove to 1.2.3 [fcambus 2020-05-25]
