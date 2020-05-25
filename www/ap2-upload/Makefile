@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/12/09 14:20:56 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/25 05:54:06 rillig Exp $
 
 DISTNAME=	mod_upload-0.8
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 APACHE_MODULE_NAME=	${DISTNAME:C/-.*//}.la
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_APXS2=	no
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
 CONFIGURE_ARGS+=	--with-php-config=${BUILDLINK_PREFIX.php}/bin/php-config
 USE_LIBTOOL=		yes

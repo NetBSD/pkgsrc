@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/05/16 17:31:52 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/25 05:54:05 rillig Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
@@ -47,7 +47,7 @@ SUBST_SED.jk-shlt=	-e "s|^\\(SH_LIBTOOL *=\\).*\$$|\\1 \$$(SHELL) \$$(top_buildd
 SUBST_MESSAGE.jk-shlt=	Fixing libtool references in install script.
 SUBST_NOOP_OK.jk-shlt=	yes
 
-# XXX The standard --with-apxs2 when using apache2 doesn't work
+GNU_CONFIGURE_APXS2=	no
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 
 .if defined(JK_ENABLE_JNI)
