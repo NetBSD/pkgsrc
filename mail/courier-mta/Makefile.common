@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2017/04/20 13:50:42 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.16 2020/05/25 05:33:59 rillig Exp $
 #
 # used by mail/courier-imap/Makefile
 # used by mail/courier-maildir/Makefile
@@ -35,9 +35,15 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${COURIER_STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-root-check
+.if ${PKGPATH} != mail/courier-maildir && ${PKGPATH} != net/couriertcpd
 CONFIGURE_ARGS+=	--enable-unicode
+.endif
+.if ${PKGPATH} != mail/courier-imap
 CONFIGURE_ARGS+=	--enable-utf7-folder-encoding
+.endif
+.if ${PKGPATH} != net/couriertcpd
 CONFIGURE_ARGS+=	--with-trashquota
+.endif
 
 USE_DB185=		yes
 CONFIGURE_ARGS+=	--with-db=db
