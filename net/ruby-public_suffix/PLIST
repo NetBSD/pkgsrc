@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/16 03:53:21 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/25 14:16:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/FUNDING.yml
+${GEM_LIBDIR}/.github/workflows/tests.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.rubocop_defaults.yml
+${GEM_LIBDIR}/.rubocop_opinionated.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/2.0-Upgrade.md
@@ -14,6 +15,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/codecov.yml
 ${GEM_LIBDIR}/data/list.txt
 ${GEM_LIBDIR}/lib/public_suffix.rb
 ${GEM_LIBDIR}/lib/public_suffix/domain.rb
