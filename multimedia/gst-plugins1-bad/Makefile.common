@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2020/01/10 12:47:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2020/05/25 04:50:45 rillig Exp $
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
 # used by audio/gst-plugins1-faad/Makefile
@@ -16,6 +16,9 @@ GST_PLUGINS1_TYPE=	bad
 GST_PLUGINS1_VER=	1.16.2
 
 # Disable all drivers and features by default.
+#
+# 2020-05-25: Needs to be synced with ./configure, which
+# has many more options that can be disabled.
 .for driver in	\
 		apple_media \
 		directfb \
@@ -31,7 +34,6 @@ GST_PLUGINS1_VER=	1.16.2
 		neon \
 		shm \
 		soundtouch \
-		vcd \
 		vdpau
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
