@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/25 14:06:14 taca Exp $
+
+SHA1 (roadie-4.0.0.gem) = 6e848992f791c6c1ff4fa80f872507c8924c321f
+RMD160 (roadie-4.0.0.gem) = 39f077fdcb3fc97bb17d86ff3c3ef77e1df9109a
+SHA512 (roadie-4.0.0.gem) = d8a45906c8c6905479c86c9a232d149b9a1fb337e9e6e12b41319df3b92e30ad8f5ffc7e305ff690534fb8fba2991fc6fec0bb7fdb7ed84950240cb2513ca861
+Size (roadie-4.0.0.gem) = 54784 bytes
