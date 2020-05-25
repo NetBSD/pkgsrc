@@ -1,0 +1,12 @@
+Ever needed to use a global variable in Rails? Ugh, that's the worst. If youq
+need global state, you've probably reached for Thread.current. Like this:
+
+    def self.foo
+      Thread.current[:foo] ||= 0
+    end
+
+    def self.foo=(value)
+      Thread.current[:foo] = value
+    end
+
+Ugh! I hate it. But you gotta do what you gotta do...

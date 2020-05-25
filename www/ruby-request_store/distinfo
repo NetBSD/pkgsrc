@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/25 14:40:23 taca Exp $
+
+SHA1 (request_store-1.5.0.gem) = 885c89acee5d7ee49804085090ff91d79babac8a
+RMD160 (request_store-1.5.0.gem) = d93bbff6e4f84f0f4ff5c1af794ce16bec109888
+SHA512 (request_store-1.5.0.gem) = c01d4505d2bc0b88456d0bc49416fcbea67da1e2ab6ef0c7fc900fae8856d82157dc39d2e1d2f299000f74b140f6f13d7352f4684e247d103bbaab7b1705910f
+Size (request_store-1.5.0.gem) = 9216 bytes
