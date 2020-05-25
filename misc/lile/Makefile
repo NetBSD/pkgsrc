@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/08 09:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/25 05:37:37 rillig Exp $
 
 DISTNAME=	lile-2.0
 PKGNAME=	ile-2.0
@@ -13,6 +13,13 @@ COMMENT=	Input Line Editor that wraps itself around programs
 NOT_FOR_PLATFORM=	Linux-*-*
 
 USE_TOOLS+=	gzcat
+
+# ile.c: In function 'delete_word':
+# ile.c:729:32: error: array subscript has type 'char' [-Werror=char-subscripts]
+#   for (; (point > 0) && (delimit[line[point - 1]]); point--)
+#                                 ^
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
