@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/10/07 08:51:42 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/25 05:29:32 rillig Exp $
 
 DISTNAME=	pyfits-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,8 +12,6 @@ LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-d2to1>=0.2.12:../../devel/py-d2to1
 BUILD_DEPENDS+=	${PYPKGPREFIX}-stsci.distutils>=0.3:../../devel/py-stsci.distutils
-
-REPLACE_PYTHON=	lib/pyfits/core.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
