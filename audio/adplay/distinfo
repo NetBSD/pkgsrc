@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/05/21 21:00:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/05/25 10:53:22 fcambus Exp $
 
-SHA1 (adplay-1.8.tar.bz2) = 68957c7fb7a7803b8e9d784faf4158dd3fdf9154
-RMD160 (adplay-1.8.tar.bz2) = 169817211acd91037e5ca44e80de4487c3a9eb39
-SHA512 (adplay-1.8.tar.bz2) = 6a82b10fa73ad9317303da03d2fcb1fa97772d850f3f78f53c554b9daaa9ae5d04bc2f0a1b1d25fd5d3a1eab073641d6fa0589070721612987d57762f03363c7
-Size (adplay-1.8.tar.bz2) = 333582 bytes
-SHA1 (patch-configure) = f8b33e56e1b29ee446628ba7ffc1ec8bcdfdc5cb
+SHA1 (adplay-1.8.1.tar.bz2) = beda2f2a351cbb9842780dadabaa066bdaf7003d
+RMD160 (adplay-1.8.1.tar.bz2) = ce8d3ce285992ad6056dd2d8b799727cc98cdbc2
+SHA512 (adplay-1.8.1.tar.bz2) = 5c3e09d89372c19dd098955ceb6d0315364421233da60f669b1a7e4337fca0fe1f1d54f3ec103d413aad3df9ac6bcfc1a2c2f136770d08b37ff9000954ee6c1c
+Size (adplay-1.8.1.tar.bz2) = 323128 bytes
