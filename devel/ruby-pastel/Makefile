@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/19 14:37:02 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/25 13:34:53 taca Exp $
 
-DISTNAME=	pastel-0.7.3
+DISTNAME=	pastel-0.7.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
