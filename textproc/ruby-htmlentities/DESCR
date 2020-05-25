@@ -1,0 +1,5 @@
+HTML entity encoding and decoding for Ruby
+
+HTMLEntities is a simple library to facilitate encoding and decoding
+of named (&yacute; and so on) or numerical (&#123; or &#x12a;)
+entities in HTML and XHTML documents.
