@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/25 14:30:15 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.TXT
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/core/mini_magick.rb
+${GEM_LIBDIR}/lib/core/rmagick.rb
+${GEM_LIBDIR}/lib/htmlcolors.rb
+${GEM_LIBDIR}/lib/rbpdf.rb
+${GEM_LIBDIR}/lib/rbpdf/version.rb
+${GEM_LIBDIR}/lib/unicode_data.rb
+${GEM_LIBDIR}/logo_example.png
+${GEM_LIBDIR}/rbpdf.gemspec
+${GEM_LIBDIR}/test_unicode.rbpdf
+${GEM_LIBDIR}/utf8test.txt
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
