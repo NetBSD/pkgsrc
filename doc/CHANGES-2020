@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3168 2020/05/25 14:41:56 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3169 2020/05/25 14:54:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5050,3 +5050,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/ruby-rbpdf version 1.20.1 [taca 2020-05-25]
 	Added textproc/ruby-csv version 3.1.5 [taca 2020-05-25]
 	Added www/ruby-request_store version 1.5.0 [taca 2020-05-25]
+	Updated sysutils/puppet to 6.15.0 [taca 2020-05-25]
