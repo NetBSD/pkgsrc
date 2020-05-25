@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/04/12 08:28:46 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/25 14:14:37 gdt Exp $
 #
 
 DISTNAME=	gpsbabel-1.6.0
@@ -37,6 +37,7 @@ LIBS.Darwin+=	-lexpat
 #    va_start(args, fmt);
 #                       ^
 
+# gpsbabel 1.6.0 really does need libusb 0.1, and uses usb_interrupt_read
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
