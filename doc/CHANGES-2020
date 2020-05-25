@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3165 2020/05/25 14:23:43 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3166 2020/05/25 14:32:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5046,3 +5046,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-mimemagic to 0.3.5 [taca 2020-05-25]
 	Updated net/ruby-public_suffix to 4.0.5 [taca 2020-05-25]
 	Added textproc/ruby-htmlentities version 4.3.4 [taca 2020-05-25]
+	Added print/ruby-rbpdf-font version 1.19.1 [taca 2020-05-25]
+	Added print/ruby-rbpdf version 1.20.1 [taca 2020-05-25]
