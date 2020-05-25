@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3154 2020/05/25 13:35:18 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3155 2020/05/25 13:43:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5035,3 +5035,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-google-protobuf to 3.12.1 [taca 2020-05-25]
 	Updated devel/ruby-minitest to 5.14.1 [taca 2020-05-25]
 	Updated devel/ruby-pastel to 0.7.4 [taca 2020-05-25]
+	Updated devel/ruby-posix-spawn to 0.3.14 [taca 2020-05-25]
