@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3152 2020/05/25 13:31:59 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3153 2020/05/25 13:33:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5033,3 +5033,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed net/wu-ftpd [nia 2020-05-25]
 	Updated devel/ruby-backports to 3.17.2 [taca 2020-05-25]
 	Updated devel/ruby-google-protobuf to 3.12.1 [taca 2020-05-25]
+	Updated devel/ruby-minitest to 5.14.1 [taca 2020-05-25]
