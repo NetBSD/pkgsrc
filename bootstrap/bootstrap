@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.279 2020/05/06 15:34:31 jperkin Exp $
+# $NetBSD: bootstrap,v 1.280 2020/05/25 07:32:59 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1003,10 +1003,8 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 	# Clang pretends to be GCC, so we have to check it first.
 	if [ $compiler_is_clang -gt 0 ]; then
 		compiler="clang"
-		test -n "$CC" || CC=clang
 	elif [ $compiler_is_gnu -gt 0 ]; then
 		compiler="gcc"
-		test -n "$CC" || CC=gcc
 	else
 		case "$opsys" in
 		IRIX)
@@ -1015,14 +1013,21 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 			else
 				compiler="ido"
 			fi
-			test -n "$CC" || CC=cc
 			;;
 		SunOS)	compiler="sunpro"
-			test -n "$CC" || CC=cc
 			;;
 		esac
 	fi
 fi
+
+case "$compiler" in
+clang|gcc)
+	test -n "$CC" || CC=$compiler
+	;;
+*)
+	test -n "$CC" || CC=cc
+	;;
+esac
 
 has_ssp_support() {
 	mkdir_p_early ${wrkdir}/tmp
@@ -1237,7 +1242,6 @@ run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C 
 case "$need_ksh" in
 yes)	echo_msg "Bootstrapping ksh"
 	copy_src $pkgsrcdir/shells/pdksh/files ksh
-	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
 	run_cmd "(cd $wrkdir/ksh && env $BSTRAP_ENV $shprog ./configure $configure_quiet_flags --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags -j$make_jobs)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/ksh/ksh $wrkdir/bin/pdksh"
 	echo "TOOLS_PLATFORM.sh?=		$prefix/bin/pdksh" >> ${TARGET_MKCONF}
@@ -1255,7 +1259,6 @@ esac
 case "$need_awk" in
 yes)	echo_msg "Bootstrapping awk"
 	copy_src $pkgsrcdir/lang/nawk/files awk
-	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
 	run_cmd "(cd $wrkdir/awk && $bmake $make_quiet_flags -j$make_jobs -f Makefile CC=\"${CC}\" CFLAGS=\"${CFLAGS}\")"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $wrkdir/bin/nawk"
 	echo "TOOLS_PLATFORM.awk?=		$prefix/bin/nawk" >> ${TARGET_MKCONF}
