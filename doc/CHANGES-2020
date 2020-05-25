@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3181 2020/05/25 17:54:03 he Exp $
+$NetBSD: CHANGES-2020,v 1.3182 2020/05/25 20:28:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5063,3 +5063,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ansilove to 4.1.1 [fcambus 2020-05-25]
 	Updated www/netsurf to 3.10 [leot 2020-05-25]
 	Updated lang/rust-bin to 1.42.0nb1 [he 2020-05-25]
+	Updated net/ndpi to 3.2 [adam 2020-05-25]
+	Updated net/ntopng to 4.0 [adam 2020-05-25]
