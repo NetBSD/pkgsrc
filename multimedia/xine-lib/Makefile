@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2020/05/22 10:56:25 adam Exp $
+# $NetBSD: Makefile,v 1.162 2020/05/25 07:47:55 rillig Exp $
 
 PKGREVISION=	3
 
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--disable-vaapi
 CONFIGURE_ARGS+=	--disable-vidix
 CONFIGURE_ARGS+=	--disable-xvmc
 
-CONFIGURE_ARGS+=	--with-a52dec=internal
 CONFIGURE_ARGS+=	--without-dav1d
 CONFIGURE_ARGS+=	--without-esound
 
