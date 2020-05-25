@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/03/24 18:27:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2020/05/25 14:53:31 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -393,6 +393,7 @@ ${GEM_LIBDIR}/lib/puppet/graph/simple_graph.rb
 ${GEM_LIBDIR}/lib/puppet/http.rb
 ${GEM_LIBDIR}/lib/puppet/http/client.rb
 ${GEM_LIBDIR}/lib/puppet/http/errors.rb
+${GEM_LIBDIR}/lib/puppet/http/external_client.rb
 ${GEM_LIBDIR}/lib/puppet/http/redirector.rb
 ${GEM_LIBDIR}/lib/puppet/http/resolver.rb
 ${GEM_LIBDIR}/lib/puppet/http/resolver/server_list.rb
@@ -1105,6 +1106,17 @@ ${GEM_LIBDIR}/lib/puppet/util/network_device/config.rb
 ${GEM_LIBDIR}/lib/puppet/util/network_device/transport.rb
 ${GEM_LIBDIR}/lib/puppet/util/network_device/transport/base.rb
 ${GEM_LIBDIR}/lib/puppet/util/package.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/debian.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/gem.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/pip.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/range.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/range/gt.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/range/gt_eq.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/range/lt.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/range/lt_eq.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/range/min_max.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/range/simple.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/rpm.rb
 ${GEM_LIBDIR}/lib/puppet/util/pidlock.rb
 ${GEM_LIBDIR}/lib/puppet/util/platform.rb
 ${GEM_LIBDIR}/lib/puppet/util/plist.rb
@@ -1127,6 +1139,7 @@ ${GEM_LIBDIR}/lib/puppet/util/rdoc/parser/puppet_parser_rdoc2.rb
 ${GEM_LIBDIR}/lib/puppet/util/reference.rb
 ${GEM_LIBDIR}/lib/puppet/util/resource_template.rb
 ${GEM_LIBDIR}/lib/puppet/util/retry_action.rb
+${GEM_LIBDIR}/lib/puppet/util/rpm_compare.rb
 ${GEM_LIBDIR}/lib/puppet/util/rubygems.rb
 ${GEM_LIBDIR}/lib/puppet/util/run_mode.rb
 ${GEM_LIBDIR}/lib/puppet/util/selinux.rb
@@ -1269,6 +1282,10 @@ ${GEM_LIBDIR}/spec/fixtures/ssl/signed-key.pem
 ${GEM_LIBDIR}/spec/fixtures/ssl/signed.pem
 ${GEM_LIBDIR}/spec/fixtures/ssl/tampered-cert.pem
 ${GEM_LIBDIR}/spec/fixtures/ssl/tampered-csr.pem
+${GEM_LIBDIR}/spec/fixtures/ssl/unknown-127.0.0.1-key.pem
+${GEM_LIBDIR}/spec/fixtures/ssl/unknown-127.0.0.1.pem
+${GEM_LIBDIR}/spec/fixtures/ssl/unknown-ca-key.pem
+${GEM_LIBDIR}/spec/fixtures/ssl/unknown-ca.pem
 ${GEM_LIBDIR}/spec/fixtures/stdlib.tgz
 ${GEM_LIBDIR}/spec/fixtures/unit/application/environments/production/data/common.yaml
 ${GEM_LIBDIR}/spec/fixtures/unit/application/environments/production/environment.conf
@@ -1538,7 +1555,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/provider/cron/crontab/single_line.yaml
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/cron/crontab/vixie_header.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/cron/parsed/managed
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/cron/parsed/simple
-${GEM_LIBDIR}/spec/fixtures/unit/provider/package/dnfmodule/dnf-module-list-installed.txt
+${GEM_LIBDIR}/spec/fixtures/unit/provider/package/dnfmodule/dnf-module-list-enabled.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/gem/gem-list-single-package
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/gem/line-with-1.8.5-warning
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/openbsd/pkginfo.detail
@@ -1566,6 +1583,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/yum/yum-check-update-obsoletes
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/yum/yum-check-update-plugin-output.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/yum/yum-check-update-security.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/yum/yum-check-update-simple.txt
+${GEM_LIBDIR}/spec/fixtures/unit/provider/package/yum/yum-check-update-subscription-manager.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/zypper/zypper-list-updates-SLES11sp1.out
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/zypper/zypper-list-updates-empty.out
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/parsedfile/aliases.txt
@@ -1600,9 +1618,12 @@ ${GEM_LIBDIR}/spec/fixtures/vcr/cassettes/Puppet_Type_File/when_sourcing/from_ht
 ${GEM_LIBDIR}/spec/fixtures/yaml/report2.6.x.yaml
 ${GEM_LIBDIR}/spec/fixtures/yaml/test.local.yaml
 ${GEM_LIBDIR}/spec/integration/agent/logging_spec.rb
+${GEM_LIBDIR}/spec/integration/application/agent_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/apply_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/doc_spec.rb
+${GEM_LIBDIR}/spec/integration/application/filebucket_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/lookup_spec.rb
+${GEM_LIBDIR}/spec/integration/application/plugin_spec.rb
 ${GEM_LIBDIR}/spec/integration/configurer_spec.rb
 ${GEM_LIBDIR}/spec/integration/data_binding_spec.rb
 ${GEM_LIBDIR}/spec/integration/defaults_spec.rb
@@ -1613,7 +1634,6 @@ ${GEM_LIBDIR}/spec/integration/environments/settings_interpolation_spec.rb
 ${GEM_LIBDIR}/spec/integration/environments/settings_spec.rb
 ${GEM_LIBDIR}/spec/integration/faces/config_spec.rb
 ${GEM_LIBDIR}/spec/integration/faces/documentation_spec.rb
-${GEM_LIBDIR}/spec/integration/faces/plugin_spec.rb
 ${GEM_LIBDIR}/spec/integration/file_bucket/file_spec.rb
 ${GEM_LIBDIR}/spec/integration/file_serving/content_spec.rb
 ${GEM_LIBDIR}/spec/integration/file_serving/fileset_spec.rb
@@ -1626,6 +1646,7 @@ ${GEM_LIBDIR}/spec/integration/indirector/direct_file_server_spec.rb
 ${GEM_LIBDIR}/spec/integration/indirector/facts/facter_spec.rb
 ${GEM_LIBDIR}/spec/integration/indirector/file_content/file_server_spec.rb
 ${GEM_LIBDIR}/spec/integration/indirector/file_metadata/file_server_spec.rb
+${GEM_LIBDIR}/spec/integration/indirector/report/yaml.rb
 ${GEM_LIBDIR}/spec/integration/module_tool/forge_spec.rb
 ${GEM_LIBDIR}/spec/integration/module_tool/tar/mini_spec.rb
 ${GEM_LIBDIR}/spec/integration/network/authconfig_spec.rb
@@ -1714,6 +1735,7 @@ ${GEM_LIBDIR}/spec/lib/puppet_spec/module_tool/stub_source.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/modules.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/network.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/pops.rb
+${GEM_LIBDIR}/spec/lib/puppet_spec/puppetserver.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/scope.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/settings.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/ssl.rb
@@ -1733,6 +1755,7 @@ ${GEM_LIBDIR}/spec/shared_behaviours/store_configs_terminus.rb
 ${GEM_LIBDIR}/spec/shared_behaviours/things_that_declare_options.rb
 ${GEM_LIBDIR}/spec/shared_contexts/checksum.rb
 ${GEM_LIBDIR}/spec/shared_contexts/digests.rb
+${GEM_LIBDIR}/spec/shared_contexts/https.rb
 ${GEM_LIBDIR}/spec/shared_contexts/types_setup.rb
 ${GEM_LIBDIR}/spec/shared_examples/rhel_package_provider.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
@@ -1910,6 +1933,7 @@ ${GEM_LIBDIR}/spec/unit/graph/simple_graph_spec.rb
 ${GEM_LIBDIR}/spec/unit/hiera/scope_spec.rb
 ${GEM_LIBDIR}/spec/unit/hiera_puppet_spec.rb
 ${GEM_LIBDIR}/spec/unit/http/client_spec.rb
+${GEM_LIBDIR}/spec/unit/http/external_client_spec.rb
 ${GEM_LIBDIR}/spec/unit/http/resolver_spec.rb
 ${GEM_LIBDIR}/spec/unit/http/response_spec.rb
 ${GEM_LIBDIR}/spec/unit/http/service/ca_spec.rb
@@ -2386,6 +2410,10 @@ ${GEM_LIBDIR}/spec/unit/util/multi_match_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/network_device/config_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/network_device/transport/base_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/network_device_spec.rb
+${GEM_LIBDIR}/spec/unit/util/package/version/debian_spec.rb
+${GEM_LIBDIR}/spec/unit/util/package/version/pip_spec.rb
+${GEM_LIBDIR}/spec/unit/util/package/version/range_spec.rb
+${GEM_LIBDIR}/spec/unit/util/package/version/rpm_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/package_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/pidlock_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/plist_spec.rb
@@ -2400,6 +2428,7 @@ ${GEM_LIBDIR}/spec/unit/util/rdoc_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/reference_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/resource_template_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/retry_action_spec.rb
+${GEM_LIBDIR}/spec/unit/util/rpm_compare_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/rubygems_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/run_mode_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/selinux_spec.rb
