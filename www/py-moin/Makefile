@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/02/27 16:42:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.41 2020/05/25 05:56:18 rillig Exp $
 
 VER=		1.9.10
 DISTNAME=	moin-${VER}
@@ -29,9 +29,6 @@ REPLACE_PYTHON=	jabberbot/bot.py \
 		MoinMoin/script/migration/1059999.py \
 		MoinMoin/script/migration/1089999.py \
 		MoinMoin/script/old/migration/*.py \
-		MoinMoin/support/difflib.py \
-		MoinMoin/support/tarfile.py \
-		MoinMoin/support/parsedatetime/*.py \
 		MoinMoin/support/xappy/*.py \
 		MoinMoin/web/static/htdocs/applets/FCKeditor/editor/filemanager/connectors/py/*.py \
 		wiki/server/moin* \
