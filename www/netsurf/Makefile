@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2020/05/22 10:56:45 adam Exp $
+# $NetBSD: Makefile,v 1.91 2020/05/25 17:48:36 leot Exp $
 
-DISTNAME=	netsurf-all-3.9
+DISTNAME=	netsurf-all-3.10
 PKGNAME=	${DISTNAME:S/-all//}
-PKGREVISION=	9
 CATEGORIES=	www
 MASTER_SITES=	https://download.netsurf-browser.org/netsurf/releases/source-full/
 
@@ -18,13 +17,13 @@ BUILD_DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 BUILD_TARGET=	build
 USE_TOOLS+=	bison flex gmake perl:build pax pkg-config
 
-MAKE_FLAGS+=	NETSURF_GTK_MAJOR=3
+MAKE_FLAGS+=	TARGET=gtk3
 
 SUBST_CLASSES+=			ssl-certs
 SUBST_STAGE.ssl-certs=		pre-configure
 SUBST_MESSAGE.ssl-certs=	Fixing hardcoded paths for SSL certs
 SUBST_FILES.ssl-certs=		netsurf/frontends/beos/gui.cpp
-SUBST_FILES.ssl-certs+=		netsurf/frontends/gtk/gui.c
+SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices
 SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices-all
 SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices-full
 SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices-short

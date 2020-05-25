@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2019/09/12 18:41:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/05/25 17:48:36 leot Exp $
 bin/netsurf-gtk3
 share/applications/netsurf-gtk.desktop
 share/netsurf/Messages
 share/netsurf/SearchEngines
 share/netsurf/adblock.css
-share/netsurf/arrow_down_8x32.png
 share/netsurf/ca-bundle.txt
 share/netsurf/cookies.gtk3.ui
 share/netsurf/credits.html
@@ -16,7 +15,6 @@ share/netsurf/downloads.gtk3.ui
 share/netsurf/en/Messages
 share/netsurf/en/credits.html
 share/netsurf/en/licence.html
-share/netsurf/en/maps.html
 share/netsurf/en/welcome.html
 share/netsurf/favicon.png
 share/netsurf/fr/Messages
@@ -28,7 +26,9 @@ share/netsurf/icons/directory.png
 share/netsurf/icons/directory2.png
 share/netsurf/icons/hotlist-add.png
 share/netsurf/icons/hotlist-rmv.png
+share/netsurf/icons/local-history.png
 share/netsurf/icons/search.png
+share/netsurf/icons/show-cookie.png
 share/netsurf/internal.css
 share/netsurf/it/Messages
 share/netsurf/it/credits.html
@@ -38,8 +38,6 @@ share/netsurf/ja/welcome.html
 share/netsurf/languages
 share/netsurf/licence.html
 share/netsurf/localhistory.gtk3.ui
-share/netsurf/login.gtk3.ui
-share/netsurf/maps.html
 share/netsurf/netsurf-16x16.xpm
 share/netsurf/netsurf.gtk3.ui
 share/netsurf/netsurf.png
@@ -49,9 +47,9 @@ share/netsurf/nl/credits.html
 share/netsurf/nl/licence.html
 share/netsurf/nl/welcome.html
 share/netsurf/options.gtk3.ui
+share/netsurf/pageinfo.gtk3.ui
 share/netsurf/password.gtk3.ui
 share/netsurf/quirks.css
-share/netsurf/ssl.gtk3.ui
 share/netsurf/tabcontents.gtk3.ui
 share/netsurf/throbber/throbber0.png
 share/netsurf/throbber/throbber1.png
