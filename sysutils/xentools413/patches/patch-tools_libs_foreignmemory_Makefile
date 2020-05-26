@@ -1,0 +1,12 @@
+$NetBSD: patch-tools_libs_foreignmemory_Makefile,v 1.1 2020/05/26 11:12:11 bouyer Exp $
+--- tools/libs/foreignmemory/Makefile.orig	2020-05-25 17:33:42.184858531 +0200
++++ tools/libs/foreignmemory/Makefile	2020-05-25 17:33:49.531799991 +0200
+@@ -10,7 +10,7 @@
+ SRCS-$(CONFIG_Linux)   += linux.c
+ SRCS-$(CONFIG_FreeBSD) += freebsd.c
+ SRCS-$(CONFIG_SunOS)   += compat.c solaris.c
+-SRCS-$(CONFIG_NetBSD)  += compat.c netbsd.c
++SRCS-$(CONFIG_NetBSD)  += netbsd.c
+ SRCS-$(CONFIG_MiniOS)  += minios.c
+ 
+ include $(XEN_ROOT)/tools/libs/libs.mk
