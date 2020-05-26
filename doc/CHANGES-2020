@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3189 2020/05/26 11:11:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3190 2020/05/26 11:15:55 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5071,4 +5071,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/libarchive to 3.4.3 [nia 2020-05-26]
 	Updated archivers/bsdtar to 3.4.3 [nia 2020-05-26]
 	Updated textproc/bat to 0.15.3 [fox 2020-05-26]
+	Added sysutils/xenkernel413 version 4.13.1 [bouyer 2020-05-26]
+	Added sysutils/xentools413 version 4.13.1 [bouyer 2020-05-26]
 	Updated chat/srain to 1.1.0 [nia 2020-05-26]
