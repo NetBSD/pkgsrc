@@ -1,4 +1,4 @@
-$NetBSD: patch-airprint-scheduler_dirsvc.c,v 1.1 2018/07/24 12:19:21 bouyer Exp $
+$NetBSD: patch-airprint-scheduler_dirsvc.c,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 From bbc3507a260d29db3fc5601826f33c10f9dccd1e Mon Sep 17 00:00:00 2001
 From: Till Kamppeter <till.kamppeter@gmail.com>
@@ -25,7 +25,7 @@ diff --git a/scheduler/dirsvc.c b/scheduler/dirsvc.c
 index 3dab90ca9..f21942af3 100644
 --- scheduler/dirsvc.c.orig
 +++ scheduler/dirsvc.c
-@@ -443,6 +443,12 @@ dnssdBuildTxtRecord(
+@@ -440,6 +440,12 @@ dnssdBuildTxtRecord(
      keyvalue[count  ][0] = "pdl";
      keyvalue[count++][1] = p->pdl ? p->pdl : "application/postscript";
  

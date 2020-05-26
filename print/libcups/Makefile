@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2020/05/22 10:55:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/26 08:36:56 triaxx Exp $
 
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	libcups-${CUPS_VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 
 MAINTAINER=	sbd@NetBSD.org
@@ -40,6 +40,8 @@ CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+BUILD_DEFS+=		VARBASE
+
 # Explicitly disable epoll on illumos, it is provided for Linux compat only.
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_create=no
 
@@ -53,7 +55,7 @@ BUILDLINK_TRANSFORM.FreeBSD+=	rm:-Wl,-pie
 PKG_SYSCONFSUBDIR=	cups
 CUPS_CACHE=		${VARBASE}/cache/cups
 
-.if !empty(OPSYS:MNetBSD) && !empty(MACHINE_ARCH:Mpowerpc)
+.if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == powerpc
 SUBST_CLASSES+=		piefix
 SUBST_FILES.piefix=	Makedefs.in
 SUBST_MESSAGE.piefix=	Removing PIE flags

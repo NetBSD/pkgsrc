@@ -1,10 +1,10 @@
-$NetBSD: patch-config-scripts_cups-libtool.m4,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-config-scripts_cups-libtool.m4,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 Fix non-portable `==' test(1) operator.
 
 --- config-scripts/cups-libtool.m4.orig	2017-10-13 18:22:26.000000000 +0000
 +++ config-scripts/cups-libtool.m4
-@@ -14,7 +14,7 @@ dnl
+@@ -10,7 +10,7 @@ dnl
  AC_ARG_ENABLE(libtool_unsupported, [  --enable-libtool-unsupported=/path/to/libtool
                            build with libtool (UNSUPPORTED!)],
  	[if test x$enable_libtool_unsupported != xno; then
