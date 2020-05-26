@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/07/05 07:43:42 nia Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/26 09:45:15 nia Exp $
 
 DISTNAME=	libretro-mupen64plus-20190426
 CATEGORIES=	emulators
@@ -11,9 +11,13 @@ HOMEPAGE=	https://docs.libretro.com/library/mupen64plus/
 COMMENT=	Libretro core based on the Mupen64Plus emulator
 LICENSE=	gnu-gpl-v3
 
-EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 SUBST_CLASSES+=		vc
 SUBST_STAGE.vc=		pre-configure

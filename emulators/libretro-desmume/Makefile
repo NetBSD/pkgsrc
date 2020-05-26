@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/05/20 10:32:32 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/26 09:45:14 nia Exp $
 
 DISTNAME=	libretro-desmume-20190426
 PKGREVISION=	2
@@ -12,11 +12,15 @@ HOMEPAGE=	https://docs.libretro.com/library/desmume/
 COMMENT=	Libretro core based on the DeSmuME Nintendo DS emulator
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	bsdtar
 BUILD_DIRS=	desmume/src/frontend/libretro
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c99 gnu++11
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../mk/bsd.prefs.mk"
 

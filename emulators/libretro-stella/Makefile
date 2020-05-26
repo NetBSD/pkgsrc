@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/18 12:27:37 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/26 09:45:16 nia Exp $
 
 .include "../../emulators/stella/Makefile.common"
 
@@ -11,6 +11,11 @@ COMMENT=	Libretro core based on the Stella Atari 2600 (VCS) emulator
 BUILD_DIRS=	src/libretro
 
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-${PKGVERSION_NOREV}-pkgsrc"
 MAKE_FLAGS+=	LTO=

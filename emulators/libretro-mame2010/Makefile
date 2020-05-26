@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/01/02 13:24:29 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/26 09:45:15 nia Exp $
 
 DISTNAME=	libretro-mame2010-20180417
 CATEGORIES=	emulators
@@ -11,9 +11,13 @@ HOMEPAGE=	https://docs.libretro.com/library/mame_2010/
 COMMENT=	Libretro core based on the MAME 0.139 arcade game emulator
 LICENSE=	mame-license
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	platform=unix
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
