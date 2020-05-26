@@ -1,0 +1,13 @@
+$NetBSD: patch-docs_man_xl-disk-configuration.5.pod,v 1.1 2020/05/26 11:12:11 bouyer Exp $
+
+--- docs/man/xl-disk-configuration.5.pod.orig	2018-04-23 16:19:11.000000000 +0200
++++ docs/man/xl-disk-configuration.5.pod	2018-04-23 16:19:41.000000000 +0200
+@@ -257,7 +257,7 @@
+ 
+ Specifies that B<target> is not a normal host path, but rather
+ information to be interpreted by the executable program I<SCRIPT>,
+-(looked for in F</etc/xen/scripts>, if it doesn't contain a slash).
++(looked for in F<@XENDCONFDIR@/scripts>, if it doesn't contain a slash).
+ 
+ These scripts are normally called "block-I<SCRIPT>".
+ 

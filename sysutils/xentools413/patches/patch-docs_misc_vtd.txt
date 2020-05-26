@@ -1,0 +1,22 @@
+$NetBSD: patch-docs_misc_vtd.txt,v 1.1 2020/05/26 11:12:11 bouyer Exp $
+
+--- docs/misc/vtd.txt.orig	2020-05-08 16:46:26.400241453 +0200
++++ docs/misc/vtd.txt	2020-05-08 16:46:50.253734556 +0200
+@@ -39,7 +39,7 @@
+             echo -n 0000:01:00.0 >/sys/bus/pci/drivers/pciback/bind
+ 
+ 12) reboot system (not requires if you use the dynamic hiding method)
+-13) add "pci" line in /etc/xen/hvm.conf for to assigned devices
++13) add "pci" line in @XENDCONFDIR@/hvm.conf for to assigned devices
+         pci = [ '01:00.0', '03:00.0' ]
+ 15) start hvm guest and use "lspci" to see the passthru device and
+     "ifconfig" to see if IP address has been assigned to NIC devices.
+@@ -77,7 +77,7 @@
+         echo "0000:01:00.0" > /sys/bus/pci/devices/0000:01:00.0/driver/unbind
+         echo "0000:01:00.0" > /sys/bus/pci/drivers/pci-stub/bind
+ 
+-12) add "pci" line in /etc/xen/hvm.conf for to assigned devices
++12) add "pci" line in @XENDCONFDIR@/hvm.conf for to assigned devices
+         pci = [ '01:00.0' ]
+ 13) start hvm guest and use "lspci" to see the passthru device and
+     "ifconfig" to see if IP address has been assigned to NIC devices.
