@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/04/12 08:28:03 adam Exp $
+# $NetBSD: Makefile,v 1.50 2020/05/26 11:30:50 joerg Exp $
 
 DISTNAME=	libdmapsharing-2.9.15
 PKGNAME=	${DISTNAME:S/sharing/sharing3/}
@@ -26,4 +26,5 @@ BUILDLINK_ABI_DEPENDS.libsoup+=	libsoup>=2.32
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
