@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2019/11/26 22:40:07 nia Exp $
+$NetBSD: distinfo,v 1.12 2020/05/26 11:30:06 joerg Exp $
 
 SHA1 (flightgear-2019.1.1.tar.bz2) = 3ea81afd23701ea3c08515acd0ef84efdace0ba3
 RMD160 (flightgear-2019.1.1.tar.bz2) = ff8c00d498f2a529bede7a4fe12e9cfdf29c70e1
@@ -7,3 +7,4 @@ Size (flightgear-2019.1.1.tar.bz2) = 8440986 bytes
 SHA1 (patch-3rdparty_hts__engine__API_lib_HTS__misc.c) = 78de7201192e73f6f032ffcadd5ec2f63423390f
 SHA1 (patch-3rdparty_iaxclient_lib_libiax2_src_iax.c) = d6ae7b47253c1ba8f79e42cde27189d32e603eea
 SHA1 (patch-3rdparty_joystick_jsNone.cxx) = 4a662c71f97dd2d5093f09d4631d672e5278f082
+SHA1 (patch-CMakeLists.txt) = d540a64ce208a2380fe69d0d27146f5834b02152
