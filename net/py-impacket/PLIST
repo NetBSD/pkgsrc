@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/18 08:44:35 leot Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/05/26 22:30:50 adam Exp $
 bin/GetADUsers-${PYVERSSUFFIX}.py
 bin/GetNPUsers-${PYVERSSUFFIX}.py
 bin/GetUserSPNs-${PYVERSSUFFIX}.py
@@ -436,5 +436,3 @@ ${PYSITELIB}/impacket/winregistry.pyo
 ${PYSITELIB}/impacket/wps.py
 ${PYSITELIB}/impacket/wps.pyc
 ${PYSITELIB}/impacket/wps.pyo
-share/doc/impacket/LICENSE
-share/doc/impacket/README.md
