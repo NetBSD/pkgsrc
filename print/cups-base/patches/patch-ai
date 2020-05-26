@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-ai,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 Don't create directories, do that with OWN_DIRS and OWN_DIRS_PERMS
 
 --- notifier/Makefile.orig	2013-05-29 11:51:34.000000000 +0000
 +++ notifier/Makefile
-@@ -62,6 +62,8 @@ install:	all install-data install-header
+@@ -56,6 +56,8 @@ install:	all install-data install-header
  #
  
  install-data:

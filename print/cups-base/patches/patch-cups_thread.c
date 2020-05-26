@@ -1,10 +1,10 @@
-$NetBSD: patch-cups_thread.c,v 1.1 2018/07/09 13:53:34 youri Exp $
+$NetBSD: patch-cups_thread.c,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 Patch for macOS Sierra and before.
 
 --- cups/thread.c.orig	2018-06-05 16:06:54.000000000 +0000
 +++ cups/thread.c
-@@ -19,6 +19,26 @@
+@@ -14,6 +14,26 @@
  #include "cups-private.h"
  #include "thread-private.h"
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-conf_Makefile,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-conf_Makefile,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 Don't install the config files (leave it up to pkgsrc).
 
 --- conf/Makefile.orig	2015-02-27 12:30:26.000000000 +0000
 +++ conf/Makefile
-@@ -70,22 +70,8 @@ install:	all install-data install-header
+@@ -64,22 +64,8 @@ install:	all install-data install-header
  #
  
  install-data:
