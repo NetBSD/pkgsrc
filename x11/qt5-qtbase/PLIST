@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2020/03/18 21:55:23 tnn Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/05/26 12:52:59 nia Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt5DBus.pc
@@ -2752,7 +2752,7 @@ qt5/lib/cmake/Qt5PlatformCompositorSupport/Qt5PlatformCompositorSupportConfig.cm
 qt5/lib/cmake/Qt5PlatformCompositorSupport/Qt5PlatformCompositorSupportConfigVersion.cmake
 qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake
 qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake
-${PLIST.cups}qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupport_QCupsPrinterSupportPlugin.cmake
+${PLIST.notdarwin}${PLIST.cups}qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupport_QCupsPrinterSupportPlugin.cmake
 qt5/lib/cmake/Qt5ServiceSupport/Qt5ServiceSupportConfig.cmake
 qt5/lib/cmake/Qt5ServiceSupport/Qt5ServiceSupportConfigVersion.cmake
 qt5/lib/cmake/Qt5Sql/Qt5SqlConfig.cmake
