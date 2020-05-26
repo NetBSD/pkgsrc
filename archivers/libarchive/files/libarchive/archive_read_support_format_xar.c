@@ -458,6 +458,11 @@ archive_read_support_format_xar(struct archive *_a)
 		return (ARCHIVE_FATAL);
 	}
 
+	/* initialize xar->file_queue */
+	xar->file_queue.allocated = 0;
+	xar->file_queue.used = 0;
+	xar->file_queue.files = NULL;
+
 	r = __archive_read_register_format(a,
 	    xar,
 	    "xar",
@@ -1221,10 +1226,12 @@ heap_add_entry(struct archive_read *a,
 	/* Expand our pending files list as necessary. */
 	if (heap->used >= heap->allocated) {
 		struct xar_file **new_pending_files;
-		int new_size = heap->allocated * 2;
+		int new_size;
 
 		if (heap->allocated < 1024)
 			new_size = 1024;
+		else
+			new_size = heap->allocated * 2;
 		/* Overflow might keep us from growing the list. */
 		if (new_size <= heap->allocated) {
 			archive_set_error(&a->archive,
@@ -1238,9 +1245,11 @@ heap_add_entry(struct archive_read *a,
 			    ENOMEM, "Out of memory");
 			return (ARCHIVE_FATAL);
 		}
-		memcpy(new_pending_files, heap->files,
-		    heap->allocated * sizeof(new_pending_files[0]));
-		free(heap->files);
+		if (heap->allocated) {
+			memcpy(new_pending_files, heap->files,
+			    heap->allocated * sizeof(new_pending_files[0]));
+			free(heap->files);
+		}
 		heap->files = new_pending_files;
 		heap->allocated = new_size;
 	}
@@ -2613,15 +2622,14 @@ strappend_base64(struct xar *xar,
 	while (l > 0) {
 		int n = 0;
 
-		if (l > 0) {
-			if (base64[b[0]] < 0 || base64[b[1]] < 0)
-				break;
-			n = base64[*b++] << 18;
-			n |= base64[*b++] << 12;
-			*out++ = n >> 16;
-			len++;
-			l -= 2;
-		}
+		if (base64[b[0]] < 0 || base64[b[1]] < 0)
+			break;
+		n = base64[*b++] << 18;
+		n |= base64[*b++] << 12;
+		*out++ = n >> 16;
+		len++;
+		l -= 2;
+
 		if (l > 0) {
 			if (base64[*b] < 0)
 				break;

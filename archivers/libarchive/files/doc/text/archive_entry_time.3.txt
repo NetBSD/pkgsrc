@@ -10,7 +10,7 @@ NAME
      archive_entry_ctime_is_set, archive_entry_set_ctime,
      archive_entry_unset_ctime, archive_entry_mtime, archive_entry_mtime_nsec,
      archive_entry_mtime_is_set, archive_entry_set_mtime,
-     archive_entry_unset_mtime, — functions for manipulating times in archive
+     archive_entry_unset_mtime -- functions for manipulating times in archive
      entry descriptions
 
 LIBRARY
@@ -95,11 +95,11 @@ DESCRIPTION
 
      All timestamp fields are optional.  The XXX_unset() functions can be used
      to mark the corresponding field as missing.  The current state can be
-     queried using XXX_is_set().  Unset time fields have a second and nanosec‐
+     queried using XXX_is_set().  Unset time fields have a second and nanosec-
      ond field of 0.
 
 SEE ALSO
-     archive_entry(3) libarchive(3),
+     archive_entry(3), libarchive(3)
 
 HISTORY
      The libarchive library first appeared in FreeBSD 5.3.

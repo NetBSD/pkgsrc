@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Wed Jun 12 21:10:18 2019 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Wed May 20 01:10:08 2020 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -57,13 +57,13 @@ can be easily converted to UTF-8.</p>
 
 <p style="margin-left:6%; margin-top: 1em">Libarchive3 uses
 the standard iconv library to convert between character sets
-and is introducing the notion of a &ldquo;default character
-set for the archive&rdquo;. To support this, archive_entry
-objects can now be bound to a particular archive when they
-are created. The automatic character set conversions
-performed by archive_entry objects when reading and writing
-filenames, usernames, and other strings will now use an
-appropriate default character set:</p>
+and is introducing the notion of a &rsquo;&rsquo;default
+character set for the archive&rsquo;&rsquo;. To support
+this, archive_entry objects can now be bound to a particular
+archive when they are created. The automatic character set
+conversions performed by archive_entry objects when reading
+and writing filenames, usernames, and other strings will now
+use an appropriate default character set:</p>
 
 <p style="margin-left:6%; margin-top: 1em">If the
 archive_entry object is bound to an archive, it will use the
@@ -450,11 +450,12 @@ or <b>archive_write_set_format_option</b>()</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">libarchive(3), archive_read(3),
+<p style="margin-left:6%;">archive_read(3),
 archive_read_filter(3), archive_read_format(3),
-archive_read_set_options(3), archive_write(3),
-archive_write_filter(3), archive_write_format(3),
-archive_write_set_options(3), archive_util(3)</p>
+archive_read_set_options(3), archive_util(3),
+archive_write(3), archive_write_filter(3),
+archive_write_format(3), archive_write_set_options(3),
+libarchive(3)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
 December&nbsp;23, 2011 BSD</p>

@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Wed Jun 12 21:10:15 2019 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Wed May 20 01:10:06 2020 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -134,7 +134,7 @@ finished reading data from the archive, you should call
 <b>archive_read_free</b>() to release all resources,
 including all memory allocated by the library.</p>
 
-<p style="margin-top: 1em"><b>EXAMPLE</b></p>
+<p style="margin-top: 1em"><b>EXAMPLES</b></p>
 
 <p style="margin-left:6%;">The following illustrates basic
 usage of the library. In this example, the callback
@@ -199,12 +199,12 @@ return (ARCHIVE_OK); <br>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">tar(1), libarchive(3),
-archive_read_new(3), archive_read_data(3),
+<p style="margin-left:6%;">tar(1), archive_read_data(3),
 archive_read_extract(3), archive_read_filter(3),
 archive_read_format(3), archive_read_header(3),
-archive_read_open(3), archive_read_set_options(3),
-archive_util(3), tar(5)</p>
+archive_read_new(3), archive_read_open(3),
+archive_read_set_options(3), archive_util(3), libarchive(3),
+tar(5)</p>
 
 <p style="margin-top: 1em"><b>HISTORY</b></p>
 
@@ -224,7 +224,7 @@ example, many implementations of tar(1) allow you to append
 entries to an empty file. Of course, it is impossible to
 determine the format of an empty file by inspecting the
 contents, so this library treats empty files as having a
-special &ldquo;empty&rdquo; format.</p>
+special &rsquo;&rsquo;empty&rsquo;&rsquo; format.</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
 February&nbsp;2, 2012 BSD</p>

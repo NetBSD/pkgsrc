@@ -15,7 +15,7 @@ ARCHIVE_WRITE_FILTER(3) manual page
 '''archive_write_add_filter_program''', 
 '''archive_write_add_filter_uuencode''', 
 '''archive_write_add_filter_xz''', 
-'''archive_write_add_filter_zstd''', 
+'''archive_write_add_filter_zstd''' 
 - functions enabling output filters 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -125,10 +125,10 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWrite3]], 
-[[ManPageArchiveWriteFormat3]], 
-[[ManPageArchiveWriteSetOptions3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteormat3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPageibarchive3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

@@ -449,7 +449,7 @@ Vendor-specific attributes used by Joerg Schilling's
 \fB\%star\fP
 implementation.
 .TP
-\fBSCHILY.acl.access\fP, \fBSCHILY.acl.default,\fP \fBSCHILY.acl.ace\fP
+\fBSCHILY.acl.access\fP, \fBSCHILY.acl.default\fP, \fBSCHILY.acl.ace\fP
 Stores the access, default and NFSv4 ACLs as textual strings in a format
 that is an extension of the format specified by POSIX.1e draft 17.
 In particular, each user or group access specification can include
@@ -468,7 +468,7 @@ The file flags.
 The full size of the file on disk.
 XXX explain? XXX
 .TP
-\fBSCHILY.dev,\fP \fBSCHILY.ino\fP, \fBSCHILY.nlinks\fP
+\fBSCHILY.dev\fP, \fBSCHILY.ino\fP, \fBSCHILY.nlinks\fP
 The device number, inode number, and link count for the entry.
 In particular, note that a pax interchange format archive using Joerg
 Schilling's
@@ -488,7 +488,7 @@ The time when the file was created.
 attribute, which refers to the time when the file
 metadata was last changed.)
 .TP
-\fBLIBARCHIVE.xattr.\fP \fInamespace\fP.\fIkey\fP
+\fBLIBARCHIVE.xattr\fP. \fInamespace\fP. \fIkey\fP
 Libarchive stores POSIX.1e-style extended attributes using
 keys of this form.
 The
@@ -944,7 +944,8 @@ GNU tar long pathname for the following header.
 GNU tar multivolume marker, indicating the file is a continuation of a file from the previous volume.
 .TP
 \fBN\fP
-GNU tar long filename support.  Deprecated.
+GNU tar long filename support.
+Deprecated.
 .TP
 \fBS\fP
 GNU tar sparse regular file.

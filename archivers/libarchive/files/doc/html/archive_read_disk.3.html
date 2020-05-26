@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Wed Jun 12 21:10:16 2019 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Wed May 20 01:10:06 2020 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -143,7 +143,7 @@ values:</p>
 
 <p style="margin-left:27%;">Skip files and directories with
 the nodump file attribute (file flag) set. By default, the
-nodump file atrribute is ignored.</p>
+nodump file attribute is ignored.</p>
 
 <p><b>ARCHIVE_READDISK_MAC_COPYFILE</b></p>
 
@@ -166,7 +166,7 @@ X) for more information on file attributes.</p>
 <p><b>ARCHIVE_READDISK_NO_TRAVERSE_MOUNTS</b></p>
 
 <p style="margin-left:27%;">Do not traverse mount points.
-By defaut, moint points are traversed.</p>
+By default, mount points are traversed.</p>
 
 <p><b>ARCHIVE_READDISK_NO_XATTR</b></p>
 
@@ -188,11 +188,13 @@ is not restored.</p>
 <b>archive_read_disk_set_symlink_hybrid</b>()</p>
 
 <p style="margin-left:17%;">This sets the mode used for
-handling symbolic links. The &ldquo;logical&rdquo; mode
-follows all symbolic links. The &ldquo;physical&rdquo; mode
-does not follow any symbolic links. The &ldquo;hybrid&rdquo;
-mode currently behaves identically to the
-&ldquo;logical&rdquo; mode.</p>
+handling symbolic links. The
+&rsquo;&rsquo;logical&rsquo;&rsquo; mode follows all
+symbolic links. The &rsquo;&rsquo;physical&rsquo;&rsquo;
+mode does not follow any symbolic links. The
+&rsquo;&rsquo;hybrid&rsquo;&rsquo; mode currently behaves
+identically to the &rsquo;&rsquo;logical&rsquo;&rsquo;
+mode.</p>
 
 
 <p style="margin-top: 1em"><b>archive_read_disk_gname</b>(),
@@ -251,7 +253,7 @@ this information.)</p>
 
 <p style="margin-left:17%; margin-top: 1em">Where
 necessary, user and group ids are converted to user and
-group names using the currently registered lookup functions
+group names using the currently-registered lookup functions
 above. This affects the file ownership fields and ACL values
 in the struct archive_entry object.</p>
 
@@ -259,7 +261,7 @@ in the struct archive_entry object.</p>
 <i>struct archive</i> object and the overall design of the
 library can be found in the libarchive(3) overview.</p>
 
-<p style="margin-top: 1em"><b>EXAMPLE</b></p>
+<p style="margin-top: 1em"><b>EXAMPLES</b></p>
 
 <p style="margin-left:6%;">The following illustrates basic
 usage of the library by showing how to use it to copy an
@@ -326,9 +328,9 @@ and <b>archive_error_string</b>() functions.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">archive_read(3),
+<p style="margin-left:6%;">tar(1), archive_read(3),
 archive_util(3), archive_write(3), archive_write_disk(3),
-tar(1), libarchive(3)</p>
+libarchive(3)</p>
 
 <p style="margin-top: 1em"><b>HISTORY</b></p>
 
@@ -346,10 +348,11 @@ was written by Tim Kientzle
 
 <p style="margin-top: 1em"><b>BUGS</b></p>
 
-<p style="margin-left:6%;">The &ldquo;standard&rdquo; user
-name and group name lookup functions are not the defaults
-because getgrgid(3) and getpwuid(3) are sometimes too large
-for particular applications. The current design allows the
+<p style="margin-left:6%;">The
+&rsquo;&rsquo;standard&rsquo;&rsquo; user name and group
+name lookup functions are not the defaults because
+getgrgid(3) and getpwuid(3) are sometimes too large for
+particular applications. The current design allows the
 application author to use a more compact implementation when
 appropriate.</p>
 
@@ -368,8 +371,9 @@ such information.</p>
 <p style="margin-left:6%; margin-top: 1em">This API should
 provide a set of methods for walking a directory tree. That
 would make it a direct parallel of the archive_read(3) API.
-When such methods are implemented, the &ldquo;hybrid&rdquo;
-symbolic link mode will make sense.</p>
+When such methods are implemented, the
+&rsquo;&rsquo;hybrid&rsquo;&rsquo; symbolic link mode will
+make sense.</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
 April&nbsp;3, 2017 BSD</p>

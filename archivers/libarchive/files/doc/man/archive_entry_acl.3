@@ -8,7 +8,6 @@
 \fB\%archive_entry_acl_from_text\fP,
 \fB\%archive_entry_acl_from_text_w\fP,
 \fB\%archive_entry_acl_next\fP,
-\fB\%archive_entry_acl_next_w\fP,
 \fB\%archive_entry_acl_reset\fP,
 \fB\%archive_entry_acl_to_text\fP,
 \fB\%archive_entry_acl_to_text_w\fP,
@@ -51,10 +50,6 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
-\fB\%archive_entry_acl_next_w\fP(\fI\%struct\ archive_entry\ *a\fP, \fI\%int\ type\fP, \fI\%int\ *ret_type\fP, \fI\%int\ *ret_permset\fP, \fI\%int\ *ret_tag\fP, \fI\%int\ *ret_qual\fP, \fI\%const\ wchar_t\ **ret_name\fP);
-.br
-\fIint\fP
-.br
 \fB\%archive_entry_acl_reset\fP(\fI\%struct\ archive_entry\ *a\fP, \fI\%int\ type\fP);
 .br
 \fIchar *\fP
@@ -72,15 +67,16 @@ Streaming Archive Library (libarchive, -larchive)
 .ad l
 The
 ``Access Control Lists (ACLs)''
-extend the standard Unix perssion model.
+extend the standard Unix permission model.
 The ACL interface of
 \fB\%libarchive\fP
-supports both POSIX.1e and NFSv4 style ACLs. Use of ACLs is restricted by
+supports both POSIX.1e and NFSv4 style ACLs.
+Use of ACLs is restricted by
 various levels of ACL support in operating systems, file systems and archive
 formats.
 .SS POSIX.1e Access Control Lists
 A POSIX.1e ACL consists of a number of independent entries.
-Each entry specifies the permission set as bitmask of basic permissions.
+Each entry specifies the permission set as a bitmask of basic permissions.
 Valid permissions in the
 are:
 .RS 5
@@ -102,13 +98,13 @@ The user specified by the name field.
 It .BR ARCHIVE_ENTRY_ACL_USER_OBJ
 The owner of the file.
 It .BR ARCHIVE_ENTRY_ACL_GROUP
-The group specied by the name field.
+The group specified by the name field.
 It .BR ARCHIVE_ENTRY_ACL_GROUP_OBJ
-The group who owns the file.
+The group which owns the file.
 It .BR ARCHIVE_ENTRY_ACL_MASK
 The maximum permissions to be obtained via group permissions.
 It .BR ARCHIVE_ENTRY_ACL_OTHER
-Any principal who is not file owner or a member of the owning group.
+Any principal who is not the file owner or a member of the owning group.
 .RE
 .PP
 The principals
@@ -119,12 +115,12 @@ and
 are equivalent to user, group and other in the classic Unix permission
 model and specify non-extended ACL entries.
 .PP
-All files with have an access ACL
+All files have an access ACL
 (.BR ARCHIVE_ENTRY_ACL_TYPE_ACCESS.)
 This specifies the permissions required for access to the file itself.
 Directories have an additional ACL
 (.BR ARCHIVE_ENTRY_ACL_TYPE_DEFAULT,)
-which controls the initial access ACL for newly created directory entries.
+which controls the initial access ACL for newly-created directory entries.
 .SS NFSv4 Access Control Lists
 A NFSv4 ACL consists of multiple individual entries called Access Control
 Entries (ACEs).
@@ -151,11 +147,11 @@ The user specified by the name field.
 It .BR ARCHIVE_ENTRY_ACL_USER_OBJ
 The owner of the file.
 It .BR ARCHIVE_ENTRY_ACL_GROUP
-The group specied by the name field.
+The group specified by the name field.
 It .BR ARCHIVE_ENTRY_ACL_GROUP_OBJ
-The group who owns the file.
+The group which owns the file.
 It .BR ARCHIVE_ENTRY_ACL_EVERYONE
-Any principal who is not file owner or a member of the owning group.
+Any principal who is not the file owner or a member of the owning group.
 .RE
 .PP
 Entries with the
@@ -167,9 +163,10 @@ string and optionally the user or group ID in the
 integer.
 .PP
 NFSv4 ACE permissions and flags are stored in the same
-bitfield. Some permissions share the same constant and permission character but
-have different effect on directories than on files. The following ACE
-permissions are supported:
+bitfield.
+Some permissions share the same constant and permission character
+but have different effect on directories than on files.
+The following ACE permissions are supported:
 .RS 5
 .TP
 .BR ARCHIVE_ENTRY_ACL_READ_DATA (.B r )
@@ -237,7 +234,8 @@ Inherit parent directory ACE to subdirectories.
 Only inherit, do not apply the permission on the directory itself.
 .TP
 .BR ARCHIVE_ENTRY_ACL_ENTRY_NO_PROPAGATE_INHERIT (.B n )
-Do not propagate inherit flags. Only first-level entries inherit ACLs.
+Do not propagate inherit flags.
+Only first-level entries inherit ACLs.
 .TP
 .BR ARCHIVE_ENTRY_ACL_ENTRY_SUCCESSFUL_ACCESS (.B S )
 Trigger alarm or audit on successful access.
@@ -254,8 +252,8 @@ and
 \fB\%archive_entry_acl_add_entry_w\fP()
 add a single ACL entry.
 For the access ACL and non-extended principals, the classic Unix permissions
-are updated. An archive entry cannot contain both POSIX.1e and NFSv4 ACL
-entries.
+are updated.
+An archive entry cannot contain both POSIX.1e and NFSv4 ACL entries.
 .PP
 \fB\%archive_entry_acl_clear\fP()
 removes all ACL entries and resets the enumeration pointer.
@@ -280,7 +278,8 @@ for POSIX.1e ACLs and
 .TP
 .BR ARCHIVE_ENTRY_ACL_TYPE_ALARM
 .RE
-for NFSv4 ACLs. For POSIX.1e ACLs if
+for NFSv4 ACLs.
+For POSIX.1e ACLs if
 .BR ARCHIVE_ENTRY_ACL_TYPE_ACCESS
 is included and at least one extended ACL entry is found,
 the three non-extended ACLs are added.
@@ -292,7 +291,8 @@ add new
 (or merge with existing)
 ACL entries from
 (wide)
-text. The argument
+text.
+The argument
 may take one of the following values:
 .RS 5
 .TP
@@ -304,11 +304,13 @@ may take one of the following values:
 .RE
 Supports all formats that can be created with
 \fB\%archive_entry_acl_to_text\fP()
-or respective
+or respectively
 \fB\%archive_entry_acl_to_text_w\fP().
-Existing ACL entries are preserved. To get a clean new ACL from text
+Existing ACL entries are preserved.
+To get a clean new ACL from text
 \fB\%archive_entry_acl_clear\fP()
-must be called first. Entries prefixed with
+must be called first.
+Entries prefixed with
 ``default:''
 are treated as
 .BR ARCHIVE_ENTRY_ACL_TYPE_DEFAULT
@@ -323,8 +325,6 @@ character
 are skipped.
 .PP
 \fB\%archive_entry_acl_next\fP()
-and
-\fB\%archive_entry_acl_next_w\fP()
 return the next entry of the ACL list.
 This functions may only be called after
 \fB\%archive_entry_acl_reset\fP()
@@ -332,10 +332,8 @@ has indicated the presence of extended ACL entries.
 .PP
 \fB\%archive_entry_acl_reset\fP()
 prepare reading the list of ACL entries with
-\fB\%archive_entry_acl_next\fP()
-or
-\fB\%archive_entry_acl_next_w\fP().
-The function returns either 0, if no non-extended ACLs are found.
+\fB\%archive_entry_acl_next\fP().
+The function returns 0 if no non-extended ACLs are found.
 In this case, the access permissions should be obtained by
 \fBarchive_entry_mode\fP(3)
 or set using
@@ -348,7 +346,8 @@ and
 \fB\%archive_entry_acl_to_text_w\fP()
 convert the ACL entries for the given type into a
 (wide)
-string of ACL entries separated by newline. If the pointer
+string of ACL entries separated by newline.
+If the pointer
 is not NULL, then the function shall return the length of the string
 (not including the NULL terminator)
 in the location pointed to by
@@ -401,7 +400,8 @@ are prefixed with
 ``default:''.
 .PP
 \fB\%archive_entry_acl_types\fP()
-get ACL entry types contained in an archive entry's ACL. As POSIX.1e and NFSv4
+get ACL entry types contained in an archive entry's ACL.
+As POSIX.1e and NFSv4
 ACL entries cannot be mixed, this function is a very efficient way to detect if
 an ACL already contains POSIX.1e or NFSv4 ACL entries.
 .SH RETURN VALUES
@@ -425,9 +425,7 @@ if all entries were successfully parsed and
 if one or more entries were invalid or non-parseable.
 .PP
 \fB\%archive_entry_acl_next\fP()
-and
-\fB\%archive_entry_acl_next_w\fP()
-return
+returns
 .BR ARCHIVE_OK
 on success,
 .BR ARCHIVE_EOF

@@ -1,7 +1,7 @@
 CPIO(1) 		  BSD General Commands Manual		       CPIO(1)
 
 NAME
-     cpio — copy files to and from archives
+     cpio -- copy files to and from archives
 
 SYNOPSIS
      cpio -i [options] [pattern ...] [< archive]
@@ -15,7 +15,7 @@ DESCRIPTION
 
      The first option to cpio is a mode indicator from the following list:
      -i      Input.  Read an archive from standard input (unless overridden)
-	     and extract the contents to disk or (if the -t option is speci‐
+	     and extract the contents to disk or (if the -t option is speci-
 	     fied) list the contents to standard output.  If one or more file
 	     patterns are specified, only files matching one of the patterns
 	     will be extracted.
@@ -26,15 +26,15 @@ DESCRIPTION
 	     copy the files to the specified directory.
 
 OPTIONS
-     Unless specifically stated otherwise, options are applicable in all oper‐
+     Unless specifically stated otherwise, options are applicable in all oper-
      ating modes.
 
      -0, --null
 	     Read filenames separated by NUL characters instead of newlines.
-	     This is necessary if any of the filenames being read might con‐
+	     This is necessary if any of the filenames being read might con-
 	     tain newlines.
 
-     -A      (o mode only) Append to the specified archive.  (Not yet imple‐
+     -A      (o mode only) Append to the specified archive.  (Not yet imple-
 	     mented.)
 
      -a      (o and p modes) Reset access times on files after they are read.
@@ -67,7 +67,7 @@ OPTIONS
 	     cpio     Synonym for odc.
 	     newc     The SVR4 portable cpio format.
 	     odc      The old POSIX.1 portable octet-oriented cpio format.
-	     pax      The POSIX.1 pax format, an extension of the ustar for‐
+	     pax      The POSIX.1 pax format, an extension of the ustar for-
 		      mat.
 	     ustar    The POSIX.1 tar format.
 
@@ -87,7 +87,7 @@ OPTIONS
      --insecure
 	     (i and p mode only) Disable security checks during extraction or
 	     copying.  This allows extraction via symbolic links, absolute
-	     paths, and path names containing ‘..’ in the name.
+	     paths, and path names containing '..' in the name.
 
      -J, --xz
 	     (o mode only) Compress the file with xz-compatible compression
@@ -102,18 +102,18 @@ OPTIONS
 	     instead.
 
      -l, --link
-	     (p mode only) Create links from the target directory to the orig‐
+	     (p mode only) Create links from the target directory to the orig-
 	     inal files, instead of copying.
 
      --lrzip
 	     (o mode only) Compress the resulting archive with lrzip(1).  In
 	     input mode, this option is ignored.
 
-     --lz4   (o mode only) Compress the archive with lz4-compatible compres‐
+     --lz4   (o mode only) Compress the archive with lz4-compatible compres-
 	     sion before writing it.  In input mode, this option is ignored;
 	     lz4 compression is recognized automatically on input.
 
-     --zstd  (o mode only) Compress the archive with zstd-compatible compres‐
+     --zstd  (o mode only) Compress the archive with zstd-compatible compres-
 	     sion before writing it.  In input mode, this option is ignored;
 	     zstd compression is recognized automatically on input.
 
@@ -183,11 +183,11 @@ OPTIONS
 	     restore the contents to disk.
 
      -u, --unconditional
-	     (i and p modes) Unconditionally overwrite existing files.	Ordi‐
+	     (i and p modes) Unconditionally overwrite existing files.	Ordi-
 	     narily, an older file will not overwrite a newer file on disk.
 
      -V, --dot
-	     Print a dot to stderr for each file as it is processed.  Super‐
+	     Print a dot to stderr for each file as it is processed.  Super-
 	     seded by -v.
 
      -v, --verbose
@@ -197,15 +197,15 @@ OPTIONS
      --version
 	     Print the program version information and exit.
 
-     -y      (o mode only) Compress the archive with bzip2-compatible compres‐
+     -y      (o mode only) Compress the archive with bzip2-compatible compres-
 	     sion before writing it.  In input mode, this option is ignored;
 	     bzip2 compression is recognized automatically on input.
 
-     -Z      (o mode only) Compress the archive with compress-compatible com‐
-	     pression before writing it.  In input mode, this option is ig‐
-	     nored; compression is recognized automatically on input.
+     -Z      (o mode only) Compress the archive with compress-compatible com-
+	     pression before writing it.  In input mode, this option is
+	     ignored; compression is recognized automatically on input.
 
-     -z      (o mode only) Compress the archive with gzip-compatible compres‐
+     -z      (o mode only) Compress the archive with gzip-compatible compres-
 	     sion before writing it.  In input mode, this option is ignored;
 	     gzip compression is recognized automatically on input.
 
@@ -221,51 +221,51 @@ ENVIRONMENT
 		more information.
 
 EXAMPLES
-     The cpio command is traditionally used to copy file hierarchies in con‐
+     The cpio command is traditionally used to copy file hierarchies in con-
      junction with the find(1) command.  The first example here simply copies
      all files from src to dest:
 	   find src | cpio -pmud dest
 
      By carefully selecting options to the find(1) command and combining it
-     with other standard utilities, it is possible to exercise very fine con‐
+     with other standard utilities, it is possible to exercise very fine con-
      trol over which files are copied.	This next example copies files from
-     src to dest that are more than 2 days old and whose names match a partic‐
+     src to dest that are more than 2 days old and whose names match a partic-
      ular pattern:
 	   find src -mtime +2 | grep foo[bar] | cpio -pdmu dest
 
      This example copies files from src to dest that are more than 2 days old
-     and which contain the word “foobar”:
+     and which contain the word ``foobar'':
 	   find src -mtime +2 | xargs grep -l foobar | cpio -pdmu dest
 
 COMPATIBILITY
      The mode options i, o, and p and the options a, B, c, d, f, l, m, r, t,
      u, and v comply with SUSv2.
 
-     The old POSIX.1 standard specified that only -i, -o, and -p were inter‐
+     The old POSIX.1 standard specified that only -i, -o, and -p were inter-
      preted as command-line options.  Each took a single argument of a list of
      modifier characters.  For example, the standard syntax allows -imu but
      does not support -miu or -i -m -u, since m and u are only modifiers to
      -i, they are not command-line options in their own right.	The syntax
-     supported by this implementation is backwards-compatible with the stan‐
+     supported by this implementation is backwards-compatible with the stan-
      dard.  For best compatibility, scripts should limit themselves to the
      standard syntax.
 
 SEE ALSO
-     bzip2(1), tar(1), gzip(1), mt(1), pax(1), libarchive(3), cpio(5),
+     bzip2(1), gzip(1), mt(1), pax(1), tar(1), libarchive(3), cpio(5),
      libarchive-formats(5), tar(5)
 
 STANDARDS
      There is no current POSIX standard for the cpio command; it appeared in
-     ISO/IEC 9945-1:1996 (“POSIX.1”) but was dropped from IEEE Std 1003.1-2001
-     (“POSIX.1”).
+     ISO/IEC 9945-1:1996 (``POSIX.1'') but was dropped from IEEE Std
+     1003.1-2001 (``POSIX.1'').
 
      The cpio, ustar, and pax interchange file formats are defined by IEEE Std
-     1003.1-2001 (“POSIX.1”) for the pax command.
+     1003.1-2001 (``POSIX.1'') for the pax command.
 
 HISTORY
      The original cpio and find utilities were written by Dick Haight while
      working in AT&T's Unix Support Group.  They first appeared in 1977 in
-     PWB/UNIX 1.0, the “Programmer's Work Bench” system developed for use
+     PWB/UNIX 1.0, the ``Programmer's Work Bench'' system developed for use
      within AT&T.  They were first released outside of AT&T as part of System
      III Unix in 1981.	As a result, cpio actually predates tar, even though
      it was not well-known outside of AT&T until some time later.
@@ -277,8 +277,8 @@ BUGS
      user and group names, only numbers.  As a result, it cannot be reliably
      used to transfer files between systems with dissimilar user and group
      numbering.  Older cpio formats limit the user and group numbers to 16 or
-     18 bits, which is insufficient for modern systems.  The cpio archive for‐
-     mats cannot support files over 4 gigabytes, except for the “odc” variant,
-     which can support files up to 8 gigabytes.
+     18 bits, which is insufficient for modern systems.  The cpio archive for-
+     mats cannot support files over 4 gigabytes, except for the ``odc'' vari-
+     ant, which can support files up to 8 gigabytes.
 
 BSD			      September 16, 2014			   BSD

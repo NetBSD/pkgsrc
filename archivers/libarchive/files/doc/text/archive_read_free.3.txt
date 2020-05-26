@@ -1,7 +1,7 @@
 ARCHIVE_READ_FREE(3)	 BSD Library Functions Manual	  ARCHIVE_READ_FREE(3)
 
 NAME
-     archive_read_close, archive_read_finish, archive_read_free — functions
+     archive_read_close, archive_read_finish, archive_read_free -- functions
      for reading streaming archives
 
 LIBRARY
@@ -25,7 +25,7 @@ DESCRIPTION
      archive_read_finish()
 	     This is a deprecated synonym for archive_read_free().  The new
 	     name was introduced with libarchive 3.0.  Applications that need
-	     to compile with either libarchive 2 or libarchive 3 should con‐
+	     to compile with either libarchive 2 or libarchive 3 should con-
 	     tinue to use the archive_read_finish() name.  Both names will be
 	     supported until libarchive 4.0 is released, which is not expected
 	     to occur earlier than 2013.
@@ -45,8 +45,8 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     libarchive(3), archive_read_new(3), archive_read_data(3),
-     archive_read_filter(3), archive_read_format(3), archive_read_open(3),
-     archive_read_set_options(3), archive_util(3)
+     archive_read_data(3), archive_read_filter(3), archive_read_format(3),
+     archive_read_new(3), archive_read_open(3), archive_read_set_options(3),
+     archive_util(3), libarchive(3)
 
 BSD			       February 2, 2012 			   BSD

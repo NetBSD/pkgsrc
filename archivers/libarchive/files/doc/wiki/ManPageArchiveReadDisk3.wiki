@@ -78,9 +78,10 @@ following values:
 <dl> 
 <dt>'''ARCHIVE_READDISK_HONOR_NODUMP'''</dt><dd> 
 Skip files and directories with the nodump file attribute (file flag) set. 
-By default, the nodump file atrribute is ignored. 
+By default, the nodump file attribute is ignored. 
 </dd><dt>'''ARCHIVE_READDISK_MAC_COPYFILE'''</dt><dd> 
-Mac OS X specific. Read metadata (ACLs and extended attributes) with 
+Mac OS X specific. 
+Read metadata (ACLs and extended attributes) with 
 [[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]]. 
 By default, metadata is read using 
 [[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]]. 
@@ -99,7 +100,7 @@ or
 for more information on file attributes. 
 </dd><dt>'''ARCHIVE_READDISK_NO_TRAVERSE_MOUNTS'''</dt><dd> 
 Do not traverse mount points. 
-By defaut, moint points are traversed. 
+By default, mount points are traversed. 
 </dd><dt>'''ARCHIVE_READDISK_NO_XATTR'''</dt><dd> 
 Do not read extended file attributes (xattrs). 
 By default, extended file attributes are read from disk. 
@@ -173,7 +174,7 @@ object with information about a particular file.
 The 
 '''archive_entry''' 
 object must have already been created with 
-[[ManPageArchiveEntryNew3]] 
+[[ManPagerchiventryew3]] 
 and at least one of the source path or path fields must already be set. 
 (If both are set, the source path will be used.) 
 
@@ -195,7 +196,7 @@ of some other operation.
 (For example, directory traversal libraries often provide this information.) 
 
 Where necessary, user and group ids are converted to user and group names 
-using the currently registered lookup functions above. 
+using the currently-registered lookup functions above. 
 This affects the file ownership fields and ACL values in the 
 '''struct archive_entry''' 
 object. 
@@ -203,9 +204,9 @@ object.
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-[[ManPageLibarchive3]] 
+[[ManPageibarchive3]] 
 overview. 
-== EXAMPLE == 
+== EXAMPLES == 
 The following illustrates basic usage of the library by 
 showing how to use it to copy an item on disk into an archive. 
 ```text
@@ -267,12 +268,12 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-[[ManPageArchiveRead3]], 
-[[ManPageArchiveUtil3]], 
-[[ManPageArchiveWrite3]], 
-[[ManPageArchiveWriteDisk3]], 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]] 
+[[ManPagerchiveead3]], 
+[[ManPagerchivetil3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteisk3]], 
+[[ManPageibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 
@@ -313,7 +314,7 @@ to look up such information.
 
 This API should provide a set of methods for walking a directory tree. 
 That would make it a direct parallel of the 
-[[ManPageArchiveRead3]] 
+[[ManPagerchiveead3]] 
 API. 
 When such methods are implemented, the 
 "hybrid" 

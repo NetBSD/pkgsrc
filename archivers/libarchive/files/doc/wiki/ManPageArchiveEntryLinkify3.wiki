@@ -64,7 +64,7 @@ The
 '''archive_entry_linkresolver_set_strategy'''() 
 function selects the optimal hardlink strategy for the given format. 
 The format code can be obtained from 
-[[ManPageArchiveFormat3]]. 
+[[ManPagerchiveormat3]]. 
 The function can be called more than once, but it is recommended to 
 flush all deferred entries first. 
 
@@ -194,4 +194,4 @@ on
 [[malloc(3)|http://www.freebsd.org/cgi/man.cgi?query=malloc&sektion=3]] 
 failures. 
 == SEE ALSO == 
-[[ManPageArchiveEntry3]] 
+[[ManPagerchiventry3]] 

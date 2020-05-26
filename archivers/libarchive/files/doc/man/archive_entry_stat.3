@@ -29,7 +29,7 @@
 \fB\%archive_entry_rdevmajor\fP,
 \fB\%archive_entry_set_rdevmajor\fP,
 \fB\%archive_entry_rdevminor\fP,
-\fB\%archive_entry_set_rdevminor\fP,
+\fB\%archive_entry_set_rdevminor\fP
 \- accessor functions for manipulating archive entry descriptions
 .SH LIBRARY
 .ad l
@@ -260,9 +260,9 @@ and
 set and unset the size, respectively.
 .PP
 The number of references (hardlinks) can be obtained by calling
-\fB\%archive_entry_nlinks\fP()
+\fB\%archive_entry_nlink\fP()
 and set with
-\fB\%archive_entry_set_nlinks\fP().
+\fB\%archive_entry_set_nlink\fP().
 .SS Identifying unique files
 The functions
 \fB\%archive_entry_dev\fP()
@@ -313,8 +313,8 @@ Some archive formats use the combined form, while other formats use
 the split form.
 .SH SEE ALSO
 .ad l
+\fBstat\fP(2),
 \fBarchive_entry_acl\fP(3),
 \fBarchive_entry_perms\fP(3),
 \fBarchive_entry_time\fP(3),
-\fBlibarchive\fP(3),
-\fBstat\fP(2)
+\fBlibarchive\fP(3)

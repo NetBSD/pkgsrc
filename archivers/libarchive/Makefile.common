@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.11 2020/01/26 17:30:40 rillig Exp $
+# $NetBSD: Makefile.common,v 1.12 2020/05/26 09:16:39 nia Exp $
 # used by archivers/bsdtar/Makefile
 # used by archivers/libarchive/Makefile
 
-DISTNAME=	libarchive-3.4.0
+DISTNAME=	libarchive-3.4.3
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.libarchive.org/downloads/
+MASTER_SITES=	https://www.libarchive.org/downloads/
 DISTFILES=	# empty
 
 MAINTAINER?=	joerg@NetBSD.org
@@ -14,8 +14,11 @@ LICENSE=	2-clause-bsd
 TEST_TARGET=		check
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-expat
+CONFIGURE_ARGS+=	--without-libb2
 CONFIGURE_ARGS+=	--without-lzo2
+CONFIGURE_ARGS+=	--without-mbedtls
 CONFIGURE_ARGS+=	--without-nettle
+CONFIGURE_ARGS+=	--without-openssl
 CONFIGURE_ARGS+=	--without-xml2
 CONFIGURE_ARGS+=	--without-zstd
 CONFIGURE_ARGS+=	--disable-maintainer-mode
