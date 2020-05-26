@@ -139,7 +139,7 @@ The corresponding functions
 and 
 '''archive_entry_set_perm'''() 
 store the given user id, group id and permission in the entry. 
-The permission is also set as side effect of calling 
+The permission is also set as a side effect of calling 
 '''archive_entry_set_mode'''(). 
 
 '''archive_entry_strmode'''() 
@@ -156,12 +156,12 @@ The accessor functions are named
 '''XXX_w'''(). 
 </dd><dt>UTF-8</dt><dd> 
 Unicode strings encoded as UTF-8. 
-This are convience functions to update both the multibyte and wide 
+These are convenience functions to update both the multibyte and wide 
 character strings at the same time. 
 </dd></dl> 
 
 '''archive_entry_set_XXX'''() 
-is an alias for  
+is an alias for 
 '''archive_entry_copy_XXX'''(). 
 === File Flags=== 
 File flags are transparently converted between a bitmap 
@@ -195,7 +195,7 @@ The
 '''archive_entry_copy_fflags_text'''() 
 and 
 '''archive_entry_copy_fflags_text_w'''() 
-functions parse the provided text and sets the internal bitmap values. 
+functions parse the provided text and set the internal bitmap values. 
 This is a platform-specific operation; names that are not meaningful 
 on the current platform will be ignored. 
 The function returns a pointer to the start of the first name that was not 
@@ -207,11 +207,11 @@ every name that is recognized.
 [[strtofflags(3)|http://www.freebsd.org/cgi/man.cgi?query=strtofflags&sektion=3]], 
 which stops parsing at the first unrecognized name.) 
 == SEE ALSO == 
-[[ManPageArchiveEntry3]], 
-[[ManPageArchiveEntryAcl3]], 
-[[ManPageArchiveReadDisk3]], 
-[[ManPageArchiveWriteDisk3]] 
-[[ManPageLibarchive3]], 
+[[ManPagerchiventry3]], 
+[[ManPagerchiventrycl3]], 
+[[ManPagerchiveeadisk3]], 
+[[ManPagerchiveriteisk3]], 
+[[ManPageibarchive3]] 
 == BUGS == 
 The platform types 
 ''uid_t'' 

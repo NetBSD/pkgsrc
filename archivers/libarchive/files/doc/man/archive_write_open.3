@@ -176,7 +176,7 @@ On failure, the callback should invoke
 \fB\%archive_set_error\fP()
 to register an error code and message and
 return
-\fBARCHIVE_FATAL.\fP
+\fBARCHIVE_FATAL\fP.
 .PP
 Note that if the client-provided write callback function
 returns a non-zero value, that error will be propagated back to the caller
@@ -210,13 +210,13 @@ functions.
 .SH SEE ALSO
 .ad l
 \fBtar\fP(1),
-\fBlibarchive\fP(3),
 \fBarchive_write\fP(3),
 \fBarchive_write_blocksize\fP(3),
 \fBarchive_write_filter\fP(3),
 \fBarchive_write_format\fP(3),
 \fBarchive_write_new\fP(3),
 \fBarchive_write_set_options\fP(3),
+\fBlibarchive\fP(3),
 \fBcpio\fP(5),
 \fBmtree\fP(5),
 \fBtar\fP(5)
