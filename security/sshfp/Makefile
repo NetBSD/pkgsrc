@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.15 2019/11/04 21:13:03 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/26 21:18:14 khorben Exp $
 
-DISTNAME=	sshfp-1.1.3
-PKGREVISION=	5
+DISTNAME=	sshfp-1.2.2
 CATEGORIES=	security net
-#MASTER_SITES=	https://www.xelerance.com/software/sshfp/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=xelerance/}
 
 MAINTAINER=	agc@NetBSD.org
-#HOMEPAGE=	https://www.xelerance.com/software/sshfp/
+HOMEPAGE=	${MASTER_SITE_GITHUB:=xelerange/sshfp/}
 COMMENT=	Print ssh host key fingerprint resource records
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
+DEPENDS+=	${PYPKGPREFIX}-dnspython-[0-9]*:../../net/py-dnspython
 
 MANCOMPRESSED=	yes
 NO_BUILD=	yes
-REPLACE_PYTHON=	sshfp
+PYTHON_VERSIONS_ACCEPTED=	27
+REPLACE_PYTHON=	dane sshfp
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
