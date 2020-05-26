@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3194 2020/05/26 16:54:06 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3195 2020/05/26 20:43:58 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5083,3 +5083,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/prometheus to 2.18.1 [adam 2020-05-26]
 	Updated lang/nodejs12 to 12.17.0 [adam 2020-05-26]
 	Updated net/py-prometheus_client to 0.8.0 [adam 2020-05-26]
+	Updated devel/fossil to 2.11 [js 2020-05-26]
