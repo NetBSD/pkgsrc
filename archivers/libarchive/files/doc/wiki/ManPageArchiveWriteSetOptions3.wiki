@@ -32,7 +32,7 @@ specific write modules.
 '''archive_write_set_filter_option'''(), 
 '''archive_write_set_format_option'''() 
 </dt> <dd> 
-Specifies an option that will be passed to currently-registered 
+Specifies an option that will be passed to the currently-registered 
 filters (including decompression filters) or format readers. 
 
 If 
@@ -99,7 +99,7 @@ If either function returns
 '''ARCHIVE_FATAL''' 
 will be returned 
 immediately. 
-Otherwise, greater of the two values will be returned. 
+Otherwise, the greater of the two values will be returned. 
 </dd><dt>'''archive_write_set_options'''()</dt><dd> 
 ''options'' 
 is a comma-separated list of options. 
@@ -129,55 +129,154 @@ only to modules whose name matches
 </dd></dl> 
 == OPTIONS == 
 <dl> 
-<dt>Filter gzip</dt><dd> 
+<dt>Filter b64encode</dt><dd> 
+<dl> 
+<dt>'''mode'''</dt><dd> 
+The value is interpreted as octal digits specifying the file mode. 
+</dd><dt>'''name'''</dt><dd> 
+The value specifies the file name. 
+</dd></dl> 
+</dd><dt>Filter bzip2</dt><dd> 
 <dl> 
 <dt>'''compression-level'''</dt><dd> 
 The value is interpreted as a decimal integer specifying the 
-gzip compression level. 
+bzip2 compression level. Supported values are from 1 to 9. 
+</dd></dl> 
+</dd><dt>Filter gzip</dt><dd> 
+<dl> 
+<dt>'''compression-level'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+gzip compression level. Supported values are from 0 to 9. 
+</dd><dt>'''timestamp'''</dt><dd> 
+Store timestamp. This is enabled by default. 
+</dd></dl> 
+</dd><dt>Filter lrzip</dt><dd> 
+<dl> 
+<dt>'''compression'''=''type''</dt><dd> 
+Use 
+''type'' 
+as compression method. 
+Supported values are 
+"bzip2", 
+"gzipi", 
+"lzo" 
+(ultra fast,) 
+and 
+"zpaq" 
+(best, extremely slow.) 
+</dd><dt>'''compression-level'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+lrzip compression level. Supported values are from 1 to 9. 
+</dd></dl> 
+</dd><dt>Filter lz4</dt><dd> 
+<dl> 
+<dt>'''compression-level'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+lz4 compression level. Supported values are from 0 to 9. 
+</dd><dt>'''stream-checksum'''</dt><dd> 
+Enable stream checksum. This is enabled by default. 
+</dd><dt>'''block-checksum'''</dt><dd> 
+Enable block checksum. This is disabled by default. 
+</dd><dt>'''block-size'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+lz4 compression block size. Supported values are from 4 to 7 
+(default.) 
+</dd><dt>'''block-dependence'''</dt><dd> 
+Use the previous block of the block being compressed for 
+a compression dictionary to improve compression ratio. 
+This is disabled by default. 
+</dd></dl> 
+</dd><dt>Filter lzop</dt><dd> 
+<dl> 
+<dt>'''compression-level'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+lzop compression level. Supported values are from 1 to 9. 
+</dd></dl> 
+</dd><dt>Filter uuencode</dt><dd> 
+<dl> 
+<dt>'''mode'''</dt><dd> 
+The value is interpreted as octal digits specifying the file mode. 
+</dd><dt>'''name'''</dt><dd> 
+The value specifies the file name. 
 </dd></dl> 
 </dd><dt>Filter xz</dt><dd> 
 <dl> 
 <dt>'''compression-level'''</dt><dd> 
 The value is interpreted as a decimal integer specifying the 
-compression level. 
+compression level. Supported values are from 0 to 9. 
+</dd><dt>'''threads'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+number of threads for multi-threaded lzma compression. 
+If supported, the default value is read from 
+'''lzma_cputhreads'''(). 
 </dd></dl> 
-</dd><dt>Format mtree</dt><dd> 
+</dd><dt>Filter zstd</dt><dd> 
 <dl> 
-<dt>'''cksum''', '''device''', '''flags''', '''gid''', '''gname''', '''indent''', '''link''', '''md5''', '''mode''', '''nlink''', '''rmd160''', '''sha1''', '''sha256''', '''sha384''', '''sha512''', '''size''', '''time''', '''uid''', '''uname'''</dt><dd> 
-Enable a particular keyword in the mtree output. 
-Prefix with an exclamation mark to disable the corresponding keyword. 
-The default is equivalent to 
-"device, flags, gid, gname, link, mode, nlink, size, time, type, uid, uname". 
-</dd><dt>'''all'''</dt><dd> 
-Enables all of the above keywords. 
-</dd><dt>'''use-set'''</dt><dd> 
-Enables generation of 
-'''/set''' 
-lines that specify default values for the following files and/or directories. 
-</dd><dt>'''indent'''</dt><dd> 
-XXX needs explanation XXX 
+<dt>'''compression-level'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+compression level. Supported values depend on the library version, 
+common values are from 1 to 22. 
+</dd></dl> 
+</dd><dt>Format 7zip</dt><dd> 
+<dl> 
+<dt>'''compression'''</dt><dd> 
+The value is one of 
+"store", 
+"deflate", 
+"bzip2", 
+"lzma1", 
+"lzma2" 
+or 
+"ppmd" 
+to indicate how the following entries should be compressed. 
+Note that this setting is ignored for directories, symbolic links, 
+and other special entries. 
+</dd><dt>'''compression-level'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+compression level. 
+Values between 0 and 9 are supported. 
+The interpretation of the compression level depends on the chosen 
+compression method. 
+</dd></dl> 
+</dd><dt>Format cpio</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file names. 
+</dd></dl> 
+</dd><dt>Format gnutar</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file, group and user names. 
 </dd></dl> 
 </dd><dt>Format iso9660 - volume metadata</dt><dd> 
 These options are used to set standard ISO9660 metadata. 
 <dl> 
 <dt>'''abstract-file'''=''filename''</dt><dd> 
 The file with the specified name will be identified in the ISO9660 metadata 
-as holding the abstract for this volume.  Default: none. 
+as holding the abstract for this volume. 
+Default: none. 
 </dd><dt>'''application-id'''=''filename''</dt><dd> 
 The file with the specified name will be identified in the ISO9660 metadata 
-as holding the application identifier for this volume.  Default: none. 
+as holding the application identifier for this volume. 
+Default: none. 
 </dd><dt>'''biblio-file'''=''filename''</dt><dd> 
 The file with the specified name will be identified in the ISO9660 metadata 
-as holding the bibliography for this volume.  Default: none. 
+as holding the bibliography for this volume. 
+Default: none. 
 </dd><dt>'''copyright-file'''=''filename''</dt><dd> 
 The file with the specified name will be identified in the ISO9660 metadata 
-as holding the copyright for this volume.  Default: none. 
+as holding the copyright for this volume. 
+Default: none. 
 </dd><dt>'''publisher'''=''filename''</dt><dd> 
 The file with the specified name will be identified in the ISO9660 metadata 
-as holding the publisher information for this volume.  Default: none. 
+as holding the publisher information for this volume. 
+Default: none. 
 </dd><dt>'''volume-id'''=''string''</dt><dd> 
 The specified string will be used as the Volume Identifier in the ISO9660 metadata. 
-It is limited to 32 bytes. Default: none. 
+It is limited to 32 bytes. 
+Default: none. 
 </dd></dl> 
 </dd><dt>Format iso9660 - boot support</dt><dd> 
 These options are used to make an ISO9660 image that can be directly 
@@ -225,7 +324,7 @@ If the boot image is exactly 1.2MB, 1.44MB, or 2.88MB, then
 the default is 
 '''fd''', 
 otherwise the default is 
-'''no-emulation.''' 
+'''no-emulation'''. 
 </dd></dl> 
 </dd><dt>Format iso9660 - filename and size extensions</dt><dd> 
 Various extensions to the base ISO9660 format. 
@@ -249,7 +348,7 @@ This does not impact names stored in the Rockridge or Joliet extension area.
 Default: disabled. 
 </dd><dt>'''allow-period'''</dt><dd> 
 If enabled, allows filenames to contain trailing period characters, in violation of the ISO9660 specification. 
-If disabled,trailing periods will be converted to underscore characters. 
+If disabled, trailing periods will be converted to underscore characters. 
 This does not impact names stored in the Rockridge or Joliet extension area. 
 Default: disabled. 
 </dd><dt>'''allow-pvd-lowercase'''</dt><dd> 
@@ -357,6 +456,111 @@ Specifies a filename that should not be compressed when using
 This option can be provided multiple times to suppress compression 
 on many files. 
 </dd></dl> 
+</dd><dt>Format mtree</dt><dd> 
+<dl> 
+<dt>'''cksum''', '''device''', '''flags''', '''gid''', '''gname''', '''indent''', '''link''', '''md5''', '''mode''', '''nlink''', '''rmd160''', '''sha1''', '''sha256''', '''sha384''', '''sha512''', '''size''', '''time''', '''uid''', '''uname'''</dt><dd> 
+Enable a particular keyword in the mtree output. 
+Prefix with an exclamation mark to disable the corresponding keyword. 
+The default is equivalent to 
+"device, flags, gid, gname, link, mode, nlink, size, time, type, uid, uname". 
+</dd><dt>'''all'''</dt><dd> 
+Enables all of the above keywords. 
+</dd><dt>'''use-set'''</dt><dd> 
+Enables generation of 
+'''/set''' 
+lines that specify default values for the following files and/or directories. 
+</dd><dt>'''indent'''</dt><dd> 
+XXX needs explanation XXX 
+</dd></dl> 
+</dd><dt>Format newc</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file names. 
+</dd></dl> 
+</dd><dt>Format pax</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file, group and user names. 
+The value is one of 
+"BINARY" 
+or 
+"UTF-8". 
+With 
+"BINARY" 
+there is no character conversion, with 
+"UTF-8" 
+names are converted to UTF-8. 
+</dd><dt>'''xattrheader'''</dt><dd> 
+When storing extended attributes, this option configures which 
+headers should be written. The value is one of 
+"all", 
+"LIBARCHIVE", 
+or 
+"SCHILY". 
+By default, both 
+"LIBARCHIVE.xattr" 
+and 
+"SCHILY.xattr" 
+headers are written. 
+</dd></dl> 
+</dd><dt>Format ustar</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file, group and user names. 
+</dd></dl> 
+</dd><dt>Format v7tar</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file, group and user names. 
+</dd></dl> 
+</dd><dt>Format warc</dt><dd> 
+<dl> 
+<dt>'''omit-warcinfo'''</dt><dd> 
+Set to 
+"true" 
+to disable output of the warcinfo record. 
+</dd></dl> 
+</dd><dt>Format xar</dt><dd> 
+<dl> 
+<dt>'''checksum'''=''type''</dt><dd> 
+Use 
+''type'' 
+as file checksum method. 
+Supported values are 
+"none", 
+"md5", 
+and 
+"sha1" 
+(default.) 
+</dd><dt>'''compression'''=''type''</dt><dd> 
+Use 
+''type'' 
+as compression method. 
+Supported values are 
+"none", 
+"bzip2", 
+"gzip" 
+(default,) 
+"lzma" 
+and 
+"xz". 
+</dd><dt>'''compression_level'''</dt><dd> 
+The value is a decimal integer from 1 to 9 specifying the compression level. 
+</dd><dt>'''toc-checksum'''=''type''</dt><dd> 
+Use 
+''type'' 
+as table of contents checksum method. 
+Supported values are 
+"none", 
+"md5" 
+and 
+"sha1" 
+(default.) 
+</dd></dl> 
 </dd><dt>Format zip</dt><dd> 
 <dl> 
 <dt>'''compression'''</dt><dd> 
@@ -367,6 +571,29 @@ or
 to indicate how the following entries should be compressed. 
 Note that this setting is ignored for directories, symbolic links, 
 and other special entries. 
+</dd><dt>'''compression-level'''</dt><dd> 
+The value is interpreted as a decimal integer specifying the 
+compression level. 
+Values between 0 and 9 are supported. 
+A compression level of 0 switches the compression method to 
+"store", 
+other values will enable 
+"deflate" 
+compression with the given level. 
+</dd><dt>'''encryption'''</dt><dd> 
+Enable encryption using traditional zip encryption. 
+</dd><dt>'''encryption'''=''type''</dt><dd> 
+Use 
+''type'' 
+as encryption type. 
+Supported values are 
+"zipcrypt" 
+(traditional zip encryption,) 
+"aes128" 
+(WinZip AES-128 encryption) 
+and 
+"aes256" 
+(WinZip AES-256 encryption.) 
 </dd><dt>'''experimental'''</dt><dd> 
 This boolean option enables or disables experimental Zip features 
 that may not be compatible with other Zip implementations. 
@@ -375,7 +602,8 @@ This boolean option disables CRC calculations.
 All CRC fields are set to zero. 
 It should not be used except for testing purposes. 
 </dd><dt>'''hdrcharset'''</dt><dd> 
-This sets the character set used for filenames. 
+The value is used as a character set name that will be 
+used when translating file names. 
 </dd><dt>'''zip64'''</dt><dd> 
 Zip64 extensions provide additional file size information 
 for entries larger than 4 GiB. 
@@ -422,9 +650,9 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveReadSetOptions3]], 
-[[ManPageArchiveWrite3]] 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchiverite3]], 
+[[ManPageibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 

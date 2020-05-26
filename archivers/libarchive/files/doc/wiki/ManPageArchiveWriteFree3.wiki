@@ -36,7 +36,7 @@ after calling this function, the only call that can succeed is
 to release the resources. 
 This can be used to speed recovery when the archive creation 
 must be aborted. 
-Note that the created archive is likely to be malformed in this case;  
+Note that the created archive is likely to be malformed in this case; 
 </dd><dt>'''archive_write_close'''()</dt><dd> 
 Complete the archive and invoke the close callback. 
 </dd><dt>'''archive_write_finish'''()</dt><dd> 
@@ -66,8 +66,8 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWriteSetOptions3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPageibarchive3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

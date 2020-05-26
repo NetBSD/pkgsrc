@@ -1,7 +1,7 @@
 LIBARCHIVE_CHANGES(3)	 BSD Library Functions Manual	 LIBARCHIVE_CHANGES(3)
 
 NAME
-     libarchive_changes — changes in libarchive interface
+     libarchive_changes -- changes in libarchive interface
 
 CHANGES IN LIBARCHIVE 3
      This page describes user-visible changes in libarchive3, and lists public
@@ -9,7 +9,7 @@ CHANGES IN LIBARCHIVE 3
      libarchive3, along with their replacements if any.
 
    Multiple Filters
-     Libarchive2 permitted a single (input or output) filter active on an ar‐
+     Libarchive2 permitted a single (input or output) filter active on an ar-
      chive.  Libarchive3 extends this into a variable-length stack.  Where
      archive_write_set_compression_XXX() would replace any existing filter,
      archive_write_add_filter_XXX() extends the write pipeline with another
@@ -18,28 +18,28 @@ CHANGES IN LIBARCHIVE 3
    Character Set Handling
      Libarchive2 assumed that the local platform uses Unicode as the native
      wchar_t encoding, which is true on Windows, modern Linux, and a few other
-     systems, but is certainly not universal.  As a result, pax format ar‐
-     chives were written incorrectly on some systems, since pax format re‐
-     quires UTF-8 and libarchive 2 incorrectly assumed that wchar_t strings
+     systems, but is certainly not universal.  As a result, pax format ar-
+     chives were written incorrectly on some systems, since pax format
+     requires UTF-8 and libarchive 2 incorrectly assumed that wchar_t strings
      can be easily converted to UTF-8.
 
      Libarchive3 uses the standard iconv library to convert between character
-     sets and is introducing the notion of a “default character set for the
-     archive”.	To support this, archive_entry objects can now be bound to a
+     sets and is introducing the notion of a ``default character set for the
+     archive''.  To support this, archive_entry objects can now be bound to a
      particular archive when they are created.	The automatic character set
      conversions performed by archive_entry objects when reading and writing
-     filenames, usernames, and other strings will now use an appropriate de‐
-     fault character set:
+     filenames, usernames, and other strings will now use an appropriate
+     default character set:
 
-     If the archive_entry object is bound to an archive, it will use the de‐
-     fault character set for that archive.
+     If the archive_entry object is bound to an archive, it will use the
+     default character set for that archive.
 
      The platform default character encoding (as returned by
      nl_langinfo(CHARSET)) will be used if nothing else is specified.
 
-     Libarchive3 also introduces charset options to many of the archive read‐
-     ers and writers to control the character set that will be used for file‐
-     names written in those archives.  When possible, this will be set auto‐
+     Libarchive3 also introduces charset options to many of the archive read-
+     ers and writers to control the character set that will be used for file-
+     names written in those archives.  When possible, this will be set auto-
      matically based on information in the archive itself.  Combining this
      with the notion of a default character set for the archive should allow
      you to configure libarchive to read archives from other platforms and
@@ -54,13 +54,13 @@ CHANGES IN LIBARCHIVE 3
 
      There are a few cases where these changes will affect your source code:
 
-     •	  In some cases, libarchive's wider types will introduce the possibil‐
+     o	  In some cases, libarchive's wider types will introduce the possibil-
 	  ity of truncation: for example, on a system with a 16-bit uid_t, you
 	  risk having uid 65536 be truncated to uid 0, which can cause serious
 	  security problems.
 
-     •	  Typedef function pointer types will be incompatible.	For example,
-	  if you define custom skip callbacks, you may have to use code simi‐
+     o	  Typedef function pointer types will be incompatible.	For example,
+	  if you define custom skip callbacks, you may have to use code simi-
 	  lar to the following if you want to support building against
 	  libarchive2 and libarchive3:
 
@@ -78,19 +78,19 @@ CHANGES IN LIBARCHIVE 3
 
      Affected functions:
 
-     •	 archive_entry_gid(), archive_entry_set_gid()
-     •	 archive_entry_uid(), archive_entry_set_uid()
-     •	 archive_entry_ino(), archive_entry_set_ino()
-     •	 archive_read_data_block(), archive_write_data_block()
-     •	 archive_read_disk_gname(), archive_read_disk_uname()
-     •	 archive_read_disk_set_gname_lookup(),
+     o	 archive_entry_gid(), archive_entry_set_gid()
+     o	 archive_entry_uid(), archive_entry_set_uid()
+     o	 archive_entry_ino(), archive_entry_set_ino()
+     o	 archive_read_data_block(), archive_write_data_block()
+     o	 archive_read_disk_gname(), archive_read_disk_uname()
+     o	 archive_read_disk_set_gname_lookup(),
 	 archive_read_disk_set_group_lookup(),
 	 archive_read_disk_set_uname_lookup(),
 	 archive_read_disk_set_user_lookup()
-     •	 archive_skip_callback()
-     •	 archive_read_extract_set_skip_file(),
+     o	 archive_skip_callback()
+     o	 archive_read_extract_set_skip_file(),
 	 archive_write_disk_set_skip_file(), archive_write_set_skip_file()
-     •	 archive_write_disk_set_group_lookup(),
+     o	 archive_write_disk_set_group_lookup(),
 	 archive_write_disk_set_user_lookup()
 
      Where these functions or their arguments took or returned gid_t, ino_t,
@@ -252,9 +252,9 @@ CHANGES IN LIBARCHIVE 3
 	  10240
 
 SEE ALSO
-     libarchive(3), archive_read(3), archive_read_filter(3),
-     archive_read_format(3), archive_read_set_options(3), archive_write(3),
+     archive_read(3), archive_read_filter(3), archive_read_format(3),
+     archive_read_set_options(3), archive_util(3), archive_write(3),
      archive_write_filter(3), archive_write_format(3),
-     archive_write_set_options(3), archive_util(3)
+     archive_write_set_options(3), libarchive(3)
 
 BSD			       December 23, 2011			   BSD

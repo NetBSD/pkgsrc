@@ -87,7 +87,7 @@ See
 After all entries have been written, use the
 \fB\%archive_write_free\fP()
 function to release all resources.
-.SH EXAMPLE
+.SH EXAMPLES
 .ad l
 The following sketch illustrates basic usage of the library.
 In this example,
@@ -154,7 +154,7 @@ write_archive(const char *outname, const char **filename)
   if (archive_write_set_format_filter_by_ext(a, outname) != ARCHIVE_OK)  {
     archive_write_add_filter_gzip(a);
     archive_write_set_format_ustar(a);
-  }  
+  }
   archive_write_open(a, mydata, myopen, mywrite, myclose);
   while (*filename) {
     stat(*filename, &st);
@@ -187,8 +187,8 @@ int main(int argc, const char **argv)
 .SH SEE ALSO
 .ad l
 \fBtar\fP(1),
-\fBlibarchive\fP(3),
 \fBarchive_write_set_options\fP(3),
+\fBlibarchive\fP(3),
 \fBcpio\fP(5),
 \fBmtree\fP(5),
 \fBtar\fP(5)

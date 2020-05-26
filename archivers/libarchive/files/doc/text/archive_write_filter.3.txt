@@ -8,7 +8,7 @@ NAME
      archive_write_add_filter_lzip, archive_write_add_filter_lzma,
      archive_write_add_filter_lzop, archive_write_add_filter_none,
      archive_write_add_filter_program, archive_write_add_filter_uuencode,
-     archive_write_add_filter_xz, archive_write_add_filter_zstd, — functions
+     archive_write_add_filter_xz, archive_write_add_filter_zstd -- functions
      enabling output filters
 
 LIBRARY
@@ -79,7 +79,7 @@ DESCRIPTION
 	     always properly blocked.
 
      archive_write_add_filter_none()
-	     This is never necessary.  It is provided only for backwards com‐
+	     This is never necessary.  It is provided only for backwards com-
 	     patibility.
 
      archive_write_add_filter_program()
@@ -95,7 +95,7 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_write(3), archive_write_format(3),
-     archive_write_set_options(3), cpio(5), mtree(5), tar(5)
+     tar(1), archive_write(3), archive_write_format(3),
+     archive_write_set_options(3), libarchive(3), cpio(5), mtree(5), tar(5)
 
 BSD				August 14, 2014 			   BSD
