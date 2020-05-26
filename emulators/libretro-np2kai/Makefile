@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/02/24 15:26:50 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:15 nia Exp $
 
 NP2KAI_REV=	18
 DISTNAME=	libretro-np2kai-0.86.${NP2KAI_REV}
@@ -12,9 +12,13 @@ HOMEPAGE=	https://docs.libretro.com/library/neko_project_ii_kai/
 COMMENT=	Libretro core based on the Neko Project II PC-9801 emulator
 LICENSE=	mit
 
-EXTRACT_USING=	bsdtar
 BUILD_DIRS=	sdl2
 MAKE_FILE=	Makefile.libretro
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++

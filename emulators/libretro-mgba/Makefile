@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/02/18 13:29:48 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/26 09:45:15 nia Exp $
 
 DISTNAME=	mgba-0.8.1
 PKGNAME=	libretro-${DISTNAME}
@@ -11,11 +11,14 @@ HOMEPAGE=	https://docs.libretro.com/library/mgba/
 COMMENT=	Libretro core based on the mGBA emulator
 LICENSE=	mpl-2.0
 
-EXTRACT_USING=	bsdtar
-
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 WRKSRC=		${WRKDIR}/mgba-${PKGVERSION_NOREV}
 
