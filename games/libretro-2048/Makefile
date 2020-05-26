@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/10 12:39:10 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/26 09:45:11 nia Exp $
 
 DISTNAME=	libretro-2048-20181229
 CATEGORIES=	games
@@ -11,9 +11,13 @@ HOMEPAGE=	https://docs.libretro.com/library/2048/
 COMMENT=	Libretro core based on the 2048 puzzle game
 LICENSE=	unlicense
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.libretro
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 CHECK_PORTABILITY_SKIP+=	pixman/configure
 

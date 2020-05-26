@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/03 19:24:33 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/26 09:45:16 nia Exp $
 
 PKGNAME=	libretro-ppsspp-1.7.5
 CATEGORIES=	emulators
@@ -31,12 +31,16 @@ SITES.ppsspp-glslang.tar.gz= \
 SITES.ppsspp-spriv.tar.gz= \
 	-https://github.com/KhronosGroup/SPIRV-Cross/archive/${SPRIV_TAG}.tar.gz
 
-EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/ppsspp-${PKGVERSION_NOREV}
 BUILD_DIRS=	libretro
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++11
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../mk/bsd.prefs.mk"
 

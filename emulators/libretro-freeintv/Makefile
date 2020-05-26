@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/02 21:09:29 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/26 09:45:14 nia Exp $
 
 DISTNAME=	libretro-freeintv-20180729
 CATEGORIES=	emulators
@@ -11,9 +11,13 @@ HOMEPAGE=	https://docs.libretro.com/library/freeintv/
 COMMENT=	Libretro core for Mattel Intellivision emulation
 LICENSE=	gnu-gpl-v3
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../mk/endian.mk"
 

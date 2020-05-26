@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/12 16:14:27 nia Exp $
-lib/libretro/freeintv_libretro.so
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:14 nia Exp $
+lib/libretro/freeintv_libretro.${SOEXT}

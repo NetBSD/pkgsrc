@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/13 14:37:25 nia Exp $
-lib/libretro/bsnes_mercury_accuracy_libretro.so
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:13 nia Exp $
+lib/libretro/bsnes_mercury_accuracy_libretro.${SOEXT}
