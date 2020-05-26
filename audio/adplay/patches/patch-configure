@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.2.2.2 2020/05/26 18:37:29 bsiegert Exp $
+
+Broken with adplug-2.3.2
+
+--- configure.orig	2017-11-19 00:28:23.000000000 +0000
++++ configure
+@@ -17462,7 +17462,7 @@ CSurroundopl *dummy;
+ _ACEOF
+ if ac_fn_cxx_try_link "$LINENO"; then :
+ 
+-$as_echo "#define HAVE_ADPLUG_SURROUND /**/" >>confdefs.h
++#$as_echo "#define HAVE_ADPLUG_SURROUND /**/" >>confdefs.h
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
