@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/26 09:45:16 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/26 11:35:46 nia Exp $
 
 .include "../../emulators/stella/Makefile.common"
 
@@ -23,9 +23,6 @@ MAKE_FLAGS+=	LTO=
 # Should not be combined with -fPIC
 BUILDLINK_TRANSFORM+=	rm:-static-libgcc
 BUILDLINK_TRANSFORM+=	rm:-static-libstdc++
-
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
