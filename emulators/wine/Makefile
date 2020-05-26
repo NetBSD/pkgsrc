@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2020/05/23 21:20:38 adam Exp $
+# $NetBSD: Makefile,v 1.216 2020/05/26 12:40:08 nia Exp $
 
 DISTNAME=	wine-4.0.3
 CATEGORIES=	emulators
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison flex gmake mktemp msgfmt perl
+USE_TOOLS+=	pkg-config
 
 REPLACE_PERL+=	tools/winemaker/winemaker
 REPLACE_PERL+=	tools/winedump/function_grep.pl
