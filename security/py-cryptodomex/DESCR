@@ -1,4 +1,0 @@
-PyCryptodomex is a self-contained Python package of low-level cryptographic
-primitives.
-
-All modules are installed under the Cryptodome package.
