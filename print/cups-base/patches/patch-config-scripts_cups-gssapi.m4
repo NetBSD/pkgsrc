@@ -1,11 +1,11 @@
-$NetBSD: patch-config-scripts_cups-gssapi.m4,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-config-scripts_cups-gssapi.m4,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
 --- config-scripts/cups-gssapi.m4.orig	2017-06-30 15:44:38.000000000 +0000
 +++ config-scripts/cups-gssapi.m4
-@@ -34,19 +34,18 @@ if test x$enable_gssapi != xno; then
+@@ -30,19 +30,18 @@ if test x$enable_gssapi != xno; then
  					AC_MSG_RESULT(no)
  				fi
  				;;

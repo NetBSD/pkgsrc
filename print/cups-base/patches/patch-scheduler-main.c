@@ -1,10 +1,10 @@
-$NetBSD: patch-scheduler-main.c,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-scheduler-main.c,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
 --- scheduler/main.c.orig	2017-10-13 18:22:26.000000000 +0000
 +++ scheduler/main.c
-@@ -61,6 +61,7 @@
+@@ -62,6 +62,7 @@
   * Local functions...
   */
  
@@ -26,7 +26,7 @@ Add a PidFile configuration directive to write a PID file.
    * Send server-started event...
    */
  
-@@ -1143,6 +1151,7 @@ main(int  argc,				/* I - Number of comm
+@@ -1158,6 +1166,7 @@ main(int  argc,				/* I - Number of comm
                    "Scheduler shutting down due to program error.");
    }
  
@@ -34,7 +34,7 @@ Add a PidFile configuration directive to write a PID file.
   /*
    * Close all network clients...
    */
-@@ -1168,6 +1177,12 @@ main(int  argc,				/* I - Number of comm
+@@ -1183,6 +1192,12 @@ main(int  argc,				/* I - Number of comm
    */
  
    cupsdDeleteTemporaryPrinters(1);
@@ -47,7 +47,7 @@ Add a PidFile configuration directive to write a PID file.
  
  #ifdef __APPLE__
   /*
-@@ -2088,6 +2103,36 @@ service_checkout(int shutdown)          
+@@ -2122,6 +2137,36 @@ service_checkout(int shutdown)          
  
  
  /*

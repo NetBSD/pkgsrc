@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.35 2020/05/22 10:55:49 adam Exp $
+# $NetBSD: Makefile,v 1.36 2020/05/26 08:36:55 triaxx Exp $
 
 .include "../../print/cups/Makefile.common"
 
-DISTNAME=	cups-${CUPS_VERS}-source
 PKGNAME=	cups-base-${CUPS_VERS}
-PKGREVISION=	3
-CATEGORIES=	print
+PKGREVISION=	4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 
 MAINTAINER=	sbd@NetBSD.org
-HOMEPAGE=	https://www.cups.org/
 COMMENT=	Common UNIX Printing System
-LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 GITHUB_PROJECT=	cups
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -56,13 +52,6 @@ LIBS+=			${BUILDLINK_LDADD.iconv}
 # can not be used when making a shared object; recompile with -fPIC
 BUILDLINK_TRANSFORM.FreeBSD+=	rm:-Wl,-pie
 
-# CUPS_USER		user to run filter and CGI programs as
-# CUPS_GROUP		group to run filter and CGI programs as
-# CUPS_SYSTEM_GROUPS	group for system administration
-#
-CUPS_USER?=		lp
-CUPS_GROUP?=		lp
-CUPS_SYSTEM_GROUPS?=	${REAL_ROOT_GROUP}
 FILES_SUBST+=		CUPS_USER=${CUPS_USER}
 FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP}
 FILES_SUBST+=		CUPS_SYSTEM_GROUPS=${CUPS_SYSTEM_GROUPS:Q}
@@ -116,7 +105,7 @@ SUBST_MESSAGE.rpathfix=	Adding rpath to cups-config.
 SUBST_SED.rpathfix=	-e 's|@EXPORT_LDFLAGS@|${COMPILER_RPATH_FLAG}${PREFIX}/lib|g'
 SUBST_STAGE.rpathfix=	pre-configure
 
-.if !empty(OPSYS:MNetBSD) && !empty(MACHINE_ARCH:Mpowerpc)
+.if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == powerpc
 SUBST_CLASSES+=		piefix
 SUBST_FILES.piefix=	Makedefs.in
 SUBST_MESSAGE.piefix=	Removing PIE flags
