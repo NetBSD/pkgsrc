@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:12:39 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/05/26 11:25:34 joerg Exp $
 
 SHA1 (libvisual-plugins-0.2.0.tar.gz) = bc001f66b1c81b747bc06e3e09aaf71882c47370
 RMD160 (libvisual-plugins-0.2.0.tar.gz) = 3f4835843e3719e6342a3b8f1478f89388423b37
@@ -7,4 +7,7 @@ Size (libvisual-plugins-0.2.0.tar.gz) = 1021051 bytes
 SHA1 (patch-aa) = 68ffdb6261aafa219df0e5c4d313fc7f865ae734
 SHA1 (patch-ab) = 31a380ed59ed9eed1e5516c44fec54c1e7dcf25c
 SHA1 (patch-ac) = 2bb5757b041cd3161a77fa71f14628c9013c1298
+SHA1 (patch-plugins_actor_G-Force_Common_UI_LineXX.cpp) = 97cd58ba4320cb14e1890a86a829726ff088b128
+SHA1 (patch-plugins_actor_G-Force_GForceCommon_G-Force.cpp) = 514a9f2c0ef7785d4795554436cb2368990b9608
+SHA1 (patch-plugins_actor_G-Force_GForceCommon_WaveShape.cpp) = 5658627e165bc7dbf9469ac0c26f70c69a85f128
 SHA1 (patch-plugins_morph_flash_morph__flash_c) = fc1cb75a68d98327d072182447aa8183940d5f61
