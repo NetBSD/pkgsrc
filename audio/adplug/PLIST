@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/12/11 09:50:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3.10.1 2020/05/26 18:37:25 bsiegert Exp $
 bin/adplugdb
 include/adplug/a2m.h
 include/adplug/adl.h
@@ -37,6 +37,7 @@ include/adplug/jbm.h
 include/adplug/kemuopl.h
 include/adplug/ksm.h
 include/adplug/lds.h
+include/adplug/load_helper.h
 include/adplug/mad.h
 include/adplug/mdi.h
 include/adplug/mid.h
