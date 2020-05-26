@@ -1,0 +1,14 @@
+$NetBSD: patch-tools_libs_gnttab_Makefile,v 1.1 2020/05/26 11:12:11 bouyer Exp $
+
+--- tools/libs/gnttab/Makefile.orig	2020-05-09 10:17:22.745274071 +0200
++++ tools/libs/gnttab/Makefile	2020-05-09 10:17:45.177659218 +0200
+@@ -12,8 +12,8 @@
+ SRCS-$(CONFIG_Linux)   += $(SRCS-GNTTAB) $(SRCS-GNTSHR) linux.c
+ SRCS-$(CONFIG_MiniOS)  += $(SRCS-GNTTAB) gntshr_unimp.c minios.c
+ SRCS-$(CONFIG_FreeBSD) += $(SRCS-GNTTAB) $(SRCS-GNTSHR) freebsd.c
++SRCS-$(CONFIG_NetBSD)  += $(SRCS-GNTTAB) $(SRCS-GNTSHR) netbsd.c
+ SRCS-$(CONFIG_SunOS)   += gnttab_unimp.c gntshr_unimp.c
+-SRCS-$(CONFIG_NetBSD)  += gnttab_unimp.c gntshr_unimp.c
+ 
+ include $(XEN_ROOT)/tools/libs/libs.mk
+ 

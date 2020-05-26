@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2020/05/26 11:12:10 bouyer Exp $
+
+The Xen hypervisor is installed under the following locations:
+	${XENKERNELDIR}/xen.gz		(standard hypervisor)
+	${XENKERNELDIR}/xen-debug.gz	(debug hypervisor)
+
+Note that unlike upstream Xen, pv-linear-pt defaults to true.
+You can disable it using pv-linear-pt=false on the Xen command line,
+but then you can't boot NetBSD in PV mode.
+===========================================================================

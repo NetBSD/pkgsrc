@@ -1,0 +1,14 @@
+$NetBSD: patch-tools_qemu-xen_configure,v 1.1 2020/05/26 11:12:11 bouyer Exp $
+
+-lrt is needed for shm_open()
+
+--- tools/qemu-xen/configure.orig	2019-09-27 12:21:35.000000000 +0200
++++ tools/qemu-xen/configure	2020-05-08 20:09:00.341400664 +0200
+@@ -841,6 +841,7 @@
+   audio_drv_list="oss try-sdl"
+   audio_possible_drivers="oss sdl"
+   oss_lib="-lossaudio"
++  LIBS="-lrt $LIBS"
+   HOST_VARIANT_DIR="netbsd"
+   supported_os="yes"
+ ;;

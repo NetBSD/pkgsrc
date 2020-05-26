@@ -1,0 +1,48 @@
+$NetBSD: patch-tools_Makefile,v 1.1 2020/05/26 11:12:11 bouyer Exp $
+
+--- tools/Makefile.orig	2019-12-17 15:23:09.000000000 +0100
++++ tools/Makefile	2020-05-08 16:52:21.141716531 +0200
+@@ -20,7 +20,7 @@
+ SUBDIRS-y += xenmon
+ SUBDIRS-y += xenstat
+ SUBDIRS-$(CONFIG_Linux) += memshr 
+-SUBDIRS-$(CONFIG_NetBSD) += xenbackendd
++#XXX SUBDIRS-$(CONFIG_NetBSD) += xenbackendd
+ SUBDIRS-y += libfsimage
+ SUBDIRS-$(CONFIG_Linux) += libvchan
+ 
+@@ -38,7 +38,7 @@
+ SUBDIRS-$(CONFIG_X86) += xenpaging
+ SUBDIRS-$(CONFIG_X86) += debugger/gdbsx
+ SUBDIRS-$(CONFIG_X86) += debugger/kdd
+-SUBDIRS-$(CONFIG_TESTS) += tests
++#XXX SUBDIRS-$(CONFIG_TESTS) += tests
+ 
+ # These don't cross-compile
+ ifeq ($(XEN_COMPILE_ARCH),$(XEN_TARGET_ARCH))
+@@ -267,17 +267,18 @@
+ 		-L$(XEN_ROOT)/tools/libs/gnttab \
+ 		-L$(XEN_ROOT)/tools/libs/foreignmemory \
+ 		-L$(XEN_ROOT)/tools/libs/devicemodel \
+-		-Wl,-rpath-link=$(XEN_ROOT)/tools/libs/toolcore \
+-		-Wl,-rpath-link=$(XEN_ROOT)/tools/libs/toollog \
+-		-Wl,-rpath-link=$(XEN_ROOT)/tools/libs/evtchn \
+-		-Wl,-rpath-link=$(XEN_ROOT)/tools/libs/gnttab \
+-		-Wl,-rpath-link=$(XEN_ROOT)/tools/libs/call \
+-		-Wl,-rpath-link=$(XEN_ROOT)/tools/libs/foreignmemory \
+-		-Wl,-rpath-link=$(XEN_ROOT)/tools/libs/devicemodel \
++		-Wl,-rpath-link,$(XEN_ROOT)/tools/libs/toolcore \
++		-Wl,-rpath-link,$(XEN_ROOT)/tools/libs/toollog \
++		-Wl,-rpath-link,$(XEN_ROOT)/tools/libs/evtchn \
++		-Wl,-rpath-link,$(XEN_ROOT)/tools/libs/gnttab \
++		-Wl,-rpath-link,$(XEN_ROOT)/tools/libs/call \
++		-Wl,-rpath-link,$(XEN_ROOT)/tools/libs/foreignmemory \
++		-Wl,-rpath-link,$(XEN_ROOT)/tools/libs/devicemodel \
+ 		$(QEMU_UPSTREAM_RPATH)" \
+ 		--bindir=$(LIBEXEC_BIN) \
+ 		--datadir=$(SHAREDIR)/qemu-xen \
+ 		--localstatedir=$(localstatedir) \
++		--disable-opengl \
+ 		--disable-kvm \
+ 		--disable-docs \
+ 		--disable-guest-agent \
