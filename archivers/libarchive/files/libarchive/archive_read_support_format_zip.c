@@ -487,7 +487,7 @@ process_extra(struct archive_read *a, struct archive_entry *entry,
 		/* Some ZIP files may have trailing 0 bytes. Let's check they
 		 * are all 0 and ignore them instead of returning an error.
 		 *
-		 * This is not techincally correct, but some ZIP files look
+		 * This is not technically correct, but some ZIP files look
 		 * like this and other tools support those files - so let's
 		 * also  support them.
 		 */
@@ -1053,7 +1053,7 @@ zip_read_local_file_header(struct archive_read *a, struct archive_entry *entry,
 
 	/* Make sure that entries with a trailing '/' are marked as directories
 	 * even if the External File Attributes contains bogus values.  If this
-	 * is not a directory and there is no type, assume regularfile. */
+	 * is not a directory and there is no type, assume a regular file. */
 	if ((zip_entry->mode & AE_IFMT) != AE_IFDIR) {
 		int has_slash;
 
@@ -1104,7 +1104,7 @@ zip_read_local_file_header(struct archive_read *a, struct archive_entry *entry,
 	}
 
 	if (zip_entry->flags & LA_FROM_CENTRAL_DIRECTORY) {
-		/* If this came from the central dir, it's size info
+		/* If this came from the central dir, its size info
 		 * is definitive, so ignore the length-at-end flag. */
 		zip_entry->zip_flags &= ~ZIP_LENGTH_AT_END;
 		/* If local header is missing a value, use the one from
@@ -1796,6 +1796,23 @@ zip_read_data_zipx_lzma_alone(struct archive_read *a, const void **buff,
 			archive_set_error(&a->archive, ARCHIVE_ERRNO_MISC,
 			    "lzma data error (error %d)", (int) lz_ret);
 			return (ARCHIVE_FATAL);
+
+		/* This case is optional in lzma alone format. It can happen,
+		 * but most of the files don't have it. (GitHub #1257) */
+		case LZMA_STREAM_END:
+			lzma_end(&zip->zipx_lzma_stream);
+			zip->zipx_lzma_valid = 0;
+			if((int64_t) zip->zipx_lzma_stream.total_in !=
+			    zip->entry_bytes_remaining)
+			{
+				archive_set_error(&a->archive,
+				    ARCHIVE_ERRNO_MISC,
+				    "lzma alone premature end of stream");
+				return (ARCHIVE_FATAL);
+			}
+
+			zip->end_of_entry = 1;
+			break;
 
 		case LZMA_OK:
 			break;

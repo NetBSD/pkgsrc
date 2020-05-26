@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Wed Jun 12 21:10:14 2019 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Wed May 20 01:10:05 2020 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -33,7 +33,6 @@ ARCHIVE_ENTRY_ACL(3)</p>
 <b>archive_entry_acl_from_text</b>,
 <b>archive_entry_acl_from_text_w</b>,
 <b>archive_entry_acl_next</b>,
-<b>archive_entry_acl_next_w</b>,
 <b>archive_entry_acl_reset</b>,
 <b>archive_entry_acl_to_text</b>,
 <b>archive_entry_acl_to_text_w</b>,
@@ -104,15 +103,6 @@ descriptions</p>
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
 
-<p><b>archive_entry_acl_next_w</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
-<i>int&nbsp;type</i>, <i>int&nbsp;*ret_type</i>,
-<i>int&nbsp;*ret_permset</i>, <i>int&nbsp;*ret_tag</i>,
-<i>int&nbsp;*ret_qual</i>,
-<i>const&nbsp;wchar_t&nbsp;**ret_name</i>);</p>
-
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
-
-
 <p style="margin-left:12%;"><b>archive_entry_acl_reset</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
 <i>int&nbsp;type</i>);</p>
 
@@ -137,18 +127,18 @@ descriptions</p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION</b></p>
 
-<p style="margin-left:6%;">The &ldquo;Access Control Lists
-(ACLs)&rdquo; extend the standard Unix perssion model. The
-ACL interface of <b>libarchive</b> supports both POSIX.1e
-and NFSv4 style ACLs. Use of ACLs is restricted by various
-levels of ACL support in operating systems, file systems and
-archive formats.</p>
+<p style="margin-left:6%;">The &rsquo;&rsquo;Access Control
+Lists (ACLs)&rsquo;&rsquo; extend the standard Unix
+permission model. The ACL interface of <b>libarchive</b>
+supports both POSIX.1e and NFSv4 style ACLs. Use of ACLs is
+restricted by various levels of ACL support in operating
+systems, file systems and archive formats.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>POSIX.1e
 Access Control Lists</b> <br>
 A POSIX.1e ACL consists of a number of independent entries.
-Each entry specifies the permission set as bitmask of basic
-permissions. Valid permissions in the <i>permset</i>
+Each entry specifies the permission set as a bitmask of
+basic permissions. Valid permissions in the <i>permset</i>
 are:</p>
 
 <p>ARCHIVE_ENTRY_ACL_READ (<b>r</b>) <br>
@@ -173,12 +163,12 @@ field.</p>
 
 <p>ARCHIVE_ENTRY_ACL_GROUP</p>
 
-<p style="margin-left:51%;">The group specied by the name
+<p style="margin-left:51%;">The group specified by the name
 field.</p>
 
 <p>ARCHIVE_ENTRY_ACL_GROUP_OBJ</p>
 
-<p style="margin-left:51%;">The group who owns the
+<p style="margin-left:51%;">The group which owns the
 file.</p>
 
 <p>ARCHIVE_ENTRY_ACL_MASK</p>
@@ -188,8 +178,8 @@ obtained via group permissions.</p>
 
 <p>ARCHIVE_ENTRY_ACL_OTHER</p>
 
-<p style="margin-left:51%;">Any principal who is not file
-owner or a member of the owning group.</p>
+<p style="margin-left:51%;">Any principal who is not the
+file owner or a member of the owning group.</p>
 
 <p style="margin-left:6%; margin-top: 1em">The principals
 ARCHIVE_ENTRY_ACL_USER_OBJ, ARCHIVE_ENTRY_ACL_GROUP_OBJ and
@@ -197,12 +187,12 @@ ARCHIVE_ENTRY_ACL_OTHER are equivalent to user, group and
 other in the classic Unix permission model and specify
 non-extended ACL entries.</p>
 
-<p style="margin-left:6%; margin-top: 1em">All files with
-have an access ACL (ARCHIVE_ENTRY_ACL_TYPE_ACCESS). This
+<p style="margin-left:6%; margin-top: 1em">All files have
+an access ACL (ARCHIVE_ENTRY_ACL_TYPE_ACCESS). This
 specifies the permissions required for access to the file
 itself. Directories have an additional ACL
 (ARCHIVE_ENTRY_ACL_TYPE_DEFAULT), which controls the initial
-access ACL for newly created directory entries.</p>
+access ACL for newly-created directory entries.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>NFSv4 Access
 Control Lists</b> <br>
@@ -248,18 +238,18 @@ field.</p>
 
 <p>ARCHIVE_ENTRY_ACL_GROUP</p>
 
-<p style="margin-left:51%;">The group specied by the name
+<p style="margin-left:51%;">The group specified by the name
 field.</p>
 
 <p>ARCHIVE_ENTRY_ACL_GROUP_OBJ</p>
 
-<p style="margin-left:51%;">The group who owns the
+<p style="margin-left:51%;">The group which owns the
 file.</p>
 
 <p>ARCHIVE_ENTRY_ACL_EVERYONE</p>
 
-<p style="margin-left:51%;">Any principal who is not file
-owner or a member of the owning group.</p>
+<p style="margin-left:51%;">Any principal who is not the
+file owner or a member of the owning group.</p>
 
 <p style="margin-left:6%; margin-top: 1em">Entries with the
 ARCHIVE_ENTRY_ACL_USER or ARCHIVE_ENTRY_ACL_GROUP tag store
@@ -436,33 +426,30 @@ ARCHIVE_ENTRY_ACL_TYPE_NFS4</p>
 
 <p style="margin-left:6%; margin-top: 1em">Supports all
 formats that can be created with
-<b>archive_entry_acl_to_text</b>() or respective
+<b>archive_entry_acl_to_text</b>() or respectively
 <b>archive_entry_acl_to_text_w</b>(). Existing ACL entries
 are preserved. To get a clean new ACL from text
 <b>archive_entry_acl_clear</b>() must be called first.
-Entries prefixed with &ldquo;default:&rdquo; are treated as
-ARCHIVE_ENTRY_ACL_TYPE_DEFAULT unless <i>type</i> is
-ARCHIVE_ENTRY_ACL_TYPE_NFS4. Invalid entries, non-parseable
-ACL entries and entries beginning with the &rsquo;#&rsquo;
-character (comments) are skipped.</p>
+Entries prefixed with &rsquo;&rsquo;default:&rsquo;&rsquo;
+are treated as ARCHIVE_ENTRY_ACL_TYPE_DEFAULT unless
+<i>type</i> is ARCHIVE_ENTRY_ACL_TYPE_NFS4. Invalid entries,
+non-parseable ACL entries and entries beginning with the
+&rsquo;#&rsquo; character (comments) are skipped.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_next</b>()
-and <b>archive_entry_acl_next_w</b>() return the next entry
-of the ACL list. This functions may only be called after
-<b>archive_entry_acl_reset</b>() has indicated the presence
-of extended ACL entries.</p>
+return the next entry of the ACL list. This functions may
+only be called after <b>archive_entry_acl_reset</b>() has
+indicated the presence of extended ACL entries.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_reset</b>()
 prepare reading the list of ACL entries with
-<b>archive_entry_acl_next</b>() or
-<b>archive_entry_acl_next_w</b>(). The function returns
-either 0, if no non-extended ACLs are found. In this case,
-the access permissions should be obtained by
-archive_entry_mode(3) or set using chmod(2). Otherwise, the
-function returns the same value as
-<b>archive_entry_acl_count</b>().</p>
+<b>archive_entry_acl_next</b>(). The function returns 0 if
+no non-extended ACLs are found. In this case, the access
+permissions should be obtained by archive_entry_mode(3) or
+set using chmod(2). Otherwise, the function returns the same
+value as <b>archive_entry_acl_count</b>().</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_to_text</b>()
@@ -489,7 +476,7 @@ ACLs.</p>
 <p>ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT</p>
 
 <p style="margin-left:24%;">Prefix each default ACL entry
-with the word &ldquo;default:&rdquo;.</p>
+with the word &rsquo;&rsquo;default:&rsquo;&rsquo;.</p>
 
 <p>ARCHIVE_ENTRY_ACL_STYLE_SOLARIS</p>
 
@@ -524,7 +511,7 @@ returned. It the entry contains POSIX.1e ACLs and none of
 the flags ARCHIVE_ENTRY_ACL_TYPE_ACCESS or
 ARCHIVE_ENTRY_ACL_TYPE_DEFAULT are specified, both access
 and default entries are returned and default entries are
-prefixed with &ldquo;default:&rdquo;.</p>
+prefixed with &rsquo;&rsquo;default:&rsquo;&rsquo;.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_types</b>()
@@ -551,10 +538,10 @@ one or more entries were invalid or non-parseable.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_next</b>()
-and <b>archive_entry_acl_next_w</b>() return ARCHIVE_OK on
-success, ARCHIVE_EOF if no more ACL entries exist and
-ARCHIVE_WARN if <b>archive_entry_acl_reset</b>() has not
-been called first.</p>
+returns ARCHIVE_OK on success, ARCHIVE_EOF if no more ACL
+entries exist and ARCHIVE_WARN if
+<b>archive_entry_acl_reset</b>() has not been called
+first.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_to_text</b>()

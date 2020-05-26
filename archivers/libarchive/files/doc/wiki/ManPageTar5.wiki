@@ -414,7 +414,7 @@ archives to store files much larger than the historic 8GB limit.
 Vendor-specific attributes used by Joerg Schilling's 
 '''star''' 
 implementation. 
-</dd><dt>'''SCHILY.acl.access''', '''SCHILY.acl.default,''' '''SCHILY.acl.ace'''</dt><dd> 
+</dd><dt>'''SCHILY.acl.access''', '''SCHILY.acl.default''', '''SCHILY.acl.ace'''</dt><dd> 
 Stores the access, default and NFSv4 ACLs as textual strings in a format 
 that is an extension of the format specified by POSIX.1e draft 17. 
 In particular, each user or group access specification can include 
@@ -429,7 +429,7 @@ The file flags.
 </dd><dt>'''SCHILY.realsize'''</dt><dd> 
 The full size of the file on disk. 
 XXX explain? XXX 
-</dd><dt>'''SCHILY.dev,''' '''SCHILY.ino''', '''SCHILY.nlinks'''</dt><dd> 
+</dd><dt>'''SCHILY.dev''', '''SCHILY.ino''', '''SCHILY.nlinks'''</dt><dd> 
 The device number, inode number, and link count for the entry. 
 In particular, note that a pax interchange format archive using Joerg 
 Schilling's 
@@ -446,7 +446,7 @@ The time when the file was created.
 "ctime" 
 attribute, which refers to the time when the file 
 metadata was last changed.) 
-</dd><dt>'''LIBARCHIVE.xattr.'''''namespace''.''key''</dt><dd> 
+</dd><dt>'''LIBARCHIVE.xattr'''.''namespace''.''key''</dt><dd> 
 Libarchive stores POSIX.1e-style extended attributes using 
 keys of this form. 
 The 
@@ -863,7 +863,8 @@ GNU tar long pathname for the following header.
 </dd><dt>'''M'''</dt><dd> 
 GNU tar multivolume marker, indicating the file is a continuation of a file from the previous volume. 
 </dd><dt>'''N'''</dt><dd> 
-GNU tar long filename support.  Deprecated. 
+GNU tar long filename support. 
+Deprecated. 
 </dd><dt>'''S'''</dt><dd> 
 GNU tar sparse regular file. 
 </dd><dt>'''V'''</dt><dd> 

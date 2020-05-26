@@ -1,7 +1,7 @@
 ARCHIVE_WRITE_NEW(3)	 BSD Library Functions Manual	  ARCHIVE_WRITE_NEW(3)
 
 NAME
-     archive_write_new — functions for creating archives
+     archive_write_new -- functions for creating archives
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -20,7 +20,7 @@ DESCRIPTION
      overview manual page for libarchive(3).
 
 SEE ALSO
-     tar(1), libarchive(3), archive_write(3), archive_write_set_options(3),
+     tar(1), archive_write(3), archive_write_set_options(3), libarchive(3),
      cpio(5), mtree(5), tar(5)
 
 BSD			       February 2, 2012 			   BSD

@@ -2,8 +2,8 @@ ARCHIVE_READ_OPTIONS(3)  BSD Library Functions Manual  ARCHIVE_READ_OPTIONS(3)
 
 NAME
      archive_read_set_filter_option, archive_read_set_format_option,
-     archive_read_set_option, archive_read_set_options — functions controlling
-     options for reading archives
+     archive_read_set_option, archive_read_set_options -- functions control-
+     ling options for reading archives
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -25,14 +25,14 @@ SYNOPSIS
      archive_read_set_options(struct archive *, const char *options);
 
 DESCRIPTION
-     These functions provide a way for libarchive clients to configure spe‐
+     These functions provide a way for libarchive clients to configure spe-
      cific read modules.
 
      archive_read_set_filter_option(), archive_read_set_format_option()
 	     Specifies an option that will be passed to currently-registered
 	     filters (including decompression filters) or format readers.
 
-	     If option and value are both NULL, these functions will do noth‐
+	     If option and value are both NULL, these functions will do noth-
 	     ing and ARCHIVE_OK will be returned.  If option is NULL but value
 	     is not, these functions will do nothing and ARCHIVE_FAILED will
 	     be returned.
@@ -51,7 +51,7 @@ DESCRIPTION
      archive_read_set_option()
 	     Calls archive_read_set_format_option(), then
 	     archive_read_set_filter_option().	If either function returns
-	     ARCHIVE_FATAL, ARCHIVE_FATAL will be returned immediately.  Oth‐
+	     ARCHIVE_FATAL, ARCHIVE_FATAL will be returned immediately.  Oth-
 	     erwise, greater of the two values will be returned.
 
      archive_read_set_options()
@@ -68,7 +68,7 @@ DESCRIPTION
 		     Modules that do not accept an option with this name will
 		     ignore it.
 	     option  The option will be provided to every module with a value
-		     of “1”.
+		     of ``1''.
 	     !option
 		     The option will be provided to every module with a NULL
 		     value.
@@ -77,30 +77,50 @@ DESCRIPTION
 		     provided only to modules whose name matches module.
 
 OPTIONS
+     Format cab
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file names.
+     Format cpio
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file names.
      Format iso9660
 	     joliet  Support Joliet extensions.  Defaults to enabled, use
 		     !joliet to disable.
 	     rockridge
 		     Support RockRidge extensions.  Defaults to enabled, use
 		     !rockridge to disable.
+     Format lha
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file names.
+     Format mtree
+	     checkfs
+		     Allow reading information missing from the mtree from the
+		     file system.  Disabled by default.
+     Format rar
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file names.
      Format tar
 	     compat-2x
 		     Libarchive 2.x incorrectly encoded Unicode filenames on
 		     some platforms.  This option mimics the libarchive 2.x
-		     filename handling so that such archives can be read cor‐
+		     filename handling so that such archives can be read cor-
 		     rectly.
 	     hdrcharset
 		     The value is used as a character set name that will be
-		     used when translating filenames.
+		     used when translating file names.
 	     mac-ext
 		     Support Mac OS metadata extension that records data in
 		     special files beginning with a period and underscore.
-		     Defaults to enabled on Mac OS, disabled on other plat‐
+		     Defaults to enabled on Mac OS, disabled on other plat-
 		     forms.  Use !mac-ext to disable.
 	     read_concatenated_archives
 		     Ignore zeroed blocks in the archive, which occurs when
 		     multiple tar archives have been concatenated together.
-		     Without this option, only the contents of the first con‐
+		     Without this option, only the contents of the first con-
 		     catenated archive would be read.
 
 ERRORS
@@ -108,6 +128,6 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_write_set_options(3), archive_read(3)
+     tar(1), archive_read(3), archive_write_set_options(3), libarchive(3)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       January 31, 2020 			   BSD
