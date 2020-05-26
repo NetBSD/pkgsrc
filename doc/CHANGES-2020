@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3195 2020/05/26 20:43:58 js Exp $
+$NetBSD: CHANGES-2020,v 1.3196 2020/05/26 20:46:35 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5084,3 +5084,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs12 to 12.17.0 [adam 2020-05-26]
 	Updated net/py-prometheus_client to 0.8.0 [adam 2020-05-26]
 	Updated devel/fossil to 2.11 [js 2020-05-26]
+	Added net/py-dnspython version 1.16.0 [khorben 2020-05-26]
