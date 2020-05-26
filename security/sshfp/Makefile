@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/05/26 21:18:14 khorben Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/26 21:31:12 khorben Exp $
 
 DISTNAME=	sshfp-1.2.2
+PKGREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xelerance/}
 
@@ -11,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-dnspython-[0-9]*:../../net/py-dnspython
+DEPENDS+=	${PYPKGPREFIX}-ipcalc-[0-9]*:../../net/py-ipcalc
 
 MANCOMPRESSED=	yes
 NO_BUILD=	yes
