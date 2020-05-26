@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3199 2020/05/26 21:29:22 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.3200 2020/05/26 22:22:18 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5088,3 +5088,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cloc to 1.86 [fcambus 2020-05-26]
 	Updated security/sshfp to 1.2.2 [khorben 2020-05-26]
 	Added net/py-ipcalc version 1.99.0 [khorben 2020-05-26]
+	Updated sysutils/xfce4-thunar to 1.8.15 [gutteridge 2020-05-26]
