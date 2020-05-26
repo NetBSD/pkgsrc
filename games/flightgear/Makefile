@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2020/05/22 10:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.110 2020/05/26 11:30:06 joerg Exp $
 
 DISTNAME=	flightgear-2019.1.1
 PKGREVISION=	10
@@ -22,6 +22,9 @@ CMAKE_ARG_PATH=		..
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DFG_BUILD_TYPE=Release
+
+post-extract:
+	${MV} ${WRKSRC}/version ${WRKSRC}/myversion
 
 # The cmake script warns against building in the source directory.
 pre-configure:
