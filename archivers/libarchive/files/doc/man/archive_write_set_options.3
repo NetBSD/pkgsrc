@@ -1,4 +1,4 @@
-.TH ARCHIVE_WRITE_OPTIONS 3 "February 2, 2012" ""
+.TH ARCHIVE_WRITE_OPTIONS 3 "January 31, 2020" ""
 .SH NAME
 .ad l
 \fB\%archive_write_set_filter_option\fP,
@@ -35,7 +35,7 @@ specific write modules.
 .TP
 \fB\%archive_write_set_filter_option\fP(),
 \fB\%archive_write_set_format_option\fP()
-Specifies an option that will be passed to currently-registered
+Specifies an option that will be passed to the currently-registered
 filters (including decompression filters) or format readers.
 .PP
 If
@@ -103,7 +103,7 @@ If either function returns
 \fBARCHIVE_FATAL\fP
 will be returned
 immediately.
-Otherwise, greater of the two values will be returned.
+Otherwise, the greater of the two values will be returned.
 .TP
 \fB\%archive_write_set_options\fP()
 \fIoptions\fP
@@ -140,12 +140,96 @@ only to modules whose name matches
 .ad l
 .RS 5
 .TP
+Filter b64encode
+.RS 5
+.TP
+\fBmode\fP
+The value is interpreted as octal digits specifying the file mode.
+.TP
+\fBname\fP
+The value specifies the file name.
+.RE
+.TP
+Filter bzip2
+.RS 5
+.TP
+\fBcompression-level\fP
+The value is interpreted as a decimal integer specifying the
+bzip2 compression level. Supported values are from 1 to 9.
+.RE
+.TP
 Filter gzip
 .RS 5
 .TP
 \fBcompression-level\fP
 The value is interpreted as a decimal integer specifying the
-gzip compression level.
+gzip compression level. Supported values are from 0 to 9.
+.TP
+\fBtimestamp\fP
+Store timestamp. This is enabled by default.
+.RE
+.TP
+Filter lrzip
+.RS 5
+.TP
+\fBcompression\fP=\fItype\fP
+Use
+\fItype\fP
+as compression method.
+Supported values are
+``bzip2'',
+``gzipi'',
+``lzo''
+(ultra fast,)
+and
+``zpaq''
+(best, extremely slow.)
+.TP
+\fBcompression-level\fP
+The value is interpreted as a decimal integer specifying the
+lrzip compression level. Supported values are from 1 to 9.
+.RE
+.TP
+Filter lz4
+.RS 5
+.TP
+\fBcompression-level\fP
+The value is interpreted as a decimal integer specifying the
+lz4 compression level. Supported values are from 0 to 9.
+.TP
+\fBstream-checksum\fP
+Enable stream checksum. This is enabled by default.
+.TP
+\fBblock-checksum\fP
+Enable block checksum. This is disabled by default.
+.TP
+\fBblock-size\fP
+The value is interpreted as a decimal integer specifying the
+lz4 compression block size. Supported values are from 4 to 7
+(default.)
+.TP
+\fBblock-dependence\fP
+Use the previous block of the block being compressed for
+a compression dictionary to improve compression ratio.
+This is disabled by default.
+.RE
+.TP
+Filter lzop
+.RS 5
+.TP
+\fBcompression-level\fP
+The value is interpreted as a decimal integer specifying the
+lzop compression level. Supported values are from 1 to 9.
+.RE
+.TP
+Filter uuencode
+.RS 5
+.TP
+\fBmode\fP
+The value is interpreted as octal digits specifying the file mode.
+.TP
+\fBname\fP
+The value specifies the file name.
 .RE
 .TP
 Filter xz
@@ -153,28 +237,62 @@ Filter xz
 .TP
 \fBcompression-level\fP
 The value is interpreted as a decimal integer specifying the
-compression level.
+compression level. Supported values are from 0 to 9.
+.TP
+\fBthreads\fP
+The value is interpreted as a decimal integer specifying the
+number of threads for multi-threaded lzma compression.
+If supported, the default value is read from
+\fB\%lzma_cputhreads\fP().
 .RE
 .TP
-Format mtree
+Filter zstd
 .RS 5
 .TP
-\fBcksum\fP, \fBdevice\fP, \fBflags\fP, \fBgid\fP, \fBgname\fP, \fBindent\fP, \fBlink\fP, \fBmd5\fP, \fBmode\fP, \fBnlink\fP, \fBrmd160\fP, \fBsha1\fP, \fBsha256\fP, \fBsha384\fP, \fBsha512\fP, \fBsize\fP, \fBtime\fP, \fBuid\fP, \fBuname\fP
-Enable a particular keyword in the mtree output.
-Prefix with an exclamation mark to disable the corresponding keyword.
-The default is equivalent to
-``device, flags, gid, gname, link, mode, nlink, size, time, type, uid, uname''.
+\fBcompression-level\fP
+The value is interpreted as a decimal integer specifying the
+compression level. Supported values depend on the library version,
+common values are from 1 to 22.
+.RE
 .TP
-\fBall\fP
-Enables all of the above keywords.
+Format 7zip
+.RS 5
 .TP
-\fBuse-set\fP
-Enables generation of
-\fB/set\fP
-lines that specify default values for the following files and/or directories.
+\fBcompression\fP
+The value is one of
+``store'',
+``deflate'',
+``bzip2'',
+``lzma1'',
+``lzma2''
+or
+``ppmd''
+to indicate how the following entries should be compressed.
+Note that this setting is ignored for directories, symbolic links,
+and other special entries.
 .TP
-\fBindent\fP
-XXX needs explanation XXX
+\fBcompression-level\fP
+The value is interpreted as a decimal integer specifying the
+compression level.
+Values between 0 and 9 are supported.
+The interpretation of the compression level depends on the chosen
+compression method.
+.RE
+.TP
+Format cpio
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file names.
+.RE
+.TP
+Format gnutar
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file, group and user names.
 .RE
 .TP
 Format iso9660 - volume metadata
@@ -183,27 +301,33 @@ These options are used to set standard ISO9660 metadata.
 .TP
 \fBabstract-file\fP=\fIfilename\fP
 The file with the specified name will be identified in the ISO9660 metadata
-as holding the abstract for this volume.  Default: none.
+as holding the abstract for this volume.
+Default: none.
 .TP
 \fBapplication-id\fP=\fIfilename\fP
 The file with the specified name will be identified in the ISO9660 metadata
-as holding the application identifier for this volume.  Default: none.
+as holding the application identifier for this volume.
+Default: none.
 .TP
 \fBbiblio-file\fP=\fIfilename\fP
 The file with the specified name will be identified in the ISO9660 metadata
-as holding the bibliography for this volume.  Default: none.
+as holding the bibliography for this volume.
+Default: none.
 .TP
 \fBcopyright-file\fP=\fIfilename\fP
 The file with the specified name will be identified in the ISO9660 metadata
-as holding the copyright for this volume.  Default: none.
+as holding the copyright for this volume.
+Default: none.
 .TP
 \fBpublisher\fP=\fIfilename\fP
 The file with the specified name will be identified in the ISO9660 metadata
-as holding the publisher information for this volume.  Default: none.
+as holding the publisher information for this volume.
+Default: none.
 .TP
 \fBvolume-id\fP=\fIstring\fP
 The specified string will be used as the Volume Identifier in the ISO9660 metadata.
-It is limited to 32 bytes. Default: none.
+It is limited to 32 bytes.
+Default: none.
 .RE
 .TP
 Format iso9660 - boot support
@@ -258,7 +382,7 @@ If the boot image is exactly 1.2MB, 1.44MB, or 2.88MB, then
 the default is
 \fBfd\fP,
 otherwise the default is
-\fBno-emulation.\fP
+\fBno-emulation\fP.
 .RE
 .TP
 Format iso9660 - filename and size extensions
@@ -287,7 +411,7 @@ Default: disabled.
 .TP
 \fBallow-period\fP
 If enabled, allows filenames to contain trailing period characters, in violation of the ISO9660 specification.
-If disabled,trailing periods will be converted to underscore characters.
+If disabled, trailing periods will be converted to underscore characters.
 This does not impact names stored in the Rockridge or Joliet extension area.
 Default: disabled.
 .TP
@@ -416,6 +540,132 @@ This option can be provided multiple times to suppress compression
 on many files.
 .RE
 .TP
+Format mtree
+.RS 5
+.TP
+\fBcksum\fP, \fBdevice\fP, \fBflags\fP, \fBgid\fP, \fBgname\fP, \fBindent\fP, \fBlink\fP, \fBmd5\fP, \fBmode\fP, \fBnlink\fP, \fBrmd160\fP, \fBsha1\fP, \fBsha256\fP, \fBsha384\fP, \fBsha512\fP, \fBsize\fP, \fBtime\fP, \fBuid\fP, \fBuname\fP
+Enable a particular keyword in the mtree output.
+Prefix with an exclamation mark to disable the corresponding keyword.
+The default is equivalent to
+``device, flags, gid, gname, link, mode, nlink, size, time, type, uid, uname''.
+.TP
+\fBall\fP
+Enables all of the above keywords.
+.TP
+\fBuse-set\fP
+Enables generation of
+\fB/set\fP
+lines that specify default values for the following files and/or directories.
+.TP
+\fBindent\fP
+XXX needs explanation XXX
+.RE
+.TP
+Format newc
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file names.
+.RE
+.TP
+Format pax
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file, group and user names.
+The value is one of
+``BINARY''
+or
+``UTF-8''.
+With
+``BINARY''
+there is no character conversion, with
+``UTF-8''
+names are converted to UTF-8.
+.TP
+\fBxattrheader\fP
+When storing extended attributes, this option configures which
+headers should be written. The value is one of
+``all'',
+``LIBARCHIVE'',
+or
+``SCHILY''.
+By default, both
+``LIBARCHIVE.xattr''
+and
+``SCHILY.xattr''
+headers are written.
+.RE
+.TP
+Format ustar
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file, group and user names.
+.RE
+.TP
+Format v7tar
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file, group and user names.
+.RE
+.TP
+Format warc
+.RS 5
+.TP
+\fBomit-warcinfo\fP
+Set to
+``true''
+to disable output of the warcinfo record.
+.RE
+.TP
+Format xar
+.RS 5
+.TP
+\fBchecksum\fP=\fItype\fP
+Use
+\fItype\fP
+as file checksum method.
+Supported values are
+``none'',
+``md5'',
+and
+``sha1''
+(default.)
+.TP
+\fBcompression\fP=\fItype\fP
+Use
+\fItype\fP
+as compression method.
+Supported values are
+``none'',
+``bzip2'',
+``gzip''
+(default,)
+``lzma''
+and
+``xz''.
+.TP
+\fBcompression_level\fP
+The value is a decimal integer from 1 to 9 specifying the compression level.
+.TP
+\fBtoc-checksum\fP=\fItype\fP
+Use
+\fItype\fP
+as table of contents checksum method.
+Supported values are
+``none'',
+``md5''
+and
+``sha1''
+(default.)
+.RE
+.TP
 Format zip
 .RS 5
 .TP
@@ -428,6 +678,32 @@ to indicate how the following entries should be compressed.
 Note that this setting is ignored for directories, symbolic links,
 and other special entries.
 .TP
+\fBcompression-level\fP
+The value is interpreted as a decimal integer specifying the
+compression level.
+Values between 0 and 9 are supported.
+A compression level of 0 switches the compression method to
+``store'',
+other values will enable
+``deflate''
+compression with the given level.
+.TP
+\fBencryption\fP
+Enable encryption using traditional zip encryption.
+.TP
+\fBencryption\fP=\fItype\fP
+Use
+\fItype\fP
+as encryption type.
+Supported values are
+``zipcrypt''
+(traditional zip encryption,)
+``aes128''
+(WinZip AES-128 encryption)
+and
+``aes256''
+(WinZip AES-256 encryption.)
+.TP
 \fBexperimental\fP
 This boolean option enables or disables experimental Zip features
 that may not be compatible with other Zip implementations.
@@ -438,7 +714,8 @@ All CRC fields are set to zero.
 It should not be used except for testing purposes.
 .TP
 \fBhdrcharset\fP
-This sets the character set used for filenames.
+The value is used as a character set name that will be
+used when translating file names.
 .TP
 \fBzip64\fP
 Zip64 extensions provide additional file size information
@@ -490,9 +767,9 @@ functions.
 .SH SEE ALSO
 .ad l
 \fBtar\fP(1),
-\fBlibarchive\fP(3),
 \fBarchive_read_set_options\fP(3),
-\fBarchive_write\fP(3)
+\fBarchive_write\fP(3),
+\fBlibarchive\fP(3)
 .SH HISTORY
 .ad l
 The

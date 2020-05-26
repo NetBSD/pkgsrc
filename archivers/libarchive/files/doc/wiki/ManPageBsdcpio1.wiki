@@ -50,7 +50,6 @@ Pass-through.
 Read a list of filenames from standard input and copy the files to the 
 specified directory. 
 </dd></dl> 
-
 == OPTIONS == 
 Unless specifically stated otherwise, options are applicable in 
 all operating modes. 
@@ -115,10 +114,10 @@ The POSIX.1 tar format.
 The default format is 
 ''odc''. 
 See 
-[[ManPageLibarchiveFormats5]] 
+[[ManPageibarchiveormats5]] 
 for more complete information about the 
 formats currently supported by the underlying 
-[[ManPageLibarchive3]] 
+[[ManPageibarchive3]] 
 library. 
 </dd><dt>-h, --help</dt><dd> 
 Print usage information. 
@@ -366,13 +365,13 @@ For best compatibility, scripts should limit themselves to the
 standard syntax. 
 == SEE ALSO == 
 [[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]], 
-[[ManPageBsdtar1]], 
 [[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]], 
 [[mt(1)|http://www.freebsd.org/cgi/man.cgi?query=mt&sektion=1]], 
 [[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]], 
-[[ManPageLibarchive3]], 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
 [[ManPageCpio5]], 
-[[ManPageLibarchiveFormats5]], 
+[[ManPageibarchiveormats5]], 
 [[ManPageTar5]] 
 == STANDARDS == 
 There is no current POSIX standard for the cpio command; it appeared 
@@ -402,7 +401,7 @@ actually predates
 even though it was not well-known outside of AT&T until some time later. 
 
 This is a complete re-implementation based on the 
-[[ManPageLibarchive3]] 
+[[ManPageibarchive3]] 
 library. 
 == BUGS == 
 The cpio archive format has several basic limitations: 

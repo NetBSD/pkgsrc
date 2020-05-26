@@ -18,7 +18,7 @@ Streaming Archive Library (libarchive, -larchive)
 == DESCRIPTION == 
 <dl> 
 <dt>'''archive_write_set_passphrase'''()</dt><dd> 
-Set a passphrase for writing an encryption archive. 
+Set a passphrase for writing an encrypted archive. 
 If 
 ''passphrase'' 
 is 
@@ -28,15 +28,15 @@ or empty, this function will do nothing and
 will be returned. 
 Otherwise, 
 '''ARCHIVE_OK''' 
-will be returned.  
+will be returned. 
 </dd><dt>'''archive_write_set_passphrase_callback'''()</dt><dd> 
-Register callback function that will be invoked to get a passphrase 
-for encrption if the passphrase was not set by the 
+Register a callback function that will be invoked to get a passphrase 
+for encryption if the passphrase was not set by the 
 '''archive_write_set_passphrase'''() 
 function. 
 </dd></dl> 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWrite3]], 
-[[ManPageArchiveWriteSetOptions3]] 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPageibarchive3]] 

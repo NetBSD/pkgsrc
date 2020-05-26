@@ -1,8 +1,8 @@
 ARCHIVE_READ_ADD_PASS... BSD Library Functions Manual ARCHIVE_READ_ADD_PASS...
 
 NAME
-     archive_read_add_passphrase, archive_read_set_passphrase_callback — func‐
-     tions for reading encrypted archives
+     archive_read_add_passphrase, archive_read_set_passphrase_callback --
+     functions for reading encrypted archives
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -25,11 +25,11 @@ DESCRIPTION
 	     returned.
 
      archive_read_set_passphrase_callback()
-	     Register callback function that will be invoked to get a
-	     passphrase for decrption after trying all passphrases registered
-	     by the archive_read_add_passphrase() function failed.
+	     Register a callback function that will be invoked to get a
+	     passphrase for decryption after trying all the passphrases regis-
+	     tered by the archive_read_add_passphrase() function failed.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_read(3), archive_read_set_options(3)
+     tar(1), archive_read(3), archive_read_set_options(3), libarchive(3)
 
 BSD			      September 14, 2014			   BSD

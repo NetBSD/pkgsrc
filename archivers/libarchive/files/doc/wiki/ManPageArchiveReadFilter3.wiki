@@ -136,8 +136,8 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveRead3]], 
-[[ManPageArchiveReadData3]], 
-[[ManPageArchiveReadFormat3]], 
-[[ManPageArchiveReadFormat3]] 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPageibarchive3]] 

@@ -7,7 +7,7 @@ NAME
      archive_read_support_filter_none, archive_read_support_filter_rpm,
      archive_read_support_filter_uu, archive_read_support_filter_xz,
      archive_read_support_filter_zstd, archive_read_support_filter_program,
-     archive_read_support_filter_program_signature — functions for reading
+     archive_read_support_filter_program_signature -- functions for reading
      streaming archives
 
 LIBRARY
@@ -83,14 +83,14 @@ DESCRIPTION
 	     specified compression.  These functions may fall back on external
 	     programs if an appropriate library was not available at build
 	     time.  Decompression using an external program is usually slower
-	     than decompression through built-in libraries.  Note that “none”
-	     is always enabled by default.
+	     than decompression through built-in libraries.  Note that
+	     ``none'' is always enabled by default.
      archive_read_support_filter_all()
 	     Enables all available decompression filters.
      archive_read_support_filter_program()
 	     Data is fed through the specified external program before being
 	     dearchived.  Note that this disables automatic detection of the
-	     compression format, so it makes no sense to specify this in con‐
+	     compression format, so it makes no sense to specify this in con-
 	     junction with any other decompression option.
      archive_read_support_filter_program_signature()
 	     This feeds data through the specified external program but only
@@ -109,7 +109,7 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     libarchive(3), archive_read(3), archive_read_data(3),
-     archive_read_format(3), archive_read_format(3)
+     archive_read(3), archive_read_data(3), archive_read_format(3),
+     archive_read_format(3), libarchive(3)
 
 BSD				August 14, 2014 			   BSD

@@ -28,15 +28,15 @@ or empty, this function will do nothing and
 will be returned. 
 Otherwise, 
 '''ARCHIVE_OK''' 
-will be returned.  
+will be returned. 
 </dd><dt>'''archive_read_set_passphrase_callback'''()</dt><dd> 
-Register callback function that will be invoked to get a passphrase  
-for decrption after trying all passphrases registered by the 
+Register a callback function that will be invoked to get a passphrase  
+for decryption after trying all the passphrases registered by the 
 '''archive_read_add_passphrase'''() 
 function failed. 
 </dd></dl> 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveRead3]], 
-[[ManPageArchiveReadSetOptions3]] 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPageibarchive3]] 

@@ -3,7 +3,7 @@ ARCHIVE_READ_OPEN(3)	 BSD Library Functions Manual	  ARCHIVE_READ_OPEN(3)
 NAME
      archive_read_open, archive_read_open2, archive_read_open_fd,
      archive_read_open_FILE, archive_read_open_filename,
-     archive_read_open_memory — functions for reading streaming archives
+     archive_read_open_memory -- functions for reading streaming archives
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -52,7 +52,7 @@ DESCRIPTION
 	     pointer.  This function should not be used with tape drives or
 	     other devices that require strict I/O blocking.
      archive_read_open_fd()
-	     Like archive_read_open(), except that it accepts a file descrip‐
+	     Like archive_read_open(), except that it accepts a file descrip-
 	     tor and block size rather than a set of function pointers.  Note
 	     that the file descriptor will not be automatically closed at end-
 	     of-archive.  This function is safe for use with tape drives or
@@ -60,16 +60,16 @@ DESCRIPTION
      archive_read_open_file()
 	     This is a deprecated synonym for archive_read_open_filename().
      archive_read_open_filename()
-	     Like archive_read_open(), except that it accepts a simple file‐
-	     name and a block size.  A NULL filename represents standard in‐
-	     put.  This function is safe for use with tape drives or other
+	     Like archive_read_open(), except that it accepts a simple file-
+	     name and a block size.  A NULL filename represents standard
+	     input.  This function is safe for use with tape drives or other
 	     blocked devices.
      archive_read_open_memory()
 	     Like archive_read_open(), except that it accepts a pointer and
 	     size of a block of memory containing the archive data.
 
-     A complete description of the struct archive and struct archive_entry ob‐
-     jects can be found in the overview manual page for libarchive(3).
+     A complete description of the struct archive and struct archive_entry
+     objects can be found in the overview manual page for libarchive(3).
 
 CLIENT CALLBACKS
      The callback functions must match the following prototypes:
@@ -88,8 +88,8 @@ CLIENT CALLBACKS
 
      The open callback is invoked by archive_open().  It should return
      ARCHIVE_OK if the underlying file or data source is successfully opened.
-     If the open fails, it should call archive_set_error() to register an er‐
-     ror code and message and return ARCHIVE_FATAL.
+     If the open fails, it should call archive_set_error() to register an
+     error code and message and return ARCHIVE_FATAL.
 
      The read callback is invoked whenever the library requires raw bytes from
      the archive.  The read callback should read data into a buffer, set the
@@ -98,8 +98,8 @@ CLIENT CALLBACKS
      callback again only after it has consumed this data.  The library imposes
      no constraints on the size of the data blocks returned.  On end-of-file,
      the read callback should return zero.  On error, the read callback should
-     invoke archive_set_error() to register an error code and message and re‐
-     turn -1.
+     invoke archive_set_error() to register an error code and message and
+     return -1.
 
      The skip callback is invoked when the library wants to ignore a block of
      data.  The return value is the number of bytes actually skipped, which
@@ -110,7 +110,7 @@ CLIENT CALLBACKS
      gains when reading uncompressed archives from slow disk drives or other
      media that can skip quickly.
 
-     The close callback is invoked by archive_close when the archive process‐
+     The close callback is invoked by archive_close when the archive process-
      ing is complete.  The callback should return ARCHIVE_OK on success.  On
      failure, the callback should invoke archive_set_error() to register an
      error code and message and return ARCHIVE_FATAL.
@@ -123,8 +123,8 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_read(3), archive_read_data(3),
-     archive_read_filter(3), archive_read_format(3),
-     archive_read_set_options(3), archive_util(3), tar(5)
+     tar(1), archive_read(3), archive_read_data(3), archive_read_filter(3),
+     archive_read_format(3), archive_read_set_options(3), archive_util(3),
+     libarchive(3), tar(5)
 
 BSD			       February 2, 2012 			   BSD

@@ -93,11 +93,11 @@ Not generally used in client code.
 .TP
 \fB\%archive_compression\fP()
 Synonym for
-\fB\%archive_filter_code(a,\fP(\fI\%0)\fP).
+\fB\%archive_filter_code\fP(\fI\%a\fP, \fI\%0\fP).
 .TP
 \fB\%archive_compression_name\fP()
 Synonym for
-\fB\%archive_filter_name(a,\fP(\fI\%0)\fP).
+\fB\%archive_filter_name\fP(\fI\%a\fP, \fI\%0\fP).
 .TP
 \fB\%archive_copy_error\fP()
 Copies error information from one archive to another.
@@ -150,13 +150,13 @@ filter 0 is the gunzip filter,
 filter 1 is the uudecode filter,
 and filter 2 is the pseudo-filter that wraps the archive read functions.
 In this case, requesting
-\fB\%archive_position(a,\fP(\fI\%-1)\fP)
+\fB\%archive_position\fP(\fI\%a\fP, \fI\%-1\fP)
 would be a synonym for
-\fB\%archive_position(a,\fP(\fI\%2)\fP)
+\fB\%archive_position\fP(\fI\%a\fP, \fI\%2\fP)
 which would return the number of bytes currently read from the archive, while
-\fB\%archive_position(a,\fP(\fI\%1)\fP)
+\fB\%archive_position\fP(\fI\%a\fP, \fI\%1\fP)
 would return the number of bytes after uudecoding, and
-\fB\%archive_position(a,\fP(\fI\%0)\fP)
+\fB\%archive_position\fP(\fI\%a\fP, \fI\%0\fP)
 would return the number of bytes after decompression.
 .TP
 \fB\%archive_filter_name\fP()
@@ -182,9 +182,9 @@ A textual description of the format of the current entry.
 \fB\%archive_position\fP()
 Returns the number of bytes read from or written to the indicated filter.
 In particular,
-\fB\%archive_position(a,\fP(\fI\%0)\fP)
+\fB\%archive_position\fP(\fI\%a\fP, \fI\%0\fP)
 returns the number of bytes read or written by the format handler, while
-\fB\%archive_position(a,\fP(\fI\%-1)\fP)
+\fB\%archive_position\fP(\fI\%a\fP, \fI\%-1\fP)
 returns the number of bytes read or written to the archive.
 See
 \fB\%archive_filter_count\fP()
