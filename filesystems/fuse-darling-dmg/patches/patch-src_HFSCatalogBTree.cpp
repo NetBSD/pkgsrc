@@ -1,4 +1,4 @@
-$NetBSD: patch-src_HFSCatalogBTree.cpp,v 1.1 2020/03/26 02:34:52 joerg Exp $
+$NetBSD: patch-src_HFSCatalogBTree.cpp,v 1.2 2020/05/26 11:29:17 joerg Exp $
 
 --- src/HFSCatalogBTree.cpp.orig	2020-03-25 15:29:11.522914079 +0000
 +++ src/HFSCatalogBTree.cpp
@@ -6,7 +6,7 @@ $NetBSD: patch-src_HFSCatalogBTree.cpp,v 1.1 2020/03/26 02:34:52 joerg Exp $
  #include <cstring>
  #include "unichar.h"
  
-+using icu_64::UnicodeString;
++using icu::UnicodeString;
 +
  static const int MAX_SYMLINKS = 50;
  
