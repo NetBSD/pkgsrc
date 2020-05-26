@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2020/05/23 10:45:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.231 2020/05/26 11:30:29 joerg Exp $
 
 VERREL=		6.4.4
 VERRC=		2
@@ -12,6 +12,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.libreoffice.org/
 COMMENT=	Office productivity suite from The Document Foundation
 LICENSE=	gnu-lgpl-v3
+
+UNLIMIT_RESOURCES+=	cputime
 
 USE_LANGUAGES=	c gnu++17
 
