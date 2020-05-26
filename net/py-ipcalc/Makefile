@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/05/26 21:28:37 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/26 21:42:42 leot Exp $
 
 DISTNAME=	ipcalc-1.99.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	https://files.pythonhosted.org/packages/8f/14/bb4034c87b4b2a47b381a52051138c3aeb87515a498185e275d40585deeb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipcalc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tehmaze/ipcalc/
