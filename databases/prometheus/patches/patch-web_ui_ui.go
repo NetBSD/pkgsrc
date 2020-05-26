@@ -1,13 +1,13 @@
-$NetBSD: patch-web_ui_ui.go,v 1.1 2020/01/08 22:33:05 adam Exp $
+$NetBSD: patch-web_ui_ui.go,v 1.2 2020/05/26 15:30:49 adam Exp $
 
 Use absolute path for web files.
 
---- web/ui/ui.go.orig	2020-01-08 22:04:44.000000000 +0000
+--- web/ui/ui.go.orig	2020-05-07 16:47:40.000000000 +0000
 +++ web/ui/ui.go
 @@ -27,22 +27,7 @@ import (
  
  // Assets contains the project's assets.
- var Assets http.FileSystem = func() http.FileSystem {
+ var Assets = func() http.FileSystem {
 -	wd, err := os.Getwd()
 -	if err != nil {
 -		panic(err)
