@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2020/05/19 16:51:43 adam Exp $
+$NetBSD: distinfo,v 1.48 2020/05/26 13:11:01 jperkin Exp $
 
 SHA1 (samba-4.12.3.tar.gz) = 08109949a70c88010dd4b53d1ae088b7e1a282eb
 RMD160 (samba-4.12.3.tar.gz) = 9d4a4d7d1da5367a1f442ba0ff3ea8abde1ba69e
@@ -17,6 +17,8 @@ SHA1 (patch-lib_tdb_common_mutex.c) = 12dbcf870e6ba17ef7f92a8ce7f0b7462f820232
 SHA1 (patch-lib_tevent_tevent.c) = 4a20506e2bfbab85bad664299b884575326e73fd
 SHA1 (patch-lib_tevent_tevent__threads.c) = 14867888dd0b7c4613914752ab368c39bfdbb943
 SHA1 (patch-lib_tevent_wscript) = fbbe2024096b57d651d90064f53489a974db9d7a
+SHA1 (patch-lib_tsocket_tsocket.h) = d8699b21a591a4c531ee91e7fa45bfe269164da6
+SHA1 (patch-lib_tsocket_tsocket__bsd.c) = 3143adde8c4711599608592f737cbe0fab912fa0
 SHA1 (patch-lib_util_smb__threads.h) = 93bbc4276ad927ad6faf305af093064f47c09254
 SHA1 (patch-lib_util_tfork.c) = cd70dcff5f2ce94ffe642e0f029f03ee07dff27d
 SHA1 (patch-libcli_dns_wscript__build) = 4103a144aa1bb4662fd7a62270941f1a3d01fe89
