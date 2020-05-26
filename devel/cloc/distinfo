@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2019/11/23 07:17:59 mef Exp $
+$NetBSD: distinfo,v 1.5 2020/05/26 20:53:13 fcambus Exp $
 
-SHA1 (cloc-1.84.tar.gz) = a22231bdd7fa889dbd93a3694ea79a942bd7e899
-RMD160 (cloc-1.84.tar.gz) = 670bca5cce6de56da22e646aee4c10f4028e04ae
-SHA512 (cloc-1.84.tar.gz) = 85f8af041b0ca858c21e28d3fb7cd9201264afa9e12bd3a14b15a8af3e6e68378dbb02a39dc12140bcbb104424cf38bfa602d2a0683e8c89fa50cbdcf7556b3a
-Size (cloc-1.84.tar.gz) = 514868 bytes
+SHA1 (cloc-1.86.tar.gz) = 9d7688d43de4030f11ce9d1c2970c4a64a987133
+RMD160 (cloc-1.86.tar.gz) = eb58b3a84854fde2c38769d245718a0137f16c4a
+SHA512 (cloc-1.86.tar.gz) = fe6101404f5884d11bf73de43bd25e533b04a70707b95e4e9482b51413aed46ddb55beaa27e3d25cd7604394a739f7cac6c1f8695cd9cab3f23adf6e27171719
+Size (cloc-1.86.tar.gz) = 536828 bytes
 SHA1 (patch-Unix_Makefile) = b797a50124177380837d00ff72dd119c508c87c3
