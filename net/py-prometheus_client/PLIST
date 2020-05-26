@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/08 10:43:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 16:53:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/prometheus_client/__init__.py
 ${PYSITELIB}/prometheus_client/__init__.pyc
 ${PYSITELIB}/prometheus_client/__init__.pyo
+${PYSITELIB}/prometheus_client/asgi.py
+${PLIST.py3x}${PYSITELIB}/prometheus_client/asgi.pyc
+${PLIST.py3x}${PYSITELIB}/prometheus_client/asgi.pyo
 ${PYSITELIB}/prometheus_client/bridge/__init__.py
 ${PYSITELIB}/prometheus_client/bridge/__init__.pyc
 ${PYSITELIB}/prometheus_client/bridge/__init__.pyo
