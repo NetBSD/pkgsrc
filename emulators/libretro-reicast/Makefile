@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/05/09 23:24:17 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/26 09:45:16 nia Exp $
 
 DISTNAME=	libretro-reicast-20190508
 CATEGORIES=	emulators
@@ -11,9 +11,13 @@ HOMEPAGE=	https://docs.libretro.com/library/reicast/
 COMMENT=	Libretro core based on the Reicast Sega Dreamcast emulator
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++11
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	platform=unix
 MAKE_FLAGS+=	HAVE_OPENMP=0

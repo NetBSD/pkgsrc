@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/20 06:09:06 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:12 nia Exp $
 
 DISTNAME=	libretro-craft-20180803
 CATEGORIES=	games
@@ -12,6 +12,11 @@ COMMENT=	Libretro core based on the 'Craft' Minecraft clone
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FILE=	Makefile.libretro
 MAKE_FLAGS+=	GIT_VERSION=" \(pkgsrc\)"

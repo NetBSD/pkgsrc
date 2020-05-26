@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.4 2019/09/22 15:19:29 nia Exp $
-lib/libretro/mgba_libretro.so
+@comment $NetBSD: PLIST,v 1.5 2020/05/26 09:45:15 nia Exp $
+lib/libretro/mgba_libretro.${SOEXT}

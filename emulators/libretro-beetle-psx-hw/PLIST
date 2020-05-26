@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/18 15:50:48 nia Exp $
-lib/libretro/mednafen_psx_hw_libretro.so
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:12 nia Exp $
+lib/libretro/mednafen_psx_hw_libretro.${SOEXT}

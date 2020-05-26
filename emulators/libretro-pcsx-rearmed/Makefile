@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:09 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/26 09:45:15 nia Exp $
 
 DISTNAME=	libretro-pcsx-rearmed-0.22
 CATEGORIES=	emulators
@@ -14,6 +14,11 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.libretro
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

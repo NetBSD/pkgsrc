@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/11/13 17:16:25 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/26 09:45:14 nia Exp $
 
 DISTNAME=	libretro-fbalpha-0.2.97.43.20181022
 PKGREVISION=	1
@@ -12,10 +12,14 @@ HOMEPAGE=	https://github.com/libretro/fbalpha
 COMMENT=	Libretro core based on the FB Alpha arcade game emulator
 LICENSE=	fbalpha-license AND mame-license
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 MAKE_FILE=	makefile.libretro
 USE_LANGUAGES=	c c++
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
