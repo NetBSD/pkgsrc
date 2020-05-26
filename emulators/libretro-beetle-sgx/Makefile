@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:29 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:12 nia Exp $
 
 DISTNAME=	libretro-beetle-sgx-20180512
 CATEGORIES=	emulators
@@ -11,9 +11,13 @@ HOMEPAGE=	https://docs.libretro.com/library/beetle_sgx/
 COMMENT=	Libretro core based on the Mednafen SuperGrafx emulator
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

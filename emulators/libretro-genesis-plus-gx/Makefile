@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/02 21:09:29 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/26 09:45:15 nia Exp $
 
 DISTNAME=	libretro-genesis-plus-gx-20180607
 CATEGORIES=	emulators
@@ -11,8 +11,12 @@ HOMEPAGE=	https://docs.libretro.com/library/genesis_plus_gx/
 COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 LICENSE=	mame-license
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FILE=	Makefile.libretro
 

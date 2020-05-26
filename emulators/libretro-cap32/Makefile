@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/02/01 10:11:03 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/26 09:45:13 nia Exp $
 
 DISTNAME=	libretro-cap32-20190128
 CATEGORIES=	emulators
@@ -10,9 +10,13 @@ HOMEPAGE=	https://docs.libretro.com/library/caprice32/
 COMMENT=	Libretro core based on the Caprice32 Amstrad CPC emulator
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c99
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../mk/endian.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:30 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:17 nia Exp $
 
 DISTNAME=	libretro-vecx-20180412
 CATEGORIES=	emulators
@@ -10,9 +10,13 @@ HOMEPAGE=	https://docs.libretro.com/library/vecx/
 COMMENT=	Libretro core for Vectrex emulation
 LICENSE=	gnu-gpl-v3
 
-EXTRACT_USING=	bsdtar
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/13 16:19:31 nia Exp $
-lib/libretro/virtualjaguar_libretro.so
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:17 nia Exp $
+lib/libretro/virtualjaguar_libretro.${SOEXT}

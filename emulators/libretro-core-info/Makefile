@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/08 12:40:05 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/26 09:45:13 nia Exp $
 
 DISTNAME=	libretro-core-info-${RETROARCH_VERSION}
 CATEGORIES=	emulators
@@ -10,7 +10,6 @@ HOMEPAGE=	https://www.libretro.com/
 COMMENT=	Libretro core information
 LICENSE=	public-domain
 
-EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 

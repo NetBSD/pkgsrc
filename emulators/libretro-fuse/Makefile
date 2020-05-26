@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:29 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:14 nia Exp $
 
 DISTNAME=	libretro-fuse-20180419
 CATEGORIES=	emulators
@@ -11,9 +11,13 @@ HOMEPAGE=	https://docs.libretro.com/library/fuse/
 COMMENT=	Libretro core based on the FUSE ZX Spectrum emulator
 LICENSE=	gnu-gpl-v3
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.libretro
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../mk/endian.mk"
 

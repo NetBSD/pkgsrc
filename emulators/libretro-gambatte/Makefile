@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/04/25 13:50:19 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/26 09:45:14 nia Exp $
 
 DISTNAME=	libretro-gambatte-20190412
 CATEGORIES=	emulators
@@ -11,10 +11,14 @@ HOMEPAGE=	https://docs.libretro.com/library/gambatte/
 COMMENT=	Libretro core based on the Gambatte Game Boy Color emulator
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c c++03
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 CFLAGS.SunOS+=	-DBSD_COMP
 

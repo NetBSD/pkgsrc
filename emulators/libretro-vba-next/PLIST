@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/13 21:21:03 snj Exp $
-lib/libretro/vba_next_libretro.so
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:17 nia Exp $
+lib/libretro/vba_next_libretro.${SOEXT}

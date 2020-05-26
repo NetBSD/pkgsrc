@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/05/22 10:56:05 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/26 09:45:14 nia Exp $
 
 DISTNAME=	libretro-dolphin-20180827
 PKGREVISION=	10
@@ -12,11 +12,15 @@ HOMEPAGE=	https://docs.libretro.com/library/dolphin/
 COMMENT=	Libretro core based on the Dolphin GameCube/Wii emulator
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++14
 GCC_REQD+=	6
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DTRY_X11=OFF
