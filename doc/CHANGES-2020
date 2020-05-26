@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3190 2020/05/26 11:15:55 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.3191 2020/05/26 12:16:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5074,3 +5074,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/xenkernel413 version 4.13.1 [bouyer 2020-05-26]
 	Added sysutils/xentools413 version 4.13.1 [bouyer 2020-05-26]
 	Updated chat/srain to 1.1.0 [nia 2020-05-26]
+	Updated audio/strawberry to 0.6.11 [nia 2020-05-26]
