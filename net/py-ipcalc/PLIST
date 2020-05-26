@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/26 21:28:37 khorben Exp $
-${PYSITELIB}/ipcalc.pyo
-${PYSITELIB}/ipcalc.pyc
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 21:43:05 leot Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ipcalc.py
+${PYSITELIB}/ipcalc.pyc
+${PYSITELIB}/ipcalc.pyo
