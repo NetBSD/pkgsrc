@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/05/22 10:56:07 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/26 14:14:50 nia Exp $
 
 DISTNAME=	7kaa-2.15.3
 PKGREVISION=	5
@@ -22,7 +22,7 @@ USE_TOOLS+=	pkg-config
 # C++11
 GCC_REQD+=	4.6
 
-LDFLAGS+=	${BUILDLINK_LDADD.iconv}
+LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 
 CONFIGURE_ARGS+=	--disable-sdltest
 
