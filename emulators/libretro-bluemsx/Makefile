@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 13:46:11 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/26 09:45:13 nia Exp $
 
 DISTNAME=	libretro-bluemsx-20190420
 CATEGORIES=	emulators
@@ -11,10 +11,14 @@ HOMEPAGE=	https://docs.libretro.com/library/bluemsx/
 COMMENT=	Libretro core for MSX/MSX2/ColecoVision/SVI/SG-1000 emulation
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	bsdtar
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++03
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/02 21:09:30 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/26 09:45:15 nia Exp $
 
 DISTNAME=	libretro-o2em-20180812
 CATEGORIES=	emulators
@@ -10,8 +10,12 @@ HOMEPAGE=	https://docs.libretro.com/library/o2em/
 COMMENT=	Libretro core for Magnavox Odyssey 2 and VideoPac emulation
 LICENSE=	artistic
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/10 20:34:01 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:16 nia Exp $
 
 DISTNAME=	libretro-snes9x2005-20180626
 CATEGORIES=	emulators
@@ -12,6 +12,11 @@ COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 LICENSE=	snes9x-license
 
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

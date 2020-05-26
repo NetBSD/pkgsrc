@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/02 13:24:29 nia Exp $
-lib/libretro/mame2010_libretro.so
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:15 nia Exp $
+lib/libretro/mame2010_libretro.${SOEXT}

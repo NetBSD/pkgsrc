@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/10/13 16:19:31 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/26 09:45:17 nia Exp $
 
 DISTNAME=	libretro-virtualjaguar-20180812
 CATEGORIES=	emulators
@@ -11,8 +11,12 @@ HOMEPAGE=	https://docs.libretro.com/library/virtual_jaguar/
 COMMENT=	Libretro core based on the Virtual Jaguar Atari Jaguar emulation
 LICENSE=	gnu-gpl-v3
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
