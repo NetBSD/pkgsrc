@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/11/23 07:17:59 mef Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/26 20:53:13 fcambus Exp $
 
-DISTNAME=	cloc-1.84
+DISTNAME=	cloc-1.86
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AlDanial/}
 
