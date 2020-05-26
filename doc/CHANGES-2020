@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3193 2020/05/26 15:31:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3194 2020/05/26 16:54:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5081,3 +5081,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/lemon to 1.0.3.32.1 [adam 2020-05-26]
 	Updated emulators/wine to 4.0.4 [adam 2020-05-26]
 	Updated databases/prometheus to 2.18.1 [adam 2020-05-26]
+	Updated lang/nodejs12 to 12.17.0 [adam 2020-05-26]
+	Updated net/py-prometheus_client to 0.8.0 [adam 2020-05-26]
