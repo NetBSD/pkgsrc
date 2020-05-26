@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/05/22 10:55:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/05/26 08:36:56 triaxx Exp $
 
 BUILDLINK_TREE+=	libcups
 
@@ -6,21 +6,21 @@ BUILDLINK_TREE+=	libcups
 LIBCUPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcups+=	libcups>=1.1.19nb3
-BUILDLINK_ABI_DEPENDS.libcups+=	libcups>=2.3.3nb2
+BUILDLINK_ABI_DEPENDS.libcups+=	libcups>=2.3.3nb3
 BUILDLINK_PKGSRCDIR.libcups?=	../../print/libcups
 
 pkgbase := libcups
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libcups:Mkerberos)
+.if ${PKG_BUILD_OPTIONS.libcups:Mkerberos}
 .include "../../mk/krb5.buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.libcups:Mdnssd)
+.if ${PKG_BUILD_OPTIONS.libcups:Mdnssd}
 .include "../../net/mDNSResponder/buildlink3.mk"
 .endif
 
-.if ${OPSYS} != "Darwin" && !empty(PKG_BUILD_OPTIONS.libcups:Mavahi)
+.if ${OPSYS} != "Darwin" && ${PKG_BUILD_OPTIONS.libcups:Mavahi}
 .include "../../net/avahi/buildlink3.mk"
 .endif
 
