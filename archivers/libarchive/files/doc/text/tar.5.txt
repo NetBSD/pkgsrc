@@ -1,7 +1,7 @@
 TAR(5)			    BSD File Formats Manual			TAR(5)
 
 NAME
-     tar — format of tape archive files
+     tar -- format of tape archive files
 
 DESCRIPTION
      The tar archive format collects any number of files, directories, and
@@ -14,18 +14,19 @@ DESCRIPTION
      A tar archive consists of a series of 512-byte records.  Each file system
      object requires a header record which stores basic metadata (pathname,
      owner, permissions, etc.) and zero or more records containing any file
-     data.  The end of the archive is indicated by two records consisting en‐
-     tirely of zero bytes.
+     data.  The end of the archive is indicated by two records consisting
+     entirely of zero bytes.
 
      For compatibility with tape drives that use fixed block sizes, programs
      that read or write tar files always read or write a fixed number of
-     records with each I/O operation.  These “blocks” are always a multiple of
-     the record size.  The maximum block size supported by early implementa‐
-     tions was 10240 bytes or 20 records.  This is still the default for most
-     implementations although block sizes of 1MiB (2048 records) or larger are
-     commonly used with modern high-speed tape drives.	(Note: the terms
-     “block” and “record” here are not entirely standard; this document fol‐
-     lows the convention established by John Gilmore in documenting pdtar.)
+     records with each I/O operation.  These ``blocks'' are always a multiple
+     of the record size.  The maximum block size supported by early implemen-
+     tations was 10240 bytes or 20 records.  This is still the default for
+     most implementations although block sizes of 1MiB (2048 records) or
+     larger are commonly used with modern high-speed tape drives.  (Note: the
+     terms ``block'' and ``record'' here are not entirely standard; this docu-
+     ment follows the convention established by John Gilmore in documenting
+     pdtar.)
 
    Old-Style Archive Format
      The original tar archive format has been extended many times to include
@@ -50,10 +51,10 @@ DESCRIPTION
 	   };
      All unused bytes in the header record are filled with nulls.
 
-     name    Pathname, stored as a null-terminated string.  Early tar imple‐
+     name    Pathname, stored as a null-terminated string.  Early tar imple-
 	     mentations only stored regular files (including hardlinks to
 	     those files).  One common early convention used a trailing "/"
-	     character to indicate a directory name, allowing directory per‐
+	     character to indicate a directory name, allowing directory per-
 	     missions and owner information to be archived and restored.
 
      mode    File mode, stored as an octal number in ASCII.
@@ -67,8 +68,8 @@ DESCRIPTION
 	     when extracting hardlinks.  Modern writers should always store a
 	     zero length for hardlink entries.
 
-     mtime   Modification time of file, as an octal number in ASCII.  This in‐
-	     dicates the number of seconds since the start of the epoch,
+     mtime   Modification time of file, as an octal number in ASCII.  This
+	     indicates the number of seconds since the start of the epoch,
 	     00:00:00 UTC January 1, 1970.  Note that negative values should
 	     be avoided here, as they are handled inconsistently.
 
@@ -78,7 +79,7 @@ DESCRIPTION
 	     bytes in the header using unsigned arithmetic.  This field should
 	     be stored as six octal digits followed by a null and a space
 	     character.  Note that many early implementations of tar used
-	     signed arithmetic for the checksum field, which can cause inter‐
+	     signed arithmetic for the checksum field, which can cause inter-
 	     operability problems when transferring archives between systems.
 	     Modern robust readers compute the checksum both ways and accept
 	     the header if either computation matches.
@@ -87,7 +88,7 @@ DESCRIPTION
 	     In order to preserve hardlinks and conserve tape, a file with
 	     multiple links is only written to the archive the first time it
 	     is encountered.  The next time it is encountered, the linkflag is
-	     set to an ASCII ‘1’ and the linkname field holds the first name
+	     set to an ASCII '1' and the linkname field holds the first name
 	     under which this file appears.  (Note that regular files have a
 	     null value in the linkflag field.)
 
@@ -96,30 +97,30 @@ DESCRIPTION
      (this is also documented in early BSD manpages): the pathname must be
      null-terminated; the mode, uid, and gid fields must end in a space and a
      null byte; the size and mtime fields must end in a space; the checksum is
-     terminated by a null and a space.	Early implementations filled the nu‐
-     meric fields with leading spaces.	This seems to have been common prac‐
-     tice until the IEEE Std 1003.1-1988 (“POSIX.1”) standard was released.
+     terminated by a null and a space.	Early implementations filled the
+     numeric fields with leading spaces.  This seems to have been common prac-
+     tice until the IEEE Std 1003.1-1988 (``POSIX.1'') standard was released.
      For best portability, modern implementations should fill the numeric
      fields with leading zeros.
 
    Pre-POSIX Archives
-     An early draft of IEEE Std 1003.1-1988 (“POSIX.1”) served as the basis
+     An early draft of IEEE Std 1003.1-1988 (``POSIX.1'') served as the basis
      for John Gilmore's pdtar program and many system implementations from the
      late 1980s and early 1990s.  These archives generally follow the POSIX
      ustar format described below with the following variations:
-     •	     The magic value consists of the five characters “ustar” followed
-	     by a space.  The version field contains a space character fol‐
-	     lowed by a null.
-     •	     The numeric fields are generally filled with leading spaces (not
+     o	     The magic value consists of the five characters ``ustar'' fol-
+	     lowed by a space.	The version field contains a space character
+	     followed by a null.
+     o	     The numeric fields are generally filled with leading spaces (not
 	     leading zeros as recommended in the final standard).
-     •	     The prefix field is often not used, limiting pathnames to the 100
+     o	     The prefix field is often not used, limiting pathnames to the 100
 	     characters of old-style archives.
 
    POSIX ustar Archives
-     IEEE Std 1003.1-1988 (“POSIX.1”) defined a standard tar file format to be
-     read and written by compliant implementations of tar(1).  This format is
-     often called the “ustar” format, after the magic value used in the
-     header.  (The name is an acronym for “Unix Standard TAR”.)  It extends
+     IEEE Std 1003.1-1988 (``POSIX.1'') defined a standard tar file format to
+     be read and written by compliant implementations of tar(1).  This format
+     is often called the ``ustar'' format, after the magic value used in the
+     header.  (The name is an acronym for ``Unix Standard TAR''.)  It extends
      the historic format with new fields:
 
 	   struct header_posix_ustar {
@@ -145,36 +146,36 @@ DESCRIPTION
      typeflag
 	     Type of entry.  POSIX extended the earlier linkflag field with
 	     several new type values:
-	     “0”     Regular file.  NUL should be treated as a synonym, for
+	     ``0''   Regular file.  NUL should be treated as a synonym, for
 		     compatibility purposes.
-	     “1”     Hard link.
-	     “2”     Symbolic link.
-	     “3”     Character device node.
-	     “4”     Block device node.
-	     “5”     Directory.
-	     “6”     FIFO node.
-	     “7”     Reserved.
-	     Other   A POSIX-compliant implementation must treat any unrecog‐
+	     ``1''   Hard link.
+	     ``2''   Symbolic link.
+	     ``3''   Character device node.
+	     ``4''   Block device node.
+	     ``5''   Directory.
+	     ``6''   FIFO node.
+	     ``7''   Reserved.
+	     Other   A POSIX-compliant implementation must treat any unrecog-
 		     nized typeflag value as a regular file.  In particular,
-		     writers should ensure that all entries have a valid file‐
+		     writers should ensure that all entries have a valid file-
 		     name so that they can be restored by readers that do not
 		     support the corresponding extension.  Uppercase letters
 		     "A" through "Z" are reserved for custom extensions.  Note
 		     that sockets and whiteout entries are not archivable.
-	     It is worth noting that the size field, in particular, has dif‐
+	     It is worth noting that the size field, in particular, has dif-
 	     ferent meanings depending on the type.  For regular files, of
 	     course, it indicates the amount of data following the header.
 	     For directories, it may be used to indicate the total size of all
-	     files in the directory, for use by operating systems that pre-al‐
-	     locate directory space.  For all other types, it should be set to
-	     zero by writers and ignored by readers.
+	     files in the directory, for use by operating systems that pre-
+	     allocate directory space.	For all other types, it should be set
+	     to zero by writers and ignored by readers.
 
-     magic   Contains the magic value “ustar” followed by a NUL byte to indi‐
-	     cate that this is a POSIX standard archive.  Full compliance re‐
-	     quires the uname and gname fields be properly set.
+     magic   Contains the magic value ``ustar'' followed by a NUL byte to
+	     indicate that this is a POSIX standard archive.  Full compliance
+	     requires the uname and gname fields be properly set.
 
      version
-	     Version.  This should be “00” (two copies of the ASCII digit
+	     Version.  This should be ``00'' (two copies of the ASCII digit
 	     zero) for POSIX standard archives.
 
      uname, gname
@@ -183,8 +184,8 @@ DESCRIPTION
 	     set and the corresponding names exist on the system.
 
      devmajor, devminor
-	     Major and minor numbers for character device or block device en‐
-	     try.
+	     Major and minor numbers for character device or block device
+	     entry.
 
      name, prefix
 	     If the pathname is too long to fit in the 100 bytes provided by
@@ -193,12 +194,12 @@ DESCRIPTION
 	     is not empty, the reader will prepend the prefix value and a /
 	     character to the regular name field to obtain the full pathname.
 	     The standard does not require a trailing / character on directory
-	     names, though most implementations still include this for compat‐
+	     names, though most implementations still include this for compat-
 	     ibility reasons.
 
      Note that all unused bytes must be set to NUL.
 
-     Field termination is specified slightly differently by POSIX than by pre‐
+     Field termination is specified slightly differently by POSIX than by pre-
      vious implementations.  The magic, uname, and gname fields must have a
      trailing NUL.  The pathname, linkname, and prefix fields must have a
      trailing NUL unless they fill the entire field.  (In particular, it is
@@ -207,7 +208,7 @@ DESCRIPTION
      the front, and requires them to be terminated with either space or NUL
      characters.
 
-     Currently, most tar implementations comply with the ustar format, occa‐
+     Currently, most tar implementations comply with the ustar format, occa-
      sionally extending it by adding new fields to the blank area at the end
      of the header record.
 
@@ -221,37 +222,37 @@ DESCRIPTION
      the twelfth byte for a trailing NUL character.  Allowing 12 octal digits
      allows file sizes up to 64 GB.
 
-     Another extension, utilized by GNU tar, star, and other newer tar imple‐
+     Another extension, utilized by GNU tar, star, and other newer tar imple-
      mentations, permits binary numbers in the standard numeric fields.  This
      is flagged by setting the high bit of the first byte.  The remainder of
      the field is treated as a signed twos-complement value.  This permits
      95-bit values for the length and time fields and 63-bit values for the
      uid, gid, and device numbers.  In particular, this provides a consistent
      way to handle negative time values.  GNU tar supports this extension for
-     the length, mtime, ctime, and atime fields.  Joerg Schilling's star pro‐
+     the length, mtime, ctime, and atime fields.  Joerg Schilling's star pro-
      gram and the libarchive library support this extension for all numeric
      fields.  Note that this extension is largely obsoleted by the extended
      attribute record provided by the pax interchange format.
 
      Another early GNU extension allowed base-64 values rather than octal.
-     This extension was short-lived and is no longer supported by any imple‐
+     This extension was short-lived and is no longer supported by any imple-
      mentation.
 
    Pax Interchange Format
      There are many attributes that cannot be portably stored in a POSIX ustar
-     archive.  IEEE Std 1003.1-2001 (“POSIX.1”) defined a “pax interchange
-     format” that uses two new types of entries to hold text-formatted meta‐
-     data that applies to following entries.  Note that a pax interchange for‐
+     archive.  IEEE Std 1003.1-2001 (``POSIX.1'') defined a ``pax interchange
+     format'' that uses two new types of entries to hold text-formatted meta-
+     data that applies to following entries.  Note that a pax interchange for-
      mat archive is a ustar archive in every respect.  The new data is stored
-     in ustar-compatible archive entries that use the “x” or “g” typeflag.  In
-     particular, older implementations that do not fully support these exten‐
-     sions will extract the metadata into regular files, where the metadata
-     can be examined as necessary.
+     in ustar-compatible archive entries that use the ``x'' or ``g'' typeflag.
+     In particular, older implementations that do not fully support these
+     extensions will extract the metadata into regular files, where the meta-
+     data can be examined as necessary.
 
-     An entry in a pax interchange format archive consists of one or two stan‐
-     dard ustar entries, each with its own header and data.  The first op‐
-     tional entry stores the extended attributes for the following entry.
-     This optional first entry has an "x" typeflag and a size field that indi‐
+     An entry in a pax interchange format archive consists of one or two stan-
+     dard ustar entries, each with its own header and data.  The first
+     optional entry stores the extended attributes for the following entry.
+     This optional first entry has an "x" typeflag and a size field that indi-
      cates the total size of the extended attributes.  The extended attributes
      themselves are stored as a series of text-format lines encoded in the
      portable UTF-8 encoding.  Each line consists of a decimal number, a
@@ -262,7 +263,7 @@ DESCRIPTION
 	   25 ctime=1084839148.1212\n
      Keys in all lowercase are standard keys.  Vendors can add their own keys
      by prefixing them with an all uppercase vendor name and a period.	Note
-     that, unlike the historic header, numeric values are stored using deci‐
+     that, unlike the historic header, numeric values are stored using deci-
      mal, not octal.  A description of some common keys follows:
 
      atime, ctime, mtime
@@ -276,13 +277,13 @@ DESCRIPTION
 	     be in UTF-8, including pathnames, user names, and group names.
 	     In some cases, it is not possible to translate local conventions
 	     into UTF-8.  If this key is present and the value is the six-
-	     character ASCII string “BINARY”, then all textual values are as‐
-	     sumed to be in a platform-dependent multi-byte encoding.  Note
-	     that there are only two valid values for this key: “BINARY” or
-	     “ISO-IR 10646 2000 UTF-8”.  No other values are permitted by the
-	     standard, and the latter value should generally not be used as it
-	     is the default when this key is not specified.  In particular,
-	     this flag should not be used as a general mechanism to allow
+	     character ASCII string ``BINARY'', then all textual values are
+	     assumed to be in a platform-dependent multi-byte encoding.  Note
+	     that there are only two valid values for this key: ``BINARY'' or
+	     ``ISO-IR 10646 2000 UTF-8''.  No other values are permitted by
+	     the standard, and the latter value should generally not be used
+	     as it is the default when this key is not specified.  In particu-
+	     lar, this flag should not be used as a general mechanism to allow
 	     filenames to be stored in arbitrary encodings.
 
      uname, uid, gname, gid
@@ -299,7 +300,7 @@ DESCRIPTION
 	     UTF8 and can thus include non-ASCII characters.
 
      realtime.*, security.*
-	     These keys are reserved and may be used for future standardiza‐
+	     These keys are reserved and may be used for future standardiza-
 	     tion.
 
      size    The size of the file.  Note that there is no length limit on this
@@ -307,7 +308,7 @@ DESCRIPTION
 	     than the historic 8GB limit.
 
      SCHILY.*
-	     Vendor-specific attributes used by Joerg Schilling's star imple‐
+	     Vendor-specific attributes used by Joerg Schilling's star imple-
 	     mentation.
 
      SCHILY.acl.access, SCHILY.acl.default, SCHILY.acl.ace
@@ -340,35 +341,35 @@ DESCRIPTION
 
      LIBARCHIVE.creationtime
 	     The time when the file was created.  (This should not be confused
-	     with the POSIX “ctime” attribute, which refers to the time when
+	     with the POSIX ``ctime'' attribute, which refers to the time when
 	     the file metadata was last changed.)
 
      LIBARCHIVE.xattr.namespace.key
 	     Libarchive stores POSIX.1e-style extended attributes using keys
-	     of this form.  The key value is URL-encoded: All non-ASCII char‐
-	     acters and the two special characters “=” and “%” are encoded as
-	     “%” followed by two uppercase hexadecimal digits.	The value of
-	     this key is the extended attribute value encoded in base 64.  XXX
-	     Detail the base-64 format here XXX
+	     of this form.  The key value is URL-encoded: All non-ASCII char-
+	     acters and the two special characters ``='' and ``%'' are encoded
+	     as ``%'' followed by two uppercase hexadecimal digits.  The value
+	     of this key is the extended attribute value encoded in base 64.
+	     XXX Detail the base-64 format here XXX
 
      VENDOR.*
 	     XXX document other vendor-specific extensions XXX
 
      Any values stored in an extended attribute override the corresponding
-     values in the regular tar header.	Note that compliant readers should ig‐
-     nore the regular fields when they are overridden.	This is important, as
-     existing archivers are known to store non-compliant values in the stan‐
-     dard header fields in this situation.  There are no limits on length for
-     any of these fields.  In particular, numeric fields can be arbitrarily
-     large.  All text fields are encoded in UTF8.  Compliant writers should
-     store only portable 7-bit ASCII characters in the standard ustar header
-     and use extended attributes whenever a text value contains non-ASCII
-     characters.
+     values in the regular tar header.	Note that compliant readers should
+     ignore the regular fields when they are overridden.  This is important,
+     as existing archivers are known to store non-compliant values in the
+     standard header fields in this situation.	There are no limits on length
+     for any of these fields.  In particular, numeric fields can be arbitrar-
+     ily large.  All text fields are encoded in UTF8.  Compliant writers
+     should store only portable 7-bit ASCII characters in the standard ustar
+     header and use extended attributes whenever a text value contains non-
+     ASCII characters.
 
      In addition to the x entry described above, the pax interchange format
-     also supports a g entry.  The g entry is identical in format, but speci‐
-     fies attributes that serve as defaults for all subsequent archive en‐
-     tries.  The g entry is not widely used.
+     also supports a g entry.  The g entry is identical in format, but speci-
+     fies attributes that serve as defaults for all subsequent archive
+     entries.  The g entry is not widely used.
 
      Besides the new x and g entries, the pax interchange format has a few
      other minor variations from the earlier ustar format.  The most troubling
@@ -379,16 +380,16 @@ DESCRIPTION
      ignore the size field for hardlink entries.
 
    GNU Tar Archives
-     The GNU tar program started with a pre-POSIX format similar to that de‐
-     scribed earlier and has extended it using several different mechanisms:
+     The GNU tar program started with a pre-POSIX format similar to that
+     described earlier and has extended it using several different mechanisms:
      It added new fields to the empty space in the header (some of which was
      later used by POSIX for conflicting purposes); it allowed the header to
-     be continued over multiple records; and it defined new entries that mod‐
+     be continued over multiple records; and it defined new entries that mod-
      ify following entries (similar in principle to the x entry described
      above, but each GNU special entry is single-purpose, unlike the general-
-     purpose x entry).	As a result, GNU tar archives are not POSIX compati‐
-     ble, although more lenient POSIX-compliant readers can successfully ex‐
-     tract most GNU tar archives.
+     purpose x entry).	As a result, GNU tar archives are not POSIX compati-
+     ble, although more lenient POSIX-compliant readers can successfully
+     extract most GNU tar archives.
 
 	   struct header_gnu_tar {
 		   char name[100];
@@ -429,17 +430,17 @@ DESCRIPTION
 		     to indicate the pre-allocation of a contiguous file on
 		     disk.
 
-	     D	     This indicates a directory entry.	Unlike the POSIX-stan‐
+	     D	     This indicates a directory entry.	Unlike the POSIX-stan-
 		     dard "5" typeflag, the header is followed by data records
 		     listing the names of files in this directory.  Each name
 		     is preceded by an ASCII "Y" if the file is stored in this
 		     archive or "N" if the file is not stored in this archive.
 		     Each name is terminated with a null, and an extra null
-		     marks the end of the name list.  The purpose of this en‐
-		     try is to support incremental backups; a program restor‐
-		     ing from such an archive may wish to delete files on disk
-		     that did not exist in the directory when the archive was
-		     made.
+		     marks the end of the name list.  The purpose of this
+		     entry is to support incremental backups; a program
+		     restoring from such an archive may wish to delete files
+		     on disk that did not exist in the directory when the ar-
+		     chive was made.
 
 		     Note that the "D" typeflag specifically violates POSIX,
 		     which requires that unrecognized typeflags be restored as
@@ -447,58 +448,58 @@ DESCRIPTION
 		     file could interfere with subsequent creation of the
 		     like-named directory.
 
-	     K	     The data for this entry is a long linkname for the fol‐
+	     K	     The data for this entry is a long linkname for the fol-
 		     lowing regular entry.
 
-	     L	     The data for this entry is a long pathname for the fol‐
+	     L	     The data for this entry is a long pathname for the fol-
 		     lowing regular entry.
 
 	     M	     This is a continuation of the last file on the previous
 		     volume.  GNU multi-volume archives guarantee that each
 		     volume begins with a valid entry header.  To ensure this,
 		     a file may be split, with part stored at the end of one
-		     volume, and part stored at the beginning of the next vol‐
-		     ume.  The "M" typeflag indicates that this entry contin‐
+		     volume, and part stored at the beginning of the next vol-
+		     ume.  The "M" typeflag indicates that this entry contin-
 		     ues an existing file.  Such entries can only occur as the
 		     first or second entry in an archive (the latter only if
-		     the first entry is a volume label).  The size field spec‐
+		     the first entry is a volume label).  The size field spec-
 		     ifies the size of this entry.  The offset field at bytes
-		     369-380 specifies the offset where this file fragment be‐
-		     gins.  The realsize field specifies the total size of the
-		     file (which must equal size plus offset).	When extract‐
-		     ing, GNU tar checks that the header file name is the one
-		     it is expecting, that the header offset is in the correct
-		     sequence, and that the sum of offset and size is equal to
-		     realsize.
+		     369-380 specifies the offset where this file fragment
+		     begins.  The realsize field specifies the total size of
+		     the file (which must equal size plus offset).  When
+		     extracting, GNU tar checks that the header file name is
+		     the one it is expecting, that the header offset is in the
+		     correct sequence, and that the sum of offset and size is
+		     equal to realsize.
 
 	     N	     Type "N" records are no longer generated by GNU tar.
 		     They contained a list of files to be renamed or symlinked
 		     after extraction; this was originally used to support
-		     long names.  The contents of this record are a text de‐
-		     scription of the operations to be done, in the form
-		     “Rename %s to %s\n” or “Symlink %s to %s\n”; in either
-		     case, both filenames are escaped using K&R C syntax.  Due
-		     to security concerns, "N" records are now generally ig‐
-		     nored when reading archives.
+		     long names.  The contents of this record are a text
+		     description of the operations to be done, in the form
+		     ``Rename %s to %s\n'' or ``Symlink %s to %s\n''; in
+		     either case, both filenames are escaped using K&R C syn-
+		     tax.  Due to security concerns, "N" records are now gen-
+		     erally ignored when reading archives.
 
-	     S	     This is a “sparse” regular file.  Sparse files are stored
-		     as a series of fragments.	The header contains a list of
-		     fragment offset/length pairs.  If more than four such en‐
-		     tries are required, the header is extended as necessary
-		     with “extra” header extensions (an older format that is
-		     no longer used), or “sparse” extensions.
+	     S	     This is a ``sparse'' regular file.  Sparse files are
+		     stored as a series of fragments.  The header contains a
+		     list of fragment offset/length pairs.  If more than four
+		     such entries are required, the header is extended as nec-
+		     essary with ``extra'' header extensions (an older format
+		     that is no longer used), or ``sparse'' extensions.
 
 	     V	     The name field should be interpreted as a tape/volume
 		     header name.  This entry should generally be ignored on
 		     extraction.
 
-     magic   The magic field holds the five characters “ustar” followed by a
+     magic   The magic field holds the five characters ``ustar'' followed by a
 	     space.  Note that POSIX ustar archives have a trailing null.
 
      version
 	     The version field holds a space character followed by a null.
 	     Note that POSIX ustar archives use two copies of the ASCII digit
-	     “0”.
+	     ``0''.
 
      atime, ctime
 	     The time the file was last accessed and the time of last change
@@ -510,15 +511,15 @@ DESCRIPTION
      Sparse offset / numbytes
 	     Each such structure specifies a single fragment of a sparse file.
 	     The two fields store values as octal numbers.  The fragments are
-	     each padded to a multiple of 512 bytes in the archive.  On ex‐
-	     traction, the list of fragments is collected from the header (in‐
-	     cluding any extension headers), and the data is then read and
+	     each padded to a multiple of 512 bytes in the archive.  On
+	     extraction, the list of fragments is collected from the header
+	     (including any extension headers), and the data is then read and
 	     written to the file at appropriate offsets.
 
      isextended
-	     If this is set to non-zero, the header will be followed by addi‐
-	     tional “sparse header” records.  Each such record contains infor‐
-	     mation about as many as 21 additional sparse blocks as shown
+	     If this is set to non-zero, the header will be followed by addi-
+	     tional ``sparse header'' records.	Each such record contains
+	     information about as many as 21 additional sparse blocks as shown
 	     here:
 
 		   struct gnu_sparse_header {
@@ -541,14 +542,14 @@ DESCRIPTION
    GNU tar pax archives
      GNU tar 1.14 (XXX check this XXX) and later will write pax interchange
      format archives when you specify the --posix flag.  This format follows
-     the pax interchange format closely, using some SCHILY tags and introduc‐
+     the pax interchange format closely, using some SCHILY tags and introduc-
      ing new keywords to store sparse file information.  There have been three
-     iterations of the sparse file support, referred to as “0.0”, “0.1”, and
-     “1.0”.
+     iterations of the sparse file support, referred to as ``0.0'', ``0.1'',
+     and ``1.0''.
 
      GNU.sparse.numblocks, GNU.sparse.offset, GNU.sparse.numbytes,
 	     GNU.sparse.size
-	     The “0.0” format used an initial GNU.sparse.numblocks attribute
+	     The ``0.0'' format used an initial GNU.sparse.numblocks attribute
 	     to indicate the number of blocks in the file, a pair of
 	     GNU.sparse.offset and GNU.sparse.numbytes to indicate the offset
 	     and size of each block, and a single GNU.sparse.size to indicate
@@ -560,36 +561,36 @@ DESCRIPTION
 	     the standards.
 
      GNU.sparse.map
-	     The “0.1” format used a single attribute that stored a comma-sep‐
-	     arated list of decimal numbers.  Each pair of numbers indicated
-	     the offset and size, respectively, of a block of data.  This does
-	     not work well if the archive is extracted by an archiver that
-	     does not recognize this extension, since many pax implementations
-	     simply discard unrecognized attributes.
+	     The ``0.1'' format used a single attribute that stored a comma-
+	     separated list of decimal numbers.  Each pair of numbers indi-
+	     cated the offset and size, respectively, of a block of data.
+	     This does not work well if the archive is extracted by an
+	     archiver that does not recognize this extension, since many pax
+	     implementations simply discard unrecognized attributes.
 
      GNU.sparse.major, GNU.sparse.minor, GNU.sparse.name, GNU.sparse.realsize
-	     The “1.0” format stores the sparse block map in one or more
+	     The ``1.0'' format stores the sparse block map in one or more
 	     512-byte blocks prepended to the file data in the entry body.
 	     The pax attributes indicate the existence of this map (via the
 	     GNU.sparse.major and GNU.sparse.minor fields) and the full size
 	     of the file.  The GNU.sparse.name holds the true name of the
 	     file.  To avoid confusion, the name stored in the regular tar
-	     header is a modified name so that extraction errors will be ap‐
-	     parent to users.
+	     header is a modified name so that extraction errors will be
+	     apparent to users.
 
    Solaris Tar
      XXX More Details Needed XXX
 
-     Solaris tar (beginning with SunOS XXX 5.7 ?? XXX) supports an “extended”
-     format that is fundamentally similar to pax interchange format, with the
-     following differences:
-     •	     Extended attributes are stored in an entry whose type is X, not
+     Solaris tar (beginning with SunOS XXX 5.7 ?? XXX) supports an
+     ``extended'' format that is fundamentally similar to pax interchange for-
+     mat, with the following differences:
+     o	     Extended attributes are stored in an entry whose type is X, not
 	     x, as used by pax interchange format.  The detailed format of
-	     this entry appears to be the same as detailed above for the x en‐
-	     try.
-     •	     An additional A header is used to store an ACL for the following
-	     regular entry.  The body of this entry contains a seven-digit oc‐
-	     tal number followed by a zero byte, followed by the textual ACL
+	     this entry appears to be the same as detailed above for the x
+	     entry.
+     o	     An additional A header is used to store an ACL for the following
+	     regular entry.  The body of this entry contains a seven-digit
+	     octal number followed by a zero byte, followed by the textual ACL
 	     description.  The octal value is the number of ACL entries plus a
 	     constant that indicates the ACL type: 01000000 for POSIX.1e ACLs
 	     and 03000000 for NFSv4 ACLs.
@@ -606,17 +607,17 @@ DESCRIPTION
    Mac OS X Tar
      The tar distributed with Apple's Mac OS X stores most regular files as
      two separate files in the tar archive.  The two files have the same name
-     except that the first one has “._” prepended to the last path element.
-     This special file stores an AppleDouble-encoded binary blob with addi‐
-     tional metadata about the second file, including ACL, extended at‐
-     tributes, and resources.  To recreate the original file on disk, each
+     except that the first one has ``._'' prepended to the last path element.
+     This special file stores an AppleDouble-encoded binary blob with addi-
+     tional metadata about the second file, including ACL, extended
+     attributes, and resources.  To recreate the original file on disk, each
      separate file can be extracted and the Mac OS X copyfile() function can
      be used to unpack the separate metadata file and apply it to th regular
-     file.  Conversely, the same function provides a “pack” option to encode
+     file.  Conversely, the same function provides a ``pack'' option to encode
      the extended metadata from a file into a separate file whose contents can
      then be put into a tar archive.
 
-     Note that the Apple extended attributes interact badly with long file‐
+     Note that the Apple extended attributes interact badly with long file-
      names.  Since each file is stored with the full name, a separate set of
      extensions needs to be included in the archive for each one, doubling the
      overhead required for files with long names.
@@ -654,10 +655,11 @@ SEE ALSO
 
 STANDARDS
      The tar utility is no longer a part of POSIX or the Single Unix Standard.
-     It last appeared in Version 2 of the Single UNIX Specification (“SUSv2”).
-     It has been supplanted in subsequent standards by pax(1).	The ustar for‐
-     mat is currently part of the specification for the pax(1) utility.  The
-     pax interchange file format is new with IEEE Std 1003.1-2001 (“POSIX.1”).
+     It last appeared in Version 2 of the Single UNIX Specification
+     (``SUSv2'').  It has been supplanted in subsequent standards by pax(1).
+     The ustar format is currently part of the specification for the pax(1)
+     utility.  The pax interchange file format is new with IEEE Std
+     1003.1-2001 (``POSIX.1'').
 
 HISTORY
      A tar command appeared in Seventh Edition Unix, which was released in

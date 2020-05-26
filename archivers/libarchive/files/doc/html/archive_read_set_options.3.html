@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Wed Jun 12 21:10:16 2019 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Wed May 20 01:10:06 2020 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -142,7 +142,7 @@ option with this name will ignore it.</p>
 
 <p style="margin-left:27%; margin-top: 1em">The option will
 be provided to every module with a value of
-&ldquo;1&rdquo;.</p>
+&rsquo;&rsquo;1&rsquo;&rsquo;.</p>
 
 <p><i>!option</i></p>
 
@@ -157,7 +157,21 @@ option and value will be provided only to modules whose name
 matches <i>module</i>.</p>
 
 <p style="margin-top: 1em"><b>OPTIONS</b> <br>
-Format iso9660 <b><br>
+Format cab <b><br>
+hdrcharset</b></p>
+
+<p style="margin-left:27%;">The value is used as a
+character set name that will be used when translating file
+names.</p>
+
+<p>Format cpio <b><br>
+hdrcharset</b></p>
+
+<p style="margin-left:27%;">The value is used as a
+character set name that will be used when translating file
+names.</p>
+
+<p>Format iso9660 <b><br>
 joliet</b></p>
 
 <p style="margin-left:27%; margin-top: 1em">Support Joliet
@@ -168,6 +182,27 @@ disable.</p>
 
 <p style="margin-left:27%;">Support RockRidge extensions.
 Defaults to enabled, use <b>!rockridge</b> to disable.</p>
+
+<p>Format lha <b><br>
+hdrcharset</b></p>
+
+<p style="margin-left:27%;">The value is used as a
+character set name that will be used when translating file
+names.</p>
+
+<p>Format mtree <b><br>
+checkfs</b></p>
+
+<p style="margin-left:27%;">Allow reading information
+missing from the mtree from the file system. Disabled by
+default.</p>
+
+<p>Format rar <b><br>
+hdrcharset</b></p>
+
+<p style="margin-left:27%;">The value is used as a
+character set name that will be used when translating file
+names.</p>
 
 <p>Format tar <b><br>
 compat-2x</b></p>
@@ -180,8 +215,8 @@ archives can be read correctly.</p>
 <p><b>hdrcharset</b></p>
 
 <p style="margin-left:27%;">The value is used as a
-character set name that will be used when translating
-filenames.</p>
+character set name that will be used when translating file
+names.</p>
 
 <p><b>mac-ext</b></p>
 
@@ -207,11 +242,11 @@ and <b>archive_error_string</b>() functions.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">tar(1), libarchive(3),
-archive_write_set_options(3), archive_read(3)</p>
+<p style="margin-left:6%;">tar(1), archive_read(3),
+archive_write_set_options(3), libarchive(3)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+January&nbsp;31, 2020 BSD</p>
 <hr>
 </body>
 </html>

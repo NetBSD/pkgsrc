@@ -101,7 +101,6 @@ or
 .B char 
 file types. 
 The value must be one of the following forms: 
-
 <dl> 
 <dt>''format'',''major'',''minor''Bo,''subunit'' Bc</dt><dd> 
 A device with 
@@ -133,8 +132,8 @@ are recognized:
 .B solaris , 
 .B sunos , 
 .B svr3 , 
-.B svr4 ,  
-and  
+.B svr4 , 
+and 
 .B ultrix . 
 
 See 
@@ -256,12 +255,10 @@ The file owner as a numeric value.
 </dd><dt>'''uname'''</dt><dd> 
 The file owner as a symbolic name. 
 </dd></dl> 
-
 == SEE ALSO == 
 [[cksum(1)|http://www.freebsd.org/cgi/man.cgi?query=cksum&sektion=1]], 
 [[find(1)|http://www.freebsd.org/cgi/man.cgi?query=find&sektion=1]], 
 [[mtree(8)|http://www.freebsd.org/cgi/man.cgi?query=mtree&sektion=8]] 
-== BUGS == 
 == HISTORY == 
 The 
 '''mtree''' 

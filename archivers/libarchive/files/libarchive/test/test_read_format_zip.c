@@ -139,7 +139,7 @@ verify_basic(struct archive *a, int seek_checks)
 	} else {
 		assertEqualInt(ARCHIVE_FAILED, archive_read_data(a, buff, 19));
 		assertEqualString(archive_error_string(a),
-		    "Unsupported ZIP compression method (deflation)");
+		    "Unsupported ZIP compression method (8: deflation)");
 		assert(archive_errno(a) != 0);
 	}
 
@@ -162,7 +162,7 @@ verify_basic(struct archive *a, int seek_checks)
 	} else {
 		assertEqualInt(ARCHIVE_FAILED, archive_read_data(a, buff, 19));
 		assertEqualString(archive_error_string(a),
-		    "Unsupported ZIP compression method (deflation)");
+		    "Unsupported ZIP compression method (8: deflation)");
 		assert(archive_errno(a) != 0);
 	}
 	assertEqualInt(ARCHIVE_EOF, archive_read_next_header(a, &ae));
@@ -194,7 +194,7 @@ test_basic(void)
 	verify_basic(a, 1);
 
 	/* Verify with streaming reader. */
-	p = slurpfile(&s, refname);
+	p = slurpfile(&s, "%s", refname);
 	assert((a = archive_read_new()) != NULL);
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_filter_all(a));
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_all(a));
@@ -231,7 +231,7 @@ verify_info_zip_ux(struct archive *a, int seek_checks)
 	} else {
 		assertEqualInt(ARCHIVE_FAILED, archive_read_data(a, buff, 19));
 		assertEqualString(archive_error_string(a),
-		    "Unsupported ZIP compression method (deflation)");
+		    "Unsupported ZIP compression method (8: deflation)");
 		assert(archive_errno(a) != 0);
 	}
 	assertEqualIntA(a, ARCHIVE_EOF, archive_read_next_header(a, &ae));
@@ -264,7 +264,7 @@ test_info_zip_ux(void)
 	verify_info_zip_ux(a, 1);
 
 	/* Verify with streaming reader. */
-	p = slurpfile(&s, refname);
+	p = slurpfile(&s, "%s", refname);
 	assert((a = archive_read_new()) != NULL);
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_filter_all(a));
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_all(a));
@@ -302,7 +302,7 @@ verify_extract_length_at_end(struct archive *a, int seek_checks)
 	} else {
 		assertEqualIntA(a, ARCHIVE_FAILED, archive_read_extract(a, ae, 0));
 		assertEqualString(archive_error_string(a),
-		    "Unsupported ZIP compression method (deflation)");
+		    "Unsupported ZIP compression method (8: deflation)");
 		assert(archive_errno(a) != 0);
 	}
 
@@ -328,7 +328,7 @@ test_extract_length_at_end(void)
 	verify_extract_length_at_end(a, 1);
 
 	/* Verify extraction with streaming reader. */
-	p = slurpfile(&s, refname);
+	p = slurpfile(&s, "%s", refname);
 	assert((a = archive_read_new()) != NULL);
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_filter_all(a));
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_all(a));
@@ -347,7 +347,7 @@ test_symlink(void)
 	struct archive_entry *ae;
 
 	extract_reference_file(refname);
-	p = slurpfile(&s, refname);
+	p = slurpfile(&s, "%s", refname);
 
 	/* Symlinks can only be extracted with the seeking reader. */
 	assert((a = archive_read_new()) != NULL);
@@ -915,4 +915,54 @@ DEFINE_TEST(test_read_format_zip_lzma_alone_leak)
 	/* This testcase shouldn't produce any memory leaks. When running test
 	 * suite under Valgrind or ASan, the test runner won't return with
 	 * exit code 0 in case if a memory leak. */
+}
+
+DEFINE_TEST(test_read_format_zip_lzma_stream_end)
+{
+	const char *refname = "test_read_format_zip_lzma_stream_end.zipx";
+	struct archive *a;
+	struct archive_entry *ae;
+
+	assert((a = archive_read_new()) != NULL);
+		if (ARCHIVE_OK != archive_read_support_filter_lzma(a)) {
+				skipping("lzma reading not fully supported on this platform");
+				assertEqualInt(ARCHIVE_OK, archive_read_free(a));
+				return;
+		}
+	extract_reference_file(refname);
+
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_zip(a));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_open_filename(a, refname, 37));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_next_header(a, &ae));
+	assertEqualString("ZIP 6.3 (lzma)", archive_format_name(a));
+	assertEqualString("vimrc", archive_entry_pathname(ae));
+	assertEqualIntA(a, 0, extract_one(a, ae, 0xBA8E3BAA));
+	assertEqualIntA(a, ARCHIVE_EOF, archive_read_next_header(a, &ae));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_close(a));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_free(a));
+}
+
+DEFINE_TEST(test_read_format_zip_lzma_stream_end_blockread)
+{
+	const char *refname = "test_read_format_zip_lzma_stream_end.zipx";
+	struct archive *a;
+	struct archive_entry *ae;
+
+	assert((a = archive_read_new()) != NULL);
+	if (ARCHIVE_OK != archive_read_support_filter_lzma(a)) {
+			skipping("lzma reading not fully supported on this platform");
+			assertEqualInt(ARCHIVE_OK, archive_read_free(a));
+			return;
+	}
+	extract_reference_file(refname);
+
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_zip(a));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_open_filename(a, refname, 37));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_next_header(a, &ae));
+	assertEqualString("ZIP 6.3 (lzma)", archive_format_name(a));
+	assertEqualString("vimrc", archive_entry_pathname(ae));
+	assertEqualIntA(a, 0, extract_one_using_blocks(a, 13, 0xBA8E3BAA));
+	assertEqualIntA(a, ARCHIVE_EOF, archive_read_next_header(a, &ae));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_close(a));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_free(a));
 }

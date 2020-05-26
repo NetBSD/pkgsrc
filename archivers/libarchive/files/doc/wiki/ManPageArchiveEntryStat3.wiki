@@ -28,7 +28,7 @@ ARCHIVE_ENTRY_STAT(3) manual page
 '''archive_entry_rdevmajor''', 
 '''archive_entry_set_rdevmajor''', 
 '''archive_entry_rdevminor''', 
-'''archive_entry_set_rdevminor''', 
+'''archive_entry_set_rdevminor''' 
 - accessor functions for manipulating archive entry descriptions 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -249,16 +249,16 @@ and
 set and unset the size, respectively. 
 
 The number of references (hardlinks) can be obtained by calling 
-'''archive_entry_nlinks'''() 
+'''archive_entry_nlink'''() 
 and set with 
-'''archive_entry_set_nlinks'''(). 
+'''archive_entry_set_nlink'''(). 
 === Identifying unique files=== 
 The functions 
 '''archive_entry_dev'''() 
 and 
 '''archive_entry_ino64'''() 
 are used by 
-[[ManPageArchiveEntryLinkify3]] 
+[[ManPagerchiventryinkify3]] 
 to find hardlinks. 
 The pair of device and inode is supposed to identify hardlinked files. 
 
@@ -301,8 +301,8 @@ platforms.
 Some archive formats use the combined form, while other formats use 
 the split form. 
 == SEE ALSO == 
-[[ManPageArchiveEntryAcl3]], 
-[[ManPageArchiveEntryPerms3]], 
-[[ManPageArchiveEntryTime3]], 
-[[ManPageLibarchive3]], 
-[[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]] 
+[[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]], 
+[[ManPagerchiventrycl3]], 
+[[ManPagerchiventryerms3]], 
+[[ManPagerchiventryime3]], 
+[[ManPageibarchive3]] 
