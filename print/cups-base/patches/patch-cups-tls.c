@@ -1,10 +1,10 @@
-$NetBSD: patch-cups-tls.c,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-cups-tls.c,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 Add missing stub.
 
 --- cups/tls.c.orig	2014-08-29 15:19:40.000000000 +0000
 +++ cups/tls.c
-@@ -50,6 +50,13 @@
+@@ -43,6 +43,13 @@
  #    include "tls-sspi.c"
  #  endif /* HAVE_GNUTLS */
  #else

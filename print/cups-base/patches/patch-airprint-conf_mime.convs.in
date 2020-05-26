@@ -1,4 +1,4 @@
-$NetBSD: patch-airprint-conf_mime.convs.in,v 1.1 2018/07/24 12:19:21 bouyer Exp $
+$NetBSD: patch-airprint-conf_mime.convs.in,v 1.2 2020/05/26 08:36:56 triaxx Exp $
 
 From bbc3507a260d29db3fc5601826f33c10f9dccd1e Mon Sep 17 00:00:00 2001
 From: Till Kamppeter <till.kamppeter@gmail.com>
@@ -25,7 +25,7 @@ diff --git a/conf/mime.convs.in b/conf/mime.convs.in
 index bffd04f84..33ce812e3 100644
 --- conf/mime.convs.in.orig
 +++ conf/mime.convs.in
-@@ -47,6 +47,9 @@ application/postscript		application/vnd.cups-postscript	66	pstops
+@@ -44,6 +44,9 @@ application/postscript		application/vnd.cups-postscript	66	pstops
  application/vnd.cups-raster	image/pwg-raster		100	rastertopwg
  application/vnd.cups-raster	image/urf			100	rastertopwg
  
