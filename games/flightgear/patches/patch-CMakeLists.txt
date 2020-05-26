@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/05/26 11:30:06 joerg Exp $
+
+--- CMakeLists.txt.orig	2020-05-26 01:02:04.550372381 +0000
++++ CMakeLists.txt
+@@ -80,7 +80,7 @@ set(CMAKE_RELWITHDEBINFO_POSTFIX ""  CAC
+ set(CMAKE_MINSIZEREL_POSTFIX     ""  CACHE STRING "add a postfix, usually empty on windows")
+ 
+ # read 'version' file into a variable (stripping any newlines or spaces)
+-file(READ version versionFile)
++file(READ myversion versionFile)
+ if (NOT versionFile)
+     message(FATAL_ERROR "Unable to determine FlightGear version. Version file is missing.")
+ endif()
