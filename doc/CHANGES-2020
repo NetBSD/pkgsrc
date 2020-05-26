@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3183 2020/05/26 00:28:41 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.3184 2020/05/26 02:04:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5066,3 +5066,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ndpi to 3.2 [adam 2020-05-25]
 	Updated net/ntopng to 4.0 [adam 2020-05-25]
 	Updated print/cups-base to 2.3.3nb3 [triaxx 2020-05-26]
+	Updated fonts/p5-Font-FreeType to 0.16 [wen 2020-05-26]
