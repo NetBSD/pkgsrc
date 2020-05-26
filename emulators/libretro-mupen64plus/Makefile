@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/05/26 09:45:15 nia Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/26 11:41:29 nia Exp $
 
 DISTNAME=	libretro-mupen64plus-20190426
 CATEGORIES=	emulators
@@ -33,7 +33,7 @@ MAKE_FLAGS+=	PIC=1
 .elif ${MACHINE_ARCH} == "i386"
 MAKE_FLAGS+=	WITH_DYNAREC=x86
 MAKE_FLAGS+=	PIC=0
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .elif ${MACHINE_ARCH} == "x86_64"
 MAKE_FLAGS+=	WITH_DYNAREC=x86_64
 MAKE_FLAGS+=	PIC=1
