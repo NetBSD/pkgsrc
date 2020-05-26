@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2020/05/22 10:55:55 adam Exp $
+# $NetBSD: Makefile,v 1.220 2020/05/26 13:47:51 nia Exp $
 
 DISTNAME=	mpd-0.21.23
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=	mpd-[0-9]*
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c99 c++14
+USE_LANGUAGES=	c c++14
 
 # c++14
 GCC_REQD+=	6
