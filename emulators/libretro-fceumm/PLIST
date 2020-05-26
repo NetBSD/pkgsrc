@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/04 22:57:29 jmcneill Exp $
-lib/libretro/fceumm_libretro.so
+@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:14 nia Exp $
+lib/libretro/fceumm_libretro.${SOEXT}
