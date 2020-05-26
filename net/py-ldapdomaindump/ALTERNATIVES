@@ -1,0 +1,2 @@
+bin/ldapdomaindump @PREFIX@/bin/ldapdomaindump-@PYVERSSUFFIX@
+bin/ldd2bloodhound @PREFIX@/bin/ldd2bloodhound-@PYVERSSUFFIX@
