@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/12/11 09:50:44 wiz Exp $
+$NetBSD: distinfo,v 1.7.10.1 2020/05/26 18:37:25 bsiegert Exp $
 
-SHA1 (adplug-2.3.1.tar.bz2) = c6efe2e3ec744b45b607a18fb0ef04c87374b4ba
-RMD160 (adplug-2.3.1.tar.bz2) = 928c26a97248fb4e5c63813ff52369e812d1dd2c
-SHA512 (adplug-2.3.1.tar.bz2) = 324ce084ecf5b0d180b335ebcacd5ab80806a5c9fbdeed6ef7cbd6c2f2cb476d9d9f38f596b7d6100e3d6cab42294300559200297b4b3f34190c1f516454c8c3
-Size (adplug-2.3.1.tar.bz2) = 1478424 bytes
+SHA1 (adplug-2.3.2.tar.bz2) = bcbe536e39c25316e42dc4b1f9a54e66072f8ad1
+RMD160 (adplug-2.3.2.tar.bz2) = e7d7a3884918e4209c425075aae185d55c82a1d9
+SHA512 (adplug-2.3.2.tar.bz2) = 0c2e0037172cb968394a4223862d40be1d790ac37311d25d1b9bd8e17043f5aba8d3470840bb0f006710677714ea91704c10f3c23694502c28a40ab22a0c80a4
+Size (adplug-2.3.2.tar.bz2) = 1486690 bytes

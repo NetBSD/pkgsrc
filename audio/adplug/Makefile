@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/08/18 19:01:58 fcambus Exp $
+# $NetBSD: Makefile,v 1.10.4.1 2020/05/26 18:37:25 bsiegert Exp $
 
-DISTNAME=	adplug-2.3.1
+DISTNAME=	adplug-2.3.2
 CATEGORIES=	audio devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adplug/}
 GITHUB_RELEASE=	${PKGNAME_NOREV}
