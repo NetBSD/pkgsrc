@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3192 2020/05/26 12:51:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3193 2020/05/26 15:31:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5079,3 +5079,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/sqlite3-docs to 3.32.1 [adam 2020-05-26]
 	Updated databases/sqlite3-tcl to 3.32.1 [adam 2020-05-26]
 	Updated devel/lemon to 1.0.3.32.1 [adam 2020-05-26]
+	Updated emulators/wine to 4.0.4 [adam 2020-05-26]
+	Updated databases/prometheus to 2.18.1 [adam 2020-05-26]
