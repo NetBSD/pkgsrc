@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.760 2020/05/23 09:06:19 adam Exp $
+# $NetBSD: Makefile,v 1.761 2020/05/26 22:33:20 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -441,7 +441,6 @@ SUBDIR+=	py-crcmod
 SUBDIR+=	py-cryptkit
 SUBDIR+=	py-crypto
 SUBDIR+=	py-cryptodome
-SUBDIR+=	py-cryptodomex
 SUBDIR+=	py-cryptography
 SUBDIR+=	py-cryptography_vectors
 SUBDIR+=	py-cryptopp
