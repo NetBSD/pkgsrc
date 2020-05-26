@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2020/05/26 11:12:10 bouyer Exp $
+
+SHA1 (xen413/xen-4.13.1.tar.gz) = 194a314171120dad0b3c5433104c92343ec884ba
+RMD160 (xen413/xen-4.13.1.tar.gz) = 29cfb90b9da0ede99c1228b8e5964a99547c205d
+SHA512 (xen413/xen-4.13.1.tar.gz) = b56d20704155d98d803496cba83eb928e0f986a750831cd5600fc88d0ae772fe1456571654375054043d2da8daca255cc98385ebf08b1b1a75ecf7f4b7a0ee90
+Size (xen413/xen-4.13.1.tar.gz) = 39024612 bytes
+SHA1 (patch-Config.mk) = 9372a09efd05c9fbdbc06f8121e411fcb7c7ba65
+SHA1 (patch-xen_Makefile) = 465388d80de414ca3bb84faefa0f52d817e423a6
+SHA1 (patch-xen_Rules.mk) = c743dc63f51fc280d529a7d9e08650292c171dac
+SHA1 (patch-xen_arch_x86_Rules.mk) = 0bedfc53a128a87b6a249ae04fbdf6a053bfb70b
+SHA1 (patch-xen_arch_x86_boot_build32.mk) = b82c20de9b86ddaa9d05bbc1ff28f970eb78473c
+SHA1 (patch-xen_arch_x86_mm_p2m.c) = 6e9b84dc8448eca9677f184e720bbfcb3c6d314e
+SHA1 (patch-xen_drivers_passthrough_x86_iommu.c) = 76dd564d5740df587b5ebe4a593dac82ab18edac
+SHA1 (patch-xen_tools_symbols.c) = 6070b3b5ccc38a196283cfc1c52f5d87858beb18
