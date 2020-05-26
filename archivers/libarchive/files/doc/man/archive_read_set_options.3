@@ -1,4 +1,4 @@
-.TH ARCHIVE_READ_OPTIONS 3 "February 2, 2012" ""
+.TH ARCHIVE_READ_OPTIONS 3 "January 31, 2020" ""
 .SH NAME
 .ad l
 \fB\%archive_read_set_filter_option\fP,
@@ -145,6 +145,22 @@ only to modules whose name matches
 .ad l
 .RS 5
 .TP
+Format cab
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file names.
+.RE
+.TP
+Format cpio
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file names.
+.RE
+.TP
 Format iso9660
 .RS 5
 .TP
@@ -161,6 +177,30 @@ Defaults to enabled, use
 to disable.
 .RE
 .TP
+Format lha
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file names.
+.RE
+.TP
+Format mtree
+.RS 5
+.TP
+\fBcheckfs\fP
+Allow reading information missing from the mtree from the file system.
+Disabled by default.
+.RE
+.TP
+Format rar
+.RS 5
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file names.
+.RE
+.TP
 Format tar
 .RS 5
 .TP
@@ -172,7 +212,7 @@ so that such archives can be read correctly.
 .TP
 \fBhdrcharset\fP
 The value is used as a character set name that will be
-used when translating filenames.
+used when translating file names.
 .TP
 \fBmac-ext\fP
 Support Mac OS metadata extension that records data in special
@@ -184,7 +224,8 @@ to disable.
 .TP
 \fBread_concatenated_archives\fP
 Ignore zeroed blocks in the archive, which occurs when multiple tar archives
-have been concatenated together.  Without this option, only the contents of
+have been concatenated together.
+Without this option, only the contents of
 the first concatenated archive would be read.
 .RE
 .RE
@@ -198,6 +239,6 @@ functions.
 .SH SEE ALSO
 .ad l
 \fBtar\fP(1),
-\fBlibarchive\fP(3),
+\fBarchive_read\fP(3),
 \fBarchive_write_set_options\fP(3),
-\fBarchive_read\fP(3)
+\fBlibarchive\fP(3)

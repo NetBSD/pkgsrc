@@ -87,7 +87,8 @@ or
 (FreeBSD, Mac OS X) 
 for more information on file attributes. 
 </dd><dt>'''ARCHIVE_EXTRACT_MAC_METADATA'''</dt><dd> 
-Mac OS X specific. Restore metadata using 
+Mac OS X specific. 
+Restore metadata using 
 [[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]]. 
 By default, 
 [[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]] 
@@ -112,6 +113,11 @@ is not specified, then SUID and SGID bits will only be restored
 if the default user and group IDs of newly-created objects on disk 
 happen to match those specified in the archive entry. 
 By default, only basic permissions are restored, and umask is obeyed. 
+</dd><dt>'''ARCHIVE_EXTRACT_SAFE_WRITES'''</dt><dd> 
+Extract files atomically, by first creating a unique temporary file and then 
+renaming it to its required destination name. 
+This avoids a race where an application might see a partial file (or no 
+file) during extraction. 
 </dd><dt>'''ARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS'''</dt><dd> 
 Refuse to extract an absolute path. 
 The default is to not refuse such paths. 
@@ -202,10 +208,10 @@ and
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-[[ManPageLibarchive3]] 
+[[ManPageibarchive3]] 
 overview. 
 Many of these functions are also documented under 
-[[ManPageArchiveWrite3]]. 
+[[ManPagerchiverite3]]. 
 == RETURN VALUES == 
 Most functions return 
 '''ARCHIVE_OK''' 
@@ -238,10 +244,10 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-[[ManPageArchiveRead3]], 
-[[ManPageArchiveWrite3]], 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]] 
+[[ManPagerchiveead3]], 
+[[ManPagerchiverite3]], 
+[[ManPageibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 

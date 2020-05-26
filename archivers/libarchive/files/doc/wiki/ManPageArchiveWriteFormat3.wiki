@@ -24,7 +24,7 @@ ARCHIVE_WRITE_FORMAT(3) manual page
 '''archive_write_set_format_v7tar''', 
 '''archive_write_set_format_warc''', 
 '''archive_write_set_format_xar''', 
-'''archive_write_set_format_zip''', 
+'''archive_write_set_format_zip''' 
 - functions for creating archives 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -165,7 +165,7 @@ Supported extensions: .7z, .zip, .jar, .cpio, .iso, .a, .ar, .tar, .tgz, .tar.gz
 </dt> <dd> 
 Set the format as specified. 
 More details on the formats supported by libarchive can be found in the 
-[[ManPageLibarchiveFormats5]] 
+[[ManPageibarchiveormats5]] 
 manual page. 
 </dd></dl> 
 == RETURN VALUES == 
@@ -181,10 +181,10 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWrite3]], 
-[[ManPageArchiveWriteSetOptions3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPageibarchive3]], 
 [[ManPageCpio5]], 
-[[ManPageLibarchiveFormats5]], 
+[[ManPageibarchiveormats5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

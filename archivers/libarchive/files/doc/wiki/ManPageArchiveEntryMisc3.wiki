@@ -2,7 +2,7 @@ ARCHIVE_ENTRY_MISC(3) manual page
 == NAME == 
 '''archive_entry_symlink_type''', 
 '''archive_entry_set_symlink_type''' 
-- miscellaneous functions for manipulating properties of archive_entry. 
+- miscellaneous functions for manipulating properties of archive_entry 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
 == SYNOPSIS == 
@@ -20,7 +20,8 @@ The function
 '''archive_entry_symlink_type'''() 
 returns and the function 
 '''archive_entry_set_symlink_type'''() 
-sets the type of the symbolic link stored in an archive entry. These functions 
+sets the type of the symbolic link stored in an archive entry. 
+These functions 
 have special meaning on operating systems that support multiple symbolic link 
 types (e.g. Microsoft Windows). 
 
@@ -34,7 +35,7 @@ Symbolic link points to a file
 Symbolic link points to a directory 
 </dd></dl> 
 == SEE ALSO == 
-[[ManPageArchiveEntry3]], 
-[[ManPageArchiveEntryPaths3]], 
-[[ManPageArchiveEntryStat3]], 
-[[ManPageLibarchive3]] 
+[[ManPagerchiventry3]], 
+[[ManPagerchiventryaths3]], 
+[[ManPagerchiventrytat3]], 
+[[ManPageibarchive3]] 

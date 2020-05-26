@@ -253,6 +253,8 @@ struct archive_write_disk {
 	struct archive_entry	*entry; /* Entry being extracted. */
 	char			*name; /* Name of entry, possibly edited. */
 	struct archive_string	 _name_data; /* backing store for 'name' */
+	char			*tmpname; /* Temporary name * */
+	struct archive_string	 _tmpname_data; /* backing store for 'tmpname' */
 	/* Tasks remaining for this object. */
 	int			 todo;
 	/* Tasks deferred until end-of-archive. */
@@ -354,6 +356,7 @@ struct archive_write_disk {
 
 
 static int	la_opendirat(int, const char *);
+static int	la_mktemp(struct archive_write_disk *);
 static void	fsobj_error(int *, struct archive_string *, int, const char *,
 		    const char *);
 static int	check_symlinks_fsobj(char *, int *, struct archive_string *,
@@ -407,6 +410,30 @@ static ssize_t	_archive_write_disk_data_block(struct archive *, const void *,
 		    size_t, int64_t);
 
 static int
+la_mktemp(struct archive_write_disk *a)
+{
+	int oerrno, fd;
+	mode_t mode;
+
+	archive_string_empty(&a->_tmpname_data);
+	archive_string_sprintf(&a->_tmpname_data, "%s.XXXXXX", a->name);
+	a->tmpname = a->_tmpname_data.s;
+
+	fd = __archive_mkstemp(a->tmpname);
+	if (fd == -1)
+		return -1;
+
+	mode = a->mode & 0777 & ~a->user_umask;
+	if (fchmod(fd, mode) == -1) {
+		oerrno = errno;
+		close(fd);
+		errno = oerrno;
+		return -1;
+	}
+	return fd;
+}
+
+static int
 la_opendirat(int fd, const char *path) {
 	const int flags = O_CLOEXEC
 #if defined(O_BINARY)
@@ -419,7 +446,7 @@ la_opendirat(int fd, const char *path) {
 	    | O_PATH
 #elif defined(O_SEARCH)
 	    | O_SEARCH
-#elif defined(O_EXEC)
+#elif defined(__FreeBSD__) && defined(O_EXEC)
 	    | O_EXEC
 #else
 	    | O_RDONLY
@@ -431,7 +458,7 @@ la_opendirat(int fd, const char *path) {
 		errno = ENOTSUP;
 		return (-1);
 	} else
-		return (open(fd, path, flags));
+		return (open(path, flags));
 #else
 	return (openat(fd, path, flags));
 #endif
@@ -1826,6 +1853,15 @@ finish_metadata:
 	if (a->fd >= 0) {
 		close(a->fd);
 		a->fd = -1;
+		if (a->tmpname) {
+			if (rename(a->tmpname, a->name) == -1) {
+				archive_set_error(&a->archive, errno,
+				    "Failed to rename temporary file");
+				ret = ARCHIVE_FAILED;
+				unlink(a->tmpname);
+			}
+			a->tmpname = NULL;
+		}
 	}
 	/* If there's an entry, we can release it now. */
 	archive_entry_free(a->entry);
@@ -2103,17 +2139,31 @@ restore_entry(struct archive_write_disk *a)
 		}
 
 		if (!S_ISDIR(a->st.st_mode)) {
-			/* A non-dir is in the way, unlink it. */
 			if (a->flags & ARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS)
 				(void)clear_nochange_fflags(a);
-			if (unlink(a->name) != 0) {
-				archive_set_error(&a->archive, errno,
-				    "Can't unlink already-existing object");
-				return (ARCHIVE_FAILED);
+
+			if ((a->flags & ARCHIVE_EXTRACT_SAFE_WRITES) &&
+			    S_ISREG(a->st.st_mode)) {
+				/* Use a temporary file to extract */
+				if ((a->fd = la_mktemp(a)) == -1) {
+					archive_set_error(&a->archive, errno,
+					    "Can't create temporary file");
+					return ARCHIVE_FAILED;
+				}
+				a->pst = NULL;
+				en = 0;
+			} else {
+				/* A non-dir is in the way, unlink it. */
+				if (unlink(a->name) != 0) {
+					archive_set_error(&a->archive, errno,
+					    "Can't unlink already-existing "
+					    "object");
+					return (ARCHIVE_FAILED);
+				}
+				a->pst = NULL;
+				/* Try again. */
+				en = create_filesystem_object(a);
 			}
-			a->pst = NULL;
-			/* Try again. */
-			en = create_filesystem_object(a);
 		} else if (!S_ISDIR(a->mode)) {
 			/* A dir is in the way of a non-dir, rmdir it. */
 			if (a->flags & ARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS)
@@ -2215,6 +2265,13 @@ create_filesystem_object(struct archive_write_disk *a)
 		}
 		free(linkname_copy);
 		archive_string_free(&error_string);
+		/*
+		 * Unlinking and linking here is really not atomic,
+		 * but doing it right, would require us to construct
+		 * an mktemplink() function, and then use rename(2).
+		 */
+		if (a->flags & ARCHIVE_EXTRACT_SAFE_WRITES)
+			unlink(a->name);
 		r = link(linkname, a->name) ? errno : 0;
 		/*
 		 * New cpio and pax formats allow hardlink entries
@@ -2253,6 +2310,13 @@ create_filesystem_object(struct archive_write_disk *a)
 	linkname = archive_entry_symlink(a->entry);
 	if (linkname != NULL) {
 #if HAVE_SYMLINK
+		/*
+		 * Unlinking and linking here is really not atomic,
+		 * but doing it right, would require us to construct
+		 * an mktempsymlink() function, and then use rename(2).
+		 */
+		if (a->flags & ARCHIVE_EXTRACT_SAFE_WRITES)
+			unlink(a->name);
 		return symlink(linkname, a->name) ? errno : 0;
 #else
 		return (EPERM);
@@ -2288,6 +2352,7 @@ create_filesystem_object(struct archive_write_disk *a)
 		/* POSIX requires that we fall through here. */
 		/* FALLTHROUGH */
 	case AE_IFREG:
+		a->tmpname = NULL;
 		a->fd = open(a->name,
 		    O_WRONLY | O_CREAT | O_EXCL | O_BINARY | O_CLOEXEC, mode);
 		__archive_ensure_cloexec_flag(a->fd);
@@ -2449,6 +2514,7 @@ _archive_write_disk_free(struct archive *_a)
 	archive_write_disk_set_user_lookup(&a->archive, NULL, NULL, NULL);
 	archive_entry_free(a->entry);
 	archive_string_free(&a->_name_data);
+	archive_string_free(&a->_tmpname_data);
 	archive_string_free(&a->archive.error_string);
 	archive_string_free(&a->path_safe);
 	a->archive.magic = 0;
@@ -3544,26 +3610,16 @@ set_mode(struct archive_write_disk *a, int mode)
 	}
 
 	if (S_ISLNK(a->mode)) {
+#ifdef HAVE_LCHMOD
 		/*
-		 * If this is a symlink, use fchmod() or lchmod().  If the
+		 * If this is a symlink, use lchmod().  If the
 		 * platform doesn't support lchmod(), just skip it.  A
 		 * platform that doesn't provide a way to set
 		 * permissions on symlinks probably ignores
 		 * permissions on symlinks, so a failure here has no
 		 * impact.
 		 */
-#ifdef HAVE_FCHMOD
-		if (a->fd > 0)
-			r2 = fchmod(a->fd, mode);
-		else
-#endif
-#ifdef HAVE_LCHMOD
-		r2 = lchmod(a->name, mode);
-#else
-		/* We don't have lchmod() here and a fd is not given */
-		r2 = 0;
-#endif
-		if (r2 != 0) {
+		if (lchmod(a->name, mode) != 0) {
 			switch (errno) {
 			case ENOTSUP:
 			case ENOSYS:
@@ -3582,6 +3638,7 @@ set_mode(struct archive_write_disk *a, int mode)
 				r = ARCHIVE_WARN;
 			}
 		}
+#endif
 	} else if (!S_ISDIR(a->mode)) {
 		/*
 		 * If it's not a symlink and not a dir, then use

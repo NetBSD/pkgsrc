@@ -1,4 +1,4 @@
-.TH ARCHIVE_WRITE_DISK 3 "April 3, 2017" ""
+.TH ARCHIVE_WRITE_DISK 3 "January 19, 2020" ""
 .SH NAME
 .ad l
 \fB\%archive_write_disk_new\fP,
@@ -98,7 +98,8 @@ or
 for more information on file attributes.
 .TP
 \fBARCHIVE_EXTRACT_MAC_METADATA\fP
-Mac OS X specific. Restore metadata using
+Mac OS X specific.
+Restore metadata using
 \fBcopyfile\fP(3).
 By default,
 \fBcopyfile\fP(3)
@@ -126,6 +127,12 @@ is not specified, then SUID and SGID bits will only be restored
 if the default user and group IDs of newly-created objects on disk
 happen to match those specified in the archive entry.
 By default, only basic permissions are restored, and umask is obeyed.
+.TP
+\fBARCHIVE_EXTRACT_SAFE_WRITES\fP
+Extract files atomically, by first creating a unique temporary file and then
+renaming it to its required destination name.
+This avoids a race where an application might see a partial file (or no
+file) during extraction.
 .TP
 \fBARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS\fP
 Refuse to extract an absolute path.
@@ -262,9 +269,9 @@ and
 functions.
 .SH SEE ALSO
 .ad l
+\fBtar\fP(1),
 \fBarchive_read\fP(3),
 \fBarchive_write\fP(3),
-\fBtar\fP(1),
 \fBlibarchive\fP(3)
 .SH HISTORY
 .ad l
