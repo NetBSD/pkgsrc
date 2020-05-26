@@ -1,4 +1,4 @@
-$NetBSD: patch-src_unichar.cpp,v 1.1 2020/03/26 02:34:52 joerg Exp $
+$NetBSD: patch-src_unichar.cpp,v 1.2 2020/05/26 11:29:17 joerg Exp $
 
 --- src/unichar.cpp.orig	2020-03-25 15:28:01.041787497 +0000
 +++ src/unichar.cpp
@@ -6,7 +6,7 @@ $NetBSD: patch-src_unichar.cpp,v 1.1 2020/03/26 02:34:52 joerg Exp $
  #include <cassert>
  #include <iostream>
  
-+using icu_64::UnicodeString;
++using icu::UnicodeString;
 +
  UConverter *g_utf16be;
  
