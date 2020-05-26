@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3197 2020/05/26 20:53:28 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3198 2020/05/26 21:18:35 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5086,3 +5086,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/fossil to 2.11 [js 2020-05-26]
 	Added net/py-dnspython version 1.16.0 [khorben 2020-05-26]
 	Updated devel/cloc to 1.86 [fcambus 2020-05-26]
+	Updated security/sshfp to 1.2.2 [khorben 2020-05-26]
