@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3182 2020/05/25 20:28:01 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3183 2020/05/26 00:28:41 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5065,3 +5065,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust-bin to 1.42.0nb1 [he 2020-05-25]
 	Updated net/ndpi to 3.2 [adam 2020-05-25]
 	Updated net/ntopng to 4.0 [adam 2020-05-25]
+	Updated print/cups-base to 2.3.3nb3 [triaxx 2020-05-26]
