@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2020/02/03 08:00:17 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.23 2020/05/27 19:37:42 wiz Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -23,7 +23,7 @@ CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
 EXTRACT_USING=	bsdtar
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://collectd.org/
 LICENSE=	gnu-gpl-v2
 

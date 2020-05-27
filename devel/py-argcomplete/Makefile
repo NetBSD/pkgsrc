@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2020/02/11 17:21:26 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/05/27 19:37:39 wiz Exp $
 
 DISTNAME=	argcomplete-1.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argcomplete/}
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kislyuk/argcomplete
 COMMENT=	Bash tab completion for argparse
 LICENSE=	apache-2.0

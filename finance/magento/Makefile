@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/12/15 21:12:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/27 19:37:40 wiz Exp $
 
 DISTNAME=	magento-1.9.2.2
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	www finance
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/magento/
 # MASTER_SITES=	http://www.magentocommerce.com/downloads/assets/${PKGVERSION_NOREV}/
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.magentocommerce.com/
 COMMENT=	Feature-rich eCommerce platform
 LICENSE=	osl

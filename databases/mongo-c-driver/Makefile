@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/04/12 08:27:50 adam Exp $
+# $NetBSD: Makefile,v 1.44 2020/05/27 19:37:38 wiz Exp $
 
 DISTNAME=	mongo-c-driver-1.16.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mongodb/mongo-c-driver
 COMMENT=	MongoDB client library written in C
 LICENSE=	apache-2.0
