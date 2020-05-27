@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/04 21:28:48 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/27 19:37:43 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/^M/m/}
 PKGREVISION=	1
@@ -6,7 +6,7 @@ DISTNAME=	Manifold-0.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Manifold/}
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/Manifold
 COMMENT=	SMF service manifest creation tool
 LICENSE=	mit

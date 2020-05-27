@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2019/03/20 16:02:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/27 19:37:40 wiz Exp $
 
 DISTNAME=	libtelnet-0.21
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=seanmiddleditch/}
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/seanmiddleditch/libtelnet/
 COMMENT=	RFC-complient TELNET implementation as a C library
 LICENSE=	mit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/03/09 19:37:20 khorben Exp $
+# $NetBSD: Makefile,v 1.33 2020/05/27 19:37:37 wiz Exp $
 #
 
 DISTNAME=		prosody-0.11.4
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		https://prosody.im/downloads/source/
 
-MAINTAINER=		fhajny@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://prosody.im/
 COMMENT=		Flexible communications server for Jabber/XMPP written in Lua
 LICENSE=		mit

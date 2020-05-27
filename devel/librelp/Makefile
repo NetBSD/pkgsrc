@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2020/05/22 10:55:44 adam Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/27 19:37:39 wiz Exp $
 
 DISTNAME=	librelp-1.2.16
 PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://download.rsyslog.com/librelp/
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.librelp.com/
 COMMENT=	Reliable Event Logging Protocol core library
 LICENSE=	gnu-gpl-v3

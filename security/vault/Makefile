@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2020/04/12 11:01:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.51 2020/05/27 19:37:42 wiz Exp $
 
 DISTNAME=	vault-1.2.3
 PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.vaultproject.io/
 COMMENT=	Tool for managing secrets
 LICENSE=	mpl-2.0
