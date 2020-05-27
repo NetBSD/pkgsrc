@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:47:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/27 19:37:37 wiz Exp $
 
 DISTNAME=	libmongo-client-0.1.8
 PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/algernon/libmongo-client/archive/
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/algernon/libmongo-client/
 COMMENT=	Alternative C driver for MongoDB
 LICENSE=	apache-2.0
