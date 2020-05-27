@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3207 2020/05/27 13:00:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3208 2020/05/27 14:00:21 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5101,3 +5101,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-awscli to 1.18.67 [adam 2020-05-27]
 	Updated sysutils/py-crontab to 2.5.1 [adam 2020-05-27]
 	Updated www/py-beautifulsoup4 to 4.9.1 [adam 2020-05-27]
+	Updated security/openssh to 8.3p1 [sevan 2020-05-27]
