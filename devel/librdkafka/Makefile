@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2020/02/01 20:49:43 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/05/27 19:37:39 wiz Exp $
 
 DISTNAME=	librdkafka-1.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=edenhill/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/edenhill/librdkafka
 COMMENT=	Apache Kafka C/C++ library
 LICENSE=	2-clause-bsd
