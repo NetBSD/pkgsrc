@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3209 2020/05/27 14:20:42 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3210 2020/05/27 14:33:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5104,3 +5104,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/openssh to 8.3p1 [sevan 2020-05-27]
 	Updated devel/py-modulegraph to 0.18 [adam 2020-05-27]
 	Updated devel/py-rope to 0.17.0 [adam 2020-05-27]
+	Updated net/knot to 2.9.5 [ryoon 2020-05-27]
