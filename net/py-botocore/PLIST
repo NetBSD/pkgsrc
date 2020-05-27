@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2020/04/30 06:45:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2020/05/27 12:22:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -487,6 +487,8 @@ ${PYSITELIB}/botocore/data/machinelearning/2014-12-12/waiters-2.json
 ${PYSITELIB}/botocore/data/macie/2017-12-19/examples-1.json
 ${PYSITELIB}/botocore/data/macie/2017-12-19/paginators-1.json
 ${PYSITELIB}/botocore/data/macie/2017-12-19/service-2.json
+${PYSITELIB}/botocore/data/macie2/2020-01-01/paginators-1.json
+${PYSITELIB}/botocore/data/macie2/2020-01-01/service-2.json
 ${PYSITELIB}/botocore/data/managedblockchain/2018-09-24/paginators-1.json
 ${PYSITELIB}/botocore/data/managedblockchain/2018-09-24/service-2.json
 ${PYSITELIB}/botocore/data/marketplace-catalog/2018-09-17/paginators-1.json
