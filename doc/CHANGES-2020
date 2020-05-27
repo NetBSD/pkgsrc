@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3208 2020/05/27 14:00:21 sevan Exp $
+$NetBSD: CHANGES-2020,v 1.3209 2020/05/27 14:20:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5102,3 +5102,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-crontab to 2.5.1 [adam 2020-05-27]
 	Updated www/py-beautifulsoup4 to 4.9.1 [adam 2020-05-27]
 	Updated security/openssh to 8.3p1 [sevan 2020-05-27]
+	Updated devel/py-modulegraph to 0.18 [adam 2020-05-27]
+	Updated devel/py-rope to 0.17.0 [adam 2020-05-27]
