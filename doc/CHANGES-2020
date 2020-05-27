@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3211 2020/05/27 14:56:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3212 2020/05/27 15:03:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5107,3 +5107,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/knot to 2.9.5 [ryoon 2020-05-27]
 	Updated www/py-meinheld to 1.0.2 [adam 2020-05-27]
 	Updated sysutils/py-supervisor to 4.2.0 [adam 2020-05-27]
+	Updated security/py-nacl to 1.4.0 [adam 2020-05-27]
+	Updated devel/py-test-cov to 2.9.0 [adam 2020-05-27]
