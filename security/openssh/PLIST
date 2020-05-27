@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2017/01/19 03:50:53 maya Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/05/27 13:49:27 sevan Exp $
 bin/scp
 bin/sftp
 bin/ssh
@@ -9,6 +9,7 @@ bin/ssh-keyscan
 libexec/sftp-server
 libexec/ssh-keysign
 libexec/ssh-pkcs11-helper
+libexec/ssh-sk-helper
 man/man1/scp.1
 man/man1/sftp.1
 man/man1/ssh-add.1
@@ -22,6 +23,7 @@ man/man5/sshd_config.5
 man/man8/sftp-server.8
 man/man8/ssh-keysign.8
 man/man8/ssh-pkcs11-helper.8
+man/man8/ssh-sk-helper.8
 man/man8/sshd.8
 sbin/sshd
 share/examples/openssh/moduli
