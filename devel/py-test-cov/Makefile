@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/05/16 09:03:22 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/27 15:02:39 adam Exp $
 
-DISTNAME=	pytest-cov-2.8.1
+DISTNAME=	pytest-cov-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-cov/}
