@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/26 13:41:17 adam Exp $
+$NetBSD: distinfo,v 1.6 2020/05/27 14:53:46 adam Exp $
 
-SHA1 (meinheld-1.0.1.tar.gz) = ea98785a98ad10158c7ffc0be9535445057dc57d
-RMD160 (meinheld-1.0.1.tar.gz) = fea26675940310f1b44a83d451a24332613eee7e
-SHA512 (meinheld-1.0.1.tar.gz) = e7669cbc21e3b1c7cee0f86d2b28953a7196ffaae87d82213109f43bac1366778cc6c936ea66e51bf165cf35eb294e2b532db8ae6ffaee5a1b0d58bba726806c
-Size (meinheld-1.0.1.tar.gz) = 81891 bytes
+SHA1 (meinheld-1.0.2.tar.gz) = a48f1045b86378fd01c79fc9c8fecbb5164f9133
+RMD160 (meinheld-1.0.2.tar.gz) = 095acc5057c47543b31f9233225f6b377bdc6e10
+SHA512 (meinheld-1.0.2.tar.gz) = 928aa3d14fd6a76c2ba1999e4d78d28a90b108f2a18c8d5c51af70cb15c66bc185c0fb6fcb1c701dcbac9954c7bc70ebe94bb04e5d4560072ed117e5e14694ff
+Size (meinheld-1.0.2.tar.gz) = 83085 bytes
