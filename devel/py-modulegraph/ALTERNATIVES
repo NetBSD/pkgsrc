@@ -1,1 +1,1 @@
-bin/modulegraph @PREFIX@/bin/modulegraph@PYVERSSUFFIX@
+bin/modulegraph @PREFIX@/bin/modulegraph-@PYVERSSUFFIX@
