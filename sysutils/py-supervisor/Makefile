@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/03/02 20:33:30 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/27 14:56:15 adam Exp $
 
-DISTNAME=	supervisor-4.1.0
+DISTNAME=	supervisor-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/supervisor/}
