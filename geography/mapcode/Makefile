@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2018/12/15 21:12:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/27 19:37:40 wiz Exp $
 
 DISTNAME=	mapcode-cpp-2.5.4
 PKGNAME=	${DISTNAME:S/-cpp//}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mapcode-foundation/}
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mapcode-foundation/mapcode-cpp/
 COMMENT=	Mapcode Library for C/C++
 LICENSE=	apache-2.0
