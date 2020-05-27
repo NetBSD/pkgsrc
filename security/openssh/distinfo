@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.109 2019/09/06 09:03:00 manu Exp $
+$NetBSD: distinfo,v 1.110 2020/05/27 13:49:27 sevan Exp $
 
-SHA1 (openssh-8.0p1.tar.gz) = 756dbb99193f9541c9206a667eaa27b0fa184a4f
-RMD160 (openssh-8.0p1.tar.gz) = 9c0d0d97a5f9f97329bf334725dfbad53576d612
-SHA512 (openssh-8.0p1.tar.gz) = e280fa2d56f550efd37c5d2477670326261aa8b94d991f9eb17aad90e0c6c9c939efa90fe87d33260d0f709485cb05c379f0fd1bd44fc0d5190298b6398c9982
-Size (openssh-8.0p1.tar.gz) = 1597697 bytes
+SHA1 (openssh-8.3p1.tar.gz) = 04c7adb9986f16746588db8988b910530c589819
+RMD160 (openssh-8.3p1.tar.gz) = 2203f2e7591ccf292dc05fccd8ea46d0fe19d88d
+SHA512 (openssh-8.3p1.tar.gz) = b5232f7c85bf59ae2ff9d17b030117012e257e3b8c0d5ac60bb139a85b1fbf298b40f2e04203a2e13ca7273053ed668b9dedd54d3a67a7cb8e8e58c0228c5f40
+Size (openssh-8.3p1.tar.gz) = 1706358 bytes
 SHA1 (patch-Makefile.in) = 13502b825c13c98b2ba3b84ff4bae9aa664b76b1
 SHA1 (patch-auth.c) = 060a93f5264751769f2fdf98fefd154bd80c0c5f
 SHA1 (patch-clientloop.c) = 4e88fbd14db33f003eb93c30c682a017e102196e
@@ -15,5 +15,5 @@ SHA1 (patch-openbsd-compat_openbsd-compat.h) = bedbede16ab2fe918419c994ba15a2016
 SHA1 (patch-openbsd-compat_port-tun.c) = 4b1b55b7fdc319e011d249ee336301b17a589228
 SHA1 (patch-sandbox-darwin.c) = c9a1fe2e4dbf98e929d983b4206a244e0e354b75
 SHA1 (patch-sshd.8) = 5bf48cd27cef8e8810b9dc7115f5180102a345d1
-SHA1 (patch-sshd.c) = 825eeec13608859852f4cfdeaceedce21bd2f164
+SHA1 (patch-sshd.c) = b3674e9f467323d1852dd988a408ac23896f6700
 SHA1 (patch-sshkey.h) = 8e6758a5f78eb48fae2df6efe8ddb9f5d4a71f7b
