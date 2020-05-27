@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2017/07/31 05:18:56 adam Exp $
-bin/modulegraph${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.6 2020/05/27 14:14:47 adam Exp $
+bin/modulegraph-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
