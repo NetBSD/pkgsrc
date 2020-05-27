@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2020/05/12 07:45:30 adam Exp $
+$NetBSD: distinfo,v 1.24 2020/05/27 12:23:12 adam Exp $
 
-SHA1 (boto3-1.13.7.tar.gz) = b2faeec2fd07d79060ba550012c54e02e45d7517
-RMD160 (boto3-1.13.7.tar.gz) = 60731c10981ccf29aafbd76df5fe11b46b4551ad
-SHA512 (boto3-1.13.7.tar.gz) = 1ac1d48d6c078748b37d745d2946b0729cbb75fd7ac21bfccd96b182fa54c07ff386755f13c3c8a8066f846723f2ae4867b592ead41893956c396def2f20b1dc
-Size (boto3-1.13.7.tar.gz) = 97964 bytes
+SHA1 (boto3-1.13.17.tar.gz) = 4818815c2c59e08cb62b0a227ef01b8d2aeade48
+RMD160 (boto3-1.13.17.tar.gz) = 1e2b755cd3f200abf1ec9f2bae837fd26af5f119
+SHA512 (boto3-1.13.17.tar.gz) = ea163ffea5961e2cfd08e3475e90965194cb5222f9590a319527ed0370dc8ac2bdbdf8e877f36dff6a6226c04098b6befc01c18a5fdb543bdaabdebf96ade5f6
+Size (boto3-1.13.17.tar.gz) = 96987 bytes
