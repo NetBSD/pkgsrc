@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3204 2020/05/27 11:41:17 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3205 2020/05/27 11:42:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5094,3 +5094,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-zeroconf to 0.26.3 [adam 2020-05-27]
 	Updated databases/py-pypika to 0.37.7 [adam 2020-05-27]
 	Updated mail/thunderbird to 68.8.1 [ryoon 2020-05-27]
+	Updated mail/thunderbird-l10n to 68.8.1 [ryoon 2020-05-27]
