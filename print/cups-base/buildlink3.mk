@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2020/05/26 08:36:55 triaxx Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2020/05/27 05:29:40 triaxx Exp $
 
 BUILDLINK_TREE+=	cups-base
 
@@ -20,7 +20,7 @@ pkgbase := cups-base
 .include "../../net/mDNSResponder/buildlink3.mk"
 .endif
 
-.if ${OPSYS} != "Darwin" && ${PKG_BUILD_OPTIONS.cups-base:Mdnssd}
+.if ${OPSYS} != "Darwin" && ${PKG_BUILD_OPTIONS.cups-base:Mavahi}
 .include "../../net/avahi/buildlink3.mk"
 .endif
 
