@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:30:30 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/27 19:37:39 wiz Exp $
 
 DISTNAME=	kafka_${SCALA_VERSION}-1.1.0
 PKGNAME=	${DISTNAME:S/_${SCALA_VERSION}//}
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_APACHE:=kafka/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kafka.apache.org/
 COMMENT=	Distributed streaming platform
 LICENSE=	apache-2.0 AND cddl-1.0
