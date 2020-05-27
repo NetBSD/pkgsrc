@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2019/07/06 19:16:28 nia Exp $
+# $NetBSD: Makefile.common,v 1.43 2020/05/27 19:37:43 wiz Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -18,7 +18,7 @@ DISTNAME=		rsyslog-8.38.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
-MAINTAINER?=		fhajny@NetBSD.org
+MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.rsyslog.com/
 LICENSE=		gnu-gpl-v3
 COMMENT?=		Enhanced syslogd for Unix - the ${RSYSLOG_MOD} module

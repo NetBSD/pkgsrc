@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/05/22 10:56:47 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/27 19:37:44 wiz Exp $
 
 DISTNAME=	trafficserver-7.1.2
 PKGREVISION=	14
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=trafficserver/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trafficserver.apache.org/
 COMMENT=	Fast, scalable and extensible caching proxy server
 LICENSE=	apache-2.0
