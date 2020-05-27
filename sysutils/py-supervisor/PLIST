@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/02 20:33:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/27 14:56:16 adam Exp $
 bin/echo_supervisord_conf-${PYVERSSUFFIX}
 bin/pidproxy-${PYVERSSUFFIX}
 bin/supervisorctl-${PYVERSSUFFIX}
@@ -136,7 +136,10 @@ ${PYSITELIB}/supervisor/tests/fixtures/example/included.conf
 ${PYSITELIB}/supervisor/tests/fixtures/include.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1054.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1224.conf
-${PYSITELIB}/supervisor/tests/fixtures/issue-1231.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-1231a.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-1231b.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-1231c.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-1298.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-565.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-638.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-663.conf
@@ -215,9 +218,6 @@ ${PYSITELIB}/supervisor/tests/test_web.pyo
 ${PYSITELIB}/supervisor/tests/test_xmlrpc.py
 ${PYSITELIB}/supervisor/tests/test_xmlrpc.pyc
 ${PYSITELIB}/supervisor/tests/test_xmlrpc.pyo
-${PYSITELIB}/supervisor/ui/images/button_refresh.gif
-${PYSITELIB}/supervisor/ui/images/button_restart.gif
-${PYSITELIB}/supervisor/ui/images/button_stop.gif
 ${PYSITELIB}/supervisor/ui/images/icon.png
 ${PYSITELIB}/supervisor/ui/images/rule.gif
 ${PYSITELIB}/supervisor/ui/images/state0.gif
