@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2020/04/11 07:26:27 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/05/27 14:20:24 adam Exp $
 
-DISTNAME=	rope-0.16.0
+DISTNAME=	rope-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rope/}
