@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/08/19 07:20:28 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/27 14:14:47 adam Exp $
 
-DISTNAME=	modulegraph-0.17
+DISTNAME=	modulegraph-0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/modulegraph/}
@@ -15,7 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.15:../../graphics/py-altgraph
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} modulegraph modulegraph${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} modulegraph modulegraph-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
