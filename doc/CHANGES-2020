@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3223 2020/05/28 12:15:09 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3224 2020/05/28 12:24:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5122,3 +5122,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-joblib to 0.15.1 [adam 2020-05-28]
 	Removed editors/notecase [nia 2020-05-28]
 	Removed time/gtodo [nia 2020-05-28]
+	Removed x11/libgnomekbd2 successor x11/libgnomekbd [nia 2020-05-28]
