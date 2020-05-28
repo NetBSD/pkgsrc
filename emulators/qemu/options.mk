@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2020/03/13 13:57:04 tnn Exp $
+# $NetBSD: options.mk,v 1.10 2020/05/28 14:44:19 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	gtk3 iscsi sdl spice
@@ -11,7 +11,8 @@ PKG_SUPPORTED_OPTIONS+=	virtfs-proxy-helper
 .endif
 
 .if ${OPSYS} != "Darwin"
-PKG_SUGGESTED_OPTIONS+=	sdl
+PKG_SUPPORTED_OPTIONS+=	opengl
+PKG_SUGGESTED_OPTIONS+=	opengl sdl
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -24,6 +25,14 @@ CONFIGURE_ARGS+=	--enable-gtk
 .include "../../x11/gtk3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtk
+.endif
+
+.if !empty(PKG_OPTIONS:Mopengl)
+CONFIGURE_ARGS+=	--enable-opengl
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-opengl
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
