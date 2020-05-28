@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3221 2020/05/28 12:07:15 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3222 2020/05/28 12:09:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5120,3 +5120,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed audio/gnome-vfs-cdda [nia 2020-05-28]
 	Updated databases/redis to 6.0.4 [adam 2020-05-28]
 	Updated devel/py-joblib to 0.15.1 [adam 2020-05-28]
+	Removed editors/notecase [nia 2020-05-28]
