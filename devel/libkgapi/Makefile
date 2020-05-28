@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/05/21 20:53:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/28 15:33:29 rillig Exp $
 
 DISTNAME=	libkgapi-2.2.0
 PKGREVISION=	20
@@ -15,6 +15,7 @@ BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+TOOLS_BROKEN+=	perl
 
 
 .include "../../meta-pkgs/kde4/kde4.mk"
