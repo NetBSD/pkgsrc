@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/11 10:46:12 micha Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/28 09:16:55 wiz Exp $
 
 DISTNAME=	woof_1.2.1
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c99
 USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-G "Unix Makefiles" ..
 CONFIGURE_DIRS=	build
 WRKSRC=		${WRKDIR}/woof-${DISTNAME}
