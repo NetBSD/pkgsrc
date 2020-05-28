@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.898 2020/05/15 11:54:25 nia Exp $
+# $NetBSD: Makefile,v 1.899 2020/05/28 12:22:08 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -230,7 +230,6 @@ SUBDIR+=	libdrm
 SUBDIR+=	libfakekey
 SUBDIR+=	libfm-qt
 SUBDIR+=	libgnomekbd
-SUBDIR+=	libgnomekbd2
 SUBDIR+=	libkactivities4
 SUBDIR+=	libkscreen
 SUBDIR+=	liblxqt
