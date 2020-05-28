@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2020/03/31 10:25:28 nia Exp $
+# $NetBSD: Makefile,v 1.174 2020/05/28 14:16:46 ryoon Exp $
 #
 
 COMMENT=	Archivers
@@ -107,6 +107,7 @@ SUBDIR+=	py-zipp
 SUBDIR+=	py-zipp1
 SUBDIR+=	py-zipstream
 SUBDIR+=	py-zstandard
+SUBDIR+=	quazip
 SUBDIR+=	rar
 SUBDIR+=	rox-archive
 SUBDIR+=	ruby-archive-tar-minitar
