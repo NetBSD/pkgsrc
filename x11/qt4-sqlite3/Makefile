@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/04/12 08:29:20 adam Exp $
+# $NetBSD: Makefile,v 1.62 2020/05/28 15:20:01 rillig Exp $
 
 PKGREVISION= 15
 .include "../../x11/qt4-libs/Makefile.common"
@@ -12,6 +12,7 @@ CONFIGURE_ARGS+=	-system-sqlite
 
 BUILD_QT4=		yes
 USE_TOOLS+=		pkg-config
+TOOLS_BROKEN+=		perl
 
 do-build:
 	cd ${WRKSRC}/src/tools/bootstrap && env ${MAKE_ENV} ${GMAKE}
