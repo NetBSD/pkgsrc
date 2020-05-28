@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/09 17:46:48 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/28 15:31:43 rillig Exp $
 
 DISTNAME=	gdb-7.10
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 ARMELF_PREFIX=	${PREFIX}/cross-arm-none-eabi
 
 USE_TOOLS+=	gmake makeinfo
+TOOLS_BROKEN+=	perl # used in do-install for texi2pod
 GNU_CONFIGURE=	yes
 
 OBJDIR=			../build
