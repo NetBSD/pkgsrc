@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3220 2020/05/28 12:02:35 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3221 2020/05/28 12:07:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5118,3 +5118,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-protobuf to 3.12.2 [adam 2020-05-28]
 	Removed sysutils/gnome-vfs-monikers [nia 2020-05-28]
 	Removed audio/gnome-vfs-cdda [nia 2020-05-28]
+	Updated databases/redis to 6.0.4 [adam 2020-05-28]
+	Updated devel/py-joblib to 0.15.1 [adam 2020-05-28]
