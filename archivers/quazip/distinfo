@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/05/28 14:15:12 ryoon Exp $
+
+SHA1 (quazip-0.9.tar.gz) = 4a03c1dcaf27e7dadbea83eabf0d0b1eca3c22d8
+RMD160 (quazip-0.9.tar.gz) = 5bff705bcf1471c7709d88bb8770fa9af7498a41
+SHA512 (quazip-0.9.tar.gz) = 8045d36c018bb7bcc39c978bb8f336bad09f21bca4ea5f1327e3ba56d7d01bcc09ee0eca98d7c9065184bf3e15103c4520a81bfbe51286b91a4a82e4f61057f1
+Size (quazip-0.9.tar.gz) = 155764 bytes
+SHA1 (patch-CMakeLists.txt) = 6b77cd56f1d269ff658338a01a3d36a33c535775

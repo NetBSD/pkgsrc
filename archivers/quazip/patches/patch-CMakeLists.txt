@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/05/28 14:15:12 ryoon Exp $
+
+* Set version in quazip.pc.
+
+--- CMakeLists.txt.orig	2020-04-29 12:11:37.000000000 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,9 @@
+ cmake_minimum_required(VERSION 2.6)
+ project(QuaZip)
+ 
++set(QUAZIP_LIB_VERSION 0.9.0)
++set(QUAZIP_LIB_SOVERSION 1)
++
+ # CMP0042: Explicitly acknowledge MACOSX_RPATH
+ # (introduced in CMake 2.8.12, enabled by default in CMake 3.0,
+ # and producing a warning when unset since 3.7.1)
