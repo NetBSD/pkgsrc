@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:16 agc Exp $
-
-SHA1 (gnome-vfs-monikers-2.15.3.tar.bz2) = 34b1a8f4eb35af1608e35687595daef771112420
-RMD160 (gnome-vfs-monikers-2.15.3.tar.bz2) = 798a337bf8f680725c009251fc0c68cb28fa5124
-SHA512 (gnome-vfs-monikers-2.15.3.tar.bz2) = 1ddc7a85aaa751dd2cc9c9a00d1516e2a233dffc98ae00815c0e9c51af158a876a01f2931ef5036e343e8481cf95a4ef14f8791be3e561ddb98f97e831bcbcf3
-Size (gnome-vfs-monikers-2.15.3.tar.bz2) = 260537 bytes
