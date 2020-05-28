@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.774 2020/05/25 14:31:13 taca Exp $
+# $NetBSD: Makefile,v 1.775 2020/05/28 06:15:51 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -430,8 +430,8 @@ SUBDIR+=	tex-colortbl
 SUBDIR+=	tex-colortbl-doc
 SUBDIR+=	tex-comment
 SUBDIR+=	tex-comment-doc
-SUBDIR+=	tex-components-of-TeX-doc
 SUBDIR+=	tex-compare
+SUBDIR+=	tex-components-of-TeX-doc
 SUBDIR+=	tex-comprehensive-doc
 SUBDIR+=	tex-concprog
 SUBDIR+=	tex-concprog-doc
