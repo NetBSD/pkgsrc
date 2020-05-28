@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3225 2020/05/28 14:15:53 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3226 2020/05/28 14:21:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5124,3 +5124,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed time/gtodo [nia 2020-05-28]
 	Removed x11/libgnomekbd2 successor x11/libgnomekbd [nia 2020-05-28]
 	Added archivers/quazip version 0.9 [ryoon 2020-05-28]
+	Updated graphics/libmypaint to 1.6.1 [ryoon 2020-05-28]
