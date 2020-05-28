@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3222 2020/05/28 12:09:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3223 2020/05/28 12:15:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/redis to 6.0.4 [adam 2020-05-28]
 	Updated devel/py-joblib to 0.15.1 [adam 2020-05-28]
 	Removed editors/notecase [nia 2020-05-28]
+	Removed time/gtodo [nia 2020-05-28]
