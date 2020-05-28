@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/03/08 16:47:29 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/05/28 15:15:51 rillig Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -7,7 +7,8 @@ PKGREVISION= 2
 PKGCONFIG_OVERRIDE+=	libgda-5.0.pc.in
 PKGCONFIG_OVERRIDE+=	libgda-report-5.0.pc.in
 
-CONFIGURE_ARGS+=	--with-odbc=no --with-bdb=no --with-oracle=no
+CONFIGURE_ARGS+=	--with-bdb=no
+CONFIGURE_ARGS+=	--with-oracle=no
 
 TEST_TARGET=		check
 
