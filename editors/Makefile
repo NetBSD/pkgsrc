@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2020/04/15 16:06:21 wiz Exp $
+# $NetBSD: Makefile,v 1.204 2020/05/28 12:06:17 nia Exp $
 #
 
 COMMENT=	Editors
@@ -88,7 +88,6 @@ SUBDIR+=	ne
 SUBDIR+=	neatvi
 SUBDIR+=	nedit
 SUBDIR+=	ng
-SUBDIR+=	notecase
 SUBDIR+=	nts
 SUBDIR+=	nvi
 SUBDIR+=	nvi-m17n
