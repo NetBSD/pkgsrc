@@ -1,4 +1,4 @@
-# $NetBSD: check-vulnerable.mk,v 1.5 2011/10/15 00:23:08 reed Exp $
+# $NetBSD: check-vulnerable.mk,v 1.6 2020/05/28 16:22:58 maya Exp $
 #
 # Public targets:
 #
@@ -6,13 +6,8 @@
 #	Checks for vulnerabilities in the package.
 #
 
-.if defined(ALLOW_VULNERABLE_PACKAGES)
-check-vulnerable: .PHONY
-	@${DO_NADA}
-.  else
 check-vulnerable: .PHONY _pkgformat-check-vulnerable
 	@${DO_NADA}
-.endif
 
 # A package format does not need to implement this target, so provide a
 # default implementation.
