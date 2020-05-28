@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/05/14 08:42:22 rin Exp $
+$NetBSD: distinfo,v 1.6 2020/05/28 15:26:23 triaxx Exp $
 
 SHA1 (mozjs60_60.8.0.orig.tar.xz) = b66207ee477c110995029f173e6b026f2e013591
 RMD160 (mozjs60_60.8.0.orig.tar.xz) = fef033969a51dc56c84669d33401f60bd499de6d
@@ -6,6 +6,7 @@ SHA512 (mozjs60_60.8.0.orig.tar.xz) = ad4d5d17824b1d0e50fc43a56cb5ffe022ffd150ce
 Size (mozjs60_60.8.0.orig.tar.xz) = 25294372 bytes
 SHA1 (patch-.._.._config_rules.mk) = cf3421d991e1cbfab4c0cdcb7b648b1388fa32d5
 SHA1 (patch-.._.._python_mozbuild_mozbuild_backend_recursivemake.py) = dda670432e5673c5d28dcf6c4902d4a724e71170
+SHA1 (patch-.._.._python_mozbuild_mozbuild_virtualenv.py) = 231d96ae8f66da1db36a4371c28d97a4db4c0f5c
 SHA1 (patch-.._public_TypeDecls.h) = 846e0707755cbe7e97cc380f66bfe6da0daf996e
 SHA1 (patch-gc_Memory.cpp) = ba865bee4b99ce6298404b41b465b281fd23555f
 SHA1 (patch-jsdate.cpp) = f9314460476ffbc00fe85a75bddc964807d0153f
