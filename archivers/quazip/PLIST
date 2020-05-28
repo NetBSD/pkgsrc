@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/28 14:15:12 ryoon Exp $
+include/quazip5/JlCompress.h
+include/quazip5/ioapi.h
+include/quazip5/minizip_crypt.h
+include/quazip5/quaadler32.h
+include/quazip5/quachecksum32.h
+include/quazip5/quacrc32.h
+include/quazip5/quagzipfile.h
+include/quazip5/quaziodevice.h
+include/quazip5/quazip.h
+include/quazip5/quazip_global.h
+include/quazip5/quazipdir.h
+include/quazip5/quazipfile.h
+include/quazip5/quazipfileinfo.h
+include/quazip5/quazipnewinfo.h
+include/quazip5/unzip.h
+include/quazip5/zip.h
+lib/cmake/QuaZip5/QuaZip5Config.cmake
+lib/libquazip5.a
+lib/libquazip5.so
+lib/libquazip5.so.1
+lib/libquazip5.so.1.0.0
+lib/pkgconfig/quazip.pc
