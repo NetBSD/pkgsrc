@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2020/05/27 19:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/28 12:02:44 adam Exp $
 
-DISTNAME=	redis-6.0.3
+DISTNAME=	redis-6.0.4
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -11,8 +11,8 @@ LICENSE=	modified-bsd
 
 TEST_DEPENDS+=	tcl>=8.5:../../lang/tcl
 
-USE_LANGUAGES=		c99
-USE_TOOLS+=		gmake
+USE_LANGUAGES=	c99
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
