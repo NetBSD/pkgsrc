@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/11/02 23:31:37 agc Exp $
-
-SHA1 (gtodo-0.14.tar.gz) = c6eb5089a324abdf41383a60a9f8f0d3f4ebb8ff
-RMD160 (gtodo-0.14.tar.gz) = 49728a8adf3219786a5576b81f5f5dca9e838a04
-SHA512 (gtodo-0.14.tar.gz) = 3e57de3cdd129120985c1840b50ef9be62048cb9805a89e9fa981ae10649922d82fab03f633dafde976f769166c03bcef30093b31998b122856d152a52045eca
-Size (gtodo-0.14.tar.gz) = 198798 bytes
-SHA1 (patch-aa) = 3729f70027316bbab34c2c3a81adc7f83c18e189
-SHA1 (patch-ab) = be4d6466e463a5abbe51a9c40e1aae3aefc81014
