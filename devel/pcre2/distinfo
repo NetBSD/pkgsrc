@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2020/05/19 14:18:49 nia Exp $
+$NetBSD: distinfo,v 1.14 2020/05/28 07:53:05 wiz Exp $
 
 SHA1 (pcre2-10.35.tar.bz2) = 2e5ee2dd397fa8c3ce9aed1a986e51d66a88bdb0
 RMD160 (pcre2-10.35.tar.bz2) = fdfdf74eec41107c77eecc071eb153efabd59605
 SHA512 (pcre2-10.35.tar.bz2) = ecfb8d48e219daff02874783b7b436fe7d70d8471e44eb66e1e29abb7b0aa67547e6b5fba7058b074ac90eef265ece7d12728f80afdda45b6b8124435f4561fd
 Size (pcre2-10.35.tar.bz2) = 1725214 bytes
+SHA1 (patch-src_sljit_sljitProtExecAllocator.c) = 306c7c6c1dfa8fb696ae78eea3b3a803b040d885
