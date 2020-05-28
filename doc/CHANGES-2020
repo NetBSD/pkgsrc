@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3217 2020/05/28 11:49:24 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3218 2020/05/28 11:53:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5114,3 +5114,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/easyrpg-player to 0.6.2.1 [nia 2020-05-28]
 	Updated net/rclone to 1.52.0 [leot 2020-05-28]
 	Removed www/browser-bookmarks-menu [nia 2020-05-28]
+	Updated devel/protobuf to 3.12.2 [adam 2020-05-28]
+	Updated devel/py-protobuf to 3.12.2 [adam 2020-05-28]
