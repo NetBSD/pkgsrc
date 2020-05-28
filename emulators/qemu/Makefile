@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.244 2020/05/26 07:17:53 skrll Exp $
+# $NetBSD: Makefile,v 1.245 2020/05/28 14:44:19 nia Exp $
 
 DISTNAME=	qemu-5.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -43,7 +43,6 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ARGS+=	--enable-jemalloc
-CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 
 .if defined(PKGSRC_USE_SSP)
