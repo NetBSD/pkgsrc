@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1458 2020/05/25 14:41:37 taca Exp $
+# $NetBSD: Makefile,v 1.1459 2020/05/28 11:39:40 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -61,7 +61,6 @@ SUBDIR+=	bkedit
 SUBDIR+=	bluefish
 SUBDIR+=	blur6ex
 SUBDIR+=	bozohttpd
-SUBDIR+=	browser-bookmarks-menu
 SUBDIR+=	c-icap
 SUBDIR+=	c-icap-modules
 SUBDIR+=	cadaver
