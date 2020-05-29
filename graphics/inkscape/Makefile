@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2020/05/18 05:20:58 rillig Exp $
+# $NetBSD: Makefile,v 1.212 2020/05/29 22:07:25 tnn Exp $
 
 DISTNAME=	inkscape-1.0
 PKGREVISION=	3
@@ -73,6 +73,13 @@ MANCOMPRESSED=	yes
 .if ${OPSYS} == "Darwin"
 CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 .endif
+
+# There exists some race condition in create_default_templates.py that
+# makes default.es_MX.svg sometimes not get installed.
+# (gettext translation file dependency not correctly expressed in cmake?)
+# Run the script post-build to ensure all files are generated.
+post-build:
+	cd ${WRKSRC} && ${PYTHONBIN} ./share/templates/create_default_templates.py . .
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../converters/libcdr/buildlink3.mk"
