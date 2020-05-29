@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/04/27 10:19:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/05/29 08:59:25 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -20,6 +20,15 @@ ${PYSITELIB}/faker/cli.pyo
 ${PYSITELIB}/faker/config.py
 ${PYSITELIB}/faker/config.pyc
 ${PYSITELIB}/faker/config.pyo
+${PYSITELIB}/faker/contrib/__init__.py
+${PYSITELIB}/faker/contrib/__init__.pyc
+${PYSITELIB}/faker/contrib/__init__.pyo
+${PYSITELIB}/faker/contrib/pytest/__init__.py
+${PYSITELIB}/faker/contrib/pytest/__init__.pyc
+${PYSITELIB}/faker/contrib/pytest/__init__.pyo
+${PYSITELIB}/faker/contrib/pytest/plugin.py
+${PYSITELIB}/faker/contrib/pytest/plugin.pyc
+${PYSITELIB}/faker/contrib/pytest/plugin.pyo
 ${PYSITELIB}/faker/documentor.py
 ${PYSITELIB}/faker/documentor.pyc
 ${PYSITELIB}/faker/documentor.pyo
@@ -449,6 +458,9 @@ ${PYSITELIB}/faker/providers/date_time/ar_AA/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/ar_EG/__init__.py
 ${PYSITELIB}/faker/providers/date_time/ar_EG/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/ar_EG/__init__.pyo
+${PYSITELIB}/faker/providers/date_time/de_DE/__init__.py
+${PYSITELIB}/faker/providers/date_time/de_DE/__init__.pyc
+${PYSITELIB}/faker/providers/date_time/de_DE/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/en_PH/__init__.py
 ${PYSITELIB}/faker/providers/date_time/en_PH/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/en_PH/__init__.pyo
