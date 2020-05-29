@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/29 06:32:10 adam Exp $
+
+SHA1 (terraform-provider-null-2.1.2.tar.gz) = 81d966c5464de8c4133df053ac6423bff0aa40d5
+RMD160 (terraform-provider-null-2.1.2.tar.gz) = 6cc35a664f83c97b5eed5a9d5d0425409bdf17dc
+SHA512 (terraform-provider-null-2.1.2.tar.gz) = a6e9b3765c258387ab158e08a99fdf795f561c0bcb463b1a0e83ab32a727750840e232631c2d7967d82d1ccc481cf8fa177d05f62c340fa7c4c6b8c0d23ac07f
+Size (terraform-provider-null-2.1.2.tar.gz) = 3748929 bytes
