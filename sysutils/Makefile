@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.881 2020/05/28 11:55:34 nia Exp $
+# $NetBSD: Makefile,v 1.882 2020/05/29 10:38:13 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -479,7 +479,6 @@ SUBDIR+=	py-dbus
 SUBDIR+=	py-diffoscope
 SUBDIR+=	py-euca2ools
 SUBDIR+=	py-filetype
-SUBDIR+=	py-gnome-menus
 SUBDIR+=	py-google-compute-engine
 SUBDIR+=	py-kazoo
 SUBDIR+=	py-magic
