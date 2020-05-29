@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/05/26 22:39:28 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/29 06:22:47 adam Exp $
 
 DISTNAME=	sshfp-1.2.2
 PKGREVISION=	1
@@ -14,10 +14,18 @@ DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-ipcalc-[0-9]*:../../net/py-ipcalc
 
-MANCOMPRESSED=	yes
-NO_BUILD=	yes
+NO_BUILD=		yes
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+REPLACE_PYTHON+=	dane
+REPLACE_PYTHON+=	sshfp
+
 PYTHON_VERSIONS_ACCEPTED=	27
-REPLACE_PYTHON=	dane sshfp
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/dane ${DESTDIR}${PREFIX}/bin/dane
+	${INSTALL_SCRIPT} ${WRKSRC}/sshfp ${DESTDIR}${PREFIX}/bin/sshfp
+	${INSTALL_MAN} ${WRKSRC}/dane.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/sshfp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
