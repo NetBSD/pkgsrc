@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/05/26 21:18:14 khorben Exp $
+$NetBSD: distinfo,v 1.5 2020/05/29 06:22:47 adam Exp $
 
 SHA1 (sshfp-1.2.2.tar.gz) = 090cc250a2ce93e8ddedb4ccdf38553c15f99d33
 RMD160 (sshfp-1.2.2.tar.gz) = 760ce696df3415e3fa162925b6290fa1119ce2bb
 SHA512 (sshfp-1.2.2.tar.gz) = b93f0b5027a66f314abcd3a83b4957c665e9be1db0a17e27a9ed1735ac505b653256a9b9842e77db8fa03620015ebf5c438dc9aab0fa7b0b51b6e2c6ea684368
 Size (sshfp-1.2.2.tar.gz) = 34690 bytes
-SHA1 (patch-aa) = 4cc77adf2f2e1f7f874ec66d79594167dbf45a4c
