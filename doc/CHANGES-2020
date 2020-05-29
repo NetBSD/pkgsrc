@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3227 2020/05/28 19:30:57 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3228 2020/05/29 06:36:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5126,3 +5126,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added archivers/quazip version 0.9 [ryoon 2020-05-28]
 	Updated graphics/libmypaint to 1.6.1 [ryoon 2020-05-28]
 	Updated audio/libao-sun to 1.2.2nb1 [nia 2020-05-28]
+	Updated net/terraform to 0.12.26 [adam 2020-05-29]
+	Updated net/terraform-provider-aws to 2.64.0 [adam 2020-05-29]
+	Added net/terraform-provider-null version 2.1.2 [adam 2020-05-29]
+	Added net/terraform-provider-kubernetes version 1.11.3 [adam 2020-05-29]
