@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/05/18 08:21:19 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/29 06:27:54 adam Exp $
 
-DISTNAME=	terraform-0.12.25
+DISTNAME=	terraform-0.12.26
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	${PKGBASE}
@@ -13,6 +13,8 @@ LICENSE=	mpl-2.0
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/hashicorp/${GITHUB_PROJECT}
+
+GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
 # Not actually sure these are used.
 USE_TOOLS+=	bash
