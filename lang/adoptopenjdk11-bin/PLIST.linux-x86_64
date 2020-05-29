@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.2 2020/04/16 15:03:42 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.3 2020/05/29 10:57:06 abs Exp $
 bin/adoptopenjdk11-bin-jar
 bin/adoptopenjdk11-bin-java
 bin/adoptopenjdk11-bin-javac
@@ -7,6 +7,7 @@ bin/adoptopenjdk11-bin-javah
 bin/adoptopenjdk11-bin-javap
 bin/adoptopenjdk11-bin-jcmd
 bin/adoptopenjdk11-bin-jhat
+bin/adoptopenjdk11-bin-jmap
 bin/adoptopenjdk11-bin-jps
 bin/adoptopenjdk11-bin-jstack
 bin/adoptopenjdk11-bin-keytool

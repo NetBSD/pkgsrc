@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/03/15 12:47:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/29 10:57:09 abs Exp $
 
 DISTNAME=	openjdk-13.0.2_linux-x64_bin
 PKGNAME=	${DISTNAME:S/_linux-x64_bin//:S/openjdk-/openjdk-bin-/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/
 
@@ -29,7 +30,7 @@ JAVA_NAME=		openjdk-bin
 JAVA_HOME=		${PREFIX}/java/${JAVA_NAME}
 INSTALLATION_DIRS+=	${JAVA_HOME}
 
-JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jps jstack \
+JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jmap jps jstack \
 		keytool orbd policytool rmid rmiregistry servertool tnameserv
 
 do-install:
