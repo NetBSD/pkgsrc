@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/05/22 22:05:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/29 06:29:03 adam Exp $
 
-DISTNAME=	terraform-provider-aws-2.63.0
+DISTNAME=	terraform-provider-aws-2.64.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=terraform-providers/}
 GITHUB_PROJECT=	${PKGBASE}
@@ -17,6 +17,8 @@ UNLIMIT_RESOURCES=	datasize virtualsize
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/terraform-providers/${GITHUB_PROJECT}
+
+GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/*.sh
