@@ -101,6 +101,7 @@ func (ck *PatchChecker) Check(pkg *Package) {
 func (ck *PatchChecker) checkUnifiedDiff(patchedFile Path) {
 	isConfigure := ck.isConfigure(patchedFile)
 
+	linesDiff := 0
 	hasHunks := false
 	for {
 		m := ck.llex.NextRegexp(rePatchUniHunk)
@@ -110,8 +111,26 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile Path) {
 
 		text := m[0]
 		hasHunks = true
+		linenoDel := toInt(m[1], 0)
 		linesToDel := toInt(m[2], 1)
+		linenoAdd := toInt(m[3], 0)
 		linesToAdd := toInt(m[4], 1)
+		if linenoDel > 0 && linenoAdd > 0 && linenoDel+linesDiff != linenoAdd {
+			line := ck.llex.PreviousLine()
+			line.Notef("The difference between the line numbers %d and %d should be %d, not %d.",
+				linenoDel, linenoAdd, linesDiff, linenoAdd-linenoDel)
+			line.Explain(
+				"This only happens when patches are edited manually.",
+				"",
+				"To fix this, either regenerate the line numbers by first running",
+				bmake("patch"),
+				"and then \"mkpatches\", or edit the line numbers by hand.",
+				"",
+				"While here, it's a good idea to make the patch apply really cleanly,",
+				"by ensuring that the output from the patch command does not contain",
+				"the word \"offset\", like in \"Hunk #11 succeeded at 2598 (offset 10 lines).")
+		}
+		linesDiff += linesToAdd - linesToDel
 
 		ck.checktextUniHunkCr()
 		ck.checktextCvsID(text)
