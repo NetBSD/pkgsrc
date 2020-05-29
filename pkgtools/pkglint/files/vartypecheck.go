@@ -1142,6 +1142,14 @@ func (cv *VartypeCheck) PrefixPathname() {
 		return
 	}
 
+	cv.MkLine.ForEachUsedText(cv.Value, VucRunTime, func(varUse *MkVarUse, time VucTime) {
+		varname := varUse.varname
+		if varname == "PKG_SYSCONFDIR" || varname == "VARBASE" {
+			cv.Errorf("%s must not be used in %s since it is not relative to PREFIX.",
+				varname, cv.Varname)
+		}
+	})
+
 	if m, manSubdir := match1(cv.Value, `^man/(.+)`); m {
 		from := "${PKGMANDIR}/" + manSubdir
 		fix := cv.Autofix()

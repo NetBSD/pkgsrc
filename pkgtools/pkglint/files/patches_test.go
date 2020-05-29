@@ -619,7 +619,7 @@ func (s *Suite) Test_PatchChecker_Check__add_hardcoded_usr_pkg(c *check.C) {
 func (s *Suite) Test_PatchChecker_checkUnifiedDiff__lines_at_end(c *check.C) {
 	t := s.Init(c)
 
-	lines := t.SetUpFileLines("patch-aa",
+	lines := t.NewLines("patch-aa",
 		CvsID,
 		"",
 		"Documentation",
@@ -636,6 +636,30 @@ func (s *Suite) Test_PatchChecker_checkUnifiedDiff__lines_at_end(c *check.C) {
 	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_PatchChecker_checkUnifiedDiff__line_number_mismatch(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("patch-aa",
+		CvsID,
+		"",
+		"Documentation",
+		"",
+		"--- old",
+		"+++ new",
+		"@@ -2,1 +1,1 @@",
+		"- old",
+		"+ new",
+		"@@ -5,1 +7,1 @@",
+		"- old",
+		"+ new")
+
+	CheckLinesPatch(lines, nil)
+
+	t.CheckOutputLines(
+		"NOTE: patch-aa:7: The difference between the line numbers 2 and 1 should be 0, not -1.",
+		"NOTE: patch-aa:10: The difference between the line numbers 5 and 7 should be 0, not 2.")
 }
 
 func (s *Suite) Test_PatchChecker_checkBeginDiff__multiple_patches_without_documentation(c *check.C) {
