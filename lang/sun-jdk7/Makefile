@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/09/19 18:19:09 abs Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/29 10:57:27 abs Exp $
 
 # Note: This must be kept in sync with the sun-jre7 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
@@ -6,7 +6,7 @@
 
 DISTNAME=	jdk-7u${UPDATE_NUMBER}-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk7-7.0.${UPDATE_NUMBER}
-PKGREVISION=	2
+PKGREVISION=	3
 MASTER_SITES=	# empty
 
 LICENSE=	oracle-binary-code-license
@@ -17,7 +17,7 @@ DEPENDS+=	${PKGNAME_NOREV:S/jdk/jre/}*:../../lang/sun-jre7
 
 WRKSRC=		${WRKDIR}/jdk1.7.0_${UPDATE_NUMBER}
 JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
-		javac javadoc javah javap jcmd jdb jhat jps rmic serialver
+		javac javadoc javah javap jcmd jdb jhat jmap jps rmic serialver
 
 MAKE_JOBS_SAFE=	no
 
