@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3229 2020/05/29 08:59:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3230 2020/05/29 10:40:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5132,3 +5132,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/terraform-provider-kubernetes version 1.11.3 [adam 2020-05-29]
 	Updated mail/py-email_validator to 1.1.1 [adam 2020-05-29]
 	Updated devel/py-faker to 4.1.0 [adam 2020-05-29]
+	Removed sysutils/py-gnome-menus [nia 2020-05-29]
