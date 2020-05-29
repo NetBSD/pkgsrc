@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/04/30 12:17:33 nikita Exp $
+$NetBSD: distinfo,v 1.2 2020/05/29 06:04:32 adam Exp $
 
 SHA1 (impacket-0.9.21.tar.gz) = 8f722458bf0a19dfdd5c904224927833437f949c
 RMD160 (impacket-0.9.21.tar.gz) = a0005dd4c95f586f819a795495d1df9028784df7
 SHA512 (impacket-0.9.21.tar.gz) = 594bae33f917f0704e7b28645b2f201d6ac781b30c99bd3710711961c15dbf3a51e010b61156779fd85935cd5818e0facf9a662bd289b04e4b91761e5ebd1edd
 Size (impacket-0.9.21.tar.gz) = 1270110 bytes
+SHA1 (patch-setup.py) = 8f5315c3f28739dad0fd258f902ea6d91c20d945
