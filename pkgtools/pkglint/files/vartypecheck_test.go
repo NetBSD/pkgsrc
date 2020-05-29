@@ -1620,6 +1620,16 @@ func (s *Suite) Test_VartypeCheck_PrefixPathname(c *check.C) {
 			"Please use \"${PKGMANDIR}/man1\" instead of \"man/man1\".",
 		"ERROR: filename.mk:3: The pathname \"/absolute\" in PKGMANDIR "+
 			"must be relative to ${PREFIX}.")
+
+	vt.Varname("INSTALLATION_DIRS")
+	vt.Values(
+		"bin ${PKG_SYSCONFDIR} ${VARBASE}")
+
+	vt.Output(
+		"ERROR: filename.mk:11: PKG_SYSCONFDIR must not be used in INSTALLATION_DIRS "+
+			"since it is not relative to PREFIX.",
+		"ERROR: filename.mk:11: VARBASE must not be used in INSTALLATION_DIRS "+
+			"since it is not relative to PREFIX.")
 }
 
 func (s *Suite) Test_VartypeCheck_PythonDependency(c *check.C) {

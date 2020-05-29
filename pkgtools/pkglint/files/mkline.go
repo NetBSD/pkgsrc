@@ -821,57 +821,54 @@ func (mkline *MkLine) VariableNeedsQuoting(mklines *MkLines, varuse *MkVarUse, v
 
 // ForEachUsed calls the action for each variable that is used in the line.
 func (mkline *MkLine) ForEachUsed(action func(varUse *MkVarUse, time VucTime)) {
-
-	var searchIn func(text string, time VucTime) // mutually recursive with searchInVarUse
-
-	searchInVarUse := func(varuse *MkVarUse, time VucTime) {
-		varname := varuse.varname
-		if !varuse.IsExpression() {
-			action(varuse, time)
-		}
-		searchIn(varname, time)
-		for _, mod := range varuse.modifiers {
-			searchIn(mod.Text, time)
-		}
-	}
-
-	searchIn = func(text string, time VucTime) {
-		if !contains(text, "$") {
-			return
-		}
-
-		tokens, _ := NewMkLexer(text, nil).MkTokens()
-		for _, token := range tokens {
-			if token.Varuse != nil {
-				searchInVarUse(token.Varuse, time)
-			}
-		}
-	}
-
 	switch {
 
 	case mkline.IsVarassign():
-		searchIn(mkline.Varname(), VucLoadTime)
-		searchIn(mkline.Value(), mkline.Op().Time())
+		mkline.ForEachUsedText(mkline.Varname(), VucLoadTime, action)
+		mkline.ForEachUsedText(mkline.Value(), mkline.Op().Time(), action)
 
 	case mkline.IsDirective() && mkline.Directive() == "for":
-		searchIn(mkline.Args(), VucLoadTime)
+		mkline.ForEachUsedText(mkline.Args(), VucLoadTime, action)
 
 	case mkline.IsDirective() && (mkline.Directive() == "if" || mkline.Directive() == "elif") && mkline.Cond() != nil:
 		mkline.Cond().Walk(&MkCondCallback{
 			VarUse: func(varuse *MkVarUse) {
-				searchInVarUse(varuse, VucLoadTime)
+				mkline.ForEachUsedVarUse(varuse, VucLoadTime, action)
 			}})
 
 	case mkline.IsShellCommand():
-		searchIn(mkline.ShellCommand(), VucRunTime)
+		mkline.ForEachUsedText(mkline.ShellCommand(), VucRunTime, action)
 
 	case mkline.IsDependency():
-		searchIn(mkline.Targets(), VucLoadTime)
-		searchIn(mkline.Sources(), VucLoadTime)
+		mkline.ForEachUsedText(mkline.Targets(), VucLoadTime, action)
+		mkline.ForEachUsedText(mkline.Sources(), VucLoadTime, action)
 
 	case mkline.IsInclude():
-		searchIn(mkline.IncludedFile().String(), VucLoadTime)
+		mkline.ForEachUsedText(mkline.IncludedFile().String(), VucLoadTime, action)
+	}
+}
+
+func (mkline *MkLine) ForEachUsedText(text string, time VucTime, action func(varUse *MkVarUse, time VucTime)) {
+	if !contains(text, "$") {
+		return
+	}
+
+	tokens, _ := NewMkLexer(text, nil).MkTokens()
+	for _, token := range tokens {
+		if token.Varuse != nil {
+			mkline.ForEachUsedVarUse(token.Varuse, time, action)
+		}
+	}
+}
+
+func (mkline *MkLine) ForEachUsedVarUse(varuse *MkVarUse, time VucTime, action func(varUse *MkVarUse, time VucTime)) {
+	varname := varuse.varname
+	if !varuse.IsExpression() {
+		action(varuse, time)
+	}
+	mkline.ForEachUsedText(varname, time, action)
+	for _, mod := range varuse.modifiers {
+		mkline.ForEachUsedText(mod.Text, time, action)
 	}
 }
 
