@@ -1,35 +1,25 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2019/11/27 22:25:21 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2020/05/30 06:09:47 adam Exp $
 
 Make so version match symlink versions.
 Remove -Werror=conversion.
-Do not build examples.
 
---- CMakeLists.txt.orig	2019-11-12 07:16:54.000000000 +0000
+--- CMakeLists.txt.orig	2020-05-29 13:50:26.000000000 +0000
 +++ CMakeLists.txt
-@@ -74,7 +74,7 @@ project(JSONCPP
+@@ -71,7 +71,7 @@ project(JSONCPP
          LANGUAGES CXX)
  
  message(STATUS "JsonCpp Version: ${JSONCPP_VERSION_MAJOR}.${JSONCPP_VERSION_MINOR}.${JSONCPP_VERSION_PATCH}")
--set( JSONCPP_SOVERSION 22 )
-+set( JSONCPP_SOVERSION ${JSONCPP_VERSION_MAJOR} )
+-set(JSONCPP_SOVERSION 24)
++set(JSONCPP_SOVERSION ${JSONCPP_VERSION_MAJOR})
  
  option(JSONCPP_WITH_TESTS "Compile and (for jsoncpp_check) run JsonCpp test executables" ON)
  option(JSONCPP_WITH_POST_BUILD_UNITTEST "Automatically run unit-tests as a post build step" ON)
-@@ -141,9 +141,9 @@ endif()
+@@ -120,7 +120,7 @@ endif()
+ 
  if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
      # using regular Clang or AppleClang
-     if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.12.0)
--      add_compile_options(-Wall -Wconversion -Wshadow -Werror=conversion -Werror=sign-compare)
-+      add_compile_options(-Wall -Wconversion -Wshadow -Werror=sign-compare)
-     else()
--      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wconversion -Wshadow -Werror=conversion -Werror=sign-compare")
-+      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wconversion -Wshadow -Werror=sign-compare")
-     endif()
+-    add_compile_options(-Wall -Wconversion -Wshadow -Werror=conversion -Werror=sign-compare)
++    add_compile_options(-Wall -Wconversion -Wshadow -Werror=sign-compare)
  elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
      # using GCC
-@@ -227,5 +227,3 @@ add_subdirectory( src )
- #install the includes
- add_subdirectory( include )
- 
--#install the example
--add_subdirectory( example )
+     add_compile_options(-Wall -Wconversion -Wshadow -Wextra)
