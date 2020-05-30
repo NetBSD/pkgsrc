@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3260 2020/05/30 20:36:33 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3261 2020/05/30 21:07:11 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5163,3 +5163,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20200529 [leot 2020-05-30]
 	Updated graphics/xfig to 3.2.7b [he 2020-05-30]
 	Updated emulators/libretro-mame2010 to 20200525 [nia 2020-05-30]
+	Updated www/p5-Net-Curl to 0.44 [dogcow 2020-05-30]
