@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/08/11 15:42:09 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/05/30 15:56:22 nia Exp $
 
-SHA1 (libretro-fuse-20180419-fa6ecc43754be89ec5a156877f04adb8f9cc7a09.tar.gz) = 15793fd2a22b0d5a119ff443a46e7def073eb96a
-RMD160 (libretro-fuse-20180419-fa6ecc43754be89ec5a156877f04adb8f9cc7a09.tar.gz) = 97f43f166bc9da6a7de57bc463098352e0353ddc
-SHA512 (libretro-fuse-20180419-fa6ecc43754be89ec5a156877f04adb8f9cc7a09.tar.gz) = 096bb8fe1fd8e9cfbc23dc9b0939fc5d7aee060ac9c52b5a3d3c6a75bf1f4d006ede1dbafd97e481e061bd2ec6d158edef66250f6a20fffec8535dcb9d8e11ed
-Size (libretro-fuse-20180419-fa6ecc43754be89ec5a156877f04adb8f9cc7a09.tar.gz) = 4320074 bytes
+SHA1 (libretro-fuse-20200506-c2f03e6f08f3e2a03d7888fe756e0beb7979f983.tar.gz) = 106a37f95db50ea16407abab5903abab9bd86edf
+RMD160 (libretro-fuse-20200506-c2f03e6f08f3e2a03d7888fe756e0beb7979f983.tar.gz) = ac392a6bef7c32cd467c77dc6331c95845f108ed
+SHA512 (libretro-fuse-20200506-c2f03e6f08f3e2a03d7888fe756e0beb7979f983.tar.gz) = 60645bd0ac6e85f833cbce2fe4932379f334aa915227bf3126feba227206b94bcb300b647a502844880b5cf91e6176535004b846c806c4a937112150c1ea4a04
+Size (libretro-fuse-20200506-c2f03e6f08f3e2a03d7888fe756e0beb7979f983.tar.gz) = 4319376 bytes
 SHA1 (patch-Makefile.libretro) = 5fa69278a3caccd2228d33287262e53f8a6472d3
-SHA1 (patch-fuse_configure) = dd010a208542746ddba2365e5fb3c26dd4be5c99
+SHA1 (patch-build_Makefile.common) = 23ce82ac005ba8a125f24f7d3b99ee56b4143893
