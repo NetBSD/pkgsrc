@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/04/30 07:42:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.112 2020/05/30 08:45:58 ryoon Exp $
 
 DISTNAME=	nsd-4.3.1
 CATEGORIES=	net
@@ -22,8 +22,8 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 .if ${OPSYS} == "NetBSD"
-# For reallocarray(3) on NetBSD 9
-CPPFLAGS+=	-D_OPENBSD_SOURCE
+# Some _NETBSD_SOURCE definitions are required to build.
+CPPFLAGS+=	-D_NETBSD_SOURCE
 .endif
 
 GNU_CONFIGURE=	yes
