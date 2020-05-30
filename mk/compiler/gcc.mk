@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.210 2020/03/30 09:39:24 nia Exp $
+# $NetBSD: gcc.mk,v 1.211 2020/05/30 22:45:36 sjmulder Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -976,7 +976,7 @@ CC_VERSION=		${_GCC_PKG}
 .endif
 
 # The user can choose the level of stack smashing protection.
-.if !empty(CC_VERSION:Mgcc-[4-9]*)
+.if empty(CC_VERSION:Mgcc-[1-3].*)
 .  if ${PKGSRC_USE_SSP} == "all"
 _SSP_CFLAGS=		-fstack-protector-all
 .  elif ${PKGSRC_USE_SSP} == "strong"
