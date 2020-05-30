@@ -1,49 +1,31 @@
-# $NetBSD: options.mk,v 1.13 2020/01/08 23:40:42 nia Exp $
+# $NetBSD: options.mk,v 1.14 2020/05/30 14:26:52 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
-PKG_SUPPORTED_OPTIONS+=		libdrm sdl2 sixel qt5 x11 caca
-PKG_SUPPORTED_OPTIONS+=		ffmpeg freetype mbedtls
 PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
+PKG_SUPPORTED_OPTIONS+=		debug caca ffmpeg freetype sixel qt5
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} == "Linux"
-PKG_SUPPORTED_OPTIONS+=		udev
-.endif
-
-PKG_SUGGESTED_OPTIONS+=		sdl2 freetype x11
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa libdrm pulseaudio mbedtls udev
-PKG_SUGGESTED_OPTIONS.NetBSD+=	mbedtls
-
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
-PKG_OPTIONS_GROUP.gl+=		opengl
 
-.if !empty(MACHINE_ARCH:M*arm*)
-CONFIGURE_ARGS+=		--enable-floathard
+.if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:M*arm*)
 PKG_OPTIONS_GROUP.gl+=		rpi
-PKG_SUPPORTED_OPTIONS+=		simd
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*)
-PKG_SUGGESTED_OPTIONS+=		rpi
+.if ${OPSYS} != "Darwin"
+PKG_OPTIONS_GROUP.gl+=		opengl
+PKG_SUGGESTED_OPTIONS=		freetype opengl
 .else
-PKG_SUGGESTED_OPTIONS+=		opengl
+PKG_SUGGESTED_OPTIONS=		freetype
 .endif
+
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(MACHINE_ARCH:M*arm*)
-.  if !empty(PKG_OPTIONS:Msimd)
-CONFIGURE_ARGS+=	--enable-neon
-.  else
-CONFIGURE_ARGS+=	--disable-neon
-.  endif
-.endif
-
-.if !empty(PKG_OPTIONS:Mlibdrm)
-CONFIGURE_ARGS+=	--enable-plain_drm
-.include "../../x11/libdrm/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Msixel)
@@ -53,34 +35,14 @@ CONFIGURE_ARGS+=	--enable-sixel
 CONFIGURE_ARGS+=	--disable-sixel
 .endif
 
-.if !empty(PKG_OPTIONS:Mmbedtls)
-CONFIGURE_ARGS+=	--enable-ssl
-.include "../../security/mbedtls/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-ssl
-.endif
-
-.if !empty(PKG_OPTIONS:Mx11)
-CONFIGURE_ARGS+=	--enable-x11
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXv/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/libxkbcommon/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-x11
-.endif
-
 #
 # Graphics acceleration options
 #
 
 # Use standard Mesa OpenGL
 .if !empty(PKG_OPTIONS:Mopengl)
-.include "../../graphics/MesaLib/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-opengl
+.include "../../graphics/MesaLib/buildlink3.mk"
 
 # Enable use of the Raspberry Pi GPU driver
 .elif !empty(PKG_OPTIONS:Mrpi)
@@ -94,29 +56,12 @@ SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 CONFIGURE_ARGS+=	--enable-opengles
 
 # Disable any graphics acceleration library
-.else
+.elif ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--disable-egl
 CONFIGURE_ARGS+=	--disable-opengl
+CONFIGURE_ARGS+=	--disable-opengl_core
 CONFIGURE_ARGS+=	--disable-vulkan
 CONFIGURE_ARGS+=	--disable-vulkan_display
-CONFIGURE_ARGS+=	--disable-wayland
-.endif
-
-.if !empty(PKG_OPTIONS:Mudev)
-# To support keyboard callback interface in udev, the libxkbcommon package
-# (version 0.3 and up) is required. It is used to translate raw evdev events
-# to printable characters. It does not depend on Xorg, but it depends on X11
-# keyboard layout files being installed.
-.include "../../x11/libxkbcommon/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-udev
-.endif
-
-.if !empty(PKG_OPTIONS:Msdl2)
-CONFIGURE_ARGS+=	--enable-sdl2
-.include "../../devel/SDL2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-sdl2
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
