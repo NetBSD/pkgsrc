@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3241 2020/05/30 14:33:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3242 2020/05/30 14:38:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5146,3 +5146,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-fceumm to 20200520 [nia 2020-05-30]
 	Updated emulators/libretro-picodrive to 20200527 [nia 2020-05-30]
 	Updated emulators/libretro-gambatte to 20200207 [nia 2020-05-30]
+	Updated emulators/libretro-freeintv to 20200421 [nia 2020-05-30]
