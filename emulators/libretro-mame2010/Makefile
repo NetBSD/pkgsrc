@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/05/26 09:45:15 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/30 20:36:15 nia Exp $
 
-DISTNAME=	libretro-mame2010-20180417
+DISTNAME=	libretro-mame2010-20200525
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	mame2010-libretro
-GITHUB_TAG=	70732f9137f6bb2bde4014746ea8bc613173dd1e
+GITHUB_TAG=	bef96188e7276422eab81b44b41361896885bae5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/mame_2010/
@@ -31,13 +31,15 @@ CFLAGS+=	-DMSB_FIRST
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Bitrig"
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 CFLAGS+=	-DSDLMAME_BSD
 .endif
 
 .if ${OPSYS} != "Linux"
 CFLAGS+=	-DNO_AFFINITY_NP
 .endif
+
+CFLAGS+=	-Wno-narrowing
 
 .if ${MACHINE_ARCH} != "x86_64" && ${MACHINE_ARCH} != "i386"
 MAKE_FLAGS+=	FORCE_DRC_C_BACKEND=1
