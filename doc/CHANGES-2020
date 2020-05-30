@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3235 2020/05/30 06:10:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3236 2020/05/30 12:59:29 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5139,3 +5139,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/nnn to 3.2 [sjmulder 2020-05-30]
 	Updated textproc/jsoncpp to 1.9.3 [adam 2020-05-30]
 	Updated multimedia/x265 to 3.4 [adam 2020-05-30]
+	Updated security/mozilla-rootcerts to 1.0.20200529 [tnn 2020-05-30]
+	Updated security/mozilla-rootcerts-openssl to 2.4 [tnn 2020-05-30]
