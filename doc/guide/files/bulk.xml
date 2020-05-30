@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.28 2020/05/22 18:50:08 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.29 2020/05/30 08:22:59 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -335,7 +335,7 @@ WARNING_MSG=            ${FAIL_MSG} "(was warning)"
 <para>(There are many more classes of warnings in pkgsrc, and most of
 them can be redefined with a simple definition like above.</para>
 
-<para>If a package suggest to add <varname>USE_TOOLS+=perl</varname> to
+<para>If a package suggests to add <varname>USE_TOOLS+=perl</varname> to
 the package Makefile, research whether the package actually needs Perl.
 If it does, add <varname>USE_TOOLS+=perl</varname> to the package
 Makefile, and if it doesn't, add
