@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 03:29:34 agc Exp $
+$NetBSD: distinfo,v 1.14 2020/05/30 20:43:40 joerg Exp $
 
 SHA1 (tclcl-src-1.20.tar.gz) = 45d38a1dea2ed9bfd529776b16f5a78d584f7549
 RMD160 (tclcl-src-1.20.tar.gz) = eea14ea193669d60c8e7fab23bf2096d9feaae8a
@@ -11,4 +11,4 @@ SHA1 (patch-ab) = 8df79a3911c55aa21eaa9d4a2cbb7f82dc9870a1
 SHA1 (patch-ac) = dbbd4529799e015ffaafff449fb6140aa8f9d663
 SHA1 (patch-rate-variable.cc) = c07ee30701b82de146c49f8300644aee73e45b09
 SHA1 (patch-rate-variable.h) = c316718a950a8ac6a8bcc304dc25b48e0baad537
-SHA1 (patch-tclcl.h) = ddb7884a0106ef1c2796743ffbef13f50e5dd992
+SHA1 (patch-tclcl.h) = bf0902bc62066fc8981e2bbfa6e09f8f144e4708
