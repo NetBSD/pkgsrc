@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.1 2019/11/17 16:19:57 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/05/30 20:47:08 joerg Exp $
 
 SHA1 (openrct2-0.2.4.tar.gz) = 625b106d6b1eeefd5e979bf5f92b80e19e47739b
 RMD160 (openrct2-0.2.4.tar.gz) = f49860012f1b7ef39452d87821ca178045e768bb
 SHA512 (openrct2-0.2.4.tar.gz) = 956044b5fa5e55256a33f352d2d1e8a4eb6738b98dc9894807b3628b5c5c08f3229c952fbf8b33ad867771f88c6d7e17ad1a8a4e050f8f269a6152d013afce03
 Size (openrct2-0.2.4.tar.gz) = 6805976 bytes
 SHA1 (patch-src_openrct2-ui_UiContext.Linux.cpp) = 36bd777ed772a0f18d76f699214223cc4011da6c
+SHA1 (patch-src_openrct2_CMakeLists.txt) = a0553c147661396405a607f5ef62f10fc9b55f6c
 SHA1 (patch-src_openrct2_Version.h) = 5402d56aaedcac51d333d95c49f88472d9de7e91
 SHA1 (patch-src_openrct2_core_FileStream.hpp) = b1b69a0cb86207fd0c9d25beda3a063ee232b4fe
 SHA1 (patch-src_openrct2_platform_Linux.cpp) = 9562e6a0314a1c37192e8715bac39e1d9fd7faba
 SHA1 (patch-src_openrct2_platform_Platform.Linux.cpp) = 426b2bcbb6bf59d5093cbc27ef3f638a054cf1e8
 SHA1 (patch-src_openrct2_platform_Platform2.h) = 36da0bf860735b771837a949e67bcfe95380c684
 SHA1 (patch-src_openrct2_platform_Posix.cpp) = 103299bf299ccc347154ebad5d8ca1b1f26a34e3
+SHA1 (patch-src_openrct2_util_Util.cpp) = 4086d3a99c24581f82f950ad87b7a0e5f94b9e40
