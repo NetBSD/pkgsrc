@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/04/29 09:29:38 sjmulder Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/30 03:06:03 sjmulder Exp $
 
-DISTNAME=	nnn-3.1
+DISTNAME=	nnn-3.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,6 +29,20 @@ READLINE_DEFAULT=	readline
 # clock_gettime() on older glibc (eg RHEL 6). See:
 # https://github.com/jarun/nnn/issues/453
 MAKE_ENV.Linux+=	LDLIBS=-lrt
+
+.include "../../mk/compiler.mk"
+
+# nnn uses -std=c11 for `restrict` but c99 has it too, so use that on
+# old GCC versions that don't support c11.
+# https://github.com/jarun/nnn/issues/605
+.if !empty(CC_VERSION:Mgcc-[123].*) || \
+    !empty(CC_VERSION:Mgcc-4.[0123456].*)
+SUBST_CLASSES+=		c11
+SUBST_MESSAGE.c11=	Use c99 on old GCC instead of c11
+SUBST_STAGE.c11=	pre-configure
+SUBST_FILES.c11=	Makefile
+SUBST_SED.c11=		-e 's/-std=c11/-std=c99/'
+.endif
 
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	CFLAGS_OPTIMIZATION=
