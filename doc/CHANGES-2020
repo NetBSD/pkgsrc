@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3257 2020/05/30 16:40:46 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3258 2020/05/30 17:58:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5160,3 +5160,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-vecx to 20200517 [nia 2020-05-30]
 	Updated emulators/libretro-cap32 to 20200508 [nia 2020-05-30]
 	Updated emulators/libretro-beetle-ngp to 20200518 [nia 2020-05-30]
+	Updated net/youtube-dl to 20200529 [leot 2020-05-30]
