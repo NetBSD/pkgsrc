@@ -1,17 +1,18 @@
-$NetBSD: patch-src_emu_state.h,v 1.1 2020/05/14 19:35:59 joerg Exp $
+$NetBSD: patch-src_emu_state.h,v 1.2 2020/05/30 20:36:15 nia Exp $
 
---- src/emu/state.h.orig	2020-05-13 15:02:59.769613659 +0000
+--- src/emu/state.h.orig	2020-05-25 02:01:22.000000000 +0000
 +++ src/emu/state.h
-@@ -18,16 +18,8 @@
+@@ -18,17 +18,8 @@
  #ifndef __STATE_H__
  #define __STATE_H__
  
--#if defined(__MACH__) && !defined(IOS)
+-#if (defined(__MACH__) && !defined(IOS)) || defined(ANDROID)
  #include <type_traits>
  #define DEF_NAMESPACE std
 -#elif defined(IOS)
--#include <tr1/type_traits>
+-#include <type_traits>
 -#define DEF_NAMESPACE std::tr1
+-#define DEF_NAMESPACE std
 -#elif defined(__GNUC__)
 -#include <tr1/type_traits>
 -#define DEF_NAMESPACE std::tr1
