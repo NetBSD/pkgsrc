@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/05/22 10:55:44 adam Exp $
+# $NetBSD: Makefile,v 1.34 2020/05/30 08:14:13 rillig Exp $
 
 DISTNAME=	ecore-1.7.10
 PKGREVISION=	2
@@ -15,9 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
-CONFIGURE_ARGS+=	--disable-ecore-directfb \
-			--enable-ecore-desktop \
-			--disable-ecore-evas-sdl
+CONFIGURE_ARGS+=	--disable-ecore-directfb
 
 # Explicitly disable epoll/inotify on illumos, provided for Linux compat only.
 CONFIGURE_ARGS.SunOS+=	--disable-epoll
