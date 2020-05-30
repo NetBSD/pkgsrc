@@ -1,40 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:12 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/30 14:52:27 nia Exp $
 
-DISTNAME=	libretro-beetle-pce-fast-20180720
+DISTNAME=	libretro-beetle-pce-fast-20200523
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-pce-fast-libretro
-GITHUB_TAG=	6dfaf04cf2085ab9e5bb6ffac75070816cb4ff52
+GITHUB_TAG=	17ba58b4695970dad499de04a3b81777ff47c9d9
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/beetle_pce_fast/
 COMMENT=	Libretro core based on the Mednafen PC Engine emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
+LIBRETRO_CORE=	mednafen_pce_fast
 
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+.include "../../emulators/retroarch/core.mk"
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-.include "../../mk/endian.mk"
-
-.if ${MACHINE_ENDIAN} == "big"
-CFLAGS+=	-DMSB_FIRST
-CFLAGS+=	-DBYTE_ORDER=BIG_ENDIAN
-.endif
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/mednafen_pce_fast_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/mednafen_pce_fast_libretro.so
 
 .include "../../mk/bsd.pkg.mk"
