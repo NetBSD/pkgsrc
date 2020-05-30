@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2019/11/27 22:25:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/30 06:09:47 adam Exp $
 
-DISTNAME=	jsoncpp-1.9.2
+DISTNAME=	jsoncpp-1.9.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-source-parsers/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/open-source-parsers/jsoncpp
