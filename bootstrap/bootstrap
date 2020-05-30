@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.280 2020/05/25 07:32:59 jperkin Exp $
+# $NetBSD: bootstrap,v 1.281 2020/05/30 21:36:15 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -869,7 +869,7 @@ SunOS)
 	idprog="/usr/xpg4/bin/id"
 	groupsprog="${idprog} -gn"
 	whoamiprog="${idprog} -un"
-	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
+	machine_arch=`isainfo -k`
 	check_compiler=yes
 	check_ssp=yes
 	;;
@@ -915,7 +915,9 @@ powerpc/*)	abi=32	machine_arch=powerpc	;;
 powerpc64/32)	abi=32	machine_arch=powerpc	;;
 powerpc64/*)	abi=64	machine_arch=powerpc64	;;
 powerpc64le/*)	abi=64	machine_arch=powerpc64le;;
-# "sparc" can support 64-bit, e.g. SunOS, defaults to 32-bit.
+# sparc/sparcv9 support 32-bit/64-bit, default to native.
+sparcv9/32)	abi=32	machine_arch=sparc	;;
+sparcv9/*)	abi=64	machine_arch=sparc64	;;
 sparc/64)	abi=64	machine_arch=sparc64	;;
 sparc/*)	abi=32	machine_arch=sparc	;;
 # x86_64 supports 32-bit/64-bit, defaults to 64-bit.
