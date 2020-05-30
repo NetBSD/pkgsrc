@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/04/12 08:28:33 adam Exp $
+# $NetBSD: Makefile,v 1.56 2020/05/30 20:48:13 joerg Exp $
 
 DISTNAME=	OpenGrok-0.12.1.5
 PKGNAME=	${DISTNAME:tl:S/-rc/rc/}
@@ -47,7 +47,7 @@ INSTALLATION_DIRS+=	share/opengrok/bin \
 			share/opengrok/var/opengrok
 
 do-build:
-	cd ${WRKSRC} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		CLASSPATH=${PREFIX}/lib/java/JFlex.jar ${PREFIX}/bin/ant
 
 do-install:
