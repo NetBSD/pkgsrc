@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/12/03 02:17:18 manu Exp $
+$NetBSD: distinfo,v 1.2 2020/05/30 21:04:25 dogcow Exp $
 
-SHA1 (Net-Curl-0.39.tar.gz) = 95e210fec3622d462bb6b56b9196ee18b1d1b397
-RMD160 (Net-Curl-0.39.tar.gz) = 43161423875d8747658bfb0cb173e27a8f2741f3
-SHA512 (Net-Curl-0.39.tar.gz) = 2d9a3d6c593e8ac82656350e2735fe2ffac549979bca2d78b3fa4eb5445b2d1435398a594d1a0adacc93b9bfdff1394ba70edfd36f5070d3b93b18580010ce97
-Size (Net-Curl-0.39.tar.gz) = 102420 bytes
+SHA1 (Net-Curl-0.44.tar.gz) = ee33eaac66f807d9977e204e0af57f203ac6d49a
+RMD160 (Net-Curl-0.44.tar.gz) = 9e3c2d9a6e50028f273f6bd1fc5b36d1ad1f7825
+SHA512 (Net-Curl-0.44.tar.gz) = 7e0ee20686227b1bd6c07d4151cfee501d948cc613cd0f8d9a33ad2736e5e0beaf357e19d8235f1d13f8a43148dc429525b0ff1551ba72f8ddc2b8c083d8d2d8
+Size (Net-Curl-0.44.tar.gz) = 104995 bytes
