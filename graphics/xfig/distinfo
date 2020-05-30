@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.30 2017/10/04 11:58:45 wiz Exp $
+$NetBSD: distinfo,v 1.31 2020/05/30 18:11:22 he Exp $
 
-SHA1 (xfig-3.2.6a.tar.xz) = 6413bd1884b6bcb8ea8e53a2511856334b30bb5f
-RMD160 (xfig-3.2.6a.tar.xz) = 740793039ec8a6c14eca92f70f2f3096c31e4183
-SHA512 (xfig-3.2.6a.tar.xz) = 8d6952301cab297f87041ca645c316863c4ee454ba6318ae94b2493ca9dfeda6b0240a038001f82c390d1a772c4b5e3c43c9414ea150fd18adb8780a608d8cd0
-Size (xfig-3.2.6a.tar.xz) = 5053800 bytes
-SHA1 (patch-src_e__chop.c) = fce714b4f597cc7f15125f11df73cdb2e8a1abd2
-SHA1 (patch-src_w__intersect.c) = 546d46caf19feeaaa754400c5f3278dfd8abb368
-SHA1 (patch-src_w__keyboard.c) = 9ff6b743a7f38593be507ef41361626b0892cf05
-SHA1 (patch-src_w__snap.c) = 6c11b3de454aeeb2c96f940f8a6bb5185308fe22
+SHA1 (xfig-3.2.7b.tar.xz) = c8e4426194b8860b5d5e568eb2a94a790ad62f72
+RMD160 (xfig-3.2.7b.tar.xz) = 0e9096c7653141e061f7329d9efc90668f337c21
+SHA512 (xfig-3.2.7b.tar.xz) = f3396ebf8a5961909e58b05b60117fd7bbc8c24fabbd47f108eaea9586f4180af572faffe077b1a5dcbf669ebd69b1c2791f302c126dea62a44aa1592de66f73
+Size (xfig-3.2.7b.tar.xz) = 5059984 bytes
