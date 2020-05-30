@@ -1,45 +1,37 @@
-# $NetBSD: Makefile,v 1.10 2020/05/26 09:45:15 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/30 14:49:00 nia Exp $
 
-DISTNAME=	libretro-pcsx-rearmed-0.22
+DISTNAME=	libretro-pcsx-rearmed-20200526
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=notaz/}
 GITHUB_PROJECT=	pcsx_rearmed
-GITHUB_TAG=	r22
+GITHUB_TAG=	7973b25fe929f92e146a854ecaf4f3cea5b4ffb8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://notaz.gp2x.de/pcsx_rearmed.php
+HOMEPAGE=	https://docs.libretro.com/library/pcsx_rearmed/
 COMMENT=	Libretro core based on the PCSX ReARMed emulator
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.libretro
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-BUILDLINK_TRANSFORM+=	rm:-ldl
+MAKE_FLAGS+=	WANT_ZLIB=0 # disable vendored zlib
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_ARCH:M*arm*hf)
-PCSX_REARMED_PLATFORM=	${MACHINE_ARCH}-hardfloat
-.else
-PCSX_REARMED_PLATFORM=	unix
+.if ${MACHINE_ARCH} == "earmv7hf"
+MAKE_FLAGS+=	ARCH=arm
+MAKE_FLAGS+=	DYNAREC=ari64
+MAKE_FLAGS+=	HAVE_NEON=1
+MAKE_FLAGS+=	BUILTIN_GPU=neon
+.elif !empty(MACHINE_ARCH:M*arm*)
+MAKE_FLAGS+=	ARCH=arm
+MAKE_FLAGS+=	DYNAREC=ari64
+MAKE_FLAGS+=	HAVE_NEON=0
+MAKE_FLAGS+=	BUILTIN_GPU=peops
 .endif
 
-MAKE_ENV+=	platform="${PCSX_REARMED_PLATFORM}"
+LIBRETRO_CORE=	pcsx_rearmed
 
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/pcsx_rearmed_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/pcsx_rearmed_libretro.so
+.include "../../emulators/retroarch/core.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
