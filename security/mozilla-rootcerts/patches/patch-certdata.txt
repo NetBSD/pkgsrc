@@ -1,12 +1,12 @@
-$NetBSD: patch-certdata.txt,v 1.1 2020/05/30 12:55:46 tnn Exp $
+$NetBSD: patch-certdata.txt,v 1.2 2020/05/30 22:39:08 tnn Exp $
 
 Delete the following expired certificates:
 C = SE, O = AddTrust AB, OU = AddTrust TTP Network, CN = AddTrust Class 1 CA Root
 C = SE, O = AddTrust AB, OU = AddTrust External TTP Network, CN = AddTrust External CA Root
 C = NL, O = Staat der Nederlanden, CN = Staat der Nederlanden Root CA - G2
 
---- certdata-20200529.txt.orig	2020-05-30 12:42:07.645376642 +0000
-+++ certdata-20200529.txt
+--- certdata.txt.orig	2020-05-30 12:42:07.645376642 +0000
++++ certdata.txt
 @@ -1251,305 +1251,6 @@ CKA_TRUST_CODE_SIGNING CK_TRUST CKT_NSS_
  CKA_TRUST_STEP_UP_APPROVED CK_BBOOL CK_FALSE
  
