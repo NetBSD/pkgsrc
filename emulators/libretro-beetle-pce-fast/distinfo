@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/08/10 23:16:12 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/05/30 14:52:27 nia Exp $
 
-SHA1 (libretro-beetle-pce-fast-20180720-6dfaf04cf2085ab9e5bb6ffac75070816cb4ff52.tar.gz) = 79aff7c35fc8e70b8fe5f3280828a679e9a8bc9d
-RMD160 (libretro-beetle-pce-fast-20180720-6dfaf04cf2085ab9e5bb6ffac75070816cb4ff52.tar.gz) = 3189b5a86e19cf35c6682b7bfa068608646e526d
-SHA512 (libretro-beetle-pce-fast-20180720-6dfaf04cf2085ab9e5bb6ffac75070816cb4ff52.tar.gz) = 3d904688d8a39d0045c934b68a3ca98752856f64a1f34b8342757f158afb23b38f62ff296a1a97ec069ff7e5a8052e696714baf063788e44f862ab1e5a57a64e
-Size (libretro-beetle-pce-fast-20180720-6dfaf04cf2085ab9e5bb6ffac75070816cb4ff52.tar.gz) = 1146912 bytes
+SHA1 (libretro-beetle-pce-fast-20200523-17ba58b4695970dad499de04a3b81777ff47c9d9.tar.gz) = 776707703689510829465c3ad6948c47fa9cc14d
+RMD160 (libretro-beetle-pce-fast-20200523-17ba58b4695970dad499de04a3b81777ff47c9d9.tar.gz) = 484fffb5c8342c6fa9e0f38664778be042a56dc8
+SHA512 (libretro-beetle-pce-fast-20200523-17ba58b4695970dad499de04a3b81777ff47c9d9.tar.gz) = 8dd68b12d0bbd935cb6e471df8c4622ff6a517582e32bfc41140a058a2fde4e51f6f24e8a3760478e10790a732b74dd0b7a05071601d3694924ae26d80cedefb
+Size (libretro-beetle-pce-fast-20200523-17ba58b4695970dad499de04a3b81777ff47c9d9.tar.gz) = 1200707 bytes
