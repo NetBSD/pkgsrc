@@ -1,0 +1,15 @@
+$NetBSD: patch-bin_named_Makefile.in,v 1.1 2020/05/30 14:20:36 taca Exp $
+
+* Dirty hack to prevent WRKDIR reference.
+
+--- bin/named/Makefile.in.orig	2020-05-06 12:50:24.000000000 +0000
++++ bin/named/Makefile.in
+@@ -130,7 +130,7 @@ main.@O@: main.c
+ 		-DPRODUCT=\"${PRODUCT}\" \
+ 		-DDESCRIPTION=\"${DESCRIPTION}\" \
+ 		-DSRCID=\"${SRCID}\" \
+-		-DCONFIGARGS="\"${CONFIGARGS}\"" \
++		-DCONFIGARGS="\"${CONFIGARGS:S/${WRKDIR}\/.tools/${PREFIX}/g:S/${WRKDIR}\/.buildlink/${PREFIX}/g}\"" \
+ 		-DBUILDER="\"make\"" \
+ 		-DNS_LOCALSTATEDIR=\"${localstatedir}\" \
+ 		-DNS_SYSCONFDIR=\"${sysconfdir}\" -c ${srcdir}/main.c
