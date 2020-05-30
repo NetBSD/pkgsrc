@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3232 2020/05/30 00:05:41 fox Exp $
+$NetBSD: CHANGES-2020,v 1.3233 2020/05/30 00:09:00 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5135,3 +5135,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/py-gnome-menus [nia 2020-05-29]
 	Updated pkgtools/pkglint to 20.1.11 [rillig 2020-05-29]
 	Updated print/foliate to 2.2.0 [fox 2020-05-30]
+	Updated textproc/bat to 0.15.4 [fox 2020-05-30]
