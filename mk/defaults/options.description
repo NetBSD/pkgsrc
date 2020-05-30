@@ -500,7 +500,7 @@ lsof-less-secure-sockets	If 'lsof-more-secure' is set, allow all sockets to be v
 lsof-more-secure	Only allow root to view all open files with lsof.
 lua			Enable Lua support.
 luit			Enable luit support.
-lwt			Enable Lwt support.	
+lwt			Enable Lwt support.
 lynx			Use and enable support for the lynx browser.
 lz4			Enable LZ4 (de)compression support.
 lzma			Enable LZMA (de)compression support.
@@ -512,7 +512,7 @@ mac			Enable Monkey's Audio Codec support.
 mad			Enable usage of the mad library to play MP3 files.
 magick			Use ImageMagick as the image processing backend.
 maintainer-zts		Enable the Zend Thread Safety option for PHP.
-manual			Include manual.			
+manual			Include manual.
 marble			Enable marble (virtual globe) support.
 mbedtls			Enable mbed TLS support.
 mc-charset		Enable charset selection and conversion.
