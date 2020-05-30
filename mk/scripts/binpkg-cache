@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.22 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: binpkg-cache,v 1.23 2020/05/30 03:36:45 khorben Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -72,7 +72,7 @@ usage(){
 	echo "        packages.  This cache file can then be used by the README.html"
 	echo "        generation code to avoid having to call pkg_info(1) over and over"
 	echo "        on the same binary package.  In addition, pkg_summary.gz files for"
-	echo "        use by the pkgtools/pkg_chk pacakge may be generated."
+	echo "        use by the pkgtools/pkg_chk package may be generated."
 	echo " "
 	echo "Usage:      $prog [-d|--debug] [-v|--verbose] [-s|--summary] [-p|--packages <dir>]"
 	echo " "
