@@ -109,18 +109,15 @@ I. The pkgsrc user's guide
         8.3. Requirements of a full bulk build
         8.4. Bulk build variants
 
-            8.4.1. Strict SUBST blocks
-            8.4.2. Detect unknown configure options
-            8.4.3. Detect classes of bugs by forcing compiler warnings
-            8.4.4. Use custom directories
-            8.4.5. Turn warnings into errors
-            8.4.6. Reject packages for which pkglint reports errors
-            8.4.7. Reject packages that contain forbidden strings
-            8.4.8. Reject packages whose self-test fails
-            8.4.9. Reject packages that use undefined shell variables
-            8.4.10. Turn off verbose logging
-            8.4.11. Select random sets of options
-            8.4.12. Select random configurations of BUILD_DEFS
+            8.4.1. Detect unknown configure options
+            8.4.2. Detect classes of bugs by forcing compiler warnings
+            8.4.3. Use custom directories
+            8.4.4. Turn warnings into errors
+            8.4.5. Reject packages for which pkglint reports errors
+            8.4.6. Reject packages that contain forbidden strings
+            8.4.7. Reject packages whose self-test fails
+            8.4.8. Reject packages that use undefined shell variables
+            8.4.9. Turn off verbose logging
 
         8.5. Creating a multiple CD-ROM packages collection
 
@@ -765,18 +762,15 @@ Table of Contents
     8.3. Requirements of a full bulk build
     8.4. Bulk build variants
 
-        8.4.1. Strict SUBST blocks
-        8.4.2. Detect unknown configure options
-        8.4.3. Detect classes of bugs by forcing compiler warnings
-        8.4.4. Use custom directories
-        8.4.5. Turn warnings into errors
-        8.4.6. Reject packages for which pkglint reports errors
-        8.4.7. Reject packages that contain forbidden strings
-        8.4.8. Reject packages whose self-test fails
-        8.4.9. Reject packages that use undefined shell variables
-        8.4.10. Turn off verbose logging
-        8.4.11. Select random sets of options
-        8.4.12. Select random configurations of BUILD_DEFS
+        8.4.1. Detect unknown configure options
+        8.4.2. Detect classes of bugs by forcing compiler warnings
+        8.4.3. Use custom directories
+        8.4.4. Turn warnings into errors
+        8.4.5. Reject packages for which pkglint reports errors
+        8.4.6. Reject packages that contain forbidden strings
+        8.4.7. Reject packages whose self-test fails
+        8.4.8. Reject packages that use undefined shell variables
+        8.4.9. Turn off verbose logging
 
     8.5. Creating a multiple CD-ROM packages collection
 
@@ -1121,7 +1115,8 @@ To install packages directly from an FTP or HTTP server, run the following
 commands in a Bourne-compatible shell (be sure to su to root first):
 
 # PATH="/usr/pkg/sbin:$PATH"
-# PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages"
+
+# PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages"
 # PKG_PATH="$PKG_PATH/OPSYS/ARCH/VERSIONS/All/"
 # export PATH PKG_PATH
 
@@ -1172,8 +1167,8 @@ files.
 
 The pkgsrc Security Team and Packages Groups maintain a list of known security
 vulnerabilities to packages which are (or have been) included in pkgsrc. The
-list is available from the NetBSD FTP site at https://ftp.NetBSD.org/pub/NetBSD
-/packages/vulns/pkg-vulnerabilities.
+list is available from the NetBSD FTP site at http://ftp.NetBSD.org/pub/NetBSD/
+packages/vulns/pkg-vulnerabilities.
 
 Through pkg_admin fetch-pkg-vulnerabilities, this list can be downloaded
 automatically, and a security audit of all packages installed on a system can
@@ -1737,18 +1732,15 @@ Table of Contents
 8.3. Requirements of a full bulk build
 8.4. Bulk build variants
 
-    8.4.1. Strict SUBST blocks
-    8.4.2. Detect unknown configure options
-    8.4.3. Detect classes of bugs by forcing compiler warnings
-    8.4.4. Use custom directories
-    8.4.5. Turn warnings into errors
-    8.4.6. Reject packages for which pkglint reports errors
-    8.4.7. Reject packages that contain forbidden strings
-    8.4.8. Reject packages whose self-test fails
-    8.4.9. Reject packages that use undefined shell variables
-    8.4.10. Turn off verbose logging
-    8.4.11. Select random sets of options
-    8.4.12. Select random configurations of BUILD_DEFS
+    8.4.1. Detect unknown configure options
+    8.4.2. Detect classes of bugs by forcing compiler warnings
+    8.4.3. Use custom directories
+    8.4.4. Turn warnings into errors
+    8.4.5. Reject packages for which pkglint reports errors
+    8.4.6. Reject packages that contain forbidden strings
+    8.4.7. Reject packages whose self-test fails
+    8.4.8. Reject packages that use undefined shell variables
+    8.4.9. Turn off verbose logging
 
 8.5. Creating a multiple CD-ROM packages collection
 
@@ -1878,35 +1870,7 @@ to run non-default bulk builds from time to time. This section lists some ideas
 for bulk builds that intentionally let packages fail if they don't follow the
 pkgsrc style.
 
-8.4.1. Strict SUBST blocks
-
-Up to May 2020, the SUBST blocks ignored files that didn't exist, as well as
-substitutions that didn't have any effect. There were quite a few SUBST blocks
-that were redundant, and these have been removed already.
-
-The next step would be to not only check that each filename pattern has an
-effect but also that each substitution in SUBST_SED or SUBST_VARS applies to at
-least one file.
-
-To do this, mk/subst.mk would have to be adjusted, in a similar way as the
-check for no-op SUBST_FILES. There are several regression tests in regress/
-infra-unittests that help to get all edge cases correct.
-
-When a package fails this additional check, there are various possible causes
-why the SUBST_SED became a no-op.
-
- 1. The pattern used to be found in a former version of the package, but is not
-    needed anymore. In that case, just remove it.
-
- 2. The pattern contains a typo. In that case, fix the typo and bump
-    PKGREVISION, since the fixed typo will probably modify the resulting binary
-    package.
-
- 3. There is a patch that is applied before the SUBST block, and the patch
-    accidentally contains the change that was intended for the SUBST block. In
-    that case, remove the respective hunk from the patch.
-
-8.4.2. Detect unknown configure options
+8.4.1. Detect unknown configure options
 
 Add the following line to mk.conf.
 
@@ -1916,17 +1880,23 @@ When a package fails this additional check, the most common cause is that the
 configure option was valid for an older version of the package but does not
 apply anymore. In that case, just remove it.
 
-8.4.3. Detect classes of bugs by forcing compiler warnings
+8.4.2. Detect classes of bugs by forcing compiler warnings
 
 The job of a compiler is not restricted to producing executable code, most
-compilers also detects typical mistakes.
+compilers also detect typical programming mistakes. The pkgsrc compiler
+wrappers make it easy to force compiler options when the package is built. This
+can be used to find typical bugs across all packages that are in pkgsrc. By
+reporting these bugs upstream, the packages will be more reliable with the next
+updates.
 
-Add the following line to mk.conf.
+Add some of the following lines to mk.conf:
 
 CFLAGS+=        -Werror=char-subscripts
+CFLAGS+=        -Werror=implicit-function-declaration
 
-When a package fails this additional check, first document the circumstances in
-which the compiler produced the error message. This includes:
+When a package fails to build using these stricter compiler options, document
+the circumstances in which the compiler produced the error message. This
+includes:
 
   * The platform (MACHINE_PLATFORM)
 
@@ -1935,23 +1905,28 @@ which the compiler produced the error message. This includes:
   * An excerpt of the code. GCC and Clang already do this as part of the
     diagnostic.
 
-  * The error message from the compiler.
+  * The exact error message from the compiler.
 
-If a package produces these error messages, but the package is fine, document
-this in the package Makefile, like this:
+If a package produces these error messages, but the package is fine, record
+this in your local mk.conf, like this, to skip this check in the next builds:
 
+.if ${PKGPATH} == category/package
 # Version ${VERSION} failed on ${MACHINE_PLATFORM}:
 # error message
 # code
-# reason why the code does not need to be fixed
+# Reason why the code does not need to be fixed.
 BUILDLINK_TRANSFORM+=   rm:-Werror=char-subscripts
+.endif
 
 If the error messages from the compiler are valid and the code needs to be
-fixed, prepare a patch for a single source file, or if it's a one-liner fix,
-add a SUBST block to the package Makefile. In any case, report it to the
-upstream authors of the package.
+fixed, prepare a local patch (see LOCALPATCHES) and report the bug to the
+upstream authors of the package, providing them with the information you
+collected above.
 
-8.4.4. Use custom directories
+Patches that are not essential for the package to work should only be reported
+upstream but not committed to pkgsrc, to make future updates easier.
+
+8.4.3. Use custom directories
 
 Some directories like PREFIX, VARBASE, PKG_SYSCONFDIR, PKGMANDIR, PKG_INFODIR
 can be configured in pkgsrc. Set these to arbitrary paths during bootstrap or
@@ -1963,7 +1938,7 @@ VARBASE=        /a-random-uuid
 PKGMANDIR=      a-random-uuid
 PKG_INFODIR=    a-random-uuid
 
-8.4.5. Turn warnings into errors
+8.4.4. Turn warnings into errors
 
 When building a package, warnings are typically ignored since they just flow by
 and do not cause the build to fail immediately. To find these warnings,
@@ -1975,18 +1950,18 @@ WARNING_MSG=            ${FAIL_MSG} "(was warning)"
 (There are many more classes of warnings in pkgsrc, and most of them can be
 redefined with a simple definition like above.
 
-If a package suggest to add USE_TOOLS+=perl to the package Makefile, research
+If a package suggests to add USE_TOOLS+=perl to the package Makefile, research
 whether the package actually needs Perl. If it does, add USE_TOOLS+=perl to the
 package Makefile, and if it doesn't, add TOOLS_BROKEN+=perl.
 
-8.4.6. Reject packages for which pkglint reports errors
+8.4.5. Reject packages for which pkglint reports errors
 
 Using pkglint as part of the regular build process is mostly a waste of time.
 If you want to fix some of the warnings, just run pkglint recursively on the
 whole pkgsrc tree. This will take a few minutes (up to 10), which is much
 faster than a complete bulk build.
 
-8.4.7. Reject packages that contain forbidden strings
+8.4.6. Reject packages that contain forbidden strings
 
 To ensure that the binary packages don't contain references to the build
 directory, there is already CHECK_WRKREF. If that variable includes the item
@@ -2001,7 +1976,7 @@ CHECK_WRKREF_EXTRA_DIRS+=       @[A-Z][A-Z]*@
 The above patterns will probably generate many false positives, therefore the
 results need to be taken with a grain of salt.
 
-8.4.8. Reject packages whose self-test fails
+8.4.7. Reject packages whose self-test fails
 
 To run the test suites that come with each package, add this line to mk.conf.
 
@@ -2012,7 +1987,7 @@ build with this, it will often abort in the early phase where the packages are
 scanned for their dependencies since there are cyclic dependencies. There is
 still a lot to do in this area.
 
-8.4.9. Reject packages that use undefined shell variables
+8.4.8. Reject packages that use undefined shell variables
 
 To catch typos in the shell snippets from the Makefile fragments, add the -u
 flag to most of the commands by adding this line to mk.conf.
@@ -2021,7 +1996,7 @@ RUN=    @set -eu;
 
 See mk/misc/common.mk for the existing definition.
 
-8.4.10. Turn off verbose logging
+8.4.9. Turn off verbose logging
 
 The build logs of a package are often quite long. This allows error messages or
 other interesting details to hide between the noise. To make the actual error
@@ -2032,48 +2007,6 @@ MAKE_FLAGS+=            -s
 
 The -s option works for both GNU Make and BSD Make. On exotic platforms with
 their own make, it may be a little different.
-
-8.4.11. Select random sets of options
-
-Most bulk builds run with the default package options. This means that other
-combinations of options are not regularly tested. To do this, run a bulk build
-with these configurations.
-
-  * no options enabled
-
-  * all options enabled
-
-  * 2n + 0
-
-  * 2n + 1
-
-  * 4n + 0..1
-
-  * 4n + 2..3
-
-  * 8n + 0..3
-
-  * 8n + 4..7
-
-  * 2048n + 0..1023
-
-  * 2048n + 1024..2047
-
-Open questions are:
-
-  * how to collect all options from the entire pkgsrc
-
-  * how to handle mutually exclusive options
-
-  * the sets of mutually exclusive options are defined per-package
-
-  * the sets of nonempty sets are defined per-package
-
-8.4.12. Select random configurations of BUILD_DEFS
-
-Just like the PKG_OPTIONS, the BUILD_DEFS also allow different variants of
-pkgsrc to be created. The same ideas as in Section 8.4.11, "Select random sets
-of options" apply.
 
 8.5. Creating a multiple CD-ROM packages collection
 
