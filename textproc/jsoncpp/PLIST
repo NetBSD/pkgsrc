@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/27 22:25:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/30 06:09:47 adam Exp $
 include/json/allocator.h
 include/json/assertions.h
-include/json/autolink.h
 include/json/config.h
 include/json/forwards.h
 include/json/json.h
