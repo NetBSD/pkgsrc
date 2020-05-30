@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2020/03/04 13:51:51 wiz Exp $
+$NetBSD: distinfo,v 1.11 2020/05/30 20:46:09 joerg Exp $
 
 SHA1 (mypaint-2.0.0.tar.xz) = 334fa13893d20c80805092de665dbbcf03b92ece
 RMD160 (mypaint-2.0.0.tar.xz) = 894b276a4f6139a717d8fdfcf8618ecef00222dd
 SHA512 (mypaint-2.0.0.tar.xz) = 118d905f4d7ce6adb9779b59d6b3f51b94a9937778b8fe3ed1b31c9b5b77d63110134bdc74849a91d8095e905664227ff43ffe183ad9c7c7ba18fa954ade8a84
 Size (mypaint-2.0.0.tar.xz) = 7316680 bytes
 SHA1 (patch-lib_meta.py) = 1c8832ff06154255d7ea14037dc728d1fa0ba50e
+SHA1 (patch-setup.py) = 55b5c2ef1ef8612999c1630b2259f7f54a5cf264
