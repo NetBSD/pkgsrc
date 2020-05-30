@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.29 2020/05/30 08:22:59 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.30 2020/05/30 19:25:17 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -198,6 +198,10 @@ makes sense to run non-default bulk builds from time to time. This
 section lists some ideas for bulk builds that intentionally let packages
 fail if they don't follow the pkgsrc style.</para>
 
+<!--
+Needs to be implemented first, so that the remaining work is just
+setting a variable in mk.conf, like in the other scenarios.
+
 <sect2 id="bulk.var.subst_noop">
 <title>Strict SUBST blocks</title>
 
@@ -217,7 +221,7 @@ that help to get all edge cases correct.</para>
 
 <para>When a package fails this additional check, there are various
 possible causes why the <varname>SUBST_SED</varname> became a
-no-op.</para>
+no-op:</para>
 
 <orderedlist>
 
@@ -237,6 +241,7 @@ patch.</para></listitem>
 </orderedlist>
 
 </sect2>
+-->
 
 <sect2 id="bulk.var.confopt">
 <title>Detect unknown configure options</title>
@@ -257,17 +262,22 @@ package but does not apply anymore. In that case, just remove it.</para>
 <title>Detect classes of bugs by forcing compiler warnings</title>
 
 <para>The job of a compiler is not restricted to producing executable
-code, most compilers also detects typical mistakes.</para>
+code, most compilers also detect typical programming mistakes. The pkgsrc
+compiler wrappers make it easy to force compiler options when the package
+is built. This can be used to find typical bugs across all packages that
+are in pkgsrc. By reporting these bugs upstream, the packages will be
+more reliable with the next updates.</para>
 
-<para>Add the following line to &mk.conf;.</para>
+<para>Add some of the following lines to &mk.conf;:</para>
 
 <programlisting>
 CFLAGS+=        -Werror=char-subscripts
+CFLAGS+=        -Werror=implicit-function-declaration
 </programlisting>
 
-<para>When a package fails this additional check, first document the
-circumstances in which the compiler produced the error message. This
-includes:</para>
+<para>When a package fails to build using these stricter compiler
+options, document the circumstances in which the compiler produced the
+error message. This includes:</para>
 
 <itemizedlist>
 
@@ -279,25 +289,33 @@ includes:</para>
 <listitem><para>An excerpt of the code. GCC and Clang already do this as
 part of the diagnostic.</para></listitem>
 
-<listitem><para>The error message from the compiler.</para></listitem>
+<listitem><para>The exact error message from the compiler.</para></listitem>
 
 </itemizedlist>
 
 <para>If a package produces these error messages, but the package is
-fine, document this in the package Makefile, like this:</para>
+fine, record this in your local &mk.conf;, like this, to skip this check
+in the next builds:</para>
 
 <programlisting>
+.if ${PKGPATH} == category/package
 # Version ${VERSION} failed on ${MACHINE_PLATFORM}:
 # error message
 # code
-# reason why the code does not need to be fixed
+# Reason why the code does not need to be fixed.
 BUILDLINK_TRANSFORM+=   rm:-Werror=char-subscripts
+.endif
 </programlisting>
 
 <para>If the error messages from the compiler are valid and the code
-needs to be fixed, prepare a patch for a single source file, or if it's a
-one-liner fix, add a SUBST block to the package Makefile. In any case,
-report it to the upstream authors of the package.</para>
+needs to be fixed, prepare a local patch (see
+<varname>LOCALPATCHES</varname>) and report the bug to the upstream
+authors of the package, providing them with the information you collected
+above.</para>
+
+<para>Patches that are not essential for the package to work should only
+be reported upstream but not committed to pkgsrc, to make future updates
+easier.</para>
 
 </sect2>
 
@@ -426,6 +444,10 @@ different.</para>
 
 </sect2>
 
+<!--
+Needs to be implemented first, so that the remaining work is just
+setting a variable in mk.conf, like in the other scenarios.
+
 <sect2 id="bulk.var.options">
 <title>Select random sets of options</title>
 
@@ -465,6 +487,10 @@ per-package</para></listitem>
 </itemizedlist>
 
 </sect2>
+-->
+
+<!--
+Refers to bulk.var.options, which is not yet implemented.
 
 <sect2 id="bulk.var.build_defs">
 <title>Select random configurations of BUILD_DEFS</title>
@@ -475,6 +501,7 @@ be created. The same ideas as in <xref linkend="bulk.var.options"/>
 apply.</para>
 
 </sect2>
+-->
 
 </sect1>
 
