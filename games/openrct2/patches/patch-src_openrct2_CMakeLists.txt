@@ -1,0 +1,18 @@
+$NetBSD: patch-src_openrct2_CMakeLists.txt,v 1.1 2020/05/30 20:47:08 joerg Exp $
+
+--- src/openrct2/CMakeLists.txt.orig	2020-05-27 23:23:58.110984083 +0000
++++ src/openrct2/CMakeLists.txt
+@@ -143,13 +143,6 @@ if (NOT MINGW AND NOT MSVC)
+     endif ()
+ endif ()
+ 
+-if (NOT APPLE AND NOT MINGW AND NOT MSVC)
+-    # This is ugly hack to work around https://bugs.launchpad.net/ubuntu/+source/gcc-5/+bug/1568899.
+-    # Once C++17 is enabled (and thus old compilers are no longer supported, this needs to be gone.
+-    # We cannot simply detect the _compiler_ version, as the bug exists with the C++ _library_
+-    target_link_libraries(${PROJECT_NAME} gcc_s gcc)
+-endif ()
+-
+ if (NOT DISABLE_TTF)
+     if (STATIC)
+         target_link_libraries(${PROJECT_NAME} ${FREETYPE_STATIC_LIBRARIES})
