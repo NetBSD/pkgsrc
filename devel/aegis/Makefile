@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/05/22 10:56:03 adam Exp $
+# $NetBSD: Makefile,v 1.56 2020/05/30 08:16:05 rillig Exp $
 #
 
 DISTNAME=	aegis-4.24.2
@@ -23,7 +23,6 @@ AEGIS_USER_GID?=	3
 
 CONFIGURE_ARGS+=	--with-nlsdir=${_PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-no-aegis-configured
 CONFIGURE_ARGS+=	--sharedstatedir=${PREFIX}/com/aegis
 CONFIGURE_ENV+=		PATCH=${PATCH:Q}
 CONFIGURE_ENV+=		AEGIS_UID=${AEGIS_USER_UID:Q}
