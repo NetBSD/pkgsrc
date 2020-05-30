@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/24 16:44:20 nat Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/30 22:45:07 nat Exp $
 
 PKGNAME=	diffbreaker-0.1
 #PKGREVISION=	1
@@ -10,6 +10,7 @@ LICENSE=	2-clause-bsd
 
 NO_CONFIGURE=	yes
 
+WRKSRC=		${WRKDIR}/diffbreaker
 USE_LANGUAGES=	c
 USE_TOOLS=	make
 
@@ -25,8 +26,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/cat1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 .endif
 
-pre-build:
-	${CP} -R ${FILESDIR}/diffbreaker ${WRKSRC}
+do-extract:
+	${CP} -R ${FILESDIR}/diffbreaker ${WRKDIR}
 
 do-install:
 .for f in diffbreaker
