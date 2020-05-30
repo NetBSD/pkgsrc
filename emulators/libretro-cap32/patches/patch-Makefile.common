@@ -1,0 +1,34 @@
+$NetBSD: patch-Makefile.common,v 1.1 2020/05/30 16:19:44 nia Exp $
+
+Don't vendor zlib.
+
+--- Makefile.common.orig	2020-05-08 13:51:31.000000000 +0000
++++ Makefile.common
+@@ -8,8 +8,7 @@ INCFLAGS := \
+ 	-I$(CORE_DIR)/libretro  \
+ 	-I$(GUI) \
+ 	-I$(GUI)/nuklear \
+-	-I$(GUI)/retro \
+-   -I$(DEPS)/zlib
++	-I$(GUI)/retro
+ 
+ SOURCES_C := \
+ 				 $(CORE_DIR)/libretro/libretro-core.c \
+@@ -33,17 +32,3 @@ SOURCES_C += $(CORE_DIR)/libretro/retro_
+ SOURCES_C += $(CORE_DIR)/libretro/retro_disk_control.c
+ SOURCES_C += $(CORE_DIR)/libretro/retro_events.c
+ SOURCES_C += $(CORE_DIR)/libretro/retro_snd.c
+-
+-SOURCES_C += \
+-      $(DEPS)/zlib/adler32.c \
+-      $(DEPS)/zlib/inflate.c \
+-      $(DEPS)/zlib/inffast.c \
+-      $(DEPS)/zlib/inftrees.c \
+-      $(DEPS)/zlib/zutil.c \
+-      $(DEPS)/zlib/gzread.c \
+-      $(DEPS)/zlib/gzwrite.c \
+-      $(DEPS)/zlib/gzclose.c \
+-      $(DEPS)/zlib/gzlib.c \
+-      $(DEPS)/zlib/trees.c \
+-      $(DEPS)/zlib/crc32.c \
+-      $(DEPS)/zlib/deflate.c
