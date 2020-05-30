@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/26 09:45:14 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/30 14:29:41 nia Exp $
 
-DISTNAME=	libretro-fceumm-20190106
+DISTNAME=	libretro-fceumm-20200520
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
-GITHUB_TAG=	3efe223f135e2da1bd04909b30cf480fa62fe9d4
+GITHUB_TAG=	f11f3afbd6a8a54f0656708cdd2b8398f1da6a9b
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/fceumm/
@@ -11,25 +10,8 @@ COMMENT=	Libretro core based on the FCEUmm Famicom/NES emulator
 LICENSE=	gnu-gpl-v2
 
 MAKE_FILE=	Makefile.libretro
-USE_TOOLS+=	gmake
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
+LIBRETRO_CORE=	fceumm
 
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
-
-.include "../../mk/endian.mk"
-
-.if ${MACHINE_ENDIAN} == "big"
-CFLAGS+=	-DMSB_FIRST
-.endif
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/fceumm_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/fceumm_libretro.so
-
+.include "../../emulators/retroarch/core.mk"
 .include "../../mk/bsd.pkg.mk"
