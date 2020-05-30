@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3231 2020/05/29 20:13:29 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3232 2020/05/30 00:05:41 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5134,3 +5134,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-faker to 4.1.0 [adam 2020-05-29]
 	Removed sysutils/py-gnome-menus [nia 2020-05-29]
 	Updated pkgtools/pkglint to 20.1.11 [rillig 2020-05-29]
+	Updated print/foliate to 2.2.0 [fox 2020-05-30]
