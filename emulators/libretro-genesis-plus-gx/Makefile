@@ -1,42 +1,28 @@
-# $NetBSD: Makefile,v 1.4 2020/05/26 09:45:15 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/30 15:04:10 nia Exp $
 
-DISTNAME=	libretro-genesis-plus-gx-20180607
+DISTNAME=	libretro-genesis-plus-gx-20200208
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	Genesis-Plus-GX
-GITHUB_TAG=	5ae12e75a08cf48ca1d350520998bf18db846381
+GITHUB_TAG=	50551066f71f8a5ea782ea3747891fd6d24ebe67
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/genesis_plus_gx/
 COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 LICENSE=	mame-license
 
-USE_TOOLS+=	gmake
+LIBRETRO_CORE=	genesis_plus_gx
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
+.include "../../emulators/retroarch/core.mk"
 
 MAKE_FILE=	Makefile.libretro
 
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 MAKE_FLAGS+=	SHARED_LIBVORBIS=1
-
-.include "../../mk/endian.mk"
 
 .if ${MACHINE_ENDIAN} == "big"
 MAKE_FLAGS+=	ENDIANNESS_DEFINES="-DBYTE_ORDER=BIG_ENDIAN -DCPU_IS_BIG_ENDIAN=1 -DWORDS_BIGENDIAN=1"
 .endif
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./libretro/link.T
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/genesis_plus_gx_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/genesis_plus_gx_libretro.so
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
