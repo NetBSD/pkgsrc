@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 03:27:35 agc Exp $
+$NetBSD: distinfo,v 1.11 2020/05/30 20:48:59 joerg Exp $
 
 SHA1 (ht-2.1.0.tar.bz2) = d9d39fd3055fd4b4abd5a718bde8e0249cd61e9a
 RMD160 (ht-2.1.0.tar.bz2) = 665e20a70a4735acf2102521b49074f94a28fba6
 SHA512 (ht-2.1.0.tar.bz2) = 6b5fc5fcbc63b9b7c85721158e044e4578ebfdc38618c760c0e6de06a276bccd3a960ab8bed172de788934515ad94d86349c4abd3228da66b1601deaaa2ce410
 Size (ht-2.1.0.tar.bz2) = 884139 bytes
+SHA1 (patch-htapp.cc) = 62d14f6bd39eb1f49773d2868e43000c8aaf9d21
