@@ -1,14 +1,13 @@
-# $NetBSD: Makefile.common,v 1.3 2019/04/29 12:00:16 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2020/05/30 14:59:10 nia Exp $
 
 # used by emulators/libretro-beetle-psx-hw/Makefile
 # used by emulators/libretro-beetle-psx/Makefile
 
-VERSION=	20190203
+VERSION=	20200526
 DISTNAME=	libretro-beetle-psx-${VERSION}
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-psx-libretro
-GITHUB_TAG=	53591985319edc34d83a0858ad9a935b934dcf5c
+GITHUB_TAG=	12014e1f317ae8bda1c9ccce319d9dd78f253d2f
 
 LICENSE=	gnu-gpl-v2
 
@@ -16,28 +15,7 @@ DISTINFO_FILE=	${.CURDIR}/../../emulators/libretro-beetle-psx/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/libretro-beetle-psx/patches
 MESSAGE_SRC=	${.CURDIR}/../../emulators/libretro-beetle-psx/MESSAGE
 
-EXTRACT_USING=	bsdtar
-
-USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++03
 
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/endian.mk"
-
-.if ${MACHINE_ENDIAN} == "big"
-CFLAGS+=	-DMSB_FIRST
-.endif
-
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
-
-.if ${OPSYS} != "Linux"
-BUILDLINK_TRANSFORM+=	rm:-ldl
-.endif
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-.include "../../mk/dlopen.buildlink3.mk"
+.include "../../emulators/retroarch/core.mk"
 .include "../../mk/pthread.buildlink3.mk"
