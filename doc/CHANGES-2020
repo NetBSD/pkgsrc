@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3251 2020/05/30 15:02:57 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3252 2020/05/30 15:04:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5154,3 +5154,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-beetle-pce-fast to 20200523 [nia 2020-05-30]
 	Updated emulators/libretro-beetle-psx to 20200526 [nia 2020-05-30]
 	Updated emulators/libretro-beetle-psx-hw to 20200526 [nia 2020-05-30]
+	Updated emulators/libretro-genesis-plus-gx to 20200208 [nia 2020-05-30]
