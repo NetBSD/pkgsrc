@@ -1,6 +1,6 @@
-$NetBSD: patch-src_cares__wrap.cc,v 1.2 2020/05/29 07:07:12 adam Exp $
+$NetBSD: patch-src_cares__wrap.cc,v 1.3 2020/05/30 20:45:12 joerg Exp $
 
-NetBSD has no AI_V4MAPPED.
+NetBSD has neither AI_V4MAPPED nor AI_ALL.
 
 --- src/cares_wrap.cc.orig	2020-05-26 11:53:34.000000000 +0000
 +++ src/cares_wrap.cc
