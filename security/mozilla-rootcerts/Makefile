@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/05/30 12:55:46 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2020/05/30 22:39:08 tnn Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 CATEGORIES=	security
@@ -46,18 +46,18 @@ INSTALLATION_DIRS=	sbin ${DATADIR}
 
 do-extract:
 	${CP} ${FILESDIR}/${CERT_SCRIPT} ${WRKSRC}
-	${CP} ${DISTDIR}/${CERTDATA} ${WRKSRC}
+	${CP} ${DISTDIR}/${CERTDATA} ${WRKSRC}/certdata.txt
 
 do-build:
 	${MKDIR} ${WRKSRC}/certs
 	cd ${WRKSRC}/certs && \
-	${SH} ${WRKSRC}/${CERT_SCRIPT} -f ${WRKSRC}/${CERTDATA} extract
+	${SH} ${WRKSRC}/${CERT_SCRIPT} -f ${WRKSRC}/certdata.txt extract
 	${LS} -rt ${WRKSRC}/certs/*.pem | ${XARGS} ${CAT} >${WRKSRC}/cacert.pem
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${CERT_SCRIPT} \
 		${DESTDIR}${PREFIX}/sbin/mozilla-rootcerts
-	${INSTALL_DATA} ${WRKSRC}/${CERTDATA} ${DESTDIR}${DATADIR}/certdata.txt
+	${INSTALL_DATA} ${WRKSRC}/certdata.txt ${DESTDIR}${DATADIR}/certdata.txt
 	${INSTALL_DATA} ${WRKSRC}/cacert.pem ${DESTDIR}${DATADIR}/cacert.pem
 
 .include "../../mk/bsd.pkg.mk"
