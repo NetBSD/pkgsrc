@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2015/03/20 16:33:28 taca Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/31 16:46:38 rillig Exp $
 
 MODNAME=		exif
 CATEGORIES+=		graphics
 COMMENT=		PHP extension to extract information from EXIF headers
 
-CONFIGURE_ARGS+=	--with-${MODNAME}=shared
 USE_PHP_EXT_PATCHES=	yes
 
 .include "../../lang/php/ext.mk"
