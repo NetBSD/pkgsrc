@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/03/10 22:09:12 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2020/05/31 17:00:18 rillig Exp $
 
 .include "../../x11/vte/Makefile.common"
 
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--enable-python
-CONFIGURE_ARGS+=	--disable-freetype-test
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
