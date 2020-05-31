@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3285 2020/05/31 23:29:31 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.3286 2020/05/31 23:35:28 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5184,3 +5184,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.14.0 [leot 2020-05-31]
 	Updated devel/mate-common to 1.24.1 [gutteridge 2020-05-31]
 	Updated graphics/mate-backgrounds to 1.24.1 [gutteridge 2020-05-31]
+	Updated sysutils/mate-power-manager to 1.24.1 [gutteridge 2020-05-31]
