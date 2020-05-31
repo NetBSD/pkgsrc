@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3276 2020/05/31 16:03:18 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3277 2020/05/31 16:05:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5178,3 +5178,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed emulators/libretro-reicast successor emulators/libretro-flycast [nia 2020-05-31]
 	Added security/ca-certificates version 20190110 [kim 2020-05-31]
 	Added emulators/libretro-parallel-n64 version 20200528 [nia 2020-05-31]
+	Removed emulators/libretro-mupen64plus successor emulators/libretro-parallel-n64 [nia 2020-05-31]
