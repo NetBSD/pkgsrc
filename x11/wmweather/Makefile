@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2020/05/22 10:56:49 adam Exp $
+# $NetBSD: Makefile,v 1.64 2020/05/31 17:44:44 rillig Exp $
 
 DISTNAME=	wmweather-2.4.6
 PKGREVISION=	14
@@ -15,7 +15,6 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake xmessage:run
 
-CONFIGURE_ARGS+=	--with-sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-xmessage=${TOOLS_PATH.xmessage}
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
