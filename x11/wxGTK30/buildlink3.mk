@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2020/05/21 14:00:51 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2020/05/31 16:43:04 rillig Exp $
 
 BUILDLINK_TREE+=	wxGTK30
 
@@ -14,7 +14,9 @@ PREPEND_PATH+=			${PREFIX}/libexec/wx-3.0
 .if ${GNU_CONFIGURE_WX_VERSION:Uyes:tl} == yes
 CONFIGURE_ARGS+=		--with-wx-version=3.0
 .endif
+.if ${GNU_CONFIGURE_WX_CONFIG:Uyes:tl} == yes
 CONFIGURE_ARGS+=		--with-wx-config=${PREFIX}/libexec/wx-3.0/wx-config
+.endif
 
 pkgbase := wxGTK30
 .include "../../mk/pkg-build-options.mk"
