@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2020/04/12 08:28:32 adam Exp $
+# $NetBSD: Makefile,v 1.114 2020/05/31 16:06:59 rillig Exp $
 
 DISTNAME=	monotone-1.1
 PKGREVISION=	21
@@ -18,8 +18,6 @@ UNLIMIT_RESOURCES+=	datasize
 USE_TOOLS+=		gmake makeinfo pax perl:run pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-
-CONFIGURE_ARGS+=	--with-system-pcre
 
 INSTALL_MAKE_FLAGS+=	bashcompdir=${PREFIX:Q}/share/examples/monotone
 
