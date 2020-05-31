@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/11/02 15:38:01 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2020/05/31 15:20:22 rillig Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.kyotocabinet
@@ -12,7 +12,6 @@ PKG_SUGGESTED_OPTIONS=		zlib
 .if !empty(PKG_OPTIONS:Mzlib)
 .include "../../devel/zlib/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-zlib
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 .else
 CONFIGURE_ARGS+=	--disable-zlib
 .endif
