@@ -1,17 +1,10 @@
-# $NetBSD: options.mk,v 1.7 2019/11/04 19:17:10 rillig Exp $
+# $NetBSD: options.mk,v 1.8 2020/05/31 15:08:27 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inn
-PKG_SUPPORTED_OPTIONS=	inet6 perl python uucp
-PKG_SUGGESTED_OPTIONS=	inet6 perl
+PKG_SUPPORTED_OPTIONS=	perl python uucp
+PKG_SUGGESTED_OPTIONS=	perl
 
 .include "../../mk/bsd.options.mk"
-
-###
-### IPv6 support
-###
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
 
 ###
 ### uucp support (requires a group uucp to exist)
