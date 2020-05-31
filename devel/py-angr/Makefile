@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/15 22:50:40 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/31 20:44:31 joerg Exp $
 
 DISTNAME=	angr-8.20.1.7
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
@@ -26,6 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-cle-[0-9]*:../../devel/py-cle
 DEPENDS+=	${PYPKGPREFIX}-pyvex-[0-9]*:../../devel/py-pyvex
 DEPENDS+=	${PYPKGPREFIX}-unicorn-[0-9]*:../../emulators/py-unicorn
 DEPENDS+=	${PYPKGPREFIX}-claripy-[0-9]*:../../math/py-claripy
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
