@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/31 11:19:43 asau Exp $
+# $NetBSD: Makefile,v 1.25 2020/05/31 17:16:38 rillig Exp $
 #
 
 DISTNAME=	rvm-1.17
@@ -13,7 +13,6 @@ USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-lwp-includes=${BUILDLINK_PREFIX.lwp}/include
 
 pre-build:
 	cd ${WRKSRC}/rvm;						\
