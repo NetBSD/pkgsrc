@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2020/05/19 12:09:09 nia Exp $
+# $NetBSD: Makefile,v 1.39 2020/05/31 17:30:17 rillig Exp $
 
 .include "../../sysutils/syslog-ng/Makefile.common"
 
 PKGREVISION=		4
 
-CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-stomp
 CONFIGURE_ARGS+=	--enable-tcp-wrapper
 CONFIGURE_ARGS+=	--with-jsonc=system
