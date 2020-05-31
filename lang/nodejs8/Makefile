@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/04/12 08:27:58 adam Exp $
+# $NetBSD: Makefile,v 1.30 2020/05/31 21:41:22 rillig Exp $
 
 DISTNAME=	node-v8.17.0
 PKGREVISION=	2
@@ -9,6 +9,8 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--shared-http-parser
 CONFIGURE_ARGS+=	--with-intl=system-icu
+
+CHECK_PORTABILITY_SKIP+=	tools/macos-installer/*
 
 .include "../../lang/nodejs/Makefile.common"
 .include "../../textproc/icu/buildlink3.mk"
