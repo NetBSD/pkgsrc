@@ -378,6 +378,7 @@ kerberos		Enable Kerberos support.
 kerberos-prefix-cmds	Enables addition of a prefix to the kerberos client commands.
 kerberos4		Enable Kerberos4 support.
 kermit-suid-uucp	Install kermit setuid uucp.
+keyring			Enable gnome-keyring support.
 klash			Install Konqueror flash plugin.
 kqueue			Enable support for kernel event notification mechanism.
 l10n			Enable language localization.
