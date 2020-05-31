@@ -1,0 +1,7 @@
+# $NetBSD: INSTALL,v 1.1 2020/05/31 15:53:44 kim Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	@PREFIX@/sbin/update-ca-certificates
+	;;
+esac
