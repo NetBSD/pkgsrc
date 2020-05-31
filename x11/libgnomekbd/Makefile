@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/03/10 22:11:15 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2020/05/31 15:32:20 rillig Exp $
 #
 
 DISTNAME=	libgnomekbd-3.6.0
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake msgfmt
+
+GNU_CONFIGURE_GCONF_SCHEMAS=	no
 
 PKGCONFIG_OVERRIDE+=	libgnomekbd.pc.in
 PKGCONFIG_OVERRIDE+=	libgnomekbdui.pc.in
