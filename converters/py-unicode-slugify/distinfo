@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/05/01 17:50:59 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/05/31 20:49:33 joerg Exp $
 
 SHA1 (unicode-slugify-0.1.3.tar.gz) = 077cfd0c226f6b2cab3c84b340cd9693ce9939fc
 RMD160 (unicode-slugify-0.1.3.tar.gz) = 16fbfb4614658bb4fb2217484ebece362d140e0d
 SHA512 (unicode-slugify-0.1.3.tar.gz) = 509414c8b3603f3b092390ee29f52b6a22de45d904fcfa5554f2c1188a35ac090781050642b0b7bf068d1b30ce424342878e646db98b592712f47595528911a1
 Size (unicode-slugify-0.1.3.tar.gz) = 4430 bytes
+SHA1 (patch-setup.py) = 3a7d378b2d2881e533b5e04688d60ab2d2853b52
