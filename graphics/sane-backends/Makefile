@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2020/01/18 21:49:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.72 2020/05/31 17:19:49 rillig Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -17,7 +17,6 @@ USE_TOOLS+=		msgfmt msgmerge pkg-config
 USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--with-gphoto2=no
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/sane-${SANE_VERSION}
 CONFIGURE_ARGS+=	--without-snmp
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -69,7 +68,6 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 
 .include "options.mk"
 .include "../../devel/libusb1/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-libusb_1_0
 .if (${OPSYS} == "Linux")
 .include "../../graphics/libv4l/buildlink3.mk"
 .endif
