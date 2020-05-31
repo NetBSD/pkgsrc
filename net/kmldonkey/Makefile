@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/05/21 20:53:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2020/05/31 09:30:12 rillig Exp $
 #
 
 DISTNAME=	kmldonkey-2.0.2-kde4.4.0
@@ -18,6 +18,7 @@ BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	msgfmt
+TOOLS_BROKEN+=	perl
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
