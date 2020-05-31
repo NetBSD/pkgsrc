@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2020/05/13 14:53:29 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/05/31 20:49:33 joerg Exp $
 
 SHA1 (ephem-3.7.7.1.tar.gz) = 9928fb8f0e1a13ae627cdd86cb4ecc2bbeeb6edd
 RMD160 (ephem-3.7.7.1.tar.gz) = 2b6a4bb41d51697f17f3a1bdafe1a1dbee17c846
 SHA512 (ephem-3.7.7.1.tar.gz) = c3f489371febcb65da03da7ba0e08168320a6f5d81fd2355281f621074ecf2be694b2d0cc3ef7863cec617176751a34856bdd22beb66cd64129fbfb915b3dcae
 Size (ephem-3.7.7.1.tar.gz) = 745839 bytes
+SHA1 (patch-setup.py) = ca5c99e7f1a4cf90e53b7d34f63d91210f9e0acf
