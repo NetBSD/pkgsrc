@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/27 19:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/31 14:54:10 rillig Exp $
 
 DISTNAME=	hitch-1.5.2
 CATEGORIES=	security
@@ -17,8 +17,6 @@ USE_TOOLS+=	pkg-config
 .include "../../mk/bsd.prefs.mk"
 
 CHECK_PORTABILITY_SKIP+=	src/tests/*
-
-CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man.py${PYVERSSUFFIX}
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 LIBS.SunOS+=		-lnsl -lsocket
