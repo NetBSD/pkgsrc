@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/01/13 08:53:58 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2020/05/31 17:22:16 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.scrollz
 PKG_SUPPORTED_OPTIONS=		regexp utf8
@@ -13,9 +13,6 @@ PKG_OPTIONS_GROUP.conflict=	efence inet6
 
 .if !empty(PKG_OPTIONS:Mefence)
 .include "../../devel/electric-fence/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-efence
-.else
-CONFIGURE_ARGS+=	--disable-efence
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnutls)
@@ -46,16 +43,10 @@ CONFIGURE_ARGS+=	--disable-regexp
 
 .if !empty(PKG_OPTIONS:Msocks4)
 .include "../../net/socks4/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-socks4=${BUILDLINK_PREFIX.socks4}
-.else
-CONFIGURE_ARGS+=	--disable-socks4
 .endif
 
 .if !empty(PKG_OPTIONS:Mdante)
 .include "../../net/dante/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-socks4=${BUILDLINK_PREFIX.dante}
-.else
-CONFIGURE_ARGS+=	--disable-socks4
 .endif
 
 .if !empty(PKG_OPTIONS:Mutf8)
