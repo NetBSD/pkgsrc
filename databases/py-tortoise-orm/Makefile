@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/23 20:01:55 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/31 11:38:13 adam Exp $
 
 DISTNAME=	tortoise-orm-0.16.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
