@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3268 2020/05/31 11:40:47 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3269 2020/05/31 12:19:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5171,3 +5171,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ipython to 7.15.0 [adam 2020-05-31]
 	Updated multimedia/mkvtoolnix to 47.0.0 [adam 2020-05-31]
 	Updated emulators/libretro-bluemsx to 20200507 [nia 2020-05-31]
+	Added emulators/libretro-fbneo version 20200530 [nia 2020-05-31]
