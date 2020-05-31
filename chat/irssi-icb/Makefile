@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/03/08 16:48:57 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2020/05/31 15:10:11 rillig Exp $
 #
 
 DISTNAME=	irssi-icb-0.15
@@ -26,8 +26,6 @@ USE_TOOLS+=		pkg-config
 SHLIBTOOL_OVERRIDE=	# empty
 
 CONFIGURE_ARGS+=	--with-irssi=${WRKDIR}/${IRSSI_DISTNAME}
-CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
-CONFIGURE_ARGS+=	--disable-glibtest
 
 INSTALLATION_DIRS+=	share/doc/irssi
 
