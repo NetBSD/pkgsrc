@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2020/05/26 11:28:50 joerg Exp $
+$NetBSD: distinfo,v 1.14 2020/05/31 14:11:42 mef Exp $
 
 SHA1 (simulavr-1.0.0.tar.gz) = e7cacc74be974793bd9c18330ec8d128fbd17d42
 RMD160 (simulavr-1.0.0.tar.gz) = 0e9eb32f398943449b564e919765348c32f4c600
@@ -9,7 +9,8 @@ SHA1 (patch-doc_simulavr_texinfo) = b2d169f24623c090038a6d4196f284ae9a611831
 SHA1 (patch-examples_atmel_key_StdDefs_c) = 73a89da0144d1d0cc2c678476270ea1f79300089
 SHA1 (patch-examples_atmel_key_scancodes.h) = f7f6d3f2da8eec4cf9b52800a499bd8300545bc0
 SHA1 (patch-regress_timertest_timer_16bit.c) = 81ee86847fd4d40817b2f4bf01e03aca86856f3c
-SHA1 (patch-src_cmd_gdbserver.cpp) = 4697b3ddb0e1b5e8088beab2a0af67c226921447
+SHA1 (patch-src_Makefile.in) = 4db5a6b72180958466cd46979cb3ad40f45ab9ed
+SHA1 (patch-src_cmd_gdbserver.cpp) = 29156d12667eaa1545628f64737766b75a4e92ed
 SHA1 (patch-src_systemclock_cpp) = 91535a11446dade72752dd0d549d4a605c5e90bc
 SHA1 (patch-src_systemclock_h) = fce9df95336b02b3152ec9b162a085c8c4b20283
 SHA1 (patch-src_traceval_cpp) = a92597bd935916fa0ec366b9187df33f075a7c83
