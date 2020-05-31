@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2019/11/02 22:18:25 rillig Exp $
+# $NetBSD: Makefile,v 1.73 2020/05/31 17:23:45 rillig Exp $
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
 PKGREVISION=		11
@@ -29,14 +29,10 @@ CONF_FILES+=		${EGDIR}/silc.conf.default ${PKG_SYSCONFDIR}/silc.conf
 
 GNU_CONFIGURE_LIBSUBDIR=	${PKGBASE}
 CONFIGURE_ARGS+=		--with-helpdir=${PREFIX}/share/${PKGBASE}/help
-CONFIGURE_ARGS+=		--with-docdir=${PREFIX}/share/doc/${PKGBASE}
-CONFIGURE_ARGS+=		--with-etcdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=		--with-simdir=${PREFIX}/lib/${PKGBASE}/modules
 CONFIGURE_ARGS+=		--with-iconv=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=		--enable-shared
 CONFIGURE_ARGS+=		--with-terminfo
 CONFIGURE_ARGS+=		--without-ncurses
-CONFIGURE_ARGS+=		--without-libtoolfix
 
 # Assembler optimizations.
 #
