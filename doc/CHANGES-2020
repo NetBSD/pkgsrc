@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3279 2020/05/31 16:30:24 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3280 2020/05/31 17:01:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5181,3 +5181,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed emulators/libretro-mupen64plus successor emulators/libretro-parallel-n64 [nia 2020-05-31]
 	Updated games/libretro-nxengine to 20200109 [nia 2020-05-31]
 	Updated games/libretro-craft to 20200504 [nia 2020-05-31]
+	Added emulators/libretro-smsplus version 20200425 [nia 2020-05-31]
