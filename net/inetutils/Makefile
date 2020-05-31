@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:16 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/31 15:05:28 rillig Exp $
 
 DISTNAME=	inetutils-1.9.4
 PKGREVISION=	2
@@ -15,8 +15,6 @@ AUTO_MKDIRS=		yes
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=g
-CONFIGURE_ARGS+=	--with-path-bshell=${SH:Q}
-CONFIGURE_ARGS+=	--with-path-cp=${CP:Q}
 
 TEST_TARGET=		check
 
