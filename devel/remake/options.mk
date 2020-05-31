@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/01/06 17:35:31 ng0 Exp $
+# $NetBSD: options.mk,v 1.2 2020/05/31 17:14:23 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.remake
 PKG_SUPPORTED_OPTIONS=	nls readline
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=	--disable-nls
 
 # readline
 .if !empty(PKG_OPTIONS:Mreadline)
-CONFIGURE_ARGS+= --enable-gpl
 .include "../../mk/readline.buildlink3.mk"
 .else
 CONFIGURE_ARGS+= --disable-readline
