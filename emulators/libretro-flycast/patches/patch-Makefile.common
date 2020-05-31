@@ -1,0 +1,58 @@
+$NetBSD: patch-Makefile.common,v 1.1 2020/05/31 15:20:22 nia Exp $
+
+Avoid bundling depends.
+
+--- Makefile.common.orig	2020-05-29 12:45:55.000000000 +0000
++++ Makefile.common
+@@ -191,8 +191,7 @@ SOURCES_C +=   \
+ 					$(DEPS_DIR)/picotcp/stack/pico_socket_multicast.c \
+ 					$(DEPS_DIR)/picotcp/stack/pico_socket.c \
+ 					$(DEPS_DIR)/picotcp/stack/pico_stack.c \
+-					$(DEPS_DIR)/picotcp/stack/pico_tree.c \
+-					$(DEPS_DIR)/xxhash/xxhash.c
++					$(DEPS_DIR)/picotcp/stack/pico_tree.c
+ 
+ SOURCES_ASM :=
+ 
+@@ -401,21 +400,6 @@ SOURCES_CXX += $(DEPS_DIR)/xbrz/xbrz.cpp
+ endif
+ 
+ ifeq ($(HAVE_CHD),1)
+-INCFLAGS += -I$(DEPS_DIR)/flac/include
+-
+-SOURCES_C += \
+-				 $(DEPS_DIR)/flac/bitmath.c \
+-				 $(DEPS_DIR)/flac/bitreader.c \
+-				 $(DEPS_DIR)/flac/cpu.c \
+-				 $(DEPS_DIR)/flac/crc.c \
+-				 $(DEPS_DIR)/flac/fixed.c \
+-				 $(DEPS_DIR)/flac/float.c \
+-				 $(DEPS_DIR)/flac/format.c \
+-				 $(DEPS_DIR)/flac/lpc.c \
+-				 $(DEPS_DIR)/flac/md5.c \
+-				 $(DEPS_DIR)/flac/memory.c \
+-				 $(DEPS_DIR)/flac/stream_decoder.c
+-
+ SOURCES_C += $(DEPS_DIR)/lzma/C/7zArcIn.c \
+ 				 $(DEPS_DIR)/lzma/C/7zBuf.c \
+ 				 $(DEPS_DIR)/lzma/C/7zCrc.c \
+@@ -440,19 +424,3 @@ SOURCES_C += $(DEPS_DIR)/lzma/C/7zArcIn.
+ 				 $(DEPS_DIR)/lzma/C/Sort.c
+ 
+ endif
+-
+-SOURCES_C +=   $(DEPS_DIR)/zlib/deflate.c \
+-					$(DEPS_DIR)/zlib/gzlib.c \
+-					$(DEPS_DIR)/zlib/uncompr.c \
+-					$(DEPS_DIR)/zlib/zutil.c \
+-					$(DEPS_DIR)/zlib/inffast.c \
+-					$(DEPS_DIR)/zlib/gzread.c \
+-					$(DEPS_DIR)/zlib/crc32.c \
+-					$(DEPS_DIR)/zlib/gzwrite.c \
+-					$(DEPS_DIR)/zlib/inflate.c \
+-					$(DEPS_DIR)/zlib/infback.c \
+-					$(DEPS_DIR)/zlib/inftrees.c \
+-					$(DEPS_DIR)/zlib/trees.c \
+-					$(DEPS_DIR)/zlib/gzclose.c \
+-					$(DEPS_DIR)/zlib/compress.c \
+-					$(DEPS_DIR)/zlib/adler32.c
