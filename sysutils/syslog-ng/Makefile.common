@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2019/11/04 21:28:52 rillig Exp $
+# $NetBSD: Makefile.common,v 1.16 2020/05/31 17:30:17 rillig Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
@@ -34,7 +34,6 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-redis
 CONFIGURE_ARGS+=	--disable-smtp
 CONFIGURE_ARGS+=	--disable-sql
-CONFIGURE_ARGS+=	--disable-ssl
 CONFIGURE_ARGS+=	--disable-stomp
 CONFIGURE_ARGS+=	--disable-sun-streams
 CONFIGURE_ARGS+=	--disable-tcp-wrapper
@@ -42,7 +41,6 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ivykis=system
 CONFIGURE_ARGS+=	--with-mongoc=no
-CONFIGURE_ARGS+=	--with-librabbitmq-client=no
 CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
 
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
