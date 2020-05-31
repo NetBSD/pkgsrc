@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/04/25 19:50:42 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/31 17:15:33 rillig Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -18,6 +18,7 @@ BUILD_DIRS=	${MY_SUBDIR}
 CONFIGURE_DIRS=	${MY_SUBDIR}
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PTHREAD=	no
 MAKE_ENV+=		RUBY_EXTCONF_ARGS=${RUBY_EXTCONF_ARGS:Q}
 TEST_TARGET=		check
 #USE_RUBY_EXTCONF=	yes
