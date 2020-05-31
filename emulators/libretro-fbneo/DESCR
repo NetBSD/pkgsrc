@@ -1,0 +1,11 @@
+Libretro is a simple but powerful development interface that allows for the
+easy creation of emulators, games and multimedia applications that can plug
+straight into any libretro-compatible frontend. This development interface is
+open to others so that they can run these pluggable emulator and game cores
+also in their own programs or devices.
+
+FinalBurn Neo is an emulator for arcade games and select consoles.
+
+It is based on the emulators FinalBurn and old versions of MAME.  Many of
+the developers of this project also worked on FB Alpha. Due to a controversy,
+we no longer do, and recommend that everyone use this emulator instead.
