@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3286 2020/05/31 23:35:28 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.3287 2020/05/31 23:38:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3770,6 +3770,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-beautifulsoup4 to 4.9.0 [gutteridge 2020-04-28]
 	Updated geography/gdal-lib to 3.0.4 [gdt 2020-04-28]
 	Updated geography/py-gdal to 3.0.4 [gdt 2020-04-28]
+	Added security/tor-browser-noscript version 11.0.25 [wiz 2020-04-28]
 	Updated devel/R-Rcpp to 1.0.4.6 [mef 2020-04-29]
 	Updated devel/cmake to 3.17.2 [adam 2020-04-29]
 	Updated devel/cmake-gui to 3.17.2 [adam 2020-04-29]
@@ -3832,6 +3833,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/qemu to 5.0.0 [adam 2020-04-30]
 	Updated www/gnurl to 7.70.0 [nikita 2020-04-30]
 	Updated pkgtools/pkglint to 20.1.3 [rillig 2020-04-30]
+	Added security/tor-browser-https-everywhere version 2020.3.16 [wiz 2020-04-30]
 	Updated devel/eio to 1.7.10 [joerg 2020-05-01]
 	Updated lang/embryo to 1.7.10 [joerg 2020-05-01]
 	Updated sysutils/edbus to 1.7.10 [joerg 2020-05-01]
