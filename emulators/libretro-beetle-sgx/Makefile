@@ -1,40 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:12 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/31 08:44:57 nia Exp $
 
-DISTNAME=	libretro-beetle-sgx-20180512
+DISTNAME=	libretro-beetle-sgx-20200520
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-supergrafx-libretro
-GITHUB_TAG=	0d4d96428073f8734e80a2ebc157daa228babe51
+GITHUB_TAG=	49c87096495438021a32c1bd1abd59b6a8b61ce9
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/beetle_sgx/
 COMMENT=	Libretro core based on the Mednafen SuperGrafx emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
+LIBRETRO_CORE=	mednafen_supergrafx
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
-
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
-
-.include "../../mk/endian.mk"
-
-.if ${MACHINE_ENDIAN} == "big"
-CFLAGS+=	-DMSB_FIRST
-CFLAGS+=	-DBYTE_ORDER=BIG_ENDIAN
-.endif
+LDFLAGS+=	-lz -lFLAC
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/mednafen_supergrafx_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/mednafen_supergrafx_libretro.so
-
+.include "../../emulators/retroarch/core.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
