@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2020/05/22 07:59:29 adam Exp $
+# $NetBSD: Makefile.common,v 1.19 2020/05/31 07:42:13 rillig Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
@@ -11,7 +11,6 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2 ${ADDITIONAL_LICENSE}
 
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg4/patches
 
-USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pod2man perl pkg-config
 HAS_CONFIGURE=		yes
