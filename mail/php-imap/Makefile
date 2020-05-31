@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 21:49:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2020/05/31 16:51:29 rillig Exp $
 
 MODNAME=		imap
 CATEGORIES+=		mail
@@ -10,7 +10,6 @@ CONFLICTS=	php-imap-[0-9]*
 USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.imap-uw}
-CONFIGURE_ARGS+=	--with-${MODNAME}-linkage
 
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 
