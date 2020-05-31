@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/03 11:45:40 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2020/05/31 15:42:08 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lldpd
 PKG_SUPPORTED_OPTIONS=	json snmp xml
@@ -7,7 +7,6 @@ PKG_SUGGESTED_OPTIONS=	json snmp xml
 
 .if !empty(PKG_OPTIONS:Mjson)
 .  include "../../textproc/jansson/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-json
 .endif
 
 .if !empty(PKG_OPTIONS:Msnmp)
