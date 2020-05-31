@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/03/13 21:03:41 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2020/05/31 17:35:39 rillig Exp $
 
 DISTNAME=	tinyproxy-1.10.0
 PKGREVISION=	2
@@ -16,10 +16,8 @@ BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEFS+=		VARBASE
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-config=${PKG_SYSCONFDIR}/tinyproxy.conf
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--enable-transparent-proxy
 
 RCD_SCRIPTS=		tinyproxy
 
