@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/03/25 16:19:48 riastradh Exp $
+$NetBSD: distinfo,v 1.3 2020/05/31 20:50:18 joerg Exp $
 
 SHA1 (gandi.cli/1.5.tar.gz) = 16f19aacb49945777a41a8fced0e8e05b3b50da4
 RMD160 (gandi.cli/1.5.tar.gz) = c64618f7f248d0b296bbb8f0d2092412218f6d1f
 SHA512 (gandi.cli/1.5.tar.gz) = cdcaf4441c253a465e73e6b108ea2e348d5943308263f3d190ef82279aa340378e9c576d71c5d03cf60e4d7586b0282a5a804078129ec96af34e80d5919d6a89
 Size (gandi.cli/1.5.tar.gz) = 167825 bytes
+SHA1 (patch-setup.py) = fe5bbd736b48b2620f33f8dba083015ad0f17a32
