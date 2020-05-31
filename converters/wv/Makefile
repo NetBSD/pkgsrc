@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2020/03/08 16:47:29 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2020/05/31 17:51:19 rillig Exp $
 
 DISTNAME=	wv-1.2.9
 PKGREVISION=	14
@@ -13,9 +13,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.libiconv}
 CONFIGURE_ARGS+=	--with-libwmf=${BUILDLINK_PREFIX.libwmf}
-CONFIGURE_ARGS+=	--with-libxml2=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
