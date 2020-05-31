@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2018/12/18 06:46:39 kamil Exp $
+$NetBSD: distinfo,v 1.9 2020/05/31 20:49:33 joerg Exp $
 
 SHA1 (z3-4.8.3.tar.gz) = bc713372c9be6808306a8e0844caf27c0a10ee2c
 RMD160 (z3-4.8.3.tar.gz) = 3b8bc18719725c0d110ca52f7e692519cbac341e
 SHA512 (z3-4.8.3.tar.gz) = 34a2dca0083ed469fdaf5ac062dda26248633245607ddd9ef90629c5f76ae30f87bfa4191c04ba9be7a617bf182a1bd00b59fd2274699e12ece69b86088c8044
 Size (z3-4.8.3.tar.gz) = 4119116 bytes
-SHA1 (patch-scripts_mk__util.py) = 59c17bbcd05be21089a89ae304662b69bd2a571d
+SHA1 (patch-scripts_mk__genfile__common.py) = ecedf747f4a5b4cb410898a6cb65eed2aad46d27
+SHA1 (patch-scripts_mk__util.py) = 79106c08ce39901d13eaab5a18173fcb0479dc96
