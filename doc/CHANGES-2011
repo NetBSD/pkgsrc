@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3396 2020/05/08 18:10:04 rillig Exp $
+$NetBSD: CHANGES-2011,v 1.3397 2020/05/31 21:01:43 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3206,7 +3206,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-railties to 3.0.10 [taca 2011-08-17]
 	Updated www/ruby-rails3 to 3.0.10 [taca 2011-08-17]
 	Updated misc/tmux to 1.5 [jmmv 2011-08-17]
-	Updated www/ruby-activeresource3 to 3.0.10 [obache 2011-08-18]
 	Updated net/tinyfugue to 4.0s1nb7 [dholland 2011-08-18]
 	Updated security/openssh to 5.8.2nb4 [taca 2011-08-18]
 	Updated net/p5-Net-Amazon to 0.60 [obache 2011-08-18]
@@ -4188,7 +4187,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-DBIx-Connector to 0.47 [hiramatsu 2011-10-24]
 	Updated pkgtools/pkgin to 0.5.2 [imil 2011-10-24]
 	Updated net/wget to 1.13.4 [ryoon 2011-10-24]
-	Updated graphics/libraw to 0.13.8 [gls 2011-10-24]
+	Downgraded graphics/libraw to 0.13.8 [gls 2011-10-24]
 	Updated editors/emacs-snapshot to 24.0.90.20111019 [minskim 2011-10-24]
 	Updated www/py-cherrypy to 3.2.2 [gls 2011-10-24]
 	Updated x11/xorg-cf-files to 1.0.4 [mef 2011-10-25]
@@ -4424,7 +4423,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/ruby-termios to 0.9.6nb2 [taca 2011-11-08]
 	Updated databases/ruby-odbc to 0.99994nb2 [taca 2011-11-08]
 	Updated devel/ruby-debug to 0.10.4nb3 [taca 2011-11-08]
-	Updated devel/ruby-ffi to 1.0.9 [taca 2011-11-08]
 	Updated devel/ruby-metaid to 1.0nb1 [taca 2011-11-08]
 	Updated devel/ruby-parsetree to 3.0.7nb1 [taca 2011-11-08]
 	Updated devel/ruby-rbtree to 0.3.0nb2 [taca 2011-11-08]
@@ -4585,7 +4583,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-System-Command version 1.05 [sno 2011-11-15]
 	Added devel/p5-Git-Repository version 1.22 [sno 2011-11-15]
 	Updated devel/p5-Any-Moose to 0.18 [sno 2011-11-15]
-	Added www/p5-HTTP-Tiny version 0.016 [sno 2011-11-15]
 	Added www/p5-HTTP-Tiny version 0.016 [sno 2011-11-15]
 	Updated net/icsi-finger to 1.0.27nb6 [is 2011-11-15]
 	Added devel/p5-Test-TinyMocker version 0.03 [sno 2011-11-15]
@@ -4854,7 +4851,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/mediatomb to 0.12.1nb7 [sbd 2011-11-27]
 	Updated x11/gtk3 to 3.0.12nb2 [obache 2011-11-27]
 	Updated mail/cue to 20100426 [obache 2011-11-27]
-	Updated devel/bzr to 2.4.2 [cheusov 2011-11-27]
 	Updated devel/bzr to 2.4.2 [cheusov 2011-11-27]
 	Updated devel/bzrtools to 2.4.1 [cheusov 2011-11-27]
 	Updated devel/bzr-svn to 1.1.1 [cheusov 2011-11-27]
