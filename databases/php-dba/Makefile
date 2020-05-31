@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.18 2018/03/02 02:16:08 taca Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/31 16:44:18 rillig Exp $
 
 MODNAME=		dba
 CATEGORIES+=		databases
 COMMENT=		PHP extension for DBM database access
 
-CONFLICTS=	php-dba-[0-9]*
+CONFLICTS=		php-dba-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared
 
 CONFIGURE_ARGS+=	--with-cdb
 CONFIGURE_ARGS+=	--without-dbm
-CONFIGURE_ARGS+=	--with-inifile
 
 .if exists(/usr/include/ndbm.h)
 CONFIGURE_ARGS+=	--with-ndbm=/usr
