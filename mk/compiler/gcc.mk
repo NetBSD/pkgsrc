@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.211 2020/05/30 22:45:36 sjmulder Exp $
+# $NetBSD: gcc.mk,v 1.212 2020/05/31 00:00:13 sjmulder Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -395,6 +395,9 @@ _LANGUAGES.gcc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 .endfor
+
+_WRAP_EXTRA_ARGS.cc+=	-fcommon
+CWRAPPERS_PREPEND.cc+=	-fcommon
 
 .if !empty(USE_LANGUAGES:Mc99)
 _WRAP_EXTRA_ARGS.CC+=	-std=gnu99
