@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/05/31 14:54:10 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/31 16:26:36 tnn Exp $
 
 DISTNAME=	hitch-1.5.2
 CATEGORIES=	security
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://hitch-tls.org/
 COMMENT=	High performance SSL/TLS proxy
 LICENSE=	2-clause-bsd
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
