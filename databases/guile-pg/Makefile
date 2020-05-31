@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/03/08 16:49:04 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2020/05/31 14:49:13 rillig Exp $
 
 DISTNAME=	guile-pg-0.47
 PKGREVISION=	3
@@ -15,8 +15,6 @@ USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	YES
 INFO_FILES=	YES
-
-CONFIGURE_ARGS+=	--with-libpq=${PREFIX}
 
 TEST_TARGET=	check
 # To run tests without compiling
