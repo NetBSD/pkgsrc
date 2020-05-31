@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/05/07 06:49:23 tsutsui Exp $
+# $NetBSD: Makefile,v 1.55 2020/05/31 16:12:10 rillig Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	9
@@ -22,6 +22,7 @@ WRKSRC=			${WRKDIR}/mule
 USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}/man1
+GNU_CONFIGURE_STRICT=	no # everything ok, just ancient
 
 .include "../../mk/bsd.prefs.mk"
 
