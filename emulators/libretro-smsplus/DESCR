@@ -1,0 +1,11 @@
+Libretro is a simple but powerful development interface that allows for the
+easy creation of emulators, games and multimedia applications that can plug
+straight into any libretro-compatible frontend. This development interface is
+open to others so that they can run these pluggable emulator and game cores
+also in their own programs or devices.
+
+SMS Plus is an open source Sega Master System and Game Gear emulator written
+by Charles MacDonald.
+
+SMS Plus GX is an enhanced version which includes improved accuracy and bug
+fixes.
