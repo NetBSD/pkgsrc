@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2019/11/03 17:12:01 rillig Exp $
+# $NetBSD: Makefile.common,v 1.23 2020/05/31 14:46:48 rillig Exp $
 #
 # used by audio/gst-plugins0.10-a52/Makefile
 # used by audio/gst-plugins0.10-lame/Makefile
@@ -16,9 +16,7 @@ GST_PLUGINS0.10_VER=	0.10.19
 .for driver in	a52dec \
 		amrnb \
 		dvdread \
-		dvdnav \
 		lame \
-		id3tag \
 		mad \
 		mpeg2dec \
 		sidplay
