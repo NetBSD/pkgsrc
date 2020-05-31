@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2020/05/31 15:18:30 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2020/05/31 16:38:00 rillig Exp $
 
 BUILDLINK_TREE+=	qdbm
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.qdbm?=	../../databases/qdbm
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
-.if defined(GNU_CONFIGURE_PTHREAD)
+.if ${GNU_CONFIGURE_PTHREAD:Uyes:tl} == yes
 CONFIGURE_ARGS+=		--enable-pthread
 .endif
 BUILDLINK_CFLAGS.qdbm+=		${PTHREAD_CFLAGS}
