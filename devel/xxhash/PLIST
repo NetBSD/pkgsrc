@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/10 13:47:31 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/31 09:51:35 nia Exp $
 bin/xxhsum
 include/xxhash.h
+${PLIST.darwin}lib/libxxhash.0.dylib
+lib/libxxhash.a
+${PLIST.darwin}lib/libxxhash.${PKGVERSION}.dylib
+${PLIST.darwin}lib/libxxhash.dylib
+${PLIST.notdarwin}lib/libxxhash.so
+${PLIST.notdarwin}lib/libxxhash.so.0
+${PLIST.notdarwin}lib/libxxhash.so.${PKGVERSION}
+lib/pkgconfig/libxxhash.pc
 man/man1/xxhsum.1
