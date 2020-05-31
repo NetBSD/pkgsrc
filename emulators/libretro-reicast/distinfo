@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2019/12/22 22:24:51 joerg Exp $
-
-SHA1 (libretro-reicast-20190508-8c38fcedbe064f7fbda9c2213fd6987b7d4e4dbc.tar.gz) = e9199c1488c6ea9d1fdaa235d224a084117dcce0
-RMD160 (libretro-reicast-20190508-8c38fcedbe064f7fbda9c2213fd6987b7d4e4dbc.tar.gz) = f48d93863cdb9c28682359b7ea0e2f76814c81ae
-SHA512 (libretro-reicast-20190508-8c38fcedbe064f7fbda9c2213fd6987b7d4e4dbc.tar.gz) = 65463f18c7e49bda396ee5beb5a1bc39f5c58e047b37ee3857200a97ebb0a0854a2dc79f520ddc5afc0aeebff73baf60e28d79091c8306dbd035715c507f2fc1
-Size (libretro-reicast-20190508-8c38fcedbe064f7fbda9c2213fd6987b7d4e4dbc.tar.gz) = 2613651 bytes
-SHA1 (patch-Makefile) = d8d2e91d0c1705647f76da134cd9cd0661d3ec95
-SHA1 (patch-core_hw_sh4_dyna_driver.cpp) = 6d00a7297f528fe3389a13872095da80200a9013
-SHA1 (patch-core_libretro_common.cpp) = b1291f55ced1dc92087d31270f8bc582c2db6fc5
