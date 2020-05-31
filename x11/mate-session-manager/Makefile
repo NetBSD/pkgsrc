@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/04/11 06:33:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/31 15:49:15 rillig Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -17,7 +17,6 @@ DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_TOOLS+=	autoreconf automake autoconf aclocal libtoolize
 
 .include "../../graphics/MesaLib/features.mk"
-CONFIGURE_ARGS+=	--with-glesv2=${MESALIB_SUPPORTS_GLESv2}
 PLIST_VARS+=	glesv2
 .if ${MESALIB_SUPPORTS_GLESv2} == "yes"
 PLIST.glesv2=	yes
