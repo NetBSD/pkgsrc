@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/05/26 09:45:13 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/05/31 11:45:45 nia Exp $
 #
 # used by emulators/libretro-bsnes-mercury/Makefile
 # used by emulators/libretro-bsnes-mercury-accuracy/Makefile
@@ -7,7 +7,6 @@
 DISTNAME=	libretro-bsnes-mercury-20180803
 PKGNAME=	${DISTNAME:S/libretro-bsnes-mercury/libretro-bsnes-mercury-${BSNES_PROFILE}/}
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	bsnes-mercury
 GITHUB_TAG=	4e221df676ffc7b46d083cf2ae100131eabe5076
 
@@ -15,36 +14,23 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c gnu++11
-
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
+USE_LANGUAGES=	c c++
 
 MAKE_FLAGS+=	profile=${BSNES_PROFILE}
 MAKE_FLAGS+=	compiler=${CXX:Q}
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=target-libretro/link.T
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/libretro-bsnes-mercury/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/libretro-bsnes-mercury/patches
 
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/out/bsnes_mercury_${BSNES_PROFILE}_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/bsnes_mercury_${BSNES_PROFILE}_libretro.so
-
-.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 # Needed in libco/aarch64.c
 .if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "aarch64eb"
 CFLAGS+=	-DHAVE_POSIX_MEMALIGN=1
 .endif
 
-.include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+LIBRETRO_CORE=	bsnes_mercury_${BSNES_PROFILE}
+
+.include "../../emulators/retroarch/core.mk"
