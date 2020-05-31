@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2017/08/29 12:54:47 fhajny Exp $
+# $NetBSD: options.mk,v 1.19 2020/05/31 14:43:14 rillig Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -20,12 +20,9 @@ CONFIGURE_ARGS+=	--without-mecab
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
-CONFIGURE_ARGS+=	--with-cutter
 TEST_TARGET=		check
 BUILDLINK_API_DEPENDS.cutter+=		cutter>=1.1.6
 .include "../../devel/cutter/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-cutter
 .endif
 
 .if !empty(PKG_OPTIONS:Mzlib)
