@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2020/05/31 12:28:21 nia Exp $
+# $NetBSD: Makefile,v 1.319 2020/05/31 15:20:21 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -108,6 +108,7 @@ SUBDIR+=	libretro-desmume
 SUBDIR+=	libretro-dolphin
 SUBDIR+=	libretro-fbneo
 SUBDIR+=	libretro-fceumm
+SUBDIR+=	libretro-flycast
 SUBDIR+=	libretro-freeintv
 SUBDIR+=	libretro-fuse
 SUBDIR+=	libretro-gambatte
