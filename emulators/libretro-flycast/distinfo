@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2020/05/31 15:20:22 nia Exp $
+
+SHA1 (libretro-flycast-20200529-e595af5dfbff2e49fbcb95bec5b240785c8b4f4f.tar.gz) = b4c6492680fd84a8dc4d7ef025ab648438e305dc
+RMD160 (libretro-flycast-20200529-e595af5dfbff2e49fbcb95bec5b240785c8b4f4f.tar.gz) = 5545255f788358f03ab5340436d75a17e28d8523
+SHA512 (libretro-flycast-20200529-e595af5dfbff2e49fbcb95bec5b240785c8b4f4f.tar.gz) = 0c6bf51960a36069912a0d44dfc96a0cc8fd352e6e06087bd11dd309045b8f0efbd83629f894f213f822efe73d3f94a9f3461cfc3f14c77c56ead664bcc23acd
+Size (libretro-flycast-20200529-e595af5dfbff2e49fbcb95bec5b240785c8b4f4f.tar.gz) = 4301350 bytes
+SHA1 (patch-Makefile) = 8159fc931d8514bd100ead06c3fe1ae4d11dfac0
+SHA1 (patch-Makefile.common) = 4bfdaae74db7672f11698040bbb29d851006c2b3
+SHA1 (patch-core_hw_aica_dsp__x64.cpp) = 2ed58220ac214136879bc4aa8939c11b8d6f0916
+SHA1 (patch-core_hw_sh4_dyna_driver.cpp) = 6067ac4c8009759baeffc71049e7987c5441947b
+SHA1 (patch-core_libretro_common.cpp) = c3cf6bcfa2e2f9a74459517f8d9e3d0a562cf479
+SHA1 (patch-core_log_StringUtil.h) = b0726f1ab856adb27ba672f8a9ca3ef9f369e583
+SHA1 (patch-core_rec-x64_rec__x64.cpp) = c0074b495a15f3cc8b4772a7b51a1100cff04286
