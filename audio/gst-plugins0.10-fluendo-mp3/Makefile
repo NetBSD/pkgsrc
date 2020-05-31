@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/08 16:48:41 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/31 14:44:45 rillig Exp $
 
 DISTNAME=		gst-fluendo-mp3-0.10.32
 PKGREVISION=		1
@@ -14,7 +14,6 @@ LICENSE=		mit
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-CONFIGURE_ARGS+=	--with-liboil
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../devel/liboil/buildlink3.mk"
