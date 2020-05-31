@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3271 2020/05/31 12:38:58 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3272 2020/05/31 15:20:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5174,3 +5174,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added emulators/libretro-fbneo version 20200530 [nia 2020-05-31]
 	Removed emulators/libretro-fbalpha successor emulators/fbneo [nia 2020-05-31]
 	Updated emulators/libretro-virtualjaguar to 20200521 [nia 2020-05-31]
+	Added emulators/libretro-flycast version 20200529 [nia 2020-05-31]
