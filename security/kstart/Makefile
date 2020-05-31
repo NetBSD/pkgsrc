@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/22 05:27:06 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/31 09:36:44 rillig Exp $
 
 DISTNAME=	kstart-4.2
 CATEGORIES=	sysutils
@@ -11,7 +11,6 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--disable-k4start
 CONFIGURE_ARGS+=	--enable-setpag
 
 # As the NetBSD base system doesn't ship with afslog
