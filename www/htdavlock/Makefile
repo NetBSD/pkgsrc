@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/05/22 10:56:45 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/31 15:03:06 rillig Exp $
 
 DISTNAME=	htdavlock-0.2
 PKGREVISION=	10
@@ -11,6 +11,7 @@ COMMENT=	Apache mod_dav_fs lock database management tool
 LICENSE=	original-bsd
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_APXS2=	no
 USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=       --with-apxs=${APXS}
 
