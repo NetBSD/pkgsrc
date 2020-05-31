@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2020/04/12 08:28:34 adam Exp $
+# $NetBSD: Makefile,v 1.110 2020/05/31 17:12:23 rillig Exp $
 
 DISTNAME=		rapidsvn-0.12.1
 PKGREVISION=		42
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-svn-include=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-svn-lib=${BUILDLINK_DIR}/lib
 CONFIGURE_ARGS+=	--with-doxygen=no
+
+GNU_CONFIGURE_WX_VERSION=	no
 
 # While apr is actually a dependency, we ride it being included via
 # subversion-base, following the precedent of devel/foo-subversion and
