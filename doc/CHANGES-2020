@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3264 2020/05/31 08:45:32 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3265 2020/05/31 09:51:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5167,3 +5167,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-beetle-wswan to 20200518 [nia 2020-05-31]
 	Updated emulators/libretro-beetle-vb to 20200518 [nia 2020-05-31]
 	Updated emulators/libretro-beetle-sgx to 20200520 [nia 2020-05-31]
+	Updated devel/xxhash to 0.7.3 [nia 2020-05-31]
