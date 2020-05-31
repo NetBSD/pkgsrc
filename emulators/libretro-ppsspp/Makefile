@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/26 09:45:16 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/31 18:51:00 nia Exp $
 
 PKGNAME=	libretro-ppsspp-1.7.5
 CATEGORIES=	emulators
@@ -34,13 +34,9 @@ SITES.ppsspp-spriv.tar.gz= \
 WRKSRC=		${WRKDIR}/ppsspp-${PKGVERSION_NOREV}
 BUILD_DIRS=	libretro
 
-USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++11
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
+LIBRETRO_CORE=	ppsspp
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -55,25 +51,15 @@ MAKE_FLAGS+=		TARGET_ARCH=x86_64
 MAKE_FLAGS+=		TARGET_ARCH=x86
 .endif
 
-MAKE_FLAGS+=		GIT_VERSION="${PKGVERSION}-pkgsrc"
-
 LDFLAGS+=		${BUILDLINK_LDADD.libexecinfo}
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 post-extract:
 	${MV} ${WRKDIR}/armips-${ARMIPS_TAG}/* ${WRKSRC}/ext/armips
 	${MV} ${WRKDIR}/glslang-${GLSLANG_TAG}/* ${WRKSRC}/ext/glslang
 	${MV} ${WRKDIR}/SPIRV-Cross-${SPRIV_TAG}/* ${WRKSRC}/ext/SPIRV-Cross
 
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/libretro/ppsspp_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/ppsspp_libretro.so
-
 .include "options.mk"
+.include "../../emulators/retroarch/core.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
