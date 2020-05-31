@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/03/26 02:33:15 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2020/05/31 15:22:21 rillig Exp $
 
 DISTNAME=	lbreakout2-2.6.5
 CATEGORIES=	games
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
-CONFIGURE_ARGS+=	--with-highscore-path=${PREFIX}/share/games/
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
