@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/05/26 09:45:14 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/31 18:36:29 nia Exp $
 
 DISTNAME=	libretro-dolphin-20180827
 PKGREVISION=	10
@@ -50,8 +50,8 @@ LDFLAGS.NetBSD+=	-lrt
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/dolphin_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/dolphin_libretro.so
+	${INSTALL_LIB} ${WRKSRC}/dolphin_libretro.${SOEXT} \
+	    ${DESTDIR}${PREFIX}/lib/libretro/dolphin_libretro.${SOEXT}
 
 .if ${OPSYS} != "Darwin"
 .include "../../archivers/lzo/buildlink3.mk"
