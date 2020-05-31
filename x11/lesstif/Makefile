@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2018/03/12 11:15:53 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2020/05/31 15:24:20 rillig Exp $
 
 DISTNAME=	lesstif-0.95.2
 PKGREVISION=	7
@@ -17,9 +17,7 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-verbose
-CONFIGURE_ARGS+=	--enable-editres
 CONFIGURE_ARGS+=	--enable-production
-CONFIGURE_ARGS+=	--enable-xdnd
 
 # The following forces the build process to use sed as the HTML-to-text
 # converter.
