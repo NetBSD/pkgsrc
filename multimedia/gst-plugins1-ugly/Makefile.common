@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2020/01/10 12:47:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.33 2020/05/31 14:47:47 rillig Exp $
 #
 # used by audio/gst-plugins1-a52/Makefile
 # used by audio/gst-plugins1-lame/Makefile
@@ -16,8 +16,6 @@ GST_PLUGINS1_VER=	1.16.2
 .for driver in	a52dec \
 		amrnb \
 		dvdread \
-		lame \
-		mad \
 		mpeg2dec \
 		sidplay
 CONFIGURE_ARGS+=	--disable-${driver}
