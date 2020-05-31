@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3263 2020/05/31 08:29:45 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3264 2020/05/31 08:45:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5166,3 +5166,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Net-Curl to 0.44 [dogcow 2020-05-30]
 	Updated emulators/libretro-beetle-wswan to 20200518 [nia 2020-05-31]
 	Updated emulators/libretro-beetle-vb to 20200518 [nia 2020-05-31]
+	Updated emulators/libretro-beetle-sgx to 20200520 [nia 2020-05-31]
