@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2020/04/27 18:50:26 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/05/31 20:49:32 joerg Exp $
 
 SHA1 (gdspy-1.5.2.zip) = 97a0f614aee05b79dbcec42740670c98e4980eaa
 RMD160 (gdspy-1.5.2.zip) = d2fcfada1ee830fa9a63c690418935c6b6703ca4
 SHA512 (gdspy-1.5.2.zip) = 33fb48da4a9ed9e789d9da41e8428c859c66f39d50a2edf88cbe41f9396d210e5b7f41b5446814f0f52ef51368a5fb689a96cdc3b71d93ba03bfc83fb9306cb0
 Size (gdspy-1.5.2.zip) = 7128099 bytes
+SHA1 (patch-setup.py) = 9cd9fe70eff8346a03f758cf3c72d94e02ed50bf
