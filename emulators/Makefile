@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.320 2020/05/31 15:22:17 nia Exp $
+# $NetBSD: Makefile,v 1.321 2020/05/31 16:03:04 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -119,6 +119,7 @@ SUBDIR+=	libretro-mupen64plus
 SUBDIR+=	libretro-nestopia
 SUBDIR+=	libretro-np2kai
 SUBDIR+=	libretro-o2em
+SUBDIR+=	libretro-parallel-n64
 SUBDIR+=	libretro-pcsx-rearmed
 SUBDIR+=	libretro-picodrive
 SUBDIR+=	libretro-ppsspp
