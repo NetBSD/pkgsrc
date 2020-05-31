@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/05/22 10:55:50 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/05/31 15:36:12 rillig Exp $
 #
 
 PKGREVISION=	21
@@ -12,7 +12,7 @@ CONF_FILES+=	${PREFIX}/share/examples/libprelude/global.conf ${PKG_SYSCONFDIR}/d
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/idmef-client.conf ${PKG_SYSCONFDIR}/default/idmef-client.conf
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/tls.conf ${PKG_SYSCONFDIR}/default/tls.conf
 
-CONFIGURE_ARGS+=	--without-python --without-lua --without-perl --without-ruby
+CONFIGURE_ARGS+=	--without-python --without-lua --without-perl
 
 # Work around mktime configure test failure leading to build issue
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
