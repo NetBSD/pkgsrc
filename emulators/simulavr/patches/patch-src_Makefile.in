@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.in,v 1.2 2014/08/29 04:40:06 mef Exp $
+$NetBSD: patch-src_Makefile.in,v 1.3 2020/05/31 14:11:42 mef Exp $
 
 /usr/pkg/bin/swig -c++ -python -Ipython -o pysim ...
 ...
@@ -11,7 +11,7 @@ pysimulavr_wrap.cpp:146:20: fatal error: Python.h: No such file or directory
  @USE_SWIG_TRUE@@USE_TCL_TRUE@TCL_INCLUDE = @AVR_TCL_INCLUDE@
  @PYTHON_USE_TRUE@@USE_SWIG_TRUE@PYTHON_MODUL_LIB = _pysimulavr@PYTHON_MODULE_EXTENSION@
 -@PYTHON_USE_TRUE@@USE_SWIG_TRUE@PYTHON_XTRA_INC = -Ipython
-+@PYTHON_USE_TRUE@@USE_SWIG_TRUE@PYTHON_XTRA_INC = -I@PREFIX@/include/python2.7 -Ipython
++@PYTHON_USE_TRUE@@USE_SWIG_TRUE@PYTHON_XTRA_INC = -I@PREFIX@/include/@PY_VER_SUFFIX@ -Ipython
  @PYTHON_USE_TRUE@@USE_SWIG_TRUE@PYTHON_MODUL_INTERFACE = $(srcdir)/python/pysimulavr.i
  @PYTHON_USE_TRUE@@USE_SWIG_TRUE@nodist_lib_pysimulavr_la_SOURCES = pysimulavr_wrap.cpp
  @PYTHON_USE_TRUE@@USE_SWIG_TRUE@lib_pysimulavr_la_CPPFLAGS = $(PYTHON_CPPFLAGS) $(PYTHON_XTRA_INC)
