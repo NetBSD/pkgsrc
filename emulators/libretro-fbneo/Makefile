@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/31 12:19:33 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/31 15:26:09 nia Exp $
 
 DISTNAME=	libretro-fbneo-20200530
 CATEGORIES=	emulators
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libretro/FBNeo/tree/master/src/burner/libretro
 COMMENT=	Libretro core based on the FinalBurn Neo arcade game emulator
 LICENSE=	fbalpha-license
+
+SUPERSEDES+=	libretro-fbalpha-[0-9]*
 
 BUILD_DIRS=	src/burner/libretro
 USE_LANGUAGES=	c c++
