@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/05/30 20:36:15 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/31 18:34:56 nia Exp $
 
 DISTNAME=	libretro-mame2010-20200525
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	mame2010-libretro
 GITHUB_TAG=	bef96188e7276422eab81b44b41361896885bae5
 
@@ -11,16 +10,10 @@ HOMEPAGE=	https://docs.libretro.com/library/mame_2010/
 COMMENT=	Libretro core based on the MAME 0.139 arcade game emulator
 LICENSE=	mame-license
 
-USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
+LIBRETRO_CORE=	mame2010
 
-MAKE_FLAGS+=	platform=unix
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 MAKE_FLAGS+=	BUILD_ZLIB=0
 
 .include "../../mk/endian.mk"
@@ -59,15 +52,10 @@ MAKE_FLAGS+=	PTR64=1
 .  endif
 .endfor
 
+.include "../../emulators/retroarch/core.mk"
+
 MAKE_FLAGS+=	CC=${CXX:Q}
 MAKE_FLAGS+=	LD=${CXX:Q}
 
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/mame2010_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/mame2010_libretro.so
-
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
