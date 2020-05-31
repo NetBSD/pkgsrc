@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3281 2020/05/31 18:15:28 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3282 2020/05/31 19:47:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5183,3 +5183,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/libretro-craft to 20200504 [nia 2020-05-31]
 	Added emulators/libretro-smsplus version 20200425 [nia 2020-05-31]
 	Updated emulators/libretro-beetle-saturn to 20200526 [nia 2020-05-31]
+	Updated net/gallery-dl to 1.14.0 [leot 2020-05-31]
