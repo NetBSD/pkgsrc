@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:15 nia Exp $
-lib/libretro/mupen64plus_libretro.${SOEXT}
