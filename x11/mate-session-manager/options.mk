@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/05/22 13:03:21 youri Exp $
+# $NetBSD: options.mk,v 1.2 2020/05/31 15:49:15 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-session-manager
 PKG_SUPPORTED_OPTIONS=	inet6 upower
@@ -14,7 +14,4 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if !empty(PKG_OPTIONS:Mupower)
 .include "../../sysutils/upower/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-upower
-.else
-CONFIGURE_ARGS+=	--disable-upower
 .endif
