@@ -1,0 +1,6 @@
+This package provides the certificates distributed by the Mozilla
+Project.
+
+It also provides a script, update-ca-certs, which can be used to manage
+a location that makes certificates usable by TLS implementations,
+including installing select certificates from this package.
