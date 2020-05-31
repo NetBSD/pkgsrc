@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2020/03/20 11:58:20 nia Exp $
+# $NetBSD: Makefile,v 1.97 2020/05/31 09:25:51 rillig Exp $
 
 DISTNAME=	zsh-5.8
 CATEGORIES=	shells
@@ -15,6 +15,8 @@ USE_TOOLS+=		automake autoconf makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 TEXINFO_REQD=		4.0
+
+CHECK_PORTABILITY_SKIP=	Misc/c2z # not used
 
 CONFIGURE_ARGS+=	--disable-gdbm
 CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR:Q}
