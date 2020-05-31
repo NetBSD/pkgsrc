@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/31 15:26:09 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/31 17:38:15 nia Exp $
 
 DISTNAME=	libretro-flycast-20200529
 CATEGORIES=	emulators
@@ -7,7 +7,7 @@ GITHUB_TAG=	e595af5dfbff2e49fbcb95bec5b240785c8b4f4f
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/flycast/
-COMMENT=	Libretro core based on the Reicast Sega Dreamcast emulator
+COMMENT=	Libretro core based on the Flycast Sega Dreamcast emulator
 LICENSE=	gnu-gpl-v2
 
 SUPERSEDES+=	libretro-reicast-[0-9]*
