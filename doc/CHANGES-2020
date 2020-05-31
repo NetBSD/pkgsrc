@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3274 2020/05/31 15:54:01 kim Exp $
+$NetBSD: CHANGES-2020,v 1.3275 2020/05/31 15:55:16 kim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5176,4 +5176,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-virtualjaguar to 20200521 [nia 2020-05-31]
 	Added emulators/libretro-flycast version 20200529 [nia 2020-05-31]
 	Removed emulators/libretro-reicast successor emulators/libretro-flycast [nia 2020-05-31]
-	Updated security/ca-certificates to 20190110 [kim 2020-05-31]
+	Added security/ca-certificates version 20190110 [kim 2020-05-31]
