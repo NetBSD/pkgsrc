@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2020/05/22 10:55:49 adam Exp $
+# $NetBSD: Makefile,v 1.139 2020/05/31 14:40:29 rillig Exp $
 
 DISTNAME=	cups-filters-1.27.4
 PKGREVISION=	2
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-braille
 CONFIGURE_ARGS+=	--disable-ldap
 CONFIGURE_ARGS+=	--disable-mutool
-CONFIGURE_ARGS+=	--enable-ijs
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-apple-raster-filter=rastertopdf
 CONFIGURE_ARGS+=	--with-gs-path=${PREFIX}/bin/gs
