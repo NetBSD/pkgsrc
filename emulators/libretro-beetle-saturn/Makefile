@@ -1,45 +1,35 @@
-# $NetBSD: Makefile,v 1.5 2020/05/26 09:45:12 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/31 18:15:11 nia Exp $
 
-DISTNAME=	libretro-beetle-saturn-20180620
-PKGREVISION=	1
+DISTNAME=	libretro-beetle-saturn-20200526
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-saturn-libretro
-GITHUB_TAG=	1983713f665e86459900a08873fac09e70c31bfa
+GITHUB_TAG=	7ba4ff3aed62a60e99e0758a92dbb1924c63d0fa
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/beetle_saturn/
 COMMENT=	Libretro core based on the Mednafen Sega Saturn emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
+LIBRETRO_CORE=	mednafen_saturn
 
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+LDFLAGS+=	-lFLAC -lz
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+MAKE_FLAGS+=	HAVE_CDROM=0
+.endif
 
 # "experimental, x86_64 only" - https://mednafen.github.io/
 # Not built by upstream's buildbot for i386, ARM, or PowerPC.
 ONLY_FOR_PLATFORM=	*-*-x86_64
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-.include "../../mk/endian.mk"
-
-.if ${MACHINE_ENDIAN} == "big"
-CFLAGS+=	-DMSB_FIRST
-.endif
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/mednafen_saturn_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/mednafen_saturn_libretro.so
-
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../emulators/retroarch/core.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
