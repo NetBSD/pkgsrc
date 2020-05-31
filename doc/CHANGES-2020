@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3269 2020/05/31 12:19:47 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3270 2020/05/31 12:29:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5172,3 +5172,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/mkvtoolnix to 47.0.0 [adam 2020-05-31]
 	Updated emulators/libretro-bluemsx to 20200507 [nia 2020-05-31]
 	Added emulators/libretro-fbneo version 20200530 [nia 2020-05-31]
+	Removed emulators/libretro-fbalpha successor emulators/fbneo [nia 2020-05-31]
