@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/26 09:45:15 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/31 17:49:49 nia Exp $
 
 NP2KAI_REV=	18
 DISTNAME=	libretro-np2kai-0.86.${NP2KAI_REV}
@@ -15,15 +15,9 @@ LICENSE=	mit
 BUILD_DIRS=	sdl2
 MAKE_FILE=	Makefile.libretro
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
+LIBRETRO_CORE=	np2kai
 
-USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
-
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,11 +26,5 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 MAKE_FLAGS=	SUPPORT_NET=0
 .endif
 
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/sdl2/np2kai_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/np2kai_libretro.so
-
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../emulators/retroarch/core.mk"
 .include "../../mk/bsd.pkg.mk"
