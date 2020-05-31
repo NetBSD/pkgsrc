@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/31 17:01:08 nia Exp $
+
+SHA1 (libretro-smsplus-20200425-72b9bdccd6e5758ac17efd88b9bece94ec137e80.tar.gz) = 9679221c25112dbcdf90100195613154ad62443f
+RMD160 (libretro-smsplus-20200425-72b9bdccd6e5758ac17efd88b9bece94ec137e80.tar.gz) = b6b47bec1688dfe79381284aea9064e05c89bba6
+SHA512 (libretro-smsplus-20200425-72b9bdccd6e5758ac17efd88b9bece94ec137e80.tar.gz) = ceac4d440ca9a8f3bf541d9772237da5fa653f6092ee7a67acefc0c09237cb5daa66a03f13a51d25a4616a96bea3a9694e1ca53761b762847ddfb62d3902d079
+Size (libretro-smsplus-20200425-72b9bdccd6e5758ac17efd88b9bece94ec137e80.tar.gz) = 448757 bytes
