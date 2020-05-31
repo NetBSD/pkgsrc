@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/07/11 09:25:24 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/31 15:18:30 rillig Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -15,8 +15,9 @@ MY_SUBDIR=	java
 BUILD_DIRS=	${MY_SUBDIR:Q}
 CONFIGURE_DIRS=	${MY_SUBDIR:Q}
 
-GNU_CONFIGURE=	yes
-TEST_TARGET=	check
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PTHREAD=	no
+TEST_TARGET=		check
 
 .include "../../databases/qdbm/buildlink3.mk"
 .include "../../mk/java-vm.mk"
