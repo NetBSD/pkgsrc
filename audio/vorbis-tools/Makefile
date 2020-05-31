@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/05/22 10:55:57 adam Exp $
+# $NetBSD: Makefile,v 1.81 2020/05/31 17:37:36 rillig Exp $
 
 DISTNAME=	vorbis-tools-1.4.0
 PKGREVISION=	23
@@ -18,8 +18,6 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_PREFIX.libogg}
-CONFIGURE_ARGS+=	--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis}
 
 PLIST_SUBST+=	DISTNAME=${DISTNAME}
 
