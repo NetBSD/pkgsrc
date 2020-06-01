@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/06/01 06:25:31 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2020/06/01 23:07:27 mef Exp $
 
 .include "version.mk"
 
@@ -59,7 +59,7 @@ CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
 .endfor
 RCD_SCRIPTS=		webmin
 
-REPLACE_PYTHON= webmin/acme_tiny.py
+REPLACE_PYTHON=	webmin/acme_tiny.py
 
 CHECK_INTERPRETER_SKIP+=	share/webmin/webmin-gentoo-init
 
