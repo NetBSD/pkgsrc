@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/05/21 20:53:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2020/06/01 20:02:31 rillig Exp $
 
 DISTNAME=	dikt-2j
 PKGREVISION=	33
@@ -15,6 +15,7 @@ BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
 BUILD_DEPENDS+=	xz-[0-9]*:../../archivers/xz
 
 USE_TOOLS+=	tar
+TOOLS_BROKEN+=	perl
 USE_LIBTOOL=	yes
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
