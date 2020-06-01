@@ -1,12 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/21 06:35:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/01 16:01:01 adam Exp $
+bin/xmlschema-json2xml-${PYVERSSUFFIX}
+bin/xmlschema-validate-${PYVERSSUFFIX}
+bin/xmlschema-xml2json-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/xmlschema/__init__.py
 ${PYSITELIB}/xmlschema/__init__.pyc
 ${PYSITELIB}/xmlschema/__init__.pyo
+${PYSITELIB}/xmlschema/cli.py
+${PYSITELIB}/xmlschema/cli.pyc
+${PYSITELIB}/xmlschema/cli.pyo
 ${PYSITELIB}/xmlschema/codepoints.py
 ${PYSITELIB}/xmlschema/codepoints.pyc
 ${PYSITELIB}/xmlschema/codepoints.pyo
