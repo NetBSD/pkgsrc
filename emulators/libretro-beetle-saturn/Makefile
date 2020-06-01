@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/31 18:15:11 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/01 19:36:32 nia Exp $
 
 DISTNAME=	libretro-beetle-saturn-20200526
 CATEGORIES=	emulators
@@ -29,7 +29,6 @@ ONLY_FOR_PLATFORM=	*-*-x86_64
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
 
 .include "../../emulators/retroarch/core.mk"
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
