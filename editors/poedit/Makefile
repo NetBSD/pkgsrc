@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2020/05/06 14:04:29 adam Exp $
+# $NetBSD: Makefile,v 1.96 2020/06/01 06:03:25 rillig Exp $
 
 VERSION=	2.3
 DISTNAME=	poedit-${VERSION}
@@ -18,7 +18,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config zip:run
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+CONFIGURE_ARGS+=		--with-boost=${BUILDLINK_PREFIX.boost-libs}
+GNU_CONFIGURE_WX_VERSION=	no
 
 CXXFLAGS+=		-fpermissive
 BUILDLINK_TRANSFORM+=	rm:-Wall
