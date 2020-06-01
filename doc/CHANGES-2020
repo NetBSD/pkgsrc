@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3325 2020/06/01 20:50:05 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3326 2020/06/01 21:46:58 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5238,3 +5238,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-wcwidth to 0.2.2 [adam 2020-06-01]
 	Updated devel/py-setuptools to 44.1.1 [adam 2020-06-01]
 	Updated pkgtools/pkglint to 20.1.12 [rillig 2020-06-01]
+	Updated mail/sympa to 6.2.56 [bouyer 2020-06-01]
