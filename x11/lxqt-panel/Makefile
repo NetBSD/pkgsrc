@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2020/04/26 03:05:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/01 12:24:06 pin Exp $
 
-DISTNAME=	lxqt-panel-0.14.1
-PKGREVISION=	1
+VERSION=	0.15.1
+DISTNAME=	lxqt-panel-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-panel/0.14.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-panel/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+HOMEPAGE=	https://github.com/lxqt/lxqt-panel/
 COMMENT=	Desktop panel
 LICENSE=	gnu-lgpl-v2.1
 
@@ -19,7 +19,7 @@ CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+.if ${OPSYS} != "Linux"
 CMAKE_ARGS+=	-DCPULOAD_PLUGIN=No
 CMAKE_ARGS+=	-DKBINDICATOR_PLUGIN=No
 CMAKE_ARGS+=	-DMOUNT_PLUGIN=No
@@ -27,6 +27,7 @@ CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
 CMAKE_ARGS+=	-DNETWORKMONITOR_PLUGIN=No
 CMAKE_ARGS+=	-DSYSSTAT_PLUGIN=No
 CMAKE_ARGS+=	-DVOLUME_USE_ALSA=No
+CMAKE_ARGS+=	-DBACKLIGHT_PLUGIN=No
 .endif
 
 MENU_CONF=		share/examples/lxqt/xdg/menus

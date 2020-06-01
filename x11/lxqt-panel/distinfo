@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/04/26 03:05:51 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2020/06/01 12:24:06 pin Exp $
 
-SHA1 (lxqt-panel-0.14.1.tar.xz) = 757fc18e72f33b3cbec4d468f6f95bd3c10d202f
-RMD160 (lxqt-panel-0.14.1.tar.xz) = 2d140a1b203e236198b109e5e9c0c3477efdb2b4
-SHA512 (lxqt-panel-0.14.1.tar.xz) = e7cb361a13ac480cda50bc0549d5501f0d4f5bb6c8e257febf81550aaa88c0c55b615762aedb1f03fd654f79efe5aa2590b1dd592f6ae8c7e5a8d08086e0a687
-Size (lxqt-panel-0.14.1.tar.xz) = 439252 bytes
+SHA1 (lxqt-panel-0.15.1.tar.xz) = 7eab6a7d8c09524a776a34498167ce0c77468082
+RMD160 (lxqt-panel-0.15.1.tar.xz) = e70367893df26d6d6020faf95630b790d4d88890
+SHA512 (lxqt-panel-0.15.1.tar.xz) = 8eb9856faa2ce56c56df7514772d3ae6d31339a10d16e1ed659be0a2affc57fd16e01e05cb67c4205dfb773234ca9b8a69f414f742ccc30495bf4e2acfa0513f
+Size (lxqt-panel-0.15.1.tar.xz) = 473356 bytes
 SHA1 (patch-panel_CMakeLists.txt) = 503d92f919776787cf797ef40ab4f054a2709ed3
