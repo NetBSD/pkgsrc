@@ -498,7 +498,7 @@ func (t *Tester) SetUpPackage(pkgpath RelPath, makefileLines ...string) CurrPath
 	mlines := []string{
 		MkCvsID,
 		"",
-		"DISTNAME=\t" + distname + "-1.0",
+		"DISTNAME=\t" + distname.String() + "-1.0",
 		"#PKGNAME=\tpackage-1.0",
 		"CATEGORIES=\t" + category.String(),
 		"MASTER_SITES=\t# none",
@@ -589,7 +589,7 @@ func (t *Tester) CreateFileDummyPatch(filename RelPath) {
 
 func (t *Tester) CreateFileBuildlink3(filename RelPath, customLines ...string) {
 	lower := filename.Dir().Base()
-	t.CreateFileBuildlink3Id(filename, lower, customLines...)
+	t.CreateFileBuildlink3Id(filename, lower.String(), customLines...)
 }
 
 func (t *Tester) CreateFileBuildlink3Id(filename RelPath, id string, customLines ...string) {
@@ -739,7 +739,7 @@ func (t *Tester) SetUpHierarchy() (
 		fromDir := including.Dir().Clean()
 		to := basedir.Rel(included.AsPath())
 		if fromDir == to.Dir() {
-			return NewRelPathString(to.Base())
+			return to.Base()
 		} else {
 			return fromDir.Rel(basedir).JoinNoClean(to).CleanDot()
 		}
@@ -1001,9 +1001,9 @@ func (t *Tester) NewLine(filename CurrPath, lineno int, text string) *Line {
 func (t *Tester) NewMkLine(filename CurrPath, lineno int, text string) *MkLine {
 	basename := filename.Base()
 	assertf(
-		hasSuffix(basename, ".mk") ||
+		basename.HasSuffixText(".mk") ||
 			basename == "Makefile" ||
-			hasPrefix(basename, "Makefile.") ||
+			basename.HasPrefixText("Makefile.") ||
 			basename == "mk.conf",
 		"filename %q must be realistic, otherwise the variable permissions are wrong", filename)
 
@@ -1053,7 +1053,7 @@ func (t *Tester) NewMkLines(filename CurrPath, lines ...string) *MkLines {
 func (t *Tester) NewMkLinesPkg(filename CurrPath, pkg *Package, lines ...string) *MkLines {
 	basename := filename.Base()
 	assertf(
-		hasSuffix(basename, ".mk") || basename == "Makefile" || hasPrefix(basename, "Makefile."),
+		basename.HasSuffixText(".mk") || basename == "Makefile" || basename.HasPrefixText("Makefile."),
 		"filename %q must be realistic, otherwise the variable permissions are wrong", filename)
 
 	var rawText strings.Builder

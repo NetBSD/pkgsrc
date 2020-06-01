@@ -6,7 +6,7 @@ import (
 
 type Lines struct {
 	Filename CurrPath
-	BaseName string // TODO: consider converting to Path
+	BaseName RelPath
 	Lines    []*Line
 }
 

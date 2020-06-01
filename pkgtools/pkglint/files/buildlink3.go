@@ -72,6 +72,9 @@ func (ck *Buildlink3Checker) Check() {
 
 func (ck *Buildlink3Checker) checkFirstParagraph(mlex *MkLinesLexer) bool {
 
+	for mlex.SkipPrefix("#") {
+	}
+
 	// First paragraph: Introduction of the package identifier
 	m := mlex.NextRegexp(`^BUILDLINK_TREE\+=[\t ]*([^\t ]+)$`)
 	if m == nil {
@@ -104,7 +107,7 @@ func (ck *Buildlink3Checker) checkUniquePkgbase(pkgbase string, mkline *MkLine) 
 	}
 
 	dirname := G.Pkgsrc.Rel(mkline.Filename().Dir()).Base()
-	base, name := trimCommon(pkgbase, dirname)
+	base, name := trimCommon(pkgbase, dirname.String())
 	if base == "" && matches(name, `^(\d*|-cvs|-fossil|-git|-hg|-svn|-devel|-snapshot)$`) {
 		return
 	}
@@ -315,6 +318,7 @@ func (ck *Buildlink3Checker) checkVaruseInPkgbase(pkgbaseLine *MkLine) {
 
 type Buildlink3Data struct {
 	id             Buildlink3ID
+	prefix         Path
 	pkgsrcdir      PackagePath
 	apiDepends     *DependencyPattern
 	apiDependsLine *MkLine
@@ -331,43 +335,50 @@ type Buildlink3ID string
 
 func LoadBuildlink3Data(mklines *MkLines) *Buildlink3Data {
 	var data Buildlink3Data
+
 	mklines.ForEach(func(mkline *MkLine) {
-		if mkline.IsVarassign() {
-			varname := mkline.Varname()
-			varbase := varnameBase(varname)
-			varid := Buildlink3ID(varnameParam(varname))
+		if !mkline.IsVarassign() {
+			return
+		}
 
-			if varname == "BUILDLINK_TREE" {
-				value := mkline.Value()
-				if !hasPrefix(value, "-") {
-					data.id = Buildlink3ID(mkline.Value())
-				}
-			}
+		varname := mkline.Varname()
+		varbase := varnameBase(varname)
+		varid := Buildlink3ID(varnameParam(varname))
 
-			if varbase == "BUILDLINK_API_DEPENDS" && varid == data.id {
-				p := NewMkParser(nil, mkline.Value())
-				dep := p.DependencyPattern()
-				if dep != nil && p.EOF() {
-					data.apiDepends = dep
-					data.apiDependsLine = mkline
-				}
-			}
-
-			if varbase == "BUILDLINK_ABI_DEPENDS" && varid == data.id {
-				p := NewMkParser(nil, mkline.Value())
-				dep := p.DependencyPattern()
-				if dep != nil && p.EOF() {
-					data.abiDepends = dep
-					data.abiDependsLine = mkline
-				}
-			}
-
-			if varbase == "BUILDLINK_PKGSRCDIR" && varid == data.id {
-				data.pkgsrcdir = NewPackagePathString(mkline.Value())
+		if varname == "BUILDLINK_TREE" {
+			value := mkline.Value()
+			if !hasPrefix(value, "-") {
+				data.id = Buildlink3ID(mkline.Value())
 			}
 		}
+
+		if varbase == "BUILDLINK_API_DEPENDS" && varid == data.id {
+			p := NewMkParser(nil, mkline.Value())
+			dep := p.DependencyPattern()
+			if dep != nil && p.EOF() {
+				data.apiDepends = dep
+				data.apiDependsLine = mkline
+			}
+		}
+
+		if varbase == "BUILDLINK_ABI_DEPENDS" && varid == data.id {
+			p := NewMkParser(nil, mkline.Value())
+			dep := p.DependencyPattern()
+			if dep != nil && p.EOF() {
+				data.abiDepends = dep
+				data.abiDependsLine = mkline
+			}
+		}
+
+		if varbase == "BUILDLINK_PREFIX" && varid == data.id {
+			data.prefix = NewPath(mkline.Value())
+		}
+		if varbase == "BUILDLINK_PKGSRCDIR" && varid == data.id {
+			data.pkgsrcdir = NewPackagePathString(mkline.Value())
+		}
 	})
-	if data.id != "" && !data.pkgsrcdir.IsEmpty() && data.apiDepends != nil && data.abiDepends != nil {
+
+	if data.id != "" {
 		return &data
 	}
 	return nil

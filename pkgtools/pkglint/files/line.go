@@ -56,7 +56,7 @@ type Line struct {
 	// TODO: Consider storing pointers to the Filename and Basename instead of strings to save memory.
 	//  But first find out where and why pkglint needs so much memory (200 MB for a full recursive run over pkgsrc + wip).
 	Location Location
-	Basename string // the last component of the Filename
+	Basename RelPath // the last component of the Filename
 
 	// the text of the line, without the trailing newline character;
 	// in Makefiles, also contains the text from the continuation lines,

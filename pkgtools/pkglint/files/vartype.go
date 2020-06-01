@@ -209,9 +209,9 @@ func (vt *Vartype) IsDefinedIfInScope() bool    { return vt.options&DefinedIfInS
 func (vt *Vartype) IsNonemptyIfDefined() bool   { return vt.options&NonemptyIfDefined != 0 }
 func (vt *Vartype) IsUnique() bool              { return vt.options&Unique != 0 }
 
-func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
+func (vt *Vartype) EffectivePermissions(basename RelPath) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {
-		if aclEntry.matcher.matches(basename) {
+		if aclEntry.matcher.matches(basename.String()) {
 			return aclEntry.permissions
 		}
 	}

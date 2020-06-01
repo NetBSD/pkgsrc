@@ -369,17 +369,22 @@ func (s *Suite) Test_MkLineChecker_checkInclude(c *check.C) {
 	t.CreateFileLines("graphics/jpeg/buildlink3.mk")
 	t.CreateFileLines("devel/intltool/buildlink3.mk")
 	t.CreateFileLines("devel/intltool/builtin.mk")
+	t.CreateFileLines("mk/bsd.pkg.mk")
 	mklines := t.SetUpFileMkLines("category/package/filename.mk",
 		MkCvsID,
 		"",
 		".include \"../../pkgtools/x11-links/buildlink3.mk\"",
 		".include \"../../graphics/jpeg/buildlink3.mk\"",
 		".include \"../../devel/intltool/buildlink3.mk\"",
-		".include \"../../devel/intltool/builtin.mk\"")
+		".include \"../../devel/intltool/builtin.mk\"",
+		".include \"/absolute\"",
+		".include \"../../mk/bsd.pkg.mk\"")
 
 	mklines.Check()
 
 	t.CheckOutputLines(
+		"ERROR: ~/category/package/filename.mk:7: "+
+			"Unknown Makefile line format: \".include \\\"/absolute\\\"\".",
 		"ERROR: ~/category/package/filename.mk:3: "+
 			"\"../../pkgtools/x11-links/buildlink3.mk\" must not be included directly. "+
 			"Include \"../../mk/x11.buildlink3.mk\" instead.",
@@ -390,7 +395,10 @@ func (s *Suite) Test_MkLineChecker_checkInclude(c *check.C) {
 			"Please write \"USE_TOOLS+= intltool\" instead of this line.",
 		"ERROR: ~/category/package/filename.mk:6: "+
 			"\"../../devel/intltool/builtin.mk\" must not be included directly. "+
-			"Include \"../../devel/intltool/buildlink3.mk\" instead.")
+			"Include \"../../devel/intltool/buildlink3.mk\" instead.",
+		"ERROR: ~/category/package/filename.mk:8: "+
+			"The file bsd.pkg.mk must only be included by package Makefiles, "+
+			"not by other Makefile fragments.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkInclude__Makefile(c *check.C) {
