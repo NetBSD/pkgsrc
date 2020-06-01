@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/23 08:19:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 16:13:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/aiounittest/__init__.py
 ${PYSITELIB}/aiounittest/__init__.pyc
