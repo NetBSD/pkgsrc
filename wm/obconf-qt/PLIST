@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/31 22:36:37 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 11:20:07 pin Exp $
 bin/obconf-qt
 share/applications/obconf-qt.desktop
 share/icons/hicolor/48x48/apps/obconf-qt.png
+share/obconf-qt/translations/obconf-qt_arn.qm
+share/obconf-qt/translations/obconf-qt_ast.qm
 share/obconf-qt/translations/obconf-qt_ca.qm
 share/obconf-qt/translations/obconf-qt_cs.qm
 share/obconf-qt/translations/obconf-qt_cy.qm
@@ -26,6 +28,7 @@ share/obconf-qt/translations/obconf-qt_pl.qm
 share/obconf-qt/translations/obconf-qt_pt.qm
 share/obconf-qt/translations/obconf-qt_pt_BR.qm
 share/obconf-qt/translations/obconf-qt_ru.qm
+share/obconf-qt/translations/obconf-qt_sk_SK.qm
 share/obconf-qt/translations/obconf-qt_sv.qm
 share/obconf-qt/translations/obconf-qt_tr.qm
 share/obconf-qt/translations/obconf-qt_uk.qm
