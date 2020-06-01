@@ -1,9 +1,14 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2016/09/02 16:46:04 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2020/06/01 10:30:03 js Exp $
 
 Fix use of CMAKE_MODULE_PATH (see also patch-cmake_VersionString.cmake)
 
 Resolve "Attempt at a recursive or nested TRY_COMPILE in directory"
 (see also patch-cmake_CompileCheck.cmake)
+
+and
+
+Rename VERSION to ARX_VERSION so that __has_include(<version>) does not
+pick it up on a case-insensitive file system on Darwin.
 
 and
 
@@ -73,3 +78,12 @@ Date:   Tue Feb 23 07:04:11 2016 +0100
  	
  	check_symbol_exists(nanosleep "time.h" ARX_HAVE_NANOSLEEP)
  	
+@@ -951,7 +958,7 @@ configure_file("${SRC_DIR}/${PLATFORM_CO
+ 
+ set(VERSION_TEMPLATE "${SRC_DIR}/core/Version.cpp.in")
+ set(VERSION_FILE     "${CMAKE_BINARY_DIR}/core/Version.cpp")
+-set(VERSION_SOURCES  VERSION "VERSION" AUTHORS "AUTHORS")
++set(VERSION_SOURCES  VERSION "ARX_VERSION" AUTHORS "AUTHORS")
+ file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/core")
+ version_file("${VERSION_TEMPLATE}" "${VERSION_FILE}" "${VERSION_SOURCES}" ".git")
+ list(APPEND ARX_SOURCES "${VERSION_FILE}")
