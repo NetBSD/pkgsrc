@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3303 2020/06/01 11:37:09 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3304 2020/06/01 11:43:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5207,3 +5207,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/pavucontrol-qt to 0.15.0 [pin 2020-06-01]
 	Updated x11/lxqt-qtplugin to 0.15.1 [pin 2020-06-01]
 	Updated graphics/lxqt-themes to 0.15.0 [pin 2020-06-01]
+	Updated x11/lxqt-about to 0.15.0 [pin 2020-06-01]
