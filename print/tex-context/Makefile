@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/05/25 05:06:30 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/06/01 06:28:49 rillig Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2020
@@ -25,7 +25,6 @@ CHECK_INTERPRETER_SKIP=	share/texmf-dist/scripts/context/ruby/*.rb
 REPLACE_SH=		bin/context bin/ctxtools bin/luatools
 REPLACE_TEXLUA=		bin/mtxrun \
 			texmf-dist/scripts/context/stubs/mswin/mtxrun.lua \
-			texmf-dist/scripts/context/stubs/mswin/luatools.lua \
 			texmf-dist/scripts/context/stubs/unix/mtxrun
 
 TEX_FORMATS+=		"cont-en pdftex cont-usr.tex -8bit *cont-en.mkii\\ncont-en xetex cont-usr.tex -8bit *cont-en.mkii\\n"
