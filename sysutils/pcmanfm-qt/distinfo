@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/06/01 10:47:53 pin Exp $
+$NetBSD: distinfo,v 1.4 2020/06/01 15:06:15 pin Exp $
 
 SHA1 (pcmanfm-qt-0.15.1.tar.xz) = 8b25f4d52cee6b916ba015bb35c133fe9d1fd666
 RMD160 (pcmanfm-qt-0.15.1.tar.xz) = b83a43eed1361922b381db6c78c84825512bb1b9
 SHA512 (pcmanfm-qt-0.15.1.tar.xz) = db0d3cc683b5c94cabab5a8c68b3ae8bf5938735b34989a420692e933bb54d53ebb15da9af4a59039bfd101de0cc00c521c08207e81bfad9d80315e2d94bc559
 Size (pcmanfm-qt-0.15.1.tar.xz) = 257832 bytes
-SHA1 (patch-config_CMakeLists.txt) = f9fa729a592d0d9683af9408f115ec2383b27aa1
+SHA1 (patch-config_CMakeLists.txt) = 84ace10083579bf3c09e16b472c92e6146665b85
