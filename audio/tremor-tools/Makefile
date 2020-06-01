@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/05/22 10:55:56 adam Exp $
+# $NetBSD: Makefile,v 1.52 2020/06/01 06:14:02 rillig Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	tremor-tools-1.0.0.8
@@ -18,9 +18,6 @@ CONFLICTS=	vorbis-[0-9]*
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake14 gmake
-CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_PREFIX.libogg}	\
-			--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis} \
-			--with-ao-prefix=${BUILDLINK_PREFIX.libao}
 
 PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 
