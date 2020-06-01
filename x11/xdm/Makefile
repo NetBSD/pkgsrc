@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 23:36:00 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/06/01 06:06:48 rillig Exp $
 
 DISTNAME=	xdm-1.1.12
 CATEGORIES=	x11
@@ -23,7 +23,6 @@ CONF_FILES+=		${EGDIR}/Xaccess	${PKG_SYSCONFDIR}/Xaccess
 CONF_FILES+=		${EGDIR}/Xresources	${PKG_SYSCONFDIR}/Xresources
 CONF_FILES+=		${EGDIR}/Xservers	${PKG_SYSCONFDIR}/Xservers
 
-CONFIGURE_ARGS+=	--enable-dynamic-greeter
 CONFIGURE_ARGS+=	--enable-tcp-transport
 CONFIGURE_ARGS+=	--enable-unix-transport
 CONFIGURE_ARGS+=	--enable-xdmshell
