@@ -186,7 +186,7 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 	// This check has been added in 2018.
 	// For years earlier than 2018 pkglint doesn't care because it's not a big issue anyway.
 	year := ""
-	if _, yyyy := match1(filename.Base(), `-(\d\d\d\d)$`); yyyy >= "2018" {
+	if _, yyyy := match1(filename.Base().String(), `-(\d\d\d\d)$`); yyyy >= "2018" {
 		year = yyyy
 	}
 
@@ -532,7 +532,7 @@ func (src *Pkgsrc) loadToolsPlatform() {
 	var systems []string
 	scopes := make(map[string]*RedundantScope)
 	for _, mkFile := range src.File("mk/tools").ReadPaths() {
-		m, opsys := match1(mkFile.Base(), `^tools\.(.+)\.mk$`)
+		m, opsys := match1(mkFile.Base().String(), `^tools\.(.+)\.mk$`)
 		if !m {
 			continue
 		}

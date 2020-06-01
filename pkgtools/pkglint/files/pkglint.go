@@ -43,7 +43,7 @@ type Pkglint struct {
 	Username       string // For checking against OWNER and MAINTAINER
 
 	cvsEntriesDir CurrPath // Cached to avoid I/O
-	cvsEntries    map[string]CvsEntry
+	cvsEntries    map[RelPath]CvsEntry
 
 	Logger Logger
 
@@ -308,7 +308,6 @@ func (p *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 		dir = dirent.Dir()
 	}
 
-	basename := dirent.Base()
 	pkgsrcRel := p.Pkgsrc.Rel(dirent)
 
 	p.Wip = pkgsrcRel.HasPrefixPath("wip")
@@ -323,7 +322,7 @@ func (p *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 
 	if isReg {
 		p.checkExecutable(dirent, mode)
-		p.checkReg(dirent, basename, pkgsrcRel.Count(), nil)
+		p.checkReg(dirent, dirent.Base(), pkgsrcRel.Count(), nil)
 		return
 	}
 
@@ -549,10 +548,10 @@ func CheckFileMk(filename CurrPath, pkg *Package) {
 // checkReg checks the given regular file.
 // depth is 3 for files in the package directory, and 4 or more for files
 // deeper in the directory hierarchy, such as in files/ or patches/.
-func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *Package) {
+func (p *Pkglint) checkReg(filename CurrPath, basename RelPath, depth int, pkg *Package) {
 
 	if depth == 3 && !p.Wip {
-		if contains(basename, "TODO") {
+		if basename.ContainsText("TODO") {
 			NewLineWhole(filename).Errorf("Packages in main pkgsrc must not have a %s file.", basename)
 			// TODO: Add a convincing explanation.
 			return
@@ -560,10 +559,10 @@ func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *P
 	}
 
 	switch {
-	case hasSuffix(basename, "~"),
-		hasSuffix(basename, ".orig"),
-		hasSuffix(basename, ".rej"),
-		contains(basename, "TODO") && depth == 3:
+	case basename.HasSuffixText("~"),
+		basename.HasSuffixText(".orig"),
+		basename.HasSuffixText(".rej"),
+		basename.ContainsText("TODO") && depth == 3:
 		if p.Import {
 			NewLineWhole(filename).Errorf("Must be cleaned up before committing the package.")
 		}
@@ -584,7 +583,7 @@ func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *P
 	case p.Wip && basename == "COMMIT_MSG":
 		// https://mail-index.netbsd.org/pkgsrc-users/2020/05/10/msg031174.html
 
-	case hasPrefix(basename, "DESCR"):
+	case basename.HasPrefixText("DESCR"):
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
 			CheckLinesDescr(lines)
 		}
@@ -597,7 +596,7 @@ func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *P
 	case basename == "DEINSTALL" || basename == "INSTALL":
 		CheckFileOther(filename)
 
-	case hasPrefix(basename, "MESSAGE"):
+	case basename.HasPrefixText("MESSAGE"):
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
 			CheckLinesMessage(lines, pkg)
 		}
@@ -611,36 +610,36 @@ func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *P
 			CheckLinesOptionsMk(mklines, buildlinkID)
 		}
 
-	case matches(basename, `^patch-[-\w.~+]*\w$`):
+	case matches(basename.String(), `^patch-[-\w.~+]*\w$`):
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
 			CheckLinesPatch(lines, pkg)
 		}
 
-	case filename.Dir().Base() == "patches" && matches(filename.Base(), `^manual[^/]*$`):
+	case filename.Dir().HasBase("patches") && filename.Base().HasPrefixText("manual"):
 		if trace.Tracing {
 			trace.Stepf("Unchecked file %q.", filename)
 		}
 
-	case filename.Dir().Base() == "patches":
+	case filename.Dir().HasBase("patches"):
 		NewLineWhole(filename).Warnf("Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
 
-	case (hasPrefix(basename, "Makefile") || hasSuffix(basename, ".mk")) &&
+	case (basename.HasPrefixText("Makefile") || basename.HasSuffixText(".mk")) &&
 		!G.Pkgsrc.Rel(filename).AsPath().ContainsPath("files"):
 		CheckFileMk(filename, pkg)
 
-	case hasPrefix(basename, "PLIST"):
+	case basename.HasPrefixText("PLIST"):
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
 			CheckLinesPlist(pkg, lines)
 		}
 
-	case contains(basename, "README"):
+	case basename.ContainsText("README"):
 		break
 
-	case hasPrefix(basename, "CHANGES-"):
+	case basename.HasPrefixText("CHANGES-"):
 		// This only checks the file but doesn't register the changes globally.
 		_ = p.Pkgsrc.loadDocChangesFromFile(filename)
 
-	case filename.Dir().Base() == "files":
+	case filename.Dir().HasBase("files"):
 		// Skip files directly in the files/ directory, but not those further down.
 
 	case basename == "spec":
@@ -674,7 +673,7 @@ func (p *Pkglint) checkRegCvsSubst(filename CurrPath) {
 		"For more information, see",
 		"https://www.gnu.org/software/trans-coord/manual/cvs/html_node/Substitution-modes.html.",
 		"",
-		sprintf("To fix this, run \"cvs admin -kkv %s\"", shquote(filename.Base())))
+		sprintf("To fix this, run \"cvs admin -kkv %s\"", shquote(filename.Base().String())))
 }
 
 func (p *Pkglint) checkExecutable(filename CurrPath, mode os.FileMode) {
@@ -757,13 +756,13 @@ func (p *Pkglint) tools(mklines *MkLines) *Tools {
 	}
 }
 
-func (p *Pkglint) loadCvsEntries(filename CurrPath) map[string]CvsEntry {
+func (p *Pkglint) loadCvsEntries(filename CurrPath) map[RelPath]CvsEntry {
 	dir := filename.Dir().Clean()
 	if dir == p.cvsEntriesDir {
 		return p.cvsEntries
 	}
 
-	var entries map[string]CvsEntry
+	var entries map[RelPath]CvsEntry
 
 	handle := func(line *Line, add bool, text string) {
 		if !hasPrefix(text, "/") {
@@ -776,16 +775,17 @@ func (p *Pkglint) loadCvsEntries(filename CurrPath) map[string]CvsEntry {
 			return
 		}
 
+		key := NewRelPathString(fields[1])
 		if add {
-			entries[fields[1]] = CvsEntry{fields[1], fields[2], fields[3], fields[4], fields[5]}
+			entries[key] = CvsEntry{key, fields[2], fields[3], fields[4], fields[5]}
 		} else {
-			delete(entries, fields[1])
+			delete(entries, key)
 		}
 	}
 
 	lines := Load(dir.JoinNoClean("CVS/Entries"), 0)
 	if lines != nil {
-		entries = make(map[string]CvsEntry)
+		entries = make(map[RelPath]CvsEntry)
 		for _, line := range lines.Lines {
 			handle(line, true, line.Text)
 		}
