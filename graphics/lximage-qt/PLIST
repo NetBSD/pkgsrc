@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/20 06:21:02 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:42:24 pin Exp $
 bin/lximage-qt
 share/applications/lximage-qt-screenshot.desktop
 share/applications/lximage-qt.desktop
 share/icons/hicolor/48x48/apps/lximage-qt.png
 share/lximage-qt/translations/lximage-qt_ar.qm
+share/lximage-qt/translations/lximage-qt_arn.qm
+share/lximage-qt/translations/lximage-qt_ast.qm
 share/lximage-qt/translations/lximage-qt_ca.qm
 share/lximage-qt/translations/lximage-qt_cs.qm
 share/lximage-qt/translations/lximage-qt_cy.qm
@@ -28,7 +30,9 @@ share/lximage-qt/translations/lximage-qt_pa.qm
 share/lximage-qt/translations/lximage-qt_pl.qm
 share/lximage-qt/translations/lximage-qt_pt.qm
 share/lximage-qt/translations/lximage-qt_pt_BR.qm
+share/lximage-qt/translations/lximage-qt_pt_PT.qm
 share/lximage-qt/translations/lximage-qt_ru.qm
+share/lximage-qt/translations/lximage-qt_sl.qm
 share/lximage-qt/translations/lximage-qt_sv.qm
 share/lximage-qt/translations/lximage-qt_tr.qm
 share/lximage-qt/translations/lximage-qt_uk.qm

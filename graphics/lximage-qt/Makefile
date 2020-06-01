@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/04/22 08:28:11 pin Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/01 10:42:24 pin Exp $
 
-DISTNAME=	lximage-qt-0.14.1
-PKGREVISION=	3
+VERSION=	0.15.0
+DISTNAME=	lximage-qt-${VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	https://downloads.lxqt.org/downloads/lximage-qt/0.14.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lximage-qt/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/lxqt/lximage-qt/
 COMMENT=	Image viewer and screenshot tool for the LXQt desktop
 LICENSE=	gnu-gpl-v2
 
@@ -21,11 +21,11 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
-.include "../../x11/libfm-qt/buildlink3.mk"
+.include "../../wip/libfm-qt/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
