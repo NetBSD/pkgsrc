@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/05/15 13:32:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.25 2020/06/01 16:18:16 cheusov Exp $
 #
 
-DISTNAME=	paexec-1.1.3
+DISTNAME=	paexec-1.1.4
 CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/}
 
@@ -10,7 +10,7 @@ HOMEPAGE=	https://sourceforge.net/projects/paexec
 COMMENT=	Distributes tasks over network or CPUs
 LICENSE=	mit
 
-BUILD_DEPENDS+=		mk-configure>=0.27.0:../../devel/mk-configure
+BUILD_DEPENDS+=		mk-configure>=0.33.0:../../devel/mk-configure
 DEPENDS+=		runawk>=1.4.3:../../lang/runawk
 
 REPLACE_INTERPRETER+=	runawk
