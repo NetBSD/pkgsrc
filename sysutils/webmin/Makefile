@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/04/27 15:16:45 mef Exp $
+# $NetBSD: Makefile,v 1.51 2020/06/01 06:25:31 rillig Exp $
 
 .include "version.mk"
 
@@ -59,7 +59,6 @@ CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
 .endfor
 RCD_SCRIPTS=		webmin
 
-REPLACE_SH=	update-from-repo.sh
 REPLACE_PYTHON= webmin/acme_tiny.py
 
 CHECK_INTERPRETER_SKIP+=	share/webmin/webmin-gentoo-init
@@ -74,6 +73,7 @@ post-extract:
 	${CP} ${FILESDIR}/man_config-dragonfly ${WRKSRC}/man/config-dragonfly
 	${CP} ${FILESDIR}/proc_config-dragonfly ${WRKSRC}/proc/config-dragonfly
 	${RM} -r ${WRKSRC}/acl/Authen-SolarisRBAC-0.1*
+	${RM} ${WRKSRC}/update-from-repo.sh # contains lots of bashisms
 
 pre-configure:
 	cd ${WRKSRC} &&							\
