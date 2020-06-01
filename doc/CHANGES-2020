@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3289 2020/06/01 06:22:00 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3290 2020/06/01 10:21:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5193,3 +5193,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nginx-devel to 1.19.0 [adam 2020-06-01]
 	Updated devel/cmake to 3.17.3 [adam 2020-06-01]
 	Updated devel/cmake-gui to 3.17.3 [adam 2020-06-01]
+	Updated devel/lxqt-build-tools to 0.7.0 [pin 2020-06-01]
