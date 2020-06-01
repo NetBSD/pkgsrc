@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:13 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/01 10:30:03 js Exp $
 
 DISTNAME=	arx-libertatis-1.1.2
 PKGREVISION=	1
@@ -25,6 +25,9 @@ PLIST_VARS+=	NotDarwin
 .if ${OPSYS} != "Darwin"
 PLIST.NotDarwin=	yes
 .endif
+
+post-patch:
+	${MV} ${WRKSRC}/VERSION ${WRKSRC}/ARX_VERSION
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
