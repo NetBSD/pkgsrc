@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2020/05/30 14:49:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/06/01 17:41:02 nia Exp $
 
 SHA1 (libretro-pcsx-rearmed-20200526-7973b25fe929f92e146a854ecaf4f3cea5b4ffb8.tar.gz) = dd07cdb90a432d3626147ae8901fdfd8489f883a
 RMD160 (libretro-pcsx-rearmed-20200526-7973b25fe929f92e146a854ecaf4f3cea5b4ffb8.tar.gz) = dace80b932044463eb0cf6fc0c9eb5917f5c030b
 SHA512 (libretro-pcsx-rearmed-20200526-7973b25fe929f92e146a854ecaf4f3cea5b4ffb8.tar.gz) = bd8c2e5ca9d434005790767d3a4a2d7bc86deb1ca272ef73676c99a0cacb1dd92e843732d4f3455f77d0bce4666953befef7a108a616e8a4b2ff752deeef4e69
 Size (libretro-pcsx-rearmed-20200526-7973b25fe929f92e146a854ecaf4f3cea5b4ffb8.tar.gz) = 2278331 bytes
+SHA1 (patch-Makefile) = 2fa7c2c4127c3a688aaa2e62981a5c89436e29b4
