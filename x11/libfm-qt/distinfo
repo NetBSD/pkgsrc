@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/02/20 06:07:54 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2020/06/01 10:38:55 pin Exp $
 
-SHA1 (libfm-qt-0.14.1.tar.xz) = 7aa6f6d3642dab532c7222a3d3a4c05699498689
-RMD160 (libfm-qt-0.14.1.tar.xz) = 51ecb0f285bbb9a20727e5a3ff7a96c53a52b472
-SHA512 (libfm-qt-0.14.1.tar.xz) = a265f6831a077ccb78a994828e6c69a22f2f6432b1f6ed6f404af41f013112870f7aee98067f2c466bec6cdfea040c10c7ce7e0f0ed977e5d266ec38e543d2a7
-Size (libfm-qt-0.14.1.tar.xz) = 328192 bytes
+SHA1 (libfm-qt-0.15.1.tar.xz) = 8c957bb06b77dc43f40bcb610fb0108a4d089876
+RMD160 (libfm-qt-0.15.1.tar.xz) = 42b340b9d07122cd305d5a216a05a89d886186fc
+SHA512 (libfm-qt-0.15.1.tar.xz) = 9bd3f61d830e4f7ba3e72d84e3ff1a07544f6f461d6eea7ecf2b31056020e08d47d83ef920b6e1a481a470dadfb995a6b3e3b57a13574d6abca617a84c71bdf5
+Size (libfm-qt-0.15.1.tar.xz) = 337396 bytes
