@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/25 00:56:46 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 11:36:49 pin Exp $
 share/icons/hicolor/scalable/apps/lxqt.svg
 share/icons/hicolor/scalable/places/start-here-lxqt.svg
 share/lxqt/graphics/README
