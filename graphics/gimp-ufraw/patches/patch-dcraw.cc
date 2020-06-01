@@ -1,4 +1,6 @@
-$NetBSD: patch-dcraw.cc,v 1.1 2020/04/20 00:38:36 joerg Exp $
+$NetBSD: patch-dcraw.cc,v 1.2 2020/06/01 00:14:21 gdt Exp $
+
+\todo Explain this patch.
 
 --- dcraw.cc.orig	2020-04-19 19:55:05.713900482 +0000
 +++ dcraw.cc
