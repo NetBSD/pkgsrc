@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3290 2020/06/01 10:21:16 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3291 2020/06/01 10:26:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5194,3 +5194,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cmake to 3.17.3 [adam 2020-06-01]
 	Updated devel/cmake-gui to 3.17.3 [adam 2020-06-01]
 	Updated devel/lxqt-build-tools to 0.7.0 [pin 2020-06-01]
+	Updated x11/libqtxdg to 3.5.0 [pin 2020-06-01]
