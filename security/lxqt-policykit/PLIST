@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/25 17:24:41 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 11:48:49 pin Exp $
 bin/lxqt-policykit-agent
 man/man1/lxqt-policykit-agent.1
 share/examples/lxqt/xdg/autostart/lxqt-policykit-agent.desktop
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ar.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_arn.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ast.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ca.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_cs.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_cy.qm
@@ -23,6 +25,7 @@ share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_nl.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_pl.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_pt.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ru.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_sk_SK.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_tr.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_uk.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_zh_CN.qm
