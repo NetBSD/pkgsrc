@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3323 2020/06/01 19:15:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3324 2020/06/01 20:32:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5233,3 +5233,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pip to 20.1.1 [adam 2020-06-01]
 	Updated net/libcares to 1.16.1 [adam 2020-06-01]
 	Updated devel/memcached to 1.6.6 [adam 2020-06-01]
+	Updated mail/exim to 4.94 [adam 2020-06-01]
+	Updated mail/exim-html to 4.94 [adam 2020-06-01]
+	Updated devel/py-wcwidth to 0.2.2 [adam 2020-06-01]
+	Updated devel/py-setuptools to 44.1.1 [adam 2020-06-01]
