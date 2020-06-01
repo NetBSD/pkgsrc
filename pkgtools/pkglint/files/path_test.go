@@ -77,7 +77,7 @@ func (s *Suite) Test_Path_Dir(c *check.C) {
 func (s *Suite) Test_Path_Base(c *check.C) {
 	t := s.Init(c)
 
-	test := func(p Path, base string) {
+	test := func(p Path, base RelPath) {
 		t.CheckEquals(p.Base(), base)
 	}
 
@@ -615,7 +615,7 @@ func (s *Suite) Test_CurrPath_Dir(c *check.C) {
 func (s *Suite) Test_CurrPath_Base(c *check.C) {
 	t := s.Init(c)
 
-	test := func(curr CurrPath, base string) {
+	test := func(curr CurrPath, base RelPath) {
 		t.CheckEquals(curr.Base(), base)
 	}
 
@@ -1104,7 +1104,7 @@ func (s *Suite) Test_PkgsrcPath_Dir(c *check.C) {
 func (s *Suite) Test_PkgsrcPath_Base(c *check.C) {
 	t := s.Init(c)
 
-	test := func(pp PkgsrcPath, base string) {
+	test := func(pp PkgsrcPath, base RelPath) {
 		t.CheckEquals(pp.Base(), base)
 	}
 
@@ -1347,7 +1347,7 @@ func (s *Suite) Test_RelPath_Dir(c *check.C) {
 func (s *Suite) Test_RelPath_Base(c *check.C) {
 	t := s.Init(c)
 
-	test := func(rel RelPath, base string) {
+	test := func(rel RelPath, base RelPath) {
 		t.CheckEquals(rel.Base(), base)
 	}
 
