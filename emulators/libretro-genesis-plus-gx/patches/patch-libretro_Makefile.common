@@ -1,0 +1,50 @@
+$NetBSD: patch-libretro_Makefile.common,v 1.1 2020/06/01 19:12:38 nia Exp $
+
+Don't use bundled deps.
+
+--- libretro/Makefile.common.orig	2020-02-08 21:59:22.000000000 +0000
++++ libretro/Makefile.common
+@@ -18,30 +18,13 @@ endif
+ 
+ ifeq ($(HAVE_CHD), 1)
+    INCFLAGS += -I$(CHDLIBDIR)/src \
+-					-I$(CHDLIBDIR)/deps/libFLAC/include \
+-					-I$(CHDLIBDIR)/deps/lzma \
+-					-I$(CHDLIBDIR)/deps/zlib
++					-I$(CHDLIBDIR)/deps/lzma
+    SOURCES_C += \
+ 					 $(CHDLIBDIR)/src/bitstream.c \
+ 					 $(CHDLIBDIR)/src/cdrom.c \
+ 					 $(CHDLIBDIR)/src/chd.c \
+ 					 $(CHDLIBDIR)/src/flac.c \
+ 					 $(CHDLIBDIR)/src/huffman.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/bitmath.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/bitreader.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/cpu.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/crc.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/fixed.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/float.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/format.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/lpc.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/lpc_intrin_avx2.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/lpc_intrin_sse.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/lpc_intrin_sse2.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/lpc_intrin_sse41.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/md5.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/memory.c \
+-					 $(CHDLIBDIR)/deps/libFLAC/stream_decoder.c \
+ 					 $(CHDLIBDIR)/deps/lzma/LzFind.c \
+ 					 $(CHDLIBDIR)/deps/lzma/LzmaDec.c \
+ 					 $(CHDLIBDIR)/deps/lzma/LzmaEnc.c
+@@ -82,11 +65,6 @@ SOURCES_C += \
+ 				 $(LIBRETRO_COMM_DIR)/vfs/vfs_implementation_cdrom.c
+ endif
+ 
+-SOURCES_C += $(CHDLIBDIR)/deps/zlib/adler32.c \
+-				 $(CHDLIBDIR)/deps/zlib/inffast.c \
+-				 $(CHDLIBDIR)/deps/zlib/inflate.c \
+-				 $(CHDLIBDIR)/deps/zlib/inftrees.c \
+-				 $(CHDLIBDIR)/deps/zlib/zutil.c
+ endif
+ 
+ ifeq ($(SHARED_LIBVORBIS),)
