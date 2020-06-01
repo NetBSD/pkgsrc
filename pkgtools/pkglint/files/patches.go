@@ -365,7 +365,7 @@ func (ck *PatchChecker) checktextCvsID(text string) {
 }
 
 func (ck *PatchChecker) checkCanonicalPatchName(patched Path) {
-	patch := ck.lines.BaseName
+	patch := ck.lines.BaseName.String()
 	if matches(patch, `^patch-[a-z][a-z]$`) {
 		// This naming scheme is only accepted for historic reasons.
 		// It has has absolutely no benefit.
@@ -386,7 +386,7 @@ func (ck *PatchChecker) checkCanonicalPatchName(patched Path) {
 	if patchNorm == patchedNorm {
 		return
 	}
-	if hasSuffix(patchedNorm, patchNorm) && patchNorm == normalize(patched.Base()) {
+	if hasSuffix(patchedNorm, patchNorm) && patchNorm == normalize(patched.Base().String()) {
 		return
 	}
 

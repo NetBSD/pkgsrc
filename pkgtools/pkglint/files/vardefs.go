@@ -402,8 +402,8 @@ func (reg *VarTypeRegistry) enumFromFiles(
 	var relevant []string
 	for _, filename := range src.File(basedir).ReadPaths() {
 		basename := filename.Base()
-		if matches(basename, re) {
-			relevant = append(relevant, replaceAll(basename, re, repl))
+		if matches(basename.String(), re) {
+			relevant = append(relevant, replaceAll(basename.String(), re, repl))
 		}
 	}
 	if len(relevant) == 0 {

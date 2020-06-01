@@ -148,6 +148,48 @@ func (ck *MkVarUseChecker) checkVarname(time VucTime) {
 		fix.ReplaceAfter("${", "LOCALBASE", "PREFIX")
 		fix.Apply()
 	}
+
+	ck.checkVarnameBuildlink(varname)
+}
+
+func (ck *MkVarUseChecker) checkVarnameBuildlink(varname string) {
+	pkg := ck.MkLines.pkg
+	if pkg == nil {
+		return
+	}
+
+	if !hasPrefix(varname, "BUILDLINK_PREFIX.") {
+		return
+	}
+
+	basename := ck.MkLine.Basename
+	if basename == "buildlink3.mk" || basename == "builtin.mk" {
+		return
+	}
+
+	varparam := varnameParam(varname)
+	id := Buildlink3ID(varparam)
+	if pkg.bl3Data[id] != nil || containsVarUse(varparam) {
+		return
+	}
+
+	// Several packages contain Makefile fragments that are more related
+	// to the buildlink3.mk file than to the package Makefile.
+	// These may use the buildlink identifier from the package itself.
+	bl3 := LoadMk(pkg.File("buildlink3.mk"), pkg, 0)
+	if bl3 != nil {
+		bl3Data := LoadBuildlink3Data(bl3)
+		if bl3Data != nil && bl3Data.id == id {
+			return
+		}
+	}
+
+	if id == "mysql-client" && pkg.Includes("../../mk/mysql.buildlink3.mk") != nil {
+		return
+	}
+
+	ck.MkLine.Warnf("Buildlink identifier %q is not known in this package.",
+		varparam)
 }
 
 // checkPermissions checks the permissions when a variable is used,

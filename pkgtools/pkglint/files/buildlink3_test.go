@@ -506,6 +506,35 @@ func (s *Suite) Test_Buildlink3Checker_Check__no_tracing(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_Buildlink3Checker_checkFirstParagraph__comment_before_tree(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/buildlink3.mk",
+		MkCvsID,
+		"",
+		"# comment",
+		"BUILDLINK_TREE+=\tpackage",
+		"",
+		".if !defined(PACKAGE_BUILDLINK3_MK)",
+		"PACKAGE_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.package+=\tpackage>=0",
+		"BUILDLINK_PKGSRCDIR.package?=\t../../category/package",
+		"BUILDLINK_DEPMETHOD.package?=\tbuild",
+		"",
+		".endif # PACKAGE_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=\t-package")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package/buildlink3.mk"))
+
+	// No warning in line 3. Comments are ok there.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Buildlink3Checker_checkUniquePkgbase(c *check.C) {
 	t := s.Init(c)
 

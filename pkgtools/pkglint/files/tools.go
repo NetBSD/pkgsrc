@@ -154,7 +154,7 @@ func (tr *Tools) Define(name, varname string, mkline *MkLine) *Tool {
 		return nil
 	}
 
-	validity := tr.validity(mkline.Basename, false)
+	validity := tr.validity(mkline.Basename.String(), false)
 	return tr.def(name, varname, false, validity, nil)
 }
 
@@ -318,7 +318,7 @@ func (tr *Tools) parseUseTools(mkline *MkLine, createIfAbsent bool, addToUseTool
 		return
 	}
 
-	validity := tr.validity(mkline.Basename, addToUseTools)
+	validity := tr.validity(mkline.Basename.String(), addToUseTools)
 	for _, dep := range mkline.ValueFields(value) {
 		name := strings.Split(dep, ":")[0]
 		if createIfAbsent || tr.ByName(name) != nil {
