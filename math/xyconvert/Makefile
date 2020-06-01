@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/10 22:10:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/01 06:11:01 rillig Exp $
 #
 
 PKGREVISION= 2
@@ -10,6 +10,8 @@ BUILD_TARGET=	gui/xyconvert
 
 DISTINFO_FILE=	../../math/xylib/distinfo
 PATCHDIR=	../../math/xylib/patches
+
+GNU_CONFIGURE_WX_VERSION=	no
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
