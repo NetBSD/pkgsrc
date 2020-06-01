@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2020/05/22 10:56:18 adam Exp $
+# $NetBSD: Makefile,v 1.82 2020/06/01 20:01:18 rillig Exp $
 #
 
 PLUGIN_NAME=		spam_report
@@ -10,6 +10,7 @@ PKGREVISION= 2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Report spam to various places
 
+TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--enable-${PLUGIN_NAME}-plugin
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
