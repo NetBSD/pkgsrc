@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/04/22 08:31:54 pin Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/01 10:20:48 pin Exp $
 
-DISTNAME=	lxqt-build-tools-0.6.0
-PKGREVISION=	3
+VERSION=	0.7.0
+DISTNAME=	lxqt-build-tools-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-build-tools/0.6.0/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-build-tools/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/lxqt/lxqt-build-tools/
 COMMENT=	LXQt build tools
 LICENSE=	modified-bsd
 
@@ -24,4 +24,5 @@ pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
