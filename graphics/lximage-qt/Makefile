@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/06/01 10:42:24 pin Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/01 14:56:36 pin Exp $
 
 VERSION=	0.15.0
 DISTNAME=	lximage-qt-${VERSION}
@@ -21,11 +21,11 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
-.include "../../wip/libfm-qt/buildlink3.mk"
+.include "../../x11/libfm-qt/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
