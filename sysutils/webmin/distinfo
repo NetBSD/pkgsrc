@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2020/04/27 15:33:30 mef Exp $
+$NetBSD: distinfo,v 1.25 2020/06/01 23:07:27 mef Exp $
 
 SHA1 (webmin-1.941.tar.gz) = 9103d027933ebc662ef76a56c07343ab5241efaa
 RMD160 (webmin-1.941.tar.gz) = 4bd1f28a7dc0338d97cf7a92e6844120d1d647bf
@@ -26,4 +26,3 @@ SHA1 (patch-aw) = a6f8b4c80222b4f659ebe11754d5e5cf981abf5a
 SHA1 (patch-ax) = e7debde036d736f641229b2b604b2d77b03c7366
 SHA1 (patch-ay) = 8f21939c04e71c0aa74660b93e03e0ff2b9e69d5
 SHA1 (patch-az) = 770d55c85ca9de3f038cfbcf2a1134848ad000d0
-SHA1 (patch-update-from-repo_sh) = 75e862d2e3c070de85391526acf4de853ccb14d1
