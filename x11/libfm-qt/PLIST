@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/20 06:07:54 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:38:55 pin Exp $
 include/libfm-qt/appchoosercombobox.h
 include/libfm-qt/appchooserdialog.h
 include/libfm-qt/applaunchcontext.h
@@ -95,11 +95,10 @@ include/libfm-qt/renamedialog.h
 include/libfm-qt/sidepane.h
 include/libfm-qt/utilities.h
 include/libfm-qt/utilities_p.h
-include/libfm-qt/utils.h
 include/libfm-qt/xdndworkaround.h
 lib/libfm-qt.so
-lib/libfm-qt.so.6
-lib/libfm-qt.so.6.1.0
+lib/libfm-qt.so.7
+lib/libfm-qt.so.7.0.0
 lib/pkgconfig/libfm-qt.pc
 share/cmake/fm-qt/fm-qt-config-version.cmake
 share/cmake/fm-qt/fm-qt-config.cmake
@@ -108,6 +107,8 @@ share/cmake/fm-qt/fm-qt-targets.cmake
 share/libfm-qt/archivers.list
 share/libfm-qt/terminals.list
 share/libfm-qt/translations/libfm-qt_ar.qm
+share/libfm-qt/translations/libfm-qt_arn.qm
+share/libfm-qt/translations/libfm-qt_ast.qm
 share/libfm-qt/translations/libfm-qt_ca.qm
 share/libfm-qt/translations/libfm-qt_cs.qm
 share/libfm-qt/translations/libfm-qt_cy.qm
@@ -126,6 +127,7 @@ share/libfm-qt/translations/libfm-qt_ja.qm
 share/libfm-qt/translations/libfm-qt_lt.qm
 share/libfm-qt/translations/libfm-qt_nb_NO.qm
 share/libfm-qt/translations/libfm-qt_nl.qm
+share/libfm-qt/translations/libfm-qt_or.qm
 share/libfm-qt/translations/libfm-qt_pl.qm
 share/libfm-qt/translations/libfm-qt_pt.qm
 share/libfm-qt/translations/libfm-qt_pt_BR.qm
