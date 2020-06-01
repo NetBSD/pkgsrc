@@ -1,15 +1,14 @@
-# $NetBSD: options.mk,v 1.55 2020/03/10 08:20:31 adam Exp $
+# $NetBSD: options.mk,v 1.56 2020/06/01 06:18:51 adam Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=		dav flv gtools inet6 luajit mail-proxy memcache naxsi \
-				geoip pcre push realip ssl sub uwsgi image-filter \
-				debug slice status nginx-autodetect-cflags echo \
-				set-misc headers-more array-var encrypted-session \
-				form-input perl gzip http2 auth-request secure-link rtmp \
-				stream-ssl-preread
+PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
+PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug echo encrypted-session \
+			form-input flv geoip gtools gzip headers-more http2 \
+			image-filter luajit mail-proxy memcache naxsi \
+			pcre perl push realip rtmp secure-link set-misc slice \
+			ssl status stream-ssl-preread sub uwsgi
+PKG_SUGGESTED_OPTIONS=	pcre ssl
+
 PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
-
-PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi perl uwsgi
 
@@ -191,7 +190,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 CONFIGURE_ARGS+=	--add-module=../nchan-${PUSH_VERSION}
 .endif
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum) || make(mdi)
-PUSH_VERSION=		1.2.6
+PUSH_VERSION=		1.2.7
 PUSH_DISTNAME=		nginx_http_push_module-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-https://github.com/slact/nchan/archive/v${PUSH_VERSION}.tar.gz
