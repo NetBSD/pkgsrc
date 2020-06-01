@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2020/03/20 11:57:48 nia Exp $
+# $NetBSD: Makefile,v 1.119 2020/06/01 00:14:21 gdt Exp $
 
 # Note that upstream has replaced tarballs without changing the
 # version number (e.g., 0.19.2 had two different tarballs).
@@ -10,6 +10,8 @@ PKGREVISION=		16
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
+# There have been issues with unstable OPENMP APIs.  Therefore,
+# updates must be tested on NetBSD 8 with gcc.
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://ufraw.sourceforge.net/
 COMMENT=		GIMP plug-in for raw digicam import
