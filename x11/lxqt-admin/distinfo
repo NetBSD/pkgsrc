@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/04/25 17:37:47 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2020/06/01 12:39:14 pin Exp $
 
-SHA1 (lxqt-admin-0.14.1.tar.xz) = 4c4c76f1b1441063b6a77664fb45ba69792dd81c
-RMD160 (lxqt-admin-0.14.1.tar.xz) = 2519de22bdb1c90caa956d12e6ea6ae711c6f19a
-SHA512 (lxqt-admin-0.14.1.tar.xz) = bd6272a3042a71e9e00b2ba10be2575649c2d2750a4e00a6e11adaae6b91ccab5e3cf79a8ceb7bfbe808ec80c139b93e02cd96990f80b68a77a974c063e6a373
-Size (lxqt-admin-0.14.1.tar.xz) = 141088 bytes
-SHA1 (patch-CMakeLists.txt) = edb73bcfbf4655a9e9d223c21db4693c902ce6a4
-SHA1 (patch-lxqt-admin-time_lxqt-admin-time-helper.freebsd) = 6469e32073989df84233dc353b908052c7c5edb3
+SHA1 (lxqt-admin-0.15.0.tar.xz) = 715ff33e02fd79594961201582598dcaf2a58fc2
+RMD160 (lxqt-admin-0.15.0.tar.xz) = 139d9da0c016cf0c59b8a316bf236a42e8289532
+SHA512 (lxqt-admin-0.15.0.tar.xz) = 830de1f3f65913b939b286adeeddfdfc22318bf09ea0ff7b705521c5c06f8edefa189b08bd4f6281116a12fc3255ace68a35ee56f3f7bec0e0f1cceea3b47c22
+Size (lxqt-admin-0.15.0.tar.xz) = 143456 bytes
