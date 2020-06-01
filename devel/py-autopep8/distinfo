@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/04/23 06:08:32 adam Exp $
+$NetBSD: distinfo,v 1.13 2020/06/01 05:12:22 adam Exp $
 
-SHA1 (autopep8-1.5.2.tar.gz) = 96e5b0038823aea69cc581867ab9125a790ffe45
-RMD160 (autopep8-1.5.2.tar.gz) = 065043e92fcb43bacab13e3604f374d67c99bba8
-SHA512 (autopep8-1.5.2.tar.gz) = d7386de85d3390493b4f53cdf8c23ed6c8d5b2c7d783b7e215bc9c4bdc3b09dd098d3a0b8328480dbe9d10e5ca141849babd14865ef6e206f5088f00aca0804a
-Size (autopep8-1.5.2.tar.gz) = 117909 bytes
+SHA1 (autopep8-1.5.3.tar.gz) = e3f89f6f00119d3c15cb6ced0cba507beb284cbb
+RMD160 (autopep8-1.5.3.tar.gz) = b305b43a7b3ba2a732a0510b81278c2bb4547166
+SHA512 (autopep8-1.5.3.tar.gz) = e288b45da93b91d75b469bd6efb9d94fbd9abc00a6d2167655d9f80675aa2a5ce00d1256b6ef8b7a7e3e9d5dc9f11827fd91152b0a06246abfc8ed4cf510b0de
+Size (autopep8-1.5.3.tar.gz) = 116297 bytes
