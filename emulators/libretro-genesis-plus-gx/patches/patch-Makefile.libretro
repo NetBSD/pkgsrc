@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.libretro,v 1.1 2020/06/01 19:12:38 nia Exp $
+
+This is not C++.
+
+--- Makefile.libretro.orig	2020-02-08 21:59:22.000000000 +0000
++++ Makefile.libretro
+@@ -715,7 +715,7 @@ else
+ 	LD = link.exe
+ endif
+ else
+-	LD = $(CXX)
++	LD = $(CC)
+ endif
+ 
+ ifeq ($(platform), theos_ios)
