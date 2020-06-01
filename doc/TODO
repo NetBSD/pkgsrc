@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19895 2020/06/01 19:15:08 adam Exp $
+$NetBSD: TODO,v 1.19896 2020/06/01 20:32:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -980,7 +980,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-codespell-1.17.1
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
-	o py-gnome-menus-3.8.0
 	o py-google-api-python-client-1.8.4
 	o py-google-auth-1.16.0
 	o py-hgview-1.9.0
@@ -991,7 +990,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
-	o py-setuptools-46.4.0 [drops python-2.x support]
 	o py-setuptools-47.1.1
 	o py-setuptools_scm-4.1.1
 	o py-simpletal-5.1
