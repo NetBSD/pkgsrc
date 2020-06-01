@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2020/04/22 08:43:33 pin Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/01 10:38:55 pin Exp $
 
-DISTNAME=	libfm-qt-0.14.1
-PKGREVISION=	3
+VERSION=	0.15.1
+DISTNAME=	libfm-qt-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	https://downloads.lxqt.org/downloads/libfm-qt/0.14.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/libfm-qt/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/lxqt/libfm-qt/
 COMMENT=	Core library of PCManFM-Qt
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
@@ -27,10 +27,7 @@ SUBST_MESSAGE.prefix=	Fixing paths.
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	src/core/fileinfo.cpp
 SUBST_FILES.prefix+=	src/core/vfs/vfs-menu.c
-# Upstream has a typo in a hard-coded path of "xgd" where they mean "xdg".
-# On the next update, check vfs-menu.c, as this will likely be corrected
-# to "xdg": https://github.com/lxqt/libfm-qt/pull/528
-SUBST_SED.prefix=	-e 's,/etc/xgd,${PKG_SYSCONFDIR},g'
+SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
 
 pre-configure:
