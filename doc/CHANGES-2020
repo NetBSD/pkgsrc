@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3316 2020/06/01 12:48:49 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3317 2020/06/01 15:36:21 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5220,3 +5220,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/lxqt-session to 0.15.0 [pin 2020-06-01]
 	Updated x11/lxqt-admin to 0.15.0 [pin 2020-06-01]
 	Updated meta-pkgs/lxqt to 0.15.0 [pin 2020-06-01]
+	Updated sysutils/intel-microcode-netbsd to 20200520 [msaitoh 2020-06-01]
