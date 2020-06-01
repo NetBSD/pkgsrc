@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2020/05/22 10:56:16 adam Exp $
+# $NetBSD: Makefile,v 1.76 2020/06/01 20:01:17 rillig Exp $
 #
 
 PLUGIN_NAME=    att_remover
@@ -9,6 +9,7 @@ PKGREVISION= 2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Permanently deletes attachments from mail
 
+TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--enable-${PLUGIN_NAME}-plugin
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
