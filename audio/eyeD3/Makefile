@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/05/20 07:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/06/01 18:38:23 wiz Exp $
 
 DISTNAME=	eyeD3-0.9.5
 CATEGORIES=	audio
@@ -12,17 +12,24 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-deprecation-[0-9]*:../../devel/py-deprecation
 DEPENDS+=	${PYPKGPREFIX}-factory_boy-[0-9]*:../../devel/py-factory_boy
 DEPENDS+=	${PYPKGPREFIX}-filetype-[0-9]*:../../sysutils/py-filetype
+#TEST_DEPENDS+=	wget-[0-9]*:../../net/wget
+#TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-faker via py-factory_boy
 
-USE_LANGUAGES=			# none
+USE_LANGUAGES=	# none
+USE_TOOLS+=	gmake
 
-# 13 test failures as of 0.9.5
-# https://github.com/nicfit/eyeD3/issues/437
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
+#SUBST_CLASSES+=		test
+#SUBST_SED.test+=	-e "s,tox,tox-${PYVERSSUFFIX},g"
+#SUBST_STAGE.test+=	pre-configure
+#SUBST_FILES.test+=	Makefile
+
+# tox-based testing
+#do-test:
+#	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test-data test
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
