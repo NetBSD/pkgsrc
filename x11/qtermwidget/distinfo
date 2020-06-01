@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/04/23 04:11:19 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2020/06/01 10:53:09 pin Exp $
 
-SHA1 (qtermwidget-0.14.1.tar.xz) = 07d99b8f4a673fa1f965716f0db89a4ba9e3f9b5
-RMD160 (qtermwidget-0.14.1.tar.xz) = 73bcdbf8847c1816b42ff3da3dbb7c67c1b58a4d
-SHA512 (qtermwidget-0.14.1.tar.xz) = 6b6d4abd6fc21f10f5323321f26132c0ff5b9682d09a086e265e57976deb60fca8db9a9906a29a0ed8d0e7b83417d5852df55d0118936d5f7a1342a9c2cb6410
-Size (qtermwidget-0.14.1.tar.xz) = 178952 bytes
-SHA1 (patch-lib_kpty.cpp) = 083f01444518ef6e9596417a112bde6b2f4b5c5c
-SHA1 (patch-lib_kpty__p.h) = bd122197507218057e6bf90139a8e1f332281a98
+SHA1 (qtermwidget-0.15.0.tar.xz) = 25671ac9b32732464b2488c0a4a8640427cab080
+RMD160 (qtermwidget-0.15.0.tar.xz) = 7b87a7e6db416ff38671c1f6bc7bc022e1f01ba2
+SHA512 (qtermwidget-0.15.0.tar.xz) = 95f44c77d0b678b1a204b559a7adb2fb68b2e82b2357d89239e9fc1c6f445346d84ec7f395d58f17a2ef7b42e58c02590f637683193eae4f7efbd001b61857c7
+Size (qtermwidget-0.15.0.tar.xz) = 181284 bytes
