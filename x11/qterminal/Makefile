@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/04/22 08:42:02 pin Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/01 10:56:14 pin Exp $
 
-DISTNAME=	qterminal-0.14.1
-PKGREVISION=	3
+VERSION=	0.15.0
+DISTNAME=	qterminal-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	https://downloads.lxqt.org/downloads/qterminal/0.14.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/qterminal/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/lxqt/qterminal/
 COMMENT=	Terminal emulator for Qt5
 LICENSE=	gnu-gpl-v2
 
