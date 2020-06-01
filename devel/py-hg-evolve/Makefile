@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/05/10 19:29:58 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2020/06/01 15:48:20 joerg Exp $
 
 DISTNAME=	hg-evolve-10.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://www.mercurial-scm.org/doc/evolution/
 COMMENT=	Experimental Mercurial extensions from Facebook
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-mercurial>=4.6:../../devel/py-mercurial
+DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.4nb1:../../devel/py-mercurial
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 
 post-install:
