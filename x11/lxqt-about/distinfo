@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/04/25 02:06:58 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2020/06/01 11:43:15 pin Exp $
 
-SHA1 (lxqt-about-0.14.1.tar.xz) = 29ce53eea2057927cd370df9be781eb50f61b444
-RMD160 (lxqt-about-0.14.1.tar.xz) = 5e9bc55c5eb4124eab43fd27df7b1cb1226633e1
-SHA512 (lxqt-about-0.14.1.tar.xz) = 09cbb4c6c331b16b551d1b63ad4643f424fbaa35cfa9e2d4c70393fae499d403bf8a70c8105d258bd84200d06862033bfe0a082500e794b0db10df38d27b407a
-Size (lxqt-about-0.14.1.tar.xz) = 36204 bytes
+SHA1 (lxqt-about-0.15.0.tar.xz) = 20ab10f1b1c5904bb2d27cbce01e4b808dd6c979
+RMD160 (lxqt-about-0.15.0.tar.xz) = 3f80db3832702a2ac3b2415e3ef7291befdcec50
+SHA512 (lxqt-about-0.15.0.tar.xz) = 0572db83f7f11abe2b17c69ba3d1bcefc5daa011a3c474aa8217f2cf8cc1db54a5de1db4a0678381c4d37caf1d1ebbe4026ed63e17e2fbbaa4133d1e781c6e44
+Size (lxqt-about-0.15.0.tar.xz) = 39048 bytes
