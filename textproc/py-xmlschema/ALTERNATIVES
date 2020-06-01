@@ -1,0 +1,3 @@
+bin/xmlschema-json2xml @PREFIX@/bin/xmlschema-json2xml-@PYVERSSUFFIX@
+bin/xmlschema-validate @PREFIX@/bin/xmlschema-validate-@PYVERSSUFFIX@
+bin/xmlschema-xml2json @PREFIX@/bin/xmlschema-xml2json-@PYVERSSUFFIX@
