@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/05/30 14:59:10 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/01 19:16:16 nia Exp $
+
+LIBRETRO_CORE=	mednafen_psx_hw
 
 .include "../../emulators/libretro-beetle-psx/Makefile.common"
 
