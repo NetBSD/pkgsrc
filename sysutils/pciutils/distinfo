@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.34 2020/01/28 01:46:58 msaitoh Exp $
+$NetBSD: distinfo,v 1.35 2020/06/01 15:47:53 msaitoh Exp $
 
-SHA1 (pciutils-3.6.4.tar.gz) = c99196cf232ecf539a9a63c7da3f9f3500a4955d
-RMD160 (pciutils-3.6.4.tar.gz) = 76d18d1dd0fce7567bbd9fabcd35f0b987f1e495
-SHA512 (pciutils-3.6.4.tar.gz) = ace51681d8803a06fdfa7153a56f586616044823cb10b0e701a7fb57af0e38884537afc27be0885cf244c0a8dec7c6295baf226f1ef2868ed1eedff10565945f
-Size (pciutils-3.6.4.tar.gz) = 489925 bytes
-SHA1 (patch-aa) = e9f937fabf60baac2a999aa1d10f5e275e7ff7df
+SHA1 (pciutils-3.7.0.tar.gz) = 8688ce7351895df5b1eab91888ed9c313e35ee4b
+RMD160 (pciutils-3.7.0.tar.gz) = 49be0dbddad3bad0727527b154a23982730c6194
+SHA512 (pciutils-3.7.0.tar.gz) = 37c01619264d299ac1e367a022637d60ab2bf6e5533fe9d37b2d37fdc5070563b78bfedc200b6bcb9192ce43fdec09ff350080c3e3ba504b90766d004398efc5
+Size (pciutils-3.7.0.tar.gz) = 507777 bytes
+SHA1 (patch-aa) = f609713b035dd20dcdc1f8cdc15f9b280598e89a
 SHA1 (patch-ab) = 14786e702cceaea9146f34a5a301650d2092d689
 SHA1 (patch-ac) = 4b90e99c051391b9cd3a6c1f5781f41b4a855c29
 SHA1 (patch-lib_i386-io-sunos.h) = afb666796a6b220d868a41e4fb9fd9e42152faed
