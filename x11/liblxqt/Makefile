@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/04/22 08:46:30 pin Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/01 10:30:37 pin Exp $
 
-DISTNAME=	liblxqt-0.14.1
-PKGREVISION=	3
+VERSION=	0.15.1
+DISTNAME=	liblxqt-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	https://downloads.lxqt.org/downloads/liblxqt/0.14.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/liblxqt/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/lxqt/liblxqt/
 COMMENT=	Core utility library for all LXQt components
 LICENSE=	gnu-lgpl-v2.1
 
