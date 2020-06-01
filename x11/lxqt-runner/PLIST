@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/25 15:16:41 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 12:31:01 pin Exp $
 bin/lxqt-runner
 man/man1/lxqt-runner.1
 share/examples/lxqt/xdg/autostart/lxqt-runner.desktop
 share/lxqt/translations/lxqt-runner/lxqt-runner_ar.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_arn.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_ast.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ca.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_cs.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_cy.qm
@@ -32,6 +34,7 @@ share/lxqt/translations/lxqt-runner/lxqt-runner_pt_BR.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ro_RO.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ru.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ru_RU.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_sk.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_sk_SK.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_sl.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_sr@latin.qm
@@ -42,4 +45,3 @@ share/lxqt/translations/lxqt-runner/lxqt-runner_tr.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_uk.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_zh_CN.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_zh_TW.qm
-@pkgdir lib
