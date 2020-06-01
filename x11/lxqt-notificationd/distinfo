@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/04/25 16:20:02 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2020/06/01 12:09:51 pin Exp $
 
-SHA1 (lxqt-notificationd-0.14.1.tar.xz) = 89564fb423d399a2044cc5324140269aac3a1c1a
-RMD160 (lxqt-notificationd-0.14.1.tar.xz) = 5f48f4059180a4ecbf6a7702ebf256452a3a06f0
-SHA512 (lxqt-notificationd-0.14.1.tar.xz) = dcd1892ff66d6beb5c8953c6731f798a59272365fb7439277732b145cc9e6479314415481d9e8aae9fd670d779011c3d7bb3874b05a67cfad2a722f467866795
-Size (lxqt-notificationd-0.14.1.tar.xz) = 47356 bytes
+SHA1 (lxqt-notificationd-0.15.0.tar.xz) = bbe04b198989c676139c510d3756790ec48eec93
+RMD160 (lxqt-notificationd-0.15.0.tar.xz) = 6119facb8f510522a066c4cf2833c3e288dffb35
+SHA512 (lxqt-notificationd-0.15.0.tar.xz) = 0febe3ff61caaf4303e3853df6bc494ce8eb4a931e6d8600a2e38c07317ecadbe3d7060ac234d139326a726c43ac555153dde6b2d4d05e95ab357873457c9632
+Size (lxqt-notificationd-0.15.0.tar.xz) = 49068 bytes
