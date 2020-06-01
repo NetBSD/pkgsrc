@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/01 11:02:20 pin Exp $
+
+SHA1 (screengrab-2.0.1.tar.xz) = 76938d239b73b80319fb75dfe68fc5f866ba3b7b
+RMD160 (screengrab-2.0.1.tar.xz) = 1e5f8bfa82dec247e44116f716490d48238a8916
+SHA512 (screengrab-2.0.1.tar.xz) = f65d1aa4a36bf7e11e29bd1d1ad009f979e3c66a27204cd74c7ef7a54bde4027efdf030933cb81d2f9cb8b67715e868e1454a1faf7bbbb63cf162214bad8dc02
+Size (screengrab-2.0.1.tar.xz) = 123628 bytes
