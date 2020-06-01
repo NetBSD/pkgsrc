@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2020/04/25 17:24:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/01 11:48:49 pin Exp $
 
-DISTNAME=	lxqt-policykit-0.14.1
+VERSION=	0.15.0
+DISTNAME=	lxqt-policykit-${VERSION}
 CATEGORIES=	security
-MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-policykit/0.14.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-policykit/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+HOMEPAGE=	https://github.com/lxqt/lxqt-policykit/
 COMMENT=	Policykit authentication agent
 LICENSE=	gnu-lgpl-v2.1
 
