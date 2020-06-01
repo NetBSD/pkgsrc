@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/01 11:10:44 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/01 15:08:38 pin Exp $
 
 VERSION=	0.2.0
 DISTNAME=	lxqt-archiver-${VERSION}
@@ -31,4 +31,5 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 .include "../../x11/libfm-qt/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
