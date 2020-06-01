@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2020/05/16 17:39:24 rillig Exp $
+# $NetBSD: Makefile,v 1.87 2020/06/01 06:04:57 rillig Exp $
 
 DISTNAME=	xcdroast-1.18
 PKGREVISION=	7
@@ -16,7 +16,6 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
