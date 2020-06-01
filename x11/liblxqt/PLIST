@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/20 05:31:20 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:30:37 pin Exp $
 bin/lxqt-backlight_backend
 include/lxqt/LXQt/Application
 include/lxqt/LXQt/AutostartEntry
@@ -48,6 +48,9 @@ share/cmake/lxqt/lxqt-targets-release.cmake
 share/cmake/lxqt/lxqt-targets.cmake
 share/lxqt/power.conf
 share/lxqt/translations/liblxqt/liblxqt_ar.qm
+share/lxqt/translations/liblxqt/liblxqt_arn.qm
+share/lxqt/translations/liblxqt/liblxqt_ast.qm
+share/lxqt/translations/liblxqt/liblxqt_bg.qm
 share/lxqt/translations/liblxqt/liblxqt_ca.qm
 share/lxqt/translations/liblxqt/liblxqt_cs.qm
 share/lxqt/translations/liblxqt/liblxqt_cy.qm
