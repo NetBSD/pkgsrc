@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2020/04/12 08:28:19 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/01 11:23:01 pin Exp $
 
-VERSION=	0.14.1
+VERSION=	0.15.0
 DISTNAME=	pavucontrol-qt-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	https://downloads.lxqt.org/downloads/pavucontrol-qt/${VERSION}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/pavucontrol-qt/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+HOMEPAGE=	https://github.com/lxqt/pavucontrol-qt/
 COMMENT=	Pulseaudio mixer implemented in Qt
 LICENSE=	gnu-lgpl-v2
 
