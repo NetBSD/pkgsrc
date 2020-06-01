@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2011/08/02 14:03:18 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.13 2020/06/01 05:54:16 rillig Exp $
 #
 # used by net/nagios-base/Makefile
 # used by net/nagios-nsca/Makefile
@@ -27,6 +27,5 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${NAGIOSDIR}
 
 CONFIGURE_ARGS+=	--with-cgiurl=/nagios/cgi-bin
-CONFIGURE_ARGS+=	--with-htmurl=/nagios
 
 BUILD_DEFS+=		NAGIOSDIR
