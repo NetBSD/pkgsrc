@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2020/05/22 10:56:17 adam Exp $
+# $NetBSD: Makefile,v 1.79 2020/06/01 20:01:18 rillig Exp $
 #
 
 PLUGIN_NAME=	pgpcore
@@ -11,6 +11,7 @@ COMMENT=	Handles core PGP functions
 
 PLIST_SRC+=	PLIST
 
+TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--enable-pgpcore-plugin
 CONFIGURE_ARGS+=	--enable-pgpmime-plugin
 CONFIGURE_ARGS+=	--enable-pgpinline-plugin
