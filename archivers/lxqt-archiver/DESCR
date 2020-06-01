@@ -1,0 +1,4 @@
+A simple & lightweight Qt file archiver.
+The core I/O functions are ported from Engrampa (a Gnome File Roller fork).
+This is only a front-end (a graphical interface) to archiving programs
+like tar and zip.
