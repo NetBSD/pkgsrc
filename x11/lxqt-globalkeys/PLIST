@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/25 01:34:53 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 12:01:42 pin Exp $
 bin/lxqt-config-globalkeyshortcuts
 bin/lxqt-globalkeysd
 include/lxqt-globalkeys-ui/LXQtGlobalKeysUi/ShortcutSelector
@@ -13,10 +13,10 @@ include/lxqt-globalkeys/lxqt-globalkeys.h
 include/lxqt-globalkeys/lxqtglobalkeys.h
 lib/liblxqt-globalkeys-ui.so
 lib/liblxqt-globalkeys-ui.so.0
-lib/liblxqt-globalkeys-ui.so.0.14.1
+lib/liblxqt-globalkeys-ui.so.0.15.1
 lib/liblxqt-globalkeys.so
 lib/liblxqt-globalkeys.so.0
-lib/liblxqt-globalkeys.so.0.14.1
+lib/liblxqt-globalkeys.so.0.15.1
 lib/pkgconfig/lxqt-globalkeys-ui.pc
 lib/pkgconfig/lxqt-globalkeys.pc
 share/applications/lxqt-config-globalkeyshortcuts.desktop
@@ -31,6 +31,7 @@ share/cmake/lxqt-globalkeys/lxqt-globalkeys-targets.cmake
 share/examples/lxqt/xdg/autostart/lxqt-globalkeyshortcuts.desktop
 share/lxqt/globalkeyshortcuts.conf
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_ar.qm
+share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_arn.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_ast.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_ca.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_cs.qm
