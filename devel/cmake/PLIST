@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2020/03/21 12:58:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.61 2020/06/01 06:21:27 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -179,6 +179,8 @@ share/cmake-${CMAKE_API}/Help/envvar/FC.rst
 share/cmake-${CMAKE_API}/Help/envvar/FFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/LDFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/MACOSX_DEPLOYMENT_TARGET.rst
+share/cmake-${CMAKE_API}/Help/envvar/OBJC.rst
+share/cmake-${CMAKE_API}/Help/envvar/OBJCXX.rst
 share/cmake-${CMAKE_API}/Help/envvar/PackageName_ROOT.rst
 share/cmake-${CMAKE_API}/Help/envvar/RC.rst
 share/cmake-${CMAKE_API}/Help/envvar/RCFLAGS.rst
