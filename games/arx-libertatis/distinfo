@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2016/10/30 10:25:30 maya Exp $
+$NetBSD: distinfo,v 1.3 2020/06/01 10:30:03 js Exp $
 
 SHA1 (arx-libertatis-1.1.2.tar.xz) = 3b14a55553c564fd33caafb3a5bdb2d328e1fde8
 RMD160 (arx-libertatis-1.1.2.tar.xz) = 94145d36664d8d747c0abc3ced9c9055fd642690
 SHA512 (arx-libertatis-1.1.2.tar.xz) = d4cb8187e7f63934408e38a51a44b7da03c8628820d43139507ff97ebd463b9cd7baf6cc4e85a3d4191d6e5f56850d77d07cfffc33d8f5a51378dfb41f719fb8
 Size (arx-libertatis-1.1.2.tar.xz) = 970608 bytes
-SHA1 (patch-CMakeLists.txt) = 37a9c12a831ed6127a9c0a2e28bec2c3d7b6075d
+SHA1 (patch-CMakeLists.txt) = f905b3b51e39dff8bf2e24d4de76b677495fad00
 SHA1 (patch-cmake_CompileCheck.cmake) = b954b0115666741ffbd5686e997d24bae72a3196
 SHA1 (patch-cmake_VersionString.cmake) = afff2ae36425f3ffe0e1679d28e48ff4b6fc3d6f
 SHA1 (patch-src_graphics_opengl_OpenGLRenderer.cpp) = 410769fea6b911dcb283b1da85bebd2861de8d94
