@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2019/08/29 15:36:39 bouyer Exp $
+$NetBSD: distinfo,v 1.13 2020/06/01 03:50:21 mef Exp $
 
 SHA1 (kicad-5.1.4.tar.xz) = 5c4a2cf2f99afc67a57433ead0686e0083dd6fb2
 RMD160 (kicad-5.1.4.tar.xz) = ed8e53cebddf76df70e80ec1f221cf5bf69be060
@@ -11,6 +11,7 @@ SHA1 (patch-CMakeModules_WriteVersionHeader.cmake) = 153ad7c4cd21358f613a4060164
 SHA1 (patch-CMakeModules_config.h.cmake) = 7d2edb2cf7482724d255b8db0232dd28f6b7e517
 SHA1 (patch-bitmaps_png_CMakeLists.txt) = 1202783b39af4ddf83b9def91eb72b058f2da5bb
 SHA1 (patch-common_CMakeLists.txt) = 29b3dbcbb5f82b3f16881e7c83a8cc11e2d8bd85
+SHA1 (patch-common_lib__tree__model.cpp) = 09977f6e8ed3e103dc9f9e60b015feddbad0716d
 SHA1 (patch-cvpcb_CMakeLists.txt) = 664ad5a5788c7c2b28911b60a71697012ceed260
 SHA1 (patch-eeschema_CMakeLists.txt) = 351f684b4a6ff58532634086a7df1e35ea02d792
 SHA1 (patch-gerbview_CMakeLists.txt) = 0a9417eeb432919d57afbfaa07a9651f7df4acb0
