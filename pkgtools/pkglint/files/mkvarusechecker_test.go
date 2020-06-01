@@ -379,6 +379,25 @@ func (s *Suite) Test_MkVarUseChecker_checkVarname(c *check.C) {
 		"AUTOFIX: filename.mk:3: Replacing \"LOCALBASE\" with \"PREFIX\".")
 }
 
+func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/library")
+	t.CreateFileBuildlink3Id("category/library/buildlink3.mk", "lib")
+	t.SetUpPackage("category/package",
+		"CONFIGURE_ARGS+=\t--with-library=${BUILDLINK_PREFIX.library}",
+		"CONFIGURE_ARGS+=\t--with-lib=${BUILDLINK_PREFIX.lib}",
+		"",
+		".include \"../../category/library/buildlink3.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:20: Buildlink identifier \"library\" is not known in this package.")
+}
+
 func (s *Suite) Test_MkVarUseChecker_checkPermissions(c *check.C) {
 	t := s.Init(c)
 

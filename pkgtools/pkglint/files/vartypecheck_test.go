@@ -507,6 +507,40 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__smaller_version(c *check.C)
 			"version 1.4abi from ../../category/lib/buildlink3.mk:13.")
 }
 
+func (s *Suite) Test_VartypeCheck_DependencyPattern__API_ABI(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../category/lib/buildlink3.mk\"",
+		"BUILDLINK_API_DEPENDS.lib+=\tlib>=1.0pkg")
+	t.SetUpPackage("category/lib")
+	t.CreateFileBuildlink3("category/lib/buildlink3.mk",
+		"BUILDLINK_ABI_DEPENDS.lib+=\tlib>=1.4abi")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_VartypeCheck_DependencyPattern__ABI_API(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../category/lib/buildlink3.mk\"",
+		"BUILDLINK_ABI_DEPENDS.lib+=\tlib>=1.1pkg")
+	t.SetUpPackage("category/lib")
+	t.CreateFileBuildlink3("category/lib/buildlink3.mk",
+		"BUILDLINK_API_DEPENDS.lib+=\tlib>=1.3api")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	t := s.Init(c)
 

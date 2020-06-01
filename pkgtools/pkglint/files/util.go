@@ -382,7 +382,7 @@ func isLocallyModified(filename CurrPath) bool {
 //
 // See http://cvsman.com/cvs-1.12.12/cvs_19.php.
 type CvsEntry struct {
-	Name      string
+	Name      RelPath
 	Revision  string
 	Timestamp string
 	Options   string

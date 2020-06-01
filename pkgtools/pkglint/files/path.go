@@ -42,7 +42,7 @@ func (p Path) Dir() Path {
 	return NewPath(s[:end])
 }
 
-func (p Path) Base() string { return path.Base(string(p)) }
+func (p Path) Base() RelPath { return NewRelPathString(path.Base(string(p))) }
 
 func (p Path) Split() (dir Path, base string) {
 	strDir, strBase := path.Split(string(p))
@@ -157,7 +157,7 @@ func (p Path) HasSuffixPath(suffix Path) bool {
 		(len(p) == len(suffix) || p[len(p)-len(suffix)-1] == '/')
 }
 
-func (p Path) HasBase(base string) bool { return p.Base() == base }
+func (p Path) HasBase(base string) bool { return p.Base().String() == base }
 
 func (p Path) TrimSuffix(suffix string) Path {
 	return Path(strings.TrimSuffix(string(p), suffix))
@@ -253,7 +253,7 @@ func (p CurrPath) Dir() CurrPath {
 	return CurrPath(p.AsPath().Dir())
 }
 
-func (p CurrPath) Base() string { return p.AsPath().Base() }
+func (p CurrPath) Base() RelPath { return p.AsPath().Base() }
 
 func (p CurrPath) Split() (dir CurrPath, base string) {
 	pathDir, pathBase := p.AsPath().Split()
@@ -395,7 +395,7 @@ func (p PkgsrcPath) Dir() PkgsrcPath {
 	return NewPkgsrcPath(p.AsPath().Dir())
 }
 
-func (p PkgsrcPath) Base() string { return p.AsPath().Base() }
+func (p PkgsrcPath) Base() RelPath { return p.AsPath().Base() }
 
 func (p PkgsrcPath) Count() int { return p.AsPath().Count() }
 
@@ -484,7 +484,7 @@ func (p RelPath) Dir() RelPath {
 	return RelPath(p.AsPath().Dir())
 }
 
-func (p RelPath) Base() string { return p.AsPath().Base() }
+func (p RelPath) Base() RelPath { return p.AsPath().Base() }
 
 func (p RelPath) HasBase(base string) bool { return p.AsPath().HasBase(base) }
 

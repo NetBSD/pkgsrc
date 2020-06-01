@@ -270,6 +270,10 @@ func (mkline *MkLine) FirstLineContainsValue() bool {
 
 func (mkline *MkLine) ShellCommand() string { return mkline.data.(mkLineShell).command }
 
+// Indent returns the whitespace between the dot and the directive.
+//
+// For the following example line it returns two spaces:
+//  .  include "other.mk"
 func (mkline *MkLine) Indent() string {
 	if mkline.IsDirective() {
 		return mkline.data.(*mkLineDirective).indent

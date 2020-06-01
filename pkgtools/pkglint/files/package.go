@@ -90,7 +90,7 @@ type Package struct {
 
 	// Contains the basenames of the distfiles that are mentioned in distinfo,
 	// for example "package-1.0.tar.gz", even if that file is in a DIST_SUBDIR.
-	distinfoDistfiles map[string]bool
+	distinfoDistfiles map[RelPath]bool
 }
 
 func NewPackage(dir CurrPath) *Package {
@@ -161,11 +161,11 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 		files = append(files, pkg.File(pkg.DistinfoFile))
 	}
 
-	isRelevantMk := func(filename CurrPath, basename string) bool {
-		if !hasPrefix(basename, "Makefile.") && !filename.HasSuffixText(".mk") {
+	isRelevantMk := func(filename CurrPath, basename RelPath) bool {
+		if !hasPrefix(basename.String(), "Makefile.") && !filename.HasSuffixText(".mk") {
 			return false
 		}
-		if filename.Dir().Base() == "patches" {
+		if filename.Dir().HasBase("patches") {
 			return false
 		}
 		if pkg.Pkgdir == "." {
@@ -184,7 +184,7 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 			pkg.collectConditionalIncludes(fragmentMklines)
 			pkg.loadBuildlink3Pkgbase(filename, fragmentMklines)
 		}
-		if hasPrefix(basename, "PLIST") {
+		if basename.HasPrefixText("PLIST") {
 			pkg.loadPlistDirs(filename)
 		}
 	}
@@ -1351,7 +1351,7 @@ func (pkg *Package) checkDirent(dirent CurrPath, mode os.FileMode) {
 	case mode.IsRegular():
 		G.checkReg(dirent, basename, G.Pkgsrc.Rel(dirent).Count(), pkg)
 
-	case hasPrefix(basename, "work"):
+	case basename.HasPrefixText("work"):
 		if G.Import {
 			NewLineWhole(dirent).Errorf("Must be cleaned up before committing the package.")
 		}
@@ -1361,7 +1361,7 @@ func (pkg *Package) checkDirent(dirent CurrPath, mode os.FileMode) {
 		switch {
 		case basename == "files",
 			basename == "patches",
-			dirent.Dir().Base() == "files",
+			dirent.Dir().HasBase("files"),
 			isEmptyDir(dirent):
 			break
 
@@ -1445,10 +1445,10 @@ func (pkg *Package) checkFreeze(filename CurrPath) {
 // TODO: Move to MkLinesChecker.
 func (*Package) checkFileMakefileExt(filename CurrPath) {
 	base := filename.Base()
-	if !hasPrefix(base, "Makefile.") || base == "Makefile.common" {
+	if !base.HasPrefixText("Makefile.") || base == "Makefile.common" {
 		return
 	}
-	ext := strings.TrimPrefix(base, "Makefile.")
+	ext := strings.TrimPrefix(base.String(), "Makefile.")
 
 	line := NewLineWhole(filename)
 	line.Notef("Consider renaming %q to %q.", base, ext+".mk")
@@ -1566,7 +1566,7 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 	//  already done with *_MK variables.
 }
 
-func (pkg *Package) matchesLicenseFile(basename string) bool {
+func (pkg *Package) matchesLicenseFile(basename RelPath) bool {
 	licenseFile := NewPath(pkg.vars.LastValue("LICENSE_FILE"))
 	return basename == licenseFile.Base()
 }

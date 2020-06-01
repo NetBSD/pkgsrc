@@ -170,7 +170,7 @@ func (ck *PlistChecker) checkPath(pline *PlistLine, rel RelPath) {
 	ck.checkSorted(pline)
 	ck.checkDuplicate(pline)
 
-	if contains(rel.Base(), "${IMAKE_MANNEWSUFFIX}") {
+	if rel.Base().ContainsText("${IMAKE_MANNEWSUFFIX}") {
 		pline.warnImakeMannewsuffix()
 	}
 
@@ -342,7 +342,7 @@ func (ck *PlistChecker) checkPathLib(pline *PlistLine, rel RelPath) {
 	}
 
 	basename := rel.Base()
-	if contains(basename, ".a") || contains(basename, ".so") {
+	if basename.ContainsText(".a") || basename.ContainsText(".so") {
 		la := replaceAll(pline.text, `(\.a|\.so[0-9.]*)$`, ".la")
 		if la != pline.text {
 			laLine := ck.allFiles[NewRelPathString(la)]
@@ -362,7 +362,7 @@ func (ck *PlistChecker) checkPathLib(pline *PlistLine, rel RelPath) {
 		pline.Errorf("Only the libiconv package may install lib/charset.alias.")
 	}
 
-	if hasSuffix(basename, ".la") && !pkg.vars.IsDefined("USE_LIBTOOL") {
+	if basename.HasSuffixText(".la") && !pkg.vars.IsDefined("USE_LIBTOOL") {
 		if ck.once.FirstTime("USE_LIBTOOL") {
 			pline.Warnf("Packages that install libtool libraries should define USE_LIBTOOL.")
 		}
@@ -710,7 +710,7 @@ type PlistRank struct {
 
 var defaultPlistRank = &PlistRank{0, "", "", ""}
 
-func NewPlistRank(basename string) *PlistRank {
+func NewPlistRank(basename RelPath) *PlistRank {
 	isOpsys := func(s string) bool {
 		return G.Pkgsrc.VariableType(nil, "OPSYS").basicType.HasEnum(s)
 	}
@@ -733,7 +733,7 @@ func NewPlistRank(basename string) *PlistRank {
 		return &PlistRank{2, "", "", ""}
 	}
 
-	parts := strings.Split(basename[6:], "-")
+	parts := strings.Split(basename.String()[6:], "-")
 	rank := PlistRank{3, "", "", ""}
 	if isOpsys(parts[0]) {
 		rank.Opsys = parts[0]
