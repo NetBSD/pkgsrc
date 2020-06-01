@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.176 2020/05/22 10:56:03 adam Exp $
+# $NetBSD: Makefile,v 1.177 2020/06/01 06:21:27 adam Exp $
 
-PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=	Cross platform make
@@ -25,6 +24,8 @@ LDFLAGS.Darwin+=	-framework CoreServices # for LSOpenCFURLRef()
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 PLIST_SUBST+=		CMAKE_API=${CMAKE_API}
+
+REPLACE_SH=		Modules/Compiler/XL-Fortran/cpp
 
 # for Source/cmDependsJavaParser.cxx
 UNLIMIT_RESOURCES=	datasize
