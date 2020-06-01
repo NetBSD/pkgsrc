@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.36 2020/04/20 00:38:36 joerg Exp $
+$NetBSD: distinfo,v 1.37 2020/06/01 00:14:21 gdt Exp $
 
 SHA1 (ufraw-0.22.tar.gz) = 7fc33b66f4d6ecc277e1a5589c8e5db24568949c
 RMD160 (ufraw-0.22.tar.gz) = 2588acde88dda8c30310b967e7185862072c124c
 SHA512 (ufraw-0.22.tar.gz) = a42eff5052c18afec90245cf97ceeade78e3f288186cf697ac4abf2e8290d4081db8ac4de3ae47b3774f30a6cb4cbda392099e6fd2125fe751abb40d9b065ad2
 Size (ufraw-0.22.tar.gz) = 1103554 bytes
-SHA1 (patch-dcraw.cc) = d68c75bb0438df6bd16ecde2d2718b573018fa28
-SHA1 (patch-dcraw__api.cc) = 70cd527ddc226bcac16638e3a631acf42c72dbbf
-SHA1 (patch-dcraw__indi.c) = c070b8a8fc7d47b3e3ed3817098c5f9bb2c1d62a
+SHA1 (patch-dcraw.cc) = 1d379ffa2624ce24b8f7e523d0dcfe7a313ec9c7
+SHA1 (patch-dcraw__api.cc) = 96220c6cca793684122839310883c5d5754916f4
+SHA1 (patch-dcraw__indi.c) = 48415d0d0e00f6652cb745e4f7a86ce71ed82739
 SHA1 (patch-ufraw__exiv2.cc) = c6f3c6bd9ec8cdc3dee1801f9b1972bbe827cd8d
