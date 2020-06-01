@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/06/01 12:18:53 pin Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/01 14:29:00 pin Exp $
 
 VERSION=	0.15.0
 DISTNAME=	lxqt-config-${VERSION}
@@ -43,9 +43,9 @@ SUBST_VARS.prefix+=	XKBSUB
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-DEPENDS+=	lxqt-themes-[0-9]*:../../wip/lxqt-themes
+DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
 
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
