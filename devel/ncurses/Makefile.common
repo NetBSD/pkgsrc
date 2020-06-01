@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2020/03/09 06:11:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.46 2020/06/01 07:01:19 jperkin Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--with-pkg-config-libdir=${PREFIX}/lib/pkgconfig
 CONFIGURE_ARGS+=	--without-ada
 CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
-CONFIGURE_ARGS+=	--with-manpage-tbl
 CONFIGURE_ARGS+=	--without-manpage-renames
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
@@ -49,21 +48,13 @@ CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
 CONFIGURE_ENV+=		ac_cv_path_TIC_PATH=${LOCALBASE}/bin/tic
 .endif
 
-.if !defined(TOOLS_TBL)
-# This means that groff needs to be built to get tbl(1).
-# We can only build groff if there is a builtin implementation of curses,
-# otherwise we get a circular dependency problem.
-# Additionally, Interix is special, see ../../mk/curses.buildlink3.mk
-# Additionally, Arch Linux boostrap comes without curses package.
-.  if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h)) || \
-	${OPSYS} == "Interix" || \
-	(${OPSYS} == "FreeBSD" && empty(OS_VERSION:M[0-9].*) && \
-		empty(OS_VERSION:M1[01].*)) || \
-	(${OPSYS} == "Linux" && exists(/etc/arch-release))
-# None was available, so disable use of tbl(1)
+# If there's no native tbl(1) then the tools infrastructure would pull in
+# groff, causing various circular dependencies.
+.if defined(TOOLS_TBL)
+CONFIGURE_ARGS+=	--with-manpage-tbl
+.else
 USE_TOOLS:=		${USE_TOOLS:Ntbl}
 CONFIGURE_ARGS+=	--without-manpage-tbl
-.  endif
 .endif
 
 .include "../../mk/compiler.mk"
