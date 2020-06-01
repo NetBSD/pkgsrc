@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/25 01:14:54 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 11:34:19 pin Exp $
 qt5/plugins/platformthemes/libqtlxqt.so
