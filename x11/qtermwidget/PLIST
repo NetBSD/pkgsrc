@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/20 05:47:44 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:53:09 pin Exp $
 include/qtermwidget5/Emulation.h
 include/qtermwidget5/Filter.h
 include/qtermwidget5/qtermwidget.h
 include/qtermwidget5/qtermwidget_export.h
+include/qtermwidget5/qtermwidget_version.h
 lib/cmake/qtermwidget5/qtermwidget5-config-version.cmake
 lib/cmake/qtermwidget5/qtermwidget5-config.cmake
 lib/cmake/qtermwidget5/qtermwidget5-targets-release.cmake
@@ -44,6 +45,8 @@ share/qtermwidget5/kb-layouts/linux.keytab
 share/qtermwidget5/kb-layouts/macbook.keytab
 share/qtermwidget5/kb-layouts/solaris.keytab
 share/qtermwidget5/kb-layouts/vt420pc.keytab
+share/qtermwidget5/translations/qtermwidget_arn.qm
+share/qtermwidget5/translations/qtermwidget_ast.qm
 share/qtermwidget5/translations/qtermwidget_ca.qm
 share/qtermwidget5/translations/qtermwidget_cs.qm
 share/qtermwidget5/translations/qtermwidget_cy.qm
@@ -60,6 +63,7 @@ share/qtermwidget5/translations/qtermwidget_lt.qm
 share/qtermwidget5/translations/qtermwidget_nb_NO.qm
 share/qtermwidget5/translations/qtermwidget_pl.qm
 share/qtermwidget5/translations/qtermwidget_pt.qm
+share/qtermwidget5/translations/qtermwidget_pt_BR.qm
 share/qtermwidget5/translations/qtermwidget_tr.qm
 share/qtermwidget5/translations/qtermwidget_zh_CN.qm
 share/qtermwidget5/translations/qtermwidget_zh_TW.qm
