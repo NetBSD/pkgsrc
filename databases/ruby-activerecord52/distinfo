@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/03/20 15:41:33 taca Exp $
+$NetBSD: distinfo,v 1.3.2.1 2020/06/01 19:15:21 bsiegert Exp $
 
-SHA1 (activerecord-5.2.4.2.gem) = 61fcf0ae09b1278c6e29affc307e318f83912301
-RMD160 (activerecord-5.2.4.2.gem) = 9b99bd36fa5a302b79a9b2c9ce7108a5f7cd55c0
-SHA512 (activerecord-5.2.4.2.gem) = e4c74986558a28298d5180fa92a79350bada6af42403a5b47260e2c891d47fd7928fbdb52cc61f4fcca05561dbd0099cc543cc14f376030e061e353b421f7fff
-Size (activerecord-5.2.4.2.gem) = 358400 bytes
+SHA1 (activerecord-5.2.4.3.gem) = 2db5dfbeb0860c4287fe1f6f7f4d180213c95393
+RMD160 (activerecord-5.2.4.3.gem) = 85d658a693acd7c9c12a90ea7020681618529aea
+SHA512 (activerecord-5.2.4.3.gem) = ab6dbb05d90dcc722b8b2df4b0b743a91d7e47e97e53e72e63308fe8d47d20d28ebfaa863ce0130583fb05ec2c65f559d82511b91bc6ba7ba80538a3ed02f196
+Size (activerecord-5.2.4.3.gem) = 358400 bytes
