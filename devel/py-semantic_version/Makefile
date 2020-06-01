@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/03/20 09:31:27 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/01 16:03:03 adam Exp $
 
-DISTNAME=	semantic_version-2.8.4
+DISTNAME=	semantic_version-2.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/semantic_version/}
