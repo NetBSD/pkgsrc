@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2020/04/25 01:46:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/01 12:17:53 pin Exp $
 
-DISTNAME=	lxqt-config-0.14.1
+VERSION=	0.15.0
+DISTNAME=	lxqt-config-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-config/0.14.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-config/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/lxqt/lxqt-config/
 COMMENT=	System configuration control center
-HOMEPAGE=	https://lxqt.org/
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
@@ -17,12 +18,13 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Linux"
 CMAKE_ARGS+=	-DWITH_INPUT=OFF
+.endif
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/lxqt-config \
 		-L${PREFIX}/lib/lxqt-config/
-
-.include "../../mk/bsd.prefs.mk"
 
 # NetBSD base X11 places xkb config files in a non-standard location
 .if ${OPSYS} == "NetBSD" && ${X11_TYPE} != "modular"
@@ -41,13 +43,13 @@ SUBST_VARS.prefix+=	XKBSUB
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
+DEPENDS+=	lxqt-themes-[0-9]*:../../wip/lxqt-themes
 
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/liblxqt/buildlink3.mk"
+.include "../../wip/liblxqt/buildlink3.mk"
 .include "../../x11/libkscreen/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
