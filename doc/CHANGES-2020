@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3319 2020/06/01 15:48:57 msaitoh Exp $
+$NetBSD: CHANGES-2020,v 1.3320 2020/06/01 16:07:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5224,3 +5224,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-aiofiles to 0.5.0 [adam 2020-06-01]
 	Updated devel/py-deprecation to 2.1.0 [adam 2020-06-01]
 	Updated sysutils/pciutils to 3.7.0 [msaitoh 2020-06-01]
+	Updated textproc/py-xlsxwriter to 1.2.9 [adam 2020-06-01]
+	Updated textproc/py-xmlschema to 1.2.0 [adam 2020-06-01]
+	Updated devel/py-semantic_version to 2.8.5 [adam 2020-06-01]
+	Updated textproc/py-relatorio to 0.9.1 [adam 2020-06-01]
