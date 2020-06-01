@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/06/01 12:17:53 pin Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/01 12:18:53 pin Exp $
 
 VERSION=	0.15.0
 DISTNAME=	lxqt-config-${VERSION}
@@ -50,6 +50,6 @@ DEPENDS+=	lxqt-themes-[0-9]*:../../wip/lxqt-themes
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/liblxqt/buildlink3.mk"
+.include "../../x11/liblxqt/buildlink3.mk"
 .include "../../x11/libkscreen/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
