@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3317 2020/06/01 15:36:21 msaitoh Exp $
+$NetBSD: CHANGES-2020,v 1.3318 2020/06/01 15:45:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5221,3 +5221,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/lxqt-admin to 0.15.0 [pin 2020-06-01]
 	Updated meta-pkgs/lxqt to 0.15.0 [pin 2020-06-01]
 	Updated sysutils/intel-microcode-netbsd to 20200520 [msaitoh 2020-06-01]
+	Updated devel/py-aiofiles to 0.5.0 [adam 2020-06-01]
+	Updated devel/py-deprecation to 2.1.0 [adam 2020-06-01]
