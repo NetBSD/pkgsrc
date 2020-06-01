@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/25 17:37:47 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 12:39:14 pin Exp $
 bin/lxqt-admin-user
 bin/lxqt-admin-user-helper
 share/applications/lxqt-admin-user.desktop
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_ar.qm
+share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_arn.qm
+share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_ast.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_ca.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_cs.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_cy.qm
@@ -28,5 +30,6 @@ share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_pt_BR.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_ru.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_tr.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_uk.qm
+share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_vi.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_zh_CN.qm
 share/polkit-1/actions/org.lxqt.lxqt-admin-user.policy
