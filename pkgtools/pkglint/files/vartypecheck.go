@@ -394,7 +394,7 @@ func (cv *VartypeCheck) DependencyPattern() {
 			return
 		}
 		defpat := depends(data)
-		if defpat.LowerOp != deppat.LowerOp {
+		if defpat == nil || defpat.LowerOp != deppat.LowerOp {
 			return
 		}
 		if pkgver.Compare(deppat.Lower, defpat.Lower) < 0 {

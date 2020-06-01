@@ -387,7 +387,7 @@ func (ck *MkAssignChecker) checkVarassignRightCategory() {
 	primary := categories[0]
 	dir := G.Pkgsrc.Rel(mkline.Filename()).Dir().Dir().Base()
 
-	if primary == dir || dir == "wip" || dir == "regress" {
+	if primary == dir.String() || dir == "wip" || dir == "regress" {
 		return
 	}
 
@@ -397,7 +397,7 @@ func (ck *MkAssignChecker) checkVarassignRightCategory() {
 		"The primary category of a package should be its location in the",
 		"pkgsrc directory tree, to make it easy to find the package.",
 		"All other categories may be added after this primary category.")
-	if len(categories) > 1 && categories[1] == dir {
+	if len(categories) > 1 && categories[1] == dir.String() {
 		fix.Replace(primary+" "+categories[1], categories[1]+" "+primary)
 	}
 	fix.Apply()
