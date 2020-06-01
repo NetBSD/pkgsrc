@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3307 2020/06/01 12:02:39 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3308 2020/06/01 12:10:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5211,3 +5211,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/lxqt-policykit to 0.15.0 [pin 2020-06-01]
 	Updated security/lxqt-sudo to 0.15.0 [pin 2020-06-01]
 	Updated x11/lxqt-globalkeys to 0.15.0 [pin 2020-06-01]
+	Updated x11/lxqt-notificationd to 0.15.0 [pin 2020-06-01]
