@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2020/04/20 22:54:53 mef Exp $
+# $NetBSD: Makefile,v 1.90 2020/06/01 06:09:42 rillig Exp $
 #
 
 DISTNAME=	xlog-2.0.19
@@ -15,8 +15,6 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
-
-CONFIGURE_ARGS+=	--enable-hamlib
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
