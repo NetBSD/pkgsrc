@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/25 18:36:10 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 12:15:15 pin Exp $
 bin/lxqt-openssh-askpass
 man/man1/lxqt-openssh-askpass.1
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ar.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_arn.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ast.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ca.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_cs.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_cy.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_da.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_de.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_el.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_en_GB.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_es.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_fr.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_gl.qm
@@ -22,6 +25,8 @@ share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_nl.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_pl.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_pt.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ru.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_sk_SK.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_sv.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_tr.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_uk.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_zh_CN.qm
