@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/04/27 17:57:51 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/06/01 21:46:25 bouyer Exp $
 man/man1/mod2html.1
 man/man1/sympa.1
 man/man1/sympa_newaliases.1
@@ -161,6 +161,7 @@ man/man3/Sympa::Tools::Text.3Sympa
 man/man3/Sympa::Tools::Time.3Sympa
 man/man3/Sympa::Tracking.3Sympa
 man/man3/Sympa::User.3Sympa
+man/man3/Sympa::WWW::FastCGI.3Sympa
 man/man3/Sympa::WWW::Marc::Search.3Sympa
 man/man3/Sympa::WWW::Session.3Sympa
 man/man3/Sympa::WWW::SharedDocument.3Sympa
@@ -243,6 +244,7 @@ share/locale/fr/LC_MESSAGES/sympa.mo
 share/locale/fr/LC_MESSAGES/web_help.mo
 share/locale/gl/LC_MESSAGES/sympa.mo
 share/locale/gl/LC_MESSAGES/web_help.mo
+share/locale/hr/LC_MESSAGES/sympa.mo
 share/locale/hu/LC_MESSAGES/sympa.mo
 share/locale/hu/LC_MESSAGES/web_help.mo
 share/locale/id/LC_MESSAGES/sympa.mo
@@ -445,6 +447,7 @@ sympa/bin/Sympa/Tracking.pm
 sympa/bin/Sympa/Upgrade.pm
 sympa/bin/Sympa/User.pm
 sympa/bin/Sympa/WWW/Auth.pm
+sympa/bin/Sympa/WWW/FastCGI.pm
 sympa/bin/Sympa/WWW/Marc.pm
 sympa/bin/Sympa/WWW/Marc/Search.pm
 sympa/bin/Sympa/WWW/Report.pm
