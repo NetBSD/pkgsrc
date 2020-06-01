@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.15 2020/04/27 15:16:45 mef Exp $
+# $NetBSD: wbm.mk,v 1.16 2020/06/01 23:07:27 mef Exp $
 #
 # Makefile fragment for Webmin modules
 #
@@ -48,8 +48,8 @@ DEPENDS+=	webmin>=${WBM_VERSION}:../../sysutils/webmin
 DEPENDS+=	wbm-${m}>=${WBM_VERSION}:../../sysutils/wbm-${m}
 .endfor
 
-WEBMIN_DIR=	${LOCALBASE}/share/webmin
-WEBMIN_EGDIR=	${LOCALBASE}/share/examples/webmin
+WEBMIN_DIR=	${PREFIX}/share/webmin
+WEBMIN_EGDIR=	${PREFIX}/share/examples/webmin
 WEBMIN_VARDIR=	${VARBASE}/webmin
 WBM_DIR=	${PREFIX}/share/webmin
 WBM_EGDIR=	${PREFIX}/share/examples/webmin

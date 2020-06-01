@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/04/27 15:16:45 mef Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/06/01 23:07:27 mef Exp $
 share/examples/webmin/acl/config
 share/examples/webmin/config
 share/examples/webmin/cron/config
@@ -2266,7 +2266,6 @@ share/webmin/switch_user.cgi
 share/webmin/thirdparty.pl
 share/webmin/ui-lib.pl
 share/webmin/unauthenticated/filter_match.js
-share/webmin/update-from-repo.sh
 share/webmin/uptracker.cgi
 share/webmin/user_chooser.cgi
 share/webmin/version
