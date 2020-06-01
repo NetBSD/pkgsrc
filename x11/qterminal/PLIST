@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/20 05:52:38 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:56:14 pin Exp $
 bin/qterminal
 share/appdata/qterminal.appdata.xml
 share/applications/qterminal.desktop
 share/applications/qterminal_drop.desktop
 share/icons/hicolor/64x64/apps/qterminal.png
 share/qterminal/translations/qterminal_ar.qm
+share/qterminal/translations/qterminal_arn.qm
+share/qterminal/translations/qterminal_ast.qm
+share/qterminal/translations/qterminal_bg.qm
 share/qterminal/translations/qterminal_ca.qm
 share/qterminal/translations/qterminal_cs.qm
 share/qterminal/translations/qterminal_cy.qm
@@ -29,6 +32,7 @@ share/qterminal/translations/qterminal_pl.qm
 share/qterminal/translations/qterminal_pt.qm
 share/qterminal/translations/qterminal_pt_BR.qm
 share/qterminal/translations/qterminal_ru.qm
+share/qterminal/translations/qterminal_sk_SK.qm
 share/qterminal/translations/qterminal_tr.qm
 share/qterminal/translations/qterminal_uk.qm
 share/qterminal/translations/qterminal_zh_CN.qm
