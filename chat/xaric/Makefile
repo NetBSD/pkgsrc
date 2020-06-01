@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/26 17:30:49 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/06/01 06:11:54 rillig Exp $
 #
 
 DISTNAME=	xaric-0.13.6
@@ -12,8 +12,6 @@ COMMENT=	IRC client similar to BitchX and ircII
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-
-CONFIGURE_ARGS+=	--enable-optimize
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
