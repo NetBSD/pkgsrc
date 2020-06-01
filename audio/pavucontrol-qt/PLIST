@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/09 00:16:02 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 11:23:01 pin Exp $
 bin/pavucontrol-qt
 share/applications/pavucontrol-qt.desktop
+share/pavucontrol-qt/translations/pavucontrol-qt_arn.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_as.qm
+share/pavucontrol-qt/translations/pavucontrol-qt_ast.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_bn_IN.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_ca.qm
 share/pavucontrol-qt/translations/pavucontrol-qt_cs.qm
