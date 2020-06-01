@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/17 19:50:34 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:25:53 pin Exp $
 bin/qtxdg-mat
 include/qt5xdg/XdgAction
 include/qt5xdg/XdgAutoStart
