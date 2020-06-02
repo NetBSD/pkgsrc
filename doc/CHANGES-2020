@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3337 2020/06/02 13:28:05 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3338 2020/06/02 13:47:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5282,3 +5282,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added emulators/libretro-gearboy version 3.1.1 [nia 2020-06-02]
 	Added emulators/gearsystem version 3.1.0 [nia 2020-06-02]
 	Added emulators/libretro-gearsystem version 3.1.0 [nia 2020-06-02]
+	Updated www/ruby-em-http-request to 1.1.6 [taca 2020-06-02]
