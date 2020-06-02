@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.163 2020/05/07 19:36:52 nia Exp $
+$NetBSD: distinfo,v 1.164 2020/06/02 06:11:28 rillig Exp $
 
 SHA1 (seamonkey-2.53.2.source.tar.xz) = 7c6e3295a751aa36c8325e20ef1367d0fb643120
 RMD160 (seamonkey-2.53.2.source.tar.xz) = 567c8bd64166e5854c712f2c2d6ca0dea182c75b
@@ -25,7 +25,6 @@ SHA1 (patch-mozilla_media_libcubeb_src_cubeb__alsa.c) = 5931c3293ec6130776f146a6
 SHA1 (patch-mozilla_media_libcubeb_src_moz.build) = ca2c76fc54a62323db0e66386a99a996cd7aaef0
 SHA1 (patch-mozilla_media_libcubeb_update.sh) = a1632da23a4752e6cc805f2af9243d152896cc3f
 SHA1 (patch-mozilla_media_libpng_pngpriv.h) = 731061bf32caa61e586a7a7fe86f1393a6520731
-SHA1 (patch-mozilla_modules_pdfium_update.sh) = a09e806625e97c623697667b4c086d309da40dac
 SHA1 (patch-mozilla_netwerk_srtp_src_crypto_hash_hmac.c) = eb07566cd98d4bbab3fd020815e72b17fbed324a
 SHA1 (patch-mozilla_netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = e3974859577a7437e32e37995149c938be8d9ff3
 SHA1 (patch-mozilla_old-configure.in) = 5c711b031a2acee9ab4cf803769179de4fff0ea7
