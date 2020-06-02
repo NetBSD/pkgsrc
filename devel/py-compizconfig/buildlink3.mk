@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/01/17 12:10:37 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/06/02 08:22:40 adam Exp $
 
 BUILDLINK_TREE+=	${PYPKGPREFIX}-compizconfig
 
@@ -8,7 +8,7 @@ PY_COMPIZCONFIG_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-compizconfig+=	${PYPKGPREFIX}-compizconfig>=0.6.0
-BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-compizconfig+=	${PYPKGPREFIX}-compizconfig>=0.8.4nb44
+BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-compizconfig+=	${PYPKGPREFIX}-compizconfig>=0.8.4nb60
 BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-compizconfig?=	../../devel/py-compizconfig
 
 .include "../../devel/libcompizconfig/buildlink3.mk"

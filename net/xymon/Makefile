@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2020/03/10 22:10:49 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2020/06/02 08:24:36 adam Exp $
 #
 
 DISTNAME=		xymon-4.3.29
 #PKGREVISION=		0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 

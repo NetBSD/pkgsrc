@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2020/04/12 08:27:51 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2020/06/02 08:22:36 adam Exp $
 
 BUILDLINK_TREE+=	kdeclarative
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdeclarative
 KDECLARATIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdeclarative+=	kdeclarative>=5.21.0
-BUILDLINK_ABI_DEPENDS.kdeclarative?=	kdeclarative>=5.66.0nb3
+BUILDLINK_ABI_DEPENDS.kdeclarative?=	kdeclarative>=5.66.0nb4
 BUILDLINK_PKGSRCDIR.kdeclarative?=	../../devel/kdeclarative
 
 .include "../../graphics/libepoxy/buildlink3.mk"

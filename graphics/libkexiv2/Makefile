@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2020/04/12 08:27:56 adam Exp $
+# $NetBSD: Makefile,v 1.81 2020/06/02 08:22:43 adam Exp $
 
 DISTNAME=	libkexiv2-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/

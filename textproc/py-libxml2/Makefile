@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2019/01/09 19:09:03 adam Exp $
+# $NetBSD: Makefile,v 1.65 2020/06/02 08:24:51 adam Exp $
 
+PKGREVISION= 1
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}

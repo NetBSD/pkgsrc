@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/10/13 18:02:10 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2020/06/02 08:23:08 adam Exp $
 #
 
 DISTNAME=		ezstream-0.6.0
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://downloads.us.xiph.org/releases/ezstream/
 LICENSE=		gnu-gpl-v2

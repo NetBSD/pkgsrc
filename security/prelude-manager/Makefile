@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2020/05/22 10:56:39 adam Exp $
+# $NetBSD: Makefile,v 1.53 2020/06/02 08:24:42 adam Exp $
 #
 
 DISTNAME=		prelude-manager-0.9.15
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/prelude-manager/
 #MASTER_SITES+=		http://www.prelude-ids.org/download/releases/

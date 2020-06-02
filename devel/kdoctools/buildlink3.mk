@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2020/04/12 08:27:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2020/06/02 08:22:36 adam Exp $
 
 BUILDLINK_TREE+=	kdoctools
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdoctools
 KDOCTOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdoctools+=	kdoctools>=5.21.0
-BUILDLINK_ABI_DEPENDS.kdoctools?=	kdoctools>=5.66.0nb3
+BUILDLINK_ABI_DEPENDS.kdoctools?=	kdoctools>=5.66.0nb4
 BUILDLINK_PKGSRCDIR.kdoctools?=		../../devel/kdoctools
 
 .include "../../textproc/libxslt/buildlink3.mk"

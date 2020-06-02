@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:58 asau Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/02 08:24:34 adam Exp $
 
 MODNAME=		soap
 CATEGORIES+=		net
 COMMENT=		PHP extension for SOAP functions
+PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 

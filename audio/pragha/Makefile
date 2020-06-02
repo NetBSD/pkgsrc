@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/05/22 10:55:56 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/02 08:23:14 adam Exp $
 
 DISTNAME=	pragha-1.3.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pragha-music-player/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

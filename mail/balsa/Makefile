@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.158 2020/05/22 10:56:16 adam Exp $
+# $NetBSD: Makefile,v 1.159 2020/06/02 08:24:13 adam Exp $
 
 DISTNAME=	balsa-2.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	https://pawsa.fedorapeople.org/balsa/
 EXTRACT_SUFX=	.tar.bz2

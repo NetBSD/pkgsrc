@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/05/28 14:15:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/02 08:22:31 adam Exp $
 
 DISTNAME=	quazip-0.9
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stachenov/}
 GITHUB_PROJECT=	quazip

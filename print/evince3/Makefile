@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2020/04/03 10:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2020/06/02 08:24:38 adam Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../print/evince3/Makefile.common"
 
 COMMENT=		Document viewer

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/04/12 08:28:02 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/06/02 08:22:51 adam Exp $
 
 BUILDLINK_TREE+=	gssdp12
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gssdp12
 GSSDP12_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gssdp12+=	gssdp12>=1.2
-BUILDLINK_ABI_DEPENDS.gssdp12?=	gssdp12>=1.2.2nb3
+BUILDLINK_ABI_DEPENDS.gssdp12?=	gssdp12>=1.2.2nb4
 BUILDLINK_PKGSRCDIR.gssdp12?=	../../net/gssdp12
 
 .include "../../devel/glib2/buildlink3.mk"

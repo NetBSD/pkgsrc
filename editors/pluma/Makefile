@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2020/04/05 16:05:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2020/06/02 08:23:44 adam Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DISTNAME=	pluma-${VERSION:R}.0
+PKGREVISION=	1
 CATEGORIES=	editors
 
 COMMENT=	Small and lightweight UTF-8 text editor for MATE

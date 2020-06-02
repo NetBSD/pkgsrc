@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/11/05 08:12:52 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/02 08:24:51 adam Exp $
 
 DISTNAME=	html5-parser-0.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html5-parser/}
 
