@@ -1147,6 +1147,27 @@ func (s *Suite) Test_MkCondChecker_checkCompareVarStr__no_tracing(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_MkCondChecker_checkCompareVarNum(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"OS_VERSION=\t9.0",
+		"",
+		".if ${OS_VERSION} > 6.5",
+		".endif",
+		"",
+		".if ${OS_VERSION} == 6.5",
+		".endif")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:5: Numeric comparison > 6.5.",
+		"WARN: filename.mk:8: Numeric comparison == 6.5.")
+}
+
 func (s *Suite) Test_MkCondChecker_checkCompareVarStrCompiler(c *check.C) {
 	t := s.Init(c)
 
