@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@SH@
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.20 2020/03/30 16:38:03 gdt Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.21 2020/06/02 22:32:02 jperkin Exp $
 #
 # This script is meant to be used as follows:
 #
