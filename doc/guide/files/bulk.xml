@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.30 2020/05/30 19:25:17 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.31 2020/06/02 20:03:09 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -74,9 +74,9 @@ unprivileged user doesn't work well at the moment.</para></listitem>
 </sect1>
 
 <sect1 id="bulk.pbulk">
-<title>Running a pbulk-style bulk build</title>
+<title>Running a bulk build</title>
 
-<para>Running a pbulk-style bulk build works roughly as follows:</para>
+<para>Running a bulk build works roughly as follows:</para>
 
 <itemizedlist>
 <listitem><para>First, build the pbulk infrastructure in a fresh pkgsrc location.</para></listitem>
