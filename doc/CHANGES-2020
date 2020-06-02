@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3327 2020/06/02 06:45:26 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3328 2020/06/02 08:36:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5271,3 +5271,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/qt5-qtwebsockets to 5.15.0 [adam 2020-06-02]
 	Updated x11/qt5-qtx11extras to 5.15.0 [adam 2020-06-02]
 	Updated x11/qt5-qtxmlpatterns to 5.15.0 [adam 2020-06-02]
+	Updated audio/mpg123 to 1.26.1 [adam 2020-06-02]
+	Updated textproc/libyaml to 0.2.5 [adam 2020-06-02]
