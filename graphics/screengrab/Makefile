@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/06/01 11:02:20 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/02 08:24:07 adam Exp $
 
 VERSION=	2.0.1
 DISTNAME=	screengrab-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/screengrab/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz

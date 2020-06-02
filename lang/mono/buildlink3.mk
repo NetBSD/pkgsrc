@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.64 2020/04/12 08:27:57 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.65 2020/06/02 08:22:45 adam Exp $
 
 BUILDLINK_TREE+=	mono
 
@@ -8,7 +8,7 @@ MONO_BUILDLINK3_MK:=
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "NetBSD"
 BUILDLINK_API_DEPENDS.mono+=	mono>=6
-BUILDLINK_ABI_DEPENDS.mono?=	mono>=4.0.4.1nb18
+BUILDLINK_ABI_DEPENDS.mono?=	mono>=4.0.4.1nb20
 BUILDLINK_PKGSRCDIR.mono?=	../../lang/mono6
 .else
 BUILDLINK_API_DEPENDS.mono+=	mono>=4

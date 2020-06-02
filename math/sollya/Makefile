@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/05/19 14:45:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/02 08:24:17 adam Exp $
 
 DISTNAME=	sollya-7.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/37749/
 

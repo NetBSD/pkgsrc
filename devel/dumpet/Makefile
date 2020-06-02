@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/11/03 19:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/02 08:23:35 adam Exp $
 
 DISTNAME=	dumpet-2.1
+PKGREVISION=	1
 CATEGORIES=	devel
 #MASTER_SITES=	https://fedorahosted.org/releases/d/u/dumpet/
 EXTRACT_SUFX=	.tar.bz2

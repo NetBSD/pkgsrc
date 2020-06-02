@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.66 2020/03/10 22:08:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.67 2020/06/02 08:22:39 adam Exp $
 
 BUILDLINK_TREE+=	libgnome
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnome
 LIBGNOME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.8.0
-BUILDLINK_ABI_DEPENDS.libgnome+=	libgnome>=2.32.1nb38
+BUILDLINK_ABI_DEPENDS.libgnome+=	libgnome>=2.32.1nb39
 BUILDLINK_PKGSRCDIR.libgnome?=		../../devel/libgnome
 
 .include "../../audio/libcanberra/buildlink3.mk"

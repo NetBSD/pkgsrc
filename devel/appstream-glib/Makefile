@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/04/18 22:00:10 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/02 08:23:33 adam Exp $
 
 DISTNAME=	appstream-glib-appstream_glib_0_7_17
 PKGNAME=	appstream-glib-0.7.17
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_PROJECT=	appstream-glib

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2020/05/26 11:30:06 joerg Exp $
+# $NetBSD: Makefile,v 1.111 2020/06/02 08:23:49 adam Exp $
 
 DISTNAME=	flightgear-2019.1.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/03/10 22:09:12 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2020/06/02 08:23:07 adam Exp $
 
-PKGREVISION= 10
+PKGREVISION= 11
 .include "../../x11/keybinder/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
