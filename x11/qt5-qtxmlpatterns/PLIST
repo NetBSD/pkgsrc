@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/01/21 20:25:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/06/02 06:41:03 adam Exp $
 lib/pkgconfig/Qt5XmlPatterns.pc
 qt5/bin/xmlpatterns
 qt5/bin/xmlpatternsvalidator
@@ -413,7 +413,7 @@ qt5/lib/libQt5XmlPatterns.prl
 qt5/lib/libQt5XmlPatterns.so
 qt5/lib/libQt5XmlPatterns.so.${PKGVERSION}
 qt5/lib/libQt5XmlPatterns.so.5
-qt5/lib/libQt5XmlPatterns.so.5.14
+qt5/lib/libQt5XmlPatterns.so.5.15
 qt5/lib/pkgconfig/Qt5XmlPatterns.pc
 qt5/mkspecs/modules/qt_lib_xmlpatterns.pri
 qt5/mkspecs/modules/qt_lib_xmlpatterns_private.pri

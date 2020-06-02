@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2020/03/18 21:55:23 tnn Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/06/02 06:41:01 adam Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
@@ -34,10 +34,10 @@ qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsoundeffect_pulse_p
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsoundeffect_qaudio_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimedia-config_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimediaglobal_p.h
-qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframe_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconversionhelper_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideooutputorientationhandler_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideosurfaceoutput_p.h
+qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideosurfaces_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwavedecoder_p.h
 qt5/include/QtMultimedia/QAbstractAudioDeviceInfo
 qt5/include/QtMultimedia/QAbstractAudioInput
@@ -299,22 +299,22 @@ qt5/lib/libQt5Multimedia.prl
 qt5/lib/libQt5Multimedia.so
 qt5/lib/libQt5Multimedia.so.${PKGVERSION}
 qt5/lib/libQt5Multimedia.so.5
-qt5/lib/libQt5Multimedia.so.5.14
+qt5/lib/libQt5Multimedia.so.5.15
 ${PLIST.gst}qt5/lib/libQt5MultimediaGstTools.prl
 ${PLIST.gst}qt5/lib/libQt5MultimediaGstTools.so
 ${PLIST.gst}qt5/lib/libQt5MultimediaGstTools.so.${PKGVERSION}
 ${PLIST.gst}qt5/lib/libQt5MultimediaGstTools.so.5
-${PLIST.gst}qt5/lib/libQt5MultimediaGstTools.so.5.14
+${PLIST.gst}qt5/lib/libQt5MultimediaGstTools.so.5.15
 qt5/lib/libQt5MultimediaQuick.prl
 qt5/lib/libQt5MultimediaQuick.so
 qt5/lib/libQt5MultimediaQuick.so.${PKGVERSION}
 qt5/lib/libQt5MultimediaQuick.so.5
-qt5/lib/libQt5MultimediaQuick.so.5.14
+qt5/lib/libQt5MultimediaQuick.so.5.15
 qt5/lib/libQt5MultimediaWidgets.prl
 qt5/lib/libQt5MultimediaWidgets.so
 qt5/lib/libQt5MultimediaWidgets.so.${PKGVERSION}
 qt5/lib/libQt5MultimediaWidgets.so.5
-qt5/lib/libQt5MultimediaWidgets.so.5.14
+qt5/lib/libQt5MultimediaWidgets.so.5.15
 qt5/lib/pkgconfig/Qt5Multimedia.pc
 qt5/lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/mkspecs/modules/qt_lib_multimedia.pri

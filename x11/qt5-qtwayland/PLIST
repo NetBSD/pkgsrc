@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/27 18:36:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/02 06:41:03 adam Exp $
 lib/pkgconfig/Qt5Wayland.pc
 qt5/bin/qtwaylandscanner
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclient-config_p.h
@@ -8,6 +8,7 @@ qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-qt-ke
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-qt-windowmanager.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-server-buffer-extension.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-surface-extension.h
+qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-tablet-unstable-v2.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-text-input-unstable-v2.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-touch-extension.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-wayland.h
@@ -53,7 +54,10 @@ qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandshmbac
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandshmwindow_p.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandsubsurface_p.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandsurface_p.h
+qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtabletv2_p.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtouch_p.h
+qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandvulkaninstance_p.h
+qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandvulkanwindow_p.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandwindow_p.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandwindowmanagerintegration_p.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-hardware-integration-client-protocol.h
@@ -61,6 +65,7 @@ qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-qt-key
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-qt-windowmanager-client-protocol.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-server-buffer-extension-client-protocol.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-surface-extension-client-protocol.h
+qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-tablet-unstable-v2-client-protocol.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-text-input-unstable-v2-client-protocol.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-touch-extension-client-protocol.h
 qt5/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-wayland-client-protocol.h
@@ -309,12 +314,12 @@ qt5/lib/libQt5WaylandClient.prl
 qt5/lib/libQt5WaylandClient.so
 qt5/lib/libQt5WaylandClient.so.${PKGVERSION}
 qt5/lib/libQt5WaylandClient.so.5
-qt5/lib/libQt5WaylandClient.so.5.14
+qt5/lib/libQt5WaylandClient.so.5.15
 qt5/lib/libQt5WaylandCompositor.prl
 qt5/lib/libQt5WaylandCompositor.so
 qt5/lib/libQt5WaylandCompositor.so.${PKGVERSION}
 qt5/lib/libQt5WaylandCompositor.so.5
-qt5/lib/libQt5WaylandCompositor.so.5.14
+qt5/lib/libQt5WaylandCompositor.so.5.15
 qt5/lib/pkgconfig/Qt5WaylandClient.pc
 qt5/lib/pkgconfig/Qt5WaylandCompositor.pc
 qt5/mkspecs/modules/qt_lib_waylandclient.pri
@@ -332,14 +337,14 @@ qt5/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so
 qt5/plugins/wayland-graphics-integration-client/libshm-emulation-server.so
 qt5/plugins/wayland-graphics-integration-client/libxcomposite-egl.so
 qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so
-qt5/plugins/wayland-graphics-integration-server/libdmabuf-server.so
-qt5/plugins/wayland-graphics-integration-server/libdrm-egl-server.so
-qt5/plugins/wayland-graphics-integration-server/liblinux-dmabuf-unstable-v1.so
-qt5/plugins/wayland-graphics-integration-server/libqt-plugin-wayland-egl.so
-qt5/plugins/wayland-graphics-integration-server/libshm-emulation-server.so
-qt5/plugins/wayland-graphics-integration-server/libwayland-eglstream-controller.so
-qt5/plugins/wayland-graphics-integration-server/libxcomposite-egl.so
-qt5/plugins/wayland-graphics-integration-server/libxcomposite-glx.so
+qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-dmabuf-server-buffer.so
+qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so
+qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-linux-dmabuf-unstable-v1.so
+qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-shm-emulation-server.so
+qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-wayland-egl.so
+qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-wayland-eglstream-controller.so
+qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-xcomposite-egl.so
+qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-xcomposite-glx.so
 qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so
 qt5/plugins/wayland-shell-integration/libivi-shell.so
 qt5/plugins/wayland-shell-integration/libwl-shell.so
