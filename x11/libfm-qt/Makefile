@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2020/06/02 08:23:05 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/06/02 10:37:28 pin Exp $
 
-VERSION=	0.15.1
-DISTNAME=	libfm-qt-${VERSION}
+DISTNAME=	libfm-qt-0.15.1
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/libfm-qt/releases/download/${VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
