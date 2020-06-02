@@ -1,0 +1,21 @@
+Gearsystem is a cross-platform Sega Master System / Game Gear / SG-1000
+emulator written in C++.
+
+## Features
+
+- Accurate Z80 core, including undocumented opcodes and behaviour like R
+  and MEMPTR registers.
+- Multi-Mapper support: SEGA, Codemasters, Korean, MSX, SG-1000, and ROM
+  only cartridges.
+- External RAM support with save files.
+- Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
+- Accurate VDP emulation including timing and SMS2 only 224 mode support.
+- Internal database for rom detection.
+- Audio emulation using SDL Audio and Sms_Snd_Emu library.
+- Saves battery powered RAM cartridges to file.
+- Save states.
+- Compressed rom support (ZIP deflate).
+- Game Genie and Pro Action Replay cheat support.
+- Full debugger with disassembler, breakpoints, debug symbols, memory editor,
+  IO inspector and and VRAM viewer including tiles, sprites, backgrounds and
+  palettes.
