@@ -1,0 +1,51 @@
+$NetBSD: patch-platforms_desktop-shared_Makefile.common,v 1.1 2020/06/02 13:24:32 nia Exp $
+
+Avoid overriding variables we want to pass through pkgsrc.
+
+--- platforms/desktop-shared/Makefile.common.orig	2020-05-23 18:52:56.000000000 +0000
++++ platforms/desktop-shared/Makefile.common
+@@ -27,14 +27,14 @@ OBJS = $(addsuffix .o, $(basename $(notd
+ 
+ UNAME_S := $(shell uname -s)
+ 
+-CXXFLAGS = -I../ -I../../
++CXXFLAGS += -I../ -I../../
+ CXXFLAGS += -Wall -Wextra -Wformat -std=c++11 -DEMULATOR_BUILD=\"$(GIT_VERSION)\"
+ 
+ DEBUG ?= 0
+ ifeq ($(DEBUG), 1)
+-    CXXFLAGS +=-DDEBUG -g3
++    CXXFLAGS +=-DDEBUG
+ else
+-    CXXFLAGS +=-DNDEBUG -O3
++    CXXFLAGS +=-DNDEBUG
+ endif
+ 
+ LIBS =
+@@ -48,7 +48,7 @@ ifeq ($(UNAME_S), Linux) #LINUX
+ 	LIBS += -lGL -lGLEW -ldl `sdl2-config --libs`
+ 
+ 	CXXFLAGS += `sdl2-config --cflags`
+-	CFLAGS = $(CXXFLAGS)
++	CFLAGS += $(CXXFLAGS)
+ endif
+ 
+ ifeq ($(UNAME_S), Darwin) #APPLE
+@@ -58,7 +58,7 @@ ifeq ($(UNAME_S), Darwin) #APPLE
+ 
+ 	CXXFLAGS += `sdl2-config --cflags`
+ 	CXXFLAGS += -I/usr/local/include -I/opt/local/include
+-	CFLAGS = $(CXXFLAGS)
++	CFLAGS += $(CXXFLAGS)
+ endif
+ 
+ ifeq ($(findstring MINGW,$(UNAME_S)),MINGW)
+@@ -95,7 +95,7 @@ all: $(EXE)
+ 	@echo Build complete for $(ECHO_MESSAGE)
+ 
+ $(EXE): $(OBJS)
+-	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
++	$(CXX) -o $@ $^ $(LDFLAGS) $(LIBS)
+ 
+ clean:
+ 	rm -f $(EXE) $(OBJS)

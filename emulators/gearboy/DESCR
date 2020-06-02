@@ -1,0 +1,22 @@
+Gearboy is a cross-platform Game Boy / GameBoy Color emulator written in C++.
+
+## Features
+
+- Accurate CPU emulation, passes cpu_instrs.gb from blargg's tests.
+- Accurate instruction and memory timing, passes instr_timing.gb and
+  mem_timing.gb from blargg's tests.
+- Supported cartridges: ROM, ROM + RAM, MBC1, MBC2, MBC3 + RTC, MBC5, HuC-1
+  and MBC1M (multicart).
+- Accurate LCD controller emulation with correct timings and priorities
+  including mid-scanline effects.
+- Game Boy Color support.
+- LCD screen ghosting effect as seen in the original Game Boy.
+- LCD dot matrix effect.
+- Sound emulation using SDL Audio and Gb_Snd_Emu library.
+- Save battery powered RAM cartridges to file.
+- Save states.
+- Compressed rom support (ZIP).
+- Game Genie and GameShark cheat support.
+- Full debugger with disassembler, breakpoints, debug symbols, memory editor,
+  IO inspector and and VRAM viewer including tiles, sprites, backgrounds and
+  palettes.
