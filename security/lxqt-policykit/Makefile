@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2020/06/02 08:24:41 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/02 09:15:07 pin Exp $
 
-VERSION=	0.15.0
-DISTNAME=	lxqt-policykit-${VERSION}
+DISTNAME=	lxqt-policykit-0.15.0
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-policykit/releases/download/${VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
