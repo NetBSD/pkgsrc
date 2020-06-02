@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.93 2020/05/16 19:02:32 rillig Exp $
+# $NetBSD: subst.mk,v 1.94 2020/06/02 23:37:25 gdt Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -24,7 +24,8 @@
 # SUBST_NOOP_OK
 #	Whether it is ok to have patterns in SUBST_FILES that don't
 #	contain any of the patterns from SUBST_SED or SUBST_VARS and
-#	thus are not modified at all.
+#	thus are not modified at all.  (A typical cause of this is
+#	using find to generate a list of files.)
 #
 #	This setting only detects redundant filename patterns.  It does
 #	not detect redundant patterns in SUBST_SED.
