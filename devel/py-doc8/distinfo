@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/06/05 19:34:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2020/06/02 19:58:00 adam Exp $
 
-SHA1 (doc8-0.8.0.tar.gz) = 1db8f1f9b54b0344016d19c5d78755061583b6c9
-RMD160 (doc8-0.8.0.tar.gz) = 3d9a4bfc8dc949ccf4b8e0ba9e7bb222f0096cd4
-SHA512 (doc8-0.8.0.tar.gz) = a8a485e2d3f5b20eb172b4e6521ac0916eb99b90a93ab630ca60b93b61aa22ee636557de56a6605c1c49491d01cbbe8b153c2a4ce1606637b46140a5d7aa8fca
-Size (doc8-0.8.0.tar.gz) = 21864 bytes
+SHA1 (doc8-0.8.1.tar.gz) = 66dd56263c6a4236776db2f196066540c682a07c
+RMD160 (doc8-0.8.1.tar.gz) = af5a9469f60999d56d9a5e575919631fbeb25235
+SHA512 (doc8-0.8.1.tar.gz) = 855a00e24daba0c1a7caa4e888411c356570d2f30c7966bb2e566260edff13bc4c35124fd8d4129231bc7a3bec2ed959d23fb52961a5d8f6d1c67cff22bb35de
+Size (doc8-0.8.1.tar.gz) = 28775 bytes
