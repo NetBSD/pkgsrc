@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/01/21 20:25:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/06/02 06:41:03 adam Exp $
 lib/pkgconfig/Qt5WebChannel.pc
 qt5/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qmetaobjectpublisher_p.h
 qt5/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qqmlwebchannelattached_p.h
@@ -22,7 +22,7 @@ qt5/lib/libQt5WebChannel.prl
 qt5/lib/libQt5WebChannel.so
 qt5/lib/libQt5WebChannel.so.${PKGVERSION}
 qt5/lib/libQt5WebChannel.so.5
-qt5/lib/libQt5WebChannel.so.5.14
+qt5/lib/libQt5WebChannel.so.5.15
 qt5/lib/pkgconfig/Qt5WebChannel.pc
 qt5/mkspecs/modules/qt_lib_webchannel.pri
 qt5/mkspecs/modules/qt_lib_webchannel_private.pri

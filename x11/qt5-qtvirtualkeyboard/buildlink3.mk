@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/04/12 08:28:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2020/06/02 06:41:03 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtvirtualkeyboard
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtvirtualkeyboard
 QT5_QTVIRTUALKEYBOARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtvirtualkeyboard+=	qt5-qtvirtualkeyboard>=5.13.2
-BUILDLINK_ABI_DEPENDS.qt5-qtvirtualkeyboard?=	qt5-qtvirtualkeyboard>=5.14.2nb1
+BUILDLINK_ABI_DEPENDS.qt5-qtvirtualkeyboard?=	qt5-qtvirtualkeyboard>=5.15.0
 BUILDLINK_PKGSRCDIR.qt5-qtvirtualkeyboard?=	../../x11/qt5-qtvirtualkeyboard
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"

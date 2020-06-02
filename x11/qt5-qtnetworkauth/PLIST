@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/21 20:25:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/02 06:41:01 adam Exp $
 lib/pkgconfig/Qt5NetworkAuth.pc
 qt5/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth2_p.h
 qt5/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth_p.h
@@ -34,7 +34,7 @@ qt5/lib/libQt5NetworkAuth.prl
 qt5/lib/libQt5NetworkAuth.so
 qt5/lib/libQt5NetworkAuth.so.${PKGVERSION}
 qt5/lib/libQt5NetworkAuth.so.5
-qt5/lib/libQt5NetworkAuth.so.5.14
+qt5/lib/libQt5NetworkAuth.so.5.15
 qt5/lib/pkgconfig/Qt5NetworkAuth.pc
 qt5/mkspecs/modules/qt_lib_networkauth.pri
 qt5/mkspecs/modules/qt_lib_networkauth_private.pri

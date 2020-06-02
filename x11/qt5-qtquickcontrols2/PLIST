@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/01/21 20:25:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/06/02 06:41:02 adam Exp $
 lib/pkgconfig/Qt5QuickControls2.pc
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickanimatednode_p.h
 qt5/include/QtQuickControls2/${PKGVERSION}/QtQuickControls2/private/qquickattachedobject_p.h
@@ -60,6 +60,8 @@ qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickdraw
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickframe_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickframe_p_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickgroupbox_p.h
+qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickheaderview_p.h
+qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickheaderview_p_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickicon_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickitemdelegate_p.h
 qt5/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickitemdelegate_p_p.h
@@ -144,12 +146,12 @@ qt5/lib/libQt5QuickControls2.prl
 qt5/lib/libQt5QuickControls2.so
 qt5/lib/libQt5QuickControls2.so.${PKGVERSION}
 qt5/lib/libQt5QuickControls2.so.5
-qt5/lib/libQt5QuickControls2.so.5.14
+qt5/lib/libQt5QuickControls2.so.5.15
 qt5/lib/libQt5QuickTemplates2.prl
 qt5/lib/libQt5QuickTemplates2.so
 qt5/lib/libQt5QuickTemplates2.so.${PKGVERSION}
 qt5/lib/libQt5QuickTemplates2.so.5
-qt5/lib/libQt5QuickTemplates2.so.5.14
+qt5/lib/libQt5QuickTemplates2.so.5.15
 qt5/lib/pkgconfig/Qt5QuickControls2.pc
 qt5/lib/pkgconfig/Qt5QuickTemplates2.pc
 qt5/mkspecs/modules/qt_lib_quickcontrols2.pri
@@ -201,6 +203,7 @@ qt5/qml/QtQuick/Controls.2/Fusion/DialogButtonBox.qml
 qt5/qml/QtQuick/Controls.2/Fusion/Drawer.qml
 qt5/qml/QtQuick/Controls.2/Fusion/Frame.qml
 qt5/qml/QtQuick/Controls.2/Fusion/GroupBox.qml
+qt5/qml/QtQuick/Controls.2/Fusion/HorizontalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Fusion/ItemDelegate.qml
 qt5/qml/QtQuick/Controls.2/Fusion/Label.qml
 qt5/qml/QtQuick/Controls.2/Fusion/Menu.qml
@@ -238,10 +241,12 @@ qt5/qml/QtQuick/Controls.2/Fusion/ToolButton.qml
 qt5/qml/QtQuick/Controls.2/Fusion/ToolSeparator.qml
 qt5/qml/QtQuick/Controls.2/Fusion/ToolTip.qml
 qt5/qml/QtQuick/Controls.2/Fusion/Tumbler.qml
+qt5/qml/QtQuick/Controls.2/Fusion/VerticalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Fusion/libqtquickcontrols2fusionstyleplugin.so
 qt5/qml/QtQuick/Controls.2/Fusion/plugins.qmltypes
 qt5/qml/QtQuick/Controls.2/Fusion/qmldir
 qt5/qml/QtQuick/Controls.2/GroupBox.qml
+qt5/qml/QtQuick/Controls.2/HorizontalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Imagine/ApplicationWindow.qml
 qt5/qml/QtQuick/Controls.2/Imagine/BusyIndicator.qml
 qt5/qml/QtQuick/Controls.2/Imagine/Button.qml
@@ -255,6 +260,7 @@ qt5/qml/QtQuick/Controls.2/Imagine/DialogButtonBox.qml
 qt5/qml/QtQuick/Controls.2/Imagine/Drawer.qml
 qt5/qml/QtQuick/Controls.2/Imagine/Frame.qml
 qt5/qml/QtQuick/Controls.2/Imagine/GroupBox.qml
+qt5/qml/QtQuick/Controls.2/Imagine/HorizontalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Imagine/ItemDelegate.qml
 qt5/qml/QtQuick/Controls.2/Imagine/Label.qml
 qt5/qml/QtQuick/Controls.2/Imagine/Menu.qml
@@ -288,6 +294,7 @@ qt5/qml/QtQuick/Controls.2/Imagine/ToolButton.qml
 qt5/qml/QtQuick/Controls.2/Imagine/ToolSeparator.qml
 qt5/qml/QtQuick/Controls.2/Imagine/ToolTip.qml
 qt5/qml/QtQuick/Controls.2/Imagine/Tumbler.qml
+qt5/qml/QtQuick/Controls.2/Imagine/VerticalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Imagine/libqtquickcontrols2imaginestyleplugin.so
 qt5/qml/QtQuick/Controls.2/Imagine/plugins.qmltypes
 qt5/qml/QtQuick/Controls.2/Imagine/qmldir
@@ -310,6 +317,7 @@ qt5/qml/QtQuick/Controls.2/Material/Drawer.qml
 qt5/qml/QtQuick/Controls.2/Material/ElevationEffect.qml
 qt5/qml/QtQuick/Controls.2/Material/Frame.qml
 qt5/qml/QtQuick/Controls.2/Material/GroupBox.qml
+qt5/qml/QtQuick/Controls.2/Material/HorizontalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Material/ItemDelegate.qml
 qt5/qml/QtQuick/Controls.2/Material/Label.qml
 qt5/qml/QtQuick/Controls.2/Material/Menu.qml
@@ -349,6 +357,7 @@ qt5/qml/QtQuick/Controls.2/Material/ToolButton.qml
 qt5/qml/QtQuick/Controls.2/Material/ToolSeparator.qml
 qt5/qml/QtQuick/Controls.2/Material/ToolTip.qml
 qt5/qml/QtQuick/Controls.2/Material/Tumbler.qml
+qt5/qml/QtQuick/Controls.2/Material/VerticalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so
 qt5/qml/QtQuick/Controls.2/Material/plugins.qmltypes
 qt5/qml/QtQuick/Controls.2/Material/qmldir
@@ -400,6 +409,7 @@ qt5/qml/QtQuick/Controls.2/Universal/DialogButtonBox.qml
 qt5/qml/QtQuick/Controls.2/Universal/Drawer.qml
 qt5/qml/QtQuick/Controls.2/Universal/Frame.qml
 qt5/qml/QtQuick/Controls.2/Universal/GroupBox.qml
+qt5/qml/QtQuick/Controls.2/Universal/HorizontalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Universal/ItemDelegate.qml
 qt5/qml/QtQuick/Controls.2/Universal/Label.qml
 qt5/qml/QtQuick/Controls.2/Universal/Menu.qml
@@ -436,9 +446,11 @@ qt5/qml/QtQuick/Controls.2/Universal/ToolButton.qml
 qt5/qml/QtQuick/Controls.2/Universal/ToolSeparator.qml
 qt5/qml/QtQuick/Controls.2/Universal/ToolTip.qml
 qt5/qml/QtQuick/Controls.2/Universal/Tumbler.qml
+qt5/qml/QtQuick/Controls.2/Universal/VerticalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/Universal/libqtquickcontrols2universalstyleplugin.so
 qt5/qml/QtQuick/Controls.2/Universal/plugins.qmltypes
 qt5/qml/QtQuick/Controls.2/Universal/qmldir
+qt5/qml/QtQuick/Controls.2/VerticalHeaderView.qml
 qt5/qml/QtQuick/Controls.2/designer/AbstractButtonSection.qml
 qt5/qml/QtQuick/Controls.2/designer/BusyIndicatorSpecifics.qml
 qt5/qml/QtQuick/Controls.2/designer/ButtonSection.qml

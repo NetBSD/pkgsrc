@@ -1,19 +1,19 @@
-$NetBSD: patch-qmake_Makefile.unix,v 1.4 2018/01/17 19:30:47 markd Exp $
+$NetBSD: patch-qmake_Makefile.unix,v 1.5 2020/06/02 06:41:00 adam Exp $
 
 Pass environmental variables from pkgsrc
 
---- qmake/Makefile.unix.orig	2017-11-30 13:49:46.000000000 +0000
+--- qmake/Makefile.unix.orig	2020-05-11 08:15:08.000000000 +0000
 +++ qmake/Makefile.unix
-@@ -130,7 +130,7 @@ DEPEND_SRC = \
+@@ -134,7 +134,7 @@ DEPEND_SRC = \
  # by configure); QTSRCS2 may include *.mm entries on macOS.
  # See below for special handling of qlibraryinfo.cpp
  
 -CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
 +CPPFLAGS += -g $(EXTRA_CPPFLAGS) \
  	   -I$(QMKSRC) -I$(QMKLIBSRC) -I$(QMKGENSRC) \
+ 	   -I$(SOURCE_PATH)/src/3rdparty/tinycbor/src \
  	   -I$(QMKGENSRC)/unix -I$(QMKGENSRC)/win32 -I$(QMKGENSRC)/mac \
- 	   -I$(INC_PATH) -I$(INC_PATH)/QtCore \
-@@ -141,8 +141,8 @@ CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
+@@ -146,8 +146,8 @@ CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
  	   -DQT_BUILD_QMAKE -DQT_BOOTSTRAPPED -DPROEVALUATOR_FULL \
  	   -DQT_NO_FOREACH
  

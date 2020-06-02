@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/02 22:05:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/02 06:41:00 adam Exp $
 lib/pkgconfig/Qt5Bluetooth.pc
 lib/pkgconfig/Qt5Nfc.pc
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/adapter1_bluez5_p.h
@@ -79,7 +79,7 @@ qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_a
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_bluez_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_bluezdbus_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_darwin_p.h
-qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_p.h
+qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_dummy_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_win_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_winrt_new_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_winrt_p.h
@@ -225,12 +225,12 @@ qt5/lib/libQt5Bluetooth.prl
 qt5/lib/libQt5Bluetooth.so
 qt5/lib/libQt5Bluetooth.so.${PKGVERSION}
 qt5/lib/libQt5Bluetooth.so.5
-qt5/lib/libQt5Bluetooth.so.5.14
+qt5/lib/libQt5Bluetooth.so.5.15
 qt5/lib/libQt5Nfc.prl
 qt5/lib/libQt5Nfc.so
 qt5/lib/libQt5Nfc.so.${PKGVERSION}
 qt5/lib/libQt5Nfc.so.5
-qt5/lib/libQt5Nfc.so.5.14
+qt5/lib/libQt5Nfc.so.5.15
 qt5/lib/pkgconfig/Qt5Bluetooth.pc
 qt5/lib/pkgconfig/Qt5Nfc.pc
 qt5/mkspecs/modules/qt_lib_bluetooth.pri
