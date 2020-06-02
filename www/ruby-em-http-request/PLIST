@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/18 15:16:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/02 13:46:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
@@ -40,6 +40,7 @@ ${GEM_LIBDIR}/lib/em-http/middleware/oauth2.rb
 ${GEM_LIBDIR}/lib/em-http/multi.rb
 ${GEM_LIBDIR}/lib/em-http/request.rb
 ${GEM_LIBDIR}/lib/em-http/version.rb
+${GEM_LIBDIR}/lib/em/io_streamer.rb
 ${GEM_LIBDIR}/spec/client_fiber_spec.rb
 ${GEM_LIBDIR}/spec/client_spec.rb
 ${GEM_LIBDIR}/spec/digest_auth_spec.rb

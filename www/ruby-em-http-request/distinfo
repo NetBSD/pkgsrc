@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/10/18 15:16:13 taca Exp $
+$NetBSD: distinfo,v 1.6 2020/06/02 13:46:43 taca Exp $
 
-SHA1 (em-http-request-1.1.5.gem) = e23cccc12c28295732a39156ecde8d75c6b3f54f
-RMD160 (em-http-request-1.1.5.gem) = 2fbe4f8f6e0043e674c52ffc84febcea102c2466
-SHA512 (em-http-request-1.1.5.gem) = cb37582291eb282b8c9386ae1512222856b48a482f1c72da80c40f1d5d6c9a61af949da7e6b7d77d6c45ed9547be2041e147c973676ab6ffc1ea3bfa7ddb35bc
-Size (em-http-request-1.1.5.gem) = 219648 bytes
+SHA1 (em-http-request-1.1.6.gem) = e544a3fddf4cc6aedeb3dd2ef5a2debacec57866
+RMD160 (em-http-request-1.1.6.gem) = 43169274f9cbdc9e717a13d6fb535bab4c8d59cd
+SHA512 (em-http-request-1.1.6.gem) = a50c129bc756c523d7702b9f979842000d54a5efb9939162484bdec5c4ca09a5c6e5506dc1182ddd60b8b66fc88fdf7b091544cc12ef2efc9b32cf4d76926b76
+Size (em-http-request-1.1.6.gem) = 221696 bytes
