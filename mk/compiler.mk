@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.94 2019/07/23 13:57:04 gdt Exp $
+# $NetBSD: compiler.mk,v 1.95 2020/06/02 06:58:13 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -36,6 +36,10 @@
 # COMPILER_USE_SYMLINKS
 #	If set to yes, use symlinks for the compiler drivers, otherwise
 #	shell scripts are created.  The default is yes.
+#
+# CHECK_COMPILER
+#	If set to yes, fail early if the compiler.mk variables are not
+#	set correctly.
 #
 # The following variables may be set by a package:
 #
@@ -89,6 +93,9 @@ _CXX_STD_VERSIONS=	gnu++17 c++17 gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++
 USE_LANGUAGES+=		c++
 .  endif
 .endfor
+
+#.READONLY: USE_LANGUAGES
+_USE_LANGUAGES_EFFECTIVE:=	${USE_LANGUAGES}
 
 COMPILER_USE_SYMLINKS?=	yes
 
@@ -265,3 +272,12 @@ ALL_ENV+=		CCVER=${DRAGONFLY_CCVER}
 .endif
 
 .endif	# BSD_COMPILER_MK
+
+.if ${CHECK_COMPILER:Uno:tl} == yes
+.  if ${USE_LANGUAGES:O:u} != ${_USE_LANGUAGES_EFFECTIVE:O:u}
+.warning For ${PKGPATH}, only languages "${_USE_LANGUAGES_EFFECTIVE}" are used, the others in "${USE_LANGUAGES}" were defined too late.
+.  endif
+.  if ${GCC_REQD:U:O:u} != ${_GCC_REQD_EFFECTIVE:U:O:u}
+.warning For ${PKGPATH}, only GCC_REQD "${_GCC_REQD_EFFECTIVE}" are used, the others in "${GCC_REQD}" were defined too late.
+.  endif
+.endif
