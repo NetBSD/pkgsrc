@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3329 2020/06/02 08:49:47 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.3330 2020/06/02 09:59:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5274,3 +5274,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/mpg123 to 1.26.1 [adam 2020-06-02]
 	Updated textproc/libyaml to 0.2.5 [adam 2020-06-02]
 	Added editors/micro version 2.0.4 [sjmulder 2020-06-02]
+	Updated textproc/uriparser to 0.9.4 [nia 2020-06-02]
