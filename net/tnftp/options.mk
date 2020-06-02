@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.12 2019/11/03 11:45:55 rillig Exp $
+# $NetBSD: options.mk,v 1.13 2020/06/02 12:17:20 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tnftp
-PKG_SUPPORTED_OPTIONS=	inet6 ssl socks
+PKG_SUPPORTED_OPTIONS=	editline inet6 ssl socks
 PKG_SUGGESTED_OPTIONS=	inet6
 
 CHECK_BUILTIN.openssl:=	yes
@@ -13,6 +13,13 @@ PKG_SUGGESTED_OPTIONS+=	ssl
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Meditline)
+CONFIGURE_ARGS+=	--enable-editcomplete
+.include "../../mk/termcap.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-editcomplete
+.endif
 
 .if !empty(PKG_OPTIONS:Msocks)
 CONFIGURE_ARGS+=	--with-socks
