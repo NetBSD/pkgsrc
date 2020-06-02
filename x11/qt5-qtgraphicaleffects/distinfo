@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2020/04/02 22:05:58 adam Exp $
+$NetBSD: distinfo,v 1.18 2020/06/02 06:41:01 adam Exp $
 
-SHA1 (qtgraphicaleffects-everywhere-src-5.14.2.tar.xz) = 31e5707b1e0dc5dc51289c6c796f3afe92ba5537
-RMD160 (qtgraphicaleffects-everywhere-src-5.14.2.tar.xz) = f54cbd0cffa95ff512e83a4f6a102b077675a954
-SHA512 (qtgraphicaleffects-everywhere-src-5.14.2.tar.xz) = fa6ed3eff243675f9d0bfa71b2886804e4902cf9d7d91d5dec0f8e4f060ee7c347ba7775a89e3f8effd0ffed8314f916b55f09056902abc892ee27e79ce2925c
-Size (qtgraphicaleffects-everywhere-src-5.14.2.tar.xz) = 14040880 bytes
+SHA1 (qtgraphicaleffects-everywhere-src-5.15.0.tar.xz) = 4043b947de44edf4474610d1aa9c38a014f5fae1
+RMD160 (qtgraphicaleffects-everywhere-src-5.15.0.tar.xz) = c647ff35cc2b86bef9dd156a4d77c021cd379ee1
+SHA512 (qtgraphicaleffects-everywhere-src-5.15.0.tar.xz) = 62b18a9032bc30468ad4dc95648b1234a71240467fe8ff34a76bc36ed4613eea279dfc6fe0bf8e7734143e8b6ec6442f5e2f92338c2233f4e396bd333e67bc0c
+Size (qtgraphicaleffects-everywhere-src-5.15.0.tar.xz) = 14040716 bytes

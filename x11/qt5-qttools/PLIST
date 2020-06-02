@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/03/18 23:04:21 tnn Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/06/02 06:41:02 adam Exp $
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5Help.pc
 lib/pkgconfig/Qt5UiTools.pc
@@ -199,12 +199,15 @@ qt5/include/QtDesignerComponents/QtDesignerComponents
 qt5/include/QtDesignerComponents/QtDesignerComponentsDepends
 qt5/include/QtDesignerComponents/QtDesignerComponentsVersion
 qt5/include/QtDesignerComponents/qtdesignercomponentsversion.h
+qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qfilternamedialog_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpcollectionhandler_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpdbreader_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpengine_p.h
+qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpfiltersettings_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpsearchindexreader_default_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpsearchindexreader_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpsearchindexwriter_default_p.h
+qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qoptionswidget_p.h
 qt5/include/QtHelp/QCompressedHelpInfo
 qt5/include/QtHelp/QHelpContentItem
 qt5/include/QtHelp/QHelpContentModel
@@ -213,9 +216,11 @@ qt5/include/QtHelp/QHelpEngine
 qt5/include/QtHelp/QHelpEngineCore
 qt5/include/QtHelp/QHelpFilterData
 qt5/include/QtHelp/QHelpFilterEngine
+qt5/include/QtHelp/QHelpFilterSettingsWidget
 qt5/include/QtHelp/QHelpGlobal
 qt5/include/QtHelp/QHelpIndexModel
 qt5/include/QtHelp/QHelpIndexWidget
+qt5/include/QtHelp/QHelpLink
 qt5/include/QtHelp/QHelpSearchEngine
 qt5/include/QtHelp/QHelpSearchQuery
 qt5/include/QtHelp/QHelpSearchQueryWidget
@@ -231,7 +236,9 @@ qt5/include/QtHelp/qhelpengine.h
 qt5/include/QtHelp/qhelpenginecore.h
 qt5/include/QtHelp/qhelpfilterdata.h
 qt5/include/QtHelp/qhelpfilterengine.h
+qt5/include/QtHelp/qhelpfiltersettingswidget.h
 qt5/include/QtHelp/qhelpindexwidget.h
+qt5/include/QtHelp/qhelplink.h
 qt5/include/QtHelp/qhelpsearchengine.h
 qt5/include/QtHelp/qhelpsearchquerywidget.h
 qt5/include/QtHelp/qhelpsearchresultwidget.h
@@ -275,17 +282,17 @@ qt5/lib/libQt5Designer.prl
 qt5/lib/libQt5Designer.so
 qt5/lib/libQt5Designer.so.${PKGVERSION}
 qt5/lib/libQt5Designer.so.5
-qt5/lib/libQt5Designer.so.5.14
+qt5/lib/libQt5Designer.so.5.15
 qt5/lib/libQt5DesignerComponents.prl
 qt5/lib/libQt5DesignerComponents.so
 qt5/lib/libQt5DesignerComponents.so.${PKGVERSION}
 qt5/lib/libQt5DesignerComponents.so.5
-qt5/lib/libQt5DesignerComponents.so.5.14
+qt5/lib/libQt5DesignerComponents.so.5.15
 qt5/lib/libQt5Help.prl
 qt5/lib/libQt5Help.so
 qt5/lib/libQt5Help.so.${PKGVERSION}
 qt5/lib/libQt5Help.so.5
-qt5/lib/libQt5Help.so.5.14
+qt5/lib/libQt5Help.so.5.15
 qt5/lib/libQt5UiPlugin.prl
 qt5/lib/libQt5UiTools.a
 qt5/lib/libQt5UiTools.prl
