@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/05/30 15:56:22 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/02 12:26:14 nia Exp $
 
 DISTNAME=	libretro-fuse-20200506
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	fuse-libretro
 GITHUB_TAG=	c2f03e6f08f3e2a03d7888fe756e0beb7979f983
 
@@ -22,4 +21,5 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
 CHECK_PORTABILITY_SKIP+=	fuse/configure
 
 .include "../../emulators/retroarch/core.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
