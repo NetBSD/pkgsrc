@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2020/05/06 08:12:55 pin Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/02 08:24:05 adam Exp $
 
 VERSION=	0.15.3
 DISTNAME=	Kvantum-V${VERSION}
 PKGNAME=	kvantum-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}

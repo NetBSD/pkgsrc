@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/03/31 19:07:54 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/02 08:23:42 adam Exp $
 
 DISTNAME=	woboq_codebrowser-2.1
+PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woboq/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

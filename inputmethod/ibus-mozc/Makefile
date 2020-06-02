@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2020/05/22 10:56:14 adam Exp $
+# $NetBSD: Makefile,v 1.61 2020/06/02 08:24:10 adam Exp $
 
 PKGNAME=	ibus-${DISTNAME}
-PKGREVISION=	24
+PKGREVISION=	25
 
 INSTALLATION_DIRS+=	libexec share/ibus share/ibus/component \
 			share/ibus-mozc

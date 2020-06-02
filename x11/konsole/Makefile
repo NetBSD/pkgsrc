@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/05/21 20:53:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2020/06/02 08:25:01 adam Exp $
 
 DISTNAME=	konsole-${_KDE_VERSION}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11
 COMMENT=	Terminal emulator for the K Desktop Environment
 

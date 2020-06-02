@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2020/05/22 22:28:04 mef Exp $
+# $NetBSD: Makefile,v 1.31 2020/06/02 08:23:04 adam Exp $
 
 DISTNAME=	kxmlgui-${KF5VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/05/14 17:30:50 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/02 08:24:13 adam Exp $
 
 DISTNAME=	zig-0.6.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

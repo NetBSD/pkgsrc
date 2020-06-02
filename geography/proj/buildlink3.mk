@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/04/12 08:27:56 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/06/02 08:22:42 adam Exp $
 
 BUILDLINK_TREE+=	proj
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	proj
 PROJ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.proj+=	proj>=5.0.0
-BUILDLINK_ABI_DEPENDS.proj+=	proj>=6.3.1nb1
+BUILDLINK_ABI_DEPENDS.proj+=	proj>=6.3.2nb1
 BUILDLINK_PKGSRCDIR.proj?=	../../geography/proj
 .include "../../databases/sqlite3/buildlink3.mk"
 .endif # PROJ_BUILDLINK3_MK

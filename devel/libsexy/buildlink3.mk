@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2020/03/10 22:08:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2020/06/02 08:22:40 adam Exp $
 
 BUILDLINK_TREE+=	libsexy
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsexy
 LIBSEXY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsexy+=	libsexy>=0.1.8
-BUILDLINK_ABI_DEPENDS.libsexy+=	libsexy>=0.1.11nb32
+BUILDLINK_ABI_DEPENDS.libsexy+=	libsexy>=0.1.11nb33
 BUILDLINK_PKGSRCDIR.libsexy?=	../../devel/libsexy
 
 .include "../../devel/glib2/buildlink3.mk"

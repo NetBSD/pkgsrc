@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/06/01 10:56:14 pin Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/02 08:25:03 adam Exp $
 
 VERSION=	0.15.0
 DISTNAME=	qterminal-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/qterminal/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
