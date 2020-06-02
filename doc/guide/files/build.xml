@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.81 2020/05/03 08:27:10 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.82 2020/06/02 06:10:09 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -394,12 +394,10 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     <varname>PATCH_DIST_ARGS</varname>.  See <xref
     linkend="components.patches"/> for more details.</para>
 
-    <para>By default &man.patch.1; is given special args to make
-    it fail if the patches apply with some lines of fuzz. Please
-    fix (regen) the patches so that they apply cleanly. The
-    rationale behind this is that patches that don't apply cleanly
-    may end up being applied in the wrong place, and cause severe
-    harm there.</para>
+    <para>By default &man.patch.1; is given special arguments to make it
+    fail if the expected text from the patch context is not found in the
+    patched file. If that happens, fix the patch file by comparing it
+    with the actual text in the file to be patched.</para>
 
   </sect1>
 
