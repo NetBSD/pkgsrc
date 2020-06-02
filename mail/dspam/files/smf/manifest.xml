@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='export'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='0'>
+    <create_default_instance enabled='false'/>
+    <single_instance/>
+    <dependency name='fs' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local'/>
+    </dependency>
+    <dependency name='net' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/loopback'/>
+    </dependency>
+    <dependency name='config' grouping='require_all' restart_on='none' type='path'>
+      <service_fmri value='file://@PKG_SYSCONFDIR@/dspam.conf'/>
+    </dependency>
+    <method_context working_directory="@DSPAM_HOME@">
+      <method_credential group='@DSPAM_USER@' user='@DSPAM_GROUP@'/>
+    </method_context>
+    <exec_method type='method' name='start' exec='@PREFIX@/bin/dspam --daemon' timeout_seconds='120' />
+    <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>dspam daemon</loctext>
+      </common_name>
+      <documentation> 
+        <manpage title="dspam" section="1" manpath='@PREFIX@/@PKGMANDIR@'/> 
+      </documentation> 
+    </template>
+  </service>
+</service_bundle>
