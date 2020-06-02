@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2020/06/02 08:24:54 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/02 08:54:52 pin Exp $
 
-VERSION=	0.15.0
-DISTNAME=	obconf-qt-${VERSION}
+DISTNAME=	obconf-qt-0.15.0
 PKGREVISION=	1
 CATEGORIES=	wm
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/obconf-qt/releases/download/${VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
