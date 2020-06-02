@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/01/21 20:25:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/02 06:41:03 adam Exp $
 lib/pkgconfig/Qt5X11Extras.pc
 qt5/include/QtX11Extras/QX11Info
 qt5/include/QtX11Extras/QtX11Extras
@@ -13,7 +13,7 @@ qt5/lib/libQt5X11Extras.prl
 qt5/lib/libQt5X11Extras.so
 qt5/lib/libQt5X11Extras.so.${PKGVERSION}
 qt5/lib/libQt5X11Extras.so.5
-qt5/lib/libQt5X11Extras.so.5.14
+qt5/lib/libQt5X11Extras.so.5.15
 qt5/lib/pkgconfig/Qt5X11Extras.pc
 qt5/mkspecs/modules/qt_lib_x11extras.pri
 qt5/mkspecs/modules/qt_lib_x11extras_private.pri
