@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/06/02 08:23:57 adam Exp $
+# $NetBSD: Makefile,v 1.83 2020/06/02 18:45:30 rillig Exp $
 
 DISTNAME=	merkaartor-0.17.2
 PKGREVISION=	55
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.merkaartor.be/
-COMMENT=	Merkaartor is an OpenStreetMap mapping program
+COMMENT=	OpenStreetMap mapping program
 
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
@@ -19,7 +19,7 @@ CONFIGURE_ARGS=		PREFIX=${PREFIX} NODEBUG=1 OSMARENDER=1 PROJ=1 GDAL=1 \
 SUBST_CLASSES+=			installtarget
 SUBST_MESSAGE.installtarget=	Fixing wrong install target
 SUBST_STAGE.installtarget=	post-configure
-SUBST_FILES.installtarget=	${WRKSRC}/src/Makefile
+SUBST_FILES.installtarget=	src/Makefile
 SUBST_SED.installtarget=	-e 's:--mode=install cp "$$(QMAKE_TARGET)":--mode=install cp "$$(TARGET)":'
 
 INSTALL_ENV+=	INSTALL_ROOT=${DESTDIR}
