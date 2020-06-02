@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2020/04/12 08:29:04 adam Exp $
+# $NetBSD: Makefile,v 1.37 2020/06/02 08:24:31 adam Exp $
 #
 
 GST_PLUGINS0.10_NAME=	soup
 GST_PLUGINS0.10_DIRS=	ext/soup
-PKGREVISION=		25
+PKGREVISION=		26
 
 .include "../../multimedia/gst-plugins0.10-good/Makefile.common"
 

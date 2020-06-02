@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/14 19:04:51 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/02 08:22:57 adam Exp $
 
 GITHUB_PROJECT=	hfst-ospell
 DISTNAME=	hfstospell-0.5.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hfst/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

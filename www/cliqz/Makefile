@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2020/05/17 10:10:18 fox Exp $
+# $NetBSD: Makefile,v 1.42 2020/06/02 08:24:56 adam Exp $
 
 DISTNAME=	cliqz-1.36.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f

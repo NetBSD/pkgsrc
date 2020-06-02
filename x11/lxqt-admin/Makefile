@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/06/01 12:39:14 pin Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/02 08:25:01 adam Exp $
 
 VERSION=	0.15.0
 DISTNAME=	lxqt-admin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-admin/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz

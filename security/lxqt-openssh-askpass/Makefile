@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/06/01 12:15:15 pin Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/02 08:24:41 adam Exp $
 
 VERSION=	0.15.0
 DISTNAME=	lxqt-openssh-askpass-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-openssh-askpass/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz

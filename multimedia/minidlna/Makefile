@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2020/04/12 08:29:02 adam Exp $
+# $NetBSD: Makefile,v 1.41 2020/06/02 08:24:27 adam Exp $
 
 PKGNAME=	minidlna-1.2.1.20180601
-PKGREVISION=	6
+PKGREVISION=	7
 DISTNAME=	minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837
 CATEGORIES=	multimedia
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=minidlna/}

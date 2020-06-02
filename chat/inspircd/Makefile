@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2020/05/22 10:55:58 adam Exp $
+# $NetBSD: Makefile,v 1.73 2020/06/02 08:23:17 adam Exp $
 
 DISTNAME=	inspircd-2.0.28
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=inspircd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
