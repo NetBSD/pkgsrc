@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3341 2020/06/02 19:58:33 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3342 2020/06/02 21:26:30 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5290,3 +5290,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test to 5.4.3 [adam 2020-06-02]
 	Updated devel/py-restructuredtext_lint to 1.3.0 [adam 2020-06-02]
 	Updated devel/py-doc8 to 0.8.1 [adam 2020-06-02]
+	Added devel/libatomic version 10.1.0 [maya 2020-06-02]
