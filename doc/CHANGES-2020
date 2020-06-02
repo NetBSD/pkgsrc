@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3333 2020/06/02 11:08:06 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.3334 2020/06/02 13:27:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5278,3 +5278,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/bmake to 20200524nb1 [sjmulder 2020-06-02]
 	Updated textproc/libxlsxwriter to 0.9.5 [sjmulder 2020-06-02]
 	Updated sysutils/nnn to 3.2nb1 [sjmulder 2020-06-02]
+	Added emulators/gearboy version 3.1.1 [nia 2020-06-02]
