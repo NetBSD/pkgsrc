@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.212 2020/05/31 00:00:13 sjmulder Exp $
+# $NetBSD: gcc.mk,v 1.213 2020/06/02 06:58:13 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1069,5 +1069,8 @@ _GCC_NEEDS_A_FORTRAN=	yes
 COMPILER_INCLUDE_DIRS=	${_GCCBINDIR:H}/include ${_OPSYS_INCLUDE_DIRS}
 COMPILER_LIB_DIRS=	${_GCCBINDIR:H}/lib ${_OPSYS_LIB_DIRS}
 .endif
+
+#.READONLY: GCC_REQD
+_GCC_REQD_EFFECTIVE:=	${GCC_REQD}
 
 .endif	# COMPILER_GCC_MK
