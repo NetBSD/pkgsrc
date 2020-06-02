@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/05/30 14:32:32 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/06/02 14:51:03 nia Exp $
 
 DISTNAME=	libretro-picodrive-20200527
+PKGREVISION=	1
 CATEGORIES=	emulators
 GITHUB_PROJECT=	picodrive
 GITHUB_TAG=	b8fb8f285317632f42ecbbd36cf4fe18ea9189f1
