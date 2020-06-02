@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2020/06/02 13:24:31 nia Exp $
+# $NetBSD: Makefile,v 1.325 2020/06/02 13:25:00 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -69,6 +69,7 @@ SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fuse-emulator
 SUBDIR+=	fuse-emulator-utils
 SUBDIR+=	gearboy
+SUBDIR+=	gearsystem
 SUBDIR+=	generator-cbiere
 SUBDIR+=	gens
 SUBDIR+=	gns3-gui
