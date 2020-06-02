@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:33:25 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/06/02 19:46:00 rillig Exp $
 
 PKGNAME=		cwrappers-20180325
 CATEGORIES=		pkgtools sysutils
@@ -16,7 +16,8 @@ INSTALLATION_DIRS=	libexec/cwrappers
 
 .include "../../mk/bsd.prefs.mk"
 
-CHECK_PERMS=		no
+CHECK_PERMS_SKIP=	*	# avoid dependency cycles with sysutils/checkperms
+CHECK_PORTABILITY_SKIP=	*	# avoid dependency cycles with pkgtools/check-portability
 PKGSRC_LOCKTYPE=	none	# avoid dependency cycles with pkgtool/shlock
 
 .if ${OPSYS} != "NetBSD" || !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
