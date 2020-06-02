@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3338 2020/06/02 13:47:15 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3339 2020/06/02 14:17:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5283,3 +5283,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added emulators/gearsystem version 3.1.0 [nia 2020-06-02]
 	Added emulators/libretro-gearsystem version 3.1.0 [nia 2020-06-02]
 	Updated www/ruby-em-http-request to 1.1.6 [taca 2020-06-02]
+	Updated sysutils/pear-Log to 1.13.2 [taca 2020-06-02]
