@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/02 13:25:45 nia Exp $
+lib/libretro/gearboy_libretro.${SOEXT}
