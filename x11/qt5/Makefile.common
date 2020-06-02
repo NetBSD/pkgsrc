@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.22 2020/04/02 22:05:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2020/06/02 06:41:00 adam Exp $
 # used by x11/qt5-qtbase/Makefile.common
 # used by inputmethod/qt5-uim/Makefile
 
-QTVERSION=	5.14.2
+QTVERSION=	5.15.0
 
 .include "../../mk/bsd.prefs.mk"
 
 CATEGORIES=	x11
-MASTER_SITES=	http://download.qt-project.org/official_releases/qt/${QTVERSION:R}/${QTVERSION}/submodules/
+MASTER_SITES=	http://download.qt.io/official_releases/qt/${QTVERSION:R}/${QTVERSION}/submodules/
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
 

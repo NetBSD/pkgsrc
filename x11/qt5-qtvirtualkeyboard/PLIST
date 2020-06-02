@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/21 20:25:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/02 06:41:03 adam Exp $
 lib/pkgconfig/Qt5VirtualKeyboard.pc
 qt5/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/abstractinputpanel_p.h
 qt5/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/appinputpanel_p.h
@@ -52,7 +52,7 @@ qt5/lib/libQt5VirtualKeyboard.prl
 qt5/lib/libQt5VirtualKeyboard.so
 qt5/lib/libQt5VirtualKeyboard.so.${PKGVERSION}
 qt5/lib/libQt5VirtualKeyboard.so.5
-qt5/lib/libQt5VirtualKeyboard.so.5.14
+qt5/lib/libQt5VirtualKeyboard.so.5.15
 qt5/lib/pkgconfig/Qt5VirtualKeyboard.pc
 qt5/mkspecs/modules/qt_lib_virtualkeyboard.pri
 qt5/mkspecs/modules/qt_lib_virtualkeyboard_private.pri
