@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1 2020/06/02 13:24:32 nia Exp $
+# used by emulators/gearboy/Makefile
+# used by emulators/libretro-gearboy/Makefile
+
+DISTNAME=	gearboy-3.1.1
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=drhelius/}
+GITHUB_PROJECT=	Gearboy
+GITHUB_TAG=	${DISTNAME}
+
+USE_LANGUAGES=	c c++
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/gearboy/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/gearboy/patches
+
+CHECK_PORTABILITY_SKIP+=	platforms/*/dependencies/SDL-*/premake/*/build-scripts/*
+CHECK_PORTABILITY_SKIP+=	platforms/ios/dependencies/SDL-*/build-scripts/*
