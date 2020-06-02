@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2020/06/02 08:23:39 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/02 08:42:34 pin Exp $
 
-VERSION=	0.7.0
-DISTNAME=	lxqt-build-tools-${VERSION}
+DISTNAME=	lxqt-build-tools-0.7.0
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-build-tools/releases/download/${VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
