@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/01/21 20:25:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/06/02 06:41:01 adam Exp $
 qt5/doc/qtcmake.qch
 qt5/doc/qtcmake/cmake-command-reference.html
 qt5/doc/qtcmake/cmake-get-started.html
@@ -374,6 +374,7 @@ qt5/doc/qtdoc/newclasses511.html
 qt5/doc/qtdoc/newclasses512.html
 qt5/doc/qtdoc/newclasses513.html
 qt5/doc/qtdoc/newclasses514.html
+qt5/doc/qtdoc/newclasses515.html
 qt5/doc/qtdoc/newclasses52.html
 qt5/doc/qtdoc/newclasses53.html
 qt5/doc/qtdoc/newclasses54.html
@@ -648,6 +649,7 @@ qt5/doc/qtdoc/whatsnew511.html
 qt5/doc/qtdoc/whatsnew512.html
 qt5/doc/qtdoc/whatsnew513.html
 qt5/doc/qtdoc/whatsnew514.html
+qt5/doc/qtdoc/whatsnew515.html
 qt5/doc/qtdoc/whatsnew52.html
 qt5/doc/qtdoc/whatsnew53.html
 qt5/doc/qtdoc/whatsnew54.html

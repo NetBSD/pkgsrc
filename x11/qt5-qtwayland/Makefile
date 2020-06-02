@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/04/12 08:29:20 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/06/02 06:41:03 adam Exp $
 
 DISTNAME=	qtwayland-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwayland-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt5 module for Wayland support
 
 BUILD_TARGET=		sub-src

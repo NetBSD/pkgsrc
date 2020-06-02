@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/01/21 20:25:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/06/02 06:41:02 adam Exp $
 lib/pkgconfig/Qt5Script.pc
 lib/pkgconfig/Qt5ScriptTools.pc
 qt5/include/QtScript/${PKGVERSION}/QtScript/private/qscriptable_p.h
@@ -159,12 +159,12 @@ qt5/lib/libQt5Script.prl
 qt5/lib/libQt5Script.so
 qt5/lib/libQt5Script.so.${PKGVERSION}
 qt5/lib/libQt5Script.so.5
-qt5/lib/libQt5Script.so.5.14
+qt5/lib/libQt5Script.so.5.15
 qt5/lib/libQt5ScriptTools.prl
 qt5/lib/libQt5ScriptTools.so
 qt5/lib/libQt5ScriptTools.so.${PKGVERSION}
 qt5/lib/libQt5ScriptTools.so.5
-qt5/lib/libQt5ScriptTools.so.5.14
+qt5/lib/libQt5ScriptTools.so.5.15
 qt5/lib/pkgconfig/Qt5Script.pc
 qt5/lib/pkgconfig/Qt5ScriptTools.pc
 qt5/mkspecs/modules/qt_lib_script.pri

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/21 20:25:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/02 06:41:00 adam Exp $
 lib/pkgconfig/Qt5Charts.pc
 qt5/include/QtCharts/${PKGVERSION}/QtCharts/private/abstractbarchartitem_p.h
 qt5/include/QtCharts/${PKGVERSION}/QtCharts/private/abstractchartlayout_p.h
@@ -279,7 +279,7 @@ qt5/lib/libQt5Charts.prl
 qt5/lib/libQt5Charts.so
 qt5/lib/libQt5Charts.so.${PKGVERSION}
 qt5/lib/libQt5Charts.so.5
-qt5/lib/libQt5Charts.so.5.14
+qt5/lib/libQt5Charts.so.5.15
 qt5/lib/pkgconfig/Qt5Charts.pc
 qt5/mkspecs/modules/qt_lib_charts.pri
 qt5/mkspecs/modules/qt_lib_charts_private.pri
