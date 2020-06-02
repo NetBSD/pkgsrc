@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2020/06/02 08:24:41 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/02 09:18:13 pin Exp $
 
-VERSION=	0.15.0
-DISTNAME=	lxqt-sudo-${VERSION}
+DISTNAME=	lxqt-sudo-0.15.0
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-sudo/releases/download/${VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
