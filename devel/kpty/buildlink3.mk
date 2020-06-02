@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2020/04/12 08:27:53 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2020/06/02 08:22:37 adam Exp $
 
 BUILDLINK_TREE+=	kpty
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kpty
 KPTY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kpty+=	kpty>=5.19.0
-BUILDLINK_ABI_DEPENDS.kpty?=	kpty>=5.66.0nb3
+BUILDLINK_ABI_DEPENDS.kpty?=	kpty>=5.66.0nb4
 BUILDLINK_PKGSRCDIR.kpty?=	../../devel/kpty
 
 .include "../../devel/kcoreaddons/buildlink3.mk"

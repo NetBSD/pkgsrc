@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.79 2020/04/12 08:29:10 adam Exp $
+# $NetBSD: Makefile,v 1.80 2020/06/02 08:24:41 adam Exp $
 #
 
 DISTNAME=	opendnssec-1.4.14
 #PKGREVISION=	9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security net
 MASTER_SITES=	https://www.opendnssec.org/files/source/
 
