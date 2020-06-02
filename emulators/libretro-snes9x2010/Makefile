@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/30 14:42:05 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/02 12:24:10 nia Exp $
 
 DISTNAME=	libretro-snes9x2010-20200518
 CATEGORIES=	emulators
@@ -13,6 +13,8 @@ LICENSE=	snes9x-license
 MAKE_FILE=	Makefile.libretro
 
 LIBRETRO_CORE=	snes9x2010
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=libretro/link.T
 
 .include "../../emulators/retroarch/core.mk"
 .include "../../mk/bsd.pkg.mk"
