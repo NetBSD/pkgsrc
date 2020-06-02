@@ -1,0 +1,39 @@
+$NetBSD: patch-Makefile.common,v 1.1 2020/06/02 14:08:58 nia Exp $
+
+Don't use bundled zlib.
+
+--- Makefile.common.orig	2020-05-07 17:41:19.000000000 +0000
++++ Makefile.common
+@@ -24,8 +24,7 @@ INCFLAGS := -I$(CORE_DIR) \
+ 				-I$(CORE_DIR)/Src/VideoRender \
+ 				-I$(CORE_DIR)/Src/Z80 \
+ 				-I$(CORE_DIR)/Src/Input \
+-				-I$(CORE_DIR)/Src/Libretro \
+-				-I$(DEPS_DIR)/zlib
++				-I$(CORE_DIR)/Src/Libretro
+ 
+ ifneq (,$(findstring msvc2003,$(platform)))
+ INCFLAGS += -I$(LIBRETRO_COMM_DIR)/include/compat/msvc
+@@ -332,22 +331,6 @@ ifneq ($(STATIC_LINKING), 1)
+ SOURCES_C += $(LIBRETRO_COMM_DIR)/file/retro_dirent.c \
+ 				 $(LIBRETRO_COMM_DIR)/compat/compat_snprintf.c \
+ 				 $(LIBRETRO_COMM_DIR)/compat/compat_strcasestr.c
+-
+-#include zlib
+-SOURCES_C += $(DEPS_DIR)/zlib/adler32.c \
+-				 $(DEPS_DIR)/zlib/compress.c \
+-				 $(DEPS_DIR)/zlib/crc32.c \
+-				 $(DEPS_DIR)/zlib/deflate.c \
+-				 $(DEPS_DIR)/zlib/gzclose.c \
+-				 $(DEPS_DIR)/zlib/gzlib.c \
+-				 $(DEPS_DIR)/zlib/gzread.c \
+-				 $(DEPS_DIR)/zlib/gzwrite.c \
+-				 $(DEPS_DIR)/zlib/inffast.c \
+-				 $(DEPS_DIR)/zlib/inflate.c \
+-				 $(DEPS_DIR)/zlib/inftrees.c \
+-				 $(DEPS_DIR)/zlib/trees.c \
+-				 $(DEPS_DIR)/zlib/uncompr.c \
+-				 $(DEPS_DIR)/zlib/zutil.c
+ endif
+ 
+ ifeq ($(HAVE_COMPAT), 1)
