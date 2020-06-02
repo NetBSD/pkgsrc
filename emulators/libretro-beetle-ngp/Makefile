@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/30 16:40:16 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/02 12:24:09 nia Exp $
 
 DISTNAME=	libretro-beetle-ngp-20200518
 CATEGORIES=	emulators
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++03
 
 LIBRETRO_CORE=	mednafen_ngp
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T 
 
 .include "../../emulators/retroarch/core.mk"
 .include "../../mk/bsd.pkg.mk"
