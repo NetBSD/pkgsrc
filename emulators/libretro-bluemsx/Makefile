@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/05/31 11:39:55 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/02 14:08:58 nia Exp $
 
 DISTNAME=	libretro-bluemsx-20200507
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	blueMSX-libretro
@@ -13,7 +14,10 @@ LICENSE=	gnu-gpl-v2
 
 MAKE_FILE=	Makefile.libretro
 USE_LANGUAGES=	c c++03
+
 LIBRETRO_CORE=	bluemsx
+
+LDFLAGS+=	-lz
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,4 +35,5 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=link.T
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
 
 .include "../../emulators/retroarch/core.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
