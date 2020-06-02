@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3331 2020/06/02 10:07:47 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.3332 2020/06/02 10:28:57 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5276,3 +5276,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added editors/micro version 2.0.4 [sjmulder 2020-06-02]
 	Updated textproc/uriparser to 0.9.4 [nia 2020-06-02]
 	Updated devel/bmake to 20200524nb1 [sjmulder 2020-06-02]
+	Updated textproc/libxlsxwriter to 0.9.5 [sjmulder 2020-06-02]
