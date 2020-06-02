@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/03/08 16:49:05 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2020/06/02 08:23:25 adam Exp $
 
 LIBGDA_PROVIDER=	mysql
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../databases/libgda/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}

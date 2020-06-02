@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2020/03/10 22:09:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2020/06/02 08:23:06 adam Exp $
 #
 
 BUILDLINK_TREE+=	mate-control-center
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	mate-control-center
 MATE_CONTROL_CENTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mate-control-center+=	mate-control-center>=1.8.3
-BUILDLINK_ABI_DEPENDS.mate-control-center+=	mate-control-center>=1.22.2nb2
+BUILDLINK_ABI_DEPENDS.mate-control-center+=	mate-control-center>=1.24.0nb1
 BUILDLINK_PKGSRCDIR.mate-control-center?=	../../x11/mate-control-center
 
 .include "../../x11/mate-desktop/buildlink3.mk"

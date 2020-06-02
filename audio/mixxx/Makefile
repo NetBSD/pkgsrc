@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/04/12 08:28:19 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/02 08:23:13 adam Exp $
 
 DISTNAME=	mixxx-2.2.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mixxxdj/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
