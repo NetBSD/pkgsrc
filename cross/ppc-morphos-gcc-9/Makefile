@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/21 18:26:46 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/02 18:37:46 rillig Exp $
 
 DISTNAME=	sdk-source-20191111
 PKGNAME=	ppc-morphos-gcc-9-9.2.0
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--enable-threads=morphos
 CONFIGURE_ARGS+=	--disable-bootstrap
 CONFIGURE_ARGS+=	--enable-version-specific-runtime-libs
 
-CHECK_PORTABILITY_SKIP+=	contrib/download_prerequisites
+CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	libgo/mksysinfo.sh
 
 post-extract:
