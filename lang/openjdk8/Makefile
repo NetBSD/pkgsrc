@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2020/05/29 10:51:23 abs Exp $
+# $NetBSD: Makefile,v 1.103 2020/06/02 18:25:39 rillig Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -28,6 +28,7 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jmap jps jstack \
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # not really GNU configure, only similar
 USE_GNU_CONFIGURE_HOST=	no
 CONFIGURE_SCRIPT=	configure
 CONFIG_SHELL=		bash
