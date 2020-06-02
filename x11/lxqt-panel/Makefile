@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2020/06/02 08:25:01 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/02 10:59:59 pin Exp $
 
-VERSION=	0.15.1
-DISTNAME=	lxqt-panel-${VERSION}
+DISTNAME=	lxqt-panel-0.15.1
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-panel/releases/download/${VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
