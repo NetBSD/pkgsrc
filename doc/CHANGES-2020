@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3340 2020/06/02 17:53:29 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3341 2020/06/02 19:58:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5285,3 +5285,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-em-http-request to 1.1.6 [taca 2020-06-02]
 	Updated sysutils/pear-Log to 1.13.2 [taca 2020-06-02]
 	Updated pkgtools/pkglint to 20.1.13 [rillig 2020-06-02]
+	Updated www/nghttp2 to 1.41.0 [adam 2020-06-02]
+	Updated www/nghttp2-tools to 1.41.0 [adam 2020-06-02]
+	Updated devel/py-test to 5.4.3 [adam 2020-06-02]
+	Updated devel/py-restructuredtext_lint to 1.3.0 [adam 2020-06-02]
+	Updated devel/py-doc8 to 0.8.1 [adam 2020-06-02]
