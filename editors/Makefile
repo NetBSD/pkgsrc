@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2020/05/28 12:06:17 nia Exp $
+# $NetBSD: Makefile,v 1.205 2020/06/02 08:49:15 sjmulder Exp $
 #
 
 COMMENT=	Editors
@@ -80,6 +80,7 @@ SUBDIR+=	medit
 SUBDIR+=	mflteco
 SUBDIR+=	mg
 SUBDIR+=	mg2a
+SUBDIR+=	micro
 SUBDIR+=	mined
 SUBDIR+=	mule
 SUBDIR+=	mule-ucs
