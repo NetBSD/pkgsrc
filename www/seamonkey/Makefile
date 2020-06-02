@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2020/06/02 06:11:28 rillig Exp $
+# $NetBSD: Makefile,v 1.213 2020/06/02 06:13:43 rillig Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -21,6 +21,8 @@ USE_TOOLS+=	unzip pax
 
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/seamonkey
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/seamonkey-bin
+
+GCC_REQD+=	6
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
