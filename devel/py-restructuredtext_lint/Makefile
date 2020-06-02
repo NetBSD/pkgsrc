@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/02/15 16:44:30 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/02 19:52:43 adam Exp $
 
-DISTNAME=	restructuredtext-lint-1.1.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/_/}
+DISTNAME=	restructuredtext_lint-1.3.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=twolfson/}
-GITHUB_PROJECT=	restructuredtext-lint
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/restructuredtext_lint/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/twolfson/restructuredtext-lint
@@ -15,12 +14,14 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.11:../../textproc/py-docutils
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+pre-configure:
+	${FIND} ${WRKSRC} -type f -name '*.pyc' -exec ${RM} {} +
 
 post-install:
-.for file in restructuredtext-lint rst-lint
-	${MV} ${DESTDIR}${PREFIX}/bin/${file} \
-		${DESTDIR}${PREFIX}/bin/${file}${PYVERSSUFFIX}
+.for bin in restructuredtext-lint rst-lint
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
