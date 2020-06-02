@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2020/06/01 11:36:49 pin Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/02 08:57:34 pin Exp $
 
-VERSION=	0.15.0
-DISTNAME=	lxqt-themes-${VERSION}
+DISTNAME=	lxqt-themes-0.15.0
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-themes/releases/download/${VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
