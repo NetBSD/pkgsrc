@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/06/02 08:22:32 adam Exp $
+# $NetBSD: Makefile,v 1.23 2020/06/02 18:33:40 rillig Exp $
 
 PKGREVISION= 19
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt
+TOOLS_BROKEN+=	perl
 
 DEPENDS+=	telepathy-mission-control5>=5.7.9:../../chat/telepathy-mission-control5
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
