@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/05/30 22:39:08 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2020/06/02 22:32:02 jperkin Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 CATEGORIES=	security
@@ -39,7 +39,7 @@ SUBST_CLASSES=		paths
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
 SUBST_STAGE.paths=	post-configure
 SUBST_FILES.paths=	${CERT_SCRIPT}
-SUBST_VARS.paths=	AWK DATADIR ECHO EXPR LN LS MKDIR PREFIX SSLDIR RM
+SUBST_VARS.paths=	AWK DATADIR ECHO EXPR LN LS MKDIR PREFIX RM SH SSLDIR
 SUBST_SED.paths=	-e 's,@OPENSSL@,${TOOLS_PATH.openssl},g'
 
 INSTALLATION_DIRS=	sbin ${DATADIR}
