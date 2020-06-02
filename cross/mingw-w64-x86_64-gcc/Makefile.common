@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2020/05/12 11:13:51 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/06/02 18:36:37 rillig Exp $
 #
 # used by cross/mingw-w64-i686-gcc/Makefile
 # used by cross/mingw-w64-x86_64-gcc/Makefile
@@ -42,6 +42,8 @@ PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
 PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-bootstrap/bin
 
 INFO_FILES=		yes
+
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
