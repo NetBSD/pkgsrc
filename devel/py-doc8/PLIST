@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/05 19:34:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/02 19:58:00 adam Exp $
 bin/doc8-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/doc8/__init__.py
 ${PYSITELIB}/doc8/__init__.pyc
 ${PYSITELIB}/doc8/__init__.pyo
+${PYSITELIB}/doc8/__main__.py
+${PYSITELIB}/doc8/__main__.pyc
+${PYSITELIB}/doc8/__main__.pyo
 ${PYSITELIB}/doc8/checks.py
 ${PYSITELIB}/doc8/checks.pyc
 ${PYSITELIB}/doc8/checks.pyo
@@ -26,6 +29,9 @@ ${PYSITELIB}/doc8/tests/__init__.pyo
 ${PYSITELIB}/doc8/tests/test_checks.py
 ${PYSITELIB}/doc8/tests/test_checks.pyc
 ${PYSITELIB}/doc8/tests/test_checks.pyo
+${PYSITELIB}/doc8/tests/test_main.py
+${PYSITELIB}/doc8/tests/test_main.pyc
+${PYSITELIB}/doc8/tests/test_main.pyo
 ${PYSITELIB}/doc8/utils.py
 ${PYSITELIB}/doc8/utils.pyc
 ${PYSITELIB}/doc8/utils.pyo
