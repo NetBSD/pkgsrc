@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/05/19 10:48:39 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/06/02 08:25:03 adam Exp $
 
 DISTNAME=	rofi-1.5.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DaveDavenport/}
 # We need to specify this way to get submodules fetched

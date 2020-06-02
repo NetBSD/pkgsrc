@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/06/01 10:20:48 pin Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/02 08:23:39 adam Exp $
 
 VERSION=	0.7.0
 DISTNAME=	lxqt-build-tools-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-build-tools/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz

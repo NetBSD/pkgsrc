@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2020/04/23 16:45:57 nia Exp $
+# $NetBSD: Makefile,v 1.42 2020/06/02 08:24:24 adam Exp $
 #
 
 DISTNAME=	gst-ffmpeg-0.10.13
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-ffmpeg/
 

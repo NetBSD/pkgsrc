@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/04/26 13:19:39 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/02 08:25:00 adam Exp $
 
 DISTNAME=	gtk-sharp-2.99.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-sharp/2.99/}
 EXTRACT_SUFX=	.tar.xz
