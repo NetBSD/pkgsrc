@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2020/05/24 21:10:17 nia Exp $
+# $NetBSD: Makefile,v 1.76 2020/06/02 10:07:33 sjmulder Exp $
 
 DISTNAME=	bmake-20200524
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -40,6 +41,9 @@ DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
 CONFIGURE_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
 .endif
 MAKE_ENV.Interix+=	XDEFS=-DUSE_SELECT
+
+# Fix bmake not finding files (e.g. .include) on Illumos with 32 bit ABI
+CFLAGS.SunOS+=-D_FILE_OFFSET_BITS=64
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
