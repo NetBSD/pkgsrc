@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.79 2018/11/12 14:22:58 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.80 2020/06/02 16:22:40 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -40,7 +40,7 @@ MOTIF_TYPE_DEFAULT?=	motif
 .endif
 
 # Use SMF by default if available.
-.if ${OS_VERSION} >= 5.10
+.if empty(OS_VERSION:M5.[0-9])
 INIT_SYSTEM?=		smf
 .endif
 
