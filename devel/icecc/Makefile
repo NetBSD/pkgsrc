@@ -2,7 +2,9 @@
 
 DISTNAME=	icecc-1.3.1
 CATEGORIES= devel
-MASTER_SITES=	https://github.com/icecc/icecream/releases/download/1.3.1/
+GITHUB_RELEASE= 1.3.1
+GITHUB_PROJECT= icecream
+MASTER_SITES=	${MASTER_SITE_GITHUB:=icecc/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	gang65@poczta.onet.pl
