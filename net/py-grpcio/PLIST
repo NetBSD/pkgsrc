@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/04/04 09:30:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/06/03 09:28:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -90,6 +90,9 @@ ${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_channel.pyo
 ${PYSITELIB}/grpc/experimental/aio/_interceptor.py
 ${PYSITELIB}/grpc/experimental/aio/_interceptor.pyc
 ${PYSITELIB}/grpc/experimental/aio/_interceptor.pyo
+${PYSITELIB}/grpc/experimental/aio/_metadata.py
+${PYSITELIB}/grpc/experimental/aio/_metadata.pyc
+${PYSITELIB}/grpc/experimental/aio/_metadata.pyo
 ${PYSITELIB}/grpc/experimental/aio/_server.py
 ${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_server.pyc
 ${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_server.pyo

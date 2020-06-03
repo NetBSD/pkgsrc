@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/04/04 09:30:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/06/03 09:28:53 adam Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -91,7 +91,6 @@ include/grpc/census.h
 include/grpc/compression.h
 include/grpc/fork.h
 include/grpc/grpc.h
-include/grpc/grpc_cronet.h
 include/grpc/grpc_posix.h
 include/grpc/grpc_security.h
 include/grpc/grpc_security_constants.h
@@ -270,6 +269,7 @@ include/grpcpp/support/error_details.h
 include/grpcpp/support/error_details_impl.h
 include/grpcpp/support/interceptor.h
 include/grpcpp/support/message_allocator.h
+include/grpcpp/support/method_handler.h
 include/grpcpp/support/proto_buffer_reader.h
 include/grpcpp/support/proto_buffer_writer.h
 include/grpcpp/support/server_callback.h
@@ -290,11 +290,11 @@ lib/cmake/grpc/gRPCTargets-noconfig.cmake
 lib/cmake/grpc/gRPCTargets.cmake
 lib/cmake/grpc/modules/Findc-ares.cmake
 lib/libaddress_sorting.so
-lib/libaddress_sorting.so.9
-lib/libaddress_sorting.so.9.0.0
+lib/libaddress_sorting.so.10
+lib/libaddress_sorting.so.10.0.0
 lib/libgpr.so
-lib/libgpr.so.9
-lib/libgpr.so.9.0.0
+lib/libgpr.so.10
+lib/libgpr.so.10.0.0
 lib/libgrpc++.so
 lib/libgrpc++.so.${PKGVERSION}
 lib/libgrpc++.so.1
@@ -311,23 +311,20 @@ lib/libgrpc++_unsecure.so
 lib/libgrpc++_unsecure.so.${PKGVERSION}
 lib/libgrpc++_unsecure.so.1
 lib/libgrpc.so
-lib/libgrpc.so.9
-lib/libgrpc.so.9.0.0
-lib/libgrpc_cronet.so
-lib/libgrpc_cronet.so.9
-lib/libgrpc_cronet.so.9.0.0
+lib/libgrpc.so.10
+lib/libgrpc.so.10.0.0
 lib/libgrpc_plugin_support.so
 lib/libgrpc_plugin_support.so.${PKGVERSION}
 lib/libgrpc_plugin_support.so.1
 lib/libgrpc_unsecure.so
-lib/libgrpc_unsecure.so.9
-lib/libgrpc_unsecure.so.9.0.0
+lib/libgrpc_unsecure.so.10
+lib/libgrpc_unsecure.so.10.0.0
 lib/libgrpcpp_channelz.so
 lib/libgrpcpp_channelz.so.${PKGVERSION}
 lib/libgrpcpp_channelz.so.1
 lib/libupb.so
-lib/libupb.so.9
-lib/libupb.so.9.0.0
+lib/libupb.so.10
+lib/libupb.so.10.0.0
 lib/pkgconfig/gpr.pc
 lib/pkgconfig/grpc++.pc
 lib/pkgconfig/grpc++_unsecure.pc
