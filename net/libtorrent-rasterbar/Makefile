@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2020/05/06 14:04:12 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/06/03 16:23:10 nia Exp $
 
-DISTNAME=	libtorrent-rasterbar-1.2.6
-PKGREVISION=	1
+DISTNAME=	libtorrent-rasterbar-1.2.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arvidn/}
 GITHUB_PROJECT=	libtorrent
-GITHUB_RELEASE=	libtorrent-${PKGVERSION_NOREV:S/./_/g}
+GITHUB_RELEASE=	libtorrent_${PKGVERSION_NOREV:S/./_/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.libtorrent.org/
@@ -13,7 +12,7 @@ COMMENT=	Feature complete C++ bittorrent implementation
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 GCC_REQD+=	6 # c++14
