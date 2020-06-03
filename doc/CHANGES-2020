@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3350 2020/06/03 11:15:14 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3351 2020/06/03 13:00:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5307,3 +5307,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-asn-lite to 2020.06 [fcambus 2020-06-03]
 	Updated net/dbip-country-lite to 2020.06 [fcambus 2020-06-03]
 	Updated net/dbip-city-lite to 2020.06 [fcambus 2020-06-03]
+	Updated www/firefox68 to 68.9.0 [nia 2020-06-03]
