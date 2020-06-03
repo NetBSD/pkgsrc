@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2020/06/02 08:22:46 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2020/06/03 09:25:38 adam Exp $
 
 BUILDLINK_TREE+=	nodejs
 
@@ -29,7 +29,7 @@ BUILDLINK_API_DEPENDS.http-parser+=	http-parser>=2.9.0
 pkgbase := nodejs
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.nodejs:Mopenssl)
+.if ${PKG_BUILD_OPTIONS.nodejs:Mopenssl}
 .  include "../../security/openssl/buildlink3.mk"
 .endif
 
