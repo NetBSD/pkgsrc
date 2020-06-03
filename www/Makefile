@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1459 2020/05/28 11:39:40 nia Exp $
+# $NetBSD: Makefile,v 1.1460 2020/06/03 14:18:43 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -746,6 +746,7 @@ SUBDIR+=	py-hstspreload
 SUBDIR+=	py-http-parser
 SUBDIR+=	py-http_ece
 SUBDIR+=	py-httpbin
+SUBDIR+=	py-httpcore
 SUBDIR+=	py-httpie
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-httptools
