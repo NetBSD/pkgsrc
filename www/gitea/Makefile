@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2020/06/02 08:24:57 adam Exp $
+# $NetBSD: Makefile,v 1.37 2020/06/03 18:30:28 jperkin Exp $
 
-DISTNAME=	gitea-1.11.5
-PKGREVISION=	2
+DISTNAME=	gitea-1.11.6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +13,11 @@ LICENSE=	mit
 GO_DIST_BASE=		${DISTNAME}
 GO_SRCPATH=		code.gitea.io/gitea
 
-FRONTEND=		${DISTNAME}-frontend.tar.gz
+#
+# The front-end files do not change every release, so only bump this when
+# necessary to avoid excessive uploads to LOCAL_PORTS.
+#
+FRONTEND=		gitea-1.11.5-frontend.tar.gz
 SITES.${FRONTEND}=	${MASTER_SITE_LOCAL}
 DISTFILES:=		${DEFAULT_DISTFILES} ${FRONTEND}
 
@@ -22,11 +25,15 @@ BUILD_TARGET=	backend
 
 #
 # When updating this package it is necessary to build the front-end artefacts
-# and upload them to LOCAL_PORTS.  Doing this at build time is untenable as npm
-# will download a significant number of modules.
+# and upload them to LOCAL_PORTS, but only if they differ from the existing
+# frontend tarball.
+#
+# This must not be enabled for normal builds as npm will download a significant
+# number of modules by itself, bypassing the usual pkgsrc distfiles rules.
 #
 # Install nodejs>=10 and npm, uncomment the additional BUILD_TARGET, run the
-# generate-artefacts target, then upload the distfile to LOCAL_PORTS.
+# generate-frontend target, and compare with the previous contents.  If needed,
+# upload the generated distfile to LOCAL_PORTS and bump FRONTEND.
 #
 #BUILD_TARGET+=	frontend
 #
