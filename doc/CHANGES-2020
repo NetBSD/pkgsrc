@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3359 2020/06/03 16:23:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3360 2020/06/03 16:45:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5321,3 +5321,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-django2 to 2.2.13 [adam 2020-06-03]
 	Updated www/py-django3 to 3.0.7 [adam 2020-06-03]
 	Updated net/libtorrent-rasterbar to 1.2.7 [nia 2020-06-03]
+	Moved devel/py-python-slugify to devel/py-slugify [adam 2020-06-03]
+	Updated devel/py-slugify to 4.0.0 [adam 2020-06-03]
+	Updated devel/py-cookiecutter to 1.7.2 [adam 2020-06-03]
