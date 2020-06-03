@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3346 2020/06/03 09:02:12 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3347 2020/06/03 09:29:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5295,3 +5295,12 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cbindgen to 0.14.2 [ryoon 2020-06-03]
 	Updated www/firefox to 77.0 [ryoon 2020-06-03]
 	Updated www/firefox-l10n to 77.0 [ryoon 2020-06-03]
+	Updated lang/perl5 to 5.30.3 [adam 2020-06-03]
+	Updated graphics/freetype2 to 2.10.2 [adam 2020-06-03]
+	Updated lang/nodejs to 14.4.0 [adam 2020-06-03]
+	Updated lang/nodejs12 to 12.18.0 [adam 2020-06-03]
+	Updated lang/nodejs10 to 10.21.0 [adam 2020-06-03]
+	Updated net/grpc to 1.29.1 [adam 2020-06-03]
+	Updated net/py-grpcio to 1.29.0 [adam 2020-06-03]
+	Updated net/py-grpcio-testing to 1.29.0 [adam 2020-06-03]
+	Updated net/py-grpcio-tools to 1.29.0 [adam 2020-06-03]
