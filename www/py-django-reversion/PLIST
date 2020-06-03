@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/12/10 08:56:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/06/03 15:27:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,9 +11,6 @@ ${PYSITELIB}/reversion/__init__.pyo
 ${PYSITELIB}/reversion/admin.py
 ${PYSITELIB}/reversion/admin.pyc
 ${PYSITELIB}/reversion/admin.pyo
-${PYSITELIB}/reversion/compat.py
-${PYSITELIB}/reversion/compat.pyc
-${PYSITELIB}/reversion/compat.pyo
 ${PYSITELIB}/reversion/errors.py
 ${PYSITELIB}/reversion/errors.pyc
 ${PYSITELIB}/reversion/errors.pyo
@@ -47,6 +44,8 @@ ${PYSITELIB}/reversion/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/ru/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/sk/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/sk/LC_MESSAGES/django.po
+${PYSITELIB}/reversion/locale/sl_SI/LC_MESSAGES/django.mo
+${PYSITELIB}/reversion/locale/sl_SI/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/sv/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/sv/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/uk/LC_MESSAGES/django.mo
@@ -70,21 +69,9 @@ ${PYSITELIB}/reversion/management/commands/deleterevisions.pyo
 ${PYSITELIB}/reversion/middleware.py
 ${PYSITELIB}/reversion/middleware.pyc
 ${PYSITELIB}/reversion/middleware.pyo
-${PYSITELIB}/reversion/migrations/0001_initial.py
-${PYSITELIB}/reversion/migrations/0001_initial.pyc
-${PYSITELIB}/reversion/migrations/0001_initial.pyo
 ${PYSITELIB}/reversion/migrations/0001_squashed_0004_auto_20160611_1202.py
 ${PYSITELIB}/reversion/migrations/0001_squashed_0004_auto_20160611_1202.pyc
 ${PYSITELIB}/reversion/migrations/0001_squashed_0004_auto_20160611_1202.pyo
-${PYSITELIB}/reversion/migrations/0002_auto_20141216_1509.py
-${PYSITELIB}/reversion/migrations/0002_auto_20141216_1509.pyc
-${PYSITELIB}/reversion/migrations/0002_auto_20141216_1509.pyo
-${PYSITELIB}/reversion/migrations/0003_auto_20160601_1600.py
-${PYSITELIB}/reversion/migrations/0003_auto_20160601_1600.pyc
-${PYSITELIB}/reversion/migrations/0003_auto_20160601_1600.pyo
-${PYSITELIB}/reversion/migrations/0004_auto_20160611_1202.py
-${PYSITELIB}/reversion/migrations/0004_auto_20160611_1202.pyc
-${PYSITELIB}/reversion/migrations/0004_auto_20160611_1202.pyo
 ${PYSITELIB}/reversion/migrations/__init__.py
 ${PYSITELIB}/reversion/migrations/__init__.pyc
 ${PYSITELIB}/reversion/migrations/__init__.pyo
