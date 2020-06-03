@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3360 2020/06/03 16:45:02 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3361 2020/06/03 16:52:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5324,3 +5324,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Moved devel/py-python-slugify to devel/py-slugify [adam 2020-06-03]
 	Updated devel/py-slugify to 4.0.0 [adam 2020-06-03]
 	Updated devel/py-cookiecutter to 1.7.2 [adam 2020-06-03]
+	Updated games/openttd to 1.10.2 [nia 2020-06-03]
