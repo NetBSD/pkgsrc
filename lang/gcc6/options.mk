@@ -28,8 +28,13 @@ PKG_SUGGESTED_OPTIONS+=			always-libgcc
 ###
 MULTILIB_SUPPORTED?=	unknown
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-.  if exists(/usr/include/gnu/stubs-64.h) && \
-     !exists(/usr/include/gnu/stubs-32.h)
+.  if exists(/usr/include/x86_64-linux-gnu/gnu)
+_GNU_INCLUDE_DIR=	/usr/include/x86_64-linux-gnu/gnu
+.  else
+_GNU_INCLUDE_DIR=	/usr/include/gnu
+.  endif
+.  if exists(${_GNU_INCLUDE_DIR}/stubs-64.h) && \
+     !exists(${_GNU_INCLUDE_DIR}/stubs-32.h)
 MULTILIB_SUPPORTED=	No
 .  else
 MULTILIB_SUPPORTED=	Yes
