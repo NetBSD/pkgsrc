@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2020/06/02 08:23:55 adam Exp $
+# $NetBSD: Makefile,v 1.91 2020/06/03 16:52:39 nia Exp $
 
-DISTNAME=	openttd-1.10.1-source
+DISTNAME=	openttd-1.10.2-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
