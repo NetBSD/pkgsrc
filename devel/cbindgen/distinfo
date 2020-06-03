@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2020/03/06 14:22:14 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2020/06/03 08:53:04 ryoon Exp $
 
 SHA1 (ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
@@ -16,10 +16,10 @@ SHA1 (c2-chacha-0.2.3.crate) = 40ba6b2702a3262598dea03417e606d33ef899ed
 RMD160 (c2-chacha-0.2.3.crate) = e061651b6fb11fb22d9f1877b06a2ec99b496994
 SHA512 (c2-chacha-0.2.3.crate) = 302498f75d1befdb8bf8b61d0eff2762f0e86000c3909d819a377be2fec72e830bfb4530e24059906b499cef17ab56229f5627fb998ad9ba34a7c6c0de748538
 Size (c2-chacha-0.2.3.crate) = 13336 bytes
-SHA1 (cbindgen-0.13.1.crate) = f1cb289ee65aa07326b52421fc77e4179fc1b8b4
-RMD160 (cbindgen-0.13.1.crate) = dd1b89f3cbd1dccde4c889b28b8d5a9e9c4bce37
-SHA512 (cbindgen-0.13.1.crate) = faaf76c95e3111931fbe044909be385c2af3366ee07cd4c5d9aeb02a9715ff75c3a78370a3b5c50af145970851feadb2aef983ff0c3aaae63626d25f40a656b8
-Size (cbindgen-0.13.1.crate) = 155690 bytes
+SHA1 (cbindgen-0.14.2.crate) = 60e79b3626cc4d31ff7185e8259c9a1f0a7e1986
+RMD160 (cbindgen-0.14.2.crate) = 5f69077a07b8add7ef78fc7209b0a60aa79d55ac
+SHA512 (cbindgen-0.14.2.crate) = d3ab0a4c217c9047bc3ada7911d4ae1bdfc09092835f78d232bb56ef0d9a499df43e358532dfb828a04df61a0cacccd7e57214cd15f466791eb1b8edd9f92ed0
+Size (cbindgen-0.14.2.crate) = 165699 bytes
 SHA1 (cfg-if-0.1.10.crate) = 3bd865df56c1f9266444b96351a1c30ffa5d9d75
 RMD160 (cfg-if-0.1.10.crate) = 896cd2fb2bb15582a174cb08c5e5ace6cc0be1c8
 SHA512 (cfg-if-0.1.10.crate) = 9d22616bfb4a75770a828a0a3cddac6787297a5fdc53eb17e25811cc94de717f2de8bd66d53c5d65ba1c83d8892aefee5ae758cf56a1ef0a0c3120f70b244339
@@ -32,6 +32,10 @@ SHA1 (getrandom-0.1.13.crate) = 7b8927be6ad9d1a76e4eef12df243bd154effcd4
 RMD160 (getrandom-0.1.13.crate) = 85bdd1fe7cad678c6d6b42955ad51046b3ffec15
 SHA512 (getrandom-0.1.13.crate) = 534b01d28bc9e69a5ad1e84f34aa4154939c27d70c5f557f15e669fa8894c375486ee945a6a6d8adaf1b6b7accda0e24963f70e77dd51ee0638a6ae6daa38925
 Size (getrandom-0.1.13.crate) = 24581 bytes
+SHA1 (heck-0.3.1.crate) = 319444e11ed4d17ab13a0635561cdee9fda2dd60
+RMD160 (heck-0.3.1.crate) = e1df454f4fb46feab9f869917f22e1ebcd3c3579
+SHA512 (heck-0.3.1.crate) = 134722192c46fd64b38d2fbec3a2511c560916e906491a72c4ec9d99b9f716dc58942fb99cac99b9a6ef2de5b5ad1d1c1155f292d091401b6873347d80c086d6
+Size (heck-0.3.1.crate) = 54666 bytes
 SHA1 (itoa-0.4.4.crate) = fbe126837bac1c5a02458f78e08721041c7f7608
 RMD160 (itoa-0.4.4.crate) = ed98e4ffc1c13d9bd14bca3df2ca315f7d58e052
 SHA512 (itoa-0.4.4.crate) = f5e04bd908457e7592243ce64a99c5283428b767f4cc17d77946770411b06fccb0250625263c3e84a02a018ea7e8a0e4216e1929a71988bab8e1dbf603d3801d
@@ -116,6 +120,10 @@ SHA1 (toml-0.5.5.crate) = d0846eaa2efcc86ae8b3162dc4408a2ef8295425
 RMD160 (toml-0.5.5.crate) = afb0125d49e44ef0315df3a2ce8aa36d3118b649
 SHA512 (toml-0.5.5.crate) = 8f6a04dc24ea775a9a28cc948039f20540ec983c46b287ebfa820e29cc5867803765ce099283f79d3b4a22c513b386603dbd8130808cb3354bc63b5d4706cb33
 Size (toml-0.5.5.crate) = 54805 bytes
+SHA1 (unicode-segmentation-1.6.0.crate) = 7f29b24dd81af3bd32409bb5056c332fbf34ba2f
+RMD160 (unicode-segmentation-1.6.0.crate) = 4c9d2a58b28cebf771089b5b88a13f632a817f52
+SHA512 (unicode-segmentation-1.6.0.crate) = 80c6f92d9b39602a05809dc63a7cb05a305441689b6056801097a882a36c9795aabd660f884f707daa7e7fe6ad4983f6e245c226962cc982dbfeea2ddfddf41e
+Size (unicode-segmentation-1.6.0.crate) = 90703 bytes
 SHA1 (unicode-width-0.1.7.crate) = ae937651d2d4bf8a1cbdb1411269373f389ed78e
 RMD160 (unicode-width-0.1.7.crate) = 3180ee3c5c0a2d81bc02d5861c518a8e9fcf79c3
 SHA512 (unicode-width-0.1.7.crate) = 39b8a539c9009d0421f54ae68b139f21456c9cb03d743b58535a977f98bc9655cf42eaacfadbcff796c187a6f315ae16259ee22be9c2da5aa042172c6b464d84

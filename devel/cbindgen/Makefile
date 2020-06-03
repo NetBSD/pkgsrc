@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/03/06 14:22:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2020/06/03 08:53:04 ryoon Exp $
 
-DISTNAME=	cbindgen-0.13.1
+DISTNAME=	cbindgen-0.14.2
 CATEGORIES=	devel
 EXTRACT_SUFX=	.crate
 
@@ -16,6 +16,7 @@ CARGO_CRATE_DEPENDS+=	c2-chacha-0.2.3
 CARGO_CRATE_DEPENDS+=	cfg-if-0.1.10
 CARGO_CRATE_DEPENDS+=	clap-2.33.0
 CARGO_CRATE_DEPENDS+=	getrandom-0.1.13
+CARGO_CRATE_DEPENDS+=	heck-0.3.1
 CARGO_CRATE_DEPENDS+=	itoa-0.4.4
 CARGO_CRATE_DEPENDS+=	libc-0.2.66
 CARGO_CRATE_DEPENDS+=	log-0.4.8
@@ -37,6 +38,7 @@ CARGO_CRATE_DEPENDS+=	syn-1.0.11
 CARGO_CRATE_DEPENDS+=	tempfile-3.1.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
 CARGO_CRATE_DEPENDS+=	toml-0.5.5
+CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.6.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.7
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.0
 CARGO_CRATE_DEPENDS+=	vec_map-0.8.1
