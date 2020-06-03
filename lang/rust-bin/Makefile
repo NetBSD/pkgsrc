@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/25 17:53:21 he Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/03 10:45:04 nia Exp $
 
 DISTNAME=	rust-1.42.0
 CATEGORIES=	lang
@@ -9,6 +9,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
 COMMENT=	Safe, concurrent, practical language (official binaries)
 LICENSE=	mit OR apache-2.0
+
+.include "../../lang/rust/type.mk"
+
+.if ${RUST_TYPE} != "bin"
+PKG_SKIP_REASON+=	"Rust binary package, RUST_TYPE is src"
+.endif
 
 ONLY_FOR_PLATFORM+=	Darwin-*-x86_64
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2020/05/24 16:58:43 triaxx Exp $
+# $NetBSD: Makefile,v 1.171 2020/06/03 10:45:04 nia Exp $
 
 DISTNAME=	rustc-1.43.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -19,6 +19,12 @@ USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
 BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
+
+.include "type.mk"
+
+.if ${RUST_TYPE} != "src"
+PKG_SKIP_REASON+=	"Rust source package, RUST_TYPE is bin"
+.endif
 
 HAS_CONFIGURE=			yes
 PYTHON_FOR_BUILD_ONLY=		yes
