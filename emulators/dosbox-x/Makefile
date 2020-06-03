@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/05/04 10:22:31 nia Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/03 13:36:26 nia Exp $
 
-DISTNAME=	dosbox-x-0.83.1
+DISTNAME=	dosbox-x-0.83.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
 GITHUB_TAG=	dosbox-x-v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/dosbox-x-${GITHUB_TAG}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf autoreconf automake pkg-config
-USE_LANGUAGES=	c gnu++11
+USE_LANGUAGES=	c c++
 
 # C++11
 GCC_REQD+=	4.7
