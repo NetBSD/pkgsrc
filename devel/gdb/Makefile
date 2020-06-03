@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/05/17 15:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2020/06/03 16:50:19 kamil Exp $
 
 DISTNAME=	gdb-8.3.1
 CATEGORIES=	devel
@@ -65,25 +65,10 @@ CONFIGURE_ENV+= gdb_cv_struct_lwp=yes
 MAKE_ENV+= gdb_cv_struct_lwp=yes
 
 CONFIGURE_ARGS+=	--with-separate-debug-dir=/usr/libdata/debug
-.elif ${OPSYS} == "DragonFly"
-TARGET_STR=		${MACHINE_ARCH}--dragonfly
-BUILD_DEFS+=		${TARGET_STR}
-## Remove "-pc" string, without this, getting following message:
-##	   *** Gdb does not support native target i386-pc-dragonfly"
-CONFIGURE_ARGS+=	--target=${TARGET_STR}
-TEST_ENV=		DEJAGNU=${WRKDIR}/../files/dragonfly-default.exp
 .endif
 
 post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
-.if ${OPSYS} == "DragonFly"
-# Following are installed by binutils
-#. for f in ansidecl.h bfdlink.h dis-asm.h symcat.h
-#	(cd ${WRKSRC}/include; ${INSTALL_DATA} ${f}  ${DESTDIR}${PREFIX}/include)
-#. endfor
-	(cd ${DESTDIR}${PREFIX}/bin;               ${LN} ${TARGET_STR}-gdb gdb)
-	(cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; ${LN} ${TARGET_STR}-gdb.1 gdb.1)
-.endif
 #
 # PATH of libiberty.a differs between clang and gcc: (and conflicts to other toolchain)
 # Rename to avoid conflict to native and other toolchain
