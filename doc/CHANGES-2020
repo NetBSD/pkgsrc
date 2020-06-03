@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3353 2020/06/03 13:36:38 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3354 2020/06/03 13:47:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5310,3 +5310,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox68 to 68.9.0 [nia 2020-06-03]
 	Updated www/firefox68-l10n to 68.9.0 [nia 2020-06-03]
 	Updated emulators/dosbox-x to 0.83.2 [nia 2020-06-03]
+	Updated emulators/sameboy to 0.13 [nia 2020-06-03]
