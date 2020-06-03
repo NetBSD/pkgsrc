@@ -1,20 +1,20 @@
-$NetBSD: patch-builds_unix_unix-cc.in,v 1.2 2018/05/04 08:40:11 adam Exp $
+$NetBSD: patch-builds_unix_unix-cc.in,v 1.3 2020/06/03 08:40:21 adam Exp $
 
 Provide tag to libtool.
 Use CFLAGS when compiling executables.
 
---- builds/unix/unix-cc.in.orig	2018-04-22 09:41:36.000000000 +0000
+--- builds/unix/unix-cc.in.orig	2020-05-04 04:07:22.000000000 +0000
 +++ builds/unix/unix-cc.in
-@@ -88,7 +88,7 @@ ANSIFLAGS := @XX_ANSIFLAGS@
- # C compiler to use -- we use libtool!
+@@ -95,7 +95,7 @@ ANSIFLAGS := @XX_ANSIFLAGS@
+ # libtool call is always prepended.
  #
- CCraw := $(CC)
--CC    := $(LIBTOOL) --mode=compile $(CCraw)
-+CC    := $(LIBTOOL) --tag=CC --mode=compile $(CCraw)
+ CCraw       := $(CC)
+-override CC := $(LIBTOOL) --mode=compile $(CCraw)
++override CC := $(LIBTOOL) --tag=CC --mode=compile $(CCraw)
  
  # Resource compiler to use on Cygwin/MinGW, usually windres.
  #
-@@ -108,14 +108,14 @@ LIB_CLOCK_GETTIME := @LIB_CLOCK_GETTIME@
+@@ -115,14 +115,14 @@ LIB_CLOCK_GETTIME := @LIB_CLOCK_GETTIME@
  CCraw_build  := @CC_BUILD@	# native CC of building system
  E_BUILD      := @EXEEXT_BUILD@	# extension for executable on building system
  EXPORTS_LIST := $(OBJ_DIR)/ftexport.sym
