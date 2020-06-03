@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.162 2020/03/15 20:10:46 wiz Exp $
+$NetBSD: distinfo,v 1.163 2020/06/03 08:39:16 adam Exp $
 
-SHA1 (perl-5.30.2.tar.xz) = d82cdaa610a3e749e821fc77004b1b4bfd5ebd28
-RMD160 (perl-5.30.2.tar.xz) = 3396f046beb7cab923cab37fa80fdcb40af5139d
-SHA512 (perl-5.30.2.tar.xz) = b945c95f44a58b9cc920c926e23017c4270c0dc8daf0bf8169cd7c8f6b8f980f1780bee4fbd525df518edc50f08364ba65988cb17e72a1667f50226459b65087
-Size (perl-5.30.2.tar.xz) = 12373480 bytes
+SHA1 (perl-5.30.3.tar.xz) = 1003c6aa71d8966501038178459a9fa4e9aba747
+RMD160 (perl-5.30.3.tar.xz) = 7aaec213f6537a53abd8fd97bb96d91b681cdf1e
+SHA512 (perl-5.30.3.tar.xz) = 0ea62cf17532ee99217a218c39aa530472857c7a1982494f3a01693683062b4cdebe383a79f7b64452c713337b554ed5e0fd6eda018ea29e83c3538a13c24f3c
+Size (perl-5.30.3.tar.xz) = 12375128 bytes
 SHA1 (patch-Configure) = 6000aafeb993fd096c9b1327302b510aa0d386bb
 SHA1 (patch-Makefile.SH) = 56203aea57c429a94760f039a978463b8859b0a9
 SHA1 (patch-Safe.pm) = bfeefb82d4cfe991e3a9a90cd87b894c9f4cc337
