@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3138 2020/05/25 13:54:49 taca Exp $
+# $NetBSD: Makefile,v 1.3139 2020/06/03 16:37:25 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2484,7 +2484,6 @@ SUBDIR+=	py-pysha3
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pyte
 SUBDIR+=	py-pytemplate
-SUBDIR+=	py-python-slugify
 SUBDIR+=	py-pyutil
 SUBDIR+=	py-pyvex
 SUBDIR+=	py-queuelib
@@ -2523,6 +2522,7 @@ SUBDIR+=	py-setuptools_scm_git_archive
 SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-singledispatch
+SUBDIR+=	py-slugify
 SUBDIR+=	py-sortedcontainers
 SUBDIR+=	py-speaklater
 SUBDIR+=	py-stem
