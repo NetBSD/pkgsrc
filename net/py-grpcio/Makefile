@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/04/04 09:30:37 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/06/03 09:28:53 adam Exp $
 
-DISTNAME=	grpcio-1.28.1
+DISTNAME=	grpcio-1.29.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio/}
@@ -14,8 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.5.0:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
 
 USE_LANGUAGES+=	c99 c++11
 USE_TOOLS+=	gmake pkg-config
