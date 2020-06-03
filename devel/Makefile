@@ -609,6 +609,7 @@ SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
 SUBDIR+=	hugs-unix
 SUBDIR+=	hyperscan
+SUBDIR+=	icecc
 SUBDIR+=	idiff
 SUBDIR+=	idutils
 SUBDIR+=	imake

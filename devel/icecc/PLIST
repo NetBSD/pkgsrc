@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/icecc
+bin/icecc-create-env
+bin/icecc-test-env
+bin/icerun
+include/icecc/comm.h
+include/icecc/job.h
+include/icecc/logging.h
+lib/libicecc.la
+lib/pkgconfig/icecc.pc
+libexec/icecc/bin/c++
+libexec/icecc/bin/cc
+libexec/icecc/bin/clang
+libexec/icecc/bin/clang++
+libexec/icecc/bin/g++
+libexec/icecc/bin/gcc
+libexec/icecc/compilerwrapper
+libexec/icecc/icecc-create-env
+man/man1/icecc-create-env.1
+man/man1/icecc-scheduler.1
+man/man1/icecc.1
+man/man1/iceccd.1
+man/man1/icerun.1
+man/man7/icecream.7
+sbin/icecc-scheduler
+sbin/iceccd

@@ -325,6 +325,7 @@ SUBDIR+=	lf
 SUBDIR+=	libbaloo4
 SUBDIR+=	libburn
 SUBDIR+=	libcap
+SUBDIR+=	libcap-ng
 SUBDIR+=	libdevkit-gobject
 SUBDIR+=	libfm
 SUBDIR+=	libfm-extra
