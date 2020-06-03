@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2018/02/02 08:08:10 adam Exp $
+$NetBSD: distinfo,v 1.21 2020/06/03 15:27:44 adam Exp $
 
-SHA1 (django-reversion-2.0.13.tar.gz) = 6aeff1f2da50d8208739286567e5b9424a65302f
-RMD160 (django-reversion-2.0.13.tar.gz) = 393b732ef2fb6a33b1aee6c6faf864f0b091ab37
-SHA512 (django-reversion-2.0.13.tar.gz) = 77316c54404c2f4712f967ac8a0d6cc55c365dc435fbc1bd0ce39fad92dee8386c7cb93411e050ae06fdfbde56aae9752e0c5e76bd680042d61e696b9fa2ff2c
-Size (django-reversion-2.0.13.tar.gz) = 65238 bytes
+SHA1 (django-reversion-3.0.7.tar.gz) = b5f4d0fbad61099494be568bb387fbf4f8c72f33
+RMD160 (django-reversion-3.0.7.tar.gz) = 4376c81d1ef903aa07f550883a3721f43b896bc4
+SHA512 (django-reversion-3.0.7.tar.gz) = 8efe785bd71965248749cfcbd608e82a753533ec3826e230f7e2265f855c3bd297cc644076abbb401e28533799a357ce322b3f97e54c0633e62333757d4a188f
+Size (django-reversion-3.0.7.tar.gz) = 67504 bytes
