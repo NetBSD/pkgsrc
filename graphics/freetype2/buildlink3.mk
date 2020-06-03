@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2019/09/09 12:40:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2020/06/03 08:40:21 adam Exp $
 
 BUILDLINK_TREE+=	freetype2
 
@@ -20,7 +20,7 @@ CONFIGURE_ENV+=		FREETYPE_CONFIG=${FREETYPE_CONFIG:Q}
 pkgbase := freetype2
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.freetype2:Mpng)
+.if ${PKG_BUILD_OPTIONS.freetype2:Mpng}
 CHECK_BUILTIN.freetype2:=	yes
 .include "../../graphics/freetype2/builtin.mk"
 CHECK_BUILTIN.freetype2:=	no
