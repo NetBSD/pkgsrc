@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3356 2020/06/03 14:07:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3357 2020/06/03 14:21:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5313,3 +5313,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/sameboy to 0.13 [nia 2020-06-03]
 	Updated emulators/libretro-sameboy to 0.13 [nia 2020-06-03]
 	Updated devel/git to 2.27.0 [adam 2020-06-03]
+	Added www/py-httpcore version 0.9.1 [adam 2020-06-03]
+	Updated www/py-httpx to 0.13.3 [adam 2020-06-03]
