@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2020/05/04 10:22:31 nia Exp $
+$NetBSD: distinfo,v 1.9 2020/06/03 13:36:26 nia Exp $
 
-SHA1 (dosbox-x-0.83.1.tar.gz) = c74d74ba4c634077757a165d95288411c1e6d2f8
-RMD160 (dosbox-x-0.83.1.tar.gz) = 617115a4ed42f8c890d95aada58108f8c3cc5512
-SHA512 (dosbox-x-0.83.1.tar.gz) = 43482bbf33ec72f925525ec5fc6cad11f00f5a7dc385b3daaed4ba82f0c7ea372b9de3c83d7189a80a0157023c7e5e54148c1ae2c7ac36b3ff8a34c971e8df9e
-Size (dosbox-x-0.83.1.tar.gz) = 37051874 bytes
-SHA1 (patch-configure.ac) = 12028b528aa1f4b4d13a25c144954d9f69755e6b
+SHA1 (dosbox-x-0.83.2.tar.gz) = 45937131b9470fb57cb1023936a00e0c5cea9dee
+RMD160 (dosbox-x-0.83.2.tar.gz) = 027f0fd112e9ef6b25943e107170fbd714469245
+SHA512 (dosbox-x-0.83.2.tar.gz) = ea45de86d66cbe806a3b5c089ebe8307ad541c0f4830605010b2254541650045f87518305037d35da4b12de17bf82086daf67297560eab03d37e046ac63096bd
+Size (dosbox-x-0.83.2.tar.gz) = 41708385 bytes
+SHA1 (patch-configure.ac) = c2e25ae1532145ea43cb62694e906d17b2d7fc77
 SHA1 (patch-include_byteorder.h) = 86eccfbc2318ddc8d71a6de8723947a48d98a126
