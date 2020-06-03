@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/01/14 21:37:58 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/06/03 16:40:09 adam Exp $
 
-SHA1 (cookiecutter-1.7.0.tar.gz) = dbcc5b322a7aa268505c8fd0a0000b6726d87496
-RMD160 (cookiecutter-1.7.0.tar.gz) = 1c57b9ebf90dd89733b78709a71aaccd7c32b15d
-SHA512 (cookiecutter-1.7.0.tar.gz) = c57315251085ed55494d09564a43dd6348971f8b78e5755642cd64473a73b03c00a7c513f5dd05d098db9fd7a74aef90f115975386084f3df8abc08fd318922c
-Size (cookiecutter-1.7.0.tar.gz) = 148363 bytes
+SHA1 (cookiecutter-1.7.2.tar.gz) = dc7bb710f4205eeadde23a758e1123a937a36194
+RMD160 (cookiecutter-1.7.2.tar.gz) = 49f5289f60798c5fd1b30c108547e9e7789fa749
+SHA512 (cookiecutter-1.7.2.tar.gz) = 8fb6db75703a2c6276d275817b81c0e5d5f15226236e8c5442fbda6198aaec19c3fd68c030f79f6bca55258c0c248660b32d1344f7d6b06ecf5563b43474d877
+Size (cookiecutter-1.7.2.tar.gz) = 142970 bytes
