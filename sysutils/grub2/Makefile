@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/05/09 17:21:32 triaxx Exp $
+# $NetBSD: Makefile,v 1.24 2020/06/04 20:17:19 triaxx Exp $
 
 DISTNAME=		grub-2.04
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -16,8 +16,13 @@ CONFLICTS=		grub-[0-9]*
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
+SSP_SUPPORTED=		no
+FORTIFY_SUPPORTED=	no
+
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake flex bison gettext:run awk pkg-config
+
+.include "../../lang/python/tool.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
 
 GNU_CONFIGURE=		yes
@@ -27,9 +32,6 @@ CONFIGURE_ARGS+=	--disable-grub-emu-sdl
 CONFIGURE_ARGS+=	--disable-grub-emu-pci
 INFO_FILES=		yes
 USE_PKGLOCALEDIR=	yes
-
-SSP_SUPPORTED=		no
-FORTIFY_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
