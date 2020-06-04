@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/12/19 00:38:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.24.2.1 2020/06/04 08:55:59 bsiegert Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -114,6 +114,7 @@ share/drupal/misc/forum-icons.png
 share/drupal/misc/grippie.png
 share/drupal/misc/help.png
 share/drupal/misc/jquery-extend-3.4.0.js
+share/drupal/misc/jquery-html-prefilter-3.5.0-backport.js
 share/drupal/misc/jquery.ba-bbq.js
 share/drupal/misc/jquery.cookie.js
 share/drupal/misc/jquery.form.js
