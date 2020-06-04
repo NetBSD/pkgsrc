@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24.2.1 2020/05/06 11:19:15 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.24.2.2 2020/06/04 10:17:58 bsiegert Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -472,6 +472,7 @@ share/drupal/core/assets/vendor/jquery.ui/ui/widgets/spinner-min.js
 share/drupal/core/assets/vendor/jquery.ui/ui/widgets/tabs-min.js
 share/drupal/core/assets/vendor/jquery.ui/ui/widgets/tooltip-min.js
 share/drupal/core/assets/vendor/jquery/jquery-extend-3.4.0.js
+share/drupal/core/assets/vendor/jquery/jquery-htmlprefilter-3.5.0.js
 share/drupal/core/assets/vendor/jquery/jquery.js
 share/drupal/core/assets/vendor/jquery/jquery.min.js
 share/drupal/core/assets/vendor/jquery/jquery.min.map
@@ -6643,6 +6644,7 @@ share/drupal/core/modules/menu_link_content/src/Plugin/migrate/process/d6/LinkUr
 share/drupal/core/modules/menu_link_content/src/Plugin/migrate/process/d7/InternalUri.php
 share/drupal/core/modules/menu_link_content/src/Plugin/migrate/source/MenuLink.php
 share/drupal/core/modules/menu_link_content/src/Plugin/migrate/source/d6/MenuLinkTranslation.php
+share/drupal/core/modules/menu_link_content/tests/fixtures/update/drupal-8.menu-link-content-null-data-3056543.php
 share/drupal/core/modules/menu_link_content/tests/menu_link_content_dynamic_route/menu_link_content_dynamic_route.info.yml
 share/drupal/core/modules/menu_link_content/tests/menu_link_content_dynamic_route/menu_link_content_dynamic_route.routing.yml
 share/drupal/core/modules/menu_link_content/tests/menu_link_content_dynamic_route/src/Routes.php
@@ -9926,6 +9928,7 @@ share/drupal/core/modules/taxonomy/taxonomy.services.yml
 share/drupal/core/modules/taxonomy/taxonomy.tokens.inc
 share/drupal/core/modules/taxonomy/taxonomy.views.inc
 share/drupal/core/modules/taxonomy/templates/taxonomy-term.html.twig
+share/drupal/core/modules/taxonomy/tests/fixtures/update/drupal-8.taxonomy-term-null-data-3056543.php
 share/drupal/core/modules/taxonomy/tests/fixtures/update/drupal-8.views-taxonomy-term-publishing-status-2981887.php
 share/drupal/core/modules/taxonomy/tests/fixtures/update/views.view.test_taxonomy_term_view_with_content_translation_status.yml
 share/drupal/core/modules/taxonomy/tests/fixtures/update/views.view.test_taxonomy_term_view_without_content_translation_status.yml
