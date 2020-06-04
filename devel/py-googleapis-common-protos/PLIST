@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/16 14:16:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/04 06:20:07 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -126,6 +126,12 @@ ${PYSITELIB}/google/rpc/__init__.pyo
 ${PYSITELIB}/google/rpc/code_pb2.py
 ${PYSITELIB}/google/rpc/code_pb2.pyc
 ${PYSITELIB}/google/rpc/code_pb2.pyo
+${PYSITELIB}/google/rpc/context/__init__.py
+${PYSITELIB}/google/rpc/context/__init__.pyc
+${PYSITELIB}/google/rpc/context/__init__.pyo
+${PYSITELIB}/google/rpc/context/attribute_context_pb2.py
+${PYSITELIB}/google/rpc/context/attribute_context_pb2.pyc
+${PYSITELIB}/google/rpc/context/attribute_context_pb2.pyo
 ${PYSITELIB}/google/rpc/error_details_pb2.py
 ${PYSITELIB}/google/rpc/error_details_pb2.pyc
 ${PYSITELIB}/google/rpc/error_details_pb2.pyo
@@ -144,6 +150,9 @@ ${PYSITELIB}/google/type/color_pb2.pyo
 ${PYSITELIB}/google/type/date_pb2.py
 ${PYSITELIB}/google/type/date_pb2.pyc
 ${PYSITELIB}/google/type/date_pb2.pyo
+${PYSITELIB}/google/type/datetime_pb2.py
+${PYSITELIB}/google/type/datetime_pb2.pyc
+${PYSITELIB}/google/type/datetime_pb2.pyo
 ${PYSITELIB}/google/type/dayofweek_pb2.py
 ${PYSITELIB}/google/type/dayofweek_pb2.pyc
 ${PYSITELIB}/google/type/dayofweek_pb2.pyo
@@ -159,6 +168,9 @@ ${PYSITELIB}/google/type/latlng_pb2.pyo
 ${PYSITELIB}/google/type/money_pb2.py
 ${PYSITELIB}/google/type/money_pb2.pyc
 ${PYSITELIB}/google/type/money_pb2.pyo
+${PYSITELIB}/google/type/month_pb2.py
+${PYSITELIB}/google/type/month_pb2.pyc
+${PYSITELIB}/google/type/month_pb2.pyo
 ${PYSITELIB}/google/type/postal_address_pb2.py
 ${PYSITELIB}/google/type/postal_address_pb2.pyc
 ${PYSITELIB}/google/type/postal_address_pb2.pyo
