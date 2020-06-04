@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/12/19 22:25:06 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2020/06/04 17:56:27 leot Exp $
 
 DISTNAME=		wmii+ixp-3.9.2
 PKGNAME=		wmii-3.9.2
@@ -6,7 +6,7 @@ CATEGORIES=		wm
 MASTER_SITES=		http://dl.suckless.org/wmii/
 EXTRACT_SUFX=		.tbz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		rares.aioanei@gmail.com
 HOMEPAGE=		https://github.com/0intro/wmii
 COMMENT=		Modular and keyboard-friendly window manager
 LICENSE=		mit
