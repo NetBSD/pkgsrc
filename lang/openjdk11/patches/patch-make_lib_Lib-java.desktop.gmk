@@ -1,0 +1,17 @@
+$NetBSD: patch-make_lib_Lib-java.desktop.gmk,v 1.1 2020/06/04 01:10:38 ryoon Exp $
+
+* Enable ALSA audio support under NetBSD.
+
+--- make/lib/Lib-java.desktop.gmk.orig	2020-04-15 22:35:23.000000000 +0000
++++ make/lib/Lib-java.desktop.gmk
+@@ -67,10 +67,6 @@ ifneq ($(OPENJDK_TARGET_OS), aix)
+     LIBJSOUND_EXCLUDE_SRC_PATTERNS := bsd
+   endif
+ 
+-  ifeq ($(OPENJDK_TARGET_OS_ENV), bsd.netbsd)
+-    LIBJSOUND_EXCLUDE_SRC_PATTERNS := bsd
+-  endif
+-
+   $(eval $(call SetupJdkLibrary, BUILD_LIBJSOUND, \
+       NAME := jsound, \
+       EXCLUDE_SRC_PATTERNS := $(LIBJSOUND_EXCLUDE_SRC_PATTERNS), \
