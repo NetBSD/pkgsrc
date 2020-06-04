@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3369 2020/06/04 13:17:33 kleink Exp $
+$NetBSD: CHANGES-2020,v 1.3370 2020/06/04 19:45:45 gson Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5335,3 +5335,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/py-googlemaps to 4.4.1 [kleink 2020-06-04]
 	Updated net/dhcpcd to 9.1.1 [roy 2020-06-04]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.904 [kleink 2020-06-04]
+	Updated misc/py-anita to 2.4 [gson 2020-06-04]
