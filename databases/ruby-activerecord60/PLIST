@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/20 16:55:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2020/06/04 08:51:16 bsiegert Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/examples/performance.rb
 ${GEM_LIBDIR}/examples/simple.rb
 ${GEM_LIBDIR}/lib/active_record.rb
+${GEM_LIBDIR}/lib/active_record/advisory_lock_base.rb
 ${GEM_LIBDIR}/lib/active_record/aggregations.rb
 ${GEM_LIBDIR}/lib/active_record/association_relation.rb
 ${GEM_LIBDIR}/lib/active_record/associations.rb
