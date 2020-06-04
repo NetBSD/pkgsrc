@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/31 17:36:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/04 16:46:35 micha Exp $
 include/utf8proc.h
-lib/libutf8proc.so
-lib/libutf8proc.so.2
-lib/libutf8proc.so.2.3.2
+lib/libutf8proc.la
+lib/pkgconfig/libutf8proc.pc
