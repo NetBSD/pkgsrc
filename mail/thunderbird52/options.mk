@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/12/16 08:29:48 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2020/06/04 13:47:19 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird52
 
@@ -6,15 +6,14 @@ PKG_OPTIONS_REQUIRED_GROUPS=	gtk
 PKG_OPTIONS_GROUP.gtk=		gtk2 gtk3
 PKG_SUGGESTED_OPTIONS=		gtk3
 
-PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc gnome \
+PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc \
 			official-mozilla-branding pulseaudio \
 			mozilla-lightning
 PKG_SUGGESTED_OPTIONS+=	mozilla-lightning
 
-PLIST_VARS+=		branding nobranding debug gnome jemalloc
+PLIST_VARS+=		branding nobranding debug jemalloc
 
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa mozilla-jemalloc
-PKG_SUGGESTED_OPTIONS.*+=	pulseaudio
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio mozilla-jemalloc
 
 .include "../../mk/bsd.options.mk"
 
@@ -40,14 +39,6 @@ CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnome)
-.include "../../devel/libgnomeui/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-dbus --enable-gnomeui
-PLIST.gnome=		yes
-.else
-CONFIGURE_ARGS+=	--disable-dbus --disable-gnomeui
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/06/02 08:24:15 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/06/04 13:47:19 nia Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird${TB_VER:C/\..*$//}-${TB_VER}
-PKGREVISION=	10
+PKGREVISION=	11
 TB_VER=		52.9.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
@@ -24,6 +24,8 @@ CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 CONFIGURE_ARGS+=	--enable-application=mail
 # Disable WebRTC support for Thunderbird unconditionally.
 CONFIGURE_ARGS+=	--disable-webrtc
+CONFIGURE_ARGS+=	--disable-dbus
+CONFIGURE_ARGS+=	--disable-gnomeui
 
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/thunderbird
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/thunderbird-bin
