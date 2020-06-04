@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2020/05/09 00:55:44 tnn Exp $
+$NetBSD: distinfo,v 1.17 2020/06/04 01:10:38 ryoon Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
@@ -22,9 +22,11 @@ SHA1 (patch-make_autoconf_jdk-options.m4) = d0d9fbaf29cc521fa4b62b1ea2616dc8f3b0
 SHA1 (patch-make_autoconf_lib-bundled.m4) = 8720c3f674955e8a51b2ab7dba80c36d34ba8594
 SHA1 (patch-make_autoconf_lib-freetype.m4) = 3dbdfea4011dc69593ab302626b9ec4dfc7a7d54
 SHA1 (patch-make_autoconf_lib-x11.m4) = f609a726f2d795f1d05cc933df587d3440c09b9f
+SHA1 (patch-make_autoconf_libraries.m4) = 212cea17edcaf9f333bbf1f2f2b7220787c77d10
 SHA1 (patch-make_common_NativeCompilation.gmk) = fc97a952ba87efb450f59e87f19fb4c47558ae1d
 SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 9fd9f6ef4af0eece0b4ca0acbb44331566f17e07
 SHA1 (patch-make_lib_Awt2dLibraries.gmk) = ab77cfd0f07425b694688ffa98c2c661d1ac017d
+SHA1 (patch-make_lib_Lib-java.desktop.gmk) = db330b3e1820c3423a2334a3e88179c9a69ee342
 SHA1 (patch-src_hotspot_cpu_aarch64_vm__version__aarch64.cpp) = 70cd073fcc3e84e673228754dd0fb85ce5ae7102
 SHA1 (patch-src_hotspot_cpu_aarch64_vm__version__aarch64.hpp) = 042ae280b0988c945ed96a2c20e9f1cb356d8efe
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_bytes__bsd__aarch64.inline.hpp) = 4153d3a12ffc24de868b2fd97498dbdf7645e499
@@ -38,5 +40,6 @@ SHA1 (patch-src_java.base_bsd_native_libjava_ProcessHandleImpl__bsd.c) = fbc0aa6
 SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.c) = 39c7afb3c36fa9557d2a660c4b4068b5684c552f
 SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.h) = 121357cb76b4a96c06cc2bf670579e0b27f66fc1
 SHA1 (patch-src_java.base_unix_native_libjsig_jsig.c) = 82e3a8bad9ca18478cad85ada8544712ff117459
+SHA1 (patch-src_java.desktop_bsd_native_libjsound_PLATFORM__API__BsdOS__ALSA__PCM.c) = 3bec9153803ae023c655579ac08e39963c352880
 SHA1 (patch-src_java.desktop_share_native_libfontmanager_harfbuzz_hb-blob.cc) = 0a78e7e8db513ddc06a75f6e504f8ce6132b97ec
 SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = c27a058dbcc836fa5a9f979f193284a706a7c50b
