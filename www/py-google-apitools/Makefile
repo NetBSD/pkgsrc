@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/07/02 10:08:19 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/04 06:25:17 adam Exp $
 
-DISTNAME=	google-apitools-0.5.30
+DISTNAME=	google-apitools-0.5.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-apitools/}
