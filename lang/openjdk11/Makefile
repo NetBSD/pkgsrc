@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/05/29 10:57:14 abs Exp $
+# $NetBSD: Makefile,v 1.25 2020/06/04 01:10:38 ryoon Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	openjdk-jdk11u
@@ -165,8 +165,9 @@ do-install:
 	cd ${BUILDDIR}/images/jdk && pax -rwpp .		\
 	  ${DESTDIR}${JAVA_HOME}/.
 
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../audio/alsa-lib/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-alsa=${BUILDLINK_PREFIX.alsa-lib}
 .endif
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
