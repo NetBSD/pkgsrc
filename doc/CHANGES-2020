@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3365 2020/06/04 01:11:17 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3366 2020/06/04 06:25:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5330,3 +5330,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/gitea to 1.11.6 [jperkin 2020-06-03]
 	Updated devel/php-composer to 1.10.7 [tpaul 2020-06-03]
 	Updated lang/openjdk11 to 1.11.0.7.10nb3 [ryoon 2020-06-04]
+	Updated devel/py-googleapis-common-protos to 1.52.0 [adam 2020-06-04]
+	Updated www/py-google-apitools to 0.5.31 [adam 2020-06-04]
