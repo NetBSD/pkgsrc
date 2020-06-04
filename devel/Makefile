@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3139 2020/06/03 16:37:25 adam Exp $
+# $NetBSD: Makefile,v 1.3140 2020/06/04 08:56:12 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -684,6 +684,7 @@ SUBDIR+=	libappindicator
 SUBDIR+=	libarena
 SUBDIR+=	libargparse
 SUBDIR+=	libast
+SUBDIR+=	libatomic
 SUBDIR+=	libatomic_ops
 SUBDIR+=	libbegemot
 SUBDIR+=	libbinio
