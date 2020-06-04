@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3366 2020/06/04 06:25:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3367 2020/06/04 13:12:56 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5332,3 +5332,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/openjdk11 to 1.11.0.7.10nb3 [ryoon 2020-06-04]
 	Updated devel/py-googleapis-common-protos to 1.52.0 [adam 2020-06-04]
 	Updated www/py-google-apitools to 0.5.31 [adam 2020-06-04]
+	Updated geography/py-googlemaps to 4.4.1 [kleink 2020-06-04]
