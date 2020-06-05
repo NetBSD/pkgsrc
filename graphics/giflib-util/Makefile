@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/01/07 20:25:14 sevan Exp $
+# $NetBSD: Makefile,v 1.12 2020/06/05 12:49:07 jperkin Exp $
 
+PKGREVISION= 1
 .include "../../graphics/giflib/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-util-/}
