@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2020/05/28 19:30:45 nia Exp $
+$NetBSD: distinfo,v 1.28 2020/06/05 10:08:35 nia Exp $
 
 SHA1 (libao-1.2.2.tar.gz) = aa2a6ac0df63c702e46477ea5ce4a9b32e0d4306
 RMD160 (libao-1.2.2.tar.gz) = d65fa3dc31b591d22bb8a47c71a91615cc1919cf
 SHA512 (libao-1.2.2.tar.gz) = d2736d25b60862e7d7469611ce31b1df40a4366ab160e2ff1b46919ae91692d1596c8468e4f016303b306fc3ac1bddc7b727f535a362f403c3fe7c6532e9045a
 Size (libao-1.2.2.tar.gz) = 96134 bytes
 SHA1 (patch-src_plugins_alsa_ao__alsa.c) = 9047608f232c4e4bfd5e4b3fcac3831750b0eef3
-SHA1 (patch-src_plugins_sun_ao__sun.c) = b1e9b11a4b5211e69172cc3d6418ec8e35d014f2
+SHA1 (patch-src_plugins_sun_ao__sun.c) = 1c2e1429644aad84317a0223aaa033821193441f
