@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3379 2020/06/05 11:23:12 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3380 2020/06/05 11:42:00 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5350,3 +5350,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/terraform-provider-local to 1.4.0nb1 [adam 2020-06-05]
 	Updated archivers/libzip to 1.7.0 [wiz 2020-06-05]
 	Updated devel/spdlog to 1.6.1 [ryoon 2020-06-05]
+	Updated www/py-flask-sqlalchemy to 2.4.3 [kleink 2020-06-05]
