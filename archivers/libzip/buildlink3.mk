@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2020/05/22 10:55:43 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2020/06/05 10:44:48 wiz Exp $
 
 BUILDLINK_TREE+=	libzip
 
@@ -18,10 +18,10 @@ BUILDLINK_INCDIRS.libzip=	include lib/libzip/include
 pkgbase := libzip
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libzip:Mgnutls)
+.if ${PKG_BUILD_OPTIONS.libzip:Mgnutls}
 .include "../../security/gnutls/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.libzip:Mopenssl)
+.if ${PKG_BUILD_OPTIONS.libzip:Mopenssl}
 .include "../../security/openssl/buildlink3.mk"
 .endif
 .endif # LIBZIP_BUILDLINK3_MK
