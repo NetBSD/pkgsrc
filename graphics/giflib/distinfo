@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2020/03/19 23:58:33 joerg Exp $
+$NetBSD: distinfo,v 1.23 2020/06/05 12:15:16 jperkin Exp $
 
 SHA1 (giflib-5.2.1.tar.gz) = c3f774dcbdf26afded7788979c8081d33c6426dc
 RMD160 (giflib-5.2.1.tar.gz) = bc4be3ddaef877e4fd546b1240fe94dec8ef3e27
 SHA512 (giflib-5.2.1.tar.gz) = 4550e53c21cb1191a4581e363fc9d0610da53f7898ca8320f0d3ef6711e76bdda2609c2df15dc94c45e28bff8de441f1227ec2da7ea827cb3c0405af4faa4736
 Size (giflib-5.2.1.tar.gz) = 444187 bytes
-SHA1 (patch-Makefile) = 056d12c235600ea3e3f29c1707ecac904dc0e049
+SHA1 (patch-Makefile) = fcc937f5d0aebc9fd36895322f1b9518a775635e
