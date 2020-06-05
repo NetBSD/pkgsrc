@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2020/06/02 08:24:27 adam Exp $
+# $NetBSD: Makefile,v 1.112 2020/06/05 03:52:23 ryoon Exp $
 
 DISTNAME=	mpv-0.32.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,6 +24,7 @@ WAF_REPLACE_EXECUTABLE=	yes
 WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 WAF_CONFIGURE_ARGS+=	--enable-dvdnav
 WAF_CONFIGURE_ARGS+=	--disable-egl-x11
+WAF_CONFIGURE_ARGS+=	--enable-libmpv-shared
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -32,6 +33,8 @@ USE_TOOLS+=	perl pkg-config
 MAKE_DIRS=		${PKG_SYSCONFDIR}/mpv
 INSTALLATION_DIRS=	share/examples/mpv
 CONF_FILES+=		share/examples/mpv/encoding-profiles.conf ${PKG_SYSCONFDIR}/mpv/encoding-profiles.conf
+
+PKGCONFIG_OVERRIDE+=	libmpv/mpv.pc.in
 
 SUBST_CLASSES+=		audio
 SUBST_SED.audio+=	-e "s,/dev/dsp,${DEVOSSAUDIO},"
