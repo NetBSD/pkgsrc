@@ -1,5 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2020/01/26 21:28:11 leot Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/06/05 03:52:23 ryoon Exp $
 bin/mpv
+include/mpv/client.h
+include/mpv/opengl_cb.h
+include/mpv/qthelper.hpp
+include/mpv/render.h
+include/mpv/render_gl.h
+include/mpv/stream_cb.h
+lib/libmpv.so
+lib/libmpv.so.1
+lib/libmpv.so.1.107.0
+lib/pkgconfig/mpv.pc
 man/man1/mpv.1
 share/applications/mpv.desktop
 share/bash-completion/completions/mpv
