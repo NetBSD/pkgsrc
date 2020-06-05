@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3384 2020/06/05 15:53:02 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.3385 2020/06/05 17:06:41 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5355,3 +5355,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/minitube version 3.4 [ryoon 2020-06-05]
 	Added textproc/dwdiff version 2.1.2 [ryoon 2020-06-05]
 	Updated net/openconnect to 8.10 [bacon 2020-06-05]
+	Updated devel/smake to 1.3nb11 [micha 2020-06-05]
