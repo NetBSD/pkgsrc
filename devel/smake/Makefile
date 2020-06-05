@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/05/11 13:54:31 micha Exp $
+# $NetBSD: Makefile,v 1.9 2020/06/05 16:48:16 micha Exp $
 
-DISTNAME=	schily-2020-05-11
+DISTNAME=	schily-2020-05-25
 PKGNAME=	smake-1.3
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
