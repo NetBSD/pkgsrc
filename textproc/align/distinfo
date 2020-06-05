@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/05 22:08:49 sjmulder Exp $
+
+SHA1 (align-1.1.tar.gz) = 7cbe56904613df21c8d3c481370bb71a9a58245a
+RMD160 (align-1.1.tar.gz) = db6ba646d89d869c0f8577813d5429680361cf88
+SHA512 (align-1.1.tar.gz) = d90319831904a50fe2c0cf93ac370bfd1a688d6d09a2c788b6c8e84bc876a3051e60d6dd205f7e60cd6cba2949a6717f50e57e36c3a25038071883491153bf70
+Size (align-1.1.tar.gz) = 3248 bytes
