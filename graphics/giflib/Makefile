@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2020/04/25 11:27:35 js Exp $
+# $NetBSD: Makefile,v 1.55 2020/06/05 12:15:16 jperkin Exp $
 
 .include "Makefile.common"
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	GIF image format library
 
@@ -11,8 +11,8 @@ CONFLICTS+=	libungif-[0-9]*
 # clang: error: no such file or directory: 'egif_lib.o'
 MAKE_JOBS_SAFE=		no
 
-INSTALL_TARGET= 	install-include
-INSTALL_TARGET+= 	install-lib
+INSTALL_TARGET=		install-include
+INSTALL_TARGET+=	install-lib
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -20,7 +20,7 @@ INSTALL_TARGET+= 	install-lib
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-.  for lib in libgif.7.2.0.dylib libgifutil.dylib
+.  for lib in libgif.7.2.0.dylib
 	install_name_tool -id ${PREFIX}/lib/${lib} ${DESTDIR}${PREFIX}/lib/${lib}
 .  endfor
 .endif
