@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.82 2020/06/02 06:10:09 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.83 2020/06/05 17:05:22 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -1215,57 +1215,6 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 
 	  <para>See <xref linkend="print-PLIST"/> for more
 	  information on this target.</para>
-	</listitem>
-      </varlistentry>
-
-      <varlistentry>
-	<!-- TODO: old bulk build? --> 
-	<term>bulk-package</term>
-
-	<listitem>
-	  <para>Used to do bulk builds. If an appropriate binary
-	  package already exists, no action is taken. If not, this
-	  target will compile, install and package it (and its
-	  depends, if <varname>PKG_DEPENDS</varname> is set
-	  properly. See <xref linkend="bulk"/>).
-	  After creating the binary package, the sources, the
-	  just-installed package and its required packages are
-	  removed, preserving free disk space.</para>
-
-	  <para><emphasis>Beware that this target may deinstall
-	  all packages installed on a system!</emphasis></para>
-	</listitem>
-      </varlistentry>
-
-      <varlistentry>
-	<term>bulk-install</term>
-
-	<listitem>
-	  <para>Used during bulk-installs to install required
-	  packages. If an up-to-date binary package is available,
-	  it will be installed via &man.pkg.add.1;. If not,
-	  <command>make bulk-package</command> will be executed,
-	  but the installed binary won't be removed.</para>
-
-	  <para>A binary package is considered
-	  <quote>up-to-date</quote> to be installed via
-	  &man.pkg.add.1; if:</para>
-
-	  <itemizedlist>
-	    <listitem>
-	      <para>None of the package's files
-	      (<filename>Makefile</filename>, ...) were modified
-	      since it was built.</para>
-	    </listitem>
-
-	    <listitem>
-	      <para>None of the package's required (binary)
-	      packages were modified since it was built.</para>
-	    </listitem>
-	  </itemizedlist>
-
-	  <para><emphasis>Beware that this target may deinstall
-	  all packages installed on a system!</emphasis></para>
 	</listitem>
       </varlistentry>
     </variablelist>
