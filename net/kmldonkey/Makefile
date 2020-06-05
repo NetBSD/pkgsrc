@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2020/06/02 08:24:32 adam Exp $
+# $NetBSD: Makefile,v 1.59 2020/06/05 12:49:14 jperkin Exp $
 #
 
 DISTNAME=	kmldonkey-2.0.2-kde4.4.0
 PKGNAME=	${DISTNAME:S/-kde/./}
-PKGREVISION=	49
+PKGREVISION=	50
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_KDE:=4.4.0/src/extragear/}
 EXTRACT_SUFX=	.tar.bz2

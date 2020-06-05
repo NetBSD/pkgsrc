@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2019/11/02 22:38:04 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/06/05 12:49:09 jperkin Exp $
 
 DISTNAME=	spca5xx-20060402
 PKGNAME=	spcaview-0.6b
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://mxhaard.free.fr/spca50x/Download/oldrelease/
 
