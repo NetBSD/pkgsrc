@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/09/30 19:12:48 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/05 12:49:06 jperkin Exp $
 
 DISTNAME=	love-0.8.0-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love08/}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://bitbucket.org/rude/love/downloads/
 

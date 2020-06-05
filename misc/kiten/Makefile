@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2020/06/02 08:24:20 adam Exp $
+# $NetBSD: Makefile,v 1.49 2020/06/05 12:49:11 jperkin Exp $
 
 DISTNAME=	kiten-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kiten/
