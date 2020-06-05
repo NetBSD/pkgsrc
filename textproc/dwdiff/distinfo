@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/05 12:43:53 ryoon Exp $
+
+SHA1 (dwdiff-2.1.2.tar.bz2) = f44d63d95e4df7e8acfeb57473552c0c15ca5a3b
+RMD160 (dwdiff-2.1.2.tar.bz2) = 4fdb32536a86a4c08c5a01c1f83b62ad62bce091
+SHA512 (dwdiff-2.1.2.tar.bz2) = e4897ec3990261ddadf1fd4287902dd74c8350d11448714be8ea4b7808fc7d419ca2fd7fe65f347f46fdb1090d2d116c180a53fde3ff095027765f40acaa1c91
+Size (dwdiff-2.1.2.tar.bz2) = 79282 bytes
+SHA1 (patch-config.pkg) = d65cabaf94ebd0283ccce54b7e982e2b3395b59d
