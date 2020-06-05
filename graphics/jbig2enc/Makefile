@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/03/06 13:00:02 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/05 12:49:07 jperkin Exp $
 
 DISTNAME=	jbig2enc-0.29pre
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agl/}
 GITHUB_TAG=	0693dcd027f333d8499a4717b6452de08b6834ed

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2020/04/12 19:44:55 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2020/06/05 12:49:15 jperkin Exp $
 
 DISTNAME=	FSViewer.app-0.2.5
 PKGNAME=	FSViewer-0.2.5
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	sysutils x11 windowmaker
 #MASTER_SITES=	#http://www.bayernline.de/~gscholz/linux/fsviewer/
 
