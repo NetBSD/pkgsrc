@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2020/03/01 11:51:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.65 2020/06/05 12:17:10 jperkin Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -36,9 +36,6 @@ USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 
 PTHREAD_OPTS+=		require
-
-# For GifQuantizeBuffer of graphics/giflib
-BUILDLINK_TRANSFORM+=		l:gif:gif:gifutil
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-smb
