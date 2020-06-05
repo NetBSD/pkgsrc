@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1143 2020/06/05 12:45:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.1144 2020/06/05 22:09:29 sjmulder Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -43,6 +43,7 @@ SUBDIR+=	R-yaml
 SUBDIR+=	WordNet
 SUBDIR+=	aha
 SUBDIR+=	aiksaurus
+SUBDIR+=	align
 SUBDIR+=	ansifilter
 SUBDIR+=	antiword
 SUBDIR+=	artha
