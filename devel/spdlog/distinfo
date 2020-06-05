@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/02/05 13:32:27 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2020/06/05 11:22:44 ryoon Exp $
 
-SHA1 (spdlog-1.5.0.tar.gz) = e7aa5db40beeac011590d879931ff4f1382d507e
-RMD160 (spdlog-1.5.0.tar.gz) = aff8f2931396d1ef3ed9956cfe1ced774647a663
-SHA512 (spdlog-1.5.0.tar.gz) = 78991c943dd95af563c4b29545b9b5d635caf1af5031262dde734ecf70c0b4ae866d954ee77b050f9f0cc089a3bc57ee9583895e51cb00dd1cc6c10ff905ca34
-Size (spdlog-1.5.0.tar.gz) = 270416 bytes
+SHA1 (spdlog-1.6.1.tar.gz) = dad49a321f313dd6d9d09b64694f01d76af13432
+RMD160 (spdlog-1.6.1.tar.gz) = 5c218c33a8b295969b4fc771d4a3632c341509ef
+SHA512 (spdlog-1.6.1.tar.gz) = 1e15e7710744212240d79897af8c3bde14fe3b745a1377643d18dc0038f18fc7582236ff21836d3eae2c75cf1f4820ca4c642c5c3f63f9ae138289aa4d00e22e
+Size (spdlog-1.6.1.tar.gz) = 285531 bytes
