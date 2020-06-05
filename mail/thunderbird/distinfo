@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.227 2020/05/27 11:40:29 ryoon Exp $
+$NetBSD: distinfo,v 1.228 2020/06/05 03:57:58 ryoon Exp $
 
-SHA1 (thunderbird-68.8.1.source.tar.xz) = c7cb4f60e7f5e33fd348a9c20d7fd0e2f666d19b
-RMD160 (thunderbird-68.8.1.source.tar.xz) = 39860f273b236eab7fc22e1e7d050d2b2dfe0286
-SHA512 (thunderbird-68.8.1.source.tar.xz) = 079ab64aa9c7cbb922076bb129082d1de942fc76dad26eaf1348c963268cea830faf7414b115bd8f50f95df6383c1ddbec5cb2c9c8b8f7e57cddd1cb101783bf
-Size (thunderbird-68.8.1.source.tar.xz) = 337093664 bytes
+SHA1 (thunderbird-68.9.0.source.tar.xz) = aeee38c1a36b07f8e85af1c7371ebb539083ab4a
+RMD160 (thunderbird-68.9.0.source.tar.xz) = f3467224d1225ec98085d38a4d38b798e3cebd0b
+SHA512 (thunderbird-68.9.0.source.tar.xz) = 891472c95ba6ff46061131504e89010da512a84b0e1dea0482e603fd4c87f11e099280a245c7dd9fc9320c48229c26602565c089d86f1a1f4271b29b6fc606f0
+Size (thunderbird-68.9.0.source.tar.xz) = 332239044 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = d3ade5620370965e397ba494ff0495aeef5af0d0
 SHA1 (patch-build_moz.configure_old.configure) = edd810f8d607697898ae315453719fe6c8c09bcc
+SHA1 (patch-build_moz.configure_rust.configure) = b57a9b1451dc426d75774f73d7c05fc98fe6e317
 SHA1 (patch-comm_mail_installer_package-manifest.in) = 14e8977f690e579a8caf73326248323615e04803
 SHA1 (patch-comm_mail_installer_removed-files.in) = f360ccac70a7afaee65e4617c015535084eee035
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = aa9664c1ba850e7c45b654dcf5d7d591d4994a86
