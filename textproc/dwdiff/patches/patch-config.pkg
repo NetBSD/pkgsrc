@@ -1,0 +1,17 @@
+$NetBSD: patch-config.pkg,v 1.1 2020/06/05 12:43:53 ryoon Exp $
+
+* Fix libintl detection during configure.
+
+--- config.pkg.orig	2018-12-10 18:25:15.000000000 +0000
++++ config.pkg
+@@ -15,8 +15,8 @@ EXTENSIONS="c verbose_compile gettext"
+ 
+ SWITCHES="+unicode +dwfilter"
+ 
+-COMPILERULE='$(CC) $(CFLAGS) $(GETTEXTFLAGS) $(ICUFLAGS) -c -o $@ $<'
+-LINKRULE='$(CC) $(CFLAGS) $(LDFLAGS) -o .config .config.o $(LDLIBS) $(GETTEXTLIBS) $(ICULIBS)'
++COMPILERULE='$(CC) $(CFLAGS) $(GETTEXTFLAGS) $(ICUFLAGS) $(TESTLIBS) -c -o $@ $<'
++LINKRULE='$(CC) $(CFLAGS) $(LDFLAGS) -o .config .config.o $(LDLIBS) $(GETTEXTLIBS) $(ICULIBS) $(TESTLIBS)'
+ 
+ DEFAULT_LINGUAS="de es fr nl"
+ [ -f config.pkg.langpack ] && . config.pkg.langpack
