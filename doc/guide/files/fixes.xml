@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.155 2020/04/29 23:48:44 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.156 2020/06/05 07:34:17 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -490,7 +490,7 @@ CONFLICTS=      libXaw3d-[0-9]*
     Users may also waste time building a package and its dependencies
     only to find out at the end that it conflicts with another package
     they have installed.</para>
- 
+
     <para>To avoid these issues <varname>CONFLICTS</varname> entries
     should be added in all cases where it is known that packages conflict
     with each other.  These <varname>CONFLICTS</varname> entries are
@@ -658,95 +658,273 @@ DISTNAME=       foo-17.43
     changes.</para>
   </sect2>
 
-  <sect2 id="fixes.subst">
-    <title>Substituting variable text in the package files (the SUBST framework)</title>
+<sect2 id="fixes.subst">
+<title>Substituting variable text in the package files (the SUBST framework)</title>
 
-    <para>When you want to replace the same text in multiple files
-    or when the replacement text varies, patches alone cannot help.
-    This is where the SUBST framework comes in. It provides an
-    easy-to-use interface for replacing text in files.
-    It just needs the following information:</para>
+<para>When you want to replace the same text in multiple files, or
+multiple times in the same file, it is cumbersome to maintain a patch
+file for this. This is where the SUBST framework steps in. It provides an
+easy-to-use interface for replacing text in files. It just needs the
+following information:</para>
 
 <itemizedlist>
 
-<listitem><para><emphasis>When</emphasis> should the replacement
+<listitem><para>In which phase of the package build cycle should the
+replacement happen?</para></listitem>
+
+<listitem><para>In which files should the replacement
 happen?</para></listitem>
 
-<listitem><para><emphasis>Where</emphasis> should the replacement happen,
-i.e. in which files?</para></listitem>
-
-<listitem><para><emphasis>Which</emphasis> text should be
-replaced with what?</para></listitem>
+<listitem><para>Which text should be replaced with
+what?</para></listitem>
 
 </itemizedlist>
 
 <para>This information is encoded in a block of <varname>SUBST</varname>
-variables, like in this example:</para>
+variables. A minimal example is:</para>
 
 <programlisting>
-SUBST_CLASSES+=                 fix-paths
-SUBST_STAGE.fix-paths=          pre-configure
-SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
-SUBST_FILES.fix-paths=          src/*.c
-SUBST_FILES.fix-paths+=         scripts/*.sh
-SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
-SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
+SUBST_CLASSES+=         paths
+SUBST_STAGE.paths=      pre-configure
+SUBST_FILES.paths=      src/*.c
+SUBST_SED.paths=        -e 's,/usr/local,${PREFIX},g'
 </programlisting>
 
-    <para><varname>SUBST_CLASSES</varname> is a list of identifiers
-    that are used to identify the different SUBST blocks that are
-    defined. The SUBST framework is heavily used by pkgsrc, so it is
-    important to always use the <literal>+=</literal> operator with
-    this variable. Otherwise some substitutions may be skipped.</para>
+<para>Translated into English, it means: In the pre-configure stage (that
+is, after applying the patches from the patches/ directory and before
+running the configure script and the portability check), replace the text
+<literal>/usr/local</literal> with the content of the variable
+<varname>PREFIX</varname>.</para>
 
-    <para>The remaining variables of each SUBST block are
-    parameterized with the identifier from the first line
-    (<literal>fix-paths</literal> in this case.) They can be seen as
-    parameters to a function call.</para>
+<para>Each SUBST block starts by appending an identifier to
+<varname>SUBST_CLASSES</varname> (note the <literal>+=</literal>). This
+identifier can be chosen freely by the package. If there should ever be
+duplicate identifiers, the pkgsrc infrastructure will catch this and fail
+early, so don't worry about name collisions.</para>
 
-    <para><varname>SUBST_STAGE.*</varname> specifies the stage at
-    which the replacement will take place. All combinations of
-    <literal>pre-</literal>, <literal>do-</literal> and
-    <literal>post-</literal> together with a phase name are
-    possible, though only few are actually used. Most commonly used
-    are <literal>post-patch</literal> and
-    <literal>pre-configure</literal>. Of these two,
-    <literal>pre-configure</literal> should be preferred because
-    then it is possible to run <command>bmake patch</command> and
-    have the state after applying the patches but before making any
-    other changes. This is especially useful when you are debugging
-    a package in order to create new patches for it. Similarly,
-    <literal>post-build</literal> is preferred over
-    <literal>pre-install</literal>, because the install phase should
-    generally be kept as simple as possible. When you use
-    <literal>post-build</literal>, you have the same files in the
-    working directory that will be installed later, so you can check
-    if the substitution has succeeded.</para>
+<para>Except for <varname>SUBST_CLASSES</varname>, all variables in a
+SUBST block are parameterized using this identifier. In the remainder of
+this section, these parameterized variables are written as
+<varname>SUBST_STAGE.*</varname>.</para>
 
-    <para><varname>SUBST_MESSAGE.*</varname> is an optional text
-    that is printed just before the substitution is done.</para>
+<programlisting>
+SUBST_CLASSES+=         paths
+SUBST_STAGE.paths=      pre-configure
+SUBST_MESSAGE.paths=    Fixing absolute paths.
+SUBST_FILES.paths=      src/*.c
+SUBST_FILES.paths+=     scripts/*.sh
+SUBST_SED.paths=        -e 's,"/usr/local,"${PREFIX},g'
+SUBST_SED.paths+=       -e 's,"/var/log,"${VARBASE}/log,g'
+SUBST_VARS.paths=       LOCALBASE PREFIX PKGVERSION
+</programlisting>
 
-    <para><varname>SUBST_FILES.*</varname> is the list of shell
-    globbing patterns that specifies the files in which the
-    substitution will take place. The patterns are interpreted
-    relatively to the <varname>WRKSRC</varname> directory.</para>
+<para>To get a complete picture about the SUBST substitutions, run
+<command>bmake show-all-subst</command>. If something doesn't work as
+expected, run pkglint on the package, which detects several typical
+mistakes surrounding the SUBST blocks. For any questions that might
+remain after this, have a look at
+<filename>mk/subst.mk</filename>.</para>
 
-    <para><varname>SUBST_SED.*</varname> is a list of arguments to
-    &man.sed.1; that specify the actual substitution. Every sed
-    command should be prefixed with <literal>-e</literal>, so that
-    all SUBST blocks look uniform.</para>
+<sect3 id="fixes.subst.when">
+<title>Choosing the time where the substitutions happen</title>
 
-    <para><varname>SUBST_VARS.*</varname> is a list of variable names.
-    For each of these variables, the text <literal>@VAR@</literal> is
-    replaced with the value of the variable
-    <varname>VAR</varname>.</para>
+<para>The <varname>SUBST_STAGE.*</varname> is one of
+{pre,do,post}-{extract,patch,configure,build,test,install}. Of these,
+<literal>pre-configure</literal> is used most often, by far. The most
+popular stages are, in chronological order:</para>
 
-    <para>There are some more variables, but they are so seldomly
-    used that they are only documented in the
-    <filename>mk/subst.mk</filename> file.</para>
+<variablelist>
 
-  </sect2>
+<varlistentry><term><literal>post-extract</literal></term>
+<listitem><para>The substitutions are applied immediately after the
+distfiles are extracted. Running <command>bmake extract</command> on the
+package will leave no traces of the original files.</para>
+
+<para>When the substitution applies to files for which there is also a
+patch in the <filename>patches/</filename> directory, this means that the
+patches will be computed based on the result of the substitution. When
+these patches are sent to the upstream maintainer later, to be fixed in
+the upstream package, these patches may no longer match what the upstream
+author is used to. Because of this, <literal>pre-configure</literal> is
+often a better choice.</para></listitem></varlistentry>
+
+<varlistentry><term><literal>pre-configure</literal></term>
+<listitem><para>The substitutions are applied after the patches from the
+<filename>patches/</filename> directory. This makes it possible to run
+<command>bmake patch</command> on the package, after which the patches
+can be edited using the tools pkgvi and mkpatches from the <filename
+role="pkg">pkgtools/pkgdiff</filename> package.</para>
+
+<para>When updating the patches, it is helpful to explicitly separate the
+<command>bmake patch</command> from the <command>bmake
+configure</command>, and to only edit the patches between these commands.
+Otherwise the substitutions from the SUBST block will end up in the patch
+file. When this happens in really obvious ways, pkglint will complain
+about patches that contain a hard-coded <literal>/usr/pkg</literal>
+instead of the correct and intended <literal>@PREFIX@</literal>, but it
+can only detect these really obvious
+cases.</para></listitem></varlistentry>
+
+<varlistentry><term><literal>do-configure</literal></term>
+<listitem><para>This stage should only be used if the package defines a
+<literal>pre-configure</literal> action itself, and the substitution must
+happen after that. Typical examples are packages that use the
+<literal>pre-configure</literal> stage to regenerate the GNU configure
+script from
+<filename>configure.ac</filename>.</para></listitem></varlistentry>
+
+<varlistentry><term><literal>post-configure</literal></term>
+<listitem><para>This stage is used to fix up any mistakes by the
+configure stage.</para></listitem></varlistentry>
+
+<varlistentry><term><literal>pre-build</literal></term>
+<listitem><para>This stage should only be used for substitutions that are
+clearly related to building the package, not for fixing the
+configuration. Substitutions for pathnames (such as replacing
+<filename>/usr/local</filename> with <literal>${PREFIX}</literal>) or
+user names (such as replacing <literal>@MY_USER@</literal> with the
+actual username) belong in pre-configure or post-configure
+instead.</para></listitem></varlistentry>
+
+<varlistentry><term><literal>post-build</literal></term>
+<listitem><para>Just as with pre-build, this stage should only be used
+for substitutions that are clearly related to building the package, not
+for fixing the configuration. Substitutions for pathnames (such as
+replacing <filename>/usr/local</filename> with
+<literal>${PREFIX}</literal>) or user names (such as replacing
+<literal>@MY_USER@</literal> with the actual username) belong in
+pre-configure or post-configure instead.</para>
+
+<para>A typical use is to update pkg-config files to include the rpath
+compiler options.</para></listitem></varlistentry>
+
+<varlistentry><term><literal>pre-install</literal></term>
+<listitem><para>In general, the install phase should be as simple as
+possible. As with the pre-build and post-build stages, it should not be
+used to fix pathnames or user names, these belong in pre-configure
+instead. There are only few legitimate use cases for applying
+substitutions in this stage.</para></listitem></varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="fixes.subst.where">
+<title>Choosing the time where the substitutions happen</title>
+
+<para>The <varname>SUBST_FILES.*</varname> variable contains a list of
+filename patterns. These patterns are relative to
+<varname>WRKSRC</varname> since that is where most substitutions happen.
+A typical example is:</para>
+
+<programlisting>
+SUBST_FILES.path=       Makefile */Makefile */*/Makefile *.[ch]
+</programlisting>
+
+
+<para>The above patterns, especially the last, are quite broad. The SUBST
+implementation checks that each filename pattern that is mentioned here
+has an effect. For example, if none of the
+<filename>*/*/Makefile</filename> files contains the patterns to be found
+and substituted, that filename pattern is redundant and should be left
+out. If the text to be substituted occurs in some of the files from a
+single pattern, but not in all of them, that is totally ok, and the SUBST
+framework will only print an INFO message for those files.</para>
+
+<para>If there is a good reason for having redundant filename patterns,
+set <varname>SUBST_NOOP_OK.path=yes</varname> in the above
+example.</para>
+
+<para>Another popular way of choosing the files for the substitutions is
+via a shell command, like this:</para>
+
+<programlisting>
+C_FILES_CMD=            cd ${WRKSRC} &amp;&amp; ${FIND} -name '*.c'
+SUBST_FILES.path=       ${C_FILES_CMD:sh}
+</programlisting>
+
+<para>The variable name <varname>C_FILES_CMD</varname> in this example is
+freely chosen and independent of the SUBST framework.</para>
+
+<para>In this variant, the <varname>SUBST_FILES.*</varname> variable
+lists each file individually. Thereby chances are higher that there are
+filename patterns in which no substitution happens. Since the SUBST
+framework cannot know whether the filename patterns in
+<varname>SUBST_FILES.*</varname> have been explicitly listed in the
+Makefile (where any redundant filename pattern would be suspicious) or
+been generated by a shell command (in which redundant filename patterns
+are more likely and to be expected), it will complain about these
+redundant filename patterns. Therefore, SUBST blocks that use a shell
+command to generate the list of filename patterns often need to set
+<varname>SUBST_NOOP_OK.*</varname> to <literal>yes</literal>.</para>
+
+</sect3>
+
+<sect3 id="fixes.subst.what">
+<title>Choosing what to substitute</title>
+
+<para>In most cases, the substitutions are given using one or more
+&man.sed.1; commands, like this:</para>
+
+<programlisting>
+SUBST_SED.path=         -e 's|/usr/local|${PREFIX}|g'
+</programlisting>
+
+<para>Each of the sed commands needs to be preceded by the
+<literal>-e</literal> option and should be specified on a line of its
+own, to avoid hiding short sed commands at the end of a line.</para>
+
+<para>Since the sed commands often contain shell metacharacters as the
+separator (the <literal>|</literal> in the above example), it is common
+to enclose them in single quotes.</para>
+
+<para>A common substitution is to replace placeholders of the form
+<literal>@VARNAME@</literal> with their pkgsrc counterpart variable
+<literal>${VARNAME}</literal>. A typical example is:</para>
+
+<programlisting>
+SUBST_VARS.path=        PREFIX
+</programlisting>
+
+<para>This type of substitutions is typically done by the GNU configure
+scripts, but in some cases these need to be overridden. The same pattern
+is also used when a package defines patches that replace previously
+hard-coded paths like <literal>/usr/local</literal> with a
+<literal>@PREFIX@</literal> placeholder first, which then gets
+substituted by the actual <literal>${PREFIX}</literal> in the
+pre-configure stage. In many of these cases, it works equally well to
+just use the SUBST framework to directly replace
+<literal>/usr/local</literal> with <literal>${PREFIX}</literal>, thereby
+omitting the intermediate patch file.</para>
+
+<para>If the above is not flexible enough, it is possible to not use sed
+at all for the substitution but to specify an entirely different command,
+like this:</para>
+
+<programlisting>
+SUBST_FILTER_CMD.path=  LC_ALL=C ${TR} -d '\r'
+</programlisting>
+
+<para>This is used for the few remaining packages in which the
+distributed files use Windows-style line endings that need to be
+converted to UNIX-style line endings.</para>
+
+</sect3>
+
+<sect3 id="fixes.subst.other">
+<title>Other SUBST variables</title>
+
+<para>When a SUBST block is applied during a package build, a message is
+logged. The default message is fine for most purposes but can be
+overridden by setting <literal>SUBST_MESSAGE.*</literal> to an individual
+message.</para>
+
+</sect3>
+
+</sect2>
+
 </sect1>
+
 <sect1 id="fixes.fetch">
   <title>The <emphasis>fetch</emphasis> phase</title>
 
