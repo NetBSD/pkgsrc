@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2019/10/04 13:32:05 micha Exp $
+# $NetBSD: Makefile.common,v 1.4 2020/06/05 16:48:16 micha Exp $
 # used by archivers/star/Makefile
 # used by devel/smake/Makefile
 # used by shells/bosh/Makefile
@@ -56,3 +56,36 @@ pre-configure:
 			printf "(created)\n" ;				\
 		fi;							\
 	done
+
+# Man pages with documentation of file formats should go to section 4 on
+# SysV based systems. All supported systems that are treated by schilytools
+# with "MANSTYLE= sysv" in the RULES/os-${OPSYS}.def" files must be caught
+# by this check (IRIX and OSF/1 are treated with BSD style by schilytools).
+PLIST_VARS+=	bsd sysv
+.if ${OPSYS} == "AIX" ||	\
+	${OPSYS} == "HPUX" ||	\
+	${OPSYS} == "SunOS"
+PLIST.sysv=	yes
+.else
+PLIST.bsd=	yes
+.endif
+
+# tbl(1) of NetBSD 9 cannot be used and cripples the man pages, but man(1)
+# from mandoc uses a builtin tbl that is good enough.
+# This check should catch all supported OS that needs processed tables for
+# man pages and have a tbl that can be used to do that.
+.if ${OPSYS} == "AIX" ||		\
+	${OPSYS} == "Cygwin" ||		\
+	${OPSYS} == "Darwin" ||		\
+	${OPSYS} == "DragonFly" ||	\
+	${OPSYS} == "Haiku" ||		\
+	${OPSYS} == "HPUX" ||		\
+	${OPSYS} == "IRIX" ||		\
+	${OPSYS} == "Linux" ||		\
+	${OPSYS} == "Minix" ||		\
+	${OPSYS} == "MirBSD" ||		\
+	${OPSYS} == "OSF1" ||		\
+	${OPSYS} == "QNX" ||		\
+	${OPSYS} == "SunOS"
+USE_TOOLS+= 	tbl
+.endif
