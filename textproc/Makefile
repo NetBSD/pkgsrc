@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1142 2020/05/25 15:19:00 taca Exp $
+# $NetBSD: Makefile,v 1.1143 2020/06/05 12:45:14 ryoon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -196,6 +196,7 @@ SUBDIR+=	docbook2odf
 SUBDIR+=	doclifter
 SUBDIR+=	dsssl-docbook-modular
 SUBDIR+=	dtdparse
+SUBDIR+=	dwdiff
 SUBDIR+=	eb
 SUBDIR+=	eblook
 SUBDIR+=	ebook-tools
