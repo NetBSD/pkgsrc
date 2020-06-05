@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/05/11 16:52:07 micha Exp $
+# $NetBSD: Makefile,v 1.12 2020/06/05 17:20:52 micha Exp $
 
-DISTNAME=	schily-2020-05-11
-PKGNAME=	bosh-20200511
+DISTNAME=	schily-2020-05-25
+PKGNAME=	bosh-20200525
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,9 +13,8 @@ LICENSE=	cddl-1.0
 
 MAKE_JOBS_SAFE=	no
 
-# tbl(1) of NetBSD 9 can't process the man page, but man(1) can.
-# Install man page with unprocessed tables as workaround (may break other OS)
-#USE_TOOLS+=	tbl
+.include "../../mk/bsd.prefs.mk"
+
 TOOL_DEPENDS+=	smake-[0-9]*:../../devel/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
@@ -26,14 +25,16 @@ PKG_SHELL=		bin/bosh
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 # Only required for testsuite
+# This is a temporary workaround for NetBSD. Next release will contain some
+# test logic and this can be removed again
+.if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-test
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths for true and false.
 SUBST_FILES.fix-paths=		sh/tests/shelltests/trap/trap.sh
 SUBST_SED.fix-paths=		-e 's,/bin/true,/usr/bin/true,g'
 SUBST_SED.fix-paths+=		-e 's,/bin/false,/usr/bin/false,g'
-
-.include "../../mk/bsd.prefs.mk"
+.endif
 
 # Shared platform specific code for schilytools (provided by smake package)
 .include "../../devel/smake/Makefile.common"
@@ -51,9 +52,12 @@ do-build:
 
 # Process tables in manpage
 post-build:
+.if !empty(USE_TOOLS:Mtbl)
+	cd ${WRKSRC} && ${TBL} sh/sh.1 >sh/bosh.1.tmp;			\
+		${MV} -f sh/bosh.1.tmp sh/bosh.1
+.else
 	cd ${WRKSRC} && ${MV} -f sh/sh.1 sh/bosh.1
-#	cd ${WRKSRC} && ${TBL} sh/sh.1 >sh/bosh.1.tmp;			\
-#		${MV} -f sh/bosh.1.tmp sh/bosh.1
+.endif
 
 do-test:
 	cd ${WRKSRC}/sh &&						\
