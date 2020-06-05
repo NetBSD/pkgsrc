@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.156 2020/06/05 07:34:17 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.157 2020/06/05 14:24:17 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -810,7 +810,7 @@ substitutions in this stage.</para></listitem></varlistentry>
 </sect3>
 
 <sect3 id="fixes.subst.where">
-<title>Choosing the time where the substitutions happen</title>
+<title>Choosing the files where the substitutions happen</title>
 
 <para>The <varname>SUBST_FILES.*</varname> variable contains a list of
 filename patterns. These patterns are relative to
@@ -827,19 +827,19 @@ implementation checks that each filename pattern that is mentioned here
 has an effect. For example, if none of the
 <filename>*/*/Makefile</filename> files contains the patterns to be found
 and substituted, that filename pattern is redundant and should be left
-out. If the text to be substituted occurs in some of the files from a
-single pattern, but not in all of them, that is totally ok, and the SUBST
+out. By default, the SUBST framework will complain with an error message.
+If the text to be substituted occurs in some of the files from a single
+pattern, but not in all of them, that is totally ok, and the SUBST
 framework will only print an INFO message for those files.</para>
 
 <para>If there is a good reason for having redundant filename patterns,
-set <varname>SUBST_NOOP_OK.path=yes</varname> in the above
-example.</para>
+set <varname>SUBST_NOOP_OK.*</varname> to <literal>yes</literal>.</para>
 
 <para>Another popular way of choosing the files for the substitutions is
 via a shell command, like this:</para>
 
 <programlisting>
-C_FILES_CMD=            cd ${WRKSRC} &amp;&amp; ${FIND} -name '*.c'
+C_FILES_CMD=            cd ${WRKSRC} &amp;&amp; ${FIND} . -name '*.c'
 SUBST_FILES.path=       ${C_FILES_CMD:sh}
 </programlisting>
 
@@ -887,15 +887,15 @@ SUBST_VARS.path=        PREFIX
 </programlisting>
 
 <para>This type of substitutions is typically done by the GNU configure
-scripts, but in some cases these need to be overridden. The same pattern
-is also used when a package defines patches that replace previously
-hard-coded paths like <literal>/usr/local</literal> with a
-<literal>@PREFIX@</literal> placeholder first, which then gets
-substituted by the actual <literal>${PREFIX}</literal> in the
-pre-configure stage. In many of these cases, it works equally well to
-just use the SUBST framework to directly replace
-<literal>/usr/local</literal> with <literal>${PREFIX}</literal>, thereby
-omitting the intermediate patch file.</para>
+scripts during the do-configure stage, but in some cases these need to be
+overridden. The same pattern is also used when a package defines patches
+that replace previously hard-coded paths like
+<literal>/usr/local</literal> with a <literal>@PREFIX@</literal>
+placeholder first, which then gets substituted by the actual
+<literal>${PREFIX}</literal> in the pre-configure stage. In many of these
+cases, it works equally well to just use the SUBST framework to directly
+replace <literal>/usr/local</literal> with <literal>${PREFIX}</literal>,
+thereby omitting the intermediate patch file.</para>
 
 <para>If the above is not flexible enough, it is possible to not use sed
 at all for the substitution but to specify an entirely different command,
