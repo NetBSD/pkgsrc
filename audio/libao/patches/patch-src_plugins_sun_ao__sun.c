@@ -1,4 +1,4 @@
-$NetBSD: patch-src_plugins_sun_ao__sun.c,v 1.2 2020/05/28 19:30:45 nia Exp $
+$NetBSD: patch-src_plugins_sun_ao__sun.c,v 1.3 2020/06/05 10:08:35 nia Exp $
 
 - Fix device selection on NetBSD.
 - Support 24-bit playback on NetBSD.
@@ -20,7 +20,7 @@ $NetBSD: patch-src_plugins_sun_ao__sun.c,v 1.2 2020/05/28 19:30:45 nia Exp $
          if(internal->dev==NULL){
            char buf[80];
 -          sprintf(buf,"/dev/sound/%d",internal->id);
-+#ifdef __sun
++#ifndef __sun
 +          snprintf(buf,sizeof(buf),"/dev/audio%d",internal->id);
 +#else
 +          snprintf(buf,sizeof(buf),"/dev/sound/%d",internal->id);
