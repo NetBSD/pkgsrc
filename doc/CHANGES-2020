@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3377 2020/06/05 08:16:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3378 2020/06/05 10:44:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5348,3 +5348,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/terraform-provider-aws to 2.65.0 [adam 2020-06-05]
 	Updated net/terraform-provider-random to 2.2.1nb1 [adam 2020-06-05]
 	Updated net/terraform-provider-local to 1.4.0nb1 [adam 2020-06-05]
+	Updated archivers/libzip to 1.7.0 [wiz 2020-06-05]
