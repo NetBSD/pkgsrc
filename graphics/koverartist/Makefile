@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2020/06/02 08:24:05 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/06/05 12:49:08 jperkin Exp $
 
 PKGNAME=		koverartist-0.7.6
 DISTNAME=		38195-koverartist_0.7.6.orig
-PKGREVISION=		47
+PKGREVISION=		48
 CATEGORIES=		graphics kde
 MASTER_SITES=		http://kde-apps.org/CONTENT/content-files/
 EXTRACT_SUFX=		.tar.bz2
