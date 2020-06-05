@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.5 2020/04/18 07:53:38 adam Exp $
+$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.6 2020/06/05 15:28:54 jperkin Exp $
 
 Use compiler-rt instead of libgcc.
 Pull in libcxx correctly.
@@ -7,7 +7,7 @@ Don't specify --dynamic-linker, makes it impossible for the user to use -Wl,-r
 Ensure we reset to -zdefaultextract prior to adding compiler-rt.
 Test removing -Bdynamic for golang.
 
---- lib/Driver/ToolChains/Solaris.cpp.orig	2020-03-19 09:19:04.000000000 +0000
+--- lib/Driver/ToolChains/Solaris.cpp.orig	2020-03-23 15:01:02.000000000 +0000
 +++ lib/Driver/ToolChains/Solaris.cpp
 @@ -49,8 +49,29 @@ void solaris::Linker::ConstructJob(Compi
                                     const InputInfoList &Inputs,
@@ -59,7 +59,7 @@ Test removing -Bdynamic for golang.
  
      const Arg *Std = Args.getLastArg(options::OPT_std_EQ, options::OPT_ansi);
      bool HaveAnsi = false;
-@@ -101,16 +121,16 @@ void solaris::Linker::ConstructJob(Compi
+@@ -101,16 +121,14 @@ void solaris::Linker::ConstructJob(Compi
      // Use values-Xc.o for -ansi, -std=c*, -std=iso9899:199409.
      if (HaveAnsi || (LangStd && !LangStd->isGNUMode()))
        values_X = "values-Xc.o";
@@ -72,14 +72,13 @@ Test removing -Bdynamic for golang.
        values_xpg = "values-xpg4.o";
      CmdArgs.push_back(
 -        Args.MakeArgString(getToolChain().GetFilePath(values_xpg)));
-+        Args.MakeArgString(SysPath + values_xpg));
-     CmdArgs.push_back(
+-    CmdArgs.push_back(
 -        Args.MakeArgString(getToolChain().GetFilePath("crtbegin.o")));
-+        Args.MakeArgString(SysPath + "crtbegin.o"));
++        Args.MakeArgString(SysPath + values_xpg));
    }
  
    getToolChain().AddFilePathLibArgs(Args, CmdArgs);
-@@ -122,30 +142,23 @@ void solaris::Linker::ConstructJob(Compi
+@@ -122,30 +140,23 @@ void solaris::Linker::ConstructJob(Compi
    AddLinkerInputs(getToolChain(), Inputs, Args, CmdArgs, JA);
  
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nodefaultlibs)) {
@@ -121,7 +120,7 @@ Test removing -Bdynamic for golang.
  
    getToolChain().addProfileRTLibs(Args, CmdArgs);
  
-@@ -174,26 +187,9 @@ Solaris::Solaris(const Driver &D, const 
+@@ -174,26 +185,9 @@ Solaris::Solaris(const Driver &D, const 
                   const ArgList &Args)
      : Generic_ELF(D, Triple, Args) {
  
@@ -151,7 +150,7 @@ Test removing -Bdynamic for golang.
  }
  
  SanitizerMask Solaris::getSupportedSanitizers() const {
-@@ -218,6 +214,32 @@ Tool *Solaris::buildAssembler() const {
+@@ -218,6 +212,32 @@ Tool *Solaris::buildAssembler() const {
  
  Tool *Solaris::buildLinker() const { return new tools::solaris::Linker(*this); }
  
@@ -184,7 +183,7 @@ Test removing -Bdynamic for golang.
  void Solaris::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
                                          ArgStringList &CC1Args) const {
    const Driver &D = getDriver();
-@@ -250,40 +272,20 @@ void Solaris::AddClangSystemIncludeArgs(
+@@ -250,40 +270,20 @@ void Solaris::AddClangSystemIncludeArgs(
      return;
    }
  
