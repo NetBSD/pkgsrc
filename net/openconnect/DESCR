@@ -1,2 +1,4 @@
-OpenConnect is a client for Cisco's AnyConnect SSL VPN
-released under LGPL v2.1.
+OpenConnect is an SSL VPN client initially created to support Cisco's
+AnyConnect SSL VPN. It has since been ported to support the Juniper SSL VPN
+(which is now known as Pulse Connect Secure), and the Palo Alto Networks
+GlobalProtect SSL VPN.
