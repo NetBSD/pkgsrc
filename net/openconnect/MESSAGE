@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/03/02 15:27:58 wiz Exp $
-
-The ${PKG_SYSCONFDIR}/vpnc-config script included in the vpnc-script
-package is needed to set up DNS and routing.
-
-More information can be found in the man page.
-
-===========================================================================
