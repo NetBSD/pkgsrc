@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/05 12:37:19 ryoon Exp $
+
+SHA1 (minitube_3.4.orig.tar.gz) = 7e6ddaac73e6056a7b9e4a4f265a6acf85b4d003
+RMD160 (minitube_3.4.orig.tar.gz) = 6fe31db00be16f6efedf48d8ba23d46da7c53421
+SHA512 (minitube_3.4.orig.tar.gz) = 5295119f6b0d6700493dc9089ae8686775337714f8a906679fd5ba396dfe613e35c8ebcdcbaac522077c0d0b993d8edfcaf6f30c877d5483511816b07cbe9b9c
+Size (minitube_3.4.orig.tar.gz) = 1277351 bytes
