@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.43 2020/05/19 05:14:18 rillig Exp $
+# $NetBSD: subst.sh,v 1.44 2020/06/06 13:00:52 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1627,6 +1627,51 @@ if test_case_begin 'multiple sed commands with semicolon'; then
 		'=> Substituting "id" in file' \
 		'warning: [subst.mk:id] Nothing changed in "file".' \
 		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+
+	test_case_end
+fi
+
+
+if test_case_begin 'several substitution, only one applies to file'; then
+
+	# https://mail-index.netbsd.org/pkgsrc-changes/2020/06/06/msg215480.html
+
+	create_file 'testcase.mk' <<-EOF
+		SUBST_CLASSES+=		id
+		SUBST_FILES.id=		first second
+		SUBST_SED.id=		-e 's,first,first-modified,'
+		SUBST_SED.id+=		-e 's,second,second,'
+		SUBST_NOOP_OK.id=	no
+
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
+	create_file_lines 'first' 'first'
+	create_file_lines 'second' 'second'
+
+	run_bmake 'testcase.mk' 'subst-id' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	# FIXME: This is not the intended behavior.
+	# Each of the files contains at least one of the sed patterns,
+	# therefore the substitutions _could_ have an effect, depending
+	# on the pkgsrc configuration.
+	#
+	# Instead of testing whether the sed command is an identity
+	# substitution, the original idea was to find files that contain
+	# _none_ of the patterns.
+	#
+	# The proper fix might be as simple as replacing the "all" with an
+	# "any" in mk/scripts/subst-identity.awk.  This would also nicely
+	# remove the special handling of an empty command line.
+	assert_that "$tmpdir/output" --file-is-lines \
+		'=> Substituting "id" in first second' \
+		'warning: [subst.mk:id] Nothing changed in "second".' \
+		'fail: [subst.mk:id] The filename pattern "second" has no effect.' \
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
