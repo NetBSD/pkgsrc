@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3390 2020/06/05 22:10:22 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.3391 2020/06/06 00:56:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5361,3 +5361,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/pbosh to 20200525 [micha 2020-06-05]
 	Updated net/youtube-dl to 20200606 [leot 2020-06-05]
 	Added textproc/align version 1.1 [sjmulder 2020-06-05]
+	Updated www/php-nextcloud to 19.0.0 [ryoon 2020-06-06]
