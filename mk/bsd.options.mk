@@ -1,19 +1,19 @@
-# $NetBSD: bsd.options.mk,v 1.76 2020/05/03 18:45:28 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.77 2020/06/06 19:02:55 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
 #
 # Before including this file, the following variables can be defined:
 #
+#	PKG_OPTIONS_VAR (must be defined)
+#               The variable the user can set to enable or disable
+#		options specifically for this package.
+#
 #	PKG_SUPPORTED_OPTIONS
 #		This is a list of build options supported by the package.
 #		This variable should be set in a package Makefile.  E.g.,
 #
 #			PKG_SUPPORTED_OPTIONS=	kerberos ldap ssl
-#
-#	PKG_OPTIONS_VAR (must be defined)
-#               The variable the user can set to enable or disable
-#		options specifically for this package.
 #
 #	PKG_OPTIONS_OPTIONAL_GROUPS
 #		This is a list of names of groups of mutually exclusive
