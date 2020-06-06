@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.26 2020/05/22 01:24:05 joerg Exp $
+# $NetBSD: metadata.mk,v 1.27 2020/06/06 09:33:56 rillig Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -62,6 +62,7 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 	*)	ldd=${LDD:Q} ;;						\
 	esac;								\
 	bins=`${AWK} '/(^|\/)(bin|sbin|libexec)\// { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
+	requires="";							\
 	case ${OBJECT_FMT:Q}"" in					\
 	ELF)								\
 		libs=`${AWK} '/\/lib.*\.so(\.[0-9]+)*$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
@@ -105,12 +106,12 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 	requires=`{ for i in $$requires $$requires; do echo $$i; done; \
 		${AWK} '{ print "${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}; } | \
 		${SORT} | uniq -c | awk '$$1 == 2 {print $$2}'`; \
-	for i in "" $$libs; do						\
+	for i in $$libs; do						\
 		${TEST} "$$i" != "" || continue;			\
-		${ECHO} "PROVIDES=$${i}";				\
+		${ECHO} "PROVIDES=$$i";					\
 	done | ${SED} -e 's,^PROVIDES=${DESTDIR},PROVIDES=,'		\
 		>> ${.TARGET}.tmp;					\
-	for req in "" $$requires; do					\
+	for req in $$requires; do					\
 		${TEST} "$$req" != "" || continue;			\
 		${ECHO} "REQUIRES=$$req" >> ${.TARGET}.tmp;		\
 	done
