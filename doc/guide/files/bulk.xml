@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.31 2020/06/02 20:03:09 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.32 2020/06/06 12:22:17 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -419,6 +419,11 @@ line to &mk.conf;.</para>
 <programlisting>
 RUN=    @set -eu;
 </programlisting>
+
+<para>After that, ensure that none of the bulk build log files (even
+those for successfully built packages) contains the string
+<literal>parameter not set</literal> or whatever error message the
+command <command>sh -ceu '$undefined'</command> outputs.</para>
 
 <para>See <filename>mk/misc/common.mk</filename> for the existing
 definition.</para>
