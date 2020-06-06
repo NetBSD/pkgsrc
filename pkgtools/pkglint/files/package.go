@@ -660,33 +660,12 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 		defer trace.Call(filename)()
 	}
 
-	vars := pkg.vars
 	pkg.checkPlist()
 
-	want := !vars.IsDefined("NO_CHECKSUM")
-	want = want && !vars.IsDefined("META_PACKAGE")
-	want = want && !(vars.IsDefined("DISTFILES") && vars.LastValue("DISTFILES") == "")
-	want = want || !isEmptyDir(pkg.File(pkg.Patchdir))
-
-	if !want {
-		distinfoFile := pkg.File(pkg.DistinfoFile)
-		if distinfoFile.IsFile() {
-			NewLineWhole(distinfoFile).Warnf("This file should not exist since NO_CHECKSUM or META_PACKAGE is set.")
-		}
-	} else {
-		distinfoFile := pkg.File(pkg.DistinfoFile)
-		if !containsVarUse(distinfoFile.String()) && !distinfoFile.IsFile() {
-			line := NewLineWhole(distinfoFile)
-			line.Warnf("A package that downloads files should have a distinfo file.")
-			line.Explain(
-				sprintf("To generate the distinfo file, run %q.", bmake("makesum")),
-				"",
-				"To mark the package as not needing a distinfo file, set",
-				"NO_CHECKSUM=yes in the package Makefile.")
-		}
-	}
+	pkg.checkDistinfoExists()
 
 	// TODO: There are other REPLACE_* variables which are probably also affected by NO_CONFIGURE.
+	vars := pkg.vars
 	if noConfigureLine := vars.FirstDefinition("NO_CONFIGURE"); noConfigureLine != nil {
 		if replacePerlLine := vars.FirstDefinition("REPLACE_PERL"); replacePerlLine != nil {
 			replacePerlLine.Warnf("REPLACE_PERL is ignored when NO_CONFIGURE is set (in %s).",
@@ -764,6 +743,51 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 	pkg.CheckVarorder(mklines)
 
 	SaveAutofixChanges(mklines.lines)
+}
+
+func (pkg *Package) checkDistinfoExists() {
+	vars := pkg.vars
+
+	want := pkg.wantDistinfo(vars)
+
+	if !want {
+		distinfoFile := pkg.File(pkg.DistinfoFile)
+		if distinfoFile.IsFile() {
+			NewLineWhole(distinfoFile).Warnf("This file should not exist.")
+		}
+	} else {
+		distinfoFile := pkg.File(pkg.DistinfoFile)
+		if !containsVarUse(distinfoFile.String()) && !distinfoFile.IsFile() {
+			line := NewLineWhole(distinfoFile)
+			line.Warnf("A package that downloads files should have a distinfo file.")
+			line.Explain(
+				sprintf("To generate the distinfo file, run %q.", bmake("makesum")),
+				"",
+				"To mark the package as not needing a distinfo file, set",
+				"NO_CHECKSUM=yes in the package Makefile.")
+		}
+	}
+}
+
+func (pkg *Package) wantDistinfo(vars Scope) bool {
+	switch {
+	case vars.IsDefined("DISTINFO_FILE"):
+		return true
+	case vars.IsDefined("DISTFILES") && vars.LastValue("DISTFILES") != "":
+		return true
+	case vars.IsDefined("DISTFILES"):
+		break
+	case vars.IsDefined("NO_CHECKSUM"):
+		break
+	case vars.IsDefined("META_PACKAGE"):
+		break // see Test_Package_checkfilePackageMakefile__META_PACKAGE_with_patch
+	case !vars.IsDefined("DISTNAME"):
+		break
+	default:
+		return true
+	}
+
+	return !isEmptyDir(pkg.File(pkg.Patchdir))
 }
 
 // checkPlist checks whether the package needs a PLIST file,

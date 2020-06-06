@@ -276,6 +276,11 @@ func (ck *Buildlink3Checker) checkVarassign(mkline *MkLine, pkgbase string) {
 			mkline.Warnf("Only buildlink variables for %q, not %q may be set in this file.", pkgbase, varparam)
 		}
 	}
+
+	if varname == "pkgbase" && value != ck.pkgbase {
+		mkline.Errorf("A buildlink3.mk file must only query its own PKG_BUILD_OPTIONS.%s, not PKG_BUILD_OPTIONS.%s.",
+			ck.pkgbase, value)
+	}
 }
 
 func (ck *Buildlink3Checker) checkVaruseInPkgbase(pkgbaseLine *MkLine) {

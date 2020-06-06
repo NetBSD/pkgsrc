@@ -68,3 +68,17 @@ func (s *Suite) Test_LicenseChecker_checkName__LICENSE_FILE(c *check.C) {
 	t.CheckOutputLines(
 		"Looks fine.")
 }
+
+func (s *Suite) Test_LicenseChecker_checkName__LICENSE_FILE_absolute(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.SetUpPackage("category/package",
+		"LICENSE_FILE=\t/usr/license")
+
+	t.Main("category/package")
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/Makefile:20: LICENSE_FILE must not be an absolute path.",
+		"1 error found.")
+}

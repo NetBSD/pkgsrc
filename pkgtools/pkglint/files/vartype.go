@@ -378,7 +378,8 @@ func (bt *BasicType) NeedsQ() bool {
 		BtRelativePkgDir,
 		BtRelativePkgPath,
 		BtStage,
-		BtTool, // Sometimes contains a colon, but that should be ok.
+		BtToolDependency, // ok since the [ tool is usually not mentioned.
+		BtToolName,       // ok since the [ tool is usually not mentioned.
 		BtUserGroupName,
 		BtVersion,
 		BtWrkdirSubdirectory,
@@ -462,7 +463,8 @@ var (
 	BtShellCommands          = &BasicType{"ShellCommands", nil} // see func init below
 	BtShellWord              = &BasicType{"ShellWord", nil}     // see func init below
 	BtStage                  = &BasicType{"Stage", (*VartypeCheck).Stage}
-	BtTool                   = &BasicType{"Tool", (*VartypeCheck).Tool}
+	BtToolDependency         = &BasicType{"ToolDependency", (*VartypeCheck).ToolDependency}
+	BtToolName               = &BasicType{"ToolName", (*VartypeCheck).ToolName}
 	BtUnknown                = &BasicType{"Unknown", (*VartypeCheck).Unknown}
 	BtURL                    = &BasicType{"URL", (*VartypeCheck).URL}
 	BtUserGroupName          = &BasicType{"UserGroupName", (*VartypeCheck).UserGroupName}

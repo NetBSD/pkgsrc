@@ -1408,15 +1408,15 @@ type LazyStringBuilder struct {
 	buf      []byte
 }
 
+func NewLazyStringBuilder(expected string) LazyStringBuilder {
+	return LazyStringBuilder{expected: expected}
+}
+
 func (b *LazyStringBuilder) Write(p []byte) (n int, err error) {
 	for _, c := range p {
 		b.WriteByte(c)
 	}
 	return len(p), nil
-}
-
-func NewLazyStringBuilder(expected string) LazyStringBuilder {
-	return LazyStringBuilder{expected: expected}
 }
 
 func (b *LazyStringBuilder) Len() int {

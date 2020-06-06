@@ -542,7 +542,6 @@ func (s *Suite) Test_Pkglint_checkdirPackage__incomplete_package(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: Makefile: This package should have a PLIST file.",
-		"WARN: distinfo: A package that downloads files should have a distinfo file.",
 		"ERROR: Makefile: Each package must define its LICENSE.",
 		"WARN: Makefile: Each package should define a COMMENT.",
 		"ERROR: Makefile: Each package must have a DESCR file.")
