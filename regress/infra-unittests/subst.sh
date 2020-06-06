@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.44 2020/06/06 13:00:52 rillig Exp $
+# $NetBSD: subst.sh,v 1.45 2020/06/06 13:17:34 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1265,12 +1265,14 @@ if test_case_begin 'identity substitution implementation'; then
 	assert_identity 'yes'	-e 's!/dev/audio!/dev/audio!'
 
 	# There may be several identity substitutions in the same
-	# SUBST_SED.  As long as all these substitutions are identity
-	# substitutions, they may be skipped.  As soon as there is one
-	# other substitution, the whole SUBST_SED is treated as usual.
+	# SUBST_SED.  As long as any of these substitutions is an
+	# identity substitution, it can happen that a file stays the
+	# same.  It still might be modified in a different pkgsrc
+	# configuration.
 	assert_identity 'yes'	-e 's;from;from;' -e 's!second!second!'
-	assert_identity 'no'	-e 's,changing,x,' -e 's,id,id,'
-	assert_identity 'no'	-e 's,id,id,' -e 's,changing,x,'
+	assert_identity 'yes'	-e 's,changing,x,' -e 's,id,id,'
+	assert_identity 'yes'	-e 's,id,id,' -e 's,changing,x,'
+	assert_identity 'no'	-e 's,changing,x,' -e 's,changing,x,'
 
 	# A demonstration of all ASCII characters that may appear in an
 	# identity substitution.
@@ -1656,26 +1658,13 @@ if test_case_begin 'several substitution, only one applies to file'; then
 	run_bmake 'testcase.mk' 'subst-id' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
-	# FIXME: This is not the intended behavior.
 	# Each of the files contains at least one of the sed patterns,
 	# therefore the substitutions _could_ have an effect, depending
 	# on the pkgsrc configuration.
-	#
-	# Instead of testing whether the sed command is an identity
-	# substitution, the original idea was to find files that contain
-	# _none_ of the patterns.
-	#
-	# The proper fix might be as simple as replacing the "all" with an
-	# "any" in mk/scripts/subst-identity.awk.  This would also nicely
-	# remove the special handling of an empty command line.
 	assert_that "$tmpdir/output" --file-is-lines \
-		'=> Substituting "id" in first second' \
-		'warning: [subst.mk:id] Nothing changed in "second".' \
-		'fail: [subst.mk:id] The filename pattern "second" has no effect.' \
-		'*** Error code 1' \
-		'' \
-		'Stop.' \
-		"$make: stopped in $PWD"
+		'=> Substituting "id" in first second'
+	assert_that 'first' --file-contains-exactly 'first-modified'
+	assert_that 'second' --file-contains-exactly 'second'
 
 	test_case_end
 fi
