@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/04/30 07:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/06 20:56:31 wiz Exp $
 
-VERSION=	2020.3.16
+VERSION=	2020.5.20
 DISTNAME=	https-everywhere-${VERSION}-eff
 PKGNAME=	tor-browser-${DISTNAME:S/-eff//}
 CATEGORIES=	security www
