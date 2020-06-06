@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/05/22 10:56:22 adam Exp $
+# $NetBSD: Makefile,v 1.32 2020/06/06 01:51:20 mef Exp $
 
 DISTNAME=	libcarddav_0.6.2-2debian2
 PKGNAME=	${DISTNAME:S/_/-/:S/-2debian2/.2.2/}
@@ -22,3 +22,4 @@ USE_LIBTOOL=	yes
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+drwxr-xr-x  4 makoto  wheel  512 Jan 31 05:59 ../../graphics/tex-epstopdf
