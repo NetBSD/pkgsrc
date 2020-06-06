@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3393 2020/06/06 14:32:50 wen Exp $
+$NetBSD: CHANGES-2020,v 1.3394 2020/06/06 20:43:05 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5364,3 +5364,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/php-nextcloud to 19.0.0 [ryoon 2020-06-06]
 	Updated www/otter-browser to 1.0.01nb7 [gutteridge 2020-06-06]
 	Updated devel/p5-Devel-PatchPerl to 2.00 [wen 2020-06-06]
+	Updated pkgtools/pkglint to 20.1.14 [rillig 2020-06-06]
