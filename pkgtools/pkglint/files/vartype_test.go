@@ -136,7 +136,6 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 		rules(
 			"buildlink3.mk: none",
 			"*: set"),
-		// TODO: should be "buildlink3.mk only".
 		"*, but not buildlink3.mk")
 
 	// If there are both positive and negative cases, preserve all the
@@ -158,7 +157,6 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 			"builtin.mk: set",
 			"Makefile: none",
 			"*.mk: append"),
-		// TODO: should be "builtin.mk only".
 		"builtin.mk, but not buildlink3.mk, Makefile or *.mk")
 }
 
