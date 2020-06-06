@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3394 2020/06/06 20:43:05 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3395 2020/06/06 20:55:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5365,3 +5365,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/otter-browser to 1.0.01nb7 [gutteridge 2020-06-06]
 	Updated devel/p5-Devel-PatchPerl to 2.00 [wen 2020-06-06]
 	Updated pkgtools/pkglint to 20.1.14 [rillig 2020-06-06]
+	Updated security/tor-browser-noscript to 11.0.30 [wiz 2020-06-06]
