@@ -198,12 +198,12 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 	for _, alg := range algorithms {
 		missing[alg] = true
 	}
-	seen := map[string]distinfoHash{}
+	seen := map[string]bool{}
 
 	for _, hash := range info.hashes {
 		alg := hash.algorithm
 		if missing[alg] {
-			seen[alg] = hash
+			seen[alg] = true
 			delete(missing, alg)
 		}
 	}
@@ -275,7 +275,11 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 		}
 	}
 
-	for alg, hash := range seen {
+	for _, hash := range info.hashes {
+		alg := hash.algorithm
+		if !seen[alg] {
+			continue
+		}
 		computed := compute(alg)
 
 		if computed != hash.hash {

@@ -732,10 +732,12 @@ func (s *Suite) Test_Buildlink3Checker_checkVarUse__PKG_BUILD_OPTIONS(c *check.C
 
 	G.Check(t.File("category/package/buildlink3.mk"))
 
-	// TODO: Warn about PKG_BUILD_OPTIONS.package since that variable is not defined.
 	t.CheckOutputLines(
 		"WARN: ~/category/package/buildlink3.mk:15: "+
 			"PKG_BUILD_OPTIONS is used but not defined.",
+		"ERROR: ~/category/package/buildlink3.mk:12: "+
+			"A buildlink3.mk file must only query its own PKG_BUILD_OPTIONS.package, "+
+			"not PKG_BUILD_OPTIONS.unrelated.",
 		"WARN: ~/category/package/buildlink3.mk:21: "+
 			"Wrong PKG_BUILD_OPTIONS, expected \"package\" instead of \"unrelated\".")
 }
@@ -743,7 +745,7 @@ func (s *Suite) Test_Buildlink3Checker_checkVarUse__PKG_BUILD_OPTIONS(c *check.C
 // As of October 2018, pkglint parses package dependencies a little
 // different than the pkg_* tools.
 // In all but two cases this works, this is one of the exceptions.
-// The "{totem,totem-xine}" cannot be parsed, therefore the check skipped.
+// The "{totem,totem-xine}" cannot be parsed, therefore the check is skipped.
 func (s *Suite) Test_Buildlink3Checker_checkVarassign__abi_api_versions_brace(c *check.C) {
 	t := s.Init(c)
 

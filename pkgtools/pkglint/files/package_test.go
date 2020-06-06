@@ -283,6 +283,7 @@ func (s *Suite) Test_Package__distinfo_from_other_package(c *check.C) {
 		MkCvsID,
 		".include \"../../multimedia/gst-base/Makefile.common\"",
 		".include \"../../mk/bsd.pkg.mk\"")
+	t.CreateFileDummyPatch("x11/gst-x11/patches/patch-aa")
 	t.CreateFileLines("multimedia/gst-base/Makefile.common",
 		MkCvsID,
 		".include \"plugins.mk\"")
@@ -301,8 +302,9 @@ func (s *Suite) Test_Package__distinfo_from_other_package(c *check.C) {
 		"WARN: x11/gst-x11/Makefile: This package should have a PLIST file.",
 		"ERROR: x11/gst-x11/Makefile: Each package must define its LICENSE.",
 		"WARN: x11/gst-x11/Makefile: Each package should define a COMMENT.",
-		"WARN: x11/gst-x11/../../multimedia/gst-base/distinfo:3: "+
-			"Patch file \"patch-aa\" does not exist in directory \"../../x11/gst-x11/patches\".",
+		"ERROR: x11/gst-x11/../../multimedia/gst-base/distinfo:3: "+
+			"SHA1 hash of ../../x11/gst-x11/patches/patch-aa differs "+
+			"(distinfo has 1234, patch file has 9a93207561abfef7e7550598c5a08f2c3226995b).",
 		"ERROR: x11/gst-x11/Makefile: Each package must have a DESCR file.")
 }
 
@@ -570,6 +572,7 @@ func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 	t.CreateFileLines("category/package/Makefile",
 		MkCvsID,
 		"",
+		"DISTNAME=\tpackage-1.0",
 		"CATEGORIES=\tcategory",
 		"",
 		"COMMENT=\tComment",
@@ -584,10 +587,11 @@ func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 		"Whole Makefile (with all included files) follows:",
 		"~/category/package/Makefile:1: "+MkCvsID,
 		"~/category/package/Makefile:2: ",
-		"~/category/package/Makefile:3: CATEGORIES=\tcategory",
-		"~/category/package/Makefile:4: ",
-		"~/category/package/Makefile:5: COMMENT=\tComment",
-		"~/category/package/Makefile:6: LICENSE=\t2-clause-bsd")
+		"~/category/package/Makefile:3: DISTNAME=\tpackage-1.0",
+		"~/category/package/Makefile:4: CATEGORIES=\tcategory",
+		"~/category/package/Makefile:5: ",
+		"~/category/package/Makefile:6: COMMENT=\tComment",
+		"~/category/package/Makefile:7: LICENSE=\t2-clause-bsd")
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
@@ -1517,8 +1521,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_distinf
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:20: This package should not have a PLIST file.",
-		"WARN: ~/category/package/distinfo: "+
-			"This file should not exist since NO_CHECKSUM or META_PACKAGE is set.")
+		"WARN: ~/category/package/distinfo: This file should not exist.")
 }
 
 func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_patch(c *check.C) {
@@ -1538,8 +1541,11 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_patch(c
 	G.Check(pkg)
 
 	// At first it may sound strange to have a META_PACKAGE with patches.
-	// As of June 2019, there are 21 meta packages having a patches
-	// directory, being referred to by PATCHDIR.
+	// As of June 2019, there are 21 meta packages that have a patches
+	// directory.
+	// These patches are not used by the meta package itself.
+	// They are just stored there in the "most obvious location",
+	// to be used by the related packages.
 	t.CheckOutputEmpty()
 }
 
@@ -1627,8 +1633,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__no_distfiles(c *check.C) 
 	G.Check(t.File("category/package"))
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/distinfo: " +
-			"This file should not exist since NO_CHECKSUM or META_PACKAGE is set.")
+		"WARN: ~/category/package/distinfo: This file should not exist.")
 }
 
 func (s *Suite) Test_Package_checkfilePackageMakefile__distfiles(c *check.C) {
@@ -1644,6 +1649,21 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__distfiles(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/distinfo: " +
 			"A package that downloads files should have a distinfo file.")
+}
+
+func (s *Suite) Test_Package_checkfilePackageMakefile__no_distname(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"#DISTNAME=\t#undefined",
+		"PKGNAME=\tpackage-1.0")
+	t.Remove("category/package/distinfo")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
 }
 
 // The fonts/t1lib package has split the options handling between the
@@ -1797,8 +1817,7 @@ func (s *Suite) Test_Package_checkPlist__META_PACKAGE(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:20: This package should not have a PLIST file.",
-		"WARN: ~/category/package/distinfo: This file should not exist "+
-			"since NO_CHECKSUM or META_PACKAGE is set.")
+		"WARN: ~/category/package/distinfo: This file should not exist.")
 }
 
 func (s *Suite) Test_Package_checkPlist__Perl5_packlist(c *check.C) {
