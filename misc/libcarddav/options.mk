@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/12/22 22:26:49 joerg Exp $
+# $NetBSD: options.mk,v 1.9 2020/06/06 01:51:20 mef Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libcarddav
 PKG_SUPPORTED_OPTIONS=		doc
@@ -18,6 +18,7 @@ BUILD_DEPENDS+=		tex-adjustbox>=1.0nb1:../../print/tex-adjustbox
 BUILD_DEPENDS+=		tex-caption-[0-9]*:../../print/tex-caption
 BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
 BUILD_DEPENDS+=		tex-colortbl-[0-9]*:../../print/tex-colortbl
+BUILD_DEPENDS+=		tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
 BUILD_DEPENDS+=		tex-etoc-[0-9]*:../../print/tex-etoc
 BUILD_DEPENDS+=		tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 BUILD_DEPENDS+=		tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
