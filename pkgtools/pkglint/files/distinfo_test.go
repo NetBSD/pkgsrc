@@ -149,7 +149,7 @@ func (s *Suite) Test_distinfoLinesChecker_check__manual_patches(c *check.C) {
 // PHP modules that are not PECL use the distinfo file from lang/php* but
 // their own patches directory. Therefore the distinfo file refers to missing
 // patches. Since this strange situation is caused by the pkgsrc
-// infrastructure, there is nothing a package author can do about.
+// infrastructure, there is nothing a package author can do.
 //
 // XXX: Re-check the documentation for this test.
 func (s *Suite) Test_distinfoLinesChecker_check__missing_php_patches(c *check.C) {
@@ -190,6 +190,8 @@ func (s *Suite) Test_distinfoLinesChecker_check__missing_php_patches(c *check.C)
 	t.FinishSetUp()
 
 	G.Check(t.File("archivers/php-bz2"))
+
+	t.CheckOutputEmpty()
 
 	t.CreateFileLines("archivers/php-zlib/Makefile",
 		MkCvsID,

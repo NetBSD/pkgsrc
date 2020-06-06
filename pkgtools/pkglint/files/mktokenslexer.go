@@ -46,6 +46,29 @@ func (m *MkTokensLexer) Rest() string {
 	return sb.String()
 }
 
+// Skip skips the next n bytes from the plain text.
+// If there is a variable use in the next n bytes, it panics; see SkipMixed.
+func (m *MkTokensLexer) Skip(n int) bool {
+	return m.Lexer.Skip(n)
+}
+
+// SkipMixed skips the next n bytes, be they in plain text or in variable uses.
+// It is only used in very special situations.
+func (m *MkTokensLexer) SkipMixed(n int) bool {
+	result := n > 0
+	for n > 0 {
+		use := m.NextVarUse()
+		if use != nil {
+			n -= len(use.Text)
+		} else {
+			skip := imin(len(m.Lexer.Rest()), n)
+			assert(m.Lexer.Skip(skip))
+			n -= skip
+		}
+	}
+	return result
+}
+
 // NextVarUse returns the next varuse token, unless there is some plain text
 // before it. In that case or at EOF, it returns nil.
 func (m *MkTokensLexer) NextVarUse() *MkToken {
