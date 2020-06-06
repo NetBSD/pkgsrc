@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2019/06/19 17:50:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.35 2020/06/06 09:24:27 rillig Exp $
 #
 
 DISTNAME=		djbdns-run-20190619
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -48,8 +49,16 @@ CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/axfrdns-tcp \
 
 .include "options.mk"
 
+post-extract:
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}/
+
+SUBST_CLASSES+=		rcd
+SUBST_STAGE.rcd=	pre-configure
+SUBST_FILES.rcd=	README.pkgsrc
+SUBST_VARS.rcd=		PKG_SYSCONFDIR RCD_SCRIPTS_DIR
+
 do-install:
-	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/djbdns-run
+	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/djbdns-run
 	${INSTALL_DATA} ${FILESDIR}/axfrdns-tcp ${DESTDIR}${PREFIX}/share/examples/djbdns-run
 	${INSTALL_DATA} ${FILESDIR}/dnscache-ip ${DESTDIR}${PREFIX}/share/examples/djbdns-run
 	${INSTALL_DATA} ${PREFIX}/${DNSROOTS_GLOBAL} ${DESTDIR}${PREFIX}/share/examples/djbdns-run
