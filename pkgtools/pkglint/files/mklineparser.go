@@ -100,16 +100,9 @@ func (p MkLineParser) MatchVarassign(line *Line, text string, splitResult *mkLin
 	for !commented && lexer.SkipByte(' ') {
 	}
 
-	varnameStart := lexer.Mark()
-	// TODO: duplicated code in MkLexer.Varname
-	for lexer.NextBytesSet(VarbaseBytes) != "" || lexer.NextVarUse() != nil {
-	}
-	if lexer.SkipByte('.') || hasPrefix(splitResult.main, "SITES_") {
-		for lexer.NextBytesSet(VarparamBytes) != "" || lexer.NextVarUse() != nil {
-		}
-	}
-
-	varname := lexer.Since(varnameStart)
+	mkLexer := NewMkLexer(lexer.Rest(), nil)
+	varname := mkLexer.Varname()
+	lexer.SkipMixed(len(lexer.Rest()) - len(mkLexer.Rest()))
 
 	if varname == "" {
 		return false, nil
@@ -215,12 +208,10 @@ func (p MkLineParser) parseCommentOrEmpty(line *Line, splitResult mkLineSplitRes
 }
 
 func (p MkLineParser) parseDirective(line *Line, splitResult mkLineSplitResult) *MkLine {
-	text := line.Text
-	if !hasPrefix(text, ".") { // TODO: use lexer instead
+	lexer := textproc.NewLexer(splitResult.main)
+	if !lexer.SkipByte('.') {
 		return nil
 	}
-
-	lexer := textproc.NewLexer(splitResult.main[1:])
 
 	indent := lexer.NextHspace()
 	directive := lexer.NextBytesSet(LowerDash)
@@ -296,7 +287,7 @@ func (p MkLineParser) parseMergeConflict(line *Line, splitResult mkLineSplitResu
 // contain the shell commands to be associated with make targets. These cannot
 // have comments.
 //
-// If line is given, it is used for logging parse errors and warnings
+// If diag is given, it is used for logging parse errors and warnings
 // about round parentheses instead of curly braces, as well as ambiguous
 // variables of the form $v instead of ${v}.
 //
