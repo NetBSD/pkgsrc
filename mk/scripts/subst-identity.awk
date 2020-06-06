@@ -1,11 +1,18 @@
 #! /usr/bin/awk -f
-# $NetBSD: subst-identity.awk,v 1.4 2020/05/16 12:43:10 rillig Exp $
+# $NetBSD: subst-identity.awk,v 1.5 2020/06/06 13:17:34 rillig Exp $
 #
-# Tests whether a sed(1) command line consists of only identity substitutions
-# like s,id,id,.
+# Tests whether a sed(1) command line contains an identity substitution
+# like s,id,id,.  When used in a SUBST block, these commands may leave a
+# file unmodified, which is ok since such an identity substitution
+# typically looks like s,/var,${VARBASE},.
 #
 # See SUBST_NOOP_OK and regress/infra-unittests/subst.sh.
 #
+
+BEGIN {
+	false = 0;
+	true = 1;
+}
 
 # Returns the first character of the given regular expression,
 # if it is a single-character regular expression.
@@ -48,13 +55,13 @@ function is_identity_subst(s,   len, i, sep, pat_from, pat_to, ch, subst) {
 	return s == subst || s == subst "g" || s == subst "1";
 }
 
-function main(   i) {
+function contains_identity_subst(   i) {
 	for (i = 1; i + 1 < ARGC; i += 2)
-		if (ARGV[i] != "-e" || !is_identity_subst(ARGV[i + 1]))
-			return 0;
-	return i == ARGC && ARGC > 1;
+		if (ARGV[i] == "-e" && is_identity_subst(ARGV[i + 1]))
+			return true;
+	return false;
 }
 
 BEGIN {
-	exit(main() ? 0 : 1);
+	exit(contains_identity_subst() ? 0 : 1);
 }
