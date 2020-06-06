@@ -864,7 +864,13 @@ func (cv *VartypeCheck) Message() {
 	}
 }
 
-// Option checks whether a single package option from options.mk conforms to the naming conventions.
+// Option checks whether a single package option from an options.mk file
+// conforms to the naming conventions.
+//
+// This check only handles option names, as in PKG_SUPPORTED_OPTIONS or
+// PKG_SUGGESTED_OPTIONS. It does not handle option selections, which may
+// pre prefixed with a hyphen to disable the option. Option selections
+// are all user-settable and therefore are out of scope for pkglint.
 func (cv *VartypeCheck) Option() {
 	value := cv.Value
 
@@ -872,14 +878,11 @@ func (cv *VartypeCheck) Option() {
 		return
 	}
 
-	validName := regex.Pattern(`^-?([a-z][-0-9a-z_+]*)$`)
+	validName := regex.Pattern(`^([a-z][-0-9a-z_+]*)$`)
 	if cv.Op == opUseMatch {
-		validName = `^-?([a-z][*+\-0-9?\[\]_a-z]*)$`
+		validName = `^([a-z][*+\-0-9?\[\]_a-z]*)$`
 	}
 
-	// TODO: Distinguish between:
-	//  - a bare option name (must start with a letter),
-	//  - an option selection (may have a leading hyphen).
 	m, optname := match1(value, validName)
 	if !m {
 		cv.Errorf("Invalid option name %q. Option names must start with a lowercase letter and be all-lowercase.", value)
@@ -1352,14 +1355,9 @@ func (cv *VartypeCheck) Stage() {
 	}
 }
 
-// Tool checks for tool names like "awk", "m4:pkgsrc", "digest:bootstrap".
-//
-// TODO: Distinguish between Tool and ToolDependency.
-func (cv *VartypeCheck) Tool() {
-	if cv.Varname == "TOOLS_NOOP" && cv.Op == opAssignAppend {
-		// no warning for package-defined tool definitions
-
-	} else if m, toolname, tooldep := match2(cv.Value, `^([-\w]+|\[)(?::(\w+))?$`); m {
+// ToolDependency checks for tool dependencies like "awk", "m4:pkgsrc", "digest:bootstrap".
+func (cv *VartypeCheck) ToolDependency() {
+	if m, toolname, tooldep := match2(cv.Value, `^([-\w]+|\[)(?::(\w+))?$`); m {
 		if tool, _ := G.Tool(cv.MkLines, toolname, RunTime); tool == nil {
 			cv.Errorf("Unknown tool %q.", toolname)
 		}
@@ -1374,6 +1372,27 @@ func (cv *VartypeCheck) Tool() {
 		cv.Errorf("Invalid tool dependency %q.", cv.Value)
 		cv.Explain(
 			"A tool dependency typically looks like \"sed\" or \"sed:run\".")
+	}
+}
+
+// ToolName checks for a tool name without any trailing ":pkgsrc" or ":run".
+func (cv *VartypeCheck) ToolName() {
+	name := cv.Value
+	nameNoVar := cv.ValueNoVar
+
+	if contains(nameNoVar, ":") {
+		cv.Errorf("%s accepts only plain tool names, without any colon.", cv.Varname)
+		return
+	}
+	if name != nameNoVar {
+		return
+	}
+
+	if !matches(name, `^([-\w]+|\[)$`) {
+		cv.Errorf("Invalid tool name %q.", name)
+		cv.Explain(
+			"Tool names must consist of letters, digits, underscores and hyphens only.")
+		return
 	}
 }
 
