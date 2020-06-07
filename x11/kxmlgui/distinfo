@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/01/29 11:49:31 markd Exp $
+$NetBSD: distinfo,v 1.11 2020/06/07 12:51:50 markd Exp $
 
-SHA1 (kxmlgui-5.66.0.tar.xz) = f447dc69d4120d819bac65dd50c25830fdb74834
-RMD160 (kxmlgui-5.66.0.tar.xz) = 61167f8ad3543f7ecc3c9228c96d1aa4c12d7fab
-SHA512 (kxmlgui-5.66.0.tar.xz) = 325e055943ff5cf733cb792136652e07c4576511aee2cd4a91a1a108df8c7946d6c21e8cb5133e3587309dd528bc4c6c3a4a01cfe914574eaae90e37ebf951e9
-Size (kxmlgui-5.66.0.tar.xz) = 861580 bytes
+SHA1 (kxmlgui-5.70.0.tar.xz) = 1323f7d8db8462d40e657b590df802e8fec5d0aa
+RMD160 (kxmlgui-5.70.0.tar.xz) = 8925195a4574dec4d34337de765614b873860473
+SHA512 (kxmlgui-5.70.0.tar.xz) = d50394c42bf494d70acab91f77817e96fb76efcf1f15af2a17dd027a175d87ea27778756124c15dd104278773f74c9a1d2fca7f0671b12adcd9851532a0958e2
+Size (kxmlgui-5.70.0.tar.xz) = 857852 bytes
