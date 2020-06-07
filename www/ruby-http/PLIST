@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2018/04/29 14:58:29 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/06/07 15:24:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
@@ -24,6 +23,9 @@ ${GEM_LIBDIR}/lib/http/errors.rb
 ${GEM_LIBDIR}/lib/http/feature.rb
 ${GEM_LIBDIR}/lib/http/features/auto_deflate.rb
 ${GEM_LIBDIR}/lib/http/features/auto_inflate.rb
+${GEM_LIBDIR}/lib/http/features/instrumentation.rb
+${GEM_LIBDIR}/lib/http/features/logging.rb
+${GEM_LIBDIR}/lib/http/features/normalize_uri.rb
 ${GEM_LIBDIR}/lib/http/headers.rb
 ${GEM_LIBDIR}/lib/http/headers/known.rb
 ${GEM_LIBDIR}/lib/http/headers/mixin.rb
@@ -52,6 +54,8 @@ ${GEM_LIBDIR}/spec/lib/http/connection_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/content_type_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/features/auto_deflate_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/features/auto_inflate_spec.rb
+${GEM_LIBDIR}/spec/lib/http/features/instrumentation_spec.rb
+${GEM_LIBDIR}/spec/lib/http/features/logging_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/headers/mixin_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/headers_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options/body_spec.rb
@@ -68,6 +72,7 @@ ${GEM_LIBDIR}/spec/lib/http/request/body_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/request/writer_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/request_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/response/body_spec.rb
+${GEM_LIBDIR}/spec/lib/http/response/parser_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/response/status_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/response_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/uri_spec.rb
