@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3437 2020/06/07 15:49:21 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3438 2020/06/07 15:49:32 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5484,3 +5484,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-jekyll-watch to 2.2.1 [taca 2020-06-07]
 	Updated www/ruby-sassc to 2.4.0 [taca 2020-06-07]
 	Updated www/ruby-unicorn to 5.5.5 [taca 2020-06-07]
+	Updated pkgtools/pkglint to 20.1.15 [rillig 2020-06-07]
