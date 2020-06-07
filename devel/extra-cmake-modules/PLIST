@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/11 06:38:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/06/07 10:39:48 markd Exp $
 share/ECM/cmake/ECMConfig.cmake
 share/ECM/cmake/ECMConfigVersion.cmake
 share/ECM/find-modules/ECMFindModuleHelpersStub.cmake
@@ -81,6 +81,7 @@ share/ECM/modules/ecm_uninstall.cmake.in
 share/ECM/test-modules/test_execute_and_compare.cmake
 share/ECM/toolchain/Android.cmake
 share/ECM/toolchain/ECMAndroidDeployQt.cmake
+share/ECM/toolchain/deployment-file-qt514.json.in
 share/ECM/toolchain/deployment-file.json.in
 share/ECM/toolchain/hasMainSymbol.cmake
 share/ECM/toolchain/specifydependencies.cmake
