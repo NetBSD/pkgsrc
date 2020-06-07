@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/01/29 11:49:28 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/06/07 11:58:51 markd Exp $
 
-SHA1 (kcalendarcore-5.66.0.tar.xz) = 194e68bba0995ae54c7a9e166e4818715eabef5f
-RMD160 (kcalendarcore-5.66.0.tar.xz) = 80d415607f80b02281f33f4baa8dccf6e2bbab74
-SHA512 (kcalendarcore-5.66.0.tar.xz) = 155b229c9903f8f72fc54950810e6efbd3fc81a9e546b747170ef9125115617db248a4936206671b4e7aa2337a95791f43f8532762e761f6ad22d4e2e73d45e2
-Size (kcalendarcore-5.66.0.tar.xz) = 249656 bytes
+SHA1 (kcalendarcore-5.70.0.tar.xz) = 29c4415301b248ad3d7aa7126bb7ffeea9986f1d
+RMD160 (kcalendarcore-5.70.0.tar.xz) = 7d432b71ab74b52b63b51c671267e11315f6af5c
+SHA512 (kcalendarcore-5.70.0.tar.xz) = 1138a8c45470e4af32a0bbf7384dcba65a666de2cf6598ecd128e42087b16d3814e90cfe610453a1bb5044210e6fac174663c799e52aeffc91863bb5ab7a463d
+Size (kcalendarcore-5.70.0.tar.xz) = 254768 bytes
