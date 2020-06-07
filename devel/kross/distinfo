@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/01/29 11:49:25 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/06/07 11:21:09 markd Exp $
 
-SHA1 (kross-5.66.0.tar.xz) = c98086a985ac92e5686479e8077d75883341d0a6
-RMD160 (kross-5.66.0.tar.xz) = 12d4fd8d2a0f1124f9cd410e2aaee6a359be1b62
-SHA512 (kross-5.66.0.tar.xz) = 8b3a2876e367749a1f50aed6813521efa16e0551fec5fb8d57f5081bf4a1c27063f53c3c64efc85a986c77244a92bf8c8d4bf9fa38a886fd7b267f426ea9107d
-Size (kross-5.66.0.tar.xz) = 127748 bytes
+SHA1 (kross-5.70.0.tar.xz) = a96865f9a4b67bb85b011ad4a8253baee78aa702
+RMD160 (kross-5.70.0.tar.xz) = 7f598d6548bed1693aa7b5608eed5a5f779d21d1
+SHA512 (kross-5.70.0.tar.xz) = 26f2ef5a836c911f8b892765a797c825e0bd1e9393364a541c31231028c75d1c81361229645531a4b5480c4b6d5e07b77f29c2657fa9a1f27855d3ac765d600d
+Size (kross-5.70.0.tar.xz) = 127908 bytes
