@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.77 2020/05/01 13:51:54 nia Exp $
+$NetBSD: distinfo,v 1.78 2020/06/07 02:02:45 markd Exp $
 
 SHA1 (vlc-3.0.10.tar.xz) = 4b3c75d1861bf463db53ba9059e8cc165f5c30a7
 RMD160 (vlc-3.0.10.tar.xz) = b3b0d383f34dbf58e2e79729884c8b9fcdd02807
@@ -10,4 +10,7 @@ SHA1 (patch-lib_core.c) = 8ec5557424e6ddc05cc365aacd1ec847d9a94605
 SHA1 (patch-lib_video.c) = 362aaf7977c264bb70a79e98cf18da923ae62e39
 SHA1 (patch-m4_dolt.m4) = a1aac0c1021001a489f9b515e218904e065ed659
 SHA1 (patch-modules_access_http_Makefile.am) = d91904c6cba1a75a6872d042e4fe87ed9ce65a22
+SHA1 (patch-modules_gui_qt_components_playlist_views.cpp) = b4f4ee5de10db5cb74769866036181e2cd481e92
+SHA1 (patch-modules_gui_qt_dialogs_plugins.cpp) = b5cffc0bd54fd07e77f891f6bca58132d333afdd
+SHA1 (patch-modules_gui_qt_util_timetooltip.hpp) = 01344f4b5df0d1f2520839143324b22f94887918
 SHA1 (patch-share_Makefile.am) = 4f126948c73159d06aef323b47a702442b5981e8
