@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/27 21:19:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/06/07 12:50:55 markd Exp $
 include/KF5/KWindowSystem/KKeyServer
 include/KF5/KWindowSystem/KSelectionOwner
 include/KF5/KWindowSystem/KSelectionWatcher
@@ -6,6 +6,8 @@ include/KF5/KWindowSystem/KStartupInfo
 include/KF5/KWindowSystem/KUserTimestamp
 include/KF5/KWindowSystem/KWindowEffects
 include/KF5/KWindowSystem/KWindowInfo
+include/KF5/KWindowSystem/KWindowShadow
+include/KF5/KWindowSystem/KWindowShadowTile
 include/KF5/KWindowSystem/KWindowSystem
 include/KF5/KWindowSystem/KXMessages
 include/KF5/KWindowSystem/NETWM
@@ -20,6 +22,7 @@ include/KF5/KWindowSystem/kstartupinfo.h
 include/KF5/KWindowSystem/kusertimestamp.h
 include/KF5/KWindowSystem/kwindoweffects.h
 include/KF5/KWindowSystem/kwindowinfo.h
+include/KF5/KWindowSystem/kwindowshadow.h
 include/KF5/KWindowSystem/kwindowsystem.h
 include/KF5/KWindowSystem/kwindowsystem_export.h
 include/KF5/KWindowSystem/kxmessages.h
@@ -27,6 +30,7 @@ include/KF5/KWindowSystem/netwm.h
 include/KF5/KWindowSystem/netwm_def.h
 include/KF5/KWindowSystem/private/kwindoweffects_p.h
 include/KF5/KWindowSystem/private/kwindowinfo_p.h
+include/KF5/KWindowSystem/private/kwindowshadow_p.h
 include/KF5/KWindowSystem/private/kwindowsystem_p.h
 include/KF5/KWindowSystem/private/kwindowsystemplugininterface_p.h
 include/KF5/kwindowsystem_version.h
