@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3410 2020/06/07 09:22:05 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3411 2020/06/07 10:28:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5381,3 +5381,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-tty-screen to 0.8.0 [taca 2020-06-07]
 	Updated misc/ruby-sprockets to 4.0.2 [taca 2020-06-07]
 	Updated net/ruby-connection_pool to 2.2.3 [taca 2020-06-07]
+	Removed mail/thunderbird60 successor mail/thunderbird [nia 2020-06-07]
+	Removed mail/thunderbird60-l10n successor mail/thunderbird-l10n [nia 2020-06-07]
