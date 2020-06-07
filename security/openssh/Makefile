@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2020/05/27 13:49:27 sevan Exp $
+# $NetBSD: Makefile,v 1.266 2020/06/07 06:27:52 rillig Exp $
 
 DISTNAME=		openssh-8.3p1
 PKGNAME=		${DISTNAME:S/p1/.1/}
@@ -71,9 +71,6 @@ CONFIGURE_ENV+=		LD=${CC:Q}
 # Enable S/Key support on NetBSD, Darwin, and Solaris.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "Darwin") || (${OPSYS} == "SunOS")
 .  include "../../security/skey/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
-.else
-CONFIGURE_ARGS+=	--without-skey
 .endif
 
 .if (${OPSYS} == "NetBSD")
