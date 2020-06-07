@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2018/09/23 15:45:47 taca Exp $
+# $NetBSD: Makefile,v 1.11 2020/06/07 15:57:40 taca Exp $
 #
 
-DISTNAME=	hashie-3.6.0
+DISTNAME=	hashie-4.1.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

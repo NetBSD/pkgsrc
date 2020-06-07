@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/09/23 15:45:47 taca Exp $
+$NetBSD: distinfo,v 1.11 2020/06/07 15:57:40 taca Exp $
 
-SHA1 (hashie-3.6.0.gem) = dd587a50e17f892713228f386650780aa1f9c462
-RMD160 (hashie-3.6.0.gem) = 39d021ac1793f0fae6bc86134b71236d6d4e7cda
-SHA512 (hashie-3.6.0.gem) = 7b5355a2b93267d6b7c63608aeac4bb7d21f32a982e2c59771d5a791f9a0c921d11e1b4a185067447917315ce98f8cc5f2b48a31efec3068fb1f1ec0e4386e15
-Size (hashie-3.6.0.gem) = 74752 bytes
+SHA1 (hashie-4.1.0.gem) = 8f7f459fb31fcef5dfb5c8d2850ea5e38546666c
+RMD160 (hashie-4.1.0.gem) = dd76ac648909aa7b67c4b755713d6512bf1fa946
+SHA512 (hashie-4.1.0.gem) = 81bc01f7a55adf329b2ddb7ddb0ad2fbb5959d280736bfac71f00ff4249eff1c7df3f7ad076218821cb6868e4112935df46865b73a4a07666dad3b8d76c830bf
+Size (hashie-4.1.0.gem) = 52224 bytes
