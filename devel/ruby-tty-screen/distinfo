@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/03/08 15:32:22 taca Exp $
+$NetBSD: distinfo,v 1.3 2020/06/07 08:34:41 taca Exp $
 
-SHA1 (tty-screen-0.7.1.gem) = cb8f94dcbd8580c5509e2f1266d2b9ddb8742b7d
-RMD160 (tty-screen-0.7.1.gem) = 273c2fb49e16d34e95ee0eb232ab925dcfa61ab2
-SHA512 (tty-screen-0.7.1.gem) = 99e760515705e1ac046b9afe2caed71c79f20764bf99e02a2333e9018ee819a658c8fe47552522a4dea9a8e20158f75ad761bd949d8e7451477318bb8bfe8771
-Size (tty-screen-0.7.1.gem) = 9728 bytes
+SHA1 (tty-screen-0.8.0.gem) = e2224a73ddac531caf866e161b34d493e6bfca0e
+RMD160 (tty-screen-0.8.0.gem) = 6213bc7afef35a321d6fa4cbdba1e47840b0e219
+SHA512 (tty-screen-0.8.0.gem) = 243f1539199e0b07ddb50920e70ed39778ece2053ed11f6472ed7b950328c1b0ba7addf39ccbfa13b8ef92f78b12086abf038ebad2c84d75acf5eabfa7d2a279
+Size (tty-screen-0.8.0.gem) = 10240 bytes
