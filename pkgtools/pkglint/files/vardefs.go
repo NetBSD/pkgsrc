@@ -820,7 +820,8 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.usr("SNIPROXY_GROUP", BtUserGroupName)
 	reg.usr("SSH_SUID", BtYesNo)
 	reg.usr("SSYNC_PAWD", enum("pawd pwd"))
-	reg.usr("SUSE_PREFER", enum("13.1 12.1 10.0")) // TODO: extract
+	reg.usr("SUSE_PREFER", reg.enumFromDirs(src,
+		"emulators", `^suse(\d\d)(\d)_base$`, "$1.$2", "13.1 12.1 10.0"))
 	reg.usr("TEXMFSITE", BtPathname)
 	reg.usr("THTTPD_LOG_FACILITY", BtIdentifierIndirect)
 	reg.usr("UCSPI_SSL_USER", BtUserGroupName)

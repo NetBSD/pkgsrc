@@ -1348,6 +1348,20 @@ func (s *Suite) Test_Package_checkDescr__DESCR_SRC(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_Package_checkDescr__no_package(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("category/package/module.mk")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"ERROR: Makefile: Cannot be read.")
+}
+
 // All files that can possibly be added to DISTFILES need a corresponding
 // entry in the distinfo file.
 //
@@ -1362,10 +1376,11 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__indirect_conditional_DIST
 		".include \"../../mk/bsd.prefs.mk\"",
 		"",
 		"DISTFILES.i386=\t\tdistfile-i386.tar.gz",
+		"DISTFILES.x86=\t\tdistfile-x86.tar.gz",
 		"DISTFILES.other=\tdistfile-other.tar.gz",
 		"",
 		".if ${MACHINE_ARCH} == i386",
-		"DISTFILES+=\t${DISTFILES.i386}",
+		"DISTFILES+=\t${DISTFILES.i386} ${DISTFILES.x86}",
 		".else",
 		"DISTFILES+=\t${DISTFILES.other}",
 		".endif",
@@ -1388,8 +1403,42 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__indirect_conditional_DIST
 	G.Check(".")
 
 	t.CheckOutputLines(
-		"WARN: Makefile:26: Distfile \"distfile-i386.tar.gz\" is not mentioned in distinfo.",
-		"WARN: Makefile:28: Distfile \"distfile-other.tar.gz\" is not mentioned in distinfo.")
+		"WARN: Makefile:27: Distfile \"distfile-i386.tar.gz\" is not mentioned in distinfo.",
+		"WARN: Makefile:27: Distfile \"distfile-x86.tar.gz\" is not mentioned in distinfo.",
+		"WARN: Makefile:29: Distfile \"distfile-other.tar.gz\" is not mentioned in distinfo.")
+}
+
+func (s *Suite) Test_Package_checkDistfilesInDistinfo__unresolvable(c *check.C) {
+	G.Experimental = true
+
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
+		".if ${MACHINE_ARCH} == i386",
+		"DISTFILES+=\t${UNKNOWN}",
+		".endif",
+		"",
+		"DISTFILES+=\tok-3.tar.gz")
+	t.CreateFileLines("category/package/distinfo",
+		CvsID,
+		"",
+		"SHA1 (ok-3.tar.gz) = 1234",
+		"RMD160 (ok-3.tar.gz) = 1234",
+		"SHA512 (ok-3.tar.gz) = 1234",
+		"Size (ok-3.tar.gz) = 1234",
+		"SHA1 (package-1.0.tar.gz) = 1234",
+		"RMD160 (package-1.0.tar.gz) = 1234",
+		"SHA512 (package-1.0.tar.gz) = 1234",
+		"Size (package-1.0.tar.gz) = 1234")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:23: UNKNOWN is used but not defined.")
 }
 
 func (s *Suite) Test_Package_checkDistfilesInDistinfo__indirect_DIST_SUBDIR(c *check.C) {
@@ -1464,6 +1513,51 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__depending_on_package_sett
 	t.CheckOutputLines(
 		"WARN: ../../print/texlive/package.mk:4: Distfile \"varisize.r15878.tar.gz\" " +
 			"is not mentioned in ../../print/tex-varisize/distinfo.")
+}
+
+func (s *Suite) Test_Package_checkDistfilesInDistinfo__empty_distfiles(c *check.C) {
+	G.Experimental = true
+
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"DISTFILES=\t# none")
+	t.CreateFileLines("category/package/distinfo",
+		CvsID)
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// For completely empty distinfo files, the check is skipped.
+	t.CheckOutputLines(
+		"WARN: distinfo: This file should not exist.",
+		"NOTE: distinfo:1: Empty line expected below this line.")
+}
+
+func (s *Suite) Test_Package_checkDistfilesInDistinfo__no_distfiles(c *check.C) {
+	G.Experimental = true
+
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"#DISTNAME=\t# undefined",
+		"#DISTFILES=\t# undefined")
+	t.CreateFileLines("category/package/distinfo",
+		CvsID,
+		"",
+		"SHA1 (distfile-1.0.tar.gz) = 1234",
+		"RMD160 (distfile-1.0.tar.gz) = 1234",
+		"SHA512 (distfile-1.0.tar.gz) = 1234",
+		"Size (distfile-1.0.tar.gz) = 1234 bytes")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// For completely empty distinfo files, the check is skipped.
+	t.CheckOutputLines(
+		"WARN: distinfo: This file should not exist.")
 }
 
 func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE(c *check.C) {
