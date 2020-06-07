@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3401 2020/06/07 06:40:59 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3402 2020/06/07 06:47:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5372,3 +5372,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/ruby-sequel to 5.33.0 [taca 2020-06-07]
 	Updated devel/ruby-cucumber-expressions to 10.2.0 [taca 2020-06-07]
 	Updated devel/ruby-facade to 1.1.1 [taca 2020-06-07]
+	Updated devel/ruby-fast_gettext to 2.0.3 [taca 2020-06-07]
