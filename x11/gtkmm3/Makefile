@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/06/07 17:01:32 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2020/06/07 17:14:23 rillig Exp $
 
 DISTNAME=	gtkmm-3.24.2
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
@@ -21,9 +21,10 @@ PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
 TEST_TARGET=		check
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+
 PLIST_VARS+=	x11
-.if !empty(PKG_BUILD_OPTIONS.gtk3:Mx11)
+.if ${PKG_BUILD_OPTIONS.gtk3:Mx11}
 PLIST.x11=	yes
 .endif
 
@@ -35,6 +36,5 @@ PLIST.x11=	yes
 .include "../../graphics/cairomm/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
