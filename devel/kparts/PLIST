@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/04/25 20:50:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/07 11:18:32 markd Exp $
 include/KF5/KParts/KParts/BrowserArguments
 include/KF5/KParts/KParts/BrowserExtension
 include/KF5/KParts/KParts/BrowserHostExtension
@@ -20,6 +20,7 @@ include/KF5/KParts/KParts/OpenUrlEvent
 include/KF5/KParts/KParts/Part
 include/KF5/KParts/KParts/PartActivateEvent
 include/KF5/KParts/KParts/PartBase
+include/KF5/KParts/KParts/PartLoader
 include/KF5/KParts/KParts/PartManager
 include/KF5/KParts/KParts/PartSelectEvent
 include/KF5/KParts/KParts/Plugin
@@ -53,6 +54,7 @@ include/KF5/KParts/kparts/openurlevent.h
 include/KF5/KParts/kparts/part.h
 include/KF5/KParts/kparts/partactivateevent.h
 include/KF5/KParts/kparts/partbase.h
+include/KF5/KParts/kparts/partloader.h
 include/KF5/KParts/kparts/partmanager.h
 include/KF5/KParts/kparts/partselectevent.h
 include/KF5/KParts/kparts/plugin.h
@@ -72,7 +74,6 @@ lib/libKF5Parts.so
 lib/libKF5Parts.so.5
 lib/libKF5Parts.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KParts.pri
-qt5/plugins/notepadpart.so
 qt5/plugins/spellcheckplugin.so
 share/kdevappwizard/templates/kpartsapp.tar.bz2
 share/kservicetypes5/browserview.desktop
