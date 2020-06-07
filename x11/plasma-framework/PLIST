@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/01/29 11:49:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/06/07 12:54:11 markd Exp $
 bin/plasmapkg2
 include/KF5/Plasma/Applet
 include/KF5/Plasma/Containment
@@ -81,7 +81,6 @@ qt5/plugins/kpackage/packagestructure/plasmageneric_packagestructure.so
 qt5/plugins/kpackage/packagestructure/plasmatheme_packagestructure.so
 qt5/plugins/kpackage/packagestructure/plasmoid_packagestructure.so
 qt5/plugins/plasma/scriptengines/plasma_appletscript_declarative.so
-qt5/plugins/plasma_engine_testengine.so
 qt5/qml/QtQuick/Controls.2/Plasma/BusyIndicator.qml
 qt5/qml/QtQuick/Controls.2/Plasma/Button.qml
 qt5/qml/QtQuick/Controls.2/Plasma/CheckBox.qml
@@ -100,9 +99,11 @@ qt5/qml/QtQuick/Controls.2/Plasma/ItemDelegate.qml
 qt5/qml/QtQuick/Controls.2/Plasma/Label.qml
 qt5/qml/QtQuick/Controls.2/Plasma/Menu.qml
 qt5/qml/QtQuick/Controls.2/Plasma/MenuItem.qml
+qt5/qml/QtQuick/Controls.2/Plasma/Page.qml
 qt5/qml/QtQuick/Controls.2/Plasma/PageIndicator.qml
 qt5/qml/QtQuick/Controls.2/Plasma/Popup.qml
 qt5/qml/QtQuick/Controls.2/Plasma/ProgressBar.qml
+qt5/qml/QtQuick/Controls.2/Plasma/README.md
 qt5/qml/QtQuick/Controls.2/Plasma/RadioButton.qml
 qt5/qml/QtQuick/Controls.2/Plasma/RadioDelegate.qml
 qt5/qml/QtQuick/Controls.2/Plasma/RadioIndicator.qml
@@ -194,9 +195,11 @@ qt5/qml/org/kde/plasma/components.3/ItemDelegate.qml
 qt5/qml/org/kde/plasma/components.3/Label.qml
 qt5/qml/org/kde/plasma/components.3/Menu.qml
 qt5/qml/org/kde/plasma/components.3/MenuItem.qml
+qt5/qml/org/kde/plasma/components.3/Page.qml
 qt5/qml/org/kde/plasma/components.3/PageIndicator.qml
 qt5/qml/org/kde/plasma/components.3/Popup.qml
 qt5/qml/org/kde/plasma/components.3/ProgressBar.qml
+qt5/qml/org/kde/plasma/components.3/README.md
 qt5/qml/org/kde/plasma/components.3/RadioButton.qml
 qt5/qml/org/kde/plasma/components.3/RadioDelegate.qml
 qt5/qml/org/kde/plasma/components.3/RadioIndicator.qml
@@ -277,9 +280,11 @@ qt5/qml/org/kde/plasma/core/qmldir
 qt5/qml/org/kde/plasma/extras/App.qml
 qt5/qml/org/kde/plasma/extras/ConditionalLoader.qml
 qt5/qml/org/kde/plasma/extras/DescriptiveLabel.qml
+qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml
 qt5/qml/org/kde/plasma/extras/Heading.qml
 qt5/qml/org/kde/plasma/extras/PageRow.qml
 qt5/qml/org/kde/plasma/extras/Paragraph.qml
+qt5/qml/org/kde/plasma/extras/PlasmoidHeading.qml
 qt5/qml/org/kde/plasma/extras/ScrollArea.qml
 qt5/qml/org/kde/plasma/extras/Title.qml
 qt5/qml/org/kde/plasma/extras/animations/ActivateAnimation.qml
@@ -298,7 +303,6 @@ share/kdevappwizard/templates/plasma-wallpaper-with-qml-extension.tar.bz2
 share/kdevappwizard/templates/plasma-wallpaper.tar.bz2
 share/kdevappwizard/templates/qml-plasmoid-with-qml-extension.tar.bz2
 share/kdevappwizard/templates/qml-plasmoid.tar.bz2
-share/kservices5/plasma-dataengine-testengine.desktop
 share/kservices5/plasma-scriptengine-applet-declarative.desktop
 share/kservicetypes5/plasma-applet.desktop
 share/kservicetypes5/plasma-containment.desktop
@@ -312,6 +316,7 @@ share/kservicetypes5/plasma-service.desktop
 share/kservicetypes5/plasma-shell.desktop
 share/kservicetypes5/plasma-wallpaper.desktop
 share/locale/ar/LC_MESSAGES/libplasma5.mo
+share/locale/ast/LC_MESSAGES/libplasma5.mo
 share/locale/bs/LC_MESSAGES/libplasma5.mo
 share/locale/ca/LC_MESSAGES/libplasma5.mo
 share/locale/ca@valencia/LC_MESSAGES/libplasma5.mo
@@ -552,6 +557,7 @@ share/plasma/desktoptheme/default/widgets/notes.svgz
 share/plasma/desktoptheme/default/widgets/pager.svgz
 share/plasma/desktoptheme/default/widgets/panel-background.svgz
 share/plasma/desktoptheme/default/widgets/picker.svgz
+share/plasma/desktoptheme/default/widgets/plasmoidheading.svgz
 share/plasma/desktoptheme/default/widgets/plot-background.svgz
 share/plasma/desktoptheme/default/widgets/scrollbar.svgz
 share/plasma/desktoptheme/default/widgets/scrollwidget.svgz
