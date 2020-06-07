@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.45 2020/06/06 13:17:34 rillig Exp $
+# $NetBSD: subst.sh,v 1.46 2020/06/07 05:53:53 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1665,6 +1665,86 @@ if test_case_begin 'several substitution, only one applies to file'; then
 		'=> Substituting "id" in first second'
 	assert_that 'first' --file-contains-exactly 'first-modified'
 	assert_that 'second' --file-contains-exactly 'second'
+
+	test_case_end
+fi
+
+
+if test_case_begin 'identity substitution with newline'; then
+
+	# Ensures that the adjusted sed command line in the "found=" line
+	# in mk/subst.mk does not create shell syntax errors.
+
+	# This is the sed command after the "found=" line in mk/subst.mk.
+	# It tests whether any of the patterns is found.
+	# It only outputs the actually found lines (-n) by appending a "p"
+	# to the usual "s,from,to," commands.
+	mock_sed=$(
+		newline='
+'
+		args='-n'
+
+		# In this "usual" sed command, the "p" is added.
+		args="$args -e s,identity,identity,p"
+
+		# This is considered an "unusual" sed command because of
+		# the leading 1, therefore no "p" is added.
+		#
+		# Ideally this should be considered a "usual" sed command,
+		# even though it only applies to some of the lines.
+		# To do this, mk/scripts/subst-identity.awk has to parse
+		# sed addresses, in addition to substitutions.
+		args="$args -e 1s,first line,first line,"
+
+		# In the Makefile, the additional quotes at the beginning
+		# make this an "unusual" sed command, and the :C modifier
+		# in subst.mk doesn't see that after unquoting the word,
+		# the sed command is quite usual.  This is an edge case
+		# that doesn't occur in practice.
+		args="$args -e s,unusual,unusual,g"
+
+		# No "p" is added since this is not a "usual" substitution.
+		# If it had been found, the file would have changed anyway,
+		# and this sed command line would not be executed.
+		args="$args -e /not found/d"
+
+		# Same here.  Just make sure that the generated sed command
+		# line does not lead to a syntax error in the shell.
+		args="$args -e /not found/a\\${newline}added${newline}"
+
+		args="$args file"
+
+		mock_cmd 'mock-sed' \
+			--when-args "$args" --then-output 'identity'
+	)
+	create_file 'testcase.mk' <<-EOF
+		SUBST_CLASSES+=		id
+		SUBST_FILES.id=		file
+		SUBST_SED.id=		-e 's,identity,identity,'
+		SUBST_SED.id+=		-e '1s,first line,first line,'
+		SUBST_SED.id+=		-e '''''s,unusual,unusual,g'
+		SUBST_SED.id+=		-e '/not found/d'
+		SUBST_SED.id+=		-e '/not found/a\\\${.newline}added\${.newline}'
+		# Use the standard sed for the main part.
+		SUBST_FILTER_CMD.id=	LC_ALL=C sed \${SUBST_SED.id}
+
+		.include "prepare-subst.mk"
+		# Use the mocked sed for the "found=" part.
+		SED=			$mock_sed
+		.include "mk/subst.mk"
+		# ignore PKG_FAIL_REASON (SUBST_SED + SUBST_FILTER_CMD)
+	EOF
+	create_file 'file' <<-EOF
+		identity
+	EOF
+
+	run_bmake 'testcase.mk' 'subst-id' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$tmpdir/output" --file-is-lines \
+		'=> Substituting "id" in file'
+	assert_that 'file' --file-is-lines \
+		'identity'
 
 	test_case_end
 fi
