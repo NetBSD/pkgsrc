@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.32 2020/06/06 12:22:17 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.33 2020/06/07 23:11:16 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -316,6 +316,98 @@ above.</para>
 <para>Patches that are not essential for the package to work should only
 be reported upstream but not committed to pkgsrc, to make future updates
 easier.</para>
+
+</sect2>
+
+<sect2 id="bulk.var.builderr">
+<title>Force compiler options only in the build phase</title>
+
+<para>When adding custom compiler flags via <varname>CFLAGS</varname>,
+these apply to all phases of the package build process. Especially in the
+configure phase, adding <literal>-Werror</literal> leads to wrong
+decisions. The GNU configure scripts feed many small test programs to the
+C compiler to see whether certain headers are available, functions are
+defined in a library and programs can be run. In many cases these
+programs would not survive a strict compiler run with <literal>-Wall
+-Wextra -Werror</literal>.</para>
+
+<para>The pkgsrc infrastructure is flexible enough to support compiler
+options being added between the <literal>configure</literal> and
+<literal>build</literal> phases. It's a little more complicated than the
+other examples in this section but still easy enough.</para>
+
+<para>The basic idea is to use the pkgsrc compiler wrapper to inject the
+desired compiler options. The compiler wrapper's original task is to hide
+unwanted directories of include files and to normalize compiler options.
+It does this by wrapping the compiler command and rewriting the command
+line. To see this in action, run <command>bmake patch</command> in a
+package directory and examine the
+<filename>work/.cwrappers/config</filename> directory. It contains
+individual configurations for the C compiler and the related tools. The
+plan is to find a hook between the configure and build phases, and to
+modify these configuration files at that point.</para>
+
+<para>To find this hook, have a look at
+<filename>mk/build/build.mk</filename>, which contains among others the
+<literal>pre-build-checks-hook</literal>. The word
+<literal>checks</literal> doesn't quite fit, but the
+<literal>pre-build-hook</literal> sounds good enough.</para>
+
+<para>The code to be included in &mk.conf; is:</para>
+
+<programlisting>
+# Just a few example options.
+BUILD_ONLY_CFLAGS=      -Wall -Werror -O2 -DTEMPDIR='"/tmp"'
+
+.if ${BUILD_ONLY_CFLAGS:U:M*}
+pre-build-checks-hook: add-build-only-cflags
+
+add-build-only-cflags: .PHONY
+        ${RUN} cd ${CWRAPPERS_CONFIG_DIR};      \
+        ${TEST} ! -f ${.TARGET} || exit 0;      \
+        for flag in ${BUILD_ONLY_CFLAGS}; do    \
+                ${ECHO} "append=$$flag" >> cc;  \
+        done;                                   \
+        > ${.TARGET}
+.endif
+</programlisting>
+
+<para>(When editing the &mk.conf;, make sure that the commands of the
+<literal>add-build-only-cflags</literal> target are indented with a tab,
+not with spaces.)</para>
+
+<para>The condition in the <literal>.if</literal> statement contains the
+<literal>:U</literal> modifier to prevent parse errors if the variable
+should be undefined, possibly because it is only defined for a subset of
+the packages. The <literal>:M*</literal> modifier ensures that there is
+at least one compiler option, to prevent a syntax error in the shell
+parser.</para>
+
+<para>The code around the <literal>${.TARGET}</literal> variable ensures
+that the additional compiler options are only appended once, even if
+<command>bmake build</command> is run multiple times. To do this, it
+creates a marker file.</para>
+
+<para>To verify that this setup works, run <command>bmake
+configure</command> in a package directory. Up to now, everything works
+as usual. Examine the directory
+<filename>work/.cwrappers/config</filename> to see that the compiler
+options from <varname>BUILD_ONLY_CFLAGS</varname> are not yet added to
+the file <filename>cc</filename>. Examine the tail of the
+<filename>work/.work.log</filename> file to see that the normal compiler
+options are used.</para>
+
+<para>Now run <command>bmake build</command>. This will append the
+options to the file <filename>cc</filename> and will create the marker
+file in the same directory. After that, the build starts as usual, but
+with the added compiler options. Examine the tail of the file
+<filename>work/.work.log</filename> to see that the lines starting with
+<literal>[*]</literal> don't contain the compiler options, but the
+corresponding lines starting with <literal>&lt;.&gt;</literal> do end
+with these options.</para>
+
+<para>Building packages using this setup variant and fixing the resulting
+bugs is the same as in <xref linkend="bulk.var.comperr"/>.</para>
 
 </sect2>
 
