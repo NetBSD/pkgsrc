@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/08/27 06:26:19 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/06/07 01:46:52 markd Exp $
 
-SHA1 (grantlee-5.1.0.tar.gz) = 98429f252d850ac3ad673a1c49a0e833bafe5d3c
-RMD160 (grantlee-5.1.0.tar.gz) = 7ebd801276dd2aa257f2fd5717ddf4537551d810
-SHA512 (grantlee-5.1.0.tar.gz) = 2b806a0770b9c6d02f207d5b4939ae8cae325de4fa01901320ffef5c8442ef0f1c10dd799966d0bf0d223e6541f93db8568aaf922ea1b334bcb2f85f6373a936
-Size (grantlee-5.1.0.tar.gz) = 1175380 bytes
-SHA1 (patch-CMakeLists.txt) = 22dab41e1a0c62bdf578efd2c44b80b8b4737e72
-SHA1 (patch-templates_lib_lexer_p.h) = 72ba688ce9ad33016cadfbb022ce90a17b926a6a
+SHA1 (grantlee-5.2.0.tar.gz) = 2140f8a6c7c96724d587828464a8ad2e19836dda
+RMD160 (grantlee-5.2.0.tar.gz) = b21b4b27fe5b3d916ca46cbc87de45bc65dee52a
+SHA512 (grantlee-5.2.0.tar.gz) = 94b53d103aa775e6d45357d44d5634a5214d12ea7178d251fda30c5a88ddc2682ae44501ee8b7dc475793b84fa0998eb0bc13eea3f2e10ab29b1489db6ea60bd
+Size (grantlee-5.2.0.tar.gz) = 1166467 bytes
