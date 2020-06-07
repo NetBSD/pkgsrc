@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3442 2020/06/07 18:57:00 otis Exp $
+$NetBSD: CHANGES-2020,v 1.3443 2020/06/07 22:09:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5489,3 +5489,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-hashie to 4.1.0 [taca 2020-06-07]
 	Updated devel/ruby-rspec_junit_formatter to 0.4.1 [taca 2020-06-07]
 	Updated net/powerdns to 4.2.2 [otis 2020-06-07]
+	Updated mail/roundcube to 1.4.5 [taca 2020-06-07]
+	Updated mail/roundcube-plugin-enigma to 1.4.5 [taca 2020-06-07]
+	Updated mail/roundcube-plugin-zipdownload to 1.4.5 [taca 2020-06-07]
+	Updated mail/roundcube-plugin-password to 1.4.5 [taca 2020-06-07]
