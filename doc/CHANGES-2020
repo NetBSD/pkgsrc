@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3399 2020/06/07 06:22:00 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3400 2020/06/07 06:31:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5370,3 +5370,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/grantlee-qt5 to 5.2.0 [markd 2020-06-07]
 	Updated multimedia/mlt to 6.20.0 [markd 2020-06-07]
 	Updated databases/ruby-sequel to 5.33.0 [taca 2020-06-07]
+	Updated devel/ruby-cucumber-expressions to 10.2.0 [taca 2020-06-07]
