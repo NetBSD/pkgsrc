@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/01/29 11:49:25 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/07 11:22:20 markd Exp $
 
-SHA1 (krunner-5.66.0.tar.xz) = b241ca997b983da8e6732bd0af9ad7b55b1a2d4b
-RMD160 (krunner-5.66.0.tar.xz) = d9abc70932994c5e21d08d09a0ca1eaa5f939874
-SHA512 (krunner-5.66.0.tar.xz) = bcbc5e901797f7ca4fa3e9c3185941f38f87dc0ab6ae50c51e382e9440577e8b4eb133d503de0d41a0bcfa49df745997097c8ee008b56dfc7e6354b40df5d50c
-Size (krunner-5.66.0.tar.xz) = 62752 bytes
+SHA1 (krunner-5.70.0.tar.xz) = 6e87027add43803490de9bbacefff498b71ad811
+RMD160 (krunner-5.70.0.tar.xz) = de1b71464fe9fe8976b6037ede7ccaf55c2ef414
+SHA512 (krunner-5.70.0.tar.xz) = 861492f7106bc4f2f392e28f3ae7b61773d37d58d26b73a67c4410e2406c96e58183c584b18a24d7f9f41ec3165337d37e4616063365d65a635e07d64e18909c
+Size (krunner-5.70.0.tar.xz) = 64184 bytes
