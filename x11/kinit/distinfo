@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/01/29 11:49:30 markd Exp $
+$NetBSD: distinfo,v 1.10 2020/06/07 12:39:51 markd Exp $
 
-SHA1 (kinit-5.66.0.tar.xz) = 8271a28345b70e1023a98b1020d3708aafb38b77
-RMD160 (kinit-5.66.0.tar.xz) = a960f3faa52e8696a1f19f12d466a1aa49a4ee3b
-SHA512 (kinit-5.66.0.tar.xz) = a8cf86e53cdfb4c361b492f3a8dfe05cea0f1fb5e798e6a043912e9ab229088e0656f60ea9eb92d9e44a3fd882cc0eab93994aa1ffa1646d7ae18c6729d0438a
-Size (kinit-5.66.0.tar.xz) = 119088 bytes
+SHA1 (kinit-5.70.0.tar.xz) = 835c28a0825603056bdddf981f11076a45be7c0d
+RMD160 (kinit-5.70.0.tar.xz) = 232d410aefc6321a5c3a72610df8979577e53476
+SHA512 (kinit-5.70.0.tar.xz) = be9d066c54fdf0a22a16c40b14b55c25cc64e3c8932d69e44ac5aa3abfe191939129dc20f0a75271c2fab8102fea711e5d500735f48dd0a98e98bda9cb2672d4
+Size (kinit-5.70.0.tar.xz) = 119288 bytes
