@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/11/05 15:28:43 taca Exp $
+# $NetBSD: Makefile,v 1.12 2020/06/07 14:42:47 taca Exp $
 
-DISTNAME=	net-scp-2.0.0
+DISTNAME=	net-scp-3.0.0
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/net-ssh/net-scp
 COMMENT=	Secure copy for Ruby
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.6.5<6:../../security/ruby-net-ssh
+DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.6.5<7:../../security/ruby-net-ssh
 
 USE_LANGUAGES=	# defined
 
