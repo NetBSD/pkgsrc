@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2020/03/24 15:23:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/07 14:21:52 taca Exp $
 bin/recog_export${RUBY_SUFFIX}
 bin/recog_match${RUBY_SUFFIX}
+bin/recog_standardize${RUBY_SUFFIX}
 bin/recog_verify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/bug_report.md
@@ -9,6 +10,8 @@ ${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/fingerprint_request.md
 ${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.ruby-gemset
+${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -19,6 +22,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/recog_export
 ${GEM_LIBDIR}/bin/recog_match
+${GEM_LIBDIR}/bin/recog_standardize
 ${GEM_LIBDIR}/bin/recog_verify
 ${GEM_LIBDIR}/cpe-remap.yaml
 ${GEM_LIBDIR}/features/data/failing_banners_fingerprints.xml
@@ -30,8 +34,20 @@ ${GEM_LIBDIR}/features/data/successful_tests.xml
 ${GEM_LIBDIR}/features/data/tests_with_failures.xml
 ${GEM_LIBDIR}/features/data/tests_with_warnings.xml
 ${GEM_LIBDIR}/features/match.feature
+${GEM_LIBDIR}/features/support/aruba.rb
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/features/verify.feature
+${GEM_LIBDIR}/identifiers/README.md
+${GEM_LIBDIR}/identifiers/os_architecture.txt
+${GEM_LIBDIR}/identifiers/os_device.txt
+${GEM_LIBDIR}/identifiers/os_family.txt
+${GEM_LIBDIR}/identifiers/os_product.txt
+${GEM_LIBDIR}/identifiers/service_family.txt
+${GEM_LIBDIR}/identifiers/service_product.txt
+${GEM_LIBDIR}/identifiers/software_class.txt
+${GEM_LIBDIR}/identifiers/software_family.txt
+${GEM_LIBDIR}/identifiers/software_product.txt
+${GEM_LIBDIR}/identifiers/vendor.txt
 ${GEM_LIBDIR}/lib/recog.rb
 ${GEM_LIBDIR}/lib/recog/db.rb
 ${GEM_LIBDIR}/lib/recog/db_manager.rb
