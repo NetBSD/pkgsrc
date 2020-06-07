@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3430 2020/06/07 15:30:16 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3431 2020/06/07 15:32:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5477,3 +5477,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-http to 4.4.1 [taca 2020-06-07]
 	Updated devel/ruby-mercenary to 0.4.0 [taca 2020-06-07]
 	Updated www/ruby-jekyll to 4.1.0 [taca 2020-06-07]
+	Updated www/ruby-jekyll-archives to 2.2.1 [taca 2020-06-07]
