@@ -267,7 +267,7 @@ func (ck *PatchChecker) checkAddedAbsPath(before string, dir Path, after string)
 	before = replaceAll(before, `^[ \t]*set\(\w+[ \t]*`, "")
 
 	// Ignore comments in shell programs.
-	if m, first := match1(before, `^[ \t]*#[ \t]*(\w*)`); m && first != "define" {
+	if hasPrefix(trimHspace(before), "#") {
 		return
 	}
 

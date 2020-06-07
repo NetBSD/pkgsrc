@@ -376,7 +376,7 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__missing_BUILDLINK_TREE_at_end(c *ch
 	CheckLinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
-		"WARN: buildlink3.mk:13: This line should contain the following text: BUILDLINK_TREE+=\t-hs-X11")
+		"WARN: buildlink3.mk:13: This line should consist of the following text: BUILDLINK_TREE+=\t-hs-X11")
 }
 
 func (s *Suite) Test_CheckLinesBuildlink3Mk__DEPMETHOD_placement(c *check.C) {
@@ -424,7 +424,7 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__multiple_inclusion_wrong(c *check.C
 	t.CheckOutputLines(
 		"WARN: buildlink3.mk:5: HS_X11_BUILDLINK3_MK is used but not defined.",
 		"WARN: buildlink3.mk:6: UNRELATED_BUILDLINK3_MK is defined but not used.",
-		"WARN: buildlink3.mk:6: This line should contain the following text: HS_X11_BUILDLINK3_MK:=")
+		"WARN: buildlink3.mk:6: This line should consist of the following text: HS_X11_BUILDLINK3_MK:=")
 }
 
 func (s *Suite) Test_CheckLinesBuildlink3Mk__missing_endif(c *check.C) {
@@ -629,6 +629,21 @@ func (s *Suite) Test_Buildlink3Checker_checkSecondParagraph__missing_mkbase(c *c
 		"WARN: ~/category/package/Makefile:3: As DISTNAME is not a valid package name, "+
 			"please define the PKGNAME explicitly.",
 		"WARN: ~/category/package/Makefile:4: \"\" is not a valid package name.")
+}
+
+func (s *Suite) Test_Buildlink3Checker_checkPkgbaseMismatch(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileBuildlink3Id("category/package/buildlink3.mk", "unrelated")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"ERROR: buildlink3.mk:3: Package name mismatch between \"unrelated\" " +
+			"in this file and \"package\" from Makefile:3.")
 }
 
 func (s *Suite) Test_Buildlink3Checker_checkMainPart__if_else_endif(c *check.C) {
@@ -1098,7 +1113,19 @@ func (s *Suite) Test_LoadBuildlink3Data(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileBuildlink3("category/package/buildlink3.mk",
-		"BUILDLINK_ABI_DEPENDS.package+=\tpackage>=0.1")
+		"BUILDLINK_ABI_DEPENDS.package+=\tpackage>=0.1",
+		"",
+		"BUILDLINK_API_DEPENDS.other+=\tother>=0.1",
+		"BUILDLINK_ABI_DEPENDS.other+=\tother>=0.1.3",
+		"BUILDLINK_API_DEPENDS.package+=\tinvalid",
+		"BUILDLINK_API_DEPENDS.package+=\tpackage>=0.1:extra",
+		"BUILDLINK_ABI_DEPENDS.package+=\tinvalid",
+		"BUILDLINK_ABI_DEPENDS.package+=\tpackage>=0.1:extra",
+
+		"BUILDLINK_PREFIX.package=\t${PREFIX}",
+		"BUILDLINK_PREFIX.other=\t${PREFIX}",
+
+		"BUILDLINK_PKGSRCDIR.other=\tcategory/package")
 	t.Chdir("category/package")
 	mklines := LoadMk("buildlink3.mk", nil, MustSucceed)
 
@@ -1106,6 +1133,7 @@ func (s *Suite) Test_LoadBuildlink3Data(c *check.C) {
 
 	t.CheckDeepEquals(data, &Buildlink3Data{
 		id:        "package",
+		prefix:    "${PREFIX}",
 		pkgsrcdir: "../../category/package",
 		apiDepends: &DependencyPattern{
 			Pkgbase: "package",

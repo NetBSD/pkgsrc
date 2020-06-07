@@ -268,7 +268,7 @@ func (ck *MkCondChecker) checkCompare(left *MkCondTerm, op string, right *MkCond
 	switch {
 	case right.Num != "":
 		ck.checkCompareVarNum(op, right.Num)
-	case left.Var != nil && right.Var == nil && right.Num == "":
+	case left.Var != nil && right.Var == nil:
 		ck.checkCompareVarStr(left.Var, op, right.Str)
 	}
 }

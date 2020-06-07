@@ -1694,6 +1694,30 @@ func (s *Suite) Test_RedundantScope_checkAppendUnique__eval_assignment(c *check.
 			"because it will later be appended in included.mk:2.")
 }
 
+func (s *Suite) Test_RedundantScope_checkAppendUnique__not_redundant(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCategory("perl")
+	t.SetUpPackage("category/package",
+		"CATEGORIES:=\tcategory",
+		".include \"included1.mk\"",
+		".include \"included2.mk\"")
+	t.Chdir("category/package")
+	t.CreateFileLines("included1.mk",
+		MkCvsID,
+		"CATEGORIES+=\tperl")
+	t.CreateFileLines("included2.mk",
+		MkCvsID,
+		"CATEGORIES+=\tperl")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// The additions in included1.mk and included2.mk are not redundant
+	// since neither of them includes the other.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_includePath_includes(c *check.C) {
 	t := s.Init(c)
 

@@ -936,7 +936,8 @@ func (s *Suite) Test_PlistChecker_checkPathMan(c *check.C) {
 		"man/cat1/formatted.0",
 		"man/man1/formatted.1",
 		"man/man1/program.8",
-		"man/manx/program.x")
+		"man/manx/program.x",
+		"man/not-valid")
 
 	CheckLinesPlist(nil, lines)
 
@@ -1444,6 +1445,8 @@ func (s *Suite) Test_NewPlistRank(c *check.C) {
 	t.CheckDeepEquals(NewPlistRank("PLIST.NetBSD-x86_64"), &PlistRank{3, "NetBSD", "x86_64", ""})
 	t.CheckDeepEquals(NewPlistRank("PLIST.linux-x86_64"), &PlistRank{3, "linux", "x86_64", ""})
 	t.CheckDeepEquals(NewPlistRank("PLIST.solaris-sparc"), &PlistRank{3, "solaris", "sparc", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.solaris-specific"), &PlistRank{3, "", "", "solaris-specific"})
+	t.CheckDeepEquals(NewPlistRank("PLIST.arch-x86_64"), &PlistRank{3, "", "", "arch-x86_64"})
 	t.CheckDeepEquals(NewPlistRank("PLIST.other"), &PlistRank{3, "", "", "other"})
 
 	// To list all current PLIST filenames:

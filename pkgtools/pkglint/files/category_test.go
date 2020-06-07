@@ -32,7 +32,7 @@ func (s *Suite) Test_CheckdirCategory__totally_broken(c *check.C) {
 		"ERROR: ~/archivers/Makefile:2: \"pkg1\" does not contain a package.",
 		"ERROR: ~/archivers/Makefile:3: \"aaaaa\" does not contain a package.",
 		"NOTE: ~/archivers/Makefile:4: Empty line expected above this line.",
-		"WARN: ~/archivers/Makefile:4: This line should contain the following text: .include \"../mk/misc/category.mk\"",
+		"WARN: ~/archivers/Makefile:4: This line should consist of the following text: .include \"../mk/misc/category.mk\"",
 		"ERROR: ~/archivers/Makefile:4: The file must end here.")
 }
 
@@ -303,7 +303,7 @@ func (s *Suite) Test_CheckdirCategory__comment_at_the_top(c *check.C) {
 		"ERROR: ~/category/Makefile:3: SUBDIR+= line or empty line expected.",
 		"ERROR: ~/category/Makefile:3: Package \"package\" must be listed here.",
 		"NOTE: ~/category/Makefile:3: Empty line expected above this line.",
-		"WARN: ~/category/Makefile:3: This line should contain the following text: .include \"../mk/misc/category.mk\"",
+		"WARN: ~/category/Makefile:3: This line should consist of the following text: .include \"../mk/misc/category.mk\"",
 		"ERROR: ~/category/Makefile:3: The file must end here.")
 }
 
@@ -326,7 +326,7 @@ func (s *Suite) Test_CheckdirCategory__unexpected_EOF_while_reading_SUBDIR(c *ch
 	// Doesn't happen in practice since categories are created very seldom.
 	t.CheckOutputLines(
 		"NOTE: ~/category/Makefile:5: Empty line expected below this line.",
-		"WARN: ~/category/Makefile:EOF: This line should contain the following text: "+
+		"WARN: ~/category/Makefile:EOF: This line should consist of the following text: "+
 			".include \"../mk/misc/category.mk\"")
 }
 
