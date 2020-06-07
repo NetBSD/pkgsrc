@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3403 2020/06/07 06:48:37 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3404 2020/06/07 07:00:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5374,3 +5374,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-facade to 1.1.1 [taca 2020-06-07]
 	Updated devel/ruby-fast_gettext to 2.0.3 [taca 2020-06-07]
 	Updated devel/ruby-ffi to 1.13.0 [taca 2020-06-07]
+	Updated devel/ruby-google-protobuf to 3.12.2 [taca 2020-06-07]
