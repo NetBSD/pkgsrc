@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/05/13 04:01:36 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/07 15:52:22 rillig Exp $
 
 
 DISTNAME=	sloccount-2.26
@@ -9,7 +9,6 @@ MASTER_SITES=	https://www.dwheeler.com/sloccount/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.dwheeler.com/sloccount/
 COMMENT=	Counting physical Source Lines of Code (SLOC)
-
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	flex gunzip perl
