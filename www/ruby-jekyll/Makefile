@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2019/10/17 16:13:17 taca Exp $
+# $NetBSD: Makefile,v 1.38 2020/06/07 15:29:48 taca Exp $
 
-DISTNAME=	jekyll-4.0.0
-PKGREVISION=	1
+DISTNAME=	jekyll-4.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,7 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-watch>=2.0<3:../../www/ruby-jekyll-watch
 DEPENDS+=	${RUBY_PKGPREFIX}-kramdown>=2.1<3:../../textproc/ruby-kramdown
 DEPENDS+=	${RUBY_PKGPREFIX}-kramdown-parser-gfm>=1.0.1<2:../../textproc/ruby-kramdown-parser-gfm
 DEPENDS+=	${RUBY_PKGPREFIX}-liquid>=4.0<5:../../www/ruby-liquid
-DEPENDS+=	${RUBY_PKGPREFIX}-mercenary>=0.3.3<0.4:../../devel/ruby-mercenary
+DEPENDS+=	${RUBY_PKGPREFIX}-mercenary>=0.4.0:../../devel/ruby-mercenary
 DEPENDS+=	${RUBY_PKGPREFIX}-pathutil>=0.9<1:../../devel/ruby-pathutil
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=3.0<4:../../www/ruby-rouge
 DEPENDS+=	${RUBY_PKGPREFIX}-safe_yaml>=1.0<2:../../textproc/ruby-safe_yaml
@@ -31,8 +30,7 @@ USE_LANGUAGES=	# empty
 
 RUBYGEM_OPTIONS+=	--format-executable
 
+OVERRIDE_GEMSPEC+=	mercenary>=0.3.6
+
 .include "../../lang/ruby/gem.mk"
-.if ${RUBY_VER} != 26
-DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.7:../../misc/ruby-bundler
-.endif
 .include "../../mk/bsd.pkg.mk"
