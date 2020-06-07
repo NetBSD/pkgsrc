@@ -938,6 +938,27 @@ func (s *Suite) Test_PatchChecker_checkAddedAbsPath(c *check.C) {
 	test(
 		"#define L 150 /* Length of a line in /etc/passwd */",
 		nil...)
+
+	test(
+		"#define PID_FILE \"/var/run/daemon.pid\" /* comment */",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc VARBASE.")
+
+	// This is a rather theoretical case.
+	// Don't worry if pkglint doesn't complain about the absolute path here.
+	test(
+		"#define PID_FILE /* */ \"/var/run/daemon.pid\" /* */",
+		nil...)
+
+	// The absolute path occurs in a comment that is only opened but not closed.
+	// It's an edge case, and it may or may not be justified to complain here.
+	test(
+		"/* See /var/run/daemon.pid for details.",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc VARBASE.")
+
+	// Absolute paths in shell comments are not that dangerous.
+	test(
+		"# See /var/run/daemon.pid for details.",
+		nil...)
 }
 
 func (s *Suite) Test_PatchChecker_checktextCvsID(c *check.C) {

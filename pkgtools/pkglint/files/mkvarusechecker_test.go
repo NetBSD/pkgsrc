@@ -382,20 +382,117 @@ func (s *Suite) Test_MkVarUseChecker_checkVarname(c *check.C) {
 func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink(c *check.C) {
 	t := s.Init(c)
 
+	t.SetUpOption("option", "Description.")
+	t.CreateFileLines("mk/bsd.options.mk")
 	t.SetUpPackage("category/library")
 	t.CreateFileBuildlink3Id("category/library/buildlink3.mk", "lib")
 	t.SetUpPackage("category/package",
 		"CONFIGURE_ARGS+=\t--with-library=${BUILDLINK_PREFIX.library}",
 		"CONFIGURE_ARGS+=\t--with-lib=${BUILDLINK_PREFIX.lib}",
+		"CONFIGURE_ARGS+=\t--with-package=${BUILDLINK_PREFIX.package}",
+		"CONFIGURE_ARGS+=\t--with-package=${BUILDLINK_PREFIX.${PKGBASE}}",
 		"",
 		".include \"../../category/library/buildlink3.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\toption",
+		".include \"../../mk/bsd.options.mk\"",
+		".if ${PKG_OPTIONS:Moption}",
+		"CONFIGURE_ARGS+=\t--with-option=${BUILDLINK_PREFIX.package}",
+		".endif")
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
+		"BL3=\t${BUILDLINK_PREFIX.unknown-bl3}",
+		"BL3+=\t${BUILDLINK_PREFIX.package}")
+	t.CreateFileLines("category/package/builtin.mk",
+		MkCvsID,
+		"BUILTIN=\t${BUILDLINK_PREFIX.unknown-builtin}",
+		"BUILTIN+=\t${BUILDLINK_PREFIX.package}")
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
 	G.Check(".")
 
 	t.CheckOutputLines(
-		"WARN: Makefile:20: Buildlink identifier \"library\" is not known in this package.")
+		"WARN: Makefile:20: Buildlink identifier \"library\" is not known in this package.",
+		"WARN: Makefile:22: Buildlink identifier \"package\" is not known in this package.",
+		"WARN: buildlink3.mk:12: BL3 is defined but not used.",
+		"WARN: buildlink3.mk:12: Buildlink identifier \"unknown-bl3\" is not known in this package.",
+		"WARN: builtin.mk:2: BUILTIN is defined but not used.",
+		"WARN: builtin.mk:2: Buildlink identifier \"unknown-builtin\" is not known in this package.",
+		"WARN: options.mk:7: Buildlink identifier \"package\" is not known in this package.")
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink__no_buildlink3_file(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/module.mk",
+		MkCvsID,
+		"CONFIGURE_ARGS+=\t--prefix=${BUILDLINK_PREFIX.package}")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: module.mk:2: Buildlink identifier \"package\" is not known in this package.")
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink__no_buildlink3_data(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/module.mk",
+		MkCvsID,
+		"CONFIGURE_ARGS+=\t--prefix=${BUILDLINK_PREFIX.package}")
+	t.CreateFileLines("category/package/buildlink3.mk",
+		MkCvsID,
+		"# Empty, for whatever reason.  This doesn't happen in practice.")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"NOTE: buildlink3.mk:2: Empty line expected below this line.",
+		"WARN: buildlink3.mk:EOF: Expected a BUILDLINK_TREE line.",
+		"WARN: module.mk:2: Buildlink identifier \"package\" is not known in this package.")
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink__mysql_ok(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("mk/mysql.buildlink3.mk")
+	t.CreateFileLines("category/package/module.mk",
+		MkCvsID,
+		"CONFIGURE_ARGS+=\t--prefix=${BUILDLINK_PREFIX.mysql-client}",
+		".include \"../../mk/mysql.buildlink3.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkVarnameBuildlink__mysql_bad(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("mk/mysql.buildlink3.mk")
+	t.CreateFileLines("category/package/module.mk",
+		MkCvsID,
+		"CONFIGURE_ARGS+=\t--prefix=${BUILDLINK_PREFIX.mysql-client}")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: module.mk:2: Buildlink identifier \"mysql-client\" is not known in this package.")
 }
 
 func (s *Suite) Test_MkVarUseChecker_checkPermissions(c *check.C) {

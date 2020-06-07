@@ -656,6 +656,9 @@ func (mklines *MkLines) ExpandLoopVar(varname string) []string {
 // IsUnreachable determines whether the given line is unreachable because a
 // condition on the way to that line is not satisfied.
 // If unsure, returns false.
+//
+// Only the current package and Makefile fragment are taken into account.
+// The line might still be reachable by another pkgsrc package.
 func (mklines *MkLines) IsUnreachable(mkline *MkLine) bool {
 	// To make this code as simple as possible, the code should operate
 	// on a high-level AST, where the nodes are If, For and BasicBlock.

@@ -104,13 +104,11 @@ func (s *Suite) TearDownTest(c *check.C) {
 func Test__qa(t *testing.T) {
 	ck := intqa.NewQAChecker(t.Errorf)
 
-	ck.Configure("buildlink3.go", "*", "*", -intqa.EMissingTest)     // TODO
 	ck.Configure("distinfo.go", "*", "*", -intqa.EMissingTest)       // TODO
 	ck.Configure("files.go", "*", "*", -intqa.EMissingTest)          // TODO
 	ck.Configure("licenses.go", "*", "*", -intqa.EMissingTest)       // TODO
 	ck.Configure("line.go", "*", "*", -intqa.EMissingTest)           // TODO
 	ck.Configure("linechecker.go", "*", "*", -intqa.EMissingTest)    // TODO
-	ck.Configure("lineslexer.go", "*", "*", -intqa.EMissingTest)     // TODO
 	ck.Configure("lines.go", "*", "*", -intqa.EMissingTest)          // TODO
 	ck.Configure("logging.go", "*", "*", -intqa.EMissingTest)        // TODO
 	ck.Configure("mkline.go", "*", "*", -intqa.EMissingTest)         // TODO
@@ -962,8 +960,9 @@ func (t *Tester) ExpectPanic(action func(), expectedMessage string) {
 
 // ExpectPanicMatches runs the given action and expects that this action
 // calls assert or assertf, or uses some other way to panic.
-func (t *Tester) ExpectPanicMatches(action func(), expectedMessage string) {
-	t.Check(action, check.PanicMatches, expectedMessage)
+// The expectedMessage is anchored on both ends.
+func (t *Tester) ExpectPanicMatches(action func(), expectedMessage regex.Pattern) {
+	t.Check(action, check.PanicMatches, string(expectedMessage))
 }
 
 // ExpectAssert runs the given action and expects that this action calls assert.

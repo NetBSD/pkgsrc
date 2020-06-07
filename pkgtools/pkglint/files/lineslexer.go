@@ -109,10 +109,10 @@ func (llex *LinesLexer) SkipEmptyOrNote() bool {
 	return false
 }
 
-func (llex *LinesLexer) SkipContainsOrWarn(text string) bool {
+func (llex *LinesLexer) SkipTextOrWarn(text string) bool {
 	result := llex.SkipText(text)
 	if !result {
-		llex.CurrentLine().Warnf("This line should contain the following text: %s", text)
+		llex.CurrentLine().Warnf("This line should consist of the following text: %s", text)
 	}
 	return result
 }
