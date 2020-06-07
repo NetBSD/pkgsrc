@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2018/05/16 08:14:40 triaxx Exp $
+# $NetBSD: options.mk,v 1.17 2020/06/07 22:07:04 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
@@ -80,7 +80,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_LDAP3-[0-9]*:../../net/pear-Net_LDAP3
 ###
 ### Use sockets, required by managesieve and password plugins.
 ###
-.if !empty(PKG_OPTIONS:Msockets)
+.if !empty(PKG_OPTIONS:Mphp-sockets)
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=4.3.1:../../net/php-sockets
 .endif
 
