@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/01/29 11:49:28 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/06/07 11:55:46 markd Exp $
 
-SHA1 (sonnet-5.66.0.tar.xz) = d932309d534dfdbc8556fc84bc6772116de28211
-RMD160 (sonnet-5.66.0.tar.xz) = b292dcf20f449a64a16328a09a9de07989253973
-SHA512 (sonnet-5.66.0.tar.xz) = 17fee80d64762941f2f7d0d1b349d2b1cb9be440499209ea40ec38332c6cb12a246d5614053e8b0428ce113fef0765e577ca9ef44b2ddb216e33e6a2e947af3b
-Size (sonnet-5.66.0.tar.xz) = 288968 bytes
+SHA1 (sonnet-5.70.0.tar.xz) = f19a11eb2970a68e358bbace7e391e96bb3e9914
+RMD160 (sonnet-5.70.0.tar.xz) = 3f7a1cfbc42d303a4f0dc1291a91bf80314a7f46
+SHA512 (sonnet-5.70.0.tar.xz) = de93c1396262215407324795ea0ebc7d45752fb33873f0f6552821b9fa97dafd9972e274784f9f70c63f220aba9db261dccd55cf169cf62e629f398dc2db7fe9
+Size (sonnet-5.70.0.tar.xz) = 292380 bytes
