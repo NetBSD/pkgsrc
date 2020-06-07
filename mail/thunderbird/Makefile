@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2020/06/05 03:57:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.248 2020/06/07 10:30:38 nia Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.thunderbird.net/en-US/
 COMMENT=	Organize, secure and customize your mail
 LICENSE=	mpl-1.1
+
+SUPERSEDES+=	thunderbird60-[0-9]*
 
 USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
