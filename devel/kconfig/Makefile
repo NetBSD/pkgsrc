@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/06/02 08:22:36 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/06/07 10:51:37 markd Exp $
 
 DISTNAME=	kconfig-${KF5VER}
-PKGREVISION=	4
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
