@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2020/05/09 22:29:17 fcambus Exp $
+$NetBSD: distinfo,v 1.20 2020/06/07 11:17:30 fcambus Exp $
 
-SHA1 (yabasic-2.86.8.tar.gz) = 15043be034408b08a45cbb4e909b5493b7e79586
-RMD160 (yabasic-2.86.8.tar.gz) = 66b7f98ce27ee48fe29c5a03573fa87360197724
-SHA512 (yabasic-2.86.8.tar.gz) = abb34eb3f9e0883c6cee2e9dba4cc0fed78c2c9d02cce5c0ab984df935a5ede5b8f4192be1e2bb8be63484f60c7892f46114e70bfb5d798e7e09ee3bf79aaca6
-Size (yabasic-2.86.8.tar.gz) = 713200 bytes
+SHA1 (yabasic-2.86.9.tar.gz) = 3bccee7a25eddece1286a61b30df195d8b8f12b2
+RMD160 (yabasic-2.86.9.tar.gz) = ce8ed3e7e94b38f3552ae16ddea24f88c9b90cd1
+SHA512 (yabasic-2.86.9.tar.gz) = 649e0f26ed6e033c8630f9f18f88b67df9ca8366641eedd73f5b63a147f31ad244c43f00c3a7be009ac877b64b758818321bd946d10eef77972e9cc6471e8f11
+Size (yabasic-2.86.9.tar.gz) = 714104 bytes
