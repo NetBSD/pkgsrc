@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/01/29 11:49:27 markd Exp $
+$NetBSD: distinfo,v 1.10 2020/06/07 11:49:06 markd Exp $
 
-SHA1 (baloo-5.66.0.tar.xz) = f48f5dcc6a15d55b06392c7d3cb12e9f8624d21c
-RMD160 (baloo-5.66.0.tar.xz) = 24d2b4c35d7a60306f5a0e2c8bfd35f5c53be135
-SHA512 (baloo-5.66.0.tar.xz) = b402dda13e7b1972e32d673e837280745a57b39cd0bd54efff9ef20252f0114dae86816f7cb81c1e62bd5b324c9b539543e235cc8ef59080fd67d79cd024981a
-Size (baloo-5.66.0.tar.xz) = 271812 bytes
+SHA1 (baloo-5.70.0.tar.xz) = e7d5de83b2c3fdb2b20a865d588098419e22f80d
+RMD160 (baloo-5.70.0.tar.xz) = d372f77be089c22742f003ca8ae092d99d3ddfe1
+SHA512 (baloo-5.70.0.tar.xz) = 9d2455c29f7f5609897d06271a62c285e03370fdb8d842be252953f8b1644351b6bf8f5dc2f685bfa1cab9ed494747b59eccfd4f0f616625822c72e97692a390
+Size (baloo-5.70.0.tar.xz) = 273108 bytes
