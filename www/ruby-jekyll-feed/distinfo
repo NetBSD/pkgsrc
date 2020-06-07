@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/10/05 04:52:16 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2020/06/07 15:35:08 taca Exp $
 
-SHA1 (jekyll-feed-0.12.1.gem) = a8aa95207c60ecdeb123465de428cc19bd87292b
-RMD160 (jekyll-feed-0.12.1.gem) = 505ce118fd98cdf765b24b93e184e63a3dd77474
-SHA512 (jekyll-feed-0.12.1.gem) = f12b8371f3afe50481014a7229363f0a015c9524a332302804c489ff3d87efe348a8ca44dc7986ceeca3b351a7da09ef0846ce210f1afae605a12f0219497e94
-Size (jekyll-feed-0.12.1.gem) = 19456 bytes
+SHA1 (jekyll-feed-0.13.0.gem) = c914885cca7c82935b2c684e3f84224d726799f8
+RMD160 (jekyll-feed-0.13.0.gem) = fbdde784aa960bc70000c8c8cf321b6e8b64d751
+SHA512 (jekyll-feed-0.13.0.gem) = 7d8c6cd3732f2203416ea295d91e68e05c7f7a590d38dfa64844d0a938686d8c2bac2f0329e374bb4975af73fb04688fbe7ca637424d4beed9d840efa7df103a
+Size (jekyll-feed-0.13.0.gem) = 19968 bytes
