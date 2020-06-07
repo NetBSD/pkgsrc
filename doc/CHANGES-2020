@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3444 2020/06/07 22:13:29 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3445 2020/06/07 22:45:21 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5494,3 +5494,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/roundcube-plugin-zipdownload to 1.4.5 [taca 2020-06-07]
 	Updated mail/roundcube-plugin-password to 1.4.5 [taca 2020-06-07]
 	Updated devel/ruby-regexp_parser to 1.7.1 [taca 2020-06-07]
+	Updated lang/rust to 1.44.0 [he 2020-06-07]
