@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/08 11:21:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/07 01:46:52 markd Exp $
 include/grantlee/abstractlocalizer.h
 include/grantlee/abstractmarkupbuilder.h
 include/grantlee/bbcodebuilder.h
@@ -36,10 +36,10 @@ lib/cmake/Grantlee5/Grantlee5ConfigVersion.cmake
 lib/cmake/Grantlee5/GrantleeMacros.cmake
 lib/cmake/Grantlee5/GrantleeTargets-noconfig.cmake
 lib/cmake/Grantlee5/GrantleeTargets.cmake
-lib/grantlee/5.1/grantlee_defaultfilters.so
-lib/grantlee/5.1/grantlee_defaulttags.so
-lib/grantlee/5.1/grantlee_i18ntags.so
-lib/grantlee/5.1/grantlee_loadertags.so
+lib/grantlee/5.2/grantlee_defaultfilters.so
+lib/grantlee/5.2/grantlee_defaulttags.so
+lib/grantlee/5.2/grantlee_i18ntags.so
+lib/grantlee/5.2/grantlee_loadertags.so
 lib/libGrantlee_Templates.so
 lib/libGrantlee_Templates.so.5
 lib/libGrantlee_Templates.so.${PKGVERSION}
