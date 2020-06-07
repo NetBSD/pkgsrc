@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3398 2020/06/07 04:36:59 markd Exp $
+$NetBSD: CHANGES-2020,v 1.3399 2020/06/07 06:22:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5369,3 +5369,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/tor-browser-https-everywhere to 2020.5.20 [wiz 2020-06-06]
 	Updated devel/grantlee-qt5 to 5.2.0 [markd 2020-06-07]
 	Updated multimedia/mlt to 6.20.0 [markd 2020-06-07]
+	Updated databases/ruby-sequel to 5.33.0 [taca 2020-06-07]
