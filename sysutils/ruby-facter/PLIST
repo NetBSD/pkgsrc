@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/05/25 15:22:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/06/07 15:04:42 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE.md
@@ -556,6 +556,8 @@ ${GEM_LIBDIR}/lib/resolvers/utils/filesystem_helper.rb
 ${GEM_LIBDIR}/lib/resolvers/utils/fingerprint.rb
 ${GEM_LIBDIR}/lib/resolvers/utils/ssh.rb
 ${GEM_LIBDIR}/lib/resolvers/utils/ssh_helper.rb
+${GEM_LIBDIR}/lib/resolvers/virt_what.rb
+${GEM_LIBDIR}/lib/resolvers/vmware.rb
 ${GEM_LIBDIR}/lib/resolvers/windows/dmi_bios_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/windows/dmi_computersystem_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/windows/ffi/ffi.rb
