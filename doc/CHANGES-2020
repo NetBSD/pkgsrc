@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3407 2020/06/07 07:44:29 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3408 2020/06/07 08:35:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5378,3 +5378,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-hocon to 1.3.1 [taca 2020-06-07]
 	Removed devel/ruby-hike1 [taca 2020-06-07]
 	Updated devel/ruby-i18n to 1.8.3 [taca 2020-06-07]
+	Updated devel/ruby-tty-screen to 0.8.0 [taca 2020-06-07]
