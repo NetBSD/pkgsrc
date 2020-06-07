@@ -1,17 +1,18 @@
-$NetBSD: distinfo,v 1.20 2020/05/06 07:13:39 wiz Exp $
+$NetBSD: distinfo,v 1.21 2020/06/07 13:06:00 wiz Exp $
 
-SHA1 (src-firefox-tor-browser-68.8.0esr-9.0-2-build1.tar.xz) = def093ae726b40e573a95dafa73057e068780873
-RMD160 (src-firefox-tor-browser-68.8.0esr-9.0-2-build1.tar.xz) = bf89bcfbccf69d05ed021e98656204ac0a2fdaa9
-SHA512 (src-firefox-tor-browser-68.8.0esr-9.0-2-build1.tar.xz) = 827a13a2dd81ec1ca84cc93ea49de82640add7fdc1f872395a7be961525e2d7f20740877408832e7c65c6a1a44a5552ab8169c96662bdb240e8aedc88c79d122
-Size (src-firefox-tor-browser-68.8.0esr-9.0-2-build1.tar.xz) = 348566404 bytes
-SHA1 (tor-browser-linux64-9.0.10_en-US.tar.xz) = f50f4cdca7b96f0d50daf4b82de3d0f492634ce8
-RMD160 (tor-browser-linux64-9.0.10_en-US.tar.xz) = e4286dd13ffebbd6300f676d69aff65d1ed666f8
-SHA512 (tor-browser-linux64-9.0.10_en-US.tar.xz) = 60b54a7890e84d52a97066638ef8fbb4a24184c5f53f6d937879082fab224c346acb46e3cb90f9fb5b4030ecd980e7610f81f563f76b6f1829285937f19e5484
-Size (tor-browser-linux64-9.0.10_en-US.tar.xz) = 80175308 bytes
+SHA1 (src-firefox-tor-browser-68.9.0esr-9.5-1-build2.tar.xz) = 27b3e18e92341557b9c8b18afd114d458dd2e403
+RMD160 (src-firefox-tor-browser-68.9.0esr-9.5-1-build2.tar.xz) = db61ef7788f1b6c4111e7a4c6df56c7bd51e6777
+SHA512 (src-firefox-tor-browser-68.9.0esr-9.5-1-build2.tar.xz) = 5a8db89e2bd60980bd00d779c23433014b2d4e29bd55cc81ec83115fb62d79246e73b36cee765b285cadd9306b57f737264549936431898e78717be01200a435
+Size (src-firefox-tor-browser-68.9.0esr-9.5-1-build2.tar.xz) = 348699028 bytes
+SHA1 (tor-browser-linux64-9.5_en-US.tar.xz) = 3f84ce557b01fe22157f52d7387f979ee2824da6
+RMD160 (tor-browser-linux64-9.5_en-US.tar.xz) = df45b10a19916d79f65d99f87505d0ecce55a8fe
+SHA512 (tor-browser-linux64-9.5_en-US.tar.xz) = 7534711c12192e937c3a71ea5d3f1d3786d0cb5da6c3f9f8db5c5950c9c342a60fbcc9c4bded2fcea1e5342de3c09b41641154c4fa757734afa21c81f223b5b2
+Size (tor-browser-linux64-9.5_en-US.tar.xz) = 79022648 bytes
 SHA1 (patch-.mozconfig) = 66fbb2f113091eee1f022cd656231f845b04b0f8
 SHA1 (patch-aa) = 9f7200c411cd2217a80ec10a276c8877bc6b845c
 SHA1 (patch-browser_app_profile_000-tor-browser.js) = 84a0a15605fff0e22f3150bce901a296fc920280
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
+SHA1 (patch-build_moz.configure_rust.configure) = b57a9b1451dc426d75774f73d7c05fc98fe6e317
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3cd2c65ab281d802c56216565970450767a3fb24
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = e458c9c8dc66edc69c1874734af28a77fc5e3993
