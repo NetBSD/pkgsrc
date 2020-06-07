@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/03/20 16:04:29 taca Exp $
+# $NetBSD: Makefile,v 1.16 2020/06/07 15:48:49 taca Exp $
 
-DISTNAME=	unicorn-5.5.3
+DISTNAME=	unicorn-5.5.5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
