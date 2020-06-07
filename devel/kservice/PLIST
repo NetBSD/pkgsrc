@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/11 07:57:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/06/07 11:23:30 markd Exp $
 bin/kbuildsycoca5
+include/KF5/KService/KApplicationTrader
 include/KF5/KService/KAutostart
 include/KF5/KService/KDBusServiceStarter
 include/KF5/KService/KMimeTypeTrader
@@ -15,6 +16,7 @@ include/KF5/KService/KSycoca
 include/KF5/KService/KSycocaEntry
 include/KF5/KService/KSycocaType
 include/KF5/KService/KToolInvocation
+include/KF5/KService/kapplicationtrader.h
 include/KF5/KService/kautostart.h
 include/KF5/KService/kdbusservicestarter.h
 include/KF5/KService/kmimetypetrader.h
