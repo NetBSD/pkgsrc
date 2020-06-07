@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/05/01 07:01:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/06/07 13:06:00 wiz Exp $
 bin/tor-browser
 lib/tor-browser/actors/AudioPlaybackChild.jsm
 lib/tor-browser/actors/AutoplayChild.jsm
@@ -25,7 +25,6 @@ lib/tor-browser/actors/ZoomChild.jsm
 lib/tor-browser/application.ini
 lib/tor-browser/browser/actors/AboutLoginsChild.jsm
 lib/tor-browser/browser/actors/AboutReaderChild.jsm
-lib/tor-browser/browser/actors/AboutTBUpdateChild.jsm
 lib/tor-browser/browser/actors/BlockedSiteChild.jsm
 lib/tor-browser/browser/actors/BrowserTabChild.jsm
 lib/tor-browser/browser/actors/ClickHandlerChild.jsm
@@ -107,9 +106,6 @@ lib/tor-browser/browser/chrome/browser/content/browser/aboutlogins/icons/delete.
 lib/tor-browser/browser/chrome/browser/content/browser/aboutlogins/icons/edit.svg
 lib/tor-browser/browser/chrome/browser/content/browser/aboutlogins/icons/hide-password.svg
 lib/tor-browser/browser/chrome/browser/content/browser/aboutlogins/icons/show-password.svg
-lib/tor-browser/browser/chrome/browser/content/browser/abouttbupdate/aboutTBUpdate.css
-lib/tor-browser/browser/chrome/browser/content/browser/abouttbupdate/aboutTBUpdate.js
-lib/tor-browser/browser/chrome/browser/content/browser/abouttbupdate/aboutTBUpdate.xhtml
 lib/tor-browser/browser/chrome/browser/content/browser/blockedSite.js
 lib/tor-browser/browser/chrome/browser/content/browser/blockedSite.xhtml
 lib/tor-browser/browser/chrome/browser/content/browser/browser-addons.js
@@ -196,6 +192,20 @@ lib/tor-browser/browser/chrome/browser/content/browser/newInstall.xul
 lib/tor-browser/browser/chrome/browser/content/browser/newInstallPage.html
 lib/tor-browser/browser/chrome/browser/content/browser/newInstallPage.js
 lib/tor-browser/browser/chrome/browser/content/browser/nsContextMenu.js
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/authPreferences.css
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/authPreferences.js
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/authPrompt.js
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/authUtil.jsm
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/browser.svg
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/network.svg
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/onionNetError.css
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/onionNetError.jsm
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/netError/onionsite.svg
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/onionlocation.svg
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/onionlocationPreferences.js
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/onionservices.css
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/savedKeysDialog.js
+lib/tor-browser/browser/chrome/browser/content/browser/onionservices/savedKeysDialog.xul
 lib/tor-browser/browser/chrome/browser/content/browser/pageinfo/pageInfo.css
 lib/tor-browser/browser/chrome/browser/content/browser/pageinfo/pageInfo.js
 lib/tor-browser/browser/chrome/browser/content/browser/pageinfo/pageInfo.xul
@@ -1109,8 +1119,6 @@ lib/tor-browser/browser/chrome/browser/search-extensions/ddg/favicon.png
 lib/tor-browser/browser/chrome/browser/search-extensions/ddg/manifest.json
 lib/tor-browser/browser/chrome/browser/search-extensions/diec2/favicon.png
 lib/tor-browser/browser/chrome/browser/search-extensions/diec2/manifest.json
-lib/tor-browser/browser/chrome/browser/search-extensions/disconnect/favicon.ico
-lib/tor-browser/browser/chrome/browser/search-extensions/disconnect/manifest.json
 lib/tor-browser/browser/chrome/browser/search-extensions/drae/favicon.ico
 lib/tor-browser/browser/chrome/browser/search-extensions/drae/manifest.json
 lib/tor-browser/browser/chrome/browser/search-extensions/ebay/_locales/at/messages.json
@@ -1404,8 +1412,8 @@ lib/tor-browser/browser/chrome/browser/skin/classic/browser/notification-icons/s
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/notification-icons/screen.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/notification-icons/update.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/notification-icons/webauthn.svg
-lib/tor-browser/browser/chrome/browser/skin/classic/browser/onion-disabled.svg
-lib/tor-browser/browser/chrome/browser/skin/classic/browser/onion-lock.svg
+lib/tor-browser/browser/chrome/browser/skin/classic/browser/onion-slash.svg
+lib/tor-browser/browser/chrome/browser/skin/classic/browser/onion-warning.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/onion.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/open.svg
 lib/tor-browser/browser/chrome/browser/skin/classic/browser/pageInfo.css
@@ -3496,7 +3504,6 @@ lib/tor-browser/browser/chrome/devtools/skin/widgets.css
 lib/tor-browser/browser/chrome/en-US/locale/branding/brand.dtd
 lib/tor-browser/browser/chrome/en-US/locale/branding/brand.properties
 lib/tor-browser/browser/chrome/en-US/locale/browser-region/region.properties
-lib/tor-browser/browser/chrome/en-US/locale/browser/aboutTBUpdate.dtd
 lib/tor-browser/browser/chrome/en-US/locale/browser/accounts.properties
 lib/tor-browser/browser/chrome/en-US/locale/browser/app-extension-fields.properties
 lib/tor-browser/browser/chrome/en-US/locale/browser/appstrings.properties
@@ -4059,7 +4066,6 @@ lib/tor-browser/browser/modules/AboutDevToolsToolboxRegistration.jsm
 lib/tor-browser/browser/modules/AboutLoginsParent.jsm
 lib/tor-browser/browser/modules/AboutNewTab.jsm
 lib/tor-browser/browser/modules/AboutNewTabService.jsm
-lib/tor-browser/browser/modules/AboutTBUpdate.jsm
 lib/tor-browser/browser/modules/AsyncTabSwitcher.jsm
 lib/tor-browser/browser/modules/AttributionCode.jsm
 lib/tor-browser/browser/modules/BridgeDB.jsm
@@ -4086,6 +4092,7 @@ lib/tor-browser/browser/modules/DownloadsViewUI.jsm
 lib/tor-browser/browser/modules/DragPositionManager.jsm
 lib/tor-browser/browser/modules/EveryWindow.jsm
 lib/tor-browser/browser/modules/ExtensionControlledPopup.jsm
+lib/tor-browser/browser/modules/ExtensionMessaging.jsm
 lib/tor-browser/browser/modules/ExtensionPopups.jsm
 lib/tor-browser/browser/modules/ExtensionsUI.jsm
 lib/tor-browser/browser/modules/FaviconLoader.jsm
@@ -4093,10 +4100,14 @@ lib/tor-browser/browser/modules/FirefoxProfileMigrator.jsm
 lib/tor-browser/browser/modules/FormValidationHandler.jsm
 lib/tor-browser/browser/modules/HeadlessShell.jsm
 lib/tor-browser/browser/modules/HomePage.jsm
+lib/tor-browser/browser/modules/HttpsEverywhereControl.jsm
 lib/tor-browser/browser/modules/LaterRun.jsm
 lib/tor-browser/browser/modules/LiveBookmarkMigrator.jsm
 lib/tor-browser/browser/modules/MigrationUtils.jsm
 lib/tor-browser/browser/modules/NewTabPagePreloading.jsm
+lib/tor-browser/browser/modules/OnionAliasStore.jsm
+lib/tor-browser/browser/modules/OnionLocationChild.jsm
+lib/tor-browser/browser/modules/OnionLocationParent.jsm
 lib/tor-browser/browser/modules/OpenInTabsUtils.jsm
 lib/tor-browser/browser/modules/PageActions.jsm
 lib/tor-browser/browser/modules/PanelMultiView.jsm
@@ -4923,7 +4934,6 @@ lib/tor-browser/chrome/toolkit/skin/classic/mozapps/profile/profileDowngrade.css
 lib/tor-browser/chrome/toolkit/skin/classic/mozapps/profile/profileSelection.css
 lib/tor-browser/chrome/toolkit/skin/classic/mozapps/update/downloadButtons.png
 lib/tor-browser/chrome/toolkit/skin/classic/mozapps/update/updates.css
-lib/tor-browser/chrome/torbutton/components/cookie-jar-selector.js
 lib/tor-browser/chrome/torbutton/components/domain-isolator.js
 lib/tor-browser/chrome/torbutton/components/dragDropFilter.js
 lib/tor-browser/chrome/torbutton/components/external-app-blocker.js
@@ -4932,13 +4942,11 @@ lib/tor-browser/chrome/torbutton/components/torCheckService.js
 lib/tor-browser/chrome/torbutton/components/torbutton-logger.js
 lib/tor-browser/chrome/torbutton/content/aboutTor/aboutTor-content.js
 lib/tor-browser/chrome/torbutton/content/aboutTor/aboutTor.xhtml
-lib/tor-browser/chrome/torbutton/content/locale/non-localized.properties
+lib/tor-browser/chrome/torbutton/content/aboutTor/resources/aboutTor.js
 lib/tor-browser/chrome/torbutton/content/preferences-mobile.js
 lib/tor-browser/chrome/torbutton/content/preferences.xhtml
 lib/tor-browser/chrome/torbutton/content/tor-circuit-display.js
 lib/tor-browser/chrome/torbutton/content/torbutton.js
-lib/tor-browser/chrome/torbutton/content/torbutton_util.js
-lib/tor-browser/chrome/torbutton/defaults/preferences/preferences.js
 lib/tor-browser/chrome/torbutton/locale/ar/aboutDialog.dtd
 lib/tor-browser/chrome/torbutton/locale/ar/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/ar/aboutTor.dtd
@@ -5139,6 +5147,16 @@ lib/tor-browser/chrome/torbutton/locale/ko/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ko/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/ko/torbutton.dtd
 lib/tor-browser/chrome/torbutton/locale/ko/torbutton.properties
+lib/tor-browser/chrome/torbutton/locale/lt/aboutDialog.dtd
+lib/tor-browser/chrome/torbutton/locale/lt/aboutTBUpdate.dtd
+lib/tor-browser/chrome/torbutton/locale/lt/aboutTor.dtd
+lib/tor-browser/chrome/torbutton/locale/lt/brand.dtd
+lib/tor-browser/chrome/torbutton/locale/lt/brand.properties
+lib/tor-browser/chrome/torbutton/locale/lt/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/lt/browserOnboarding.properties
+lib/tor-browser/chrome/torbutton/locale/lt/onboarding.properties
+lib/tor-browser/chrome/torbutton/locale/lt/torbutton.dtd
+lib/tor-browser/chrome/torbutton/locale/lt/torbutton.properties
 lib/tor-browser/chrome/torbutton/locale/mk/aboutDialog.dtd
 lib/tor-browser/chrome/torbutton/locale/mk/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/mk/aboutTor.dtd
@@ -5149,6 +5167,16 @@ lib/tor-browser/chrome/torbutton/locale/mk/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/mk/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/mk/torbutton.dtd
 lib/tor-browser/chrome/torbutton/locale/mk/torbutton.properties
+lib/tor-browser/chrome/torbutton/locale/ms/aboutDialog.dtd
+lib/tor-browser/chrome/torbutton/locale/ms/aboutTBUpdate.dtd
+lib/tor-browser/chrome/torbutton/locale/ms/aboutTor.dtd
+lib/tor-browser/chrome/torbutton/locale/ms/brand.dtd
+lib/tor-browser/chrome/torbutton/locale/ms/brand.properties
+lib/tor-browser/chrome/torbutton/locale/ms/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/ms/browserOnboarding.properties
+lib/tor-browser/chrome/torbutton/locale/ms/onboarding.properties
+lib/tor-browser/chrome/torbutton/locale/ms/torbutton.dtd
+lib/tor-browser/chrome/torbutton/locale/ms/torbutton.properties
 lib/tor-browser/chrome/torbutton/locale/nb-NO/aboutDialog.dtd
 lib/tor-browser/chrome/torbutton/locale/nb-NO/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/nb-NO/aboutTor.dtd
@@ -5219,6 +5247,16 @@ lib/tor-browser/chrome/torbutton/locale/sv-SE/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/sv-SE/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/sv-SE/torbutton.dtd
 lib/tor-browser/chrome/torbutton/locale/sv-SE/torbutton.properties
+lib/tor-browser/chrome/torbutton/locale/th/aboutDialog.dtd
+lib/tor-browser/chrome/torbutton/locale/th/aboutTBUpdate.dtd
+lib/tor-browser/chrome/torbutton/locale/th/aboutTor.dtd
+lib/tor-browser/chrome/torbutton/locale/th/brand.dtd
+lib/tor-browser/chrome/torbutton/locale/th/brand.properties
+lib/tor-browser/chrome/torbutton/locale/th/branding/tor-browser-brand.ftl
+lib/tor-browser/chrome/torbutton/locale/th/browserOnboarding.properties
+lib/tor-browser/chrome/torbutton/locale/th/onboarding.properties
+lib/tor-browser/chrome/torbutton/locale/th/torbutton.dtd
+lib/tor-browser/chrome/torbutton/locale/th/torbutton.properties
 lib/tor-browser/chrome/torbutton/locale/tr/aboutDialog.dtd
 lib/tor-browser/chrome/torbutton/locale/tr/aboutTBUpdate.dtd
 lib/tor-browser/chrome/torbutton/locale/tr/aboutTor.dtd
@@ -5259,7 +5297,6 @@ lib/tor-browser/chrome/torbutton/locale/zh-TW/browserOnboarding.properties
 lib/tor-browser/chrome/torbutton/locale/zh-TW/onboarding.properties
 lib/tor-browser/chrome/torbutton/locale/zh-TW/torbutton.dtd
 lib/tor-browser/chrome/torbutton/locale/zh-TW/torbutton.properties
-lib/tor-browser/chrome/torbutton/modules/default-prefs.js
 lib/tor-browser/chrome/torbutton/modules/noscript-control.js
 lib/tor-browser/chrome/torbutton/modules/security-prefs.js
 lib/tor-browser/chrome/torbutton/modules/tor-control-port.js

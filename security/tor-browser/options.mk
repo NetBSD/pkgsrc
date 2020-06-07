@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2019/11/04 21:13:03 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2020/06/07 13:06:00 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor-browser
 PKG_SUPPORTED_OPTIONS+=	alsa debug debug-info mozilla-jemalloc pulseaudio
-PLIST_VARS+=		debug
 
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa mozilla-jemalloc
 
@@ -40,7 +39,6 @@ O0TRACKING=-fvar-tracking-assignments -fvar-tracking
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}" --enable-debug-symbols --disable-optimize
 CONFIGURE_ARGS+=	--disable-install-strip
-PLIST.debug=		yes
 .else
 .  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
