@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.407 2020/03/22 11:07:14 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.408 2020/06/07 05:59:30 rillig Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -833,6 +833,7 @@ RECURSIVE_MAKE=		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} ${MAKE}
 
 _VARGROUPS+=		dirs
 _USER_VARS.dirs=	DISTDIR LOCALBASE PACKAGES PKG_SYSCONFDIR WRKOBJDIR
+_USER_VARS.dirs+=	PKG_DBDIR
 _PKG_VARS.dirs=		WRKSRC PATCHDIR FILESDIR PKGDIR
 _SYS_VARS.dirs=		WRKDIR DESTDIR PREFIX PKG_SYSCONFBASEDIR
 
