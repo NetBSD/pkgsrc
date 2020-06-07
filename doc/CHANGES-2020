@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3439 2020/06/07 15:52:59 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3440 2020/06/07 15:58:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5486,3 +5486,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-unicorn to 5.5.5 [taca 2020-06-07]
 	Updated pkgtools/pkglint to 20.1.15 [rillig 2020-06-07]
 	Updated www/ruby-rack-cache to 1.12.0 [taca 2020-06-07]
+	Updated misc/ruby-hashie to 4.1.0 [taca 2020-06-07]
