@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/27 21:11:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/06/07 11:25:17 markd Exp $
 include/KF5/KTextEditor/KTextEditor/AbstractAnnotationItemDelegate
 include/KF5/KTextEditor/KTextEditor/AnnotationInterface
 include/KF5/KTextEditor/KTextEditor/Application
@@ -80,6 +80,7 @@ share/kservicetypes5/ktexteditor.desktop
 share/kservicetypes5/ktexteditorplugin.desktop
 share/locale/af/LC_MESSAGES/ktexteditor5.mo
 share/locale/ar/LC_MESSAGES/ktexteditor5.mo
+share/locale/ast/LC_MESSAGES/ktexteditor5.mo
 share/locale/be/LC_MESSAGES/ktexteditor5.mo
 share/locale/bg/LC_MESSAGES/ktexteditor5.mo
 share/locale/bn/LC_MESSAGES/ktexteditor5.mo
