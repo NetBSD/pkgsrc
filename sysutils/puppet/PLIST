@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2020/05/25 14:53:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2020/06/07 15:02:54 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -548,6 +548,7 @@ ${GEM_LIBDIR}/lib/puppet/network/http/api/master/v3/environments.rb
 ${GEM_LIBDIR}/lib/puppet/network/http/base_pool.rb
 ${GEM_LIBDIR}/lib/puppet/network/http/compression.rb
 ${GEM_LIBDIR}/lib/puppet/network/http/connection.rb
+${GEM_LIBDIR}/lib/puppet/network/http/connection_adapter.rb
 ${GEM_LIBDIR}/lib/puppet/network/http/error.rb
 ${GEM_LIBDIR}/lib/puppet/network/http/factory.rb
 ${GEM_LIBDIR}/lib/puppet/network/http/handler.rb
@@ -1110,6 +1111,7 @@ ${GEM_LIBDIR}/lib/puppet/util/package/version/debian.rb
 ${GEM_LIBDIR}/lib/puppet/util/package/version/gem.rb
 ${GEM_LIBDIR}/lib/puppet/util/package/version/pip.rb
 ${GEM_LIBDIR}/lib/puppet/util/package/version/range.rb
+${GEM_LIBDIR}/lib/puppet/util/package/version/range/eq.rb
 ${GEM_LIBDIR}/lib/puppet/util/package/version/range/gt.rb
 ${GEM_LIBDIR}/lib/puppet/util/package/version/range/gt_eq.rb
 ${GEM_LIBDIR}/lib/puppet/util/package/version/range/lt.rb
@@ -1555,7 +1557,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/provider/cron/crontab/single_line.yaml
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/cron/crontab/vixie_header.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/cron/parsed/managed
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/cron/parsed/simple
-${GEM_LIBDIR}/spec/fixtures/unit/provider/package/dnfmodule/dnf-module-list-enabled.txt
+${GEM_LIBDIR}/spec/fixtures/unit/provider/package/dnfmodule/dnf-module-list.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/gem/gem-list-single-package
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/gem/line-with-1.8.5-warning
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/openbsd/pkginfo.detail
@@ -1586,6 +1588,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/yum/yum-check-update-simple.tx
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/yum/yum-check-update-subscription-manager.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/zypper/zypper-list-updates-SLES11sp1.out
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/package/zypper/zypper-list-updates-empty.out
+${GEM_LIBDIR}/spec/fixtures/unit/provider/package/zypper/zypper-search-uninstalled.out
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/parsedfile/aliases.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/parsedfile/simple.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/provider/service/base/ps_ef.mixed_encoding
@@ -1972,6 +1975,7 @@ ${GEM_LIBDIR}/spec/unit/indirector/file_content/rest_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/file_content/selector_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/file_metadata/file_server_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/file_metadata/file_spec.rb
+${GEM_LIBDIR}/spec/unit/indirector/file_metadata/http_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/file_metadata/rest_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/file_metadata/selector_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/file_server_spec.rb
