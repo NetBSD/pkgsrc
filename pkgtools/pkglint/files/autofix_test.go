@@ -2,6 +2,7 @@ package pkglint
 
 import (
 	"gopkg.in/check.v1"
+	"netbsd.org/pkglint/regex"
 	"os"
 	"runtime"
 	"strings"
@@ -702,7 +703,7 @@ func (s *Suite) Test_Autofix_ReplaceAt(c *check.C) {
 		t.ExpectDiagnosticsAutofix(doTest, nil...)
 	}
 
-	testPanicMatches := func(texts []string, rawIndex int, column int, from, to, panicMessage string) {
+	testPanicMatches := func(texts []string, rawIndex int, column int, from, to string, panicMessage regex.Pattern) {
 		doTest := func(bool) {
 			t.ExpectPanicMatches(
 				func() { mainPart(texts, rawIndex, column, from, to) },

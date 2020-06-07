@@ -159,7 +159,6 @@ func (p *MkLexer) varUseBrace(usingRoundParen bool) *MkVarUse {
 func (p *MkLexer) Varname() string {
 	lexer := p.lexer
 
-	// TODO: duplicated code in MatchVarassign
 	mark := lexer.Mark()
 	lexer.SkipByte('.')
 	for lexer.NextBytesSet(VarbaseBytes) != "" || p.VarUse() != nil {

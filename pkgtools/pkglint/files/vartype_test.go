@@ -250,6 +250,8 @@ func (s *Suite) Test_BasicType_NeedsQ(c *check.C) {
 	test("PKG_FAIL_REASON", true)
 	test("SUBST_MESSAGE.id", true)
 	test("CC", true)
+
+	test("TOOLS_NOOP", false)
 }
 
 func (s *Suite) Test_BasicType_HasEnum(c *check.C) {
