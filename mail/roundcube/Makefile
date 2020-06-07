@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/01/14 14:30:00 taca Exp $
+# $NetBSD: Makefile,v 1.93 2020/06/07 22:07:04 taca Exp $
 
 DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/:S/-complete//}
@@ -44,6 +44,24 @@ CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/defaults.inc.php \
 			${PKG_SYSCONFDIR}/defaults.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 
+CONF_PLUGINS=		acl additional_message_headers database_attachments \
+			emoticons help http_authentication jqueryui \
+			krb_authentication managesieve markasjunk \
+			new_user_identity newmail_notifier \
+			redundant_attachments squirrelmail_usercopy
+RC_DOCS=		CHANGELOG INSTALL LICENSE README.md UPGRADING
+REPLACE_PHP=		cleandb.sh decrypt.sh deluser.sh gc.sh \
+			indexcontacts.sh initdb.sh installto.sh \
+			moduserprefs.sh msgexport.sh msgimport.sh \
+			update.sh updatecss.sh updatedb.sh
+
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*php[^ ]*
+REPLACE.php.new=	${PREFIX}/bin/php
+.for f in ${REPLACE_PHP}
+REPLACE_FILES.php+=	bin/${f}
+.endfor
+
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_MESSAGE.files=	Fixing configuration files.
@@ -57,17 +75,6 @@ SUBST_VARS.files+=	VARBASE
 SUBST_SED.files+=	-e "s|@PKG_EXAMPLES@|${PREFIX}/share/examples/roundcube|g"
 SUBST_VARS.files+=	PKG_SYSCONFBASE
 SUBST_VARS.files+=	PKG_SYSCONFDIR
-
-CONF_PLUGINS=		acl additional_message_headers database_attachments \
-			emoticons help http_authentication jqueryui \
-			krb_authentication managesieve markasjunk \
-			new_user_identity newmail_notifier \
-			redundant_attachments squirrelmail_usercopy
-RC_DOCS=		CHANGELOG INSTALL LICENSE README.md UPGRADING
-REPLACE_PHP=		cleandb.sh decrypt.sh deluser.sh gc.sh \
-			indexcontacts.sh initdb.sh installto.sh \
-			moduserprefs.sh msgexport.sh msgimport.sh \
-			update.sh updatecss.sh updatedb.sh
 
 pre-configure:
 	${CP} ${FILESDIR}/apache.conf ${WRKSRC}/apache.conf
