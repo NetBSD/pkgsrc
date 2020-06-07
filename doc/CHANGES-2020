@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3441 2020/06/07 16:00:30 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3442 2020/06/07 18:57:00 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5488,3 +5488,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rack-cache to 1.12.0 [taca 2020-06-07]
 	Updated misc/ruby-hashie to 4.1.0 [taca 2020-06-07]
 	Updated devel/ruby-rspec_junit_formatter to 0.4.1 [taca 2020-06-07]
+	Updated net/powerdns to 4.2.2 [otis 2020-06-07]
