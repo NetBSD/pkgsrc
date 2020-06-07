@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3406 2020/06/07 07:26:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3407 2020/06/07 07:44:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5377,3 +5377,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-google-protobuf to 3.12.2 [taca 2020-06-07]
 	Updated devel/ruby-hocon to 1.3.1 [taca 2020-06-07]
 	Removed devel/ruby-hike1 [taca 2020-06-07]
+	Updated devel/ruby-i18n to 1.8.3 [taca 2020-06-07]
