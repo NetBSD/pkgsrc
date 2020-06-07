@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3396 2020/06/06 20:56:41 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3397 2020/06/07 01:58:41 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5367,3 +5367,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.1.14 [rillig 2020-06-06]
 	Updated security/tor-browser-noscript to 11.0.30 [wiz 2020-06-06]
 	Updated security/tor-browser-https-everywhere to 2020.5.20 [wiz 2020-06-06]
+	Updated devel/grantlee-qt5 to 5.2.0 [markd 2020-06-07]
