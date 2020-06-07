@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3140 2020/06/04 08:56:12 maya Exp $
+# $NetBSD: Makefile,v 1.3141 2020/06/07 07:25:36 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2735,7 +2735,6 @@ SUBDIR+=	ruby-hashery
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
 SUBDIR+=	ruby-hike
-SUBDIR+=	ruby-hike1
 SUBDIR+=	ruby-hocon
 SUBDIR+=	ruby-i18n
 SUBDIR+=	ruby-i18n12
