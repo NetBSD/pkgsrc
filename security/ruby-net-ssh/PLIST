@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/09/23 16:08:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/06/07 14:44:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
@@ -7,11 +7,10 @@ ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.txt
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.noed25519
-${GEM_LIBDIR}/Gemfile.noed25519.lock
 ${GEM_LIBDIR}/ISSUE_TEMPLATE.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/THANKS.txt
 ${GEM_LIBDIR}/appveyor.yml
@@ -53,7 +52,6 @@ ${GEM_LIBDIR}/lib/net/ssh/proxy/https.rb
 ${GEM_LIBDIR}/lib/net/ssh/proxy/jump.rb
 ${GEM_LIBDIR}/lib/net/ssh/proxy/socks4.rb
 ${GEM_LIBDIR}/lib/net/ssh/proxy/socks5.rb
-${GEM_LIBDIR}/lib/net/ssh/ruby_compat.rb
 ${GEM_LIBDIR}/lib/net/ssh/service/forward.rb
 ${GEM_LIBDIR}/lib/net/ssh/test.rb
 ${GEM_LIBDIR}/lib/net/ssh/test/channel.rb
@@ -78,10 +76,16 @@ ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha1.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha1_96.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_256.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_256_96.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_256_etm.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_512.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_512_96.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_512_etm.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/identity_cipher.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/kex.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/kex/abstract.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/kex/abstract5656.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/kex/curve25519_sha256.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/kex/curve25519_sha256_loader.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/kex/diffie_hellman_group14_sha1.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/kex/diffie_hellman_group1_sha1.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/kex/diffie_hellman_group_exchange_sha1.rb
@@ -102,6 +106,5 @@ ${GEM_LIBDIR}/lib/net/ssh/verifiers/never.rb
 ${GEM_LIBDIR}/lib/net/ssh/version.rb
 ${GEM_LIBDIR}/net-ssh-public_cert.pem
 ${GEM_LIBDIR}/net-ssh.gemspec
-${GEM_LIBDIR}/support/arcfour_check.rb
 ${GEM_LIBDIR}/support/ssh_tunnel_bug.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
