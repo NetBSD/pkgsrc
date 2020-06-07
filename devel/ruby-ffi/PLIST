@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.19 2020/01/19 15:43:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/06/07 06:48:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/.appveyor.yml
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.travis.yml
@@ -523,12 +524,14 @@ ${GEM_LIBDIR}/lib/ffi/platform/mipsisa64r6el-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-aix/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/powerpc-openbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/s390-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/s390x-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparc-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparc-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparc64-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/sparcv9-openbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparcv9-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-cygwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-darwin/types.conf
@@ -562,5 +565,4 @@ ${GEM_LIBDIR}/samples/hello.rb
 ${GEM_LIBDIR}/samples/inotify.rb
 ${GEM_LIBDIR}/samples/pty.rb
 ${GEM_LIBDIR}/samples/qsort.rb
-${GEM_LIBDIR}/samples/sample_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
