@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.15 2020/05/12 05:34:04 rillig Exp $
+# $NetBSD: test.subr,v 1.16 2020/06/07 05:53:53 rillig Exp $
 #
 # This file defines utilities for testing Makefile fragments and shell
 # programs from the pkgsrc infrastructure. While testing one part of the
@@ -214,6 +214,8 @@ mock_cmd() {
 	cmdname="$1"
 	shift 1
 
+	. "$pkgsrcdir/mk/tools/shquote.sh"
+
 	{
 	printf '#! /bin/sh\n'
 	printf '\n'
@@ -221,15 +223,20 @@ mock_cmd() {
 	while [ $# -ge 4 ]; do
 		case $1,$3 in
 		(--when-args,--then-output)
+			shquote "$2"; shquoted_arg="$shquoted"
+			shquote "$4"; shquoted_output="$shquoted"
 			cat <<EOF
-[ "x\$*" = "x$2" ] && { printf '%s\n' "$4" && exit 0; }
+[ x"\$*" = x$shquoted_arg ] && { printf '%s\n' $shquoted_output && exit 0; }
 
 EOF
 			shift 4
 			;;
+
 		(--when-args,--then-exit)
+			shquote "$2"; shquoted_arg="$shquoted"
+			shquote "$4"; shquoted_exit="$shquoted"
 			cat <<EOF
-[ "x\$*" = "x$2" ] && exit $4
+[ x"\$*" = x$shquoted_arg ] && exit $shquoted_exit
 
 EOF
 			shift 4
