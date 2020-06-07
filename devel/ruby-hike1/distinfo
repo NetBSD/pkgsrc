@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2017/09/02 14:56:10 taca Exp $
-
-SHA1 (hike-1.2.3.gem) = feaa3c57758846636525e247dc9df89d7fd5f80e
-RMD160 (hike-1.2.3.gem) = 506543405564daa7878b4c36f20476ea70f07878
-SHA512 (hike-1.2.3.gem) = 2f1b3a80be9af85f8eb54b2327288fa1fc1bdbe429fe1097dc4f905a61e3da0732635fc808c6eee74d8579eed18eb311af822691c81f306d9c8e901cc7e10059
-Size (hike-1.2.3.gem) = 8704 bytes
