@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/27 21:32:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/07 04:35:25 markd Exp $
 bin/melt
 include/mlt++/Mlt.h
 include/mlt++/MltAnimation.h
@@ -79,6 +79,7 @@ lib/mlt/libmltsdl2.so
 lib/mlt/libmltsox.so
 lib/mlt/libmltvideostab.so
 lib/mlt/libmltvmfx.so
+lib/mlt/libmltvorbis.so
 lib/mlt/libmltxine.so
 lib/mlt/libmltxml.so
 lib/pkgconfig/mlt++.pc
@@ -139,6 +140,7 @@ share/mlt/frei0r/blacklist.txt
 share/mlt/frei0r/filter_cairoblend_mode.yml
 share/mlt/frei0r/not_thread_safe.txt
 share/mlt/frei0r/param_name_map.yaml
+share/mlt/frei0r/resolution_scale.yml
 share/mlt/gtk2/consumer_gtk2_preview.yml
 share/mlt/gtk2/filter_rescale.yml
 share/mlt/gtk2/producer_pango.yml
@@ -212,6 +214,8 @@ share/mlt/plusgpl/filter_burningtv.yml
 share/mlt/plusgpl/filter_lumaliftgaingamma.yml
 share/mlt/plusgpl/filter_rotoscoping.yml
 share/mlt/presets/consumer/avformat/AAC
+share/mlt/presets/consumer/avformat/ALAC
+share/mlt/presets/consumer/avformat/FLAC
 share/mlt/presets/consumer/avformat/Flash
 share/mlt/presets/consumer/avformat/GIF
 share/mlt/presets/consumer/avformat/MJPEG
@@ -268,10 +272,12 @@ share/mlt/presets/consumer/avformat/hdv_720_25p/HDV
 share/mlt/presets/consumer/avformat/hdv_720_30p/HDV
 share/mlt/presets/consumer/avformat/hdv_720_50p/HDV
 share/mlt/presets/consumer/avformat/hdv_720_60p/HDV
+share/mlt/presets/consumer/avformat/intermediate/DNxHR-HQ
 share/mlt/presets/consumer/avformat/intermediate/MJPEG
 share/mlt/presets/consumer/avformat/intermediate/MPEG-2
 share/mlt/presets/consumer/avformat/intermediate/MPEG-4
 share/mlt/presets/consumer/avformat/intermediate/ProRes
+share/mlt/presets/consumer/avformat/intermediate/ProRes HQ
 share/mlt/presets/consumer/avformat/intermediate/ProRes-Kostya
 share/mlt/presets/consumer/avformat/lossless/FFV1
 share/mlt/presets/consumer/avformat/lossless/H.264
@@ -401,6 +407,7 @@ share/mlt/vmfx/filter_chroma_hold.yml
 share/mlt/vmfx/filter_mono.yml
 share/mlt/vmfx/filter_shape.yml
 share/mlt/vmfx/producer_pgm.yml
+share/mlt/vorbis/producer_vorbis.yml
 share/mlt/xml/consumer_xml.yml
 share/mlt/xml/mlt-xml.dtd
 share/mlt/xml/producer_xml-nogl.yml
