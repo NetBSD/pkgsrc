@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3423 2020/06/07 15:03:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3424 2020/06/07 15:05:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-rex-exploitation to 0.1.24 [taca 2020-06-07]
 	Updated security/ruby-rex-text to 0.2.26 [taca 2020-06-07]
 	Updated sysutils/puppet to 6.16.0 [taca 2020-06-07]
+	Updated sysutils/ruby-facter to 4.0.25 [taca 2020-06-07]
