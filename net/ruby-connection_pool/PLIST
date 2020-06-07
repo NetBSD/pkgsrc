@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/13 16:01:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/07 09:21:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -9,9 +9,9 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/connection_pool.gemspec
 ${GEM_LIBDIR}/lib/connection_pool.rb
-${GEM_LIBDIR}/lib/connection_pool/monotonic_time.rb
 ${GEM_LIBDIR}/lib/connection_pool/timed_stack.rb
 ${GEM_LIBDIR}/lib/connection_pool/version.rb
+${GEM_LIBDIR}/lib/connection_pool/wrapper.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_connection_pool.rb
 ${GEM_LIBDIR}/test/test_connection_pool_timed_stack.rb
