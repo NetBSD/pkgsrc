@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/01/16 15:31:19 taca Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/07 07:09:31 taca Exp $
 
-DISTNAME=	hocon-1.3.0
+DISTNAME=	hocon-1.3.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
