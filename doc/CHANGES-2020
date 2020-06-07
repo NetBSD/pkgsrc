@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3411 2020/06/07 10:28:30 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3412 2020/06/07 10:35:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5383,3 +5383,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-connection_pool to 2.2.3 [taca 2020-06-07]
 	Removed mail/thunderbird60 successor mail/thunderbird [nia 2020-06-07]
 	Removed mail/thunderbird60-l10n successor mail/thunderbird-l10n [nia 2020-06-07]
+	Removed www/firefox60 successor www/firefox68 [nia 2020-06-07]
+	Removed www/firefox60-l10n successor www/firefox68-l10n [nia 2020-06-07]
