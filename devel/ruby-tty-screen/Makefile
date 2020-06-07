@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/03/08 15:32:22 taca Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/07 08:34:41 taca Exp $
 
-DISTNAME=	tty-screen-0.7.1
+DISTNAME=	tty-screen-0.8.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
