@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/01/29 11:49:29 markd Exp $
+$NetBSD: distinfo,v 1.10 2020/06/07 12:26:56 markd Exp $
 
-SHA1 (frameworkintegration-5.66.0.tar.xz) = 2599d2227dba59277d68567a0efe94b27ac7096f
-RMD160 (frameworkintegration-5.66.0.tar.xz) = f4c24c506ca88e027304cc93415addea6a26d9e0
-SHA512 (frameworkintegration-5.66.0.tar.xz) = d22cc4a2f5552705c0b863d2b73dfffd70a0020bf31dcf17874ac5a8c05de8bbbc88c7e12d455d1a98bc64916cb174a7fdb9677833cb5404c0b7c8f1c9bea2f2
-Size (frameworkintegration-5.66.0.tar.xz) = 1753696 bytes
+SHA1 (frameworkintegration-5.70.0.tar.xz) = 1e43ae8b30a65a06269e2c37cf9a06ef5b18414e
+RMD160 (frameworkintegration-5.70.0.tar.xz) = 2f6e02765cc6756bbb9f37fad41fc3d833f38608
+SHA512 (frameworkintegration-5.70.0.tar.xz) = 70a72388315c0ca1625bb279b15a9df1693aed9a6dd470af8744b856e5c7cc458b0ffcc384489889e8c3e753edb03062b41cc688361498e45ac3a26d7be70a34
+Size (frameworkintegration-5.70.0.tar.xz) = 1753940 bytes
