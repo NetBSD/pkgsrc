@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/06/03 13:00:24 nia Exp $
+# $NetBSD: Makefile,v 1.23 2020/06/07 10:34:43 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		68.9
@@ -14,6 +14,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Web browser with support for extensions (version ${FIREFOX_VER:tu:C/\\.[[:digit:]\.]*//})
 LICENSE=	mpl-1.1
+
+SUPERSEDES+=	firefox60-[0-9]*
 
 WRKSRC=		${WRKDIR}/firefox-${FIREFOX_VER:S/esr//}
 
