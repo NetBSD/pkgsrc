@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3425 2020/06/07 15:12:50 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3426 2020/06/07 15:15:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5472,3 +5472,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/puppet to 6.16.0 [taca 2020-06-07]
 	Updated sysutils/ruby-facter to 4.0.25 [taca 2020-06-07]
 	Updated sysutils/ruby-specinfra to 2.82.16 [taca 2020-06-07]
+	Updated textproc/ruby-coderay to 1.1.3 [taca 2020-06-07]
