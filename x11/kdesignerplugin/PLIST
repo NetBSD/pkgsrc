@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/11 09:21:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/07 12:35:27 markd Exp $
 bin/kgendesignerplugin
 lib/cmake/KF5DesignerPlugin/KF5DesignerPluginConfig.cmake
 lib/cmake/KF5DesignerPlugin/KF5DesignerPluginConfigVersion.cmake
@@ -7,6 +7,7 @@ lib/cmake/KF5DesignerPlugin/KF5DesignerPluginTargets-noconfig.cmake
 lib/cmake/KF5DesignerPlugin/KF5DesignerPluginTargets.cmake
 man/ca/man1/kgendesignerplugin.1
 man/de/man1/kgendesignerplugin.1
+man/es/man1/kgendesignerplugin.1
 man/it/man1/kgendesignerplugin.1
 man/man1/kgendesignerplugin.1
 man/nl/man1/kgendesignerplugin.1
