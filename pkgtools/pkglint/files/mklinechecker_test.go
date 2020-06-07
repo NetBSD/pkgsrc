@@ -178,12 +178,17 @@ func (s *Suite) Test_MkLineChecker_checkText__WRKSRC(c *check.C) {
 func (s *Suite) Test_MkLineChecker_checkTextRpath(c *check.C) {
 	t := s.Init(c)
 
-	t.NewMkLines("filename.mk",
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("filename.mk",
 		MkCvsID,
 		"BUILDLINK_TRANSFORM+=\trm:-Wl,-R/usr/lib",
-		"BUILDLINK_TRANSFORM+=\trm:-Wl,-rpath,/usr/lib")
+		"BUILDLINK_TRANSFORM+=\trm:-Wl,-rpath,/usr/lib",
+		"BUILDLINK_TRANSFORM+=\topt:-Wl,-rpath,/usr/lib")
 
-	t.CheckOutputEmpty()
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:4: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,-rpath,\".")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVartype__simple_type(c *check.C) {
