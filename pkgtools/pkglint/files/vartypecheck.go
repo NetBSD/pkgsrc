@@ -394,12 +394,14 @@ func (cv *VartypeCheck) DependencyPattern() {
 			return
 		}
 		defpat := depends(data)
-		if defpat == nil || defpat.LowerOp != deppat.LowerOp {
+		if defpat == nil || defpat.LowerOp == "" {
 			return
 		}
-		if pkgver.Compare(deppat.Lower, defpat.Lower) < 0 {
-			cv.Warnf("Version %s is smaller than the default version %s from %s.",
-				deppat.Lower, defpat.Lower, cv.MkLine.RelMkLine(dependsLine(data)))
+		limit := condInt(defpat.LowerOp == ">=" && deppat.LowerOp == ">", 1, 0)
+		if pkgver.Compare(deppat.Lower, defpat.Lower) < limit {
+			cv.Notef("The requirement %s%s is already guaranteed by the %s%s from %s.",
+				deppat.LowerOp, deppat.Lower, defpat.LowerOp, defpat.Lower,
+				cv.MkLine.RelMkLine(dependsLine(data)))
 		}
 	}
 
@@ -1400,7 +1402,7 @@ func (cv *VartypeCheck) ToolName() {
 //
 // Used for:
 //  - infrastructure variables that are not in vardefs.go
-//  - other variables whose type is unknown or uninteresting enough to
+//  - other variables whose type is unknown or not interesting enough to
 //    warrant the creation of a specialized type
 func (cv *VartypeCheck) Unknown() {
 	// Do nothing.
