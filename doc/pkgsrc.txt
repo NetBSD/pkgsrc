@@ -111,13 +111,14 @@ I. The pkgsrc user's guide
 
             8.4.1. Detect unknown configure options
             8.4.2. Detect classes of bugs by forcing compiler warnings
-            8.4.3. Use custom directories
-            8.4.4. Turn warnings into errors
-            8.4.5. Reject packages for which pkglint reports errors
-            8.4.6. Reject packages that contain forbidden strings
-            8.4.7. Reject packages whose self-test fails
-            8.4.8. Reject packages that use undefined shell variables
-            8.4.9. Turn off verbose logging
+            8.4.3. Force compiler options only in the build phase
+            8.4.4. Use custom directories
+            8.4.5. Turn warnings into errors
+            8.4.6. Reject packages for which pkglint reports errors
+            8.4.7. Reject packages that contain forbidden strings
+            8.4.8. Reject packages whose self-test fails
+            8.4.9. Reject packages that use undefined shell variables
+            8.4.10. Turn off verbose logging
 
         8.5. Creating a multiple CD-ROM packages collection
 
@@ -764,13 +765,14 @@ Table of Contents
 
         8.4.1. Detect unknown configure options
         8.4.2. Detect classes of bugs by forcing compiler warnings
-        8.4.3. Use custom directories
-        8.4.4. Turn warnings into errors
-        8.4.5. Reject packages for which pkglint reports errors
-        8.4.6. Reject packages that contain forbidden strings
-        8.4.7. Reject packages whose self-test fails
-        8.4.8. Reject packages that use undefined shell variables
-        8.4.9. Turn off verbose logging
+        8.4.3. Force compiler options only in the build phase
+        8.4.4. Use custom directories
+        8.4.5. Turn warnings into errors
+        8.4.6. Reject packages for which pkglint reports errors
+        8.4.7. Reject packages that contain forbidden strings
+        8.4.8. Reject packages whose self-test fails
+        8.4.9. Reject packages that use undefined shell variables
+        8.4.10. Turn off verbose logging
 
     8.5. Creating a multiple CD-ROM packages collection
 
@@ -1734,13 +1736,14 @@ Table of Contents
 
     8.4.1. Detect unknown configure options
     8.4.2. Detect classes of bugs by forcing compiler warnings
-    8.4.3. Use custom directories
-    8.4.4. Turn warnings into errors
-    8.4.5. Reject packages for which pkglint reports errors
-    8.4.6. Reject packages that contain forbidden strings
-    8.4.7. Reject packages whose self-test fails
-    8.4.8. Reject packages that use undefined shell variables
-    8.4.9. Turn off verbose logging
+    8.4.3. Force compiler options only in the build phase
+    8.4.4. Use custom directories
+    8.4.5. Turn warnings into errors
+    8.4.6. Reject packages for which pkglint reports errors
+    8.4.7. Reject packages that contain forbidden strings
+    8.4.8. Reject packages whose self-test fails
+    8.4.9. Reject packages that use undefined shell variables
+    8.4.10. Turn off verbose logging
 
 8.5. Creating a multiple CD-ROM packages collection
 
@@ -1926,7 +1929,79 @@ collected above.
 Patches that are not essential for the package to work should only be reported
 upstream but not committed to pkgsrc, to make future updates easier.
 
-8.4.3. Use custom directories
+8.4.3. Force compiler options only in the build phase
+
+When adding custom compiler flags via CFLAGS, these apply to all phases of the
+package build process. Especially in the configure phase, adding -Werror leads
+to wrong decisions. The GNU configure scripts feed many small test programs to
+the C compiler to see whether certain headers are available, functions are
+defined in a library and programs can be run. In many cases these programs
+would not survive a strict compiler run with -Wall -Wextra -Werror.
+
+The pkgsrc infrastructure is flexible enough to support compiler options being
+added between the configure and build phases. It's a little more complicated
+than the other examples in this section but still easy enough.
+
+The basic idea is to use the pkgsrc compiler wrapper to inject the desired
+compiler options. The compiler wrapper's original task is to hide unwanted
+directories of include files and to normalize compiler options. It does this by
+wrapping the compiler command and rewriting the command line. To see this in
+action, run bmake patch in a package directory and examine the work/.cwrappers/
+config directory. It contains individual configurations for the C compiler and
+the related tools. The plan is to find a hook between the configure and build
+phases, and to modify these configuration files at that point.
+
+To find this hook, have a look at mk/build/build.mk, which contains among
+others the pre-build-checks-hook. The word checks doesn't quite fit, but the
+pre-build-hook sounds good enough.
+
+The code to be included in mk.conf is:
+
+# Just a few example options.
+BUILD_ONLY_CFLAGS=      -Wall -Werror -O2 -DTEMPDIR='"/tmp"'
+
+.if ${BUILD_ONLY_CFLAGS:U:M*}
+pre-build-checks-hook: add-build-only-cflags
+
+add-build-only-cflags: .PHONY
+        ${RUN} cd ${CWRAPPERS_CONFIG_DIR};      \
+        ${TEST} ! -f ${.TARGET} || exit 0;      \
+        for flag in ${BUILD_ONLY_CFLAGS}; do    \
+                ${ECHO} "append=$$flag" >> cc;  \
+        done;                                   \
+        > ${.TARGET}
+.endif
+
+(When editing the mk.conf, make sure that the commands of the
+add-build-only-cflags target are indented with a tab, not with spaces.)
+
+The condition in the .if statement contains the :U modifier to prevent parse
+errors if the variable should be undefined, possibly because it is only defined
+for a subset of the packages. The :M* modifier ensures that there is at least
+one compiler option, to prevent a syntax error in the shell parser.
+
+The code around the ${.TARGET} variable ensures that the additional compiler
+options are only appended once, even if bmake build is run multiple times. To
+do this, it creates a marker file.
+
+To verify that this setup works, run bmake configure in a package directory. Up
+to now, everything works as usual. Examine the directory work/.cwrappers/config
+to see that the compiler options from BUILD_ONLY_CFLAGS are not yet added to
+the file cc. Examine the tail of the work/.work.log file to see that the normal
+compiler options are used.
+
+Now run bmake build. This will append the options to the file cc and will
+create the marker file in the same directory. After that, the build starts as
+usual, but with the added compiler options. Examine the tail of the file work
+/.work.log to see that the lines starting with [*] don't contain the compiler
+options, but the corresponding lines starting with <.> do end with these
+options.
+
+Building packages using this setup variant and fixing the resulting bugs is the
+same as in Section 8.4.2, "Detect classes of bugs by forcing compiler warnings"
+.
+
+8.4.4. Use custom directories
 
 Some directories like PREFIX, VARBASE, PKG_SYSCONFDIR, PKGMANDIR, PKG_INFODIR
 can be configured in pkgsrc. Set these to arbitrary paths during bootstrap or
@@ -1938,7 +2013,7 @@ VARBASE=        /a-random-uuid
 PKGMANDIR=      a-random-uuid
 PKG_INFODIR=    a-random-uuid
 
-8.4.4. Turn warnings into errors
+8.4.5. Turn warnings into errors
 
 When building a package, warnings are typically ignored since they just flow by
 and do not cause the build to fail immediately. To find these warnings,
@@ -1954,14 +2029,14 @@ If a package suggests to add USE_TOOLS+=perl to the package Makefile, research
 whether the package actually needs Perl. If it does, add USE_TOOLS+=perl to the
 package Makefile, and if it doesn't, add TOOLS_BROKEN+=perl.
 
-8.4.5. Reject packages for which pkglint reports errors
+8.4.6. Reject packages for which pkglint reports errors
 
 Using pkglint as part of the regular build process is mostly a waste of time.
 If you want to fix some of the warnings, just run pkglint recursively on the
 whole pkgsrc tree. This will take a few minutes (up to 10), which is much
 faster than a complete bulk build.
 
-8.4.6. Reject packages that contain forbidden strings
+8.4.7. Reject packages that contain forbidden strings
 
 To ensure that the binary packages don't contain references to the build
 directory, there is already CHECK_WRKREF. If that variable includes the item
@@ -1976,7 +2051,7 @@ CHECK_WRKREF_EXTRA_DIRS+=       @[A-Z][A-Z]*@
 The above patterns will probably generate many false positives, therefore the
 results need to be taken with a grain of salt.
 
-8.4.7. Reject packages whose self-test fails
+8.4.8. Reject packages whose self-test fails
 
 To run the test suites that come with each package, add this line to mk.conf.
 
@@ -1987,16 +2062,20 @@ build with this, it will often abort in the early phase where the packages are
 scanned for their dependencies since there are cyclic dependencies. There is
 still a lot to do in this area.
 
-8.4.8. Reject packages that use undefined shell variables
+8.4.9. Reject packages that use undefined shell variables
 
 To catch typos in the shell snippets from the Makefile fragments, add the -u
 flag to most of the commands by adding this line to mk.conf.
 
 RUN=    @set -eu;
 
+After that, ensure that none of the bulk build log files (even those for
+successfully built packages) contains the string parameter not set or whatever
+error message the command sh -ceu '$undefined' outputs.
+
 See mk/misc/common.mk for the existing definition.
 
-8.4.9. Turn off verbose logging
+8.4.10. Turn off verbose logging
 
 The build logs of a package are often quite long. This allows error messages or
 other interesting details to hide between the noise. To make the actual error
@@ -5759,35 +5838,6 @@ print-PLIST
     See Section 15.3, "Tweaking output of make print-PLIST" for more
     information on this target.
 
-bulk-package
-
-    Used to do bulk builds. If an appropriate binary package already exists, no
-    action is taken. If not, this target will compile, install and package it
-    (and its depends, if PKG_DEPENDS is set properly. See Chapter 8, Creating
-    binary packages for everything in pkgsrc (bulk builds)). After creating the
-    binary package, the sources, the just-installed package and its required
-    packages are removed, preserving free disk space.
-
-    Beware that this target may deinstall all packages installed on a system!
-
-bulk-install
-
-    Used during bulk-installs to install required packages. If an up-to-date
-    binary package is available, it will be installed via pkg_add(1). If not, 
-    make bulk-package will be executed, but the installed binary won't be
-    removed.
-
-    A binary package is considered "up-to-date" to be installed via pkg_add(1)
-    if:
-
-      + None of the package's files (Makefile, ...) were modified since it was
-        built.
-
-      + None of the package's required (binary) packages were modified since it
-        was built.
-
-    Beware that this target may deinstall all packages installed on a system!
-
 Chapter 20. Tools needed for building or running
 
 Table of Contents
@@ -6463,7 +6513,7 @@ pre-install
     user names, these belong in pre-configure instead. There are only few
     legitimate use cases for applying substitutions in this stage.
 
-21.1.11.2. Choosing the time where the substitutions happen
+21.1.11.2. Choosing the files where the substitutions happen
 
 The SUBST_FILES.* variable contains a list of filename patterns. These patterns
 are relative to WRKSRC since that is where most substitutions happen. A typical
@@ -6475,17 +6525,18 @@ The above patterns, especially the last, are quite broad. The SUBST
 implementation checks that each filename pattern that is mentioned here has an
 effect. For example, if none of the */*/Makefile files contains the patterns to
 be found and substituted, that filename pattern is redundant and should be left
-out. If the text to be substituted occurs in some of the files from a single
-pattern, but not in all of them, that is totally ok, and the SUBST framework
-will only print an INFO message for those files.
+out. By default, the SUBST framework will complain with an error message. If
+the text to be substituted occurs in some of the files from a single pattern,
+but not in all of them, that is totally ok, and the SUBST framework will only
+print an INFO message for those files.
 
 If there is a good reason for having redundant filename patterns, set
-SUBST_NOOP_OK.path=yes in the above example.
+SUBST_NOOP_OK.* to yes.
 
 Another popular way of choosing the files for the substitutions is via a shell
 command, like this:
 
-C_FILES_CMD=            cd ${WRKSRC} && ${FIND} -name '*.c'
+C_FILES_CMD=            cd ${WRKSRC} && ${FIND} . -name '*.c'
 SUBST_FILES.path=       ${C_FILES_CMD:sh}
 
 The variable name C_FILES_CMD in this example is freely chosen and independent
@@ -6520,13 +6571,14 @@ their pkgsrc counterpart variable ${VARNAME}. A typical example is:
 
 SUBST_VARS.path=        PREFIX
 
-This type of substitutions is typically done by the GNU configure scripts, but
-in some cases these need to be overridden. The same pattern is also used when a
-package defines patches that replace previously hard-coded paths like /usr/
-local with a @PREFIX@ placeholder first, which then gets substituted by the
-actual ${PREFIX} in the pre-configure stage. In many of these cases, it works
-equally well to just use the SUBST framework to directly replace /usr/local
-with ${PREFIX}, thereby omitting the intermediate patch file.
+This type of substitutions is typically done by the GNU configure scripts
+during the do-configure stage, but in some cases these need to be overridden.
+The same pattern is also used when a package defines patches that replace
+previously hard-coded paths like /usr/local with a @PREFIX@ placeholder first,
+which then gets substituted by the actual ${PREFIX} in the pre-configure stage.
+In many of these cases, it works equally well to just use the SUBST framework
+to directly replace /usr/local with ${PREFIX}, thereby omitting the
+intermediate patch file.
 
 If the above is not flexible enough, it is possible to not use sed at all for
 the substitution but to specify an entirely different command, like this:
@@ -9710,38 +9762,39 @@ send                             sendfile
 sendto                           setenv
 setgid                           setprogname
 setuid                           sh
-show                             show-all
-show-build-defs                  show-depends
-show-deps                        show-distfiles
-show-downlevel                   show-subdir-var
-show-tools                       show-var
-show-vars                        snprintf
-socket                           ssp
-st_mode                          stage-install
-strcasestr                       strict
-strip                            strndup
-strnlen                          strsep
-subst                            substitutions
-subversion                       sun
-sunpro                           sunwspro
-svn                              symlink
-test                             test-env
-tex                              texlive
-tmp                              tool
-tools                            tools-libtool-m4-override
-type                             ulimit
-undefined                        undo-replace
-unlimit                          unprivileged
-unprivileged-install-hook        unstripped
-update                           upload
-upload-distfiles                 use_tools
-user                             utimes
-vasprintf                        verbose
-vsnprintf                        warn
-warning                          warnings
-warnx                            wattr_off
-wattr_on                         work
-wrapper                          wrkdir
+shebang                          show
+show-all                         show-build-defs
+show-depends                     show-deps
+show-distfiles                   show-downlevel
+show-subdir-var                  show-tools
+show-var                         show-vars
+snprintf                         socket
+ssp                              st_mode
+stage-install                    strcasestr
+strict                           strip
+strndup                          strnlen
+strsep                           subst
+substitutions                    subversion
+sun                              sunpro
+sunwspro                         svn
+symlink                          test
+test-env                         tex
+texlive                          tmp
+tool                             tools
+tools-libtool-m4-override        type
+ulimit                           undefined
+undo-replace                     unlimit
+unprivileged                     unprivileged-install-hook
+unstripped                       update
+upload                           upload-distfiles
+use_tools                        user
+utimes                           vasprintf
+verbose                          vsnprintf
+warn                             warning
+warnings                         warnx
+wattr_off                        wattr_on
+work                             wrapper
+wrkdir                            
 
 Appendix E. Editing guidelines for the pkgsrc guide
 
