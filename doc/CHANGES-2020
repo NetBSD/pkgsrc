@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3435 2020/06/07 15:41:02 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3436 2020/06/07 15:43:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5482,3 +5482,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-jekyll-feed to 0.13.0 [taca 2020-06-07]
 	Updated www/ruby-jekyll-sass-converter to 2.1.0 [taca 2020-06-07]
 	Updated www/ruby-jekyll-watch to 2.2.1 [taca 2020-06-07]
+	Updated www/ruby-sassc to 2.4.0 [taca 2020-06-07]
