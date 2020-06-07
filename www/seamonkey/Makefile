@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2020/06/02 08:24:58 adam Exp $
+# $NetBSD: Makefile,v 1.215 2020/06/07 22:32:55 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -27,7 +27,8 @@ GCC_REQD+=	6
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 # See mozilla/config/milestone.txt
-.include "../../www/firefox60/mozilla-common.mk"
+#.include "../../www/firefox60/mozilla-common.mk"
+.include "mozilla-common.mk"
 
 # Workaround to fix pixman.h detection
 CFLAGS+=	-I${BUILDLINK_PREFIX.pixman}/include/pixman-1
