@@ -128,13 +128,14 @@ builds)</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#bulk.var.confopt">8.4.1. Detect unknown configure options</a></span></dt>
 <dt><span class="sect2"><a href="#bulk.var.comperr">8.4.2. Detect classes of bugs by forcing compiler warnings</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.dirs">8.4.3. Use custom directories</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.warn">8.4.4. Turn warnings into errors</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.pkglint">8.4.5. Reject packages for which pkglint reports errors</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.strings">8.4.6. Reject packages that contain forbidden strings</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.test">8.4.7. Reject packages whose self-test fails</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.shvar">8.4.8. Reject packages that use undefined shell variables</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.quiet">8.4.9. Turn off verbose logging</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.builderr">8.4.3. Force compiler options only in the build phase</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.dirs">8.4.4. Use custom directories</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.warn">8.4.5. Turn warnings into errors</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.pkglint">8.4.6. Reject packages for which pkglint reports errors</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.strings">8.4.7. Reject packages that contain forbidden strings</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.test">8.4.8. Reject packages whose self-test fails</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.shvar">8.4.9. Reject packages that use undefined shell variables</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.quiet">8.4.10. Turn off verbose logging</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">8.5. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">8.5.1. Example of cdpack</a></span></dt></dl></dd>
@@ -885,13 +886,14 @@ builds)</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#bulk.var.confopt">8.4.1. Detect unknown configure options</a></span></dt>
 <dt><span class="sect2"><a href="#bulk.var.comperr">8.4.2. Detect classes of bugs by forcing compiler warnings</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.dirs">8.4.3. Use custom directories</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.warn">8.4.4. Turn warnings into errors</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.pkglint">8.4.5. Reject packages for which pkglint reports errors</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.strings">8.4.6. Reject packages that contain forbidden strings</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.test">8.4.7. Reject packages whose self-test fails</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.shvar">8.4.8. Reject packages that use undefined shell variables</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.quiet">8.4.9. Turn off verbose logging</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.builderr">8.4.3. Force compiler options only in the build phase</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.dirs">8.4.4. Use custom directories</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.warn">8.4.5. Turn warnings into errors</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.pkglint">8.4.6. Reject packages for which pkglint reports errors</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.strings">8.4.7. Reject packages that contain forbidden strings</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.test">8.4.8. Reject packages whose self-test fails</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.shvar">8.4.9. Reject packages that use undefined shell variables</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.quiet">8.4.10. Turn off verbose logging</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">8.5. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">8.5.1. Example of cdpack</a></span></dt></dl></dd>
@@ -2093,13 +2095,14 @@ builds)</h2></div></div></div>
 <dd><dl>
 <dt><span class="sect2"><a href="#bulk.var.confopt">8.4.1. Detect unknown configure options</a></span></dt>
 <dt><span class="sect2"><a href="#bulk.var.comperr">8.4.2. Detect classes of bugs by forcing compiler warnings</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.dirs">8.4.3. Use custom directories</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.warn">8.4.4. Turn warnings into errors</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.pkglint">8.4.5. Reject packages for which pkglint reports errors</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.strings">8.4.6. Reject packages that contain forbidden strings</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.test">8.4.7. Reject packages whose self-test fails</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.shvar">8.4.8. Reject packages that use undefined shell variables</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.var.quiet">8.4.9. Turn off verbose logging</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.builderr">8.4.3. Force compiler options only in the build phase</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.dirs">8.4.4. Use custom directories</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.warn">8.4.5. Turn warnings into errors</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.pkglint">8.4.6. Reject packages for which pkglint reports errors</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.strings">8.4.7. Reject packages that contain forbidden strings</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.test">8.4.8. Reject packages whose self-test fails</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.shvar">8.4.9. Reject packages that use undefined shell variables</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.var.quiet">8.4.10. Turn off verbose logging</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">8.5. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">8.5.1. Example of cdpack</a></span></dt></dl></dd>
@@ -2290,7 +2293,86 @@ easier.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.var.dirs"></a>8.4.3. Use custom directories</h3></div></div></div>
+<a name="bulk.var.builderr"></a>8.4.3. Force compiler options only in the build phase</h3></div></div></div>
+<p>When adding custom compiler flags via <code class="varname">CFLAGS</code>,
+these apply to all phases of the package build process. Especially in the
+configure phase, adding <code class="literal">-Werror</code> leads to wrong
+decisions. The GNU configure scripts feed many small test programs to the
+C compiler to see whether certain headers are available, functions are
+defined in a library and programs can be run. In many cases these
+programs would not survive a strict compiler run with <code class="literal">-Wall
+-Wextra -Werror</code>.</p>
+<p>The pkgsrc infrastructure is flexible enough to support compiler
+options being added between the <code class="literal">configure</code> and
+<code class="literal">build</code> phases. It's a little more complicated than the
+other examples in this section but still easy enough.</p>
+<p>The basic idea is to use the pkgsrc compiler wrapper to inject the
+desired compiler options. The compiler wrapper's original task is to hide
+unwanted directories of include files and to normalize compiler options.
+It does this by wrapping the compiler command and rewriting the command
+line. To see this in action, run <span class="command"><strong>bmake patch</strong></span> in a
+package directory and examine the
+<code class="filename">work/.cwrappers/config</code> directory. It contains
+individual configurations for the C compiler and the related tools. The
+plan is to find a hook between the configure and build phases, and to
+modify these configuration files at that point.</p>
+<p>To find this hook, have a look at
+<code class="filename">mk/build/build.mk</code>, which contains among others the
+<code class="literal">pre-build-checks-hook</code>. The word
+<code class="literal">checks</code> doesn't quite fit, but the
+<code class="literal">pre-build-hook</code> sounds good enough.</p>
+<p>The code to be included in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> is:</p>
+<pre class="programlisting">
+# Just a few example options.
+BUILD_ONLY_CFLAGS=      -Wall -Werror -O2 -DTEMPDIR='"/tmp"'
+
+.if ${BUILD_ONLY_CFLAGS:U:M*}
+pre-build-checks-hook: add-build-only-cflags
+
+add-build-only-cflags: .PHONY
+        ${RUN} cd ${CWRAPPERS_CONFIG_DIR};      \
+        ${TEST} ! -f ${.TARGET} || exit 0;      \
+        for flag in ${BUILD_ONLY_CFLAGS}; do    \
+                ${ECHO} "append=$$flag" &gt;&gt; cc;  \
+        done;                                   \
+        &gt; ${.TARGET}
+.endif
+</pre>
+<p>(When editing the <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, make sure that the commands of the
+<code class="literal">add-build-only-cflags</code> target are indented with a tab,
+not with spaces.)</p>
+<p>The condition in the <code class="literal">.if</code> statement contains the
+<code class="literal">:U</code> modifier to prevent parse errors if the variable
+should be undefined, possibly because it is only defined for a subset of
+the packages. The <code class="literal">:M*</code> modifier ensures that there is
+at least one compiler option, to prevent a syntax error in the shell
+parser.</p>
+<p>The code around the <code class="literal">${.TARGET}</code> variable ensures
+that the additional compiler options are only appended once, even if
+<span class="command"><strong>bmake build</strong></span> is run multiple times. To do this, it
+creates a marker file.</p>
+<p>To verify that this setup works, run <span class="command"><strong>bmake
+configure</strong></span> in a package directory. Up to now, everything works
+as usual. Examine the directory
+<code class="filename">work/.cwrappers/config</code> to see that the compiler
+options from <code class="varname">BUILD_ONLY_CFLAGS</code> are not yet added to
+the file <code class="filename">cc</code>. Examine the tail of the
+<code class="filename">work/.work.log</code> file to see that the normal compiler
+options are used.</p>
+<p>Now run <span class="command"><strong>bmake build</strong></span>. This will append the
+options to the file <code class="filename">cc</code> and will create the marker
+file in the same directory. After that, the build starts as usual, but
+with the added compiler options. Examine the tail of the file
+<code class="filename">work/.work.log</code> to see that the lines starting with
+<code class="literal">[*]</code> don't contain the compiler options, but the
+corresponding lines starting with <code class="literal">&lt;.&gt;</code> do end
+with these options.</p>
+<p>Building packages using this setup variant and fixing the resulting
+bugs is the same as in <a class="xref" href="#bulk.var.comperr" title="8.4.2. Detect classes of bugs by forcing compiler warnings">Section 8.4.2, &#8220;Detect classes of bugs by forcing compiler warnings&#8221;</a>.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="bulk.var.dirs"></a>8.4.4. Use custom directories</h3></div></div></div>
 <p>Some directories like <code class="varname">PREFIX</code>,
 <code class="varname">VARBASE</code>, <code class="varname">PKG_SYSCONFDIR</code>,
 <code class="varname">PKGMANDIR</code>, <code class="varname">PKG_INFODIR</code> can be
@@ -2306,7 +2388,7 @@ PKG_INFODIR=	a-random-uuid
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.var.warn"></a>8.4.4. Turn warnings into errors</h3></div></div></div>
+<a name="bulk.var.warn"></a>8.4.5. Turn warnings into errors</h3></div></div></div>
 <p>When building a package, warnings are typically ignored since they
 just flow by and do not cause the build to fail immediately. To find
 these warnings, redefine them to errors in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>.</p>
@@ -2324,7 +2406,7 @@ Makefile, and if it doesn't, add
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.var.pkglint"></a>8.4.5. Reject packages for which pkglint reports errors</h3></div></div></div>
+<a name="bulk.var.pkglint"></a>8.4.6. Reject packages for which pkglint reports errors</h3></div></div></div>
 <p>Using pkglint as part of the regular build process is mostly a
 waste of time. If you want to fix some of the warnings, just run pkglint
 recursively on the whole pkgsrc tree. This will take a few minutes (up to
@@ -2332,7 +2414,7 @@ recursively on the whole pkgsrc tree. This will take a few minutes (up to
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.var.strings"></a>8.4.6. Reject packages that contain forbidden strings</h3></div></div></div>
+<a name="bulk.var.strings"></a>8.4.7. Reject packages that contain forbidden strings</h3></div></div></div>
 <p>To ensure that the binary packages don't contain references to the
 build directory, there is already <code class="varname">CHECK_WRKREF</code>. If
 that variable includes the item <code class="literal">extra</code>, it is
@@ -2349,7 +2431,7 @@ therefore the results need to be taken with a grain of salt.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.var.test"></a>8.4.7. Reject packages whose self-test fails</h3></div></div></div>
+<a name="bulk.var.test"></a>8.4.8. Reject packages whose self-test fails</h3></div></div></div>
 <p>To run the test suites that come with each package, add this line
 to <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>.</p>
 <pre class="programlisting">
@@ -2362,19 +2444,23 @@ cyclic dependencies. There is still a lot to do in this area.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.var.shvar"></a>8.4.8. Reject packages that use undefined shell variables</h3></div></div></div>
+<a name="bulk.var.shvar"></a>8.4.9. Reject packages that use undefined shell variables</h3></div></div></div>
 <p>To catch typos in the shell snippets from the Makefile fragments,
 add the <code class="literal">-u</code> flag to most of the commands by adding this
 line to <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>.</p>
 <pre class="programlisting">
 RUN=    @set -eu;
 </pre>
+<p>After that, ensure that none of the bulk build log files (even
+those for successfully built packages) contains the string
+<code class="literal">parameter not set</code> or whatever error message the
+command <span class="command"><strong>sh -ceu '$undefined'</strong></span> outputs.</p>
 <p>See <code class="filename">mk/misc/common.mk</code> for the existing
 definition.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.var.quiet"></a>8.4.9. Turn off verbose logging</h3></div></div></div>
+<a name="bulk.var.quiet"></a>8.4.10. Turn off verbose logging</h3></div></div></div>
 <p>The build logs of a package are often quite long. This allows error
 messages or other interesting details to hide between the noise. To make
 the actual error message stand out more, add these lines to
@@ -6962,40 +7048,6 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <p>See <a class="xref" href="#print-PLIST" title="15.3. Tweaking output of make print-PLIST">Section 15.3, &#8220;Tweaking output of <span class="command"><strong>make print-PLIST</strong></span>&#8221;</a> for more
 	  information on this target.</p>
 </dd>
-<dt><span class="term">bulk-package</span></dt>
-<dd>
-<p>Used to do bulk builds. If an appropriate binary
-	  package already exists, no action is taken. If not, this
-	  target will compile, install and package it (and its
-	  depends, if <code class="varname">PKG_DEPENDS</code> is set
-	  properly. See <a class="xref" href="#bulk" title="Chapter 8. Creating binary packages for everything in pkgsrc (bulk builds)">Chapter 8, <i>Creating binary packages for everything in pkgsrc (bulk
-builds)</i></a>).
-	  After creating the binary package, the sources, the
-	  just-installed package and its required packages are
-	  removed, preserving free disk space.</p>
-<p><span class="emphasis"><em>Beware that this target may deinstall
-	  all packages installed on a system!</em></span></p>
-</dd>
-<dt><span class="term">bulk-install</span></dt>
-<dd>
-<p>Used during bulk-installs to install required
-	  packages. If an up-to-date binary package is available,
-	  it will be installed via <a class="citerefentry" href="https://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-9.0"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. If not,
-	  <span class="command"><strong>make bulk-package</strong></span> will be executed,
-	  but the installed binary won't be removed.</p>
-<p>A binary package is considered
-	  <span class="quote">&#8220;<span class="quote">up-to-date</span>&#8221;</span> to be installed via
-	  <a class="citerefentry" href="https://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-9.0"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> if:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>None of the package's files
-	      (<code class="filename">Makefile</code>, ...) were modified
-	      since it was built.</p></li>
-<li class="listitem"><p>None of the package's required (binary)
-	      packages were modified since it was built.</p></li>
-</ul></div>
-<p><span class="emphasis"><em>Beware that this target may deinstall
-	  all packages installed on a system!</em></span></p>
-</dd>
 </dl></div>
 </div>
 </div>
@@ -7806,7 +7858,7 @@ substitutions in this stage.</p></dd>
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="fixes.subst.where"></a>21.1.11.2. Choosing the time where the substitutions happen</h4></div></div></div>
+<a name="fixes.subst.where"></a>21.1.11.2. Choosing the files where the substitutions happen</h4></div></div></div>
 <p>The <code class="varname">SUBST_FILES.*</code> variable contains a list of
 filename patterns. These patterns are relative to
 <code class="varname">WRKSRC</code> since that is where most substitutions happen.
@@ -7819,16 +7871,16 @@ implementation checks that each filename pattern that is mentioned here
 has an effect. For example, if none of the
 <code class="filename">*/*/Makefile</code> files contains the patterns to be found
 and substituted, that filename pattern is redundant and should be left
-out. If the text to be substituted occurs in some of the files from a
-single pattern, but not in all of them, that is totally ok, and the SUBST
+out. By default, the SUBST framework will complain with an error message.
+If the text to be substituted occurs in some of the files from a single
+pattern, but not in all of them, that is totally ok, and the SUBST
 framework will only print an INFO message for those files.</p>
 <p>If there is a good reason for having redundant filename patterns,
-set <code class="varname">SUBST_NOOP_OK.path=yes</code> in the above
-example.</p>
+set <code class="varname">SUBST_NOOP_OK.*</code> to <code class="literal">yes</code>.</p>
 <p>Another popular way of choosing the files for the substitutions is
 via a shell command, like this:</p>
 <pre class="programlisting">
-C_FILES_CMD=            cd ${WRKSRC} &amp;&amp; ${FIND} -name '*.c'
+C_FILES_CMD=            cd ${WRKSRC} &amp;&amp; ${FIND} . -name '*.c'
 SUBST_FILES.path=       ${C_FILES_CMD:sh}
 </pre>
 <p>The variable name <code class="varname">C_FILES_CMD</code> in this example is
@@ -7866,15 +7918,15 @@ to enclose them in single quotes.</p>
 SUBST_VARS.path=        PREFIX
 </pre>
 <p>This type of substitutions is typically done by the GNU configure
-scripts, but in some cases these need to be overridden. The same pattern
-is also used when a package defines patches that replace previously
-hard-coded paths like <code class="literal">/usr/local</code> with a
-<code class="literal">@PREFIX@</code> placeholder first, which then gets
-substituted by the actual <code class="literal">${PREFIX}</code> in the
-pre-configure stage. In many of these cases, it works equally well to
-just use the SUBST framework to directly replace
-<code class="literal">/usr/local</code> with <code class="literal">${PREFIX}</code>, thereby
-omitting the intermediate patch file.</p>
+scripts during the do-configure stage, but in some cases these need to be
+overridden. The same pattern is also used when a package defines patches
+that replace previously hard-coded paths like
+<code class="literal">/usr/local</code> with a <code class="literal">@PREFIX@</code>
+placeholder first, which then gets substituted by the actual
+<code class="literal">${PREFIX}</code> in the pre-configure stage. In many of these
+cases, it works equally well to just use the SUBST framework to directly
+replace <code class="literal">/usr/local</code> with <code class="literal">${PREFIX}</code>,
+thereby omitting the intermediate patch file.</p>
 <p>If the above is not flexible enough, it is possible to not use sed
 at all for the substitution but to specify an entirely different command,
 like this:</p>
@@ -13766,132 +13818,136 @@ source packages</h2></div></div></div>
 <td>sh</td>
 </tr>
 <tr>
+<td>shebang</td>
 <td>show</td>
+</tr>
+<tr>
 <td>show-all</td>
-</tr>
-<tr>
 <td>show-build-defs</td>
+</tr>
+<tr>
 <td>show-depends</td>
-</tr>
-<tr>
 <td>show-deps</td>
+</tr>
+<tr>
 <td>show-distfiles</td>
-</tr>
-<tr>
 <td>show-downlevel</td>
+</tr>
+<tr>
 <td>show-subdir-var</td>
-</tr>
-<tr>
 <td>show-tools</td>
+</tr>
+<tr>
 <td>show-var</td>
-</tr>
-<tr>
 <td>show-vars</td>
+</tr>
+<tr>
 <td>snprintf</td>
-</tr>
-<tr>
 <td>socket</td>
+</tr>
+<tr>
 <td>ssp</td>
-</tr>
-<tr>
 <td>st_mode</td>
+</tr>
+<tr>
 <td>stage-install</td>
-</tr>
-<tr>
 <td>strcasestr</td>
+</tr>
+<tr>
 <td>strict</td>
-</tr>
-<tr>
 <td>strip</td>
+</tr>
+<tr>
 <td>strndup</td>
-</tr>
-<tr>
 <td>strnlen</td>
+</tr>
+<tr>
 <td>strsep</td>
-</tr>
-<tr>
 <td>subst</td>
+</tr>
+<tr>
 <td>substitutions</td>
-</tr>
-<tr>
 <td>subversion</td>
+</tr>
+<tr>
 <td>sun</td>
-</tr>
-<tr>
 <td>sunpro</td>
+</tr>
+<tr>
 <td>sunwspro</td>
-</tr>
-<tr>
 <td>svn</td>
+</tr>
+<tr>
 <td>symlink</td>
-</tr>
-<tr>
 <td>test</td>
+</tr>
+<tr>
 <td>test-env</td>
-</tr>
-<tr>
 <td>tex</td>
+</tr>
+<tr>
 <td>texlive</td>
-</tr>
-<tr>
 <td>tmp</td>
+</tr>
+<tr>
 <td>tool</td>
-</tr>
-<tr>
 <td>tools</td>
+</tr>
+<tr>
 <td>tools-libtool-m4-override</td>
-</tr>
-<tr>
 <td>type</td>
+</tr>
+<tr>
 <td>ulimit</td>
-</tr>
-<tr>
 <td>undefined</td>
+</tr>
+<tr>
 <td>undo-replace</td>
-</tr>
-<tr>
 <td>unlimit</td>
+</tr>
+<tr>
 <td>unprivileged</td>
-</tr>
-<tr>
 <td>unprivileged-install-hook</td>
+</tr>
+<tr>
 <td>unstripped</td>
-</tr>
-<tr>
 <td>update</td>
+</tr>
+<tr>
 <td>upload</td>
-</tr>
-<tr>
 <td>upload-distfiles</td>
+</tr>
+<tr>
 <td>use_tools</td>
-</tr>
-<tr>
 <td>user</td>
+</tr>
+<tr>
 <td>utimes</td>
-</tr>
-<tr>
 <td>vasprintf</td>
+</tr>
+<tr>
 <td>verbose</td>
-</tr>
-<tr>
 <td>vsnprintf</td>
+</tr>
+<tr>
 <td>warn</td>
-</tr>
-<tr>
 <td>warning</td>
+</tr>
+<tr>
 <td>warnings</td>
-</tr>
-<tr>
 <td>warnx</td>
+</tr>
+<tr>
 <td>wattr_off</td>
-</tr>
-<tr>
 <td>wattr_on</td>
-<td>work</td>
 </tr>
 <tr>
+<td>work</td>
 <td>wrapper</td>
+</tr>
+<tr>
 <td>wrkdir</td>
+<td> </td>
 </tr>
 </table>
 </div>
