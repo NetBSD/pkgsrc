@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3427 2020/06/07 15:19:17 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3428 2020/06/07 15:24:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5474,3 +5474,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-specinfra to 2.82.16 [taca 2020-06-07]
 	Updated textproc/ruby-coderay to 1.1.3 [taca 2020-06-07]
 	Updated www/ruby-capybara to 3.32.2 [taca 2020-06-07]
+	Updated www/ruby-http to 4.4.1 [taca 2020-06-07]
