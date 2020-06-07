@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3409 2020/06/07 08:37:37 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3410 2020/06/07 09:22:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5380,3 +5380,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-i18n to 1.8.3 [taca 2020-06-07]
 	Updated devel/ruby-tty-screen to 0.8.0 [taca 2020-06-07]
 	Updated misc/ruby-sprockets to 4.0.2 [taca 2020-06-07]
+	Updated net/ruby-connection_pool to 2.2.3 [taca 2020-06-07]
