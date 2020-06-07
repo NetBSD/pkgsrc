@@ -162,11 +162,6 @@ func (ck *MkVarUseChecker) checkVarnameBuildlink(varname string) {
 		return
 	}
 
-	basename := ck.MkLine.Basename
-	if basename == "buildlink3.mk" || basename == "builtin.mk" {
-		return
-	}
-
 	varparam := varnameParam(varname)
 	id := Buildlink3ID(varparam)
 	if pkg.bl3Data[id] != nil || containsVarUse(varparam) {
@@ -176,11 +171,14 @@ func (ck *MkVarUseChecker) checkVarnameBuildlink(varname string) {
 	// Several packages contain Makefile fragments that are more related
 	// to the buildlink3.mk file than to the package Makefile.
 	// These may use the buildlink identifier from the package itself.
-	bl3 := LoadMk(pkg.File("buildlink3.mk"), pkg, 0)
-	if bl3 != nil {
-		bl3Data := LoadBuildlink3Data(bl3)
-		if bl3Data != nil && bl3Data.id == id {
-			return
+	basename := ck.MkLine.Basename
+	if basename != "Makefile" && basename != "options.mk" {
+		bl3 := LoadMk(pkg.File("buildlink3.mk"), pkg, 0)
+		if bl3 != nil {
+			bl3Data := LoadBuildlink3Data(bl3)
+			if bl3Data != nil && bl3Data.id == id {
+				return
+			}
 		}
 	}
 
