@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:08:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/07 11:53:23 markd Exp $
 bin/depdiagram-generate
 bin/depdiagram-generate-all
 bin/depdiagram-prepare
@@ -14,27 +14,9 @@ ${PYSITELIB}/kapidox/data/DoxygenLayout.xml
 ${PYSITELIB}/kapidox/data/dependencies.md.tmpl
 ${PYSITELIB}/kapidox/data/footer.html
 ${PYSITELIB}/kapidox/data/header.html
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/LICENSE.txt
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/css/bootstrap-theme.css
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/css/bootstrap-theme.css.map
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/css/bootstrap-theme.min.css
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/css/bootstrap-theme.min.css.map
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/css/bootstrap.css
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/css/bootstrap.css.map
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/css/bootstrap.min.css
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/css/bootstrap.min.css.map
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/fonts/glyphicons-halflings-regular.eot
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/fonts/glyphicons-halflings-regular.svg
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/fonts/glyphicons-halflings-regular.ttf
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/fonts/glyphicons-halflings-regular.woff
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/fonts/glyphicons-halflings-regular.woff2
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/js/bootstrap.js
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/js/bootstrap.min.js
-${PYSITELIB}/kapidox/data/htmlresource/3rd-party/bootstrap/js/npm.js
 ${PYSITELIB}/kapidox/data/htmlresource/3rd-party/jquery/LICENSE.txt
 ${PYSITELIB}/kapidox/data/htmlresource/3rd-party/jquery/jquery-3.1.0.min.js
 ${PYSITELIB}/kapidox/data/htmlresource/css/bg.png
-${PYSITELIB}/kapidox/data/htmlresource/css/kapidox.css
 ${PYSITELIB}/kapidox/data/htmlresource/default_product.png
 ${PYSITELIB}/kapidox/data/htmlresource/favicon.ico
 ${PYSITELIB}/kapidox/data/htmlresource/frameworks.css
