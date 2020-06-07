@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/01/29 11:49:30 markd Exp $
+$NetBSD: distinfo,v 1.10 2020/06/07 12:39:01 markd Exp $
 
-SHA1 (kguiaddons-5.66.0.tar.xz) = 9f1df8045951f3e73d962ccc8323e0a9672ca901
-RMD160 (kguiaddons-5.66.0.tar.xz) = 3f267d599b745380d51e6d047cf0a53f7cd1d1f7
-SHA512 (kguiaddons-5.66.0.tar.xz) = d5fabe9069e404c91172e9bb73d570abc325c32b82d3265e03822ed89c43025337e371e3970248a2021401f90c406491a2dd4f2a8aff1fbc852aa052a5e8fa9e
-Size (kguiaddons-5.66.0.tar.xz) = 40644 bytes
+SHA1 (kguiaddons-5.70.0.tar.xz) = ab1b35d3b9f37217c461d0f9aba53082915b6482
+RMD160 (kguiaddons-5.70.0.tar.xz) = 2e1d9faa1e849402792dc3a1cb2dc292f81115cc
+SHA512 (kguiaddons-5.70.0.tar.xz) = a834a0e7c523499cf11884b32aa9c6f0d54ff6cc50251de09f6892a793d8a78d6cfdb53607c43fb31c5b9987f2021393647fd3e4199276ff3b5d714d82102d02
+Size (kguiaddons-5.70.0.tar.xz) = 53160 bytes
