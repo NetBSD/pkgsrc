@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.27 2020/06/06 09:33:56 rillig Exp $
+# $NetBSD: metadata.mk,v 1.28 2020/06/07 04:41:58 rillig Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -107,12 +107,10 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 		${AWK} '{ print "${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}; } | \
 		${SORT} | uniq -c | awk '$$1 == 2 {print $$2}'`; \
 	for i in $$libs; do						\
-		${TEST} "$$i" != "" || continue;			\
 		${ECHO} "PROVIDES=$$i";					\
 	done | ${SED} -e 's,^PROVIDES=${DESTDIR},PROVIDES=,'		\
 		>> ${.TARGET}.tmp;					\
 	for req in $$requires; do					\
-		${TEST} "$$req" != "" || continue;			\
 		${ECHO} "REQUIRES=$$req" >> ${.TARGET}.tmp;		\
 	done
 .endif
