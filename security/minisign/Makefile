@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/08/14 15:50:28 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/07 11:04:43 fcambus Exp $
 
-DISTNAME=	minisign-0.8
+DISTNAME=	minisign-0.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jedisct1/}
 
