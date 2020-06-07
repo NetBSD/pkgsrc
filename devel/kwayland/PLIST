@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/11 07:57:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/07 11:27:01 markd Exp $
 include/KF5/KWayland/Client/appmenu.h
 include/KF5/KWayland/Client/blur.h
 include/KF5/KWayland/Client/buffer.h
@@ -95,6 +95,7 @@ include/KF5/KWayland/Server/shell_interface.h
 include/KF5/KWayland/Server/slide_interface.h
 include/KF5/KWayland/Server/subcompositor_interface.h
 include/KF5/KWayland/Server/surface_interface.h
+include/KF5/KWayland/Server/tablet_interface.h
 include/KF5/KWayland/Server/textinput_interface.h
 include/KF5/KWayland/Server/touch_interface.h
 include/KF5/KWayland/Server/xdgdecoration_interface.h
@@ -115,4 +116,4 @@ lib/libKF5WaylandServer.so.${PKGVERSION}
 libexec/org-kde-kf5-kwayland-testserver
 qt5/mkspecs/modules/qt_KWaylandClient.pri
 qt5/mkspecs/modules/qt_KWaylandServer.pri
-share/qlogging-categories5/org_kde_kwayland.categories
+share/qlogging-categories5/kwayland.categories
