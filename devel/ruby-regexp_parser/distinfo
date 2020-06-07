@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/03/08 15:12:55 taca Exp $
+$NetBSD: distinfo,v 1.3 2020/06/07 22:13:00 taca Exp $
 
-SHA1 (regexp_parser-1.7.0.gem) = 35913353a4428882b9d8644599a66ce6f79a3964
-RMD160 (regexp_parser-1.7.0.gem) = 9366d2f2f4399580afbee17a0c9162e0bde29936
-SHA512 (regexp_parser-1.7.0.gem) = 238f9550e885831646b930e478d3aed7829b027bfd1d466c0ff33f7f8fe2ed81eefb18f9c2da229e05454fa57aba0fe26241bc631aee4def8056524c928d33ef
-Size (regexp_parser-1.7.0.gem) = 95744 bytes
+SHA1 (regexp_parser-1.7.1.gem) = c49d9e8be3def0ca8a85bee5e7a14e6c672f53d8
+RMD160 (regexp_parser-1.7.1.gem) = 56913ba070a86fdec9d21805c0700f51bf4cd987
+SHA512 (regexp_parser-1.7.1.gem) = d91beb8205f7bdfeb915123f4e6bf9e2d7fb775d7968cfdf7c4a183dc6cbc82c0d6c1847c79264d8be7b5fe61417be7f92d8c26030aa23093cffdcbb0d1dad1a
+Size (regexp_parser-1.7.1.gem) = 96768 bytes
