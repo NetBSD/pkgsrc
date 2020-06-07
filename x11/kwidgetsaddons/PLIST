@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/11 09:21:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/07 12:50:03 markd Exp $
 include/KF5/KWidgetsAddons/KAcceleratorManager
 include/KF5/KWidgetsAddons/KActionMenu
 include/KF5/KWidgetsAddons/KActionSelector
@@ -20,6 +20,7 @@ include/KF5/KWidgetsAddons/KDualAction
 include/KF5/KWidgetsAddons/KEditListWidget
 include/KF5/KWidgetsAddons/KFontAction
 include/KF5/KWidgetsAddons/KFontChooser
+include/KF5/KWidgetsAddons/KFontChooserDialog
 include/KF5/KWidgetsAddons/KFontRequester
 include/KF5/KWidgetsAddons/KFontSizeAction
 include/KF5/KWidgetsAddons/KGradientSelector
@@ -95,6 +96,7 @@ include/KF5/KWidgetsAddons/kdualaction.h
 include/KF5/KWidgetsAddons/keditlistwidget.h
 include/KF5/KWidgetsAddons/kfontaction.h
 include/KF5/KWidgetsAddons/kfontchooser.h
+include/KF5/KWidgetsAddons/kfontchooserdialog.h
 include/KF5/KWidgetsAddons/kfontrequester.h
 include/KF5/KWidgetsAddons/kfontsizeaction.h
 include/KF5/KWidgetsAddons/kguiitem.h
@@ -159,6 +161,7 @@ share/kf5/kcharselect/kcharselect-data
 share/locale/af/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/ar/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/as/LC_MESSAGES/kwidgetsaddons5_qt.qm
+share/locale/ast/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/be/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kwidgetsaddons5_qt.qm
 share/locale/bg/LC_MESSAGES/kwidgetsaddons5_qt.qm
