@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2020/01/29 11:49:24 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/06/07 11:08:59 markd Exp $
 
-SHA1 (kio-5.66.0.tar.xz) = 53989d77a38856b35859831e5c96d7013ba66372
-RMD160 (kio-5.66.0.tar.xz) = ecde5efc44e68ee84343c2e3ee822240899cc38e
-SHA512 (kio-5.66.0.tar.xz) = 7be872029fb93e76663291e868e829603f14fadfb0264c2c7dff351eba64a8574776a595ae57ca920a394e56940b220fc1065c01d0d88858fe3b7a3e5757ce87
-Size (kio-5.66.0.tar.xz) = 3202728 bytes
+SHA1 (kio-5.70.0.tar.xz) = 20b4920882516c1abfacc4f6997a3879369d085a
+RMD160 (kio-5.70.0.tar.xz) = d0b5f1e50b29238b34f6690d82c8726cd4789698
+SHA512 (kio-5.70.0.tar.xz) = 80e8e8bcd49c09228c9a439f97aecca784880b852eeb82c84ec44868de44d2b0c5a63a4d220e6c2f2c264b7e87fe0d5b639f652b1f50c9fe1b1b941b366d929a
+Size (kio-5.70.0.tar.xz) = 3200704 bytes
 SHA1 (patch-src_core_config-kmountpoint.h.cmake) = 7da0ea584a8c10b7b5476dd91f56a284869f056c
 SHA1 (patch-src_ioslaves_file_file.cpp) = ecd5574c59b4f4db8a2e303e71894e0c527f4650
