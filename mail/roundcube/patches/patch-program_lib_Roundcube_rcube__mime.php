@@ -1,4 +1,4 @@
-$NetBSD: patch-rcube_mime_default,v 1.3 2018/05/16 08:14:41 triaxx Exp $
+$NetBSD: patch-program_lib_Roundcube_rcube__mime.php,v 1.3 2020/06/07 22:07:04 taca Exp $
 
 Fix path to /etc/.
 
