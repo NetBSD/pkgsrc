@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/01/29 11:49:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/06/07 12:43:11 markd Exp $
 include/KF5/Kirigami2/KirigamiPluginFactory
 include/KF5/Kirigami2/PlatformTheme
 include/KF5/Kirigami2/TabletModeWatcher
@@ -49,9 +49,11 @@ qt5/qml/org/kde/kirigami.2/Page.qml
 qt5/qml/org/kde/kirigami.2/PagePoolAction.qml
 qt5/qml/org/kde/kirigami.2/PageRow.qml
 qt5/qml/org/kde/kirigami.2/PasswordField.qml
+qt5/qml/org/kde/kirigami.2/PlaceholderMessage.qml
 qt5/qml/org/kde/kirigami.2/ScrollablePage.qml
 qt5/qml/org/kde/kirigami.2/SearchField.qml
 qt5/qml/org/kde/kirigami.2/Separator.qml
+qt5/qml/org/kde/kirigami.2/ShadowedImage.qml
 qt5/qml/org/kde/kirigami.2/SwipeListItem.qml
 qt5/qml/org/kde/kirigami.2/Theme.qml
 qt5/qml/org/kde/kirigami.2/ToolBarApplicationHeader.qml
@@ -115,6 +117,7 @@ qt5/qml/org/kde/kirigami.2/templates/private/ScrollView.qml
 qt5/qml/org/kde/kirigami.2/templates/qmldir
 share/kdevappwizard/templates/kirigami.tar.bz2
 share/locale/ar/LC_MESSAGES/libkirigami2plugin_qt.qm
+share/locale/ast/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ca/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ca@valencia/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/cs/LC_MESSAGES/libkirigami2plugin_qt.qm
