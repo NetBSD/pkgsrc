@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.159 2020/06/01 06:21:27 adam Exp $
+$NetBSD: distinfo,v 1.160 2020/06/08 12:00:59 kamil Exp $
 
 SHA1 (cmake-3.17.3.tar.gz) = faef76cfc9f07cae7eecee72eba0d28abbbac5b4
 RMD160 (cmake-3.17.3.tar.gz) = 3dbfa61d6a51c1190bba6b0423dd3d227906a24c
@@ -18,7 +18,6 @@ SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = c86cae48f7b39fb735eba4788d4e9d
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = d5e2708df6fcda078b1b5ea59264c663d2633ced
 SHA1 (patch-Source_CursesDialog_ccmake.cxx) = 7f6ca6fda5d0db615f04c18efa8ecdd6ef00cb93
 SHA1 (patch-Source_QtDialog_CMakeLists.txt) = c4007da363c5b7c925f1ff345901057f3fbdc4e1
-SHA1 (patch-Source_cmArchiveWrite.cxx) = 1b6a46252bd10618703116ef69e22f8ec5c5f31f
 SHA1 (patch-Source_cmWorkerPool.cxx) = 8eb3faf10767fe9228ed6822c17c96c04f017777
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
 SHA1 (patch-Utilities_std_cm_string__view) = 90bbb578c5628b661a25974d7dd9aa6f5063271f
