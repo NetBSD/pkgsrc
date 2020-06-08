@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3459 2020/06/08 14:11:24 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3460 2020/06/08 14:18:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5516,3 +5516,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ZopeComponent to 4.6.1 [adam 2020-06-08]
 	Updated devel/py-ZopeTestrunner to 5.1 [adam 2020-06-08]
 	Updated devel/p5-MooX-late to 0.100nb1 [wiz 2020-06-08]
+	Updated security/p5-GnuPG-Interface to 1.00 [wiz 2020-06-08]
