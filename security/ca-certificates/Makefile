@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/05/31 15:53:44 kim Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/08 09:55:36 kim Exp $
 
-PKGNAME=	ca-certificates-20190110
+PKGNAME=	ca-certificates-20200601
 DISTNAME=	${PKGNAME:C/-([^-]*)$/_\1/}
 CATEGORIES=	security
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/c/ca-certificates/
@@ -14,11 +14,13 @@ LICENSE=	gnu-gpl-v2 AND mpl-2.0
 NO_CONFIGURE=		yes
 PYTHON_FOR_BUILD_ONLY=	yes
 
-USE_TOOLS=	awk:run echo:run expr:run ln:run ls:run openssl:run rm:run mkdir:run
+USE_TOOLS=	echo:run find:run ln:run openssl:run rm:run sed:run sort:run wc:run
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 DATADIR=	${PREFIX}/share/${PKGBASE}
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+MANDIR=		${PREFIX}/share/man/man8
 
 # Set paths depending on whether we depend on builtin or pkgsrc
 # openssl.  \todo Arguably, we should consider installing into both
@@ -43,26 +45,37 @@ SUBST_STAGE.paths=	post-build
 SUBST_FILES.paths=	Makefile sbin/Makefile
 SUBST_FILES.paths+=	ca-certificates.conf
 SUBST_FILES.paths+=	sbin/update-ca-certificates sbin/update-ca-certificates.8
+SUBST_FILES.paths+=	README.pkgsrc
 SUBST_SED.paths=	-e 's,/usr/sbin,${PREFIX}/sbin,g'
 SUBST_SED.paths+=	-e 's,/etc/ca-certificates.conf,${PKG_SYSCONFDIR}/ca-certificates.conf,g'
 SUBST_SED.paths+=	-e 's,/etc/ssl,${SSLDIR},g'
 SUBST_SED.paths+=	-e 's,/usr/share/ca-certificates,${DATADIR},g'
 
-INSTALLATION_DIRS=	sbin ${DATADIR} ${EGDIR} share/man/man8
+INSTALLATION_DIRS=	sbin ${DATADIR} ${DOCDIR} ${EGDIR} ${MANDIR}
 
 CONF_FILES=		${EGDIR}/ca-certificates.conf \
 			${PKG_SYSCONFDIR}/ca-certificates.conf
 
 pre-build:
-	@${CP} ${FILESDIR}/ca-certificates.conf ${WRKSRC}/
+	@${CP} ${FILESDIR}/ca-certificates.conf ${FILESDIR}/README.pkgsrc ${WRKSRC}/
 	@${GREP} '^share/ca-certificates/' ${FILESDIR}/../PLIST \
 	    >> ${WRKSRC}/ca-certificates.conf
 
+post-extract:
+	${MV} ${WRKDIR}/work ${WRKSRC}
+
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/sbin/update-ca-certificates.8 \
-	    ${DESTDIR}${PREFIX}/share/man/man8/update-ca-certificates.8
-	${INSTALL_DATA} ${WRKSRC}/ca-certificates.conf \
-	    ${DESTDIR}${EGDIR}/ca-certificates.conf
+	${INSTALL_MAN} \
+	    ${WRKSRC}/sbin/update-ca-certificates.8 \
+	    ${DESTDIR}${MANDIR}/
+	${INSTALL_DATA} \
+	    ${WRKSRC}/README.pkgsrc \
+	    ${WRKSRC}/debian/README.source \
+	    ${WRKSRC}/debian/changelog \
+	    ${DESTDIR}${DOCDIR}/
+	${INSTALL_DATA} \
+	    ${WRKSRC}/ca-certificates.conf \
+	    ${DESTDIR}${EGDIR}/
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
