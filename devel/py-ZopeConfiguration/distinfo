@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/02/12 09:12:17 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/06/08 13:29:22 adam Exp $
 
-SHA1 (zope.configuration-4.3.1.tar.gz) = 0b14d7803f87ce3768877fec9ae5e158319b1b46
-RMD160 (zope.configuration-4.3.1.tar.gz) = c767e3d4a34283a70b3dcc253b2232b7be1ce53a
-SHA512 (zope.configuration-4.3.1.tar.gz) = bc8edf84a391cab4f664ea3a4d24b65cb9db351c972b6118e69fe3c726bbe3337121ff59d687dddf463b3672ed6996f21d4437941c81dc456a4e5d837e0945d2
-Size (zope.configuration-4.3.1.tar.gz) = 83223 bytes
+SHA1 (zope.configuration-4.4.0.tar.gz) = 903f9709ba04cfd12d57a25d5248e05e389a1839
+RMD160 (zope.configuration-4.4.0.tar.gz) = 9960529cdf2dec73e17751e517f991e164b5811c
+SHA512 (zope.configuration-4.4.0.tar.gz) = 6383c8e19ddbde098a545b6f22b21eadc860980e8248d05c2e29832971c2060fcde6f5092425d12198e97851f0b7b5edb0b83cc6725cda433867762778c896f9
+Size (zope.configuration-4.4.0.tar.gz) = 83230 bytes
