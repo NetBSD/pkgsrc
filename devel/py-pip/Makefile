@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2020/06/01 16:27:17 adam Exp $
+# $NetBSD: Makefile,v 1.38 2020/06/08 20:17:56 leot Exp $
 
 DISTNAME=	pip-20.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
 
@@ -15,6 +16,9 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON+=	src/pip/_vendor/appdirs.py
 REPLACE_PYTHON+=	src/pip/_vendor/chardet/cli/chardetect.py
 REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
+
+.include "../../lang/python/pyversion.mk"
+FILES_SUBST+=  PYMAJORVERSION=${_PYTHON_VERSION:C/^([0-9]).*/\1/}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f pip pip[2-3]
