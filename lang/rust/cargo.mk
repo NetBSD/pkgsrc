@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.14 2020/06/08 17:13:39 he Exp $
+# $NetBSD: cargo.mk,v 1.15 2020/06/08 22:37:28 he Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -64,6 +64,6 @@ cargo-vendor-crates:
 show-cargo-depends:
 	${RUN}${AWK} '/^name = / { split($$3, a, "\""); name=a[2]; } \
 		/^version = / { split($$3, a, "\""); vers=a[2]; } \
-		/^checksum = / { \
+		/^source = / { \
 			print "CARGO_CRATE_DEPENDS+=\t" name "-" vers; \
 			}' ${WRKSRC}/Cargo.lock
