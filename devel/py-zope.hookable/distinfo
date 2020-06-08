@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/10/28 15:17:47 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/06/08 13:09:07 adam Exp $
 
-SHA1 (zope.hookable-4.2.0.tar.gz) = 7aed58847bf92b330deda16d34b3e17607af8692
-RMD160 (zope.hookable-4.2.0.tar.gz) = 8d9428d044f17670fbf55ddcc68f822a8f340e96
-SHA512 (zope.hookable-4.2.0.tar.gz) = 89360637339ccc4131d4a6b5fda27a8721a03f0110cf5a63dfe14202c38cacc304fcd7e12d0f5d2779647d0e1e0fc7d04b7c6514ee88d167498fb62db3147a11
-Size (zope.hookable-4.2.0.tar.gz) = 22011 bytes
-SHA1 (patch-setup.py) = 530806b5c0764a8846d3e74df6c759ccee758c57
-SHA1 (patch-tox.ini) = c06bbfd3717aa4f97b80d675a5f75c4e2ef134e7
+SHA1 (zope.hookable-5.0.1.tar.gz) = 85b1cd885450dc1cdf49d3c89788349c5f8ccb11
+RMD160 (zope.hookable-5.0.1.tar.gz) = 869282b14b2c79c85e2ebebf704d6fd8975e0370
+SHA512 (zope.hookable-5.0.1.tar.gz) = 5edc09e2e33cec31e42915f85059050584ad74034c10c91b70a9cf5d27d7330c0ebf2dc1a932b41e8780e1466530f7dfe57b50c76832a259af594e281747a698
+Size (zope.hookable-5.0.1.tar.gz) = 24401 bytes
