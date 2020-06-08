@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.12 2020/06/01 17:44:19 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.13 2020/06/08 19:01:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -173,4 +173,31 @@ audio/adplug: security fix
 
 Pullup ticket #6212 - requested by nia
 audio/adplay: dependent update
+
+Pullup ticket #6213 - requested by taca
+www/ruby-rails52: security fix
+
+Pullup ticket #6214 - requested by taca
+www/ruby-rails60: security fix
+
+Pullup ticket #6215 - requested by taca
+www/drupal7: security fix
+
+Pullup ticket #6216 - requested by taca
+www/drupal8: security fix
+
+Pullup ticket #6220 - requested by nia
+www/firefox68: security fix
+
+Pullup ticket #6221 - requested by nia
+www/firefox68-l10n: dependent update
+
+Pullup ticket #6223 - requested by taca
+www/ruby-puma: security fix
+
+Pullup ticket #6224 - requested by taca
+www/ruby-em-http-request: security fix
+
+Pullup ticket #6227 - requested by otis
+net/powerdns: bugfixes
 
