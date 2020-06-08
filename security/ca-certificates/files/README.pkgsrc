@@ -1,0 +1,36 @@
+$NetBSD: README.pkgsrc,v 1.1 2020/06/08 09:55:37 kim Exp $
+
+This package provides the certificates distributed by the Mozilla
+Project and will, by default, install certificates trusted by the
+Mozilla Project in the system certificate store (/etc/ssl),
+so that they can be used by third party applications using OpenSSL.
+
+Edit /etc/ca-certificates.conf to further configure which
+certificates are installed.
+
+To install local certificate authorities to be implicitly trusted,
+place the certificate files in /usr/local/share/ca-certificates/
+as single files ending with ".crt".
+
+After changing the configuration and adding local certificates run this
+command to install and rehash the certificates:
+
+    # /usr/sbin/update-ca-certificates
+
+After removing local certificates run this command to remove dangling
+symlinks from /etc/ssl/certs:
+
+    # /usr/sbin/update-ca-certificates --fresh
+
+The update-ca-certificates tool also creates a single file certificate
+bundle in PEM format in /etc/ssl/certs/ca-certificates.crt
+which can be used by applications using GnuTLS.
+
+To mark the installed certificates as trusted for users of gnupg2 do
+the following (assuming default PKG_SYSCONFBASE and a Bourne shell):
+
+    # mkdir -p /usr/pkg/etc/gnupg
+    # cd /usr/pkg/etc/gnupg
+    # for c in /etc/ssl/certs/*.pem; do
+    > openssl x509 -in $c -noout -fingerprint|sed 's|^.*=\(.*\)|\1 S|'
+    > done > trustlist.txt
