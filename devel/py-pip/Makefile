@@ -16,6 +16,9 @@ REPLACE_PYTHON+=	src/pip/_vendor/appdirs.py
 REPLACE_PYTHON+=	src/pip/_vendor/chardet/cli/chardetect.py
 REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
 
+.include "../../lang/python/pyversion.mk"
+FILES_SUBST+=  PYMAJORVERSION=${_PYTHON_VERSION:C/^([0-9])(.*)/\1/}
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f pip pip[2-3]
 
