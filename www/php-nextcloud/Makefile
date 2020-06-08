@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.37 2020/06/08 13:12:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2020/06/08 22:15:42 gdt Exp $
 #
 
-# Please make sure not to skip major releases in pkgsrc-current
-# and previous and latest pkgsrc stable branches.
-# Specifically you must ensure that pkgsrc stable branch users can
-# update their www/php-nextcloud in previous branch to current
-# branch without skipping major release.
+# The nextcloud update process only works from one version to the
+# next; one cannot update e.g from 16 to 18.  It is a requirement for
+# stable branch users, if they update every stable branch, to have
+# automatic updates work.  Therefore a major update can only be
+# committed to pkgsrc-current if it is one higher than the major
+# version in the previous stable branch.  As an example, if 2020Q1
+# contained 18.0.2, then during April to June it is ok to update to
+# later 18.x.y, to 19.0.0, and to later 19.x.y, but it is not ok to
+# update to 20.
 DISTNAME=	nextcloud-19.0.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
