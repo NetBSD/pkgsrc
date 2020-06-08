@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2020/05/07 10:53:44 adam Exp $
+$NetBSD: distinfo,v 1.17 2020/06/08 15:53:29 adam Exp $
 
-SHA1 (acme-1.4.0.tar.gz) = 6270d57aee4ea996ca876264c53d9a3a21f9e241
-RMD160 (acme-1.4.0.tar.gz) = 6a869b53b74d668714511b49535913c3afb226ac
-SHA512 (acme-1.4.0.tar.gz) = 32398bf5657e997b46699ef0e4bbf2ee81c024556f418251ab44fbf5c8ce39556ebbe8e80045bedee8f5ff5a2084c127338eb69ae842e09bad3ae94f2f16f622
-Size (acme-1.4.0.tar.gz) = 86350 bytes
+SHA1 (acme-1.5.0.tar.gz) = 5ffcf40724065215b10b6f2d3e5c1a9524c7a42f
+RMD160 (acme-1.5.0.tar.gz) = 9380d82d5e0dbdbd27286fdff7ff950ee8f19537
+SHA512 (acme-1.5.0.tar.gz) = 4fcaf400a47066536492751cbd99fb7ac207d2c49b0b6cc747a791cfd618bc4123c18fcce1c9088a3d678600f588c6cd520f9af3186c3803b36a43fa38c333f4
+Size (acme-1.5.0.tar.gz) = 87605 bytes
