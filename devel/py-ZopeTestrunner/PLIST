@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/23 09:38:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/08 14:09:55 adam Exp $
 bin/zope-testrunner
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -163,6 +163,9 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-skip/sample_skipped_tests.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-skip/sample_skipped_tests.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-skip/sample_skipped_tests.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/README.rst
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/brokenlayer.py
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/brokenlayer.pyc
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/brokenlayer.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc0.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc0.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/gc0.pyo
@@ -309,6 +312,9 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/sampletests_ntds.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/stderrtest.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/stderrtest.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/stderrtest.pyo
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/stdstreamstest.py
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/stdstreamstest.pyc
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/stdstreamstest.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample3/__init__.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample3/__init__.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample3/__init__.pyo
