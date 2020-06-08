@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3464 2020/06/08 17:32:32 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.3465 2020/06/08 18:45:04 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5537,3 +5537,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-astroid to 2.4.2 [adam 2020-06-08]
 	Updated devel/py-pylint to 2.5.3 [adam 2020-06-08]
 	Updated www/zola to 0.11.0 [nikita 2020-06-08]
+	Updated print/foliate to 2.2.1 [fox 2020-06-08]
