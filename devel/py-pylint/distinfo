@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2020/05/16 02:11:40 joerg Exp $
+$NetBSD: distinfo,v 1.31 2020/06/08 16:09:49 adam Exp $
 
-SHA1 (pylint-2.5.2.tar.gz) = c79bd688a881e42ed68cfa19915b900439258fdc
-RMD160 (pylint-2.5.2.tar.gz) = 1c6af3008c48acd7a9617d2170cc0e3ba68cfda3
-SHA512 (pylint-2.5.2.tar.gz) = 94debcf0a26ac61ce2e161180f300677279b7e251894c4b368ffe7e70e480f53e59475e1d84df7daf7d1bff5256f75d363fe415960986dee99e634fe95e6bd3c
-Size (pylint-2.5.2.tar.gz) = 683111 bytes
+SHA1 (pylint-2.5.3.tar.gz) = d41abb6f430568d0b01985ce1cf184172a358493
+RMD160 (pylint-2.5.3.tar.gz) = c23fb00d6e402f98a7d669f1923052d7b2c72a47
+SHA512 (pylint-2.5.3.tar.gz) = 03fcd893d361b66794f17433e90df108099fee2eccb35507c7f61befb8db846f0242e5ce2b4ee63727c9cc780a376c3b93d5af3186f884a4fdaad68b224ed7d2
+Size (pylint-2.5.3.tar.gz) = 684449 bytes
 SHA1 (patch-setup.py) = 56a63cfe22fc22563b7e39b0567bd36437096d01

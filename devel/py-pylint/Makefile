@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2020/05/18 13:14:17 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/06/08 16:09:49 adam Exp $
 
-DISTNAME=	pylint-2.5.2
+DISTNAME=	pylint-2.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-astroid>=2.2.0:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.6:../../devel/py-mccabe
+DEPENDS+=	${PYPKGPREFIX}-toml>=0.7.1:../../textproc/py-toml
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
@@ -31,7 +32,7 @@ post-install:
 .endfor
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} PYTHONPATH=. py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} PYTHONPATH=. pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
