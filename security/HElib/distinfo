@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:17:40 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/06/08 13:45:35 wiz Exp $
 
-SHA1 (HElib-20130501.zip) = 4f10c723eda202442550b89d98da8b9f4fdca013
-RMD160 (HElib-20130501.zip) = 729115076c6e90584cf5380694903631764849fb
-SHA512 (HElib-20130501.zip) = 2582e2a6d56dcfa8db268d302579e8ccad85a2658f673bf58d16af13ef040a97efb4ee91a2ca76783ba2d7306ce56e8eea69ebdaa649dc4f64ae282212f2f4e4
-Size (HElib-20130501.zip) = 2287320 bytes
-SHA1 (patch-IndexMap.h) = f03a5c5d64370a233bf73fd3bff369e32f8a220a
-SHA1 (patch-Makefile) = e3a867712039b83f2c49c4dec2e5ff0a6c26f6ac
-SHA1 (patch-NumbTh.h) = f99493989f67d34595bc4e47b159dc75a952b158
-SHA1 (patch-timing.cpp) = 87e2638022326ef9bcb28c8617aa3d8d34c3aa85
+SHA1 (HElib-1.0.1.tar.gz) = f732f38a2919e59d387516d1e41f113a3ffa0448
+RMD160 (HElib-1.0.1.tar.gz) = b27214fa002750ead4eda97cf5cc1402b299674c
+SHA512 (HElib-1.0.1.tar.gz) = 19bc63f74e61db82bc9ed4c0245c7da33e1e89bbdab26260100f248512757359c49ed76bd5bc5ec061415c292d1904a2a5e3a481ffbc366f3c7c1cd7c5498aa4
+Size (HElib-1.0.1.tar.gz) = 1579853 bytes
+SHA1 (patch-timing.cpp) = e9f0f841de99b8189c7267beb4b8914069b95cb3

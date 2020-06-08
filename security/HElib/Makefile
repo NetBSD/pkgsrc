@@ -1,31 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/08 13:45:35 wiz Exp $
 
-DISTNAME=	HElib-20130501
+DISTNAME=	HElib-1.0.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=homenc/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	https://github.com/shaih/HElib/
+HOMEPAGE=	https://github.com/homenc/HElib/
 COMMENT=	Homeomorphic Encryption library
-LICENSE=	gnu-gpl-v2
+LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/HElib-master/src
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
+USE_CMAKE=	yes
 USE_LANGUAGES+=	c++
-USE_TOOLS+=	gmake
-
-TEST_TARGET=	check
-
-AUTO_MKDIRS=	yes
-
-pre-patch:
-	for f in ${WRKSRC}/Makefile ${WRKSRC}/NumbTh.h; do	\
-		${TR} -d '\r' < $${f} > $${f}.new;		\
-		${MV} $${f}.new $${f};				\
-	done
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/ntl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
