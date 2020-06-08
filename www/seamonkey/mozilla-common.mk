@@ -1,8 +1,8 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2020/06/07 10:35:12 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2020/06/08 12:39:19 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
-# used by www/firefox60/Makefile
+# used by www/seamonkey/Makefile
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
