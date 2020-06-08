@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2020/05/30 14:26:52 nia Exp $
+$NetBSD: distinfo,v 1.18 2020/06/08 08:57:08 nia Exp $
 
 SHA1 (retroarch-1.8.8/retroarch-assets.tar.gz) = f1e00377a5e3ec0ceabeab55ac5f661fc610a532
 RMD160 (retroarch-1.8.8/retroarch-assets.tar.gz) = ea66a38122f8cc25f3a7d205f7f145d5e1f43451
@@ -8,6 +8,7 @@ SHA1 (retroarch-1.8.8/retroarch.tar.gz) = de1755310fdb8c90cf0151dfad451dd910bbd4
 RMD160 (retroarch-1.8.8/retroarch.tar.gz) = 3a114e6abbe0d29d1d6189123f21da23b85f84df
 SHA512 (retroarch-1.8.8/retroarch.tar.gz) = feb2830a91beb818f1ee14231f2d48ae774e0477d10063b5cc7ab5867ac9afcbae5ccf4e725727fde01a1ca8b79829b8282e1dd630c2451de1c515d6fd832969
 Size (retroarch-1.8.8/retroarch.tar.gz) = 38619875 bytes
+SHA1 (patch-Makefile) = 886af2968421f014f71d691fb07046b42e499904
 SHA1 (patch-audio_drivers_audioio.c) = 446e422484ac613fb4586026d64c343227ee2792
 SHA1 (patch-frontend_drivers_platform__unix.c) = fd4edcb2f55b47e255f53e6b1aef639a589456f6
 SHA1 (patch-gfx_drivers__context_sdl__gl__ctx.c) = deccbfa4e00b9938552e580184af2a800254c428
