@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3451 2020/06/08 12:18:33 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3452 2020/06/08 12:52:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5502,3 +5502,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/oniguruma to 6.9.5.1 [adam 2020-06-08]
 	Updated net/haproxy to 2.1.6 [adam 2020-06-08]
 	Updated net/py-lexicon to 3.3.24 [adam 2020-06-08]
+	Updated www/py-zope.proxy to 4.3.5 [adam 2020-06-08]
+	Updated databases/py-redis to 3.5.3 [adam 2020-06-08]
