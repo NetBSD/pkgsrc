@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3463 2020/06/08 16:10:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3464 2020/06/08 17:32:32 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5536,3 +5536,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-nginx to 1.5.0 [adam 2020-06-08]
 	Updated devel/py-astroid to 2.4.2 [adam 2020-06-08]
 	Updated devel/py-pylint to 2.5.3 [adam 2020-06-08]
+	Updated www/zola to 0.11.0 [nikita 2020-06-08]
