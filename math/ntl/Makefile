@@ -1,23 +1,21 @@
-# $NetBSD: Makefile,v 1.35 2020/01/26 17:31:39 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2020/06/08 13:42:38 wiz Exp $
 
-DISTNAME=		ntl-6.0.0
-PKGREVISION=		6
+DISTNAME=		ntl-11.4.3
 CATEGORIES=		math devel
-MASTER_SITES=		http://www.shoup.net/ntl/
+MASTER_SITES=		https://www.shoup.net/ntl/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.shoup.net/ntl/
 COMMENT=		C++ library for doing number theory
-
-MAKE_JOBS_SAFE=		no
+LICENSE=		gnu-lgpl-v2.1
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-NO_CONFIGURE=		yes
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	DEF_PREFIX=${PREFIX}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl
-USE_LIBTOOL=		yes
 MAKE_FILE=		makefile
-INSTALLATION_DIRS=	lib
+TEST_TARGET=		check
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

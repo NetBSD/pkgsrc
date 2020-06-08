@@ -1,13 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.9 2013/05/18 18:32:19 agc Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2020/06/08 13:42:38 wiz Exp $
 
 BUILDLINK_TREE+=	ntl
 
 .if !defined(NTL_BUILDLINK3_MK)
 NTL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ntl+=	ntl>=6.0.0
-BUILDLINK_ABI_DEPENDS.ntl+=	ntl>=6.0.0
+BUILDLINK_API_DEPENDS.ntl+=	ntl>=11.4.3
 BUILDLINK_PKGSRCDIR.ntl?=	../../math/ntl
+
+BUILDLINK_DEPMETHOD.ntl?=	build
 
 .include "../../devel/gmp/buildlink3.mk"
 .endif # NTL_BUILDLINK3_MK
