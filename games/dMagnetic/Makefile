@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/02/17 10:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/08 08:49:58 wiz Exp $
 
-DISTNAME=		dMagnetic_0.22
+DISTNAME=		dMagnetic_0.23
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		games
 MASTER_SITES=		https://www.dettus.net/dMagnetic/
@@ -36,12 +36,24 @@ do-test:
 		| md5 `==dece45b2dcc499bd4e4f4daa0d87fca5 \
 		-a `${ECHO} Hello | ../dMagnetic -ini ../dMagnetic.ini \
 			-mag minitest.mag -gfx minitest.gfx \
+			-vmode monochrome_inv -vcols 300 -vrows 300 \
+		| md5 `==0ababd938093714b51006831f6790379 \
+		-a `${ECHO} Hello | ../dMagnetic -ini ../dMagnetic.ini \
+			-mag minitest.mag -gfx minitest.gfx \
 			-vmode low_ansi -vcols 300 -vrows 300 \
 		| md5 `==54fedb8291eafbc756686ad5d0e069ee \
 		-a `${ECHO} Hello | ../dMagnetic -ini ../dMagnetic.ini \
 			-mag minitest.mag -gfx minitest.gfx \
+			-vmode low_ansi2 -vcols 300 -vrows 300 \
+		| md5 `==214055394c710d3919b44fc7822cc9b6 \
+		-a `${ECHO} Hello | ../dMagnetic -ini ../dMagnetic.ini \
+			-mag minitest.mag -gfx minitest.gfx \
 			-vmode high_ansi -vcols 300 -vrows 300 \
 		| md5 `==84608708bfa3ff2dc4964b255766dd81 \
+		-a `${ECHO} Hello | ../dMagnetic -ini ../dMagnetic.ini \
+			-mag minitest.mag -gfx minitest.gfx \
+			-vmode high_ansi2 -vcols 300 -vrows 300 \
+		| md5 `==07c938bd0d77523d1be8e971d8610591 \
 		-a `${ECHO} Hello | ../dMagnetic -ini ../dMagnetic.ini \
 			-mag minitest.mag -gfx minitest.gfx \
 			-vmode sixel -vcols 300 -vrows 300 \
