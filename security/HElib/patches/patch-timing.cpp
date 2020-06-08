@@ -1,34 +1,18 @@
-$NetBSD: patch-timing.cpp,v 1.1 2013/05/21 16:37:46 joerg Exp $
+$NetBSD: patch-timing.cpp,v 1.2 2020/06/08 13:45:35 wiz Exp $
 
---- timing.cpp.orig	2013-05-21 14:42:27.000000000 +0000
+NetBSD provides CLOCK_MONOTONIC, but not CLOCK_MONOTONIC_RAW.
+
+--- timing.cpp.orig	2020-05-04 18:09:21.000000000 +0000
 +++ timing.cpp
-@@ -16,13 +16,19 @@
- #include <ctime>
- #include <iostream>
- #include "timing.h"
--#include <tr1/unordered_map>
- #include <vector>
- #include <algorithm>
- #include <utility>
- #include <cmath>
- #include <cstring>
+@@ -18,6 +18,11 @@
+ namespace helib {
  
-+#if __cplusplus >= 201103L || defined(_LIBCPP_VERSION)
-+#include <unordered_map>
-+#else
-+#include <tr1/unordered_map>
-+using std::tr1::unordered_map;
+ #ifdef CLOCK_MONOTONIC
++
++#ifndef CLOCK_MONOTONIC_RAW
++#define CLOCK_MONOTONIC_RAW CLOCK_MONOTONIC
 +#endif
 +
- using namespace std;
- 
- //! A simple class to toggle timing information on and off
-@@ -43,7 +49,7 @@ bool string_compare(const char *a, const
- 
- bool FHEtimersOn=false;
- 
--typedef tr1::unordered_map<const char*,FHEtimer>timerMap;
-+typedef unordered_map<const char*,FHEtimer>timerMap;
- static timerMap timers;
- 
- // Reset a timer for some label to zero
+ unsigned long GetTimerClock()
+ {
+   timespec ts;
