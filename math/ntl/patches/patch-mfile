@@ -1,0 +1,15 @@
+$NetBSD: patch-mfile,v 1.1 2020/06/08 13:42:38 wiz Exp $
+
+Add missing rpath.
+
+--- mfile.orig	2020-01-04 18:49:16.000000000 +0000
++++ mfile
+@@ -88,7 +88,7 @@ GMP_LIBDIR=@{GMP_LIBDIR}
+ # directory containing libgmp.a if using GMP 
+ 
+ GMP_OPT_INCDIR=@{GMPI}-I$(GMP_INCDIR) # GMPI
+-GMP_OPT_LIBDIR=@{GMPL}-L$(GMP_LIBDIR) # GMPL
++GMP_OPT_LIBDIR=@{GMPL}$(COMPILER_RPATH_FLAG)$(GMP_LIBDIR) -L$(GMP_LIBDIR) # GMPL
+ GMP_OPT_LIB=@{GMP}-lgmp # GMP
+ # uncomment these if using GMP
+ 

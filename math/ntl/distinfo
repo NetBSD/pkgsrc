@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:33:37 agc Exp $
+$NetBSD: distinfo,v 1.10 2020/06/08 13:42:38 wiz Exp $
 
-SHA1 (ntl-6.0.0.tar.gz) = ee71b1c6a94f34b8a3c226502a0a0c6c2d1bc3f9
-RMD160 (ntl-6.0.0.tar.gz) = 2be966b4f2ecb7cd957ca42b41836459b9a29bd9
-SHA512 (ntl-6.0.0.tar.gz) = fa1f1745e75c7588ca5af437648ab0844281f5c6e6a22a3bcaf0409792f3d4c70f0b8050823d90d19673ebcecae18ce6d39e6c9b1fec9f2d79f87b788b58d261
-Size (ntl-6.0.0.tar.gz) = 714741 bytes
-SHA1 (patch-aa) = 4f07d991930fa8bac5cf586693cce0b3e8679527
-SHA1 (patch-ab) = b91b052c88ea49a4138723259a312c43148737cc
-SHA1 (patch-ac) = 99c32692cd27ea63e966c3fe1df0b8a6373f5018
+SHA1 (ntl-11.4.3.tar.gz) = f4c7dc1fd448b499ef98549e8702b320ba6a7830
+RMD160 (ntl-11.4.3.tar.gz) = 362e62354c160daeda3af7395df79385b0c582f5
+SHA512 (ntl-11.4.3.tar.gz) = 26515ed73c8e74d0ff8bc161101f1b815f2c23e4bd633cc426f6da2741c6d8f43ad4f8df2cb7ad915475933599e0ee01cc360e75569f6f5d49cb5e5eae37b3f5
+Size (ntl-11.4.3.tar.gz) = 2274421 bytes
+SHA1 (patch-mfile) = c40f7c85a6a5719ab30c4423f296d121b25018db
