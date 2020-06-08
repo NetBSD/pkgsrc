@@ -1,16 +1,29 @@
-# $NetBSD: options.mk,v 1.5 2018/01/09 10:22:47 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2020/06/08 14:18:15 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.p5_GnuPG_Interface
 PKG_OPTIONS_REQUIRED_GROUPS=	gnupg
-PKG_OPTIONS_GROUP.gnupg=	gnupg1 # gnupg2
-PKG_SUGGESTED_OPTIONS=		gnupg1
+PKG_OPTIONS_GROUP.gnupg=	gnupg1 gnupg2
+PKG_SUGGESTED_OPTIONS=		gnupg2
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnupg2)
-# patch available at
-# https://github.com/bestpractical/gnupg-interface/pull/1
-DEPENDS+=		gnupg2-[0-9]*:../../security/gnupg2
-.else
+DEPENDS+=		gnupg2>=2.2:../../security/gnupg2
+
+SUBST_CLASSES+=		gpg
+SUBST_SED.gpg+=		-e "s,'gpg','gpg2',g"
+SUBST_FILES.gpg+=	lib/GnuPG/Interface.pm
+SUBST_FILES.gpg+=	t/Interface.t
+SUBST_STAGE.gpg=	pre-configure
+SUBST_MESSAGE.gpg=	Fixing path to gnupg binary.
+
+SUBST_CLASSES+=		gpg2
+SUBST_SED.gpg2+=	-e "s,gpg,gpg2,g"
+SUBST_FILES.gpg2+=	Makefile.PL
+SUBST_STAGE.gpg2=	pre-configure
+SUBST_MESSAGE.gpg2=	Fixing path to gnupg binary.
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnupg1)
 DEPENDS+=		gnupg>=1.4.2:../../security/gnupg
 .endif
