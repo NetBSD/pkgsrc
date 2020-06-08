@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/01/11 16:17:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/06/08 12:18:14 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -213,6 +213,9 @@ ${PYSITELIB}/lexicon/providers/subreg.pyo
 ${PYSITELIB}/lexicon/providers/transip.py
 ${PYSITELIB}/lexicon/providers/transip.pyc
 ${PYSITELIB}/lexicon/providers/transip.pyo
+${PYSITELIB}/lexicon/providers/ultradns.py
+${PYSITELIB}/lexicon/providers/ultradns.pyc
+${PYSITELIB}/lexicon/providers/ultradns.pyo
 ${PYSITELIB}/lexicon/providers/vultr.py
 ${PYSITELIB}/lexicon/providers/vultr.pyc
 ${PYSITELIB}/lexicon/providers/vultr.pyo
@@ -414,6 +417,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_softlayer.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_transip.py
 ${PYSITELIB}/lexicon/tests/providers/test_transip.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_transip.pyo
+${PYSITELIB}/lexicon/tests/providers/test_ultradns.py
+${PYSITELIB}/lexicon/tests/providers/test_ultradns.pyc
+${PYSITELIB}/lexicon/tests/providers/test_ultradns.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_vultr.py
 ${PYSITELIB}/lexicon/tests/providers/test_vultr.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_vultr.pyo
