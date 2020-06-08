@@ -1,6 +1,7 @@
 This package provides the certificates distributed by the Mozilla
-Project.
+Project and will, by default, install certificates trusted by the
+Mozilla Project in the system certificate store.
 
-It also provides a script, update-ca-certs, which can be used to manage
-a location that makes certificates usable by TLS implementations,
-including installing select certificates from this package.
+The sysadmin can configure the list of trusted certificates and also
+add local certificates as needed by editing ca-certificates.conf and
+re-running update-ca-certificates.
