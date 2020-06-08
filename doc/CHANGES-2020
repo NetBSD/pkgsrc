@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3446 2020/06/08 06:56:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3447 2020/06/08 08:50:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5497,3 +5497,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.44.0 [he 2020-06-07]
 	Updated devel/py-sortedcontainers to 2.2.2 [adam 2020-06-08]
 	Updated devel/py-wcwidth to 0.2.4 [adam 2020-06-08]
+	Updated games/dMagnetic to 0.23 [wiz 2020-06-08]
