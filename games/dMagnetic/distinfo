@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/02/17 10:43:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2020/06/08 08:49:58 wiz Exp $
 
-SHA1 (dMagnetic_0.22.tar.bz2) = 167c961b1573eed4f88ea22c5d8a991bbc0ab968
-RMD160 (dMagnetic_0.22.tar.bz2) = 0d62c70b41eed8b9ccf029b525cc7c17635f5ac8
-SHA512 (dMagnetic_0.22.tar.bz2) = 13cf53cbee1dbcfe712d0f5442d9882076aaf9b1bdb8e9b45400ba40b1d9b6633f49d2f6f22c6ce25989f9351e380b1d8e18ac2cea81a1de8db9656f72c8577f
-Size (dMagnetic_0.22.tar.bz2) = 61092 bytes
-SHA1 (patch-Makefile) = 95a24071f37cd37e53df2afd6aca15c29f52d945
+SHA1 (dMagnetic_0.23.tar.bz2) = 23d777477eb6944bdfa7301387df0579bbd72f99
+RMD160 (dMagnetic_0.23.tar.bz2) = 23205e417300f6e799ef47bed945cd77e4bafd8c
+SHA512 (dMagnetic_0.23.tar.bz2) = 380b5f5f2353eb9ad78ea6b5321dfe4cd24f6e2713d1da03490f5dc27641b4e65f023be0158eed80a08a9a61e838c6b924eb905d5e0cdfffcbeacc31707ea675
+Size (dMagnetic_0.23.tar.bz2) = 60820 bytes
+SHA1 (patch-Makefile) = bfadc0dca8def5467b286743331de3bd85d82535
