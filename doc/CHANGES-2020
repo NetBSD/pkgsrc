@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3449 2020/06/08 11:21:24 he Exp $
+$NetBSD: CHANGES-2020,v 1.3450 2020/06/08 11:26:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5498,3 +5498,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-wcwidth to 0.2.4 [adam 2020-06-08]
 	Updated games/dMagnetic to 0.23 [wiz 2020-06-08]
 	Updated security/ca-certificates to 20200601 [kim 2020-06-08]
+	Updated net/haproxy to 2.1.5 [adam 2020-06-08]
+	Updated textproc/oniguruma to 6.9.5.1 [adam 2020-06-08]
