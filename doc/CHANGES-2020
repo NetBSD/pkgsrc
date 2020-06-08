@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3454 2020/06/08 13:18:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3455 2020/06/08 13:29:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5508,3 +5508,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-paste to 3.4.1 [adam 2020-06-08]
 	Updated devel/py-zope.hookable to 5.0.1 [adam 2020-06-08]
 	Updated devel/py-ZopeInterface to 5.1.0 [adam 2020-06-08]
+	Updated devel/py-ZopeSchema to 6.0.0 [adam 2020-06-08]
+	Updated devel/py-ZopeI18NMessageid to 5.0.1 [adam 2020-06-08]
+	Updated devel/py-ZopeConfiguration to 4.4.0 [adam 2020-06-08]
