@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3461 2020/06/08 15:08:29 he Exp $
+$NetBSD: CHANGES-2020,v 1.3462 2020/06/08 15:55:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5518,3 +5518,19 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-MooX-late to 0.100nb1 [wiz 2020-06-08]
 	Updated security/p5-GnuPG-Interface to 1.00 [wiz 2020-06-08]
 	Updated security/opendnssec to 1.4.14nb4 [he 2020-06-08]
+	Updated security/py-acme to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-apache to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-digitalocean to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-dnsimple to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-gehirn to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-google to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-linode to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-luadns to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-nsone to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-ovh to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-rfc2136 to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-route53 to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-dns-sakuracloud to 1.5.0 [adam 2020-06-08]
+	Updated security/py-certbot-nginx to 1.5.0 [adam 2020-06-08]
