@@ -1,0 +1,56 @@
+$NetBSD: patch-configure,v 1.1 2020/06/08 15:07:43 he Exp $
+
+--- configure.orig	2020-06-08 14:38:08.801388307 +0000
++++ configure
+@@ -16981,6 +16981,51 @@ fi
+ 
+ fi
+ 
++	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EVP_sha1 in -lcrypto" >&5
++$as_echo_n "checking for EVP_sha1 in -lcrypto... " >&6; }
++if ${ac_cv_lib_crypto_EVP_sha1+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lcrypto  $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char EVP_sha1 ();
++int
++main ()
++{
++return EVP_sha1 ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_link "$LINENO"; then :
++  ac_cv_lib_crypto_EVP_sha1=yes
++else
++  ac_cv_lib_crypto_EVP_sha1=no
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_crypto_EVP_sha1" >&5
++$as_echo "$ac_cv_lib_crypto_EVP_sha1" >&6; }
++if test "x$ac_cv_lib_crypto_EVP_sha1" = xyes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_LIBCRYPTO 1
++_ACEOF
++
++  LIBS="-lcrypto $LIBS"
++
++fi
++
+             for ac_func in EVP_sha1 EVP_sha256
+ do :
+   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
