@@ -1,14 +1,16 @@
-$NetBSD: patch-Makefile.PL,v 1.1 2017/06/07 14:56:57 ryoon Exp $
+$NetBSD: patch-Makefile.PL,v 1.2 2020/06/08 14:18:15 wiz Exp $
 
-* Fix build with Perl 5.26.0
+pkgsrc takes care the right version is installed.
 
---- Makefile.PL.orig	2015-02-17 00:57:03.000000000 +0000
+--- Makefile.PL.orig	2020-05-13 19:57:03.000000000 +0000
 +++ Makefile.PL
-@@ -1,5 +1,7 @@
- use strict;
- use warnings;
-+use FindBin;
-+use lib $FindBin::Bin;
- use inc::Module::Install;
+@@ -8,9 +8,6 @@ system("which", "gpg");
+ die "gpg (GnuPG) not found" if ( $? != 0 );
  
- print "which gpg ... ";
+ my $output = `gpg --version`;
+-die "Can't determine gpg version"
+-    unless $output =~ /^gpg \(GnuPG.*?\) (\d+\.\d+)/;
+-die "gpg (GnuPG) 1.4 or later is required" unless $1 >= 1.4;
+ 
+ 
+ author 'BPS';
