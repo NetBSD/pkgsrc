@@ -1,6 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2020/06/06 00:52:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2020/06/08 13:12:16 ryoon Exp $
 #
 
+# Please make sure not to skip major releases in pkgsrc-current
+# and previous and latest pkgsrc stable branches.
+# Specifically you must ensure that pkgsrc stable branch users can
+# update their www/php-nextcloud in previous branch to current
+# branch without skipping major release.
 DISTNAME=	nextcloud-19.0.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
