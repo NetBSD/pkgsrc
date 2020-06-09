@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:52 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:11 markd Exp $
 
-SHA1 (kubrick-19.12.1.tar.xz) = ecf54fc33a990f5cccaaae119a290552045f2b26
-RMD160 (kubrick-19.12.1.tar.xz) = 382e75ccd47b5cb5412fa80a100ca44f6c2194a5
-SHA512 (kubrick-19.12.1.tar.xz) = a65432e6d8f52a2ee8b4023a1282ce7141ddd5470c394bd399315fe30fdb3122e19a7bf7806b959e5114fa39defd36397294686e70b9713e400e5fde9497be3d
-Size (kubrick-19.12.1.tar.xz) = 317568 bytes
+SHA1 (kubrick-20.04.1.tar.xz) = 11045621bd93f20e8180ad2cf9f31e0bb9e0ef07
+RMD160 (kubrick-20.04.1.tar.xz) = 8f147c2758b1a39cc7c5ed463e58280decaafc09
+SHA512 (kubrick-20.04.1.tar.xz) = ad0dcb69e06356ee5f3e39a9b61219235f95d1fa57a369e40bccccd1ef7fac0d0abc029366f3a243ddae58faa9ed1fe29100cc761b604efc01ed9bd7705810a9
+Size (kubrick-20.04.1.tar.xz) = 317996 bytes

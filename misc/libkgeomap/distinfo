@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:57:46 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:16 markd Exp $
 
-SHA1 (libkgeomap-19.12.1.tar.xz) = 7ef5929a35a794c88e68321f1dbe9d8cae3de7ac
-RMD160 (libkgeomap-19.12.1.tar.xz) = e48da6d6f47abf7dde90dc8b727dc353a6a2aea3
-SHA512 (libkgeomap-19.12.1.tar.xz) = b17d2d793b804fe7510ed19fc511c670d3c79bcbb9cbed9caf61073cbdb0a3b6738aea344ed9addfd45c0fd521a5336db0a533e6ad996f894dff035ea9a40219
-Size (libkgeomap-19.12.1.tar.xz) = 150780 bytes
+SHA1 (libkgeomap-20.04.1.tar.xz) = ce4279758d5ed88545d6bf1e4346501bbb194efb
+RMD160 (libkgeomap-20.04.1.tar.xz) = 42a63ba9910c376fdd280cd8b073a85548a27038
+SHA512 (libkgeomap-20.04.1.tar.xz) = 093f38f0f2e7990678ccdca065a19e78830c26bf593cb688256e2db240220aabd2debf0be176f0408889bb99e0c3ac2714848a36404fe4337105b3eb956957b0
+Size (libkgeomap-20.04.1.tar.xz) = 150896 bytes

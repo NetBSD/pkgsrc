@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2020/02/02 03:02:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/06/09 11:56:17 markd Exp $
 bin/okular
-bin/okularkirigami
 include/okular/core/action.h
 include/okular/core/annotations.h
 include/okular/core/area.h
@@ -70,10 +69,6 @@ qt5/plugins/okular/generators/okularGenerator_tiff.so
 qt5/plugins/okular/generators/okularGenerator_txt.so
 qt5/plugins/okular/generators/okularGenerator_xps.so
 qt5/plugins/okularpart.so
-qt5/qml/org/kde/okular/DocumentView.qml
-qt5/qml/org/kde/okular/libokularplugin.so
-qt5/qml/org/kde/okular/private/PageView.qml
-qt5/qml/org/kde/okular/qmldir
 share/applications/okularApplication_chm.desktop
 share/applications/okularApplication_comicbook.desktop
 share/applications/okularApplication_djvu.desktop
@@ -109,7 +104,6 @@ share/applications/org.kde.mobile.okular_tiff.desktop
 share/applications/org.kde.mobile.okular_txt.desktop
 share/applications/org.kde.mobile.okular_xps.desktop
 share/applications/org.kde.okular.desktop
-share/applications/org.kde.okular.kirigami.desktop
 share/config.kcfg/gssettings.kcfg
 share/config.kcfg/okular.kcfg
 share/config.kcfg/okular_core.kcfg
@@ -1211,7 +1205,6 @@ share/metainfo/org.kde.okular-tiff.metainfo.xml
 share/metainfo/org.kde.okular-txt.metainfo.xml
 share/metainfo/org.kde.okular-xps.metainfo.xml
 share/metainfo/org.kde.okular.appdata.xml
-share/metainfo/org.kde.okular.kirigami.appdata.xml
 share/okular/drawingtools.xml
 share/okular/icons/hicolor/16x16/apps/okular-fb2.png
 share/okular/icons/hicolor/16x16/apps/okular-gv.png

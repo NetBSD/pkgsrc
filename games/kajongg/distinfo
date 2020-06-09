@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:48 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:07 markd Exp $
 
-SHA1 (kajongg-19.12.1.tar.xz) = f8447ce90920a97a25c019781b52f90092d678bc
-RMD160 (kajongg-19.12.1.tar.xz) = 06e22d2e8bb09dd1315d732104563aa15255af74
-SHA512 (kajongg-19.12.1.tar.xz) = 1f19e13cc0b1026698cc668a31196369da9304959370a2ea4a8cf62e4f1b0d95cec97a2edb95a015cd03890c82e785cdc7f85de88d1ce8f18673b8178ce5d9f5
-Size (kajongg-19.12.1.tar.xz) = 4466720 bytes
+SHA1 (kajongg-20.04.1.tar.xz) = 30d76964ad05dad5e8e1043f5973f32f3da37a4e
+RMD160 (kajongg-20.04.1.tar.xz) = d436c4ec807eeaebd8f309ec1347fa807c5f75a2
+SHA512 (kajongg-20.04.1.tar.xz) = 18934682b375eda4320b8e891c9db5965ef75c191ca5668cd9f6753c632cee45088eee76c2b9150ab058ba4276028dbf90c1a99fb6842da7b7ed0416ef517d7d
+Size (kajongg-20.04.1.tar.xz) = 4468252 bytes

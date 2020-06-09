@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/18 10:35:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:10 markd Exp $
 bin/kspaceduel
 share/applications/org.kde.kspaceduel.desktop
 share/config.kcfg/kspaceduel.kcfg
@@ -95,6 +95,7 @@ share/locale/km/LC_MESSAGES/kspaceduel.mo
 share/locale/ko/LC_MESSAGES/kspaceduel.mo
 share/locale/lt/LC_MESSAGES/kspaceduel.mo
 share/locale/lv/LC_MESSAGES/kspaceduel.mo
+share/locale/ml/LC_MESSAGES/kspaceduel.mo
 share/locale/mr/LC_MESSAGES/kspaceduel.mo
 share/locale/nb/LC_MESSAGES/kspaceduel.mo
 share/locale/nds/LC_MESSAGES/kspaceduel.mo

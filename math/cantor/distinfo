@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2020/02/02 02:53:52 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/06/09 11:56:13 markd Exp $
 
-SHA1 (cantor-19.12.1.tar.xz) = d6cff361cca896973fcbfbb7d1876f68bd79c3a6
-RMD160 (cantor-19.12.1.tar.xz) = 439266b8690e7592a3e4300dea3863de22e6e710
-SHA512 (cantor-19.12.1.tar.xz) = 2466de7265a79a199c19b62b32fd27a949eee133bac187f9fcf46a7154aab279490f96403f4c5f61c052c6dde6ea20e35189c337c67a8f86e1a8ef1c3e82eb76
-Size (cantor-19.12.1.tar.xz) = 9011172 bytes
+SHA1 (cantor-20.04.1.tar.xz) = 2311d6b0f5cda341daf67bb7513994134e812ac0
+RMD160 (cantor-20.04.1.tar.xz) = 7d81d09eb3ef4738ce882dd41e12a2d16216efa3
+SHA512 (cantor-20.04.1.tar.xz) = fa948ab806a051d7cd820becae72c10042e9de6535401dcd2617b4558c4353a7594ff75e75e37587b6d1064c36044863fe93c701f1c869145e38be870216d17c
+Size (cantor-20.04.1.tar.xz) = 9026456 bytes
 SHA1 (patch-src_lib_jupyterutils.cpp) = d5af7e37e59bc7475112e22d5b37cc31a134fcbb
