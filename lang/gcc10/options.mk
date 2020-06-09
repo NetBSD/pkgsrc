@@ -23,23 +23,6 @@ PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math always-libgcc
 PKG_SUGGESTED_OPTIONS+=			always-libgcc
 .endif
 
-###
-### Determine if multilib is avalible.
-###
-MULTILIB_SUPPORTED?=	unknown
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-.  if exists(/usr/include/x86_64-linux-gnu/gnu)
-_GNU_INCLUDE_DIR=	/usr/include/x86_64-linux-gnu/gnu
-.  else
-_GNU_INCLUDE_DIR=	/usr/include/gnu
-.  endif
-.  if exists(${_GNU_INCLUDE_DIR}/stubs-64.h) && \
-     !exists(${_GNU_INCLUDE_DIR}/stubs-32.h)
-MULTILIB_SUPPORTED=	No
-.  else
-MULTILIB_SUPPORTED=	Yes
-.  endif
-.endif
 .if !empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss])
 PKG_SUPPORTED_OPTIONS+=	gcc-multilib
 PKG_SUGGESTED_OPTIONS+=	gcc-multilib

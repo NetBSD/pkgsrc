@@ -15,26 +15,9 @@ PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math always-libgcc
 PKG_SUGGESTED_OPTIONS+=	always-libgcc
 .endif
 
-###
-### Determine if multilib is avalible.
-###
-MULTILIB_SUPPORTED?=	unknown
-.if ${MACHINE_PLATFORM:MLinux-*-x86_64}
-.  if exists(/usr/include/x86_64-linux-gnu/gnu)
-GCC9_INCLUDE_DIR=	/usr/include/x86_64-linux-gnu/gnu
-.  else
-GCC9_INCLUDE_DIR=	/usr/include/gnu
-.  endif
-.  if exists(${GCC9_INCLUDE_DIR}/stubs-64.h) && \
-     !exists(${GCC9_INCLUDE_DIR}/stubs-32.h)
-MULTILIB_SUPPORTED=	no
-.  else
-MULTILIB_SUPPORTED=	yes
-.  endif
-.  if ${MULTILIB_SUPPORTED} == yes
+.if !empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss])
 PKG_SUPPORTED_OPTIONS+=	gcc-multilib
 PKG_SUGGESTED_OPTIONS+=	gcc-multilib
-.  endif
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -92,8 +75,9 @@ CONFIGURE_ARGS+=	--disable-nls
 ###
 ### Multilib Support
 ###
-.if ${MULTILIB_SUPPORTED} == no \
-    || (${MULTILIB_SUPPORTED} == yes && !${PKG_OPTIONS:Mgcc-multilib})
+.if (!empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss]) && \
+      empty(PKG_OPTIONS:Mgcc-multilib) ) || \
+    !empty(MULTILIB_SUPPORTED:M[Nn][Oo])
 CONFIGURE_ARGS+=	--disable-multilib
 .endif
 

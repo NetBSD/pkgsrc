@@ -48,6 +48,22 @@ USERADD?=		/usr/sbin/useradd
 _OPSYS_EMULDIR.linux=	# empty
 _OPSYS_EMULDIR.linux32=	# empty
 
+# Determine if multilib is available.
+MULTILIB_SUPPORTED?=	unknown
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.  if exists(/usr/include/x86_64-linux-gnu/gnu)
+_OPSYS_GNU_INCLUDE_DIR=	/usr/include/x86_64-linux-gnu/gnu
+.  else
+_OPSYS_GNU_INCLUDE_DIR=	/usr/include/gnu
+.  endif
+.  if exists(${_OPSYS_GNU_INCLUDE_DIR}/stubs-64.h) && \
+    !exists(${_OPSYS_GNU_INCLUDE_DIR}/stubs-32.h)
+MULTILIB_SUPPORTED=	no
+.  else
+MULTILIB_SUPPORTED=	yes
+.  endif
+.endif
+
 # Support Debian/Ubuntu's multiarch hierarchy.
 .if exists(/etc/debian_version)
 .  if !empty(MACHINE_ARCH:Mx86_64)
@@ -176,7 +192,7 @@ GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 .  endif
 .endfor
 
-# If this is defined pass it to the make process. 
+# If this is defined pass it to the make process.
 .if defined(NOGCCERROR)
 MAKE_ENV+=	NOGCCERROR=true
 .endif
