@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/21 03:17:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:08 markd Exp $
 bin/kgoldrunner
 share/applications/org.kde.kgoldrunner.desktop
 share/doc/HTML/de/kgoldrunner/editbar.png
@@ -142,6 +142,7 @@ share/locale/kk/LC_MESSAGES/kgoldrunner.mo
 share/locale/km/LC_MESSAGES/kgoldrunner.mo
 share/locale/lt/LC_MESSAGES/kgoldrunner.mo
 share/locale/lv/LC_MESSAGES/kgoldrunner.mo
+share/locale/ml/LC_MESSAGES/kgoldrunner.mo
 share/locale/mr/LC_MESSAGES/kgoldrunner.mo
 share/locale/nb/LC_MESSAGES/kgoldrunner.mo
 share/locale/nds/LC_MESSAGES/kgoldrunner.mo

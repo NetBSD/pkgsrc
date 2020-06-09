@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:48 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:07 markd Exp $
 
-SHA1 (granatier-19.12.1.tar.xz) = ca91952a4e44c2c0ae789e8cea0a560b9a7c72fc
-RMD160 (granatier-19.12.1.tar.xz) = 07289f5315b17510fe4f6fc6f91da5e3c00ccd0e
-SHA512 (granatier-19.12.1.tar.xz) = 7c214370418da7e27b2c95ee52cf52ed9674b3dd0a63f8ea493c94aa9b674b22cf62b7509af82cd03f9caa530e8a19bf4c7f9313dd2db90d060a2f43cef2476b
-Size (granatier-19.12.1.tar.xz) = 1942664 bytes
+SHA1 (granatier-20.04.1.tar.xz) = e8ca780911dede962698cc15197ec19beb271448
+RMD160 (granatier-20.04.1.tar.xz) = 555d0f21ba31b8fc72f1c59c8f14aed69622b286
+SHA512 (granatier-20.04.1.tar.xz) = 6be2708b414f8e93499edd7c22453a9f4a7699481a8ea89add3dba9d4f1c738ad23d5d16f317474dfcc2f536b9064f9b185e25497305eb8f3d3f2f7b03525ac4
+Size (granatier-20.04.1.tar.xz) = 1944576 bytes

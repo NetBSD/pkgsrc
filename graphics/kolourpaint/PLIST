@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/17 03:28:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/06/09 11:56:12 markd Exp $
 bin/kolourpaint
 lib/libkolourpaint_lgpl.so
 lib/libkolourpaint_lgpl.so.5
@@ -377,20 +377,6 @@ share/kolourpaint/icons/hicolor/scalable/actions/tool_rectangle.svgz
 share/kolourpaint/icons/hicolor/scalable/actions/tool_rounded_rectangle.svgz
 share/kolourpaint/icons/hicolor/scalable/actions/tool_spraycan.svgz
 share/kolourpaint/icons/hicolor/scalable/actions/tool_text.svgz
-share/kolourpaint/pics/color_transparent_26x26.png
-share/kolourpaint/pics/colorbutton_swap_16x16.png
-share/kolourpaint/pics/image_rotate_anticlockwise.png
-share/kolourpaint/pics/image_rotate_clockwise.png
-share/kolourpaint/pics/image_skew_horizontal.png
-share/kolourpaint/pics/image_skew_vertical.png
-share/kolourpaint/pics/option_opaque.png
-share/kolourpaint/pics/option_transparent.png
-share/kolourpaint/pics/resize.png
-share/kolourpaint/pics/scale.png
-share/kolourpaint/pics/smooth_scale.png
-share/kolourpaint/pics/tool_spraycan_17x17.png
-share/kolourpaint/pics/tool_spraycan_29x29.png
-share/kolourpaint/pics/tool_spraycan_9x9.png
 share/kxmlgui5/kolourpaint/kolourpaintui.rc
 share/locale/ar/LC_MESSAGES/kolourpaint.mo
 share/locale/bg/LC_MESSAGES/kolourpaint.mo

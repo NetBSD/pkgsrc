@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/02/02 02:52:21 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/06/09 11:56:13 markd Exp $
 
-SHA1 (kmbox-19.12.1.tar.xz) = 5aae4c4f6ed6dd2f7567b38126e12036d6ab06d0
-RMD160 (kmbox-19.12.1.tar.xz) = ce2eda98c969ffb59f301a6f407a5f5409fabfbc
-SHA512 (kmbox-19.12.1.tar.xz) = 9cfc2502cbf260532f6762a7f491bb3edbf265441260870656100d7acb6c447dbd40e089200d718aac2e881333597b4cfcd340af54455719396c1dc1ab5fbcd8
-Size (kmbox-19.12.1.tar.xz) = 24592 bytes
+SHA1 (kmbox-20.04.1.tar.xz) = f557357edf41f6a54bb03477a2bc534c5cd0baff
+RMD160 (kmbox-20.04.1.tar.xz) = 9402c7c9e1a9f6f97847490112dcea1c5f8ff6e3
+SHA512 (kmbox-20.04.1.tar.xz) = dacd7d9b5d2dfd3001786fb490ec26fc6ee29ed5c2ca048022d5922bbc686f7b0bb8ec7b5ec5d86f89ab377e6c1cf34b13a9be088047750a3c734f1e83b1b3ce
+Size (kmbox-20.04.1.tar.xz) = 24680 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:37:35 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:05 markd Exp $
 
-SHA1 (kde-dev-utils-19.12.1.tar.xz) = e3d6ab6f8e57dd6ddc6bd4b783e2b54e37b0a15d
-RMD160 (kde-dev-utils-19.12.1.tar.xz) = 76dc678f018e68091f9846c589c93377e0704c48
-SHA512 (kde-dev-utils-19.12.1.tar.xz) = fd9f81e7e20b38f1161e58b36eb25669b3d3dba3c5599745d2211d06fb0b4ad49f1a8ea05903be44a0b2d7fbaa0818c02a2fbed51769121caec51b5b3e766b59
-Size (kde-dev-utils-19.12.1.tar.xz) = 64420 bytes
+SHA1 (kde-dev-utils-20.04.1.tar.xz) = 43f3005dbec5ee7e95dd62e6afa559948688e016
+RMD160 (kde-dev-utils-20.04.1.tar.xz) = 4bf167ec227d13d0a2ef2390cce6ac88c374d613
+SHA512 (kde-dev-utils-20.04.1.tar.xz) = e2e60e2c32a35d30eceb7fff0a8d93d8f446313b8b5e48084de20f5f0cd6066c8c2a52cb821d06541de2503830cd0ac67468a7c1103e21f3268a834596274474
+Size (kde-dev-utils-20.04.1.tar.xz) = 64452 bytes

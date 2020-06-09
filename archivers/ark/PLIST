@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2020/02/02 02:33:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/09 11:56:05 markd Exp $
 bin/ark
-lib/libkerfuffle.so.19
-lib/libkerfuffle.so.19.12.1
+lib/libkerfuffle.so.20
+lib/libkerfuffle.so.20.4.1
 man/ca/man1/ark.1
 man/de/man1/ark.1
 man/es/man1/ark.1
@@ -136,5 +136,4 @@ share/locale/uk/LC_MESSAGES/ark.mo
 share/locale/zh_CN/LC_MESSAGES/ark.mo
 share/locale/zh_TW/LC_MESSAGES/ark.mo
 share/metainfo/org.kde.ark.appdata.xml
-share/mime/packages/kerfuffle.xml
 share/qlogging-categories5/ark.categories

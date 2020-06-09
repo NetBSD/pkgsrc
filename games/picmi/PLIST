@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/18 10:50:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:11 markd Exp $
 bin/picmi
 share/applications/org.kde.picmi.desktop
 share/doc/HTML/de/picmi/index.cache.bz2
@@ -12,6 +12,8 @@ share/doc/HTML/et/picmi/index.cache.bz2
 share/doc/HTML/et/picmi/index.docbook
 share/doc/HTML/fr/picmi/index.cache.bz2
 share/doc/HTML/fr/picmi/index.docbook
+share/doc/HTML/it/picmi/index.cache.bz2
+share/doc/HTML/it/picmi/index.docbook
 share/doc/HTML/nl/picmi/index.cache.bz2
 share/doc/HTML/nl/picmi/index.docbook
 share/doc/HTML/pt/picmi/index.cache.bz2
@@ -53,6 +55,7 @@ share/locale/kk/LC_MESSAGES/picmi.mo
 share/locale/ko/LC_MESSAGES/picmi.mo
 share/locale/lt/LC_MESSAGES/picmi.mo
 share/locale/lv/LC_MESSAGES/picmi.mo
+share/locale/ml/LC_MESSAGES/picmi.mo
 share/locale/mr/LC_MESSAGES/picmi.mo
 share/locale/nb/LC_MESSAGES/picmi.mo
 share/locale/nds/LC_MESSAGES/picmi.mo
@@ -92,11 +95,13 @@ share/picmi/levels/default/crocodile.xpm
 share/picmi/levels/default/elephant.xpm
 share/picmi/levels/default/halloween.xpm
 share/picmi/levels/default/hourglass.xpm
+share/picmi/levels/default/house.xpm
 share/picmi/levels/default/mobile_phone.xpm
 share/picmi/levels/default/panda.xpm
 share/picmi/levels/default/phone.xpm
 share/picmi/levels/default/picmi.xpm
 share/picmi/levels/default/pirate_dog.xpm
+share/picmi/levels/default/pirate_ship.xpm
 share/picmi/levels/default/policeman.xpm
 share/picmi/levels/default/robot.xpm
 share/picmi/levels/default/santa_claus.xpm
@@ -106,3 +111,4 @@ share/picmi/levels/default/zebra.xpm
 share/picmi/themes/picmi.desktop
 share/picmi/themes/picmi.png
 share/picmi/themes/picmi.svg
+share/qlogging-categories5/picmi.categories

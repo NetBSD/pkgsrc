@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/02 02:44:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/09 11:56:10 markd Exp $
 bin/ktuberling
 share/applications/org.kde.ktuberling.desktop
 share/doc/HTML/de/ktuberling/button-new.png
@@ -1823,6 +1823,7 @@ share/locale/km/LC_MESSAGES/ktuberling.mo
 share/locale/ko/LC_MESSAGES/ktuberling.mo
 share/locale/lt/LC_MESSAGES/ktuberling.mo
 share/locale/lv/LC_MESSAGES/ktuberling.mo
+share/locale/ml/LC_MESSAGES/ktuberling.mo
 share/locale/mr/LC_MESSAGES/ktuberling.mo
 share/locale/nb/LC_MESSAGES/ktuberling.mo
 share/locale/nds/LC_MESSAGES/ktuberling.mo
@@ -1845,3 +1846,4 @@ share/locale/wa/LC_MESSAGES/ktuberling.mo
 share/locale/zh_CN/LC_MESSAGES/ktuberling.mo
 share/locale/zh_TW/LC_MESSAGES/ktuberling.mo
 share/metainfo/org.kde.ktuberling.appdata.xml
+share/qlogging-categories5/ktuberling.categories

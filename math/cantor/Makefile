@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2020/06/02 08:24:16 adam Exp $
+# $NetBSD: Makefile,v 1.69 2020/06/09 11:56:13 markd Exp $
 
 DISTNAME=	cantor-${KAPPSVER}
-PKGREVISION=	8
 CATEGORIES=	math
 
 HOMEPAGE=	https://kde.org/applications/education/cantor/
@@ -44,8 +43,8 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_maxima.knsrc \
 		${PKG_SYSCONFDIR}/xdg/cantor_maxima.knsrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_octave.knsrc \
 		${PKG_SYSCONFDIR}/xdg/cantor_octave.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_python3.knsrc \
-		${PKG_SYSCONFDIR}/xdg/cantor_python3.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_python.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor_python.knsrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_qalculate.knsrc \
 		${PKG_SYSCONFDIR}/xdg/cantor_qalculate.knsrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_sage.knsrc \
@@ -56,8 +55,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_scilab.knsrc \
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/src/backends/*/CMakeFiles/cantor_*backend_autogen.dir/AutogenInfo.json
-SUBST_FILES.fix-moc+=	_KDE_build/src/panelplugins/variablemgr/CMakeFiles/cantor_variablemanagerplugin_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc=	_KDE_build/src/*/*/CMakeFiles/cantor_*_autogen.dir/AutogenInfo.json
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 

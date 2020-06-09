@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/02/02 02:57:46 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/06/09 11:56:15 markd Exp $
 
-SHA1 (kmouth-19.12.1.tar.xz) = 11e75f384880fc17d778727745499ec0e2a06cb5
-RMD160 (kmouth-19.12.1.tar.xz) = 28cf72e1a8cb3c5a4ac224cc2d6054f0cf6532a2
-SHA512 (kmouth-19.12.1.tar.xz) = 5422646d0c14ed3dc760e007cc7e12f6b135e7c2eff2fbb39aea01bdca70f2849deefd6c297ee498bc2e6ec6bf7d566e12a97bfc2c6bbb1947cfb64f16ff6ee2
-Size (kmouth-19.12.1.tar.xz) = 1966216 bytes
+SHA1 (kmouth-20.04.1.tar.xz) = d2011501bc85f4274101bf0fbb2a949e8024b630
+RMD160 (kmouth-20.04.1.tar.xz) = 36ae4e0baead540d7fcf6fa86db4e991f0908540
+SHA512 (kmouth-20.04.1.tar.xz) = 5b4333cc2b57c88b73dc35b6fb23c90066c0f956ef4a19a6c517b1f283d44065bde49bf3f873565eb10745b6502e84462d3d96f618605800d883053b1fcabb39
+Size (kmouth-20.04.1.tar.xz) = 1964488 bytes

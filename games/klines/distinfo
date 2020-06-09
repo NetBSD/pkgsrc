@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:50 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:09 markd Exp $
 
-SHA1 (klines-19.12.1.tar.xz) = 10d8c8e0964ee7f8121b9717e4644429ae6a6105
-RMD160 (klines-19.12.1.tar.xz) = 5b15cd56acc005df14f24109b265e6feee3dd534
-SHA512 (klines-19.12.1.tar.xz) = 46a032816eb324925959a9e71993d48d33b5ffc1d4e8209d342c5c6b86fc1f267d2b36952868b65e5e5d436e675e18dc522603e01639258ae4e638390fbd5e85
-Size (klines-19.12.1.tar.xz) = 1782308 bytes
+SHA1 (klines-20.04.1.tar.xz) = 8da4a47b2825721f3acfe078ed27d9ad40a4673e
+RMD160 (klines-20.04.1.tar.xz) = e0a666b1749ee5eb267fafa986dbe1cb9ebb978b
+SHA512 (klines-20.04.1.tar.xz) = fd286956ca383b55a366782f2550eac67776a1e4a329dc64e65bc122145e9f88e009efabe5a3c34b7f23b8f220375feb8a0d8a3596a3b65c02c68f9706aefefb
+Size (klines-20.04.1.tar.xz) = 1782048 bytes

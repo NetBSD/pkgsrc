@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2020/02/02 02:50:42 markd Exp $
+$NetBSD: distinfo,v 1.25 2020/06/09 11:56:12 markd Exp $
 
-SHA1 (libkdcraw-19.12.1.tar.xz) = c71f9ce9a7afb6b4563121a1a5e7eb8687ccff8b
-RMD160 (libkdcraw-19.12.1.tar.xz) = a56841012249288be4ccb11d6cfe21b2158ed531
-SHA512 (libkdcraw-19.12.1.tar.xz) = 896c5581d4da2dfcc5dceba60f4d155b7942eb6df8f37904c4f8aab54b2c2e2ea63d22b0828b0964810fafe6afac5739e8ddc6c86a292a231c46c0abdb2395a9
-Size (libkdcraw-19.12.1.tar.xz) = 42120 bytes
+SHA1 (libkdcraw-20.04.1.tar.xz) = af92d8f3720f1c0997825642d1af43d4d733fa0b
+RMD160 (libkdcraw-20.04.1.tar.xz) = bdc816da99c25794c764dc8dc0c03b80a1801d0a
+SHA512 (libkdcraw-20.04.1.tar.xz) = e0d52ef13ece5d45c64efc7e9fb0fb2f661fa21eb9c0e8e93f032276b4ad9cb75d99f808d30f09d0bb0000a1c02056be717e77359ac34b8ae9bdc6c8939e80cb
+Size (libkdcraw-20.04.1.tar.xz) = 41944 bytes

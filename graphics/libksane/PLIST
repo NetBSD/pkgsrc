@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/17 02:59:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:13 markd Exp $
 include/KF5/KSane/KSaneWidget
 include/KF5/KSane/ksane_export.h
 include/KF5/KSane/ksanewidget.h
@@ -35,6 +35,7 @@ share/locale/hi/LC_MESSAGES/libksane.mo
 share/locale/hr/LC_MESSAGES/libksane.mo
 share/locale/hu/LC_MESSAGES/libksane.mo
 share/locale/ia/LC_MESSAGES/libksane.mo
+share/locale/id/LC_MESSAGES/libksane.mo
 share/locale/is/LC_MESSAGES/libksane.mo
 share/locale/it/LC_MESSAGES/libksane.mo
 share/locale/ja/LC_MESSAGES/libksane.mo
