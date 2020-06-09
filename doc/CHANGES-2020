@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3478 2020/06/09 11:25:30 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3479 2020/06/09 11:27:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5557,3 +5557,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libgit2 to 1.0.1 [nia 2020-06-09]
 	Updated net/dnscrypt-proxy2 to 2.0.43 [nia 2020-06-09]
 	Updated games/ltris to 1.0.20 [ryoon 2020-06-09]
+	Updated fonts/harfbuzz to 2.6.7 [nia 2020-06-09]
