@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3483 2020/06/09 12:00:10 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3484 2020/06/09 12:00:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5562,3 +5562,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/sameboy to 0.13.1 [nia 2020-06-09]
 	Updated emulators/libretro-sameboy to 0.13.1 [nia 2020-06-09]
 	Updated emulators/stella to 6.2 [nia 2020-06-09]
+	Updated emulators/libretro-stella to 6.2 [nia 2020-06-09]
