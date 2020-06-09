@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/27 21:20:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:09 markd Exp $
 bin/kpat
 lib/libkcardgame.so
 man/de/man6/kpat.6
@@ -121,6 +121,7 @@ share/locale/km/LC_MESSAGES/kpat.mo
 share/locale/ko/LC_MESSAGES/kpat.mo
 share/locale/lt/LC_MESSAGES/kpat.mo
 share/locale/lv/LC_MESSAGES/kpat.mo
+share/locale/ml/LC_MESSAGES/kpat.mo
 share/locale/mr/LC_MESSAGES/kpat.mo
 share/locale/nb/LC_MESSAGES/kpat.mo
 share/locale/nds/LC_MESSAGES/kpat.mo

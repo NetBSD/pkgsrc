@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:49 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:08 markd Exp $
 
-SHA1 (kdiamond-19.12.1.tar.xz) = 04eaaa50d97d57a169e6e3dbd5719cc15045f4ca
-RMD160 (kdiamond-19.12.1.tar.xz) = 99c6cd8036f4ad78b00b8fa2e08242e3e3ca27b2
-SHA512 (kdiamond-19.12.1.tar.xz) = bfdd172723a968b024e2f31e19d2f81bc51464dc4feb996284023809b3cb3160237f34e90318e71e766328a920e2fb781c80b9c43644c931b26781150bf75fa2
-Size (kdiamond-19.12.1.tar.xz) = 4694472 bytes
+SHA1 (kdiamond-20.04.1.tar.xz) = 31c3ef58bd238e8007f3171281e534b0e6fd90ec
+RMD160 (kdiamond-20.04.1.tar.xz) = b7b2c96b0491848f5cca4270f0f67b3f61b49b87
+SHA512 (kdiamond-20.04.1.tar.xz) = d39e2b55aad444dbbc8e10631b3a9061222a887f055678aa70c43ca3b57a5e99321948662f3dc1b7d5402a8f7ccd5c2b73301856ff389664671c142c7ba2d7f9
+Size (kdiamond-20.04.1.tar.xz) = 4693952 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/02/02 02:57:45 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/06/09 11:56:14 markd Exp $
 
-SHA1 (kdeedu-data-19.12.1.tar.xz) = 89abfef5a39d5bc075a783cd7c69d4db17b59e7f
-RMD160 (kdeedu-data-19.12.1.tar.xz) = dbf4052c10c7aeaf3ee9bac39a3e105df1962221
-SHA512 (kdeedu-data-19.12.1.tar.xz) = 592f35c1a4e52e760b31b0cb4b54b29086f56dc4e13329de9405ed3ad66e5c9195c679945fcb74619f7a9714c3f56808da14d1c231f4d3096872b76602e2c88c
-Size (kdeedu-data-19.12.1.tar.xz) = 327120 bytes
+SHA1 (kdeedu-data-20.04.1.tar.xz) = e5c8431fa1b70b2ef28dba9d442632a6b1f47370
+RMD160 (kdeedu-data-20.04.1.tar.xz) = 3f294601d37f5570782aecea866332bfe835b042
+SHA512 (kdeedu-data-20.04.1.tar.xz) = dee3a3566eba452421c24900dfa1fdeddd31d14c036c70d5c693a12130a30c0840268e7bac71074d28cbcb278d9e00d7b98eef74f30a3e6dc6483d23e135658a
+Size (kdeedu-data-20.04.1.tar.xz) = 328620 bytes

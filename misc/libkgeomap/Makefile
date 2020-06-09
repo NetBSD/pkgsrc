@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2020/06/02 08:22:49 adam Exp $
+# $NetBSD: Makefile,v 1.50 2020/06/09 11:56:16 markd Exp $
 
 DISTNAME=	libkgeomap-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/graphics/

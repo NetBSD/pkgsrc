@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/18 10:38:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:10 markd Exp $
 bin/ksquares
 share/applications/org.kde.ksquares.desktop
 share/config.kcfg/ksquares.kcfg
@@ -66,6 +66,7 @@ share/locale/km/LC_MESSAGES/ksquares.mo
 share/locale/ko/LC_MESSAGES/ksquares.mo
 share/locale/lt/LC_MESSAGES/ksquares.mo
 share/locale/lv/LC_MESSAGES/ksquares.mo
+share/locale/ml/LC_MESSAGES/ksquares.mo
 share/locale/mr/LC_MESSAGES/ksquares.mo
 share/locale/nb/LC_MESSAGES/ksquares.mo
 share/locale/nds/LC_MESSAGES/ksquares.mo
