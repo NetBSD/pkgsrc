@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/03/23 12:01:15 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/06/09 11:59:58 nia Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -38,6 +38,7 @@ share/doc/stella/graphics/developer_stats.png
 share/doc/stella/graphics/eventmapping.png
 share/doc/stella/graphics/eventmapping_combo.png
 share/doc/stella/graphics/eventmapping_devsports.png
+share/doc/stella/graphics/eventmapping_mouse.png
 share/doc/stella/graphics/eventmapping_remap.png
 share/doc/stella/graphics/jr_pacman.png
 share/doc/stella/graphics/launcher.png
@@ -52,6 +53,7 @@ share/doc/stella/graphics/options_developer_emulation.png
 share/doc/stella/graphics/options_developer_tia.png
 share/doc/stella/graphics/options_developer_timemachine.png
 share/doc/stella/graphics/options_developer_video.png
+share/doc/stella/graphics/options_emulation.png
 share/doc/stella/graphics/options_gameinfo_cartridge.png
 share/doc/stella/graphics/options_gameinfo_console.png
 share/doc/stella/graphics/options_gameinfo_controller.png
@@ -62,6 +64,7 @@ share/doc/stella/graphics/options_misc_light.png
 share/doc/stella/graphics/options_ui.png
 share/doc/stella/graphics/options_video.png
 share/doc/stella/graphics/options_video_dbgcolors.png
+share/doc/stella/graphics/options_video_palettes.png
 share/doc/stella/graphics/options_video_tv.png
 share/doc/stella/graphics/pacman.png
 share/doc/stella/graphics/qwertz.png
