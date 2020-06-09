@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/09 10:10:37 nia Exp $
+share/examples/mime-types/mime.types
