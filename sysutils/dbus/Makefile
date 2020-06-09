@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2020/01/18 23:35:15 rillig Exp $
+# $NetBSD: Makefile,v 1.121 2020/06/09 07:13:31 wiz Exp $
 
-DISTNAME=	dbus-1.12.16
+DISTNAME=	dbus-1.12.18
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -63,12 +63,11 @@ SUBST_SED.docbook=	-e 's,http://www.oasis-open.org/docbook/xml,${PREFIX}/share/x
 PTHREAD_AUTO_VARS=	yes
 
 .if ${OPSYS} == "Linux"
-PLIST.linux=		yes
+# not currently used
+#PLIST.linux=		yes
 .else
 CONFIGURE_ARGS+=	--disable-selinux
 .endif
-
-PLIST_VARS+=		linux
 
 DBUS_CONF_DIR=		${PKG_SYSCONFBASE}/dbus-1
 OWN_DIRS+=		${DBUS_CONF_DIR}/services
