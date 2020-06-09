@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:30:32 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/06/09 06:18:17 wiz Exp $
 
-DISTNAME=	libntlm-1.5
-CATEGORIES=	security
+DISTNAME=	libntlm-1.6
+CATEGORIES=	devel security
 MASTER_SITES=	http://www.nongnu.org/libntlm/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
