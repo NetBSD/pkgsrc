@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2020/05/23 17:42:32 fox Exp $
+$NetBSD: distinfo,v 1.14 2020/06/09 15:33:52 fox Exp $
 
-SHA1 (din-47.tar.gz) = b12f5cf667f34df1d943b7aec1626ac7dfb6b725
-RMD160 (din-47.tar.gz) = 7b0fe24e1c48819e39be3815caf2e983c3677350
-SHA512 (din-47.tar.gz) = 900aadf8a214585b5dd7b56b02da579410d305893a53e433e8dd000a3892027c19dfa867c775a4eb0e85e879b0a578cf46a3183083c468de53d47d44a43614b8
-Size (din-47.tar.gz) = 3667413 bytes
+SHA1 (din-47.1.tar.gz) = e3de23c7fd65d77b9052f0d433955ba0820b103f
+RMD160 (din-47.1.tar.gz) = 2a075656caea406999545852fce5c318f1e33a7c
+SHA512 (din-47.1.tar.gz) = 883008fa54751cd626ee60a5c5a4785a82680c229adefc2c8a86bfa28bf6be6549500c1bfe4661028ae8a2015383a2d9e6fe1d8992476d49576a999eea26ba17
+Size (din-47.1.tar.gz) = 3667502 bytes
 SHA1 (patch-src_Makefile.am) = 0959b506b5ff6b2cf525fbde0bd1169f1b5c6401
 SHA1 (patch-src_Makefile.in) = e4f93496379202ac25ae1909351fea6532989078
