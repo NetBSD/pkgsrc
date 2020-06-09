@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3494 2020/06/09 17:06:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3495 2020/06/09 17:50:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5691,3 +5691,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust-bin to 1.44.0 [nia 2020-06-09]
 	Updated audio/audacious to 4.0.4 [nia 2020-06-09]
 	Updated audio/audacious-plugins to 4.0.4 [nia 2020-06-09]
+	Updated audio/strawberry to 0.6.12 [nia 2020-06-09]
