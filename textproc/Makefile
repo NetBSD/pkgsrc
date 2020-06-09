@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1144 2020/06/05 22:09:29 sjmulder Exp $
+# $NetBSD: Makefile,v 1.1145 2020/06/09 13:53:00 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1121,6 +1121,7 @@ SUBDIR+=	trang
 SUBDIR+=	translate-shell
 SUBDIR+=	translate-toolkit
 SUBDIR+=	troffcvt
+SUBDIR+=	uchardet
 SUBDIR+=	unac
 SUBDIR+=	uncrustify
 SUBDIR+=	uni2ascii
