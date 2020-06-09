@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/06/09 14:31:09 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/06/09 14:31:27 nia Exp $
 
 BUILDLINK_TREE+=	tepl4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tepl4
 TEPL4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tepl4+=	tepl4>=4.4.0
-BUILDLINK_PKGSRCDIR.tepl4?=	../../textproc/tepl4
+BUILDLINK_PKGSRCDIR.tepl4?=	../../editors/tepl4
 
 .include "../../devel/amtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
