@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 20:56:58 agc Exp $
+$NetBSD: distinfo,v 1.11 2020/06/09 11:25:00 ryoon Exp $
 
-SHA1 (ltris-1.0.19.tar.gz) = 6f9b0f3ff2de73e55d4e880b502c925f7168b2b6
-RMD160 (ltris-1.0.19.tar.gz) = 14db0c69f6fe3ac4e3eed64e268ec565111f86cc
-SHA512 (ltris-1.0.19.tar.gz) = ab43b3d8f04ab40016be5b5c414f8679bee4f5f344ef9cab52c3628d48017458b84b0fbc0bcaecdfab43853a1ef628ee1cabf3a1373ea108650d4e76015881c5
-Size (ltris-1.0.19.tar.gz) = 883543 bytes
+SHA1 (ltris-1.0.20.tar.gz) = 63bd13e1d94f0930672cd005020267f311cdaf6e
+RMD160 (ltris-1.0.20.tar.gz) = 5b82d41058df61ba7db59b4f818013cd55ddc530
+SHA512 (ltris-1.0.20.tar.gz) = 92861bdb4b43750edbdb31c999e106b0f166cae736b598caba3028b26651502f6b4e81d0b7c92df38d96223c899450ddaa445ab186198dfeb21617340eb73d26
+Size (ltris-1.0.20.tar.gz) = 897167 bytes
 SHA1 (patch-aa) = 951a8dba5a263338be2ff46d7faddc8216aa8345
 SHA1 (patch-ab) = 1b06b8a065fa6b4231a3b8d49f6111b37033e5aa
-SHA1 (patch-src_sdl.c) = 84f93458bd6998f114688409019ac65466139bed
-SHA1 (patch-src_sdl.h) = 4cd62fad8e624bd17c25620682c20ef2839df599
-SHA1 (patch-src_tools.c) = 49d823afae73dcf1f80d17179c0459a60764b4bb
-SHA1 (patch-src_tools.h) = 34000dc5c7d6ee60ea462aca0f88e697ca7599ce
