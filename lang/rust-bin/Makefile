@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/06/03 10:45:04 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/09 15:58:05 nia Exp $
 
-DISTNAME=	rust-1.42.0
+DISTNAME=	rust-1.44.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
@@ -98,21 +97,25 @@ do-install:
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
 .  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
-	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
-	    | ${GREP} '@rpath' | while read rpath rest; do		\
-		install_name_tool -change $$rpath			\
-		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
-		    ${DESTDIR}${PREFIX}/bin/${bin};			\
-	done
+	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then				\
+		otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
+		    | ${GREP} '@rpath' | while read rpath rest; do		\
+			install_name_tool -change $$rpath			\
+			    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
+			    ${DESTDIR}${PREFIX}/bin/${bin};			\
+		done								\
+	; fi
 .  endfor
 .  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump 		\
 		llvm-profdata llvm-readobj llvm-size llvm-strip
-	otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
-	    | ${GREP} '@rpath' | while read rpath rest; do		\
-		install_name_tool -change $$rpath			\
-		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib/rustlib/${RUST_ARCH}/lib,g'` \
-		    ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}; \
-	done
+	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then				\
+		otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
+		    | ${GREP} '@rpath' | while read rpath rest; do		\
+			install_name_tool -change $$rpath			\
+			    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib/rustlib/${RUST_ARCH}/lib,g'` \
+			    ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}; \
+		done								\
+	; fi
 .  endfor
 .  for lib in lib lib/rustlib/${RUST_ARCH}/lib lib/rustlib/${RUST_ARCH}/codegen-backends
 	for f in ${DESTDIR}${PREFIX}/${lib}/lib*.dylib; do		\
@@ -130,27 +133,31 @@ fix-darwin-install-name:
 .else
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
-# ld.elf_so in NetBSD 8.x only obeys RPATH, not RUNPATH, so force RPATH there.
-FORCE_RPATH=
 # The llvm utilities need a specific libstdc++ version from compat80
 .  if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-8].*)
 RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
+FORCE_RPATH=
 .  else
+# ld.elf_so in NetBSD 8.x only obeys RPATH, not RUNPATH, so force RPATH there.
 RUST_LLVM_RPATH=	${PREFIX}/lib
-FORCE_RPATH=	--force-rpath
+FORCE_RPATH=		--force-rpath
 .  endif
 
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
 .  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
-	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
-		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
+	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
+		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
+			${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin} \
+	; fi
 .  endfor
 .  for bin in llvm-ar llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
 		llvm-readobj llvm-size llvm-strip
-	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
-		${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
+	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
+		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
+			${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
+	; fi
 .  endfor
 .  for lib in lib lib/rustlib/${RUST_ARCH}/lib \
 		lib/rustlib/${RUST_ARCH}/codegen-backends
