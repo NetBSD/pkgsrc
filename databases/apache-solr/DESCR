@@ -1,0 +1,3 @@
+Apache Solr is an open source enterprise search server based on the Apache
+Lucene Java search library, with XML/HTTP and JSON APIs, hit highlighting,
+faceted search, caching, replication, and a web administration interface.
