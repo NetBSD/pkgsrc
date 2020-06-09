@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.1 2019/10/28 19:00:37 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2020/06/09 07:01:55 mef Exp $
 
 SHA1 (qwt-6.1.4.tar.bz2) = a1028cb0a33322920266fb183869023b8ed30394
 RMD160 (qwt-6.1.4.tar.bz2) = a78f245b430b3e97443245d336031be59e2b0e17
 SHA512 (qwt-6.1.4.tar.bz2) = 6135ce47fd4f9ff5b705193fc1f7410cfd5a0b84931bb17db750f6a5486ae810c261dae32431bd52838c36eadee02487148e1efa71c465c63aa43062eec160da
 Size (qwt-6.1.4.tar.bz2) = 4227315 bytes
 SHA1 (patch-pri) = ae8ca6197b76c082e22e4a9df57328ff8033d724
-SHA1 (patch-qwt.prf) = e6ba3daffb0ba084e435dd573bde50341933b694
+SHA1 (patch-qwt.prf) = f952dfc68909a24c847a8c33ea4b2cd21591fd31
+SHA1 (patch-src_qwt__dial.h) = 414509a26cf2db092881958a047291a14bc343a4
+SHA1 (patch-src_qwt__global.h) = 0624e0cdb8f3e30c34182969ef111c79da6fe128
+SHA1 (patch-src_qwt__null__paintdevice.cpp) = 7e0d8cdf2f22c565c69198128b8e0b74cc586ea2
+SHA1 (patch-src_qwt__painter.h) = f499a1316b6ffc584692b3d310483921ffe0c7e9
+SHA1 (patch-src_qwt__painter__command.h) = 27db14826ab80bf915031da7c6591a20715c3163
+SHA1 (patch-src_qwt__scale__draw.cpp) = ef8d66c0d86e6be825f7c592b081c2f28ec98508
