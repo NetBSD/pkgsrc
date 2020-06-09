@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2020/06/07 22:08:37 taca Exp $
+$NetBSD: distinfo,v 1.19 2020/06/09 00:25:19 taca Exp $
 
-SHA1 (roundcubemail-1.4.5-complete.tar.gz) = 551d5dda8760471241dfc77333b004693f04feaf
-RMD160 (roundcubemail-1.4.5-complete.tar.gz) = 99158492a9feaad08f24021bbb356113ce27c4a2
-SHA512 (roundcubemail-1.4.5-complete.tar.gz) = 031a4669249efa67050212fc6b19429751fabb8204ffe1ea0088810f2efe30de9b7bf986c21c3091b6037628a0527550e33e96ad67cd0f16c85dc5398f67b761
-Size (roundcubemail-1.4.5-complete.tar.gz) = 7031560 bytes
+SHA1 (roundcubemail-1.4.6-complete.tar.gz) = 44961ef62bb9c9875141ca34704bbc7d6f36373d
+RMD160 (roundcubemail-1.4.6-complete.tar.gz) = 51e323bf7def448b55f57b9279745b5779690ab3
+SHA512 (roundcubemail-1.4.6-complete.tar.gz) = e86763ced58cfa8174f71d33ae45cd62f26a58853b9361b800003fa5bf883a4106c957f66b6b17b03172a3ee595ca74d7c19ac38e449a23377defd77cf555742
+Size (roundcubemail-1.4.6-complete.tar.gz) = 7031573 bytes
 SHA1 (patch-plugins_password_helpers_passwd-expect) = 15e427a3c90bf7c0437a023b3f099abb5a139165
