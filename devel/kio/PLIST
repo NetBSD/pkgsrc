@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/06/07 11:08:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/06/09 06:44:05 markd Exp $
 bin/kcookiejar5
 bin/ktelnetservice5
 bin/ktrash5
@@ -263,19 +263,19 @@ lib/cmake/KF5KIO/KF5KIOTargets-noconfig.cmake
 lib/cmake/KF5KIO/KF5KIOTargets.cmake
 lib/libKF5KIOCore.so
 lib/libKF5KIOCore.so.5
-lib/libKF5KIOCore.so.${PKGVERSION}
+lib/libKF5KIOCore.so.5.70.0
 lib/libKF5KIOFileWidgets.so
 lib/libKF5KIOFileWidgets.so.5
-lib/libKF5KIOFileWidgets.so.${PKGVERSION}
+lib/libKF5KIOFileWidgets.so.5.70.0
 lib/libKF5KIOGui.so
 lib/libKF5KIOGui.so.5
-lib/libKF5KIOGui.so.${PKGVERSION}
+lib/libKF5KIOGui.so.5.70.0
 lib/libKF5KIONTLM.so
 lib/libKF5KIONTLM.so.5
-lib/libKF5KIONTLM.so.${PKGVERSION}
+lib/libKF5KIONTLM.so.5.70.0
 lib/libKF5KIOWidgets.so
 lib/libKF5KIOWidgets.so.5
-lib/libKF5KIOWidgets.so.${PKGVERSION}
+lib/libKF5KIOWidgets.so.5.70.0
 libexec/kf5/kio_http_cache_cleaner
 libexec/kf5/kiod5
 libexec/kf5/kioexec
