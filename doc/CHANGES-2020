@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3488 2020/06/09 13:53:30 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3489 2020/06/09 14:30:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5685,3 +5685,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/freerdp2 to 2.1.1 [nia 2020-06-09]
 	Updated chat/znc to 1.8.1 [nia 2020-06-09]
 	Added textproc/uchardet version 0.0.7 [nia 2020-06-09]
+	Added editors/tepl4 version 4.4.0 [nia 2020-06-09]
