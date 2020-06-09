@@ -1,2 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/10/03 16:26:00 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/09 11:32:43 nia Exp $
 bin/syncthing
+share/applications/syncthing-start.desktop
+share/applications/syncthing-ui.desktop
+share/icons/hicolor/128x128/apps/syncthing.png
+share/icons/hicolor/256x256/apps/syncthing.png
+share/icons/hicolor/32x32/apps/syncthing.png
+share/icons/hicolor/512x512/apps/syncthing.png
+share/icons/hicolor/64x64/apps/syncthing.png

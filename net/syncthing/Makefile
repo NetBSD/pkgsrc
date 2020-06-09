@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2020/05/15 13:44:20 triaxx Exp $
+# $NetBSD: Makefile,v 1.110 2020/06/09 11:32:43 nia Exp $
 
 # Upstream used to frequently break protocol compatibility, but since
 # 2018 or so this has been much better.  While users of pkgsrc
@@ -17,7 +17,7 @@
 #
 # Minor version updates may be committed without asking.  Major
 # updates not following the above policy will be reverted.
-DISTNAME=	syncthing-source-v1.5.0
+DISTNAME=	syncthing-source-v1.6.1
 PKGNAME=	${DISTNAME:S,source-v,,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
@@ -33,7 +33,7 @@ USE_LANGUAGES=		c
 NO_CONFIGURE=		yes
 GO_SRCPATH=		github.com/syncthing/syncthing
 GO_DIST_BASE=		syncthing
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/applications
 
 CHECK_RELRO_SKIP+=	bin/syncthing
 
@@ -48,8 +48,14 @@ SUBST_SED.version+=	-e 's|"go"|"${GO}"|'
 SUBST_CLASSES+=		go
 SUBST_STAGE.go=		pre-build
 SUBST_MESSAGE.go=	Fixing go executable reference
-SUBST_FILES.go=		lib/auto/doc.go cmd/strelaypoolsrv/auto/doc.go
+SUBST_FILES.go=		lib/api/auto/doc.go cmd/strelaypoolsrv/auto/doc.go
 SUBST_SED.go+=		-e 's|go run|"${GO}" run|'
+
+SUBST_CLASSES+=		bin
+SUBST_STAGE.bin=	pre-install
+SUBST_MESSAGE.bin=	Fixing location of installed binaries
+SUBST_FILES.bin=	etc/linux-desktop/*.desktop
+SUBST_SED.bin+=		-e 's,/usr/bin/syncthing,${PREFIX}/bin/syncthing,'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -80,7 +86,16 @@ do-build:
 
 # Binaries other than syncthing proper should perhaps be installed.
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/syncthing ${DESTDIR}/${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/syncthing ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/syncthing ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/etc/linux-desktop/*.desktop ${DESTDIR}${PREFIX}/share/applications
+.for s in 512 256 128 64 32
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
+	${INSTALL_DATA} ${WRKSRC}/assets/logo-${s}.png  \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/syncthing.png
+.endfor
 
 .include "../../lang/go/go-package.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
