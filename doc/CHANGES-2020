@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3496 2020/06/09 18:23:10 js Exp $
+$NetBSD: CHANGES-2020,v 1.3497 2020/06/09 22:23:21 jym Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5692,3 +5692,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/audacious-plugins to 4.0.4 [nia 2020-06-09]
 	Updated audio/strawberry to 0.6.12 [nia 2020-06-09]
 	Updated devel/fossil to 2.11.1 [js 2020-06-09]
+	Added databases/apache-solr version 8.5.1 [jym 2020-06-10]
