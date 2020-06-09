@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/02/02 02:39:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/06/09 11:56:06 markd Exp $
 bin/kate
 bin/kwrite
 man/ca/man1/kate.1
@@ -338,17 +338,22 @@ share/doc/HTML/uk/kwrite/index.cache.bz2
 share/doc/HTML/uk/kwrite/index.docbook
 share/icons/hicolor/128x128/apps/kate.png
 share/icons/hicolor/128x128/apps/kwrite.png
+share/icons/hicolor/150x150/apps/kate.png
 share/icons/hicolor/16x16/apps/kate.png
 share/icons/hicolor/16x16/apps/kwrite.png
 share/icons/hicolor/22x22/apps/kate.png
 share/icons/hicolor/22x22/apps/kwrite.png
+share/icons/hicolor/256x256/apps/kate.png
+share/icons/hicolor/310x310/apps/kate.png
 share/icons/hicolor/32x32/apps/kate.png
 share/icons/hicolor/32x32/apps/kwrite.png
+share/icons/hicolor/44x44/apps/kate.png
 share/icons/hicolor/48x48/apps/kate.png
 share/icons/hicolor/48x48/apps/kwrite.png
+share/icons/hicolor/512x512/apps/kate.png
 share/icons/hicolor/64x64/apps/kate.png
 share/icons/hicolor/64x64/apps/kwrite.png
-share/icons/hicolor/scalable/apps/kate.svgz
+share/icons/hicolor/scalable/apps/kate.svg
 share/icons/hicolor/scalable/apps/kwrite.svgz
 share/kateproject/kateproject.example
 share/katexmltools/html4-loose.dtd.xml
@@ -470,6 +475,7 @@ share/locale/ca@valencia/LC_MESSAGES/kate.mo
 share/locale/ca@valencia/LC_MESSAGES/katebacktracebrowserplugin.mo
 share/locale/ca@valencia/LC_MESSAGES/katebuild-plugin.mo
 share/locale/ca@valencia/LC_MESSAGES/katecloseexceptplugin.mo
+share/locale/ca@valencia/LC_MESSAGES/kateexternaltoolsplugin.mo
 share/locale/ca@valencia/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/ca@valencia/LC_MESSAGES/katefiletree.mo
 share/locale/ca@valencia/LC_MESSAGES/kategdbplugin.mo
@@ -485,6 +491,7 @@ share/locale/ca@valencia/LC_MESSAGES/katexmlcheck.mo
 share/locale/ca@valencia/LC_MESSAGES/katexmltools.mo
 share/locale/ca@valencia/LC_MESSAGES/ktexteditorpreviewplugin.mo
 share/locale/ca@valencia/LC_MESSAGES/kwrite.mo
+share/locale/ca@valencia/LC_MESSAGES/lspclient.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_applet_org.kde.plasma.katesessions.mo
 share/locale/ca@valencia/LC_MESSAGES/tabswitcherplugin.mo
 share/locale/cs/LC_MESSAGES/kate-ctags-plugin.mo
@@ -518,6 +525,7 @@ share/locale/da/LC_MESSAGES/kate.mo
 share/locale/da/LC_MESSAGES/katebacktracebrowserplugin.mo
 share/locale/da/LC_MESSAGES/katebuild-plugin.mo
 share/locale/da/LC_MESSAGES/katecloseexceptplugin.mo
+share/locale/da/LC_MESSAGES/kateexternaltoolsplugin.mo
 share/locale/da/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/da/LC_MESSAGES/katefiletree.mo
 share/locale/da/LC_MESSAGES/kategdbplugin.mo
@@ -533,6 +541,7 @@ share/locale/da/LC_MESSAGES/katexmlcheck.mo
 share/locale/da/LC_MESSAGES/katexmltools.mo
 share/locale/da/LC_MESSAGES/ktexteditorpreviewplugin.mo
 share/locale/da/LC_MESSAGES/kwrite.mo
+share/locale/da/LC_MESSAGES/lspclient.mo
 share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.katesessions.mo
 share/locale/da/LC_MESSAGES/tabswitcherplugin.mo
 share/locale/de/LC_MESSAGES/kate-ctags-plugin.mo
@@ -940,6 +949,7 @@ share/locale/ja/LC_MESSAGES/kate.mo
 share/locale/ja/LC_MESSAGES/katebacktracebrowserplugin.mo
 share/locale/ja/LC_MESSAGES/katebuild-plugin.mo
 share/locale/ja/LC_MESSAGES/katecloseexceptplugin.mo
+share/locale/ja/LC_MESSAGES/kateexternaltoolsplugin.mo
 share/locale/ja/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/ja/LC_MESSAGES/katefiletree.mo
 share/locale/ja/LC_MESSAGES/kategdbplugin.mo
@@ -1020,6 +1030,7 @@ share/locale/lt/LC_MESSAGES/kate.mo
 share/locale/lt/LC_MESSAGES/katebacktracebrowserplugin.mo
 share/locale/lt/LC_MESSAGES/katebuild-plugin.mo
 share/locale/lt/LC_MESSAGES/katecloseexceptplugin.mo
+share/locale/lt/LC_MESSAGES/kateexternaltoolsplugin.mo
 share/locale/lt/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/lt/LC_MESSAGES/katefiletree.mo
 share/locale/lt/LC_MESSAGES/kategdbplugin.mo
@@ -1035,6 +1046,7 @@ share/locale/lt/LC_MESSAGES/katexmlcheck.mo
 share/locale/lt/LC_MESSAGES/katexmltools.mo
 share/locale/lt/LC_MESSAGES/ktexteditorpreviewplugin.mo
 share/locale/lt/LC_MESSAGES/kwrite.mo
+share/locale/lt/LC_MESSAGES/lspclient.mo
 share/locale/lt/LC_MESSAGES/plasma_applet_org.kde.plasma.katesessions.mo
 share/locale/lt/LC_MESSAGES/tabswitcherplugin.mo
 share/locale/lv/LC_MESSAGES/kate-ctags-plugin.mo
@@ -1057,6 +1069,7 @@ share/locale/ml/LC_MESSAGES/kate.mo
 share/locale/ml/LC_MESSAGES/katebacktracebrowserplugin.mo
 share/locale/ml/LC_MESSAGES/katebuild-plugin.mo
 share/locale/ml/LC_MESSAGES/katecloseexceptplugin.mo
+share/locale/ml/LC_MESSAGES/kateexternaltoolsplugin.mo
 share/locale/ml/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/ml/LC_MESSAGES/katefiletree.mo
 share/locale/ml/LC_MESSAGES/kategdbplugin.mo
@@ -1072,6 +1085,7 @@ share/locale/ml/LC_MESSAGES/katexmlcheck.mo
 share/locale/ml/LC_MESSAGES/katexmltools.mo
 share/locale/ml/LC_MESSAGES/ktexteditorpreviewplugin.mo
 share/locale/ml/LC_MESSAGES/kwrite.mo
+share/locale/ml/LC_MESSAGES/lspclient.mo
 share/locale/ml/LC_MESSAGES/plasma_applet_org.kde.plasma.katesessions.mo
 share/locale/ml/LC_MESSAGES/tabswitcherplugin.mo
 share/locale/mr/LC_MESSAGES/kate-ctags-plugin.mo

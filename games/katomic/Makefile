@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2020/06/02 08:23:51 adam Exp $
+# $NetBSD: Makefile,v 1.39 2020/06/09 11:56:07 markd Exp $
 
 DISTNAME=	katomic-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/katomic/

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/18 10:05:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:08 markd Exp $
 bin/klickety
 share/applications/org.kde.klickety.desktop
 share/applications/org.kde.ksame.desktop
@@ -97,6 +97,7 @@ share/locale/kk/LC_MESSAGES/klickety.mo
 share/locale/ko/LC_MESSAGES/klickety.mo
 share/locale/lt/LC_MESSAGES/klickety.mo
 share/locale/lv/LC_MESSAGES/klickety.mo
+share/locale/ml/LC_MESSAGES/klickety.mo
 share/locale/mr/LC_MESSAGES/klickety.mo
 share/locale/nb/LC_MESSAGES/klickety.mo
 share/locale/nds/LC_MESSAGES/klickety.mo

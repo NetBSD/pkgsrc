@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/17 04:36:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/09 11:56:18 markd Exp $
 bin/kdf
 bin/kwikdisk
-lib/libkdfprivate.so.19
+lib/libkdfprivate.so.20
 lib/libkdfprivate.so.${PKGVERSION}
 qt5/plugins/libkcm_kdf.so
 share/applications/org.kde.kdf.desktop

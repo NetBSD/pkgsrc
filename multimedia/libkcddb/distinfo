@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/02/02 03:00:22 markd Exp $
+$NetBSD: distinfo,v 1.11 2020/06/09 11:56:17 markd Exp $
 
-SHA1 (libkcddb-19.12.1.tar.xz) = f501f0d22d44d1e6a8d6ba1b61be3688d3ce0d7b
-RMD160 (libkcddb-19.12.1.tar.xz) = df40dcc3fd06125eeca6d259e1326f7097ead4c6
-SHA512 (libkcddb-19.12.1.tar.xz) = dd8401f603f15d46f1daeda10f9f853e51dcfa1518a12e0f5eaf6dc9148f395e9c75e175fbc1dc6c02efc5e86e72b50bac82cd21e0cdf178e2bc0780f7ffea59
-Size (libkcddb-19.12.1.tar.xz) = 424108 bytes
+SHA1 (libkcddb-20.04.1.tar.xz) = ae13b407f6d0b6903d6392a40e760abd49842a51
+RMD160 (libkcddb-20.04.1.tar.xz) = 82584d5f079cd69691670b418451d63190b3cbc8
+SHA512 (libkcddb-20.04.1.tar.xz) = e7dc1d6bca0911bbd2291c5b15d7c384908eea33093bbd1ff621d8d1d846322b28c49261c9efdf186401ac9e2eac272c8355b7a6e37f8ec286d0aa3fd8ea5379
+Size (libkcddb-20.04.1.tar.xz) = 427308 bytes

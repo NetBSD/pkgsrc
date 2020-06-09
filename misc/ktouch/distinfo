@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/02/02 02:57:46 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/06/09 11:56:16 markd Exp $
 
-SHA1 (ktouch-19.12.1.tar.xz) = a5684ef6d91d87715ecd8f61dc1b81dcb4b6436d
-RMD160 (ktouch-19.12.1.tar.xz) = ec796f90daa325dd68348d0aaed8522263efb19c
-SHA512 (ktouch-19.12.1.tar.xz) = 500bb77747d08ef99f9363d12b679ae1a93a54880c1a51e9a33e289ea59b0c20dd62027c9bf410910a3c6bd2bb72acbcaf2ae7dcc3bcefb23382b6dc1feb4d72
-Size (ktouch-19.12.1.tar.xz) = 4932928 bytes
+SHA1 (ktouch-20.04.1.tar.xz) = 6bc7ba5a4ef49bd75dfbc8736d9fd893edffa1be
+RMD160 (ktouch-20.04.1.tar.xz) = 6a4d7e2ee37866669d5782c84a5055280dd2a94d
+SHA512 (ktouch-20.04.1.tar.xz) = 5953846e50259eaa2efa9c40afdce0d7c23458ea76225409d1a6a9574d80763d0686e54740427fc48de90b0cbde697fd2caea85a305b3814d52ff8a5fe8371e6
+Size (ktouch-20.04.1.tar.xz) = 4936708 bytes

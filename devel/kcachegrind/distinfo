@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:37:35 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:05 markd Exp $
 
-SHA1 (kcachegrind-19.12.1.tar.xz) = 0a40f437470a17cc4a0493f798a958e1ad31f510
-RMD160 (kcachegrind-19.12.1.tar.xz) = 16200101c1ccd3c860b4151c2bfd5d4d6a0ec5ea
-SHA512 (kcachegrind-19.12.1.tar.xz) = 4fd5e195c8269fd59ed3f565590c45ed4705f96bcb390551cd6561e6ef7d0cbf7708679f7c44905858564724a4d0a3866a411c4f9a4763b9a9e57ba8eeb7bdef
-Size (kcachegrind-19.12.1.tar.xz) = 810148 bytes
+SHA1 (kcachegrind-20.04.1.tar.xz) = 464e79fffd327538d97e8a78d137e82a2ca46ea3
+RMD160 (kcachegrind-20.04.1.tar.xz) = 03274fae495be00e796d804f2de69c214a9235ef
+SHA512 (kcachegrind-20.04.1.tar.xz) = 6ee56b674568cc1f6ae82e4df0ce7a0329394f45299535db1d0c3a9a3d30dc707db0420bf49fd20c3c61df75f998a1c04bb7a23613b990804e38feb2a554ff89
+Size (kcachegrind-20.04.1.tar.xz) = 810100 bytes
