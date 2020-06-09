@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:51 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:09 markd Exp $
 
-SHA1 (knavalbattle-19.12.1.tar.xz) = 28633b92bafc72d921dd12d0385d147ab7d457ff
-RMD160 (knavalbattle-19.12.1.tar.xz) = 6fea11bd0ddf598a9e84b2693ef7151993c78991
-SHA512 (knavalbattle-19.12.1.tar.xz) = d01f4ced36848b049af07dcf6d57097bab20ca5be5325f3453d828212f4010c3e217907f694efb3019034435b5d71a9b05afb9deee56b0a556873339a1e4de86
-Size (knavalbattle-19.12.1.tar.xz) = 1280848 bytes
+SHA1 (knavalbattle-20.04.1.tar.xz) = f2b07725446c283c33c5d801c81046b339ab89df
+RMD160 (knavalbattle-20.04.1.tar.xz) = 7c5ed24959367f2a49960550c8a3818904022fd1
+SHA512 (knavalbattle-20.04.1.tar.xz) = dc4eaaaccf5fd53f361a1d57af2cfe7c565438f716aac3a6ccab80ecb279dce4b91e8f59ba1b3009457102191ec05fa2bdfd6eb60ea0a3181552436a933cf664
+Size (knavalbattle-20.04.1.tar.xz) = 1282476 bytes

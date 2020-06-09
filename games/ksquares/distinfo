@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:52 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:10 markd Exp $
 
-SHA1 (ksquares-19.12.1.tar.xz) = fc749cb2a239b16524f0dcc5b7282f1e61354570
-RMD160 (ksquares-19.12.1.tar.xz) = fd3d0a003f57ed78696af1ea690007663765ffd6
-SHA512 (ksquares-19.12.1.tar.xz) = 4c2e4b94b231210bc4ff9f035d14ab82d79f7816511e9a3c35ec8155b2a89aeb9454bc9d1738de786a1e4850a2b43a399590e94544f17ae6b3f30f2b69133ae2
-Size (ksquares-19.12.1.tar.xz) = 261364 bytes
+SHA1 (ksquares-20.04.1.tar.xz) = 62a5be5ec118ba82f7e47d50675d56a1a346e3b1
+RMD160 (ksquares-20.04.1.tar.xz) = 8a33862a45bc651300be2d319174dbda5dca128f
+SHA512 (ksquares-20.04.1.tar.xz) = 7a6e892d999f458546caa199752b939987d1db129257713130b4b07554af2709817fb6b965bf2e4d3fd7bb1ddbd29adf39b9df75696efdf2fc9b6d935cad2924
+Size (ksquares-20.04.1.tar.xz) = 261072 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/21 06:14:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/09 11:56:14 markd Exp $
 bin/kgeography
 share/applications/org.kde.kgeography.desktop
 share/config.kcfg/kgeography.kcfg
@@ -591,24 +591,17 @@ share/kgeography/flags/nkorea.png
 share/kgeography/flags/norfolk_island.png
 share/kgeography/flags/northern_mariana_islands.png
 share/kgeography/flags/norway.png
-share/kgeography/flags/norway/akershus.png
-share/kgeography/flags/norway/aust-agder.png
-share/kgeography/flags/norway/buskerud.png
-share/kgeography/flags/norway/finnmark.png
-share/kgeography/flags/norway/hedmark.png
-share/kgeography/flags/norway/hordaland.png
+share/kgeography/flags/norway/agder.png
+share/kgeography/flags/norway/innlandet.png
 share/kgeography/flags/norway/more_og_romsdal.png
 share/kgeography/flags/norway/nordland.png
-share/kgeography/flags/norway/oppland.png
 share/kgeography/flags/norway/oslo.png
-share/kgeography/flags/norway/ostfold.png
 share/kgeography/flags/norway/rogaland.png
-share/kgeography/flags/norway/sogn_og_fjordane.png
-share/kgeography/flags/norway/telemark.png
-share/kgeography/flags/norway/troms.png
+share/kgeography/flags/norway/troms_og_finnmark.png
 share/kgeography/flags/norway/trondelag.png
-share/kgeography/flags/norway/vest-agder.png
-share/kgeography/flags/norway/vestfold.png
+share/kgeography/flags/norway/vestfold_og_telemark.png
+share/kgeography/flags/norway/vestland.png
+share/kgeography/flags/norway/viken.png
 share/kgeography/flags/oman.png
 share/kgeography/flags/pakistan.png
 share/kgeography/flags/palau.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/21 03:28:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/09 11:56:10 markd Exp $
 bin/ksirk
 bin/ksirkskineditor
 lib/libiris_ksirk.so
@@ -215,6 +215,8 @@ share/locale/lt/LC_MESSAGES/ksirk.mo
 share/locale/lt/LC_MESSAGES/ksirkskineditor.mo
 share/locale/lv/LC_MESSAGES/ksirk.mo
 share/locale/lv/LC_MESSAGES/ksirkskineditor.mo
+share/locale/ml/LC_MESSAGES/ksirk.mo
+share/locale/ml/LC_MESSAGES/ksirkskineditor.mo
 share/locale/mr/LC_MESSAGES/ksirk.mo
 share/locale/mr/LC_MESSAGES/ksirkskineditor.mo
 share/locale/nb/LC_MESSAGES/ksirk.mo

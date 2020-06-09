@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:51 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:09 markd Exp $
 
-SHA1 (kpat-19.12.1.tar.xz) = 39d05a3dbecec2e3f9283fe0cd33d9b53b37cd28
-RMD160 (kpat-19.12.1.tar.xz) = 844db4a1f72a5f81e6a7f9008a151addc3e487d1
-SHA512 (kpat-19.12.1.tar.xz) = 271d577b716e38ad3fcc675070dc93be4a78a8a9c5dfcc51a374336c9238959e83c9411cb8eaa08a263ee19be093eab95a8de526619aeb9b7c7fad62d37dd3f4
-Size (kpat-19.12.1.tar.xz) = 3577416 bytes
+SHA1 (kpat-20.04.1.tar.xz) = 530c70de200db51738fb466e814330d8d779087d
+RMD160 (kpat-20.04.1.tar.xz) = 4782e717a3b7909320ff2529627b0d9ed4e7bcd7
+SHA512 (kpat-20.04.1.tar.xz) = f0e45f2e39d66d9df889ed9bfd72b584bda21901d80ab789041d7d1f460c6670a6389e5d640434996fcd9116162023d17476dc80f3342e60f01b7dc744fa5caf
+Size (kpat-20.04.1.tar.xz) = 3577156 bytes

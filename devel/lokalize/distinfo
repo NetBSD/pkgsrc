@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/02/02 02:37:36 markd Exp $
+$NetBSD: distinfo,v 1.7 2020/06/09 11:56:06 markd Exp $
 
-SHA1 (lokalize-19.12.1.tar.xz) = 401ea1d20d035e85a4bf89080deeea22ce5a73b2
-RMD160 (lokalize-19.12.1.tar.xz) = 0bc157216e4ef349485c8465de6060b3d5e12887
-SHA512 (lokalize-19.12.1.tar.xz) = c0066b47fd6c8e369f3027d1d2dfd121d892ef9de88264553740c80cb7d549b9bfb11d64a86b9f0d0ecada108b06ce2976f3ddbf6ca8fcfb6185dbb1da4797a6
-Size (lokalize-19.12.1.tar.xz) = 1701260 bytes
+SHA1 (lokalize-20.04.1.tar.xz) = 50e372a73a90f4a9ae4be1391643edff9bd83087
+RMD160 (lokalize-20.04.1.tar.xz) = 5c5bc6efdf3edae2031c7c0b2c0de30e5ace7bd8
+SHA512 (lokalize-20.04.1.tar.xz) = b0e398a624d389335dcf12d80c7499ed412b0685b8eef75b63b5d9e126c09baa6ef6e8729172bff3238d82eb248e86c31f4c829dc17a4205cac34a24520c2161
+Size (lokalize-20.04.1.tar.xz) = 1718224 bytes

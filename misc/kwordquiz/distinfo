@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/02/02 02:57:46 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/06/09 11:56:16 markd Exp $
 
-SHA1 (kwordquiz-19.12.1.tar.xz) = 88cbb3c4c418fe6214de39726a90ef02ecd963c9
-RMD160 (kwordquiz-19.12.1.tar.xz) = 9b0cc2a20ed47f940b503d54c64dc982b5eab31a
-SHA512 (kwordquiz-19.12.1.tar.xz) = 142bc7633bd584bbd3c99f192725c58b9db652a30021b4ffcbc13fb678c1041321ac4f36b63bd9e67499a7e5e1779922327cd46a2f9775047ee82399dcce36ca
-Size (kwordquiz-19.12.1.tar.xz) = 4171084 bytes
+SHA1 (kwordquiz-20.04.1.tar.xz) = d2dacf3c162f37be96e9b744e3d4da2cfa9b3ffb
+RMD160 (kwordquiz-20.04.1.tar.xz) = 5ef14f77b3aa274162e565f60262d2b24641e6c4
+SHA512 (kwordquiz-20.04.1.tar.xz) = a7bf05a7b9e552a5d112fb8acb24954b7047f2c8b617366c4945292d73a839fe6487d88b0d1ff080e2b094c0e3bb75c0e8de58c83d5819132d0d825756e0483d
+Size (kwordquiz-20.04.1.tar.xz) = 4175624 bytes

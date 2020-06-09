@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/02/02 02:50:43 markd Exp $
+$NetBSD: distinfo,v 1.15 2020/06/09 11:56:13 markd Exp $
 
-SHA1 (svgpart-19.12.1.tar.xz) = 44bb3ff163e6bf79b08835e1252fe4a5fd2ff682
-RMD160 (svgpart-19.12.1.tar.xz) = 1bca149a136a113e8a5964cda5419f30bc1a818d
-SHA512 (svgpart-19.12.1.tar.xz) = 5505fda63b03cdbde5e1187b82a05c081e8805725a61458582109c198f584b439b845319b4243d428261ee136d64fd7111e039bf8a5f31f3035b1236df2bb0ce
-Size (svgpart-19.12.1.tar.xz) = 21272 bytes
+SHA1 (svgpart-20.04.1.tar.xz) = ceb10b4816784d1eb8173c3245eb323eee5844bb
+RMD160 (svgpart-20.04.1.tar.xz) = c74b97e0065a35a1a012c41262a1e220fe503a07
+SHA512 (svgpart-20.04.1.tar.xz) = 74bcc7234601feb2ee3d65a6410461ee20ac4f46b47378de53d098e92ddfa5335f1c9d931a944415e452fd8a5e85d0eaaacf7986bb181bf303e58c369c9e8aa4
+Size (svgpart-20.04.1.tar.xz) = 21140 bytes

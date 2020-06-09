@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:51 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:09 markd Exp $
 
-SHA1 (knetwalk-19.12.1.tar.xz) = a97704d3eb108ed543fffe5f9b14379e6700ac59
-RMD160 (knetwalk-19.12.1.tar.xz) = 0eac94f719216cf8dc168c6a66b1d9db16579a60
-SHA512 (knetwalk-19.12.1.tar.xz) = 9ed8be8d3fcf59d19a519121e72451001e249bf86d2aa0b4f2ba67b234f71969c332531b263d715cd524cfca32ea4ba574f1f26e291598fa79de0c263ceb9830
-Size (knetwalk-19.12.1.tar.xz) = 1041176 bytes
+SHA1 (knetwalk-20.04.1.tar.xz) = 8af175af5e07bd8b6d3e44117ecd9dffe87ddcb1
+RMD160 (knetwalk-20.04.1.tar.xz) = bd55d21a3ba0e35af697f44a3754756f39ceb596
+SHA512 (knetwalk-20.04.1.tar.xz) = 240bdad5be7364186f55cb0f9d492e0e617e14642a2c089d464ebef19be70b1743f66da9a831384e9697d8681fbc444069174feb09d1dea61568eecd3a894f43
+Size (knetwalk-20.04.1.tar.xz) = 1259220 bytes

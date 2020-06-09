@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2020/02/02 02:57:46 markd Exp $
+$NetBSD: distinfo,v 1.14 2020/06/09 11:56:16 markd Exp $
 
-SHA1 (marble-19.12.1.tar.xz) = 5bffd2c3707444b13f1e15edd04d1569853e8255
-RMD160 (marble-19.12.1.tar.xz) = 1c9ccf3d0eed8b9f916684ce70a5d298e445ee73
-SHA512 (marble-19.12.1.tar.xz) = ccc7bcef68ce372c11b17e8070c72d808a953f0dfed50c366d0e83c76d4f538892034b734be77f44d0ae75e80b72c2db79ac331fd178f8a5b20f4e3adde52487
-Size (marble-19.12.1.tar.xz) = 52200188 bytes
+SHA1 (marble-20.04.1.tar.xz) = 1501384faed46a7cec18e32991b6be3f5e7e3812
+RMD160 (marble-20.04.1.tar.xz) = 0a2a9b953edda0c97e32804b933b6c6dd2c87412
+SHA512 (marble-20.04.1.tar.xz) = 4eb9bd5df71f0ad9d15309e43a7d12856e382bab4eecf7050451776e7fb97307b664ffe70f5c96fc589df33a1be884c68f0ed8717010545e699e3d4fb16b098f
+Size (marble-20.04.1.tar.xz) = 52197400 bytes
 SHA1 (patch-src_lib_astro_astrolib.cpp) = 541b39516af740b0ff8e485e9e4e8a339ca5d7f4
 SHA1 (patch-src_lib_astro_astrolib.h) = 4123af9f32a35400e05943598e7dceff84899928
 SHA1 (patch-src_lib_astro_solarsystem.cpp) = 1e00e5edf7ac5b38a1d4d29ccf4847470b6f4906

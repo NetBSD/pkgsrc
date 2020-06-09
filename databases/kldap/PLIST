@@ -1,33 +1,27 @@
-@comment $NetBSD: PLIST,v 1.2 2020/02/02 02:34:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:05 markd Exp $
 include/KF5/KLDAP/KLDAP/Ber
-include/KF5/KLDAP/KLDAP/LdapAttributeProxyModel
 include/KF5/KLDAP/KLDAP/LdapConfigWidget
 include/KF5/KLDAP/KLDAP/LdapConnection
 include/KF5/KLDAP/KLDAP/LdapControl
 include/KF5/KLDAP/KLDAP/LdapDN
 include/KF5/KLDAP/KLDAP/LdapDefs
-include/KF5/KLDAP/KLDAP/LdapModel
 include/KF5/KLDAP/KLDAP/LdapObject
 include/KF5/KLDAP/KLDAP/LdapOperation
 include/KF5/KLDAP/KLDAP/LdapSearch
 include/KF5/KLDAP/KLDAP/LdapServer
-include/KF5/KLDAP/KLDAP/LdapStructureProxyModel
 include/KF5/KLDAP/KLDAP/LdapUrl
 include/KF5/KLDAP/KLDAP/Ldif
 include/KF5/KLDAP/kldap/ber.h
 include/KF5/KLDAP/kldap/kldap_export.h
-include/KF5/KLDAP/kldap/ldapattributeproxymodel.h
 include/KF5/KLDAP/kldap/ldapconfigwidget.h
 include/KF5/KLDAP/kldap/ldapconnection.h
 include/KF5/KLDAP/kldap/ldapcontrol.h
 include/KF5/KLDAP/kldap/ldapdefs.h
 include/KF5/KLDAP/kldap/ldapdn.h
-include/KF5/KLDAP/kldap/ldapmodel.h
 include/KF5/KLDAP/kldap/ldapobject.h
 include/KF5/KLDAP/kldap/ldapoperation.h
 include/KF5/KLDAP/kldap/ldapsearch.h
 include/KF5/KLDAP/kldap/ldapserver.h
-include/KF5/KLDAP/kldap/ldapstructureproxymodel.h
 include/KF5/KLDAP/kldap/ldapurl.h
 include/KF5/KLDAP/kldap/ldif.h
 include/KF5/kldap_version.h
@@ -37,7 +31,7 @@ lib/cmake/KF5Ldap/KF5LdapTargets-noconfig.cmake
 lib/cmake/KF5Ldap/KF5LdapTargets.cmake
 lib/libKF5Ldap.so
 lib/libKF5Ldap.so.5
-lib/libKF5Ldap.so.5.13.1
+lib/libKF5Ldap.so.5.14.1
 qt5/mkspecs/modules/qt_Ldap.pri
 qt5/plugins/kf5/kio/ldap.so
 share/doc/HTML/ca/kioslave5/ldap/index.cache.bz2

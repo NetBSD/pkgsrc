@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/02/02 02:57:45 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/06/09 11:56:14 markd Exp $
 
-SHA1 (kdav-19.12.1.tar.xz) = c13aba113b2e53e55efca7177c7422a34723eff2
-RMD160 (kdav-19.12.1.tar.xz) = 9f6a6f5cf773df0a37995dd4ccc5a28973f2530a
-SHA512 (kdav-19.12.1.tar.xz) = 7a68a49ec147cd62534d35376f2c8e476e108476993b7033a08db74d46b3a4412021045f207cdb4a5cb1c6abe6334b68469dc42e98b88d42e380ab62ff3b06a6
-Size (kdav-19.12.1.tar.xz) = 54336 bytes
+SHA1 (kdav-20.04.1.tar.xz) = d0017ef3cb7ef5522b2e65a5da99f66976441497
+RMD160 (kdav-20.04.1.tar.xz) = 1d118161cc5e2edb197d225c6a4444cd97c0f5f6
+SHA512 (kdav-20.04.1.tar.xz) = ba16d48f2f94e98c80e99ba15845e7c69802da36db6eb268db9ad2a0529f06a7f6eebf06b0098a0951e4d586aa98739ea66e3222a487a1dd4abc552e915997e8
+Size (kdav-20.04.1.tar.xz) = 58340 bytes

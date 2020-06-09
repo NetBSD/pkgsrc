@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/02 02:44:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/09 11:56:09 markd Exp $
 bin/kolf
 share/applications/org.kde.kolf.desktop
 share/doc/HTML/de/kolf/index.cache.bz2
@@ -86,6 +86,7 @@ share/locale/km/LC_MESSAGES/kolf.mo
 share/locale/ko/LC_MESSAGES/kolf.mo
 share/locale/lt/LC_MESSAGES/kolf.mo
 share/locale/lv/LC_MESSAGES/kolf.mo
+share/locale/ml/LC_MESSAGES/kolf.mo
 share/locale/mr/LC_MESSAGES/kolf.mo
 share/locale/nb/LC_MESSAGES/kolf.mo
 share/locale/nds/LC_MESSAGES/kolf.mo

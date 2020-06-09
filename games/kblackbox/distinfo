@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:49 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:07 markd Exp $
 
-SHA1 (kblackbox-19.12.1.tar.xz) = 8d12323907e02d7336e80428295ce702914b6a7f
-RMD160 (kblackbox-19.12.1.tar.xz) = 31c63ac9ec738cf916526388257bb8040a5844b7
-SHA512 (kblackbox-19.12.1.tar.xz) = 1bfd0349d4df0b4e85ff6bd4689f85ff02f15a3e9cf0082610f455f42bfc0fb6f698ee4e371d20b6c7dbedc0f3dc1ba1d1f881450c3fca964d87a7b53edb49e7
-Size (kblackbox-19.12.1.tar.xz) = 447776 bytes
+SHA1 (kblackbox-20.04.1.tar.xz) = 030122c2e88629db64284693ce134f7be9aed2f6
+RMD160 (kblackbox-20.04.1.tar.xz) = ceadf0158d4e7b907107482f27471ac01db3babd
+SHA512 (kblackbox-20.04.1.tar.xz) = a2419de46914828350f6c3bce35ba0515f305c98ebcc704283c1f1d6f647b80959e92e8bbf50b8da6dc2563d5284d81ba085357767711cc3ea7c0a0118bf0efb
+Size (kblackbox-20.04.1.tar.xz) = 447044 bytes

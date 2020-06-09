@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/02/02 02:57:44 markd Exp $
+$NetBSD: distinfo,v 1.14 2020/06/09 11:56:14 markd Exp $
 
-SHA1 (kalzium-19.12.1.tar.xz) = 38e12457ae30579a36ea46300afbd3e1ff1e141f
-RMD160 (kalzium-19.12.1.tar.xz) = bd157010912119b0e07d1c77d38875ab38507463
-SHA512 (kalzium-19.12.1.tar.xz) = 5505bba6066ed7dfc38b9af07e368e4c631ba9f4446330f9e6184c32135676694c2e363faf8410833805461dfb1e40451ffa3feb207ab12c58f0151278af748d
-Size (kalzium-19.12.1.tar.xz) = 24596944 bytes
+SHA1 (kalzium-20.04.1.tar.xz) = ffd26206c7c16f89dfaa0eb3aef51f4c37b07b18
+RMD160 (kalzium-20.04.1.tar.xz) = 2f9c8e7fe84eec827110f9961fb3ba491d9bd2ad
+SHA512 (kalzium-20.04.1.tar.xz) = 3413f7e4ad0630f0463664cc24329ad64044e2624e7781b77ca5cdd195e06cb6aa4f11a92a326e41d0908a72f5202e5215435de63bfce758ccc55ecacbff53a5
+Size (kalzium-20.04.1.tar.xz) = 24595836 bytes

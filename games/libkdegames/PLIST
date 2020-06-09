@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/02 02:44:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/09 11:56:11 markd Exp $
 include/KF5/KF5KDEGames/KDE/KExtHighscore
 include/KF5/KF5KDEGames/KDE/KGameClock
 include/KF5/KF5KDEGames/KDE/KGamePopupItem
@@ -159,6 +159,7 @@ share/locale/km/LC_MESSAGES/libkdegames5.mo
 share/locale/ko/LC_MESSAGES/libkdegames5.mo
 share/locale/lt/LC_MESSAGES/libkdegames5.mo
 share/locale/lv/LC_MESSAGES/libkdegames5.mo
+share/locale/ml/LC_MESSAGES/libkdegames5.mo
 share/locale/mr/LC_MESSAGES/libkdegames5.mo
 share/locale/nb/LC_MESSAGES/libkdegames5.mo
 share/locale/nds/LC_MESSAGES/libkdegames5.mo

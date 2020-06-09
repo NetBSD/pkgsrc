@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2020/06/02 08:23:53 adam Exp $
+# $NetBSD: Makefile,v 1.38 2020/06/09 11:56:09 markd Exp $
 
 DISTNAME=	kollision-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kollision/

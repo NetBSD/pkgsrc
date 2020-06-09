@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/02 02:44:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/09 11:56:09 markd Exp $
 bin/kmahjongg
 share/applications/org.kde.kmahjongg.desktop
 share/config.kcfg/kmahjongg.kcfg
@@ -271,6 +271,7 @@ share/locale/km/LC_MESSAGES/kmahjongg.mo
 share/locale/ko/LC_MESSAGES/kmahjongg.mo
 share/locale/lt/LC_MESSAGES/kmahjongg.mo
 share/locale/lv/LC_MESSAGES/kmahjongg.mo
+share/locale/ml/LC_MESSAGES/kmahjongg.mo
 share/locale/mr/LC_MESSAGES/kmahjongg.mo
 share/locale/nb/LC_MESSAGES/kmahjongg.mo
 share/locale/nds/LC_MESSAGES/kmahjongg.mo

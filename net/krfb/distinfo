@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 03:01:26 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:17 markd Exp $
 
-SHA1 (krfb-19.12.1.tar.xz) = bde376b83073e6b74332a750d757df13aa8312d8
-RMD160 (krfb-19.12.1.tar.xz) = 09fca88c429a1a05631ecd06c7ee21578761e41b
-SHA512 (krfb-19.12.1.tar.xz) = 95c3f3eb9734beb5991077ac1057066be392e59ede823c25ebef88067c2b7b1879db9d8cd2592a308cb544bbe262d58ac0b25f8e66578d19d18798fe51d5e964
-Size (krfb-19.12.1.tar.xz) = 1278880 bytes
+SHA1 (krfb-20.04.1.tar.xz) = aaa6f31210311352de6144af8bb55c3c6aae0708
+RMD160 (krfb-20.04.1.tar.xz) = 0aedd77903b82e9f71a483f2197aa078d0fe526a
+SHA512 (krfb-20.04.1.tar.xz) = 06840c61fc5a771c1acc0e0cbea6c49aa67de5964e75bf4ee617bee0a002036e48e70fa47c3aeb7f376d71db7245cd9325c15fb5c057537d68a9752d43ae6c7c
+Size (krfb-20.04.1.tar.xz) = 1276728 bytes
 SHA1 (patch-cmake_modules_FindLibVNCServer.cmake) = b9033a21495ccdaf1e9cf382af9c43b98486c3e7
