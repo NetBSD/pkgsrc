@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/06/07 11:25:17 markd Exp $
+$NetBSD: distinfo,v 1.11 2020/06/09 06:46:28 markd Exp $
 
-SHA1 (ktexteditor-5.70.0.tar.xz) = f7f565a0c826d0d80490682de250055bb5335979
-RMD160 (ktexteditor-5.70.0.tar.xz) = 6dfa080a7a01fea575f981a72cb864a467906367
-SHA512 (ktexteditor-5.70.0.tar.xz) = 5afef03b3d490bcfa1b3ba0ddbddad86959431ab8bb7595c77b4331c4f3981ae4425fecab4a864252c3cf29c7e20f34fa3d3a5a2ed1c6b1bb3e015d59c59031b
-Size (ktexteditor-5.70.0.tar.xz) = 2345148 bytes
+SHA1 (ktexteditor-5.70.1.tar.xz) = 34949310c4a8ea45a0a941cf7b2e40c8f57b7d2d
+RMD160 (ktexteditor-5.70.1.tar.xz) = 2da2f4d9c9fdc1099c5fd1f73a9a0ae987a9745b
+SHA512 (ktexteditor-5.70.1.tar.xz) = 6bc47ed6d0c10c52bacb3f183a2a724dfa9d9b3fdb6545469bf8f3e0ec710eff611f657301805efaeb202dbce3ad0c2360a095d41546e7300aa6811dcd4ff193
+Size (ktexteditor-5.70.1.tar.xz) = 2345148 bytes
