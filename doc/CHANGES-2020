@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3473 2020/06/09 10:10:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3474 2020/06/09 10:35:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5552,3 +5552,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-awscli to 1.18.75 [adam 2020-06-09]
 	Updated textproc/py-regex to 2020.6.8 [adam 2020-06-09]
 	Added misc/mime-types version 9 [nia 2020-06-09]
+	Updated graphics/blender to 2.83.0 [ryoon 2020-06-09]
