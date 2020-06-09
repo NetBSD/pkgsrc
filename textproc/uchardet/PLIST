@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/09 13:53:00 nia Exp $
+bin/uchardet
+include/uchardet/uchardet.h
+lib/libuchardet.a
+lib/libuchardet.so
+lib/libuchardet.so.0
+lib/libuchardet.so.${PKGVERSION}
+lib/pkgconfig/uchardet.pc
+man/man1/uchardet.1
