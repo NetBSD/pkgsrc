@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.13 2020/06/08 19:01:05 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.14 2020/06/09 12:03:20 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -200,4 +200,19 @@ www/ruby-em-http-request: security fix
 
 Pullup ticket #6227 - requested by otis
 net/powerdns: bugfixes
+
+Pullup ticket #6231 - requested by taca
+mail/roundcube: security fix
+
+Pullup ticket #6218 - requested by bouyer
+mail/sympa: security fix
+
+Pullup ticket #6232 - requested by maya
+security/gnutls: security fix
+
+Pullup ticket #6233 - requested by wiz
+sysutils/dbus: security fix
+
+Pullup ticket #6234 - requested by wiz
+devel/libntlm: security fix
 
