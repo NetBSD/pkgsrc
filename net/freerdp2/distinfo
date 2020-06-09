@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2020/05/19 12:31:39 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/06/09 12:22:01 nia Exp $
 
-SHA1 (freerdp-2.1.0.tar.gz) = f524701228b1c1aefd5750344718eba2f4a6e688
-RMD160 (freerdp-2.1.0.tar.gz) = 143b44375017a7354bb5bc2b08c727efd1da377a
-SHA512 (freerdp-2.1.0.tar.gz) = afed8893128067b688bf5ba87e7d28296ece3b4848d84653ab0ad0c3723b6a8bc36733aca9649fb29a0d4a53b39fdd49d56d17e9b4eac8bf7b06fa4b27e66b14
-Size (freerdp-2.1.0.tar.gz) = 6825453 bytes
+SHA1 (freerdp-2.1.1.tar.gz) = cca09bb251e16d6f436a6e7eabbc90930002753d
+RMD160 (freerdp-2.1.1.tar.gz) = e48d1a33a50907b4321f51571255fb4f555148a3
+SHA512 (freerdp-2.1.1.tar.gz) = 6f0cff79690ca550237c6e31f5ab361246a6d12ac765e85b752d474aceaf1390d8c5f2b21aba028927459892a045e5073e143705e6f2256a2a7c8744dcf3f95b
+Size (freerdp-2.1.1.tar.gz) = 6871637 bytes
 SHA1 (patch-channels_rdpdr_client_rdpdr__main.c) = 4358d4cd4b9293a27f3edafb94e7759e133ecd5f
 SHA1 (patch-winpr_libwinpr_sysinfo_sysinfo.c) = 858cfba03a902e1e6900a2d1ee2bcf7429227d3d
