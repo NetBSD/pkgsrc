@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.2 2020/05/26 12:16:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/06/09 17:49:24 nia Exp $
 
-SHA1 (strawberry-0.6.11.tar.xz) = d0312bc13caa080f9caa666fe48a83a7da3edb4a
-RMD160 (strawberry-0.6.11.tar.xz) = 06fc4c03d8e15a0db4c70889aa2af53894483a12
-SHA512 (strawberry-0.6.11.tar.xz) = f044e1b75ef6617f9901c7fa95020ca84030aa5011f8d9122e92d3d47ab90f6eb55e7e01d88d925a8a00b046810d1ba65070707650d3c465a2cef7dd228f3c2d
-Size (strawberry-0.6.11.tar.xz) = 9295808 bytes
+SHA1 (strawberry-0.6.12.tar.xz) = 57c210024785de087a9e57c07290a19567e3efaf
+RMD160 (strawberry-0.6.12.tar.xz) = 899d14f76fcf388576801b308619da25e3b818a8
+SHA512 (strawberry-0.6.12.tar.xz) = cce4fcef1cc3700dcbab9a9ac8d1cb72d2f0b1b6072002bd837825c2504b42ad2f2f8c2a23a600cf9c12c91ce6628130c166779eb6902aedb12835ff3765ee12
+Size (strawberry-0.6.12.tar.xz) = 9311104 bytes
+SHA1 (patch-src_analyzer_analyzerbase.cpp) = 80518d269382c06c88e8732c57da5a66ca3facc7
+SHA1 (patch-src_analyzer_analyzerbase.h) = 67a2c5f3a8d8153e7cfdab295e121e2140db0ab3
