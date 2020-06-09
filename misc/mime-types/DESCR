@@ -1,0 +1,5 @@
+A database of common mappings of file extensions to MIME types.
+
+The purpose of this package is to provide a reasonably complete
+default database of MIME types for packages that expect a mime.types
+file to be installed in the system configuration directory.

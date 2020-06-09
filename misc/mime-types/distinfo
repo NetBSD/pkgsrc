@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/09 10:10:37 nia Exp $
+
+SHA1 (mime-types-9.tar.bz2) = b21b7775a006b60113a6648e20beb1decdac8899
+RMD160 (mime-types-9.tar.bz2) = f9918e3be7883c119a8678b69c72fed660a1fc51
+SHA512 (mime-types-9.tar.bz2) = 066cea30c02a326e64680422b31aff0849c0a8c7486738f2edf339b88426c6ac5a365d4fa4c80c84df0fa4c39b5e13d45db314a1bf47ce369c132dd1c46130d6
+Size (mime-types-9.tar.bz2) = 15524 bytes
