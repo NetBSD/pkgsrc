@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.128 2020/06/02 08:23:48 adam Exp $
+# $NetBSD: Makefile,v 1.129 2020/06/09 11:27:04 nia Exp $
 
-DISTNAME=	harfbuzz-2.6.6
-PKGREVISION=	1
+DISTNAME=	harfbuzz-2.6.7
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -12,7 +11,8 @@ HOMEPAGE=	https://harfbuzz.github.io/
 COMMENT=	OpenType text shaping engine
 LICENSE=	mit
 
-GCC_REQD+=		4.9
+# C++11
+GCC_REQD+=	4.9
 
 .include "../../mk/bsd.prefs.mk"
 PLIST_VARS+=		graphite2
