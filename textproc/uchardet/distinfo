@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/09 13:53:00 nia Exp $
+
+SHA1 (uchardet-0.0.7.tar.xz) = de19b7e614f11572582a0d47f7d5d6f8ec649199
+RMD160 (uchardet-0.0.7.tar.xz) = 7494fefb099cb151ce1cabb7228a78c80f7be911
+SHA512 (uchardet-0.0.7.tar.xz) = ddb7b63dd09c1d9acbe620d86217e583d9aa5340780ab4010ec9faa4fd331498859d5efa7829bf8847da89325accf8f7304b51d410210178fc1ffa6658064a6f
+Size (uchardet-0.0.7.tar.xz) = 215492 bytes
