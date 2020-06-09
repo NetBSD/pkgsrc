@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/06/07 12:54:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/06/09 06:49:17 markd Exp $
 bin/plasmapkg2
 include/KF5/Plasma/Applet
 include/KF5/Plasma/Containment
@@ -61,10 +61,10 @@ lib/cmake/KF5PlasmaQuick/KF5PlasmaQuickTargets-noconfig.cmake
 lib/cmake/KF5PlasmaQuick/KF5PlasmaQuickTargets.cmake
 lib/libKF5Plasma.so
 lib/libKF5Plasma.so.5
-lib/libKF5Plasma.so.${PKGVERSION}
+lib/libKF5Plasma.so.5.70.0
 lib/libKF5PlasmaQuick.so
 lib/libKF5PlasmaQuick.so.5
-lib/libKF5PlasmaQuick.so.${PKGVERSION}
+lib/libKF5PlasmaQuick.so.5.70.0
 man/ca/man1/plasmapkg2.1
 man/de/man1/plasmapkg2.1
 man/es/man1/plasmapkg2.1
