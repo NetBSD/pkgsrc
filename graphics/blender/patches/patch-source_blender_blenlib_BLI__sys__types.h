@@ -1,11 +1,11 @@
-$NetBSD: patch-source_blender_blenlib_BLI__sys__types.h,v 1.1 2020/02/21 16:36:54 nia Exp $
+$NetBSD: patch-source_blender_blenlib_BLI__sys__types.h,v 1.2 2020/06/09 10:34:26 ryoon Exp $
 
 NetBSD also does not have uchar.h.
 
---- source/blender/blenlib/BLI_sys_types.h.orig	2020-02-21 13:50:55.328090564 +0000
+--- source/blender/blenlib/BLI_sys_types.h.orig	2020-06-03 14:18:27.000000000 +0000
 +++ source/blender/blenlib/BLI_sys_types.h
 @@ -73,7 +73,7 @@ typedef uint64_t u_int64_t;
- #include <stdbool.h>
+ #include <stddef.h> /* size_t define */
  
  #ifndef __cplusplus
 -#  if defined(__APPLE__)
