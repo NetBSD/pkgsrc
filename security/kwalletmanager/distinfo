@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/02/02 03:04:19 markd Exp $
+$NetBSD: distinfo,v 1.6 2020/06/09 11:56:17 markd Exp $
 
-SHA1 (kwalletmanager-19.12.1.tar.xz) = 470a871f3f63b79807c0ccae902dc5a3d324b064
-RMD160 (kwalletmanager-19.12.1.tar.xz) = dfec3e790ffb1fe603496c0fedc8ac84bc39e4c3
-SHA512 (kwalletmanager-19.12.1.tar.xz) = f56de8ff45f34ad39f591e5b2cc79fd8d08e8e4fb5ede10be278acbd16bdaef10afd12a41988700985e2d253970b889db3083219c05cc1e3d50888768fc8e23f
-Size (kwalletmanager-19.12.1.tar.xz) = 788792 bytes
+SHA1 (kwalletmanager-20.04.1.tar.xz) = f4a2425a44ff7ff1b1d9a55dbd87105e078a833a
+RMD160 (kwalletmanager-20.04.1.tar.xz) = fd68b202270d04012ac38680cfe542e1e9353698
+SHA512 (kwalletmanager-20.04.1.tar.xz) = 74655976d8e9827be5d3437aedffa06c698d1b152565b7eeb341d5bb3e4c328516c8386a695c736c6e6ff983baa090b1698f5bf8c4e56f275d212aef7c88f5b6
+Size (kwalletmanager-20.04.1.tar.xz) = 789216 bytes

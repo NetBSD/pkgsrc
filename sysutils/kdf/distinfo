@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2020/02/02 03:05:22 markd Exp $
+$NetBSD: distinfo,v 1.19 2020/06/09 11:56:18 markd Exp $
 
-SHA1 (kdf-19.12.1.tar.xz) = df6d47debe7fc8ec75c82a8877f7fb818038db05
-RMD160 (kdf-19.12.1.tar.xz) = 8aa69ee0239428b7c75fca976e72890b52cdde6c
-SHA512 (kdf-19.12.1.tar.xz) = a6d3ca8dc81f03f5d27f0cb2f2896fd3bcdd573c7ddde42635f249cc9c9c122fef0e915c16294baffdad175d6d5487f851a12fda8c5b6f6595d71395c0dedd74
-Size (kdf-19.12.1.tar.xz) = 462236 bytes
+SHA1 (kdf-20.04.1.tar.xz) = bc8f80bc5dca84ebfb810f2981d74cfbd6cbe6ff
+RMD160 (kdf-20.04.1.tar.xz) = 0b2bf526eec796c772b052fe3a9013e1b518822d
+SHA512 (kdf-20.04.1.tar.xz) = 60c4914e66ec09726ed14b280243c88c6ba063a633c462489f8b29fc851b151dc0e3efd9c6821c99b62aa4a0847cef8f13efa836684349f911148f2aa32dd65c
+Size (kdf-20.04.1.tar.xz) = 462316 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:50 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:08 markd Exp $
 
-SHA1 (killbots-19.12.1.tar.xz) = d84c78396f8a9b80026824bb325901978aafa77f
-RMD160 (killbots-19.12.1.tar.xz) = 6ae41fd3c2afc93132ff74d9aab459d631f8aaaa
-SHA512 (killbots-19.12.1.tar.xz) = e5f2388220bfb0f40ed74f108cac896ef7b0a8592ae745bbdbd4d3ca382337735cbb2ab2da936949a2e151efe5bafb76906eb784cd7dce84232489a6fc3c2dcf
-Size (killbots-19.12.1.tar.xz) = 1175168 bytes
+SHA1 (killbots-20.04.1.tar.xz) = 98bd459ef90c08153fb6a5f7ef212d5a13a6de96
+RMD160 (killbots-20.04.1.tar.xz) = 4552e5564e58b2e6a064c489cdb944bcd0537b0c
+SHA512 (killbots-20.04.1.tar.xz) = 874387489c5744a26c2d40261f8cc8b6e06d12b18ecaf4956b37426b0dccddc9a71c58b9345e6d4e17f9aa396da8c5b09dc6d86117c46ee6dd3a369670aa4cba
+Size (killbots-20.04.1.tar.xz) = 1173648 bytes

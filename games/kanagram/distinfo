@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/02/02 02:44:48 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/06/09 11:56:07 markd Exp $
 
-SHA1 (kanagram-19.12.1.tar.xz) = 6e54276f9ae73e0664a4f631d7533c7fb80cd0cb
-RMD160 (kanagram-19.12.1.tar.xz) = dbb2324b9cd14f412f71abe3ff965c6f75d9c399
-SHA512 (kanagram-19.12.1.tar.xz) = 77d824d91fa8b52916f6f3a3511e5b6c8eb8226a463ea9016d43b8f5a831055e355bb2f1d34d4b934e402fab98017bda06c0f4f46b21d7ab1bb327ee4cfe3985
-Size (kanagram-19.12.1.tar.xz) = 8033552 bytes
+SHA1 (kanagram-20.04.1.tar.xz) = c53a12fad25c34411e5e08cc12b7679dbf278bb6
+RMD160 (kanagram-20.04.1.tar.xz) = 99279122118beb419f5b1283f5937644f3f1c592
+SHA512 (kanagram-20.04.1.tar.xz) = ad91300db779926302220767aefb01220b4feb91e028c1842561845b3456b2415e64f558334ac604fd16738b1acdcded6ad8649900cd667af0931b058912bc98
+Size (kanagram-20.04.1.tar.xz) = 8024164 bytes
