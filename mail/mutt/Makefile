@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.228 2020/05/22 10:56:19 adam Exp $
+# $NetBSD: Makefile,v 1.229 2020/06/09 10:18:49 nia Exp $
 
 DISTNAME=		mutt-1.13.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/
 
@@ -9,6 +9,8 @@ MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.mutt.org/
 COMMENT=		Text-based MIME mail client with PGP & S/MIME support
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
+
+DEPENDS+=		mime-types-[0-9]*:../../misc/mime-types
 
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=		lynx-[0-9]*:../../www/lynx
@@ -53,7 +55,6 @@ LDFLAGS+=		${_STRIPFLAG_CC}
 DOCDIR=			${PREFIX}/share/doc/mutt
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
-CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 FILES_SUBST+=		DOCDIR=${DOCDIR}
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
