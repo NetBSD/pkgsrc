@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3476 2020/06/09 11:05:09 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3477 2020/06/09 11:07:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5555,3 +5555,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/blender to 2.83.0 [ryoon 2020-06-09]
 	Updated wm/herbstluftwm to 0.8.3 [nia 2020-06-09]
 	Updated devel/libgit2 to 1.0.1 [nia 2020-06-09]
+	Updated net/dnscrypt-proxy2 to 2.0.43 [nia 2020-06-09]
