@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3469 2020/06/09 06:18:27 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3470 2020/06/09 07:07:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5545,3 +5545,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/roundcube-plugin-password to 1.4.6 [taca 2020-06-09]
 	Updated mail/roundcube-plugin-zipdownload to 1.4.6 [taca 2020-06-09]
 	Updated devel/libntlm to 1.6 [wiz 2020-06-09]
+	Updated devel/py-mercurial to 5.4.1 [wiz 2020-06-09]
