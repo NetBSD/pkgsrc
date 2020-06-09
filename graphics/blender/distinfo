@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.57 2020/04/19 01:16:02 joerg Exp $
+$NetBSD: distinfo,v 1.58 2020/06/09 10:34:26 ryoon Exp $
 
-SHA1 (blender-2.82a.tar.xz) = 75c36640c75c718891d4a44232b45eb383a20ed2
-RMD160 (blender-2.82a.tar.xz) = 477b18c4d51ed6e5214158f1438c2c9a4317b2e7
-SHA512 (blender-2.82a.tar.xz) = 64c4ad8ac577e9af8b10d9b9ae3b0eb134258d4ceca78f15a6c42197d14499931ac6cf36f72aedbdb8962c67044d6feb5a2df777640f9096e05eed78f6d80bd6
-Size (blender-2.82a.tar.xz) = 39890216 bytes
+SHA1 (blender-2.83.0.tar.xz) = f8efc98b73b1bbe1c100ddb1549856594574029b
+RMD160 (blender-2.83.0.tar.xz) = 227b412d69c2e3db4de05f8a3cfbc762934dcb31
+SHA512 (blender-2.83.0.tar.xz) = 91a6b1997c2620e84e290fb7036d9dc148481187801f8b80dcb1ca958dc8300a8327e74c41fcdcfbb4d6d9f2691175cd78fc4c91c68b72b17f971a9d1fed52ce
+Size (blender-2.83.0.tar.xz) = 38515064 bytes
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_IO.h) = 791224b988da0383c306e76de5e93cb1cedc960e
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_arch_CUDA_Half.h) = ee35286558e5590495f1c973ae99ede32048ac38
 SHA1 (patch-extern_glog_src_base_mutex.h) = 5fceceefe83400967a59080eeb930d0f3a4b8e88
@@ -11,4 +11,4 @@ SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
 SHA1 (patch-extern_glog_src_config__netbsd.h) = f96dd9d6afed38466e5765c604efebcd78537a54
 SHA1 (patch-extern_wcwidth_wcwidth.h) = c6ebe1ec27cd9096621b26bd6b83560ea2c1770a
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 81fb0fd1b34d550168a4bdf63f28b4e199717921
-SHA1 (patch-source_blender_blenlib_BLI__sys__types.h) = c01af4c1c21e8cd0565205cfd58839b898ad83e8
+SHA1 (patch-source_blender_blenlib_BLI__sys__types.h) = 05d9dee88356021af4c7da28953ade18c012a702
