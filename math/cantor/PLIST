@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2020/02/02 02:53:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/09 11:56:13 markd Exp $
 bin/cantor
-bin/cantor_python3server
+bin/cantor_pythonserver
 bin/cantor_scripteditor
 include/cantor/animationresult.h
 include/cantor/backend.h
@@ -25,12 +25,12 @@ include/cantor/session.h
 include/cantor/syntaxhelpobject.h
 include/cantor/textresult.h
 include/cantor/worksheetaccess.h
+lib/cantor_pythonbackend.so
 lib/cmake/Cantor/CantorConfig.cmake
 lib/cmake/Cantor/CantorConfigVersion.cmake
 lib/cmake/Cantor/CantorTargets-noconfig.cmake
 lib/cmake/Cantor/CantorTargets.cmake
 lib/libcantor_config.so
-lib/libcantor_pythonbackend.so
 lib/libcantorlibs.so
 lib/libcantorlibs.so.${PKGVERSION}
 lib/libcantorlibs.so.24
@@ -50,7 +50,7 @@ qt5/plugins/cantor/assistants/cantor_solveassistant.so
 qt5/plugins/cantor/backends/cantor_kalgebrabackend.so
 qt5/plugins/cantor/backends/cantor_maximabackend.so
 qt5/plugins/cantor/backends/cantor_octavebackend.so
-qt5/plugins/cantor/backends/cantor_python3backend.so
+qt5/plugins/cantor/backends/cantor_pythonbackend.so
 qt5/plugins/cantor/backends/cantor_qalculatebackend.so
 qt5/plugins/cantor/backends/cantor_sagebackend.so
 qt5/plugins/cantor/backends/cantor_scilabbackend.so
@@ -71,7 +71,7 @@ share/config.kcfg/cantor_libs.kcfg
 share/config.kcfg/kalgebrabackend.kcfg
 share/config.kcfg/maximabackend.kcfg
 share/config.kcfg/octavebackend.kcfg
-share/config.kcfg/python3backend.kcfg
+share/config.kcfg/pythonbackend.kcfg
 share/config.kcfg/qalculatebackend.kcfg
 share/config.kcfg/sagebackend.kcfg
 share/config.kcfg/scilabbackend.kcfg
@@ -145,7 +145,7 @@ share/examples/kde-xdg/cantor.knsrc
 share/examples/kde-xdg/cantor_kalgebra.knsrc
 share/examples/kde-xdg/cantor_maxima.knsrc
 share/examples/kde-xdg/cantor_octave.knsrc
-share/examples/kde-xdg/cantor_python3.knsrc
+share/examples/kde-xdg/cantor_python.knsrc
 share/examples/kde-xdg/cantor_qalculate.knsrc
 share/examples/kde-xdg/cantor_sage.knsrc
 share/examples/kde-xdg/cantor_scilab.knsrc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/02/02 02:57:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:15 markd Exp $
 include/KF5/KIdentityManagement/KIdentityManagement/Identity
 include/KF5/KIdentityManagement/KIdentityManagement/IdentityCombo
 include/KF5/KIdentityManagement/KIdentityManagement/IdentityManager
@@ -19,7 +19,7 @@ lib/cmake/KF5IdentityManagement/KF5IdentityManagementTargets-noconfig.cmake
 lib/cmake/KF5IdentityManagement/KF5IdentityManagementTargets.cmake
 lib/libKF5IdentityManagement.so
 lib/libKF5IdentityManagement.so.5
-lib/libKF5IdentityManagement.so.5.13.1
+lib/libKF5IdentityManagement.so.5.14.1
 qt5/mkspecs/modules/qt_KIdentityManagement.pri
 share/dbus-1/interfaces/kf5_org.kde.pim.IdentityManager.xml
 share/locale/ar/LC_MESSAGES/libkpimidentities5.mo

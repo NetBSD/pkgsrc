@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/02 02:44:49 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/06/09 11:56:07 markd Exp $
 
-SHA1 (katomic-19.12.1.tar.xz) = d60d7292e57e2ed1611354b5a9c35fd6b7bf5936
-RMD160 (katomic-19.12.1.tar.xz) = 850ee0dfbbd1932a568d86d8e817efee8b5a2ce4
-SHA512 (katomic-19.12.1.tar.xz) = a57f056dbee50363b4f33861ca5221cb1413fbeb1a97994c4da8c2e0a9484f58e99b0e7a813bac1008131ea14b5c2e39722018a5baa53b479ab4af07858f785a
-Size (katomic-19.12.1.tar.xz) = 1423324 bytes
+SHA1 (katomic-20.04.1.tar.xz) = 98fe01a7a265c54c55abcc0f5bcad828d9a75971
+RMD160 (katomic-20.04.1.tar.xz) = 27cb426de6e8d50b035fa4a471f6cceb9fc282c6
+SHA512 (katomic-20.04.1.tar.xz) = 46ebaefe8e9fbd6e09193a688f278687b5e593b589caabb9b171c3035cac3e608f3864afa1844c198245635bf0c28787aeed0923672b761a66291a25a6484485
+Size (katomic-20.04.1.tar.xz) = 1424088 bytes

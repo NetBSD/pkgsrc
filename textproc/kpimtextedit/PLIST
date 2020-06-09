@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2020/02/02 03:06:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/09 11:56:18 markd Exp $
 include/KF5/KPIMTextEdit/KPIMTextEdit/AbstractTextToSpeechInterface
 include/KF5/KPIMTextEdit/KPIMTextEdit/EditorUtil
 include/KF5/KPIMTextEdit/KPIMTextEdit/EmoticonUnicodeTab
+include/KF5/KPIMTextEdit/KPIMTextEdit/MarkupDirector
 include/KF5/KPIMTextEdit/KPIMTextEdit/PlainTextEditFindBar
 include/KF5/KPIMTextEdit/KPIMTextEdit/PlainTextEditor
 include/KF5/KPIMTextEdit/KPIMTextEdit/PlainTextEditorWidget
+include/KF5/KPIMTextEdit/KPIMTextEdit/PlainTextMarkupBuilder
 include/KF5/KPIMTextEdit/KPIMTextEdit/PlainTextSyntaxSpellCheckingHighlighter
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextComposer
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextComposerActions
@@ -20,6 +22,7 @@ include/KF5/KPIMTextEdit/KPIMTextEdit/SlideContainer
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextEditFindBarBase
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextEditorCompleter
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextGotoLineWidget
+include/KF5/KPIMTextEdit/KPIMTextEdit/TextHTMLBuilder
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextToSpeech
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextToSpeechActions
 include/KF5/KPIMTextEdit/KPIMTextEdit/TextToSpeechInterface
@@ -29,9 +32,11 @@ include/KF5/KPIMTextEdit/kpimtextedit/abstracttexttospeechinterface.h
 include/KF5/KPIMTextEdit/kpimtextedit/editorutil.h
 include/KF5/KPIMTextEdit/kpimtextedit/emoticonunicodetab.h
 include/KF5/KPIMTextEdit/kpimtextedit/kpimtextedit_export.h
+include/KF5/KPIMTextEdit/kpimtextedit/markupdirector.h
 include/KF5/KPIMTextEdit/kpimtextedit/plaintexteditfindbar.h
 include/KF5/KPIMTextEdit/kpimtextedit/plaintexteditor.h
 include/KF5/KPIMTextEdit/kpimtextedit/plaintexteditorwidget.h
+include/KF5/KPIMTextEdit/kpimtextedit/plaintextmarkupbuilder.h
 include/KF5/KPIMTextEdit/kpimtextedit/plaintextsyntaxspellcheckinghighlighter.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtextcomposer.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtextcomposeractions.h
@@ -47,6 +52,7 @@ include/KF5/KPIMTextEdit/kpimtextedit/slidecontainer.h
 include/KF5/KPIMTextEdit/kpimtextedit/texteditfindbarbase.h
 include/KF5/KPIMTextEdit/kpimtextedit/texteditorcompleter.h
 include/KF5/KPIMTextEdit/kpimtextedit/textgotolinewidget.h
+include/KF5/KPIMTextEdit/kpimtextedit/texthtmlbuilder.h
 include/KF5/KPIMTextEdit/kpimtextedit/texttospeech.h
 include/KF5/KPIMTextEdit/kpimtextedit/texttospeechactions.h
 include/KF5/KPIMTextEdit/kpimtextedit/texttospeechinterface.h
@@ -59,7 +65,7 @@ lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets-noconfig.cmake
 lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets.cmake
 lib/libKF5PimTextEdit.so
 lib/libKF5PimTextEdit.so.5
-lib/libKF5PimTextEdit.so.5.13.1
+lib/libKF5PimTextEdit.so.5.14.1
 qt5/mkspecs/modules/qt_KPIMTextEdit.pri
 qt5/plugins/designer/kpimtexteditwidgets.so
 share/locale/ar/LC_MESSAGES/libkpimtextedit.mo

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2020/06/02 08:24:26 adam Exp $
+# $NetBSD: Makefile,v 1.61 2020/06/09 11:56:17 markd Exp $
 
 DISTNAME=	kdenlive-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://www.kdenlive.org/
@@ -47,5 +46,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kdenlive_wipes.knsrc \
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

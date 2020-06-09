@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/02/02 02:53:53 markd Exp $
+$NetBSD: distinfo,v 1.13 2020/06/09 11:56:14 markd Exp $
 
-SHA1 (kcalc-19.12.1.tar.xz) = 575487bf7dcbedb230dd02ea0c379279af8387ec
-RMD160 (kcalc-19.12.1.tar.xz) = 325fcc1c73328182582cbb86303ca4b5d382a6ed
-SHA512 (kcalc-19.12.1.tar.xz) = 8aa7fdb4bd1d9842f2e2036e3f94649328f9b5bc47b4c031aeb787cec0fdf28697ebf9f41cb60e120e59c38b44a2e6d366542ac9228abb859db6ec5eb28b4cf6
-Size (kcalc-19.12.1.tar.xz) = 374860 bytes
+SHA1 (kcalc-20.04.1.tar.xz) = 2a46ce69ea31f3e67a1bb17bf11095a615ea5dea
+RMD160 (kcalc-20.04.1.tar.xz) = d5c69e0316fd87aa93946c68d373cf1efa6a846e
+SHA512 (kcalc-20.04.1.tar.xz) = 5e89748b6df60db826d2f0981d78159be3e69c24f27be0bba0983190e33e9ecd1b982a121a20a527b43a59fe9d3860bcfe3bac2f80560d23d1a03185a2fd13c8
+Size (kcalc-20.04.1.tar.xz) = 374372 bytes
