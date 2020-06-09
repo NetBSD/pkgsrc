@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3480 2020/06/09 11:32:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3481 2020/06/09 11:39:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5559,3 +5559,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/ltris to 1.0.20 [ryoon 2020-06-09]
 	Updated fonts/harfbuzz to 2.6.7 [nia 2020-06-09]
 	Updated net/syncthing to 1.6.1 [nia 2020-06-09]
+	Updated emulators/sameboy to 0.13.1 [nia 2020-06-09]
