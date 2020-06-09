@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/09/15 12:55:14 nia Exp $
+# $NetBSD: options.mk,v 1.2 2020/06/09 12:22:01 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freerdp2
 PKG_SUPPORTED_OPTIONS=		alsa pulseaudio cups x11
@@ -23,7 +23,7 @@ CMAKE_ARGS+=	-DWITH_PULSE=OFF
 
 .if !empty(PKG_OPTIONS:Mcups)
 CMAKE_ARGS+=	-DWITH_CUPS=ON
-.include "../../print/cups-base/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWITH_CUPS=OFF
 .endif
