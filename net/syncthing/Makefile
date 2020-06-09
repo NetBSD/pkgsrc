@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2020/06/09 11:32:43 nia Exp $
+# $NetBSD: Makefile,v 1.111 2020/06/09 13:12:21 nia Exp $
 
 # Upstream used to frequently break protocol compatibility, but since
 # 2018 or so this has been much better.  While users of pkgsrc
@@ -87,7 +87,6 @@ do-build:
 # Binaries other than syncthing proper should perhaps be installed.
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/syncthing ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/syncthing ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/etc/linux-desktop/*.desktop ${DESTDIR}${PREFIX}/share/applications
 .for s in 512 256 128 64 32
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
