@@ -1,6 +1,6 @@
-# $NetBSD: plasma5.mk,v 1.3 2019/08/28 19:36:53 markd Exp $
+# $NetBSD: plasma5.mk,v 1.4 2020/06/09 06:51:46 markd Exp $
 
-PLASMAVER?=	5.16.4
+PLASMAVER?=	5.18.5
 CATEGORIES+=	kde
 MASTER_SITES=	${MASTER_SITE_KDE:=plasma/${PLASMAVER}/}
 EXTRACT_SUFX=	.tar.xz
