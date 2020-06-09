@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3491 2020/06/09 15:34:31 fox Exp $
+$NetBSD: CHANGES-2020,v 1.3492 2020/06/09 15:58:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5688,3 +5688,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added editors/tepl4 version 4.4.0 [nia 2020-06-09]
 	Updated chat/mumble to 1.3.1 [nia 2020-06-09]
 	Updated audio/din to 47.1 [fox 2020-06-09]
+	Updated lang/rust-bin to 1.44.0 [nia 2020-06-09]
