@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/01/26 17:31:37 rillig Exp $
+# $NetBSD: Makefile,v 1.83 2020/06/09 10:41:20 nia Exp $
 
 DISTNAME=	sqwebmail-5.5.3
 PKGREVISION=	9
@@ -12,6 +12,7 @@ HOMEPAGE=	https://www.courier-mta.org/sqwebmail/
 
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
 DEPENDS+=	maildrop>=2.5.0:../../mail/maildrop
+DEPENDS+=	mime-types-[0-9]*:../../misc/mime-types
 
 USE_TOOLS+=		env gmake gzip:run perl:run
 USE_LANGUAGES=		c c++
@@ -45,7 +46,7 @@ MESSAGE_SUBST+=		IMAGEDIR=${SQWEBMAIL_IMAGEDIR}
 MESSAGE_SUBST+=		IMAGEURL=${SQWEBMAIL_IMAGEURL}
 
 SENDMAIL?=		/usr/sbin/sendmail
-MIME_TYPES=		${PKG_SYSCONFDIR}/mime.types:${PKG_SYSCONFBASEDIR}/httpd/mime.types:${PREFIX}/etc/mime.types:/etc/mime.types
+MIME_TYPES=		${PKG_SYSCONFDIR}/mime.types
 
 # This is used by the sqwebmail configure script to set the location of
 # the sqwebmaild socket file and lockfile.
