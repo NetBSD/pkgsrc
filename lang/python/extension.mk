@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.56 2019/05/02 22:06:15 wiz Exp $
+# $NetBSD: extension.mk,v 1.57 2020/06/10 16:11:07 leot Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -74,10 +74,10 @@ FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 .if empty(_PYTHON_VERSION:M2?)
 PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=		PYVERS="${PYVERSSUFFIX:S/.//}"
-PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
-PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
-PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
-PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
+EARLY_PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
+EARLY_PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
+EARLY_PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
+EARLY_PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
 .endif
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV?=	no
