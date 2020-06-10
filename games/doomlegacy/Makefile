@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/05/19 11:20:16 micha Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/10 15:35:02 micha Exp $
 
 VERS=			1.48.4
 PKGNAME=		doomlegacy-${VERS}
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
-DISTNAME=		${PKGNAME:S/-/_/}_source
+DISTNAME=		${PKGNAME_NOREV:S/-/_/}_source
 DISTFILES=		${DEFAULT_DISTFILES} doomlegacy_${VERS}_common.zip
 EXTRACT_SUFX=		.tar.bz2
 
