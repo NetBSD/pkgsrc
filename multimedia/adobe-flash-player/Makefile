@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2020/05/12 19:20:26 tsutsui Exp $
+# $NetBSD: Makefile,v 1.48 2020/06/10 10:26:29 tsutsui Exp $
 
-FLASH_VERSION=		32.0.0.371
+FLASH_VERSION=		32.0.0.387
 DISTNAME=		flash_player_npapi_linux.${FLASH_ARCH}
 PKGNAME=		adobe-flash-player-${FLASH_VERSION}
 DIST_SUBDIR=		${PKGNAME_NOREV}
