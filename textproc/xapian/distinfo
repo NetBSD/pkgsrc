@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.39 2020/02/25 17:55:30 schmonz Exp $
+$NetBSD: distinfo,v 1.40 2020/06/10 17:54:29 schmonz Exp $
 
-SHA1 (xapian-core-1.4.15.tar.xz) = ad352d25fe85355b9a4b59e9f5cd33c207893861
-RMD160 (xapian-core-1.4.15.tar.xz) = 065ff86a68c1c0fd8cae619c7a313a9611b45c02
-SHA512 (xapian-core-1.4.15.tar.xz) = f28209acae12a42a345382668f7f7da7a2ce5a08362d0e2af63c9f94cb2adca95366499a7afa0bd9008fbfcca4fd1f2c9221e594fc2a2c740f5899e9f03ecad3
-Size (xapian-core-1.4.15.tar.xz) = 2988752 bytes
+SHA1 (xapian-core-1.4.16.tar.xz) = 9575ac9f208ae58b2a74d3417e2362873ba454f4
+RMD160 (xapian-core-1.4.16.tar.xz) = e93160ce02c8ce50c2fb97709c907e56c595415c
+SHA512 (xapian-core-1.4.16.tar.xz) = 3d319ab672485e840019ee28b54b1c59bbd535c1802874f58593fb999681c19bff3e776dc19ab5d5bd97734bf01f1408f36ae49e21ca9706ca187db49f8a18a6
+Size (xapian-core-1.4.16.tar.xz) = 3041132 bytes
 SHA1 (patch-common_errno__to__string.cc) = 222b640aa1cdacb6f9ada78671ef414b4ca11e26
 SHA1 (patch-common_safesyssocket.h) = 032d441853914d510bc285bb682a98c4ee264d52
 SHA1 (patch-xapian-config.in) = 470d1de7f04b8b8817abbcf56b5b71a36948de97

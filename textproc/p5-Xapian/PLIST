@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/09/10 10:30:06 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/10 17:54:30 schmonz Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/AssertionError.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/BM25Weight.pm
@@ -27,7 +27,6 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/MSetIterator.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/MultiValueSorter.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/NetworkError.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/NetworkTimeoutError.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Xapian/PerlStopper.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/PositionIterator.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/PostingIterator.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/Query.pm

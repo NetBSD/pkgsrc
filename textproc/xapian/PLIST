@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/02/25 17:55:30 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/06/10 17:54:29 schmonz Exp $
 bin/copydatabase
 bin/quest
 bin/simpleexpand
@@ -350,6 +350,7 @@ share/doc/xapian-core/apidoc/html/doc.png
 share/doc/xapian-core/apidoc/html/document_8h.html
 share/doc/xapian-core/apidoc/html/doxygen.css
 share/doc/xapian-core/apidoc/html/doxygen.png
+share/doc/xapian-core/apidoc/html/dynsections.js
 share/doc/xapian-core/apidoc/html/enquire_8h.html
 share/doc/xapian-core/apidoc/html/error_8h.html
 share/doc/xapian-core/apidoc/html/errorhandler_8h.html
@@ -444,8 +445,11 @@ share/doc/xapian-core/apidoc/html/inherit_graph_7.png
 share/doc/xapian-core/apidoc/html/inherit_graph_8.png
 share/doc/xapian-core/apidoc/html/inherit_graph_9.png
 share/doc/xapian-core/apidoc/html/inherits.html
+share/doc/xapian-core/apidoc/html/jquery.js
 share/doc/xapian-core/apidoc/html/keymaker_8h.html
 share/doc/xapian-core/apidoc/html/matchspy_8h.html
+share/doc/xapian-core/apidoc/html/menu.js
+share/doc/xapian-core/apidoc/html/menudata.js
 share/doc/xapian-core/apidoc/html/mset_8h.html
 share/doc/xapian-core/apidoc/html/namespaceXapian.html
 share/doc/xapian-core/apidoc/html/namespaceXapian_1_1Auto.html
