@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/12/29 02:24:18 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2020/06/10 10:18:17 adam Exp $
 
-SHA1 (ifaddr-0.1.6.tar.gz) = 9e3577dc7c123ef602545c52ebd9fc64943afb44
-RMD160 (ifaddr-0.1.6.tar.gz) = a8821b461fa66445d6b18c40b8595b12b7ee7297
-SHA512 (ifaddr-0.1.6.tar.gz) = 911f81c32e808b9e61f7e98b8c67dc9b40cb64de864843cd7239f08538c9ff7cd45c8f16428b2ce200ea5f213a539c7ed8479432e02feb5e82e917f838ee0cb6
-Size (ifaddr-0.1.6.tar.gz) = 6526 bytes
+SHA1 (ifaddr-0.1.7.tar.gz) = a74dd735a96427020774df550b997d1ad034743d
+RMD160 (ifaddr-0.1.7.tar.gz) = b524efab1ae747efdba26a5a98bd8b84fa4e055d
+SHA512 (ifaddr-0.1.7.tar.gz) = 9a428dd6bb022c8f483b77df9e9301f96e9ba64207eda8b3956a7ca5993bfe97f222c451149851135d379db1a819c75d0834566f3b6501456b2f237b0645e300
+Size (ifaddr-0.1.7.tar.gz) = 9281 bytes
