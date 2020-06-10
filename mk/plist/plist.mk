@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.54 2020/03/30 22:54:24 rillig Exp $
+# $NetBSD: plist.mk,v 1.55 2020/06/10 16:06:09 leot Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -147,8 +147,9 @@ _PLIST_AWK_ENV+=	${PLIST_AWK_ENV}
 # with the package version excluding the "nb13" extension.
 #
 # The other direction of generating the package's PLIST file from the list
-# of actually installed files is covered by PRINT_PLIST_AWK. This is only
-# needed when developing the package itself, for example after an update.
+# of actually installed files is covered by EARLY_PRINT_PLIST_AWK and
+# PRINT_PLIST_AWK. This is only needed when developing the package itself,
+# for example after an update.
 #
 PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 		OS_VERSION=${OS_VERSION:Q}				\
