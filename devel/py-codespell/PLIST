@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/02 10:32:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/10 14:54:33 wiz Exp $
 bin/codespell-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -16,6 +16,11 @@ ${PYSITELIB}/codespell_lib/data/__init__.py
 ${PYSITELIB}/codespell_lib/data/__init__.pyc
 ${PYSITELIB}/codespell_lib/data/__init__.pyo
 ${PYSITELIB}/codespell_lib/data/dictionary.txt
+${PYSITELIB}/codespell_lib/data/dictionary_code.txt
+${PYSITELIB}/codespell_lib/data/dictionary_en-GB_to_en-US.txt
+${PYSITELIB}/codespell_lib/data/dictionary_informal.txt
+${PYSITELIB}/codespell_lib/data/dictionary_names.txt
+${PYSITELIB}/codespell_lib/data/dictionary_rare.txt
 ${PYSITELIB}/codespell_lib/data/linux-kernel.exclude
 ${PYSITELIB}/codespell_lib/tests/__init__.py
 ${PYSITELIB}/codespell_lib/tests/__init__.pyc
