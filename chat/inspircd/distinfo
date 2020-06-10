@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.21 2019/08/23 10:51:48 nia Exp $
-
-SHA1 (inspircd-2.0.28.tar.gz) = e82d043c6645be854946b79bad086d591e111f07
-RMD160 (inspircd-2.0.28.tar.gz) = e20c8193dff1b7d54eeca6e0baefc85baf7decf7
-SHA512 (inspircd-2.0.28.tar.gz) = 0e8082a03e65f350ac423cc0781506c0eb40151d6e8d250067288b2a1d42087f10c159472ad76028aa986f6764180fdc493893984cadc0064715853472fa3e2a
-Size (inspircd-2.0.28.tar.gz) = 735981 bytes
