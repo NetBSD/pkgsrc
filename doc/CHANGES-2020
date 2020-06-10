@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3511 2020/06/10 14:51:52 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3512 2020/06/10 14:54:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5709,3 +5709,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/ruby-openssl-cmac version 2.0.1 [taca 2020-06-10]
 	Updated net/ruby-ruby_smb to 2.0.0 [taca 2020-06-10]
 	Updated security/ruby-net-ssh to 6.1.0 [taca 2020-06-10]
+	Updated devel/py-codespell to 1.17.1 [wiz 2020-06-10]
