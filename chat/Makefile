@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2020/03/30 09:11:53 nia Exp $
+# $NetBSD: Makefile,v 1.246 2020/06/10 21:16:57 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -40,8 +40,6 @@ SUBDIR+=	i2cbd
 SUBDIR+=	icb
 SUBDIR+=	icbirc
 SUBDIR+=	ii
-SUBDIR+=	inspircd
-SUBDIR+=	inspircd3
 SUBDIR+=	ircII
 SUBDIR+=	ircd-hybrid
 SUBDIR+=	irchat-pj
