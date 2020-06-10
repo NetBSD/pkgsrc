@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3504 2020/06/10 11:09:36 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3505 2020/06/10 11:19:14 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5702,3 +5702,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/adobe-flash-player to 32.0.0.387 [tsutsui 2020-06-10]
 	Updated emulators/PC6001VX to 3.5.0 [tsutsui 2020-06-10]
 	Updated audio/adplug to 2.3.3 [fcambus 2020-06-10]
+	Updated www/ruby-rouge to 3.20.0 [fcambus 2020-06-10]
