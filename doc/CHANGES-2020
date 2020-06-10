@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3505 2020/06/10 11:19:14 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3506 2020/06/10 13:58:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5703,3 +5703,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/PC6001VX to 3.5.0 [tsutsui 2020-06-10]
 	Updated audio/adplug to 2.3.3 [fcambus 2020-06-10]
 	Updated www/ruby-rouge to 3.20.0 [fcambus 2020-06-10]
+	Updated devel/ruby-ffi to 1.13.1 [taca 2020-06-10]
