@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.27 2017/05/15 07:39:42 gson Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.28 2020/06/10 16:07:18 leot Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -52,6 +52,12 @@ adding the RCS ID the space should be omitted.</para>
 <programlisting>
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
 </programlisting>
+
+    <para>The <varname>PRINT_PLIST_AWK</varname> transformations are
+    evaluated after the file list and directory list are sorted.
+    <varname>EARLY_PRINT_PLIST_AWK</varname> is like
+    <varname>PRINT_PLIST_AWK</varname> except it operates before the file
+    list and directory list are sorted.</para>
   </sect1>
 
   <sect1 id="plist.misc">
