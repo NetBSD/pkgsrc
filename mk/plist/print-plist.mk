@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.35 2020/04/18 10:54:21 rillig Exp $
+# $NetBSD: print-plist.mk,v 1.36 2020/06/10 16:06:09 leot Exp $
 #
 # Automatic PLIST generation
 #  - files & symlinks first
@@ -94,6 +94,9 @@ print-PLIST:
 	*)		genlinks=0 ;;					\
 	esac;								\
 	${_PRINT_PLIST_FILES_CMD}					\
+	 | ${AWK} '							\
+		${EARLY_PRINT_PLIST_AWK}				\
+		{ print $$0; }'						\
 	 | ${_PRINT_PLIST_LIBTOOLIZE_FILTER}				\
 	 | ${SORT}							\
 	 | ${AWK} '							\
@@ -124,6 +127,9 @@ print-PLIST:
 		{ print $$0; }'
 	${RUN}\
 	for i in `${_PRINT_PLIST_DIRS_CMD}				\
+			| ${AWK} '					\
+				${EARLY_PRINT_PLIST_AWK}		\
+				{ print $$0; }'				\
 			| ${SORT} -r					\
 			| ${AWK} '					\
 				/emul\/linux\/proc/ { next; }		\
