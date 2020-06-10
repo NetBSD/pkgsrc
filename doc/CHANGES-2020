@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3513 2020/06/10 15:10:16 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3514 2020/06/10 15:13:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5711,3 +5711,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-net-ssh to 6.1.0 [taca 2020-06-10]
 	Updated devel/py-codespell to 1.17.1 [wiz 2020-06-10]
 	Updated lang/vala to 0.48.6 [wiz 2020-06-10]
+	Updated net/libfilezilla to 0.22.0 [wiz 2020-06-10]
