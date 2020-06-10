@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/21 13:39:55 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/10 11:09:23 fcambus Exp $
 bin/adplugdb
 include/adplug/a2m.h
 include/adplug/adl.h
@@ -52,7 +52,7 @@ include/adplug/player.h
 include/adplug/players.h
 include/adplug/protrack.h
 include/adplug/psi.h
-include/adplug/rad.h
+include/adplug/rad2.h
 include/adplug/rat.h
 include/adplug/raw.h
 include/adplug/realopl.h
