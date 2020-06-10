@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3498 2020/06/10 02:31:03 msaitoh Exp $
+$NetBSD: CHANGES-2020,v 1.3499 2020/06/10 06:48:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5694,3 +5694,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/fossil to 2.11.1 [js 2020-06-09]
 	Added databases/apache-solr version 8.5.1 [jym 2020-06-10]
 	Updated sysutils/intel-microcode-netbsd to 20200609 [msaitoh 2020-06-10]
+	Updated time/rsibreak to 0.12.13 [markd 2020-06-10]
