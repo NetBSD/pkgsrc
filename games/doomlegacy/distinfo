@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/05/20 16:04:12 micha Exp $
+$NetBSD: distinfo,v 1.4 2020/06/10 15:35:02 micha Exp $
 
 SHA1 (doomlegacy_1.48.4_common.zip) = 14aed4c0091e8c61f46a2303f9316659ab6c0483
 RMD160 (doomlegacy_1.48.4_common.zip) = cca61af6bdda1003032ee117129e07596c8bbfcf
@@ -15,3 +15,4 @@ SHA1 (patch-src_dstrings.c) = e1fc8bdcb83efa18690d95c56e3ea7c94a388a50
 SHA1 (patch-src_p__local.h) = e429f2ce5d60dd538bc5e796847b53ae72604b33
 SHA1 (patch-src_p__setup.c) = c3766f924b05655b8d9d17d4686dde9a83239e0a
 SHA1 (patch-src_r__defs.h) = 9211ae6db72f0288f38449b18c8c252f42686405
+SHA1 (patch-src_t__prepro.h) = 768fc3a87665a75a85ff4ff88b53091b13eab55e
