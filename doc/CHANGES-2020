@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3508 2020/06/10 14:28:48 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3509 2020/06/10 14:33:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5706,3 +5706,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-ffi to 1.13.1 [taca 2020-06-10]
 	Updated devel/ruby-sexp-processor to 4.15.0 [taca 2020-06-10]
 	Updated devel/ruby-test-unit to 3.3.6 [taca 2020-06-10]
+	Added security/ruby-openssl-cmac version 2.0.1 [taca 2020-06-10]
