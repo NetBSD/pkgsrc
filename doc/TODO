@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19905 2020/06/09 11:05:09 nia Exp $
+$NetBSD: TODO,v 1.19906 2020/06/10 14:54:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -979,7 +979,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.19.1 [drops python-2.x support]
 	o py-cassa-1.11.0
-	o py-codespell-1.17.1
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
 	o py-google-api-python-client-1.9.1
