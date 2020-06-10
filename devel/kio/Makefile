@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/06/09 06:44:05 markd Exp $
+# $NetBSD: Makefile,v 1.46 2020/06/10 22:22:15 jperkin Exp $
 
 DISTNAME=	kio-5.70.1
 #DISTNAME=	kio-${KF5VER}
@@ -11,8 +11,6 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	msgmerge
-
-DEPENDS+=	kded>=${KF5VER}:../../x11/kded
 
 LDFLAGS.SunOS+=	-lsocket
 
