@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3499 2020/06/10 06:48:37 markd Exp $
+$NetBSD: CHANGES-2020,v 1.3500 2020/06/10 08:10:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5695,3 +5695,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added databases/apache-solr version 8.5.1 [jym 2020-06-10]
 	Updated sysutils/intel-microcode-netbsd to 20200609 [msaitoh 2020-06-10]
 	Updated time/rsibreak to 0.12.13 [markd 2020-06-10]
+	Updated devel/py-backcall to 0.2.0 [adam 2020-06-10]
+	Updated print/py-reportlab to 3.5.42 [adam 2020-06-10]
