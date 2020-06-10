@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2019/12/31 09:56:46 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/10 10:18:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ifaddr/__init__.py
-${PYSITELIB}/ifaddr/__init__.pyo
 ${PYSITELIB}/ifaddr/__init__.pyc
-${PYSITELIB}/ifaddr/_posix.pyo
-${PYSITELIB}/ifaddr/_posix.pyc
-${PYSITELIB}/ifaddr/_shared.pyo
-${PYSITELIB}/ifaddr/_shared.pyc
-${PYSITELIB}/ifaddr/_win32.pyo
-${PYSITELIB}/ifaddr/_win32.pyc
-${PYSITELIB}/ifaddr/test_ifaddr.pyo
-${PYSITELIB}/ifaddr/test_ifaddr.pyc
+${PYSITELIB}/ifaddr/__init__.pyo
 ${PYSITELIB}/ifaddr/_posix.py
+${PYSITELIB}/ifaddr/_posix.pyc
+${PYSITELIB}/ifaddr/_posix.pyo
 ${PYSITELIB}/ifaddr/_shared.py
+${PYSITELIB}/ifaddr/_shared.pyc
+${PYSITELIB}/ifaddr/_shared.pyo
 ${PYSITELIB}/ifaddr/_win32.py
+${PYSITELIB}/ifaddr/_win32.pyc
+${PYSITELIB}/ifaddr/_win32.pyo
 ${PYSITELIB}/ifaddr/test_ifaddr.py
+${PYSITELIB}/ifaddr/test_ifaddr.pyc
+${PYSITELIB}/ifaddr/test_ifaddr.pyo
