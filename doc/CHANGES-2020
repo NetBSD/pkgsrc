@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3518 2020/06/10 17:55:13 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.3519 2020/06/10 17:56:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5716,3 +5716,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/filezilla to 3.48.1 [wiz 2020-06-10]
 	Updated net/statzone to 1.0.2 [fcambus 2020-06-10]
 	Updated textproc/xapian to 1.4.16 [schmonz 2020-06-10]
+	Updated textproc/xapian-omega to 1.4.16 [schmonz 2020-06-10]
