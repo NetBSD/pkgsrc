@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/11/04 17:47:30 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/10 06:28:14 wiz Exp $
 
+PKGNAME=	AfterShotPro-1.1.0.30
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.corel.com/akdlm/6763/downloads/AfterShotPro/1/PF/
 EXTRACT_SUFX=	.deb
@@ -39,7 +40,6 @@ DIST_SUBDIR=	AfterShotPro-1.1.0.30
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=	AfterShotPro_i386
-PKGNAME=	${DISTNAME:S/_i386/-1.1.0.30/}
 # same data.tar.gz, just different control.tar.gz
 #.elif ${EMUL_PLATFORM} == "linux-x86_64"
 #DISTNAME=	AfterShotPro_amd64
