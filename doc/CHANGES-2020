@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3503 2020/06/10 10:40:19 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.3504 2020/06/10 11:09:36 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5701,3 +5701,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-ifaddr to 0.1.7 [adam 2020-06-10]
 	Updated multimedia/adobe-flash-player to 32.0.0.387 [tsutsui 2020-06-10]
 	Updated emulators/PC6001VX to 3.5.0 [tsutsui 2020-06-10]
+	Updated audio/adplug to 2.3.3 [fcambus 2020-06-10]
