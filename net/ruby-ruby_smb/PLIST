@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/24 15:28:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/10 14:48:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -22,6 +22,7 @@ ${GEM_LIBDIR}/examples/negotiate_with_netbios_service.rb
 ${GEM_LIBDIR}/examples/net_share_enum_all.rb
 ${GEM_LIBDIR}/examples/pipes.rb
 ${GEM_LIBDIR}/examples/read_file.rb
+${GEM_LIBDIR}/examples/read_file_encryption.rb
 ${GEM_LIBDIR}/examples/read_registry_key_value.rb
 ${GEM_LIBDIR}/examples/rename_file.rb
 ${GEM_LIBDIR}/examples/tree_connect.rb
@@ -30,11 +31,13 @@ ${GEM_LIBDIR}/lib/ruby_smb.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/authentication.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/echo.rb
+${GEM_LIBDIR}/lib/ruby_smb/client/encryption.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/negotiation.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/signing.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/tree_connect.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/utils.rb
 ${GEM_LIBDIR}/lib/ruby_smb/client/winreg.rb
+${GEM_LIBDIR}/lib/ruby_smb/crypto.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/bind.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/bind_ack.rb
@@ -209,9 +212,11 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb2/commands.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/create_context.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/file.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/info_type.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb2/negotiate_context.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/close_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/close_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/compression_transform_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/create_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/create_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/echo_request.rb
@@ -231,6 +236,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/session_setup_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/session_setup_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/set_info_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/set_info_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/transform_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/tree_connect_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/tree_connect_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/packet/tree_disconnect_request.rb
@@ -243,6 +249,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb2/tree.rb
 ${GEM_LIBDIR}/lib/ruby_smb/version.rb
 ${GEM_LIBDIR}/ruby_smb.gemspec
 ${GEM_LIBDIR}/spec/lib/ruby_smb/client_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/crypto_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/bind_ack_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/bind_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/ndr_spec.rb
@@ -273,6 +280,7 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/winreg_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dispatcher/base_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dispatcher/socket_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/error_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/field/extended_attribute_flag_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/field/file_time_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/field/nt_status_spec.rb
@@ -384,8 +392,10 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/bit_field/smb2_capabilities_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/bit_field/smb_secruity_mode_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/create_context_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/file_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/negotiate_context_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/close_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/close_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/compression_transform_header_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/create_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/create_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/echo_request_spec.rb
@@ -404,6 +414,7 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/session_setup_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/session_setup_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/set_info_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/set_info_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/transform_header_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/tree_connect_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/tree_connect_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/smb2/packet/tree_disconnect_request_spec.rb
