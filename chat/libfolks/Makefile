@@ -1,32 +1,38 @@
-# $NetBSD: Makefile,v 1.14 2020/03/08 16:47:27 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/06/10 18:08:21 nia Exp $
 
-DISTNAME=	folks-0.4.2
+DISTNAME=	folks-0.14.0
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/folks/0.4/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/folks/0.14/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/action/show/Projects/Folks
+HOMEPAGE=	https://wiki.gnome.org/Projects/Folks
 COMMENT=	Library to manage contacts
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config intltool gmake msgfmt
-USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=	pkg-config xgettext
 
-PKGCONFIG_OVERRIDE+=	backends/telepathy/lib/folks-telepathy.pc.in
-PKGCONFIG_OVERRIDE+=	folks/folks.pc.in
+MESON_ARGS+=	-Dbluez_backend=false
+MESON_ARGS+=	-Deds_backend=false
+MESON_ARGS+=	-Dofono_backend=false
 
-TEST_TARGET=	check
+PYTHON_FOR_BUILD_ONLY=	tool
 
-CPPFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/folks.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/folks-dummy.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/folks-telepathy.pc
 
+.include "../../devel/meson/build.mk"
+.include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libgee/buildlink3.mk"
+# not compatible with editline
+.include "../../devel/readline/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../devel/libgee0.6/buildlink3.mk"
-.include "../../chat/telepathy-glib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
