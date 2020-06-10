@@ -2,8 +2,4 @@ The microcode data file contains the latest microcode definitions for all
 Intel processors. Intel releases microcode updates to correct processor
 behavior as documented in the respective processor specification updates.
 While the regular approach to getting this microcode update is via a BIOS
-upgrade, Intel realizes that this can be an administrative hassle. The Linux
-operating system and VMware ESX products have a mechanism to update the
-microcode after booting. For example, this file will be used by the
-operating system mechanism if the file is placed in the /etc/firmware
-directory of the Linux system.
+upgrade, Intel realizes that this can be an administrative hassle.
