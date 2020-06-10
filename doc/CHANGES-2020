@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3521 2020/06/10 18:08:49 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3522 2020/06/10 18:39:48 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5719,3 +5719,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/xapian-omega to 1.4.16 [schmonz 2020-06-10]
 	Updated devel/gopls to 0.4.1 [wiz 2020-06-10]
 	Updated chat/libfolks to 0.14.0 [nia 2020-06-10]
+	Updated converters/bdf2sfd to 1.1.2 [fcambus 2020-06-10]
