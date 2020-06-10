@@ -1,0 +1,11 @@
+openssl-cmac
+
+Ruby Gem for
+* RFC 4493 - The AES-CMAC Algorithm (http://tools.ietf.org/html/rfc4493)
+* RFC 4494 - The AES-CMAC-96 Algorithm and Its Use with IPsec
+  (http://tools.ietf.org/html/rfc4494)
+
+* RFC 4615 - The Advanced Encryption Standard-Cipher-based Message
+  Authentication Code-Pseudo-Random Function-128 (AES-CMAC-PRF-128)
+  Algorithm for the Internet Key Exchange Protocol (IKE)
+  (http://tools.ietf.org/html/rfc4615)

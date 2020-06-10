@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/10 14:32:26 taca Exp $
+
+SHA1 (openssl-cmac-2.0.1.gem) = 4092af1242dc55ee93c5a62cf384bb410d82e7da
+RMD160 (openssl-cmac-2.0.1.gem) = 82846291290944f9aaf969cadb634a810578186a
+SHA512 (openssl-cmac-2.0.1.gem) = 4257eda512477d3d73835b402d551f68796d90151ef029f1017c504dff36a6b2239eee7d33cf2c041788b247de6122cd3e27ec1c27a65dbb04c13857173ff64f
+Size (openssl-cmac-2.0.1.gem) = 9728 bytes
