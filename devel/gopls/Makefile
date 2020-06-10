@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/06/10 18:01:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/10 18:02:37 wiz Exp $
+#
+# Release notes:
+# https://github.com/golang/go/issues/33030
 
 DISTNAME=	gopls-0.4.1
 CATEGORIES=	devel
