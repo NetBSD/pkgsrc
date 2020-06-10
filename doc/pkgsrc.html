@@ -4729,6 +4729,11 @@ adding the RCS ID the space should be omitted.</p>
 <pre class="programlisting">
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
 </pre>
+<p>The <code class="varname">PRINT_PLIST_AWK</code> transformations are
+    evaluated after the file list and directory list are sorted.
+    <code class="varname">EARLY_PRINT_PLIST_AWK</code> is like
+    <code class="varname">PRINT_PLIST_AWK</code> except it operates before the file
+    list and directory list are sorted.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
