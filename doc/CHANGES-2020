@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3527 2020/06/10 20:13:26 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3528 2020/06/10 21:17:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5723,3 +5723,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libdazzle to 3.36.0 [nia 2020-06-10]
 	Updated www/epiphany to 3.36.2 [nia 2020-06-10]
 	Updated net/gnome-online-accounts to 3.36.0 [nia 2020-06-10]
+	Removed chat/inspircd [nia 2020-06-10]
+	Removed chat/inspircd3 [nia 2020-06-10]
