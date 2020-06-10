@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.198 2020/06/02 08:24:56 adam Exp $
+# $NetBSD: Makefile,v 1.199 2020/06/10 19:45:51 nia Exp $
 
-DISTNAME=	epiphany-3.34.3.1
-PKGREVISION=	5
+DISTNAME=	epiphany-3.36.2
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/3.34/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/3.36/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -27,6 +26,7 @@ _TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
+BUILDLINK_API_DEPENDS.libdazzle+=	libdazzle>=3.35.3
 .include "../../devel/libdazzle/buildlink3.mk"
 .include "../../devel/libhandy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
