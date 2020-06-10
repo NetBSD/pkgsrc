@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/11/30 21:50:33 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/06/10 06:47:00 markd Exp $
 
-SHA1 (rsibreak-0.12.11.tar.xz) = 9a4f283cc7dcd9721c1c86973c8ddc8700cecbbe
-RMD160 (rsibreak-0.12.11.tar.xz) = 83cb34db706b9e72f242fbe477dddde0f39a84d4
-SHA512 (rsibreak-0.12.11.tar.xz) = 78498b747eeef842e40170236ace9d1ddd8b1f4bcc378134f2935cd2cf1c6933d44fa232f2f9b0724ee6b2638a34e4f71ebee2eac7664946093ed4df8eeb12ec
-Size (rsibreak-0.12.11.tar.xz) = 547764 bytes
+SHA1 (rsibreak-0.12.13.tar.xz) = 34300b3fbe7d3f928ce855088e9d6447acb47a4c
+RMD160 (rsibreak-0.12.13.tar.xz) = 4527dea3a84f3a8219ad8d64a2350de971312be0
+SHA512 (rsibreak-0.12.13.tar.xz) = dc1411221828afab1c8f3ee89238be44d9fd3784cb5cce4f5a50ce063e14d1683257bffa1b24509d7009e74d0be16f1c788754690b503490fb8be1bedc9657fd
+Size (rsibreak-0.12.13.tar.xz) = 550544 bytes
