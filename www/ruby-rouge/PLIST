@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/05/13 19:42:49 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/06/10 11:19:02 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -14,9 +14,11 @@ ${GEM_LIBDIR}/lib/rouge/demos/apex
 ${GEM_LIBDIR}/lib/rouge/demos/apiblueprint
 ${GEM_LIBDIR}/lib/rouge/demos/applescript
 ${GEM_LIBDIR}/lib/rouge/demos/armasm
+${GEM_LIBDIR}/lib/rouge/demos/augeas
 ${GEM_LIBDIR}/lib/rouge/demos/awk
 ${GEM_LIBDIR}/lib/rouge/demos/batchfile
 ${GEM_LIBDIR}/lib/rouge/demos/bbcbasic
+${GEM_LIBDIR}/lib/rouge/demos/bibtex
 ${GEM_LIBDIR}/lib/rouge/demos/biml
 ${GEM_LIBDIR}/lib/rouge/demos/bpf
 ${GEM_LIBDIR}/lib/rouge/demos/brainfuck
@@ -76,6 +78,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/handlebars
 ${GEM_LIBDIR}/lib/rouge/demos/haskell
 ${GEM_LIBDIR}/lib/rouge/demos/haxe
 ${GEM_LIBDIR}/lib/rouge/demos/hcl
+${GEM_LIBDIR}/lib/rouge/demos/hlsl
 ${GEM_LIBDIR}/lib/rouge/demos/hocon
 ${GEM_LIBDIR}/lib/rouge/demos/hql
 ${GEM_LIBDIR}/lib/rouge/demos/html
@@ -103,6 +106,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/lasso
 ${GEM_LIBDIR}/lib/rouge/demos/liquid
 ${GEM_LIBDIR}/lib/rouge/demos/literate_coffeescript
 ${GEM_LIBDIR}/lib/rouge/demos/literate_haskell
+${GEM_LIBDIR}/lib/rouge/demos/livescript
 ${GEM_LIBDIR}/lib/rouge/demos/llvm
 ${GEM_LIBDIR}/lib/rouge/demos/lua
 ${GEM_LIBDIR}/lib/rouge/demos/lustre
@@ -185,6 +189,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/typescript
 ${GEM_LIBDIR}/lib/rouge/demos/vala
 ${GEM_LIBDIR}/lib/rouge/demos/vb
 ${GEM_LIBDIR}/lib/rouge/demos/vcl
+${GEM_LIBDIR}/lib/rouge/demos/velocity
 ${GEM_LIBDIR}/lib/rouge/demos/verilog
 ${GEM_LIBDIR}/lib/rouge/demos/vhdl
 ${GEM_LIBDIR}/lib/rouge/demos/viml
@@ -196,6 +201,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/xpath
 ${GEM_LIBDIR}/lib/rouge/demos/xquery
 ${GEM_LIBDIR}/lib/rouge/demos/yaml
 ${GEM_LIBDIR}/lib/rouge/demos/yang
+${GEM_LIBDIR}/lib/rouge/demos/zig
 ${GEM_LIBDIR}/lib/rouge/formatter.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html_inline.rb
@@ -226,9 +232,11 @@ ${GEM_LIBDIR}/lib/rouge/lexers/apex.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/apiblueprint.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/apple_script.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/armasm.rb
+${GEM_LIBDIR}/lib/rouge/lexers/augeas.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/awk.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/batchfile.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/bbcbasic.rb
+${GEM_LIBDIR}/lib/rouge/lexers/bibtex.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/biml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/bpf.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/brainfuck.rb
@@ -289,6 +297,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/handlebars.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/haskell.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/haxe.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/hcl.rb
+${GEM_LIBDIR}/lib/rouge/lexers/hlsl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/hocon.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/hql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/html.rb
@@ -317,6 +326,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/lasso/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/liquid.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/literate_coffeescript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/literate_haskell.rb
+${GEM_LIBDIR}/lib/rouge/lexers/livescript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/llvm.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/llvm/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/lua.rb
@@ -410,6 +420,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/typescript/common.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/vala.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/varnish.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/vb.rb
+${GEM_LIBDIR}/lib/rouge/lexers/velocity.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/verilog.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/vhdl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/viml.rb
@@ -422,6 +433,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/xpath.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/xquery.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/yaml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/yang.rb
+${GEM_LIBDIR}/lib/rouge/lexers/zig.rb
 ${GEM_LIBDIR}/lib/rouge/plugins/redcarpet.rb
 ${GEM_LIBDIR}/lib/rouge/regex_lexer.rb
 ${GEM_LIBDIR}/lib/rouge/template_lexer.rb
