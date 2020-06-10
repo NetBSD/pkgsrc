@@ -3989,6 +3989,10 @@ resulting PLIST:
 
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
 
+The PRINT_PLIST_AWK transformations are evaluated after the file list and
+directory list are sorted. EARLY_PRINT_PLIST_AWK is like PRINT_PLIST_AWK except
+it operates before the file list and directory list are sorted.
+
 15.4. Variable substitution in PLIST
 
 A number of variables are substituted automatically in PLISTs when a package is
