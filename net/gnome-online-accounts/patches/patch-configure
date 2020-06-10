@@ -1,10 +1,28 @@
-$NetBSD: patch-configure,v 1.1 2018/05/31 14:45:56 youri Exp $
+$NetBSD: patch-configure,v 1.2 2020/06/10 20:13:01 nia Exp $
 
-Portability fix.
+Shell portability.
 
---- configure.orig	2018-04-17 15:48:19.000000000 +0000
+--- configure.orig	2020-03-10 13:08:11.000000000 +0000
 +++ configure
-@@ -16773,14 +16773,14 @@ fi
+@@ -16991,14 +16991,14 @@ fi
+ 
+ 
+ if test "$enable_fedora" != "no"; then
+-  if test "$enable_fedora" == "yes" &&
+-     test "$have_fedora" == "no" ; then
++  if test "$enable_fedora" = "yes" &&
++     test "$have_fedora" = "no" ; then
+       as_fn_error $? "Fedora Account System support requested, but not available" "$LINENO" 5
+   fi
+ 
+   enable_fedora=$have_fedora
+ 
+-  if test "$enable_fedora" == "yes"; then
++  if test "$enable_fedora" = "yes"; then
+ 
+ $as_echo "#define GCR_API_SUBJECT_TO_CHANGE 1" >>confdefs.h
+ 
+@@ -17389,14 +17389,14 @@ fi
  
  
  if test "$enable_kerberos" != "no"; then
