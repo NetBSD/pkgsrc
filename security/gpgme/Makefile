@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2020/01/26 17:32:03 rillig Exp $
+# $NetBSD: Makefile,v 1.97 2020/06/10 11:32:06 markd Exp $
 
 DISTNAME=	gpgme-1.13.1
 CATEGORIES=	security
@@ -16,6 +16,7 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 INFO_FILES=		yes
+CONFIGURE_ARGS+=	--enable-languages="cl cpp"
 
 SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	src/gpgme-config.in
