@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3506 2020/06/10 13:58:00 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3507 2020/06/10 14:25:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5704,3 +5704,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/adplug to 2.3.3 [fcambus 2020-06-10]
 	Updated www/ruby-rouge to 3.20.0 [fcambus 2020-06-10]
 	Updated devel/ruby-ffi to 1.13.1 [taca 2020-06-10]
+	Updated devel/ruby-sexp-processor to 4.15.0 [taca 2020-06-10]
