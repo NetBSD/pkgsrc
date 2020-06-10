@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2018/06/01 22:00:06 youri Exp $
+$NetBSD: distinfo,v 1.6 2020/06/10 20:13:01 nia Exp $
 
-SHA1 (gnome-online-accounts-3.28.0.tar.xz) = 3185530d5605cda0d11ee975e2985bfe59686d74
-RMD160 (gnome-online-accounts-3.28.0.tar.xz) = 70a77e53014a96df9e645c324e0b9a57042e7bb4
-SHA512 (gnome-online-accounts-3.28.0.tar.xz) = b5f83544aca0cd24dbc778a492e0da4ca82eb6acaab375daaf7aa1482acfd31c1ba82c1afc127a8890a63e883ac8a1f277da906819573d672d2d3da7f582c02b
-Size (gnome-online-accounts-3.28.0.tar.xz) = 1531200 bytes
-SHA1 (patch-configure) = ae6503051574e8a918362c1ec547b5399d078206
+SHA1 (gnome-online-accounts-3.36.0.tar.xz) = e1b1f5ddd9d78e9f0822284ddb53f771fe9a96e0
+RMD160 (gnome-online-accounts-3.36.0.tar.xz) = dd5bc0427140b0eaab80687ec53efe4b8ea9f23e
+SHA512 (gnome-online-accounts-3.36.0.tar.xz) = 2d04ea016c1bace9a2cb6ef7a6539c7f878cfa9b309394b18ed692ef1b9b73bf5f93a3f9edcb74170f1be4823a5c9ac6cde3b4e7245906e1b4e130d33eeb1c81
+Size (gnome-online-accounts-3.36.0.tar.xz) = 860472 bytes
+SHA1 (patch-configure) = db66ef8d31189e5b92b0e8e9d9db40b88f87d72c
