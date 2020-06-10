@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3522 2020/06/10 18:39:48 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3523 2020/06/10 19:17:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5720,3 +5720,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/gopls to 0.4.1 [wiz 2020-06-10]
 	Updated chat/libfolks to 0.14.0 [nia 2020-06-10]
 	Updated converters/bdf2sfd to 1.1.2 [fcambus 2020-06-10]
+	Updated devel/libdazzle to 3.36.0 [nia 2020-06-10]
