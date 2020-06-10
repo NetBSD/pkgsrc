@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2020/01/21 15:44:32 nia Exp $
+@comment $NetBSD: PLIST,v 1.43 2020/06/10 19:45:51 nia Exp $
 bin/epiphany
 lib/epiphany/libephymain.so
 lib/epiphany/libephymisc.so
@@ -293,6 +293,34 @@ share/help/hu/epiphany/pref-passwords.page
 share/help/hu/epiphany/pref.page
 share/help/hu/epiphany/prob-restore-closed-page.page
 share/help/hu/epiphany/proxy.page
+share/help/id/epiphany/browse-local.page
+share/help/id/epiphany/browse-private.page
+share/help/id/epiphany/browse-tab.page
+share/help/id/epiphany/browse-web.page
+share/help/id/epiphany/browse-webapps-del.page
+share/help/id/epiphany/browse-webapps.page
+share/help/id/epiphany/cert.page
+share/help/id/epiphany/cookies.xml
+share/help/id/epiphany/data-cookies.page
+share/help/id/epiphany/data-passwords.page
+share/help/id/epiphany/data-personal-data.page
+share/help/id/epiphany/history-delete.page
+share/help/id/epiphany/history.page
+share/help/id/epiphany/index.page
+share/help/id/epiphany/introduction.page
+share/help/id/epiphany/legal.xml
+share/help/id/epiphany/media/epiphany-3-12.png
+share/help/id/epiphany/media/private-browsing-3-12.png
+share/help/id/epiphany/media/web-browser.png
+share/help/id/epiphany/pref-cookies.page
+share/help/id/epiphany/pref-css.page
+share/help/id/epiphany/pref-downloads.page
+share/help/id/epiphany/pref-font.page
+share/help/id/epiphany/pref-mouse-gestures.page
+share/help/id/epiphany/pref-passwords.page
+share/help/id/epiphany/pref.page
+share/help/id/epiphany/prob-restore-closed-page.page
+share/help/id/epiphany/proxy.page
 share/help/ko/epiphany/browse-local.page
 share/help/ko/epiphany/browse-private.page
 share/help/ko/epiphany/browse-tab.page
