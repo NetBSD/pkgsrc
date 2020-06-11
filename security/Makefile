@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.765 2020/06/10 19:54:41 nia Exp $
+# $NetBSD: Makefile,v 1.766 2020/06/11 14:24:49 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -419,6 +419,7 @@ SUBDIR+=	py-asn1
 SUBDIR+=	py-asn1-modules
 SUBDIR+=	py-asn1crypto
 SUBDIR+=	py-asyncssh
+SUBDIR+=	py-authlib
 SUBDIR+=	py-backports.ssl_match_hostname
 SUBDIR+=	py-bcrypt
 SUBDIR+=	py-certbot
