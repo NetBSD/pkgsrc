@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3530 2020/06/11 08:16:45 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3531 2020/06/11 10:58:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5729,3 +5729,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/prometheus to 2.19.0 [adam 2020-06-11]
 	Updated math/py-numpy to 1.18.5 [adam 2020-06-11]
 	Updated math/py-uncertainties to 3.1.4 [adam 2020-06-11]
+	Updated textproc/py-rst2pdf to 0.97 [adam 2020-06-11]
+	Updated devel/py-flake8 to 3.8.3 [adam 2020-06-11]
