@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/18 12:22:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2020/06/11 14:25:51 adam Exp $
 
-SHA1 (py-cpuinfo-5.0.0.tar.gz) = 35d1dce8881c4b3860e86217fff3679e653ba8b7
-RMD160 (py-cpuinfo-5.0.0.tar.gz) = b0e8b732e281c3088fd35e3ea9b1cb8e093c33bf
-SHA512 (py-cpuinfo-5.0.0.tar.gz) = d3a22ffdc4d1668a58330016e3297e57c07f6380e544497b1ad9dfcf0410b000f69418bf1cb9a434a2ffdbc8f17be89a25d33c65817913a823c6e181df6b760e
-Size (py-cpuinfo-5.0.0.tar.gz) = 82118 bytes
+SHA1 (py-cpuinfo-6.0.0.tar.gz) = 63fab512a27f872d15938c2bdcf1e4ea79c3f6c2
+RMD160 (py-cpuinfo-6.0.0.tar.gz) = 327afbffc2d4478164cd8242f8c00353c071884e
+SHA512 (py-cpuinfo-6.0.0.tar.gz) = 4941a5193cc376a44e99bc82644ec9d7e8f9f11b4e5fb1ad22a71c959959dde7f67290b436dfad2f26c68ef17d08e33538cf80443f763268c503af17b8479438
+Size (py-cpuinfo-6.0.0.tar.gz) = 145260 bytes
