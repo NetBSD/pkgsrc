@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/10/02 14:00:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/06/11 13:30:19 ryoon Exp $
 include/c++-gtk-utils-3-2.2/c++-gtk-utils/application.h
 include/c++-gtk-utils-3-2.2/c++-gtk-utils/async_channel.h
 include/c++-gtk-utils-3-2.2/c++-gtk-utils/async_queue.h
@@ -286,7 +286,6 @@ share/doc/c++-gtk-utils/2.2/html/files.html
 share/doc/c++-gtk-utils/2.2/html/folderclosed.png
 share/doc/c++-gtk-utils/2.2/html/folderopen.png
 share/doc/c++-gtk-utils/2.2/html/functions.html
-share/doc/c++-gtk-utils/2.2/html/functions_0x7e.html
 share/doc/c++-gtk-utils/2.2/html/functions_b.html
 share/doc/c++-gtk-utils/2.2/html/functions_c.html
 share/doc/c++-gtk-utils/2.2/html/functions_d.html
@@ -295,7 +294,6 @@ share/doc/c++-gtk-utils/2.2/html/functions_enum.html
 share/doc/c++-gtk-utils/2.2/html/functions_eval.html
 share/doc/c++-gtk-utils/2.2/html/functions_f.html
 share/doc/c++-gtk-utils/2.2/html/functions_func.html
-share/doc/c++-gtk-utils/2.2/html/functions_func_0x7e.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_b.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_c.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_d.html
@@ -317,6 +315,7 @@ share/doc/c++-gtk-utils/2.2/html/functions_func_u.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_v.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_w.html
 share/doc/c++-gtk-utils/2.2/html/functions_func_x.html
+share/doc/c++-gtk-utils/2.2/html/functions_func_~.html
 share/doc/c++-gtk-utils/2.2/html/functions_g.html
 share/doc/c++-gtk-utils/2.2/html/functions_h.html
 share/doc/c++-gtk-utils/2.2/html/functions_i.html
@@ -336,6 +335,7 @@ share/doc/c++-gtk-utils/2.2/html/functions_v.html
 share/doc/c++-gtk-utils/2.2/html/functions_vars.html
 share/doc/c++-gtk-utils/2.2/html/functions_w.html
 share/doc/c++-gtk-utils/2.2/html/functions_x.html
+share/doc/c++-gtk-utils/2.2/html/functions_~.html
 share/doc/c++-gtk-utils/2.2/html/future_8h.html
 share/doc/c++-gtk-utils/2.2/html/future_8h_source.html
 share/doc/c++-gtk-utils/2.2/html/gerror__handle_8h.html
