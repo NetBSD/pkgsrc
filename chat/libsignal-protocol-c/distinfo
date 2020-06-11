@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/11 13:45:36 ryoon Exp $
+
+SHA1 (libsignal-protocol-c-2.3.3.tar.gz) = 3ea0332dbd8e4366facd8de5150ad3a6cdc68987
+RMD160 (libsignal-protocol-c-2.3.3.tar.gz) = 4938f87c0a0e0e9d16ef5738646372c89f86d2ac
+SHA512 (libsignal-protocol-c-2.3.3.tar.gz) = 19d892e13fac32022658de5eaf1db8cec3226f5f3f37a4c1c33bfa9653126ecbc6350a1ab5624025f909803c2277b86321dbea7f64e9932883cae57b65f58112
+Size (libsignal-protocol-c-2.3.3.tar.gz) = 272073 bytes
