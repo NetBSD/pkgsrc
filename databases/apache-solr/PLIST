@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/09 22:20:01 jym Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/11 15:41:23 jym Exp $
 bin/solr
 share/doc/solr/CHANGES.txt
 share/doc/solr/LICENSE.txt
@@ -302,6 +302,7 @@ share/examples/solr/example/films/films-LICENSE.txt
 share/examples/solr/example/films/films.csv
 share/examples/solr/example/films/films.json
 share/examples/solr/example/films/films.xml
+share/examples/solr/log4j.properties
 share/examples/solr/solr.in.sh
 share/examples/solr/solr.xml
 solr/bin/solr
