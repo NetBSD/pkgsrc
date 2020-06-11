@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.76 2020/02/10 08:35:12 adam Exp $
+# $NetBSD: Makefile,v 1.77 2020/06/11 12:14:54 adam Exp $
 
-DISTNAME=	libgpg-error-1.37
+DISTNAME=	libgpg-error-1.38
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/
 MASTER_SITES+=	ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://www.gnupg.org/
+HOMEPAGE=	https://www.gnupg.org/software/libgpg-error/index.html
 COMMENT=	Definitions of common error values for all GnuPG components
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
