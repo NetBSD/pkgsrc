@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.47 2020/06/11 17:57:11 rillig Exp $
+# $NetBSD: subst.sh,v 1.48 2020/06/11 18:04:41 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1388,10 +1388,8 @@ if test_case_begin 'identity substitution, found in file'; then
 
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "id" in file'
-	# demonstrate PR pkg/55364
-	# FIXME: negate
-	if [ ! -f "file.subst.sav" ]; then
-		assert_fail 'FIXME: temporary file still exists\n'
+	if [ -f "file.subst.sav" ]; then
+		assert_fail 'temporary file still exists\n'
 	fi
 
 	test_case_end
