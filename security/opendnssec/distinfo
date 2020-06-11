@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.41 2019/08/30 08:08:21 he Exp $
+$NetBSD: distinfo,v 1.42 2020/06/11 09:41:56 he Exp $
 
 SHA1 (opendnssec-1.4.14.tar.gz) = 3ac11d815572750f604707f87d68db7d593d2e86
 RMD160 (opendnssec-1.4.14.tar.gz) = c323611792c738201ea47f6874a00d127b19c6e2
 SHA512 (opendnssec-1.4.14.tar.gz) = b814d13ef95dcf238f3e9d6bb3dc489328d7a4a5db9e32214ac29716043f9e635e62fb3795b9d5d75e8215373f9330ea5a17840830f5e467067f305a610bee6b
 Size (opendnssec-1.4.14.tar.gz) = 1037188 bytes
 SHA1 (patch-aa) = 104e077af6c368cbb5fc3034d58b2f2249fcf991
+SHA1 (patch-configure) = 689f3fd6f23985421cf7de2d85533f0930a67d8a
 SHA1 (patch-enforcer_utils_Makefile.am) = 80915dee723535e5854e62bc18f00ba2d5d7496c
 SHA1 (patch-enforcer_utils_Makefile.in) = 981896f6fafd978ae435705153b8c6a6dbbc6c11
 SHA1 (patch-enforcer_utils_ksmutil.c) = f9456e0339d45dcc2776375cf40f3f8d9221878f
+SHA1 (patch-m4_acx__ssl.m4) = 792ae2b5de37bb813e5d9e475fbf1d56872f69e6
 SHA1 (patch-signer_src_daemon_engine.c) = 4a33a0220f3b64ba065ab415a5519062a0729e3c
 SHA1 (patch-signer_src_signer_ixfr.c) = 74c2c320080e585a6126e146c453998f44c164f7
 SHA1 (patch-signer_src_signer_zone.c) = 0330236f11ccab7ed83b73bc83d851f932124318
