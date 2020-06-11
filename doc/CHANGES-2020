@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3538 2020/06/11 14:26:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3539 2020/06/11 14:50:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5742,3 +5742,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-tortoise-orm to 0.16.13 [adam 2020-06-11]
 	Added security/py-authlib version 0.14.3 [adam 2020-06-11]
 	Updated sysutils/py-cpuinfo to 6.0.0 [adam 2020-06-11]
+	Updated x11/py-sip to 4.19.23 [adam 2020-06-11]
+	Updated x11/py-qt5 to 5.15.0 [adam 2020-06-11]
