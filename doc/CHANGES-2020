@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3532 2020/06/11 11:22:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3533 2020/06/11 12:16:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5733,3 +5733,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-flake8 to 3.8.3 [adam 2020-06-11]
 	Updated databases/mongodb to 4.2.7 [adam 2020-06-11]
 	Updated databases/redis to 6.0.5 [adam 2020-06-11]
+	Updated security/libgpg-error to 1.38 [adam 2020-06-11]
+	Updated devel/py-distorm3 to 3.5.0 [adam 2020-06-11]
