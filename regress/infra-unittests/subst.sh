@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.48 2020/06/11 18:04:41 rillig Exp $
+# $NetBSD: subst.sh,v 1.49 2020/06/11 20:10:53 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -38,6 +38,12 @@ test_case_set_up() {
 		WRKDIR=		$PWD
 		WRKSRC=		$PWD
 	EOF
+
+	create_file_lines "$mocked_pkgsrcdir/show-pkg-fail-reason.mk" \
+		'show-pkg-fail-reasons: .PHONY' \
+		'.if ${PKG_FAIL_REASON:M*}' \
+		'	@printf "fail reason: %s\n" ${PKG_FAIL_REASON} 1>&2 && exit 1' \
+		'.endif'
 }
 
 
@@ -1522,6 +1528,42 @@ if test_case_begin 'SUBST_FILTER_CMD + SUBST_SED in NOOP_OK=no mode'; then
 		'fail reason: [subst.mk:id] SUBST_FILTER_CMD and SUBST_SED/SUBST_VARS cannot be combined.'
 	assert_that 'file' --file-is-lines \
 		'letters  letters'
+
+	test_case_end
+fi
+
+
+if test_case_begin 'SUBST_FILTER_CMD + empty SUBST_SED'; then
+
+	# If SUBST_FILTER_CMD is defined for a SUBST class,
+	# the corresponding SUBST_SED and SUBST_VARS are ignored.
+	# To avoid redundant variable definitions, this case fails fast.
+	#
+	# This happens even if SUBST_SED or SUBST_VARS are empty since
+	# there is no point in setting these to empty values.
+	# In most cases they are constant and non-empty anyway.
+
+	create_file_lines 'testcase.mk' \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_FILTER_CMD.id=	tr -d "0-9"' \
+		'SUBST_SED.id=		# empty' \
+		'SUBST_VARS.id=		# empty' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"' \
+		'.include "show-pkg-fail-reason.mk"'
+
+	run_bmake 'testcase.mk' 'show-pkg-fail-reasons' 'subst-id' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$tmpdir/output" --file-is-lines \
+		'fail reason: [subst.mk:id] SUBST_FILTER_CMD and SUBST_SED/SUBST_VARS cannot be combined.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
 
 	test_case_end
 fi
