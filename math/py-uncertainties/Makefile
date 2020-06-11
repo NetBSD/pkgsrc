@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/04/27 18:57:23 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/11 08:16:27 adam Exp $
 
-DISTNAME=	uncertainties-3.1.2
+DISTNAME=	uncertainties-3.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uncertainties/}
