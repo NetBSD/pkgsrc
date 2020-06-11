@@ -1,7 +1,9 @@
-$NetBSD: patch-programs_aes_crypt__and__hash.c,v 1.1 2020/06/02 15:07:59 nia Exp $
+$NetBSD: patch-programs_aes_crypt__and__hash.c,v 1.2 2020/06/11 11:43:50 nia Exp $
 
 Not actually so harmless on SunOS, which requires at least 200112L
 when compiling c99.
+
+https://github.com/ARMmbed/mbedtls/pull/3421
 
 --- programs/aes/crypt_and_hash.c.orig	2020-04-09 13:12:23.000000000 +0000
 +++ programs/aes/crypt_and_hash.c
