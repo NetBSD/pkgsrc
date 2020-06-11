@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3541 2020/06/11 17:13:00 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3542 2020/06/11 17:29:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5747,3 +5747,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/apache-solr to 8.5.2 [jym 2020-06-11]
 	Updated benchmarks/google-benchmark to 1.5.1 [adam 2020-06-11]
 	Updated net/iperf3 to 3.8.1 [adam 2020-06-11]
+	Updated mail/msmtp to 1.8.11 [ryoon 2020-06-11]
