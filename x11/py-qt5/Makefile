@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2020/04/28 05:47:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.58 2020/06/11 14:50:33 adam Exp $
 
-DISTNAME=	PyQt5-5.14.2
+DISTNAME=	PyQt5-5.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5/}
@@ -8,13 +8,13 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt5
 HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt/intro
-LICENSE=	gnu-gpl-v3 
+LICENSE=	gnu-gpl-v3
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
-DEPENDS+=	${PYPKGPREFIX}-sip-qt5-[0-9]*:../../x11/py-sip-qt5
+DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=4.19.23:../../x11/py-sip-qt5
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -85,7 +85,7 @@ PLIST.dbus=	yes
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/dbus-python-common/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.19.14
+BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.19.23
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtcharts/buildlink3.mk"
