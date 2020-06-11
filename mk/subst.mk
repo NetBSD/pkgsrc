@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.96 2020/06/11 18:04:41 rillig Exp $
+# $NetBSD: subst.mk,v 1.97 2020/06/11 19:27:56 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -187,7 +187,7 @@ ${_SUBST_COOKIE.${class}}:
 	noop_sep='';							\
 	for pattern in $$patterns; do					\
 		set +f;							\
-		changed=no;						\
+		found_any=no;						\
 		for file in $$pattern; do				\
 			case $$file in ([!A-Za-z0-9/]*) file="./$$file";; esac; \
 			tmpfile="$$file.subst.sav";			\
@@ -200,24 +200,24 @@ ${_SUBST_COOKIE.${class}}:
 				${_SUBST_WARN.${class}} "Ignoring non-text file \"$$file\"."; \
 				continue;				\
 			};						\
-			${SUBST_FILTER_CMD.${class}} < "$$file" > "$$tmpfile";	\
+			${SUBST_FILTER_CMD.${class}} < "$$file" > "$$tmpfile"; \
 			${CMP} -s "$$tmpfile" "$$file" && {		\
 				${AWK} -f ${PKGSRCDIR}/mk/scripts/subst-identity.awk -- ${SUBST_SED.${class}} \
-				&& found=$$(LC_ALL=C ${SED} -n ${SUBST_SED.${class}:C,^['"]?s.*,&p,} "$$file") \
-				&& [ -n "$$found" ]			\
-				&& changed=yes				\
+				&& found_text=$$(LC_ALL=C ${SED} -n ${SUBST_SED.${class}:C,^['"]?s.*,&p,} "$$file") \
+				&& [ -n "$$found_text" ]		\
+				&& found_any=yes			\
 				|| ${_SUBST_WARN.${class}} "Nothing changed in \"$$file\"."; \
 				${RM} -f "$$tmpfile";			\
 				continue;				\
 			};						\
 			[ -x "$$file" ] && ${CHMOD} +x "$$tmpfile";	\
-			changed=yes;					\
+			found_any=yes;					\
 			${_SUBST_KEEP.${class}};			\
 			${MV} -f "$$tmpfile" "$$file"; 			\
 			${ECHO} "$$file" >> ${.TARGET}.tmp;		\
 		done;							\
 									\
-		[ "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no ] && { \
+		[ "$$found_any,${SUBST_NOOP_OK.${class}:tl}" = no,no ] && { \
 			noop_count="$$noop_count+";			\
 			noop_patterns="$$noop_patterns$$noop_sep$$pattern"; \
 			noop_sep=" ";					\
