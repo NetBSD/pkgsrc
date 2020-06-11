@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/06/10 15:39:44 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/11 10:30:41 adam Exp $
 
-DISTNAME=	rst2pdf-0.94.1
+DISTNAME=	rst2pdf-0.97
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python textproc
-# PyPI distfile does not include images, styles, and templates
-#MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rst2pdf/}
-GITHUB_PROJECT=	rst2pdf
+CATEGORIES=	textproc python
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
 
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	https://rst2pdf.org/
@@ -24,12 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-smartypants-[0-9]*:../../textproc/py-smartypants
 TEST_DEPENDS+=	${PYPKGPREFIX}-PDF2-[0-9]*:../../print/py-PDF2
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED=	27
-
-# setup.cfg contains only 'tag_build = .dev', which we don't want.
-pre-configure:
-	${RM} ${WRKSRC}/setup.cfg
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

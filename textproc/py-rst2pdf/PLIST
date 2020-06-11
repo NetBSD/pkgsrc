@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/08 10:20:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/11 10:30:41 adam Exp $
 bin/rst2pdf-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -77,9 +77,6 @@ ${PYSITELIB}/rst2pdf/languages.pyo
 ${PYSITELIB}/rst2pdf/log.py
 ${PYSITELIB}/rst2pdf/log.pyc
 ${PYSITELIB}/rst2pdf/log.pyo
-${PYSITELIB}/rst2pdf/math_directive.py
-${PYSITELIB}/rst2pdf/math_directive.pyc
-${PYSITELIB}/rst2pdf/math_directive.pyo
 ${PYSITELIB}/rst2pdf/math_flowable.py
 ${PYSITELIB}/rst2pdf/math_flowable.pyc
 ${PYSITELIB}/rst2pdf/math_flowable.pyo
