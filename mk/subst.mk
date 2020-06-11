@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.95 2020/06/03 10:56:46 gdt Exp $
+# $NetBSD: subst.mk,v 1.96 2020/06/11 18:04:41 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -204,11 +204,9 @@ ${_SUBST_COOKIE.${class}}:
 			${CMP} -s "$$tmpfile" "$$file" && {		\
 				${AWK} -f ${PKGSRCDIR}/mk/scripts/subst-identity.awk -- ${SUBST_SED.${class}} \
 				&& found=$$(LC_ALL=C ${SED} -n ${SUBST_SED.${class}:C,^['"]?s.*,&p,} "$$file") \
-				&& [ -n "$$found" ] && {		\
-					changed=yes;			\
-					continue;			\
-				};					\
-				${_SUBST_WARN.${class}} "Nothing changed in \"$$file\"."; \
+				&& [ -n "$$found" ]			\
+				&& changed=yes				\
+				|| ${_SUBST_WARN.${class}} "Nothing changed in \"$$file\"."; \
 				${RM} -f "$$tmpfile";			\
 				continue;				\
 			};						\
