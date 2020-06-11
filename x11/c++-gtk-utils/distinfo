@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2019/10/02 14:00:17 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2020/06/11 13:30:19 ryoon Exp $
 
-SHA1 (c++-gtk-utils-2.2.18.tar.gz) = 2a3bc8d547da80aea3791b16e5fe15588d4139ed
-RMD160 (c++-gtk-utils-2.2.18.tar.gz) = b9b7b5b2f0c10cd6a635ae47eed36c11117ef52a
-SHA512 (c++-gtk-utils-2.2.18.tar.gz) = 46fece74e3a3908573cfe161c870f63b9bd442eaf9eea6da03843dc03e010ba073696232206c37a10dd7eedf1aa748cedbbd5e3a58af1cabc98d804095aa3d54
-Size (c++-gtk-utils-2.2.18.tar.gz) = 3031253 bytes
+SHA1 (c++-gtk-utils-2.2.19.tar.gz) = e8d3350f2ce7fddf5a36db1a992e5257881a8fba
+RMD160 (c++-gtk-utils-2.2.19.tar.gz) = 76209538c35a9efb613ac9446db9d8ae70309454
+SHA512 (c++-gtk-utils-2.2.19.tar.gz) = c6527cc32b6a14a5fe24705a91a6918863f418ec8a274d24c79b65e905efefab53a5e53edfa57b31ed8b14ab8d9d26b4876861cab37e3702df456feb84e1cc5c
+Size (c++-gtk-utils-2.2.19.tar.gz) = 3060284 bytes
 SHA1 (patch-c++-gtk-utils_Makefile.in) = ae1210a771a5d094a7acad46ebc1992802ddf3a2
 SHA1 (patch-tests_test__fdstream.cpp) = 2735a0ab4646e14719ec9fb2c96c8bd1f31b7f7d
 SHA1 (patch-tests_test__gstream.cpp) = 0977bdfdb96b9b6ba42eefa67e17933fcd662f3b
