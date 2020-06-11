@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2020/04/12 06:19:56 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/06/11 14:49:15 adam Exp $
 #
 # used by x11/py-sip/Makefile
 # used by x11/py-sip-qt5/Makefile
 
-DISTNAME=	sip-4.19.22
+DISTNAME=	sip-4.19.23
 CATEGORIES=	x11 devel python
 MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/sip/${PKGVERSION_NOREV}/
 
