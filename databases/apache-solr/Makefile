@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/06/09 22:20:01 jym Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/11 15:41:23 jym Exp $
 
 DISTNAME=	solr-${SOLR_VER}
 PKGNAME=	apache-solr-${SOLR_VER}
-SOLR_VER=	8.5.1
+SOLR_VER=	8.5.2
 CATEGORIES=	databases textproc
 MASTER_SITES=	${MASTER_SITE_APACHE:=lucene/solr/${SOLR_VER}/}
 EXTRACT_SUFX=	.tgz
@@ -38,6 +38,7 @@ SOLR_EXAMPLE?=	${EGDIR}/example
 BUILD_DEFS+=	SOLR_USER SOLR_GROUP SOLR_HOME SOLR_PORT
 BUILD_DEFS+=	SOLR_LOGDIR SOLR_PIDDIR VARBASE
 
+CONF_FILES+=	${EGDIR}/log4j.properties ${PKG_SYSCONFDIR}/log4j.properties
 CONF_FILES+=	${EGDIR}/solr.in.sh ${PKG_SYSCONFDIR}/solr.in.sh
 CONF_FILES+=	${EGDIR}/solr.xml   ${PKG_SYSCONFDIR}/solr.xml
 
@@ -60,7 +61,7 @@ PKG_GROUPS_VARS+=	SOLR_GROUP
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	solr.in.sh bin/solr
+SUBST_FILES.paths=	solr.in.sh log4j.properties bin/solr
 SUBST_VARS.paths+=	PKG_SYSCONFDIR PREFIX SOLR_HOME SOLR_PORT
 SUBST_VARS.paths+=	SOLR_EXAMPLE SOLR_LOGDIR SOLR_PIDDIR
 
@@ -77,6 +78,7 @@ INSTALLATION_DIRS=	bin ${DOCDIR} ${EGDIR} ${SOLR_DIR}
 
 pre-patch:
 	${CP} ${FILESDIR}/solr.in.sh ${WRKSRC}/solr.in.sh
+	${CP} ${FILESDIR}/log4j.properties ${WRKSRC}/log4j.properties
 
 do-install:
 .for f in ${DOCS}
@@ -87,6 +89,8 @@ do-install:
 	cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${SOLR_DIR}/${d}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/solr.in.sh ${DESTDIR}${EGDIR}/solr.in.sh
+	${INSTALL_DATA} ${WRKSRC}/log4j.properties \
+	    ${DESTDIR}${EGDIR}/log4j.properties
 	${INSTALL_DATA} ${WRKSRC}/server/solr/solr.xml \
 		${DESTDIR}${EGDIR}/solr.xml
 	${INSTALL_DATA_DIR} ${DESTDIR}${SOLR_EXAMPLE}
