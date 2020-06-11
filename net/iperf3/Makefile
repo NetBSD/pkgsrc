@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:50 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/06/11 17:12:43 adam Exp $
 
-DISTNAME=	iperf-3.7
+DISTNAME=	iperf-3.8.1
 PKGNAME=	${DISTNAME:S/iperf/iperf3/}
-PKGREVISION=	1
 CATEGORIES=	net benchmarks
 MASTER_SITES=	http://downloads.es.net/pub/iperf/
 
@@ -14,9 +13,10 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-profiling
+#CONFIGURE_ARGS+=	--disable-profiling
+CONFIGURE_ARGS.NetBSD+=	--without-sctp
 # sctp_bindx() is in headers, but unusable
-CONFIGURE_ENV.NetBSD+=	ac_cv_header_netinet_sctp_h=no
+#CONFIGURE_ENV.NetBSD+=	ac_cv_header_netinet_sctp_h=no
 TEST_TARGET=		check
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
