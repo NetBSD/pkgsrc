@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/06/11 17:12:43 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2020-06-11 17:02:40.000000000 +0000
++++ configure
+@@ -2309,7 +2309,7 @@ else
+ fi
+ 
+ 
+-if test "x$enable_static_bin" == xyes; then :
++if test "x$enable_static_bin" = xyes; then :
+   LDFLAGS="$LDFLAGS --static"
+ 
+ fi
