@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.98 2020/06/11 19:38:40 rillig Exp $
+# $NetBSD: subst.mk,v 1.99 2020/06/11 20:13:22 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -145,7 +145,6 @@ PKG_FAIL_REASON+=		"[subst.mk:${class}] SUBST_FILTER_CMD and SUBST_SED/SUBST_VAR
 .endif
 
 SUBST_FILTER_CMD.${class}?=	LC_ALL=C ${SED} ${SUBST_SED.${class}}
-SUBST_VARS.${class}?=		# none
 SUBST_MESSAGE.${class}?=	Substituting "${class}" in ${SUBST_FILES.${class}}
 .  for v in ${SUBST_VARS.${class}}
 SUBST_FILTER_CMD.${class}+=	-e s,@${v:C|[.[\\*^]|\\\\&|gW:Q}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:S|${.newline}|\\${.newline}|gW:Q},g
