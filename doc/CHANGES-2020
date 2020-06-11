@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3537 2020/06/11 14:07:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3538 2020/06/11 14:26:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5740,3 +5740,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added chat/libsignal-protocol-c version 2.3.3 [ryoon 2020-06-11]
 	Added textproc/py-rapidjson version 0.9.1 [adam 2020-06-11]
 	Updated databases/py-tortoise-orm to 0.16.13 [adam 2020-06-11]
+	Added security/py-authlib version 0.14.3 [adam 2020-06-11]
+	Updated sysutils/py-cpuinfo to 6.0.0 [adam 2020-06-11]
