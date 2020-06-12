@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/16 14:27:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/12 06:06:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,6 +31,9 @@ ${PYSITELIB}/google/api_core/future/__init__.pyo
 ${PYSITELIB}/google/api_core/future/_helpers.py
 ${PYSITELIB}/google/api_core/future/_helpers.pyc
 ${PYSITELIB}/google/api_core/future/_helpers.pyo
+${PYSITELIB}/google/api_core/future/async_future.py
+${PYSITELIB}/google/api_core/future/async_future.pyc
+${PYSITELIB}/google/api_core/future/async_future.pyo
 ${PYSITELIB}/google/api_core/future/base.py
 ${PYSITELIB}/google/api_core/future/base.pyc
 ${PYSITELIB}/google/api_core/future/base.pyo
@@ -46,9 +49,15 @@ ${PYSITELIB}/google/api_core/gapic_v1/client_info.pyo
 ${PYSITELIB}/google/api_core/gapic_v1/config.py
 ${PYSITELIB}/google/api_core/gapic_v1/config.pyc
 ${PYSITELIB}/google/api_core/gapic_v1/config.pyo
+${PYSITELIB}/google/api_core/gapic_v1/config_async.py
+${PYSITELIB}/google/api_core/gapic_v1/config_async.pyc
+${PYSITELIB}/google/api_core/gapic_v1/config_async.pyo
 ${PYSITELIB}/google/api_core/gapic_v1/method.py
 ${PYSITELIB}/google/api_core/gapic_v1/method.pyc
 ${PYSITELIB}/google/api_core/gapic_v1/method.pyo
+${PYSITELIB}/google/api_core/gapic_v1/method_async.py
+${PYSITELIB}/google/api_core/gapic_v1/method_async.pyc
+${PYSITELIB}/google/api_core/gapic_v1/method_async.pyo
 ${PYSITELIB}/google/api_core/gapic_v1/routing_header.py
 ${PYSITELIB}/google/api_core/gapic_v1/routing_header.pyc
 ${PYSITELIB}/google/api_core/gapic_v1/routing_header.pyo
@@ -58,15 +67,24 @@ ${PYSITELIB}/google/api_core/general_helpers.pyo
 ${PYSITELIB}/google/api_core/grpc_helpers.py
 ${PYSITELIB}/google/api_core/grpc_helpers.pyc
 ${PYSITELIB}/google/api_core/grpc_helpers.pyo
+${PYSITELIB}/google/api_core/grpc_helpers_async.py
+${PYSITELIB}/google/api_core/grpc_helpers_async.pyc
+${PYSITELIB}/google/api_core/grpc_helpers_async.pyo
 ${PYSITELIB}/google/api_core/iam.py
 ${PYSITELIB}/google/api_core/iam.pyc
 ${PYSITELIB}/google/api_core/iam.pyo
 ${PYSITELIB}/google/api_core/operation.py
 ${PYSITELIB}/google/api_core/operation.pyc
 ${PYSITELIB}/google/api_core/operation.pyo
+${PYSITELIB}/google/api_core/operation_async.py
+${PYSITELIB}/google/api_core/operation_async.pyc
+${PYSITELIB}/google/api_core/operation_async.pyo
 ${PYSITELIB}/google/api_core/operations_v1/__init__.py
 ${PYSITELIB}/google/api_core/operations_v1/__init__.pyc
 ${PYSITELIB}/google/api_core/operations_v1/__init__.pyo
+${PYSITELIB}/google/api_core/operations_v1/operations_async_client.py
+${PYSITELIB}/google/api_core/operations_v1/operations_async_client.pyc
+${PYSITELIB}/google/api_core/operations_v1/operations_async_client.pyo
 ${PYSITELIB}/google/api_core/operations_v1/operations_client.py
 ${PYSITELIB}/google/api_core/operations_v1/operations_client.pyc
 ${PYSITELIB}/google/api_core/operations_v1/operations_client.pyo
@@ -76,6 +94,9 @@ ${PYSITELIB}/google/api_core/operations_v1/operations_client_config.pyo
 ${PYSITELIB}/google/api_core/page_iterator.py
 ${PYSITELIB}/google/api_core/page_iterator.pyc
 ${PYSITELIB}/google/api_core/page_iterator.pyo
+${PYSITELIB}/google/api_core/page_iterator_async.py
+${PYSITELIB}/google/api_core/page_iterator_async.pyc
+${PYSITELIB}/google/api_core/page_iterator_async.pyo
 ${PYSITELIB}/google/api_core/path_template.py
 ${PYSITELIB}/google/api_core/path_template.pyc
 ${PYSITELIB}/google/api_core/path_template.pyo
@@ -85,6 +106,9 @@ ${PYSITELIB}/google/api_core/protobuf_helpers.pyo
 ${PYSITELIB}/google/api_core/retry.py
 ${PYSITELIB}/google/api_core/retry.pyc
 ${PYSITELIB}/google/api_core/retry.pyo
+${PYSITELIB}/google/api_core/retry_async.py
+${PYSITELIB}/google/api_core/retry_async.pyc
+${PYSITELIB}/google/api_core/retry_async.pyo
 ${PYSITELIB}/google/api_core/timeout.py
 ${PYSITELIB}/google/api_core/timeout.pyc
 ${PYSITELIB}/google/api_core/timeout.pyo
