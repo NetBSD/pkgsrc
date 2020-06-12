@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/10/26 22:47:08 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/12 21:04:41 wiz Exp $
 
-DISTNAME=	lazy-object-proxy-1.4.3
+DISTNAME=	lazy-object-proxy-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazy-object-proxy/}
