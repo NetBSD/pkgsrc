@@ -1,27 +1,20 @@
-# $NetBSD: options.mk,v 1.30 2016/01/13 22:25:38 wiz Exp $
+# $NetBSD: options.mk,v 1.31 2020/06/12 11:40:19 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
-PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farstream gnome gnutls
+PKG_OPTIONS_REQUIRED_GROUPS=	ssl
+PKG_OPTIONS_GROUP.ssl=		gnutls nss
+PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farstream
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl sasl tcl
-PKG_SUGGESTED_OPTIONS+=		dbus farstream gnome gstreamer
+PKG_SUGGESTED_OPTIONS+=		dbus farstream gstreamer gnutls
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		avahi dbus gnome gnutls nss perl tcl
+PLIST_VARS+=		avahi dbus gnutls nss perl tcl vv
 
 .if !empty(PKG_OPTIONS:Mavahi)
 PLIST.avahi=		yes
 CONFIGURE_ARGS+=	--enable-avahi
 .  include "../../net/avahi/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnome)
-PLIST.gnome=		yes
-.  include "../../devel/GConf/schemas.mk"
-GCONF_SCHEMAS+=		purple.schemas
-.else
-CONFIGURE_ARGS+=	--disable-schemas-install
-CONFIGURE_ENV+=		ac_cv_path_GCONFTOOL="no"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnutls)
@@ -30,8 +23,9 @@ CONFIGURE_ARGS+=	--enable-gnutls
 CONFIGURE_ARGS+= --with-gnutls-includes=${BUILDLINK_PREFIX.gnutls}/include
 CONFIGURE_ARGS+= --with-gnutls-libs=${BUILDLINK_PREFIX.gnutls}/lib
 .  include "../../security/gnutls/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-gnutls
+.endif
+
+.if !empty(PKG_OPTIONS:Mnss)
 PLIST.nss=		yes
 CONFIGURE_ARGS+=	--enable-nss
 CONFIGURE_ARGS+= --with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
