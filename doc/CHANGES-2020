@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3565 2020/06/12 14:49:58 sevan Exp $
+$NetBSD: CHANGES-2020,v 1.3566 2020/06/12 15:00:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5777,3 +5777,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/minitube to 3.4.2 [ryoon 2020-06-12]
 	Added chat/dino version 0.1.0 [ryoon 2020-06-12]
 	Updated devel/gmake to 4.3 [sevan 2020-06-12]
+	Updated print/cups-filters to 1.27.5 [leot 2020-06-12]
