@@ -1,0 +1,12 @@
+$NetBSD: patch-main_CMakeLists.txt,v 1.1 2020/06/12 14:20:51 ryoon Exp $
+
+https://github.com/dino/dino/issues/438
+
+--- main/CMakeLists.txt.orig	2020-01-29 19:11:48.000000000 +0000
++++ main/CMakeLists.txt
+@@ -198,3 +198,5 @@ install(FILES
+ DESTINATION
+     ${ICON_INSTALL_DIR}/hicolor/scalable/status
+ )
++
++set_target_properties(dino PROPERTIES ENABLE_EXPORTS TRUE)
