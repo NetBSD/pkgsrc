@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2020/05/31 19:47:01 leot Exp $
+# $NetBSD: Makefile,v 1.58 2020/06/12 19:10:34 leot Exp $
 
-DISTNAME=	gallery_dl-1.14.0
+DISTNAME=	gallery_dl-1.14.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gallery-dl/}
