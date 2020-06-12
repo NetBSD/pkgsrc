@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3556 2020/06/12 11:42:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3557 2020/06/12 11:42:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5768,3 +5768,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/finch to 2.14.1 [nia 2020-06-12]
 	Updated chat/pidgin to 2.14.1 [nia 2020-06-12]
 	Updated chat/pidgin-sametime to 2.14.1 [nia 2020-06-12]
+	Updated chat/pidgin-silc to 2.14.1 [nia 2020-06-12]
