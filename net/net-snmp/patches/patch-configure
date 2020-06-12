@@ -1,8 +1,48 @@
-$NetBSD: patch-af,v 1.16 2013/03/17 00:15:29 gdt Exp $
+$NetBSD: patch-configure,v 1.1 2020/06/12 02:22:08 sevan Exp $
 
---- configure.orig	2012-10-09 22:35:37.000000000 +0000
-+++ configure
-@@ -20981,6 +20981,81 @@ fi
+- Fix configure to look for des_cbc_encrypt in -ldes
+- Fix configure on FreeBSD 10 & newer
+- Fix portability bug in test
+
+--- configure.orig	2018-07-16 15:33:50.000000000 +0100
++++ configure	2020-06-12 00:08:19.741995000 +0100
+@@ -13923,7 +13923,7 @@
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -14917,7 +14917,7 @@
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -14928,7 +14928,7 @@
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -19637,7 +19637,7 @@
+ fi
+ 
+ # Linux systemd
+-if test "x$with_systemd" == "xyes"; then
++if test "x$with_systemd" = "xyes"; then
+   other_src_list="$other_src_list sd-daemon.c"
+   other_objs_list="$other_objs_list sd-daemon.o"
+   other_lobjs_list="$other_lobjs_list sd-daemon.lo"
+@@ -22715,6 +22715,81 @@
  ##
  #########################################
  
@@ -84,3 +124,14 @@ $NetBSD: patch-af,v 1.16 2013/03/17 00:15:29 gdt Exp $
  ##
  #   Compilation-related
  ##
+@@ -32360,6 +32435,10 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
