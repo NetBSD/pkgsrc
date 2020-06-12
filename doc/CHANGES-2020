@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3549 2020/06/12 08:23:15 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3550 2020/06/12 10:35:49 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5760,3 +5760,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-pep517 version 0.8.2 [adam 2020-06-12]
 	Updated devel/py-importlib-metadata to 1.6.1 [adam 2020-06-12]
 	Updated www/logswan to 2.1.5 [fcambus 2020-06-12]
+	Updated security/mozilla-rootcerts to 1.0.20200529nb1 [maya 2020-06-12]
+	Updated security/mozilla-rootcerts-openssl to 2.4nb1 [maya 2020-06-12]
