@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3544 2020/06/11 20:55:24 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3545 2020/06/12 02:23:44 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5750,3 +5750,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/msmtp to 1.8.11 [ryoon 2020-06-11]
 	Updated net/rclone to 1.52.1 [leot 2020-06-11]
 	Updated security/sqlmap to 1.4.6 [leot 2020-06-11]
+	Updated net/net-snmp to 5.8 [sevan 2020-06-12]
