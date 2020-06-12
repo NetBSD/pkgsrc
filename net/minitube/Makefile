@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2020/06/05 12:37:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/12 14:09:03 ryoon Exp $
 
-DISTNAME=	minitube_3.4.orig
-PKGNAME=	${DISTNAME:S/.orig$//:S/_/-/}
+DISTNAME=	minitube-3.4.2
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/m/minitube/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=flaviotordini/}
+GITHUB_PROJECT=	minitube
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://flavio.tordini.org/minitube
@@ -11,8 +13,6 @@ COMMENT=	YouTube desktop application
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c++
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 # MAINTAINER's API key of Google's YouTube Data API v3
 # It is strictly prohibited to use this outside pkgsrc.
