@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.110 2020/06/12 14:48:38 sevan Exp $
+# $NetBSD: Makefile,v 1.111 2020/06/12 23:50:16 sevan Exp $
 
-DISTNAME=	make-4.3
+DISTNAME=	make-4.2.1
 PKGNAME=	g${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=make/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/make/make.html
