@@ -267,12 +267,15 @@ func (v *Var) updateConstantValue(mkline *MkLine) {
 		}
 
 	case opAssignAppend:
-		v.constantValue += " " + value
+		if v.constantState != 0 {
+			v.constantValue += " "
+		}
+		v.constantValue += value
 
 	default:
 		v.constantState = 3
 		v.constantValue = ""
 	}
 
-	v.constantState = [...]uint8{1, 1, 3, 3}[v.constantState]
+	v.constantState |= 1
 }

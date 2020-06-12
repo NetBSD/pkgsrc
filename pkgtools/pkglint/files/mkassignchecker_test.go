@@ -10,14 +10,14 @@ func (s *Suite) Test_NewMkAssignChecker(c *check.C) {
 
 	ck := NewMkAssignChecker(mklines.mklines[0], mklines)
 
-	ck.checkVarassign()
+	ck.check()
 
 	t.CheckOutputLines(
 		"WARN: filename.mk:1: VAR is defined but not used.",
 		"WARN: filename.mk:1: OTHER is used but not defined.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassign(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_check(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -34,7 +34,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassign(c *check.C) {
 
 // Pkglint once interpreted all lists as consisting of shell tokens,
 // splitting this URL at the ampersand.
-func (s *Suite) Test_MkAssignChecker_checkVarassign__URL_with_shell_special_characters(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_check__URL_with_shell_special_characters(c *check.C) {
 	t := s.Init(c)
 
 	pkg := NewPackage(t.File("graphics/gimp-fix-ca"))
@@ -48,7 +48,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassign__URL_with_shell_special_char
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassign__list(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_check__list(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
@@ -82,7 +82,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassign__list(c *check.C) {
 		"")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeft(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeft(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("module.mk",
@@ -100,7 +100,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeft(c *check.C) {
 
 // Files from the pkgsrc infrastructure may define and use variables
 // whose name starts with an underscore.
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeft__infrastructure(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeft__infrastructure(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
@@ -116,7 +116,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeft__infrastructure(c *check
 		"WARN: ~/mk/infra.mk:2: _VARNAME is defined but not used.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeft__documented_underscore(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeft__documented_underscore(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
@@ -130,7 +130,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeft__documented_underscore(c
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftNotUsed__procedure_call(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftNotUsed__procedure_call(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/pkg-build-options.mk")
@@ -156,7 +156,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftNotUsed__procedure_call(c
 		"WARN: ~/category/package/filename.mk:6: VAR is defined but not used.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftNotUsed__procedure_call_no_tracing(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftNotUsed__procedure_call_no_tracing(c *check.C) {
 	t := s.Init(c)
 
 	t.DisableTracing() // Just for code coverage
@@ -172,7 +172,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftNotUsed__procedure_call_n
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftNotUsed__infra(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftNotUsed__infra(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/infra.mk",
@@ -200,7 +200,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftNotUsed__infra(c *check.C
 		"WARN: ~/category/package/Makefile:22: UNDOCUMENTED is used but not defined.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftDeprecated(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftDeprecated(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
@@ -211,7 +211,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftDeprecated(c *check.C) {
 			varname+"=\t# none")
 		ck := NewMkAssignChecker(mklines.mklines[0], mklines)
 
-		ck.checkVarassignLeftDeprecated()
+		ck.checkLeftDeprecated()
 
 		t.CheckOutput(diagnostics)
 	}
@@ -224,7 +224,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftDeprecated(c *check.C) {
 		nil...)
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftBsdPrefs(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftBsdPrefs(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("-Wall", "--only", "bsd.prefs.mk")
@@ -257,7 +257,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftBsdPrefs(c *check.C) {
 // Up to 2019-12-03, pkglint didn't issue a warning if a default assignment
 // to a package-settable variable appeared before one to a user-settable
 // variable. This was a mistake.
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftBsdPrefs__first_time(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftBsdPrefs__first_time(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -276,7 +276,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftBsdPrefs__first_time(c *c
 			"be given a default value by any package.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftBsdPrefs__vartype_nil(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftBsdPrefs__vartype_nil(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("builtin.mk",
@@ -290,7 +290,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftBsdPrefs__vartype_nil(c *
 		"WARN: builtin.mk:2: Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftUserSettable(c *check.C) {
 	t := s.Init(c)
 
 	// TODO: Allow CreateFileLines before SetUpPackage, since it matches
@@ -335,7 +335,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable(c *check.C) 
 			"which differs from the default value \"default\" from mk/defaults/mk.conf.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable__before_prefs(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftUserSettable__before_prefs(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("-Wall", "--explain")
@@ -358,7 +358,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable__before_pref
 		"")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable__after_prefs(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftUserSettable__after_prefs(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("-Wall", "--explain")
@@ -377,7 +377,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable__after_prefs
 		"NOTE: Makefile:21: Redundant definition for AFTER from mk/defaults/mk.conf.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable__vartype_nil(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftUserSettable__vartype_nil(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("category/package/allVars.mk",
@@ -405,7 +405,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable__vartype_nil
 		"WARN: Makefile:20: USER_SETTABLE is defined but not used.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions__hacks_mk(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftPermissions__hacks_mk(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -422,7 +422,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions__hacks_mk(c *
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftPermissions(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -466,7 +466,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions(c *check.C) {
 			"but not options.mk.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions__no_tracing(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftPermissions__no_tracing(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -483,7 +483,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions__no_tracing(c
 // languages like Perl or Python that suggest certain licenses.
 //
 // The default license is typically set in a Makefile.common or module.mk.
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions__license_default(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftPermissions__license_default(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
@@ -502,7 +502,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions__license_defa
 }
 
 // Don't check the permissions for infrastructure files since they have their own rules.
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions__infrastructure(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkLeftPermissions__infrastructure(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -517,7 +517,26 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftPermissions__infrastructu
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignLeftRationale(c *check.C) {
+// Seen in x11/gtkmm3 before 2020-06-07.
+func (s *Suite) Test_MkAssignChecker_checkLeftAbiDepends(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"BUILDLINK_ABI_DEPENDS.lib+=\tlib>=1.0")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// It may be a good idea to not only check the buildlink identifier
+	// for ${BUILDLINK_PREFIX.*} but also for appending to
+	// BUILDLINK_API_DEPENDS and BUILDLINK_ABI_DEPENDS.
+	t.CheckOutputLines(
+		"ERROR: Makefile:20: Packages must only require API versions, " +
+			"not ABI versions of dependencies.")
+}
+
+func (s *Suite) Test_MkAssignChecker_checkLeftRationale(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -608,7 +627,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftRationale(c *check.C) {
 		nil...)
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignOp(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkOp(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpTool("uname", "UNAME", AfterPrefsMk)
@@ -630,7 +649,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignOp(c *check.C) {
 			"bsd.prefs.mk has to be included before.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignOpShell(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkOpShell(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpTool("uname", "UNAME", AfterPrefsMk)
@@ -706,7 +725,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignOpShell(c *check.C) {
 		"WARN: ~/category/package/standalone.mk:15: Please use \"${ECHO}\" instead of \"echo\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRight(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRight(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -715,7 +734,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRight(c *check.C) {
 
 	mklines.ForEach(func(mkline *MkLine) {
 		ck := NewMkAssignChecker(mkline, mklines)
-		ck.checkVarassignRight()
+		ck.checkRight()
 	})
 
 	// No warning about the UNKNOWN variable on the left-hand side,
@@ -726,7 +745,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRight(c *check.C) {
 		"WARN: filename.mk:1: Unknown shell command \"make\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__none(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__none(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("obscure/package",
@@ -738,7 +757,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__none(c *check.
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__indirect(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__indirect(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("obscure/package",
@@ -756,7 +775,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__indirect(c *ch
 			"Invalid category \"${PKGPATH:C,/.*,,}\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__wrong(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__wrong(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("obscure/package",
@@ -769,7 +788,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__wrong(c *check
 		"WARN: ~/obscure/package/Makefile:5: The primary category should be \"obscure\", not \"perl5\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__wrong_in_package_directory(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__wrong_in_package_directory(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("obscure/package",
@@ -785,7 +804,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__wrong_in_packa
 
 // Allow any primary category in "packages" from regress/*.
 // These packages won't be installed in a regular pkgsrc installation anyway.
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__regress(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__regress(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("regress/regress-package",
@@ -802,7 +821,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__regress(c *che
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__append(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__append(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("obscure/package",
@@ -817,7 +836,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__append(c *chec
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__default(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__default(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("obscure/package",
@@ -831,7 +850,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__default(c *che
 		"WARN: ~/obscure/package/Makefile:5: The primary category should be \"obscure\", not \"perl5\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__autofix(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("-Wall", "--autofix")
@@ -846,7 +865,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__autofix(c *che
 			"Replacing \"perl5 obscure\" with \"obscure perl5\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__third(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__third(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("obscure/package",
@@ -865,7 +884,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__third(c *check
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__other_file(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightCategory__other_file(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("obscure/package",
@@ -885,7 +904,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__other_file(c *
 			"The primary category should be \"obscure\", not \"perl5\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignMisc(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkMisc(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
@@ -946,7 +965,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignMisc(c *check.C) {
 			"as it includes the PKGREVISION. Please use PKGVERSION_NOREV instead.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignMisc__multiple_inclusion_guards(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkMisc__multiple_inclusion_guards(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
@@ -977,7 +996,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignMisc__multiple_inclusion_guar
 			"instead of \"# defined\".")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignDecreasingVersions(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkDecreasingVersions(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -996,7 +1015,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignDecreasingVersions(c *check.C
 	mklines.Check()
 
 	// Half of these warnings are from VartypeCheck.Enum,
-	// the other half are from checkVarassignDecreasingVersions.
+	// the other half are from checkDecreasingVersions.
 	// Strictly speaking some of them are redundant, but that's ok.
 	// They all need to be fixed in the end.
 	t.CheckOutputLines(
@@ -1016,7 +1035,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignDecreasingVersions(c *check.C
 			"Use one of { 27 36 37 38 } instead.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignMiscRedundantInstallationDirs__AUTO_MKDIRS_yes(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkMiscRedundantInstallationDirs__AUTO_MKDIRS_yes(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package",
@@ -1037,7 +1056,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignMiscRedundantInstallationDirs
 			"The directory \"man\" is redundant in INSTALLATION_DIRS.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignMiscRedundantInstallationDirs__AUTO_MKDIRS_no(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkMiscRedundantInstallationDirs__AUTO_MKDIRS_no(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package",
@@ -1054,7 +1073,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignMiscRedundantInstallationDirs
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignMiscRedundantInstallationDirs__absolute(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkMiscRedundantInstallationDirs__absolute(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package",
@@ -1074,7 +1093,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignMiscRedundantInstallationDirs
 			"must be relative to ${PREFIX}.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignRightVaruse(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkRightVaruse(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -1090,7 +1109,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightVaruse(c *check.C) {
 		"NOTE: module.mk:2: The :Q modifier isn't necessary for ${LOCALBASE} here.")
 }
 
-func (s *Suite) Test_MkAssignChecker_checkVarassignVaruseShell(c *check.C) {
+func (s *Suite) Test_MkAssignChecker_checkVaruseShell(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("filename.mk",
@@ -1098,7 +1117,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignVaruseShell(c *check.C) {
 
 	mklines.ForEach(func(mkline *MkLine) {
 		ck := NewMkAssignChecker(mkline, mklines)
-		ck.checkVarassignRight()
+		ck.checkRight()
 	})
 
 	t.CheckOutputLines(

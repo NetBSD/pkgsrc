@@ -64,8 +64,8 @@ func (s *Suite) Test_HomepageChecker_checkBasedOnMasterSites(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:11: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
-	pkg.vars.v("MASTER_SITES").firstDef = nil
-	pkg.vars.v("MASTER_SITES").lastDef = nil
+	pkg.vars.create("MASTER_SITES").firstDef = nil
+	pkg.vars.create("MASTER_SITES").lastDef = nil
 	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\thttps://cdn.NetBSD.org/pub/pkgsrc/distfiles/"))
 
@@ -76,8 +76,8 @@ func (s *Suite) Test_HomepageChecker_checkBasedOnMasterSites(c *check.C) {
 		"WARN: filename.mk:21: HOMEPAGE should not be defined in terms of MASTER_SITEs. " +
 			"Use https://cdn.NetBSD.org/pub/pkgsrc/distfiles/ directly.")
 
-	pkg.vars.v("MASTER_SITES").firstDef = nil
-	pkg.vars.v("MASTER_SITES").lastDef = nil
+	pkg.vars.create("MASTER_SITES").firstDef = nil
+	pkg.vars.create("MASTER_SITES").lastDef = nil
 	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\t${MASTER_SITE_GITHUB}"))
 
@@ -89,8 +89,8 @@ func (s *Suite) Test_HomepageChecker_checkBasedOnMasterSites(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:31: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
-	pkg.vars.v("MASTER_SITES").firstDef = nil
-	pkg.vars.v("MASTER_SITES").lastDef = nil
+	pkg.vars.create("MASTER_SITES").firstDef = nil
+	pkg.vars.create("MASTER_SITES").lastDef = nil
 	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\t# none"))
 

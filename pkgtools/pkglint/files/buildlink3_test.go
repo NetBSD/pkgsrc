@@ -305,6 +305,7 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch_abi_api(c *check.C) {
 	CheckLinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
+		"ERROR: buildlink3.mk:10: Packages must only require API versions, not ABI versions of dependencies.",
 		"WARN: buildlink3.mk:9: Package name mismatch between ABI \"hs-X12\" and API \"hs-X11\" (from line 8).",
 		"WARN: buildlink3.mk:10: Only buildlink variables for \"hs-X11\", not \"hs-X12\" may be set in this file.")
 }

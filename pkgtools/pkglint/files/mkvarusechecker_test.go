@@ -1083,7 +1083,7 @@ func (s *Suite) Test_MkVarUseChecker_checkAssignable(c *check.C) {
 
 	mklines.ForEach(func(mkline *MkLine) {
 		ck := NewMkAssignChecker(mkline, mklines)
-		ck.checkVarassignRight()
+		ck.checkRight()
 	})
 
 	t.CheckOutputLines(
@@ -1117,7 +1117,7 @@ func (s *Suite) Test_MkVarUseChecker_checkAssignable__shell_command_to_pathname(
 
 	mklines.ForEach(func(mkline *MkLine) {
 		ck := NewMkAssignChecker(mkline, mklines)
-		ck.checkVarassignRight()
+		ck.checkRight()
 	})
 
 	t.CheckOutputLines(
