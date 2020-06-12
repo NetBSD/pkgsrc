@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.34 2020/05/01 07:57:36 ryoon Exp $
+$NetBSD: distinfo,v 1.35 2020/06/12 16:23:53 ryoon Exp $
 
-SHA1 (asterisk-16.10.0/asterisk-16.10.0.tar.gz) = 035327e9823687e9459dc05f6b19a71449d8207b
-RMD160 (asterisk-16.10.0/asterisk-16.10.0.tar.gz) = e15c3b280286e058b92fd5e701c22837c6f71806
-SHA512 (asterisk-16.10.0/asterisk-16.10.0.tar.gz) = 254c582593cf6ec691649d995a8d73260d2e340ad6ae65f0af62f6b8c3ef59c4da6ad9172bc04cc29a907d1e8d2ef105ae2ae20190b30115d5d402423c8c08cb
-Size (asterisk-16.10.0/asterisk-16.10.0.tar.gz) = 27706766 bytes
-SHA1 (asterisk-16.10.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 0207e289404704c42941759db9660269599044f9
-RMD160 (asterisk-16.10.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 5d660e7664a56086bd60ad49196e1b622a60f106
-SHA512 (asterisk-16.10.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
-Size (asterisk-16.10.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
-SHA1 (asterisk-16.10.0/pjproject-2.9.md5) = f8162e9ab7e4de130c166d9ac2f4271ded408ab0
-RMD160 (asterisk-16.10.0/pjproject-2.9.md5) = 71f1173138a806451480180ab4147bbddae259d8
-SHA512 (asterisk-16.10.0/pjproject-2.9.md5) = bfc8fb4ecb6fcb6b9fe2c088e3236ccab74f09bda163c7f1a9b548b0c514228b20ca15c734ff53ed88810b32e904743b396fffdf5d1a6e0c8d66427f0216c0cd
-Size (asterisk-16.10.0/pjproject-2.9.md5) = 107 bytes
-SHA1 (asterisk-16.10.0/pjproject-2.9.tar.bz2) = 4b7690e90a9fbe757ac7c5b0db9a2d3db8927824
-RMD160 (asterisk-16.10.0/pjproject-2.9.tar.bz2) = 7333d158e05b4bee16af0a91d4432c6f9e570bf5
-SHA512 (asterisk-16.10.0/pjproject-2.9.tar.bz2) = a65823a86ad0cd76890cf7dd2485f7547fd90aea2ef631c5420c009b35f39eda3b78551a42fc2816c2470de9eb728c26497774a8494824472ecaa1d2889cc20b
-Size (asterisk-16.10.0/pjproject-2.9.tar.bz2) = 5009546 bytes
+SHA1 (asterisk-16.11.0/asterisk-16.11.0.tar.gz) = 9a9d1c7a45210d94e266686462203405e5d34dda
+RMD160 (asterisk-16.11.0/asterisk-16.11.0.tar.gz) = 74036bece29f9865f1110d8f69621e6e8cb2d79f
+SHA512 (asterisk-16.11.0/asterisk-16.11.0.tar.gz) = 1b138c6a4ac442504d05c1f9a327cdc1396669a328f86678252fe578dc0e3cccf5b4d7856937862f7cc531a0618e3b7e6eebc041ab435efe676cd89e6d877ee6
+Size (asterisk-16.11.0/asterisk-16.11.0.tar.gz) = 27708591 bytes
+SHA1 (asterisk-16.11.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 0207e289404704c42941759db9660269599044f9
+RMD160 (asterisk-16.11.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 5d660e7664a56086bd60ad49196e1b622a60f106
+SHA512 (asterisk-16.11.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
+Size (asterisk-16.11.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
+SHA1 (asterisk-16.11.0/pjproject-2.9.md5) = f8162e9ab7e4de130c166d9ac2f4271ded408ab0
+RMD160 (asterisk-16.11.0/pjproject-2.9.md5) = 71f1173138a806451480180ab4147bbddae259d8
+SHA512 (asterisk-16.11.0/pjproject-2.9.md5) = bfc8fb4ecb6fcb6b9fe2c088e3236ccab74f09bda163c7f1a9b548b0c514228b20ca15c734ff53ed88810b32e904743b396fffdf5d1a6e0c8d66427f0216c0cd
+Size (asterisk-16.11.0/pjproject-2.9.md5) = 107 bytes
+SHA1 (asterisk-16.11.0/pjproject-2.9.tar.bz2) = 4b7690e90a9fbe757ac7c5b0db9a2d3db8927824
+RMD160 (asterisk-16.11.0/pjproject-2.9.tar.bz2) = 7333d158e05b4bee16af0a91d4432c6f9e570bf5
+SHA512 (asterisk-16.11.0/pjproject-2.9.tar.bz2) = a65823a86ad0cd76890cf7dd2485f7547fd90aea2ef631c5420c009b35f39eda3b78551a42fc2816c2470de9eb728c26497774a8494824472ecaa1d2889cc20b
+Size (asterisk-16.11.0/pjproject-2.9.tar.bz2) = 5009546 bytes
 SHA1 (patch-Makefile) = f7630acc724e1beb422226318611d5f3f79be82b
 SHA1 (patch-build__tools_mkpkgconfig) = 7fab8fcf46d9f8a3b98455674fec6307ec472b23
 SHA1 (patch-channels_Makefile) = b32bb8439ae07ed361ab7cb811b4766a27f09ec9
