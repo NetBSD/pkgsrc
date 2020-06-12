@@ -1,0 +1,20 @@
+$NetBSD: patch-configure.ac,v 1.3 2020/06/12 23:50:16 sevan Exp $
+
+Support GLIBC glob interface version 2.
+
+http://git.savannah.gnu.org/cgit/make.git/commit/?id=48c8a116
+
+--- configure.ac.orig	2014-10-05 16:24:51.000000000 +0000
++++ configure.ac
+@@ -401,10 +401,9 @@ AC_CACHE_CHECK([if system libc has GNU g
+ #include <glob.h>
+ #include <fnmatch.h>
+ 
+-#define GLOB_INTERFACE_VERSION 1
+ #if !defined _LIBC && defined __GNU_LIBRARY__ && __GNU_LIBRARY__ > 1
+ # include <gnu-versions.h>
+-# if _GNU_GLOB_INTERFACE_VERSION == GLOB_INTERFACE_VERSION
++# if _GNU_GLOB_INTERFACE_VERSION == 1 || _GNU_GLOB_INTERFACE_VERSION == 2
+    gnu glob
+ # endif
+ #endif],
