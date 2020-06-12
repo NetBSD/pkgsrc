@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3548 2020/06/12 06:59:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3549 2020/06/12 08:23:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5759,3 +5759,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test-pylint to 0.17.0 [adam 2020-06-12]
 	Added devel/py-pep517 version 0.8.2 [adam 2020-06-12]
 	Updated devel/py-importlib-metadata to 1.6.1 [adam 2020-06-12]
+	Updated www/logswan to 2.1.5 [fcambus 2020-06-12]
