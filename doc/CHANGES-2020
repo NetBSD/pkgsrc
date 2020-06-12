@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3547 2020/06/12 06:31:27 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3548 2020/06/12 06:59:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5757,3 +5757,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/terraform-provider-aws to 2.66.0 [adam 2020-06-12]
 	Updated devel/py-xdis to 4.6.1 [adam 2020-06-12]
 	Updated devel/py-test-pylint to 0.17.0 [adam 2020-06-12]
+	Added devel/py-pep517 version 0.8.2 [adam 2020-06-12]
+	Updated devel/py-importlib-metadata to 1.6.1 [adam 2020-06-12]
