@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.1 2020/03/16 14:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/12 06:06:05 adam Exp $
 
-DISTNAME=	google-api-core-1.16.0
+DISTNAME=	google-api-core-1.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-core/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/google/google-api-core
+HOMEPAGE=	https://github.com/googleapis/python-api-core
 COMMENT=	Python support library for multiple Google libraries
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.14.0:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-googleapis-common-protos>=1.6.0:../../devel/py-googleapis-common-protos
+DEPENDS+=	${PYPKGPREFIX}-grpcio>=1.29.0:../../net/py-grpcio
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.4.0:../../devel/py-protobuf
-DEPENDS+=	${PYPKGPREFIX}-google-auth>=0.4.0:../../security/py-google-auth
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.18.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-grpcio-[0-9]*:../../net/py-grpcio
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.18.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=34.0.0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
@@ -24,11 +25,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-# These are not sufficient, package needs to be installed to be able to be tested
-#TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-
-#do-test:
-#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
