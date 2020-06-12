@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/06/11 14:07:15 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/12 17:02:59 adam Exp $
 
 DISTNAME=	tortoise-orm-0.16.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-pypika>=0.36.5:../../databases/py-pypika
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7:../../devel/py-typing-extensions
 # accel
 DEPENDS+=	${PYPKGPREFIX}-ciso8601>=2.1.2:../../time/py-ciso8601
-DEPENDS+=	${PYPKGPREFIX}-rapidjson-[0-9]*../../textproc/py-rapidjson
-DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.12.0../../devel/py-uvloop
+DEPENDS+=	${PYPKGPREFIX}-rapidjson-[0-9]*:../../textproc/py-rapidjson
+DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.12.0:../../devel/py-uvloop
 
 USE_LANGUAGES=	# none
 
