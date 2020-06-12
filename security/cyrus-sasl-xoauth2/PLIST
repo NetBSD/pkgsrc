@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/12 13:41:41 ryoon Exp $
+lib/sasl2/libxoauth2.la
