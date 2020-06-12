@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2018/01/01 22:29:20 rillig Exp $
+@comment $NetBSD: PLIST,v 1.35 2020/06/12 11:40:19 nia Exp $
 ${PLIST.dbus}bin/purple-client-example
 ${PLIST.dbus}bin/purple-remote
 ${PLIST.dbus}bin/purple-send
@@ -29,6 +29,7 @@ include/libpurple/dnssrv.h
 include/libpurple/eventloop.h
 include/libpurple/ft.h
 include/libpurple/gaim-compat.h
+include/libpurple/glibcompat.h
 include/libpurple/idle.h
 include/libpurple/imgstore.h
 include/libpurple/log.h
@@ -106,10 +107,10 @@ lib/purple-2/ssl.la
 lib/purple-2/statenotify.la
 ${PLIST.tcl}lib/purple-2/tcl.la
 share/aclocal/purple.m4
-${PLIST.gnome}share/gconf/schemas/purple.schemas
 share/locale/af/LC_MESSAGES/pidgin.mo
 share/locale/am/LC_MESSAGES/pidgin.mo
 share/locale/ar/LC_MESSAGES/pidgin.mo
+share/locale/ar_SA/LC_MESSAGES/pidgin.mo
 share/locale/as/LC_MESSAGES/pidgin.mo
 share/locale/ast/LC_MESSAGES/pidgin.mo
 share/locale/az/LC_MESSAGES/pidgin.mo
