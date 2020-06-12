@@ -1,5 +1,5 @@
 This package provides the certificates distributed by the Mozilla
-Project.
+Project, with the exception of any certificates not globally trusted.
 
 It also provides a script, mozilla-rootcerts, which can be used to
 install the root CA certificates distributed by the Mozilla Project
