@@ -222,6 +222,28 @@ func (s *Suite) Test_MkLines_Check__PKG_SKIP_REASON_depending_on_OPSYS(c *check.
 		"NOTE: Makefile:7: Consider setting NOT_FOR_PLATFORM instead of PKG_SKIP_REASON depending on ${OPSYS}.")
 }
 
+func (s *Suite) Test_MkLines_Check__PKG_SKIP_REASON_depending_on_OPSYS_and_others(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.Chdir("category/package")
+	t.FinishSetUp()
+	mklines := t.NewMkLines("Makefile",
+		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
+		"PKG_SKIP_REASON+=\t\"Fails everywhere\"",
+		".if ${OPSYS} == \"Cygwin\" && ${MACHINE_ARCH} == i386",
+		"PKG_SKIP_REASON+=\t\"Fails on Cygwin i386\"",
+		".endif")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"NOTE: Makefile:7: Consider setting NOT_FOR_PLATFORM instead of PKG_SKIP_REASON depending on ${OPSYS}.")
+}
+
 func (s *Suite) Test_MkLines_Check__use_list_variable_as_part_of_word(c *check.C) {
 	t := s.Init(c)
 
@@ -495,7 +517,7 @@ func (s *Suite) Test_MkLines_collectUsedVariables__simple(c *check.C) {
 	mklines.collectUsedVariables()
 
 	t.Check(mklines.allVars.vs, check.HasLen, 1)
-	t.CheckEquals(mklines.allVars.v("VAR").used, mkline)
+	t.CheckEquals(mklines.allVars.create("VAR").used, mkline)
 	t.CheckEquals(mklines.allVars.FirstUse("VAR"), mkline)
 }
 
