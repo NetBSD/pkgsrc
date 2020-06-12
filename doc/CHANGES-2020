@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3566 2020/06/12 15:00:12 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3567 2020/06/12 16:27:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5778,3 +5778,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added chat/dino version 0.1.0 [ryoon 2020-06-12]
 	Updated devel/gmake to 4.3 [sevan 2020-06-12]
 	Updated print/cups-filters to 1.27.5 [leot 2020-06-12]
+	Updated comms/asterisk16 to 16.11.0 [ryoon 2020-06-12]
