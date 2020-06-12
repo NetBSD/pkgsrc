@@ -194,7 +194,7 @@ func (ck *MkVarUseChecker) checkVarnameBuildlink(varname string) {
 // be it in a variable assignment, in a shell command, a conditional, or
 // somewhere else.
 //
-// See checkVarassignLeftPermissions.
+// See MkAssignChecker.checkLeftPermissions.
 func (ck *MkVarUseChecker) checkPermissions(vuc *VarUseContext) {
 	if !G.WarnPerm {
 		return

@@ -737,12 +737,12 @@ func (s *Suite) Test_Scope_DefineAll(c *check.C) {
 	src := NewScope()
 
 	dst := NewScope()
-	dst.DefineAll(src)
+	dst.DefineAll(&src)
 
 	c.Check(dst.vs, check.HasLen, 0)
 
 	src.Define("VAR", t.NewMkLine("file.mk", 1, "VAR=value"))
-	dst.DefineAll(src)
+	dst.DefineAll(&src)
 
 	t.CheckEquals(dst.IsDefined("VAR"), true)
 }

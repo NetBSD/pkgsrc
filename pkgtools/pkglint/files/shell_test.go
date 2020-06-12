@@ -1393,7 +1393,7 @@ func (s *Suite) Test_ShellLineChecker_CheckWord(c *check.C) {
 	t.SetUpVartypes()
 
 	test := func(shellWord string, checkQuoting bool, diagnostics ...string) {
-		// See checkVaruseUndefined and checkVarassignLeftNotUsed.
+		// See MkVarUseChecker.checkUndefined and MkAssignChecker.checkLeftNotUsed.
 		ck := t.NewShellLineChecker("\t echo " + shellWord)
 		ck.CheckWord(shellWord, checkQuoting, RunTime)
 		t.CheckOutput(diagnostics)

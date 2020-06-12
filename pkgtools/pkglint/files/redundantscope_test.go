@@ -428,6 +428,7 @@ func (s *Suite) Test_RedundantScope__before_including_same_value(c *check.C) {
 		"NOTE: including.mk:2: Default assignment of VAR.def.asg has no effect because of included.mk:2.",
 		"NOTE: including.mk:4: Definition of VAR.asg.def is redundant because of included.mk:4.",
 		"NOTE: including.mk:5: Definition of VAR.asg.asg is redundant because of included.mk:5.",
+		"NOTE: including.mk:7: Definition of VAR.app.def is redundant because of included.mk:7.",
 		"WARN: including.mk:8: Variable VAR.app.asg is overwritten in included.mk:8.")
 }
 
