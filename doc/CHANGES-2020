@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3554 2020/06/12 11:40:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3555 2020/06/12 11:41:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5766,3 +5766,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/libgnt version 2.14.0 [nia 2020-06-12]
 	Updated chat/libpurple to 2.14.1 [nia 2020-06-12]
 	Updated chat/finch to 2.14.1 [nia 2020-06-12]
+	Updated chat/pidgin to 2.14.1 [nia 2020-06-12]
