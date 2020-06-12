@@ -1,10 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/14 18:02:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/12 06:31:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/pytest_pylint.py
-${PYSITELIB}/pytest_pylint.pyc
-${PYSITELIB}/pytest_pylint.pyo
+${PYSITELIB}/pytest_pylint/__init__.py
+${PYSITELIB}/pytest_pylint/__init__.pyc
+${PYSITELIB}/pytest_pylint/__init__.pyo
+${PYSITELIB}/pytest_pylint/plugin.py
+${PYSITELIB}/pytest_pylint/plugin.pyc
+${PYSITELIB}/pytest_pylint/plugin.pyo
+${PYSITELIB}/pytest_pylint/pylint_util.py
+${PYSITELIB}/pytest_pylint/pylint_util.pyc
+${PYSITELIB}/pytest_pylint/pylint_util.pyo
+${PYSITELIB}/pytest_pylint/util.py
+${PYSITELIB}/pytest_pylint/util.pyc
+${PYSITELIB}/pytest_pylint/util.pyo

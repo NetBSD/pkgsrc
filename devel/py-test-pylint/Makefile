@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/11/15 09:57:52 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/12 06:31:08 adam Exp $
 
-DISTNAME=	pytest-pylint-0.14.1
+DISTNAME=	pytest-pylint-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-pylint/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/carsongee/pytest-pylint
 COMMENT=	Pytest plugin to check source code with Pylint
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-pylint>=1.4.5:../../devel/py-pylint
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-test>=2.7:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-pylint>=2.3.0:../../devel/py-pylint
+DEPENDS+=	${PYPKGPREFIX}-test>=5.4:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-toml>=0.7.1:../../textproc/py-toml
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
