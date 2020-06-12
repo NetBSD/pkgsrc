@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3545 2020/06/12 02:23:44 sevan Exp $
+$NetBSD: CHANGES-2020,v 1.3546 2020/06/12 06:18:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5751,3 +5751,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/rclone to 1.52.1 [leot 2020-06-11]
 	Updated security/sqlmap to 1.4.6 [leot 2020-06-11]
 	Updated net/net-snmp to 5.8 [sevan 2020-06-12]
+	Updated security/py-google-auth to 1.17.1 [adam 2020-06-12]
+	Updated devel/py-google-api-core to 1.20.0 [adam 2020-06-12]
+	Updated www/py-google-api-python-client to 1.9.3 [adam 2020-06-12]
+	Updated net/terraform-provider-aws to 2.66.0 [adam 2020-06-12]
