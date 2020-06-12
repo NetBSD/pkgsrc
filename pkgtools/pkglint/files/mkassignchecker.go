@@ -15,26 +15,27 @@ func NewMkAssignChecker(mkLine *MkLine, mkLines *MkLines) *MkAssignChecker {
 	return &MkAssignChecker{MkLine: mkLine, MkLines: mkLines}
 }
 
-func (ck *MkAssignChecker) checkVarassign() {
-	ck.checkVarassignLeft()
-	ck.checkVarassignOp()
-	ck.checkVarassignRight()
+func (ck *MkAssignChecker) check() {
+	ck.checkLeft()
+	ck.checkOp()
+	ck.checkRight()
 }
 
-// checkVarassignLeft checks everything to the left of the assignment operator.
-func (ck *MkAssignChecker) checkVarassignLeft() {
+// checkLeft checks everything to the left of the assignment operator.
+func (ck *MkAssignChecker) checkLeft() {
 	varname := ck.MkLine.Varname()
 	if hasPrefix(varname, "_") && !G.Infrastructure && G.Pkgsrc.vartypes.Canon(varname) == nil {
 		ck.MkLine.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", varname)
 	}
 
-	ck.checkVarassignLeftNotUsed()
-	ck.checkVarassignLeftDeprecated()
-	ck.checkVarassignLeftBsdPrefs()
-	if !ck.checkVarassignLeftUserSettable() {
-		ck.checkVarassignLeftPermissions()
+	ck.checkLeftNotUsed()
+	ck.checkLeftDeprecated()
+	ck.checkLeftBsdPrefs()
+	if !ck.checkLeftUserSettable() {
+		ck.checkLeftPermissions()
+		ck.checkLeftAbiDepends()
 	}
-	ck.checkVarassignLeftRationale()
+	ck.checkLeftRationale()
 
 	NewMkLineChecker(ck.MkLines, ck.MkLine).checkTextVarUse(
 		ck.MkLine.Varname(),
@@ -42,10 +43,10 @@ func (ck *MkAssignChecker) checkVarassignLeft() {
 		VucLoadTime)
 }
 
-// checkVarassignLeftNotUsed checks whether the left-hand side of a variable
+// checkLeftNotUsed checks whether the left-hand side of a variable
 // assignment is not used. If it is unused and also doesn't have a predefined
 // data type, it may be a spelling mistake.
-func (ck *MkAssignChecker) checkVarassignLeftNotUsed() {
+func (ck *MkAssignChecker) checkLeftNotUsed() {
 	varname := ck.MkLine.Varname()
 	varcanon := varnameCanon(varname)
 
@@ -90,7 +91,7 @@ func (ck *MkAssignChecker) checkVarassignLeftNotUsed() {
 		"see mk/subst.mk for an example of such a documentation comment.")
 }
 
-func (ck *MkAssignChecker) checkVarassignLeftDeprecated() {
+func (ck *MkAssignChecker) checkLeftDeprecated() {
 	varname := ck.MkLine.Varname()
 	if fix := G.Pkgsrc.Deprecated[varname]; fix != "" {
 		ck.MkLine.Warnf("Definition of %s is deprecated. %s", varname, fix)
@@ -99,7 +100,7 @@ func (ck *MkAssignChecker) checkVarassignLeftDeprecated() {
 	}
 }
 
-func (ck *MkAssignChecker) checkVarassignLeftBsdPrefs() {
+func (ck *MkAssignChecker) checkLeftBsdPrefs() {
 	mkline := ck.MkLine
 
 	switch mkline.Varcanon() {
@@ -147,10 +148,10 @@ func (ck *MkAssignChecker) checkVarassignLeftBsdPrefs() {
 		"bsd.prefs.mk file, which will take care of everything.")
 }
 
-// checkVarassignLeftUserSettable checks whether a package defines a
+// checkLeftUserSettable checks whether a package defines a
 // variable that is marked as user-settable since it is defined in
 // mk/defaults/mk.conf.
-func (ck *MkAssignChecker) checkVarassignLeftUserSettable() bool {
+func (ck *MkAssignChecker) checkLeftUserSettable() bool {
 	mkline := ck.MkLine
 	varname := mkline.Varname()
 
@@ -198,11 +199,11 @@ func (ck *MkAssignChecker) checkVarassignLeftUserSettable() bool {
 	return true
 }
 
-// checkVarassignLeftPermissions checks the permissions for the left-hand side
+// checkLeftPermissions checks the permissions for the left-hand side
 // of a variable assignment line.
 //
 // See checkPermissions.
-func (ck *MkAssignChecker) checkVarassignLeftPermissions() {
+func (ck *MkAssignChecker) checkLeftPermissions() {
 	if !G.WarnPerm {
 		return
 	}
@@ -273,7 +274,43 @@ func (ck *MkAssignChecker) checkVarassignLeftPermissions() {
 	}
 }
 
-func (ck *MkAssignChecker) checkVarassignLeftRationale() {
+func (ck *MkAssignChecker) checkLeftAbiDepends() {
+	mkline := ck.MkLine
+
+	varname := mkline.Varname()
+	if !hasPrefix(varname, "BUILDLINK_ABI_DEPENDS.") {
+		return
+	}
+
+	basename := mkline.Basename
+	if basename == "buildlink3.mk" {
+		varparam := varnameParam(varname)
+		bl3id := ""
+		for _, bl3line := range ck.MkLines.mklines {
+			if bl3line.IsVarassign() && bl3line.Varname() == "BUILDLINK_TREE" {
+				bl3id = bl3line.Value()
+				break
+			}
+		}
+		if varparam == bl3id {
+			return
+		}
+	}
+
+	fix := mkline.Autofix()
+	fix.Errorf("Packages must only require API versions, not ABI versions of dependencies.")
+	fix.Explain(
+		"When building a package from the sources,",
+		"the version of the installed package does not matter.",
+		"That version is specified by BUILDLINK_ABI_VERSION.",
+		"",
+		"The only version that matters is the API of the dependency,",
+		"which is selected by specifying BUILDLINK_API_DEPENDS.")
+	fix.Replace("BUILDLINK_ABI_DEPENDS", "BUILDLINK_API_DEPENDS")
+	fix.Apply()
+}
+
+func (ck *MkAssignChecker) checkLeftRationale() {
 	if !G.WarnExtra {
 		return
 	}
@@ -305,11 +342,11 @@ func (ck *MkAssignChecker) checkVarassignLeftRationale() {
 		"* has it been reported upstream?")
 }
 
-func (ck *MkAssignChecker) checkVarassignOp() {
-	ck.checkVarassignOpShell()
+func (ck *MkAssignChecker) checkOp() {
+	ck.checkOpShell()
 }
 
-func (ck *MkAssignChecker) checkVarassignOpShell() {
+func (ck *MkAssignChecker) checkOpShell() {
 	mkline := ck.MkLine
 
 	switch {
@@ -356,8 +393,8 @@ func (ck *MkAssignChecker) checkVarassignOpShell() {
 		"or .for directive.")
 }
 
-// checkVarassignLeft checks everything to the right of the assignment operator.
-func (ck *MkAssignChecker) checkVarassignRight() {
+// checkLeft checks everything to the right of the assignment operator.
+func (ck *MkAssignChecker) checkRight() {
 	mkline := ck.MkLine
 	varname := mkline.Varname()
 	op := mkline.Op()
@@ -372,12 +409,12 @@ func (ck *MkAssignChecker) checkVarassignRight() {
 	mkLineChecker.checkText(value)
 	mkLineChecker.checkVartype(varname, op, value, comment)
 
-	ck.checkVarassignMisc()
+	ck.checkMisc()
 
-	ck.checkVarassignRightVaruse()
+	ck.checkRightVaruse()
 }
 
-func (ck *MkAssignChecker) checkVarassignRightCategory() {
+func (ck *MkAssignChecker) checkRightCategory() {
 	mkline := ck.MkLine
 	if mkline.Op() != opAssign && mkline.Op() != opAssignDefault {
 		return
@@ -403,7 +440,7 @@ func (ck *MkAssignChecker) checkVarassignRightCategory() {
 	fix.Apply()
 }
 
-func (ck *MkAssignChecker) checkVarassignMisc() {
+func (ck *MkAssignChecker) checkMisc() {
 	mkline := ck.MkLine
 	varname := mkline.Varname()
 	value := mkline.Value()
@@ -413,7 +450,7 @@ func (ck *MkAssignChecker) checkVarassignMisc() {
 	}
 
 	if varname == "PYTHON_VERSIONS_ACCEPTED" {
-		ck.checkVarassignDecreasingVersions()
+		ck.checkDecreasingVersions()
 	}
 
 	if mkline.Comment() == " defined" && !hasSuffix(varname, "_MK") && !hasSuffix(varname, "_COMMON") {
@@ -444,14 +481,16 @@ func (ck *MkAssignChecker) checkVarassignMisc() {
 
 	if varname == "PKG_SKIP_REASON" && ck.MkLines.indentation.DependsOn("OPSYS") {
 		// TODO: Provide autofix for simple cases, like ".if ${OPSYS} == SunOS".
+		// This needs support for high-level refactoring tools though.
+		// As of June 2020, refactoring is limited to text replacements in single lines.
 		mkline.Notef("Consider setting NOT_FOR_PLATFORM instead of " +
 			"PKG_SKIP_REASON depending on ${OPSYS}.")
 	}
 
-	ck.checkVarassignMiscRedundantInstallationDirs()
+	ck.checkMiscRedundantInstallationDirs()
 }
 
-func (ck *MkAssignChecker) checkVarassignDecreasingVersions() {
+func (ck *MkAssignChecker) checkDecreasingVersions() {
 	mkline := ck.MkLine
 	strVersions := mkline.Fields()
 	intVersions := make([]int, len(strVersions))
@@ -475,7 +514,7 @@ func (ck *MkAssignChecker) checkVarassignDecreasingVersions() {
 	}
 }
 
-func (ck *MkAssignChecker) checkVarassignMiscRedundantInstallationDirs() {
+func (ck *MkAssignChecker) checkMiscRedundantInstallationDirs() {
 	mkline := ck.MkLine
 	varname := mkline.Varname()
 	pkg := ck.MkLines.pkg
@@ -502,10 +541,10 @@ func (ck *MkAssignChecker) checkVarassignMiscRedundantInstallationDirs() {
 	}
 }
 
-// checkVarassignRightVaruse checks that in a variable assignment,
+// checkRightVaruse checks that in a variable assignment,
 // each variable used on the right-hand side of the assignment operator
 // has the correct data type and quoting.
-func (ck *MkAssignChecker) checkVarassignRightVaruse() {
+func (ck *MkAssignChecker) checkRightVaruse() {
 	if trace.Tracing {
 		defer trace.Call0()()
 	}
@@ -524,16 +563,16 @@ func (ck *MkAssignChecker) checkVarassignRightVaruse() {
 	}
 
 	if vartype != nil && vartype.IsShell() {
-		ck.checkVarassignVaruseShell(vartype, time)
+		ck.checkVaruseShell(vartype, time)
 	} else {
 		mkLineChecker := NewMkLineChecker(ck.MkLines, ck.MkLine)
 		mkLineChecker.checkTextVarUse(ck.MkLine.Value(), vartype, time)
 	}
 }
 
-// checkVarassignVaruseShell is very similar to checkVarassignRightVaruse, they just differ
+// checkVaruseShell is very similar to checkRightVaruse, they just differ
 // in the way they determine isWordPart.
-func (ck *MkAssignChecker) checkVarassignVaruseShell(vartype *Vartype, time VucTime) {
+func (ck *MkAssignChecker) checkVaruseShell(vartype *Vartype, time VucTime) {
 	if trace.Tracing {
 		defer trace.Call(vartype, time)()
 	}
