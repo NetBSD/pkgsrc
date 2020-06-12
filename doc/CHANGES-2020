@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3550 2020/06/12 10:35:49 maya Exp $
+$NetBSD: CHANGES-2020,v 1.3551 2020/06/12 11:26:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5762,3 +5762,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/logswan to 2.1.5 [fcambus 2020-06-12]
 	Updated security/mozilla-rootcerts to 1.0.20200529nb1 [maya 2020-06-12]
 	Updated security/mozilla-rootcerts-openssl to 2.4nb1 [maya 2020-06-12]
+	Updated editors/featherpad to 0.14.2 [pin 2020-06-12]
