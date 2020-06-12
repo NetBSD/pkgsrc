@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/11/14 18:02:46 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/06/12 06:31:08 adam Exp $
 
-SHA1 (pytest-pylint-0.14.1.tar.gz) = ac3656492d8f9f74027e9486f0f481c1aabab443
-RMD160 (pytest-pylint-0.14.1.tar.gz) = 1011e46c9d80d2da1fa36c0173ed680e7edc6b40
-SHA512 (pytest-pylint-0.14.1.tar.gz) = 50a7413b9c33f748e3c50bac106ca1c7058a7001c1813fa76c89bad4e5787536adb1c362b6214a335a889339240b0af27e29f2b207edf37e214504155f27f9a7
-Size (pytest-pylint-0.14.1.tar.gz) = 6541 bytes
+SHA1 (pytest-pylint-0.17.0.tar.gz) = eb75d458ab5243d6b647df5b00ded66ec99c6a52
+RMD160 (pytest-pylint-0.17.0.tar.gz) = 7698447dbddc6043e88569ce1cda548f2fbbac10
+SHA512 (pytest-pylint-0.17.0.tar.gz) = 2766731d9ade6f140a8db7433ebd143b974bc1d2ef03accbe273fc72f4b6d74055806785b9802f6a523681cb977e35e7b6b40d7da3d2cdb76002455db5a70c58
+Size (pytest-pylint-0.17.0.tar.gz) = 9047 bytes
