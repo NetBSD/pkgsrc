@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/10/20 16:29:42 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/06/12 15:22:17 sevan Exp $
 bin/gmake
 gnu/bin/make
 gnu/man/man1/make.1
@@ -6,6 +6,7 @@ include/gnumake.h
 info/make.info
 man/man1/gmake.1
 ${PLIST.nls}share/locale/be/LC_MESSAGES/make.mo
+${PLIST.nls}share/locale/bg/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/da/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/make.mo
@@ -23,10 +24,13 @@ ${PLIST.nls}share/locale/ko/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/lt/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/make.mo
+${PLIST.nls}share/locale/pt/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/make.mo
+${PLIST.nls}share/locale/sr/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/make.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/make.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/make.mo
