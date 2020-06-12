@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3567 2020/06/12 16:27:29 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3568 2020/06/12 17:24:02 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/gmake to 4.3 [sevan 2020-06-12]
 	Updated print/cups-filters to 1.27.5 [leot 2020-06-12]
 	Updated comms/asterisk16 to 16.11.0 [ryoon 2020-06-12]
+	Updated devel/acr to 1.9.3 [rillig 2020-06-12]
