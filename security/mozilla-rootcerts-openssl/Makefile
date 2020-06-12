@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/05/30 12:56:54 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/12 10:35:11 maya Exp $
 
 PKGNAME=	mozilla-rootcerts-openssl-2.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty

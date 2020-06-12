@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2020/05/30 22:39:08 tnn Exp $
+$NetBSD: distinfo,v 1.18 2020/06/12 10:35:11 maya Exp $
 
 SHA1 (certdata-20200529.txt) = 3707d1ea79b8feba0a97431a39ae27112a1ccfca
 RMD160 (certdata-20200529.txt) = d2359410858af530b960d4157f780d5400a82e0b
 SHA512 (certdata-20200529.txt) = 39383103063dde12962a182f438163be2ff3b53c95da2b8433d6688b8405c36491b862c248d0f7f4ed6a4b67fa3752b75d9e5d6c6761b096cc5363fbacd7682c
 Size (certdata-20200529.txt) = 1271692 bytes
-SHA1 (patch-certdata.txt) = 4d90a8f5126397961d0afe15c0c96c1d7fcf046f
+SHA1 (patch-certdata.txt) = 08dc8064508c4914aaa0b14dc194dd935035776b
