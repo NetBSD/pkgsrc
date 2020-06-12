@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3560 2020/06/12 11:58:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3561 2020/06/12 13:42:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5772,3 +5772,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/sameboy to 0.13.2 [nia 2020-06-12]
 	Updated emulators/libretro-sameboy to 0.13.2 [nia 2020-06-12]
 	Updated net/dnscrypt-proxy2 to 2.0.44 [nia 2020-06-12]
+	Added security/cyrus-sasl-xoauth2 version 0.0.0.20200428 [ryoon 2020-06-12]
