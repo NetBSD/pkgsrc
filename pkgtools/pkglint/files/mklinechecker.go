@@ -24,7 +24,7 @@ func (ck MkLineChecker) Check() {
 
 	switch {
 	case mkline.IsVarassign():
-		NewMkAssignChecker(mkline, ck.MkLines).checkVarassign()
+		NewMkAssignChecker(mkline, ck.MkLines).check()
 
 	case mkline.IsShellCommand():
 		ck.checkShellCommand()
@@ -171,7 +171,7 @@ func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comme
 		}
 		if vartype.basicType == BtCategory {
 			mkAssignChecker := NewMkAssignChecker(mkline, ck.MkLines)
-			mkAssignChecker.checkVarassignRightCategory()
+			mkAssignChecker.checkRightCategory()
 		}
 		for _, word := range words {
 			ck.CheckVartypeBasic(varname, vartype.basicType, op, word, comment, vartype.IsGuessed())
