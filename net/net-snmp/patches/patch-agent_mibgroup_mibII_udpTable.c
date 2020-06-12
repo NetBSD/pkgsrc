@@ -1,8 +1,9 @@
-$NetBSD: patch-agent_mibgroup_mibII_udpTable.c,v 1.1 2013/11/29 12:59:51 joerg Exp $
+$NetBSD: patch-agent_mibgroup_mibII_udpTable.c,v 1.2 2020/06/12 02:22:08 sevan Exp $
 
---- agent/mibgroup/mibII/udpTable.c.orig	2013-11-26 22:25:02.000000000 +0000
-+++ agent/mibgroup/mibII/udpTable.c
-@@ -395,7 +395,11 @@ udpTable_next_entry( void **loop_context
+
+--- agent/mibgroup/mibII/udpTable.c.orig	2020-06-12 01:53:58.092446674 +0100
++++ agent/mibgroup/mibII/udpTable.c	2020-06-12 02:01:40.556941658 +0100
+@@ -426,7 +426,11 @@
       * and update the loop context ready for the next one.
       */
      *data_context = (void*)entry;
@@ -14,7 +15,7 @@ $NetBSD: patch-agent_mibgroup_mibII_udpTable.c,v 1.1 2013/11/29 12:59:51 joerg E
      return index;
  }
  
-@@ -405,7 +409,11 @@ udpTable_free(netsnmp_cache *cache, void
+@@ -436,7 +440,11 @@
      UDPTABLE_ENTRY_TYPE	 *p;
      while (udp_head) {
          p = udp_head;
@@ -26,28 +27,28 @@ $NetBSD: patch-agent_mibgroup_mibII_udpTable.c,v 1.1 2013/11/29 12:59:51 joerg E
          free(p);
      }
  
-@@ -705,7 +713,11 @@ udpTable_load(netsnmp_cache *cache, void
+@@ -744,7 +752,11 @@
      /*
       *  Set up a linked list
       */
 +#if defined(__NetBSD__) && __NetBSD_Version__ >= 699002800
 +    entry  = TAILQ_FIRST(&table.inpt_queue);
 +#else
-     entry  = table.inpt_queue.cqh_first;
+     entry  = table.INP_FIRST_SYMBOL;
 +#endif
      while (entry) {
     
          nnew = SNMP_MALLOC_TYPEDEF(struct inpcb);
-@@ -717,12 +729,22 @@ udpTable_load(netsnmp_cache *cache, void
+@@ -801,12 +813,22 @@
              break;
          }
  
 +#if defined(__NetBSD__) && __NetBSD_Version__ >= 699002800
-+        entry    = TAILQ_NEXT(nnew, inp_queue);	/* Next kernel entry */
-+	TAILQ_NEXT(nnew, inp_queue) = udp_head;
++        entry    = TAILQ_NEXT(nnew, inp_queue);        /* Next kernel entry */
++       TAILQ_NEXT(nnew, inp_queue) = udp_head;
 +#else
-         entry    = nnew->inp_queue.cqe_next;	/* Next kernel entry */
- 	nnew->inp_queue.cqe_next = udp_head;
+         entry    = nnew->INP_NEXT_SYMBOL;		/* Next kernel entry */
+ 	nnew->INP_NEXT_SYMBOL = udp_head;
 +#endif
  	udp_head = nnew;
  
@@ -55,7 +56,7 @@ $NetBSD: patch-agent_mibgroup_mibII_udpTable.c,v 1.1 2013/11/29 12:59:51 joerg E
 +        if (entry == TAILQ_FIRST(&table.inpt_queue))
 +            break;
 +#else
-         if (entry == table.inpt_queue.cqh_first)
+         if (entry == udp_inpcb.INP_NEXT_SYMBOL)
              break;
 +#endif
      }
