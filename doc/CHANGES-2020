@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3568 2020/06/12 17:24:02 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3569 2020/06/12 19:10:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5780,3 +5780,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/cups-filters to 1.27.5 [leot 2020-06-12]
 	Updated comms/asterisk16 to 16.11.0 [ryoon 2020-06-12]
 	Updated devel/acr to 1.9.3 [rillig 2020-06-12]
+	Updated net/gallery-dl to 1.14.1 [leot 2020-06-12]
