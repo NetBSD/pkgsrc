@@ -1,6 +1,7 @@
-$NetBSD: patch-libpurple_plugins_perl_common_Makefile.PL.in,v 1.1 2013/07/17 09:41:06 fhajny Exp $
+$NetBSD: patch-libpurple_plugins_perl_common_Makefile.PL.in,v 1.2 2020/06/12 11:40:19 nia Exp $
 
 Unset INSTALL_BASE so that MakeMaker installs perllocal.pod with proper path.
+
 --- libpurple/plugins/perl/common/Makefile.PL.in.orig	Wed Jul 17 08:18:42 2013
 +++ libpurple/plugins/perl/common/Makefile.PL.in	Wed Jul 17 08:18:58 2013
 @@ -15,7 +15,6 @@

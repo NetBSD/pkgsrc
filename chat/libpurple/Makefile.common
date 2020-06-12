@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2020/01/26 17:30:48 rillig Exp $
+# $NetBSD: Makefile.common,v 1.53 2020/06/12 11:40:19 nia Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -6,7 +6,7 @@
 # used by chat/pidgin-sametime/Makefile
 # used by chat/pidgin-silc/Makefile
 
-PIDGIN_VERSION=	2.13.0
+PIDGIN_VERSION=	2.14.1
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
@@ -24,7 +24,6 @@ GNU_CONFIGURE=		yes
 PATCHDIR=		${.CURDIR}/../../chat/libpurple/patches
 DISTINFO_FILE?=		${.CURDIR}/../../chat/libpurple/distinfo
 
-CONFIGURE_ARGS+=	--disable-gevolution
 CONFIGURE_ARGS+=	--disable-gtkui
 CONFIGURE_ARGS+=	--disable-consoleui
 CONFIGURE_ARGS+=	--disable-meanwhile
@@ -36,11 +35,14 @@ CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--disable-tk
 CONFIGURE_ARGS+=	--disable-gnutls
 CONFIGURE_ARGS+=	--disable-nss
+CONFIGURE_ARGS+=	--disable-schemas-install
 CONFIGURE_ARGS+=	--disable-dbus
 CONFIGURE_ARGS+=	--disable-cyrus-sasl
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-nm
 CONFIGURE_ARGS+=	--disable-vv
+
+CONFIGURE_ENV+=		ac_cv_path_GCONFTOOL="no"
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 CFLAGS.SunOS+=		-Wno-error=implicit-function-declaration
