@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/12 11:38:32 nia Exp $
+
+SHA1 (libgnt-2.14.0.tar.xz) = c179da4a23fdf123fc4f7221b8aa6096828d7d50
+RMD160 (libgnt-2.14.0.tar.xz) = e759253b992c31c02ce7c44ca0ef3d0b9080d80b
+SHA512 (libgnt-2.14.0.tar.xz) = 0d9c5550374696a0e6ede5246cda3c372d7055d21b9ffaf10be88d6a469bdf18c7dd1113ec612acf4889c0e5686ea87bb0e8348ca8985fd5ff8913afc5813b38
+Size (libgnt-2.14.0.tar.xz) = 102444 bytes
