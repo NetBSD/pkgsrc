@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2020/05/23 08:41:11 adam Exp $
+$NetBSD: distinfo,v 1.24 2020/06/12 06:26:47 adam Exp $
 
-SHA1 (xdis-4.6.0.tar.gz) = c537d10b3d37a786aebff05894525b22c81a7c4c
-RMD160 (xdis-4.6.0.tar.gz) = 165c22d498a5b4167b4d478fb89b1f7f122a8462
-SHA512 (xdis-4.6.0.tar.gz) = b806d32576f89b7475df074c98583823d854ad454c5a8fef280bf6c92a46c6265d50d98c7aceba32c6d3144843d639bccad647d18987329c2615da4cd5b33b10
-Size (xdis-4.6.0.tar.gz) = 224124 bytes
+SHA1 (xdis-4.6.1.tar.gz) = 644aa4c909165a79116e48be7b4659f15ff45f91
+RMD160 (xdis-4.6.1.tar.gz) = 126c6914015a5bd04634a9ed20d0bdca41fd3fbe
+SHA512 (xdis-4.6.1.tar.gz) = fd7695b431ada695f7fd0be0ccec62736b2319e0abedb1483c0e2348399886358e0ed24b75702a7ef23423c4ee5527f4d676d193a6f8b6615ff2a99752791118
+Size (xdis-4.6.1.tar.gz) = 225314 bytes
