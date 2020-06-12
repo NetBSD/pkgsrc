@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3552 2020/06/12 11:38:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3553 2020/06/12 11:40:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5764,3 +5764,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/mozilla-rootcerts-openssl to 2.4nb1 [maya 2020-06-12]
 	Updated editors/featherpad to 0.14.2 [pin 2020-06-12]
 	Added devel/libgnt version 2.14.0 [nia 2020-06-12]
+	Updated chat/libpurple to 2.14.1 [nia 2020-06-12]
