@@ -137,11 +137,11 @@ func (s *Suite) Test_Var_ConstantValue__append(c *check.C) {
 
 	v.Write(t.NewMkLine("write.mk", 123, "VARNAME+=\tvalue"), false)
 
-	t.CheckEquals(v.ConstantValue(), " value")
+	t.CheckEquals(v.ConstantValue(), "value")
 
 	v.Write(t.NewMkLine("write.mk", 124, "VARNAME+=\tappended"), false)
 
-	t.CheckEquals(v.ConstantValue(), " value appended")
+	t.CheckEquals(v.ConstantValue(), "value appended")
 }
 
 func (s *Suite) Test_Var_ConstantValue__eval(c *check.C) {

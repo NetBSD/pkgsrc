@@ -503,6 +503,8 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__smaller_version(c *check.C)
 	t.CheckOutputLines(
 		"NOTE: Makefile:21: The requirement >=1.0pkg is already guaranteed "+
 			"by the >=1.3api from ../../category/lib/buildlink3.mk:12.",
+		"ERROR: Makefile:22: Packages must only require API versions, "+
+			"not ABI versions of dependencies.",
 		"NOTE: Makefile:22: The requirement >=1.1pkg is already guaranteed "+
 			"by the >=1.4abi from ../../category/lib/buildlink3.mk:13.")
 }
@@ -526,6 +528,8 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__different_operators(c *chec
 	t.CheckOutputLines(
 		"NOTE: Makefile:21: The requirement >=1.0pkg is already guaranteed "+
 			"by the >1.3api from ../../category/lib/buildlink3.mk:12.",
+		"ERROR: Makefile:22: Packages must only require API versions, "+
+			"not ABI versions of dependencies.",
 		"NOTE: Makefile:22: The requirement >=1.1pkg is already guaranteed "+
 			"by the >1.4abi from ../../category/lib/buildlink3.mk:13.")
 }
@@ -549,6 +553,8 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__additional_greater(c *check
 	t.CheckOutputLines(
 		"NOTE: Makefile:21: The requirement >1.0pkg is already guaranteed "+
 			"by the >=1.3api from ../../category/lib/buildlink3.mk:12.",
+		"ERROR: Makefile:22: Packages must only require API versions, "+
+			"not ABI versions of dependencies.",
 		"NOTE: Makefile:22: The requirement >1.1pkg is already guaranteed "+
 			"by the >=1.4abi from ../../category/lib/buildlink3.mk:13.")
 }
@@ -570,8 +576,10 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__upper_limit(c *check.C) {
 	G.checkdirPackage(".")
 
 	// If the additional constraint doesn't have a lower bound,
-	// there is nothing to compare and warn about.
-	t.CheckOutputEmpty()
+	// there are no version numbers to compare and warn about.
+	t.CheckOutputLines(
+		"ERROR: Makefile:22: Packages must only require API versions, " +
+			"not ABI versions of dependencies.")
 }
 
 // Having an upper bound for a library dependency is unusual.
@@ -593,8 +601,10 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__upper_limit_in_buildlink3(c
 	G.checkdirPackage(".")
 
 	// If the additional constraint doesn't have a lower bound,
-	// there is nothing to compare and warn about.
-	t.CheckOutputEmpty()
+	// there are no version numbers to compare and warn about.
+	t.CheckOutputLines(
+		"ERROR: Makefile:22: Packages must only require API versions, " +
+			"not ABI versions of dependencies.")
 }
 
 func (s *Suite) Test_VartypeCheck_DependencyPattern__API_ABI(c *check.C) {
@@ -628,7 +638,9 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern__ABI_API(c *check.C) {
 
 	G.checkdirPackage(".")
 
-	t.CheckOutputEmpty()
+	t.CheckOutputLines(
+		"ERROR: Makefile:21: Packages must only require API versions, " +
+			"not ABI versions of dependencies.")
 }
 
 func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
