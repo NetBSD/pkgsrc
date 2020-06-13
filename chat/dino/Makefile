@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/12 14:20:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/13 15:08:16 nia Exp $
 
 DISTNAME=	dino-0.1.0
 CATEGORIES=	chat
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/dino/dino/
-COMMENT=	Modern XMPP (Jabber) chat clinet
+COMMENT=	Modern XMPP (Jabber) chat client
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES+=		c
