@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3587 2020/06/13 17:50:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3588 2020/06/13 17:55:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5797,3 +5797,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/trayer to 1.1.8 [nia 2020-06-13]
 	Updated audio/snd to 20.4 [nia 2020-06-13]
 	Updated devel/samurai to 1.1 [nia 2020-06-13]
+	Updated multimedia/totem-pl-parser to 3.26.5 [nia 2020-06-13]
