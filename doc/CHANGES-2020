@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3581 2020/06/13 16:00:15 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3582 2020/06/13 16:06:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5791,3 +5791,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/capistrano to 3.14.1 [taca 2020-06-13]
 	Updated sysutils/ruby-facter to 4.0.26 [taca 2020-06-13]
 	Updated mail/pear-Mail_Mime to 1.10.8 [taca 2020-06-13]
+	Updated devel/php-xdebug to 2.9.6 [taca 2020-06-13]
