@@ -1,4 +1,6 @@
-$NetBSD: patch-libretro_Makefile.common,v 1.2 2019/01/02 19:52:51 nia Exp $
+$NetBSD: patch-libretro_Makefile.common,v 1.3 2020/06/13 10:43:15 nia Exp $
+
+Avoid using bundled copy of zlib, libpng, xxhash, snappy.
 
 Fix "Build error: undefined references".
 
@@ -6,7 +8,53 @@ https://github.com/libretro/ppsspp/commit/68634705b9d6b5bc8db2232bc92b6ae06f0b31
 
 --- libretro/Makefile.common.orig	2018-12-04 13:43:39.000000000 +0000
 +++ libretro/Makefile.common
-@@ -229,6 +229,7 @@ SOURCES_CXX += \
+@@ -12,8 +12,6 @@ INCFLAGS += \
+ 	-I$(COMMONDIR) \
+ 	-I$(CORE_DIR)/libretro \
+ 	-I$(EXTDIR)/native \
+-	-I$(EXTDIR)/zlib \
+-	-I$(EXTDIR)/snappy \
+ 	-I$(FFMPEGDIR) \
+ 	$(FFMPEGINCFLAGS) \
+ 	-I$(EXTDIR)/cityhash \
+@@ -22,7 +20,6 @@ INCFLAGS += \
+ 	-I$(NATIVEDIR) \
+ 	-I$(EXTDIR)/libkirk \
+ 	-I$(EXTDIR)/xbrz \
+-	-I$(EXTDIR)/xxhash \
+ 	-I$(EXTDIR)/glew
+ 
+ ifeq ($(PLATFORM_EXT), android)
+@@ -99,28 +96,7 @@ SOURCES_C += \
+ 	$(EXTDIR)/libkirk/ec.c \
+ 	$(EXTDIR)/libkirk/kirk_engine.c
+ 
+-SOURCES_C += \
+-	$(NATIVEDIR)/ext/libpng17/png.c \
+-	$(NATIVEDIR)/ext/libpng17/pngerror.c \
+-	$(NATIVEDIR)/ext/libpng17/pngget.c \
+-	$(NATIVEDIR)/ext/libpng17/pngmem.c \
+-	$(NATIVEDIR)/ext/libpng17/pngread.c \
+-	$(NATIVEDIR)/ext/libpng17/pngrio.c \
+-	$(NATIVEDIR)/ext/libpng17/pngrtran.c \
+-	$(NATIVEDIR)/ext/libpng17/pngrutil.c \
+-	$(NATIVEDIR)/ext/libpng17/pngset.c \
+-	$(NATIVEDIR)/ext/libpng17/pngtrans.c \
+-	$(NATIVEDIR)/ext/libpng17/pngwio.c \
+-	$(NATIVEDIR)/ext/libpng17/pngwrite.c \
+-	$(NATIVEDIR)/ext/libpng17/pngwtran.c \
+-	$(NATIVEDIR)/ext/libpng17/pngwutil.c
+-
+ SOURCES_C += $(EXTDIR)/sfmt19937/SFMT.c
+-SOURCES_C   += $(EXTDIR)/xxhash.c
+-
+-SOURCES_CXX += \
+-	$(EXTDIR)/snappy/snappy-c.cpp \
+-	$(EXTDIR)/snappy/snappy.cpp
+ 
+ SOURCES_CXX += $(EXTDIR)/xbrz/xbrz.cpp
+ 
+@@ -229,6 +205,7 @@ SOURCES_CXX += \
  	$(EXTDIR)/glslang/glslang/MachineIndependent/ShaderLang.cpp \
  	$(EXTDIR)/glslang/glslang/MachineIndependent/SymbolTable.cpp \
  	$(EXTDIR)/glslang/glslang/MachineIndependent/Versions.cpp \
@@ -14,7 +62,7 @@ https://github.com/libretro/ppsspp/commit/68634705b9d6b5bc8db2232bc92b6ae06f0b31
  	$(EXTDIR)/glslang/glslang/MachineIndependent/glslang_tab.cpp \
  	$(EXTDIR)/glslang/glslang/MachineIndependent/intermOut.cpp \
  	$(EXTDIR)/glslang/glslang/MachineIndependent/iomapper.cpp \
-@@ -392,6 +393,7 @@ SOURCES_CXX += $(NATIVEDIR)/math/datacon
+@@ -392,6 +369,7 @@ SOURCES_CXX += $(NATIVEDIR)/math/datacon
  	       $(COREDIR)/HLE/sceMpeg.cpp \
  	       $(COREDIR)/HLE/sceNet.cpp \
  	       $(COREDIR)/HLE/sceNetAdhoc.cpp \
@@ -22,7 +70,7 @@ https://github.com/libretro/ppsspp/commit/68634705b9d6b5bc8db2232bc92b6ae06f0b31
  	       $(COREDIR)/HLE/proAdhocServer.cpp \
  	       $(COREDIR)/HLE/proAdhoc.cpp \
  	       $(COREDIR)/HLE/sceOpenPSID.cpp \
-@@ -454,6 +456,7 @@ SOURCES_CXX += $(NATIVEDIR)/math/datacon
+@@ -454,6 +432,7 @@ SOURCES_CXX += $(NATIVEDIR)/math/datacon
  	       $(COREDIR)/MemMap.cpp \
  	       $(COREDIR)/MemMapFunctions.cpp \
  	       $(COREDIR)/PSPLoaders.cpp \
@@ -30,3 +78,52 @@ https://github.com/libretro/ppsspp/commit/68634705b9d6b5bc8db2232bc92b6ae06f0b31
  	       $(COREDIR)/Reporting.cpp \
  	       $(COREDIR)/SaveState.cpp \
  	       $(COREDIR)/Screenshot.cpp \
+@@ -494,10 +473,7 @@ ifeq ($(WITH_DYNAREC),1)
+ 					 $(COMMONDIR)/ColorConvNEON.cpp \
+ 					 $(GPUDIR)/Common/TextureDecoderNEON.cpp
+ 
+-			SOURCES_C += $(NATIVEDIR)/ext/libpng17/arm/arm_init.c \
+-				     $(NATIVEDIR)/ext/libpng17/arm/filter_neon_intrinsics.c
+-			ASMFILES   += $(NATIVEDIR)/math/fast/fast_matrix_neon.S \
+-				      $(NATIVEDIR)/ext/libpng17/arm/filter_neon.S
++			ASMFILES   += $(NATIVEDIR)/math/fast/fast_matrix_neon.S
+ 		endif
+ 	else ifeq ($(TARGET_ARCH),arm64)
+       DYNAFLAGS += -D_ARCH_64
+@@ -523,10 +499,7 @@ ifeq ($(WITH_DYNAREC),1)
+ 					 $(COMMONDIR)/ColorConvNEON.cpp \
+ 					 $(GPUDIR)/Common/TextureDecoderNEON.cpp
+ 
+-			SOURCES_C += $(NATIVEDIR)/ext/libpng17/arm/arm_init.c \
+-				     $(NATIVEDIR)/ext/libpng17/arm/filter_neon_intrinsics.c
+-			ASMFILES   += $(NATIVEDIR)/math/fast/fast_matrix_neon.S \
+-				      $(NATIVEDIR)/ext/libpng17/arm/filter_neon.S
++			ASMFILES   += $(NATIVEDIR)/math/fast/fast_matrix_neon.S
+ 		endif
+    else
+ 	ifneq (,$(findstring msvc,$(platform)))
+@@ -656,24 +629,6 @@ SOURCES_CXX += \
+ 		$(LIBRETRODIR)/LibretroGraphicsContext.cpp \
+ 		$(LIBRETRODIR)/LibretroGLContext.cpp
+ 
+-ifneq ($(STATIC_LINKING), 1)
+-SOURCES_C += \
+-		$(EXTDIR)/zlib/adler32.c \
+-		$(EXTDIR)/zlib/compress.c \
+-		$(EXTDIR)/zlib/crc32.c \
+-		$(EXTDIR)/zlib/deflate.c \
+-		$(EXTDIR)/zlib/gzclose.c \
+-		$(EXTDIR)/zlib/gzlib.c \
+-		$(EXTDIR)/zlib/gzread.c \
+-		$(EXTDIR)/zlib/gzwrite.c \
+-		$(EXTDIR)/zlib/inffast.c \
+-		$(EXTDIR)/zlib/inflate.c \
+-		$(EXTDIR)/zlib/inftrees.c \
+-		$(EXTDIR)/zlib/trees.c \
+-		$(EXTDIR)/zlib/uncompr.c \
+-		$(EXTDIR)/zlib/zutil.c
+-endif
+-
+ GIT_VERSION_SRC = $(CORE_DIR)/git-version.cpp
+ GIT_VERSION := $(shell git describe --always || echo v1.4.2-git)
+ GIT_VERSION_NO_UPDATE = $(findstring 1,$(shell grep -s PPSSPP_GIT_VERSION_NO_UPDATE $(GIT_VERSION_SRC)))

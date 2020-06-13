@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/05/14 19:34:44 joerg Exp $
+$NetBSD: distinfo,v 1.4 2020/06/13 10:43:15 nia Exp $
 
 SHA1 (ppsspp-1.7.5/ppsspp-armips.tar.gz) = bcb620c901b139a9ab28fdce41436d1a88da351d
 RMD160 (ppsspp-1.7.5/ppsspp-armips.tar.gz) = a3b2c9388f4253a069275679d83c8ae9c07fa98a
@@ -17,5 +17,5 @@ RMD160 (ppsspp-1.7.5/ppsspp.tar.gz) = 62c542117d39e2d182c2e424d5ec705447afabbb
 SHA512 (ppsspp-1.7.5/ppsspp.tar.gz) = 7e1f93754e8969fee671c2cd8424cdff84b6351b4493f65c71fab4e9b99fc2a7c21c3a41fd051915f5293cda18957625649ba5ea69b88ed3efba9f4128252298
 Size (ppsspp-1.7.5/ppsspp.tar.gz) = 19487276 bytes
 SHA1 (patch-ext_glslang_glslang_Include_PoolAlloc.h) = 2eb3ed7637c9e26011c6e29fda79c72e8aee78c5
-SHA1 (patch-libretro_Makefile) = ff14d98bb21d87b5a27f40b180d73beef7ab2f74
-SHA1 (patch-libretro_Makefile.common) = eebde48b059d8a0a2ec5ae7805e7a2c083f44c1c
+SHA1 (patch-libretro_Makefile) = f892e451167139b15fc3cda98ddb15fb7a687ba4
+SHA1 (patch-libretro_Makefile.common) = d76acea02468c0e96d45ce949b6a2ee26911d0a9
