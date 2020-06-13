@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2020/05/31 11:45:45 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/06/13 10:01:06 nia Exp $
 #
 # used by emulators/libretro-bsnes-mercury/Makefile
 # used by emulators/libretro-bsnes-mercury-accuracy/Makefile
@@ -26,10 +26,8 @@ PATCHDIR=	${.CURDIR}/../../emulators/libretro-bsnes-mercury/patches
 
 .include "../../mk/bsd.prefs.mk"
 
-# Needed in libco/aarch64.c
-.if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "aarch64eb"
-CFLAGS+=	-DHAVE_POSIX_MEMALIGN=1
-.endif
+# libco/aarch64.c and libco/armeabi.c try to use memalign() otherwise,
+CFLAGS.NetBSD+=		-DHAVE_POSIX_MEMALIGN=1
 
 LIBRETRO_CORE=	bsnes_mercury_${BSNES_PROFILE}
 
