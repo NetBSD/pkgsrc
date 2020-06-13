@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3572 2020/06/13 00:05:40 sevan Exp $
+$NetBSD: CHANGES-2020,v 1.3573 2020/06/13 10:03:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5782,3 +5782,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.14.1 [leot 2020-06-12]
 	Updated pkgtools/pkglint to 20.1.16 [rillig 2020-06-12]
 	Updated devel/py-lazy-object-proxy to 1.5.0 [wiz 2020-06-12]
+	Updated sysutils/ncdu to 1.15.1 [fcambus 2020-06-13]
