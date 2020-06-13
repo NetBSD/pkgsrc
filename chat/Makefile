@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2020/06/12 14:21:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.248 2020/06/13 08:40:27 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -68,6 +68,7 @@ SUBDIR+=	libgadu
 SUBDIR+=	libmsn
 SUBDIR+=	libotr
 SUBDIR+=	libpurple
+SUBDIR+=	libsignal-protocol-c
 SUBDIR+=	libtelepathy
 SUBDIR+=	libtlen
 SUBDIR+=	loudmouth
