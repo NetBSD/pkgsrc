@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/01/20 01:41:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/06/13 17:55:40 nia Exp $
 include/totem-pl-parser/1/plparser/totem-pl-parser-builtins.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-features.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-mini.h
@@ -7,10 +7,10 @@ include/totem-pl-parser/1/plparser/totem-pl-playlist.h
 lib/girepository-1.0/TotemPlParser-1.0.typelib
 lib/libtotem-plparser-mini.so
 lib/libtotem-plparser-mini.so.18
-lib/libtotem-plparser-mini.so.18.2.4
+lib/libtotem-plparser-mini.so.18.3.4
 lib/libtotem-plparser.so
 lib/libtotem-plparser.so.18
-lib/libtotem-plparser.so.18.2.4
+lib/libtotem-plparser.so.18.3.4
 lib/pkgconfig/totem-plparser-mini.pc
 lib/pkgconfig/totem-plparser.pc
 share/gir-1.0/TotemPlParser-1.0.gir
