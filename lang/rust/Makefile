@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2020/06/13 14:18:41 gdt Exp $
+# $NetBSD: Makefile,v 1.177 2020/06/13 14:26:00 gdt Exp $
 
 DISTNAME=	rustc-1.43.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -151,7 +151,11 @@ CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 # This has not been pulled up to netbsd-8
 #   \todo Explain if it's not applicable, shouldn't be pulled up, should be
 #   but hasn't, is too hard, etc.
-
+#
+# On pkgbuild for 2020Q1 9.0_RELEASE amd64, rust did not build despite
+# MAKE_JOBS_SAFE=no, but setting MAKE_JOBS=1 resulted in success. (No
+# PR is open for this.)  \todo Understand and fix.
+#
 # If we aren't on 9-current, and are on 8.x or 9.x, avoid parallel.
 # \todo Consider avoiding setting this on netbsd-9 past the fix.
 .if empty(MACHINE_PLATFORM:MNetBSD-9.99.*) && !empty(MACHINE_PLATFORM:MNetBSD-[1-9].*)
