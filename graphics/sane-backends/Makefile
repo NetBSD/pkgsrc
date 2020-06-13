@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.72 2020/05/31 17:19:49 rillig Exp $
+# $NetBSD: Makefile,v 1.73 2020/06/13 20:54:32 leot Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
+MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/c3dd60c9e054b5dee1e7b01a7edc98b0/
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
 
 DISTNAME=	sane-backends-${SANE_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-# lib/Makefile.in builds .o files and then .a, but rules for shlibs,
-# while apparently independent, cause libtool to create .o again,
-# making it possible for the ar step of the .a build to fail to find
-# the .o
-MAKE_JOBS_SAFE=		NO
-
 USE_TOOLS+=		msgfmt msgmerge pkg-config
 USE_PKGLOCALEDIR=	YES
+
+# c++11 is needed for genesys backend
+USE_LANGUAGES=		c c++11
+
+# C++11
+GCC_REQD+=		4.8
 
 CONFIGURE_ARGS+=	--with-gphoto2=no
 CONFIGURE_ARGS+=	--without-snmp
