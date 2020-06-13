@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.29 2020/06/07 15:04:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/06/13 15:51:06 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE.md
 ${GEM_LIBDIR}/.github/actions/presuite.rb
 ${GEM_LIBDIR}/.github/workflows/acceptance_tests.yml
 ${GEM_LIBDIR}/.github/workflows/checks.yaml
+${GEM_LIBDIR}/.github/workflows/coverage.yaml
 ${GEM_LIBDIR}/.github/workflows/unit_tests.yaml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.jrubyrc
@@ -144,6 +145,7 @@ ${GEM_LIBDIR}/lib/facts/linux/identity/user.rb
 ${GEM_LIBDIR}/lib/facts/linux/interfaces.rb
 ${GEM_LIBDIR}/lib/facts/linux/ipaddress6_interfaces.rb
 ${GEM_LIBDIR}/lib/facts/linux/ipaddress_interfaces.rb
+${GEM_LIBDIR}/lib/facts/linux/is_virtual.rb
 ${GEM_LIBDIR}/lib/facts/linux/kernel.rb
 ${GEM_LIBDIR}/lib/facts/linux/kernelmajversion.rb
 ${GEM_LIBDIR}/lib/facts/linux/kernelrelease.rb
@@ -517,6 +519,7 @@ ${GEM_LIBDIR}/lib/resolvers/identity_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/load_averages_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/lpar_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/lsb_release_resolver.rb
+${GEM_LIBDIR}/lib/resolvers/lspci.rb
 ${GEM_LIBDIR}/lib/resolvers/macosx/dmi_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/macosx/filesystems_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/macosx/ipaddress_resolver.rb
@@ -529,6 +532,7 @@ ${GEM_LIBDIR}/lib/resolvers/macosx/system_profiler_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/memory_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/mountpoints_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/networking_linux_resolver.rb
+${GEM_LIBDIR}/lib/resolvers/open_vz.rb
 ${GEM_LIBDIR}/lib/resolvers/os_level_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/os_release_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/partitions.rb
@@ -588,6 +592,7 @@ ${GEM_LIBDIR}/lib/resolvers/windows/utils/win32ole.rb
 ${GEM_LIBDIR}/lib/resolvers/windows/virtualization_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/windows/win_os_description_resolver.rb
 ${GEM_LIBDIR}/lib/resolvers/wpar_resolver.rb
+${GEM_LIBDIR}/lib/resolvers/xen.rb
 ${GEM_LIBDIR}/lib/util/api_debugger.rb
 ${GEM_LIBDIR}/lib/util/file_helper.rb
 ${GEM_LIBDIR}/os_hierarchy.json
