@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/04/28 11:46:29 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/13 17:50:40 nia Exp $
 
-DISTNAME=	samurai-1.0
+DISTNAME=	samurai-1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	https://github.com/michaelforney/samurai/
+HOMEPAGE=	https://github.com/michaelforney/samurai
 COMMENT=	Ninja-compatible build tool written in C
 LICENSE=	isc AND apache-2.0
 
