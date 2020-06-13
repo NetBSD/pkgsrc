@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/03/22 03:52:45 taca Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/13 15:44:41 taca Exp $
 
-DISTNAME=	xdr-3.0.0
-PKGREVISION=	1
+DISTNAME=	xdr-3.0.1
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
