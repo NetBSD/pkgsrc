@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.221 2020/06/02 08:23:13 adam Exp $
+# $NetBSD: Makefile,v 1.222 2020/06/13 18:15:08 nia Exp $
 
-DISTNAME=	mpd-0.21.23
+DISTNAME=	mpd-0.21.24
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/0.21/
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=	mpd-[0-9]*
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 
 # c++14
 GCC_REQD+=	6
