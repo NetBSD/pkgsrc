@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.25 2020/05/23 09:39:06 rillig Exp $
+# $NetBSD: u-boot.mk,v 1.26 2020/06/13 07:01:32 tnn Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -20,10 +20,11 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison gmake gsed pkg-config gawk
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=	tool
 ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 ALL_ENV+=		PYTHONLIBPATH=-L$(LOCALBASE)/lib
 PYTHON_VERSIONS_ACCEPTED=	27
+.include "../../lang/python/tool.mk"
 
 .if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
 UBOOT_ENV+=	UBOOT_PKGREVISION=nb${PKGREVISION}
@@ -53,5 +54,3 @@ do-install:
 	${INSTALL_DATA} ${.CURDIR}/files/${UBOOT_INSTALLBOOT_PLIST} \
 	    ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}/installboot.plist
 .endif
-
-.include "../../lang/python/tool.mk"
