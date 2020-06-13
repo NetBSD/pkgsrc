@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3579 2020/06/13 15:48:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3580 2020/06/13 15:51:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5789,3 +5789,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-train-core to 3.3.1 [taca 2020-06-13]
 	Updated net/ruby-xdr to 3.0.1 [taca 2020-06-13]
 	Updated sysutils/capistrano to 3.14.1 [taca 2020-06-13]
+	Updated sysutils/ruby-facter to 4.0.26 [taca 2020-06-13]
