@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/02 23:42:54 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/06/13 17:42:01 nia Exp $
 
-SHA1 (trayer-1.1.6.tar.gz) = f0d45c722b6e2a850ce7f7c90c36dc680353d500
-RMD160 (trayer-1.1.6.tar.gz) = 078497ce53bb1eb386f9ebd2c75ce65753fb3881
-SHA512 (trayer-1.1.6.tar.gz) = 31dee9d61ad6958d7a16a8897c8f0c1dd56781453d3e6f021111c537e761fa9093374235d508f0c6d0226d4d2539f2e126b5903630f92d6d76f1188f1a4177f9
-Size (trayer-1.1.6.tar.gz) = 27582 bytes
+SHA1 (trayer-1.1.8.tar.gz) = 8dc34324cf1570d599812ae40156052b034ad08d
+RMD160 (trayer-1.1.8.tar.gz) = 05813104c2fc93b070fe011babd7d9b3e8a95555
+SHA512 (trayer-1.1.8.tar.gz) = 5ae92fdcee64ad1ca59846874dcd4bd4859adeeb80a86f1ed97d62e6306f8ec62d1ee26dba251257242dc25d158a6a550e69f2fcc8739242a2311e37fe1ce310
+Size (trayer-1.1.8.tar.gz) = 28025 bytes
+SHA1 (patch-configure) = bbb6cbc3c834de4a9de3409c6b2361d2c707c64a
