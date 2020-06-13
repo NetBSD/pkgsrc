@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3574 2020/06/13 10:47:10 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3575 2020/06/13 11:56:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5784,3 +5784,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-lazy-object-proxy to 1.5.0 [wiz 2020-06-12]
 	Updated sysutils/ncdu to 1.15.1 [fcambus 2020-06-13]
 	Updated archivers/libzip to 1.7.1 [wiz 2020-06-13]
+	Updated emulators/libretro-beetle-psx to 20200610 [nia 2020-06-13]
