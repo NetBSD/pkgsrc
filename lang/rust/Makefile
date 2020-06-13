@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2020/06/09 15:08:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.175 2020/06/13 13:15:44 gdt Exp $
 
 DISTNAME=	rustc-1.43.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -136,9 +136,18 @@ CONFIGURE_ARGS+=	--debuginfo-level-tests=0
 CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .endif
 
-.if ${OPSYS} == "NetBSD" && !empty(MACHINE_PLATFORM:MNetBSD-9.99.*) && \
-    !empty(MACHINE_PLATFORM:MNetBSD-[1-9][0-9].*)
+.if ${OPSYS} == "NetBSD"
+# On older versions of NetBSD, parallel builds cause problems.
+# \todo Explain if the build is believed to be sound if not parallel,
+# or if a non-parallel build is merely more likely to work.
+# See toolchain/54192 at
+# http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54192
+# \todo Explain if this has been pulled up to 8 and 9, and 
+
+# If we aren't on 9-current, and are on 8.x or 9.x, avoid parallel.
+.if empty(MACHINE_PLATFORM:MNetBSD-9.99.*) && !empty(MACHINE_PLATFORM:MNetBSD-[1-9].*)
 MAKE_JOBS_SAFE=	no
+.endif
 .endif
 
 #
