@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2020/06/02 08:24:07 adam Exp $
+# $NetBSD: Makefile,v 1.83 2020/06/13 20:40:19 leot Exp $
 
 .include "../../graphics/sane-backends/Makefile.common"
+MASTER_SITES=	https://gitlab.com/sane-project/frontends/uploads/14e5c5a9205b10bd3df04501852eab28/
 
 DISTNAME=	sane-frontends-${SANE_VERSION}
 SANE_MICRO=	14
