@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3575 2020/06/13 11:56:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3576 2020/06/13 11:57:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5785,3 +5785,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ncdu to 1.15.1 [fcambus 2020-06-13]
 	Updated archivers/libzip to 1.7.1 [wiz 2020-06-13]
 	Updated emulators/libretro-beetle-psx to 20200610 [nia 2020-06-13]
+	Updated emulators/libretro-beetle-psx-hw to 20200610 [nia 2020-06-13]
