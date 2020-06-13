@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/06/13 21:51:26 leot Exp $
+# $NetBSD: Makefile,v 1.15 2020/06/13 22:04:35 leot Exp $
 #
 
 DISTNAME=	entr-4.5
@@ -25,8 +25,9 @@ MAKE_FILE=		Makefile.linux
 NOT_FOR_PLATFORM=	${MACHINE_PLATFORM}
 .endif
 
-TEST_TARGET=	test
-USE_TOOLS+=	bash:test
+TEST_TARGET=			test
+USE_TOOLS+=			bash:test
+CHECK_PORTABILITY_SKIP+=	system_test.sh
 .if ${PKGSRC_RUN_TEST:tl} == yes
 REPLACE_BASH+=	system_test.sh
 .endif
