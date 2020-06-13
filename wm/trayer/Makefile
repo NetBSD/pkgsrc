@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/03/10 22:11:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/13 17:42:01 nia Exp $
 
-PKGREVISION=	11
-DISTNAME=	trayer-1.1.6
+DISTNAME=	trayer-1.1.8
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sargon/}
 GITHUB_PROJECT=	trayer-srg
@@ -14,16 +13,15 @@ LICENSE=	mit
 
 USE_TOOLS+=	gmake pkg-config
 
-BUILD_MAKE_FLAGS=	CFLAGS=${CFLAGS:Q}
-INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
+HAS_CONFIGURE=	yes
 
-SUBST_CLASSES+=		paths
-SUBST_SED.paths=	-e 's,/usr,${PREFIX},'
-SUBST_FILES.paths=	config.h Makefile.config
-SUBST_STAGE.paths=	pre-build
-SUBST_MESSAGE.paths=	Fixing path to ${PREFIX}.
+MAKE_FLAGS=	CFLAGS=${CFLAGS:Q}
 
-AUTO_MKDIRS=		yes
+AUTO_MKDIRS=	yes
+
+CONFIG_SHELL=	bash
+
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/trayer/
