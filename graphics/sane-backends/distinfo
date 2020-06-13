@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.46 2018/02/25 21:22:07 wiz Exp $
+$NetBSD: distinfo,v 1.47 2020/06/13 20:54:32 leot Exp $
 
-SHA1 (sane-backends-1.0.27.tar.gz) = 579ec4d6279c7f0f02014358a7e74056672a1e43
-RMD160 (sane-backends-1.0.27.tar.gz) = 09afbf4efee05759aef49de8d41c7d089a41ed05
-SHA512 (sane-backends-1.0.27.tar.gz) = c6552768bfc10216730fc11011c82f74ca0952182019ded3916072147ec09be5c975ce1d37dc3ccea050c488dbdf983c2ca17dcd702644060ba796ae2591f9c5
-Size (sane-backends-1.0.27.tar.gz) = 6430188 bytes
+SHA1 (sane-backends-1.0.30.tar.gz) = 4f6a2e56d92d15a58dcabcba76a36929a2fd882f
+RMD160 (sane-backends-1.0.30.tar.gz) = 85c57e773d26e8c82304d3d6bce38dcda0f2b8c0
+SHA512 (sane-backends-1.0.30.tar.gz) = e9f4ab1f21d5ab0e09b101389c325947824945af968f08b307485f79d4dc4c134b8a1979fb0cf0cfa72435abffe70d0060748a2c2ec46514eb15a0442ee181a5
+Size (sane-backends-1.0.30.tar.gz) = 7204519 bytes
 SHA1 (patch-aa) = 91f5838b7c455dc160ba22d15659c1b19a222668
 SHA1 (patch-ab) = f6ec74b90f5499d07117559c7079ba2efccccf17
 SHA1 (patch-ah) = 6e747c3b541c9ebb57db6477ac6b6e48b1df0248
 SHA1 (patch-ai) = 14f5467eb865406cbec00b8d47b5c23c4c89f113
 SHA1 (patch-aj) = c2e0733796872f1b074d0491dea4cffa1891bccc
 SHA1 (patch-ak) = f00d3773c14f9955565debc0d16231906a2bba76
-SHA1 (patch-backend_epsonds.c) = 2ecbb36431254b7059c3e35b5ac094c4b3f41374
+SHA1 (patch-backend_pixma_pixma__bjnp.c) = c48e929910cbe33b91c919de3f47badd2bf063f0
 SHA1 (patch-m4_byteorder.m4) = 23f4b0256fc9980d3472e77ab558b0e24a9495b4
 SHA1 (patch-tools_umax__pp.c) = debe660184a1380a894e8a5414983f5fdb19cded

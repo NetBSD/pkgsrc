@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2019/08/07 15:52:13 maya Exp $
+@comment $NetBSD: PLIST,v 1.35 2020/06/13 20:54:32 leot Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -7,28 +7,6 @@ bin/umax_pp
 include/sane/sane.h
 include/sane/saneopts.h
 lib/libsane.la
-${PLIST.nls}share/locale/bg/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/cs/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/da/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/de/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/en@boldquot/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/en@quot/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/en_GB/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/eo/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/es/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/fi/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/fr/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/gl/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/hu/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/it/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/ja/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/nb/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/nl/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/pl/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/pt/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/ru/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/sv/LC_MESSAGES/sane-backends.mo
-${PLIST.nls}share/locale/uk/LC_MESSAGES/sane-backends.mo
 lib/pkgconfig/sane-backends.pc
 lib/sane/libsane-abaton.la
 lib/sane/libsane-agfafocus.la
@@ -93,6 +71,7 @@ lib/sane/libsane-pixma.la
 lib/sane/libsane-plustek.la
 lib/sane/libsane-plustek_pp.la
 lib/sane/libsane-ricoh.la
+lib/sane/libsane-ricoh2.la
 lib/sane/libsane-rts8891.la
 lib/sane/libsane-s9036.la
 lib/sane/libsane-sceptre.la
@@ -179,6 +158,7 @@ man/man5/sane-pixma.5
 man/man5/sane-plustek.5
 man/man5/sane-plustek_pp.5
 man/man5/sane-ricoh.5
+man/man5/sane-ricoh2.5
 man/man5/sane-rts8891.5
 man/man5/sane-s9036.5
 man/man5/sane-sceptre.5
@@ -207,6 +187,34 @@ sbin/saned
 share/doc/sane-backends/AUTHORS
 share/doc/sane-backends/COPYING
 share/doc/sane-backends/ChangeLog
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.0
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.1
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.10
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.11
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.12
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.13
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.14
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.15
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.16
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.17
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.18
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.19
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.2
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.20
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.21
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.22
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.23
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.24
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.25
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.27
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.28
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.3
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.4
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.5
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.6
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.7
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.8
+share/doc/sane-backends/ChangeLogs/ChangeLog-1.0.9
 share/doc/sane-backends/LICENSE
 share/doc/sane-backends/NEWS
 share/doc/sane-backends/PROBLEMS
@@ -361,6 +369,28 @@ share/examples/sane/umax.conf
 share/examples/sane/umax1220u.conf
 share/examples/sane/umax_pp.conf
 share/examples/sane/xerox_mfp.conf
+${PLIST.nls}share/locale/bg/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/cs/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/da/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/de/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/en@boldquot/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/en@quot/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/en_GB/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/eo/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/fi/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/gl/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/hu/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/ja/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/nb/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/nl/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/pl/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/pt/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/uk/LC_MESSAGES/sane-backends.mo
 @pkgdir share/sane/snapscan
 @pkgdir share/sane/gt68xx
 @pkgdir share/sane/epjitsu
