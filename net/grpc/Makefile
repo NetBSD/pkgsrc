@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/06/03 09:28:53 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/06/13 11:26:31 nia Exp $
 
 DISTNAME=	grpc-1.29.1
 CATEGORIES=	net
@@ -23,6 +23,14 @@ CMAKE_ARGS+=	-DgRPC_GFLAGS_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_PROTOBUF_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_SSL_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
+
+.include "../../mk/bsd.prefs.mk"
+
+# 64 bit atomic ops are required
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=		-march=i586
+CXXFLAGS+=		-march=i586
+.endif
 
 .include "../../benchmarks/google-benchmark/buildlink3.mk"
 .include "../../devel/abseil/buildlink3.mk"
