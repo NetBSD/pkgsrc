@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3577 2020/06/13 15:43:11 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3578 2020/06/13 15:45:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5787,3 +5787,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-beetle-psx to 20200610 [nia 2020-06-13]
 	Updated emulators/libretro-beetle-psx-hw to 20200610 [nia 2020-06-13]
 	Updated net/ruby-train-core to 3.3.1 [taca 2020-06-13]
+	Updated net/ruby-xdr to 3.0.1 [taca 2020-06-13]
