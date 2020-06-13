@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/05/22 10:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/06/13 13:34:22 nia Exp $
 #
 
 DISTNAME=	ioquake3-1.36.20200125
@@ -26,6 +26,8 @@ do-install:
 QUAKE_ARCH!=	uname -m
 .elif ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "aarch64"
 QUAKE_ARCH=	${MACHINE_CPU}
+.elif ${MACHINE_ARCH} == "i386"
+QUAKE_ARCH=	x86
 .else
 QUAKE_ARCH=	${MACHINE_ARCH}
 .endif
