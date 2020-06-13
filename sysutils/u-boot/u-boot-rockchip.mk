@@ -1,4 +1,4 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.8 2020/05/23 09:39:06 rillig Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.9 2020/06/13 07:01:32 tnn Exp $
 #
 # should be used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -30,8 +30,6 @@ post-build:
 		b=$$(expr $$b + 1); \
 	done < ${WRKSRC}/idbloader.img > ${WRKSRC}/rkspi_loader.img 2> /dev/null
 	dd if=${WRKSRC}/u-boot.itb seek=1024 conv=notrunc of=${WRKSRC}/rkspi_loader.img
-
-PYTHON_VERSIONS_ACCEPTED+=	37 38
 
 .include "../../sysutils/arm-trusted-firmware-${U_BOOT_IMAGE_TYPE}/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
