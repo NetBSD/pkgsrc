@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.4 2020/05/30 14:59:10 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/06/13 11:56:23 nia Exp $
 
 # used by emulators/libretro-beetle-psx-hw/Makefile
 # used by emulators/libretro-beetle-psx/Makefile
 
-VERSION=	20200526
+VERSION=	20200610
 DISTNAME=	libretro-beetle-psx-${VERSION}
 CATEGORIES=	emulators
 GITHUB_PROJECT=	beetle-psx-libretro
-GITHUB_TAG=	12014e1f317ae8bda1c9ccce319d9dd78f253d2f
+GITHUB_TAG=	3db06fd98c4ad2e4c35f31dd1bbc71c519a26f7a
 
 LICENSE=	gnu-gpl-v2
 
@@ -16,6 +16,13 @@ PATCHDIR=	${.CURDIR}/../../emulators/libretro-beetle-psx/patches
 MESSAGE_SRC=	${.CURDIR}/../../emulators/libretro-beetle-psx/MESSAGE
 
 USE_LANGUAGES=	c c++03
+USE_TOOLS+=	pkg-config
+
+MAKE_FLAGS+=	SYSTEM_ZLIB=1
+
+LDFLAGS+=	-lFLAC
 
 .include "../../emulators/retroarch/core.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
