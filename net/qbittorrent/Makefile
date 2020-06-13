@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/06/02 08:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/13 11:21:29 nia Exp $
 
 DISTNAME=	qbittorrent-4.2.5
 PKGREVISION=	2
@@ -21,9 +21,14 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 GCC_REQD+=	6 # c++14
 
-LDFLAGS.NetBSD+=	-ljemalloc
-
 .include "../../mk/bsd.prefs.mk"
+
+# 64 bit atomic ops are required
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=		-march=i586
+.endif
+
+LDFLAGS.NetBSD+=	-ljemalloc
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -31,8 +36,8 @@ LDFLAGS.NetBSD+=	-ljemalloc
 .include "../../net/libtorrent-rasterbar/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.if ${OPSYS} == Darwin
-.include "../../x11/qt5-qtmacextras/buildlink3.mk"
+.if ${OPSYS} == "Darwin"
+.  include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
