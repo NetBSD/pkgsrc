@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2020/04/21 09:51:52 nia Exp $
+# $NetBSD: Makefile,v 1.79 2020/06/13 09:47:40 nia Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -70,7 +70,7 @@ BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
 .endif
 
 .if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:M*arm*)
-LDFLAGS+=	-Wl,-no-keep-memory -Wl-reduce-memory
+LDFLAGS+=	-Wl,--no-keep-memory
 .endif
 
 # 64-bit atomic ops are required
