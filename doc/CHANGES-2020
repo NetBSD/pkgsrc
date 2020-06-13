@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3585 2020/06/13 17:42:12 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3586 2020/06/13 17:43:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5795,3 +5795,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/php-pecl-zip to 1.19.0 [taca 2020-06-13]
 	Updated emulators/PC6001VX to 3.5.1 [tsutsui 2020-06-13]
 	Updated wm/trayer to 1.1.8 [nia 2020-06-13]
+	Updated audio/snd to 20.4 [nia 2020-06-13]
