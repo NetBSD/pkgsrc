@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.18 2020/05/12 17:36:20 rillig Exp $
+# $NetBSD: cmake.mk,v 1.19 2020/06/13 15:11:11 ryoon Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -83,7 +83,9 @@ SUBST_STAGE.cmake=	do-configure-pre-hook
 SUBST_MESSAGE.cmake=	Fixing CMAKE_MODULE_PATH in CMakeLists.txt
 SUBST_FILES.cmake=	${CMAKE_MODULE_PATH_OVERRIDE}
 SUBST_SED.cmake=	\
-	's|set *( *CMAKE_MODULE_PATH |set (CMAKE_MODULE_PATH "${_CMAKE_DIR}" |'
+	-e 's|set *( *CMAKE_MODULE_PATH |set (CMAKE_MODULE_PATH "${_CMAKE_DIR}" |'
+SUBST_SED.cmake+=	\
+	-e 's|SET *( *CMAKE_MODULE_PATH |SET (CMAKE_MODULE_PATH "${_CMAKE_DIR}" |'
 SUBST_NOOP_OK.cmake=	yes # not all packages need this
 
 do-configure-pre-hook: __cmake-copy-module-tree
