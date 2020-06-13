@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/07 11:25:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/13 22:52:38 gutteridge Exp $
 include/KF5/KTextEditor/KTextEditor/AbstractAnnotationItemDelegate
 include/KF5/KTextEditor/KTextEditor/AnnotationInterface
 include/KF5/KTextEditor/KTextEditor/Application
@@ -67,7 +67,7 @@ lib/cmake/KF5TextEditor/KF5TextEditorTargets-noconfig.cmake
 lib/cmake/KF5TextEditor/KF5TextEditorTargets.cmake
 lib/libKF5TextEditor.so
 lib/libKF5TextEditor.so.5
-lib/libKF5TextEditor.so.${PKGVERSION}
+lib/libKF5TextEditor.so.5.70.0
 libexec/kauth/kauth_ktexteditor_helper
 qt5/mkspecs/modules/qt_KTextEditor.pri
 qt5/plugins/kf5/parts/katepart.so
