@@ -1,9 +1,7 @@
-# $NetBSD: Makefile.common,v 1.34 2018/03/31 22:39:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.35 2020/06/13 20:54:32 leot Exp $
 # used by graphics/sane-frontends/Makefile
 
 CATEGORIES?=	graphics
-MASTER_SITES?=	https://alioth.debian.org/frs/download.php/file/4224/
-# http://alioth.debian.org/frs/?group_id=30186
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.sane-project.org/
@@ -11,7 +9,7 @@ LICENSE=	gnu-gpl-v2
 
 SANE_MAJOR?=	1
 SANE_MINOR?=	0
-SANE_MICRO?=	27
+SANE_MICRO?=	30
 SANE_VERSION=	${SANE_MAJOR}.${SANE_MINOR}.${SANE_MICRO}
 PLIST_SUBST+=	SANE_MAJOR=${SANE_MAJOR:Q}
 PLIST_SUBST+=	SANE_MINOR=${SANE_MINOR:Q}
