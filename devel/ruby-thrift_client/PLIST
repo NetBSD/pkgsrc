@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/10 06:32:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/14 15:46:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/Manifest
-${GEM_LIBDIR}/README.rdoc
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/thrift_client.rb
 ${GEM_LIBDIR}/lib/thrift_client/abstract_thrift_client.rb
 ${GEM_LIBDIR}/lib/thrift_client/connection.rb
@@ -13,15 +8,14 @@ ${GEM_LIBDIR}/lib/thrift_client/connection/factory.rb
 ${GEM_LIBDIR}/lib/thrift_client/connection/http.rb
 ${GEM_LIBDIR}/lib/thrift_client/connection/socket.rb
 ${GEM_LIBDIR}/lib/thrift_client/event_machine.rb
+${GEM_LIBDIR}/lib/thrift_client/server.rb
 ${GEM_LIBDIR}/lib/thrift_client/simple.rb
 ${GEM_LIBDIR}/lib/thrift_client/thrift.rb
 ${GEM_LIBDIR}/test/greeter/greeter.rb
-${GEM_LIBDIR}/test/greeter/greeter.thrift
 ${GEM_LIBDIR}/test/greeter/server.rb
 ${GEM_LIBDIR}/test/multiple_working_servers_test.rb
 ${GEM_LIBDIR}/test/simple_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/thrift_client_http_test.rb
 ${GEM_LIBDIR}/test/thrift_client_test.rb
-${GEM_LIBDIR}/thrift_client.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

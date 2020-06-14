@@ -1,1 +1,2 @@
-Thrift client wrapper for Ruby that encapsulates some common failover behaviour.
+Thrift client wrapper for Ruby that encapsulates some common failover
+behaviour.
