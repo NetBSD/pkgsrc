@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.430 2020/06/05 03:38:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.431 2020/06/14 18:42:19 maya Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		77.0
 MOZ_BRANCH_MINOR=	.1
+PKGREVISION=		1
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
@@ -98,16 +99,6 @@ pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC}/${OBJDIR} && touch old-configure.vars
 	# Do not fetch Rust Cargo file via network during build
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-8.*-*) || !empty(MACHINE_PLATFORM:MNetBSD-9.0*)
-.PHONY: disable-multiprocess
-disable-multiprocess:
-	${STEP_MSG} "Broken process-shared mutexes, disabling multiprocess windows..."
-	cd ${WRKSRC} && ${ECHO} 'pref("browser.tabs.remote.autostart", false);' >> browser/app/profile/firefox.js
-	cd ${WRKSRC} && ${ECHO} 'pref("webgl.disabled", true);' >> browser/app/profile/firefox.js
-
-post-configure: disable-multiprocess
-.endif
 
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
