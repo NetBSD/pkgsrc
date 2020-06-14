@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.7 2020/03/01 12:38:04 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/06/14 11:40:11 markd Exp $
 
 SHA1 (texworks-0.6.3.tar.gz) = cfa574773cd9db2c1248c02c4e23254a34168394
 RMD160 (texworks-0.6.3.tar.gz) = d4e03af0e41f2c14eaa4800769062002f96fd77c
 SHA512 (texworks-0.6.3.tar.gz) = 389cf54441e74164fc842f2f293cdee45c6ff9fe202f262d32f3fb076de9a29813a62cd75052969293f2f784e0722215bbbf2206e75bc836a13d495bf5aed653
 Size (texworks-0.6.3.tar.gz) = 12082640 bytes
 SHA1 (patch-getDefaultBinPaths.sh) = 3f41dd5c29f581e8bba0bb8dd48576a5619d8d1f
+SHA1 (patch-modules_QtPDF_src_PDFBackend.cpp) = 8dbae61266969249eb9e3c9585a4d10a1ebcf1bf
 SHA1 (patch-src_CompletingEdit.cpp) = e7ce59c97a232dffdf4dc58efc2ab15b46695087
