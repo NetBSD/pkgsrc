@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3620 2020/06/14 16:28:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3621 2020/06/14 18:42:43 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5831,3 +5831,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-faye-websocket to 0.10.9 [taca 2020-06-14]
 	Updated www/ruby-faraday to 1.0.1 [taca 2020-06-14]
 	Updated www/ruby-faraday_middleware to 1.0.0 [taca 2020-06-14]
+	Updated www/firefox to 77.0.1nb1 [maya 2020-06-14]
