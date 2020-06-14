@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2020/06/14 11:44:02 nia Exp $
+
+SHA1 (nvi2-2.1.3.tar.gz) = 8840cbc6c128e1f47517754be06d71be0e4446dc
+RMD160 (nvi2-2.1.3.tar.gz) = a8d2ed70388a6d698371f5e25bd53e2b49d80375
+SHA512 (nvi2-2.1.3.tar.gz) = d3f8837990aa59dd524a55a302dc892325b232a949f4f2a7114c9efdfa3406cae821edb48dd5d2763bbadd42624bda5a47a4fc21267db86c9021b1a09164db8c
+Size (nvi2-2.1.3.tar.gz) = 437664 bytes
+SHA1 (patch-cl_cl__screen.c) = de98539a79da66d2489ec6df29351d3cbaac3c56
+SHA1 (patch-common_cut.c) = 87f42be3f61aa13059391665851895534c30c762
+SHA1 (patch-ex_ex__filter.c) = b1d15ec6129fe427af61d4a2ea726d8565325f02
