@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3601 2020/06/14 10:21:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3602 2020/06/14 10:39:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5811,3 +5811,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/pdfpc version 4.4.0 [ryoon 2020-06-14]
 	Added emulators/visualboyadvance-m version 2.1.4 [ryoon 2020-06-14]
 	Updated net/libtelnet to 0.23 [nia 2020-06-14]
+	Updated lang/forth-retro to 12.0.2019.7 [ryoon 2020-06-14]
