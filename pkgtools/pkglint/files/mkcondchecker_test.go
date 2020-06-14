@@ -216,6 +216,139 @@ func (s *Suite) Test_MkCondChecker_Check__comparing_PKGSRC_COMPILER_with_eqeq(c 
 		"ERROR: Makefile:6: Use ${PKGSRC_COMPILER:Ngcc} instead of the != operator.")
 }
 
+func (s *Suite) Test_MkCondChecker_Check__contradicting_conditions(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.FinishSetUp()
+
+	lines := func(lines ...string) []string { return lines }
+	test := func(lines []string, diagnostics ...string) {
+		allLines := []string{
+			MkCvsID,
+			"",
+			".include \"../../mk/bsd.prefs.mk\"",
+			""}
+		mklines := t.NewMkLines("filename.mk",
+			append(allLines, lines...)...)
+
+		mklines.Check()
+
+		t.CheckOutput(diagnostics)
+	}
+
+	// Seen in lang/rust/Makefile on 2020-06-12.
+	// TODO: The MACHINE_PLATFORM conditions make the OPSYS condition redundant.
+	test(
+		lines(
+			".if ${OPSYS} == \"NetBSD\" && "+
+				"!empty(MACHINE_PLATFORM:MNetBSD-9.99.*) && "+
+				"!empty(MACHINE_PLATFORM:MNetBSD-[1-9][0-9].*)",
+			".endif"),
+		"ERROR: filename.mk:5: The patterns \"NetBSD-9.99.*\" "+
+			"and \"NetBSD-[1-9][0-9].*\" cannot match at the same time.")
+
+	// A syntactical variation of the above condition.
+	// TODO: The MACHINE_PLATFORM conditions make the OPSYS condition redundant.
+	test(
+		lines(
+			".if ${OPSYS} == NetBSD && ${MACHINE_PLATFORM:MNetBSD-9.99.*} && ${MACHINE_PLATFORM:MNetBSD-[1-9][0-9].*}",
+			".endif"),
+		"ERROR: filename.mk:5: The patterns \"NetBSD-9.99.*\" "+
+			"and \"NetBSD-[1-9][0-9].*\" cannot match at the same time.")
+
+	// Another variation on the same theme.
+	// TODO: The MACHINE_PLATFORM conditions make the OPSYS condition redundant.
+	test(
+		lines(
+			".if ${OPSYS} == NetBSD",
+			".  if ${MACHINE_PLATFORM:MNetBSD-9.99.*}",
+			".    if ${MACHINE_PLATFORM:MNetBSD-[1-9][0-9].*}",
+			".    endif",
+			".  endif",
+			".endif"),
+		"ERROR: filename.mk:7: The patterns \"NetBSD-9.99.*\" from line 6 "+
+			"and \"NetBSD-[1-9][0-9].*\" cannot match at the same time.")
+
+	// TODO: Since MACHINE_PLATFORM always starts with OPSYS, these
+	//  conditions contradict each other as well.
+	test(
+		lines(
+			".if ${OPSYS} == NetBSD",
+			".  if ${MACHINE_PLATFORM:MSunOS-5.*}",
+			".  endif",
+			".endif"),
+		nil...)
+
+	// Since PKG_OPTIONS is a list and contains several words,
+	// each of them can match one of the patterns.
+	t.SetUpOption("one", "")
+	t.SetUpOption("two", "")
+	test(
+		lines(
+			".if ${PKG_OPTIONS:Mone} && ${PKG_OPTIONS:Mtwo}",
+			".endif"),
+		nil...)
+
+	// For variables that are declared individually by a package,
+	// pkglint does not have any type information and thus must
+	// not issue an error here.
+	test(
+		lines(
+			"CUSTOM_VAR=\tone two",
+			".if ${CUSTOM_VAR:Mone} && ${CUSTOM_VAR:Mtwo}",
+			".endif"),
+		nil...)
+
+	// In this case, pkglint may infer that CUSTOM_VAR has a
+	// constant value and thus cannot match the second pattern.
+	// As of June 2020, it doesn't do this though.
+	test(
+		lines(
+			"CUSTOM_VAR=\tone",
+			".if ${CUSTOM_VAR:Mone} && ${CUSTOM_VAR:Mtwo}",
+			".endif"),
+		nil...)
+
+	// If the variable type is guessed based on the variable name (see
+	// guessVariableType) and is not a list, the error message is correct.
+	test(
+		lines(
+			"CUSTOM_FILE=\tone",
+			".if ${CUSTOM_FILE:Mone} && ${CUSTOM_FILE:Mtwo}",
+			".endif"),
+		"NOTE: filename.mk:6: CUSTOM_FILE can be compared using the simpler "+
+			"\"${CUSTOM_FILE} == one\" instead of matching against \":Mone\".",
+		"NOTE: filename.mk:6: CUSTOM_FILE can be compared using the simpler "+
+			"\"${CUSTOM_FILE} == two\" instead of matching against \":Mtwo\".",
+		"ERROR: filename.mk:6: The patterns \"one\" and \"two\" "+
+			"cannot match at the same time.")
+
+	// The conditions from an .if and an .elif don't contradict each other.
+	test(
+		lines(
+			".if ${OPSYS:MNet*}",
+			".elif ${OPSYS:MFree*}",
+			".endif"),
+		nil...)
+
+	// And finally, two conditions that can both match at the same time,
+	// just for the code coverage.
+	// It's strange that the above tests did not include that case.
+	test(
+		lines(
+			".if ${OPSYS:MNet*} && ${OPSYS:MNetB*}",
+			".endif"),
+		nil...)
+
+	test(
+		lines(
+			".if ${OPSYS:M[1} && ${OPSYS:M[2}",
+			".endif"),
+		"WARN: filename.mk:5: Invalid match pattern \"[1\".",
+		"WARN: filename.mk:5: Invalid match pattern \"[2\".")
+}
+
 func (s *Suite) Test_MkCondChecker_checkNotEmpty(c *check.C) {
 	t := s.Init(c)
 
@@ -1255,4 +1388,63 @@ func (s *Suite) Test_MkCondChecker_checkNotCompare(c *check.C) {
 
 	test("!${VAR}",
 		nil...)
+}
+
+func (s *Suite) Test_MkCondChecker_checkContradictions(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	test := func(cond string, diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			".if "+cond)
+		mkline := mklines.mklines[0]
+		ck := NewMkCondChecker(mkline, mklines)
+
+		mklines.ForEach(func(mkline *MkLine) { ck.checkContradictions() })
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test("!empty(MACHINE_PLATFORM:Mone) && !empty(MACHINE_PLATFORM:Mtwo)",
+		"ERROR: filename.mk:1: The patterns \"one\" and \"two\" "+
+			"cannot match at the same time.")
+}
+
+func (s *Suite) Test_MkCondChecker_collectFacts(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.NewMkLines("filename.mk",
+		".if !empty(OPSYS:Mone) && ${OPSYS:Mtwo}",
+		".  if ${OS_VERSION:Mthree}",
+		".    if ((((${OPSYS:Mfour}))))",
+		".      if (${OPSYS:Mor1} || ${OPSYS:Mor2})", // these are ignored
+		".        if ${OPSYS:Mfive} && (${OPSYS:Msix} && ${OPSYS:Mseven})",
+		".      endif",
+		".    endif",
+		".  endif",
+		".endif")
+	var facts []VarFact
+
+	mklines.ForEach(func(mkline *MkLine) {
+		ck := NewMkCondChecker(mkline, mklines)
+		if mkline.NeedsCond() {
+			facts = append(facts, ck.collectFacts(mkline)...)
+		}
+	})
+
+	for i, _ := range facts {
+		facts[i].Matches = nil // these would just complicate the comparison
+	}
+	t.CheckDeepEquals(facts, []VarFact{
+		{mklines.mklines[0], "OPSYS", "one", nil},
+		{mklines.mklines[0], "OPSYS", "two", nil},
+		{mklines.mklines[1], "OS_VERSION", "three", nil},
+		{mklines.mklines[2], "OPSYS", "four", nil},
+		{mklines.mklines[4], "OPSYS", "five", nil},
+		{mklines.mklines[4], "OPSYS", "six", nil},
+		{mklines.mklines[4], "OPSYS", "seven", nil},
+	})
 }
