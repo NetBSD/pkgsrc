@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.2 2020/06/14 15:38:18 nia Exp $
+# $NetBSD: rust.mk,v 1.3 2020/06/14 15:43:22 nia Exp $
 # 
 # This file determines the type of rust package to use.
 #
@@ -21,7 +21,6 @@
 #
 # RUST_REQ
 #	The minimum version of Rust required by the package.
-#	Binary Rust is only published for certain platforms.
 #
 #	Default: 1.20.0
 #
