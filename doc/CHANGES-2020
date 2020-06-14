@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3608 2020/06/14 13:31:57 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3609 2020/06/14 13:33:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5818,3 +5818,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/codeblocks to 20.03 [ryoon 2020-06-14]
 	Updated devel/ruby-shoulda-context to 2.0.0 [taca 2020-06-14]
 	Updated devel/ruby-shoulda-matchers to 4.3.0 [taca 2020-06-14]
+	Updated meta-pkgs/ruby-shoulda to 4.0.0 [taca 2020-06-14]
