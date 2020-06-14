@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3596 2020/06/14 05:59:54 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3597 2020/06/14 07:32:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5806,3 +5806,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/entr to 4.5 [leot 2020-06-13]
 	Updated lang/php73 to 7.3.19 [taca 2020-06-14]
 	Updated lang/php74 to 7.4.7 [taca 2020-06-14]
+	Updated print/scribus-qt4 to 1.4.8 [ryoon 2020-06-14]
