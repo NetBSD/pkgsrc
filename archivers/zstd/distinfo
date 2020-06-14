@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2019/11/06 17:13:08 adam Exp $
+$NetBSD: distinfo,v 1.24 2020/06/14 13:51:55 adam Exp $
 
-SHA1 (zstd-1.4.4.tar.gz) = 8ec1a47b704001c1804b8670a3c86f4baf035c07
-RMD160 (zstd-1.4.4.tar.gz) = 985ec5b18af21a520bb74df70a0f9e6c1b70b75f
-SHA512 (zstd-1.4.4.tar.gz) = 8209837e8eb14e474dfe21d5511085f46cef93b03ab77613fd41e7b8be652418231c38852669c8e0b55b78ad41ea2cb8008d0da122a83f8f27e32b5c86f045cf
-Size (zstd-1.4.4.tar.gz) = 1962617 bytes
+SHA1 (zstd-1.4.5.tar.gz) = 9c344c2660c990b6d6a9cced73db3a0dfe2b0092
+RMD160 (zstd-1.4.5.tar.gz) = b7b9df3d4293eab050f84d2fc7f0a29c89905e87
+SHA512 (zstd-1.4.5.tar.gz) = b03c497c3e0590c3d384cb856e3024f144b2bfac0d805d80e68deafa612c68237f12a2d657416d476a28059e80936c79f099fc42331464b417593895ea214387
+Size (zstd-1.4.5.tar.gz) = 1987927 bytes
 SHA1 (patch-Makefile) = daf9d1946513ee24a4c4c187ec80878e9a578744
-SHA1 (patch-lib_Makefile) = ed367b656573b2ff05c9992f1e80338706aaf81d
-SHA1 (patch-programs_Makefile) = c7e961ce61ee5f0e81f1f31c55e7fb9be5a5b710
+SHA1 (patch-lib_Makefile) = 5005ffd50388520f69bd95012f696274e29fd3a9
+SHA1 (patch-programs_Makefile) = 2500df468c2994f1b33165c5d2774817bdc8addc
 SHA1 (patch-zlibWrapper_examples_minigzip.c) = 4ed0cb648bdd6efa61b3f66ba6eb1ea74b7767ec
