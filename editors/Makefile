@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2020/06/09 14:30:00 nia Exp $
+# $NetBSD: Makefile,v 1.207 2020/06/14 11:44:02 nia Exp $
 #
 
 COMMENT=	Editors
@@ -91,6 +91,7 @@ SUBDIR+=	nedit
 SUBDIR+=	ng
 SUBDIR+=	nts
 SUBDIR+=	nvi
+SUBDIR+=	nvi2
 SUBDIR+=	nvi-m17n
 SUBDIR+=	obby
 SUBDIR+=	p5-Acme-Padre-PlayCode
