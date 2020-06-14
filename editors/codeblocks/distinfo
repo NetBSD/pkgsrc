@@ -1,16 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/05/22 01:18:14 joerg Exp $
+$NetBSD: distinfo,v 1.5 2020/06/14 13:22:58 ryoon Exp $
 
-SHA1 (codeblocks_16.01.tar.gz) = 70aabe8a948dbaa919eb4b87bc74a600e0d93516
-RMD160 (codeblocks_16.01.tar.gz) = e98b034eb8d6cf52a89312f2d5eaa10b17f1355e
-SHA512 (codeblocks_16.01.tar.gz) = 496ff2dbcf9a8248fa9f1060d50567d1fc6480cc9d8fc9f7d2cd532c82f4344deafe9b43f2b17d2510c74851e21acf2ca90d5cc7b61237d69a17e78e9907a63a
-Size (codeblocks_16.01.tar.gz) = 20250097 bytes
-SHA1 (patch-configure) = c746e3b0f4f5ca2b8d5d215e4510c1996205338b
-SHA1 (patch-src_include_scripting_sqplus_sqplus.h) = 92385bb49c86d113d635a9540bd2013294f60ee1
-SHA1 (patch-src_plugins_contrib_wxContribItems_wxchart_configure) = 57f52bac348192b1dbfa63b012a48ed259e5933d
-SHA1 (patch-src_plugins_contrib_wxContribItems_wxthings_configure) = 645d331fc86c872e522ed56fc0764e2a2a77c3c2
-SHA1 (patch-src_plugins_scriptedwizard_resources_opencv_wizard.script) = ec8514c3e816a882104221e5bfb32a6a2937030d
-SHA1 (patch-src_sdk_scripting_squirrel_sqbaselib.cpp) = 6d5bf9f9272ca6d75052e79f65953cb6894d0d6b
-SHA1 (patch-src_sdk_scripting_squirrel_sqvm.cpp) = 7e872890205637d381f0cba9b5ced1695e1e9dc4
-SHA1 (patch-src_sdk_wxpropgrid_configure) = fc842f5964e7a213907d93b81ef35a3f1a4edf19
-SHA1 (patch-src_src_appglobals.cpp) = cb561786251fe14ed777105f207635c219f8634b
+SHA1 (codeblocks-20.03.tar.xz) = d75b2d8820de369be1b574c433a7a6dde7e8b218
+RMD160 (codeblocks-20.03.tar.xz) = 2b4a2136cc34b1d27a8c7bdb3747f87904648cab
+SHA512 (codeblocks-20.03.tar.xz) = f97c1a02d31f0be4dc08b1f19b57bd0d3cba375ab5f33ab91b2a2df7817018f5b3e3063ed07199a3970644f1caa7c7e511db2034c73264f5f4963046d65b0097
+Size (codeblocks-20.03.tar.xz) = 11799264 bytes
 SHA1 (patch-src_src_prefix.cpp) = 941fe61e81427990ed45b414a0bf98ceb40557cc
