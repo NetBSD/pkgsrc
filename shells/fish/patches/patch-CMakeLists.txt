@@ -1,0 +1,35 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/06/14 22:52:10 js Exp $
+
+Disable code-signing on macOS.
+
+If fish is code-signed, it fails to load libintl as pkgsrc does not codesign
+libintl.
+
+--- CMakeLists.txt.orig	2020-04-29 02:54:40.000000000 +0000
++++ CMakeLists.txt
+@@ -165,25 +165,9 @@ ADD_DEFINITIONS(-D_REENTRANT)
+ # Set up PCRE2
+ INCLUDE(cmake/PCRE2.cmake)
+ 
+-# Code signing ID on Mac. A default '-' is ad-hoc codesign.
+-SET(MAC_CODESIGN_ID "-" CACHE STRING "Mac code-signing identity")
+-
+-FUNCTION(CODESIGN_ON_MAC target)
+-  IF(APPLE)
+-    ADD_CUSTOM_COMMAND(
+-      TARGET ${target}
+-      POST_BUILD
+-      COMMAND codesign --force --deep --options runtime --sign "${MAC_CODESIGN_ID}" $<TARGET_FILE:${target}>
+-      VERBATIM
+-    )
+-  ENDIF()
+-ENDFUNCTION(CODESIGN_ON_MAC target)
+-
+-
+ # Define a function to link dependencies.
+ FUNCTION(FISH_LINK_DEPS_AND_SIGN target)
+   TARGET_LINK_LIBRARIES(${target} fishlib)
+-  CODESIGN_ON_MAC(${target})
+ ENDFUNCTION(FISH_LINK_DEPS_AND_SIGN)
+ 
+ # Define libfish.a.
