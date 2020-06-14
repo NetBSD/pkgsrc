@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/06/13 17:42:01 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/06/14 16:20:15 nia Exp $
 
 DISTNAME=	trayer-1.1.8
 CATEGORIES=	wm x11
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/sargon/trayer-srg
 COMMENT=	Lightweight GTK2-based systray for UNIX desktop
 LICENSE=	mit
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config bash
 
 HAS_CONFIGURE=	yes
 
