@@ -1,24 +1,21 @@
-$NetBSD: patch-programs_Makefile,v 1.6 2019/05/01 08:24:58 wiz Exp $
+$NetBSD: patch-programs_Makefile,v 1.7 2020/06/14 13:51:55 adam Exp $
 
 Use zstd shared library.
 
---- programs/Makefile.orig	2019-04-16 22:37:24.000000000 +0000
+--- programs/Makefile.orig	2020-05-22 05:04:00.000000000 +0000
 +++ programs/Makefile
-@@ -165,7 +165,7 @@ $(ZSTDDECOMP_O): CFLAGS += $(ALIGN_LOOP)
- zstd : CPPFLAGS += $(THREAD_CPP) $(ZLIBCPP) $(LZMACPP) $(LZ4CPP)
- zstd : LDFLAGS += $(THREAD_LD) $(ZLIBLD) $(LZMALD) $(LZ4LD) $(DEBUGFLAGS_LD)
- zstd : CPPFLAGS += -DZSTD_LEGACY_SUPPORT=$(ZSTD_LEGACY_SUPPORT)
--zstd : $(ZSTDLIB_FILES) zstdcli.o util.o timefn.o fileio.o benchfn.o benchzstd.o datagen.o dibio.o
-+zstd : zstdcli.o util.o timefn.o fileio.o benchfn.o benchzstd.o datagen.o dibio.o
+@@ -172,12 +172,12 @@ zstd : CPPFLAGS += -DZSTD_LEGACY_SUPPORT
+ ifneq (,$(filter Windows%,$(OS)))
+ zstd : $(RES_FILE)
+ endif
+-zstd : $(ZSTDLIB_FILES) $(ZSTD_CLI_OBJ)
++zstd : $(ZSTD_CLI_OBJ)
  	@echo "$(THREAD_MSG)"
  	@echo "$(ZLIB_MSG)"
  	@echo "$(LZMA_MSG)"
-@@ -173,7 +173,7 @@ zstd : $(ZSTDLIB_FILES) zstdcli.o util.o
- ifneq (,$(filter Windows%,$(OS)))
- 	windres/generate_res.bat
- endif
--	$(CC) $(FLAGS) $^ $(RES_FILE) -o $@$(EXT) $(LDFLAGS)
-+	$(CC) $(FLAGS) $^ $(RES_FILE) -o $@$(EXT) $(LDFLAGS) -L$(ZSTDDIR) -lzstd
+ 	@echo "$(LZ4_MSG)"
+-	$(CC) $(FLAGS) $^ -o $@$(EXT) $(LDFLAGS)
++	$(CC) $(FLAGS) $^ -o $@$(EXT) $(LDFLAGS) -L$(ZSTDDIR) -lzstd
  
  .PHONY: zstd-release
  zstd-release: DEBUGFLAGS := -DBACKTRACE_ENABLE=0
