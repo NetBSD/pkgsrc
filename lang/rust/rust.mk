@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.3 2020/06/14 15:43:22 nia Exp $
+# $NetBSD: rust.mk,v 1.4 2020/06/14 19:40:52 nia Exp $
 # 
 # This file determines the type of rust package to use.
 #
@@ -43,7 +43,7 @@ RUST_TYPE?=	src
 .endif
 
 .if ${RUST_TYPE} == "bin"
-.  if ${RUST_RUNTIME} != "no"
+.  if ${RUST_RUNTIME} == "no"
 BUILDLINK_DEPMETHOD.rust-bin?=		build
 .  endif
 BUILDLINK_API_DEPENDS.rust-bin+=	rust-bin>=${RUST_REQ}
@@ -51,7 +51,7 @@ BUILDLINK_API_DEPENDS.rust-bin+=	rust-bin>=${RUST_REQ}
 .endif
 
 .if ${RUST_TYPE} == "src"
-.  if ${RUST_RUNTIME} != "no"
+.  if ${RUST_RUNTIME} == "no"
 BUILDLINK_DEPMETHOD.rust?=		build
 .  endif
 BUILDLINK_API_DEPENDS.rust+=		rust>=${RUST_REQ}
