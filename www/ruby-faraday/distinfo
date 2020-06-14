@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/03/21 17:07:23 taca Exp $
+$NetBSD: distinfo,v 1.16 2020/06/14 16:20:03 taca Exp $
 
-SHA1 (faraday-0.17.3.gem) = fbe67c73ece4933cb29b0f65a082b40f51087744
-RMD160 (faraday-0.17.3.gem) = b6e0a846c2b3f6fe64f9a474be8e6017e8c37223
-SHA512 (faraday-0.17.3.gem) = 5e950a01181692224767b598924fd3892696f7d56688e33281b031af7b047ca3e7ccdedbd486f82fd1fed6779b24517523d3177407435aa50cccb9cb95b43143
-Size (faraday-0.17.3.gem) = 72192 bytes
+SHA1 (faraday-1.0.1.gem) = 3bce6dd422ddd66eef20402cae1aa183b5554e8f
+RMD160 (faraday-1.0.1.gem) = 367591b68bc8d84ef3d87c141af380e77af2902d
+SHA512 (faraday-1.0.1.gem) = 0374cf32669e1727f435b765d959c5cefd774a451073e88c81c3b49d73885798803b53580f591f1e8862813baf113be7efb7abdc4d526719002f899a7c3b5c82
+Size (faraday-1.0.1.gem) = 77312 bytes
