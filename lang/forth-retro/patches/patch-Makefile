@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile,v 1.1 2020/06/14 10:38:11 ryoon Exp $
+
+* Fix DESTDIR installation of man pages.
+
+--- Makefile.orig	2019-08-12 17:00:59.000000000 +0000
++++ Makefile
+@@ -61,13 +61,14 @@ install-examples:
+ 	cp -fpR example $(DESTDIR)$(EXAMPLESDIR)
+ 
+ install-manpages:
+-	install -c -m 644 man/retro.1 $(MANDIR)/retro.1
+-	install -c -m 644 man/retro-embedimage.1 $(MANDIR)/retro-embedimage.1
+-	install -c -m 644 man/retro-extend.1 $(MANDIR)/retro-extend.1
+-	install -c -m 644 man/retro-describe.1 $(MANDIR)/retro-describe.1
+-	install -c -m 644 man/retro-document.1 $(MANDIR)/retro-document.1
+-	install -c -m 644 man/retro-muri.1 $(MANDIR)/retro-muri.1
+-	install -c -m 644 man/retro-unu.1 $(MANDIR)/retro-unu.1
++	install -m 755 -d -- $(DESTDIR)$(MANDIR)
++	install -c -m 644 man/retro.1 ${DESTDIR}$(MANDIR)/retro.1
++	install -c -m 644 man/retro-embedimage.1 ${DESTDIR}$(MANDIR)/retro-embedimage.1
++	install -c -m 644 man/retro-extend.1 ${DESTDIR}$(MANDIR)/retro-extend.1
++	install -c -m 644 man/retro-describe.1 ${DESTDIR}$(MANDIR)/retro-describe.1
++	install -c -m 644 man/retro-document.1 ${DESTDIR}$(MANDIR)/retro-document.1
++	install -c -m 644 man/retro-muri.1 ${DESTDIR}$(MANDIR)/retro-muri.1
++	install -c -m 644 man/retro-unu.1 ${DESTDIR}$(MANDIR)/retro-unu.1
+ 
+ test: bin/retro
+ 	./bin/retro tests/test-core.forth
