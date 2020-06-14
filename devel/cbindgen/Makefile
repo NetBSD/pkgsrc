@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/06/03 08:53:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2020/06/14 15:33:28 nia Exp $
 
 DISTNAME=	cbindgen-0.14.2
 CATEGORIES=	devel
@@ -55,6 +55,6 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/cbindgen ${DESTDIR}${PREFIX}/bin
 
+RUST_RUNTIME=	yes
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/rust/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
