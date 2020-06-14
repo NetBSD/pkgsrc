@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2020/06/14 11:19:34 rillig Exp $
+# $NetBSD: Makefile,v 1.179 2020/06/14 14:29:25 gdt Exp $
 
 DISTNAME=	rustc-1.43.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -137,6 +137,8 @@ CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .endif
 
 .if ${OPSYS} == "NetBSD"
+# This block contains information about known trouble on NetBSD and workarounds.
+
 # Parallel builds failed on NetBSD due to dynamic linker locking bugs.
 # \todo Explain if the build is believed to be sound if not parallel,
 # or if a non-parallel build is merely more likely to work.
@@ -161,6 +163,23 @@ CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .  if ${MACHINE_PLATFORM:MNetBSD-[1-9].*} && !${MACHINE_PLATFORM:MNetBSD-9.99.*}
 MAKE_JOBS_SAFE=	no
 .  endif
+
+# Open PRs
+# 
+# Broken package with PREFIX not /usr/pkg:
+#   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54453
+#
+# NetBSD 8.1 earmv7hf: unknown configure option
+#   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54621
+#
+# NetBSD 9 i386: bootstrap fails with missing libcurl.so.4
+#   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=55368
+
+# Stale PRs (a reason to believe they no longer apply)
+# 
+# NetBSD 8.1 sparc64: bootstrap fails with libssl.so.14 missing
+#   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54622
+
 .endif
 
 #
