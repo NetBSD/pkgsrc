@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/19 19:43:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/14 15:33:28 nia Exp $
 
 DISTNAME=	tealdeer-1.3.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -190,6 +190,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/bash_tealdeer ${DESTDIR}${PREFIX}/share/bash-completion/completions/tldr
 
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/rust/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

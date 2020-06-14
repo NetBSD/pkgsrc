@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/06/02 08:24:56 adam Exp $
+# $NetBSD: Makefile,v 1.43 2020/06/14 15:33:28 nia Exp $
 
 DISTNAME=	cliqz-1.36.0
 PKGREVISION=	1
@@ -175,8 +175,7 @@ PKG_CC=		${PREFIX}/bin/clang
 PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=     build
 .include "../../lang/clang/buildlink3.mk"
-BUILDLINK_DEPMETHOD.rust=      build
-BUILDLINK_API_DEPENDS.rust+=   rust>=1.41.0
-.include "../../lang/rust/buildlink3.mk"
+RUST_REQ=	1.41.0
+.include "../../lang/rust/rust.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

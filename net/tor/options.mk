@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2020/05/15 16:39:34 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2020/06/14 15:33:28 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	doc rust
@@ -33,10 +33,8 @@ CARGO_CRATE_DEPENDS+=	rand-0.5.0-pre.2
 CARGO_CRATE_DEPENDS+=	rand_core-0.2.0-pre.0
 CARGO_CRATE_DEPENDS+=	typenum-1.9.0
 
+RUST_REQ=	1.34.0
 .include "../../lang/rust/cargo.mk"
-BUILDLINK_DEPMETHOD.rust=	build
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.34.0
-.include "../../lang/rust/buildlink3.mk"
 
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} -p src/rust/target/release
