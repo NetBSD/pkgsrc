@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3613 2020/06/14 14:57:34 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3614 2020/06/14 15:34:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5824,3 +5824,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/py-zstandard to 0.14.0 [adam 2020-06-14]
 	Updated devel/ruby-delayer-deferred to 2.2.0 [taca 2020-06-14]
 	Updated devel/ruby-simpleidn to 0.1.1 [taca 2020-06-14]
+	Updated misc/ruby-parallel to 1.19.1 [taca 2020-06-14]
