@@ -1,10 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/25 14:53:03 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/14 14:56:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENCE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/simpleidn.rb
+${GEM_LIBDIR}/lib/simpleidn/uts46mapping.rb
+${GEM_LIBDIR}/lib/simpleidn/version.rb
 ${GEM_LIBDIR}/simpleidn.gemspec
+${GEM_LIBDIR}/tables/IdnaMappingTable.txt
+${GEM_LIBDIR}/tables/generate_mapping_table.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
