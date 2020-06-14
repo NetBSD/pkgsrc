@@ -1,0 +1,1 @@
+bin/convert_to_should_syntax @PREFIX@/bin/convert_to_should_syntax@RUBY_SUFFIX@
