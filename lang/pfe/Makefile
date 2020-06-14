@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/20 11:57:56 nia Exp $
+# $NetBSD: Makefile,v 1.22 2020/06/14 10:32:04 ryoon Exp $
 
 DISTNAME=	pfe-0.33.71
 PKGREVISION=	13
@@ -15,6 +15,8 @@ CONFIGURE_ARGS=	--without-testmodule
 USE_LIBTOOL=	yes
 USE_TOOLS+=	perl pkg-config
 MAKE_ENV+=	SHELL=${CONFIG_SHELL}
+
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet as of 0.33.71
 
 MAKE_JOBS_SAFE=	no
 BUILD_TARGET=	all mans docs
