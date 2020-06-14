@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/06/14 11:44:02 nia Exp $
+# $NetBSD: options.mk,v 1.2 2020/06/14 11:47:03 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nvi2
 PKG_SUPPORTED_OPTIONS=	iconv wide-curses
@@ -21,5 +21,6 @@ CMAKE_ARGS+=	-DUSE_WIDECHAR=ON
 CMAKE_ARGS+=	-DUSE_WIDECHAR=OFF
 .  endif
 .else
+.  include "../../mk/curses.buildlink3.mk"
 CMAKE_ARGS+=	-DUSE_WIDECHAR=OFF
 .endif
