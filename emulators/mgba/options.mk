@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/01/25 19:26:18 nia Exp $
+# $NetBSD: options.mk,v 1.4 2020/06/14 22:01:23 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mgba
 
@@ -27,9 +27,9 @@ CMAKE_ARGS+=	-DUSE_MAGICK=OFF
 .if !empty(PKG_OPTIONS:Mqt5)
 PLIST.qt=	yes
 CMAKE_ARGS+=	-DBUILD_QT=ON
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DBUILD_QT=OFF
 .endif
