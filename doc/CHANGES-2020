@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3594 2020/06/13 21:51:38 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3595 2020/06/14 05:57:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5804,3 +5804,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/sane-backends to 1.0.30 [leot 2020-06-13]
 	Updated misc/tmux to 3.1b [leot 2020-06-13]
 	Updated sysutils/entr to 4.5 [leot 2020-06-13]
+	Updated lang/php73 to 7.3.19 [taca 2020-06-14]
