@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3604 2020/06/14 11:44:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3605 2020/06/14 11:46:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5814,3 +5814,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/forth-retro to 12.0.2019.7 [ryoon 2020-06-14]
 	Updated pkgtools/pkglint to 20.1.17 [rillig 2020-06-14]
 	Added editors/nvi2 version 2.1.3 [nia 2020-06-14]
+	Removed emulators/vba successor emulators/visualboyadvance-m [nia 2020-06-14]
