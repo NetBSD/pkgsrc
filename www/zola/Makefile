@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/06/08 17:28:05 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/14 15:33:29 nia Exp $
 
 DISTNAME=	zola-0.11.0
 CATEGORIES=	www
@@ -328,6 +328,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/zola ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/rust/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

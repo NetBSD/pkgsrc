@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2020/06/02 08:22:44 adam Exp $
+# $NetBSD: Makefile,v 1.123 2020/06/14 15:33:27 nia Exp $
 
 DISTNAME=	librsvg-2.48.3
 PKGREVISION=	1
@@ -206,8 +206,6 @@ BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.0
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.39.0
-BUILDLINK_DEPMETHOD.rust?=	build
-.include "../../lang/rust/buildlink3.mk"
+RUST_REQ=	1.39.0
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
