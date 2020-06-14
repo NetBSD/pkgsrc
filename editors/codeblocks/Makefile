@@ -1,24 +1,22 @@
-# $NetBSD: Makefile,v 1.16 2020/03/10 22:09:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/06/14 13:22:58 ryoon Exp $
 #
 
-DISTNAME=	codeblocks_16.01
-PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	12
+DISTNAME=	codeblocks-20.03
 CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=codeblocks/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.codeblocks.org/
 COMMENT=	Open source, cross platform, free C++ IDE
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.release
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++11
 
-CONFIGURE_ARGS+=	--disable-gtk-notebook
+#CONFIGURE_ARGS+=	--disable-gtk-notebook
 CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,-MouseSap,byogames,cbkoders,codesnippets,codestat,dragscroll,envvars,help,keybinder,libfinder,profiler,regex,exporter,symtab
 # wxsmith makes error in build process
 
