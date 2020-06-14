@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2019/12/29 16:53:13 adam Exp $
+$NetBSD: distinfo,v 1.14 2020/06/14 13:53:06 adam Exp $
 
-SHA1 (zstandard-0.13.0.tar.gz) = a2956e6f75ab1c182b0d6b63b97fcc8c44981494
-RMD160 (zstandard-0.13.0.tar.gz) = 0aa7feac7dd5d2a906d150999d13ba44e9c0dcbc
-SHA512 (zstandard-0.13.0.tar.gz) = 3a6151de640515f21626d150e1295c1f2e524d377b3b1ccabf2719fae6da89f95480a50ec80eac4d07d317c7abe50ed7a26162b3291169e139c4ddd71b6ada98
-Size (zstandard-0.13.0.tar.gz) = 659422 bytes
-SHA1 (patch-zstd.c) = 5a104e264605b6ce03721b84b56ae20c49684a89
+SHA1 (zstandard-0.14.0.tar.gz) = f395bc02e63a6d9b124e3634737d91a052902a57
+RMD160 (zstandard-0.14.0.tar.gz) = 9a810de9c786ced38ac7169621f4ae3d9c281b93
+SHA512 (zstandard-0.14.0.tar.gz) = 57c62eb7dedde2a2178f79a5658b87b5c5f176b282311273953003824272afa03e126a79b57fc8b75e9e15585d44d6b9931318a8ea5e7c75ec0feebbd7eb6cf0
+Size (zstandard-0.14.0.tar.gz) = 676761 bytes
+SHA1 (patch-zstd.c) = d6566abae99231175401ce130cb2260b040d72e8
