@@ -1,0 +1,10 @@
+Scribus is a publishing layout program for X using the QT interface.
+It can be used to create stationery, small posters and brochures
+and to layout newsletters and other documents. It can export in
+Postscript and PDF formats; and the data is saved in XML format.
+
+Scribus aims to be similar to Adobe PageMaker and Quark XPress.
+It can do typical tasks like kerning text and placing and rotating
+text and images.
+
+This package provides preview release of Scribus (Qt5 port).
