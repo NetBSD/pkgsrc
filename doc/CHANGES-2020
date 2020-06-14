@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3618 2020/06/14 16:16:36 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3619 2020/06/14 16:20:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5829,3 +5829,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-websocket-driver to 0.7.2 [taca 2020-06-14]
 	Updated www/ruby-websocket-extensions to 0.1.5 [taca 2020-06-14]
 	Updated www/ruby-faye-websocket to 0.10.9 [taca 2020-06-14]
+	Updated www/ruby-faraday to 1.0.1 [taca 2020-06-14]
