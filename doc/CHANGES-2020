@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3606 2020/06/14 13:24:16 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3607 2020/06/14 13:30:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5816,3 +5816,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added editors/nvi2 version 2.1.3 [nia 2020-06-14]
 	Removed emulators/vba successor emulators/visualboyadvance-m [nia 2020-06-14]
 	Updated editors/codeblocks to 20.03 [ryoon 2020-06-14]
+	Updated devel/ruby-shoulda-context to 2.0.0 [taca 2020-06-14]
