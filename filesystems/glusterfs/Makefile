@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/06/02 08:23:47 adam Exp $
+# $NetBSD: Makefile,v 1.98 2020/06/14 23:52:32 gdt Exp $
 
 DISTNAME=	glusterfs-3.12.8
 PKGREVISION=	8
@@ -78,7 +78,6 @@ SUBST_CLASSES+=		mtab
 SUBST_STAGE.mtab=	post-build
 SUBST_FILES.mtab=	doc/mount.glusterfs.8
 SUBST_FILES.mtab=	libglusterfs/src/compat.h
-SUBST_FILES.mtab=	xlators/mount/fuse/utils/mount.glusterfs.in
 SUBST_SED.mtab=		-e "s,/etc/mtab,/proc/mounts,g"
 
 SUBST_CLASSES+=		etc
