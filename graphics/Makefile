@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.893 2020/06/01 11:03:46 pin Exp $
+# $NetBSD: Makefile,v 1.894 2020/06/14 07:42:44 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -419,6 +419,7 @@ SUBDIR+=	panomatic
 SUBDIR+=	paper-icon-theme
 SUBDIR+=	papirus-folders
 SUBDIR+=	papirus-icon-theme
+SUBDIR+=	pdfpc
 SUBDIR+=	pdiff
 SUBDIR+=	pear-Image_Canvas
 SUBDIR+=	pear-Image_Color
