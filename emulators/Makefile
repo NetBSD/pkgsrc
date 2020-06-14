@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2020/06/02 13:26:26 nia Exp $
+# $NetBSD: Makefile,v 1.328 2020/06/14 07:46:59 ryoon Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -392,6 +392,7 @@ SUBDIR+=	ucon64
 SUBDIR+=	unicorn
 SUBDIR+=	vba
 SUBDIR+=	vice
+SUBDIR+=	visualboyadvance-m
 SUBDIR+=	vmips
 SUBDIR+=	wine
 SUBDIR+=	x16-emulator
