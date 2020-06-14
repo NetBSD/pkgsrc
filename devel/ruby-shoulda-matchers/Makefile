@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/03/20 15:12:43 taca Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/14 13:31:34 taca Exp $
 
-DISTNAME=	shoulda-matchers-3.1.3
+DISTNAME=	shoulda-matchers-4.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 
