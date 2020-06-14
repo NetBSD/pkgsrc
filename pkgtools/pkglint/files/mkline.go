@@ -1076,24 +1076,6 @@ type Indentation struct {
 	levels []indentationLevel
 }
 
-func NewIndentation() *Indentation { return &Indentation{} }
-
-func (ind *Indentation) String() string {
-	var s strings.Builder
-	for _, level := range ind.levels {
-		_, _ = fmt.Fprintf(&s, " %d", level.depth)
-		if len(level.conditionalVars) > 0 {
-			_, _ = fmt.Fprintf(&s, " (%s)", strings.Join(level.conditionalVars, " "))
-		}
-	}
-	return "[" + trimHspace(s.String()) + "]"
-}
-
-func (ind *Indentation) RememberUsedVariables(cond *MkCond) {
-	cond.Walk(&MkCondCallback{
-		VarUse: func(varuse *MkVarUse) { ind.AddVar(varuse.varname) }})
-}
-
 type indentationLevel struct {
 	mkline          *MkLine  // The line in which the indentation started; the .if/.for
 	depth           int      // Number of space characters; always a multiple of 2
@@ -1110,6 +1092,24 @@ type indentationLevel struct {
 
 	// whether the line is a multiple-inclusion guard
 	guard bool
+}
+
+func NewIndentation() *Indentation { return &Indentation{} }
+
+func (ind *Indentation) String() string {
+	var s strings.Builder
+	for _, level := range ind.levels {
+		_, _ = fmt.Fprintf(&s, " %d", level.depth)
+		if len(level.conditionalVars) > 0 {
+			_, _ = fmt.Fprintf(&s, " (%s)", strings.Join(level.conditionalVars, " "))
+		}
+	}
+	return "[" + trimHspace(s.String()) + "]"
+}
+
+func (ind *Indentation) RememberUsedVariables(cond *MkCond) {
+	cond.Walk(&MkCondCallback{
+		VarUse: func(varuse *MkVarUse) { ind.AddVar(varuse.varname) }})
 }
 
 func (ind *Indentation) IsEmpty() bool {

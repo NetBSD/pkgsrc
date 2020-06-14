@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.26 2020/01/26 17:12:36 rillig Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/06/14 11:35:54 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/histogram.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/intqa.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/licenses.a
+gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/makepat.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/pkgver.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/regex.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/textproc.a
@@ -50,6 +51,8 @@ gopkg/src/netbsd.org/pkglint/lineslexer.go
 gopkg/src/netbsd.org/pkglint/lineslexer_test.go
 gopkg/src/netbsd.org/pkglint/logging.go
 gopkg/src/netbsd.org/pkglint/logging_test.go
+gopkg/src/netbsd.org/pkglint/makepat/pat.go
+gopkg/src/netbsd.org/pkglint/makepat/pat_test.go
 gopkg/src/netbsd.org/pkglint/mkassignchecker.go
 gopkg/src/netbsd.org/pkglint/mkassignchecker_test.go
 gopkg/src/netbsd.org/pkglint/mkcondchecker.go
@@ -101,6 +104,8 @@ gopkg/src/netbsd.org/pkglint/plist_test.go
 gopkg/src/netbsd.org/pkglint/redundantscope.go
 gopkg/src/netbsd.org/pkglint/redundantscope_test.go
 gopkg/src/netbsd.org/pkglint/regex/regex.go
+gopkg/src/netbsd.org/pkglint/scope.go
+gopkg/src/netbsd.org/pkglint/scope_test.go
 gopkg/src/netbsd.org/pkglint/shell.go
 gopkg/src/netbsd.org/pkglint/shell.y
 gopkg/src/netbsd.org/pkglint/shell_test.go

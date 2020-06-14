@@ -474,6 +474,7 @@ type MkCondCall struct {
 // MkCondCallback defines the actions for walking a Makefile condition
 // using MkCondWalker.Walk.
 type MkCondCallback struct {
+	And     func(conds []*MkCond)
 	Not     func(cond *MkCond)
 	Defined func(varname string)
 	Empty   func(empty *MkVarUse)
@@ -504,6 +505,9 @@ func (w *MkCondWalker) Walk(cond *MkCond, callback *MkCondCallback) {
 		}
 
 	case cond.And != nil:
+		if callback.And != nil {
+			callback.And(cond.And)
+		}
 		for _, and := range cond.And {
 			w.Walk(and, callback)
 		}
