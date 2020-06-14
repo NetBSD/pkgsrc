@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/02/25 10:07:53 adam Exp $
+# $NetBSD: Makefile,v 1.51 2020/06/14 19:35:38 adam Exp $
 
 DISTNAME=	tcpdump-4.9.3
 CATEGORIES=	net
@@ -23,5 +23,6 @@ CONFIGURE_ARGS+=	--with-chroot=${VARBASE}/tcpdump
 
 .include "options.mk"
 
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=1.9.1
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
