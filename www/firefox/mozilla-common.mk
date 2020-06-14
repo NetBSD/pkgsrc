@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.169 2020/06/03 09:04:36 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.170 2020/06/14 15:33:28 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -261,9 +261,8 @@ CWRAPPERS_PREPEND.cxx+= \
 	-stdlib++-isystem \
 	${BUILDLINK_PREFIX.gcc8}/gcc8/include/c++/backward
 .endif
-BUILDLINK_DEPMETHOD.rust=	build
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.41.0
-.include "../../lang/rust/buildlink3.mk"
+RUST_REQ=	1.41.0
+.include "../../lang/rust/rust.mk"
 # webrtc option requires internal libvpx
 #BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 #.include "../../multimedia/libvpx/buildlink3.mk"

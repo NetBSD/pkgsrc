@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2020/06/14 14:29:25 gdt Exp $
+# $NetBSD: Makefile,v 1.180 2020/06/14 15:33:27 nia Exp $
 
 DISTNAME=	rustc-1.43.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -11,6 +11,8 @@ HOMEPAGE=	https://www.rust-lang.org/
 COMMENT=	Safe, concurrent, practical language
 LICENSE=	mit OR apache-2.0
 
+CONFLICTS+=	rust-bin-[0-9]*
+
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
@@ -19,12 +21,6 @@ USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
 BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
-
-.include "type.mk"
-
-.if ${RUST_TYPE} != "src"
-PKG_SKIP_REASON+=	"Rust source package, RUST_TYPE is bin"
-.endif
 
 HAS_CONFIGURE=			yes
 PYTHON_FOR_BUILD_ONLY=		yes

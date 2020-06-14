@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/06/02 08:22:45 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/14 15:33:28 nia Exp $
 
 DISTNAME=	mozjs68_68.6.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -66,9 +66,8 @@ post-install:
 
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-BUILDLINK_DEPMETHOD.rust=	build
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.34.0
-.include "../../lang/rust/buildlink3.mk"
+RUST_TYPE=	1.34.0
+.include "../../lang/rust/rust.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/icu/buildlink3.mk"
