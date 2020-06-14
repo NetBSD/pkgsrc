@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:08 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/14 10:07:48 nia Exp $
 
 DISTNAME=	filebench-1.4.9.1
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filebench/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://filebench.sf.net/
+HOMEPAGE=	https://github.com/filebench/filebench
 COMMENT=	File system and storage benchmark
 
 GNU_CONFIGURE=		yes
