@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/02/16 03:58:28 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/14 14:02:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.circleci/config.yml
 ${GEM_LIBDIR}/.gitignore
@@ -38,6 +38,7 @@ ${GEM_LIBDIR}/test/enumerable_test.rb
 ${GEM_LIBDIR}/test/graph_test.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/promise_test.rb
+${GEM_LIBDIR}/test/sleep_test.rb
 ${GEM_LIBDIR}/test/testutils.rb
 ${GEM_LIBDIR}/test/thread_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
