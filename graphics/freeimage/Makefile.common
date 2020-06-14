@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2020/05/25 12:24:37 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/06/14 10:07:48 nia Exp $
 # used by graphics/freeimage/Makefile
 # used by graphics/freeimageplus/Makefile
 
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeimage/}
 EXTRACT_SUFX=	.zip
 
-HOMEPAGE=	https://freeimage.sf.net/
+HOMEPAGE=	https://freeimage.sourceforge.io/
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR mpl-1.0
 
 USE_LANGUAGES+=	c c++11
