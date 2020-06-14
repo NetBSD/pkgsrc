@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/14 07:40:59 ryoon Exp $
+
+SHA1 (pdfpc-4.4.0.tar.gz) = 4938445201e3158d2bd679446cd13db75a714258
+RMD160 (pdfpc-4.4.0.tar.gz) = 156ff4a1364d3f6be3a0f4bca5dccf5e10ffbc85
+SHA512 (pdfpc-4.4.0.tar.gz) = 4f5d013ae513ba5f106638401cccd280e1a77535747663963a566c8b9ddc7b87c0ae1859220586ed66d294902674d54cea4256c72320ad3005e3e47cc8ea57a3
+Size (pdfpc-4.4.0.tar.gz) = 7733136 bytes
+SHA1 (patch-rc_CMakeLists.txt) = 386f2149dee0ba12c8af6cddc05ea2509eb5d6b9
