@@ -504,9 +504,13 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 		events = append(events, sprintf("%14s  %s", name, strings.Join(args, ", ")))
 	}
 
-	// XXX: Add callbacks for And and Or if needed.
+	// XXX: Add callbacks for Or if needed.
+	//  A good use case would be to check for unsatisfiable .elif conditions.
 
 	mkline.Cond().Walk(&MkCondCallback{
+		func(conds []*MkCond) {
+			addEvent("and")
+		},
 		func(cond *MkCond) {
 			addEvent("not")
 		},
@@ -550,6 +554,7 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 		"        varUse  VAR",
 		"        varUse  PRE",
 		"        varUse  POST",
+		"           and  ",
 		" compareVarNum  NUM, 3",
 		"        varUse  NUM",
 		"       defined  VAR",
