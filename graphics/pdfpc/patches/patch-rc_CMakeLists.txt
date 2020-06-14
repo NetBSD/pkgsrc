@@ -1,0 +1,15 @@
+$NetBSD: patch-rc_CMakeLists.txt,v 1.1 2020/06/14 07:40:59 ryoon Exp $
+
+* Install rc file under share/ for pkgsrc.
+
+--- rc/CMakeLists.txt.orig	2020-02-26 17:21:19.000000000 +0000
++++ rc/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ install(FILES
+     pdfpcrc
+ DESTINATION
+-    ${CMAKE_INSTALL_FULL_SYSCONFDIR}
++    ${CMAKE_INSTALL_PREFIX}/share/examples/pdfpc
+ )
+ 
+ install(FILES
