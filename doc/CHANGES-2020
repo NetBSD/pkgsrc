@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3599 2020/06/14 07:41:34 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3600 2020/06/14 07:46:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5809,3 +5809,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/scribus-qt4 to 1.4.8 [ryoon 2020-06-14]
 	Added print/scribus-qt5 version 1.5.6pre20200611 [ryoon 2020-06-14]
 	Added graphics/pdfpc version 4.4.0 [ryoon 2020-06-14]
+	Added emulators/visualboyadvance-m version 2.1.4 [ryoon 2020-06-14]
