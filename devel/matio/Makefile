@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:30:34 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/14 10:07:48 nia Exp $
 
 DISTNAME=		matio-1.3.3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matio/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://matio.sf.net/
+HOMEPAGE=		https://sourceforge.net/projects/matio/
 COMMENT=		Matlab MAT file I/O library
 
 GNU_CONFIGURE=		yes
