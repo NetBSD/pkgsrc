@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/05 10:57:47 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/14 16:27:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/faraday_middleware.rb
-${GEM_LIBDIR}/lib/faraday_middleware/addressable_patch.rb
 ${GEM_LIBDIR}/lib/faraday_middleware/backwards_compatibility.rb
 ${GEM_LIBDIR}/lib/faraday_middleware/gzip.rb
 ${GEM_LIBDIR}/lib/faraday_middleware/instrumentation.rb
 ${GEM_LIBDIR}/lib/faraday_middleware/rack_compatible.rb
+${GEM_LIBDIR}/lib/faraday_middleware/redirect_limit_reached.rb
 ${GEM_LIBDIR}/lib/faraday_middleware/request/encode_json.rb
 ${GEM_LIBDIR}/lib/faraday_middleware/request/method_override.rb
 ${GEM_LIBDIR}/lib/faraday_middleware/request/oauth.rb
