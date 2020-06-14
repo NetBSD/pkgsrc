@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/09/23 15:18:53 taca Exp $
+$NetBSD: distinfo,v 1.4 2020/06/14 13:32:57 taca Exp $
 
-SHA1 (shoulda-3.6.0.gem) = 0340a8d20631383cdedef41133100cb908d7cd32
-RMD160 (shoulda-3.6.0.gem) = ef54a44be45b3172fb8056592cbd021f53ac53ec
-SHA512 (shoulda-3.6.0.gem) = ff0bfae1c643c069ee3a597ef8b4f1b5cbed4cbdfa4fb6c81c0b4d8b15fece3792783e01dba2f705fe9b935be7366e8b13e1f8998e1879605738b701ea06c7f7
-Size (shoulda-3.6.0.gem) = 26112 bytes
+SHA1 (shoulda-4.0.0.gem) = 892cfcc9c446d539aa52fa5b1e9b4d37acc62f58
+RMD160 (shoulda-4.0.0.gem) = 49344828687974d290c93e78261c4ca8afed52ec
+SHA512 (shoulda-4.0.0.gem) = 27d9c20acafe847893fd92ef6c745efa0065f0092600c93fa64a1bdbb066cdd287fa26da28e6d31ba93f1e94e85236d8ebd901bea6159949a75587b33a1c9a30
+Size (shoulda-4.0.0.gem) = 20992 bytes
