@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3610 2020/06/14 13:48:03 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3611 2020/06/14 13:53:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5820,3 +5820,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-shoulda-matchers to 4.3.0 [taca 2020-06-14]
 	Updated meta-pkgs/ruby-shoulda to 4.0.0 [taca 2020-06-14]
 	Updated games/wesnoth to 1.14.13 [adam 2020-06-14]
+	Updated archivers/zstd to 1.4.5 [adam 2020-06-14]
+	Updated archivers/py-zstandard to 0.14.0 [adam 2020-06-14]
