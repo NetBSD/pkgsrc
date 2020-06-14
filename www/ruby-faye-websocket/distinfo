@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/03/20 14:03:56 tsutsui Exp $
+$NetBSD: distinfo,v 1.3 2020/06/14 16:16:05 taca Exp $
 
-SHA1 (faye-websocket-0.10.7.gem) = 0f540dbfcfdc2b6202edbfb6f6b46f7144a79492
-RMD160 (faye-websocket-0.10.7.gem) = f5ddd062d2ebcef1c4f258b100c880b93a5a86d3
-SHA512 (faye-websocket-0.10.7.gem) = 5911810dc25436d56df7a435f1a61c8e635c54ec65b918cd4768ca237bf4f0e40f09f0755eb610ea4161e668be631ec74e007bebeaa1d16c93dfd87abc8dbb77
-Size (faye-websocket-0.10.7.gem) = 19968 bytes
+SHA1 (faye-websocket-0.10.9.gem) = 2bc1d66aab42b7aa3bed0c8a275f1f92d356b04a
+RMD160 (faye-websocket-0.10.9.gem) = fa4d2e6e3bf70dbca73083e17c6735c66e74aa71
+SHA512 (faye-websocket-0.10.9.gem) = f359a7e6fdf0caa58fa3d121e334af0a64d7637a61855adde7e10877f35ee72c6a1fa86d4df0a65ab6e319ad7f4060d16640335e56402179f8d5c7966e3140c3
+Size (faye-websocket-0.10.9.gem) = 19968 bytes
