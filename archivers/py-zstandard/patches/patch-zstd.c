@@ -1,4 +1,4 @@
-$NetBSD: patch-zstd.c,v 1.4 2019/12/29 16:53:13 adam Exp $
+$NetBSD: patch-zstd.c,v 1.5 2020/06/14 13:53:06 adam Exp $
 
 Allow newer zstd.
 
@@ -8,7 +8,7 @@ Allow newer zstd.
  	   We detect this mismatch here and refuse to load the module if this
  	   scenario is detected.
  	*/
--	if (ZSTD_VERSION_NUMBER != 10404 || ZSTD_versionNumber() != 10404) {
+-	if (ZSTD_VERSION_NUMBER != 10405 || ZSTD_versionNumber() != 10405) {
 -		PyErr_SetString(PyExc_ImportError, "zstd C API mismatch; Python bindings not compiled against expected zstd version");
 -		return;
 -	}
