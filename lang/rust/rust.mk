@@ -1,6 +1,9 @@
-# $NetBSD: rust.mk,v 1.1 2020/06/14 15:33:27 nia Exp $
+# $NetBSD: rust.mk,v 1.2 2020/06/14 15:38:18 nia Exp $
 # 
 # This file determines the type of rust package to use.
+#
+# It should be included by rust-dependent packages that don't use
+# cargo.mk.
 #
 # === User-settable variables ===
 #
