@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.21 2020/01/07 15:41:22 wiz Exp $
+# $NetBSD: options.mk,v 1.22 2020/06/15 15:44:22 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 
-PKG_SUPPORTED_OPTIONS=	alsa dbus debug mozilla-jemalloc gnome \
-			official-mozilla-branding oss pulseaudio \
+PKG_SUPPORTED_OPTIONS=	alsa dbus debug mozilla-jemalloc \
+			official-mozilla-branding pulseaudio \
 			mozilla-lightning wayland
 PKG_SUGGESTED_OPTIONS+=	mozilla-lightning
 
-PLIST_VARS+=		branding nobranding debug gnome jemalloc
+PLIST_VARS+=		branding nobranding debug jemalloc
 
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
@@ -15,9 +15,9 @@ PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
 
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus
+PKG_SUGGESTED_OPTIONS+=	alsa pulseaudio mozilla-jemalloc dbus
 .else
-PKG_SUGGESTED_OPTIONS+=	oss dbus
+PKG_SUGGESTED_OPTIONS+=	dbus
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -27,11 +27,6 @@ CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
-.endif
-
-.if !empty(PKG_OPTIONS:Moss)
-CONFIGURE_ARGS+=	--with-oss
-.include "../../mk/oss.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)

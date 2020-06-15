@@ -1,15 +1,14 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.1 2018/12/16 08:12:16 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.2 2020/06/15 15:44:22 nia Exp $
 
---- toolkit/library/moz.build.orig	2018-12-04 23:12:02.000000000 +0000
+--- toolkit/library/moz.build.orig	2020-06-02 14:08:02.000000000 +0000
 +++ toolkit/library/moz.build
-@@ -247,8 +247,8 @@ if CONFIG['MOZ_SYSTEM_LIBVPX']:
+@@ -231,9 +231,6 @@ if CONFIG['MOZ_SYSTEM_LIBVPX']:
  if not CONFIG['MOZ_TREE_PIXMAN']:
      OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  
 -if CONFIG['MOZ_ALSA']:
 -    OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
-+if CONFIG['MOZ_OSS']:
-+    OS_LIBS += CONFIG['MOZ_OSS_LIBS']
- 
+-
  if CONFIG['HAVE_CLOCK_MONOTONIC']:
      OS_LIBS += CONFIG['REALTIME_LIBS']
+ 
