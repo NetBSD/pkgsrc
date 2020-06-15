@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2020/03/04 12:46:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.71 2020/06/15 11:00:45 ryoon Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -4415,16 +4415,6 @@ share/gtk-doc/html/libgimp/GimpProcBrowserDialog.html
 share/gtk-doc/html/libgimp/GimpProgressBar.html
 share/gtk-doc/html/libgimp/GimpSelectButton.html
 share/gtk-doc/html/libgimp/GimpZoomPreview.html
-share/gtk-doc/html/libgimp/api-index-2-10-14.html
-share/gtk-doc/html/libgimp/api-index-2-10-2.html
-share/gtk-doc/html/libgimp/api-index-2-10-4.html
-share/gtk-doc/html/libgimp/api-index-2-10-6.html
-share/gtk-doc/html/libgimp/api-index-2-10.html
-share/gtk-doc/html/libgimp/api-index-2-2.html
-share/gtk-doc/html/libgimp/api-index-2-4.html
-share/gtk-doc/html/libgimp/api-index-2-6.html
-share/gtk-doc/html/libgimp/api-index-2-8.html
-share/gtk-doc/html/libgimp/api-index-deprecated.html
 share/gtk-doc/html/libgimp/api-index-full.html
 share/gtk-doc/html/libgimp/home.png
 share/gtk-doc/html/libgimp/index.html
@@ -4515,12 +4505,6 @@ share/gtk-doc/html/libgimp/right.png
 share/gtk-doc/html/libgimp/style.css
 share/gtk-doc/html/libgimp/up-insensitive.png
 share/gtk-doc/html/libgimp/up.png
-share/gtk-doc/html/libgimpbase/api-index-2-10-10.html
-share/gtk-doc/html/libgimpbase/api-index-2-10.html
-share/gtk-doc/html/libgimpbase/api-index-2-2.html
-share/gtk-doc/html/libgimpbase/api-index-2-4.html
-share/gtk-doc/html/libgimpbase/api-index-2-8.html
-share/gtk-doc/html/libgimpbase/api-index-deprecated.html
 share/gtk-doc/html/libgimpbase/api-index-full.html
 share/gtk-doc/html/libgimpbase/home.png
 share/gtk-doc/html/libgimpbase/index.html
@@ -4552,12 +4536,6 @@ share/gtk-doc/html/libgimpbase/style.css
 share/gtk-doc/html/libgimpbase/up-insensitive.png
 share/gtk-doc/html/libgimpbase/up.png
 share/gtk-doc/html/libgimpcolor/GimpColorManaged.html
-share/gtk-doc/html/libgimpcolor/api-index-2-10.html
-share/gtk-doc/html/libgimpcolor/api-index-2-2.html
-share/gtk-doc/html/libgimpcolor/api-index-2-4.html
-share/gtk-doc/html/libgimpcolor/api-index-2-6.html
-share/gtk-doc/html/libgimpcolor/api-index-2-8.html
-share/gtk-doc/html/libgimpcolor/api-index-deprecated.html
 share/gtk-doc/html/libgimpcolor/api-index-full.html
 share/gtk-doc/html/libgimpcolor/home.png
 share/gtk-doc/html/libgimpcolor/index.html
@@ -4581,11 +4559,6 @@ share/gtk-doc/html/libgimpcolor/style.css
 share/gtk-doc/html/libgimpcolor/up-insensitive.png
 share/gtk-doc/html/libgimpcolor/up.png
 share/gtk-doc/html/libgimpconfig/GimpColorConfig.html
-share/gtk-doc/html/libgimpconfig/api-index-2-10.html
-share/gtk-doc/html/libgimpconfig/api-index-2-4.html
-share/gtk-doc/html/libgimpconfig/api-index-2-6.html
-share/gtk-doc/html/libgimpconfig/api-index-2-8.html
-share/gtk-doc/html/libgimpconfig/api-index-deprecated.html
 share/gtk-doc/html/libgimpconfig/api-index-full.html
 share/gtk-doc/html/libgimpconfig/home.png
 share/gtk-doc/html/libgimpconfig/index.html
@@ -4608,11 +4581,6 @@ share/gtk-doc/html/libgimpconfig/right.png
 share/gtk-doc/html/libgimpconfig/style.css
 share/gtk-doc/html/libgimpconfig/up-insensitive.png
 share/gtk-doc/html/libgimpconfig/up.png
-share/gtk-doc/html/libgimpmath/api-index-2-10-16.html
-share/gtk-doc/html/libgimpmath/api-index-2-10.html
-share/gtk-doc/html/libgimpmath/api-index-2-4.html
-share/gtk-doc/html/libgimpmath/api-index-2-8.html
-share/gtk-doc/html/libgimpmath/api-index-deprecated.html
 share/gtk-doc/html/libgimpmath/api-index-full.html
 share/gtk-doc/html/libgimpmath/home.png
 share/gtk-doc/html/libgimpmath/index.html
@@ -4631,9 +4599,6 @@ share/gtk-doc/html/libgimpmath/up-insensitive.png
 share/gtk-doc/html/libgimpmath/up.png
 share/gtk-doc/html/libgimpmodule/GimpModule.html
 share/gtk-doc/html/libgimpmodule/GimpModuleDB.html
-share/gtk-doc/html/libgimpmodule/api-index-2-10.html
-share/gtk-doc/html/libgimpmodule/api-index-2-8.html
-share/gtk-doc/html/libgimpmodule/api-index-deprecated.html
 share/gtk-doc/html/libgimpmodule/api-index-full.html
 share/gtk-doc/html/libgimpmodule/home.png
 share/gtk-doc/html/libgimpmodule/index.html
@@ -4647,9 +4612,6 @@ share/gtk-doc/html/libgimpmodule/style.css
 share/gtk-doc/html/libgimpmodule/up-insensitive.png
 share/gtk-doc/html/libgimpmodule/up.png
 share/gtk-doc/html/libgimpthumb/GimpThumbnail.html
-share/gtk-doc/html/libgimpthumb/api-index-2-10.html
-share/gtk-doc/html/libgimpthumb/api-index-2-2.html
-share/gtk-doc/html/libgimpthumb/api-index-deprecated.html
 share/gtk-doc/html/libgimpthumb/api-index-full.html
 share/gtk-doc/html/libgimpthumb/home.png
 share/gtk-doc/html/libgimpthumb/index.html
@@ -4712,14 +4674,6 @@ share/gtk-doc/html/libgimpwidgets/GimpUnitComboBox.html
 share/gtk-doc/html/libgimpwidgets/GimpUnitMenu.html
 share/gtk-doc/html/libgimpwidgets/GimpUnitStore.html
 share/gtk-doc/html/libgimpwidgets/GimpZoomModel.html
-share/gtk-doc/html/libgimpwidgets/api-index-2-10-10.html
-share/gtk-doc/html/libgimpwidgets/api-index-2-10-4.html
-share/gtk-doc/html/libgimpwidgets/api-index-2-10.html
-share/gtk-doc/html/libgimpwidgets/api-index-2-2.html
-share/gtk-doc/html/libgimpwidgets/api-index-2-4.html
-share/gtk-doc/html/libgimpwidgets/api-index-2-6.html
-share/gtk-doc/html/libgimpwidgets/api-index-2-8.html
-share/gtk-doc/html/libgimpwidgets/api-index-deprecated.html
 share/gtk-doc/html/libgimpwidgets/api-index-full.html
 share/gtk-doc/html/libgimpwidgets/gimp-anchor.png
 share/gtk-doc/html/libgimpwidgets/gimp-attach.png
@@ -5480,3 +5434,4 @@ share/locale/zh_TW/LC_MESSAGES/gimp20-tips.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 share/metainfo/gimp-data-extras.metainfo.xml
 share/metainfo/org.gimp.GIMP.appdata.xml
+@pkgdir share/gimp/2.0/fonts
