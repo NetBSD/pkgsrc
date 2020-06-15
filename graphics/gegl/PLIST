@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/03/03 04:15:20 brook Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/06/15 10:55:58 ryoon Exp $
 bin/gegl
 bin/gegl-imgcmp
 include/gegl-0.4/gegl-apply.h
@@ -17,8 +17,12 @@ include/gegl-0.4/gegl-enums.h
 include/gegl-0.4/gegl-graph-debug.h
 include/gegl-0.4/gegl-init.h
 include/gegl-0.4/gegl-lookup.h
+include/gegl-0.4/gegl-math.h
 include/gegl-0.4/gegl-matrix.h
 include/gegl-0.4/gegl-memory.h
+include/gegl-0.4/gegl-metadata.h
+include/gegl-0.4/gegl-metadatahash.h
+include/gegl-0.4/gegl-metadatastore.h
 include/gegl-0.4/gegl-node.h
 include/gegl-0.4/gegl-op.h
 include/gegl-0.4/gegl-operations-util.h
@@ -119,7 +123,7 @@ lib/gegl-0.4/webp-save.${SOEXT}
 lib/libgegl-0.4.${SOEXT}
 ${PLIST.Darwin}lib/libgegl-0.4.0.${SOEXT}
 ${PLIST.not_Darwin}lib/libgegl-0.4.${SOEXT}.0
-${PLIST.not_Darwin}lib/libgegl-0.4.${SOEXT}.0.421.1
+${PLIST.not_Darwin}lib/libgegl-0.4.${SOEXT}.0.423.1
 lib/libgegl-npd-0.4.${SOEXT}
 lib/libgegl-sc-0.4.${SOEXT}
 lib/pkgconfig/gegl-0.4.pc
@@ -135,6 +139,7 @@ share/locale/es/LC_MESSAGES/gegl-0.4.mo
 share/locale/eu/LC_MESSAGES/gegl-0.4.mo
 share/locale/fr/LC_MESSAGES/gegl-0.4.mo
 share/locale/gl/LC_MESSAGES/gegl-0.4.mo
+share/locale/hr/LC_MESSAGES/gegl-0.4.mo
 share/locale/id/LC_MESSAGES/gegl-0.4.mo
 share/locale/is/LC_MESSAGES/gegl-0.4.mo
 share/locale/it/LC_MESSAGES/gegl-0.4.mo
@@ -143,6 +148,7 @@ share/locale/lv/LC_MESSAGES/gegl-0.4.mo
 share/locale/mr/LC_MESSAGES/gegl-0.4.mo
 share/locale/nb/LC_MESSAGES/gegl-0.4.mo
 share/locale/ne/LC_MESSAGES/gegl-0.4.mo
+share/locale/nl/LC_MESSAGES/gegl-0.4.mo
 share/locale/oc/LC_MESSAGES/gegl-0.4.mo
 share/locale/pl/LC_MESSAGES/gegl-0.4.mo
 share/locale/pt/LC_MESSAGES/gegl-0.4.mo
