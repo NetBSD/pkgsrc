@@ -1,0 +1,10 @@
+RE-flex is a regex-centric, fast lexical analyzer generator for C++
+with full Unicode support.
+
+Faster than Flex and other regex matchers.  Accepts Flex
+specifications.  Generates reusable source code that is easy to
+understand.  Easily integrates with Bison and other parsers.  Includes
+a fast stand-alone regex engine and library.
+
+It also can use regex matchers from boost or pcre2, as well as
+visualizing FSM graphs with graphviz.
