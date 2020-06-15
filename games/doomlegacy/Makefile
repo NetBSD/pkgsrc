@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/06/10 15:35:02 micha Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/15 10:32:52 micha Exp $
 
 VERS=			1.48.4
 PKGNAME=		doomlegacy-${VERS}
@@ -37,6 +37,7 @@ MAKE_FLAGS+=		OS=MAC
 # Other Unix (should work for GNU/Linux, OpenBSD and SunOS)
 MAKE_FLAGS+=		OS=LINUX
 CFLAGS.SunOS+=		-DSOLARIS
+LDFLAGS.SunOS+=		-lresolv
 .endif
 
 .if ${MACHINE_ENDIAN} == "big"
