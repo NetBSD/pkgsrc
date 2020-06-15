@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3632 2020/06/15 17:10:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3633 2020/06/15 20:05:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5850,3 +5850,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/postfix-pgsql to 3.5.3 [taca 2020-06-15]
 	Updated mail/postfix-sqlite to 3.5.3 [taca 2020-06-15]
 	Updated finance/ledger to 3.2.1 [adam 2020-06-15]
+	Updated net/youtube-dl to 20200616 [leot 2020-06-15]
