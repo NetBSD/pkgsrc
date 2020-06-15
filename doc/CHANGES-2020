@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3622 2020/06/15 07:22:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3623 2020/06/15 10:55:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5833,3 +5833,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-faraday_middleware to 1.0.0 [taca 2020-06-14]
 	Updated www/firefox to 77.0.1nb1 [maya 2020-06-14]
 	Updated wm/twm to 1.0.11 [wiz 2020-06-15]
+	Updated graphics/babl to 0.1.78 [ryoon 2020-06-15]
