@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/04/16 11:29:52 mef Exp $
+# $NetBSD: Makefile,v 1.42 2020/06/15 18:21:03 wiz Exp $
 
 DISTNAME=	Moo-2.004000
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-Import-Into>=1.002000:../../devel/p5-Import-Into
 DEPENDS+=	p5-Sub-Quote>=2.003001:../../devel/p5-Sub-Quote
 
 TEST_DEPENDS+=	p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
-
-EXTRACT_USING=	bsdtar
 
 PERL5_PACKLIST=	auto/Moo/.packlist
 
