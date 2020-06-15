@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.28 2020/02/26 15:09:35 wiz Exp $
+$NetBSD: distinfo,v 1.29 2020/06/15 10:55:58 ryoon Exp $
 
-SHA1 (gegl-0.4.22.tar.xz) = 7882420d882980f90312d5cfc251dfec87222316
-RMD160 (gegl-0.4.22.tar.xz) = 0503f071c9a8117324abf03c11e392b4f4f5f384
-SHA512 (gegl-0.4.22.tar.xz) = 3118fb17532bcd5893a77739eaf936f5d1e2020178abc497098d227c25f726679621503ac83e7d14a9883d259247d97b92016174e76a2e6e950be7e26ce251ab
-Size (gegl-0.4.22.tar.xz) = 4826748 bytes
+SHA1 (gegl-0.4.24.tar.xz) = d4accfc8044d96c5d3bfcaa23d2c1fda09d4162b
+RMD160 (gegl-0.4.24.tar.xz) = 4b2b50e9fc9699398c97676d18dde6ad6e25e397
+SHA512 (gegl-0.4.24.tar.xz) = 09d857332eeabe39327d312b1a1692b7c6c9f8f952ae3e3cc06b5a5c262757d8b86467c25a4e66c90c37922fd3548fc1342a9864732d17924f97e7b6c6c1786d
+Size (gegl-0.4.24.tar.xz) = 4937056 bytes
 SHA1 (patch-gegl_gegl-config.c) = a8e1f5f5394a33be2bcdcb05ec7654d06f7ad4bc
