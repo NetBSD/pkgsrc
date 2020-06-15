@@ -1,0 +1,47 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2020/06/15 15:11:50 scole Exp $
+
+use libtool
+
+--- lib/Makefile.in.orig	2020-05-25 23:34:27.000000000 +0000
++++ lib/Makefile.in
+@@ -241,12 +241,13 @@ AUTOCONF = @AUTOCONF@
+ AUTOHEADER = @AUTOHEADER@
+ AUTOMAKE = @AUTOMAKE@
+ AWK = @AWK@
+-CC = @CC@
++CC=	$(LIBTOOL) --mode=compile @CC@
+ CCDEPMODE = @CCDEPMODE@
+ CFLAGS = @CFLAGS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
++CXXORIG = @CXX@
++CXX=	$(LIBTOOL) --mode=compile @CXX@
+ CXXCPP = @CXXCPP@
+ CXXDEPMODE = @CXXDEPMODE@
+ CXXFLAGS = @CXXFLAGS@
+@@ -416,15 +417,15 @@ uninstall-libLIBRARIES:
+ clean-libLIBRARIES:
+ 	-test -z "$(lib_LIBRARIES)" || rm -f $(lib_LIBRARIES)
+ 
+-libreflex.a: $(libreflex_a_OBJECTS) $(libreflex_a_DEPENDENCIES) $(EXTRA_libreflex_a_DEPENDENCIES) 
+-	$(AM_V_at)-rm -f libreflex.a
+-	$(AM_V_AR)$(libreflex_a_AR) libreflex.a $(libreflex_a_OBJECTS) $(libreflex_a_LIBADD)
+-	$(AM_V_at)$(RANLIB) libreflex.a
+-
+-libreflexmin.a: $(libreflexmin_a_OBJECTS) $(libreflexmin_a_DEPENDENCIES) $(EXTRA_libreflexmin_a_DEPENDENCIES) 
+-	$(AM_V_at)-rm -f libreflexmin.a
+-	$(AM_V_AR)$(libreflexmin_a_AR) libreflexmin.a $(libreflexmin_a_OBJECTS) $(libreflexmin_a_LIBADD)
+-	$(AM_V_at)$(RANLIB) libreflexmin.a
++libreflex.a:  $(libreflex_a_OBJECTS) $(libreflex_a_DEPENDENCIES) $(EXTRA_libreflex_a_DEPENDENCIES) 
++	$(AM_V_at)-rm -f libreflex.a libreflex.la
++	$(LIBTOOL) --tag=CXX --mode=link $(CXXORIG) -o libreflex.la $(libreflex_a_OBJECTS:.o=.lo) \
++		-rpath $(PREFIX)/lib -version-info 0:0
++
++libreflexmin.a:  $(libreflexmin_a_OBJECTS) $(libreflexmin_a_DEPENDENCIES) $(EXTRA_libreflexmin_a_DEPENDENCIES) 
++	$(AM_V_at)-rm -f libreflexmin.a libreflexmin.la
++	$(LIBTOOL) --tag=CXX --mode=link $(CXXORIG) -o libreflexmin.la $(libreflexmin_a_OBJECTS:.o=.lo) \
++		-rpath $(PREFIX)/lib -version-info 0:0
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)

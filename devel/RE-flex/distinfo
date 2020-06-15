@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2020/06/15 15:11:50 scole Exp $
+
+SHA1 (RE-flex/v2.0.1.tar.gz) = 839cd4f386bb39294f8a19e6967d7cd078fd1267
+RMD160 (RE-flex/v2.0.1.tar.gz) = ce9ae45dd5637d992617958f8b3408f6794a4eb1
+SHA512 (RE-flex/v2.0.1.tar.gz) = 6f02c67c9d27fd407866cc7843881acd9ea9b1d973efca6150d0a2fa6ee53e27f269409e5dde66065396e8334fdf912082d4c7780e2087e31a6cbc43c99f34d0
+Size (RE-flex/v2.0.1.tar.gz) = 5686909 bytes
+SHA1 (patch-examples_gz.l) = 09e92adbd4f6aa0b8fa358d6c0fc4778a67209fd
+SHA1 (patch-lib_Makefile.in) = d7ab58a8af42add67be3ba99d5e78db2a8299e00
+SHA1 (patch-src_Makefile.in) = 5e624262cc0b6fe2126dd44865bad7d0d954cad3
