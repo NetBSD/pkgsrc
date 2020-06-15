@@ -582,6 +582,9 @@ Darwin)
 	need_bsd_install=no
 	need_awk=yes
 	need_sed=yes
+	# Fix for System Integrity Protection which was included in 10.11 and later
+	# https://support.apple.com/en-us/HT204899
+	need_ksh=yes
 	set_opsys=no
 	machine_arch=`get_machine_arch_darwin`
 	CC=${CC:-"cc -isystem /usr/include"}; export CC
@@ -603,6 +606,7 @@ Darwin)
 	10.[0-7])
 		need_awk=no
 		need_sed=no
+		need_ksh=no
 		;;
 	esac
 	unset osrev macosx_version
@@ -768,7 +772,7 @@ Minix)
 	set_opsys=no
 	machine_arch=`uname -p`
 	check_compiler=yes
-	;;	
+	;;
 MirBSD)
 	root_group=wheel
 	need_pax=yes
