@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/06/21 14:28:23 taca Exp $
+$NetBSD: distinfo,v 1.8 2020/06/15 15:02:11 taca Exp $
 
-SHA1 (builder-3.2.3.gem) = 5cd6a92e6360279ec1e5c2456372f1709df9a6b2
-RMD160 (builder-3.2.3.gem) = 80e8c8ad8a8478f80365cfc17dd239f2e510a921
-SHA512 (builder-3.2.3.gem) = 7869f44bcf40d547846d50ab82234694420b2f38e08037ae671c90a7c3b547f11023f864e70adf82970fdddf7ee811730c17e30ec298bb6d1999f4c0c050fbb8
-Size (builder-3.2.3.gem) = 31744 bytes
-SHA1 (patch-lib_builder_xmlmarkup.rb) = 5d4c101b3263d84b513e254ad6b62e96840fa255
+SHA1 (builder-3.2.4.gem) = 3581f146308130f5b23b4f0348e68333288267f8
+RMD160 (builder-3.2.4.gem) = 38f46a8f4796958990e8196894decede85a1375a
+SHA512 (builder-3.2.4.gem) = 730317ec0a4af33e183283e309e38d47deb08db0ab6bd6dfebdedcebb7470bd383c6c1d32ad674adc43298e0f86930b97c652fff9827ca8890db2d1d68e792f1
+Size (builder-3.2.4.gem) = 32256 bytes
