@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.329 2020/06/02 08:22:42 adam Exp $
+# $NetBSD: Makefile,v 1.330 2020/06/15 11:00:45 ryoon Exp $
 
-DISTNAME=	gimp-2.10.18
-PKGREVISION=	8
+DISTNAME=	gimp-2.10.20
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -73,9 +72,9 @@ BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.72
+BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.78
 .include "../../graphics/babl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.18
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.24
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/gexiv2/buildlink3.mk"
