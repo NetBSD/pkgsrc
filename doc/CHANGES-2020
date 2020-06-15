@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3627 2020/06/15 14:26:54 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3628 2020/06/15 14:40:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5838,3 +5838,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/gimp to 2.10.20 [ryoon 2020-06-15]
 	Updated sysutils/ruby-specinfra to 2.82.17 [taca 2020-06-15]
 	Updated security/ruby-metasploit-payloads to 2.0.3 [taca 2020-06-15]
+	Updated security/ruby-metasploit_payloads-mettle to 1.0.0 [taca 2020-06-15]
