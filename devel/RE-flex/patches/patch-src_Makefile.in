@@ -1,0 +1,44 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2020/06/15 15:11:50 scole Exp $
+
+use libtool
+
+--- src/Makefile.in.orig	2020-05-25 23:34:27.000000000 +0000
++++ src/Makefile.in
+@@ -103,7 +103,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
+ PROGRAMS = $(bin_PROGRAMS)
+ am_reflex_OBJECTS = reflex-reflex.$(OBJEXT)
+ reflex_OBJECTS = $(am_reflex_OBJECTS)
+-reflex_DEPENDENCIES = $(top_builddir)/lib/libreflex.a
++reflex_DEPENDENCIES = $(top_builddir)/lib/libreflex.la
+ AM_V_P = $(am__v_P_@AM_V@)
+ am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
+ am__v_P_0 = false
+@@ -174,12 +174,13 @@ AUTOCONF = @AUTOCONF@
+ AUTOHEADER = @AUTOHEADER@
+ AUTOMAKE = @AUTOMAKE@
+ AWK = @AWK@
+-CC = @CC@
++CC=	$(LIBTOOL) --mode=compile @CC@
+ CCDEPMODE = @CCDEPMODE@
+ CFLAGS = @CFLAGS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
++CXXORIG = @CXX@
++CXX=	$(LIBTOOL) --mode=compile @CXX@
+ CXXCPP = @CXXCPP@
+ CXXDEPMODE = @CXXDEPMODE@
+ CXXFLAGS = @CXXFLAGS@
+@@ -356,9 +357,10 @@ uninstall-binPROGRAMS:
+ clean-binPROGRAMS:
+ 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+ 
+-reflex$(EXEEXT): $(reflex_OBJECTS) $(reflex_DEPENDENCIES) $(EXTRA_reflex_DEPENDENCIES) 
++reflex$(EXEEXT): $(reflex_OBJECTS) $(reflex_DEPENDENCIES) $(EXTRA_reflex_DEPENDENCIES)
+ 	@rm -f reflex$(EXEEXT)
+-	$(AM_V_CXXLD)$(CXXLINK) $(reflex_OBJECTS) $(reflex_LDADD) $(LIBS)
++	${LIBTOOL} --tag=CXX --mode=link $(CXXORIG) $(AM_CXXFLAGS) $(CXXFLAGS) \
++	-o reflex$(EXEEXT) $(reflex_OBJECTS:.o=.lo) $(reflex_DEPENDENCIES)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
