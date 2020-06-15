@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/21 14:28:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/06/15 15:02:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/builder.blurb
+${GEM_LIBDIR}/builder.gemspec
 ${GEM_LIBDIR}/doc/jamis.rb
 ${GEM_LIBDIR}/doc/releases/builder-1.2.4.rdoc
 ${GEM_LIBDIR}/doc/releases/builder-2.0.0.rdoc
