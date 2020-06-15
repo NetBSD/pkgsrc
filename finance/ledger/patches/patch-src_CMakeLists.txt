@@ -1,0 +1,16 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2020/06/15 16:54:38 adam Exp $
+
+Fix problem with install_name.
+
+--- src/CMakeLists.txt.orig	2020-05-18 05:30:10.000000000 +0000
++++ src/CMakeLists.txt
+@@ -277,8 +277,7 @@ if (BUILD_LIBRARY)
+   add_library(libledger SHARED ${LEDGER_SOURCES})
+   add_ledger_library_dependencies(libledger)
+   set_target_properties(libledger PROPERTIES
+-    PREFIX ""
+-    INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}"
++    OUTPUT_NAME "ledger"
+     VERSION ${Ledger_VERSION_MAJOR}
+     SOVERSION ${Ledger_VERSION_MAJOR})
+ 
