@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19916 2020/06/14 13:53:26 adam Exp $
+$NetBSD: TODO,v 1.19917 2020/06/15 11:01:31 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -614,7 +614,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o geoclue-2.1.10
 	o gfract-0.33
 	o ghdl-0.33
-	o gimp-2.10.20
 	o gjs-1.64.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
