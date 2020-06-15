@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.185 2020/05/18 14:21:53 triaxx Exp $
+$NetBSD: distinfo,v 1.186 2020/06/15 15:43:32 taca Exp $
 
-SHA1 (postfix-3.5.2.tar.gz) = e83585d16d377056a87a6a7f4a04498d19031600
-RMD160 (postfix-3.5.2.tar.gz) = e353e34625f2d9ce29608259802fed59dccecda4
-SHA512 (postfix-3.5.2.tar.gz) = 04e37c4542952dba0f3e44f10775c0bedf343e6382df14a9c43ebc80c005c3f6de68a4e7a7469f32ae74b8e50d10c089d4930eac0cd2e2a9ff1bd8d7481b3a76
-Size (postfix-3.5.2.tar.gz) = 4611518 bytes
+SHA1 (postfix-3.5.3.tar.gz) = ae2f78924cc4a7901d4daa32306cfeb1ae4756ef
+RMD160 (postfix-3.5.3.tar.gz) = d2bdf0f47def85cd622db45bf204288149196c3d
+SHA512 (postfix-3.5.3.tar.gz) = 1d020292f244e770353efb634909afdc9ac29b81707547fda1089631febbb8ecdac7c43f6b6ec9bdc4084da2be320bc433064d293811424873062d71d3545235
+Size (postfix-3.5.3.tar.gz) = 4611925 bytes
 SHA1 (patch-aa) = c8216f133e202a7bb37682b0dbc1448f021e7c1c
 SHA1 (patch-ag) = c126c572e36bf2bcbd3f6e5d8332a3d26e704109
 SHA1 (patch-ai) = 51748ccf92da543f7ff640f36906a29b5db3f6e3
