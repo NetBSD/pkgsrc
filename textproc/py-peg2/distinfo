@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/16 08:40:54 pin Exp $
+
+SHA1 (pyPEG2-2.15.2.tar.gz) = 1b4d8fd22cdae741e5c8675de2f0deeb48c467a6
+RMD160 (pyPEG2-2.15.2.tar.gz) = 594103ba8a33086a306a172f27c6d29cf0c1435a
+SHA512 (pyPEG2-2.15.2.tar.gz) = f78e3b1294169167809c5fe05f2a69af2bd6c7c4c1bcbebafb4aa6b8ae6ead181a46b051e41193bc31f49c4b4fa7b1ef231d172217c11d301d0ee21d8e411b6f
+Size (pyPEG2-2.15.2.tar.gz) = 40334 bytes

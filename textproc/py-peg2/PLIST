@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/16 08:40:54 pin Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pypeg2/__init__.py
+${PYSITELIB}/pypeg2/__init__.pyc
+${PYSITELIB}/pypeg2/__init__.pyo
+${PYSITELIB}/pypeg2/test/__init__.py
+${PYSITELIB}/pypeg2/test/__init__.pyc
+${PYSITELIB}/pypeg2/test/__init__.pyo
+${PYSITELIB}/pypeg2/test/test_pyPEG2.py
+${PYSITELIB}/pypeg2/test/test_pyPEG2.pyc
+${PYSITELIB}/pypeg2/test/test_pyPEG2.pyo
+${PYSITELIB}/pypeg2/test/test_xmlast.py
+${PYSITELIB}/pypeg2/test/test_xmlast.pyc
+${PYSITELIB}/pypeg2/test/test_xmlast.pyo
+${PYSITELIB}/pypeg2/xmlast.py
+${PYSITELIB}/pypeg2/xmlast.pyc
+${PYSITELIB}/pypeg2/xmlast.pyo
