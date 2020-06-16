@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.16 2020/03/18 18:02:41 joerg Exp $
+$NetBSD: distinfo,v 1.17 2020/06/16 23:47:07 gutteridge Exp $
 
-SHA1 (blackbox-0.75.tar.lz) = 65713441b2b5d0f496729ca65d6d609d40e1fcc4
-RMD160 (blackbox-0.75.tar.lz) = cc1362a45e292dccfbcaf03bc0a508a27bf64980
-SHA512 (blackbox-0.75.tar.lz) = 0e5e57c57408627af59fea6e6c74d081fce913c2c33005652f5c309edb6b8368f8cf4c80999134db35d1c80b0895476057d02c903210143c9411792d1fa381f1
-Size (blackbox-0.75.tar.lz) = 562326 bytes
+SHA1 (blackbox-0.76.tar.lz) = 4bd2dc0113b499d54463a2c6ef80f2500cb21dad
+RMD160 (blackbox-0.76.tar.lz) = 158989098ecda323ed1ac896e8dd747a822168c9
+SHA512 (blackbox-0.76.tar.lz) = d10ce81b2c3ad4cac25f8811d562da831f81e3003ef1469a2a7422d32b3e7d0a17b7b4f9fee02f099197c770d42d94253cc6e856b7895ad76d7cefd7a60dd4c0
+Size (blackbox-0.76.tar.lz) = 558554 bytes
 SHA1 (patch-doc_fr__FR_Makefile.in) = 39af7e28c397bd4201f85d4d13a48892024d274b
 SHA1 (patch-doc_ja__JP_Makefile.in) = bd79553e6bd5368a8b21cf463056a35c84e2e8e0
 SHA1 (patch-doc_nl__NL_Makefile.in) = 5f7df3158b59633fd9633656237f4fd5cdace897
 SHA1 (patch-doc_sl__SI_Makefile.in) = d116093a717a14d8e0b252f0254f7fb03e37f0a1
+SHA1 (patch-lib_EWMH.cc) = 5b2dd29f5dac083e56e6b17c263e8d42f32a89f6
 SHA1 (patch-lib_Image.cc) = ab49da02853b670843f4884517f0727d4569d50a
 SHA1 (patch-lib_Menu.cc) = b16a7439fa5db1d287e5353ec5986a9c3ffd6cfb
 SHA1 (patch-lib_Unicode.cc) = 7a13e7822a9af71c97b24e167394d87a65e8be73
