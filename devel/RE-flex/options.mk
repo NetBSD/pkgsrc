@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2020/06/16 16:08:01 scole Exp $
+# $NetBSD: options.mk,v 1.3 2020/06/16 16:18:02 scole Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.RE_flex
 PKG_SUPPORTED_OPTIONS=	cpu-optimization doxygen examples
-PKG_SUGGESTED_OPTIONS=	cpu-optimization
+PKG_SUGGESTED_OPTIONS=	cpu-optimization examples
 
 .include "../../mk/bsd.options.mk"
 
