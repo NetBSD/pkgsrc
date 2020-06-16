@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/16 13:41:20 ryoon Exp $
+share/open_jtalk/voices/mei/COPYRIGHT.txt
+share/open_jtalk/voices/mei/README.txt
+share/open_jtalk/voices/mei/mei_angry.htsvoice
+share/open_jtalk/voices/mei/mei_bashful.htsvoice
+share/open_jtalk/voices/mei/mei_happy.htsvoice
+share/open_jtalk/voices/mei/mei_normal.htsvoice
+share/open_jtalk/voices/mei/mei_sad.htsvoice
+share/open_jtalk/voices/slt/COPYRIGHT.txt
+share/open_jtalk/voices/slt/cmu_us_arctic_slt.htsvoice
+share/open_jtalk/voices/takumi/COPYRIGHT.txt
+share/open_jtalk/voices/takumi/README.txt
+share/open_jtalk/voices/takumi/takumi_angry.htsvoice
+share/open_jtalk/voices/takumi/takumi_happy.htsvoice
+share/open_jtalk/voices/takumi/takumi_normal.htsvoice
+share/open_jtalk/voices/takumi/takumi_sad.htsvoice
