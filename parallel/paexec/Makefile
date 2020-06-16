@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/06/01 16:18:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.26 2020/06/16 10:38:40 otis Exp $
 #
 
 DISTNAME=	paexec-1.1.4
@@ -32,5 +32,6 @@ post-install:
 	set -e; cd ${WRKSRC}; \
 	${INSTALL_DATA} presentation/paexec.pdf ${DESTDIR}${PREFIX}/share/doc/paexec/
 
+.include "../../devel/libmaa/buildlink3.mk"
 .include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
