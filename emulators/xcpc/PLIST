@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/16 12:08:45 ryoon Exp $
+bin/xcpc
+share/applications/xcpc.desktop
+share/pixmaps/xcpc.xpm
+share/xcpc/roms/amsdos.rom
+share/xcpc/roms/cpc464.rom
+share/xcpc/roms/cpc6128.rom
+share/xcpc/roms/cpc664.rom

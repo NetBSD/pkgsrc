@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/16 12:08:45 ryoon Exp $
+
+SHA1 (xcpc-20070122.tar.gz) = 61f21856b367316dac40545b91b7878ddbaf3838
+RMD160 (xcpc-20070122.tar.gz) = 4577e5cd3bc1f9f8fa2e32cfb291c4f748ea34ae
+SHA512 (xcpc-20070122.tar.gz) = b388943079b2dab9e6c60e104470859785903ec30926dc63d4efd07b272e75f11583edf41c80e56e3bd7e2b80aeddfc0b2aef222b8bf4cf41cc905c640bcf82d
+Size (xcpc-20070122.tar.gz) = 156803 bytes
