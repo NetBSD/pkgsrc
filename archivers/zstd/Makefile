@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/06/14 13:51:55 adam Exp $
+# $NetBSD: Makefile,v 1.30 2020/06/16 14:58:08 wiz Exp $
 
 DISTNAME=	zstd-1.4.5
 CATEGORIES=	archivers
@@ -11,6 +11,9 @@ COMMENT=	Fast real-time compression algorithm
 LICENSE=	modified-bsd OR gnu-gpl-v2
 
 CHECK_PORTABILITY_SKIP+=	tests/playTests.sh
+
+# 1.4.5: ../lib/libzstd.so: file not recognized: file format not recognized
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		ggrep gmake pkg-config
