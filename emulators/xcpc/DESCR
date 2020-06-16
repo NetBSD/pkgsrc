@@ -1,0 +1,4 @@
+XCPC is a portable Amstrad CPC 464/664/6128 emulator written in C.
+
+XCPC is designed to run on any POSIX compliant system, including
+Unix, Linux, BSD and having an X11 server.
