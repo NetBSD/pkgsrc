@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3641 2020/06/16 10:32:58 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.3642 2020/06/16 12:09:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5859,3 +5859,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/qutebrowser version 1.12.0 [pin 2020-06-16]
 	Updated misc/ansiweather to 1.17.0 [fcambus 2020-06-16]
 	Added security/passphrase version 1.0.0 [nikita 2020-06-16]
+	Added emulators/xcpc version 20070122 [ryoon 2020-06-16]
