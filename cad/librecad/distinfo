@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.9 2019/10/26 12:23:01 kamil Exp $
+$NetBSD: distinfo,v 1.10 2020/06/16 14:43:17 mef Exp $
 
 SHA1 (LibreCAD-2.2.0.rc1.tar.gz) = 2bffa19ac39a18d9d79fde72e624d7aebbdfa236
 RMD160 (LibreCAD-2.2.0.rc1.tar.gz) = 1521ddedf187c4ce9081062edf88f3f39d5bbb7c
 SHA512 (LibreCAD-2.2.0.rc1.tar.gz) = c7baf28511f75b63382f6f7c508b2e244638a0ecbe4cf99f4854b1f628a6772b942d95c7cbbf9082d06e066cd9ab2a33961ac48bb1d0846f5c2d75f657e5d914
 Size (LibreCAD-2.2.0.rc1.tar.gz) = 13578543 bytes
+SHA1 (patch-librecad_src_lib_engine_lc__splinepoints.cpp) = f29eae212caf267b8c62f9392abdab419c85be06
 SHA1 (patch-librecad_src_lib_engine_rs__system.cpp) = 38ceb3cde81042a1eeb6c68ead874e1a3a3512bb
+SHA1 (patch-librecad_src_lib_gui_rs__painterqt.h) = 21f2aa2f4265690dcd9b8db0c882237e0671841d
 SHA1 (patch-librecad_src_main_qc__applicationwindow.cpp) = 1234b3b4e087c651da76c1d8d7770bebaa71dddc
 SHA1 (patch-librecad_src_ui_forms_qg__commandwidget.cpp) = 97c40234eec588569a862387dc509cc911cb31dc
 SHA1 (patch-librecad_src_ui_generic_colorwizard.cpp) = db049f7bc948913ef215a1a8c2d7d94367b12f1b
