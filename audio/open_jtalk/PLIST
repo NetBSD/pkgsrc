@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/16 13:35:05 ryoon Exp $
+bin/open_jtalk
+share/open_jtalk/dic/char.bin
+share/open_jtalk/dic/left-id.def
+share/open_jtalk/dic/matrix.bin
+share/open_jtalk/dic/pos-id.def
+share/open_jtalk/dic/rewrite.def
+share/open_jtalk/dic/right-id.def
+share/open_jtalk/dic/sys.dic
+share/open_jtalk/dic/unk.dic
