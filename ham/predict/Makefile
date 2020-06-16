@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2020/06/16 12:43:24 mef Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/16 13:43:36 mef Exp $
 #
 
-DISTNAME=	predict-2.2.5
+DISTNAME=	predict-2.2.6
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/kd2bd/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://www.qsl.net/kd2bd/predict.html
@@ -31,7 +30,7 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/predict/default share/predict/vo
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/predict ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/vocalizer/vocalizer.sh ${DESTDIR}${PREFIX}/share/predict/vocalizer/vocalizer
-	${INSTALL_MAN} ${WRKSRC}/docs/man/predict.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/predict.1
+	${INSTALL_MAN} ${WRKSRC}/docs/man/predict.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/predict.1
 	${INSTALL_DATA} ${WRKSRC}/vocalizer/*.wav ${DESTDIR}${PREFIX}/share/predict/vocalizer/
 	${INSTALL_DATA} ${WRKSRC}/default/predict.* ${DESTDIR}${PREFIX}/share/predict/default/
 
