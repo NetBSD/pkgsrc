@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3647 2020/06/16 16:55:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3648 2020/06/16 17:08:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5870,3 +5870,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-google-auth to 1.17.2 [adam 2020-06-16]
 	Updated multimedia/ffmpeg4 to 4.3 [adam 2020-06-16]
 	Updated multimedia/ffplay4 to 4.3 [adam 2020-06-16]
+	Updated devel/py-llvmlite to 0.33.0 [adam 2020-06-16]
+	Updated math/py-numba to 0.50.0 [adam 2020-06-16]
