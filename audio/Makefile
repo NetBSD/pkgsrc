@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.605 2020/05/28 12:00:46 nia Exp $
+# $NetBSD: Makefile,v 1.606 2020/06/16 13:42:17 ryoon Exp $
 #
 
 COMMENT=	Audio tools
@@ -335,6 +335,9 @@ SUBDIR+=	nosefart
 SUBDIR+=	nspmod
 SUBDIR+=	ocp
 SUBDIR+=	oggasm
+SUBDIR+=	open_jtalk
+SUBDIR+=	open_jtalk-HTS_voice
+SUBDIR+=	open_jtalk-MMDAgent_voice
 SUBDIR+=	openal-soft
 SUBDIR+=	opencore-amr
 SUBDIR+=	opus-tools
