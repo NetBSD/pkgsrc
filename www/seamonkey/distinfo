@@ -1,22 +1,20 @@
-$NetBSD: distinfo,v 1.164 2020/06/02 06:11:28 rillig Exp $
+$NetBSD: distinfo,v 1.165 2020/06/16 09:09:02 nia Exp $
 
 SHA1 (seamonkey-2.53.2.source.tar.xz) = 7c6e3295a751aa36c8325e20ef1367d0fb643120
 RMD160 (seamonkey-2.53.2.source.tar.xz) = 567c8bd64166e5854c712f2c2d6ca0dea182c75b
 SHA512 (seamonkey-2.53.2.source.tar.xz) = 58dd605a916ef7fb9cad112bb54fffc837690e458e1254b685f21df1bc8808a9b53d27147cad1064294c789d1f77f17c9f6adecf2be906afa44128496f72a805
 Size (seamonkey-2.53.2.source.tar.xz) = 291744036 bytes
 SHA1 (patch-ldap_c-sdk_include_portable.h) = b262539b92c6822a5ae8c98743d2d71b27bb076a
-SHA1 (patch-mail_app_Makefile.in) = 5c55c0f80b6ccbf0ff7f88a35c164a9312ac2b77
+SHA1 (patch-mail_app_Makefile.in) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = d70faf66d802de613caa6a12cc36d9021caab41d
-SHA1 (patch-mozilla_browser_app_profile_firefox.js) = 96822c46f740ce31eab668ce989897a1ce34a420
 SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 174e1766565f576c79019a05c81f010a3ceaee2f
-SHA1 (patch-mozilla_build_moz.configure_old.configure) = b6ca035008afdff217cb81c0046fae442aa0ae9a
+SHA1 (patch-mozilla_build_moz.configure_old.configure) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-mozilla_dom_base_nsAttrName.h) = 3ddbe33950d93e06e41a43de3395a1794a66e61a
-SHA1 (patch-mozilla_dom_media_CubebUtils.cpp) = d3267e5b2ee9a87ba79c77636ecefeb86bfadf1c
+SHA1 (patch-mozilla_dom_media_CubebUtils.cpp) = 8949ad37cbde3ab2471d1771282809a254d3ec86
+SHA1 (patch-mozilla_gfx_layers_client_ClientPaintedLayer.cpp) = 5ed6afee07c97782e30d4dd7a37465230fb553fb
 SHA1 (patch-mozilla_ipc_chromium_src_base_lock__impl__posix.cc) = 985f4548d15a54f39e7d805c507131b3c6b67532
 SHA1 (patch-mozilla_ipc_chromium_src_base_message__pump__libevent.cc) = 00240cfb510cf71259640fd4aa428621f0eb75ba
 SHA1 (patch-mozilla_ipc_chromium_src_base_platform__thread__posix.cc) = 5abcee4d027dad6f29ac6ea7e002f0af47bbce3a
-SHA1 (patch-mozilla_ipc_glue_CrossProcessSemaphore.h) = 1fba3d966c5e0088cc5d9796a7fd74cb3245ffcc
-SHA1 (patch-mozilla_ipc_glue_CrossProcessSemaphore__posix.cpp) = 9799baf4be22e8e6bf6ec9b8e947f6fb870c1e19
 SHA1 (patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp) = 7ab1c1701344adab8d7ee0332476a864fa2446bb
 SHA1 (patch-mozilla_js_src_gc_Memory.cpp) = 0850c9d57794c037ee5ab6b3d52319f4ec34c72c
 SHA1 (patch-mozilla_js_src_threading_posix_Thread.cpp) = a22611b1329d38c1a56988be2f84aba71c431506
@@ -30,7 +28,7 @@ SHA1 (patch-mozilla_netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = e39748595
 SHA1 (patch-mozilla_old-configure.in) = 5c711b031a2acee9ab4cf803769179de4fff0ea7
 SHA1 (patch-mozilla_servo_components_style_build__gecko.rs) = 473e823fa0cd819dfee1040d360eda543d5557f0
 SHA1 (patch-mozilla_toolkit_components_terminator_nsTerminator.cpp) = 0d975e4b7e3d2a8550c16a9a87c2f7011917cddd
-SHA1 (patch-mozilla_toolkit_library_moz.build) = 51d4b94077a12b136ddc4bd6093336de98f3219e
+SHA1 (patch-mozilla_toolkit_library_moz.build) = b1e5ccc55527f1839afc4b1c757767445ed33e50
 SHA1 (patch-mozilla_toolkit_moz.configure) = 1798a74b329ad0f58d98872e1cbc51cb829ac746
 SHA1 (patch-mozilla_toolkit_mozapps_installer_packager.mk) = c2bb55684f2071708c487504ac6cfc9325e462d6
 SHA1 (patch-mozilla_toolkit_xre_glxtest.cpp) = 547ca37aac32c77d617cd7a2b5dafc4c18c2bbc9
