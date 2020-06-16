@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19917 2020/06/15 11:01:31 ryoon Exp $
+$NetBSD: TODO,v 1.19918 2020/06/16 16:55:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -978,7 +978,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cmake-language-server-0.1.2
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
-	o py-google-auth-1.17.2
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
