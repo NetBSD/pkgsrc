@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3642 2020/06/16 12:09:32 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3643 2020/06/16 12:43:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5860,3 +5860,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ansiweather to 1.17.0 [fcambus 2020-06-16]
 	Added security/passphrase version 1.0.0 [nikita 2020-06-16]
 	Added emulators/xcpc version 20070122 [ryoon 2020-06-16]
+	Updated ham/predict to 2.2.5 [mef 2020-06-16]
