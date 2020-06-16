@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/12 11:38:32 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/16 07:11:54 wiz Exp $
 
 DISTNAME=	libgnt-2.14.0
 CATEGORIES=	devel
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/pidgin/libgnt
 COMMENT=	GLib Ncurses Toolkit
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 
 USE_TOOLS+=	pkg-config
 
