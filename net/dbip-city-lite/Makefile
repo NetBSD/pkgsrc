@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/06/03 11:14:48 fcambus Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/16 08:43:00 fcambus Exp $
 
 DISTNAME=	dbip-city-lite-2020-06.mmdb
 PKGNAME=	dbip-city-lite-2020.06
@@ -7,7 +7,7 @@ MASTER_SITES=	https://download.db-ip.com/free/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	fcambus@NetBSD.org
-HOMEPAGE=	https://db-ip.com/db/lite.php
+HOMEPAGE=	https://db-ip.com/db/download/ip-to-city-lite
 COMMENT=	DB-IP IP to City Lite: IPv4/v6 address to city
 LICENSE=	cc-by-v4.0
 

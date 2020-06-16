@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/06/03 11:12:25 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/16 08:43:00 fcambus Exp $
 
 DISTNAME=	dbip-asn-lite-2020-06.mmdb
 PKGNAME=	dbip-asn-lite-2020.06
@@ -7,7 +7,7 @@ MASTER_SITES=	https://download.db-ip.com/free/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	fcambus@NetBSD.org
-HOMEPAGE=	https://db-ip.com/db/lite.php
+HOMEPAGE=	https://db-ip.com/db/download/ip-to-asn-lite
 COMMENT=	DB-IP IP to ASN Lite: IPv4/v6 address to ASN
 LICENSE=	cc-by-v4.0
 
