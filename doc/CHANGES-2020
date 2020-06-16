@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3643 2020/06/16 12:43:45 mef Exp $
+$NetBSD: CHANGES-2020,v 1.3644 2020/06/16 13:43:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5861,3 +5861,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/passphrase version 1.0.0 [nikita 2020-06-16]
 	Added emulators/xcpc version 20070122 [ryoon 2020-06-16]
 	Updated ham/predict to 2.2.5 [mef 2020-06-16]
+	Added audio/open_jtalk version 1.11 [ryoon 2020-06-16]
+	Added audio/open_jtalk-HTS_voice version 1.05 [ryoon 2020-06-16]
+	Added audio/open_jtalk-MMDAgent_voice version 1.8 [ryoon 2020-06-16]
