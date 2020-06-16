@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3649 2020/06/16 17:14:11 scole Exp $
+$NetBSD: CHANGES-2020,v 1.3650 2020/06/16 17:33:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5873,3 +5873,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-llvmlite to 0.33.0 [adam 2020-06-16]
 	Updated math/py-numba to 0.50.0 [adam 2020-06-16]
 	Updated devel/RE-flex to 2.0.1nb1 [scole 2020-06-16]
+	Updated net/unifi to 5.13.29 [gdt 2020-06-16]
