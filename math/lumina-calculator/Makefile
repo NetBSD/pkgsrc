@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/06/16 08:18:42 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/16 10:53:13 pin Exp $
 
-GITHUB_PROJECT=	lumina-calculator
-GITHUB_TAG=	v1.6.0
-DISTNAME=	v1.6.0
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	lumina-calculator-1.6.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lumina-desktop/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/lumina-desktop/lumina-calculator/
