@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/16 09:04:38 pin Exp $
+
+SHA1 (qutebrowser-1.12.0.tar.gz) = ef616391e4279f8c06318767c44d51ab16de9aa1
+RMD160 (qutebrowser-1.12.0.tar.gz) = c54e7bbb3cc2c90b9cc4b58e9f5bb84badcb78cc
+SHA512 (qutebrowser-1.12.0.tar.gz) = 0d4fb711d4940c40d178579b915e860d1dae75dd0950399122d30ff90e8327f69d44c4cdd863db8013db179bf74679d33750488ddf40547e7b2acc54b89788eb
+Size (qutebrowser-1.12.0.tar.gz) = 3246466 bytes

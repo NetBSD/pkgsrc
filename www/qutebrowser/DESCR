@@ -1,0 +1,4 @@
+qutebrowser is a keyboard-focused browser with a minimal GUI. Its based
+on Python and PyQt5 and free software, licensed under the GPL.
+
+It was inspired by other browsers/addons like dwb and Vimperator/Pentadactyl.
