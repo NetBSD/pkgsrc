@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/06/16 11:34:40 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/16 11:46:57 nikita Exp $
 
 DISTNAME=	1.0.0
 PKGNAME=	passphrase-1.0.0
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/pyversion.mk"
 CONFLICTS+=	${PYPKGPREFIX}-pyutil-[0-9]*
 
 SUBST_CLASSES+=		mandir
