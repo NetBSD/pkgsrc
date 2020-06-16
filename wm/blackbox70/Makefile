@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2019/11/04 21:50:15 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/06/16 23:47:07 gutteridge Exp $
 
-VERSION=	0.75
+VERSION=	0.76
 DISTNAME=	blackbox-${VERSION}
 PKGNAME=	blackbox70-${VERSION}
 CATEGORIES=	wm x11
@@ -23,6 +23,7 @@ USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES
 
 CXXFLAGS.Linux+=	-fpermissive
+CXXFLAGS.SunOS+=	-fpermissive
 
 CONFIGURE_ARGS+=	--enable-nls
 
