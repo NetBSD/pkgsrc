@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2020/04/07 08:18:21 plunky Exp $
+$NetBSD: distinfo,v 1.37 2020/06/16 23:09:31 mef Exp $
 
 SHA1 (qcad-3.24.3.0.tar.gz) = b9752603764bd1f578d741ee462fb0cac04ab03a
 RMD160 (qcad-3.24.3.0.tar.gz) = 2169bf5780ce4a879b3ce4d55caaa3e4339b0170
@@ -23,6 +23,7 @@ SHA1 (patch-src_core_core.pro) = 3b2c68139457f08205896b94e44ebf6c09eb6bfe
 SHA1 (patch-src_customwidgets_customwidgets.pro) = 8bac25b8f02092464591019be961470a45c810cc
 SHA1 (patch-src_entity_entity.pro) = 5452a432726c598036be0a816ee040c68313519e
 SHA1 (patch-src_grid_grid.pro) = 65f5f47cce612b31181a0ac3e153214d29f08767
+SHA1 (patch-src_gui_RRulerQt.h) = 6253dcb32e170dfb2b7e6de0e4182a2ed04f8bd2
 SHA1 (patch-src_gui_gui.pro) = 938fdcb8715ec78550ebff80400ab66be551584d
 SHA1 (patch-src_io_dxf_dxf.pro) = d386b09c217fcebd7fae68807950aa7b80c3a6c8
 SHA1 (patch-src_operations_operations.pro) = d10b38594f29ae07febdb52339049646926c2252
