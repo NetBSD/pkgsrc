@@ -1,0 +1,5 @@
+Passphrase is a zero-dependency passphrase generator.
+
+It is pretty fast (over 6000 times faster than
+bitwarden's "bw generate -p",) and you can use any wordlist.
+An English wordlist is included, and is the default.
