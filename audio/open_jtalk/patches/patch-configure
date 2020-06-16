@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2020/06/16 13:35:05 ryoon Exp $
+
+* Fix POSIX shell portability.
+
+--- configure.orig	2018-12-25 06:39:02.000000000 +0000
++++ configure
+@@ -6218,7 +6218,7 @@ _ACEOF
+ 
+ fi
+ 
+-if test "$use_libiconv" == "yes"; then
++if test "$use_libiconv" = "yes"; then
+    MECAB_LIBS="$MECAB_LIBS -liconv"
+ 
+ $as_echo "#define HAVE_ICONV 1" >>confdefs.h
+@@ -6227,7 +6227,7 @@ $as_echo "#define HAVE_ICONV 1" >>confde
+ $as_echo "#define ICONV_CONST /**/" >>confdefs.h
+ 
+ fi
+-if test "$use_iconv" == "yes"; then
++if test "$use_iconv" = "yes"; then
+ 
+ $as_echo "#define HAVE_ICONV 1" >>confdefs.h
+ 

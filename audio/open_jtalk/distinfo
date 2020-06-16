@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/06/16 13:35:05 ryoon Exp $
+
+SHA1 (open_jtalk-1.11.tar.gz) = de8f290664e3bfd7a071a0f6db9e949c4eedb306
+RMD160 (open_jtalk-1.11.tar.gz) = dba43f8542c339b22f1c0a42d7feff45d5b4896e
+SHA512 (open_jtalk-1.11.tar.gz) = 7bde50f868de88b03e91cc6a503d7284e831b71463b8a39870e82e675ae26ad57a89b604e4db71b8b2582f161a0dec5dce3e4f62ffd67667b591302b4067cd9e
+Size (open_jtalk-1.11.tar.gz) = 19464975 bytes
+SHA1 (patch-configure) = 90dc198e29888f71dcbea105ce09717270679cba
+SHA1 (patch-mecab-naist-jdic_Makefile.in) = d0f4372fb6f89e4b65048b0f8a22a5c99e9bbfab
