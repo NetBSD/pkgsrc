@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3651 2020/06/16 18:22:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3652 2020/06/16 21:09:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5876,3 +5876,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/unifi to 5.13.29 [gdt 2020-06-16]
 	Updated www/py-livereload to 2.6.2 [adam 2020-06-16]
 	Updated devel/py-test-cov to 2.10.0 [adam 2020-06-16]
+	Updated sysutils/bup to 0.30.1 [gdt 2020-06-16]
