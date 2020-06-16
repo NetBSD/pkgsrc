@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3634 2020/06/15 23:35:39 fox Exp $
+$NetBSD: CHANGES-2020,v 1.3635 2020/06/16 00:17:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5852,3 +5852,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/ledger to 3.2.1 [adam 2020-06-15]
 	Updated net/youtube-dl to 20200616 [leot 2020-06-15]
 	Updated audio/fasttracker2 to 1.25 [fox 2020-06-15]
+	Updated net/youtube-dl to 20200616.1 [leot 2020-06-16]
