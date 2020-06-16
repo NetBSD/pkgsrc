@@ -1,0 +1,5 @@
+HTS voice trained by using the Nitech Japanese Speech Database "NIT
+ATR503 M001" is released as a part of Open JTalk
+(http://open-jtalk.sourceforge.net/).  This voice consists of HMMs
+trained by using HMM-based Speech Synthesis System (HTS) version
+2.3 alpha (http://hts.sp.nitech.ac.jp/).
