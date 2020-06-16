@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:25 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/06/16 12:43:24 mef Exp $
 #
 
-DISTNAME=	predict-2.2.3
+DISTNAME=	predict-2.2.5
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/kd2bd/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://www.qsl.net/kd2bd/predict.html
-COMMENT=	PREDICT - curses satellite tracking/orbital prediction program
+COMMENT=	Curses satellite tracking/orbital prediction program
 
 LICENSE=	gnu-gpl-v2
 
