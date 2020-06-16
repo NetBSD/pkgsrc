@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/06/16 08:33:14 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/16 10:54:54 pin Exp $
 
-GITHUB_PROJECT=	lumina-pdf
-GITHUB_TAG=	v1.6.0
-DISTNAME=	v1.6.0
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	lumina-pdf-1.6.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lumina-desktop/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/lumina-desktop/lumina-pdf/
