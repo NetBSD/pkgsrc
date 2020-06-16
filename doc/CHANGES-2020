@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3635 2020/06/16 00:17:59 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3636 2020/06/16 08:21:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5853,3 +5853,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20200616 [leot 2020-06-15]
 	Updated audio/fasttracker2 to 1.25 [fox 2020-06-15]
 	Updated net/youtube-dl to 20200616.1 [leot 2020-06-16]
+	Added math/lumina-calculator version 1.6.0 [pin 2020-06-16]
