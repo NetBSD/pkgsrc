@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/06/14 15:33:29 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/16 17:14:43 nikita Exp $
 
 DISTNAME=	zola-0.11.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=getzola/}
 GITHUB_PROJECT=	zola
@@ -11,6 +12,7 @@ HOMEPAGE=	https://www.getzola.org/
 COMMENT=	Static website generator
 LICENSE=	mit
 USE_LANGUAGES+=	c c++
+USE_TOOLS+=	gmake
 
 CARGO_CRATE_DEPENDS+=	adler32-1.0.4
 CARGO_CRATE_DEPENDS+=	ahash-0.2.18
