@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3637 2020/06/16 08:35:04 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3638 2020/06/16 08:42:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5855,3 +5855,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20200616.1 [leot 2020-06-16]
 	Added math/lumina-calculator version 1.6.0 [pin 2020-06-16]
 	Added print/lumina-pdf version 1.6.0 [pin 2020-06-16]
+	Added textproc/py-peg2 version 2.15.2 [pin 2020-06-16]
