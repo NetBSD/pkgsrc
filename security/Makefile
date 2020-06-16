@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.767 2020/06/12 13:42:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.768 2020/06/16 10:30:32 nikita Exp $
 #
 
 COMMENT=	Security tools
@@ -366,6 +366,7 @@ SUBDIR+=	pam-tacplus
 SUBDIR+=	pam-yubico
 SUBDIR+=	pam_ssh_agent_auth
 SUBDIR+=	paperkey
+SUBDIR+=	passphrase
 SUBDIR+=	password-store
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsc-tools
