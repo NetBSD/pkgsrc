@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/06/16 21:09:36 gdt Exp $
+# $NetBSD: Makefile,v 1.43 2020/06/16 21:12:53 gdt Exp $
 
 DISTNAME=	bup-0.30.1
 CATEGORIES=	sysutils
@@ -14,17 +14,15 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 #   https://github.com/bup/bup/archive/0.30.tar.gz
 #   https://github.com/bup/bup/archive/28876cde4a3dac518e773860aa7969c106f5390d.tar.gz
 
-# EXTRACT_SUFX is set too late, so using it in SITES.* fails.
-EXTRACT_SUFX=  .tar.gz
-MAN_TAG=	bd52b8fffc37788fc00071a8e46842e60ef30926
-MAN_UNPACK=	bup-${MAN_TAG}
-MAN_DISTFILE=	bup-man-${MAN_TAG}${EXTRACT_SUFX}
-SITES.${MAN_DISTFILE}= -${MASTER_SITE_GITHUB:=bup/bup/archive/}${MAN_TAG}${EXTRACT_SUFX}
-
-DISTFILES=     ${DEFAULT_DISTFILES} ${MAN_DISTFILE}
-
+# EXTRACT_SUFX default value is set too late, so using it in SITES.* fails.
+EXTRACT_SUFX=		.tar.gz
+MAN_TAG=		bd52b8fffc37788fc00071a8e46842e60ef30926
+MAN_UNPACK=		bup-${MAN_TAG}
+MAN_DISTFILE=		bup-man-${MAN_TAG}${EXTRACT_SUFX}
+SITES.${MAN_DISTFILE}=	-${MASTER_SITE_GITHUB:=bup/bup/archive/}${MAN_TAG}${EXTRACT_SUFX}
 # Upstream provides html, but we choose not to include it in the package.
-#HTML_TARBALL=	66eccb7eb49575d006d193276018d9551ac5b4d4
+#HTML_TAG=		66eccb7eb49575d006d193276018d9551ac5b4d4
+DISTFILES=		${DEFAULT_DISTFILES} ${MAN_DISTFILE}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bup/bup
