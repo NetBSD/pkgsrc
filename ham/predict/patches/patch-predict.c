@@ -1,7 +1,6 @@
-$NetBSD: patch-predict.c,v 1.2 2020/06/16 12:43:25 mef Exp $
+$NetBSD: patch-predict.c,v 1.3 2020/06/16 13:43:36 mef Exp $
 
 sundry fixes to server mode:
-  fix buffer size issue looking for netport
   provide default port if getservbyname fails
   provide default proto if getprotobyname fails
   fix inexplicable incorrect listen call
@@ -9,15 +8,6 @@ remove reference to exended ascii symbol for degrees
 
 --- predict.c.orig	2006-05-14 23:19:56.000000000 +0000
 +++ predict.c
-@@ -172,7 +172,7 @@ double	tsince, jul_epoch, jul_utc, eclip
- 	moon_az, moon_el, moon_dx, moon_ra, moon_dec, moon_gha, moon_dv;
- 
- char	qthfile[50], tlefile[50], dbfile[50], temp[80], output[25],
--	serial_port[15], resave=0, reload_tle=0, netport[7],
-+	serial_port[15], resave=0, reload_tle=0, netport[8],
- 	once_per_second=0, ephem[5], sat_sun_status, findsun,
- 	calc_squint, database=0, xterm, io_lat='N', io_lon='W';
- 
 @@ -1984,6 +1984,7 @@ int passivesock(char *service, char *pro
  
  	struct servent *pse;
