@@ -1,4 +1,4 @@
-$NetBSD: patch-predict.c,v 1.1 2018/06/04 07:18:47 dbj Exp $
+$NetBSD: patch-predict.c,v 1.2 2020/06/16 12:43:25 mef Exp $
 
 sundry fixes to server mode:
   fix buffer size issue looking for netport
@@ -13,7 +13,7 @@ remove reference to exended ascii symbol for degrees
  	moon_az, moon_el, moon_dx, moon_ra, moon_dec, moon_gha, moon_dv;
  
  char	qthfile[50], tlefile[50], dbfile[50], temp[80], output[25],
--	serial_port[15], resave=0, reload_tle=0, netport[6],
+-	serial_port[15], resave=0, reload_tle=0, netport[7],
 +	serial_port[15], resave=0, reload_tle=0, netport[8],
  	once_per_second=0, ephem[5], sat_sun_status, findsun,
  	calc_squint, database=0, xterm, io_lat='N', io_lon='W';
