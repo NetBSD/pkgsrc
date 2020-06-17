@@ -1,0 +1,16 @@
+$NetBSD: patch-data_com.github.maoschanz.drawing.gschema.xml,v 1.1 2020/06/17 08:47:31 nia Exp $
+
+pkgsrc users are probably more likely to be using a desktop where
+server-side decorations are the norm.
+
+--- data/com.github.maoschanz.drawing.gschema.xml.orig	2020-03-07 14:34:33.000000000 +0000
++++ data/com.github.maoschanz.drawing.gschema.xml
+@@ -10,7 +10,7 @@
+       feature which is off by default because it makes icons blurry.</description>
+     </key>
+     <key type="s" name="decorations">
+-      <default>'auto'</default>
++      <default>'ssd'</default>
+       <summary>Type of window decorations</summary>
+       <description>Can be 'auto', 'csd', 'csd-eos', 'ssd', 'ssd-toolbar',
+       'ssd-symbolic', 'ssd-toolbar-symbolic', 'ssd-menubar' or 'everything'.
