@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/05/26 00:42:54 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2020/06/17 09:54:20 bsiegert Exp $
 #
 
 DISTNAME=		lf-13
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gokcehan/}
 GITHUB_TAG=		r13
@@ -9,8 +10,6 @@ GITHUB_TAG=		r13
 HOMEPAGE=		https://${GO_SRCPATH}
 COMMENT=		Terminal file manager
 LICENSE=		2-clause-bsd
-
-BROKEN=			"Tries writing to LOCALBASE during build"
 
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.4.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.4.zip
