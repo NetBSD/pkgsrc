@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/03/17 20:18:43 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/06/17 11:58:57 adam Exp $
 
-DISTNAME=	mypy-0.770
+DISTNAME=	mypy-0.780
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.mypy-lang.org/
 COMMENT=	Optional static typing for Python
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=0.4.0:../../lang/py-mypy_extensions
+DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=0.4.3:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-typed-ast>=1.4.0:../../devel/py-typed-ast
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
 
