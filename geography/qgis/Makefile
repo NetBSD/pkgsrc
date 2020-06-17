@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/06/16 21:54:24 gdt Exp $
+# $NetBSD: Makefile,v 1.93 2020/06/17 14:01:15 gdt Exp $
 
 DISTNAME=	qgis-3.8.3
 PKGREVISION=	10
@@ -38,8 +38,6 @@ SUBST_MESSAGE.xapple=		Disabling APPLE App in cmake scripts
 xapple_FIND_CMD=		cd ${WRKSRC} && \
 				find . -name '*.cmake' -o -name CMakeLists.txt
 SUBST_FILES.xapple=		${xapple_FIND_CMD:sh}
-# The output of find is a superset of the needed files.
-SUBST_NOOP_OK.xapple=		yes
 SUBST_SED.xapple+=		-e 's,APPLE,XAPPLE,'
 SUBST_SED.xapple+=		-e 's,MACOSX_BUNDLE ,,'
 SUBST_NOOP_OK.xapple=		yes # since SUBST_FILES is generated
