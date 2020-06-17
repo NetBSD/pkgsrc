@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.14 2020/06/09 12:03:20 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.15 2020/06/17 13:40:41 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -215,4 +215,25 @@ sysutils/dbus: security fix
 
 Pullup ticket #6234 - requested by wiz
 devel/libntlm: security fix
+
+Pullup ticket #6235 - requested by msaitoh
+sysutils/intel-microcode-netbsd: security fix
+
+Pullup ticket #6236 - requested by nia
+x11/qt5-qtwebkit: NetBSD/arm build fix
+
+Pullup ticket #6237 - requested by nia
+emulators/libretro-bsnes-mercury: NetBSD/arm build fix
+
+Pullup ticket #6238 - requested by nia
+net/grpc: i386 build fix
+
+Pullup ticket #6239 - requested by nia
+net/qbittorrent: i386 build fix
+
+Pullup ticket #6240 - requested by taca
+www/ruby-websocket-extensions: security fix
+
+Pullup ticket #6243 - requested by nia
+graphics/librsvg: NetBSD/arm build fix
 
