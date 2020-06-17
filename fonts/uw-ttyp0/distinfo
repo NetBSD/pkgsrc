@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/17 11:06:28 nia Exp $
+
+SHA1 (uw-ttyp0-1.3.tar.gz) = 4d2d38311e13876bfb348720d62200cda4e6a528
+RMD160 (uw-ttyp0-1.3.tar.gz) = e05ade058850321e371e944b1b9758aac141cd4e
+SHA512 (uw-ttyp0-1.3.tar.gz) = 193966b826cafa313384f20e225d4a0b0057364ed23c2beaf27a59095fdb9079281fdc1d292592038512a56ec0387e531a28449344e2960f0ecd3e64c7a6f6e7
+Size (uw-ttyp0-1.3.tar.gz) = 702217 bytes
+SHA1 (patch-Makefile.in) = 7e1e8b9da1035b604f4da1a5ad8884dfce887d33
