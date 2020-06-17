@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/12/16 12:08:02 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/17 18:35:36 pin Exp $
 bin/qt5ct
 qt5/plugins/platformthemes/libqt5ct.so
 qt5/plugins/styles/libqt5ct-style.so
@@ -6,6 +6,7 @@ share/applications/qt5ct.desktop
 share/qt5ct/colors/airy.conf
 share/qt5ct/colors/darker.conf
 share/qt5ct/colors/dusk.conf
+share/qt5ct/colors/ia_ora.conf
 share/qt5ct/colors/sand.conf
 share/qt5ct/colors/simple.conf
 share/qt5ct/colors/waves.conf
