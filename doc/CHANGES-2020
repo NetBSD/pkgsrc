@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3657 2020/06/17 08:47:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3658 2020/06/17 09:38:30 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5884,3 +5884,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-responses to 0.10.15 [adam 2020-06-17]
 	Updated devel/py-more-itertools to 8.4.0 [adam 2020-06-17]
 	Added graphics/drawing version 0.4.13 [nia 2020-06-17]
+	Updated lang/go114 to 1.14.4 [bsiegert 2020-06-17]
