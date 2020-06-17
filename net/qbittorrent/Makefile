@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/10 22:10:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2020/06/17 13:38:14 bsiegert Exp $
 
 DISTNAME=	qbittorrent-4.2.1
 PKGREVISION=	4
@@ -16,10 +16,16 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.7
-
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+
+GCC_REQD+=	6 # c++14
+
+.include "../../mk/bsd.prefs.mk"
+
+# 64 bit atomic ops are required
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=		-march=i586
+.endif
 
 LDFLAGS.NetBSD+=	-ljemalloc
 
