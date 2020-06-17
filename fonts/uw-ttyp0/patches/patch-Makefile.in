@@ -1,0 +1,29 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/06/17 11:06:28 nia Exp $
+
+The install usage is not portable, replace it with BSD_INSTALL_*.
+
+--- Makefile.in.orig	2013-07-19 20:40:39.000000000 +0000
++++ Makefile.in
+@@ -193,16 +193,16 @@ genbdf/%-sym.bdf : genbdf/%-uni.bdf mgl/
+ 	$(BDFMANGLE) $< mgl/adobe-symbol.mgl > $@
+ 
+ install : $(pcf)
+-	install -m0755 -d $(DESTDIR)$(PCFDIR)
+-	install -m0644 -p $(pcf) $(DESTDIR)$(PCFDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PCFDIR)
++	$(BSD_INSTALL_DATA) $(pcf) $(DESTDIR)$(PCFDIR)
+ 	mkfontscale $(DESTDIR)$(PCFDIR)
+ 	mkfontdir $(DESTDIR)$(PCFDIR)
+ 
+ install-util :
+-	install -m0755 -d $(DESTDIR)$(BINDIR)
+-	install -m0755 -d $(DESTDIR)$(MANDIR)/man1
+-	install -m0755 -p bin/bdfmangle $(DESTDIR)$(BINDIR)
+-	install -m0644 -p man/man1/bdfmangle.1 $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_PROGRAM) bin/bdfmangle $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN) man/man1/bdfmangle.1 $(DESTDIR)$(MANDIR)/man1
+ 
+ clean :
+ 	-rm genbdf/t0-*-???.bdf genpcf/t0-*-???.pcf.gz
