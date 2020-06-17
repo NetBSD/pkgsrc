@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/04/12 11:01:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2020/06/17 09:54:18 bsiegert Exp $
 
 DISTNAME=	webhooks-3.12.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-playground/}
 GITHUB_PROJECT=	${PKGBASE:S/^go-//}
