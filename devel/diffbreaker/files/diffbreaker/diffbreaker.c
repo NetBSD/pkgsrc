@@ -1,4 +1,4 @@
-/* $NetBSD: diffbreaker.c,v 1.1 2020/05/24 16:44:20 nat Exp $ */
+/* $NetBSD: diffbreaker.c,v 1.2 2020/06/17 10:52:03 nat Exp $ */
 
 /*-
  * Copyright (c) 2018, 2019 Nathanial Sloss <nathanialsloss@yahoo.com.au>
@@ -138,6 +138,7 @@ mark_dirty(void)
 			display = true;
 			writesect = true;
 			writetome = true;
+			/* fallthrough */
 		default:
 			if (j != i)
 				strcpy(ORIGBUF(j), ORIGBUF(i));
@@ -205,7 +206,8 @@ next:
 		if (action[i - l] == 2)
 			break;
 	}
-	l--;
+	if (l > 0)
+		l--;
 	if (tmpcontext)
 		j = update_context(tmpcontext, j, i - l);
 
@@ -410,7 +412,6 @@ read_data_to_buffer(char *myFile)
 		}
 	}
 	l = n--;
-	cpl--;
 
 	size_t totalalloc = (size_t)(l * cpl);
 	if (totalalloc <= 0 || l <= 0)
@@ -435,6 +436,8 @@ read_data_to_buffer(char *myFile)
 	}
 	memset(newaction, 0, (size_t)l * sizeof(*newaction));
 	memset(action, 0, (size_t)l * sizeof(*action));
+	memset(buffer, 0, (size_t)totalalloc * sizeof(*buffer));
+	memset(newbuffer, 0, (size_t)totalalloc * sizeof(*newbuffer));
 
 	l = 0;
 	j = n = 0;
