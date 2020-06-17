@@ -1,4 +1,4 @@
-/* $NetBSD: diffbreaker.c,v 1.3 2020/06/17 11:45:08 nat Exp $ */
+/* $NetBSD: diffbreaker.c,v 1.4 2020/06/17 20:40:28 nat Exp $ */
 
 /*-
  * Copyright (c) 2018, 2019 Nathanial Sloss <nathanialsloss@yahoo.com.au>
@@ -411,6 +411,7 @@ read_data_to_buffer(char *myFile)
 			}
 		}
 	}
+	cpl++;
 	l = n--;
 
 	size_t totalalloc = (size_t)(l * cpl);
