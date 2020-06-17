@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2020/04/12 11:01:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2020/06/17 09:54:03 bsiegert Exp $
 
 DISTNAME=	blackfriday-1.5.1
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 MASTER_SITES=	${MASTER_SITE_GITHUB:=russross/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
