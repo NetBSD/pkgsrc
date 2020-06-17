@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/06/14 10:21:10 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/17 17:06:55 nia Exp $
 
 DISTNAME=	libtelnet-0.23
 CATEGORIES=	net
@@ -13,6 +13,8 @@ LICENSE=	mit
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ENV+=	ac_cv_path_DOXYGEN=no
 
 # __EXTENSIONS__ needed by patch-util_telnet-client.c
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
