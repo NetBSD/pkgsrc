@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2019/05/18 09:42:03 nia Exp $
+# $NetBSD: Makefile.common,v 1.4.6.1 2020/06/17 11:46:56 bsiegert Exp $
 #
 # used by emulators/libretro-bsnes-mercury/Makefile
 # used by emulators/libretro-bsnes-mercury-accuracy/Makefile
@@ -37,10 +37,8 @@ do-install:
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-# Needed in libco/aarch64.c
-.if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "aarch64eb"
-CFLAGS+=	-DHAVE_POSIX_MEMALIGN=1
-.endif
+# libco/aarch64.c and libco/armeabi.c try to use memalign() otherwise,
+CFLAGS.NetBSD+=		-DHAVE_POSIX_MEMALIGN=1
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
