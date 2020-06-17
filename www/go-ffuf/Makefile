@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/14 10:36:50 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/17 09:54:18 bsiegert Exp $
 
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		go-fuff-1.0.2
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ffuf/}
 GITHUB_PROJECT=		ffuf

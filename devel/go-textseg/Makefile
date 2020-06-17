@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/27 15:42:20 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/17 09:54:09 bsiegert Exp $
 
 DISTNAME=	go-textseg-12.0.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apparentlymart/}
+PKGREVISION=	1
 CATEGORIES=	devel
 GITHUB_PROJECT=	go-textseg
 GITHUB_TAG=	v${PKGVERSION_NOREV}

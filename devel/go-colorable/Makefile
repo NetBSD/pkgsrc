@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/04/12 11:01:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2020/06/17 09:54:00 bsiegert Exp $
 
 DISTNAME=	go-colorable-0.0.9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mattn/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
