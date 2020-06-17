@@ -1,4 +1,4 @@
-/* $NetBSD: diffbreaker.c,v 1.4 2020/06/17 20:40:28 nat Exp $ */
+/* $NetBSD: diffbreaker.c,v 1.5 2020/06/17 23:52:05 nat Exp $ */
 
 /*-
  * Copyright (c) 2018, 2019 Nathanial Sloss <nathanialsloss@yahoo.com.au>
@@ -91,6 +91,7 @@ mark_dirty(void)
 	bool writetome = false, display = false;
 	bool pending = false, writesect = false;
 	ssize_t i, j = 0, last = 0, myfile = 0;
+	size_t len = (size_t)cpl;
 
 	j = 0;
 	for (i = 0; i < totalLines; i++) {
@@ -101,7 +102,7 @@ mark_dirty(void)
 			}
 			if (*ORIGBUF(i) == '+') {
 				if (j != i)
-					strcpy(ORIGBUF(j), ORIGBUF(i));
+					strncpy(ORIGBUF(j), ORIGBUF(i), len);
 				*ORIGBUF(j) = ' ';
 				action[j] = 0;
 			}
@@ -114,7 +115,7 @@ mark_dirty(void)
 			writesect = false;
 			action[j] = action[i];
 			if (j != i)
-				strcpy(ORIGBUF(j), ORIGBUF(i));
+				strncpy(ORIGBUF(j), ORIGBUF(i), len);
 			break;
 		case 6: /* --- */
 			if (pending == false && writesect == false)
@@ -126,12 +127,12 @@ mark_dirty(void)
 			writetome = false;
 			writesect = true;
 			if (j != i)
-				strcpy(ORIGBUF(j), ORIGBUF(i));
+				strncpy(ORIGBUF(j), ORIGBUF(i), len);
 			action[j] = action[i];
 			break;
 		case 7: /* +++ */
 			if (j != i)
-				strcpy(ORIGBUF(j), ORIGBUF(i));
+				strncpy(ORIGBUF(j), ORIGBUF(i), len);
 			action[j] = action[i];
 			break;
 		case 1: /* unselected change */
@@ -141,7 +142,7 @@ mark_dirty(void)
 			/* fallthrough */
 		default:
 			if (j != i)
-				strcpy(ORIGBUF(j), ORIGBUF(i));
+				strncpy(ORIGBUF(j), ORIGBUF(i), len);
 			action[j] = action[i];
 			break;
 		}
