@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3662 2020/06/17 18:36:08 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3663 2020/06/17 22:56:16 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5890,3 +5890,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py-mypy to 0.780 [adam 2020-06-17]
 	Updated misc/py-tqdm to 4.46.1 [adam 2020-06-17]
 	Updated x11/qt5ct to 1.0 [pin 2020-06-17]
+	Updated net/powerdns-recursor to 4.3.1 [otis 2020-06-17]
