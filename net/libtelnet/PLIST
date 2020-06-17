@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/14 10:21:10 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/17 17:06:55 nia Exp $
 bin/telnet-chatd
 bin/telnet-client
 bin/telnet-proxy
@@ -8,17 +8,3 @@ lib/pkgconfig/libtelnet.pc
 man/man1/telnet-chatd.1
 man/man1/telnet-client.1
 man/man1/telnet-proxy.1
-man/man3/libtelnet.h.3
-man/man3/telnet_environ_t.3
-man/man3/telnet_event_t.3
-man/man3/telnet_event_t_compress_t.3
-man/man3/telnet_event_t_data_t.3
-man/man3/telnet_event_t_environ_t.3
-man/man3/telnet_event_t_error_t.3
-man/man3/telnet_event_t_iac_t.3
-man/man3/telnet_event_t_mssp_t.3
-man/man3/telnet_event_t_negotiate_t.3
-man/man3/telnet_event_t_subnegotiate_t.3
-man/man3/telnet_event_t_ttype_t.3
-man/man3/telnet_event_t_zmp_t.3
-man/man3/telnet_telopt_t.3
