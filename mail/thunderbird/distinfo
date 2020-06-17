@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.229 2020/06/15 15:44:22 nia Exp $
+$NetBSD: distinfo,v 1.230 2020/06/17 18:00:09 nia Exp $
 
 SHA1 (thunderbird-68.9.0.source.tar.xz) = aeee38c1a36b07f8e85af1c7371ebb539083ab4a
 RMD160 (thunderbird-68.9.0.source.tar.xz) = f3467224d1225ec98085d38a4d38b798e3cebd0b
@@ -17,7 +17,6 @@ SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 879bb8ae14b
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 936ae039b758c5eaf48dd4661c896d186b340207
 SHA1 (patch-gfx_skia_skia_src_core_SkCpu.cpp) = c30cb2ed98d4486fcc23b3a9b464df088a30134a
 SHA1 (patch-gfx_thebes_gfxPlatform.cpp) = fcbe2f980557ff4eff8fcb6b4039a5c0eb956fa6
-SHA1 (patch-ipc_chromium_src_base_lock__impl__posix.cc) = 80df98ebde2365cdea7b98e72e474f594934718e
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 0475843fa07f38a3f6255cfb998e64863fd8b9c1
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = aa71eee667e920b1c2364b90956a7332906c5d74
 SHA1 (patch-ipc_chromium_src_chrome_common_ipc__channel__posix.cc) = 2c03850559c733c37a749fdb86a3e4517878d56c
@@ -39,5 +38,4 @@ SHA1 (patch-toolkit_moz.configure) = 994c8ff526984482b0e5fa26176ed6c20380a97d
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 00241c3e79d833a70753063186093d48956546b2
 SHA1 (patch-toolkit_xre_glxtest.cpp) = 8fd6f814c27067f454276422be93d919e58cb464
 SHA1 (patch-xpcom_base_nscore.h) = 45eaac305357707c25d9a6f2e9aa6eee7535fe32
-SHA1 (patch-xpcom_build_BinaryPath.h) = 5ed4bcca701a9822fa20936fe1486ca2d86b4ab7
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = c9010e14226c1f81990a999e361e5e842880ebf6
