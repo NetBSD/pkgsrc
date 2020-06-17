@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3655 2020/06/17 04:55:46 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3656 2020/06/17 06:48:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5881,3 +5881,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/intel-microcode-netbsd to 20200616 [msaitoh 2020-06-17]
 	Updated www/py-asgiref to 3.2.9 [adam 2020-06-17]
 	Updated databases/py-pypika to 0.37.8 [adam 2020-06-17]
+	Updated net/py-responses to 0.10.15 [adam 2020-06-17]
+	Updated devel/py-more-itertools to 8.4.0 [adam 2020-06-17]
