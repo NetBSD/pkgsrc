@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2020/06/15 10:04:03 nia Exp $
+$NetBSD: distinfo,v 1.18 2020/06/17 17:59:25 nia Exp $
 
 SHA1 (firefox-68.9.0esr.source.tar.xz) = ee6406ec1280afc24d4a90c392ff09ff5060686e
 RMD160 (firefox-68.9.0esr.source.tar.xz) = 6bb287d394768b137d46f4abac9111ba662b9942
@@ -15,7 +15,6 @@ SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 2f73c76c488
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 2c909a10a341e600392417240ad0c556f495d6ba
 SHA1 (patch-gfx_skia_skia_src_core_SkCpu.cpp) = 36218819254f3681b9c717d652ea78c9f20d49ad
 SHA1 (patch-gfx_thebes_gfxPlatform.cpp) = e4a25e4a96055b1c42ec018b02d1828257a571de
-SHA1 (patch-ipc_chromium_src_base_lock__impl__posix.cc) = d84d9b4d416e049423120dcbf9199644ce1c93ab
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 4a6606da590cfb8d855bde58b9c6f90e98d0870c
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1d8ffb8039e48798777f11658
 SHA1 (patch-ipc_chromium_src_chrome_common_ipc__channel__posix.cc) = d634805bf3b02475081cb2f263e91e3f4c481a29
@@ -37,5 +36,4 @@ SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02e6e2357c7d2bc
 SHA1 (patch-toolkit_xre_glxtest.cpp) = 04942938f45f326c7d5c4da3bf8cc2d09b977c69
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
-SHA1 (patch-xpcom_build_BinaryPath.h) = 92461769d2fee8f015b91a5326247f271afeedea
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 6956c90d4c74c71e7e9a5882e4840ba2673160fa
