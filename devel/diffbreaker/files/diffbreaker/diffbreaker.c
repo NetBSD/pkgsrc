@@ -1,4 +1,4 @@
-/* $NetBSD: diffbreaker.c,v 1.2 2020/06/17 10:52:03 nat Exp $ */
+/* $NetBSD: diffbreaker.c,v 1.3 2020/06/17 11:45:08 nat Exp $ */
 
 /*-
  * Copyright (c) 2018, 2019 Nathanial Sloss <nathanialsloss@yahoo.com.au>
@@ -439,20 +439,12 @@ read_data_to_buffer(char *myFile)
 	memset(buffer, 0, (size_t)totalalloc * sizeof(*buffer));
 	memset(newbuffer, 0, (size_t)totalalloc * sizeof(*newbuffer));
 
-	l = 0;
 	j = n = 0;
 	lseek(fd, 0, SEEK_SET);
 	while ((nr = read(fd, line, sizeof(line))) > 0) {
 		for (i = 0; i < nr; i++) {
 			data = line[i];
-			l++;
 			*(ORIGBUF(j) + n++) = data;
-			if (l == sizeof(line)) {
-				l = 0;
-				n = 0;
-				j++;
-				continue;
-			}
 			if (data == '\n') {
 				myaction = 0;
 				if (*ORIGBUF(j) == '-' && *(ORIGBUF(j) + 1) ==
@@ -473,8 +465,11 @@ read_data_to_buffer(char *myFile)
 				action[j] = myaction;
 				if (action[j] != 4)
 					j++;
+				else {
+					memset(ORIGBUF(j), 0, (size_t)cpl);
+					action[j] = 0;
+				}
 				n = 0;
-				l = 0;
 			}
 		}
 	}
