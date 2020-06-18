@@ -1,4 +1,4 @@
-/* $NetBSD: diffbreaker.c,v 1.6 2020/06/18 00:00:25 nat Exp $ */
+/* $NetBSD: diffbreaker.c,v 1.7 2020/06/18 13:38:49 nat Exp $ */
 
 /*-
  * Copyright (c) 2018, 2019 Nathanial Sloss <nathanialsloss@yahoo.com.au>
@@ -101,9 +101,8 @@ mark_dirty(void)
 				continue;
 			}
 			if (*ORIGBUF(i) == '+') {
-				if (j != i)
-					strncpy(ORIGBUF(j), ORIGBUF(i), len);
-				*ORIGBUF(j) = ' ';
+				strncpy(NEWBUF(j), ORIGBUF(i), len);
+				*NEWBUF(j) = ' ';
 				action[j] = 0;
 			}
 			break;
@@ -114,8 +113,7 @@ mark_dirty(void)
 			pending = false;
 			writesect = false;
 			action[j] = action[i];
-			if (j != i)
-				strncpy(ORIGBUF(j), ORIGBUF(i), len);
+			strncpy(NEWBUF(j), ORIGBUF(i), len);
 			break;
 		case 6: /* --- */
 			if (pending == false && writesect == false)
@@ -126,13 +124,11 @@ mark_dirty(void)
 			pending = true;
 			writetome = false;
 			writesect = true;
-			if (j != i)
-				strncpy(ORIGBUF(j), ORIGBUF(i), len);
+			strncpy(NEWBUF(j), ORIGBUF(i), len);
 			action[j] = action[i];
 			break;
 		case 7: /* +++ */
-			if (j != i)
-				strncpy(ORIGBUF(j), ORIGBUF(i), len);
+			strncpy(NEWBUF(j), ORIGBUF(i), len);
 			action[j] = action[i];
 			break;
 		case 1: /* unselected change */
@@ -141,11 +137,11 @@ mark_dirty(void)
 			writetome = true;
 			/* fallthrough */
 		default:
-			if (j != i)
-				strncpy(ORIGBUF(j), ORIGBUF(i), len);
+			strncpy(NEWBUF(j), ORIGBUF(i), len);
 			action[j] = action[i];
 			break;
 		}
+		strncpy(ORIGBUF(j), NEWBUF(j), len);
 		j++;
 	}
 	totalLines = display ? j-- : 0;
