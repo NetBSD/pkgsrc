@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/27 03:42:13 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/18 13:46:58 plunky Exp $
 ${PYSITELIB}/fsimage.so
 ${PYSITELIB}/grub/ExtLinuxConf.py
 ${PYSITELIB}/grub/ExtLinuxConf.pyc
@@ -298,6 +298,7 @@ man/man1/xenstore.1
 man/man1/xentop.1
 man/man1/xentrace_format.1
 man/man1/xl.1
+man/man5/xl-disk-configuration.5
 man/man5/xl.cfg.5
 man/man5/xl.conf.5
 man/man5/xlcpupool.cfg.5
