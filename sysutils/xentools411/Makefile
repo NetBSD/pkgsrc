@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/05/19 19:58:58 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/06/18 13:46:58 plunky Exp $
 #
 VERSION=	4.11.3
 VERSION_IPXE=	356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d
@@ -186,6 +186,7 @@ post-install:
 	${INSTALL_MAN} ${WRKDIR}/xl.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKDIR}/xl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKDIR}/xlcpupool.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKDIR}/xl-disk-configuration.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 .for f in \
     gamd-ucode-container.txt       gqemu-backends.txt \
     gblock-scripts.txt             gqemu-deprivilege.txt \
