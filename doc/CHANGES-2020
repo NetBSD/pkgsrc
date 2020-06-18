@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3663 2020/06/17 22:56:16 otis Exp $
+$NetBSD: CHANGES-2020,v 1.3664 2020/06/18 12:26:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5891,3 +5891,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-tqdm to 4.46.1 [adam 2020-06-17]
 	Updated x11/qt5ct to 1.0 [pin 2020-06-17]
 	Updated net/powerdns-recursor to 4.3.1 [otis 2020-06-17]
+	Updated graphics/py-matplotlib to 3.2.2 [adam 2020-06-18]
+	Updated textproc/py-markovify to 0.8.2 [adam 2020-06-18]
