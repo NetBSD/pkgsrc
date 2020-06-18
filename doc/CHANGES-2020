@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3665 2020/06/18 12:57:06 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3666 2020/06/18 12:58:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5894,3 +5894,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/py-matplotlib to 3.2.2 [adam 2020-06-18]
 	Updated textproc/py-markovify to 0.8.2 [adam 2020-06-18]
 	Updated security/tor-browser to 9.5nb2 [wiz 2020-06-18]
+	Updated audio/hydrogen to 1.0.0.rc1 [nia 2020-06-18]
