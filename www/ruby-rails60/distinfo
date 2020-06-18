@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/05/19 17:17:44 taca Exp $
+$NetBSD: distinfo,v 1.4 2020/06/18 13:38:47 taca Exp $
 
-SHA1 (rails-6.0.3.1.gem) = faebc6a2d71d81b8fdababff057b91bea2bba47e
-RMD160 (rails-6.0.3.1.gem) = 889a79e66bb73e50c206545c630cc0f6f050f526
-SHA512 (rails-6.0.3.1.gem) = f8d40fb0225e689b2c3ecf948d20e9c44db3d399a2bcd779397a3fcfa862c7735399a0d96fb5c19bf5654a56116941017abe3c5aacff99e403a785d9c44309e8
-Size (rails-6.0.3.1.gem) = 6656 bytes
+SHA1 (rails-6.0.3.2.gem) = 7a7235a0d5233338896ca26cbe368c93812231e5
+RMD160 (rails-6.0.3.2.gem) = 686714a42b2edb7639ef2a1c171f8dbe36fb14a9
+SHA512 (rails-6.0.3.2.gem) = 288f48bd20f4a5ed485a127ddb9e307a69d3ee00198a168ed1d2581b0e200e0fa14b02811b4c72cc20eedf616b10cd46b38dbbed5fcf44125bda25e1aae41b44
+Size (rails-6.0.3.2.gem) = 6656 bytes
