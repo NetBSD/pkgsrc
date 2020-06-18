@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2018/08/08 14:10:16 prlw1 Exp $
+$NetBSD: distinfo,v 1.14 2020/06/18 19:40:32 hauke Exp $
 
-SHA1 (lldpd-1.0.1.tar.gz) = ffae3bd667f7edae300b0c63a5f0103eb8c1118f
-RMD160 (lldpd-1.0.1.tar.gz) = df4ad2ff8badda0cfef602090be5d2e1a80453b4
-SHA512 (lldpd-1.0.1.tar.gz) = 61b2a7a3a78276c613c6d0b34eb625e69e5c8a206b6658a167d6a09ac6d0e1c943e46c0ff6fc3538a791d9947f193185b65848da581b3d6ecb9bc0befadde8dd
-Size (lldpd-1.0.1.tar.gz) = 1590903 bytes
+SHA1 (lldpd-1.0.5.tar.gz) = ee911186120f482f5e9bbd80023bcf5b0a628161
+RMD160 (lldpd-1.0.5.tar.gz) = 2e8a2982dbdd6e73c865d6cad3a0c821e2538369
+SHA512 (lldpd-1.0.5.tar.gz) = ce6075b6e2f847c4854c117ffc81d6e9f852e857d2bf88151ea7b3d40fbebcf980f65d4a21f17332de7f27fc696ce3ada3c063b8fa7677d7b9eee3e4634e898e
+Size (lldpd-1.0.5.tar.gz) = 1624872 bytes
