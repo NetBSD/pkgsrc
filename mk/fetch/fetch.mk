@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.73 2020/04/25 11:36:20 js Exp $
+# $NetBSD: fetch.mk,v 1.74 2020/06/18 17:05:55 wiz Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -73,7 +73,7 @@ SITES.${fetchfile:T:S/=/--/}?= ${PATCH_SITES}
 ###
 _FETCH_TARGETS+=	${_PKG_INSTALL_DEPENDS:Dpkg_install-depends}
 _FETCH_TARGETS+=	bootstrap-depends
-_FETCH_TARGETS+=	check-vulnerable
+#_FETCH_TARGETS+=	check-vulnerable
 _FETCH_TARGETS+=	pre-fetch
 _FETCH_TARGETS+=	do-fetch
 _FETCH_TARGETS+=	post-fetch
