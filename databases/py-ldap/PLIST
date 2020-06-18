@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/10/23 08:58:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/06/18 16:58:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -72,6 +72,9 @@ ${PYSITELIB}/ldap/extop/__init__.pyo
 ${PYSITELIB}/ldap/extop/dds.py
 ${PYSITELIB}/ldap/extop/dds.pyc
 ${PYSITELIB}/ldap/extop/dds.pyo
+${PYSITELIB}/ldap/extop/passwd.py
+${PYSITELIB}/ldap/extop/passwd.pyc
+${PYSITELIB}/ldap/extop/passwd.pyo
 ${PYSITELIB}/ldap/filter.py
 ${PYSITELIB}/ldap/filter.pyc
 ${PYSITELIB}/ldap/filter.pyo
