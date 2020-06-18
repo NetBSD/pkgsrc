@@ -1,4 +1,4 @@
-/* $NetBSD: diffbreaker.c,v 1.5 2020/06/17 23:52:05 nat Exp $ */
+/* $NetBSD: diffbreaker.c,v 1.6 2020/06/18 00:00:25 nat Exp $ */
 
 /*-
  * Copyright (c) 2018, 2019 Nathanial Sloss <nathanialsloss@yahoo.com.au>
@@ -43,7 +43,7 @@ ssize_t finalize_context(ssize_t context, ssize_t current, ssize_t secthead,
 ssize_t update_context(ssize_t lines, ssize_t current, ssize_t last);
 ssize_t get_context(ssize_t current, ssize_t last, ssize_t num);
 void print_buffer(ssize_t myLine, ssize_t dispLines);
-void parse_buffer(char *outfile, bool incremental, uint32_t filesuffix);
+void parse_buffer(char *outfile, bool incremental, uint32_t *filesuffix);
 void read_data_to_buffer(char *myFile);
 void free_buffers_actions(void);
 void setup_screen(void);
@@ -257,7 +257,7 @@ finalize_context(ssize_t context, ssize_t current, ssize_t secthead,
 }
 
 void
-parse_buffer(char *outfile, bool incremental, uint32_t filesuffix)
+parse_buffer(char *outfile, bool incremental, uint32_t *filesuffix)
 {
 	ssize_t origoffs = 0, newoffs = 0, first = 0, last = 0, part = 0;
 	ssize_t final = 0, context = 0, fixoffs = 0, i, j, adj;
@@ -354,9 +354,12 @@ parse_buffer(char *outfile, bool incremental, uint32_t filesuffix)
 	char tmppath [512];
 	if (incremental)
 		snprintf(tmppath, sizeof(tmppath), "%s.%d.diff", outfile,
-		    filesuffix);
+		    *filesuffix);
 	else
 		snprintf(tmppath, sizeof(tmppath), "%s", outfile);
+
+	if (j == 0)
+		return;
 
 	if (!strcmp(tmppath, "-"))
 		myfile = stderr;
@@ -369,6 +372,7 @@ parse_buffer(char *outfile, bool incremental, uint32_t filesuffix)
 		fprintf(myfile, "%s", NEWBUF(i));
 	fclose(myfile);
 
+	*filesuffix += 1;
 	return;
 }
 
@@ -596,7 +600,7 @@ main(int argc, char *argv[])
 {
 	char *infile = NULL, *outfile = NULL;
 	bool incremental = false;
-	uint32_t filesuffix = 0;
+	uint32_t filesuffix = 1;
 	int ch;
 	char myKey;
 
@@ -665,7 +669,7 @@ main(int argc, char *argv[])
 		}
 		if (myKey == 'w') {
 			currentLine = 0;
-			parse_buffer(outfile, incremental, ++filesuffix);
+			parse_buffer(outfile, incremental, &filesuffix);
 			mark_dirty();
 			if (totalLines <= 0)
 				break;
