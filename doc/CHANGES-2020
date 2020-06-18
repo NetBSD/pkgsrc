@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3682 2020/06/18 20:50:51 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3683 2020/06/18 21:45:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5924,3 +5924,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/p5-Sereal-Encoder to 4.014 [fcambus 2020-06-18]
 	Updated converters/p5-Sereal to 4.014 [fcambus 2020-06-18]
 	Updated mail/mpop to 1.4.10 [leot 2020-06-18]
+	Updated devel/py-faker to 4.1.1 [adam 2020-06-18]
+	Updated textproc/py-iniparse to 0.5 [adam 2020-06-18]
