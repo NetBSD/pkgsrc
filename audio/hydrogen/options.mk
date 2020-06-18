@@ -1,16 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2019/10/26 21:24:34 nia Exp $
+# $NetBSD: options.mk,v 1.2 2020/06/18 12:57:48 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hydrogen
 
 PKG_SUPPORTED_OPTIONS+=		alsa jack portaudio pulseaudio
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa
-
-.include "../../mk/bsd.fast.prefs.mk"
-.include "../../mk/oss.buildlink3.mk"
-
-.if ${OPSYS} != "Linux" && ${OSS_TYPE} == "none"
-PKG_SUGGESTED_OPTIONS+=		portaudio
-.endif
+PKG_SUGGESTED_OPTIONS.Linux=	alsa
+PKG_SUGGESTED_OPTIONS.*=	portaudio
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,9 +17,11 @@ CMAKE_ARGS+=	-DWANT_ALSA=OFF
 
 .if !empty(PKG_OPTIONS:Mjack)
 CMAKE_ARGS+=	-DWANT_JACK=ON
+CMAKE_ARGS+=	-DWANT_JACKSESSION=ON
 .include "../../audio/jack/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWANT_JACK=OFF
+CMAKE_ARGS+=	-DWANT_JACKSESSION=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
