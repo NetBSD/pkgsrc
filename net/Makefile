@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1339 2020/06/05 12:38:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.1340 2020/06/18 18:30:41 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -174,6 +174,7 @@ SUBDIR+=	gcloud-golang-metadata
 SUBDIR+=	get-flash-videos
 SUBDIR+=	get_iplayer
 SUBDIR+=	gethost
+SUBDIR+=	gh
 SUBDIR+=	gift
 SUBDIR+=	gift-fasttrack
 SUBDIR+=	gift-gnutella
