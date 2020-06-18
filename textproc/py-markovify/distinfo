@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/05/13 14:57:12 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/06/18 12:26:24 adam Exp $
 
-SHA1 (markovify-0.8.0.tar.gz) = cfb58a307082599c45c963221a1dd367e51021e6
-RMD160 (markovify-0.8.0.tar.gz) = 7806053c16929cb26d27c715d8d4524273d1576e
-SHA512 (markovify-0.8.0.tar.gz) = 65b7de9df0c108da394452a6375f35cfa64c1fb6b7618b18d077723c86c5072a7320a5d11036ac6339ab6fb035aec8260b1e70010f8ee145747bee3245bb1cf8
-Size (markovify-0.8.0.tar.gz) = 18381 bytes
+SHA1 (markovify-0.8.2.tar.gz) = ed1f3f9cc7cf3e5058e9c0f32a36161285b4edc9
+RMD160 (markovify-0.8.2.tar.gz) = d5259e4c9899afe7d6cb8d92fa0b54620042c19c
+SHA512 (markovify-0.8.2.tar.gz) = b424db9392edcee06df21238d737871be963fad733823934b7eef0aa47c35a8d29939dfc9c111d591ab0b7fd0999d7f9ac5a6d78d8272b870e3f50e0bb80c6fb
+Size (markovify-0.8.2.tar.gz) = 27461 bytes
