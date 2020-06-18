@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3680 2020/06/18 19:55:39 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3681 2020/06/18 19:56:43 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5922,3 +5922,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/lldpd to 1.0.5 [hauke 2020-06-18]
 	Updated converters/p5-Sereal-Decoder to 4.014 [fcambus 2020-06-18]
 	Updated converters/p5-Sereal-Encoder to 4.014 [fcambus 2020-06-18]
+	Updated converters/p5-Sereal to 4.014 [fcambus 2020-06-18]
