@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/02/03 11:31:55 fcambus Exp $
+# $NetBSD: Makefile,v 1.21 2020/06/18 19:54:33 fcambus Exp $
 
-DISTNAME=	Sereal-Decoder-4.009
+DISTNAME=	Sereal-Decoder-4.014
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5 converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../CPAN/authors/id/Y/YV/YVES/}
