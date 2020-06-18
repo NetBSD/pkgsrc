@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3669 2020/06/18 14:09:03 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3670 2020/06/18 14:17:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5910,3 +5910,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rails60 to 6.0.3.2 [taca 2020-06-18]
 	Updated net/bind911 to 9.11.20 [taca 2020-06-18]
 	Updated www/drupal7 to 7.72 [taca 2020-06-18]
+	Updated devel/nss to 3.53.1 [ryoon 2020-06-18]
