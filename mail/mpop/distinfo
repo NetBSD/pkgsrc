@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/04/20 04:57:23 wiz Exp $
+$NetBSD: distinfo,v 1.12 2020/06/18 20:50:26 leot Exp $
 
-SHA1 (mpop-1.2.6.tar.xz) = f74fe3552823e8251f050b371671d8248528bf1d
-RMD160 (mpop-1.2.6.tar.xz) = f194d30960895260d48e7755d2c599472a2cde69
-SHA512 (mpop-1.2.6.tar.xz) = ba4dedebbe4b7b9f84a339e7c605cc9082e95d8cf0c5331dbc74b83ef64f7de47da996e61dbbaa33dd093650a3021eb75a7f188a9abc985c741108d060b6bd7b
-Size (mpop-1.2.6.tar.xz) = 269912 bytes
+SHA1 (mpop-1.4.10.tar.xz) = 5f467f3a206b81c443b0a6cb3e660306245d442e
+RMD160 (mpop-1.4.10.tar.xz) = 0df79d419387686dcc65b49aec621d06ad3c5026
+SHA512 (mpop-1.4.10.tar.xz) = 214443c8caec4b41dd3e1e93d5bd302a00b6622960070e6d3dbc7c2449ab4f216efbd786f4dc9f9b653868061c072c1435d4c7471ea219097fbcf1fc42ecb999
+Size (mpop-1.4.10.tar.xz) = 331732 bytes
