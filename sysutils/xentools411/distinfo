@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2020/05/03 08:54:28 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2020/06/18 13:48:28 plunky Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -38,7 +38,7 @@ SHA1 (patch-tools_firmware_hvmloader_Makefile) = 02cac5e9314c4c71105f15a3c1c303c
 SHA1 (patch-tools_hotplug_NetBSD_Makefile) = a880a38f82e97a5d7846345307d354c8055d23a9
 SHA1 (patch-tools_hotplug_NetBSD_block) = 535ecef7cc0431a14515387e47aadea5dec79569
 SHA1 (patch-tools_hotplug_NetBSD_vif-bridge) = 6d5288c9c47fe81b388ea73f9a71ca3975df36c2
-SHA1 (patch-tools_hotplug_NetBSD_vif-ip) = cb8fd1150f6ac24fa853444618437f7d984b4282
+SHA1 (patch-tools_hotplug_NetBSD_vif-ip) = 40588fd0d637e55e6108afc441ac2e9c67597edc
 SHA1 (patch-tools_hotplug_common_Makefile) = 590186dfb31713e8d9ee675186f826bcbcba3c15
 SHA1 (patch-tools_include_xen-sys_NetBSD_gntdev.h) = ce4f7160e92d23afa029c9548cead180fe980ff4
 SHA1 (patch-tools_libs_call_netbsd.c) = c5e166212b0069220d9155636b41028f0f7f9e9e
