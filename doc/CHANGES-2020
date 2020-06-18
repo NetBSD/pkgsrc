@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3673 2020/06/18 16:27:06 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3674 2020/06/18 16:55:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5914,3 +5914,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/vlc to 3.0.11 [ryoon 2020-06-18]
 	Updated www/ruby-loofah to 2.6.0 [taca 2020-06-18]
 	Updated net/ruby-net-ping to 2.0.8 [taca 2020-06-18]
+	Updated net/pear-Net_SMTP to 1.9.1 [taca 2020-06-18]
