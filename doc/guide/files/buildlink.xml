@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.41 2017/06/29 14:22:49 leot Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.42 2020/06/18 20:30:12 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -232,11 +232,11 @@ BUILDLINK_TREE+=        -tiff
       <itemizedlist>
 	<listitem>
 	  <para><varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
-	  is the actual dependency recorded in the installed
+	  is the dependency version recorded in the installed
 	  package; this should always be set using
 	  <command>+=</command> to ensure that
 	  we're appending to any pre-existing list of values.  This
-	  variable should be set to the first version of the
+	  variable should be set to the last version of the
 	  package that had an backwards-incompatible API change.
 	  </para>
 	</listitem>
@@ -379,43 +379,57 @@ BUILDLINK_TREE+=        -tiff
       <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
       in <filename>buildlink3.mk</filename> files</title>
 
-      <para>These two variables differ in that one describes source
+      <para>Both variables set lower bounds for a version of this package.
+      The two variables differ in that one describes source
       compatibility (API) and the other binary compatibility (ABI).
       The difference is that a change in the API breaks compilation of
       programs while changes in the ABI stop compiled programs from
       running.</para>
 
-      <para>Changes to the
+      <para>The
       <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
-      variable in a <filename>buildlink3.mk</filename> file happen
-      very rarely. One possible reason is that all packages depending
-      on this already need a newer version. In case it is bumped see
-      the description below.</para>
+      variable in a <filename>buildlink3.mk</filename> should be
+      changed very rarely.  (One possible scenario: If all packages
+      using this package need a higher version than defined in the
+      <filename>buildlink3.mk</filename>,
+      <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
+      could be updated to that higher version.)</para>
 
-      <para>The most common example of an ABI change is that the major
-      version of a shared library is increased. In this case,
+      <para>On the other hand, changes to
       <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
-      should be adjusted to require at least the new package version.
-      Then the packages that depend on this package need their
-      <varname>PKGREVISION</varname>s increased and, if they have
+      are more common.  The variable will need to be updated every
+      time the major version of one of its shared libraries is changed,
+      or any other change where a binary built against the previous
+      version of the package will not run against the new version any
+      longer.</para>
+
+      <para>In such a case, the package's
+      <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
+      must be increased to require the new package version.  Then the
+      <varname>PKGREVISION</varname> of all packages that depend on
+      this package need to be increased, and if they have
       <filename>buildlink3.mk</filename> files, their
       <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
-      adjusted, too. This is needed so pkgsrc will require the correct
-      package dependency and not settle for an older one when building
-      the source.</para>
+      must be increased to the new version as well. This is required
+      so that a package will pull in the versions of the packages that
+      use the new ABI and that the packages'
+      <varname>PKGREVISION</varname>s uniquely identify the packages
+      built against the new ABI. The <filename
+      role="pkg">pkgtools/revbump</filename> package can help with
+      these updates.</para>
 
-      <para>See <xref linkend="dependencies"/> for
-      more information about dependencies on other packages,
-      including the <varname>BUILDLINK_ABI_DEPENDS</varname> and
-      <varname>ABI_DEPENDS</varname> definitions.</para>
+      <para>See <xref linkend="dependencies"/> for more information
+      about dependencies on other packages, including the
+      <varname>BUILDLINK_API_DEPENDS</varname> definitions.</para>
 
       <para>Please take careful consideration before adjusting
       <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
       or
       <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
-      as we don't want to cause unneeded package deletions and
-      rebuilds.  In many cases, new versions of packages work just
-      fine with older dependencies.</para>
+      in a <filename>buildlink3.mk</filename> file as we don't want to
+      cause unneeded package deletions and rebuilds.  In many cases,
+      new versions of packages work just fine with older
+      dependencies.</para>
 
       <para>Also it is not needed to set
       <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
