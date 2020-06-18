@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/06/03 09:25:38 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/06/18 04:58:24 gutteridge Exp $
 
 BUILDLINK_TREE+=	nodejs
 
@@ -23,6 +23,8 @@ BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.23
 # Requires http_parser_set_max_header_size
 BUILDLINK_API_DEPENDS.http-parser+=	http-parser>=2.9.0
 .include "../../www/http-parser/buildlink3.mk"
+# Requires nghttp2_option_set_max_settings
+BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.41.0
 .include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 

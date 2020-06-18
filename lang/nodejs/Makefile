@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2020/06/03 08:41:24 adam Exp $
+# $NetBSD: Makefile,v 1.185 2020/06/18 04:58:24 gutteridge Exp $
 
 DISTNAME=	node-v14.4.0
 EXTRACT_SUFX=	.tar.xz
@@ -27,5 +27,7 @@ CXXFLAGS+=	-mstackrealign
 
 .include "../../lang/nodejs/Makefile.common"
 .include "../../textproc/icu/buildlink3.mk"
+# Requires nghttp2_option_set_max_settings
+BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.41.0
 .include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
