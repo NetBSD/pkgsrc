@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3677 2020/06/18 18:45:49 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3678 2020/06/18 19:41:09 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5919,3 +5919,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-ldapdomaindump to 0.9.3 [adam 2020-06-18]
 	Added net/gh version 0.10.0 [bsiegert 2020-06-18]
 	Updated wm/spectrwm to 3.4.0 [pin 2020-06-18]
+	Updated net/lldpd to 1.0.5 [hauke 2020-06-18]
