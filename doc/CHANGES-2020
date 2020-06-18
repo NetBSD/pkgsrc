@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3667 2020/06/18 13:39:58 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3668 2020/06/18 14:06:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5908,3 +5908,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-actionpack60 to 6.0.3.2 [taca 2020-06-18]
 	Updated www/ruby-actionview60 to 6.0.3.2 [taca 2020-06-18]
 	Updated www/ruby-rails60 to 6.0.3.2 [taca 2020-06-18]
+	Updated net/bind911 to 9.11.20 [taca 2020-06-18]
