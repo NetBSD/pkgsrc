@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/03 03:49:00 rodent Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2020/06/18 21:45:06 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/iniparse/__init__.py
 ${PYSITELIB}/iniparse/__init__.pyc
 ${PYSITELIB}/iniparse/__init__.pyo
@@ -9,15 +13,12 @@ ${PYSITELIB}/iniparse/compat.pyo
 ${PYSITELIB}/iniparse/config.py
 ${PYSITELIB}/iniparse/config.pyc
 ${PYSITELIB}/iniparse/config.pyo
+${PYSITELIB}/iniparse/configparser.py
+${PYSITELIB}/iniparse/configparser.pyc
+${PYSITELIB}/iniparse/configparser.pyo
 ${PYSITELIB}/iniparse/ini.py
 ${PYSITELIB}/iniparse/ini.pyc
 ${PYSITELIB}/iniparse/ini.pyo
 ${PYSITELIB}/iniparse/utils.py
 ${PYSITELIB}/iniparse/utils.pyc
 ${PYSITELIB}/iniparse/utils.pyo
-share/doc/iniparse-${PKGVERSION}/Changelog
-share/doc/iniparse-${PKGVERSION}/LICENSE
-share/doc/iniparse-${PKGVERSION}/LICENSE-PSF
-share/doc/iniparse-${PKGVERSION}/README
-share/doc/iniparse-${PKGVERSION}/index.html
-share/doc/iniparse-${PKGVERSION}/style.css
