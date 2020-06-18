@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/05/31 15:42:08 rillig Exp $
+# $NetBSD: options.mk,v 1.5 2020/06/18 19:40:32 hauke Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lldpd
 PKG_SUPPORTED_OPTIONS=	json snmp xml
@@ -11,8 +11,10 @@ PKG_SUGGESTED_OPTIONS=	json snmp xml
 
 .if !empty(PKG_OPTIONS:Msnmp)
 .  include "../../net/net-snmp/buildlink3.mk"
-USE_TOOLS+= perl
 .  include "../../lang/perl5/buildlink3.mk"
+#  CCLD     lldpd
+#  ld: cannot find -lperl
+LDFLAGS+=		-L${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
 CONFIGURE_ARGS+=	--with-snmp
 .endif
 
