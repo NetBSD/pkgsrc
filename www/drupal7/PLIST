@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/05/20 16:22:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/06/18 14:08:36 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -161,7 +161,6 @@ share/drupal/misc/timezone.js
 share/drupal/misc/tree-bottom.png
 share/drupal/misc/tree.png
 share/drupal/misc/typo3/drupal-security/PharExtensionInterceptor.php
-share/drupal/misc/typo3/phar-stream-wrapper/.gitignore
 share/drupal/misc/typo3/phar-stream-wrapper/LICENSE
 share/drupal/misc/typo3/phar-stream-wrapper/README.md
 share/drupal/misc/typo3/phar-stream-wrapper/composer.json
@@ -760,6 +759,7 @@ share/drupal/modules/simpletest/tests/psr_4_test/psr_4_test.module
 share/drupal/modules/simpletest/tests/psr_4_test/src/Tests/ExampleTest.php
 share/drupal/modules/simpletest/tests/psr_4_test/src/Tests/Nested/NestedExampleTest.php
 share/drupal/modules/simpletest/tests/registry.test
+share/drupal/modules/simpletest/tests/request_sanitizer.test
 share/drupal/modules/simpletest/tests/requirements1_test.info
 share/drupal/modules/simpletest/tests/requirements1_test.install
 share/drupal/modules/simpletest/tests/requirements1_test.module
