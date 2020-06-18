@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.157 2020/06/05 14:24:17 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.158 2020/06/18 20:30:12 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -440,7 +440,15 @@ DEPENDS+=       ImageMagick>=6.0:../../graphics/ImageMagick
 	have changed.</para>
 
 	<para>If you need to depend on minimum versions of libraries,
-	see the buildlink section of the pkgsrc guide.</para>
+	set
+	<varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
+	to the appropriate pattern before including its
+	<filename>buildlink3.mk</filename> file, e.g.</para>
+
+<programlisting>
+BUILDLINK_API_DEPENDS.jpeg+=    jpeg>=9.0
+.include "../../graphics/jpeg/buildlink3.mk"
+</programlisting>
 
 	<para>For security fixes, please update the package
 	vulnerabilities file. See <xref
