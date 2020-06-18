@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/06/02 08:24:33 adam Exp $
+# $NetBSD: Makefile,v 1.27 2020/06/18 19:40:32 hauke Exp $
 
-DISTNAME=		lldpd-1.0.1
-PKGREVISION=		4
+DISTNAME=		lldpd-1.0.5
+#PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
@@ -9,50 +9,60 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://vincentbernat.github.com/lldpd/
 COMMENT=		802.1ab (LLDP) implementation
 LICENSE=		isc
-# `lldpcli` will be linked to GNU Readline (which is GPL licensed)
-# if available. To avoid this, use `--without-readline` as a configure
-# option.
 
 # interfaces-bsd.c:45:34: error: net/agr/if_agrioctl.h: No such file or directory
-NOT_FOR_PLATFORM=	NetBSD-5*-*
-USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+NOT_FOR_PLATFORM=	NetBSD-5.*-*
+
 USE_TOOLS+=		pkg-config
+
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c
+
 CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
-# Leave pkgsrc to handle security features.
+# Let pkgsrc handle security features.
 CONFIGURE_ARGS+=	--disable-hardening
+
+CONFIGURE_ARGS+=	--with-embedded-libevent=no
+CONFIGURE_ARGS+=	--with-readline
+
 # run/lldpd.socket is created under this directory
 # (the default is ${PRERIX}/var, changed since 0.7.9)
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 BUILD_DEFS+=		VARBASE
 
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=		${EGDIR}/README.conf ${PKG_SYSCONFDIR}/lldpd.d/README.conf
-
-#  CCLD     lldpd
-#  ld: cannot find -lperl
-LDFLAGS+=		-L${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
+PKG_SYSCONFSUBDIR=	lldpd.d
+EGDIR=			share/examples/${PKGBASE}
+CONF_FILES=		${EGDIR}/README.conf ${PKG_SYSCONFDIR}/README.conf
 
 RCD_SCRIPTS=		lldpd
-PKG_GROUPS=		_lldpd
-PKG_USERS=		_lldpd:_lldpd
-PKG_HOME._lldpd=	${VARBASE}/chroot/lldpd
 
-OWN_DIRS=		${VARBASE}/chroot/lldpd
-AUTO_MKDIRS=		yes
+LLDPD_USER?=		_lldpd
+LLDPD_GROUP?=		_lldpd
+LLDPD_HOME=		${VARBASE}/chroot/lldpd
+
+PKG_GROUPS_VARS+=	LLDPD_GROUP
+PKG_USERS_VARS+=	LLDPD_USER
+
+PKG_GROUPS=		${LLDPD_GROUP}
+PKG_USERS=		${LLDPD_USER}:${LLDPD_GROUP}
+PKG_HOME.${LLDPD_USER}=	${LLDPD_HOME}
+
 TEST_TARGET=		check
 
-INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
-INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	sbin include lib ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	${EGDIR} share/doc
+INSTALLATION_DIRS+=	share/bash-completion share/zsh/site-functions
 
 .include "options.mk"
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/lldpd.d/README.conf ${DESTDIR}${EGDIR}
+	${MV} ${DESTDIR}${PREFIX}/etc/lldpd.d/README.conf \
+		${DESTDIR}${PREFIX}/${EGDIR}
+
 
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.5
 .include "../../devel/libevent/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/editline/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
