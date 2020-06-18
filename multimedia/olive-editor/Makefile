@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/06/02 08:24:27 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/18 14:52:12 nia Exp $
 
 DISTNAME=	olive-editor-0.1.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=olive-editor/}
 GITHUB_PROJECT=	olive
@@ -11,10 +11,12 @@ HOMEPAGE=	https://olivevideoeditor.org/
 COMMENT=	Non-linear video editor
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
 WRKSRC=		${WRKDIR}/olive-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
 # C++11
 GCC_REQD+=	4.7
@@ -30,5 +32,4 @@ CMAKE_ARGS+=	-DFFMPEG_LIB_ROOT=${BUILDLINK_DIR}/lib/ffmpeg4
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
