@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/06/18 19:40:32 hauke Exp $
+# $NetBSD: Makefile,v 1.28 2020/06/18 20:01:17 hauke Exp $
 
 DISTNAME=		lldpd-1.0.5
 #PKGREVISION=		1
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c
 
-CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
+CONFIGURE_ARGS+=	--with-privsep-chroot=${LLDPD_HOME}
 # Let pkgsrc handle security features.
 CONFIGURE_ARGS+=	--disable-hardening
 
