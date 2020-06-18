@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/12/30 13:15:37 ng0 Exp $
+# $NetBSD: Makefile,v 1.15 2020/06/18 18:45:25 pin Exp $
 
-DISTNAME=	spectrwm-3.3.0
+DISTNAME=	spectrwm-3.4.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=conformal/}
 GITHUB_TAG=	${GITHUB_PROJECT:tu}_${PKGVERSION_NOREV:S/./_/g}
