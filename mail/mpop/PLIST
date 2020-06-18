@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2013/08/18 10:32:45 shattered Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/06/18 20:50:26 leot Exp $
 bin/mpop
 info/mpop.info
 man/man1/mpop.1
 share/examples/mpop/mpoprc.example
 share/locale/de/LC_MESSAGES/mpop.mo
+share/locale/es/LC_MESSAGES/mpop.mo
+share/locale/pt_BR/LC_MESSAGES/mpop.mo
+share/locale/sr/LC_MESSAGES/mpop.mo
+share/locale/ta/LC_MESSAGES/mpop.mo
+share/locale/uk/LC_MESSAGES/mpop.mo
