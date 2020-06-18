@@ -1,11 +1,12 @@
-$NetBSD: patch-tools_hotplug_NetBSD_vif-ip,v 1.1 2018/07/24 13:40:11 bouyer Exp $
+$NetBSD: patch-tools_hotplug_NetBSD_vif-ip,v 1.2 2020/06/18 13:48:28 plunky Exp $
 
---- tools/hotplug/NetBSD/vif-ip.orig	2015-01-12 17:53:24.000000000 +0100
-+++ tools/hotplug/NetBSD/vif-ip	2015-01-19 13:16:37.000000000 +0100
-@@ -24,6 +24,10 @@
+--- tools/hotplug/NetBSD/vif-ip.orig	2019-11-29 09:15:18.000000000 +0000
++++ tools/hotplug/NetBSD/vif-ip
+@@ -23,7 +23,10 @@ case $xstatus in
+ 	xip=$(xenstore-read "$xpath/ip")
  	xfid=$(xenstore-read "$xpath/frontend-id")
  	xhandle=$(xenstore-read "$xpath/handle")
- 	iface=$(xenstore-read "$xpath/vifname")
+-	iface=$(xenstore-read "$xpath/vifname")
 +	iface=$(xenstore-read "$xpath/vifname") || true
 +	if [ x${iface} = "x" ] ; then
 +		iface=xvif$xfid.$xhandle
