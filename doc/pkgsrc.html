@@ -5088,11 +5088,11 @@ BUILDLINK_TREE+=        -tiff
       added.  Several important variables are set in the section:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p><code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-	  is the actual dependency recorded in the installed
+	  is the dependency version recorded in the installed
 	  package; this should always be set using
 	  <span class="command"><strong>+=</strong></span> to ensure that
 	  we're appending to any pre-existing list of values.  This
-	  variable should be set to the first version of the
+	  variable should be set to the last version of the
 	  package that had an backwards-incompatible API change.
 	  </p></li>
 <li class="listitem"><p><code class="varname">BUILDLINK_PKGSRCDIR.<em class="replaceable"><code>pkg</code></em></code>
@@ -5206,39 +5206,51 @@ BUILDLINK_TREE+=        -tiff
       and
       <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
       in <code class="filename">buildlink3.mk</code> files</h3></div></div></div>
-<p>These two variables differ in that one describes source
+<p>Both variables set lower bounds for a version of this package.
+      The two variables differ in that one describes source
       compatibility (API) and the other binary compatibility (ABI).
       The difference is that a change in the API breaks compilation of
       programs while changes in the ABI stop compiled programs from
       running.</p>
-<p>Changes to the
+<p>The
       <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-      variable in a <code class="filename">buildlink3.mk</code> file happen
-      very rarely. One possible reason is that all packages depending
-      on this already need a newer version. In case it is bumped see
-      the description below.</p>
-<p>The most common example of an ABI change is that the major
-      version of a shared library is increased. In this case,
+      variable in a <code class="filename">buildlink3.mk</code> should be
+      changed very rarely.  (One possible scenario: If all packages
+      using this package need a higher version than defined in the
+      <code class="filename">buildlink3.mk</code>,
+      <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      could be updated to that higher version.)</p>
+<p>On the other hand, changes to
       <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-      should be adjusted to require at least the new package version.
-      Then the packages that depend on this package need their
-      <code class="varname">PKGREVISION</code>s increased and, if they have
+      are more common.  The variable will need to be updated every
+      time the major version of one of its shared libraries is changed,
+      or any other change where a binary built against the previous
+      version of the package will not run against the new version any
+      longer.</p>
+<p>In such a case, the package's
+      <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      must be increased to require the new package version.  Then the
+      <code class="varname">PKGREVISION</code> of all packages that depend on
+      this package need to be increased, and if they have
       <code class="filename">buildlink3.mk</code> files, their
       <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-      adjusted, too. This is needed so pkgsrc will require the correct
-      package dependency and not settle for an older one when building
-      the source.</p>
-<p>See <a class="xref" href="#dependencies" title="21.1.5. Handling dependencies">Section 21.1.5, &#8220;Handling dependencies&#8221;</a> for
-      more information about dependencies on other packages,
-      including the <code class="varname">BUILDLINK_ABI_DEPENDS</code> and
-      <code class="varname">ABI_DEPENDS</code> definitions.</p>
+      must be increased to the new version as well. This is required
+      so that a package will pull in the versions of the packages that
+      use the new ABI and that the packages'
+      <code class="varname">PKGREVISION</code>s uniquely identify the packages
+      built against the new ABI. The <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/revbump/README.html" target="_top"><code class="filename">pkgtools/revbump</code></a> package can help with
+      these updates.</p>
+<p>See <a class="xref" href="#dependencies" title="21.1.5. Handling dependencies">Section 21.1.5, &#8220;Handling dependencies&#8221;</a> for more information
+      about dependencies on other packages, including the
+      <code class="varname">BUILDLINK_API_DEPENDS</code> definitions.</p>
 <p>Please take careful consideration before adjusting
       <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
       or
       <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-      as we don't want to cause unneeded package deletions and
-      rebuilds.  In many cases, new versions of packages work just
-      fine with older dependencies.</p>
+      in a <code class="filename">buildlink3.mk</code> file as we don't want to
+      cause unneeded package deletions and rebuilds.  In many cases,
+      new versions of packages work just fine with older
+      dependencies.</p>
 <p>Also it is not needed to set
       <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
       when it is identical to
@@ -7558,7 +7570,14 @@ DEPENDS+=       ImageMagick&gt;=6.0:../../graphics/ImageMagick
 	if, for example, the command line options of an executable
 	have changed.</p>
 <p>If you need to depend on minimum versions of libraries,
-	see the buildlink section of the pkgsrc guide.</p>
+	set
+	<code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+	to the appropriate pattern before including its
+	<code class="filename">buildlink3.mk</code> file, e.g.</p>
+<pre class="programlisting">
+BUILDLINK_API_DEPENDS.jpeg+=    jpeg&gt;=9.0
+.include "../../graphics/jpeg/buildlink3.mk"
+</pre>
 <p>For security fixes, please update the package
 	vulnerabilities file. See <a class="xref" href="#security-handling" title="21.1.9. Handling packages with security problems">Section 21.1.9, &#8220;Handling packages with security problems&#8221;</a> for more
 	information.</p>
