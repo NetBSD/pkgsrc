@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/06/03 09:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/18 04:58:24 gutteridge Exp $
 
 DISTNAME=	node-v10.21.0
 
 USE_LANGUAGES=	c gnu++14
-
-# Requires http_parser_set_max_header_size
-BUILDLINK_API_DEPENDS.http-parser+=	http-parser>=2.9.0
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,6 +27,10 @@ CXXFLAGS+=	-mstackrealign
 
 .include "../../lang/nodejs/Makefile.common"
 .include "../../textproc/icu/buildlink3.mk"
+# Requires http_parser_set_max_header_size
+BUILDLINK_API_DEPENDS.http-parser+=	http-parser>=2.9.0
 .include "../../www/http-parser/buildlink3.mk"
+# Requires nghttp2_option_set_max_settings
+BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.41.0
 .include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
