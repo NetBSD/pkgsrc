@@ -4276,10 +4276,10 @@ buildlink3.mk files and is used to track the dependency tree.
 The main section is protected from multiple inclusion and controls how the
 dependency on pkg is added. Several important variables are set in the section:
 
-  * BUILDLINK_API_DEPENDS.pkg is the actual dependency recorded in the
+  * BUILDLINK_API_DEPENDS.pkg is the dependency version recorded in the
     installed package; this should always be set using += to ensure that we're
     appending to any pre-existing list of values. This variable should be set
-    to the first version of the package that had an backwards-incompatible API
+    to the last version of the package that had an backwards-incompatible API
     change.
 
   * BUILDLINK_PKGSRCDIR.pkg is the location of the pkg pkgsrc directory.
@@ -4351,31 +4351,40 @@ included:
 16.2.2. Updating BUILDLINK_API_DEPENDS.pkg and BUILDLINK_ABI_DEPENDS.pkg in
 buildlink3.mk files
 
-These two variables differ in that one describes source compatibility (API) and
-the other binary compatibility (ABI). The difference is that a change in the
-API breaks compilation of programs while changes in the ABI stop compiled
-programs from running.
+Both variables set lower bounds for a version of this package. The two
+variables differ in that one describes source compatibility (API) and the other
+binary compatibility (ABI). The difference is that a change in the API breaks
+compilation of programs while changes in the ABI stop compiled programs from
+running.
 
-Changes to the BUILDLINK_API_DEPENDS.pkg variable in a buildlink3.mk file
-happen very rarely. One possible reason is that all packages depending on this
-already need a newer version. In case it is bumped see the description below.
+The BUILDLINK_API_DEPENDS.pkg variable in a buildlink3.mk should be changed
+very rarely. (One possible scenario: If all packages using this package need a
+higher version than defined in the buildlink3.mk, BUILDLINK_API_DEPENDS.pkg
+could be updated to that higher version.)
 
-The most common example of an ABI change is that the major version of a shared
-library is increased. In this case, BUILDLINK_ABI_DEPENDS.pkg should be
-adjusted to require at least the new package version. Then the packages that
-depend on this package need their PKGREVISIONs increased and, if they have
-buildlink3.mk files, their BUILDLINK_ABI_DEPENDS.pkg adjusted, too. This is
-needed so pkgsrc will require the correct package dependency and not settle for
-an older one when building the source.
+On the other hand, changes to BUILDLINK_ABI_DEPENDS.pkg are more common. The
+variable will need to be updated every time the major version of one of its
+shared libraries is changed, or any other change where a binary built against
+the previous version of the package will not run against the new version any
+longer.
+
+In such a case, the package's BUILDLINK_ABI_DEPENDS.pkg must be increased to
+require the new package version. Then the PKGREVISION of all packages that
+depend on this package need to be increased, and if they have buildlink3.mk
+files, their BUILDLINK_ABI_DEPENDS.pkg must be increased to the new version as
+well. This is required so that a package will pull in the versions of the
+packages that use the new ABI and that the packages' PKGREVISIONs uniquely
+identify the packages built against the new ABI. The pkgtools/revbump package
+can help with these updates.
 
 See Section 21.1.5, "Handling dependencies" for more information about
-dependencies on other packages, including the BUILDLINK_ABI_DEPENDS and
-ABI_DEPENDS definitions.
+dependencies on other packages, including the BUILDLINK_API_DEPENDS
+definitions.
 
 Please take careful consideration before adjusting BUILDLINK_API_DEPENDS.pkg or
-BUILDLINK_ABI_DEPENDS.pkg as we don't want to cause unneeded package deletions
-and rebuilds. In many cases, new versions of packages work just fine with older
-dependencies.
+BUILDLINK_ABI_DEPENDS.pkg in a buildlink3.mk file as we don't want to cause
+unneeded package deletions and rebuilds. In many cases, new versions of
+packages work just fine with older dependencies.
 
 Also it is not needed to set BUILDLINK_ABI_DEPENDS.pkg when it is identical to
 BUILDLINK_API_DEPENDS.pkg.
@@ -6252,8 +6261,12 @@ version numbers recognized by pkg_info(1).
     newer. Such a dependency may be warranted if, for example, the command line
     options of an executable have changed.
 
-    If you need to depend on minimum versions of libraries, see the buildlink
-    section of the pkgsrc guide.
+    If you need to depend on minimum versions of libraries, set
+    BUILDLINK_API_DEPENDS.pkg to the appropriate pattern before including its
+    buildlink3.mk file, e.g.
+
+    BUILDLINK_API_DEPENDS.jpeg+=    jpeg>=9.0
+    .include "../../graphics/jpeg/buildlink3.mk"
 
     For security fixes, please update the package vulnerabilities file. See
     Section 21.1.9, "Handling packages with security problems" for more
