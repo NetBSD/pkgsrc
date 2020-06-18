@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3679 2020/06/18 19:54:45 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3680 2020/06/18 19:55:39 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5921,3 +5921,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/spectrwm to 3.4.0 [pin 2020-06-18]
 	Updated net/lldpd to 1.0.5 [hauke 2020-06-18]
 	Updated converters/p5-Sereal-Decoder to 4.014 [fcambus 2020-06-18]
+	Updated converters/p5-Sereal-Encoder to 4.014 [fcambus 2020-06-18]
