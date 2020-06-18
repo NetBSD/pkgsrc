@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3666 2020/06/18 12:58:12 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3667 2020/06/18 13:39:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5895,3 +5895,16 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-markovify to 0.8.2 [adam 2020-06-18]
 	Updated security/tor-browser to 9.5nb2 [wiz 2020-06-18]
 	Updated audio/hydrogen to 1.0.0.rc1 [nia 2020-06-18]
+	Updated devel/ruby-activesupport60 to 6.0.3.2 [taca 2020-06-18]
+	Updated devel/ruby-activemodel60 to 6.0.3.2 [taca 2020-06-18]
+	Updated databases/ruby-activerecord60 to 6.0.3.2 [taca 2020-06-18]
+	Updated devel/ruby-activejob60 to 6.0.3.2 [taca 2020-06-18]
+	Updated devel/ruby-activestorage60 to 6.0.3.2 [taca 2020-06-18]
+	Updated devel/ruby-railties60 to 6.0.3.2 [taca 2020-06-18]
+	Updated mail/ruby-actionmailbox60 to 6.0.3.2 [taca 2020-06-18]
+	Updated mail/ruby-actionmailer60 to 6.0.3.2 [taca 2020-06-18]
+	Updated textproc/ruby-actiontext60 to 6.0.3.2 [taca 2020-06-18]
+	Updated www/ruby-actioncable60 to 6.0.3.2 [taca 2020-06-18]
+	Updated www/ruby-actionpack60 to 6.0.3.2 [taca 2020-06-18]
+	Updated www/ruby-actionview60 to 6.0.3.2 [taca 2020-06-18]
+	Updated www/ruby-rails60 to 6.0.3.2 [taca 2020-06-18]
