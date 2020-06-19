@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3686 2020/06/19 10:33:04 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3687 2020/06/19 10:38:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5932,3 +5932,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/lemon to 1.0.3.32.3 [adam 2020-06-19]
 	Updated graphics/ImageMagick to 7.0.10.19 [wiz 2020-06-19]
 	Updated devel/catch2 to 2.12.2 [wiz 2020-06-19]
+	Updated x11/st-term to 0.8.4 [leot 2020-06-19]
