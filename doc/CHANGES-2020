@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3697 2020/06/19 17:40:49 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.3698 2020/06/19 18:05:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5944,3 +5944,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-parallel to 1.19.2 [taca 2020-06-19]
 	Updated graphics/krita to 4.3.0 [ryoon 2020-06-19]
 	Updated devel/kdiff3 to 1.8.2 [gutteridge 2020-06-19]
+	Updated math/bc-gh to 3.0.0 [gdt 2020-06-19]
