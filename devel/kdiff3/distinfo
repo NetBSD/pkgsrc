@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/01/16 02:37:30 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2020/06/19 17:39:54 gutteridge Exp $
 
-SHA1 (kdiff3-1.8.1.tar.xz) = cfb63e7fb8ef81e9ebc0ae47d6922f25a32a1ef9
-RMD160 (kdiff3-1.8.1.tar.xz) = b5076a50461f3612071aa08732c1d7c3b5ec5d8b
-SHA512 (kdiff3-1.8.1.tar.xz) = 09cddac0f3adffa91f1986dfb50982deb1c6a31c232215da8a2a396d7525b4d28ef6d3febdcd4ba89cf9f6371a7b34441ef4e10aa0e3468fadf95fb7f78d7720
-Size (kdiff3-1.8.1.tar.xz) = 897692 bytes
-SHA1 (patch-src_directorymergewindow.cpp) = a2b429584e30467501ccadbc9266ffbf05250900
-SHA1 (patch-src_guiutils.h) = 82bb9629ce73057beb5e81cac031ef9b881d90ab
-SHA1 (patch-src_kdiff3.cpp) = d5c497d02064f716ea8a26521061605477fd9272
-SHA1 (patch-src_mergeresultwindow.cpp) = c7da5bcc2f9834a48e1fdd90d070295c6dc62332
-SHA1 (patch-src_mergeresultwindow.h) = 22412d26ff9879abd4759387fbd3fd195593b028
-SHA1 (patch-src_pdiff.cpp) = d88157d208116c63cbd7cc85b96a2717bd675a80
-SHA1 (patch-src_smalldialogs.cpp) = d189a1631ba5bed1d794babb11764eff40efcf07
+SHA1 (kdiff3-1.8.2.tar.xz) = a0ade8bc56ec4a01ef0a42ad08a165914986cd61
+RMD160 (kdiff3-1.8.2.tar.xz) = 953f3b6e3cc8cbd0b8a31e7142e044a1c64a36bc
+SHA512 (kdiff3-1.8.2.tar.xz) = c52dea38b8fa483344a840fb0f6eab04fdeb2dfc5f2a554f9fc095ed175c45f4c355fe7f04dceca4446ac483a1e97db2a296b947fb99315fc388a45e6298d7f0
+Size (kdiff3-1.8.2.tar.xz) = 1039304 bytes
