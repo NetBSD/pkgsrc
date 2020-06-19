@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2020/02/08 16:34:55 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/19 13:17:59 wiz Exp $
+bin/mysofa2json
 include/mysofa.h
 lib/libmysofa.a
 lib/libmysofa.so
 lib/libmysofa.so.1
-lib/libmysofa.so.${PKGVERSION}.0
+lib/libmysofa.so.1.0.0
 lib/pkgconfig/libmysofa.pc
 share/libmysofa/MIT_KEMAR_normal_pinna.sofa
 share/libmysofa/default.sofa
