@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/09 04:37:36 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/19 09:21:06 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -66,7 +66,7 @@ REPLACE_RUBY=		bin/bundle bin/bundler bin/erb bin/gem bin/irb \
 			libexec/racc libexec/racc2y libexec/rdoc libexec/ri \
 			libexec/y2racc \
 			gems/net-telnet-${RUBY_NET_TELNET_VERSION}/bin/console \
-			gems/power_assert-*/bin/console \
+			gems/power_assert-${RUBY_POWER_ASSERT_VERSION}/bin/console \
 			gems/rake-${RUBY_RAKE_VERSION}/bin/bundle \
 			gems/rake-${RUBY_RAKE_VERSION}/bin/console \
 			gems/rake-${RUBY_RAKE_VERSION}/bin/rake \
