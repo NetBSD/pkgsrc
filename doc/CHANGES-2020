@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3692 2020/06/19 13:26:24 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3693 2020/06/19 13:34:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5939,3 +5939,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/mgba to 0.8.2 [nia 2020-06-19]
 	Updated audio/libmysofa to 1.1 [wiz 2020-06-19]
 	Updated lang/janet to 1.10.1 [nia 2020-06-19]
+	Updated emulators/libretro-mgba to 0.8.2 [nia 2020-06-19]
