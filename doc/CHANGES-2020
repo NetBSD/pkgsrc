@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3698 2020/06/19 18:05:58 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.3699 2020/06/19 20:46:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5945,3 +5945,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/krita to 4.3.0 [ryoon 2020-06-19]
 	Updated devel/kdiff3 to 1.8.2 [gutteridge 2020-06-19]
 	Updated math/bc-gh to 3.0.0 [gdt 2020-06-19]
+	Updated security/py-certifi to 2020.4.5.2 [adam 2020-06-19]
+	Updated devel/py-requests to 2.24.0 [adam 2020-06-19]
