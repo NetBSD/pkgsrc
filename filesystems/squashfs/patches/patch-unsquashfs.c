@@ -1,32 +1,27 @@
-$NetBSD: patch-unsquashfs.c,v 1.1 2016/09/09 15:40:17 scole Exp $
-Some workarounds for not using autoconf and include fnm_extmatch.h
+$NetBSD: patch-unsquashfs.c,v 1.2 2020/06/19 21:17:46 scole Exp $
 
---- unsquashfs.c.orig	2014-05-12 22:18:35.000000000 +0000
+Some workarounds for not using autoconf
+
+--- unsquashfs.c.orig	2019-08-29 01:58:04.000000000 +0000
 +++ unsquashfs.c
-@@ -31,13 +31,25 @@
- #include "unsquashfs_info.h"
+@@ -32,8 +32,18 @@
  #include "stdarg.h"
+ #include "fnmatch_compat.h"
  
 -#include <sys/sysinfo.h>
-+/* XXX need autoconf */
-+#if ( defined(__linux__) )
-+ #include <sys/sysinfo.h>
-+#endif
-+
+-#include <sys/sysmacros.h>
 +/* XXX need autoconf HAVE_SYS_SYSCTL_H */
 +#if ( defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__) || \
 +      defined(__FreeBSD__) || defined(__OpenBSD__) )
 + #include <sys/sysctl.h>
 +#endif
 +
++/* XXX probably others... */
++#if defined(__linux__) 
++ #include <sys/sysinfo.h>
++ #include <sys/sysmacros.h>
++#endif
++
  #include <sys/types.h>
  #include <sys/time.h>
  #include <sys/resource.h>
- #include <limits.h>
- #include <ctype.h>
- 
-+#include "fnm_extmatch.h"
-+
- struct cache *fragment_cache, *data_cache;
- struct queue *to_reader, *to_inflate, *to_writer, *from_writer;
- pthread_t *thread, *inflator_thread;
