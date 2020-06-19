@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/02/22 06:55:01 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/19 12:04:33 adam Exp $
 
-DISTNAME=	django-filer-1.7.0
+DISTNAME=	django-filer-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-filer/}
