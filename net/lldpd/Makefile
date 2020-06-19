@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2020/06/18 20:01:17 hauke Exp $
+# $NetBSD: Makefile,v 1.29 2020/06/19 10:05:07 hauke Exp $
 
 DISTNAME=		lldpd-1.0.5
-#PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
@@ -22,18 +22,17 @@ USE_LANGUAGES=		c
 CONFIGURE_ARGS+=	--with-privsep-chroot=${LLDPD_HOME}
 # Let pkgsrc handle security features.
 CONFIGURE_ARGS+=	--disable-hardening
-
 CONFIGURE_ARGS+=	--with-embedded-libevent=no
 CONFIGURE_ARGS+=	--with-readline
-
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # run/lldpd.socket is created under this directory
 # (the default is ${PRERIX}/var, changed since 0.7.9)
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+
 BUILD_DEFS+=		VARBASE
 
-PKG_SYSCONFSUBDIR=	lldpd.d
 EGDIR=			share/examples/${PKGBASE}
-CONF_FILES=		${EGDIR}/README.conf ${PKG_SYSCONFDIR}/README.conf
+CONF_FILES=		${EGDIR}/lldpd.conf ${PKG_SYSCONFDIR}/lldpd.conf
 
 RCD_SCRIPTS=		lldpd
 
@@ -48,17 +47,26 @@ PKG_GROUPS=		${LLDPD_GROUP}
 PKG_USERS=		${LLDPD_USER}:${LLDPD_GROUP}
 PKG_HOME.${LLDPD_USER}=	${LLDPD_HOME}
 
-TEST_TARGET=		check
+SUBST_CLASSES+=		files
+SUBST_STAGE.files=	pre-configure
+SUBST_FILES.files=	../lldpd.conf
+SUBST_VARS.files=	PKG_SYSCONFDIR
+SUBST_MESSAGE.files=	Fixing default configuration file.
 
 INSTALLATION_DIRS+=	sbin include lib ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	${EGDIR} share/doc
 INSTALLATION_DIRS+=	share/bash-completion share/zsh/site-functions
 
+TEST_TARGET=		check
+
 .include "options.mk"
 
+post-patch:
+	${CP} ${PKGDIR}/files/lldpd.conf ${WRKDIR}
+
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/lldpd.d/README.conf \
-		${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/lldpd.conf \
+		${DESTDIR}${PREFIX}/${EGDIR}/lldpd.conf
 
 
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.5
