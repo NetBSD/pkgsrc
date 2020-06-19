@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.26 2020/06/13 07:01:32 tnn Exp $
+# $NetBSD: u-boot.mk,v 1.27 2020/06/19 22:27:39 mrg Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -20,7 +20,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison gmake gsed pkg-config gawk
-PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_FOR_BUILD_ONLY=	yes
 ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 ALL_ENV+=		PYTHONLIBPATH=-L$(LOCALBASE)/lib
 PYTHON_VERSIONS_ACCEPTED=	27
