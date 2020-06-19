@@ -1,16 +1,14 @@
-$NetBSD: patch-configure,v 1.5 2020/04/23 13:52:24 mef Exp $
+$NetBSD: patch-configure,v 1.6 2020/06/19 13:44:28 taca Exp $
 
 * More support for OpenSSL 1.1; not only check SSL_Library_init() but
   also check OPENSSL_init_ssl().
 * Fix syntax error by accidental new line.
 * Utilize <stdlib.h> on BSD.
 * Do not override CFLAGS/CXXFLAGS except linux.
-* Fix detection of IPv6 NAT in IPFilter by including correct headers
-  and generating correct #defines without trailing underscores
 
---- configure.orig	2020-01-20 02:51:59.000000000 +0000
-+++ configure	2020-04-09 16:05:04.000000000 +0100
-@@ -23201,10 +23201,12 @@
+--- configure.orig	2020-06-09 07:15:48.000000000 +0000
++++ configure
+@@ -23226,10 +23226,12 @@ do
  done
  
    # GLIBC 2.30 deprecates sysctl.h. Test with the same flags that (may) break includes later.
@@ -26,7 +24,7 @@ $NetBSD: patch-configure,v 1.5 2020/04/23 13:52:24 mef Exp $
        ${TRUE}
        ;;
      mingw)
-@@ -23244,6 +23246,7 @@
+@@ -23269,6 +23271,7 @@ done
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  ac_fn_cxx_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
@@ -34,7 +32,7 @@ $NetBSD: patch-configure,v 1.5 2020/04/23 13:52:24 mef Exp $
  #include <sys/types.h>
  #include <sys/socket.h>
  
-@@ -24080,7 +24083,51 @@
+@@ -24105,7 +24108,51 @@ if test "x$ac_cv_lib_ssl_SSL_CTX_new" = 
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
  else
  
@@ -87,7 +85,7 @@ $NetBSD: patch-configure,v 1.5 2020/04/23 13:52:24 mef Exp $
  
  fi
  
-@@ -24183,7 +24230,51 @@
+@@ -24208,7 +24255,51 @@ if test "x$ac_cv_lib_ssl_SSL_CTX_new" = 
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
  else
  
@@ -140,7 +138,7 @@ $NetBSD: patch-configure,v 1.5 2020/04/23 13:52:24 mef Exp $
  
  fi
  
-@@ -39234,6 +39325,8 @@
+@@ -39571,6 +39662,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -149,7 +147,7 @@ $NetBSD: patch-configure,v 1.5 2020/04/23 13:52:24 mef Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -42021,6 +42114,9 @@
+@@ -42313,6 +42406,9 @@ ac_fn_cxx_check_header_compile "$LINENO"
  #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
  #define minor_t fubar
  #endif
@@ -159,52 +157,3 @@ $NetBSD: patch-configure,v 1.5 2020/04/23 13:52:24 mef Exp $
  #if HAVE_SYS_TYPES_H
  #include <sys/types.h>
  #endif
-@@ -42046,7 +42142,11 @@
- #elif HAVE_NETINET_IP_FIL_H
- #include <netinet/ip_fil.h>
- #endif
-+#if HAVE_IP_NAT_H
- #include <ip_nat.h>
-+#elif HAVE_NETINET_IP_NAT_H
-+#include <netinet/ip_nat.h>
-+#endif
- 
- "
- if test "x$ac_cv_member_struct_natlookup_nl_inipaddr_in6" = xyes; then :
-@@ -42057,11 +42157,14 @@
- 
- 
- fi
--ac_fn_cxx_check_member "$LINENO" "struct natlookup" "nl_realipaddr.in6"
--   "ac_cv_member_struct_natlookup_nl_realipaddr_in6___" "
-+ac_fn_cxx_check_member "$LINENO" "struct natlookup" "nl_realipaddr.in6" \
-+   "ac_cv_member_struct_natlookup_nl_realipaddr_in6" "
- #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
- #define minor_t fubar
- #endif
-+#if HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #if HAVE_SYS_TYPES_H
- #include <sys/types.h>
- #endif
-@@ -42087,13 +42190,17 @@
- #elif HAVE_NETINET_IP_FIL_H
- #include <netinet/ip_fil.h>
- #endif
-+#if HAVE_IP_NAT_H
- #include <ip_nat.h>
-+#elif HAVE_NETINET_IP_NAT_H
-+#include <netinet/ip_nat.h>
-+#endif
- 
- "
--if test "x$ac_cv_member_struct_natlookup_nl_realipaddr_in6___" = xyes; then :
-+if test "x$ac_cv_member_struct_natlookup_nl_realipaddr_in6" = xyes; then :
- 
- cat >>confdefs.h <<_ACEOF
--#define HAVE_STRUCT_NATLOOKUP_NL_REALIPADDR_IN6___ 1
-+#define HAVE_STRUCT_NATLOOKUP_NL_REALIPADDR_IN6 1
- _ACEOF
- 
- 
