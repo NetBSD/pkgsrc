@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2020/02/18 13:29:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2020/06/19 13:34:33 nia Exp $
 
-SHA1 (mgba-0.8.1.tar.gz) = b22963764f7213ec0e599cf1504973f5655c92a7
-RMD160 (mgba-0.8.1.tar.gz) = bb2a05688cbd1965c670b18f162675adcf7acc2b
-SHA512 (mgba-0.8.1.tar.gz) = 7873bde6a74e8a1509a3b5bba602da1c747ca1eff72adcf11f7b2572298d94766570fea0b920cb28c8b63a7d8237a15876b9feb9169edbf331b2d72f340734e2
-Size (mgba-0.8.1.tar.gz) = 11893993 bytes
+SHA1 (mgba-0.8.2.tar.gz) = 170597b9be302b942ec04e7cb2d8a24c8298c87f
+RMD160 (mgba-0.8.2.tar.gz) = 5c964dc3ef92e470c914f6a3939b343ee149c40a
+SHA512 (mgba-0.8.2.tar.gz) = 181abab9e94964e2027cb039ded6128af1364e1442c418b8703263c9e0c5befeb7aca4d925fb44f3e25e8711a2cc22b198ea00483c42aea3b1c7ba077223d426
+Size (mgba-0.8.2.tar.gz) = 12014352 bytes
 SHA1 (patch-CMakeLists.txt) = 24514d9f72b86dd91a4ee7116f446fd0aae68475
 SHA1 (patch-include_mgba-util_math.h) = 448ca1bb3bbe2812e7d9482917c488ddcf3b48f0
 SHA1 (patch-version.cmake) = 7d6d44febe7bb0ff2231452f037def7cb3782e21
