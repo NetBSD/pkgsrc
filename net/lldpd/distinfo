@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2020/06/18 19:40:32 hauke Exp $
+$NetBSD: distinfo,v 1.15 2020/06/19 10:05:07 hauke Exp $
 
 SHA1 (lldpd-1.0.5.tar.gz) = ee911186120f482f5e9bbd80023bcf5b0a628161
 RMD160 (lldpd-1.0.5.tar.gz) = 2e8a2982dbdd6e73c865d6cad3a0c821e2538369
 SHA512 (lldpd-1.0.5.tar.gz) = ce6075b6e2f847c4854c117ffc81d6e9f852e857d2bf88151ea7b3d40fbebcf980f65d4a21f17332de7f27fc696ce3ada3c063b8fa7677d7b9eee3e4634e898e
 Size (lldpd-1.0.5.tar.gz) = 1624872 bytes
+SHA1 (patch-src_daemon_lldpd.8.in) = 13f08e48123ae6a3edce43fa465823353955534e
