@@ -1,4 +1,4 @@
-$NetBSD: patch-requests_____init____.py,v 1.5 2019/05/17 08:34:38 adam Exp $
+$NetBSD: patch-requests_____init____.py,v 1.6 2020/06/19 20:45:42 adam Exp $
 
 * Allow newer py-urllib3 and py-chardet.
 * Add workaround for segfault of security/py-certbot on NetBSD/amd64
@@ -7,7 +7,7 @@ $NetBSD: patch-requests_____init____.py,v 1.5 2019/05/17 08:34:38 adam Exp $
 
   This is introduced in https://github.com/shazow/urllib3
 
---- requests/__init__.py.orig	2019-05-16 14:22:45.000000000 +0000
+--- requests/__init__.py.orig	2020-05-09 04:43:25.000000000 +0000
 +++ requests/__init__.py
 @@ -60,15 +60,12 @@ def check_compatibility(urllib3_version,
      # urllib3 >= 1.21.1, <= 1.25
@@ -25,11 +25,11 @@ $NetBSD: patch-requests_____init____.py,v 1.5 2019/05/17 08:34:38 adam Exp $
  
  
  def _check_cryptography(cryptography_version):
-@@ -93,7 +90,6 @@ except (AssertionError, ValueError):
- # Attempt to enable urllib3's SNI support, if possible
- try:
-     from urllib3.contrib import pyopenssl
--    pyopenssl.inject_into_urllib3()
+@@ -101,7 +98,6 @@ try:
  
-     # Check cryptography version
-     from cryptography import __version__ as cryptography_version
+     if not getattr(ssl, "HAS_SNI", False):
+         from urllib3.contrib import pyopenssl
+-        pyopenssl.inject_into_urllib3()
+ 
+         # Check cryptography version
+         from cryptography import __version__ as cryptography_version
