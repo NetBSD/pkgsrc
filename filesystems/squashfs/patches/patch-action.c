@@ -1,17 +1,10 @@
-$NetBSD: patch-action.c,v 1.1 2016/09/09 15:40:17 scole Exp $
+$NetBSD: patch-action.c,v 1.2 2020/06/19 21:17:46 scole Exp $
+
 Do not use alloca and strdupa which some platforms may not have
 
---- action.c.orig	2014-05-10 04:54:13.000000000 +0000
+--- action.c.orig	2019-08-29 01:58:04.000000000 +0000
 +++ action.c
-@@ -43,6 +43,7 @@
- #include "mksquashfs.h"
- #include "action.h"
- #include "error.h"
-+#include "fnm_extmatch.h"
- 
- /*
-  * code to parse actions
-@@ -1953,9 +1954,22 @@ static char *get_start(char *s, int n)
+@@ -2284,9 +2284,22 @@ static char *get_start(char *s, int n)
  
  static int subpathname_fn(struct atom *atom, struct action_data *action_data)
  {
@@ -34,4 +27,4 @@ Do not use alloca and strdupa which some platforms may not have
 +	return ret_val;
  }
  
- TEST_VAR_FN(filesize, ACTION_REG, action_data->buf->st_size)
+ /*
