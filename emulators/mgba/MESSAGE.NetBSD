@@ -1,7 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2019/06/08 22:46:03 nia Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.2 2020/06/19 13:06:35 nia Exp $
 
-Lowering the system audio latency (or blk_ms) with sysctl(8) may be
-required to achieve full performance and framerates.
+With the Qt UI (mgba-qt), the OpenGL video driver seems to cause frame
+drops below 60FPS on certain hardware. The SDL UI (mgba) seems to be solid.
+
+You might want to change the audio sample rate (in mGBA's settings)
+to the native rate of the device (usually 48000 Hz, or a multiple).
+
+NetBSD 9.0's default audio latency of 4-10ms seems good enough. If
+yours is set to any higher, sysctl hw.audio0.blk_ms might need to be
+lowered for full performance and framerates.
 
 ===========================================================================

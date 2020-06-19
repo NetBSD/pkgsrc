@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/02/18 13:29:48 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/06/19 13:06:35 nia Exp $
 bin/mgba
 ${PLIST.qt}bin/mgba-qt
 include/mgba-util/arm-algo.h
@@ -154,9 +154,7 @@ share/doc/mGBA/LICENSE
 share/doc/mGBA/README.md
 share/doc/mGBA/README_DE.md
 share/doc/mGBA/licenses/blip_buf.txt
-share/doc/mGBA/licenses/discord-rpc.txt
 share/doc/mGBA/licenses/inih.txt
-share/doc/mGBA/licenses/rapidjson.txt
 share/icons/hicolor/128x128/apps/mgba.png
 share/icons/hicolor/16x16/apps/mgba.png
 share/icons/hicolor/24x24/apps/mgba.png
