@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/06/19 10:05:07 hauke Exp $
+# $NetBSD: Makefile,v 1.30 2020/06/19 10:14:58 hauke Exp $
 
 DISTNAME=		lldpd-1.0.5
 PKGREVISION=		2
@@ -55,7 +55,6 @@ SUBST_MESSAGE.files=	Fixing default configuration file.
 
 INSTALLATION_DIRS+=	sbin include lib ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	${EGDIR} share/doc
-INSTALLATION_DIRS+=	share/bash-completion share/zsh/site-functions
 
 TEST_TARGET=		check
 
