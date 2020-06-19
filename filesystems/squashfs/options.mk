@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2020/06/19 21:17:46 scole Exp $
+# $NetBSD: options.mk,v 1.5 2020/06/19 23:11:37 scole Exp $
 
 # xxx unsquashfs hung for me without any error message when extracting
-# an xattr archive and xattr was an included as a package option
+# an xattr archive and xattr was not included as a package option
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squashfs
 PKG_SUPPORTED_OPTIONS=	zlib xz lzo lz4 zstd xattr reproducible
 PKG_SUGGESTED_OPTIONS=	zlib xz lzo lz4 zstd xattr reproducible
