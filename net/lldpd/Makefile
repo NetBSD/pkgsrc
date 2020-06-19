@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/06/19 10:21:17 hauke Exp $
+# $NetBSD: Makefile,v 1.32 2020/06/19 19:18:12 hauke Exp $
 
 DISTNAME=		lldpd-1.0.5
 PKGREVISION=		2
@@ -67,6 +67,7 @@ post-patch:
 	${CP} ${PKGDIR}/files/lldpd.conf ${WRKDIR}
 
 post-install:
+	${RM} -r ${DESTDIR}${PKG_SYSCONFDIR}/lldpd.d
 	${INSTALL_DATA} ${WRKDIR}/lldpd.conf \
 		${DESTDIR}${PREFIX}/${EGDIR}/lldpd.conf
 
