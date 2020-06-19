@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3684 2020/06/19 07:32:04 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3685 2020/06/19 10:31:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5930,3 +5930,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/sqlite3-docs to 3.32.3 [adam 2020-06-19]
 	Updated databases/sqlite3-tcl to 3.32.3 [adam 2020-06-19]
 	Updated devel/lemon to 1.0.3.32.3 [adam 2020-06-19]
+	Updated graphics/ImageMagick to 7.0.10.19 [wiz 2020-06-19]
