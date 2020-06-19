@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2017/12/30 14:51:42 tsutsui Exp $
+$NetBSD: distinfo,v 1.22 2020/06/19 05:45:30 taca Exp $
 
 SHA1 (mozc-2.20.2673.102.tar.xz) = 9cedf4d392593e04755fa44afd79cd40bb80b9d1
 RMD160 (mozc-2.20.2673.102.tar.xz) = 723fef550d88c5a4dc33f2ec9c8d7ee694e60d64
@@ -25,6 +25,13 @@ SHA1 (patch-build__tools_mozc__version.py) = 7130eac051d0d4f78da887aedd669fc4713
 SHA1 (patch-build__tools_util.py) = 5ca614adf2453fcc33c18cda74c0d9b2e4f6bc21
 SHA1 (patch-client_client.cc) = f1eb1860c41a97c82a338f74acdcf0ed3477b6da
 SHA1 (patch-config_stats__config__util__test.cc) = 3514f04a921908795c03d0e8685135297dc9e2af
+SHA1 (patch-dictionary_user__dictionary.cc) = 34147edfd4d0c09637ab285584b4fad4e7ee95ff
+SHA1 (patch-dictionary_user__dictionary__session.cc) = 13270d72fcdd11a3d7fd6992613a8b562f7e51d0
+SHA1 (patch-dictionary_user__dictionary__session__test.cc) = 2c3fb20f3bd8c4f7e870e978f51a6e707d4a366d
+SHA1 (patch-dictionary_user__dictionary__storage.cc) = d2ac32d6606b835d93422e925bb1b82e62b46ab8
+SHA1 (patch-dictionary_user__dictionary__storage.h) = df3da7bf5a31f030d0202051befb70cf7afac519
+SHA1 (patch-dictionary_user__dictionary__storage__test.cc) = 1f11ecc89326af675f252ead82bcd4afb65cec2e
+SHA1 (patch-dictionary_user__dictionary__test.cc) = 5ca305cae59163f1e1779e77e608f3087aae0190
 SHA1 (patch-gui_config__dialog_config__dialog.cc) = de2750a6bf99c4e38983cf5322adae8c46ca45d6
 SHA1 (patch-gui_config__dialog_keybinding__editor.cc) = 529e902c146907d3a91181bad3822bbbec69b6b7
 SHA1 (patch-gui_dictionary__tool_dictionary__tool.cc) = cae617cc8e324b0f93adc1e76632a018530cd2c7
@@ -32,7 +39,7 @@ SHA1 (patch-gui_qt__libraries.gypi) = ceb8d5b15d4cd5b2d907406f02413290bd4ab652
 SHA1 (patch-gui_qt__moc.gypi) = e3d42e61b35012cda10da13aa03cee67786e171c
 SHA1 (patch-gui_qt__rcc.gypi) = d38a849fe8e81672eb441a41936f454d8e45ff5c
 SHA1 (patch-gui_qt__uic.gypi) = 7dd69ee109e81f0e70f2866b77555412518b4844
-SHA1 (patch-gui_word__register__dialog_word__register__dialog.cc) = 6e247fcab5d570b733365b57c5a5d72a021dd16f
+SHA1 (patch-gui_word__register__dialog_word__register__dialog.cc) = 213b087d4cd5f22ee2b202963a7b7b3325baafb0
 SHA1 (patch-gyp_common.gypi) = 13cd5010a6f3ed314a94248144657955f8bbbe72
 SHA1 (patch-gyp_directories.gypi) = 6504d8b43f83be3908b39a5e51598c2aba0dffd9
 SHA1 (patch-handwriting_zinnia.gyp) = b59e546cb9b8b91dcd627885e1853e8ba8dead46
@@ -42,7 +49,10 @@ SHA1 (patch-ipc_ipc__path__manager__test.cc) = 1b83b513383f184f5ab5a56cce734b793
 SHA1 (patch-ipc_named__event.cc) = 92283261e7580569587e43156f13567b593c9a32
 SHA1 (patch-ipc_unix__ipc.cc) = 25107c2e84844ecaa3445efb48cc3f2795579dec
 SHA1 (patch-net_net.gyp) = 61353724533f9239f4c58fa37f0a8fb2eb5552c3
-SHA1 (patch-prediction_user__history__predictor.cc) = 14e7a899c1c27108169de6571746d5fe4841630a
+SHA1 (patch-prediction_user__history__predictor.cc) = 66cf79206663d35f64a0cbee63be04c8faa99903
+SHA1 (patch-prediction_user__history__predictor.h) = 50ee05871b01864b71e4682f712c3eb662b0be94
+SHA1 (patch-prediction_user__history__predictor__test.cc) = 7fbcbfcb6bcaa236bc94fd8a9c1cd97051ffa222
+SHA1 (patch-rewriter_usage__rewriter__test.cc) = 0ceba47a833574d4eeac3e38ed2fca5ba5ba0c0c
 SHA1 (patch-session_session.cc) = 773017ac54e79239f6734a124f457b0b81bb1ced
 SHA1 (patch-session_session__test.cc) = 99165b29555844a40d30cf5554cc5c66773b70ed
 SHA1 (patch-third__party_protobuf_post__process__dist.sh) = 8adc79d5d7eed3cbf406ebcfbd5832b7a050ced6
