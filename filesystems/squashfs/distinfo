@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.2 2017/02/09 18:16:07 scole Exp $
+$NetBSD: distinfo,v 1.3 2020/06/19 21:17:46 scole Exp $
 
-SHA1 (squashfs4.3.tar.gz) = a615979db9cee82e4a934a1455577f597d290b41
-RMD160 (squashfs4.3.tar.gz) = fc91627c0757205c4a0fbe2037913cec1cefb1fd
-SHA512 (squashfs4.3.tar.gz) = 854ed7acc99920f24ecf11e0da807e5a2a162eeda55db971aba63a03f0da2c13b20ec0564a906c4b0e415bd8258b273a10208c7abc0704f2ceea773aa6148a79
-Size (squashfs4.3.tar.gz) = 182550 bytes
-SHA1 (patch-Makefile) = e9701425da11a12157407f6212ad0e1cd7fed536
-SHA1 (patch-action.c) = d0fc02e79f93a125f20992362214b359460bdce2
-SHA1 (patch-fnm__extmatch.h) = 167c9b473c78f3e10d7536791d63e42c39794e4a
-SHA1 (patch-mksquashfs.c) = 8e91a84b4bfd0de4aef79d9165ff41f17e5b8c41
-SHA1 (patch-pseudo.c) = 6c4e94d8f559404f7b6e155c71267ce7fd6c1456
-SHA1 (patch-unsquashfs.c) = 1e02204097129fdd0309124d2a664c2e081db2f0
+SHA1 (squashfs-tools-4.4.tar.gz) = 883eb8bfae3aaef619e6d3b7ae51f5aa83097cfd
+RMD160 (squashfs-tools-4.4.tar.gz) = 1967b075376dbc05c9683509afd508af89e95d65
+SHA512 (squashfs-tools-4.4.tar.gz) = 133ce437fb8c929933d52cff710b61dd9181f6f8be58250b0d6a59a7bb79a2b350f68f456b06a0e17c469409a71272d586802d570248273ddcd5dad088c00308
+Size (squashfs-tools-4.4.tar.gz) = 241842 bytes
+SHA1 (patch-Makefile) = ee53cb3c16983cb3767df2ccdcf4636bd646fc3c
+SHA1 (patch-action.c) = 35200e6cafd0846fb05fac50862ba3ceb4777935
+SHA1 (patch-mksquashfs.c) = 723e9250e0ce821825de916671ac51251dce9432
+SHA1 (patch-unsquashfs.c) = 167ee4ec1aea744dac6e13d837f1ae19a0f2472a
