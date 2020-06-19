@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/08/08 14:10:16 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/19 10:05:07 hauke Exp $
 include/lldp-const.h
 include/lldpctl.h
 lib/liblldpctl.la
@@ -15,5 +15,6 @@ share/doc/lldpd/ChangeLog
 share/doc/lldpd/LICENSE
 share/doc/lldpd/NEWS
 share/doc/lldpd/README.md
-share/examples/lldpd/README.conf
+share/examples/lldpd/lldpd.conf
 share/zsh/site-functions/_lldpcli
+@pkgdir man/man5
