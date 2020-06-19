@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3695 2020/06/19 13:51:37 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3696 2020/06/19 15:12:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5942,3 +5942,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-mgba to 0.8.2 [nia 2020-06-19]
 	Updated www/squid4 to 4.12 [taca 2020-06-19]
 	Updated misc/ruby-parallel to 1.19.2 [taca 2020-06-19]
+	Updated graphics/krita to 4.3.0 [ryoon 2020-06-19]
