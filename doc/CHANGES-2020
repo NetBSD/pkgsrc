@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3688 2020/06/19 12:04:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3689 2020/06/19 13:03:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5935,3 +5935,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/st-term to 0.8.4 [leot 2020-06-19]
 	Updated www/py-django-polymorphic to 2.1.2 [adam 2020-06-19]
 	Updated www/py-django-filer to 1.7.1 [adam 2020-06-19]
+	Updated devel/boost-headers to 1.73.0nb1 [ryoon 2020-06-19]
