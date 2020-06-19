@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.6 2020/05/25 10:31:17 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2020/06/19 15:11:29 ryoon Exp $
 
-SHA1 (krita-4.2.9.tar.gz) = a6baf46bd6d22627254ded080826cde97e0df419
-RMD160 (krita-4.2.9.tar.gz) = 976576e2e511b985fa138f385441094315aa4953
-SHA512 (krita-4.2.9.tar.gz) = 39152d3cd5d2155b67a7fc79b0a80328aa4756d3b0b0fc32d549ad30041dc8d1106e0578accabd4e5a2b6ad67d06710598672bd6592887e80983b29cfb7ec7c8
-Size (krita-4.2.9.tar.gz) = 246341028 bytes
+SHA1 (krita-4.3.0.tar.gz) = 9b18ef34194bf7e7b65242bcfef8139769282f51
+RMD160 (krita-4.3.0.tar.gz) = cd0a542f61a8bb6c27ce09ae3729d99492fc45e5
+SHA512 (krita-4.3.0.tar.gz) = 2f60d407a9e143aac289b16ba442619660d3ec56492c5a85095004d724378a682661d4594a0c3aec9b10cc225c45058d7890be3d05ce4460fa807eca59020509
+Size (krita-4.3.0.tar.gz) = 248996139 bytes
 SHA1 (patch-krita_data_CMakeLists.txt) = bc0a37c1a60a2e0702c4a87b70ae0abf8359cc45
-SHA1 (patch-qt5.14.2) = e5eee4bfce5c5287f0558f86244db7ff87c9b787
 SHA1 (patch-xcftools.h) = eeeed207e9b1995999a16efbbae91ed8f6255f48
