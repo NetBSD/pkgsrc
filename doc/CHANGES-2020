@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3712 2020/06/20 15:06:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3713 2020/06/20 15:14:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5967,3 +5967,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added cross/mipsel-none-elf-binutils version 2.32 [thorpej 2020-06-20]
 	Added cross/mipsel-none-elf-gcc version 8.3.0 [thorpej 2020-06-20]
 	Added x11/gnome-terminal version 3.36.2 [nia 2020-06-20]
+	Added www/felinks version 0.13.2 [nia 2020-06-20]
