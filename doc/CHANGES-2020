@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3705 2020/06/20 07:08:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3706 2020/06/20 07:28:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5955,3 +5955,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.1.18 [rillig 2020-06-20]
 	Updated devel/py-hypothesis to 4.57.1 [adam 2020-06-20]
 	Updated lang/py-mypy to 0.781 [adam 2020-06-20]
+	Updated editors/py-jedi to 0.17.1 [adam 2020-06-20]
+	Updated time/py-dateparser to 0.7.6 [adam 2020-06-20]
+	Updated time/py-arrow to 0.15.7 [adam 2020-06-20]
+	Updated net/py-netaddr to 0.7.20 [adam 2020-06-20]
