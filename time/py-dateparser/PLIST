@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/09 09:17:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/20 07:18:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -929,3 +929,21 @@ ${PYSITELIB}/dateparser_data/__init__.pyo
 ${PYSITELIB}/dateparser_data/settings.py
 ${PYSITELIB}/dateparser_data/settings.pyc
 ${PYSITELIB}/dateparser_data/settings.pyo
+${PYSITELIB}/dateparser_scripts/__init__.py
+${PYSITELIB}/dateparser_scripts/__init__.pyc
+${PYSITELIB}/dateparser_scripts/__init__.pyo
+${PYSITELIB}/dateparser_scripts/get_cldr_data.py
+${PYSITELIB}/dateparser_scripts/get_cldr_data.pyc
+${PYSITELIB}/dateparser_scripts/get_cldr_data.pyo
+${PYSITELIB}/dateparser_scripts/get_cldr_numeral_data.py
+${PYSITELIB}/dateparser_scripts/get_cldr_numeral_data.pyc
+${PYSITELIB}/dateparser_scripts/get_cldr_numeral_data.pyo
+${PYSITELIB}/dateparser_scripts/order_languages.py
+${PYSITELIB}/dateparser_scripts/order_languages.pyc
+${PYSITELIB}/dateparser_scripts/order_languages.pyo
+${PYSITELIB}/dateparser_scripts/utils.py
+${PYSITELIB}/dateparser_scripts/utils.pyc
+${PYSITELIB}/dateparser_scripts/utils.pyo
+${PYSITELIB}/dateparser_scripts/write_complete_data.py
+${PYSITELIB}/dateparser_scripts/write_complete_data.pyc
+${PYSITELIB}/dateparser_scripts/write_complete_data.pyo
