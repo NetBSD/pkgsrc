@@ -1,0 +1,37 @@
+$NetBSD: patch-libiberty_Makefile.in,v 1.1 2020/06/20 14:33:35 thorpej Exp $
+
+--- libiberty/Makefile.in.orig	2014-12-24 16:22:51.000000000 +0000
++++ libiberty/Makefile.in
+@@ -363,13 +363,12 @@ install-strip: install
+ # multilib-specific flags, it's overridden by FLAGS_TO_PASS from the
+ # default multilib, so we have to take CFLAGS into account as well,
+ # since it will be passed the multilib flags.
+-MULTIOSDIR = `$(CC) $(CFLAGS) -print-multi-os-directory`
+ install_to_libdir: all
+ 	if test -n "${target_header_dir}"; then \
+-		${mkinstalldirs} $(DESTDIR)$(libdir)/$(MULTIOSDIR); \
+-		$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n; \
+-		( cd $(DESTDIR)$(libdir)/$(MULTIOSDIR) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n ); \
+-		mv -f $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB); \
++		${mkinstalldirs} $(DESTDIR)$(libdir); \
++		$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(TARGETLIB)n; \
++		( cd $(DESTDIR)$(libdir) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n ); \
++		mv -f $(DESTDIR)$(libdir)/$(TARGETLIB)n $(DESTDIR)$(libdir)/$(TARGETLIB); \
+ 		case "${target_header_dir}" in \
+ 		  /*)    thd=${target_header_dir};; \
+ 		  *)     thd=${includedir}/${target_header_dir};; \
+@@ -382,10 +381,10 @@ install_to_libdir: all
+ 	@$(MULTIDO) $(FLAGS_TO_PASS) multi-do DO=install
+ 
+ install_to_tooldir: all
+-	${mkinstalldirs} $(DESTDIR)$(tooldir)/lib/$(MULTIOSDIR)
+-	$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(tooldir)/lib/$(MULTIOSDIR)/$(TARGETLIB)n
+-	( cd $(DESTDIR)$(tooldir)/lib/$(MULTIOSDIR) ; chmod 644 $(TARGETLIB)n; $(RANLIB) $(TARGETLIB)n )
+-	mv -f $(DESTDIR)$(tooldir)/lib/$(MULTIOSDIR)/$(TARGETLIB)n $(DESTDIR)$(tooldir)/lib/$(MULTIOSDIR)/$(TARGETLIB)
++	${mkinstalldirs} $(DESTDIR)$(tooldir)/lib
++	$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(tooldir)/lib/$(TARGETLIB)n
++	( cd $(DESTDIR)$(tooldir)/lib ; chmod 644 $(TARGETLIB)n; $(RANLIB) $(TARGETLIB)n )
++	mv -f $(DESTDIR)$(tooldir)/lib/$(TARGETLIB)n $(DESTDIR)$(tooldir)/lib/$(TARGETLIB)
+ 	@$(MULTIDO) $(FLAGS_TO_PASS) multi-do DO=install
+ 
+ # required-list was used when building a shared bfd/opcodes/libiberty

@@ -1,0 +1,15 @@
+$NetBSD: patch-contrib_download__prerequisites,v 1.1 2020/06/20 14:33:35 thorpej Exp $
+
+* POSIX shell portability
+
+--- contrib/download_prerequisites.orig	2017-04-11 16:34:07.000000000 +0000
++++ contrib/download_prerequisites
+@@ -122,7 +122,7 @@ md5_check() {
+   md5_checksum_output=$(md5 -r "${file_to_check}")
+   # Grab the text before the first space
+   md5_checksum_detected="${md5_checksum_output%% *}"
+-  [ "${md5_checksum_expected}" == "${md5_checksum_detected}" ] \
++  [ "${md5_checksum_expected}" = "${md5_checksum_detected}" ] \
+     || die "Cannot verify integrity of possibly corrupted file ${file_to_check}"
+   echo "${file_to_check}: OK"
+ }
