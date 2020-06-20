@@ -128,7 +128,6 @@ func Test__qa(t *testing.T) {
 	ck.Configure("pkglint.go", "*", "*", -intqa.EMissingTest)        // TODO
 	ck.Configure("pkgsrc.go", "*", "*", -intqa.EMissingTest)         // TODO
 	ck.Configure("redundantscope.go", "*", "*", -intqa.EMissingTest) // TODO
-	ck.Configure("scope.go", "*", "*", -intqa.EMissingTest)          // TODO
 	ck.Configure("shell.go", "*", "*", -intqa.EMissingTest)          // TODO
 	ck.Configure("shtokenizer.go", "*", "*", -intqa.EMissingTest)    // TODO
 	ck.Configure("shtypes.go", "*", "*", -intqa.EMissingTest)        // TODO
