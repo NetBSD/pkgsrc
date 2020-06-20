@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/12/11 10:38:05 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/06/20 16:16:13 adam Exp $
 
-SHA1 (pysmb-1.1.28.zip) = 77b65f70a9b850bae21d661a013398c9c93f096c
-RMD160 (pysmb-1.1.28.zip) = a96677be83bc05ced48e6c54929474cfe222771b
-SHA512 (pysmb-1.1.28.zip) = 347602b2c4221e06d730fd52c61ebdae385c7dd791738b871cb88c14b810cdbc76138c139184e1443f3790e2fe79c55b8d885855ac04804173c8edc4208615ea
-Size (pysmb-1.1.28.zip) = 1255488 bytes
+SHA1 (pysmb-1.2.1.zip) = 34c84a4e1b9b7cb7db73d8e3aa1bdf04328fade9
+RMD160 (pysmb-1.2.1.zip) = ed1d1d06fd0560881fab0e4f2a538b98b3352074
+SHA512 (pysmb-1.2.1.zip) = d669ad09d8ac372de61ecb7b9b0b4cf21528d4a6a799daf26adba61a9802405c758b1b22e845f843b7529c733846d1b3b78f48da2429b23b4f08a1720196effa
+Size (pysmb-1.2.1.zip) = 1275305 bytes
