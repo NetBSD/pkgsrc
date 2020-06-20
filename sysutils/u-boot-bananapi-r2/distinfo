@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/06/20 17:19:37 thorpej Exp $
+$NetBSD: distinfo,v 1.4 2020/06/20 17:42:34 thorpej Exp $
 
 SHA1 (BPI-R2-HEAD1-512b.img) = ef5ae9707d39654b8d931a0bd8c0825318591e69
 RMD160 (BPI-R2-HEAD1-512b.img) = 098f7c260353034a3d286d2113698c16605cd4b4
@@ -12,10 +12,9 @@ SHA1 (preloader_iotg7623Np1_sd_1600M.bin) = 51f2d73d6e1e47f9b961ec86b1cd624c8bc5
 RMD160 (preloader_iotg7623Np1_sd_1600M.bin) = bd13434a35e35ef334fb713ea5d2caec7ca0f663
 SHA512 (preloader_iotg7623Np1_sd_1600M.bin) = 5a5f580956ed9cc558c4b8b75f9dbeba6299d9950bbdbae8f5064d1d60ae7cb42ff89c9dd7f1bddebb955183780f88a731d8c2b71d61970c07e8356a9cc093a5
 Size (preloader_iotg7623Np1_sd_1600M.bin) = 91996 bytes
-SHA1 (u-boot-2019.04-rc4.tar.bz2) = 40bd6eb58ae0048da4221e28ec5fe98d6f4987f9
-RMD160 (u-boot-2019.04-rc4.tar.bz2) = 67c1b0effa8eb18872ed3608dd99c9ed521dc2b2
-SHA512 (u-boot-2019.04-rc4.tar.bz2) = 33a57e4acb51dbe04123055b159a5b3a933ea8340aa81a4148572ee5fc12288413a6c6c0b80b6fe099ac79ea6359be2d9034ead1edfcc0403895f3f8eb56746e
-Size (u-boot-2019.04-rc4.tar.bz2) = 13616834 bytes
-SHA1 (patch-Makefile) = b64ed7e0eac7299e9c621e32b4afb976c8dfda5a
-SHA1 (patch-include_configs_mt7623.h) = 3f4985844a753dac03834a14366fd76234ab6574
-SHA1 (patch-lib_bch.c) = 151e5f311742a7da919359950ccac2521bcfaaff
+SHA1 (u-boot-2020.04.tar.bz2) = 0821ce2dac9bbd9ec5883779ddad78b8610366e3
+RMD160 (u-boot-2020.04.tar.bz2) = 8f13836ea4d9d7235aa83f6b713b76e047ce27f1
+SHA512 (u-boot-2020.04.tar.bz2) = e04fe54883149123730605b084324ac0d1d72ce6913467bbe587a5a2675bcf7bb393405d9a446dc0c64ba42abc1e862ae5a132e9e51aa7390e2e9fce045af8d8
+Size (u-boot-2020.04.tar.bz2) = 15065656 bytes
+SHA1 (patch-include_configs_mt7623.h) = 47cf1bd28c15fb54fd86e135afbaf1495c5acbb1
+SHA1 (patch-include_image.h) = 46f9efc0b9bbeea407e18f2b7e02b265dc0b58e1
