@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/06/02 08:24:08 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/20 10:42:42 leot Exp $
 
-DISTNAME=	zbar-0.23
-PKGREVISION=	4
+DISTNAME=	zbar-0.23.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://linuxtv.org/downloads/zbar/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +15,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--with-jpeg
+CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-video
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-python
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-qt
 
 PKGCONFIG_OVERRIDE+=	zbar-gtk.pc.in
-PKGCONFIG_OVERRIDE+=	zbar-qt.pc.in
 PKGCONFIG_OVERRIDE+=	zbar.pc.in
 
 .include "options.mk"

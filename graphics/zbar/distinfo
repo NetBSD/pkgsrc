@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2020/03/26 21:51:11 joerg Exp $
+$NetBSD: distinfo,v 1.3 2020/06/20 10:42:42 leot Exp $
 
-SHA1 (zbar-0.23.tar.bz2) = 11a1d3f1aa8ef905fe16d88347a191909705d7ab
-RMD160 (zbar-0.23.tar.bz2) = 59ecd5c78fa91f6951a129377b4fa477307676bb
-SHA512 (zbar-0.23.tar.bz2) = 7eef2ee99760edd693ecc12a36e04b71a156b93b4c1977ca4f6da103a955284cf640b55adb185477e1d4cc65345bb01608ed9528f6518abb514ccbc58e5d350b
-Size (zbar-0.23.tar.bz2) = 1168183 bytes
-SHA1 (patch-configure) = 7cbc332aae614096b4dcc76af0dd831284639fcc
+SHA1 (zbar-0.23.1.tar.bz2) = 6a047e29895dd9248cc3dbac6fe0ac454d86f45b
+RMD160 (zbar-0.23.1.tar.bz2) = d4a8f17d7bc5874677c5bc301028b2fd236f221c
+SHA512 (zbar-0.23.1.tar.bz2) = e27765d380daa907b50817f4efa9b16a906f01ddb4ad7d7fd4a5193582a3fabc5a34d01c5dd8bdeb16cad9ccb62e6d72279294fbdcf8163815394be9722bfba4
+Size (zbar-0.23.1.tar.bz2) = 1195599 bytes
+SHA1 (patch-configure) = 98a156737fd6058ba39f9f7e43cac8c63034beb2
 SHA1 (patch-gtk_Makefile.in) = bf32ac312d0d00ed7ac152ddd849dae0fc681e74
-SHA1 (patch-test_test__examples.sh.in) = d8a91cf9f8d619723825d6b50c26e781b5411a43
+SHA1 (patch-test_test__examples.sh.in) = d5739c5e4670d602b36ac62e7544f25709fc0d61
