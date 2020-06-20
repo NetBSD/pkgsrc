@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/06/02 19:52:43 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/20 16:38:36 adam Exp $
 
-DISTNAME=	restructuredtext_lint-1.3.0
+DISTNAME=	restructuredtext_lint-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/restructuredtext_lint/}
@@ -13,9 +13,6 @@ LICENSE=	unlicense
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.11:../../textproc/py-docutils
 
 USE_LANGUAGES=	# none
-
-pre-configure:
-	${FIND} ${WRKSRC} -type f -name '*.pyc' -exec ${RM} {} +
 
 post-install:
 .for bin in restructuredtext-lint rst-lint
