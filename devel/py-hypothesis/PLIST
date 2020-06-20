@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2019/12/15 11:28:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/06/20 07:06:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -108,6 +108,9 @@ ${PYSITELIB}/hypothesis/internal/conjecture/junkdrawer.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/optimiser.py
 ${PYSITELIB}/hypothesis/internal/conjecture/optimiser.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/optimiser.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/pareto.py
+${PYSITELIB}/hypothesis/internal/conjecture/pareto.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/pareto.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinker.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinker.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinker.pyo
