@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2019/07/03 19:50:33 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/06/20 16:36:49 adam Exp $
 
-DISTNAME=	mod_wsgi-4.6.7
+DISTNAME=	mod_wsgi-4.7.1
 PKGNAME=	${PYPKGPREFIX}-${APACHE_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mod_wsgi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.modwsgi.org/
+HOMEPAGE=	https://modwsgi.readthedocs.io/
 COMMENT=	WSGI module for apache
 LICENSE=	apache-2.0
 
