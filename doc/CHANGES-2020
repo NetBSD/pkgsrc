@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3710 2020/06/20 12:44:11 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.3711 2020/06/20 14:37:05 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5964,3 +5964,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/zbar to 0.23.1 [leot 2020-06-20]
 	Updated sysutils/zabbix to 4.0.21 [gdt 2020-06-20]
 	Updated sysutils/zabbix-frontend to 4.0.21 [gdt 2020-06-20]
+	Added cross/mipsel-none-elf-binutils version 2.32 [thorpej 2020-06-20]
+	Added cross/mipsel-none-elf-gcc version 8.3.0 [thorpej 2020-06-20]
