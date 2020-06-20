@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/20 22:29:12 thorpej Exp $
+
+SHA1 (u-boot-2020.04.tar.bz2) = 0821ce2dac9bbd9ec5883779ddad78b8610366e3
+RMD160 (u-boot-2020.04.tar.bz2) = 8f13836ea4d9d7235aa83f6b713b76e047ce27f1
+SHA512 (u-boot-2020.04.tar.bz2) = e04fe54883149123730605b084324ac0d1d72ce6913467bbe587a5a2675bcf7bb393405d9a446dc0c64ba42abc1e862ae5a132e9e51aa7390e2e9fce045af8d8
+Size (u-boot-2020.04.tar.bz2) = 15065656 bytes
+SHA1 (patch-include_image.h) = 46f9efc0b9bbeea407e18f2b7e02b265dc0b58e1
