@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/04 12:14:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2020/06/20 05:31:10 rillig Exp $
 
 WEB_PREFIX?=		${.CURDIR}/../htdocs
 DBX_XML_CATALOG?=	${SGML_PREFIX}/docbook/4.5/catalog.xml
@@ -15,7 +15,6 @@ SRCS+=	bulk.xml
 SRCS+=	creating.xml
 SRCS+=	components.xml
 SRCS+=	configuring.xml
-SRCS+=	debug.xml
 SRCS+=	devfaq.xml
 SRCS+=	editing.xml
 SRCS+=	examples.xml
