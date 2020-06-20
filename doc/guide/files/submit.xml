@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.36 2020/04/29 23:09:48 gutteridge Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.37 2020/06/20 05:31:10 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -20,7 +20,7 @@
 <title>Submitting source packages (for non-NetBSD-developers)</title>
 
 	<para>First, check that your package is complete, compiles and
-	runs well; see <xref linkend="debug"/> and the rest of this
+	runs well; see <xref linkend="creating"/> and the rest of this
 	document. Next, generate an uuencoded gzipped &man.tar.1;
 	archive that contains all files that make up the package.
 	Finally, send this package to the pkgsrc bug tracking system,

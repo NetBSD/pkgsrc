@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.33 2020/04/29 23:24:43 gutteridge Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.34 2020/06/20 05:31:10 rillig Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -10,15 +10,30 @@ few steps.</para>
 
 <procedure>
 
-<step><para>First, install the packages <filename
-role="pkg">pkgtools/url2pkg</filename> and <filename
-role="pkg">pkgtools/pkglint</filename>.</para></step>
+<step><para>In your &mk.conf;, set <code>PKG_DEVELOPER=yes</code> to
+enable the basic quality checks.</para></step>
 
-<step><para>Then, choose one of the top-level directories as the
-category in which you want to place your package. You can also create a
-directory of your own (maybe called <filename>local</filename>). In that
-category directory, create another directory for your package and change
-into it.</para></step>
+<step><para>Install the package <filename
+role="pkg">meta-pkgs/pkg_developer</filename>, which among others will
+install the utilities <command>url2pkg</command>,
+<command>pkglint</command>, <command>pkgvi</command> and
+<command>mkpatches</command>:</para>
+
+<screen>&uprompt; <userinput>cd /usr/pkgsrc</userinput>
+&uprompt; <userinput>(cd meta-pkgs/pkg_developer &amp;&amp; bmake update)</userinput></screen>
+
+</step>
+
+<step><para>Choose one of the top-level directories as the category in
+which you want to place your package. You can also create a directory of
+your own (maybe called <filename>local</filename>). In that category
+directory, create another directory for your package and change into
+it:</para>
+
+<screen>&uprompt; <userinput>mkdir <replaceable>category</replaceable>/<replaceable>package</replaceable></userinput>
+&uprompt; <userinput>cd <replaceable>category</replaceable>/<replaceable>package</replaceable></userinput></screen>
+
+</step>
 
 <step><para>Run the program <command>url2pkg</command>, which will ask
 you for a URL. Enter the URL of the distribution file (in most cases a
@@ -26,7 +41,11 @@ you for a URL. Enter the URL of the distribution file (in most cases a
 of your package are created automatically. The distribution file is
 extracted automatically to fill in some details in the
 <filename>Makefile</filename> that would otherwise have to be done
-manually.</para></step>
+manually:</para>
+
+<screen>&uprompt; <userinput>url2pkg <replaceable>https://www.example.org/packages/package-1.0.tar.gz</replaceable></userinput></screen>
+
+</step>
 
 <step><para>Examine the extracted files to determine the dependencies of
 your package. Ideally, this is mentioned in some
@@ -77,9 +96,8 @@ DEPENDS+=       screen>=4.0:../../misc/screen
 <step><para>Run <command>pkglint</command> to see what things still need
 to be done to make your package a <quote>good</quote> one. If you don't
 know what pkglint's warnings want to tell you, try <command>pkglint
---explain</command> or <command>pkglint
--e</command>, which outputs additional
-explanations.</para></step>
+--explain</command> or <command>pkglint -e</command>, which outputs
+additional explanations.</para></step>
 
 <step><para>In many cases the package is not yet ready to build. You can
 find instructions for the most common cases in the next section, <xref
@@ -94,7 +112,17 @@ directory, which may become wrong after you edited the
 
 <step><para>Now, run <command>bmake</command> to build the package. For
 the various things that can go wrong in this phase, consult <xref
-linkend="fixes"/>.</para></step>
+linkend="fixes"/>.</para>
+
+<para>If the extracted files from the package need to be fixed, run multiple rounds of these commands:</para>
+
+<screen>&uprompt; <userinput>make</userinput>
+&uprompt; <userinput>pkgvi ${WRKSRC}/some/file/that/does/not/compile</userinput>
+&uprompt; <userinput>mkpatches</userinput>
+&uprompt; <userinput>make mps</userinput>
+&uprompt; <userinput>make clean</userinput></screen>
+
+</step>
 
 <step><para>When the package builds fine, the next step is to install
 the package. Run <command>bmake install</command> and hope that
@@ -111,7 +139,7 @@ files looks plausible.</para></step>
 <filename>PLIST</filename> contains garbage or not.</para></step>
 
 <step><para>When you ran <command>bmake install</command>, the package
-has been registered in the database of installed files, but with an
+had been registered in the database of installed files, but with an
 empty list of files. To fix this, run <command>bmake deinstall</command>
 and <command>bmake install</command> again. Now the package is
 registered with the list of files from
@@ -119,6 +147,15 @@ registered with the list of files from
 
 <step><para>Run <command>bmake package</command> to create a binary
 package from the set of installed files.</para></step>
+
+<step><para>Run <command>bmake clean update</command> to run everything
+from above again in a single step, making sure that the PLIST is correct
+and the whole package is created as intended.</para></step>
+
+<step><para>Run <command>pkglint</command> to see if there's anything left to do.</para></step>
+
+<step><para>Commit the package to pkgsrc-wip or main pkgsrc; see <xref
+linkend="submit"/>.</para></step>
 
 </procedure>
 
