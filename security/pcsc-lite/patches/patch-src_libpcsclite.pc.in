@@ -1,4 +1,4 @@
-$NetBSD: patch-src_libpscslite.pc.in,v 1.2 2014/10/01 16:27:03 gdt Exp $
+$NetBSD: patch-src_libpcsclite.pc.in,v 1.1 2020/06/20 19:03:37 adam Exp $
 
 Make sure dependencies (opensc) do not get -pthread.
 
