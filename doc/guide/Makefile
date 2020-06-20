@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/04/02 20:39:10 leot Exp $
+# $NetBSD: Makefile,v 1.63 2020/06/20 14:55:06 rillig Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
@@ -114,8 +114,13 @@ install-htdocs: build
 	cd ${WRKSRC} && ${CP} pkgsrc.txt pkgsrc.pdf pkgsrc.ps *.html	\
 		${HTDOCSDIR}/docs/pkgsrc
 
-.PHONY: regen regen-doc regen-htdocs
-regen: regen-doc regen-htdocs
+.PHONY: regen cvs-update regen-doc regen-htdocs
+regen: cvs-update regen-doc regen-htdocs
+
+regen: cvs-update
+
+cvs-update:
+	cvs -q update -dP
 
 regen-doc: build
 	@${STEP_MSG} "Updating the files in pkgsrc/doc"
