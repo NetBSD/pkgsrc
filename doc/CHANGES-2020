@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3700 2020/06/19 21:15:31 scole Exp $
+$NetBSD: CHANGES-2020,v 1.3701 2020/06/20 00:11:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5948,3 +5948,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certifi to 2020.4.5.2 [adam 2020-06-19]
 	Updated devel/py-requests to 2.24.0 [adam 2020-06-19]
 	Updated filesystems/squashfs to 4.4 [scole 2020-06-19]
+	Updated x11/vte3 to 0.60.3 [ryoon 2020-06-20]
