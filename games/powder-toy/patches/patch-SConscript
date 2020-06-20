@@ -1,4 +1,4 @@
-$NetBSD: patch-SConscript,v 1.1 2019/04/13 12:08:04 nia Exp $
+$NetBSD: patch-SConscript,v 1.2 2020/06/20 20:57:02 nia Exp $
 
 Support NetBSD.
 
@@ -58,7 +58,7 @@ Support NetBSD.
  			if not conf.CheckLib('GL'):
  				FatalError("libGL not found or not installed")
  			try:
-@@ -363,7 +360,7 @@ def findLibs(env, conf):
+@@ -363,10 +360,12 @@ def findLibs(env, conf):
  			if not conf.CheckFramework("OpenGL"):
  				FatalError("OpenGL framework not found or not installed")
  
@@ -67,7 +67,12 @@ Support NetBSD.
  		if not conf.CheckLib('X11'):
  			FatalError("X11 development library not found or not installed")
  
-@@ -418,7 +415,7 @@ if platform == "Windows":
++		env.ParseConfig('pkg-config --libs x11')
++
+ 		if not conf.CheckLib('rt'):
+ 			FatalError("librt not found or not installed")
+ 	elif platform == "Windows":
+@@ -418,7 +417,7 @@ if platform == "Windows":
  			env.Append(LINKFLAGS=['/NODEFAULTLIB:msvcrtd.lib'])
  	else:
  		env.Append(LINKFLAGS=['-mwindows'])
