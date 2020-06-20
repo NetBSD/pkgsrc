@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.18 2019/11/16 10:57:22 he Exp $
+$NetBSD: distinfo,v 1.19 2020/06/20 12:43:46 gdt Exp $
 
-SHA1 (zabbix-4.0.9.tar.gz) = 865eb4d9cbb7c53b942c4a538314ebf9d8400099
-RMD160 (zabbix-4.0.9.tar.gz) = c586e0b55ed8d6569889df7494379266dd67ef31
-SHA512 (zabbix-4.0.9.tar.gz) = 4e04d80490f43d2e7833a4e11dbc7ce0ed70dc1f43653eeff923f5bfa16bbeedf37597599d68e0de3194820501d896d785a20d6ae0dce9328c458fd711a6a7bf
-Size (zabbix-4.0.9.tar.gz) = 17118478 bytes
+SHA1 (zabbix-4.0.21.tar.gz) = df8c54ccff94f7804470e58c363ef743976f2f57
+RMD160 (zabbix-4.0.21.tar.gz) = 7cbcd33118d4f9893bd639aa55abd80c1a0fedaa
+SHA512 (zabbix-4.0.21.tar.gz) = d5eac5474dcad005466200868fa4fab86abdd41eb9cf49bf6e7f52ae1e9fab82757d5a96f373154edd275bfa22461a8f7f2bbf70b419b2918e8dcf872818aa76
+Size (zabbix-4.0.21.tar.gz) = 17300931 bytes
 SHA1 (patch-frontends_php_locale_add__new__language.sh) = 71be94363ee58490d2ee3ef4bc6b800cfc99e90a
 SHA1 (patch-frontends_php_locale_make__mo.sh) = c44c8996ffc5c1fa31eebaa766edb430e03004de
-SHA1 (patch-src_libs_zbxsysinfo_netbsd_proc.c) = fde4e78373d7f10e015dae8a15bab74633560093
 SHA1 (patch-src_zabbix__agent_Makefile.in) = 55149e2969d0e6e54c537750ca1bde11c9b690d7
 SHA1 (patch-src_zabbix__proxy_Makefile.in) = 2e7dbe6e8554bbe2c1cb1074a308661ae44bb977
 SHA1 (patch-src_zabbix__server_Makefile.in) = bfcb02e8450df163a038adbae83a7e17fda0a9a9

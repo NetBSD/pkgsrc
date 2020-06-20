@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/06/24 12:05:36 he Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/06/20 12:43:46 gdt Exp $
 share/zabbix/php/actionconf.php
 share/zabbix/php/adm.gui.php
 share/zabbix/php/adm.housekeeper.php
@@ -30,6 +30,7 @@ share/zabbix/php/app/controllers/CControllerDashboardWidgetCheck.php
 share/zabbix/php/app/controllers/CControllerDashboardWidgetEdit.php
 share/zabbix/php/app/controllers/CControllerDashboardWidgetRfRate.php
 share/zabbix/php/app/controllers/CControllerDiscoveryView.php
+share/zabbix/php/app/controllers/CControllerExportXml.php
 share/zabbix/php/app/controllers/CControllerFavouriteCreate.php
 share/zabbix/php/app/controllers/CControllerFavouriteDelete.php
 share/zabbix/php/app/controllers/CControllerMapView.php
@@ -41,6 +42,9 @@ share/zabbix/php/app/controllers/CControllerMediatypeEnable.php
 share/zabbix/php/app/controllers/CControllerMediatypeList.php
 share/zabbix/php/app/controllers/CControllerMediatypeUpdate.php
 share/zabbix/php/app/controllers/CControllerMenuPopup.php
+share/zabbix/php/app/controllers/CControllerNotificationsGet.php
+share/zabbix/php/app/controllers/CControllerNotificationsMute.php
+share/zabbix/php/app/controllers/CControllerNotificationsRead.php
 share/zabbix/php/app/controllers/CControllerPopupGeneric.php
 share/zabbix/php/app/controllers/CControllerPopupHttpStep.php
 share/zabbix/php/app/controllers/CControllerPopupMedia.php
@@ -114,6 +118,7 @@ share/zabbix/php/app/views/layout.javascript.php
 share/zabbix/php/app/views/layout.json.php
 share/zabbix/php/app/views/layout.warning.php
 share/zabbix/php/app/views/layout.widget.php
+share/zabbix/php/app/views/layout.xml.php
 share/zabbix/php/app/views/monitoring.acknowledge.edit.js.php
 share/zabbix/php/app/views/monitoring.acknowledge.edit.php
 share/zabbix/php/app/views/monitoring.dashboard.breadcrumbs.php
@@ -146,7 +151,6 @@ share/zabbix/php/app/views/monitoring.widget.trigover.view.php
 share/zabbix/php/app/views/monitoring.widget.url.view.php
 share/zabbix/php/app/views/monitoring.widget.web.view.php
 share/zabbix/php/app/views/popup.generic.php
-share/zabbix/php/app/views/popup.httpstep.js.php
 share/zabbix/php/app/views/popup.httpstep.php
 share/zabbix/php/app/views/popup.media.js.php
 share/zabbix/php/app/views/popup.media.php
@@ -174,13 +178,13 @@ share/zabbix/php/assets/styles/blue-theme.css
 share/zabbix/php/assets/styles/dark-theme.css
 share/zabbix/php/assets/styles/hc-dark.css
 share/zabbix/php/assets/styles/hc-light.css
-share/zabbix/php/audio/alarm_average.wav
-share/zabbix/php/audio/alarm_disaster.wav
-share/zabbix/php/audio/alarm_high.wav
-share/zabbix/php/audio/alarm_information.wav
-share/zabbix/php/audio/alarm_ok.wav
-share/zabbix/php/audio/alarm_warning.wav
-share/zabbix/php/audio/no_sound.wav
+share/zabbix/php/audio/alarm_average.mp3
+share/zabbix/php/audio/alarm_disaster.mp3
+share/zabbix/php/audio/alarm_high.mp3
+share/zabbix/php/audio/alarm_information.mp3
+share/zabbix/php/audio/alarm_ok.mp3
+share/zabbix/php/audio/alarm_warning.mp3
+share/zabbix/php/audio/no_sound.mp3
 share/zabbix/php/auditacts.php
 share/zabbix/php/auditlogs.php
 share/zabbix/php/browserwarning.php
@@ -212,14 +216,6 @@ share/zabbix/php/hosts.php
 share/zabbix/php/httpconf.php
 share/zabbix/php/httpdetails.php
 share/zabbix/php/image.php
-share/zabbix/php/images/general/arrow_down.png
-share/zabbix/php/images/general/arrow_up.png
-share/zabbix/php/images/general/no_icon.png
-share/zabbix/php/images/general/tr_space.gif
-share/zabbix/php/images/general/tr_top_bottom.gif
-share/zabbix/php/images/general/tr_top_right.gif
-share/zabbix/php/images/general/tr_top_right_bottom.gif
-share/zabbix/php/images/general/tree/zero.gif
 share/zabbix/php/imgstore.php
 share/zabbix/php/include/.htaccess
 share/zabbix/php/include/actions.inc.php
@@ -318,6 +314,7 @@ share/zabbix/php/include/classes/db/PostgresqlDbBackend.php
 share/zabbix/php/include/classes/debug/CProfiler.php
 share/zabbix/php/include/classes/export/CConfigurationExport.php
 share/zabbix/php/include/classes/export/CConfigurationExportBuilder.php
+share/zabbix/php/include/classes/export/CConfigurationExportException.php
 share/zabbix/php/include/classes/export/writers/CExportWriter.php
 share/zabbix/php/include/classes/export/writers/CExportWriterFactory.php
 share/zabbix/php/include/classes/export/writers/CJsonExportWriter.php
@@ -505,7 +502,7 @@ share/zabbix/php/include/classes/parsers/CUpdateIntervalParser.php
 share/zabbix/php/include/classes/parsers/CUserMacroParser.php
 share/zabbix/php/include/classes/parsers/CValidationRule.php
 share/zabbix/php/include/classes/parsers/results/CParserResult.php
-share/zabbix/php/include/classes/parsers/results/CTriggerExpressionParserResult.php
+share/zabbix/php/include/classes/parsers/results/CTriggerExprParserResult.php
 share/zabbix/php/include/classes/regexp/CGlobalRegexp.php
 share/zabbix/php/include/classes/routing/CUrl.php
 share/zabbix/php/include/classes/routing/CUrlFactory.php
@@ -680,7 +677,7 @@ share/zabbix/php/include/views/administration.general.other.edit.php
 share/zabbix/php/include/views/administration.general.regularexpressions.edit.php
 share/zabbix/php/include/views/administration.general.regularexpressions.list.php
 share/zabbix/php/include/views/administration.general.trigger.options.edit.php
-share/zabbix/php/include/views/administration.general.triggerSeverity.edit.php
+share/zabbix/php/include/views/administration.general.trigseverity.edit.php
 share/zabbix/php/include/views/administration.general.valuemapping.edit.php
 share/zabbix/php/include/views/administration.general.valuemapping.list.php
 share/zabbix/php/include/views/administration.general.workingtime.edit.php
@@ -742,7 +739,7 @@ share/zabbix/php/include/views/js/administration.general.housekeeper.edit.js.php
 share/zabbix/php/include/views/js/administration.general.iconmap.js.php
 share/zabbix/php/include/views/js/administration.general.macros.edit.js.php
 share/zabbix/php/include/views/js/administration.general.trigger.options.js.php
-share/zabbix/php/include/views/js/administration.general.triggerSeverity.js.php
+share/zabbix/php/include/views/js/administration.general.trigseverity.js.php
 share/zabbix/php/include/views/js/administration.general.valuemapping.edit.js.php
 share/zabbix/php/include/views/js/administration.users.edit.js.php
 share/zabbix/php/include/views/js/common.filter.trigger.js.php
@@ -798,12 +795,12 @@ share/zabbix/php/items.php
 share/zabbix/php/js/browsers.js
 share/zabbix/php/js/chkbxrange.js
 share/zabbix/php/js/class.bbcode.js
+share/zabbix/php/js/class.browsertab.js
 share/zabbix/php/js/class.calendar.js
 share/zabbix/php/js/class.cclock.js
 share/zabbix/php/js/class.cdate.js
 share/zabbix/php/js/class.cdebug.js
 share/zabbix/php/js/class.cmap.js
-share/zabbix/php/js/class.cmessages.js
 share/zabbix/php/js/class.cnavtree.js
 share/zabbix/php/js/class.cookie.js
 share/zabbix/php/js/class.coverride.js
@@ -815,8 +812,15 @@ share/zabbix/php/js/class.ctree.js
 share/zabbix/php/js/class.curl.js
 share/zabbix/php/js/class.cverticalaccordion.js
 share/zabbix/php/js/class.cviewswitcher.js
-share/zabbix/php/js/class.mapWidget.js
+share/zabbix/php/js/class.localstorage.js
+share/zabbix/php/js/class.mapwidget.js
+share/zabbix/php/js/class.notification.collection.js
+share/zabbix/php/js/class.notification.js
+share/zabbix/php/js/class.notifications.audio.js
+share/zabbix/php/js/class.notifications.js
+share/zabbix/php/js/class.overlaycollection.js
 share/zabbix/php/js/class.pmaster.js
+share/zabbix/php/js/class.promise.js
 share/zabbix/php/js/class.rpc.js
 share/zabbix/php/js/colorpicker.js
 share/zabbix/php/js/common.js
