@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3704 2020/06/20 07:01:49 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3705 2020/06/20 07:08:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5953,3 +5953,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ansible to 2.9.10 [adam 2020-06-20]
 	Updated net/terraform-provider-aws to 2.67.0 [adam 2020-06-20]
 	Updated pkgtools/pkglint to 20.1.18 [rillig 2020-06-20]
+	Updated devel/py-hypothesis to 4.57.1 [adam 2020-06-20]
+	Updated lang/py-mypy to 0.781 [adam 2020-06-20]
