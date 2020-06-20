@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3711 2020/06/20 14:37:05 thorpej Exp $
+$NetBSD: CHANGES-2020,v 1.3712 2020/06/20 15:06:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5966,3 +5966,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/zabbix-frontend to 4.0.21 [gdt 2020-06-20]
 	Added cross/mipsel-none-elf-binutils version 2.32 [thorpej 2020-06-20]
 	Added cross/mipsel-none-elf-gcc version 8.3.0 [thorpej 2020-06-20]
+	Added x11/gnome-terminal version 3.36.2 [nia 2020-06-20]
