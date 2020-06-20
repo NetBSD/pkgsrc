@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2019/11/06 11:56:56 mrg Exp $
+$NetBSD: distinfo,v 1.16 2020/06/20 07:56:40 rillig Exp $
 
 SHA1 (Csound5.19.01.tar.gz) = eeeb3591745c5b352b9040a2dfa3805f22f5fbda
 RMD160 (Csound5.19.01.tar.gz) = ceb9952d562c57b09143a47a4d51081753f1b694
@@ -13,7 +13,7 @@ SHA1 (patch-Opcodes_wavegde.h) = e1a6d742b28dd9b6b129a993102baf7218efa57c
 SHA1 (patch-ac) = ac09a9ee3f8be72f63aef9bc2ac977ab914428fe
 SHA1 (patch-ad) = 30aa452d35dbcd6ba4fe2c9a7680fe028368aae4
 SHA1 (patch-ae) = cba2fb017f4b940debbf7f8fd482c73c3fe19587
-SHA1 (patch-ah) = 229fc00e122288ea16ebf07f081869965cab9365
+SHA1 (patch-ah) = 5fac3f61487ae417269e43dbf02c6dbea0700f49
 SHA1 (patch-ai) = f5dee772f6569d4356be17045282666e159ce2dc
 SHA1 (patch-aj) = 6721ccfeeeb196d2f1430e1fd497e23226b42c80
 SHA1 (patch-ak) = 1f3a7ec113a5185a81fe219d99061afb025bc13b
