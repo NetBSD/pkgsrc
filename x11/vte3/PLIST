@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/07 21:36:06 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/20 00:10:24 ryoon Exp $
 bin/vte-2.91
+etc/profile.d/vte.csh
 etc/profile.d/vte.sh
 include/vte-2.91/vte/vte.h
 include/vte-2.91/vte/vtedeprecated.h
@@ -11,39 +12,13 @@ include/vte-2.91/vte/vteregex.h
 include/vte-2.91/vte/vteterminal.h
 include/vte-2.91/vte/vtetypebuiltins.h
 include/vte-2.91/vte/vteversion.h
-lib/libvte-2.91.la
+lib/girepository-1.0/Vte-2.91.typelib
+lib/libvte-2.91.so
+lib/libvte-2.91.so.0
+lib/libvte-2.91.so.0.6000.3
 lib/pkgconfig/vte-2.91.pc
-share/gtk-doc/html/vte-2.91/VteRegex.html
-share/gtk-doc/html/vte-2.91/VteTerminal.html
-share/gtk-doc/html/vte-2.91/annotation-glossary.html
-share/gtk-doc/html/vte-2.91/api-index-0-40.html
-share/gtk-doc/html/vte-2.91/api-index-0-44.html
-share/gtk-doc/html/vte-2.91/api-index-0-46.html
-share/gtk-doc/html/vte-2.91/api-index-0-48.html
-share/gtk-doc/html/vte-2.91/api-index-0-50.html
-share/gtk-doc/html/vte-2.91/api-index-0-52.html
-share/gtk-doc/html/vte-2.91/api-index-0-54.html
-share/gtk-doc/html/vte-2.91/api-index-deprecated.html
-share/gtk-doc/html/vte-2.91/api-index-full.html
-share/gtk-doc/html/vte-2.91/ch01.html
-share/gtk-doc/html/vte-2.91/ch02.html
-share/gtk-doc/html/vte-2.91/ch03.html
-share/gtk-doc/html/vte-2.91/ch04.html
-share/gtk-doc/html/vte-2.91/home.png
-share/gtk-doc/html/vte-2.91/index.html
-share/gtk-doc/html/vte-2.91/left-insensitive.png
-share/gtk-doc/html/vte-2.91/left.png
-share/gtk-doc/html/vte-2.91/licence.html
-share/gtk-doc/html/vte-2.91/object-hierarchy.html
-share/gtk-doc/html/vte-2.91/pt01.html
-share/gtk-doc/html/vte-2.91/right-insensitive.png
-share/gtk-doc/html/vte-2.91/right.png
-share/gtk-doc/html/vte-2.91/style.css
-share/gtk-doc/html/vte-2.91/up-insensitive.png
-share/gtk-doc/html/vte-2.91/up.png
-share/gtk-doc/html/vte-2.91/vte-2.91.devhelp2
-share/gtk-doc/html/vte-2.91/vte-Version-Information.html
-share/gtk-doc/html/vte-2.91/vte-Vte-PTY.html
+libexec/vte-urlencode-cwd
+share/gir-1.0/Vte-2.91.gir
 share/locale/am/LC_MESSAGES/vte-2.91.mo
 share/locale/an/LC_MESSAGES/vte-2.91.mo
 share/locale/ang/LC_MESSAGES/vte-2.91.mo
@@ -59,6 +34,7 @@ share/locale/bn_IN/LC_MESSAGES/vte-2.91.mo
 share/locale/bs/LC_MESSAGES/vte-2.91.mo
 share/locale/ca/LC_MESSAGES/vte-2.91.mo
 share/locale/ca@valencia/LC_MESSAGES/vte-2.91.mo
+share/locale/ckb/LC_MESSAGES/vte-2.91.mo
 share/locale/cs/LC_MESSAGES/vte-2.91.mo
 share/locale/cy/LC_MESSAGES/vte-2.91.mo
 share/locale/da/LC_MESSAGES/vte-2.91.mo
@@ -99,6 +75,7 @@ share/locale/lt/LC_MESSAGES/vte-2.91.mo
 share/locale/lv/LC_MESSAGES/vte-2.91.mo
 share/locale/mai/LC_MESSAGES/vte-2.91.mo
 share/locale/mi/LC_MESSAGES/vte-2.91.mo
+share/locale/mjw/LC_MESSAGES/vte-2.91.mo
 share/locale/mk/LC_MESSAGES/vte-2.91.mo
 share/locale/ml/LC_MESSAGES/vte-2.91.mo
 share/locale/mn/LC_MESSAGES/vte-2.91.mo
@@ -139,3 +116,5 @@ share/locale/xh/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_CN/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_HK/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_TW/LC_MESSAGES/vte-2.91.mo
+share/vala/vapi/vte-2.91.deps
+share/vala/vapi/vte-2.91.vapi
