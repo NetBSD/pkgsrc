@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/03/05 10:18:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/06/20 06:55:04 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-connection
@@ -71,9 +71,6 @@ ${PYSITELIB}/ansible/compat/__init__.pyo
 ${PYSITELIB}/ansible/compat/selectors/__init__.py
 ${PYSITELIB}/ansible/compat/selectors/__init__.pyc
 ${PYSITELIB}/ansible/compat/selectors/__init__.pyo
-${PYSITELIB}/ansible/compat/selectors/_selectors2.py
-${PYSITELIB}/ansible/compat/selectors/_selectors2.pyc
-${PYSITELIB}/ansible/compat/selectors/_selectors2.pyo
 ${PYSITELIB}/ansible/config/__init__.py
 ${PYSITELIB}/ansible/config/__init__.pyc
 ${PYSITELIB}/ansible/config/__init__.pyo
@@ -392,12 +389,21 @@ ${PYSITELIB}/ansible/module_utils/common/validation.pyo
 ${PYSITELIB}/ansible/module_utils/compat/__init__.py
 ${PYSITELIB}/ansible/module_utils/compat/__init__.pyc
 ${PYSITELIB}/ansible/module_utils/compat/__init__.pyo
+${PYSITELIB}/ansible/module_utils/compat/_selectors2.py
+${PYSITELIB}/ansible/module_utils/compat/_selectors2.pyc
+${PYSITELIB}/ansible/module_utils/compat/_selectors2.pyo
+${PYSITELIB}/ansible/module_utils/compat/importlib.py
+${PYSITELIB}/ansible/module_utils/compat/importlib.pyc
+${PYSITELIB}/ansible/module_utils/compat/importlib.pyo
 ${PYSITELIB}/ansible/module_utils/compat/ipaddress.py
 ${PYSITELIB}/ansible/module_utils/compat/ipaddress.pyc
 ${PYSITELIB}/ansible/module_utils/compat/ipaddress.pyo
 ${PYSITELIB}/ansible/module_utils/compat/paramiko.py
 ${PYSITELIB}/ansible/module_utils/compat/paramiko.pyc
 ${PYSITELIB}/ansible/module_utils/compat/paramiko.pyo
+${PYSITELIB}/ansible/module_utils/compat/selectors.py
+${PYSITELIB}/ansible/module_utils/compat/selectors.pyc
+${PYSITELIB}/ansible/module_utils/compat/selectors.pyo
 ${PYSITELIB}/ansible/module_utils/connection.py
 ${PYSITELIB}/ansible/module_utils/connection.pyc
 ${PYSITELIB}/ansible/module_utils/connection.pyo
