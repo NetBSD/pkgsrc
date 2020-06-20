@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.4 2014/10/01 16:27:03 gdt Exp $
+$NetBSD: patch-configure,v 1.5 2020/06/20 19:03:37 adam Exp $
 
-Make sure libpscslite.so is not linked against -lphtread on NetBSD, as
+Make sure libpcsclite.so is not linked against -lphtread on NetBSD, as
 loading libpthread.so through dlopen() is now forbidden
 
 --- configure.orig	2014-09-24 13:04:46.000000000 +0000
