@@ -1,4 +1,4 @@
-$NetBSD: patch-src_vte.cc,v 1.3 2020/06/20 00:10:24 ryoon Exp $
+$NetBSD: patch-src_vte.cc,v 1.4 2020/06/20 16:00:07 nia Exp $
 
 Use correct includes on SunOS.
 Don't use packet mode on SunOS.
@@ -48,3 +48,30 @@ Don't use packet mode on SunOS.
  						break;
  				}
  			} while (rem);
+@@ -4052,7 +4060,7 @@ out:
+         case EBUSY: /* do nothing */
+                 break;
+         default:
+-                _vte_debug_print (VTE_DEBUG_IO, "Error reading from child: %m");
++                _vte_debug_print (VTE_DEBUG_IO, "Error reading from child: %s", strerror(errno));
+                 break;
+ 	}
+ 
+@@ -7655,7 +7663,7 @@ Terminal::set_size(long columns,
+ 		 * in case something went awry.
+                  */
+ 		if (!pty()->set_size(rows, columns))
+-			g_warning("Failed to set PTY size: %m\n");
++			g_warning("Failed to set PTY size: %s\n", strerror(errno));
+ 		refresh_size();
+ 	} else {
+ 		m_row_count = rows;
+@@ -10074,7 +10082,7 @@ Terminal::set_pty(vte::base::Pty *new_pt
+         set_size(m_column_count, m_row_count);
+ 
+         if (!pty()->set_utf8(data_syntax() == DataSyntax::eECMA48_UTF8))
+-                g_warning ("Failed to set UTF8 mode: %m\n");
++                g_warning ("Failed to set UTF8 mode: %s\n", strerror(errno));
+ 
+         /* Open channels to listen for input on. */
+         connect_pty_read();

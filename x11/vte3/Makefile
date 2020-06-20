@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/06/20 00:10:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2020/06/20 16:00:07 nia Exp $
 
 DISTNAME=	vte-0.60.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.60/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,8 +20,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
 USE_LANGUAGES=		c c++14
 # for c++14 \todo
 GCC_REQD+=		5
-
-BUILDLINK_TRANSFORM+=	rm:-Werror=format=2 # for %m in printf
 
 .include "../../devel/meson/build.mk"
 .include "../../converters/fribidi/buildlink3.mk"
