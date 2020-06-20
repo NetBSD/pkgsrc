@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.3 2014/02/13 10:10:06 mrg Exp $
+$NetBSD: patch-ah,v 1.4 2020/06/20 07:56:40 rillig Exp $
 
-+++ frontends/CsoundVST/ScoreGeneratorVstMain.cpp.orig	2013-01-07 04:49:35.000000000 -0800
---- frontends/CsoundVST/ScoreGeneratorVstMain.cpp	2014-02-12 20:42:30.000000000 -0800
+--- frontends/CsoundVST/ScoreGeneratorVstMain.cpp.orig	2013-01-07 04:49:35.000000000 -0800
++++ frontends/CsoundVST/ScoreGeneratorVstMain.cpp	2014-02-12 20:42:30.000000000 -0800
 @@ -42,7 +42,7 @@
  #if defined(__GNUC__) && defined(WIN32)
  #define main main_plugin
