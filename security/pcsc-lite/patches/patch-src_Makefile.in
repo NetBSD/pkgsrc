@@ -1,12 +1,12 @@
-$NetBSD: patch-src_Makefile.in,v 1.6 2014/10/01 16:27:03 gdt Exp $
+$NetBSD: patch-src_Makefile.in,v 1.7 2020/06/20 19:03:37 adam Exp $
 
-Make sure libpscslite.so is not linked against -lpthread on NetBSD, as
+Make sure libpcsclite.so is not linked against -lpthread on NetBSD, as
 loading libpthread.so through dlopen() is now forbidden.
 Disable installation of pcsc-spy
 
---- src/Makefile.in.orig	2014-09-24 13:04:47.000000000 +0000
+--- src/Makefile.in.orig	2020-06-14 13:43:23.000000000 +0000
 +++ src/Makefile.in
-@@ -396,6 +396,8 @@ POLKIT_LIBS = @POLKIT_LIBS@
+@@ -436,6 +436,8 @@ POLKIT_LIBS = @POLKIT_LIBS@
  PTHREAD_CC = @PTHREAD_CC@
  PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
  PTHREAD_LIBS = @PTHREAD_LIBS@
@@ -15,16 +15,15 @@ Disable installation of pcsc-spy
  RANLIB = @RANLIB@
  SED = @SED@
  SET_MAKE = @SET_MAKE@
-@@ -466,7 +468,7 @@ top_builddir = @top_builddir@
+@@ -507,7 +509,6 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  usbdropdir = @usbdropdir@
  usbdropdir_exp = @usbdropdir_exp@
 -SUBDIRS = spy
-+#SUBDIRS = spy
  AM_CPPFLAGS = -I$(top_srcdir)/src/PCSC -I$(top_builddir)/src/PCSC \
  	$(SYMBOL_VISIBILITY)
  
-@@ -490,8 +492,8 @@ libpcsclite_la_SOURCES = \
+@@ -529,8 +530,8 @@ libpcsclite_la_SOURCES = \
  	winscard_msg.c
  
  libpcsclite_la_LDFLAGS = -version-info 1:0:0
