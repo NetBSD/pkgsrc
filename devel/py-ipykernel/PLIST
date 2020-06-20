@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/10/21 19:16:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/06/20 16:43:15 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -180,6 +180,9 @@ ${PYSITELIB}/ipykernel/tests/test_zmq_shell.pyo
 ${PYSITELIB}/ipykernel/tests/utils.py
 ${PYSITELIB}/ipykernel/tests/utils.pyc
 ${PYSITELIB}/ipykernel/tests/utils.pyo
+${PYSITELIB}/ipykernel/trio_runner.py
+${PYSITELIB}/ipykernel/trio_runner.pyc
+${PYSITELIB}/ipykernel/trio_runner.pyo
 ${PYSITELIB}/ipykernel/zmqshell.py
 ${PYSITELIB}/ipykernel/zmqshell.pyc
 ${PYSITELIB}/ipykernel/zmqshell.pyo
