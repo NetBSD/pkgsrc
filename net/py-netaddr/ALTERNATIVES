@@ -1,1 +1,1 @@
-bin/netaddr @PREFIX@/bin/netaddr@PYVERSSUFFIX@
+bin/netaddr @PREFIX@/bin/netaddr-@PYVERSSUFFIX@
