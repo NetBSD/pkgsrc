@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/05/21 13:24:53 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/20 07:16:06 adam Exp $
 
-DISTNAME=	jedi-0.17.0
+DISTNAME=	jedi-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jedi/}
