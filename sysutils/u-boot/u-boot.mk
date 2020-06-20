@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.27 2020/06/19 22:27:39 mrg Exp $
+# $NetBSD: u-boot.mk,v 1.28 2020/06/20 22:26:15 thorpej Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -12,8 +12,17 @@ PATCHDIR?=	${.CURDIR}/../../sysutils/u-boot/patches
 HOMEPAGE?=	https://www.denx.de/wiki/U-Boot
 MASTER_SITES?=	ftp://ftp.denx.de/pub/u-boot/
 
+.if !empty(UBOOT_VERSION:M202[0-9].*)
+PYTHON_VERSIONS_ACCEPTED= 37
+UBOOT_SWIG_VERSION=	3
+.endif
+
 TOOL_DEPENDS+=	dtc>=1.4.2:../../sysutils/dtc
+.if !empty(UBOOT_SWIG_VERSION:M3)
+TOOL_DEPENDS+=	swig3>=swig-3.0.12:../../devel/swig3
+.else
 TOOL_DEPENDS+=	swig>=1.3:../../devel/swig
+.endif
 
 COMMENT=	Das U-Boot, the Universal Boot Loader (${UBOOT_CONFIG})
 LICENSE=	gnu-gpl-v2
@@ -21,10 +30,15 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison gmake gsed pkg-config gawk
 PYTHON_FOR_BUILD_ONLY=	yes
-ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
-ALL_ENV+=		PYTHONLIBPATH=-L$(LOCALBASE)/lib
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_ACCEPTED?=	27
 .include "../../lang/python/tool.mk"
+
+.if !empty(_PYTHON_VERSION_37_OK:M)
+ALL_ENV+= 		PYTHON3=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
+.else
+ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
+.endif
+ALL_ENV+=		PYTHONLIBPATH=-L$(LOCALBASE)/lib
 
 .if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
 UBOOT_ENV+=	UBOOT_PKGREVISION=nb${PKGREVISION}
@@ -39,6 +53,11 @@ post-patch:
 .endfor
 
 do-configure:
+.if !empty(UBOOT_SWIG_VERSION:M3)
+	${MKDIR} -p ${BUILDLINK_DIR}/bin
+	${RM} -f ${BUILDLINK_DIR}/bin/swig3.0
+	${LN} -s ${PREFIX}/bin/swig3.0 ${BUILDLINK_DIR}/bin/swig
+.endif
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${UBOOT_CONFIG}
 
 do-build:
