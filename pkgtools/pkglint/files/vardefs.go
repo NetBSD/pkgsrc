@@ -1155,7 +1155,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("EXTRACT_CMD", BtShellCommand)
 	reg.pkg("EXTRACT_DIR", BtPathname)
 	reg.pkg("EXTRACT_DIR.*", BtPathname)
-	reg.pkglist("EXTRACT_ELEMENTS", BtPathPattern) // TODO: No slashes allowed
+	reg.pkglist("EXTRACT_ELEMENTS", BtPathPattern)
 	reg.pkglist("EXTRACT_ENV", BtShellWord)
 	reg.pkglist("EXTRACT_ONLY", BtPathname)
 	reg.pkglist("EXTRACT_OPTS", BtShellWord)

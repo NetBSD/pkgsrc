@@ -27,22 +27,20 @@ type StateID uint16
 // Compile parses a pattern, including the error checking that is missing
 // from bmake.
 func Compile(pattern string) (*Pattern, error) {
-	var a Pattern
-	s := a.AddState(false)
-
-	var deadEnd StateID
+	var p Pattern
+	s := p.AddState(false)
 
 	lex := textproc.NewLexer(pattern)
 	for !lex.EOF() {
 
 		if lex.SkipByte('*') {
-			a.AddTransition(s, 0, 255, s)
+			p.AddTransition(s, 0, 255, s)
 			continue
 		}
 
 		if lex.SkipByte('?') {
-			next := a.AddState(false)
-			a.AddTransition(s, 0, 255, next)
+			next := p.AddState(false)
+			p.AddTransition(s, 0, 255, next)
 			s = next
 			continue
 		}
@@ -52,112 +50,194 @@ func Compile(pattern string) (*Pattern, error) {
 				return nil, errors.New("unfinished escape sequence")
 			}
 			ch := lex.NextByte()
-			next := a.AddState(false)
-			a.AddTransition(s, ch, ch, next)
+			next := p.AddState(false)
+			p.AddTransition(s, ch, ch, next)
 			s = next
 			continue
 		}
 
 		ch := lex.NextByte()
 		if ch != '[' {
-			next := a.AddState(false)
-			a.AddTransition(s, ch, ch, next)
+			next := p.AddState(false)
+			p.AddTransition(s, ch, ch, next)
 			s = next
 			continue
 		}
 
-		negate := lex.SkipByte('^')
-		if negate && deadEnd == 0 {
-			deadEnd = a.AddState(false)
+		next, err := compileCharClass(&p, lex, ch, s)
+		if err != nil {
+			return nil, err
 		}
-		next := a.AddState(false)
-		for {
-			if lex.EOF() {
-				return nil, errors.New("unfinished character class")
-			}
-			ch = lex.NextByte()
-			if ch == ']' {
-				break
-			}
-			max := ch
-			if lex.SkipByte('-') {
-				if lex.EOF() {
-					return nil, errors.New("unfinished character range")
-				}
-				max = lex.NextByte()
-			}
 
-			to := next
-			if negate {
-				to = deadEnd
-			}
-			a.AddTransition(s, bmin(ch, max), bmax(ch, max), to)
-		}
-		if negate {
-			a.AddTransition(s, 0, 255, next)
-		}
 		s = next
 	}
 
-	a.states[s].end = true
-	return &a, nil
+	p.states[s].end = true
+	return &p, nil
 }
 
-func (a *Pattern) AddState(end bool) StateID {
-	a.states = append(a.states, state{nil, end})
-	return StateID(len(a.states) - 1)
+func compileCharClass(p *Pattern, lex *textproc.Lexer, ch byte, s StateID) (StateID, error) {
+	negate := lex.SkipByte('^')
+	chars := make([]bool, 256)
+	next := p.AddState(false)
+	for {
+		if lex.EOF() {
+			return 0, errors.New("unfinished character class")
+		}
+		ch = lex.NextByte()
+		if ch == ']' {
+			break
+		}
+		if lex.SkipByte('-') {
+			if lex.EOF() {
+				return 0, errors.New("unfinished character range")
+			}
+			max := lex.NextByte()
+			if ch > max {
+				ch, max = max, ch
+			}
+			for i := int(ch); i <= int(max); i++ {
+				chars[i] = true
+			}
+		} else {
+			chars[ch] = true
+		}
+	}
+	if negate {
+		for i, b := range chars {
+			chars[i] = !b
+		}
+	}
+
+	start := 0
+	for start < len(chars) && !chars[start] {
+		start++
+	}
+
+	for start < len(chars) {
+		end := start
+		for end < len(chars) && chars[end] {
+			end++
+		}
+
+		if start < end {
+			p.AddTransition(s, byte(start), byte(end-1), next)
+		}
+
+		start = end
+		for start < len(chars) && !chars[start] {
+			start++
+		}
+	}
+	return next, nil
 }
 
-func (a *Pattern) AddTransition(from StateID, min, max byte, to StateID) {
-	state := &a.states[from]
+func (p *Pattern) AddState(end bool) StateID {
+	p.states = append(p.states, state{nil, end})
+	return StateID(len(p.states) - 1)
+}
+
+func (p *Pattern) AddTransition(from StateID, min, max byte, to StateID) {
+	state := &p.states[from]
 	state.transitions = append(state.transitions, transition{min, max, to})
 }
 
 // Match tests whether a pattern matches the given string.
-func (a *Pattern) Match(s string) bool {
-	state := StateID(0)
+func (p *Pattern) Match(s string) bool {
+	curr := make([]bool, len(p.states))
+	next := make([]bool, len(p.states))
+
+	curr[0] = true
 	for _, ch := range []byte(s) {
-		for _, tr := range a.states[state].transitions {
-			if tr.min <= ch && ch <= tr.max {
-				state = tr.to
-				goto nextByte
+		ok := false
+		for i, _ := range next {
+			next[i] = false
+		}
+
+		for si := range curr {
+			if !curr[si] {
+				continue
+			}
+			for _, tr := range p.states[si].transitions {
+				if tr.min <= ch && ch <= tr.max {
+					next[tr.to] = true
+					ok = true
+				}
 			}
 		}
-		return false
-	nextByte:
+		if !ok {
+			return false
+		}
+		curr, next = next, curr
 	}
-	return a.states[state].end
+
+	for i, curr := range curr {
+		if curr && p.states[i].end {
+			return true
+		}
+	}
+	return false
 }
 
 // Intersect computes a pattern that only matches if both given patterns
 // match at the same time.
-func Intersect(a, b *Pattern) *Pattern {
-	var is Pattern
-	for i := 0; i < len(a.states); i++ {
-		for j := 0; j < len(b.states); j++ {
-			is.AddState(a.states[i].end && b.states[j].end)
+func Intersect(p1, p2 *Pattern) *Pattern {
+	var res Pattern
+	for i1 := 0; i1 < len(p1.states); i1++ {
+		for i2 := 0; i2 < len(p2.states); i2++ {
+			res.AddState(p1.states[i1].end && p2.states[i2].end)
 		}
 	}
 
-	for i := 0; i < len(a.states); i++ {
-		for j := 0; j < len(b.states); j++ {
-			for _, at := range a.states[i].transitions {
-				for _, bt := range b.states[j].transitions {
-					min := bmax(at.min, bt.min)
-					max := bmin(at.max, bt.max)
+	for i1 := 0; i1 < len(p1.states); i1++ {
+		for i2 := 0; i2 < len(p2.states); i2++ {
+			for _, t1 := range p1.states[i1].transitions {
+				for _, t2 := range p2.states[i2].transitions {
+					min := bmax(t1.min, t2.min)
+					max := bmin(t1.max, t2.max)
 					if min <= max {
-						from := StateID(i*len(b.states) + j)
-						to := at.to*StateID(len(b.states)) + bt.to
-						is.AddTransition(from, min, max, to)
+						from := StateID(i1*len(p2.states) + i2)
+						to := t1.to*StateID(len(p2.states)) + t2.to
+						res.AddTransition(from, min, max, to)
 					}
 				}
 			}
 		}
 	}
 
-	// TODO: optimize: remove transitions that point to a dead end
+	return res.optimized()
+}
 
-	return &is
+func (p *Pattern) optimized() *Pattern {
+	var opt Pattern
+
+	var todo []StateID
+	hasNewID := make([]bool, len(p.states))
+	newIDs := make([]StateID, len(p.states))
+
+	todo = append(todo, 0)
+	newIDs[0] = opt.AddState(p.states[0].end)
+	hasNewID[0] = true
+
+	for len(todo) > 0 {
+		oldStateID := todo[len(todo)-1]
+		todo = todo[:len(todo)-1]
+
+		oldState := p.states[oldStateID]
+
+		for _, t := range oldState.transitions {
+			if !hasNewID[t.to] {
+				hasNewID[t.to] = true
+				newIDs[t.to] = opt.AddState(p.states[t.to].end)
+				todo = append(todo, t.to)
+			}
+			opt.AddTransition(newIDs[oldStateID], t.min, t.max, newIDs[t.to])
+		}
+	}
+
+	// TODO: remove transitions that point to a dead end
+
+	return &opt
 }
 
 // CanMatch tests whether the pattern can match some string.
@@ -165,13 +245,13 @@ func Intersect(a, b *Pattern) *Pattern {
 // Typical counterexamples are:
 //  [^]
 //  Intersect("*.c", "*.h")
-func (a *Pattern) CanMatch() bool {
-	reachable := make([]bool, len(a.states))
+func (p *Pattern) CanMatch() bool {
+	reachable := make([]bool, len(p.states))
 	reachable[0] = true
 
 again:
 	changed := false
-	for i, s := range a.states {
+	for i, s := range p.states {
 		if reachable[i] {
 			for _, t := range s.transitions {
 				if !reachable[t.to] {
@@ -185,7 +265,7 @@ again:
 		goto again
 	}
 
-	for i, s := range a.states {
+	for i, s := range p.states {
 		if reachable[i] && s.end {
 			return true
 		}

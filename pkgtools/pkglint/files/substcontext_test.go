@@ -978,6 +978,22 @@ func (s *Suite) Test_substScope_finish__foreign_two_blocks_one_paragraph(c *chec
 			"Please add only one class at a time to SUBST_CLASSES.")
 }
 
+func (s *Suite) Test_substScope_finish__indirect_SUBST_FILES(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+= 1",
+		"SUBST_STAGE.1=  pre-configure",
+		"S1_CMD=         echo file",
+		"SUBST_FILES.1=  ${S1_CMD:sh}",
+		"SUBST_VARS.1=   PREFIX")
+
+	// Since S1_CMD is used in SUBST_FILES, it is not foreign
+	// but obviously belongs to the SUBST block.
+	// Before 2020-06-20, pkglint had warned about this.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_substScope_prepareSubstClasses(c *check.C) {
 	t := s.Init(c)
 
