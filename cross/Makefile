@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2020/04/14 22:02:21 js Exp $
+# $NetBSD: Makefile,v 1.99 2020/06/20 14:34:10 thorpej Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -57,6 +57,8 @@ SUBDIR+=	mingw-w64-x86_64-gcc-bootstrap
 SUBDIR+=	mingw-w64-x86_64-gcc-winpthreads
 SUBDIR+=	mingw-w64-x86_64-headers
 SUBDIR+=	mingw-w64-x86_64-winpthreads
+SUBDIR+=	mipsel-none-elf-binutils
+SUBDIR+=	mipsel-none-elf-gcc
 #SUBDIR+=	nios2			# just contains makefile fragments
 SUBDIR+=	nios2-binutils
 SUBDIR+=	nios2-gcc
