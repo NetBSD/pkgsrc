@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/05/10 02:14:18 js Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/20 19:30:48 js Exp $
 
-DISTNAME=	sdk-source-20191111
-PKGNAME=	ppc-morphos-binutils-2.33.1
+DISTNAME=	sdk-source-20200422
+PKGNAME=	ppc-morphos-binutils-2.34
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/src/sdk/
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/sdk-source/binutils/binutils-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		xzcat gtar patch gmake makeinfo
+USE_TOOLS+=		xzcat gtar patch gmake makeinfo perl
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
