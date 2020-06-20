@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/20 14:32:33 thorpej Exp $
+
+SHA1 (binutils-2.32.tar.bz2) = ee5ae264f29c0c89fbaa817ee629675acd815d26
+RMD160 (binutils-2.32.tar.bz2) = 4d6c948ded0c20afeb4e7807d120b50d534770cc
+SHA512 (binutils-2.32.tar.bz2) = 99ec7ed2b5ebfd3ac16cecb1567ec4a72f81ac30717002d601708f7547b2f8122ffcce076c986f22894aede33c54c73012210a4e973ba9b6e2d87a242a2bee12
+Size (binutils-2.32.tar.bz2) = 30782392 bytes
