@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.49 2020/06/11 20:10:53 rillig Exp $
+# $NetBSD: subst.sh,v 1.50 2020/06/20 16:26:11 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1683,7 +1683,7 @@ if test_case_begin 'multiple sed commands with semicolon'; then
 fi
 
 
-if test_case_begin 'several substitution, only one applies to file'; then
+if test_case_begin 'several substitutions, only one applies to file'; then
 
 	# https://mail-index.netbsd.org/pkgsrc-changes/2020/06/06/msg215480.html
 
