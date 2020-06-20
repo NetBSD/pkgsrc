@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/04/14 21:55:31 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/20 19:40:56 js Exp $
 
 PKGNAME=	ppc-morphos-${DISTNAME}
-PKGREVISION=	2
-DISTNAME=	sdk-20191111
+DISTNAME=	sdk-20200422
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/
 EXTRACT_SUFX=	.lha
@@ -23,6 +22,9 @@ DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 WRKSRC=		${WRKDIR}/morphossdk
 USE_TOOLS+=	xzcat gtar gsed
 USE_LANGUAGES=	# none
+
+# These are wrong all over the place.
+CHECK_PERMS_SKIP=	*
 
 do-build:
 
