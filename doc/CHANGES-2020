@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3717 2020/06/20 17:48:15 thorpej Exp $
+$NetBSD: CHANGES-2020,v 1.3718 2020/06/20 19:08:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5982,3 +5982,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-lexicon to 3.3.26 [adam 2020-06-20]
 	Updated sysutils/u-boot-bananapi-r2 to 2020.04 [thorpej 2020-06-20]
 	Added sysutils/u-boot-ci20 version 2020.04 [thorpej 2020-06-20]
+	Updated security/pcsc-lite to 1.9.0 [adam 2020-06-20]
+	Updated security/opensc to 0.20.0nb2 [adam 2020-06-20]
