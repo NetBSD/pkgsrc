@@ -1,4 +1,5 @@
-$NetBSD: patch-g2clib_enc_jpeg2000.c,v 1.1 2019/10/28 19:02:35 bouyer Exp $
+$NetBSD: patch-g2clib_enc_jpeg2000.c,v 1.2 2020/06/20 21:34:26 mef Exp $
+
 https://github.com/cloudruninc/wps/issues/5
 
 --- g2clib/enc_jpeg2000.c.orig	2019-10-28 18:40:41.262350843 +0100
