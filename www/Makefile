@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1462 2020/06/16 09:14:21 pin Exp $
+# $NetBSD: Makefile,v 1.1463 2020/06/20 15:13:56 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -99,6 +99,7 @@ SUBDIR+=	emacs-w3m-snapshot
 SUBDIR+=	epiphany
 SUBDIR+=	fcgi
 SUBDIR+=	fcgiwrap
+SUBDIR+=	felinks
 SUBDIR+=	fengoffice
 SUBDIR+=	ffproxy
 SUBDIR+=	firefox
