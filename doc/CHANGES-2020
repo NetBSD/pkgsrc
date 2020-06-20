@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3721 2020/06/20 21:38:14 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3722 2020/06/20 22:33:12 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5988,3 +5988,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated cross/ppc-morphos-sdk to 20200422 [js 2020-06-20]
 	Updated www/liferea to 1.12.8 [adam 2020-06-20]
 	Updated databases/prometheus to 2.19.1 [adam 2020-06-20]
+	Added sysutils/u-boot-jetson-nano version 2020.04 [thorpej 2020-06-20]
