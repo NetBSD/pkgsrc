@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/04/30 15:29:33 manu Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/06/20 19:08:19 adam Exp $
 bin/cardos-tool
 bin/cryptoflex-tool
 bin/dnie-tool
@@ -22,7 +22,6 @@ bin/pkcs15-init
 bin/pkcs15-tool
 bin/sc-hsm-tool
 bin/westcos-tool
-etc/xdg/autostart/pkcs11-register.desktop
 lib/libopensc.la
 lib/libsmm-local.la
 lib/onepin-opensc-pkcs11.la
