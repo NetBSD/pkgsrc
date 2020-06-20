@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/20 15:13:56 nia Exp $
+
+SHA1 (felinks-0.13.2.tar.gz) = 34d1ee729442b391422bf8a0485d3ae734dd38c8
+RMD160 (felinks-0.13.2.tar.gz) = 71b855c4d0a7383a57afa065b7f8e259f0d9ec98
+SHA512 (felinks-0.13.2.tar.gz) = 7136ad8d5bf1a7a5aa40f213815f62fb92cdd56f6ad7e45f0526a30d90885c7a1e40a72317d3bbe0da8222e2cfd5439b4778f60c5418ff130a7cae97402080d0
+Size (felinks-0.13.2.tar.gz) = 3588685 bytes
+SHA1 (patch-src_util_memory.c) = dc390442f65d7cee70d28d6a6cba5ee0981eb83a
