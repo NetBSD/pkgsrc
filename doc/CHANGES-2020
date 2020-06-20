@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3708 2020/06/20 10:42:55 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3709 2020/06/20 12:43:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5962,3 +5962,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/haproxy to 2.1.7 [adam 2020-06-20]
 	Updated archivers/unrar to 5.9.3 [adam 2020-06-20]
 	Updated graphics/zbar to 0.23.1 [leot 2020-06-20]
+	Updated sysutils/zabbix to 4.0.21 [gdt 2020-06-20]
