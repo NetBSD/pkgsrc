@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2020/06/20 20:57:02 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/06/20 21:05:11 nia Exp $
 
 SHA1 (powder-toy-94.1.tar.gz) = 14249c100e38971444bb96fd31ff26fd24cc2190
 RMD160 (powder-toy-94.1.tar.gz) = 88671b2007f2f1a2ecc3a079cc961d3475742f56
@@ -8,4 +8,3 @@ SHA1 (patch-SConscript) = 73cb6c1efb0bfe7db2f8e67c3b8cff6aa93da313
 SHA1 (patch-resources_powder.appdata.xml) = e687b33b50c286ec2858bdf2024e201df4b8be8e
 SHA1 (patch-resources_powder.desktop) = 9c77feb557afbd2e5ad4fb0b5f15be1809214555
 SHA1 (patch-src_Config.h) = 01d9cced7a87b6f33b1974bf51dd9d93949d41a2
-SHA1 (patch-src_lua_luascripts_eventcompat.lua) = 8d32490978be03c85ccd3131e52fae0b750b34af
