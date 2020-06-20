@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/09/15 12:59:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2020/06/20 00:11:27 ryoon Exp $
 
-SHA1 (Remmina-v1.3.6.tar.gz) = 9a7778dbabb82b62207d97ed6b2bd25fffb1a080
-RMD160 (Remmina-v1.3.6.tar.gz) = 012bc4e6711a2aa1aaff96c77615ef9b5f2eb944
-SHA512 (Remmina-v1.3.6.tar.gz) = ce16379aa163467d05018c900d0dc7c2a7d73c1c22dd06a9a3092efa7675fda505bfa31b20131b9a3a10c74788377db17961c0bc9e59c47b1c7a15bf347f3bab
-Size (Remmina-v1.3.6.tar.gz) = 1538166 bytes
-SHA1 (patch-data_desktop_remmina-file-wrapper.sh.in) = 2d12db8fae340b8933ca27501ace029e30893f2a
+SHA1 (Remmina-v1.4.6.tar.gz) = 5155c43b1fc240e21699b84f58d02be539329c43
+RMD160 (Remmina-v1.4.6.tar.gz) = 1708aa5cf3aacbf26aac519645d984a2b8d39da8
+SHA512 (Remmina-v1.4.6.tar.gz) = 8b918502622957f6a1637d5d79ec605f7bf1c164f902c76a3a65dc316a8ccd11de63066182ffad4783bcb7f86d5e04ca6462f6a5d2e4256c4ae14c6f483419ea
+Size (Remmina-v1.4.6.tar.gz) = 1895441 bytes
