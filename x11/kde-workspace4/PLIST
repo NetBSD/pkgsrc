@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/01/17 19:10:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/06/20 07:38:54 rillig Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -156,7 +156,6 @@ lib/kde4/kcm_keys.so
 lib/kde4/kcm_krunner_kill.so
 lib/kde4/kcm_ksplashthemes.so
 lib/kde4/kcm_kwin4_effect_builtins.so
-${PLIST.gles}lib/kde4/kwin4_effect_gles_builtins.so
 lib/kde4/kcm_kwin4_genericscripted.so
 lib/kde4/kcm_kwin_scripts.so
 lib/kde4/kcm_kwincompositing.so
@@ -188,8 +187,8 @@ lib/kde4/kded_freespacenotifier.so
 lib/kde4/kded_kephal.so
 lib/kde4/kded_keyboard.so
 lib/kde4/kded_khotkeys.so
-${PLIST.utempter}lib/kde4/kded_kwrited.so
 lib/kde4/kded_ktouchpadenabler.so
+${PLIST.utempter}lib/kde4/kded_kwrited.so
 lib/kde4/kded_powerdevil.so
 lib/kde4/kded_randrmonitor.so
 lib/kde4/kded_statusnotifierwatcher.so
@@ -221,6 +220,7 @@ lib/kde4/kwin3_b2.so
 lib/kde4/kwin3_laptop.so
 lib/kde4/kwin3_oxygen.so
 lib/kde4/kwin4_effect_builtins.so
+${PLIST.gles}lib/kde4/kwin4_effect_gles_builtins.so
 lib/kde4/kwin_b2_config.so
 lib/kde4/kwin_oxygen_config.so
 lib/kde4/libexec/fontinst
@@ -426,10 +426,6 @@ lib/libweather_ion.so.6.0.0
 ${PYSITELIB}/PyKDE4/plasmascript.py
 ${PYSITELIB}/PyKDE4/plasmascript.pyc
 lib/strigi/strigita_font.so
-share/polkit-1/actions/org.kde.fontinst.policy
-share/polkit-1/actions/org.kde.kcontrol.kcmclock.policy
-share/polkit-1/actions/org.kde.kcontrol.kcmkdm.policy
-share/polkit-1/actions/org.kde.ksysguard.processlisthelper.policy
 share/applications/kde4/kdesystemsettings.desktop
 share/applications/kde4/kfontview.desktop
 share/applications/kde4/kinfocenter.desktop
@@ -1838,8 +1834,8 @@ share/kde4/services/kded/freespacenotifier.desktop
 share/kde4/services/kded/kephal.desktop
 share/kde4/services/kded/keyboard.desktop
 share/kde4/services/kded/khotkeys.desktop
-${PLIST.utempter}share/kde4/services/kded/kwrited.desktop
 share/kde4/services/kded/ktouchpadenabler.desktop
+${PLIST.utempter}share/kde4/services/kded/kwrited.desktop
 share/kde4/services/kded/powerdevil.desktop
 share/kde4/services/kded/randrmonitor.desktop
 share/kde4/services/kded/statusnotifierwatcher.desktop
@@ -2147,5 +2143,9 @@ share/kde4/servicetypes/solid-device-type.desktop
 share/kde4/servicetypes/systemsettingscategory.desktop
 share/kde4/servicetypes/systemsettingsexternalapp.desktop
 share/kde4/servicetypes/systemsettingsview.desktop
+share/polkit-1/actions/org.kde.fontinst.policy
+share/polkit-1/actions/org.kde.kcontrol.kcmclock.policy
+share/polkit-1/actions/org.kde.kcontrol.kcmkdm.policy
+share/polkit-1/actions/org.kde.ksysguard.processlisthelper.policy
 share/sounds/pop.wav
 @pkgdir share/kde/config/kdm/sessions
