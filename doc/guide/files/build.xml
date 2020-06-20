@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.84 2020/06/20 04:18:41 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.85 2020/06/20 15:25:01 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -467,14 +467,19 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     invoked by setting <varname>HAS_CONFIGURE</varname> to
     <quote>yes</quote>. If the configure script is a GNU autoconf
     script, you should set <varname>GNU_CONFIGURE</varname> to
-    <quote>yes</quote> instead. What happens in the
-    <emphasis>configure</emphasis> phase is roughly:</para>
+    <quote>yes</quote> instead.</para>
+
+    <para>In the <literal>do-configure</literal> stage, a rough
+    equivalent of the following command is run. See
+    <filename>mk/configure/configure.mk</filename>, target
+    <literal>do-configure-script</literal> for the exact
+    definition.</para>
 
 <programlisting>
-.for d in ${CONFIGURE_DIRS}
-        cd ${WRKSRC} \
-        &amp;&amp; cd ${d} \
-        &amp;&amp; env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+.for dir in ${CONFIGURE_DIRS}
+        cd ${WRKSRC} &amp;&amp; cd ${dir} \
+        &amp;&amp; env ${CONFIGURE_ENV} \
+            ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .endfor
 </programlisting>
 
@@ -521,15 +526,15 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
   <sect1 id="build.build">
     <title>The <emphasis>build</emphasis> phase</title>
 
-    <para>For building a package, a rough equivalent of the
-    following code is executed.</para>
+    <para>For building a package, a rough equivalent of the following
+    code is executed; see <filename>mk/build/build.mk</filename>, target
+    <literal>do-build</literal> for the exact definition.</para>
 
 <programlisting>
-.for d in ${BUILD_DIRS}
-        cd ${WRKSRC} \
-        &amp;&amp; cd ${d} \
+.for dir in ${BUILD_DIRS}
+        cd ${WRKSRC} &amp;&amp; cd ${dir} \
         &amp;&amp; env ${MAKE_ENV} \
-            ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+            ${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS} \
                 -f ${MAKE_FILE} \
                 ${BUILD_TARGET}
 .endfor
@@ -572,19 +577,20 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     install the software in public directories, so users can
     access the programs and files.</para>
 
-    <para>In the <emphasis>install</emphasis> phase, a rough
-    equivalent of the following code is executed. Additionally,
-    before and after this code, much magic is performed to do
-    consistency checks, registering the package, and so on.</para>
+    <para>In the <emphasis>install</emphasis> phase, a rough equivalent
+    of the following code is executed; see
+    <filename>mk/install/install.mk</filename>, target
+    <literal>do-install</literal> for the exact definition. Additionally,
+    before and after this code, several consistency checks are run
+    against the files-to-be-installed, see
+    <filename>mk/check/*.mk</filename> for details.</para>
 
 <programlisting>
-.for d in ${INSTALL_DIRS}
-        cd ${WRKSRC} \
-        &amp;&amp; cd ${d} \
-        &amp;&amp; env ${MAKE_ENV} \
-            ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                -f ${MAKE_FILE} \
-                ${INSTALL_TARGET}
+.for dir in ${INSTALL_DIRS}
+        cd ${WRKSRC} &amp;&amp; cd ${dir} \
+        &amp;&amp; env ${INSTALL_ENV} ${MAKE_ENV} \
+            ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} \
+                -f ${MAKE_FILE} ${INSTALL_TARGET}
 .endfor
 </programlisting>
 
