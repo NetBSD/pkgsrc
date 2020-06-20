@@ -1,6 +1,6 @@
-$NetBSD: patch-src_utils.c,v 1.2 2014/10/01 16:27:03 gdt Exp $
+$NetBSD: patch-src_utils.c,v 1.3 2020/06/20 19:03:37 adam Exp $
 
-Make sure libpscslite.so is not linked against -lpthread on NetBSD, as
+Make sure libpcsclite.so is not linked against -lpthread on NetBSD, as
 loading libpthread.so through dlopen() is now forbidden.
 
 --- src/utils.c.orig	2014-08-08 16:57:27.000000000 +0000

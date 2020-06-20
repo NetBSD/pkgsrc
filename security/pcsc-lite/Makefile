@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2019/11/04 21:12:57 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/06/20 19:03:37 adam Exp $
 
-DISTNAME=	pcsc-lite-1.8.24
-PKGREVISION=	1
+DISTNAME=	pcsc-lite-1.9.0
 CATEGORIES=	security
 # Note that the MASTER_SITES URL is not stable with version changes,
 # and one can end up with an old version if DISTNAME is changed but
@@ -12,24 +11,19 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pcsclite.apdu.fr/
-
 COMMENT=	Middleware to access a smart card using SCard API (PC/SC)
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		spy
-#REPLACE_PYTHON=	src/spy/pcsc-spy
-#.include "../../lang/python/application.mk"
-
-CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--enable-confdir=${PKG_SYSCONFDIR:Q}/reader.conf.d
+CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--enable-confdir=${PKG_SYSCONFDIR}/reader.conf.d
 CONFIGURE_ARGS+=	--enable-ipcdir=${VARBASE}/pcsc-lite
 CONFIGURE_ARGS+=	--enable-usbdropdir=${PREFIX}/lib/pcsc-lite/drivers
 CONFIGURE_ARGS+=	--disable-libudev
