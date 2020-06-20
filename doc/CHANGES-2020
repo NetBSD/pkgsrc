@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3702 2020/06/20 00:11:59 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3703 2020/06/20 06:59:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5950,3 +5950,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated filesystems/squashfs to 4.4 [scole 2020-06-19]
 	Updated x11/vte3 to 0.60.3 [ryoon 2020-06-20]
 	Updated net/remmina to 1.4.6 [ryoon 2020-06-20]
+	Updated sysutils/ansible to 2.9.10 [adam 2020-06-20]
+	Updated net/terraform-provider-aws to 2.67.0 [adam 2020-06-20]
