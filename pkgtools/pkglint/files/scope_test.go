@@ -34,6 +34,43 @@ func (s *Suite) Test_Scope__commented_varassign(c *check.C) {
 	t.CheckEquals(indeterminate, false)
 }
 
+func (s *Suite) Test_NewScope(c *check.C) {
+	t := s.Init(c)
+
+	scope := NewScope()
+
+	t.Check(scope.names, check.IsNil)
+	t.Check(scope.vs, check.NotNil)
+	t.Check(scope.vs, check.HasLen, 0)
+}
+
+func (s *Suite) Test_Scope_varnames(c *check.C) {
+	t := s.Init(c)
+
+	scope := NewScope()
+	mkline := t.NewMkLine("filename.mk", 3, "DEFINED=\t${USED}")
+
+	t.Check(scope.varnames(), check.IsNil)
+
+	scope.Define("DEFINED", mkline)
+	scope.Use("USED", mkline, VucRunTime)
+
+	t.CheckDeepEquals(scope.varnames(), []string{"DEFINED", "USED"})
+	scope.varnames()[0] = "modified" // just to demonstrate the caching
+	t.CheckDeepEquals(scope.varnames(), []string{"modified", "USED"})
+}
+
+func (s *Suite) Test_Scope_create(c *check.C) {
+	t := s.Init(c)
+
+	scope := NewScope()
+
+	v1 := scope.create("VAR")
+	v2 := scope.create("VAR")
+
+	t.CheckEquals(v1, v2)
+}
+
 func (s *Suite) Test_Scope_Define(c *check.C) {
 	t := s.Init(c)
 
@@ -75,6 +112,45 @@ func (s *Suite) Test_Scope_Define(c *check.C) {
 		true, true, "")
 }
 
+func (s *Suite) Test_Scope_def(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
+	scope := NewScope()
+
+	scope.def("VAR.param", mkline)
+
+	t.Check(scope.FirstDefinition("VAR"), check.IsNil)
+	t.CheckEquals(scope.FirstDefinition("VAR.param"), mkline)
+	t.Check(scope.FirstDefinition("VAR.*"), check.IsNil)
+}
+
+func (s *Suite) Test_Scope_Fallback(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
+	scope := NewScope()
+	scope.def("VAR.param", mkline)
+
+	scope.Fallback("FALLBACK", "fallback")
+
+	t.CheckEquals(scope.LastValue("VAR.param"), "value")
+	t.CheckEquals(scope.LastValue("FALLBACK"), "fallback")
+	t.CheckEquals(scope.LastValue("UNDEFINED"), "")
+}
+
+func (s *Suite) Test_Scope_Use(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 3, "VAR=\t${USED}")
+	scope := NewScope()
+	scope.Define("VAR", mkline)
+	scope.Use("USED", mkline, VucRunTime)
+
+	t.CheckEquals(scope.LastValue("VAR"), "${USED}")
+	t.CheckEquals(scope.LastValue("USED"), "")
+}
+
 func (s *Suite) Test_Scope_Mentioned(c *check.C) {
 	t := s.Init(c)
 
@@ -102,6 +178,13 @@ func (s *Suite) Test_Scope_IsDefined(c *check.C) {
 	t.CheckEquals(scope.IsDefined("VAR.param"), true)
 	t.CheckEquals(scope.IsDefined("VAR.other"), false)
 	t.CheckEquals(scope.IsDefined("VARIABLE.*"), false)
+}
+
+func (s *Suite) Test_Scope_IsDefinedSimilar(c *check.C) {
+	t := s.Init(c)
+
+	scope := NewScope()
+	scope.Define("VAR.param", t.NewMkLine("file.mk", 1, "VAR.param=value"))
 
 	t.CheckEquals(scope.IsDefinedSimilar("VAR.param"), true)
 	t.CheckEquals(scope.IsDefinedSimilar("VAR.other"), true)
@@ -118,23 +201,47 @@ func (s *Suite) Test_Scope_IsUsed(c *check.C) {
 	t.CheckEquals(scope.IsUsed("VAR.param"), true)
 	t.CheckEquals(scope.IsUsed("VAR.other"), false)
 	t.CheckEquals(scope.IsUsed("VARIABLE.*"), false)
+}
+
+func (s *Suite) Test_Scope_IsUsedSimilar(c *check.C) {
+	t := s.Init(c)
+
+	scope := NewScope()
+	mkline := t.NewMkLine("file.mk", 1, "\techo ${VAR.param}")
+	scope.Use("VAR.param", mkline, VucRunTime)
 
 	t.CheckEquals(scope.IsUsedSimilar("VAR.param"), true)
 	t.CheckEquals(scope.IsUsedSimilar("VAR.other"), true)
 	t.CheckEquals(scope.IsUsedSimilar("VARIABLE.*"), false)
 }
 
+func (s *Suite) Test_Scope_IsUsedAtLoadTime(c *check.C) {
+	t := s.Init(c)
+
+	scope := NewScope()
+	mkline := t.NewMkLine("file.mk", 1, "\techo ${VAR.param}")
+
+	scope.Use("LOAD_TIME", mkline, VucLoadTime)
+	scope.Use("RUN_TIME", mkline, VucRunTime)
+
+	t.CheckEquals(scope.IsUsedAtLoadTime("LOAD_TIME"), true)
+	t.CheckEquals(scope.IsUsedAtLoadTime("RUN_TIME"), false)
+	t.CheckEquals(scope.IsUsedAtLoadTime("UNDEFINED"), false)
+}
+
 func (s *Suite) Test_Scope_FirstDefinition(c *check.C) {
 	t := s.Init(c)
 
-	mkline1 := t.NewMkLine("fname.mk", 3, "VAR=\tvalue")
-	mkline2 := t.NewMkLine("fname.mk", 3, ".if ${SNEAKY::=value}")
+	mkline3 := t.NewMkLine("fname.mk", 3, "VAR=\tvalue")
+	mkline4 := t.NewMkLine("fname.mk", 4, ".if ${SNEAKY::=value}")
+	mkline5 := t.NewMkLine("fname.mk", 5, ".if ${USED}")
 
 	scope := NewScope()
-	scope.Define("VAR", mkline1)
-	scope.Define("SNEAKY", mkline2)
+	scope.Define("VAR", mkline3)
+	scope.Define("SNEAKY", mkline4)
+	scope.Use("USED", mkline5, VucLoadTime)
 
-	t.CheckEquals(scope.FirstDefinition("VAR"), mkline1)
+	t.CheckEquals(scope.FirstDefinition("VAR"), mkline3)
 
 	// This call returns nil because it's not a variable assignment
 	// and the calling code typically assumes a variable definition.
@@ -142,9 +249,27 @@ func (s *Suite) Test_Scope_FirstDefinition(c *check.C) {
 	// case that only few people actually know. It's better that way.
 	t.Check(scope.FirstDefinition("SNEAKY"), check.IsNil)
 
+	t.Check(scope.FirstDefinition("USED"), check.IsNil)
+
 	t.CheckOutputLines(
-		"ERROR: fname.mk:3: Assignment modifiers like \":=\" " +
+		"ERROR: fname.mk:4: Assignment modifiers like \":=\" " +
 			"must not be used at all.")
+}
+
+func (s *Suite) Test_Scope_LastDefinition(c *check.C) {
+	t := s.Init(c)
+
+	mkline3 := t.NewMkLine("fname.mk", 3, "VAR=\tfirst")
+	mkline4 := t.NewMkLine("fname.mk", 4, "VAR=\t${USED}")
+
+	scope := NewScope()
+	scope.Define("VAR", mkline3)
+	scope.Define("VAR", mkline4)
+	scope.Use("USED", mkline4, VucRunTime)
+
+	t.CheckEquals(scope.LastDefinition("VAR"), mkline4)
+	t.Check(scope.LastDefinition("UNDEFINED"), check.IsNil)
+	t.Check(scope.LastDefinition("USED"), check.IsNil)
 }
 
 func (s *Suite) Test_Scope_Commented(c *check.C) {
@@ -153,16 +278,39 @@ func (s *Suite) Test_Scope_Commented(c *check.C) {
 	assigned := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
 	commented := t.NewMkLine("filename.mk", 4, "#COMMENTED=\tvalue")
 	documented := t.NewMkLine("filename.mk", 5, "# DOCUMENTED is a variable.")
+	used := t.NewMkLine("filename.mk", 6, "ANY=\t${USED}")
 
 	scope := NewScope()
 	scope.Define("VAR", assigned)
 	scope.Define("COMMENTED", commented)
 	scope.Define("DOCUMENTED", documented)
+	scope.Use("USED", used, VucRunTime)
 
 	t.Check(scope.Commented("VAR"), check.IsNil)
 	t.CheckEquals(scope.Commented("COMMENTED"), commented)
 	t.Check(scope.Commented("DOCUMENTED"), check.IsNil)
 	t.Check(scope.Commented("UNKNOWN"), check.IsNil)
+	t.Check(scope.Commented("USED"), check.IsNil)
+}
+
+func (s *Suite) Test_Scope_FirstUse(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("file.mk",
+		MkCvsID,
+		"VAR1=\t${USED}",
+		"VAR2=\t${USED}")
+
+	mklines.Check()
+
+	scope := mklines.allVars
+	t.CheckEquals(scope.FirstUse("USED"), mklines.mklines[1])
+	t.Check(scope.FirstUse("UNUSED"), check.IsNil)
+
+	t.CheckOutputLines(
+		"WARN: file.mk:2: VAR1 is defined but not used.",
+		"WARN: file.mk:2: USED is used but not defined.",
+		"WARN: file.mk:3: VAR2 is defined but not used.")
 }
 
 func (s *Suite) Test_Scope_LastValue(c *check.C) {
@@ -210,10 +358,37 @@ func (s *Suite) Test_Scope_LastValue__append_in_multiple_files(c *check.C) {
 	t.CheckEquals(pkg.vars.LastValue("PLIST_VARS"), "one two")
 }
 
+func (s *Suite) Test_Scope_LastValueFound(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("file.mk",
+		MkCvsID,
+		"VAR=\tfirst",
+		"VAR=\tsecond",
+		".if 1",
+		"VAR=\tthird (conditional)",
+		".endif")
+
+	mklines.Check()
+
+	value, found, indeterminate := mklines.allVars.LastValueFound("VAR")
+	t.CheckEquals(value, "third (conditional)")
+	t.CheckEquals(found, true)
+	t.CheckEquals(indeterminate, false) // TODO: why?
+
+	t.CheckOutputLines(
+		"WARN: file.mk:2: VAR is defined but not used.")
+}
+
+// Scope.DefineAll copies only the variable definitions,
+// but not the uses of variables.
 func (s *Suite) Test_Scope_DefineAll(c *check.C) {
 	t := s.Init(c)
 
+	mkline := t.NewMkLine("filename.mk", 123, "VAR=\t${USED}")
+
 	src := NewScope()
+	src.Use("USED", mkline, VucRunTime)
 
 	dst := NewScope()
 	dst.DefineAll(&src)
@@ -224,4 +399,23 @@ func (s *Suite) Test_Scope_DefineAll(c *check.C) {
 	dst.DefineAll(&src)
 
 	t.CheckEquals(dst.IsDefined("VAR"), true)
+}
+
+func (s *Suite) Test_Scope_forEach(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "VAR=\t${USED}")
+
+	scope := NewScope()
+	scope.Define("VAR", mkline)
+	scope.Use("USED", mkline, VucRunTime)
+
+	var result []string
+	scope.forEach(func(varname string, data *scopeVar) {
+		result = append(result, varname+"="+data.value)
+	})
+
+	t.CheckDeepEquals(result, []string{
+		"USED=",
+		"VAR=${USED}"})
 }
