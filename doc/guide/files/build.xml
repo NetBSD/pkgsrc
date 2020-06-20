@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.83 2020/06/05 17:05:22 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.84 2020/06/20 04:18:41 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -717,8 +717,9 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	<term>pre/post-*</term>
 
 	<listitem>
-	  <para>For any of the main targets described in the
-	  previous section, two auxiliary targets exist with
+	  <para>For any of the main targets described in the previous
+	  section (configure, build, install, etc.), two auxiliary
+	  targets exist with
 	  <quote>pre-</quote> and <quote>post-</quote> used as a
 	  prefix for the main target's name.  These targets are
 	  invoked before and after the main target is called,
@@ -726,6 +727,11 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  performed from a package's Makefile, for example, which
 	  a program's configure script or install target
 	  omitted.</para>
+
+	  <para>About 5% of the pkgsrc packages define their custom
+	  post-extract target, another 5% define pre-configure, and 10%
+	  define post-install. The other pre/post-* targets are defined
+	  even less often.</para>
 	</listitem>
       </varlistentry>
 
@@ -738,8 +744,11 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  redefine it with the do-* target.  (Note that redefining
 	  the target itself instead of the do-* target is a bad
 	  idea, as the pre-* and post-* targets won't be called
-	  anymore, etc.) You will not usually need to do
-	  this.</para>
+	  anymore, etc.)</para>
+
+	  <para>About 15% of the pkgsrc packages override the default
+	  do-install, the other do-* targets are overridden even less
+	  often.</para>
 	</listitem>
       </varlistentry>
 
