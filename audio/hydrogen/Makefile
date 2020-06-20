@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/06/18 12:57:48 nia Exp $
+# $NetBSD: Makefile,v 1.63 2020/06/20 18:38:34 adam Exp $
 
 DISTNAME=	hydrogen-1.0.0.rc1
 CATEGORIES=	audio
@@ -42,5 +42,7 @@ PREFER.libarchive=	pkgsrc
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt5-qttools= build
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
