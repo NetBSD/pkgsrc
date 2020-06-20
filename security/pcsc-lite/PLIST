@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/01/15 20:56:03 wiz Exp $
-${PLIST.spy}bin/pcsc-spy
+@comment $NetBSD: PLIST,v 1.8 2020/06/20 19:03:37 adam Exp $
 include/PCSC/debuglog.h
 include/PCSC/ifdhandler.h
 include/PCSC/pcsclite.h
@@ -7,9 +6,7 @@ include/PCSC/reader.h
 include/PCSC/winscard.h
 include/PCSC/wintypes.h
 lib/libpcsclite.la
-${PLIST.spy}lib/libpcscspy.la
 lib/pkgconfig/libpcsclite.pc
-${PLIST.spy}man/man1/pcsc-spy.1
 man/man5/reader.conf.5
 man/man8/pcscd.8
 sbin/pcscd
