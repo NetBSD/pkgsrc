@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/12/09 14:20:56 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/20 12:43:46 gdt Exp $
 
-PKGREVISION= 1
+#PKGREVISION= 1
 .include "../../sysutils/zabbix/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-/}
@@ -12,7 +12,7 @@ NO_BUILD=		yes
 do-configure:
 	${DO_NADA}
 
-REPLACE_SH+=	${WRKSRC}/frontends/php/locale/*.sh
+REPLACE_SH+=	frontends/php/locale/*.sh
 
 .include "../../mk/bsd.prefs.mk"
 
