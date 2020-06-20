@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3713 2020/06/20 15:14:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3714 2020/06/20 16:23:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5968,3 +5968,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added cross/mipsel-none-elf-gcc version 8.3.0 [thorpej 2020-06-20]
 	Added x11/gnome-terminal version 3.36.2 [nia 2020-06-20]
 	Added www/felinks version 0.13.2 [nia 2020-06-20]
+	Updated net/py-smb to 1.2.1 [adam 2020-06-20]
+	Updated textproc/py-xmlschema to 1.2.2 [adam 2020-06-20]
+	Updated devel/py-xdis to 4.7.0 [adam 2020-06-20]
+	Updated lang/py-uncompyle6 to 3.7.1 [adam 2020-06-20]
