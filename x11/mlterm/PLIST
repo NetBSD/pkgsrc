@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2020/04/27 15:45:43 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.45 2020/06/20 07:50:45 rillig Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -17,23 +17,23 @@ lib/mef/libmef_zh.la
 lib/mlterm/libathena.la
 ${PLIST.bidi}lib/mlterm/libctl_bidi.la
 ${PLIST.ind}lib/mlterm/libctl_iscii.la
-${PLIST.canna}lib/mlterm/libim-canna.la
 ${PLIST.fbfiles}${PLIST.canna}lib/mlterm/libim-canna-fb.la
+${PLIST.canna}lib/mlterm/libim-canna.la
 ${PLIST.fbfiles}${PLIST.fcitx}lib/mlterm/libim-fcitx-fb.la
 ${PLIST.fcitx}lib/mlterm/libim-fcitx.la
-${PLIST.ibus}lib/mlterm/libim-ibus.la
 ${PLIST.fbfiles}${PLIST.ibus}lib/mlterm/libim-ibus-fb.la
-lib/mlterm/libim-kbd.la
+${PLIST.ibus}lib/mlterm/libim-ibus.la
 ${PLIST.fbfiles}lib/mlterm/libim-kbd-fb.la
-${PLIST.m17nlib}lib/mlterm/libim-m17nlib.la
+lib/mlterm/libim-kbd.la
 ${PLIST.fbfiles}${PLIST.m17nlib}lib/mlterm/libim-m17nlib-fb.la
+${PLIST.m17nlib}lib/mlterm/libim-m17nlib.la
 ${PLIST.scim}lib/mlterm/libim-scim.la
-${PLIST.skk}lib/mlterm/libim-skk.la
 ${PLIST.fbfiles}${PLIST.skk}lib/mlterm/libim-skk-fb.la
-${PLIST.uim}lib/mlterm/libim-uim.la
+${PLIST.skk}lib/mlterm/libim-skk.la
 ${PLIST.fbfiles}${PLIST.uim}lib/mlterm/libim-uim-fb.la
-${PLIST.wnn}lib/mlterm/libim-wnn.la
+${PLIST.uim}lib/mlterm/libim-uim.la
 ${PLIST.fbfiles}${PLIST.wnn}lib/mlterm/libim-wnn-fb.la
+${PLIST.wnn}lib/mlterm/libim-wnn.la
 ${PLIST.ind}lib/mlterm/libind_assamese.la
 ${PLIST.ind}lib/mlterm/libind_bengali.la
 ${PLIST.ind}lib/mlterm/libind_gujarati.la
