@@ -1,4 +1,5 @@
-<!-- $NetBSD: buildlink.xml,v 1.42 2020/06/18 20:30:12 wiz Exp $ -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $NetBSD: buildlink.xml,v 1.43 2020/06/20 09:47:05 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -406,17 +407,18 @@ BUILDLINK_TREE+=        -tiff
       <para>In such a case, the package's
       <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
       must be increased to require the new package version.  Then the
-      <varname>PKGREVISION</varname> of all packages that depend on
-      this package need to be increased, and if they have
-      <filename>buildlink3.mk</filename> files, their
-      <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
-      must be increased to the new version as well. This is required
-      so that a package will pull in the versions of the packages that
-      use the new ABI and that the packages'
-      <varname>PKGREVISION</varname>s uniquely identify the packages
-      built against the new ABI. The <filename
-      role="pkg">pkgtools/revbump</filename> package can help with
-      these updates.</para>
+      <varname>PKGREVISION</varname> of all packages
+      <replaceable>foo</replaceable> that depend on this package need
+      to be increased, and if they have
+      <filename>buildlink3.mk</filename> files,
+      <varname>BUILDLINK_ABI_DEPENDS.<replaceable>foo</replaceable></varname>
+      in their <filename>buildlink3.mk</filename> files must be
+      increased to the new version as well. This is required so that a
+      package will pull in the versions of the packages that use the
+      new ABI and that the packages' <varname>PKGREVISION</varname>s
+      uniquely identify the packages built against the new ABI. The
+      <filename role="pkg">pkgtools/revbump</filename> package can
+      help with these updates.</para>
 
       <para>See <xref linkend="dependencies"/> for more information
       about dependencies on other packages, including the
