@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3703 2020/06/20 06:59:42 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3704 2020/06/20 07:01:49 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5952,3 +5952,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/remmina to 1.4.6 [ryoon 2020-06-20]
 	Updated sysutils/ansible to 2.9.10 [adam 2020-06-20]
 	Updated net/terraform-provider-aws to 2.67.0 [adam 2020-06-20]
+	Updated pkgtools/pkglint to 20.1.18 [rillig 2020-06-20]
