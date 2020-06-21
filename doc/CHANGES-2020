@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3744 2020/06/21 20:27:09 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3745 2020/06/21 22:39:11 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6012,3 +6012,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/u-boot-zynq-zybo version 2018.11 [thorpej 2020-06-21]
 	Updated sysutils/u-boot to 2018.11nb11 [thorpej 2020-06-21]
 	Added www/firefox_decrypt version 0.7.0 [wiz 2020-06-21]
+	Updated print/foliate to 2.3.0 [fox 2020-06-21]
