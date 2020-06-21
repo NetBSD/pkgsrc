@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3724 2020/06/21 03:55:17 mef Exp $
+$NetBSD: CHANGES-2020,v 1.3725 2020/06/21 04:09:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5992,3 +5992,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/u-boot-pandaboard version 2018.11 [thorpej 2020-06-20]
 	Updated sysutils/u-boot to 2018.11nb10 [thorpej 2020-06-20]
 	Updated editors/TeXmacs to 1.99.13 [mef 2020-06-21]
+	Updated editors/fe to 1.9 [mef 2020-06-21]
