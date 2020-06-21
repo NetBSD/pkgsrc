@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3730 2020/06/21 14:23:48 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3731 2020/06/21 14:27:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5998,3 +5998,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/spleen to 1.7.1 [fcambus 2020-06-21]
 	Updated meta-pkgs/netbsd-doc-print to 1.5 [rillig 2020-06-21]
 	Updated net/ruby-ruby_smb to 2.0.1 [taca 2020-06-21]
+	Updated time/ruby-iso8601 to 0.12.2 [taca 2020-06-21]
