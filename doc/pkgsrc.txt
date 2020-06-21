@@ -3702,13 +3702,16 @@ invocation results in generation of header files, Makefiles, etc.
 
 If the package contains a configure script, this can be invoked by setting
 HAS_CONFIGURE to "yes". If the configure script is a GNU autoconf script, you
-should set GNU_CONFIGURE to "yes" instead. What happens in the configure phase
-is roughly:
+should set GNU_CONFIGURE to "yes" instead.
 
-.for d in ${CONFIGURE_DIRS}
-        cd ${WRKSRC} \
-        && cd ${d} \
-        && env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+In the do-configure stage, a rough equivalent of the following command is run.
+See mk/configure/configure.mk, target do-configure-script for the exact
+definition.
+
+.for dir in ${CONFIGURE_DIRS}
+        cd ${WRKSRC} && cd ${dir} \
+        && env ${CONFIGURE_ENV} \
+            ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .endfor
 
 CONFIGURE_DIRS (default: ".") is a list of pathnames relative to WRKSRC. In
@@ -3738,13 +3741,13 @@ If there is no configure step at all, set NO_CONFIGURE to "yes".
 
 13.12. The build phase
 
-For building a package, a rough equivalent of the following code is executed.
+For building a package, a rough equivalent of the following code is executed;
+see mk/build/build.mk, target do-build for the exact definition.
 
-.for d in ${BUILD_DIRS}
-        cd ${WRKSRC} \
-        && cd ${d} \
+.for dir in ${BUILD_DIRS}
+        cd ${WRKSRC} && cd ${dir} \
         && env ${MAKE_ENV} \
-            ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+            ${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS} \
                 -f ${MAKE_FILE} \
                 ${BUILD_TARGET}
 .endfor
@@ -3769,17 +3772,16 @@ If there is no build step at all, set NO_BUILD to "yes".
 Once the build stage has completed, the final step is to install the software
 in public directories, so users can access the programs and files.
 
-In the install phase, a rough equivalent of the following code is executed.
-Additionally, before and after this code, much magic is performed to do
-consistency checks, registering the package, and so on.
+In the install phase, a rough equivalent of the following code is executed; see
+mk/install/install.mk, target do-install for the exact definition.
+Additionally, before and after this code, several consistency checks are run
+against the files-to-be-installed, see mk/check/*.mk for details.
 
-.for d in ${INSTALL_DIRS}
-        cd ${WRKSRC} \
-        && cd ${d} \
-        && env ${MAKE_ENV} \
-            ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                -f ${MAKE_FILE} \
-                ${INSTALL_TARGET}
+.for dir in ${INSTALL_DIRS}
+        cd ${WRKSRC} && cd ${dir} \
+        && env ${INSTALL_ENV} ${MAKE_ENV} \
+            ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} \
+                -f ${MAKE_FILE} ${INSTALL_TARGET}
 .endfor
 
 The variable's meanings are analogous to the ones in the build phase.
