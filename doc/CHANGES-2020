@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3726 2020/06/21 07:44:08 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3727 2020/06/21 08:02:19 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5994,3 +5994,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/TeXmacs to 1.99.13 [mef 2020-06-21]
 	Updated editors/fe to 1.9 [mef 2020-06-21]
 	Updated lang/nim to 1.2.2 [ryoon 2020-06-21]
+	Updated graphics/libansilove to 1.2.4 [fcambus 2020-06-21]
