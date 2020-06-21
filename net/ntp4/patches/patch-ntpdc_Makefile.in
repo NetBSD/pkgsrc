@@ -1,0 +1,17 @@
+$NetBSD: patch-ntpdc_Makefile.in,v 1.1 2020/06/21 15:10:47 taca Exp $
+
+* Changes from NetBSD base.
+
+--- ntpdc/Makefile.in.orig	2020-03-04 01:40:11.000000000 +0000
++++ ntpdc/Makefile.in
+@@ -1207,8 +1207,8 @@ ntpdc-layout.o: nl.c
+ layout.here: ntpdc-layout
+ 	./ntpdc-layout > $@
+ 
+-check-layout: ntpdc-layout $(srcdir)/layout.std layout.here
+-	cmp $(srcdir)/layout.std layout.here && echo stamp > $@
++check-layout: # ntpdc-layout $(srcdir)/layout.std layout.here
++#	cmp $(srcdir)/layout.std layout.here && echo stamp > $@
+ 
+ $(PROGRAMS): version.o
+ 
