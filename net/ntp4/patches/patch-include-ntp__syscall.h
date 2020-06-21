@@ -1,4 +1,6 @@
-$NetBSD: patch-include-ntp__syscall.h,v 1.1 2015/10/29 11:23:47 christos Exp $
+$NetBSD: patch-include-ntp__syscall.h,v 1.2 2020/06/21 15:10:47 taca Exp $
+
+* Changes from NetBSD base.
 
 --- include/ntp_syscall.h.orig	2011-03-31 10:03:53.000000000 +0000
 +++ include/ntp_syscall.h
