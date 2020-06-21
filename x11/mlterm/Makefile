@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.160 2020/06/02 08:25:02 adam Exp $
+# $NetBSD: Makefile,v 1.161 2020/06/21 17:53:01 tsutsui Exp $
 
 DISTNAME=	mlterm-3.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
@@ -52,12 +52,18 @@ SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing hardcoded paths in config files.
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	etc/font-fb
-SUBST_SED.conf=		-e 's|/usr/X11R7/|${X11BASE}/|g'
-SUBST_SED.conf+=	-e 's|/usr/pkg/|${PREFIX}/|g'
+SUBST_VARS.conf=	PREFIX X11BASE
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-SPECIAL_PERMS+=		bin/mlterm ${REAL_ROOT_USER} utmp 2755
+# XXX
+# setgid is required only on ancient systems that have
+# none of pututxline(3), setutent(3), or addToUtmp(3)
+# but have to use logwtmp(3) or open system's _PATH_UTMP
+# or _PATH_WTMP file directly to handle utmp entries.
+# configure script checks these functions automatically, but
+# no easy way to statically identify them per OS and version.
+#SPECIAL_PERMS+=		bin/mlterm ${REAL_ROOT_USER} utmp 2755
 
 INSTALLATION_DIRS=	share/doc/mlterm share/doc/mlterm/en share/doc/mlterm/ja
 
