@@ -1,0 +1,16 @@
+$NetBSD: patch-bin_perload,v 1.3 2020/06/21 07:35:25 mef Exp $
+
+$* is no longer supported as of Perl 5.30 at ../bin/perload line 463.
+
+--- bin/perload.orig	2020-06-21 07:22:20.380448528 +0000
++++ bin/perload
+@@ -460,8 +460,7 @@ sub flush_comment {
+ 
+ sub q {
+ 	local($_) = @_;
+-	local($*) = 1;
+-	s/^://g;
++	s/^://mg;
+ 	$_;
+ }
+ 
