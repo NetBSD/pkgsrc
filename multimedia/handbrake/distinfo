@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2020/02/13 23:12:37 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2020/06/21 09:00:48 mef Exp $
 
 SHA1 (handbrake/HandBrake-1.3.1-source.tar.bz2) = 213da9cebb19215d6e7ea49ac390ecc9cb6c749f
 RMD160 (handbrake/HandBrake-1.3.1-source.tar.bz2) = 2e586c8dae9d4a8b7c2fcb036fcdbff62f5c26d6
@@ -24,6 +24,10 @@ SHA1 (handbrake/libdvdread-6.0.2.tar.bz2) = a3d4b85cbe52b11cff7587ed010fa38ce512
 RMD160 (handbrake/libdvdread-6.0.2.tar.bz2) = 811f3199acabd487edce8741060e6499b53deb68
 SHA512 (handbrake/libdvdread-6.0.2.tar.bz2) = e8831a67bbf1a144e9298b59e5462889c8b0197592a3c169523b5d84d9b9c1aaa719ccde2aa98c490e04f2a94c3fa7244b286e8faed674ae8c70400a0ece9c6c
 Size (handbrake/libdvdread-6.0.2.tar.bz2) = 405298 bytes
+SHA1 (handbrake/meson-0.54.2.tar.gz) = 42d632ef821a01ffb46c0a84a49b4daf69a25077
+RMD160 (handbrake/meson-0.54.2.tar.gz) = 925f77346b04d85ca34d3cf37fc2d1125b223408
+SHA512 (handbrake/meson-0.54.2.tar.gz) = ad5ec826879d3d85088ca40d768599a4c8e66983f2a6a7ebe8ab12051cad18b4ade9a2afd30fe543b0a75900822992c8ef7161d369489e2211dd7a1a8ccc32ed
+Size (handbrake/meson-0.54.2.tar.gz) = 1691270 bytes
 SHA1 (handbrake/x265_3.2.1.tar.gz) = 0bd4889ff3ad596372ce2338f2d896947a2eec53
 RMD160 (handbrake/x265_3.2.1.tar.gz) = 7386c00a49a2fc143cd3c8cea657872235a8ba77
 SHA512 (handbrake/x265_3.2.1.tar.gz) = 5cb29b9d4475c1f686f6e31e47ccddde3db1639d5dcf9c058513389a9fdeb35a83b14e30e59498a76dec74bb0b410b6d8f5b1b45d18927be9811bb6a40d8d568
