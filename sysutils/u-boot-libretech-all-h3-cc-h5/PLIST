@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/21 19:43:48 thorpej Exp $
+share/u-boot/libretech-all-h3-cc-h5/installboot.plist
+share/u-boot/libretech-all-h3-cc-h5/u-boot-sunxi-with-spl.bin
