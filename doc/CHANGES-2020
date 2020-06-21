@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3735 2020/06/21 15:11:11 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3736 2020/06/21 15:25:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6003,3 +6003,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-metasploit-payloads to 2.0.5 [taca 2020-06-21]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.1 [taca 2020-06-21]
 	Updated net/ntp4 to 4.2.8p14 [taca 2020-06-21]
+	Updated net/ruby-twitter-text to 3.1.0 [taca 2020-06-21]
