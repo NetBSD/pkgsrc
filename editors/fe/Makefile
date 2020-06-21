@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2015/08/18 07:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/06/21 04:09:24 mef Exp $
 
-DISTNAME=	fe-1.8
-PKGREVISION=	2
+DISTNAME=	fe-1.9
 CATEGORIES=	editors
 MASTER_SITES=	http://www.moria.de/~michael/fe/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.moria.de/~michael/fe/
 COMMENT=	Folding editor
+LICENSE=	gnu-gpl-v1
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	msgfmt
