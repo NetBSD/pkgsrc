@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.10 2020/05/11 19:08:59 nikita Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/06/21 07:43:29 ryoon Exp $
 bin/nim
-nim/bin/nim
 bin/nimble
 bin/nimfind
 bin/nimgrep
 bin/nimpretty
 bin/nimsuggest
 bin/testament
+nim/bin/nim
+nim/bin/nim-gdb
+nim/bin/nim-gdb.bash
 nim/compiler.nimble
 nim/compiler/aliases.nim
 nim/compiler/asciitables.nim
@@ -19,6 +21,7 @@ nim/compiler/ccgcalls.nim
 nim/compiler/ccgexprs.nim
 nim/compiler/ccgliterals.nim
 nim/compiler/ccgmerge.nim
+nim/compiler/ccgreset.nim
 nim/compiler/ccgstmts.nim
 nim/compiler/ccgthreadvars.nim
 nim/compiler/ccgtrav.nim
