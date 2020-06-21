@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.28 2020/06/20 22:26:15 thorpej Exp $
+# $NetBSD: u-boot.mk,v 1.29 2020/06/21 10:06:53 wiz Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -13,8 +13,11 @@ HOMEPAGE?=	https://www.denx.de/wiki/U-Boot
 MASTER_SITES?=	ftp://ftp.denx.de/pub/u-boot/
 
 .if !empty(UBOOT_VERSION:M202[0-9].*)
-PYTHON_VERSIONS_ACCEPTED= 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 UBOOT_SWIG_VERSION=	3
+.else
+UBOOT_SWIG_VERSION=	3
+PYTHON_VERSIONS_ACCEPTED?=	27
 .endif
 
 TOOL_DEPENDS+=	dtc>=1.4.2:../../sysutils/dtc
@@ -30,13 +33,12 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison gmake gsed pkg-config gawk
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_ACCEPTED?=	27
 .include "../../lang/python/tool.mk"
 
-.if !empty(_PYTHON_VERSION_37_OK:M)
-ALL_ENV+= 		PYTHON3=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
-.else
+.if ${PYPKGPREFIX} == "py27"
 ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
+.else
+ALL_ENV+= 		PYTHON3=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 .endif
 ALL_ENV+=		PYTHONLIBPATH=-L$(LOCALBASE)/lib
 
