@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19926 2020/06/21 10:13:23 wiz Exp $
+$NetBSD: TODO,v 1.19927 2020/06/21 15:31:02 nia Exp $
 
 Suggested new packages
 ======================
@@ -1097,7 +1097,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-4.0.4
 	o tct-1.19
 	o tds-1.6.2
 	o ted-2.23
