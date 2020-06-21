@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2008/01/12 04:17:38 bjs Exp $
+$NetBSD: patch-ab,v 1.2 2020/06/21 04:09:24 mef Exp $
+
+Update to version 1.8.  This version adds folding for C++ programs.
+While here, add user-destdir support.
 
 --- Makefile.in.orig	2007-08-31 14:47:09.000000000 -0400
 +++ Makefile.in
