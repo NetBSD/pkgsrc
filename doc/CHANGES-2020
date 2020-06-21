@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3742 2020/06/21 16:49:06 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3743 2020/06/21 18:29:14 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6008,3 +6008,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-sshkey to 2.0.0 [taca 2020-06-21]
 	Updated www/php-ja-wordpress to 5.4.2 [taca 2020-06-21]
 	Updated www/drupal8 to 8.9.1 [taca 2020-06-21]
+	Added sysutils/u-boot-a20-olinuxino-micro version 2018.11 [thorpej 2020-06-21]
+	Added sysutils/u-boot-zynq-zybo version 2018.11 [thorpej 2020-06-21]
+	Updated sysutils/u-boot to 2018.11nb11 [thorpej 2020-06-21]
