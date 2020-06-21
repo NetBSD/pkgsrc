@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2015/05/17 12:32:33 tron Exp $
+# $NetBSD: Makefile,v 1.27 2020/06/21 10:33:06 rillig Exp $
 
-DISTNAME=	netbsd-doc-print-1.4
+DISTNAME=	netbsd-doc-print-1.5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,6 +25,7 @@ DEPENDS+=	tex-lh-[0-9]*:../../fonts/tex-lh
 DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
 DEPENDS+=	tex-picinpar-[0-9]*:../../print/tex-picinpar
 DEPENDS+=	tex-pslatex-[0-9]*:../../print/tex-pslatex
+DEPENDS+=	tex-epstopdf>=0:../../graphics/tex-epstopdf
 DEPENDS+=	tex-ly1-[0-9]*:../../fonts/tex-ly1
 USE_TOOLS+=	gs:run
 
