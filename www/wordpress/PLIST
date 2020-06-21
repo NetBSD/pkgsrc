@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2020/05/03 12:00:03 morr Exp $
+@comment $NetBSD: PLIST,v 1.44 2020/06/21 19:02:31 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -1257,6 +1257,7 @@ share/wordpress/wp-includes/images/toggle-arrow-2x.png
 share/wordpress/wp-includes/images/toggle-arrow.png
 share/wordpress/wp-includes/images/uploader-icons-2x.png
 share/wordpress/wp-includes/images/uploader-icons.png
+share/wordpress/wp-includes/images/w-logo-blue-white-bg.png
 share/wordpress/wp-includes/images/w-logo-blue.png
 share/wordpress/wp-includes/images/wlw/wp-comments.png
 share/wordpress/wp-includes/images/wlw/wp-icon.png
