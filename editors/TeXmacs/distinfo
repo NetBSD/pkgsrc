@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.72 2020/03/18 17:53:45 joerg Exp $
+$NetBSD: distinfo,v 1.73 2020/06/21 03:54:53 mef Exp $
 
-SHA1 (TeXmacs-1.99.11-src.tar.gz) = 53abe8011df033005ffa3530f23501833afed440
-RMD160 (TeXmacs-1.99.11-src.tar.gz) = 25a17545389f06b4ac49899fc2c8554612708b48
-SHA512 (TeXmacs-1.99.11-src.tar.gz) = 3f3481834baeeee93afc2c2de1666297b8c02d7dc5223b00ee93120e175503c91bdcc3d9ff4d8df498033064b2e67b12ffd47af9e8b95ad5eee12b47ec076855
-Size (TeXmacs-1.99.11-src.tar.gz) = 32798336 bytes
-SHA1 (patch-3rdparty_benchmark_CMakeLists.txt) = 3977244d6f130d6135f9eac5fc03ee41c40efb9d
+SHA1 (TeXmacs-1.99.13-src.tar.gz) = b95da965a047e82461f39e8641189ddf388453cb
+RMD160 (TeXmacs-1.99.13-src.tar.gz) = 5b3ef92a19929ffacd4ecbd358e4b839d124202f
+SHA512 (TeXmacs-1.99.13-src.tar.gz) = 26d178d3c5cad48746c27788948b06f29aedb814beb860b4517e143d1daa5c9cb8e61b728fac1b7dea93e1ae09d5e5294d623b33c14937016118ff511f697eb6
+Size (TeXmacs-1.99.13-src.tar.gz) = 37181886 bytes
 SHA1 (patch-cmake_FindGuile.cmake) = cb6085af098467d320ff65451df33bf552b2ddaa
 SHA1 (patch-misc_CMakeLists.txt) = 0534c9a1c66315d3189a4d6932ce56b3d7c2978a
-SHA1 (patch-misc_tm-devel-mac_Makefile) = 195fd3b38e9be56a89602b82d46591d529e9ef9c
+SHA1 (patch-misc_tm-devel-mac_Makefile) = acddf680138bee82ff46e1e9cb4a69be81d764b7
+SHA1 (patch-src_Plugins_Qt_QTMStyle.cpp) = e6001bf43f3a331b2bf5c69bf95378f7b15cb0f3
+SHA1 (patch-src_Plugins_Qt_qt__renderer.hpp) = 4462d168612938d9494d1d4b7135a5d04ff2a06e
