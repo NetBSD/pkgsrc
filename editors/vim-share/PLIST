@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2020/05/03 13:14:21 morr Exp $
+@comment $NetBSD: PLIST,v 1.51 2020/06/21 19:53:01 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -90,6 +90,7 @@ share/vim/${VIM_SUBDIR}/compiler/decada.vim
 share/vim/${VIM_SUBDIR}/compiler/dot.vim
 share/vim/${VIM_SUBDIR}/compiler/erlang.vim
 share/vim/${VIM_SUBDIR}/compiler/eruby.vim
+share/vim/${VIM_SUBDIR}/compiler/eslint.vim
 share/vim/${VIM_SUBDIR}/compiler/fortran_F.vim
 share/vim/${VIM_SUBDIR}/compiler/fortran_cv.vim
 share/vim/${VIM_SUBDIR}/compiler/fortran_elf90.vim
@@ -136,6 +137,7 @@ share/vim/${VIM_SUBDIR}/compiler/sass.vim
 share/vim/${VIM_SUBDIR}/compiler/se.vim
 share/vim/${VIM_SUBDIR}/compiler/splint.vim
 share/vim/${VIM_SUBDIR}/compiler/stack.vim
+share/vim/${VIM_SUBDIR}/compiler/standard.vim
 share/vim/${VIM_SUBDIR}/compiler/tcl.vim
 share/vim/${VIM_SUBDIR}/compiler/tex.vim
 share/vim/${VIM_SUBDIR}/compiler/tidy.vim
@@ -272,6 +274,7 @@ share/vim/${VIM_SUBDIR}/doc/usr_42.txt
 share/vim/${VIM_SUBDIR}/doc/usr_43.txt
 share/vim/${VIM_SUBDIR}/doc/usr_44.txt
 share/vim/${VIM_SUBDIR}/doc/usr_45.txt
+share/vim/${VIM_SUBDIR}/doc/usr_46.txt
 share/vim/${VIM_SUBDIR}/doc/usr_90.txt
 share/vim/${VIM_SUBDIR}/doc/usr_toc.txt
 share/vim/${VIM_SUBDIR}/doc/various.txt
@@ -301,6 +304,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/alsaconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ant.vim
 share/vim/${VIM_SUBDIR}/ftplugin/arch.vim
 share/vim/${VIM_SUBDIR}/ftplugin/art.vim
+share/vim/${VIM_SUBDIR}/ftplugin/asm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/aspvbs.vim
 share/vim/${VIM_SUBDIR}/ftplugin/automake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/awk.vim
@@ -346,6 +350,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/dtrace.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dune.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eiffel.vim
 share/vim/${VIM_SUBDIR}/ftplugin/elinks.vim
+share/vim/${VIM_SUBDIR}/ftplugin/elm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/erlang.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eruby.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eterm.vim
@@ -411,6 +416,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/make.vim
 share/vim/${VIM_SUBDIR}/ftplugin/man.vim
 share/vim/${VIM_SUBDIR}/ftplugin/manconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/markdown.vim
+share/vim/${VIM_SUBDIR}/ftplugin/masm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/matlab.vim
 share/vim/${VIM_SUBDIR}/ftplugin/meson.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mf.vim
@@ -552,6 +558,7 @@ share/vim/${VIM_SUBDIR}/indent/dtd.vim
 share/vim/${VIM_SUBDIR}/indent/dtrace.vim
 share/vim/${VIM_SUBDIR}/indent/dylan.vim
 share/vim/${VIM_SUBDIR}/indent/eiffel.vim
+share/vim/${VIM_SUBDIR}/indent/elm.vim
 share/vim/${VIM_SUBDIR}/indent/erlang.vim
 share/vim/${VIM_SUBDIR}/indent/eruby.vim
 share/vim/${VIM_SUBDIR}/indent/eterm.vim
@@ -622,6 +629,7 @@ share/vim/${VIM_SUBDIR}/indent/sh.vim
 share/vim/${VIM_SUBDIR}/indent/sml.vim
 share/vim/${VIM_SUBDIR}/indent/sql.vim
 share/vim/${VIM_SUBDIR}/indent/sqlanywhere.vim
+share/vim/${VIM_SUBDIR}/indent/sshconfig.vim
 share/vim/${VIM_SUBDIR}/indent/systemd.vim
 share/vim/${VIM_SUBDIR}/indent/systemverilog.vim
 share/vim/${VIM_SUBDIR}/indent/tcl.vim
@@ -907,6 +915,7 @@ share/vim/${VIM_SUBDIR}/syntax/edif.vim
 share/vim/${VIM_SUBDIR}/syntax/eiffel.vim
 share/vim/${VIM_SUBDIR}/syntax/elf.vim
 share/vim/${VIM_SUBDIR}/syntax/elinks.vim
+share/vim/${VIM_SUBDIR}/syntax/elm.vim
 share/vim/${VIM_SUBDIR}/syntax/elmfilt.vim
 share/vim/${VIM_SUBDIR}/syntax/erlang.vim
 share/vim/${VIM_SUBDIR}/syntax/eruby.vim
@@ -1115,6 +1124,7 @@ share/vim/${VIM_SUBDIR}/syntax/openroad.vim
 share/vim/${VIM_SUBDIR}/syntax/opl.vim
 share/vim/${VIM_SUBDIR}/syntax/ora.vim
 share/vim/${VIM_SUBDIR}/syntax/pamconf.vim
+share/vim/${VIM_SUBDIR}/syntax/pamenv.vim
 share/vim/${VIM_SUBDIR}/syntax/papp.vim
 share/vim/${VIM_SUBDIR}/syntax/pascal.vim
 share/vim/${VIM_SUBDIR}/syntax/passwd.vim

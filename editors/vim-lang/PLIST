@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/02/23 10:40:07 morr Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/06/21 19:53:01 morr Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -131,6 +131,30 @@ man/ru.UTF-8/man1/view.1
 man/ru.UTF-8/man1/vim.1
 man/ru.UTF-8/man1/vimdiff.1
 man/ru.UTF-8/man1/vimtutor.1
+man/tr.ISO8859-9/man1/evim.1
+man/tr.ISO8859-9/man1/ex.1
+man/tr.ISO8859-9/man1/rview.1
+man/tr.ISO8859-9/man1/rvim.1
+man/tr.ISO8859-9/man1/view.1
+man/tr.ISO8859-9/man1/vim.1
+man/tr.ISO8859-9/man1/vimdiff.1
+man/tr.ISO8859-9/man1/vimtutor.1
+man/tr.UTF-8/man1/evim.1
+man/tr.UTF-8/man1/ex.1
+man/tr.UTF-8/man1/rview.1
+man/tr.UTF-8/man1/rvim.1
+man/tr.UTF-8/man1/view.1
+man/tr.UTF-8/man1/vim.1
+man/tr.UTF-8/man1/vimdiff.1
+man/tr.UTF-8/man1/vimtutor.1
+man/tr/man1/evim.1
+man/tr/man1/ex.1
+man/tr/man1/rview.1
+man/tr/man1/rvim.1
+man/tr/man1/view.1
+man/tr/man1/vim.1
+man/tr/man1/vimdiff.1
+man/tr/man1/vimtutor.1
 share/vim/${VIM_SUBDIR}/keymap/README.txt
 share/vim/${VIM_SUBDIR}/keymap/accents.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic.vim
