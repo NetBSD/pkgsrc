@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.137 2020/06/02 08:23:42 adam Exp $
+# $NetBSD: Makefile,v 1.138 2020/06/21 03:54:53 mef Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
-DISTNAME=		TeXmacs-1.99.11-src
+DISTNAME=		TeXmacs-1.99.13-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		6
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/
@@ -20,6 +19,7 @@ DEPENDS+=		ps2pkm>=1.5:../../fonts/ps2pkm
 USE_CMAKE=		yes
 USE_TOOLS+=		gmake perl:run pkg-config bash
 USE_LANGUAGES=		c c++
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 
@@ -38,7 +38,7 @@ SUBST_STAGE.guile=	pre-configure
 SUBST_FILES.guile=	cmake/FindGuile.cmake
 SUBST_VARS.guile=	PREFIX
 
-SUBST_CLASSES+=	bash
+SUBST_CLASSES+=		bash
 SUBST_SED.bash+=	-e "s,/bin/bash,${PREFIX}/bin/bash,"
 SUBST_FILES.bash+=	src/Texmacs/Texmacs/texmacs.cpp
 SUBST_MESSAGE.bash=	Fixing hardcoded bash path.
