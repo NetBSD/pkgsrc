@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/11 17:52:00 rillig Exp $
-${HS_DOCS}${HS_IMPL}${HS_INTF}/package-description
-${HS_DOCS}${HS_IMPL}${HS_INTF}/package-id
-${HS_DOCS}${HS_IMPL}share/doc/x86_64-netbsd-ghc-8.8.1/bytestring-builder-${PKGVERSION}/LICENSE
+@comment $NetBSD: PLIST,v 1.2 2020/06/21 22:21:02 rillig Exp $
+${HS_INTF}/package-description
+${HS_INTF}/package-id
+share/doc/x86_64-netbsd-ghc-8.8.1/bytestring-builder-${PKGVERSION}/LICENSE
