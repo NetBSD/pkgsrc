@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/04/09 15:00:47 tm Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/06/21 10:21:00 mef Exp $
 bin/munin-get
 bin/munindoc
 lib/munin/plugins/amavis
@@ -49,6 +49,7 @@ lib/munin/plugins/hp2000_
 lib/munin/plugins/http_loadtime
 lib/munin/plugins/ifx_concurrent_sessions_
 lib/munin/plugins/ipac-ng
+lib/munin/plugins/ipmi_
 lib/munin/plugins/ipmi_sensor_
 lib/munin/plugins/ircu
 lib/munin/plugins/loggrep
@@ -71,6 +72,7 @@ lib/munin/plugins/mysql_queries
 lib/munin/plugins/mysql_slowqueries
 lib/munin/plugins/mysql_threads
 lib/munin/plugins/named
+lib/munin/plugins/netopia
 lib/munin/plugins/netstat
 lib/munin/plugins/nginx_request
 lib/munin/plugins/nginx_status
@@ -178,6 +180,7 @@ lib/munin/plugins/tomcat_access
 lib/munin/plugins/tomcat_jvm
 lib/munin/plugins/tomcat_threads
 lib/munin/plugins/tomcat_volume
+lib/munin/plugins/users
 lib/munin/plugins/varnish_
 lib/munin/plugins/vmstat
 lib/munin/plugins/zimbra_
