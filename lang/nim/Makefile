@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/06/14 16:15:54 nikita Exp $
+# $NetBSD: Makefile,v 1.16 2020/06/21 07:43:29 ryoon Exp $
 
-DISTNAME=	nim-1.2.0
-PKGREVISION=	1
+DISTNAME=	nim-1.2.2
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,15 @@ HOMEPAGE=	https://nim-lang.org/
 COMMENT=	The Nim programming language
 LICENSE=	mit
 
+DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
+
+USE_TOOLS+=	bash
+REPLACE_BASH+=	bin/nim-gdb
+
 INSTALLATION_DIRS=	bin
+
+post-patch:
+	cd ${WRKSRC}/bin && ${LN} -sf nim-gdb nim-gdb.bash
 
 do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} sh ./build.sh
