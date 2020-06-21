@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/12/09 18:00:46 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/06/21 15:26:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -14,6 +14,11 @@ ${GEM_LIBDIR}/lib/twitter/configuration.rb
 ${GEM_LIBDIR}/lib/twitter/creatable.rb
 ${GEM_LIBDIR}/lib/twitter/cursor.rb
 ${GEM_LIBDIR}/lib/twitter/direct_message.rb
+${GEM_LIBDIR}/lib/twitter/direct_message_event.rb
+${GEM_LIBDIR}/lib/twitter/direct_messages/welcome_message.rb
+${GEM_LIBDIR}/lib/twitter/direct_messages/welcome_message_rule.rb
+${GEM_LIBDIR}/lib/twitter/direct_messages/welcome_message_rule_wrapper.rb
+${GEM_LIBDIR}/lib/twitter/direct_messages/welcome_message_wrapper.rb
 ${GEM_LIBDIR}/lib/twitter/entities.rb
 ${GEM_LIBDIR}/lib/twitter/entity.rb
 ${GEM_LIBDIR}/lib/twitter/entity/hashtag.rb
@@ -41,19 +46,23 @@ ${GEM_LIBDIR}/lib/twitter/metadata.rb
 ${GEM_LIBDIR}/lib/twitter/null_object.rb
 ${GEM_LIBDIR}/lib/twitter/oembed.rb
 ${GEM_LIBDIR}/lib/twitter/place.rb
+${GEM_LIBDIR}/lib/twitter/premium_search_results.rb
 ${GEM_LIBDIR}/lib/twitter/profile.rb
 ${GEM_LIBDIR}/lib/twitter/profile_banner.rb
 ${GEM_LIBDIR}/lib/twitter/rate_limit.rb
 ${GEM_LIBDIR}/lib/twitter/relationship.rb
+${GEM_LIBDIR}/lib/twitter/rest/account_activity.rb
 ${GEM_LIBDIR}/lib/twitter/rest/api.rb
 ${GEM_LIBDIR}/lib/twitter/rest/client.rb
 ${GEM_LIBDIR}/lib/twitter/rest/direct_messages.rb
+${GEM_LIBDIR}/lib/twitter/rest/direct_messages/welcome_messages.rb
 ${GEM_LIBDIR}/lib/twitter/rest/favorites.rb
 ${GEM_LIBDIR}/lib/twitter/rest/friends_and_followers.rb
 ${GEM_LIBDIR}/lib/twitter/rest/help.rb
 ${GEM_LIBDIR}/lib/twitter/rest/lists.rb
 ${GEM_LIBDIR}/lib/twitter/rest/oauth.rb
 ${GEM_LIBDIR}/lib/twitter/rest/places_and_geo.rb
+${GEM_LIBDIR}/lib/twitter/rest/premium_search.rb
 ${GEM_LIBDIR}/lib/twitter/rest/request.rb
 ${GEM_LIBDIR}/lib/twitter/rest/saved_searches.rb
 ${GEM_LIBDIR}/lib/twitter/rest/search.rb
@@ -63,6 +72,7 @@ ${GEM_LIBDIR}/lib/twitter/rest/timelines.rb
 ${GEM_LIBDIR}/lib/twitter/rest/trends.rb
 ${GEM_LIBDIR}/lib/twitter/rest/tweets.rb
 ${GEM_LIBDIR}/lib/twitter/rest/undocumented.rb
+${GEM_LIBDIR}/lib/twitter/rest/upload_utils.rb
 ${GEM_LIBDIR}/lib/twitter/rest/users.rb
 ${GEM_LIBDIR}/lib/twitter/rest/utils.rb
 ${GEM_LIBDIR}/lib/twitter/saved_search.rb
