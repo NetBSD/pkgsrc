@@ -1,14 +1,15 @@
-# $NetBSD: options.mk,v 1.3 2020/02/04 03:03:48 taca Exp $
+# $NetBSD: options.mk,v 1.4 2020/06/21 16:05:55 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.squid4
-PKG_SUPPORTED_OPTIONS=		ecap esi inet6 snmp squid-backend-aufs \
+PKG_SUPPORTED_OPTIONS=		inet6 snmp squid-backend-aufs \
 				squid-backend-diskd squid-backend-rock \
-				squid-backend-ufs squid-unlinkd \
-				squid-kerberos-helper squid-ldap-helper \
-				squid-pam-helper
+				squid-backend-ufs squid-ecap squid-esi \
+				squid-unlinkd squid-kerberos-helper \
+				squid-ldap-helper squid-pam-helper
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		openssl gnutls
 PKG_OPTIONS_LEGACY_OPTS+=	diskd:squid-backend-diskd \
+				ecap:squid-ecap esi:squid-esi \
 				null:squid-backend-null ufs:squid-backend-ufs \
 				linux-netfilter:squid-netfilter \
 				ipf-transparent:squid-ipf \
@@ -21,9 +22,9 @@ PLIST_VARS+=	da_LDAP da_file diskd
 PLIST_VARS+=	eacl_LDAP_group eacl_file_userip eacl_unix_group
 PLIST_VARS+=	openssl ta_kerberos unlinkd
 
-PKG_SUGGESTED_OPTIONS=	inet6 esi openssl snmp squid-backend-aufs \
+PKG_SUGGESTED_OPTIONS=	inet6 openssl snmp squid-backend-aufs \
 			squid-backend-diskd squid-backend-ufs \
-			squid-pam-helper squid-unlinkd
+			squid-esi squid-pam-helper squid-unlinkd
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -85,7 +86,7 @@ CONFIGURE_ARGS+=	--enable-ipfw-transparent
 CONFIGURE_ARGS+=	--enable-arp-acl
 .endif
 
-.if !empty(PKG_OPTIONS:Mecap)
+.if !empty(PKG_OPTIONS:Msquid-ecap)
 CONFIGURE_ARGS+=	--enable-ecap
 USE_TOOLS+=		pkg-config
 CHECK_WRKREF_SKIP+=	sbin/squid
@@ -95,7 +96,7 @@ USE_LANGUAGES+=		c++11
 CONFIGURE_ARGS+=	--disable-ecap
 .endif
 
-.if !empty(PKG_OPTIONS:Mesi)
+.if !empty(PKG_OPTIONS:Msquid-esi)
 CONFIGURE_ARGS+=	--enable-esi
 .include "../../textproc/expat/buildlink3.mk"
 .else
