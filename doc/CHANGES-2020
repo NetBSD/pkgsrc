@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3725 2020/06/21 04:09:37 mef Exp $
+$NetBSD: CHANGES-2020,v 1.3726 2020/06/21 07:44:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5993,3 +5993,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/u-boot to 2018.11nb10 [thorpej 2020-06-20]
 	Updated editors/TeXmacs to 1.99.13 [mef 2020-06-21]
 	Updated editors/fe to 1.9 [mef 2020-06-21]
+	Updated lang/nim to 1.2.2 [ryoon 2020-06-21]
