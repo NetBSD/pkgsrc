@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/04 12:14:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/21 04:32:36 rillig Exp $
 ${PLIST.html}share/doc/pkgsrc/binary.html
 ${PLIST.html}share/doc/pkgsrc/build.html
 ${PLIST.html}share/doc/pkgsrc/buildlink.html
@@ -6,7 +6,6 @@ ${PLIST.html}share/doc/pkgsrc/bulk.html
 ${PLIST.html}share/doc/pkgsrc/components.html
 ${PLIST.html}share/doc/pkgsrc/configuring.html
 ${PLIST.html}share/doc/pkgsrc/creating.html
-${PLIST.html}share/doc/pkgsrc/debug.html
 ${PLIST.html}share/doc/pkgsrc/developers-guide.html
 ${PLIST.html}share/doc/pkgsrc/devfaq.html
 ${PLIST.html}share/doc/pkgsrc/editing.html
