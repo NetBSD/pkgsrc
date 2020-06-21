@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/06/21 09:00:48 mef Exp $
+# $NetBSD: Makefile,v 1.62 2020/06/21 09:23:11 mef Exp $
 #
 
 DISTNAME=	HandBrake-1.3.1-source
@@ -75,7 +75,7 @@ post-extract:
 	cp ${DISTDIR}/${DIST_SUBDIR}/${distfile} \
 		${WRKSRC}/download/
 .endfor
-	cp ${DISTDIR}/${MESON_DISTFILE} ${WRKSRC}/download/
+	cp ${DISTDIR}/${DIST_SUBDIR}/${MESON_DISTFILE} ${WRKSRC}/download/
 	(cd ${WRKSRC}/contrib; tar zxf ${WRKSRC}/download/${MESON_DISTFILE})
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
