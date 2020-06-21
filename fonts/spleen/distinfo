@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/02/13 13:46:23 fcambus Exp $
+$NetBSD: distinfo,v 1.10 2020/06/21 09:25:05 fcambus Exp $
 
-SHA1 (spleen-1.7.0.tar.gz) = b247d8b8e700bbcb3f46e3475a20cbde7b372ede
-RMD160 (spleen-1.7.0.tar.gz) = 74b2a9596fe4a1a6e9b88c2ae74d0a9b74fb5ba1
-SHA512 (spleen-1.7.0.tar.gz) = a6b675fd302644477f70304f20f915ac598b9e09faa82ab93579b2b5856d2d857f33b73e958e3ec4674ad6638b43982f77d2412fb1afdb3970acf9a773008212
-Size (spleen-1.7.0.tar.gz) = 290409 bytes
+SHA1 (spleen-1.7.1.tar.gz) = c3f90d2611ec5fe45af18d19004eeffaa17553c2
+RMD160 (spleen-1.7.1.tar.gz) = 47bfe4a0df483e48bc476bd653a4b472297a2449
+SHA512 (spleen-1.7.1.tar.gz) = 17b3062b8662139765325c9fb4684a60b46013cb5db3ec7e2fce8574de402553bb67760e05f71264fde3eb72af755a026ad5408c82bcfdf1fbda033d1b2eae8d
+Size (spleen-1.7.1.tar.gz) = 292432 bytes
