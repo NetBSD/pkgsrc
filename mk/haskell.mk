@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.20 2020/05/10 17:46:59 rillig Exp $
+# $NetBSD: haskell.mk,v 1.21 2020/06/21 22:21:02 rillig Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -105,7 +105,14 @@ BUILD_DEFS+=	HASKELL_ENABLE_HADDOCK_DOCUMENTATION
 
 
 # Declarations for ../../mk/misc/show.mk
-_VARGROUPS+=		haskell
+_VARGROUPS+=	haskell
+_USER_VARS.haskell= \
+	HASKELL_ENABLE_SHARED_LIBRARY \
+	HASKELL_ENABLE_LIBRARY_PROFILING \
+	HASKELL_ENABLE_HADDOCK_DOCUMENTATION
+_SYS_VARS.haskell= \
+	PKGNAME DISTNAME MASTER_SITES MASTER_SITE_HASKELL_HACKAGE \
+	HOMEPAGE UNLIMIT_RESOURCES PREFIX
 _DEF_VARS.haskell= \
 	HASKELL_OPTIMIZATION_LEVEL \
 	HASKELL_PKG_NAME \
@@ -121,10 +128,8 @@ _DEF_VARS.haskell= \
 	_HASKELL_PKG_DESCR_FILE \
 	_HASKELL_PKG_ID_FILE \
 	_HASKELL_VERSION
-_USER_VARS.haskell= \
-	HASKELL_ENABLE_SHARED_LIBRARY \
-	HASKELL_ENABLE_LIBRARY_PROFILING \
-	HASKELL_ENABLE_HADDOCK_DOCUMENTATION
+_IGN_VARS.haskell= \
+	USE_TOOLS _*
 
 # PKGNAME is usually named after DISTNAME.
 PKGNAME?=	hs-${DISTNAME}
@@ -211,16 +216,30 @@ CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 # Optimization
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
 
+.if !exists(${PKGDIR}/PLIST)
+_HS_PLIST_STATUS=	missing
+.elif ${${GREP} HS_INTF ${PKGDIR}/PLIST || ${TRUE}:L:sh}
+_HS_PLIST_STATUS=	lib-ok
+.elif !${${GREP} "/package-id" ${PKGDIR}/PLIST || ${TRUE}:L:sh}
+_HS_PLIST_STATUS=	plain
+.else
+_HS_PLIST_STATUS=	outdated
+.endif
+
 # Starting from GHC 7.10 (or 7.8?), packages are installed in directories
 # with a hashed name, which makes it a bit more complicated to generate
 # the PLIST.
 #
+.if ${_HS_PLIST_STATUS} == lib-ok || ${_HS_PLIST_STATUS} == missing
+
 _HASKELL_PL_INTF=	${_HASKELL_PKG_ID_FILE:H:S,^${PREFIX}/,,}
-_HASKELL_PL_IMPL_AWK=	prev == "import-dirs:" { print $$1; exit } { prev = $$0 }
+_HASKELL_PL_IMPL_AWK=	prev == "import-dirs:" { dir = $$1; exit }
+_HASKELL_PL_IMPL_AWK+=	{ prev = $$0 }
+_HASKELL_PL_IMPL_AWK+=	END { print(dir ? dir : "never_match_this") }
 _HASKELL_PL_IMPL_CMD=	${AWK} '${_HASKELL_PL_IMPL_AWK}' ${DESTDIR}${_HASKELL_PKG_DESCR_FILE}
 _HASKELL_PL_IMPL=	${_HASKELL_PL_IMPL_CMD:sh:S,^${PREFIX}/,,}
 _HASKELL_PL_DOCS=	${_HASKELL_PL_IMPL:S,^lib,share/doc,:C,-[A-Za-z0-9]*$,,}
-_HASKELL_PL_PLATFORM=	${_HASKELL_PL_IMPL:H:T}
+_HASKELL_PL_PLATFORM=	${_HASKELL_PL_IMPL:H:T:S,^.$,never_match_this,}
 _HASKELL_PL_PKGID_CMD=	${CAT} ${DESTDIR}${_HASKELL_PKG_ID_FILE}
 _HASKELL_PL_PKGID=	${_HASKELL_PL_PKGID_CMD:sh}
 _HASKELL_PL_VER=	${_HASKELL_VERSION:S,-,,}
@@ -238,23 +257,14 @@ PRINT_PLIST_AWK+=	{ sub("/${_HASKELL_PL_PLATFORM}/", "/$${HS_PLATFORM}/") }
 PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_PKGID}",      "$${HS_PKGID}") }
 PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_VER}",        "$${HS_VER}") }
 
-.if !exists(${PKGDIR}/PLIST)
-_HS_PLIST_STATUS=	missing
-.elif ${${GREP} HS_INTF ${PKGDIR}/PLIST || ${TRUE}:L:sh}
-_HS_PLIST_STATUS=	up-to-date
-.else
-_HS_PLIST_STATUS=	outdated
-.endif
-
 HS_UPDATE_PLIST?=	no
 
-.if ${HS_UPDATE_PLIST} != no && ${_HS_PLIST_STATUS} != up-to-date
+.  if ${HS_UPDATE_PLIST} != no && ${_HS_PLIST_STATUS} == missing
 GENERATE_PLIST+= 	${MAKE} print-PLIST > ${PKGDIR}/PLIST;
+.  endif
 .endif
 
-.if ${_HS_PLIST_STATUS} != up-to-date
-# The PLISTs that don't use HS_INTF and the other placeholders defined
-# above are outdated and wrong, and are therefore ignored.
+.if ${_HS_PLIST_STATUS} == missing || ${_HS_PLIST_STATUS} == outdated
 GENERATE_PLIST+= \
 	cd ${DESTDIR:Q}${PREFIX:Q} && \
 		${FIND} * \( -type f -o -type l \) | ${SORT};
