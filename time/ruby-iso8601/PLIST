@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/22 09:39:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/06/21 14:26:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/iso8601.gemspec
 ${GEM_LIBDIR}/lib/iso8601.rb
 ${GEM_LIBDIR}/lib/iso8601/atomic.rb
