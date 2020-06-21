@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.4 2020/06/21 15:10:47 taca Exp $
+
+* Changes from NetBSD base; add support for setproctitle(3).
+
+--- configure.orig	2020-03-04 01:40:14.000000000 +0000
++++ configure
+@@ -27148,7 +27148,7 @@ fi
+ done
+ 
+ 
+-for ac_func in fnmatch getbootfile getuid getrusage nanosleep strsignal
++for ac_func in fnmatch getbootfile getuid getrusage nanosleep strsignal setproctitle
+ do :
+   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"

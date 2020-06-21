@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2016/05/14 08:13:49 bsiegert Exp $
+# $NetBSD: options.mk,v 1.4 2020/06/21 15:10:47 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ntp4
 PKG_SUPPORTED_OPTIONS=	inet6 snmp
 PKG_SUGGESTED_OPTIONS=
+
+PLIST_VARS+=	ntpsnmpd
 
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=	inet6
@@ -19,6 +21,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Msnmp)
 CONFIGURE_ARGS+=	--with-ntpsnmpd
 PLIST.ntpsnmpd=		yes
+USE_TOOLS+=		perl
 .  include "../../net/net-snmp/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ntpsnmpd
