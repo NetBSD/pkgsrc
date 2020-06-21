@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2020/05/20 16:31:27 taca Exp $
+# $NetBSD: Makefile,v 1.34 2020/06/21 16:48:44 taca Exp $
 
-DISTNAME=	drupal-8.7.14
+DISTNAME=	drupal-8.9.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
 
-PHP_VERSIONS_ACCEPTED=	72 73
+PHP_VERSIONS_ACCEPTED=	73 74
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
@@ -44,6 +44,10 @@ REPLACE_FILES.php=	core/scripts/drupal.sh core/scripts/password-hash.sh
 REPLACE_FILES.php+=	core/scripts/update-countries.sh
 REPLACE_FILES.php+=	core/scripts/rebuild_token_calculator.sh
 REPLACE_FILES.php+=	vendor/pear/archive_tar/scripts/phptar.in
+
+REPLACE_SH+=		core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/scripts/disable-git-bin/git
+REPLACE_SH+=		vendor/paragonie/random_compat/build-phar.sh
+REPLACE_SH+=		vendor/twig/twig/drupal_test.sh
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
