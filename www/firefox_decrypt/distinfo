@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/21 20:25:45 wiz Exp $
+
+SHA1 (firefox_decrypt-0.7.0.tar.gz) = d4e83c500f4afc0f814096dc501d5aafb18cddc4
+RMD160 (firefox_decrypt-0.7.0.tar.gz) = f9f22345a3589ed9180b2913e7a0094ae7da88da
+SHA512 (firefox_decrypt-0.7.0.tar.gz) = a719820e1934f38b7f2a22f6946d1f3738281473381b346eec3a1904827aa5f6b7fff2147cbb9c411276232bacc32ec7a09d597d30ba2f72a93a8482e7737e7f
+Size (firefox_decrypt-0.7.0.tar.gz) = 62639 bytes
+SHA1 (patch-firefox__decrypt.py) = 2b27605f255cf8f45db6f827ded04f2e424a4941
