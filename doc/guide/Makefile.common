@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2020/01/04 12:14:22 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.10 2020/06/21 04:45:36 rillig Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -10,7 +10,7 @@
 # used by meta-pkgs/pkgsrc-guide-tools/Makefile
 
 _GUIDE_DEPTYPE?=	build
-_GUIDE_OUTPUTS?=	lint html html-split ascii pdf
+_GUIDE_OUTPUTS?=	lint html html-split ascii ps pdf
 
 # html output
 _GUIDE_DEPENDS+=	docbook>=4.5:../../textproc/docbook
@@ -46,6 +46,10 @@ USE_TOOLS+=		gs:run
 .  else
 USE_TOOLS+=		gs pax
 .  endif
+.endif
+
+.if ${_GUIDE_OUTPUTS:Mpdf}
+_GUIDE_DEPENDS+=	tex-epstopdf-pkg>=2.11:../../print/tex-epstopdf-pkg
 .endif
 
 .if ${_GUIDE_DEPTYPE} == "run"
