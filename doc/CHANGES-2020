@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3727 2020/06/21 08:02:19 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3728 2020/06/21 09:25:16 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5995,3 +5995,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/fe to 1.9 [mef 2020-06-21]
 	Updated lang/nim to 1.2.2 [ryoon 2020-06-21]
 	Updated graphics/libansilove to 1.2.4 [fcambus 2020-06-21]
+	Updated fonts/spleen to 1.7.1 [fcambus 2020-06-21]
