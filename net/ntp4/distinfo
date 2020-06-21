@@ -1,8 +1,41 @@
-$NetBSD: distinfo,v 1.30 2019/03/25 17:19:59 tnn Exp $
+$NetBSD: distinfo,v 1.31 2020/06/21 15:10:47 taca Exp $
 
-SHA1 (ntp-4.2.8p13.tar.gz) = cff200a987d64e891fb349a22313ecb0feaea090
-RMD160 (ntp-4.2.8p13.tar.gz) = 5d85e2a01bafa0bb755ab49e462f6dd7f96ce3d0
-SHA512 (ntp-4.2.8p13.tar.gz) = afbdbb8a37b8f4040a8a6939a3a85ad0350d359c153c297b32b8a013c7b7061fd925fa3e6e103671c5901e169156e22497813c654195ba50f890a7170b2f2075
-Size (ntp-4.2.8p13.tar.gz) = 6949363 bytes
-SHA1 (patch-include-ntp__syscall.h) = b247569339d09a88f2e143e355033ce7635ffe92
+SHA1 (ntp-4.2.8p14.tar.gz) = c6f353278cd5b7c8aa11e1189d3ac80985370b8f
+RMD160 (ntp-4.2.8p14.tar.gz) = c49cb8138678b246661cc1afe68d38f255756a7e
+SHA512 (ntp-4.2.8p14.tar.gz) = b0183b4b2f2c6ea0a49d0aca1fa28a7b5cd21e20696a2f633f5afa37c4ea2c59fa7769af82a55c626db49b9eb5a531608710dc1977c4d518583577ef95940ae8
+Size (ntp-4.2.8p14.tar.gz) = 7007263 bytes
+SHA1 (patch-configure) = cd2b6d9353282b574eea117b4b6e391a39a6267b
+SHA1 (patch-include-ntp__syscall.h) = b0587655e707b9a2e0eb9c937be47fd27e8d5435
+SHA1 (patch-include_ntp__md5.h) = 1bde85704e539ab40133f498409294d071df0cc8
+SHA1 (patch-include_ntp__request.h) = f76caeaaed595d32f249d493571f24410170e7bd
+SHA1 (patch-include_refclock__atom.h) = 72ab4f018356a006c41d041ed064072d99e75bbb
+SHA1 (patch-lib_isc_inet__ntop.c) = 8feef4a19e7762d0739345fa45aecea5b68c834a
+SHA1 (patch-lib_isc_unix_net.c) = abbe0dbc424666ef4c564870a65155cf5d355504
+SHA1 (patch-libntp_ntp__calendar.c) = f7e6a1cd37026a51288825a8a41d6337e0e10d86
+SHA1 (patch-libntp_socktoa.c) = ff469782951666834b753a55993fdd6a2f1f4f74
+SHA1 (patch-libntp_timexsup.c) = 385461d1049611921e19e7c75b94ed2788f7b1b7
+SHA1 (patch-libntp_work__fork.c) = f46501017291a0764db2240e258ae511a55baba7
+SHA1 (patch-ntpd_ntp__config.c) = 5b2107ab8ea5cac590b897b1e6709c47bce5b5d8
+SHA1 (patch-ntpd_ntp__control.c) = 3c6267aa5c36bd1d2e0fa729be86875436812783
+SHA1 (patch-ntpd_ntp__io.c) = 0ad70fe53d3c0f779842fb71ba60b8c2cbb1e456
+SHA1 (patch-ntpd_ntp__keyword.h) = 158f7e93459ea30bbf87830b939a81071fa13eaa
+SHA1 (patch-ntpd_ntp__loopfilter.c) = 381e44622a25351c470dbc7bfaef353e47370d79
+SHA1 (patch-ntpd_ntp__proto.c) = 5e5629cc5b8dc785427bc9b267d0cac6fc7b1b39
+SHA1 (patch-ntpd_ntp__restrict.c) = b659db3d7913a72f3a36c3a33ef47cfaf4545095
+SHA1 (patch-ntpd_refclock__jjy.c) = 592d010d2e19bb47beefdcb3fe5645271e2645bb
+SHA1 (patch-ntpd_refclock__jupiter.c) = bb248d2766cadddacdf9cb56bf9b29cbc538bbcb
+SHA1 (patch-ntpd_refclock__neoclock4x.c) = 66c38ba21572cb8804a39766f3b32d1b65cb0946
+SHA1 (patch-ntpd_refclock__oncore.c) = d93efa11cadc37fd9e600f80f2cbf0280be969c6
+SHA1 (patch-ntpd_refclock__ulink.c) = 55003f758fd71621db60ffad8a1880588098389e
+SHA1 (patch-ntpd_refclock__wwvb.c) = e1a7fc80df6dba9595788a8b8c56729619048ee4
+SHA1 (patch-ntpdate_ntpdate.c) = 17e2534ab7a54e5af16059ca8c02c9995d79d83c
+SHA1 (patch-ntpdc_Makefile.in) = 6afaf915ee8c6b244f94d3733545231e69dfd14d
+SHA1 (patch-ntpq_ntpq.c) = 0776827a712e2f6636b9d322ae7445d184f3709f
+SHA1 (patch-sntp_libevent_build-aux_config.guess) = 5f5fff42d04daef5fcbba2bc09b015fb4489ca59
+SHA1 (patch-sntp_libevent_build-aux_config.sub) = 178e8b39138e49db7702c4bb84fe92550d14a978
+SHA1 (patch-sntp_libopts_autoopts.h) = d4cbaa31df97e04f3637349a3d5eb1addfa847db
+SHA1 (patch-sntp_libopts_enum.c) = 7d6624ed84a6ea6f85b4de4c37480041a7603252
+SHA1 (patch-sntp_libopts_usage.c) = ec77942c98965c13de625b930db3458d5b81d28b
 SHA1 (patch-sntp_loc_pkgsrc) = 6e46ffc0cc2afcfdc1d01297cbe04cb80d103575
+SHA1 (patch-util_ntp-keygen.c) = e66348e2fcf7da4bf9ee35e66e3f891cb436f338
+SHA1 (patch-util_ntptime.c) = 897c3986661a9e655eeb7a7eeb10816996c31301
