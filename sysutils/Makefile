@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.885 2020/06/21 03:29:15 thorpej Exp $
+# $NetBSD: Makefile,v 1.886 2020/06/21 16:21:44 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -628,6 +628,7 @@ SUBDIR+=	ttyplot
 SUBDIR+=	u-boot-a10-olinuxino-lime
 SUBDIR+=	u-boot-a20-olinuxino-lime2
 SUBDIR+=	u-boot-a20-olinuxino-lime2-emmc
+SUBDIR+=	u-boot-a20-olinuxino-micro
 SUBDIR+=	u-boot-a20-olinuxino-micro-emmc
 SUBDIR+=	u-boot-bananapi
 SUBDIR+=	u-boot-bananapi-m2-zero
