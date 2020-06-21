@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3739 2020/06/21 15:42:40 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3740 2020/06/21 15:52:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6005,3 +6005,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-twitter-text to 3.1.0 [taca 2020-06-21]
 	Updated net/ruby-twitter to 7.0.0 [taca 2020-06-21]
 	Updated net/tcpreplay to 4.3.3 [nia 2020-06-21]
+	Updated security/ruby-sshkey to 2.0.0 [taca 2020-06-21]
