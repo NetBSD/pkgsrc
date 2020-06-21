@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2020/05/09 15:16:30 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2020/06/21 09:34:59 rillig Exp $
 
 DISTNAME=	openjade-1.3.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjade/}
 
@@ -27,9 +27,9 @@ SGML_CATALOGS=		${PREFIX}/share/sgml/openjade/catalog
 OPENJADE_DATA_DIR=	${PREFIX}/share/sgml/openjade
 OPENJADE_DOC_DIR=	${PREFIX}/share/doc/openjade
 
-INSTALLATION_DIRS=	${OPENJADE_DATA_DIR}/pubtext \
-			${OPENJADE_DOC_DIR}/doc \
-			${OPENJADE_DOC_DIR}/jadedoc/images
+AUTO_MKDIRS=		yes
+INSTALL_TARGET=		install install-man
+
 
 # openjade has incorrect code:
 #   https://gcc.gnu.org/bugzilla/show_bug.cgi?id=69534#c9
