@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.886 2020/06/21 16:21:44 thorpej Exp $
+# $NetBSD: Makefile,v 1.887 2020/06/21 16:48:08 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -681,6 +681,7 @@ SUBDIR+=	u-boot-rockpro64-ayufan
 SUBDIR+=	u-boot-rpi3-32
 SUBDIR+=	u-boot-sopine-baseboard
 SUBDIR+=	u-boot-tinker
+SUBDIR+=	u-boot-zynq-zybo
 SUBDIR+=	u-boot-zynq-zybo-z7
 SUBDIR+=	ufetch
 SUBDIR+=	upower
