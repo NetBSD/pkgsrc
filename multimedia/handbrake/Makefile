@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/06/02 08:24:26 adam Exp $
+# $NetBSD: Makefile,v 1.61 2020/06/21 09:00:48 mef Exp $
 #
 
 DISTNAME=	HandBrake-1.3.1-source
@@ -22,11 +22,16 @@ CDISTFILES=	ffmpeg-4.2.2.tar.bz2 \
 		libdvdread-6.0.2.tar.bz2 \
 		x265_3.2.1.tar.gz \
 		dav1d-0.5.1.tar.bz2
+
+MESON_DISTFILE=	meson-0.54.2.tar.gz
 DISTFILES+=	${CDISTFILES}
+DISTFILES+=	${MESON_DISTFILE}
 
 .for f in ${CDISTFILES}
 SITES.${f}=	https://download.handbrake.fr/contrib/
 .endfor
+
+SITES.${MESON_DISTFILE}=	${MASTER_SITE_PYPI:=m/meson/}
 
 RESTRICTED=		Unresolved patent issues
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -42,7 +47,7 @@ USE_TOOLS+=	autoconf automake aclocal autoreconf m4
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=			gettext-tools-[0-9]*:../../devel/gettext-tools
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 USE_BUILTIN.gettext=		no
 
@@ -70,6 +75,8 @@ post-extract:
 	cp ${DISTDIR}/${DIST_SUBDIR}/${distfile} \
 		${WRKSRC}/download/
 .endfor
+	cp ${DISTDIR}/${MESON_DISTFILE} ${WRKSRC}/download/
+	(cd ${WRKSRC}/contrib; tar zxf ${WRKSRC}/download/${MESON_DISTFILE})
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
