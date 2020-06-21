@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3722 2020/06/20 22:33:12 thorpej Exp $
+$NetBSD: CHANGES-2020,v 1.3723 2020/06/21 03:34:05 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5989,3 +5989,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/liferea to 1.12.8 [adam 2020-06-20]
 	Updated databases/prometheus to 2.19.1 [adam 2020-06-20]
 	Added sysutils/u-boot-jetson-nano version 2020.04 [thorpej 2020-06-20]
+	Added sysutils/u-boot-pandaboard version 2018.11 [thorpej 2020-06-20]
+	Updated sysutils/u-boot to 2018.11nb10 [thorpej 2020-06-20]
