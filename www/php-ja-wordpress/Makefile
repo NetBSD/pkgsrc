@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2019/12/16 16:52:40 taca Exp $
+# $NetBSD: Makefile,v 1.19 2020/06/21 16:42:55 taca Exp $
 
 DISTNAME=		wordpress-${VERSION}-ja
 PKGNAME=		${PHP_PKG_PREFIX}-ja-wordpress-${VERSION}
-VERSION=		5.3.1
+VERSION=		5.4.2
 CATEGORIES=		www
 MASTER_SITES=		https://ja.wordpress.org/
 
@@ -29,7 +29,7 @@ BUILD_DEFS+=		WWW_USER WWW_GROUP APACHE_USER APACHE_GROUP
 EGDIR=			${PREFIX}/share/examples/ja-wordpress
 DOCDIR=			${PREFIX}/share/doc/ja-wordpress
 WPHOME=			${PREFIX}/share/ja-wordpress
-MESSAGE_SUBST+=		PKG_PHP_MAJOR_VERS=${PKG_PHP_MAJOR_VERS}
+FILES_SUBST+=		WPHOME=${WPHOME}
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
 
 CONF_FILES+=		${EGDIR}/ja-wordpress.conf ${PKG_SYSCONFDIR}/ja-wordpress.conf
@@ -62,7 +62,6 @@ post-extract:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/readme.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/license.txt ${DESTDIR}${DOCDIR}
-
 	${INSTALL_DATA} ${WRKSRC}/wp-config-sample.php ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/ja-wordpress.conf ${DESTDIR}${EGDIR}
 
