@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.887 2020/06/21 16:48:08 thorpej Exp $
+# $NetBSD: Makefile,v 1.888 2020/06/21 19:44:29 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -653,6 +653,9 @@ SUBDIR+=	u-boot-jetson-tk1
 SUBDIR+=	u-boot-jetson-tx1
 SUBDIR+=	u-boot-jetson-tx2
 SUBDIR+=	u-boot-lamobo-r1
+SUBDIR+=	u-boot-libretech-all-h3-cc-h2-plus
+SUBDIR+=	u-boot-libretech-all-h3-cc-h3
+SUBDIR+=	u-boot-libretech-all-h3-cc-h5
 SUBDIR+=	u-boot-libretech-cc
 SUBDIR+=	u-boot-nanopi-duo2
 SUBDIR+=	u-boot-nanopi-m1
