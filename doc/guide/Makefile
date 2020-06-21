@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2020/06/20 14:55:06 rillig Exp $
+# $NetBSD: Makefile,v 1.64 2020/06/21 04:45:36 rillig Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
@@ -26,7 +26,7 @@ HTDOCSDIR?=		/usr/cvs/htdocs
 HTDOCSDIR?=		${.CURDIR}/../../../htdocs
 
 BUILD_DEFS+=		OUTPUTS
-OUTPUTS?=		lint html html-split ascii pdf
+OUTPUTS?=		lint html html-split ascii ps pdf
 
 INSTALLATION_DIRS=	${DOCDIR}
 
