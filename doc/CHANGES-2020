@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3733 2020/06/21 14:41:28 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3734 2020/06/21 14:52:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6001,3 +6001,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ruby-iso8601 to 0.12.2 [taca 2020-06-21]
 	Updated sysutils/ruby-childprocess to 4.0.0 [taca 2020-06-21]
 	Updated security/ruby-metasploit-payloads to 2.0.5 [taca 2020-06-21]
+	Updated security/ruby-metasploit_payloads-mettle to 1.0.1 [taca 2020-06-21]
