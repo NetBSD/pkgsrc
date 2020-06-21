@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.884 2020/06/20 22:29:59 thorpej Exp $
+# $NetBSD: Makefile,v 1.885 2020/06/21 03:29:15 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -668,7 +668,8 @@ SUBDIR+=	u-boot-orangepi-one
 SUBDIR+=	u-boot-orangepi-plus2e
 SUBDIR+=	u-boot-orangepi-zero
 SUBDIR+=	u-boot-orangepi-zero-plus
-SUBDIR+=	u-boot-pine-h64
+SUBDIR+= 	u-boot-pandaboard
+SUBDIR+= 	u-boot-pine-h64
 SUBDIR+=	u-boot-pine64
 SUBDIR+=	u-boot-pinebook
 SUBDIR+=	u-boot-pinebook-pro
