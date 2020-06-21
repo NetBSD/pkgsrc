@@ -167,7 +167,6 @@ eaccelerator-disassembler	Include disassembler.
 eaccelerator-doc-comment-inclusion	Retain doc-comments in internal php structures.
 eai			Enable EAI (Email Address Internationalization) support.
 eb			Enable EB dictionary library support.
-ecap			Enable eCAP support.
 ecl			Use Embeddable Common Lisp.
 ecore			Enable ecore library support.
 editline		Enable use of the NetBSD Editline library.
@@ -186,7 +185,6 @@ enchant-zemberek	Add spell checking support for Turkish.
 epoll			Enable support for epoll I/O event notification facility.
 epub			Enable epub support.
 erlang-hipe		Enable HiPE support.
-esi			Enable ESI (Edge Side Includes) support.
 eucjp			Support EUC-JP, a character encoding for Japanese.
 evolution-data-server	Enable support for evolution-data-server.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
@@ -774,6 +772,8 @@ squid-backend-null	Enable use of null backend; using only memory.
 squid-backend-rock	Enable use of rock backend; database-style storage.
 squid-backend-ufs	Enable use of UFS (Unix File System).
 squid-carp		Enable use of CARP (Cache Array Routing Protocol).
+squid-ecap		Enable use of eCAP.
+squid-esi		Enable use of ESI (Edge Side Includes).
 squid-ipf		Enable use of transparent proxy with IP Filter.
 squid-ipfw		Enable use of transparent proxy with IPFW.
 squid-kerberos-helper	Enable use of Kerberos helper support.
