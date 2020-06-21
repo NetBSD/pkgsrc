@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/06/21 01:36:03 mef Exp $
 #
 
-DISTNAME=	Padre-Plugin-Debugger-0.3
-PKGNAME=	p5-${DISTNAME}
+VERSION=	0.3
+PKGNAME=	p5-Padre-Plugin-Debugger-${VERSION}
+GITHUB_PROJECT=	${PKGBASE:S/p5-//:tl}
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGREVISION=	10
 CATEGORIES=	editors devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pmakholm/}
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://metacpan.org/release/Padre-Plugin-Debugger
+HOMEPAGE=	https://github.com/pmakholm/padre-plugin-debugger/
 COMMENT=	Debug Perl code from Padre editor
 LICENSE=	${PERL5_LICENSE}
 
