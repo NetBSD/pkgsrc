@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/21 03:27:58 thorpej Exp $
+share/u-boot/pandaboard/MLO
+share/u-boot/pandaboard/installboot.plist
+share/u-boot/pandaboard/u-boot.img
