@@ -1,14 +1,17 @@
-$NetBSD: patch-src_crssync_CMakeLists.txt,v 1.2 2016/07/01 16:15:18 bouyer Exp $
+$NetBSD: patch-src_crssync_CMakeLists.txt,v 1.3 2020/06/21 13:51:49 gdt Exp $
+
 Fix executing dynamically-linked executable from the build directory
 
---- src/crssync/CMakeLists.txt.orig	2016-06-26 16:02:58.000000000 +0200
-+++ src/crssync/CMakeLists.txt	2016-06-26 16:04:09.000000000 +0200
-@@ -22,7 +22,7 @@
- 	)
- ELSE(MSVC AND NOT USING_NMAKE)
+\todo Explain if this should be filed upstream or not.
+
+--- src/crssync/CMakeLists.txt.orig	2020-06-19 12:10:56.000000000 +0000
++++ src/crssync/CMakeLists.txt
+@@ -33,7 +33,7 @@ ELSEIF(CMAKE_CROSSCOMPILING)
+   )
+ ELSE()
  	ADD_CUSTOM_TARGET(synccrsdb
 -		COMMAND ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/crssync
 +		COMMAND env LD_LIBRARY_PATH=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/../lib ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/crssync
  		DEPENDS crssync
  	)
- ENDIF(MSVC AND NOT USING_NMAKE)
+ ENDIF()
