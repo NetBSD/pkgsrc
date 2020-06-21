@@ -1,4 +1,4 @@
-$NetBSD: patch-etc_font-fb,v 1.9 2015/10/30 15:29:20 tsutsui Exp $
+$NetBSD: patch-etc_font-fb,v 1.10 2020/06/21 17:53:01 tsutsui Exp $
 
 add more examples for typical NetBSD and pkgsrc installation
 
@@ -6,23 +6,23 @@ add more examples for typical NetBSD and pkgsrc installation
 +++ etc/font-fb
 @@ -1,12 +1,19 @@
 -#DEFAULT = /usr/share/fonts/X11/misc/unifont.pcf.gz:100
-+#DEFAULT = /usr/pkg/share/fonts/X11/misc/unifont.pcf.gz:100
-+#DEFAULT = /usr/pkg/share/fonts/X11/efont/b16.pcf.gz
++#DEFAULT = @PREFIX@/share/fonts/X11/misc/unifont.pcf.gz:100
++#DEFAULT = @PREFIX@/share/fonts/X11/efont/b16.pcf.gz
  
  #ISO8859_1 = /usr/share/fonts/X11/misc/mplus_f12r.pcf.gz
-+#ISO8859_1 = /usr/X11R7/lib/X11/fonts/misc/8x16.pcf.gz
-+#JISX0201_KATA = /usr/X11R7/lib/X11/fonts/misc/8x16rk.pcf.gz
++#ISO8859_1 = @X11BASE@/lib/X11/fonts/misc/8x16.pcf.gz
++#JISX0201_KATA = @X11BASE@/lib/X11/fonts/misc/8x16rk.pcf.gz
  #JISX0208_1983 = /usr/share/fonts/X11/misc/mplus_j12r.pcf.gz
-+#JISX0208_1983 = /usr/X11R7/lib/X11/fonts/misc/jiskan16.pcf.gz
++#JISX0208_1983 = @X11BASE@/lib/X11/fonts/misc/jiskan16.pcf.gz
  JISC6226_1978 = &JISX0208_1983
  JISX0208_1990 = &JISX0208_1983
  JISX0213_2000_1 = &JISX0208_1983
-+#JISX0213_2000_1=/usr/pkg/share/fonts/X11/local/jiskan16-2000-1.pcf.gz
-+#JISX0213_2000_2=/usr/pkg/share/fonts/X11/local/jiskan16-2000-2.pcf.gz
++#JISX0213_2000_1 = @PREFIX@/share/fonts/X11/local/jiskan16-2000-1.pcf.gz
++#JISX0213_2000_2 = @PREFIX@/share/fonts/X11/local/jiskan16-2000-2.pcf.gz
  
 -#ISO10646_UCS4_1 = /usr/share/fonts/X11/misc/unifont.pcf.gz:100
-+#ISO10646_UCS4_1 = /usr/pkg/share/fonts/X11/misc/unifont.pcf.gz:100
-+#ISO10646_UCS4_1 = /usr/pkg/share/fonts/X11/efont/b16.pcf.gz
++#ISO10646_UCS4_1 = @PREFIX@/share/fonts/X11/misc/unifont.pcf.gz:100
++#ISO10646_UCS4_1 = @PREFIX@/share/fonts/X11/efont/b16.pcf.gz
  ISO10646_UCS4_1_FULLWIDTH = &ISO10646_UCS4_1
  
  #ISCII_ASSAMESE = /usr/share/fonts/truetype/Asdr0ntt.ttf:120
