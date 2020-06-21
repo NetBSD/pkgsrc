@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.13 2017/12/04 09:32:01 he Exp $
+$NetBSD: distinfo,v 1.14 2020/06/21 15:30:39 nia Exp $
 
-SHA1 (tcpreplay-4.2.6.tar.gz) = 8f7b91534d7936ae534d87689ad371fd4e4bb059
-RMD160 (tcpreplay-4.2.6.tar.gz) = afdbd71573d04afbe7f6594778e9dd1223b64ff0
-SHA512 (tcpreplay-4.2.6.tar.gz) = a46846b29e3cd7fbc635faee9c4be90db0d346c0d0f291ac8e007e1fbf614289094e14480c1c5b40feb5a175d3cbad018e2dd4d1a5762b7d31a4325af6102e7e
-Size (tcpreplay-4.2.6.tar.gz) = 3494827 bytes
-SHA1 (patch-libopts_makeshell.c) = 1da67df9acb4ac7972ed72db5b113bfee054aeae
-SHA1 (patch-src_common_get.c) = 71685be82d53faa5f1e73afcddb540506055e41e
-SHA1 (patch-src_common_mac.c) = e667846485bb1d07065f98cc685a318ee04873ec
+SHA1 (tcpreplay-4.3.3.tar.xz) = 23ffd5e382d55bb0ed27c7becb196c7565fcaf6b
+RMD160 (tcpreplay-4.3.3.tar.xz) = b159ff5fe5d6e4e126932c155bf9680047d19972
+SHA512 (tcpreplay-4.3.3.tar.xz) = 110d7768a176d2126766829466a209cdd983afcf0c988f7e128baa5057b3ac1dc918fcaeb168a2e6654429100a146afcbdafcda8c3d67adf6b17892a48689a02
+Size (tcpreplay-4.3.3.tar.xz) = 748220 bytes
+SHA1 (patch-configure) = acafd832ae7d94520daf9600a18f3419bd440e1e
