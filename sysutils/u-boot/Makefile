@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2020/06/21 03:31:13 thorpej Exp $
+# $NetBSD: Makefile,v 1.31 2020/06/21 18:28:16 thorpej Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	meta-pkgs sysutils u-boot
 MASTER_SITES=	# empty
 
@@ -20,10 +20,12 @@ META_PACKAGE=	yes
 DEPENDS+=	u-boot-a10-olinuxino-lime-[0-9]*:../../sysutils/u-boot-a10-olinuxino-lime
 DEPENDS+=	u-boot-a20-olinuxino-lime2-[0-9]*:../../sysutils/u-boot-a20-olinuxino-lime2
 DEPENDS+=	u-boot-a20-olinuxino-lime2-emmc-[0-9]*:../../sysutils/u-boot-a20-olinuxino-lime2-emmc
+DEPENDS+=	u-boot-a20-olinuxino-micro-[0-9]*:../../sysutils/u-boot-a20-olinuxino-micro-emmc
 DEPENDS+=	u-boot-a20-olinuxino-micro-emmc-[0-9]*:../../sysutils/u-boot-a20-olinuxino-micro-emmc
 DEPENDS+=	u-boot-bananapi-m2-zero-[0-9]*:../../sysutils/u-boot-bananapi-m2-zero
 DEPENDS+=	u-boot-bananapi-m3-[0-9]*:../../sysutils/u-boot-bananapi-m3
 DEPENDS+=	u-boot-bananapi-p2-zero-[0-9]*:../../sysutils/u-boot-bananapi-p2-zero
+DEPENDS+=	u-boot-bananapi-r2-[0-9]*:../../sysutils/u-boot-bananapi-r2
 DEPENDS+=	u-boot-bananapi-[0-9]*:../../sysutils/u-boot-bananapi
 DEPENDS+=	u-boot-bananapro-[0-9]*:../../sysutils/u-boot-bananapro
 DEPENDS+=	u-boot-beagleboard-[0-9]*:../../sysutils/u-boot-beagleboard
@@ -37,6 +39,7 @@ DEPENDS+=	u-boot-cubietruck-[0-9]*:../../sysutils/u-boot-cubietruck
 DEPENDS+=	u-boot-cubietruck-plus-[0-9]*:../../sysutils/u-boot-cubietruck-plus
 DEPENDS+=	u-boot-de0-nanosoc-[0-9]*:../../sysutils/u-boot-de0-nanosoc
 DEPENDS+=	u-boot-hummingbird-a31-[0-9]*:../../sysutils/u-boot-hummingbird-a31
+DEPENDS+=	u-boot-jetson-nano-[0-9]*:../../sysutils/u-boot-jetson-nano
 DEPENDS+=	u-boot-jetson-tk1-[0-9]*:../../sysutils/u-boot-jetson-tk1
 DEPENDS+=	u-boot-jetson-tx1-[0-9]*:../../sysutils/u-boot-jetson-tx1
 DEPENDS+=	u-boot-jetson-tx2-[0-9]*:../../sysutils/u-boot-jetson-tx2
@@ -71,5 +74,8 @@ DEPENDS+=	u-boot-rock64-[0-9]*:../../sysutils/u-boot-rock64
 DEPENDS+=	u-boot-rockpro64-[0-9]*:../../sysutils/u-boot-rockpro64
 DEPENDS+=	u-boot-rpi3-32-[0-9]*:../../sysutils/u-boot-rpi3-32
 DEPENDS+=	u-boot-sopine-baseboard-[0-9]*:../../sysutils/u-boot-sopine-baseboard
+DEPENDS+=	u-boot-tinker-[0-9]*:../../sysutils/u-boot-tinker
+DEPENDS+=	u-boot-zynq-zybo-[0-9]*:../../sysutils/u-boot-zynq-zybo
+DEPENDS+=	u-boot-zynq-zybo-z7-[0-9]*:../../sysutils/u-boot-zynq-zybo-z7
 
 .include "../../mk/bsd.pkg.mk"
