@@ -4459,13 +4459,17 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     invoked by setting <code class="varname">HAS_CONFIGURE</code> to
     <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span>. If the configure script is a GNU autoconf
     script, you should set <code class="varname">GNU_CONFIGURE</code> to
-    <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span> instead. What happens in the
-    <span class="emphasis"><em>configure</em></span> phase is roughly:</p>
+    <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span> instead.</p>
+<p>In the <code class="literal">do-configure</code> stage, a rough
+    equivalent of the following command is run. See
+    <code class="filename">mk/configure/configure.mk</code>, target
+    <code class="literal">do-configure-script</code> for the exact
+    definition.</p>
 <pre class="programlisting">
-.for d in ${CONFIGURE_DIRS}
-        cd ${WRKSRC} \
-        &amp;&amp; cd ${d} \
-        &amp;&amp; env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+.for dir in ${CONFIGURE_DIRS}
+        cd ${WRKSRC} &amp;&amp; cd ${dir} \
+        &amp;&amp; env ${CONFIGURE_ENV} \
+            ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .endfor
 </pre>
 <p><code class="varname">CONFIGURE_DIRS</code> (default:
@@ -4506,14 +4510,14 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.build"></a>13.12. The <span class="emphasis"><em>build</em></span> phase</h2></div></div></div>
-<p>For building a package, a rough equivalent of the
-    following code is executed.</p>
+<p>For building a package, a rough equivalent of the following
+    code is executed; see <code class="filename">mk/build/build.mk</code>, target
+    <code class="literal">do-build</code> for the exact definition.</p>
 <pre class="programlisting">
-.for d in ${BUILD_DIRS}
-        cd ${WRKSRC} \
-        &amp;&amp; cd ${d} \
+.for dir in ${BUILD_DIRS}
+        cd ${WRKSRC} &amp;&amp; cd ${dir} \
         &amp;&amp; env ${MAKE_ENV} \
-            ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+            ${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS} \
                 -f ${MAKE_FILE} \
                 ${BUILD_TARGET}
 .endfor
@@ -4549,18 +4553,19 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <p>Once the build stage has completed, the final step is to
     install the software in public directories, so users can
     access the programs and files.</p>
-<p>In the <span class="emphasis"><em>install</em></span> phase, a rough
-    equivalent of the following code is executed. Additionally,
-    before and after this code, much magic is performed to do
-    consistency checks, registering the package, and so on.</p>
+<p>In the <span class="emphasis"><em>install</em></span> phase, a rough equivalent
+    of the following code is executed; see
+    <code class="filename">mk/install/install.mk</code>, target
+    <code class="literal">do-install</code> for the exact definition. Additionally,
+    before and after this code, several consistency checks are run
+    against the files-to-be-installed, see
+    <code class="filename">mk/check/*.mk</code> for details.</p>
 <pre class="programlisting">
-.for d in ${INSTALL_DIRS}
-        cd ${WRKSRC} \
-        &amp;&amp; cd ${d} \
-        &amp;&amp; env ${MAKE_ENV} \
-            ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                -f ${MAKE_FILE} \
-                ${INSTALL_TARGET}
+.for dir in ${INSTALL_DIRS}
+        cd ${WRKSRC} &amp;&amp; cd ${dir} \
+        &amp;&amp; env ${INSTALL_ENV} ${MAKE_ENV} \
+            ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} \
+                -f ${MAKE_FILE} ${INSTALL_TARGET}
 .endfor
 </pre>
 <p>The variable's meanings are analogous to the ones in the
