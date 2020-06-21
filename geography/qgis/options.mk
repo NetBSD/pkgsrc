@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.16 2019/11/03 19:30:34 rillig Exp $
+# $NetBSD: options.mk,v 1.17 2020/06/21 13:51:49 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qgis
 PKG_SUPPORTED_OPTIONS=	python
-# Don't enable python by default because it is not
-# supported by gdal-lib and as a result we get a
-# warning when qgis is launched.
-# XXX fix gdal-lib and reenable this.
+# \todo Explain why there is even an option; python is so central and
+# qgis is so huge that it is hard to imagine someone wanting to build
+# qgis without python.
 PKG_SUGGESTED_OPTIONS+=	python
 
 .include "../../mk/bsd.options.mk"
 
+# \todo Flip sense of option (if it isn't just removed).
 .if empty(PKG_OPTIONS:Mpython)
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=FALSE
 PYTHON_FOR_BUILD_ONLY=	YES

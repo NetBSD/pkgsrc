@@ -1,18 +1,12 @@
-$NetBSD: distinfo,v 1.16 2020/06/21 00:30:04 gdt Exp $
+$NetBSD: distinfo,v 1.17 2020/06/21 13:51:49 gdt Exp $
 
-SHA1 (qgis-3.8.3.tar.bz2) = 4ac18e9818e86433901158185e2c807cf418a043
-RMD160 (qgis-3.8.3.tar.bz2) = dd90e89d522924cedb5152826eae426ad7aa1754
-SHA512 (qgis-3.8.3.tar.bz2) = afe1e5c565c63c7a031da4217339661d1f481a0f1c1672bf197edf334bdb9b1abb22c88fe2ed3d3f1c3ebbe08d51708499cabfbff5e312ad6f39833407df14d8
-Size (qgis-3.8.3.tar.bz2) = 82720462 bytes
+SHA1 (qgis-3.10.7.tar.bz2) = 3c2f972e5c8ad91d848cd84ee6c7c975cea4c4f3
+RMD160 (qgis-3.10.7.tar.bz2) = d38d179ee5ed3f999f47cc3bfcd0fe25e6afb6dc
+SHA512 (qgis-3.10.7.tar.bz2) = b10d81d24c7cfb8b285b6d9884dfe19ba33b032cd843d29b879159d203454fd359a669047b677baf515d92ce331ba66f59dc2466beae2048920b2c0da0c3d666
+Size (qgis-3.10.7.tar.bz2) = 102154692 bytes
 SHA1 (patch-cmake_FindQwt.cmake) = bd0c082e53b8647fcdeb671b932180ec16de49d9
 SHA1 (patch-mac_CMakeLists.txt) = 2468c0a629738ce78cccb784395eb1f41049cc73
 SHA1 (patch-mac_cmake_1qt.cmake.in) = d74f7201849ef6dd83f39251e466eb04c791c0e6
-SHA1 (patch-python_core_conversions.sip) = 41df73f8438569392f2158d83c89e86ae8024319
-SHA1 (patch-src_analysis_interpolation_qgsinterpolator.h) = 13e48b38dbe2c2e3a134da7d551a81067ffe25bd
 SHA1 (patch-src_core_CMakeLists.txt) = f476770fcb488385723def8aecaa8146de18d624
-SHA1 (patch-src_core_dxf_qgsdxfpaintengine.h) = 1c574fa457bb9fbbf3fc5421dd806875a883c518
-SHA1 (patch-src_core_geometry_qgscurve.h) = 890b19e0821ac63de53e348ad43ee7b080b9c361
 SHA1 (patch-src_core_qgsapplication.cpp) = 9300b9af85281c1b766560e72e52658930f50a12
-SHA1 (patch-src_core_symbology_qgssymbollayer.h) = f79e02a6b5440f802ef41126004f8fee92f4f28a
-SHA1 (patch-src_crssync_CMakeLists.txt) = 49b551cd2231704dac0872b7c8893b5bdda3e0ad
-SHA1 (patch-src_gui_qgsmapoverviewcanvas.cpp) = c0caaae20b12d9363addb1117c9ae1e788e246a9
+SHA1 (patch-src_crssync_CMakeLists.txt) = a3f4f9d0ac47bafb7c23931528bbdcbbf08b6098
