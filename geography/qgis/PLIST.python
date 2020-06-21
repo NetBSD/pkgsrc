@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST.python,v 1.5 2019/10/29 19:30:11 bouyer Exp $
+@comment $NetBSD: PLIST.python,v 1.6 2020/06/21 13:51:49 gdt Exp $
 lib/libqgispython.so
 lib/libqgispython.so.${PKGVERSION}
-lib/qgis/plugins/libarcgisfeatureserverprovider.so
-lib/qgis/plugins/libarcgismapserverprovider.so
 share/qgis/python/console/__init__.py
 share/qgis/python/console/console.py
 share/qgis/python/console/console_compile_apis.py
@@ -188,6 +186,7 @@ share/qgis/python/plugins/processing/algs/gdal/polygonize.py
 share/qgis/python/plugins/processing/algs/gdal/proximity.py
 share/qgis/python/plugins/processing/algs/gdal/rasterize.py
 share/qgis/python/plugins/processing/algs/gdal/rasterize_over.py
+share/qgis/python/plugins/processing/algs/gdal/rasterize_over_fixed_value.py
 share/qgis/python/plugins/processing/algs/gdal/rearrange_bands.py
 share/qgis/python/plugins/processing/algs/gdal/retile.py
 share/qgis/python/plugins/processing/algs/gdal/rgb2pct.py
@@ -622,6 +621,7 @@ share/qgis/python/plugins/processing/algs/qgis/BasicStatistics.py
 share/qgis/python/plugins/processing/algs/qgis/BoxPlot.py
 share/qgis/python/plugins/processing/algs/qgis/Buffer.py
 share/qgis/python/plugins/processing/algs/qgis/CheckValidity.py
+share/qgis/python/plugins/processing/algs/qgis/Climb.py
 share/qgis/python/plugins/processing/algs/qgis/ConcaveHull.py
 share/qgis/python/plugins/processing/algs/qgis/CreateAttributeIndex.py
 share/qgis/python/plugins/processing/algs/qgis/CreateConstantRaster.py
@@ -1249,7 +1249,9 @@ share/qgis/python/plugins/processing/script/ScriptUtils.py
 share/qgis/python/plugins/processing/script/__init__.py
 share/qgis/python/plugins/processing/tests/AlgorithmsTestBase.py
 share/qgis/python/plugins/processing/tests/CheckValidityAlgorithm.py
-share/qgis/python/plugins/processing/tests/GdalAlgorithmsTest.py
+share/qgis/python/plugins/processing/tests/GdalAlgorithmsGeneralTest.py
+share/qgis/python/plugins/processing/tests/GdalAlgorithmsRasterTest.py
+share/qgis/python/plugins/processing/tests/GdalAlgorithmsVectorTest.py
 share/qgis/python/plugins/processing/tests/Grass7AlgorithmsImageryTest.py
 share/qgis/python/plugins/processing/tests/Grass7AlgorithmsRasterTest.py
 share/qgis/python/plugins/processing/tests/Grass7AlgorithmsVectorTest.py
@@ -1349,6 +1351,7 @@ share/qgis/python/qgis/core/additions/markerlinesymbollayer.py
 share/qgis/python/qgis/core/additions/metaenum.py
 share/qgis/python/qgis/core/additions/processing.py
 share/qgis/python/qgis/core/additions/projectdirtyblocker.py
+share/qgis/python/qgis/core/additions/providermetadata.py
 share/qgis/python/qgis/core/additions/qgsfeature.py
 share/qgis/python/qgis/core/additions/qgsfunction.py
 share/qgis/python/qgis/core/additions/qgsgeometry.py
