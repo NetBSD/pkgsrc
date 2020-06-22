@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/05 12:43:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/22 11:43:26 ryoon Exp $
 
 DISTNAME=	dwdiff-2.1.2
 CATEGORIES=	textproc
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
