@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/06/22 11:46:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/22 11:49:01 ryoon Exp $
 
 DISTNAME=	minitube-3.4.2
 PKGREVISION=	1
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c++
 
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
 # MAINTAINER's API key of Google's YouTube Data API v3
 # It is strictly prohibited to use this outside pkgsrc.
 YT_DATA_API_KEY=	AIzaSyC1J587QO_mrYeJsH4BpAWoSxIuwlW1USc
@@ -30,6 +32,5 @@ do-configure:
 .include "../../multimedia/mpv/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
-.include "../../x11/qt5-tools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
