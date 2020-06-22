@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3751 2020/06/22 07:24:53 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3752 2020/06/22 07:57:47 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6019,3 +6019,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/mutt to 1.14.4 [wiz 2020-06-22]
 	Updated pkgtools/pkglint to 20.1.19 [rillig 2020-06-22]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2020Q2 branch [wiz 2020-06-22]
+	Updated databases/guile-sqlite3 to 0.1.2 [nikita 2020-06-22]
