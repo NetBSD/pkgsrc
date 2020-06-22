@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/06/19 13:06:35 nia Exp $
+# $NetBSD: Makefile,v 1.16 2020/06/22 09:57:18 nia Exp $
 
 DISTNAME=	mgba-0.8.2
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
 
@@ -17,10 +18,10 @@ USE_LANGUAGES=	c c++
 GCC_REQD+=	5
 
 CMAKE_ARGS+=	-DUSE_DISCORD_RPC=OFF
-CMAKE_ARGS+=	-DUSE_MINIZIP=OFF # using libzip
+CMAKE_ARGS+=	-DUSE_LIBZIP=OFF # using minizip
 
 .include "options.mk"
-.include "../../archivers/libzip/buildlink3.mk"
+.include "../../archivers/minizip/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libelf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
