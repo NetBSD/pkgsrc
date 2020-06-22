@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.229 2020/06/09 10:18:49 nia Exp $
+# $NetBSD: Makefile,v 1.230 2020/06/22 06:24:15 wiz Exp $
 
-DISTNAME=		mutt-1.13.5
-PKGREVISION=		2
+DISTNAME=		mutt-1.14.4
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/
 
@@ -41,13 +40,6 @@ CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
 
 CONFIGURE_ARGS.SunOS+=	--without-wc-funcs
 
-# There is a problem using /bin/sh on old NetBSD releases, so use /bin/ksh
-# there.
-#
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-5]*-*)
-CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
-.endif
-
 .include "options.mk"
 
 LDFLAGS+=		${_STRIPFLAG_CC}
@@ -59,8 +51,19 @@ FILES_SUBST+=		DOCDIR=${DOCDIR}
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	doc/Muttrc
-SUBST_VARS.paths+=	DOCDIR PREFIX
+SUBST_FILES.paths+=	contrib/sample.muttrc
+SUBST_FILES.paths+=	contrib/sample.muttrc-starter
+SUBST_FILES.paths+=	doc/configuration.html
+SUBST_FILES.paths+=	doc/gettingstarted.html
+SUBST_FILES.paths+=	doc/instdoc.sh.in
+SUBST_FILES.paths+=	doc/manual.html
+SUBST_FILES.paths+=	doc/manual.xml.head
+SUBST_FILES.paths+=	doc/mimesupport.html
+SUBST_FILES.paths+=	doc/mutt.info
+SUBST_FILES.paths+=	doc/mutt.texi
+SUBST_FILES.paths+=	doc/muttrc.man
+SUBST_FILES.paths+=	doc/reference.html
+SUBST_SED.paths+=	-e "s,/usr/local,${PREFIX},g"
 SUBST_STAGE.paths=	pre-configure
 
 SPECIAL_PERMS+=		bin/mutt_dotlock ${REAL_ROOT_USER} mail 2551
