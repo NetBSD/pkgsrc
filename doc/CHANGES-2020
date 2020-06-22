@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3755 2020/06/22 11:49:37 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3756 2020/06/22 11:51:03 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -5991,6 +5991,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/u-boot-jetson-nano version 2020.04 [thorpej 2020-06-20]
 	Added sysutils/u-boot-pandaboard version 2018.11 [thorpej 2020-06-20]
 	Updated sysutils/u-boot to 2018.11nb10 [thorpej 2020-06-20]
+	Updated misc/udfclient to 0.8.11 [reinoud 2020-06-20]
 	Updated editors/TeXmacs to 1.99.13 [mef 2020-06-21]
 	Updated editors/fe to 1.9 [mef 2020-06-21]
 	Updated lang/nim to 1.2.2 [ryoon 2020-06-21]
