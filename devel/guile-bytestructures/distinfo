@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/11/13 11:43:54 ng0 Exp $
+$NetBSD: distinfo,v 1.2 2020/06/22 08:14:28 nikita Exp $
 
-SHA1 (scheme-bytestructures-1.0.6.tar.gz) = 68aae12de2e817892116c17afb7f4be57da15734
-RMD160 (scheme-bytestructures-1.0.6.tar.gz) = 9a43f11c3e9c44a0cf6768bc54dc1fa4e9dc679f
-SHA512 (scheme-bytestructures-1.0.6.tar.gz) = f1e51c9e22215173a30f7096bc0d707b3da41f8b2dc8ea868e105a76b2653b7957c377b7d12fbfb9b788935dfaf961a29d6c5783bf93a0e78ba0e77b0d9bd68e
-Size (scheme-bytestructures-1.0.6.tar.gz) = 49056 bytes
+SHA1 (scheme-bytestructures-1.0.7.tar.gz) = 723c6cde6cbad620d154c7db94c40172835c5952
+RMD160 (scheme-bytestructures-1.0.7.tar.gz) = 1d5ac237f7548bff9bc4fa3fcf67412956afd522
+SHA512 (scheme-bytestructures-1.0.7.tar.gz) = 5b757d4e78746dd5e07c7b1b3f90054965dcd98a4cef59d3dd635273625667e24a77995ad570e4b9d2c674869f92c59b14f3f86d05af1d0f790af16ef68cd712
+Size (scheme-bytestructures-1.0.7.tar.gz) = 49112 bytes
