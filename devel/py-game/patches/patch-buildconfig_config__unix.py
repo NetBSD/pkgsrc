@@ -1,12 +1,12 @@
-$NetBSD: patch-buildconfig_config__unix.py,v 1.1 2019/06/06 21:46:12 adam Exp $
+$NetBSD: patch-buildconfig_config__unix.py,v 1.2 2020/06/22 11:33:41 ryoon Exp $
 
 Detect X11R6 or X11R7; avoid localbase overriding search.
 Use correct libpng.
 Disable portmidi and porttime; porttime is a part of portmidi.
 
---- buildconfig/config_unix.py.orig	2019-06-06 17:38:22.000000000 +0000
+--- buildconfig/config_unix.py.orig	2019-04-25 06:14:17.000000000 +0000
 +++ buildconfig/config_unix.py
-@@ -148,8 +148,8 @@ def main(sdl2=False):
+@@ -148,12 +148,12 @@ def main(sdl2=False):
  
      #these get prefixes with '/usr' and '/usr/local' or the $LOCALBASE
      if sdl2:
@@ -17,6 +17,11 @@ Disable portmidi and porttime; porttime is a part of portmidi.
                         '/lib/i386-linux-gnu', '/lib/x86_64-linux-gnu']
      else:
          origincdirs = ['/include', '/include/SDL', '/include/SDL']
+-        origlibdirs = ['/lib','/lib64','/X11R6/lib']
++        origlibdirs = ['/lib','/lib64','/X11R6/lib','/X11R7/lib']
+     if 'ORIGLIBDIRS' in os.environ and os.environ['ORIGLIBDIRS'] != "":
+         origlibdirs = os.environ['ORIGLIBDIRS'].split(":")
+ 
 @@ -216,13 +216,12 @@ def main(sdl2=False):
              #Dependency('GFX', 'SDL_gfxPrimitives.h', 'libSDL_gfx.so', ['SDL_gfx']),
          ]
