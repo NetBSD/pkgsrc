@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3745 2020/06/21 22:39:11 fox Exp $
+$NetBSD: CHANGES-2020,v 1.3746 2020/06/22 00:31:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6013,3 +6013,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/u-boot to 2018.11nb11 [thorpej 2020-06-21]
 	Added www/firefox_decrypt version 0.7.0 [wiz 2020-06-21]
 	Updated print/foliate to 2.3.0 [fox 2020-06-21]
+	Updated databases/postgresql-postgis2 to 3.0.1 [gdt 2020-06-22]
