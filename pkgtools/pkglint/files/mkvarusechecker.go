@@ -168,6 +168,14 @@ func (ck *MkVarUseChecker) checkVarnameBuildlink(varname string) {
 		return
 	}
 
+	// lang/lua/buildlink3.mk defines BUILDLINK_PREFIX.lua but
+	// doesn't add it to BUILDLINK_TREE. Only the versioned
+	// buildlink identifier (lua53) is added to BUILDLINK_TREE.
+	// This is unusual.
+	if pkg.vars.IsDefined(varname) {
+		return
+	}
+
 	// Several packages contain Makefile fragments that are more related
 	// to the buildlink3.mk file than to the package Makefile.
 	// These may use the buildlink identifier from the package itself.
