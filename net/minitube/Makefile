@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/06/12 14:09:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/22 11:46:43 ryoon Exp $
 
 DISTNAME=	minitube-3.4.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flaviotordini/}
 GITHUB_PROJECT=	minitube
@@ -29,5 +30,6 @@ do-configure:
 .include "../../multimedia/mpv/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-tools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
