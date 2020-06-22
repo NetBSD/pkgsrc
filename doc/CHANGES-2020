@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3754 2020/06/22 08:14:39 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.3755 2020/06/22 11:49:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6022,3 +6022,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/guile-sqlite3 to 0.1.2 [nikita 2020-06-22]
 	Updated textproc/guile-json to 4.1.0 [nikita 2020-06-22]
 	Updated devel/guile-bytestructures to 1.0.7 [nikita 2020-06-22]
+	Updated net/minitube to 3.4.2nb1 [ryoon 2020-06-22]
