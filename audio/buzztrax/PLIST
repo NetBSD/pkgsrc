@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/16 11:18:11 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/22 11:18:38 nia Exp $
 bin/buzztrax-cmd
 bin/buzztrax-edit
 include/libbml/BuzzMachineLoader.h
@@ -62,6 +62,7 @@ lib/buzztrax/libbuzzmachineloader.la
 lib/gstreamer-1.0/libbuzztraxaudio.la
 lib/gstreamer-1.0/libbuzztraxdec.la
 lib/gstreamer-1.0/libgstbml.la
+lib/gstreamer-1.0/libgstfluidsynth.la
 lib/gstreamer-1.0/libgstsidsyn.la
 lib/libbml.la
 lib/libbuzztrax-core.la
@@ -103,35 +104,6 @@ share/buzztrax/songs/melo4.xml
 share/buzztrax/songs/melo5.xml
 share/buzztrax/songs/melo6.xml
 share/glib-2.0/schemas/org.buzztrax.gschema.xml
-share/gnome/help/buzztrax-edit/C/buzztrax-edit.xml
-share/gnome/help/buzztrax-edit/C/figures/about.png
-share/gnome/help/buzztrax-edit/C/figures/crash-recovery.png
-share/gnome/help/buzztrax-edit/C/figures/interaction-controller-learn.png
-share/gnome/help/buzztrax-edit/C/figures/machine-preferences.png
-share/gnome/help/buzztrax-edit/C/figures/machine-properties.png
-share/gnome/help/buzztrax-edit/C/figures/machine-rename.png
-share/gnome/help/buzztrax-edit/C/figures/main-window.png
-share/gnome/help/buzztrax-edit/C/figures/missing-gstreamer-elements.png
-share/gnome/help/buzztrax-edit/C/figures/missing-song-elements.png
-share/gnome/help/buzztrax-edit/C/figures/page-info-view.png
-share/gnome/help/buzztrax-edit/C/figures/page-machine-view.png
-share/gnome/help/buzztrax-edit/C/figures/page-pattern-view.png
-share/gnome/help/buzztrax-edit/C/figures/page-sequence-view.png
-share/gnome/help/buzztrax-edit/C/figures/page-wavetable-view.png
-share/gnome/help/buzztrax-edit/C/figures/pattern-properties.png
-share/gnome/help/buzztrax-edit/C/figures/preset-properties.png
-share/gnome/help/buzztrax-edit/C/figures/recording-progress.png
-share/gnome/help/buzztrax-edit/C/figures/recording-settings.png
-share/gnome/help/buzztrax-edit/C/figures/settings-audio.png
-share/gnome/help/buzztrax-edit/C/figures/settings-colors.png
-share/gnome/help/buzztrax-edit/C/figures/settings-directories.png
-share/gnome/help/buzztrax-edit/C/figures/settings-ic.png
-share/gnome/help/buzztrax-edit/C/figures/settings-pc.png
-share/gnome/help/buzztrax-edit/C/figures/settings-shortcuts.png
-share/gnome/help/buzztrax-edit/C/figures/signal-analysis.png
-share/gnome/help/buzztrax-edit/C/figures/tip.png
-share/gnome/help/buzztrax-edit/C/legal.xml
-share/gnome/help/buzztrax-edit/C/version.entities
 share/gstreamer-1.0/presets/GstBtEBeats.prs
 share/gstreamer-1.0/presets/GstBtSimSyn.prs
 share/gtk-doc/html/buzztrax-cmd/BtCmdApplication.html
@@ -494,4 +466,3 @@ share/locale/vi/LC_MESSAGES/${PKGNAME}.mo
 share/locale/zh_CN/LC_MESSAGES/${PKGNAME}.mo
 share/mime/packages/buzztrax-songio-buzz.xml
 share/mime/packages/buzztrax.xml
-share/omf/buzztrax-edit/buzztrax-edit-C.omf
