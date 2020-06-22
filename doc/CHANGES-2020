@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3748 2020/06/22 06:09:41 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3749 2020/06/22 06:24:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6016,3 +6016,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/postgresql-postgis2 to 3.0.1 [gdt 2020-06-22]
 	Added audio/hts_engine version 1.10 [ryoon 2020-06-22]
 	Updated mail/neomutt to 20200619 [wiz 2020-06-22]
+	Updated mail/mutt to 1.14.4 [wiz 2020-06-22]
