@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2019/11/11 16:26:43 ng0 Exp $
+# $NetBSD: options.mk,v 1.16 2020/06/22 06:08:35 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -157,7 +157,6 @@ CONFIGURE_ARGS+=	--disable-notmuch
 .if !empty(PKG_OPTIONS:Mlua)
 .include "../../lang/lua/buildlink3.mk"
 .include "../../lang/lua/tool.mk"
-USE_TOOLS+=		lua
 CONFIGURE_ARGS+=	--lua
 CONFIGURE_ARGS+=	--with-lua=${BUILDLINK_PREFIX.lua}
 .else
