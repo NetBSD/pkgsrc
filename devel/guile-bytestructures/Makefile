@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/04/28 11:46:28 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/22 08:14:28 nikita Exp $
 
-DISTNAME=	scheme-bytestructures-1.0.6
+DISTNAME=	scheme-bytestructures-1.0.7
 PKGNAME=	${DISTNAME:S/scheme/guile/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TaylanUB/}
