@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2020/04/08 08:40:00 rhialto Exp $
+# $NetBSD: options.mk,v 1.35 2020/06/22 06:24:15 wiz Exp $
 
 # Global and legacy options
 
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
 .if !empty(PKG_OPTIONS:Mcurses) || !empty(PKG_OPTIONS:Mwide-curses)
 .  include "../../mk/curses.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.curses}
-.  if !empty(CURSES_TYPE:Mcurses)
+.  if ${CURSES_TYPE:U} == curses
 OPSYSVARS+=			BUILDLINK_PASSTHRU_DIRS
 BUILDLINK_PASSTHRU_DIRS.SunOS+=	/usr/xpg4
 CONFIGURE_ARGS.SunOS+=		--with-curses=/usr/xpg4
@@ -89,9 +89,9 @@ PLIST_VARS+=		smime
 .if !empty(PKG_OPTIONS:Msmime)
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		*.pl */*.pl
-.if empty(PKG_OPTIONS:Mopenssl) && empty(PKG_OPTIONS:Mgnutls)
+.  if empty(PKG_OPTIONS:Mopenssl) && empty(PKG_OPTIONS:Mgnutls)
 PKG_FAIL_REASON+=	"The smime option requires the openssl or gnutls options."
-.endif
+.  endif
 CONFIGURE_ARGS+=	--enable-smime
 PLIST.smime=		yes
 .else
@@ -103,14 +103,14 @@ CONFIGURE_ARGS+=	--disable-smime
 ###
 .if !empty(PKG_OPTIONS:Mmutt-hcache)
 .  if !empty(PKG_OPTIONS:Mtokyocabinet)
-.  include "../../databases/tokyocabinet/buildlink3.mk"
+.    include "../../databases/tokyocabinet/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hcache
 CONFIGURE_ARGS+=	--enable-tokyocabinet
 CONFIGURE_ARGS+=	--without-gdbm
 CONFIGURE_ARGS+=	--without-bdb
 .  else
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
-.  include "../../mk/bdb.buildlink3.mk"
+.    include "../../mk/bdb.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hcache
 CONFIGURE_ARGS+=	--without-gdbm
 # BDB_INCLUDE_DIR_ and BDB_LIB_DIR don't have to be particularly accurate
