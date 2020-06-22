@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/11/13 12:52:25 ng0 Exp $
+$NetBSD: distinfo,v 1.2 2020/06/22 07:57:36 nikita Exp $
 
-SHA1 (guile-sqlite3-0.1.0/v0.1.0.tar.gz) = faee70ad63a55709fa057b54968fc62872d366fe
-RMD160 (guile-sqlite3-0.1.0/v0.1.0.tar.gz) = 78865cb43aca970e107a258a74964f69a0bb8e20
-SHA512 (guile-sqlite3-0.1.0/v0.1.0.tar.gz) = 8c1f58024c464e5628162e3ba1bf129809403bcc5d2329b55b6628f419ff8d5ead21d87f0bdcbb458ce5798d62184af177616bbfbeb653c34450c716f6b3ab26
-Size (guile-sqlite3-0.1.0/v0.1.0.tar.gz) = 23832 bytes
-SHA1 (patch-configure.ac) = c848428774814382fd9147835efca397aa0682e8
+SHA1 (guile-sqlite3-0.1.2/v0.1.2.tar.gz) = 6f9aad95fae0bfecfc62a38049ef858454278295
+RMD160 (guile-sqlite3-0.1.2/v0.1.2.tar.gz) = 65b758df5f7ddbf67b3ec077bc7e959702889381
+SHA512 (guile-sqlite3-0.1.2/v0.1.2.tar.gz) = 872f321fbc53cbca4f7570c8cb7d4f5e4990e49316d2f2230c8da084ef8559890630b87f17a93ee07594f847a4dee0b8e8504acab2027c64c17339bfa540a8e8
+Size (guile-sqlite3-0.1.2/v0.1.2.tar.gz) = 24719 bytes
+SHA1 (patch-configure.ac) = dff25ddc6c63e50eef3ddb204c51720421d6fe88
