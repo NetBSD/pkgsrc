@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.1 2019/11/13 12:52:25 ng0 Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/06/22 07:57:35 nikita Exp $
 
 Override SQLITE_LIBDIR detection.
 
 --- configure.ac.orig	2018-06-27 07:44:03.000000000 +0000
 +++ configure.ac
-@@ -18,7 +18,7 @@ GUILE_PKG([2.2 2.0])
+@@ -18,6 +18,6 @@ GUILE_PKG([2.2 2.0])
  GUILE_PROGS
  
  PKG_CHECK_MODULES([SQLITE], [sqlite3])
@@ -12,4 +12,3 @@ Override SQLITE_LIBDIR detection.
 +#SQLITE_LIBDIR="`"$PKG_CONFIG" sqlite3 --variable libdir`"
  AC_SUBST([SQLITE_LIBDIR])
  
- AC_MSG_CHECKING([whether '$SQLITE_LIBDIR/libsqlite3' is usable])
