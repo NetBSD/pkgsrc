@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.606 2020/06/16 13:42:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.607 2020/06/22 00:56:46 ryoon Exp $
 #
 
 COMMENT=	Audio tools
@@ -192,6 +192,7 @@ SUBDIR+=	gtkmserv
 SUBDIR+=	gtkpod
 SUBDIR+=	guspatches
 SUBDIR+=	herrie
+SUBDIR+=	hts_engine
 SUBDIR+=	hydrogen
 SUBDIR+=	ibniz
 SUBDIR+=	icecast
