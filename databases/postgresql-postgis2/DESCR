@@ -14,5 +14,3 @@ PostGIS/PostgreSQL includes the following functionality:
 * PostgreSQL JDBC extension objects corresponding to the geometries
 * Support for OGC access functions as defined by the Simple Features
   Specification
-
-This is postgis 2.x, the currently-maintained and recommended version.
