@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3747 2020/06/22 00:56:05 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3748 2020/06/22 06:09:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6015,3 +6015,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/foliate to 2.3.0 [fox 2020-06-21]
 	Updated databases/postgresql-postgis2 to 3.0.1 [gdt 2020-06-22]
 	Added audio/hts_engine version 1.10 [ryoon 2020-06-22]
+	Updated mail/neomutt to 20200619 [wiz 2020-06-22]
