@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/09/25 08:48:43 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2020/06/22 19:04:58 wiz Exp $
 
 Fix locale detection.
 
---- CMakeLists.txt.orig	2019-09-15 23:08:33.000000000 +0000
+--- CMakeLists.txt.orig	2020-06-15 02:50:34.000000000 +0000
 +++ CMakeLists.txt
-@@ -390,7 +390,9 @@ if(HAVE_LOCALTIME_R)
+@@ -360,7 +360,9 @@ if(HAVE_LOCALTIME_R)
  	list(APPEND FUNCTION_DEFINES HAVE_LOCALTIME_R)
  endif()
  
@@ -15,7 +15,29 @@ Fix locale detection.
  	list(APPEND FUNCTION_DEFINES HAVE_LOCALE)
  	if (HAVE_SNPRINTF_L)
  		list(APPEND FUNCTION_DEFINES HAVE_SNPRINTF_L)
-@@ -1037,9 +1039,6 @@ endif()
+@@ -609,19 +611,10 @@ if(WANT_SQLITE3 AND NOT USE_SQLITE3)
+ endif()
+ 
+ if(USE_LIBZIP)
+-	include_directories(AFTER ${LIBZIP_INCLUDE_DIRS})
+-	link_directories(${LIBZIP_LIBRARY_DIRS})
+-	list(APPEND DEPENDENCY_LIB ${LIBZIP_LIBRARIES})
+ 	list(APPEND FEATURES LIBZIP)
+ 	list(APPEND VFS_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/util/vfs/vfs-zip.c)
+-	string(REGEX MATCH "^[0-9]+" LIBZIP_VERSION_MAJOR ${libzip_VERSION})
+-	if (LIBZIP_VERSION_MAJOR LESS 1)
+-		set(CPACK_DEBIAN_PACKAGE_DEPENDS "${CPACK_DEBIAN_PACKAGE_DEPENDS},libzip2")
+-	elseif(LIBZIP_VERSION_MAJOR EQUAL 1)
+-		set(CPACK_DEBIAN_PACKAGE_DEPENDS "${CPACK_DEBIAN_PACKAGE_DEPENDS},libzip4|libzip5")
+-	else()
+-		message(AUTHOR_WARNING Unknown version of libzip detected: ${libzip_VERSION})
+-	endif()
++	list(APPEND DEPENDENCY_LIB zip)
++	set(CPACK_DEBIAN_PACKAGE_DEPENDS "${CPACK_DEBIAN_PACKAGE_DEPENDS},libzip4|libzip5")
+ elseif(USE_MINIZIP)
+ 	include_directories(AFTER ${MINIZIP_INCLUDE_DIRS})
+ 	link_directories(${MINIZIP_LIBRARY_DIRS})
+@@ -1025,9 +1018,6 @@ endif()
  
  file(GLOB READMES ${CMAKE_CURRENT_SOURCE_DIR}/README*.md)
  
