@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/06/17 16:59:19 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/22 12:18:19 ryoon Exp $
 
 DISTNAME=	visualboyadvance-m-2.1.4
 CATEGORIES=	emulators
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config msgmerge
+USE_TOOLS+=		pkg-config msgmerge zip
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
