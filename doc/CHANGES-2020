@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3749 2020/06/22 06:24:25 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3750 2020/06/22 06:35:15 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6017,3 +6017,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added audio/hts_engine version 1.10 [ryoon 2020-06-22]
 	Updated mail/neomutt to 20200619 [wiz 2020-06-22]
 	Updated mail/mutt to 1.14.4 [wiz 2020-06-22]
+	Updated pkgtools/pkglint to 20.1.19 [rillig 2020-06-22]
