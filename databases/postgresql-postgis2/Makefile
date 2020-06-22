@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.78 2020/06/05 12:49:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.79 2020/06/22 00:30:17 gdt Exp $
 
-MAJOR=		2.5
-DISTNAME=	postgis-${MAJOR}.3
+# Note that the directory is still postgis2, for historical reasons.
+# It remains, due to inertia, until there is a good basis to be sure
+# no other changes will be needed.
+MAJOR=		3.0
+DISTNAME=	postgis-${MAJOR}.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	12
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 
@@ -29,11 +31,10 @@ CONFLICTS=		postgis-[0-9]*
 # gmake complains about adding + to parent rule
 MAKE_JOBS_SAFE=		no
 
-
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake lex pax perl
+USE_TOOLS+=		gmake lex pax perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
@@ -79,9 +80,11 @@ MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 .include "../../textproc/libxslt/buildlink3.mk"
 
 # NORMAL DEPENDS
+.include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
