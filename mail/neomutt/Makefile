@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2020/04/26 20:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2020/06/22 06:08:35 wiz Exp $
 
-DISTNAME=		neomutt-20200424
+DISTNAME=		neomutt-20200619
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ HOMEPAGE=		https://www.neomutt.org/
 COMMENT=		Fork of mutt with integrated community patches
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
 
-USE_TOOLS+=		msgfmt gmake
+USE_TOOLS+=		msgfmt gmake perl:build
 
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
