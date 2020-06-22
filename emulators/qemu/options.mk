@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2020/05/28 14:44:19 nia Exp $
+# $NetBSD: options.mk,v 1.11 2020/06/22 12:13:20 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	gtk3 iscsi sdl spice
@@ -11,8 +11,15 @@ PKG_SUPPORTED_OPTIONS+=	virtfs-proxy-helper
 .endif
 
 .if ${OPSYS} != "Darwin"
+# NetBSD<9.0 does not have EGL support in native X11,
+# so the QEMU OpenGL display driver cannot build.
+.  include "../../graphics/MesaLib/features.mk"
+.  if !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
 PKG_SUPPORTED_OPTIONS+=	opengl
 PKG_SUGGESTED_OPTIONS+=	opengl sdl
+.  else
+PKG_SUGGESTED_OPTIONS+=	sdl
+.  endif
 .endif
 
 .include "../../mk/bsd.options.mk"
