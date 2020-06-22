@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/06/20 16:00:07 nia Exp $
+# $NetBSD: Makefile,v 1.28 2020/06/22 10:48:34 gdt Exp $
 
 DISTNAME=	vte-0.60.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
@@ -17,9 +17,9 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/vte-2.91.pc
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
-USE_LANGUAGES=		c c++14
-# for c++14 \todo
-GCC_REQD+=		5
+USE_LANGUAGES=		c c++17
+# for c++17
+GCC_REQD+=		7
 
 .include "../../devel/meson/build.mk"
 .include "../../converters/fribidi/buildlink3.mk"
