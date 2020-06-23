@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/06/02 08:24:55 adam Exp $
+# $NetBSD: Makefile,v 1.93 2020/06/23 14:33:22 bacon Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -7,7 +7,7 @@
 
 DISTNAME=	httpd-2.4.43
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/}
 MASTER_SITES+=	http://archive.apache.org/dist/httpd/
@@ -194,9 +194,9 @@ post-install:
 	${CHOWN} ${MANOWN}:${MANGRP} ${DESTDIR}${PREFIX}/${PKGMANDIR}/${file}
 .endfor
 
-	${CHMOD} -x ${DESTDIR}${PREFIX}/sbin/envvars-std
+	${CHMOD} a-x ${DESTDIR}${PREFIX}/sbin/envvars-std
 .if exists(${DESTDIR}${PREFIX}/sbin/suexec)
-	${CHMOD} -w ${DESTDIR}${PREFIX}/sbin/suexec
+	${CHMOD} a-w ${DESTDIR}${PREFIX}/sbin/suexec
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
