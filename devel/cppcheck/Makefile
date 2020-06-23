@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2020/06/02 08:23:34 adam Exp $
+# $NetBSD: Makefile,v 1.69 2020/06/23 20:46:50 wiz Exp $
 
 DISTNAME=	cppcheck-1.90
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,14 +25,6 @@ MAKE_FLAGS+=		FILESDIR=${PREFIX}/share/cppcheck
 # rules support (needs pcre)
 MAKE_FLAGS+=		HAVE_RULES=yes
 
-# use pkgsrc tinyxml2 instead of included copy
-MAKE_FLAGS+=		TINYXML=
-MAKE_FLAGS+=		INCLUDE_FOR_LIB="-Ilib -isystem externals -isystem externals/simplecpp"
-MAKE_FLAGS+=		INCLUDE_FOR_CLI="-Ilib -isystem externals/simplecpp"
-MAKE_FLAGS+=		INCLUDE_FOR_TEST="-Ilib -Icli -isystem externals/simplecpp"
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.tinyxml2}/include
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tinyxml2}/lib -L${BUILDLINK_PREFIX.tinyxml2}/lib -ltinyxml2
-
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-4.[0-5]*) || !empty(CC_VERSION:Mgcc-3.*)
 CXXFLAGS+= -include lib/cxx11emu.h
@@ -51,5 +43,4 @@ man-install:
 
 .include "../../lang/python/application.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../textproc/tinyxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
