@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.399 2020/06/17 17:54:26 nia Exp $
+$NetBSD: distinfo,v 1.400 2020/06/23 17:38:49 nia Exp $
 
 SHA1 (firefox-77.0.1.source.tar.xz) = 86735b221c17964f5e6a756a973b6d0696fbf1c5
 RMD160 (firefox-77.0.1.source.tar.xz) = 59ef718e1bf9eef0a6b90c60ec20bbe4c7402ffe
@@ -30,6 +30,7 @@ SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac0
 SHA1 (patch-media_libvorbis_lib_vorbis__info.c) = b6b1a84a095db8459bdff24c04f4d56886ddbe45
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
+SHA1 (patch-third__party_rust_getrandom_src_lib.rs) = 2ad80d10ebfeef0dc27435fc2c16be7b5e5d444a
 SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 3755f32fea84900cc0f00af3d9f53ed5fcfb0b4b
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5a516d377d491e0504aaf2d7aed04bb9ebeccc56
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
