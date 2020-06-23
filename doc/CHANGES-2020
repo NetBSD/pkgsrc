@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3757 2020/06/22 19:05:23 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3758 2020/06/23 20:47:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6025,3 +6025,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/guile-bytestructures to 1.0.7 [nikita 2020-06-22]
 	Updated net/minitube to 3.4.2nb1 [ryoon 2020-06-22]
 	Updated emulators/mgba to 0.8.2nb2 [wiz 2020-06-22]
+	Updated devel/cppcheck to 1.90nb2 [wiz 2020-06-23]
