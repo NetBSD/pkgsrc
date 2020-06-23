@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2020/06/18 13:48:28 plunky Exp $
+$NetBSD: distinfo,v 1.13 2020/06/23 13:22:30 manu Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -81,4 +81,5 @@ SHA1 (patch-tools_xenstore_xs_lib.c) = e3a8f6e3b149c3ab0f4ec8dcfa455983f94e6c16
 SHA1 (patch-tools_xentrace_xentrace.c) = f964c7555f454358a39f28a2e75db8ee100a4243
 SHA1 (patch-tools_xl_Makefile) = dd4fa8cc66c74eea8b022cd6129aa2831776f2a8
 SHA1 (patch-xen_Rules.mk) = c743dc63f51fc280d529a7d9e08650292c171dac
+SHA1 (patch-xen_common_lz4_dexompress.c) = 521a247c2d36980b3433c4be92c77308a2d3f3b9
 SHA1 (patch-xen_tools_symbols.c) = 67b5a38312095029631e00457abc0e4bb633aaf8
