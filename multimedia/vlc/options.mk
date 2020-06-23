@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2020/05/19 08:45:36 tnn Exp $
+# $NetBSD: options.mk,v 1.37 2020/06/23 15:59:17 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
@@ -163,7 +163,7 @@ CONFIGURE_ARGS+=	--disable-libva
 
 ## VDPAU support
 PLIST_VARS+=		vdpau
-.if !empty(PKG_OPTIONS:Mvaapi)
+.if !empty(PKG_OPTIONS:Mvdpau)
 CONFIGURE_ARGS+=	--enable-vdpau
 PLIST.vdpau=		yes
 .include "../../multimedia/libvdpau/buildlink3.mk"
