@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3761 2020/06/24 06:34:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3762 2020/06/24 11:10:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6029,3 +6029,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/nnn to 3.2nb2 [sjmulder 2020-06-23]
 	Updated devel/ruby-redmine to 4.0.7nb4 [taca 2020-06-24]
 	Updated mail/mutt to 1.14.5 [wiz 2020-06-24]
+	Updated security/ruby-metasploit-model to 3.0.0 [taca 2020-06-24]
