@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2020/06/02 08:23:41 adam Exp $
+# $NetBSD: Makefile,v 1.54 2020/06/24 03:04:23 taca Exp $
 
 DISTNAME=	redmine-4.0.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 PREV_PKGPATH=	devel/redmine
 CATEGORIES=	devel
 MASTER_SITES=	http://www.redmine.org/releases/
@@ -232,9 +232,15 @@ SUBST_MESSAGE.shell=	Fixing paths in helper shell scripts.
 SUBST_VARS.shell=	GEM PREFIX RUBY RUBY_PKGPREFIX RUBY_SUFFIX
 SUBST_STAGE.shell=	post-install
 
-REPLACE_BASH+=	mini_mime-1.0.2/bin/setup
-REPLACE_BASH+=	mini_portile2-2.4.0/concourse/tasks/rake-test/task.sh
-REPLACE_BASH+=	net-ldap-0.16.2/script/package net-ldap-0.16.2/script/release
+REPLACE_BASH+=	net-ldap-0.16.2/script/changelog
+REPLACE_BASH+=	puma-3.12.1/tools/jungle/init.d/run-puma
+REPLACE_BASH+=	roadie-rails-1.3.0/setup.sh
+REPLACE_SH+=	mini_mime-1.0.2/bin/setup
+REPLACE_SH+=	mini_portile2-2.4.0/concourse/tasks/rake-test/task.sh
+REPLACE_SH+=	net-ldap-0.16.2/script/ldap-docker
+REPLACE_SH+=	net-ldap-0.16.2/script/package net-ldap-0.16.2/script/release
+REPLACE_SH+=	rake-12.3.3/bin/setup
+REPLACE_PERL+=	unicorn-5.5.3/test/benchmark/uconnect.perl
 
 GEM_HOME=	${RM_DIR}/gems
 MESSAGE_SUBST+=	RM_DIR=${RM_DIR}
