@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/06/05 12:49:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/24 12:12:41 nia Exp $
 
 DISTNAME=	love-0.8.0-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love08/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://bitbucket.org/rude/love/downloads/
 
@@ -18,7 +18,10 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 
-LUA_VERSIONS_INCOMPATIBLE=	52 53
+SUBST_CLASSES+=		lua
+SUBST_STAGE.lua=	pre-configure
+SUBST_FILES.lua=	configure
+SUBST_SED.lua=		-e 's,lua5.1,lua-5.1,g'
 
 GNU_CONFIGURE_PREFIX=		${PREFIX}/love0.8
 
@@ -28,8 +31,7 @@ GNU_CONFIGURE_PREFIX=		${PREFIX}/love0.8
 BUILDLINK_API_DEPENDS.physfs+=	physfs>=2.0
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../lang/lua51/buildlink3.mk"
 .include "../../devel/devIL/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
