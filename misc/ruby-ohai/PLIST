@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/05/25 15:11:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/06/24 03:01:00 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -88,7 +88,6 @@ ${GEM_LIBDIR}/lib/ohai/plugins/linux/mdadm.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/platform.rb
-${GEM_LIBDIR}/lib/ohai/plugins/linux/selinux.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/sessions.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/sysctl.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/systemd_paths.rb
