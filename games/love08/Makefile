@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/06/24 12:12:41 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/24 12:30:56 nia Exp $
 
 DISTNAME=	love-0.8.0-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love08/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://bitbucket.org/rude/love/downloads/
 
@@ -18,10 +18,11 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 
+# Avoid detecting unversioned lua in NetBSD.
 SUBST_CLASSES+=		lua
 SUBST_STAGE.lua=	pre-configure
 SUBST_FILES.lua=	configure
-SUBST_SED.lua=		-e 's,lua5.1,lua-5.1,g'
+SUBST_SED.lua=		-e 's,lua lua5.1,lua5.1,g'
 
 GNU_CONFIGURE_PREFIX=		${PREFIX}/love0.8
 
