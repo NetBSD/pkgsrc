@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/04/27 17:15:22 nikita Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/06/24 22:31:49 nikita Exp $
 
 BUILDLINK_TREE+=	go-cmp
 
@@ -11,6 +11,7 @@ BUILDLINK_DEPMETHOD.go-cmp?=		build
 BUILDLINK_API_DEPENDS.go-cmp+=		go-cmp>=0.4.0
 BUILDLINK_PKGSRCDIR.go-cmp?=		../../devel/go-cmp
 
+.include "../../devel/go-xerrors/buildlink3.mk"
 .endif	# GO_CMP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-cmp
