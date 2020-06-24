@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2020/06/12 11:47:49 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2020/06/24 13:25:40 nia Exp $
 # used by emulators/sameboy/Makefile
 # used by emulators/libretro-sameboy/Makefile
 
@@ -15,3 +15,6 @@ USE_TOOLS+=	gmake pkg-config
 TOOL_DEPENDS+=	rgbds-[0-9]*:../../devel/rgbds
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/sameboy/distinfo
+
+# sh: /tmp/emulators/libretro-sameboy/work/SameBoy-0.13.2/build/pb12: text busy
+MAKE_JOBS_SAFE=	no
