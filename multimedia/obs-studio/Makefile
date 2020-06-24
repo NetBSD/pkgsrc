@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/06/02 08:24:27 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/06/24 14:34:37 nia Exp $
 
 DISTNAME=	obs-studio-25.0.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=obsproject/}
 
@@ -15,7 +15,6 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c gnu++11
 
 CMAKE_ARGS+=	-DDISABLE_LIBFDK=BOOL:ON
-CMAKE_ARGS+=	-DDISABLE_VLC=BOOL:ON
 
 TOOL_DEPENDS+=	swig3>=3.0:../../devel/swig3
 
@@ -38,7 +37,15 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .  include "../../graphics/libv4l/buildlink3.mk"
 .endif
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../lang/LuaJIT2/platform.mk"
+PLIST_VARS+=	lua
+#.if !empty(PLATFORM_SUPPORTS_LUAJIT:M[Yy][Ee][Ss])
+.if 0
+PLIST.lua=	yes
+.  include "../../lang/LuaJIT2/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-DDISABLE_LUA=ON
+.endif
 .include "../../lang/python/pyversion.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
