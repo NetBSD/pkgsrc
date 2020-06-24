@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.165 2020/06/16 09:09:02 nia Exp $
+$NetBSD: distinfo,v 1.166 2020/06/24 14:26:00 nia Exp $
 
 SHA1 (seamonkey-2.53.2.source.tar.xz) = 7c6e3295a751aa36c8325e20ef1367d0fb643120
 RMD160 (seamonkey-2.53.2.source.tar.xz) = 567c8bd64166e5854c712f2c2d6ca0dea182c75b
 SHA512 (seamonkey-2.53.2.source.tar.xz) = 58dd605a916ef7fb9cad112bb54fffc837690e458e1254b685f21df1bc8808a9b53d27147cad1064294c789d1f77f17c9f6adecf2be906afa44128496f72a805
 Size (seamonkey-2.53.2.source.tar.xz) = 291744036 bytes
 SHA1 (patch-ldap_c-sdk_include_portable.h) = b262539b92c6822a5ae8c98743d2d71b27bb076a
-SHA1 (patch-mail_app_Makefile.in) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = d70faf66d802de613caa6a12cc36d9021caab41d
 SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 174e1766565f576c79019a05c81f010a3ceaee2f
-SHA1 (patch-mozilla_build_moz.configure_old.configure) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-mozilla_dom_base_nsAttrName.h) = 3ddbe33950d93e06e41a43de3395a1794a66e61a
 SHA1 (patch-mozilla_dom_media_CubebUtils.cpp) = 8949ad37cbde3ab2471d1771282809a254d3ec86
 SHA1 (patch-mozilla_gfx_layers_client_ClientPaintedLayer.cpp) = 5ed6afee07c97782e30d4dd7a37465230fb553fb
@@ -27,6 +25,7 @@ SHA1 (patch-mozilla_netwerk_srtp_src_crypto_hash_hmac.c) = eb07566cd98d4bbab3fd0
 SHA1 (patch-mozilla_netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = e3974859577a7437e32e37995149c938be8d9ff3
 SHA1 (patch-mozilla_old-configure.in) = 5c711b031a2acee9ab4cf803769179de4fff0ea7
 SHA1 (patch-mozilla_servo_components_style_build__gecko.rs) = 473e823fa0cd819dfee1040d360eda543d5557f0
+SHA1 (patch-mozilla_third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs) = 784a2bd19eeae5f616e430caf6f90e1220645be3
 SHA1 (patch-mozilla_toolkit_components_terminator_nsTerminator.cpp) = 0d975e4b7e3d2a8550c16a9a87c2f7011917cddd
 SHA1 (patch-mozilla_toolkit_library_moz.build) = b1e5ccc55527f1839afc4b1c757767445ed33e50
 SHA1 (patch-mozilla_toolkit_moz.configure) = 1798a74b329ad0f58d98872e1cbc51cb829ac746

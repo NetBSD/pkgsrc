@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.216 2020/06/16 09:09:02 nia Exp $
+# $NetBSD: Makefile,v 1.217 2020/06/24 14:26:00 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	3
+PKGREVISION=	4
 SM_VER=		2.53.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
@@ -54,6 +54,21 @@ CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpt.py
 
 CHECK_WRKREF_SKIP=	lib/seamonkey/chrome/toolkit/content/global/buildconfig.html
+
+CKSUM_CRATES+=	mozilla/third_party/rust/libc
+
+# patch-mozilla_third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs
+CKSUMS+=	4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212
+CKSUMS+=	30c5211b393d9314f880f63e29833785c8b55369102eec21170a0fe0fd1c4a16
+
+SUBST_CLASSES+=		cksum
+SUBST_STAGE.cksum=	pre-configure
+.for crate in ${CKSUM_CRATES}
+SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+.endfor
+.for from to in ${CKSUMS}
+SUBST_SED.cksum+=	-e 's,${from},${to},g'
+.endfor
 
 post-extract:
 	mv ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.S
