@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/14 19:43:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/24 11:09:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -52,6 +52,7 @@ ${GEM_LIBDIR}/app/validators/ip_format_validator.rb
 ${GEM_LIBDIR}/app/validators/nil_validator.rb
 ${GEM_LIBDIR}/app/validators/parameters_validator.rb
 ${GEM_LIBDIR}/app/validators/password_is_strong_validator.rb
+${GEM_LIBDIR}/bin/rails
 ${GEM_LIBDIR}/config/locales/en.yml
 ${GEM_LIBDIR}/lib/metasploit/model.rb
 ${GEM_LIBDIR}/lib/metasploit/model/association.rb
@@ -131,6 +132,7 @@ ${GEM_LIBDIR}/spec/dummy/app/assets/stylesheets/application.css
 ${GEM_LIBDIR}/spec/dummy/app/controllers/application_controller.rb
 ${GEM_LIBDIR}/spec/dummy/app/helpers/application_helper.rb
 ${GEM_LIBDIR}/spec/dummy/app/mailers/.gitkeep
+${GEM_LIBDIR}/spec/dummy/app/models/application_record.rb
 ${GEM_LIBDIR}/spec/dummy/app/views/layouts/application.html.erb
 ${GEM_LIBDIR}/spec/dummy/bin/bundle
 ${GEM_LIBDIR}/spec/dummy/bin/rails
@@ -144,7 +146,6 @@ ${GEM_LIBDIR}/spec/dummy/config/environment.rb
 ${GEM_LIBDIR}/spec/dummy/config/environments/development.rb
 ${GEM_LIBDIR}/spec/dummy/config/environments/production.rb
 ${GEM_LIBDIR}/spec/dummy/config/environments/test.rb
-${GEM_LIBDIR}/spec/dummy/config/initializers/assets.rb
 ${GEM_LIBDIR}/spec/dummy/config/initializers/backtrace_silencers.rb
 ${GEM_LIBDIR}/spec/dummy/config/initializers/cookies_serializer.rb
 ${GEM_LIBDIR}/spec/dummy/config/initializers/filter_parameter_logging.rb
