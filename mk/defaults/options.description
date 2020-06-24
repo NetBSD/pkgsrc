@@ -498,6 +498,7 @@ lprng-suid		Install LPRng executables setuid root.
 lsof-less-secure-sockets	If 'lsof-more-secure' is set, allow all sockets to be viewed at all times.
 lsof-more-secure	Only allow root to view all open files with lsof.
 lua			Enable Lua support.
+luajit			Enable LuaJIT support.
 luit			Enable luit support.
 lwt			Enable Lwt support.
 lynx			Use and enable support for the lynx browser.
