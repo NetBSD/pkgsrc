@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/06/05 12:49:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/24 11:24:45 nia Exp $
 
 DISTNAME=	love-0.10.2-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love010/}
@@ -18,16 +18,12 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 
-LUA_VERSIONS_INCOMPATIBLE=	52
-
-# JIT needs WX mappings
-NOT_PAX_MPROTECT_SAFE+=		love0.10/bin/love
-
 GNU_CONFIGURE_PREFIX=		${PREFIX}/love0.10
 GNU_CONFIGURE_MANDIR=		${PREFIX}/love0.10/${PKGMANDIR}/
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/love0.10/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/love0.10/lib
 
+.include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
@@ -35,8 +31,6 @@ BUILDLINK_API_DEPENDS.physfs+=	physfs>=2.0
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../devel/devIL/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
