@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2020/06/02 06:41:00 adam Exp $
+# $NetBSD: Makefile,v 1.99 2020/06/24 12:29:30 ryoon Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -240,6 +240,7 @@ post-install:
 .  if !empty(MESALIB_SUPPORTS_EGL:Myes)
 PLIST.egl=	yes
 .  endif
+BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.11
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"
