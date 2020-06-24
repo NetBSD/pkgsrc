@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/06/24 14:34:37 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/06/24 14:35:12 nia Exp $
 
 DISTNAME=	obs-studio-25.0.8
 PKGREVISION=	4
@@ -39,8 +39,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/LuaJIT2/platform.mk"
 PLIST_VARS+=	lua
-#.if !empty(PLATFORM_SUPPORTS_LUAJIT:M[Yy][Ee][Ss])
-.if 0
+.if !empty(PLATFORM_SUPPORTS_LUAJIT:M[Yy][Ee][Ss])
 PLIST.lua=	yes
 .  include "../../lang/LuaJIT2/buildlink3.mk"
 .else
