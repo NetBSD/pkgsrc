@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/12 15:32:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/24 03:00:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/spec/expression/to_h_spec.rb
 ${GEM_LIBDIR}/spec/expression/to_s_spec.rb
 ${GEM_LIBDIR}/spec/lexer/all_spec.rb
 ${GEM_LIBDIR}/spec/lexer/conditionals_spec.rb
+${GEM_LIBDIR}/spec/lexer/delimiters_spec.rb
 ${GEM_LIBDIR}/spec/lexer/escapes_spec.rb
 ${GEM_LIBDIR}/spec/lexer/keep_spec.rb
 ${GEM_LIBDIR}/spec/lexer/literals_spec.rb
@@ -117,6 +118,7 @@ ${GEM_LIBDIR}/spec/parser/types_spec.rb
 ${GEM_LIBDIR}/spec/scanner/all_spec.rb
 ${GEM_LIBDIR}/spec/scanner/anchors_spec.rb
 ${GEM_LIBDIR}/spec/scanner/conditionals_spec.rb
+${GEM_LIBDIR}/spec/scanner/delimiters_spec.rb
 ${GEM_LIBDIR}/spec/scanner/errors_spec.rb
 ${GEM_LIBDIR}/spec/scanner/escapes_spec.rb
 ${GEM_LIBDIR}/spec/scanner/free_space_spec.rb
