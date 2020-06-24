@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2020/06/21 21:19:11 gdt Exp $
+# $NetBSD: Makefile,v 1.96 2020/06/24 21:49:20 gdt Exp $
 
 # This is intentionally 3.10 Long Term Release.  Please do not update
 # to 3.14, and instead discuss whether/how we want multiple versions.
@@ -7,8 +7,8 @@ CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	brook@nmsu.edu
-#MAINTAINER+=	gdt@NetBSD.orrg
+MAINTAINER=	gdt@NetBSD.org
+#MAINTAINER+=	brook@nmsu.edu
 #MAINTAINER+=	bouyer@NetBSD.orrg
 HOMEPAGE=	http://www.qgis.org/
 COMMENT=	Geographic Information System (GIS)
