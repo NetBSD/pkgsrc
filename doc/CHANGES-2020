@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3760 2020/06/24 03:04:55 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3761 2020/06/24 06:34:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6028,3 +6028,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cppcheck to 1.90nb2 [wiz 2020-06-23]
 	Updated sysutils/nnn to 3.2nb2 [sjmulder 2020-06-23]
 	Updated devel/ruby-redmine to 4.0.7nb4 [taca 2020-06-24]
+	Updated mail/mutt to 1.14.5 [wiz 2020-06-24]
