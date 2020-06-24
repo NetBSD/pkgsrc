@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2020/06/14 15:33:27 nia Exp $
+# $NetBSD: Makefile,v 1.181 2020/06/24 09:46:26 nia Exp $
 
 DISTNAME=	rustc-1.43.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -12,6 +12,9 @@ COMMENT=	Safe, concurrent, practical language
 LICENSE=	mit OR apache-2.0
 
 CONFLICTS+=	rust-bin-[0-9]*
+
+# uses -std=c++14
+GCC_REQD+=	5
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
