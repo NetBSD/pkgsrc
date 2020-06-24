@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/28 11:40:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/24 14:34:37 nia Exp $
 bin/obs
 bin/obs-ffmpeg-mux
 include/obs/audio-monitoring/pulse/pulseaudio-wrapper.h
@@ -113,7 +113,7 @@ lib/obs-plugins/obs-x264.so
 lib/obs-plugins/rtmp-services.so
 lib/obs-plugins/text-freetype2.so
 lib/obs-scripting/_obspython.so
-lib/obs-scripting/obslua.so
+${PLIST.lua}lib/obs-scripting/obslua.so
 lib/obs-scripting/obspython.py
 lib/pkgconfig/libobs.pc
 share/applications/com.obsproject.Studio.desktop
