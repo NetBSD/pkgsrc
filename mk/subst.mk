@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.100 2020/06/16 18:13:54 rillig Exp $
+# $NetBSD: subst.mk,v 1.101 2020/06/25 08:45:00 jperkin Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -221,7 +221,7 @@ ${_SUBST_COOKIE.${class}}:
 			noop_count="$$noop_count+";			\
 			noop_patterns="$$noop_patterns$$noop_sep$$pattern"; \
 			noop_sep=" ";					\
-		};							\
+		} || ${TRUE};						\
 	done;								\
 	\
 	case $$noop_count in						\
