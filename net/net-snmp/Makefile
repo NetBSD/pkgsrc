@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2020/06/16 10:06:04 otis Exp $
+# $NetBSD: Makefile,v 1.131 2020/06/25 10:54:42 jperkin Exp $
 
 .include "Makefile.common"
 CATEGORIES=	net
@@ -139,6 +139,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/agent/snmp_perl.pl \
 		${DESTDIR}${PREFIX}/share/snmp/
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
