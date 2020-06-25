@@ -1,13 +1,13 @@
-$NetBSD: patch-curl-config.in,v 1.8 2018/01/24 07:57:19 wiz Exp $
+$NetBSD: patch-curl-config.in,v 1.9 2020/06/25 21:20:04 wiz Exp $
 
 - make "curl-config --libs" return proper ldflags for shared libraries
 
---- curl-config.in.orig	2018-01-22 08:55:10.000000000 +0000
+--- curl-config.in.orig	2020-06-22 08:52:00.000000000 +0000
 +++ curl-config.in
-@@ -149,9 +149,9 @@ while test $# -gt 0; do
+@@ -161,9 +161,9 @@ while test $# -gt 0; do
             CURLLIBDIR=""
          fi
-         if test "X@REQUIRE_LIB_DEPS@" = "Xyes"; then
+         if test "X@ENABLE_SHARED@" = "Xno" -o "X@REQUIRE_LIB_DEPS@" = "Xyes"; then
 -          echo ${CURLLIBDIR}-lcurl @LIBCURL_LIBS@
 +          echo @LDFLAGS@ ${CURLLIBDIR}-lcurl @LIBCURL_LIBS@
          else
