@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/04 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/25 05:42:39 schmonz Exp $
 #
 
 DISTNAME=		service-config-0.51
@@ -13,6 +13,8 @@ DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
 # Possibly inherited DJB-style distribution terms
 DJB_RESTRICTED=		YES
+
+SUBST_CLASSES+=		djberrno
 
 INSTALLATION_DIRS=	bin
 
