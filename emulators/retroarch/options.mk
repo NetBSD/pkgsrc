@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2020/06/25 12:17:42 nia Exp $
+# $NetBSD: options.mk,v 1.16 2020/06/25 12:25:19 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
@@ -38,9 +38,9 @@ CONFIGURE_ARGS+=	--disable-sixel
 # Use standard Mesa OpenGL
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--enable-opengl
-.if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
-.endif
+.  if ${OPSYS} != "Darwin"
+.    include "../../graphics/MesaLib/buildlink3.mk"
+.  endif
 
 # Enable use of the Raspberry Pi GPU driver
 .elif !empty(PKG_OPTIONS:Mrpi)
