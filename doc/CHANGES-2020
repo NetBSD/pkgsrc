@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3763 2020/06/24 12:53:39 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3764 2020/06/25 11:29:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6031,3 +6031,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/mutt to 1.14.5 [wiz 2020-06-24]
 	Updated security/ruby-metasploit-model to 3.0.0 [taca 2020-06-24]
 	Updated graphics/kvantum to 0.16.0 [pin 2020-06-24]
+	Updated wm/spectrwm to 3.4.1 [pin 2020-06-25]
