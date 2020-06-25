@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2020/06/13 20:54:32 leot Exp $
+# $NetBSD: Makefile,v 1.74 2020/06/25 12:44:10 nia Exp $
 
 .include "Makefile.common"
 MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/c3dd60c9e054b5dee1e7b01a7edc98b0/
@@ -37,6 +37,8 @@ PLIST.kvs40xx=		yes
 PLIST.pint=		yes
 PLIST.sm3600=		yes
 .endif
+
+LIBS.SunOS+=	-lresolv -lnsl -lsocket
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/sane.d
 EGDIR=		${PREFIX}/share/examples/sane
