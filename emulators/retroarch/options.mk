@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2020/05/30 14:26:52 nia Exp $
+# $NetBSD: options.mk,v 1.15 2020/06/25 12:17:42 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
@@ -13,12 +13,8 @@ PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		rpi
 .endif
 
-.if ${OPSYS} != "Darwin"
 PKG_OPTIONS_GROUP.gl+=		opengl
 PKG_SUGGESTED_OPTIONS=		freetype opengl
-.else
-PKG_SUGGESTED_OPTIONS=		freetype
-.endif
 
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
 
@@ -42,7 +38,9 @@ CONFIGURE_ARGS+=	--disable-sixel
 # Use standard Mesa OpenGL
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--enable-opengl
-.include "../../graphics/MesaLib/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.  include "../../graphics/MesaLib/buildlink3.mk"
+.endif
 
 # Enable use of the Raspberry Pi GPU driver
 .elif !empty(PKG_OPTIONS:Mrpi)
@@ -56,7 +54,7 @@ SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 CONFIGURE_ARGS+=	--enable-opengles
 
 # Disable any graphics acceleration library
-.elif ${OPSYS} != "Darwin"
+.else
 CONFIGURE_ARGS+=	--disable-egl
 CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--disable-opengl_core
