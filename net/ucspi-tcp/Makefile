@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/01/26 17:31:57 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2020/06/25 05:42:37 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		6
@@ -22,6 +22,8 @@ CONFLICTS+=		ucspi-tcp6-[0-9]*
 
 DJB_RESTRICTED=		no
 
+SUBST_CLASSES+=		djberrno
+
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	do-configure
 SUBST_FILES.etc=	dns_rcrw.c
@@ -31,6 +33,8 @@ SUBST_MESSAGE.etc=	Fixing prefix.
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+.include "options.mk"
 
 post-install:
 	cd ${WRKDIR}/${PKGNAME_NOREV}-man; for i in 1; do	 	\

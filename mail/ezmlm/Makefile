@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/26 17:31:34 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/06/25 05:42:38 schmonz Exp $
 #
 
 DISTNAME=		ezmlm-0.53
@@ -20,7 +20,11 @@ DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q} > conf-destdir
 DJB_BUILD_TARGETS=	install
 INSTALL_TARGET=		setup
 
+SUBST_CLASSES+=		djberrno
+
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/cat1 ${PKGMANDIR}/cat5
+
+.include "options.mk"
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

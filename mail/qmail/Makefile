@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2020/05/23 20:50:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.121 2020/06/25 05:42:39 schmonz Exp $
 #
 
 DISTNAME=		notqmail-1.08
@@ -36,7 +36,6 @@ DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_QMAIL_GROUP:Q}    > conf-groups;
 DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_NOFILES_GROUP:Q} >> conf-groups;
 DJB_BUILD_TARGETS=	man
 DJB_RESTRICTED=		no
-DJB_ERRNO_HACK=		no
 
 TEST_TARGET=		test
 #.include "../../devel/check/buildlink3.mk"
@@ -114,8 +113,6 @@ SUBST_STAGE.config=	do-configure
 SUBST_FILES.config=	config-fast-pkgsrc-defaults.sh
 SUBST_VARS.config=	SORT MV CP PKG_SYSCONFDIR QMAIL_QUEUE_EXTRA
 
-SUBST_FILES.djbware+=	cdb_seek.c dns.c
-
 PKG_USERS_VARS+=		QMAIL_ALIAS_USER QMAIL_DAEMON_USER QMAIL_LOG_USER
 PKG_USERS_VARS+=		QMAIL_ROOT_USER QMAIL_PASSWD_USER QMAIL_QUEUE_USER
 PKG_USERS_VARS+=		QMAIL_REMOTE_USER QMAIL_SEND_USER
@@ -180,6 +177,8 @@ PATCH_DIST_CAT.${SPP_PATCH}=	${TAR} -C ${WRKDIR} -zxf ${SPP_PATCH} ${SPP_PATCHFI
 				| ${SED} -e 's|sppfok \!= 1|sppfok == -1|'
 PATCH_DIST_STRIP.${SPP_PATCH}=	-p1
 LICENSE+=			AND gnu-gpl-v2
+
+.include "options.mk"
 
 post-extract:
 	for i in ${READMES}; do						\

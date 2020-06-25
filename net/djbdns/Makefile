@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2020/01/26 17:31:49 rillig Exp $
+# $NetBSD: Makefile,v 1.71 2020/06/25 05:42:36 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		14
@@ -18,6 +18,8 @@ CONFLICTS+=		djbdnscurve6-[0-9]*
 
 DJB_RESTRICTED=		no
 
+SUBST_CLASSES+=		djberrno
+
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	do-configure
 SUBST_FILES.etc=	dns_rcrw.c
@@ -31,6 +33,8 @@ CONF_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 share/examples/${PKGBASE}
+
+.include "options.mk"
 
 post-install:
 	cd ${WRKDIR}/${PKGBASE}-man; for i in 1 5 8; do		 	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/26 17:31:35 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/06/25 05:42:38 schmonz Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -20,7 +20,8 @@ DJB_BUILD_TARGETS=	install instcheck
 
 AUTO_MKDIRS=		yes
 
-SUBST_FILES.djbware+=	cdb_seek.c
+SUBST_CLASSES+=		djberrno
+SUBST_FILES.djberrno+=	cdb_seek.c
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure

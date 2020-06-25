@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/01/26 17:31:33 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/06/25 05:42:38 schmonz Exp $
 #
 
 DISTNAME=		dot-forward-0.71
@@ -18,6 +18,8 @@ DJB_BUILD_TARGETS=	install instcheck
 DJB_RESTRICTED=		no
 
 INSTALLATION_DIRS=	${PKGMANDIR}
+
+SUBST_CLASSES+=		djberrno
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
