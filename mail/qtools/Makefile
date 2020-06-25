@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 12:19:29 asau Exp $
+# $NetBSD: Makefile,v 1.18 2020/06/25 05:42:37 schmonz Exp $
 #
 
 DISTNAME=		qtools-0.56
@@ -14,6 +14,8 @@ DEPENDS+=		qmail>=1.03:../../mail/qmail
 
 DJB_RESTRICTED=		NO
 DJB_CONFIG_CMDS=	${ECHO} ${LOCALBASE:Q} > ${WRKSRC}/conf-ezmlm
+
+SUBST_CLASSES+=		djberrno
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

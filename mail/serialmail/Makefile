@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 17:31:36 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/06/25 05:42:38 schmonz Exp $
 #
 
 DISTNAME=		serialmail-0.75
@@ -18,7 +18,7 @@ INSTALLATION_DIRS=	share/doc/${PKGBASE}
 # provide compatibility symlinks. We also apply patches.
 DJB_RESTRICTED=		YES
 
-SUBST_FILES.djbware+=	leapsecs_read.c
+SUBST_CLASSES+=		djberrno
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure

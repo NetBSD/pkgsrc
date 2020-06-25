@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/06/25 05:42:40 schmonz Exp $
 #
 
 DISTNAME=		checkpassword-0.90
@@ -12,6 +12,8 @@ COMMENT=		Simple, uniform password-checking interface to all root applications
 LICENSE=		public-domain
 
 DJB_RESTRICTED=		no
+
+SUBST_CLASSES+=		djberrno
 
 CHECKPASSWORD_BIN=	bin/checkpassword
 
