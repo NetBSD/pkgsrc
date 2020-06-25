@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2020/01/18 23:32:42 rillig Exp $
+# $NetBSD: Makefile,v 1.72 2020/06/25 19:48:03 hauke Exp $
 
 DISTNAME=	gawk-5.0.1
 CATEGORIES=	lang
@@ -30,6 +30,11 @@ CPPFLAGS.OSF1+=		-D_OSF_SOURCE
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
 CFLAGS+=	-Dvm_region=vm_region_64
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
+# ld does not have -rpath
+CONFIGURE_ARGS+=	--disable-rpath
 .endif
 
 PLIST_VARS+=		extension
