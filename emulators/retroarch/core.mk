@@ -1,4 +1,4 @@
-# $NetBSD: core.mk,v 1.3 2020/06/25 12:32:37 nia Exp $
+# $NetBSD: core.mk,v 1.4 2020/06/25 15:22:50 nia Exp $
 
 MASTER_SITES?=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -13,11 +13,14 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 MAKE_FLAGS+=	CC=${CC}
 MAKE_FLAGS+=	LTO=
 
-MAKE_FLAGS.Darwin+=	platform=osx
-
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
+MAKE_FLAGS+=	platform=osx
+.  if ${MACHINE_ARCH} == "powerpc"
+MAKE_FLAGS+=	arch=ppc
+.  endif
+
 CHECK_SHLIBS_SUPPORTED=	no # XXX investigate
 .endif
 
