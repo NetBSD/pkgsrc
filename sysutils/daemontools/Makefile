@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/05/23 21:32:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.44 2020/06/25 05:42:39 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		3
@@ -17,7 +17,6 @@ SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 CONFLICTS+=		daemontools-encore-[0-9]*
 
 DJB_RESTRICTED=		no
-DJB_ERRNO_HACK=		no
 
 WRKSRC=			${WRKDIR}/admin/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
@@ -28,7 +27,8 @@ USE_TOOLS+=		file
 
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man8
 
-SUBST_FILES.djbware+=	src/error.h
+SUBST_CLASSES+=		djberrno
+SUBST_FILES.djberrno+=	src/error.h
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure

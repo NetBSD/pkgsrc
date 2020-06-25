@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.29 2020/05/02 11:49:40 rillig Exp $
+# $NetBSD: djbware.mk,v 1.30 2020/06/25 05:42:36 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -29,7 +29,6 @@ DJB_RESTRICTED?=	YES
 DJB_MAKE_TARGETS?=	YES
 DJB_BUILD_TARGETS?=	# empty
 DJB_INSTALL_TARGETS?=	# empty
-DJB_ERRNO_HACK?=	YES
 DJB_SLASHPACKAGE?=	NO
 .if !empty(DJB_SLASHPACKAGE:M[yY][eE][sS])
 DJB_CONFIG_DIR?=	${WRKSRC}/src
@@ -83,30 +82,10 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} package/compile ${DJB_BUILD_ARGS}
 .endif
 
-.if !empty(DJB_ERRNO_HACK:M[yY][eE][sS]) || !empty(DJB_ERRNO_HACK_FILES)
-PKG_SUPPORTED_OPTIONS+=	djbware-errno-hack
-PKG_SUGGESTED_OPTIONS+=	djbware-errno-hack
-
-.  include "bsd.fast.prefs.mk"
-
-.  if exists(${PKGDIR}/options.mk)
-.    include "${PKGDIR}/options.mk"
-.  else
-# Note: This expression is the same as ${PKGBASE}, but the latter is
-# not defined yet, so we cannot use it here.
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
-.    include "bsd.options.mk"
-.  endif
-
-.  if !empty(PKG_OPTIONS:Mdjbware-errno-hack) || !empty(DJB_ERRNO_HACK_FILES)
-SUBST_CLASSES+=		djbware
-SUBST_STAGE.djbware=	do-configure
-SUBST_FILES.djbware+=	${DJB_ERRNO_HACK_FILES:Uerror.h}
-SUBST_SED.djbware=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
-SUBST_MESSAGE.djbware=	Correcting definition of errno.
-.  endif
-.else
-.  sinclude "${PKGDIR}/options.mk"
-.endif
+# Set SUBST_CLASSES+=djberrno for packages that need this fix
+SUBST_STAGE.djberrno=	do-configure
+SUBST_FILES.djberrno?=	error.h
+SUBST_SED.djberrno=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
+SUBST_MESSAGE.djberrno=	Correcting definition of errno.
 
 .endif	# DJBWARE_MK
