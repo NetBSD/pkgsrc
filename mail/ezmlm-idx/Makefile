@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/06/02 08:24:14 adam Exp $
+# $NetBSD: Makefile,v 1.56 2020/06/25 05:42:38 schmonz Exp $
 #
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
@@ -25,7 +25,6 @@ DJB_CONFIG_CMDS+=	${ECHO} ${DESTDIR:Q} > conf-destdir;		\
 			${ECHO} ${EGDIR:Q} > conf-egdir;		\
 			${ECHO} ${PKG_SYSCONFDIR:Q} > conf-etc;		\
 			${ECHO} ${PREFIX:Q}/lib/ezmlm > conf-lib;
-DJB_ERRNO_HACK=		no
 
 LDFLAGS.Darwin+=	-Wl,-U,_FATAL -Wl,-U,_USAGE
 LDFLAGS.Linux+=		-Wl,--export-dynamic
@@ -52,6 +51,8 @@ SPECIAL_PERMS+=		${PREFIX}/libexec/cgi-bin/ezmlm-cgi ${REAL_ROOT_USER} ${REAL_RO
 
 INSTALLATION_DIRS=	bin lib libexec/cgi-bin ${PKGMANDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/examples/${PKGBASE}
+
+.include "options.mk"
 
 post-extract:
 	${GREP} -v '^#' < cf-files.mk | ${CUT} -f2 | ${SED} -e 's|^|share/examples/ezmlm-idx/|g' > ${WRKDIR}/PLIST.idxcf

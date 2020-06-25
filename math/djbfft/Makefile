@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/26 17:31:38 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/06/25 05:42:39 schmonz Exp $
 
 DISTNAME=	djbfft-0.76
 CATEGORIES=	math
@@ -12,7 +12,11 @@ LICENSE=	public-domain
 DJB_RESTRICTED=		no
 NOT_FOR_PLATFORM=	IRIX-*-*
 
+SUBST_CLASSES+=		djberrno
+
 INSTALLATION_DIRS=	include/djbfft lib
+
+.include "options.mk"
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

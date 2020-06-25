@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/05/23 19:23:18 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/06/25 05:42:39 schmonz Exp $
 #
 
 DISTNAME=		leapsunpack-0.05
@@ -14,6 +14,8 @@ DEPENDS+=		libtai-[0-9]*:../../devel/libtai
 DJB_RESTRICTED=		no
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+SUBST_CLASSES+=		djberrno
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure

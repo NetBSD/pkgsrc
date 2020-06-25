@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:36 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/06/25 05:42:38 schmonz Exp $
 #
 
 DISTNAME=		qmailanalog-0.70
@@ -12,6 +12,8 @@ COMMENT=		Collection of tools to help analyze qmail's activity
 
 DJB_RESTRICTED=		YES
 DJB_CONFIG_PREFIX=	${PREFIX}/qmailanalog
+
+SUBST_CLASSES+=		djberrno
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

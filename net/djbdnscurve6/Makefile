@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/04/27 05:36:56 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/06/25 05:42:36 schmonz Exp $
 
 DISTNAME=		djbdnscurve6-36b
 CATEGORIES=		net
@@ -15,7 +15,6 @@ CONFLICTS+=		djbdns-[0-9]*
 WRKSRC=			${WRKDIR}/net/${PKGBASE}/${DISTNAME}
 DJB_SLASHPACKAGE=	yes
 DJB_RESTRICTED=		no
-DJB_ERRNO_HACK=		no
 
 DJB_CONFIG_DIR=		${WRKSRC}
 
