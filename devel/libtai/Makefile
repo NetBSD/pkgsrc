@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/05/23 21:32:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2020/06/25 05:42:36 schmonz Exp $
 #
 
 DISTNAME=		libtai-0.60
@@ -14,11 +14,11 @@ LICENSE=		public-domain
 CONFLICTS=		libowfat<0.32nb1
 
 DJB_RESTRICTED=		NO
-DJB_ERRNO_HACK=		no
 
 EGDIR=			share/examples/${PKGBASE}
 
-SUBST_FILES.djbware+=	leapsecs_read.c
+SUBST_CLASSES+=		djberrno
+SUBST_FILES.djberrno+=	leapsecs_read.c
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
