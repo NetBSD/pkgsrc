@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/14 19:08:27 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/26 10:26:08 yyamano Exp $
 
 DISTNAME=	jna-5.2.0
 PKGNAME=	java-${DISTNAME}
@@ -58,6 +58,15 @@ PLIST_SUBST+=	JNIPFX=${JNIPFX} JNISFX=${JNISFX}
 # openjdk8<1.8.202 uses oldest sigaction on NetBSD.
 DEPENDS+=	openjdk8>=1.8.202:../../lang/openjdk8
 .endif
+
+# JDK 11 or later doesn't generate frames
+PLIST_SRC=	PLIST
+.if ${PKG_JVM} == "sun-jdk7" || ${PKG_JVM} == "oracle-jdk8" || ${PKG_JVM} == "openjdk8"
+PLIST_SRC+=	PLIST.java8-javadoc	
+.else
+PLIST_SRC+=	PLIST.java11-javadoc
+.endif
+
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
 INSTALLATION_DIRS+= \
