@@ -1,18 +1,20 @@
-$NetBSD: patch-configure,v 1.6 2018/05/27 15:24:32 tsutsui Exp $
+$NetBSD: patch-configure,v 1.7 2020/06/26 21:19:16 nia Exp $
 
-Enable PIC on NetBSD, even on i386 to avoid text relocations.
+Enable PIC and section_data_rel_ro on NetBSD, even on i386,
+to avoid text relocations.
 
---- configure.orig	2018-02-12 00:29:18.000000000 +0000
+--- configure.orig	2019-12-01 22:46:41.000000000 +0000
 +++ configure
-@@ -4940,6 +4940,7 @@ case $target_os in
+@@ -4941,6 +4941,8 @@ case $target_os in
          ;;
      netbsd)
          disable symver
 +        enable pic
++        enable section_data_rel_ro
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5360,10 +5361,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -5361,10 +5363,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
