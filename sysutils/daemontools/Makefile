@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/06/25 05:42:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.45 2020/06/26 16:37:23 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		3
@@ -28,7 +28,7 @@ USE_TOOLS+=		file
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man8
 
 SUBST_CLASSES+=		djberrno
-SUBST_FILES.djberrno+=	src/error.h
+SUBST_FILES.djberrno=	src/error.h
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
