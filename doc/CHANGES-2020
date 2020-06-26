@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3767 2020/06/26 13:10:59 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.3768 2020/06/26 20:02:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6035,3 +6035,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/curl to 7.71.0 [wiz 2020-06-25]
 	Updated games/chocolate-doom to 3.0.1 [micha 2020-06-26]
 	Updated editors/micro to 2.0.6 [sjmulder 2020-06-26]
+	Updated www/qutebrowser to 1.13.0 [pin 2020-06-26]
