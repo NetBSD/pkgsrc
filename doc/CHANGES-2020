@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3765 2020/06/25 21:20:14 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3766 2020/06/26 09:05:40 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6033,3 +6033,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/kvantum to 0.16.0 [pin 2020-06-24]
 	Updated wm/spectrwm to 3.4.1 [pin 2020-06-25]
 	Updated www/curl to 7.71.0 [wiz 2020-06-25]
+	Updated games/chocolate-doom to 3.0.1 [micha 2020-06-26]
