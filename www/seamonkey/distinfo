@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.166 2020/06/24 14:26:00 nia Exp $
+$NetBSD: distinfo,v 1.167 2020/06/26 11:40:28 nia Exp $
 
 SHA1 (seamonkey-2.53.2.source.tar.xz) = 7c6e3295a751aa36c8325e20ef1367d0fb643120
 RMD160 (seamonkey-2.53.2.source.tar.xz) = 567c8bd64166e5854c712f2c2d6ca0dea182c75b
@@ -10,12 +10,14 @@ SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 174e1
 SHA1 (patch-mozilla_dom_base_nsAttrName.h) = 3ddbe33950d93e06e41a43de3395a1794a66e61a
 SHA1 (patch-mozilla_dom_media_CubebUtils.cpp) = 8949ad37cbde3ab2471d1771282809a254d3ec86
 SHA1 (patch-mozilla_gfx_layers_client_ClientPaintedLayer.cpp) = 5ed6afee07c97782e30d4dd7a37465230fb553fb
+SHA1 (patch-mozilla_gfx_skia_skia_src_core_SkCpu.cpp) = 5151277f18865ea817ecef5d3dfba5b82d07d649
 SHA1 (patch-mozilla_ipc_chromium_src_base_lock__impl__posix.cc) = 985f4548d15a54f39e7d805c507131b3c6b67532
 SHA1 (patch-mozilla_ipc_chromium_src_base_message__pump__libevent.cc) = 00240cfb510cf71259640fd4aa428621f0eb75ba
 SHA1 (patch-mozilla_ipc_chromium_src_base_platform__thread__posix.cc) = 5abcee4d027dad6f29ac6ea7e002f0af47bbce3a
 SHA1 (patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp) = 7ab1c1701344adab8d7ee0332476a864fa2446bb
 SHA1 (patch-mozilla_js_src_gc_Memory.cpp) = 0850c9d57794c037ee5ab6b3d52319f4ec34c72c
 SHA1 (patch-mozilla_js_src_threading_posix_Thread.cpp) = a22611b1329d38c1a56988be2f84aba71c431506
+SHA1 (patch-mozilla_media_ffvpx_libavutil_arm_bswap.h) = 092081aad618309cf016fefcd00cf725fc0e92af
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb.c) = 85e03895737f47dfb373a46bb2992e36fc78728f
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb__alsa.c) = 5931c3293ec6130776f146a6a962ebe86aba39a4
 SHA1 (patch-mozilla_media_libcubeb_src_moz.build) = ca2c76fc54a62323db0e66386a99a996cd7aaef0
