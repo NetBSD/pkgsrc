@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/11/28 19:08:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/06/26 21:08:11 otis Exp $
 bin/svn-bisect
-${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
 ${PERL5_SUB_INSTALLVENDORLIB}/App/SVN/Bisect.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/App/SVN/Bisect/.packlist
 ${PERL5_SUB_INSTALLVENDORBIN}/svn-bisect
