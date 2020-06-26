@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/06/12 02:49:46 sevan Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/06/26 07:47:22 otis Exp $
 bin/agentxtrap
 ${PLIST.perl}bin/checkbandwidth
 bin/encode_keychange
@@ -274,7 +274,6 @@ lib/libnetsnmphelpers.la
 lib/libnetsnmpmibs.la
 lib/libnetsnmptrapd.la
 lib/libsnmp.la
-${PLIST.perl}${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Bundle/MakefileSubs.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/ASN.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/NetSNMP/OID.pm
