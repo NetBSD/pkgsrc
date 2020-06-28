@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2020/06/14 15:33:28 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2020/06/28 11:32:04 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -121,8 +121,9 @@ PLIST_VARS+=	sps vorbis tremor glskia throwwrapper mozglue avx86
 PLIST.glskia=	yes
 .endif
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-PLIST.avx86=	yes	# see media/libav/README_MOZILLA: only used on x86
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+    ${MACHINE_ARCH} == "aarch64"
+PLIST.avx86=	yes	# see media/libav/README_MOZILLA
 .endif
 
 .if ${MACHINE_ARCH} != "sparc64"
