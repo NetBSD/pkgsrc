@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/06/02 08:22:45 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/06/28 17:20:43 nia Exp $
 
 DISTNAME=	mono-6.8.0.105
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.xz
@@ -129,12 +129,9 @@ CHECK_PORTABILITY_SKIP+=	acceptance-tests/microbench-perf.sh.in
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX remove
-MAKE_ENV+=	V=1
-
 # We patched makefiles, regen
 pre-configure:
-	${RUN} cd ${WRKSRC} && ${SH} ./autogen.sh
+	${RUN} cd ${WRKSRC} && NOCONFIGURE=1 ${SH} ./autogen.sh
 
 .if ${OPSYS} == "SunOS"
 CFLAGS+=		-D_XOPEN_SOURCE=600
@@ -157,6 +154,14 @@ CONFIGURE_ENV+=		ac_cv_func_getfsstat=no
 # for gcc byte atomic builtins
 GNU_ARCH.i386=		i586
 CFLAGS+=		-march=i586
+.endif
+
+PLIST_VARS+=		boehm
+.if ${MACHINE_ARCH} == "aarch64"
+CONFIGURE_ARGS+=	--disable-boehm
+CONFIGURE_ARGS+=	--with-libgc=none
+.else
+PLIST.boehm=		yes
 .endif
 
 # Unsafe JIT, possibly problematic boehm-gc
