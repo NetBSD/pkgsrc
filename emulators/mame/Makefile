@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2020/06/02 08:23:46 adam Exp $
+# $NetBSD: Makefile,v 1.116 2020/06/28 16:33:58 nia Exp $
 
 DISTNAME=	mame-0.220
 PKGREVISION=	2
@@ -34,6 +34,13 @@ EXTRACT_USING=		bsdtar
 MAKE_ENV+=	LDOPTS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lkvm"
 .else
 MAKE_ENV+=	LDOPTS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib"
+.endif
+
+.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
+# \todo Arch detection for aarch64 fails, investigate why
+MAKE_FLAGS+=		NOASM=1
+BUILDLINK_TRANSFORM+=	rm:-m32
+BUILDLINK_TRANSFORM+=	rm:-m64
 .endif
 
 # -Werror is problematic
