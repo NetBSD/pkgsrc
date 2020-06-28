@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/23 09:12:57 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/06/28 14:34:06 nia Exp $
 
 DISTNAME=	fs-uae-3.0.5
 CATEGORIES=	emulators
@@ -14,7 +14,19 @@ USE_TOOLS+=		msgfmt pkg-config zip
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libmpeg2
 
+.include "../../mk/bsd.prefs.mk"
+
+# See the configure script for the full conditions for whether
+# the JIT is supported.
+#error JIT is only supported on x86/x86-64
+#error no JIT on OpenBSD/FreeBSD right now
+.if ${MACHINE_ARCH} != "i386" || \
+    ${MACHINE_ARCH} != "x86_64" || \
+    ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+CONFIGURE_ARGS+=	--disable-jit
+.else
 NOT_PAX_MPROTECT_SAFE+=	bin/fs-uae
+.endif
 
 # src/debug.cpp: In function 'void debug()':
 # src/debug.cpp:5361:188: error: array subscript has type 'char' [-Werror=char-subscripts]
@@ -24,7 +36,6 @@ NOT_PAX_MPROTECT_SAFE+=	bin/fs-uae
 # This may produce unexpected results with long process names.
 BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 #OPENAL_CFLAGS="-framework OpenAL"
 .else
