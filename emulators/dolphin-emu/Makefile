@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/05/22 10:56:05 adam Exp $
+# $NetBSD: Makefile,v 1.21 2020/06/28 15:04:36 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dolphin-emu/}
 GITHUB_PROJECT=	dolphin
@@ -12,10 +12,9 @@ HOMEPAGE=	https://dolphin-emu.org/
 COMMENT=	Nintendo GameCube and Wii emulator
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	msgfmt msgmerge pkg-config
 USE_CMAKE=	yes
-USE_LANGUAGES=	c gnu++14
+USE_LANGUAGES=	c c++
 
 # std::make_unique
 GCC_REQD+=	4.9
