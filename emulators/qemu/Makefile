@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2020/05/28 14:44:19 nia Exp $
+# $NetBSD: Makefile,v 1.246 2020/06/28 13:39:52 nia Exp $
 
 DISTNAME=	qemu-5.0.0
 PKGREVISION=	5
@@ -103,8 +103,12 @@ UE_ARCHS+=		tilegx
 UE_ARCHS+=		x86_64 xtensa xtensaeb
 
 .if ${OPSYS} == "NetBSD"
-USER_EMUL=			i386 x86_64 sparc sparc64
 PLIST.nbd=			yes
+.  if !exists(/usr/include/machine/trap.h)
+CONFIGURE_ARGS+=		--disable-bsd-user
+.  else
+USER_EMUL=			i386 x86_64 sparc sparc64
+.  endif
 .elif !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 USER_EMUL=			i386 x86_64 sparc sparc64
 PLIST.nbd=			yes
