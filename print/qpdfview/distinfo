@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2019/11/08 13:38:48 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/06/28 14:55:17 nia Exp $
 
 SHA1 (qpdfview-0.4.18.tar.gz) = 670c762436927a37980159206472d5a7a194da70
 RMD160 (qpdfview-0.4.18.tar.gz) = 28d6676a7fc76b38f23b867b0d34a92d5002cec4
@@ -6,4 +6,5 @@ SHA512 (qpdfview-0.4.18.tar.gz) = 38741520b20e3ed7100e52982930abac26e994a69df68c
 Size (qpdfview-0.4.18.tar.gz) = 786577 bytes
 SHA1 (patch-application.pro) = 11dd983ed4814f1c4913663b0bca13170fd8edfe
 SHA1 (patch-qpdfview.pri) = d569e92af7ee8baa80eec93df46d927f9bde3374
+SHA1 (patch-sources_model.h) = 9638186f83b3ebb311ef15a89a3be44530abd9db
 SHA1 (patch-sources_pdfmodel.cpp) = a718b01601d69bd4dfc4d3c4da0a19cd3f3f21ad
