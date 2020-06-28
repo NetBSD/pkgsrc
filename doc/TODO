@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19928 2020/06/22 06:24:25 wiz Exp $
+$NetBSD: TODO,v 1.19929 2020/06/28 14:45:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.10.20
+	o ImageMagick-7.0.10.22
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -495,6 +495,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o colortail-0.3.3
 	o compiz-0.8.10
 	o cone-0.92
+	o confuse-3.3
 	o cook-2.31
 	o courier-0.77.0
 	o courier-authlib-0.66.2
@@ -669,6 +670,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grantlee-5.0.0
 	o greed-4.1
 	o gromacs-5.1.2
+	o grpc-1.30.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
@@ -810,7 +812,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.221
+	o mame-0.222
 	o manedit-1.2.1
 	o mantis-2.22.1
 	o mapserver-7.0.1
@@ -890,6 +892,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opensmtpd-6.0.0
 	o openvas-libraries-8.0.8
 	o opera-26
+	o opusfile-0.12
 	o oroborus-2.0.18
 	o ortp-0.25.0
 	o oto-0.5
@@ -906,6 +909,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcc-1.1.0
 	o pcc-current-20160305
 	o pdmenu-1.2.87
+	o perl5-5.32.0
 	o pessulus-2.30.3
 	o pgadmin4-1.0
 	o pgbuildfarm-4.17
@@ -977,6 +981,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
 	o py-hgview-1.9.0
+	o py-idna-2.10
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-musicbrainz-0.7.4
@@ -1008,6 +1013,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ratmen-2.2.3
 	o razor-qt-0.5.2
 	o rbldnsd-0.998
+	o rclone-1.52.2
 	o rdp-1.6
 	o regionset-0.2
 	o rep-gtk-0.90.8.1
@@ -1024,7 +1030,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
-	o rsync-3.2.0
+	o rsync-3.2.1
 	o rt4-4.4.0
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
@@ -1106,6 +1112,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o telepathy-mission-control5-5.16.3
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
+	o thunderbird-enigmail-2.1.7
 	o tig-2.2
 	o tigervnc-1.10.1 [quite unstable]
 	o tightvnc-2.7.10
