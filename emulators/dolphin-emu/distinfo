@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2020/04/20 00:34:20 joerg Exp $
+$NetBSD: distinfo,v 1.5 2020/06/28 15:04:36 nia Exp $
 
 SHA1 (dolphin-emu-5.0.tar.gz) = 6553f9fe5281326b86f33fb6b99a93fe6a8820af
 RMD160 (dolphin-emu-5.0.tar.gz) = e8c4cb2c903b78c3e21cb12b0724ab0728c1391a
 SHA512 (dolphin-emu-5.0.tar.gz) = 8de76f811abfb82e19502336734e86ba600c11d9fa95bcf7f70a2a525165d07ead826854c39377602aab7856a057af9ba91bff458cf2dd008712527290489d3a
 Size (dolphin-emu-5.0.tar.gz) = 38246344 bytes
-SHA1 (patch-CMakeLists.txt) = 6e0163c4d385f31981a13e4f8527c873820ba6a6
+SHA1 (patch-CMakeLists.txt) = e6f8d72d53ea930306dfb7a879608c3d3ab946aa
 SHA1 (patch-Externals_SFML_include_SFML_Config.hpp) = 75ece2ce86b54b219a80d6ff028ecc80a00454f5
 SHA1 (patch-Source_Core_Common_FileUtil.cpp) = 27b859714e294abbfb3f468928e22b30abfd0099
 SHA1 (patch-Source_Core_Common_MemoryUtil.cpp) = af681a3f43687f7af09c87732a7a2da8e8c58e05
