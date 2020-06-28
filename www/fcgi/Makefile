@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2017/08/16 20:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/06/28 13:55:59 nia Exp $
 
 DISTNAME=		fcgi-2.4.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www devel
 #MASTER_SITES=		http://fastcgi.com/dist/
 
@@ -15,6 +15,8 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PTHREAD_OPTS+=		require
+
+LIBS.NetBSD+=		-lm # frexp()
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
