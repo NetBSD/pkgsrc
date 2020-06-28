@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/01/18 23:36:04 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2020/06/28 13:54:09 nia Exp $
 
 DISTNAME=	xf86-video-intel-2.99.917
 PKGREVISION=	7
@@ -18,6 +18,9 @@ CONFIGURE_ARGS+=	--disable-dri1
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config
+
+# Assumes platform compiler has SSE2, etc
+ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
