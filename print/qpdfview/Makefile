@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2020/06/02 08:24:38 adam Exp $
+# $NetBSD: Makefile,v 1.91 2020/06/28 14:55:17 nia Exp $
 
 DISTNAME=	qpdfview-0.4.18
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	print
 MASTER_SITES=	https://launchpad.net/qpdfview/trunk/${PKGVERSION_NOREV}/+download/
 
@@ -25,7 +25,7 @@ do-configure:
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../print/cups-base/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
