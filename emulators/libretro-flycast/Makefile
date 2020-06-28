@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/31 17:38:15 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/06/28 13:30:29 nia Exp $
 
 DISTNAME=	libretro-flycast-20200529
 CATEGORIES=	emulators
@@ -26,9 +26,6 @@ MAKE_FLAGS+=	CC_AS=${AS}
 CFLAGS+=	-DLOW_END
 CXXFLAGS+=	-DLOW_END
 .endif
-
-CFLAGS+=	-DHAVE_POSIX_MEMALIGN=1
-CXXFLAGS+=	-DHAVE_POSIX_MEMALIGN=1
 
 .if ${MACHINE_ARCH} == "aarch64"
 MAKE_FLAGS+=	WITH_DYNAREC=arm64
