@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2020/06/04 17:56:27 leot Exp $
+# $NetBSD: Makefile,v 1.39 2020/06/28 14:05:58 nia Exp $
 
 DISTNAME=		wmii+ixp-3.9.2
 PKGNAME=		wmii-3.9.2
+PKGREVISION=		1
 CATEGORIES=		wm
 MASTER_SITES=		http://dl.suckless.org/wmii/
 EXTRACT_SUFX=		.tbz
@@ -45,6 +46,7 @@ CONF_FILES+=		${EGDIR}/${EGSUBDIR.${subdir}}/${file} \
 .  endfor
 .endfor
 
+LDFLAGS.NetBSD+=	-lm # frexp
 LDFLAGS.SunOS+=		-lsocket -lnsl -liconv
 
 SUBST_CLASSES+=		vars
