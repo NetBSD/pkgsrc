@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.37 2020/06/23 15:59:17 nia Exp $
+# $NetBSD: options.mk,v 1.38 2020/06/28 15:23:38 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
@@ -21,7 +21,7 @@ PKG_SUGGESTED_OPTIONS+=	vaapi
 
 ### Add VDPAU if it is available
 .include "../../multimedia/libvdpau/available.mk"
-.if ${VAAPI_AVAILABLE} == "yes"
+.if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+= vdpau
 PKG_SUGGESTED_OPTIONS+= vdpau
 .endif
