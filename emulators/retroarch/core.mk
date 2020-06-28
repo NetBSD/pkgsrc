@@ -1,4 +1,4 @@
-# $NetBSD: core.mk,v 1.4 2020/06/25 15:22:50 nia Exp $
+# $NetBSD: core.mk,v 1.5 2020/06/28 13:30:29 nia Exp $
 
 MASTER_SITES?=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -31,6 +31,9 @@ CHECK_SHLIBS_SUPPORTED=	no # XXX investigate
 CFLAGS+=	-DBYTE_ORDER=BIG_ENDIAN
 CFLAGS+=	-DWORDS_BIGENDIAN -DMSB_FIRST
 .endif
+
+# Avoid using memalign() in libco on NetBSD.
+CFLAGS.NetBSD+=	-DHAVE_POSIX_MEMALIGN=1
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 
