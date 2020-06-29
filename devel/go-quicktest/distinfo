@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/29 13:35:12 nikita Exp $
+
+SHA1 (go-quicktest-1.10.0.tar.gz) = cdd134a9b27610f6b91c049d9cf5e7e37347fd20
+RMD160 (go-quicktest-1.10.0.tar.gz) = 836278bc2823ad570743c51e3f7e7a78cfd1c10e
+SHA512 (go-quicktest-1.10.0.tar.gz) = 3dbb7159d799b1a4788c3ffd47453496049f13a44bbcc1bd7fac48447f4447c1613517c8ed34b9cc5eb265d7a88e4053e0b583c1303adc73ff774b38847d29e1
+Size (go-quicktest-1.10.0.tar.gz) = 33165 bytes
