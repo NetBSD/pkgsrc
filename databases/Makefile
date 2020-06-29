@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.604 2020/06/09 22:20:56 jym Exp $
+# $NetBSD: Makefile,v 1.605 2020/06/29 13:32:25 ryoon Exp $
 
 COMMENT=	Databases
 
@@ -19,6 +19,7 @@ SUBDIR+=	csharp-mysql
 #SUBDIR+=	cstore	# not enabled at present due to its size requirements
 SUBDIR+=	datadraw
 SUBDIR+=	db
+SUBDIR+=	db18
 SUBDIR+=	db3
 SUBDIR+=	db4
 SUBDIR+=	db5
