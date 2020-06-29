@@ -1,18 +1,13 @@
-# $NetBSD: options.mk,v 1.22 2020/06/15 15:44:22 nia Exp $
+# $NetBSD: options.mk,v 1.23 2020/06/29 11:53:09 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 
 PKG_SUPPORTED_OPTIONS=	alsa dbus debug mozilla-jemalloc \
 			official-mozilla-branding pulseaudio \
-			mozilla-lightning wayland
+			mozilla-lightning
 PKG_SUGGESTED_OPTIONS+=	mozilla-lightning
 
 PLIST_VARS+=		branding nobranding debug jemalloc
-
-.include "../../devel/wayland/platform.mk"
-.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
-PKG_SUGGESTED_OPTIONS+=	wayland
-.endif
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	alsa pulseaudio mozilla-jemalloc dbus
@@ -79,10 +74,4 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 .else
 CONFIGURE_ARGS+=	--disable-official-branding
 PLIST.nobranding=	yes
-.endif
-
-PLIST_VARS+=		wayland
-.if !empty(PKG_OPTIONS:Mwayland)
-# \todo Instead of using an option, determine if gtk3 was built with wayland.
-PLIST.wayland=		yes
 .endif

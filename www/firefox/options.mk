@@ -1,16 +1,11 @@
-# $NetBSD: options.mk,v 1.54 2020/02/27 15:53:33 nia Exp $
+# $NetBSD: options.mk,v 1.55 2020/06/29 11:53:09 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
-PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus wayland
+PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
 PLIST_VARS+=		jemalloc debug
-
-.include "../../devel/wayland/platform.mk"
-.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
-PKG_SUGGESTED_OPTIONS+= wayland
-.endif
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus webrtc
@@ -91,10 +86,4 @@ CONFIGURE_ARGS+=	--enable-webrtc
 PLIST.webrtc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
-.endif
-
-PLIST_VARS+=		wayland
-.if !empty(PKG_OPTIONS:Mwayland)
-# \todo Instead of using an option, determine if gtk3 was built with wayland.
-PLIST.wayland=		yes
 .endif
