@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/02 18:42:21 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/06/29 13:04:48 ryoon Exp $
 
-SHA1 (gnome-chemistry-utils-0.12.13.tar.bz2) = a3d83f281ccd7fdbc98e14e295093287d8648a69
-RMD160 (gnome-chemistry-utils-0.12.13.tar.bz2) = 259509c4e9086fc40e91d1f2f93ad5bad9317b8c
-SHA512 (gnome-chemistry-utils-0.12.13.tar.bz2) = 70180d9bc51fcef00b979ac0ed573435e17ab626e816a9b0a91cbddf9fb76866c9726802cc741c52fa9243a327d5cd3cdb17e8404916de7447dbd46628adde6d
-Size (gnome-chemistry-utils-0.12.13.tar.bz2) = 5399998 bytes
-SHA1 (patch-libs_gccv_text.cc) = 798aa83faf31c0e63c88859ccca9ab40c25e5f6d
-SHA1 (patch-libs_gcu_loader-error.h) = 8e223394ac6fb6a17cc23439fc2e3bb2e3bc5440
-SHA1 (patch-libs_gcu_spectrumdoc.cc) = 6d4d87c128096006fd384fc058c7942b49df8646
-SHA1 (patch-programs_crystal_document.cc) = 192b376922d39796780863720459ee3ef025bfed
+SHA1 (gnome-chemistry-utils-0.14.16.tar.bz2) = 3ae7d3dfb1a5c9cd119c84a789e6571f44b62da7
+RMD160 (gnome-chemistry-utils-0.14.16.tar.bz2) = c4cedcc6aa1cdeae071b3a9a25d3c235f12eb6e7
+SHA512 (gnome-chemistry-utils-0.14.16.tar.bz2) = 7ae652edcee9707c731d77f42899dbebb16c058034d234ea95d62351f8d7c1b87a80ebbf37960721585f8d2af2b5017cb072d655a3c2d01a3a2b52fa1a17b34c
+Size (gnome-chemistry-utils-0.14.16.tar.bz2) = 6701094 bytes
+SHA1 (patch-configure) = 71e51e882eae3ea5920efdfd7f065f497ab2268d
