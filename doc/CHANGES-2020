@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3798 2020/06/29 13:44:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3799 2020/06/29 13:45:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6069,3 +6069,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-cryptodome to 3.9.8 [adam 2020-06-29]
 	Added devel/go-quicktest version 1.10.0 [nikita 2020-06-29]
 	Updated fonts/harfbuzz to 2.6.8 [nia 2020-06-29]
+	Updated devel/ccache to 3.7.10 [adam 2020-06-29]
+	Updated www/wslay to 1.1.1 [adam 2020-06-29]
