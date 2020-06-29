@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3778 2020/06/29 12:14:01 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3779 2020/06/29 12:41:41 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6047,3 +6047,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/rclone to 1.52.2 [leot 2020-06-29]
 	Updated net/terraform to 0.12.28 [adam 2020-06-29]
 	Updated net/terraform-provider-aws to 2.68.0 [adam 2020-06-29]
+	Added graphics/go-gift version 1.2.1 [nikita 2020-06-29]
