@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.900 2020/06/20 15:05:48 nia Exp $
+# $NetBSD: Makefile,v 1.901 2020/06/29 18:36:33 pin Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -496,6 +496,7 @@ SUBDIR+=	xdialog
 SUBDIR+=	xditview
 SUBDIR+=	xdm
 SUBDIR+=	xdm3d
+SUBDIR+=	xdo
 SUBDIR+=	xdotool
 SUBDIR+=	xdpyinfo
 SUBDIR+=	xdriinfo
