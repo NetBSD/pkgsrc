@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3792 2020/06/29 13:26:34 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3793 2020/06/29 13:30:07 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6062,3 +6062,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/db6 to 6.2.32 [ryoon 2020-06-29]
 	Updated x11/qt5-qscintilla to 2.11.5 [adam 2020-06-29]
 	Updated x11/py-qt5-qscintilla to 2.11.5 [adam 2020-06-29]
+	Added devel/go-kr-pretty version 0.2.0 [nikita 2020-06-29]
