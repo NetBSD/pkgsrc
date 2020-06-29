@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2019/07/01 16:01:36 jaapb Exp $
+# $NetBSD: options.mk,v 1.2 2020/06/29 10:15:07 yyamano Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml-conduit
 PKG_SUPPORTED_OPTIONS=	async lwt
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	async lwt
 
 .include "../../mk/bsd.prefs.mk"
 
