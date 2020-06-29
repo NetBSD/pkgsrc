@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3811 2020/06/29 16:14:00 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3812 2020/06/29 18:37:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6087,3 +6087,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/gitea to 1.12.1 [jperkin 2020-06-29]
 	Updated converters/py-zfec to 1.5.3 [adam 2020-06-29]
 	Updated www/py-flask-caching to 1.9.0 [adam 2020-06-29]
+	Added x11/xdo version 0.5.7 [pin 2020-06-29]
