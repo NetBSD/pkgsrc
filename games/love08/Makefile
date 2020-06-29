@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/06/24 12:30:56 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/29 13:04:14 nia Exp $
 
 DISTNAME=	love-0.8.0-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love08/}
@@ -8,7 +8,7 @@ MASTER_SITES=	https://bitbucket.org/rude/love/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://love2d.org/
-COMMENT=	Framework for making 2D games in Lua
+COMMENT=	Framework for making 2D games in Lua (version 0.8)
 LICENSE=	zlib
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-linux-src//}
