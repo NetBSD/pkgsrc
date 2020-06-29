@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/06/29 18:53:26 leot Exp $
+# $NetBSD: options.mk,v 1.6 2020/06/29 19:30:04 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nvi
 PKG_SUPPORTED_OPTIONS+=	wide-curses
@@ -11,6 +11,5 @@ PKG_LEGACY_OPTS+=	ncursesw:wide-curses
 ### Wide curses support
 ###
 .if !empty(PKG_OPTIONS:Mwide-curses)
-.  include "../../mk/curses.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-widechar
 .endif
