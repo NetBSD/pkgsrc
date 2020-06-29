@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.154 2020/06/02 08:24:27 adam Exp $
+# $NetBSD: Makefile,v 1.155 2020/06/29 15:12:00 adam Exp $
 
-DISTNAME=	mkvtoolnix-47.0.0
-PKGREVISION=	1
+DISTNAME=	mkvtoolnix-48.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -52,7 +51,7 @@ do-install:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.libebml+= libebml>=1.3.5
+BUILDLINK_API_DEPENDS.libebml+= libebml>=1.4.0
 .include "../../devel/libebml/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
