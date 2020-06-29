@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/21 08:55:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/29 16:13:01 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,21 +14,21 @@ ${PYSITELIB}/flask_caching/backends/__init__.pyo
 ${PYSITELIB}/flask_caching/backends/base.py
 ${PYSITELIB}/flask_caching/backends/base.pyc
 ${PYSITELIB}/flask_caching/backends/base.pyo
-${PYSITELIB}/flask_caching/backends/filesystem.py
-${PYSITELIB}/flask_caching/backends/filesystem.pyc
-${PYSITELIB}/flask_caching/backends/filesystem.pyo
+${PYSITELIB}/flask_caching/backends/filesystemcache.py
+${PYSITELIB}/flask_caching/backends/filesystemcache.pyc
+${PYSITELIB}/flask_caching/backends/filesystemcache.pyo
 ${PYSITELIB}/flask_caching/backends/memcache.py
 ${PYSITELIB}/flask_caching/backends/memcache.pyc
 ${PYSITELIB}/flask_caching/backends/memcache.pyo
-${PYSITELIB}/flask_caching/backends/null.py
-${PYSITELIB}/flask_caching/backends/null.pyc
-${PYSITELIB}/flask_caching/backends/null.pyo
+${PYSITELIB}/flask_caching/backends/nullcache.py
+${PYSITELIB}/flask_caching/backends/nullcache.pyc
+${PYSITELIB}/flask_caching/backends/nullcache.pyo
 ${PYSITELIB}/flask_caching/backends/rediscache.py
 ${PYSITELIB}/flask_caching/backends/rediscache.pyc
 ${PYSITELIB}/flask_caching/backends/rediscache.pyo
-${PYSITELIB}/flask_caching/backends/simple.py
-${PYSITELIB}/flask_caching/backends/simple.pyc
-${PYSITELIB}/flask_caching/backends/simple.pyo
+${PYSITELIB}/flask_caching/backends/simplecache.py
+${PYSITELIB}/flask_caching/backends/simplecache.pyc
+${PYSITELIB}/flask_caching/backends/simplecache.pyo
 ${PYSITELIB}/flask_caching/backends/uwsgicache.py
 ${PYSITELIB}/flask_caching/backends/uwsgicache.pyc
 ${PYSITELIB}/flask_caching/backends/uwsgicache.pyo
