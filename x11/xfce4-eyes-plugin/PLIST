@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/09 09:31:55 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/06/29 23:38:01 gutteridge Exp $
 lib/xfce4/panel/plugins/libeyes.la
 share/icons/hicolor/16x16/apps/xfce4-eyes.png
 share/icons/hicolor/22x22/apps/xfce4-eyes.png
@@ -26,9 +26,13 @@ share/locale/fi/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/fr/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/gl/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/he/LC_MESSAGES/xfce4-eyes-plugin.mo
+share/locale/hi/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/hr/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-eyes-plugin.mo
+share/locale/hy_AM/LC_MESSAGES/xfce4-eyes-plugin.mo
+share/locale/hye/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-eyes-plugin.mo
+share/locale/ie/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/is/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/it/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/ja/LC_MESSAGES/xfce4-eyes-plugin.mo
@@ -51,6 +55,7 @@ share/locale/sl/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/sq/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/sr/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/sv/LC_MESSAGES/xfce4-eyes-plugin.mo
+share/locale/th/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/tr/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/ug/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/uk/LC_MESSAGES/xfce4-eyes-plugin.mo
