@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/29 13:22:14 nikita Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/kr/pretty.a
+gopkg/src/github.com/kr/pretty/License
+gopkg/src/github.com/kr/pretty/Readme
+gopkg/src/github.com/kr/pretty/diff.go
+gopkg/src/github.com/kr/pretty/diff_test.go
+gopkg/src/github.com/kr/pretty/example_test.go
+gopkg/src/github.com/kr/pretty/formatter.go
+gopkg/src/github.com/kr/pretty/formatter_test.go
+gopkg/src/github.com/kr/pretty/go.mod
+gopkg/src/github.com/kr/pretty/go.sum
+gopkg/src/github.com/kr/pretty/pretty.go
+gopkg/src/github.com/kr/pretty/zero.go
