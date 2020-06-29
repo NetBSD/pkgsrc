@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2020/06/29 12:56:03 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/29 12:56:43 nikita Exp $
 
 DISTNAME=		go-org-1.1.0
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=niklasfasching/}
 GITHUB_PROJECT=		go-org
-GITHUB_TAG=		v1.1.0
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/niklasfasching/go-org
