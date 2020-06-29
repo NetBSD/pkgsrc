@@ -30,6 +30,7 @@ anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
 ap-php			Use PHP via Apache module.
 apache			Enable support for Apache web server.
+apache-managed-domain-handling	Enabele Managing domains and ACME support in Apache web server.
 apache-mpm-event	Use multi-threaded workers in Apache web server.
 apache-mpm-prefork	Use pre-forked workers in Apache web server.
 apache-mpm-worker	Use multiple processes of multi-threaded workers in Apache web server.
