@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.171 2020/06/17 17:54:26 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.172 2020/06/29 11:53:09 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -269,4 +269,8 @@ BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+PLIST_VARS+=		wayland
+.if ${PKG_BUILD_OPTIONS.gtk3:Mx11}
+PLIST.wayland=		yes
+.endif
 .include "../../lang/python/pyversion.mk"
