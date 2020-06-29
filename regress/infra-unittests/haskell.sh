@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: haskell.sh,v 1.2 2020/06/29 20:12:34 rillig Exp $
+# $NetBSD: haskell.sh,v 1.3 2020/06/29 20:30:13 rillig Exp $
 #
 # Tests for mk/haskell.mk.
 #
@@ -427,23 +427,6 @@ if test_case_begin 'neither package-id nor package-description'; then
 
 	assert_that "$tmpdir/output" --file-is-lines \
 		'_HS_PLIST_STATUS=missing' \
-		"awk: can't open file $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-description" \
-		' source line number 1' \
-		'bmake: "awk '\''prev == "import-dirs:" { dir = $1; exit } { prev = $0 } END { print(dir ? dir : "never_match_this") }'\'' '"$destdir""$prefix"'/lib/package-1.0/ghc-8.8.1/package-description" returned non-zero status' \
-		"awk: can't open file $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-description" \
-		' source line number 1' \
-		'bmake: "awk '\''prev == "import-dirs:" { dir = $1; exit } { prev = $0 } END { print(dir ? dir : "never_match_this") }'\'' '"$destdir""$prefix"'/lib/package-1.0/ghc-8.8.1/package-description" returned non-zero status' \
-		"awk: can't open file $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-description" \
-		' source line number 1' \
-		'bmake: "awk '\''prev == "import-dirs:" { dir = $1; exit } { prev = $0 } END { print(dir ? dir : "never_match_this") }'\'' '"$destdir""$prefix"'/lib/package-1.0/ghc-8.8.1/package-description" returned non-zero status' \
-		"cat: $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-id: No such file or directory" \
-		"$make: \"cat $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-id\" returned non-zero status" \
-		'PLIST_SUBST HS_INTF=lib/package-1.0/ghc-8.8.1' \
-		'PLIST_SUBST HS_IMPL=' \
-		'PLIST_SUBST HS_DOCS=' \
-		'PLIST_SUBST HS_PLATFORM=never_match_this' \
-		'PLIST_SUBST HS_PKGID=' \
-		'PLIST_SUBST HS_VER=ghc8.8.1' \
 		'PLIST_SUBST OPSYS=Opsys' \
 		'PLIST_SUBST OS_VERSION=' \
 		'PLIST_SUBST MACHINE_ARCH=arch' \
@@ -469,43 +452,7 @@ if test_case_begin 'neither package-id nor package-description'; then
 		'PLIST_SUBST TRUE=true' \
 		'PLIST_SUBST PKGGNUDIR=' \
 		'PLIST_SUBST PKGMANDIR=' \
-		"awk: can't open file $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-description" \
-		' source line number 1' \
-		'bmake: "awk '\''prev == "import-dirs:" { dir = $1; exit } { prev = $0 } END { print(dir ? dir : "never_match_this") }'\'' '"$destdir""$prefix"'/lib/package-1.0/ghc-8.8.1/package-description" returned non-zero status' \
-		"awk: can't open file $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-description" \
-		' source line number 1' \
-		'bmake: "awk '\''prev == "import-dirs:" { dir = $1; exit } { prev = $0 } END { print(dir ? dir : "never_match_this") }'\'' '"$destdir""$prefix"'/lib/package-1.0/ghc-8.8.1/package-description" returned non-zero status' \
-		"awk: can't open file $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-description" \
-		' source line number 1' \
-		'bmake: "awk '\''prev == "import-dirs:" { dir = $1; exit } { prev = $0 } END { print(dir ? dir : "never_match_this") }'\'' '"$destdir""$prefix"'/lib/package-1.0/ghc-8.8.1/package-description" returned non-zero status' \
-		"cat: $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-id: No such file or directory" \
-		"$make: \"cat $destdir$prefix/lib/package-1.0/ghc-8.8.1/package-id\" returned non-zero status" \
-		'PRINT_PLIST_AWK {' \
-		'PRINT_PLIST_AWK sub("^lib/package-1.0/ghc-8.8.1",' \
-		'PRINT_PLIST_AWK "")' \
-		'PRINT_PLIST_AWK }' \
-		'PRINT_PLIST_AWK {' \
-		'PRINT_PLIST_AWK sub("^",' \
-		'PRINT_PLIST_AWK "")' \
-		'PRINT_PLIST_AWK }' \
-		'PRINT_PLIST_AWK {' \
-		'PRINT_PLIST_AWK sub("^",' \
-		'PRINT_PLIST_AWK "")' \
-		'PRINT_PLIST_AWK }' \
-		'PRINT_PLIST_AWK {' \
-		'PRINT_PLIST_AWK sub("/never_match_this/",' \
-		'PRINT_PLIST_AWK "//")' \
-		'PRINT_PLIST_AWK }' \
-		'PRINT_PLIST_AWK {' \
-		'PRINT_PLIST_AWK sub(' \
-		'PRINT_PLIST_AWK "",' \
-		'PRINT_PLIST_AWK "")' \
-		'PRINT_PLIST_AWK }' \
-		'PRINT_PLIST_AWK {' \
-		'PRINT_PLIST_AWK sub(' \
-		'PRINT_PLIST_AWK "ghc8.8.1",' \
-		'PRINT_PLIST_AWK "")' \
-		'PRINT_PLIST_AWK }'
+		'PRINT_PLIST_AWK '
 
 	test_case_end
 fi
