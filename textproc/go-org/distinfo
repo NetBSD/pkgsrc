@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/29 12:56:03 nikita Exp $
+
+SHA1 (go-org-1.1.0.tar.gz) = e4bd534941b2b25f5c71cd9b31528d86d9424531
+RMD160 (go-org-1.1.0.tar.gz) = 2aea8e437038fb491bd49a06f614e464d871c0d8
+SHA512 (go-org-1.1.0.tar.gz) = 65e15fcc257a31b58027659693027d6e4e84ea49d3a4f7ba08546348bd01540916116be14edbfaf853c1dc1b9ac6a6dd547b6d44ec233a8d12dad898d179d5fc
+Size (go-org-1.1.0.tar.gz) = 222300 bytes
