@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.8 2017/01/26 11:03:17 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/06/29 13:24:54 ryoon Exp $
 
-SHA1 (db-6.2.23.tar.gz) = 646c57b99799dc300207976e2270cdaca1a2f198
-RMD160 (db-6.2.23.tar.gz) = 20beb699e72e08734c1631c993851e5010e644d4
-SHA512 (db-6.2.23.tar.gz) = 0aac380673ff4f97a2a6230f135f8151b8d2896a12710f708cd983b5fb95075b55fc2c67af577365e8ec7a32e43357a4f3118e37713d00b227f05eb11b1d12f5
-Size (db-6.2.23.tar.gz) = 44305964 bytes
+SHA1 (db-6.2.32.tar.gz) = 51824cee0a59cdcfb11413ac4558c851dda24551
+RMD160 (db-6.2.32.tar.gz) = 6a3bc6562aea20184f8ee60800461dca31b50c4f
+SHA512 (db-6.2.32.tar.gz) = 83bdbf18a7b9782409cf4563f8d5f11322d5e564a39946c890604a60440a6ea6361e0236bbc30bd4e8e1de1fa9196b8e815fd126baa035f55c5826c2c6aa3401
+Size (db-6.2.32.tar.gz) = 45342417 bytes
 SHA1 (patch-dist_Makefile.in) = d4e65068c341b5f3a6053e6bc87bd2731270e7d7
-SHA1 (patch-dist_aclocal_libtool.m4) = 37367e10d9d856cf233b7a0efd3680f35728039e
-SHA1 (patch-dist_configure) = 9e08277448cddfe60e85e8f32ef9d1e3e002df0e
-SHA1 (patch-src_dbinc_atomic.h) = 544c5c65b66fe57455a458328aa44a0e9282c6dd
+SHA1 (patch-dist_configure) = 723c5e90e16e54ddd0be87b920fe57fddbee8e80
+SHA1 (patch-dist_s__thrift) = 83da14f3f2732d842321cdec03dc8485ee372737
+SHA1 (patch-src_dbinc_atomic.h) = 4eec1a15920051e269ee10dbe5ae43fe97b656ab
 SHA1 (patch-src_dbinc_db.in) = 78579e81cb682b60a4306c752e04472b7f0d8d5a
 SHA1 (patch-src_hmac_sha1.c) = 0e98e6383c214adbb939839bb345e55efe8d89da
 SHA1 (patch-src_mp_mp__fget.c) = 059ecdb74bef29c17b445c305b6d4934b5a3c59b
