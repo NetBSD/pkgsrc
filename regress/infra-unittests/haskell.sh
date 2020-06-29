@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: haskell.sh,v 1.5 2020/06/29 21:24:39 rillig Exp $
+# $NetBSD: haskell.sh,v 1.6 2020/06/29 22:00:58 rillig Exp $
 #
 # Tests for mk/haskell.mk.
 #
@@ -71,8 +71,16 @@ ALL_ENV=		ALL_ENV_VAR=value
 .include "mk/plist/bsd.plist.mk"
 .include "mk/misc/show.mk"
 
+# from bsd.pkg.mk
+PKGNAME_NOREV?=		\${PKGNAME}
+PKGVERSION?=		\${PKGNAME:C/^.*-//}
+PKGBASE?=		\${PKGNAME:C/-[^-]*$//}
+
 show-plist-status: .PHONY
 	@echo "PLIST status: "\${_HS_PLIST_STATUS:Q}
+
+show-var: .PHONY
+	@echo \${\${VARNAME}:Q}
 EOF
 
 	link_from_pkgsrc 'mk/haskell.mk'
@@ -206,19 +214,12 @@ if test_case_begin 'missing, update=yes'; then
 
 	# Based on devel/hs-asn1-parse from 2020-06-22.
 
-	create_file_lines 'Makefile' \
-		'DISTNAME=	asn1-parse-0.9.5' \
-		'PKGVERSION=	0.9.5' \
-		'PKGNAME_NOREV=	${DISTNAME}' \
-		'' \
-		'HS_UPDATE_PLIST=	yes' \
-		"PKGDIR=	$PWD" \
-		'' \
-		'.include "../../main.mk"' \
-		'.include "../../mk/haskell.mk"' \
-		'' \
-		'show-haskell-plist-status: .PHONY' \
-		'	@echo "PLIST status: "${_HS_PLIST_STATUS:Q}'
+	create_file 'Makefile' <<-EOF
+		DISTNAME=		asn1-parse-0.9.5
+		HS_UPDATE_PLIST=	yes
+
+		.include "../../main.mk"
+	EOF
 	create_file "$destdir$prefix/lib/asn1-parse-0.9.5/ghc-8.8.1/package-id" <<-EOF
 		asn1-parse-0.9.5-2HryHNyN1grJJzKM4AV1Gr
 	EOF
@@ -392,10 +393,10 @@ if test_case_begin 'neither package-id nor package-description'; then
 		'PLIST_SUBST LOWER_VENDOR=' \
 		'PLIST_SUBST LOWER_OPSYS=' \
 		'PLIST_SUBST LOWER_OS_VERSION=' \
-		'PLIST_SUBST PKGBASE=' \
-		'PLIST_SUBST PKGNAME=' \
+		'PLIST_SUBST PKGBASE=hs-package' \
+		'PLIST_SUBST PKGNAME=hs-package-1.0' \
 		'PLIST_SUBST PKGLOCALEDIR=' \
-		'PLIST_SUBST PKGVERSION=' \
+		'PLIST_SUBST PKGVERSION=1.0' \
 		'PLIST_SUBST LOCALBASE=' \
 		'PLIST_SUBST VIEWBASE=' \
 		'PLIST_SUBST X11BASE=' \
