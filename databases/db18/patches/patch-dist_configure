@@ -1,0 +1,22 @@
+$NetBSD: patch-dist_configure,v 1.1 2020/06/29 13:30:35 ryoon Exp $
+
+--- dist/configure.orig	2020-05-29 17:58:22.000000000 +0000
++++ dist/configure
+@@ -7044,7 +7044,7 @@ fi
+ # we're using.
+ case "$host_os" in
+ sysv5UnixWare*|sysv5OpenUNIX8*)
+-	if test "$GCC" == "yes"; then
++	if test "$GCC" = "yes"; then
+ 		CPPFLAGS="$CPPFLAGS -pthread"
+ 		LDFLAGS="$LDFLAGS -pthread"
+ 	else
+@@ -20201,7 +20201,7 @@ else
+ fi
+ 
+ 
+-if test "$ac_cv_sizeof_off_t" == "4"; then
++if test "$ac_cv_sizeof_off_t" = "4"; then
+ 	db_off_t_max_decl="#define DB_OFF_T_MAX INT32_MAX"
+ else
+ 	db_off_t_max_decl="#define DB_OFF_T_MAX INT64_MAX"

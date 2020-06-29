@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2020/06/29 13:30:35 ryoon Exp $
+
+SHA1 (db-18.1.40.tar.gz) = 880c13a65b6c2126f6ec90d6d5f2f28485b237c3
+RMD160 (db-18.1.40.tar.gz) = b10cefc26100f66861f7db18be54f5a38ee595fc
+SHA512 (db-18.1.40.tar.gz) = 53787164fb8a198a0178c7f58d891c2b0943d1c52b11fe9de525938469327e85664f0bc63e33d740c171bc370954710a6b3e8b9be2a08237fb9757a795c5b19e
+Size (db-18.1.40.tar.gz) = 30763705 bytes
+SHA1 (patch-dist_Makefile.in) = 8187cadb2c12232eadbb597dee08ec1b43761ca4
+SHA1 (patch-dist_bumprel) = 565aa2fae7ae996a9ae620f79eee93010b511f22
+SHA1 (patch-dist_configure) = 0ceccc385cc7b62db446ac11fcdd32abb4457d66
+SHA1 (patch-test_xa_src1_run.sh) = c8bdd44f96baf9032400b6976d4b94ab4e42ea4a
+SHA1 (patch-test_xa_src3_run.sh) = ecbf3776fa53939896d110e57351a796b4bec83c
+SHA1 (patch-test_xa_src4_run.sh) = c8ce04fcfdae830bca04fd62e4c813271ac05da7
+SHA1 (patch-test_xa_src5_run.sh) = bc2dc6152ac6e5f8495871dd85ee9a4a3a2d1e5b
