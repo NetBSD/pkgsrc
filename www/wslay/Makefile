@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/06/24 09:15:44 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/29 13:44:22 adam Exp $
 
-DISTNAME=	wslay-1.1.0
+DISTNAME=	wslay-1.1.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
 EXTRACT_SUFX=	.tar.xz
