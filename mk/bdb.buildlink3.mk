@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.28 2020/05/03 10:00:42 rillig Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.29 2020/06/29 13:36:50 ryoon Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB (BDB) implementation and that are not restricted
@@ -6,7 +6,7 @@
 # (if builtin) and db[23456].
 #
 # This Makefile cannot handle packages that can use only a subset of
-# { db2 db3 db4 db5 db6 }.
+# { db2 db3 db4 db5 db6 db18 }.
 #
 # User-settable variables:
 #
@@ -18,7 +18,7 @@
 #	FIXME: Improve the wording of the text above so that one can
 #	understand it.
 #
-#	Possible: db1 db2 db3 db4 db5 db6
+#	Possible: db1 db2 db3 db4 db5 db6 db18
 #	Default: db4
 #
 # BDB185_DEFAULT
@@ -78,7 +78,7 @@ USE_DB185?=	yes
 # _BDB_PKGS is an exhaustive list of all of the Berkeley DB
 # implementations that may be used with bdb.buildlink3.mk.
 #
-_BDB_PKGS?=	db1 db2 db3 db4 db5 db6
+_BDB_PKGS?=	db1 db2 db3 db4 db5 db6 db18
 
 BDB_DEFAULT?=	db4
 BDB_ACCEPTED?=	${_BDB_PKGS}
