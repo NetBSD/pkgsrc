@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/29 13:04:14 nia Exp $
+
+SHA1 (love-11.3-linux-src.tar.gz) = d4615bc1ccfbf0de34f4354827e369887fa1d78e
+RMD160 (love-11.3-linux-src.tar.gz) = a757d77ab58f93e043de32917205ab67ef1075f9
+SHA512 (love-11.3-linux-src.tar.gz) = d02900bbad658da7127bdbc52ceb8282a725b32d6a17fc51962327411be94f81b2c871d21b3c4bd8492a4ca355c3cfb1f04a7fe010d6c69ae35c7c5d64579e1b
+Size (love-11.3-linux-src.tar.gz) = 2898851 bytes
+SHA1 (patch-src_libraries_physfs_physfs_platform_unix.c) = 2a22ef68fa86e2c96d084eb8dce493ab1f4b1009
