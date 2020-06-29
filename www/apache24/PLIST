@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2020/04/06 08:27:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/06/29 13:58:53 ryoon Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -135,6 +135,7 @@ lib/httpd/mod_log_forensic.so
 lib/httpd/mod_logio.so
 ${PLIST.lua}lib/httpd/mod_lua.so
 lib/httpd/mod_macro.so
+${PLIST.md}lib/httpd/mod_md.so
 lib/httpd/mod_mime.so
 lib/httpd/mod_mime_magic.so
 ${PLIST.event}lib/httpd/mod_mpm_event.so
