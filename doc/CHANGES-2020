@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3801 2020/06/29 14:10:18 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3802 2020/06/29 14:28:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6073,3 +6073,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/wslay to 1.1.1 [adam 2020-06-29]
 	Updated finance/gnucash-docs to 4.0 [wiz 2020-06-29]
 	Updated chat/srain to 1.1.1 [nia 2020-06-29]
+	Updated emulators/sameboy to 0.13.3 [nia 2020-06-29]
