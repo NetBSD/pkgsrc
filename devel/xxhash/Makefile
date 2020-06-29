@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/05/31 09:51:35 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/29 13:19:48 adam Exp $
 
-DISTNAME=	xxhash-0.7.3
+DISTNAME=	xxhash-0.7.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Cyan4973/}
 GITHUB_PROJECT=	xxHash
@@ -11,34 +11,11 @@ HOMEPAGE=	https://github.com/Cyan4973/xxHash
 COMMENT=	Extremely fast non-cryptographic hash algorithm
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=	gmake
-
-BUILD_TARGET=	all pkgconfig
-
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=	darwin notdarwin
-
-.if ${OPSYS} == "Darwin"
-PLIST.darwin=		yes
-.else
-PLIST.notdarwin=	yes
-.endif
-
-INSTALLATION_DIRS+=	bin include ${PKGMANDIR}/man1 lib lib/pkgconfig
-
+USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	libxxhash.pc.in
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/xxhash.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_MAN} ${WRKSRC}/xxhsum.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_PROGRAM} ${WRKSRC}/xxhsum ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/libxxhash.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/libxxhash.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
-.if ${OPSYS} == "Darwin"
-	${INSTALL_LIB} ${WRKSRC}/libxxhash*dylib ${DESTDIR}${PREFIX}/lib
-.else
-	${INSTALL_LIB} ${WRKSRC}/libxxhash.so* ${DESTDIR}${PREFIX}/lib
-.endif
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
+MAKE_ENV+=		PKGCONFIGDIR=${PREFIX}/lib/pkgconfig
+BUILD_TARGET=		all pkgconfig
+TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
