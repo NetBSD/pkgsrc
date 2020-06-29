@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.24 2020/06/29 20:51:24 rillig Exp $
+# $NetBSD: haskell.mk,v 1.25 2020/06/29 22:00:58 rillig Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -234,7 +234,6 @@ _HS_PLIST_STATUS=	outdated
 # the PLIST.
 #
 .if ${_HS_PLIST_STATUS} == lib-ok || ${_HS_PLIST_STATUS} == missing
-
 _HASKELL_PL_INTF=	${_HASKELL_PKG_ID_FILE:H:S,^${PREFIX}/,,}
 _HASKELL_PL_IMPL_AWK=	prev == "import-dirs:" { dir = $$1; exit }
 _HASKELL_PL_IMPL_AWK+=	{ prev = $$0 }
@@ -254,6 +253,7 @@ _HS_PLIST_SUBST+=	HS_PLATFORM=${_HASKELL_PL_PLATFORM}
 _HS_PLIST_SUBST+=	HS_PKGID=${_HASKELL_PL_PKGID}
 _HS_PLIST_SUBST+=	HS_VER=${_HASKELL_PL_VER}
 PLIST_SUBST+=		${exists(${DESTDIR}${_HASKELL_PKG_DESCR_FILE}):?${_HS_PLIST_SUBST}:}
+
 _HS_PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_INTF}",       "$${HS_INTF}") }
 _HS_PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_IMPL}",       "$${HS_IMPL}") }
 _HS_PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_DOCS}",       "$${HS_DOCS}") }
@@ -261,21 +261,21 @@ _HS_PRINT_PLIST_AWK+=	{ sub("/${_HASKELL_PL_PLATFORM}/", "/$${HS_PLATFORM}/") }
 _HS_PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_PKGID}",      "$${HS_PKGID}") }
 _HS_PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_VER}",        "$${HS_VER}") }
 PRINT_PLIST_AWK+=	${exists(${DESTDIR}${_HASKELL_PKG_DESCR_FILE}):?${_HS_PRINT_PLIST_AWK}:}
-
-.  if ${HS_UPDATE_PLIST} != no && ${_HS_PLIST_STATUS} == missing
-GENERATE_PLIST+= 	${MAKE} print-PLIST > ${PKGDIR}/PLIST;
-.  endif
 .endif
 
 .if ${_HS_PLIST_STATUS} == missing || ${_HS_PLIST_STATUS} == outdated
+.  if ${HS_UPDATE_PLIST} == yes
+GENERATE_PLIST+= 	${MAKE} print-PLIST > ${PKGDIR}/PLIST;
+.  endif
 GENERATE_PLIST+= \
 	cd ${DESTDIR:Q}${PREFIX:Q} && \
 		${FIND} * \( -type f -o -type l \) | ${SORT};
-PLIST_SRC=	# none, because the PLIST file is outdated or missing
-.  if ${_HS_PLIST_STATUS} == outdated && ${HS_UPDATE_PLIST} == no
+PLIST_SRC=	# none
+.endif
+
+.if ${_HS_PLIST_STATUS} == outdated && ${HS_UPDATE_PLIST} == no
 WARNINGS+=	"[haskell.mk] The PLIST format is outdated."
 WARNINGS+=	"[haskell.mk] Set HS_UPDATE_PLIST=yes to update it automatically."
-.  endif
 .endif
 
 # Define configure target. We might not have any working Haskell
