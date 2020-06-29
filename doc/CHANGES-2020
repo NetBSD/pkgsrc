@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3807 2020/06/29 14:59:43 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3808 2020/06/29 15:06:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6080,3 +6080,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/stella to 6.2.1 [nia 2020-06-29]
 	Updated emulators/libretro-stella to 6.2.1 [nia 2020-06-29]
 	Updated games/corsix-th to 0.64 [nia 2020-06-29]
+	Updated net/get_iplayer to 3.26 [nia 2020-06-29]
