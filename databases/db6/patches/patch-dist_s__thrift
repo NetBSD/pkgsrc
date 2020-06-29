@@ -1,0 +1,15 @@
+$NetBSD: patch-dist_s__thrift,v 1.1 2020/06/29 13:24:55 ryoon Exp $
+
+* Fix POSIX shell portability issue.
+
+--- dist/s_thrift.orig	2017-04-13 14:06:13.000000000 +0000
++++ dist/s_thrift
+@@ -93,7 +93,7 @@ build_jar()
+ 	fi
+ 
+ 	javac -cp $CLASS_PATH:$4 -d $CLASS_DIR -sourcepath $SRC_DIR `find $SRC_DIR -type f -name *.java`
+-	if [ "x$3" == "x" ]; then
++	if [ "x$3" = "x" ]; then
+ 		jar cf $BUILD_DIR/$2.jar -C $CLASS_DIR .
+ 	else
+ 		jar cfm $BUILD_DIR/$2.jar $3 -C $CLASS_DIR .
