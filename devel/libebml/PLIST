@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/05/28 07:46:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/06/29 15:08:26 adam Exp $
 include/ebml/Debug.h
 include/ebml/EbmlBinary.h
 include/ebml/EbmlConfig.h
@@ -33,6 +33,6 @@ lib/cmake/EBML/EBMLConfigVersion.cmake
 lib/cmake/EBML/EBMLTargets-noconfig.cmake
 lib/cmake/EBML/EBMLTargets.cmake
 lib/libebml.so
-lib/libebml.so.4
-lib/libebml.so.4.0.0
+lib/libebml.so.5
+lib/libebml.so.5.0.0
 lib/pkgconfig/libebml.pc
