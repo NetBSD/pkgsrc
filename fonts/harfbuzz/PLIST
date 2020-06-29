@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2020/05/17 14:43:16 nia Exp $
+@comment $NetBSD: PLIST,v 1.40 2020/06/29 13:44:02 nia Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -31,6 +31,7 @@ include/harfbuzz/hb-ot.h
 include/harfbuzz/hb-set.h
 include/harfbuzz/hb-shape-plan.h
 include/harfbuzz/hb-shape.h
+include/harfbuzz/hb-style.h
 include/harfbuzz/hb-subset.h
 include/harfbuzz/hb-unicode.h
 include/harfbuzz/hb-version.h
