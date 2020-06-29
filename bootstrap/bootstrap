@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.281 2020/05/30 21:36:15 jperkin Exp $
+# $NetBSD: bootstrap,v 1.282 2020/06/29 12:01:38 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -535,7 +535,12 @@ fi
 overpath=""
 root_user=root
 bmakexargs=
+need_awk=no
+need_bsd_install=no
 need_extras=no
+need_sed=no
+need_xargs=no
+set_opsys=no
 use_bsdinstall=
 case "$opsys" in
 AIX)
@@ -545,15 +550,10 @@ AIX)
 	need_sed=yes
 	need_ksh=yes
 	need_fixed_strip=yes
-	set_opsys=no
 	machine_arch=`get_machine_arch_aix`
 	;;
 Bitrig)
 	root_group=wheel
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
 	machine_arch=`arch -s`
 	check_compiler=yes
 	;;
@@ -566,11 +566,8 @@ CYGWIN_*)
 	}
 	root_user=Administrators
 	root_group=Administrators
-	need_bsd_install=no
 	opsys=`uname -o`
-	need_awk=no
 	need_sed=yes
-	need_xargs=no
 	machine_arch=`uname -m`
 	# only used for unprivileged builds.
 	whoamiprog='id -u'
@@ -579,10 +576,8 @@ CYGWIN_*)
 
 Darwin)
 	root_group=wheel
-	need_bsd_install=no
 	need_awk=yes
 	need_sed=yes
-	set_opsys=no
 	machine_arch=`get_machine_arch_darwin`
 	CC=${CC:-"cc -isystem /usr/include"}; export CC
 	check_compiler=yes
@@ -609,45 +604,26 @@ Darwin)
 	;;
 DragonFly)
 	root_group=wheel
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
 	check_prog tarprog tar
 	machine_arch=`uname -p`
 	;;
 FreeBSD)
 	root_group=wheel
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
 	machine_arch=`uname -p`
 	check_compiler=yes
 	;;
 FreeMiNT)
 	root_group=root
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
 	machine_arch=m68k
 	;;
 GNUkFreeBSD)
 	root_group=root
-	need_bsd_install=no
 	need_awk=yes
-	need_sed=no
-	set_opsys=no
 	machine_arch=`uname -m`
 	;;
 Haiku)
 	root_user=`id -un`
 	root_group=root
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
 	case `uname -m` in
 	BeMac)
 		machine_arch=powerpc
@@ -665,7 +641,6 @@ HPUX)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
-	set_opsys=no
 	machine_arch=`uname -m | sed 's/^9000.*$/hppa/'`
 	;;
 Interix)
@@ -686,15 +661,7 @@ Interix)
 		need_bsd_install=yes
 		need_awk=yes
 		need_sed=yes
-		set_opsys=no
 		need_xargs=yes
-		;;
-	*)
-		need_bsd_install=no
-		need_awk=no
-		need_sed=no
-		set_opsys=no
-		need_xargs=no
 		;;
 	esac
 	# only used for unprivileged builds
@@ -735,7 +702,6 @@ Linux)
 	else
 		root_group=root
 	fi
-	need_bsd_install=no
 	# Debian/Ubuntu's awk is mawk, and mawk does not understand
 	# some regexp used in pkgsrc/mk.
 	if [ -f /etc/debian_version ]; then
@@ -748,11 +714,7 @@ Linux)
 	elif grep -sq '^CHROMEOS_RELEASE_NAME' /etc/lsb-release; then
 		need_awk=yes
 		need_sed=yes
-	else
-		need_awk=no
-		need_sed=no
 	fi
-	set_opsys=no
 	machine_arch=`uname -m`
 	# Override machine_arch where required.
 	case "$machine_arch" in
@@ -762,22 +724,12 @@ Linux)
 	;;
 Minix)
 	root_group=wheel
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
 	machine_arch=`uname -p`
 	check_compiler=yes
 	;;	
 MirBSD)
 	root_group=wheel
 	need_pax=yes
-	need_mtree=no
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
-	check_prog mtreeprog mtree
 	machine_arch=`arch -s`
 	# there is no /usr/bin/cc, so use mgcc if unset
 	test -n "$CC" || { CC=mgcc; export CC; }
@@ -799,18 +751,10 @@ MirBSD)
 	;;
 NetBSD)
 	root_group=wheel
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
 	machine_arch=`uname -p`
 	;;
 OpenBSD)
 	root_group=wheel
-	need_bsd_install=no
-	need_awk=no
-	need_sed=no
-	set_opsys=no
 	machine_arch=`arch -s`
 	CC=${CC:-cc}; export CC
 	check_compiler=yes
@@ -821,7 +765,6 @@ OSF1)
 	need_awk=yes
 	need_sed=yes
 	need_ksh=yes
-	set_opsys=no
 	machine_arch=`uname -p`
 	;;
 QNX)
@@ -829,7 +772,6 @@ QNX)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
-	set_opsys=no
 	groupsprog="id -gn"
 	whoamiprog="id -un"
 	machine_arch=`uname -p | sed -e 's/x86/i386/'`
@@ -839,7 +781,6 @@ SCO_SV)
 	need_awk=yes
 	need_bsd_install=yes
 	need_sed=yes
-	set_opsys=no
 	whoamiprog='id -u'
 	groupsprog='id -g'
 	# /bin/sh under OpenServer 5.0.7/3.2 breaks bmake tests.
@@ -849,14 +790,10 @@ SunOS)
 	root_group=root
 	need_bsd_install=yes
 	use_bsdinstall=yes
-	if [ -x "/usr/gnu/bin/awk" ]; then
-		need_awk=no
-	else
+	if [ ! -x "/usr/gnu/bin/awk" ]; then
 		need_awk=yes
 	fi
-	if [ -x "/usr/gnu/bin/sed" ]; then
-		need_sed=no
-	else
+	if [ ! -x "/usr/gnu/bin/sed" ]; then
 		need_sed=yes
 	fi
 	if [ -x "/usr/bin/bash" ]; then
@@ -865,7 +802,6 @@ SunOS)
 	else
 		need_ksh=yes
 	fi
-	set_opsys=no
 	idprog="/usr/xpg4/bin/id"
 	groupsprog="${idprog} -gn"
 	whoamiprog="${idprog} -un"
@@ -875,13 +811,11 @@ SunOS)
 	;;
 UnixWare)
 	root_group=sys
-	need_bsd_install=no
 	BSTRAP_ENV="INSTALL=/usr/ucb/install $BSTRAP_ENV"
 	need_mkdir=yes
 	need_awk=yes
 	need_sed=yes
 	whoamiprog=/usr/ucb/whoami
-	set_opsys=no
 	CC="gcc -DUNIXWARE"; export CC
 	;;
 *)
@@ -890,7 +824,6 @@ UnixWare)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
-	set_opsys=no
 	;;
 esac
 
