@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2015/01/06 14:59:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2020/06/29 15:08:26 adam Exp $
 
 BUILDLINK_TREE+=	libebml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libebml
 LIBEBML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libebml+=	libebml>=0.8
-BUILDLINK_ABI_DEPENDS.libebml+=	libebml>=1.3.1
+BUILDLINK_ABI_DEPENDS.libebml+=	libebml>=1.4.0
 BUILDLINK_PKGSRCDIR.libebml?=	../../devel/libebml
 .endif # LIBEBML_BUILDLINK3_MK
 
