@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.101 2020/05/12 06:16:17 wiz Exp $
+$NetBSD: distinfo,v 1.102 2020/06/29 13:36:45 wiz Exp $
 
-SHA1 (gnucash-3.10.tar.bz2) = b9fcdb1e5c44ad989ea6585f6a3c62c56a730663
-RMD160 (gnucash-3.10.tar.bz2) = 25ad9822130e641240418d753a0092c98815688b
-SHA512 (gnucash-3.10.tar.bz2) = f4b88d35c94af59ffc8144b95dc5f3ba54c6f72473589c4184e026300536ad7f5f13a71fb572693c55ee540ba30c8cf65fba101d7112e34e3fcbbd738007b27e
-Size (gnucash-3.10.tar.bz2) = 14166587 bytes
-SHA1 (patch-bindings_python_tests_CMakeLists.txt) = 1a02e3860d0b02742e0dc7228f3a58f5ebe8fb89
-SHA1 (patch-bindings_python_tests_runTests.py.in) = 6966117741ecef177c41c85e7e6765ce934280a3
-SHA1 (patch-gnucash_import-export_csv-imp_gnc-imp-settings-csv.hpp) = acf06740c4a9bcd3768ed968d9cd87fcc201162f
-SHA1 (patch-libgnucash_core-utils_binreloc.c) = 8ed7610d64e2d68e597025ffdbf46dc1d41381d6
+SHA1 (gnucash-4.0.tar.bz2) = 0bfe960fb97f0ea3fc7df513b60cf3f79b3b270b
+RMD160 (gnucash-4.0.tar.bz2) = 65e64e9dc19518ddb9a54f62af5abcf5efbaf852
+SHA512 (gnucash-4.0.tar.bz2) = 29fd61352932ff0962e5c634711bc1ae09020e457bace5d2954b743976b607ad3632ddf6a7024148e989dc8e69769400cb7795eee097f8d88dea3ac8d6b7c7ee
+Size (gnucash-4.0.tar.bz2) = 13978744 bytes
