@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2020/06/29 13:35:12 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2020/06/29 13:35:47 nikita Exp $
 
 DISTNAME=		go-quicktest-1.10.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=frankban/}
 GITHUB_PROJECT=		quicktest
-GITHUB_TAG=		v1.10.0
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/frankban/quicktest
