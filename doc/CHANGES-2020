@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3810 2020/06/29 16:02:24 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.3811 2020/06/29 16:14:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6085,3 +6085,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/libmatroska to 1.6.0 [adam 2020-06-29]
 	Updated multimedia/mkvtoolnix to 48.0.0 [adam 2020-06-29]
 	Updated www/gitea to 1.12.1 [jperkin 2020-06-29]
+	Updated converters/py-zfec to 1.5.3 [adam 2020-06-29]
+	Updated www/py-flask-caching to 1.9.0 [adam 2020-06-29]
