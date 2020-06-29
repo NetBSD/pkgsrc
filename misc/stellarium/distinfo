@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.45 2020/04/22 06:33:36 adam Exp $
+$NetBSD: distinfo,v 1.46 2020/06/29 13:21:08 adam Exp $
 
-SHA1 (stellarium-0.20.1.tar.gz) = 20d89ff8e26bb8cef71796d138176be2602e6327
-RMD160 (stellarium-0.20.1.tar.gz) = 631fa278adfa1d639bae09c41c400e1a8d20ee7c
-SHA512 (stellarium-0.20.1.tar.gz) = 685a306391dc681cc21834a226e35c769e11909f625ff7461d7e896ba412ad595871e93c69981b342099f46829f9f3ef3e276be867dc5ea5523fa60a99cc21d1
-Size (stellarium-0.20.1.tar.gz) = 343991703 bytes
+SHA1 (stellarium-0.20.2.tar.gz) = 308fd0878d2126878d769d66cac1f00b3dccf819
+RMD160 (stellarium-0.20.2.tar.gz) = 42fda7ceae95a9d0bad3e243eb589a0f937a33af
+SHA512 (stellarium-0.20.2.tar.gz) = 34f1ad5891dde84b53324046bdf1514df858335ba8f0954bb72350b057ff6dc4091a2d7bf89083489e0d8d1c750c5fb8ba8e1e241f9287a740121b377f0e510c
+Size (stellarium-0.20.2.tar.gz) = 344319520 bytes
 SHA1 (patch-CMakeLists.txt) = 135846ad53c2c448b31b61ea0f0c0dd5e8f2d2a7
 SHA1 (patch-data_CMakeLists.txt) = 760c38c5a5d3bf60a4039a2fbe177b2e49dee128
 SHA1 (patch-doc_CMakeLists.txt) = c0505c73dc051b4416deb08b2127a49591cd1aed
