@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2020/06/09 11:59:58 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/06/29 14:48:49 nia Exp $
 # used by emulators/stella/Makefile
 # used by emulators/libretro-stella/Makefile
 
-DISTNAME=	stella-6.2-src
+DISTNAME=	stella-6.2.1-src
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stella-emu/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -18,6 +18,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//1}
 USE_LANGUAGES=	c c++
 
 # c++14
-GCC_REQD+=	5
+GCC_REQD+=	6
 
 UNLIMIT_RESOURCES=	datasize
