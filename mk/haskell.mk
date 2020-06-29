@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.21 2020/06/21 22:21:02 rillig Exp $
+# $NetBSD: haskell.mk,v 1.22 2020/06/29 18:07:45 rillig Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -217,6 +217,8 @@ CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
 
 .if !exists(${PKGDIR}/PLIST)
+_HS_PLIST_STATUS=	missing
+.elif !${${GREP} "." ${PKGDIR}/PLIST || ${TRUE}:L:sh}
 _HS_PLIST_STATUS=	missing
 .elif ${${GREP} HS_INTF ${PKGDIR}/PLIST || ${TRUE}:L:sh}
 _HS_PLIST_STATUS=	lib-ok
