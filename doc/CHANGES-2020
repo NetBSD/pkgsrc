@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3797 2020/06/29 13:41:31 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.3798 2020/06/29 13:44:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6068,3 +6068,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-humanize to 2.4.1 [adam 2020-06-29]
 	Updated security/py-cryptodome to 3.9.8 [adam 2020-06-29]
 	Added devel/go-quicktest version 1.10.0 [nikita 2020-06-29]
+	Updated fonts/harfbuzz to 2.6.8 [nia 2020-06-29]
