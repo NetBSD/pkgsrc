@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2019/03/19 11:25:41 jaapb Exp $
+# $NetBSD: options.mk,v 1.2 2020/06/29 10:19:26 yyamano Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml-logs
 PKG_SUPPORTED_OPTIONS=	fmt cmdliner lwt js_of_ocaml
-PKG_SUGGESTED_OPTIONS=	fmt cmdliner
+PKG_SUGGESTED_OPTIONS=	fmt cmdliner lwt
 
 .include "../../mk/bsd.prefs.mk"
 
