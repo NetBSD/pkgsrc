@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3809 2020/06/29 15:12:20 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3810 2020/06/29 16:02:24 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6084,3 +6084,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libebml to 1.4.0 [adam 2020-06-29]
 	Updated multimedia/libmatroska to 1.6.0 [adam 2020-06-29]
 	Updated multimedia/mkvtoolnix to 48.0.0 [adam 2020-06-29]
+	Updated www/gitea to 1.12.1 [jperkin 2020-06-29]
