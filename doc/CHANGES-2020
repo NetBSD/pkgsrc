@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3777 2020/06/29 12:12:34 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3778 2020/06/29 12:14:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6045,3 +6045,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/nspr to 4.26 [ryoon 2020-06-29]
 	Updated biology/openbabel to 3.1.1 [ryoon 2020-06-29]
 	Updated net/rclone to 1.52.2 [leot 2020-06-29]
+	Updated net/terraform to 0.12.28 [adam 2020-06-29]
+	Updated net/terraform-provider-aws to 2.68.0 [adam 2020-06-29]
