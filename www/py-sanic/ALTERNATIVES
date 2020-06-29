@@ -1,0 +1,1 @@
+bin/sanic @PREFIX@/bin/sanic-@PYVERSSUFFIX@
