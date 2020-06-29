@@ -1,0 +1,118 @@
+$NetBSD: patch-dist_Makefile.in,v 1.1 2020/06/29 13:30:35 ryoon Exp $
+
+* Adjust library name to coexist other berkeley DB versions.
+
+--- dist/Makefile.in.orig	2020-05-29 17:58:22.000000000 +0000
++++ dist/Makefile.in
+@@ -17,7 +17,7 @@ exec_prefix=@exec_prefix@
+ bindir=	@bindir@
+ includedir=@includedir@
+ libdir=	@libdir@
+-docdir=	$(prefix)/docs
++docdir=	$(prefix)/share/doc/db18
+ 
+ dmode=	755
+ emode=	555
+@@ -54,7 +54,7 @@ INSTALLER=	@INSTALLER@
+ LIBTOOL=	@LIBTOOL@
+ 
+ POSTLINK=	@POSTLINK@
+-SOLINK=		@MAKEFILE_SOLINK@ @CFLAGS@
++SOLINK=		@MAKEFILE_SOLINK@ -version-info @DB_VERSION_MINOR@:@DB_VERSION_PATCH@ @CFLAGS@
+ SOFLAGS=	@SOFLAGS@
+ LIBMAJOR=	@DB_VERSION_MAJOR@
+ LIBVERSION=	@DB_VERSION_MAJOR@.@DB_VERSION_MINOR@
+@@ -73,7 +73,7 @@ LIBS=		@LIBSO_LIBS@
+ TEST_LIBS=	@TEST_LIBS@
+ LIBCSO_LIBS=	@LIBCSO_LIBS@ @LIBSO_LIBS@
+ 
+-libdb_base=	libdb
++libdb_base=	libdb18
+ libdb=		$(libdb_base).a
+ libdb_version=	$(libdb_base)-$(LIBVERSION).a
+ libso=		$(libdb_base)-$(LIBVERSION)@SOSUFFIX@
+@@ -92,7 +92,7 @@ CXXLINK=	@MAKEFILE_CXXLINK@ @CXXFLAGS@
+ XSOLINK=	@MAKEFILE_XSOLINK@ @CXXFLAGS@
+ LIBXSO_LIBS=	@LIBXSO_LIBS@ @LIBSO_LIBS@
+ 
+-libcxx_base=	libdb_cxx
++libcxx_base=	libdb18_cxx
+ libcxx=		$(libcxx_base).a
+ libcxx_version=	$(libcxx_base)-$(LIBVERSION).a
+ libxso=		$(libcxx_base)-$(LIBVERSION)@SOSUFFIX@
+@@ -167,12 +167,12 @@ JAVA_MANIFEST=	$(langdir)/java/jarManife
+ 
+ JDK_VERSION=	`$(JAVAC) -version 2>&1 | sed 's/.*\.\(.*\)\..*/\\1/'`
+ 
+-libj_jarfile=	db.jar
++libj_jarfile=	db18.jar
+ libj_exjarfile=	dbexamples.jar
+ libj_demojarfile=dbdemos.jar
+ libj_guijarfile=db_gui.jar
+ libj_guitestjarfile=db_guitest.jar
+-libjso_base=	libdb_java
++libjso_base=	libdb18_java
+ libjso=		$(libjso_base)-$(LIBVERSION)@JMODSUFFIX@
+ libjso_static=	$(libjso_base)-$(LIBVERSION).a
+ libjso_target=	$(libjso_base)-$(LIBVERSION).la
+@@ -188,7 +188,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
+ TCL_INCLUDE_SPEC=	@TCL_INCLUDE_SPEC@
+ LIBTSO_LIBS=	@LIBTSO_LIBS@ @LIBSO_LIBS@
+ TCL_SRCDIR=	$(langdir)/tcl
+-libtcl_base=	libdb_tcl
++libtcl_base=	libdb18_tcl
+ libtcl=		$(libtcl_base).a
+ libtcl_version=	$(libtcl_base)-$(LIBVERSION).a
+ libtso=		$(libtcl_base)-$(LIBVERSION)@LIBTSO_MODSUFFIX@
+@@ -1109,7 +1109,7 @@ $(libj_guijarfile): $(libj_jarfile) $(JA
+ 			$(CHMOD) $(dmode) $(JAVA_GUICLASSTOP)) ; \
+ 		$(JAVAC) -classpath $(libj_jarfile) -d $(JAVA_GUICLASSTOP) \
+ 			$(JAVACFLAGS) $(JAVA_GUISRCS) ; \
+-		$(CP) $(JAVA_GUIDATAFXML) $(JAVA_GUICLASSTOP)/db_gui/datapage ; \
++		$(18CP) $(JAVA_GUIDATAFXML) $(JAVA_GUICLASSTOP)/db_gui/datapage ; \
+ 		$(CP) $(JAVA_GUIDBFXML) $(JAVA_GUICLASSTOP)/db_gui/dbpage ; \
+ 		$(CP) $(JAVA_GUIDATAFXML) $(JAVA_GUICLASSTOP)/db_gui/envpage ; \
+ 		cd $(JAVA_GUICLASSTOP) && $(JAR) cf ../$(libj_guijarfile) . ; 
+@@ -1233,8 +1233,7 @@ install_include: $(INCDOT)
+ 	@for f in $(INCDOT); do \
+ 	    basef=`echo $$f | $(SED) 's,.*/,,'` ; \
+ 	    $(RM) $(DESTDIR)$(includedir)/$$basef ; \
+-	    $(CP) -p $$f $(DESTDIR)$(includedir) ; \
+-	    $(CHMOD) $(fmode) $(DESTDIR)$(includedir)/$$basef ; \
++	    $(BSD_INSTALL_DATA) $$f $(DESTDIR)$(includedir)/$$basef ; \
+ 	done
+ 
+ uninstall_include:
+@@ -1284,10 +1283,8 @@ install_utilities:
+ 	@for i in $(UTIL_PROGS); do \
+ 		test -f $$i.exe && i=$$i.exe; \
+ 		e=`echo $$i | $(SED) '$(transform)'`; \
+-		$(RM) $(DESTDIR)$(bindir)/$$e; \
+-		$(INSTALLER) $$i $(DESTDIR)$(bindir)/$$e; \
+-		$(STRIP) $(DESTDIR)$(bindir)/$$e; \
+-		$(CHMOD) $(emode) $(DESTDIR)$(bindir)/$$e; \
++		target="${DESTDIR}${bindir}/$$e"; \
++		libtool --mode=install $(BSD_INSTALL_PROGRAM) $$i $$target; \
+ 	done
+ 
+ uninstall_utilities:
+@@ -1299,8 +1296,8 @@ uninstall_utilities:
+ 
+ # We install csharp docs even on UNIX so we don't have a 
+ # broken link on the landing page.
+-DOCLIST=api_reference articles bdb-sql collections csharp gsg \
+-	gsg_db_rep gsg_db_server gsg_txn index.html installation \
++DOCLIST=api_reference articles collections csharp gsg \
++	gsg_db_rep gsg_txn index.html installation \
+ 	java license porting programmer_reference upgrading
+ 
+ install_docs:
+@@ -1309,7 +1306,7 @@ install_docs:
+ 	    ($(MKDIR) -p $(DESTDIR)$(docdir) && \
+ 	    $(CHMOD) $(dmode) $(DESTDIR)$(docdir))
+ 	@cd $(DESTDIR)$(docdir) && $(RM) -r $(DOCLIST)
+-	@cd $(topdir)/docs && $(CP) -pr $(DOCLIST) $(DESTDIR)$(docdir)/
++	@cd $(topdir)/docs && pax -rwpp $(DOCLIST) $(DESTDIR)$(docdir)/
+ 
+ uninstall_docs:
+ 	@cd $(DESTDIR)$(docdir) && $(RM) -r $(DOCLIST)
