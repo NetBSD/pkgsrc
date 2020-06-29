@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2020/06/17 09:54:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.39 2020/06/29 16:02:13 jperkin Exp $
 
-DISTNAME=	gitea-1.11.6
+DISTNAME=	gitea-1.12.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
-PKGREVISION=	1
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -18,7 +17,7 @@ GO_SRCPATH=		code.gitea.io/gitea
 # The front-end files do not change every release, so only bump this when
 # necessary to avoid excessive uploads to LOCAL_PORTS.
 #
-FRONTEND=		gitea-1.11.5-frontend.tar.gz
+FRONTEND=		gitea-1.12.1-frontend.tar.gz
 SITES.${FRONTEND}=	${MASTER_SITE_LOCAL}
 DISTFILES:=		${DEFAULT_DISTFILES} ${FRONTEND}
 
