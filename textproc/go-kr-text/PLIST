@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/29 13:04:01 nikita Exp $
+bin/go-agg
+bin/go-mc
+gopkg/pkg/${GO_PLATFORM}/github.com/kr/text.a
+gopkg/pkg/${GO_PLATFORM}/github.com/kr/text/colwriter.a
+gopkg/src/github.com/kr/text/License
+gopkg/src/github.com/kr/text/Readme
+gopkg/src/github.com/kr/text/cmd/agg/doc.go
+gopkg/src/github.com/kr/text/cmd/agg/main.go
+gopkg/src/github.com/kr/text/cmd/agg/num.go
+gopkg/src/github.com/kr/text/cmd/agg/string.go
+gopkg/src/github.com/kr/text/colwriter/Readme
+gopkg/src/github.com/kr/text/colwriter/column.go
+gopkg/src/github.com/kr/text/colwriter/column_test.go
+gopkg/src/github.com/kr/text/doc.go
+gopkg/src/github.com/kr/text/go.mod
+gopkg/src/github.com/kr/text/indent.go
+gopkg/src/github.com/kr/text/indent_test.go
+gopkg/src/github.com/kr/text/mc/Readme
+gopkg/src/github.com/kr/text/mc/mc.go
+gopkg/src/github.com/kr/text/wrap.go
+gopkg/src/github.com/kr/text/wrap_test.go
