@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3773 2020/06/29 11:39:19 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3774 2020/06/29 11:50:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6041,3 +6041,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/spleen to 1.8.0 [fcambus 2020-06-29]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2020Q2 branch [wiz 2020-06-29]
 	Updated net/gallery-dl to 1.14.2 [leot 2020-06-29]
+	Updated security/putty to 0.74 [ryoon 2020-06-29]
