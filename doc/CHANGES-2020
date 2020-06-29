@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3800 2020/06/29 13:52:19 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3801 2020/06/29 14:10:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6072,3 +6072,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ccache to 3.7.10 [adam 2020-06-29]
 	Updated www/wslay to 1.1.1 [adam 2020-06-29]
 	Updated finance/gnucash-docs to 4.0 [wiz 2020-06-29]
+	Updated chat/srain to 1.1.1 [nia 2020-06-29]
