@@ -1,0 +1,2 @@
+bin/zfec @PREFIX@/bin/zfec-@PYVERSSUFFIX@
+bin/zunfec @PREFIX@/bin/zunfec-@PYVERSSUFFIX@
