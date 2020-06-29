@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/29 13:04:14 nia Exp $
+love11/bin/love
+love11/lib/liblove.la
+love11/man/man1/love.1
+love11/share/applications/love.desktop
+love11/share/icons/hicolor/scalable/mimetypes/application-x-love-game.svg
+love11/share/mime/packages/love.xml
+love11/share/pixmaps/love.svg

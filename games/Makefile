@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.490 2020/05/21 08:42:57 plunky Exp $
+# $NetBSD: Makefile,v 1.491 2020/06/29 13:04:14 nia Exp $
 #
 
 COMMENT=	Games
@@ -262,6 +262,7 @@ SUBDIR+=	love010
 SUBDIR+=	love07
 SUBDIR+=	love08
 SUBDIR+=	love09
+SUBDIR+=	love11
 SUBDIR+=	lpairs
 SUBDIR+=	lskat
 SUBDIR+=	ltris
