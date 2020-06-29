@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.282 2020/06/29 12:01:38 jperkin Exp $
+# $NetBSD: bootstrap,v 1.283 2020/06/29 12:38:03 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -573,34 +573,35 @@ CYGWIN_*)
 	whoamiprog='id -u'
 	groupsprog='id -g'
 	;;
-
 Darwin)
 	root_group=wheel
-	need_awk=yes
-	need_sed=yes
 	machine_arch=`get_machine_arch_darwin`
 	CC=${CC:-"cc -isystem /usr/include"}; export CC
 	check_compiler=yes
 	osrev=`uname -r`
-	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
-	case "$macosx_version" in
-	10.[7-9])
+
+	# Combine major.minor product version for simpler numerical tests.
+	macos_version=`sw_vers -productVersion | awk -F. '{print $1 $2}'`
+
+	# Newer native sed does not support multibyte correctly.
+	if [ $macos_version -ge 1008 ]; then
+		need_awk=yes
+		need_sed=yes
+	fi
+
+	case "$macos_version" in
+	100[7-9])
 		packagemaker=/Applications/PackageMaker.app/Contents/MacOS/PackageMaker
 		;;
-	10.[0-4])
+	100[0-4])
 		packagemaker=/Developer/Tools/packagemaker
 		;;
 	*)
 		packagemaker=/Developer/usr/bin/packagemaker
 		;;
 	esac
-	case "$macosx_version" in
-	10.[0-7])
-		need_awk=no
-		need_sed=no
-		;;
-	esac
-	unset osrev macosx_version
+
+	unset osrev macos_version
 	;;
 DragonFly)
 	root_group=wheel
