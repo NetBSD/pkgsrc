@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3785 2020/06/29 13:07:01 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3786 2020/06/29 13:08:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6043,3 +6043,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.14.2 [leot 2020-06-29]
 	Added games/love11 version 11.3 [nia 2020-06-29]
 	Updated devel/cppcheck to 2.1 [wiz 2020-06-29]
+	Updated lang/py-cmake-language-server to 0.1.2 [wiz 2020-06-29]
