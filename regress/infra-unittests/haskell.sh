@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: haskell.sh,v 1.3 2020/06/29 20:30:13 rillig Exp $
+# $NetBSD: haskell.sh,v 1.4 2020/06/29 20:51:25 rillig Exp $
 #
 # Tests for mk/haskell.mk.
 #
@@ -149,6 +149,9 @@ fi
 if test_case_begin 'PLIST status: outdated'; then
 
 	# See devel/hs-hashable/PLIST, r1.1.
+	# In that file, there was only a package-description but not
+	# package-id.  After the migration, it has both the
+	# package-description and the package-id.
 
 	create_file 'Makefile' <<-EOF
 		DISTNAME=	hashable-1.3.0.0
@@ -165,9 +168,8 @@ if test_case_begin 'PLIST status: outdated'; then
 	"$make" 'show-plist-status' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
-	# TODO: should be 'outdated' because of 'package-description'
 	assert_that "$tmpdir/output" --file-is-lines \
-		'PLIST status: plain'
+		'PLIST status: outdated'
 
 	test_case_end
 fi
