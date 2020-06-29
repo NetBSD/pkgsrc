@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/29 12:46:01 nikita Exp $
+
+SHA1 (go-pty-1.1.11.tar.gz) = bb8ee65c66931ca5c2de2efaeef22fcf4ecc06d1
+RMD160 (go-pty-1.1.11.tar.gz) = acf3de0257dec87172a9ce565f653a2907a4782e
+SHA512 (go-pty-1.1.11.tar.gz) = 5bebe9bb7635eb96c6487f308e0aa9ac4de0113eba2bdb2cce737dee188d261a86842fc8ba3c03f2691a8d194af0f35ae4418e3a0f46fb38dbc2e2eadd61eeea
+Size (go-pty-1.1.11.tar.gz) = 8396 bytes
