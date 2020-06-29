@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3795 2020/06/29 13:37:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3796 2020/06/29 13:37:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6065,3 +6065,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/go-kr-pretty version 0.2.0 [nikita 2020-06-29]
 	Added databases/db18 version 18.1.40 [ryoon 2020-06-29]
 	Updated finance/gnucash to 4.0 [wiz 2020-06-29]
+	Updated textproc/py-humanize to 2.4.1 [adam 2020-06-29]
+	Updated security/py-cryptodome to 3.9.8 [adam 2020-06-29]
