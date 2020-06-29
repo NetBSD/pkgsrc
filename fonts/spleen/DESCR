@@ -1,4 +1,4 @@
-Spleen is a monospaced bitmap font available in 5 sizes:
-5x8, 8x16, 12x24, 16x32 and 32x64.
+Spleen is a monospaced bitmap font available in 6 sizes:
+5x8, 6x12, 8x16, 12x24, 16x32 and 32x64.
 
 fonts/spleen provides font files in the PCF format for use with X11.
