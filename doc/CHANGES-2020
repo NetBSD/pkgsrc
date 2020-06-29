@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3776 2020/06/29 12:10:59 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3777 2020/06/29 12:12:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6044,3 +6044,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/putty to 0.74 [ryoon 2020-06-29]
 	Updated devel/nspr to 4.26 [ryoon 2020-06-29]
 	Updated biology/openbabel to 3.1.1 [ryoon 2020-06-29]
+	Updated net/rclone to 1.52.2 [leot 2020-06-29]
