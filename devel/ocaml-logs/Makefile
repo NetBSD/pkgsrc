@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/04/30 13:29:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/29 10:19:26 yyamano Exp $
 
 DISTNAME=	logs-0.7.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/logs/releases/
 EXTRACT_SUFX=	.tbz
