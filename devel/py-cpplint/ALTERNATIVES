@@ -1,0 +1,1 @@
+bin/cpplint @PREFIX@/bin/cpplint-@PYVERSSUFFIX@
