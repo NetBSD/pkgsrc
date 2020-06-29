@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3790 2020/06/29 13:21:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3791 2020/06/29 13:25:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6059,3 +6059,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated biology/gnome-chemistry-utils to 0.14.16 [ryoon 2020-06-29]
 	Updated devel/xxhash to 0.7.4 [adam 2020-06-29]
 	Updated misc/stellarium to 0.20.2 [adam 2020-06-29]
+	Updated databases/db6 to 6.2.32 [ryoon 2020-06-29]
