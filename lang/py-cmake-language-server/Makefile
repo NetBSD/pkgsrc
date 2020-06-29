@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/05/19 05:14:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/06/29 13:07:55 wiz Exp $
 
-DISTNAME=	cmake-language-server-0.1.1
+DISTNAME=	cmake-language-server-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmake-language-server/}
