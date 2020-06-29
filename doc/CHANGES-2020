@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3804 2020/06/29 14:30:27 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3805 2020/06/29 14:49:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6077,3 +6077,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-sameboy to 0.13.3 [nia 2020-06-29]
 	Updated databases/py-pypika to 0.37.14 [adam 2020-06-29]
 	Updated www/py-sanic to 20.6.3 [adam 2020-06-29]
+	Updated emulators/stella to 6.2.1 [nia 2020-06-29]
