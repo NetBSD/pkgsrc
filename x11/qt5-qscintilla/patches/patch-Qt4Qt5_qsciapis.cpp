@@ -1,9 +1,9 @@
-$NetBSD: patch-qsciapis.cpp,v 1.1 2020/01/26 12:54:15 rhialto Exp $
+$NetBSD: patch-Qt4Qt5_qsciapis.cpp,v 1.1 2020/06/29 13:25:57 adam Exp $
 
 Search in qt5/qsci*/api/.../*.api.
 
---- qsciapis.cpp.orig	2019-06-25 12:49:27.000000000 +0000
-+++ qsciapis.cpp
+--- Qt4Qt5/qsciapis.cpp.orig	2019-06-25 12:49:27.000000000 +0000
++++ Qt4Qt5/qsciapis.cpp
 @@ -982,6 +982,7 @@ QString QsciAPIs::prepName(const QString
  // Return installed API files.
  QStringList QsciAPIs::installedAPIFiles() const
