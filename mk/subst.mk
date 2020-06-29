@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.101 2020/06/25 08:45:00 jperkin Exp $
+# $NetBSD: subst.mk,v 1.102 2020/06/29 18:04:13 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -110,7 +110,7 @@
 #
 
 SUBST_SHOW_DIFF?=	no
-SUBST_NOOP_OK?=		yes	# for the stable branch 2020Q2
+SUBST_NOOP_OK?=		no	# will be forced to "no" after 2020Q3
 
 _VARGROUPS+=		subst
 _USER_VARS.subst=	SUBST_SHOW_DIFF SUBST_NOOP_OK
