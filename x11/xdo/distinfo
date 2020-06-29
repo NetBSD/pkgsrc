@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/06/29 18:35:14 pin Exp $
+
+SHA1 (xdo-0.5.7.tar.gz) = 9daa84c47dd213fb3de6ac5ebec5ec4fc1be61a3
+RMD160 (xdo-0.5.7.tar.gz) = 4b0b661f00013d7b6154e88230f9e72bae72f298
+SHA512 (xdo-0.5.7.tar.gz) = 0978a8571a35899c916495c9d38458adb6c766db4d498dfacf2f0a46e373f7caa3c3e227096b3e60e03c67b972777cf7519e5b6eee7ebb91f82d4450ac0ff98d
+Size (xdo-0.5.7.tar.gz) = 7453 bytes
