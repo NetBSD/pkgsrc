@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2020/06/11 19:55:42 leot Exp $
+$NetBSD: distinfo,v 1.4 2020/06/29 12:12:19 leot Exp $
 
-SHA1 (rclone-1.52.1.tar.gz) = 29f70952ceb017c914e0f22acf785892a88e1ec1
-RMD160 (rclone-1.52.1.tar.gz) = f527abed7e2a4b1d516ed7afb8783112065b55b6
-SHA512 (rclone-1.52.1.tar.gz) = bbd305074071986cf6fb8146c634e35c28e1ea8ce2ce95507c55b95cb19eb3b1453dfb11e365bef5948978328d91df44b936b866c49db26149a17f5ca451ba15
-Size (rclone-1.52.1.tar.gz) = 20029046 bytes
+SHA1 (rclone-1.52.2.tar.gz) = 9249a12b2412aadc713723d7baf9d470ac56c14a
+RMD160 (rclone-1.52.2.tar.gz) = e3f80822701a074c5476bae6d9bcd6392fbce613
+SHA512 (rclone-1.52.2.tar.gz) = f49f0dcf8bfa105b01b35921daa655a6c1161f6505e2299f027a4059d196adcc673038b1718320e6f0b8bb053fad8d2de7714f66fa245dd90ea0a791e848a418
+Size (rclone-1.52.2.tar.gz) = 19515310 bytes
 SHA1 (patch-vfs_vfstest_write__non__unix.go) = fbb230be4fb8540191527b4f04231f2d0148ac51
 SHA1 (patch-vfs_vfstest_write__unix.go) = 4765ca7d7e6ceefc6480a154c2216bd7def33a42
