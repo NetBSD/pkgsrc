@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3774 2020/06/29 11:50:26 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3775 2020/06/29 12:07:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6042,3 +6042,4 @@ Changes to the packages collection and infrastructure in 2020:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2020Q2 branch [wiz 2020-06-29]
 	Updated net/gallery-dl to 1.14.2 [leot 2020-06-29]
 	Updated security/putty to 0.74 [ryoon 2020-06-29]
+	Updated devel/nspr to 4.26 [ryoon 2020-06-29]
