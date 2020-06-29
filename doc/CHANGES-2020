@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3808 2020/06/29 15:06:50 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3809 2020/06/29 15:12:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6081,3 +6081,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-stella to 6.2.1 [nia 2020-06-29]
 	Updated games/corsix-th to 0.64 [nia 2020-06-29]
 	Updated net/get_iplayer to 3.26 [nia 2020-06-29]
+	Updated devel/libebml to 1.4.0 [adam 2020-06-29]
+	Updated multimedia/libmatroska to 1.6.0 [adam 2020-06-29]
+	Updated multimedia/mkvtoolnix to 48.0.0 [adam 2020-06-29]
