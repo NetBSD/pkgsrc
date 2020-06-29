@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2020/05/15 08:32:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/06/29 14:29:20 adam Exp $
+bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sanic/__init__.py
