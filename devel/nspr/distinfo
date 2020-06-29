@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.55 2020/02/05 03:26:52 ryoon Exp $
+$NetBSD: distinfo,v 1.56 2020/06/29 12:06:37 ryoon Exp $
 
-SHA1 (nspr-4.25.tar.gz) = fe02a9056ce867677401b3d6372cdb62f7c7aad4
-RMD160 (nspr-4.25.tar.gz) = 29a3c17c3872478afaa13b4bf4b43b99d92a10a1
-SHA512 (nspr-4.25.tar.gz) = b9aa576e0da37e8729088fe559d94030cf18f277c1f7a30104d3088a804913343ed884645c0adb62144da475e20934b359f897bf3ae9a6ebb5f9daf283d5a562
-Size (nspr-4.25.tar.gz) = 1079633 bytes
+SHA1 (nspr-4.26.tar.gz) = 53fa85a05718ce952ac01257d37013801183e48d
+RMD160 (nspr-4.26.tar.gz) = 7ad7072be6a9fbccb739716941e1dac0cc7b2af5
+SHA512 (nspr-4.26.tar.gz) = d6632cde3570ee386ee1459257eba99f91dd62fa905fd82679222c83d63c185b76d8dca0422d4349de2dfce603472ae52bc0dcced0f142acb733374c74155d3c
+Size (nspr-4.26.tar.gz) = 1079778 bytes
 SHA1 (patch-ab) = a24f80c2bab73c12b02d0aad7649da0ce4ca8d4f
 SHA1 (patch-ac) = a3d2cef788393b84e833d9e33bdf40b10d8efbd0
 SHA1 (patch-ae) = 28474b852325a37fb2a30717e9f7ffb77dad5deb
