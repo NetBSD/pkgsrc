@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3812 2020/06/29 18:37:07 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3813 2020/06/29 23:38:47 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6088,3 +6088,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/py-zfec to 1.5.3 [adam 2020-06-29]
 	Updated www/py-flask-caching to 1.9.0 [adam 2020-06-29]
 	Added x11/xdo version 0.5.7 [pin 2020-06-29]
+	Updated x11/xfce4-eyes-plugin to 4.5.1 [gutteridge 2020-06-29]
