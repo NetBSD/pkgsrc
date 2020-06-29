@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: haskell.sh,v 1.4 2020/06/29 20:51:25 rillig Exp $
+# $NetBSD: haskell.sh,v 1.5 2020/06/29 21:24:39 rillig Exp $
 #
 # Tests for mk/haskell.mk.
 #
@@ -325,15 +325,17 @@ if test_case_begin 'missing, update=no'; then
 	create_file_lines "$destdir$prefix/share/doc/x86_64-netbsd-ghc-8.8.1/asn1-parse-0.9.5/html/synopsis.png" ''
 	create_file_lines "$destdir$prefix/share/doc/x86_64-netbsd-ghc-8.8.1/asn1-parse-0.9.5/LICENSE" ''
 
+	# By default, the PLIST file is not updated.
 	"$make" 'plist' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-empty
 
-	"$make" 'print-PLIST' 1> "$tmpdir/output" 2>&1 \
+	# Manually generating the PLIST file works though.
+	"$make" 'print-PLIST' 1> "manual-PLIST" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
-	assert_that "$tmpdir/output" --file-is-lines \
+	assert_that "manual-PLIST" --file-is-lines \
 		'@comment $''NetBSD$' \
 		'${HS_INTF}/package-description' \
 		'${HS_INTF}/package-id' \
@@ -353,54 +355,6 @@ if test_case_begin 'missing, update=no'; then
 		'${HS_DOCS}/html/meta.json' \
 		'${HS_DOCS}/html/quick-jump.css' \
 		'${HS_DOCS}/html/synopsis.png'
-
-	test_case_end
-fi
-
-
-if test_case_begin 'plain, update=yes'; then
-
-	# TODO
-
-	test_case_end
-fi
-
-
-if test_case_begin 'outdated, update=yes'; then
-
-	# TODO
-
-	test_case_end
-fi
-
-
-if test_case_begin 'lib-ok, update=yes'; then
-
-	# TODO
-
-	test_case_end
-fi
-
-
-if test_case_begin 'plain, update=no'; then
-
-	# TODO
-
-	test_case_end
-fi
-
-
-if test_case_begin 'outdated, update=no'; then
-
-	# TODO
-
-	test_case_end
-fi
-
-
-if test_case_begin 'lib-ok, update=no'; then
-
-	# TODO
 
 	test_case_end
 fi
@@ -464,7 +418,23 @@ if test_case_begin 'package-description, but no library'; then
 
 	# example: devel/hs-fail
 
-	# TODO
+	create_file 'Makefile' <<-'EOF'
+		DISTNAME=	package-1.0
+
+		.include "../../main.mk"
+		.include "../../mk/haskell.mk"
+	EOF
+	create_file 'PLIST' <<-'EOF'
+		${HS_INTF}/package-description
+		${HS_INTF}/package-id
+		share/doc/x86_64-netbsd-ghc-8.8.1/fail-${PKGVERSION}/LICENSE
+	EOF
+
+	"$make" 'show-plist-status' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$tmpdir/output" --file-is-lines \
+		'PLIST status: lib-ok'
 
 	test_case_end
 fi
@@ -474,7 +444,29 @@ if test_case_begin 'package-description + library'; then
 
 	# example: security/hs-SHA
 
-	# TODO
+	create_file 'Makefile' <<-'EOF'
+		DISTFILE=	package-1.0
+		.include "../../main.mk"
+		.include "../../mk/haskell.mk"
+	EOF
+	create_file 'PLIST' <<-'EOF'
+		${HS_INTF}/package-description
+		${HS_INTF}/package-id
+		${HS_IMPL}/Data/Digest/Pure/SHA.dyn_hi
+		${HS_IMPL}/Data/Digest/Pure/SHA.hi
+		${HS_IMPL}/Data/Digest/Pure/SHA.p_hi
+		${HS_IMPL}/libHS${HS_PKGID}.a
+		${HS_IMPL}/libHS${HS_PKGID}_p.a
+		lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+		${HS_DOCS}/LICENSE
+		${HS_DOCS}/html/Data-Digest-Pure-SHA.html
+	EOF
+
+	"$make" 'show-plist-status' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "$tmpdir/output" --file-is-lines \
+		'PLIST status: lib-ok'
 
 	test_case_end
 fi
