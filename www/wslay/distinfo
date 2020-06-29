@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/06/24 09:15:44 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/06/29 13:44:22 adam Exp $
 
-SHA1 (wslay-1.1.0.tar.xz) = dab83f59ccb52628f33372f81a7bd58a9a50c3ba
-RMD160 (wslay-1.1.0.tar.xz) = e6f4366e62964fdcb5cf938c91786c5c72a9aadd
-SHA512 (wslay-1.1.0.tar.xz) = 2f90a38690cd9b4e810696b1ad0ce56d6966f0b21051bfb3e9765240df4f5f8d5e1b7ce3e841296354186378cd866943f90c00834a1bf8c3a2e78bf5eddfa417
-Size (wslay-1.1.0.tar.xz) = 278988 bytes
+SHA1 (wslay-1.1.1.tar.xz) = a865ccb6d392cc55744371a15bfacefc87bdc8b1
+RMD160 (wslay-1.1.1.tar.xz) = 83639d73027f3b66929c4abb4b5e34e1b93ba311
+SHA512 (wslay-1.1.1.tar.xz) = d1101d3d78d0c2c09647d7266483a7a9dc23f991b1dbef37c3d3f4ad5836d75830086ac7d982650461b92771494185a8b80435156b113b17f23b3c03bbceb56b
+Size (wslay-1.1.1.tar.xz) = 278264 bytes
