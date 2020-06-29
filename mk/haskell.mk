@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.23 2020/06/29 20:30:13 rillig Exp $
+# $NetBSD: haskell.mk,v 1.24 2020/06/29 20:51:24 rillig Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -95,6 +95,7 @@ HASKELL_MK=	# defined
 
 .include "../../mk/bsd.fast.prefs.mk"
 
+HS_UPDATE_PLIST?=	no
 
 # Declare HASKELL_COMPILER as one of BUILD_DEFS variables. See
 # ../../mk/misc/show.mk
@@ -222,7 +223,7 @@ _HS_PLIST_STATUS=	missing
 _HS_PLIST_STATUS=	missing
 .elif ${${GREP} HS_INTF ${PKGDIR}/PLIST || ${TRUE}:L:sh}
 _HS_PLIST_STATUS=	lib-ok
-.elif !${${GREP} "/package-id" ${PKGDIR}/PLIST || ${TRUE}:L:sh}
+.elif !${${GREP} "/package-description" ${PKGDIR}/PLIST || ${TRUE}:L:sh}
 _HS_PLIST_STATUS=	plain
 .else
 _HS_PLIST_STATUS=	outdated
@@ -260,8 +261,6 @@ _HS_PRINT_PLIST_AWK+=	{ sub("/${_HASKELL_PL_PLATFORM}/", "/$${HS_PLATFORM}/") }
 _HS_PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_PKGID}",      "$${HS_PKGID}") }
 _HS_PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_VER}",        "$${HS_VER}") }
 PRINT_PLIST_AWK+=	${exists(${DESTDIR}${_HASKELL_PKG_DESCR_FILE}):?${_HS_PRINT_PLIST_AWK}:}
-
-HS_UPDATE_PLIST?=	no
 
 .  if ${HS_UPDATE_PLIST} != no && ${_HS_PLIST_STATUS} == missing
 GENERATE_PLIST+= 	${MAKE} print-PLIST > ${PKGDIR}/PLIST;
