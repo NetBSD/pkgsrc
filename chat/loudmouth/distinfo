@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2019/01/16 01:36:12 gutteridge Exp $
+$NetBSD: distinfo,v 1.21 2020/06/29 23:35:51 gutteridge Exp $
 
 SHA1 (loudmouth-1.5.3.tar.bz2) = a69ef9a57e0ae993340921e73ada27979850db04
 RMD160 (loudmouth-1.5.3.tar.bz2) = aba3fc803a87e334b09987e27a5f841a46761dd8
 SHA512 (loudmouth-1.5.3.tar.bz2) = ab6b16b4e644b69cdb7d8df1753d1bb5b43c2f1e76944e639339169b332e1b5c6a4246053c5b8a579ee9b53c845cef610b0040dfdffeb857180b6bab71adfcce
 Size (loudmouth-1.5.3.tar.bz2) = 375974 bytes
-SHA1 (patch-loudmouth_lm-resolver.c) = 3b59fb67197aeae55d642e061600cac2458c0a92
+SHA1 (patch-loudmouth_lm-resolver.c) = c16eb618dded2158bceac511a96c0b7535177b80
