@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/05/02 15:05:30 wiedi Exp $
+$NetBSD: distinfo,v 1.11 2020/06/29 12:10:34 ryoon Exp $
 
-SHA1 (openbabel-3.0.0.tar.gz) = 8e1428127f00e39f5f05f58b9b186cd8e50f2486
-RMD160 (openbabel-3.0.0.tar.gz) = 333fd2af6dd6e59ca88258c2f228932a728321c6
-SHA512 (openbabel-3.0.0.tar.gz) = 94af7cffec7de3a7c9d18ea0e1f7b95b0fc64ec563ddb9d420bfb8e9dfa6ac2365338e55e0444e1f5aa2a9f35f5f53961212193c0fdb9d4fd348bd8f61a1684e
-Size (openbabel-3.0.0.tar.gz) = 36571060 bytes
-SHA1 (patch-doc_CMakeLists.txt) = c4a46fd0ddd253fb755680d7eb91799c74a6489d
-SHA1 (patch-openbabel-3.pc.cmake) = abae8cf74db7d45d340f17e5ef9749b6bafa5a70
-SHA1 (patch-src_conformersearch.cpp) = 0f16cc0d0a45e30c6bf00af3b67fac435013a337
-SHA1 (patch-src_formats_confabreport.cpp) = d9f81b6dfeff8ce7e94be5fdb375972ca8d422f2
-SHA1 (patch-test_addhtest.cpp) = 995f7b532517ef9cee8ee924181c3103aa6f3b6c
+SHA1 (openbabel-3.1.1.tar.gz) = 22d5eea2492d4ea55fd29f9dcea34fd972af2a27
+RMD160 (openbabel-3.1.1.tar.gz) = 74c74c3129d47ecf70f37d17c1caa42693f6be28
+SHA512 (openbabel-3.1.1.tar.gz) = d46807e8f4e2f0f691e69943e5c5eda9c271271cfca6f66b6df136bbf384502fd3b65a4adf134a4e9e1f2452e1316c9515aa92292b73205b9eb4d7e4d7a85f18
+Size (openbabel-3.1.1.tar.gz) = 36688499 bytes
