@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19933 2020/06/29 13:08:04 wiz Exp $
+$NetBSD: TODO,v 1.19934 2020/06/29 13:12:01 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -629,7 +629,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-3.36.1
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0
-	o gnome-chemistry-utils-0.14.11
 	o gnome-chess-3.12.3
 	o gnome-color-manager-2.32.0
 	o gnome-commander-1.6.4
