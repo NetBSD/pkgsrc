@@ -1,11 +1,11 @@
-$NetBSD: patch-dist_configure,v 1.4 2017/01/26 11:03:17 adam Exp $
+$NetBSD: patch-dist_configure,v 1.5 2020/06/29 13:24:55 ryoon Exp $
 
 Toolchains differ whether __aarch64__ or __arm64__ should be defined.
 Portability fix.
 
---- dist/configure.orig	2016-03-28 19:45:49.000000000 +0000
+--- dist/configure.orig	2017-04-13 14:06:13.000000000 +0000
 +++ dist/configure
-@@ -5318,7 +5318,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
+@@ -5276,7 +5276,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
  	LIBSO_LIBS="$LIBSO_LIBS -lipc";;
  cygwin*)
  	CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE -D_REENTRANT";;
@@ -14,7 +14,7 @@ Portability fix.
  	CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
  	LDFLAGS="$LDFLAGS -pthread";;
  gnu*|k*bsd*-gnu|linux*)
-@@ -7112,7 +7112,7 @@ fi
+@@ -7070,7 +7070,7 @@ fi
  # we're using.
  case "$host_os" in
  sysv5UnixWare*|sysv5OpenUNIX8*)
@@ -23,61 +23,7 @@ Portability fix.
  		CPPFLAGS="$CPPFLAGS -pthread"
  		LDFLAGS="$LDFLAGS -pthread"
  	else
-@@ -12434,7 +12434,7 @@ fi
-       hardcode_shlibpath_var=no
-       ;;
- 
--    freebsd1*)
-+    freebsd1*|freebsd1.*)
-       ld_shlibs=no
-       ;;
- 
-@@ -13428,7 +13428,7 @@ dgux*)
-   shlibpath_var=LD_LIBRARY_PATH
-   ;;
- 
--freebsd1*)
-+freebsd1*|freebsd1.*)
-   dynamic_linker=no
-   ;;
- 
-@@ -13439,7 +13439,7 @@ freebsd* | dragonfly*)
-     objformat=`/usr/bin/objformat`
-   else
-     case $host_os in
--    freebsd[123]*) objformat=aout ;;
-+    freebsd[123]*|freebsd[123].*) objformat=aout ;;
-     *) objformat=elf ;;
-     esac
-   fi
-@@ -15397,7 +15397,7 @@ fi
-         esac
-         ;;
- 
--      freebsd[12]*)
-+      freebsd[12]*|freebsd[12].*)
-         # C++ shared libraries reported to be fairly broken before
- 	# switch to ELF
-         ld_shlibs_CXX=no
-@@ -17261,7 +17261,7 @@ dgux*)
-   shlibpath_var=LD_LIBRARY_PATH
-   ;;
- 
--freebsd1*)
-+freebsd1*|freebsd1.*)
-   dynamic_linker=no
-   ;;
- 
-@@ -17272,7 +17272,7 @@ freebsd* | dragonfly*)
-     objformat=`/usr/bin/objformat`
-   else
-     case $host_os in
--    freebsd[123]*) objformat=aout ;;
-+    freebsd[123]*|freebsd[123].*) objformat=aout ;;
-     *) objformat=elf ;;
-     esac
-   fi
-@@ -17919,7 +17919,7 @@ LIBTOOL="./libtool"
+@@ -17877,7 +17877,7 @@ LIBTOOL="./libtool"
  INSTALLER="\$(LIBTOOL) --mode=install cp -p"
  
  MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
@@ -86,7 +32,7 @@ Portability fix.
  MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
  MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
  MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
-@@ -18663,6 +18663,7 @@ if test "$_JTOPDIR" != "/usr"; then
+@@ -18617,6 +18617,7 @@ if test "$_JTOPDIR" != "/usr"; then
  	bsdi*)		_JNI_INC_SUBDIRS="bsdos";;
  	cygwin*)	_JNI_INC_SUBDIRS="win32";;
  	darwin*)	_JNI_INC_SUBDIRS="darwin";;
@@ -94,7 +40,7 @@ Portability fix.
  	freebsd*)	_JNI_INC_SUBDIRS="freebsd";;
  	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
  	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
-@@ -20531,7 +20532,7 @@ else
+@@ -20485,7 +20486,7 @@ else
  fi
  
  
@@ -103,7 +49,7 @@ Portability fix.
  	db_off_t_max_decl="#define DB_OFF_T_MAX INT32_MAX"
  else
  	db_off_t_max_decl="#define DB_OFF_T_MAX INT64_MAX"
-@@ -20866,7 +20867,7 @@ if test "$db_cv_mutex" = no; then
+@@ -20820,7 +20821,7 @@ if test "$db_cv_mutex" = no; then
  		# avoid these probes for multiprocess pthreads.
  		;;
  	    *)
@@ -112,7 +58,7 @@ Portability fix.
  			LIBS="$LIBS -lpthread"
  
  if test "$cross_compiling" = yes; then :
-@@ -22106,7 +22107,7 @@ int
+@@ -22087,7 +22088,7 @@ int
  main ()
  {
  

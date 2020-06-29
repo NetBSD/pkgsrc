@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2017/01/26 11:03:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/06/29 13:24:54 ryoon Exp $
 bin/db6_archive
 bin/db6_checkpoint
+bin/db6_convert
 bin/db6_deadlock
 bin/db6_dump
 bin/db6_hotbackup
@@ -45,6 +46,7 @@ share/doc/db6/api_reference/C/db.html
 share/doc/db6/api_reference/C/db_archive.html
 share/doc/db6/api_reference/C/db_channel.html
 share/doc/db6/api_reference/C/db_checkpoint.html
+share/doc/db6/api_reference/C/db_convert.html
 share/doc/db6/api_reference/C/db_copy.html
 share/doc/db6/api_reference/C/db_deadlock.html
 share/doc/db6/api_reference/C/db_dump.html
@@ -542,6 +544,7 @@ share/doc/db6/api_reference/CXX/db.html
 share/doc/db6/api_reference/CXX/db_archive.html
 share/doc/db6/api_reference/CXX/db_channel.html
 share/doc/db6/api_reference/CXX/db_checkpoint.html
+share/doc/db6/api_reference/CXX/db_convert.html
 share/doc/db6/api_reference/CXX/db_copy.html
 share/doc/db6/api_reference/CXX/db_deadlock.html
 share/doc/db6/api_reference/CXX/db_dump.html
@@ -4361,7 +4364,6 @@ share/doc/db6/gsg_txn/C/nestedtxn.html
 share/doc/db6/gsg_txn/C/nodurabletxn.html
 share/doc/db6/gsg_txn/C/perftune-intro.html
 share/doc/db6/gsg_txn/C/preface.html
-share/doc/db6/gsg_txn/C/readblock-pdf.jpg
 share/doc/db6/gsg_txn/C/readblock.jpg
 share/doc/db6/gsg_txn/C/readmodifywrite.html
 share/doc/db6/gsg_txn/C/recovery-intro.html
@@ -4369,6 +4371,7 @@ share/doc/db6/gsg_txn/C/recovery.html
 share/doc/db6/gsg_txn/C/reversesplit.html
 share/doc/db6/gsg_txn/C/rwlocks1-pdf.jpg
 share/doc/db6/gsg_txn/C/rwlocks1.jpg
+share/doc/db6/gsg_txn/C/simplelock-pdf.jpg
 share/doc/db6/gsg_txn/C/simplelock.jpg
 share/doc/db6/gsg_txn/C/sysfailure.html
 share/doc/db6/gsg_txn/C/txn_ccursor.html
@@ -4408,7 +4411,6 @@ share/doc/db6/gsg_txn/CXX/nestedtxn.html
 share/doc/db6/gsg_txn/CXX/nodurabletxn.html
 share/doc/db6/gsg_txn/CXX/perftune-intro.html
 share/doc/db6/gsg_txn/CXX/preface.html
-share/doc/db6/gsg_txn/CXX/readblock-pdf.jpg
 share/doc/db6/gsg_txn/CXX/readblock.jpg
 share/doc/db6/gsg_txn/CXX/readmodifywrite.html
 share/doc/db6/gsg_txn/CXX/recovery-intro.html
@@ -4416,6 +4418,7 @@ share/doc/db6/gsg_txn/CXX/recovery.html
 share/doc/db6/gsg_txn/CXX/reversesplit.html
 share/doc/db6/gsg_txn/CXX/rwlocks1-pdf.jpg
 share/doc/db6/gsg_txn/CXX/rwlocks1.jpg
+share/doc/db6/gsg_txn/CXX/simplelock-pdf.jpg
 share/doc/db6/gsg_txn/CXX/simplelock.jpg
 share/doc/db6/gsg_txn/CXX/sysfailure.html
 share/doc/db6/gsg_txn/CXX/txn_ccursor.html
@@ -4455,7 +4458,6 @@ share/doc/db6/gsg_txn/JAVA/nestedtxn.html
 share/doc/db6/gsg_txn/JAVA/nodurabletxn.html
 share/doc/db6/gsg_txn/JAVA/perftune-intro.html
 share/doc/db6/gsg_txn/JAVA/preface.html
-share/doc/db6/gsg_txn/JAVA/readblock-pdf.jpg
 share/doc/db6/gsg_txn/JAVA/readblock.jpg
 share/doc/db6/gsg_txn/JAVA/readmodifywrite.html
 share/doc/db6/gsg_txn/JAVA/recovery-intro.html
@@ -4463,6 +4465,7 @@ share/doc/db6/gsg_txn/JAVA/recovery.html
 share/doc/db6/gsg_txn/JAVA/reversesplit.html
 share/doc/db6/gsg_txn/JAVA/rwlocks1-pdf.jpg
 share/doc/db6/gsg_txn/JAVA/rwlocks1.jpg
+share/doc/db6/gsg_txn/JAVA/simplelock-pdf.jpg
 share/doc/db6/gsg_txn/JAVA/simplelock.jpg
 share/doc/db6/gsg_txn/JAVA/sysfailure.html
 share/doc/db6/gsg_txn/JAVA/txn_ccursor.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/07/10 10:37:13 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/06/29 13:24:54 ryoon Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (6.n -> 6.(n+1))
@@ -6,7 +6,7 @@
 # ABI depends in buildlink3.mk and bump PKGREVISIONs for all dependencies.
 # In particular, take care to include BDB_ACCEPTED=db6 packages.
 
-DISTNAME=	db-6.2.23
+DISTNAME=	db-6.2.32
 PKGNAME=	${DISTNAME:S/db/db6/}
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
