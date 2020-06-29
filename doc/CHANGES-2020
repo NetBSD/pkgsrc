@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3770 2020/06/28 10:21:09 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3771 2020/06/29 09:08:43 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6038,3 +6038,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/qutebrowser to 1.13.0 [pin 2020-06-26]
 	Updated pkgtools/pkglint to 20.2.0 [rillig 2020-06-28]
 	Updated pkgtools/url2pkg to 20.2.0 [rillig 2020-06-28]
+	Updated fonts/spleen to 1.8.0 [fcambus 2020-06-29]
