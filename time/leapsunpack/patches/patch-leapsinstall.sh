@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/07/30 13:59:25 schmonz Exp $
+$NetBSD: patch-leapsinstall.sh,v 1.1 2020/06/30 17:29:12 schmonz Exp $
 
---- leapsinstall.sh.orig	2003-12-30 16:18:29.000000000 -0500
+Support PKG_SYSCONFDIR.
+
+--- leapsinstall.sh.orig	2003-12-30 21:18:29.000000000 +0000
 +++ leapsinstall.sh
 @@ -1,4 +1,4 @@
  umask 022
