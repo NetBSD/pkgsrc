@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/07/24 16:47:52 jschauma Exp $
+$NetBSD: patch-hier.c,v 1.1 2020/06/30 17:24:56 schmonz Exp $
 
---- hier.c.orig	Thu Sep 30 21:25:58 1999
+Adjust install paths.
+
+--- hier.c.orig	1999-09-30 20:25:58.000000000 +0000
 +++ hier.c
 @@ -2,19 +2,16 @@
  
