@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/12/28 22:30:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/06/30 05:56:02 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1374,8 +1374,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-19.2.3-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-41.2.0-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-20.1.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-47.1.0-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -1457,11 +1457,12 @@ lib/python${PY_VER_SUFFIX}/http/server.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/CREDITS.txt
 lib/python${PY_VER_SUFFIX}/idlelib/ChangeLog
 lib/python${PY_VER_SUFFIX}/idlelib/HISTORY.txt
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/README.txt
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/folder.gif
-lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle.icns
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle.ico
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_16.gif
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_16.png
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_256.png
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_32.gif
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_32.png
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_48.gif
