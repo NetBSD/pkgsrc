@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2017/01/01 22:00:12 schmonz Exp $
+$NetBSD: patch-INSTHIER,v 1.1 2020/06/30 13:35:37 schmonz Exp $
 
 Use the system's shared library extension.
 
---- INSTHIER.orig	2008-04-11 20:02:17.000000000 -0400
+--- INSTHIER.orig	2015-01-31 14:00:19.000000000 +0000
 +++ INSTHIER
 @@ -1,7 +1,7 @@
  >lib
