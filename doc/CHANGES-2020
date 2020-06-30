@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3820 2020/06/30 16:09:01 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3821 2020/06/30 19:20:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6097,11 +6097,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/rsync to 3.2.1 [adam 2020-06-30]
 	Updated devel/meson to 0.54.3 [adam 2020-06-30]
 	Updated devel/glib2 to 2.64.3 [adam 2020-06-30]
-	Updated arm-trusted-firmware-fiptool to 2.3 [thorpej 2020-06-30]
-	Updated arm-trusted-firmware-rk3328 to 2.3 [thorpej 2020-06-30]
-	Updated arm-trusted-firmware-rk3399 to 2.3 [thorpej 2020-06-30]
-	Updated arm-trusted-firmware-sun50i-h6 to 2.3 [thorpej 2020-06-30]
-	Updated arm-trusted-firmware-sun50i_a64 to 2.3 [thorpej 2020-06-30]
+	Updated sysutils/arm-trusted-firmware-fiptool to 2.3 [thorpej 2020-06-30]
+	Updated sysutils/arm-trusted-firmware-rk3328 to 2.3 [thorpej 2020-06-30]
+	Updated sysutils/arm-trusted-firmware-rk3399 to 2.3 [thorpej 2020-06-30]
+	Updated sysutils/arm-trusted-firmware-sun50i-h6 to 2.3 [thorpej 2020-06-30]
+	Updated sysutils/arm-trusted-firmware-sun50i_a64 to 2.3 [thorpej 2020-06-30]
 	Added sysutils/u-boot-roc-rk3328-cc version 2020.07.rc4 [thorpej 2020-06-30]
 	Updated mail/postfix to 3.5.4 [taca 2020-06-30]
 	Updated mail/postfix-cdb to 3.5.4 [taca 2020-06-30]
