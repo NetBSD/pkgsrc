@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2017/01/02 02:20:08 schmonz Exp $
+$NetBSD: distinfo,v 1.13 2020/06/30 13:35:37 schmonz Exp $
 
 SHA1 (cvm-0.97.tar.gz) = 64e21c3702b47b9d157fd7bfa627ce96445f3719
 RMD160 (cvm-0.97.tar.gz) = 59ef6af8a5e7dcdb073b192bcb57198edd6dd045
 SHA512 (cvm-0.97.tar.gz) = b04ca9edb8c84e06628ed1a827d28bf7d787c3853bec1e064fc1eb7e3082ad81998e7c902e029c0f01c346a52a4419e3c9890e2a7a75ab38625e0078dc4e9891
 Size (cvm-0.97.tar.gz) = 127759 bytes
+SHA1 (patch-INSTHIER) = 1f05a3ec46026fed808f38011eb14ecfbc5fe3cb
 SHA1 (patch-Makefile) = bc0aeec5b7e85e8a7d0205e2e66ef428d2ba33d5
-SHA1 (patch-aa) = 522bb927f7b8d165cd24c81ceed2c180ec317d38
