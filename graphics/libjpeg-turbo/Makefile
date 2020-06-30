@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2020/04/12 06:17:06 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/06/30 06:03:04 adam Exp $
 
-DISTNAME=	libjpeg-turbo-2.0.4
+DISTNAME=	libjpeg-turbo-2.0.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libjpeg-turbo/}
 
