@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.112 2020/01/26 17:31:55 rillig Exp $
+# $NetBSD: Makefile,v 1.113 2020/06/30 11:56:14 adam Exp $
 
-DISTNAME=	rsync-3.1.3
-PKGREVISION=	2
+DISTNAME=	rsync-3.2.1
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/
 MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
@@ -12,16 +11,13 @@ HOMEPAGE=	https://rsync.samba.org/
 COMMENT=	Network file distribution/synchronisation utility
 LICENSE=	gnu-gpl-v3
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/doc/rsync
-
+USE_TOOLS+=		bash:run
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-included-popt
 CONFIGURE_ARGS+=	--with-rsyncd-conf=${PKG_SYSCONFDIR}/rsyncd.conf
+PKG_SYSCONFSUBDIR=	rsync
 TEST_TARGET=		test
 
-USE_TOOLS+=	perl
-
-PKG_SYSCONFSUBDIR=	rsync
+REPLACE_BASH=		rsync-ssl
 
 RCD_SCRIPTS=		rsyncd
 RCD_SCRIPT_SRC.rsyncd=	files/rsyncd.sh
@@ -34,9 +30,11 @@ SUBST_FILES.paths=	rsync.1 rsyncd.conf.5
 SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g'
 SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/tech_report.tex \
-		${DESTDIR}${PREFIX}/share/doc/rsync
-
+.include "../../archivers/lz4/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/xxhash/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
