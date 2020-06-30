@@ -1,13 +1,13 @@
-$NetBSD: patch-Makefile,v 1.1 2019/01/20 17:39:05 wiz Exp $
+$NetBSD: patch-Makefile,v 1.2 2020/06/30 14:33:15 thorpej Exp $
 
 Honor LDFLAGS.
 
---- Makefile.orig	2018-10-02 13:13:37.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2020-04-20 15:56:43.000000000 +0000
++++ Makefile	2020-06-22 01:21:57.959255753 +0000
 @@ -37,7 +37,7 @@ all: ${PROJECT}
  
  ${PROJECT}: ${OBJECTS} Makefile
- 	@echo "  LD      $@"
+ 	@echo "  HOSTLD  $@"
 -	${Q}${HOSTCC} ${OBJECTS} -o $@ ${LDLIBS}
 +	${Q}${HOSTCC} ${OBJECTS} -o $@ ${LDFLAGS} ${LDLIBS}
  	@${ECHO_BLANK_LINE}
