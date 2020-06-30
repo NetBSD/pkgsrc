@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2020/03/17 11:22:31 nia Exp $
+# $NetBSD: options.mk,v 1.25 2020/06/30 14:30:38 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -81,7 +81,7 @@ WAF_CONFIGURE_ARGS+=	--disable-caca
 ###
 .if !empty(PKG_OPTIONS:Mlua)
 WAF_CONFIGURE_ARGS+=	--enable-lua
-LUA_VERSIONS_INCOMPATIBLE=	53
+LUA_VERSIONS_ACCEPTED=	52 51
 .include "../../lang/lua/buildlink3.mk"
 .else
 WAF_CONFIGURE_ARGS+=	--disable-lua
