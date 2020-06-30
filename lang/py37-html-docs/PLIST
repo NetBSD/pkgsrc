@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2020/03/11 08:31:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/06/30 05:56:02 adam Exp $
 share/doc/python3.7/.buildinfo
-share/doc/python3.7/_downloads/d83ca97a7bd8a49fe601273beee918ab/tzinfo_examples.py
+share/doc/python3.7/_downloads/6b45dc135219d1404be49d606589a11d/tzinfo_examples.py
 share/doc/python3.7/_images/hashlib-blake2-tree.png
 share/doc/python3.7/_images/logging_flow.png
 share/doc/python3.7/_images/pathlib-inheritance.png
@@ -488,7 +488,7 @@ share/doc/python3.7/_static/default.css
 share/doc/python3.7/_static/doctools.js
 share/doc/python3.7/_static/documentation_options.js
 share/doc/python3.7/_static/file.png
-share/doc/python3.7/_static/jquery-3.2.1.js
+share/doc/python3.7/_static/jquery-3.4.1.js
 share/doc/python3.7/_static/jquery.js
 share/doc/python3.7/_static/language_data.js
 share/doc/python3.7/_static/minus.png
