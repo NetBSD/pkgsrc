@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2017/09/26 09:43:03 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2020/06/30 15:38:44 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.celestia
 PKG_SUPPORTED_OPTIONS=		lua
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=		gtk lua
 
 .if !empty(PKG_OPTIONS:Mlua)
 CONFIGURE_ARGS+=	--with-lua
-LUA_VERSIONS_INCOMPATIBLE=	52 53
+LUA_VERSIONS_ACCEPTED=	51
 .  include "../../lang/lua/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-lua
