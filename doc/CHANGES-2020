@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3819 2020/06/30 15:26:25 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3820 2020/06/30 16:09:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6112,3 +6112,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/postfix-pgsql to 3.5.4 [taca 2020-06-30]
 	Updated mail/postfix-sqlite to 3.5.4 [taca 2020-06-30]
 	Updated mail/pear-Mail_Mime to 1.10.9 [taca 2020-06-30]
+	Removed databases/lua-sqlite successor databases/lua-sqlite3 [nia 2020-06-30]
