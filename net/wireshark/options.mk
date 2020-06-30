@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2019/12/30 17:48:05 adam Exp $
+# $NetBSD: options.mk,v 1.26 2020/06/30 15:52:51 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=	http2 lua qt5 spandsp
@@ -15,7 +15,7 @@ CMAKE_ARGS+=		-DENABLE_NGHTTP2=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
-LUA_VERSIONS_INCOMPATIBLE=	53
+LUA_VERSIONS_ACCEPTED=	52 51
 .  include "../../lang/lua/buildlink3.mk"
 PLIST.lua=		yes
 .else
