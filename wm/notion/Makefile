@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/03/20 11:58:33 nia Exp $
+# $NetBSD: Makefile,v 1.28 2020/06/30 14:56:36 nia Exp $
 
 DISTNAME=	notion-3-2017050501
 PKGNAME=	${DISTNAME:S/3-/3./}
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake msgfmt pax pkg-config
 
-LUA_VERSIONS_INCOMPATIBLE=	53
+LUA_VERSIONS_ACCEPTED=	52 51
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	EXAMPLEDIR=${PREFIX}/share/examples/notion
