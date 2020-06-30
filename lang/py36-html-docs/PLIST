@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/07/03 21:09:54 leot Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/06/30 05:59:40 adam Exp $
 share/doc/python3.6/.buildinfo
 share/doc/python3.6/_images/hashlib-blake2-tree.png
 share/doc/python3.6/_images/logging_flow.png
@@ -479,7 +479,7 @@ share/doc/python3.6/_static/default.css
 share/doc/python3.6/_static/doctools.js
 share/doc/python3.6/_static/documentation_options.js
 share/doc/python3.6/_static/file.png
-share/doc/python3.6/_static/jquery-3.2.1.js
+share/doc/python3.6/_static/jquery-3.4.1.js
 share/doc/python3.6/_static/jquery.js
 share/doc/python3.6/_static/language_data.js
 share/doc/python3.6/_static/minus.png
