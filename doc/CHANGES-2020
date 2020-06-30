@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3817 2020/06/30 14:42:04 thorpej Exp $
+$NetBSD: CHANGES-2020,v 1.3818 2020/06/30 15:01:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6103,3 +6103,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated arm-trusted-firmware-sun50i-h6 to 2.3 [thorpej 2020-06-30]
 	Updated arm-trusted-firmware-sun50i_a64 to 2.3 [thorpej 2020-06-30]
 	Added sysutils/u-boot-roc-rk3328-cc version 2020.07.rc4 [thorpej 2020-06-30]
+	Updated mail/postfix to 3.5.4 [taca 2020-06-30]
+	Updated mail/postfix-cdb to 3.5.4 [taca 2020-06-30]
+	Updated mail/postfix-ldap to 3.5.4 [taca 2020-06-30]
+	Updated mail/postfix-lmdb to 3.5.4 [taca 2020-06-30]
+	Updated mail/postfix-mysql to 3.5.4 [taca 2020-06-30]
+	Updated mail/postfix-pcre to 3.5.4 [taca 2020-06-30]
+	Updated mail/postfix-pgsql to 3.5.4 [taca 2020-06-30]
+	Updated mail/postfix-sqlite to 3.5.4 [taca 2020-06-30]
