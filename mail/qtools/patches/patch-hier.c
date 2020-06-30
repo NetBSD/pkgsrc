@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/12/22 18:36:51 schmonz Exp $
+$NetBSD: patch-hier.c,v 1.1 2020/06/30 13:40:54 schmonz Exp $
 
---- hier.c.orig	2001-06-30 16:44:50.000000000 -0400
+Support DESTDIR.
+
+--- hier.c.orig	2001-06-30 20:44:50.000000000 +0000
 +++ hier.c
 @@ -2,9 +2,9 @@
  
