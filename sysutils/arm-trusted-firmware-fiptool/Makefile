@@ -1,20 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/05/14 04:08:51 thorpej Exp $
+# $NetBSD: Makefile,v 1.5 2020/06/30 14:33:15 thorpej Exp $
 
-GITHUB_PROJECT=	arm-trusted-firmware
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	arm-trusted-firmware-2.0
+# We override WRKSRC, so we provide our own patches (and thus distinfo)
+DISTINFO_FILE=	${.CURDIR}/distinfo
+PATCHDIR=	${.CURDIR}/patches
+
+.include "../../sysutils/arm-trusted-firmware/arm-trusted-firmware-dist.mk"
+
 PKGNAME=	${DISTNAME:S/firmware/firmware-fiptool/}
-PKGREVISION=	2
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ARM-software/}
-EXTRACT_SUFX=	.zip
-
-MAINTAINER=	port-arm@NetBSD.org
-HOMEPAGE=	https://github.com/ARM-software/arm-trusted-firmware/
-COMMENT=	ARM Trusted Firmware fiptool
-LICENSE=	modified-bsd
-
-USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/tools/fiptool
 
 INSTALLATION_DIRS=	bin
