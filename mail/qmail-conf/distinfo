@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2017/04/27 20:38:20 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2020/06/30 17:15:28 schmonz Exp $
 
 SHA1 (qmail-conf-0.60.tar.gz) = d9a48e15394b0e7beaf5f7c64db4be101a71fb08
 RMD160 (qmail-conf-0.60.tar.gz) = 41bb36cb644c3669be96abccce3b69a91aa44cd8
@@ -8,4 +8,4 @@ SHA1 (djbdns-1.05.tar.gz) = 2efdb3a039d0c548f40936aa9cb30829e0ce8c3d
 RMD160 (djbdns-1.05.tar.gz) = a832cbfd93e4ccec6a565492a4ee0b3c1b4b68ed
 SHA512 (djbdns-1.05.tar.gz) = 20f066402801d7bec183cb710a5bc51e41f1410024741e5803e26f68f2c13567e48eba793f233dfab903459c3335bc169e24b99d66a4c64e617e1f0779732fa9
 Size (djbdns-1.05.tar.gz) = 85648 bytes
-SHA1 (patch-aa) = fcb8da2264012753b484f91fcf10b7dbea17de42
+SHA1 (patch-Makefile.ini) = fcb8da2264012753b484f91fcf10b7dbea17de42
