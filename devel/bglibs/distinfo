@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.29 2018/02/24 01:03:53 schmonz Exp $
+$NetBSD: distinfo,v 1.30 2020/06/30 13:24:05 schmonz Exp $
 
 SHA1 (bglibs-2.04.tar.gz) = 4f95d5d7779669bb336ccf460e4ffbbadbd4f18b
 RMD160 (bglibs-2.04.tar.gz) = db4fac7244cb394c73a1440fc29d9daff4b4322d
 SHA512 (bglibs-2.04.tar.gz) = 094268cad7d4bacf65c0dd3d42fde2e6bac34da0fd6193b1c8202c018e752b3ef80a86c38e687467fb3a4e97130126fe74ee4a86063e4b25ee291de573984a6f
 Size (bglibs-2.04.tar.gz) = 713673 bytes
-SHA1 (patch-ab) = 6568ac7dfada53baa378670155e9214e3879c9b9
+SHA1 (patch-Makefile) = 6568ac7dfada53baa378670155e9214e3879c9b9
 SHA1 (patch-crypto_hmac-md5.c) = 197c0d6de2b48dd611430d64d029381d95c8e5d8
 SHA1 (patch-crypto_hmac-sha1.c) = d540ac565ef79e68099186c64578f32c8925cfb1
 SHA1 (patch-crypto_hmac-sha256.c) = 29635908a1012e5a31ed46599a64ed33249c4015
