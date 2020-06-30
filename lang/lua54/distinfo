@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/30 13:16:14 nia Exp $
+
+SHA1 (lua-5.4.0.tar.gz) = 8cdbffa8a214a23d190d7c45f38c19518ae62e89
+RMD160 (lua-5.4.0.tar.gz) = cb188956351b40f7a1420067e90d309cdcf8ea45
+SHA512 (lua-5.4.0.tar.gz) = 22aa0f9fcf953fc49c97bf50a4cee708b458e8a95447f881037b2c6ddd60e40368a807f2575671c6cd7497cedc2cf5716a8959c196445bf9a359fe7ebcd65465
+Size (lua-5.4.0.tar.gz) = 349308 bytes
+SHA1 (patch-src_Makefile) = e481eced298e45cb45276e294a9b39e3b7d52046
