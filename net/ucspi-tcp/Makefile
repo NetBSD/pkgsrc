@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2020/06/25 05:42:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.47 2020/06/30 13:32:26 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		6
-CATEGORIES=		sysutils net
+CATEGORIES=		net sysutils
 MASTER_SITES=		http://cr.yp.to/ucspi-tcp/ ftp://cr.yp.to/ucspi-tcp/
 DISTFILES=		${DISTNAME}.tar.gz ${MANPAGES}
 
