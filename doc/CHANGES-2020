@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3814 2020/06/30 06:03:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3815 2020/06/30 11:59:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6094,3 +6094,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/python36 to 3.6.11 [adam 2020-06-30]
 	Updated lang/py36-html-docs to 3.6.11 [adam 2020-06-30]
 	Updated graphics/libjpeg-turbo to 2.0.5 [adam 2020-06-30]
+	Updated net/rsync to 3.2.1 [adam 2020-06-30]
+	Updated devel/meson to 0.54.3 [adam 2020-06-30]
+	Updated devel/glib2 to 2.64.3 [adam 2020-06-30]
