@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/06/30 14:33:14 thorpej Exp $
+
+SHA1 (arm-trusted-firmware-2.3.zip) = 7fd1f1c896de819f3fa262de78ba4641cdd0e436
+RMD160 (arm-trusted-firmware-2.3.zip) = 6e17330effbc7524def684c3683bbdd3a48ad05d
+SHA512 (arm-trusted-firmware-2.3.zip) = 1ee358fef1a4cda68d01857d3c822034b3ab1cc68918c7a4087e95f3f2b9b41a12431a8091847f5897ae9a403826d8fcfde0a8a689c69808ff06e737a845db28
+Size (arm-trusted-firmware-2.3.zip) = 5797101 bytes
+SHA1 (patch-plat_allwinner_sun50i_h6_include_sunxi_mmap.h) = 214c137847cf93661be0f6179882b63aa4aed4fe

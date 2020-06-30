@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2019/05/14 04:08:51 thorpej Exp $
+$NetBSD: distinfo,v 1.4 2020/06/30 14:33:15 thorpej Exp $
 
-SHA1 (arm-trusted-firmware-2.0.zip) = d789e7aac0e987d8524a11587cc598bf5d894581
-RMD160 (arm-trusted-firmware-2.0.zip) = a7a49da9b0e27c45df867ea1de4809cb89d9b8cc
-SHA512 (arm-trusted-firmware-2.0.zip) = 39180d12be7532b742949f162759793e97c0a6ac835d66aaf857bd3c1d9c0ab10b7ccd5e6a47831ad909a92b4727e181c82a74c90b5d941e469f3a5cf66b0e7c
-Size (arm-trusted-firmware-2.0.zip) = 3949049 bytes
-SHA1 (patch-Makefile) = b5c27e44135e6a99c1a598daec91db58d6ff894d
-SHA1 (patch-fiptool_uuid_parse) = 6ef5785e2f696e0297239cb597b94dd3ac4a6c7d
+SHA1 (arm-trusted-firmware-2.3.zip) = 7fd1f1c896de819f3fa262de78ba4641cdd0e436
+RMD160 (arm-trusted-firmware-2.3.zip) = 6e17330effbc7524def684c3683bbdd3a48ad05d
+SHA512 (arm-trusted-firmware-2.3.zip) = 1ee358fef1a4cda68d01857d3c822034b3ab1cc68918c7a4087e95f3f2b9b41a12431a8091847f5897ae9a403826d8fcfde0a8a689c69808ff06e737a845db28
+Size (arm-trusted-firmware-2.3.zip) = 5797101 bytes
+SHA1 (patch-Makefile) = 90cedf2c6c04fbf00bd8b2782add95b46c2ebcc0
