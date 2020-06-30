@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.605 2020/06/29 13:32:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.606 2020/06/30 15:05:28 nia Exp $
 
 COMMENT=	Databases
 
@@ -91,7 +91,6 @@ SUBDIR+=	lua-sql-mysql
 SUBDIR+=	lua-sql-postgres
 SUBDIR+=	lua-sql-sqlite
 SUBDIR+=	lua-sql-sqlite3
-SUBDIR+=	lua-sqlite
 SUBDIR+=	lua-sqlite3
 SUBDIR+=	lua-tokyocabinet
 SUBDIR+=	mariadb-connector-c
