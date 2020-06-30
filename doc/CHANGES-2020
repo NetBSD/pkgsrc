@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3813 2020/06/29 23:38:47 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.3814 2020/06/30 06:03:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6089,3 +6089,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-flask-caching to 1.9.0 [adam 2020-06-29]
 	Added x11/xdo version 0.5.7 [pin 2020-06-29]
 	Updated x11/xfce4-eyes-plugin to 4.5.1 [gutteridge 2020-06-29]
+	Updated lang/python37 to 3.7.8 [adam 2020-06-30]
+	Updated lang/py37-html-docs to 3.7.8 [adam 2020-06-30]
+	Updated lang/python36 to 3.6.11 [adam 2020-06-30]
+	Updated lang/py36-html-docs to 3.6.11 [adam 2020-06-30]
+	Updated graphics/libjpeg-turbo to 2.0.5 [adam 2020-06-30]
