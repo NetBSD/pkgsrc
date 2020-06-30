@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/03/11 11:47:19 nia Exp $
+# $NetBSD: Makefile,v 1.42 2020/06/30 11:10:26 jperkin Exp $
 
 DISTNAME=	pure-ftpd-1.0.49
 CATEGORIES=	net
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 BUILD_DEFS+=		VARBASE
 
 CONFIGURE_ARGS.Interix+=	--without-privsep
+
+CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600
 
 RCD_SCRIPTS=		pure_ftpd pure_uploadscript
 
