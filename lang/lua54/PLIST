@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/30 13:16:14 nia Exp $
+bin/lua5.4
+bin/luac5.4
+include/lua-5.4/lauxlib.h
+include/lua-5.4/lua.h
+include/lua-5.4/lua.hpp
+include/lua-5.4/luaconf.h
+include/lua-5.4/lualib.h
+lib/liblua5.4.la
+lib/pkgconfig/lua-5.4.pc
+man/man1/lua.1
+man/man1/luac.1
+share/doc/lua-5.4/contents.html
+share/doc/lua-5.4/index.css
+share/doc/lua-5.4/logo.gif
+share/doc/lua-5.4/lua.css
+share/doc/lua-5.4/manual.css
+share/doc/lua-5.4/manual.html
+share/doc/lua-5.4/osi-certified-72x60.png
+share/doc/lua-5.4/readme.html
