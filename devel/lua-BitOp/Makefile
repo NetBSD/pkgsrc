@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:00 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/06/30 15:37:33 nia Exp $
 
 DISTNAME=	LuaBitOp-1.0.2
 PKGNAME=	${DISTNAME:S/Lua/${LUA_PKGPREFIX}-/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://bitop.luajit.org/
 COMMENT=	Lua module which adds bitwise operations on numbers
 LICENSE=	mit
 
-LUA_VERSIONS_INCOMPATIBLE=	53
+LUA_VERSIONS_ACCEPTED=	52 51
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
