@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/06/02 08:24:39 adam Exp $
+# $NetBSD: Makefile,v 1.53 2020/06/30 17:38:02 nia Exp $
 
 DISTNAME=	modsecurity-apache_2.7.7
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
@@ -22,12 +22,11 @@ GNU_CONFIGURE=			YES
 USE_TOOLS+=			pax
 USE_LIBTOOL=			yes
 BUILD_DIRS=			apache2
-LUA_VERSIONS_INCOMPATIBLE=	52
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-libxml=${BUILDLINK_PREFIX.libxml2}
-CONFIGURE_ARGS+=	--with-lua=${BUILDLINK_PREFIX.lua}
+CONFIGURE_ARGS+=	--with-lua=${BUILDLINK_PREFIX.lua51}
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apu=${BUILDLINK_PREFIX.apr-util}
 
@@ -50,5 +49,5 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua51/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
