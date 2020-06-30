@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3816 2020/06/30 14:35:21 thorpej Exp $
+$NetBSD: CHANGES-2020,v 1.3817 2020/06/30 14:42:04 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6102,3 +6102,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated arm-trusted-firmware-rk3399 to 2.3 [thorpej 2020-06-30]
 	Updated arm-trusted-firmware-sun50i-h6 to 2.3 [thorpej 2020-06-30]
 	Updated arm-trusted-firmware-sun50i_a64 to 2.3 [thorpej 2020-06-30]
+	Added sysutils/u-boot-roc-rk3328-cc version 2020.07.rc4 [thorpej 2020-06-30]
