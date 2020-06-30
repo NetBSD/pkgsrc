@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2019/11/04 22:09:57 rillig Exp $
+# $NetBSD: options.mk,v 1.23 2020/06/30 14:45:48 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=		bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
@@ -58,7 +58,6 @@ PLIST.ldap=		yes
 ### Support enabling the Cache Meta Language module with the Lua engine.
 ###
 .if !empty(PKG_OPTIONS:Mlua)
-LUA_VERSIONS_INCOMPATIBLE=	52 53
 .  include "../../lang/lua/buildlink3.mk"
 USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--with-lua
