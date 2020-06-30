@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3815 2020/06/30 11:59:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3816 2020/06/30 14:35:21 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6097,3 +6097,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/rsync to 3.2.1 [adam 2020-06-30]
 	Updated devel/meson to 0.54.3 [adam 2020-06-30]
 	Updated devel/glib2 to 2.64.3 [adam 2020-06-30]
+	Updated arm-trusted-firmware-fiptool to 2.3 [thorpej 2020-06-30]
+	Updated arm-trusted-firmware-rk3328 to 2.3 [thorpej 2020-06-30]
+	Updated arm-trusted-firmware-rk3399 to 2.3 [thorpej 2020-06-30]
+	Updated arm-trusted-firmware-sun50i-h6 to 2.3 [thorpej 2020-06-30]
+	Updated arm-trusted-firmware-sun50i_a64 to 2.3 [thorpej 2020-06-30]
