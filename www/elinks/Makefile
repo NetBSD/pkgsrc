@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/05/22 10:56:44 adam Exp $
+# $NetBSD: Makefile,v 1.69 2020/06/30 18:56:19 nia Exp $
 
 DISTNAME=		elinks-0.12pre6
 PKGNAME=		${DISTNAME:S/pre/rc/}
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--enable-256-colors
 CONFIGURE_ARGS+=	--enable-utf-8
 CONFIGURE_ARGS+=	--without-lzma
+CONFIGURE_ARGS+=	--without-lua
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,6 +36,4 @@ LIBS+=	-lexecinfo
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
