@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/06/30 14:40:05 thorpej Exp $
+share/u-boot/roc-rk3328-cc/installboot.plist
+share/u-boot/roc-rk3328-cc/u-boot-rockchip.bin
