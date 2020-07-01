@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.606 2020/06/30 15:05:28 nia Exp $
+# $NetBSD: Makefile,v 1.607 2020/07/01 11:21:36 nia Exp $
 
 COMMENT=	Databases
 
@@ -375,7 +375,6 @@ SUBDIR+=	py-sqlalchemy
 SUBDIR+=	py-sqlalchemy-i18n
 SUBDIR+=	py-sqlalchemy-migrate
 SUBDIR+=	py-sqlalchemy-utils
-SUBDIR+=	py-sqlite
 SUBDIR+=	py-sqlite2
 SUBDIR+=	py-sqlite3
 SUBDIR+=	py-sqlparse
