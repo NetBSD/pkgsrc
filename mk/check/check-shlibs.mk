@@ -32,10 +32,16 @@
 #
 #	Default value: yes
 #
+# CHECK_SHLIBS_AUTOFIX
+#	If set to yes, there is an attempt to fix errors automatically.
+#	Currently only works for Mach-O.
+#
+#	Possible values: yes, no.
+#
 
 _VARGROUPS+=			check-shlibs
 _USER_VARS.check-shlibs=	CHECK_SHLIBS
-_PKG_VARS.check-shlibs=		CHECK_SHLIBS_SUPPORTED
+_PKG_VARS.check-shlibs=		CHECK_SHLIBS_SUPPORTED CHECK_SHLIBS_AUTOFIX
 
 .if ${PKG_DEVELOPER:Uno} != "no"
 CHECK_SHLIBS?=			yes
@@ -44,6 +50,7 @@ CHECK_SHLIBS?=			no
 .endif
 CHECK_SHLIBS_SUPPORTED?=	yes
 CHECK_SHLIBS_SKIP?=		# none
+CHECK_PERMS_AUTOFIX?=	no
 
 # All binaries and shared libraries.
 _CHECK_SHLIBS_ERE=	(bin/|sbin/|libexec/|\.(dylib|sl|so)$$|lib/lib.*\.(dylib|sl|so))
@@ -94,4 +101,22 @@ _check-shlibs: error-check .PHONY
 		${ECHO} $$file;						\
 	done |								\
 	${PKGSRC_SETENV} ${CHECK_SHLIBS_NATIVE_ENV} ${AWK} -f ${CHECK_SHLIBS_NATIVE} > ${ERROR_DIR}/${.TARGET}
+.endif
+
+.if !empty(CHECK_SHLIBS_AUTOFIX:M[Yy][Ee][Ss] && ${OBJECT_FMT} == "Mach-O")
+privileged-install-hook: _check-shlibs-autofix
+_check-shlibs-autofix: error-check .PHONY
+	@${STEP_MSG} "Attempting to fix missing run-time search paths in ${PKGNAME}"
+	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
+	${RUN}
+	cd ${DESTDIR:Q}${PREFIX:Q};					\
+	${_CHECK_SHLIBS_FILELIST_CMD} |					\
+	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
+	while read file; do						\
+		case "$$file" in					\
+		${CHECK_SHLIBS_SKIP:@p@${p}) continue ;;@}		\
+		*) ;;							\
+		esac;							\
+		install_name_tool -id ${PREFIX:Q}$$file $$file >${WARNING_DIR}/${.TARGET} 2>&1	\
+	done								\
 .endif
