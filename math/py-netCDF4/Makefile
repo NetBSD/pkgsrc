@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2020/05/22 10:56:21 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/07/01 15:59:40 adam Exp $
 
-DISTNAME=	netCDF4-1.5.2
+DISTNAME=	netCDF4-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	5
-CATEGORIES=	devel python
+CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netCDF4/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/Unidata/netcdf4-python
 COMMENT=	Object-oriented python interface to netCDF version 4
 LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-cftime-[0-9]*:../../time/py-cftime
 
 USE_TOOLS+=	pkg-config
 
@@ -20,7 +21,7 @@ SUBST_FILES.paths+=	setup.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
 do-test:
-	${RUN} cd ${WRKSRC}/test; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_all.py
+	cd ${WRKSRC}/test && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_all.py
 
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
