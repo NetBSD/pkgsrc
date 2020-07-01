@@ -1,0 +1,10 @@
+Boltons is a set of pure-Python utilities in the same spirit as - and yet
+conspicuously missing from - the standard library, including:
+
+* Atomic file saving, bolted on with fileutils
+* A highly-optimized OrderedMultiDict, in dictutils
+* Two types of PriorityQueue, in queueutils
+* Chunked and windowed iteration, in iterutils
+* A full-featured TracebackInfo type, for representing stack traces, in tbutils
+* A lightweight UTC timezone available in timeutils.
+* Recursive mapping for nested data transforms, with remap
