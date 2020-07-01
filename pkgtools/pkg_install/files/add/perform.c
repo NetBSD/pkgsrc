@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.111 2020/07/01 09:46:04 jperkin Exp $	*/
+/*	$NetBSD: perform.c,v 1.112 2020/07/01 10:03:19 jperkin Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.111 2020/07/01 09:46:04 jperkin Exp $");
+__RCSID("$NetBSD: perform.c,v 1.112 2020/07/01 10:03:19 jperkin Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -450,7 +450,7 @@ check_other_installed(struct pkg_task *pkg)
 		return -1;
 	}
 	*iter = '\0';
-	pkg->other_version = find_best_matching_installed_pkg(pkgbase);
+	pkg->other_version = find_best_matching_installed_pkg(pkgbase, 0);
 	free(pkgbase);
 	if (pkg->other_version == NULL)
 		return 0;
@@ -1127,7 +1127,7 @@ install_depend_pkg(const char *dep)
 		warnx("Can't install dependency %s, continuing", dep);
 	}
 
-	if (find_best_matching_installed_pkg(dep) == NULL) {
+	if (find_best_matching_installed_pkg(dep, 0) == NULL) {
 		if (!ForceDepends) {
 			warnx("Just installed dependency %s disappeared", dep);
 			return 1;
@@ -1158,7 +1158,7 @@ check_dependencies(struct pkg_task *pkg)
 		} else if (p->type != PLIST_PKGDEP)
 			continue;
 
-		if (find_best_matching_installed_pkg(p->name) == NULL) {
+		if (find_best_matching_installed_pkg(p->name, 0) == NULL) {
 			if (install_depend_pkg(p->name) != 0) {
 				status = -1;
 				break;
@@ -1177,7 +1177,7 @@ check_dependencies(struct pkg_task *pkg)
 		} else if (p->type != PLIST_PKGDEP)
 			continue;
 
-		best_installed = find_best_matching_installed_pkg(p->name);
+		best_installed = find_best_matching_installed_pkg(p->name, 0);
 
 		for (i = 0; i < pkg->dep_length; ++i) {
 			if (strcmp(best_installed, pkg->dependencies[i]) == 0)
