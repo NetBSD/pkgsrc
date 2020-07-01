@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.29 2020/04/18 10:49:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/07/01 14:46:37 adam Exp $
 bin/c-index-test
 bin/clang
 bin/clang++
 bin/clang-10
+bin/clang-check
 bin/clang-cl
 bin/clang-cpp
+bin/clang-extdef-mapping
 bin/clang-format
 bin/clang-import-test
 bin/clang-offload-bundler
@@ -15,6 +17,8 @@ bin/clang-scan-deps
 bin/diagtool
 bin/git-clang-format
 bin/hmaptool
+bin/scan-build
+bin/scan-view
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
 include/clang-c/CXErrorCode.h
@@ -773,6 +777,7 @@ lib/libclang-cpp.${SOEXT}
 ${PLIST.notdylib}lib/libclang-cpp.${SOEXT}.10
 lib/libclang.${SOEXT}
 ${PLIST.notdylib}lib/libclang.${SOEXT}.10
+lib/libclangARCMigrate.a
 lib/libclangAST.a
 lib/libclangASTMatchers.a
 lib/libclangAnalysis.a
@@ -796,6 +801,9 @@ lib/libclangRewrite.a
 lib/libclangRewriteFrontend.a
 lib/libclangSema.a
 lib/libclangSerialization.a
+lib/libclangStaticAnalyzerCheckers.a
+lib/libclangStaticAnalyzerCore.a
+lib/libclangStaticAnalyzerFrontend.a
 lib/libclangTooling.a
 lib/libclangToolingASTDiff.a
 lib/libclangToolingCore.a
@@ -803,6 +811,9 @@ lib/libclangToolingInclusions.a
 lib/libclangToolingRefactoring.a
 lib/libclangToolingSyntax.a
 lib/libclangTransformer.a
+libexec/c++-analyzer
+libexec/ccc-analyzer
+man/man1/scan-build.1
 share/clang/bash-autocomplete.sh
 share/clang/clang-format-bbedit.applescript
 share/clang/clang-format-diff.py
@@ -811,3 +822,11 @@ share/clang/clang-format.el
 share/clang/clang-format.py
 share/clang/clang-rename.el
 share/clang/clang-rename.py
+share/scan-build/scanview.css
+share/scan-build/sorttable.js
+share/scan-view/FileRadar.scpt
+share/scan-view/GetRadarVersion.scpt
+share/scan-view/Reporter.py
+share/scan-view/ScanView.py
+share/scan-view/bugcatcher.ico
+share/scan-view/startfile.py
