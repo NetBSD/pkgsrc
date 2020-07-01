@@ -14,7 +14,7 @@ COMMENT=	Robust and full-featured Unicode services
 LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/icu/source
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c99 c++11
 USE_TOOLS+=		gmake pkg-config
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
