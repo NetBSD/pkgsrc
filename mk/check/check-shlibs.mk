@@ -117,6 +117,6 @@ _check-shlibs-autofix: error-check .PHONY
 		${CHECK_SHLIBS_SKIP:@p@${p}) continue ;;@}		\
 		*) ;;							\
 		esac;							\
-		install_name_tool -id ${PREFIX:Q}$$file $$file >${WARNING_DIR}/${.TARGET} 2>&1	\
+		install_name_tool -id ${PREFIX:Q}"/""$$file" "$$file" >${WARNING_DIR}/${.TARGET} 2>&1	\
 	done								\
 .endif
