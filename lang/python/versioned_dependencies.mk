@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.40 2020/05/16 08:56:50 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.41 2020/07/01 08:54:30 adam Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -21,6 +21,7 @@ _SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
 _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
 _SUPPORTED_PACKAGES+=	cherrypy www/py-cherrypy17 www/py-cherrypy
 _SUPPORTED_PACKAGES+=	dialog devel/py-dialog2 devel/py-dialog
+_SUPPORTED_PACKAGES+=	eliot sysutils/py-eliot17 sysutils/py-eliot
 _SUPPORTED_PACKAGES+=	html2text textproc/py-html2text-2019.8.11 textproc/py-html2text
 _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
