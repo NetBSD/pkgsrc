@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/02/16 03:02:15 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/01 16:03:59 adam Exp $
 
-DISTNAME=	arviz-0.6.1
+DISTNAME=	arviz-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math
+CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arviz/}
 
 MAINTAINER=	minskim@NetBSD.org
@@ -18,9 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-pandas>=0.23:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.19:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-xarray>=0.11:../../math/py-xarray
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
