@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3831 2020/07/01 10:15:29 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.3832 2020/07/01 11:06:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6125,3 +6125,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-country-lite to 2020.07 [fcambus 2020-07-01]
 	Updated net/dbip-city-lite to 2020.07 [fcambus 2020-07-01]
 	Updated pkgtools/pkg_install to 20200701 [jperkin 2020-07-01]
+	Updated devel/lua-rocks to 3.3.1 [nia 2020-07-01]
