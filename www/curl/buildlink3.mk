@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2020/05/22 10:55:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2020/07/01 07:54:09 adam Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -11,22 +11,22 @@ BUILDLINK_PKGSRCDIR.curl?=	../../www/curl
 
 pkgbase:= curl
 .include "../../mk/pkg-build-options.mk"
-.if !empty(PKG_BUILD_OPTIONS.curl:Mlibssh2)
+.if ${PKG_BUILD_OPTIONS.curl:Mlibssh2}
 .  include "../../security/libssh2/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.curl:Mgssapi)
+.if ${PKG_BUILD_OPTIONS.curl:Mgssapi}
 .  include "../../mk/krb5.buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.curl:Mldap)
+.if ${PKG_BUILD_OPTIONS.curl:Mldap}
 .  include "../../databases/openldap-client/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.curl:Mrtmp)
+.if ${PKG_BUILD_OPTIONS.curl:Mrtmp}
 .  include "../../net/rtmpdump/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.curl:Midn)
+.if ${PKG_BUILD_OPTIONS.curl:Midn}
 .  include "../../devel/libidn2/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.curl:Mhttp2)
+.if ${PKG_BUILD_OPTIONS.curl:Mhttp2}
 .  include "../../www/nghttp2/buildlink3.mk"
 .endif
 
