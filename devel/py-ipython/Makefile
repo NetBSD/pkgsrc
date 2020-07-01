@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2020/05/31 11:31:52 adam Exp $
+# $NetBSD: Makefile,v 1.51 2020/07/01 14:05:04 adam Exp $
 
-DISTNAME=	ipython-7.15.0
+DISTNAME=	ipython-7.16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.10:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
-DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=2.0.0:../../devel/py-prompt_toolkit2
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.1:../../devel/py-prompt_toolkit2
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
