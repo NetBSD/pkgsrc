@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3839 2020/07/01 14:39:32 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3840 2020/07/01 14:51:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6135,3 +6135,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-pypika to 0.37.15 [adam 2020-07-01]
 	Updated devel/py-wcwidth to 0.2.5 [adam 2020-07-01]
 	Updated sysutils/py-watchdog to 0.10.3 [adam 2020-07-01]
+	Updated lang/clang to 10.0.0nb3 [adam 2020-07-01]
+	Updated lang/clang-tools-extra to 10.0.0nb3 [adam 2020-07-01]
+	Removed lang/clang-static-analyzer [adam 2020-07-01]
