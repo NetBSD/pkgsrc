@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 10:39:30 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/07/01 05:03:39 yyamano Exp $
 
 DISTNAME=	snappy-java-${SNAPVER}${SNAPJVER}
 CATEGORIES=	devel
@@ -28,9 +28,19 @@ USE_TOOLS+=	gmake
 USE_JAVA=	yes
 USE_JAVA2=	6
 
+.include "../../mk/java-vm.mk"
+
 MAVEN_FLAGS+=	-Duser.home=${FAKEHOMEDIR}
 MAVEN_FLAGS+=	-Dmaven.repo.local=${WRKDIR}/deps
 MAVEN_FLAGS+=	--offline
+# Java 11 doesn't support Java 1.5 compatibility.
+.if ${PKG_JVM} == "sun-jdk7" || ${PKG_JVM} == "oracle-jdk8" || ${PKG_JVM} == "openjdk8"
+MAVEN_FLAGS+=	-Dmaven.compiler.source=1.5
+MAVEN_FLAGS+=	-Dmaven.compiler.target=1.5
+.else
+MAVEN_FLAGS+=	-Dmaven.compiler.source=1.6
+MAVEN_FLAGS+=	-Dmaven.compiler.target=1.6
+.endif
 
 MAKE_FLAGS+=	JAVA_HOME=${PKG_JAVA_HOME}
 MAKE_FLAGS+=	MVN="mvn ${MAVEN_FLAGS}"
@@ -47,5 +57,4 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/java/snappy-java/snappy-java.jar
 
 .include "../../mk/java-env.mk"
-.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
