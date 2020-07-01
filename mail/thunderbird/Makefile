@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2020/06/17 18:00:09 nia Exp $
+# $NetBSD: Makefile,v 1.252 2020/07/01 07:18:14 rillig Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -33,14 +33,6 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA}/${MOZILLA}-bin
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA}
 
 .include "../../mk/bsd.prefs.mk"
-
-#SUBST_CLASSES+=		ext-compat
-#SUBST_STAGE.ext-compat=	pre-configure
-#SUBST_MESSAGE.ext-compat=	Fixing extension compatibility
-#SUBST_FILES.ext-compat=	mailnews/extensions/enigmail/package/install.rdf
-#SUBST_FILES.ext-compat+=	calendar/*/install.rdf
-#SUBST_FILES.ext-compat+=	calendar/*/*/install.rdf
-#SUBST_SED.ext-compat=		-e 's,\(<em:maxVersion>\).*<,\19.0<,g'
 
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA}/chrome/toolkit/content/global/buildconfig.html
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA}/chrome/messenger/content/messenger/buildconfig.html
