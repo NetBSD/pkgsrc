@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/06/03 11:14:48 fcambus Exp $
+$NetBSD: distinfo,v 1.5 2020/07/01 09:31:19 fcambus Exp $
 
-SHA1 (dbip-city-lite-2020-06.mmdb.gz) = d5598a86da69bbd3b9855b3db42d7b58fd4df9a0
-RMD160 (dbip-city-lite-2020-06.mmdb.gz) = e28cb7b774953ff120cbc54cae3421e94418a050
-SHA512 (dbip-city-lite-2020-06.mmdb.gz) = 44e04e38e95a98997a22b3a9183f30281d9283f79fd7b090f4817fa2d0ecb8573f9facfbf4e795259924b9ed83981ddb17c93e3177dfdd5636b883969ef00ae7
-Size (dbip-city-lite-2020-06.mmdb.gz) = 41497518 bytes
+SHA1 (dbip-city-lite-2020-07.mmdb.gz) = ef5b8f302c507be5b747b7205a2a3594509ebdde
+RMD160 (dbip-city-lite-2020-07.mmdb.gz) = 2ecda1c61dfdce7491f41a38cfe3006e221b5f86
+SHA512 (dbip-city-lite-2020-07.mmdb.gz) = a13e211c0c4301ed866d842ad4802bf3553aece1b0342d90350671ea7880226194afe7f9a017be101de11d2cdf4b51dc51b6b1c81a80d81cfc763bdaf7c78293
+Size (dbip-city-lite-2020-07.mmdb.gz) = 41759341 bytes
