@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.178 2020/06/05 03:39:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.179 2020/07/01 13:02:07 ryoon Exp $
 
-FIREFOX_VER=	77.0.1
+FIREFOX_VER=	78.0
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -22,13 +22,14 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	lib/firefox/distribution/extensions
 
 FIREFOX_LOCALES= \
-	ach af an ar ast az be bg bn br bs ca cak cs cy da de dsb	\
+	ach af an ar ast az be bg bn br bs ca-valencia ca cak cs cy	\
+	da de dsb	\
 	el en-CA en-GB en-US eo es-AR es-CL es-ES es-MX et eu		\
 	fa ff fi fr fy-NL ga-IE gd gl gn gu-IN				\
 	he hi-IN hr hsb hu hy-AM ia id is it ja ka kab kk km kn	ko	\
 	lij lt lv mk mr ms my nb-NO ne-NP nl nn-NO oc			\
 	pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE		\
-	ta te th tr uk uz vi xh zh-CN zh-TW
+	ta te th tl tr trs uk uz vi xh zh-CN zh-TW
 
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox/distribution/extensions
 
