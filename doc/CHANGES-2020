@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3824 2020/07/01 06:52:45 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3825 2020/07/01 07:03:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6115,3 +6115,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed databases/lua-sqlite successor databases/lua-sqlite3 [nia 2020-06-30]
 	Updated audio/fasttracker2 to 1.26 [fox 2020-06-30]
 	Updated devel/userspace-rcu to 0.12.1 [manu 2020-07-01]
+	Added devel/py-aiocontextvars version 0.2.2 [adam 2020-07-01]
+	Added devel/py-boltons version 20.2.0 [adam 2020-07-01]
