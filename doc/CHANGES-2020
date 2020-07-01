@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3840 2020/07/01 14:51:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3841 2020/07/01 14:53:29 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6138,3 +6138,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/clang to 10.0.0nb3 [adam 2020-07-01]
 	Updated lang/clang-tools-extra to 10.0.0nb3 [adam 2020-07-01]
 	Removed lang/clang-static-analyzer [adam 2020-07-01]
+	Updated net/powerdns-recursor to 4.3.2 [otis 2020-07-01]
