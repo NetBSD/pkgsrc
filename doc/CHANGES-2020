@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3837 2020/07/01 13:17:51 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.3838 2020/07/01 14:07:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6131,3 +6131,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 78.0 [ryoon 2020-07-01]
 	Updated www/firefox-l10n to 78.0 [ryoon 2020-07-01]
 	Updated pkgtools/pkglint to 20.2.1 [rillig 2020-07-01]
+	Updated devel/py-ipython to 7.16.1 [adam 2020-07-01]
+	Updated databases/py-pypika to 0.37.15 [adam 2020-07-01]
