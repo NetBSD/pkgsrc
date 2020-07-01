@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2020/06/17 17:57:25 nia Exp $
+# $NetBSD: Makefile,v 1.27 2020/07/01 09:17:03 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		68.9
+MOZ_BRANCH=		68.10
 MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//:S/firefox-/firefox68-/}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -71,41 +70,6 @@ MOZILLA_NAME=	Firefox
 .else
 MOZILLA_NAME=	Browser
 .endif
-
-#
-# Generate list of subst entries for various .cargo-checksum.json files.  These
-# are all handled together in one big substitution to simplify things rather
-# than one substitution entry per file, but are kept separate below to ease
-# updating and verification.
-#
-
-CKSUM_CRATES+=	third_party/rust/libc
-
-CKSUMS+=	4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212
-CKSUMS+=	7f3da734d5e2e9426051da4f406e46d9e9bed43ed2d7d048e8afc8af7ed44795
-
-CKSUMS+=	1cd66ed5967c788562d4ad626cfbeb1544f4b9267111de5f6790379b8327f28e
-CKSUMS+=	6ae549dd21581748b2f1d82880eaca3445c11e3354965e5b49b20342075a3e52
-
-CKSUM_CRATES+=	third_party/rust/bindgen
-
-CKSUMS+=	5788372d27bdbaaf0454bc17be31a5480918bc41a8a1c4832e8c61185c07f9cd
-CKSUMS+=	8c92a52c0f859c7bec7bfbc36b9d18f904baab0c8c9dc1b3e7af34de1a0b0da4
-
-CKSUMS+=	8dc10043d872e68e660ef96edca4d9733f95be45cdad4893462fa929b335014f
-CKSUMS+=	71f1a37f75b971ea5b0d8457473cc410947dbf706cb6d2c0338916910b78a675
-
-CKSUMS+=	34f9aa76b6c9c05136bb69dcd6455397faef571a567254d2c541d50a962994db
-CKSUMS+=	e5581852eec87918901a129284b4965aefc8a19394187a8095779a084f28fabe
-
-SUBST_CLASSES+=		cksum
-SUBST_STAGE.cksum=	pre-configure
-.for crate in ${CKSUM_CRATES}
-SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
-.endfor
-.for from to in ${CKSUMS}
-SUBST_SED.cksum+=	-e 's,${from},${to},g'
-.endfor
 
 post-extract:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
