@@ -50,7 +50,7 @@ CHECK_SHLIBS?=			no
 .endif
 CHECK_SHLIBS_SUPPORTED?=	yes
 CHECK_SHLIBS_SKIP?=		# none
-CHECK_PERMS_AUTOFIX?=	no
+CHECK_SHLIBS_AUTOFIX?=	no
 
 # All binaries and shared libraries.
 _CHECK_SHLIBS_ERE=	(bin/|sbin/|libexec/|\.(dylib|sl|so)$$|lib/lib.*\.(dylib|sl|so))
