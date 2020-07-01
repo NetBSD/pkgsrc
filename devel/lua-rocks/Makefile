@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/10/26 12:06:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2020/07/01 10:32:42 nia Exp $
 
 DISTNAME=	luarocks-2.4.4
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
@@ -40,6 +40,8 @@ CONF_FILES=		${LUA_EXAMPLESDIR}/${LUAROCKS_CONF} \
 # XXX Add subst rules to ../../lang/lua/xxx.mk
 PLIST_SUBST+=		LUADOTVER=${_LUA_DOT_VERSION}
 FILES_SUBST+=		LUADOTVER=${_LUA_DOT_VERSION}
+
+LUA_VERSIONS_ACCEPTED=	53 52 51
 
 .include "../../lang/lua/application.mk"
 .include "../../lang/lua/module.mk"
