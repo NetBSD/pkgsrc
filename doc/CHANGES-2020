@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3844 2020/07/01 16:17:04 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.3845 2020/07/01 18:30:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6144,3 +6144,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-arviz to 0.9.0 [adam 2020-07-01]
 	Updated lang/py-mypy to 0.782 [adam 2020-07-01]
 	Updated geography/gama to 2.09 [gdt 2020-07-01]
+	Updated wm/2bwm to 0.3 [pin 2020-07-01]
