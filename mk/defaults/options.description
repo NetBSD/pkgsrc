@@ -95,7 +95,6 @@ cgi			Enable CGI support.
 chasen			Use ChaSen as the Japanese Morphological Analzer.
 cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
-clang-static-analyzer	Install the clang static analyzer.
 claws-mail-jpilot	Add jpilot support.
 clisp			Common/C Lisp.
 clutter			Use Clutter for graphics support.
