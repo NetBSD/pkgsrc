@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/01 06:58:11 adam Exp $
+
+SHA1 (aiocontextvars-0.2.2.tar.gz) = aaa7e4a02f476bf4c61d5fd208cf721f4e763ee0
+RMD160 (aiocontextvars-0.2.2.tar.gz) = 8149aaa91430d7b5286b1ea41547ea0191ff9df5
+SHA512 (aiocontextvars-0.2.2.tar.gz) = 54a9cb7a6327d56c7a784a0a09648c8209715595be9eaa6fb81ad35df7db02a5bfd16f8c674063cbd123b87131a4e80006eae71db8e7127c1b725e25b16e3efd
+Size (aiocontextvars-0.2.2.tar.gz) = 13565 bytes
