@@ -1,0 +1,43 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2020/07/01 11:06:40 nia Exp $
+
+- Install suffixed binaries so multiple Lua versions can coexist.
+- Install config file to LUA_EXAMPLESDIR.
+
+--- GNUmakefile.orig	2020-02-07 10:24:14.000000000 +0000
++++ GNUmakefile
+@@ -103,20 +103,20 @@ $(buildbinarydir)/luarocks-admin.exe: sr
+ # Regular install
+ # ----------------------------------------
+ 
+-INSTALL_FILES = $(DESTDIR)$(bindir)/luarocks \
+-	$(DESTDIR)$(bindir)/luarocks-admin \
+-	$(DESTDIR)$(luarocksconfdir)/config-$(LUA_VERSION).lua \
++INSTALL_FILES = $(DESTDIR)$(bindir)/luarocks-$(LUA_VERSION) \
++	$(DESTDIR)$(bindir)/luarocks-admin-$(LUA_VERSION) \
++	$(DESTDIR)$(PREFIX)/$(LUA_EXAMPLESDIR)/config-$(LUA_VERSION).lua \
+ 	$(patsubst src/%, $(DESTDIR)$(luadir)/%, $(LUAROCKS_FILES))
+ 
+ install: $(INSTALL_FILES)
+ 
+-install-config: $(DESTDIR)$(luarocksconfdir)/config-$(LUA_VERSION).lua
++install-config: $(DESTDIR)$(PREFIX)/$(LUA_EXAMPLESDIR)/config-$(LUA_VERSION).lua
+ 
+-$(DESTDIR)$(bindir)/luarocks: $(builddir)/luarocks
++$(DESTDIR)$(bindir)/luarocks-$(LUA_VERSION): $(builddir)/luarocks
+ 	mkdir -p "$(@D)"
+ 	$(INSTALL) "$<" "$@"
+ 
+-$(DESTDIR)$(bindir)/luarocks-admin: $(builddir)/luarocks-admin
++$(DESTDIR)$(bindir)/luarocks-admin-$(LUA_VERSION): $(builddir)/luarocks-admin
+ 	mkdir -p "$(@D)"
+ 	$(INSTALL) "$<" "$@"
+ 
+@@ -124,7 +124,7 @@ $(DESTDIR)$(luadir)/luarocks/%.lua: src/
+ 	mkdir -p "$(@D)"
+ 	$(INSTALL_DATA) "$<" "$@"
+ 
+-$(DESTDIR)$(luarocksconfdir)/config-$(LUA_VERSION).lua: $(builddir)/config-$(LUA_VERSION).lua
++$(DESTDIR)$(PREFIX)/$(LUA_EXAMPLESDIR)/config-$(LUA_VERSION).lua: $(builddir)/config-$(LUA_VERSION).lua
+ 	mkdir -p "$(@D)"
+ 	$(INSTALL_DATA) "$<" "$@"
+ 
