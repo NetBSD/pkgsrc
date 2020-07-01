@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/01 08:52:38 adam Exp $
+
+SHA1 (eliot-1.12.0.tar.gz) = 19ea57fe203d94425a17fa54bf065d5cdd9189c6
+RMD160 (eliot-1.12.0.tar.gz) = 0def7f7939383b901fa76a78e6da7b183a9edad8
+SHA512 (eliot-1.12.0.tar.gz) = d0ca6cf5a1a9ffb615c495a816856bd80880ff2a2ef0cf37ee905ce32e7a81d6e0cb28e107bb38899eb295e86850006f60d036f484663e6c105e4d51a13feb3c
+Size (eliot-1.12.0.tar.gz) = 152125 bytes
