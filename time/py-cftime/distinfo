@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/01 15:57:35 adam Exp $
+
+SHA1 (cftime-1.1.3.tar.gz) = 74b195aa98742a4b26063628979c849774e46f22
+RMD160 (cftime-1.1.3.tar.gz) = 31488d80ee1961f13b7fb4f983bae4813cd3708d
+SHA512 (cftime-1.1.3.tar.gz) = 27925e67efa06d5ce165c01958c13be492953a372941cd85437e943e87e3e3799be5f851ac9c9100cff37a8f49ab948e2d0d5aacdd36ff5124dabf1ca51d32ce
+Size (cftime-1.1.3.tar.gz) = 50083 bytes
