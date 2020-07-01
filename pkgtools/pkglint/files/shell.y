@@ -224,6 +224,7 @@ case_item : case_selector compound_list tkSEMISEMI linebreak {
 	$$ = &MkShCaseItem{$1, $2, sepNone, nil}
 }
 case_item : tkWORD {
+	// Special case for ${SKIP:@p@ ${p}) continue;; @}
 	$$ = &MkShCaseItem{Var: $1}
 }
 
