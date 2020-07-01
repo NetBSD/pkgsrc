@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2020/04/28 12:17:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.66 2020/07/01 13:02:07 ryoon Exp $
 lib/firefox/distribution/extensions/langpack-ach@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-af@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-an@firefox.mozilla.org.xpi
@@ -10,6 +10,7 @@ lib/firefox/distribution/extensions/langpack-bg@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-bn@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-br@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-bs@firefox.mozilla.org.xpi
+lib/firefox/distribution/extensions/langpack-ca-valencia@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-ca@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-cak@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-cs@firefox.mozilla.org.xpi
@@ -84,7 +85,9 @@ lib/firefox/distribution/extensions/langpack-sv-SE@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-ta@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-te@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-th@firefox.mozilla.org.xpi
+lib/firefox/distribution/extensions/langpack-tl@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-tr@firefox.mozilla.org.xpi
+lib/firefox/distribution/extensions/langpack-trs@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-uk@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-uz@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-vi@firefox.mozilla.org.xpi
