@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3823 2020/07/01 00:40:48 manu Exp $
+$NetBSD: CHANGES-2020,v 1.3824 2020/07/01 06:52:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6114,4 +6114,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/pear-Mail_Mime to 1.10.9 [taca 2020-06-30]
 	Removed databases/lua-sqlite successor databases/lua-sqlite3 [nia 2020-06-30]
 	Updated audio/fasttracker2 to 1.26 [fox 2020-06-30]
-	Updated devel/userspaace-rcu to 0.12.1 [manu 2020-07-01]
+	Updated devel/userspace-rcu to 0.12.1 [manu 2020-07-01]
