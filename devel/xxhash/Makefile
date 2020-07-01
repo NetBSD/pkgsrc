@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/06/29 13:19:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/01 16:40:15 hauke Exp $
 
 DISTNAME=	xxhash-0.7.4
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	libxxhash.pc.in
+MAKE_ENV+=		INSTALL=${TOOLS_PLATFORM.install}
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_ENV+=		PKGCONFIGDIR=${PREFIX}/lib/pkgconfig
 BUILD_TARGET=		all pkgconfig
