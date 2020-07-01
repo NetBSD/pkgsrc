@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.173 2020/06/29 11:59:41 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.174 2020/07/01 13:01:01 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -103,15 +103,12 @@ CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 #CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--with-system-bz2
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
-CONFIGURE_ARGS+=	--disable-libjpeg-turbo
 CONFIGURE_ARGS+=	--with-system-webp
 
-CONFIGURE_ARGS+=	--disable-gconf
 #CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
@@ -205,11 +202,6 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 # In unspecified case, clock_gettime(CLOCK_MONOTONIC, ...) fails.
 CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 
-.if ${OPSYS} == "SunOS"
-# native libbz2.so hides BZ2_crc32Table
-PREFER.bzip2?=	pkgsrc
-.endif
-
 .if ${OPSYS} == "OpenBSD"
 PLIST_SUBST+=	DLL_SUFFIX=".so.1.0"
 .elif ${OPSYS} == "Darwin"
@@ -218,7 +210,6 @@ PLIST_SUBST+=	DLL_SUFFIX=".dylib"
 PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
-.include "../../archivers/bzip2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
