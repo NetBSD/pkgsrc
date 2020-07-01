@@ -220,3 +220,6 @@ WRAPPER_BIN_SH?=	/bin/ksh
 .if ${OS_VERSION:R} < 11
 _OPSYS_MISSING_FEATURES+= 	strnlen
 .endif
+
+# Enables _check-shlibs-autofix.
+CHECK_SHLIBS_AUTOFIX?=   yes
