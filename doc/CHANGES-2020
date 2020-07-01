@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3827 2020/07/01 08:53:19 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3828 2020/07/01 08:57:27 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6121,3 +6121,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/unrar to 5.9.4 [adam 2020-07-01]
 	Added sysutils/py-eliot version 1.12.0 [adam 2020-07-01]
 	Added sysutils/py-eliot17 version 1.7.0 [adam 2020-07-01]
+	Updated net/dbip-asn-lite to 2020.07 [fcambus 2020-07-01]
