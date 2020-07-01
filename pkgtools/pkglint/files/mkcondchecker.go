@@ -141,7 +141,7 @@ func (ck *MkCondChecker) checkEmptyType(varuse *MkVarUse) {
 			continue
 		}
 
-		switch modifier.Text {
+		switch modifier.String() {
 		default:
 			return
 		case "O", "u":
@@ -256,7 +256,7 @@ func (ck *MkCondChecker) simplify(varuse *MkVarUse, fromEmpty bool, neg bool) {
 	fix := ck.MkLine.Autofix()
 	fix.Notef("%s can be compared using the simpler \"%s\" "+
 		"instead of matching against %q.",
-		varname, to, ":"+modifier.Text)
+		varname, to, ":"+modifier.String()) // TODO: Quoted
 	fix.Explain(
 		"This variable has a single value, not a list of values.",
 		"Therefore it feels strange to apply list operators like :M and :N onto it.",
