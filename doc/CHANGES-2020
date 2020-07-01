@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3835 2020/07/01 13:01:45 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.3836 2020/07/01 13:03:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6129,3 +6129,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed databases/py-sqlite [nia 2020-07-01]
 	Removed databases/lua-sql-sqlite [nia 2020-07-01]
 	Updated www/firefox to 78.0 [ryoon 2020-07-01]
+	Updated www/firefox-l10n to 78.0 [ryoon 2020-07-01]
