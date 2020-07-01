@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2020/07/01 07:18:14 rillig Exp $
+# $NetBSD: Makefile,v 1.253 2020/07/01 09:19:13 nia Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -36,33 +36,6 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA}
 
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA}/chrome/toolkit/content/global/buildconfig.html
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA}/chrome/messenger/content/messenger/buildconfig.html
-
-#
-# Generate list of subst entries for various .cargo-checksum.json files.  These
-# are all handled together in one big substitution to simplify things rather
-# than one substitution entry per file, but are kept separate below to ease
-# updating and verification.
-#
-
-CKSUM_CRATES+=	third_party/rust/bindgen
-
-CKSUMS+=	5788372d27bdbaaf0454bc17be31a5480918bc41a8a1c4832e8c61185c07f9cd
-CKSUMS+=	8c92a52c0f859c7bec7bfbc36b9d18f904baab0c8c9dc1b3e7af34de1a0b0da4
-
-CKSUMS+=	8dc10043d872e68e660ef96edca4d9733f95be45cdad4893462fa929b335014f
-CKSUMS+=	71f1a37f75b971ea5b0d8457473cc410947dbf706cb6d2c0338916910b78a675
-
-CKSUMS+=	34f9aa76b6c9c05136bb69dcd6455397faef571a567254d2c541d50a962994db
-CKSUMS+=	e5581852eec87918901a129284b4965aefc8a19394187a8095779a084f28fabe
-
-SUBST_CLASSES+=		cksum
-SUBST_STAGE.cksum=	pre-configure
-.for crate in ${CKSUM_CRATES}
-SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
-.endfor
-.for from to in ${CKSUMS}
-SUBST_SED.cksum+=	-e 's,${from},${to},g'
-.endfor
 
 post-extract:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
