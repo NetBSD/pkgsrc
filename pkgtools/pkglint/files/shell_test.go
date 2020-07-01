@@ -5,6 +5,33 @@ import (
 	"strings"
 )
 
+func (s *Suite) Test_SimpleCommandChecker__case_continue_with_loop(c *check.C) {
+	t := s.Init(c)
+
+	code := "case $$fname in ${CHECK_PORTABILITY_SKIP:@p@${p}) continue;; @} esac"
+	line := t.NewLine("filename.mk", 123, "\t"+code)
+
+	program, err := parseShellProgram(line, code)
+	assertNil(err, "parse error")
+	t.CheckEquals(
+		program.AndOrs[0].Pipes[0].Cmds[0].Compound.Case.Cases[0].Var.MkText,
+		"${CHECK_PORTABILITY_SKIP:@p@${p}) continue;; @}")
+}
+
+func (s *Suite) Test_SimpleCommandChecker__case_continue_with_suffix(c *check.C) {
+	t := s.Init(c)
+
+	code := "case $$fname in ${CHECK_PORTABILITY_SKIP:=) continue;; } esac"
+	line := t.NewLine("filename.mk", 123, "\t"+code)
+
+	program, err := parseShellProgram(line, code)
+	assertNil(err, "parse error: parse error at []string{\"esac\"}")
+
+	t.CheckEquals(
+		program.AndOrs[0].Pipes[0].Cmds[0].Compound.Case.Cases[0].Var.MkText,
+		"${CHECK_PORTABILITY_SKIP:=) continue;; }")
+}
+
 // When pkglint is called without -Wextra, the check for unknown shell
 // commands is disabled, as it is still unreliable. As of December 2019
 // there are around 500 warnings in pkgsrc, and several of them are wrong.

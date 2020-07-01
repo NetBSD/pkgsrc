@@ -179,7 +179,7 @@ func (cv *VartypeCheck) Category() {
 		"gnome", "gnustep",
 		"japanese", "java",
 		"kde", "korean",
-		"linux", "local",
+		"linux", "local", "lua",
 		"perl5", "plan9", "python",
 		"R", "ruby",
 		"scm",
@@ -580,11 +580,11 @@ func (cv *VartypeCheck) FetchURL() {
 			}
 		}
 
-		if len(varUse.modifiers) != 1 || !hasPrefix(varUse.modifiers[0].Text, "=") {
+		if len(varUse.modifiers) != 1 || !varUse.modifiers[0].HasPrefix("=") {
 			continue
 		}
 
-		subdir := varUse.modifiers[0].Text[1:]
+		subdir := varUse.modifiers[0].String()[1:]
 		if !hasSuffix(subdir, "/") {
 			cv.Errorf("The subdirectory in %s must end with a slash.", name)
 		}
@@ -1274,7 +1274,7 @@ func (cv *VartypeCheck) SedCommands() {
 			}
 
 			// The :C modifier is similar enough for parsing.
-			ok, _, from, _, _ := MkVarUseModifier{"C" + command[1:]}.MatchSubst()
+			ok, _, from, _, _ := MkVarUseModifier("C" + command[1:]).MatchSubst()
 			if !ok {
 				return
 			}

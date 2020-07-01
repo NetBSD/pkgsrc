@@ -354,6 +354,69 @@ func (s *Suite) Test_MkVarUseChecker_checkModifiersRange(c *check.C) {
 	mklines.Check()
 }
 
+func (s *Suite) Test_MkVarUseChecker_checkModifierLoop(c *check.C) {
+	t := s.Init(c)
+
+	autofixTest := func(before, after string, autofix bool) {
+		mklines := t.NewMkLines("filename.mk",
+			MkCvsID,
+			"VAR=\t"+before)
+		mklines.ForEach(func(mkline *MkLine) {
+			mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
+				ck := NewMkVarUseChecker(varUse, nil, mkline)
+				ck.checkModifiers()
+			})
+		})
+		if autofix {
+			t.CheckEquals(mklines.mklines[1].Text, "VAR=\t"+after)
+		}
+	}
+
+	test := func(before, after string, diagnostics ...string) {
+		t.ExpectDiagnosticsAutofix(
+			func(autofix bool) { autofixTest(before, after, autofix) },
+			diagnostics...)
+	}
+
+	test("${VAR:@l@-l${l}@}", "${VAR:S,^,-l,}",
+		"NOTE: filename.mk:2: The modifier \"@l@-l${l}@\" "+
+			"can be replaced with the simpler \"S,^,-l,\".",
+		"AUTOFIX: filename.mk:2: Replacing \"@l@-l${l}@\" with \"S,^,-l,\".")
+
+	// The comma is used in the :S modifier as the separator,
+	// therefore the modifier is left as-is.
+	test("${VAR:@word@-Wl,${word}@}", "${VAR:@word@-Wl,${word}@}",
+		nil...)
+
+	test("${VAR:@l@${l}suffix@}", "${VAR:=suffix}",
+		"NOTE: filename.mk:2: The modifier \"@l@${l}suffix@\" "+
+			"can be replaced with the simpler \"=suffix\".",
+		"AUTOFIX: filename.mk:2: Replacing \"@l@${l}suffix@\" with \"=suffix\".")
+
+	// Escaping the colon is not yet supported.
+	test("${VAR:@word@${word}: suffix@}", "${VAR:@word@${word}: suffix@}",
+		nil...)
+
+	// The loop variable must be mentioned exactly once.
+	test("${VAR:@var@${var}${var}@}", "${VAR:@var@${var}${var}@}",
+		nil...)
+
+	// Other variables are fine though.
+	test("${VAR:@var@${var}${OTHER}@}", "${VAR:=${OTHER}}",
+		"NOTE: filename.mk:2: The modifier \"@var@${var}${OTHER}@\" "+
+			"can be replaced with the simpler \"=${OTHER}\".",
+		"AUTOFIX: filename.mk:2: Replacing \"@var@${var}${OTHER}@\" with \"=${OTHER}\".")
+
+	// If the loop variable has modifiers, the :@var@ is probably appropriate.
+	test("${VAR:@var@${var:Q}@}", "${VAR:@var@${var:Q}@}",
+		nil...)
+
+	test("${VAR:@p@${p}) continue;; @}", "${VAR:=) continue;; }",
+		"NOTE: filename.mk:2: The modifier \"@p@${p}) continue;; @\" "+
+			"can be replaced with the simpler \"=) continue;; \".",
+		"AUTOFIX: filename.mk:2: Replacing \"@p@${p}) continue;; @\" with \"=) continue;; \".")
+}
+
 func (s *Suite) Test_MkVarUseChecker_checkVarname(c *check.C) {
 	t := s.Init(c)
 

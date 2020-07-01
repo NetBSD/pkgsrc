@@ -156,7 +156,7 @@ func (ck *PlistChecker) checkLine(pline *PlistLine) {
 
 	} else if m, cmd, arg := match2(text, `^@([a-z-]+)[\t ]*(.*)`); m {
 		pline.CheckDirective(cmd, arg)
-		if cmd == "comment" && pline.Location.lineno > 1 {
+		if cmd == "comment" && pline.Line.Location.lineno > 1 {
 			ck.nonAsciiAllowed = true
 		}
 
@@ -407,7 +407,7 @@ func (ck *PlistChecker) checkPathMan(pline *PlistLine) {
 			"configured by the pkgsrc user.",
 			"Compression and decompression takes place automatically,",
 			"no matter if the .gz extension is mentioned in the PLIST or not.")
-		fix.ReplaceAt(0, len(pline.Text)-len(".gz"), ".gz", "")
+		fix.ReplaceAt(0, len(pline.Line.Text)-len(".gz"), ".gz", "")
 		fix.Apply()
 	}
 }
@@ -528,10 +528,25 @@ func (ck *PlistChecker) checkOmf(plines []*PlistLine) {
 }
 
 type PlistLine struct {
-	*Line
+	Line *Line
 	// XXX: Why "PLIST.docs" and not simply "docs"?
 	conditions []string // e.g. PLIST.docs
 	text       string   // Line.Text without any conditions of the form ${PLIST.cond}
+}
+
+func (pline *PlistLine) Autofix() *Autofix { return pline.Line.Autofix() }
+
+func (pline *PlistLine) Errorf(format string, args ...interface{}) {
+	pline.Line.Errorf(format, args...)
+}
+func (pline *PlistLine) Warnf(format string, args ...interface{}) {
+	pline.Line.Warnf(format, args...)
+}
+func (pline *PlistLine) Explain(explanation ...string) {
+	pline.Line.Explain(explanation...)
+}
+func (pline *PlistLine) RelLine(other *Line) string {
+	return pline.Line.RelLine(other)
 }
 
 func (pline *PlistLine) HasPath() bool {

@@ -1475,6 +1475,14 @@ func (s *Suite) Test_InterPackage_Bl3__same_identifier(c *check.C) {
 	G.Check("category/package2")
 
 	t.CheckOutputLines(
-		"ERROR: category/package2/buildlink3.mk:3: Duplicate package identifier " +
+		"NOTE: category/package1/Makefile:4: The modifier \"@v@${v}@\" "+
+			"can be replaced with the simpler \"S,^,,\".",
+		"NOTE: category/package1/Makefile:4: The modifier \"@v@${v}@\" "+
+			"can be replaced with the simpler \"=\".",
+		"NOTE: category/package2/Makefile:4: The modifier \"@v@${v}@\" "+
+			"can be replaced with the simpler \"S,^,,\".",
+		"NOTE: category/package2/Makefile:4: The modifier \"@v@${v}@\" "+
+			"can be replaced with the simpler \"=\".",
+		"ERROR: category/package2/buildlink3.mk:3: Duplicate package identifier "+
 			"\"package1\" already appeared in ../../category/package1/buildlink3.mk:3.")
 }

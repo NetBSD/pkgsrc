@@ -605,8 +605,9 @@ func (s *Suite) Test_MkLexer_varUseModifier(c *check.C) {
 
 	varUse := p.VarUse()
 
-	t.CheckDeepEquals(varUse.modifiers, []MkVarUseModifier{
-		{"R"}, {"E"}, {"Ox"}, {"tA"}, {"tW"}, {"tw"}})
+	t.CheckDeepEquals(
+		varUse.modifiers,
+		[]MkVarUseModifier{"R", "E", "Ox", "tA", "tW", "tw"})
 }
 
 func (s *Suite) Test_MkLexer_varUseModifier__S_parse_error(c *check.C) {
@@ -617,7 +618,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__S_parse_error(c *check.C) {
 
 	mod := p.varUseModifier("VAR", '}')
 
-	t.CheckEquals(mod, "")
+	t.CheckEquals(mod, MkVarUseModifier(""))
 	// XXX: The "S," has just disappeared.
 	t.CheckEquals(p.Rest(), "}")
 
@@ -634,7 +635,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__invalid_ts_modifier_with_warning(c 
 
 	modifier := p.varUseModifier("VAR", '}')
 
-	t.CheckEquals(modifier, "tsabc")
+	t.CheckEquals(modifier, MkVarUseModifier("tsabc"))
 	t.CheckEquals(p.Rest(), "}")
 	t.CheckOutputLines(
 		"WARN: filename.mk:123: Invalid separator \"abc\" for :ts modifier of \"VAR\".",
@@ -652,7 +653,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__invalid_ts_modifier_without_warning
 
 	modifier := p.varUseModifier("VAR", '}')
 
-	t.CheckEquals(modifier, "tsabc")
+	t.CheckEquals(modifier, MkVarUseModifier("tsabc"))
 	t.CheckEquals(p.Rest(), "}")
 }
 
@@ -664,7 +665,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__square_bracket(c *check.C) {
 
 	modifier := p.varUseModifier("VAR", '}')
 
-	t.CheckEquals(modifier, "")
+	t.CheckEquals(modifier, MkVarUseModifier(""))
 	t.CheckEquals(p.Rest(), "")
 
 	t.CheckOutputLines(
@@ -725,7 +726,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__varuse_in_malformed_modifier(c *che
 func (s *Suite) Test_MkLexer_varUseModifier__eq_suffix_replacement(c *check.C) {
 	t := s.Init(c)
 
-	test := func(input, modifier, rest string, diagnostics ...string) {
+	test := func(input string, modifier MkVarUseModifier, rest string, diagnostics ...string) {
 		line := t.NewLine("filename.mk", 123, "")
 		p := NewMkLexer(input, line)
 
@@ -762,7 +763,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__eq_suffix_replacement(c *check.C) {
 func (s *Suite) Test_MkLexer_varUseModifier__assigment(c *check.C) {
 	t := s.Init(c)
 
-	test := func(varname, input, modifier, rest string, diagnostics ...string) {
+	test := func(varname, input string, modifier MkVarUseModifier, rest string, diagnostics ...string) {
 		line := t.NewLine("filename.mk", 123, "")
 		p := NewMkLexer(input, line)
 
@@ -807,7 +808,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__assigment(c *check.C) {
 func (s *Suite) Test_MkLexer_varUseModifierTs(c *check.C) {
 	t := s.Init(c)
 
-	test := func(input string, closing byte, mod string, rest string, diagnostics ...string) {
+	test := func(input string, closing byte, mod MkVarUseModifier, rest string, diagnostics ...string) {
 		diag := t.NewLine("filename.mk", 123, "")
 		lex := NewMkLexer(input, diag)
 		mark := lex.lexer.Mark()
@@ -851,7 +852,7 @@ func (s *Suite) Test_MkLexer_varUseModifierTs(c *check.C) {
 func (s *Suite) Test_MkLexer_varUseModifierMatch(c *check.C) {
 	t := s.Init(c)
 
-	testClosing := func(input string, closing byte, modifier, rest string, diagnostics ...string) {
+	testClosing := func(input string, closing byte, modifier MkVarUseModifier, rest string, diagnostics ...string) {
 		line := t.NewLine("filename.mk", 123, "")
 		p := NewMkLexer(input, line)
 
@@ -862,10 +863,10 @@ func (s *Suite) Test_MkLexer_varUseModifierMatch(c *check.C) {
 		t.CheckOutput(diagnostics)
 	}
 
-	test := func(input, modifier, rest string, diagnostics ...string) {
+	test := func(input string, modifier MkVarUseModifier, rest string, diagnostics ...string) {
 		testClosing(input, '}', modifier, rest, diagnostics...)
 	}
-	testParen := func(input, modifier, rest string, diagnostics ...string) {
+	testParen := func(input string, modifier MkVarUseModifier, rest string, diagnostics ...string) {
 		testClosing(input, ')', modifier, rest, diagnostics...)
 	}
 
@@ -905,7 +906,7 @@ func (s *Suite) Test_MkLexer_varUseModifierMatch(c *check.C) {
 func (s *Suite) Test_MkLexer_varUseModifierMatch__varmod_edge(c *check.C) {
 	t := s.Init(c)
 
-	test := func(input, modifier, rest string, diagnostics ...string) {
+	test := func(input string, modifier MkVarUseModifier, rest string, diagnostics ...string) {
 		line := t.NewLine("filename.mk", 123, "")
 		p := NewMkLexer(input, line)
 
