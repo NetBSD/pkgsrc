@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: show-all.sh,v 1.1 2020/07/01 08:15:58 rillig Exp $
+# $NetBSD: show-all.sh,v 1.2 2020/07/01 09:10:11 rillig Exp $
 #
 # Tests for the show-all target from mk/misc/show.mk.
 #
@@ -117,6 +117,9 @@ fi
 
 if test_case_begin 'show dollars in variable values'; then
 
+	# Up to 2020-03-20, the output of the ENV and ARGS variables differed
+	# a lot from the PLAIN variable.
+
 	create_file 'test.mk' <<'EOF'
 SHELLVAR_PLAIN=		"$$var $${var} $$other $$$$"
 SHELLVAR_ENV=		"$$var $${var} $$other $$$$"
@@ -135,9 +138,6 @@ EOF
 	"$make" -f 'test.mk' 'show-all-shellvar' 1> 'output' 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
-	# Up to 2020-03-20, the output of the ENV and ARGS variables differed
-	# a lot from the PLAIN variable.
-	#
 	create_file 'expected' <<'EOF'
 shellvar:
   pkg   SHELLVAR_PLAIN=         "$$var $${var} $$other $$$$"
@@ -147,6 +147,54 @@ shellvar:
   pkg   SHELLVAR_ARGS=          \
                                 "$$var $${var} $$other $$$$" \
                                 # end of SHELLVAR_ARGS
+
+EOF
+
+	assert_that "$exitcode" --equals '0'
+	assert_that 'output' --file-equals 'expected'
+
+	test_case_end
+fi
+
+
+if test_case_begin 'individual width'; then
+
+	# If the variable names of a group are typically longer than 16
+	# characters, it is possible to increase the width.
+
+	create_file 'test.mk' <<'EOF'
+VAR_PLAIN=		value
+VAR_ENV=		value1 value2
+VAR_ARGS=		value1 value2
+
+_VARGROUPS+=		var
+_VARGROUPS_WIDTH.var=	15
+_PKG_VARS.var=		VAR_PLAIN VAR_PLAIN_LONG_NAME
+_PKG_VARS.var+=		VAR_ENV VAR_ENV_LONG_NAME
+_PKG_VARS.var+=		VAR_ARGS VAR_ARGS_LONG_NAME
+_SORTED_VARS.var=	*_ENV
+_LISTED_VARS.var=	*_ARGS
+
+RUN=	@set -eu;
+.include "${PKGSRCDIR}/mk/misc/show.mk"
+EOF
+
+	PKGSRCDIR="$pkgsrcdir" \
+	"$make" -f 'test.mk' 'show-all-var' 1> 'output' 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	create_file 'expected' <<'EOF'
+var:
+  pkg   VAR_PLAIN=      "$$var $${var} $$other $$$$"
+  pkg   VAR_PLAIN_LONG_NAME # undefined
+  pkg   VAR_ENV=        \
+                        "$$var $${var} $$other $$$$" \
+                        # end of VAR_ENV (sorted)
+  pkg   VAR_ENV_LONG_NAME # undefined
+  pkg   VAR_ARGS=       \
+                        "$$var $${var} $$other $$$$" \
+                        # end of VAR_ARGS
+  pkg   VAR_ARGS_LONG_NAME # undefined
 
 EOF
 
