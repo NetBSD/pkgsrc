@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3830 2020/07/01 09:31:30 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3831 2020/07/01 10:15:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6124,3 +6124,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-asn-lite to 2020.07 [fcambus 2020-07-01]
 	Updated net/dbip-country-lite to 2020.07 [fcambus 2020-07-01]
 	Updated net/dbip-city-lite to 2020.07 [fcambus 2020-07-01]
+	Updated pkgtools/pkg_install to 20200701 [jperkin 2020-07-01]
