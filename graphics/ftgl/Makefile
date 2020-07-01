@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:32:11 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/01 14:16:48 nia Exp $
 
 DISTNAME=	ftgl-2.1.3-rc5
 PKGNAME=	${DISTNAME:S/-r/r/1}
@@ -16,6 +16,9 @@ USE_TOOLS+=	gmake gsed pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
+CONFIGURE_ENV+=	ac_cv_path_DOXYGEN=no
+
+CONFIGURE_ARGS+=	--disable-freetypetest
 CONFIGURE_ARGS+=	--without-glut-inc
 CONFIGURE_ARGS+=	--without-x
 
