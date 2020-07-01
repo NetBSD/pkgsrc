@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/06/02 08:24:12 adam Exp $
+# $NetBSD: Makefile,v 1.56 2020/07/01 14:46:36 adam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -6,7 +6,6 @@
 # devel/lldb
 # devel/polly
 # lang/clang
-# lang/clang-static-analyzer
 # lang/clang-tools-extra
 # lang/compiler-rt
 # lang/libcxx
