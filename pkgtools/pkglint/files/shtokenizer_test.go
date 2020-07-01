@@ -140,10 +140,12 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 
 	operator := func(s string) *ShAtom { return atom(shtOperator, s) }
 	comment := func(s string) *ShAtom { return atom(shtComment, s) }
-	mkvar := func(varname string, modifiers ...string) *ShAtom {
+	mkvar := func(varname string, modifiers ...MkVarUseModifier) *ShAtom {
 		text := "${" + varname
 		for _, modifier := range modifiers {
-			text += ":" + strings.Replace(strings.Replace(modifier, "\\", "\\\\", -1), ":", "\\:", -1)
+			escapedBackslash := strings.Replace(modifier.String(), "\\", "\\\\", -1)
+			escapedColon := strings.Replace(escapedBackslash, ":", "\\:", -1)
+			text += ":" + escapedColon // TODO: modifier.Quoted
 		}
 		text += "}"
 		varuse := NewMkTokenBuilder().VarUse(varname, modifiers...)

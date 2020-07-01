@@ -5,14 +5,6 @@ import (
 	"netbsd.org/pkglint/textproc"
 )
 
-func (s *Suite) Test_MkTokensLexer__empty_slice_returns_EOF(c *check.C) {
-	t := s.Init(c)
-
-	lexer := NewMkTokensLexer(nil)
-
-	t.CheckEquals(lexer.EOF(), true)
-}
-
 // A slice of a single token behaves like textproc.Lexer.
 func (s *Suite) Test_MkTokensLexer__single_plain_text_token(c *check.C) {
 	t := s.Init(c)
@@ -29,13 +21,133 @@ func (s *Suite) Test_MkTokensLexer__single_plain_text_token(c *check.C) {
 	t.CheckEquals(lexer.EOF(), true)
 }
 
+// When the MkTokensLexer is constructed, it gets a copy of the tokens array.
+// In theory it would be possible to change the tokens after starting lexing,
+// but there is no practical case where that would be useful.
+//
+// Since each slice is a separate view on the underlying array, modifying the
+// size of the outside slice does not affect parsing. This is also only a
+// theoretical case.
+//
+// Because all these cases are only theoretical, the MkTokensLexer doesn't
+// bother to make this unnecessary copy and works on the shared slice.
+func (s *Suite) Test_NewMkTokensLexer__shared_array(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	tokens := b.Tokens(b.VaruseToken("VAR"))
+	lexer := NewMkTokensLexer(tokens)
+
+	t.CheckEquals(lexer.Rest(), "${VAR}")
+
+	tokens[0].Text = "modified text"
+	tokens[0].Varuse = b.VarUse("MODIFIED", "Mpattern")
+
+	t.CheckEquals(lexer.Rest(), "modified text")
+}
+
+func (s *Suite) Test_MkTokensLexer_next(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	tokens := b.Tokens(b.VaruseToken("VAR"))
+	lexer := NewMkTokensLexer(tokens)
+
+	t.CheckEquals(lexer.Lexer.Rest(), "")
+}
+
+func (s *Suite) Test_MkTokensLexer_EOF__plain_text(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(b.TextToken("rest")))
+
+	t.CheckEquals(lexer.EOF(), false)
+
+	lexer.SkipString("rest")
+
+	t.CheckEquals(lexer.EOF(), true)
+}
+
+func (s *Suite) Test_MkTokensLexer_EOF__varuse(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(b.VaruseToken("VAR")))
+
+	t.CheckEquals(lexer.EOF(), false)
+
+	lexer.NextVarUse()
+
+	t.CheckEquals(lexer.EOF(), true)
+}
+
+func (s *Suite) Test_MkTokensLexer_Rest(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(b.VaruseToken("VAR"), b.TextToken("text"), b.VaruseToken("VAR2")))
+
+	t.CheckEquals(lexer.Rest(), "${VAR}text${VAR2}")
+	t.CheckEquals(lexer.NextVarUse().Text, "${VAR}")
+	t.CheckEquals(lexer.Rest(), "text${VAR2}")
+	t.CheckEquals(lexer.SkipString("text"), true)
+	t.CheckEquals(lexer.Rest(), "${VAR2}")
+	t.CheckEquals(lexer.NextVarUse().Text, "${VAR2}")
+	t.CheckEquals(lexer.Rest(), "")
+}
+
+func (s *Suite) Test_MkTokensLexer_Skip(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(b.VaruseToken("VAR"), b.TextToken("text"), b.VaruseToken("VAR2")))
+
+	t.CheckEquals(lexer.Rest(), "${VAR}text${VAR2}")
+	t.CheckEquals(lexer.NextVarUse().Text, "${VAR}")
+	t.CheckEquals(lexer.Rest(), "text${VAR2}")
+	t.CheckEquals(lexer.Skip(4), true)
+	t.CheckEquals(lexer.Rest(), "${VAR2}")
+	t.CheckEquals(lexer.NextVarUse().Text, "${VAR2}")
+	t.CheckEquals(lexer.Rest(), "")
+}
+
+func (s *Suite) Test_MkTokensLexer_SkipMixed__exact(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(b.VaruseToken("VAR"), b.TextToken("text"), b.VaruseToken("VAR2")))
+
+	t.CheckEquals(lexer.SkipMixed(17), true)
+	t.CheckEquals(lexer.EOF(), true)
+}
+
+func (s *Suite) Test_MkTokensLexer_SkipMixed__short(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(b.VaruseToken("VAR"), b.TextToken("text"), b.VaruseToken("VAR2")))
+
+	// After 15 characters, the lexer would be in the middle of a MkVarUse.
+	t.ExpectAssert(func() { lexer.SkipMixed(15) })
+}
+
+func (s *Suite) Test_MkTokensLexer_SkipMixed__long(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(b.VaruseToken("VAR"), b.TextToken("text"), b.VaruseToken("VAR2")))
+
+	t.ExpectAssert(func() { lexer.SkipMixed(20) })
+}
+
 // If the first element of the slice is a variable use, none of the plain
 // text patterns matches.
 //
 // The code that uses the MkTokensLexer needs to distinguish these cases
 // anyway, therefore it doesn't make sense to treat variable uses as plain
 // text.
-func (s *Suite) Test_MkTokensLexer__single_varuse_token(c *check.C) {
+func (s *Suite) Test_MkTokensLexer_NextVarUse__single_varuse_token(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
 
@@ -47,7 +159,7 @@ func (s *Suite) Test_MkTokensLexer__single_varuse_token(c *check.C) {
 	t.CheckDeepEquals(lexer.NextVarUse(), tokens[0])
 }
 
-func (s *Suite) Test_MkTokensLexer__plain_then_varuse(c *check.C) {
+func (s *Suite) Test_MkTokensLexer_NextVarUse__plain_then_varuse(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
 
@@ -61,7 +173,7 @@ func (s *Suite) Test_MkTokensLexer__plain_then_varuse(c *check.C) {
 	t.CheckEquals(lexer.EOF(), true)
 }
 
-func (s *Suite) Test_MkTokensLexer__varuse_varuse_varuse(c *check.C) {
+func (s *Suite) Test_MkTokensLexer_NextVarUse__varuse_varuse_varuse(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
 
@@ -77,178 +189,20 @@ func (s *Suite) Test_MkTokensLexer__varuse_varuse_varuse(c *check.C) {
 	t.Check(lexer.NextVarUse(), check.IsNil)
 }
 
-func (s *Suite) Test_MkTokensLexer__mark_reset_since_in_initial_state(c *check.C) {
+func (s *Suite) Test_MkTokensLexer_NextVarUse__varuse_when_plain_text(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
 
-	tokens := b.Tokens(
-		b.VaruseToken("dirs", "O", "u"),
-		b.VaruseToken("VAR", "Mpattern"),
-		b.VaruseToken(".TARGET"))
-	lexer := NewMkTokensLexer(tokens)
+	lexer := NewMkTokensLexer(b.Tokens(b.TextToken("text")))
 
-	start := lexer.Mark()
-	t.CheckDeepEquals(lexer.NextVarUse(), tokens[0])
-	middle := lexer.Mark()
-	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}${.TARGET}")
-	lexer.Reset(start)
-	t.CheckEquals(lexer.Rest(), "${dirs:O:u}${VAR:Mpattern}${.TARGET}")
-	lexer.Reset(middle)
-	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}${.TARGET}")
+	t.Check(lexer.NextVarUse(), check.IsNil)
+	t.CheckEquals(lexer.NextString("te"), "te")
+	t.Check(lexer.NextVarUse(), check.IsNil)
+	t.CheckEquals(lexer.NextString("xt"), "xt")
+	t.Check(lexer.NextVarUse(), check.IsNil)
 }
 
-func (s *Suite) Test_MkTokensLexer__mark_reset_since_inside_plain_text(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	lexer := NewMkTokensLexer(b.Tokens(
-		b.TextToken("plain text"),
-		b.VaruseToken("VAR", "Mpattern"),
-		b.TextToken("rest")))
-
-	start := lexer.Mark()
-	t.CheckEquals(lexer.NextBytesSet(textproc.Alpha), "plain")
-	middle := lexer.Mark()
-	t.CheckEquals(lexer.Rest(), " text${VAR:Mpattern}rest")
-	lexer.Reset(start)
-	t.CheckEquals(lexer.Rest(), "plain text${VAR:Mpattern}rest")
-	lexer.Reset(middle)
-	t.CheckEquals(lexer.Rest(), " text${VAR:Mpattern}rest")
-}
-
-func (s *Suite) Test_MkTokensLexer__mark_reset_since_after_plain_text(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	lexer := NewMkTokensLexer(b.Tokens(
-		b.TextToken("plain text"),
-		b.VaruseToken("VAR", "Mpattern"),
-		b.TextToken("rest")))
-
-	start := lexer.Mark()
-	t.CheckEquals(lexer.SkipString("plain text"), true)
-	end := lexer.Mark()
-	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
-	lexer.Reset(start)
-	t.CheckEquals(lexer.Rest(), "plain text${VAR:Mpattern}rest")
-	lexer.Reset(end)
-	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
-}
-
-func (s *Suite) Test_MkTokensLexer__mark_reset_since_after_varuse(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	tokens := b.Tokens(
-		b.VaruseToken("VAR", "Mpattern"),
-		b.TextToken("rest"))
-	lexer := NewMkTokensLexer(tokens)
-
-	start := lexer.Mark()
-	t.CheckEquals(lexer.NextVarUse(), tokens[0])
-	end := lexer.Mark()
-	t.CheckEquals(lexer.Rest(), "rest")
-	lexer.Reset(start)
-	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
-	lexer.Reset(end)
-	t.CheckEquals(lexer.Rest(), "rest")
-}
-
-func (s *Suite) Test_MkTokensLexer__multiple_marks_in_same_plain_text(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	lexer := NewMkTokensLexer(b.Tokens(
-		b.TextToken("plain text"),
-		b.VaruseToken("VAR", "Mpattern"),
-		b.TextToken("rest")))
-
-	start := lexer.Mark()
-	t.CheckEquals(lexer.NextString("plain "), "plain ")
-	middle := lexer.Mark()
-	t.CheckEquals(lexer.NextString("text"), "text")
-	end := lexer.Mark()
-	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
-	lexer.Reset(start)
-	t.CheckEquals(lexer.Rest(), "plain text${VAR:Mpattern}rest")
-	lexer.Reset(middle)
-	t.CheckEquals(lexer.Rest(), "text${VAR:Mpattern}rest")
-	lexer.Reset(end)
-	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
-}
-
-func (s *Suite) Test_MkTokensLexer__multiple_marks_in_varuse(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	tokens := b.Tokens(
-		b.VaruseToken("VAR1"),
-		b.VaruseToken("VAR2"),
-		b.VaruseToken("VAR3"))
-	lexer := NewMkTokensLexer(tokens)
-
-	start := lexer.Mark()
-	t.CheckDeepEquals(lexer.NextVarUse(), tokens[0])
-	middle := lexer.Mark()
-	t.CheckDeepEquals(lexer.NextVarUse(), tokens[1])
-	further := lexer.Mark()
-	t.CheckDeepEquals(lexer.NextVarUse(), tokens[2])
-	end := lexer.Mark()
-	t.CheckEquals(lexer.Rest(), "")
-	lexer.Reset(middle)
-	t.CheckEquals(lexer.Rest(), "${VAR2}${VAR3}")
-	lexer.Reset(further)
-	t.CheckEquals(lexer.Rest(), "${VAR3}")
-	lexer.Reset(start)
-	t.CheckEquals(lexer.Rest(), "${VAR1}${VAR2}${VAR3}")
-	lexer.Reset(end)
-	t.CheckEquals(lexer.Rest(), "")
-}
-
-func (s *Suite) Test_MkTokensLexer__EOF_before_plain_text(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	lexer := NewMkTokensLexer(b.Tokens(b.TextToken("rest")))
-
-	t.CheckEquals(lexer.EOF(), false)
-}
-
-func (s *Suite) Test_MkTokensLexer__EOF_before_varuse(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	lexer := NewMkTokensLexer(b.Tokens(b.VaruseToken("VAR")))
-
-	t.CheckEquals(lexer.EOF(), false)
-}
-
-// When the MkTokensLexer is constructed, it gets a copy of the tokens array.
-// In theory it would be possible to change the tokens after starting lexing,
-// but there is no practical case where that would be useful.
-//
-// Since each slice is a separate view on the underlying array, modifying the
-// size of the outside slice does not affect parsing. This is also only a
-// theoretical case.
-//
-// Because all these cases are only theoretical, the MkTokensLexer doesn't
-// bother to make this unnecessary copy and works on the shared slice.
-func (s *Suite) Test_MkTokensLexer__constructor_uses_shared_array(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	tokens := b.Tokens(b.VaruseToken("VAR"))
-	lexer := NewMkTokensLexer(tokens)
-
-	t.CheckEquals(lexer.Rest(), "${VAR}")
-
-	tokens[0].Text = "modified text"
-	tokens[0].Varuse = b.VarUse("MODIFIED", "Mpattern")
-
-	t.CheckEquals(lexer.Rest(), "modified text")
-}
-
-func (s *Suite) Test_MkTokensLexer__peek_after_varuse(c *check.C) {
+func (s *Suite) Test_MkTokensLexer_NextVarUse__peek_after_varuse(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
 
@@ -265,24 +219,11 @@ func (s *Suite) Test_MkTokensLexer__peek_after_varuse(c *check.C) {
 	t.CheckEquals(lexer.PeekByte(), int('t'))
 }
 
-func (s *Suite) Test_MkTokensLexer__varuse_when_plain_text(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	lexer := NewMkTokensLexer(b.Tokens(b.TextToken("text")))
-
-	t.Check(lexer.NextVarUse(), check.IsNil)
-	t.CheckEquals(lexer.NextString("te"), "te")
-	t.Check(lexer.NextVarUse(), check.IsNil)
-	t.CheckEquals(lexer.NextString("xt"), "xt")
-	t.Check(lexer.NextVarUse(), check.IsNil)
-}
-
 // The code that creates the tokens for the lexer never puts two
 // plain text MkTokens besides each other. There's no point in doing
 // that since they could have been combined into a single token from
 // the beginning.
-func (s *Suite) Test_MkTokensLexer__adjacent_plain_text(c *check.C) {
+func (s *Suite) Test_MkTokensLexer_NextVarUse__adjacent_plain_text(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
 
@@ -310,4 +251,149 @@ func (s *Suite) Test_MkTokensLexer__adjacent_plain_text(c *check.C) {
 	// The string is still not found since the next token is only consumed
 	// by the NextVarUse above if it is indeed a VarUse.
 	t.CheckEquals(lexer.SkipString("text2"), false)
+}
+
+func (s *Suite) Test_MkTokensLexer_Mark__multiple_marks_in_varuse(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	tokens := b.Tokens(
+		b.VaruseToken("VAR1"),
+		b.VaruseToken("VAR2"),
+		b.VaruseToken("VAR3"))
+	lexer := NewMkTokensLexer(tokens)
+
+	start := lexer.Mark()
+	t.CheckDeepEquals(lexer.NextVarUse(), tokens[0])
+	middle := lexer.Mark()
+	t.CheckDeepEquals(lexer.NextVarUse(), tokens[1])
+	further := lexer.Mark()
+	t.CheckDeepEquals(lexer.NextVarUse(), tokens[2])
+	end := lexer.Mark()
+	t.CheckEquals(lexer.Rest(), "")
+	lexer.Reset(middle)
+	t.CheckEquals(lexer.Rest(), "${VAR2}${VAR3}")
+	lexer.Reset(further)
+	t.CheckEquals(lexer.Rest(), "${VAR3}")
+	lexer.Reset(start)
+	t.CheckEquals(lexer.Rest(), "${VAR1}${VAR2}${VAR3}")
+	lexer.Reset(end)
+	t.CheckEquals(lexer.Rest(), "")
+}
+
+func (s *Suite) Test_MkTokensLexer_Mark__multiple_marks_in_same_plain_text(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(
+		b.TextToken("plain text"),
+		b.VaruseToken("VAR", "Mpattern"),
+		b.TextToken("rest")))
+
+	start := lexer.Mark()
+	t.CheckEquals(lexer.NextString("plain "), "plain ")
+	middle := lexer.Mark()
+	t.CheckEquals(lexer.NextString("text"), "text")
+	end := lexer.Mark()
+	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
+	lexer.Reset(start)
+	t.CheckEquals(lexer.Rest(), "plain text${VAR:Mpattern}rest")
+	lexer.Reset(middle)
+	t.CheckEquals(lexer.Rest(), "text${VAR:Mpattern}rest")
+	lexer.Reset(end)
+	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
+}
+
+func (s *Suite) Test_MkTokensLexer_Since(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	tokens := b.Tokens(
+		b.VaruseToken("dirs", "O", "u"),
+		b.VaruseToken("VAR", "Mpattern"),
+		b.VaruseToken(".TARGET"))
+	lexer := NewMkTokensLexer(tokens)
+
+	start := lexer.Mark()
+	t.CheckDeepEquals(lexer.NextVarUse(), tokens[0])
+	middle := lexer.Mark()
+	t.CheckEquals(lexer.Since(start), "${dirs:O:u}")
+	t.CheckEquals(lexer.Since(middle), "")
+}
+
+func (s *Suite) Test_MkTokensLexer_Reset__initial_state(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	tokens := b.Tokens(
+		b.VaruseToken("dirs", "O", "u"),
+		b.VaruseToken("VAR", "Mpattern"),
+		b.VaruseToken(".TARGET"))
+	lexer := NewMkTokensLexer(tokens)
+
+	start := lexer.Mark()
+	t.CheckDeepEquals(lexer.NextVarUse(), tokens[0])
+	middle := lexer.Mark()
+	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}${.TARGET}")
+	lexer.Reset(start)
+	t.CheckEquals(lexer.Rest(), "${dirs:O:u}${VAR:Mpattern}${.TARGET}")
+	lexer.Reset(middle)
+	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}${.TARGET}")
+}
+
+func (s *Suite) Test_MkTokensLexer_Reset__inside_plain_text(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(
+		b.TextToken("plain text"),
+		b.VaruseToken("VAR", "Mpattern"),
+		b.TextToken("rest")))
+
+	start := lexer.Mark()
+	t.CheckEquals(lexer.NextBytesSet(textproc.Alpha), "plain")
+	middle := lexer.Mark()
+	t.CheckEquals(lexer.Rest(), " text${VAR:Mpattern}rest")
+	lexer.Reset(start)
+	t.CheckEquals(lexer.Rest(), "plain text${VAR:Mpattern}rest")
+	lexer.Reset(middle)
+	t.CheckEquals(lexer.Rest(), " text${VAR:Mpattern}rest")
+}
+
+func (s *Suite) Test_MkTokensLexer_Reset__after_plain_text(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	lexer := NewMkTokensLexer(b.Tokens(
+		b.TextToken("plain text"),
+		b.VaruseToken("VAR", "Mpattern"),
+		b.TextToken("rest")))
+
+	start := lexer.Mark()
+	t.CheckEquals(lexer.SkipString("plain text"), true)
+	end := lexer.Mark()
+	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
+	lexer.Reset(start)
+	t.CheckEquals(lexer.Rest(), "plain text${VAR:Mpattern}rest")
+	lexer.Reset(end)
+	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
+}
+
+func (s *Suite) Test_MkTokensLexer_Reset__after_varuse(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	tokens := b.Tokens(
+		b.VaruseToken("VAR", "Mpattern"),
+		b.TextToken("rest"))
+	lexer := NewMkTokensLexer(tokens)
+
+	start := lexer.Mark()
+	t.CheckEquals(lexer.NextVarUse(), tokens[0])
+	end := lexer.Mark()
+	t.CheckEquals(lexer.Rest(), "rest")
+	lexer.Reset(start)
+	t.CheckEquals(lexer.Rest(), "${VAR:Mpattern}rest")
+	lexer.Reset(end)
+	t.CheckEquals(lexer.Rest(), "rest")
 }

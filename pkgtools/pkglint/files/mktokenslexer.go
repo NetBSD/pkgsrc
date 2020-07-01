@@ -60,6 +60,7 @@ func (m *MkTokensLexer) SkipMixed(n int) bool {
 		use := m.NextVarUse()
 		if use != nil {
 			n -= len(use.Text)
+			assert(n >= 0)
 		} else {
 			skip := imin(len(m.Lexer.Rest()), n)
 			assert(m.Lexer.Skip(skip))

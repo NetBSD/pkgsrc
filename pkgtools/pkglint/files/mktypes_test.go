@@ -9,19 +9,19 @@ type MkTokenBuilder struct{}
 
 func NewMkTokenBuilder() MkTokenBuilder { return MkTokenBuilder{} }
 
-func (b MkTokenBuilder) VaruseToken(varname string, modifiers ...string) *MkToken {
+func (b MkTokenBuilder) VaruseToken(varname string, modifiers ...MkVarUseModifier) *MkToken {
 	var text strings.Builder
 	text.WriteString("${")
 	text.WriteString(varname)
 	for _, modifier := range modifiers {
 		text.WriteString(":")
-		text.WriteString(modifier)
+		text.WriteString(modifier.String()) // TODO: Quoted
 	}
 	text.WriteString("}")
 	return &MkToken{Text: text.String(), Varuse: b.VarUse(varname, modifiers...)}
 }
 
-func (b MkTokenBuilder) VaruseTextToken(text, varname string, modifiers ...string) *MkToken {
+func (b MkTokenBuilder) VaruseTextToken(text, varname string, modifiers ...MkVarUseModifier) *MkToken {
 	return &MkToken{Text: text, Varuse: b.VarUse(varname, modifiers...)}
 }
 
@@ -31,18 +31,77 @@ func (MkTokenBuilder) TextToken(text string) *MkToken {
 
 func (MkTokenBuilder) Tokens(tokens ...*MkToken) []*MkToken { return tokens }
 
-func (MkTokenBuilder) VarUse(varname string, modifiers ...string) *MkVarUse {
-	var mods []MkVarUseModifier
-	for _, modifier := range modifiers {
-		mods = append(mods, MkVarUseModifier{modifier})
+func (MkTokenBuilder) VarUse(varname string, modifiers ...MkVarUseModifier) *MkVarUse {
+	return NewMkVarUse(varname, modifiers...)
+}
+
+func (s *Suite) Test_NewMkVarUse(c *check.C) {
+	t := s.Init(c)
+
+	use := NewMkVarUse("VARNAME", "Q")
+
+	t.CheckEquals(use.String(), "${VARNAME:Q}")
+	t.CheckEquals(use.varname, "VARNAME")
+	t.CheckDeepEquals(use.modifiers, []MkVarUseModifier{"Q"})
+}
+
+func (s *Suite) Test_MkVarUse_String(c *check.C) {
+	t := s.Init(c)
+
+	use := NewMkVarUse("VARNAME", "S,:,colon,", "Q")
+
+	t.CheckEquals(use.String(), "${VARNAME:S,:,colon,:Q}")
+}
+
+func (s *Suite) Test_MkVarUseModifier_String(c *check.C) {
+	t := s.Init(c)
+
+	test := func(mod MkVarUseModifier, str string) {
+		t.CheckEquals(mod.String(), str)
 	}
-	return NewMkVarUse(varname, mods...)
+
+	test("Q", "Q")
+	test("S/from/to/1g", "S/from/to/1g")
+	test(":", ":")
+}
+
+func (s *Suite) Test_MkVarUseModifier_Quoted(c *check.C) {
+	t := s.Init(c)
+
+	test := func(mod MkVarUseModifier, quoted string) {
+		t.CheckEquals(mod.Quoted(), quoted)
+	}
+
+	test("Q", "Q")
+	test("S/from/to/1g", "S/from/to/1g")
+	test(":", "\\:")
+}
+
+func (s *Suite) Test_MkVarUseModifier_HasPrefix(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(MkVarUseModifier("Q").HasPrefix("Q"), true)
+	t.CheckEquals(MkVarUseModifier("S/from/to/1g").HasPrefix("Q"), false)
+}
+
+func (s *Suite) Test_MkVarUseModifier_IsQ(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(MkVarUseModifier("Q").IsQ(), true)
+	t.CheckEquals(MkVarUseModifier("S/from/to/1g").IsQ(), false)
+}
+
+func (s *Suite) Test_MkVarUseModifier_IsSuffixSubst(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(MkVarUseModifier("=suffix").IsSuffixSubst(), true)
+	t.CheckEquals(MkVarUseModifier("S,=,eq,").IsSuffixSubst(), false)
 }
 
 func (s *Suite) Test_MkVarUseModifier_MatchSubst(c *check.C) {
 	t := s.Init(c)
 
-	mod := MkVarUseModifier{"S/from/to/1g"}
+	mod := MkVarUseModifier("S/from/to/1g")
 
 	ok, regex, from, to, options := mod.MatchSubst()
 
@@ -56,7 +115,7 @@ func (s *Suite) Test_MkVarUseModifier_MatchSubst(c *check.C) {
 func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash(c *check.C) {
 	t := s.Init(c)
 
-	mod := MkVarUseModifier{"S/\\//\\:/"}
+	mod := MkVarUseModifier("S/\\//\\:/")
 
 	ok, regex, from, to, options := mod.MatchSubst()
 
@@ -76,7 +135,7 @@ func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash(c *check.C) {
 func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash_as_separator(c *check.C) {
 	t := s.Init(c)
 
-	mod := MkVarUseModifier{"S\\.post1\\\\1"}
+	mod := MkVarUseModifier("S\\.post1\\\\1")
 
 	ok, regex, from, to, options := mod.MatchSubst()
 
@@ -91,7 +150,7 @@ func (s *Suite) Test_MkVarUseModifier_Subst(c *check.C) {
 	t := s.Init(c)
 
 	test := func(mod, str string, ok bool, result string) {
-		m := MkVarUseModifier{mod}
+		m := MkVarUseModifier(mod)
 
 		actualOk, actualResult := m.Subst(str)
 
@@ -154,7 +213,7 @@ func (s *Suite) Test_MkVarUseModifier_EvalSubst(c *check.C) {
 	t := s.Init(c)
 
 	test := func(s string, left bool, from string, right bool, to string, flags string, ok bool, result string) {
-		mod := MkVarUseModifier{}
+		mod := MkVarUseModifier("")
 
 		actualOk, actual := mod.EvalSubst(s, left, from, right, to, flags)
 
@@ -195,13 +254,12 @@ func (s *Suite) Test_MkVarUseModifier_EvalSubst(c *check.C) {
 func (s *Suite) Test_MkVarUseModifier_MatchMatch(c *check.C) {
 	t := s.Init(c)
 
-	testFail := func(modifier string) {
-		mod := MkVarUseModifier{modifier}
+	testFail := func(modifier MkVarUseModifier) {
+		mod := modifier
 		ok, _, _, _ := mod.MatchMatch()
 		t.CheckEquals(ok, false)
 	}
-	test := func(modifier string, positive bool, pattern string, exact bool) {
-		mod := MkVarUseModifier{modifier}
+	test := func(mod MkVarUseModifier, positive bool, pattern string, exact bool) {
 		actualOk, actualPositive, actualPattern, actualExact := mod.MatchMatch()
 		t.CheckDeepEquals(
 			[]interface{}{actualOk, actualPositive, actualPattern, actualExact},
@@ -217,11 +275,17 @@ func (s *Suite) Test_MkVarUseModifier_MatchMatch(c *check.C) {
 	test("Npattern", false, "pattern", true)
 }
 
+func (s *Suite) Test_MkVarUseModifier_IsToLower(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(MkVarUseModifier("tl").IsToLower(), true)
+	t.CheckEquals(MkVarUseModifier("tu").IsToLower(), false)
+}
+
 func (s *Suite) Test_MkVarUseModifier_ChangesList(c *check.C) {
 	t := s.Init(c)
 
-	test := func(modifier string, changes bool) {
-		mod := MkVarUseModifier{modifier}
+	test := func(mod MkVarUseModifier, changes bool) {
 		t.CheckEquals(mod.ChangesList(), changes)
 	}
 
@@ -280,4 +344,33 @@ func (s *Suite) Test_MkVarUse_Mod(c *check.C) {
 
 	test("${varname:Q}", ":Q")
 	test("${PATH:ts::Q}", ":ts::Q")
+}
+
+func (s *Suite) Test_MkVarUse_IsExpression(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(ToVarUse("${VAR}").IsExpression(), false)
+	t.CheckEquals(ToVarUse("${expr:L}").IsExpression(), true)
+	t.CheckEquals(ToVarUse("${expr:?then:else}").IsExpression(), true)
+}
+
+func (s *Suite) Test_MkVarUse_IsQ(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(ToVarUse("${VAR}").IsQ(), false)
+	t.CheckEquals(ToVarUse("${VAR:Q}").IsQ(), true)
+	t.CheckEquals(ToVarUse("${VAR:tl}").IsQ(), false)
+	t.CheckEquals(ToVarUse("${VAR:tl:Q}").IsQ(), true)
+	t.CheckEquals(ToVarUse("${VAR:Q:tl}").IsQ(), false)
+}
+
+func (s *Suite) Test_MkVarUse_HasModifier(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(ToVarUse("${VAR}").HasModifier("Q"), false)
+	t.CheckEquals(ToVarUse("${VAR:Q}").HasModifier("Q"), true)
+	t.CheckEquals(ToVarUse("${VAR:tl}").HasModifier("Q"), false)
+	t.CheckEquals(ToVarUse("${VAR:tl}").HasModifier("t"), true)
+	t.CheckEquals(ToVarUse("${VAR:tl:Q}").HasModifier("Q"), true)
+	t.CheckEquals(ToVarUse("${VAR:Q:tl}").HasModifier("Q"), true)
 }

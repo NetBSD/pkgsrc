@@ -53,8 +53,6 @@ func (loc *Location) File(rel RelPath) CurrPath {
 
 // Line represents a line of text from a file.
 type Line struct {
-	// TODO: Consider storing pointers to the Filename and Basename instead of strings to save memory.
-	//  But first find out where and why pkglint needs so much memory (200 MB for a full recursive run over pkgsrc + wip).
 	Location Location
 	Basename RelPath // the last component of the Filename
 
@@ -66,8 +64,6 @@ type Line struct {
 	raw  []*RawLine // contains the original text including trailing newline
 	fix  *Autofix   // any changes that pkglint would like to apply to the line
 	once Once
-
-	// XXX: Filename and Basename could be replaced with a pointer to a Lines object.
 }
 
 func NewLine(filename CurrPath, lineno int, text string, rawLine *RawLine) *Line {

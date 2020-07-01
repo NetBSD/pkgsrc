@@ -39,19 +39,31 @@ func NewMkVarUse(varname string, modifiers ...MkVarUseModifier) *MkVarUse {
 
 func (vu *MkVarUse) String() string { return sprintf("${%s%s}", vu.varname, vu.Mod()) }
 
-type MkVarUseModifier struct {
-	Text string // The text of the modifier, without the initial colon.
+// MkVarUseModifier stores the text of the modifier, without the initial colon.
+// Examples: "Q", "S,from,to,g"
+type MkVarUseModifier string
+
+func (m MkVarUseModifier) String() string {
+	return string(m)
 }
 
-func (m MkVarUseModifier) IsQ() bool { return m.Text == "Q" }
+func (m MkVarUseModifier) Quoted() string {
+	return strings.Replace(string(m), ":", "\\:", -1)
+}
+
+func (m MkVarUseModifier) HasPrefix(prefix string) bool {
+	return hasPrefix(m.String(), prefix)
+}
+
+func (m MkVarUseModifier) IsQ() bool { return m == "Q" }
 
 func (m MkVarUseModifier) IsSuffixSubst() bool {
 	// XXX: There are other cases
-	return hasPrefix(m.Text, "=")
+	return m.HasPrefix("=")
 }
 
 func (m MkVarUseModifier) MatchSubst() (ok bool, regex bool, from string, to string, options string) {
-	p := NewMkLexer(m.Text, nil)
+	p := NewMkLexer(m.String(), nil)
 	return p.varUseModifierSubst('}')
 }
 
@@ -91,7 +103,7 @@ func (m MkVarUseModifier) Subst(str string) (bool, string) {
 
 	ok, result := m.EvalSubst(str, leftAnchor, from, rightAnchor, to, options)
 	if trace.Tracing && ok && result != str {
-		trace.Stepf("Subst: %q %q => %q", str, m.Text, result)
+		trace.Stepf("Subst: %q %q => %q", str, m.String(), result)
 	}
 	return ok, result
 }
@@ -124,21 +136,22 @@ func (MkVarUseModifier) EvalSubst(s string, left bool, from string, right bool, 
 //  :Npattern   => true,  false, "pattern", true
 //  :X          => false
 func (m MkVarUseModifier) MatchMatch() (ok bool, positive bool, pattern string, exact bool) {
-	if hasPrefix(m.Text, "M") || hasPrefix(m.Text, "N") {
+	if m.HasPrefix("M") || m.HasPrefix("N") {
+		str := m.String()
 		// See devel/bmake/files/str.c:^Str_Match
-		exact := !strings.ContainsAny(m.Text[1:], "*?[\\$")
-		return true, m.Text[0] == 'M', m.Text[1:], exact
+		exact := !strings.ContainsAny(str[1:], "*?[\\$")
+		return true, str[0] == 'M', str[1:], exact
 	}
 	return false, false, "", false
 }
 
-func (m MkVarUseModifier) IsToLower() bool { return m.Text == "tl" }
+func (m MkVarUseModifier) IsToLower() bool { return m == "tl" }
 
 // ChangesList returns true if applying this modifier to a variable
 // may change the expression from a list type to a non-list type
 // or vice versa.
 func (m MkVarUseModifier) ChangesList() bool {
-	text := m.Text
+	text := m.String()
 
 	// See MkParser.varUseModifier for the meaning of these modifiers.
 	switch text[0] {
@@ -172,7 +185,7 @@ func (vu *MkVarUse) Mod() string {
 	var mod strings.Builder
 	for _, modifier := range vu.modifiers {
 		mod.WriteString(":")
-		mod.WriteString(modifier.Text)
+		mod.WriteString(modifier.String())
 	}
 	return mod.String()
 }
@@ -184,7 +197,7 @@ func (vu *MkVarUse) IsExpression() bool {
 		return false
 	}
 	mod := vu.modifiers[0]
-	return mod.Text == "L" || hasPrefix(mod.Text, "?")
+	return mod.String() == "L" || mod.HasPrefix("?")
 }
 
 func (vu *MkVarUse) IsQ() bool {
@@ -194,7 +207,7 @@ func (vu *MkVarUse) IsQ() bool {
 
 func (vu *MkVarUse) HasModifier(prefix string) bool {
 	for _, mod := range vu.modifiers {
-		if hasPrefix(mod.Text, prefix) {
+		if mod.HasPrefix(prefix) {
 			return true
 		}
 	}

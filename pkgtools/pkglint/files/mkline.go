@@ -872,7 +872,7 @@ func (mkline *MkLine) ForEachUsedVarUse(varuse *MkVarUse, time VucTime, action f
 	}
 	mkline.ForEachUsedText(varname, time, action)
 	for _, mod := range varuse.modifiers {
-		mkline.ForEachUsedText(mod.Text, time, action)
+		mkline.ForEachUsedText(mod.String(), time, action)
 	}
 }
 

@@ -241,6 +241,7 @@ func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
 		"korean",
 		"linux",
 		"local",
+		"lua",
 		"plan9",
 		"R",
 		"ruby",

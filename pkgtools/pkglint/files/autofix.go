@@ -96,6 +96,7 @@ func (fix *Autofix) Explain(explanation ...string) {
 
 // Replace replaces "from" with "to", a single time.
 // If the text is not found exactly once, nothing is replaced at all.
+// The diagnostic is given nevertheless, to allow humans to fix it.
 func (fix *Autofix) Replace(from string, to string) {
 	fix.ReplaceAfter("", from, to)
 }
