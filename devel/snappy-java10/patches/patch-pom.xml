@@ -1,10 +1,22 @@
-$NetBSD: patch-pom.xml,v 1.1 2018/06/09 11:36:45 fhajny Exp $
+$NetBSD: patch-pom.xml,v 1.2 2020/07/01 05:03:39 yyamano Exp $
 
+Specify java source and target version as maven option to make this build with JDK 11.
 Remove pre-built binaries for other platforms.
 
 --- pom.xml.orig	2014-07-04 05:20:00.000000000 +0000
 +++ pom.xml
-@@ -182,13 +182,6 @@
+@@ -102,10 +102,6 @@
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-compiler-plugin</artifactId>
+                 <version>2.0.2</version>
+-                <configuration>
+-                    <source>1.5</source>
+-                    <target>1.5</target>
+-                </configuration>
+             </plugin>
+ 
+             <plugin>
+@@ -182,13 +178,6 @@
                          <Import-Package>org.osgi.framework;version="[1.5,2)"</Import-Package>
                          <Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
                          <Bundle-NativeCode>

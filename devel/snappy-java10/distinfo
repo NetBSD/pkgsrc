@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2018/06/09 11:36:45 fhajny Exp $
+$NetBSD: distinfo,v 1.9 2020/07/01 05:03:39 yyamano Exp $
 
 SHA1 (snappy-java/snappy-1.0.5.tar.gz) = 3a3df859cf33f78f8e945c3f67f28685f0f38bb1
 RMD160 (snappy-java/snappy-1.0.5.tar.gz) = c9dec9a8a2faac7bf85b79bcf82f8080713103aa
@@ -14,4 +14,4 @@ SHA512 (snappy-java/snappy-java-deps-1.0.5.4.tar.gz) = f5148b0ded3b6beeb688b1b57
 Size (snappy-java/snappy-java-deps-1.0.5.4.tar.gz) = 13148358 bytes
 SHA1 (patch-Makefile) = cb15c6016dab4670fce0ace6f1dd21e7c7bb1097
 SHA1 (patch-Makefile.common) = 83eeaf91c7dbd6ac3c4b3405d53acec9caa260aa
-SHA1 (patch-pom.xml) = 2dbf15f680aa570e8479fa81640d53d6fac12b15
+SHA1 (patch-pom.xml) = 833e19ef0b58d539b2ca2d6cd89361e9845b17cf
