@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2018/10/29 14:35:09 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/07/01 11:26:42 nia Exp $
 #
 # used by databases/lua-sql-postgres/Makefile
-# used by databases/lua-sql-sqlite/Makefile
 # used by databases/lua-sql-sqlite3/Makefile
 
 # TODO: firebird, oci8, odbc
