@@ -1,0 +1,17 @@
+$NetBSD: patch-doc_examples_Makefile.in,v 1.1 2020/07/01 00:40:48 manu Exp $
+
+Use -Wl,-rpath,$(PATH) and not -Wl,-rpath $(PATH) as the later chokes on gcc
+
+--- ./doc/examples/Makefile.in.orig	2020-06-27 02:56:59.896992052 +0200
++++ ./doc/examples/Makefile.in	2020-06-27 02:57:30.454482609 +0200
+@@ -862,9 +862,9 @@
+ @NO_SHARED_FALSE@		rel_build_subdir=""; \
+ @NO_SHARED_FALSE@	else \
+ @NO_SHARED_FALSE@		rel_build_subdir="../"; \
+ @NO_SHARED_FALSE@	fi; \
+-@NO_SHARED_FALSE@	$(MAKE) -f dist-files/Makefile CC="$(CC)" CPPFLAGS="$(CPPFLAGS)" AM_CPPFLAGS="$(AM_CPPFLAGS) -I"$${rel_src_subdir}/$(top_srcdir)/include/" -I"$${rel_src_subdir}/$(top_srcdir)/src/" -I"$${rel_build_subdir}$(top_builddir)/include/" -I"$${rel_build_subdir}$(top_builddir)/include/src/"" CFLAGS="$(CFLAGS)" AM_CFLAGS="$(AM_CFLAGS)" LDFLAGS="$(LDFLAGS)" AM_LDFLAGS="$(AM_LDFLAGS) -L../../../src/.libs/ -Wl,-rpath "$(PWD)/../../src/.libs/"" AM_V_P="$(AM_V_P)" AM_V_at="$(AM_V_at)" $(AM_MAKEFLAGS) all;
++@NO_SHARED_FALSE@	$(MAKE) -f dist-files/Makefile CC="$(CC)" CPPFLAGS="$(CPPFLAGS)" AM_CPPFLAGS="$(AM_CPPFLAGS) -I"$${rel_src_subdir}/$(top_srcdir)/include/" -I"$${rel_src_subdir}/$(top_srcdir)/src/" -I"$${rel_build_subdir}$(top_builddir)/include/" -I"$${rel_build_subdir}$(top_builddir)/include/src/"" CFLAGS="$(CFLAGS)" AM_CFLAGS="$(AM_CFLAGS)" LDFLAGS="$(LDFLAGS)" AM_LDFLAGS="$(AM_LDFLAGS) -L../../../src/.libs/ -Wl,-rpath,"$(PWD)/../../src/.libs/"" AM_V_P="$(AM_V_P)" AM_V_at="$(AM_V_at)" $(AM_MAKEFLAGS) all;
+ 
+ @NO_SHARED_FALSE@clean-local:
+ @NO_SHARED_FALSE@	$(AM_V_at)$(MAKE) -f dist-files/Makefile $(AM_MAKEFLAGS) clean; \
+ @NO_SHARED_FALSE@	if [ x"$(srcdir)" != x"$(builddir)" ]; then \
