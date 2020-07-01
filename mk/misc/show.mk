@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.20 2020/03/30 22:49:30 rillig Exp $
+# $NetBSD: show.mk,v 1.21 2020/07/01 07:39:52 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -154,6 +154,7 @@ _LABEL._DEF_VARS=	def
 
 show-all: .PHONY
 .for g in ${"${.TARGETS:Mshow-all*}":?${_VARGROUPS:O:u}:}
+.  for w in ${_VARGROUPS_WIDTH.${g}:U23}
 
 show-all: show-all-${g}
 
@@ -171,54 +172,55 @@ _SHOW_ALL.d8=	$$$$$$$$	# see regress/show-all
 show-all-${g}: .PHONY
 	@${RUN} printf '%s:\n' ${g:Q}
 
-.  for c in ${_SHOW_ALL_CATEGORIES}
-.    for v in ${${c}.${g}}
+.    for c in ${_SHOW_ALL_CATEGORIES}
+.      for v in ${${c}.${g}}
 
-.      if ${_SORTED_VARS.${g}:U:@pattern@ ${v:M${pattern}} @:M*}
+.        if ${_SORTED_VARS.${g}:U:@pattern@ ${v:M${pattern}} @:M*}
 
 # multi-valued variables, values are sorted
 	${RUN}								\
 	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %s\t%-23s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
+	  printf '  %-6s%-${w}s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
 	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
-	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
+	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
-	  printf '  %s\t%-23s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '\t\t\t\t%s \\\n' ${${v}:O:C,\\$$,${_SHOW_ALL.d8},g:@x@${x:Q}@}; \
-	  printf '\t\t\t\t# end of %s (sorted)\n' ${v:Q};		\
+	  printf '  %-6s%-${w}s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
+	  printf '        %-${w}s %s \\\n' ${${v}:O:C,\\$$,${_SHOW_ALL.d8},g:@x@'' ${x:Q}@}; \
+	  printf '        %-${w}s # end of %s (sorted)\n' '' ${v:Q};	\
 	fi
 
-.      elif ${_LISTED_VARS.${g}:U:@pattern@ ${v:M${pattern}} @:M*}
+.        elif ${_LISTED_VARS.${g}:U:@pattern@ ${v:M${pattern}} @:M*}
 
 # multi-valued variables, preserving original order
 	${RUN}								\
 	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %s\t%-23s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
+	  printf '  %-6s%-${w}s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
 	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
-	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
+	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
-	  printf '  %s\t%-23s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '\t\t\t\t%s \\\n' ${${v}:C,\\$$,${_SHOW_ALL.d8},g:@x@${x:Q}@}; \
-	  printf '\t\t\t\t# end of %s\n' ${v:Q};			\
+	  printf '  %-6s%-${w}s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
+	  printf '        %-${w}s %s \\\n' ${${v}:C,\\$$,${_SHOW_ALL.d8},g:@x@'' ${x:Q}@}; \
+	  printf '        %-${w}s # end of %s\n' '' ${v:Q};		\
 	fi
 
-.      else
+.        else
 
 # single-valued variables
 	${RUN}								\
 	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %s\t%-23s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
+	  printf '  %-6s%-${w}s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
 	elif value=${${v}:U:C,\\$$,${_SHOW_ALL.d4},gW:Q} && test "x$$value" = "x"; then \
-	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
+	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
 	  case "$$value" in (*[\	\ ]) eol="# ends with space";; (*) eol=""; esac; \
-	  printf '  %s\t%-23s %s\n' ${_LABEL.${c}} ${v:Q}= "$$value$$eol"; \
+	  printf '  %-6s%-${w}s %s\n' ${_LABEL.${c}} ${v:Q}= "$$value$$eol"; \
 	fi
 
-.      endif
+.        endif
+.      endfor
 .    endfor
-.  endfor
 	${RUN} printf '\n'
+.  endfor
 .endfor
 
 .PHONY: show-depends-options
