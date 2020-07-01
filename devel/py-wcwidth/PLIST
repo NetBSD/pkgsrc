@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 20:30:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/07/01 14:20:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,7 +14,9 @@ ${PYSITELIB}/wcwidth/table_wide.pyo
 ${PYSITELIB}/wcwidth/table_zero.py
 ${PYSITELIB}/wcwidth/table_zero.pyc
 ${PYSITELIB}/wcwidth/table_zero.pyo
-${PYSITELIB}/wcwidth/version.json
+${PYSITELIB}/wcwidth/unicode_versions.py
+${PYSITELIB}/wcwidth/unicode_versions.pyc
+${PYSITELIB}/wcwidth/unicode_versions.pyo
 ${PYSITELIB}/wcwidth/wcwidth.py
 ${PYSITELIB}/wcwidth/wcwidth.pyc
 ${PYSITELIB}/wcwidth/wcwidth.pyo
