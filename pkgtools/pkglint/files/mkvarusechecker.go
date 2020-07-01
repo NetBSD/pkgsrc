@@ -1,6 +1,9 @@
 package pkglint
 
-import "strings"
+import (
+	"netbsd.org/pkglint/textproc"
+	"strings"
+)
 
 type MkVarUseChecker struct {
 	use     *MkVarUse
@@ -72,9 +75,9 @@ func (ck *MkVarUseChecker) checkModifiers() {
 	ck.checkModifiersSuffix()
 	ck.checkModifiersRange()
 
-	// TODO: Add checks for a single modifier, among them:
-	// TODO: Suggest to replace ${VAR:@l@-l${l}@} with the simpler ${VAR:S,^,-l,}.
-	// TODO: Suggest to replace ${VAR:@l@${l}suffix@} with the simpler ${VAR:=suffix}.
+	for _, mod := range ck.use.modifiers {
+		ck.checkModifierLoop(mod)
+	}
 	// TODO: Investigate why :Q is not checked at this exact place.
 }
 
@@ -131,6 +134,55 @@ func (ck *MkVarUseChecker) checkModifiersRange() {
 		"the year 2006.")
 	fix.Replace(varuse.Mod(), ":[1]")
 	fix.Apply()
+}
+
+func (ck *MkVarUseChecker) checkModifierLoop(mod MkVarUseModifier) {
+	str := mod.String()
+	if !hasSuffix(str, "@") {
+		return
+	}
+	lex := textproc.NewLexer(str[:len(str)-1])
+	if !lex.SkipByte('@') {
+		return
+	}
+	varname := lex.NextBytesSet(textproc.Alnum)
+	if varname == "" || !lex.SkipByte('@') {
+		return
+	}
+	body := lex.Rest()
+	// TODO: Are MkVarUse interpreted the same in the before/after modifiers?
+	if !matches(body, `^[-A-Za-z0-9 $();_{}]+$`) {
+		return
+	}
+	varnameUse := "${" + varname + "}"
+
+	n := 0
+	ck.MkLine.ForEachUsedText(str, VucRunTime, func(varUse *MkVarUse, time VucTime) {
+		if varUse.varname == varname {
+			n++
+		}
+	})
+	if n != 1 {
+		return
+	}
+
+	if rest := strings.TrimSuffix(body, varnameUse); len(rest) < len(body) {
+		simpler := "S,^," + rest + ","
+		fix := ck.MkLine.Autofix()
+		fix.Notef("The modifier %q can be replaced with the simpler %q.",
+			str, simpler)
+		fix.Replace(str, simpler)
+		fix.Apply()
+	}
+
+	if rest := strings.TrimPrefix(body, varnameUse); len(rest) < len(body) {
+		simpler := "=" + rest
+		fix := ck.MkLine.Autofix()
+		fix.Notef("The modifier %q can be replaced with the simpler %q.",
+			str, simpler)
+		fix.Replace(str, simpler)
+		fix.Apply()
+	}
 }
 
 func (ck *MkVarUseChecker) checkVarname(time VucTime) {

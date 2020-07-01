@@ -55,8 +55,6 @@ type Package struct {
 	// TODO: Include files with multiple-inclusion guard only once.
 	//
 	// TODO: Include files without multiple-inclusion guard as often as needed.
-	//
-	// TODO: Set an upper limit, to prevent denial of service.
 	included Once
 
 	// Does the package have any .includes?
@@ -540,7 +538,7 @@ func (pkg *Package) loadPlistDirs(plistFilename CurrPath) {
 	}
 	for _, plistLine := range plistLines {
 		if plistLine.HasPath() {
-			rank := NewPlistRank(plistLine.Basename)
+			rank := NewPlistRank(plistLine.Line.Basename)
 			pkg.PlistLines.Add(plistLine, rank)
 		}
 		for _, cond := range plistLine.conditions {
@@ -661,15 +659,9 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 
 	pkg.checkDistinfoExists()
 
-	// TODO: There are other REPLACE_* variables which are probably also affected by NO_CONFIGURE.
-	vars := pkg.vars
-	if noConfigureLine := vars.FirstDefinition("NO_CONFIGURE"); noConfigureLine != nil {
-		if replacePerlLine := vars.FirstDefinition("REPLACE_PERL"); replacePerlLine != nil {
-			replacePerlLine.Warnf("REPLACE_PERL is ignored when NO_CONFIGURE is set (in %s).",
-				replacePerlLine.RelMkLine(noConfigureLine))
-		}
-	}
+	pkg.checkReplaceInterpreter()
 
+	vars := pkg.vars
 	if !vars.IsDefined("LICENSE") && !vars.IsDefined("META_PACKAGE") {
 		line := NewLineWhole(filename)
 		line.Errorf("Each package must define its LICENSE.")
@@ -740,6 +732,34 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 	pkg.CheckVarorder(mklines)
 
 	SaveAutofixChanges(mklines.lines)
+}
+
+func (pkg *Package) checkReplaceInterpreter() {
+	vars := pkg.vars
+	noConfigureLine := vars.FirstDefinition("NO_CONFIGURE")
+	if noConfigureLine == nil {
+		return
+	}
+
+	// See mk/configure/replace-interpreter.mk.
+	varnames := [...]string{
+		"REPLACE_AWK",
+		"REPLACE_BASH",
+		"REPLACE_CSH",
+		"REPLACE_KSH",
+		"REPLACE_PERL",
+		"REPLACE_PERL6",
+		"REPLACE_SH",
+		"REPLACE_INTERPRETER"}
+
+	for _, varname := range varnames {
+		mkline := vars.FirstDefinition(varname)
+		if mkline == nil {
+			continue
+		}
+		mkline.Warnf("%s is ignored when NO_CONFIGURE is set (in %s).",
+			varname, mkline.RelMkLine(noConfigureLine))
+	}
 }
 
 func (pkg *Package) checkDistinfoExists() {
@@ -1176,14 +1196,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 		}
 	}
 
-	if pkgnameLine != nil && (pkgname == distname || pkgname == "${DISTNAME}") {
-		if !pkgnameLine.HasComment() {
-			pkgnameLine.Notef("This assignment is probably redundant " +
-				"since PKGNAME is ${DISTNAME} by default.")
-			pkgnameLine.Explain(
-				"To mark this assignment as necessary, add a comment to the end of this line.")
-		}
-	}
+	pkg.checkPkgnameRedundant(pkgnameLine, pkgname, distname)
 
 	if pkgname == "" && distnameLine != nil && !containsVarUse(distname) && !matches(distname, rePkgname) {
 		distnameLine.Warnf("As DISTNAME is not a valid package name, please define the PKGNAME explicitly.")
@@ -1217,6 +1230,23 @@ func (pkg *Package) determineEffectivePkgVars() {
 				pkg.EffectivePkgname, pkg.EffectivePkgbase, pkg.EffectivePkgversion)
 		}
 	}
+}
+
+func (pkg *Package) checkPkgnameRedundant(pkgnameLine *MkLine, pkgname string, distname string) {
+	if pkgnameLine == nil || pkgnameLine.HasComment() {
+		return
+	}
+	if pkgname != distname && pkgname != "${DISTNAME}" {
+		return
+	}
+	pkgnameInfo := pkg.redundant.vars["PKGNAME"]
+	if len(pkgnameInfo.vari.WriteLocations()) >= 2 {
+		return
+	}
+	pkgnameLine.Notef("This assignment is probably redundant " +
+		"since PKGNAME is ${DISTNAME} by default.")
+	pkgnameLine.Explain(
+		"To mark this assignment as necessary, add a comment to the end of this line.")
 }
 
 // nbPart determines the smallest part of the package version number,
@@ -1253,7 +1283,7 @@ func (pkg *Package) pkgnameFromDistname(pkgname, distname string, diag Diagnoser
 					newDistname = strings.ToLower(newDistname)
 				} else if ok, subst := mod.Subst(newDistname); ok {
 					if subst == newDistname && !containsVarUse(subst) {
-						diag.Notef("The modifier :%s does not have an effect.", mod.Text)
+						diag.Notef("The modifier :%s does not have an effect.", mod.String())
 					}
 					newDistname = subst
 				} else {
