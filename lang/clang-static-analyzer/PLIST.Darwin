@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2017/01/11 00:19:22 minskim Exp $
-bin/set-xcode-analyzer
