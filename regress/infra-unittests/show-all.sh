@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: show-all.sh,v 1.2 2020/07/01 09:10:11 rillig Exp $
+# $NetBSD: show-all.sh,v 1.3 2020/07/01 09:13:12 rillig Exp $
 #
 # Tests for the show-all target from mk/misc/show.mk.
 #
@@ -168,7 +168,7 @@ VAR_ENV=		value1 value2
 VAR_ARGS=		value1 value2
 
 _VARGROUPS+=		var
-_VARGROUPS_WIDTH.var=	15
+_VARGROUP_WIDTH.var=	15
 _PKG_VARS.var=		VAR_PLAIN VAR_PLAIN_LONG_NAME
 _PKG_VARS.var+=		VAR_ENV VAR_ENV_LONG_NAME
 _PKG_VARS.var+=		VAR_ARGS VAR_ARGS_LONG_NAME
@@ -185,14 +185,16 @@ EOF
 
 	create_file 'expected' <<'EOF'
 var:
-  pkg   VAR_PLAIN=      "$$var $${var} $$other $$$$"
+  pkg   VAR_PLAIN=      value
   pkg   VAR_PLAIN_LONG_NAME # undefined
   pkg   VAR_ENV=        \
-                        "$$var $${var} $$other $$$$" \
+                        value1 \
+                        value2 \
                         # end of VAR_ENV (sorted)
   pkg   VAR_ENV_LONG_NAME # undefined
   pkg   VAR_ARGS=       \
-                        "$$var $${var} $$other $$$$" \
+                        value1 \
+                        value2 \
                         # end of VAR_ARGS
   pkg   VAR_ARGS_LONG_NAME # undefined
 
