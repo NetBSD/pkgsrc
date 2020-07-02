@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 14:52:49 nia Exp $
+
+SHA1 (lua-fifo-0.2.tar.gz) = 687113bfc9cc7af2fd0f2950ed1a7c53592010de
+RMD160 (lua-fifo-0.2.tar.gz) = 05ce9df75d915f6b9622c57296df3e964e3e7d65
+SHA512 (lua-fifo-0.2.tar.gz) = db2e0d2117c70ab0daa6e83141b95f198689e6568aab51e8300ca5577c1a517de249b9514ad8a3476239da3d9bceb699726ead913126817c0801f7ec5d419306
+Size (lua-fifo-0.2.tar.gz) = 5210 bytes
