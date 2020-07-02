@@ -1,0 +1,2 @@
+A Lua library for base2, base16, base32, base64, base85 decoding
+and encoding of data strings.
