@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 14:52:33 nia Exp $
+
+SHA1 (lua-binaryheap-0.4.tar.gz) = 4c7a5373ce79c74ec16a9c5293268cea9e852c18
+RMD160 (lua-binaryheap-0.4.tar.gz) = 9eb1db2215386c901c34e0146c864c1a695f20e3
+SHA512 (lua-binaryheap-0.4.tar.gz) = 2d26108af024f6de5873d9ad2a10dc2fec5b603770c5ff3b3b36289c73261ad6952ed790caad6886bd313a41f9bd42a8257585dd653508d7f1bcd5d1236d2e12
+Size (lua-binaryheap-0.4.tar.gz) = 13556 bytes
