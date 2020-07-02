@@ -1,0 +1,14 @@
+Allows you to render ERB style templates but with Lua. Supports <%
+%>, <%= %> and <%- %> tags (with optional newline slurping) for
+embedding code.
+
+How it works:
+
+- Templates are transparently translated into Lua code and then
+  loaded as a function. Rendering a compiled template is very fast.
+
+- Any compile time errors are rewritten to show the original source
+  position in the template.
+
+- The parser is aware of strings so you can put closing tags inside
+  of a string literal without any problems.
