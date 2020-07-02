@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3859 2020/07/02 14:53:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3860 2020/07/02 14:54:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6159,3 +6159,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/lua-cmark version 0.29.0 [nia 2020-07-02]
 	Added devel/lua-basexx version 0.4.1 [nia 2020-07-02]
 	Added devel/lua-binaryheap version 0.4 [nia 2020-07-02]
+	Added devel/lua-fifo version 0.2 [nia 2020-07-02]
