@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 13:14:59 nia Exp $
+
+SHA1 (lua-markdown-0.33.tar.gz) = 692030bee6553756bd82c527b23446c05c4263b3
+RMD160 (lua-markdown-0.33.tar.gz) = e0ba37a6eb3c0606070740c1bc6f504d47899d3d
+SHA512 (lua-markdown-0.33.tar.gz) = 37e29cb77d9d1176e6fd1f9c02faf3e277b23992a85a0db9dbe9b935ac09e3c274623a8e53143e7c8b3731060b3114da729c5069707a8ac5520744032551fbd5
+Size (lua-markdown-0.33.tar.gz) = 35028 bytes
