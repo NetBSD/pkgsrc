@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.mess,v 1.1 2020/07/02 17:46:26 nia Exp $
+
+Use libc on NetBSD too.
+
+--- Makefile.mess.orig	2017-04-13 21:00:05.000000000 +0000
++++ Makefile.mess
+@@ -12,7 +12,9 @@ else
+ 	LDFLAGS += -bundle -undefined dynamic_lookup
+ endif
+ 
+-ifneq ($(uname),OpenBSD)
++ifeq ($(uname),NetBSD)
++else ifeq ($(uname),OpenBSD)
++else
+ 	# This is more or less what libressl does
+ 	# See http://openbsd.cs.toronto.edu/cgi-bin/cvsweb/src/lib/libssl/src/crypto/mem_clr.c?rev=1.4&content-type=text/x-cvsweb-markup
+ 	CFLAGS += -DOPENSSL_cleanse=explicit_bzero
