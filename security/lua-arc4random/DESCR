@@ -1,0 +1,9 @@
+The arc4random family of functions provides a cryptographic pseudorandom
+number generator automatically seeded from the system entropy pool and
+safe to use from multiple threads.  arc4random is designed to prevent an
+adversary from guessing outputs, unlike rand(3) and random(3), and is
+faster and more convenient than reading from /dev/urandom directly.
+
+This is a Lua wrapper for arc4random(3), portable to systems that
+do and don't have it natively in libc. On systems where arc4random
+may be insecure it provides a replacement.
