@@ -1,10 +1,31 @@
-$NetBSD: patch-configure.ac,v 1.1 2018/07/29 08:41:18 schmonz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/07/02 08:50:09 schmonz Exp $
 
 Remove anonymous inner functions to build with clang.
+Remove outdated OpenSSL check to build with 1.1.x.
 
---- configure.ac.orig	2018-07-08 21:13:05.924307278 +0000
+--- configure.ac.orig	2015-04-30 00:53:36.000000000 +0000
 +++ configure.ac
-@@ -188,37 +188,6 @@ AC_SEARCH_LIBS([getopt_long],
+@@ -149,19 +149,6 @@ AS_IF([ test "x$enable_tls" != "xno" ],
+                        [
+                          AC_MSG_RESULT([yes])
+                          AC_SEARCH_LIBS([RSA_sign], [ssl crypto], [], [ AC_MSG_FAILURE([--enable-tls was given but OpenSSL was not found]) ])
+-                         AC_SEARCH_LIBS([SSL_library_init],
+-                                        [ssl crypto],
+-                                        [ LIBS="$LIBS -lssl"
+-                                          AC_DEFINE([HAVE_LIBSSL], [1])
+-                                          AC_MSG_CHECKING([for OpenSSL libraries (for TLS support)]) 
+-                                          AC_MSG_RESULT([yes])
+-                                        ],
+-                                        [ AS_IF([ test "x$enable_tls" = "xcheck" ],
+-                                                [ AC_MSG_CHECKING([for OpenSSL libraries (for TLS support)])
+-                                                  AC_MSG_RESULT([no, TLS disabled]) ],
+-                                                [ AC_MSG_FAILURE([--enable-tls was given but OpenSSL was not found])
+-                                                ])
+-                                        ])
+                        ],
+                        [
+                          AC_MSG_RESULT([no])
+@@ -188,37 +175,6 @@ AC_SEARCH_LIBS([getopt_long],
                                  [ AC_MSG_FAILURE([unable to compile without getopt_long(), you may need to install the libgnugetopt package/port]) ])
                 ])
  
