@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3847 2020/07/02 10:45:47 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3848 2020/07/02 10:55:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6147,3 +6147,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/2bwm to 0.3 [pin 2020-07-01]
 	Updated net/wireshark to 3.2.5 [adam 2020-07-02]
 	Updated lang/clang to 10.0.0nb4 [wiz 2020-07-02]
+	Updated www/firefox to 78.0.1 [ryoon 2020-07-02]
