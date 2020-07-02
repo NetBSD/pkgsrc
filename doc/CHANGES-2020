@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3845 2020/07/01 18:30:19 pin Exp $
+$NetBSD: CHANGES-2020,v 1.3846 2020/07/02 06:18:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6145,3 +6145,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py-mypy to 0.782 [adam 2020-07-01]
 	Updated geography/gama to 2.09 [gdt 2020-07-01]
 	Updated wm/2bwm to 0.3 [pin 2020-07-01]
+	Updated net/wireshark to 3.2.5 [adam 2020-07-02]
