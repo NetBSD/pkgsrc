@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/02 17:59:02 nia Exp $
+${LUA_CDIR}/bcrypt.so

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 17:59:02 nia Exp $
+
+SHA1 (lua-bcrypt-2.1.5.tar.gz) = 367bc2dd4b48dd428eec12ac224ea6ff8fc193ad
+RMD160 (lua-bcrypt-2.1.5.tar.gz) = 2a76e963638eff00e2b3c60974d6375f09dff9e3
+SHA512 (lua-bcrypt-2.1.5.tar.gz) = 0cc418a67a1eb66091665a7e9cf0a1fa65a8faae4d22e5a92f9d724a346326ab92b14e6f4d6fe46cfb8ec00bbe8b876020e754bcb4dff368a6b17e5a9eada8ef
+Size (lua-bcrypt-2.1.5.tar.gz) = 37369 bytes
+SHA1 (patch-Makefile.mess) = 0c1774023b6fbe91095c62d8c18fe1f462a811bb
