@@ -1,24 +1,27 @@
-# $NetBSD: Makefile,v 1.4 2020/07/02 10:26:17 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/07/02 22:06:14 nia Exp $
 
-DISTNAME=	cqueues-20171014
+DISTNAME=	cqueues-20200603
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel lua
-MASTER_SITES=	http://25thandclement.com/~william/projects/releases/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wahern/}
+GITHUB_PROJECT=	cqueues
+GITHUB_TAG=	rel-${PKGVERSION_NOREV}
 
 MAINTAINER=	alnsn@NetBSD.org
 HOMEPAGE=	http://25thandclement.com/~william/projects/releases/
 COMMENT=	Stackable Continuation Queues for Lua
 LICENSE=	mit
 
-USE_LANGUAGES=	c
 USE_TOOLS+=	gmake m4
 
 MAKE_ENV+=	prefix=${PREFIX}
 
 BUILD_TARGET=	all${_LUA_DOT_VERSION}
 INSTALL_TARGET=	install${_LUA_DOT_VERSION}
+
+MAKE_FLAGS+=	LUA_APIS=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
+
+LUA_VERSIONS_ACCEPTED=	53 52 51
 
 .include "../../lang/lua/module.mk"
 .include "../../security/openssl/buildlink3.mk"
