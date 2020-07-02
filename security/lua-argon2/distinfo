@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 14:02:36 nia Exp $
+
+SHA1 (lua-argon2-3.0.1.tar.gz) = 02fa984df9fd9fc98918033b759c3653a0cf3d92
+RMD160 (lua-argon2-3.0.1.tar.gz) = b558218a195cf9745b62e16e3bc9d1038c3db33d
+SHA512 (lua-argon2-3.0.1.tar.gz) = baa21cefc31cd43ee1e339558479e1f262f7c4cc6a180fd684a18fa8631283e9f345b4c3ee0dac8d0c025dfa5877e19b800411b8e51caa4a46ecac9843ec48fa
+Size (lua-argon2-3.0.1.tar.gz) = 13836 bytes
+SHA1 (patch-Makefile) = 22933ef94bac8fcf19fcc09f4e948c4ad16db75e
