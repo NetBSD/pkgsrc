@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 20:48:09 nia Exp $
+
+SHA1 (luv-1.36.0-0.tar.gz) = f070256fe5567c1d475d2c6337c01d7e87d3a4aa
+RMD160 (luv-1.36.0-0.tar.gz) = 950a7289b11105be4d438fa6a022e1225c6ec141
+SHA512 (luv-1.36.0-0.tar.gz) = 9972d82bacdcf528d95047f3f2cfbceb523f6d6f5782e577b24cdd25f1292df745d3fb116b6fbd376d797df47c378ad25d5b673044d9ab5678af6e5fef5eca49
+Size (luv-1.36.0-0.tar.gz) = 1387184 bytes
+SHA1 (patch-src_luv.c) = 52ec94671dfdc86e421119ddca13646ee7c6e2e2
+SHA1 (patch-src_private.h) = f086e40c912851a319626986840fe75eeb0e52f5
