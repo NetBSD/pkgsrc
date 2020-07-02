@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 14:10:04 nia Exp $
+
+SHA1 (lua-cmark-0.29.0.tar.gz) = 0aad960a5682a0d78cb1dc7c15462071a6be8db0
+RMD160 (lua-cmark-0.29.0.tar.gz) = 711e271e740c230b78641518d7025dca16a07539
+SHA512 (lua-cmark-0.29.0.tar.gz) = b773162da024277a55672015b3497ee751daca9c5fe514a5270d43e3e2d9fba31ed36d15fefe80f7367a5829dc303d7828309ec34cef0bfb334e29a191137f05
+Size (lua-cmark-0.29.0.tar.gz) = 208150 bytes
+SHA1 (patch-Makefile) = 90ecd6f58a5c01cccc4dc8dba53086683c7b2e8e
