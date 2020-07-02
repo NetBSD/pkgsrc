@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.mess,v 1.1 2020/07/02 17:59:02 nia Exp $
+$NetBSD: patch-Makefile.mess,v 1.2 2020/07/02 20:09:03 nia Exp $
 
-Just use libc strlcpy and arc4random on NetBSD.
+- Just use libc strlcpy and arc4random on NetBSD.
+- Support SunOS.
 
 --- Makefile.mess.orig	2020-05-20 07:20:53.000000000 +0000
 +++ Makefile.mess
@@ -18,3 +19,15 @@ Just use libc strlcpy and arc4random on NetBSD.
  
  	ifeq ($(uname),Linux)
  		SRCS += compat/sha/sha512.c
+@@ -37,6 +40,11 @@ ifneq ($(uname),OpenBSD)
+ 		LDFLAGS += -lrt
+ 	endif
+ 
++	ifeq ($(uname),SunOS)
++		SRCS += compat/sha/sha512.c
++		SRCS += compat/getentropy/getentropy_solaris.c
++	endif
++
+ 	ifeq ($(uname),Darwin)
+ 		SRCS += compat/getentropy/getentropy_osx.c
+ 	endif
