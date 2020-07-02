@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/07/02 10:26:18 nia Exp $
+# $NetBSD: Makefile,v 1.12 2020/07/02 12:13:36 nia Exp $
 
 DISTNAME=	luarocks-3.3.1
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
@@ -18,6 +18,8 @@ USE_TOOLS+=	unzip:run	# extraction
 MAKE_FILE=	GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
+
+PREFER.unzip=	pkgsrc
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
