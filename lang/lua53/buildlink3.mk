@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2015/07/20 11:30:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/07/02 21:42:23 nia Exp $
 
 BUILDLINK_TREE+=	lua53
 
@@ -15,6 +15,14 @@ BUILDLINK_DEPMETHOD.lua53?=	${BUILDLINK_DEPMETHOD.lua}
 # -llua -> -llua5.3
 BUILDLINK_TRANSFORM+=		l:lua:lua5.3
 BUILDLINK_INCDIRS.lua53+=	include/lua-5.3
+
+.if defined(USE_CMAKE)
+# used by FindLua.cmake
+CMAKE_ARGS+=	-DLua_FIND_VERSION_EXACT=ON
+CMAKE_ARGS+=	-DLua_FIND_VERSION_COUNT=2
+CMAKE_ARGS+=	-DLua_FIND_VERSION_MAJOR=5
+CMAKE_ARGS+=	-DLua_FIND_VERSION_MINOR=3
+.endif
 
 .include "../../mk/readline.buildlink3.mk"
 .endif # LUA53_BUILDLINK3_MK
