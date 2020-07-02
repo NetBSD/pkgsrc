@@ -103,7 +103,7 @@ _check-shlibs: error-check .PHONY
 	${PKGSRC_SETENV} ${CHECK_SHLIBS_NATIVE_ENV} ${AWK} -f ${CHECK_SHLIBS_NATIVE} > ${ERROR_DIR}/${.TARGET}
 .endif
 
-.if !empty(CHECK_SHLIBS_AUTOFIX:M[Yy][Ee][Ss] && ${OBJECT_FMT} == "Mach-O")
+.if !empty(CHECK_SHLIBS_AUTOFIX:M[Yy][Ee][Ss]) && ${OBJECT_FMT} == "Mach-O"
 privileged-install-hook: _check-shlibs-autofix
 _check-shlibs-autofix: error-check .PHONY
 	@${STEP_MSG} "Attempting to fix missing run-time search paths in ${PKGNAME}"
