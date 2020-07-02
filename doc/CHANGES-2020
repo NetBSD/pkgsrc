@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3846 2020/07/02 06:18:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3847 2020/07/02 10:45:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6146,3 +6146,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/gama to 2.09 [gdt 2020-07-01]
 	Updated wm/2bwm to 0.3 [pin 2020-07-01]
 	Updated net/wireshark to 3.2.5 [adam 2020-07-02]
+	Updated lang/clang to 10.0.0nb4 [wiz 2020-07-02]
