@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/07/29 20:35:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/07/02 10:26:17 nia Exp $
 
 DISTNAME=	rel-${VERSION}
 VERSION=	20130419
 PKGNAME=	${EMACS_PKGNAME_PREFIX}lua-mode-${VERSION}
-CATEGORIES=	devel
+CATEGORIES=	devel lua
 MASTER_SITES=	https://github.com/immerrr/lua-mode/archive/
 
 MAINTAINER=	cheusov@NetBSD.org

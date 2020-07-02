@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2018/11/20 17:29:24 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/02 10:26:18 nia Exp $
 
 DISTNAME=		std.normalize-2.0.2
 PKGNAME=		${DISTNAME:S/std.normalize/${LUA_PKGPREFIX}-std-normalize/}
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_GITHUB:=lua-stdlib/}
 GITHUB_PROJECT=		normalize
 GITHUB_TAG=		v${PKGVERSION_NOREV}
-MASTER_SITES=		${MASTER_SITE_GITHUB:=lua-stdlib/}
-
-CATEGORIES=		devel
-COMMENT=		Normalized Lua functions
-MAINTAINER=		pkgsrc-users@NetBSD.org
 
 HOMEPAGE=		https://lua-stdlib.github.io/normalize
+COMMENT=		Normalized Lua functions
 LICENSE=		mit
+MAINTAINER=		pkgsrc-users@NetBSD.org
 
 DEPENDS+=		${LUA_PKGPREFIX}-std-_debug-[0-9]*:../../devel/lua-std-_debug
 

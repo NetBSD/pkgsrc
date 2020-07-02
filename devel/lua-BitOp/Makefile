@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2020/06/30 15:37:33 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/07/02 10:26:16 nia Exp $
 
 DISTNAME=	LuaBitOp-1.0.2
 PKGNAME=	${DISTNAME:S/Lua/${LUA_PKGPREFIX}-/}
 PKGREVISION=	1
-CATEGORIES=	devel
+CATEGORIES=	devel lua
 MASTER_SITES=	http://bitop.luajit.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
