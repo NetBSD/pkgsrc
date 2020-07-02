@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/07/02 10:59:24 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/02 11:00:29 nia Exp $
 
 DISTNAME=	lua-term-0.07
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
-CATEGORIES=	devel
+CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hoelzro/}
 GITHUB_PROJECT=	lua-term
 
