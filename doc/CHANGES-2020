@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3865 2020/07/02 20:00:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3866 2020/07/02 20:48:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6165,3 +6165,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/lua-arc4random version 1.3.4 [nia 2020-07-02]
 	Added security/lua-bcrypt version 2.1.5 [nia 2020-07-02]
 	Added archivers/lua-zlib version 1.2 [nia 2020-07-02]
+	Added devel/lua-luv version 1.36.0 [nia 2020-07-02]
