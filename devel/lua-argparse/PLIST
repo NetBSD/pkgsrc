@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/02 11:36:36 nia Exp $
+${LUA_LDIR}/argparse.lua
