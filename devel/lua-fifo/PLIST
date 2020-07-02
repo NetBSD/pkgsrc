@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/02 14:52:49 nia Exp $
+${LUA_LDIR}/fifo.lua
