@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/02 14:10:04 nia Exp $
+${LUA_CDIR}/cmark.so
+${LUA_LDIR}/cmark/builder.lua
