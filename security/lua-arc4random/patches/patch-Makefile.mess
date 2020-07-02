@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.mess,v 1.1 2020/07/02 17:46:26 nia Exp $
+$NetBSD: patch-Makefile.mess,v 1.2 2020/07/02 20:07:29 nia Exp $
 
-Use libc on NetBSD too.
+- Use libc on NetBSD too.
+- Support SunOS.
 
 --- Makefile.mess.orig	2017-04-13 21:00:05.000000000 +0000
 +++ Makefile.mess
@@ -15,3 +16,15 @@ Use libc on NetBSD too.
  	# This is more or less what libressl does
  	# See http://openbsd.cs.toronto.edu/cgi-bin/cvsweb/src/lib/libssl/src/crypto/mem_clr.c?rev=1.4&content-type=text/x-cvsweb-markup
  	CFLAGS += -DOPENSSL_cleanse=explicit_bzero
+@@ -32,6 +34,11 @@ ifneq ($(uname),OpenBSD)
+ 		LDFLAGS += -lrt
+ 	endif
+ 
++	ifeq ($(uname),SunOS)
++		SRCS += compat/sha/sha512.c
++		SRCS += compat/getentropy/getentropy_solaris.c
++	endif
++
+ 	ifeq ($(uname),Darwin)
+ 		SRCS += compat/getentropy/getentropy_osx.c
+ 	endif
