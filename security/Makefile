@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.769 2020/07/02 14:02:36 nia Exp $
+# $NetBSD: Makefile,v 1.770 2020/07/02 17:46:26 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -206,6 +206,7 @@ SUBDIR+=	libyubikey
 SUBDIR+=	log2timeline
 SUBDIR+=	logcheck
 SUBDIR+=	lsh
+SUBDIR+=	lua-arc4random
 SUBDIR+=	lua-argon2
 SUBDIR+=	lua-sec
 SUBDIR+=	lxqt-openssh-askpass

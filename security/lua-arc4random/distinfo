@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 17:46:26 nia Exp $
+
+SHA1 (lua-arc4random-1.3.4.tar.gz) = 300c7397ea4bf44dd970fca9eb58c4c04f87e0c9
+RMD160 (lua-arc4random-1.3.4.tar.gz) = c4e42556458ac82cbfccecdcc0791a0509abb726
+SHA512 (lua-arc4random-1.3.4.tar.gz) = 8af54d0b44a823e39a5dfdfef0e8e74883a170cce7bf94a7093734b4a35050b5eada12b14ff17a7c3a8fb0b7849a98e8d542b25b1b4f993fd76919a52c16c87a
+Size (lua-arc4random-1.3.4.tar.gz) = 23194 bytes
+SHA1 (patch-Makefile.mess) = 8571ccd75bb392c0f595f35da53410a1a74d82cc
