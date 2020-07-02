@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 21:49:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/02 10:26:17 nia Exp $
 
 DISTNAME=	cqueues-20171014
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
-CATEGORIES=	devel
+CATEGORIES=	devel lua
 MASTER_SITES=	http://25thandclement.com/~william/projects/releases/
 EXTRACT_SUFX=	.tgz
 

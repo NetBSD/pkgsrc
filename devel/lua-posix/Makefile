@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/01/29 11:30:01 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/07/02 10:26:18 nia Exp $
 
 DISTNAME=	luaposix-34.1.1
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
-CATEGORIES=	devel
+CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luaposix/}
 GITHUB_PROJECT=	luaposix
 GITHUB_TAG=	v${PKGVERSION_NOREV}

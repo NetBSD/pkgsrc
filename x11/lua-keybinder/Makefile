@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2020/03/10 22:09:10 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/07/02 10:26:19 nia Exp $
 
 PKGREVISION= 10
 .include "../../x11/keybinder/Makefile.common"
 
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	x11
+CATEGORIES=	x11 lua
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Lua bindings for the keybinder library

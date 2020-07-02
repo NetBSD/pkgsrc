@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2019/11/03 10:39:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/07/02 10:26:17 nia Exp $
 # used by devel/lua-lrexlib-posix/Makefile
 # used by devel/lua-lrexlib-pcre/Makefile
 # used by devel/lua-lrexlib-onig/Makefile
@@ -7,7 +7,7 @@
 
 DISTNAME=	lrexlib-rel-${VERSION:S/./-/g}
 PKGNAME=	${LUA_PKGPREFIX}-lrexlib-${ENGINE}-${VERSION}
-CATEGORIES=	devel
+CATEGORIES=	devel lua
 MASTER_SITES=	-https://github.com/rrthomas/lrexlib/archive/rel-${VERSION:S/./-/g}.zip
 EXTRACT_SUFX=	.zip
 

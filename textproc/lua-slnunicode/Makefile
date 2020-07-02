@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2020/06/30 14:48:07 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/07/02 10:26:19 nia Exp $
 
 DISTNAME=	slnunicode-1.1apl1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
-CATEGORIES=	textproc
+CATEGORIES=	textproc lua
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	ryoon@NetBSD.org

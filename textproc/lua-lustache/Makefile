@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/07/01 11:14:27 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/02 10:26:19 nia Exp $
 
 DISTNAME=	lustache-1.3.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc
+CATEGORIES=	textproc lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Olivine-Labs/}
 GITHUB_PROJECT=	lustache
 GITHUB_TAG=	v${PKGVERSION_NOREV}-0
