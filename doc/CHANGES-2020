@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3855 2020/07/02 14:02:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3856 2020/07/02 14:05:53 roy Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6155,3 +6155,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/powerdns to 4.3.0 [otis 2020-07-02]
 	Added textproc/lua-markdown version 0.33 [nia 2020-07-02]
 	Added security/lua-argon2 version 3.0.1 [nia 2020-07-02]
+	Updated net/dhcpcd to 9.1.3 [roy 2020-07-02]
