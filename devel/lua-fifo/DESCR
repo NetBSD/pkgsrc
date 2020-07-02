@@ -1,0 +1,2 @@
+A Lua library/'class' that implements a FIFO. Objects in the FIFO
+can be of any type, including nil.
