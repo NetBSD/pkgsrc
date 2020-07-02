@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3854 2020/07/02 13:15:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3855 2020/07/02 14:02:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6154,3 +6154,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-argparse version 0.7.0 [nia 2020-07-02]
 	Updated net/powerdns to 4.3.0 [otis 2020-07-02]
 	Added textproc/lua-markdown version 0.33 [nia 2020-07-02]
+	Added security/lua-argon2 version 3.0.1 [nia 2020-07-02]
