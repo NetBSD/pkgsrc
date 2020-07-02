@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3867 2020/07/02 21:41:07 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3868 2020/07/02 22:06:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6167,3 +6167,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added archivers/lua-zlib version 1.2 [nia 2020-07-02]
 	Added devel/lua-luv version 1.36.0 [nia 2020-07-02]
 	Updated devel/lua-filesystem to 1.8.0 [nia 2020-07-02]
+	Updated devel/lua-cqueues to 20200603 [nia 2020-07-02]
