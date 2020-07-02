@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:26 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/02 10:16:59 nia Exp $
 #
 
 DISTNAME=	LuaJIT-1.1.5
-CATEGORIES=	lang
+CATEGORIES=	lang lua
 MASTER_SITES=	http://luajit.org/download/
 
 MAINTAINER=	pho@cielonegro.org
