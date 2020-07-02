@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/07/02 17:24:56 alnsn Exp $
+# $NetBSD: Makefile,v 1.15 2020/07/02 20:53:10 nia Exp $
 
 DISTNAME=	luarocks-3.3.1
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel lua
 MASTER_SITES=	https://luarocks.org/releases/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://luarocks.org/
 COMMENT=	Deployment and management system for Lua modules
 LICENSE=	mit
