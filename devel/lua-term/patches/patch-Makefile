@@ -1,0 +1,36 @@
+$NetBSD: patch-Makefile,v 1.1 2020/07/02 10:59:24 nia Exp $
+
+- Don't pass -O3.
+- Use LDFLAGS when linking.
+- DESTDIR support.
+
+--- Makefile.orig	2016-04-06 03:11:44.000000000 +0000
++++ Makefile
+@@ -6,7 +6,7 @@ LUA_LIBDIR      := $(LUA_DIR)/lib/lua/$(
+ LUA_INC         := $(LUA_DIR)/include/lua$(LUA_VER)
+ LUA_SHARE       := $(LUA_DIR)/share/lua/$(LUA_VER)/term
+ CWARNS          := -Wall -pedantic
+-CFLAGS          += $(CWARNS) -O3 -I$(LUA_INC) -fPIC
++CFLAGS          += $(CWARNS) -I$(LUA_INC) -fPIC
+ LIB_OPTION      := -shared
+ 
+ SONAME          := core.so
+@@ -26,13 +26,13 @@ $(SONAME):
+ 	ln -s $(SONAMEV) $@
+ 
+ $(LIBRARY): $(OBJ)
+-	$(CC) $(CFLAGS) $(LIB_OPTION) -o $(LIBRARY) $(OBJ) -lc
++	$(CC) $(LDFLAGS) $(LIB_OPTION) -o $(LIBRARY) $(OBJ) -lc
+ 
+ install:
+-	mkdir -p $(LUA_LIBDIR)
+-	cp $(SONAME) $(LUA_LIBDIR)
+-	mkdir -p $(LUA_SHARE)
+-	cp $(FILES) $(LUA_SHARE)
++	mkdir -p $(DESTDIR)$(LUA_LIBDIR)
++	cp $(SONAME) $(DESTDIR)$(LUA_LIBDIR)
++	mkdir -p $(DESTDIR)$(LUA_SHARE)
++	cp $(FILES) $(DESTDIR)$(LUA_SHARE)
+ 
+ clean:
+ 	$(RM) $(LIBRARY) $(SONAMEV) $(SONAME) *.o
