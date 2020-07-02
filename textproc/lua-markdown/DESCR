@@ -1,0 +1,5 @@
+This is an implementation of the popular text markup language
+Markdown in pure Lua. Markdown can convert documents written in a
+simple and easy to read text format to well-formatted HTML. For a
+more thorough description of Markdown and the Markdown syntax, see
+http://daringfireball.net/projects/markdown/
