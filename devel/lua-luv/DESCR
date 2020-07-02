@@ -1,0 +1,2 @@
+This library makes libuv available to lua scripts.  It was made for the
+luvit project but should usable from nearly any lua project.
