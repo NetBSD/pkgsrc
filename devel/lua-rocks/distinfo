@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2020/07/01 11:06:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/07/02 12:13:36 nia Exp $
 
 SHA1 (luarocks-3.3.1.tar.gz) = b85a4afd890d172994f4ebc95fe647f71de7eeb4
 RMD160 (luarocks-3.3.1.tar.gz) = 937a2d6d62474e3245927dc77fbe982b8ca4f2bb
 SHA512 (luarocks-3.3.1.tar.gz) = 0a695ceb30ae575cbca52abd2aad9675e33a234c53c5d1e125442d874c21e0e3cf6157431f07085e4311f81833680366adfe5c626a66cb5880380b48899a116a
 Size (luarocks-3.3.1.tar.gz) = 241636 bytes
 SHA1 (patch-GNUmakefile) = 1f84ae6e926a57b07abcc65789d784c8e6a0fa75
+SHA1 (patch-src_luarocks_core_cfg.lua) = 24c8c7e66fa12b2daf67924ac8ae0a2458380250
