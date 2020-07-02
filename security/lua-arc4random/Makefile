@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/07/02 17:50:38 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/02 17:52:03 nia Exp $
 
 DISTNAME=	lua-arc4random-1.3.4
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -10,7 +10,7 @@ GITHUB_TAG=	v1.3-4
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/mikejsavage/lua-arc4random
 COMMENT=	Lua wrapper for arc4random(3)
-LICENSE=	mit
+LICENSE=	isc
 
 USE_TOOLS+=	gmake
 
