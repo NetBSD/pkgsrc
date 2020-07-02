@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile.mess,v 1.1 2020/07/02 17:59:02 nia Exp $
+
+Just use libc strlcpy and arc4random on NetBSD.
+
+--- Makefile.mess.orig	2020-05-20 07:20:53.000000000 +0000
++++ Makefile.mess
+@@ -28,8 +28,11 @@ ifneq ($(uname),OpenBSD)
+ 	SRCS += compat/safebfuns.c
+ 	SRCS += compat/bcrypt/bcrypt.c
+ 	SRCS += compat/bcrypt/blowfish.c
+-	SRCS += compat/arc4random/arc4random.c
+-	SRCS += compat/strlcpy.c
++
++	ifneq ($(uname),NetBSD)
++		SRCS += compat/arc4random/arc4random.c
++		SRCS += compat/strlcpy.c
++	endif
+ 
+ 	ifeq ($(uname),Linux)
+ 		SRCS += compat/sha/sha512.c
