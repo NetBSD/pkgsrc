@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/02 14:02:36 nia Exp $
+${LUA_CDIR}/argon2.so
