@@ -1,0 +1,10 @@
+This module adds UTF-8 support to Lua. It's compatible with Lua's
+own string module, and passes all string and pattern matching tests
+in Lua's test suite.
+
+It also adds some useful routines against UTF-8 features:
+
+- a convenient interface to escape Unicode sequences in strings.
+- string insert/remove, since UTF-8 substring extract may be expensive.
+- calculate Unicode width, useful when implementing e.g. console emulator.
+- a useful interface to translate Unicode offsets and byte offsets.
