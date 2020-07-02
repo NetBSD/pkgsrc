@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.34 2018/12/25 16:24:26 schmonz Exp $
+$NetBSD: distinfo,v 1.35 2020/07/02 08:50:09 schmonz Exp $
 
 SHA1 (spamdyke-5.0.1.tgz) = 4de76158a98b3ee33e7002160446ae36de7c96d2
 RMD160 (spamdyke-5.0.1.tgz) = 7237108ebf0ff2a5c02b7e305985a11e93720f8d
 SHA512 (spamdyke-5.0.1.tgz) = a022c8a8d4a8d74f5249f8e2d901d3de423ee853bbaffaf7e86cece1d19880d9039135892ef6ccb8a2a0fb11532c487402dc97a8dd6d89c9de431752c55f6eb9
 Size (spamdyke-5.0.1.tgz) = 383720 bytes
 SHA1 (patch-configuration.c) = 81548b8a7cc557446d3ecfca3546a129b04a2173
-SHA1 (patch-configure) = 0ff7ecd6b73445664243918001368a73186159b3
-SHA1 (patch-configure.ac) = 5b932db1992c268e80fced15d032d369d1dc40ce
+SHA1 (patch-configure) = 308cde4c9f54c30ce11c7d7c415ebe7caf51732e
+SHA1 (patch-configure.ac) = 23ed678900fbb9b9d1a2613e9267607ac59eb5b8
 SHA1 (patch-md5.c) = d30f421e28fbc6b87c4dc78f4a2e7f5048c61a45
 SHA1 (patch-spamdyke.h) = 689d4774d78b60a4dd2fbb62a99b218aca9b500b
+SHA1 (patch-tls.c) = 1cc05d30dfd3736727c6203a81ebb24c44cd2c1f
