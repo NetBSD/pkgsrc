@@ -221,5 +221,9 @@ WRAPPER_BIN_SH?=	/bin/ksh
 _OPSYS_MISSING_FEATURES+= 	strnlen
 .endif
 
+# This option enables the use of install_name_tool(1).
+_WRAP_EXTRA_ARGS.LD+=	-headerpad_max_install_names
+CWRAPPERS_APPEND.ld+=	-headerpad_max_install_names
+
 # Enables _check-shlibs-autofix.
 CHECK_SHLIBS_AUTOFIX?=   yes
