@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3851 2020/07/02 11:16:30 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3852 2020/07/02 11:37:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6151,3 +6151,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox-l10n to 78.0.1 [ryoon 2020-07-02]
 	Added devel/lua-term version 0.07 [nia 2020-07-02]
 	Added devel/lua-inspect version 3.1.1 [nia 2020-07-02]
+	Added devel/lua-argparse version 0.7.0 [nia 2020-07-02]
