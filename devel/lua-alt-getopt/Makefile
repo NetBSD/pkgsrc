@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/02/18 13:15:22 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/07/02 10:26:16 nia Exp $
 
 DISTNAME=	lua-alt-getopt-0.8.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua-//}
-CATEGORIES=	devel
+CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lua-alt-getopt/}
 
 MAINTAINER=	cheusov@NetBSD.org

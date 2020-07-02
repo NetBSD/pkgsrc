@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/07/01 11:26:42 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/07/02 10:26:18 nia Exp $
 #
 # used by databases/lua-sql-postgres/Makefile
 # used by databases/lua-sql-sqlite3/Makefile
@@ -7,7 +7,7 @@
 
 GITHUB_PROJECT=	luasql
 DISTNAME=	luasql-2.3.2
-CATEGORIES=	databases
+CATEGORIES=	databases lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 

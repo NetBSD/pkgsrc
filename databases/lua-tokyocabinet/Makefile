@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2019/11/02 15:38:01 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/07/02 10:26:18 nia Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.10
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-lua-/-/}
 PKGREVISION=	2
-CATEGORIES=	databases
+CATEGORIES=	databases lua
 MASTER_SITES=	${HOMEPAGE:S/luadoc/luapkg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
