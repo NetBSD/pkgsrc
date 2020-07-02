@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:33:18 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/02 10:26:18 nia Exp $
 
 DISTNAME=	copas-2.0.2
 PKGNAME=	${DISTNAME:S/copas/${LUA_PKGPREFIX}-copas/}
-CATEGORIES=	net
+CATEGORIES=	net lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
 GITHUB_TAG=	v${PKGVERSION:S/./_/g}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
