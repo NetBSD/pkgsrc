@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2020/06/24 10:41:49 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/07/02 10:16:59 nia Exp $
 #
 
 DISTNAME=	LuaJIT-2.0.5
 PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT2/}
 PKGREVISION=	1
-CATEGORIES=	lang
+CATEGORIES=	lang lua
 MASTER_SITES=	http://luajit.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
