@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.13 2020/07/02 20:43:26 nia Exp $
+# $NetBSD: luaversion.mk,v 1.14 2020/07/02 21:42:23 nia Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -163,13 +163,5 @@ _LUA_DOT_VERSION=	${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 LUA_INCDIR=		include/lua-${_LUA_DOT_VERSION}
 LUA_INTERPRETER=	${LOCALBASE}/bin/lua${_LUA_DOT_VERSION}
 LUA_COMPILER=		${LOCALBASE}/bin/luac${_LUA_DOT_VERSION}
-
-.if defined(USE_CMAKE)
-# used by FindLua.cmake
-CMAKE_ARGS+=	-DLua_FIND_VERSION_EXACT=ON
-CMAKE_ARGS+=	-DLua_FIND_VERSION_COUNT=2
-CMAKE_ARGS+=	-DLua_FIND_VERSION_MAJOR=${LUA_VERSION_MAJOR}
-CMAKE_ARGS+=	-DLua_FIND_VERSION_MINOR=${LUA_VERSION_MINOR}
-.endif
 
 .endif  # LUA_LUAVERSION_MK
