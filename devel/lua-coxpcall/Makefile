@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:30:33 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/02 10:26:16 nia Exp $
 
 DISTNAME=	coxpcall-1.16.0
 PKGNAME=	${DISTNAME:S/coxpcall/${LUA_PKGPREFIX}-coxpcall/}
-CATEGORIES=	devel
+CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
 GITHUB_TAG=	v${PKGVERSION:S/./_/g}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
