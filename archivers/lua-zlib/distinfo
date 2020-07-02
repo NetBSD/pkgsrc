@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/02 20:00:23 nia Exp $
+
+SHA1 (lua-zlib-1.2.tar.gz) = 4005d0fc08258742558a8993fa4479307b3771dc
+RMD160 (lua-zlib-1.2.tar.gz) = a41dc59096a121a324b781dc6bff48c2846413c5
+SHA512 (lua-zlib-1.2.tar.gz) = da13239089c1027b0bfb4ee463043b326ef5586206c5d76af8707736da3c03622b2fc38e732761a5b7a6422ad81a09557abc8548f37fef07ada0d4064eabfcf4
+Size (lua-zlib-1.2.tar.gz) = 16612 bytes
