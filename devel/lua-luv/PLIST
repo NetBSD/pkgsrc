@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/02 20:48:09 nia Exp $
+${LUA_CDIR}/luv.so
