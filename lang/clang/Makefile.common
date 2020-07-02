@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2020/07/01 14:46:37 adam Exp $
+# $NetBSD: Makefile.common,v 1.46 2020/07/02 10:45:38 wiz Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -68,7 +68,7 @@ REPLACE_PYTHON+=	www/builtins.py
 
 .if ${OPSYS} == "NetBSD" && ${PKGSRC_COMPILER:Mclang}
 # command to check if clang is using libc++ or libstdc++
-LIBCPP_CHECK!= \
+LIBCPP_CHECK!=	\
 	printf '%s\n' \
 		'\#include <ciso646>' \
 		'\#ifdef _LIBCPP_VERSION' \
