@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2020/06/01 11:11:56 pin Exp $
+# $NetBSD: Makefile,v 1.176 2020/07/02 20:00:23 nia Exp $
 #
 
 COMMENT=	Archivers
@@ -55,6 +55,7 @@ SUBDIR+=	libmspack
 SUBDIR+=	libunrar
 SUBDIR+=	libzip
 SUBDIR+=	lrzip
+SUBDIR+=	lua-zlib
 SUBDIR+=	lxqt-archiver
 SUBDIR+=	lz4
 SUBDIR+=	lz4json
