@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2020/02/15 05:54:35 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/02 10:26:18 nia Exp $
 
 DISTNAME=		std._debug-1.0.1
 PKGNAME=		${DISTNAME:S/std._debug/${LUA_PKGPREFIX}-std-_debug/}
+CATEGORIES=		devel lua
+MASTER_SITES=		${MASTER_SITE_GITHUB:=lua-stdlib/}
 GITHUB_PROJECT=		_debug
 GITHUB_TAG=		v${PKGVERSION_NOREV}
-MASTER_SITES=		${MASTER_SITE_GITHUB:=lua-stdlib/}
 
-CATEGORIES=		devel
-COMMENT=		Debug Hints Library
 MAINTAINER=		pkgsrc-users@NetBSD.org
-
 HOMEPAGE=		https://lua-stdlib.github.io/_debug
+COMMENT=		Debug Hints Library
 LICENSE=		mit
 
 NO_BUILD=		yes
