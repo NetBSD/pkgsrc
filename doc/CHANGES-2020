@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3873 2020/07/03 15:42:51 micha Exp $
+$NetBSD: CHANGES-2020,v 1.3874 2020/07/03 19:01:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6173,3 +6173,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/foliate to 2.4.0 [fox 2020-07-03]
 	Updated www/logswan to 2.1.6 [fcambus 2020-07-03]
 	Updated games/woof to 2.0.0 [micha 2020-07-03]
+	Updated lang/nodejs to 14.5.0 [adam 2020-07-03]
+	Updated lang/nodejs12 to 12.18.2 [adam 2020-07-03]
