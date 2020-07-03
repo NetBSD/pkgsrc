@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 03:32:24 agc Exp $
+$NetBSD: distinfo,v 1.13 2020/07/03 11:37:44 hauke Exp $
 
-SHA1 (zile-2.4.5.tar.gz) = 26514fccfb5717e870c19ff8ab1f9b182791fc23
-RMD160 (zile-2.4.5.tar.gz) = 4dd4a0b438414ad6e49dde7a2c0f3647dc91e165
-SHA512 (zile-2.4.5.tar.gz) = fef54b8e85fb46d09030e9f3525bd900d5f08c43374d914d09cab182b8c015d91e626529312e97a7489a973440cfa1641fa55bcedc5d4708612a58769bbd58e9
-Size (zile-2.4.5.tar.gz) = 1259220 bytes
+SHA1 (zile-2.4.14.tar.gz) = 0cfd3fb38eb4f2b867755a1c4e3bc16a222b4caa
+RMD160 (zile-2.4.14.tar.gz) = 9db14b79606375f3229e176588495066f1c2fba4
+SHA512 (zile-2.4.14.tar.gz) = 0dea56fd13a82015ec73de3139a4b2c27ad4c001ed535f1bae557ee49f9d8a188610a08160998d0a36b95fec42b46a019fd43634ef6502ebd27e162164de98cc
+Size (zile-2.4.14.tar.gz) = 1385314 bytes
 SHA1 (patch-aa) = a46b85b65e2bb46ddbba28761e1b956fb9541b8f
 SHA1 (patch-ab) = 55f6e35e748d2efa4841925456da8e474d14df17
