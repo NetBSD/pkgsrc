@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3871 2020/07/03 12:23:42 fox Exp $
+$NetBSD: CHANGES-2020,v 1.3872 2020/07/03 15:06:12 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6171,3 +6171,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dhcpcd to 9.1.4 [roy 2020-07-03]
 	Updated editors/zile to 2.4.14 [hauke 2020-07-03]
 	Updated print/foliate to 2.4.0 [fox 2020-07-03]
+	Updated www/logswan to 2.1.6 [fcambus 2020-07-03]
