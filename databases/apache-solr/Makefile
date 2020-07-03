@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/06/11 15:41:23 jym Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/03 11:50:57 yyamano Exp $
 
 DISTNAME=	solr-${SOLR_VER}
 PKGNAME=	apache-solr-${SOLR_VER}
@@ -95,7 +95,6 @@ do-install:
 		${DESTDIR}${EGDIR}/solr.xml
 	${INSTALL_DATA_DIR} ${DESTDIR}${SOLR_EXAMPLE}
 	cd ${WRKSRC}/example && pax -rwpam . ${DESTDIR}${SOLR_EXAMPLE}
-	${CHOWN} -R ${SOLR_USER}:${SOLR_GROUP} ${DESTDIR}${SOLR_EXAMPLE}
 
 	${INSTALL_DATA_DIR} ${DESTDIR}${SOLR_DIR}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/solr ${DESTDIR}${SOLR_DIR}/bin/solr
