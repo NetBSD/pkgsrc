@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/06/29 13:36:51 adam Exp $
+# $NetBSD: Makefile,v 1.32 2020/07/03 03:03:18 gutteridge Exp $
 
 DISTNAME=	pycryptodome-3.9.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pycryptodome.org/
 COMMENT=	Cryptographic and hash functions for Python
 LICENSE=	public-domain AND python-software-foundation
+
+EXTRACT_USING=	bsdtar
 
 # XXX is this needed?
 CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
