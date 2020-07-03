@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2020/04/09 10:57:04 adam Exp $
+# $NetBSD: Makefile,v 1.107 2020/07/03 13:22:55 hauke Exp $
 
 DISTNAME=	krb5-1.18
 PKGNAME=	mit-${DISTNAME}
@@ -69,5 +69,6 @@ INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
 pre-configure:
 	cd ${WRKSRC} && autoconf -I ${WRKSRC} -f
 
+.include "../../databases/lmdb/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
