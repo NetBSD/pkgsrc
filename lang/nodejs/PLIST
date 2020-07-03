@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST,v 1.60 2020/04/30 06:58:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.61 2020/07/03 19:00:15 adam Exp $
 bin/node
 include/node/common.gypi
 include/node/config.gypi
+include/node/cppgc/allocation.h
+include/node/cppgc/finalizer-trait.h
+include/node/cppgc/garbage-collected.h
+include/node/cppgc/gc-info.h
+include/node/cppgc/heap.h
+include/node/cppgc/internals.h
+include/node/cppgc/platform.h
 include/node/js_native_api.h
 include/node/js_native_api_types.h
 include/node/libplatform/libplatform-export.h
@@ -13,6 +20,7 @@ include/node/node_api_types.h
 include/node/node_buffer.h
 include/node/node_object_wrap.h
 include/node/node_version.h
+include/node/v8-fast-api-calls.h
 include/node/v8-internal.h
 include/node/v8-platform.h
 include/node/v8-profiler.h

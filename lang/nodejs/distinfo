@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.172 2020/06/03 08:41:24 adam Exp $
+$NetBSD: distinfo,v 1.173 2020/07/03 19:00:15 adam Exp $
 
-SHA1 (node-v14.4.0.tar.xz) = 410b41fc6723af146914d1359ef2c19646d3bde2
-RMD160 (node-v14.4.0.tar.xz) = 830ab17bad8cbb9d04877216c157e86cb149c58f
-SHA512 (node-v14.4.0.tar.xz) = f1a7c788a8a149b942ec2b90a4314baaa5355c381029eda45002728ce7209925c016323b0ec1e0dfe2359fddb24f494df125805d0d266b738a333dcddb3f59c3
-Size (node-v14.4.0.tar.xz) = 33005312 bytes
+SHA1 (node-v14.5.0.tar.xz) = 7a0a77084f5e0475d386be3f8f494d7bce429014
+RMD160 (node-v14.5.0.tar.xz) = fd1a1622463be9a7278a6a01c2794fc326af7366
+SHA512 (node-v14.5.0.tar.xz) = 8bcd3d72f294fff60a59815137a193b465b3a901a59fcf08a4840507e2cfc74ee165d7ae0ca6388662dc218213376f559a6c872a92062691c7413351a2ec2b5f
+Size (node-v14.5.0.tar.xz) = 33141456 bytes
 SHA1 (patch-common.gypi) = f0bd2962bf7c8466db24b35a35154897ecad6316
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
-SHA1 (patch-deps_v8_src_base_atomicops.h) = d1ef20a3fee1d188687bd76836ada6f2c8e0787f
+SHA1 (patch-deps_v8_src_base_atomicops.h) = 05b1f62850c3d4a9a8e94a5263be1c4267cf566d
 SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = b47025f33d2991275bbcd15dbabb28900afab0e1
 SHA1 (patch-deps_v8_src_base_platform_platform-openbsd.cc) = 5e593879dbab095f99e82593272a0de91043f9a8
 SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = 0d80cc6587af9220832de112834e9f50242f819f
