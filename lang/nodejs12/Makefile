@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2020/06/18 04:58:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2020/07/03 19:01:40 adam Exp $
 
-DISTNAME=	node-v12.18.0
+DISTNAME=	node-v12.18.2
 
 USE_LANGUAGES=	c gnu++14
 
