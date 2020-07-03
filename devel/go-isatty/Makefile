@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/06/17 09:54:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2020/07/03 01:29:09 gutteridge Exp $
 
 DISTNAME=	go-isatty-0.0.3
 PKGREVISION=	19
@@ -17,4 +17,5 @@ GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG:S/^v//}
 GO_SRCPATH=	github.com/mattn/go-isatty
 
 .include "../../lang/go/go-package.mk"
+.include "../../devel/go-sys/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
