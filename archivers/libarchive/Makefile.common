@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2020/05/26 09:16:39 nia Exp $
+# $NetBSD: Makefile.common,v 1.13 2020/07/03 19:57:23 hauke Exp $
 # used by archivers/bsdtar/Makefile
 # used by archivers/libarchive/Makefile
 
@@ -15,6 +15,7 @@ TEST_TARGET=		check
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-expat
 CONFIGURE_ARGS+=	--without-libb2
+CONFIGURE_ARGS+=	--without-lz4
 CONFIGURE_ARGS+=	--without-lzo2
 CONFIGURE_ARGS+=	--without-mbedtls
 CONFIGURE_ARGS+=	--without-nettle
