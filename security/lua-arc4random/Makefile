@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/02 17:52:03 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/03 20:41:36 nia Exp $
 
 DISTNAME=	lua-arc4random-1.3.4
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -20,4 +20,8 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/arc4random.so ${DESTDIR}${PREFIX}/${LUA_CDIR}
 
 .include "../../lang/lua/module.mk"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+.  include "../../security/openssl/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
