@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/07/03 13:22:55 hauke Exp $
+@comment $NetBSD: PLIST,v 1.24 2020/07/03 13:36:57 hauke Exp $
 bin/compile_et
 bin/gss-client
 bin/k5srvutil
@@ -63,6 +63,7 @@ include/profile.h
 include/verto-module.h
 include/verto.h
 lib/krb5/plugins/kdb/db2.la
+${PLIST.ldap}lib/krb5/plugins/kdb/kldap.la
 lib/krb5/plugins/kdb/klmdb.la
 lib/krb5/plugins/preauth/otp.la
 lib/krb5/plugins/preauth/pkinit.la
@@ -77,6 +78,7 @@ lib/libkadm5clnt_mit.la
 lib/libkadm5srv.la
 lib/libkadm5srv_mit.la
 lib/libkdb5.la
+${PLIST.ldap}lib/libkdb_ldap.la
 lib/libkrad.la
 lib/libkrb5.la
 lib/libkrb5support.la
@@ -122,6 +124,7 @@ man/man8/sserver.8
 sbin/gss-server
 sbin/kadmin.local
 sbin/kadmind
+${PLIST.ldap}sbin/kdb5_ldap_util
 sbin/kdb5_util
 sbin/kprop
 sbin/kpropd
