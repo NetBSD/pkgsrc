@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/06/21 22:35:42 fox Exp $
+# $NetBSD: Makefile,v 1.13 2020/07/03 12:18:12 fox Exp $
 
-DISTNAME=	foliate-2.3.0
+DISTNAME=	foliate-2.4.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnfactotum/}
 EXTRACT_USING=	bsdtar
