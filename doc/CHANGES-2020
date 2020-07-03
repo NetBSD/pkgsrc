@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3872 2020/07/03 15:06:12 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3873 2020/07/03 15:42:51 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6172,3 +6172,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/zile to 2.4.14 [hauke 2020-07-03]
 	Updated print/foliate to 2.4.0 [fox 2020-07-03]
 	Updated www/logswan to 2.1.6 [fcambus 2020-07-03]
+	Updated games/woof to 2.0.0 [micha 2020-07-03]
