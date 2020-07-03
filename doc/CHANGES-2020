@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3869 2020/07/03 10:52:06 roy Exp $
+$NetBSD: CHANGES-2020,v 1.3870 2020/07/03 11:38:13 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6169,3 +6169,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/lua-filesystem to 1.8.0 [nia 2020-07-02]
 	Updated devel/lua-cqueues to 20200603 [nia 2020-07-02]
 	Updated net/dhcpcd to 9.1.4 [roy 2020-07-03]
+	Updated editors/zile to 2.4.14 [hauke 2020-07-03]
