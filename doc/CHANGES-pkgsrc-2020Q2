@@ -1,4 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.1 2020/06/29 11:33:57 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.2 2020/07/03 10:32:21 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
+
+Pullup ticket #6255 - requested by gdt
+x11/qt5-qscintilla, x11/py-qt5-qscintilla: build fix
+
+Pullup ticket #6258 - requested by sevan
+bootstrap: FreeBSD documentation update
 
