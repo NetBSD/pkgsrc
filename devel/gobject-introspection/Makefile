@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2020/04/12 20:29:08 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2020/07/04 10:04:46 schmonz Exp $
 
 DISTNAME=	gobject-introspection-1.64.1
 CATEGORIES=	devel gnome
@@ -18,6 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_TOOLS+=	pkg-config flex bison
 
 MESON_ARGS+=	-Dpython=${PYTHONBIN}
+MESON_ARGS+=	-Ddoctool=disabled
 
 PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
