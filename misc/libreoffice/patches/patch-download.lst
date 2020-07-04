@@ -1,15 +1,15 @@
-$NetBSD: patch-download.lst,v 1.15 2020/02/05 14:10:35 ryoon Exp $
+$NetBSD: patch-download.lst,v 1.16 2020/07/04 05:02:14 ryoon Exp $
 
---- download.lst.orig	2020-01-22 23:14:16.000000000 +0000
+--- download.lst.orig	2020-06-24 20:35:34.000000000 +0000
 +++ download.lst
 @@ -97,8 +97,8 @@ export GPGME_TARBALL := gpgme-1.9.0.tar.
- export GRAPHITE_SHA256SUM := d47d387161db7f7ebade1920aa7cbdc797e79772597d8b55e80b58d1071bcc36
- export GRAPHITE_TARBALL := graphite2-minimal-1.3.13.tgz
+ export GRAPHITE_SHA256SUM := b8e892d8627c41888ff121e921455b9e2d26836978f2359173d19825da62b8fc
+ export GRAPHITE_TARBALL := graphite2-minimal-1.3.14.tgz
  export HARFBUZZ_SHA256SUM := 9cf7d117548265f95ca884e2f4c9fafaf4e17d45a67b11107147b79eed76c966
 -export HARFBUZZ_TARBALL := harfbuzz-2.6.0.tar.xz
 -export HSQLDB_SHA256SUM := d30b13f4ba2e3b6a2d4f020c0dee0a9fb9fc6fbcc2d561f36b78da4bf3802370
-+export HARFBUZZ_TARBALL := harfbuzz-2.6.4.tar.xz
-+export HSQLDB_SHA256SUM := 9413b8d96132d699687ef914ebb8c50440efc87b3f775d25856d7ec347c03c12
++export HARFBUZZ_TARBALL := harfbuzz-2.6.8.tar.xz
++export HSQLDB_SHA256SUM := 6648a571a27f186e47094121f0095e1b809e918b3037c630c7f38ffad86e3035
  export HSQLDB_TARBALL := 17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip
  export HUNSPELL_SHA256SUM := 57be4e03ae9dd62c3471f667a0d81a14513e314d4d92081292b90435944ff951
  export HUNSPELL_TARBALL := hunspell-1.7.0.tar.gz
