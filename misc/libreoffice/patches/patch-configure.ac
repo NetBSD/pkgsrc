@@ -1,10 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.15 2020/02/05 14:10:35 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.16 2020/07/04 05:02:14 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
   to fix X11_TYPE=native build and internal pdfium's internal freetype build.
-* Exclude c++2a to avoid some C++ errors. And c++17 causes alloca(3) problem.
-  Use gnu++17 dialect instead.
 * Fix some static links.
 * Include header files from gpgme correctly.
 * Find pkgsrc/devel/apache-ant.
@@ -31,15 +29,6 @@ $NetBSD: patch-configure.ac,v 1.15 2020/02/05 14:10:35 ryoon Exp $
  if test "$test_fontconfig" = "yes"; then
      PKG_CHECK_MODULES([FONTCONFIG], [fontconfig >= 2.4.1])
      SYSTEM_FONTCONFIG=TRUE
-@@ -6446,7 +6452,7 @@ CXXFLAGS_CXX11=
- if test "$COM" = MSC -a "$COM_IS_CLANG" != TRUE; then
-     CXXFLAGS_CXX11='-std:c++17 -Zc:__cplusplus'
- elif test "$GCC" = "yes" -o "$COM_IS_CLANG" = TRUE; then
--    my_flags='-std=c++2a -std=c++17 -std=c++1z'
-+    my_flags='-std=gnu++17 -std=gnu++1z'
-     for flag in $my_flags; do
-         if test "$COM" = MSC; then
-             flag="-Xclang $flag"
 @@ -8097,7 +8103,7 @@ else
      if test "$COM" = "MSC"; then
          LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.lib"
@@ -85,7 +74,7 @@ $NetBSD: patch-configure.ac,v 1.15 2020/02/05 14:10:35 ryoon Exp $
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
 -        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I/usr/include/gpgme++ ],
-+        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I/usr/pkg/include/gpgme++ ],
++        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I@PREFIX@/include/gpgme++ ],
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
