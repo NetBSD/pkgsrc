@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.232 2020/06/02 08:24:21 adam Exp $
+# $NetBSD: Makefile,v 1.233 2020/07/04 05:02:14 ryoon Exp $
 
-VERREL=		6.4.4
+VERREL=		6.4.5
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +16,11 @@ LICENSE=	gnu-lgpl-v3
 UNLIMIT_RESOURCES+=	cputime
 
 USE_LANGUAGES=	c gnu++17
+
+# Do not use alloca(3) in libc at least on NetBSD.
+BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
+BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z
+BUILDLINK_TRANSFORM+=	opt:-std=c++2a:-std=gnu++2a
 
 SUBST_CLASSES+=			use-bash
 SUBST_STAGE.use-bash=		pre-configure
