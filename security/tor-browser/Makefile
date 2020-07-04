@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2020/06/18 12:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2020/07/04 08:33:57 wiz Exp $
 
-DISTNAME=	src-firefox-tor-browser-68.9.0esr-9.5-1-build2
-PKGNAME=	tor-browser-9.5
-PKGREVISION=	2
+DISTNAME=	src-firefox-tor-browser-68.10.0esr-9.5-1-build2
+PKGNAME=	tor-browser-9.5.1
 CATEGORIES=	security www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -18,16 +17,19 @@ LICENSE=	mpl-1.1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/src-//}
 
 DEPENDS+=	tor-[0-9]*:../../net/tor
-DEPENDS+=	tor-browser-https-everywhere-[0-9]*:../../security/tor-browser-https-everywhere
-DEPENDS+=	tor-browser-noscript-[0-9]*:../../security/tor-browser-noscript
+DEPENDS+=	tor-browser-https-everywhere>=2020.5.20:../../security/tor-browser-https-everywhere
+DEPENDS+=	tor-browser-noscript>=11.0.32:../../security/tor-browser-noscript
 
 # How to update this package:
 #
 # replace all patches with the one from the correspoding www/firefox${ESR_RELEASE}
-# BUT keep patch-xpcom_io_TorFileUtils.cpp
-# AND keep patch-browser_app_profile_000-tor-browser.js
-# AND the second chunk of patch-toolkit_moz.configure
-# (AND if necessary patch-.mozconfig)
+# compare e.g. the output of
+# diff -r -I NetBSD . ../../www/firefox68
+# BUT keep:
+# patch-.mozconfig (if still necessary)
+# patch-browser_app_profile_000-tor-browser.js
+# patch-toolkit_moz.configure (second chunk)
+# patch-xpcom_io_TorFileUtils.cpp
 # make the patches apply
 #
 # when packaged up, read MESSAGE and test by visiting https://check.torproject.org
