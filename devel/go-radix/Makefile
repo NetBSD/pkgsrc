@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/06/17 09:54:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/04 19:24:55 gutteridge Exp $
 
 GITHUB_PROJECT=	go-radix
 GITHUB_TAG=	v1.0.0
@@ -14,7 +14,7 @@ HOMEPAGE=	https://github.com/armon/go-radix/
 COMMENT=	Golang implementation of Radix trees
 LICENSE=	mit
 
-GO_DIST_BASE=	${PKGNAME}
+GO_DIST_BASE=	${PKGNAME_NOREV}
 GO_SRCPATH=	github.com/armon/go-radix
 
 .include "../../lang/go/go-package.mk"
