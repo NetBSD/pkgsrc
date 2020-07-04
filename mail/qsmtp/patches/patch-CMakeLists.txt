@@ -1,7 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2020/01/12 23:03:28 joerg Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2020/07/04 14:11:41 schmonz Exp $
 
 Support PKGMANDIR.
 Support explicit_memset on NetBSD.
+Skip building API docs with Doxygen.
 
 --- CMakeLists.txt.orig	2020-01-06 19:19:59.000000000 +0000
 +++ CMakeLists.txt
@@ -34,6 +35,32 @@ Support explicit_memset on NetBSD.
  set(CMAKE_REQUIRED_INCLUDES fcntl.h)
  CHECK_FUNCTION_EXISTS(openat HAS_OPENAT)
  unset(CMAKE_REQUIRED_INCLUDES)
+@@ -190,19 +194,19 @@ endif ()
+ option(BUILD_DOC "Build documentation" ON)
+ if (BUILD_DOC)
+ 	# API documentation
+-	find_package(Doxygen REQUIRED)
++	# find_package(Doxygen REQUIRED)
+ 
+-	configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
++	# configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
+ 
+-	add_custom_target(docu ALL
+-			COMMAND ${DOXYGEN_EXECUTABLE}
+-			WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
++	#	add_custom_target(docu ALL
++	#		COMMAND ${DOXYGEN_EXECUTABLE}
++	#		WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
+ 
+ 	if (NOT DOC_DESTINATION_DIRECTORY)
+ 		set(DOC_DESTINATION_DIRECTORY "doc/")
+ 	endif ()
+ 
+-	install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION ${DOC_DESTINATION_DIRECTORY})
++	# install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION ${DOC_DESTINATION_DIRECTORY})
+ 
+ 	# general documentation
+ 	install(FILES
 @@ -220,8 +224,8 @@ if (BUILD_DOC)
  	install(FILES
  		${CMAKE_CURRENT_BINARY_DIR}/Qremote.8
