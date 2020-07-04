@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2016/05/14 07:52:47 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/07/04 06:46:26 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.circleci/config.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/pluggaloid.rb
+${GEM_LIBDIR}/lib/pluggaloid/collection.rb
 ${GEM_LIBDIR}/lib/pluggaloid/error.rb
 ${GEM_LIBDIR}/lib/pluggaloid/event.rb
 ${GEM_LIBDIR}/lib/pluggaloid/filter.rb
@@ -14,10 +16,17 @@ ${GEM_LIBDIR}/lib/pluggaloid/handler_tag.rb
 ${GEM_LIBDIR}/lib/pluggaloid/identity.rb
 ${GEM_LIBDIR}/lib/pluggaloid/listener.rb
 ${GEM_LIBDIR}/lib/pluggaloid/plugin.rb
+${GEM_LIBDIR}/lib/pluggaloid/stream.rb
+${GEM_LIBDIR}/lib/pluggaloid/stream_generator.rb
+${GEM_LIBDIR}/lib/pluggaloid/subscriber.rb
 ${GEM_LIBDIR}/lib/pluggaloid/version.rb
 ${GEM_LIBDIR}/pluggaloid.gemspec
+${GEM_LIBDIR}/test/collect_test.rb
+${GEM_LIBDIR}/test/generate_test.rb
+${GEM_LIBDIR}/test/handle_in_generate_test.rb
 ${GEM_LIBDIR}/test/handler_tag_test.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/multi_vm_test.rb
 ${GEM_LIBDIR}/test/plugin_test.rb
+${GEM_LIBDIR}/test/reactive_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
