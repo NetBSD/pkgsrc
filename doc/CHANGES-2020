@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3875 2020/07/03 22:54:01 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.3876 2020/07/04 05:02:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6176,3 +6176,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 14.5.0 [adam 2020-07-03]
 	Updated lang/nodejs12 to 12.18.2 [adam 2020-07-03]
 	Updated security/tor-browser-noscript to 11.0.32 [wiz 2020-07-03]
+	Updated misc/libreoffice to 6.4.5.2 [ryoon 2020-07-04]
