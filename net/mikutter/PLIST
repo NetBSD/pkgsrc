@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2020/02/21 02:53:19 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.50 2020/07/04 06:53:51 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -536,6 +536,8 @@ share/mikutter/plugin/proxy/po/zh/proxy.po
 share/mikutter/plugin/proxy/po/zh_CN/proxy.po
 share/mikutter/plugin/proxy/po/zh_TW/proxy.po
 share/mikutter/plugin/proxy/proxy.rb
+share/mikutter/plugin/pulseaudio/.mikutter.yml
+share/mikutter/plugin/pulseaudio/pulseaudio.rb
 share/mikutter/plugin/quickstep/.mikutter.yml
 share/mikutter/plugin/quickstep/complete.rb
 share/mikutter/plugin/quickstep/model/command.rb
