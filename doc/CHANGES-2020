@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3882 2020/07/04 14:11:51 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.3883 2020/07/04 19:54:49 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6183,3 +6183,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/mikutter to 4.0.6 [tsutsui 2020-07-04]
 	Updated security/tor-browser to 9.5.1 [wiz 2020-07-04]
 	Updated mail/qsmtp to 0.37nb2 [schmonz 2020-07-04]
+	Updated graphics/ansilove to 4.1.2 [fcambus 2020-07-04]
