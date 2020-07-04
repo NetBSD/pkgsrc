@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.22 2020/07/01 09:13:12 rillig Exp $
+# $NetBSD: show.mk,v 1.23 2020/07/04 18:08:35 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -166,8 +166,8 @@ show-all: show-all-${g}
 # using the :sh modifier may show warnings, for example because ${WRKDIR}
 # doesn't exist.
 
-_SHOW_ALL.d4=	$$$$		# see regress/show-all
-_SHOW_ALL.d8=	$$$$$$$$	# see regress/show-all
+_SHOW_ALL.d4=	$$$$		# see regress/infra-unittests/show-all.sh
+_SHOW_ALL.d8=	$$$$$$$$	# see regress/infra-unittests/show-all.sh
 
 show-all-${g}: .PHONY
 	@${RUN} printf '%s:\n' ${g:Q}
