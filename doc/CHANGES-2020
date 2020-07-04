@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3879 2020/07/04 06:46:44 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.3880 2020/07/04 06:55:20 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6180,3 +6180,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird to 68.10.0 [ryoon 2020-07-04]
 	Updated mail/thunderbird-l10n to 68.10.0 [ryoon 2020-07-04]
 	Updated net/ruby-pluggaloid to 1.5.0 [tsutsui 2020-07-04]
+	Updated net/mikutter to 4.0.6 [tsutsui 2020-07-04]
