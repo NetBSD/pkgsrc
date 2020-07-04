@@ -4,5 +4,7 @@ SHA1 (ImageMagick-6.9.11-7.tar.xz) = f47291d0100b5c30d2294aaca2dc4cd297f8d6dd
 RMD160 (ImageMagick-6.9.11-7.tar.xz) = 4e4df5aa941906519bec04324d2928144e1bd244
 SHA512 (ImageMagick-6.9.11-7.tar.xz) = 7eb169679846ae18cc16fbf66d3e5903f4ad38373a4e24c1219fab7a5fe323afd60bd1c540c75931c069116ea8367a89d25c68283276dbfeda67cc4d601b2888
 Size (ImageMagick-6.9.11-7.tar.xz) = 9075300 bytes
+SHA1 (patch-Magick++_lib_Magick++.pc.in) = 6842e28fbfe54641b975fd1b79dd42b0c3494be5
 SHA1 (patch-Makefile.in) = bb747b5e062f2a59e307289b5b33861dd5f96ab0
 SHA1 (patch-config_policy.xml) = 2c446a00fc00f85ab33eae0691d4d8989a46289f
+SHA1 (patch-wand_MagickWand.pc.in) = 50e1b64a0f6ec256471922b00f994c6e8ff66a6f

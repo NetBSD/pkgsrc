@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- wand/MagickWand.pc.in.orig	2020-04-19 01:03:03.000000000 +0000
++++ wand/MagickWand.pc.in
+@@ -9,7 +9,7 @@ Name: MagickWand
+ Description: MagickWand - C API for ImageMagick (ABI @MAGICK_ABI_SUFFIX@)
+ URL: https://github.com/ImageMagick/ImageMagick6
+ Version: @PACKAGE_VERSION@
+-Requires: MagickCore-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@
++Requires: MagickCore
+ Cflags: -I${includearchdir} -I${includedir} @MAGICK_PCFLAGS@
+ Libs: -L${libdir} -l${libname} 
+ Libs.private: -L${libdir} -l${libname} @MAGICK_LIBS@ @MATH_LIBS@
