@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.17 2019/02/07 10:42:48 markd Exp $
+$NetBSD: distinfo,v 1.18 2020/07/05 12:23:06 rhialto Exp $
 
-SHA1 (lyx-2.3.2.tar.xz) = 6bbc0b43cdd52b818aa96788f7ade31843a4f0ad
-RMD160 (lyx-2.3.2.tar.xz) = 369d5f0be707436ccafe0d454db95de0a4744449
-SHA512 (lyx-2.3.2.tar.xz) = c1d660f9fbf20ba67fd07e15cc7e37934bde82e6f07b4a2c0da33f3a783bc6d88482f12df7a2824aa57970b4c0bd7631f934ccecce9ed2757be8427d3e67c951
-Size (lyx-2.3.2.tar.xz) = 15791748 bytes
+SHA1 (lyx-2.3.5.2.tar.xz) = 560be1f6b299cb12ded443a05f0ca5cc2897f65f
+RMD160 (lyx-2.3.5.2.tar.xz) = 5352f4cc354ebe47f45774e46fa9cb93163ae18f
+SHA512 (lyx-2.3.5.2.tar.xz) = 90c5459ad0a77568d588e05a360482985988382927583b14914d6a23b788756e957d0237c18b9ab0681dfc2ad7aa34d21e97304e3a74d19ef047c38f692fba03
+Size (lyx-2.3.5.2.tar.xz) = 16139804 bytes
 SHA1 (patch-configure) = d68e3329353f2fa0ffdf9633ff0b31649f0114c7
 SHA1 (patch-development_MacOSX_Makefile.in) = 086dddfcd7b2ca498e87b0d3e90a211aca2f64fe
-SHA1 (patch-src_support_FileName.cpp) = f940c9e526c3ef34a6d3b1099aec8d41543529ef
 SHA1 (patch-src_support_strfwd.h) = 3ebd71772539d6a2cd327c1127fa9ef66cb15b41

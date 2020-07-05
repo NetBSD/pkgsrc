@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/02/07 10:42:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/07/05 12:23:06 rhialto Exp $
 ${BIN_DIR}/lyx
 ${BIN_DIR}/lyxclient
 ${BIN_DIR}/tex2lyx
@@ -9,6 +9,7 @@ ${PLIST.x11}share/applications/lyx.desktop
 ${PLIST.x11}share/icons/hicolor/48x48/apps/lyx.png
 ${PLIST.x11}share/icons/hicolor/scalable/apps/lyx.svg
 share/locale/ar/LC_MESSAGES/${LYX}.mo
+share/locale/bg/LC_MESSAGES/${LYX}.mo
 share/locale/cs/LC_MESSAGES/${LYX}.mo
 share/locale/de/LC_MESSAGES/${LYX}.mo
 share/locale/el/LC_MESSAGES/${LYX}.mo
@@ -24,6 +25,7 @@ share/locale/id/LC_MESSAGES/${LYX}.mo
 share/locale/it/LC_MESSAGES/${LYX}.mo
 share/locale/ja/LC_MESSAGES/${LYX}.mo
 share/locale/nb/LC_MESSAGES/${LYX}.mo
+share/locale/nl/LC_MESSAGES/${LYX}.mo
 share/locale/nn/LC_MESSAGES/${LYX}.mo
 share/locale/pl/LC_MESSAGES/${LYX}.mo
 share/locale/pt_BR/LC_MESSAGES/${LYX}.mo
@@ -237,7 +239,10 @@ ${SHARE_DIR}/doc/ja/clipart/reference.png
 ${SHARE_DIR}/doc/nb/Intro.lyx
 ${SHARE_DIR}/doc/nb/Tutorial.lyx
 ${SHARE_DIR}/doc/nl/Intro.lyx
+${SHARE_DIR}/doc/nl/Shortcuts.lyx
 ${SHARE_DIR}/doc/nl/Tutorial.lyx
+${SHARE_DIR}/doc/nl/clipart/verwijzing.png
+${SHARE_DIR}/doc/nl/clipart/voetnoot.png
 ${SHARE_DIR}/doc/pl/Intro.lyx
 ${SHARE_DIR}/doc/pl/Tutorial.lyx
 ${SHARE_DIR}/doc/pt/Intro.lyx
@@ -271,6 +276,7 @@ ${SHARE_DIR}/examples/PDF-comment.lyx
 ${SHARE_DIR}/examples/PDF-form.lyx
 ${SHARE_DIR}/examples/aa_sample.lyx
 ${SHARE_DIR}/examples/aas_sample.lyx
+${SHARE_DIR}/examples/aas_sample62.lyx
 ${SHARE_DIR}/examples/achemso.lyx
 ${SHARE_DIR}/examples/addressExample.adr
 ${SHARE_DIR}/examples/amsart-test.lyx
@@ -462,6 +468,7 @@ ${SHARE_DIR}/examples/sv/splash.lyx
 ${SHARE_DIR}/examples/sweave.lyx
 ${SHARE_DIR}/examples/thesis/Acknowledgments.lyx
 ${SHARE_DIR}/examples/thesis/Appendix.lyx
+${SHARE_DIR}/examples/thesis/Bibliography.lyx
 ${SHARE_DIR}/examples/thesis/Summary.lyx
 ${SHARE_DIR}/examples/thesis/alpha.bst
 ${SHARE_DIR}/examples/thesis/chapter-1.lyx
@@ -681,6 +688,7 @@ ${SHARE_DIR}/images/classic/tabular-feature_multicolumn.png
 ${SHARE_DIR}/images/classic/tabular-feature_multirow.png
 ${SHARE_DIR}/images/classic/tabular-feature_set-all-lines.png
 ${SHARE_DIR}/images/classic/tabular-feature_set-border-lines.png
+${SHARE_DIR}/images/classic/tabular-feature_set-inner-lines.png
 ${SHARE_DIR}/images/classic/tabular-feature_set-longtabular.png
 ${SHARE_DIR}/images/classic/tabular-feature_set-rotate-cell.png
 ${SHARE_DIR}/images/classic/tabular-feature_set-rotate-tabular.png
@@ -2011,6 +2019,7 @@ ${SHARE_DIR}/images/oxygen/tabular-feature_multicolumn.svgz
 ${SHARE_DIR}/images/oxygen/tabular-feature_multirow.svgz
 ${SHARE_DIR}/images/oxygen/tabular-feature_set-all-lines.svgz
 ${SHARE_DIR}/images/oxygen/tabular-feature_set-border-lines.svgz
+${SHARE_DIR}/images/oxygen/tabular-feature_set-inner-lines.svgz
 ${SHARE_DIR}/images/oxygen/tabular-feature_set-longtabular.svgz
 ${SHARE_DIR}/images/oxygen/tabular-feature_toggle-line-bottom.svgz
 ${SHARE_DIR}/images/oxygen/tabular-feature_toggle-line-left.svgz
@@ -2078,6 +2087,7 @@ ${SHARE_DIR}/images/tabular-feature_multicolumn.svgz
 ${SHARE_DIR}/images/tabular-feature_multirow.svgz
 ${SHARE_DIR}/images/tabular-feature_set-all-lines.svgz
 ${SHARE_DIR}/images/tabular-feature_set-border-lines.svgz
+${SHARE_DIR}/images/tabular-feature_set-inner-lines.svgz
 ${SHARE_DIR}/images/tabular-feature_set-longtabular.svgz
 ${SHARE_DIR}/images/tabular-feature_set-rotate-cell.svgz
 ${SHARE_DIR}/images/tabular-feature_set-rotate-tabular.svgz
@@ -2164,6 +2174,7 @@ ${SHARE_DIR}/layouts/aapaper.inc
 ${SHARE_DIR}/layouts/aapaper.layout
 ${SHARE_DIR}/layouts/aastex.layout
 ${SHARE_DIR}/layouts/aastex6.layout
+${SHARE_DIR}/layouts/aastex62.layout
 ${SHARE_DIR}/layouts/achemso.layout
 ${SHARE_DIR}/layouts/acm-sigs-alt.layout
 ${SHARE_DIR}/layouts/acm-sigs.inc
@@ -2278,6 +2289,7 @@ ${SHARE_DIR}/layouts/llncs.layout
 ${SHARE_DIR}/layouts/logicalmkup.module
 ${SHARE_DIR}/layouts/ltugboat.layout
 ${SHARE_DIR}/layouts/lyxmacros.inc
+${SHARE_DIR}/layouts/maa-monthly.layout
 ${SHARE_DIR}/layouts/memoir.layout
 ${SHARE_DIR}/layouts/minimalistic.module
 ${SHARE_DIR}/layouts/moderncv.layout
@@ -2299,6 +2311,8 @@ ${SHARE_DIR}/layouts/recipebook.layout
 ${SHARE_DIR}/layouts/report.layout
 ${SHARE_DIR}/layouts/revtex.layout
 ${SHARE_DIR}/layouts/revtex4-1.layout
+${SHARE_DIR}/layouts/revtex4-2.layout
+${SHARE_DIR}/layouts/revtex4-x.inc
 ${SHARE_DIR}/layouts/revtex4.layout
 ${SHARE_DIR}/layouts/rsphrase.module
 ${SHARE_DIR}/layouts/sciposter.layout
@@ -2516,6 +2530,7 @@ ${SHARE_DIR}/templates/README.new_templates
 ${SHARE_DIR}/templates/RJournal.lyx
 ${SHARE_DIR}/templates/aa.lyx
 ${SHARE_DIR}/templates/aastex6.lyx
+${SHARE_DIR}/templates/aastex62.lyx
 ${SHARE_DIR}/templates/acmart.lyx
 ${SHARE_DIR}/templates/beamer-conference-ornate-20min.lyx
 ${SHARE_DIR}/templates/ctex.lyx
@@ -2533,6 +2548,7 @@ ${SHARE_DIR}/templates/kluwer.lyx
 ${SHARE_DIR}/templates/koma-letter2.lyx
 ${SHARE_DIR}/templates/letter.lyx
 ${SHARE_DIR}/templates/lettre.lyx
+${SHARE_DIR}/templates/maa-monthly.lyx
 ${SHARE_DIR}/templates/obsolete/ACM-SIGS.lyx
 ${SHARE_DIR}/templates/obsolete/ACM-siggraph.lyx
 ${SHARE_DIR}/templates/obsolete/ACM-sigplan.lyx
