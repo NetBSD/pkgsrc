@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2020/06/02 06:41:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/07/05 01:12:14 nia Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
@@ -282,7 +282,7 @@ qt5/include/QtMultimediaWidgets/qvideowidget.h
 qt5/include/QtMultimediaWidgets/qvideowidgetcontrol.h
 qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake
 qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake
-${PLIST.notdarwin}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
+${PLIST.gst}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
 ${PLIST.alsa}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake
 ${PLIST.gst}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake
 ${PLIST.gst}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake
@@ -330,9 +330,9 @@ ${PLIST.gst}qt5/plugins/mediaservice/libgstcamerabin.so
 ${PLIST.gst}qt5/plugins/mediaservice/libgstmediacapture.so
 ${PLIST.gst}qt5/plugins/mediaservice/libgstmediaplayer.so
 qt5/plugins/playlistformats/libqtmultimedia_m3u.so
-qt5/qml/QtAudioEngine/libdeclarative_audioengine.so
-qt5/qml/QtAudioEngine/plugins.qmltypes
-qt5/qml/QtAudioEngine/qmldir
+${PLIST.openal}qt5/qml/QtAudioEngine/libdeclarative_audioengine.so
+${PLIST.openal}qt5/qml/QtAudioEngine/plugins.qmltypes
+${PLIST.openal}qt5/qml/QtAudioEngine/qmldir
 qt5/qml/QtMultimedia/Video.qml
 qt5/qml/QtMultimedia/libdeclarative_multimedia.so
 qt5/qml/QtMultimedia/plugins.qmltypes
