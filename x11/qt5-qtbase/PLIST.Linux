@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.7 2019/03/27 10:16:34 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.8 2020/07/05 01:14:27 nia Exp $
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboard_defaultmap_p.h
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboardhandler_p.h
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboardmanager_p.h
@@ -26,13 +26,13 @@ qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake
-qt5/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake
-qt5/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake
+${PLIST.dbus}qt5/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake
+${PLIST.dbus}qt5/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake
 qt5/lib/libQt5InputSupport.a
 qt5/lib/libQt5InputSupport.prl
 qt5/mkspecs/modules/qt_lib_input_support_private.pri
-qt5/plugins/bearer/libqconnmanbearer.so
-qt5/plugins/bearer/libqnmbearer.so
+${PLIST.dbus}qt5/plugins/bearer/libqconnmanbearer.so
+${PLIST.dbus}qt5/plugins/bearer/libqnmbearer.so
 qt5/plugins/generic/libqevdevkeyboardplugin.so
 qt5/plugins/generic/libqevdevmouseplugin.so
 qt5/plugins/generic/libqevdevtabletplugin.so
