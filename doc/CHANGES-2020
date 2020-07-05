@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3883 2020/07/04 19:54:49 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3884 2020/07/05 02:11:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6184,3 +6184,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/tor-browser to 9.5.1 [wiz 2020-07-04]
 	Updated mail/qsmtp to 0.37nb2 [schmonz 2020-07-04]
 	Updated graphics/ansilove to 4.1.2 [fcambus 2020-07-04]
+	Updated www/p5-Dancer2 to 0.300004 [wen 2020-07-05]
