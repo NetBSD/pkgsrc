@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19937 2020/07/03 11:38:13 hauke Exp $
+$NetBSD: TODO,v 1.19938 2020/07/05 19:48:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.10.22
+	o ImageMagick-7.0.10.23
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -398,6 +398,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
+	o afl-2.57b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o aide-0.16
@@ -474,7 +475,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o calibre-4.17.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o cascadia-ttf-2005.15
+	o cascadia-ttf-2007.01
+	o catch2-2.12.3
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o cddbd-1.5.2
@@ -510,6 +512,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.12.0
+	o dbus-1.12.20
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
@@ -659,6 +662,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.4.2
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
@@ -783,9 +787,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o libressl-3.2.0
 	o libtecla-1.6.3
+	o libuv-1.38.1
 	o libv4l-0.8.5
 	o libvirt-2.3
+	o libvorbis-1.3.7
 	o libwnck3-3.32.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
@@ -954,7 +961,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
-	o poppler-0.89.0
+	o poppler-0.90.0
 	o postal-0.72
 	o pound-2.8a
 	o povray-3.7.0.0
@@ -973,6 +980,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-cachetools-4.1.1
 	o py-cairo-1.19.1 [drops python-2.x support]
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
@@ -981,13 +989,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-idna-2.10
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-mercurial-5.4.2
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
 	o py-rsa-4.6
-	o py-setuptools-47.3.1 [drops python-2.x support]
+	o py-setuptools-49.1.0 [drops python-2.x support]
 	o py-setuptools_scm-4.1.2
 	o py-simpletal-5.1
 	o py-sphinx-autoapi-1.4.0
@@ -1026,6 +1035,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
+	o rsync-3.2.2
 	o rt4-4.4.0
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
@@ -1107,7 +1117,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o telepathy-mission-control5-5.16.3
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
-	o thunderbird-enigmail-2.1.7
+	o thunderbird-enigmail-2.2
 	o tig-2.2
 	o tigervnc-1.10.1 [quite unstable]
 	o tightvnc-2.7.10
@@ -1133,11 +1143,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ufoai-2.3.1
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
+	o unifont-13.0.03
 	o units-2.12
 	o urlgrabber-3.10.1
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
+	o vala-0.48.7
 	o varnish-5.1.3
 	o varnish-6.0
 	o vbetool-1.1
