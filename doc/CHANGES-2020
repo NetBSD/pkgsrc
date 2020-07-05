@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3884 2020/07/05 02:11:41 wen Exp $
+$NetBSD: CHANGES-2020,v 1.3885 2020/07/05 12:23:43 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6185,3 +6185,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/qsmtp to 0.37nb2 [schmonz 2020-07-04]
 	Updated graphics/ansilove to 4.1.2 [fcambus 2020-07-04]
 	Updated www/p5-Dancer2 to 0.300004 [wen 2020-07-05]
+	Updated editors/lyx to 2.3.5.2 [rhialto 2020-07-05]
