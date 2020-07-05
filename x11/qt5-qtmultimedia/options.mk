@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/03/22 07:31:42 nia Exp $
+# $NetBSD: options.mk,v 1.3 2020/07/05 01:12:14 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qt5-qtmultimedia
 PKG_SUPPORTED_OPTIONS=		alsa gstreamer openal pulseaudio
@@ -30,7 +30,9 @@ MAKE_ENV+=	QT_CONFIG+=gstreamer-1.0
 MAKE_ENV+=	QT_CONFIG+=-gstreamer-1.0
 .endif
 
+PLIST_VARS+=	openal
 .if !empty(PKG_OPTIONS:Mopenal)
+PLIST.openal=	yes
 MAKE_ENV+=	QT_CONFIG+=openal
 .include "../../audio/openal-soft/buildlink3.mk"
 .else
