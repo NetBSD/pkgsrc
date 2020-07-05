@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/07/02 20:00:23 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/05 00:14:48 nia Exp $
 
 DISTNAME=	lua-zlib-1.2
+PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
 CATEGORIES=	archivers lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=brimworks/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
