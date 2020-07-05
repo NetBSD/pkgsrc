@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.104 2019/09/24 16:39:50 kamil Exp $
+$NetBSD: distinfo,v 1.105 2020/07/05 12:09:08 rhialto Exp $
 
 SHA1 (calibre-3.40.1.tar.xz) = 12cea0bed963dde2b58c9cdd4c3c25c735d6d15a
 RMD160 (calibre-3.40.1.tar.xz) = 72bf801e4164dcebec22ba36162fe034c9edad54
@@ -6,5 +6,6 @@ SHA512 (calibre-3.40.1.tar.xz) = 1333c24e384ccae79d264055e1e84b8a13919e68d9290a2
 Size (calibre-3.40.1.tar.xz) = 38365300 bytes
 SHA1 (patch-setup_build.py) = f309c8f01af375fce1d09bf5c4bac9610cf4e0c5
 SHA1 (patch-setup_build__environment.py) = dd6160233c717e935205649ee685e71df3f1858e
+SHA1 (patch-src_calibre_headless_fontconfig_database.cpp) = d794a9f1c94c85d3406384bf25ade4be8d2f8a1c
 SHA1 (patch-src_calibre_headless_headless__integration.cpp) = 62ab6f5aaf6bd8bcbb875ab56eac1a474d8b446b
 SHA1 (patch-src_calibre_linux.py) = 16c3122a612ec9996f774c5c2c9d40a475723662
