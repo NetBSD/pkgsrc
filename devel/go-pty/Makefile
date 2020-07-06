@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/06/29 12:46:01 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/06 22:38:29 gutteridge Exp $
 
 DISTNAME=	go-pty-1.1.11
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=creack/}
 GITHUB_PROJECT=	pty
@@ -20,4 +21,5 @@ GO_SRCPATH=	github.com/creack/pty/
 GO_DIST_BASE=	pty-${PKGVERSION_NOREV}
 
 .include "../../lang/go/go-package.mk"
+.include "../../devel/go-sys/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
