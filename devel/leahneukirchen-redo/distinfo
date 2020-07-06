@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/07/06 15:27:19 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2020/07/06 16:48:50 schmonz Exp $
 
-SHA1 (redo-c/v0.2.tar.gz) = 1c7ea152b8839abde63b32b39aaa76aeb16aa7d3
-RMD160 (redo-c/v0.2.tar.gz) = 40f2ef804d31fdba636eaf3e2ce55b81561d8d76
-SHA512 (redo-c/v0.2.tar.gz) = 7547625d3536bf875b34f05acdbed825d3a6915e62f4d504360c4bfcfd41506f197712f7bbc90fa7d5d50e87eddb6cb37bf27e39e105238406abe617600e0c4f
-Size (redo-c/v0.2.tar.gz) = 7673 bytes
+SHA1 (leahneukirchen-redo-0.2.tar.gz) = 1c7ea152b8839abde63b32b39aaa76aeb16aa7d3
+RMD160 (leahneukirchen-redo-0.2.tar.gz) = 40f2ef804d31fdba636eaf3e2ce55b81561d8d76
+SHA512 (leahneukirchen-redo-0.2.tar.gz) = 7547625d3536bf875b34f05acdbed825d3a6915e62f4d504360c4bfcfd41506f197712f7bbc90fa7d5d50e87eddb6cb37bf27e39e105238406abe617600e0c4f
+Size (leahneukirchen-redo-0.2.tar.gz) = 7673 bytes
 SHA1 (patch-redo.c) = 96e794071dc06bfc6efae27fc955b00c1b39326f

@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2020/07/06 15:27:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/06 16:48:50 schmonz Exp $
 
-GITHUB_PROJECT=		redo-c
-GITHUB_TAG=		v0.2
-DISTNAME=		v0.2
-PKGNAME=		leahneukirchen-redo-${DISTNAME:S,^v,,}
+DISTNAME=		leahneukirchen-redo-0.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=leahneukirchen/}
-DIST_SUBDIR=		${GITHUB_PROJECT}
+GITHUB_PROJECT=		redo-c
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/leahneukirchen/redo-c/
 COMMENT=		Redo build system implemented in portable C
 LICENSE=		public-domain
 
-WRKSRC=			${WRKDIR}/redo-c-0.2
+WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
