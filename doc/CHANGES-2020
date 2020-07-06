@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3887 2020/07/06 10:09:28 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3888 2020/07/06 10:54:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6189,3 +6189,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/collectd to 5.8.0nb4 [he 2020-07-05]
 	Updated devel/libuv to 1.38.1 [adam 2020-07-06]
 	Updated devel/libevent to 2.1.12 [adam 2020-07-06]
+	Updated devel/kdiff3 to 1.8.3 [gutteridge 2020-07-06]
