@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.34 2020/05/19 15:20:07 nia Exp $
-
-SHA1 (mksh-R59b.tgz) = b3fbbcdaf5029011e3ec42ed5426a1b0567c4654
-RMD160 (mksh-R59b.tgz) = d898ba5a55f194e2c373734e4640025ea27fe936
-SHA512 (mksh-R59b.tgz) = 4ae330a79a09d2dd989116b1a836ab7f179d920eb34c97ea5da7d1434361911a93ba77ca47c5e473e5a5ce1877f2a2e919a807bb6139ec6c89c87969054d021d
-Size (mksh-R59b.tgz) = 440055 bytes

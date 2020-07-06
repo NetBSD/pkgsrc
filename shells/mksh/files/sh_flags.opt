@@ -1,0 +1,194 @@
+/*-
+ * Copyright (c) 2013, 2014, 2015, 2017
+ *	mirabilos <m@mirbsd.org>
+ *
+ * Provided that these terms and disclaimer and all copyright notices
+ * are retained or reproduced in an accompanying document, permission
+ * is granted to deal in this work without restriction, including un-
+ * limited rights to use, publicly perform, distribute, sell, modify,
+ * merge, give away, or sublicence.
+ *
+ * This work is provided "AS IS" and WITHOUT WARRANTY of any kind, to
+ * the utmost extent permitted by applicable law, neither express nor
+ * implied; without malicious intent or gross negligence. In no event
+ * may a licensor, author or contributor be held liable for indirect,
+ * direct, other damage, loss, or other issues arising in any way out
+ * of dealing in the work, even if advised of the possibility of such
+ * damage or existence of a defect, except proven that it results out
+ * of said person's immediate fault when using the work as intended.
+ */
+
+@SHFLAGS_DEFNS
+__RCSID("$MirOS: src/bin/mksh/sh_flags.opt,v 1.9 2020/05/16 22:38:25 tg Exp $");
+@SHFLAGS_ENUMS
+#define FN(sname,cname,flags,ochar)	cname,
+#define F0(sname,cname,flags,ochar)	cname = 0,
+@SHFLAGS_ITEMS
+#define FN(sname,cname,flags,ochar)	((const char *)(&shoptione_ ## cname)) + 2,
+@@
+
+/* special cases */
+
+<o:|!SHFLAGS_NOT_CMD
+<T:|!SHFLAGS_NOT_CMD
+<A:|!SHFLAGS_NOT_SET
+<o;|!SHFLAGS_NOT_SET
+<s|!SHFLAGS_NOT_SET
+
+/*
+ * options are sorted by their longnames
+ */
+
+/* -a	all new parameters are created with the export attribute */
+>a|
+F0("allexport", FEXPORT, OF_ANY
+
+/* ./.	bgnice */
+>| HAVE_NICE
+FN("bgnice", FBGNICE, OF_ANY
+
+/* ./.	enable {} globbing (non-standard) */
+>|
+FN("braceexpand", FBRACEEXPAND, OF_ANY
+
+/* ./.	Emacs command line editing mode */
+>|!MKSH_NO_CMDLINE_EDITING
+FN("emacs", FEMACS, OF_ANY
+
+/* -e	quit on error */
+>e|
+FN("errexit", FERREXIT, OF_ANY
+
+/* ./.	Emacs command line editing mode, gmacs variant */
+>|!MKSH_NO_CMDLINE_EDITING
+FN("gmacs", FGMACS, OF_ANY
+
+/* ./.	reading EOF does not exit */
+>|
+FN("ignoreeof", FIGNOREEOF, OF_ANY
+
+/* ./.	inherit -x flag */
+>|
+FN("inherit-xtrace", FXTRACEREC, OF_ANY
+
+/* -i	interactive shell */
+>i|!SHFLAGS_NOT_CMD
+FN("interactive", FTALKING, OF_CMDLINE
+
+/* -k	name=value are recognised anywhere */
+>k|
+FN("keyword", FKEYWORD, OF_ANY
+
+/* -l	login shell */
+>l|!SHFLAGS_NOT_CMD
+FN("login", FLOGIN, OF_CMDLINE
+
+/* -X	mark dirs with / in file name completion */
+>X|
+FN("markdirs", FMARKDIRS, OF_ANY
+
+/* -m	job control monitoring */
+>m|!MKSH_UNEMPLOYED
+FN("monitor", FMONITOR, OF_ANY
+
+/* -C	don't overwrite existing files */
+>C|
+FN("noclobber", FNOCLOBBER, OF_ANY
+
+/* -n	don't execute any commands */
+>n|
+FN("noexec", FNOEXEC, OF_ANY
+
+/* -f	don't do file globbing */
+>f|
+FN("noglob", FNOGLOB, OF_ANY
+
+/* ./.	don't kill running jobs when login shell exits */
+>|
+FN("nohup", FNOHUP, OF_ANY
+
+/* ./.	don't save functions in history (no effect) */
+>|
+FN("nolog", FNOLOG, OF_ANY
+
+/* -b	asynchronous job completion notification */
+>b|!MKSH_UNEMPLOYED
+FN("notify", FNOTIFY, OF_ANY
+
+/* -u	using an unset variable is an error */
+>u|
+FN("nounset", FNOUNSET, OF_ANY
+
+/* ./.	don't do logical cds/pwds (non-standard) */
+>|
+FN("physical", FPHYSICAL, OF_ANY
+
+/* ./.	errorlevel of a pipeline is the rightmost nonzero value */
+>|
+FN("pipefail", FPIPEFAIL, OF_ANY
+
+/* ./.	adhere more closely to POSIX even when undesirable */
+>|
+FN("posix", FPOSIX, OF_ANY
+
+/* -p	privileged shell (suid) */
+>p|
+FN("privileged", FPRIVILEGED, OF_ANY
+
+/* -r	restricted shell */
+>r|!SHFLAGS_NOT_CMD
+FN("restricted", FRESTRICTED, OF_CMDLINE
+
+/* ./.	kludge mode for better compat with traditional sh (OS-specific) */
+>|
+FN("sh", FSH, OF_ANY
+
+/* -s	(invocation) parse stdin (pseudo non-standard) */
+>s|!SHFLAGS_NOT_CMD
+FN("stdin", FSTDIN, OF_CMDLINE
+
+/* -h	create tracked aliases for all commands */
+>h|
+FN("trackall", FTRACKALL, OF_ANY
+
+/* -U	enable UTF-8 processing (non-standard) */
+>U|
+FN("utf8-mode", FUNNYCODE, OF_ANY
+
+/* -v	echo input */
+>v|
+FN("verbose", FVERBOSE, OF_ANY
+
+/* ./.	Vi command line editing mode */
+>|!MKSH_NO_CMDLINE_EDITING
+FN("vi", FVI, OF_ANY
+
+/* ./.	enable ESC as file name completion character (non-standard) */
+>|!MKSH_NO_CMDLINE_EDITING
+FN("vi-esccomplete", FVIESCCOMPLETE, OF_ANY
+
+/* ./.	enable Tab as file name completion character (non-standard) */
+>|!MKSH_NO_CMDLINE_EDITING
+FN("vi-tabcomplete", FVITABCOMPLETE, OF_ANY
+
+/* ./.	always read in raw mode (no effect) */
+>|!MKSH_NO_CMDLINE_EDITING
+FN("viraw", FVIRAW, OF_ANY
+
+/* -x	execution trace (display commands as they are run) */
+>x|
+FN("xtrace", FXTRACE, OF_ANY
+
+/* -c	(invocation) execute specified command */
+>c|!SHFLAGS_NOT_CMD
+FN("", FCOMMAND, OF_CMDLINE
+
+/*
+ * anonymous flags: used internally by shell only (not visible to user)
+ */
+
+/* ./.	(internal) initial shell was interactive */
+>|
+FN("", FTALKING_I, OF_INTERNAL
+
+|SHFLAGS_OPTCS
