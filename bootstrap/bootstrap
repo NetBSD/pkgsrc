@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.283 2020/06/29 12:38:03 jperkin Exp $
+# $NetBSD: bootstrap,v 1.284 2020/07/06 10:21:01 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -871,6 +871,11 @@ yes)
 	;;
 esac
 
+# mksh and ksh are mutually exclusive, prefer mksh while we transition to it.
+case "$need_mksh" in
+yes)	need_ksh=no ;;
+esac
+
 case "$quiet" in
 yes)
 	configure_quiet_flags="--quiet"
@@ -1174,6 +1179,20 @@ echo_msg "Building libnbcompat"
 copy_src $pkgsrcdir/pkgtools/libnbcompat/files libnbcompat
 run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --enable-bsd-getopt --enable-db && $bmake $make_quiet_flags -j$make_jobs)"
 
+# bootstrap mksh if necessary
+case "$need_mksh" in
+yes)	echo_msg "Bootstrapping mksh"
+	copy_src $pkgsrcdir/shells/mksh/files mksh
+	run_cmd "(cd $wrkdir/mksh && env $BSTRAP_ENV CC=\"${CC}\" $shprog Build.sh -r)"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/mksh/mksh $wrkdir/bin/mksh"
+	echo "TOOLS_PLATFORM.sh?=               $prefix/bin/mksh" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.sh?=               $wrkdir/bin/mksh" >> ${BOOTSTRAP_MKCONF}
+	echo_msg "Rebootstrapping bmake for mksh"
+	bmakexargs="$bmakexargs --with-defshell=$wrkdir/bin/mksh"
+	bootstrap_bmake
+	;;
+esac
+
 # bootstrap ksh if necessary
 case "$need_ksh" in
 yes)	echo_msg "Bootstrapping ksh"
@@ -1350,6 +1369,9 @@ yes)
 		build_package "sysutils/install-sh"
 	fi
 	;;
+esac
+case "$need_mksh" in
+yes)	build_package "shells/mksh";;
 esac
 case "$need_ksh" in
 yes)	build_package "shells/pdksh";;
