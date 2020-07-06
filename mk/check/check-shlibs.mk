@@ -86,7 +86,7 @@ CHECK_SHLIBS_NATIVE_ENV+=	CHECK_SHLIBS_BLACKLIST=${CHECK_SHLIBS_BLACKLIST:Q}
 .  endif
 
 privileged-install-hook: _check-shlibs
-_check-shlibs: error-check .PHONY
+_check-shlibs: error-check _check-shlibs-autofix .PHONY
 	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
 	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
 	${RUN}					\
@@ -119,4 +119,8 @@ _check-shlibs-autofix: error-check .PHONY
 		esac;							\
 		install_name_tool -id ${PREFIX:Q}"/""$$file" "$$file" >${WARNING_DIR}/${.TARGET} 2>&1	\
 	done								\
+.else
+_check-shlibs-autofix: .PHONY
+	@${DO_NADA}
 .endif
+
