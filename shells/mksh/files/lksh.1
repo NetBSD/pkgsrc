@@ -1,0 +1,354 @@
+.\" $MirOS: src/bin/mksh/lksh.1,v 1.25 2018/12/25 19:38:08 tg Exp $
+.\"-
+.\" Copyright (c) 2008, 2009, 2010, 2012, 2013, 2015, 2016, 2017, 2018
+.\"	mirabilos <m@mirbsd.org>
+.\"
+.\" Provided that these terms and disclaimer and all copyright notices
+.\" are retained or reproduced in an accompanying document, permission
+.\" is granted to deal in this work without restriction, including un‐
+.\" limited rights to use, publicly perform, distribute, sell, modify,
+.\" merge, give away, or sublicence.
+.\"
+.\" This work is provided “AS IS” and WITHOUT WARRANTY of any kind, to
+.\" the utmost extent permitted by applicable law, neither express nor
+.\" implied; without malicious intent or gross negligence. In no event
+.\" may a licensor, author or contributor be held liable for indirect,
+.\" direct, other damage, loss, or other issues arising in any way out
+.\" of dealing in the work, even if advised of the possibility of such
+.\" damage or existence of a defect, except proven that it results out
+.\" of said person’s immediate fault when using the work as intended.
+.\"-
+.\" Try to make GNU groff and AT&T nroff more compatible
+.\" * ` generates ‘ in gnroff, so use \`
+.\" * ' generates ’ in gnroff, \' generates ´, so use \*(aq
+.\" * - generates ‐ in gnroff, \- generates −, so .tr it to -
+.\"   thus use - for hyphens and \- for minus signs and option dashes
+.\" * ~ is size-reduced and placed atop in groff, so use \*(TI
+.\" * ^ is size-reduced and placed atop in groff, so use \*(ha
+.\" * \(en does not work in nroff, so use \*(en
+.\" * <>| are problematic, so redefine and use \*(Lt\*(Gt\*(Ba
+.\" Also make sure to use \& *before* a punctuation char that is to not
+.\" be interpreted as punctuation, and especially with two-letter words
+.\" but also (after) a period that does not end a sentence (“e.g.\&”).
+.\" The section after the "doc" macropackage has been loaded contains
+.\" additional code to convene between the UCB mdoc macropackage (and
+.\" its variant as BSD mdoc in groff) and the GNU mdoc macropackage.
+.\"
+.ie \n(.g \{\
+.	if \*[.T]ascii .tr \-\N'45'
+.	if \*[.T]latin1 .tr \-\N'45'
+.	if \*[.T]utf8 .tr \-\N'45'
+.	ds <= \[<=]
+.	ds >= \[>=]
+.	ds Rq \[rq]
+.	ds Lq \[lq]
+.	ds sL \(aq
+.	ds sR \(aq
+.	if \*[.T]utf8 .ds sL `
+.	if \*[.T]ps .ds sL `
+.	if \*[.T]utf8 .ds sR '
+.	if \*[.T]ps .ds sR '
+.	ds aq \(aq
+.	ds TI \(ti
+.	ds ha \(ha
+.	ds en \(en
+.\}
+.el \{\
+.	ds aq '
+.	ds TI ~
+.	ds ha ^
+.	ds en \(em
+.\}
+.\"
+.\" Implement .Dd with the Mdocdate RCS keyword
+.\"
+.rn Dd xD
+.de Dd
+.ie \\$1$Mdocdate: \{\
+.	xD \\$2 \\$3, \\$4
+.\}
+.el .xD \\$1 \\$2 \\$3 \\$4 \\$5 \\$6 \\$7 \\$8
+..
+.\"
+.\" .Dd must come before definition of .Mx, because when called
+.\" with -mandoc, it might implement .Mx itself, but we want to
+.\" use our own definition. And .Dd must come *first*, always.
+.\"
+.Dd $Mdocdate: December 25 2018 $
+.\"
+.\" Check which macro package we use, and do other -mdoc setup.
+.\"
+.ie \n(.g \{\
+.	if \*[.T]utf8 .tr \[la]\*(Lt
+.	if \*[.T]utf8 .tr \[ra]\*(Gt
+.	ie d volume-ds-1 .ds tT gnu
+.	el .ie d doc-volume-ds-1 .ds tT gnp
+.	el .ds tT bsd
+.\}
+.el .ds tT ucb
+.\"
+.\" Implement .Mx (MirBSD)
+.\"
+.ie "\*(tT"gnu" \{\
+.	eo
+.	de Mx
+.	nr curr-font \n[.f]
+.	nr curr-size \n[.ps]
+.	ds str-Mx \f[\n[curr-font]]\s[\n[curr-size]u]
+.	ds str-Mx1 \*[Tn-font-size]\%MirBSD\*[str-Mx]
+.	if !\n[arg-limit] \
+.	if \n[.$] \{\
+.	ds macro-name Mx
+.	parse-args \$@
+.	\}
+.	if (\n[arg-limit] > \n[arg-ptr]) \{\
+.	nr arg-ptr +1
+.	ie (\n[type\n[arg-ptr]] == 2) \
+.	as str-Mx1 \~\*[arg\n[arg-ptr]]
+.	el \
+.	nr arg-ptr -1
+.	\}
+.	ds arg\n[arg-ptr] "\*[str-Mx1]
+.	nr type\n[arg-ptr] 2
+.	ds space\n[arg-ptr] "\*[space]
+.	nr num-args (\n[arg-limit] - \n[arg-ptr])
+.	nr arg-limit \n[arg-ptr]
+.	if \n[num-args] \
+.	parse-space-vector
+.	print-recursive
+..
+.	ec
+.	ds sP \s0
+.	ds tN \*[Tn-font-size]
+.\}
+.el .ie "\*(tT"gnp" \{\
+.	eo
+.	de Mx
+.	nr doc-curr-font \n[.f]
+.	nr doc-curr-size \n[.ps]
+.	ds doc-str-Mx \f[\n[doc-curr-font]]\s[\n[doc-curr-size]u]
+.	ds doc-str-Mx1 \*[doc-Tn-font-size]\%MirBSD\*[doc-str-Mx]
+.	if !\n[doc-arg-limit] \
+.	if \n[.$] \{\
+.	ds doc-macro-name Mx
+.	doc-parse-args \$@
+.	\}
+.	if (\n[doc-arg-limit] > \n[doc-arg-ptr]) \{\
+.	nr doc-arg-ptr +1
+.	ie (\n[doc-type\n[doc-arg-ptr]] == 2) \
+.	as doc-str-Mx1 \~\*[doc-arg\n[doc-arg-ptr]]
+.	el \
+.	nr doc-arg-ptr -1
+.	\}
+.	ds doc-arg\n[doc-arg-ptr] "\*[doc-str-Mx1]
+.	nr doc-type\n[doc-arg-ptr] 2
+.	ds doc-space\n[doc-arg-ptr] "\*[doc-space]
+.	nr doc-num-args (\n[doc-arg-limit] - \n[doc-arg-ptr])
+.	nr doc-arg-limit \n[doc-arg-ptr]
+.	if \n[doc-num-args] \
+.	doc-parse-space-vector
+.	doc-print-recursive
+..
+.	ec
+.	ds sP \s0
+.	ds tN \*[doc-Tn-font-size]
+.\}
+.el \{\
+.	de Mx
+.	nr cF \\n(.f
+.	nr cZ \\n(.s
+.	ds aa \&\f\\n(cF\s\\n(cZ
+.	if \\n(aC==0 \{\
+.		ie \\n(.$==0 \&MirBSD\\*(aa
+.		el .aV \\$1 \\$2 \\$3 \\$4 \\$5 \\$6 \\$7 \\$8 \\$9
+.	\}
+.	if \\n(aC>\\n(aP \{\
+.		nr aP \\n(aP+1
+.		ie \\n(C\\n(aP==2 \{\
+.			as b1 \&MirBSD\ #\&\\*(A\\n(aP\\*(aa
+.			ie \\n(aC>\\n(aP \{\
+.				nr aP \\n(aP+1
+.				nR
+.			\}
+.			el .aZ
+.		\}
+.		el \{\
+.			as b1 \&MirBSD\\*(aa
+.			nR
+.		\}
+.	\}
+..
+.\}
+.\"-
+.Dt LKSH 1
+.Os MirBSD
+.Sh NAME
+.Nm lksh
+.Nd Legacy Korn shell built on mksh
+.Sh SYNOPSIS
+.Nm
+.Bk -words
+.Op Fl +abCefhiklmnprUuvXx
+.Op Fl +o Ar opt
+.Oo
+.Fl c Ar string \*(Ba
+.Fl s \*(Ba
+.Ar file
+.Op Ar args ...
+.Oc
+.Ek
+.Sh DESCRIPTION
+.Nm
+is a command interpreter intended exclusively for running legacy
+shell scripts.
+It is built on
+.Nm mksh ;
+refer to its manual page for details on the scripting language.
+It is recommended to port scripts to
+.Nm mksh
+instead of relying on legacy or objectionable POSIX-mandated behaviour,
+since the MirBSD Korn Shell scripting language is much more consistent.
+.Pp
+Do not use
+.Nm
+as an interactive or login shell; use
+.Nm mksh
+instead.
+.Pp
+Note that it's strongly recommended to invoke
+.Nm
+with
+.Fl o Ic posix
+to fully enjoy better compatibility to the
+.Tn POSIX
+standard (which is probably why you use
+.Nm
+over
+.Nm mksh
+in the first place);
+.Fl o Ic sh
+(possibly additionally to the above) may be needed for some legacy scripts.
+.Sh LEGACY MODE
+.Nm
+currently has the following differences from
+.Nm mksh :
+.Bl -bullet
+.It
+The
+.Ev KSH_VERSION
+string identifies
+.Nm
+as
+.Dq Li LEGACY KSH
+instead of
+.Dq Li MIRBSD KSH .
+Note that the rest of the version string is identical between
+the two shell flavours, and the behaviour and differences can
+change between versions; see the accompanying manual page
+.Xr mksh 1
+for the versions this document applies to.
+.It
+.Nm
+uses
+.Tn POSIX
+arithmetic, which has quite a few implications:
+The data type for arithmetic operations is the host
+.Tn ISO
+C
+.Vt long
+data type.
+Signed integer wraparound is Undefined Behaviour; this means that...
+.Bd -literal -offset indent
+$ echo $((2147483647 + 1))
+.Ed
+.Pp
+\&... is permitted to, e.g. delete all files on your system
+(the figure differs for non-32-bit systems, the rule doesn't).
+The sign of the result of a modulo operation with at least one
+negative operand is unspecified.
+Shift operations on negative numbers are unspecified.
+Division of the largest negative number by \-1 is Undefined Behaviour.
+The compiler is permitted to delete all data and crash the system
+if Undefined Behaviour occurs (see above for an example).
+.It
+The rotation arithmetic operators are not available.
+.It
+The shift arithmetic operators take all bits of the second operand into
+account; if they exceed permitted precision, the result is unspecified.
+.It
+Unless
+.Ic set -o posix
+is active,
+.Nm
+always uses traditional mode for constructs like:
+.Bd -literal -offset indent
+$ set -- $(getopt ab:c "$@")
+$ echo $?
+.Ed
+.Pp
+POSIX mandates this to show 0, but traditional mode
+passes through the errorlevel from the
+.Xr getopt 1
+command.
+.It
+Functions defined with the
+.Ic function
+reserved word share the shell options
+.Pq Ic set -o
+instead of locally scoping them.
+.El
+.Sh SEE ALSO
+.Xr mksh 1
+.Pp
+.Pa http://www.mirbsd.org/mksh.htm
+.Pp
+.Pa http://www.mirbsd.org/ksh\-chan.htm
+.Sh CAVEATS
+To use
+.Nm
+as
+.Pa /bin/sh ,
+compilation to enable
+.Ic set -o posix
+by default if called as
+.Nm sh
+.Pq adding Dv \-DMKSH_BINSHPOSIX to Dv CPPFLAGS
+is highly recommended for better standards compliance.
+.Pp
+For better compatibility with legacy scripts, such as many
+.Tn Debian
+maintainer scripts, Upstart and SYSV init scripts, and other
+unfixed scripts, also adding the
+.Dv \-DMKSH_BINSHREDUCED
+compile-time option to enable
+.Em both
+.Ic set -o posix -o sh
+when the shell is run as
+.Nm sh ,
+as well as integrating the optional disrecommended
+.Xr printf 1
+builtin, might be necessary.
+.Pp
+.Nm
+tries to make a cross between a legacy bourne/posix compatibl-ish
+shell and a legacy pdksh-alike but
+.Dq legacy
+is not exactly specified.
+.Pp
+Talk to the
+.Mx
+development team and users using the mailing list at
+.Aq Mt miros\-mksh@mirbsd.org
+(please note the EU-DSGVO/GDPR notice on
+.Pa http://www.mirbsd.org/rss.htm#lists
+and in the SMTP banner!) or the
+.Li \&#\&!/bin/mksh
+.Pq or Li \&#ksh
+IRC channel at
+.Pa irc.freenode.net
+.Pq Port 6697 SSL, 6667 unencrypted
+if you need any further quirks or assistance,
+and consider migrating your legacy scripts to work with
+.Nm mksh
+instead of requiring
+.Nm .
