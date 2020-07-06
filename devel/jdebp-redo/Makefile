@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/08/02 21:54:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/06 15:16:49 schmonz Exp $
 
 DISTNAME=	redo-1.4
 PKGNAME=	jdebp-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://jdebp.eu/Repository/freebsd/
 
@@ -9,8 +10,6 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://jdebp.eu/Softwares/redo/
 COMMENT=	C++ implementation of DJB's redo build tool
 LICENSE=	isc OR 2-clause-bsd
-
-CONFLICTS+=	apenwarr-redo-[0-9]*
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c++
@@ -34,5 +33,8 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ./package/makeinstall
 	cd ${WRKSRC} && ./package/export ${DESTDIR}${PREFIX}/
+	for i in bin man/man1; do cd ${DESTDIR}${PREFIX}/$${i}; \
+	  for j in *; do mv $${j} jdebp-$${j}; done; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
