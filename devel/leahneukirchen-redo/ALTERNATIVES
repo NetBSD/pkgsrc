@@ -1,0 +1,4 @@
+bin/redo @PREFIX@/bin/leahneukirchen-redo
+bin/redo-always @PREFIX@/bin/leahneukirchen-redo-always
+bin/redo-ifchange @PREFIX@/bin/leahneukirchen-redo-ifchange
+bin/redo-ifcreate @PREFIX@/bin/leahneukirchen-redo-ifcreate
