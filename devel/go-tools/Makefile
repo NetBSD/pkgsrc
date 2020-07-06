@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/06/17 09:54:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.40 2020/07/06 23:05:30 gutteridge Exp $
 
 DISTNAME=		tools
 PKGNAME=		go-tools-1.11.20181009
@@ -53,6 +53,5 @@ post-install:
 
 .include "../../lang/go/go-package.mk"
 .include "../../devel/google-api-go-client/buildlink3.mk"
-BUILDLINK_API_DEPENDS.go-crypto+=	go-crypto>=0.0.20180308
 .include "../../security/go-crypto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
