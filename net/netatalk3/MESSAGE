@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2016/11/07 00:47:29 christos Exp $
+$NetBSD: MESSAGE,v 1.3 2020/07/06 20:19:54 christos Exp $
 
 For users migrating from Netatalk 2.x, version 3.x comes with
 substantial changes, like an all-new config file format, and the loss
@@ -12,9 +12,13 @@ In addition, 3.x appears to only work reliably with the Berkeley
 Database v5, so you either have to manually upgrade the existing
 CNID database(s), or discard them.
 
-- You need to start mdnsd for this
-- add your IPv4 address to the 'afp listen' in /etc/netatalk/afp.conf
-  because otherwise the daemon only listens on IPv6, and we have mapped
-  addresses turned off by default
+- You need to start mdnsd for this, if you want enable autodiscovery
+  Otherwise you can just manually add the time machine on the mac using:
+
+	tmutil setdestination -ap afp://<user>@<host>/<share>
+
+- You don't need to add your IPv4 address to the 'afp listen' in
+  /etc/netatalk/afp.conf anymore because although the daemon only
+  listens on IPv6, it also turns mapped addresses on.
 
 ===========================================================================
