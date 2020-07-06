@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2020/05/19 12:13:51 hauke Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/07/06 14:38:06 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -404,6 +404,7 @@ ${PYSITELIB}/samba/tests/dns_base.py
 ${PYSITELIB}/samba/tests/dns_forwarder.py
 ${PYSITELIB}/samba/tests/dns_forwarder_helpers/server.py
 ${PYSITELIB}/samba/tests/dns_invalid.py
+${PYSITELIB}/samba/tests/dns_packet.py
 ${PYSITELIB}/samba/tests/dns_tkey.py
 ${PYSITELIB}/samba/tests/dns_wildcard.py
 ${PYSITELIB}/samba/tests/docs.py
