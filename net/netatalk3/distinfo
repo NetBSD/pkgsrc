@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2018/12/21 09:59:21 hauke Exp $
+$NetBSD: distinfo,v 1.8 2020/07/06 20:19:54 christos Exp $
 
 SHA1 (netatalk-3.1.12.tar.bz2) = cc1fe1ebdbdb4da9cf82835c440e82ba28a832c5
 RMD160 (netatalk-3.1.12.tar.bz2) = 30f44674f76f7d70d02772ddf2ff249e4aef3a50
@@ -10,10 +10,13 @@ SHA1 (patch-config_Makefile.in) = 81fff584e5cb98537a4fa671fb551ad0258ba092
 SHA1 (patch-config_pam_Makefile.in) = 8f69225c333b327b4c57ef12994666cc521e5c70
 SHA1 (patch-distrib_initscripts_Makefile.in) = fbeffa06a051fb61819d09e0396695cbe564780e
 SHA1 (patch-distrib_initscripts_netatalk.xml.tmpl) = dd7591e12eca3c1e7d7bc768cd1e060979dc383e
+SHA1 (patch-etc_afpd_afp__dsi.c) = 024cc7a0935ece2ed43d1ab3142c8d6bb1b376be
 SHA1 (patch-etc_afpd_quota.c) = d7c87086c8eb1ff68e46c5972fcd0b2e18c592e5
 SHA1 (patch-etc_cnid__dbd_cnid__metad.c) = 6c28332ca3e11d11f3b5bb13fa01783dbb94c30f
+SHA1 (patch-etc_cnid__dbd_usockfd.c) = a3b6c498ed73dc449b84d092f2b9e13eeae3dfc5
 SHA1 (patch-etc_netatalk_netatalk.c) = 2bdbfc035e4bea9859cf970cd6b9a6503244185e
 SHA1 (patch-include_atalk_util.h) = a7a0763c5866288ad89a8b6b90c71767ee4d9d64
 SHA1 (patch-libatalk_bstring_bstrlib.c) = eaee8075f102c1150f74e9dce4d83697c3eac3fc
+SHA1 (patch-libatalk_dsi_dsi__tcp.c) = eacb939dba2749925e36ca05fa0480b3391d0f80
 SHA1 (patch-libatalk_util_getiface.c) = 1a46bd695c96e0666b6f45493eb44501c0f4e0b5
 SHA1 (patch-macros_quota-check.m4) = a6502693ae8c7218b7c4426b134e0aa590412e1f
