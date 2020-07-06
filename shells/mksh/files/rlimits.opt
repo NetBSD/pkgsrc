@@ -1,0 +1,111 @@
+/*-
+ * Copyright (c) 2013, 2015
+ *	mirabilos <m@mirbsd.org>
+ *
+ * Provided that these terms and disclaimer and all copyright notices
+ * are retained or reproduced in an accompanying document, permission
+ * is granted to deal in this work without restriction, including un-
+ * limited rights to use, publicly perform, distribute, sell, modify,
+ * merge, give away, or sublicence.
+ *
+ * This work is provided "AS IS" and WITHOUT WARRANTY of any kind, to
+ * the utmost extent permitted by applicable law, neither express nor
+ * implied; without malicious intent or gross negligence. In no event
+ * may a licensor, author or contributor be held liable for indirect,
+ * direct, other damage, loss, or other issues arising in any way out
+ * of dealing in the work, even if advised of the possibility of such
+ * damage or existence of a defect, except proven that it results out
+ * of said person's immediate fault when using the work as intended.
+ */
+
+@RLIMITS_DEFNS
+__RCSID("$MirOS: src/bin/mksh/rlimits.opt,v 1.4 2019/04/24 20:56:31 tg Exp $");
+@RLIMITS_ITEMS
+#define FN(lname,lid,lfac,lopt) (const struct limits *)(&rlimits_ ## lid),
+@@
+
+/* generic options for the ulimit builtin */
+
+<a|
+<H|
+<S|
+
+/* do not use options -H, -S or -a or change the order */
+
+>t|RLIMIT_CPU
+FN("time(cpu-seconds)", RLIMIT_CPU, 1
+
+>f|RLIMIT_FSIZE
+FN("file(blocks)", RLIMIT_FSIZE, 512
+
+>c|RLIMIT_CORE
+FN("coredump(blocks)", RLIMIT_CORE, 512
+
+>d|RLIMIT_DATA
+FN("data(KiB)", RLIMIT_DATA, 1024
+
+>s|RLIMIT_STACK
+FN("stack(KiB)", RLIMIT_STACK, 1024
+
+>l|RLIMIT_MEMLOCK
+FN("lockedmem(KiB)", RLIMIT_MEMLOCK, 1024
+
+>n|RLIMIT_NOFILE
+FN("nofiles(descriptors)", RLIMIT_NOFILE, 1
+
+>p|RLIMIT_NPROC
+FN("processes", RLIMIT_NPROC, 1
+
+>w|RLIMIT_SWAP
+FN("swap(KiB)", RLIMIT_SWAP, 1024
+
+>T|RLIMIT_TIME
+FN("humantime(seconds)", RLIMIT_TIME, 1
+
+>V|RLIMIT_NOVMON
+FN("vnodemonitors", RLIMIT_NOVMON, 1
+
+>i|RLIMIT_SIGPENDING
+FN("sigpending", RLIMIT_SIGPENDING, 1
+
+>q|RLIMIT_MSGQUEUE
+FN("msgqueue(bytes)", RLIMIT_MSGQUEUE, 1
+
+>M|RLIMIT_AIO_MEM
+FN("AIOlockedmem(KiB)", RLIMIT_AIO_MEM, 1024
+
+>O|RLIMIT_AIO_OPS
+FN("AIOoperations", RLIMIT_AIO_OPS, 1
+
+>C|RLIMIT_TCACHE
+FN("cachedthreads", RLIMIT_TCACHE, 1
+
+>B|RLIMIT_SBSIZE
+FN("sockbufsiz(KiB)", RLIMIT_SBSIZE, 1024
+
+>P|RLIMIT_PTHREAD
+FN("threadsperprocess", RLIMIT_PTHREAD, 1
+
+>r|RLIMIT_THREADS
+FN("threadsperprocess", RLIMIT_THREADS, 1
+
+>e|RLIMIT_NICE
+FN("maxnice", RLIMIT_NICE, 1
+
+>r|RLIMIT_RTPRIO
+FN("maxrtprio", RLIMIT_RTPRIO, 1
+
+>m|ULIMIT_M_IS_RSS
+FN("resident-set(KiB)", RLIMIT_RSS, 1024
+>m|ULIMIT_M_IS_VMEM
+FN("memory(KiB)", RLIMIT_VMEM, 1024
+
+>v|ULIMIT_V_IS_VMEM
+FN("virtual-memory(KiB)", RLIMIT_VMEM, 1024
+>v|ULIMIT_V_IS_AS
+FN("address-space(KiB)", RLIMIT_AS, 1024
+
+>x|RLIMIT_LOCKS
+FN("filelocks", RLIMIT_LOCKS, 1
+
+|RLIMITS_OPTCS
