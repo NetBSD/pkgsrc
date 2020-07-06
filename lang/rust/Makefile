@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.182 2020/07/06 13:56:31 he Exp $
+# $NetBSD: Makefile,v 1.183 2020/07/06 16:03:00 he Exp $
 
-DISTNAME=	rustc-1.44.0-src
+DISTNAME=	rustc-1.44.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -71,27 +71,6 @@ CHECK_RELRO_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf)
-# Bootstrapping on NetBSD/powerpc requires no debug-info from rustc
-# (both for amd64->powerpc built and powerpc->powerpc built bootstrap bits)
-CONFIGURE_ARGS+=	--disable-debug
-CONFIGURE_ARGS+=	--disable-debug-assertions
-CONFIGURE_ARGS+=	--disable-llvm-release-debuginfo
-CONFIGURE_ARGS+=	--debuginfo-level=0
-CONFIGURE_ARGS+=	--debuginfo-level-rustc=0
-CONFIGURE_ARGS+=	--debuginfo-level-std=0
-CONFIGURE_ARGS+=	--debuginfo-level-tools=0
-CONFIGURE_ARGS+=	--debuginfo-level-tests=0
-.endif
-
-# Only build the ARM target on/for this host, due to resource constraints
-# (X86 needs to go along due to 2-stage build process)
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || \
-    !empty(TARGET:Marmv7-unknown-netbsd-eabihf)
-CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
-.endif
 
 .if ${OPSYS} == "NetBSD"
 # This block contains information about known trouble on NetBSD and workarounds.
