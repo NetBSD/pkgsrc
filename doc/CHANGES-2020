@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3892 2020/07/06 15:18:36 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.3893 2020/07/06 15:26:56 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6195,3 +6195,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/samba4 to 4.12.5 [adam 2020-07-06]
 	Updated devel/jdebp-redo to 1.4nb1 [schmonz 2020-07-06]
 	Updated devel/apenwarr-redo to 0.42c [schmonz 2020-07-06]
+	Updated net/statzone to 1.0.3 [fcambus 2020-07-06]
