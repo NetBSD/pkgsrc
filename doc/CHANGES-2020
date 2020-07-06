@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3898 2020/07/06 18:22:13 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.3899 2020/07/06 20:26:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6203,3 +6203,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-coverage to 5.2 [adam 2020-07-06]
 	Updated devel/py-test-asyncio to 0.14.0 [adam 2020-07-06]
 	Updated misc/usbids to 20200622 [bsiegert 2020-07-06]
+	Updated databases/p5-App-Sqitch to 1.1.0 [schmonz 2020-07-06]
