@@ -1,0 +1,4 @@
+bin/cubehash @PREFIX@/bin/jdebp-cubehash
+bin/redo @PREFIX@/bin/jdebp-redo
+bin/redo-ifchange @PREFIX@/bin/jdebp-redo-ifchange
+bin/redo-ifcreate @PREFIX@/bin/jdebp-redo-ifcreate
