@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3897 2020/07/06 15:44:45 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3898 2020/07/06 18:22:13 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6202,3 +6202,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/fdupes to 2.1.1 [fcambus 2020-07-06]
 	Updated devel/py-coverage to 5.2 [adam 2020-07-06]
 	Updated devel/py-test-asyncio to 0.14.0 [adam 2020-07-06]
+	Updated misc/usbids to 20200622 [bsiegert 2020-07-06]
