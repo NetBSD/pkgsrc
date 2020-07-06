@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3890 2020/07/06 14:38:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3891 2020/07/06 15:17:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6193,3 +6193,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.44.0 [he 2020-07-06]
 	Updated databases/ldb to 2.1.4 [adam 2020-07-06]
 	Updated net/samba4 to 4.12.5 [adam 2020-07-06]
+	Updated devel/jdebp-redo to 1.4nb1 [schmonz 2020-07-06]
