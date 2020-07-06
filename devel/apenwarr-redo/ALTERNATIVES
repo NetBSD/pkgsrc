@@ -1,0 +1,11 @@
+bin/redo @PREFIX@/bin/apenwarr-redo
+bin/redo-always @PREFIX@/bin/apenwarr-redo-always
+bin/redo-ifchange @PREFIX@/bin/apenwarr-redo-ifchange
+bin/redo-ifcreate @PREFIX@/bin/apenwarr-redo-ifcreate
+bin/redo-log @PREFIX@/bin/apenwarr-redo-log
+bin/redo-ood @PREFIX@/bin/apenwarr-redo-ood
+bin/redo-sources @PREFIX@/bin/apenwarr-redo-sources
+bin/redo-stamp @PREFIX@/bin/apenwarr-redo-stamp
+bin/redo-targets @PREFIX@/bin/apenwarr-redo-targets
+bin/redo-unlocked @PREFIX@/bin/apenwarr-redo-unlocked
+bin/redo-whichdo @PREFIX@/bin/apenwarr-redo-whichdo
