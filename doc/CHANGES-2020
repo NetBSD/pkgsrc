@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3889 2020/07/06 13:57:51 he Exp $
+$NetBSD: CHANGES-2020,v 1.3890 2020/07/06 14:38:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6191,3 +6191,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libevent to 2.1.12 [adam 2020-07-06]
 	Updated devel/kdiff3 to 1.8.3 [gutteridge 2020-07-06]
 	Updated lang/rust to 1.44.0 [he 2020-07-06]
+	Updated databases/ldb to 2.1.4 [adam 2020-07-06]
+	Updated net/samba4 to 4.12.5 [adam 2020-07-06]
