@@ -1,0 +1,2 @@
+redo-c is an implementation of DJB's redo build system in portable C
+with zero dependencies.
