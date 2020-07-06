@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/04/21 07:48:55 dsainty Exp $
+# $NetBSD: Makefile,v 1.14 2020/07/06 10:48:34 jperkin Exp $
 
 DISTNAME=	ninja-1.10.0
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
@@ -26,8 +26,17 @@ BUILD_DEPENDS+=	re2c>=0.11.3:../../devel/re2c
 # Because many (most?) users of ninja/meson seem to need hacks involving
 # LD_LIBRARY_PATH, use a non-SIP-triggering shell under MacOS X.
 #
+# macOS bootstraps are transitioning to mksh as the system shell, once that
+# has been in place for a while we can remove the pdksh support, and ideally
+# just replace this whole section with -DNINJA_SHELL=${TOOLS_PLATFORM.sh}
+#
+.  if ${TOOLS_PLATFORM.sh:M?*/bin/mksh}
+DEPENDS+=	mksh-[0-9]*:../../shells/mksh
+CFLAGS+=	-DNINJA_SHELL=${PREFIX}/bin/mksh
+.  else
 DEPENDS+=	pdksh-[0-9]*:../../shells/pdksh
 CFLAGS+=	-DNINJA_SHELL=${PREFIX}/bin/pdksh
+.  endif
 .else
 CFLAGS+=	-DNINJA_SHELL=/bin/sh
 .endif
