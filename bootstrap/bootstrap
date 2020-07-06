@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.284 2020/07/06 10:21:01 jperkin Exp $
+# $NetBSD: bootstrap,v 1.285 2020/07/06 10:25:29 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -801,7 +801,7 @@ SunOS)
 		bootstrap_sh=${SH:-/usr/bin/bash}
 		bootstrap_sh_set=set
 	else
-		need_ksh=yes
+		need_mksh=yes
 	fi
 	idprog="/usr/xpg4/bin/id"
 	groupsprog="${idprog} -gn"
