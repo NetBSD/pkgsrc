@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.285 2020/07/06 10:25:29 jperkin Exp $
+# $NetBSD: bootstrap,v 1.286 2020/07/06 10:43:47 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -587,6 +587,15 @@ Darwin)
 	if [ $macos_version -ge 1008 ]; then
 		need_awk=yes
 		need_sed=yes
+	fi
+
+	# Avoid system shells on macOS versions that enable System Integrity
+	# Protection (SIP) as it affects packages that rely on variables such
+	# as LD_LIBRARY_PATH.  SIP unsets any variables that may affect
+	# security when using system binaries, i.e. /bin/*sh, but using a
+	# non-system shell is unaffected, at least for now.
+	if [ $macos_version -ge 1011 ]; then
+		need_mksh=yes
 	fi
 
 	case "$macos_version" in
