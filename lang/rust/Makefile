@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2020/07/06 16:12:14 he Exp $
+# $NetBSD: Makefile,v 1.185 2020/07/06 19:09:29 he Exp $
 
 DISTNAME=	rustc-1.44.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -47,6 +47,9 @@ CONFIGURE_ARGS+=		--disable-ninja
 # Use "dist" build target for cross compile of bootstrap
 #BUILD_TARGET=		dist
 BUILD_TARGET=		build
+
+# Include (optional) settings to cross-build rust
+.include "cross.mk"
 
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
