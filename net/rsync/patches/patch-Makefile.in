@@ -1,18 +1,18 @@
-$NetBSD: patch-Makefile.in,v 1.3 2020/06/30 11:56:14 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2020/07/07 06:54:03 adam Exp $
 
 https://bugzilla.samba.org/show_bug.cgi?id=11594
 Fix installation.
 
---- Makefile.in.orig	2020-06-21 19:55:24.000000000 +0000
+--- Makefile.in.orig	2020-07-01 02:30:28.000000000 +0000
 +++ Makefile.in
-@@ -76,13 +76,13 @@ all: Makefile rsync$(EXEEXT) stunnel-rsy
+@@ -73,13 +73,13 @@ all: Makefile rsync$(EXEEXT) stunnel-rsy
  .PHONY: install
  install: all
  	-${MKDIR_P} ${DESTDIR}${bindir}
 -	${INSTALLCMD} ${INSTALL_STRIP} -m 755 rsync$(EXEEXT) ${DESTDIR}${bindir}
--	${INSTALLCMD} -m 755 rsync-ssl ${DESTDIR}${bindir}
+-	${INSTALLCMD} -m 755 $(srcdir)/rsync-ssl ${DESTDIR}${bindir}
 +	${BSD_INSTALL_PROGRAM} rsync$(EXEEXT) ${DESTDIR}${bindir}
-+	${BSD_INSTALL_SCRIPT} rsync-ssl ${DESTDIR}${bindir}
++	${BSD_INSTALL_SCRIPT} $(srcdir)/rsync-ssl ${DESTDIR}${bindir}
  	-${MKDIR_P} ${DESTDIR}${mandir}/man1
  	-${MKDIR_P} ${DESTDIR}${mandir}/man5
 -	if test -f rsync.1; then ${INSTALLMAN} -m 644 rsync.1 ${DESTDIR}${mandir}/man1; fi
@@ -24,12 +24,12 @@ Fix installation.
  
  install-ssl-daemon: stunnel-rsyncd.conf
  	-${MKDIR_P} ${DESTDIR}/etc/stunnel
-@@ -227,7 +227,7 @@ proto: proto.h-tstamp
+@@ -231,7 +231,7 @@ proto: proto.h-tstamp
  proto.h: proto.h-tstamp
  	@if test -f proto.h; then :; else cp -p $(srcdir)/proto.h .; fi
  
--proto.h-tstamp: $(srcdir)/*.c $(srcdir)/lib/compat.c config.h
-+proto.h-tstamp: $(srcdir)/*.c $(srcdir)/lib/compat.c
- 	$(AWK) -f $(srcdir)/mkproto.awk $(srcdir)/*.c $(srcdir)/lib/compat.c
+-proto.h-tstamp: $(srcdir)/*.c $(srcdir)/lib/compat.c config.h daemon-parm.h
++proto.h-tstamp: $(srcdir)/*.c $(srcdir)/lib/compat.c daemon-parm.h
+ 	$(AWK) -f $(srcdir)/mkproto.awk $(srcdir)/*.c $(srcdir)/lib/compat.c daemon-parm.h
  
  .PHONY: man

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.49 2020/06/30 11:56:14 adam Exp $
+$NetBSD: distinfo,v 1.50 2020/07/07 06:54:03 adam Exp $
 
-SHA1 (rsync-3.2.1.tar.gz) = b00af97012cf1cb4b567e28e89c6365a651a24c9
-RMD160 (rsync-3.2.1.tar.gz) = 5e766682e2d2ea1194cf8cb13d21caa81d3a87ba
-SHA512 (rsync-3.2.1.tar.gz) = 80d639ab56a993de8016115fe15794bb9aa7012e4a8300402954760566a821c230af9dcdb19143d70663497a830289212ce329fb0c4fd5c4b6f392d850e5fd8c
-Size (rsync-3.2.1.tar.gz) = 1051665 bytes
-SHA1 (patch-Makefile.in) = 45e47fc610428a26542abf2b0657aeaa22c27794
-SHA1 (patch-authenticate.c) = 0612fb141cea1509b882df78f1b90fa52b1092b0
+SHA1 (rsync-3.2.2.tar.gz) = f73d49bcac52016894a29339701d390fe1a9aac9
+RMD160 (rsync-3.2.2.tar.gz) = 0de1f851925437e08d794db341189ead54e36620
+SHA512 (rsync-3.2.2.tar.gz) = 78107cf423e9259a7f7e9bf5527a956b648107aba72ea88b4267ae6334539342501d3c060efbc87235563b0253a12c382c4bb1f73335e68a62ff53aa905f9169
+Size (rsync-3.2.2.tar.gz) = 1057001 bytes
+SHA1 (patch-Makefile.in) = 8c2f80302ad504a40381c4c4e9396a1fd259e13f
+SHA1 (patch-authenticate.c) = 39b60b2a0742c8b161c2923f89828bd604aa7e83
