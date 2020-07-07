@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3924 2020/07/07 16:44:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3925 2020/07/07 16:49:45 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6242,3 +6242,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/angband-sdl to 4.2.1 [nia 2020-07-07]
 	Updated lang/vala to 0.48.7 [ryoon 2020-07-07]
 	Updated www/firefox68 to 68.10.0 [nia 2020-07-07]
+	Updated net/py-gsutil to 4.51 [bsiegert 2020-07-07]
