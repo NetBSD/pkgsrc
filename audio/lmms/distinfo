@@ -1,14 +1,10 @@
-$NetBSD: distinfo,v 1.12 2020/06/09 16:03:00 nia Exp $
+$NetBSD: distinfo,v 1.13 2020/07/07 12:40:58 nia Exp $
 
-SHA1 (lmms_1.2.1.tar.xz) = 47d139272ba938de89fbd432fbd7438ea919e58c
-RMD160 (lmms_1.2.1.tar.xz) = 8a0361b2771eb49e979047e03600265c127dc220
-SHA512 (lmms_1.2.1.tar.xz) = 7054d1592fdea60d76423a0260e941c217f50d2db9c4fcc35df20c8b58067c431ed9b264ef05e9f3f2cba84ca66870d1bf23da92b294a00ac6d567e3d3e771d6
-Size (lmms_1.2.1.tar.xz) = 14543092 bytes
+SHA1 (lmms_1.2.2.tar.xz) = 9b0681490e0f8a06347b6a0d4470be138bba6338
+RMD160 (lmms_1.2.2.tar.xz) = cb4a07dc27dfa31a70b5154a5386b2a8873774c8
+SHA512 (lmms_1.2.2.tar.xz) = df74d9e938f1c3807e9941b11db4ccfe9450e23b723c82774de15b7666ac39f1bfdd8519231e28849f994628190ecc92fa05d55bbc0b50a4421f2d183e729028
+Size (lmms_1.2.2.tar.xz) = 22733960 bytes
 SHA1 (patch-CMakeLists.txt) = e30599b486c83b734fd8f9afa4cf2bd488eab338
-SHA1 (patch-plugins_Eq_EqSpectrumView.h) = 76a2efb341ca724be552cdb9f04fb7d835eeee4b
 SHA1 (patch-src_CMakeLists.txt) = 92acfc9bc236c1b211bbe9686de818641c01b257
 SHA1 (patch-src_core_audio_AudioOss.cpp) = 6bc591b929f26cbfb5f160c3d9b49316bf165e58
 SHA1 (patch-src_core_midi_MidiOss.cpp) = d1bf1a7bf9aaec549f3ac97d300c7bee4d81ff29
-SHA1 (patch-src_gui_AutomationPatternView.cpp) = 50d1b5130ce98ce2fe0e40c4eada0197ab9af706
-SHA1 (patch-src_gui_LmmsStyle.cpp) = 4d965590a8dfd6facb40a156f93de303da26cfaf
-SHA1 (patch-src_gui_editors_AutomationEditor.cpp) = 6f0b7e5d2609059586df323ef7779c4af8465cf2
