@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.771 2020/07/02 17:59:02 nia Exp $
+# $NetBSD: Makefile,v 1.772 2020/07/07 23:47:40 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -31,7 +31,6 @@ SUBDIR+=	bcrypt
 SUBDIR+=	bearssl
 SUBDIR+=	beecrypt
 SUBDIR+=	bitstir
-SUBDIR+=	boringssl
 SUBDIR+=	botan
 SUBDIR+=	botan-devel
 SUBDIR+=	ca-certificates
