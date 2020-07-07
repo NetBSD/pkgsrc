@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.569 2020/07/01 14:46:36 adam Exp $
+# $NetBSD: Makefile,v 1.570 2020/07/07 23:43:58 nia Exp $
 #
 
 COMMENT=	Programming languages
 
 SUBDIR+=	Cg-compiler
-SUBDIR+=	LuaJIT
 SUBDIR+=	LuaJIT2
 SUBDIR+=	R-sourcetools
 SUBDIR+=	STk

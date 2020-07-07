@@ -1,9 +1,0 @@
-LuaJIT is a Just-In-Time Compiler for the Lua programming language.
-
-Lua is a powerful, light-weight programming language designed for extending
-applications. Lua is also frequently used as a general-purpose, stand-alone
-language. More information about Lua can be found at: http://www.lua.org/
-
-LuaJIT is based on the Lua 5.1.x virtual machine and bytecode interpreter from
-lua.org. It compiles bytecode to native x86 (i386+) machine code to speed up the
-execution of Lua programs.
