@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2020/06/14 23:52:32 gdt Exp $
+# $NetBSD: Makefile,v 1.99 2020/07/07 01:01:27 manu Exp $
 
-DISTNAME=	glusterfs-3.12.8
-PKGREVISION=	8
+DISTNAME=	glusterfs-8.0
+#PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -66,6 +66,7 @@ REPLACE_BASH+=		extras/peer_add_secret_pub.in
 REPLACE_BASH+=		extras/post-upgrade-script-for-quota.sh
 REPLACE_BASH+=		extras/pre-upgrade-script-for-quota.sh
 REPLACE_BASH+=		extras/stop-all-gluster-processes.sh
+REPLACE_BASH+=		extras/thin-arbiter/setup-thin-arbiter.sh
 REPLACE_BASH+=		geo-replication/src/gverify.sh
 REPLACE_BASH+=		geo-replication/src/peer_gsec_create.in
 REPLACE_BASH+=		geo-replication/src/set_geo_rep_pem_keys.sh
@@ -78,6 +79,7 @@ SUBST_CLASSES+=		mtab
 SUBST_STAGE.mtab=	post-build
 SUBST_FILES.mtab=	doc/mount.glusterfs.8
 SUBST_FILES.mtab=	libglusterfs/src/compat.h
+SUBST_FILES.mtab=	xlators/mount/fuse/utils/mount.glusterfs.in
 SUBST_SED.mtab=		-e "s,/etc/mtab,/proc/mounts,g"
 
 SUBST_CLASSES+=		etc
@@ -92,8 +94,8 @@ SUBST_STAGE.vol=	post-build
 SUBST_FILES.vol=	extras/Makefile
 SUBST_SED.vol=		-e "/vol_DATA/s/glusterd.vol/glusterd.vol.sample/g"
 
-EGDIR=			${PREFIX}/etc/glusterfs
-CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
+#EGDIR=			${PREFIX}/etc/glusterfs
+#CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
 OWN_DIRS+=		${VARBASE}/log/glusterfs
 BUILD_DEFS+=		VARBASE
 
@@ -126,9 +128,12 @@ CONFIGURE_ARGS+=	--enable-debug
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../devel/libuuid/buildlink3.mk"
+.include "../../devel/argp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.userspace-rcu+=	userspace-rcu>=0.12.1
 .include "../../devel/userspace-rcu/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
