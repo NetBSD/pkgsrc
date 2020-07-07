@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3905 2020/07/07 07:06:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3906 2020/07/07 08:20:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6222,3 +6222,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/rsync to 3.2.2 [adam 2020-07-07]
 	Updated devel/py-cachetools to 4.1.1 [adam 2020-07-07]
 	Updated finance/py-braintree to 4.2.0 [adam 2020-07-07]
+	Updated devel/py-jupyter_client to 6.1.2 [adam 2020-07-07]
+	Updated devel/py-ipykernel to 5.3.1 [adam 2020-07-07]
