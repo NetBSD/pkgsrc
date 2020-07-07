@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/03/08 16:42:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2020/07/07 14:58:24 ryoon Exp $
 #
 
 DISTNAME=	sablevm-1.13
@@ -9,6 +9,7 @@ MASTER_SITES=	http://sablevm.org/download/release/1.13/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sablevm.org/
 COMMENT=	SableVM free Java virtual machine
+LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	sablevm-classpath-1.13nb1:../../lang/sablevm-classpath
 
