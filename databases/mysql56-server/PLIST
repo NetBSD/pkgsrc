@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2020/03/17 18:59:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2020/07/07 20:18:20 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -3547,6 +3547,7 @@ share/mysql/test/suite/innodb/r/flush-hang.result
 share/mysql/test/suite/innodb/r/foreign_key.result
 share/mysql/test/suite/innodb/r/ibuf_not_empty.result
 share/mysql/test/suite/innodb/r/import.result
+share/mysql/test/suite/innodb/r/import_tablespace_schema_missmatch.result
 share/mysql/test/suite/innodb/r/import_update_stats.result
 share/mysql/test/suite/innodb/r/index_length.result
 share/mysql/test/suite/innodb/r/index_tree_operation.result
@@ -3721,6 +3722,7 @@ share/mysql/test/suite/innodb/r/innodb_stats_rename_table_if_exists.result
 share/mysql/test/suite/innodb/r/innodb_stats_sample_pages.result
 share/mysql/test/suite/innodb/r/innodb_stats_table_flag_auto_recalc.result
 share/mysql/test/suite/innodb/r/innodb_stats_table_flag_sample_pages.result
+share/mysql/test/suite/innodb/r/innodb_sys_var_valgrind.result
 share/mysql/test/suite/innodb/r/innodb_timeout_rollback.result
 share/mysql/test/suite/innodb/r/innodb_trx_weight.result
 share/mysql/test/suite/innodb/r/innodb_upd_stats_if_needed_not_inited.result
@@ -3757,6 +3759,7 @@ share/mysql/test/suite/innodb/t/foreign_key.test
 share/mysql/test/suite/innodb/t/ibuf_not_empty-master.opt
 share/mysql/test/suite/innodb/t/ibuf_not_empty.test
 share/mysql/test/suite/innodb/t/import.test
+share/mysql/test/suite/innodb/t/import_tablespace_schema_missmatch.test
 share/mysql/test/suite/innodb/t/import_update_stats.test
 share/mysql/test/suite/innodb/t/index_length.test
 share/mysql/test/suite/innodb/t/index_tree_operation.test
@@ -3967,6 +3970,7 @@ share/mysql/test/suite/innodb/t/innodb_stats_rename_table_if_exists.test
 share/mysql/test/suite/innodb/t/innodb_stats_sample_pages.test
 share/mysql/test/suite/innodb/t/innodb_stats_table_flag_auto_recalc.test
 share/mysql/test/suite/innodb/t/innodb_stats_table_flag_sample_pages.test
+share/mysql/test/suite/innodb/t/innodb_sys_var_valgrind.test
 share/mysql/test/suite/innodb/t/innodb_timeout_rollback-master.opt
 share/mysql/test/suite/innodb/t/innodb_timeout_rollback.test
 share/mysql/test/suite/innodb/t/innodb_trx_weight.test
@@ -6667,6 +6671,7 @@ share/mysql/test/suite/rpl/r/rpl_row_hash_scan.result
 share/mysql/test/suite/rpl/r/rpl_row_hash_scan_sanity.result
 share/mysql/test/suite/rpl/r/rpl_row_idempotency.result
 share/mysql/test/suite/rpl/r/rpl_row_ignorable_event.result
+share/mysql/test/suite/rpl/r/rpl_row_image_check_for_insert_select.result
 share/mysql/test/suite/rpl/r/rpl_row_img_blobs.result
 share/mysql/test/suite/rpl/r/rpl_row_img_eng_full.result
 share/mysql/test/suite/rpl/r/rpl_row_img_eng_min.result
@@ -7322,6 +7327,7 @@ share/mysql/test/suite/rpl/t/rpl_row_idempotency.test
 share/mysql/test/suite/rpl/t/rpl_row_ignorable_event-master.opt
 share/mysql/test/suite/rpl/t/rpl_row_ignorable_event-slave.opt
 share/mysql/test/suite/rpl/t/rpl_row_ignorable_event.test
+share/mysql/test/suite/rpl/t/rpl_row_image_check_for_insert_select.test
 share/mysql/test/suite/rpl/t/rpl_row_img.cnf
 share/mysql/test/suite/rpl/t/rpl_row_img_blobs.cnf
 share/mysql/test/suite/rpl/t/rpl_row_img_blobs.test
