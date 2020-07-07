@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/20 14:56:00 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/07 13:17:46 nia Exp $
 bin/angband
 share/angband/customize/font-gcu.prf
 share/angband/customize/font-sdl.prf
@@ -38,6 +38,7 @@ share/angband/gamedata/blow_effects.txt
 share/angband/gamedata/blow_methods.txt
 share/angband/gamedata/body.txt
 share/angband/gamedata/brand.txt
+share/angband/gamedata/chest_trap.txt
 share/angband/gamedata/class.txt
 share/angband/gamedata/constants.txt
 share/angband/gamedata/curse.txt
@@ -56,6 +57,7 @@ share/angband/gamedata/object_property.txt
 share/angband/gamedata/p_race.txt
 share/angband/gamedata/pain.txt
 share/angband/gamedata/pit.txt
+share/angband/gamedata/player_property.txt
 share/angband/gamedata/player_timed.txt
 share/angband/gamedata/projection.txt
 share/angband/gamedata/quest.txt
@@ -67,7 +69,11 @@ share/angband/gamedata/store.txt
 share/angband/gamedata/summon.txt
 share/angband/gamedata/terrain.txt
 share/angband/gamedata/trap.txt
+share/angband/gamedata/ui_entry.txt
+share/angband/gamedata/ui_entry_base.txt
+share/angband/gamedata/ui_entry_renderer.txt
 share/angband/gamedata/vault.txt
+share/angband/gamedata/visuals.txt
 share/angband/gamedata/world.txt
 share/angband/help/commands.txt
 share/angband/help/index.txt
@@ -313,7 +319,8 @@ share/angband/tiles/old/graf-xxx.prf
 share/angband/tiles/old/xtra-xxx.prf
 share/angband/tiles/shockbolt/64x64.png
 share/angband/tiles/shockbolt/flvr-shb.prf
-share/angband/tiles/shockbolt/graf-shb.prf
+share/angband/tiles/shockbolt/graf-shb-dark.prf
+share/angband/tiles/shockbolt/graf-shb-light.prf
 share/angband/tiles/shockbolt/xtra-shb.prf
 share/angband/user/info/dummy.txt
 share/angband/user/info/user.hlp
