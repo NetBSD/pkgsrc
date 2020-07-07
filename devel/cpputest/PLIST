@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/08/14 23:42:08 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/07/07 09:04:55 schmonz Exp $
 include/CppUTest/CommandLineArguments.h
 include/CppUTest/CommandLineTestRunner.h
 include/CppUTest/CppUTestConfig.h
@@ -12,6 +12,7 @@ include/CppUTest/PlatformSpecificFunctions.h
 include/CppUTest/PlatformSpecificFunctions_c.h
 include/CppUTest/SimpleMutex.h
 include/CppUTest/SimpleString.h
+include/CppUTest/SimpleStringInternalCache.h
 include/CppUTest/StandardCLibrary.h
 include/CppUTest/TeamCityTestOutput.h
 include/CppUTest/TestFailure.h
@@ -26,9 +27,11 @@ include/CppUTest/TestResult.h
 include/CppUTest/TestTestingFixture.h
 include/CppUTest/Utest.h
 include/CppUTest/UtestMacros.h
+include/CppUTestExt/CodeMemoryReportFormatter.h
 include/CppUTestExt/GMock.h
 include/CppUTestExt/GTest.h
 include/CppUTestExt/GTestConvertor.h
+include/CppUTestExt/GTestSupport.h
 include/CppUTestExt/IEEE754ExceptionsPlugin.h
 include/CppUTestExt/MemoryReportAllocator.h
 include/CppUTestExt/MemoryReportFormatter.h
@@ -44,6 +47,12 @@ include/CppUTestExt/MockSupport.h
 include/CppUTestExt/MockSupportPlugin.h
 include/CppUTestExt/MockSupport_c.h
 include/CppUTestExt/OrderedTest.h
+lib/CppUTest/cmake/CppUTestConfig.cmake
+lib/CppUTest/cmake/CppUTestConfigVersion.cmake
+lib/CppUTest/cmake/CppUTestTargets-relwithdebinfo.cmake
+lib/CppUTest/cmake/CppUTestTargets.cmake
+lib/CppUTest/cmake/Modules/CppUTestBuildTimeDiscoverTests.cmake
+lib/CppUTest/cmake/Scripts/CppUTestBuildTimeDiscoverTests.cmake
 lib/libCppUTest.a
 lib/libCppUTestExt.a
 lib/pkgconfig/cpputest.pc
