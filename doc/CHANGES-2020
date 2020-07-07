@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3929 2020/07/07 23:45:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3930 2020/07/07 23:48:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6250,3 +6250,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mysql56-server to 5.6.48 [adam 2020-07-07]
 	Updated security/go-mkcert to 1.4.1 [bsiegert 2020-07-07]
 	Removed lang/LuaJIT successor lang/LuaJIT2 [nia 2020-07-08]
+	Removed security/boringssl [nia 2020-07-07]
