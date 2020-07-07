@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3901 2020/07/07 01:40:51 fox Exp $
+$NetBSD: CHANGES-2020,v 1.3902 2020/07/07 04:39:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6206,3 +6206,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/p5-App-Sqitch to 1.1.0 [schmonz 2020-07-06]
 	Updated filesystems/glusterfs to 8.0 [manu 2020-07-06]
 	Updated print/foliate to 2.4.2 [fox 2020-07-07]
+	Updated mail/roundcube to 1.4.7 [taca 2020-07-07]
+	Updated mail/roundcube-plugin-enigma to 1.4.7 [taca 2020-07-07]
+	Updated mail/roundcube-plugin-password to 1.4.7 [taca 2020-07-07]
+	Updated mail/roundcube-plugin-zipdownload to 1.4.7 [taca 2020-07-07]
