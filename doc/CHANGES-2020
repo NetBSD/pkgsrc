@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3909 2020/07/07 09:45:17 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3910 2020/07/07 10:31:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6227,3 +6227,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cpputest to 4.0 [schmonz 2020-07-07]
 	Updated multimedia/ffmpeg4 to 4.3nb2 [rin 2020-07-07]
 	Updated converters/fribidi to 1.0.10 [nia 2020-07-07]
+	Updated devel/skalibs to 2.9.2.1 [schmonz 2020-07-07]
