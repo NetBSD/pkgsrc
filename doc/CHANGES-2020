@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3900 2020/07/07 01:01:27 manu Exp $
+$NetBSD: CHANGES-2020,v 1.3901 2020/07/07 01:40:51 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6205,3 +6205,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/usbids to 20200622 [bsiegert 2020-07-06]
 	Updated databases/p5-App-Sqitch to 1.1.0 [schmonz 2020-07-06]
 	Updated filesystems/glusterfs to 8.0 [manu 2020-07-06]
+	Updated print/foliate to 2.4.2 [fox 2020-07-07]
