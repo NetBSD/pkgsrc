@@ -1,18 +1,16 @@
-$NetBSD: patch-setup.py,v 1.3 2020/01/02 19:22:41 bsiegert Exp $
+$NetBSD: patch-setup.py,v 1.4 2020/07/07 16:49:19 bsiegert Exp $
 
 Relax requirements.
 
---- setup.py.orig	2019-10-16 20:08:15.000000000 +0000
+--- setup.py.orig	2020-05-19 21:00:16.000000000 +0000
 +++ setup.py
-@@ -44,15 +44,15 @@ requires = [
+@@ -44,14 +44,14 @@ requires = [
      'httplib2>=0.11.3',
      'google-reauth>=0.1.0',
      # TODO: Sync submodule with tag referenced here once #339 is fixed in mock.
 -    'mock==2.0.0',
 +    'mock>=2.0.0',
      'monotonic>=1.4',
--    'oauth2client==4.1.3',
-+    'oauth2client>=4.1.3',
      'pyOpenSSL>=0.13',
      'retry_decorator>=1.0.0',
      'six>=1.12.0',
