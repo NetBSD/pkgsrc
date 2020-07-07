@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2018/12/16 07:02:07 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2020/07/07 09:04:55 schmonz Exp $
 
-SHA1 (cpputest-3.8.tar.gz) = c68f8b59d0beb6d4e6953173ec3611f801cdb3a1
-RMD160 (cpputest-3.8.tar.gz) = c1a4fad966bd8c557fbe62dde0d418b7d1b529ec
-SHA512 (cpputest-3.8.tar.gz) = 42b9a98549e1296ab9dfcd40bb94e1ac634fc1e70ad6250654ca0fa254c63e0349ae9ccd0b9d72c4bde1f7baccde97e08ce3e6d1fff3e464c3d9e8ae5949185f
-Size (cpputest-3.8.tar.gz) = 2333302 bytes
+SHA1 (cpputest-4.0.tar.gz) = 523a82e55cfdec16bd98b4fe087dd8b929d92538
+RMD160 (cpputest-4.0.tar.gz) = 3f59d987202a38a18c6a749c5d5c8df9b0e99cb5
+SHA512 (cpputest-4.0.tar.gz) = 5f7d6f9e34a462b35a0161a7486fd56074f5b07f92d029a3c57741c72df7bbc6ea4f98b1e57e9c500ad6d57c303d222afe523d59ec943f4461f67ce5be74dd77
+Size (cpputest-4.0.tar.gz) = 762773 bytes
 SHA1 (patch-include_CppUTest_PlatformSpecificFunctions.h) = 03a11329605ae496f1eb41c958d9679da9e0133a
 SHA1 (patch-src_Platforms_Gcc_UtestPlatform.cpp) = 436725ac8e2d6b71d2488cd1076d55082104c3bb
