@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/06/03 13:36:26 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/07/07 12:05:49 nia Exp $
 
-DISTNAME=	dosbox-x-0.83.2
+DISTNAME=	dosbox-x-0.83.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
 GITHUB_TAG=	dosbox-x-v${PKGVERSION_NOREV}
@@ -20,14 +20,6 @@ GCC_REQD+=	4.7
 
 LIBS.NetBSD+=	-lcompat
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-CPPFLAGS+=	-Dfopen64=fopen
-CPPFLAGS+=	-Dftello64=ftello
-CPPFLAGS+=	-Dfseeko64=fseeko
-.endif
-
 CONFIGURE_ARGS+=	--disable-alsatest
 CONFIGURE_ARGS+=	--disable-sdl2test
 CONFIGURE_ARGS+=	--disable-sdltest
@@ -39,6 +31,7 @@ CONFIGURE_ARGS+=	--disable-dynrec
 CONFIGURE_ARGS+=	--disable-fpu
 CONFIGURE_ARGS+=	--disable-unaligned-memory
 .else
+TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
 # LOG: Setting execute permission on the code cache has failed
 NOT_PAX_MPROTECT_SAFE+=	bin/dosbox-x
 .endif
@@ -49,6 +42,7 @@ PKGCONFIG_OVERRIDE+=	vs2015/sdl2/sdl2.pc.in
 PKGCONFIG_OVERRIDE+=	vs2015/sdlnet/SDL_net.pc.in
 PKGCONFIG_OVERRIDE+=	vs2015/zlib/zlib.pc.in
 
+INSTALLATION_DIRS+=	bin share/dosbox-x
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
 
@@ -58,7 +52,14 @@ CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/iosbuild.sh
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
 
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/dosbox-x ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/font/FREECG98.BMP \
+	    ${DESTDIR}${PREFIX}/share/dosbox-x
+	${INSTALL_DATA} ${WRKSRC}/CHANGELOG \
+	    ${DESTDIR}${PREFIX}/share/dosbox-x
+	${INSTALL_DATA} ${WRKSRC}/dosbox-x.reference.conf \
+	    ${DESTDIR}${PREFIX}/share/dosbox-x
 	${INSTALL_DATA} ${WRKSRC}/src/dosbox.png \
 	    ${DESTDIR}${PREFIX}/share/pixmaps/dosbox.png
 	${INSTALL_DATA} ${FILESDIR}/dosbox-x.desktop \
