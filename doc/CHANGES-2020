@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3903 2020/07/07 05:36:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3904 2020/07/07 06:54:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6218,3 +6218,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-ldap to 3.3.1 [adam 2020-07-07]
 	Updated net/py-netaddr to 0.8.0 [adam 2020-07-07]
 	Updated textproc/py-phonenumbers to 8.12.6 [adam 2020-07-07]
+	Updated net/terraform-provider-aws to 2.69.0 [adam 2020-07-07]
+	Updated net/rsync to 3.2.2 [adam 2020-07-07]
