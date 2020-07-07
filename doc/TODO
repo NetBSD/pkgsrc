@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19940 2020/07/06 15:34:13 adam Exp $
+$NetBSD: TODO,v 1.19941 2020/07/07 06:54:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
-	o rsync-3.2.2
 	o rt4-4.4.0
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
