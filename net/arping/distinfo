@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2020/04/10 21:25:03 schwarz Exp $
+$NetBSD: distinfo,v 1.15 2020/07/07 08:48:25 sborrill Exp $
 
 SHA1 (arping-2.21.tar.gz) = 2e3477883110f3c0456af78d13fab3c029f93974
 RMD160 (arping-2.21.tar.gz) = 13e645ccb52add237458862fb59ee4ccd581a57a
 SHA512 (arping-2.21.tar.gz) = 0413e87aa9f0664c3e9485c1d8c2fbd2adb322bfc871f9bddf84f458433d7c8c7587ac4b24cff36caff7b966cd9b71a7d8a54ac951723b322a475ac68cf45d47
 Size (arping-2.21.tar.gz) = 181039 bytes
+SHA1 (patch-arping.c) = 66de32d83a15c704ef4bc273cfc849fdb10bf0f6
