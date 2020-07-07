@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/06/10 19:08:42 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/07/07 12:40:58 nia Exp $
 bin/lmms
 include/lmms/AboutDialog.h
 include/lmms/ActionGroup.h
@@ -283,7 +283,6 @@ lib/lmms/ladspa/imp_1199.so
 lib/lmms/ladspa/impulse_1885.so
 lib/lmms/ladspa/inv_1429.so
 lib/lmms/ladspa/karaoke_1409.so
-lib/lmms/ladspa/ladspa-util.so
 lib/lmms/ladspa/latency_1914.so
 lib/lmms/ladspa/lcr_delay_1436.so
 lib/lmms/ladspa/lowpass_iir_1891.so
