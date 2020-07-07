@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3922 2020/07/07 13:18:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3923 2020/07/07 13:48:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6240,3 +6240,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/7kaa to 2.15.4 [nia 2020-07-07]
 	Updated games/angband to 4.2.1 [nia 2020-07-07]
 	Updated games/angband-sdl to 4.2.1 [nia 2020-07-07]
+	Updated lang/vala to 0.48.7 [ryoon 2020-07-07]
