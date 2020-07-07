@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/07/07 01:01:27 manu Exp $
+
+--- configure.ac.orig	2020-05-31 16:45:57.328537679 +0200
++++ configure.ac	2020-06-28 03:10:02.906173087 +0200
+@@ -945,8 +945,11 @@
+     *freebsd*)
+     CFLAGS="${CFLAGS} -isystem /usr/local/include"
+     ARGP_LDADD=-largp
+     ;;
++    *netbsd*)
++    ARGP_LDADD=-largp
++    ;;
+ esac
+ dnl argp-standalone does not provide a pkg-config file
+ AC_CHECK_HEADER([argp.h], AC_DEFINE(HAVE_ARGP, 1, [have argp]))
+ if test "x$ac_cv_header_argp_h" != "xyes"; then
