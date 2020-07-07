@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3904 2020/07/07 06:54:25 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3905 2020/07/07 07:06:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6220,3 +6220,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-phonenumbers to 8.12.6 [adam 2020-07-07]
 	Updated net/terraform-provider-aws to 2.69.0 [adam 2020-07-07]
 	Updated net/rsync to 3.2.2 [adam 2020-07-07]
+	Updated devel/py-cachetools to 4.1.1 [adam 2020-07-07]
+	Updated finance/py-braintree to 4.2.0 [adam 2020-07-07]
