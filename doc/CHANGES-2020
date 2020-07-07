@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3910 2020/07/07 10:31:15 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.3911 2020/07/07 10:31:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6228,3 +6228,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/ffmpeg4 to 4.3nb2 [rin 2020-07-07]
 	Updated converters/fribidi to 1.0.10 [nia 2020-07-07]
 	Updated devel/skalibs to 2.9.2.1 [schmonz 2020-07-07]
+	Updated sysutils/fdtools to 2020.05.04 [schmonz 2020-07-07]
