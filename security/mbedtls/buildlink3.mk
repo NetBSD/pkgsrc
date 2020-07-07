@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/06/29 12:39:36 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/07/07 11:21:39 nia Exp $
 
 BUILDLINK_TREE+=	mbedtls
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	mbedtls
 MBEDTLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mbedtls+=	mbedtls>=0.10.0
+BUILDLINK_ABI_DEPENDS.mbedtls?=	mbedtls>=2.23.0
 BUILDLINK_PKGSRCDIR.mbedtls?=	../../security/mbedtls
 
 pkgbase := mbedtls
