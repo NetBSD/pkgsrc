@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3902 2020/07/07 04:39:50 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3903 2020/07/07 05:36:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6210,3 +6210,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/roundcube-plugin-enigma to 1.4.7 [taca 2020-07-07]
 	Updated mail/roundcube-plugin-password to 1.4.7 [taca 2020-07-07]
 	Updated mail/roundcube-plugin-zipdownload to 1.4.7 [taca 2020-07-07]
+	Updated devel/py-test-sugar to 0.9.4 [adam 2020-07-07]
+	Updated security/py-gssapi to 1.6.7 [adam 2020-07-07]
+	Updated devel/py-curtsies to 0.3.3 [adam 2020-07-07]
+	Updated graphics/py-wand to 0.6.2 [adam 2020-07-07]
+	Updated www/py-hstspreload to 2020.7.7 [adam 2020-07-07]
+	Updated databases/py-ldap to 3.3.1 [adam 2020-07-07]
+	Updated net/py-netaddr to 0.8.0 [adam 2020-07-07]
+	Updated textproc/py-phonenumbers to 8.12.6 [adam 2020-07-07]
