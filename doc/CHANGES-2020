@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3920 2020/07/07 13:09:17 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3921 2020/07/07 13:17:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6238,3 +6238,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/musicpd to 0.21.25 [nia 2020-07-07]
 	Updated audio/libmpdclient to 2.19 [nia 2020-07-07]
 	Updated games/7kaa to 2.15.4 [nia 2020-07-07]
+	Updated games/angband to 4.2.1 [nia 2020-07-07]
