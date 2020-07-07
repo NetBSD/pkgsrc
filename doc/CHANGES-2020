@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3911 2020/07/07 10:31:42 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.3912 2020/07/07 10:44:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6229,3 +6229,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/fribidi to 1.0.10 [nia 2020-07-07]
 	Updated devel/skalibs to 2.9.2.1 [schmonz 2020-07-07]
 	Updated sysutils/fdtools to 2020.05.04 [schmonz 2020-07-07]
+	Updated lang/rust to 1.44.1 [he 2020-07-07]
