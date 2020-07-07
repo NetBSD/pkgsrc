@@ -1,4 +1,4 @@
-$NetBSD: patch-bsd_kernel.cc,v 1.2 2020/05/24 11:29:13 rillig Exp $
+$NetBSD: patch-bsd_kernel.cc,v 1.3 2020/07/07 19:13:18 bsiegert Exp $
 
 Don't fail for unprivileged users.
 
@@ -19,3 +19,12 @@ https://github.com/hills/xosview/pull/15
  
  	// Parenthetical note:  FreeBSD kvm_openfiles() uses getbootfile() to get
  	// the correct kernel file if the 1st arg is NULL.  As far as I can see,
+@@ -276,7 +278,7 @@ BSDGetCPUSpeed() {
+ 	size = sizeof(speed);
+ #if defined(XOSVIEW_NETBSD)
+ 	if ( sysctlbyname("machdep.tsc_freq", &speed, &size, NULL, 0) < 0 )
+-		err(EX_OSERR, "sysctl machdep.tsc_freq failed");
++		return 0;
+ #else  /* XOSVIEW_DFBSD */
+ 	if ( sysctlbyname("hw.tsc_frequency", &speed, &size, NULL, 0) < 0 )
+ 		err(EX_OSERR, "sysctl hw.tsc_frequency failed");
