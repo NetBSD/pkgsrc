@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2020/05/13 15:18:14 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/07/07 05:20:47 adam Exp $
 
-DISTNAME=	curtsies-0.3.1
+DISTNAME=	curtsies-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/curtsies/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/thomasballinger/curtsies
+HOMEPAGE=	https://github.com/bpython/curtsies
 COMMENT=	Curses-like terminal wrapper, with colored strings
 LICENSE=	mit
 
