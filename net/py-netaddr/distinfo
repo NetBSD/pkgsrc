@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/06/20 07:27:44 adam Exp $
+$NetBSD: distinfo,v 1.6 2020/07/07 05:33:30 adam Exp $
 
-SHA1 (netaddr-0.7.20.tar.gz) = 118a33614bd6db85e462fb8375f06ed97b501da9
-RMD160 (netaddr-0.7.20.tar.gz) = bf73edac6c0da67c4099ae4ab1a5e1844445b514
-SHA512 (netaddr-0.7.20.tar.gz) = f6cbfefa3cec95c039ef711b15e3c9509cdf730c9c4b9427fe2fa55beddd8fd44621fe8615d26a3b9ac6989a648f96d42a6a8e848a4976d883b8a5a243590ccf
-Size (netaddr-0.7.20.tar.gz) = 1889698 bytes
+SHA1 (netaddr-0.8.0.tar.gz) = 16f10a1bfaf95052f368b3786188f9fbdda108c3
+RMD160 (netaddr-0.8.0.tar.gz) = a4f5def6bba751895ac441f75b1c6699de8651f7
+SHA512 (netaddr-0.8.0.tar.gz) = a158bef87e862330c583f8b6709c4f575ec036dd31d725dad679e583ad4bef1a34f43225453bc93970ab720ae5f9f0fc2a6a3b92cbb922ed6f201414fd1e96d3
+Size (netaddr-0.8.0.tar.gz) = 1891561 bytes
