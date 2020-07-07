@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.116 2020/06/13 18:15:08 nia Exp $
+$NetBSD: distinfo,v 1.117 2020/07/07 12:52:19 nia Exp $
 
-SHA1 (mpd-0.21.24.tar.xz) = ffbc50a8a08951de132ba990b93d55cade58ef57
-RMD160 (mpd-0.21.24.tar.xz) = 4badc3c4643548704d7c537f5a3ada623fa523b4
-SHA512 (mpd-0.21.24.tar.xz) = dd0f97cdb405a0995ceafb965d2e872c54b27b384a721efa8d13ae7e28544b22da9e94433bc544f475d8da52d06c020842b11104cbfbc41406a10599db2d005c
-Size (mpd-0.21.24.tar.xz) = 681576 bytes
+SHA1 (mpd-0.21.25.tar.xz) = 7e733fc9bf98c9c25f6b780e0df2347d0f1717b2
+RMD160 (mpd-0.21.25.tar.xz) = 9951bf096e8d6d6fe3a07a82d660caf1d2bd91af
+SHA512 (mpd-0.21.25.tar.xz) = 67e0cbf176d18cd63effab0d12b22bea846458cbaa383ead9078c4b5f2a472dbb1d7308af4d6898691e8864a911c808af5ca2c553d8233323b8aaedfdc7189fc
+Size (mpd-0.21.25.tar.xz) = 683768 bytes
 SHA1 (patch-src_net_IPv6Address.hxx) = c9e9a5676451e6834fcef359266d37fc15f079e6
 SHA1 (patch-src_output_plugins_SolarisOutputPlugin.cxx) = 16f366dfc41b712753ed8da32389848a2cd84f4d
