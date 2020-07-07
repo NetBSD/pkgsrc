@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.3 2020/07/07 01:01:27 manu Exp $
+
+--- configure.orig	2020-06-28 22:54:09.920229276 +0000
++++ configure	2020-06-28 22:53:47.595791666 +0000
+@@ -14973,8 +14973,11 @@
+     *freebsd*)
+     CFLAGS="${CFLAGS} -isystem /usr/local/include"
+     ARGP_LDADD=-largp
+     ;;
++    *netbsd*)
++    ARGP_LDADD=-largp
++    ;;
+ esac
+ ac_fn_c_check_header_mongrel "$LINENO" "argp.h" "ac_cv_header_argp_h" "$ac_includes_default"
+ if test "x$ac_cv_header_argp_h" = xyes; then :
+ 
