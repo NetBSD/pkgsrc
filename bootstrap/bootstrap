@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.286 2020/07/06 10:43:47 jperkin Exp $
+# $NetBSD: bootstrap,v 1.287 2020/07/07 11:50:04 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -876,7 +876,7 @@ yes)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
-	need_ksh=yes
+	need_mksh=yes
 	;;
 esac
 
