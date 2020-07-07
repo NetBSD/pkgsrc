@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.1 2019/12/15 19:03:51 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.2 2020/07/07 10:31:03 schmonz Exp $
 
 Libtoolize for shared libraries on Darwin.
 
---- Makefile.orig	2019-09-19 14:00:38.000000000 +0000
+--- Makefile.orig	2020-01-27 16:20:44.000000000 +0000
 +++ Makefile
 @@ -17,6 +17,8 @@ CC = $(error Please use ./configure firs
  -include config.mak
@@ -24,14 +24,13 @@ Libtoolize for shared libraries on Darwin.
  install-include: $(ALL_INCLUDES:src/include/$(package)/%.h=$(DESTDIR)$(includedir)/$(package)/%.h)
  
  ifneq ($(exthome),)
-@@ -105,30 +107,22 @@ $(DESTDIR)$(datadir)/%: src/etc/%
+@@ -105,29 +107,22 @@ $(DESTDIR)$(datadir)/%: src/etc/%
  $(DESTDIR)$(sysdepdir)/%: $(sysdeps)/%
  	exec $(INSTALL) -D -m 644 $< $@
  
--$(DESTDIR)$(dynlibdir)/%.so: %.so.xyzzy
+-$(DESTDIR)$(dynlibdir)/lib%.so $(DESTDIR)$(dynlibdir)/lib%.so.$(version_M): lib%.so.xyzzy
 -	$(INSTALL) -D -m 755 $< $@.$(version) && \
--	$(INSTALL) -l $(@F).$(version) $@.$(version_m) && \
--	$(INSTALL) -l $(@F).$(version_m) $@.$(version_M) && \
+-	$(INSTALL) -l $(@F).$(version) $@.$(version_M) && \
 -	exec $(INSTALL) -l $(@F).$(version_M) $@
 -
 -$(DESTDIR)$(libdir)/lib%.a: lib%.a.xyzzy
