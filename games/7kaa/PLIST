@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/01/08 16:59:07 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/07/07 13:09:04 nia Exp $
 bin/7kaa
 share/7kaa/ENCYC/FIRM/FACTORY.COL
 share/7kaa/ENCYC/FIRM/FACTORY.ICN
@@ -174,17 +174,23 @@ share/7kaa/RESOURCE/EXPLMASK.BIN
 share/7kaa/RESOURCE/EXPREMAP.BIN
 share/7kaa/RESOURCE/FNT_BARD.RES
 share/7kaa/RESOURCE/FNT_CASA.RES
+share/7kaa/RESOURCE/FNT_CASA_88592.RES
 share/7kaa/RESOURCE/FNT_CASA_88595.RES
 share/7kaa/RESOURCE/FNT_HITP.RES
 share/7kaa/RESOURCE/FNT_MID.RES
+share/7kaa/RESOURCE/FNT_MID_88592.RES
 share/7kaa/RESOURCE/FNT_MID_88595.RES
 share/7kaa/RESOURCE/FNT_NEWS.RES
+share/7kaa/RESOURCE/FNT_NEWS_88592.RES
 share/7kaa/RESOURCE/FNT_NEWS_88595.RES
 share/7kaa/RESOURCE/FNT_SAN.RES
+share/7kaa/RESOURCE/FNT_SAN_88592.RES
 share/7kaa/RESOURCE/FNT_SAN_88595.RES
 share/7kaa/RESOURCE/FNT_SMAL.RES
+share/7kaa/RESOURCE/FNT_SMAL_88592.RES
 share/7kaa/RESOURCE/FNT_SMAL_88595.RES
 share/7kaa/RESOURCE/FNT_STD.RES
+share/7kaa/RESOURCE/FNT_STD_88592.RES
 share/7kaa/RESOURCE/FNT_STD_88595.RES
 share/7kaa/RESOURCE/HELP.RES
 share/7kaa/RESOURCE/HILL1.RES
@@ -502,6 +508,7 @@ share/doc/7kaa/COPYING
 share/doc/7kaa/README
 share/locale/de/LC_MESSAGES/7kaa.mo
 share/locale/es/LC_MESSAGES/7kaa.mo
+share/locale/pl/LC_MESSAGES/7kaa.mo
 share/locale/pt_BR/LC_MESSAGES/7kaa.mo
 share/locale/ru/LC_MESSAGES/7kaa.mo
 share/pixmaps/7kaa.png
