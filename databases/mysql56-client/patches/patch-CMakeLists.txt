@@ -1,11 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2019/01/20 18:04:49 maya Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2020/07/07 20:18:20 adam Exp $
 
 Split configuration between mysql-client and mysql-server.
 Build with newer DTrace.
-
-Backport of https://github.com/mysql/mysql-server/commit/98ed3d8bc8ad724686d26c7bf98dced3bd1777be
-Avoid disclosure of files from a client to a malicious server, described here:
-https://gwillem.gitlab.io/2019/01/17/adminer-4.6.2-file-disclosure-vulnerability/
 
 --- CMakeLists.txt.orig	2016-07-11 09:19:51.000000000 +0000
 +++ CMakeLists.txt
@@ -17,15 +13,6 @@ https://gwillem.gitlab.io/2019/01/17/adminer-4.6.2-file-disclosure-vulnerability
  OPTION(CYBOZU "" OFF)
  OPTION(BACKUP_TEST "" OFF)
  OPTION(WITHOUT_SERVER OFF)
-@@ -345,7 +346,7 @@ IF(REPRODUCIBLE_BUILD)
- ENDIF()
- 
- OPTION(ENABLED_LOCAL_INFILE
-- "If we should should enable LOAD DATA LOCAL by default" ${IF_WIN})
-+"If we should should enable LOAD DATA LOCAL by default" OFF)
- MARK_AS_ADVANCED(ENABLED_LOCAL_INFILE)
- 
- OPTION(WITH_FAST_MUTEXES "Compile with fast mutexes" OFF)
 @@ -495,7 +496,6 @@ ADD_SUBDIRECTORY(vio)
  ADD_SUBDIRECTORY(regex)
  ADD_SUBDIRECTORY(mysys)
