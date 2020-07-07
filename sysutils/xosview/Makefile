@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2020/05/24 11:24:19 rillig Exp $
+# $NetBSD: Makefile,v 1.77 2020/07/07 19:13:18 bsiegert Exp $
 
 DISTNAME=	xosview-1.22
+PKGREVISION=	1
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hills/}
 
