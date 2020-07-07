@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3918 2020/07/07 12:52:38 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3919 2020/07/07 12:55:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6236,3 +6236,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/opusfile to 0.12 [nia 2020-07-07]
 	Updated audio/lmms to 1.2.2 [nia 2020-07-07]
 	Updated audio/musicpd to 0.21.25 [nia 2020-07-07]
+	Updated audio/libmpdclient to 2.19 [nia 2020-07-07]
