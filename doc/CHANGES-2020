@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3913 2020/07/07 11:34:39 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3914 2020/07/07 11:35:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6231,3 +6231,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/fdtools to 2020.05.04 [schmonz 2020-07-07]
 	Updated lang/rust to 1.44.1 [he 2020-07-07]
 	Updated lang/elixir to 1.10.4 [nia 2020-07-07]
+	Updated security/mbedtls to 2.23.0 [nia 2020-07-07]
