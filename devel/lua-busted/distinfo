@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/08 16:23:23 nia Exp $
+
+SHA1 (busted-2.0.0.tar.gz) = eb9dbbb7f61df58e00b033de0722372b03f7d924
+RMD160 (busted-2.0.0.tar.gz) = 5c34e6fa4e4a6ab7f2ac32104143e8ed8f0563fa
+SHA512 (busted-2.0.0.tar.gz) = 3151694b1fba1acc52e3bcfee0231008b14934e89da5885d7e063c6f023479c42040c42a8c0aa6ff1f8303ad6b2a70f0687c8a218830de7231007ef8748457bf
+Size (busted-2.0.0.tar.gz) = 55002 bytes
