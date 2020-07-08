@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3954 2020/07/08 15:22:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3955 2020/07/08 15:36:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6282,3 +6282,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-django3 to 3.0.8 [adam 2020-07-08]
 	Updated www/py-django2 to 2.2.14 [adam 2020-07-08]
 	Added devel/lua-luassert version 1.7.11 [nia 2020-07-08]
+	Added devel/lua-cliargs version 3.0.2 [nia 2020-07-08]
