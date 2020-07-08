@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3945 2020/07/08 13:57:56 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.3946 2020/07/08 13:58:22 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6270,3 +6270,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pyobjc to 6.2.1 [adam 2020-07-08]
 	Added devel/lua-lpeg-patterns version 0.5 [nia 2020-07-08]
 	Updated audio/solfege to 3.22.2nb5 [schmonz 2020-07-08]
+	Updated math/bc-gh to 3.1.1 [gdt 2020-07-08]
