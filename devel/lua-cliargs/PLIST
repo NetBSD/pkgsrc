@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 15:36:21 nia Exp $
+${LUA_LDIR}/cliargs.lua
+${LUA_LDIR}/cliargs/config_loader.lua
+${LUA_LDIR}/cliargs/constants.lua
+${LUA_LDIR}/cliargs/core.lua
+${LUA_LDIR}/cliargs/parser.lua
+${LUA_LDIR}/cliargs/printer.lua
+${LUA_LDIR}/cliargs/utils/disect.lua
+${LUA_LDIR}/cliargs/utils/disect_argument.lua
+${LUA_LDIR}/cliargs/utils/filter.lua
+${LUA_LDIR}/cliargs/utils/lookup.lua
+${LUA_LDIR}/cliargs/utils/shallow_copy.lua
+${LUA_LDIR}/cliargs/utils/split.lua
+${LUA_LDIR}/cliargs/utils/trim.lua
+${LUA_LDIR}/cliargs/utils/wordwrap.lua
