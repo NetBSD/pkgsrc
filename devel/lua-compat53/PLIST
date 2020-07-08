@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 14:25:38 nia Exp $
+${LUA_INCDIR}/compat-5.3.c
+${LUA_INCDIR}/compat-5.3.h
+${LUA_CDIR}/compat53/string.so
+${LUA_CDIR}/compat53/table.so
+${LUA_CDIR}/compat53/utf8.so
+${LUA_LDIR}/compat53/init.lua
+${LUA_LDIR}/compat53/module.lua
