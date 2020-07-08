@@ -1,0 +1,4 @@
+mediator_lua is a simple class that allows you to listen to events by
+subscribing to and sending data to channels. Its purpose is to help you
+decouple code where you might otherwise have functions calling functions
+calling functions.
