@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3948 2020/07/08 14:46:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3949 2020/07/08 14:50:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6274,3 +6274,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-compat53 version 0.7 [nia 2020-07-08]
 	Updated databases/py-sqlalchemy to 1.3.18 [adam 2020-07-08]
 	Updated devel/py-appdirs to 1.4.4 [adam 2020-07-08]
+	Added www/lua-psl version 0.3 [nia 2020-07-08]
