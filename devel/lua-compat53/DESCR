@@ -1,0 +1,5 @@
+This is a small module that aims to make it easier to write Lua
+code in a Lua-5.3-style that runs on Lua 5.3, 5.2, and 5.1.
+
+It does *not* make Lua 5.2 (or even 5.1) entirely compatible
+with Lua 5.3, but it brings the API closer to that of Lua 5.3.
