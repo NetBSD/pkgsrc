@@ -1,0 +1,7 @@
+luasystem is a platform independent system call library for Lua.
+
+Currently the following functions are supported:
+
+- gettime
+- monotime
+- sleep
