@@ -1,10 +1,9 @@
-$NetBSD: patch-src_libstd_build.rs,v 1.8 2020/07/06 13:56:32 he Exp $
+$NetBSD: patch-src_libstd_build.rs,v 1.9 2020/07/08 14:46:14 jperkin Exp $
 
-SunOS support:
- - Support PKGSRC_USE_SSP (ugly for now).
- - Add libexecinfo for backtrace().
+- Support PKGSRC_USE_SSP (ugly for now).
+- Add libexecinfo for backtrace().
 
---- src/libstd/build.rs.orig	2019-08-13 06:27:22.000000000 +0000
+--- src/libstd/build.rs.orig	2020-06-01 15:44:16.000000000 +0000
 +++ src/libstd/build.rs
 @@ -16,6 +16,7 @@ fn main() {
          println!("cargo:rustc-link-lib=execinfo");
@@ -14,12 +13,20 @@ SunOS support:
          println!("cargo:rustc-link-lib=pthread");
          println!("cargo:rustc-link-lib=rt");
      } else if target.contains("dragonfly") || target.contains("openbsd") {
-@@ -31,6 +32,8 @@ fn main() {
+@@ -25,12 +26,16 @@ fn main() {
+         println!("cargo:rustc-link-lib=posix4");
+         println!("cargo:rustc-link-lib=pthread");
+         println!("cargo:rustc-link-lib=resolv");
++        println!("cargo:rustc-link-lib=nsl");
++        println!("cargo:rustc-link-lib=ssp");
++        println!("cargo:rustc-link-lib=umem");
+     } else if target.contains("illumos") {
+         println!("cargo:rustc-link-lib=socket");
+         println!("cargo:rustc-link-lib=posix4");
          println!("cargo:rustc-link-lib=pthread");
          println!("cargo:rustc-link-lib=resolv");
          println!("cargo:rustc-link-lib=nsl");
-+	// pkgsrc hack until I can figure out how to pass it through properly
-+	println!("cargo:rustc-link-lib=ssp");
++        println!("cargo:rustc-link-lib=ssp");
          // Use libumem for the (malloc-compatible) allocator
          println!("cargo:rustc-link-lib=umem");
      } else if target.contains("apple-darwin") {

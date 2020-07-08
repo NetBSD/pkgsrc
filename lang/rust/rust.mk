@@ -1,5 +1,5 @@
-# $NetBSD: rust.mk,v 1.4 2020/06/14 19:40:52 nia Exp $
-# 
+# $NetBSD: rust.mk,v 1.5 2020/07/08 14:46:14 jperkin Exp $
+#
 # This file determines the type of rust package to use.
 #
 # It should be included by rust-dependent packages that don't use
