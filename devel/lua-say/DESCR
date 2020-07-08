@@ -1,0 +1,2 @@
+say is a simple string key/value store for internationalization or any other
+case where you want namespaced strings.
