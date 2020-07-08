@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3933 2020/07/08 08:28:28 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3934 2020/07/08 09:29:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6257,3 +6257,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/gtk3 to 3.24.21 [adam 2020-07-08]
 	Updated net/terraform-provider-random to 2.3.0 [adam 2020-07-08]
 	Updated net/py-zeroconf to 0.28.0 [adam 2020-07-08]
+	Added www/badwolf version 1.0.2 [pin 2020-07-08]
