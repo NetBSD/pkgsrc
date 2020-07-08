@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/08 15:22:32 nia Exp $
+
+SHA1 (luassert-1.7.11.tar.gz) = b053d570286e01e1ddce8229c92f226c0d44f5cf
+RMD160 (luassert-1.7.11.tar.gz) = 7e621578eb7584f141297efb54872c325b1e1d38
+SHA512 (luassert-1.7.11.tar.gz) = 8c8e6a23f875e47babafcc3c70f256fc524f2bdc31d2f7fd73187ebb9a10c6ae445fc56c2cfd44f75145ac1344b6f6593667a50e1fa62385c691de5875805140
+Size (luassert-1.7.11.tar.gz) = 38556 bytes
