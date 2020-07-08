@@ -1,4 +1,4 @@
-# $Id: cross.mk,v 1.1 2020/07/06 19:09:29 he Exp $
+# $NetBSD: cross.mk,v 1.2 2020/07/08 14:46:14 jperkin Exp $
 
 # These settings may be used to cross-build rust.
 #
@@ -32,11 +32,11 @@
 # the ultimate target to built for, as well as the
 # host the compiler is supposed to run on.
 # Rust's target designation
-#TARGET= 		armv7-unknown-netbsd-eabihf
-#TARGET= 		sparc64-unknown-netbsd
-#TARGET= 		powerpc-unknown-netbsd
-#TARGET= 		aarch64-unknown-netbsd
-#TARGET= 		i686-unknown-netbsd
+#TARGET=		armv7-unknown-netbsd-eabihf
+#TARGET=		sparc64-unknown-netbsd
+#TARGET=		powerpc-unknown-netbsd
+#TARGET=		aarch64-unknown-netbsd
+#TARGET=		i686-unknown-netbsd
 #
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
@@ -48,3 +48,11 @@
 
 # May be required when cross-building on NetBSD
 #MAKE_ENV+=		OPENSSL_DIR=/usr
+
+#
+# Cross-compile illumos target.  The host is identical, it's just the target that
+# has been renamed.
+#
+#CONFIGURE_ARGS+=	--set=target.x86_64-unknown-illumos.llvm-config=${BUILDLINK_PREFIX.llvm}/bin/llvm-config
+#CONFIGURE_ARGS+=	--host=x86_64-unknown-illumos
+#CONFIGURE_ARGS+=	--target=x86_64-unknown-illumos
