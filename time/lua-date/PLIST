@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 11:03:57 nia Exp $
+${LUA_LDIR}/date.lua
