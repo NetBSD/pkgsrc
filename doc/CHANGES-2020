@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3959 2020/07/08 16:25:50 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3960 2020/07/08 17:00:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6287,3 +6287,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/lua-dkjson version 2.5 [nia 2020-07-08]
 	Updated net/gh to 0.10.1 [leot 2020-07-08]
 	Added devel/lua-busted version 2.0.0 [nia 2020-07-08]
+	Added textproc/lua-rapidjson version 0.6.1 [nia 2020-07-08]
