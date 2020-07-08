@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 12:52:07 nia Exp $
+${LUA_LDIR}/mediator.lua
