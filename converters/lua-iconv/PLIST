@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 15:10:38 nia Exp $
+${LUA_CDIR}/iconv.so
