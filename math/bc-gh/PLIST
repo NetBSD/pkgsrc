@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/19 18:04:05 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/07/08 13:48:55 gdt Exp $
 bin/bc-gh
 bin/dc-gh
 man/man1/bc-gh.1
@@ -71,5 +71,6 @@ share/locale/ru_RU.KOI8-R/bc-gh
 share/locale/ru_RU.UTF-8/bc-gh
 share/locale/zh_CN.GB18030/bc-gh
 share/locale/zh_CN.GB2312/bc-gh
+share/locale/zh_CN.GBK/bc-gh
 share/locale/zh_CN.UTF-8/bc-gh
 share/locale/zh_CN.eucCN/bc-gh
