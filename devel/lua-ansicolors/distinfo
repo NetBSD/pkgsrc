@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/08 11:25:21 nia Exp $
+
+SHA1 (ansicolors.lua-1.0.2.tar.gz) = a662b742da066b0a47bfb2817a1bbe8f4eacef69
+RMD160 (ansicolors.lua-1.0.2.tar.gz) = 69c0375cd7bbf3de778fba39bcbf4ae429a291f1
+SHA512 (ansicolors.lua-1.0.2.tar.gz) = d7052fc63ec09076c0fa940f506fa06ebd210cf590f35310a21c80062cbf062b6d2607c3f89b8dbb39377793e25ea11f471101913e620a7566957e7ed7efbb04
+Size (ansicolors.lua-1.0.2.tar.gz) = 3471 bytes
