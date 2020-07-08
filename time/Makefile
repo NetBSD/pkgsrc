@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2020/07/08 11:03:56 nia Exp $
+# $NetBSD: Makefile,v 1.210 2020/07/08 11:13:40 nia Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -51,6 +51,7 @@ SUBDIR+=	libical
 SUBDIR+=	lmclock
 SUBDIR+=	logtime
 SUBDIR+=	lua-date
+SUBDIR+=	lua-tz
 SUBDIR+=	memo
 SUBDIR+=	ntpsec
 SUBDIR+=	ocaml-calendar
