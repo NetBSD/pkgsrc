@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.78 2019/09/06 09:00:35 jperkin Exp $
+# $NetBSD: install.mk,v 1.79 2020/07/08 12:37:13 jperkin Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -374,11 +374,11 @@ install-strip-debug: plist
 	@${STEP_MSG} "Automatic stripping of debug information"
 	${RUN}cd ${DESTDIR:Q}${PREFIX:Q};				\
 	${CAT} ${_PLIST_NOKEYWORDS} | while read f; do			\
-		[ ! -h "$${f}" ] || continue;				\
 		case "$${f}" in						\
 		${STRIP_FILES_SKIP:@p@${p}) continue;;@}		\
 		*) ;;							\
 		esac;							\
+		[ ! -h "$${f}" ] || continue;				\
 		tmp_f="$${f}.XXX";					\
 		if ${STRIP_DBG} -o "$${tmp_f}" "$${f}" 2>/dev/null; then \
 			if [ -f "$${tmp_f}" -a -f "$${f}" ]; then	\
