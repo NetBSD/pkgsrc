@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2020/07/08 15:11:29 nia Exp $
+
+Honour environment.
+
+--- Makefile.orig	2012-05-07 02:27:38.000000000 +0000
++++ Makefile
+@@ -32,8 +32,8 @@ OMIT_FRAME_PTR = -fomit-frame-pointer
+ 
+ LUABIN = lua
+ LUAPKG = lua5.2
+-CFLAGS = `pkg-config $(LUAPKG) --cflags` -fPIC -O3 -Wall $(OMIT_FRAME_PTR)
+-LFLAGS = -shared
++CFLAGS+= -Wall -fPIC
++LFLAGS = $(LDFLAGS) -shared
+ 
+ INSTALL_PATH = `$(LUABIN) -e'                           \
+     for dir in package.cpath:gmatch("(/[^?;]+)?") do    \
