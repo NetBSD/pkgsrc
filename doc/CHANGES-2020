@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3956 2020/07/08 15:46:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3957 2020/07/08 16:00:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6284,3 +6284,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-luassert version 1.7.11 [nia 2020-07-08]
 	Added devel/lua-cliargs version 3.0.2 [nia 2020-07-08]
 	Added devel/lua-say version 1.3 [nia 2020-07-08]
+	Added textproc/lua-dkjson version 2.5 [nia 2020-07-08]
