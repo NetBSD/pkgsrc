@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3947 2020/07/08 14:26:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3948 2020/07/08 14:46:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6272,3 +6272,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/solfege to 3.22.2nb5 [schmonz 2020-07-08]
 	Updated math/bc-gh to 3.1.1 [gdt 2020-07-08]
 	Added devel/lua-compat53 version 0.7 [nia 2020-07-08]
+	Updated databases/py-sqlalchemy to 1.3.18 [adam 2020-07-08]
+	Updated devel/py-appdirs to 1.4.4 [adam 2020-07-08]
