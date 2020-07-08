@@ -1,0 +1,27 @@
+$NetBSD: patch-stringy_Makefile,v 1.1 2020/07/08 11:54:53 nia Exp $
+
+- Append CFLAGS.
+- Use LDFLAGS when linking.
+- Don't try to run tests.
+
+--- stringy/Makefile.orig	2019-03-22 19:12:17.000000000 +0000
++++ stringy/Makefile
+@@ -2,7 +2,7 @@ LUA ?= lua5.1
+ LUA_PC ?= lua5.1
+ LUA_CFLAGS = $(shell pkg-config $(LUA_PC) --cflags)
+ 
+-CFLAGS ?= -O3 -Wall -Werror
++CFLAGS += -Wall
+ 
+ all: stringy.so
+ 
+@@ -12,8 +12,7 @@ all: stringy.so
+ stringy.o: fastsearch.h
+ 
+ stringy.so: stringy.o stringy_test.lua
+-	$(CC) -shared stringy.o -o $@
+-	$(LUA) stringy_test.lua
++	$(CC) $(LDFLAGS) -shared stringy.o -o $@
+ 
+ clean:
+ 	rm -f stringy.so stringy.o *.rock
