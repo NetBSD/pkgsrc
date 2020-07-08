@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1465 2020/07/08 09:28:22 pin Exp $
+# $NetBSD: Makefile,v 1.1466 2020/07/08 14:50:05 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -194,6 +194,7 @@ SUBDIR+=	llgal
 SUBDIR+=	loggerhead
 SUBDIR+=	logswan
 SUBDIR+=	lua-curl
+SUBDIR+=	lua-psl
 SUBDIR+=	lynx
 SUBDIR+=	mMosaic
 SUBDIR+=	make_album
