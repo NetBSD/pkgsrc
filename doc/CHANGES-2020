@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3935 2020/07/08 11:04:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3936 2020/07/08 11:13:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6259,3 +6259,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-zeroconf to 0.28.0 [adam 2020-07-08]
 	Added www/badwolf version 1.0.2 [pin 2020-07-08]
 	Added time/lua-date version 2.1.2 [nia 2020-07-08]
+	Added time/lua-tz version 0.4.1 [nia 2020-07-08]
