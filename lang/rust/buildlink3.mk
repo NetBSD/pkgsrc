@@ -1,9 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.5 2020/06/14 15:38:18 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2020/07/08 14:46:14 jperkin Exp $
 
 #
 # DO NOT include this directly! Use rust.mk instead.
 #
-
 BUILDLINK_TREE+=	rust
 
 .if !defined(RUST_BUILDLINK3_MK)
