@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3946 2020/07/08 13:58:22 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.3947 2020/07/08 14:26:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6271,3 +6271,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-lpeg-patterns version 0.5 [nia 2020-07-08]
 	Updated audio/solfege to 3.22.2nb5 [schmonz 2020-07-08]
 	Updated math/bc-gh to 3.1.1 [gdt 2020-07-08]
+	Added devel/lua-compat53 version 0.7 [nia 2020-07-08]
