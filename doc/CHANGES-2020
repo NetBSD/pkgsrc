@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3942 2020/07/08 12:52:25 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3943 2020/07/08 13:14:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6267,3 +6267,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-system version 0.2.1 [nia 2020-07-08]
 	Added security/lua-ossl version 20190731 [nia 2020-07-08]
 	Added devel/lua-mediator version 1.1.2 [nia 2020-07-08]
+	Updated devel/py-pyobjc to 6.2.1 [adam 2020-07-08]
