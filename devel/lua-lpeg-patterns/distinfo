@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/08 13:48:33 nia Exp $
+
+SHA1 (lpeg_patterns-0.5.tar.gz) = 1989399e21407feb7c7e070e710fb3129961b332
+RMD160 (lpeg_patterns-0.5.tar.gz) = 2416e2cf13f50d6f6d9679341ca0673a66f53154
+SHA512 (lpeg_patterns-0.5.tar.gz) = 74e36083872cfa7ff8bb03927d075680b490b4d7ba55cee0cad7e1e27e6744809b05286a80967a19cd79f526168f53d362efa2b87c318efad726fa1ba3708f80
+Size (lpeg_patterns-0.5.tar.gz) = 26183 bytes

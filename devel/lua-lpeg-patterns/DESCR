@@ -1,0 +1,6 @@
+A collection of LPEG patterns.
+
+Use cases:
+
+- Strict validation of user input
+- Searching free-form input
