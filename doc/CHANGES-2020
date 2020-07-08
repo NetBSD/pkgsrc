@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3931 2020/07/08 06:12:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3932 2020/07/08 06:51:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6253,3 +6253,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed security/boringssl [nia 2020-07-07]
 	Updated devel/py-gobject3 to 3.36.1 [adam 2020-07-08]
 	Updated lang/npm to 6.14.6 [adam 2020-07-08]
+	Updated net/glib-networking to 2.64.3 [adam 2020-07-08]
+	Updated x11/gtk3 to 3.24.21 [adam 2020-07-08]
