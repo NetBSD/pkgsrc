@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2020/05/21 09:25:44 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/07/08 06:12:12 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -334,6 +334,7 @@ lib/node_modules/npm/lib/utils/pick-manifest-from-registry-metadata.js
 lib/node_modules/npm/lib/utils/pulse-till-done.js
 lib/node_modules/npm/lib/utils/read-local-package.js
 lib/node_modules/npm/lib/utils/read-user-info.js
+lib/node_modules/npm/lib/utils/replace-info.js
 lib/node_modules/npm/lib/utils/save-stack.js
 lib/node_modules/npm/lib/utils/spawn.js
 lib/node_modules/npm/lib/utils/temp-filename.js
