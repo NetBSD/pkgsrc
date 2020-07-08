@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2019/07/11 04:51:14 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2020/07/08 13:57:42 schmonz Exp $
 
 SHA1 (solfege-3.22.2.tar.xz) = d46e67d2f64c943fbdfa3858f077b49186a60a66
 RMD160 (solfege-3.22.2.tar.xz) = 0832a8b75c913af0f7d7124b339e70a6cc82fb23
@@ -7,3 +7,5 @@ Size (solfege-3.22.2.tar.xz) = 4107232 bytes
 SHA1 (patch-Makefile.in) = 24cf0755877f53bef9687019e6b493d115709347
 SHA1 (patch-default.config) = b8cb381b348b4e2c2201e7ab9666006b40cbd4ce
 SHA1 (patch-po_Makefile) = 5c7ceec962593afc80f23aa8059c32642a456be3
+SHA1 (patch-topdocs_AUTHORS.texi) = f4c29b218a60c5dbf3d90c4bf01f7f547b6c97eb
+SHA1 (patch-topdocs_README.texi) = f2048b20e00bc47e4401d5bdb68a46f340788193
