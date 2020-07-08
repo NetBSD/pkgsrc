@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.16 2020/03/22 18:36:17 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2020/07/08 06:08:46 adam Exp $
 # used by devel/py-gobject3/Makefile
 # used by devel/py-gobject3-common/Makefile
 
-DISTNAME=	pygobject-3.36.0
+DISTNAME=	pygobject-3.36.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygobject/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
