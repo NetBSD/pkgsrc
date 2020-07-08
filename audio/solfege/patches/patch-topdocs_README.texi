@@ -1,0 +1,14 @@
+$NetBSD: patch-topdocs_README.texi,v 1.1 2020/07/08 13:57:42 schmonz Exp $
+
+Specify encoding to avoid UTF8-to-Unicode conversion error.
+
+--- topdocs/README.texi.orig	2013-10-05 20:57:48.000000000 +0000
++++ topdocs/README.texi
+@@ -2,6 +2,7 @@
+ @setfilename README.info
+ @include topdocs/defs.texi
+ @settitle README
++@documentencoding ISO-8859-1
+ 
+ @contents 
+ 
