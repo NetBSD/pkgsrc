@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 11:13:40 nia Exp $
+${LUA_LDIR}/luatz/gettime.lua
+${LUA_LDIR}/luatz/init.lua
+${LUA_LDIR}/luatz/parse.lua
+${LUA_LDIR}/luatz/strftime.lua
+${LUA_LDIR}/luatz/timetable.lua
+${LUA_LDIR}/luatz/tzcache.lua
+${LUA_LDIR}/luatz/tzfile.lua
+${LUA_LDIR}/luatz/tzinfo.lua
