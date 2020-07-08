@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/18 08:32:02 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/07/08 08:15:06 adam Exp $
 
-SHA1 (terraform-provider-random-2.2.1.tar.gz) = c4b909ee5c0187c48b4e7ec49eb4c3282f62d40e
-RMD160 (terraform-provider-random-2.2.1.tar.gz) = 28a418362604ad8db6e6a58083e76cc1da73d43a
-SHA512 (terraform-provider-random-2.2.1.tar.gz) = d7247f588a0ebfec6a4b48a375656b5eba1bbe7099288482ce37aafeea55949df3c7a0fc654585cce26b83e6950bb612aa17459c1e849d713af9ef2ad782b17d
-Size (terraform-provider-random-2.2.1.tar.gz) = 4745888 bytes
+SHA1 (terraform-provider-random-2.3.0.tar.gz) = b0415b95ba9a6ffcf07baf906fe7c7236c6737c6
+RMD160 (terraform-provider-random-2.3.0.tar.gz) = 9c74b60aa243530a4d80381c3f18f9a58c98256d
+SHA512 (terraform-provider-random-2.3.0.tar.gz) = 972ce5d551f83b502885462d9d545ceea006266373bfb39dc7db8434bccce860f531b018f5129d58a063c4a62bc2ea3de8c35f38b3ebd5cb56e5f5ea615cff62
+Size (terraform-provider-random-2.3.0.tar.gz) = 4419245 bytes

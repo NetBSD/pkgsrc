@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/06/17 09:54:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/08 08:15:06 adam Exp $
 
-DISTNAME=	terraform-provider-random-2.2.1
-PKGREVISION=	2
+DISTNAME=	terraform-provider-random-2.3.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +17,7 @@ UNLIMIT_RESOURCES=	datasize virtualsize
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/terraform-providers/${GITHUB_PROJECT}
 
-GO_BUILD_PATTERN?=	${GO_SRCPATH}/.
+GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/*.sh
