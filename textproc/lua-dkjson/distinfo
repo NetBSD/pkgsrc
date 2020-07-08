@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/08 16:00:22 nia Exp $
+
+SHA1 (dkjson-2.5.tar.gz) = 3c27571b08c8f66a12419b690ac5764112ccaed7
+RMD160 (dkjson-2.5.tar.gz) = fa3c87a9705e463a23593734ba520281abd210f0
+SHA512 (dkjson-2.5.tar.gz) = 91c84c662932579e8dd0a34bfb931730502981ad2937029aacd5b7ece972942c1b425ec4b0c9428935c550a060412614d6b26cb5e205c4c840f9effed7995148
+Size (dkjson-2.5.tar.gz) = 15878 bytes

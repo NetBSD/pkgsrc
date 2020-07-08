@@ -1,0 +1,4 @@
+This is a JSON module written in Lua. It supports UTF-8.
+
+dkjson is written in Lua without any dependencies, but when LPeg
+is available dkjson uses it to speed up decoding.
