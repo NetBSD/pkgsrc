@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2020/06/02 08:23:14 adam Exp $
+# $NetBSD: Makefile,v 1.76 2020/07/08 13:57:42 schmonz Exp $
 
 DISTNAME=		solfege-3.22.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GNU:=solfege/}
 EXTRACT_SUFX=		.tar.xz
@@ -53,11 +53,11 @@ MIDIPLAYER=	/usr/bin/midiplay
 MP3PLAYER=	${PREFIX}/bin/mpg123
 OGGPLAYER=	${PREFIX}/bin/ogg123
 .elif ${OPSYS} == "Darwin"
-WAVPLAYER=	${PREFIX}/bin/qtplay
-MIDIPLAYER=	${PREFIX}/bin/qtplay
-MP3PLAYER=	${PREFIX}/bin/qtplay
-OGGPLAYER=	${PREFIX}/bin/qtplay
-DEPENDS+=	qtplay-[0-9]*:../../audio/qtplay
+WAVPLAYER=	/usr/bin/afplay
+MIDIPLAYER=	/usr/bin/afplay
+MP3PLAYER=	/usr/bin/afplay
+OGGPLAYER=	${PREFIX}/bin/ogg123
+DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 .endif
 
 post-install:
@@ -66,6 +66,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/solfege/src
 
 .include "../../lang/python/application.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.14
