@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3164 2020/07/08 15:46:36 nia Exp $
+# $NetBSD: Makefile,v 1.3165 2020/07/08 16:23:23 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -852,6 +852,7 @@ SUBDIR+=	lua-argparse
 SUBDIR+=	lua-basexx
 SUBDIR+=	lua-binaryheap
 SUBDIR+=	lua-bitlib
+SUBDIR+=	lua-busted
 SUBDIR+=	lua-cliargs
 SUBDIR+=	lua-compat53
 SUBDIR+=	lua-coxpcall
