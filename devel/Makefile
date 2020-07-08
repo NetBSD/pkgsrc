@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3158 2020/07/08 12:15:08 nia Exp $
+# $NetBSD: Makefile,v 1.3159 2020/07/08 12:52:07 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -865,6 +865,7 @@ SUBDIR+=	lua-lrexlib-onig
 SUBDIR+=	lua-lrexlib-pcre
 SUBDIR+=	lua-lrexlib-posix
 SUBDIR+=	lua-luv
+SUBDIR+=	lua-mediator
 SUBDIR+=	lua-mode
 SUBDIR+=	lua-penlight
 SUBDIR+=	lua-posix
