@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2020/07/07 10:44:02 he Exp $
+# $NetBSD: Makefile,v 1.187 2020/07/08 14:46:14 jperkin Exp $
 
 DISTNAME=	rustc-1.44.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -125,7 +125,7 @@ MAKE_JOBS_SAFE=	no
 .  endif
 
 # Open PRs
-# 
+#
 # Broken package with PREFIX not /usr/pkg:
 #   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54453
 #
@@ -136,7 +136,7 @@ MAKE_JOBS_SAFE=	no
 #   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=55368
 
 # Stale PRs (a reason to believe they no longer apply)
-# 
+#
 # NetBSD 8.1 sparc64: bootstrap fails with libssl.so.14 missing
 #   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54622
 
@@ -322,10 +322,27 @@ CKSUM_CRATES+=	vendor/lzma-sys
 CKSUMS+=	51a9ca7a4576822dc4fa01b31bc4bbed21817777abb304f605ef5951f68c3ed2
 CKSUMS+=	807c3aa4b5a62a70ba790df151e9ecf19f4bb562f2858575d690908751262db3
 
-# Contain identical checksums
 CKSUM_CRATES+=	vendor/rand-0.6.1
 CKSUMS+=	1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1
 CKSUMS+=	bc03f2345d7cfa7000f9da817120b6afa073359789c21a9a790ebd8676c50cca
+
+CKSUM_CRATES+=	vendor/mio
+CKSUMS+=	62331824b1f5022e372b875faad41a970abb13e63c15e3fae9af948a2b06e4e1
+CKSUMS+=	6fc27e48d0c7275588da244c372994ef442bc4ecd78264cc5337a55b79798f62
+CKSUMS+=	bf76f97c0dc9dfe870b8e865ea03ebbdfa939494a6fea809ac530d8055a56ec0
+CKSUMS+=	f4d143c57f3b87e4af6381ea33cb81c3c3577aa717bf7690e0a5c1eea73d2baa
+
+CKSUM_CRATES+=	vendor/net2
+CKSUMS+=	b9300ae246e9ac451889f146ece8bb6ed4a95482edf806373de5af759cd09360
+CKSUMS+=	762a881d936363f4140bc6befc516f9b3f321ef0a6eb9f3f812aa15ab32b56c0
+CKSUMS+=	bb28a7275eac021132b01206d134802902d616c0be3e82100b45a3ff1eba4c02
+CKSUMS+=	baa97a46744047bef086334ed9a63b340e4aba85e6471493780fc99d8e6445ed
+CKSUMS+=	8d8a171090b75e86e7505921460fba072db0077942edd11c4a3c8a70e9164eef
+CKSUMS+=	7ad3b486020bd652ad7c5af752f039c30ee0099c86ff6b6f336587db7a2bc523
+
+CKSUM_CRATES+=	vendor/time
+CKSUMS+=	4f6bc5c6300c2d49da7d21615152872e16d53c0f02540824f48c45edd4d3140f
+CKSUMS+=	6d460b1899de033f625ccb13b1e3ba28cd338980a8c88c518a18749a079bafc3
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
@@ -461,7 +478,7 @@ stage0-bootstrap: install
 		   libssh2.so.1 libunistring.so.2; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	for f in ${BOOTSTRAP_TMPDIR}/bin/{cargo*,clippy*,miri,rls,rustc,rustdoc,rustfmt}; do \
+	for f in ${BOOTSTRAP_TMPDIR}/bin/{cargo*,clippy*,rls,rustc,rustdoc,rustfmt}; do \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN/../lib:$$ORIGIN/../lib/pkgsrc' $$f; \
 	done
 	for f in ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/*.so*; do \
@@ -470,7 +487,7 @@ stage0-bootstrap: install
 	for f in ${BOOTSTRAP_TMPDIR}/lib/*.so*; do \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/pkgsrc' $$f; \
 	done
-	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/${RUST_ARCH}/*/*.so*; do \
+	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/*/*/*.so*; do \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
 	done
 	(cd ${WRKDIR}; \
