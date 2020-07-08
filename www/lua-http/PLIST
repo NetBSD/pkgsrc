@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 14:58:49 nia Exp $
+${LUA_LDIR}/http/bit.lua
+${LUA_LDIR}/http/client.lua
+${LUA_LDIR}/http/connection_common.lua
+${LUA_LDIR}/http/cookie.lua
+${LUA_LDIR}/http/h1_connection.lua
+${LUA_LDIR}/http/h1_reason_phrases.lua
+${LUA_LDIR}/http/h1_stream.lua
+${LUA_LDIR}/http/h2_connection.lua
+${LUA_LDIR}/http/h2_error.lua
+${LUA_LDIR}/http/h2_stream.lua
+${LUA_LDIR}/http/headers.lua
+${LUA_LDIR}/http/hpack.lua
+${LUA_LDIR}/http/hsts.lua
+${LUA_LDIR}/http/proxies.lua
+${LUA_LDIR}/http/request.lua
+${LUA_LDIR}/http/server.lua
+${LUA_LDIR}/http/socks.lua
+${LUA_LDIR}/http/stream_common.lua
+${LUA_LDIR}/http/tls.lua
+${LUA_LDIR}/http/util.lua
+${LUA_LDIR}/http/version.lua
+${LUA_LDIR}/http/websocket.lua
+${LUA_LDIR}/http/zlib.lua
