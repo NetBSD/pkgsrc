@@ -1,10 +1,11 @@
-$NetBSD: patch-ab,v 1.12 2012/05/25 20:01:31 he Exp $
+$NetBSD: patch-ab,v 1.13 2020/07/08 04:06:48 mrg Exp $
 
 Special adaptation for different NetBSD versions and for OpenBSD.
+Turn on SYSMALLOC for NetBSD until tc.alloc.c gets better.
 
---- config_f.h.orig	2006-08-28 10:53:04.000000000 -0400
-+++ config_f.h	2007-04-09 20:02:34.000000000 -0400
-@@ -44,7 +44,18 @@
+--- config_f.h.orig	2019-12-04 09:51:54.000000000 -0800
++++ config_f.h	2020-07-06 15:21:46.122410962 -0700
+@@ -47,7 +47,18 @@
   *	         of nls...
   *
   */
@@ -24,3 +25,12 @@ Special adaptation for different NetBSD versions and for OpenBSD.
  
  /*
   * WIDE_STRINGS	Represent strings using wide characters
+@@ -138,7 +149,7 @@
+  *		This can be much slower and no memory statistics will be
+  *		provided.
+  */
+-#if defined(__MACHTEN__) || defined(PURIFY) || defined(MALLOC_TRACE) || defined(_OSD_POSIX) || defined(__MVS__) || defined (__CYGWIN__) || defined(__GLIBC__) || defined(__OpenBSD__) || defined(__APPLE__) || defined (__ANDROID__)
++#if defined(__MACHTEN__) || defined(PURIFY) || defined(MALLOC_TRACE) || defined(_OSD_POSIX) || defined(__MVS__) || defined (__CYGWIN__) || defined(__GLIBC__) || defined(__OpenBSD__) || defined(__APPLE__) || defined (__ANDROID__) || defined(__NetBSD__)
+ # define SYSMALLOC
+ #else
+ # undef SYSMALLOC
