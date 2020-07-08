@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1464 2020/06/21 20:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.1465 2020/07/08 09:28:22 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -55,6 +55,7 @@ SUBDIR+=	august
 SUBDIR+=	aws
 SUBDIR+=	aws-demos
 SUBDIR+=	awstats
+SUBDIR+=	badwolf
 SUBDIR+=	bannerfilter
 SUBDIR+=	bins
 SUBDIR+=	bkedit
