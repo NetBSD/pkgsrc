@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/07/08 13:48:55 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/08 13:58:14 gdt Exp $
 
-VERSION=	3.0.0
+VERSION=	3.1.1
 DISTNAME=	bc-${VERSION}
 PKGNAME=	bc-gh-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gavinhoward/}
 GITHUB_PROJECT=	bc
