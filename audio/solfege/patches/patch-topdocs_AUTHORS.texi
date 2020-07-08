@@ -1,0 +1,14 @@
+$NetBSD: patch-topdocs_AUTHORS.texi,v 1.1 2020/07/08 13:57:42 schmonz Exp $
+
+Specify encoding to avoid UTF8-to-Unicode conversion error.
+
+--- topdocs/AUTHORS.texi.orig	2013-10-05 20:57:48.000000000 +0000
++++ topdocs/AUTHORS.texi
+@@ -3,6 +3,7 @@
+ @settitle AUTHORS
+ @node Top, , , (dir)
+ @chapter AUTHORS - who wrote what on GNU Solfege?
++@documentencoding ISO-8859-1
+ 
+ @itemize @bullet
+ 
