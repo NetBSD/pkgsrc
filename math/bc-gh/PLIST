@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/07/08 13:48:55 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/07/08 13:58:14 gdt Exp $
 bin/bc-gh
 bin/dc-gh
 man/man1/bc-gh.1
@@ -36,6 +36,8 @@ share/locale/en_US.ISO8859-15/bc-gh
 share/locale/en_US.US-ASCII/bc-gh
 share/locale/en_US.UTF-8/bc-gh
 share/locale/en_US/bc-gh
+share/locale/es_ES.ISO8859-1/bc-gh
+share/locale/es_ES.ISO8859-15/bc-gh
 share/locale/es_ES.UTF-8/bc-gh
 share/locale/fr_BE.ISO8859-1/bc-gh
 share/locale/fr_BE.ISO8859-15/bc-gh
