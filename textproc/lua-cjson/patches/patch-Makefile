@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2020/07/08 17:11:52 nia Exp $
+
+Respect CFLAGS.
+
+--- Makefile.orig	2012-03-01 12:22:50.000000000 +0000
++++ Makefile
+@@ -15,7 +15,7 @@ LUA_VERSION =       5.1
+ TARGET =            cjson.so
+ PREFIX =            /usr/local
+ #CFLAGS =            -g -Wall -pedantic -fno-inline
+-CFLAGS =            -O3 -Wall -pedantic -DNDEBUG
++CFLAGS +=           -Wall -pedantic -DNDEBUG
+ CJSON_CFLAGS =      -fpic
+ CJSON_LDFLAGS =     -shared
+ LUA_INCLUDE_DIR =   $(PREFIX)/include
