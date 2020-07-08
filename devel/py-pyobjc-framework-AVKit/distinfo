@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/05/23 07:03:41 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/07/08 13:12:35 adam Exp $
 
-SHA1 (pyobjc-framework-AVKit-6.2.tar.gz) = dbc834e3aa6e2a38bcfa91d0f3fc3bf2faab9e6d
-RMD160 (pyobjc-framework-AVKit-6.2.tar.gz) = 2e33dc213948c2b6ade60a8a632447affb8dde46
-SHA512 (pyobjc-framework-AVKit-6.2.tar.gz) = 04e2905a77a9492ac0f49960bc0f14a0c19420cac28165f2ead90ad5feaa89260ecf0ddadf54244b9208bc9659b143fbf75e06f23c87ce3d88f9f52636f9261a
-Size (pyobjc-framework-AVKit-6.2.tar.gz) = 20656 bytes
+SHA1 (pyobjc-framework-AVKit-6.2.1.tar.gz) = e27477bebbdf7483e605b16bd0d36f6429f2e4b6
+RMD160 (pyobjc-framework-AVKit-6.2.1.tar.gz) = 4ef6f775e90256eca5f8157d052e64eb8bc96297
+SHA512 (pyobjc-framework-AVKit-6.2.1.tar.gz) = 661e88b00a1435c61be30f547e260ec469ebc7408751683ca448b528559e4f30e3b1e38ed3f60394c73189d4abc8d6e9076fd1b3055030b8d8f9774f4d25d784
+Size (pyobjc-framework-AVKit-6.2.1.tar.gz) = 20841 bytes
