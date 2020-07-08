@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/07/08 17:00:03 nia Exp $
+
+-march=native is a terrible idea for obvious reasons.
+
+--- CMakeLists.txt.orig	2020-07-08 16:47:57.527083977 +0000
++++ CMakeLists.txt
+@@ -31,8 +31,8 @@ if(UNIX)
+         set(PLAT "linux")
+         set(LINK_FLAGS "-shared")
+     endif(APPLE)
+-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -fPIC -march=native")
+-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -fPIC -march=native")
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fPIC")
++    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fPIC")
+ else(UNIX)
+     if(WIN32)
+         set(PLAT "win32")
