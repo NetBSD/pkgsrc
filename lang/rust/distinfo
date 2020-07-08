@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.116 2020/07/07 10:44:02 he Exp $
+$NetBSD: distinfo,v 1.117 2020/07/08 14:46:14 jperkin Exp $
 
 SHA1 (rust-1.41.1-i686-apple-darwin.tar.gz) = 5a778b77fc88b19f1c668316e3bf677c60f8ead1
 RMD160 (rust-1.41.1-i686-apple-darwin.tar.gz) = ae61f32a4d27a760e6f2b79f4042ed0cf385f784
@@ -112,7 +112,7 @@ SHA1 (patch-src_librustc__codegen__ssa_back_linker.rs) = e7c592f78b9ee317521cf02
 SHA1 (patch-src_librustc__llvm_build.rs) = 7cc2aa0568aa2cbf4eb1fdbb00922b10df0b3ff6
 SHA1 (patch-src_librustc__target_spec_solaris__base.rs) = 63bf74e64f01e918db0860c43eefe50185c9a0c2
 SHA1 (patch-src_librustc__target_spec_x86__64__sun__solaris.rs) = f6ad33b41906bbf83a1cbd0e2fe13a4da37266fa
-SHA1 (patch-src_libstd_build.rs) = 8d9508a3c8931f280e5b8031413672a485094872
+SHA1 (patch-src_libstd_build.rs) = eb8faae53e997c14a40c0d35615f4ca5e316e7cc
 SHA1 (patch-src_libstd_sys_unix_thread.rs) = 2554f1a42afaa0ddce5053860f4dabecdf6c527a
 SHA1 (patch-src_libunwind_build.rs) = 723ded63580812f74d04c447f90925725ae9bfc9
 SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = d49503d19c30a64d571eb7fa79e7aad7038cd427
@@ -130,4 +130,10 @@ SHA1 (patch-vendor_backtrace-sys_src_libbacktrace_configure) = 90e54f66edce65ebe
 SHA1 (patch-vendor_libc_src_unix_solarish_mod.rs) = 804ea03be546fef0d2bd37d7f8abb26d38a7892b
 SHA1 (patch-vendor_libssh2-sys_libssh2_Makefile.am) = 5343adcf044eeed1f325cd29d28964e209a50058
 SHA1 (patch-vendor_lzma-sys_config.h) = ab963fc8d7a847715e0e0dc2928333efe38e923f
+SHA1 (patch-vendor_mio_src_sys_unix_mod.rs) = ebc40c32ee5a709cce986304c493cb852aee642e
+SHA1 (patch-vendor_mio_src_sys_unix_ready.rs) = 2479285f60290c3669df84b6a6ce9f5fd0c5edc7
+SHA1 (patch-vendor_net2_src_ext.rs) = d390377f3ba98b9a38c9460c2b320af5b26901b6
+SHA1 (patch-vendor_net2_src_lib.rs) = dc3595a88f1322f39049de23755ef54f340eb054
+SHA1 (patch-vendor_net2_src_sys_unix_mod.rs) = 368b05d524edbaf3bb4f72b7066086aa876e2b9a
 SHA1 (patch-vendor_rand__os_src_netbsd.rs) = 049df63c904abd81cb92f33fa0882f5c81cae51a
+SHA1 (patch-vendor_time_src_sys.rs) = 9684a60cb9c6fb6a0f3eed3d6101a76986a38d8d
