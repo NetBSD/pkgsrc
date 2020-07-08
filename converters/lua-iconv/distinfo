@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/07/08 15:10:38 nia Exp $
+
+SHA1 (lua-iconv-7.tar.gz) = 66e1d0f367d460e1bd78ad6befccdd2837b279e1
+RMD160 (lua-iconv-7.tar.gz) = fe16fce0cf5af4bfeab27cb691559d6fbe16f4f9
+SHA512 (lua-iconv-7.tar.gz) = 7fae8be68878747a6bcb559d1548f7d0b330d519cdf306f6ec8250cb914ed971ba1a86fef20771a5add728d796c613c32544c20ba4f8b4315d20ee8ac39a607f
+Size (lua-iconv-7.tar.gz) = 11568 bytes
+SHA1 (patch-Makefile) = a10dbee19203d06294c3daba33b5fff97bb85d5d
