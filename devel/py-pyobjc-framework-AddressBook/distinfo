@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/05/23 07:03:42 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/07/08 13:12:35 adam Exp $
 
-SHA1 (pyobjc-framework-AddressBook-6.2.tar.gz) = 33a80877efe0a2de8dee035c48035caff359fa05
-RMD160 (pyobjc-framework-AddressBook-6.2.tar.gz) = a1e2a71a5dba9de43012b1b2b4556ff6461d65ee
-SHA512 (pyobjc-framework-AddressBook-6.2.tar.gz) = 248bc1e62cd030b1023d08af40c98b2d611d8769f9edd0013d28f2115d324b743f12b30bb9f822c7d12d6a97b228e3455894c9dd52adb47cacbf1ad69554a294
-Size (pyobjc-framework-AddressBook-6.2.tar.gz) = 76465 bytes
+SHA1 (pyobjc-framework-AddressBook-6.2.1.tar.gz) = 91868a373939f5174754d93cfbf4c72aa7d31018
+RMD160 (pyobjc-framework-AddressBook-6.2.1.tar.gz) = a01b2e748af8e86da229f0d45e7b0be8f013d7f0
+SHA512 (pyobjc-framework-AddressBook-6.2.1.tar.gz) = e9695c98f85b7647068b1cb60875d92a874261fa2d92b8d7f9de94320e61b41377649dfb638e4da6a0d16c2adbbfe0275eac31c89dbe5d690ed4790bd5326409
+Size (pyobjc-framework-AddressBook-6.2.1.tar.gz) = 76649 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/23 07:03:43 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/07/08 13:12:37 adam Exp $
 
-SHA1 (pyobjc-framework-CoreAudio-6.2.tar.gz) = ad624b6342b14d4ac49beab5ea19f4252358fb04
-RMD160 (pyobjc-framework-CoreAudio-6.2.tar.gz) = 4af9e6243fa6e10b27e7c9a48d917f49679c5cd6
-SHA512 (pyobjc-framework-CoreAudio-6.2.tar.gz) = 042bfeff919be1f041fc0fe0e51051416d5dcb4599b868bdff5528ca780695a8ce382f3a7ddd7db6bbec10c88b62c96b13a67acbab8460784197d621f55002ee
-Size (pyobjc-framework-CoreAudio-6.2.tar.gz) = 81781 bytes
+SHA1 (pyobjc-framework-CoreAudio-6.2.1.tar.gz) = 6bb2cb47e095f40f1404582844950d0f46b05379
+RMD160 (pyobjc-framework-CoreAudio-6.2.1.tar.gz) = 16bbdf947f418d0d398feb08485e5bc34cba664e
+SHA512 (pyobjc-framework-CoreAudio-6.2.1.tar.gz) = 8b05fff675d864c767aba2a70f16dbbf4433bc94ec03fe2fa765cd9bd6c8bddcca0a6d43de9026524c494ed88ed645f73b3b9c5b9d49bd57e433ccbd8e070d2c
+Size (pyobjc-framework-CoreAudio-6.2.1.tar.gz) = 82121 bytes
