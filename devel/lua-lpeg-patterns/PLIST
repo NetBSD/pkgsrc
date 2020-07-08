@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 13:48:33 nia Exp $
+${LUA_LDIR}/lpeg_patterns/IPv4.lua
+${LUA_LDIR}/lpeg_patterns/IPv6.lua
+${LUA_LDIR}/lpeg_patterns/core.lua
+${LUA_LDIR}/lpeg_patterns/email.lua
+${LUA_LDIR}/lpeg_patterns/http.lua
+${LUA_LDIR}/lpeg_patterns/language.lua
+${LUA_LDIR}/lpeg_patterns/phone.lua
+${LUA_LDIR}/lpeg_patterns/uri.lua
+${LUA_LDIR}/lpeg_patterns/util.lua
