@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.1 2020/06/18 18:30:41 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2020/07/08 16:16:05 leot Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
 Size (cloud.google.com_go_@v_v0.26.0.mod) = 27 bytes
-SHA1 (gh-0.10.0.tar.gz) = 13c8f51fed060e7bf8cd5f1f6d2b4208dd2edee7
-RMD160 (gh-0.10.0.tar.gz) = e794a0b917b2c49cec714e92d1e48269f731b588
-SHA512 (gh-0.10.0.tar.gz) = e00d8a6b800ffa35fb3886a7040b91bcdc20c030883ff651a4c154925daba612ffcd8d4108a302ec97a21c6b5a09979722f8ccee687ab0e4687020edade82328
-Size (gh-0.10.0.tar.gz) = 253152 bytes
+SHA1 (gh-0.10.1.tar.gz) = a115acd3b685144830a97beb5949ca23900c37b8
+RMD160 (gh-0.10.1.tar.gz) = 5baf18a1d149545c51602a9ea68d98f06d6aeef9
+SHA512 (gh-0.10.1.tar.gz) = ab7e236b3aa14d4cb24e2af96fca07aa1a9cbacf4b80fcfce8ed157e24cca3c8c6e5ffa05240dabb8494e308960237d5b6920a4c426de6c00b655b201439d769
+Size (gh-0.10.1.tar.gz) = 257623 bytes
 SHA1 (github.com__alec_aivazis_survey_v2_@v_v2.0.7.mod) = c0250c577d5c0b325aca9b31a012f407bb0802af
 RMD160 (github.com__alec_aivazis_survey_v2_@v_v2.0.7.mod) = 18938251832563853de84f8565fb8db8f7425fca
 SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.0.7.mod) = 72213e0d0609572f5e749a4f295a8b3ffd13bfe38f786fa3174e53ec318a623e9122c69718944034aa70b05ddad1771cbfa62d2fdc49df2152c5c9679a681ff9
