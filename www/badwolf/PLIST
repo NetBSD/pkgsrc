@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 09:26:58 pin Exp $
+bin/badwolf
+man/man1/badwolf.1
+share/applications/badwolf.desktop
+share/badwolf/interface.css
+share/badwolf/locale/fr/LC_MESSAGES/Badwolf.mo
+share/badwolf/locale/pt_BR/LC_MESSAGES/Badwolf.mo
+share/doc/${PKGNAME}/KnowledgeBase.md
+share/doc/${PKGNAME}/README.md
+share/doc/${PKGNAME}/interface.txt
+share/doc/${PKGNAME}/usr.bin.badwolf
+share/icons/hicolor/128x128/apps/badwolf.png
+share/icons/hicolor/24x24/apps/badwolf.png
+share/icons/hicolor/256x256/apps/badwolf.png
+share/icons/hicolor/32x32/apps/badwolf.png
+share/icons/hicolor/48x48/apps/badwolf.png
+share/icons/hicolor/64x64/apps/badwolf.png
+share/icons/hicolor/scalable/apps/badwolf.svg

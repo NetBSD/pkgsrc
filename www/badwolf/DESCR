@@ -1,0 +1,16 @@
+badwolf is a minimalist browser that cares about privacy, it is based on
+WebKitGTK and thus also accepts WebKitGTK (and dependencies) flags and
+environment variables.
+
+Runtime configuration specific to badwolf will probably get added at a later
+release.
+
+- No browser-level tracking, multiple ephemeral isolated sessions per new
+  unrelated tabs, JavaScript off by default.
+- Small codebase (~1 500 LoC), reuses existing components when available or
+  makes it available.
+- WebKitGTK native extensions, Interface customizable through CSS.
+- Stable User-Interface; The common shortcuts are available (and documented),
+  no vi-modal edition or single-key shortcuts are used.
+- Dialogs are only used when required, javascript popups open in a
+  background tab.
