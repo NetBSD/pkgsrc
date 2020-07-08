@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3938 2020/07/08 11:55:25 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3939 2020/07/08 11:57:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6262,3 +6262,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added time/lua-tz version 0.4.1 [nia 2020-07-08]
 	Added devel/lua-ansicolors version 1.0.2 [nia 2020-07-08]
 	Added textproc/lua-stringy version 0.6.1 [nia 2020-07-08]
+	Updated chat/py-nbxmpp to 1.0.1 [adam 2020-07-08]
+	Updated chat/gajim to 1.2.0 [adam 2020-07-08]
