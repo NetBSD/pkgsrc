@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 12:15:08 nia Exp $
+${LUA_CDIR}/system/core.so
+${LUA_LDIR}/system/init.lua
