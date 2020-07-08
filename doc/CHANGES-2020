@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3930 2020/07/07 23:48:16 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3931 2020/07/08 06:12:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6251,3 +6251,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/go-mkcert to 1.4.1 [bsiegert 2020-07-07]
 	Removed lang/LuaJIT successor lang/LuaJIT2 [nia 2020-07-08]
 	Removed security/boringssl [nia 2020-07-07]
+	Updated devel/py-gobject3 to 3.36.1 [adam 2020-07-08]
+	Updated lang/npm to 6.14.6 [adam 2020-07-08]
