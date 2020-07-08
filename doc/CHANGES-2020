@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3952 2020/07/08 15:11:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3953 2020/07/08 15:12:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6279,3 +6279,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-crayons to 0.3.1 [adam 2020-07-08]
 	Updated devel/py-slugify to 4.0.1 [adam 2020-07-08]
 	Added converters/lua-iconv version 7 [nia 2020-07-08]
+	Updated www/py-django3 to 3.0.8 [adam 2020-07-08]
+	Updated www/py-django2 to 2.2.14 [adam 2020-07-08]
