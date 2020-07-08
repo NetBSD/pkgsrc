@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/11/06 17:31:40 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/07/08 14:55:18 adam Exp $
 
-SHA1 (crayons-0.3.0.tar.gz) = 47f312efbc8ea32207772d4f7e6d418e19e6b863
-RMD160 (crayons-0.3.0.tar.gz) = 241cf323ee85790aec23ecbd1cbca229a4ce4811
-SHA512 (crayons-0.3.0.tar.gz) = dd3a5d17cf941899eb3f7ec154429888c6560a73217c5531069e88bbd56a8ef0eb3ee18d3ac4a332aacfcc29a5162d56c44c03da643ed9f43908802712318d41
-Size (crayons-0.3.0.tar.gz) = 3857 bytes
+SHA1 (crayons-0.3.1.tar.gz) = 25cbf06a483369c01dcbc90d53c52d66754467da
+RMD160 (crayons-0.3.1.tar.gz) = 78f62cca20463077feb8c707b2e77150e7bf167d
+SHA512 (crayons-0.3.1.tar.gz) = 35a0ed8279646dc9a4423d9bfa118f781fb8210904aa34f2ade982af26d1063c17c678289f852f4edaf7b420dd7535ec1739910ff6a5455eee6464d7b4723eb9
+Size (crayons-0.3.1.tar.gz) = 4516 bytes
