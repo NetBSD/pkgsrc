@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/05/23 07:03:44 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/07/08 13:12:37 adam Exp $
 
-SHA1 (pyobjc-framework-CoreServices-6.2.tar.gz) = 11dbf86106f29b3dd49303bcd9cc4203531cce52
-RMD160 (pyobjc-framework-CoreServices-6.2.tar.gz) = 863ddcdbe90e0d1c2ce9e2484e4b6530073200e3
-SHA512 (pyobjc-framework-CoreServices-6.2.tar.gz) = 1db73af581bf38ca6b3e1984a82adeb71413b5333dcf1472e59987dcbecec58179d4e3cd7c779fe5d853b66ffd0433eb79e231dc0c9c75d2bfb91667c1cda127
-Size (pyobjc-framework-CoreServices-6.2.tar.gz) = 437541 bytes
+SHA1 (pyobjc-framework-CoreServices-6.2.1.tar.gz) = 95ece71e4d8d585784bba178a63fa7ae764304e6
+RMD160 (pyobjc-framework-CoreServices-6.2.1.tar.gz) = 1e6c8f10f7181cd03a0bab0974718780684fa007
+SHA512 (pyobjc-framework-CoreServices-6.2.1.tar.gz) = 386685df2ae4f8da181d71d82fb511fd2fffe459392605b2816720f0e5c1ef0b28a94bd490b45e5ee35bdbc7f7eb6dc3159915ee6b1cefa4a997c778960a192c
+Size (pyobjc-framework-CoreServices-6.2.1.tar.gz) = 437796 bytes

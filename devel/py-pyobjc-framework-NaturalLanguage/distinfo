@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/23 07:03:47 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/07/08 13:12:41 adam Exp $
 
-SHA1 (pyobjc-framework-NaturalLanguage-6.2.tar.gz) = ebd90ef204ba0dc5ba658262f278d2b51a832c5a
-RMD160 (pyobjc-framework-NaturalLanguage-6.2.tar.gz) = 59b7c5360a23f97673f04e61b08c51c75b2dae57
-SHA512 (pyobjc-framework-NaturalLanguage-6.2.tar.gz) = 56436b1abdec7af68eb1a5b7fc3ff8ce3a50264290f4f440f8fe4758af2e2a4d882fd510cd9b82602982d9564bba5b9dec04ca10e6114df3c8444823275c197d
-Size (pyobjc-framework-NaturalLanguage-6.2.tar.gz) = 16255 bytes
+SHA1 (pyobjc-framework-NaturalLanguage-6.2.1.tar.gz) = 7574f4b63489946c3f411761e6b04f4ff89a08a6
+RMD160 (pyobjc-framework-NaturalLanguage-6.2.1.tar.gz) = f6da27e64c98e7d422e9ed13d1261fd67b75e278
+SHA512 (pyobjc-framework-NaturalLanguage-6.2.1.tar.gz) = d01686a3c5b80ce2350060a8fc281fba270fd295c6059b78c2105dba5cf438930b034e286d128d7845ac08d0013ffbfcb5c48c5f6823db695cb5a150ae13c2ea
+Size (pyobjc-framework-NaturalLanguage-6.2.1.tar.gz) = 16405 bytes
