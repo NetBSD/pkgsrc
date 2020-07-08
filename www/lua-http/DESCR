@@ -1,0 +1,9 @@
+A HTTP library for Lua.
+
+## Features
+
+- Optionally asynchronous (including DNS lookups and TLS)
+- Supports HTTP(S) version 1.0, 1.1 and 2
+- Functionality for both client and server
+- Cookie Management
+- Websockets
