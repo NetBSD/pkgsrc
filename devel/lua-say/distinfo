@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/08 15:46:37 nia Exp $
+
+SHA1 (lua-say-1.3.tar.gz) = 88509fecc43d18fffe2947a66ba710d747e5bbf0
+RMD160 (lua-say-1.3.tar.gz) = 9d9e70ac88d0a02000a6773766206d59c459924d
+SHA512 (lua-say-1.3.tar.gz) = 8d4a360bf0731c2a70c23edb9e6e81cab1e7d9b861aa35103a5c6e521633410860d76c46dc2ea62a06ac8ab3b522bc71c11143d6fe7e26e7fa24dd3f5ea1e5f6
+Size (lua-say-1.3.tar.gz) = 3667 bytes
