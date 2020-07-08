@@ -1,0 +1,15 @@
+A comprehensive OpenSSL module for Lua.
+
+It includes support for certificate and key management, key generation,
+signature verification, and deep bindings to the distinguished name,
+alternative name, and X.509v3 extension interfaces.
+
+It also binds OpenSSL's bignum, message digest, HMAC, cipher, and CSPRNG
+interfaces. The end goal is to bind almost everything that OpenSSL supports,
+but no more. It's intended as a low-level interface.
+
+Basic bindings to OpenSSL's SSL* session and SSL_CTX* prototype objects are
+available, but they cannot yet be used standalone to do SSL I/O. cqueues
+supports SSL/TLS sockets internally, accepts an SSL_CTX* object from Lua
+code for session configuration, and exports an SSL* object to Lua for session
+introspection.

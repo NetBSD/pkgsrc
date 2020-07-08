@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/08 12:41:12 nia Exp $
+${LUA_CDIR}/_openssl.so
+${LUA_LDIR}/openssl.lua
+${LUA_LDIR}/openssl/auxlib.lua
+${LUA_LDIR}/openssl/bignum.lua
+${LUA_LDIR}/openssl/cipher.lua
+${LUA_LDIR}/openssl/des.lua
+${LUA_LDIR}/openssl/digest.lua
+${LUA_LDIR}/openssl/hmac.lua
+${LUA_LDIR}/openssl/kdf.lua
+${LUA_LDIR}/openssl/ocsp/basic.lua
+${LUA_LDIR}/openssl/ocsp/response.lua
+${LUA_LDIR}/openssl/pkcs12.lua
+${LUA_LDIR}/openssl/pkey.lua
+${LUA_LDIR}/openssl/pubkey.lua
+${LUA_LDIR}/openssl/rand.lua
+${LUA_LDIR}/openssl/ssl.lua
+${LUA_LDIR}/openssl/ssl/context.lua
+${LUA_LDIR}/openssl/x509.lua
+${LUA_LDIR}/openssl/x509/altname.lua
+${LUA_LDIR}/openssl/x509/chain.lua
+${LUA_LDIR}/openssl/x509/crl.lua
+${LUA_LDIR}/openssl/x509/csr.lua
+${LUA_LDIR}/openssl/x509/extension.lua
+${LUA_LDIR}/openssl/x509/name.lua
+${LUA_LDIR}/openssl/x509/store.lua
+${LUA_LDIR}/openssl/x509/verify_param.lua
