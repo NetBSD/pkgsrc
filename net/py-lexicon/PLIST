@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2020/06/08 12:18:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/07/09 07:26:32 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -84,6 +84,9 @@ ${PYSITELIB}/lexicon/providers/dnspod.pyo
 ${PYSITELIB}/lexicon/providers/dreamhost.py
 ${PYSITELIB}/lexicon/providers/dreamhost.pyc
 ${PYSITELIB}/lexicon/providers/dreamhost.pyo
+${PYSITELIB}/lexicon/providers/dynu.py
+${PYSITELIB}/lexicon/providers/dynu.pyc
+${PYSITELIB}/lexicon/providers/dynu.pyo
 ${PYSITELIB}/lexicon/providers/easydns.py
 ${PYSITELIB}/lexicon/providers/easydns.pyc
 ${PYSITELIB}/lexicon/providers/easydns.pyo
@@ -291,6 +294,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_dnspod.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_dreamhost.py
 ${PYSITELIB}/lexicon/tests/providers/test_dreamhost.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_dreamhost.pyo
+${PYSITELIB}/lexicon/tests/providers/test_dynu.py
+${PYSITELIB}/lexicon/tests/providers/test_dynu.pyc
+${PYSITELIB}/lexicon/tests/providers/test_dynu.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_easydns.py
 ${PYSITELIB}/lexicon/tests/providers/test_easydns.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_easydns.pyo
