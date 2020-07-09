@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2020/06/02 08:24:37 adam Exp $
+# $NetBSD: Makefile,v 1.104 2020/07/09 10:46:24 kim Exp $
 
 DISTNAME=		pkgin-20.5.1
 PKGREVISION=		1
@@ -25,6 +25,7 @@ BUILD_DEFS+=		VARBASE
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-maintainer-mode
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-dbdir=${VARBASE}/db/pkgin
 CONFIGURE_ARGS+=	--with-machine-arch=${MACHINE_ARCH}
 CONFIGURE_ARGS+=	--with-pkg-install=${PKG_TOOLS_BIN}
