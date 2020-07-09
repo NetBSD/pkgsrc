@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/07/08 13:12:44 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/07/09 08:36:42 adam Exp $
 
-SHA1 (pyobjc-framework-libdispatch-6.2.1.tar.gz) = 0fda1c97294a53479fb5ce845dd8298c4cd1846f
-RMD160 (pyobjc-framework-libdispatch-6.2.1.tar.gz) = feeca8db2efb9613faa15fb7b9509dfaa525f8a0
-SHA512 (pyobjc-framework-libdispatch-6.2.1.tar.gz) = aecb937ee1dca5bb76762212455a00eaa62067e1f47bf395c3126f8efab4475a608c2e0aa5dee23b0840f24729d801fc302ed669adc77808a65c4dff9203fce5
-Size (pyobjc-framework-libdispatch-6.2.1.tar.gz) = 26421 bytes
+SHA1 (pyobjc-framework-libdispatch-6.2.2.tar.gz) = ea6bba679863e5c2bb9d17f505416c6842c4564e
+RMD160 (pyobjc-framework-libdispatch-6.2.2.tar.gz) = 8641455fe3bb50dcd9b856cb451f37b8fcb0ede8
+SHA512 (pyobjc-framework-libdispatch-6.2.2.tar.gz) = 9cd9ea87c32a52b58479f3f2f41ca4a8d5395e3dd5cf2cc5af524875589bb188a2659b7d6aa0b557af75f9a5d0af4e9327a9c6c20055d04c2e2e80be4c079805
+Size (pyobjc-framework-libdispatch-6.2.2.tar.gz) = 26481 bytes

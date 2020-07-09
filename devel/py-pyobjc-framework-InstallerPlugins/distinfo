@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/07/08 13:12:39 adam Exp $
+$NetBSD: distinfo,v 1.11 2020/07/09 08:36:38 adam Exp $
 
-SHA1 (pyobjc-framework-InstallerPlugins-6.2.1.tar.gz) = 11749d4c965d1c5a81ea9aa51a71b6959c1cf50b
-RMD160 (pyobjc-framework-InstallerPlugins-6.2.1.tar.gz) = 90bd9e2965152bc1613d6f4312b42c20d8dca2af
-SHA512 (pyobjc-framework-InstallerPlugins-6.2.1.tar.gz) = 4febf290c3c8013f387fa475aaeb0e2dc14e9b7d718b5916eed853e19ebeb661f7e6cf70ff2b64ea7197caec067044c2b57a42aeee52fb301c573941b3865c6b
-Size (pyobjc-framework-InstallerPlugins-6.2.1.tar.gz) = 23381 bytes
+SHA1 (pyobjc-framework-InstallerPlugins-6.2.2.tar.gz) = 4ee0bf03f1370b477a533f6d137dbb1298b418aa
+RMD160 (pyobjc-framework-InstallerPlugins-6.2.2.tar.gz) = c2c2de0fcabc8b33493bd12abea39f46a5b307f3
+SHA512 (pyobjc-framework-InstallerPlugins-6.2.2.tar.gz) = 2e0fa84b22863262750c3364c9a144839c4b41b783e94eec680018dd8e3853b1c5dca184d490abdffa66b75c5e6d74c0e722f5f4503e3f7c903e10e24c973683
+Size (pyobjc-framework-InstallerPlugins-6.2.2.tar.gz) = 23434 bytes

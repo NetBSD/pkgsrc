@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/07/08 13:12:41 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/07/09 08:36:40 adam Exp $
 
-SHA1 (pyobjc-framework-NetFS-6.2.1.tar.gz) = c63a55c8379845ade4604bc506eaed402df41236
-RMD160 (pyobjc-framework-NetFS-6.2.1.tar.gz) = 209b3eb93d961fcbe2350dd1f3ebeb9b4d272996
-SHA512 (pyobjc-framework-NetFS-6.2.1.tar.gz) = 58ded1e991f73a1f985faa9255b0a46a30e5bd7eb0af154c88ec27606b2f96366e0bceff4f54a2b9e1eba56740db359a662cbc2bdceb99af8ccec64d530a3158
-Size (pyobjc-framework-NetFS-6.2.1.tar.gz) = 13058 bytes
+SHA1 (pyobjc-framework-NetFS-6.2.2.tar.gz) = 83603ba9d1f5c4d6868e171c6e13c1a34e85c8c8
+RMD160 (pyobjc-framework-NetFS-6.2.2.tar.gz) = 86e18e66f90f1623e399ae6d65588a605fd7c99e
+SHA512 (pyobjc-framework-NetFS-6.2.2.tar.gz) = 67c425dfec54136d794ab4e6133799a8e28d638f7526bb363fbf00c13075ad1647cd1bbb74129b9c6631dc7960282b85812879848ac5de4eb9a88e8b747f77e1
+Size (pyobjc-framework-NetFS-6.2.2.tar.gz) = 13084 bytes
