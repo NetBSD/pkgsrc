@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/07/08 13:12:36 adam Exp $
+$NetBSD: distinfo,v 1.11 2020/07/09 08:36:35 adam Exp $
 
-SHA1 (pyobjc-framework-Collaboration-6.2.1.tar.gz) = 51d509b8ce606c42eeb6fbb903c033f361ce33ba
-RMD160 (pyobjc-framework-Collaboration-6.2.1.tar.gz) = 7ca2dd4dfa3a0325025d09da8e9151a5873638ea
-SHA512 (pyobjc-framework-Collaboration-6.2.1.tar.gz) = 014a065e8e74ad4d20c5ec024dada5aec936b795694f95f2beb3e465393676f2653db7cf9e376bab9b69d3c3707ff95a081cae5068573a6191e491fb80c01f22
-Size (pyobjc-framework-Collaboration-6.2.1.tar.gz) = 13355 bytes
+SHA1 (pyobjc-framework-Collaboration-6.2.2.tar.gz) = 437877ca538aa27bfbe86769d88f2dc9a304d4e2
+RMD160 (pyobjc-framework-Collaboration-6.2.2.tar.gz) = a8910635665ceb22d25c91ed06230101c13bfa97
+SHA512 (pyobjc-framework-Collaboration-6.2.2.tar.gz) = ae4eddca107e5dc8dd12a53ad0c26656b39a9f1d093da36d5a43e55c7eecef738ad3ec4506173628df1676dac9f367d5c765a43616edc955d00b3f73ab3cfd7f
+Size (pyobjc-framework-Collaboration-6.2.2.tar.gz) = 13425 bytes

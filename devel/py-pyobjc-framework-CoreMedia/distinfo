@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/07/08 13:12:37 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/07/09 08:36:36 adam Exp $
 
-SHA1 (pyobjc-framework-CoreMedia-6.2.1.tar.gz) = db801d29315a14feecd42c9e153441771ed3b54c
-RMD160 (pyobjc-framework-CoreMedia-6.2.1.tar.gz) = 98b0010257db2933d0f55c9d021ac236e3ec60fb
-SHA512 (pyobjc-framework-CoreMedia-6.2.1.tar.gz) = 51f58a98349de9e1a9080aa2ecf82170fba4a653860b6b0d20fc8dad579fe49104be20506c0db849772eae7078cb91e87fbabd5e1f7a32a7746e17a7bf155bc2
-Size (pyobjc-framework-CoreMedia-6.2.1.tar.gz) = 74067 bytes
+SHA1 (pyobjc-framework-CoreMedia-6.2.2.tar.gz) = d79dea161c9daf8f8d731c1c1389994f0e625820
+RMD160 (pyobjc-framework-CoreMedia-6.2.2.tar.gz) = f27ad74b7f243e57fc86c915c07eca16881830b4
+SHA512 (pyobjc-framework-CoreMedia-6.2.2.tar.gz) = 2f8c554cd095bb1376f78b97dfa43a46ab225a887d2ede46da3cd48997192e797e474ada1bbd382eee128f0a5a8d018ad5e983e337ecd522048775e73d40fa1b
+Size (pyobjc-framework-CoreMedia-6.2.2.tar.gz) = 74181 bytes

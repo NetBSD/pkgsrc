@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/07/08 13:12:43 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/07/09 08:36:42 adam Exp $
 
-SHA1 (pyobjc-framework-SpriteKit-6.2.1.tar.gz) = bdd4f96373ff125b6d4e9f5342799f2e38132b9c
-RMD160 (pyobjc-framework-SpriteKit-6.2.1.tar.gz) = 73c772a09a80becea2dc2794888400963a6a9c91
-SHA512 (pyobjc-framework-SpriteKit-6.2.1.tar.gz) = 9cc6cfb1d37021ca915608a98f61dfb616f8c2c01106b0ec0a1ce3327421f2122ca3067595b8d670f5d1b6153a862cd2a4fd2d584e56211a1fa6d6d713e754ee
-Size (pyobjc-framework-SpriteKit-6.2.1.tar.gz) = 33133 bytes
+SHA1 (pyobjc-framework-SpriteKit-6.2.2.tar.gz) = 338e836f49cf2bb4c02353cd1f144b2a25525d35
+RMD160 (pyobjc-framework-SpriteKit-6.2.2.tar.gz) = 2ef53c62b0b60dd8d85ce9ef353673572708798d
+SHA512 (pyobjc-framework-SpriteKit-6.2.2.tar.gz) = df206fb1972da3ea4efb04b3e7918dba89b22df9366f48b699671eb73a8f54b638e09eaa83e31b6c679245de3b086c9888232c6a40df8b38bc3d42417b679467
+Size (pyobjc-framework-SpriteKit-6.2.2.tar.gz) = 33176 bytes

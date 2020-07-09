@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/07/08 13:12:39 adam Exp $
+$NetBSD: distinfo,v 1.11 2020/07/09 08:36:38 adam Exp $
 
-SHA1 (pyobjc-framework-InputMethodKit-6.2.1.tar.gz) = cb60ead7b140428b77371d29d67f67cbbe178f05
-RMD160 (pyobjc-framework-InputMethodKit-6.2.1.tar.gz) = 1a8d3dad0c9dee9acd59cb3af2d8bad0574fe79d
-SHA512 (pyobjc-framework-InputMethodKit-6.2.1.tar.gz) = 737bf131357f6c619de70eca07b8dd94eaf2f713968669c80ed4d2eeff868dc3dc8265473ac43f3d2fca7507ca86195ce16eeda8561646369f0b3fa2f613e42d
-Size (pyobjc-framework-InputMethodKit-6.2.1.tar.gz) = 22007 bytes
+SHA1 (pyobjc-framework-InputMethodKit-6.2.2.tar.gz) = 4ffffc81fbc00f700471aa0bf123fa71360abf2f
+RMD160 (pyobjc-framework-InputMethodKit-6.2.2.tar.gz) = 29c6a7ef0ae7d4411887346d7eac34aac40843e7
+SHA512 (pyobjc-framework-InputMethodKit-6.2.2.tar.gz) = c071893ec8be5cc08633124daa4ccead81e11857da788ce73a4875476610880039f8edab6377fe4f6402c1c658db28bdf58ba090d1caf56f67b369c20590ac44
+Size (pyobjc-framework-InputMethodKit-6.2.2.tar.gz) = 22040 bytes
