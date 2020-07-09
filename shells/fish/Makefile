@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/06/14 22:52:10 js Exp $
+# $NetBSD: Makefile,v 1.25.2.1 2020/07/09 06:47:08 bsiegert Exp $
 
 DISTNAME=		fish-3.1.2
 PKGREVISION=		1
@@ -47,6 +47,9 @@ post-extract:
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
+.if !empty(PKGSRC_COMPILER:M*gcc*)
+.  include "../../devel/libatomic/buildlink3.mk"
+.endif
 .include "../../lang/python/application.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
