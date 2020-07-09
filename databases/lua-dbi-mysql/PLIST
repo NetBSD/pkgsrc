@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/09 16:12:57 nia Exp $
+${LUA_CDIR}/dbd/mysql.so
