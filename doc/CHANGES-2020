@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3970 2020/07/09 13:34:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3971 2020/07/09 14:39:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6307,3 +6307,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-gssapi to 1.6.9 [adam 2020-07-09]
 	Updated textproc/py-jxmlease to 1.0.3 [adam 2020-07-09]
 	Added devel/lua-loadkit version 1.1.0 [nia 2020-07-09]
+	Updated graphics/cairo to 1.16.0nb1 [leot 2020-07-09]
