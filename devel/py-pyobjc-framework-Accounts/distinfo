@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/07/08 13:12:35 adam Exp $
+$NetBSD: distinfo,v 1.11 2020/07/09 08:36:34 adam Exp $
 
-SHA1 (pyobjc-framework-Accounts-6.2.1.tar.gz) = 1d853b99df1a0f09843350c891701cfafde36711
-RMD160 (pyobjc-framework-Accounts-6.2.1.tar.gz) = bc54a969364314b6ce2a9900661d6c55be8275fb
-SHA512 (pyobjc-framework-Accounts-6.2.1.tar.gz) = d208973ea095e9417a09fb9bd1a881298ed3367ba3f510285cf638b83c646d0f5b218d64b5c31f81ee0cf4fb82e967ca4938f224938283ee15489a9db242e266
-Size (pyobjc-framework-Accounts-6.2.1.tar.gz) = 13213 bytes
+SHA1 (pyobjc-framework-Accounts-6.2.2.tar.gz) = ca3857062e413932ccb7c56950b196702fcd96b4
+RMD160 (pyobjc-framework-Accounts-6.2.2.tar.gz) = 4b00103a6febd0a85553e55c9302b2eeba50f20e
+SHA512 (pyobjc-framework-Accounts-6.2.2.tar.gz) = 34a7d9f6ba1029f91995fd57a61ad5c175d39aa19329168b46d9351f4bf188e57bd4ffaccc1bf77e432a23bf692d76d4569d104518c81fa54dfb793153f299db
+Size (pyobjc-framework-Accounts-6.2.2.tar.gz) = 13262 bytes
