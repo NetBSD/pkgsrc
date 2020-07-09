@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/09 10:04:25 nia Exp $
+
+SHA1 (luasdl2-2.0.5.6.0.tar.gz) = 44ba8a90dfb1a20e10badea65bcbc56863eb413b
+RMD160 (luasdl2-2.0.5.6.0.tar.gz) = aa999efd4c4cf524c0d360edac8d79f44873e6e8
+SHA512 (luasdl2-2.0.5.6.0.tar.gz) = 9c10c15f24fc46b4e4c3de9545dd1b680bd740d0e9f76e4aa799534b0d447a690623815b1d6034b1a1e3d81ae6d86f4e922dbac1eae659f343dd54949db60998
+Size (luasdl2-2.0.5.6.0.tar.gz) = 11147375 bytes
