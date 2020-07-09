@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/09 13:15:45 nia Exp $
+share/doc/${PKGNAME}/README
+${LUA_LDIR}/mimetypes.lua

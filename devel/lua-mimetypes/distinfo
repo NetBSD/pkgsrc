@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/09 13:15:45 nia Exp $
+
+SHA1 (lua-mimetypes-1.0.0.tar.gz) = b050f5210a2fd636d985d0e8c40af93e61031985
+RMD160 (lua-mimetypes-1.0.0.tar.gz) = c259aec4ac42d18a4101079907c38ebfd00eacdd
+SHA512 (lua-mimetypes-1.0.0.tar.gz) = 2533e1a4ff0c48efd7eb776b4bd202ef2d31f5b23df5f27e628c7b0236072bef5cd07d05c895e1d5318587ed2ecf63c6e1aaea9e6959854306fc88b0082725f6
+Size (lua-mimetypes-1.0.0.tar.gz) = 4992 bytes
