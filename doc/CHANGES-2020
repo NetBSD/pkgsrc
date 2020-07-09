@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3966 2020/07/09 10:56:54 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3967 2020/07/09 11:14:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6302,3 +6302,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-sdl2 version 2.0.5.6.0 [nia 2020-07-09]
 	Added geography/lua-mmdb version 0.2 [nia 2020-07-09]
 	Updated www/webkit-gtk to 2.28.3 [leot 2020-07-09]
+	Added textproc/lua-inifile version 1.0 [nia 2020-07-09]
