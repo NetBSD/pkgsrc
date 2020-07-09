@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2020/07/09 13:34:02 nia Exp $
-share/doc/${PKGNAME}/README.md
+@comment $NetBSD: PLIST,v 1.2 2020/07/09 15:03:35 nia Exp $
+${LUA_DOCDIR}/README.md
 ${LUA_LDIR}/loadkit.lua
