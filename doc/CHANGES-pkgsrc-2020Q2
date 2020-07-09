@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.2 2020/07/03 10:32:21 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.3 2020/07/09 08:30:09 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -7,4 +7,25 @@ x11/qt5-qscintilla, x11/py-qt5-qscintilla: build fix
 
 Pullup ticket #6258 - requested by sevan
 bootstrap: FreeBSD documentation update
+
+Pullup ticket #6260 - requested by wiz
+security/tor-browser: security fix
+
+Pullup ticket #6261 - requested by wiz
+security/tor-browser-noscript: security fix
+
+Pullup ticket #6262 - requested by he
+lang/llvm: powerpc build fix
+
+Pullup ticket #6263 - requested by maya
+mk: NetBSD 7 build fix
+
+Pullup ticket #6265 - requested by nia
+shells/fish: build fix
+
+Pullup ticket #6266 - requested by nia
+www/firefox68: security fix
+
+Pullup ticket #6267 - requested by nia
+www/firefox68-l10n: dependent update
 
