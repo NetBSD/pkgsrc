@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.609 2020/07/09 15:27:56 nia Exp $
+# $NetBSD: Makefile,v 1.610 2020/07/09 16:12:57 nia Exp $
 
 COMMENT=	Databases
 
@@ -87,6 +87,10 @@ SUBDIR+=	libtcd
 SUBDIR+=	libzdb
 SUBDIR+=	liquibase
 SUBDIR+=	lmdb
+SUBDIR+=	lua-dbi
+SUBDIR+=	lua-dbi-mysql
+SUBDIR+=	lua-dbi-postgresql
+SUBDIR+=	lua-dbi-sqlite3
 SUBDIR+=	lua-lsqlite3
 SUBDIR+=	lua-sql-mysql
 SUBDIR+=	lua-sql-postgres
