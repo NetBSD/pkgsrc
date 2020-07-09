@@ -1,0 +1,4 @@
+Loadkit allows you to load arbitrary files within the Lua package path.
+
+A project like MoonScript uses a technique like this to let you load compiled
+MoonScript as you would load Lua making the integration seamless.
