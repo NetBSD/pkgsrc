@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/07/09 13:15:45 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/09 15:03:35 nia Exp $
 
 DISTNAME=	lua-mimetypes-1.0.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua-//1}
+PKGREVISION=	1
 CATEGORIES=	devel lua
 MASTER_SITES=	-https://bitbucket.org/leafstorm/lua-mimetypes/get/v${PKGVERSION_NOREV}.tar.gz
 
@@ -15,11 +16,11 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
 INSTALLATION_DIRS+=	${LUA_LDIR}
-INSTALLATION_DIRS+=	share/doc/${PKGNAME_NOREV}
+INSTALLATION_DIRS+=	${LUA_DOCDIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
-		${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
+		${DESTDIR}${PREFIX}/${LUA_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/mimetypes.lua \
 		${DESTDIR}${PREFIX}/${LUA_LDIR}/mimetypes.lua
 
