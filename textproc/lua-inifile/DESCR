@@ -1,0 +1,9 @@
+Inifile is a lua library for parsing and writing ini files.
+
+It supports multiple backends, these are:
+
+- io: The lua i/o library backend, the default.
+- memory: The memory backend uses the filename as input, and returns
+  the output on write.
+- love: Uses LOVE's love.filesystem, this is the default when LOVE
+  is detected.
