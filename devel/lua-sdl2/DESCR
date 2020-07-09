@@ -1,0 +1,8 @@
+Lua-SDL2 is a portable binding of SDL2, written in pure C for efficiency.
+It tries to stay as close to SDL as possible, acting as a simple binding
+rather than attempting to re-design the interaction between the programmer
+and SDL.
+
+Lua-SDL2 takes full advantage of Lua's object-oriented capabilities wherever
+possible, allowing the programmer to fully leverage SDL's inherent
+object-oriented design.
