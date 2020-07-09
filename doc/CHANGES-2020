@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3974 2020/07/09 16:14:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3975 2020/07/09 16:14:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6311,3 +6311,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added databases/lua-lsqlite3 version 0.9.5 [nia 2020-07-09]
 	Added databases/lua-dbi version 0.7.2 [nia 2020-07-09]
 	Added databases/lua-dbi-mysql version 0.7.2 [nia 2020-07-09]
+	Added databases/lua-dbi-postgresql version 0.7.2 [nia 2020-07-09]
