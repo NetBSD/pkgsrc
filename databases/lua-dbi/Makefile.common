@@ -1,0 +1,21 @@
+# $NetBSD: Makefile.common,v 1.1 2020/07/09 16:12:57 nia Exp $
+# used by databases/lua-dbi/Makefile
+# used by databases/lua-dbi-mysql/Makefile
+# used by databases/lua-dbi-postgresql/Makefile
+# used by databases/lua-dbi-sqlite3/Makefile
+
+DISTNAME=	luadbi-0.7.2
+CATEGORIES=	databases lua
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mwild1/}
+GITHUB_PROJECT=	luadbi
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+HOMEPAGE=	https://zadzmo.org/code/luadbi/
+LICENSE=	mit
+
+USE_TOOLS+=	gmake
+
+DISTINFO_FILE=	${.CURDIR}/../../databases/lua-dbi/distinfo
+PATCHDIR=	${.CURDIR}/../../databases/lua-dbi/patches
+
+.include "../../lang/lua/module.mk"
