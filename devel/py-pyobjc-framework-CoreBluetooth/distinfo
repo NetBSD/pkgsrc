@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/07/08 13:12:37 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/07/09 08:36:35 adam Exp $
 
-SHA1 (pyobjc-framework-CoreBluetooth-6.2.1.tar.gz) = 8af0e726d4b17a1319e095aadcc438e353d631f7
-RMD160 (pyobjc-framework-CoreBluetooth-6.2.1.tar.gz) = b8f7e03485dff854fd7e0154250ad761bcd3d461
-SHA512 (pyobjc-framework-CoreBluetooth-6.2.1.tar.gz) = 4050f2ace008c27f94ef5ef0840a931287bb7c753a9706696a172d576f2529162d47be9ed75b96fc55f4dbc5e9de6cbb844a87adf88f5d3e47a1fc17feb8c559
-Size (pyobjc-framework-CoreBluetooth-6.2.1.tar.gz) = 32421 bytes
+SHA1 (pyobjc-framework-CoreBluetooth-6.2.2.tar.gz) = d2fcfd759ffd85e77970b203dca849a292af62d6
+RMD160 (pyobjc-framework-CoreBluetooth-6.2.2.tar.gz) = a64598bdcf0bbca00fe59c42d34c89738c3ad5d8
+SHA512 (pyobjc-framework-CoreBluetooth-6.2.2.tar.gz) = 7ea84d6587e6a90454417f1bc3d58d7b6585eeef6527fb516c8da2052364fed1deeb5db47ee47e6add8fdfd526bf0f703de2d68cb4bc909e43d7154cb6d2d64c
+Size (pyobjc-framework-CoreBluetooth-6.2.2.tar.gz) = 32482 bytes
