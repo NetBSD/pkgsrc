@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/09 21:30:17 nia Exp $
+${LUA_CDIR}/yaml.so
+${LUA_DOCDIR}/README.md
+${LUA_LDIR}/lyaml/explicit.lua
+${LUA_LDIR}/lyaml/functional.lua
+${LUA_LDIR}/lyaml/implicit.lua
+${LUA_LDIR}/lyaml/init.lua
