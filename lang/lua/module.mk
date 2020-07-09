@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.7 2015/03/05 14:15:45 ryoon Exp $
+# $NetBSD: module.mk,v 1.8 2020/07/09 15:01:53 nia Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install Lua modules.
@@ -49,6 +49,9 @@ PRINT_PLIST_AWK+=	/^${LUA_CDIR:S|/|\\/|g}/ \
 
 LUA_DOCDIR=	share/doc/${PKGBASE}
 PLIST_SUBST+=	LUA_DOCDIR=${LUA_DOCDIR}
+
+PRINT_PLIST_AWK+=	/^${LUA_DOCDIR:S|/|\\/|g}/ \
+			{ gsub(/${LUA_DOCDIR:S|/|\\/|g}/, "$${LUA_DOCDIR}") }
 
 LUA_EXAMPLESDIR=	share/examples/${PKGBASE}
 PLIST_SUBST+=		LUA_EXAMPLESDIR=${LUA_EXAMPLESDIR}
