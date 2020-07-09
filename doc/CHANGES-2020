@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3972 2020/07/09 15:28:17 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3973 2020/07/09 16:13:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6309,3 +6309,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-loadkit version 1.1.0 [nia 2020-07-09]
 	Updated graphics/cairo to 1.16.0nb1 [leot 2020-07-09]
 	Added databases/lua-lsqlite3 version 0.9.5 [nia 2020-07-09]
+	Added databases/lua-dbi version 0.7.2 [nia 2020-07-09]
