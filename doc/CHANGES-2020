@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3977 2020/07/09 18:08:55 leot Exp $
+$NetBSD: CHANGES-2020,v 1.3978 2020/07/09 19:38:13 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6314,3 +6314,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added databases/lua-dbi-postgresql version 0.7.2 [nia 2020-07-09]
 	Added databases/lua-dbi-sqlite3 version 0.7.2 [nia 2020-07-09]
 	Updated net/tor to 0.4.3.6 [leot 2020-07-09]
+	Updated textproc/lowdown to 0.7.1 [fcambus 2020-07-09]
