@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/09 10:48:58 nia Exp $
+
+SHA1 (mmdblua-0.2.tar.gz) = a6ac7f68a3ae9ff31ae5b4613bf702fbfa0481e4
+RMD160 (mmdblua-0.2.tar.gz) = 68e9f7b91272275bdd54d22350f0e06c7d53209d
+SHA512 (mmdblua-0.2.tar.gz) = f45dbff51fbf04f11d4cc7592aae4cc72c38a421476cb2c37829fd2c59953148f012ad977251b8c5f9a358d7dc7acbf2abd3bf9f11b0d018d1297831a0bd80e1
+Size (mmdblua-0.2.tar.gz) = 6430 bytes
