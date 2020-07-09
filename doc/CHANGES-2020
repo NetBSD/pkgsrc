@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3961 2020/07/08 19:06:33 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.3962 2020/07/09 07:27:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6289,3 +6289,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-busted version 2.0.0 [nia 2020-07-08]
 	Added textproc/lua-rapidjson version 0.6.1 [nia 2020-07-08]
 	Updated textproc/asciidoc to 9.0.1 [bsiegert 2020-07-08]
+	Updated devel/py-cython to 0.29.21 [adam 2020-07-09]
+	Updated net/grpc to 1.30.1 [adam 2020-07-09]
+	Updated net/py-grpcio to 1.30.0 [adam 2020-07-09]
+	Updated net/py-grpcio-testing to 1.30.0 [adam 2020-07-09]
+	Updated net/py-grpcio-tools to 1.30.0 [adam 2020-07-09]
+	Updated net/py-lexicon to 3.3.27 [adam 2020-07-09]
