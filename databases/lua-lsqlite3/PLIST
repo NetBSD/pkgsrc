@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/09 15:27:56 nia Exp $
+${LUA_CDIR}/lsqlite3.so
+${LUA_DOCDIR}/examples/aggregate.lua
+${LUA_DOCDIR}/examples/function.lua
+${LUA_DOCDIR}/examples/hooks_advanced.lua
+${LUA_DOCDIR}/examples/order.lua
+${LUA_DOCDIR}/examples/simple.lua
+${LUA_DOCDIR}/examples/smart.lua
+${LUA_DOCDIR}/examples/statement.lua
+${LUA_DOCDIR}/examples/tracing.lua
+${LUA_DOCDIR}/examples/update_hook.lua
+${LUA_LDIR}/lsqlite3complete.lua
