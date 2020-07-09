@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3963 2020/07/09 08:47:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3964 2020/07/09 10:04:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6299,3 +6299,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-diff-match-patch to 20181111 [adam 2020-07-09]
 	Updated www/py-django-import-export to 2.2.0 [adam 2020-07-09]
 	Updated www/py-django-cors-headers to 3.4.0 [adam 2020-07-09]
+	Added devel/lua-sdl2 version 2.0.5.6.0 [nia 2020-07-09]
