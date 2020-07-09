@@ -1,0 +1,4 @@
+This is a simple library for guessing a file's MIME type. It includes
+a (hopefully) comprehensive database of MIME types, but it allows
+you to create your own should you have specific requirements. It
+can guess types both by extension and by the complete filename.
