@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2019/11/11 19:22:28 nia Exp $
+# $NetBSD: options.mk,v 1.6.6.1 2020/07/09 06:39:00 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
@@ -26,6 +26,9 @@ PKG_SUGGESTED_OPTIONS+=		terminfo
 PKG_SUGGESTED_OPTIONS+=		llvm-target-sparc
 .elif !empty(MACHINE_ARCH:Mpowerpc*)
 PKG_SUGGESTED_OPTIONS+=		llvm-target-powerpc
+# Needed to avoid "relocation truncated to fit: R_PPC_REL24"
+CFLAGS+=	-mlongcall
+CXXFLAGS+=	-mlongcall
 .elif !empty(MACHINE_ARCH:Mearm*)
 PKG_SUGGESTED_OPTIONS+=		llvm-target-arm
 .elif !empty(MACHINE_ARCH:M*mips*)
