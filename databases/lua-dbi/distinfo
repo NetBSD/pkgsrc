@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/07/09 16:12:57 nia Exp $
+
+SHA1 (luadbi-0.7.2.tar.gz) = da56d2bcfdaed0fd3f309799dcfde74b77008476
+RMD160 (luadbi-0.7.2.tar.gz) = 310c6415c81608f6e81187f61d04ef94546833b5
+SHA512 (luadbi-0.7.2.tar.gz) = 891f99cbc8f1b5327ef820641a1608abf41410f2f28584b975cc3cf65154b9bebf6f1b9ca7d1818b9c965738ad700dd17ae042dfd2a7146cf755871ebae535b9
+Size (luadbi-0.7.2.tar.gz) = 36462 bytes
+SHA1 (patch-Makefile) = 013db4eb44d27c161ff37956fca39386f9fcb2cb
