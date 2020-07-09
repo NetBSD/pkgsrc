@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3969 2020/07/09 13:25:12 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3970 2020/07/09 13:34:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6306,3 +6306,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-mimetypes version 1.0.0 [nia 2020-07-09]
 	Updated security/py-gssapi to 1.6.9 [adam 2020-07-09]
 	Updated textproc/py-jxmlease to 1.0.3 [adam 2020-07-09]
+	Added devel/lua-loadkit version 1.1.0 [nia 2020-07-09]
