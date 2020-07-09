@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3978 2020/07/09 19:38:13 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.3979 2020/07/09 21:30:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6315,3 +6315,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added databases/lua-dbi-sqlite3 version 0.7.2 [nia 2020-07-09]
 	Updated net/tor to 0.4.3.6 [leot 2020-07-09]
 	Updated textproc/lowdown to 0.7.1 [fcambus 2020-07-09]
+	Added textproc/lua-lyaml version 6.2.5 [nia 2020-07-09]
