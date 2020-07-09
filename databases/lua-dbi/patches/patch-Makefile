@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile,v 1.1 2020/07/09 16:12:57 nia Exp $
+
+- Don't peek into /usr.
+- Don't pass -g/-O2 unconditionally
+
+--- Makefile.orig	2019-01-14 09:39:17.000000000 +0000
++++ Makefile
+@@ -6,15 +6,8 @@ MKDIR		?= mkdir -p
+ INSTALL		?= install
+ INSTALL_PROGRAM	?= $(INSTALL)
+ INSTALL_DATA	?= $(INSTALL) -m 644
+-LUA_V		?= 5.1
+-LUA_LDIR	?= /usr/share/lua/$(LUA_V)
+-LUA_CDIR	?= /usr/lib/lua/$(LUA_V)
+-
+-COMMON_CFLAGS	 ?= -g -pedantic -Wall -O2 -shared -fPIC -DPIC -std=c99
+-LUA_INC		?= -I/usr/include/lua$(LUA_V)
+-MYSQL_INC	?= -I/usr/include/mysql
+-PSQL_INC	?= -I/usr/include/postgresql
+-SQLITE3_INC	?= -I/usr/include
++
++COMMON_CFLAGS	 ?= -pedantic -Wall -shared -fPIC -DPIC -std=c99
+ DB2_INC		?= -I/opt/ibm/db2exc/V9.5/include
+ ORACLE_INC	?= -I/usr/lib/oracle/xe/app/oracle/product/10.2.0/client/rdbms/public
+ CF		 = $(LUA_INC) $(COMMON_CFLAGS) $(CFLAGS) -I.
