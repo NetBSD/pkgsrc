@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2020/03/21 18:59:56 adam Exp $
+# $NetBSD: Makefile,v 1.80 2020/07/09 10:48:58 nia Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -29,6 +29,7 @@ SUBDIR+=	libmaxminddb
 SUBDIR+=	libmemphis02
 SUBDIR+=	libnova
 SUBDIR+=	libspatialite
+SUBDIR+=	lua-mmdb
 SUBDIR+=	mapcode
 SUBDIR+=	mapserver
 SUBDIR+=	merkaartor
