@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.135 2020/04/24 11:06:46 leot Exp $
+$NetBSD: distinfo,v 1.136 2020/07/09 10:56:39 leot Exp $
 
-SHA1 (webkitgtk-2.28.2.tar.xz) = 0aba97beba7b2677ed2d28aac51e429cb26c3fe6
-RMD160 (webkitgtk-2.28.2.tar.xz) = a626f58cf30b6dd1ef8a63c165ce85770c4da675
-SHA512 (webkitgtk-2.28.2.tar.xz) = c7c0c55b1ebc61c0ec9cd9af96a12058a96ba9b011330b12c7c2776685736e0edf604f5eee639637cb50b2967d77c2db4dea15050a575fd34a1f6f0a8b8c56f8
-Size (webkitgtk-2.28.2.tar.xz) = 21427772 bytes
+SHA1 (webkitgtk-2.28.3.tar.xz) = af1d845d373e67fd666105e798a44e2cadaef83c
+RMD160 (webkitgtk-2.28.3.tar.xz) = 2145913664c08decc1919437db97d2c79f21f153
+SHA512 (webkitgtk-2.28.3.tar.xz) = 575184edb8279f1dca67cbeeb45280ca5da9aa388e208251d9ad7a56907950cfd85b1fc426eee90699593c428f4e1037c96cb6aa16f534c71734c64950f2d643
+Size (webkitgtk-2.28.3.tar.xz) = 21425556 bytes
 SHA1 (patch-CMakeLists.txt) = 08f647f6928bf3fce0dabb02586e1447d16da297
 SHA1 (patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh) = f4f117e6c1cd8eb8e4905f74946e0367156ed528
 SHA1 (patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh) = 308a7c8f687253b4fc75de0c66016dd18666e697
