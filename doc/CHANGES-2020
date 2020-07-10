@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3984 2020/07/10 10:11:28 plunky Exp $
+$NetBSD: CHANGES-2020,v 1.3985 2020/07/10 10:25:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6324,3 +6324,20 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-awscli to 1.18.97 [adam 2020-07-10]
 	Updated security/lua-ossl to 20200709 [nia 2020-07-10]
 	Updated www/php-phalcon to 3.4.5 [plunky 2020-07-10]
+	Updated devel/py-test-xdist to 1.33.0 [adam 2020-07-10]
+	Updated security/py-acme to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-apache to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-digitalocean to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-dnsimple to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-gehirn to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-google to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-linode to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-luadns to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-nsone to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-ovh to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-rfc2136 to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-route53 to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-dns-sakuracloud to 1.6.0 [adam 2020-07-10]
+	Updated security/py-certbot-nginx to 1.6.0 [adam 2020-07-10]
