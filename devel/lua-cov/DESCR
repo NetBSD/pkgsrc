@@ -1,0 +1,6 @@
+LuaCov is a simple coverage analyzer for Lua scripts. When a Lua script is
+run with the luacov module loaded, it generates a stats file with the number
+of executions of each line of the script and its loaded modules. The luacov
+command-line script then processes this file generating a report file which
+allows one to visualize which code paths were not traversed, which is useful
+for verifying the effectiveness of a test suite.
