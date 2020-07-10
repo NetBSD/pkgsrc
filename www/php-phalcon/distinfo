@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/05/29 09:13:35 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2020/07/10 10:11:02 plunky Exp $
 
-SHA1 (php-phalcon/phalcon-3.4.0.tar.gz) = 583313348be458daf84f258dfdf5fc6423ad98eb
-RMD160 (php-phalcon/phalcon-3.4.0.tar.gz) = 40cc680af910486bb1714ba66ffa779c436da3ec
-SHA512 (php-phalcon/phalcon-3.4.0.tar.gz) = 37a0db09a97f26d26bfaf49a9e9f949101e4e1c3edbbda0923f205be46ac53be5dedb63b5a19e7dd29284f9858e495c5dc4c19f3417c548dd384b2dfd7def9e7
-Size (php-phalcon/phalcon-3.4.0.tar.gz) = 6700442 bytes
+SHA1 (php-phalcon/phalcon-3.4.5.tar.gz) = 6ab8623a12b7a4c3b012ed8842c889a826f21a77
+RMD160 (php-phalcon/phalcon-3.4.5.tar.gz) = 8dc7fb1c7eea9218d280804ddb79e09e1b4f3023
+SHA512 (php-phalcon/phalcon-3.4.5.tar.gz) = b91cd00e2d82ccf87d56cd35f9281c24feaa8dafb02e3c591f31c56ceb3d7d057358a9b4f9f8160119151f4594a62588660dc3cdecf6ba5c7e9b3db878190890
+Size (php-phalcon/phalcon-3.4.5.tar.gz) = 6707873 bytes
