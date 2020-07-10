@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3985 2020/07/10 10:25:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3986 2020/07/10 10:27:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6341,3 +6341,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-dns-route53 to 1.6.0 [adam 2020-07-10]
 	Updated security/py-certbot-dns-sakuracloud to 1.6.0 [adam 2020-07-10]
 	Updated security/py-certbot-nginx to 1.6.0 [adam 2020-07-10]
+	Added devel/lua-cov version 0.14.0 [nia 2020-07-10]
