@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3169 2020/07/10 10:26:59 nia Exp $
+# $NetBSD: Makefile,v 1.3170 2020/07/10 11:18:01 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -875,8 +875,10 @@ SUBDIR+=	lua-luv
 SUBDIR+=	lua-mediator
 SUBDIR+=	lua-mimetypes
 SUBDIR+=	lua-mode
+SUBDIR+=	lua-moses
 SUBDIR+=	lua-penlight
 SUBDIR+=	lua-posix
+SUBDIR+=	lua-rings
 SUBDIR+=	lua-rocks
 SUBDIR+=	lua-say
 SUBDIR+=	lua-sdl2

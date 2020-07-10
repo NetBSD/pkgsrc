@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/07/10 11:18:01 nia Exp $
+
+SHA1 (rings-1.3.0.tar.gz) = e16029ddad5c2ffeca0416f01b88750d61fd13ba
+RMD160 (rings-1.3.0.tar.gz) = b63307cfa5727d0321dbe8de64a3023e66c6452b
+SHA512 (rings-1.3.0.tar.gz) = 04542ae08a3ad70120473ae383301100ded75f39aa1147cd2c99b2a5d82c90cae452d90333a9788e725a2b7a11018320cf39611620175cd9706b922ff4ad6dc1
+Size (rings-1.3.0.tar.gz) = 23322 bytes
+SHA1 (patch-Makefile) = caa2d2fadf9ca61a70ac691b68669d48850e08d1
+SHA1 (patch-config) = 7cb2b87773c72de2a566c8d34ff52ac75e89d93a

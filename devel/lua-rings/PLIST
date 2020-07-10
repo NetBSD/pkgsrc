@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/10 11:18:01 nia Exp $
+${LUA_CDIR}/rings.so
+${LUA_DOCDIR}/index.html
+${LUA_DOCDIR}/license.html
+${LUA_DOCDIR}/manual.html
+${LUA_DOCDIR}/rings.png
+${LUA_LDIR}/stable.lua
