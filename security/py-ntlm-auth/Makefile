@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/08/27 10:11:26 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/10 19:43:31 adam Exp $
 
-DISTNAME=	ntlm-auth-1.4.0
+DISTNAME=	ntlm-auth-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/ntlm-auth/}
