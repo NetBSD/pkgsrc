@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/10 20:02:23 rhialto Exp $
+${PYSITELIB}/PyQt4/sip.pyi
+${PYSITELIB}/PyQt4/sip.so
+${PYSITELIB}/PyQt4_sip-${PKGVERSION}.dist-info/INSTALLER
+${PYSITELIB}/PyQt4_sip-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/PyQt4_sip-${PKGVERSION}.dist-info/RECORD

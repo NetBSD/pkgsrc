@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2020/06/11 14:49:15 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/07/10 20:02:23 rhialto Exp $
 #
 # used by x11/py-sip/Makefile
+# used by x11/py-sip-qt4/Makefile
 # used by x11/py-sip-qt5/Makefile
 
 DISTNAME=	sip-4.19.23

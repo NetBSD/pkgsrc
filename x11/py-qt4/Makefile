@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2020/03/08 16:51:47 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2020/07/10 20:02:23 rhialto Exp $
 
 DISTNAME=	PyQt4_gpl_${PYQT_SYS}-4.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt4_gpl_${PYQT_SYS}/qt4/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt4
 HOMEPAGE=	https://riverbankcomputing.com/software/pyqt/intro
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	${PYPKGPREFIX}-sip-qt4>=4.19.23:../../x11/py-sip-qt4
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
