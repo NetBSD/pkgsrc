@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/15 15:11:50 scole Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/10 16:05:55 scole Exp $
 bin/reflex
 include/reflex/abslexer.h
 include/reflex/absmatcher.h
@@ -781,6 +781,8 @@ ${PLIST.examples}share/RE-flex/examples/indent2.l
 ${PLIST.examples}share/RE-flex/examples/jdefs.l
 ${PLIST.examples}share/RE-flex/examples/json.l
 ${PLIST.examples}share/RE-flex/examples/jtokens.l
+${PLIST.examples}share/RE-flex/examples/minic.l
+${PLIST.examples}share/RE-flex/examples/minic.y
 ${PLIST.examples}share/RE-flex/examples/mmap.l
 ${PLIST.examples}share/RE-flex/examples/pdefs.l
 ${PLIST.examples}share/RE-flex/examples/ptokens.l

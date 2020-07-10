@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/06/16 17:16:03 scole Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/10 16:05:55 scole Exp $
 
 GITHUB_PROJECT=	RE-flex
-GITHUB_TAG=	v2.0.1
-DISTNAME=	v2.0.1
+GITHUB_TAG=	v2.1.2
+DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
-PKGREVISION=	1
+
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Genivia/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -19,7 +19,6 @@ LICENSE=	modified-bsd
 
 INSTALLATION_DIRS+=	bin lib share/RE-flex include/reflex ${PKGMANDIR}/man1
 
-WRKSRC=		${WRKDIR}/RE-flex-2.0.1
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
