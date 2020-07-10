@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3995 2020/07/10 20:02:54 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.3996 2020/07/10 20:42:10 kre Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6357,3 +6357,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-typing to 3.7.4.2 [adam 2020-07-10]
 	Updated devel/py-lazr.config to 2.2.2 [adam 2020-07-10]
 	Added x11/py-sip-qt4 version 4.19.23 [rhialto 2020-07-10]
+	Updated shells/bash to 5.0.18 [kre 2020-07-10]
