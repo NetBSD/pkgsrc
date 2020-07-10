@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3979 2020/07/09 21:30:44 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3980 2020/07/10 00:01:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6316,3 +6316,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/tor to 0.4.3.6 [leot 2020-07-09]
 	Updated textproc/lowdown to 0.7.1 [fcambus 2020-07-09]
 	Added textproc/lua-lyaml version 6.2.5 [nia 2020-07-09]
+	Updated math/bc-gh to 3.1.2 [gdt 2020-07-10]
