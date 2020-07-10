@@ -1,22 +1,29 @@
-# $NetBSD: Makefile,v 1.2 2019/04/25 07:33:25 maya Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/10 07:05:21 adam Exp $
 
-DISTNAME=	translate-toolkit-2.2.5
-PKGREVISION=	1
-CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
-GITHUB_PROJECT=	translate
-GITHUB_RELEASE=	2.2.5
+DISTNAME=	translate-toolkit-3.0.0
+CATEGORIES=	textproc python
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/translate-toolkit/}
 
 MAINTAINER=	rillig@NetBSD.org
-HOMEPAGE=	https://github.com/translate/translate/
+HOMEPAGE=	https://github.com/translate/translate
 COMMENT=	Tools for working with translation files
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-diff-match-patch-20121119{,nb*}:../../textproc/py-diff-match-patch
+DEPENDS+=	${PYPKGPREFIX}-lxml>=4.3.2:../../textproc/py-lxml
+
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run
-REPLACE_BASH=	* */* */*/*
+
+REPLACE_BASH+=	tools/mozilla/build_firefox.sh
+REPLACE_BASH+=	tools/junitmsgfmt
+REPLACE_BASH+=	tools/posplit
+REPLACE_BASH+=	tools/pomigrate2
+REPLACE_BASH+=	tools/pocompendium
+REPLACE_BASH+=	tools/pocommentclean
+REPLACE_BASH+=	tools/poreencode
+REPLACE_BASH+=	tools/popuretext
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

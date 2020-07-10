@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/11 15:42:31 rillig Exp $
+$NetBSD: distinfo,v 1.2 2020/07/10 07:05:21 adam Exp $
 
-SHA1 (translate-toolkit-2.2.5.tar.gz) = 480b038645b940c5dc699c1b62cb127886dd489e
-RMD160 (translate-toolkit-2.2.5.tar.gz) = 149e0c96ae91a0d87045552411517f890f2e70e4
-SHA512 (translate-toolkit-2.2.5.tar.gz) = deee3a149fc5850051b76be83364564f35cb51c8b98e73b755831d0600b42a39dd95b11a2534e7022a61e1e77f805e056ec3f9d8724de41db0d7f65db98cd00b
-Size (translate-toolkit-2.2.5.tar.gz) = 6186061 bytes
+SHA1 (translate-toolkit-3.0.0.tar.gz) = bbf1bbec93c6b7e62c2ee389cdbda794c33816c4
+RMD160 (translate-toolkit-3.0.0.tar.gz) = 69577a9b028c83ea87786e530fb7f3ed6651ff82
+SHA512 (translate-toolkit-3.0.0.tar.gz) = 81590d0d2ca960902c06f24f6ad1d16cd09655e2e19de46f0b30ea43858d0bf379287f46b1f895eefa9a4d6e3d2673a2a713bd0f3684712668b76d339c49afe1
+Size (translate-toolkit-3.0.0.tar.gz) = 6109446 bytes
