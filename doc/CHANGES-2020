@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3992 2020/07/10 16:08:58 scole Exp $
+$NetBSD: CHANGES-2020,v 1.3993 2020/07/10 19:37:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6350,3 +6350,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-aiosqlite to 0.14.0 [adam 2020-07-10]
 	Updated www/py-aiohttp-socks to 0.4.1 [adam 2020-07-10]
 	Updated devel/RE-flex to 2.1.2 [scole 2020-07-10]
+	Updated emulators/hatari to 2.2.1 [adam 2020-07-10]
+	Updated devel/blosc to 1.19.0 [adam 2020-07-10]
