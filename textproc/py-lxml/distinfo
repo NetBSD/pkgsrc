@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.54 2020/05/23 07:48:00 adam Exp $
+$NetBSD: distinfo,v 1.55 2020/07/10 07:03:57 adam Exp $
 
-SHA1 (lxml-4.5.1.tar.gz) = 59f73262538ce53393bc560e646722ebbef8df48
-RMD160 (lxml-4.5.1.tar.gz) = 5308b3c8810141c338481eb054802f46c283896a
-SHA512 (lxml-4.5.1.tar.gz) = 5332d2b691b3d0def42b907a013fa814054dcd150ab6d7adf34891b70667b3e907f80c956a58671d7a31c63caa6110b2e007d2ed82b5fc706e6ad7b428742883
-Size (lxml-4.5.1.tar.gz) = 4545809 bytes
+SHA1 (lxml-4.5.2.tar.gz) = 2e4fc1bd8a60ae4876e2f6e4c9f0daa244abf8bc
+RMD160 (lxml-4.5.2.tar.gz) = dc3e49d91fa4a5fbd5836731b4fa87766e316adf
+SHA512 (lxml-4.5.2.tar.gz) = 58d287fc9533605117ffb391edbfe94a2abd0db9be11eb54c9f78ff348c8567d10874cc047e7ae099ef5ce4403ef3d5e5bd5e64aad158ce3c621f106e4c1df63
+Size (lxml-4.5.2.tar.gz) = 4547051 bytes
 SHA1 (patch-setupinfo.py) = 264e934a4e5c095b0a65769798bf94db394d03e1
