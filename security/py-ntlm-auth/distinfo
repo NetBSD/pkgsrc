@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/08/27 10:11:26 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/07/10 19:43:31 adam Exp $
 
-SHA1 (ntlm-auth-1.4.0.tar.gz) = 6e2d58d84597463c2adb5a8c578991cca7e6a65c
-RMD160 (ntlm-auth-1.4.0.tar.gz) = 9b485e8cdb23bfe0fcb4a35c4b7d19461ada2461
-SHA512 (ntlm-auth-1.4.0.tar.gz) = 99c3c03cc4306b8e1ecc498d9368f383e38d1f2715a9bf6354bbfdfe49101a0978ca0464454d72f77fce8fa0a85e184aa33bad4ed5ddda15aff9ed56e0605f80
-Size (ntlm-auth-1.4.0.tar.gz) = 28340 bytes
+SHA1 (ntlm-auth-1.5.0.tar.gz) = 6c2e3a7958fc34da9a296b872df9600e24310c9b
+RMD160 (ntlm-auth-1.5.0.tar.gz) = 898989eefc29be237d1fc5dda4bbd3f4f574f355
+SHA512 (ntlm-auth-1.5.0.tar.gz) = be420f30187d159a607ebcb9340e361e86ff5eaaa71b7399df0235aea839875ff24a1d471a6d668654f9e126ce526e22209b1b7fbe7170b0821f604272202780
+Size (ntlm-auth-1.5.0.tar.gz) = 28872 bytes
