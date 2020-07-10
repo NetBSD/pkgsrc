@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/10 10:26:59 nia Exp $
+bin/luacov${LUADOTVER}
+${LUA_DOCDIR}/doc.css
+${LUA_DOCDIR}/doc/index.html
+${LUA_DOCDIR}/doc/ldoc.css
+${LUA_DOCDIR}/doc/modules/luacov.defaults.html
+${LUA_DOCDIR}/doc/modules/luacov.hook.html
+${LUA_DOCDIR}/doc/modules/luacov.html
+${LUA_DOCDIR}/doc/modules/luacov.reporter.html
+${LUA_DOCDIR}/doc/modules/luacov.runner.html
+${LUA_DOCDIR}/doc/modules/luacov.stats.html
+${LUA_DOCDIR}/doc/modules/luacov.tick.html
+${LUA_DOCDIR}/doc/modules/luacov.util.html
+${LUA_DOCDIR}/index.html
+${LUA_DOCDIR}/license.html
+${LUA_DOCDIR}/luacov.png
+${LUA_LDIR}/luacov.lua
+${LUA_LDIR}/luacov/defaults.lua
+${LUA_LDIR}/luacov/hook.lua
+${LUA_LDIR}/luacov/linescanner.lua
+${LUA_LDIR}/luacov/reporter.lua
+${LUA_LDIR}/luacov/reporter/default.lua
+${LUA_LDIR}/luacov/runner.lua
+${LUA_LDIR}/luacov/stats.lua
+${LUA_LDIR}/luacov/tick.lua
+${LUA_LDIR}/luacov/util.lua
