@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/05/07 10:53:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/07/10 10:24:21 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -207,6 +207,9 @@ ${PYSITELIB}/certbot/tests/testdata/cert_2048.pem
 ${PYSITELIB}/certbot/tests/testdata/cert_512.pem
 ${PYSITELIB}/certbot/tests/testdata/cert_512_bad.pem
 ${PYSITELIB}/certbot/tests/testdata/cert_fullchain_2048.pem
+${PYSITELIB}/certbot/tests/testdata/cert_intermediate_1.pem
+${PYSITELIB}/certbot/tests/testdata/cert_intermediate_2.pem
+${PYSITELIB}/certbot/tests/testdata/cert_leaf.pem
 ${PYSITELIB}/certbot/tests/testdata/cli.ini
 ${PYSITELIB}/certbot/tests/testdata/csr-6sans_512.conf
 ${PYSITELIB}/certbot/tests/testdata/csr-6sans_512.pem

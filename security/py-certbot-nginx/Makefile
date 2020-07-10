@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/06/21 08:00:03 plunky Exp $
+# $NetBSD: Makefile,v 1.13 2020/07/10 10:24:23 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-nginx-${CERTBOT_VERSION}
-PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-nginx/}
 
 COMMENT=	Nginx plugin for Certbot
