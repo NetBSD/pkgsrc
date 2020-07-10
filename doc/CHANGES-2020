@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3981 2020/07/10 07:05:46 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3982 2020/07/10 07:32:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6319,3 +6319,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/bc-gh to 3.1.2 [gdt 2020-07-10]
 	Updated textproc/translate-toolkit to 3.0.0 [adam 2020-07-10]
 	Updated textproc/py-lxml to 4.5.2 [adam 2020-07-10]
+	Updated net/py-botocore to 1.17.20 [adam 2020-07-10]
+	Updated net/py-boto3 to 1.14.20 [adam 2020-07-10]
+	Updated net/py-awscli to 1.18.97 [adam 2020-07-10]
