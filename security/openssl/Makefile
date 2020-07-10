@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2020/05/21 10:41:36 nia Exp $
+# $NetBSD: Makefile,v 1.260 2020/07/10 10:04:54 hauke Exp $
 
 DISTNAME=	openssl-1.1.1g
 PKGREVISION=	1
@@ -22,6 +22,13 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	shared
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
+# No {get,make,set}context support before Darwin 9
+CONFIGURE_ARGS+=	no-async
+.endif
 
 .include "options.mk"
 
