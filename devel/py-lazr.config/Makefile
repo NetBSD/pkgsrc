@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/12/10 09:51:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/10 19:48:22 adam Exp $
 
-DISTNAME=	lazr.config-2.2.1
+DISTNAME=	lazr.config-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazr.config/}
