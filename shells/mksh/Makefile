@@ -1,26 +1,36 @@
-# $NetBSD: Makefile,v 1.40 2020/07/06 10:11:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2020/07/10 11:24:24 jperkin Exp $
 
-DISTNAME=			mksh-R59b
-PKGNAME=			${DISTNAME:S/-R/-/}
-CATEGORIES=			shells
-MASTER_SITES=			# maintained locally
-DISTFILES=			# empty
+DISTNAME=		mksh-R59b
+PKGNAME=		${DISTNAME:S/-R/-/}
+CATEGORIES=		shells
+MASTER_SITES=		# maintained locally
+DISTFILES=		# empty
 
-MAINTAINER=			jperkin@pkgsrc.org
-HOMEPAGE=			http://mirbsd.de/mksh
-COMMENT=			MirBSD Korn Shell
-LICENSE=			miros
+MAINTAINER=		jperkin@pkgsrc.org
+HOMEPAGE=		http://mirbsd.de/mksh
+COMMENT=		MirBSD Korn Shell
+LICENSE=		miros
 
-BOOTSTRAP_PKG=			yes
-NO_CHECKSUM=			yes
+BOOTSTRAP_PKG=		yes
+NO_CHECKSUM=		yes
 
-WRKSRC=				${WRKDIR}/mksh
+WRKSRC=			${WRKDIR}/mksh
 
-PKG_SHELL=			bin/mksh
+LIBS.Interix+=		-lcrypt
 
-LIBS.Interix+=			-lcrypt
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/mksh
 
-INSTALLATION_DIRS=		bin ${PKGMANDIR}/man1 share/examples/mksh
+.include "../../mk/bsd.prefs.mk"
+
+#
+# If mksh is currently in use as the bootstrap shell then do not enable
+# PKG_SHELL as it can cause circular problems (its +INSTALL script will
+# require the shell itself).  This match is deliberate to catch both of
+# the prefixes used during bootstrap, we can't simply use LOCALBASE.
+#
+.if ${TOOLS_PLATFORM.sh:N?*/bin/mksh}
+PKG_SHELL=		bin/mksh
+.endif
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
