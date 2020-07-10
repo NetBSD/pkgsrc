@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/10 12:08:28 nia Exp $
+${LUA_DOCDIR}/README.md
+${LUA_DOCDIR}/tutorial.md
+${LUA_LDIR}/moses.lua
+${LUA_LDIR}/moses_min.lua
