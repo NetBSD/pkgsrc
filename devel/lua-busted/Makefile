@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/07/08 16:23:23 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/10 10:24:31 nia Exp $
 
 DISTNAME=	busted-2.0.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -25,6 +25,8 @@ DEPENDS+=	${LUA_PKGPREFIX}-mediator-[0-9]*:../../devel/lua-mediator
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
+REPLACE_LUA+=	bin/busted
+
 PLIST_SUBST+=	LUADOTVER=${_LUA_DOT_VERSION}
 
 INSTALLATION_DIRS+=	bin
@@ -33,12 +35,6 @@ INSTALLATION_DIRS+=	${LUA_LDIR}/busted/modules
 INSTALLATION_DIRS+=	${LUA_LDIR}/busted/modules/files
 INSTALLATION_DIRS+=	${LUA_LDIR}/busted/outputHandlers
 INSTALLATION_DIRS+=	${LUA_LDIR}/busted/languages
-
-SUBST_CLASSES+=		lua
-SUBST_MESSAGE.lua=	Fixing Lua interpreter path
-SUBST_STAGE.lua=	pre-configure
-SUBST_FILES.lua=	bin/busted
-SUBST_SED.lua=		-e 's,/usr/bin/env lua,${LUA_INTERPRETER},g'
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/busted/*.lua \
@@ -54,5 +50,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/busted \
 		${DESTDIR}${PREFIX}/bin/busted${_LUA_DOT_VERSION}
 
+.include "../../lang/lua/application.mk"
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
