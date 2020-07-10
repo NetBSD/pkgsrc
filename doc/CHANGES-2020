@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3996 2020/07/10 20:42:10 kre Exp $
+$NetBSD: CHANGES-2020,v 1.3997 2020/07/10 23:07:22 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6296,6 +6296,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-grpcio-tools to 1.30.0 [adam 2020-07-09]
 	Updated net/py-lexicon to 3.3.27 [adam 2020-07-09]
 	Updated devel/py-pyobjc to 6.2.2 [adam 2020-07-09]
+	Updated lang/ecl to 20.4.24 [yhardy 2020-07-09]
 	Updated textproc/py-diff-match-patch to 20181111 [adam 2020-07-09]
 	Updated www/py-django-import-export to 2.2.0 [adam 2020-07-09]
 	Updated www/py-django-cors-headers to 3.4.0 [adam 2020-07-09]
