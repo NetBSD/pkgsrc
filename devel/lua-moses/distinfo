@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/10 12:08:28 nia Exp $
+
+SHA1 (Moses-2.1.0-1.tar.gz) = e9200d73112370ec389093cd2da1f2d9ebab4705
+RMD160 (Moses-2.1.0-1.tar.gz) = a8cd462546cae198d128f71600be0ec483660467
+SHA512 (Moses-2.1.0-1.tar.gz) = 523826a3d63c8e80928c1be24180322d7502f6ade8110e7f07d28feee421045fead83c22596f674237637f92666ef6df7803ac5d0ee5c3404790bc039feed16f
+Size (Moses-2.1.0-1.tar.gz) = 117287 bytes
