@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/06/09 12:47:37 mef Exp $
+$NetBSD: distinfo,v 1.13 2020/07/10 10:24:22 adam Exp $
 
-SHA1 (certbot-dns-linode-1.5.0.tar.gz) = 3291ba1f969a6cb751ea9115fd9c6304ab88d837
-RMD160 (certbot-dns-linode-1.5.0.tar.gz) = 94655b5d8ddc21c8f508b01bdc9f4e2c2af658d7
-SHA512 (certbot-dns-linode-1.5.0.tar.gz) = 5f29437f7d5cd22112ac1c357115e426a8d0e7ff554a587bbb17e10a9cd8a959063bbe01db34b0ea85ec99e9141a97076ee5c50a000736e623668f144206b008
-Size (certbot-dns-linode-1.5.0.tar.gz) = 12450 bytes
+SHA1 (certbot-dns-linode-1.6.0.tar.gz) = 484b8057e8767ba7bbdd692a73e0dc18bd545147
+RMD160 (certbot-dns-linode-1.6.0.tar.gz) = 7f068ffa0a29380b683f44adea0700fdc6f6061d
+SHA512 (certbot-dns-linode-1.6.0.tar.gz) = 06550e7d2c7d8367f4b93020a433d3bc25c84d18bb678019cca43ff66af3830b2fec5f5f997db560e2a555d582d061b2456e2faf1cb333a979bd7725538b1aaf
+Size (certbot-dns-linode-1.6.0.tar.gz) = 12522 bytes
