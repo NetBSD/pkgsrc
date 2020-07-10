@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2020/07/08 12:41:12 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/10 09:12:51 nia Exp $
 ${LUA_CDIR}/_openssl.so
+${LUA_DOCDIR}/luaossl.pdf
 ${LUA_LDIR}/openssl.lua
 ${LUA_LDIR}/openssl/auxlib.lua
 ${LUA_LDIR}/openssl/bignum.lua
