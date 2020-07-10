@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3993 2020/07/10 19:37:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.3994 2020/07/10 19:48:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6352,3 +6352,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/RE-flex to 2.1.2 [scole 2020-07-10]
 	Updated emulators/hatari to 2.2.1 [adam 2020-07-10]
 	Updated devel/blosc to 1.19.0 [adam 2020-07-10]
+	Updated security/py-ntlm-auth to 1.5.0 [adam 2020-07-10]
+	Updated databases/py-pypika to 0.37.16 [adam 2020-07-10]
+	Updated devel/py-typing to 3.7.4.2 [adam 2020-07-10]
+	Updated devel/py-lazr.config to 2.2.2 [adam 2020-07-10]
