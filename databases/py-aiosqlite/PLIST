@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/26 12:41:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/07/10 14:44:47 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/aiosqlite/__init__.py
 ${PYSITELIB}/aiosqlite/__init__.pyc
@@ -9,6 +9,7 @@ ${PYSITELIB}/aiosqlite/context.pyo
 ${PYSITELIB}/aiosqlite/core.py
 ${PYSITELIB}/aiosqlite/core.pyc
 ${PYSITELIB}/aiosqlite/core.pyo
+${PYSITELIB}/aiosqlite/py.typed
 ${PYSITELIB}/aiosqlite/tests/__init__.py
 ${PYSITELIB}/aiosqlite/tests/__init__.pyc
 ${PYSITELIB}/aiosqlite/tests/__init__.pyo
