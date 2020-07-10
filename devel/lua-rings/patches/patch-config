@@ -1,0 +1,16 @@
+$NetBSD: patch-config,v 1.1 2020/07/10 11:18:01 nia Exp $
+
+Make sure WARN gets used properly.
+
+--- config.orig	2013-09-24 13:47:05.000000000 +0000
++++ config
+@@ -22,7 +22,7 @@ LIBNAME ?= $T.so.$V
+ 
+ # Compilation directives
+-WARN ?= -O2 -Wall -fPIC -W -Waggregate-return -Wcast-align -Wmissing-prototypes -Wnested-externs -Wshadow -Wwrite-strings -Wpointer-arith -pedantic
++WARN += -Wall -fPIC -W -Waggregate-return -Wcast-align -Wmissing-prototypes -Wnested-externs -Wshadow -Wwrite-strings -Wpointer-arith -pedantic
+ INCS ?= -I$(LUA_INC)
+-CFLAGS ?= $(WARN) $(INCS)
++CFLAGS += $(WARN) $(INCS)
+ CC ?= gcc
+ 
