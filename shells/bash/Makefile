@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2020/04/25 12:56:54 kre Exp $
+# $NetBSD: Makefile,v 1.95 2020/07/10 20:40:26 kre Exp $
 
 BASH_VERSION=		5.0
-BASH_PATCHLEVEL=	17
+BASH_PATCHLEVEL=	18
 
 DISTNAME=	bash-${BASH_VERSION}
 PKGNAME=	bash-${BASH_VERSION:C/4\.4\..*/4.4/}.${BASH_PATCHLEVEL}
@@ -12,7 +12,7 @@ PATCH_SITES=	${MASTER_SITES:=bash-5.0-patches/}
 PATCHFILES+=	bash50-001 bash50-002 bash50-003 bash50-004 bash50-005
 PATCHFILES+=	bash50-006 bash50-007 bash50-008 bash50-009 bash50-010
 PATCHFILES+=	bash50-011 bash50-012 bash50-013 bash50-014 bash50-015
-PATCHFILES+=	bash50-016 bash50-017
+PATCHFILES+=	bash50-016 bash50-017 bash50-018
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/bash/bash.html
