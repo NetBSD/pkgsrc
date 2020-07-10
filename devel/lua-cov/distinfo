@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/10 10:26:59 nia Exp $
+
+SHA1 (luacov-0.14.0.tar.gz) = d10c25af154b6d6b19197fcccdc48fa5362ea1a5
+RMD160 (luacov-0.14.0.tar.gz) = eab58848f391fb78202816f2897ba2c7a801ef62
+SHA512 (luacov-0.14.0.tar.gz) = 44ea158ce597f705d80b9768676e401804daea91b9c2afb146a8d25aae612e895e4f42a29c4b7b3438659c596fa500af5d23b66b7f3477459747ad06ca9b7ffa
+Size (luacov-0.14.0.tar.gz) = 49571 bytes
