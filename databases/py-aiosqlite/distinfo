@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/23 08:20:54 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/07/10 14:44:47 adam Exp $
 
-SHA1 (aiosqlite-0.13.0.tar.gz) = 9bf0488218002955e9228383d73417c99bf35d16
-RMD160 (aiosqlite-0.13.0.tar.gz) = 60411be893a6d463556a9749f9dbdc6a4f4936d3
-SHA512 (aiosqlite-0.13.0.tar.gz) = f6304803f9533c8caded7e28feabe18367ee436af8a1a138344104708bd46eb7bbf0e0cad347a4e604b821463c4039b0de4ad3e72c6a39cb104d78e7d393fa62
-Size (aiosqlite-0.13.0.tar.gz) = 22869 bytes
+SHA1 (aiosqlite-0.14.0.tar.gz) = d12b6e75b92c2d3ce0a0db6397db72fef8a14fb1
+RMD160 (aiosqlite-0.14.0.tar.gz) = 5634d019eb0a41aeecac8274b9d660279b109bf2
+SHA512 (aiosqlite-0.14.0.tar.gz) = d0278a6ef47cd55f9b82c75db78105c673518d8ddc8ca2de48060b3da221edaab74b0fd1f9718b2f764a361308cd6fbf7a273be2ccf83a3c041d0879ec18b624
+Size (aiosqlite-0.14.0.tar.gz) = 23685 bytes
