@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/12/10 09:51:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/07/10 19:48:22 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,7 +16,6 @@ ${PYSITELIB}/lazr/config/_config.pyo
 ${PYSITELIB}/lazr/config/_version.py
 ${PYSITELIB}/lazr/config/_version.pyc
 ${PYSITELIB}/lazr/config/_version.pyo
-${PYSITELIB}/lazr/config/docs/NEWS.rst
 ${PYSITELIB}/lazr/config/docs/__init__.py
 ${PYSITELIB}/lazr/config/docs/__init__.pyc
 ${PYSITELIB}/lazr/config/docs/__init__.pyo
