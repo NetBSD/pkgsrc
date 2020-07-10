@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/07/08 12:41:12 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/10 09:12:51 nia Exp $
 
-DISTNAME=	luaossl-20190731
+DISTNAME=	luaossl-20200709
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wahern/}
 CATEGORIES=	security lua
@@ -25,7 +25,12 @@ INSTALL_TARGET=	install${_LUA_DOT_VERSION}
 
 MAKE_FLAGS+=	LUA_APIS=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
-LUA_VERSIONS_ACCEPTED=	53 52 51
+LUA_VERSIONS_ACCEPTED=	54 53 52 51
+
+INSTALLATION_DIRS+=	${LUA_DOCDIR}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${DESTDIR}${PREFIX}/${LUA_DOCDIR}
 
 .include "../../lang/lua/module.mk"
 .include "../../security/openssl/buildlink3.mk"
