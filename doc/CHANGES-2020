@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3983 2020/07/10 09:13:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.3984 2020/07/10 10:11:28 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6323,3 +6323,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-boto3 to 1.14.20 [adam 2020-07-10]
 	Updated net/py-awscli to 1.18.97 [adam 2020-07-10]
 	Updated security/lua-ossl to 20200709 [nia 2020-07-10]
+	Updated www/php-phalcon to 3.4.5 [plunky 2020-07-10]
