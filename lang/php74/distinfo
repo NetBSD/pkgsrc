@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2020/06/14 05:59:17 taca Exp $
+$NetBSD: distinfo,v 1.10 2020/07/11 04:02:14 taca Exp $
 
-SHA1 (php-7.4.7.tar.xz) = 81b2f89d3668b137514e94383b79957e19066caa
-RMD160 (php-7.4.7.tar.xz) = 7690589df7a30612698e5931a7b4b16965538a9d
-SHA512 (php-7.4.7.tar.xz) = 5b3ba690e610e0511675f06a10afe9edbcfa90b5b16956d22aab225cdf140b55e5a8a551e7b189d30404981c94c6921b8c4aed00102546cfa38784a719704b80
-Size (php-7.4.7.tar.xz) = 10286580 bytes
+SHA1 (php-7.4.8.tar.xz) = 9499044771c595fcf06c873013127a0fea0646b4
+RMD160 (php-7.4.8.tar.xz) = ae3642ba11d048a7c7b23052857cffb3654f5417
+SHA512 (php-7.4.8.tar.xz) = cfb23eac731a0eabed83908d7c056a123cd9a73ccc091d92b8601366da4cd95ded8623156eaa0458405f23d8bb9dc244d117bd99876f916ef582e3966dc78b44
+Size (php-7.4.8.tar.xz) = 10281976 bytes
 SHA1 (patch-configure) = 5e9c9c06f6d819d5ba2832d648f41363f40f3108
 SHA1 (patch-disable-filter-url) = 0a2c19c18f089448a8d842e99738b292ab9e5640
 SHA1 (patch-ext_phar_Makefile.frag) = 53ea5c58b0bc27d236118d5750a74b1cba43e5dd
