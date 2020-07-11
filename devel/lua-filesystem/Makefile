@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/07/11 14:48:58 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/07/11 15:14:29 nia Exp $
 #
 
 DISTNAME=		luafilesystem-1.8.0
@@ -24,8 +24,6 @@ MAKE_FLAGS+=		PREFIX=${PREFIX}
 MAKE_FLAGS+=		CC=${CC}
 MAKE_FLAGS+=		CFLAGS="${CFLAGS} -fPIC"
 MAKE_FLAGS+=		LUA_VERSION=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
-
-LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
