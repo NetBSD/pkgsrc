@@ -1,0 +1,19 @@
+$NetBSD: patch-src_Makefile,v 1.1 2020/07/11 16:15:09 nia Exp $
+
+Respect CC/CFLAGS.
+
+--- src/Makefile.orig	2018-11-30 12:28:50.000000000 +0000
++++ src/Makefile
+@@ -88,11 +88,10 @@ ifeq "$(LUAROCKS)" ""
+     # Some machines need 'MACOSX_DEPLOYMENT_TARGET=10.3' for using '-undefined dynamic_lookup'
+     # (at least PowerPC running 10.4.11); does not harm the others
+     #
+-    CC = MACOSX_DEPLOYMENT_TARGET=10.3 gcc
+     LIBFLAG = -bundle -undefined dynamic_lookup
+   endif
+   
+-  CFLAGS=-Wall -Werror $(OPT_FLAGS) $(LUA_FLAGS)
++  CFLAGS+=-fPIC -Wall $(OPT_FLAGS) $(LUA_FLAGS)
+   LIBS=$(LUA_LIBS)
+ endif
+ 
