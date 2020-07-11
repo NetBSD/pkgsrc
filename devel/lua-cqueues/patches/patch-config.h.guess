@@ -1,0 +1,15 @@
+$NetBSD: patch-config.h.guess,v 1.1 2020/07/11 15:21:23 nia Exp $
+
+Don't try to include sys/epoll.h on SunOS, since this breaks on SmartOS.
+
+--- config.h.guess.orig	2020-06-03 06:57:02.000000000 +0000
++++ config.h.guess
+@@ -483,7 +483,7 @@
+ #define HAVE_SYS_AUXV_H ag_test_include(<sys/auxv.h>, HAVE_SYS_AUXV_H_)
+ #endif
+ 
+-#ifndef HAVE_SYS_EPOLL_H
++#if !defined(HAVE_SYS_EPOLL_H) && !defined(__sun)
+ #define HAVE_SYS_EPOLL_H ag_test_include(<sys/epoll.h>, __linux__)
+ #endif
+ 
