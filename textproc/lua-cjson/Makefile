@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/07/08 17:11:52 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/11 14:52:19 nia Exp $
 
 DISTNAME=	lua-cjson-2.1.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
@@ -14,6 +14,8 @@ LICENSE=	mit
 USE_TOOLS+=	gmake
 
 MAKE_ENV+=	LUA_CDIR=${LUA_CDIR}
+
+LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
 
 INSTALLATION_DIRS=	${LUA_CDIR}
 
