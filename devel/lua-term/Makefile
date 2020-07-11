@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/11 14:35:13 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/11 14:48:58 nia Exp $
 
 DISTNAME=	lua-term-0.07
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
@@ -19,7 +19,7 @@ MAKE_FLAGS+=	LUA_INC=${PREFIX}/${LUA_INCDIR}
 MAKE_FLAGS+=	LUA_LIBDIR=${PREFIX}/${LUA_CDIR}/term
 MAKE_FLAGS+=	LUA_SHARE=${PREFIX}/${LUA_LDIR}/term
 
-LDFLAGS.Darwin+=	-undefined dynamic_lookup
+LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"

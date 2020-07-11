@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/11 14:20:06 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/11 14:48:57 nia Exp $
 
 DISTNAME=	lua-compat53-0.9
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 PLIST_SUBST+=	LUA_INCDIR=${LUA_INCDIR}
 
-LDFLAGS.Darwin+=	-undefined dynamic_lookup
+LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
 
 PRINT_PLIST_AWK+=	/^${LUA_INCDIR:S|/|\\/|g}/ \
 			{ gsub(/${LUA_INCDIR:S|/|\\/|g}/, "$${LUA_INCDIR}") }

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/07/11 14:20:05 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/11 14:48:57 nia Exp $
 
 # Keep versioning in sync with the luarocks rockspec.
 DISTNAME=	lua-compat53-0.9
@@ -16,7 +16,7 @@ LICENSE=	mit
 CONFLICTS+=	${LUA_PKGPREFIX}-bitlib-[0-9]*
 SUPERSEDES+=	${LUA_PKGPREFIX}-bitlib-[0-9]*
 
-LDFLAGS.Darwin+=	-undefined dynamic_lookup
+LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
 
