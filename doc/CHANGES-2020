@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4000 2020/07/11 04:06:39 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4001 2020/07/11 10:26:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6362,3 +6362,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/php73 to 7.3.20 [taca 2020-07-11]
 	Updated lang/php74 to 7.4.8 [taca 2020-07-11]
 	Updated lang/php72 to 7.2.32 [taca 2020-07-11]
+	Updated archivers/libzip to 1.7.2 [wiz 2020-07-11]
