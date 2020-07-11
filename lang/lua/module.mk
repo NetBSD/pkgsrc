@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.9 2020/07/11 15:14:30 nia Exp $
+# $NetBSD: module.mk,v 1.10 2020/07/11 15:30:52 nia Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install Lua modules.
@@ -73,6 +73,14 @@ LUA_LINKER_MAGIC?=	yes
 .if !empty(LUA_LINKER_MAGIC:M[yY][eE][sS])
 LDFLAGS.Cygwin+=	-llua${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
+.endif
+
+.if ${_LUA_VERSION} != "51" && ${_LUA_VERSION} != "52"
+# Any Lua>=5.3 module using these flags is invalid,
+# since Lua 5.3 and newer require "long long".
+BUILDLINK_TRANSFORM+=	opt:-ansi:-std=c99
+BUILDLINK_TRANSFORM+=	opt:-std=c89:-std=c99
+BUILDLINK_TRANSFORM+=	opt:-std=c90:-std=c99
 .endif
 
 .endif  # LUA_MODULE_MK
