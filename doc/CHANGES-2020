@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3998 2020/07/11 04:00:32 taca Exp $
+$NetBSD: CHANGES-2020,v 1.3999 2020/07/11 04:02:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6360,3 +6360,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/py-sip-qt4 version 4.19.23 [rhialto 2020-07-10]
 	Updated shells/bash to 5.0.18 [kre 2020-07-10]
 	Updated lang/php73 to 7.3.20 [taca 2020-07-11]
+	Updated lang/php74 to 7.4.8 [taca 2020-07-11]
