@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/09 20:25:29 brook Exp $
+# $NetBSD: Makefile,v 1.28 2020/07/11 16:15:08 nia Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
@@ -11,6 +11,7 @@ SUBDIR+=	ganglia-monitor-core
 SUBDIR+=	gridscheduler
 SUBDIR+=	hwloc
 SUBDIR+=	linda
+SUBDIR+=	lua-lanes
 SUBDIR+=	mpi-ch
 SUBDIR+=	openmp
 SUBDIR+=	openmpi
