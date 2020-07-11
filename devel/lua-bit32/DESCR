@@ -1,0 +1,4 @@
+bit32 is the native Lua 5.2+ bit manipulation library.
+
+This package contains bit32 distributed as a module for use by all
+Lua versions.
