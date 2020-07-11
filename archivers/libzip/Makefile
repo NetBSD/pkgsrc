@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2020/06/13 10:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2020/07/11 10:26:04 wiz Exp $
 
-DISTNAME=		libzip-1.7.1
+DISTNAME=		libzip-1.7.2
 CATEGORIES=		archivers devel
 MASTER_SITES=		https://libzip.org/download/
+MASTER_SITES+=		${MASTER_SITE_GITHUB:=nih-at/}
 EXTRACT_SUFX=		.tar.xz
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		https://www.libzip.org/
