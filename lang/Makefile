@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.570 2020/07/07 23:43:58 nia Exp $
+# $NetBSD: Makefile,v 1.571 2020/07/11 11:56:59 nia Exp $
 #
 
 COMMENT=	Programming languages
@@ -145,6 +145,7 @@ SUBDIR+=	libunwind
 SUBDIR+=	likepython
 SUBDIR+=	llvm
 #SUBDIR+=	lua		# only contains Makefile fragments
+SUBDIR+=	lua-moonscript
 SUBDIR+=	lua51
 SUBDIR+=	lua52
 SUBDIR+=	lua53
