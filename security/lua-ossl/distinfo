@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/07/10 09:12:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/07/11 15:18:24 nia Exp $
 
 SHA1 (luaossl-20200709.tar.gz) = f967f640869f863a421886bf8d9e2625e72302f3
 RMD160 (luaossl-20200709.tar.gz) = 0a396bc54983f028018f0726b51a35ff0669b6ab
 SHA512 (luaossl-20200709.tar.gz) = 324175f65e9d292ecb1343cfa9e111f1fd17f15e67037bd705d3db95d32b859c039a6e70620d649f446a8e7043a125a75c64de1714f0fe18e077fb9c017bea34
 Size (luaossl-20200709.tar.gz) = 352960 bytes
+SHA1 (patch-config.h.guess) = b25ce37a141bbb28921ffac8324af496b073817b
