@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/11 12:37:25 nia Exp $
+${LUA_CDIR}/luaevent/core.so
+${LUA_DOCDIR}/api.mdwn
+${LUA_DOCDIR}/index.mdwn
+${LUA_DOCDIR}/modules/luaevent.core.buffer.mdwn
+${LUA_DOCDIR}/modules/luaevent.core.bufferevent.mdwn
+${LUA_DOCDIR}/modules/luaevent.core.mdwn
+${LUA_DOCDIR}/modules/luaevent.mdwn
+${LUA_LDIR}/luaevent.lua
