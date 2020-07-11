@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2019/09/05 18:54:37 maya Exp $
-${LUA_CDIR}/bit32.la
