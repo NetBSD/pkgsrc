@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4005 2020/07/11 13:48:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4006 2020/07/11 13:59:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6367,3 +6367,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-event version 0.4.6 [nia 2020-07-11]
 	Added devel/lua-fun version 0.1.3 [nia 2020-07-11]
 	Updated devel/lua-compat53 to 0.9 [nia 2020-07-11]
+	Added devel/lua-bitlib version 5.3.5 [nia 2020-07-11]
+	Removed devel/lua-bitlib successor devel/lua-bit32 [nia 2020-07-11]
