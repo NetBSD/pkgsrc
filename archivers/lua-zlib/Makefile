@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/05 18:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/11 14:30:25 nia Exp $
 
 DISTNAME=	lua-zlib-1.2
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -17,7 +17,12 @@ BUILD_TARGET=	zlib.so
 MAKE_FLAGS+=	CC=${CC}
 MAKE_FLAGS+=	LD=${CC}
 MAKE_FLAGS+=	CFLAGS="${CFLAGS} -fPIC"
+
+.if ${OPSYS} == "Darwin"
+MAKE_FLAGS+=	LDFLAGS="${LDFLAGS} -shared -undefined dynamic_lookup"
+.else
 MAKE_FLAGS+=	LDFLAGS="${LDFLAGS} -shared"
+.endif
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
 
