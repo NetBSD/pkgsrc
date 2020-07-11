@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/07/08 14:25:38 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/07/11 13:48:49 nia Exp $
 
-SHA1 (lua-compat53-0.7.tar.gz) = b93fcbfe10e1c6f410dba4db9450f7c217695f43
-RMD160 (lua-compat53-0.7.tar.gz) = b0c5b6cb1c7c69055e42ff49ef91d5e2b99fe836
-SHA512 (lua-compat53-0.7.tar.gz) = 665ece98422a105b818cffd96eea5788696fbb854d2ba41d2d387e8bd25c1fa9de601468e55e22e9e749979a66d4d2e0f7dfd656e5bf27b489d37bb07c96f48d
-Size (lua-compat53-0.7.tar.gz) = 51383 bytes
+SHA1 (lua-compat53-0.9.tar.gz) = e1f2f8052dacb30295c768969547423c882bf3ee
+RMD160 (lua-compat53-0.9.tar.gz) = ae80f773f517885dad3e64863aaf9b56d40d535c
+SHA512 (lua-compat53-0.9.tar.gz) = bec15b6e95cb5cc775785515eba1f094e453059a0ba1eefa433d328b823378b7f48d9c7a34080ad77478cffb2008bead93418f809793afa6021e6046562acc58
+Size (lua-compat53-0.9.tar.gz) = 53599 bytes
