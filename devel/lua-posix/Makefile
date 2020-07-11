@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/07/11 14:33:00 nia Exp $
+# $NetBSD: Makefile,v 1.20 2020/07/11 14:34:22 nia Exp $
 
 DISTNAME=	luaposix-34.1.1
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
@@ -24,7 +24,13 @@ DEPENDS+=	${LUA_PKGPREFIX}-std-_debug-[0-9]*:../../devel/lua-std-_debug
 DEPENDS+=	lua51-bit32-[0-9]*:../../devel/lua-bit32
 .endif
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+LIBFLAG+=	${LDFLAGS} -shared -fPIC -undefined dynamic_lookup
+.else
 LIBFLAG+=	${LDFLAGS} -shared -fPIC
+.endif
 
 do-build:
 	cd ${WRKSRC} && \
