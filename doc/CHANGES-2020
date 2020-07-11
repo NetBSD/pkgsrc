@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.3997 2020/07/10 23:07:22 yhardy Exp $
+$NetBSD: CHANGES-2020,v 1.3998 2020/07/11 04:00:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6359,3 +6359,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-lazr.config to 2.2.2 [adam 2020-07-10]
 	Added x11/py-sip-qt4 version 4.19.23 [rhialto 2020-07-10]
 	Updated shells/bash to 5.0.18 [kre 2020-07-10]
+	Updated lang/php73 to 7.3.20 [taca 2020-07-11]
