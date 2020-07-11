@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/07/11 14:34:22 nia Exp $
+# $NetBSD: Makefile,v 1.21 2020/07/11 14:48:58 nia Exp $
 
 DISTNAME=	luaposix-34.1.1
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
@@ -27,7 +27,7 @@ DEPENDS+=	lua51-bit32-[0-9]*:../../devel/lua-bit32
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-LIBFLAG+=	${LDFLAGS} -shared -fPIC -undefined dynamic_lookup
+LIBFLAG+=	${LDFLAGS} -fPIC -bundle -undefined dynamic_lookup
 .else
 LIBFLAG+=	${LDFLAGS} -shared -fPIC
 .endif
