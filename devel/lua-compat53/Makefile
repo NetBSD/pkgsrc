@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/07/08 14:25:38 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/11 13:48:49 nia Exp $
 
-DISTNAME=	lua-compat53-0.7
+DISTNAME=	lua-compat53-0.9
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
@@ -21,9 +21,6 @@ INSTALLATION_DIRS+=	${LUA_LDIR} ${LUA_CDIR} ${LUA_INCDIR}
 INSTALLATION_DIRS+=	${LUA_LDIR}/compat53
 INSTALLATION_DIRS+=	${LUA_CDIR}/compat53
 
-# Does not make sense to use this with newer Lua versions.
-LUA_VERSIONS_ACCEPTED=	52 51
-
 pre-build:
 	${CP} -f ${FILESDIR}/Makefile ${WRKSRC}/Makefile
 
@@ -31,6 +28,9 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/*.so ${DESTDIR}${PREFIX}/${LUA_CDIR}/compat53
 	${INSTALL_DATA} ${WRKSRC}/compat53/*.lua ${DESTDIR}${PREFIX}/${LUA_LDIR}/compat53
 	${INSTALL_DATA} ${WRKSRC}/c-api/* ${DESTDIR}${PREFIX}/${LUA_INCDIR}
+
+do-test:
+	cd ${WRKSRC}/tests && ${LUA_INTERPRETER} test.lua
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
