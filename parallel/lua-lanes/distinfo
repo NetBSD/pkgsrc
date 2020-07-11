@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2020/07/11 16:15:08 nia Exp $
+
+SHA1 (lanes-3.13.0.tar.gz) = f9cda1fa99ea042c0645967a4bd573b0ae6762eb
+RMD160 (lanes-3.13.0.tar.gz) = dab59db4717e28e1a248860a9d2441e2bf7e83cc
+SHA512 (lanes-3.13.0.tar.gz) = bb509181757fa2b4f07a55962015b35ca6bb867b18ec89dd655f333babe2e12f56479fa85bc98e0dacf5bec2a523265bbc3a978396dc332dc1fdda4df760b2e5
+Size (lanes-3.13.0.tar.gz) = 247978 bytes
+SHA1 (patch-src_Makefile) = a9f40a821f086574d5debc2ecd434eee1aa93b18
+SHA1 (patch-src_threading.c) = 2daf9d772fbbcd7a04cd41a0b10060c7a97d8b38
+SHA1 (patch-src_threading.h) = 036129d1c9c5e7bf7b6535caff07fbb15f65e23d

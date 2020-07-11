@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/11 16:15:08 nia Exp $
+${LUA_CDIR}/lanes/core.so
+${LUA_DOCDIR}/comparison.html
+${LUA_DOCDIR}/index.html
+${LUA_DOCDIR}/multi.png
+${LUA_LDIR}/lanes.lua
