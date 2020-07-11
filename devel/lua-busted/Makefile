@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/07/10 10:24:31 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/11 15:22:54 nia Exp $
 
 DISTNAME=	busted-2.0.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -37,6 +37,8 @@ INSTALLATION_DIRS+=	${LUA_LDIR}/busted/outputHandlers
 INSTALLATION_DIRS+=	${LUA_LDIR}/busted/languages
 
 do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/busted \
+		${DESTDIR}${PREFIX}/bin/busted${_LUA_DOT_VERSION}
 	${INSTALL_DATA} ${WRKSRC}/busted/*.lua \
 		${DESTDIR}${PREFIX}/${LUA_LDIR}/busted
 	${INSTALL_DATA} ${WRKSRC}/busted/modules/*.lua \
@@ -47,8 +49,6 @@ do-install:
 		${DESTDIR}${PREFIX}/${LUA_LDIR}/busted/outputHandlers
 	${INSTALL_DATA} ${WRKSRC}/busted/languages/*.lua \
 	    	${DESTDIR}${PREFIX}/${LUA_LDIR}/busted/languages
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/busted \
-		${DESTDIR}${PREFIX}/bin/busted${_LUA_DOT_VERSION}
 
 .include "../../lang/lua/application.mk"
 .include "../../lang/lua/module.mk"
