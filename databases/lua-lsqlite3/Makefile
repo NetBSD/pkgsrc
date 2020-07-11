@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/07/09 15:27:56 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/11 14:20:05 nia Exp $
 
 DISTNAME=	lsqlite3_fsl09y
 PKGNAME=	${LUA_PKGPREFIX}-lsqlite3-0.9.5
@@ -10,6 +10,8 @@ MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	http://lua.sqlite.org/index.cgi/index
 COMMENT=	Binding for Lua to the SQLite3 database library
 LICENSE=	mit
+
+LDFLAGS.Darwin+=	-undefined dynamic_lookup
 
 INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_LDIR}
 INSTALLATION_DIRS+=	${LUA_DOCDIR}/examples

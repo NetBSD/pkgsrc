@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/07/11 12:37:25 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/11 14:20:06 nia Exp $
 
 DISTNAME=	luaevent-0.4.6
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
@@ -13,6 +13,8 @@ COMMENT=	Binding of libevent to Lua, with drop-in replacement for copas
 LICENSE=	mit
 
 BUILD_DIRS+=	src
+
+LDFLAGS.Darwin+=	-undefined dynamic_lookup
 
 INSTALLATION_DIRS+=	${LUA_DOCDIR}
 INSTALLATION_DIRS+=	${LUA_DOCDIR}/modules
