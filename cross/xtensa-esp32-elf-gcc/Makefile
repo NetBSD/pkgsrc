@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/11 13:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/07/11 09:05:13 tnn Exp $
 
 # We could use the upstream GCC distfile, but Espressif has important vendor
 # patches in their branch and it seems not worth the maintenance overhead to
@@ -64,6 +64,8 @@ CONFIGURE_ARGS+=	--disable-libquadmath
 CONFIGURE_ARGS+=	--disable-libssp
 CONFIGURE_ARGS+=	--without-long-double-128
 CONFIGURE_ARGS+=	--enable-gcov-custom-rtio
+
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 post-extract:
 	${CP} -r ${WRKDIR}/crosstool-NG*/overlays/xtensa_esp32/gcc/. ${WRKSRC}/.
