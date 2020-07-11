@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/11 12:37:25 nia Exp $
+
+SHA1 (luaevent-0.4.6.tar.gz) = bdeed4c612ed7b2cf4e86d3ccc9ba80730537aad
+RMD160 (luaevent-0.4.6.tar.gz) = 348cfb3381519b72f64a5a96b82f4418f6814664
+SHA512 (luaevent-0.4.6.tar.gz) = 21e222d5bba75fd2e623a8abf20fc3cd38505bf7d3fe94d8781ed626556c398a8501775eb423f0567918cc75f2d846026d4aa559ac5129eca8261f0c73427913
+Size (luaevent-0.4.6.tar.gz) = 22599 bytes

@@ -1,0 +1,2 @@
+This is a binding of libevent to Lua. It includes a higher level wrapper
+mimicking copas, and an interface to core libevent functions.
