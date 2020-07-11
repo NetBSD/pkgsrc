@@ -1,7 +1,19 @@
-# $NetBSD: module.mk,v 1.8 2020/07/09 15:01:53 nia Exp $
+# $NetBSD: module.mk,v 1.9 2020/07/11 15:14:30 nia Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install Lua modules.
+#
+# === Package-settable variables ===
+#
+# LUA_LINKER_MAGIC
+#	This appends LDFLAGS to properly link Lua modules on non-ELF
+#	linkers.
+#
+#	You probably want to set this to "no" if the package links
+#	binaries that are not Lua modules.
+#
+#	Possible values: yes no
+#	Default: yes
 #
 # === Defined variables ===
 #
@@ -56,6 +68,11 @@ PRINT_PLIST_AWK+=	/^${LUA_DOCDIR:S|/|\\/|g}/ \
 LUA_EXAMPLESDIR=	share/examples/${PKGBASE}
 PLIST_SUBST+=		LUA_EXAMPLESDIR=${LUA_EXAMPLESDIR}
 
+LUA_LINKER_MAGIC?=	yes
+
+.if !empty(LUA_LINKER_MAGIC:M[yY][eE][sS])
 LDFLAGS.Cygwin+=	-llua${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
+LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
+.endif
 
 .endif  # LUA_MODULE_MK

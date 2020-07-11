@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/11 14:48:57 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/11 15:14:30 nia Exp $
 
 DISTNAME=	lyaml-6.2.5
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ LICENSE=	mit
 BUILD_DIRS=	ext/yaml
 
 MAKE_FLAGS+=	PKGVERSION=${PKGVERSION}
-
-LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
 
 INSTALLATION_DIRS+=	${LUA_DOCDIR}
 INSTALLATION_DIRS+=	${LUA_CDIR}
