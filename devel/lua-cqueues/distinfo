@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2020/07/02 22:06:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/07/11 15:21:23 nia Exp $
 
 SHA1 (cqueues-20200603.tar.gz) = 7655585865bc675370e432d110e87bfbcde18bbe
 RMD160 (cqueues-20200603.tar.gz) = 4d51092638bb079f351b4a549d8a00795578b0df
 SHA512 (cqueues-20200603.tar.gz) = 7185c39b8ea524a8edfa5ea1f93752ae5970aaf2a780ccf65fcec16b23a5dc536465f037a3495c26fdf751a1523f787c9fab941e6f1c9eb27be630723fc629d3
 Size (cqueues-20200603.tar.gz) = 509190 bytes
+SHA1 (patch-config.h.guess) = a4c9de988504c6a03eef7837a7c62bf12fdfaa16
 SHA1 (patch-src_lib_notify.c) = 63dcb558dbd1d53e668ee766b9cd506e36c1efb2
