@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.3 2020/07/09 08:30:09 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.4 2020/07/11 11:52:14 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -28,4 +28,10 @@ www/firefox68: security fix
 
 Pullup ticket #6267 - requested by nia
 www/firefox68-l10n: dependent update
+
+Pullup ticket #6270 - requested by leot
+graphics/cairo: fix crashes
+
+Pullup ticket #6271 - requested by leot
+www/webkit-gtk: security fix
 
