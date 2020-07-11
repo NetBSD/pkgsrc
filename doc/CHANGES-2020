@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4003 2020/07/11 12:37:38 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4004 2020/07/11 12:56:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6365,3 +6365,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/libzip to 1.7.2 [wiz 2020-07-11]
 	Added lang/lua-moonscript version 0.5.0 [nia 2020-07-11]
 	Added devel/lua-event version 0.4.6 [nia 2020-07-11]
+	Added devel/lua-fun version 0.1.3 [nia 2020-07-11]
