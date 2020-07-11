@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/07/02 10:26:18 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/07/11 14:33:00 nia Exp $
 
 DISTNAME=	luaposix-34.1.1
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
@@ -21,7 +21,7 @@ INSTALLATION_DIRS+=	${LUA_LDIR} ${LUA_CDIR}
 DEPENDS+=	${LUA_PKGPREFIX}-std-normalize-[0-9]*:../../devel/lua-std-normalize
 DEPENDS+=	${LUA_PKGPREFIX}-std-_debug-[0-9]*:../../devel/lua-std-_debug
 .if ${LUA_PKGPREFIX} == "lua51"
-DEPENDS+=	lua51-bitlib-[0-9]*:../../devel/lua-bitlib
+DEPENDS+=	lua51-bit32-[0-9]*:../../devel/lua-bit32
 .endif
 
 LIBFLAG+=	${LDFLAGS} -shared -fPIC
