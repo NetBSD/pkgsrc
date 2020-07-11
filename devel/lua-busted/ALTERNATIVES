@@ -1,0 +1,1 @@
+bin/busted @PREFIX@/bin/busted@LUADOTVER@
