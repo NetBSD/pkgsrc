@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/07/11 13:58:11 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/11 14:20:05 nia Exp $
 
 all: bit32.so
 
@@ -6,4 +6,4 @@ all: bit32.so
 	$(CC) $(CFLAGS) -DLUA_COMPAT_BITLIB -fPIC -c $<
 
 bit32.so: lbitlib.o
-	$(CC) $(LDFLAGS) -shared -o $@ lbitlib.o
+	$(CC) $(LDFLAGS) -z undefs -shared -o $@ lbitlib.o
