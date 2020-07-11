@@ -1,0 +1,4 @@
+Lua Lanes is a Lua extension library providing the possibility to run multiple
+Lua states in parallel. It is intended to be used for optimizing performance
+on multicore CPUs and to study ways to make Lua programs naturally parallel
+to begin with.
