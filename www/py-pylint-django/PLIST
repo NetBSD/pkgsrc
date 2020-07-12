@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/04/18 07:32:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/07/12 17:47:25 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,9 +17,6 @@ ${PYSITELIB}/pylint_django/augmentations/__init__.pyo
 ${PYSITELIB}/pylint_django/checkers/__init__.py
 ${PYSITELIB}/pylint_django/checkers/__init__.pyc
 ${PYSITELIB}/pylint_django/checkers/__init__.pyo
-${PYSITELIB}/pylint_django/checkers/db_performance.py
-${PYSITELIB}/pylint_django/checkers/db_performance.pyc
-${PYSITELIB}/pylint_django/checkers/db_performance.pyo
 ${PYSITELIB}/pylint_django/checkers/django_installed.py
 ${PYSITELIB}/pylint_django/checkers/django_installed.pyc
 ${PYSITELIB}/pylint_django/checkers/django_installed.pyo
@@ -29,6 +26,9 @@ ${PYSITELIB}/pylint_django/checkers/forms.pyo
 ${PYSITELIB}/pylint_django/checkers/json_response.py
 ${PYSITELIB}/pylint_django/checkers/json_response.pyc
 ${PYSITELIB}/pylint_django/checkers/json_response.pyo
+${PYSITELIB}/pylint_django/checkers/migrations.py
+${PYSITELIB}/pylint_django/checkers/migrations.pyc
+${PYSITELIB}/pylint_django/checkers/migrations.pyo
 ${PYSITELIB}/pylint_django/checkers/models.py
 ${PYSITELIB}/pylint_django/checkers/models.pyc
 ${PYSITELIB}/pylint_django/checkers/models.pyo
@@ -192,6 +192,13 @@ ${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.py
 ${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.pyc
 ${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.pyo
 ${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.txt
+${PYSITELIB}/pylint_django/tests/input/migrations/0003_without_backwards.py
+${PYSITELIB}/pylint_django/tests/input/migrations/0003_without_backwards.pyc
+${PYSITELIB}/pylint_django/tests/input/migrations/0003_without_backwards.pyo
+${PYSITELIB}/pylint_django/tests/input/migrations/0003_without_backwards.txt
+${PYSITELIB}/pylint_django/tests/input/migrations/0004_noerror_with_backwards.py
+${PYSITELIB}/pylint_django/tests/input/migrations/0004_noerror_with_backwards.pyc
+${PYSITELIB}/pylint_django/tests/input/migrations/0004_noerror_with_backwards.pyo
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.py
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.pyc
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.pyo
