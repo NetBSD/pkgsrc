@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/04/02 09:39:43 nia Exp $
+$NetBSD: distinfo,v 1.12 2020/07/12 02:09:23 ryoon Exp $
 
-SHA1 (vttest-20200303.tgz) = 08c75a2050e50d79136a4528b12f4d583dca2acc
-RMD160 (vttest-20200303.tgz) = 52b3c2fb64d42a896d07f14ee36ac219e133659f
-SHA512 (vttest-20200303.tgz) = dcd32e5e2bd2c2be0c068f84473efbe955ef7c5c8e9dab85f8ef57b7704ddb1c6d2daa81f25f3bd7424208ccb15c6013f40ede4355c98800d523be835921430d
-Size (vttest-20200303.tgz) = 207542 bytes
+SHA1 (vttest-20200610.tgz) = ba0a8c0776eb6ca21daa519f224a02cd3e5cdd0a
+RMD160 (vttest-20200610.tgz) = c6cd9ef06c2d2cd5f4d51d5da88f8e8fbe994edf
+SHA512 (vttest-20200610.tgz) = 2975f2cba251358eefaabae7726f6d2e55bc2bd96d4e7e52c49270aa92dd1ffe57282a8d208870dd77aac7005ef7defd37506d7c03a28f01dd73876580f05b77
+Size (vttest-20200610.tgz) = 208598 bytes
