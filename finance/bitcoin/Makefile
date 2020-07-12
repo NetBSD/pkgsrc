@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/06/02 08:23:47 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/07/12 21:02:12 adam Exp $
 
-DISTNAME=	bitcoin-0.19.1
-PKGREVISION=	3
+DISTNAME=	bitcoin-0.20.0
 CATEGORIES=	finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PKGVERSION_NOREV}/
 
@@ -13,7 +12,7 @@ LICENSE=	mit
 # bitcoin-core requires c++11 (but does not need manual -std=c++11).
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-hardening # uses -fPIE which is problemtic
@@ -36,11 +35,14 @@ INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1 src/univalue
 
 .include "options.mk"
 
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
+
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.21
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../net/zeromq/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
