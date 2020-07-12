@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19947 2020/07/10 19:37:40 adam Exp $
+$NetBSD: TODO,v 1.19948 2020/07/12 20:45:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -468,6 +468,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzrtools-2.6.0
 	o c4-1.10
 	o cacti-spine-1.2.7
+	o caff-2.11
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
@@ -476,7 +477,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cascadia-ttf-2007.01
-	o catch2-2.12.3
+	o catch2-2.12.4
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o cddbd-1.5.2
@@ -579,6 +580,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07 [wip]
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
+	o ffmpeg4-4.3.1
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flow-tools-0.411
@@ -662,7 +664,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
-	o gopls-0.4.2
+	o gopls-0.4.3
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
@@ -768,6 +770,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcarddav-14.0.4
 	o libdrm-2.4.102
 	o libflash-0.4.13
+	o libgcrypt-1.8.6
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
@@ -851,6 +854,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mpdas-0.4.1
+	o mpfr-4.1.0
 	o mserv-devel-0.41
 	o multitail-6.4.2
 	o munin-common-2.0.52
@@ -955,7 +959,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
-	o poppler-0.90.0
+	o poppler-0.90.1
 	o postal-0.72
 	o pound-2.8a
 	o povray-3.7.0.0
@@ -978,6 +982,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
+	o py-google-auth-httplib2-0.0.4
 	o py-hgview-1.9.0
 	o py-idna-2.10
 	o py-input-pad-1.4.2
@@ -990,6 +995,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-rsa-4.6
 	o py-setuptools-49.1.0 [drops python-2.x support]
+	o py-setuptools-49.1.2
 	o py-setuptools_scm-4.1.2
 	o py-simpletal-5.1
 	o py-sphinx-autoapi-1.4.0
@@ -1069,6 +1075,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o softhsm-2.0.0
 	o sparse-0.5.0
 	o spcaview-20060501
+	o spdlog-1.7.0
 	o spl-1.0pre6
 	o sqlrelay-1.4.0
 	o squeak-5.0
@@ -1077,6 +1084,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
 	o sshguard-1.6.4
+	o sslh-1.21
 	o stalin-0.11
 	o statist-1.3.0
 	o stegavorto-2011.05.26
