@@ -1,15 +1,24 @@
-$NetBSD: patch-configure,v 1.2 2020/03/25 11:06:19 jperkin Exp $
+$NetBSD: patch-configure,v 1.3 2020/07/12 01:48:36 ryoon Exp $
 
 * Select GnuPG binary
 
---- configure.orig	2019-06-07 09:46:30.000000000 +0000
+--- configure.orig	2020-07-11 01:25:04.000000000 +0000
 +++ configure
-@@ -533,7 +533,7 @@ EOF
+@@ -518,7 +518,7 @@ EOF
          printf 'No.\nCould not make tempdir for testing session-key support.\n'
          errors=$((errors + 1))
      elif ${CC} ${CFLAGS} ${gmime_cflags} _check_session_keys.c ${gmime_ldflags} -o _check_session_keys \
--           && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < test/gnupg-secret-key.asc \
-+           && GNUPGHOME=${TEMP_GPG} @GPGME_GPG@ --batch --quiet --import < test/gnupg-secret-key.asc \
+-           && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < "$srcdir"/test/gnupg-secret-key.asc \
++           && GNUPGHOME=${TEMP_GPG} @GPGME_GPG@ --batch --quiet --import < "$srcdir"/test/gnupg-secret-key.asc \
             && SESSION_KEY=$(GNUPGHOME=${TEMP_GPG} ./_check_session_keys) \
             && [ $SESSION_KEY = 9:0BACD64099D1468AB07C796F0C0AC4851948A658A15B34E803865E9FC635F2F5 ]
      then
+@@ -669,7 +669,7 @@ EOF
+         printf 'No.\nCould not make tempdir for testing signature verification when decrypting with session keys.\n'
+         errors=$((errors + 1))
+     elif ${CC} ${CFLAGS} ${gmime_cflags} _verify_sig_with_session_key.c ${gmime_ldflags} -o _verify_sig_with_session_key \
+-            && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < "$srcdir"/test/gnupg-secret-key.asc \
++            && GNUPGHOME=${TEMP_GPG} @GPGME_GPG@ --batch --quiet --import < "$srcdir"/test/gnupg-secret-key.asc \
+             && rm -f ${TEMP_GPG}/private-keys-v1.d/*.key
+     then
+         if GNUPGHOME=${TEMP_GPG} ./_verify_sig_with_session_key; then
