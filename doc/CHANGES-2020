@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4015 2020/07/12 19:37:48 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4016 2020/07/12 21:02:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6388,3 +6388,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/ffmpeg4 to 4.3.1 [adam 2020-07-12]
 	Updated multimedia/ffplay4 to 4.3.1 [adam 2020-07-12]
 	Updated converters/help2man to 1.47.16 [adam 2020-07-12]
+	Updated finance/bitcoin to 0.20.0 [adam 2020-07-12]
