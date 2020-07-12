@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4014 2020/07/12 17:53:46 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4015 2020/07/12 19:37:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6380,3 +6380,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-pylint-django to 2.1.0 [adam 2020-07-12]
 	Updated math/py-roman to 3.3 [adam 2020-07-12]
 	Updated www/py-django-import-export to 2.3.0 [adam 2020-07-12]
+	Updated net/fping to 4.3 [adam 2020-07-12]
+	Updated multimedia/ffmpeg2 to 2.8.17 [adam 2020-07-12]
+	Updated multimedia/ffplay2 to 2.8.17 [adam 2020-07-12]
+	Updated multimedia/ffmpeg3 to 3.4.8 [adam 2020-07-12]
+	Updated multimedia/ffplay3 to 3.4.8 [adam 2020-07-12]
+	Updated multimedia/ffmpeg4 to 4.3.1 [adam 2020-07-12]
+	Updated multimedia/ffplay4 to 4.3.1 [adam 2020-07-12]
+	Updated converters/help2man to 1.47.16 [adam 2020-07-12]
