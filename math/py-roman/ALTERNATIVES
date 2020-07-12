@@ -1,0 +1,1 @@
+bin/roman @PREFIX@/bin/roman-@PYVERSSUFFIX@
