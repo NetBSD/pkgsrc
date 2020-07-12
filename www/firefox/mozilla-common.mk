@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.174 2020/07/01 13:01:01 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.175 2020/07/12 01:37:50 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -210,6 +210,11 @@ PLIST_SUBST+=	DLL_SUFFIX=".dylib"
 PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
+# PR pkg/55456
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
+.include "../../devel/libatomic/buildlink3.mk"
+CONFIGURE_ENV.NetBSD+=	ac_cv_needs_atomic=yes
+.endif
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
