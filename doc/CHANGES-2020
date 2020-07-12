@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4013 2020/07/12 15:19:53 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4014 2020/07/12 17:53:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6376,3 +6376,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/vttest to 20200610 [ryoon 2020-07-12]
 	Updated mail/mutt to 1.14.6 [tron 2020-07-12]
 	Updated converters/bdf2sfd to 1.1.3 [fcambus 2020-07-12]
+	Updated databases/py-aiosqlite to 0.14.1 [adam 2020-07-12]
+	Updated www/py-pylint-django to 2.1.0 [adam 2020-07-12]
+	Updated math/py-roman to 3.3 [adam 2020-07-12]
+	Updated www/py-django-import-export to 2.3.0 [adam 2020-07-12]
