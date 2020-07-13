@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2019/07/20 23:14:40 wiz Exp $
+$NetBSD: distinfo,v 1.16 2020/07/13 13:01:01 wiz Exp $
 
-SHA1 (transmission-2.94.tar.xz) = 5f1b41090764bb2150eb0440fce671a3825ef265
-RMD160 (transmission-2.94.tar.xz) = 92fef8c64ff0ee71002b3f36149947e60e568d10
-SHA512 (transmission-2.94.tar.xz) = ee411743940f2897aa0bbc351ce79f11d860075d2e9e399d60301eae8cfc453e20426ef553fc62ee43019a07c052d512f5d7972cc4411fb57b1312c2c1558da7
-Size (transmission-2.94.tar.xz) = 3365952 bytes
-SHA1 (patch-qt_qtr.pro) = 8789931713d96bd1015c615660ab729008d5bbf4
+SHA1 (transmission-3.00.tar.xz) = fd6bd78cfe5a612b422a49e8193d82df2486a3c4
+RMD160 (transmission-3.00.tar.xz) = 5286c3e183474cba6ed1c6cfc022f4f5afab4fda
+SHA512 (transmission-3.00.tar.xz) = eeaf7fe46797326190008776a7fa641b6341c806b0f1684c2e7326c1284832a320440013e42a37acda9fd0ee5dca695f215d6263c8acb39188c5d9a836104a61
+Size (transmission-3.00.tar.xz) = 3329220 bytes
+SHA1 (patch-qt_qtr.pro) = e29629fada5bbb34e3b05b47092dba655b9d8265
