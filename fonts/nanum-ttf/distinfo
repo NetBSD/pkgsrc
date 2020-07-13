@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:37 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/07/13 16:59:59 minskim Exp $
 
-SHA1 (NanumFont_TTF_ALL.zip) = 1cbfffdf8e5f81915642340560fb2ca7c1d08ef5
-RMD160 (NanumFont_TTF_ALL.zip) = 55a540bef2d5428b04adcc09eb36ecfb12431d37
-SHA512 (NanumFont_TTF_ALL.zip) = a2deeba9d145e8474cdb84e3a6a4e528f60c5f5b3d3f5cc3239b465927a091da77ff83c7995b8cbaeee91b12753bfa91fdf39fb530a1dbbd88fed0db3a460141
-Size (NanumFont_TTF_ALL.zip) = 14967190 bytes
+SHA1 (fonts-nanum_20200506.orig.tar.xz) = 525c4c710882d5af2752d9d20455387f2ca9fa07
+RMD160 (fonts-nanum_20200506.orig.tar.xz) = fa3fe0c9bdb1af95541c74a79eeb0b54665564eb
+SHA512 (fonts-nanum_20200506.orig.tar.xz) = 13b686d2151d5fb2b526f1355ea0cc7f91f885678b00dfb009921370a98c94b4956d58f624f4e02bfc2a48e88ecdf7707d1b78c6a24facd3f5bc527ee024aaa6
+Size (fonts-nanum_20200506.orig.tar.xz) = 28854212 bytes
