@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.260 2020/07/10 10:04:54 hauke Exp $
+# $NetBSD: Makefile,v 1.261 2020/07/13 11:35:54 jperkin Exp $
 
 DISTNAME=	openssl-1.1.1g
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
@@ -87,7 +87,9 @@ post-install:
 	for f in openssl-*; do						\
 		${RM} -f $${f};						\
 		${MV} `${ECHO} $${f} | ${SED} -e 's/openssl-//'` $${f};	\
-	done
+	done;								\
+	${RM} -f openssl-c_rehash.1;					\
+	${LN} -s openssl-rehash.1 c_rehash.1
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
