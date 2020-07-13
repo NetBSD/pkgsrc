@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.105 2020/04/30 08:43:25 plunky Exp $
+# $NetBSD: license.mk,v 1.106 2020/07/13 20:25:57 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -42,8 +42,7 @@
 #	LICENSE=	(license1 AND license2) OR license3
 #	Parenthesis are required when mixing AND and OR.
 #
-#	Every package should specify its license.  (Prior to early 2009,
-#	Open Source and Free software did not have license tags.)
+#	Every package should specify its license.
 #
 #	Licenses are collected in the licenses/ subdirectory of
 #	pkgsrc.  For open source license, we generally use the same
@@ -218,13 +217,9 @@ SKIP_LICENSE_CHECK?=	no
 _ACCEPTABLE_LICENSE=	skipped
 .else
 _ACCEPTABLE_LICENSE!=	\
-    if test `${PKG_ADMIN} -V` -lt 20090528; then \
-	echo outdated; \
-    else \
 	${PKGSRC_SETENV} PKGSRC_ACCEPTABLE_LICENSES=${ACCEPTABLE_LICENSES:Q} \
 	PKGSRC_DEFAULT_ACCEPTABLE_LICENSES=${DEFAULT_ACCEPTABLE_LICENSES:Q} \
-	${PKG_ADMIN} check-license ${LICENSE:Q} || echo failure; \
-    fi
+	${PKG_ADMIN} check-license ${LICENSE:Q} || echo failure
 .endif
 
 .if ${_ACCEPTABLE_LICENSE} == "no"
