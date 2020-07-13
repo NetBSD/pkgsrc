@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4017 2020/07/13 06:01:45 kim Exp $
+$NetBSD: CHANGES-2020,v 1.4018 2020/07/13 09:49:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6390,3 +6390,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/help2man to 1.47.16 [adam 2020-07-12]
 	Updated finance/bitcoin to 0.20.0 [adam 2020-07-12]
 	Updated textproc/par to 1.53.0 [kim 2020-07-13]
+	Updated games/dMagnetic to 0.24 [wiz 2020-07-13]
