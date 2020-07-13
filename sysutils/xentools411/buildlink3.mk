@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2020/07/13 21:49:37 wiz Exp $
+
+BUILDLINK_TREE+=	xentools411
+
+.if !defined(XENTOOLS411_BUILDLINK3_MK)
+XENTOOLS411_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.xentools411+=	xentools411>=4.11.0
+BUILDLINK_PKGSRCDIR.xentools411?=	../../sysutils/xentools411
+
+.endif	# XENTOOLS411_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-xentools411
