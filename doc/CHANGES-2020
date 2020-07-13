@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4020 2020/07/13 13:01:14 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4021 2020/07/13 16:09:55 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6393,3 +6393,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/dMagnetic to 0.24 [wiz 2020-07-13]
 	Updated security/openssl to 1.1.1gnb2 [jperkin 2020-07-13]
 	Updated net/transmission to 3.00 [wiz 2020-07-13]
+	Updated converters/bdf2psf to 1.196 [fcambus 2020-07-13]
