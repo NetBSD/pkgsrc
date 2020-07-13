@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.9 2019/07/20 23:14:40 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2020/07/13 13:01:01 wiz Exp $
 #
 # used by net/transmission/Makefile
 # used by net/transmission-gtk/Makefile
 # used by net/transmission-qt/Makefile
 
-VERSION=	2.94
+VERSION=	3.00
 DISTNAME=	transmission-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/transmission/transmission-releases/raw/master/
@@ -40,8 +40,8 @@ ALL_ENV+=	LIBEVENT_CFLAGS=-I${BUILDLINK_PREFIX.libevent}/include
 ALL_ENV+=	LIBEVENT_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libevent}/lib -levent"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
 .include "../../devel/libevent/buildlink3.mk"
-ALL_ENV+=	"OPENSSL_CFLAGS=-I${SSLBASE}/include"
-ALL_ENV+=	"OPENSSL_LIBS=-L${SSLBASE}/lib -lcrypto -lssl"
+ALL_ENV+=	OPENSSL_CFLAGS="-I${SSLBASE}/include"
+ALL_ENV+=	OPENSSL_LIBS="-L${SSLBASE}/lib -lcrypto -lssl"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
