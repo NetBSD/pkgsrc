@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/03/16 17:16:53 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/07/13 20:05:11 wiz Exp $
 
 DISTNAME=	freeswitch-sounds-fr-${VERSION}
 VERSION=	1.0.18
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://files.freeswitch.org/
 DIST_SUBDIR=	freeswitch
 
-MAINTAINER=	darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	FreeSwitch Sounds (French)
 LICENSE=	mpl-1.1
 
