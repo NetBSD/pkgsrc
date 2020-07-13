@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2020/04/06 12:26:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2020/07/13 20:33:56 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -129,24 +129,21 @@ share/mame/hash/atom_rom.xml
 share/mame/hash/attache.xml
 share/mame/hash/aussiebyte.xml
 share/mame/hash/b2m.xml
+share/mame/hash/bbc_cass.xml
 share/mame/hash/bbc_flop_32016.xml
 share/mame/hash/bbc_flop_6502.xml
-share/mame/hash/bbc_flop_65c102.xml
 share/mame/hash/bbc_flop_68000.xml
 share/mame/hash/bbc_flop_80186.xml
 share/mame/hash/bbc_flop_arm.xml
 share/mame/hash/bbc_flop_torch.xml
 share/mame/hash/bbc_flop_z80.xml
+share/mame/hash/bbc_hdd.xml
 share/mame/hash/bbc_rom.xml
-share/mame/hash/bbca_cass.xml
-share/mame/hash/bbcb_cass.xml
-share/mame/hash/bbcb_cass_de.xml
 share/mame/hash/bbcb_flop.xml
 share/mame/hash/bbcb_flop_orig.xml
 share/mame/hash/bbcb_flop_us.xml
 share/mame/hash/bbcbc.xml
 share/mame/hash/bbcm_cart.xml
-share/mame/hash/bbcm_cass.xml
 share/mame/hash/bbcm_flop.xml
 share/mame/hash/bbcmc_flop.xml
 share/mame/hash/bdesignm_design_cart.xml
@@ -235,15 +232,19 @@ share/mame/hash/electron_cart.xml
 share/mame/hash/electron_cass.xml
 share/mame/hash/electron_flop.xml
 share/mame/hash/electron_rom.xml
+share/mame/hash/entex_sag.xml
 share/mame/hash/ep64_cart.xml
 share/mame/hash/ep64_cass.xml
 share/mame/hash/ep64_flop.xml
 share/mame/hash/epson_cpm.xml
+share/mame/hash/eti660_quik.xml
 share/mame/hash/evio.xml
 share/mame/hash/ews286_flop.xml
+share/mame/hash/excalibur64.xml
 share/mame/hash/exl100.xml
 share/mame/hash/famicom_cass.xml
 share/mame/hash/famicom_flop.xml
+share/mame/hash/fidel_msc.xml
 share/mame/hash/fidel_sc6.xml
 share/mame/hash/fidel_scc.xml
 share/mame/hash/fm77av.xml
@@ -293,6 +294,7 @@ share/mame/hash/hp_ipc.xml
 share/mame/hash/ht68k.xml
 share/mame/hash/hx20_rom.xml
 share/mame/hash/hyperscan.xml
+share/mame/hash/hyperscan_card.xml
 share/mame/hash/i7000_card.xml
 share/mame/hash/ibm5140.xml
 share/mame/hash/ibm5150.xml
@@ -315,6 +317,7 @@ share/mame/hash/iq151_cart.xml
 share/mame/hash/iq151_flop.xml
 share/mame/hash/ique.xml
 share/mame/hash/iqunlim_cart.xml
+share/mame/hash/itt3030.xml
 share/mame/hash/jaguar.xml
 share/mame/hash/jakks_gamekey_dp.xml
 share/mame/hash/jakks_gamekey_dy.xml
@@ -338,6 +341,7 @@ share/mame/hash/kim1_cass.xml
 share/mame/hash/korvet_flop.xml
 share/mame/hash/lantutor.xml
 share/mame/hash/laser2001_cart.xml
+share/mame/hash/leapfrog_didj_cart.xml
 share/mame/hash/leapfrog_leappad_cart.xml
 share/mame/hash/leapfrog_ltleappad_cart.xml
 share/mame/hash/leapfrog_mfleappad_cart.xml
@@ -347,6 +351,7 @@ share/mame/hash/lisa2.xml
 share/mame/hash/lviv.xml
 share/mame/hash/lynx.xml
 share/mame/hash/m20.xml
+share/mame/hash/m24.xml
 share/mame/hash/m5_cart.xml
 share/mame/hash/m5_cass.xml
 share/mame/hash/m5_flop.xml
@@ -429,6 +434,7 @@ share/mame/hash/next.xml
 share/mame/hash/ngp.xml
 share/mame/hash/ngpc.xml
 share/mame/hash/nimbus.xml
+share/mame/hash/nuon.xml
 share/mame/hash/octopus.xml
 share/mame/hash/odyssey2.xml
 share/mame/hash/ondra.xml
@@ -456,6 +462,7 @@ share/mame/hash/pc8801_flop.xml
 share/mame/hash/pc88va.xml
 share/mame/hash/pc98.xml
 share/mame/hash/pc98_cd.xml
+share/mame/hash/pcd_flop.xml
 share/mame/hash/pce.xml
 share/mame/hash/pce_tourvision.xml
 share/mame/hash/pcecd.xml
@@ -520,6 +527,7 @@ share/mame/hash/rx78.xml
 share/mame/hash/sage2.xml
 share/mame/hash/saitek_egr.xml
 share/mame/hash/saitek_kso.xml
+share/mame/hash/saitek_schess.xml
 share/mame/hash/samcoupe_cass.xml
 share/mame/hash/samcoupe_flop.xml
 share/mame/hash/sat_cart.xml
@@ -535,6 +543,7 @@ share/mame/hash/sega_beena_cart.xml
 share/mame/hash/segacd.xml
 share/mame/hash/sf7000.xml
 share/mame/hash/sg1000.xml
+share/mame/hash/sgi_mips.xml
 share/mame/hash/sgx.xml
 share/mame/hash/sitcom.xml
 share/mame/hash/smarttv_cart.xml
@@ -574,6 +583,7 @@ share/mame/hash/studio2.xml
 share/mame/hash/stv.xml
 share/mame/hash/super6.xml
 share/mame/hash/super80_cass.xml
+share/mame/hash/super80_flop.xml
 share/mame/hash/superpet_flop.xml
 share/mame/hash/supracan.xml
 share/mame/hash/sv8000.xml
@@ -595,6 +605,7 @@ share/mame/hash/ti74_cart.xml
 share/mame/hash/ti95_cart.xml
 share/mame/hash/ti99_cart.xml
 share/mame/hash/tiki100.xml
+share/mame/hash/timex_cass.xml
 share/mame/hash/timex_dock.xml
 share/mame/hash/tntell.xml
 share/mame/hash/to770_cart.xml
