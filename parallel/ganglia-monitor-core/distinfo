@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2018/06/28 01:05:01 bacon Exp $
+$NetBSD: distinfo,v 1.17 2020/07/13 18:40:47 wiz Exp $
 
 SHA1 (ganglia-3.7.2.tar.gz) = 5ea23da8e5b85da53216dd7c742c8154e7aa576e
 RMD160 (ganglia-3.7.2.tar.gz) = 9b5c48bcf2aa489caea689713dabb12804d9cee2
@@ -11,8 +11,8 @@ SHA1 (patch-gmetad_data__thread.c) = 1af7a1c5b3f78bf65de42638e8ed595bf718107a
 SHA1 (patch-gmetad_rrd__helpers.c) = e1afe61311b0df96f633983e673652b32a1938f4
 SHA1 (patch-gmond_gmond.conf.5) = dfabfee6fb26cd5a384c1baed48fe631b957cf5b
 SHA1 (patch-gmond_modules_conf.d_modpython.conf.in) = 5b0d79efb34dae2f46dd911509759e8d75b4af96
-SHA1 (patch-lib__gm_protocol_dr.c) = 9d17d79bb1a6426a2547c00006819483aff47363
 SHA1 (patch-lib__update_pidfile.c) = a8ed4fbeabf5d46a523c5cd3b891e5752d74187b
 SHA1 (patch-lib_default__conf.h.in) = 70dbcbc39226369c9fb4f59240b8568854ac4e87
+SHA1 (patch-lib_gm__protocol__xdr.c) = 2e9d30dfb552a266728aafdfab5c82b0018936b0
 SHA1 (patch-libmetrics__solaris__metrics.c) = 2b6ad945ed7eafa05fe4c24a535b00deba46173d
 SHA1 (patch-libmetrics_freebsd_metrics.c) = acb3485a603c13fd4a9f7d7af621988f777ede6e
