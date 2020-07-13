@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/11/04 22:10:12 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/07/13 20:05:12 wiz Exp $
 
 DISTNAME=	BeautifulSoup-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/B/b/:S/S/s/}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	https://www.crummy.com/software/BeautifulSoup/download/3.x/
 MASTER_SITES+=	${MASTER_SITE_PYPI:=b/beautifulsoup/}
 
-MAINTAINER=	darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.crummy.com/software/BeautifulSoup/
 COMMENT=	HTML/XML Parser for Python, version 3
 LICENSE=	modified-bsd
