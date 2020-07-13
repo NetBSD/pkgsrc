@@ -1,4 +1,4 @@
-$NetBSD: patch-snmp-error-msg.c,v 1.1 2018/09/21 00:59:53 jym Exp $
+$NetBSD: patch-drivers_snmp-ups.c,v 1.1 2020/07/13 18:50:05 wiz Exp $
 
 Get an explicit error message if we fail obtaining a response.
 
