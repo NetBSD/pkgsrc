@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4018 2020/07/13 09:49:19 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4019 2020/07/13 11:36:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6391,3 +6391,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/bitcoin to 0.20.0 [adam 2020-07-12]
 	Updated textproc/par to 1.53.0 [kim 2020-07-13]
 	Updated games/dMagnetic to 0.24 [wiz 2020-07-13]
+	Updated security/openssl to 1.1.1gnb2 [jperkin 2020-07-13]
