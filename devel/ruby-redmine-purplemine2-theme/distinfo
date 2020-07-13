@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/06 13:56:10 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/07/13 20:21:36 wiz Exp $
 
-SHA1 (ruby-redmine-purplemine2-theme/v2.10.2.tar.gz) = 1bfd30020ffda1b5d7b88194d31c7f7f3392892b
-RMD160 (ruby-redmine-purplemine2-theme/v2.10.2.tar.gz) = 7864faa636abfc3a6995632ca357edc51ea9e2dc
-SHA512 (ruby-redmine-purplemine2-theme/v2.10.2.tar.gz) = 29a30f9a59a672525cf62fd88741577397e49aa5b448e83c51882a6603e9c2e383179a97a8e64da15e5b40d6d12927c56b200df6499f1a76e1caca41c7cb477a
-Size (ruby-redmine-purplemine2-theme/v2.10.2.tar.gz) = 1248572 bytes
+SHA1 (PurpleMine2-2.10.2.tar.gz) = 1bfd30020ffda1b5d7b88194d31c7f7f3392892b
+RMD160 (PurpleMine2-2.10.2.tar.gz) = 7864faa636abfc3a6995632ca357edc51ea9e2dc
+SHA512 (PurpleMine2-2.10.2.tar.gz) = 29a30f9a59a672525cf62fd88741577397e49aa5b448e83c51882a6603e9c2e383179a97a8e64da15e5b40d6d12927c56b200df6499f1a76e1caca41c7cb477a
+Size (PurpleMine2-2.10.2.tar.gz) = 1248572 bytes
