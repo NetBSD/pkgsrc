@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/11/02 15:38:12 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/07/13 18:37:22 wiz Exp $
 #
 
 DISTNAME=	tokyotyrant-1.1.41
@@ -24,10 +24,10 @@ TEST_TARGET=	check
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.29
 .include "../../databases/tokyocabinet/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tc=${BUILDLINK_PREFIX.tokyocabinet}
-.if !empty(PKG_BUILD_OPTIONS.tokyocabinet:Mbzip2)
+.if ${PKG_BUILD_OPTIONS.tokyocabinet:Mbzip2}
 CONFIGURE_ARGS+=	--with-bzip=${BUILDLINK_PREFIX.bzip2}
 .endif
-.if !empty(PKG_BUILD_OPTIONS.tokyocabinet:Mzlib)
+.if ${PKG_BUILD_OPTIONS.tokyocabinet:Mzlib}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 .endif
 PTHREAD_AUTO_VARS=	yes
