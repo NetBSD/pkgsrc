@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/03/10 22:10:44 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2020/07/13 20:05:12 wiz Exp $
 
 DISTNAME=		gitso-0.6
 PKGREVISION=		24
@@ -6,7 +6,7 @@ CATEGORIES=		net x11
 MASTER_SITES=		http://gitso.googlecode.com/files/
 DISTFILES=		gitso_0.6_linux_all.tar.gz
 
-MAINTAINER=		darcy@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://code.google.com/archive/p/gitso/
 COMMENT=		Gitso is to support others
 LICENSE=		gnu-gpl-v3
