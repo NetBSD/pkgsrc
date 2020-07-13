@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2020/06/11 10:30:41 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/13 20:05:12 wiz Exp $
 
 DISTNAME=	rst2pdf-0.97
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
 
-MAINTAINER=	darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rst2pdf.org/
 COMMENT=	Convert restructured text to PDF via reportlab
 LICENSE=	mit

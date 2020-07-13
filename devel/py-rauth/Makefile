@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/09/20 16:31:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/13 20:05:11 wiz Exp $
 
 DISTNAME=	rauth-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rauth/}
 
-MAINTAINER=	darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/litl/rauth
 COMMENT=	Python library for OAuth 1.0/a, 2.0, and Ofly consumers
 LICENSE=	mit
