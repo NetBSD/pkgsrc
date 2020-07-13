@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/09 11:41:57 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/13 20:05:11 wiz Exp $
 
 DISTNAME=	freeswitch-music-1.0.8
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	http://files.freeswitch.org/
 DIST_SUBDIR=	freeswitch
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	FreeSwitch Music - All Bitrates
 LICENSE=	mpl-1.1
 
