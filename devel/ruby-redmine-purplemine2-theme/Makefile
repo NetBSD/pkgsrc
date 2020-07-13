@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/05/06 14:53:30 taca Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/13 20:21:36 wiz Exp $
 
-DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${RUBY_PKGPREFIX}-redmine-${GITHUB_PROJECT:tl}-theme-${DISTNAME:S/v//1}
+DISTNAME=	PurpleMine2-2.10.2
+PKGNAME=	${RUBY_PKGPREFIX}-redmine-purplemine2-theme-${DISTNAME:S/PurpleMine2-//}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrliptontea/}
 GITHUB_PROJECT=	PurpleMine2
-GITHUB_TAG=	v2.10.2
-DIST_SUBDIR=	ruby-redmine-${GITHUB_PROJECT:tl}-theme
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mrliptontea/PurpleMine2/
@@ -13,8 +12,6 @@ COMMENT=	Free Redmine theme for modern browsers
 LICENSE=	mit
 
 .include "../../meta-pkgs/ruby-redmine-themes/Makefile.common"
-
-WRKSRC=		${WRKDIR}/PurpleMine2-${GITHUB_TAG:S/v//}
 
 PM2_DIR=	${REDMINE_THEMEDIR}/purplemine2
 
