@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/04/15 09:28:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/07/13 13:01:01 wiz Exp $
 bin/transmission-create
 bin/transmission-daemon
 bin/transmission-edit
@@ -25,7 +25,9 @@ share/transmission/web/javascript/jquery/jquery.min.js
 share/transmission/web/javascript/jquery/jquery.transmenu.min.js
 share/transmission/web/javascript/jquery/jquery.ui-contextmenu.min.js
 share/transmission/web/javascript/jquery/json2.min.js
+share/transmission/web/javascript/main.js
 share/transmission/web/javascript/notifications.js
+share/transmission/web/javascript/polyfill.js
 share/transmission/web/javascript/prefs-dialog.js
 share/transmission/web/javascript/remote.js
 share/transmission/web/javascript/torrent-row.js

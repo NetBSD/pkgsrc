@@ -1,9 +1,9 @@
-$NetBSD: patch-qt_qtr.pro,v 1.6 2019/07/20 23:14:40 wiz Exp $
+$NetBSD: patch-qt_qtr.pro,v 1.7 2020/07/13 13:01:01 wiz Exp $
 
 1. Fix man page installation path.
 2. add openssl cflags/ldflags (still needed?)
 
---- qt/qtr.pro.orig	2015-12-29 00:47:32.464150631 +0000
+--- qt/qtr.pro.orig	2020-05-22 11:04:23.470805450 +0000
 +++ qt/qtr.pro
 @@ -8,7 +8,8 @@ target.path = /bin
  INSTALLS += target
@@ -14,8 +14,8 @@ $NetBSD: patch-qt_qtr.pro,v 1.6 2019/07/20 23:14:40 wiz Exp $
 +
  man.files = transmission-qt.1
  
- CONFIG += qt thread debug link_pkgconfig c++11 warn_on
-@@ -28,12 +29,14 @@ include(config.pri)
+ CONFIG += qt thread link_pkgconfig c++1z warn_on
+@@ -29,12 +30,14 @@ include(config.pri)
  
  INCLUDEPATH = $${EVENT_TOP}/include $${INCLUDEPATH}
  INCLUDEPATH += $${TRANSMISSION_TOP}
