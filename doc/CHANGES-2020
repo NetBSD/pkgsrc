@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4023 2020/07/13 17:00:42 minskim Exp $
+$NetBSD: CHANGES-2020,v 1.4024 2020/07/13 18:19:05 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6396,3 +6396,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/bdf2psf to 1.196 [fcambus 2020-07-13]
 	Updated security/snallygaster to 0.0.8 [leot 2020-07-13]
 	Updated fonts/nanum-ttf to 20200506 [msk 2020-07-13]
+	Updated pkgtools/pkgin to 20.7.0 [jperkin 2020-07-13]
