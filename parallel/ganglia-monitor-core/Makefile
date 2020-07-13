@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2020/06/02 08:24:37 adam Exp $
-#
+# $NetBSD: Makefile,v 1.70 2020/07/13 18:40:47 wiz Exp $
 
 DISTNAME=		ganglia-3.7.2
 PKGNAME=		ganglia-monitor-core-3.7.2
 PKGREVISION=		11
-CATEGORIES=		net parallel
+CATEGORIES=		parallel net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
 
 MAINTAINER=		bacon@NetBSD.org
@@ -70,9 +69,9 @@ SUBST_VARS.paths+=	GANGLIA_VARBASE
 ## doing so requires perl installed in the build stage.
 SUBST_CLASSES+=		etcdir
 SUBST_STAGE.etcdir=	pre-configure
-SUBST_FILES.etcdir=	${WRKSRC}/README \
-			${WRKSRC}/mans/gmetad.1 \
-			${WRKSRC}/mans/gmond.1
+SUBST_FILES.etcdir+=	README
+SUBST_FILES.etcdir+=	mans/gmetad.1
+SUBST_FILES.etcdir+=	mans/gmond.1
 SUBST_SED.etcdir=	-e "s|/etc/ganglia/\(gm.*d\.conf\)|${PREFIX}/etc/\1|g"
 
 SUBST_CLASSES+=			linux_init
