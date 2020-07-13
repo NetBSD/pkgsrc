@@ -1,20 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/02 19:34:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/13 13:01:01 wiz Exp $
 bin/transmission-gtk
 man/man1/transmission-gtk.1
+share/appdata/transmission-gtk.appdata.xml
 share/applications/transmission-gtk.desktop
-share/icons/hicolor/16x16/apps/transmission.png
-share/icons/hicolor/22x22/apps/transmission.png
-share/icons/hicolor/24x24/apps/transmission.png
-share/icons/hicolor/256x256/apps/transmission.png
-share/icons/hicolor/32x32/apps/transmission.png
-share/icons/hicolor/48x48/apps/transmission.png
+share/icons/hicolor/scalable/apps/transmission-devel.svg
 share/icons/hicolor/scalable/apps/transmission.svg
+share/icons/hicolor/symbolic/apps/transmission-symbolic.svg
 share/locale/an/LC_MESSAGES/transmission-gtk.mo
 share/locale/ar/LC_MESSAGES/transmission-gtk.mo
 share/locale/ast/LC_MESSAGES/transmission-gtk.mo
 share/locale/az/LC_MESSAGES/transmission-gtk.mo
 share/locale/be/LC_MESSAGES/transmission-gtk.mo
-share/locale/be@latin/LC_MESSAGES/transmission-gtk.mo
 share/locale/bg/LC_MESSAGES/transmission-gtk.mo
 share/locale/bn/LC_MESSAGES/transmission-gtk.mo
 share/locale/bo/LC_MESSAGES/transmission-gtk.mo
@@ -25,6 +21,7 @@ share/locale/ca@valencia/LC_MESSAGES/transmission-gtk.mo
 share/locale/ceb/LC_MESSAGES/transmission-gtk.mo
 share/locale/ckb/LC_MESSAGES/transmission-gtk.mo
 share/locale/cs/LC_MESSAGES/transmission-gtk.mo
+share/locale/cy/LC_MESSAGES/transmission-gtk.mo
 share/locale/da/LC_MESSAGES/transmission-gtk.mo
 share/locale/de/LC_MESSAGES/transmission-gtk.mo
 share/locale/el/LC_MESSAGES/transmission-gtk.mo
@@ -40,6 +37,7 @@ share/locale/fi/LC_MESSAGES/transmission-gtk.mo
 share/locale/fil/LC_MESSAGES/transmission-gtk.mo
 share/locale/fo/LC_MESSAGES/transmission-gtk.mo
 share/locale/fr/LC_MESSAGES/transmission-gtk.mo
+share/locale/fr_CA/LC_MESSAGES/transmission-gtk.mo
 share/locale/ga/LC_MESSAGES/transmission-gtk.mo
 share/locale/gl/LC_MESSAGES/transmission-gtk.mo
 share/locale/gv/LC_MESSAGES/transmission-gtk.mo
@@ -53,6 +51,7 @@ share/locale/id/LC_MESSAGES/transmission-gtk.mo
 share/locale/is/LC_MESSAGES/transmission-gtk.mo
 share/locale/it/LC_MESSAGES/transmission-gtk.mo
 share/locale/ja/LC_MESSAGES/transmission-gtk.mo
+share/locale/jbo/LC_MESSAGES/transmission-gtk.mo
 share/locale/ka/LC_MESSAGES/transmission-gtk.mo
 share/locale/kk/LC_MESSAGES/transmission-gtk.mo
 share/locale/ko/LC_MESSAGES/transmission-gtk.mo
@@ -85,7 +84,7 @@ share/locale/sq/LC_MESSAGES/transmission-gtk.mo
 share/locale/sr/LC_MESSAGES/transmission-gtk.mo
 share/locale/sv/LC_MESSAGES/transmission-gtk.mo
 share/locale/sw/LC_MESSAGES/transmission-gtk.mo
-share/locale/ta_LK/LC_MESSAGES/transmission-gtk.mo
+share/locale/ta/LC_MESSAGES/transmission-gtk.mo
 share/locale/te/LC_MESSAGES/transmission-gtk.mo
 share/locale/th/LC_MESSAGES/transmission-gtk.mo
 share/locale/tl/LC_MESSAGES/transmission-gtk.mo
@@ -96,5 +95,6 @@ share/locale/ur/LC_MESSAGES/transmission-gtk.mo
 share/locale/uz/LC_MESSAGES/transmission-gtk.mo
 share/locale/vi/LC_MESSAGES/transmission-gtk.mo
 share/locale/zh_CN/LC_MESSAGES/transmission-gtk.mo
+share/locale/zh_HK/LC_MESSAGES/transmission-gtk.mo
 share/locale/zh_TW/LC_MESSAGES/transmission-gtk.mo
 share/pixmaps/transmission.png
