@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/19 14:44:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/13 19:45:45 alnsn Exp $
 #
 
 DISTNAME=	fplll-5.3.2
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fplll/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION}//}
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://perso.ens-lyon.fr/damien.stehle/\#software
 COMMENT=	Lattice algorithms using floating-point arithmetic
 LICENSE=	gnu-lgpl-v2.1

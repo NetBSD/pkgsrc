@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/06/17 09:54:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2020/07/13 19:45:45 alnsn Exp $
 
 PKGNAME=	go-ed25519-20171601
 PKGREVISION=	19
@@ -8,7 +8,7 @@ CATEGORIES=	devel security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agl/}
 GITHUB_PROJECT=	ed25519
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/agl/ed25519
 COMMENT=	Ed25519 for Go
 LICENSE=	modified-bsd
