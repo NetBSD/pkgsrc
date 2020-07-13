@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/21 13:35:59 sevan Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/07/13 11:35:54 jperkin Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -117,8 +117,8 @@ lib/pkgconfig/libcrypto.pc
 lib/pkgconfig/libssl.pc
 lib/pkgconfig/openssl.pc
 man/man1/CA.pl.1
+man/man1/c_rehash.1
 man/man1/openssl-asn1parse.1
-man/man1/openssl-c_rehash.1
 man/man1/openssl-ca.1
 man/man1/openssl-ciphers.1
 man/man1/openssl-cms.1
