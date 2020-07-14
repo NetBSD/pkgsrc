@@ -1,3 +1,7 @@
-Coxpcall encapsulates the protected calls with a coroutine based
-loop, so errors can be dealed without the usual pcall/xpcall issues
-with coroutines.
+Coxpcall encapsulates the protected calls with a coroutine based loop, so
+errors can be handled without the usual pcall/xpcall issues with coroutines
+for Lua 5.1.
+
+Lua 5.2 was extended with the Coxpcall functionality and hence it is no
+longer required. The 5.2+ compatibility by coxpcall means that it maintains
+backward compatibility while using the built-in Lua implementation.
