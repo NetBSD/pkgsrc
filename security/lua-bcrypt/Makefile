@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/07/03 20:41:36 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/14 11:45:23 nia Exp $
 
-DISTNAME=	lua-bcrypt-2.1.5
+DISTNAME=	lua-bcrypt-2.1.6
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
 CATEGORIES=	security lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikejsavage/}
 GITHUB_PROJECT=	lua-bcrypt
-GITHUB_TAG=	v2.1-5
+GITHUB_TAG=	v2.1-6
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/mikejsavage/lua-bcrypt
