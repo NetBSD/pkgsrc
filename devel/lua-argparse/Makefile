@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/07/02 11:36:36 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/14 11:47:01 nia Exp $
 
-DISTNAME=	lua-argparse-0.7.0
+DISTNAME=	lua-argparse-0.7.1
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luarocks/}
