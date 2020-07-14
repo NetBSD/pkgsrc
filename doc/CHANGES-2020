@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4033 2020/07/14 12:44:28 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4034 2020/07/14 12:48:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6406,3 +6406,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/lua-coxpcall to 1.17.0 [nia 2020-07-14]
 	Updated devel/lua-posix to 35.0 [nia 2020-07-14]
 	Updated devel/lua-luassert to 1.8.0 [nia 2020-07-14]
+	Updated misc/py-tqdm to 4.47.0 [adam 2020-07-14]
+	Updated time/py-tzdata to 2020.1 [adam 2020-07-14]
+	Updated textproc/py-elementpath to 1.4.6 [adam 2020-07-14]
+	Updated textproc/py-humanize to 2.5.0 [adam 2020-07-14]
