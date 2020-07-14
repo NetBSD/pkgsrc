@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.11 2020/05/24 03:43:16 markd Exp $
+# $NetBSD: Makefile,v 1.12 2020/07/14 19:12:31 adam Exp $
 
-PKGREVISION=	1
 .include "dist.mk"
 
 PKGNAME=	python38-${PY_DISTVERSION}
@@ -22,6 +21,7 @@ PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.opt-1.pyc$$/ {
 PRINT_PLIST_AWK+=	sub(/.opt-[12].pyc$$/, ".pyo")}
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
@@ -164,6 +164,11 @@ CHECK_INTERPRETER_SKIP=		lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
 CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/exe_with_z64
 CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/exe_with_zip
 CHECK_INTERPRETER_SKIP+=	lib/python${PY_VER_SUFFIX}/test/ziptestdata/header.sh
+
+# contain CONFIGURE_ARGS and CONFIGURE_ENV
+CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/_sysconfigdata*
+CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/__pycache__/_sysconfigdata*
+CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/Makefile
 
 # Avoid error: Cannot generate ./Include/opcode.h, python not found !
 post-configure:
