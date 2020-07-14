@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4028 2020/07/14 11:43:43 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4029 2020/07/14 11:45:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6401,3 +6401,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/terraform-provider-aws to 2.70.0 [adam 2020-07-14]
 	Updated news/sfeed to 0.9.18 [leot 2020-07-14]
 	Updated security/lua-arc4random to 1.4.1 [nia 2020-07-14]
+	Updated security/lua-bcrypt to 2.1.6 [nia 2020-07-14]
