@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/06 10:09:49 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.6 2020/07/14 12:41:28 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pytzdata/__init__.py
 ${PYSITELIB}/pytzdata/__init__.pyc
 ${PYSITELIB}/pytzdata/__init__.pyo
@@ -202,6 +205,7 @@ ${PYSITELIB}/pytzdata/zoneinfo/America/Noronha
 ${PYSITELIB}/pytzdata/zoneinfo/America/North_Dakota/Beulah
 ${PYSITELIB}/pytzdata/zoneinfo/America/North_Dakota/Center
 ${PYSITELIB}/pytzdata/zoneinfo/America/North_Dakota/New_Salem
+${PYSITELIB}/pytzdata/zoneinfo/America/Nuuk
 ${PYSITELIB}/pytzdata/zoneinfo/America/Ojinaga
 ${PYSITELIB}/pytzdata/zoneinfo/America/Panama
 ${PYSITELIB}/pytzdata/zoneinfo/America/Pangnirtung
