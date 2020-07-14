@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4037 2020/07/14 17:52:41 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4038 2020/07/14 19:12:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6414,3 +6414,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/nnn to 3.3 [sjmulder 2020-07-14]
 	Updated devel/py-argcomplete to 1.12.0 [adam 2020-07-14]
 	Updated net/py-gsutil to 4.52 [adam 2020-07-14]
+	Updated lang/python38 to 3.8.4 [adam 2020-07-14]
+	Updated lang/py38-html-docs to 3.8.4 [adam 2020-07-14]
