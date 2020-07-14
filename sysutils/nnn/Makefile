@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/06/23 23:32:30 sjmulder Exp $
+# $NetBSD: Makefile,v 1.21 2020/07/14 12:51:01 sjmulder Exp $
 
-DISTNAME=	nnn-3.2
-PKGREVISION=	2
+DISTNAME=	nnn-3.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -35,6 +34,7 @@ READLINE_DEFAULT=	readline
 # https://github.com/jarun/nnn/issues/453
 MAKE_ENV.Linux+=	LDLIBS=-lrt
 
+CFLAGS+=		-DCTX8
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 .include "../../mk/compiler.mk"
