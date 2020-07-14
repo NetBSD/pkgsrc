@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4025 2020/07/13 20:34:08 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4026 2020/07/14 10:28:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6398,3 +6398,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/nanum-ttf to 20200506 [msk 2020-07-13]
 	Updated pkgtools/pkgin to 20.7.0 [jperkin 2020-07-13]
 	Updated emulators/mame to 0.222 [wiz 2020-07-13]
+	Updated net/terraform-provider-aws to 2.70.0 [adam 2020-07-14]
