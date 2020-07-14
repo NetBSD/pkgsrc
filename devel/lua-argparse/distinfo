@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/07/02 11:36:36 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/07/14 11:47:01 nia Exp $
 
-SHA1 (lua-argparse-0.7.0.tar.gz) = d826e9eb73c27a55a1e17a2f368f6b3fd6f13d9d
-RMD160 (lua-argparse-0.7.0.tar.gz) = f1f2ed1035e2fcd4f8d29802c3ea179437768dc4
-SHA512 (lua-argparse-0.7.0.tar.gz) = 81aa94a7f522fcee9cefc5fd86d845bc375308e01c3cc90023ec9a0f42e0ce382c6708acb4269e0a8b200d1f13f394fb11acc97bfbb3253f0779966c5b2a36bf
-Size (lua-argparse-0.7.0.tar.gz) = 43433 bytes
+SHA1 (lua-argparse-0.7.1.tar.gz) = fbc6c7cb2176a3560b24de478c2ec88b629f0700
+RMD160 (lua-argparse-0.7.1.tar.gz) = 5c44c56557940ff82bb394815eb9690a283f3757
+SHA512 (lua-argparse-0.7.1.tar.gz) = f192d0c591516a74408a19c0bbf34233be180f63794211a951d19fc8d981749bc71eace16a4680c8f2bb302ab48958c6a9ffc84022a1754275fc1f9113ae32b0
+Size (lua-argparse-0.7.1.tar.gz) = 43778 bytes
