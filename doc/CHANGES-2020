@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4034 2020/07/14 12:48:46 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4035 2020/07/14 12:49:14 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6410,3 +6410,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/py-tzdata to 2020.1 [adam 2020-07-14]
 	Updated textproc/py-elementpath to 1.4.6 [adam 2020-07-14]
 	Updated textproc/py-humanize to 2.5.0 [adam 2020-07-14]
+	Updated textproc/libxls to 1.5.3 [sjmulder 2020-07-14]
