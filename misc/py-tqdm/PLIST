@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/05/03 11:52:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/07/14 12:39:03 adam Exp $
 bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -49,15 +49,24 @@ ${PYSITELIB}/tqdm/completion.sh
 ${PYSITELIB}/tqdm/contrib/__init__.py
 ${PYSITELIB}/tqdm/contrib/__init__.pyc
 ${PYSITELIB}/tqdm/contrib/__init__.pyo
+${PYSITELIB}/tqdm/contrib/bells.py
+${PYSITELIB}/tqdm/contrib/bells.pyc
+${PYSITELIB}/tqdm/contrib/bells.pyo
 ${PYSITELIB}/tqdm/contrib/concurrent.py
 ${PYSITELIB}/tqdm/contrib/concurrent.pyc
 ${PYSITELIB}/tqdm/contrib/concurrent.pyo
+${PYSITELIB}/tqdm/contrib/discord.py
+${PYSITELIB}/tqdm/contrib/discord.pyc
+${PYSITELIB}/tqdm/contrib/discord.pyo
 ${PYSITELIB}/tqdm/contrib/itertools.py
 ${PYSITELIB}/tqdm/contrib/itertools.pyc
 ${PYSITELIB}/tqdm/contrib/itertools.pyo
 ${PYSITELIB}/tqdm/contrib/telegram.py
 ${PYSITELIB}/tqdm/contrib/telegram.pyc
 ${PYSITELIB}/tqdm/contrib/telegram.pyo
+${PYSITELIB}/tqdm/contrib/utils_worker.py
+${PYSITELIB}/tqdm/contrib/utils_worker.pyc
+${PYSITELIB}/tqdm/contrib/utils_worker.pyo
 ${PYSITELIB}/tqdm/gui.py
 ${PYSITELIB}/tqdm/gui.pyc
 ${PYSITELIB}/tqdm/gui.pyo
