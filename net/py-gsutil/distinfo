@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2020/07/07 16:49:19 bsiegert Exp $
+$NetBSD: distinfo,v 1.9 2020/07/14 17:52:22 adam Exp $
 
-SHA1 (gsutil-4.51.tar.gz) = 87b2fd6afa82c96d8326d040b60fc2640f790f1d
-RMD160 (gsutil-4.51.tar.gz) = 10d87e4c6b2d375adbb9b928389791a70b812118
-SHA512 (gsutil-4.51.tar.gz) = cce5ca78c68a3dd33373fb86c2298a12f8290b4af73688758d84c7742a53e900afc8099e1f2113c50585a75e38344208276afb0f39492ced287fcbb1b5a3cfa3
-Size (gsutil-4.51.tar.gz) = 2484357 bytes
+SHA1 (gsutil-4.52.tar.gz) = 8e535f4a03d80c27a76603c61ff74a43c186cf20
+RMD160 (gsutil-4.52.tar.gz) = 250060a3c3f117b68fcb215ffbbc8fabcf9c281d
+SHA512 (gsutil-4.52.tar.gz) = 97c6e7dacdf0359f805523a4fce59fe1ea23dbaaba6e53917a7b397cd3f04a171a02a0648c55afb2a4455cb1358d42badb39df381e8e711d570800175208401d
+Size (gsutil-4.52.tar.gz) = 2487184 bytes
 SHA1 (patch-setup.py) = 2e2be0ae17a84feb3a7d6e2c2a5b14158d6ff276
