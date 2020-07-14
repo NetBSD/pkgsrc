@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2020/02/11 17:21:26 adam Exp $
+$NetBSD: distinfo,v 1.19 2020/07/14 17:43:46 adam Exp $
 
-SHA1 (argcomplete-1.11.1.tar.gz) = af53e44d0f15e47766ad50ba1bb73bcc404ee2e7
-RMD160 (argcomplete-1.11.1.tar.gz) = fb89dbf0238ace2e8ce231368eb6fc32bf2e061b
-SHA512 (argcomplete-1.11.1.tar.gz) = 523d542cf1430d8ad7b056e3b9c52769847c6e0bb9e266d71cc961e56816b7811f488a5c412f89b8de0d022a321d74733af87a50b3c0d698e796fb5e322d16ce
-Size (argcomplete-1.11.1.tar.gz) = 50773 bytes
+SHA1 (argcomplete-1.12.0.tar.gz) = 5316860c86a931535fd9bed6a5ca8bd9f6a67e33
+RMD160 (argcomplete-1.12.0.tar.gz) = 9fb4b724d2bc2faf9e722ce667948f4ff91bce16
+SHA512 (argcomplete-1.12.0.tar.gz) = 5e21e3caf1dcee661c0dadf28d7b127147325475fe3ae569fae8797a762c34b55125df9f52de8d76f0aa6dd4efdac260a358b325a7659beae02b1dedab501c18
+Size (argcomplete-1.12.0.tar.gz) = 53625 bytes
