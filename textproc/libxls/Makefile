@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/11/16 13:23:03 sjmulder Exp $
+# $NetBSD: Makefile,v 1.6 2020/07/14 12:48:58 sjmulder Exp $
 
-DISTNAME=	libxls-1.5.2
+DISTNAME=	libxls-1.5.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libxls/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
