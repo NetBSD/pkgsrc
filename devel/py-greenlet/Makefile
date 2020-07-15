@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/09/24 10:05:02 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/07/15 07:40:59 adam Exp $
 
-DISTNAME=	greenlet-0.4.15
+DISTNAME=	greenlet-0.4.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
