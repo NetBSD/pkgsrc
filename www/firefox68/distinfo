@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2020/07/07 16:44:11 nia Exp $
+$NetBSD: distinfo,v 1.20 2020/07/15 19:52:23 riastradh Exp $
 
 SHA1 (firefox-68.10.0esr.source.tar.xz) = 6c502a8d2379c761250781b313db53d7a270985e
 RMD160 (firefox-68.10.0esr.source.tar.xz) = 870aaf124f1812018c885ed461fc8541df089b5c
@@ -10,6 +10,13 @@ SHA1 (patch-build_moz.configure_rust.configure) = b57a9b1451dc426d75774f73d7c05f
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 11b45e0c7a9399c5b74b170648280a388dd67d89
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3cd2c65ab281d802c56216565970450767a3fb24
+SHA1 (patch-dom_webauthn_u2f-hid-rs_src_lib.rs) = c0dfe8b1e7ebbc7c1d6066c204030f13b063b8d7
+SHA1 (patch-dom_webauthn_u2f-hid-rs_src_netbsd_device.rs) = 091ffab5bd6a15425acb2ab023cc26f6b23324c6
+SHA1 (patch-dom_webauthn_u2f-hid-rs_src_netbsd_fd.rs) = 57f5c3c879b07375234e5cb0cbe0469b15105a6a
+SHA1 (patch-dom_webauthn_u2f-hid-rs_src_netbsd_mod.rs) = 7160fc9fe6d197b42104856b997337f823d2a791
+SHA1 (patch-dom_webauthn_u2f-hid-rs_src_netbsd_monitor.rs) = 527722bd4fbf0aca07d710e0a8b73f95b2adad40
+SHA1 (patch-dom_webauthn_u2f-hid-rs_src_netbsd_transaction.rs) = aeafe7c1df614bb5e46cb7fb1cb351001f292caf
+SHA1 (patch-dom_webauthn_u2f-hid-rs_src_netbsd_uhid.rs) = c1d2157350803fb3eaef6f7a00e7c81dd9cf708b
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = e458c9c8dc66edc69c1874734af28a77fc5e3993
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 2f73c76c48852613e0c55c1680fcc2a9eb3cf4ef
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 2c909a10a341e600392417240ad0c556f495d6ba
