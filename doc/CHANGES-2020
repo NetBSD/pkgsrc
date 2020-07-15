@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4045 2020/07/15 14:10:33 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4046 2020/07/15 15:07:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6432,3 +6432,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rouge to 3.21.0 [fcambus 2020-07-15]
 	Updated databases/py-aiosqlite to 0.15.0 [adam 2020-07-15]
 	Updated textproc/py-diff-match-patch to 20200713 [adam 2020-07-15]
+	Updated textproc/py-ICU to 2.5 [adam 2020-07-15]
+	Updated security/py-certifi to 2020.6.20 [adam 2020-07-15]
