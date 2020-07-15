@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/07/12 17:46:29 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/07/15 14:07:51 adam Exp $
 
-DISTNAME=	aiosqlite-0.14.1
+DISTNAME=	aiosqlite-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiosqlite/}
@@ -15,6 +15,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-aiounittest-[0-9]*:../../devel/py-aiounittest
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} -m aiosqlite.tests
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
