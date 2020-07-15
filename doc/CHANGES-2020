@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4043 2020/07/15 09:33:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4044 2020/07/15 14:02:22 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6429,3 +6429,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-google-auth to 1.19.0 [adam 2020-07-15]
 	Updated security/py-google-auth-httplib2 to 0.0.4 [adam 2020-07-15]
 	Updated devel/py-typing to 3.7.4.3 [adam 2020-07-15]
+	Updated www/ruby-rouge to 3.21.0 [fcambus 2020-07-15]
