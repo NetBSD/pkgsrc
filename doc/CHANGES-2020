@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4042 2020/07/15 08:15:51 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4043 2020/07/15 09:33:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6425,3 +6425,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-greenlet to 0.4.16 [adam 2020-07-15]
 	Updated print/py-latexcodec to 2.0.1 [adam 2020-07-15]
 	Updated archivers/libzip to 1.7.3 [wiz 2020-07-15]
+	Updated net/haproxy to 2.2.0 [adam 2020-07-15]
+	Updated security/py-google-auth to 1.19.0 [adam 2020-07-15]
+	Updated security/py-google-auth-httplib2 to 0.0.4 [adam 2020-07-15]
+	Updated devel/py-typing to 3.7.4.3 [adam 2020-07-15]
