@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.1 2020/03/21 17:02:14 gutteridge Exp $
+$NetBSD: patch-setup.py,v 1.2 2020/07/15 15:04:18 adam Exp $
 
 Add NetBSD support.
 
---- setup.py.orig	2020-03-19 20:58:31.000000000 +0000
+--- setup.py.orig	2020-05-26 22:08:37.000000000 +0000
 +++ setup.py
-@@ -85,6 +85,7 @@ CONFIGURE_WITH_ICU_CONFIG = {
+@@ -86,6 +86,7 @@ CONFIGURE_WITH_ICU_CONFIG = {
      'win32': False,   # no icu-config
      'sunos5': False,  # not tested
      'cygwin': False,  # not tested
@@ -12,7 +12,7 @@ Add NetBSD support.
  }
  
  CONFIGURE_WITH_PKG_CONFIG = {
-@@ -94,6 +95,7 @@ CONFIGURE_WITH_PKG_CONFIG = {
+@@ -95,6 +96,7 @@ CONFIGURE_WITH_PKG_CONFIG = {
      'win32': False,   # no pkg-config ?
      'sunos5': False,  # not tested
      'cygwin': False,  # not tested
@@ -20,7 +20,7 @@ Add NetBSD support.
  }
  
  INCLUDES = {
-@@ -103,6 +105,7 @@ INCLUDES = {
+@@ -104,6 +106,7 @@ INCLUDES = {
      'win32': ['c:/icu/include'],
      'sunos5': [],
      'cygwin': [],
@@ -28,15 +28,16 @@ Add NetBSD support.
  }
  
  VER_FLAGS = {
-@@ -112,6 +115,7 @@ VER_FLAGS = {
-     'win32': ['/DPYICU_VER=\\"%s\\"' %(VERSION)],
-     'sunos5': ['-DPYICU_VER="%s"' %(VERSION)],
-     'cygwin': ['-DPYICU_VER="%s"' %(VERSION)],
-+    'netbsd': ['-DPYICU_VER="%s"' %(VERSION)],
+@@ -119,6 +122,8 @@ VER_FLAGS = {
+                '-DPYICU_ICU_MAX_VER="%s"' %(ICU_MAX_MAJOR_VERSION)],
+     'cygwin': ['-DPYICU_VER="%s"' %(VERSION),
+                '-DPYICU_ICU_MAX_VER="%s"' %(ICU_MAX_MAJOR_VERSION)],
++    'netbsd': ['-DPYICU_VER="%s"' %(VERSION),
++               '-DPYICU_ICU_MAX_VER="%s"' %(ICU_MAX_MAJOR_VERSION)],
  }
  
- CFLAGS = {
-@@ -121,6 +125,7 @@ CFLAGS = {
+ PEDANTIC_FLAGS = {
+@@ -137,6 +142,7 @@ CFLAGS = {
      'win32': ['/Zc:wchar_t', '/EHsc'],
      'sunos5': ['-std=c++11'],
      'cygwin': ['-D_GNU_SOURCE=1', '-std=c++11'],
@@ -44,7 +45,7 @@ Add NetBSD support.
  }
  
  # added to CFLAGS when setup is invoked with --debug
-@@ -131,6 +136,7 @@ DEBUG_CFLAGS = {
+@@ -147,6 +153,7 @@ DEBUG_CFLAGS = {
      'win32': ['/Od', '/DDEBUG'],
      'sunos5': ['-DDEBUG'],
      'cygwin': ['-Og', '-g', '-DDEBUG'],
@@ -52,7 +53,7 @@ Add NetBSD support.
  }
  
  LFLAGS = {
-@@ -140,6 +146,7 @@ LFLAGS = {
+@@ -156,6 +163,7 @@ LFLAGS = {
      'win32': ['/LIBPATH:c:/icu/lib'],
      'sunos5': [],
      'cygwin': [],
@@ -60,7 +61,7 @@ Add NetBSD support.
  }
  
  LIBRARIES = {
-@@ -149,6 +156,7 @@ LIBRARIES = {
+@@ -165,6 +173,7 @@ LIBRARIES = {
      'win32': ['icuin', 'icuuc', 'icudt'],
      'sunos5': ['icui18n', 'icuuc', 'icudata'],
      'cygwin': ['icui18n', 'icuuc', 'icudata'],
@@ -68,7 +69,7 @@ Add NetBSD support.
  }
  
  platform = sys.platform
-@@ -156,6 +164,8 @@ if platform.startswith(('linux', 'gnu'))
+@@ -172,6 +181,8 @@ if platform.startswith(('linux', 'gnu'))
      platform = 'linux'
  elif platform.startswith('freebsd'):
      platform = 'freebsd'
