@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4041 2020/07/15 07:44:23 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4042 2020/07/15 08:15:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6424,3 +6424,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-paste to 3.4.2 [adam 2020-07-15]
 	Updated devel/py-greenlet to 0.4.16 [adam 2020-07-15]
 	Updated print/py-latexcodec to 2.0.1 [adam 2020-07-15]
+	Updated archivers/libzip to 1.7.3 [wiz 2020-07-15]
