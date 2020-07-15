@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/07/07 08:19:10 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/07/15 07:35:53 adam Exp $
 
-DISTNAME=	jupyter_client-6.1.2
+DISTNAME=	jupyter_client-6.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -15,10 +15,13 @@ DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.6.0:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=13.0.0:../../net/py-zmq
+TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator-[0-9]*:../../devel/py-async_generator
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
