@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/07/09 08:44:15 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/15 14:10:14 adam Exp $
 
-DISTNAME=	diff-match-patch-20181111
+DISTNAME=	diff-match-patch-20200713
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diff-match-patch/}
