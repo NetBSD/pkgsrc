@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4046 2020/07/15 15:07:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4047 2020/07/15 16:04:22 snj Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6434,3 +6434,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-diff-match-patch to 20200713 [adam 2020-07-15]
 	Updated textproc/py-ICU to 2.5 [adam 2020-07-15]
 	Updated security/py-certifi to 2020.6.20 [adam 2020-07-15]
+	Updated meta-pkgs/netbsd-doc-print to 1.6 [snj 2020-07-15]
