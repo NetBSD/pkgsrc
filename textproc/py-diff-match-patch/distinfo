@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/07/09 08:44:15 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/07/15 14:10:14 adam Exp $
 
-SHA1 (diff-match-patch-20181111.tar.gz) = 3a74a95e65b431dd9e7e967b579e8e21dd6daef3
-RMD160 (diff-match-patch-20181111.tar.gz) = e01dabf595cee36ea587bac9653bf21d4281346c
-SHA512 (diff-match-patch-20181111.tar.gz) = 9b21726b9c0e350553533c14dd86cca823c6f98ab642e7166cf9348952a57b62bcb0576e3d6a3b76655ea1bcc8cef3fe7f33ffb068b5a4bfb4b4b521042484e6
-Size (diff-match-patch-20181111.tar.gz) = 58554 bytes
+SHA1 (diff-match-patch-20200713.tar.gz) = 971286da0d85d81974a414c43fc792d3c0ecd4df
+RMD160 (diff-match-patch-20200713.tar.gz) = 05ae62db1d30937fb750e1c2c96e2de21ccee25e
+SHA512 (diff-match-patch-20200713.tar.gz) = f161efed3d87dd0693c98ee81aedb3868787f040f8f9f31015f9f1de04d50046be75b2351a65a4c26ae1d194b983dbc1420799cf70e7c25737ee4eb3cc78a183
+Size (diff-match-patch-20200713.tar.gz) = 60711 bytes
