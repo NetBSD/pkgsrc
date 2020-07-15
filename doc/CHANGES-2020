@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4038 2020/07/14 19:12:56 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4039 2020/07/15 07:17:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6416,3 +6416,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-gsutil to 4.52 [adam 2020-07-14]
 	Updated lang/python38 to 3.8.4 [adam 2020-07-14]
 	Updated lang/py38-html-docs to 3.8.4 [adam 2020-07-14]
+	Updated misc/rhash to 1.4.0 [adam 2020-07-15]
+	Updated textproc/py-regex to 2020.7.14 [adam 2020-07-15]
