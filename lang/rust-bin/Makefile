@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/06/14 15:33:28 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/07/15 15:13:57 nia Exp $
 
 DISTNAME=	rust-1.44.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -151,7 +151,7 @@ fix-relative-rpath:
 .  endfor
 .  for bin in llvm-ar llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
 		llvm-readobj llvm-size llvm-strip
-	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
+	if [ -f ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} ]; then \
 		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 			${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
 	; fi
