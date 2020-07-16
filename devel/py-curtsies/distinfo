@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/07/07 05:20:47 adam Exp $
+$NetBSD: distinfo,v 1.6 2020/07/16 06:08:13 adam Exp $
 
-SHA1 (curtsies-0.3.3.tar.gz) = 2bad1ffdec9c2ad51617564989e7ab64c6eb883e
-RMD160 (curtsies-0.3.3.tar.gz) = 23dbe8729ea587937172c093afd1e8a1fc1fc62e
-SHA512 (curtsies-0.3.3.tar.gz) = 16f58c2d21687b4eda470fd9d919c2441fc232c76983e48e9f45f6afb3f7cc6f9477a0d502e37256ca484a7d38c00d80190d0b7f4f618f41f0ca46e5d977216e
-Size (curtsies-0.3.3.tar.gz) = 53107 bytes
+SHA1 (curtsies-0.3.4.tar.gz) = 336b54a640a02d398ad7bfc8e93d6b8d0ae81be9
+RMD160 (curtsies-0.3.4.tar.gz) = a9839baf73fe50b367899243ee22006cac16d5f1
+SHA512 (curtsies-0.3.4.tar.gz) = 5f65af34f6dd13491acf65311516ed90e57d99f681032ab6b4753710953f5285b012a09de6c56d28ccd5bc942c9886076f04287cddf955ba424205a5c44785b2
+Size (curtsies-0.3.4.tar.gz) = 52733 bytes
