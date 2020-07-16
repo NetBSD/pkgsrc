@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2020/04/19 10:04:54 adam Exp $
+$NetBSD: distinfo,v 1.37 2020/07/16 11:16:21 adam Exp $
 
-SHA1 (psutil-5.7.0.tar.gz) = 8c26a9336998e0ba7939979b480fd4a64c0b3d77
-RMD160 (psutil-5.7.0.tar.gz) = 0f18df3c85ee2f3136b5fd54cdf1fa84d2bc2795
-SHA512 (psutil-5.7.0.tar.gz) = 8cee64ab396dae79866e961aeabdb9a4174e1339bcd5c0a35f23fee97ca2a61c0cb08f7152d7e0db90c387400c5c6fb3da2dd2124ce9bf97dfffe6f3b4967981
-Size (psutil-5.7.0.tar.gz) = 449628 bytes
+SHA1 (psutil-5.7.2.tar.gz) = 96b2286d1b06b6093aa0b5cb192bce7eb60c831a
+RMD160 (psutil-5.7.2.tar.gz) = 81e2a15776e0dea9f460f735f1f0ca5a1a421a79
+SHA512 (psutil-5.7.2.tar.gz) = b0c9b6bceffc031b230d656f76eca555e5cd481d8dc70de1c6068ec31f1ffd74314aa35c8e11903901f58c326152128749ff9525064ecca117df258311d27320
+Size (psutil-5.7.2.tar.gz) = 460198 bytes
 SHA1 (patch-psutil___psbsd.py) = da61606aee2366181935c10873d0627d0cb80f3f
 SHA1 (patch-psutil___psutil__bsd.c) = a94b2c5a11338f3fffcbdde4339391c9519cf6d6
