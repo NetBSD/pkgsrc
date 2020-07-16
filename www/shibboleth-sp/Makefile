@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2020/05/22 10:56:46 adam Exp $
+# $NetBSD: Makefile,v 1.41 2020/07/16 14:49:13 perseant Exp $
 #
 
-DISTNAME=	shibboleth-sp-2.5.5
-PKGREVISION=	17
+DISTNAME=	shibboleth-sp-3.1.0
+PKGREVISION=
 CATEGORIES=	www
-MASTER_SITES=	http://www.shibboleth.net/downloads/service-provider/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://shibboleth.net/downloads/service-provider/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://shibboleth.net/
@@ -16,6 +16,7 @@ BUILD_DEFS+=	VARBASE
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xmltooling=${PREFIX}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+USE_TOOLS+=		pkg-config
 
 EGDIR=		${PREFIX}/share/examples/shibboleth
 SHIB_CONFDIR=	${PKG_SYSCONFDIR}/shibboleth
@@ -46,8 +47,6 @@ CONF_FILES+=	${EGDIR}/native.logger \
 			${SHIB_CONFDIR}/native.logger
 CONF_FILES+=	${EGDIR}/shibd.logger \
 			${SHIB_CONFDIR}/shibd.logger
-CONF_FILES+=	${EGDIR}/syslog.logger \
-			${SHIB_CONFDIR}/syslog.logger
 CONF_FILES+=	${EGDIR}/shibboleth2.xml \
 			${SHIB_CONFDIR}/shibboleth2.xml
 CONF_FILES+=	${EGDIR}/attribute-map.xml \
@@ -58,8 +57,6 @@ CONF_FILES+=	${EGDIR}/protocols.xml \
 			${SHIB_CONFDIR}/protocols.xml
 CONF_FILES+=	${EGDIR}/security-policy.xml \
 			${SHIB_CONFDIR}/security-policy.xml
-CONF_FILES+=	${EGDIR}/accessError.html \
-			${SHIB_CONFDIR}/accessError.html
 CONF_FILES+=	${EGDIR}/sessionError.html \
 			${SHIB_CONFDIR}/sessionError.html
 CONF_FILES+=	${EGDIR}/metadataError.html \
