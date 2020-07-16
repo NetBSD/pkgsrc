@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4054 2020/07/16 11:16:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4055 2020/07/16 15:32:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6458,3 +6458,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/woof to 2.0.1 [micha 2020-07-16]
 	Updated www/py-aiohttp-socks to 0.5.1 [adam 2020-07-16]
 	Updated sysutils/py-psutil to 5.7.2 [adam 2020-07-16]
+	Updated chat/miniircd to 2.0 [leot 2020-07-16]
