@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/07/07 11:20:26 nia Exp $
+# $NetBSD: Makefile,v 1.21 2020/07/16 01:41:49 markd Exp $
 
 DISTNAME=	obs-studio-25.0.8
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=obsproject/}
 
@@ -47,6 +47,7 @@ CMAKE_ARGS+=	-DDISABLE_LUA=ON
 .endif
 .include "../../lang/python/pyversion.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/vlc/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../security/mbedtls/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
