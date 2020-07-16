@@ -1,10 +1,6 @@
-$NetBSD: patch-configs_Makefile.in,v 1.2 2015/10/23 07:35:08 pettai Exp $
-
-Install config and example pkgsrc-ish
-
---- configs/Makefile.in.orig	2015-07-09 09:16:39.000000000 -0700
-+++ configs/Makefile.in	2015-10-20 15:27:28.000000000 -0700
-@@ -354,20 +354,13 @@
+--- configs/Makefile.in.orig	2020-03-06 09:16:20.000000000 -0800
++++ configs/Makefile.in	2020-07-07 12:59:05.660340097 -0700
+@@ -381,20 +381,13 @@
  pkgcachedir = $(localstatedir)/cache/@PACKAGE_NAME@
  pkgsysconfdir = $(sysconfdir)/@PACKAGE_NAME@
  pkgsysconf_DATA = \
@@ -20,13 +16,13 @@ Install config and example pkgsrc-ish
  	apache24.config \
 -	keygen.sh \
 -	metagen.sh \
- 	upgrade.xsl
+ 	seckeygen.sh
  
 +EGDIR = @EGDIR@
  
  # The config files are installed "special".  Unlike the entries in
  # pkgsysconf_DATA, these files are installed as "foo.dist" and only
-@@ -480,16 +475,16 @@
+@@ -504,16 +497,16 @@
  	@$(NORMAL_INSTALL)
  	@list='$(pkgsysconf_DATA)'; test -n "$(pkgsysconfdir)" || list=; \
  	if test -n "$$list"; then \
@@ -47,7 +43,7 @@ Install config and example pkgsrc-ish
  	done
  
  uninstall-pkgsysconfDATA:
-@@ -538,7 +533,7 @@
+@@ -565,7 +558,7 @@
  check: check-am
  all-am: Makefile $(DATA)
  installdirs:
@@ -56,7 +52,7 @@ Install config and example pkgsrc-ish
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-am
-@@ -594,7 +589,6 @@
+@@ -621,7 +614,6 @@
  
  install-data-am: install-data-local install-pkgsysconfDATA
  	@$(NORMAL_INSTALL)
@@ -64,7 +60,7 @@ Install config and example pkgsrc-ish
  install-dvi: install-dvi-am
  
  install-dvi-am:
-@@ -720,18 +714,18 @@
+@@ -742,18 +734,18 @@
  	$(mkinstalldirs) $(DESTDIR)$(pkgrundir)
  	$(mkinstalldirs) $(DESTDIR)$(pkgcachedir)
  	$(mkinstalldirs) $(DESTDIR)$(pkgxmldir)
@@ -78,7 +74,7 @@ Install config and example pkgsrc-ish
  		fi; \
 -		$(INSTALL_DATA) $$f $(DESTDIR)${pkgsysconfdir}/$$f.dist; \
 +		$(INSTALL_DATA) $$f $(DESTDIR)${EGDIR}/$$f.dist; \
-         done
+ 	done
  	for f in $(CONFIGFILES); do \
 -		if test ! -f $(DESTDIR)${pkgsysconfdir}/$$f; then \
 -			$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${pkgsysconfdir}; \
@@ -87,6 +83,6 @@ Install config and example pkgsrc-ish
  		fi; \
 -		$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${pkgsysconfdir}/$$f.dist; \
 +		$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${EGDIR}/$$f.dist; \
-         done
+ 	done
  
  install-data-hook:
