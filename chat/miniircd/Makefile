@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/08/02 10:20:53 leot Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/16 15:32:11 leot Exp $
 
-DISTNAME=	miniircd-1.3
+DISTNAME=	miniircd-2.0
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jrosdahl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,6 +30,8 @@ REPLACE_PYTHON+=	miniircd
 REPLACE_PYTHON+=	test.py
 
 USE_LANGUAGES=		# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 2.0
 
 INSTALLATION_DIRS=	sbin share/doc/miniircd
 
