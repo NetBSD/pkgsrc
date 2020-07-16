@@ -1,0 +1,6 @@
+The package contains a theme for Beamer which is referenced as
+"Cuerna" inside beamer and has four basic colour themes. The
+title page shows rectangles that represent the Fibonacci
+sequence, and spiral is drawn on top of the rectangles. Besides
+that the rest of the graphic elements in the slides are scarce
+to keep it clean
