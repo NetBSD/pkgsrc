@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.15 2017/12/15 10:54:59 adam Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.16 2020/07/16 10:11:39 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -776,7 +776,7 @@ sub list_pkgsrc_pkgdirs($$) {
           && $_ ne 'CVS'
           && substr( $_, 0, 1 ) ne '.',
         readdir(CAT) );
-    close(CAT);
+    closedir(CAT);
     @pkgdirs;
 }
 
