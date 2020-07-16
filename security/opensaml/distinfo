@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/03/20 10:04:14 pettai Exp $
+$NetBSD: distinfo,v 1.7 2020/07/16 14:49:13 perseant Exp $
 
-SHA1 (opensaml-2.5.5.tar.gz) = beb3a45ff88076f31eb91f573ddf4ff57984c73a
-RMD160 (opensaml-2.5.5.tar.gz) = 8048b89a7f496d0f5920e64991f69afe8b1a9698
-SHA512 (opensaml-2.5.5.tar.gz) = a590b20efa3f8f688393b8f9f0d2add8614e93e54181870736b6efd05e9c3a12d35789f6b6feab426d8a9e2604b5eae4e183c37f30aced215622bd3a7239b43f
-Size (opensaml-2.5.5.tar.gz) = 739776 bytes
+SHA1 (opensaml-3.1.0.tar.gz) = fbad61a3deccb93ea49b2512007b65d5e383e4bb
+RMD160 (opensaml-3.1.0.tar.gz) = 2d70a7c9ede22c6b5210388a8ee2c11afcb33cf4
+SHA512 (opensaml-3.1.0.tar.gz) = 885418c0ae725dd53bc9e5b71a02a16325533eb12e86f5485c76f503056de8b813e1a4814b4d1f2fb3f79f1dbc39c17a997fae41d7d80ddae3c3a98f86df344c
+Size (opensaml-3.1.0.tar.gz) = 759409 bytes

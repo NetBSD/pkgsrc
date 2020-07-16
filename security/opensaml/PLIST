@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/03/20 10:04:14 pettai Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/07/16 14:49:13 perseant Exp $
 bin/samlsign
 include/saml/Assertion.h
 include/saml/RootObject.h
@@ -19,18 +19,16 @@ include/saml/saml1/binding/SAMLArtifactType0001.h
 include/saml/saml1/binding/SAMLArtifactType0002.h
 include/saml/saml1/core/Assertions.h
 include/saml/saml1/core/Protocols.h
-include/saml/saml1/profile/AssertionValidator.h
-include/saml/saml1/profile/BrowserSSOProfileValidator.h
 include/saml/saml2/binding/SAML2Artifact.h
 include/saml/saml2/binding/SAML2ArtifactType0004.h
 include/saml/saml2/binding/SAML2MessageDecoder.h
-include/saml/saml2/binding/SAML2Redirect.h
+include/saml/saml2/binding/SAML2MessageEncoder.h
 include/saml/saml2/binding/SAML2SOAPClient.h
 include/saml/saml2/core/Assertions.h
 include/saml/saml2/core/Protocols.h
+include/saml/saml2/metadata/AbstractDynamicMetadataProvider.h
 include/saml/saml2/metadata/AbstractMetadataProvider.h
 include/saml/saml2/metadata/DiscoverableMetadataProvider.h
-include/saml/saml2/metadata/DynamicMetadataProvider.h
 include/saml/saml2/metadata/EndpointManager.h
 include/saml/saml2/metadata/EntityMatcher.h
 include/saml/saml2/metadata/Metadata.h
@@ -39,8 +37,6 @@ include/saml/saml2/metadata/MetadataCredentialCriteria.h
 include/saml/saml2/metadata/MetadataFilter.h
 include/saml/saml2/metadata/MetadataProvider.h
 include/saml/saml2/metadata/ObservableMetadataProvider.h
-include/saml/saml2/profile/AssertionValidator.h
-include/saml/saml2/profile/BrowserSSOProfileValidator.h
 include/saml/saml2/profile/SAML2AssertionPolicy.h
 include/saml/signature/ContentReference.h
 include/saml/signature/SignableObject.h
@@ -49,9 +45,10 @@ include/saml/util/CommonDomainCookie.h
 include/saml/util/SAMLConstants.h
 include/saml/version.h
 lib/libsaml.a
+lib/libsaml.la
 lib/libsaml.so
-lib/libsaml.so.8
-lib/libsaml.so.8.0.5
+lib/libsaml.so.11
+lib/libsaml.so.11.0.0
 lib/pkgconfig/opensaml.pc
 share/doc/${PKGNAME}/LICENSE.txt
 share/doc/${PKGNAME}/LOG4CPP.LICENSE

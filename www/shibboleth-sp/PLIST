@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/10/23 07:35:07 pettai Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/07/16 14:49:13 perseant Exp $
 bin/mdquery
 bin/resolvertest
 bin/shib-metagen
@@ -11,7 +11,6 @@ include/shibsp/SPConfig.h
 include/shibsp/SPRequest.h
 include/shibsp/ServiceProvider.h
 include/shibsp/SessionCache.h
-include/shibsp/SessionCacheEx.h
 include/shibsp/TransactionLog.h
 include/shibsp/attribute/Attribute.h
 include/shibsp/attribute/AttributeDecoder.h
@@ -61,22 +60,31 @@ include/shibsp/util/SPConstants.h
 include/shibsp/util/TemplateParameters.h
 include/shibsp/version.h
 lib/libshibsp-lite.a
+lib/libshibsp-lite.la
 lib/libshibsp-lite.so
-lib/libshibsp-lite.so.6
-lib/libshibsp-lite.so.6.0.5
+lib/libshibsp-lite.so.8
+lib/libshibsp-lite.so.8.0.5
 lib/libshibsp.a
+lib/libshibsp.la
 lib/libshibsp.so
-lib/libshibsp.so.6
-lib/libshibsp.so.6.0.5
+lib/libshibsp.so.9
+lib/libshibsp.so.9.0.0
+lib/pkgconfig/shibsp-lite.pc
+lib/pkgconfig/shibsp.pc
 lib/shibboleth/adfs-lite.a
+lib/shibboleth/adfs-lite.la
 lib/shibboleth/adfs-lite.so
 lib/shibboleth/adfs.a
+lib/shibboleth/adfs.la
 lib/shibboleth/adfs.so
 lib/shibboleth/mod_shib_${PKG_APACHE_NUM}.a
 lib/shibboleth/mod_shib_${PKG_APACHE_NUM}.so
+lib/shibboleth/mod_shib_24.la
 lib/shibboleth/plugins-lite.a
+lib/shibboleth/plugins-lite.la
 lib/shibboleth/plugins-lite.so
 lib/shibboleth/plugins.a
+lib/shibboleth/plugins.la
 lib/shibboleth/plugins.so
 sbin/shib-keygen
 sbin/shibd
@@ -88,8 +96,6 @@ share/doc/shibboleth-${PKGVERSION}/NOTICE.txt
 share/doc/shibboleth-${PKGVERSION}/OPENSSL.LICENSE
 share/doc/shibboleth-${PKGVERSION}/README.txt
 share/doc/shibboleth-${PKGVERSION}/RELEASE.txt
-share/examples/shibboleth/accessError.html
-share/examples/shibboleth/accessError.html.dist
 share/examples/shibboleth/apache.config
 share/examples/shibboleth/apache2.config
 share/examples/shibboleth/apache22.config
@@ -124,6 +130,7 @@ share/examples/shibboleth/postTemplate.html
 share/examples/shibboleth/postTemplate.html.dist
 share/examples/shibboleth/protocols.xml
 share/examples/shibboleth/protocols.xml.dist
+share/examples/shibboleth/seckeygen.sh
 share/examples/shibboleth/security-policy.xml
 share/examples/shibboleth/security-policy.xml.dist
 share/examples/shibboleth/sessionError.html
@@ -134,12 +141,12 @@ share/examples/shibboleth/shibd.logger
 share/examples/shibboleth/shibd.logger.dist
 share/examples/shibboleth/sslError.html
 share/examples/shibboleth/sslError.html.dist
-share/examples/shibboleth/syslog.logger
-share/examples/shibboleth/syslog.logger.dist
-share/examples/shibboleth/upgrade.xsl
 share/shibboleth/main.css
+share/xml/shibboleth/MetadataExchange.xsd
 share/xml/shibboleth/WS-Trust.xsd
 share/xml/shibboleth/catalog.xml
+share/xml/shibboleth/oasis-200401-wss-wssecurity-secext-1.0.xsd
+share/xml/shibboleth/oasis-200401-wss-wssecurity-utility-1.0.xsd
 share/xml/shibboleth/shibboleth-2.0-afp-mf-basic.xsd
 share/xml/shibboleth/shibboleth-2.0-afp-mf-saml.xsd
 share/xml/shibboleth/shibboleth-2.0-afp.xsd
@@ -147,7 +154,12 @@ share/xml/shibboleth/shibboleth-2.0-attribute-map.xsd
 share/xml/shibboleth/shibboleth-2.0-native-sp-config.xsd
 share/xml/shibboleth/shibboleth-2.0-native-sp-protocols.xsd
 share/xml/shibboleth/shibboleth-2.0-sp-notify.xsd
+share/xml/shibboleth/shibboleth-3.0-native-sp-config.xsd
 share/xml/shibboleth/shibboleth-metadata-1.0.xsd
 share/xml/shibboleth/shibboleth.xsd
+share/xml/shibboleth/ws-addr.xsd
+share/xml/shibboleth/ws-authorization.xsd
+share/xml/shibboleth/ws-federation.xsd
+share/xml/shibboleth/ws-securitypolicy-1.2.xsd
 @pkgdir share/doc/shibboleth-${PKGVERSION}/api
 @pkgdir etc/shibboleth
