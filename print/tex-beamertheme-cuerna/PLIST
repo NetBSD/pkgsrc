@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/16 01:03:31 markd Exp $
+share/texmf-dist/tex/latex/beamertheme-cuerna/beamercolorthemeCuerna.sty
+share/texmf-dist/tex/latex/beamertheme-cuerna/beamercolorthemebluesimplex.sty
+share/texmf-dist/tex/latex/beamertheme-cuerna/beamercolorthemebrick.sty
+share/texmf-dist/tex/latex/beamertheme-cuerna/beamercolorthemelettuce.sty
+share/texmf-dist/tex/latex/beamertheme-cuerna/beamerinnerthemeCuerna.sty
+share/texmf-dist/tex/latex/beamertheme-cuerna/beamerouterthemeCuerna.sty
+share/texmf-dist/tex/latex/beamertheme-cuerna/beamerthemeCuerna.sty

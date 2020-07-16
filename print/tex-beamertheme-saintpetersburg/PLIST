@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/16 01:03:33 markd Exp $
+share/texmf-dist/tex/latex/beamertheme-saintpetersburg/beamercolorthemeSaintPetersburg.sty
+share/texmf-dist/tex/latex/beamertheme-saintpetersburg/beamerfontthemeSaintPetersburg.sty
+share/texmf-dist/tex/latex/beamertheme-saintpetersburg/beamerthemeSaintPetersburg.sty
