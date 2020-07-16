@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/06/29 09:08:30 fcambus Exp $
+# $NetBSD: Makefile,v 1.14 2020/07/16 17:37:43 fcambus Exp $
 
-DISTNAME=	spleen-1.8.0
+DISTNAME=	spleen-1.8.1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
