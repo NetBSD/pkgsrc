@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2020/05/11 01:18:30 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/16 18:09:30 riastradh Exp $
 
 DISTNAME=	ledger2beancount-2.0
 PKGREVISION=	1
 CATEGORIES=	finance
-MASTER_SITES=	${MASTER_SITE_GITHUB:=zacchiro/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=beancount/}
 GITHUB_PROJECT=	ledger2beancount
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/zacchiro/ledger2beancount/
+HOMEPAGE=	https://github.com/beancount/ledger2beancount/
 COMMENT=	Script to convert ledger to beancount
 LICENSE=	gnu-gpl-v3
 
