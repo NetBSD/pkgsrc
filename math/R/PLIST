@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2019/06/09 13:39:12 wen Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/07/16 02:22:55 markd Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -46,11 +46,15 @@ lib/R/doc/NEWS
 lib/R/doc/NEWS.0
 lib/R/doc/NEWS.1
 lib/R/doc/NEWS.2
+lib/R/doc/NEWS.2.rds
+lib/R/doc/NEWS.3
+lib/R/doc/NEWS.3.rds
 lib/R/doc/NEWS.pdf
 lib/R/doc/NEWS.rds
 lib/R/doc/RESOURCES
 lib/R/doc/THANKS
 lib/R/doc/html/NEWS.2.html
+lib/R/doc/html/NEWS.3.html
 lib/R/doc/html/NEWS.html
 lib/R/doc/html/R.css
 lib/R/doc/html/Rlogo.pdf
@@ -152,6 +156,7 @@ lib/R/library/KernSmooth/libs/KernSmooth.so
 lib/R/library/KernSmooth/po/de/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/en@quot/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/fr/LC_MESSAGES/R-KernSmooth.mo
+lib/R/library/KernSmooth/po/it/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/ko/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/pl/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/MASS/CITATION
@@ -183,6 +188,7 @@ lib/R/library/MASS/libs/MASS.so
 lib/R/library/MASS/po/de/LC_MESSAGES/R-MASS.mo
 lib/R/library/MASS/po/en@quot/LC_MESSAGES/R-MASS.mo
 lib/R/library/MASS/po/fr/LC_MESSAGES/R-MASS.mo
+lib/R/library/MASS/po/it/LC_MESSAGES/R-MASS.mo
 lib/R/library/MASS/po/ko/LC_MESSAGES/R-MASS.mo
 lib/R/library/MASS/po/pl/LC_MESSAGES/R-MASS.mo
 lib/R/library/MASS/scripts/ch01.R
@@ -331,6 +337,7 @@ lib/R/library/boot/html/R.css
 lib/R/library/boot/po/de/LC_MESSAGES/R-boot.mo
 lib/R/library/boot/po/en@quot/LC_MESSAGES/R-boot.mo
 lib/R/library/boot/po/fr/LC_MESSAGES/R-boot.mo
+lib/R/library/boot/po/it/LC_MESSAGES/R-boot.mo
 lib/R/library/boot/po/ko/LC_MESSAGES/R-boot.mo
 lib/R/library/boot/po/pl/LC_MESSAGES/R-boot.mo
 lib/R/library/boot/po/ru/LC_MESSAGES/R-boot.mo
@@ -359,6 +366,7 @@ lib/R/library/class/libs/class.so
 lib/R/library/class/po/de/LC_MESSAGES/R-class.mo
 lib/R/library/class/po/en@quot/LC_MESSAGES/R-class.mo
 lib/R/library/class/po/fr/LC_MESSAGES/R-class.mo
+lib/R/library/class/po/it/LC_MESSAGES/R-class.mo
 lib/R/library/class/po/ko/LC_MESSAGES/R-class.mo
 lib/R/library/class/po/pl/LC_MESSAGES/R-class.mo
 lib/R/library/cluster/CITATION
@@ -487,6 +495,8 @@ lib/R/library/foreign/po/en@quot/LC_MESSAGES/R-foreign.mo
 lib/R/library/foreign/po/en@quot/LC_MESSAGES/foreign.mo
 lib/R/library/foreign/po/fr/LC_MESSAGES/R-foreign.mo
 lib/R/library/foreign/po/fr/LC_MESSAGES/foreign.mo
+lib/R/library/foreign/po/it/LC_MESSAGES/R-foreign.mo
+lib/R/library/foreign/po/it/LC_MESSAGES/foreign.mo
 lib/R/library/foreign/po/pl/LC_MESSAGES/R-foreign.mo
 lib/R/library/foreign/po/pl/LC_MESSAGES/foreign.mo
 lib/R/library/grDevices/DESCRIPTION
@@ -858,6 +868,7 @@ lib/R/library/nnet/libs/nnet.so
 lib/R/library/nnet/po/de/LC_MESSAGES/R-nnet.mo
 lib/R/library/nnet/po/en@quot/LC_MESSAGES/R-nnet.mo
 lib/R/library/nnet/po/fr/LC_MESSAGES/R-nnet.mo
+lib/R/library/nnet/po/it/LC_MESSAGES/R-nnet.mo
 lib/R/library/nnet/po/ko/LC_MESSAGES/R-nnet.mo
 lib/R/library/nnet/po/pl/LC_MESSAGES/R-nnet.mo
 lib/R/library/parallel/DESCRIPTION
@@ -953,6 +964,7 @@ lib/R/library/spatial/libs/spatial.so
 lib/R/library/spatial/po/de/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/po/en@quot/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/po/fr/LC_MESSAGES/R-spatial.mo
+lib/R/library/spatial/po/it/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/po/ko/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/po/pl/LC_MESSAGES/R-spatial.mo
 lib/R/library/spatial/ppdata/agter.dat
@@ -1068,6 +1080,9 @@ lib/R/library/survival/data/Rdata.rdx
 lib/R/library/survival/doc/adjcurve.R
 lib/R/library/survival/doc/adjcurve.Rnw
 lib/R/library/survival/doc/adjcurve.pdf
+lib/R/library/survival/doc/approximate.R
+lib/R/library/survival/doc/approximate.Rnw
+lib/R/library/survival/doc/approximate.pdf
 lib/R/library/survival/doc/compete.R
 lib/R/library/survival/doc/compete.Rnw
 lib/R/library/survival/doc/compete.pdf
@@ -1075,21 +1090,19 @@ lib/R/library/survival/doc/concordance.R
 lib/R/library/survival/doc/concordance.Rnw
 lib/R/library/survival/doc/concordance.pdf
 lib/R/library/survival/doc/index.html
-lib/R/library/survival/doc/multi.R
 lib/R/library/survival/doc/multi.Rnw
 lib/R/library/survival/doc/multi.pdf
+lib/R/library/survival/doc/other.Rnw
+lib/R/library/survival/doc/other.pdf
 lib/R/library/survival/doc/population.R
 lib/R/library/survival/doc/population.Rnw
 lib/R/library/survival/doc/population.pdf
-lib/R/library/survival/doc/survival.R
-lib/R/library/survival/doc/survival.Rnw
-lib/R/library/survival/doc/survival.pdf
 lib/R/library/survival/doc/splines.R
 lib/R/library/survival/doc/splines.Rnw
 lib/R/library/survival/doc/splines.pdf
-lib/R/library/survival/doc/tests.R
-lib/R/library/survival/doc/tests.Rnw
-lib/R/library/survival/doc/tests.pdf
+lib/R/library/survival/doc/survival.R
+lib/R/library/survival/doc/survival.Rnw
+lib/R/library/survival/doc/survival.pdf
 lib/R/library/survival/doc/tiedtimes.R
 lib/R/library/survival/doc/tiedtimes.Rnw
 lib/R/library/survival/doc/tiedtimes.pdf

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.85 2019/08/14 14:36:59 wen Exp $
+$NetBSD: distinfo,v 1.86 2020/07/16 02:22:55 markd Exp $
 
-SHA1 (R-3.6.1.tar.gz) = 0041c025561b5622e3dc88cdedf82334620cd3c2
-RMD160 (R-3.6.1.tar.gz) = 0944f67117372acf342251c988d83b83839deccf
-SHA512 (R-3.6.1.tar.gz) = fae7d114437c4b5d10fcb2a4265acd707ad2a4810eeb7c11e25caca1d85093a1495c2e13457b4894c1508830ec1b2be95379b7d54007cf3e574c2a9eea28ef80
-Size (R-3.6.1.tar.gz) = 30463021 bytes
+SHA1 (R-4.0.2.tar.gz) = ee79a57730ed4786c0d6a05bd050d52a5d0290c1
+RMD160 (R-4.0.2.tar.gz) = a323d61573a6fc46a7ce80135348578f0e7b347d
+SHA512 (R-4.0.2.tar.gz) = b7330613ee9795f54cde3dd9f7509be83d9156fb8577c17179727ee01450db27704249f68bd48e0331e2df09c2d9833d8bb019c4f9ce9ba669df74650ff2e842
+Size (R-4.0.2.tar.gz) = 33191186 bytes
 SHA1 (patch-configure.ac) = 2732e3e0a39ee64ae4cba5c476f4754ecbd14942
 SHA1 (patch-m4_R.m4) = 704d5514e10adf0b5217bb71b06f44a612eca6e0
 SHA1 (patch-m4_cairo.m4) = a0c4ec68d7d6d3a73a2a24481d0dee8c192bf154
