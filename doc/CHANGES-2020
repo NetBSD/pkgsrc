@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4048 2020/07/15 18:46:25 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.4049 2020/07/16 01:08:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6436,3 +6436,17 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certifi to 2020.6.20 [adam 2020-07-15]
 	Updated meta-pkgs/netbsd-doc-print to 1.6 [snj 2020-07-15]
 	Updated multimedia/adobe-flash-player to 32.0.0.403 [tsutsui 2020-07-15]
+	Added print/tex-appendixnumberbeamer version 1.2 [markd 2020-07-16]
+	Added print/tex-appendixnumberbeamer-doc version 1.2 [markd 2020-07-16]
+	Added print/tex-beamertheme-cuerna version 2020 [markd 2020-07-16]
+	Added print/tex-beamertheme-detlevcm version 1.02 [markd 2020-07-16]
+	Added print/tex-beamertheme-epyt version 1.0 [markd 2020-07-16]
+	Added print/tex-beamertheme-focus version 2.6 [markd 2020-07-16]
+	Added print/tex-beamertheme-light version 1.0 [markd 2020-07-16]
+	Added print/tex-beamertheme-metropolis version 1.2 [markd 2020-07-16]
+	Added print/tex-beamertheme-npbt version 4.1 [markd 2020-07-16]
+	Added print/tex-beamertheme-phnompenh version 1.0 [markd 2020-07-16]
+	Added print/tex-beamertheme-saintpetersburg version 2020 [markd 2020-07-16]
+	Added print/tex-beamertheme-upenn-bc version 1.0 [markd 2020-07-16]
+	Added print/tex-beamerthemejltree version 1.1 [markd 2020-07-16]
+	Added print/tex-beamerthemenirma version 0.1 [markd 2020-07-16]
