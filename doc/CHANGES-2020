@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4051 2020/07/16 06:09:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4052 2020/07/16 09:59:34 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6453,3 +6453,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R to 4.0.2 [markd 2020-07-16]
 	Updated devel/py-curtsies to 0.3.4 [adam 2020-07-16]
 	Updated devel/atk to 2.36.0 [adam 2020-07-16]
+	Updated sysutils/xenkernel411 to 4.11.3nb3 [bouyer 2020-07-16]
+	Updated sysutils/xenkernel413 to 4.13.1nb1 [bouyer 2020-07-16]
