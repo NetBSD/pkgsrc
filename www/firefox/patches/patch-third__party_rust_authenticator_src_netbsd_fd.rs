@@ -1,6 +1,10 @@
-$NetBSD: patch-third__party_rust_authenticator_src_netbsd_fd.rs,v 1.1 2020/07/15 19:51:19 riastradh Exp $
+$NetBSD: patch-third__party_rust_authenticator_src_netbsd_fd.rs,v 1.2 2020/07/16 14:46:56 riastradh Exp $
 
 Add NetBSD support for U2F.
+
+Submitted upstream:
+
+https://github.com/mozilla/authenticator-rs/pull/116
 
 --- third_party/rust/authenticator/src/netbsd/fd.rs.orig	2020-07-15 16:29:34.209237373 +0000
 +++ third_party/rust/authenticator/src/netbsd/fd.rs
