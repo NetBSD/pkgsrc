@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/16 01:03:32 markd Exp $
+share/texmf-dist/tex/latex/beamertheme-metropolis/beamercolorthememetropolis-highcontrast.sty
+share/texmf-dist/tex/latex/beamertheme-metropolis/beamercolorthememetropolis.sty
+share/texmf-dist/tex/latex/beamertheme-metropolis/beamerfontthememetropolis.sty
+share/texmf-dist/tex/latex/beamertheme-metropolis/beamerinnerthememetropolis.sty
+share/texmf-dist/tex/latex/beamertheme-metropolis/beamerouterthememetropolis.sty
+share/texmf-dist/tex/latex/beamertheme-metropolis/beamerthememetropolis.sty
+share/texmf-dist/tex/latex/beamertheme-metropolis/pgfplotsthemetol.sty
