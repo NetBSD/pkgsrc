@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2020/03/12 22:50:30 wiz Exp $
+$NetBSD: distinfo,v 1.39 2020/07/16 11:27:25 markd Exp $
 
 SHA1 (gst-plugins-base-1.16.2.tar.xz) = 7c650c99cd02f8ebc66d7b980a6b33663c71a89d
 RMD160 (gst-plugins-base-1.16.2.tar.xz) = 7013e114ed94abe195ae4669a029ea5493015152
@@ -6,3 +6,12 @@ SHA512 (gst-plugins-base-1.16.2.tar.xz) = f28e71bba8ba25d4f18ba3a196f057721151f1
 Size (gst-plugins-base-1.16.2.tar.xz) = 3939868 bytes
 SHA1 (patch-Makefile.in) = 415bdaffc5d0cd7543efadb7dca2707afabe98e1
 SHA1 (patch-configure) = ccc8c761bf9bae23c97c6085e221d1a387acd651
+SHA1 (patch-gst-libs_gst_app_Makefile.in) = eecd8ae17fefc21a4abbdadf14d34de1894bce93
+SHA1 (patch-gst-libs_gst_audio_Makefile.in) = 8237bafb887428a7844a74f107e58454f7cfd3fe
+SHA1 (patch-gst-libs_gst_gl_Makefile.in) = 851598cd958d11d2327bfeb820ffb461cdc45575
+SHA1 (patch-gst-libs_gst_pbutils_Makefile.in) = 0e5608829bdbc12e630f498545a46980add58c98
+SHA1 (patch-gst-libs_gst_rtp_Makefile.in) = ce8d14e30a6ccb85d37af0b4bc3fdf515c0e4a06
+SHA1 (patch-gst-libs_gst_rtsp_Makefile.in) = c30d0219dff9246245893e2d15b13b7ccca5b9e0
+SHA1 (patch-gst-libs_gst_tag_Makefile.in) = 5558c952a968ff69c8f770b601a07f3e7e7eca72
+SHA1 (patch-gst-libs_gst_video_Makefile.in) = c7b4ca841e7785c3754866f704a8493cb02835cd
+SHA1 (patch-gst_encoding_Makefile.in) = 1d945b6f174934aa4d4913e50363a088e9ed1ca8
