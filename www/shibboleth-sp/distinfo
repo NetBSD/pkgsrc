@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 02:47:38 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/07/16 14:49:13 perseant Exp $
 
-SHA1 (shibboleth-sp-2.5.5.tar.gz) = e69f4dae585771292e6ad51d5872f14edd683f7a
-RMD160 (shibboleth-sp-2.5.5.tar.gz) = f0176c78e8a85b582266bdc9845f833cf35a83a6
-SHA512 (shibboleth-sp-2.5.5.tar.gz) = 908d0ea664bd3c40fbfa97c7575509cfaf59735f3cf3ffa4bdf13c87b5cc939640030678ab43d4ead3c246dbf6f57927d9eab64db8256504f7c8908b4cebb981
-Size (shibboleth-sp-2.5.5.tar.gz) = 1003433 bytes
-SHA1 (patch-ab) = f667e876e1ebd84e706433156eed2cd60e905372
-SHA1 (patch-configs_Makefile.in) = 00235f36dc529da21cdc55fd833d561ace153d22
-SHA1 (patch-shibsp_SPConfig.cpp) = 2fd64032705f56de3c1a9c32a9916ce5e91b2964
-SHA1 (patch-shibsp_attribute_filtering_impl_XMLAttributeFilter.cpp) = 1ec2c98134d1bfc50e7571a26b5992c8ac47ef46
-SHA1 (patch-shibsp_attribute_resolver_impl_ChainingAttributeExtractor.cpp) = 6ca0844486031880919bb52a9b72829e2f48fe79
-SHA1 (patch-shibsp_attribute_resolver_impl_ChainingAttributeResolver.cpp) = 37a7d6d7d03c27489db2b6e198a4b85233f57e34
-SHA1 (patch-shibsp_attribute_resolver_impl_QueryAttributeResolver.cpp) = 8ce5f3dbdb0b77864401c03335637cc2b2d4f400
-SHA1 (patch-shibsp_base.h) = c1b6d2598afdff067990224d1202c5e10ae0259a
+SHA1 (shibboleth-sp-3.1.0.tar.gz) = 9652369b903adb969c98038a229e7e88ecfd29ae
+RMD160 (shibboleth-sp-3.1.0.tar.gz) = 1da575c978c4e789ab94f0bf251e79a11e753397
+SHA512 (shibboleth-sp-3.1.0.tar.gz) = e67fbfc0183544ed580c59e541eed3f69055a5cafce248d20ab0c6a5df9bfc0dba1190a03e4cd8ff6ffacc6b7e67ed0fe6fd42b064cf025548baab68ac4df05b
+Size (shibboleth-sp-3.1.0.tar.gz) = 1099076 bytes
+SHA1 (patch-configs_Makefile.in) = 452741659276be98e9c0b2531b69ad1fa5c421f8
+SHA1 (patch-configs_keygen.sh) = 414467335f80da97643863fb221c152fd7139a9e
+SHA1 (patch-shibsp_attribute_filtering_impl_XMLAttributeFilter.cpp) = 3de173b5680b71d964af7aaf50b351da7b58228a
+SHA1 (patch-shibsp_attribute_resolver_impl_ChainingAttributeExtractor.cpp) = 40cb02c0edeaa3423ff2ec0289c6ea50f85da42b
+SHA1 (patch-shibsp_attribute_resolver_impl_ChainingAttributeResolver.cpp) = 38055a70f1d7f884a58b9452bbf44ff2005febf1
+SHA1 (patch-shibsp_attribute_resolver_impl_QueryAttributeResolver.cpp) = e34302974301d69d6c7c1ba40826d20a7dc6c001
+SHA1 (patch-shibsp_base.h) = 74e6936f0471014697511c267d0bcd5b63a82a01

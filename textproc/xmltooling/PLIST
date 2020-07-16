@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/13 21:08:19 pettai Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/07/16 14:49:13 perseant Exp $
 include/xmltooling/AbstractAttributeExtensibleXMLObject.h
 include/xmltooling/AbstractComplexElement.h
 include/xmltooling/AbstractDOMCachingXMLObject.h
@@ -24,6 +24,9 @@ include/xmltooling/encryption/Encrypter.h
 include/xmltooling/encryption/Encryption.h
 include/xmltooling/exceptions.h
 include/xmltooling/impl/AnyElement.h
+include/xmltooling/impl/ManagedResource.h
+include/xmltooling/impl/OpenSSLSecurityHelper.h
+include/xmltooling/impl/OpenSSLSupport.h
 include/xmltooling/impl/UnknownElement.h
 include/xmltooling/io/AbstractXMLObjectMarshaller.h
 include/xmltooling/io/AbstractXMLObjectUnmarshaller.h
@@ -39,6 +42,7 @@ include/xmltooling/security/Credential.h
 include/xmltooling/security/CredentialContext.h
 include/xmltooling/security/CredentialCriteria.h
 include/xmltooling/security/CredentialResolver.h
+include/xmltooling/security/DataSealer.h
 include/xmltooling/security/KeyInfoCredentialContext.h
 include/xmltooling/security/KeyInfoResolver.h
 include/xmltooling/security/OpenSSLCredential.h
@@ -63,8 +67,9 @@ include/xmltooling/soap/SOAP.h
 include/xmltooling/soap/SOAPClient.h
 include/xmltooling/soap/SOAPTransport.h
 include/xmltooling/unicode.h
+include/xmltooling/util/CloneInputStream.h
 include/xmltooling/util/CurlURLInputStream.h
-include/xmltooling/util/DateTime.h
+include/xmltooling/util/DirectoryWalker.h
 include/xmltooling/util/NDC.h
 include/xmltooling/util/ParserPool.h
 include/xmltooling/util/PathResolver.h
@@ -83,6 +88,7 @@ include/xmltooling/validation/ValidatorSuite.h
 include/xmltooling/version.h
 lib/libxmltooling-lite.la
 lib/libxmltooling.la
+lib/pkgconfig/xmltooling-lite.pc
 lib/pkgconfig/xmltooling.pc
 share/doc/${PKGNAME}/CURL.LICENSE
 share/doc/${PKGNAME}/LICENSE.txt
