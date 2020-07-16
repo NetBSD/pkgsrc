@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2019/04/30 09:32:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/07/16 11:16:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/psutil/__init__.py
 ${PYSITELIB}/psutil/__init__.pyc
@@ -61,9 +61,9 @@ ${PYSITELIB}/psutil/tests/test_contracts.pyo
 ${PYSITELIB}/psutil/tests/test_linux.py
 ${PYSITELIB}/psutil/tests/test_linux.pyc
 ${PYSITELIB}/psutil/tests/test_linux.pyo
-${PYSITELIB}/psutil/tests/test_memory_leaks.py
-${PYSITELIB}/psutil/tests/test_memory_leaks.pyc
-${PYSITELIB}/psutil/tests/test_memory_leaks.pyo
+${PYSITELIB}/psutil/tests/test_memleaks.py
+${PYSITELIB}/psutil/tests/test_memleaks.pyc
+${PYSITELIB}/psutil/tests/test_memleaks.pyo
 ${PYSITELIB}/psutil/tests/test_misc.py
 ${PYSITELIB}/psutil/tests/test_misc.pyc
 ${PYSITELIB}/psutil/tests/test_misc.pyo
@@ -82,6 +82,9 @@ ${PYSITELIB}/psutil/tests/test_sunos.pyo
 ${PYSITELIB}/psutil/tests/test_system.py
 ${PYSITELIB}/psutil/tests/test_system.pyc
 ${PYSITELIB}/psutil/tests/test_system.pyo
+${PYSITELIB}/psutil/tests/test_testutils.py
+${PYSITELIB}/psutil/tests/test_testutils.pyc
+${PYSITELIB}/psutil/tests/test_testutils.pyo
 ${PYSITELIB}/psutil/tests/test_unicode.py
 ${PYSITELIB}/psutil/tests/test_unicode.pyc
 ${PYSITELIB}/psutil/tests/test_unicode.pyo
