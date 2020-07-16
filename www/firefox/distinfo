@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.404 2020/07/15 19:51:18 riastradh Exp $
+$NetBSD: distinfo,v 1.405 2020/07/16 14:47:50 riastradh Exp $
 
 SHA1 (firefox-78.0.2.source.tar.xz) = 6dd99fc08df3f479fa3a8ff7a3ab527fbeeb4f61
 RMD160 (firefox-78.0.2.source.tar.xz) = 94efd51d47add86fe41ed50ba55ff901994e1a9e
@@ -31,14 +31,14 @@ SHA1 (patch-media_libvorbis_lib_vorbis__info.c) = b6b1a84a095db8459bdff24c04f4d5
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 2eda6a0adab376cd9b41514dac4a811d7fcf599c
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
-SHA1 (patch-third__party_rust_authenticator_.cargo-checksum.json) = 19af4323fbab4c9ec9f41e3f0029fb5c90b8f08c
-SHA1 (patch-third__party_rust_authenticator_src_lib.rs) = 0edc6533c22f039e8a3845a4f35b3d6a8b5f086f
-SHA1 (patch-third__party_rust_authenticator_src_netbsd_device.rs) = 476566aab6487aa909f0edc2166db0506f0d9d52
-SHA1 (patch-third__party_rust_authenticator_src_netbsd_fd.rs) = a1927d417e8d8d37095b835f3ec7cd32b08c7224
-SHA1 (patch-third__party_rust_authenticator_src_netbsd_mod.rs) = 5217cd940127601569c656934286c0c850c217f0
-SHA1 (patch-third__party_rust_authenticator_src_netbsd_monitor.rs) = c7142fa41f946fe9d06d4cf4f5ca3c6bcec65fe6
-SHA1 (patch-third__party_rust_authenticator_src_netbsd_transaction.rs) = 73cce27ccfcd762874ad8e004f619ebddb02811b
-SHA1 (patch-third__party_rust_authenticator_src_netbsd_uhid.rs) = a5a8f9cede72602bc4a0a214bff1612b35ddfe28
+SHA1 (patch-third__party_rust_authenticator_.cargo-checksum.json) = 0c230417f33fca9e27bbb30a9ac80b864cd8c1e2
+SHA1 (patch-third__party_rust_authenticator_src_lib.rs) = 5b1d1c3c6db7876aace3c6bb056f8434ca740350
+SHA1 (patch-third__party_rust_authenticator_src_netbsd_device.rs) = 72af2ec76f32a7d8b4f25d30a383343d0f624059
+SHA1 (patch-third__party_rust_authenticator_src_netbsd_fd.rs) = fdbe7db081afa1ee2a1b71e96886f72c2a691d7e
+SHA1 (patch-third__party_rust_authenticator_src_netbsd_mod.rs) = 80f50157fb23f2e1de579b62148708c52822831b
+SHA1 (patch-third__party_rust_authenticator_src_netbsd_monitor.rs) = 95dbbdb7608230e01b50c7399a9734a74d1086c7
+SHA1 (patch-third__party_rust_authenticator_src_netbsd_transaction.rs) = 0f3d490b2b7cec5e47b3adc9187b58eaa70350d1
+SHA1 (patch-third__party_rust_authenticator_src_netbsd_uhid.rs) = e0856c37eb1d73bca431da6048132233eace44bb
 SHA1 (patch-third__party_rust_getrandom_src_lib.rs) = 2ad80d10ebfeef0dc27435fc2c16be7b5e5d444a
 SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 3755f32fea84900cc0f00af3d9f53ed5fcfb0b4b
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5a516d377d491e0504aaf2d7aed04bb9ebeccc56
