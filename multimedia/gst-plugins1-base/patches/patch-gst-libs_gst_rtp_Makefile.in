@@ -1,0 +1,16 @@
+$NetBSD: patch-gst-libs_gst_rtp_Makefile.in,v 1.1 2020/07/16 11:27:25 markd Exp $
+
+fix build with GNU make 4.3
+
+--- gst-libs/gst/rtp/Makefile.in.orig	2019-12-03 10:58:13.000000000 +0000
++++ gst-libs/gst/rtp/Makefile.in
+@@ -670,7 +670,8 @@ glib_enum_headers = $(libgstrtpinclude_H
+ glib_gen_basename = gstrtp
+ glib_gen_decl_banner = GST_RTP_API
+ glib_gen_decl_include = \#include <gst/rtp/rtp-prelude.h>
+-enum_headers = $(foreach h,$(glib_enum_headers),\n\#include \"$(h)\")
++hash:=\#
++enum_headers = $(foreach h,$(glib_enum_headers),\n$(hash)include \"$(h)\")
+ @HAVE_INTROSPECTION_TRUE@BUILT_GIRSOURCES = GstRtp-@GST_API_VERSION@.gir
+ @HAVE_INTROSPECTION_TRUE@gir_headers = $(patsubst %,$(srcdir)/%, \
+ @HAVE_INTROSPECTION_TRUE@	$(libgstrtpinclude_HEADERS)) \

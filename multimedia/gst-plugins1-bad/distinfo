@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.37 2020/03/13 07:39:41 wiz Exp $
+$NetBSD: distinfo,v 1.38 2020/07/16 11:27:25 markd Exp $
 
 SHA1 (gst-plugins-bad-1.16.2.tar.xz) = e5a1b317c1e6f77aebe74fd6a823c4668ba6c1f7
 RMD160 (gst-plugins-bad-1.16.2.tar.xz) = e42b51eee105a2c6181725ca801887ea64f3f4ce
 SHA512 (gst-plugins-bad-1.16.2.tar.xz) = aeaf3388156fe7317e193a3f940d391a6d8a1187f93e6925cee4cb02c4e78d9b456c22c27c318f0f9b2212ca68887c5cdcc256adaf068bfab8ec5c091a1e8805
 Size (gst-plugins-bad-1.16.2.tar.xz) = 4887812 bytes
 SHA1 (patch-Makefile.in) = 415bdaffc5d0cd7543efadb7dca2707afabe98e1
+SHA1 (patch-gst-libs_gst_interfaces_Makefile.in) = 1f4f79507ec23d67380d052e920bd111de8269e4
+SHA1 (patch-gst-libs_gst_mpegts_Makefile.in) = 198358d35c0541b7f960ef3de1c8325d892d8154
+SHA1 (patch-gst-libs_gst_webrtc_Makefile.in) = 49f82d33a3130dd4014fde426aa6ae9cd43fbe56
