@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.214 2020/05/22 10:56:20 adam Exp $
+# $NetBSD: Makefile,v 1.215 2020/07/16 02:22:55 markd Exp $
 
-DISTNAME=	R-3.6.1
-PKGREVISION=	7
+DISTNAME=	R-4.0.2
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-3/}
+MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.R-project.org/
@@ -160,7 +159,7 @@ fix-darwin-install-name:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 # uses callback interface
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
