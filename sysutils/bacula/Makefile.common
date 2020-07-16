@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2020/04/28 03:48:29 rillig Exp $
+# $NetBSD: Makefile.common,v 1.72 2020/07/16 01:51:41 markd Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
@@ -65,6 +65,7 @@ CONFIGURE_ARGS+=	--with-sbin-perm=0755
 CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}/include/readline
+CONFIGURE_ARGS+=	--disable-docker-plugin
 
 CONFIGURE_ARGS.Linux+=	--enable-smartalloc
 
