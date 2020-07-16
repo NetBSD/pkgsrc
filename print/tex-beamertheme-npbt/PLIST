@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/16 01:03:32 markd Exp $
+share/texmf-dist/tex/latex/beamertheme-npbt/beamercolorthemeNPBT_EUFOM.sty
+share/texmf-dist/tex/latex/beamertheme-npbt/beamercolorthemeNPBT_FOM.sty
+share/texmf-dist/tex/latex/beamertheme-npbt/beamercolorthemeNPBT_FOM_ifes.sty
+share/texmf-dist/tex/latex/beamertheme-npbt/beamercolorthemeNPBT_SC.sty
+share/texmf-dist/tex/latex/beamertheme-npbt/beamerouterthemeNPBT_FOM.sty
+share/texmf-dist/tex/latex/beamertheme-npbt/beamerouterthemeNPBT_FOM_ifes.sty
+share/texmf-dist/tex/latex/beamertheme-npbt/beamerthemeNPBT.sty
+share/texmf-dist/tex/latex/beamertheme-npbt/images/LICENSE.md
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_FOM_background.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_FOM_frametitlebackground.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_FOM_ifes_backgound.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_FOM_ifes_frametitlebackgound.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_FOM_ifes_linie.pdf
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_FOM_ifes_logo.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_FOM_linie.pdf
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_FOM_logo.pdf
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_SC_background.jpg
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_SC_logo.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_eufom_backgound.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_eufom_frametitlebackgound.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_eufom_linie.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/NPBT_eufom_logo.png
+share/texmf-dist/tex/latex/beamertheme-npbt/images/lNPBT_SC_linie.png
