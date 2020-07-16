@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2020/05/22 03:57:05 markd Exp $
+# $NetBSD: Makefile,v 1.54 2020/07/16 01:13:49 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2020pre3
+PKGNAME=	texlive-${DISTNAME}-2020pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	55060
@@ -49,7 +49,7 @@ DEPENDS+=	tex-anonchap-[0-9]*:../../print/tex-anonchap
 DEPENDS+=	tex-answers-[0-9]*:../../print/tex-answers
 # depend anyfontsize
 DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
-# depend appendixnumberbeamer
+DEPENDS+=	tex-appendixnumberbeamer-[0-9]*:../../print/tex-appendixnumberbeamer
 # depend apptools
 DEPENDS+=	tex-arabicfront-[0-9]*:../../print/tex-arabicfront
 # depend arcs
@@ -85,18 +85,18 @@ DEPENDS+=	tex-background-[0-9]*:../../print/tex-background
 # depend beamerdarkthemes
 DEPENDS+=	tex-beamerposter-[0-9]*:../../print/tex-beamerposter
 # depend beamersubframe
-# depend beamertheme-cuerna
-# depend beamertheme-detlevcm
-# depend beamertheme-epyt
-# depend beamertheme-focus
-# depend beamertheme-light
-# depend beamertheme-metropolis
-# depend beamertheme-npbt
-# depend beamertheme-phnompenh
-# depend beamertheme-saintpetersburg
-# depend beamertheme-upenn-bc
-# depend beamerthemejltree
-# depend beamerthemenirma
+DEPENDS+=	tex-beamertheme-cuerna-[0-9]*:../../print/tex-beamertheme-cuerna
+DEPENDS+=	tex-beamertheme-detlevcm-[0-9]*:../../print/tex-beamertheme-detlevcm
+DEPENDS+=	tex-beamertheme-epyt-[0-9]*:../../print/tex-beamertheme-epyt
+DEPENDS+=	tex-beamertheme-focus-[0-9]*:../../print/tex-beamertheme-focus
+DEPENDS+=	tex-beamertheme-light-[0-9]*:../../print/tex-beamertheme-light
+DEPENDS+=	tex-beamertheme-metropolis-[0-9]*:../../print/tex-beamertheme-metropolis
+DEPENDS+=	tex-beamertheme-npbt-[0-9]*:../../print/tex-beamertheme-npbt
+DEPENDS+=	tex-beamertheme-phnompenh-[0-9]*:../../print/tex-beamertheme-phnompenh
+DEPENDS+=	tex-beamertheme-saintpetersburg-[0-9]*:../../print/tex-beamertheme-saintpetersburg
+DEPENDS+=	tex-beamertheme-upenn-bc-[0-9]*:../../print/tex-beamertheme-upenn-bc
+DEPENDS+=	tex-beamerthemejltree-[0-9]*:../../print/tex-beamerthemejltree
+DEPENDS+=	tex-beamerthemenirma-[0-9]*:../../print/tex-beamerthemenirma
 # depend bearwear
 DEPENDS+=	tex-beton-[0-9]*:../../print/tex-beton
 # depend bewerbung
