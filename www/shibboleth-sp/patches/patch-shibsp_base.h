@@ -1,7 +1,5 @@
-$NetBSD: patch-shibsp_base.h,v 1.1 2013/09/20 23:11:01 joerg Exp $
-
---- shibsp/base.h.orig	2013-09-20 16:02:01.000000000 +0000
-+++ shibsp/base.h
+--- shibsp/base.h.orig	2018-07-09 18:17:23.000000000 -0700
++++ shibsp/base.h	2020-07-07 12:13:39.779239618 -0700
 @@ -32,6 +32,7 @@
  # define XMLTOOLING_LITE
  # include <xmltooling/base.h>
