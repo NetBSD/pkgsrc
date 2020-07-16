@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4055 2020/07/16 15:32:22 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4056 2020/07/16 17:38:31 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6459,3 +6459,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-aiohttp-socks to 0.5.1 [adam 2020-07-16]
 	Updated sysutils/py-psutil to 5.7.2 [adam 2020-07-16]
 	Updated chat/miniircd to 2.0 [leot 2020-07-16]
+	Updated fonts/spleen to 1.8.1 [fcambus 2020-07-16]
