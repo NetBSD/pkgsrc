@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/16 01:03:31 markd Exp $
+share/texmf-dist/tex/latex/beamertheme-detlevcm/beamercolorthemeETII.sty
+share/texmf-dist/tex/latex/beamertheme-detlevcm/beamerfontthemeDetlevCM.sty
+share/texmf-dist/tex/latex/beamertheme-detlevcm/beamerouterthemeDetlevCM.sty
+share/texmf-dist/tex/latex/beamertheme-detlevcm/beamerthemeDetlevCM.sty

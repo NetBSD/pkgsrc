@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/16 01:03:32 markd Exp $
+share/texmf-dist/tex/latex/beamertheme-focus/beamercolorthemefocus.sty
+share/texmf-dist/tex/latex/beamertheme-focus/beamerfontthemefocus.sty
+share/texmf-dist/tex/latex/beamertheme-focus/beamerinnerthemefocus.sty
+share/texmf-dist/tex/latex/beamertheme-focus/beamerouterthemefocus.sty
+share/texmf-dist/tex/latex/beamertheme-focus/beamerthemefocus.sty
