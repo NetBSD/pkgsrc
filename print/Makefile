@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.777 2020/06/16 08:34:26 pin Exp $
+# $NetBSD: Makefile,v 1.778 2020/07/16 01:07:13 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -224,6 +224,8 @@ SUBDIR+=	tex-apacite
 SUBDIR+=	tex-apacite-doc
 SUBDIR+=	tex-appendix
 SUBDIR+=	tex-appendix-doc
+SUBDIR+=	tex-appendixnumberbeamer
+SUBDIR+=	tex-appendixnumberbeamer-doc
 SUBDIR+=	tex-arabi
 SUBDIR+=	tex-arabi-doc
 SUBDIR+=	tex-arabicfront
@@ -308,6 +310,18 @@ SUBDIR+=	tex-beamer
 SUBDIR+=	tex-beamer-doc
 SUBDIR+=	tex-beamerposter
 SUBDIR+=	tex-beamerposter-doc
+SUBDIR+=	tex-beamertheme-cuerna
+SUBDIR+=	tex-beamertheme-detlevcm
+SUBDIR+=	tex-beamertheme-epyt
+SUBDIR+=	tex-beamertheme-focus
+SUBDIR+=	tex-beamertheme-light
+SUBDIR+=	tex-beamertheme-metropolis
+SUBDIR+=	tex-beamertheme-npbt
+SUBDIR+=	tex-beamertheme-phnompenh
+SUBDIR+=	tex-beamertheme-saintpetersburg
+SUBDIR+=	tex-beamertheme-upenn-bc
+SUBDIR+=	tex-beamerthemejltree
+SUBDIR+=	tex-beamerthemenirma
 SUBDIR+=	tex-beton
 SUBDIR+=	tex-beton-doc
 SUBDIR+=	tex-biblatex
