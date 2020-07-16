@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/04/12 11:21:10 nia Exp $
+# $NetBSD: options.mk,v 1.5 2020/07/16 01:28:25 markd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fluidsynth
 
@@ -6,7 +6,7 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.fluidsynth
 PKG_SUPPORTED_OPTIONS=		alsa jack portaudio pulseaudio sdl2
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 # Misc
-PKG_SUPPORTED_OPTIONS=		dbus ladspa
+PKG_SUPPORTED_OPTIONS+=		dbus ladspa
 
 .include "../../mk/oss.buildlink3.mk"
 
