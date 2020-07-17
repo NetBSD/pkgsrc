@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2020/04/26 03:13:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.107 2020/07/17 06:10:34 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -15,7 +15,6 @@ SUBDIR+=	gimp-docs
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer0.10-plugins
-#SUBDIR+=	kde	# currently just Makefile fragments
 SUBDIR+=	kde-telepathy
 SUBDIR+=	kde4
 SUBDIR+=	kf5
