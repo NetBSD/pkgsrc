@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/17 16:20:17 leot Exp $
+bin/sfeed_curses
+bin/sfeed_markread
+man/man1/sfeed_curses.1
+man/man1/sfeed_markread.1
+share/doc/sfeed_curses/README
