@@ -1,6 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/05/19 14:45:21 riastradh Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/07/17 17:30:13 riastradh Exp $
 
 Fix shell portability.
+
+https://lists.gforge.inria.fr/pipermail/sollya-devl/2020-July/000018.html
 
 --- configure.ac.orig	2018-09-20 11:11:30.000000000 +0000
 +++ configure.ac
