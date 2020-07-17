@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2020/07/13 19:45:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.24 2020/07/17 18:04:17 bsiegert Exp $
 
 DISTNAME=	1.0.0
 DIST_SUBDIR=	go-goptlib
 PKGNAME=	${DIST_SUBDIR}-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel net
 MASTER_SITES=	https://gitweb.torproject.org/pluggable-transports/goptlib.git/snapshot/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/06/17 09:54:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2020/07/17 18:04:24 bsiegert Exp $
 
 DISTNAME=	smartcrop-0.2.0.20180227
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	16
+PKGREVISION=	17
 MASTER_SITES=	${MASTER_SITE_GITHUB:=muesli/}
 CATEGORIES=	graphics
 GITHUB_PROJECT=	${PKGBASE:S/^go-//}

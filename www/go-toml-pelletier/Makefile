@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/06/17 09:54:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2020/07/17 18:04:32 bsiegert Exp $
 
 DISTNAME=	go-toml-1.0.0
 PKGNAME=	${DISTNAME:S/toml/toml-pelletier/}
-PKGREVISION=	19
+PKGREVISION=	20
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pelletier/}
 CATEGORIES=	www
 GITHUB_PROJECT=	go-toml
