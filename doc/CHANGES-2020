@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4057 2020/07/17 00:38:15 tpaul Exp $
+$NetBSD: CHANGES-2020,v 1.4058 2020/07/17 04:49:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6461,3 +6461,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/miniircd to 2.0 [leot 2020-07-16]
 	Updated fonts/spleen to 1.8.1 [fcambus 2020-07-16]
 	Updated devel/php-composer to 1.10.9 [tpaul 2020-07-17]
+	Updated security/clamav to 0.102.4 [taca 2020-07-17]
