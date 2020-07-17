@@ -1,18 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/11/28 13:27:21 wiz Exp $
+$NetBSD: distinfo,v 1.2 2020/07/17 23:50:44 wiz Exp $
 
-SHA1 (cascadia-ttf-1911.21/Cascadia.ttf) = 8397d5aaf5e61cb949ddd97d923caafdefb958b7
-RMD160 (cascadia-ttf-1911.21/Cascadia.ttf) = 5b1ae0f85bf669db35f22b66611081da724f5934
-SHA512 (cascadia-ttf-1911.21/Cascadia.ttf) = 8e2b55eb589bedb03c18857f6852333469776a38705ba3722ffa9fe4a1a8e82cf52d74ce1bbe749d06179ed74136eb0f419b7467e92e935f35c0966928810349
-Size (cascadia-ttf-1911.21/Cascadia.ttf) = 213476 bytes
-SHA1 (cascadia-ttf-1911.21/CascadiaMono.ttf) = addee265ec26e6e6eafd4921727a0d13fba93eb8
-RMD160 (cascadia-ttf-1911.21/CascadiaMono.ttf) = 5403894fcd4777a33146d03663cebe1165c1e6f1
-SHA512 (cascadia-ttf-1911.21/CascadiaMono.ttf) = 69b95ba8bf2c23a050e78e08acfcfa22b09efb20a6b8fe6ef1d9595484686095811f37ecc47c690a49278de2a0fec03bdc4ec3b37a49180381c87ad6abfc5f8d
-Size (cascadia-ttf-1911.21/CascadiaMono.ttf) = 195316 bytes
-SHA1 (cascadia-ttf-1911.21/CascadiaMonoPL.ttf) = d34b622c4fb426bd7cee61e52571be4ec5c90df2
-RMD160 (cascadia-ttf-1911.21/CascadiaMonoPL.ttf) = fb74ded6a9244be8c0f90cb02d69bf1d7fac0aa1
-SHA512 (cascadia-ttf-1911.21/CascadiaMonoPL.ttf) = cd638e171621844d9227d4612a5674c029aace29a52e85624e2c4ab719bf3911a74d721d852a18a4116eaedd2d952239630e3b4e5ec887e2a12d83e67e60b042
-Size (cascadia-ttf-1911.21/CascadiaMonoPL.ttf) = 211216 bytes
-SHA1 (cascadia-ttf-1911.21/CascadiaPL.ttf) = e6e1e91f15f84c6ccc22412bd28b9f9880302a71
-RMD160 (cascadia-ttf-1911.21/CascadiaPL.ttf) = 053098b3049a4ca4abc027723aa483278c1bb451
-SHA512 (cascadia-ttf-1911.21/CascadiaPL.ttf) = 9c171c0b98801f7a8236fd5e88f849c97de8d66c4357e3a27c0d5c2b0b64d459854283251c4478ff62062851423b1f84e0912a68be0eb9f02dc525af90251a5e
-Size (cascadia-ttf-1911.21/CascadiaPL.ttf) = 229376 bytes
+SHA1 (CascadiaCode-2007.01.zip) = 3e337821738dd83fdffc9e8973ba501f7cf103ad
+RMD160 (CascadiaCode-2007.01.zip) = 37df4a28806510e20dc96db5d1a5cfbab6f27a75
+SHA512 (CascadiaCode-2007.01.zip) = ed94eb1b4fb10bd157b1cd6cbf0fda2915f48ae324f464e0cb7a7fe1d4f445dd4c6dac57a1100b01729f82d08b04e8e841e89558721742b40c83386bec862c5f
+Size (CascadiaCode-2007.01.zip) = 3478705 bytes
