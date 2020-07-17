@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/04/12 11:09:03 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/07/17 17:10:20 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go113/AUTHORS
@@ -1936,6 +1936,7 @@ go113/src/cmd/go/testdata/script/README
 go113/src/cmd/go/testdata/script/bug.txt
 go113/src/cmd/go/testdata/script/build_GOTMPDIR.txt
 go113/src/cmd/go/testdata/script/build_acl_windows.txt
+go113/src/cmd/go/testdata/script/build_cache_arch_mode.txt
 go113/src/cmd/go/testdata/script/build_cache_compile.txt
 go113/src/cmd/go/testdata/script/build_cache_gomips.txt
 go113/src/cmd/go/testdata/script/build_cache_link.txt
@@ -8436,6 +8437,8 @@ go113/test/fixedbugs/issue3552.go
 go113/test/fixedbugs/issue3705.go
 go113/test/fixedbugs/issue3783.go
 go113/test/fixedbugs/issue3925.go
+go113/test/fixedbugs/issue39459.go
+go113/test/fixedbugs/issue39541.go
 go113/test/fixedbugs/issue4066.go
 go113/test/fixedbugs/issue4085a.go
 go113/test/fixedbugs/issue4085b.go
