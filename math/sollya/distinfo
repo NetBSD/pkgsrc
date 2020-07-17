@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2020/05/19 14:45:21 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2020/07/17 17:30:13 riastradh Exp $
 
 SHA1 (sollya-7.0.tar.gz) = ee14b55752842bc21dcd772204e4bc427844dea0
 RMD160 (sollya-7.0.tar.gz) = fb207ccd874d70de0d9b2ee9667ea4e82fe31846
 SHA512 (sollya-7.0.tar.gz) = 14dc25ffdfae16c52b335525eb26c787e561a5b9787fe65a9858e84d49f7386dfe2f7c0b7d18268a54a2f7227f506f6dbeecf7455d1ad49bef9dafbc25c30bef
 Size (sollya-7.0.tar.gz) = 3722904 bytes
-SHA1 (patch-configure) = 221a95f05cda20d68ed25826ace212a4cc077588
-SHA1 (patch-configure.ac) = 0d1d734a4d04983a30e4ed1945812b9afcb5d0bb
-SHA1 (patch-general.c) = 06e8a654250885ccc61481e5155c64c4c2b0374d
+SHA1 (patch-configure) = 0a63ec954969fe7f78804c430f1775fb0e9e0313
+SHA1 (patch-configure.ac) = 3c6c1804d1504265bf02cb6d984d6d60d39f0c16
+SHA1 (patch-general.c) = 66a0175d043c25c55e33c4e771bd11902b85f973

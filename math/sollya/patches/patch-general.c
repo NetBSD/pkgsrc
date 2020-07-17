@@ -1,6 +1,8 @@
-$NetBSD: patch-general.c,v 1.1 2020/05/19 14:45:21 riastradh Exp $
+$NetBSD: patch-general.c,v 1.2 2020/07/17 17:30:13 riastradh Exp $
 
 Get declarations for gettimeofday and clock_gettime on NetBSD.
+
+https://lists.gforge.inria.fr/pipermail/sollya-devl/2020-July/000019.html
 
 --- general.c.orig	2018-08-27 08:32:07.000000000 +0000
 +++ general.c
