@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/07/14 10:28:13 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/07/17 18:04:26 bsiegert Exp $
 
 DISTNAME=	terraform-provider-aws-2.70.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=terraform-providers/}
 GITHUB_PROJECT=	${PKGBASE}
