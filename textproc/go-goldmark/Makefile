@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/06/17 09:54:14 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/17 18:04:29 bsiegert Exp $
 
 DISTNAME=	goldmark-1.1.30
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yuin/}
 CATEGORIES=	textproc
 GITHUB_PROJECT=	goldmark
