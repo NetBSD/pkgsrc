@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/17 16:20:17 leot Exp $
+
+SHA1 (sfeed_curses-0.8.tar.gz) = e9c11c52338654d21d944f8c76cf706197efc5ed
+RMD160 (sfeed_curses-0.8.tar.gz) = abcd3df139bf2faa7e97554dfbb7eb21cc8e0f7f
+SHA512 (sfeed_curses-0.8.tar.gz) = b783a6fc922e48a864b67e08c79b2c6785689091cedc209be36acf52bdedbf123bcf4d4833572782f8f6613e5aad92cadf8058eeb28b1adbe659b2602a111133
+Size (sfeed_curses-0.8.tar.gz) = 16327 bytes
