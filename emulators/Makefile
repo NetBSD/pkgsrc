@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2020/06/16 12:10:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.331 2020/07/17 06:10:34 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -47,7 +47,6 @@ SUBDIR+=	compat60
 SUBDIR+=	compat61
 SUBDIR+=	compat61-x11
 SUBDIR+=	compat80
-#SUBDIR+=	compat_netbsd		# only contains Makefile fragments
 SUBDIR+=	cygwin_lib
 SUBDIR+=	darwin_lib
 SUBDIR+=	dega
@@ -222,7 +221,6 @@ SUBDIR+=	suse100_libpng
 SUBDIR+=	suse100_libsigc++2
 SUBDIR+=	suse100_libtiff
 SUBDIR+=	suse100_libxml2
-#SUBDIR+=	suse100_linux		# only contains Makefile fragments
 SUBDIR+=	suse100_locale
 SUBDIR+=	suse100_openmotif
 SUBDIR+=	suse100_openssl
@@ -276,7 +274,6 @@ SUBDIR+=	suse121_libpng
 SUBDIR+=	suse121_libsigc++2
 SUBDIR+=	suse121_libtiff
 SUBDIR+=	suse121_libxml2
-#SUBDIR+=	suse121_linux		# only contains Makefile fragments
 SUBDIR+=	suse121_locale
 SUBDIR+=	suse121_openmotif
 SUBDIR+=	suse121_openssl
@@ -368,7 +365,6 @@ SUBDIR+=	suse131_libwebp
 SUBDIR+=	suse131_libwrap
 SUBDIR+=	suse131_libxml2
 SUBDIR+=	suse131_libxslt
-#SUBDIR+=	suse131_linux		# only contains Makefile fragments
 SUBDIR+=	suse131_locale
 SUBDIR+=	suse131_lsb
 SUBDIR+=	suse131_motif
