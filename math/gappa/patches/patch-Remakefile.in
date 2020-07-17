@@ -1,6 +1,8 @@
-$NetBSD: patch-Remakefile.in,v 1.1 2020/05/19 21:42:29 riastradh Exp $
+$NetBSD: patch-Remakefile.in,v 1.2 2020/07/17 17:30:13 riastradh Exp $
 
 Install to DESTDIR.
+
+https://gitlab.inria.fr/gappa/gappa/-/commit/ba4dbb3ef66bbdd9d1f3d660a293515df0b57b43
 
 --- Remakefile.in.orig	2019-05-24 12:52:39.000000000 +0000
 +++ Remakefile.in
