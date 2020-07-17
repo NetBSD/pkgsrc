@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4058 2020/07/17 04:49:02 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4059 2020/07/17 09:30:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6462,3 +6462,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/spleen to 1.8.1 [fcambus 2020-07-16]
 	Updated devel/php-composer to 1.10.9 [tpaul 2020-07-17]
 	Updated security/clamav to 0.102.4 [taca 2020-07-17]
+	Updated x11/xterm to 344nb1 [pin 2020-07-17]
