@@ -1,5 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/28 13:27:21 wiz Exp $
-share/fonts/X11/TTF/Cascadia.ttf
+@comment $NetBSD: PLIST,v 1.2 2020/07/17 23:50:44 wiz Exp $
+share/fonts/X11/OTF/CascadiaCode-Bold.otf
+share/fonts/X11/OTF/CascadiaCode-ExtraLight.otf
+share/fonts/X11/OTF/CascadiaCode-Light.otf
+share/fonts/X11/OTF/CascadiaCode-Regular.otf
+share/fonts/X11/OTF/CascadiaCode-SemiBold.otf
+share/fonts/X11/OTF/CascadiaCode-SemiLight.otf
+share/fonts/X11/OTF/CascadiaCodePL-Bold.otf
+share/fonts/X11/OTF/CascadiaCodePL-ExtraLight.otf
+share/fonts/X11/OTF/CascadiaCodePL-Light.otf
+share/fonts/X11/OTF/CascadiaCodePL-Regular.otf
+share/fonts/X11/OTF/CascadiaCodePL-SemiBold.otf
+share/fonts/X11/OTF/CascadiaCodePL-SemiLight.otf
+share/fonts/X11/OTF/CascadiaMono-Bold.otf
+share/fonts/X11/OTF/CascadiaMono-ExtraLight.otf
+share/fonts/X11/OTF/CascadiaMono-Light.otf
+share/fonts/X11/OTF/CascadiaMono-Regular.otf
+share/fonts/X11/OTF/CascadiaMono-SemiBold.otf
+share/fonts/X11/OTF/CascadiaMono-SemiLight.otf
+share/fonts/X11/OTF/CascadiaMonoPL-Bold.otf
+share/fonts/X11/OTF/CascadiaMonoPL-ExtraLight.otf
+share/fonts/X11/OTF/CascadiaMonoPL-Light.otf
+share/fonts/X11/OTF/CascadiaMonoPL-Regular.otf
+share/fonts/X11/OTF/CascadiaMonoPL-SemiBold.otf
+share/fonts/X11/OTF/CascadiaMonoPL-SemiLight.otf
+share/fonts/X11/TTF/CascadiaCode.ttf
+share/fonts/X11/TTF/CascadiaCodePL.ttf
 share/fonts/X11/TTF/CascadiaMono.ttf
 share/fonts/X11/TTF/CascadiaMonoPL.ttf
-share/fonts/X11/TTF/CascadiaPL.ttf
