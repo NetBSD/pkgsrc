@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/07/17 16:20:17 leot Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/17 18:11:02 leot Exp $
 
 DISTNAME=	sfeed_curses-0.8
 CATEGORIES=	news
@@ -17,4 +17,5 @@ MAKE_FLAGS+=		CC=${CC:Q}
 
 REPLACE_SH+=		sfeed_markread
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
