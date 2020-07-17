@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4074 2020/07/17 23:50:53 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4075 2020/07/17 23:53:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6479,3 +6479,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/apache-ant to 1.10.8 [wiz 2020-07-17]
 	Updated security/caff to 2.11 [wiz 2020-07-17]
 	Updated fonts/cascadia-ttf to 2007.01 [wiz 2020-07-17]
+	Updated fonts/unifont to 13.0.03 [wiz 2020-07-17]

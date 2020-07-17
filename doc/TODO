@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19959 2020/07/17 23:50:53 wiz Exp $
+$NetBSD: TODO,v 1.19960 2020/07/17 23:53:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -986,8 +986,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
 	o py-rsa-4.6
-	o py-setuptools-49.1.0 [drops python-2.x support]
-	o py-setuptools-49.1.2
+	o py-setuptools-49.1.2 [drops python-2.x support]
 	o py-setuptools_scm-4.1.2
 	o py-simpletal-5.1
 	o py-sphinx-autoapi-1.4.0
@@ -1132,7 +1131,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ufoai-2.3.1
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
-	o unifont-13.0.03
 	o units-2.12
 	o urlgrabber-3.10.1
 	o userppp-030706
