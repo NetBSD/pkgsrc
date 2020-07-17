@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4072 2020/07/17 23:40:52 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4073 2020/07/17 23:44:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6477,3 +6477,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird-enigmail to 2.1.7 [wiz 2020-07-17]
 	Updated sysutils/dbus to 1.12.20 [wiz 2020-07-17]
 	Updated devel/apache-ant to 1.10.8 [wiz 2020-07-17]
+	Updated security/caff to 2.11 [wiz 2020-07-17]
