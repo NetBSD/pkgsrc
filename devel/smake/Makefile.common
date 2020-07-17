@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2020/06/05 16:48:16 micha Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/07/17 11:41:42 micha Exp $
 # used by archivers/star/Makefile
 # used by devel/smake/Makefile
 # used by shells/bosh/Makefile
@@ -87,5 +87,5 @@ PLIST.bsd=	yes
 	${OPSYS} == "OSF1" ||		\
 	${OPSYS} == "QNX" ||		\
 	${OPSYS} == "SunOS"
-USE_TOOLS+= 	tbl
+USE_TOOLS+=	tbl
 .endif
