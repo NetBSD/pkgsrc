@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/06/17 09:54:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2020/07/17 18:04:21 bsiegert Exp $
 
 DISTNAME=	sanitized_anchor_name-0.0.20170919
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shurcooL/}
 GITHUB_TAG=	86672fcb3f950f35f2e675df2240550f2a50762f

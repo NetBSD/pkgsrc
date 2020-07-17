@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/06/17 09:54:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2020/07/17 18:04:32 bsiegert Exp $
 
 DISTNAME=	go-libsass-0.9.2.0.20180625
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wellington/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	www
 GITHUB_PROJECT=	go-libsass
 GITHUB_TAG=	615eaa47ef794d037c1906a0eb7bf85375a5decf
