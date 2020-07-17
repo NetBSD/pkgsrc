@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4067 2020/07/17 23:20:28 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4068 2020/07/17 23:22:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6472,3 +6472,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/go114 to 1.14.6 [bsiegert 2020-07-17]
 	Updated x11/xev to 1.2.4 [wiz 2020-07-17]
 	Updated misc/todoman to 3.8.0 [wiz 2020-07-17]
+	Updated security/libgcrypt to 1.8.6 [wiz 2020-07-17]
