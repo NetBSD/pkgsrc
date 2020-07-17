@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4059 2020/07/17 09:30:30 pin Exp $
+$NetBSD: CHANGES-2020,v 1.4060 2020/07/17 10:35:09 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6463,3 +6463,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-composer to 1.10.9 [tpaul 2020-07-17]
 	Updated security/clamav to 0.102.4 [taca 2020-07-17]
 	Updated x11/xterm to 344nb1 [pin 2020-07-17]
+	Updated devel/smake to 1.3nb12 [micha 2020-07-17]
