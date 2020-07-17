@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.571 2020/07/11 11:56:59 nia Exp $
+# $NetBSD: Makefile,v 1.572 2020/07/17 06:10:34 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -144,7 +144,6 @@ SUBDIR+=	librep
 SUBDIR+=	libunwind
 SUBDIR+=	likepython
 SUBDIR+=	llvm
-#SUBDIR+=	lua		# only contains Makefile fragments
 SUBDIR+=	lua-moonscript
 SUBDIR+=	lua51
 SUBDIR+=	lua52
@@ -200,7 +199,6 @@ SUBDIR+=	pear
 SUBDIR+=	perl5
 SUBDIR+=	pfe
 SUBDIR+=	pforth
-#SUBDIR+=	php		# only contains Makefile fragments
 SUBDIR+=	php56
 SUBDIR+=	php72
 SUBDIR+=	php73
@@ -234,7 +232,6 @@ SUBDIR+=	py27-html-docs
 SUBDIR+=	py36-html-docs
 SUBDIR+=	py37-html-docs
 SUBDIR+=	py38-html-docs
-#SUBDIR+=	python		# only contains Makefile fragments
 SUBDIR+=	python27
 SUBDIR+=	python36
 SUBDIR+=	python37

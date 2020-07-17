@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.778 2020/07/16 01:07:13 markd Exp $
+# $NetBSD: Makefile,v 1.779 2020/07/17 06:10:34 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1568,7 +1568,6 @@ SUBDIR+=	tex-zref-doc
 SUBDIR+=	tex-zxjafont
 SUBDIR+=	tex-zxjafont-doc
 SUBDIR+=	tex4ht
-#SUBDIR+=	texlive				# place holder directory
 SUBDIR+=	vlna
 SUBDIR+=	web2c
 SUBDIR+=	xdvik
