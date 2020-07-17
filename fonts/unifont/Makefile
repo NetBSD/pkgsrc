@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/04/28 18:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/07/17 23:53:43 wiz Exp $
 
-DISTNAME=	unifont-13.0.02
+DISTNAME=	unifont-13.0.03
 CATEGORIES=	fonts
 MASTER_SITES=	http://unifoundry.com/pub/unifont/${DISTNAME}/
 
@@ -18,8 +18,6 @@ MAKE_FLAGS+=	PKGMANDIR=${PKGMANDIR}
 
 FONTS_DIRS.ttf+=	${PREFIX}/share/fonts/truetype/unifont
 FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/misc
-
-MAKE_JOBS_SAFE=	no
 
 REPLACE_PERL+=	src/bdfimplode
 REPLACE_PERL+=	src/hex2bdf
