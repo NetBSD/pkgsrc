@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4063 2020/07/17 11:36:25 micha Exp $
+$NetBSD: CHANGES-2020,v 1.4064 2020/07/17 16:20:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6467,3 +6467,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/star to 1.6.1nb9 [micha 2020-07-17]
 	Updated shells/bosh to 20200701 [micha 2020-07-17]
 	Updated shells/pbosh to 20200701 [micha 2020-07-17]
+	Added news/sfeed_curses version 0.8 [leot 2020-07-17]
