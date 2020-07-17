@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2020/06/05 17:26:43 micha Exp $
+# $NetBSD: Makefile,v 1.13 2020/07/17 11:34:59 micha Exp $
 
-DISTNAME=	schily-2020-05-25
-PKGNAME=	pbosh-20200525
+DISTNAME=	schily-2020-07-01
+PKGNAME=	pbosh-20200701
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/schilytools/
 COMMENT=	The Schily Bourne Shell
 LICENSE=	cddl-1.0
