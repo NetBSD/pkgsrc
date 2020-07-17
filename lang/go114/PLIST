@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/17 09:37:25 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/07/17 17:20:05 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go114/AUTHORS
@@ -1899,6 +1899,7 @@ go114/src/cmd/go/testdata/script/README
 go114/src/cmd/go/testdata/script/bug.txt
 go114/src/cmd/go/testdata/script/build_GOTMPDIR.txt
 go114/src/cmd/go/testdata/script/build_acl_windows.txt
+go114/src/cmd/go/testdata/script/build_cache_arch_mode.txt
 go114/src/cmd/go/testdata/script/build_cache_compile.txt
 go114/src/cmd/go/testdata/script/build_cache_gomips.txt
 go114/src/cmd/go/testdata/script/build_cache_link.txt
@@ -2161,9 +2162,16 @@ go114/src/cmd/go/testdata/script/std_vendor.txt
 go114/src/cmd/go/testdata/script/sum_readonly.txt
 go114/src/cmd/go/testdata/script/test_bad_example.txt
 go114/src/cmd/go/testdata/script/test_badtest.txt
+go114/src/cmd/go/testdata/script/test_benchmark_chatty_fail.txt
+go114/src/cmd/go/testdata/script/test_benchmark_chatty_success.txt
 go114/src/cmd/go/testdata/script/test_benchmark_fatal.txt
 go114/src/cmd/go/testdata/script/test_benchmark_labels.txt
 go114/src/cmd/go/testdata/script/test_cache_inputs.txt
+go114/src/cmd/go/testdata/script/test_chatty_fail.txt
+go114/src/cmd/go/testdata/script/test_chatty_parallel_fail.txt
+go114/src/cmd/go/testdata/script/test_chatty_parallel_success.txt
+go114/src/cmd/go/testdata/script/test_chatty_parallel_success_sleepy.txt
+go114/src/cmd/go/testdata/script/test_chatty_success.txt
 go114/src/cmd/go/testdata/script/test_compile_binary.txt
 go114/src/cmd/go/testdata/script/test_compile_tempfile.txt
 go114/src/cmd/go/testdata/script/test_flag.txt
@@ -8604,6 +8612,8 @@ go114/test/fixedbugs/issue37716.go
 go114/test/fixedbugs/issue3783.go
 go114/test/fixedbugs/issue38117.go
 go114/test/fixedbugs/issue3925.go
+go114/test/fixedbugs/issue39459.go
+go114/test/fixedbugs/issue39541.go
 go114/test/fixedbugs/issue4066.go
 go114/test/fixedbugs/issue4085a.go
 go114/test/fixedbugs/issue4085b.go
