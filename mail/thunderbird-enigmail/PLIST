@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/11/06 15:45:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/07/17 23:33:12 wiz Exp $
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/bootstrap.js
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content/am-enigprefs.xul
@@ -243,6 +243,7 @@ lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content/ui/setupWizard2.xul
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content/ui/tb60FilterEditorOverlay.js
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content/ui/tb60FilterEditorOverlay.xul
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content/ui/tb78warning.xul
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content/ui/updateGnuPG.html
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content/ui/updateGnuPG.js
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/content/ui/upgradeInfo.html
