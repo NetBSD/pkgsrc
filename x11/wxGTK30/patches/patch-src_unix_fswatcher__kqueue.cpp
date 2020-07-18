@@ -1,9 +1,9 @@
-$NetBSD: patch-src_unix_fswatcher__kqueue.cpp,v 1.3 2019/10/16 20:43:14 wiz Exp $
+$NetBSD: patch-src_unix_fswatcher__kqueue.cpp,v 1.4 2020/07/18 13:02:54 adam Exp $
 
 Fix compilation error on NetBSD
 https://trac.wxwidgets.org/ticket/18199
 
---- src/unix/fswatcher_kqueue.cpp.orig	2018-03-07 16:55:38.000000000 +0000
+--- src/unix/fswatcher_kqueue.cpp.orig	2020-07-18 06:20:35.185180562 +0000
 +++ src/unix/fswatcher_kqueue.cpp
 @@ -14,6 +14,10 @@
      #pragma hdrstop
@@ -16,31 +16,12 @@ https://trac.wxwidgets.org/ticket/18199
  #if wxUSE_FSWATCHER
  
  #include "wx/fswatcher.h"
-@@ -125,8 +129,13 @@ public:
-         struct kevent event;
-         int action = EV_ADD | EV_ENABLE | EV_CLEAR | EV_ERROR;
-         int flags = Watcher2NativeFlags(watch->GetFlags());
+@@ -34,7 +38,7 @@ namespace
+ 
+ // NetBSD is different as it uses intptr_t as type of kevent struct udata field
+ // for some reason, instead of "void*" as all the other platforms using kqueue.
+-#ifdef __NetBSD__
 +#if defined(__NetBSD__) && (__NetBSD_Version__ <= 999001400)
-+        EV_SET( &event, watch->GetFileDescriptor(), EVFILT_VNODE, action,
-+                flags, 0, (intptr_t)watch.get() );
-+#else
-         EV_SET( &event, watch->GetFileDescriptor(), EVFILT_VNODE, action,
-                 flags, 0, watch.get() );
-+#endif
- 
-         // TODO more error conditions according to man
-         // TODO best deal with the error here
-@@ -281,10 +290,11 @@ protected:
- 
-         wxLogTrace(wxTRACE_FSWATCHER, "Event: ident=%d, filter=%d, flags=%u, "
-                    "fflags=%u, data=%d, user_data=%p",
--                   e.ident, e.filter, e.flags, e.fflags, e.data, e.udata);
-+                   e.ident, e.filter, e.flags, e.fflags, e.data,
-+                   (const void *)e.udata);
- 
-         // for ease of use
--        wxFSWatchEntryKq& w = *(static_cast<wxFSWatchEntry*>(e.udata));
-+        wxFSWatchEntryKq& w = *(reinterpret_cast<wxFSWatchEntry*>(e.udata));
-         int nflags = e.fflags;
- 
-         // clear ignored flags
+     inline intptr_t ToUdata(void* d) { return reinterpret_cast<intptr_t>(d); }
+     inline void* FromUdata(intptr_t d) { return reinterpret_cast<void*>(d); }
+ #else
