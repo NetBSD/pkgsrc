@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2020/05/31 19:47:01 leot Exp $
+@comment $NetBSD: PLIST,v 1.43 2020/07/18 17:17:04 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -237,6 +237,9 @@ ${PYSITELIB}/gallery_dl/extractor/mangafox.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangahere.py
 ${PYSITELIB}/gallery_dl/extractor/mangahere.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangahere.pyo
+${PYSITELIB}/gallery_dl/extractor/mangakakalot.py
+${PYSITELIB}/gallery_dl/extractor/mangakakalot.pyc
+${PYSITELIB}/gallery_dl/extractor/mangakakalot.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangapanda.py
 ${PYSITELIB}/gallery_dl/extractor/mangapanda.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangapanda.pyo
@@ -372,6 +375,9 @@ ${PYSITELIB}/gallery_dl/extractor/smugmug.pyo
 ${PYSITELIB}/gallery_dl/extractor/speakerdeck.py
 ${PYSITELIB}/gallery_dl/extractor/speakerdeck.pyc
 ${PYSITELIB}/gallery_dl/extractor/speakerdeck.pyo
+${PYSITELIB}/gallery_dl/extractor/subscribestar.py
+${PYSITELIB}/gallery_dl/extractor/subscribestar.pyc
+${PYSITELIB}/gallery_dl/extractor/subscribestar.pyo
 ${PYSITELIB}/gallery_dl/extractor/test.py
 ${PYSITELIB}/gallery_dl/extractor/test.pyc
 ${PYSITELIB}/gallery_dl/extractor/test.pyo
@@ -468,3 +474,4 @@ ${PYSITELIB}/gallery_dl/version.pyo
 man/man1/gallery-dl.1
 man/man5/gallery-dl.conf.5
 share/bash-completion/completions/gallery-dl
+share/zsh/site-functions/_gallery-dl
