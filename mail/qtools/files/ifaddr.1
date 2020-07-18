@@ -1,0 +1,53 @@
+.TH ifaddr 1
+.SH NAME
+.PP
+\fB\fCifaddr\fR \- match addresses in headers
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+ifaddr [ _field_ ... : ] [ _addr_ ... ]
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fCifaddr\fR program reads a message from standard input. It exits 0 if any
+\fB\fC_addr_\fR appears in a \fB\fC_field_\fR header, and exiting 100 if there is no match.
+Invoked with no \fB\fC_addr_\fR arguments, \fB\fCifaddr\fR looks for the address in the
+environment variable \fB\fC$RECIPIENT\fR\&. Address comparisons are case insensitive.
+If no \fB\fC_field_\fR arguments appear, then \fB\fCifaddr\fR uses \fB\fCTo\fR and \fB\fCCc\fR\&.
+.PP
+If an \fB\fC_addr_\fR begins with \fB\fC@\fR, then \fB\fCifaddr\fR compares it to the domain
+portion of addresses from each field.
+.SH EXIT STATUS
+.PP
+If it encounters a temporary error while reading input, \fB\fCifaddr\fR exits 111.
+.SH EXAMPLES
+.PP
+The \fB\fC\&.qmail\fR line
+.PP
+.RS
+.nf
+| condtomaildir _dir_ ifaddr to cc from : _myfriend_
+.fi
+.RE
+.PP
+writes correspondence with \fB\fC_myfriend_\fR to \fB\fC_dir_\fR\&.
+.PP
+The \fB\fC\&.qmail\fR line
+.PP
+.RS
+.nf
+| condtomaildir _dir_ ifaddr @example.com
+.fi
+.RE
+.PP
+writes a message with a \fB\fCTo\fR or \fB\fCCc\fR address in the domain \fB\fCexample.com\fR to
+\fB\fC_dir_\fR\&.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT

@@ -1,0 +1,139 @@
+.TH replier\-config 1
+.SH NAME
+.PP
+\fB\fCreplier\-config\fR \- configure an instance of replier
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+replier\-config _dir_ _dot_ _local_ _host_ [ _outlocal_ [ _outhost_ ]]
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fCreplier\-config\fR program configures an instance of
+\fB\fCreplier\fR \[la]replier.html\[ra], the qtools auto\-responder. It creates \fB\fC_dir_\fR and
+populates it with configuration files. It creates two qmail files called
+\fB\fC_dot_ \-help\fR and \fB\fC_dot_ \-return\-default\fR\&. The \fB\fC_local_\fR, \fB\fC_host_\fR arguments
+together determine the local delivery address configured for auto\-response.
+The \fB\fC_outlocal_\fR, \fB\fC_outhost_\fR arguments are used in the responses.
+.PP
+The directory \fB\fC_dir_\fR must begin with a slash. If \fB\fC_outlocal_\fR is not present,
+\fB\fCreplier\-config\fR sets it to \fB\fC_local_\fR\&. If \fB\fC_outhost_\fR is not present,
+\fB\fCreplier\-config\fR sets it to \fB\fC_host_\fR\&.
+.PP
+If \fB\fC_outlocal_\fR is not empty, \fB\fCreplier\-config\fR creates a new email replier at
+the address
+.PP
+.RS
+.nf
+_outlocal_ \-help@ _outhost_
+.fi
+.RE
+.PP
+If \fB\fC_outlocal_\fR is empty, \fB\fCreplier\-config\fR creates a new email replier at the
+address
+.PP
+.RS
+.nf
+help@ _outhost_
+.fi
+.RE
+.PP
+In either case, \fB\fCreplier\-config\fR sets up two \fB\fC\&.qmail\fR files to control the
+help\-address replier: \fB\fC_dot_ \-help\fR and \fB\fC_dot_ \-return\-default\fR\&. These files
+should control messages to the addresses \fB\fC_outlocal_ \-help@ _outhost_\fR and
+\fB\fC_outlocal_ \-return\-@ _outhost_\fR, respectively (or \fB\fChelp@ _outhost_\fR and
+\fB\fCreturn\-@ _outhost_\fR if \fB\fC_outlocal_\fR is empty).
+.PP
+Within \fB\fC_dir_\fR, \fB\fCreplier\-config\fR creates several configuration files for
+\fB\fCreplier\fR\&.
+.PP
+The first line of \fB\fC_dir_ /inlocal\fR consists of \fB\fC_local_\fR\&.
+.PP
+The first line of \fB\fC_dir_ /inhost\fR consists of \fB\fC_host_\fR\&.
+.PP
+The first line of \fB\fC_dir_ /outlocal\fR consists of \fB\fC_outlocal_\fR\&.
+.PP
+The first line of \fB\fC_dir_ /outhost\fR consists of \fB\fC_outhost_\fR\&.
+.PP
+The first line of \fB\fC_dir_ /mailinglist\fR consists of \fB\fCcontact _helpaddress_ ;
+run by replier\fR, where \fB\fC_helpaddress_\fR is the help address created by
+\fB\fCreplier\-config\fR as described above.
+.PP
+The \fB\fC_dir_ /headerremove\fR file contains
+.PP
+.RS
+.nf
+return\-path
+return\-receipt\-to
+content\-length
+.fi
+.RE
+.PP
+The \fB\fC_dir_ /headeradd\fR file contains
+.PP
+.RS
+.nf
+Precedence: bulk
+.fi
+.RE
+.PP
+The \fB\fC_dir_ /text/help\fR file contains text sent in response to messages
+received at the help address.
+.SH EXAMPLES
+.PP
+To configure a replier at the address \fB\fCjoe\-replier\-help@example.com\fR, the user
+\fB\fCjoe\fR issues the command
+.PP
+.RS
+.nf
+replier\-config $HOME/replier $HOME/.qmail\-replier joe\-replier example.com
+.fi
+.RE
+.PP
+If email to \fB\fCjoe@example.com\fR is delivered to \fB\fCjoe@joehost.example.com\fR, the
+following command may be appropriate to configure a replier at \fB\fCjoe\-replier\-
+help@example.com\fR:
+.PP
+.RS
+.nf
+replier\-config $HOME/replier $HOME/.qmail\-replier joe\-replier joehost.example.com joe\-replier example.com
+.fi
+.RE
+.PP
+If the user \fB\fCreplier\fR handles mail for the virtual domain
+\fB\fCreplier.example.com\fR, then the following command creates a replier at
+\fB\fChelp@replier.example.com\fR:
+.PP
+.RS
+.nf
+replier\-config $HOME/replier $HOME/.qmail replier example.com ""
+.fi
+.RE
+.SS Adding replier addresses
+.PP
+To add a new replier address that filters only the body of a message, edit the
+\fB\fC_dir_ /bodyfilter\fR shell script and add a new case corresponding to the new
+address. Then create a symbolic link from \fB\fC_dir_ /qmail\-bodyfilter\fR to the
+\fB\fC\&.qmail\fR file that controls the new address. That's it!
+.PP
+Adding a command to filter the message header is entirely analagous, but use
+\fB\fC_dir_ /headerfilter\fR and \fB\fC_dir_ /qmail\-headerfilter\fR, while entire\-message
+filters use \fB\fC_dir_ /msgfilter\fR and \fB\fC_dir_ /qmail\-msgfilter\fR\&.
+.SS Bounce handling
+.PP
+By default, a replier created with \fB\fCreplier\-config\fR silently throws away
+bounce messages. The \fB\fC\&.qmail\fR file controlling bounces is a symbolic link
+pointing to \fB\fC_dir_ /bouncer\fR\&. Edit \fB\fC_dir_ /bouncer\fR to change the treatment of
+bounce messages.
+.SH BUGS
+.PP
+The very existence of this program is a bug.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT
