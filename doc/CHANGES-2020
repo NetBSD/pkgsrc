@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4076 2020/07/18 13:03:19 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4077 2020/07/18 13:31:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6482,3 +6482,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/unifont to 13.0.03 [wiz 2020-07-17]
 	Updated graphics/lcms2 to 2.11 [adam 2020-07-18]
 	Updated x11/wxGTK30 to 3.0.5.1 [adam 2020-07-18]
+	Updated mail/qtools to 0.56nb1 [schmonz 2020-07-18]
