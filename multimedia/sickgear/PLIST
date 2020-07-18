@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/15 19:31:56 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/18 23:22:49 js Exp $
 bin/sickgear
 lib/sickgear/CHANGES.md
 lib/sickgear/COPYING.txt
@@ -1897,7 +1897,6 @@ lib/sickgear/lib/js2py/prototypes/jsstring.py
 lib/sickgear/lib/js2py/prototypes/jstypedarray.py
 lib/sickgear/lib/js2py/py_node_modules/__init__.py
 lib/sickgear/lib/js2py/pyjs.py
-lib/sickgear/lib/js2py/test_internals.py
 lib/sickgear/lib/js2py/translators/__init__.py
 lib/sickgear/lib/js2py/translators/friendly_nodes.py
 lib/sickgear/lib/js2py/translators/jsregexps.py
