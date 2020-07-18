@@ -1,0 +1,40 @@
+.TH iftoccfrom 1
+.SH NAME
+.PP
+\fB\fCiftoccfrom\fR \- look for addresses in standard message headers
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+iftoccfrom [ _addr_ ... ]
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fCiftoccfrom\fR program reads an 822\-format message from standard input and
+matches address in the \fB\fCTo\fR, \fB\fCCc\fR, or \fB\fCFrom\fR headers against \fB\fC_addr_\fR\&. If it
+finds a match, \fB\fCiftoccfrom\fR exits 0\&. Otherwise it exits 100\&. If no \fB\fC_addr_\fR
+argument is present, then \fB\fCiftoccfrom\fR uses the address in the environment
+variable \fB\fC$RECIPIENT\fR as \fB\fC_addr_\fR\&.
+.SH EXIT STATUS
+.PP
+If it encounters a temporary error while reading input, \fB\fCiftoccfrom\fR exits
+111.
+.SH EXAMPLES
+.PP
+The \fB\fC\&.qmail\fR line
+.PP
+.RS
+.nf
+| condtomaildir _dir_ iftoccfrom _afriend_
+.fi
+.RE
+.PP
+writes correspondence with \fB\fC_afriend_\fR to \fB\fC_dir_\fR\&.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT
