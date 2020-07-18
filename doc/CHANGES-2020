@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4079 2020/07/18 19:26:26 pin Exp $
+$NetBSD: CHANGES-2020,v 1.4080 2020/07/18 20:38:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6485,3 +6485,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/qtools to 0.56nb1 [schmonz 2020-07-18]
 	Updated net/gallery-dl to 1.14.3 [leot 2020-07-18]
 	Updated x11/xterm to 358 [pin 2020-07-18]
+	Updated www/qutebrowser to 1.13.1 [pin 2020-07-18]
