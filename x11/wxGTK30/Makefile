@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2020/05/20 06:09:09 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/07/18 13:02:53 adam Exp $
 
-DISTNAME=	wxWidgets-3.0.4
+DISTNAME=	wxWidgets-3.0.5.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
-PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -26,19 +25,13 @@ CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-expat=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
+CONFIGURE_ARGS+=	--disable-webview
 CONFIGURE_ARGS+=	--enable-mediactrl
 # wxregexu symbols are not exported properly as of 3.0.1
 # http://trac.wxwidgets.org/ticket/16571
 CONFIGURE_ARGS+=	--disable-visibility
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/wx-3.0
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/wx-3.0
-
-# ./src/stc/scintilla/src/Editor.cxx: In member function 'void Editor::LayoutLine(int, Surface*, ViewStyle&, LineLayout*, int)':
-# ./src/stc/scintilla/src/Editor.cxx:2200:47: error: array subscript has type 'char' [-Werror=char-subscripts]
-#         if (ctrlCharWidth[ll->chars[charInLine]] == 0) {
-#                                                ^
-# Maybe fix this later.
-BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 DOCDIR=			share/wx-3.0/doc/wxWidgets
 
