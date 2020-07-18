@@ -1,20 +1,11 @@
-$NetBSD: patch-configure,v 1.6 2020/03/18 14:11:37 gdt Exp $
+$NetBSD: patch-configure,v 1.7 2020/07/18 13:02:54 adam Exp $
 
-Fix shell script portability
-tweak SEARCH_LIB
+Tweak SEARCH_LIB.
+Avoid -Werror.
 
---- configure.orig	2014-06-14 21:48:48.000000000 +0000
+--- configure.orig	2020-05-02 14:03:18.000000000 +0000
 +++ configure
-@@ -19447,7 +19447,7 @@ $as_echo_n "checking SDK deployment vers
-         MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" buildSettings | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
- 
-         # If that failed, try again with the new key
--        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" == "x"; then
-+        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" = "x"; then
- 
-             MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" DefaultProperties | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
- 
-@@ -22015,7 +22015,7 @@ fi
+@@ -21778,7 +21778,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $wx_cv_std_libfullpath" >&5
  $as_echo "$wx_cv_std_libfullpath" >&6; }
  
@@ -23,22 +14,13 @@ tweak SEARCH_LIB
  
  if test "$build" != "$host" -a "$GCC" = yes; then
                      if cross_root=`$CC -print-prog-name=ld 2>/dev/null`; then
-@@ -38819,7 +38822,7 @@ $as_echo "$bakefile_cv_gcc31" >&6; }
-             SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
-         fi
+@@ -35158,9 +35158,6 @@ if ac_fn_cxx_try_compile "$LINENO"; then
+ else
  
--        if test "x$GCC" == "xyes"; then
-+        if test "x$GCC" = "xyes"; then
-             PIC_FLAG="-dynamic -fPIC"
-         fi
-         if test "x$XLCC" = "xyes"; then
-@@ -40007,7 +40011,8 @@ EOF
-       *-*-solaris2* )
-         SONAME_FLAG="-h "
-         USE_SOVERSION=1
--        USE_SOVERSOLARIS=1
-+        USE_SOVERLINUX=1
-+        USE_SOTWOSYMLINKS=1
-       ;;
+                                                                                                                                                                         CFLAGS_OLD="$CFLAGS"
+-                        if test "$GCC" = yes ; then
+-                            CFLAGS="-Werror $CFLAGS"
+-                        fi
  
-       *-*-darwin* )
+                         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
