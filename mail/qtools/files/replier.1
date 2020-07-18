@@ -1,0 +1,72 @@
+.TH replier 1
+.SH NAME
+.PP
+\fB\fCreplier\fR \- automatically respond to messages
+.SH SYNOPSIS
+.PP
+In \fB\fC\&.qmail\fR:
+.PP
+.RS
+.nf
+| replier _dir_ _address_ _prog_
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fCreplier\fR program changes the working directory to \fB\fC_dir_\fR, executes
+\fB\fC_prog_\fR with a message on standard input, and forwards the standard output
+from \fB\fC_prog_\fR to \fB\fC_address_\fR\&. It adds a \fB\fCMailing\-List\fR field to the message
+headers with the contents of \fB\fC_dir_ /mailinglist\fR\&. It rejects the message if
+there is already a \fB\fCMailing\-List\fR field. It adds to the message all fields
+listed in \fB\fC_dir_ /headeradd\fR, followed by an appropriate \fB\fCDelivered\-To\fR line.
+It deletes from the message any fields with names listed in \fB\fC_dir_
+/headerremove\fR\&. It performs its header editing on the output from \fB\fC_prog_\fR\&.
+.PP
+If \fB\fC_prog_\fR exits 0, then \fB\fCreplier\fR forwards the message to \fB\fC_address_\fR and
+exits 99\&. If \fB\fCprog\fR exits 111, \fB\fCreplier\fR exits 111\&. If \fB\fCprog\fR exits anything
+else, or does not exist, \fB\fCreplier\fR exits 0.
+.PP
+The \fB\fCreplier\fR program does not distribute bounce messages: if the environment
+variable \fB\fC$SENDER\fR is set, and is either empty or \fB\fC#@[]\fR, then \fB\fCreplier\fR
+rejects the message.
+.SS Environment variables
+.PP
+The \fB\fCreplier\fR program supplies several environment variables to \fB\fCprog\fR\&. The
+recipient address that caused message processing by \fB\fCreplier\fR has one of two
+forms: \fB\fC_inlocal_ \- _request_ @ _domain_\fR, where \fB\fC_inlocal_\fR matches the first
+line of \fB\fC_dir_ /inlocal\fR, or \fB\fC_request_ @ _domain_\fR, when \fB\fC_dir_ /inlocal\fR has
+an empty first line. In either case, \fB\fCreplier\fR sets the following environment
+variables:
+.PP
+\fBNB\fP : These environment variables are not quoted. They are under the
+control of the sender.
+.PP
+\fB\fC$REQUEST\fR
+.PP
+The \fB\fC_request_\fR portionh of the recipient address.
+.PP
+\fB\fC$REQUEST2\fR
+.PP
+The portion of \fB\fC_request_\fR in the recipient address that follows the first
+hyphen.
+.PP
+\fB\fC$REQUEST3\fR
+.PP
+The portion of \fB\fC_request_\fR in the recipient address that follows the second
+hyphen.
+.PP
+\fB\fC$REQUEST4\fR
+.PP
+The portion of \fB\fC_request_\fR in the recipient address that follows the third
+hyphen.
+.SH EXIT STATUS
+.PP
+If it encounters a permanent error in handling a message, \fB\fCreplier\fR exits
+100\&. If it encounters a temporary error a message, \fB\fCreplier\fR exits 111.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT
