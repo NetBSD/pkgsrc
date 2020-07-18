@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4077 2020/07/18 13:31:56 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4078 2020/07/18 17:17:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6483,3 +6483,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/lcms2 to 2.11 [adam 2020-07-18]
 	Updated x11/wxGTK30 to 3.0.5.1 [adam 2020-07-18]
 	Updated mail/qtools to 0.56nb1 [schmonz 2020-07-18]
+	Updated net/gallery-dl to 1.14.3 [leot 2020-07-18]
