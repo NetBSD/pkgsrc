@@ -1,0 +1,36 @@
+.TH filterto 1
+.SH NAME
+.PP
+\fB\fCfilterto\fR \- conditionally forward a filtered message
+.SH SYNOPSIS
+.PP
+In \fB\fC\&.qmail\fR:
+.PP
+.RS
+.nf
+| filterto _address_ _prog_
+.fi
+.RE
+.PP
+where \fB\fC_address_\fR is an email address, and \fB\fC_prog_\fR is one or more arguments
+specifying a program to run for each message.
+.SH DESCRIPTION
+.PP
+The \fB\fCfilterto\fR program runs \fB\fC_prog_\fR with a message on standard input. If
+\fB\fC_prog_\fR exits 0, \fB\fCfilterto\fR forwards the standard output from \fB\fC_prog_\fR to
+\fB\fC_address_\fR, and then exits 99\&. If \fB\fC_prog_\fR exits 111, \fB\fCfilterto\fR exits 111\&.
+If \fB\fC_prog_\fR exits with any other exit code, or does not exist, \fB\fCfilterto\fR
+exits 0.
+.PP
+\fBNB\fP : It is not safe for \fB\fC_prog_\fR to fork a child that reads the message in
+the background.
+.PP
+\fBNB\fP : If you use \fB\fCfilterto\fR in a \fB\fC\&.qmail\fR file, make sure to add a line
+specifying delivery to your normal mailbox.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT

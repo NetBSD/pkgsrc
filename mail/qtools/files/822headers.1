@@ -1,0 +1,32 @@
+.TH 822headers 1
+.SH NAME
+.PP
+\fB\fC822headers\fR \- FIXME
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+822headers _field_ ...
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fC822headers\fR program reads an 822\-format email message from standard
+input. For each input header \fB\fC_field_\fR, \fB\fC822headers\fR prints a full copy of the
+field, including name, to standard output. If no \fB\fC_field_\fR appears,
+\fB\fC822headers\fR looks for \fB\fC_subject_\fR\&.
+.PP
+The end of the message or the first line that cannot be part of an 822\-format
+header field terminates the message headers.
+.SH EXIT STATUS
+.PP
+If it encounters an error while processing a message, \fB\fC822headers\fR exits 111\&.
+If \fB\fC822headers\fR finds any matching headers, it exits 0\&. Otherwise,
+\fB\fC822headers\fR exits 100.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT

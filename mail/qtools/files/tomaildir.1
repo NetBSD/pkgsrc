@@ -1,0 +1,25 @@
+.TH tomaildir 1
+.SH NAME
+.PP
+\fB\fCtomaildir\fR \- deliver a message to a maildir
+.SH SYNOPSIS
+.PP
+In \fB\fC\&.qmail\fR:
+.PP
+.RS
+.nf
+| tomaildir _dir_
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+For each email message it processes, \fB\fCtomaildir\fR writes the message to
+\fB\fC_dir_\fR\&. If the write succeeds, \fB\fCtomaildir\fR exits 0\&. If it encounters a
+permanent error, \fB\fCtomaildir\fR exits 100\&. Otherwise, \fB\fCtomaildir\fR exits 111.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT

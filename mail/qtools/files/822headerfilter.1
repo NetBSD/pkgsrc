@@ -1,0 +1,31 @@
+.TH 822headerfilter 1
+.SH NAME
+.PP
+\fB\fC822headerfilter\fR \- filter a message header
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+822headerfilter _prog_
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fC822headerfilter\fR program reads an 822\-format email message from standard
+input. It executes \fB\fC_prog_\fR with the header of the message on standard input.
+.PP
+The end of the message or the first line that cannot be part of an 822\-format
+header field terminates the headers.
+.SH EXIT STATUS
+.PP
+If it encounters a permanent error in reading input or executing \fB\fC_prog_\fR,
+\fB\fC822headerfilter\fR exits 100\&. If it encounters a temporary error in reading
+input or executing \fB\fC_prog_\fR, \fB\fC822headerfilter\fR exits 111\&. Otherwise,
+\fB\fC822headerfilter\fR yields the same exit code as \fB\fC_prog_\fR\&.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT

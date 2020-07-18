@@ -1,0 +1,30 @@
+.TH checkdomain 1
+.SH NAME
+.PP
+\fB\fCcheckdomain\fR \- check input for matching address domains
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+checkdomain _dom_ ...
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fCcheckdomain\fR program reads email addresses from standard input, and
+compares the domain portion with each \fB\fC_dom_\fR without regard to case. If no
+\fB\fC_addr_\fR appears, \fB\fCcheckdomain\fR uses the domain part of the environment
+variable \fB\fC$RECIPIENT\fR as \fB\fC_dom_\fR\&. The \fB\fCcheckdomain\fR program reads addresses in
+the form output by \fB\fC822addr\fR \[la]822addr.html\[ra]\&. It considers only delivery
+addresses and ignores address comments.
+.SH EXIT STATUS
+.PP
+If it finds a match, \fB\fCcheckdomain\fR exits 0\&. Otherwise, \fB\fCcheckdomain\fR exits
+100.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT

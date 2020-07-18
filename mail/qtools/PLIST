@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/29 19:11:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/18 13:31:44 schmonz Exp $
 bin/822addr
 bin/822body
 bin/822bodyfilter
@@ -15,3 +15,19 @@ bin/iftoccfrom
 bin/replier
 bin/replier-config
 bin/tomaildir
+man/man1/822addr.1
+man/man1/822body.1
+man/man1/822bodyfilter.1
+man/man1/822fields.1
+man/man1/822headerfilter.1
+man/man1/822headerok.1
+man/man1/822headers.1
+man/man1/checkaddr.1
+man/man1/checkdomain.1
+man/man1/condtomaildir.1
+man/man1/filterto.1
+man/man1/ifaddr.1
+man/man1/iftoccfrom.1
+man/man1/replier-config.1
+man/man1/replier.1
+man/man1/tomaildir.1
