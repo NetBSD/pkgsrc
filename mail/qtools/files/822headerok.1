@@ -1,0 +1,32 @@
+.TH 822headerok 1
+.SH NAME
+.PP
+\fB\fC822headerok\fR \- FIXME
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+822headerok
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fC822headerok\fR program reads an 822\-format email message from standard
+input. In any case, \fB\fC822headerok\fR writes no output.
+.PP
+The end of the message or a blank line terminate the headers.
+.PP
+Note that the UUCP\-style \fB\fCFrom_\fR line placed before a message in an mbox file
+is not part of the message.
+.SH EXIT STATUS
+.PP
+If it encounters a read error, \fB\fC822headerok\fR exits 111\&. If it sees a nonblank
+line that cannot be part of an 822\-format header field, \fB\fC822headerok\fR exits
+100\&. Otherwise it exits 0.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT

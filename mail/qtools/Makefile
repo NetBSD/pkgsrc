@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2020/06/25 05:42:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2020/07/18 13:31:44 schmonz Exp $
 #
 
 DISTNAME=		qtools-0.56
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -16,6 +17,13 @@ DJB_RESTRICTED=		NO
 DJB_CONFIG_CMDS=	${ECHO} ${LOCALBASE:Q} > ${WRKSRC}/conf-ezmlm
 
 SUBST_CLASSES+=		djberrno
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+post-install:
+	cd ${FILESDIR} && for i in *.1; do \
+		${INSTALL_MAN} $$i ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$i; \
+	done
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
