@@ -1,0 +1,34 @@
+.TH 822bodyfilter 1
+.SH NAME
+.PP
+\fB\fC822bodyfilter\fR \- filter a message body
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+822bodyfilter _prog_
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fC822bodyfilter\fR program reads an 822\-format email message from standard
+input. It executes \fB\fC_prog_\fR with the body of the message on standard input,
+and prints the message headers followed by the output from \fB\fC_prog_\fR to
+standard output.
+.PP
+The end of the message or the first line that cannot be part of an 822\-format
+header field terminates the message headers. A nonblank line that terminates
+the headers is part of the message body.
+.SH EXIT STATUS
+.PP
+If \fB\fC822bodyfilter\fR encounters a temporary error in executing \fB\fC_prog_\fR, it
+exits 111\&. If \fB\fC822bodyfilter\fR encounters a permanent error in executing
+\fB\fC_prog_\fR, it exits 100\&. Normally, \fB\fC822bodyfilter\fR yields the same exit code
+as \fB\fC_prog_\fR\&. The standard input to \fB\fC822bodyfilter\fR must be seekable.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT

@@ -1,0 +1,30 @@
+.TH 822body 1
+.SH NAME
+.PP
+\fB\fC822body\fR \- extract the body from a message
+.SH SYNOPSIS
+.PP
+.RS
+.nf
+822body
+.fi
+.RE
+.SH DESCRIPTION
+.PP
+The \fB\fC822body\fR program reads an 822\-format email message from standard input
+and prints the body of the message to standard output.
+.PP
+The end of the message or the first line that cannot be part of an 822\-format
+header field terminates the message headers. A nonblank line that terminates
+the headers is part of the message body.
+.SH EXIT STATUS
+.PP
+If it encounters an error processing a message, \fB\fC822body\fR exits 111\&.
+Otherwise, \fB\fC822body\fR exits 0.
+.SH AUTHOR
+.PP
+William Baxter <sst@superscript.com>
+.PP
+Version 0.56
+.br
+Last updated 2015\-08\-23 23:24:43 CDT
