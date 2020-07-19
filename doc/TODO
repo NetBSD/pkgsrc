@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19960 2020/07/17 23:53:54 wiz Exp $
+$NetBSD: TODO,v 1.19961 2020/07/19 08:59:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.10.23
+	o ImageMagick-7.0.10.24
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -474,7 +474,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o calibre-4.17.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o catch2-2.12.4
+	o catch2-2.13.0
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o cddbd-1.5.2
@@ -579,6 +579,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flow-tools-0.411
+	o fluidsynth-2.1.4
 	o fortunes-calvin-0.3
 	o freedv-1.2.2
 	o freenet-0.7
@@ -669,6 +670,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grantlee-5.0.0
 	o greed-4.1
 	o gromacs-5.1.2
+	o grpc-1.30.2
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
@@ -820,6 +822,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
 	o mediawiki-1.34
+	o mednafen-1.25.0
 	o memached-1.5.6
 	o merkaator-0.18.3
 	o mesure-0.7.2
@@ -975,9 +978,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
+	o py-google-api-python-client-1.10.0
+	o py-google-auth-1.19.2
 	o py-hgview-1.9.0
 	o py-idna-2.10
 	o py-input-pad-1.4.2
+	o py-jedi-0.17.2
 	o py-keybinder-0.3.1
 	o py-mercurial-5.4.2
 	o py-musicbrainz-0.7.4
@@ -985,8 +991,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
-	o py-rsa-4.6
-	o py-setuptools-49.1.2 [drops python-2.x support]
+	o py-rsa-4.6 [drops python-2.x support]
+	o py-setuptools-49.2.0 [drops python-2.x support]
 	o py-setuptools_scm-4.1.2
 	o py-simpletal-5.1
 	o py-sphinx-autoapi-1.4.0
