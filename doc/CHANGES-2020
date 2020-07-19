@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4081 2020/07/18 23:23:12 js Exp $
+$NetBSD: CHANGES-2020,v 1.4082 2020/07/19 07:41:55 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6487,3 +6487,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xterm to 358 [pin 2020-07-18]
 	Updated www/qutebrowser to 1.13.1 [pin 2020-07-18]
 	Updated multimedia/sickgear to 0.21.39 [js 2020-07-18]
+	Updated textproc/jo to 1.4 [fcambus 2020-07-19]
