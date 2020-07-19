@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2020/04/13 20:40:22 leot Exp $
+# $NetBSD: Makefile,v 1.30 2020/07/19 16:01:27 leot Exp $
 
-DISTNAME=	mitmproxy-5.1.1
+DISTNAME=	mitmproxy-5.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -38,7 +38,7 @@ SUBST_CLASSES+=			setuppyversions
 SUBST_STAGE.setuppyversions=	pre-configure
 SUBST_MESSAGE.setuppyversions=	Avoid too strict version requirements
 SUBST_FILES.setuppyversions=	setup.py
-SUBST_SED.setuppyversions=	-E -e '/>=/ s/, *<[^"]+//g'
+SUBST_SED.setuppyversions=	-E -e '/[>=]=/ s/, *(<|!=)[^"]+//g'
 SUBST_SED.setuppyversions+=	-E -e '/==[0-9.]+",/ s/==/>=/g'
 
 REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
