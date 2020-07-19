@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/04/13 20:40:22 leot Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/07/19 16:01:27 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -64,6 +64,18 @@ ${PYSITELIB}/mitmproxy/addons/intercept.pyo
 ${PYSITELIB}/mitmproxy/addons/keepserving.py
 ${PYSITELIB}/mitmproxy/addons/keepserving.pyc
 ${PYSITELIB}/mitmproxy/addons/keepserving.pyo
+${PYSITELIB}/mitmproxy/addons/maplocal.py
+${PYSITELIB}/mitmproxy/addons/maplocal.pyc
+${PYSITELIB}/mitmproxy/addons/maplocal.pyo
+${PYSITELIB}/mitmproxy/addons/mapremote.py
+${PYSITELIB}/mitmproxy/addons/mapremote.pyc
+${PYSITELIB}/mitmproxy/addons/mapremote.pyo
+${PYSITELIB}/mitmproxy/addons/modifybody.py
+${PYSITELIB}/mitmproxy/addons/modifybody.pyc
+${PYSITELIB}/mitmproxy/addons/modifybody.pyo
+${PYSITELIB}/mitmproxy/addons/modifyheaders.py
+${PYSITELIB}/mitmproxy/addons/modifyheaders.pyc
+${PYSITELIB}/mitmproxy/addons/modifyheaders.pyo
 ${PYSITELIB}/mitmproxy/addons/onboarding.py
 ${PYSITELIB}/mitmproxy/addons/onboarding.pyc
 ${PYSITELIB}/mitmproxy/addons/onboarding.pyo
@@ -90,9 +102,6 @@ ${PYSITELIB}/mitmproxy/addons/proxyauth.pyo
 ${PYSITELIB}/mitmproxy/addons/readfile.py
 ${PYSITELIB}/mitmproxy/addons/readfile.pyc
 ${PYSITELIB}/mitmproxy/addons/readfile.pyo
-${PYSITELIB}/mitmproxy/addons/replace.py
-${PYSITELIB}/mitmproxy/addons/replace.pyc
-${PYSITELIB}/mitmproxy/addons/replace.pyo
 ${PYSITELIB}/mitmproxy/addons/save.py
 ${PYSITELIB}/mitmproxy/addons/save.pyc
 ${PYSITELIB}/mitmproxy/addons/save.pyo
@@ -105,9 +114,6 @@ ${PYSITELIB}/mitmproxy/addons/serverplayback.pyo
 ${PYSITELIB}/mitmproxy/addons/session.py
 ${PYSITELIB}/mitmproxy/addons/session.pyc
 ${PYSITELIB}/mitmproxy/addons/session.pyo
-${PYSITELIB}/mitmproxy/addons/setheaders.py
-${PYSITELIB}/mitmproxy/addons/setheaders.pyc
-${PYSITELIB}/mitmproxy/addons/setheaders.pyo
 ${PYSITELIB}/mitmproxy/addons/stickyauth.py
 ${PYSITELIB}/mitmproxy/addons/stickyauth.pyc
 ${PYSITELIB}/mitmproxy/addons/stickyauth.pyo
@@ -231,6 +237,12 @@ ${PYSITELIB}/mitmproxy/contrib/kaitaistruct/tls_client_hello.pyo
 ${PYSITELIB}/mitmproxy/contrib/kaitaistruct/vlq_base128_le.py
 ${PYSITELIB}/mitmproxy/contrib/kaitaistruct/vlq_base128_le.pyc
 ${PYSITELIB}/mitmproxy/contrib/kaitaistruct/vlq_base128_le.pyo
+${PYSITELIB}/mitmproxy/contrib/urwid_escape.py
+${PYSITELIB}/mitmproxy/contrib/urwid_escape.pyc
+${PYSITELIB}/mitmproxy/contrib/urwid_escape.pyo
+${PYSITELIB}/mitmproxy/contrib/urwid_monkeypatch.py
+${PYSITELIB}/mitmproxy/contrib/urwid_monkeypatch.pyc
+${PYSITELIB}/mitmproxy/contrib/urwid_monkeypatch.pyo
 ${PYSITELIB}/mitmproxy/contrib/wbxml/ASCommandResponse.py
 ${PYSITELIB}/mitmproxy/contrib/wbxml/ASCommandResponse.pyc
 ${PYSITELIB}/mitmproxy/contrib/wbxml/ASCommandResponse.pyo
@@ -670,6 +682,9 @@ ${PYSITELIB}/mitmproxy/utils/human.pyo
 ${PYSITELIB}/mitmproxy/utils/sliding_window.py
 ${PYSITELIB}/mitmproxy/utils/sliding_window.pyc
 ${PYSITELIB}/mitmproxy/utils/sliding_window.pyo
+${PYSITELIB}/mitmproxy/utils/spec.py
+${PYSITELIB}/mitmproxy/utils/spec.pyc
+${PYSITELIB}/mitmproxy/utils/spec.pyo
 ${PYSITELIB}/mitmproxy/utils/strutils.py
 ${PYSITELIB}/mitmproxy/utils/strutils.pyc
 ${PYSITELIB}/mitmproxy/utils/strutils.pyo
