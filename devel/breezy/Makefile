@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:30:56 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/07/20 20:04:32 rhialto Exp $
 
-DISTNAME=	breezy-3.0.1
+DISTNAME=	breezy-3.1.0
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
@@ -27,7 +27,6 @@ REPLACE_PYTHON+=	breezy/git/bzr-receive-pack
 REPLACE_PYTHON+=	breezy/git/bzr-upload-pack
 REPLACE_PYTHON+=	breezy/git/git-remote-bzr
 REPLACE_PYTHON+=	breezy/git/git_remote_helper.py
-REPLACE_PYTHON+=	breezy/patiencediff.py breezy/_patiencediff_py.py
 REPLACE_PYTHON+=	breezy/plugins/bash_completion/bashcomp.py
 REPLACE_PYTHON+=	breezy/tests/ssl_certs/create_ssls.py
 REPLACE_PYTHON+=	breezy/version_info_formats/format_python.py
