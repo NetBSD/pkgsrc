@@ -1,4 +1,4 @@
-$NetBSD: patch-Qt4Qt5_qscintilla.pro,v 1.1 2020/06/29 13:25:57 adam Exp $
+$NetBSD: patch-Qt4Qt5_qscintilla.pro,v 1.2 2020/07/20 17:09:15 adam Exp $
 
 Add full path to installed library names on Darwin.
 
@@ -9,7 +9,7 @@ Add full path to installed library names on Darwin.
  
  macx:!CONFIG(staticlib) {
 -    QMAKE_POST_LINK += install_name_tool -id @rpath/$(TARGET1) $(TARGET)
-+    QMAKE_POST_LINK += install_name_tool -id $$target.path/$(TARGET1) $(TARGET)
++    QMAKE_POST_LINK += install_name_tool -id $$[QT_INSTALL_LIBS]/$(TARGET1) $(TARGET)
  }
  
  INCLUDEPATH += . ../include ../lexlib ../src
