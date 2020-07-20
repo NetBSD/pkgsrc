@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4088 2020/07/20 19:14:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4089 2020/07/20 19:46:06 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6495,3 +6495,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/woof to 2.0.2 [micha 2020-07-20]
 	Updated databases/sqlitebrowser to 3.12.0 [adam 2020-07-20]
 	Updated converters/py-simplejson to 3.17.2 [adam 2020-07-20]
+	Added textproc/ruby-asciidoctor version 2.0.10 [triaxx 2020-07-20]
