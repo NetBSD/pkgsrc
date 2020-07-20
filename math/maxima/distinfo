@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.32 2017/11/28 15:18:21 wiz Exp $
+$NetBSD: distinfo,v 1.33 2020/07/20 06:42:31 yhardy Exp $
 
-SHA1 (maxima-5.41.0.tar.gz) = 0f69a6603d7334bfec6388151eeb768e8c5e7626
-RMD160 (maxima-5.41.0.tar.gz) = e58cedfa395ac5cb4715d1b60ed7cf6ae48979cf
-SHA512 (maxima-5.41.0.tar.gz) = 1b93ae2db055ba7fb4a95924a896667f0cfa1c675c603c104181662aeb32b10b006158526b2f3ad93a59688a23eacdc82e870bb8ffb182a89e1e51de013ec209
-Size (maxima-5.41.0.tar.gz) = 41540226 bytes
+SHA1 (maxima-5.44.0.tar.gz) = 5f1fce915675f46823c33638480dcc1fcaf447a1
+RMD160 (maxima-5.44.0.tar.gz) = 23e5a93303edaee9615e4e36331f53416c34ce8a
+SHA512 (maxima-5.44.0.tar.gz) = 1e043bebb7c6d002c113d8de20a98d58d1a8e7bedfc9bcf52819e7c7554655991dc2f42f0333889706574249736db833a237b3e59b967e7e42ede28262e31f2f
+Size (maxima-5.44.0.tar.gz) = 34976354 bytes
+SHA1 (patch-doc_info_build__html.sh.in) = 814d0d1db8411ad3bec3e913221bf7f0b89e1ce6
