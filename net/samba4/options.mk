@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2020/05/26 12:22:57 jperkin Exp $
+# $NetBSD: options.mk,v 1.11 2020/07/20 22:19:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads avahi fam ldap pam winbind # cups # cups option is broken for me.
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	avahi ldap pam winbind
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-SAMBA_ACL_OPSYS=	AIX Darwin FreeBSD HPUX IRIX Linux OSF1 SunOS
+SAMBA_ACL_OPSYS=	AIX Darwin FreeBSD HPUX IRIX Linux NetBSD OSF1 SunOS
 .if !empty(SAMBA_ACL_OPSYS:M${OPSYS})
 PKG_SUPPORTED_OPTIONS+=	acl
 .endif
