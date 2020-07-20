@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4084 2020/07/20 06:43:06 yhardy Exp $
+$NetBSD: CHANGES-2020,v 1.4085 2020/07/20 14:40:52 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6490,3 +6490,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/jo to 1.4 [fcambus 2020-07-19]
 	Updated net/mitmproxy to 5.2 [leot 2020-07-19]
 	Updated math/maxima to 5.44.0 [yhardy 2020-07-20]
+	Updated devel/glade to 3.36.0 [maya 2020-07-20]
