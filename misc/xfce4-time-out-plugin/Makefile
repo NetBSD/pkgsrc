@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/03/10 22:10:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2020/07/20 23:40:42 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.1.0
+VERSION=	1.1.1
 DISTNAME=	xfce4-time-out-plugin-${VERSION}
 CATEGORIES=	misc
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/${VERSION:R}/
