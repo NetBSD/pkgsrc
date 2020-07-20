@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/02/20 06:35:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.16 2020/07/20 23:43:43 gutteridge Exp $
 
 DISTNAME=	nwdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nwdiag/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://blockdiag.com/
+HOMEPAGE=	http://blockdiag.com/
 COMMENT=	Simple network-diagram image generator
 LICENSE=	apache-2.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/02/19 17:52:00 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/07/20 23:43:43 gutteridge Exp $
 
 DISTNAME=	seqdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/seqdiag/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://blockdiag.com/
+HOMEPAGE=	http://blockdiag.com/
 COMMENT=	Simple sequence-diagram image generator
 LICENSE=	apache-2.0
 
