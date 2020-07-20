@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4086 2020/07/20 14:41:05 maya Exp $
+$NetBSD: CHANGES-2020,v 1.4087 2020/07/20 16:23:12 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6492,3 +6492,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/maxima to 5.44.0 [yhardy 2020-07-20]
 	Updated devel/glade to 3.36.0 [maya 2020-07-20]
 	Updated x11/gtk3 to 3.24.21nb1 [maya 2020-07-20]
+	Updated games/woof to 2.0.2 [micha 2020-07-20]
