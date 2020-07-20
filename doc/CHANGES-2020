@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4083 2020/07/19 16:01:39 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4084 2020/07/20 06:43:06 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6489,3 +6489,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/sickgear to 0.21.39 [js 2020-07-18]
 	Updated textproc/jo to 1.4 [fcambus 2020-07-19]
 	Updated net/mitmproxy to 5.2 [leot 2020-07-19]
+	Updated math/maxima to 5.44.0 [yhardy 2020-07-20]
