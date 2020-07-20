@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/07/06 16:48:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/20 19:46:18 schmonz Exp $
 
 DISTNAME=		leahneukirchen-redo-0.2
 CATEGORIES=		devel
@@ -17,7 +17,7 @@ INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
 do-build:
 	cd ${WRKSRC}; \
-	cc -Wall -Wextra -Wwrite-strings -o redo redo.c
+	cc ${CFLAGS} -Wall -Wextra -Wwrite-strings -o redo redo.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/redo ${DESTDIR}${PREFIX}/bin
