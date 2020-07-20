@@ -11,6 +11,7 @@ $_rc_subr_loaded . /etc/rc.subr
 name=microcode
 rcvar=$name
 start_cmd="microcode_start"
+stop_cmd=":"
 
 _microcode_baremetal()
 {
