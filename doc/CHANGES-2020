@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4090 2020/07/20 20:04:54 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.4091 2020/07/20 20:22:31 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6497,3 +6497,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/py-simplejson to 3.17.2 [adam 2020-07-20]
 	Added textproc/ruby-asciidoctor version 2.0.10 [triaxx 2020-07-20]
 	Updated devel/breezy to 3.1.0 [rhialto 2020-07-20]
+	Updated games/warzone2100 to 3.4.1 [triaxx 2020-07-20]
