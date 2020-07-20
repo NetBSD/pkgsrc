@@ -1,10 +1,19 @@
-$NetBSD: patch-redo.c,v 1.1 2020/07/06 15:27:19 schmonz Exp $
+$NetBSD: patch-redo.c,v 1.2 2020/07/20 19:46:18 schmonz Exp $
 
 Avoid CONFLICTS with other redo implementations.
+Define PATH_MAX on Illumos.
 
---- redo.c.orig	2018-07-08 21:49:57.000000000 +0000
+--- redo.c.orig	2020-06-26 21:46:40.000000000 +0000
 +++ redo.c
-@@ -974,20 +974,25 @@ main(int argc, char *argv[])
+@@ -34,6 +34,7 @@ todo:
+ #include <errno.h>
+ #include <fcntl.h>
+ #include <inttypes.h>
++#include <limits.h>
+ #include <stdarg.h>
+ #include <stdint.h>
+ #include <stdio.h>
+@@ -968,20 +969,25 @@ main(int argc, char *argv[])
  
  	dir_fd = keepdir();
  
