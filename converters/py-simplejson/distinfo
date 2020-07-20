@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2019/11/18 09:03:03 adam Exp $
+$NetBSD: distinfo,v 1.29 2020/07/20 19:14:03 adam Exp $
 
-SHA1 (simplejson-3.17.0.tar.gz) = d04766cc5e0259477eeb391adc8ddf39ca2c4ff9
-RMD160 (simplejson-3.17.0.tar.gz) = 257f2ee0809663a3809de201181998b2d443ee40
-SHA512 (simplejson-3.17.0.tar.gz) = 383ee4fa3b2f378cd83152ba588ffbb620aa0e7cec80d3e3097edfb406a60e96afd6c5302a5b64adb710d3a52479c609873a2db7ab5756d7ca7a51412029e4c6
-Size (simplejson-3.17.0.tar.gz) = 83119 bytes
+SHA1 (simplejson-3.17.2.tar.gz) = ed38d765ad1b58862905aa25d13c95b134f03f5a
+RMD160 (simplejson-3.17.2.tar.gz) = 4a65961d9731ad1574863ef758717bb2ae9a868e
+SHA512 (simplejson-3.17.2.tar.gz) = 003b2fbcb3f8e0849bdbd958c78f8b470081d97527bef82306db77940c6734a1cbf3b5dcb0984d2f9c9d14aa525e7865a08e70a10971f8841e138f7ad6476e4a
+Size (simplejson-3.17.2.tar.gz) = 83210 bytes
