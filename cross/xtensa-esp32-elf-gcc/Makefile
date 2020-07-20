@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/07/11 09:05:13 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2020/07/20 02:14:10 tnn Exp $
 
 # We could use the upstream GCC distfile, but Espressif has important vendor
 # patches in their branch and it seems not worth the maintenance overhead to
@@ -9,7 +9,7 @@
 #EXTRACT_SUFX=		.tar.xz
 
 DISTNAME=		espressif-gcc-8.2.0
-PKGREVISION=		2
+PKGREVISION=		3
 PKGNAME=		${DISTNAME:C/.*gcc/xtensa-esp32-elf-gcc/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GITHUB:=espressif/}
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--disable-libstdcxx-verbose
 CONFIGURE_ARGS+=	--disable-__cxa_atexit
-CONFIGURE_ARGS+=	--enable-cxx-flags="-fno-rtti -ffunction-sections"
+CONFIGURE_ARGS+=	--enable-cxx-flags="-fno-rtti -ffunction-sections -mlongcalls"
 CONFIGURE_ARGS+=	--enable-target-optspace
 CONFIGURE_ARGS+=	--disable-libquadmath
 CONFIGURE_ARGS+=	--disable-libssp
