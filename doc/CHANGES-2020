@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4087 2020/07/20 16:23:12 micha Exp $
+$NetBSD: CHANGES-2020,v 1.4088 2020/07/20 19:14:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6493,3 +6493,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/glade to 3.36.0 [maya 2020-07-20]
 	Updated x11/gtk3 to 3.24.21nb1 [maya 2020-07-20]
 	Updated games/woof to 2.0.2 [micha 2020-07-20]
+	Updated databases/sqlitebrowser to 3.12.0 [adam 2020-07-20]
+	Updated converters/py-simplejson to 3.17.2 [adam 2020-07-20]
