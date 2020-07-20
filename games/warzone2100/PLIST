@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/27 19:35:54 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/07/20 20:21:26 triaxx Exp $
 bin/warzone2100
 man/man6/warzone2100.6
 share/applications/warzone2100.desktop
@@ -10,6 +10,7 @@ share/doc/warzone2100/ChangeLog
 share/doc/warzone2100/README.md
 share/doc/warzone2100/Scripting.md
 share/doc/warzone2100/ScriptingManual.htm
+share/doc/warzone2100/copyright
 share/doc/warzone2100/docbook-xsl.css
 share/doc/warzone2100/images/artillery-far-away.jpg
 share/doc/warzone2100/images/artillery-sensor.jpg
@@ -63,9 +64,6 @@ share/doc/warzone2100/js-globals.md
 share/doc/warzone2100/js-objects.md
 share/doc/warzone2100/quickstartguide.html
 share/doc/warzone2100/warzone2100.6.html
-share/fonts/DejaVu.LICENSE.txt
-share/fonts/DejaVuSans-Bold.ttf
-share/fonts/DejaVuSans.ttf
 share/icons/warzone2100.png
 share/locale/ca_ES/LC_MESSAGES/warzone2100.mo
 share/locale/cs/LC_MESSAGES/warzone2100.mo
@@ -102,6 +100,9 @@ share/locale/zh_CN/LC_MESSAGES/warzone2100.mo
 share/locale/zh_TW/LC_MESSAGES/warzone2100.mo
 share/metainfo/warzone2100.appdata.xml
 share/warzone2100/base.wz
+share/warzone2100/fonts/DejaVu.LICENSE.txt
+share/warzone2100/fonts/DejaVuSans-Bold.ttf
+share/warzone2100/fonts/DejaVuSans.ttf
 share/warzone2100/mp.wz
 share/warzone2100/music/menu.ogg
 share/warzone2100/music/music.wpl
