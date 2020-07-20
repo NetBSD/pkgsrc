@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2020/06/29 13:25:57 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/07/20 17:09:15 adam Exp $
 
 SHA1 (QScintilla-2.11.5.tar.gz) = 1719d557f21375e04c11bd4ecf09a4d2ef87d2d0
 RMD160 (QScintilla-2.11.5.tar.gz) = bf0596f336fe888fd3d08d9ce816231533233bdb
@@ -6,4 +6,4 @@ SHA512 (QScintilla-2.11.5.tar.gz) = 46bc3c896b4ab71fbcc821ce3a248ecc4200378e0b62
 Size (QScintilla-2.11.5.tar.gz) = 3007564 bytes
 SHA1 (patch-Python_configure.py) = c447d37537924272a632a76a32ab3b2afc690bb4
 SHA1 (patch-Qt4Qt5_qsciapis.cpp) = 00466d4b0fe635c55566aa4b07a3de52e63274bd
-SHA1 (patch-Qt4Qt5_qscintilla.pro) = b798a34cdde64789db0e1cf2b9c28c5698027f95
+SHA1 (patch-Qt4Qt5_qscintilla.pro) = 8b9713355ccb6134cec98e5ce9ccfb532b1c7a8a
