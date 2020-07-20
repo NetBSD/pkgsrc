@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2020/03/28 18:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2020/07/20 18:41:06 hauke Exp $
 
 DISTNAME=	docbook-xsl-nons-1.79.2
 PKGNAME=	${DISTNAME:S/-nons//}
@@ -71,7 +71,7 @@ do-install:
 	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/"; \
 	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/; \
 	done
-	${FIND} ${DESTDIR}${XSLDIR} -name '*.orig' -exec ${RM} {} +
+	${FIND} ${DESTDIR}${XSLDIR} -name '*.orig' -exec ${RM} {} \;
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
