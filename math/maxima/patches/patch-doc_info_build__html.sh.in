@@ -1,0 +1,13 @@
+$NetBSD: patch-doc_info_build__html.sh.in,v 1.1 2020/07/20 06:42:31 yhardy Exp $
+
+--- doc/info/build_html.sh.in.orig	2020-03-14 14:24:40.000000000 +0000
++++ doc/info/build_html.sh.in
+@@ -46,7 +46,7 @@ do
+   echo "filenamebase = \"$filenamebase\""
+   cat $f
+ done | @AWK@ '!/^@c / && !/^@c$/ && (/^@deffn/ || /^@defvr/ || /^@end deffn/ || /^@end defvr/ || /@category/ || /@node/ || /^filenamebase/)' | @SED@ -f @abs_srcdir@/extract_categories1.sed | @AWK@ -f @abs_srcdir@/extract_categories1.awk > make-categories.py 
+-python make-categories.py 
++${PYTHON} make-categories.py 
+ @SED@ -e 's/^@bye/@node Documentation Categories, , Function and Variable Index\n@chapter Documentation Categories/' @abs_srcdir@/maxima.texi > maxima.texi 
+ ( for f in Category-*.texi; do echo '@include' $f; done ; echo @bye ) >> maxima.texi 
+ 
