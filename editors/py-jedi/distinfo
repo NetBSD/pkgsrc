@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/06/20 07:16:06 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/07/21 08:04:58 adam Exp $
 
-SHA1 (jedi-0.17.1.tar.gz) = 382d259dcfcaa8a5a97d5fcb23cc45658352f788
-RMD160 (jedi-0.17.1.tar.gz) = 03aa576b39d1674936e31807ab560c74138673d2
-SHA512 (jedi-0.17.1.tar.gz) = b86297b2fbb212695469b34288836e3346a33c5c6b83337dbe4ceaaeb2b4185dcb6c888336e24f6da3fe22a39c803af5c34ae5a4ed1d177fde1c1d7fc143bf09
-Size (jedi-0.17.1.tar.gz) = 1137664 bytes
+SHA1 (jedi-0.17.2.tar.gz) = 882249ea674ef7d500ddbd694d9bcbf0475f7f54
+RMD160 (jedi-0.17.2.tar.gz) = 3ef7a2b0f643edccf2d533aabcd8e6f096952a63
+SHA512 (jedi-0.17.2.tar.gz) = cd6f1e5dd617d721528f39fd4d28903ed35d148fd2738cc07b1cb1f6e2631f2a54008113b9acbbd8b790d7523091dee62875391387d701eb747e6c3de5487706
+Size (jedi-0.17.2.tar.gz) = 1139617 bytes
