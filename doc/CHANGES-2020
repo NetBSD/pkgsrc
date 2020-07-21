@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4092 2020/07/20 23:41:21 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.4093 2020/07/21 07:34:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6499,3 +6499,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/breezy to 3.1.0 [rhialto 2020-07-20]
 	Updated games/warzone2100 to 3.4.1 [triaxx 2020-07-20]
 	Updated misc/xfce4-time-out-plugin to 1.1.1 [gutteridge 2020-07-20]
+	Updated graphics/jasper to 2.0.18 [adam 2020-07-21]
+	Updated databases/redis to 6.0.6 [adam 2020-07-21]
