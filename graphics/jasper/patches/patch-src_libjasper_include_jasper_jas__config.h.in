@@ -1,0 +1,14 @@
+$NetBSD: patch-src_libjasper_include_jasper_jas__config.h.in,v 1.1 2020/07/21 07:31:28 adam Exp $
+
+Support GLUT/glut.h.
+
+--- src/libjasper/include/jasper/jas_config.h.in.orig	2020-07-21 07:07:56.000000000 +0000
++++ src/libjasper/include/jasper/jas_config.h.in
+@@ -28,6 +28,7 @@
+ #cmakedefine JAS_HAVE_GETTIMEOFDAY 1
+ #cmakedefine JAS_HAVE_GETRUSAGE 1
+ 
++#cmakedefine JAS_HAVE_GLUT_GLUT_H 1
+ #cmakedefine JAS_HAVE_GL_GLUT_H 1
+ #cmakedefine JAS_HAVE_GLUT_H 1
+ 
