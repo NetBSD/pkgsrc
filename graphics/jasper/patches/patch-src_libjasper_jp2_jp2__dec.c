@@ -1,11 +1,11 @@
-$NetBSD: patch-src_libjasper_jp2_jp2__dec.c,v 1.4 2016/12/16 13:05:58 he Exp $
+$NetBSD: patch-src_libjasper_jp2_jp2__dec.c,v 1.5 2020/07/21 07:31:28 adam Exp $
 
 Only output debug info if debuglevel >= 1.
 And .. cast argument to jas_iccprof_createfrombuf() to match.
 
---- src/libjasper/jp2/jp2_dec.c.orig	2016-11-16 15:03:41.000000000 +0000
+--- src/libjasper/jp2/jp2_dec.c.orig	2020-07-20 13:56:40.000000000 +0000
 +++ src/libjasper/jp2/jp2_dec.c
-@@ -295,14 +295,16 @@ jas_image_t *jp2_decode(jas_stream_t *in
+@@ -297,14 +297,16 @@ jas_image_t *jp2_decode(jas_stream_t *in
  		jas_image_setclrspc(dec->image, jp2_getcs(&dec->colr->data.colr));
  		break;
  	case JP2_COLR_ICC:
@@ -23,4 +23,4 @@ And .. cast argument to jas_iccprof_createfrombuf() to match.
 +		}
  		jas_image_setclrspc(dec->image, fromiccpcs(icchdr.colorspc));
  		dec->image->cmprof_ = jas_cmprof_createfromiccprof(iccprof);
- 		assert(dec->image->cmprof_);
+ 		if (!dec->image->cmprof_) {
