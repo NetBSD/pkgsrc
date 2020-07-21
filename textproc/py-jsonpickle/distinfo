@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/07/03 20:14:59 adam Exp $
+$NetBSD: distinfo,v 1.6 2020/07/21 10:57:12 adam Exp $
 
-SHA1 (jsonpickle-1.2.tar.gz) = 221d5365e92352dda0238e526df02567cacd4b64
-RMD160 (jsonpickle-1.2.tar.gz) = eeadb48d325c40a2e0d02494098363abf4032aa9
-SHA512 (jsonpickle-1.2.tar.gz) = 0a5bfb2e77175c9174ee1783301c613e25fcfa60f07e610206d1e1e34053e90b21b12bc1b1045dd03ff2d4efe5940d85d852800037ca01397994c022f0ffb2c6
-Size (jsonpickle-1.2.tar.gz) = 74693 bytes
+SHA1 (jsonpickle-1.4.1.tar.gz) = 4823723b6c5aa733f6427b6b0c20b615c3b95241
+RMD160 (jsonpickle-1.4.1.tar.gz) = 8e916215d2da2e7c2f6971102e0e1b7e4809f69b
+SHA512 (jsonpickle-1.4.1.tar.gz) = ed6bf3472c59ba907a973c5c6f05de13dbfc75eef103796b8f8a63d388f769527f22667ca8761092d1649ff2caf5a73de0593e370df3e7fcabe06e73b265da35
+Size (jsonpickle-1.4.1.tar.gz) = 104564 bytes
