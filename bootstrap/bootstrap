@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.288 2020/07/15 10:32:12 jperkin Exp $
+# $NetBSD: bootstrap,v 1.289 2020/07/21 15:53:10 sjmulder Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -219,6 +219,9 @@ get_machine_arch_aix()
 get_machine_arch_darwin()
 {
 	case `uname -p` in
+	arm)
+		echo "aarch64"
+		;;
 	i386)
 		# Returns "i386" or "x86_64" depending on CPU
 		echo `uname -m`
