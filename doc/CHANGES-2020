@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4096 2020/07/21 08:14:32 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4097 2020/07/21 10:59:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6506,3 +6506,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-nbformat to 5.0.7 [adam 2020-07-21]
 	Updated editors/py-jedi to 0.17.2 [adam 2020-07-21]
 	Updated comms/py-esptool to 2.8 [adam 2020-07-21]
+	Updated textproc/py-jsonpickle to 1.4.1 [adam 2020-07-21]
+	Updated textproc/py-deepdiff to 5.0.1 [adam 2020-07-21]
