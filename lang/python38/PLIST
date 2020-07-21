@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/07/14 19:12:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/07/21 16:31:15 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -3095,6 +3095,7 @@ lib/python${PY_VER_SUFFIX}/test/randv3.pck
 lib/python${PY_VER_SUFFIX}/test/re_tests.py
 lib/python${PY_VER_SUFFIX}/test/re_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/re_tests.pyo
+lib/python${PY_VER_SUFFIX}/test/recursion.tar
 lib/python${PY_VER_SUFFIX}/test/regrtest.py
 lib/python${PY_VER_SUFFIX}/test/regrtest.pyc
 lib/python${PY_VER_SUFFIX}/test/regrtest.pyo
