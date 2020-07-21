@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2020/07/06 14:38:06 adam Exp $
+$NetBSD: distinfo,v 1.50 2020/07/21 18:42:25 christos Exp $
 
 SHA1 (samba-4.12.5.tar.gz) = 67322997b5588b95c8f9d3fb85f9709deea885cd
 RMD160 (samba-4.12.5.tar.gz) = 5dd2eff38edbb1c0872222559fc08b7e57c5d3c7
@@ -24,7 +24,7 @@ SHA1 (patch-lib_util_smb__threads.h) = 93bbc4276ad927ad6faf305af093064f47c09254
 SHA1 (patch-lib_util_tfork.c) = cd70dcff5f2ce94ffe642e0f029f03ee07dff27d
 SHA1 (patch-libcli_dns_wscript__build) = 4103a144aa1bb4662fd7a62270941f1a3d01fe89
 SHA1 (patch-nsswitch_stress-nss-libwbclient.c) = bf327282a59aefeeb2d6bf9eccf9b3a832033066
-SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 71d8acd0aa4c297d75555fba650461c778495caa
+SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 2773ec9269d1fe0d7ce7ed220f6a7122d187fabe
 SHA1 (patch-nsswitch_wscript__build) = e8a6251e031ffa13d6347fade8891f7afd65d3eb
 SHA1 (patch-source3_libsmb_pylibsmb.c) = 50c3aaecf345449e02642e387eeac3dd7043e77a
 SHA1 (patch-source3_smbd_process.c) = 532d2426b9bd2a215d133bc489741558aa07f849
