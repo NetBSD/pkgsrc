@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/07/08 14:45:48 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/07/21 10:15:39 wiz Exp $
 
 SHA1 (appdirs-1.4.4.tar.gz) = 1fa04e44b1084338cb7b21e9cf44fce5efb81840
 RMD160 (appdirs-1.4.4.tar.gz) = 9cb319eaad2555f163855a2d14bc8104f741496e
 SHA512 (appdirs-1.4.4.tar.gz) = 8b0cdd9fd471d45b186aa47607691cf378dabd3edc7b7026a57bd6d6f57698e86f440818a5e23ba4288b35d6bb8cb6eb0106eae8aab09d8863ee15025d300883
 Size (appdirs-1.4.4.tar.gz) = 13470 bytes
+SHA1 (patch-appdirs.py) = 1e46bd11ddfed14db104659d8463d14f09db9eaf
