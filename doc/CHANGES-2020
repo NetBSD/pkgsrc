@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4095 2020/07/21 07:59:25 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4096 2020/07/21 08:14:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6504,3 +6504,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-flaky to 3.7.0 [adam 2020-07-21]
 	Updated www/py-uvicorn to 0.11.6 [adam 2020-07-21]
 	Updated www/py-nbformat to 5.0.7 [adam 2020-07-21]
+	Updated editors/py-jedi to 0.17.2 [adam 2020-07-21]
+	Updated comms/py-esptool to 2.8 [adam 2020-07-21]
