@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4098 2020/07/21 16:31:57 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4099 2020/07/21 21:21:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6510,3 +6510,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-deepdiff to 5.0.1 [adam 2020-07-21]
 	Updated lang/python38 to 3.8.5 [adam 2020-07-21]
 	Updated lang/py38-html-docs to 3.8.5 [adam 2020-07-21]
+	Updated security/py-aes to 1.6.1 [adam 2020-07-21]
+	Updated finance/py-stripe to 2.49.0 [adam 2020-07-21]
