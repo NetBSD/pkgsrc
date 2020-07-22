@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.16 2020/07/13 13:01:01 wiz Exp $
+$NetBSD: distinfo,v 1.17 2020/07/22 13:25:40 wiz Exp $
 
 SHA1 (transmission-3.00.tar.xz) = fd6bd78cfe5a612b422a49e8193d82df2486a3c4
 RMD160 (transmission-3.00.tar.xz) = 5286c3e183474cba6ed1c6cfc022f4f5afab4fda
 SHA512 (transmission-3.00.tar.xz) = eeaf7fe46797326190008776a7fa641b6341c806b0f1684c2e7326c1284832a320440013e42a37acda9fd0ee5dca695f215d6263c8acb39188c5d9a836104a61
 Size (transmission-3.00.tar.xz) = 3329220 bytes
+SHA1 (patch-qt_TorrentDelegate.h) = 232da13b8442c1cfbd8b1c0a404505b42a4ca30c
+SHA1 (patch-qt_TorrentFilter.cc) = f1abc98bffb80d0412843fd465fe239f3175fbb3
+SHA1 (patch-qt_TorrentModel.h) = 2f87d7c7e9460207e59b343d90237a985df3a8ad
 SHA1 (patch-qt_qtr.pro) = e29629fada5bbb34e3b05b47092dba655b9d8265
