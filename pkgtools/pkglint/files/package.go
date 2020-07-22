@@ -155,8 +155,12 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 		files = append(files, pkg.File(pkg.Pkgdir).ReadPaths()...)
 	}
 	files = append(files, pkg.File(pkg.Patchdir).ReadPaths()...)
-	if pkg.DistinfoFile != NewPackagePathString(pkg.vars.create("DISTINFO_FILE").fallback) {
-		files = append(files, pkg.File(pkg.DistinfoFile))
+	defaultDistinfoFile := NewPackagePathString(pkg.vars.create("DISTINFO_FILE").fallback)
+	if pkg.DistinfoFile != defaultDistinfoFile {
+		resolved := func(p PackagePath) PkgsrcPath { return G.Pkgsrc.Rel(pkg.File(p)) }
+		if resolved(pkg.DistinfoFile) != resolved(defaultDistinfoFile) {
+			files = append(files, pkg.File(pkg.DistinfoFile))
+		}
 	}
 
 	isRelevantMk := func(filename CurrPath, basename RelPath) bool {
