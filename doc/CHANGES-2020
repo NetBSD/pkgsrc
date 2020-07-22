@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4106 2020/07/22 20:43:34 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.4107 2020/07/22 21:47:16 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6520,3 +6520,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/openresolv to 3.11.0 [roy 2020-07-22]
 	Updated pkgtools/pkglint to 20.2.2 [rillig 2020-07-22]
 	Updated devel/honggfuzz to 2.3 [kamil 2020-07-22]
+	Updated www/weblint to 1.020nb8 [gutteridge 2020-07-22]
