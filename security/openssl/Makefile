@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2020/07/13 11:35:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.262 2020/07/22 20:41:30 sjmulder Exp $
 
 DISTNAME=	openssl-1.1.1g
 PKGREVISION=	2
@@ -39,6 +39,7 @@ CONFIGURE_ENV+=		PERL=${PERL5:Q}
 # specify it manually and call the Configure script directly.
 OPENSSL_HOST.SunOS-i386=	solaris-x86-gcc
 OPENSSL_HOST.SunOS-x86_64=	solaris64-x86_64-gcc
+OPENSSL_HOST.Darwin-aarch64=	darwin64-arm64-cc
 
 .if defined(OPENSSL_HOST.${OPSYS}-${MACHINE_ARCH})
 CONFIG_SHELL=		${PERL5}
