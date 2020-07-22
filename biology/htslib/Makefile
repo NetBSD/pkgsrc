@@ -1,25 +1,30 @@
-# $NetBSD: Makefile,v 1.15 2020/05/22 10:55:57 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/07/22 14:50:14 bacon Exp $
 
-DISTNAME=	htslib-1.9
-PKGREVISION=	10
+DISTNAME=	htslib-1.10.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
-EXTRACT_SUFX=	.tar.bz2
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
 COMMENT=	C library for high-throughput sequencing data formats
 LICENSE=	mit
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		autoconf automake autoreconf bash gmake perl
 GNU_CONFIGURE=		yes
+
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
+SUBST_FILES.version=	configure.ac
+
+REPLACE_PERL+=		test/*.pl
+
 CONFIGURE_ARGS+=	--enable-libcurl
 PKGCONFIG_OVERRIDE=	htslib.pc.in
 TEST_TARGET=		test
 
-REPLACE_PERL+=		test/compare_sam.pl
-REPLACE_PERL+=		test/test.pl
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
