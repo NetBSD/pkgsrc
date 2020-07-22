@@ -1,0 +1,15 @@
+$NetBSD: patch-weblint,v 1.1 2020/07/22 21:45:41 gutteridge Exp $
+
+Fix incorrect test of whether a hash is defined.
+
+--- weblint.orig	1997-09-04 09:19:55.000000000 +0000
++++ weblint
+@@ -843,7 +843,7 @@ sub WebLint
+          }
+          elsif ($closing == 0 && $id =~ /^($expectArgsRE)$/io)
+          {
+-            &whine($., 'expected-attribute', $id) unless defined %args;
++            &whine($., 'expected-attribute', $id) unless %args;
+          }
+ 
+          #--------------------------------------------------------
