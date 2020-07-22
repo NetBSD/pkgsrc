@@ -36,6 +36,31 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 		"WARN: distinfo:9: Patch file \"patch-nonexistent\" does not exist in directory \"patches\".")
 }
 
+func (s *Suite) Test_CheckLinesDistinfo__DISTINFO_FILE(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"DISTINFO_FILE=\t${.CURDIR}/../../category/package/distinfo",
+		"PATCHDIR=\t${.CURDIR}/../../category/package/patches")
+	t.Chdir("category/package")
+	t.CreateFileDummyPatch("patches/patch-dummy_txt")
+	t.CreateFileLines("patches/CVS/Entries",
+		"/other/1.1/modified//")
+	t.CreateFileLines("distinfo",
+		CvsID,
+		"",
+		"SHA1 (patch-dummy_txt) = 2388e84518db54eaa827c68f191d9a87e90f7f00")
+	t.CreateFileLines("CVS/Entries",
+		"/distinfo/1.1/modified//")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: distinfo:3: ../../category/package/patches/patch-dummy_txt " +
+			"is registered in distinfo but not added to CVS.")
+}
+
 func (s *Suite) Test_distinfoLinesChecker_parse__trailing_empty_line(c *check.C) {
 	t := s.Init(c)
 
