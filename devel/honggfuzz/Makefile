@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/07/22 20:43:22 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/22 21:53:59 kamil Exp $
 
-DISTNAME=	honggfuzz-2.3
+DISTNAME=	honggfuzz-2.3.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 
