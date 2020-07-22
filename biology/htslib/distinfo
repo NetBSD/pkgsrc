@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.2 2018/11/06 10:24:14 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/07/22 14:50:14 bacon Exp $
 
-SHA1 (htslib-1.9.tar.bz2) = 21be5187203df30637dda2e1133cae2e833ef050
-RMD160 (htslib-1.9.tar.bz2) = 85d5211cc197931e73a0dc7ca0673426f2ff6d89
-SHA512 (htslib-1.9.tar.bz2) = ddb0e2d970e4c2c27e203b064898f95cb7c187cd497c02fc7b4312dcea25669d0b6063d537687521e7a065f6daefa1ae897add2df4981037a187b499d08fdef7
-Size (htslib-1.9.tar.bz2) = 1178859 bytes
+SHA1 (htslib-1.10.2.tar.gz) = 0ac4b86e49556d7dcaa89d4cce2661c9ca706631
+RMD160 (htslib-1.10.2.tar.gz) = 6d8b6a362297345420dc9acc544029276ce4b1b6
+SHA512 (htslib-1.10.2.tar.gz) = 7a91c15ca1de35653d068dc57ae511ad791ae0bd8504867d4e60c46e813e58b441409541197cde3b2a37840e60331336aebc627ecbf5c64fca1af63dd05f8f9e
+Size (htslib-1.10.2.tar.gz) = 1452177 bytes
+SHA1 (patch-Makefile) = e13333dd97ecd6c6753d14c1b738d6e5934a2911
+SHA1 (patch-cram_open__trace__file.c) = 49b47e13786317e652a8ec810cc91f10d21bb8ea
+SHA1 (patch-hfile__libcurl.c) = 2a143818f1099ef01c57a3c904060a76abb63f14
