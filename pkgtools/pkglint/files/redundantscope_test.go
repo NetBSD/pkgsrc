@@ -25,8 +25,8 @@ func (s *Suite) Test_RedundantScope__single_file_default(c *check.C) {
 	t.CheckOutputLines(
 		"NOTE: file.mk:7: Default assignment of VAR.def has no effect because of line 1.",
 		"NOTE: file.mk:8: Definition of VAR.asg is redundant because of line 2.",
-		"NOTE: file.mk:10: Definition of VAR.evl is redundant because of line 4.")
-	// TODO: "VAR.shl: is overwritten later"
+		"NOTE: file.mk:10: Definition of VAR.evl is redundant because of line 4.",
+		"NOTE: file.mk:5: Default assignment of VAR.shl has no effect because of line 11.")
 }
 
 // In a single file, five variables get assigned are value and are later overridden
@@ -52,8 +52,8 @@ func (s *Suite) Test_RedundantScope__single_file_assign(c *check.C) {
 	t.CheckOutputLines(
 		"NOTE: file.mk:7: Default assignment of VAR.def has no effect because of line 1.",
 		"NOTE: file.mk:8: Definition of VAR.asg is redundant because of line 2.",
-		"NOTE: file.mk:10: Definition of VAR.evl is redundant because of line 4.")
-	// TODO: "VAR.shl: is overwritten later"
+		"NOTE: file.mk:10: Definition of VAR.evl is redundant because of line 4.",
+		"NOTE: file.mk:5: Definition of VAR.shl is redundant because of line 11.")
 }
 
 // In a single file, five variables get appended a value and are later overridden
@@ -79,8 +79,8 @@ func (s *Suite) Test_RedundantScope__single_file_append(c *check.C) {
 	t.CheckOutputLines(
 		"NOTE: file.mk:7: Default assignment of VAR.def has no effect because of line 1.",
 		"WARN: file.mk:2: Variable VAR.asg is overwritten in line 8.",
-		"WARN: file.mk:4: Variable VAR.evl is overwritten in line 10.")
-	// TODO: "VAR.shl: is overwritten later"
+		"WARN: file.mk:4: Variable VAR.evl is overwritten in line 10.",
+		"NOTE: file.mk:5: Definition of VAR.shl is redundant because of line 11.")
 }
 
 // In a single file, five variables get assigned a value using the := operator,
@@ -107,8 +107,8 @@ func (s *Suite) Test_RedundantScope__single_file_eval(c *check.C) {
 	t.CheckOutputLines(
 		"NOTE: file.mk:7: Default assignment of VAR.def has no effect because of line 1.",
 		"NOTE: file.mk:8: Definition of VAR.asg is redundant because of line 2.",
-		"NOTE: file.mk:10: Definition of VAR.evl is redundant because of line 4.")
-	// TODO: "VAR.shl: is overwritten later"
+		"NOTE: file.mk:10: Definition of VAR.evl is redundant because of line 4.",
+		"NOTE: file.mk:5: Definition of VAR.shl is redundant because of line 11.")
 }
 
 // In a single file, five variables get assigned a value using the != operator,
@@ -162,9 +162,9 @@ func (s *Suite) Test_RedundantScope__single_file_default_ref(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: file.mk:7: Default assignment of VAR.def has no effect because of line 1.",
-		"NOTE: file.mk:8: Definition of VAR.asg is redundant because of line 2.")
-	// TODO: "VAR.evl: is overwritten later",
-	// TODO: "VAR.shl: is overwritten later"
+		"NOTE: file.mk:8: Definition of VAR.asg is redundant because of line 2.",
+		"NOTE: file.mk:5: Default assignment of VAR.shl has no effect because of line 11.")
+	// TODO: "VAR.evl: is overwritten later"
 }
 
 // In a single file, five variables get assigned are value and are later overridden
@@ -189,9 +189,9 @@ func (s *Suite) Test_RedundantScope__single_file_assign_ref(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: file.mk:7: Default assignment of VAR.def has no effect because of line 1.",
-		"NOTE: file.mk:8: Definition of VAR.asg is redundant because of line 2.")
-	// TODO: "VAR.evl: is overwritten later",
-	// TODO: "VAR.shl: is overwritten later"
+		"NOTE: file.mk:8: Definition of VAR.asg is redundant because of line 2.",
+		"NOTE: file.mk:5: Definition of VAR.shl is redundant because of line 11.")
+	// TODO: "VAR.evl: is overwritten later"
 }
 
 // In a single file, five variables get appended a value and are later overridden
@@ -216,9 +216,9 @@ func (s *Suite) Test_RedundantScope__single_file_append_ref(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: file.mk:7: Default assignment of VAR.def has no effect because of line 1.",
-		"WARN: file.mk:2: Variable VAR.asg is overwritten in line 8.")
-	// TODO: "VAR.evl: is overwritten later",
-	// TODO: "VAR.shl: is overwritten later"
+		"WARN: file.mk:2: Variable VAR.asg is overwritten in line 8.",
+		"NOTE: file.mk:5: Definition of VAR.shl is redundant because of line 11.")
+	// TODO: "VAR.evl: is overwritten later"
 }
 
 // In a single file, five variables get assigned a value using the := operator,
@@ -1229,13 +1229,8 @@ func (s *Suite) Test_RedundantScope__shell_and_eval_literal(c *check.C) {
 
 	NewRedundantScope().Check(mklines)
 
-	// Even when := is used with a literal value (which is usually
-	// only done for procedure calls), the shell evaluation can have
-	// so many different side effects that pkglint cannot reliably
-	// help in this situation.
-	//
-	// TODO: Why not? The evaluation in line 1 is trivial to analyze.
-	t.CheckOutputEmpty()
+	t.CheckOutputLines(
+		"NOTE: module.mk:1: Definition of VAR is redundant because of line 2.")
 }
 
 func (s *Suite) Test_RedundantScope__included_OPSYS_variable(c *check.C) {
