@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.27 2020/07/08 06:12:12 adam Exp $
+$NetBSD: distinfo,v 1.28 2020/07/22 06:55:12 adam Exp $
 
-SHA1 (cli-6.14.6.tar.gz) = 35c8e166051f40c5c3151e04d00e692899079168
-RMD160 (cli-6.14.6.tar.gz) = 0f724053ea41f76e8b6cac1aee369eb4428830ba
-SHA512 (cli-6.14.6.tar.gz) = f2b1d6261e0a3ed7888df0fcad073c91f2c55381846a4f2a9b7aa80540ade2aee22579177926144a695c5ee8a9feb2d5836905f0617127d16cffa8ee5e2a2768
-Size (cli-6.14.6.tar.gz) = 5622946 bytes
+SHA1 (cli-6.14.7.tar.gz) = 5626bd5f78c3d3ee635f2179b16a597a8c265297
+RMD160 (cli-6.14.7.tar.gz) = 04e3f722f897413970d7b6ba4673a11a1e589fb1
+SHA512 (cli-6.14.7.tar.gz) = d4222cdad566d3a01aca6f87e4fe4870060736657e9ca7b68b082690abc77c58fee2ed0e6c75a3ccb38c2b83a328054b6cf179d9a6e3e67dc6c66791d2d1fa88
+Size (cli-6.14.7.tar.gz) = 5634289 bytes
 SHA1 (patch-Makefile) = 50cc950719f06198b7dffc8c740f08f3e5d4bb57
 SHA1 (patch-lib_config_defaults.js) = 5a00cbef781c9ab4efcec41ad781987f3f540886
 SHA1 (patch-node__modules_bin-links_index.js) = adbabdccde34483973ba134aa461b48ba690b5a2
