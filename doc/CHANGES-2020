@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4099 2020/07/21 21:21:03 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4100 2020/07/22 00:24:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6512,3 +6512,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py38-html-docs to 3.8.5 [adam 2020-07-21]
 	Updated security/py-aes to 1.6.1 [adam 2020-07-21]
 	Updated finance/py-stripe to 2.49.0 [adam 2020-07-21]
+	Updated x11/xfce4-whiskermenu-plugin to 2.4.5 [gutteridge 2020-07-22]
