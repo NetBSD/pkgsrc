@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/07/22 14:50:14 bacon Exp $
+# $NetBSD: Makefile,v 1.17 2020/07/22 15:36:55 bacon Exp $
 
 DISTNAME=	htslib-1.10.2
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 
@@ -24,7 +25,7 @@ PKGCONFIG_OVERRIDE=	htslib.pc.in
 TEST_TARGET=		test
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && autoreconf -if
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
