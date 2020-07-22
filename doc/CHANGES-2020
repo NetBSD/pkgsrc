@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4100 2020/07/22 00:24:25 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.4101 2020/07/22 06:36:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6513,3 +6513,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-aes to 1.6.1 [adam 2020-07-21]
 	Updated finance/py-stripe to 2.49.0 [adam 2020-07-21]
 	Updated x11/xfce4-whiskermenu-plugin to 2.4.5 [gutteridge 2020-07-22]
+	Updated time/py-vdirsyncer to 0.16.8nb1 [wiz 2020-07-22]
