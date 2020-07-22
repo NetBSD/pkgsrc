@@ -155,6 +155,23 @@ func (s *RedundantScope) handleVarassign(mkline *MkLine, ind *Indentation) {
 
 	case opAssignAppend:
 		s.checkAppendUnique(mkline, info)
+
+	case opAssignShell:
+		if s.includePath.includedByOrEqualsAll(info.includePaths) {
+
+			// The situation is:
+			//
+			//   including.mk: VAR=  value
+			//   included.mk:  VAR!= value   <-- you are here
+			//
+			// A variable has been defined in an including file and
+			// has never been read.
+			// The current line has a shell command assignment,
+			// overwriting the previously assigned value.
+			if info.vari.IsConstant() {
+				s.onRedundant(prevWrites[len(prevWrites)-1], mkline)
+			}
+		}
 	}
 }
 
