@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2018/08/23 22:08:07 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/22 20:43:22 kamil Exp $
 
-DISTNAME=	honggfuzz-1.7
+DISTNAME=	honggfuzz-2.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 
-MAINTAINER=	tomsun.0.7@gmail.com
+MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	https://github.com/google/honggfuzz/
 COMMENT=	Security oriented fuzzer based on code coverage
 LICENSE=	apache-2.0
+
+FORTIFY_SUPPORTED=	no # fortify-source intercepts some functions
 
 USE_TOOLS+=	bash:run gmake
 

@@ -1,7 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/23 22:08:07 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/22 20:43:22 kamil Exp $
 bin/hfuzz-cc
 bin/hfuzz-clang
 bin/hfuzz-clang++
 bin/hfuzz-g++
 bin/hfuzz-gcc
 bin/honggfuzz
+include/libhfcommon/common.h
+include/libhfcommon/files.h
+include/libhfcommon/log.h
+include/libhfcommon/ns.h
+include/libhfcommon/util.h
+include/libhfuzz/fetch.h
+include/libhfuzz/instrument.h
+include/libhfuzz/libhfuzz.h
+include/libhfuzz/performance.h
+include/libhfuzz/persistent.h
+include/libhnetdriver/netdriver.h
