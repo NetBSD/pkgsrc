@@ -1,8 +1,11 @@
-$NetBSD: patch-Makefile,v 1.1 2020/05/04 16:12:48 micha Exp $
+$NetBSD: patch-Makefile,v 1.2 2020/07/22 10:25:24 micha Exp $
 
 Use PREFIX and PKGMANDIR from pkgsrc.
 Honor CXXFLAGS and LDFLAGS from pkgsrc.
 Don't set root owner on install.
+Remove nonportable strip option "--strip-unneeded".
+POSIX strip doesn't support options:
+https://pubs.opengroup.org/onlinepubs/9699919799/utilities/strip.html
 
 --- Makefile.orig	2018-06-19 05:23:16.000000000 +0000
 +++ Makefile
@@ -17,7 +20,17 @@ Don't set root owner on install.
  
  OBJ_DIR=obj_linux
  
-@@ -25,9 +25,9 @@ STRIP_FLAGS=--strip-unneeded
+@@ -18,16 +18,18 @@ OBJ_DIR=obj_linux
+ 
+ WARNINGS=-Wall -Wextra -Wshadow -Wno-unused-parameter
+ OPTIMISE=-O2 -fno-strict-aliasing -fwrapv -fno-exceptions -fno-rtti
+-STRIP_FLAGS=--strip-unneeded
++# pkgsrc: "--strip-unneeded" is not supported on all pkgsrc architectures
++#STRIP_FLAGS= --strip-unneeded
++STRIP_FLAGS=
+ 
+ 
+ #--- Internal stuff from here -----------------------------------
  
  MAN_PAGE=$(PROGRAM).6
  
@@ -29,7 +42,7 @@ Don't set root owner on install.
  # LDFLAGS=-static
  
  # I needed this when using -m32 and -static:
-@@ -77,9 +77,9 @@ stripped: all
+@@ -77,9 +79,9 @@ stripped: all
  
  install: stripped
  	install -d -m 755 $(DESTDIR)$(PREFIX)/bin
