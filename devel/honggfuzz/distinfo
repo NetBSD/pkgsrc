@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/07/22 20:43:22 kamil Exp $
+$NetBSD: distinfo,v 1.3 2020/07/22 21:53:59 kamil Exp $
 
-SHA1 (honggfuzz-2.3.tar.gz) = 0cca7144d2785c8d54277f4057692906dd812b48
-RMD160 (honggfuzz-2.3.tar.gz) = 49596ddcc9703af0d57cc19c1809612f3f1002c5
-SHA512 (honggfuzz-2.3.tar.gz) = b06906595ec59dbe1ccffeb55ecf4f309b6f7b0fdce268d0528de05c4f1537b71c5056638ec419a1f875484e0120d45f32b8bec1b485060ebedde58aa16b5842
-Size (honggfuzz-2.3.tar.gz) = 65223517 bytes
-SHA1 (patch-Makefile) = b0d9745bec55ac9f395a71036f2cf5805301f0de
+SHA1 (honggfuzz-2.3.1.tar.gz) = a1cc55ab7120d442a8d859782751915c38ab9056
+RMD160 (honggfuzz-2.3.1.tar.gz) = 22ff9d18e07ba95fd9039b43f407a382256e12e4
+SHA512 (honggfuzz-2.3.1.tar.gz) = 36b3182a0075289467c385b5e03f881fd20193b938dfcec6e364f502637ffc797b6b8ddaddbc5851c4482758088e40eee1e4ca2850bff0294c04c04a036359bf
+Size (honggfuzz-2.3.1.tar.gz) = 65221820 bytes
