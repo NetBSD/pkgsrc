@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4102 2020/07/22 06:57:29 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4103 2020/07/22 10:27:11 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6516,3 +6516,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/py-vdirsyncer to 0.16.8nb1 [wiz 2020-07-22]
 	Updated lang/nodejs to 14.6.0 [adam 2020-07-22]
 	Updated lang/npm to 6.14.7 [adam 2020-07-22]
+	Updated games/ajbsp to 1.01nb1 [micha 2020-07-22]
