@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4104 2020/07/22 13:53:14 roy Exp $
+$NetBSD: CHANGES-2020,v 1.4105 2020/07/22 19:26:45 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6518,3 +6518,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/npm to 6.14.7 [adam 2020-07-22]
 	Updated games/ajbsp to 1.01nb1 [micha 2020-07-22]
 	Updated net/openresolv to 3.11.0 [roy 2020-07-22]
+	Updated pkgtools/pkglint to 20.2.2 [rillig 2020-07-22]
