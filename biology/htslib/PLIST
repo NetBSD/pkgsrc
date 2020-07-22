@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/30 16:51:54 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/22 14:50:14 bacon Exp $
 bin/bgzip
 bin/htsfile
 bin/tabix
@@ -31,7 +31,7 @@ include/htslib/vcfutils.h
 lib/libhts.a
 lib/libhts.so
 lib/libhts.so.${PKGVERSION}
-lib/libhts.so.2
+lib/libhts.so.3
 lib/pkgconfig/htslib.pc
 man/man1/bgzip.1
 man/man1/htsfile.1
@@ -39,3 +39,4 @@ man/man1/tabix.1
 man/man5/faidx.5
 man/man5/sam.5
 man/man5/vcf.5
+man/man7/htslib-s3-plugin.7
