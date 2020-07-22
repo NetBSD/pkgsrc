@@ -1,4 +1,4 @@
-$NetBSD: patch-Configure,v 1.8 2019/08/11 10:14:18 adam Exp $
+$NetBSD: patch-Configure,v 1.9 2020/07/22 15:23:57 sjmulder Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
@@ -7,7 +7,7 @@ $NetBSD: patch-Configure,v 1.8 2019/08/11 10:14:18 adam Exp $
 * Add Minix
 * Several other changes.
 
---- Configure.orig	2019-05-11 09:50:20.000000000 +0000
+--- Configure.orig	2020-02-27 17:40:12.000000000 +0000
 +++ Configure
 @@ -3475,13 +3475,14 @@ EOM
  			osvers="$3"
@@ -209,7 +209,7 @@ $NetBSD: patch-Configure,v 1.8 2019/08/11 10:14:18 adam Exp $
  	echo "Oh!  Smells like ANSI's been here." >&4
  	echo "We can catify or stringify, separately or together!"
  	cpp_stuff=42
-@@ -22864,6 +22907,21 @@ eval $inhdr
+@@ -22864,6 +22907,18 @@ eval $inhdr
  set fenv.h i_fenv
  eval $inhdr
  
@@ -217,10 +217,7 @@ $NetBSD: patch-Configure,v 1.8 2019/08/11 10:14:18 adam Exp $
 +: On NetBSD 6.x non-amd64 non-i386 and non-sparc this fails
 +cat > try.c <<EOCP
 +#include <fenv.h>
-+int main() {
-+	printf("runs ok too\n");
-+	exit(0);
-+}
++int main() { return 0; }
 +EOCP
 +set try
 +if ! eval $compile_ok; then
