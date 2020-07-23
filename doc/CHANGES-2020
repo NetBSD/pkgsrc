@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4118 2020/07/23 12:06:44 wen Exp $
+$NetBSD: CHANGES-2020,v 1.4119 2020/07/23 12:38:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6533,3 +6533,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-Warnings to 0.030 [wen 2020-07-23]
 	Updated databases/p5-CDB_File to 1.02 [wen 2020-07-23]
 	Updated databases/p5-Data-Table to 1.78 [wen 2020-07-23]
+	Added sysutils/cfm version 0.6.3 [nia 2020-07-23]
