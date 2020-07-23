@@ -281,6 +281,15 @@ func (ck *Buildlink3Checker) checkVarassign(mkline *MkLine, pkgbase string) {
 		mkline.Errorf("A buildlink3.mk file must only query its own PKG_BUILD_OPTIONS.%s, not PKG_BUILD_OPTIONS.%s.",
 			ck.pkgbase, value)
 	}
+
+	if varname == "BUILDLINK_PKGSRCDIR."+pkgbase {
+		pkgdir := mkline.Filename().Dir()
+		expected := "../../" + G.Pkgsrc.Rel(pkgdir).String()
+		if value != expected {
+			mkline.Errorf("%s must be set to the package's own path (%s), not %s.",
+				varname, expected, value)
+		}
+	}
 }
 
 func (ck *Buildlink3Checker) checkVaruseInPkgbase(pkgbaseLine *MkLine) {
