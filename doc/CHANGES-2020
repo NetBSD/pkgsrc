@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4123 2020/07/23 19:22:11 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.4124 2020/07/23 19:56:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6538,3 +6538,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.2.4 [rillig 2020-07-23]
 	Updated biology/htslib to 1.10.2nb1 [bacon 2020-07-23]
 	Updated biology/kallisto to 0.46.1 [bacon 2020-07-23]
+	Added wm/frankenwm version 1.0.22 [pin 2020-07-23]
