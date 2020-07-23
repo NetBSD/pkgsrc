@@ -1,0 +1,14 @@
+FrankenWM
+"monsterwm's bastard child" or "not the wm your desktop needs, but the one
+it deserves".
+FrankenWM is a dynamic tiling WM (comparable to dwm or Awesome), featuring the
+v-stack, b-stack, grid, fibonacci, dualstack, equal and monocle layouts out of
+the box. If you want to, you can add gaps between the windows as well.
+
+It was once based on monsterwm but has undergone many greater changes including
+adding pieces from other WMs (hence the name) and porting all sorts of stuff
+from Xlib to XCB. Many of the original monsterwm patches have been ported as
+well.
+
+All settings must be set at compile time by editing `config.h` and it does not
+feature a status bar (but supports leaving preconfigured space for one).
