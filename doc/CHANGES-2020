@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4113 2020/07/23 11:05:41 wen Exp $
+$NetBSD: CHANGES-2020,v 1.4114 2020/07/23 11:15:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6528,3 +6528,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Plack-Middleware-RemoveRedundantBody to 0.09 [wen 2020-07-23]
 	Updated www/py-flask-sqlalchemy to 2.4.4 [kleink 2020-07-23]
 	Updated textproc/p5-PPIx-QuoteLike to 0.011 [wen 2020-07-23]
+	Updated mail/p5-Mail-Transport to 3.005 [wen 2020-07-23]
