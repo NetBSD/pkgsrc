@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/07/02 07:32:18 wen Exp $
+$NetBSD: distinfo,v 1.4 2020/07/23 11:02:12 wen Exp $
 
-SHA1 (PPIx-QuoteLike-0.007.tar.gz) = 6512516b01c53d45db3c1c8e02e5d9335c021b0e
-RMD160 (PPIx-QuoteLike-0.007.tar.gz) = 6be076ecce3df0df86f98f015d3b5e97a34590b2
-SHA512 (PPIx-QuoteLike-0.007.tar.gz) = f3d56abebd7237769441b13de4c79744787eb2c4535844557a858bdda9cdedd2c9a8ab9359ef61bb67ec62dae61103753f0dbfac821b0be572038250eab14852
-Size (PPIx-QuoteLike-0.007.tar.gz) = 57682 bytes
+SHA1 (PPIx-QuoteLike-0.011.tar.gz) = 690b20dde493879b0337fd7e2f53f3565908e395
+RMD160 (PPIx-QuoteLike-0.011.tar.gz) = 22ac605865145aa0926d3f8785d955def6b11804
+SHA512 (PPIx-QuoteLike-0.011.tar.gz) = 6c5eb263e0b39d5d665623831c3b8e24099e6023c48893f0ecfef902446eff1533170c6996f4a62367c1dd9eb50e8fd3a444447e2a9c3cffdc8ff30114d994ee
+Size (PPIx-QuoteLike-0.011.tar.gz) = 66410 bytes
