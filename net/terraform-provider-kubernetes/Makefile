@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/07/17 18:04:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/23 07:44:19 adam Exp $
 
-DISTNAME=	terraform-provider-kubernetes-1.11.3
-PKGREVISION=	2
+DISTNAME=	terraform-provider-kubernetes-1.11.4
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=terraform-providers/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	${PKGBASE}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -15,7 +14,7 @@ LICENSE=	mpl-2.0
 UNLIMIT_RESOURCES=	datasize virtualsize
 
 GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/terraform-providers/${GITHUB_PROJECT}
+GO_SRCPATH=	github.com/hashicorp/${GITHUB_PROJECT}
 
 GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
