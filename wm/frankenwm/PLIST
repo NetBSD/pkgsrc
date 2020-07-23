@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/23 19:53:51 pin Exp $
+bin/frankenwm
+man/man1/frankenwm.1
