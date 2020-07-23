@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/06/05 11:41:32 kleink Exp $
+$NetBSD: distinfo,v 1.10 2020/07/23 09:35:16 kleink Exp $
 
-SHA1 (Flask-SQLAlchemy-2.4.3.tar.gz) = 3ad354a1a5de3185b96025d564d5f8e64532531a
-RMD160 (Flask-SQLAlchemy-2.4.3.tar.gz) = 5cfd2de710b3d2e9ffa59a99733708f6190bd668
-SHA512 (Flask-SQLAlchemy-2.4.3.tar.gz) = 231593d53b02c4560eeb74dca7075495eb6fb4a75a4d25257aa281401dac39ac3ab2ef0edfd76ce762332c599b9bf2d903743142056a827a3170709516e94445
-Size (Flask-SQLAlchemy-2.4.3.tar.gz) = 132134 bytes
+SHA1 (Flask-SQLAlchemy-2.4.4.tar.gz) = f9c25a58c50fc1523508a9723dcfb671d9c37bdb
+RMD160 (Flask-SQLAlchemy-2.4.4.tar.gz) = 439fdba891e55b820b9137f8c23ca8280909ff19
+SHA512 (Flask-SQLAlchemy-2.4.4.tar.gz) = 9d952a39f3d116306ae15c8f802780c987e54dbe519612a9b699bb77e8a45f272e90f994697f881283d1eaf5767d42eaef2ca017d22c08e48596d385d942b1ee
+Size (Flask-SQLAlchemy-2.4.4.tar.gz) = 132193 bytes
