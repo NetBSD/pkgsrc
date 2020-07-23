@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4119 2020/07/23 12:38:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4120 2020/07/23 18:39:31 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6534,3 +6534,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/p5-CDB_File to 1.02 [wen 2020-07-23]
 	Updated databases/p5-Data-Table to 1.78 [wen 2020-07-23]
 	Added sysutils/cfm version 0.6.3 [nia 2020-07-23]
+	Updated graphics/jasper to 2.0.17 [otis 2020-07-23]
