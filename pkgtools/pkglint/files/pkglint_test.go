@@ -1484,5 +1484,8 @@ func (s *Suite) Test_InterPackage_Bl3__same_identifier(c *check.C) {
 		"NOTE: category/package2/Makefile:4: The modifier \"@v@${v}@\" "+
 			"can be replaced with the simpler \"=\".",
 		"ERROR: category/package2/buildlink3.mk:3: Duplicate package identifier "+
-			"\"package1\" already appeared in ../../category/package1/buildlink3.mk:3.")
+			"\"package1\" already appeared in ../../category/package1/buildlink3.mk:3.",
+		"ERROR: category/package2/buildlink3.mk:9: "+
+			"BUILDLINK_PKGSRCDIR.package1 must be set to the package's own path "+
+			"(../../category/package2), not ../../category/package1.")
 }
