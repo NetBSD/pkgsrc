@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.891 2020/07/01 08:52:38 adam Exp $
+# $NetBSD: Makefile,v 1.892 2020/07/23 12:38:44 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -82,6 +82,7 @@ SUBDIR+=	cdrkit
 SUBDIR+=	cdrtools
 SUBDIR+=	cfengine2
 SUBDIR+=	cfengine3
+SUBDIR+=	cfm
 SUBDIR+=	checkpassword
 SUBDIR+=	checkpassword-pam
 SUBDIR+=	checkperms
