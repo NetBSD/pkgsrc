@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/11/04 22:10:04 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/07/23 04:07:58 gutteridge Exp $
 
 DISTNAME=	HTML-Lint-2.32
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/HTML-Lint
 COMMENT=	Perl 5 module to check for HTML errors in a string or file
 LICENSE=	artistic-2.0
+
+CONFLICTS=	weblint-[0-9]*
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/HTML/Lint/.packlist
