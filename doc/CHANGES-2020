@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4122 2020/07/23 19:17:03 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.4123 2020/07/23 19:22:11 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6537,3 +6537,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/jasper to 2.0.17 [otis 2020-07-23]
 	Updated pkgtools/pkglint to 20.2.4 [rillig 2020-07-23]
 	Updated biology/htslib to 1.10.2nb1 [bacon 2020-07-23]
+	Updated biology/kallisto to 0.46.1 [bacon 2020-07-23]
