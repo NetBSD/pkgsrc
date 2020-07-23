@@ -778,6 +778,66 @@ func (s *Suite) Test_PatchChecker_checkConfigure__configure_ac(c *check.C) {
 		"ERROR: ~/patch-aa:9: This code must not be included in patches.")
 }
 
+func (s *Suite) Test_PatchChecker_checkAddedLine__interpreter(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("patch-aa",
+		CvsID,
+		"",
+		"Documentation.",
+		"",
+		"--- a/aa",
+		"+++ b/aa",
+		"@@ -1,1 +1,1 @@",
+		"-old",
+		"+#! /home/my/pkgsrc/pkg/bin/bash")
+
+	CheckLinesPatch(lines, nil)
+
+	t.CheckOutputLines(
+		"ERROR: patch-aa:9: Patches must not add a hard-coded interpreter " +
+			"(/home/my/pkgsrc/pkg/bin/bash).")
+}
+
+func (s *Suite) Test_PatchChecker_checkAddedLine__interpreter_in_line_2(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("patch-aa",
+		CvsID,
+		"",
+		"Documentation.",
+		"",
+		"--- a/aa",
+		"+++ b/aa",
+		"@@ -1,1 +1,2 @@",
+		"-old",
+		"+new",
+		"+#! /home/my/pkgsrc/pkg/bin/bash")
+
+	CheckLinesPatch(lines, nil)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_PatchChecker_checkAddedLine__interpreter_placeholder(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("patch-aa",
+		CvsID,
+		"",
+		"Documentation.",
+		"",
+		"--- a/aa",
+		"+++ b/aa",
+		"@@ -1,1 +1,1 @@",
+		"-old",
+		"+#! @PREFIX@/bin/bash")
+
+	CheckLinesPatch(lines, nil)
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_PatchChecker_checkAddedAbsPath(c *check.C) {
 	t := s.Init(c)
 
