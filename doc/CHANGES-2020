@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4116 2020/07/23 11:34:23 wen Exp $
+$NetBSD: CHANGES-2020,v 1.4117 2020/07/23 11:47:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6531,3 +6531,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/p5-Mail-Transport to 3.005 [wen 2020-07-23]
 	Updated mail/p5-Mail-AuthenticationResults to 1.20200331.1 [wen 2020-07-23]
 	Updated devel/p5-Test-Warnings to 0.030 [wen 2020-07-23]
+	Updated databases/p5-CDB_File to 1.02 [wen 2020-07-23]
