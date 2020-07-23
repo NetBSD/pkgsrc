@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4111 2020/07/23 09:33:45 wen Exp $
+$NetBSD: CHANGES-2020,v 1.4112 2020/07/23 09:35:44 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6526,3 +6526,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/terraform-provider-kubernetes to 1.11.4 [adam 2020-07-23]
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9911 [wen 2020-07-23]
 	Updated www/p5-Plack-Middleware-RemoveRedundantBody to 0.09 [wen 2020-07-23]
+	Updated www/py-flask-sqlalchemy to 2.4.4 [kleink 2020-07-23]
