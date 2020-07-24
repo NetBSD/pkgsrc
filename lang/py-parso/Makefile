@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/05/17 18:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/07/24 06:54:40 adam Exp $
 
-DISTNAME=	parso-0.7.0
+DISTNAME=	parso-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parso/}
