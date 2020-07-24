@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.11 2020/05/17 10:10:18 fox Exp $
+# $NetBSD: mozilla-common.mk,v 1.12 2020/07/24 07:29:32 fox Exp $
 #
 # Common Makefile fragment for mozilla packages based on gecko 2.0.
 # derived from www/firefox
@@ -36,7 +36,6 @@ MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-debug"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-debug-symbols"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-tests"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-necko-wifi"
-MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-libjpeg-turbo"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-icf"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-jemalloc"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-webrtc"
@@ -45,7 +44,6 @@ MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-icu"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-nss"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-nspr"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-zlib"
-MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-bz2"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-libvpx"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-system-libevent=${BUILDLINK_PREFIX.libevent}"
 
@@ -56,7 +54,6 @@ MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-pixman"
 #MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-rust-simd"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-ffi"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-chrome-format=flat"
-MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-gconf"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --with-libclang-path=${PREFIX}/lib"
 
 # Fix binary path
@@ -74,7 +71,7 @@ BUILDLINK_API_DEPENDS.libevent+=       libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=   nspr>=4.25
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=     nss>=3.52
+BUILDLINK_API_DEPENDS.nss+=     nss>=3.53
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
