@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4125 2020/07/24 06:54:57 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4126 2020/07/24 07:32:54 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6541,3 +6541,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added wm/frankenwm version 1.0.22 [pin 2020-07-23]
 	Updated time/py-arrow to 0.15.8 [adam 2020-07-24]
 	Updated lang/py-parso to 0.7.1 [adam 2020-07-24]
+	Updated www/cliqz to 1.38.0 [fox 2020-07-24]
