@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4124 2020/07/23 19:56:03 pin Exp $
+$NetBSD: CHANGES-2020,v 1.4125 2020/07/24 06:54:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6539,3 +6539,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated biology/htslib to 1.10.2nb1 [bacon 2020-07-23]
 	Updated biology/kallisto to 0.46.1 [bacon 2020-07-23]
 	Added wm/frankenwm version 1.0.22 [pin 2020-07-23]
+	Updated time/py-arrow to 0.15.8 [adam 2020-07-24]
+	Updated lang/py-parso to 0.7.1 [adam 2020-07-24]
