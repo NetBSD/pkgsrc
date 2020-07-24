@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla-release_toolkit_components_terminator_nsTerminator.cpp,v 1.1 2019/04/19 14:02:03 fox Exp $
+$NetBSD: patch-mozilla-release_toolkit_components_terminator_nsTerminator.cpp,v 1.2 2020/07/24 07:29:32 fox Exp $
 
 * Fix segfault on exit under NetBSD
 
-Original patch from ryoon, imported from www/firefox
+Taken from www/firefox
 
---- mozilla-release/toolkit/components/terminator/nsTerminator.cpp.orig	2018-11-16 08:40:07.000000000 +0000
+--- mozilla-release/toolkit/components/terminator/nsTerminator.cpp.orig	2020-05-21 22:38:09.000000000 +0000
 +++ mozilla-release/toolkit/components/terminator/nsTerminator.cpp
 @@ -36,7 +36,7 @@
  #if defined(XP_WIN)
@@ -15,7 +15,7 @@ Original patch from ryoon, imported from www/firefox
  #endif
  
  #include "mozilla/ArrayUtils.h"
-@@ -170,7 +170,10 @@ void RunWatchdog(void* arg) {
+@@ -180,7 +180,10 @@ void RunWatchdog(void* arg) {
  #if defined(XP_WIN)
      Sleep(1000 /* ms */);
  #else
@@ -25,5 +25,5 @@ Original patch from ryoon, imported from www/firefox
 +    tickd.tv_nsec = 0;
 +    nanosleep(&tickd, NULL);
  #endif
- 
      if (gHeartbeat++ < timeToLive) {
+ #if !defined(MOZ_VALGRIND) || !defined(MOZ_CODE_COVERAGE)

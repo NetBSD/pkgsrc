@@ -1,0 +1,30 @@
+$NetBSD: patch-mozilla-release_mach,v 1.1 2020/07/24 07:29:32 fox Exp $
+
+* Accept Python 3.x from pkgsrc.
+
+--- mozilla-release/mach.orig	2020-07-23 22:08:42.682115705 +0000
++++ mozilla-release/mach
+@@ -94,7 +94,7 @@ fi
+ 
+ if [ -z "$first_arg" ]; then
+     # User ran `./mach` or `./mach help`, use Python 3.
+-    run_py python3 "$@"
++    run_py ${PYTHON3} "$@"
+ fi
+ 
+ case "${first_arg}" in
+@@ -121,12 +121,12 @@ case " $(echo $py2commands) " in
+         run_py python2.7 "$@"
+         ;;
+     *)
+-        run_py python3 "$@"
++        run_py ${PYTHON3} "$@"
+         ;;
+ esac
+ 
+ # Run Python 3 for everything else.
+-run_py python3 "$@"
++run_py ${PYTHON3} "$@"
+ '''
+ 
+ from __future__ import absolute_import, print_function, unicode_literals
