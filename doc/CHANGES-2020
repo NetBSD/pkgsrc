@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4127 2020/07/24 10:48:01 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4128 2020/07/25 21:31:27 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6544,3 +6544,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/cliqz to 1.38.0 [fox 2020-07-24]
 	Updated net/haproxy to 2.2.1 [adam 2020-07-24]
 	Updated security/gnupg2 to 2.2.21 [adam 2020-07-24]
+	Updated audio/fasttracker2 to 1.27 [fox 2020-07-25]
