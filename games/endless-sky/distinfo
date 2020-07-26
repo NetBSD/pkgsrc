@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/07/26 05:21:20 dholland Exp $
+
+SHA1 (endless-sky/v0.9.12.tar.gz) = ac05cc0a31027ebad74aa1634def6a0388af0206
+RMD160 (endless-sky/v0.9.12.tar.gz) = 7008698acc29ebc6f7e31a7db3d8b6f92d7fc53f
+SHA512 (endless-sky/v0.9.12.tar.gz) = 694d3c6f50f80e8b4ff79580fa9510fde26a846dd227736af96a3eda7810d68b2ae051a72c0e02fe88eae9d839e48933614aa172a9bed6653e03ad30feaddc05
+Size (endless-sky/v0.9.12.tar.gz) = 103105695 bytes
+SHA1 (patch-source_Files.cpp) = 6adbe54302510e97a612cc949cf5a9c3d3b62c81
+SHA1 (patch-source_ImageBuffer.cpp) = cd22f1bc31b9241d0d0f472889e046239fbd5648
