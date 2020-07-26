@@ -1,0 +1,44 @@
+# $NetBSD: Makefile.source,v 1.1 2020/07/26 05:21:20 dholland Exp $
+
+#
+# As of 0.9.12 the package's native build uses scons, and naturally it
+# doesn't work. (It seems to compile ok, but ignores most of the
+# install directives in the SConstruct script, for no obvious reason.)
+#
+# While the package is fairly large, the build is pretty simple and
+# the SConstruct script is only 120 lines, so instead of arguing with
+# scons I've transcribed the material here. We'll see if I regret this
+# when it's time to update.
+#
+# Note: this makefile requires BSD make and is not expected to work
+# outside of the context of pkgsrc.
+#
+
+DESTDIR?=
+PREFIX?=/usr/local
+
+BINDIR=		$(DESTDIR)$(PREFIX)/bin
+
+CXXFLAGS+=-O3 -Isource -DBINDIR=\"$(BINDIR)\"
+LIBS+=-lSDL2 -lpng -ljpeg -lGL -lGLEW -lopenal -lmad
+
+CXXFLAGS+=	$(PTHREAD_CFLAGS)
+LDFLAGS+=	$(PTHREAD_LDFLAGS)
+LIBS+=		$(PTHREAD_LIBS)
+
+PROG=endless-sky
+SRCS!=find . -name '*.cpp' -print | sed -e 's,\./,,'
+
+all: $(PROG)
+
+$(PROG): $(SRCS:T:.cpp=.o)
+	$(CXX) $(LDFLAGS) $(SRCS:T:.cpp=.o) $(LIBS) -o $(PROG)
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $<
+
+install:
+	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
+	$(BSD_INSTALL_PROGRAM) endless-sky $(BINDIR)/
+
+.PHONY: all install
