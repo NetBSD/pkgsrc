@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/07/26 00:51:00 scole Exp $
+
+SHA1 (zeal-0.6.1.tar.gz) = 3af62d2e34404587a63767ed115d0a3cf41e6ac8
+RMD160 (zeal-0.6.1.tar.gz) = a0ee450c38579b1de4efc95c736b6e75240af013
+SHA512 (zeal-0.6.1.tar.gz) = 5b1a129980000c0fc8516e2c7d6c4a8de4adde7054ff8d9635e3be35441ad3ef0539746bbe1ca8abce7e6fb3d20c825b57661c3f8cd059ef1480db65ff81f3d9
+Size (zeal-0.6.1.tar.gz) = 1063963 bytes
+SHA1 (patch-src_libs_ui_searchitemdelegate.cpp) = ecd4ee285c79e2181d051e4588f50ce74eca753a
