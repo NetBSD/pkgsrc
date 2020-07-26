@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/07/26 08:46:35 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/26 08:49:38 rillig Exp $
 #
 VERSION=	4.13.1
 
@@ -85,11 +85,6 @@ SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
 XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup hotplugpath.sh locking.sh
 
-SUBST_CLASSES.NetBSD+=	proc
-SUBST_STAGE.proc=	pre-configure
-SUBST_FILES.proc+=	tools/ocaml/xenstored/define.ml
-SUBST_SED.proc=		-e "s|/proc|/kern|g"
-
 SUBST_CLASSES+=		getopt
 SUBST_STAGE.getopt=	pre-configure
 SUBST_MESSAGE.getopt=	Fixing getopt_long_only
@@ -101,15 +96,6 @@ PROCPATH.NetBSD=	/kern
 PROCPATH.*=		/proc
 
 .include "../../mk/bsd.prefs.mk"
-
-SUBST_CLASSES+=		procdev
-SUBST_STAGE.procdev=	pre-configure
-SUBST_FILES.procdev=	tools/ocaml/xenstored/define.ml
-.if ${OPSYS} == "NetBSD"
-SUBST_SED.procdev=	-e "s|@PROCDEV@|/dev|g"
-.else
-SUBST_SED.procdev=	-e "s|@PROCDEV@|/proc/xen|g"
-.endif
 
 .if ${OPSYS} == "NetBSD"
 MESSAGE_SRC=		${.CURDIR}/MESSAGE ${.CURDIR}/MESSAGE.NetBSD
