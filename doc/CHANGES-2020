@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4131 2020/07/26 07:55:03 maya Exp $
+$NetBSD: CHANGES-2020,v 1.4132 2020/07/26 19:21:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6548,3 +6548,14 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/zeal version 0.6.1 [scole 2020-07-26]
 	Added games/endless-sky version 0.9.12 [dholland 2020-07-26]
 	Updated fonts/woff2 to 1.0.2nb1 [maya 2020-07-26]
+	Updated lang/llvm to 10.0.1 [adam 2020-07-26]
+	Updated devel/lld to 10.0.1 [adam 2020-07-26]
+	Updated devel/lldb to 10.0.1 [adam 2020-07-26]
+	Updated devel/polly to 10.0.1 [adam 2020-07-26]
+	Updated lang/clang to 10.0.1 [adam 2020-07-26]
+	Updated lang/clang-tools-extra to 10.0.1 [adam 2020-07-26]
+	Updated lang/compiler-rt to 10.0.1 [adam 2020-07-26]
+	Updated lang/libcxx to 10.0.1 [adam 2020-07-26]
+	Updated lang/libcxxabi to 10.0.1 [adam 2020-07-26]
+	Updated lang/libunwind to 10.0.1 [adam 2020-07-26]
+	Updated parallel/openmp to 10.0.1 [adam 2020-07-26]
