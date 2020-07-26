@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2020/06/29 13:04:14 nia Exp $
+# $NetBSD: Makefile,v 1.492 2020/07/26 05:22:35 dholland Exp $
 #
 
 COMMENT=	Games
@@ -106,6 +106,7 @@ SUBDIR+=	dungeon
 SUBDIR+=	easyrpg-player
 SUBDIR+=	eboard
 SUBDIR+=	einstein-puzzle
+SUBDIR+=	endless-sky
 SUBDIR+=	enigma
 SUBDIR+=	etlegacy
 SUBDIR+=	etlegacy-data
