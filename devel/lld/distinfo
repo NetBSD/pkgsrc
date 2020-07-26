@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2020/04/18 08:00:49 adam Exp $
+$NetBSD: distinfo,v 1.11 2020/07/26 19:20:12 adam Exp $
 
-SHA1 (lld-10.0.0.src.tar.xz) = ed8dc4f73847e084b65f4ad5d2f6670f6f38a8eb
-RMD160 (lld-10.0.0.src.tar.xz) = d0cf312b30a8d726555a4aeb1a1ea822a600ca02
-SHA512 (lld-10.0.0.src.tar.xz) = 3457b4a4be2cc9f1e6f1a74dff74e142e7590f1aafffa9623f46af0e2e8822aea264a6cf79287849ae4944505ddbbfb99efa380ac860d5a7eb791984ac4ca59f
-Size (lld-10.0.0.src.tar.xz) = 1143340 bytes
+SHA1 (lld-10.0.1.src.tar.xz) = 8581337dba00041c2633f61bfb5be778df83cff7
+RMD160 (lld-10.0.1.src.tar.xz) = e445e5a1a81dfce3428d3c05a2afcb3a31ec02f7
+SHA512 (lld-10.0.1.src.tar.xz) = cc0d206739db4c3876eb4718690e11b3eb1a2278e0d4a17a9576eef2320a2e25e1f548768f74f0877e4d00ef50471af1ce179eae9e514d41a0d93285c537941a
+Size (lld-10.0.1.src.tar.xz) = 1134580 bytes
 SHA1 (patch-CMakeLists.txt) = 87d32f66488541ba68e219f5fa83646b48bf9c71
 SHA1 (patch-ELF_Config.h) = 3f2a310bc2c8f625493b0b73702feaac22769c9c
 SHA1 (patch-ELF_Driver.cpp) = d1bd9821f2d952dfa86d4f0cf3afc4e7fb477001

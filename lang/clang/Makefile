@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2020/07/02 10:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2020/07/26 19:20:13 adam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	4
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
