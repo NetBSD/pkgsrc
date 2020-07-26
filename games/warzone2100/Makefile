@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/07/20 20:21:26 triaxx Exp $
+# $NetBSD: Makefile,v 1.39 2020/07/26 17:10:48 wiz Exp $
 
 DISTNAME=	warzone2100_src
 PKGNAME=	warzone2100-3.4.1
@@ -18,7 +18,7 @@ USE_TOOLS+=	pkg-config zip
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
 .include "../../lang/ruby/rubyversion.mk"
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor>=1.5.3:../../print/ruby-asciidoctor
+BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor>=1.5.3:../../textproc/ruby-asciidoctor
 
 # Could NOT find Gettext: Found unsuitable version "0.16.1", but
 # required is at least "0.18"
@@ -51,14 +51,12 @@ BUILDLINK_API_DEPENDS.gettext+=		gettext>=0.18
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.0
 .include "../../fonts/harfbuzz/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.10.2
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glew+=		glew>=1.5.2
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.png+=		png>=1.2
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/quesoglc/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
