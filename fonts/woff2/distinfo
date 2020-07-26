@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/04/28 09:40:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2020/07/26 07:54:45 maya Exp $
 
 SHA1 (woff2-1.0.2.tar.gz) = bab4838b248026c968e171a5467b5176caf4e2e5
 RMD160 (woff2-1.0.2.tar.gz) = fbfd0a3771df1d31eb32db6f12b6b00ee9f458f3
 SHA512 (woff2-1.0.2.tar.gz) = c788bba1530aec463e755e901f9342f4b599e3a07f54645fef1dc388ab5d5c30625535e5dd38e9e792e04a640574baa50eeefb6b7338ab403755f4a4e0c3044d
 Size (woff2-1.0.2.tar.gz) = 38934 bytes
+SHA1 (patch-CMakeLists.txt) = 1ec110379f53ff0716b3938a1c16de10e6f30398
