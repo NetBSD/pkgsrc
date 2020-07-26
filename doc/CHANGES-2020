@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4136 2020/07/26 23:10:44 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4137 2020/07/26 23:31:34 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6563,3 +6563,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/dMagnetic to 0.25 [wiz 2020-07-26]
 	Updated audio/strawberry to 0.6.13 [nia 2020-07-26]
 	Updated chat/weechat to 2.9 [nia 2020-07-26]
+	Updated biology/samtools to 1.10 [bacon 2020-07-26]
