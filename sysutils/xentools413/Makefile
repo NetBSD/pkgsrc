@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/07/26 08:40:05 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/07/26 08:46:35 rillig Exp $
 #
 VERSION=	4.13.1
 
@@ -79,9 +79,7 @@ REPLACE_PERL+=		tools/libxl/check-libxl-api-rules
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf+=	tools/ocaml/xenstored/define.ml
-SUBST_FILES.conf+=	tools/libxl/xl_cmdtable.c
-SUBST_FILES.conf+=	docs/misc/block-scripts.txt
+SUBST_FILES.conf=	docs/misc/block-scripts.txt
 SUBST_FILES.conf+=	docs/misc/vtd.txt
 SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
