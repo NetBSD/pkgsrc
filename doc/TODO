@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19963 2020/07/26 20:28:19 nia Exp $
+$NetBSD: TODO,v 1.19964 2020/07/26 20:45:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -471,7 +471,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
-	o calibre-4.17.0
+	o calibre-4.21.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catch2-2.13.0
@@ -490,6 +490,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o classpath-gui-0.99
 	o clawsker-0.7.13
 	o clusterssh-4.05
+	o cmake-3.18.0
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compiz-0.8.10
@@ -526,6 +527,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o doclifter-2.16
 	o dolphin-5.0
 	o drivel-3.0.5
+	o dunst-1.5.0
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
 	o ec2-ami-tools-1.5.7
@@ -569,6 +571,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evolution-exchange-3.5.2
 	o evolution-mapi-0.32.2
 	o ex-20050325
+	o exiv2-0.27.3
 	o exmh-2.8.0
 	o faces-1.7.7
 	o facter-2.4.5
@@ -977,12 +980,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
+	o py-google-api-core-1.22.0
 	o py-google-api-python-client-1.10.0
 	o py-google-auth-1.19.2
 	o py-hgview-1.9.0
 	o py-idna-2.10
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-lazy-object-proxy-1.5.1
 	o py-mercurial-5.4.2
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
@@ -1078,7 +1083,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
 	o sshguard-1.6.4
-	o sslh-1.21
+	o sslh-1.21b
 	o stalin-0.11
 	o statist-1.3.0
 	o stegavorto-2011.05.26
