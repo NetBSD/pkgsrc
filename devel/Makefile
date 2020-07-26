@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3173 2020/07/11 13:58:10 nia Exp $
+# $NetBSD: Makefile,v 1.3174 2020/07/26 00:51:00 scole Exp $
 #
 
 COMMENT=	Development utilities
@@ -3049,6 +3049,7 @@ SUBDIR+=	yajl
 SUBDIR+=	yarn
 SUBDIR+=	yasm
 SUBDIR+=	z80-asm
+SUBDIR+=	zeal
 SUBDIR+=	zlib
 SUBDIR+=	zookeeper
 SUBDIR+=	zzuf
