@@ -1,0 +1,3286 @@
+@comment $NetBSD: PLIST,v 1.1 2020/07/26 05:21:20 dholland Exp $
+bin/endless-sky
+man/man6/endless-sky.6
+share/appdata/endless-sky.appdata.xml
+share/applications/endless-sky.desktop
+share/games/endless-sky/credits.txt
+share/games/endless-sky/data/coalition/coalition jobs.txt
+share/games/endless-sky/data/coalition/coalition missions.txt
+share/games/endless-sky/data/coalition/coalition outfits.txt
+share/games/endless-sky/data/coalition/coalition ships.txt
+share/games/endless-sky/data/coalition/coalition weapons.txt
+share/games/endless-sky/data/coalition/coalition.txt
+share/games/endless-sky/data/commodities.txt
+share/games/endless-sky/data/conversations.txt
+share/games/endless-sky/data/deprecated outfits.txt
+share/games/endless-sky/data/dialog phrases.txt
+share/games/endless-sky/data/drak/drak missions.txt
+share/games/endless-sky/data/drak/drak.txt
+share/games/endless-sky/data/drak/indigenous.txt
+share/games/endless-sky/data/effects.txt
+share/games/endless-sky/data/governments.txt
+share/games/endless-sky/data/hai/hai jobs.txt
+share/games/endless-sky/data/hai/hai missions.txt
+share/games/endless-sky/data/hai/hai news.txt
+share/games/endless-sky/data/hai/hai outfits.txt
+share/games/endless-sky/data/hai/hai ships.txt
+share/games/endless-sky/data/hai/hai.txt
+share/games/endless-sky/data/harvesting.txt
+share/games/endless-sky/data/help.txt
+share/games/endless-sky/data/human/boarding missions.txt
+share/games/endless-sky/data/human/deep jobs.txt
+share/games/endless-sky/data/human/deep missions.txt
+share/games/endless-sky/data/human/dirt belt jobs.txt
+share/games/endless-sky/data/human/engines.txt
+share/games/endless-sky/data/human/events.txt
+share/games/endless-sky/data/human/fleets.txt
+share/games/endless-sky/data/human/free worlds checkmate.txt
+share/games/endless-sky/data/human/free worlds epilogue.txt
+share/games/endless-sky/data/human/free worlds intro.txt
+share/games/endless-sky/data/human/free worlds middle.txt
+share/games/endless-sky/data/human/free worlds reconciliation.txt
+share/games/endless-sky/data/human/free worlds side plots.txt
+share/games/endless-sky/data/human/free worlds start.txt
+share/games/endless-sky/data/human/free worlds war jobs.txt
+share/games/endless-sky/data/human/frontier jobs.txt
+share/games/endless-sky/data/human/hails.txt
+share/games/endless-sky/data/human/jobs.txt
+share/games/endless-sky/data/human/kestrel.txt
+share/games/endless-sky/data/human/marauders.txt
+share/games/endless-sky/data/human/names.txt
+share/games/endless-sky/data/human/near earth jobs.txt
+share/games/endless-sky/data/human/news.txt
+share/games/endless-sky/data/human/outfits.txt
+share/games/endless-sky/data/human/paradise world jobs.txt
+share/games/endless-sky/data/human/pirate jobs.txt
+share/games/endless-sky/data/human/power.txt
+share/games/endless-sky/data/human/rim jobs.txt
+share/games/endless-sky/data/human/sales.txt
+share/games/endless-sky/data/human/ships.txt
+share/games/endless-sky/data/human/south jobs.txt
+share/games/endless-sky/data/human/syndicate jobs.txt
+share/games/endless-sky/data/human/transport missions.txt
+share/games/endless-sky/data/human/variants.txt
+share/games/endless-sky/data/human/weapons.txt
+share/games/endless-sky/data/interfaces.txt
+share/games/endless-sky/data/intro missions.txt
+share/games/endless-sky/data/ka'het/ka'het missions.txt
+share/games/endless-sky/data/ka'het/ka'het outfits.txt
+share/games/endless-sky/data/ka'het/ka'het ships.txt
+share/games/endless-sky/data/ka'het/ka'het.txt
+share/games/endless-sky/data/korath/korath missions.txt
+share/games/endless-sky/data/korath/korath outfits.txt
+share/games/endless-sky/data/korath/korath ships.txt
+share/games/endless-sky/data/korath/korath weapons.txt
+share/games/endless-sky/data/korath/korath.txt
+share/games/endless-sky/data/korath/nanobots.txt
+share/games/endless-sky/data/landing messages.txt
+share/games/endless-sky/data/map.txt
+share/games/endless-sky/data/persons.txt
+share/games/endless-sky/data/pug/pug.txt
+share/games/endless-sky/data/quarg/quarg missions.txt
+share/games/endless-sky/data/quarg/quarg outfits.txt
+share/games/endless-sky/data/quarg/quarg ships.txt
+share/games/endless-sky/data/quarg/quarg.txt
+share/games/endless-sky/data/ratings.txt
+share/games/endless-sky/data/remnant/remnant missions.txt
+share/games/endless-sky/data/remnant/remnant outfits.txt
+share/games/endless-sky/data/remnant/remnant ships.txt
+share/games/endless-sky/data/remnant/remnant.txt
+share/games/endless-sky/data/stars.txt
+share/games/endless-sky/data/start.txt
+share/games/endless-sky/data/tooltips.txt
+share/games/endless-sky/data/wanderer/wanderer jobs.txt
+share/games/endless-sky/data/wanderer/wanderer outfits.txt
+share/games/endless-sky/data/wanderer/wanderer ships.txt
+share/games/endless-sky/data/wanderer/wanderers middle.txt
+share/games/endless-sky/data/wanderer/wanderers start.txt
+share/games/endless-sky/data/wanderer/wanderers.txt
+share/games/endless-sky/images/_menu/compass.png
+share/games/endless-sky/images/_menu/forest2.png
+share/games/endless-sky/images/_menu/g0.png
+share/games/endless-sky/images/_menu/haze+.jpg
+share/games/endless-sky/images/_menu/haze-red+.jpg
+share/games/endless-sky/images/_menu/oberon.png
+share/games/endless-sky/images/_menu/side panel.png
+share/games/endless-sky/images/_menu/title.png
+share/games/endless-sky/images/asteroid/gold/spin-00.png
+share/games/endless-sky/images/asteroid/gold/spin-01.png
+share/games/endless-sky/images/asteroid/gold/spin-02.png
+share/games/endless-sky/images/asteroid/gold/spin-03.png
+share/games/endless-sky/images/asteroid/gold/spin-04.png
+share/games/endless-sky/images/asteroid/gold/spin-05.png
+share/games/endless-sky/images/asteroid/gold/spin-06.png
+share/games/endless-sky/images/asteroid/gold/spin-07.png
+share/games/endless-sky/images/asteroid/gold/spin-08.png
+share/games/endless-sky/images/asteroid/gold/spin-09.png
+share/games/endless-sky/images/asteroid/gold/spin-10.png
+share/games/endless-sky/images/asteroid/gold/spin-11.png
+share/games/endless-sky/images/asteroid/gold/spin-12.png
+share/games/endless-sky/images/asteroid/gold/spin-13.png
+share/games/endless-sky/images/asteroid/gold/spin-14.png
+share/games/endless-sky/images/asteroid/gold/spin-15.png
+share/games/endless-sky/images/asteroid/gold/spin-16.png
+share/games/endless-sky/images/asteroid/gold/spin-17.png
+share/games/endless-sky/images/asteroid/gold/spin-18.png
+share/games/endless-sky/images/asteroid/gold/spin-19.png
+share/games/endless-sky/images/asteroid/gold/spin-20.png
+share/games/endless-sky/images/asteroid/gold/spin-21.png
+share/games/endless-sky/images/asteroid/gold/spin-22.png
+share/games/endless-sky/images/asteroid/gold/spin-23.png
+share/games/endless-sky/images/asteroid/gold/spin-24.png
+share/games/endless-sky/images/asteroid/gold/spin-25.png
+share/games/endless-sky/images/asteroid/gold/spin-26.png
+share/games/endless-sky/images/asteroid/gold/spin-27.png
+share/games/endless-sky/images/asteroid/gold/spin-28.png
+share/games/endless-sky/images/asteroid/gold/spin-29.png
+share/games/endless-sky/images/asteroid/gold/spin-30.png
+share/games/endless-sky/images/asteroid/gold/spin-31.png
+share/games/endless-sky/images/asteroid/gold/spin-32.png
+share/games/endless-sky/images/asteroid/gold/spin-33.png
+share/games/endless-sky/images/asteroid/gold/spin-34.png
+share/games/endless-sky/images/asteroid/gold/spin-35.png
+share/games/endless-sky/images/asteroid/gold/spin-36.png
+share/games/endless-sky/images/asteroid/gold/spin-37.png
+share/games/endless-sky/images/asteroid/gold/spin-38.png
+share/games/endless-sky/images/asteroid/gold/spin-39.png
+share/games/endless-sky/images/asteroid/gold/spin-40.png
+share/games/endless-sky/images/asteroid/gold/spin-41.png
+share/games/endless-sky/images/asteroid/gold/spin-42.png
+share/games/endless-sky/images/asteroid/gold/spin-43.png
+share/games/endless-sky/images/asteroid/gold/spin-44.png
+share/games/endless-sky/images/asteroid/gold/spin-45.png
+share/games/endless-sky/images/asteroid/gold/spin-46.png
+share/games/endless-sky/images/asteroid/gold/spin-47.png
+share/games/endless-sky/images/asteroid/gold/spin-48.png
+share/games/endless-sky/images/asteroid/gold/spin-49.png
+share/games/endless-sky/images/asteroid/gold/spin-50.png
+share/games/endless-sky/images/asteroid/iron/spin-00.png
+share/games/endless-sky/images/asteroid/iron/spin-01.png
+share/games/endless-sky/images/asteroid/iron/spin-02.png
+share/games/endless-sky/images/asteroid/iron/spin-03.png
+share/games/endless-sky/images/asteroid/iron/spin-04.png
+share/games/endless-sky/images/asteroid/iron/spin-05.png
+share/games/endless-sky/images/asteroid/iron/spin-06.png
+share/games/endless-sky/images/asteroid/iron/spin-07.png
+share/games/endless-sky/images/asteroid/iron/spin-08.png
+share/games/endless-sky/images/asteroid/iron/spin-09.png
+share/games/endless-sky/images/asteroid/iron/spin-10.png
+share/games/endless-sky/images/asteroid/iron/spin-11.png
+share/games/endless-sky/images/asteroid/iron/spin-12.png
+share/games/endless-sky/images/asteroid/iron/spin-13.png
+share/games/endless-sky/images/asteroid/iron/spin-14.png
+share/games/endless-sky/images/asteroid/iron/spin-15.png
+share/games/endless-sky/images/asteroid/iron/spin-16.png
+share/games/endless-sky/images/asteroid/iron/spin-17.png
+share/games/endless-sky/images/asteroid/iron/spin-18.png
+share/games/endless-sky/images/asteroid/iron/spin-19.png
+share/games/endless-sky/images/asteroid/iron/spin-20.png
+share/games/endless-sky/images/asteroid/iron/spin-21.png
+share/games/endless-sky/images/asteroid/iron/spin-22.png
+share/games/endless-sky/images/asteroid/iron/spin-23.png
+share/games/endless-sky/images/asteroid/iron/spin-24.png
+share/games/endless-sky/images/asteroid/iron/spin-25.png
+share/games/endless-sky/images/asteroid/iron/spin-26.png
+share/games/endless-sky/images/asteroid/iron/spin-27.png
+share/games/endless-sky/images/asteroid/iron/spin-28.png
+share/games/endless-sky/images/asteroid/iron/spin-29.png
+share/games/endless-sky/images/asteroid/iron/spin-30.png
+share/games/endless-sky/images/asteroid/iron/spin-31.png
+share/games/endless-sky/images/asteroid/iron/spin-32.png
+share/games/endless-sky/images/asteroid/iron/spin-33.png
+share/games/endless-sky/images/asteroid/iron/spin-34.png
+share/games/endless-sky/images/asteroid/iron/spin-35.png
+share/games/endless-sky/images/asteroid/iron/spin-36.png
+share/games/endless-sky/images/asteroid/iron/spin-37.png
+share/games/endless-sky/images/asteroid/iron/spin-38.png
+share/games/endless-sky/images/asteroid/iron/spin-39.png
+share/games/endless-sky/images/asteroid/iron/spin-40.png
+share/games/endless-sky/images/asteroid/iron/spin-41.png
+share/games/endless-sky/images/asteroid/iron/spin-42.png
+share/games/endless-sky/images/asteroid/iron/spin-43.png
+share/games/endless-sky/images/asteroid/iron/spin-44.png
+share/games/endless-sky/images/asteroid/iron/spin-45.png
+share/games/endless-sky/images/asteroid/iron/spin-46.png
+share/games/endless-sky/images/asteroid/iron/spin-47.png
+share/games/endless-sky/images/asteroid/iron/spin-48.png
+share/games/endless-sky/images/asteroid/iron/spin-49.png
+share/games/endless-sky/images/asteroid/iron/spin-50.png
+share/games/endless-sky/images/asteroid/iron/spin-51.png
+share/games/endless-sky/images/asteroid/iron/spin-52.png
+share/games/endless-sky/images/asteroid/iron/spin-53.png
+share/games/endless-sky/images/asteroid/iron/spin-54.png
+share/games/endless-sky/images/asteroid/iron/spin-55.png
+share/games/endless-sky/images/asteroid/iron/spin-56.png
+share/games/endless-sky/images/asteroid/iron/spin-57.png
+share/games/endless-sky/images/asteroid/iron/spin-58.png
+share/games/endless-sky/images/asteroid/iron/spin-59.png
+share/games/endless-sky/images/asteroid/large metal/spin-00.png
+share/games/endless-sky/images/asteroid/large metal/spin-01.png
+share/games/endless-sky/images/asteroid/large metal/spin-02.png
+share/games/endless-sky/images/asteroid/large metal/spin-03.png
+share/games/endless-sky/images/asteroid/large metal/spin-04.png
+share/games/endless-sky/images/asteroid/large metal/spin-05.png
+share/games/endless-sky/images/asteroid/large metal/spin-06.png
+share/games/endless-sky/images/asteroid/large metal/spin-07.png
+share/games/endless-sky/images/asteroid/large metal/spin-08.png
+share/games/endless-sky/images/asteroid/large metal/spin-09.png
+share/games/endless-sky/images/asteroid/large metal/spin-10.png
+share/games/endless-sky/images/asteroid/large metal/spin-11.png
+share/games/endless-sky/images/asteroid/large metal/spin-12.png
+share/games/endless-sky/images/asteroid/large metal/spin-13.png
+share/games/endless-sky/images/asteroid/large metal/spin-14.png
+share/games/endless-sky/images/asteroid/large metal/spin-15.png
+share/games/endless-sky/images/asteroid/large metal/spin-16.png
+share/games/endless-sky/images/asteroid/large metal/spin-17.png
+share/games/endless-sky/images/asteroid/large metal/spin-18.png
+share/games/endless-sky/images/asteroid/large metal/spin-19.png
+share/games/endless-sky/images/asteroid/large metal/spin-20.png
+share/games/endless-sky/images/asteroid/large metal/spin-21.png
+share/games/endless-sky/images/asteroid/large metal/spin-22.png
+share/games/endless-sky/images/asteroid/large metal/spin-23.png
+share/games/endless-sky/images/asteroid/large metal/spin-24.png
+share/games/endless-sky/images/asteroid/large metal/spin-25.png
+share/games/endless-sky/images/asteroid/large metal/spin-26.png
+share/games/endless-sky/images/asteroid/large metal/spin-27.png
+share/games/endless-sky/images/asteroid/large metal/spin-28.png
+share/games/endless-sky/images/asteroid/large metal/spin-29.png
+share/games/endless-sky/images/asteroid/large metal/spin-30.png
+share/games/endless-sky/images/asteroid/large metal/spin-31.png
+share/games/endless-sky/images/asteroid/large metal/spin-32.png
+share/games/endless-sky/images/asteroid/large metal/spin-33.png
+share/games/endless-sky/images/asteroid/large metal/spin-34.png
+share/games/endless-sky/images/asteroid/large metal/spin-35.png
+share/games/endless-sky/images/asteroid/large metal/spin-36.png
+share/games/endless-sky/images/asteroid/large metal/spin-37.png
+share/games/endless-sky/images/asteroid/large metal/spin-38.png
+share/games/endless-sky/images/asteroid/large metal/spin-39.png
+share/games/endless-sky/images/asteroid/large metal/spin-40.png
+share/games/endless-sky/images/asteroid/large metal/spin-41.png
+share/games/endless-sky/images/asteroid/large metal/spin-42.png
+share/games/endless-sky/images/asteroid/large metal/spin-43.png
+share/games/endless-sky/images/asteroid/large metal/spin-44.png
+share/games/endless-sky/images/asteroid/large metal/spin-45.png
+share/games/endless-sky/images/asteroid/large metal/spin-46.png
+share/games/endless-sky/images/asteroid/large metal/spin-47.png
+share/games/endless-sky/images/asteroid/large metal/spin-48.png
+share/games/endless-sky/images/asteroid/large metal/spin-49.png
+share/games/endless-sky/images/asteroid/large metal/spin-50.png
+share/games/endless-sky/images/asteroid/large metal/spin-51.png
+share/games/endless-sky/images/asteroid/large metal/spin-52.png
+share/games/endless-sky/images/asteroid/large metal/spin-53.png
+share/games/endless-sky/images/asteroid/large rock/spin-00.png
+share/games/endless-sky/images/asteroid/large rock/spin-01.png
+share/games/endless-sky/images/asteroid/large rock/spin-02.png
+share/games/endless-sky/images/asteroid/large rock/spin-03.png
+share/games/endless-sky/images/asteroid/large rock/spin-04.png
+share/games/endless-sky/images/asteroid/large rock/spin-05.png
+share/games/endless-sky/images/asteroid/large rock/spin-06.png
+share/games/endless-sky/images/asteroid/large rock/spin-07.png
+share/games/endless-sky/images/asteroid/large rock/spin-08.png
+share/games/endless-sky/images/asteroid/large rock/spin-09.png
+share/games/endless-sky/images/asteroid/large rock/spin-10.png
+share/games/endless-sky/images/asteroid/large rock/spin-11.png
+share/games/endless-sky/images/asteroid/large rock/spin-12.png
+share/games/endless-sky/images/asteroid/large rock/spin-13.png
+share/games/endless-sky/images/asteroid/large rock/spin-14.png
+share/games/endless-sky/images/asteroid/large rock/spin-15.png
+share/games/endless-sky/images/asteroid/large rock/spin-16.png
+share/games/endless-sky/images/asteroid/large rock/spin-17.png
+share/games/endless-sky/images/asteroid/large rock/spin-18.png
+share/games/endless-sky/images/asteroid/large rock/spin-19.png
+share/games/endless-sky/images/asteroid/large rock/spin-20.png
+share/games/endless-sky/images/asteroid/large rock/spin-21.png
+share/games/endless-sky/images/asteroid/large rock/spin-22.png
+share/games/endless-sky/images/asteroid/large rock/spin-23.png
+share/games/endless-sky/images/asteroid/large rock/spin-24.png
+share/games/endless-sky/images/asteroid/large rock/spin-25.png
+share/games/endless-sky/images/asteroid/large rock/spin-26.png
+share/games/endless-sky/images/asteroid/large rock/spin-27.png
+share/games/endless-sky/images/asteroid/large rock/spin-28.png
+share/games/endless-sky/images/asteroid/large rock/spin-29.png
+share/games/endless-sky/images/asteroid/large rock/spin-30.png
+share/games/endless-sky/images/asteroid/large rock/spin-31.png
+share/games/endless-sky/images/asteroid/large rock/spin-32.png
+share/games/endless-sky/images/asteroid/large rock/spin-33.png
+share/games/endless-sky/images/asteroid/large rock/spin-34.png
+share/games/endless-sky/images/asteroid/large rock/spin-35.png
+share/games/endless-sky/images/asteroid/large rock/spin-36.png
+share/games/endless-sky/images/asteroid/large rock/spin-37.png
+share/games/endless-sky/images/asteroid/large rock/spin-38.png
+share/games/endless-sky/images/asteroid/large rock/spin-39.png
+share/games/endless-sky/images/asteroid/large rock/spin-40.png
+share/games/endless-sky/images/asteroid/large rock/spin-41.png
+share/games/endless-sky/images/asteroid/large rock/spin-42.png
+share/games/endless-sky/images/asteroid/large rock/spin-43.png
+share/games/endless-sky/images/asteroid/large rock/spin-44.png
+share/games/endless-sky/images/asteroid/large rock/spin-45.png
+share/games/endless-sky/images/asteroid/large rock/spin-46.png
+share/games/endless-sky/images/asteroid/large rock/spin-47.png
+share/games/endless-sky/images/asteroid/large rock/spin-48.png
+share/games/endless-sky/images/asteroid/large rock/spin-49.png
+share/games/endless-sky/images/asteroid/large rock/spin-50.png
+share/games/endless-sky/images/asteroid/large rock/spin-51.png
+share/games/endless-sky/images/asteroid/large rock/spin-52.png
+share/games/endless-sky/images/asteroid/large rock/spin-53.png
+share/games/endless-sky/images/asteroid/large rock/spin-54.png
+share/games/endless-sky/images/asteroid/large rock/spin-55.png
+share/games/endless-sky/images/asteroid/large rock/spin-56.png
+share/games/endless-sky/images/asteroid/large rock/spin-57.png
+share/games/endless-sky/images/asteroid/large rock/spin-58.png
+share/games/endless-sky/images/asteroid/large rock/spin-59.png
+share/games/endless-sky/images/asteroid/lead/spin-00.png
+share/games/endless-sky/images/asteroid/lead/spin-01.png
+share/games/endless-sky/images/asteroid/lead/spin-02.png
+share/games/endless-sky/images/asteroid/lead/spin-03.png
+share/games/endless-sky/images/asteroid/lead/spin-04.png
+share/games/endless-sky/images/asteroid/lead/spin-05.png
+share/games/endless-sky/images/asteroid/lead/spin-06.png
+share/games/endless-sky/images/asteroid/lead/spin-07.png
+share/games/endless-sky/images/asteroid/lead/spin-08.png
+share/games/endless-sky/images/asteroid/lead/spin-09.png
+share/games/endless-sky/images/asteroid/lead/spin-10.png
+share/games/endless-sky/images/asteroid/lead/spin-11.png
+share/games/endless-sky/images/asteroid/lead/spin-12.png
+share/games/endless-sky/images/asteroid/lead/spin-13.png
+share/games/endless-sky/images/asteroid/lead/spin-14.png
+share/games/endless-sky/images/asteroid/lead/spin-15.png
+share/games/endless-sky/images/asteroid/lead/spin-16.png
+share/games/endless-sky/images/asteroid/lead/spin-17.png
+share/games/endless-sky/images/asteroid/lead/spin-18.png
+share/games/endless-sky/images/asteroid/lead/spin-19.png
+share/games/endless-sky/images/asteroid/lead/spin-20.png
+share/games/endless-sky/images/asteroid/lead/spin-21.png
+share/games/endless-sky/images/asteroid/lead/spin-22.png
+share/games/endless-sky/images/asteroid/lead/spin-23.png
+share/games/endless-sky/images/asteroid/lead/spin-24.png
+share/games/endless-sky/images/asteroid/lead/spin-25.png
+share/games/endless-sky/images/asteroid/lead/spin-26.png
+share/games/endless-sky/images/asteroid/lead/spin-27.png
+share/games/endless-sky/images/asteroid/lead/spin-28.png
+share/games/endless-sky/images/asteroid/lead/spin-29.png
+share/games/endless-sky/images/asteroid/lead/spin-30.png
+share/games/endless-sky/images/asteroid/lead/spin-31.png
+share/games/endless-sky/images/asteroid/lead/spin-32.png
+share/games/endless-sky/images/asteroid/lead/spin-33.png
+share/games/endless-sky/images/asteroid/lead/spin-34.png
+share/games/endless-sky/images/asteroid/lead/spin-35.png
+share/games/endless-sky/images/asteroid/lead/spin-36.png
+share/games/endless-sky/images/asteroid/lead/spin-37.png
+share/games/endless-sky/images/asteroid/lead/spin-38.png
+share/games/endless-sky/images/asteroid/lead/spin-39.png
+share/games/endless-sky/images/asteroid/lead/spin-40.png
+share/games/endless-sky/images/asteroid/lead/spin-41.png
+share/games/endless-sky/images/asteroid/lead/spin-42.png
+share/games/endless-sky/images/asteroid/lead/spin-43.png
+share/games/endless-sky/images/asteroid/lead/spin-44.png
+share/games/endless-sky/images/asteroid/lead/spin-45.png
+share/games/endless-sky/images/asteroid/lead/spin-46.png
+share/games/endless-sky/images/asteroid/lead/spin-47.png
+share/games/endless-sky/images/asteroid/medium metal/spin-00.png
+share/games/endless-sky/images/asteroid/medium metal/spin-01.png
+share/games/endless-sky/images/asteroid/medium metal/spin-02.png
+share/games/endless-sky/images/asteroid/medium metal/spin-03.png
+share/games/endless-sky/images/asteroid/medium metal/spin-04.png
+share/games/endless-sky/images/asteroid/medium metal/spin-05.png
+share/games/endless-sky/images/asteroid/medium metal/spin-06.png
+share/games/endless-sky/images/asteroid/medium metal/spin-07.png
+share/games/endless-sky/images/asteroid/medium metal/spin-08.png
+share/games/endless-sky/images/asteroid/medium metal/spin-09.png
+share/games/endless-sky/images/asteroid/medium metal/spin-10.png
+share/games/endless-sky/images/asteroid/medium metal/spin-11.png
+share/games/endless-sky/images/asteroid/medium metal/spin-12.png
+share/games/endless-sky/images/asteroid/medium metal/spin-13.png
+share/games/endless-sky/images/asteroid/medium metal/spin-14.png
+share/games/endless-sky/images/asteroid/medium metal/spin-15.png
+share/games/endless-sky/images/asteroid/medium metal/spin-16.png
+share/games/endless-sky/images/asteroid/medium metal/spin-17.png
+share/games/endless-sky/images/asteroid/medium metal/spin-18.png
+share/games/endless-sky/images/asteroid/medium metal/spin-19.png
+share/games/endless-sky/images/asteroid/medium metal/spin-20.png
+share/games/endless-sky/images/asteroid/medium metal/spin-21.png
+share/games/endless-sky/images/asteroid/medium metal/spin-22.png
+share/games/endless-sky/images/asteroid/medium metal/spin-23.png
+share/games/endless-sky/images/asteroid/medium metal/spin-24.png
+share/games/endless-sky/images/asteroid/medium metal/spin-25.png
+share/games/endless-sky/images/asteroid/medium metal/spin-26.png
+share/games/endless-sky/images/asteroid/medium metal/spin-27.png
+share/games/endless-sky/images/asteroid/medium metal/spin-28.png
+share/games/endless-sky/images/asteroid/medium metal/spin-29.png
+share/games/endless-sky/images/asteroid/medium metal/spin-30.png
+share/games/endless-sky/images/asteroid/medium metal/spin-31.png
+share/games/endless-sky/images/asteroid/medium metal/spin-32.png
+share/games/endless-sky/images/asteroid/medium metal/spin-33.png
+share/games/endless-sky/images/asteroid/medium metal/spin-34.png
+share/games/endless-sky/images/asteroid/medium metal/spin-35.png
+share/games/endless-sky/images/asteroid/medium metal/spin-36.png
+share/games/endless-sky/images/asteroid/medium metal/spin-37.png
+share/games/endless-sky/images/asteroid/medium metal/spin-38.png
+share/games/endless-sky/images/asteroid/medium metal/spin-39.png
+share/games/endless-sky/images/asteroid/medium metal/spin-40.png
+share/games/endless-sky/images/asteroid/medium metal/spin-41.png
+share/games/endless-sky/images/asteroid/medium metal/spin-42.png
+share/games/endless-sky/images/asteroid/medium metal/spin-43.png
+share/games/endless-sky/images/asteroid/medium metal/spin-44.png
+share/games/endless-sky/images/asteroid/medium metal/spin-45.png
+share/games/endless-sky/images/asteroid/medium metal/spin-46.png
+share/games/endless-sky/images/asteroid/medium metal/spin-47.png
+share/games/endless-sky/images/asteroid/medium rock/spin-00.png
+share/games/endless-sky/images/asteroid/medium rock/spin-01.png
+share/games/endless-sky/images/asteroid/medium rock/spin-02.png
+share/games/endless-sky/images/asteroid/medium rock/spin-03.png
+share/games/endless-sky/images/asteroid/medium rock/spin-04.png
+share/games/endless-sky/images/asteroid/medium rock/spin-05.png
+share/games/endless-sky/images/asteroid/medium rock/spin-06.png
+share/games/endless-sky/images/asteroid/medium rock/spin-07.png
+share/games/endless-sky/images/asteroid/medium rock/spin-08.png
+share/games/endless-sky/images/asteroid/medium rock/spin-09.png
+share/games/endless-sky/images/asteroid/medium rock/spin-10.png
+share/games/endless-sky/images/asteroid/medium rock/spin-11.png
+share/games/endless-sky/images/asteroid/medium rock/spin-12.png
+share/games/endless-sky/images/asteroid/medium rock/spin-13.png
+share/games/endless-sky/images/asteroid/medium rock/spin-14.png
+share/games/endless-sky/images/asteroid/medium rock/spin-15.png
+share/games/endless-sky/images/asteroid/medium rock/spin-16.png
+share/games/endless-sky/images/asteroid/medium rock/spin-17.png
+share/games/endless-sky/images/asteroid/medium rock/spin-18.png
+share/games/endless-sky/images/asteroid/medium rock/spin-19.png
+share/games/endless-sky/images/asteroid/medium rock/spin-20.png
+share/games/endless-sky/images/asteroid/medium rock/spin-21.png
+share/games/endless-sky/images/asteroid/medium rock/spin-22.png
+share/games/endless-sky/images/asteroid/medium rock/spin-23.png
+share/games/endless-sky/images/asteroid/medium rock/spin-24.png
+share/games/endless-sky/images/asteroid/medium rock/spin-25.png
+share/games/endless-sky/images/asteroid/medium rock/spin-26.png
+share/games/endless-sky/images/asteroid/medium rock/spin-27.png
+share/games/endless-sky/images/asteroid/medium rock/spin-28.png
+share/games/endless-sky/images/asteroid/medium rock/spin-29.png
+share/games/endless-sky/images/asteroid/medium rock/spin-30.png
+share/games/endless-sky/images/asteroid/medium rock/spin-31.png
+share/games/endless-sky/images/asteroid/medium rock/spin-32.png
+share/games/endless-sky/images/asteroid/medium rock/spin-33.png
+share/games/endless-sky/images/asteroid/medium rock/spin-34.png
+share/games/endless-sky/images/asteroid/medium rock/spin-35.png
+share/games/endless-sky/images/asteroid/medium rock/spin-36.png
+share/games/endless-sky/images/asteroid/medium rock/spin-37.png
+share/games/endless-sky/images/asteroid/medium rock/spin-38.png
+share/games/endless-sky/images/asteroid/medium rock/spin-39.png
+share/games/endless-sky/images/asteroid/medium rock/spin-40.png
+share/games/endless-sky/images/asteroid/medium rock/spin-41.png
+share/games/endless-sky/images/asteroid/medium rock/spin-42.png
+share/games/endless-sky/images/asteroid/medium rock/spin-43.png
+share/games/endless-sky/images/asteroid/medium rock/spin-44.png
+share/games/endless-sky/images/asteroid/medium rock/spin-45.png
+share/games/endless-sky/images/asteroid/medium rock/spin-46.png
+share/games/endless-sky/images/asteroid/medium rock/spin-47.png
+share/games/endless-sky/images/asteroid/medium rock/spin-48.png
+share/games/endless-sky/images/asteroid/medium rock/spin-49.png
+share/games/endless-sky/images/asteroid/medium rock/spin-50.png
+share/games/endless-sky/images/asteroid/medium rock/spin-51.png
+share/games/endless-sky/images/asteroid/medium rock/spin-52.png
+share/games/endless-sky/images/asteroid/medium rock/spin-53.png
+share/games/endless-sky/images/asteroid/medium rock/spin-54.png
+share/games/endless-sky/images/asteroid/medium rock/spin-55.png
+share/games/endless-sky/images/asteroid/medium rock/spin-56.png
+share/games/endless-sky/images/asteroid/silicon/spin-00.png
+share/games/endless-sky/images/asteroid/silicon/spin-01.png
+share/games/endless-sky/images/asteroid/silicon/spin-02.png
+share/games/endless-sky/images/asteroid/silicon/spin-03.png
+share/games/endless-sky/images/asteroid/silicon/spin-04.png
+share/games/endless-sky/images/asteroid/silicon/spin-05.png
+share/games/endless-sky/images/asteroid/silicon/spin-06.png
+share/games/endless-sky/images/asteroid/silicon/spin-07.png
+share/games/endless-sky/images/asteroid/silicon/spin-08.png
+share/games/endless-sky/images/asteroid/silicon/spin-09.png
+share/games/endless-sky/images/asteroid/silicon/spin-10.png
+share/games/endless-sky/images/asteroid/silicon/spin-11.png
+share/games/endless-sky/images/asteroid/silicon/spin-12.png
+share/games/endless-sky/images/asteroid/silicon/spin-13.png
+share/games/endless-sky/images/asteroid/silicon/spin-14.png
+share/games/endless-sky/images/asteroid/silicon/spin-15.png
+share/games/endless-sky/images/asteroid/silicon/spin-16.png
+share/games/endless-sky/images/asteroid/silicon/spin-17.png
+share/games/endless-sky/images/asteroid/silicon/spin-18.png
+share/games/endless-sky/images/asteroid/silicon/spin-19.png
+share/games/endless-sky/images/asteroid/silicon/spin-20.png
+share/games/endless-sky/images/asteroid/silicon/spin-21.png
+share/games/endless-sky/images/asteroid/silicon/spin-22.png
+share/games/endless-sky/images/asteroid/silicon/spin-23.png
+share/games/endless-sky/images/asteroid/silicon/spin-24.png
+share/games/endless-sky/images/asteroid/silicon/spin-25.png
+share/games/endless-sky/images/asteroid/silicon/spin-26.png
+share/games/endless-sky/images/asteroid/silicon/spin-27.png
+share/games/endless-sky/images/asteroid/silicon/spin-28.png
+share/games/endless-sky/images/asteroid/silicon/spin-29.png
+share/games/endless-sky/images/asteroid/silicon/spin-30.png
+share/games/endless-sky/images/asteroid/silicon/spin-31.png
+share/games/endless-sky/images/asteroid/silicon/spin-32.png
+share/games/endless-sky/images/asteroid/silicon/spin-33.png
+share/games/endless-sky/images/asteroid/silicon/spin-34.png
+share/games/endless-sky/images/asteroid/silicon/spin-35.png
+share/games/endless-sky/images/asteroid/silicon/spin-36.png
+share/games/endless-sky/images/asteroid/silicon/spin-37.png
+share/games/endless-sky/images/asteroid/silicon/spin-38.png
+share/games/endless-sky/images/asteroid/silicon/spin-39.png
+share/games/endless-sky/images/asteroid/silicon/spin-40.png
+share/games/endless-sky/images/asteroid/silicon/spin-41.png
+share/games/endless-sky/images/asteroid/silicon/spin-42.png
+share/games/endless-sky/images/asteroid/silicon/spin-43.png
+share/games/endless-sky/images/asteroid/silicon/spin-44.png
+share/games/endless-sky/images/asteroid/silicon/spin-45.png
+share/games/endless-sky/images/asteroid/silicon/spin-46.png
+share/games/endless-sky/images/asteroid/silicon/spin-47.png
+share/games/endless-sky/images/asteroid/silicon/spin-48.png
+share/games/endless-sky/images/asteroid/silicon/spin-49.png
+share/games/endless-sky/images/asteroid/silicon/spin-50.png
+share/games/endless-sky/images/asteroid/silicon/spin-51.png
+share/games/endless-sky/images/asteroid/silicon/spin-52.png
+share/games/endless-sky/images/asteroid/silicon/spin-53.png
+share/games/endless-sky/images/asteroid/silver/spin-00.png
+share/games/endless-sky/images/asteroid/silver/spin-01.png
+share/games/endless-sky/images/asteroid/silver/spin-02.png
+share/games/endless-sky/images/asteroid/silver/spin-03.png
+share/games/endless-sky/images/asteroid/silver/spin-04.png
+share/games/endless-sky/images/asteroid/silver/spin-05.png
+share/games/endless-sky/images/asteroid/silver/spin-06.png
+share/games/endless-sky/images/asteroid/silver/spin-07.png
+share/games/endless-sky/images/asteroid/silver/spin-08.png
+share/games/endless-sky/images/asteroid/silver/spin-09.png
+share/games/endless-sky/images/asteroid/silver/spin-10.png
+share/games/endless-sky/images/asteroid/silver/spin-11.png
+share/games/endless-sky/images/asteroid/silver/spin-12.png
+share/games/endless-sky/images/asteroid/silver/spin-13.png
+share/games/endless-sky/images/asteroid/silver/spin-14.png
+share/games/endless-sky/images/asteroid/silver/spin-15.png
+share/games/endless-sky/images/asteroid/silver/spin-16.png
+share/games/endless-sky/images/asteroid/silver/spin-17.png
+share/games/endless-sky/images/asteroid/silver/spin-18.png
+share/games/endless-sky/images/asteroid/silver/spin-19.png
+share/games/endless-sky/images/asteroid/silver/spin-20.png
+share/games/endless-sky/images/asteroid/silver/spin-21.png
+share/games/endless-sky/images/asteroid/silver/spin-22.png
+share/games/endless-sky/images/asteroid/silver/spin-23.png
+share/games/endless-sky/images/asteroid/silver/spin-24.png
+share/games/endless-sky/images/asteroid/silver/spin-25.png
+share/games/endless-sky/images/asteroid/silver/spin-26.png
+share/games/endless-sky/images/asteroid/silver/spin-27.png
+share/games/endless-sky/images/asteroid/silver/spin-28.png
+share/games/endless-sky/images/asteroid/silver/spin-29.png
+share/games/endless-sky/images/asteroid/silver/spin-30.png
+share/games/endless-sky/images/asteroid/silver/spin-31.png
+share/games/endless-sky/images/asteroid/silver/spin-32.png
+share/games/endless-sky/images/asteroid/silver/spin-33.png
+share/games/endless-sky/images/asteroid/silver/spin-34.png
+share/games/endless-sky/images/asteroid/silver/spin-35.png
+share/games/endless-sky/images/asteroid/silver/spin-36.png
+share/games/endless-sky/images/asteroid/silver/spin-37.png
+share/games/endless-sky/images/asteroid/silver/spin-38.png
+share/games/endless-sky/images/asteroid/silver/spin-39.png
+share/games/endless-sky/images/asteroid/silver/spin-40.png
+share/games/endless-sky/images/asteroid/silver/spin-41.png
+share/games/endless-sky/images/asteroid/small metal/spin-00.png
+share/games/endless-sky/images/asteroid/small metal/spin-01.png
+share/games/endless-sky/images/asteroid/small metal/spin-02.png
+share/games/endless-sky/images/asteroid/small metal/spin-03.png
+share/games/endless-sky/images/asteroid/small metal/spin-04.png
+share/games/endless-sky/images/asteroid/small metal/spin-05.png
+share/games/endless-sky/images/asteroid/small metal/spin-06.png
+share/games/endless-sky/images/asteroid/small metal/spin-07.png
+share/games/endless-sky/images/asteroid/small metal/spin-08.png
+share/games/endless-sky/images/asteroid/small metal/spin-09.png
+share/games/endless-sky/images/asteroid/small metal/spin-10.png
+share/games/endless-sky/images/asteroid/small metal/spin-11.png
+share/games/endless-sky/images/asteroid/small metal/spin-12.png
+share/games/endless-sky/images/asteroid/small metal/spin-13.png
+share/games/endless-sky/images/asteroid/small metal/spin-14.png
+share/games/endless-sky/images/asteroid/small metal/spin-15.png
+share/games/endless-sky/images/asteroid/small metal/spin-16.png
+share/games/endless-sky/images/asteroid/small metal/spin-17.png
+share/games/endless-sky/images/asteroid/small metal/spin-18.png
+share/games/endless-sky/images/asteroid/small metal/spin-19.png
+share/games/endless-sky/images/asteroid/small metal/spin-20.png
+share/games/endless-sky/images/asteroid/small metal/spin-21.png
+share/games/endless-sky/images/asteroid/small metal/spin-22.png
+share/games/endless-sky/images/asteroid/small metal/spin-23.png
+share/games/endless-sky/images/asteroid/small metal/spin-24.png
+share/games/endless-sky/images/asteroid/small metal/spin-25.png
+share/games/endless-sky/images/asteroid/small metal/spin-26.png
+share/games/endless-sky/images/asteroid/small metal/spin-27.png
+share/games/endless-sky/images/asteroid/small metal/spin-28.png
+share/games/endless-sky/images/asteroid/small metal/spin-29.png
+share/games/endless-sky/images/asteroid/small metal/spin-30.png
+share/games/endless-sky/images/asteroid/small metal/spin-31.png
+share/games/endless-sky/images/asteroid/small metal/spin-32.png
+share/games/endless-sky/images/asteroid/small metal/spin-33.png
+share/games/endless-sky/images/asteroid/small metal/spin-34.png
+share/games/endless-sky/images/asteroid/small metal/spin-35.png
+share/games/endless-sky/images/asteroid/small metal/spin-36.png
+share/games/endless-sky/images/asteroid/small metal/spin-37.png
+share/games/endless-sky/images/asteroid/small metal/spin-38.png
+share/games/endless-sky/images/asteroid/small metal/spin-39.png
+share/games/endless-sky/images/asteroid/small metal/spin-40.png
+share/games/endless-sky/images/asteroid/small metal/spin-41.png
+share/games/endless-sky/images/asteroid/small rock/spin-00.png
+share/games/endless-sky/images/asteroid/small rock/spin-01.png
+share/games/endless-sky/images/asteroid/small rock/spin-02.png
+share/games/endless-sky/images/asteroid/small rock/spin-03.png
+share/games/endless-sky/images/asteroid/small rock/spin-04.png
+share/games/endless-sky/images/asteroid/small rock/spin-05.png
+share/games/endless-sky/images/asteroid/small rock/spin-06.png
+share/games/endless-sky/images/asteroid/small rock/spin-07.png
+share/games/endless-sky/images/asteroid/small rock/spin-08.png
+share/games/endless-sky/images/asteroid/small rock/spin-09.png
+share/games/endless-sky/images/asteroid/small rock/spin-10.png
+share/games/endless-sky/images/asteroid/small rock/spin-11.png
+share/games/endless-sky/images/asteroid/small rock/spin-12.png
+share/games/endless-sky/images/asteroid/small rock/spin-13.png
+share/games/endless-sky/images/asteroid/small rock/spin-14.png
+share/games/endless-sky/images/asteroid/small rock/spin-15.png
+share/games/endless-sky/images/asteroid/small rock/spin-16.png
+share/games/endless-sky/images/asteroid/small rock/spin-17.png
+share/games/endless-sky/images/asteroid/small rock/spin-18.png
+share/games/endless-sky/images/asteroid/small rock/spin-19.png
+share/games/endless-sky/images/asteroid/small rock/spin-20.png
+share/games/endless-sky/images/asteroid/small rock/spin-21.png
+share/games/endless-sky/images/asteroid/small rock/spin-22.png
+share/games/endless-sky/images/asteroid/small rock/spin-23.png
+share/games/endless-sky/images/asteroid/small rock/spin-24.png
+share/games/endless-sky/images/asteroid/small rock/spin-25.png
+share/games/endless-sky/images/asteroid/small rock/spin-26.png
+share/games/endless-sky/images/asteroid/small rock/spin-27.png
+share/games/endless-sky/images/asteroid/small rock/spin-28.png
+share/games/endless-sky/images/asteroid/small rock/spin-29.png
+share/games/endless-sky/images/asteroid/small rock/spin-30.png
+share/games/endless-sky/images/asteroid/small rock/spin-31.png
+share/games/endless-sky/images/asteroid/small rock/spin-32.png
+share/games/endless-sky/images/asteroid/small rock/spin-33.png
+share/games/endless-sky/images/asteroid/small rock/spin-34.png
+share/games/endless-sky/images/asteroid/small rock/spin-35.png
+share/games/endless-sky/images/asteroid/small rock/spin-36.png
+share/games/endless-sky/images/asteroid/small rock/spin-37.png
+share/games/endless-sky/images/asteroid/small rock/spin-38.png
+share/games/endless-sky/images/asteroid/small rock/spin-39.png
+share/games/endless-sky/images/asteroid/small rock/spin-40.png
+share/games/endless-sky/images/asteroid/small rock/spin-41.png
+share/games/endless-sky/images/asteroid/small rock/spin-42.png
+share/games/endless-sky/images/asteroid/small rock/spin-43.png
+share/games/endless-sky/images/asteroid/small rock/spin-44.png
+share/games/endless-sky/images/asteroid/small rock/spin-45.png
+share/games/endless-sky/images/asteroid/small rock/spin-46.png
+share/games/endless-sky/images/asteroid/small rock/spin-47.png
+share/games/endless-sky/images/asteroid/small rock/spin-48.png
+share/games/endless-sky/images/asteroid/small rock/spin-49.png
+share/games/endless-sky/images/asteroid/small rock/spin-50.png
+share/games/endless-sky/images/asteroid/titanium/spin-00.png
+share/games/endless-sky/images/asteroid/titanium/spin-01.png
+share/games/endless-sky/images/asteroid/titanium/spin-02.png
+share/games/endless-sky/images/asteroid/titanium/spin-03.png
+share/games/endless-sky/images/asteroid/titanium/spin-04.png
+share/games/endless-sky/images/asteroid/titanium/spin-05.png
+share/games/endless-sky/images/asteroid/titanium/spin-06.png
+share/games/endless-sky/images/asteroid/titanium/spin-07.png
+share/games/endless-sky/images/asteroid/titanium/spin-08.png
+share/games/endless-sky/images/asteroid/titanium/spin-09.png
+share/games/endless-sky/images/asteroid/titanium/spin-10.png
+share/games/endless-sky/images/asteroid/titanium/spin-11.png
+share/games/endless-sky/images/asteroid/titanium/spin-12.png
+share/games/endless-sky/images/asteroid/titanium/spin-13.png
+share/games/endless-sky/images/asteroid/titanium/spin-14.png
+share/games/endless-sky/images/asteroid/titanium/spin-15.png
+share/games/endless-sky/images/asteroid/titanium/spin-16.png
+share/games/endless-sky/images/asteroid/titanium/spin-17.png
+share/games/endless-sky/images/asteroid/titanium/spin-18.png
+share/games/endless-sky/images/asteroid/titanium/spin-19.png
+share/games/endless-sky/images/asteroid/titanium/spin-20.png
+share/games/endless-sky/images/asteroid/titanium/spin-21.png
+share/games/endless-sky/images/asteroid/titanium/spin-22.png
+share/games/endless-sky/images/asteroid/titanium/spin-23.png
+share/games/endless-sky/images/asteroid/titanium/spin-24.png
+share/games/endless-sky/images/asteroid/titanium/spin-25.png
+share/games/endless-sky/images/asteroid/titanium/spin-26.png
+share/games/endless-sky/images/asteroid/titanium/spin-27.png
+share/games/endless-sky/images/asteroid/titanium/spin-28.png
+share/games/endless-sky/images/asteroid/titanium/spin-29.png
+share/games/endless-sky/images/asteroid/titanium/spin-30.png
+share/games/endless-sky/images/asteroid/titanium/spin-31.png
+share/games/endless-sky/images/asteroid/titanium/spin-32.png
+share/games/endless-sky/images/asteroid/titanium/spin-33.png
+share/games/endless-sky/images/asteroid/titanium/spin-34.png
+share/games/endless-sky/images/asteroid/titanium/spin-35.png
+share/games/endless-sky/images/asteroid/titanium/spin-36.png
+share/games/endless-sky/images/asteroid/titanium/spin-37.png
+share/games/endless-sky/images/asteroid/titanium/spin-38.png
+share/games/endless-sky/images/asteroid/titanium/spin-39.png
+share/games/endless-sky/images/asteroid/titanium/spin-40.png
+share/games/endless-sky/images/asteroid/titanium/spin-41.png
+share/games/endless-sky/images/asteroid/titanium/spin-42.png
+share/games/endless-sky/images/asteroid/titanium/spin-43.png
+share/games/endless-sky/images/asteroid/titanium/spin-44.png
+share/games/endless-sky/images/asteroid/titanium/spin-45.png
+share/games/endless-sky/images/asteroid/titanium/spin-46.png
+share/games/endless-sky/images/asteroid/titanium/spin-47.png
+share/games/endless-sky/images/asteroid/titanium/spin-48.png
+share/games/endless-sky/images/asteroid/titanium/spin-49.png
+share/games/endless-sky/images/asteroid/titanium/spin-50.png
+share/games/endless-sky/images/asteroid/titanium/spin-51.png
+share/games/endless-sky/images/asteroid/titanium/spin-52.png
+share/games/endless-sky/images/asteroid/titanium/spin-53.png
+share/games/endless-sky/images/asteroid/titanium/spin-54.png
+share/games/endless-sky/images/asteroid/titanium/spin-55.png
+share/games/endless-sky/images/asteroid/titanium/spin-56.png
+share/games/endless-sky/images/asteroid/yottrite/spin-00.png
+share/games/endless-sky/images/asteroid/yottrite/spin-01.png
+share/games/endless-sky/images/asteroid/yottrite/spin-02.png
+share/games/endless-sky/images/asteroid/yottrite/spin-03.png
+share/games/endless-sky/images/asteroid/yottrite/spin-04.png
+share/games/endless-sky/images/asteroid/yottrite/spin-05.png
+share/games/endless-sky/images/asteroid/yottrite/spin-06.png
+share/games/endless-sky/images/asteroid/yottrite/spin-07.png
+share/games/endless-sky/images/asteroid/yottrite/spin-08.png
+share/games/endless-sky/images/asteroid/yottrite/spin-09.png
+share/games/endless-sky/images/asteroid/yottrite/spin-10.png
+share/games/endless-sky/images/asteroid/yottrite/spin-11.png
+share/games/endless-sky/images/asteroid/yottrite/spin-12.png
+share/games/endless-sky/images/asteroid/yottrite/spin-13.png
+share/games/endless-sky/images/asteroid/yottrite/spin-14.png
+share/games/endless-sky/images/asteroid/yottrite/spin-15.png
+share/games/endless-sky/images/asteroid/yottrite/spin-16.png
+share/games/endless-sky/images/asteroid/yottrite/spin-17.png
+share/games/endless-sky/images/asteroid/yottrite/spin-18.png
+share/games/endless-sky/images/asteroid/yottrite/spin-19.png
+share/games/endless-sky/images/asteroid/yottrite/spin-20.png
+share/games/endless-sky/images/asteroid/yottrite/spin-21.png
+share/games/endless-sky/images/asteroid/yottrite/spin-22.png
+share/games/endless-sky/images/asteroid/yottrite/spin-23.png
+share/games/endless-sky/images/asteroid/yottrite/spin-24.png
+share/games/endless-sky/images/asteroid/yottrite/spin-25.png
+share/games/endless-sky/images/asteroid/yottrite/spin-26.png
+share/games/endless-sky/images/asteroid/yottrite/spin-27.png
+share/games/endless-sky/images/asteroid/yottrite/spin-28.png
+share/games/endless-sky/images/asteroid/yottrite/spin-29.png
+share/games/endless-sky/images/asteroid/yottrite/spin-30.png
+share/games/endless-sky/images/asteroid/yottrite/spin-31.png
+share/games/endless-sky/images/asteroid/yottrite/spin-32.png
+share/games/endless-sky/images/asteroid/yottrite/spin-33.png
+share/games/endless-sky/images/asteroid/yottrite/spin-34.png
+share/games/endless-sky/images/asteroid/yottrite/spin-35.png
+share/games/endless-sky/images/asteroid/yottrite/spin-36.png
+share/games/endless-sky/images/asteroid/yottrite/spin-37.png
+share/games/endless-sky/images/asteroid/yottrite/spin-38.png
+share/games/endless-sky/images/asteroid/yottrite/spin-39.png
+share/games/endless-sky/images/asteroid/yottrite/spin-40.png
+share/games/endless-sky/images/asteroid/yottrite/spin-41.png
+share/games/endless-sky/images/asteroid/yottrite/spin-42.png
+share/games/endless-sky/images/asteroid/yottrite/spin-43.png
+share/games/endless-sky/images/asteroid/yottrite/spin-44.png
+share/games/endless-sky/images/asteroid/yottrite/spin-45.png
+share/games/endless-sky/images/asteroid/yottrite/spin-46.png
+share/games/endless-sky/images/asteroid/yottrite/spin-47.png
+share/games/endless-sky/images/asteroid/yottrite/spin-48.png
+share/games/endless-sky/images/asteroid/yottrite/spin-49.png
+share/games/endless-sky/images/asteroid/yottrite/spin-50.png
+share/games/endless-sky/images/asteroid/yottrite/spin-51.png
+share/games/endless-sky/images/asteroid/yottrite/spin-52.png
+share/games/endless-sky/images/asteroid/yottrite/spin-53.png
+share/games/endless-sky/images/asteroid/yottrite/spin-54.png
+share/games/endless-sky/images/asteroid/yottrite/spin-55.png
+share/games/endless-sky/images/asteroid/yottrite/spin-56.png
+share/games/endless-sky/images/effect/afterburner+0.png
+share/games/endless-sky/images/effect/afterburner+1.png
+share/games/endless-sky/images/effect/afterburner+2.png
+share/games/endless-sky/images/effect/afterburner+3.png
+share/games/endless-sky/images/effect/afterburner+4.png
+share/games/endless-sky/images/effect/anti-missile 3 die+0.png
+share/games/endless-sky/images/effect/anti-missile 3 die+1.png
+share/games/endless-sky/images/effect/anti-missile 3 die+2.png
+share/games/endless-sky/images/effect/anti-missile 3 die+3.png
+share/games/endless-sky/images/effect/anti-missile 3 die+4.png
+share/games/endless-sky/images/effect/anti-missile 3 die+5.png
+share/games/endless-sky/images/effect/anti-missile 3 fire+0.png
+share/games/endless-sky/images/effect/anti-missile 3 fire+1.png
+share/games/endless-sky/images/effect/antimatter spark+0.png
+share/games/endless-sky/images/effect/antimatter spark+1.png
+share/games/endless-sky/images/effect/antimatter spark+2.png
+share/games/endless-sky/images/effect/atomic flare/huge+0.png
+share/games/endless-sky/images/effect/atomic flare/huge+1.png
+share/games/endless-sky/images/effect/atomic flare/large+0.png
+share/games/endless-sky/images/effect/atomic flare/large+1.png
+share/games/endless-sky/images/effect/atomic flare/medium+0.png
+share/games/endless-sky/images/effect/atomic flare/medium+1.png
+share/games/endless-sky/images/effect/atomic flare/small+0.png
+share/games/endless-sky/images/effect/atomic flare/small+1.png
+share/games/endless-sky/images/effect/atomic flare/tiny+0.png
+share/games/endless-sky/images/effect/atomic flare/tiny+1.png
+share/games/endless-sky/images/effect/attractor impact+0.png
+share/games/endless-sky/images/effect/attractor impact+1.png
+share/games/endless-sky/images/effect/attractor impact+2.png
+share/games/endless-sky/images/effect/attractor impact+3.png
+share/games/endless-sky/images/effect/attractor impact+4.png
+share/games/endless-sky/images/effect/banisher impact+0.png
+share/games/endless-sky/images/effect/banisher impact+1.png
+share/games/endless-sky/images/effect/banisher impact+2.png
+share/games/endless-sky/images/effect/banisher impact+3.png
+share/games/endless-sky/images/effect/banisher impact+4.png
+share/games/endless-sky/images/effect/blaster impact+0.png
+share/games/endless-sky/images/effect/blaster impact+1.png
+share/games/endless-sky/images/effect/blaster impact+2.png
+share/games/endless-sky/images/effect/blaster impact+3.png
+share/games/endless-sky/images/effect/blood-0.png
+share/games/endless-sky/images/effect/blood-1.png
+share/games/endless-sky/images/effect/blood-2.png
+share/games/endless-sky/images/effect/blood-3.png
+share/games/endless-sky/images/effect/blood-4.png
+share/games/endless-sky/images/effect/blood-5.png
+share/games/endless-sky/images/effect/blood-6.png
+share/games/endless-sky/images/effect/bolide~0.png
+share/games/endless-sky/images/effect/bolide~1.png
+share/games/endless-sky/images/effect/bolide~2.png
+share/games/endless-sky/images/effect/bolide~3.png
+share/games/endless-sky/images/effect/bolide~4.png
+share/games/endless-sky/images/effect/bolide~5.png
+share/games/endless-sky/images/effect/bolide~6.png
+share/games/endless-sky/images/effect/bombardment impact~0.png
+share/games/endless-sky/images/effect/bombardment impact~1.png
+share/games/endless-sky/images/effect/bombardment impact~2.png
+share/games/endless-sky/images/effect/bombardment impact~3.png
+share/games/endless-sky/images/effect/bombardment impact~4.png
+share/games/endless-sky/images/effect/box-0.png
+share/games/endless-sky/images/effect/box-1.png
+share/games/endless-sky/images/effect/box-2.png
+share/games/endless-sky/images/effect/box-3.png
+share/games/endless-sky/images/effect/box-4.png
+share/games/endless-sky/images/effect/box-5.png
+share/games/endless-sky/images/effect/box-6.png
+share/games/endless-sky/images/effect/box-7.png
+share/games/endless-sky/images/effect/bullet impact-0.png
+share/games/endless-sky/images/effect/bullet impact-1.png
+share/games/endless-sky/images/effect/bullet impact-2.png
+share/games/endless-sky/images/effect/bullet impact-3.png
+share/games/endless-sky/images/effect/bullet impact-4.png
+share/games/endless-sky/images/effect/bullet impact-5.png
+share/games/endless-sky/images/effect/bullet impact-6.png
+share/games/endless-sky/images/effect/bullet impact-7.png
+share/games/endless-sky/images/effect/coalition flare/large~0.png
+share/games/endless-sky/images/effect/coalition flare/large~1.png
+share/games/endless-sky/images/effect/coalition flare/small~0.png
+share/games/endless-sky/images/effect/coalition flare/small~1.png
+share/games/endless-sky/images/effect/detainer impact+0.png
+share/games/endless-sky/images/effect/detainer impact+1.png
+share/games/endless-sky/images/effect/detainer impact+2.png
+share/games/endless-sky/images/effect/detainer impact+3.png
+share/games/endless-sky/images/effect/detainer impact+4.png
+share/games/endless-sky/images/effect/detainer impact+5.png
+share/games/endless-sky/images/effect/detainer impact+6.png
+share/games/endless-sky/images/effect/detainer impact+7.png
+share/games/endless-sky/images/effect/detainer impact+8.png
+share/games/endless-sky/images/effect/detainer sparks+0.png
+share/games/endless-sky/images/effect/detainer sparks+1.png
+share/games/endless-sky/images/effect/detainer sparks+2.png
+share/games/endless-sky/images/effect/detainer sparks+3.png
+share/games/endless-sky/images/effect/detainer sparks+4.png
+share/games/endless-sky/images/effect/detainer sparks+5.png
+share/games/endless-sky/images/effect/detainer sparks+6.png
+share/games/endless-sky/images/effect/distancer+0.png
+share/games/endless-sky/images/effect/distancer+1.png
+share/games/endless-sky/images/effect/drak bolt impact~0.png
+share/games/endless-sky/images/effect/drak bolt impact~1.png
+share/games/endless-sky/images/effect/drak bolt impact~2.png
+share/games/endless-sky/images/effect/drak bolt impact~3.png
+share/games/endless-sky/images/effect/drak bolt impact~4.png
+share/games/endless-sky/images/effect/drak bolt impact~5.png
+share/games/endless-sky/images/effect/drak bolt impact~6.png
+share/games/endless-sky/images/effect/electron impact+0.png
+share/games/endless-sky/images/effect/electron impact+1.png
+share/games/endless-sky/images/effect/electron impact+2.png
+share/games/endless-sky/images/effect/emp ring+00.png
+share/games/endless-sky/images/effect/emp ring+01.png
+share/games/endless-sky/images/effect/emp ring+02.png
+share/games/endless-sky/images/effect/emp ring+03.png
+share/games/endless-sky/images/effect/emp ring+04.png
+share/games/endless-sky/images/effect/emp ring+05.png
+share/games/endless-sky/images/effect/emp ring+06.png
+share/games/endless-sky/images/effect/emp ring+07.png
+share/games/endless-sky/images/effect/emp ring+08.png
+share/games/endless-sky/images/effect/emp ring+09.png
+share/games/endless-sky/images/effect/emp ring+10.png
+share/games/endless-sky/images/effect/emp ring+11.png
+share/games/endless-sky/images/effect/emp ring+12.png
+share/games/endless-sky/images/effect/emp spark+0.png
+share/games/endless-sky/images/effect/emp spark+1.png
+share/games/endless-sky/images/effect/emp spark+2.png
+share/games/endless-sky/images/effect/emp spark+3.png
+share/games/endless-sky/images/effect/emp spark+4.png
+share/games/endless-sky/images/effect/emp spark+5.png
+share/games/endless-sky/images/effect/emp spark+6.png
+share/games/endless-sky/images/effect/emp torpedo fire+0.png
+share/games/endless-sky/images/effect/emp torpedo fire+1.png
+share/games/endless-sky/images/effect/emp torpedo fire+2.png
+share/games/endless-sky/images/effect/emp torpedo fire+3.png
+share/games/endless-sky/images/effect/emp torpedo fire+4.png
+share/games/endless-sky/images/effect/emp torpedo fire+5.png
+share/games/endless-sky/images/effect/explosion/huge~0.png
+share/games/endless-sky/images/effect/explosion/huge~1.png
+share/games/endless-sky/images/effect/explosion/huge~2.png
+share/games/endless-sky/images/effect/explosion/huge~3.png
+share/games/endless-sky/images/effect/explosion/huge~4.png
+share/games/endless-sky/images/effect/explosion/huge~5.png
+share/games/endless-sky/images/effect/explosion/huge~6.png
+share/games/endless-sky/images/effect/explosion/huge~7.png
+share/games/endless-sky/images/effect/explosion/huge~8.png
+share/games/endless-sky/images/effect/explosion/huge~9.png
+share/games/endless-sky/images/effect/explosion/large~0.png
+share/games/endless-sky/images/effect/explosion/large~1.png
+share/games/endless-sky/images/effect/explosion/large~2.png
+share/games/endless-sky/images/effect/explosion/large~3.png
+share/games/endless-sky/images/effect/explosion/large~4.png
+share/games/endless-sky/images/effect/explosion/large~5.png
+share/games/endless-sky/images/effect/explosion/large~6.png
+share/games/endless-sky/images/effect/explosion/large~7.png
+share/games/endless-sky/images/effect/explosion/large~8.png
+share/games/endless-sky/images/effect/explosion/medium~0.png
+share/games/endless-sky/images/effect/explosion/medium~1.png
+share/games/endless-sky/images/effect/explosion/medium~2.png
+share/games/endless-sky/images/effect/explosion/medium~3.png
+share/games/endless-sky/images/effect/explosion/medium~4.png
+share/games/endless-sky/images/effect/explosion/medium~5.png
+share/games/endless-sky/images/effect/explosion/medium~6.png
+share/games/endless-sky/images/effect/explosion/medium~7.png
+share/games/endless-sky/images/effect/explosion/nuke+0.png
+share/games/endless-sky/images/effect/explosion/nuke+1.png
+share/games/endless-sky/images/effect/explosion/nuke+2.png
+share/games/endless-sky/images/effect/explosion/nuke+3.png
+share/games/endless-sky/images/effect/explosion/nuke+4.png
+share/games/endless-sky/images/effect/explosion/nuke+5.png
+share/games/endless-sky/images/effect/explosion/nuke+6.png
+share/games/endless-sky/images/effect/explosion/nuke+7.png
+share/games/endless-sky/images/effect/explosion/pug/huge~0.png
+share/games/endless-sky/images/effect/explosion/pug/huge~1.png
+share/games/endless-sky/images/effect/explosion/pug/huge~2.png
+share/games/endless-sky/images/effect/explosion/pug/huge~3.png
+share/games/endless-sky/images/effect/explosion/pug/huge~4.png
+share/games/endless-sky/images/effect/explosion/pug/huge~5.png
+share/games/endless-sky/images/effect/explosion/pug/huge~6.png
+share/games/endless-sky/images/effect/explosion/pug/huge~7.png
+share/games/endless-sky/images/effect/explosion/pug/huge~8.png
+share/games/endless-sky/images/effect/explosion/pug/huge~9.png
+share/games/endless-sky/images/effect/explosion/pug/large~0.png
+share/games/endless-sky/images/effect/explosion/pug/large~1.png
+share/games/endless-sky/images/effect/explosion/pug/large~2.png
+share/games/endless-sky/images/effect/explosion/pug/large~3.png
+share/games/endless-sky/images/effect/explosion/pug/large~4.png
+share/games/endless-sky/images/effect/explosion/pug/large~5.png
+share/games/endless-sky/images/effect/explosion/pug/large~6.png
+share/games/endless-sky/images/effect/explosion/pug/large~7.png
+share/games/endless-sky/images/effect/explosion/pug/large~8.png
+share/games/endless-sky/images/effect/explosion/pug/medium~0.png
+share/games/endless-sky/images/effect/explosion/pug/medium~1.png
+share/games/endless-sky/images/effect/explosion/pug/medium~2.png
+share/games/endless-sky/images/effect/explosion/pug/medium~3.png
+share/games/endless-sky/images/effect/explosion/pug/medium~4.png
+share/games/endless-sky/images/effect/explosion/pug/medium~5.png
+share/games/endless-sky/images/effect/explosion/pug/medium~6.png
+share/games/endless-sky/images/effect/explosion/pug/medium~7.png
+share/games/endless-sky/images/effect/explosion/pug/small~0.png
+share/games/endless-sky/images/effect/explosion/pug/small~1.png
+share/games/endless-sky/images/effect/explosion/pug/small~2.png
+share/games/endless-sky/images/effect/explosion/pug/small~3.png
+share/games/endless-sky/images/effect/explosion/pug/small~4.png
+share/games/endless-sky/images/effect/explosion/pug/small~5.png
+share/games/endless-sky/images/effect/explosion/pug/small~6.png
+share/games/endless-sky/images/effect/explosion/pug/tiny~0.png
+share/games/endless-sky/images/effect/explosion/pug/tiny~1.png
+share/games/endless-sky/images/effect/explosion/pug/tiny~2.png
+share/games/endless-sky/images/effect/explosion/pug/tiny~3.png
+share/games/endless-sky/images/effect/explosion/pug/tiny~4.png
+share/games/endless-sky/images/effect/explosion/pug/tiny~5.png
+share/games/endless-sky/images/effect/explosion/small~0.png
+share/games/endless-sky/images/effect/explosion/small~1.png
+share/games/endless-sky/images/effect/explosion/small~2.png
+share/games/endless-sky/images/effect/explosion/small~3.png
+share/games/endless-sky/images/effect/explosion/small~4.png
+share/games/endless-sky/images/effect/explosion/small~5.png
+share/games/endless-sky/images/effect/explosion/small~6.png
+share/games/endless-sky/images/effect/explosion/tiny~0.png
+share/games/endless-sky/images/effect/explosion/tiny~1.png
+share/games/endless-sky/images/effect/explosion/tiny~2.png
+share/games/endless-sky/images/effect/explosion/tiny~3.png
+share/games/endless-sky/images/effect/explosion/tiny~4.png
+share/games/endless-sky/images/effect/explosion/tiny~5.png
+share/games/endless-sky/images/effect/finisher impact~0.png
+share/games/endless-sky/images/effect/finisher impact~1.png
+share/games/endless-sky/images/effect/finisher impact~2.png
+share/games/endless-sky/images/effect/finisher impact~3.png
+share/games/endless-sky/images/effect/finisher impact~4.png
+share/games/endless-sky/images/effect/finisher sparks~0.png
+share/games/endless-sky/images/effect/finisher sparks~1.png
+share/games/endless-sky/images/effect/finisher sparks~2.png
+share/games/endless-sky/images/effect/finisher sparks~3.png
+share/games/endless-sky/images/effect/finisher trail+0.png
+share/games/endless-sky/images/effect/finisher trail+1.png
+share/games/endless-sky/images/effect/finisher trail+2.png
+share/games/endless-sky/images/effect/finisher trail+3.png
+share/games/endless-sky/images/effect/fire-lance impact+0.png
+share/games/endless-sky/images/effect/fire-lance impact+1.png
+share/games/endless-sky/images/effect/fire-lance impact+2.png
+share/games/endless-sky/images/effect/fire-lance impact+3.png
+share/games/endless-sky/images/effect/flame~0.png
+share/games/endless-sky/images/effect/flame~1.png
+share/games/endless-sky/images/effect/flame~2.png
+share/games/endless-sky/images/effect/flame~3.png
+share/games/endless-sky/images/effect/flame~4.png
+share/games/endless-sky/images/effect/flame~5.png
+share/games/endless-sky/images/effect/flotsam aluminum.png
+share/games/endless-sky/images/effect/flotsam copper.png
+share/games/endless-sky/images/effect/flotsam gold.png
+share/games/endless-sky/images/effect/flotsam iron.png
+share/games/endless-sky/images/effect/flotsam lead.png
+share/games/endless-sky/images/effect/flotsam neodymium.png
+share/games/endless-sky/images/effect/flotsam platinum.png
+share/games/endless-sky/images/effect/flotsam silicon.png
+share/games/endless-sky/images/effect/flotsam silver.png
+share/games/endless-sky/images/effect/flotsam titanium.png
+share/games/endless-sky/images/effect/flotsam tungsten.png
+share/games/endless-sky/images/effect/flotsam uranium.png
+share/games/endless-sky/images/effect/flotsam yottrite.png
+share/games/endless-sky/images/effect/grab-strike impact~0.png
+share/games/endless-sky/images/effect/grab-strike impact~1.png
+share/games/endless-sky/images/effect/grab-strike impact~2.png
+share/games/endless-sky/images/effect/grab-strike impact~3.png
+share/games/endless-sky/images/effect/grab-strike impact~4.png
+share/games/endless-sky/images/effect/gridfire cloud+0.png
+share/games/endless-sky/images/effect/gridfire cloud+1.png
+share/games/endless-sky/images/effect/gridfire cloud+2.png
+share/games/endless-sky/images/effect/gridfire fire+0.png
+share/games/endless-sky/images/effect/gridfire fire+1.png
+share/games/endless-sky/images/effect/gridfire fire+2.png
+share/games/endless-sky/images/effect/gridfire hit+0.png
+share/games/endless-sky/images/effect/gridfire hit+1.png
+share/games/endless-sky/images/effect/gridfire hit+2.png
+share/games/endless-sky/images/effect/gridfire hit+3.png
+share/games/endless-sky/images/effect/gridfire hit+4.png
+share/games/endless-sky/images/effect/heavy laser impact+0.png
+share/games/endless-sky/images/effect/heavy laser impact+1.png
+share/games/endless-sky/images/effect/heavy laser impact+2.png
+share/games/endless-sky/images/effect/inhibitor impact+0.png
+share/games/endless-sky/images/effect/inhibitor impact+1.png
+share/games/endless-sky/images/effect/inhibitor impact+2.png
+share/games/endless-sky/images/effect/inhibitor impact+3.png
+share/games/endless-sky/images/effect/inhibitor impact+4.png
+share/games/endless-sky/images/effect/inhibitor impact+5.png
+share/games/endless-sky/images/effect/ion flare/huge+0.png
+share/games/endless-sky/images/effect/ion flare/huge+1.png
+share/games/endless-sky/images/effect/ion flare/large+0.png
+share/games/endless-sky/images/effect/ion flare/large+1.png
+share/games/endless-sky/images/effect/ion flare/medium+0.png
+share/games/endless-sky/images/effect/ion flare/medium+1.png
+share/games/endless-sky/images/effect/ion flare/small+0.png
+share/games/endless-sky/images/effect/ion flare/small+1.png
+share/games/endless-sky/images/effect/ion flare/tiny+0.png
+share/games/endless-sky/images/effect/ion flare/tiny+1.png
+share/games/endless-sky/images/effect/ion impact~0.png
+share/games/endless-sky/images/effect/ion impact~1.png
+share/games/endless-sky/images/effect/ion impact~2.png
+share/games/endless-sky/images/effect/ion impact~3.png
+share/games/endless-sky/images/effect/ion impact~4.png
+share/games/endless-sky/images/effect/ion rain impact~0.png
+share/games/endless-sky/images/effect/ion rain impact~1.png
+share/games/endless-sky/images/effect/ion rain impact~2.png
+share/games/endless-sky/images/effect/ion rain impact~3.png
+share/games/endless-sky/images/effect/ion rain impact~4.png
+share/games/endless-sky/images/effect/ionic afterburner+0.png
+share/games/endless-sky/images/effect/ionic afterburner+1.png
+share/games/endless-sky/images/effect/ionic afterburner+2.png
+share/games/endless-sky/images/effect/ionic afterburner+3.png
+share/games/endless-sky/images/effect/ionic afterburner+4.png
+share/games/endless-sky/images/effect/ionic afterburner+5.png
+share/games/endless-sky/images/effect/jump drive+0.png
+share/games/endless-sky/images/effect/jump drive+1.png
+share/games/endless-sky/images/effect/korath flare/huge+0.png
+share/games/endless-sky/images/effect/korath flare/huge+1.png
+share/games/endless-sky/images/effect/korath flare/huge+2.png
+share/games/endless-sky/images/effect/korath flare/huge+3.png
+share/games/endless-sky/images/effect/korath flare/large+0.png
+share/games/endless-sky/images/effect/korath flare/large+1.png
+share/games/endless-sky/images/effect/korath flare/large+2.png
+share/games/endless-sky/images/effect/korath flare/medium+0.png
+share/games/endless-sky/images/effect/korath flare/medium+1.png
+share/games/endless-sky/images/effect/korath flare/medium+2.png
+share/games/endless-sky/images/effect/korath flare/small+0.png
+share/games/endless-sky/images/effect/korath flare/small+1.png
+share/games/endless-sky/images/effect/korath flare/small+2.png
+share/games/endless-sky/images/effect/korath flare/tiny+0.png
+share/games/endless-sky/images/effect/korath flare/tiny+1.png
+share/games/endless-sky/images/effect/korath flare/tiny+2.png
+share/games/endless-sky/images/effect/large anti missile~0.png
+share/games/endless-sky/images/effect/large anti missile~1.png
+share/games/endless-sky/images/effect/laser impact+0.png
+share/games/endless-sky/images/effect/laser impact+1.png
+share/games/endless-sky/images/effect/laser impact+2.png
+share/games/endless-sky/images/effect/leak big-0.png
+share/games/endless-sky/images/effect/leak big-1.png
+share/games/endless-sky/images/effect/leak big-2.png
+share/games/endless-sky/images/effect/leak big-3.png
+share/games/endless-sky/images/effect/leak-0.png
+share/games/endless-sky/images/effect/leak-1.png
+share/games/endless-sky/images/effect/leak-2.png
+share/games/endless-sky/images/effect/leak-3.png
+share/games/endless-sky/images/effect/medium graviton flare+.png
+share/games/endless-sky/images/effect/meteor fire~0.png
+share/games/endless-sky/images/effect/meteor fire~1.png
+share/games/endless-sky/images/effect/meteor fire~2.png
+share/games/endless-sky/images/effect/meteor fire~3.png
+share/games/endless-sky/images/effect/meteor fire~4.png
+share/games/endless-sky/images/effect/meteor fire~5.png
+share/games/endless-sky/images/effect/minelayer split+0.png
+share/games/endless-sky/images/effect/minelayer split+1.png
+share/games/endless-sky/images/effect/minelayer split+2.png
+share/games/endless-sky/images/effect/minelayer split+3.png
+share/games/endless-sky/images/effect/missile death~0.png
+share/games/endless-sky/images/effect/missile death~1.png
+share/games/endless-sky/images/effect/missile death~2.png
+share/games/endless-sky/images/effect/missile death~3.png
+share/games/endless-sky/images/effect/moonbeam fleck+0.png
+share/games/endless-sky/images/effect/moonbeam fleck+1.png
+share/games/endless-sky/images/effect/moonbeam impact+0.png
+share/games/endless-sky/images/effect/moonbeam impact+1.png
+share/games/endless-sky/images/effect/moonbeam impact+2.png
+share/games/endless-sky/images/effect/moonbeam impact+3.png
+share/games/endless-sky/images/effect/nano spark+0.png
+share/games/endless-sky/images/effect/nano spark+1.png
+share/games/endless-sky/images/effect/nano spark+2.png
+share/games/endless-sky/images/effect/nano spark+3.png
+share/games/endless-sky/images/effect/nano spark+4.png
+share/games/endless-sky/images/effect/particle impact+0.png
+share/games/endless-sky/images/effect/particle impact+1.png
+share/games/endless-sky/images/effect/particle impact+2.png
+share/games/endless-sky/images/effect/particle impact+3.png
+share/games/endless-sky/images/effect/particle impact+4.png
+share/games/endless-sky/images/effect/particle impact+5.png
+share/games/endless-sky/images/effect/particle impact+6.png
+share/games/endless-sky/images/effect/particle impact+7.png
+share/games/endless-sky/images/effect/piercer explosion+0.png
+share/games/endless-sky/images/effect/piercer explosion+1.png
+share/games/endless-sky/images/effect/piercer explosion+2.png
+share/games/endless-sky/images/effect/piercer explosion+3.png
+share/games/endless-sky/images/effect/piercer explosion+4.png
+share/games/endless-sky/images/effect/piercer explosion+5.png
+share/games/endless-sky/images/effect/piercer explosion+6.png
+share/games/endless-sky/images/effect/piercer explosion+7.png
+share/games/endless-sky/images/effect/piercer explosion+8.png
+share/games/endless-sky/images/effect/piercer explosion+9.png
+share/games/endless-sky/images/effect/piercer fire+0.png
+share/games/endless-sky/images/effect/piercer fire+1.png
+share/games/endless-sky/images/effect/piercer fire+2.png
+share/games/endless-sky/images/effect/piercer fire+3.png
+share/games/endless-sky/images/effect/piercer fire+4.png
+share/games/endless-sky/images/effect/piercer impact+0.png
+share/games/endless-sky/images/effect/piercer impact+1.png
+share/games/endless-sky/images/effect/piercer impact+2.png
+share/games/endless-sky/images/effect/piercer impact+3.png
+share/games/endless-sky/images/effect/piercer impact+4.png
+share/games/endless-sky/images/effect/plasma explosion~0.png
+share/games/endless-sky/images/effect/plasma explosion~1.png
+share/games/endless-sky/images/effect/plasma explosion~2.png
+share/games/endless-sky/images/effect/plasma explosion~3.png
+share/games/endless-sky/images/effect/plasma explosion~4.png
+share/games/endless-sky/images/effect/plasma explosion~5.png
+share/games/endless-sky/images/effect/plasma explosion~6.png
+share/games/endless-sky/images/effect/plasma explosion~7.png
+share/games/endless-sky/images/effect/plasma flare/huge+0.png
+share/games/endless-sky/images/effect/plasma flare/huge+1.png
+share/games/endless-sky/images/effect/plasma flare/huge+2.png
+share/games/endless-sky/images/effect/plasma flare/large+0.png
+share/games/endless-sky/images/effect/plasma flare/large+1.png
+share/games/endless-sky/images/effect/plasma flare/large+2.png
+share/games/endless-sky/images/effect/plasma flare/medium+0.png
+share/games/endless-sky/images/effect/plasma flare/medium+1.png
+share/games/endless-sky/images/effect/plasma flare/medium+2.png
+share/games/endless-sky/images/effect/plasma flare/small+0.png
+share/games/endless-sky/images/effect/plasma flare/small+1.png
+share/games/endless-sky/images/effect/plasma flare/small+2.png
+share/games/endless-sky/images/effect/plasma flare/tiny+0.png
+share/games/endless-sky/images/effect/plasma flare/tiny+1.png
+share/games/endless-sky/images/effect/plasma flare/tiny+2.png
+share/games/endless-sky/images/effect/point defense die+0.png
+share/games/endless-sky/images/effect/point defense die+1.png
+share/games/endless-sky/images/effect/point defense die+2.png
+share/games/endless-sky/images/effect/point defense die+3.png
+share/games/endless-sky/images/effect/point defense die+4.png
+share/games/endless-sky/images/effect/point defense die+5.png
+share/games/endless-sky/images/effect/point defense fire+0.png
+share/games/endless-sky/images/effect/point defense fire+1.png
+share/games/endless-sky/images/effect/point defense fire+2.png
+share/games/endless-sky/images/effect/point defense hit+0.png
+share/games/endless-sky/images/effect/point defense hit+1.png
+share/games/endless-sky/images/effect/point defense hit+2.png
+share/games/endless-sky/images/effect/proton impact+0.png
+share/games/endless-sky/images/effect/proton impact+1.png
+share/games/endless-sky/images/effect/proton impact+2.png
+share/games/endless-sky/images/effect/proton impact+3.png
+share/games/endless-sky/images/effect/proton impact+4.png
+share/games/endless-sky/images/effect/proton impact+5.png
+share/games/endless-sky/images/effect/proton impact+6.png
+share/games/endless-sky/images/effect/proton impact+7.png
+share/games/endless-sky/images/effect/puff~0.png
+share/games/endless-sky/images/effect/puff~1.png
+share/games/endless-sky/images/effect/puff~2.png
+share/games/endless-sky/images/effect/puff~3.png
+share/games/endless-sky/images/effect/pulse impact~0.png
+share/games/endless-sky/images/effect/pulse impact~1.png
+share/games/endless-sky/images/effect/pulse impact~2.png
+share/games/endless-sky/images/effect/pulse impact~3.png
+share/games/endless-sky/images/effect/quarg anti missile+0.png
+share/games/endless-sky/images/effect/quarg anti missile+1.png
+share/games/endless-sky/images/effect/railspark~0.png
+share/games/endless-sky/images/effect/railspark~1.png
+share/games/endless-sky/images/effect/railspark~2.png
+share/games/endless-sky/images/effect/ravager impact+0.png
+share/games/endless-sky/images/effect/ravager impact+1.png
+share/games/endless-sky/images/effect/ravager impact+2.png
+share/games/endless-sky/images/effect/remnant afterburner/remnant afterburner-00.png
+share/games/endless-sky/images/effect/remnant afterburner/remnant afterburner-01.png
+share/games/endless-sky/images/effect/remnant afterburner/remnant afterburner-02.png
+share/games/endless-sky/images/effect/remnant flare/large~0.png
+share/games/endless-sky/images/effect/remnant flare/large~1.png
+share/games/endless-sky/images/effect/remnant flare/large~2.png
+share/games/endless-sky/images/effect/remnant flare/medium~0.png
+share/games/endless-sky/images/effect/remnant flare/medium~1.png
+share/games/endless-sky/images/effect/remnant flare/medium~2.png
+share/games/endless-sky/images/effect/remnant flare/small~0.png
+share/games/endless-sky/images/effect/remnant flare/small~1.png
+share/games/endless-sky/images/effect/remnant flare/small~2.png
+share/games/endless-sky/images/effect/remnant leak sparkle-0.png
+share/games/endless-sky/images/effect/remnant leak sparkle-1.png
+share/games/endless-sky/images/effect/remnant leak sparkle-2.png
+share/games/endless-sky/images/effect/remnant leak sparkle-3.png
+share/games/endless-sky/images/effect/remnant leak-0.png
+share/games/endless-sky/images/effect/remnant leak-1.png
+share/games/endless-sky/images/effect/remnant leak-2.png
+share/games/endless-sky/images/effect/remnant leak-3.png
+share/games/endless-sky/images/effect/repeater impact~0.png
+share/games/endless-sky/images/effect/repeater impact~1.png
+share/games/endless-sky/images/effect/repeater impact~2.png
+share/games/endless-sky/images/effect/repeater impact~3.png
+share/games/endless-sky/images/effect/repeater impact~4.png
+share/games/endless-sky/images/effect/repulsor impact+0.png
+share/games/endless-sky/images/effect/repulsor impact+1.png
+share/games/endless-sky/images/effect/repulsor impact+2.png
+share/games/endless-sky/images/effect/repulsor impact+3.png
+share/games/endless-sky/images/effect/seeker impact~0.png
+share/games/endless-sky/images/effect/seeker impact~1.png
+share/games/endless-sky/images/effect/seeker impact~2.png
+share/games/endless-sky/images/effect/seeker impact~3.png
+share/games/endless-sky/images/effect/seeker impact~4.png
+share/games/endless-sky/images/effect/seeker impact~5.png
+share/games/endless-sky/images/effect/sidewinder fire~0.png
+share/games/endless-sky/images/effect/sidewinder fire~1.png
+share/games/endless-sky/images/effect/sidewinder fire~2.png
+share/games/endless-sky/images/effect/sidewinder fire~3.png
+share/games/endless-sky/images/effect/sidewinder fire~4.png
+share/games/endless-sky/images/effect/skylance impact+0.png
+share/games/endless-sky/images/effect/skylance impact+1.png
+share/games/endless-sky/images/effect/slicer impact+0.png
+share/games/endless-sky/images/effect/slicer impact+1.png
+share/games/endless-sky/images/effect/slicer impact+2.png
+share/games/endless-sky/images/effect/slicer impact+3.png
+share/games/endless-sky/images/effect/slowing~0.png
+share/games/endless-sky/images/effect/slowing~1.png
+share/games/endless-sky/images/effect/slowing~2.png
+share/games/endless-sky/images/effect/slowing~3.png
+share/games/endless-sky/images/effect/slowing~4.png
+share/games/endless-sky/images/effect/small anti missile~0.png
+share/games/endless-sky/images/effect/small anti missile~1.png
+share/games/endless-sky/images/effect/smoke~0.png
+share/games/endless-sky/images/effect/smoke~1.png
+share/games/endless-sky/images/effect/smoke~2.png
+share/games/endless-sky/images/effect/smoke~3.png
+share/games/endless-sky/images/effect/smoke~4.png
+share/games/endless-sky/images/effect/smoke~5.png
+share/games/endless-sky/images/effect/smoke~6.png
+share/games/endless-sky/images/effect/smoke~7.png
+share/games/endless-sky/images/effect/spark~0.png
+share/games/endless-sky/images/effect/spark~1.png
+share/games/endless-sky/images/effect/spark~2.png
+share/games/endless-sky/images/effect/spark~3.png
+share/games/endless-sky/images/effect/spark~4.png
+share/games/endless-sky/images/effect/static+0.png
+share/games/endless-sky/images/effect/static+1.png
+share/games/endless-sky/images/effect/static+2.png
+share/games/endless-sky/images/effect/static+3.png
+share/games/endless-sky/images/effect/static+4.png
+share/games/endless-sky/images/effect/static+5.png
+share/games/endless-sky/images/effect/static+6.png
+share/games/endless-sky/images/effect/subsidurial death/subsidurial death~0.png
+share/games/endless-sky/images/effect/subsidurial death/subsidurial death~1.png
+share/games/endless-sky/images/effect/subsidurial death/subsidurial death~2.png
+share/games/endless-sky/images/effect/subsidurial death/subsidurial death~3.png
+share/games/endless-sky/images/effect/subsidurial death/subsidurial death~4.png
+share/games/endless-sky/images/effect/subsidurial death/subsidurial death~5.png
+share/games/endless-sky/images/effect/sunbeam impact+0.png
+share/games/endless-sky/images/effect/sunbeam impact+1.png
+share/games/endless-sky/images/effect/sunbeam impact+2.png
+share/games/endless-sky/images/effect/thrasher impact~0.png
+share/games/endless-sky/images/effect/thrasher impact~1.png
+share/games/endless-sky/images/effect/thrasher impact~2.png
+share/games/endless-sky/images/effect/thrasher impact~3.png
+share/games/endless-sky/images/effect/thrasher impact~4.png
+share/games/endless-sky/images/effect/thrasher impact~5.png
+share/games/endless-sky/images/effect/torpedo fire+0.png
+share/games/endless-sky/images/effect/torpedo fire+1.png
+share/games/endless-sky/images/effect/torpedo fire+2.png
+share/games/endless-sky/images/effect/tracker cloud+0.png
+share/games/endless-sky/images/effect/tracker cloud+1.png
+share/games/endless-sky/images/effect/tracker cloud+2.png
+share/games/endless-sky/images/effect/tracker cloud+3.png
+share/games/endless-sky/images/effect/tracker cloud+4.png
+share/games/endless-sky/images/effect/tracker fire+0.png
+share/games/endless-sky/images/effect/tracker fire+1.png
+share/games/endless-sky/images/effect/tracker fire+2.png
+share/games/endless-sky/images/effect/tracker fire+3.png
+share/games/endless-sky/images/effect/tracker fire+4.png
+share/games/endless-sky/images/effect/tracker impact~0.png
+share/games/endless-sky/images/effect/tracker impact~1.png
+share/games/endless-sky/images/effect/tracker impact~2.png
+share/games/endless-sky/images/effect/tracker impact~3.png
+share/games/endless-sky/images/effect/tracker impact~4.png
+share/games/endless-sky/images/effect/tracker impact~5.png
+share/games/endless-sky/images/effect/typhoon fire+0.png
+share/games/endless-sky/images/effect/typhoon fire+1.png
+share/games/endless-sky/images/effect/typhoon fire+2.png
+share/games/endless-sky/images/effect/void sprite adult death~0.png
+share/games/endless-sky/images/effect/void sprite adult death~1.png
+share/games/endless-sky/images/effect/void sprite adult death~2.png
+share/games/endless-sky/images/effect/void sprite adult death~3.png
+share/games/endless-sky/images/effect/void sprite adult death~4.png
+share/games/endless-sky/images/effect/void sprite adult death~5.png
+share/games/endless-sky/images/effect/void sprite infant death~0.png
+share/games/endless-sky/images/effect/void sprite infant death~1.png
+share/games/endless-sky/images/effect/void sprite infant death~2.png
+share/games/endless-sky/images/effect/void sprite infant death~3.png
+share/games/endless-sky/images/effect/void sprite infant death~4.png
+share/games/endless-sky/images/effect/void sprite infant death~5.png
+share/games/endless-sky/images/effect/wanderer anti-missile+0.png
+share/games/endless-sky/images/effect/wanderer anti-missile+1.png
+share/games/endless-sky/images/effect/wanderer anti-missile+2.png
+share/games/endless-sky/images/effect/wanderer anti-missile+3.png
+share/games/endless-sky/images/effect/warder~0.png
+share/games/endless-sky/images/effect/warder~1.png
+share/games/endless-sky/images/font/ubuntu14r.png
+share/games/endless-sky/images/font/ubuntu18r.png
+share/games/endless-sky/images/hardpoint/annihilator turret.png
+share/games/endless-sky/images/hardpoint/anti-missile hai.png
+share/games/endless-sky/images/hardpoint/anti-missile.png
+share/games/endless-sky/images/hardpoint/banisher.png
+share/games/endless-sky/images/hardpoint/blaster turret.png
+share/games/endless-sky/images/hardpoint/bombardment turret.png
+share/games/endless-sky/images/hardpoint/disruptor.png
+share/games/endless-sky/images/hardpoint/dual sunbeam turret.png
+share/games/endless-sky/images/hardpoint/electron turret.png
+share/games/endless-sky/images/hardpoint/grab-strike.png
+share/games/endless-sky/images/hardpoint/heavy anti-missile hai.png
+share/games/endless-sky/images/hardpoint/heavy anti-missile.png
+share/games/endless-sky/images/hardpoint/heavy laser turret.png
+share/games/endless-sky/images/hardpoint/heliarch attractor.png
+share/games/endless-sky/images/hardpoint/heliarch repulsor.png
+share/games/endless-sky/images/hardpoint/inhibitor turret.png
+share/games/endless-sky/images/hardpoint/ion hail turret.png
+share/games/endless-sky/images/hardpoint/laser turret.png
+share/games/endless-sky/images/hardpoint/mod blaster turret.png
+share/games/endless-sky/images/hardpoint/moonbeam turret.png
+share/games/endless-sky/images/hardpoint/plasma turret.png
+share/games/endless-sky/images/hardpoint/point defense.png
+share/games/endless-sky/images/hardpoint/proton turret.png
+share/games/endless-sky/images/hardpoint/pug anti-missile.png
+share/games/endless-sky/images/hardpoint/pug gridfire turret.png
+share/games/endless-sky/images/hardpoint/pug zapper turret.png
+share/games/endless-sky/images/hardpoint/pulse turret.png
+share/games/endless-sky/images/hardpoint/quad blaster turret.png
+share/games/endless-sky/images/hardpoint/quarg anti missile.png
+share/games/endless-sky/images/hardpoint/quarg skylance.png
+share/games/endless-sky/images/hardpoint/ravager turret.png
+share/games/endless-sky/images/hardpoint/repeater turret.png
+share/games/endless-sky/images/hardpoint/slicer turret.png
+share/games/endless-sky/images/hardpoint/sunbeam turret.png
+share/games/endless-sky/images/hardpoint/t3 anti missile.png
+share/games/endless-sky/images/hardpoint/thrasher turret.png
+share/games/endless-sky/images/hardpoint/wanderer anti-missile.png
+share/games/endless-sky/images/hardpoint/warder.png
+share/games/endless-sky/images/icon/emp.png
+share/games/endless-sky/images/icon/finisher.png
+share/games/endless-sky/images/icon/flamethrower.png
+share/games/endless-sky/images/icon/gat.png
+share/games/endless-sky/images/icon/javelin.png
+share/games/endless-sky/images/icon/meteor.png
+share/games/endless-sky/images/icon/minelayer.png
+share/games/endless-sky/images/icon/nuke.png
+share/games/endless-sky/images/icon/piercer.png
+share/games/endless-sky/images/icon/rail gun.png
+share/games/endless-sky/images/icon/rocket.png
+share/games/endless-sky/images/icon/sidewinder.png
+share/games/endless-sky/images/icon/thunderhead.png
+share/games/endless-sky/images/icon/torpedo.png
+share/games/endless-sky/images/icon/tracker.png
+share/games/endless-sky/images/icon/typhoon.png
+share/games/endless-sky/images/label/arachi+.png
+share/games/endless-sky/images/label/core+.png
+share/games/endless-sky/images/label/deep+.png
+share/games/endless-sky/images/label/dirt belt+.png
+share/games/endless-sky/images/label/earth+.png
+share/games/endless-sky/images/label/graveyard+.png
+share/games/endless-sky/images/label/hai+.png
+share/games/endless-sky/images/label/kimek+.png
+share/games/endless-sky/images/label/korath+.png
+share/games/endless-sky/images/label/north+.png
+share/games/endless-sky/images/label/paradise+.png
+share/games/endless-sky/images/label/rim+.png
+share/games/endless-sky/images/label/saryds+.png
+share/games/endless-sky/images/label/south+.png
+share/games/endless-sky/images/label/wanderers+.png
+share/games/endless-sky/images/label/waste+.png
+share/games/endless-sky/images/land/badlands0.jpg
+share/games/endless-sky/images/land/badlands1.jpg
+share/games/endless-sky/images/land/badlands2.jpg
+share/games/endless-sky/images/land/badlands3.jpg
+share/games/endless-sky/images/land/badlands4.jpg
+share/games/endless-sky/images/land/badlands5.jpg
+share/games/endless-sky/images/land/badlands6.jpg
+share/games/endless-sky/images/land/badlands7.jpg
+share/games/endless-sky/images/land/badlands8.jpg
+share/games/endless-sky/images/land/badlands9-harro.jpg
+share/games/endless-sky/images/land/beach0.jpg
+share/games/endless-sky/images/land/beach1.jpg
+share/games/endless-sky/images/land/beach10-sfiera.jpg
+share/games/endless-sky/images/land/beach11-harro.jpg
+share/games/endless-sky/images/land/beach12-harro.jpg
+share/games/endless-sky/images/land/beach2.jpg
+share/games/endless-sky/images/land/beach3.jpg
+share/games/endless-sky/images/land/beach4.jpg
+share/games/endless-sky/images/land/beach5.jpg
+share/games/endless-sky/images/land/beach6.jpg
+share/games/endless-sky/images/land/beach7-sfiera.jpg
+share/games/endless-sky/images/land/beach8-sfiera.jpg
+share/games/endless-sky/images/land/beach9-sfiera.jpg
+share/games/endless-sky/images/land/bwerner0.jpg
+share/games/endless-sky/images/land/bwerner1.jpg
+share/games/endless-sky/images/land/bwerner2.jpg
+share/games/endless-sky/images/land/bwerner3.jpg
+share/games/endless-sky/images/land/bwerner4.jpg
+share/games/endless-sky/images/land/bwerner5.jpg
+share/games/endless-sky/images/land/bwerner6.jpg
+share/games/endless-sky/images/land/bwerner7.jpg
+share/games/endless-sky/images/land/bwerner8.jpg
+share/games/endless-sky/images/land/canyon0.jpg
+share/games/endless-sky/images/land/canyon01.jpg
+share/games/endless-sky/images/land/canyon02.jpg
+share/games/endless-sky/images/land/canyon03.jpg
+share/games/endless-sky/images/land/canyon04.jpg
+share/games/endless-sky/images/land/canyon05.jpg
+share/games/endless-sky/images/land/canyon1.jpg
+share/games/endless-sky/images/land/canyon10-harro.jpg
+share/games/endless-sky/images/land/canyon2.jpg
+share/games/endless-sky/images/land/canyon3.jpg
+share/games/endless-sky/images/land/canyon4.jpg
+share/games/endless-sky/images/land/canyon5.jpg
+share/games/endless-sky/images/land/canyon6.jpg
+share/games/endless-sky/images/land/canyon7.jpg
+share/games/endless-sky/images/land/canyon8.jpg
+share/games/endless-sky/images/land/canyon9.jpg
+share/games/endless-sky/images/land/city0.jpg
+share/games/endless-sky/images/land/city1.jpg
+share/games/endless-sky/images/land/city10.jpg
+share/games/endless-sky/images/land/city11.jpg
+share/games/endless-sky/images/land/city12.jpg
+share/games/endless-sky/images/land/city13-sfiera.jpg
+share/games/endless-sky/images/land/city14-sfiera.jpg
+share/games/endless-sky/images/land/city15-sfiera.jpg
+share/games/endless-sky/images/land/city16-sfiera.jpg
+share/games/endless-sky/images/land/city17-sfiera.jpg
+share/games/endless-sky/images/land/city18-iridium.jpg
+share/games/endless-sky/images/land/city2.jpg
+share/games/endless-sky/images/land/city3.jpg
+share/games/endless-sky/images/land/city4.jpg
+share/games/endless-sky/images/land/city5.jpg
+share/games/endless-sky/images/land/city6.jpg
+share/games/endless-sky/images/land/city7.jpg
+share/games/endless-sky/images/land/city8.jpg
+share/games/endless-sky/images/land/city9.jpg
+share/games/endless-sky/images/land/desert0.jpg
+share/games/endless-sky/images/land/desert1.jpg
+share/games/endless-sky/images/land/desert10-harro.jpg
+share/games/endless-sky/images/land/desert2.jpg
+share/games/endless-sky/images/land/desert3.jpg
+share/games/endless-sky/images/land/desert4.jpg
+share/games/endless-sky/images/land/desert5.jpg
+share/games/endless-sky/images/land/desert6.jpg
+share/games/endless-sky/images/land/desert7.jpg
+share/games/endless-sky/images/land/desert8-sfiera.jpg
+share/games/endless-sky/images/land/desert9-sfiera.jpg
+share/games/endless-sky/images/land/dmottl0.jpg
+share/games/endless-sky/images/land/dmottl1.jpg
+share/games/endless-sky/images/land/dmottl2.jpg
+share/games/endless-sky/images/land/dmottl3.jpg
+share/games/endless-sky/images/land/dmottl4.jpg
+share/games/endless-sky/images/land/dmottl5.jpg
+share/games/endless-sky/images/land/dune0.jpg
+share/games/endless-sky/images/land/dune1.jpg
+share/games/endless-sky/images/land/dune2.jpg
+share/games/endless-sky/images/land/dune3.jpg
+share/games/endless-sky/images/land/dune4.jpg
+share/games/endless-sky/images/land/dune5.jpg
+share/games/endless-sky/images/land/dune6-harro.jpg
+share/games/endless-sky/images/land/earthrise.jpg
+share/games/endless-sky/images/land/fields0.jpg
+share/games/endless-sky/images/land/fields1.jpg
+share/games/endless-sky/images/land/fields10-sfiera.jpg
+share/games/endless-sky/images/land/fields11-sfiera.jpg
+share/games/endless-sky/images/land/fields12-sfiera.jpg
+share/games/endless-sky/images/land/fields13-sfiera.jpg
+share/games/endless-sky/images/land/fields2.jpg
+share/games/endless-sky/images/land/fields3.jpg
+share/games/endless-sky/images/land/fields4.jpg
+share/games/endless-sky/images/land/fields5.jpg
+share/games/endless-sky/images/land/fields6.jpg
+share/games/endless-sky/images/land/fields7.jpg
+share/games/endless-sky/images/land/fields8.jpg
+share/games/endless-sky/images/land/fields9.jpg
+share/games/endless-sky/images/land/fog0.jpg
+share/games/endless-sky/images/land/fog1.jpg
+share/games/endless-sky/images/land/fog2.jpg
+share/games/endless-sky/images/land/fog3.jpg
+share/games/endless-sky/images/land/fog4.jpg
+share/games/endless-sky/images/land/fog5.jpg
+share/games/endless-sky/images/land/fog6.jpg
+share/games/endless-sky/images/land/fog7.jpg
+share/games/endless-sky/images/land/forest0.jpg
+share/games/endless-sky/images/land/forest1.jpg
+share/games/endless-sky/images/land/forest2.jpg
+share/games/endless-sky/images/land/forest3.jpg
+share/games/endless-sky/images/land/forest4.jpg
+share/games/endless-sky/images/land/forest5.jpg
+share/games/endless-sky/images/land/hills0.jpg
+share/games/endless-sky/images/land/hills1.jpg
+share/games/endless-sky/images/land/hills2.jpg
+share/games/endless-sky/images/land/hills3.jpg
+share/games/endless-sky/images/land/hills4.jpg
+share/games/endless-sky/images/land/hills5-sfiera.jpg
+share/games/endless-sky/images/land/hills6-sfiera.jpg
+share/games/endless-sky/images/land/hills7-harro.jpg
+share/games/endless-sky/images/land/industrial0-iridium.jpg
+share/games/endless-sky/images/land/lava0.jpg
+share/games/endless-sky/images/land/lava1.jpg
+share/games/endless-sky/images/land/lava2.jpg
+share/games/endless-sky/images/land/lava3.jpg
+share/games/endless-sky/images/land/lava4.jpg
+share/games/endless-sky/images/land/lava5.jpg
+share/games/endless-sky/images/land/lava6.jpg
+share/games/endless-sky/images/land/lava7-sfiera.jpg
+share/games/endless-sky/images/land/loc0.jpg
+share/games/endless-sky/images/land/loc1.jpg
+share/games/endless-sky/images/land/loc2.jpg
+share/games/endless-sky/images/land/mfield0.jpg
+share/games/endless-sky/images/land/mfield1.jpg
+share/games/endless-sky/images/land/mfield2.jpg
+share/games/endless-sky/images/land/mfield3.jpg
+share/games/endless-sky/images/land/mfield4.jpg
+share/games/endless-sky/images/land/mfield5.jpg
+share/games/endless-sky/images/land/mountain0.jpg
+share/games/endless-sky/images/land/mountain1.jpg
+share/games/endless-sky/images/land/mountain10-sfiera.jpg
+share/games/endless-sky/images/land/mountain11-sfiera.jpg
+share/games/endless-sky/images/land/mountain12-sfiera.jpg
+share/games/endless-sky/images/land/mountain13-sfiera.jpg
+share/games/endless-sky/images/land/mountain14-sfiera.jpg
+share/games/endless-sky/images/land/mountain15-sfiera.jpg
+share/games/endless-sky/images/land/mountain16-striker.jpg
+share/games/endless-sky/images/land/mountain17-harro.jpg
+share/games/endless-sky/images/land/mountain18-harro.jpg
+share/games/endless-sky/images/land/mountain19-harro.jpg
+share/games/endless-sky/images/land/mountain2.jpg
+share/games/endless-sky/images/land/mountain20-harro.jpg
+share/games/endless-sky/images/land/mountain21-harro.jpg
+share/games/endless-sky/images/land/mountain22-spfld.jpg
+share/games/endless-sky/images/land/mountain23-spfld.jpg
+share/games/endless-sky/images/land/mountain24-spfld.jpg
+share/games/endless-sky/images/land/mountain25-spfld.jpg
+share/games/endless-sky/images/land/mountain3.jpg
+share/games/endless-sky/images/land/mountain4.jpg
+share/games/endless-sky/images/land/mountain5.jpg
+share/games/endless-sky/images/land/mountain6.jpg
+share/games/endless-sky/images/land/mountain7.jpg
+share/games/endless-sky/images/land/mountain8.jpg
+share/games/endless-sky/images/land/mountain9.jpg
+share/games/endless-sky/images/land/myrabella0.jpg
+share/games/endless-sky/images/land/myrabella1.jpg
+share/games/endless-sky/images/land/myrabella2.jpg
+share/games/endless-sky/images/land/myrabella3.jpg
+share/games/endless-sky/images/land/myrabella4.jpg
+share/games/endless-sky/images/land/myrabella5.jpg
+share/games/endless-sky/images/land/myrabella6.jpg
+share/games/endless-sky/images/land/myrabella7.jpg
+share/games/endless-sky/images/land/myrabella8.jpg
+share/games/endless-sky/images/land/nasa0.jpg
+share/games/endless-sky/images/land/nasa1.jpg
+share/games/endless-sky/images/land/nasa2.jpg
+share/games/endless-sky/images/land/nasa3.jpg
+share/games/endless-sky/images/land/nasa4.jpg
+share/games/endless-sky/images/land/nasa5.jpg
+share/games/endless-sky/images/land/nasa6.jpg
+share/games/endless-sky/images/land/nasa7.jpg
+share/games/endless-sky/images/land/nasa8.jpg
+share/games/endless-sky/images/land/nasa9.jpg
+share/games/endless-sky/images/land/sea0.jpg
+share/games/endless-sky/images/land/sea1.jpg
+share/games/endless-sky/images/land/sea10-sfiera.jpg
+share/games/endless-sky/images/land/sea11-sfiera.jpg
+share/games/endless-sky/images/land/sea12-sfiera.jpg
+share/games/endless-sky/images/land/sea13-sfiera.jpg
+share/games/endless-sky/images/land/sea14-sfiera.jpg
+share/games/endless-sky/images/land/sea15-harro.jpg
+share/games/endless-sky/images/land/sea16-harro.jpg
+share/games/endless-sky/images/land/sea17-harro.jpg
+share/games/endless-sky/images/land/sea2.jpg
+share/games/endless-sky/images/land/sea3.jpg
+share/games/endless-sky/images/land/sea4.jpg
+share/games/endless-sky/images/land/sea5.jpg
+share/games/endless-sky/images/land/sea6.jpg
+share/games/endless-sky/images/land/sea7.jpg
+share/games/endless-sky/images/land/sea8.jpg
+share/games/endless-sky/images/land/sea9.jpg
+share/games/endless-sky/images/land/sivael0.jpg
+share/games/endless-sky/images/land/sivael1.jpg
+share/games/endless-sky/images/land/sivael2.jpg
+share/games/endless-sky/images/land/sivael3.jpg
+share/games/endless-sky/images/land/sivael4.jpg
+share/games/endless-sky/images/land/sivael5.jpg
+share/games/endless-sky/images/land/sivael6.jpg
+share/games/endless-sky/images/land/sivael7.jpg
+share/games/endless-sky/images/land/sivael8.jpg
+share/games/endless-sky/images/land/sivael9.jpg
+share/games/endless-sky/images/land/sky0.jpg
+share/games/endless-sky/images/land/sky1.jpg
+share/games/endless-sky/images/land/sky2.jpg
+share/games/endless-sky/images/land/sky3.jpg
+share/games/endless-sky/images/land/sky4.jpg
+share/games/endless-sky/images/land/sky5.jpg
+share/games/endless-sky/images/land/sky6.jpg
+share/games/endless-sky/images/land/sky7.jpg
+share/games/endless-sky/images/land/sky8.jpg
+share/games/endless-sky/images/land/sky9.jpg
+share/games/endless-sky/images/land/snow0.jpg
+share/games/endless-sky/images/land/snow1.jpg
+share/games/endless-sky/images/land/snow10-sfiera.jpg
+share/games/endless-sky/images/land/snow10.jpg
+share/games/endless-sky/images/land/snow11-sfiera.jpg
+share/games/endless-sky/images/land/snow2.jpg
+share/games/endless-sky/images/land/snow3.jpg
+share/games/endless-sky/images/land/snow4.jpg
+share/games/endless-sky/images/land/snow5.jpg
+share/games/endless-sky/images/land/snow6.jpg
+share/games/endless-sky/images/land/snow7.jpg
+share/games/endless-sky/images/land/snow8.jpg
+share/games/endless-sky/images/land/snow9.jpg
+share/games/endless-sky/images/land/space0.jpg
+share/games/endless-sky/images/land/space1.jpg
+share/games/endless-sky/images/land/space2.jpg
+share/games/endless-sky/images/land/space3.jpg
+share/games/endless-sky/images/land/space4.jpg
+share/games/endless-sky/images/land/space5.jpg
+share/games/endless-sky/images/land/space6.jpg
+share/games/endless-sky/images/land/space7.jpg
+share/games/endless-sky/images/land/station0.jpg
+share/games/endless-sky/images/land/station1.jpg
+share/games/endless-sky/images/land/station2.jpg
+share/games/endless-sky/images/land/station3.jpg
+share/games/endless-sky/images/land/station4.jpg
+share/games/endless-sky/images/land/station5.jpg
+share/games/endless-sky/images/land/valley0.jpg
+share/games/endless-sky/images/land/valley1.jpg
+share/games/endless-sky/images/land/valley10-sfiera.jpg
+share/games/endless-sky/images/land/valley11-harro.jpg
+share/games/endless-sky/images/land/valley12-harro.jpg
+share/games/endless-sky/images/land/valley13-harro.jpg
+share/games/endless-sky/images/land/valley14-harro.jpg
+share/games/endless-sky/images/land/valley15-harro.jpg
+share/games/endless-sky/images/land/valley2.jpg
+share/games/endless-sky/images/land/valley3.jpg
+share/games/endless-sky/images/land/valley4.jpg
+share/games/endless-sky/images/land/valley5.jpg
+share/games/endless-sky/images/land/valley6.jpg
+share/games/endless-sky/images/land/valley7.jpg
+share/games/endless-sky/images/land/valley8.jpg
+share/games/endless-sky/images/land/valley9.jpg
+share/games/endless-sky/images/land/water0.jpg
+share/games/endless-sky/images/land/water1.jpg
+share/games/endless-sky/images/land/water10-harro.jpg
+share/games/endless-sky/images/land/water11-harro.jpg
+share/games/endless-sky/images/land/water2.jpg
+share/games/endless-sky/images/land/water3.jpg
+share/games/endless-sky/images/land/water4.jpg
+share/games/endless-sky/images/land/water5.jpg
+share/games/endless-sky/images/land/water6.jpg
+share/games/endless-sky/images/land/water7.jpg
+share/games/endless-sky/images/land/water8.jpg
+share/games/endless-sky/images/land/water9.jpg
+share/games/endless-sky/images/outfit/aeon cell.png
+share/games/endless-sky/images/outfit/afterburner.png
+share/games/endless-sky/images/outfit/android.png
+share/games/endless-sky/images/outfit/anti-missile hai.png
+share/games/endless-sky/images/outfit/anti-missile.png
+share/games/endless-sky/images/outfit/asteroid scanner.png
+share/games/endless-sky/images/outfit/banisher.png
+share/games/endless-sky/images/outfit/blaster turret.png
+share/games/endless-sky/images/outfit/blaster.png
+share/games/endless-sky/images/outfit/blue screwdriver.png
+share/games/endless-sky/images/outfit/blue sun.png
+share/games/endless-sky/images/outfit/bombardment cannon.png
+share/games/endless-sky/images/outfit/bombardment turret.png
+share/games/endless-sky/images/outfit/breeder.png
+share/games/endless-sky/images/outfit/brig.png
+share/games/endless-sky/images/outfit/bright cloud.png
+share/games/endless-sky/images/outfit/bullet storage.png
+share/games/endless-sky/images/outfit/bullet.png
+share/games/endless-sky/images/outfit/bunk room.png
+share/games/endless-sky/images/outfit/cargo scanner.png
+share/games/endless-sky/images/outfit/catalytic ramscoop.png
+share/games/endless-sky/images/outfit/city-ship license.png
+share/games/endless-sky/images/outfit/coalition license.png
+share/games/endless-sky/images/outfit/command center.png
+share/games/endless-sky/images/outfit/control transceiver.png
+share/games/endless-sky/images/outfit/cooling ducts hai.png
+share/games/endless-sky/images/outfit/cooling ducts.png
+share/games/endless-sky/images/outfit/cooling module.png
+share/games/endless-sky/images/outfit/core.png
+share/games/endless-sky/images/outfit/crystal capacitor.png
+share/games/endless-sky/images/outfit/dark storm.png
+share/games/endless-sky/images/outfit/detainer.png
+share/games/endless-sky/images/outfit/disruptor.png
+share/games/endless-sky/images/outfit/double plasma core.png
+share/games/endless-sky/images/outfit/dual sunbeam turret.png
+share/games/endless-sky/images/outfit/dwarf core hai.png
+share/games/endless-sky/images/outfit/dwarf core.png
+share/games/endless-sky/images/outfit/electron beam.png
+share/games/endless-sky/images/outfit/electron turret.png
+share/games/endless-sky/images/outfit/emergency ramscoop.png
+share/games/endless-sky/images/outfit/emp torpedo bay.png
+share/games/endless-sky/images/outfit/emp torpedo.png
+share/games/endless-sky/images/outfit/enforcer confrontation gear.png
+share/games/endless-sky/images/outfit/enforcer riot staff.png
+share/games/endless-sky/images/outfit/epoch cell.png
+share/games/endless-sky/images/outfit/finisher pod.png
+share/games/endless-sky/images/outfit/finisher.png
+share/games/endless-sky/images/outfit/fire-lance.png
+share/games/endless-sky/images/outfit/fission hai.png
+share/games/endless-sky/images/outfit/fission.png
+share/games/endless-sky/images/outfit/flamethrower.png
+share/games/endless-sky/images/outfit/fragmentation grenades.png
+share/games/endless-sky/images/outfit/fuel cell hai.png
+share/games/endless-sky/images/outfit/fuel pod.png
+share/games/endless-sky/images/outfit/fusion hai.png
+share/games/endless-sky/images/outfit/fusion.png
+share/games/endless-sky/images/outfit/gat.png
+share/games/endless-sky/images/outfit/grab-strike.png
+share/games/endless-sky/images/outfit/hai boulder.png
+share/games/endless-sky/images/outfit/hai geode.png
+share/games/endless-sky/images/outfit/hai pebble core.png
+share/games/endless-sky/images/outfit/hai rifle.png
+share/games/endless-sky/images/outfit/hai tracker pod.png
+share/games/endless-sky/images/outfit/hai tracker storage.png
+share/games/endless-sky/images/outfit/hai tracker.png
+share/games/endless-sky/images/outfit/hai williwaw.png
+share/games/endless-sky/images/outfit/harvested aluminum.png
+share/games/endless-sky/images/outfit/harvested copper.png
+share/games/endless-sky/images/outfit/harvested gold.png
+share/games/endless-sky/images/outfit/harvested iron.png
+share/games/endless-sky/images/outfit/harvested lead.png
+share/games/endless-sky/images/outfit/harvested neodymium.png
+share/games/endless-sky/images/outfit/harvested platinum.png
+share/games/endless-sky/images/outfit/harvested silicon.png
+share/games/endless-sky/images/outfit/harvested silver.png
+share/games/endless-sky/images/outfit/harvested titanium.png
+share/games/endless-sky/images/outfit/harvested tungsten.png
+share/games/endless-sky/images/outfit/harvested uranium.png
+share/games/endless-sky/images/outfit/harvested yottrite.png
+share/games/endless-sky/images/outfit/heavy anti-missile hai.png
+share/games/endless-sky/images/outfit/heavy anti-missile.png
+share/games/endless-sky/images/outfit/heavy laser turret.png
+share/games/endless-sky/images/outfit/heavy laser.png
+share/games/endless-sky/images/outfit/heliarch attractor.png
+share/games/endless-sky/images/outfit/heliarch repulsor.png
+share/games/endless-sky/images/outfit/huge atomic steering hai.png
+share/games/endless-sky/images/outfit/huge atomic steering.png
+share/games/endless-sky/images/outfit/huge atomic thruster hai.png
+share/games/endless-sky/images/outfit/huge atomic thruster.png
+share/games/endless-sky/images/outfit/huge battery hai.png
+share/games/endless-sky/images/outfit/huge battery.png
+share/games/endless-sky/images/outfit/huge fuel cell.png
+share/games/endless-sky/images/outfit/huge ion steering.png
+share/games/endless-sky/images/outfit/huge ion thruster.png
+share/games/endless-sky/images/outfit/huge korath steering.png
+share/games/endless-sky/images/outfit/huge korath thruster.png
+share/games/endless-sky/images/outfit/huge plasma steering.png
+share/games/endless-sky/images/outfit/huge plasma thruster.png
+share/games/endless-sky/images/outfit/huge shield.png
+share/games/endless-sky/images/outfit/hyperdrive.png
+share/games/endless-sky/images/outfit/inhibitor cannon.png
+share/games/endless-sky/images/outfit/inhibitor turret.png
+share/games/endless-sky/images/outfit/interference plating.png
+share/games/endless-sky/images/outfit/ion cannon.png
+share/games/endless-sky/images/outfit/ion hail turret.png
+share/games/endless-sky/images/outfit/ion rain gun.png
+share/games/endless-sky/images/outfit/ionic afterburner.png
+share/games/endless-sky/images/outfit/javelin pod.png
+share/games/endless-sky/images/outfit/javelin storage.png
+share/games/endless-sky/images/outfit/javelin.png
+share/games/endless-sky/images/outfit/jump drive (broken).png
+share/games/endless-sky/images/outfit/jump drive.png
+share/games/endless-sky/images/outfit/ka'het annihilator turret.png
+share/games/endless-sky/images/outfit/ka'het annihilator.png
+share/games/endless-sky/images/outfit/ka'het emp deployer.png
+share/games/endless-sky/images/outfit/ka'het primary cooling.png
+share/games/endless-sky/images/outfit/ka'het ravager beam.png
+share/games/endless-sky/images/outfit/ka'het ravager turret.png
+share/games/endless-sky/images/outfit/ka'het shield restorer.png
+share/games/endless-sky/images/outfit/ka'het support cooling.png
+share/games/endless-sky/images/outfit/keystone.png
+share/games/endless-sky/images/outfit/korath fuel processor.png
+share/games/endless-sky/images/outfit/korath mine storage.png
+share/games/endless-sky/images/outfit/korath mine.png
+share/games/endless-sky/images/outfit/korath minelayer.png
+share/games/endless-sky/images/outfit/korath piercer storage.png
+share/games/endless-sky/images/outfit/korath rifle.png
+share/games/endless-sky/images/outfit/large atomic steering hai.png
+share/games/endless-sky/images/outfit/large atomic steering.png
+share/games/endless-sky/images/outfit/large atomic thruster hai.png
+share/games/endless-sky/images/outfit/large atomic thruster.png
+share/games/endless-sky/images/outfit/large battery hai.png
+share/games/endless-sky/images/outfit/large battery module.png
+share/games/endless-sky/images/outfit/large battery.png
+share/games/endless-sky/images/outfit/large biochemical.png
+share/games/endless-sky/images/outfit/large collector module.png
+share/games/endless-sky/images/outfit/large fuel cell.png
+share/games/endless-sky/images/outfit/large heat shunt.png
+share/games/endless-sky/images/outfit/large ion steering.png
+share/games/endless-sky/images/outfit/large ion thruster.png
+share/games/endless-sky/images/outfit/large korath generator.png
+share/games/endless-sky/images/outfit/large korath steering.png
+share/games/endless-sky/images/outfit/large korath thruster.png
+share/games/endless-sky/images/outfit/large plasma steering.png
+share/games/endless-sky/images/outfit/large plasma thruster.png
+share/games/endless-sky/images/outfit/large quarg steering.png
+share/games/endless-sky/images/outfit/large quarg thruster.png
+share/games/endless-sky/images/outfit/large radar jammer.png
+share/games/endless-sky/images/outfit/large radiant steering.png
+share/games/endless-sky/images/outfit/large radiant thruster.png
+share/games/endless-sky/images/outfit/large reactor module.png
+share/games/endless-sky/images/outfit/large regenerator hai.png
+share/games/endless-sky/images/outfit/large regenerator.png
+share/games/endless-sky/images/outfit/large remnant steering.png
+share/games/endless-sky/images/outfit/large remnant thruster.png
+share/games/endless-sky/images/outfit/large repair module.png
+share/games/endless-sky/images/outfit/large shield module.png
+share/games/endless-sky/images/outfit/large shield.png
+share/games/endless-sky/images/outfit/large steering module.png
+share/games/endless-sky/images/outfit/large systems core.png
+share/games/endless-sky/images/outfit/large thrust module.png
+share/games/endless-sky/images/outfit/laser rifle.png
+share/games/endless-sky/images/outfit/laser turret.png
+share/games/endless-sky/images/outfit/laser.png
+share/games/endless-sky/images/outfit/license.png
+share/games/endless-sky/images/outfit/liquid helium.png
+share/games/endless-sky/images/outfit/liquid nitrogen.png
+share/games/endless-sky/images/outfit/luxury accommodations.png
+share/games/endless-sky/images/outfit/map.png
+share/games/endless-sky/images/outfit/medium atomic steering hai.png
+share/games/endless-sky/images/outfit/medium atomic steering.png
+share/games/endless-sky/images/outfit/medium atomic thruster hai.png
+share/games/endless-sky/images/outfit/medium atomic thruster.png
+share/games/endless-sky/images/outfit/medium battery hai.png
+share/games/endless-sky/images/outfit/medium battery.png
+share/games/endless-sky/images/outfit/medium fuel cell.png
+share/games/endless-sky/images/outfit/medium ion steering.png
+share/games/endless-sky/images/outfit/medium ion thruster.png
+share/games/endless-sky/images/outfit/medium korath generator.png
+share/games/endless-sky/images/outfit/medium korath steering.png
+share/games/endless-sky/images/outfit/medium korath thruster.png
+share/games/endless-sky/images/outfit/medium plasma steering.png
+share/games/endless-sky/images/outfit/medium plasma thruster.png
+share/games/endless-sky/images/outfit/medium quarg steering.png
+share/games/endless-sky/images/outfit/medium quarg thruster.png
+share/games/endless-sky/images/outfit/medium radiant steering.png
+share/games/endless-sky/images/outfit/medium radiant thruster.png
+share/games/endless-sky/images/outfit/medium remnant steering.png
+share/games/endless-sky/images/outfit/medium remnant thruster.png
+share/games/endless-sky/images/outfit/medium shield.png
+share/games/endless-sky/images/outfit/medium systems core.png
+share/games/endless-sky/images/outfit/meteor launcher.png
+share/games/endless-sky/images/outfit/meteor storage.png
+share/games/endless-sky/images/outfit/meteor.png
+share/games/endless-sky/images/outfit/militia license.png
+share/games/endless-sky/images/outfit/millennium cell.png
+share/games/endless-sky/images/outfit/mod blaster turret.png
+share/games/endless-sky/images/outfit/mod blaster.png
+share/games/endless-sky/images/outfit/moonbeam turret.png
+share/games/endless-sky/images/outfit/moonbeam.png
+share/games/endless-sky/images/outfit/navy carrier license.png
+share/games/endless-sky/images/outfit/navy cruiser license.png
+share/games/endless-sky/images/outfit/navy license.png
+share/games/endless-sky/images/outfit/nerve gas.png
+share/games/endless-sky/images/outfit/nuke.png
+share/games/endless-sky/images/outfit/outfit scanner.png
+share/games/endless-sky/images/outfit/overcharged shield module.png
+share/games/endless-sky/images/outfit/overclocked repair module.png
+share/games/endless-sky/images/outfit/particle cannon.png
+share/games/endless-sky/images/outfit/piercer launcher.png
+share/games/endless-sky/images/outfit/piercer.png
+share/games/endless-sky/images/outfit/plasma cannon.png
+share/games/endless-sky/images/outfit/plasma core.png
+share/games/endless-sky/images/outfit/plasma turret.png
+share/games/endless-sky/images/outfit/point defense.png
+share/games/endless-sky/images/outfit/proton gun.png
+share/games/endless-sky/images/outfit/proton turret.png
+share/games/endless-sky/images/outfit/pug akfar steering.png
+share/games/endless-sky/images/outfit/pug akfar thruster.png
+share/games/endless-sky/images/outfit/pug anti-missile.png
+share/games/endless-sky/images/outfit/pug biodefenses.png
+share/games/endless-sky/images/outfit/pug cormet steering.png
+share/games/endless-sky/images/outfit/pug cormet thruster.png
+share/games/endless-sky/images/outfit/pug gridfire turret.png
+share/games/endless-sky/images/outfit/pug lohmar steering.png
+share/games/endless-sky/images/outfit/pug lohmar thruster.png
+share/games/endless-sky/images/outfit/pug seeker.png
+share/games/endless-sky/images/outfit/pug staff.png
+share/games/endless-sky/images/outfit/pug zapper turret.png
+share/games/endless-sky/images/outfit/pug zapper.png
+share/games/endless-sky/images/outfit/pulse cannon.png
+share/games/endless-sky/images/outfit/pulse turret.png
+share/games/endless-sky/images/outfit/quad blaster turret.png
+share/games/endless-sky/images/outfit/quarg anti missile.png
+share/games/endless-sky/images/outfit/quarg antimatter core.png
+share/games/endless-sky/images/outfit/quarg countermeasures.png
+share/games/endless-sky/images/outfit/quarg nanotech battery.png
+share/games/endless-sky/images/outfit/quarg quantum shield generator.png
+share/games/endless-sky/images/outfit/quarg skylance.png
+share/games/endless-sky/images/outfit/railgun.png
+share/games/endless-sky/images/outfit/railslug.png
+share/games/endless-sky/images/outfit/ramscoop.png
+share/games/endless-sky/images/outfit/reasoning node.png
+share/games/endless-sky/images/outfit/red screwdriver.png
+share/games/endless-sky/images/outfit/red sun.png
+share/games/endless-sky/images/outfit/remnant afterburner.png
+share/games/endless-sky/images/outfit/remnant capital license.png
+share/games/endless-sky/images/outfit/remnant license.png
+share/games/endless-sky/images/outfit/remnant rifle.png
+share/games/endless-sky/images/outfit/repeater turret.png
+share/games/endless-sky/images/outfit/repeater.png
+share/games/endless-sky/images/outfit/reverse thruster.png
+share/games/endless-sky/images/outfit/rocket launcher.png
+share/games/endless-sky/images/outfit/rocket storage.png
+share/games/endless-sky/images/outfit/rocket.png
+share/games/endless-sky/images/outfit/salvage scanner.png
+share/games/endless-sky/images/outfit/scan module.png
+share/games/endless-sky/images/outfit/scram drive.png
+share/games/endless-sky/images/outfit/security station.png
+share/games/endless-sky/images/outfit/sidewinder launcher.png
+share/games/endless-sky/images/outfit/sidewinder storage.png
+share/games/endless-sky/images/outfit/sidewinder.png
+share/games/endless-sky/images/outfit/slicer turret.png
+share/games/endless-sky/images/outfit/slicer.png
+share/games/endless-sky/images/outfit/small atomic steering hai.png
+share/games/endless-sky/images/outfit/small atomic steering.png
+share/games/endless-sky/images/outfit/small atomic thruster hai.png
+share/games/endless-sky/images/outfit/small atomic thruster.png
+share/games/endless-sky/images/outfit/small battery hai.png
+share/games/endless-sky/images/outfit/small battery module.png
+share/games/endless-sky/images/outfit/small battery.png
+share/games/endless-sky/images/outfit/small biochemical.png
+share/games/endless-sky/images/outfit/small bunk room.png
+share/games/endless-sky/images/outfit/small collector module.png
+share/games/endless-sky/images/outfit/small fuel cell.png
+share/games/endless-sky/images/outfit/small heat shunt.png
+share/games/endless-sky/images/outfit/small ion steering.png
+share/games/endless-sky/images/outfit/small ion thruster.png
+share/games/endless-sky/images/outfit/small korath generator.png
+share/games/endless-sky/images/outfit/small korath steering.png
+share/games/endless-sky/images/outfit/small korath thruster.png
+share/games/endless-sky/images/outfit/small nucleovoltaic.png
+share/games/endless-sky/images/outfit/small photovoltaic.png
+share/games/endless-sky/images/outfit/small plasma steering.png
+share/games/endless-sky/images/outfit/small plasma thruster.png
+share/games/endless-sky/images/outfit/small quarg steering.png
+share/games/endless-sky/images/outfit/small quarg thruster.png
+share/games/endless-sky/images/outfit/small radar jammer.png
+share/games/endless-sky/images/outfit/small radiant steering.png
+share/games/endless-sky/images/outfit/small radiant thruster.png
+share/games/endless-sky/images/outfit/small radiothermal.png
+share/games/endless-sky/images/outfit/small reactor module.png
+share/games/endless-sky/images/outfit/small regenerator hai.png
+share/games/endless-sky/images/outfit/small regenerator.png
+share/games/endless-sky/images/outfit/small remnant steering.png
+share/games/endless-sky/images/outfit/small remnant thruster.png
+share/games/endless-sky/images/outfit/small repair module.png
+share/games/endless-sky/images/outfit/small shield module.png
+share/games/endless-sky/images/outfit/small shield.png
+share/games/endless-sky/images/outfit/small steering module.png
+share/games/endless-sky/images/outfit/small systems core.png
+share/games/endless-sky/images/outfit/small thermionic.png
+share/games/endless-sky/images/outfit/small thrust module.png
+share/games/endless-sky/images/outfit/stack core.png
+share/games/endless-sky/images/outfit/sunbeam turret.png
+share/games/endless-sky/images/outfit/sunbeam.png
+share/games/endless-sky/images/outfit/supercapacitor.png
+share/games/endless-sky/images/outfit/surveillance pod.png
+share/games/endless-sky/images/outfit/t3 anti missile.png
+share/games/endless-sky/images/outfit/tactical scanner.png
+share/games/endless-sky/images/outfit/thermoelectric cooler.png
+share/games/endless-sky/images/outfit/thrasher cannon.png
+share/games/endless-sky/images/outfit/thrasher turret.png
+share/games/endless-sky/images/outfit/thunderhead launcher.png
+share/games/endless-sky/images/outfit/thunderhead storage.png
+share/games/endless-sky/images/outfit/thunderhead.png
+share/games/endless-sky/images/outfit/tiny atomic engines hai.png
+share/games/endless-sky/images/outfit/tiny atomic steering hai.png
+share/games/endless-sky/images/outfit/tiny atomic steering.png
+share/games/endless-sky/images/outfit/tiny atomic thruster hai.png
+share/games/endless-sky/images/outfit/tiny atomic thruster.png
+share/games/endless-sky/images/outfit/tiny battery hai.png
+share/games/endless-sky/images/outfit/tiny battery.png
+share/games/endless-sky/images/outfit/tiny fuel cell.png
+share/games/endless-sky/images/outfit/tiny ion engines.png
+share/games/endless-sky/images/outfit/tiny ion steering.png
+share/games/endless-sky/images/outfit/tiny ion thruster.png
+share/games/endless-sky/images/outfit/tiny korath steering.png
+share/games/endless-sky/images/outfit/tiny korath thruster.png
+share/games/endless-sky/images/outfit/tiny photovoltaic.png
+share/games/endless-sky/images/outfit/tiny plasma steering.png
+share/games/endless-sky/images/outfit/tiny plasma thruster.png
+share/games/endless-sky/images/outfit/tiny radiant steering.png
+share/games/endless-sky/images/outfit/tiny radiant thruster.png
+share/games/endless-sky/images/outfit/tiny remnant engine.png
+share/games/endless-sky/images/outfit/tiny shield.png
+share/games/endless-sky/images/outfit/torpedo launcher.png
+share/games/endless-sky/images/outfit/torpedo storage.png
+share/games/endless-sky/images/outfit/torpedo.png
+share/games/endless-sky/images/outfit/triple plasma core.png
+share/games/endless-sky/images/outfit/typhoon launcher.png
+share/games/endless-sky/images/outfit/typhoon storage.png
+share/games/endless-sky/images/outfit/typhoon.png
+share/games/endless-sky/images/outfit/unknown.png
+share/games/endless-sky/images/outfit/void rifle.png
+share/games/endless-sky/images/outfit/wanderer anti-missile.png
+share/games/endless-sky/images/outfit/wanderer heat sink.png
+share/games/endless-sky/images/outfit/wanderer license.png
+share/games/endless-sky/images/outfit/wanderer military license.png
+share/games/endless-sky/images/outfit/wanderer outfits license.png
+share/games/endless-sky/images/outfit/wanderer ramscoop.png
+share/games/endless-sky/images/outfit/warder.png
+share/games/endless-sky/images/outfit/water cooling.png
+share/games/endless-sky/images/outfit/white sun.png
+share/games/endless-sky/images/outfit/yellow sun.png
+share/games/endless-sky/images/planet/asteroid base.png
+share/games/endless-sky/images/planet/browndwarf-l-rouge.png
+share/games/endless-sky/images/planet/browndwarf-l.png
+share/games/endless-sky/images/planet/browndwarf-t-rouge.png
+share/games/endless-sky/images/planet/browndwarf-t.png
+share/games/endless-sky/images/planet/browndwarf-y-rouge.png
+share/games/endless-sky/images/planet/browndwarf-y.png
+share/games/endless-sky/images/planet/callisto-b.png
+share/games/endless-sky/images/planet/callisto.png
+share/games/endless-sky/images/planet/cloud0-b.png
+share/games/endless-sky/images/planet/cloud0.png
+share/games/endless-sky/images/planet/cloud1-b.png
+share/games/endless-sky/images/planet/cloud1.png
+share/games/endless-sky/images/planet/cloud2-b.png
+share/games/endless-sky/images/planet/cloud2.png
+share/games/endless-sky/images/planet/cloud3-b.png
+share/games/endless-sky/images/planet/cloud3.png
+share/games/endless-sky/images/planet/cloud4-b.png
+share/games/endless-sky/images/planet/cloud4.png
+share/games/endless-sky/images/planet/cloud5-b.png
+share/games/endless-sky/images/planet/cloud5.png
+share/games/endless-sky/images/planet/cloud6-b.png
+share/games/endless-sky/images/planet/cloud6.png
+share/games/endless-sky/images/planet/cloud7-b.png
+share/games/endless-sky/images/planet/cloud7.png
+share/games/endless-sky/images/planet/cloud8-b.png
+share/games/endless-sky/images/planet/cloud8.png
+share/games/endless-sky/images/planet/desert0-b.png
+share/games/endless-sky/images/planet/desert0.png
+share/games/endless-sky/images/planet/desert1-b.png
+share/games/endless-sky/images/planet/desert1.png
+share/games/endless-sky/images/planet/desert10-b.png
+share/games/endless-sky/images/planet/desert10.png
+share/games/endless-sky/images/planet/desert2-b.png
+share/games/endless-sky/images/planet/desert2.png
+share/games/endless-sky/images/planet/desert3-b.png
+share/games/endless-sky/images/planet/desert3.png
+share/games/endless-sky/images/planet/desert4-b.png
+share/games/endless-sky/images/planet/desert4.png
+share/games/endless-sky/images/planet/desert5-b.png
+share/games/endless-sky/images/planet/desert5.png
+share/games/endless-sky/images/planet/desert6-b.png
+share/games/endless-sky/images/planet/desert6.png
+share/games/endless-sky/images/planet/desert7-b.png
+share/games/endless-sky/images/planet/desert7.png
+share/games/endless-sky/images/planet/desert8-b.png
+share/games/endless-sky/images/planet/desert8.png
+share/games/endless-sky/images/planet/desert9-b.png
+share/games/endless-sky/images/planet/desert9.png
+share/games/endless-sky/images/planet/dust0-b.png
+share/games/endless-sky/images/planet/dust0.png
+share/games/endless-sky/images/planet/dust1-b.png
+share/games/endless-sky/images/planet/dust1.png
+share/games/endless-sky/images/planet/dust2-b.png
+share/games/endless-sky/images/planet/dust2.png
+share/games/endless-sky/images/planet/dust3-b.png
+share/games/endless-sky/images/planet/dust3.png
+share/games/endless-sky/images/planet/dust4-b.png
+share/games/endless-sky/images/planet/dust4.png
+share/games/endless-sky/images/planet/dust5-b.png
+share/games/endless-sky/images/planet/dust5.png
+share/games/endless-sky/images/planet/dust6-b.png
+share/games/endless-sky/images/planet/dust6.png
+share/games/endless-sky/images/planet/dust7-b.png
+share/games/endless-sky/images/planet/dust7.png
+share/games/endless-sky/images/planet/dyson1.png
+share/games/endless-sky/images/planet/dyson2.png
+share/games/endless-sky/images/planet/dyson3.png
+share/games/endless-sky/images/planet/earth-b.png
+share/games/endless-sky/images/planet/earth.png
+share/games/endless-sky/images/planet/europa-b.png
+share/games/endless-sky/images/planet/europa.png
+share/games/endless-sky/images/planet/fog0-b.png
+share/games/endless-sky/images/planet/fog0.png
+share/games/endless-sky/images/planet/forest0-b.png
+share/games/endless-sky/images/planet/forest0.png
+share/games/endless-sky/images/planet/forest1-b.png
+share/games/endless-sky/images/planet/forest1.png
+share/games/endless-sky/images/planet/forest2-b.png
+share/games/endless-sky/images/planet/forest2.png
+share/games/endless-sky/images/planet/forest3-b.png
+share/games/endless-sky/images/planet/forest3.png
+share/games/endless-sky/images/planet/forest4-b.png
+share/games/endless-sky/images/planet/forest4.png
+share/games/endless-sky/images/planet/forest5-b.png
+share/games/endless-sky/images/planet/forest5.png
+share/games/endless-sky/images/planet/forest6-b.png
+share/games/endless-sky/images/planet/forest6.png
+share/games/endless-sky/images/planet/ganymede-b.png
+share/games/endless-sky/images/planet/ganymede.png
+share/games/endless-sky/images/planet/gas0-b.png
+share/games/endless-sky/images/planet/gas0.png
+share/games/endless-sky/images/planet/gas1-b.png
+share/games/endless-sky/images/planet/gas1.png
+share/games/endless-sky/images/planet/gas10-b.png
+share/games/endless-sky/images/planet/gas10.png
+share/games/endless-sky/images/planet/gas11-b.png
+share/games/endless-sky/images/planet/gas11.png
+share/games/endless-sky/images/planet/gas12-b.png
+share/games/endless-sky/images/planet/gas12.png
+share/games/endless-sky/images/planet/gas13-b.png
+share/games/endless-sky/images/planet/gas13.png
+share/games/endless-sky/images/planet/gas14-b.png
+share/games/endless-sky/images/planet/gas14.png
+share/games/endless-sky/images/planet/gas15-b.png
+share/games/endless-sky/images/planet/gas15.png
+share/games/endless-sky/images/planet/gas16-b.png
+share/games/endless-sky/images/planet/gas16.png
+share/games/endless-sky/images/planet/gas17-b.png
+share/games/endless-sky/images/planet/gas17.png
+share/games/endless-sky/images/planet/gas2-b.png
+share/games/endless-sky/images/planet/gas2.png
+share/games/endless-sky/images/planet/gas3-b.png
+share/games/endless-sky/images/planet/gas3.png
+share/games/endless-sky/images/planet/gas4-b.png
+share/games/endless-sky/images/planet/gas4.png
+share/games/endless-sky/images/planet/gas5-b.png
+share/games/endless-sky/images/planet/gas5.png
+share/games/endless-sky/images/planet/gas6-b.png
+share/games/endless-sky/images/planet/gas6.png
+share/games/endless-sky/images/planet/gas7-b.png
+share/games/endless-sky/images/planet/gas7.png
+share/games/endless-sky/images/planet/gas8-b.png
+share/games/endless-sky/images/planet/gas8.png
+share/games/endless-sky/images/planet/gas9-b.png
+share/games/endless-sky/images/planet/gas9.png
+share/games/endless-sky/images/planet/ice0-b.png
+share/games/endless-sky/images/planet/ice0.png
+share/games/endless-sky/images/planet/ice1-b.png
+share/games/endless-sky/images/planet/ice1.png
+share/games/endless-sky/images/planet/ice2-b.png
+share/games/endless-sky/images/planet/ice2.png
+share/games/endless-sky/images/planet/ice3-b.png
+share/games/endless-sky/images/planet/ice3.png
+share/games/endless-sky/images/planet/ice4-b.png
+share/games/endless-sky/images/planet/ice4.png
+share/games/endless-sky/images/planet/ice5-b.png
+share/games/endless-sky/images/planet/ice5.png
+share/games/endless-sky/images/planet/ice6-b.png
+share/games/endless-sky/images/planet/ice6.png
+share/games/endless-sky/images/planet/ice7-b.png
+share/games/endless-sky/images/planet/ice7.png
+share/games/endless-sky/images/planet/ice8-b.png
+share/games/endless-sky/images/planet/ice8.png
+share/games/endless-sky/images/planet/io-b.png
+share/games/endless-sky/images/planet/io.png
+share/games/endless-sky/images/planet/jupiter-b.png
+share/games/endless-sky/images/planet/jupiter.png
+share/games/endless-sky/images/planet/lava0-b.png
+share/games/endless-sky/images/planet/lava0.png
+share/games/endless-sky/images/planet/lava1-b.png
+share/games/endless-sky/images/planet/lava1.png
+share/games/endless-sky/images/planet/lava2-b.png
+share/games/endless-sky/images/planet/lava2.png
+share/games/endless-sky/images/planet/lava3-b.png
+share/games/endless-sky/images/planet/lava3.png
+share/games/endless-sky/images/planet/lava4-b.png
+share/games/endless-sky/images/planet/lava4.png
+share/games/endless-sky/images/planet/lava5-b.png
+share/games/endless-sky/images/planet/lava5.png
+share/games/endless-sky/images/planet/lava6-b.png
+share/games/endless-sky/images/planet/lava6.png
+share/games/endless-sky/images/planet/lava7-b.png
+share/games/endless-sky/images/planet/lava7.png
+share/games/endless-sky/images/planet/luna-b.png
+share/games/endless-sky/images/planet/luna.png
+share/games/endless-sky/images/planet/mars-b.png
+share/games/endless-sky/images/planet/mars.png
+share/games/endless-sky/images/planet/mercury-b.png
+share/games/endless-sky/images/planet/mercury.png
+share/games/endless-sky/images/planet/miranda-b.png
+share/games/endless-sky/images/planet/miranda.png
+share/games/endless-sky/images/planet/neptune-b.png
+share/games/endless-sky/images/planet/neptune.png
+share/games/endless-sky/images/planet/oberon-b.png
+share/games/endless-sky/images/planet/oberon.png
+share/games/endless-sky/images/planet/ocean0-b.png
+share/games/endless-sky/images/planet/ocean0.png
+share/games/endless-sky/images/planet/ocean1-b.png
+share/games/endless-sky/images/planet/ocean1.png
+share/games/endless-sky/images/planet/ocean2-b.png
+share/games/endless-sky/images/planet/ocean2.png
+share/games/endless-sky/images/planet/ocean3-b.png
+share/games/endless-sky/images/planet/ocean3.png
+share/games/endless-sky/images/planet/ocean4-b.png
+share/games/endless-sky/images/planet/ocean4.png
+share/games/endless-sky/images/planet/ocean5-b.png
+share/games/endless-sky/images/planet/ocean5.png
+share/games/endless-sky/images/planet/ocean6-b.png
+share/games/endless-sky/images/planet/ocean6.png
+share/games/endless-sky/images/planet/ocean7-b.png
+share/games/endless-sky/images/planet/ocean7.png
+share/games/endless-sky/images/planet/ocean8-b.png
+share/games/endless-sky/images/planet/ocean8.png
+share/games/endless-sky/images/planet/ocean9-b.png
+share/games/endless-sky/images/planet/ocean9.png
+share/games/endless-sky/images/planet/panels1.png
+share/games/endless-sky/images/planet/panels2.png
+share/games/endless-sky/images/planet/panels3.png
+share/games/endless-sky/images/planet/panels4.png
+share/games/endless-sky/images/planet/panels5.png
+share/games/endless-sky/images/planet/rhea-b.png
+share/games/endless-sky/images/planet/rhea.png
+share/games/endless-sky/images/planet/ringworld left.png
+share/games/endless-sky/images/planet/ringworld right.png
+share/games/endless-sky/images/planet/ringworld.png
+share/games/endless-sky/images/planet/rock0-b.png
+share/games/endless-sky/images/planet/rock0.png
+share/games/endless-sky/images/planet/rock1-b.png
+share/games/endless-sky/images/planet/rock1.png
+share/games/endless-sky/images/planet/rock10-b.png
+share/games/endless-sky/images/planet/rock10.png
+share/games/endless-sky/images/planet/rock11-b.png
+share/games/endless-sky/images/planet/rock11.png
+share/games/endless-sky/images/planet/rock12-b.png
+share/games/endless-sky/images/planet/rock12.png
+share/games/endless-sky/images/planet/rock13-b.png
+share/games/endless-sky/images/planet/rock13.png
+share/games/endless-sky/images/planet/rock14-b.png
+share/games/endless-sky/images/planet/rock14.png
+share/games/endless-sky/images/planet/rock15-b.png
+share/games/endless-sky/images/planet/rock15.png
+share/games/endless-sky/images/planet/rock16-b.png
+share/games/endless-sky/images/planet/rock16.png
+share/games/endless-sky/images/planet/rock17-b.png
+share/games/endless-sky/images/planet/rock17.png
+share/games/endless-sky/images/planet/rock18-b.png
+share/games/endless-sky/images/planet/rock18.png
+share/games/endless-sky/images/planet/rock19-b.png
+share/games/endless-sky/images/planet/rock19.png
+share/games/endless-sky/images/planet/rock2-b.png
+share/games/endless-sky/images/planet/rock2.png
+share/games/endless-sky/images/planet/rock3-b.png
+share/games/endless-sky/images/planet/rock3.png
+share/games/endless-sky/images/planet/rock4-b.png
+share/games/endless-sky/images/planet/rock4.png
+share/games/endless-sky/images/planet/rock5-b.png
+share/games/endless-sky/images/planet/rock5.png
+share/games/endless-sky/images/planet/rock6-b.png
+share/games/endless-sky/images/planet/rock6.png
+share/games/endless-sky/images/planet/rock7-b.png
+share/games/endless-sky/images/planet/rock7.png
+share/games/endless-sky/images/planet/rock8-b.png
+share/games/endless-sky/images/planet/rock8.png
+share/games/endless-sky/images/planet/rock9-b.png
+share/games/endless-sky/images/planet/rock9.png
+share/games/endless-sky/images/planet/station0.png
+share/games/endless-sky/images/planet/station1.png
+share/games/endless-sky/images/planet/station10.png
+share/games/endless-sky/images/planet/station11.png
+share/games/endless-sky/images/planet/station12.png
+share/games/endless-sky/images/planet/station13.png
+share/games/endless-sky/images/planet/station14.png
+share/games/endless-sky/images/planet/station15.png
+share/games/endless-sky/images/planet/station16.png
+share/games/endless-sky/images/planet/station17.png
+share/games/endless-sky/images/planet/station1b.png
+share/games/endless-sky/images/planet/station1c.png
+share/games/endless-sky/images/planet/station1k.png
+share/games/endless-sky/images/planet/station1kd.png
+share/games/endless-sky/images/planet/station2.png
+share/games/endless-sky/images/planet/station2b.png
+share/games/endless-sky/images/planet/station2c.png
+share/games/endless-sky/images/planet/station2k.png
+share/games/endless-sky/images/planet/station2kd.png
+share/games/endless-sky/images/planet/station3.png
+share/games/endless-sky/images/planet/station3b.png
+share/games/endless-sky/images/planet/station3bd.png
+share/games/endless-sky/images/planet/station3c.png
+share/games/endless-sky/images/planet/station3k.png
+share/games/endless-sky/images/planet/station3kd.png
+share/games/endless-sky/images/planet/station4.png
+share/games/endless-sky/images/planet/station5.png
+share/games/endless-sky/images/planet/station6.png
+share/games/endless-sky/images/planet/station7.png
+share/games/endless-sky/images/planet/station8.png
+share/games/endless-sky/images/planet/station9.png
+share/games/endless-sky/images/planet/tethys-b.png
+share/games/endless-sky/images/planet/tethys.png
+share/games/endless-sky/images/planet/titan-b.png
+share/games/endless-sky/images/planet/titan.png
+share/games/endless-sky/images/planet/uranus-b.png
+share/games/endless-sky/images/planet/uranus.png
+share/games/endless-sky/images/planet/venus-b.png
+share/games/endless-sky/images/planet/venus.png
+share/games/endless-sky/images/planet/water0-b.png
+share/games/endless-sky/images/planet/water0.png
+share/games/endless-sky/images/planet/water1-b.png
+share/games/endless-sky/images/planet/water1.png
+share/games/endless-sky/images/planet/wisp.png
+share/games/endless-sky/images/planet/wormhole-red.png
+share/games/endless-sky/images/planet/wormhole.png
+share/games/endless-sky/images/planet/zenith cold.png
+share/games/endless-sky/images/planet/zenith hot.png
+share/games/endless-sky/images/portrait/hai00.png
+share/games/endless-sky/images/portrait/human00.png
+share/games/endless-sky/images/portrait/human01.png
+share/games/endless-sky/images/portrait/human02.png
+share/games/endless-sky/images/portrait/human03.png
+share/games/endless-sky/images/portrait/human04.png
+share/games/endless-sky/images/portrait/human05.png
+share/games/endless-sky/images/portrait/human06.png
+share/games/endless-sky/images/portrait/human07.png
+share/games/endless-sky/images/portrait/human08.png
+share/games/endless-sky/images/portrait/human09.png
+share/games/endless-sky/images/portrait/human10.png
+share/games/endless-sky/images/portrait/human100.png
+share/games/endless-sky/images/portrait/human101.png
+share/games/endless-sky/images/portrait/human102.png
+share/games/endless-sky/images/portrait/human103.png
+share/games/endless-sky/images/portrait/human104.png
+share/games/endless-sky/images/portrait/human105.png
+share/games/endless-sky/images/portrait/human106.png
+share/games/endless-sky/images/portrait/human107.png
+share/games/endless-sky/images/portrait/human108.png
+share/games/endless-sky/images/portrait/human109.png
+share/games/endless-sky/images/portrait/human11.png
+share/games/endless-sky/images/portrait/human110.png
+share/games/endless-sky/images/portrait/human111.png
+share/games/endless-sky/images/portrait/human112.png
+share/games/endless-sky/images/portrait/human113.png
+share/games/endless-sky/images/portrait/human114.png
+share/games/endless-sky/images/portrait/human115.png
+share/games/endless-sky/images/portrait/human116.png
+share/games/endless-sky/images/portrait/human117.png
+share/games/endless-sky/images/portrait/human118.png
+share/games/endless-sky/images/portrait/human119.png
+share/games/endless-sky/images/portrait/human12.png
+share/games/endless-sky/images/portrait/human120.png
+share/games/endless-sky/images/portrait/human121.png
+share/games/endless-sky/images/portrait/human122.png
+share/games/endless-sky/images/portrait/human123.png
+share/games/endless-sky/images/portrait/human124.png
+share/games/endless-sky/images/portrait/human125.png
+share/games/endless-sky/images/portrait/human126.png
+share/games/endless-sky/images/portrait/human127.png
+share/games/endless-sky/images/portrait/human128.png
+share/games/endless-sky/images/portrait/human13.png
+share/games/endless-sky/images/portrait/human14.png
+share/games/endless-sky/images/portrait/human15.png
+share/games/endless-sky/images/portrait/human16.png
+share/games/endless-sky/images/portrait/human17.png
+share/games/endless-sky/images/portrait/human18.png
+share/games/endless-sky/images/portrait/human19.png
+share/games/endless-sky/images/portrait/human20.png
+share/games/endless-sky/images/portrait/human21.png
+share/games/endless-sky/images/portrait/human22.png
+share/games/endless-sky/images/portrait/human23.png
+share/games/endless-sky/images/portrait/human24.png
+share/games/endless-sky/images/portrait/human25.png
+share/games/endless-sky/images/portrait/human26.png
+share/games/endless-sky/images/portrait/human27.png
+share/games/endless-sky/images/portrait/human28.png
+share/games/endless-sky/images/portrait/human29.png
+share/games/endless-sky/images/portrait/human30.png
+share/games/endless-sky/images/portrait/human31.png
+share/games/endless-sky/images/portrait/human32.png
+share/games/endless-sky/images/portrait/human33.png
+share/games/endless-sky/images/portrait/human34.png
+share/games/endless-sky/images/portrait/human35.png
+share/games/endless-sky/images/portrait/human36.png
+share/games/endless-sky/images/portrait/human37.png
+share/games/endless-sky/images/portrait/human38.png
+share/games/endless-sky/images/portrait/human39.png
+share/games/endless-sky/images/portrait/human40.png
+share/games/endless-sky/images/portrait/human41.png
+share/games/endless-sky/images/portrait/human42.png
+share/games/endless-sky/images/portrait/human43.png
+share/games/endless-sky/images/portrait/human44.png
+share/games/endless-sky/images/portrait/human45.png
+share/games/endless-sky/images/portrait/human46.png
+share/games/endless-sky/images/portrait/human47.png
+share/games/endless-sky/images/portrait/human48.png
+share/games/endless-sky/images/portrait/human49.png
+share/games/endless-sky/images/portrait/human50.png
+share/games/endless-sky/images/portrait/human51.png
+share/games/endless-sky/images/portrait/human52.png
+share/games/endless-sky/images/portrait/human53.png
+share/games/endless-sky/images/portrait/human54.png
+share/games/endless-sky/images/portrait/human55.png
+share/games/endless-sky/images/portrait/human56.png
+share/games/endless-sky/images/portrait/human57.png
+share/games/endless-sky/images/portrait/human58.png
+share/games/endless-sky/images/portrait/human59.png
+share/games/endless-sky/images/portrait/human60.png
+share/games/endless-sky/images/portrait/human61.png
+share/games/endless-sky/images/portrait/human62.png
+share/games/endless-sky/images/portrait/human63.png
+share/games/endless-sky/images/portrait/human64.png
+share/games/endless-sky/images/portrait/human65.png
+share/games/endless-sky/images/portrait/human66.png
+share/games/endless-sky/images/portrait/human67.png
+share/games/endless-sky/images/portrait/human68.png
+share/games/endless-sky/images/portrait/human69.png
+share/games/endless-sky/images/portrait/human70.png
+share/games/endless-sky/images/portrait/human71.png
+share/games/endless-sky/images/portrait/human72.png
+share/games/endless-sky/images/portrait/human73.png
+share/games/endless-sky/images/portrait/human74.png
+share/games/endless-sky/images/portrait/human75.png
+share/games/endless-sky/images/portrait/human76.png
+share/games/endless-sky/images/portrait/human77.png
+share/games/endless-sky/images/portrait/human78.png
+share/games/endless-sky/images/portrait/human79.png
+share/games/endless-sky/images/portrait/human80.png
+share/games/endless-sky/images/portrait/human81.png
+share/games/endless-sky/images/portrait/human82.png
+share/games/endless-sky/images/portrait/human83.png
+share/games/endless-sky/images/portrait/human84.png
+share/games/endless-sky/images/portrait/human85.png
+share/games/endless-sky/images/portrait/human86.png
+share/games/endless-sky/images/portrait/human87.png
+share/games/endless-sky/images/portrait/human88.png
+share/games/endless-sky/images/portrait/human89.png
+share/games/endless-sky/images/portrait/human90.png
+share/games/endless-sky/images/portrait/human91.png
+share/games/endless-sky/images/portrait/human92.png
+share/games/endless-sky/images/portrait/human93.png
+share/games/endless-sky/images/portrait/human94.png
+share/games/endless-sky/images/portrait/human95.png
+share/games/endless-sky/images/portrait/human96.png
+share/games/endless-sky/images/portrait/human97.png
+share/games/endless-sky/images/portrait/human98.png
+share/games/endless-sky/images/portrait/human99.png
+share/games/endless-sky/images/portrait/korath00.png
+share/games/endless-sky/images/portrait/quarg00.png
+share/games/endless-sky/images/portrait/wanderer00.png
+share/games/endless-sky/images/projectile/2x electron+0.png
+share/games/endless-sky/images/projectile/2x electron+1.png
+share/games/endless-sky/images/projectile/2x electron+2.png
+share/games/endless-sky/images/projectile/2x heavy laser+0.png
+share/games/endless-sky/images/projectile/2x heavy laser+1.png
+share/games/endless-sky/images/projectile/2x laser+0.png
+share/games/endless-sky/images/projectile/2x laser+1.png
+share/games/endless-sky/images/projectile/2x sunbeam+0.png
+share/games/endless-sky/images/projectile/2x sunbeam+1.png
+share/games/endless-sky/images/projectile/2x sunbeam+2.png
+share/games/endless-sky/images/projectile/2x sunbeam+3.png
+share/games/endless-sky/images/projectile/annihilator+0.png
+share/games/endless-sky/images/projectile/annihilator+1.png
+share/games/endless-sky/images/projectile/annihilator+2.png
+share/games/endless-sky/images/projectile/attractor+0.png
+share/games/endless-sky/images/projectile/attractor+1.png
+share/games/endless-sky/images/projectile/attractor+2.png
+share/games/endless-sky/images/projectile/banisher~0.png
+share/games/endless-sky/images/projectile/banisher~1.png
+share/games/endless-sky/images/projectile/banisher~2.png
+share/games/endless-sky/images/projectile/blaster+.png
+share/games/endless-sky/images/projectile/bombardment~0.png
+share/games/endless-sky/images/projectile/bombardment~1.png
+share/games/endless-sky/images/projectile/bombardment~2.png
+share/games/endless-sky/images/projectile/bombardment~3.png
+share/games/endless-sky/images/projectile/bombardment~4.png
+share/games/endless-sky/images/projectile/bombardment~5.png
+share/games/endless-sky/images/projectile/bombardment~6.png
+share/games/endless-sky/images/projectile/bombardment~7.png
+share/games/endless-sky/images/projectile/bombardment~8.png
+share/games/endless-sky/images/projectile/bullet-0.png
+share/games/endless-sky/images/projectile/bullet-1.png
+share/games/endless-sky/images/projectile/detainer+0.png
+share/games/endless-sky/images/projectile/detainer+1.png
+share/games/endless-sky/images/projectile/detainer+2.png
+share/games/endless-sky/images/projectile/disruptor+0.png
+share/games/endless-sky/images/projectile/disruptor+1.png
+share/games/endless-sky/images/projectile/disruptor+2.png
+share/games/endless-sky/images/projectile/disruptor+3.png
+share/games/endless-sky/images/projectile/disruptor+4.png
+share/games/endless-sky/images/projectile/disruptor+5.png
+share/games/endless-sky/images/projectile/drak bolt+0.png
+share/games/endless-sky/images/projectile/drak bolt+1.png
+share/games/endless-sky/images/projectile/drak bolt+2.png
+share/games/endless-sky/images/projectile/drak bolt+3.png
+share/games/endless-sky/images/projectile/drak bolt+4.png
+share/games/endless-sky/images/projectile/electron+0.png
+share/games/endless-sky/images/projectile/electron+1.png
+share/games/endless-sky/images/projectile/electron+2.png
+share/games/endless-sky/images/projectile/emp torpedo-0.png
+share/games/endless-sky/images/projectile/emp torpedo-1.png
+share/games/endless-sky/images/projectile/emp torpedo-2.png
+share/games/endless-sky/images/projectile/emp torpedo-3.png
+share/games/endless-sky/images/projectile/finisher activating-0.png
+share/games/endless-sky/images/projectile/finisher activating-1.png
+share/games/endless-sky/images/projectile/finisher-0.png
+share/games/endless-sky/images/projectile/finisher-1.png
+share/games/endless-sky/images/projectile/finisher-2.png
+share/games/endless-sky/images/projectile/finisher-3.png
+share/games/endless-sky/images/projectile/fire-lance+0.png
+share/games/endless-sky/images/projectile/fire-lance+1.png
+share/games/endless-sky/images/projectile/fire-lance+2.png
+share/games/endless-sky/images/projectile/fire-lance+3.png
+share/games/endless-sky/images/projectile/flamethrower+0.png
+share/games/endless-sky/images/projectile/flamethrower+1.png
+share/games/endless-sky/images/projectile/flamethrower+2.png
+share/games/endless-sky/images/projectile/flamethrower+3.png
+share/games/endless-sky/images/projectile/grab-strike~00.png
+share/games/endless-sky/images/projectile/grab-strike~01.png
+share/games/endless-sky/images/projectile/grab-strike~02.png
+share/games/endless-sky/images/projectile/grab-strike~03.png
+share/games/endless-sky/images/projectile/grab-strike~04.png
+share/games/endless-sky/images/projectile/grab-strike~05.png
+share/games/endless-sky/images/projectile/grab-strike~06.png
+share/games/endless-sky/images/projectile/grab-strike~07.png
+share/games/endless-sky/images/projectile/grab-strike~08.png
+share/games/endless-sky/images/projectile/grab-strike~09.png
+share/games/endless-sky/images/projectile/grab-strike~10.png
+share/games/endless-sky/images/projectile/heavy laser+0.png
+share/games/endless-sky/images/projectile/heavy laser+1.png
+share/games/endless-sky/images/projectile/inhibitor+0.png
+share/games/endless-sky/images/projectile/inhibitor+1.png
+share/games/endless-sky/images/projectile/inhibitor+2.png
+share/games/endless-sky/images/projectile/inhibitor+3.png
+share/games/endless-sky/images/projectile/inhibitor+4.png
+share/games/endless-sky/images/projectile/ion bolt~0.png
+share/games/endless-sky/images/projectile/ion bolt~1.png
+share/games/endless-sky/images/projectile/ion bolt~2.png
+share/games/endless-sky/images/projectile/ion bolt~3.png
+share/games/endless-sky/images/projectile/ion rain~0.png
+share/games/endless-sky/images/projectile/ion rain~1.png
+share/games/endless-sky/images/projectile/ion rain~2.png
+share/games/endless-sky/images/projectile/ion rain~3.png
+share/games/endless-sky/images/projectile/javelin.png
+share/games/endless-sky/images/projectile/korath mine-0.png
+share/games/endless-sky/images/projectile/korath mine-1.png
+share/games/endless-sky/images/projectile/korath minelayer-0.png
+share/games/endless-sky/images/projectile/korath minelayer-1.png
+share/games/endless-sky/images/projectile/laser+0.png
+share/games/endless-sky/images/projectile/laser+1.png
+share/games/endless-sky/images/projectile/lightning+0.png
+share/games/endless-sky/images/projectile/lightning+1.png
+share/games/endless-sky/images/projectile/lightning+2.png
+share/games/endless-sky/images/projectile/lightning+3.png
+share/games/endless-sky/images/projectile/lightning+4.png
+share/games/endless-sky/images/projectile/lightning+5.png
+share/games/endless-sky/images/projectile/lightning+6.png
+share/games/endless-sky/images/projectile/meteor-0.png
+share/games/endless-sky/images/projectile/meteor-1.png
+share/games/endless-sky/images/projectile/missile-0.png
+share/games/endless-sky/images/projectile/missile-1.png
+share/games/endless-sky/images/projectile/mod blaster+.png
+share/games/endless-sky/images/projectile/moonbeam+0.png
+share/games/endless-sky/images/projectile/moonbeam+1.png
+share/games/endless-sky/images/projectile/moonbeam+2.png
+share/games/endless-sky/images/projectile/particle beam+.png
+share/games/endless-sky/images/projectile/piercer-0.png
+share/games/endless-sky/images/projectile/piercer-1.png
+share/games/endless-sky/images/projectile/piercer-2.png
+share/games/endless-sky/images/projectile/plasma~0.png
+share/games/endless-sky/images/projectile/plasma~1.png
+share/games/endless-sky/images/projectile/plasma~2.png
+share/games/endless-sky/images/projectile/plasma~3.png
+share/games/endless-sky/images/projectile/plasma~4.png
+share/games/endless-sky/images/projectile/plasma~5.png
+share/games/endless-sky/images/projectile/plasma~6.png
+share/games/endless-sky/images/projectile/plasma~7.png
+share/games/endless-sky/images/projectile/proton fragment+0.png
+share/games/endless-sky/images/projectile/proton fragment+1.png
+share/games/endless-sky/images/projectile/proton+.png
+share/games/endless-sky/images/projectile/pulse~.png
+share/games/endless-sky/images/projectile/rail slug.png
+share/games/endless-sky/images/projectile/rainbow~0.png
+share/games/endless-sky/images/projectile/rainbow~1.png
+share/games/endless-sky/images/projectile/rainbow~2.png
+share/games/endless-sky/images/projectile/rainbow~3.png
+share/games/endless-sky/images/projectile/rainbow~4.png
+share/games/endless-sky/images/projectile/rainbow~5.png
+share/games/endless-sky/images/projectile/ravager beam+0.png
+share/games/endless-sky/images/projectile/ravager beam+1.png
+share/games/endless-sky/images/projectile/repeater+0.png
+share/games/endless-sky/images/projectile/repeater+1.png
+share/games/endless-sky/images/projectile/repeater+2.png
+share/games/endless-sky/images/projectile/repeater+3.png
+share/games/endless-sky/images/projectile/repulsor+0.png
+share/games/endless-sky/images/projectile/repulsor+1.png
+share/games/endless-sky/images/projectile/repulsor+2.png
+share/games/endless-sky/images/projectile/rocket-0.png
+share/games/endless-sky/images/projectile/rocket-1.png
+share/games/endless-sky/images/projectile/seeker~0.png
+share/games/endless-sky/images/projectile/seeker~1.png
+share/games/endless-sky/images/projectile/seeker~2.png
+share/games/endless-sky/images/projectile/seeker~3.png
+share/games/endless-sky/images/projectile/seeker~4.png
+share/games/endless-sky/images/projectile/seeker~5.png
+share/games/endless-sky/images/projectile/seeker~6.png
+share/games/endless-sky/images/projectile/seeker~7.png
+share/games/endless-sky/images/projectile/sidewinder-0.png
+share/games/endless-sky/images/projectile/sidewinder-1.png
+share/games/endless-sky/images/projectile/skylance+.png
+share/games/endless-sky/images/projectile/slicer+0.png
+share/games/endless-sky/images/projectile/slicer+1.png
+share/games/endless-sky/images/projectile/sunbeam+0.png
+share/games/endless-sky/images/projectile/sunbeam+1.png
+share/games/endless-sky/images/projectile/sunbeam+2.png
+share/games/endless-sky/images/projectile/sunbeam+3.png
+share/games/endless-sky/images/projectile/thrasher~0.png
+share/games/endless-sky/images/projectile/thrasher~1.png
+share/games/endless-sky/images/projectile/thrasher~2.png
+share/games/endless-sky/images/projectile/thrasher~3.png
+share/games/endless-sky/images/projectile/thrasher~4.png
+share/games/endless-sky/images/projectile/thrasher~5.png
+share/games/endless-sky/images/projectile/thrasher~6.png
+share/games/endless-sky/images/projectile/thrasher~7.png
+share/games/endless-sky/images/projectile/thrasher~8.png
+share/games/endless-sky/images/projectile/thrasher~9.png
+share/games/endless-sky/images/projectile/thunderhead fragment-0.png
+share/games/endless-sky/images/projectile/thunderhead fragment-1.png
+share/games/endless-sky/images/projectile/thunderhead-0.png
+share/games/endless-sky/images/projectile/thunderhead-1.png
+share/games/endless-sky/images/projectile/tinyflare+0.png
+share/games/endless-sky/images/projectile/tinyflare+1.png
+share/games/endless-sky/images/projectile/tinyflare+2.png
+share/games/endless-sky/images/projectile/torpedo~0.png
+share/games/endless-sky/images/projectile/torpedo~1.png
+share/games/endless-sky/images/projectile/torpedo~2.png
+share/games/endless-sky/images/projectile/torpedo~3.png
+share/games/endless-sky/images/projectile/tracker-0.png
+share/games/endless-sky/images/projectile/tracker-1.png
+share/games/endless-sky/images/projectile/tracker-2.png
+share/games/endless-sky/images/projectile/tracker-3.png
+share/games/endless-sky/images/projectile/typhoon~0.png
+share/games/endless-sky/images/projectile/typhoon~1.png
+share/games/endless-sky/images/projectile/typhoon~2.png
+share/games/endless-sky/images/projectile/typhoon~3.png
+share/games/endless-sky/images/scene/army0.jpg
+share/games/endless-sky/images/scene/engine.jpg
+share/games/endless-sky/images/scene/engine2.jpg
+share/games/endless-sky/images/scene/eso0.jpg
+share/games/endless-sky/images/scene/geoscan.jpg
+share/games/endless-sky/images/scene/lobby.jpg
+share/games/endless-sky/images/scene/loc0.jpg
+share/games/endless-sky/images/scene/loc1.jpg
+share/games/endless-sky/images/scene/loc2.jpg
+share/games/endless-sky/images/scene/loc3.jpg
+share/games/endless-sky/images/scene/loc4.jpg
+share/games/endless-sky/images/scene/loc5.jpg
+share/games/endless-sky/images/scene/loc6.jpg
+share/games/endless-sky/images/scene/loc7.jpg
+share/games/endless-sky/images/scene/loc8.jpg
+share/games/endless-sky/images/scene/loc9.jpg
+share/games/endless-sky/images/scene/penguinscene.jpg
+share/games/endless-sky/images/scene/tempest.jpg
+share/games/endless-sky/images/ship/aerie.png
+share/games/endless-sky/images/ship/albatross.png
+share/games/endless-sky/images/ship/arach courier.png
+share/games/endless-sky/images/ship/arach freighter.png
+share/games/endless-sky/images/ship/arach hulk.png
+share/games/endless-sky/images/ship/arach spindle.png
+share/games/endless-sky/images/ship/arach transport.png
+share/games/endless-sky/images/ship/archon b-0.png
+share/games/endless-sky/images/ship/archon b-1.png
+share/games/endless-sky/images/ship/archon c-0.png
+share/games/endless-sky/images/ship/archon c-1.png
+share/games/endless-sky/images/ship/archon-0.png
+share/games/endless-sky/images/ship/archon-1.png
+share/games/endless-sky/images/ship/argosy.png
+share/games/endless-sky/images/ship/arrow.png
+share/games/endless-sky/images/ship/autumn leaf.png
+share/games/endless-sky/images/ship/bactrian.png
+share/games/endless-sky/images/ship/barb.png
+share/games/endless-sky/images/ship/barbp.png
+share/games/endless-sky/images/ship/bastion.png
+share/games/endless-sky/images/ship/behemoth.png
+share/games/endless-sky/images/ship/berserker.png
+share/games/endless-sky/images/ship/blackbird.png
+share/games/endless-sky/images/ship/bounder.png
+share/games/endless-sky/images/ship/boxwing.png
+share/games/endless-sky/images/ship/bulk freighter.png
+share/games/endless-sky/images/ship/carrier.png
+share/games/endless-sky/images/ship/chaser.png
+share/games/endless-sky/images/ship/clipper.png
+share/games/endless-sky/images/ship/cloaked.png
+share/games/endless-sky/images/ship/combat drone.png
+share/games/endless-sky/images/ship/cool breeze.png
+share/games/endless-sky/images/ship/corvette.png
+share/games/endless-sky/images/ship/cruiser.png
+share/games/endless-sky/images/ship/dagger.png
+share/games/endless-sky/images/ship/deep river 0.png
+share/games/endless-sky/images/ship/deep river 1.png
+share/games/endless-sky/images/ship/deep river 2.png
+share/games/endless-sky/images/ship/deep river 3.png
+share/games/endless-sky/images/ship/deep river 4.png
+share/games/endless-sky/images/ship/deep river.png
+share/games/endless-sky/images/ship/derecho.png
+share/games/endless-sky/images/ship/dreadnought.png
+share/games/endless-sky/images/ship/earth shaper.png
+share/games/endless-sky/images/ship/faes'mar.png
+share/games/endless-sky/images/ship/falcon.png
+share/games/endless-sky/images/ship/far lek 14.png
+share/games/endless-sky/images/ship/far osk 27.png
+share/games/endless-sky/images/ship/finch.png
+share/games/endless-sky/images/ship/firebird.png
+share/games/endless-sky/images/ship/flivver.png
+share/games/endless-sky/images/ship/flycatcher.png
+share/games/endless-sky/images/ship/freighter.png
+share/games/endless-sky/images/ship/frigate.png
+share/games/endless-sky/images/ship/fury.png
+share/games/endless-sky/images/ship/gascraft.png
+share/games/endless-sky/images/ship/gull.png
+share/games/endless-sky/images/ship/gunboat.png
+share/games/endless-sky/images/ship/hai aphid.png
+share/games/endless-sky/images/ship/hai centipede.png
+share/games/endless-sky/images/ship/hai flea.png
+share/games/endless-sky/images/ship/hai geocoris.png
+share/games/endless-sky/images/ship/hai grasshopper.png
+share/games/endless-sky/images/ship/hai lightning bug.png
+share/games/endless-sky/images/ship/hai pond strider.png
+share/games/endless-sky/images/ship/hai shield beetle.png
+share/games/endless-sky/images/ship/hai solifuge.png
+share/games/endless-sky/images/ship/hai violin spider.png
+share/games/endless-sky/images/ship/hai water bug.png
+share/games/endless-sky/images/ship/hallucination-0.png
+share/games/endless-sky/images/ship/hallucination-1.png
+share/games/endless-sky/images/ship/hauler i.png
+share/games/endless-sky/images/ship/hauler ii.png
+share/games/endless-sky/images/ship/hauler iii.png
+share/games/endless-sky/images/ship/hawk.png
+share/games/endless-sky/images/ship/headhunter.png
+share/games/endless-sky/images/ship/heavy shuttle.png
+share/games/endless-sky/images/ship/heliarch interdictor.png
+share/games/endless-sky/images/ship/heliarch neutralizer.png
+share/games/endless-sky/images/ship/heliarch punisher.png
+share/games/endless-sky/images/ship/hurricane.png
+share/games/endless-sky/images/ship/ibis.png
+share/games/endless-sky/images/ship/kar ik vot 349.png
+share/games/endless-sky/images/ship/kestrel.png
+share/games/endless-sky/images/ship/kimek briar.png
+share/games/endless-sky/images/ship/kimek spire.png
+share/games/endless-sky/images/ship/kimek thistle.png
+share/games/endless-sky/images/ship/kimek thorn.png
+share/games/endless-sky/images/ship/lampyrid.png
+share/games/endless-sky/images/ship/lance.png
+share/games/endless-sky/images/ship/leviathan.png
+share/games/endless-sky/images/ship/localworldship.png
+share/games/endless-sky/images/ship/maeri'het-00.png
+share/games/endless-sky/images/ship/maeri'het-01.png
+share/games/endless-sky/images/ship/maeri'het-02.png
+share/games/endless-sky/images/ship/maeri'het-03.png
+share/games/endless-sky/images/ship/manta.png
+share/games/endless-sky/images/ship/marrowe.png
+share/games/endless-sky/images/ship/marrows.png
+share/games/endless-sky/images/ship/marroww.png
+share/games/endless-sky/images/ship/mboundere.png
+share/games/endless-sky/images/ship/mbounders.png
+share/games/endless-sky/images/ship/mbounderw.png
+share/games/endless-sky/images/ship/met par tek 53.png
+share/games/endless-sky/images/ship/mfalcone.png
+share/games/endless-sky/images/ship/mfalcons.png
+share/games/endless-sky/images/ship/mfalconw.png
+share/games/endless-sky/images/ship/mfirebirde.png
+share/games/endless-sky/images/ship/mfirebirds.png
+share/games/endless-sky/images/ship/mfirebirdw.png
+share/games/endless-sky/images/ship/mfury.png
+share/games/endless-sky/images/ship/mleviathane.png
+share/games/endless-sky/images/ship/mleviathans.png
+share/games/endless-sky/images/ship/mleviathanw.png
+share/games/endless-sky/images/ship/mmantae.png
+share/games/endless-sky/images/ship/mmantas.png
+share/games/endless-sky/images/ship/mmantaw.png
+share/games/endless-sky/images/ship/model 128.png
+share/games/endless-sky/images/ship/model 16.png
+share/games/endless-sky/images/ship/model 256.png
+share/games/endless-sky/images/ship/model 32.png
+share/games/endless-sky/images/ship/model 512.png
+share/games/endless-sky/images/ship/model 64.png
+share/games/endless-sky/images/ship/model 8.png
+share/games/endless-sky/images/ship/modified argosy.png
+share/games/endless-sky/images/ship/mosprey.png
+share/games/endless-sky/images/ship/mquicksilvere.png
+share/games/endless-sky/images/ship/mquicksilvers.png
+share/games/endless-sky/images/ship/mquicksilverw.png
+share/games/endless-sky/images/ship/mravene.png
+share/games/endless-sky/images/ship/mravens.png
+share/games/endless-sky/images/ship/mravenw.png
+share/games/endless-sky/images/ship/msplintere.png
+share/games/endless-sky/images/ship/msplinters.png
+share/games/endless-sky/images/ship/msplinterw.png
+share/games/endless-sky/images/ship/mule.png
+share/games/endless-sky/images/ship/nest.png
+share/games/endless-sky/images/ship/osprey.png
+share/games/endless-sky/images/ship/pelican.png
+share/games/endless-sky/images/ship/penguin/penguin-00.png
+share/games/endless-sky/images/ship/penguin/penguin-01.png
+share/games/endless-sky/images/ship/penguin/penguin-02.png
+share/games/endless-sky/images/ship/penguin/penguin-03.png
+share/games/endless-sky/images/ship/penguin/penguin-04.png
+share/games/endless-sky/images/ship/penguin/penguin-05.png
+share/games/endless-sky/images/ship/penguin/penguin-06.png
+share/games/endless-sky/images/ship/penguin/penguin-07.png
+share/games/endless-sky/images/ship/penguin/penguin-08.png
+share/games/endless-sky/images/ship/penguin/penguin-09.png
+share/games/endless-sky/images/ship/penguin/penguin-10.png
+share/games/endless-sky/images/ship/penguin/penguin-11.png
+share/games/endless-sky/images/ship/penguin/penguin-12.png
+share/games/endless-sky/images/ship/penguin/penguin-13.png
+share/games/endless-sky/images/ship/penguin/penguin-14.png
+share/games/endless-sky/images/ship/petrel.png
+share/games/endless-sky/images/ship/pointedstick_vanguard.png
+share/games/endless-sky/images/ship/protector.png
+share/games/endless-sky/images/ship/pug arfecta.png
+share/games/endless-sky/images/ship/pug enfolta.png
+share/games/endless-sky/images/ship/pug maboro.png
+share/games/endless-sky/images/ship/pug zibruka.png
+share/games/endless-sky/images/ship/quicksilver.png
+share/games/endless-sky/images/ship/raider.png
+share/games/endless-sky/images/ship/rainmaker.png
+share/games/endless-sky/images/ship/raven.png
+share/games/endless-sky/images/ship/riptide.png
+share/games/endless-sky/images/ship/roost.png
+share/games/endless-sky/images/ship/saryd runabout.png
+share/games/endless-sky/images/ship/saryd sojourner.png
+share/games/endless-sky/images/ship/saryd traveler.png
+share/games/endless-sky/images/ship/saryd visitor.png
+share/games/endless-sky/images/ship/science drone.png
+share/games/endless-sky/images/ship/scout.png
+share/games/endless-sky/images/ship/selii'mar.png
+share/games/endless-sky/images/ship/shuttle=0.png
+share/games/endless-sky/images/ship/shuttle=1.png
+share/games/endless-sky/images/ship/shuttle=2.png
+share/games/endless-sky/images/ship/skein.png
+share/games/endless-sky/images/ship/skylark.png
+share/games/endless-sky/images/ship/sparrow.png
+share/games/endless-sky/images/ship/splinter.png
+share/games/endless-sky/images/ship/star barge.png
+share/games/endless-sky/images/ship/star queen.png
+share/games/endless-sky/images/ship/starling.png
+share/games/endless-sky/images/ship/strong wind.png
+share/games/endless-sky/images/ship/subsidurial.png
+share/games/endless-sky/images/ship/summer leaf.png
+share/games/endless-sky/images/ship/surveillance drone.png
+share/games/endless-sky/images/ship/tek far 109.png
+share/games/endless-sky/images/ship/tek far 71 lek.png
+share/games/endless-sky/images/ship/tek far 78 osk.png
+share/games/endless-sky/images/ship/telis'het.png
+share/games/endless-sky/images/ship/tempest.png
+share/games/endless-sky/images/ship/tern.png
+share/games/endless-sky/images/ship/vanguard.png
+share/games/endless-sky/images/ship/void sprite adult-00.png
+share/games/endless-sky/images/ship/void sprite adult-01.png
+share/games/endless-sky/images/ship/void sprite adult-02.png
+share/games/endless-sky/images/ship/void sprite adult-03.png
+share/games/endless-sky/images/ship/void sprite adult-04.png
+share/games/endless-sky/images/ship/void sprite adult-05.png
+share/games/endless-sky/images/ship/void sprite adult-06.png
+share/games/endless-sky/images/ship/void sprite adult-07.png
+share/games/endless-sky/images/ship/void sprite adult-08.png
+share/games/endless-sky/images/ship/void sprite adult-09.png
+share/games/endless-sky/images/ship/void sprite adult-10.png
+share/games/endless-sky/images/ship/void sprite adult-11.png
+share/games/endless-sky/images/ship/void sprite adult-12.png
+share/games/endless-sky/images/ship/void sprite infant-0.png
+share/games/endless-sky/images/ship/void sprite infant-1.png
+share/games/endless-sky/images/ship/void sprite infant-2.png
+share/games/endless-sky/images/ship/void sprite infant-3.png
+share/games/endless-sky/images/ship/void sprite infant-4.png
+share/games/endless-sky/images/ship/void sprite infant-5.png
+share/games/endless-sky/images/ship/void sprite infant-6.png
+share/games/endless-sky/images/ship/void sprite infant-7.png
+share/games/endless-sky/images/ship/void sprite infant-8.png
+share/games/endless-sky/images/ship/wardragon.png
+share/games/endless-sky/images/ship/wasp.png
+share/games/endless-sky/images/ship/winter gale.png
+share/games/endless-sky/images/ship/world-ship a.png
+share/games/endless-sky/images/ship/world-ship b.png
+share/games/endless-sky/images/ship/world-ship c.png
+share/games/endless-sky/images/star/a0.png
+share/games/endless-sky/images/star/a5.png
+share/games/endless-sky/images/star/b5.png
+share/games/endless-sky/images/star/black-hole+.jpg
+share/games/endless-sky/images/star/black-hole-core.png
+share/games/endless-sky/images/star/f0.png
+share/games/endless-sky/images/star/f5-old.png
+share/games/endless-sky/images/star/f5.png
+share/games/endless-sky/images/star/g0-old.png
+share/games/endless-sky/images/star/g0.png
+share/games/endless-sky/images/star/g5-old.png
+share/games/endless-sky/images/star/g5.png
+share/games/endless-sky/images/star/giant.png
+share/games/endless-sky/images/star/k0-old.png
+share/games/endless-sky/images/star/k0.png
+share/games/endless-sky/images/star/k5-old.png
+share/games/endless-sky/images/star/k5.png
+share/games/endless-sky/images/star/m0.png
+share/games/endless-sky/images/star/m4.png
+share/games/endless-sky/images/star/m8.png
+share/games/endless-sky/images/star/nova+.jpg
+share/games/endless-sky/images/star/wr.png
+share/games/endless-sky/images/thumbnail/aerie.png
+share/games/endless-sky/images/thumbnail/albatross.png
+share/games/endless-sky/images/thumbnail/arach courier.png
+share/games/endless-sky/images/thumbnail/arach freighter.png
+share/games/endless-sky/images/thumbnail/arach hulk.png
+share/games/endless-sky/images/thumbnail/arach spindle.png
+share/games/endless-sky/images/thumbnail/arach transport.png
+share/games/endless-sky/images/thumbnail/archon.png
+share/games/endless-sky/images/thumbnail/argosy.png
+share/games/endless-sky/images/thumbnail/arrow.png
+share/games/endless-sky/images/thumbnail/autumn leaf.png
+share/games/endless-sky/images/thumbnail/bactrian.png
+share/games/endless-sky/images/thumbnail/barb.png
+share/games/endless-sky/images/thumbnail/barbp.png
+share/games/endless-sky/images/thumbnail/bastion.png
+share/games/endless-sky/images/thumbnail/behemoth.png
+share/games/endless-sky/images/thumbnail/berserker.png
+share/games/endless-sky/images/thumbnail/blackbird.png
+share/games/endless-sky/images/thumbnail/bounder.png
+share/games/endless-sky/images/thumbnail/boxwing.png
+share/games/endless-sky/images/thumbnail/bulk freighter.png
+share/games/endless-sky/images/thumbnail/carrier.png
+share/games/endless-sky/images/thumbnail/chaser.png
+share/games/endless-sky/images/thumbnail/clipper.png
+share/games/endless-sky/images/thumbnail/combat drone.png
+share/games/endless-sky/images/thumbnail/cool breeze.png
+share/games/endless-sky/images/thumbnail/corvette.png
+share/games/endless-sky/images/thumbnail/cruiser.png
+share/games/endless-sky/images/thumbnail/dagger.png
+share/games/endless-sky/images/thumbnail/deep river.png
+share/games/endless-sky/images/thumbnail/derecho.png
+share/games/endless-sky/images/thumbnail/dreadnought.png
+share/games/endless-sky/images/thumbnail/earth shaper.png
+share/games/endless-sky/images/thumbnail/faes'mar.png
+share/games/endless-sky/images/thumbnail/falcon.png
+share/games/endless-sky/images/thumbnail/far lek 14.png
+share/games/endless-sky/images/thumbnail/far osk 27.png
+share/games/endless-sky/images/thumbnail/finch.png
+share/games/endless-sky/images/thumbnail/firebird.png
+share/games/endless-sky/images/thumbnail/flivver.png
+share/games/endless-sky/images/thumbnail/flycatcher.png
+share/games/endless-sky/images/thumbnail/freighter.png
+share/games/endless-sky/images/thumbnail/frigate.png
+share/games/endless-sky/images/thumbnail/fury.png
+share/games/endless-sky/images/thumbnail/gascraft.png
+share/games/endless-sky/images/thumbnail/gull.png
+share/games/endless-sky/images/thumbnail/gunboat.png
+share/games/endless-sky/images/thumbnail/hai aphid.png
+share/games/endless-sky/images/thumbnail/hai centipede.png
+share/games/endless-sky/images/thumbnail/hai flea.png
+share/games/endless-sky/images/thumbnail/hai geocoris.png
+share/games/endless-sky/images/thumbnail/hai grasshopper.png
+share/games/endless-sky/images/thumbnail/hai lightning bug.png
+share/games/endless-sky/images/thumbnail/hai pond strider.png
+share/games/endless-sky/images/thumbnail/hai shield beetle.png
+share/games/endless-sky/images/thumbnail/hai solifuge.png
+share/games/endless-sky/images/thumbnail/hai violin spider.png
+share/games/endless-sky/images/thumbnail/hai water bug.png
+share/games/endless-sky/images/thumbnail/hauler i.png
+share/games/endless-sky/images/thumbnail/hauler ii.png
+share/games/endless-sky/images/thumbnail/hauler iii.png
+share/games/endless-sky/images/thumbnail/hawk.png
+share/games/endless-sky/images/thumbnail/headhunter.png
+share/games/endless-sky/images/thumbnail/heavy shuttle.png
+share/games/endless-sky/images/thumbnail/heliarch interdictor.png
+share/games/endless-sky/images/thumbnail/heliarch neutralizer.png
+share/games/endless-sky/images/thumbnail/heliarch punisher.png
+share/games/endless-sky/images/thumbnail/hurricane.png
+share/games/endless-sky/images/thumbnail/ibis.png
+share/games/endless-sky/images/thumbnail/kar ik vot 349.png
+share/games/endless-sky/images/thumbnail/kestrel.png
+share/games/endless-sky/images/thumbnail/kimek briar.png
+share/games/endless-sky/images/thumbnail/kimek spire.png
+share/games/endless-sky/images/thumbnail/kimek thistle.png
+share/games/endless-sky/images/thumbnail/kimek thorn.png
+share/games/endless-sky/images/thumbnail/lampyrid.png
+share/games/endless-sky/images/thumbnail/lance.png
+share/games/endless-sky/images/thumbnail/leviathan.png
+share/games/endless-sky/images/thumbnail/maeri'het.png
+share/games/endless-sky/images/thumbnail/manta.png
+share/games/endless-sky/images/thumbnail/marrowe.png
+share/games/endless-sky/images/thumbnail/marrows.png
+share/games/endless-sky/images/thumbnail/marroww.png
+share/games/endless-sky/images/thumbnail/mboundere.png
+share/games/endless-sky/images/thumbnail/mbounders.png
+share/games/endless-sky/images/thumbnail/mbounderw.png
+share/games/endless-sky/images/thumbnail/met par tek 53.png
+share/games/endless-sky/images/thumbnail/mfalcone.png
+share/games/endless-sky/images/thumbnail/mfalcons.png
+share/games/endless-sky/images/thumbnail/mfalconw.png
+share/games/endless-sky/images/thumbnail/mfirebirde.png
+share/games/endless-sky/images/thumbnail/mfirebirds.png
+share/games/endless-sky/images/thumbnail/mfirebirdw.png
+share/games/endless-sky/images/thumbnail/mfury.png
+share/games/endless-sky/images/thumbnail/mleviathane.png
+share/games/endless-sky/images/thumbnail/mleviathans.png
+share/games/endless-sky/images/thumbnail/mleviathanw.png
+share/games/endless-sky/images/thumbnail/mmantae.png
+share/games/endless-sky/images/thumbnail/mmantas.png
+share/games/endless-sky/images/thumbnail/mmantaw.png
+share/games/endless-sky/images/thumbnail/model 128.png
+share/games/endless-sky/images/thumbnail/model 16.png
+share/games/endless-sky/images/thumbnail/model 256.png
+share/games/endless-sky/images/thumbnail/model 32.png
+share/games/endless-sky/images/thumbnail/model 512.png
+share/games/endless-sky/images/thumbnail/model 64.png
+share/games/endless-sky/images/thumbnail/model 8.png
+share/games/endless-sky/images/thumbnail/modified argosy.png
+share/games/endless-sky/images/thumbnail/mquicksilvere.png
+share/games/endless-sky/images/thumbnail/mquicksilvers.png
+share/games/endless-sky/images/thumbnail/mquicksilverw.png
+share/games/endless-sky/images/thumbnail/mravene.png
+share/games/endless-sky/images/thumbnail/mravens.png
+share/games/endless-sky/images/thumbnail/mravenw.png
+share/games/endless-sky/images/thumbnail/msplintere.png
+share/games/endless-sky/images/thumbnail/msplinters.png
+share/games/endless-sky/images/thumbnail/msplinterw.png
+share/games/endless-sky/images/thumbnail/mule.png
+share/games/endless-sky/images/thumbnail/nest.png
+share/games/endless-sky/images/thumbnail/osprey.png
+share/games/endless-sky/images/thumbnail/pelican.png
+share/games/endless-sky/images/thumbnail/penguin.png
+share/games/endless-sky/images/thumbnail/petrel.png
+share/games/endless-sky/images/thumbnail/protector.png
+share/games/endless-sky/images/thumbnail/pug arfecta.png
+share/games/endless-sky/images/thumbnail/pug enfolta.png
+share/games/endless-sky/images/thumbnail/pug maboro.png
+share/games/endless-sky/images/thumbnail/pug zibruka.png
+share/games/endless-sky/images/thumbnail/quicksilver.png
+share/games/endless-sky/images/thumbnail/raider.png
+share/games/endless-sky/images/thumbnail/rainmaker.png
+share/games/endless-sky/images/thumbnail/raven.png
+share/games/endless-sky/images/thumbnail/riptide.png
+share/games/endless-sky/images/thumbnail/roost.png
+share/games/endless-sky/images/thumbnail/saryd runabout.png
+share/games/endless-sky/images/thumbnail/saryd sojourner.png
+share/games/endless-sky/images/thumbnail/saryd traveler.png
+share/games/endless-sky/images/thumbnail/saryd visitor.png
+share/games/endless-sky/images/thumbnail/scout.png
+share/games/endless-sky/images/thumbnail/selii'mar.png
+share/games/endless-sky/images/thumbnail/shuttle.png
+share/games/endless-sky/images/thumbnail/skein.png
+share/games/endless-sky/images/thumbnail/skylark.png
+share/games/endless-sky/images/thumbnail/sparrow.png
+share/games/endless-sky/images/thumbnail/splinter.png
+share/games/endless-sky/images/thumbnail/star barge.png
+share/games/endless-sky/images/thumbnail/star queen.png
+share/games/endless-sky/images/thumbnail/starling.png
+share/games/endless-sky/images/thumbnail/strong wind.png
+share/games/endless-sky/images/thumbnail/subsidurial.png
+share/games/endless-sky/images/thumbnail/summer leaf.png
+share/games/endless-sky/images/thumbnail/surveillance drone.png
+share/games/endless-sky/images/thumbnail/tek far 109.png
+share/games/endless-sky/images/thumbnail/tek far 71 lek.png
+share/games/endless-sky/images/thumbnail/tek far 78 osk.png
+share/games/endless-sky/images/thumbnail/telis'het.png
+share/games/endless-sky/images/thumbnail/tempest.png
+share/games/endless-sky/images/thumbnail/tern.png
+share/games/endless-sky/images/thumbnail/vanguard.png
+share/games/endless-sky/images/thumbnail/wardragon.png
+share/games/endless-sky/images/thumbnail/wasp.png
+share/games/endless-sky/images/thumbnail/winter gale.png
+share/games/endless-sky/images/thumbnail/world-ship a.png
+share/games/endless-sky/images/thumbnail/world-ship b.png
+share/games/endless-sky/images/thumbnail/world-ship c.png
+share/games/endless-sky/images/ui/ammo selected.png
+share/games/endless-sky/images/ui/ammo unselected.png
+share/games/endless-sky/images/ui/boarding dialog.png
+share/games/endless-sky/images/ui/bottom edge.png
+share/games/endless-sky/images/ui/bottom edges.png
+share/games/endless-sky/images/ui/checked+.png
+share/games/endless-sky/images/ui/collapsed.png
+share/games/endless-sky/images/ui/description panel.png
+share/games/endless-sky/images/ui/dialog bottom.png
+share/games/endless-sky/images/ui/dialog cancel.png
+share/games/endless-sky/images/ui/dialog middle.png
+share/games/endless-sky/images/ui/dialog top.png
+share/games/endless-sky/images/ui/error.png
+share/games/endless-sky/images/ui/expanded.png
+share/games/endless-sky/images/ui/faction left.png
+share/games/endless-sky/images/ui/faction right.png
+share/games/endless-sky/images/ui/fast forward.png
+share/games/endless-sky/images/ui/five info buttons.png
+share/games/endless-sky/images/ui/galaxy.jpg
+share/games/endless-sky/images/ui/hail panel.png
+share/games/endless-sky/images/ui/icon selected.png
+share/games/endless-sky/images/ui/icon unselected.png
+share/games/endless-sky/images/ui/info panel.png
+share/games/endless-sky/images/ui/keys panel.png
+share/games/endless-sky/images/ui/left edge.png
+share/games/endless-sky/images/ui/map planet.png
+share/games/endless-sky/images/ui/map system.png
+share/games/endless-sky/images/ui/map trade.png
+share/games/endless-sky/images/ui/mission key.png
+share/games/endless-sky/images/ui/mission.png
+share/games/endless-sky/images/ui/navigation.png
+share/games/endless-sky/images/ui/news.png
+share/games/endless-sky/images/ui/orbits and key.png
+share/games/endless-sky/images/ui/outfitter key.png
+share/games/endless-sky/images/ui/outfitter selected+.png
+share/games/endless-sky/images/ui/outfitter unselected+.png
+share/games/endless-sky/images/ui/planet dialog button.png
+share/games/endless-sky/images/ui/planet dialog.png
+share/games/endless-sky/images/ui/player tab.png
+share/games/endless-sky/images/ui/pleiades.jpg
+share/games/endless-sky/images/ui/radar.png
+share/games/endless-sky/images/ui/range.png
+share/games/endless-sky/images/ui/right edge.png
+share/games/endless-sky/images/ui/sales key.png
+share/games/endless-sky/images/ui/selected system.png
+share/games/endless-sky/images/ui/settings panel.png
+share/games/endless-sky/images/ui/ship tab.png
+share/games/endless-sky/images/ui/shipyard selected+.png
+share/games/endless-sky/images/ui/shipyard unselected+.png
+share/games/endless-sky/images/ui/status.png
+share/games/endless-sky/images/ui/tactical.png
+share/games/endless-sky/images/ui/target.png
+share/games/endless-sky/images/ui/three info buttons.png
+share/games/endless-sky/images/ui/thumb box.png
+share/games/endless-sky/images/ui/thumb boxes.png
+share/games/endless-sky/images/ui/unchecked+.png
+share/games/endless-sky/images/ui/warning.png
+share/games/endless-sky/images/ui/wide button.png
+share/games/endless-sky/images/ui/zoom.png
+share/games/endless-sky/keys.txt
+share/games/endless-sky/sounds/afterburner~.wav
+share/games/endless-sky/sounds/alarm.wav
+share/games/endless-sky/sounds/ambient/machinery.mp3
+share/games/endless-sky/sounds/anti-missile.wav
+share/games/endless-sky/sounds/atomic huge~.wav
+share/games/endless-sky/sounds/atomic large~.wav
+share/games/endless-sky/sounds/atomic medium~.wav
+share/games/endless-sky/sounds/atomic small~.wav
+share/games/endless-sky/sounds/atomic tiny~.wav
+share/games/endless-sky/sounds/banisher~.wav
+share/games/endless-sky/sounds/blaster.wav
+share/games/endless-sky/sounds/bombardment.wav
+share/games/endless-sky/sounds/crunch.wav
+share/games/endless-sky/sounds/detainer.wav
+share/games/endless-sky/sounds/disruptor~.wav
+share/games/endless-sky/sounds/electron beam~.wav
+share/games/endless-sky/sounds/explosion huge.wav
+share/games/endless-sky/sounds/explosion large.wav
+share/games/endless-sky/sounds/explosion medium.wav
+share/games/endless-sky/sounds/explosion nuke.wav
+share/games/endless-sky/sounds/explosion small.wav
+share/games/endless-sky/sounds/explosion tiny.wav
+share/games/endless-sky/sounds/fail.wav
+share/games/endless-sky/sounds/final explosion large.wav
+share/games/endless-sky/sounds/final explosion medium.wav
+share/games/endless-sky/sounds/final explosion small.wav
+share/games/endless-sky/sounds/finisher.wav
+share/games/endless-sky/sounds/fire-lance~.wav
+share/games/endless-sky/sounds/flamethrower~.wav
+share/games/endless-sky/sounds/grab-strike.wav
+share/games/endless-sky/sounds/heavy anti-missile.wav
+share/games/endless-sky/sounds/heavy laser~.wav
+share/games/endless-sky/sounds/heavy rocket hit.wav
+share/games/endless-sky/sounds/heliarch attractor~.wav
+share/games/endless-sky/sounds/heliarch repulsor~.wav
+share/games/endless-sky/sounds/hyperdrive in.wav
+share/games/endless-sky/sounds/hyperdrive out.wav
+share/games/endless-sky/sounds/hyperdrive.wav
+share/games/endless-sky/sounds/inhibitor.wav
+share/games/endless-sky/sounds/ion huge~.wav
+share/games/endless-sky/sounds/ion impact.wav
+share/games/endless-sky/sounds/ion large~.wav
+share/games/endless-sky/sounds/ion medium~.wav
+share/games/endless-sky/sounds/ion rain.wav
+share/games/endless-sky/sounds/ion small~.wav
+share/games/endless-sky/sounds/ion tiny~.wav
+share/games/endless-sky/sounds/ion.wav
+share/games/endless-sky/sounds/ionic afterburner~.wav
+share/games/endless-sky/sounds/javelin.wav
+share/games/endless-sky/sounds/jump drive.wav
+share/games/endless-sky/sounds/jump in.wav
+share/games/endless-sky/sounds/jump out.wav
+share/games/endless-sky/sounds/landing.wav
+share/games/endless-sky/sounds/laser~.wav
+share/games/endless-sky/sounds/meteor.wav
+share/games/endless-sky/sounds/mine deploy.wav
+share/games/endless-sky/sounds/minelayer.wav
+share/games/endless-sky/sounds/missile hit.wav
+share/games/endless-sky/sounds/mod blaster.wav
+share/games/endless-sky/sounds/nuke.wav
+share/games/endless-sky/sounds/particle.wav
+share/games/endless-sky/sounds/piercer.wav
+share/games/endless-sky/sounds/plasma huge~.wav
+share/games/endless-sky/sounds/plasma large~.wav
+share/games/endless-sky/sounds/plasma medium~.wav
+share/games/endless-sky/sounds/plasma small~.wav
+share/games/endless-sky/sounds/plasma tiny~.wav
+share/games/endless-sky/sounds/plasma.wav
+share/games/endless-sky/sounds/point defense.wav
+share/games/endless-sky/sounds/proton.wav
+share/games/endless-sky/sounds/pug anti-missile.wav
+share/games/endless-sky/sounds/pulse.wav
+share/games/endless-sky/sounds/quarg anti-missile.wav
+share/games/endless-sky/sounds/repeater.wav
+share/games/endless-sky/sounds/rocket.wav
+share/games/endless-sky/sounds/scan~.wav
+share/games/endless-sky/sounds/seeker.wav
+share/games/endless-sky/sounds/sidewinder.wav
+share/games/endless-sky/sounds/skylance~.wav
+share/games/endless-sky/sounds/slicer~.wav
+share/games/endless-sky/sounds/sunbeam~.wav
+share/games/endless-sky/sounds/takeoff.wav
+share/games/endless-sky/sounds/thrasher.wav
+share/games/endless-sky/sounds/thunderhead.wav
+share/games/endless-sky/sounds/torpedo hit.wav
+share/games/endless-sky/sounds/torpedo.wav
+share/games/endless-sky/sounds/tracker.wav
+share/games/endless-sky/sounds/typhoon.wav
+share/games/endless-sky/sounds/warder.wav
+share/games/endless-sky/sounds/zapper~.wav
+share/icons/hicolor/128x128/apps/endless-sky.png
+share/icons/hicolor/16x16/apps/endless-sky.png
+share/icons/hicolor/22x22/apps/endless-sky.png
+share/icons/hicolor/24x24/apps/endless-sky.png
+share/icons/hicolor/256x256/apps/endless-sky.png
+share/icons/hicolor/32x32/apps/endless-sky.png
+share/icons/hicolor/48x48/apps/endless-sky.png
+share/icons/hicolor/512x512/apps/endless-sky.png

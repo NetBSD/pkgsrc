@@ -1,0 +1,53 @@
+# $NetBSD: Makefile.top,v 1.1 2020/07/26 05:21:20 dholland Exp $
+
+#
+# As of 0.9.12 the package's native build uses scons, and naturally it
+# doesn't work. (It seems to compile ok, but ignores most of the
+# install directives in the SConstruct script, for no obvious reason.)
+#
+# While the package is fairly large, the build is pretty simple and
+# the SConstruct script is only 120 lines, so instead of arguing with
+# scons I've transcribed the material here. We'll see if I regret this
+# when it's time to update.
+#
+# Note: this makefile requires BSD make and is not expected to work
+# outside of the context of pkgsrc.
+#
+
+DESTDIR?=
+PREFIX?=/usr/local
+
+MANDIR=		$(DESTDIR)$(PREFIX)/$(PKGMANDIR) 
+DESKTOPDIR=	$(DESTDIR)$(PREFIX)/share/applications
+APPDATADIR=	$(DESTDIR)$(PREFIX)/share/appdata
+ICONDIR=	$(DESTDIR)$(PREFIX)/share/icons/hicolor
+SHAREDIR=	$(DESTDIR)$(PREFIX)/share/games/endless-sky
+
+all:;
+
+.for SZ in 16 22 24 32 48 128 256 512
+SIZES+=$(SZ)x$(SZ)
+.endfor
+
+install:
+	$(BSD_INSTALL_DATA_DIR) $(MANDIR)/man6 $(DESKTOPDIR) $(APPDATADIR)
+	$(BSD_INSTALL_DATA) endless-sky.6 $(MANDIR)/man6/
+	$(BSD_INSTALL_DATA) endless-sky.desktop $(DESKTOPDIR)/
+	$(BSD_INSTALL_DATA) endless-sky.appdata.xml $(APPDATADIR)/
+.for SIZE in $(SIZES)
+	$(BSD_INSTALL_DATA_DIR) $(ICONDIR)/$(SIZE)/apps
+	$(BSD_INSTALL_DATA) icons/icon_$(SIZE).png \
+		$(ICONDIR)/$(SIZE)/apps/endless-sky.png
+.endfor
+.for DIR in data images sounds
+	$(BSD_INSTALL_DATA_DIR) $(SHAREDIR)/$(DIR)
+	pax -rw -pp $(DIR) $(SHAREDIR)
+.endfor
+	$(BSD_INSTALL_DATA) credits.txt $(SHAREDIR)/
+	$(BSD_INSTALL_DATA) keys.txt $(SHAREDIR)/
+
+# this is handled automatically by pkgsrc infrastructure
+#gtk-update-icon-cache -t $(DESTDIR)$(PREFIX)/share/icons/hicolor
+#
+
+.PHONY: all install
