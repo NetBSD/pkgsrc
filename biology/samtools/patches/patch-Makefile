@@ -1,0 +1,56 @@
+$NetBSD: patch-Makefile,v 1.1 2020/07/26 23:30:30 bacon Exp $
+
+# Respect pkgsrc env
+
+--- Makefile.orig	2020-07-21 20:20:56.996788479 +0000
++++ Makefile
+@@ -21,12 +21,12 @@
+ # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ # DEALINGS IN THE SOFTWARE.
+ 
+-CC       = gcc
+-AR       = ar
+-CPPFLAGS =
++CC       ?= gcc
++AR       ?= ar
++# CPPFLAGS =
+ #CFLAGS   = -g -Wall -O2 -pedantic -std=c99 -D_XOPEN_SOURCE=600
+-CFLAGS   = -g -Wall -O2
+-LDFLAGS  =
++CFLAGS   ?= -g -Wall -O2
++#LDFLAGS  =
+ LIBS     =
+ 
+ LZ4DIR   = ./lz4
+@@ -47,10 +47,10 @@ AOBJS=      bam_index.o bam_plcmd.o sam_
+             bam_quickcheck.o bam_addrprg.o bam_markdup.o tmp_file.o
+ LZ4OBJS  =  $(LZ4DIR)/lz4.o
+ 
+-prefix      = /usr/local
+-exec_prefix = $(prefix)
++PREFIX      ?= /usr/local
++exec_prefix = $(PREFIX)
+ bindir      = $(exec_prefix)/bin
+-datarootdir = $(prefix)/share
++datarootdir = $(PREFIX)/share
+ mandir      = $(datarootdir)/man
+ man1dir     = $(mandir)/man1
+ 
+@@ -58,12 +58,11 @@ man1dir     = $(mandir)/man1
+ misc_bindir = $(bindir)
+ 
+ MKDIR_P = mkdir -p
+-INSTALL = install -p
+-INSTALL_DATA    = $(INSTALL) -m 644
+-INSTALL_DIR     = $(MKDIR_P) -m 755
+-INSTALL_MAN     = $(INSTALL_DATA)
+-INSTALL_PROGRAM = $(INSTALL)
+-INSTALL_SCRIPT  = $(INSTALL_PROGRAM)
++INSTALL_DATA    = ${BSD_INSTALL_DATA}
++INSTALL_DIR     = $(MKDIR_P)
++INSTALL_MAN     = ${BSD_INSTALL_MAN}
++INSTALL_PROGRAM = ${BSD_INSTALL_PROGRAM}
++INSTALL_SCRIPT  = ${BSD_INSTALL_SCRIPT}
+ 
+ 
+ PROGRAMS = samtools
