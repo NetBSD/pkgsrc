@@ -1,0 +1,5 @@
+Zeal is an offline documentation browser for software developers.  It
+supports the docset format used by Dash.  You can download official
+Dash docsets within Zeal.
+
+This version uses QtWebkit to render HTML pages.
