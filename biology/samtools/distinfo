@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2018/11/06 10:49:41 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/07/26 23:30:29 bacon Exp $
 
-SHA1 (samtools-1.9.tar.bz2) = 267191dc2f5d24eb0b22c0094138270ed5384241
-RMD160 (samtools-1.9.tar.bz2) = b7f49e1bdd569f63ec53330f43df7e5566ba8a16
-SHA512 (samtools-1.9.tar.bz2) = 6c8207754615ae8dad84b278f93e7d57eb40b818efb80f6aff6aba22fde5772247724e86596e765791e3175ffbb683393dd3ddfe7681c73eef4eb4f2342bf68f
-Size (samtools-1.9.tar.bz2) = 4440405 bytes
+SHA1 (samtools-1.10.tar.gz) = 98b24393629d63f2203f59c108b840b1e046f209
+RMD160 (samtools-1.10.tar.gz) = e8d91dfc0970a0faa85d45962f76f831af331007
+SHA512 (samtools-1.10.tar.gz) = 7760a1e8a89780ac80053b136930a8ed0cc130b72c9f66cdc9c211e93b6bcc8923140e7caae9824c81caa4a2bfab3a14280e3e7d7245abeaa6f91f0f96123fda
+Size (samtools-1.10.tar.gz) = 4457760 bytes
+SHA1 (patch-Makefile) = 409ef37ff0730257d82989d866c8cba705e3ef8a
