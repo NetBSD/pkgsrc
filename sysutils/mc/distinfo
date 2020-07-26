@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.37 2020/01/25 15:00:42 nia Exp $
+$NetBSD: distinfo,v 1.38 2020/07/26 23:34:08 nia Exp $
 
-SHA1 (mc-4.8.24.tar.xz) = b6513fcbd88f480733373eac4ea294e42dc41b6d
-RMD160 (mc-4.8.24.tar.xz) = 685bcc747dff4d41d0e5b0e4acf27af6e6b50637
-SHA512 (mc-4.8.24.tar.xz) = ec9e40198455e7001bb1d06ea060b9b4c32ad3a3750d0cc9bac334b53eb666df1746335bfcd411213fa4386b23e516f6026fe3d74ad9119b2340b26c63ccd4fc
-Size (mc-4.8.24.tar.xz) = 2434988 bytes
+SHA1 (mc-4.8.25.tar.xz) = 4082ae830f09e919112aa3fc1d7e5333921a6a33
+RMD160 (mc-4.8.25.tar.xz) = 75b6ef84a6e45f86eaf1469a4b3a8de4cd6713e0
+SHA512 (mc-4.8.25.tar.xz) = 51913fd41df18b49498b97ad8e13aa4365cec24ab24169b1abe93209263e4cfea4b52e0faccaf934182c84e8eb5dc49336c885358b4b66c48d38900f890fde5e
+Size (mc-4.8.25.tar.xz) = 2488324 bytes
 SHA1 (patch-contrib_Makefile.in) = 0b9ad555c2f702cba12b6b5e5f0ae07c16499903
 SHA1 (patch-misc_Makefile.in) = b17cdebdcd0adae91a6cff3f25939cebeb1e964f
 SHA1 (patch-src_subshell_common.c) = b6d390da68aa0028d21683b1959340e51f67efd6
