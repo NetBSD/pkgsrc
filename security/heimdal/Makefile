@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.142 2020/06/02 08:22:54 adam Exp $
+# $NetBSD: Makefile,v 1.143 2020/07/26 09:30:14 bsiegert Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	26
 CATEGORIES=	security
-MASTER_SITES=	http://www.h5l.org/dist/src/
+# Original distfile is unavailable on Github
+#GITHUB_TAG=	${DISTNAME}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=heimdal/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.h5l.org/
