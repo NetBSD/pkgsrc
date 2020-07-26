@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19962 2020/07/21 08:14:32 adam Exp $
+$NetBSD: TODO,v 1.19963 2020/07/26 20:28:19 nia Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flow-tools-0.411
-	o fluidsynth-2.1.4
 	o fortunes-calvin-0.3
 	o freedv-1.2.2
 	o freenet-0.7
