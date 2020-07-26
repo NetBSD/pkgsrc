@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/28 09:40:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/07/26 07:54:45 maya Exp $
+bin/woff2_compress
+bin/woff2_decompress
+bin/woff2_info
 include/woff2/decode.h
 include/woff2/encode.h
 include/woff2/output.h
