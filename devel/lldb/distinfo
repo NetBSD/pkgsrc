@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2020/04/18 07:59:44 adam Exp $
+$NetBSD: distinfo,v 1.20 2020/07/26 19:20:12 adam Exp $
 
-SHA1 (lldb-10.0.0.src.tar.xz) = 44b5a19204717a1053fab13b113172aa822b012b
-RMD160 (lldb-10.0.0.src.tar.xz) = 02efcbf1a094276765217def9e25b3752ecbf617
-SHA512 (lldb-10.0.0.src.tar.xz) = f6a73cc05b26dfda8076cab082e90a6818b496189a8bafd6c771ea7c2dfe948e139e168bdcb82ccfad9e7ba110ad68beef453e280cca98031fa69923c27933f4
-Size (lldb-10.0.0.src.tar.xz) = 9637552 bytes
+SHA1 (lldb-10.0.1.src.tar.xz) = 90b946ff7b850bcded598509a10d0795e7da3f63
+RMD160 (lldb-10.0.1.src.tar.xz) = 59442a4685c7c6c2468477ce16fa09e4fef8540d
+SHA512 (lldb-10.0.1.src.tar.xz) = d7155cd6a7e2244cbf1f6114d790fdf2e667fd6285e2fc3a08a8f49c8e08f32827d7fa83d741ea0b54b788bd13c0c7498cf312a2cd3e86e049606869341b482e
+Size (lldb-10.0.1.src.tar.xz) = 9632124 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 55a8d614cc52872968fc7c7c205c7d6e4021b538
 SHA1 (patch-source_API_CMakeLists.txt) = ed630498cdd30f6f11c5fbfa8d9f539baeba5a2c
 SHA1 (patch-source_Host_CMakeLists.txt) = 5c7ae7b896aa110fe7ab21ed3616350e0958bc2a
