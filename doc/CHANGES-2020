@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4129 2020/07/26 00:52:18 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4130 2020/07/26 05:22:51 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6546,3 +6546,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/gnupg2 to 2.2.21 [adam 2020-07-24]
 	Updated audio/fasttracker2 to 1.27 [fox 2020-07-25]
 	Added devel/zeal version 0.6.1 [scole 2020-07-26]
+	Added games/endless-sky version 0.9.12 [dholland 2020-07-26]
