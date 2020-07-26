@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.6 2020/04/18 07:58:49 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/07/26 19:20:13 adam Exp $
 
-SHA1 (clang-10.0.0.src.tar.xz) = cfaa4c4e89a45b604e6f3057f984d73365074727
-RMD160 (clang-10.0.0.src.tar.xz) = 7a2a0b3fd1b6b0d9c59a506f99d628417a565724
-SHA512 (clang-10.0.0.src.tar.xz) = b1cccc13c46abcda3d689f51d486fa613ecec40c581c72d8b15951715100a2b8fb24370161601e6716cdba5a784337439e99ec2f0766f988e9cce92de6d775da
-Size (clang-10.0.0.src.tar.xz) = 14190012 bytes
-SHA1 (clang-tools-extra-10.0.0.src.tar.xz) = e41467d4e8c6afe917c9f9c44b1d6a95a85adadb
-RMD160 (clang-tools-extra-10.0.0.src.tar.xz) = ea0465fbad01c8991cf676574542cefa96ea7291
-SHA512 (clang-tools-extra-10.0.0.src.tar.xz) = 33b6019e64e9ac94bd7c000b77a4a927602a2705baa9b370e392a56b53fe09c8dad1ff7d583892729e9eb291440433ad7d71df768a96d927e4dbc1988fc01d99
-Size (clang-tools-extra-10.0.0.src.tar.xz) = 2604944 bytes
+SHA1 (clang-10.0.1.src.tar.xz) = 0e61e92b22a620fe7f833fa8b2a56f2db96f7335
+RMD160 (clang-10.0.1.src.tar.xz) = 15b8a3b6c6f1a2896146006b30fbcf104be7c2b6
+SHA512 (clang-10.0.1.src.tar.xz) = c6712d491ce5e166ef72724cf855d742d88da825ffc25585612d7f2eb7770343e3ae48fa78e0af3e5d5efdde3a9686a7361dac3b546a4378de22448ea6e4026c
+Size (clang-10.0.1.src.tar.xz) = 14046188 bytes
+SHA1 (clang-tools-extra-10.0.1.src.tar.xz) = 26c996da082677aca1016bcf2141dbff01dc7300
+RMD160 (clang-tools-extra-10.0.1.src.tar.xz) = 267c7495887ed838c16524a20ba61b3981ce9f16
+SHA512 (clang-tools-extra-10.0.1.src.tar.xz) = 7833197fd1f6d65e8f1fa1c169844a40e8b64f6a5cff984b29333d92527dcef532749907df2ea35b20643898baa0f49bb64b03e4ef54f9a3c4dd77bf1750a634
+Size (clang-tools-extra-10.0.1.src.tar.xz) = 2599404 bytes
 SHA1 (patch-tools_extra_clangd_CMakeLists.txt) = a9c3c2686f04a06eef10c1ebc14f0c95fef4a9e7
