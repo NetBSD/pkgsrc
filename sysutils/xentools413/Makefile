@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/07/26 08:24:11 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/07/26 08:40:05 rillig Exp $
 #
 VERSION=	4.13.1
 
@@ -76,12 +76,6 @@ REPLACE_PERL+=		tools/qemu-xen/scripts/get_maintainer.pl
 REPLACE_PERL+=		tools/qemu-xen/scripts/checkpatch.pl
 REPLACE_PERL+=		tools/libxl/libxl_save_msgs_gen.pl
 REPLACE_PERL+=		tools/libxl/check-libxl-api-rules
-
-SUBST_CLASSES+=		pathsvar
-SUBST_STAGE.pathsvar=	pre-configure
-SUBST_FILES.pathsvar=	tools/Makefile \
-			tools/hotplug/Linux/init.d/sysconfig.xendomains
-SUBST_SED.pathsvar=	-e "s|/var/lib|${VARBASE}/run|g"
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
