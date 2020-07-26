@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/07/13 09:49:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/07/26 20:47:37 wiz Exp $
 
-DISTNAME=		dMagnetic_0.24
+DISTNAME=		dMagnetic_0.25
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		games
 MASTER_SITES=		https://www.dettus.net/dMagnetic/
@@ -25,6 +25,6 @@ do-install:
 ## for this, the md5sum is being compared.
 ## dMagnetic has several output modes, each one of them is tested.
 do-test:
-	cd ${WRKSRC} && ${MAKE} SHA256_CMD=sha256 do-test
+	cd ${WRKSRC} && ${MAKE} SHA256_CMD=sha256 check
 
 .include "../../mk/bsd.pkg.mk"
