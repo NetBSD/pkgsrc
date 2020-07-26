@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2020/05/22 10:55:59 adam Exp $
+# $NetBSD: Makefile,v 1.117 2020/07/26 23:10:21 nia Exp $
 
-DISTNAME=	weechat-2.8
-PKGREVISION=	2
+DISTNAME=	weechat-2.9
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -46,11 +45,16 @@ SUBST_FILES.python=	configure.ac cmake/FindPython.cmake
 SUBST_SED.python=	-e 's,python3,python-${PYVERSSUFFIX},g'
 .endif
 
+pre-configure:
+	# Use the standard cmake mechanism for finding Lua.
+	${RM} -f ${WRKSRC}/cmake/FindLua.cmake
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

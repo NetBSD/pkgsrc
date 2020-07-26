@@ -1,0 +1,17 @@
+$NetBSD: patch-src_plugins_lua_CMakeLists.txt,v 1.1 2020/07/26 23:10:21 nia Exp $
+
+Use the standard variables defined by cmake's own FindLua.
+
+--- src/plugins/lua/CMakeLists.txt.orig	2020-07-18 11:59:02.000000000 +0000
++++ src/plugins/lua/CMakeLists.txt
+@@ -25,8 +25,8 @@ add_library(lua MODULE
+ set_target_properties(lua PROPERTIES PREFIX "")
+ 
+ if(LUA_FOUND)
+-  include_directories(${LUA_INCLUDE_DIRS})
+-  target_link_libraries(lua ${LUA_LDFLAGS} weechat_plugins_scripts coverage_config)
++  include_directories(${LUA_INCLUDE_DIR})
++  target_link_libraries(lua ${LUA_LIBRARIES} weechat_plugins_scripts coverage_config)
+ endif()
+ 
+ install(TARGETS lua LIBRARY DESTINATION ${WEECHAT_LIBDIR}/plugins)
