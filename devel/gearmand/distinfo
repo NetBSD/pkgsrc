@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.5 2020/03/26 21:49:49 joerg Exp $
 
-SHA1 (gearmand-1.1.18.tar.gz) = eb7f1d806635cba309c40460c3ca5f2ff76d6519
-RMD160 (gearmand-1.1.18.tar.gz) = 2bbe1042932dd763fcc68f4c8e6227d6a53be7e0
-SHA512 (gearmand-1.1.18.tar.gz) = fd2c978775bde19a8f1ffaf720b4c8adfda9859e5f554b247e7edca15fcc684168fb279af6c63e29c0524c8c863a9f3d07ea802e67eec42be793c0487b9beb9a
-Size (gearmand-1.1.18.tar.gz) = 1044664 bytes
+SHA1 (gearmand-1.1.19.1.tar.gz) = 2fc7e7f404268273de847eb41c2b0c3f0e3fec9e
+RMD160 (gearmand-1.1.19.1.tar.gz) = 4c0172568778be383e1c3db5faa6818a6bc78ad4
+SHA512 (gearmand-1.1.19.1.tar.gz) = cbcf85dfd7268aa9acc039eac9505385af3be89eeba48270ddb45739e0ccdcf0d2963d821ccbb6a471396fc9ab2521d096f5d6c2fc3d41b3fb050bd82a795f1f
+Size (gearmand-1.1.19.1.tar.gz) = 1094126 bytes
 SHA1 (patch-benchmark_blobslap__worker.cc) = 12f805d65b36a2f25e5751b8c36a95ac28ec757a
-SHA1 (patch-configure) = d5eb9dc8bf6aec65580de30734e3e4b6505cd0ae
+SHA1 (patch-configure) = cb01c1442879c024eb05f7a72ece763c2dcf5fbf
 SHA1 (patch-examples_reverse__client.cc) = 3e8a27626c8a922919adfddcd9b3b4bfec06390d
 SHA1 (patch-examples_reverse__client__bg.cc) = 63db59b98a8128565cecaa682334be85edf37584
 SHA1 (patch-examples_reverse__client__cb.cc) = 33f9710ca20101ce11cda04407eff1e05b14d29a

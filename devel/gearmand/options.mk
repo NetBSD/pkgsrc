@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}/bin/pg_config
 .include "../../mk/pgsql.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libpq
+CONFIGURE_ARGS+=	--with-postgresql=no
 .endif
 
 ###
