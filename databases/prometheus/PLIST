@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/01/08 22:33:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/07/27 14:50:19 adam Exp $
 bin/adapter-usage
 bin/example_write_adapter
 bin/prometheus
@@ -79,9 +79,8 @@ share/prometheus/static/vendor/bootstrap4-glyphicons/maps/glyphicons-fontawesome
 share/prometheus/static/vendor/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.css
 share/prometheus/static/vendor/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.js
 share/prometheus/static/vendor/fuzzy/fuzzy.js
-share/prometheus/static/vendor/js/jquery-3.3.1.min.js
+share/prometheus/static/vendor/js/jquery-3.5.1.min.js
 share/prometheus/static/vendor/js/jquery.hotkeys.js
-share/prometheus/static/vendor/js/jquery.min.js
 share/prometheus/static/vendor/js/jquery.selection.js
 share/prometheus/static/vendor/js/popper.min.js
 share/prometheus/static/vendor/moment/moment-timezone-with-data.min.js
