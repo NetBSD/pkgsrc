@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4161 2020/07/27 20:49:31 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4162 2020/07/27 22:21:55 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6603,3 +6603,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-setconf to 0.7.7 [adam 2020-07-27]
 	Updated graphics/graphviz to 2.44.1 [adam 2020-07-27]
 	Updated devel/subversion to 1.14.0 [adam 2020-07-27]
+	Updated net/youtube-dl to 20200728 [leot 2020-07-27]
