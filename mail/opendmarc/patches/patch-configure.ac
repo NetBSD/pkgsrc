@@ -1,15 +1,24 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/12/05 16:00:23 christos Exp $
-Search also for __res_ninit on NetBSD because of namespace protection
+$NetBSD: patch-configure.ac,v 1.2 2020/07/27 20:41:10 oster Exp $
 
---- configure.ac.orig	2014-12-05 10:53:36.000000000 -0500
-+++ configure.ac	2014-12-05 10:53:51.000000000 -0500
-@@ -126,6 +126,9 @@
+Add appropriate flags if res_ndestroy(), __res_ninit(),  or 
+__res_ndestroy() are found.
+
+--- configure.ac.orig	2015-02-23 20:31:50.000000000 +0000
++++ configure.ac
+@@ -126,6 +126,16 @@ AC_CHECK_LIB(resolv, inet_aton, , , [-ln
  AC_SEARCH_LIBS(res_ninit, resolv,
  	AC_DEFINE(HAVE_RES_NINIT, 1,
  	[Define to 1 if you have the `res_ninit()' function.]))
++AC_SEARCH_LIBS(res_ndestroy, resolv,
++       AC_DEFINE(HAVE_RES_NDESTROY, 1,
++       [Define to 1 if you have the `res_ndestroy()' function.]))
 +AC_SEARCH_LIBS(__res_ninit, resolv,
 +	AC_DEFINE(HAVE_RES_NINIT, 1,
-+	[Define to 1 if you have the `res_ninit()' function.]))
++	[Define to 1 if you have the `__res_ninit()' function.]))
++AC_SEARCH_LIBS(__res_ndestroy, resolv,
++       AC_DEFINE(HAVE_RES_NDESTROY, 1,
++       [Define to 1 if you have the `__res_ndestroy()' function.]))
++
  AC_CHECK_LIB(idn, idn_free)
  AC_CHECK_LIB(rt, nanosleep)
  AC_SEARCH_LIBS(inet_addr, nsl)
