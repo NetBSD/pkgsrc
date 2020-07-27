@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2020/06/29 15:55:52 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/07/27 16:20:45 gdt Exp $
 
 DISTNAME=	zfec-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zfec/}
 
-MAINTAINER=	gdt@ir.bbn.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/tahoe-lafs/zfec
 COMMENT=	Efficient, portable erasure coding tool
 LICENSE=	gnu-gpl-v2
