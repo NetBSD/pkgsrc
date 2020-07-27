@@ -1,11 +1,11 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2019/08/06 19:42:20 nia Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2020/07/27 15:21:43 nia Exp $
 
 Support NetBSD.
 
---- src/CMakeLists.txt.orig	2019-05-02 05:23:39.000000000 +0000
+--- src/CMakeLists.txt.orig	2020-07-12 19:33:44.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -142,9 +142,11 @@ wl_library(helper
-     base_exceptions
+@@ -140,9 +140,11 @@ wl_library(widelands_options
+     logic_filesystem_constants
  )
  
 -if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
