@@ -1,0 +1,68 @@
+$NetBSD: patch-Makefile,v 1.1 2020/07/27 00:29:04 bacon Exp $
+
+# Respect pkgsrc env
+
+--- Makefile.orig	2019-12-19 09:57:32.000000000 +0000
++++ Makefile
+@@ -22,12 +22,12 @@
+ # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ # DEALINGS IN THE SOFTWARE.
+ 
+-CC       = gcc
+-AR       = ar
+-RANLIB   = ranlib
+-CPPFLAGS =
+-CFLAGS   = -g -Wall -O2
+-LDFLAGS  =
++CC       ?= gcc
++AR       ?= ar
++RANLIB   ?= ranlib
++# CPPFLAGS =
++CFLAGS   ?= -g -Wall -O2
++# LDFLAGS  =
+ LIBS     =
+ 
+ DYNAMIC_FLAGS = -rdynamic
+@@ -45,12 +45,12 @@ OBJS     = main.o vcfindex.o tabix.o \
+            ccall.o em.o prob1.o kmin.o # the original samtools calling
+ PLUGIN_OBJS = vcfplugin.o
+ 
+-prefix      = /usr/local
+-exec_prefix = $(prefix)
++PREFIX      ?= /usr/local
++exec_prefix = $(PREFIX)
+ bindir      = $(exec_prefix)/bin
+ libdir      = $(exec_prefix)/lib
+ libexecdir  = $(exec_prefix)/libexec
+-mandir      = $(prefix)/share/man
++mandir      = $(PREFIX)/share/man
+ man1dir     = $(mandir)/man1
+ # Installation location for $(PLUGINS)
+ plugindir   = $(libexecdir)/bcftools
+@@ -59,12 +59,11 @@ pluginpath  = $(plugindir)
+ misc_bindir = $(bindir)
+ 
+ MKDIR_P = mkdir -p
+-INSTALL = install -p
+-INSTALL_DATA    = $(INSTALL) -m 644
+-INSTALL_DIR     = $(MKDIR_P) -m 755
+-INSTALL_MAN     = $(INSTALL_DATA)
+-INSTALL_PROGRAM = $(INSTALL)
+-INSTALL_SCRIPT  = $(INSTALL_PROGRAM)
++INSTALL_DATA    = ${BSD_INSTALL_DATA}
++INSTALL_DIR     = $(MKDIR_P)
++INSTALL_MAN     = ${BSD_INSTALL_MAN}
++INSTALL_PROGRAM = ${BSD_INSTALL_PROGRAM}
++INSTALL_SCRIPT  = ${BSD_INSTALL_SCRIPT}
+ 
+ PROGRAMS = bcftools
+ MISC_SCRIPTS = \
+@@ -78,7 +77,7 @@ TEST_PROGRAMS = test/test-rbuf test/test
+ 
+ ALL_CPPFLAGS = -I. $(HTSLIB_CPPFLAGS) $(CPPFLAGS)
+ ALL_LDFLAGS  = $(HTSLIB_LDFLAGS) $(LDFLAGS)
+-ALL_LIBS     = -lz $(DL_LIBS) $(LIBS)
++ALL_LIBS     = -lz $(LIBS)
+ 
+ all: $(PROGRAMS) $(TEST_PROGRAMS) plugins
+ 
