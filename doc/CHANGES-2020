@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4139 2020/07/27 00:02:56 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4140 2020/07/27 00:03:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6566,3 +6566,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated biology/samtools to 1.10 [bacon 2020-07-26]
 	Updated sysutils/mc to 4.8.25 [nia 2020-07-26]
 	Updated audio/audacious to 4.0.5 [nia 2020-07-27]
+	Updated audio/audacious-plugins to 4.0.5 [nia 2020-07-27]
