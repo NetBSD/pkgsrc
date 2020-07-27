@@ -1,8 +1,28 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/07/07 01:01:27 manu Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/07/27 16:06:08 manu Exp $
 
---- configure.ac.orig	2020-05-31 16:45:57.328537679 +0200
-+++ configure.ac	2020-06-28 03:10:02.906173087 +0200
-@@ -945,8 +945,11 @@
+Make FUSE notification optional at configure time
+From upstream https://review.gluster.org/24731
+
+--- configure.ac.orig	2020-07-06 03:22:37.734704915 +0200
++++ configure.ac	2020-07-22 02:26:32.903778538 +0200
+@@ -683,8 +683,16 @@
+    BUILD_FUSE_CLIENT="yes"
+ fi
+ 
+ AC_SUBST(FUSE_CLIENT_SUBDIR)
++
++AC_ARG_ENABLE([fuse-notifications],
++  AS_HELP_STRING([--disable-fuse-notifications], [Disable FUSE notifications]))
++
++AS_IF([test "x$enable_fuse_notifications" != "xno"], [
++  AC_DEFINE([HAVE_FUSE_NOTIFICATIONS], [1], [Use FUSE notifications])
++])
++
+ # end FUSE section
+ 
+ 
+ AC_CHECK_LIB([ssl], TLS_method, [HAVE_OPENSSL_1_1="yes"], [HAVE_OPENSSL_1_1="no"])
+@@ -945,8 +953,11 @@
      *freebsd*)
      CFLAGS="${CFLAGS} -isystem /usr/local/include"
      ARGP_LDADD=-largp
