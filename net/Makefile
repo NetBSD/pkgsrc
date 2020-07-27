@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1340 2020/06/18 18:30:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1341 2020/07/27 14:11:16 jdolecek Exp $
 #
 
 COMMENT=	Networking tools
@@ -751,6 +751,7 @@ SUBDIR+=	py-twython
 SUBDIR+=	py-txamqp
 SUBDIR+=	py-txtorcon
 SUBDIR+=	py-xandikos
+SUBDIR+=	py-xmm7360
 SUBDIR+=	py-zeep
 SUBDIR+=	py-zeroconf
 SUBDIR+=	py-zmq
