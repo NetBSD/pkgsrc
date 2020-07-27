@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2020/06/29 13:40:53 adam Exp $
+# $NetBSD: Makefile,v 1.59 2020/07/27 16:04:38 adam Exp $
 
-DISTNAME=	ccache-3.7.10
+DISTNAME=	ccache-3.7.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ccache/}
 # do not use xz distfile here, xz needs gettext-lib which leads to circular
