@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2020/06/02 08:24:39 adam Exp $
+# $NetBSD: Makefile,v 1.102 2020/07/27 19:58:04 chuck Exp $
 
 PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
@@ -77,6 +77,7 @@ do-install:
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/graphite2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
