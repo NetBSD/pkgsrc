@@ -1,11 +1,15 @@
-$NetBSD: distinfo,v 1.69 2020/07/07 01:01:27 manu Exp $
+$NetBSD: distinfo,v 1.70 2020/07/27 16:06:08 manu Exp $
 
 SHA1 (glusterfs-8.0.tar.gz) = 8b9c5d1abcec207b716bd4d6b05957872c3a0f6d
 RMD160 (glusterfs-8.0.tar.gz) = 157db93505b4baad9f985ac45ff5283ae432352b
 SHA512 (glusterfs-8.0.tar.gz) = 6af94f31e08e9ba9d1f3f674678553815933f8db58672d4225f855dc47f3290e1ad22f44dbe95856f82120bf195bc2df7dbd02c88e3a27d9363877891c619b58
 Size (glusterfs-8.0.tar.gz) = 7800370 bytes
-SHA1 (patch-configure) = 8914f1434475faa7cbd419a3e31c44fdee872ed2
-SHA1 (patch-configure.ac) = 5c90938a02b6be460b733e88cd1932ed61fdb6fa
-SHA1 (patch-rpc_rpc_lib_rpcsvc.c) = d2d039b656327a43463d0819a1bcbfb3d99c5691
-SHA1 (patch-tools_gfind__missing__files_gfind__missing__files.sh) = 000cbc70acbb4645b9e55654698fade5605aa5b8
-SHA1 (patch-xlators_performance_write-behind_src_write-behind.c) = db2a72c3d061f3e6bbba51b48b613295b1ecdb0f
+SHA1 (patch-config.h.in) = 1560806ebd786139b404544461dcda0ec1d60b37
+SHA1 (patch-configure) = 07d7a61d7c24ab8b0e4bb00ab6ae2452e41d903f
+SHA1 (patch-configure.ac) = fcb7da30005e9a08e7a0f4ac2f5e55511580aa18
+SHA1 (patch-rpc_rpc_lib_rpcsvc.c) = 44d88cdb8f930d3e920618c9ea0cdc8e9f4ebf58
+SHA1 (patch-tools_gfind__missing__files_gfind__missing__files.sh) = 67d374d8dc3213bd3d159e7cb8479c14e8ba162d
+SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-utils.c) = 3e8e6fa5e4baff94532f58a6509f7b5817ce02bf
+SHA1 (patch-xlators_mount_fuse_src_fuse-bridge.c) = 4706bc7264b7e4ec7f01cc143f3edce96213401e
+SHA1 (patch-xlators_performance_write-behind_src_write-behind.c) = cf3eea86ab4255a7714b25a35a98495eff0f772e
+SHA1 (patch-xlators_storage_posix_src_posix-entry-ops.c) = 2c1acf30097ca4ce7b6ec6e1212f989c86201553

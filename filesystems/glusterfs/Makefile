@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2020/07/07 01:01:27 manu Exp $
+# $NetBSD: Makefile,v 1.100 2020/07/27 16:06:08 manu Exp $
 
 DISTNAME=	glusterfs-8.0
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -15,6 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		flex bison pkg-config bash
 
 CONFIGURE_ARGS+=	--disable-fusermount
+CONFIGURE_ARGS+=	--disable-fuse-notifications
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 # Make sure we do not attept to link with -lfl
@@ -118,7 +119,7 @@ post-install:
 	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
 
 # Debug
-CFLAGS+=		-g
+CFLAGS+=		-g 
 INSTALL_UNSTRIPPED=	yes
 CONFIGURE_ARGS+=	--enable-debug
 #.include "../../devel/boehm-gc/buildlink3.mk"
