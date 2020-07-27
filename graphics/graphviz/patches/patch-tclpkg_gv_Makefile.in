@@ -1,4 +1,4 @@
-$NetBSD: patch-tclpkg_gv_Makefile.in.patch,v 1.1 2019/08/13 03:07:00 brook Exp $
+$NetBSD: patch-tclpkg_gv_Makefile.in,v 1.1 2020/07/27 20:44:15 adam Exp $
 
 Add missing -I flags to point to perl files.
 
