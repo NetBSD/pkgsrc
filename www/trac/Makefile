@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2020/05/22 21:24:29 rillig Exp $
+# $NetBSD: Makefile,v 1.90 2020/07/27 15:22:12 gdt Exp $
 
-DISTNAME=	Trac-1.2.3
+DISTNAME=	Trac-1.4.2
 PKGNAME=	${DISTNAME:tl}
-CATEGORIES=	devel www
+CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/
 
 MAINTAINER=	gdt@NetBSD.org
@@ -19,10 +19,11 @@ LICENSE=	modified-bsd
 # that use the other.
 
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.6:../../www/py-genshi
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py-jinja2
 
 USE_TOOLS+=	pax
 
-# The Trac 1.2 series does not support python 3.
+# The Trac 1.4 series does not support python 3.
 PYTHON_VERSIONS_ACCEPTED=	27
 
 REPLACE_PYTHON=		contrib/*.py contrib/*-hook
