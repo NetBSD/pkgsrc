@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2020/07/27 20:11:44 adam Exp $
+
+BUILDLINK_TREE+=	py-py3c
+
+.if !defined(PY_PY3C_BUILDLINK3_MK)
+PY_PY3C_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.py-py3c+=	${PYPKGPREFIX}-py3c>=1.1
+BUILDLINK_PKGSRCDIR.py-py3c?=	../../lang/py-py3c
+BUILDLINK_DEPMETHOD.py-py3c?=	build
+.endif	# PY_PY3C_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-py-py3c
