@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.90 2020/07/27 15:22:12 gdt Exp $
+# $NetBSD: Makefile,v 1.91 2020/07/27 16:37:52 gdt Exp $
 
 DISTNAME=	Trac-1.4.2
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trac.edgewall.org/
 COMMENT=	Repository browser, wiki, and issue tracking system
 LICENSE=	modified-bsd
