@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/04/18 07:50:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/07/27 11:12:48 adam Exp $
 bin/FileCheck
 bin/bugpoint
 bin/count
@@ -460,6 +460,9 @@ include/llvm/CodeGen/ParallelCG.h
 include/llvm/CodeGen/Passes.h
 include/llvm/CodeGen/PreISelIntrinsicLowering.h
 include/llvm/CodeGen/PseudoSourceValue.h
+include/llvm/CodeGen/RDFGraph.h
+include/llvm/CodeGen/RDFLiveness.h
+include/llvm/CodeGen/RDFRegisters.h
 include/llvm/CodeGen/ReachingDefAnalysis.h
 include/llvm/CodeGen/RegAllocPBQP.h
 include/llvm/CodeGen/RegAllocRegistry.h
@@ -1553,6 +1556,7 @@ lib/cmake/llvm/HandleLLVMOptions.cmake
 lib/cmake/llvm/HandleLLVMStdlib.cmake
 lib/cmake/llvm/LLVM-Config.cmake
 lib/cmake/llvm/LLVMConfig.cmake
+lib/cmake/llvm/LLVMConfigExtensions.cmake
 lib/cmake/llvm/LLVMConfigVersion.cmake
 lib/cmake/llvm/LLVMDistributionSupport.cmake
 lib/cmake/llvm/LLVMExports-release.cmake
@@ -1563,7 +1567,7 @@ lib/cmake/llvm/LLVMProcessSources.cmake
 lib/cmake/llvm/TableGen.cmake
 lib/cmake/llvm/UseLibtool.cmake
 lib/cmake/llvm/VersionFromVCS.cmake
-lib/libLLVM-10.0.0.${SOEXT}
+lib/libLLVM-10.0.1.${SOEXT}
 lib/libLLVM-10.so
 lib/libLLVM.${SOEXT}
 ${PLIST.AArch64}lib/libLLVMAArch64AsmParser.a
@@ -1611,6 +1615,7 @@ lib/libLLVMDebugInfoPDB.a
 lib/libLLVMDemangle.a
 lib/libLLVMDlltoolDriver.a
 lib/libLLVMExecutionEngine.a
+lib/libLLVMExtensions.a
 lib/libLLVMFrontendOpenMP.a
 lib/libLLVMFuzzMutate.a
 lib/libLLVMGlobalISel.a
