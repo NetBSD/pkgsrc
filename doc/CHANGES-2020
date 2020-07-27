@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4149 2020/07/27 14:12:23 jdolecek Exp $
+$NetBSD: CHANGES-2020,v 1.4150 2020/07/27 14:53:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6581,3 +6581,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-selectors2 to 2.0.2 [adam 2020-07-27]
 	Updated www/py-pylint-django to 2.2.0 [adam 2020-07-27]
 	Added net/py-xmm7360 version 0.20200727 [jdolecek 2020-07-27]
+	Updated audio/mpg123 to 1.26.3 [adam 2020-07-27]
+	Updated databases/prometheus to 2.20.0 [adam 2020-07-27]
