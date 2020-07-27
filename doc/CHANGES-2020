@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4148 2020/07/27 13:46:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4149 2020/07/27 14:12:23 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6580,3 +6580,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/py-m3u8 to 0.7.0 [adam 2020-07-27]
 	Updated devel/py-selectors2 to 2.0.2 [adam 2020-07-27]
 	Updated www/py-pylint-django to 2.2.0 [adam 2020-07-27]
+	Added net/py-xmm7360 version 0.20200727 [jdolecek 2020-07-27]
