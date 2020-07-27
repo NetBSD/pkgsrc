@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2020/04/29 12:38:52 adam Exp $
+$NetBSD: distinfo,v 1.39 2020/07/27 16:41:11 adam Exp $
 
-SHA1 (dnsmasq-2.81.tar.xz) = 7724b5f4a2249e42902e2d1a3c2d4a1a12a02b53
-RMD160 (dnsmasq-2.81.tar.xz) = 0a731a8746a34df1d0e1411fbc07b45f94458c22
-SHA512 (dnsmasq-2.81.tar.xz) = 85550c9782fef9b0710d0e233523ed1fe26e877a8bc53fcea3f7cf1fb17c3a79c46f284a99dab2bdaf6a107ea3f1a71cec476ab6d4e1b936da6591aaef42c88e
-Size (dnsmasq-2.81.tar.xz) = 510648 bytes
+SHA1 (dnsmasq-2.82.tar.xz) = 4eb84825d5a3b7e4d7de1fc58c56dd4eb8cace71
+RMD160 (dnsmasq-2.82.tar.xz) = 7583a0a0fa85aa400069e74899ec9e2aaa40c9d1
+SHA512 (dnsmasq-2.82.tar.xz) = faf36efdaa3abe84994e46aea018b0a324218d42814baac056ca635f6d03f1301e7b4d958f92b272a8e3a7ac358f3a4e2606129a217587b471aedb3ce23e903b
+Size (dnsmasq-2.82.tar.xz) = 509904 bytes
 SHA1 (patch-src_bpf.c) = 4115a5391f57564663bbfc448fbb865c370318a6
 SHA1 (patch-src_dump.c) = 3e7553e8ed2444536ba94187f7a100a9abdbb353

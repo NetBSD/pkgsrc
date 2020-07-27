@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2020/05/22 10:56:26 adam Exp $
+# $NetBSD: Makefile,v 1.43 2020/07/27 16:41:11 adam Exp $
 
-DISTNAME=	dnsmasq-2.81
-PKGREVISION=	1
+DISTNAME=	dnsmasq-2.82
 CATEGORIES=	net
 MASTER_SITES=	http://www.thekelleys.org.uk/dnsmasq/
 EXTRACT_SUFX=	.tar.xz
