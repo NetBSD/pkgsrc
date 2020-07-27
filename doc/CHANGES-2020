@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4157 2020/07/27 16:52:11 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4158 2020/07/27 17:33:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6594,3 +6594,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dnsmasq to 2.82 [adam 2020-07-27]
 	Updated devel/py-importlib-metadata to 1.7.0 [adam 2020-07-27]
 	Updated textproc/py-deepdiff to 5.0.2 [adam 2020-07-27]
+	Updated www/py-yarl to 1.5.0 [adam 2020-07-27]
+	Updated devel/py-cffi to 1.14.1 [adam 2020-07-27]
+	Updated net/py-xandikos to 0.2.3 [adam 2020-07-27]
+	Updated security/py-asyncssh to 2.3.0 [adam 2020-07-27]
