@@ -1,3 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/12 05:38:45 kamil Exp $
-bin/setconf
-man/man1/setconf.1
+@comment $NetBSD: PLIST,v 1.2 2020/07/27 20:23:01 adam Exp $
+bin/setconf-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/setconf.py
+${PYSITELIB}/setconf.pyc
+${PYSITELIB}/setconf.pyo
+man/man1/setconf-${PYVERSSUFFIX}.1
