@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4160 2020/07/27 20:24:07 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4161 2020/07/27 20:49:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6601,3 +6601,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/zathura to 0.4.6 [leot 2020-07-27]
 	Added lang/py-py3c version 1.2 [adam 2020-07-27]
 	Updated sysutils/py-setconf to 0.7.7 [adam 2020-07-27]
+	Updated graphics/graphviz to 2.44.1 [adam 2020-07-27]
+	Updated devel/subversion to 1.14.0 [adam 2020-07-27]
