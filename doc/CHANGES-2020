@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4155 2020/07/27 16:09:13 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4156 2020/07/27 16:41:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6590,3 +6590,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/widelands to 21 [nia 2020-07-27]
 	Updated devel/ccache to 3.7.11 [adam 2020-07-27]
 	Updated devel/meson to 0.55.0 [adam 2020-07-27]
+	Updated www/libpsl to 0.21.1 [adam 2020-07-27]
+	Updated net/dnsmasq to 2.82 [adam 2020-07-27]
