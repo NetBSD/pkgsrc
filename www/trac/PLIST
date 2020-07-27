@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/06/11 05:30:23 maya Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/07/27 15:22:12 gdt Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -28,9 +28,15 @@ ${PYSITELIB}/trac/admin/templates/admin_basics.html
 ${PYSITELIB}/trac/admin/templates/admin_logging.html
 ${PYSITELIB}/trac/admin/templates/admin_perms.html
 ${PYSITELIB}/trac/admin/templates/admin_plugins.html
+${PYSITELIB}/trac/admin/test.py
+${PYSITELIB}/trac/admin/test.pyc
+${PYSITELIB}/trac/admin/test.pyo
 ${PYSITELIB}/trac/admin/web_ui.py
 ${PYSITELIB}/trac/admin/web_ui.pyc
 ${PYSITELIB}/trac/admin/web_ui.pyo
+${PYSITELIB}/trac/api.py
+${PYSITELIB}/trac/api.pyc
+${PYSITELIB}/trac/api.pyo
 ${PYSITELIB}/trac/attachment.py
 ${PYSITELIB}/trac/attachment.pyc
 ${PYSITELIB}/trac/attachment.pyo
@@ -49,6 +55,9 @@ ${PYSITELIB}/trac/db/__init__.pyo
 ${PYSITELIB}/trac/db/api.py
 ${PYSITELIB}/trac/db/api.pyc
 ${PYSITELIB}/trac/db/api.pyo
+${PYSITELIB}/trac/db/convert.py
+${PYSITELIB}/trac/db/convert.pyc
+${PYSITELIB}/trac/db/convert.pyo
 ${PYSITELIB}/trac/db/mysql_backend.py
 ${PYSITELIB}/trac/db/mysql_backend.pyc
 ${PYSITELIB}/trac/db/mysql_backend.pyo
@@ -91,10 +100,6 @@ ${PYSITELIB}/trac/htdocs/css/diff.css
 ${PYSITELIB}/trac/htdocs/css/jquery-ui-addons.css
 ${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_diagonals-thick_18_ffddcc_40x40.png
 ${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_diagonals-thick_20_666666_40x40.png
-${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_flat_00_ffffff_40x100.png
-${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_flat_0_ffffdd_40x100.png
-${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_flat_0_ffffff_40x100.png
-${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_flat_10_000000_40x100.png
 ${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_30_303030_1x100.png
 ${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_75_c0f0c0_1x100.png
 ${PYSITELIB}/trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_80_ffffdd_1x100.png
@@ -155,6 +160,7 @@ ${PYSITELIB}/trac/htdocs/js/keyboard_nav.js
 ${PYSITELIB}/trac/htdocs/js/log_graph.js
 ${PYSITELIB}/trac/htdocs/js/messages/ca.js
 ${PYSITELIB}/trac/htdocs/js/messages/da.js
+${PYSITELIB}/trac/htdocs/js/messages/de.js
 ${PYSITELIB}/trac/htdocs/js/messages/en_GB.js
 ${PYSITELIB}/trac/htdocs/js/messages/en_US.js
 ${PYSITELIB}/trac/htdocs/js/messages/eo.js
@@ -175,6 +181,7 @@ ${PYSITELIB}/trac/htdocs/js/messages/nl.js
 ${PYSITELIB}/trac/htdocs/js/messages/pt_BR.js
 ${PYSITELIB}/trac/htdocs/js/messages/ru.js
 ${PYSITELIB}/trac/htdocs/js/messages/sl.js
+${PYSITELIB}/trac/htdocs/js/messages/sq.js
 ${PYSITELIB}/trac/htdocs/js/messages/sv.js
 ${PYSITELIB}/trac/htdocs/js/messages/tr.js
 ${PYSITELIB}/trac/htdocs/js/messages/uk.js
@@ -187,6 +194,7 @@ ${PYSITELIB}/trac/htdocs/js/search.js
 ${PYSITELIB}/trac/htdocs/js/threaded_comments.js
 ${PYSITELIB}/trac/htdocs/js/timeline_multirepos.js
 ${PYSITELIB}/trac/htdocs/js/trac.js
+${PYSITELIB}/trac/htdocs/js/wiki.js
 ${PYSITELIB}/trac/htdocs/js/wikitoolbar.js
 ${PYSITELIB}/trac/htdocs/js/workflow_graph.js
 ${PYSITELIB}/trac/htdocs/loading.gif
@@ -210,6 +218,8 @@ ${PYSITELIB}/trac/locale/ca/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/cs/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/cs/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/da/LC_MESSAGES/messages.mo
+${PYSITELIB}/trac/locale/de/LC_MESSAGES/messages.mo
+${PYSITELIB}/trac/locale/de/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/el/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/el/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/en_GB/LC_MESSAGES/messages.mo
@@ -259,6 +269,8 @@ ${PYSITELIB}/trac/locale/ru/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/ru/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/sl/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/sl/LC_MESSAGES/tracini.mo
+${PYSITELIB}/trac/locale/sq/LC_MESSAGES/messages.mo
+${PYSITELIB}/trac/locale/sq/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/sv/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/sv/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/tr/LC_MESSAGES/messages.mo
@@ -297,9 +309,6 @@ ${PYSITELIB}/trac/notification/__init__.pyo
 ${PYSITELIB}/trac/notification/api.py
 ${PYSITELIB}/trac/notification/api.pyc
 ${PYSITELIB}/trac/notification/api.pyo
-${PYSITELIB}/trac/notification/compat.py
-${PYSITELIB}/trac/notification/compat.pyc
-${PYSITELIB}/trac/notification/compat.pyo
 ${PYSITELIB}/trac/notification/mail.py
 ${PYSITELIB}/trac/notification/mail.pyc
 ${PYSITELIB}/trac/notification/mail.pyo
@@ -322,7 +331,6 @@ ${PYSITELIB}/trac/prefs/api.pyo
 ${PYSITELIB}/trac/prefs/templates/prefs.html
 ${PYSITELIB}/trac/prefs/templates/prefs_advanced.html
 ${PYSITELIB}/trac/prefs/templates/prefs_general.html
-${PYSITELIB}/trac/prefs/templates/prefs_keybindings.html
 ${PYSITELIB}/trac/prefs/templates/prefs_localization.html
 ${PYSITELIB}/trac/prefs/templates/prefs_userinterface.html
 ${PYSITELIB}/trac/prefs/web_ui.py
@@ -342,7 +350,6 @@ ${PYSITELIB}/trac/search/templates/search.html
 ${PYSITELIB}/trac/search/web_ui.py
 ${PYSITELIB}/trac/search/web_ui.pyc
 ${PYSITELIB}/trac/search/web_ui.pyo
-${PYSITELIB}/trac/templates/README
 ${PYSITELIB}/trac/templates/about.html
 ${PYSITELIB}/trac/templates/attach_file_form.html
 ${PYSITELIB}/trac/templates/attachment.html
@@ -352,10 +359,31 @@ ${PYSITELIB}/trac/templates/diff_options.html
 ${PYSITELIB}/trac/templates/diff_view.html
 ${PYSITELIB}/trac/templates/environment_info.html
 ${PYSITELIB}/trac/templates/error.html
+${PYSITELIB}/trac/templates/genshi/about.html
+${PYSITELIB}/trac/templates/genshi/admin.html
+${PYSITELIB}/trac/templates/genshi/attach_file_form.html
+${PYSITELIB}/trac/templates/genshi/attachment.html
+${PYSITELIB}/trac/templates/genshi/author_or_creator.rss
+${PYSITELIB}/trac/templates/genshi/diff_div.html
+${PYSITELIB}/trac/templates/genshi/diff_options.html
+${PYSITELIB}/trac/templates/genshi/diff_view.html
+${PYSITELIB}/trac/templates/genshi/environment_info.html
+${PYSITELIB}/trac/templates/genshi/error.html
+${PYSITELIB}/trac/templates/genshi/history_view.html
+${PYSITELIB}/trac/templates/genshi/index.html
+${PYSITELIB}/trac/templates/genshi/layout.html
+${PYSITELIB}/trac/templates/genshi/list_of_attachments.html
+${PYSITELIB}/trac/templates/genshi/page_index.html
+${PYSITELIB}/trac/templates/genshi/prefs.html
+${PYSITELIB}/trac/templates/genshi/preview_file.html
+${PYSITELIB}/trac/templates/genshi/progress_bar.html
+${PYSITELIB}/trac/templates/genshi/progress_bar_grouped.html
+${PYSITELIB}/trac/templates/genshi/theme.html
 ${PYSITELIB}/trac/templates/history_view.html
 ${PYSITELIB}/trac/templates/index.html
 ${PYSITELIB}/trac/templates/layout.html
 ${PYSITELIB}/trac/templates/list_of_attachments.html
+${PYSITELIB}/trac/templates/macros.html
 ${PYSITELIB}/trac/templates/page_index.html
 ${PYSITELIB}/trac/templates/preview_file.html
 ${PYSITELIB}/trac/templates/progress_bar.html
@@ -421,6 +449,9 @@ ${PYSITELIB}/trac/ticket/templates/ticket_change.html
 ${PYSITELIB}/trac/ticket/templates/ticket_notify_email.txt
 ${PYSITELIB}/trac/ticket/templates/ticket_preview.html
 ${PYSITELIB}/trac/ticket/templates/ticket_workflow.html
+${PYSITELIB}/trac/ticket/test.py
+${PYSITELIB}/trac/ticket/test.pyc
+${PYSITELIB}/trac/ticket/test.pyo
 ${PYSITELIB}/trac/ticket/web_ui.py
 ${PYSITELIB}/trac/ticket/web_ui.pyc
 ${PYSITELIB}/trac/ticket/web_ui.pyo
@@ -542,6 +573,18 @@ ${PYSITELIB}/trac/upgrades/db40.pyo
 ${PYSITELIB}/trac/upgrades/db41.py
 ${PYSITELIB}/trac/upgrades/db41.pyc
 ${PYSITELIB}/trac/upgrades/db41.pyo
+${PYSITELIB}/trac/upgrades/db42.py
+${PYSITELIB}/trac/upgrades/db42.pyc
+${PYSITELIB}/trac/upgrades/db42.pyo
+${PYSITELIB}/trac/upgrades/db43.py
+${PYSITELIB}/trac/upgrades/db43.pyc
+${PYSITELIB}/trac/upgrades/db43.pyo
+${PYSITELIB}/trac/upgrades/db44.py
+${PYSITELIB}/trac/upgrades/db44.pyc
+${PYSITELIB}/trac/upgrades/db44.pyo
+${PYSITELIB}/trac/upgrades/db45.py
+${PYSITELIB}/trac/upgrades/db45.pyc
+${PYSITELIB}/trac/upgrades/db45.pyo
 ${PYSITELIB}/trac/upgrades/db5.py
 ${PYSITELIB}/trac/upgrades/db5.pyc
 ${PYSITELIB}/trac/upgrades/db5.pyo
@@ -608,15 +651,10 @@ ${PYSITELIB}/trac/versioncontrol/diff.pyo
 ${PYSITELIB}/trac/versioncontrol/svn_authz.py
 ${PYSITELIB}/trac/versioncontrol/svn_authz.pyc
 ${PYSITELIB}/trac/versioncontrol/svn_authz.pyo
-${PYSITELIB}/trac/versioncontrol/svn_fs.py
-${PYSITELIB}/trac/versioncontrol/svn_fs.pyc
-${PYSITELIB}/trac/versioncontrol/svn_fs.pyo
-${PYSITELIB}/trac/versioncontrol/svn_prop.py
-${PYSITELIB}/trac/versioncontrol/svn_prop.pyc
-${PYSITELIB}/trac/versioncontrol/svn_prop.pyo
 ${PYSITELIB}/trac/versioncontrol/templates/admin_repositories.html
 ${PYSITELIB}/trac/versioncontrol/templates/browser.html
 ${PYSITELIB}/trac/versioncontrol/templates/changeset.html
+${PYSITELIB}/trac/versioncontrol/templates/changeset_content.html
 ${PYSITELIB}/trac/versioncontrol/templates/diff_form.html
 ${PYSITELIB}/trac/versioncontrol/templates/dir_entries.html
 ${PYSITELIB}/trac/versioncontrol/templates/dirlist_thead.html
@@ -811,6 +849,8 @@ ${PYSITELIB}/tracopt/ticket/commit_updater.pyo
 ${PYSITELIB}/tracopt/ticket/deleter.py
 ${PYSITELIB}/tracopt/ticket/deleter.pyc
 ${PYSITELIB}/tracopt/ticket/deleter.pyo
+${PYSITELIB}/tracopt/ticket/htdocs/ticketclone.js
+${PYSITELIB}/tracopt/ticket/htdocs/ticketdeleter.js
 ${PYSITELIB}/tracopt/ticket/templates/ticket_delete.html
 ${PYSITELIB}/tracopt/versioncontrol/__init__.py
 ${PYSITELIB}/tracopt/versioncontrol/__init__.pyc
@@ -841,6 +881,7 @@ share/examples/trac/checkwiki.py
 share/examples/trac/emailfilter.py
 share/examples/trac/htdigest.py
 share/examples/trac/htpasswd.py
+share/examples/trac/jinjachecker.py
 share/examples/trac/l10n_diff_index.py
 share/examples/trac/l10n_reset_en_GB.py
 share/examples/trac/l10n_revert_lineno_conflicts.py
@@ -851,6 +892,8 @@ share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-pre-commit-hook
 share/examples/trac/trac-svn-hook
 share/examples/trac/trac-svn-post-commit-hook.cmd
+share/examples/trac/travis/edgewall_host_key
+share/examples/trac/travis/id_rsa.enc
 share/examples/trac/wiki2rst.py
 share/examples/trac/workflow/README
 share/examples/trac/workflow/enterprise-workflow.ini
