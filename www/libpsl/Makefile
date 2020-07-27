@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2020/06/02 08:23:01 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/07/27 16:38:51 adam Exp $
 
-DISTNAME=	libpsl-0.21.0
-PKGREVISION=	2
+DISTNAME=	libpsl-0.21.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rockdaboot/}
-GITHUB_RELEASE=	${DISTNAME}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rockdaboot/libpsl/
+HOMEPAGE=	https://github.com/rockdaboot/libpsl
 COMMENT=	Library to handle the Public Suffix List
 LICENSE=	mit
 
