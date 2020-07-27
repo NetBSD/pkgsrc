@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/05/16 16:35:25 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/07/27 16:20:45 gdt Exp $
 
 DISTNAME=	setuptools_trial-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_trial/}
 
-MAINTAINER=	gdt@ir.bbn.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/rutsky/setuptools-trial
 COMMENT=	Setuptools plugin for Twisted-based unit tests
 LICENSE=	modified-bsd
