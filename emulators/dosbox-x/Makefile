@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/07/27 13:37:53 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/07/27 13:41:32 nia Exp $
 
 DISTNAME=	dosbox-x-0.83.3
 CATEGORIES=	emulators
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--disable-dynrec
 CONFIGURE_ARGS+=	--disable-unaligned-memory
 .else
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
- LOG: Setting execute permission on the code cache has failed
+# LOG: Setting execute permission on the code cache has failed
 NOT_PAX_MPROTECT_SAFE+=	bin/dosbox-x
 .endif
 
