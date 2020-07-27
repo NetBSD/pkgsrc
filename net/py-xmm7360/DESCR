@@ -1,0 +1,6 @@
+This package contains tool to connect Intel XMM7360 modem to mobile network.
+
+It requires the wwanc(4) driver to be present, and device nodes already
+created, for details see the manpage.
+
+open_xdatachannel.py must be run as root.
