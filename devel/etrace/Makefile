@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/07/27 16:37:52 gdt Exp $
 #
 
 DISTNAME=	etrace-2.1
@@ -6,7 +6,7 @@ PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	http://ndevilla.free.fr/etrace/
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ndevilla.free.fr/etrace/
 COMMENT=	Function call tracing
 
