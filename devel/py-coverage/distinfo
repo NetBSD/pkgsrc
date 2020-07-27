@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2020/07/06 15:42:00 adam Exp $
+$NetBSD: distinfo,v 1.20 2020/07/27 08:15:15 adam Exp $
 
-SHA1 (coverage-5.2.tar.gz) = d6ad7a64f58ae0cd95ae5c19def7bc31595b2f8a
-RMD160 (coverage-5.2.tar.gz) = 9b239db61dbda3af40885958d5c3e8e581265c81
-SHA512 (coverage-5.2.tar.gz) = 54645e66ab3e7632889a91703c479a885195d24b414d1559093059f0b648d40d7de22ca25816e43c30f955f0725eda6131ea7d43276d25ee25522ce0bd58683a
-Size (coverage-5.2.tar.gz) = 693669 bytes
+SHA1 (coverage-5.2.1.tar.gz) = 3047b7b6d66d262fc83e982ca0a4bccbbc615667
+RMD160 (coverage-5.2.1.tar.gz) = 1855cfd33804f1905beec66b23a4d1679530905d
+SHA512 (coverage-5.2.1.tar.gz) = bda6129a4f4e2db3d26878036ceec137e4f359b8d37ce087e4007751bf0bbda7d706967a50b120378fa533f980e70142328099332374a1f303fa0083ffc078b0
+Size (coverage-5.2.1.tar.gz) = 694076 bytes
