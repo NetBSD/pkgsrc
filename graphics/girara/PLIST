@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/12/20 10:12:45 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/07/27 15:14:20 leot Exp $
 include/girara/callbacks.h
 include/girara/commands.h
 include/girara/completion.h
@@ -26,6 +26,7 @@ share/locale/de/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/el/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/eo/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/es/LC_MESSAGES/libgirara-gtk3-3.mo
+share/locale/fa_IR/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/fr/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/he/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/it/LC_MESSAGES/libgirara-gtk3-3.mo
@@ -35,3 +36,4 @@ share/locale/pt_BR/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/ru/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/sv/LC_MESSAGES/libgirara-gtk3-3.mo
 share/locale/tr/LC_MESSAGES/libgirara-gtk3-3.mo
+share/locale/uk_UA/LC_MESSAGES/libgirara-gtk3-3.mo
