@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/07/27 15:21:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2020/07/27 15:22:12 nia Exp $
 
 SHA1 (widelands-build21-source.tar.gz) = 6e759c187db71afb6c4ea5e0d4d896a032f09696
 RMD160 (widelands-build21-source.tar.gz) = b4beb43886b9daa857d431cc4203e96f4dad8864
@@ -7,6 +7,5 @@ Size (widelands-build21-source.tar.gz) = 381374149 bytes
 SHA1 (patch-CMakeLists.txt) = 8b400bc5554964378275d304943e6489c82d9915
 SHA1 (patch-src_CMakeLists.txt) = 184a4240280db8324005c8bb06cbc49f1f7195f5
 SHA1 (patch-src_base_i18n.cc) = e8120008c30dcc3611b12d02f6a6b76d8699e218
-SHA1 (patch-src_editor_ui__menus_categorized__item__selection__menu.h) = 5f81ded849263f3569d243b952c97e639ac437e1
 SHA1 (patch-src_network_bufferedconnection.h) = c3b8ced8d90a70da88dcb61ed079bf95ac350a23
 SHA1 (patch-xdg_CMakeLists.txt) = 4fac4da5c8d7d1f528caec5de21a212c03f44932
