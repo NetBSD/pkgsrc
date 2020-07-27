@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4159 2020/07/27 17:44:31 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4160 2020/07/27 20:24:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6599,3 +6599,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-xandikos to 0.2.3 [adam 2020-07-27]
 	Updated security/py-asyncssh to 2.3.0 [adam 2020-07-27]
 	Updated print/zathura to 0.4.6 [leot 2020-07-27]
+	Added lang/py-py3c version 1.2 [adam 2020-07-27]
+	Updated sysutils/py-setconf to 0.7.7 [adam 2020-07-27]
