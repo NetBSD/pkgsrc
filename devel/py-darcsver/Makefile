@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/09/02 13:19:41 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/07/27 16:20:45 gdt Exp $
 
 DISTNAME=	darcsver-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/darcsver/}
 
-MAINTAINER=	gdt@ir.bbn.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/darcsver/
 COMMENT=	Generate a version number from darcs history
 LICENSE=	modified-bsd
