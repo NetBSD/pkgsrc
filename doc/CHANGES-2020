@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4153 2020/07/27 15:22:22 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.4154 2020/07/27 15:22:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6587,3 +6587,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-lexicon to 3.3.28 [adam 2020-07-27]
 	Updated graphics/girara to 0.3.5 [leot 2020-07-27]
 	Updated www/trac to 1.4.2 [gdt 2020-07-27]
+	Updated games/widelands to 21 [nia 2020-07-27]
