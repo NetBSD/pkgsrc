@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2020/05/22 21:31:15 adam Exp $
+# $NetBSD: Makefile,v 1.30 2020/07/27 16:20:45 gdt Exp $
 
 DISTNAME=	Nevow-0.14.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=N/Nevow/}
 
-MAINTAINER=	gdt@ir.bbn.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/twisted/nevow
 COMMENT=	Next-generation web application templating system
 LICENSE=	mit
