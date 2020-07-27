@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4150 2020/07/27 14:53:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4151 2020/07/27 15:02:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6583,3 +6583,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/py-xmm7360 version 0.20200727 [jdolecek 2020-07-27]
 	Updated audio/mpg123 to 1.26.3 [adam 2020-07-27]
 	Updated databases/prometheus to 2.20.0 [adam 2020-07-27]
+	Updated www/py-idna to 2.10 [adam 2020-07-27]
+	Updated net/py-lexicon to 3.3.28 [adam 2020-07-27]
