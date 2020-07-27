@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/07/07 12:05:49 nia Exp $
+# $NetBSD: Makefile,v 1.16 2020/07/27 13:37:53 nia Exp $
 
 DISTNAME=	dosbox-x-0.83.3
 CATEGORIES=	emulators
@@ -28,11 +28,10 @@ CONFIGURE_ARGS+=	--enable-sdl2
 
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 CONFIGURE_ARGS+=	--disable-dynrec
-CONFIGURE_ARGS+=	--disable-fpu
 CONFIGURE_ARGS+=	--disable-unaligned-memory
 .else
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
-# LOG: Setting execute permission on the code cache has failed
+ LOG: Setting execute permission on the code cache has failed
 NOT_PAX_MPROTECT_SAFE+=	bin/dosbox-x
 .endif
 
@@ -48,6 +47,9 @@ INSTALLATION_DIRS+=	share/pixmaps
 
 CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/androidbuildlibs.sh
 CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/iosbuild.sh
+
+BUILDLINK_TRANSFORM+=	rm:-Wno-int-to-void-pointer-cast
+BUILDLINK_TRANSFORM+=	rm:-Wno-address-of-packed-member
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
