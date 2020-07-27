@@ -1,0 +1,78 @@
+$NetBSD: patch-configure,v 1.7 2020/07/27 20:48:52 adam Exp $
+
+Fix include paths for py3c.
+
+--- configure.orig	2020-06-03 13:35:42.000000000 +0000
++++ configure
+@@ -24336,7 +24336,7 @@ $as_echo "$as_me: WARNING: py3c cannot b
+       fi
+ 
+       save_cppflags="$CPPFLAGS"
+-      CPPFLAGS="$CPPFLAGS $ac_cv_python_includes -I$py3c_prefix/include"
++      CPPFLAGS="$CPPFLAGS $ac_cv_python_includes -I$py3c_prefix"
+       for ac_header in py3c.h
+ do :
+   ac_fn_c_check_header_mongrel "$LINENO" "py3c.h" "ac_cv_header_py3c_h" "$ac_includes_default"
+@@ -24346,7 +24346,7 @@ if test "x$ac_cv_header_py3c_h" = xyes; 
+ _ACEOF
+ 
+           py3c_found="yes"
+-          SVN_PY3C_INCLUDES="-I$py3c_prefix/include"
++          SVN_PY3C_INCLUDES="-I$py3c_prefix"
+ 
+ fi
+ 
+@@ -24967,7 +24967,7 @@ $as_echo "$as_me: WARNING: py3c cannot b
+       fi
+ 
+       save_cppflags="$CPPFLAGS"
+-      CPPFLAGS="$CPPFLAGS $ac_cv_python_includes -I$py3c_prefix/include"
++      CPPFLAGS="$CPPFLAGS $ac_cv_python_includes -I$py3c_prefix"
+       for ac_header in py3c.h
+ do :
+   ac_fn_c_check_header_mongrel "$LINENO" "py3c.h" "ac_cv_header_py3c_h" "$ac_includes_default"
+@@ -24977,7 +24977,7 @@ if test "x$ac_cv_header_py3c_h" = xyes; 
+ _ACEOF
+ 
+           py3c_found="yes"
+-          SVN_PY3C_INCLUDES="-I$py3c_prefix/include"
++          SVN_PY3C_INCLUDES="-I$py3c_prefix"
+ 
+ fi
+ 
+@@ -25598,7 +25598,7 @@ $as_echo "$as_me: WARNING: py3c cannot b
+       fi
+ 
+       save_cppflags="$CPPFLAGS"
+-      CPPFLAGS="$CPPFLAGS $ac_cv_python_includes -I$py3c_prefix/include"
++      CPPFLAGS="$CPPFLAGS $ac_cv_python_includes -I$py3c_prefix"
+       for ac_header in py3c.h
+ do :
+   ac_fn_c_check_header_mongrel "$LINENO" "py3c.h" "ac_cv_header_py3c_h" "$ac_includes_default"
+@@ -25608,7 +25608,7 @@ if test "x$ac_cv_header_py3c_h" = xyes; 
+ _ACEOF
+ 
+           py3c_found="yes"
+-          SVN_PY3C_INCLUDES="-I$py3c_prefix/include"
++          SVN_PY3C_INCLUDES="-I$py3c_prefix"
+ 
+ fi
+ 
+@@ -26232,7 +26232,7 @@ $as_echo "$as_me: WARNING: py3c cannot b
+       fi
+ 
+       save_cppflags="$CPPFLAGS"
+-      CPPFLAGS="$CPPFLAGS $ac_cv_python_includes -I$py3c_prefix/include"
++      CPPFLAGS="$CPPFLAGS $ac_cv_python_includes -I$py3c_prefix"
+       for ac_header in py3c.h
+ do :
+   ac_fn_c_check_header_mongrel "$LINENO" "py3c.h" "ac_cv_header_py3c_h" "$ac_includes_default"
+@@ -26242,7 +26242,7 @@ if test "x$ac_cv_header_py3c_h" = xyes; 
+ _ACEOF
+ 
+           py3c_found="yes"
+-          SVN_PY3C_INCLUDES="-I$py3c_prefix/include"
++          SVN_PY3C_INCLUDES="-I$py3c_prefix"
+ 
+ fi
+ 
