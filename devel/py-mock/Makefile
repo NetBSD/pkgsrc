@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2019/05/20 11:49:10 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/07/27 16:20:44 gdt Exp $
 
 DISTNAME=	mock-3.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mock/}
 
-MAINTAINER=	gdt@ir.bbn.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/testing-cabal/mock
 COMMENT=	Python testing framework
 LICENSE=	gnu-gpl-v2
