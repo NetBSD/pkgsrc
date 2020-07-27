@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/03/12 16:36:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/07/27 17:32:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -34,6 +34,9 @@ ${PYSITELIB}/asyncssh/client.pyo
 ${PYSITELIB}/asyncssh/compression.py
 ${PYSITELIB}/asyncssh/compression.pyc
 ${PYSITELIB}/asyncssh/compression.pyo
+${PYSITELIB}/asyncssh/config.py
+${PYSITELIB}/asyncssh/config.pyc
+${PYSITELIB}/asyncssh/config.pyo
 ${PYSITELIB}/asyncssh/connection.py
 ${PYSITELIB}/asyncssh/connection.pyc
 ${PYSITELIB}/asyncssh/connection.pyo
