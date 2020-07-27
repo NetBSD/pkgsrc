@@ -1,0 +1,16 @@
+$NetBSD: patch-build-config.h.in,v 1.1 2020/07/27 20:41:10 oster Exp $
+
+We need to use res_ndestroy() to cleanup after res_init().
+
+--- build-config.h.in.orig	2015-02-23 20:32:27.000000000 +0000
++++ build-config.h.in
+@@ -104,6 +104,9 @@
+ /* Define to 1 if you have the `res_ninit()' function. */
+ #undef HAVE_RES_NINIT
+ 
++/* Define to 1 if you have the 'res_ndestroy()' function. */
++#undef HAVE_RES_NDESTROY
++
+ /* Define to 1 if you have the <signal.h> header file. */
+ #undef HAVE_SIGNAL_H
+ 
