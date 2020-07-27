@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4158 2020/07/27 17:33:25 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4159 2020/07/27 17:44:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6598,3 +6598,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-cffi to 1.14.1 [adam 2020-07-27]
 	Updated net/py-xandikos to 0.2.3 [adam 2020-07-27]
 	Updated security/py-asyncssh to 2.3.0 [adam 2020-07-27]
+	Updated print/zathura to 0.4.6 [leot 2020-07-27]
