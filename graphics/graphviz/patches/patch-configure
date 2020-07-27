@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.7 2017/03/08 14:51:56 wiz Exp $
+$NetBSD: patch-configure,v 1.8 2020/07/27 20:44:15 adam Exp $
 
 1. chunk: fix
 ./configure.lineno: 1: Syntax error: Bad substitution
@@ -10,9 +10,9 @@ last chunk: fix
 http://www.graphviz.org/mantisbt/view.php?id=2362
 last last chunk: fix sed expression not to use + which is not in BRE (guile)
 
---- configure.orig	2016-12-25 03:04:52.000000000 +0000
+--- configure.orig	2020-04-08 07:52:13.000000000 +0000
 +++ configure
-@@ -3527,8 +3527,15 @@ case "${host_os}" in
+@@ -3369,8 +3369,15 @@ case "${host_os}" in
  	# For the build number: months since Jan 2000, day of month from the timestamp
  	# For the revision number: hour, minute from the timestamp
  	if test $GRAPHVIZ_VERSION_MICRO != "0"; then
@@ -30,15 +30,15 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
  	fi
  	;;
  esac
-@@ -3544,7 +3551,6 @@ if test -z "$LIBPOSTFIX"; then
+@@ -3387,7 +3394,6 @@ if test -z "$LIBPOSTFIX"; then
      *linux* )
        case "${host_cpu}" in
-         aarch64 | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 )
+         aarch64 | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 )
 -          LIBPOSTFIX="64"
            INTGOSIZE=64
            ;;
        esac
-@@ -3552,7 +3558,6 @@ if test -z "$LIBPOSTFIX"; then
+@@ -3395,7 +3401,6 @@ if test -z "$LIBPOSTFIX"; then
      *solaris* )
        case "${host_cpu}" in
          x86_64 | sparc64 )
@@ -46,7 +46,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
            INTGOSIZE=64
            ;;
        esac
-@@ -17920,7 +17925,7 @@ esac
+@@ -18350,7 +18355,7 @@ esac
  
  
  
@@ -55,7 +55,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
  then
    # Enable common warnings flags
    CFLAGS="${CFLAGS} -Wall"
-@@ -20954,7 +20959,7 @@ done
+@@ -21191,7 +21196,7 @@ done
        if test "x$GUILE" = "x"; then
          use_guile="No (guile not available)"
        else
@@ -64,16 +64,16 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
          GUILE_VERSION_MAJOR=`echo $GUILE_VERSION | cut -d '.' -f 1`
          GUILE_VERSION_MINOR=`echo $GUILE_VERSION | cut -d '.' -f 2`
          if test 0$GUILE_VERSION_MAJOR -lt 2; then
-@@ -21586,7 +21591,7 @@ $as_echo_n "checking for Lua headers and
- 		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
-                         LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
-                         LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
--		        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
+@@ -21870,7 +21875,7 @@ $as_echo_n "checking for Lua headers and
+ 		        LUA_VERSION=`$PKG_CONFIG --modversion lua$l`
+                         LUA_INCLUDES="$LUA_CFLAGS "`$PKG_CONFIG --cflags lua$l`
+                         LUA_LIBS="$LUA_LFLAGS "`$PKG_CONFIG --libs lua$l`
+-		        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/`$PKG_CONFIG --variable=V lua`"
 +		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
  
- 		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
+ 		        pkgconfig_lualib_found=`$PKG_CONFIG --exists lualib$l 2>/dev/null`
  		        if test  "x$?" = "x0"; then
-@@ -21650,7 +21655,7 @@ $as_echo_n "checking for Lua headers and
+@@ -21934,7 +21939,7 @@ $as_echo_n "checking for Lua headers and
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -82,7 +82,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
              fi
          fi
  
-@@ -21928,8 +21933,8 @@ $as_echo "no" >&6; }
+@@ -22212,8 +22217,8 @@ $as_echo "no" >&6; }
  fi
  
  
@@ -93,32 +93,16 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
          ac_fn_c_check_header_mongrel "$LINENO" "caml/mlvalues.h" "ac_cv_header_caml_mlvalues_h" "$ac_includes_default"
-@@ -22149,17 +22154,17 @@ test -n "$PHP" || PHP="php"
-       if test "x$PHP" = "x"; then
-         use_php="No (php not available)"
-       else
--        if test -d /usr/include/php7; then
--          PHP_INCLUDES="-I/usr/include/php7 -I/usr/include/php7/main -I/usr/include/php7/Zend -I/usr/include/php7/TSRM"
-+        if test -d ${PREFIX}/include/php7; then
-+          PHP_INCLUDES="-I${PREFIX}/include/php7 -I${PREFIX}/include/php7/main -I${PREFIX}/include/php7/Zend -I${PREFIX}/include/php7/TSRM"
+@@ -22487,7 +22492,7 @@ test -n "$PHPCONFIG" || PHPCONFIG="php-c
          else
--          if test -d /usr/include/php5; then
--            PHP_INCLUDES="-I/usr/include/php5 -I/usr/include/php5/main -I/usr/include/php5/Zend -I/usr/include/php5/TSRM"
-+          if test -d ${PREFIX}/include/php5; then
-+            PHP_INCLUDES="-I${PREFIX}/include/php5 -I${PREFIX}/include/php5/main -I${PREFIX}/include/php5/Zend -I${PREFIX}/include/php5/TSRM"
-           else
--            PHP_INCLUDES="-I/usr/include/php -I/usr/include/php/main -I/usr/include/php/TSRM -I/usr/include/php/Zend -I/usr/include/php/ext -I/usr/include/php/ext/date/lib"
-+            PHP_INCLUDES="-I${PREFIX}/include/php -I${PREFIX}/include/php/main -I${PREFIX}/include/php/TSRM -I${PREFIX}/include/php/Zend -I${PREFIX}/include/php/ext -I${PREFIX}/include/php/ext/date/lib"
-           fi
-         fi
--        PHP_INSTALL_DIR="/usr/lib${LIBPOSTFIX}/php/modules"
--        PHP_INSTALL_DATADIR="/usr/share/php"
-+        PHP_INSTALL_DIR="${PREFIX}/lib${LIBPOSTFIX}/php/modules"
-+        PHP_INSTALL_DATADIR="${PREFIX}/share/php"
-         PHP_LIBS=
-         save_CPPFLAGS=$CPPFLAGS
-         CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -27214,10 +27219,6 @@ fi
+           PHP_INCLUDES="`$PHPCONFIG --includes`"
+           PHP_INSTALL_DIR="`$PHPCONFIG --extension-dir`"
+-          PHP_INSTALL_DATADIR="/usr/share/php"
++          PHP_INSTALL_DATADIR="${PREFIX}/share/php"
+           PHP_LIBS="`$PHPCONFIG --ldflags` `$PHPCONFIG --libs`"
+           save_CPPFLAGS=$CPPFLAGS
+           CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
+@@ -27143,10 +27148,6 @@ fi
  
  
  
