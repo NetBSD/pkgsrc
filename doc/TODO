@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19966 2020/07/27 10:11:38 adam Exp $
+$NetBSD: TODO,v 1.19967 2020/07/27 12:20:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -709,6 +709,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icdprog-0.5
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
+	o icewm-1.7.0
 	o icinga-base-2.11.2
 	o ike-2.0.1 [pkg/37032]
 	o ilmbase-2.5.2
@@ -1002,6 +1003,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o qbzr-0.23.2
+	o qdirstat-1.7
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qt4-creator-3.4.0
 	o racket-7.1
