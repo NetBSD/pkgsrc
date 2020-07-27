@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4156 2020/07/27 16:41:34 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4157 2020/07/27 16:52:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6592,3 +6592,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/meson to 0.55.0 [adam 2020-07-27]
 	Updated www/libpsl to 0.21.1 [adam 2020-07-27]
 	Updated net/dnsmasq to 2.82 [adam 2020-07-27]
+	Updated devel/py-importlib-metadata to 1.7.0 [adam 2020-07-27]
+	Updated textproc/py-deepdiff to 5.0.2 [adam 2020-07-27]
