@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4146 2020/07/27 10:11:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4147 2020/07/27 12:21:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6576,3 +6576,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-google-api-core to 1.22.0 [adam 2020-07-27]
 	Updated www/py-urllib3 to 1.25.10 [adam 2020-07-27]
 	Updated security/py-google-auth to 1.19.2 [adam 2020-07-27]
+	Updated devel/py-urwid to 2.1.1 [adam 2020-07-27]
+	Updated multimedia/py-m3u8 to 0.7.0 [adam 2020-07-27]
