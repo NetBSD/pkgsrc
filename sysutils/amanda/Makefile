@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/10/23 19:50:50 asau Exp $
+# $NetBSD: Makefile,v 1.48 2020/07/27 16:36:35 gdt Exp $
 #
 
 .include	"../../sysutils/amanda-common/version.mk"
@@ -8,7 +8,6 @@ CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-# MAINTAINER sort-of gdt@NetBSD.org
 HOMEPAGE=	http://www.amanda.org/
 COMMENT=	The "meta-package" for Amanda, a network backup system
 
