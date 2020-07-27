@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/03/13 18:54:31 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/27 13:41:42 adam Exp $
 
-DISTNAME=	selectors2-2.0.1
+DISTNAME=	selectors2-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/selectors2/}
