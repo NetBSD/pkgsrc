@@ -1,8 +1,7 @@
-$NetBSD: patch-tools_gfind__missing__files_gfind__missing__files.sh,v 1.1 2020/03/23 23:21:17 gdt Exp $
+$NetBSD: patch-tools_gfind__missing__files_gfind__missing__files.sh,v 1.2 2020/07/27 16:06:08 manu Exp $
 
-Remediate bashism.
-
-Not yet filed upstream.
+NetBSD build fixes
+From upstream https://review.gluster.org/24648
 
 --- tools/gfind_missing_files/gfind_missing_files.sh.orig	2018-04-12 17:46:46.697237625 +0000
 +++ tools/gfind_missing_files/gfind_missing_files.sh
