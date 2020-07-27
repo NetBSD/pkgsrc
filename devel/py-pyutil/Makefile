@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2020/06/16 11:34:40 nikita Exp $
+# $NetBSD: Makefile,v 1.24 2020/07/27 16:20:44 gdt Exp $
 
 DISTNAME=	pyutil-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutil/}
 
-MAINTAINER=	gdt@ir.bbn.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/tpltnt/pyutil
 COMMENT=	Collection of mature utilities for Python programmers
 LICENSE=	gnu-gpl-v2
