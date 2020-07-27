@@ -1,15 +1,16 @@
-$NetBSD: patch-src_base_i18n.cc,v 1.1 2019/12/19 22:16:34 joerg Exp $
+$NetBSD: patch-src_base_i18n.cc,v 1.2 2020/07/27 15:21:43 nia Exp $
 
---- src/base/i18n.cc.orig	2019-12-19 15:58:00.820559242 +0000
+Include clocale unconditionally.
+
+--- src/base/i18n.cc.orig	2020-07-12 19:33:44.000000000 +0000
 +++ src/base/i18n.cc
-@@ -19,10 +19,7 @@
+@@ -19,9 +19,7 @@
  
  #include "base/i18n.h"
  
 -#ifdef __FreeBSD__
  #include <clocale>
 -#endif
--
- #include <cstdlib>
+ 
  #include <map>
- #include <utility>
+ 
