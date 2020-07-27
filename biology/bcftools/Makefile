@@ -1,30 +1,55 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:08 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/27 00:29:04 bacon Exp $
 
-DISTNAME=	bcftools-1.9
-PKGREVISION=	2
+DISTNAME=	bcftools-1.10.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
-EXTRACT_SUFX=	.tar.bz2
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://samtools.github.io/bcftools/
-COMMENT=	Calling and manipulating files VCF and BCF formats
+HOMEPAGE=	https://www.htslib.org/
+COMMENT=	Tools for manipulating BCF and VCF variant call files
 LICENSE=	mit
 
-USE_TOOLS+=		gmake perl
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-htslib=system
-TEST_TARGET=		test
+USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
+GNU_CONFIGURE=	yes
 
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
+SUBST_FILES.version=	configure.ac
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-configure
+SUBST_SED.bash+=	-e 's|/bin/bash|${TOOLS_PATH.bash}|'
+SUBST_SED.bash+=	-e 's|\\/bin\\/bash|${TOOLS_PATH.bash:S,/,\\\/,g}|'
+SUBST_FILES.bash=	test/test.pl
 
 REPLACE_PERL+=		misc/*.pl
+REPLACE_PERL+=		misc/fix-broken-GATK-Double-vs-Integer
 REPLACE_PERL+=		misc/plot-vcfstats
+REPLACE_PERL+=		test/test.pl
 REPLACE_PYTHON+=	misc/*.py
 
-.include "../../devel/zlib/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-htslib=system
+MAKE_ENV+=		USE_GPL=1
+TEST_TARGET=		test
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -if
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/color-chrs.pl \
+		${DESTDIR}${PREFIX}/bin/color-chrs
+	${MV} ${DESTDIR}${PREFIX}/bin/guess-ploidy.py\
+	       ${DESTDIR}${PREFIX}/bin/guess-ploidy
+	${MV} ${DESTDIR}${PREFIX}/bin/plot-roh.py \
+		${DESTDIR}${PREFIX}/bin/plot-roh
+	${MV} ${DESTDIR}${PREFIX}/bin/run-roh.pl \
+		${DESTDIR}${PREFIX}/bin/run-roh
+	${MV} ${DESTDIR}${PREFIX}/bin/vcfutils.pl \
+		${DESTDIR}${PREFIX}/bin/vcfutils
+
+BUILDLINK_API_DEPENDS.htslib+=	htslib>=1.10.2
 .include "../../biology/htslib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
