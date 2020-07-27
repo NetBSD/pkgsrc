@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/01/26 17:30:56 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/07/27 16:37:52 gdt Exp $
 
 # used by devel/fann/Makefile
 # TODO: fold this into Makefile.
@@ -8,5 +8,5 @@ DISTNAME=		fann-${FANNVERSION}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=libfann/}
 
-MAINTAINER=		gdt@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://leenissen.dk/fann/wp/
