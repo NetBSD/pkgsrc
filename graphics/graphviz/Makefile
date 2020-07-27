@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.214 2020/05/15 06:02:55 rillig Exp $
+# $NetBSD: Makefile,v 1.215 2020/07/27 20:44:15 adam Exp $
 
-DISTNAME=	graphviz-2.40.1
-PKGREVISION=	47
+DISTNAME=	graphviz-2.44.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.graphviz.org/pub/graphviz/stable/SOURCES/
+MASTER_SITES=	https://www2.graphviz.org/Packages/stable/portable_source/
 
 MAINTAINER=	sno@NetBSD.org
 HOMEPAGE=	https://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 LICENSE=	epl-v1.0
 
-CHECK_FILES_SKIP+=	${PREFIX}/lib/graphviz/config6
-CHECK_PORTABILITY_SKIP+=windows/*
+CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
+CHECK_PORTABILITY_SKIP+=	windows/*
 
 PRIVILEGED_STAGES+=	clean
 
@@ -23,9 +22,12 @@ GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-python2
+CONFIGURE_ARGS+=	--disable-python3
+CONFIGURE_ARGS+=	--disable-r
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sharp
-CONFIGURE_ARGS+=	--disable-r
+CONFIGURE_ARGS+=	--enable-ltdl
 CONFIGURE_ARGS+=	--without-qt
 # build fails when PHP and/or Ruby are also installed
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
@@ -53,8 +55,7 @@ REPLACE.tclsh.old=	.*tclsh
 REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
 REPLACE_FILES.tclsh=	tclpkg/gv/demo/modgraph.tcl
 
-REPLACE_PERL+=		config/config_perl.pl \
-			tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
+REPLACE_PERL+=		tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
 			contrib/dirgraph/dirgraph.pl
 
 .include "../../mk/compiler.mk"
@@ -69,8 +70,8 @@ pre-build:
 # Remove temporary files and directories created by re-linking "libgv_lua.la".
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/lib/graphviz/lua/gv.so \
-	  ${DESTDIR}${PREFIX}/lib/graphviz/tcl/tcl \
-	  ${DESTDIR}${PREFIX}/lib/lua/5.1/gv.so
+		${DESTDIR}${PREFIX}/lib/graphviz/tcl/tcl \
+		${DESTDIR}${PREFIX}/lib/lua/5.1/gv.so
 
 .include "options.mk"
 
@@ -84,6 +85,7 @@ post-install:
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gts/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
