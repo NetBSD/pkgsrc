@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/27 20:11:44 adam Exp $
+
+SHA1 (py3c-1.2.tar.gz) = 34968631850de8307fedac41041cdc0bcfea5976
+RMD160 (py3c-1.2.tar.gz) = bbfc2c76c7c0c552800e183bb381bd769b9df9f2
+SHA512 (py3c-1.2.tar.gz) = 69896ea93589a98d061299cab1bd1e4681a2550a9fd4a7aa23f85740bdb3b85e3fe4fa8ee12a5657ebe57f3fe6decd9df506fa67add018fab466ad4c88dd29b6
+Size (py3c-1.2.tar.gz) = 46022 bytes
