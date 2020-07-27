@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4142 2020/07/27 00:30:00 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.4143 2020/07/27 06:40:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6569,3 +6569,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/audacious-plugins to 4.0.5 [nia 2020-07-27]
 	Updated chat/mumble to 1.3.2 [nia 2020-07-27]
 	Updated biology/bcftools to 1.10.2 [bacon 2020-07-27]
+	Updated databases/py-tortoise-orm to 0.16.14 [adam 2020-07-27]
+	Updated devel/py-ipykernel to 5.3.4 [adam 2020-07-27]
