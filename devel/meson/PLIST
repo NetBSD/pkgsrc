@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/01 14:51:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/07/27 16:08:13 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mesonbuild/__init__.py
 ${PYSITELIB}/mesonbuild/__init__.pyc
 ${PYSITELIB}/mesonbuild/__init__.pyo
+${PYSITELIB}/mesonbuild/arglist.py
+${PYSITELIB}/mesonbuild/arglist.pyc
+${PYSITELIB}/mesonbuild/arglist.pyo
 ${PYSITELIB}/mesonbuild/ast/__init__.py
 ${PYSITELIB}/mesonbuild/ast/__init__.pyc
 ${PYSITELIB}/mesonbuild/ast/__init__.pyo
@@ -64,9 +67,6 @@ ${PYSITELIB}/mesonbuild/cmake/common.py
 ${PYSITELIB}/mesonbuild/cmake/common.pyc
 ${PYSITELIB}/mesonbuild/cmake/common.pyo
 ${PYSITELIB}/mesonbuild/cmake/data/preload.cmake
-${PYSITELIB}/mesonbuild/cmake/data/run_ctgt.py
-${PYSITELIB}/mesonbuild/cmake/data/run_ctgt.pyc
-${PYSITELIB}/mesonbuild/cmake/data/run_ctgt.pyo
 ${PYSITELIB}/mesonbuild/cmake/executor.py
 ${PYSITELIB}/mesonbuild/cmake/executor.pyc
 ${PYSITELIB}/mesonbuild/cmake/executor.pyo
@@ -310,9 +310,9 @@ ${PYSITELIB}/mesonbuild/modules/unstable_cuda.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.py
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyo
-${PYSITELIB}/mesonbuild/modules/unstable_kconfig.py
-${PYSITELIB}/mesonbuild/modules/unstable_kconfig.pyc
-${PYSITELIB}/mesonbuild/modules/unstable_kconfig.pyo
+${PYSITELIB}/mesonbuild/modules/unstable_keyval.py
+${PYSITELIB}/mesonbuild/modules/unstable_keyval.pyc
+${PYSITELIB}/mesonbuild/modules/unstable_keyval.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.py
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyo
@@ -352,6 +352,9 @@ ${PYSITELIB}/mesonbuild/scripts/clangtidy.pyo
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.py
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.pyc
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.pyo
+${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.py
+${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyc
+${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyo
 ${PYSITELIB}/mesonbuild/scripts/commandrunner.py
 ${PYSITELIB}/mesonbuild/scripts/commandrunner.pyc
 ${PYSITELIB}/mesonbuild/scripts/commandrunner.pyo
