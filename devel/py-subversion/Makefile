@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2020/06/02 08:23:40 adam Exp $
+# $NetBSD: Makefile,v 1.88 2020/07/27 20:48:53 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
-PKGREVISION=	2
 COMMENT=	Python bindings and tools for Subversion
 
 .include "../../devel/subversion/Makefile.common"
@@ -10,6 +9,8 @@ SHLIBTOOL_OVERRIDE=	# empty
 TOOLS_BROKEN+=		perl
 
 CPPFLAGS+=		-P # for APR_INT64_T_FMT
+CONFIGURE_ARGS+=	--with-py3c=${BUILDLINK_PREFIX.py-py3c}/${PYINC}/py3c
+CONFIGURE_ARGS+=	--with-swig=${PREFIX}/bin/swig3.0
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 PY_PATCHPLIST=		YES
@@ -42,6 +43,8 @@ post-install:
 	${PY_COMPILE_O_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/svn
 
 .include "../../devel/subversion-base/buildlink3.mk"
+.include "../../devel/swig3/buildlink3.mk"
+.include "../../lang/py-py3c/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
