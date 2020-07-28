@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4162 2020/07/27 22:21:55 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4163 2020/07/28 06:42:44 kardel Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6604,3 +6604,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/graphviz to 2.44.1 [adam 2020-07-27]
 	Updated devel/subversion to 1.14.0 [adam 2020-07-27]
 	Updated net/youtube-dl to 20200728 [leot 2020-07-27]
+	Added sysutils/bareos version 19.2.8 [kardel 2020-07-28]
+	Added sysutils/bareos-clientonly version 19.2.8 [kardel 2020-07-28]
