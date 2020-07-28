@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4168 2020/07/28 14:28:30 pin Exp $
+$NetBSD: CHANGES-2020,v 1.4169 2020/07/28 14:38:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6611,3 +6611,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/libopenmpt to 0.5.1 [fcambus 2020-07-28]
 	Updated www/webkit-gtk to 2.28.4 [leot 2020-07-28]
 	Updated archivers/arqiver to 0.6.0 [pin 2020-07-28]
+	Removed sysutils/wbm-proc version 1.941 [mef 2020-07-28]
+	Removed sysutils/wbm-acl version 1.941 [mef 2020-07-28]
