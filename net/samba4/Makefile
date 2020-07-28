@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2020/07/21 18:42:25 christos Exp $
+# $NetBSD: Makefile,v 1.104 2020/07/28 01:11:10 christos Exp $
 
 DISTNAME=	samba-4.12.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -34,8 +34,8 @@ SMB_SHAREDSTATE?=	${PREFIX}/com
 SMB_LOCALSTATE?=	${VARBASE}
 SMB_INFO?=		${PREFIX}/info
 SMB_MAN?=		${PREFIX}/${PKGMANDIR}
-SMB_STATE?=		${VARBASE}/run
-SMB_PRIVATE?=		${PKG_SYSCONFDIR}/private
+SMB_STATE?=		${VARBASE}/db/samba4
+SMB_PRIVATE?=		${SMB_STATE}/private
 SMB_PID?=		${VARBASE}/run
 SMB_CACHE?=		${VARBASE}/run
 SMB_LOCK?=		${VARBASE}/run
