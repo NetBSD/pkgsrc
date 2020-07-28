@@ -1,10 +1,25 @@
-$NetBSD: patch-conf_Unix.mk,v 1.2 2019/01/21 06:59:58 agc Exp $
+$NetBSD: patch-conf_Unix.mk,v 1.3 2020/07/28 08:49:54 wiz Exp $
 
 Don't overwrite LDFLAGS
 
---- conf/Unix.mk.orig	2018-08-14 13:41:54.000000000 -0700
-+++ conf/Unix.mk	2019-01-20 22:50:36.191161113 -0800
-@@ -53,7 +53,7 @@
+--- conf/Unix.mk.orig	2018-08-14 20:41:54.000000000 +0000
++++ conf/Unix.mk
+@@ -38,7 +38,7 @@ MKDIR = mkdir -p
+ 
+ # C compiler and flags.
+ CC = cc
+-CFLAGS = -W -Wall -Os -fPIC
++CFLAGS += -W -Wall -Os -fPIC
+ CCOUT = -c -o 
+ 
+ # Static library building tool.
+@@ -48,12 +48,12 @@ AROUT =
+ 
+ # DLL building tool.
+ LDDLL = cc
+-LDDLLFLAGS = -shared
++LDDLLFLAGS = -shared ${LDFLAGS}
+ LDDLLOUT = -o 
  
  # Static linker.
  LD = cc
