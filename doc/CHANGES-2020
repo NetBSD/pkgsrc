@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4166 2020/07/28 12:46:59 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4167 2020/07/28 14:24:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6609,3 +6609,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/bearssl to 0.6nb1 [wiz 2020-07-28]
 	Updated net/php-baikal to 0.7.1 [wiz 2020-07-28]
 	Updated audio/libopenmpt to 0.5.1 [fcambus 2020-07-28]
+	Updated www/webkit-gtk to 2.28.4 [leot 2020-07-28]
