@@ -1,4 +1,4 @@
-$NetBSD: patch-mesonbuild_environment.py,v 1.3 2020/07/28 22:43:01 tnn Exp $
+$NetBSD: patch-mesonbuild_environment.py,v 1.4 2020/07/28 23:28:23 tnn Exp $
 
 Specify c++ language when making CXX parse standard input.
 Fixes problem where graphics/MesaLib fails to build due to:
@@ -14,7 +14,7 @@ Fixes problem where graphics/MesaLib fails to build due to:
          # gcc, g++, and gfortran all support these arguments
 -        args = compiler + ['-E', '-dM', '-']
 +        args = compiler + ['-E', '-dM' ]
-+        if "++" in compiler[0]:
++        if compiler[0].endswith('++'):
 +          args += [ '-x', 'c++' ]
 +        args += [ '-' ]
          p, output, error = Popen_safe(args, write='', stdin=subprocess.PIPE)
@@ -26,7 +26,7 @@ Fixes problem where graphics/MesaLib fails to build due to:
          """
 -        args = compiler + ['-E', '-dM', '-']
 +        args = compiler + ['-E', '-dM' ]
-+        if "++" in compiler[0]:
++        if compiler[0].endswith('++'):
 +          args += [ '-x', 'c++' ]
 +        args += [ '-' ]
          p, output, error = Popen_safe(args, write='', stdin=subprocess.PIPE)
