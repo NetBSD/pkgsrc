@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2020/07/27 23:23:20 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2020/07/28 14:53:34 leot Exp $
 
-GITHUB_PROJECT=	endless-sky
-GITHUB_TAG=	v0.9.12
-DISTNAME=	v0.9.12
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	endless-sky-0.9.12
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=endless-sky/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://endless-sky.github.io/
 COMMENT=	Side-scrolling space trading game
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v4.0 AND cc-by-sa-v3.0
 
-WRKSRC=		${WRKDIR}/endless-sky-0.9.12
 USE_LANGUAGES=	c++11
 ICON_THEMES=	yes
 BUILD_DIRS+=	. source
