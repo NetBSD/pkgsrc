@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2020/03/06 19:48:48 jnemeth Exp $
+# $NetBSD: Makefile,v 1.30 2020/07/28 06:42:44 kardel Exp $
 
 PKGNAME=		${DISTNAME:S/-/-clientonly-/}
 #PKGREVISION=		1
 COMMENT=		The Network Backup Solution (client only)
 
-CONFLICTS=		bacula-[0-9]* bacula-client-[0-9]*
+CONFLICTS=		bacula-[0-9]* bacula-client-[0-9]* bareos-[0-9]* bareos-clientonly-[0-9]*
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/bacula/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/bacula/patches
