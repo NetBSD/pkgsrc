@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/12/14 01:01:15 mef Exp $
+# $NetBSD: Makefile,v 1.10 2020/07/28 16:34:49 scole Exp $
 
 DISTNAME=	ttf-tlwg-${TLWG_VERSION}
 CATEGORIES=	fonts
@@ -6,7 +6,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/fonts-tlwg/fonts/
 EXTRACT_SUFX=	.tar.xz
 
-TLWG_VERSION=	0.7.1
+TLWG_VERSION=	0.7.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://linux.thai.net/projects/thaifonts-scalable
