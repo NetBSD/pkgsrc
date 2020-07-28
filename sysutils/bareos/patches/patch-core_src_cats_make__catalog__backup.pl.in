@@ -1,0 +1,20 @@
+$NetBSD: patch-core_src_cats_make__catalog__backup.pl.in,v 1.1 2020/07/28 06:36:29 kardel Exp $
+
+	XXX sort of works, but should ge generalized
+
+--- core/src/cats/make_catalog_backup.pl.in.orig	2020-07-09 17:39:20.000000000 +0000
++++ core/src/cats/make_catalog_backup.pl.in
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env perl
++#!@PREFIX@/bin/perl
+ use strict;
+ 
+ =head1 SCRIPT
+@@ -36,6 +36,7 @@ use strict;
+ my $cat = shift or die "Usage: $0 catalogname";
+ my $dir_conf='@sbindir@/bareos-dbcheck -B -c @confdir@';
+ my $wd = "@working_dir@";
++$ENV{PATH} = "@PREFIX@/bin:@PREFIX@/sbin:" . $ENV{PATH};
+ 
+ sub dump_sqlite3
+ {
