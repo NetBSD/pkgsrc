@@ -1,0 +1,15 @@
+$NetBSD: patch-core_src_CMakeLists.txt,v 1.1 2020/07/28 06:36:29 kardel Exp $
+
+make ndmp conditional
+
+--- core/src/CMakeLists.txt.orig	2020-06-22 13:23:09.152706321 +0000
++++ core/src/CMakeLists.txt
+@@ -20,7 +20,7 @@
+ if(NOT client-only)
+   add_subdirectory(tools)
+   add_subdirectory(cats)
+-  if(NOT HAVE_WIN32 AND ndmp)
++  if(HAVE_NDMP AND ndmp)
+     add_subdirectory(ndmp)
+   endif()
+   add_subdirectory(dird)

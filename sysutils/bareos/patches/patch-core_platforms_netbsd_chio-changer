@@ -1,0 +1,141 @@
+$NetBSD: patch-core_platforms_netbsd_chio-changer,v 1.1 2020/07/28 06:36:29 kardel Exp $
+
+	NetBSD changer script using NetBSD chio command
+
+--- core/platforms/netbsd/chio-changer.orig	2020-07-22 11:05:39.078612642 +0000
++++ core/platforms/netbsd/chio-changer
+@@ -0,0 +1,134 @@
++#!/bin/sh
++#
++# Bareos interface to chio autoloader
++#
++#  If you set in your Device resource
++#
++#  Changer Command = "path-to-this-script/chio-changer %c %o %S %a %d"
++#    you will have the following input to this script:
++#
++#  So Bareos will always call with all the following arguments, even though
++#    in come cases, not all are used.
++#
++#  chio-changer "changer-device" "command" "slot" "archive-device" "drive-index"
++#		   $1		   $2	    $3	      $4	       $5
++#
++#  N.B. If you change the script, take care to return either 
++#   the chio exit code or a 0. If the script exits with a non-zero
++#   exit code, Bareos will assume the request failed.
++
++CHIO=chio
++AWK=awk
++
++# check parameter count on commandline
++check_parm_count() {
++    pCount=$1
++    pCountNeed=$2
++    if test $pCount -lt $pCountNeed; then
++	echo "usage: chio-changer ctl-device command [slot archive-device drive-index]"
++	echo "	Insufficient number of arguments given."
++	if test $pCount -lt 2; then
++	    echo "  Mimimum usage is first two arguments ..."
++	else
++	    echo "  Command expected $pCountNeed arguments"
++	fi
++	exit 1
++    fi
++}
++
++params() {
++ eval $(${CHIO} -f $1 params | ${AWK} '/slots, / { print "slots=" $2 "; drives=" $4 "; picker=" $6 "; portals=" $8 "; totalslots=" ($2+$8) "; portalbase=" $2;}')
++ if [ "x$slots" = "x" ]; then
++   echo "unable to get changer parameters"
++   exit 1
++ fi
++}
++
++# Check for special cases where only 2 arguments are needed, 
++# all others are a minimum of 5
++case $2 in
++    list|listall)
++	check_parm_count $# 2
++	;;
++    slots)
++	check_parm_count $# 2
++	;;
++    transfer)
++	check_parm_count $# 3
++	;;
++    *)
++	check_parm_count $# 5
++	;;
++esac
++
++
++# Setup arguments
++ctl=$1
++cmd="$2"
++slot=${3+`expr $3 - 1`}
++device=$4
++drive=$5
++
++params $ctl
++
++case $cmd in 
++   unload)
++      ${CHIO} -f $ctl move drive $drive slot $slot
++      exit $?
++      ;;
++
++   load)
++      ${CHIO} -f $ctl move slot $slot drive $drive
++      exit $?
++      ;;
++
++   list) 
++      ${CHIO} -f $ctl status voltags | ${AWK} -v portalbase=$portalbase ' \
++		/^(slot|drive) .*ACCESS.*FULL/ { if (slot != "") { print slot tag; } slot=($2+1) ":"; next; } \
++		/^(slot|drive)/       { if (slot != "") { print slot tag; } slot=""; next; } \
++		/^portal .*ACCESS.*FULL/ { if (slot != "") { print slot tag; } slot=($2+1+portalbase) ":"; next; } \
++		/^portal/       { if (slot != "") { print slot tag; } slot=""; next; } \
++		/Primary volume tag:/ { tag=$4; next;} \
++		/From: slot/ { slot=($3+1) ":"; next;} \
++		END { if (slot != "") { print slot tag; } } \
++      '
++      ;;
++
++   listall) 
++      ${CHIO} -f $ctl status voltags | ${AWK} -v portalbase=$portalbase ' \
++		BEGIN { t["slot"] = "S"; t["drive"] = "D"; t["portal"] = "I"; state = "E"; type = "?";} \
++		/^(slot|drive) [0-9]+: <.*ACCESS.*FULL/ { if (slot != "") { print type ":" slot ":" state tag; } slot=($2+1); type = t[$1]; state = "F"; next; } \
++		/^(slot|drive) [0-9]+: <.*ACCESS/       { if (slot != "") { print type ":" slot ":" state tag; } slot=($2+1); type = t[$1]; state = "E"; next; } \
++		/^portal [0-9]+: <.*(INEAB|EXENAB).*ACCESS.*FULL/       { if (slot != "") { print type ":" slot ":" state tag; } slot=($2+1+portalbase); type = t[$1]; state = "F"; next; } \
++		/^portal [0-9]+: <.*(INEAB|EXENAB).*ACCESS/       { if (slot != "") { print type ":" slot ":" state tag; } slot=($2+1+portalbase); type = t[$1]; state = "E"; next; } \
++		/Primary volume tag:/                 { if (NF > 5) { tag=":" $4; } else { tag=""; } next;} \
++		/From: slot/                          { if (type == "D") { state = state ":" ($3+1); } next;} \
++		END { if (slot != "") { print type ":" slot ":" state tag; } } \
++      '
++      ;;
++
++   loaded)
++      ${CHIO} -f $ctl status drive $drive | ${AWK} 'BEGIN { from=0 }\
++		/From:/{ from=$3+1; }\
++		END { print from }'
++      ;;
++
++   slots)
++      echo $totalslots
++      ;;
++
++   transfer)
++      if [ $slot -ge $portalbase ]; then
++        src="portal $(($slot - $portalbase))"
++      else
++        src="slot $slot"
++      fi
++      if [ $device -gt $portalbase ]; then
++        tgt="portal $(($device - $portalbase - 1))"
++      else
++        tgt="slot $(($device - 1))"
++      fi
++      ${CHIO} -f $ctl move $src $tgt
++      exit $?
++      ;;
++esac

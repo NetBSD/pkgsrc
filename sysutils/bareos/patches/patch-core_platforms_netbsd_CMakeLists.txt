@@ -1,0 +1,18 @@
+$NetBSD: patch-core_platforms_netbsd_CMakeLists.txt,v 1.1 2020/07/28 06:36:29 kardel Exp $
+
+	Add installation of chio-changer script
+
+--- core/platforms/netbsd/CMakeLists.txt.orig	2019-04-01 11:02:03.728443554 +0000
++++ core/platforms/netbsd/CMakeLists.txt
+@@ -0,0 +1,11 @@
++# NetBSD specifics
++
++MESSAGE(STATUS  "installing changer script to ${scriptdir}")
++
++# Install changer script
++IF(NOT ${build_client_only})
++	INSTALL (FILES "${CMAKE_CURRENT_LIST_DIR}/chio-changer" DESTINATION "${scriptdir}/"
++           PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
++                     GROUP_READ GROUP_EXECUTE
++                     WORLD_READ WORLD_EXECUTE)
++ENDIF()

@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2020/07/28 06:36:29 kardel Exp $
+
+You can find some useful scripts to create, update and drop the necessary
+databases, privileges and tables in ${PREFIX}/lib/bareos/scripts.
+
+===========================================================================

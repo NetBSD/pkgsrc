@@ -1,0 +1,53 @@
+$NetBSD: patch-core_scripts_CMakeLists.txt,v 1.1 2020/07/28 06:36:29 kardel Exp $
+
+suppress mtx-changer installation if not found
+
+--- core/scripts/CMakeLists.txt.orig	2020-07-09 17:39:20.000000000 +0000
++++ core/scripts/CMakeLists.txt
+@@ -35,25 +35,37 @@ install(
+ install(
+   FILES bareos btraceback.gdb btraceback.dbx btraceback.mdb bareos-config
+         bareos-config-lib.sh bareos-ctl-funcs
+-  PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE
+-              WORLD_READ WORLD_EXECUTE
++  PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ
++              WORLD_READ
+   DESTINATION "${scriptdir}"
+ )
+ 
+ if(NOT client-only)
+   install(
+-    FILES mtx-changer disk-changer bareos-explorer bareos-glusterfind-wrapper
++    FILES disk-changer bareos-explorer bareos-glusterfind-wrapper
+           bareos-ctl-dir bareos-ctl-sd bareos-ctl-funcs
+     PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE
+                 WORLD_READ WORLD_EXECUTE
+     DESTINATION "${scriptdir}"
+   )
+ 
+-  install(FILES mtx-changer.conf bareos-regress.conf DESTINATION "${confdir}")
++  install(FILES bareos-regress.conf DESTINATION "${configtemplatedir}")
+ 
+-  install(
+-    FILES logrotate
+-    DESTINATION "${sysconfdir}/logrotate.d"
+-    RENAME bareos-dir
+-  )
++  if(NOT ${MTX} STREQUAL "MTX-NOTFOUND")
++    install(
++      FILES mtx-changer
++      PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE
++		  WORLD_READ WORLD_EXECUTE
++      DESTINATION "${scriptdir}"
++    )
++    install(FILES mtx-changer.conf DESTINATION "${configtemplatedir}")
++  endif()
++
++  if (NOT ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++    install(
++      FILES logrotate
++      DESTINATION "${sysconfdir}/logrotate.d"
++      RENAME bareos-dir
++    )
++  endif()
+ endif()
