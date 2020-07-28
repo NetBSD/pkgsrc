@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/14 22:26:26 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/07/28 14:28:01 pin Exp $
 bin/arqiver
 share/applications/arqiver.desktop
 share/arqiver/translations/arqiver_eo.qm
+share/arqiver/translations/arqiver_hu.qm
 share/arqiver/translations/arqiver_nl.qm
 share/arqiver/translations/arqiver_pl.qm
 share/arqiver/translations/arqiver_pt_BR.qm
 share/arqiver/translations/arqiver_ru.qm
+share/icons/hicolor/scalable/apps/arqiver.svg
