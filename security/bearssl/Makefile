@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/01/21 06:59:58 agc Exp $
+# $NetBSD: Makefile,v 1.7 2020/07/28 08:49:54 wiz Exp $
 
 DISTNAME=	bearssl-0.6
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://bearssl.org/
 
