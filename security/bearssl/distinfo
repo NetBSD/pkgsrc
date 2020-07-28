@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2019/01/21 06:59:58 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/07/28 08:49:54 wiz Exp $
 
 SHA1 (bearssl-0.6.tar.gz) = 443761821576544cd539206b1aba99a647b3137a
 RMD160 (bearssl-0.6.tar.gz) = 15cbb065fcccfac434e097a98e054d3b0498e2ea
 SHA512 (bearssl-0.6.tar.gz) = f9ed25683cfc6c4abe7f1203a2b82ed101ee4c9e0f9ab60755b6a09c8d1e8e4f64d413624e7bb9c4b0033f909a2e4568a1d916cc6ce4736222900691e1f8359a
 Size (bearssl-0.6.tar.gz) = 765094 bytes
-SHA1 (patch-conf_Unix.mk) = 5f85f1803b1e631a6011e3f8fc70aea2c1305d7a
+SHA1 (patch-conf_Unix.mk) = b3f005ee2ec39a2f9eca5b51f2af904f936a81ed
