@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4171 2020/07/28 16:38:29 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4172 2020/07/28 20:56:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6614,3 +6614,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/wbm-proc version 1.941 [mef 2020-07-28]
 	Removed sysutils/wbm-acl version 1.941 [mef 2020-07-28]
 	Updated fonts/ttf-tlwg to 0.7.2 [scole 2020-07-28]
+	Updated security/sqlmap to 1.4.7 [leot 2020-07-28]
