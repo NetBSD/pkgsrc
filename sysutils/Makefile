@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.892 2020/07/23 12:38:44 nia Exp $
+# $NetBSD: Makefile,v 1.893 2020/07/28 06:42:44 kardel Exp $
 #
 
 COMMENT=	System utilities
@@ -49,6 +49,8 @@ SUBDIR+=	bacula-tray-monitor-qt5
 SUBDIR+=	baloo
 SUBDIR+=	baloo-widgets
 SUBDIR+=	baloo5
+SUBDIR+=	bareos
+SUBDIR+=	bareos-clientonly
 SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bcmfw
