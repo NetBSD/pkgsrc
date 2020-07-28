@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/06/11 20:55:10 leot Exp $
+# $NetBSD: Makefile,v 1.21 2020/07/28 20:56:21 leot Exp $
 
-DISTNAME=	sqlmap-1.4.6
+DISTNAME=	sqlmap-1.4.7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
