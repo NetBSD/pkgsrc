@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/07/23 19:53:51 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/28 14:23:37 pin Exp $
 
 DISTNAME=	FrankenWM-1.0.22
-PKGNAME=	frankenwm-1.0.22
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sulami/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/sulami/FrankenWM/
 COMMENT=	Dynamic tiling window manager
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/FrankenWM-1.0.22
+WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c99
 
