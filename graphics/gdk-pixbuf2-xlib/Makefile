@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/03/08 16:47:46 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/07/28 05:11:21 wiz Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	gdk-pixbuf2-xlib-${PIXBUF2_VERSION}
@@ -36,7 +36,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
 	${INSTALL_DATA} ${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h ${DESTDIR}${PREFIX}/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
 	${INSTALL_DATA} ${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlibrgb.h ${DESTDIR}${PREFIX}/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
-	${INSTALL_LIB} ${WRKSRC}/output/contrib/gdk-pixbuf-xlib/*.so* ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/output/contrib/gdk-pixbuf-xlib/*.so ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/output/contrib/gdk-pixbuf-xlib/*.so.*[0-9.] ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/output/meson-private/gdk-pixbuf-xlib-2.0.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../devel/meson/build.mk"
