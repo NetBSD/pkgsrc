@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4186 2020/07/29 14:20:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4187 2020/07/29 14:21:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6634,3 +6634,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/xxhash to 0.8.0 [adam 2020-07-29]
 	Updated sysutils/ansible to 2.9.11 [adam 2020-07-29]
 	Updated www/firefox68 to 68.11.0 [nia 2020-07-29]
+	Updated www/firefox68-l10n to 68.11.0 [nia 2020-07-29]
