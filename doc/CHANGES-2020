@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4181 2020/07/29 10:47:45 mef Exp $
+$NetBSD: CHANGES-2020,v 1.4182 2020/07/29 11:22:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6627,3 +6627,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pip to 20.2 [adam 2020-07-29]
 	Updated net/py-aiormq to 3.2.3 [adam 2020-07-29]
 	Updated sysutils/webmin to 1.953 [mef 2020-07-29]
+	Updated graphics/ImageMagick to 7.0.10.24 [wiz 2020-07-29]
