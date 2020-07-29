@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4176 2020/07/29 07:07:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4177 2020/07/29 07:27:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6620,3 +6620,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/tor-browser-noscript to 11.0.34 [wiz 2020-07-29]
 	Updated graphics/leptonica to 1.80.0 [adam 2020-07-29]
 	Updated graphics/jasper to 2.0.19 [adam 2020-07-29]
+	Updated security/py-asn1crypto to 1.4.0 [adam 2020-07-29]
+	Updated www/py-uvicorn to 0.11.7 [adam 2020-07-29]
