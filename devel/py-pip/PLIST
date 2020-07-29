@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/06/01 16:27:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/07/29 10:00:16 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -186,6 +186,9 @@ ${PYSITELIB}/pip/_internal/network/cache.pyo
 ${PYSITELIB}/pip/_internal/network/download.py
 ${PYSITELIB}/pip/_internal/network/download.pyc
 ${PYSITELIB}/pip/_internal/network/download.pyo
+${PYSITELIB}/pip/_internal/network/lazy_wheel.py
+${PYSITELIB}/pip/_internal/network/lazy_wheel.pyc
+${PYSITELIB}/pip/_internal/network/lazy_wheel.pyo
 ${PYSITELIB}/pip/_internal/network/session.py
 ${PYSITELIB}/pip/_internal/network/session.pyc
 ${PYSITELIB}/pip/_internal/network/session.pyo
@@ -306,6 +309,9 @@ ${PYSITELIB}/pip/_internal/utils/compat.pyo
 ${PYSITELIB}/pip/_internal/utils/compatibility_tags.py
 ${PYSITELIB}/pip/_internal/utils/compatibility_tags.pyc
 ${PYSITELIB}/pip/_internal/utils/compatibility_tags.pyo
+${PYSITELIB}/pip/_internal/utils/datetime.py
+${PYSITELIB}/pip/_internal/utils/datetime.pyc
+${PYSITELIB}/pip/_internal/utils/datetime.pyo
 ${PYSITELIB}/pip/_internal/utils/deprecation.py
 ${PYSITELIB}/pip/_internal/utils/deprecation.pyc
 ${PYSITELIB}/pip/_internal/utils/deprecation.pyo
@@ -348,6 +354,9 @@ ${PYSITELIB}/pip/_internal/utils/models.pyo
 ${PYSITELIB}/pip/_internal/utils/packaging.py
 ${PYSITELIB}/pip/_internal/utils/packaging.pyc
 ${PYSITELIB}/pip/_internal/utils/packaging.pyo
+${PYSITELIB}/pip/_internal/utils/parallel.py
+${PYSITELIB}/pip/_internal/utils/parallel.pyc
+${PYSITELIB}/pip/_internal/utils/parallel.pyo
 ${PYSITELIB}/pip/_internal/utils/pkg_resources.py
 ${PYSITELIB}/pip/_internal/utils/pkg_resources.pyc
 ${PYSITELIB}/pip/_internal/utils/pkg_resources.pyo
@@ -675,9 +684,6 @@ ${PYSITELIB}/pip/_vendor/html5lib/_trie/__init__.pyo
 ${PYSITELIB}/pip/_vendor/html5lib/_trie/_base.py
 ${PYSITELIB}/pip/_vendor/html5lib/_trie/_base.pyc
 ${PYSITELIB}/pip/_vendor/html5lib/_trie/_base.pyo
-${PYSITELIB}/pip/_vendor/html5lib/_trie/datrie.py
-${PYSITELIB}/pip/_vendor/html5lib/_trie/datrie.pyc
-${PYSITELIB}/pip/_vendor/html5lib/_trie/datrie.pyo
 ${PYSITELIB}/pip/_vendor/html5lib/_trie/py.py
 ${PYSITELIB}/pip/_vendor/html5lib/_trie/py.pyc
 ${PYSITELIB}/pip/_vendor/html5lib/_trie/py.pyo
@@ -942,6 +948,12 @@ ${PYSITELIB}/pip/_vendor/requests/utils.pyo
 ${PYSITELIB}/pip/_vendor/resolvelib/__init__.py
 ${PYSITELIB}/pip/_vendor/resolvelib/__init__.pyc
 ${PYSITELIB}/pip/_vendor/resolvelib/__init__.pyo
+${PYSITELIB}/pip/_vendor/resolvelib/compat/__init__.py
+${PYSITELIB}/pip/_vendor/resolvelib/compat/__init__.pyc
+${PYSITELIB}/pip/_vendor/resolvelib/compat/__init__.pyo
+${PYSITELIB}/pip/_vendor/resolvelib/compat/collections_abc.py
+${PYSITELIB}/pip/_vendor/resolvelib/compat/collections_abc.pyc
+${PYSITELIB}/pip/_vendor/resolvelib/compat/collections_abc.pyo
 ${PYSITELIB}/pip/_vendor/resolvelib/providers.py
 ${PYSITELIB}/pip/_vendor/resolvelib/providers.pyc
 ${PYSITELIB}/pip/_vendor/resolvelib/providers.pyo
@@ -960,12 +972,12 @@ ${PYSITELIB}/pip/_vendor/retrying.pyo
 ${PYSITELIB}/pip/_vendor/six.py
 ${PYSITELIB}/pip/_vendor/six.pyc
 ${PYSITELIB}/pip/_vendor/six.pyo
-${PYSITELIB}/pip/_vendor/toml.py
-${PYSITELIB}/pip/_vendor/toml.pyc
-${PYSITELIB}/pip/_vendor/toml.pyo
 ${PYSITELIB}/pip/_vendor/toml/__init__.py
 ${PYSITELIB}/pip/_vendor/toml/__init__.pyc
 ${PYSITELIB}/pip/_vendor/toml/__init__.pyo
+${PYSITELIB}/pip/_vendor/toml/common.py
+${PYSITELIB}/pip/_vendor/toml/common.pyc
+${PYSITELIB}/pip/_vendor/toml/common.pyo
 ${PYSITELIB}/pip/_vendor/toml/decoder.py
 ${PYSITELIB}/pip/_vendor/toml/decoder.pyc
 ${PYSITELIB}/pip/_vendor/toml/decoder.pyo
