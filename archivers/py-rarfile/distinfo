@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/09/16 08:56:17 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/07/29 12:10:46 adam Exp $
 
-SHA1 (rarfile-3.1.tar.gz) = c3ef753642e5e75b84c21752f215e65815992df8
-RMD160 (rarfile-3.1.tar.gz) = fcc9a2cb8208bd5d5545eaefcb4d2637260d906b
-SHA512 (rarfile-3.1.tar.gz) = eb910b0adfd1f28497163aa7994ab268d7780707e09931cb01014ffa51d985410b0bc17e5fb9ca133992b28115a0b5f443d01215624145d280f29e7065abb9d9
-Size (rarfile-3.1.tar.gz) = 121579 bytes
+SHA1 (rarfile-3.3.tar.gz) = ef46f9c38ef5afb749c7f8a3def36d4dcfb98447
+RMD160 (rarfile-3.3.tar.gz) = f44e5f0eff975cd64eae4494071b44c99b8473d5
+SHA512 (rarfile-3.3.tar.gz) = 6c66efae84d960bdda09e4d379744ebca7f5e280dcdc287183e22e7e633bbfd9b25f0672910e0ae80f4434b336aee6aa1036325786cbf82639bcff11ee34a02d
+Size (rarfile-3.3.tar.gz) = 135373 bytes
