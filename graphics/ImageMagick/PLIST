@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.110 2020/06/19 10:31:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.111 2020/07/29 11:21:57 wiz Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -1134,6 +1134,7 @@ share/doc/ImageMagick-7/www/assets/magick.js
 share/doc/ImageMagick-7/www/binary-releases.html
 share/doc/ImageMagick-7/www/changelog.html
 share/doc/ImageMagick-7/www/cipher.html
+share/doc/ImageMagick-7/www/cite.html
 share/doc/ImageMagick-7/www/clahe.html
 share/doc/ImageMagick-7/www/color-management.html
 share/doc/ImageMagick-7/www/color-thresholding.html
