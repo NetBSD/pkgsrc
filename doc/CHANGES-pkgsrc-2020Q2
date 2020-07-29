@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.5 2020/07/20 15:05:16 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.6 2020/07/29 20:20:59 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -38,7 +38,15 @@ www/webkit-gtk: security fix
 Pullup ticket #6278 - requested by bsiegert
 lang/go113: security update
 
-==> ticket-6279.log <==
 Pullup ticket #6279 - requested by bsiegert
 lang/go114: security update
+
+Pullup ticket #6274 - requested by taca
+mail/roundcube: security fix
+
+Pullup ticket #6275 - requested by taca
+databases/ldb: dependent update
+
+Pullup ticket #6276 - requested by taca
+net/samba4: security fix
 
