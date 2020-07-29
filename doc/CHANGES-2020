@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4179 2020/07/29 07:48:45 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4180 2020/07/29 10:08:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6624,3 +6624,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-uvicorn to 0.11.7 [adam 2020-07-29]
 	Updated security/tor-browser to 9.5.3 [wiz 2020-07-29]
 	Updated devel/git to 2.28.0 [adam 2020-07-29]
+	Updated devel/py-pip to 20.2 [adam 2020-07-29]
+	Updated net/py-aiormq to 3.2.3 [adam 2020-07-29]
