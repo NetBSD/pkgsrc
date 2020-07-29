@@ -1,15 +1,15 @@
-$NetBSD: patch-ai,v 1.7 2020/04/27 15:33:30 mef Exp $
+$NetBSD: patch-ai,v 1.8 2020/07/29 10:28:27 mef Exp $
 
 Add dragonfly
 
---- init/module.info.orig	2020-01-15 09:06:33.000000000 +0900
-+++ init/module.info	2020-04-26 23:25:45.553247331 +0900
+--- init/module.info.orig	2020-07-05 23:07:36.000000000 +0000
++++ init/module.info
 @@ -1,7 +1,7 @@
- version=1.941
+ version=1.953
  longdesc=Setup scripts to be run at boot time from /etc/init.d or /etc/rc.local.
  name=Boot Manager
 -os_support=solaris *-linux hpux freebsd unixware openserver openbsd osf1 irix aix macos netbsd windows 
-+os_support=solaris *-linux hpux freebsd unixware openserver openbsd osf1 irix aix macos netbsd windows dragonfly
++os_support=solaris *-linux hpux freebsd unixware openserver openbsd osf1 irix aix macos netbsd windows  dragonfly
  readonly=1
  desc=Bootup and Shutdown
- category=system
+ syslog=1
