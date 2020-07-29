@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.6 2020/04/27 15:16:45 mef Exp $
+$NetBSD: patch-ah,v 1.7 2020/07/29 10:28:27 mef Exp $
 
 Add dragonfly
 
---- cron/module.info.orig	2020-01-15 09:06:33.000000000 +0900
-+++ cron/module.info	2020-04-26 23:26:07.273223864 +0900
+--- cron/module.info.orig	2020-07-05 23:07:36.000000000 +0000
++++ cron/module.info
 @@ -1,7 +1,7 @@
- version=1.941
+ version=1.953
  longdesc=Create, edit and delete Cron jobs.
  name=Cron Manager
 -os_support=solaris *-linux hpux freebsd osf1 irix unixware openserver macos openbsd aix netbsd windows 
