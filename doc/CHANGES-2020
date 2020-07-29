@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4173 2020/07/28 20:59:23 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4174 2020/07/29 07:00:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6616,3 +6616,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/ttf-tlwg to 0.7.2 [scole 2020-07-28]
 	Updated security/sqlmap to 1.4.7 [leot 2020-07-28]
 	Updated textproc/lowdown to 0.7.2 [fcambus 2020-07-28]
+	Updated devel/gettext to 0.21 [wiz 2020-07-29]
