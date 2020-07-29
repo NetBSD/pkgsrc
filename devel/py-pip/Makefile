@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2020/06/08 20:17:56 leot Exp $
+# $NetBSD: Makefile,v 1.39 2020/07/29 10:00:16 adam Exp $
 
-DISTNAME=	pip-20.1.1
+DISTNAME=	pip-20.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pip-installer.org/
+HOMEPAGE=	https://pip.pypa.io/
 COMMENT=	Installs Python packages as an easy_install replacement
 LICENSE=	mit
 
