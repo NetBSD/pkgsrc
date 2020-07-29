@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/06/12 21:04:41 wiz Exp $
+$NetBSD: distinfo,v 1.6 2020/07/29 12:07:15 adam Exp $
 
-SHA1 (lazy-object-proxy-1.5.0.tar.gz) = fe528283cc14ec11fc282c4959693ae698c88e1e
-RMD160 (lazy-object-proxy-1.5.0.tar.gz) = 85e5a19960cffb6887654b12cae943daee3281b3
-SHA512 (lazy-object-proxy-1.5.0.tar.gz) = 8d594df743694f01b9710e55d8e88831d6ac2e81a925ad310f0c39d061f20115550c5adf1da40d0d7c4749eb3a7ffbbb6000ebbda3dbb445c9efa1d05ff37cc3
-Size (lazy-object-proxy-1.5.0.tar.gz) = 35938 bytes
+SHA1 (lazy-object-proxy-1.5.1.tar.gz) = 0a0155ddcdc89b4edeb69115e43af50ee179ff20
+RMD160 (lazy-object-proxy-1.5.1.tar.gz) = ddbeb508c8151dc08fe6ea75ce7c3304b2eae613
+SHA512 (lazy-object-proxy-1.5.1.tar.gz) = e38d5fdcd3982ead6766237899c85c474c730fcedab65f84ee1ebe4feccc24a3f646e4eb63c5b80a093dde8e84f5ada4b2fbfd4fc988b671fb03144c882a9985
+Size (lazy-object-proxy-1.5.1.tar.gz) = 36363 bytes
