@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2007/04/21 05:22:57 obache Exp $
+$NetBSD: patch-ab,v 1.5 2020/07/29 10:28:27 mef Exp $
+
+Give proper error message when OS detection failed
 
 --- oschooser.pl.orig	2007-04-09 05:00:00.000000000 +0000
 +++ oschooser.pl
