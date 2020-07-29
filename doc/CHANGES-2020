@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4174 2020/07/29 07:00:34 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4175 2020/07/29 07:03:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6617,3 +6617,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/sqlmap to 1.4.7 [leot 2020-07-28]
 	Updated textproc/lowdown to 0.7.2 [fcambus 2020-07-28]
 	Updated devel/gettext to 0.21 [wiz 2020-07-29]
+	Updated security/tor-browser-noscript to 11.0.34 [wiz 2020-07-29]
