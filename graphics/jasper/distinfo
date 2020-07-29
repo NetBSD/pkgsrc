@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.32 2020/07/23 18:39:06 otis Exp $
+$NetBSD: distinfo,v 1.33 2020/07/29 07:03:59 adam Exp $
 
-SHA1 (jasper-2.0.17.tar.gz) = fe8d8532d043fe2a9ec0bbcbc92a1583cd9f996f
-RMD160 (jasper-2.0.17.tar.gz) = bc0de6964ef567ff0d3faa240bf83843a00e5c54
-SHA512 (jasper-2.0.17.tar.gz) = 9b682cfef7e951e6a78b57869fb7ddeb696aaa1b90f08c3142d2f26246ea06ed5f2cd867dae0b49ac41a792e4672db7cd96d32a46a6e99c066b7118b025a65fe
-Size (jasper-2.0.17.tar.gz) = 1314703 bytes
+SHA1 (jasper-2.0.19.tar.gz) = 32522a49abf12b2c0138d3cd705a8d9e0a0be839
+RMD160 (jasper-2.0.19.tar.gz) = 5c6377651ecbeed7f196be2586ce8b9401fcf2e0
+SHA512 (jasper-2.0.19.tar.gz) = b4e1930057587d3417678fc19c661bef21d87a7d6f79fc9486282531097792c4dc074845405c66dc036620344a900349f985a248009934333c5858242ffec655
+Size (jasper-2.0.19.tar.gz) = 1314817 bytes
 SHA1 (patch-CMakeLists.txt) = 7629fcab6bc854c51a0895449b2cdd214409fa3c
 SHA1 (patch-src_appl_jiv.c) = 123f1db81a95b4ddd679ccea6f1b2c4887bf574d
 SHA1 (patch-src_libjasper_base_jas__stream.c) = 2e9ad538ab2c0191063fef06202949b435b0085e
