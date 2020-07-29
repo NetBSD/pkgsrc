@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4182 2020/07/29 11:22:07 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4183 2020/07/29 12:11:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6628,3 +6628,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-aiormq to 3.2.3 [adam 2020-07-29]
 	Updated sysutils/webmin to 1.953 [mef 2020-07-29]
 	Updated graphics/ImageMagick to 7.0.10.24 [wiz 2020-07-29]
+	Updated devel/py-lazy-object-proxy to 1.5.1 [adam 2020-07-29]
+	Updated archivers/py-rarfile to 3.3 [adam 2020-07-29]
