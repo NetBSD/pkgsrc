@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.8 2020/04/27 15:16:45 mef Exp $
+# $NetBSD: version.mk,v 1.9 2020/07/29 10:28:27 mef Exp $
 
-WBM_VERSION=	1.941
+WBM_VERSION=	1.953

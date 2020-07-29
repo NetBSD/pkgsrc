@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2020/04/27 15:16:48 mef Exp $
+$NetBSD: distinfo,v 1.12 2020/07/29 10:28:29 mef Exp $
 
-SHA1 (webmin-1.941.tar.gz) = 9103d027933ebc662ef76a56c07343ab5241efaa
-RMD160 (webmin-1.941.tar.gz) = 4bd1f28a7dc0338d97cf7a92e6844120d1d647bf
-SHA512 (webmin-1.941.tar.gz) = 0285bacb3529b4b4a161fa5f78d0c2bb0b053ac84c52ac7a7b5daf1fce564bb0ab60080edd3743d5b1f0ef91c1fbf8bc0b017b849dde451ac6d9baa3f69b1a3e
-Size (webmin-1.941.tar.gz) = 31045591 bytes
+SHA1 (webmin-1.953.tar.gz) = e3189004368663ded0fefb4904f0169e3b8d4a58
+RMD160 (webmin-1.953.tar.gz) = 023f36b705d34ce63bc2f04e539fe4f7c2e0acfe
+SHA512 (webmin-1.953.tar.gz) = b992acdfda74ac75661f1cddeca2637a7382832d3669ed4a5220297ded264e2e12244f73f9fc580a78feec7221c0c68e725f528bec0433706478bf637ff072aa
+Size (webmin-1.953.tar.gz) = 46898438 bytes
 SHA1 (patch-ab) = ae6b2ddf17472a707e6bce49759fc3743c4410b0
