@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/07/23 07:42:08 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/07/30 03:08:43 tpaul Exp $
 
 DISTNAME=	terraform-0.12.29
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	${PKGBASE}
@@ -22,6 +23,8 @@ REPLACE_BASH+=	command/e2etest/make-archive.sh
 REPLACE_BASH+=	scripts/debug-terraform
 REPLACE_BASH+=	scripts/*.sh
 REPLACE_BASH+=	scripts/*/*.sh
+
+CHECK_RELRO_SKIP+=	bin/terraform
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
