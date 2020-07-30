@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4190 2020/07/30 01:58:03 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4191 2020/07/30 02:15:50 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6639,3 +6639,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test-xdist to 1.34.0 [adam 2020-07-29]
 	Updated lang/abcl to 1.7.1 [rjs 2020-07-29]
 	Updated devel/libdatrie to 0.2.12nb1 [scole 2020-07-30]
+	Updated textproc/swath to 0.6.1 [scole 2020-07-30]
