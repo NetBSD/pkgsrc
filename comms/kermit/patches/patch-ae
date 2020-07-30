@@ -1,8 +1,23 @@
-$NetBSD: patch-ae,v 1.6 2011/08/25 13:46:28 hans Exp $
+$NetBSD: patch-ae,v 1.7 2020/07/30 00:02:10 gutteridge Exp $
 
---- ckucmd.c.orig	2005-12-18 22:57:18.000000000 +0000
+Portability fixes for DragonFly, SunOS, and Linux.
+
+--- ckucmd.c.orig	2011-07-14 12:14:37.000000000 +0000
 +++ ckucmd.c
-@@ -7115,8 +7115,19 @@ cmdconchk() {
+@@ -7370,7 +7370,11 @@ cmdconchk() {
+ 
+ /* Here we must look inside the stdin buffer - highly platform dependent */
+ 
+-#ifdef _IO_file_flags			/* Linux */
++#ifdef __FILE_defined                   /* glibc 2.28 1 Aug 2018 */
++    x = (int) ((stdin->_IO_read_end) - (stdin->_IO_read_ptr));
++    debug(F101,"cmdconchk __FILE_defined","",x);
++#else /* __FILE_defined */ 
++#ifdef _IO_file_flags              /* Linux (glibc 2.28 removed this symbol */
+     x = (int) ((stdin->_IO_read_end) - (stdin->_IO_read_ptr));
+     debug(F101,"cmdconchk _IO_file_flags","",x);
+ #else  /* _IO_file_flags */
+@@ -7382,8 +7386,19 @@ cmdconchk() {
  #ifdef NOARROWKEYS
      debug(F101,"cmdconchk NOARROWKEYS x","",0);
  #else
@@ -22,7 +37,7 @@ $NetBSD: patch-ae,v 1.6 2011/08/25 13:46:28 hans Exp $
  #endif /* NOARROWKEYS */
  #endif /* VMS */
      if (x == 0) x = conchk();
-@@ -7128,7 +7128,12 @@ cmdconchk() {
+@@ -7395,7 +7410,12 @@ cmdconchk() {
      if (x == 0) x = conchk();
      if (x < 0) x = 0;
  #else  /* USE_FILE_CNT */
@@ -36,3 +51,11 @@ $NetBSD: patch-ae,v 1.6 2011/08/25 13:46:28 hans Exp $
      debug(F101,"cmdconchk stdin->_r","",stdin->_r);
      x = stdin->_r;
      if (x == 0) x = conchk();
+@@ -7407,6 +7427,7 @@ cmdconchk() {
+ #endif /* USE_FILE__CNT */
+ #endif /* USE_FILE_CNT */
+ #endif /* _IO_file_flags */
++#endif /* __FILE_defined */
+ #endif /* CMD_CONINC */
+ #endif /* OS2 */
+     return(x + y);
