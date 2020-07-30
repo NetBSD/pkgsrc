@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2018/07/11 18:08:43 adam Exp $
+$NetBSD: distinfo,v 1.12 2020/07/30 01:56:16 scole Exp $
 
 SHA1 (libdatrie-0.2.12.tar.xz) = 8516d3c86e05338d3cd3ce0421181d66709dba18
 RMD160 (libdatrie-0.2.12.tar.xz) = 8e29779b2f850830f9d2bb720cf21adc768333fd
 SHA512 (libdatrie-0.2.12.tar.xz) = 7cf17859331d6111679e2c6fe0fa256abb13187b0b1116c8225f066281ab852f847a0d2d0d42b9604faf1d56290909fe3386362e34ed5bd1109516dffa2775a1
 Size (libdatrie-0.2.12.tar.xz) = 310236 bytes
+SHA1 (patch-tools_trietool.c) = 638eee9ec4a22284f442a742e4cd3428c74d67e1
