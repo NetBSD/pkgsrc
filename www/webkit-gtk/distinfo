@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.135.2.1 2020/07/11 11:51:59 bsiegert Exp $
+$NetBSD: distinfo,v 1.135.2.2 2020/07/30 16:13:31 bsiegert Exp $
 
-SHA1 (webkitgtk-2.28.3.tar.xz) = af1d845d373e67fd666105e798a44e2cadaef83c
-RMD160 (webkitgtk-2.28.3.tar.xz) = 2145913664c08decc1919437db97d2c79f21f153
-SHA512 (webkitgtk-2.28.3.tar.xz) = 575184edb8279f1dca67cbeeb45280ca5da9aa388e208251d9ad7a56907950cfd85b1fc426eee90699593c428f4e1037c96cb6aa16f534c71734c64950f2d643
-Size (webkitgtk-2.28.3.tar.xz) = 21425556 bytes
+SHA1 (webkitgtk-2.28.4.tar.xz) = 70e9dd80647b30eaaf8a7f5b30d8869cd1254056
+RMD160 (webkitgtk-2.28.4.tar.xz) = d6d4ce81153e997b1276a474bed88f2269b27cda
+SHA512 (webkitgtk-2.28.4.tar.xz) = 227cd4066235180521a32a83d3a906212adf4f234f15a1fff4ac86b48e39c431f1e0cb4a56f62924015099a0c8909a73a21a56f8dc71a16c53ac65de4a5773a1
+Size (webkitgtk-2.28.4.tar.xz) = 21424908 bytes
 SHA1 (patch-CMakeLists.txt) = 08f647f6928bf3fce0dabb02586e1447d16da297
 SHA1 (patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh) = f4f117e6c1cd8eb8e4905f74946e0367156ed528
 SHA1 (patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh) = 308a7c8f687253b4fc75de0c66016dd18666e697
@@ -25,8 +25,10 @@ SHA1 (patch-Source_WTF_wtf_RAMSize.cpp) = 81f8f63b4f974601cd50b1d49fcb89f326a434
 SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = 22a71daac8443f079ad8bcc7285cfd7319c972b3
 SHA1 (patch-Source_WebCore_Scripts_check-xcfilelists.sh) = b292baf2494bcd459d9af91386263123046c6615
 SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 740eb33931b6f9cb8008748323235f23466328dc
+SHA1 (patch-Source_WebCore_crypto_algorithms_CryptoAlgorithmAES__GCM.cpp) = 03337c5eec54d6974dfea1766b14cb2c1b9f7750
 SHA1 (patch-Source_WebCore_inspector_InspectorFrontendHost.cpp) = daf6351a1a0b5a49592a2bb6db0d54620c7b09e3
 SHA1 (patch-Source_WebCore_platform_graphics_filters_FEMorphology.cpp) = 16b36d2d91fd7f43156b9ee09bcafd19602ebbd9
+SHA1 (patch-Source_WebCore_rendering_RenderLayerBacking.h) = ecf722df1d1cca13573786b34fe1e3d85edf1e1e
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
 SHA1 (patch-Source_WebKit_CMakeLists.txt) = 228cc4734de3b08a3877ac839b1ffa2fbf2d3aa8
 SHA1 (patch-Source_WebKit_NetworkProcess_cache_NetworkCacheFileSystem.cpp) = 8c19692e78b1cfb021b95435508a10bc6542b173
