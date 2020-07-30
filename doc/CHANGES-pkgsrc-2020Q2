@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.6 2020/07/29 20:20:59 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.7 2020/07/30 18:50:01 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -49,4 +49,25 @@ databases/ldb: dependent update
 
 Pullup ticket #6276 - requested by taca
 net/samba4: security fix
+
+Pullup ticket #6284 - requested by wiz
+security/tor-browser-noscript: security fix
+
+Pullup ticket #6285 - requested by wiz
+security/tor-browser: security fix
+
+Pullup ticket #6286 - requested by leot
+www/webkit-gtk: security fix (WSA-2020-0007)
+
+Pullup ticket #6287 - requested by nia
+www/firefox68: security fix
+
+Pullup ticket #6288 - requested by nia
+www/firefox68-l10n: dependent update
+
+Pullup ticket #6282 - requested by oster
+mail/opendmarc: bugfix
+
+Pullup ticket #6283 - requested by leot
+net/youtube-dl: update
 
