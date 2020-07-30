@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1467 2020/07/08 14:58:49 nia Exp $
+# $NetBSD: Makefile,v 1.1468 2020/07/30 08:09:28 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -109,6 +109,8 @@ SUBDIR+=	firefox52
 SUBDIR+=	firefox52-l10n
 SUBDIR+=	firefox68
 SUBDIR+=	firefox68-l10n
+SUBDIR+=	firefox78
+SUBDIR+=	firefox78-l10n
 SUBDIR+=	firefox_decrypt
 SUBDIR+=	gallery
 SUBDIR+=	gallery2
