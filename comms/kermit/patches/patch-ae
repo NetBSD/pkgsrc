@@ -1,6 +1,10 @@
-$NetBSD: patch-ae,v 1.7 2020/07/30 00:02:10 gutteridge Exp $
+$NetBSD: patch-ae,v 1.8 2020/07/30 03:03:07 gutteridge Exp $
 
 Portability fixes for DragonFly, SunOS, and Linux.
+
+The Linux fix is taken from upstream's 9.0.305 Alpha.01 release, and is
+noted to be a temporary workaround, so it may change in form in a
+pending release.
 
 --- ckucmd.c.orig	2011-07-14 12:14:37.000000000 +0000
 +++ ckucmd.c
