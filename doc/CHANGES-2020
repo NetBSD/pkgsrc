@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4194 2020/07/30 08:11:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4195 2020/07/30 14:14:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6644,3 +6644,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-protobuf to 3.12.4 [adam 2020-07-30]
 	Added www/firefox78 version 78.1.0 [nia 2020-07-30]
 	Added www/firefox78-l10n version 78.1.0 [nia 2020-07-30]
+	Updated net/unifi to 5.13.32 [gdt 2020-07-30]
