@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2020/07/30 08:09:28 nia Exp $
+
+* Add Sun audio support
+* Include include/nss/nss for workaround for neqo-crypto 0.1.6 of firefox-72.0
+
+--- old-configure.in.orig	Tue Jan  7 17:23:36 2020
++++ old-configure.in	Fri Jan 17 16:03:40 2020
+@@ -1960,6 +1960,19 @@
+ AC_DEFINE(MOZ_WEBM_ENCODER)
+ AC_SUBST(MOZ_WEBM_ENCODER)
+ 
++dnl ==================================
++dnl = Check sunaudio availability
++dnl ==================================
++
++dnl If using Solaris or NetBSD, ensure that sunaudio is available
++case "$OS_TARGET" in
++SunOS|NetBSD)
++    MOZ_SUNAUDIO=1
++    ;;
++esac
++
++AC_SUBST(MOZ_SUNAUDIO)
++
+ dnl ========================================================
+ dnl NegotiateAuth
+ dnl ========================================================
+@@ -2744,7 +2757,7 @@
+ AC_SUBST_LIST(MOZ_CAIRO_OSLIBS)
+ AC_SUBST(MOZ_TREE_PIXMAN)
+ 
+-BINDGEN_SYSTEM_FLAGS="$_BINDGEN_CFLAGS $NSPR_CFLAGS $NSS_CFLAGS $MOZ_PIXMAN_CFLAGS $MOZ_CAIRO_CFLAGS"
++BINDGEN_SYSTEM_FLAGS="$_BINDGEN_CFLAGS $NSPR_CFLAGS $NSS_CFLAGS $MOZ_PIXMAN_CFLAGS $MOZ_CAIRO_CFLAGS -I${PREFIX}/include/nss/nss"
+ AC_SUBST(BINDGEN_SYSTEM_FLAGS)
+ BINDGEN_SYSTEM_TOML_FLAGS="$BINDGEN_SYSTEM_FLAGS"
+ AC_SUBST_TOML_LIST(BINDGEN_SYSTEM_TOML_FLAGS)
