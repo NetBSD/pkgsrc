@@ -1,0 +1,16 @@
+$NetBSD: patch-gedit_meson.build,v 1.1 2020/07/31 11:05:49 prlw1 Exp $
+
+Install library in ${PREFIX}/lib, not ${PREFIX}/gedit/lib where
+no one will find it.
+
+--- gedit/meson.build.orig	2020-04-25 16:59:58.000000000 +0000
++++ gedit/meson.build
+@@ -186,7 +186,7 @@ libgedit_sha = shared_library(
+   c_args: libgedit_c_args,
+   link_args: libgedit_link_args,
+   install: true,
+-  install_dir: pkglibdir,
++  install_dir: libdir,
+ )
+ 
+ if generate_gir == true
