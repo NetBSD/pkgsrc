@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/06/21 09:23:11 mef Exp $
+# $NetBSD: Makefile,v 1.63 2020/07/31 15:39:31 mef Exp $
 #
 
 DISTNAME=	HandBrake-1.3.1-source
@@ -23,7 +23,7 @@ CDISTFILES=	ffmpeg-4.2.2.tar.bz2 \
 		x265_3.2.1.tar.gz \
 		dav1d-0.5.1.tar.bz2
 
-MESON_DISTFILE=	meson-0.54.2.tar.gz
+MESON_DISTFILE=	meson-0.55.0.tar.gz
 DISTFILES+=	${CDISTFILES}
 DISTFILES+=	${MESON_DISTFILE}
 
@@ -61,6 +61,7 @@ BUILD_FLAGS+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 BUILD_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
+BUILD_DEPENDS+=		meson-[0-9]*:../../devel/meson
 #BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 .include "../../mk/compiler.mk"
