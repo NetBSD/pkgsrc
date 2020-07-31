@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/01/25 18:14:36 minskim Exp $
+$NetBSD: distinfo,v 1.7 2020/07/31 18:37:34 brook Exp $
 
-SHA1 (R/plyr_1.8.4.tar.gz) = b85d161877ba9b30f22b68568e411d60d89d6e4a
-RMD160 (R/plyr_1.8.4.tar.gz) = c1b05f1129d157b8efd1df049a93ce90e6d68b11
-SHA512 (R/plyr_1.8.4.tar.gz) = 5261afea13f4ea65f6fca74d3ff656bbdc2cb99d9f95a66f1394ae955eb248a2c3696a96b0dadca262a8a1fe70733337c91738aef98eac706dfcfed28c7c313b
-Size (R/plyr_1.8.4.tar.gz) = 392451 bytes
+SHA1 (R/plyr_1.8.6.tar.gz) = db95c573ccc1afd6b47c8bc947bf7154123a18c7
+RMD160 (R/plyr_1.8.6.tar.gz) = 52f6a1be24b1fb7cfa439e62410aa600306425ba
+SHA512 (R/plyr_1.8.6.tar.gz) = 2c41e77b338055fbc500cf3c5e1f8b0e8339692eb18b63edceca92f4e4ba4b3930d718b59da79ab459230f4177de718a034069bbf42c1b0e47b97ba99dcacec7
+Size (R/plyr_1.8.6.tar.gz) = 401191 bytes
