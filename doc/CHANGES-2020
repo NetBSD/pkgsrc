@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4234 2020/07/31 20:23:47 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4235 2020/07/31 20:26:30 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6689,3 +6689,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/R-lifecycle version 0.2.0 [brook 2020-07-31]
 	Updated math/R-vctrs to 0.3.2 [brook 2020-07-31]
 	Updated math/R-classInt to 0.4.2 [brook 2020-07-31]
+	Updated devel/R-tidyselect to 1.1.0 [brook 2020-07-31]
