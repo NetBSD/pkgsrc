@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2003/11/16 14:01:20 agc Exp $
+$NetBSD: patch-aa,v 1.4 2020/07/31 17:01:44 brook Exp $
 
---- configure.orig	Sun Nov  9 21:44:24 2003
-+++ configure	Sun Nov  9 21:45:58 2003
+Explicitly remove all write permissions from files.  See
+https://sourceforge.net/p/openjade/patches/49/
+
+--- configure.orig	2002-12-01 16:18:40.000000000 +0000
++++ configure
 @@ -4899,16 +4899,16 @@
  
  fi
@@ -68,3 +71,12 @@ $NetBSD: patch-aa,v 1.3 2003/11/16 14:01:20 agc Exp $
    cat >>confdefs.h <<\_ACEOF
  #define SP_HAVE_WCHAR 1
  _ACEOF
+@@ -7358,7 +7358,7 @@
+ # the output directory.  Thus, making CWD read-only will cause this test
+ # to fail, enabling locking or at least warning the user not to do parallel
+ # builds.
+-chmod -w .
++chmod a-w .
+ save_CFLAGS="$CFLAGS"
+ CFLAGS="$CFLAGS -o out/conftest2.$ac_objext"
+ compiler_c_o=no
