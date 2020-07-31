@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4232 2020/07/31 20:12:15 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4233 2020/07/31 20:18:12 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6687,3 +6687,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-autobahn to 20.1.2nb1 [wiz 2020-07-31]
 	Updated x11/qt5ct to 1.1 [pin 2020-07-31]
 	Added devel/R-lifecycle version 0.2.0 [brook 2020-07-31]
+	Updated math/R-vctrs to 0.3.2 [brook 2020-07-31]
