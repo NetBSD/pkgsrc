@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/01/26 14:07:54 mef Exp $
+$NetBSD: distinfo,v 1.4 2020/07/31 15:19:37 mef Exp $
 
-SHA1 (R/callr_3.4.1.tar.gz) = 9f8f7b3566ba540c81fdd1cb2cef8b4e0887f926
-RMD160 (R/callr_3.4.1.tar.gz) = a85907dc9f5c896581c77f99357314ee68d43a51
-SHA512 (R/callr_3.4.1.tar.gz) = d1504064fe59d7e510c8f6fc461aa5c77e5210bf9800c5af8b45d95787fbdd62780698ed8809b4d1136549acb955b59be24a9807e94a5c534f9da7322fa516d3
-Size (R/callr_3.4.1.tar.gz) = 67676 bytes
+SHA1 (R/callr_3.4.3.tar.gz) = 1c2d22fedd6a5798eff5944d513e4d8522d027ba
+RMD160 (R/callr_3.4.3.tar.gz) = 1218971c7896b8e6b9531057cf62351c6b2e157b
+SHA512 (R/callr_3.4.3.tar.gz) = 04ef68084b9fb2721566d51d0ca3cbf89ddb78d65e769ba1ed9b337097dd87b7640f7e8e06bc2e6cdf121aba1e7f9567bcaf7277d886686a079f1630713f16df
+Size (R/callr_3.4.3.tar.gz) = 85802 bytes
