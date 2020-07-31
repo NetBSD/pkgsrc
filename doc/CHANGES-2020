@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4214 2020/07/31 15:11:13 maya Exp $
+$NetBSD: CHANGES-2020,v 1.4215 2020/07/31 15:19:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6664,3 +6664,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/yelp-tools to 3.32.2 [prlw1 2020-07-31]
 	Updated fonts/spleen to 1.8.2 [fcambus 2020-07-31]
 	Updated x11/xf86-video-intel to 2.99.917.20200515 [maya 2020-07-31]
+	Updated devel/R-callr to 3.4.3 [mef 2020-07-31]
