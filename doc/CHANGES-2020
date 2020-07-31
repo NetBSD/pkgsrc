@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4215 2020/07/31 15:19:48 mef Exp $
+$NetBSD: CHANGES-2020,v 1.4216 2020/07/31 16:37:14 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6665,3 +6665,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/spleen to 1.8.2 [fcambus 2020-07-31]
 	Updated x11/xf86-video-intel to 2.99.917.20200515 [maya 2020-07-31]
 	Updated devel/R-callr to 3.4.3 [mef 2020-07-31]
+	Updated x11/libX11 to 1.6.10 [maya 2020-07-31]
