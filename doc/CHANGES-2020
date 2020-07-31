@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4202 2020/07/31 09:13:07 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4203 2020/07/31 09:18:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6652,3 +6652,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/catch2 to 2.13.0 [wiz 2020-07-31]
 	Updated devel/cmake to 3.18.1 [wiz 2020-07-31]
 	Updated devel/gopls to 0.4.3 [wiz 2020-07-31]
+	Updated sysutils/desktop-file-utils to 0.26 [wiz 2020-07-31]
