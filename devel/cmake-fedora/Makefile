@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/11/01 06:44:49 maya Exp $
+# $NetBSD: Makefile,v 1.13 2020/07/31 09:21:23 wiz Exp $
 
 DISTNAME=	cmake-fedora-2.6.0-modules-only
 PKGNAME=	${DISTNAME:S/-modules-only//}
+PKGREVISION=	1
 CATEGORIES=	devel
 # Doesn't host our old version, fedorahosted retired.
 #MASTER_SITES=	https://releases.pagure.org/cmake-fedora/
@@ -19,7 +20,8 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}
 
-.include "../../devel/cmake/Makefile.version"
+.include "../../devel/cmake/version.mk"
+
 PLIST_SUBST+=	CMAKE_API=${CMAKE_API}
 
 INSTALLATION_DIRS+=	share/cmake-${CMAKE_API}/Modules
