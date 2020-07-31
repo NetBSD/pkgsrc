@@ -1,0 +1,32 @@
+$NetBSD: patch-Makefile.comm.in,v 1.1 2020/07/31 17:01:44 brook Exp $
+
+Use --tag explicitly to always detect the correct compiler.  See
+https://sourceforge.net/p/openjade/patches/48/
+
+Explicitly remove all write permissions from files.  See
+https://sourceforge.net/p/openjade/patches/49/
+
+--- Makefile.comm.in.orig	2002-12-01 11:56:47.000000000 +0000
++++ Makefile.comm.in
+@@ -42,18 +42,18 @@ CXXDEPGENFLAGS=-MM
+ 	$(CXX) $(CXXFLAGS) -c $<
+ 
+ .cxx.lo:
+-	@$(LIBTOOL) --mode=compile $(CXX) $(CXXFLAGS) -c $<
++	@$(LIBTOOL) --mode=compile --tag=CXX $(CXX) $(CXXFLAGS) -c $<
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
+ 
+ .c.lo:
+-	@$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
++	@$(LIBTOOL) --mode=compile --tag=CC $(CC) $(CFLAGS) -c $<
+ 
+ .m4.cxx:
+ 	rm -f $@
+ 	$(PERL) $(srcdir)/../instmac.pl $< >$@
+-	chmod -w $@
++	chmod a-w $@
+ 
+ %.h %.cxx %.rc: %.msg
+ 	$(PERL) -w $(srcdir)/../msggen.pl $(MSGGENFLAGS) $<
