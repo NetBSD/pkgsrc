@@ -1,0 +1,1 @@
+bin/wamp @PREFIX@/bin/wamp-@PYVERSSUFFIX@
