@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/31 20:41:40 brook Exp $
+
+SHA1 (R/generics_0.0.2.tar.gz) = 7af4850cffe68a78a44ed16608d1cd933b65cefa
+RMD160 (R/generics_0.0.2.tar.gz) = 087695f45fc420ecaf25a06fb10e51a5348d4e0d
+SHA512 (R/generics_0.0.2.tar.gz) = ed6e8eae7697436763fa13e6114c78c2432ad48cd355edd6f41dfe96c461a80d8f37b27290f0aff1168567566fe8b257dacdd7cd14d0e27d3a7f4b1c047e119f
+Size (R/generics_0.0.2.tar.gz) = 163610 bytes

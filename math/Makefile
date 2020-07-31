@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.465 2020/06/16 08:20:16 pin Exp $
+# $NetBSD: Makefile,v 1.466 2020/07/31 20:41:39 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -55,6 +55,7 @@ SUBDIR+=	R-forcats
 SUBDIR+=	R-forecast
 SUBDIR+=	R-fracdiff
 SUBDIR+=	R-gdata
+SUBDIR+=	R-generics
 SUBDIR+=	R-genetics
 SUBDIR+=	R-geoR
 SUBDIR+=	R-geoRglm
