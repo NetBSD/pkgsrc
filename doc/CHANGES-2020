@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4196 2020/07/31 01:21:18 maya Exp $
+$NetBSD: CHANGES-2020,v 1.4197 2020/07/31 01:25:32 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6646,3 +6646,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/firefox78-l10n version 78.1.0 [nia 2020-07-30]
 	Updated net/unifi to 5.13.32 [gdt 2020-07-30]
 	Updated devel/cbindgen to 0.14.3 [maya 2020-07-31]
+	Updated devel/nss to 3.55 [maya 2020-07-31]
