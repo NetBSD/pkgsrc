@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4219 2020/07/31 18:21:04 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4220 2020/07/31 18:23:00 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6673,3 +6673,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-R6 to 2.4.1 [brook 2020-07-31]
 	Updated devel/R-glue to 1.4.1 [brook 2020-07-31]
 	Updated devel/R-glue to 1.4.1 [brook 2020-07-31]
+	Updated devel/R-purrr to 0.3.3 [brook 2020-07-31]
+	Updated devel/R-purrr to 0.3.3 [brook 2020-07-31]
