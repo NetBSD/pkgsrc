@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.32 2019/10/25 09:44:26 kamil Exp $
+$NetBSD: distinfo,v 1.33 2020/07/31 09:20:39 wiz Exp $
 
-SHA1 (exiv2-0.27.2-Source.tar.gz) = 1a72065c95e721b1c21df4f2ee64d8338c6acf94
-RMD160 (exiv2-0.27.2-Source.tar.gz) = d19c3f29fc5e9637339a9f39c1a4539fc85b1d36
-SHA512 (exiv2-0.27.2-Source.tar.gz) = 39eb7d920dce18b275ac66f4766c7c73f7c72ee10e3e1e43d84c611b24f48ce20a70eac6d53948914e93242a25b8b52cc4bc760ee611ddcd77481306c1f9e721
-Size (exiv2-0.27.2-Source.tar.gz) = 27591236 bytes
+SHA1 (exiv2-0.27.3-Source.tar.gz) = f31a74793ce2cd0161915ed1fbec8e79c31cd54d
+RMD160 (exiv2-0.27.3-Source.tar.gz) = 7e3ce6de75aaf87b46d419f86b4b0fc55f133234
+SHA512 (exiv2-0.27.3-Source.tar.gz) = 3f5758ee862b811eeb89cc75fc2bbd8bf10329efa2ce1e68555cdc7729faa6cfd1603e0cc859fbdbe6d8fd5e53bd9b9e6d869d8a20ed17497bf87ce78c005de9
+Size (exiv2-0.27.3-Source.tar.gz) = 26447901 bytes
 SHA1 (patch-cmake_config.h.cmake) = b7e0336e5ca55a9df08958a05d8ac2a2c800e836
 SHA1 (patch-contrib_organize_Makefile) = 27348fdb0f80092b6e16f27e3ac1dca988eefe70
 SHA1 (patch-contrib_organize_helpers.cpp) = ec003c826d463b3e7e571ab4c41baffaca1240e9
