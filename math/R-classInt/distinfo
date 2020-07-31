@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/07/31 19:09:38 brook Exp $
+$NetBSD: distinfo,v 1.7 2020/07/31 20:23:26 brook Exp $
 
-SHA1 (R/classInt_0.3-3.tar.gz) = 7084dc6992f3ccb78244aa9d3cbb9cf396210833
-RMD160 (R/classInt_0.3-3.tar.gz) = b519b1faee965a7791873ea0ca7070a36cec6caa
-SHA512 (R/classInt_0.3-3.tar.gz) = fe0f60654f385655840cfe4abdbaa818c14cfaddcc9975fffa800b268f3f9b17f387bef4a07d815ececa9d2f00ca13fc1136213ee1ac00a0906de6704998187c
-Size (R/classInt_0.3-3.tar.gz) = 18231 bytes
+SHA1 (R/classInt_0.4-2.tar.gz) = 410fd1f6ae6cea786a07af0d97bda07b30ea6125
+RMD160 (R/classInt_0.4-2.tar.gz) = cad6aff32d17e55b2946f12341810878b11a82e2
+SHA512 (R/classInt_0.4-2.tar.gz) = 4f2635545ec15eec35438e00542b9b851b90ceb4956429e7d05baacbc6e5ef1b769705dca9a085bb106e3fff71378d1fb986e5145582875a8b023e655cac4c85
+Size (R/classInt_0.4-2.tar.gz) = 22054 bytes
