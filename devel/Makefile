@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3174 2020/07/26 00:51:00 scole Exp $
+# $NetBSD: Makefile,v 1.3175 2020/07/31 20:11:23 brook Exp $
 #
 
 COMMENT=	Development utilities
@@ -41,6 +41,7 @@ SUBDIR+=	R-ini
 SUBDIR+=	R-inline
 SUBDIR+=	R-iterators
 SUBDIR+=	R-lazyeval
+SUBDIR+=	R-lifecycle
 SUBDIR+=	R-lintr
 SUBDIR+=	R-magrittr
 SUBDIR+=	R-memoise
