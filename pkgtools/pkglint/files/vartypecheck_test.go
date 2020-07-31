@@ -1476,7 +1476,7 @@ func (s *Suite) Test_VartypeCheck_Option(c *check.C) {
 		"-invalid")
 
 	vt.Output(
-		"WARN: filename.mk:3: Unknown option \"unknown\".",
+		"WARN: filename.mk:3: Undocumented option \"unknown\".",
 		"WARN: filename.mk:4: Use of the underscore character in option names is deprecated.",
 		"ERROR: filename.mk:5: Invalid option name \"UPPER\". "+
 			"Option names must start with a lowercase letter and be all-lowercase.",

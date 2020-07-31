@@ -244,7 +244,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__conditionals(c *check.C) {
 
 	t.CheckOutputLines(
 		// This warning comes from VarTypeCheck.PkgOption
-		"WARN: options.mk:11: Unknown option \"negative\".",
+		"WARN: options.mk:11: Undocumented option \"negative\".",
 		"WARN: options.mk:4: "+
 			"Option \"option\" should be handled below in an .if block.")
 }
@@ -304,7 +304,7 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:6: l is used but not defined.",
-		"WARN: ~/category/package/options.mk:18: Unknown option \"undeclared\".",
+		"WARN: ~/category/package/options.mk:18: Undocumented option \"undeclared\".",
 		"WARN: ~/category/package/options.mk:21: "+
 			"The positive branch of the .if/.else should be the one where the option is set.",
 		// TODO: The diagnostics should appear in the correct order.
