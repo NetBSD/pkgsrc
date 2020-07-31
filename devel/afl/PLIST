@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/08/14 20:49:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/07/31 08:46:47 wiz Exp $
 bin/afl-analyze
 bin/afl-clang
 bin/afl-clang++
@@ -21,6 +21,7 @@ share/afl/dictionaries/js.dict
 share/afl/dictionaries/json.dict
 share/afl/dictionaries/pdf.dict
 share/afl/dictionaries/png.dict
+share/afl/dictionaries/regexp.dict
 share/afl/dictionaries/sql.dict
 share/afl/dictionaries/tiff.dict
 share/afl/dictionaries/webp.dict
@@ -61,6 +62,10 @@ share/afl/testcases/others/elf/small_exec.elf
 share/afl/testcases/others/js/small_script.js
 share/afl/testcases/others/pcap/small_capture.pcap
 share/afl/testcases/others/pdf/small.pdf
+share/afl/testcases/others/regexp/reg1
+share/afl/testcases/others/regexp/reg2
+share/afl/testcases/others/regexp/reg3
+share/afl/testcases/others/regexp/reg4
 share/afl/testcases/others/rtf/small_document.rtf
 share/afl/testcases/others/sql/simple_queries.sql
 share/afl/testcases/others/text/hello_world.txt
