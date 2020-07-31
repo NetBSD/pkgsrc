@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4224 2020/07/31 18:44:37 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4225 2020/07/31 18:46:07 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6679,3 +6679,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R-plyr to 1.8.6 [brook 2020-07-31]
 	Updated security/R-digest to 0.6.25 [brook 2020-07-31]
 	Updated textproc/R-stringi to 1.4.6 [brook 2020-07-31]
+	Updated www/R-curl to 4.3 [brook 2020-07-31]
