@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4213 2020/07/31 13:51:13 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4214 2020/07/31 15:11:13 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6663,3 +6663,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/gedit to 3.36.2 [prlw1 2020-07-31]
 	Updated textproc/yelp-tools to 3.32.2 [prlw1 2020-07-31]
 	Updated fonts/spleen to 1.8.2 [fcambus 2020-07-31]
+	Updated x11/xf86-video-intel to 2.99.917.20200515 [maya 2020-07-31]
