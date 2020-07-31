@@ -1,19 +1,7 @@
-$NetBSD: distinfo,v 1.29 2018/05/15 10:50:19 wiz Exp $
+$NetBSD: distinfo,v 1.30 2020/07/31 14:41:37 maya Exp $
 
-SHA1 (xf86-video-intel-2.99.917.tar.bz2) = 9af9ded7a29026c211e5eb50a547e3e33976301d
-RMD160 (xf86-video-intel-2.99.917.tar.bz2) = dd443e9e87286bbc454f4231a7a5d7c9bb2488a1
-SHA512 (xf86-video-intel-2.99.917.tar.bz2) = cbf4d46ad1ad5e5587c0f1f620ff534ef0645270517b60056b9f03e83d8216e2f456de46352a06c37c0c46963cc4ed20b71b815b20ec1bf680ff046e535f580f
-Size (xf86-video-intel-2.99.917.tar.bz2) = 2259040 bytes
-SHA1 (patch-src_backlight.c) = 39537a3233613c777f0475343f0be615bff3c3ca
-SHA1 (patch-src_compat-api.h) = 303cc02ad41aa8024631577b9ea0bb26cd5f23f4
+SHA1 (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = f9cb02d46b771e278a11dc88536049daf76f6ee8
+RMD160 (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 40400b5860115d3c679ec849e0ba90dba74ee6ca
+SHA512 (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 29fea01332438ad7616bae56a926f5c6fa08f93f67c23a0bb38f775719f12b15fba5bcb096c0665948f80d3ff6b7c108f360e44aae008192ef6c9b21187b4bbb
+Size (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 1250303 bytes
 SHA1 (patch-src_legacy_i810_i810__dri.c) = fb963b994d51c9db48457106048226214a2d986c
-SHA1 (patch-src_legacy_i810_i810__video.c) = 8788a9bf4e1efdb5292771c125af9a24c09d62da
-SHA1 (patch-src_sna_sna.h) = 13f0f7c9f8235f6100da90203a9ca4aa09fad977
-SHA1 (patch-src_sna_sna__accel.c) = 233229449a469e12a928bde4e2f8196157918102
-SHA1 (patch-src_sna_sna__acpi.c) = 7105609e38876fe8bb931d6980c023cabdf41736
-SHA1 (patch-src_sna_sna__display.c) = b2e5b330b5b4154b4d0bbf4edd7af1cec2c68cd8
-SHA1 (patch-src_sna_sna__dri2.c) = 4bcc7e5c502a340954073386dad88fd6cebcc7b1
-SHA1 (patch-src_sna_sna__driver.c) = ced69376d7f1af697b1f51ccb46d958495138136
-SHA1 (patch-src_uxa_intel.h) = 201a28ce259c474ea9f83700ec04c105388ad8ed
-SHA1 (patch-src_uxa_intel__display.c) = b8936ecbad39f5a507ae32b4c46d5069f53ca727
-SHA1 (patch-src_uxa_intel__driver.c) = e1800c27e1b35568254efa7bc16bf89a2e5a6fd4
