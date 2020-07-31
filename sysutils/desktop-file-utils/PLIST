@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/02/13 12:29:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/07/31 09:17:53 wiz Exp $
 bin/desktop-file-edit
 bin/desktop-file-install
 bin/desktop-file-validate
@@ -7,3 +7,4 @@ man/man1/desktop-file-edit.1
 man/man1/desktop-file-install.1
 man/man1/desktop-file-validate.1
 man/man1/update-desktop-database.1
+share/emacs/site-lisp/desktop-entry-mode.el
