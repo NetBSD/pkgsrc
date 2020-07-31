@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2020/03/08 16:51:15 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/07/31 09:17:53 wiz Exp $
 
-DISTNAME=	desktop-file-utils-0.24
-PKGREVISION=	1
+DISTNAME=	desktop-file-utils-0.26
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://freedesktop.org/software/desktop-file-utils/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -12,12 +11,6 @@ COMMENT=	Utilities to manage desktop entries
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	EMACS=no
 
 LDFLAGS.SunOS+=		-lintl
 
@@ -29,4 +22,5 @@ PRINT_PLIST_AWK+=	/^share\/applications\/mimeinfo.cache$$/ \
 				  next; }
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
