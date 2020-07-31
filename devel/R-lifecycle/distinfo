@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/31 20:11:23 brook Exp $
+
+SHA1 (R/lifecycle_0.2.0.tar.gz) = 63e1381e0e8a3cb7da9d5a1210076ec5eebeb5b6
+RMD160 (R/lifecycle_0.2.0.tar.gz) = 56d2a3adb8b331e293bedc153eae191581aa8652
+SHA512 (R/lifecycle_0.2.0.tar.gz) = f939b65a7eaaff543ffaf7284b07d551d2f851a1975a17116d7cdd3561dcf2e60d79561912f6e007a3d60c8a4e78727e74a96532f2555a5d6cc365a6f1e1dde5
+Size (R/lifecycle_0.2.0.tar.gz) = 164455 bytes
