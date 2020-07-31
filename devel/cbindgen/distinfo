@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2020/06/03 08:53:04 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2020/07/31 01:20:43 maya Exp $
 
 SHA1 (ansi_term-0.11.0.crate) = 0c6f984f171ee890100780e038def5db2a8b7ab8
 RMD160 (ansi_term-0.11.0.crate) = 0bc10d826fc7a658ac1026dac333cc54f26f7c5b
@@ -16,10 +16,10 @@ SHA1 (c2-chacha-0.2.3.crate) = 40ba6b2702a3262598dea03417e606d33ef899ed
 RMD160 (c2-chacha-0.2.3.crate) = e061651b6fb11fb22d9f1877b06a2ec99b496994
 SHA512 (c2-chacha-0.2.3.crate) = 302498f75d1befdb8bf8b61d0eff2762f0e86000c3909d819a377be2fec72e830bfb4530e24059906b499cef17ab56229f5627fb998ad9ba34a7c6c0de748538
 Size (c2-chacha-0.2.3.crate) = 13336 bytes
-SHA1 (cbindgen-0.14.2.crate) = 60e79b3626cc4d31ff7185e8259c9a1f0a7e1986
-RMD160 (cbindgen-0.14.2.crate) = 5f69077a07b8add7ef78fc7209b0a60aa79d55ac
-SHA512 (cbindgen-0.14.2.crate) = d3ab0a4c217c9047bc3ada7911d4ae1bdfc09092835f78d232bb56ef0d9a499df43e358532dfb828a04df61a0cacccd7e57214cd15f466791eb1b8edd9f92ed0
-Size (cbindgen-0.14.2.crate) = 165699 bytes
+SHA1 (cbindgen-0.14.3.crate) = a8d5bc9262876840fcd8bef38f102b6094b4fe60
+RMD160 (cbindgen-0.14.3.crate) = dc1c19d08d0b134a95db560469aead75c642b0f6
+SHA512 (cbindgen-0.14.3.crate) = abce798aff93260c28b0717df5fd25cf24b3eb89c9d05df4832d06169ec30db8e1c17a300f88087c6fbd4414a6aae6788e162dde838aac01c499afcb145c8461
+Size (cbindgen-0.14.3.crate) = 165874 bytes
 SHA1 (cfg-if-0.1.10.crate) = 3bd865df56c1f9266444b96351a1c30ffa5d9d75
 RMD160 (cfg-if-0.1.10.crate) = 896cd2fb2bb15582a174cb08c5e5ace6cc0be1c8
 SHA512 (cfg-if-0.1.10.crate) = 9d22616bfb4a75770a828a0a3cddac6787297a5fdc53eb17e25811cc94de717f2de8bd66d53c5d65ba1c83d8892aefee5ae758cf56a1ef0a0c3120f70b244339
