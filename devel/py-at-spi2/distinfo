@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2019/07/18 15:16:46 prlw1 Exp $
+$NetBSD: distinfo,v 1.15 2020/07/31 10:48:00 prlw1 Exp $
 
-SHA1 (pyatspi-2.33.2.tar.xz) = 88c4e4f884e2c51881299f5a5eab3e0e6bf4d415
-RMD160 (pyatspi-2.33.2.tar.xz) = 67646ff46e27fd4db75f696749679903e786795d
-SHA512 (pyatspi-2.33.2.tar.xz) = 6805520a8f0bcd37aa7a9c688dc08e54305e061c9facf86fe686b3ad368737fb86ff4c719e960c85df4eec5cc4b936953168392575c90f40059fd4e922fb0217
-Size (pyatspi-2.33.2.tar.xz) = 311196 bytes
+SHA1 (pyatspi-2.36.0.tar.xz) = 5f6c87474f1475cfb39ad9497be6237d50cd4640
+RMD160 (pyatspi-2.36.0.tar.xz) = 3e21eb6f04c27add5603840e6f89d8c96311ccbe
+SHA512 (pyatspi-2.36.0.tar.xz) = 709236fd992f570426043e32b201bdfee06bb28faa3d1237778f4069d3548b88b8336e53c0951359f5c7e2914b90f6f682ac58e33c84e32f360bdc32662800af
+Size (pyatspi-2.36.0.tar.xz) = 315076 bytes
