@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/07/31 23:37:09 brook Exp $
+
+SHA1 (R/jpeg_0.1-8.1.tar.gz) = 2f77424653893d158898357efd9f1d65e966e82a
+RMD160 (R/jpeg_0.1-8.1.tar.gz) = 013a44ddab3e40e8ecdfae11370a9cf18c3e6679
+SHA512 (R/jpeg_0.1-8.1.tar.gz) = f7e3148a54a4414505e3e3066b39634877ee9a69820df3e83e3593e78a6fd4d5047a5bd7abce8558149cd1e6519a13dec6d2b8412da8b396a73f3b661d2fba31
+Size (R/jpeg_0.1-8.1.tar.gz) = 18116 bytes
