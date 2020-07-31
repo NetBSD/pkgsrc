@@ -862,7 +862,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveEnd__ending_comments(c *check.C
 		"WARN: opsys.mk:9: Comment \"MACHINE_ARCH\" does not match condition \"${OS_VERSION:M8.*}\" in line 8.",
 		"WARN: opsys.mk:10: Comment \"OS_VERSION\" does not match condition \"${MACHINE_ARCH} == x86_64\" in line 7.",
 		"WARN: opsys.mk:12: Comment \"j\" does not match loop \"i in 1 2 3 4 5\" in line 5.",
-		"WARN: opsys.mk:14: Unknown option \"option\".",
+		"WARN: opsys.mk:14: Undocumented option \"option\".",
 		"WARN: opsys.mk:22: Comment \"NetBSD\" does not match condition \"${OPSYS} == FreeBSD\" in line 21.",
 		"WARN: opsys.mk:26: Comment \"ii\" does not match loop \"jj in 1 2\" in line 25.")
 }
