@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4206 2020/07/31 09:26:38 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4207 2020/07/31 10:34:40 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6656,3 +6656,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/exiv2 to 0.27.3 [wiz 2020-07-31]
 	Updated devel/cmake-fedora to 2.6.0nb1 [wiz 2020-07-31]
 	Updated net/grpc to 1.30.2 [wiz 2020-07-31]
+	Updated devel/at-spi2-core to 2.36.0 [prlw1 2020-07-31]
