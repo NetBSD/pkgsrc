@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/03/26 07:27:15 triaxx Exp $
+$NetBSD: distinfo,v 1.3 2020/07/31 11:39:11 prlw1 Exp $
 
-SHA1 (yelp-tools-3.32.0.tar.gz) = e715cdb5983c4d4f662d1c252a271f2dd6d69f37
-RMD160 (yelp-tools-3.32.0.tar.gz) = 197674ce27899bb03852aeeff5817b0452986c9d
-SHA512 (yelp-tools-3.32.0.tar.gz) = 8801cd754c8bbf2b64595314576b6b947b6e0a19196e34e2640419c3ded5b360e00cc361e49e54a5d7bc36dab18831253642a4251966d15aaa64bc2c4ccf7701
-Size (yelp-tools-3.32.0.tar.gz) = 40685 bytes
+SHA1 (yelp-tools-3.32.2.tar.gz) = a756401f7859bb1fdf809743ef999d9b3b365a1c
+RMD160 (yelp-tools-3.32.2.tar.gz) = e13d4bdc5f0eaa5fa445dce69e6e05e274ea3835
+SHA512 (yelp-tools-3.32.2.tar.gz) = d43890ddf66e8d95d97ebd4ccc7b270cf2ffde7a2d80f889a5a8589c41f1790b4670400062add932c7fb439bfe48bee3a6d106c1e775e1e93ad66b3b77d9db42
+Size (yelp-tools-3.32.2.tar.gz) = 41136 bytes
