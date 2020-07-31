@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4204 2020/07/31 09:20:48 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4205 2020/07/31 09:21:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6654,3 +6654,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/gopls to 0.4.3 [wiz 2020-07-31]
 	Updated sysutils/desktop-file-utils to 0.26 [wiz 2020-07-31]
 	Updated graphics/exiv2 to 0.27.3 [wiz 2020-07-31]
+	Updated devel/cmake-fedora to 2.6.0nb1 [wiz 2020-07-31]
