@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4216 2020/07/31 16:37:14 maya Exp $
+$NetBSD: CHANGES-2020,v 1.4217 2020/07/31 16:51:54 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6666,3 +6666,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xf86-video-intel to 2.99.917.20200515 [maya 2020-07-31]
 	Updated devel/R-callr to 3.4.3 [mef 2020-07-31]
 	Updated x11/libX11 to 1.6.10 [maya 2020-07-31]
+	Updated x11/modular-xorg-xephyr to 1.20.8nb2 [maya 2020-07-31]
+	Updated x11/modular-xorg-server to 1.20.8nb2 [maya 2020-07-31]
+	Updated x11/modular-xorg-xwayland to 1.20.8nb2 [maya 2020-07-31]
