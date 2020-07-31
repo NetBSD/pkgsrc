@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4211 2020/07/31 11:06:16 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.4212 2020/07/31 11:39:33 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6661,3 +6661,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/at-spi2-atk to 2.34.2 [prlw1 2020-07-31]
 	Updated devel/py-at-spi2 to 2.36.0 [prlw1 2020-07-31]
 	Updated editors/gedit to 3.36.2 [prlw1 2020-07-31]
+	Updated textproc/yelp-tools to 3.32.2 [prlw1 2020-07-31]
