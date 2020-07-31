@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 16:20:54 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/07/31 18:22:34 brook Exp $
 
 R_PKGNAME=	purrr
-R_PKGVER=	0.3.2
+R_PKGVER=	0.3.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
