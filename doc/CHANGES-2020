@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4237 2020/07/31 20:34:21 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4238 2020/07/31 20:36:24 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6690,5 +6690,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R-vctrs to 0.3.2 [brook 2020-07-31]
 	Updated math/R-classInt to 0.4.2 [brook 2020-07-31]
 	Updated devel/R-tidyselect to 1.1.0 [brook 2020-07-31]
-	Updated graphics/R-farver to 2.0.3 [brook 2020-07-31]
+	Added graphics/R-farver version 2.0.3 [brook 2020-07-31]
 	Updated graphics/R-scales to 1.1.0 [brook 2020-07-31]
