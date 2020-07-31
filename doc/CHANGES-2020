@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4227 2020/07/31 19:06:01 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4228 2020/07/31 19:06:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6682,3 +6682,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/R-curl to 4.3 [brook 2020-07-31]
 	Updated net/fehqlibs to 0.9.15 [schmonz 2020-07-31]
 	Updated net/ucspi-tcp6 to 1.11.5 [schmonz 2020-07-31]
+	Updated net/ucspi-ssl to 0.999.11.5 [schmonz 2020-07-31]
