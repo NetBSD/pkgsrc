@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4207 2020/07/31 10:34:40 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.4208 2020/07/31 10:40:48 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6657,3 +6657,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cmake-fedora to 2.6.0nb1 [wiz 2020-07-31]
 	Updated net/grpc to 1.30.2 [wiz 2020-07-31]
 	Updated devel/at-spi2-core to 2.36.0 [prlw1 2020-07-31]
+	Updated www/firefox-l10n to 79.0 [maya 2020-07-31]
