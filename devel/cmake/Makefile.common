@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2020/07/31 09:02:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2020/07/31 12:35:27 maya Exp $
 # used by devel/cmake-gui/Makefile
 
 .include "version.mk"
@@ -15,3 +15,6 @@ DISTINFO_FILE=	${.CURDIR}/../../devel/cmake/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/cmake/patches
 
 USE_LANGUAGES=	c c++11
+
+# Workaround issue in NetBSD before stdio.h r1.35 (NetBSD 9_STABLE)
+CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
