@@ -902,7 +902,7 @@ func (cv *VartypeCheck) Option() {
 
 	if !strings.ContainsAny(optname, "*?[") {
 		if _, found := G.Pkgsrc.PkgOptions[optname]; !found {
-			cv.Warnf("Unknown option %q.", optname)
+			cv.Warnf("Undocumented option %q.", optname)
 			cv.Explain(
 				"This option is not documented in the mk/defaults/options.description file.",
 				"Please think of a brief but precise description and either",
@@ -945,7 +945,7 @@ func (cv *VartypeCheck) Pathlist() {
 //
 // See FilePattern.
 func (cv *VartypeCheck) PathPattern() {
-	invalid := replaceAll(cv.ValueNoVar, `[%*+,\-./0-9?@A-Z\[\]_a-z~]`, "")
+	invalid := replaceAll(cv.ValueNoVar, `[!%*+,\-./0-9?@A-Z\[\]_a-z~]`, "")
 	if invalid == "" {
 		return
 	}
@@ -964,8 +964,8 @@ func (cv *VartypeCheck) PathPattern() {
 func (cv *VartypeCheck) Pathname() {
 	valid := regex.Pattern(condStr(
 		cv.Op == opUseMatch,
-		`[%*+,\-./0-9?@A-Z\[\]_a-z~]`,
-		`[%+,\-./0-9@A-Z_a-z~]`))
+		`[!%*+,\-./0-9?@A-Z\[\]_a-z~]`,
+		`[!%+,\-./0-9@A-Z_a-z~]`))
 	invalid := replaceAll(cv.ValueNoVar, valid, "")
 	if invalid == "" {
 		return
