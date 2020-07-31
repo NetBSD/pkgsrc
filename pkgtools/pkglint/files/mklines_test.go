@@ -861,7 +861,7 @@ func (s *Suite) Test_MkLines_checkAll__wip_category_Makefile(c *check.C) {
 		"")
 }
 
-func (s *Suite) Test_MkLines_checkAll__unknown_options(c *check.C) {
+func (s *Suite) Test_MkLines_checkAll__undocumented_options(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -876,7 +876,7 @@ func (s *Suite) Test_MkLines_checkAll__unknown_options(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: options.mk:4: Unknown option \"unknown\".")
+		"WARN: options.mk:4: Undocumented option \"unknown\".")
 }
 
 func (s *Suite) Test_MkLines_checkAll__PLIST_VARS(c *check.C) {
