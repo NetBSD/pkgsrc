@@ -1,11 +1,11 @@
-$NetBSD: patch-Modules_Platform_UnixPaths.cmake,v 1.1 2017/07/19 17:44:34 adam Exp $
+$NetBSD: patch-Modules_Platform_UnixPaths.cmake,v 1.2 2020/07/31 09:02:31 wiz Exp $
 
 Patch in pkgsrc paths for finding stuff.
 
---- Modules/Platform/UnixPaths.cmake.orig	2017-07-18 15:22:54.000000000 +0000
+--- Modules/Platform/UnixPaths.cmake.orig	2020-07-15 11:19:20.000000000 +0000
 +++ Modules/Platform/UnixPaths.cmake
-@@ -23,7 +23,7 @@ get_filename_component(_CMAKE_INSTALL_DI
- # search types.
+@@ -27,7 +27,7 @@ get_filename_component(_CMAKE_INSTALL_DI
+ # synchronized
  list(APPEND CMAKE_SYSTEM_PREFIX_PATH
    # Standard
 -  /usr/local /usr /
@@ -13,7 +13,7 @@ Patch in pkgsrc paths for finding stuff.
  
    # CMake install location
    "${_CMAKE_INSTALL_DIR}"
-@@ -43,20 +43,20 @@ endif()
+@@ -47,20 +47,20 @@ endif()
  
  # Non "standard" but common install prefixes
  list(APPEND CMAKE_SYSTEM_PREFIX_PATH
