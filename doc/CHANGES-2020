@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4200 2020/07/31 08:48:32 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4201 2020/07/31 09:02:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6650,3 +6650,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 79.0 [maya 2020-07-31]
 	Updated devel/afl to 2.57b [wiz 2020-07-31]
 	Updated devel/catch2 to 2.13.0 [wiz 2020-07-31]
+	Updated devel/cmake to 3.18.1 [wiz 2020-07-31]
