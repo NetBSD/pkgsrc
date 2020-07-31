@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19981 2020/07/31 09:20:48 wiz Exp $
+$NetBSD: TODO,v 1.19982 2020/07/31 09:26:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -609,7 +609,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o geoclue-2.1.10
 	o gfract-0.33
 	o ghdl-0.33
-	o gjs-1.64.1
+	o gjs-1.64.3 [wip]
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -664,7 +664,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grantlee-5.0.0
 	o greed-4.1
 	o gromacs-5.1.2
-	o grpc-1.30.2
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
