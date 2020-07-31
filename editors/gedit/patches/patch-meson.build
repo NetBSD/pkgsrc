@@ -1,0 +1,18 @@
+$NetBSD: patch-meson.build,v 1.1 2020/07/31 11:05:49 prlw1 Exp $
+
+Don't insist that python binary is called 'python3'.
+
+--- meson.build.orig	2020-04-25 16:59:58.000000000 +0000
++++ meson.build
+@@ -69,7 +69,10 @@ x11_dep = dependency('x11', required: fa
+ introspection_dep = dependency('gobject-introspection-1.0', required: false)
+ vapigen_dep = dependency('vapigen', version: '>= 0.25.1', required: false)
+ 
+-python3 = python.find_installation('python3')
++python3 = python.find_installation('python3', required: false)
++if not python3.found()
++  python3 = python.find_installation()
++endif
+ 
+ build_checkupdate_plugin = host_machine.system() == 'windows'
+ if build_checkupdate_plugin

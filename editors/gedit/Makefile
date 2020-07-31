@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.152 2020/06/02 08:23:43 adam Exp $
+# $NetBSD: Makefile,v 1.153 2020/07/31 11:05:49 prlw1 Exp $
 
-DISTNAME=	gedit-3.22.1
-PKGREVISION=	13
+DISTNAME=	gedit-3.36.2
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gedit/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,40 +12,40 @@ LICENSE=	gnu-gpl-v2
 
 PREV_PKGPATH=	editors/gedit3
 
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
-GNU_CONFIGURE=		yes
+USE_TOOLS+=			gmake gettext msgfmt perl pkg-config
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
-PKGCONFIG_OVERRIDE+=		data/gedit.pc.in
-PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PY_PATCHPLIST=			yes
 REPLACE_PYTHON+=		plugins/externaltools/data/send-to-fpaste.tool.in
+REPLACE_PYTHON+=		build-aux/meson/post_install.py
 
-CONFIGURE_ARGS+=	--disable-updater
-CONFIGURE_ARGS+=	--disable-deprecations
-CONFIGURE_ARGS+=	--disable-maintainer-mode
-
-.include "options.mk"
+MESON_ARGS+=	-Dvapi=false
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gedit
 
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
+pre-configure:
+	${FIND} ${WRKSRC}/help -type f -exec ${CHMOD} 644 {} \;
+
+
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpeas+=	libpeas>=1.14.1
 .include "../../devel/libpeas/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.52
 .include "../../devel/glib2/schemas.mk"
-.include "../../devel/py-gobject3-common/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../editors/tepl4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.21.3
+.include "../../textproc/gspell/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22
 .include "../../x11/gtk3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.21.2
-.include "../../x11/gtksourceview3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtksourceview4+=	gtksourceview4>=4.0.2
+.include "../../x11/gtksourceview4/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 
