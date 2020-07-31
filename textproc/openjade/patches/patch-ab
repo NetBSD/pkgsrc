@@ -1,4 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2017/07/15 14:34:15 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2020/07/31 17:01:44 brook Exp $
+
+Use --tag explicitly to always detect the correct compiler.  See
+https://sourceforge.net/p/openjade/patches/48/
+
+Include $(LDFLAGS) in linker arguments.
 
 --- Makefile.lib.in.orig	2002-01-22 11:57:53.000000000 +0000
 +++ Makefile.lib.in
@@ -7,7 +12,7 @@ $NetBSD: patch-ab,v 1.4 2017/07/15 14:34:15 wiz Exp $
  
  lib$(LIB).la: $(LT_OBJS)
 -	$(LIBTOOL) --mode=link $(CC) $(LINKFLAGS) -o lib$(LIB).la $(LT_OBJS) \
-+	$(LIBTOOL) --mode=link $(CXX) $(LINKFLAGS) $(LDFLAGS) -o lib$(LIB).la $(LT_OBJS) \
++	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LINKFLAGS) $(LDFLAGS) -o lib$(LIB).la $(LT_OBJS) \
  	    -rpath $(libdir) -version-info $(LTVERSION) $(DEPLIBS)
  
  install:
