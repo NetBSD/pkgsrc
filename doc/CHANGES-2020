@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4241 2020/07/31 21:50:28 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4242 2020/07/31 22:39:50 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6695,3 +6695,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/R-generics version 0.0.2 [brook 2020-07-31]
 	Updated math/R-dplyr to 1.0.0 [brook 2020-07-31]
 	Updated math/R-tidyr to 1.0.2 [brook 2020-07-31]
+	Updated pkgtools/pkglint to 20.2.5 [rillig 2020-07-31]
