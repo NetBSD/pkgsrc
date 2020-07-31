@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:33:31 brook Exp $
+$NetBSD: distinfo,v 1.2 2020/07/31 20:17:39 brook Exp $
 
-SHA1 (R/vctrs_0.2.0.tar.gz) = 3b895360667b117672423c88f9b375ca8fd71428
-RMD160 (R/vctrs_0.2.0.tar.gz) = 2af957bdb8eba94cecb52a4aad98890844c651a2
-SHA512 (R/vctrs_0.2.0.tar.gz) = 446c54e2cb33f2beb1d95afc2e4ca2d297bdf1f62b31c588f314534d856a62607fb2011c9bad1a1270f6da732a3e78f6cefbb0498144bb4dd4a5abf1078a84c2
-Size (R/vctrs_0.2.0.tar.gz) = 668258 bytes
+SHA1 (R/vctrs_0.3.2.tar.gz) = abc2f09732d68b0a729e25eefa65fc99777cea10
+RMD160 (R/vctrs_0.3.2.tar.gz) = 17ef8bf538f8008779b7312e500dd36d560ca12e
+SHA512 (R/vctrs_0.3.2.tar.gz) = fc9fa39cf0c5eb096c29baa8d62c285eb362a93fecfcc8fd7211fbbf2de9e5324514710c6efa36d2b6238672175fc7026f5494cc4d19da9450ae8638f00846d8
+Size (R/vctrs_0.3.2.tar.gz) = 958372 bytes
