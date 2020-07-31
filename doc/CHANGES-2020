@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4229 2020/07/31 19:07:47 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4230 2020/07/31 19:52:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6684,3 +6684,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ucspi-tcp6 to 1.11.5 [schmonz 2020-07-31]
 	Updated net/ucspi-ssl to 0.999.11.5 [schmonz 2020-07-31]
 	Updated net/djbdnscurve6 to 36c [schmonz 2020-07-31]
+	Updated www/py-autobahn to 20.1.2nb1 [wiz 2020-07-31]
