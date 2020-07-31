@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/01/23 14:33:18 adam Exp $
+# $NetBSD: Makefile,v 1.32 2020/07/31 19:52:00 wiz Exp $
 
 DISTNAME=	autobahn-20.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
 
@@ -21,6 +22,9 @@ TEST_ENV+=	USE_ASYNCIO=1
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} wamp wamp-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
