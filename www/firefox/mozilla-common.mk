@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.175 2020/07/12 01:37:50 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.176 2020/07/31 01:26:43 maya Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -37,7 +37,7 @@ UNLIMIT_RESOURCES+=	datasize virtualsize
 # selection framework.
 USE_LANGUAGES+=		c99 c++
 
-TOOL_DEPENDS+=		cbindgen>=0.14.2:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.14.3:../../devel/cbindgen
 .if ${MACHINE_ARCH} == "sparc64"
 CONFIGURE_ARGS+=	--disable-nodejs
 .else
@@ -218,10 +218,10 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_needs_atomic=yes
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.25
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.26
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.53
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.54
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
