@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4217 2020/07/31 16:51:54 maya Exp $
+$NetBSD: CHANGES-2020,v 1.4218 2020/07/31 18:18:26 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6669,3 +6669,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/modular-xorg-xephyr to 1.20.8nb2 [maya 2020-07-31]
 	Updated x11/modular-xorg-server to 1.20.8nb2 [maya 2020-07-31]
 	Updated x11/modular-xorg-xwayland to 1.20.8nb2 [maya 2020-07-31]
+	Updated devel/R-R6 to 2.4.1 [brook 2020-07-31]
+	Updated devel/R-R6 to 2.4.1 [brook 2020-07-31]
