@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.26 2020/03/08 16:49:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/07/31 10:48:00 prlw1 Exp $
 
-DISTNAME=	pyatspi-2.33.2
+DISTNAME=	pyatspi-2.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
-PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pyatspi/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	https://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus
+HOMEPAGE=	https://wiki.linuxfoundation.org/accessibility/atk/at-spi/at-spi_on_d-bus
+
 COMMENT=	Python Assistive Technology Service Provider Interface
 # GPLv2 for pasytest, but tests are not built by default
 LICENSE=	gnu-lgpl-v2
