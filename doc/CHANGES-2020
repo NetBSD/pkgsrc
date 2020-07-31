@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4209 2020/07/31 10:43:08 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.4210 2020/07/31 10:48:23 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6659,3 +6659,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/at-spi2-core to 2.36.0 [prlw1 2020-07-31]
 	Updated www/firefox-l10n to 79.0 [maya 2020-07-31]
 	Updated devel/at-spi2-atk to 2.34.2 [prlw1 2020-07-31]
+	Updated devel/py-at-spi2 to 2.36.0 [prlw1 2020-07-31]
