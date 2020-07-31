@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2019/11/27 22:33:03 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/07/31 09:02:31 wiz Exp $
 # used by devel/cmake-gui/Makefile
 
-.include "Makefile.version"
+.include "version.mk"
 
 DISTNAME=	cmake-${CMAKE_VERSION}
 CATEGORIES=	devel
