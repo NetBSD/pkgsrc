@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/01 21:48:17 mef Exp $
+
+SHA1 (R/tinytest_1.2.2.tar.gz) = 5eda44ad2835386dfcafb72cd30213d14bb2b9e0
+RMD160 (R/tinytest_1.2.2.tar.gz) = be67da336e3ece37d017203285f403f64c2c3371
+SHA512 (R/tinytest_1.2.2.tar.gz) = 2a7cbc070d40b8d3562a1aee69c02436613d29ea94b2a08bddd825b8ae4d6de4476c50acab01e54b198458d10f0fbf7f82e416c72e1d9e6013ef86e51938e332
+Size (R/tinytest_1.2.2.tar.gz) = 436173 bytes
