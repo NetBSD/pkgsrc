@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4251 2020/08/01 15:15:13 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4252 2020/08/01 15:55:37 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6705,3 +6705,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/R-pingr version 2.0.1 [mef 2020-08-01]
 	Updated devel/R-covr to 3.5.0 [mef 2020-08-01]
 	Added textproc/ugrep version 2.5.0 [scole 2020-08-01]
+	Updated net/dbip-asn-lite to 2020.08 [fcambus 2020-08-01]
