@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1341 2020/07/27 14:11:16 jdolecek Exp $
+# $NetBSD: Makefile,v 1.1342 2020/08/01 13:13:21 mef Exp $
 #
 
 COMMENT=	Networking tools
@@ -12,6 +12,7 @@ SUBDIR+=	IglooFTP
 SUBDIR+=	LaBrea
 SUBDIR+=	ORBit2
 SUBDIR+=	R-pbdZMQ
+SUBDIR+=	R-pingr
 SUBDIR+=	Radicale
 SUBDIR+=	Radicale2
 SUBDIR+=	SDL2_net
