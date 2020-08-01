@@ -1,0 +1,21 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/08/01 08:17:43 tnn Exp $
+
+--- CMakeLists.txt.orig	2020-01-12 18:05:37.000000000 +0000
++++ CMakeLists.txt
+@@ -126,14 +126,14 @@ message(STATUS "########################
+ message(STATUS "## Begin configuration for Python support...")
+ message(STATUS "#############################################")
+ message(STATUS "Enabling optional Python bindings if possible...")
+-add_subdirectory(python)
++#add_subdirectory(python)
+ 
+ message(STATUS "")
+ message(STATUS "#############################################")
+ message(STATUS "## Begin configuration for Python3 support...")
+ message(STATUS "#############################################")
+ message(STATUS "Enabling optional Python3 bindings if possible...")
+-add_subdirectory(python3)
++#add_subdirectory(python3)
+ 
+ 
+ ########################################################################
