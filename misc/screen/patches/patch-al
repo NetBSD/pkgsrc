@@ -1,8 +1,12 @@
-$NetBSD: patch-al,v 1.6 2016/06/20 16:04:44 ryoon Exp $
+$NetBSD: patch-al,v 1.7 2020/08/01 14:10:23 kim Exp $
 
 Make extra calls to remove utmp entries when utmpx is used.
 For non-login entries we only update utmpx, as it stores
 more information, and utilities are reading both.
+
+Do not truncate hostnames that have two colons (:) as they
+are likely IPv6 addresses. Wrap them in brackets ([])
+unless already wrapped (e.g. from $DISPLAY).
 
 --- utmp.c.orig	2016-06-19 19:41:03.000000000 +0000
 +++ utmp.c
@@ -39,3 +43,64 @@ more information, and utilities are reading both.
    if (utmpok && D_loginslot != (slot_t)0 && D_loginslot != (slot_t)-1)
      {
        debug1(" logging you in again (slot %#x)\n", (int)D_loginslot);
+@@ -410,7 +422,7 @@ struct win *wi;
+   struct utmp u;
+   int saved_ut;
+ #ifdef UTHOST
+-  char *p;
++  char *m, *p;
+   char host[sizeof(D_loginhost) + 15];
+ #else
+   char *host = 0;
+@@ -449,12 +461,48 @@ struct win *wi;
+ 	   * "faui45.informati"......:s.0
+ 	   * HPUX uses host:0.0, so chop at "." and ":" (Eric Backus)
+ 	   */
+-	  for (p = host; *p; p++)
+-	    if ((*p < '0' || *p > '9') && (*p != '.'))
++	  for (m = p = host; *p; p++)
++	    if (*p == ':')
+ 	      break;
+-	  if (*p)
++	  if (*p == ':')
++	    {
++	      for (m = p + 1; *m; m++)
++		{
++		  if (*m == ':')
++		    {
++		      if (host[0] != '[')
++			{
++			  strncpy(host + 1, D_loginhost, sizeof(host) - 15 -1);
++			  host[0] = '[';
++			  for (p = host; *p; p++)
++			    ;
++			  *p++ = ']';
++			  break;
++			}
++		      else
++			{
++			  for (p = m + 1; *p; p++)
++			    ;
++			}
++		    }
++		}
++	    }
++	  else
+ 	    {
+ 	      for (p = host; *p; p++)
++		if ((*p < '0' || *p > '9') && (*p != '.'))
++		  break;
++	    }
++	  if (*p)
++	    {
++	      p = host;
++	      if (host[0] == '[')
++		{
++		  for (; *p == ']'; p++)
++		    ;
++		  p++;
++		}
++	      for (; *p; p++)
+ 		if (*p == '.' || (*p == ':' && p != host))
+ 		  {
+ 		    *p = '\0';
