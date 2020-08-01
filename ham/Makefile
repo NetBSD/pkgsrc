@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/08/01 07:47:22 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2020/08/01 09:00:31 tnn Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -47,6 +47,7 @@ SUBDIR+=	locator
 SUBDIR+=	nec2c
 SUBDIR+=	osmo-sdr
 SUBDIR+=	predict
+SUBDIR+=	py-soapy-sdr
 SUBDIR+=	rtl-sdr
 SUBDIR+=	soapy-sdr
 SUBDIR+=	tfkiss
