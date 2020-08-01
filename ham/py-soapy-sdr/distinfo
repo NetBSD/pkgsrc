@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/01 08:57:05 tnn Exp $
+
+SHA1 (soapy-sdr-0.7.2.tar.gz) = f2639510f2ba006c1f8f96e53de6809dbbf41c51
+RMD160 (soapy-sdr-0.7.2.tar.gz) = bea70c024d73ed0053d4ecc43c9b8a78fb7c60ea
+SHA512 (soapy-sdr-0.7.2.tar.gz) = 2454b9b6bf4542f3bce2c6a8e1c886cee9179ca0e13e3c1e22817a05ef671428a3cb8fea69e496c8b62573f360c248508edf3d0871ec5063dfac8211b122d371
+Size (soapy-sdr-0.7.2.tar.gz) = 124607 bytes
