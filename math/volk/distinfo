@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/08/01 04:35:09 tnn Exp $
+
+SHA1 (volk-2.3.0.tar.gz) = c9824143bc8835ca2e9ebb2204dcb8a4836e8958
+RMD160 (volk-2.3.0.tar.gz) = 9cf2d79cdf98ac8b9e935694601f3b33a5852b8d
+SHA512 (volk-2.3.0.tar.gz) = 9e3b405b7be46b4f5ff61a4d42fa9013fc55169bc18c9cf9253e446fe23fd12dc0356adb9aa176e33dfa4cc478e4b9226bee906a2d89ef83bac3b28f52816382
+Size (volk-2.3.0.tar.gz) = 344763 bytes
+SHA1 (patch-include_volk_volk__common.h) = 53e7aa38deaa9cdf68ca12fff6c176be471cf162
+SHA1 (patch-include_volk_volk__complex.h) = 248bf10c03364f7338f03cbaa4ddc8047da9c775
