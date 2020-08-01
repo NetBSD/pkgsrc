@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/04/09 16:23:09 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/08/01 03:58:54 tnn Exp $
 bin/uhd_cal_rx_iq_balance
 bin/uhd_cal_tx_dc_offset
 bin/uhd_cal_tx_iq_balance
@@ -305,3 +305,6 @@ share/uhd/rfnoc/blocks/siggen.xml
 share/uhd/rfnoc/blocks/splitstream.xml
 share/uhd/rfnoc/blocks/vector_iir.xml
 share/uhd/rfnoc/blocks/window.xml
+@pkgdir share/uhd/images
+@pkgdir share/uhd/fpga
+@pkgdir share/uhd/firmware

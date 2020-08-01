@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.9 2019/03/22 17:58:27 adam Exp $
+# $NetBSD: options.mk,v 1.10 2020/08/01 03:58:54 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uhd
 PKG_SUPPORTED_OPTIONS=	doxygen
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_SRC=	${PKGDIR}/PLIST
+PLIST_SRC=	${PLIST_SRC_DFLT}
 
 .if !empty(PKG_OPTIONS:Mdoxygen)
 BUILD_DEPENDS+=	doxygen>=1.8.15:../../devel/doxygen
