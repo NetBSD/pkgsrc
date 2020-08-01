@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/08/01 15:13:59 scole Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/01 17:11:11 scole Exp $
 
-GITHUB_PROJECT=	ugrep
-GITHUB_TAG=	v2.5.0
-DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	ugrep-2.5.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Genivia/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Genivia/ugrep
@@ -20,7 +17,6 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-bzlib
 CONFIGURE_ARGS+=	--with-lz4
 CONFIGURE_ARGS+=	--with-lzma	# lzma & xz files
