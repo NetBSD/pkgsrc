@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4250 2020/08/01 13:40:57 mef Exp $
+$NetBSD: CHANGES-2020,v 1.4251 2020/08/01 15:15:13 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6704,3 +6704,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added ham/py-soapy-sdr version 0.7.2 [tnn 2020-08-01]
 	Added net/R-pingr version 2.0.1 [mef 2020-08-01]
 	Updated devel/R-covr to 3.5.0 [mef 2020-08-01]
+	Added textproc/ugrep version 2.5.0 [scole 2020-08-01]
