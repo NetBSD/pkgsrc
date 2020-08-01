@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/01 13:08:32 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/01 13:11:51 mef Exp $
 
 R_PKGNAME=	pingr
 R_PKGVER=	2.0.1
@@ -11,7 +11,7 @@ LICENSE=	mit	# + file LICENSE
 DEPENDS+=	R-processx>=3.4.1:../../sysutils/R-processx
 
 # may conflict with tex-tetex-3.0.50602nb1
-TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../print/tex-inconsolata
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
 
 USE_LANGUAGES=	c
 
