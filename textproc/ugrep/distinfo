@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/01 15:13:59 scole Exp $
+
+SHA1 (ugrep/v2.5.0.tar.gz) = b0b077993c5a7b6f948f889841a314f35ed95912
+RMD160 (ugrep/v2.5.0.tar.gz) = 6087438b5a61389ed5152eb64d3318260d905dc9
+SHA512 (ugrep/v2.5.0.tar.gz) = 4d4ecab89e89cfb4786f016a83b1e657cc18edbd8a757aa604a2a6f23489d3346f462c39ecc74b0b7f869ae67fc00c0d96245059b0f6a69c2c264684827b9dac
+Size (ugrep/v2.5.0.tar.gz) = 4090150 bytes
