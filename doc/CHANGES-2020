@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4248 2020/08/01 09:00:31 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4249 2020/08/01 13:13:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6702,3 +6702,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/volk version 2.3.0 [tnn 2020-08-01]
 	Added ham/soapy-sdr version 0.7.2 [tnn 2020-08-01]
 	Added ham/py-soapy-sdr version 0.7.2 [tnn 2020-08-01]
+	Added net/R-pingr version 2.0.1 [mef 2020-08-01]
