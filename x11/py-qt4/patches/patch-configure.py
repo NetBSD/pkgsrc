@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.py,v 1.2 2018/01/17 19:18:47 markd Exp $
+$NetBSD: patch-configure.py,v 1.3 2020/08/01 07:18:35 tnn Exp $
 
---- configure.py.orig	2017-06-30 08:44:36.000000000 +0000
+--- configure.py.orig	2018-08-31 07:36:58.000000000 +0000
 +++ configure.py
-@@ -341,7 +341,7 @@ class ConfigurePyQt4:
+@@ -341,14 +341,14 @@ class ConfigurePyQt4:
          pyqt_modules.append("QtCore")
  
          check_module("QtGui", "qwidget.h", "new QWidget()")
@@ -11,6 +11,14 @@ $NetBSD: patch-configure.py,v 1.2 2018/01/17 19:18:47 markd Exp $
          check_module("QtMultimedia", "QAudioDeviceInfo",
                  "new QAudioDeviceInfo()")
          check_module("QtNetwork", "qhostaddress.h", "new QHostAddress()")
+ 
+         # Qt v4.7 was current when we added support for QtDBus and we didn't
+         # bother properly versioning its API.
+-        if qt_version >= 0x040700:
++        if qt_version >= 0x040700 and os.path.isdir(os.path.join(src_dir, "dbus")):
+             check_module("QtDBus", "qdbusconnection.h",
+                     "QDBusConnection::systemBus()")
+ 
 @@ -367,8 +367,8 @@ class ConfigurePyQt4:
          check_module("QtWebKit", "qwebpage.h", "new QWebPage()")
          check_module("QtXml", "qdom.h", "new QDomDocument()")
