@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4246 2020/08/01 04:39:13 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4247 2020/08/01 07:47:21 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6700,3 +6700,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/R-polyclip version 1.10.0 [brook 2020-08-01]
 	Added graphics/R-ggthemes version 4.2.0 [brook 2020-08-01]
 	Added math/volk version 2.3.0 [tnn 2020-08-01]
+	Added ham/soapy-sdr version 0.7.2 [tnn 2020-08-01]
