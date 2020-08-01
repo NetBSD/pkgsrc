@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/05/06 14:04:43 adam Exp $
+# $NetBSD: Makefile,v 1.57 2020/08/01 03:58:54 tnn Exp $
 
 DISTNAME=	uhd-3.15.0.0
 PKGREVISION=	1
@@ -48,6 +48,7 @@ REPLACE_PYTHON+=	utils/latency/run_tests.py
 REPLACE_PYTHON+=	utils/uhd_images_downloader.py.in
 REPLACE_PYTHON+=	utils/usrp2_card_burner.py
 REPLACE_PYTHON+=	utils/usrp2_card_burner_gui.py
+REPLACE_PYTHON+=	utils/usrp2_recovery.py
 REPLACE_PYTHON+=	tests/devtest/benchmark_rate_test.py
 REPLACE_PYTHON+=	tests/devtest/multi_usrp_test.py
 REPLACE_PYTHON+=	tests/devtest/python_api_test.py
