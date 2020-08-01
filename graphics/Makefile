@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.899 2020/08/01 02:25:23 brook Exp $
+# $NetBSD: Makefile,v 1.900 2020/08/01 02:26:12 brook Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -27,6 +27,7 @@ SUBDIR+=	R-farver
 SUBDIR+=	R-ggExtra
 SUBDIR+=	R-ggplot2
 SUBDIR+=	R-ggtern
+SUBDIR+=	R-ggthemes
 SUBDIR+=	R-gridExtra
 SUBDIR+=	R-jpeg
 SUBDIR+=	R-labeling
