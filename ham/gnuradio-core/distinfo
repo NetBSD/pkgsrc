@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2020/05/19 13:57:11 joerg Exp $
+$NetBSD: distinfo,v 1.38 2020/08/01 07:49:26 tnn Exp $
 
 SHA1 (gnuradio-3.7.13.5.tar.gz) = c81a9cb1ec5e9455d885c804ba8fb656c4573b53
 RMD160 (gnuradio-3.7.13.5.tar.gz) = 87786c5f333069c15316c6a45dbce11f329ddac6
@@ -59,4 +59,3 @@ SHA1 (patch-gr-qtgui_lib_waterfall__sink__c__impl.cc) = 532f134213f4d5b41fb9b9c4
 SHA1 (patch-gr-qtgui_lib_waterfall__sink__f__impl.cc) = 555d31ffeecaadfa9c958df999108bcde8f5cc0e
 SHA1 (patch-gr-zeromq_lib_pub__msg__sink__impl.cc) = 719abaf0408e0ac73666f4f42cae3fc938532854
 SHA1 (patch-gr-zeromq_lib_push__msg__sink__impl.cc) = 92d115956cdd69747391ee13adc9c8b701ed9186
-SHA1 (patch-volk_lib_qa__utils.cc) = 2bf322c4cf75183baeb589df2e3deccfffad0391

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2020/05/19 13:58:24 joerg Exp $
+# $NetBSD: Makefile.common,v 1.25 2020/08/01 07:49:26 tnn Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -47,7 +47,6 @@ LDFLAGS.NetBSD+=	-lrt
 
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
-DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # gr_filter_design in gnuradio-core ask for:
 DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../x11/py-qwt-qt4
@@ -86,7 +85,7 @@ CMAKE_ARGS+=	-DENABLE_GR_BLOCKS=ON
 CMAKE_ARGS+=	-DENABLE_GR_FFT=ON
 CMAKE_ARGS+=	-DENABLE_GR_FILTER=ON
 CMAKE_ARGS+=	-DENABLE_PYTHON=ON
-CMAKE_ARGS+=	-DENABLE_VOLK=ON
+CMAKE_ARGS+=	-DENABLE_VOLK=ON -DENABLE_INTERNAL_VOLK=OFF
 CMAKE_ARGS+=	-DCMAKE_HAVE_PTHREADS_CREATE=OFF
 
 # Default setting (for pkgsrc)
@@ -140,10 +139,9 @@ do-install:
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"
 .include	"../../devel/cppunit/buildlink3.mk"
-# VOLK needs orc.h, so in the common
-.include	"../../devel/orc/buildlink3.mk"
 .include	"../../devel/swig2/buildlink3.mk"
 
 .include	"../../lang/python/application.mk"
 .include	"../../math/fftwf/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
+.include	"../../math/volk/buildlink3.mk"
