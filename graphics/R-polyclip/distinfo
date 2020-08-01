@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/01 02:03:53 brook Exp $
+
+SHA1 (R/polyclip_1.10-0.tar.gz) = b87d61ecd6887755f07e1428625e490392a7773e
+RMD160 (R/polyclip_1.10-0.tar.gz) = 4fde6c4845dc95708529699814ff7a1833bc3cc2
+SHA512 (R/polyclip_1.10-0.tar.gz) = 53a1ab0eca17178da415bc9a40b661ab2d5d3341de92a72b02c848ca636a7abc29b66ed9e78c929ec76685a698ef1b83524aaf90d83d4b41b4a1ed2c3e083d03
+Size (R/polyclip_1.10-0.tar.gz) = 79619 bytes
