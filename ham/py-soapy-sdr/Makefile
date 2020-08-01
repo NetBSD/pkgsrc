@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/01 08:57:05 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/01 08:59:36 tnn Exp $
 
 DISTNAME=	soapy-sdr-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,8 +23,8 @@ CMAKE_ARGS+=	-DPYTHON_CONFIG_EXECUTABLE=${PYTHONBIN:Q}-config
 CMAKE_ARGS+=	-DSWIG_EXECUTABLE=${PREFIX:Q}/bin/swig3.0
 WRKSRC=		${WRKDIR}/SoapySDR-${DISTNAME}/python
 
-.include "../../lang/python/extension.mk"
 PY_PATCHPLIST=	yes
+.include "../../lang/python/extension.mk"
 
 .include "../../ham/soapy-sdr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
