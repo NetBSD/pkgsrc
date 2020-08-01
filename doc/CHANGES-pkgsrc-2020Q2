@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.7 2020/07/30 18:50:01 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.8 2020/08/01 06:48:22 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -70,4 +70,10 @@ mail/opendmarc: bugfix
 
 Pullup ticket #6283 - requested by leot
 net/youtube-dl: update
+
+Pullup ticket #6290 - requested by maya
+x11/libX11: security fix
+
+Pullup ticket #6291 - requested by maya
+x11/modular-xorg-server: security fix
 
