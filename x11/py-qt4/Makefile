@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2020/07/10 20:02:23 rhialto Exp $
+# $NetBSD: Makefile,v 1.92 2020/08/01 07:18:35 tnn Exp $
 
 DISTNAME=	PyQt4_gpl_${PYQT_SYS}-4.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt4_gpl_${PYQT_SYS}/qt4/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
@@ -53,6 +53,7 @@ SUBST_MESSAGE.PIC=	Adding -fPIC to CXXFLAGS.
 #SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${OPSYS} == "Darwin"
 PYQT_SYS=	mac
@@ -93,12 +94,9 @@ post-install:
 	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt4
 
 .include "../../x11/py-sip/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/py-dbus/buildlink3.mk"
 # needs the QtXmlPatterns fix
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.6.1nb3
 .include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-qdbus/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.4.0nb1
 BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../x11/qt4-tools/buildlink3.mk"
