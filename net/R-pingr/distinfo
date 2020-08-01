@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/01 13:08:32 mef Exp $
+
+SHA1 (R/pingr_2.0.1.tar.gz) = 91eb4aa5f96f3c8a319320e0a26268a41b3d7c4a
+RMD160 (R/pingr_2.0.1.tar.gz) = 6c44563c7bacf1f1ebc35c56e40b8758aa6521d6
+SHA512 (R/pingr_2.0.1.tar.gz) = 36e4f9106d682a0d2261bd5aa27ca918f5febe04689d032aaed9f574416cd1ccd3255303b3b5e08cea0efce3140b47d7c0aa57faac95f463cdc1ee4463111adb
+Size (R/pingr_2.0.1.tar.gz) = 16845 bytes
