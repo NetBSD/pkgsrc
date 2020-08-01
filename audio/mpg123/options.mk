@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2018/07/14 17:12:56 tsutsui Exp $
+# $NetBSD: options.mk,v 1.6 2020/08/01 23:44:06 tsutsui Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mpg123
 PKG_OPTIONS_OPTIONAL_GROUPS=	fpu
@@ -17,7 +17,7 @@ PKG_SUGGESTED_OPTIONS+=		mpg123-x86-dither
 PKG_OPTIONS_GROUP.fpu=		mpg123-with-fpu
 PKG_SUGGESTED_OPTIONS+=		mpg123-with-fpu
 .  endif
-.elif (${MACHINE_ARCH} == "arm") || (${MACHINE_ARCH} == "arm32")
+.elif !empty(MACHINE_ARCH:M*arm*) && empty(MACHINE_ARCH:M*hf*)
 PKG_OPTIONS_GROUP.fpu=		mpg123-with-fpu 
 .elif (${MACHINE_ARCH} == "aarch64")
 PKG_OPTIONS_GROUP.fpu=		mpg123-neon64 mpg123-aarch64
