@@ -641,8 +641,8 @@ func (s *Suite) Test_MkLexer_varUseModifier__invalid_ts_modifier_with_warning(c 
 		"WARN: filename.mk:123: Invalid separator \"abc\" for :ts modifier of \"VAR\".",
 		"",
 		"\tThe separator for the :ts modifier must be either a single character",
-		"\tor an escape sequence like \\t or \\n or an octal or decimal escape",
-		"\tsequence; see the bmake man page for further details.",
+		"\tor an escape sequence like \\t or \\n or an octal or hexadecimal",
+		"\tescape sequence; see the bmake man page for further details.",
 		"")
 }
 
