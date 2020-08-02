@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/01/18 23:30:15 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2020/08/02 21:20:33 tnn Exp $
 
 DISTNAME=		avrdude-6.3
 PKGREVISION=		2
@@ -10,9 +10,6 @@ HOMEPAGE=		https://www.nongnu.org/avrdude/
 COMMENT=		Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,7 +26,27 @@ EGDIR=			${PREFIX}/share/examples/avrdude
 CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 
+PKG_OPTIONS_VAR=		PKG_OPTIONS.avrdude
+PKG_SUPPORTED_OPTIONS=		doc
+PKG_SUGGESTED_OPTIONS=		doc
+
+.include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		doc
+.if !empty(PKG_OPTIONS:Mdoc)
+PLIST.doc=		yes
+BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
+BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
+BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
+# DragonFly has stripped makeinfo in the base - without texi2dvi.
+.  if ${OPSYS} == "DragonFly"
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+.  endif
 CONFIGURE_ARGS+=	--enable-doc
+.else
+CONFIGURE_ARGS+=	--disable-doc
+.endif
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		DEFAULT_SER_PORT=${DEFAULT_SERIAL_DEVICE}
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
@@ -39,10 +56,6 @@ PLIST_SUBST+=		DISTNAME=${DISTNAME}
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
 
-# DragonFly has stripped makeinfo in the base - without texi2dvi.
-.if ${OPSYS} == "DragonFly"
-BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
-.endif
 
 .include "../../devel/libftdi/buildlink3.mk"
 .include "../../devel/libhid/buildlink3.mk"
