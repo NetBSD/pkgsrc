@@ -1,4 +1,7 @@
-$NetBSD: patch-po_Makevars,v 1.1 2016/10/01 13:05:15 joerg Exp $
+$NetBSD: patch-po_Makevars,v 1.2 2020/08/02 22:15:05 mef Exp $
+
+   Pretend that the gettext catalogs don't use modern fancy features, since
+   pkgsrc's msgfmt wrapper will strip them as needed.
 
 --- po/Makevars.orig	2016-09-30 11:50:33.000000000 +0000
 +++ po/Makevars
