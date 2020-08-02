@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/09/09 06:18:53 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/08/02 22:15:05 mef Exp $
 bin/corebird
 man/man1/corebird.1
 share/applications/org.baedert.corebird.desktop
@@ -43,6 +43,7 @@ share/locale/pt_BR/LC_MESSAGES/corebird.mo
 share/locale/ro/LC_MESSAGES/corebird.mo
 share/locale/ru/LC_MESSAGES/corebird.mo
 share/locale/sr/LC_MESSAGES/corebird.mo
+share/locale/sr@latin/LC_MESSAGES/corebird.mo
 share/locale/tr/LC_MESSAGES/corebird.mo
 share/locale/uk_UA/LC_MESSAGES/corebird.mo
 share/locale/zh_CN/LC_MESSAGES/corebird.mo
