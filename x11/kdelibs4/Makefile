@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2020/06/05 12:49:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.118 2020/08/02 12:49:08 jmcneill Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -87,6 +87,7 @@ LDFLAGS.SunOS+=		-lintl
 
 # jasper uses SIZE_MAX and friends in its headers.
 CXXFLAGS+=	-D__STDC_LIMIT_MACROS
+CXXFLAGS+=	-fpermissive
 
 BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../meta-pkgs/kde4/kde4.mk"
