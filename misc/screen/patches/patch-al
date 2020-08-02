@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.7 2020/08/01 14:10:23 kim Exp $
+$NetBSD: patch-al,v 1.8 2020/08/02 10:59:13 kim Exp $
 
 Make extra calls to remove utmp entries when utmpx is used.
 For non-login entries we only update utmpx, as it stores
@@ -52,7 +52,7 @@ unless already wrapped (e.g. from $DISPLAY).
    char host[sizeof(D_loginhost) + 15];
  #else
    char *host = 0;
-@@ -449,12 +461,48 @@ struct win *wi;
+@@ -449,12 +461,37 @@ struct win *wi;
  	   * "faui45.informati"......:s.0
  	   * HPUX uses host:0.0, so chop at "." and ":" (Eric Backus)
  	   */
@@ -61,45 +61,34 @@ unless already wrapped (e.g. from $DISPLAY).
 +	  for (m = p = host; *p; p++)
 +	    if (*p == ':')
  	      break;
--	  if (*p)
 +	  if (*p == ':')
-+	    {
-+	      for (m = p + 1; *m; m++)
++	    for (m = p + 1; *m; m++)
++	      if (*m == ':')
 +		{
-+		  if (*m == ':')
++		  if (host[0] != '[')
 +		    {
-+		      if (host[0] != '[')
-+			{
-+			  strncpy(host + 1, D_loginhost, sizeof(host) - 15 -1);
-+			  host[0] = '[';
-+			  for (p = host; *p; p++)
-+			    ;
-+			  *p++ = ']';
-+			  break;
-+			}
-+		      else
-+			{
-+			  for (p = m + 1; *p; p++)
-+			    ;
-+			}
++		      strncpy(host + 1, D_loginhost, sizeof(host) - 15 - 2);
++		      host[0] = '[';
++		      p = host + strlen(host);
++		      *p++ = ']';
 +		    }
-+		}
-+	    }
-+	  else
- 	    {
- 	      for (p = host; *p; p++)
-+		if ((*p < '0' || *p > '9') && (*p != '.'))
 +		  break;
-+	    }
-+	  if (*p)
-+	    {
++		}
++	  else
++	    for (p = host; *p; p++)
++	      if ((*p < '0' || *p > '9') && (*p != '.'))
++		break;
+ 	  if (*p)
+ 	    {
+-	      for (p = host; *p; p++)
 +	      p = host;
 +	      if (host[0] == '[')
-+		{
-+		  for (; *p == ']'; p++)
-+		    ;
-+		  p++;
-+		}
++		for (; *p; p++)
++		  if (*p == ']')
++		    {
++		      p++;
++		      break;
++		    }
 +	      for (; *p; p++)
  		if (*p == '.' || (*p == ':' && p != host))
  		  {
