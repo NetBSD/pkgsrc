@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/06/11 14:50:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/08/02 00:25:20 tnn Exp $
 bin/pylupdate5-${PYVERSSUFFIX}
 bin/pyrcc5-${PYVERSSUFFIX}
 bin/pyuic5-${PYVERSSUFFIX}
@@ -107,7 +107,7 @@ ${PYSITELIB}/PyQt5/uic/widget-plugins/qtprintsupport.py
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qtquickwidgets.py
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qtwebenginewidgets.py
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qtwebkit.py
-${PYSITELIB}/dbus/mainloop/pyqt5.so
+${PLIST.dbus}${PYSITELIB}/dbus/mainloop/pyqt5.so
 qt5/plugins/PyQt5-${PYVERSSUFFIX}/libpyqt5qmlplugin.so
 qt5/plugins/designer${PYVERSSUFFIX}/libpyqt5.so
 qt5/qsci${PYVERSSUFFIX}/api/python/PyQt5.api
