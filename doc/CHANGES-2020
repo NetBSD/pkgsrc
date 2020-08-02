@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4258 2020/08/02 20:22:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4259 2020/08/02 20:59:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6713,3 +6713,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.2.6 [rillig 2020-08-02]
 	Updated multimedia/libmatroska to 1.6.2 [adam 2020-08-02]
 	Updated multimedia/mkvtoolnix to 49.0.0 [adam 2020-08-02]
+	Updated mail/rss2email to 3.12 [schmonz 2020-08-02]
