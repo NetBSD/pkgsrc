@@ -367,7 +367,7 @@ func (p *MkLexer) varUseModifierTs(
 	mod string, closing byte, lexer *textproc.Lexer, varname string,
 	mark textproc.LexerMark) MkVarUseModifier {
 
-	// See devel/bmake/files/var.c:/case 't'
+	// See devel/bmake/files/var.c:/^ApplyModifier_ToSep/
 	sep := mod[2:] + p.varUseText(closing)
 	switch {
 	case sep == "":
@@ -380,7 +380,7 @@ func (p *MkLexer) varUseModifierTs(
 		p.Warnf("Invalid separator %q for :ts modifier of %q.", sep, varname)
 		p.Explain(
 			"The separator for the :ts modifier must be either a single character",
-			"or an escape sequence like \\t or \\n or an octal or decimal escape",
+			"or an escape sequence like \\t or \\n or an octal or hexadecimal escape",
 			"sequence; see the bmake man page for further details.")
 	}
 	return MkVarUseModifier(lexer.Since(mark))
