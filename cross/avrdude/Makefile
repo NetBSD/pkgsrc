@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/08/02 21:20:33 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2020/08/02 21:22:29 tnn Exp $
 
 DISTNAME=		avrdude-6.3
 PKGREVISION=		2
@@ -14,8 +14,7 @@ LICENSE=		gnu-gpl-v2
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-TEXINFO_REQD=		4.9
-USE_TOOLS+=		autoconf automake autoreconf lex makeinfo texi2html yacc
+USE_TOOLS+=		autoconf automake autoreconf lex yacc
 # Upstream does not documentat that GNU make is required, but BSD make
 # leads to inexplicable errors about libavrdude.
 # \todo Resolve and/or discuss with upstream.
@@ -35,6 +34,8 @@ PKG_SUGGESTED_OPTIONS=		doc
 PLIST_VARS+=		doc
 .if !empty(PKG_OPTIONS:Mdoc)
 PLIST.doc=		yes
+TEXINFO_REQD=		4.9
+USE_TOOLS+=		texi2html makeinfo
 BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
 BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
