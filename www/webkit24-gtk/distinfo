@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2020/04/13 19:11:55 joerg Exp $
+$NetBSD: distinfo,v 1.9 2020/08/02 17:41:41 jmcneill Exp $
 
 SHA1 (webkitgtk-2.4.11.tar.xz) = e425ae86084ab6335dadb368c9e8f53600665d54
 RMD160 (webkitgtk-2.4.11.tar.xz) = e1f72498f911465f5ba152313dd9c62ae8d5eee6
@@ -6,6 +6,7 @@ SHA512 (webkitgtk-2.4.11.tar.xz) = 2e2cf01a52b8593765a0a3c2d7f0ad306121660019eb4
 Size (webkitgtk-2.4.11.tar.xz) = 9869100 bytes
 SHA1 (patch-Source_JavaScriptCore_API_JSStringRef.cpp) = 633d5e3fa945cb443ea8c58337ba6ec78fc093b2
 SHA1 (patch-Source_JavaScriptCore_ForwardingHeaders_JavaScriptCore_JSCallbackFunction.h) = 79122450435eb12a57086d18e5410eec131c33b2
+SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 7c134294a9cb27f8d860ec3e3b8dc6ba91289c47
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 2ff343ac53b14af0692754a44059e7d2ea969b96
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 69221390dd5fdac55abf341c5ae3a03267e38ae6
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = fdd31fcf6c745394499570397c82fe3dfce02e1d
