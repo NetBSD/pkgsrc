@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.15 2017/11/27 23:53:54 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2020/08/02 22:15:05 mef Exp $
 
-SHA1 (corebird-1.7.3.tar.xz) = f4024f31c1643a085f0ac131af9054f36f9faaff
-RMD160 (corebird-1.7.3.tar.xz) = 0968f745ff58d97a1a493677557da6280c0fe6dc
-SHA512 (corebird-1.7.3.tar.xz) = 1b963742acdc327231e7885ec08a9a6ee551d23436360e5282b07754489dc42a8d1779824f2ee9d6f1448a088d978404db8e0ea05f7c66d8f08301113eecdb2b
-Size (corebird-1.7.3.tar.xz) = 705080 bytes
+SHA1 (corebird-1.7.4.tar.xz) = 80d9db6926091b49515e4bb27e52d818fbbea31d
+RMD160 (corebird-1.7.4.tar.xz) = 13d80f64680bb06145bbe31da7990e548f25a553
+SHA512 (corebird-1.7.4.tar.xz) = ad50130b7a7fa32a5629889ee9758bbbf4d622f503a7f935b73c64a8e7cb5e1ec44df2202c3d82e04afe4865c08b671286a445d327af3b4fd1d7c732fb62ebdd
+Size (corebird-1.7.4.tar.xz) = 712704 bytes
 SHA1 (patch-data_Makefile.am) = cebf21049f03cdcca06b476040125edcdc86d675
-SHA1 (patch-data_Makefile.in) = 8ed5776f7b694a7cf574f5e8097811eb7cd060b4
-SHA1 (patch-po_Makevars) = 7d1f0dcef0caf53d6fa1187306d6264c158b8210
+SHA1 (patch-data_Makefile.in) = ae084a61f3bed3177f5c43deb9cc967e2b2009f6
+SHA1 (patch-po_Makevars) = bb845edd686fc8550bddee25ae00efe88f4c1fdd
+SHA1 (patch-src_Corebird.vala) = 4355468778dada39c27527de7344507ba1b92f8f
+SHA1 (patch-src_DefaultTimeline.vala) = 7e7299b350acca1ba53a036d5a4f55bb4aa4e8ef
+SHA1 (patch-src_MainWindow.vala) = 909b0fe8f5e1af9d6508483dcf6962a5df5e5e15
