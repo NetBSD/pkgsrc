@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2020/06/02 08:24:29 adam Exp $
+# $NetBSD: Makefile,v 1.58 2020/08/02 22:15:05 mef Exp $
 
-DISTNAME=	corebird-1.7.3
-PKGREVISION=	21
+DISTNAME=	corebird-1.7.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baedert/}
 GITHUB_PROJECT=	corebird
@@ -16,7 +15,7 @@ LICENSE=	gnu-gpl-v3
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gettext-m4 pkg-config gmake msgfmt
+USE_TOOLS+=	gettext pkg-config gmake msgfmt
 
 .include "options.mk"
 
