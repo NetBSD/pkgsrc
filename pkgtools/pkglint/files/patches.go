@@ -296,8 +296,18 @@ func (ck *PatchChecker) checkAddedAbsPath(before string, dir Path, after string)
 		return
 	}
 
-	// Ignore paths inside C-style comments.
+	// Ignore paths inside C-style block comments.
 	if contains(before, "/*") && contains(after, "*/") {
+		return
+	}
+
+	// Ignore paths inside multiline C-style block comments.
+	if hasPrefix(trimHspace(before), "*") {
+		return
+	}
+
+	// Ignore paths inside C-style end-of-line comments.
+	if contains(before, "//") {
 		return
 	}
 
@@ -310,6 +320,11 @@ func (ck *PatchChecker) checkAddedAbsPath(before string, dir Path, after string)
 	// But keep compiler options like -I/usr/pkg even though they look
 	// like a relative pathname.
 	if matches(before, `\w$`) && !matches(before, `(^|[ \t])-(I|L|R|rpath|Wl,-R)$`) {
+		return
+	}
+
+	// Allow well-known pathnames that belong to the base system.
+	if matches(after, `hosts|passwd|shadow`) {
 		return
 	}
 
