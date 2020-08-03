@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/04/06 12:21:00 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/03 14:11:32 adam Exp $
 
-DISTNAME=	dnsdiag-1.6.4
+DISTNAME=	dnsdiag-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnsdiag/}
@@ -15,12 +15,13 @@ DEPENDS+=	${PYPKGPREFIX}-dns>=1.15.0:../../net/py-dns
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 post-install:
+.for bin in dnseval dnsping dnstraceroute
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} dnseval.py dnseval${PYVERSSUFFIX} && ${RM} dnseval && \
-		${MV} dnsping.py dnsping${PYVERSSUFFIX} && ${RM} dnsping && \
-		${MV} dnstraceroute.py dnstraceroute${PYVERSSUFFIX} && \
-		${RM} dnstraceroute || ${TRUE}
+	${MV} ${bin}.py ${bin}-${PYVERSSUFFIX} && ${RM} -f ${bin} || ${TRUE}
+.endfor
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
