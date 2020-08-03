@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4267 2020/08/03 11:11:42 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4268 2020/08/03 11:19:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6724,3 +6724,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/mediainfo to 20.03 [wiz 2020-08-03]
 	Updated databases/redis to 6.0.6nb1 [wiz 2020-08-03]
 	Updated lang/python37 to 3.7.8nb1 [wiz 2020-08-03]
+	Updated textproc/hunspell to 1.7.0nb2 [wiz 2020-08-03]
