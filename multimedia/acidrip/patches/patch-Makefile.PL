@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.PL,v 1.1 2020/03/29 01:05:18 joerg Exp $
+$NetBSD: patch-Makefile.PL,v 1.2 2020/08/03 11:11:20 mef Exp $
+
+mplayer > dev/null 2>&1 returns 768, drain it to echo
 
 Don't care if mp3lame is supported in mencoder. LAVC can be used just as well.
 
@@ -9,7 +11,7 @@ Don't care if mp3lame is supported in mencoder. LAVC can be used just as well.
    "your current path. Install it from http://mplayerhq/hu see INSTALL.html or\n" .
    "INSTALL for installation instructions.\n" .
 -  "***************\n\n" if ( system "mplayer 2&>1 > /dev/null" ); print "found\n";
-+  "***************\n\n" if ( system "mplayer > /dev/null 2>&1" ); print "found\n";
++  "***************\n\n" if ( system "mplayer > /dev/null 2>&1 || echo" ); print "found\n";
  
  print "test for MEncoder: "; die "Not Found!\n\n***************\n" .
    "AcidRip uses MEncoder, which is part of MPlayer video player package. This\n" .
