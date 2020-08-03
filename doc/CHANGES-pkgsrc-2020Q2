@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.8 2020/08/01 06:48:22 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.9 2020/08/03 09:33:40 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -76,4 +76,9 @@ x11/libX11: security fix
 
 Pullup ticket #6291 - requested by maya
 x11/modular-xorg-server: security fix
+
+Pullup ticket #6272 - requested by wiz
+net/transmission-gtk: security update
+net/transmission-qt: security update
+net/transmission: security update
 
