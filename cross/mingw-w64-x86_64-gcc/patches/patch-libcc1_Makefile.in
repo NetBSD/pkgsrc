@@ -1,0 +1,13 @@
+$NetBSD: patch-libcc1_Makefile.in,v 1.1 2020/08/03 22:35:48 joerg Exp $
+
+--- libcc1/Makefile.in.orig	2020-07-20 23:42:55.985670787 +0000
++++ libcc1/Makefile.in
+@@ -394,7 +394,7 @@ libiberty = $(if $(wildcard $(libiberty_
+ 
+ libiberty_dep = $(patsubst $(Wc)%,%,$(libiberty))
+ plugindir = $(libdir)/gcc/$(target_noncanonical)/$(gcc_version)/plugin
+-cc1libdir = $(libdir)/$(libsuffix)
++cc1libdir = $(libdir)
+ @ENABLE_PLUGIN_TRUE@plugin_LTLIBRARIES = libcc1plugin.la libcp1plugin.la
+ @ENABLE_PLUGIN_TRUE@cc1lib_LTLIBRARIES = libcc1.la
+ shared_source = callbacks.cc callbacks.hh connection.cc connection.hh \
