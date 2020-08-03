@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2017/12/21 13:30:40 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2020/08/03 15:32:31 adam Exp $
 
 BUILDLINK_TREE+=	gpgme
 
@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.gpgme?=	../../security/gpgme
 pkgbase:=		gpgme
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.gpgme:Mgnupg2)
+.if ${PKG_BUILD_OPTIONS.gpgme:Mgnupg2}
 DEPENDS+=		gnupg2>=2.2.0:../../security/gnupg2
 GPGME_GPG=		${PREFIX}/bin/gpg2
 .else
