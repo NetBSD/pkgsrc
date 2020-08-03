@@ -1,0 +1,4 @@
+A Python image library that sits on top of Pillow, Wand and OpenCV.
+
+Willow currently has basic resize and crop operations, face and feature
+detection and animated GIF support.
