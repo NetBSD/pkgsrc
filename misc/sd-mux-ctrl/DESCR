@@ -1,0 +1,5 @@
+sd-mux stands for Secure Digital Multiplexer.
+
+This is SD card switcher (multiplexer) designed to help automatic testing.
+
+This project is sd-mux controller - binary for controlling sd-mux device.
