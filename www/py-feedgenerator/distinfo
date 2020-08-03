@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/02/03 09:47:12 nils Exp $
+$NetBSD: distinfo,v 1.3 2020/08/03 13:51:29 adam Exp $
 
-SHA1 (feedgenerator-1.9.tar.gz) = f4d42f3f4a4d9e07651219a73e0e48373daf9f25
-RMD160 (feedgenerator-1.9.tar.gz) = dd0ec73f849125ecf82d601d6d8c8a36c9289737
-SHA512 (feedgenerator-1.9.tar.gz) = 77f4df51c6bdf261f0d1665206ab048a21f8660cf8f2c7abf3d71e17c63284240d0eaa690dd6d53b0b7d8ce9c9e0349094d5270c75c2a069608b7717538d7fa1
-Size (feedgenerator-1.9.tar.gz) = 4136224 bytes
+SHA1 (feedgenerator-1.9.1.tar.gz) = 0cb4303452a8642285a1742ed709bf0677c436c2
+RMD160 (feedgenerator-1.9.1.tar.gz) = 2a70254c854d03acee0437b9b600fa7191f202b1
+SHA512 (feedgenerator-1.9.1.tar.gz) = db3642acb8f0c9fd692f37a79cf5862e60687a1745afbc6593d37a0372adb994de603238a17a8eae95ffcc993195f63037f16122a3cf8771e6922dea492fb5d5
+Size (feedgenerator-1.9.1.tar.gz) = 25677 bytes
