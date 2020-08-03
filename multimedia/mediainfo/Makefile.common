@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2020/02/28 12:16:45 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.9 2020/08/03 09:51:28 wiz Exp $
 #
 # used by multimedia/mediainfo/Makefile
 # used by multimedia/libmediainfo/Makefile
 
-MIVER=			19.09
+MIVER=			20.03
 
 DISTNAME=		mediainfo_${MIVER}_AllInclusive
 CATEGORIES=		multimedia
