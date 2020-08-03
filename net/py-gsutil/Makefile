@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/07/14 17:52:22 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/03 08:44:24 adam Exp $
 
 DISTNAME=	gsutil-4.52
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,6 +32,11 @@ DEPENDS+=	${PYPKGPREFIX}-retry_decorator>=1.0.0:../../devel/py-retry_decorator
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gslib/vendored/oauth2client/scripts/build_docs.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gslib/vendored/oauth2client/scripts/install.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gslib/vendored/oauth2client/scripts/run.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gslib/vendored/oauth2client/scripts/run_system_tests.sh
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} gsutil gsutil-${PYVERSSUFFIX} || ${TRUE}
