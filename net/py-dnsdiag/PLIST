@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/05 09:53:12 adam Exp $
-bin/dnseval${PYVERSSUFFIX}
-bin/dnsping${PYVERSSUFFIX}
-bin/dnstraceroute${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2020/08/03 14:11:32 adam Exp $
+bin/dnseval-${PYVERSSUFFIX}
+bin/dnsping-${PYVERSSUFFIX}
+bin/dnstraceroute-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
