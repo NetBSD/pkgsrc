@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4264 2020/08/03 09:51:42 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4265 2020/08/03 09:51:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6721,3 +6721,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ipython to 7.17.0 [adam 2020-08-03]
 	Updated graphics/py-imageio to 2.9.0 [adam 2020-08-03]
 	Updated multimedia/libmediainfo to 20.03 [wiz 2020-08-03]
+	Updated multimedia/mediainfo to 20.03 [wiz 2020-08-03]
