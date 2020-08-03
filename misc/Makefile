@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.539 2020/06/09 10:10:37 nia Exp $
+# $NetBSD: Makefile,v 1.540 2020/08/03 18:28:07 jmcneill Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -341,6 +341,7 @@ SUBDIR+=	rump
 SUBDIR+=	sch
 SUBDIR+=	sci
 SUBDIR+=	screen
+SUBDIR+=	sd-mux-ctrl
 SUBDIR+=	send-pr
 SUBDIR+=	siag
 SUBDIR+=	since
