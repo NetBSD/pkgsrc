@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/03 23:57:49 joerg Exp $
+
+SHA1 (draftjs_exporter-4.1.0.tar.gz) = 01aab07cad1d6fdf577cc0a2805e8688ed60198e
+RMD160 (draftjs_exporter-4.1.0.tar.gz) = 951be4c598e42b3d307ef15f69ab10117462a922
+SHA512 (draftjs_exporter-4.1.0.tar.gz) = 6adfef658daa4fea15757985d31f941adf3c5b8ef4a26ffbc305a03dedd638defb6dd9397e70e048effa512e3f7eac3171f0d45f26350b7af8129added1ee926
+Size (draftjs_exporter-4.1.0.tar.gz) = 64037 bytes
