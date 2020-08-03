@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.89 2020/06/09 07:07:13 wiz Exp $
+$NetBSD: distinfo,v 1.90 2020/08/03 21:34:20 joerg Exp $
 
-SHA1 (mercurial-5.4.1.tar.gz) = fb77969c3d9fe1a4df2af282bbec74201c9cbdac
-RMD160 (mercurial-5.4.1.tar.gz) = 040a68d43f4afb4991ddb4aeef951de7891a6d37
-SHA512 (mercurial-5.4.1.tar.gz) = 6173853c38f0aba59d2e29bec7da1c384c27a6004d5d00d1aee70571155122e07514fe6e56cecfdae48ec5f670823a2e6a5c9c8a36dd7041def2b8956fd35703
-Size (mercurial-5.4.1.tar.gz) = 7725893 bytes
-SHA1 (patch-D8480) = dca33fd25007a160cff02054ca659cce2a01511c
-SHA1 (patch-D8490) = 96a4eefb403919d17f188573b7d1dc34cef28388
+SHA1 (mercurial-5.5.tar.gz) = ff9b44836fb7342f6f3fbf401118cde8b61e8abf
+RMD160 (mercurial-5.5.tar.gz) = 40beaddc36912a6d57a2238346082b02f4f75f8f
+SHA512 (mercurial-5.5.tar.gz) = ed8f283a61aa13fd3638ae5b0473e989069128fbec99e9a0e5980db6041e5ea3bae6ff7647ba609c7fb3e6386aaa7398861d2cab6c6fb1165bfeb532855c331d
+Size (mercurial-5.5.tar.gz) = 7757631 bytes
+SHA1 (patch-D8480) = d97094c64addcc243e54cfde48734ecfe130c3d6
 SHA1 (patch-D8574) = 56cecc1c83558803186e84d90ef67b4dce68f8e9
-SHA1 (patch-D8575) = 5f414acb04ba5f8c141ceada93f29f6f7d43a833
