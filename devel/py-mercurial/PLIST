@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/05/05 12:12:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/08/03 21:34:20 joerg Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -663,6 +663,7 @@ ${PYSITELIB}/mercurial/helptext/hgweb.txt
 ${PYSITELIB}/mercurial/helptext/internals/__init__.py
 ${PYSITELIB}/mercurial/helptext/internals/__init__.pyc
 ${PYSITELIB}/mercurial/helptext/internals/__init__.pyo
+${PYSITELIB}/mercurial/helptext/internals/bid-merge.txt
 ${PYSITELIB}/mercurial/helptext/internals/bundle2.txt
 ${PYSITELIB}/mercurial/helptext/internals/bundles.txt
 ${PYSITELIB}/mercurial/helptext/internals/cbor.txt
@@ -797,9 +798,15 @@ ${PYSITELIB}/mercurial/mdiff.pyo
 ${PYSITELIB}/mercurial/merge.py
 ${PYSITELIB}/mercurial/merge.pyc
 ${PYSITELIB}/mercurial/merge.pyo
+${PYSITELIB}/mercurial/mergestate.py
+${PYSITELIB}/mercurial/mergestate.pyc
+${PYSITELIB}/mercurial/mergestate.pyo
 ${PYSITELIB}/mercurial/mergeutil.py
 ${PYSITELIB}/mercurial/mergeutil.pyc
 ${PYSITELIB}/mercurial/mergeutil.pyo
+${PYSITELIB}/mercurial/metadata.py
+${PYSITELIB}/mercurial/metadata.pyc
+${PYSITELIB}/mercurial/metadata.pyo
 ${PYSITELIB}/mercurial/minifileset.py
 ${PYSITELIB}/mercurial/minifileset.pyc
 ${PYSITELIB}/mercurial/minifileset.pyo
