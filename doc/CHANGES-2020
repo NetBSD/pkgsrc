@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4274 2020/08/03 15:01:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4275 2020/08/03 15:32:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6739,3 +6739,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-dnsdiag to 1.7.0 [adam 2020-08-03]
 	Updated devel/blosc to 1.20.0 [adam 2020-08-03]
 	Updated finance/bitcoin to 0.20.1 [adam 2020-08-03]
+	Updated security/libksba to 1.4.0 [adam 2020-08-03]
+	Updated security/gpgme to 1.14.0 [adam 2020-08-03]
