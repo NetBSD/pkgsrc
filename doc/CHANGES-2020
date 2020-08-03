@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4269 2020/08/03 11:53:05 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4270 2020/08/03 12:11:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6727,3 +6727,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/hunspell to 1.7.0nb2 [wiz 2020-08-03]
 	Updated net/fping to 4.4 [adam 2020-08-03]
 	Updated net/haproxy to 2.2.2 [adam 2020-08-03]
+	Updated lang/nodejs to 14.7.0 [adam 2020-08-03]
+	Updated lang/nodejs12 to 12.18.3 [adam 2020-08-03]
