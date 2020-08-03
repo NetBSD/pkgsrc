@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4279 2020/08/03 21:34:16 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4280 2020/08/03 21:35:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6745,3 +6745,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added misc/sd-mux-ctrl version 0.0.20200217 [jmcneill 2020-08-03]
 	Updated devel/py-hg-evolve to 10.0.1 [joerg 2020-08-03]
 	Updated graphics/jbigkit to 2.1nb1 [wiz 2020-08-03]
+	Updated devel/py-mercurial to 5.5 [joerg 2020-08-03]
