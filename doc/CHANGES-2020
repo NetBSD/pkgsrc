@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4260 2020/08/02 22:15:50 mef Exp $
+$NetBSD: CHANGES-2020,v 1.4261 2020/08/03 07:57:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6715,3 +6715,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/mkvtoolnix to 49.0.0 [adam 2020-08-02]
 	Updated mail/rss2email to 3.12 [schmonz 2020-08-02]
 	Updated net/corebird to 1.7.4 [mef 2020-08-02]
+	Updated mail/rss2email to 3.12.1 [schmonz 2020-08-03]
