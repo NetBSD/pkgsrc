@@ -1,0 +1,3 @@
+This package provides lazy translations for names used for localization
+purposes, e.g. places and timezones. The name l18n is a contraction of
+i18n and l10n (internationalisation and localization).
