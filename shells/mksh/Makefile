@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/07/10 11:24:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2020/08/03 15:33:45 tnn Exp $
 
 DISTNAME=		mksh-R59b
 PKGNAME=		${DISTNAME:S/-R/-/}
@@ -43,6 +43,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mksh ${DESTDIR}${PREFIX}/bin/mksh
 	${INSTALL_MAN} ${WRKSRC}/mksh.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC}/dot.mkshrc ${DESTDIR}${PREFIX}/share/examples/mksh/
+
+# For check-portability's double brackets check.
+# This should be patched instead.
+CHECK_PORTABILITY_SKIP+=	Build.sh
 
 # Uncomment this if you want to run the regression tests
 #USE_TOOLS+=			perl
