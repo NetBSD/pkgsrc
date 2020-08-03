@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/08/03 10:38:45 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/08/03 14:07:02 wiz Exp $
 
 DISTNAME=	redis-6.0.6
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TEST_DEPENDS+=	tcl>=8.5:../../lang/tcl
 
 USE_LANGUAGES=	c99
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
