@@ -1,4 +1,4 @@
-$NetBSD: patch-D8480,v 1.1 2020/05/24 01:16:26 joerg Exp $
+$NetBSD: patch-D8480,v 1.2 2020/08/03 21:52:55 joerg Exp $
 
 # HG changeset patch
 # User Joerg Sonnenberger <joerg@bec.de>
@@ -136,7 +136,7 @@ diff -r edffab2cf0ea -r 8467bb8885f5 tests/test-obsolete-distributed.t
    searching for changes
 +  taking quick initial sample
 +  query 2; still undecided: 1, sample size is: 1
-+  2 total queries in 0.0091s
++  2 total queries in *.*s (glob)
 +  1 changesets found
 +  list of changesets:
 +  391a2bf12b1b8b05a72400ae36b26d50a091dc22
