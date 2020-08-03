@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4276 2020/08/03 17:24:18 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4277 2020/08/03 18:29:36 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6742,3 +6742,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libksba to 1.4.0 [adam 2020-08-03]
 	Updated security/gpgme to 1.14.0 [adam 2020-08-03]
 	Updated www/firefox78 to 78.1.0 [nia 2020-08-03]
+	Added misc/sd-mux-ctrl version 0.0.20200217 [jmcneill 2020-08-03]
