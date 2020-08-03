@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/03 23:49:52 joerg Exp $
+
+SHA1 (Willow-1.4.tar.gz) = 3103ce678550967f1ee9be9087adee1d46556751
+RMD160 (Willow-1.4.tar.gz) = 5bbfb5a817faf754745d50867b7888750db61a28
+SHA512 (Willow-1.4.tar.gz) = 7a59f0afdd6f59311707673130edcc61bcf6d05b0e2410f6fe488324d50fdbf9c066d5a89626be862082b7bc092ad45de65795c93fcaec41c0cb2574eea16242
+Size (Willow-1.4.tar.gz) = 1950643 bytes
