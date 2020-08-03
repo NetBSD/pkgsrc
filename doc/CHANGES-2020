@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4273 2020/08/03 14:12:00 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4274 2020/08/03 15:01:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6737,3 +6737,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-feedgenerator to 1.9.1 [adam 2020-08-03]
 	Updated www/py-uvicorn to 0.11.8 [adam 2020-08-03]
 	Updated net/py-dnsdiag to 1.7.0 [adam 2020-08-03]
+	Updated devel/blosc to 1.20.0 [adam 2020-08-03]
+	Updated finance/bitcoin to 0.20.1 [adam 2020-08-03]
