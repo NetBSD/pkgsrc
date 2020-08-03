@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2020/02/28 12:16:45 bsiegert Exp $
+$NetBSD: distinfo,v 1.15 2020/08/03 09:51:28 wiz Exp $
 
-SHA1 (mediainfo_19.09_AllInclusive.7z) = 8d250b9101a34e19d76f48a1e1e36df820e5e051
-RMD160 (mediainfo_19.09_AllInclusive.7z) = 54b517222fbbf34dd0282bdd3e54c4c2d45e8f26
-SHA512 (mediainfo_19.09_AllInclusive.7z) = c03a116ec2abf28026ea62a7a5cad773d119549e78452882c8189044bf1f75f462d00adaed5e12c7d309f5e191cc10d6f1b9f0bf7793aaec4737c61855017e6a
-Size (mediainfo_19.09_AllInclusive.7z) = 3603490 bytes
+SHA1 (mediainfo_20.03_AllInclusive.7z) = e6cbdaa85b9c4b182cd1325506926637b0e158d8
+RMD160 (mediainfo_20.03_AllInclusive.7z) = 976c635af03faa44d9a4cca2bc5c143efa44601d
+SHA512 (mediainfo_20.03_AllInclusive.7z) = 850f4ee5f8ceb3a91a4466ff73c9f2fb70a1a63f8bdd7ffd8dd40e83b619b71c59e9b8659a8636758c90a62d7024b4e617b17025c72f23a7bcd25a3823d2ee39
+Size (mediainfo_20.03_AllInclusive.7z) = 3706487 bytes
 SHA1 (patch-MediaInfoLib_Source_MediaInfo_MediaInfo__Config.h) = 19d6cba816c9e282e31fac527cbc39b9303f9f08
