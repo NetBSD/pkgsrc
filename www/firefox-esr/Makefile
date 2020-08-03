@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/15 20:42:10 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/03 17:23:57 nia Exp $
 
-ESR_VER=	68
+ESR_VER=	78
 PKGNAME=	firefox-esr-${ESR_VER}
 CATEGORIES=	www meta-pkgs
 DISTFILES=	#
@@ -11,6 +11,6 @@ COMMENT=	Meta-package for installing the most recent Firefox ESR version
 
 META_PACKAGE=	yes
 
-DEPENDS+=	firefox${ESR_VER}-[0-9]*:../../www/firefox${ESR_VER}
+DEPENDS+=	firefox${ESR_VER}>=${ESR_VER}.0.0:../../www/firefox${ESR_VER}
 
 .include "../../mk/bsd.pkg.mk"
