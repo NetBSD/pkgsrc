@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4275 2020/08/03 15:32:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4276 2020/08/03 17:24:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6741,3 +6741,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/bitcoin to 0.20.1 [adam 2020-08-03]
 	Updated security/libksba to 1.4.0 [adam 2020-08-03]
 	Updated security/gpgme to 1.14.0 [adam 2020-08-03]
+	Updated www/firefox78 to 78.1.0 [nia 2020-08-03]
