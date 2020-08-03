@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2020/06/10 11:32:06 markd Exp $
+# $NetBSD: Makefile,v 1.98 2020/08/03 15:32:31 adam Exp $
 
-DISTNAME=	gpgme-1.13.1
+DISTNAME=	gpgme-1.14.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,9 +33,8 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
-.include "../../mk/pthread.buildlink3.mk"
-BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.0.2
 .include "../../security/libassuan2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.28
 .include "../../security/libgpg-error/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
