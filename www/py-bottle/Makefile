@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/02/11 17:26:04 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/03 13:58:05 adam Exp $
 
 DISTNAME=	bottle-0.12.18
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bottle/}
@@ -14,7 +15,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} bottle.py bottle-${PYVERSSUFFIX}.py || ${TRUE}
+	${MV} bottle.py bottle-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
