@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2020/05/12 08:19:46 adam Exp $
+$NetBSD: distinfo,v 1.23 2020/08/03 13:41:49 adam Exp $
 
-SHA1 (pyzmq-19.0.1.tar.gz) = 3537257d854dd92c524c182b8356e7b8260f7da9
-RMD160 (pyzmq-19.0.1.tar.gz) = c15a1acbeae4e19ac0e33f90f949975218f2ce30
-SHA512 (pyzmq-19.0.1.tar.gz) = 90265fddc40691fbf2b7c29cb8780670c7bc73f0d222031d874c7ba4a08e807cc983e43bab25834c37f258b0f19ac215979636908f131efde0c338e237ad7343
-Size (pyzmq-19.0.1.tar.gz) = 1152365 bytes
+SHA1 (pyzmq-19.0.2.tar.gz) = 1f65a40ff85536a6ebb6ddd7105075061d37d2e2
+RMD160 (pyzmq-19.0.2.tar.gz) = 008be479b08313768a8cba8b20a2d813101be4a0
+SHA512 (pyzmq-19.0.2.tar.gz) = aca37b54e07fe6c3c16be56aa5bd856bbf0f4d7bebd11bd9fdecc6e74b7f996572f1dc52e32ae94562c5a63391975a1caeb04d3c0af9f82f780dbee37aae1a9f
+Size (pyzmq-19.0.2.tar.gz) = 1156195 bytes
 SHA1 (patch-buildutils_detect.py) = 74e061f716b308a3a8965d10fdbf18aca4b814f4
 SHA1 (patch-setup.py) = e03b101b23f2dd61bdd82743b7abeb57520898da
