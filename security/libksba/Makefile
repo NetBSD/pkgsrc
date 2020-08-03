@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.34 2017/05/30 22:40:17 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2020/08/03 15:30:06 adam Exp $
 
-DISTNAME=	libksba-1.3.5
-PKGREVISION=	1
+DISTNAME=	libksba-1.4.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libksba/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnupg.org/(fr)/related_software/libksba/index.html
+HOMEPAGE=	https://www.gnupg.org/related_software/libksba/index.html
 COMMENT=	X.509 library
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE=	src/ksba.pc.in
 INFO_FILES=		yes
 
 TEST_TARGET=		check
