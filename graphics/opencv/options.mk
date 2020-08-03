@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.12 2020/08/03 22:37:05 joerg Exp $
+# $NetBSD: options.mk,v 1.13 2020/08/03 23:02:18 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opencv
-PKG_SUPPORTED_OPTIONS=	ffmpeg gtk jasper
+PKG_SUPPORTED_OPTIONS=	ffmpeg jasper
 
 .include "../../mk/bsd.prefs.mk"
 
