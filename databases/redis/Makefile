@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2020/07/21 07:34:43 adam Exp $
+# $NetBSD: Makefile,v 1.56 2020/08/03 10:38:45 wiz Exp $
 
 DISTNAME=	redis-6.0.6
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -24,6 +25,7 @@ DOCFILES+=		00-RELEASENOTES BUGS COPYING README.md
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	bin ${DOCDIR} ${EGDIR} ${EGDIR}/utils ${EGDIR}/tests
 CONF_FILES=		${EGDIR}/redis.conf.example ${PKG_SYSCONFDIR}/redis.conf
+CONF_FILES_MODE=	0640
 
 BUILD_DEFS+=		VARBASE REDIS_USER REDIS_GROUP REDIS_DATADIR
 BUILD_DEFS+=		REDIS_LOGDIR REDIS_PIDDIR
