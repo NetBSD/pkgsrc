@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4271 2020/08/03 13:45:26 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4272 2020/08/03 13:51:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6733,3 +6733,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-aiohttp-socks to 0.5.3 [adam 2020-08-03]
 	Updated net/py-zmq to 19.0.2 [adam 2020-08-03]
 	Updated finance/py-braintree to 4.3.0 [adam 2020-08-03]
+	Updated devel/py-autopep8 to 1.5.4 [adam 2020-08-03]
+	Updated www/py-feedgenerator to 1.9.1 [adam 2020-08-03]
