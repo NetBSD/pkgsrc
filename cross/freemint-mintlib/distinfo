@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2016/12/18 21:34:25 joerg Exp $
+$NetBSD: distinfo,v 1.5 2020/08/04 22:21:57 mef Exp $
 
 SHA1 (gcc-4.6.4-mint-20130415.patch.bz2) = bd2e88f2b862cc404f47144fb67375b1fe17291b
 RMD160 (gcc-4.6.4-mint-20130415.patch.bz2) = d3cafafb1caa1a1eb915c5f15f4063d6a70ac4ee
@@ -12,5 +12,7 @@ SHA1 (mintlib-CVS-20131219.tar.gz) = c49107b07c775daa5028ac964ea1c558eede9cd1
 RMD160 (mintlib-CVS-20131219.tar.gz) = 949b0d3abe28f26539198da27d2dd7c7bd544f29
 SHA512 (mintlib-CVS-20131219.tar.gz) = 3814c63578276b7722b91b86712d4f2b5f499b46e58e5dd5dbe8f978c907fdca960811234691f498ededf2028088334c416c94d347e54caf91d09be023473692
 Size (mintlib-CVS-20131219.tar.gz) = 1888097 bytes
+SHA1 (patch-gcc-4.6.4_gcc_cp_cfns.gperf) = da2735f36dc5a2ab19f92cb13f505cea11442fca
+SHA1 (patch-gcc-4.6.4_gcc_cp_cfns.h) = 2a9e8f53bd63c98efa0cda782dacb78b00beb2bc
 SHA1 (patch-gcc-4.6.4_gcc_doc_gcc.texi) = b11ef8d6ad28139623800ddcc5aa67bc45289b07
 SHA1 (patch-mintlib-CVS-20130415_configvars) = f1d0f2e1fe244c475634cd1ab4dd5ddc2b9a73f3
