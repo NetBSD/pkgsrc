@@ -1,0 +1,3 @@
+This is a storage system for Django that stores uploaded files in binary
+fields in the database. Files can be served from the database (usually a
+bad idea), the file system, or a CDN.
