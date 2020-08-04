@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/05/20 11:16:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/08/04 18:05:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -142,6 +142,9 @@ ${PYSITELIB}/ncclient/transport/errors.pyo
 ${PYSITELIB}/ncclient/transport/notify.py
 ${PYSITELIB}/ncclient/transport/notify.pyc
 ${PYSITELIB}/ncclient/transport/notify.pyo
+${PYSITELIB}/ncclient/transport/parser.py
+${PYSITELIB}/ncclient/transport/parser.pyc
+${PYSITELIB}/ncclient/transport/parser.pyo
 ${PYSITELIB}/ncclient/transport/session.py
 ${PYSITELIB}/ncclient/transport/session.pyc
 ${PYSITELIB}/ncclient/transport/session.pyo
@@ -157,6 +160,9 @@ ${PYSITELIB}/ncclient/transport/third_party/junos/__init__.pyo
 ${PYSITELIB}/ncclient/transport/third_party/junos/ioproc.py
 ${PYSITELIB}/ncclient/transport/third_party/junos/ioproc.pyc
 ${PYSITELIB}/ncclient/transport/third_party/junos/ioproc.pyo
+${PYSITELIB}/ncclient/transport/third_party/junos/parser.py
+${PYSITELIB}/ncclient/transport/third_party/junos/parser.pyc
+${PYSITELIB}/ncclient/transport/third_party/junos/parser.pyo
 ${PYSITELIB}/ncclient/xml_.py
 ${PYSITELIB}/ncclient/xml_.pyc
 ${PYSITELIB}/ncclient/xml_.pyo
