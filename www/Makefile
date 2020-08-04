@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1469 2020/08/03 23:58:27 joerg Exp $
+# $NetBSD: Makefile,v 1.1470 2020/08/04 00:10:41 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -678,6 +678,7 @@ SUBDIR+=	py-django-sortedm2m
 SUBDIR+=	py-django-south
 SUBDIR+=	py-django-sql-explorer
 SUBDIR+=	py-django-tagging
+SUBDIR+=	py-django-taggit
 SUBDIR+=	py-django-tastypie
 SUBDIR+=	py-django-timezone-field
 SUBDIR+=	py-django-treebeard
