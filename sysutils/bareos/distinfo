@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2020/07/28 06:36:29 kardel Exp $
+$NetBSD: distinfo,v 1.2 2020/08/04 12:56:15 kardel Exp $
 
 SHA1 (bareos-19.2.8.tar.gz) = b26f7db66e108eed1e20b11c36f994456419748e
 RMD160 (bareos-19.2.8.tar.gz) = 221777925946ab05ddc00063ba51daf4555f16d1
@@ -32,7 +32,7 @@ SHA1 (patch-core_src_findlib_find__one.cc) = 50eb6d289b7b2a7b33ee5828db31d031698
 SHA1 (patch-core_src_lib_mem__pool.cc) = 16b5adc4a5b2b4fd542b4d330e03283b8994a4a7
 SHA1 (patch-core_src_lib_scsi__lli.cc) = 09aa887d71009baa2ce2203c46c88a89097d6546
 SHA1 (patch-core_src_lib_version.c) = edfd88aed983ea3ce1ead6846707b5625ad5fc51
-SHA1 (patch-core_src_lmdb_mdb.c) = 70c76d7ecf610edb47afbb91f3c4d500d85583fe
+SHA1 (patch-core_src_lmdb_mdb.c) = 6cb69f975c23ec5ae52eb1daa8f6f73b7cbf71fd
 SHA1 (patch-core_src_plugins_stored_scsicrypto-sd.cc) = d59125fd445536e220140acf16e43605a4a98e9c
 SHA1 (patch-core_src_plugins_stored_scsitapealert-sd.cc) = 92ef75fbddb587957ec972480a87fe0f5b110111
 SHA1 (patch-core_src_stored_acquire.cc) = c239b2a4a3769b3f99315fae5cc5ee564454a1ad
