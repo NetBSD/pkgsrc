@@ -1,0 +1,2 @@
+A Django extension to allow working with 'clusters' of models as a single
+unit, independently of the database.
