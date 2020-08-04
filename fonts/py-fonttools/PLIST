@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2020/06/16 16:52:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/08/04 19:06:42 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -92,6 +92,9 @@ ${PYSITELIB}/fontTools/feaLib/error.pyo
 ${PYSITELIB}/fontTools/feaLib/lexer.py
 ${PYSITELIB}/fontTools/feaLib/lexer.pyc
 ${PYSITELIB}/fontTools/feaLib/lexer.pyo
+${PYSITELIB}/fontTools/feaLib/location.py
+${PYSITELIB}/fontTools/feaLib/location.pyc
+${PYSITELIB}/fontTools/feaLib/location.pyo
 ${PYSITELIB}/fontTools/feaLib/parser.py
 ${PYSITELIB}/fontTools/feaLib/parser.pyc
 ${PYSITELIB}/fontTools/feaLib/parser.pyo
@@ -203,6 +206,9 @@ ${PYSITELIB}/fontTools/otlLib/__init__.pyo
 ${PYSITELIB}/fontTools/otlLib/builder.py
 ${PYSITELIB}/fontTools/otlLib/builder.pyc
 ${PYSITELIB}/fontTools/otlLib/builder.pyo
+${PYSITELIB}/fontTools/otlLib/error.py
+${PYSITELIB}/fontTools/otlLib/error.pyc
+${PYSITELIB}/fontTools/otlLib/error.pyo
 ${PYSITELIB}/fontTools/otlLib/maxContextCalc.py
 ${PYSITELIB}/fontTools/otlLib/maxContextCalc.pyc
 ${PYSITELIB}/fontTools/otlLib/maxContextCalc.pyo
