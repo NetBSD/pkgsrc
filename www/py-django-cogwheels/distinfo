@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/08/04 00:38:23 joerg Exp $
+
+SHA1 (django-cogwheels-0.3.tar.gz) = e7900cc074bbe7a41806c9f244775817ef84f346
+RMD160 (django-cogwheels-0.3.tar.gz) = 84417bb1b53cd0e3d6ac4c04ca1e3ac7a2ae506c
+SHA512 (django-cogwheels-0.3.tar.gz) = b0c3d59cdef100196a4de4995e30f5b8aaf686f71872dce6a2001004e59fa69529d934839c1f053b2e8ad4903cbc7ba66b17cd8ec022a0b46a3a72790b77e097
+Size (django-cogwheels-0.3.tar.gz) = 46744 bytes
+SHA1 (patch-setup.py) = 07dcd39f3b812803db5a7f59808f103e821c2b07
