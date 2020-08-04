@@ -1,4 +1,4 @@
-/* $NetBSD: stat.c,v 1.5 2018/02/19 12:03:00 wiz Exp $ */
+/* $NetBSD: stat.c,v 1.6 2020/08/04 02:35:09 tnn Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -59,7 +59,7 @@ stat_mode(const char *client_port)
 	int fd;
 
 	if ((fd = connect_sockaddr(client_port)) == -1)
-		err(1, "Could not creation connection to %s", client_port);
+		err(1, "Could not create connection to %s", client_port);
 
 	sent_bytes = write(fd, "S", 1);
 	if (sent_bytes == -1)
