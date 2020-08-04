@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4281 2020/08/04 00:12:17 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.4282 2020/08/04 01:10:38 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6750,3 +6750,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/py-Willow to 1.4 [joerg 2020-08-03]
 	Added www/py-draftjs_exporter to 4.1.0 [joerg 2020-08-03]
 	Added www/py-django-taggit version 1.3.0 [joerg 2020-08-04]
+	Added www/py-django-phonenumber-field version 4.0.0 [joerg 2020-08-04]
+	Added www/py-django-modelcluster version 5.0.2 [joerg 2020-08-04]
+	Added www/py-django-cogwheels version 0.3 [joerg 2020-08-04]
+	Added www/py-wagtailmenus version 3.0.2 [joerg 2020-08-04]
+	Added www/py-wagtail version 2.9.3 [joerg 2020-08-04]
