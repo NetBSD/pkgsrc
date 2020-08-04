@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1471 2020/08/04 00:32:01 joerg Exp $
+# $NetBSD: Makefile,v 1.1472 2020/08/04 00:35:51 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -667,6 +667,7 @@ SUBDIR+=	py-django-import-export
 SUBDIR+=	py-django-inline-ordering
 SUBDIR+=	py-django-js-asset
 SUBDIR+=	py-django-kronos
+SUBDIR+=	py-django-modelcluster
 SUBDIR+=	py-django-mptt
 SUBDIR+=	py-django-phonenumber-field
 SUBDIR+=	py-django-photologue
