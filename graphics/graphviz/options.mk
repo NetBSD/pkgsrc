@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.28 2020/07/27 20:44:15 adam Exp $
+# $NetBSD: options.mk,v 1.29 2020/08/04 23:30:42 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
-PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk gts lua ocaml perl poppler svg tcl x11 # guile does not build with guile20
+PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua ocaml perl poppler svg tcl x11 # guile does not build with guile20
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
 .endif
