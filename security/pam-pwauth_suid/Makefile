@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/11/04 21:12:57 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/08/04 02:58:12 gutteridge Exp $
 
 DISTNAME=	pam-pwauth_suid-1.2
 PKGREVISION=	1
@@ -26,12 +26,12 @@ do-build:
 	 ${CC} ${CFLAGS} ${LDFLAGS} pwauth_suid_helper.c -o pwauth_suid_helper -lcrypt)
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/pam_pwauth_suid.so \
+	${INSTALL_LIB} ${WRKSRC}/pam_pwauth_suid.so \
 		${DESTDIR}${PREFIX}/lib/security
 	${INSTALL_PROGRAM} ${WRKSRC}/pwauth_suid_helper \
 		${DESTDIR}${PREFIX}/libexec
 	${CHMOD} 04555 ${DESTDIR}${PREFIX}/libexec/pwauth_suid_helper
-	sed -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/xscreensaver > \
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/xscreensaver > \
 		${DESTDIR}${PREFIX}/share/examples/pam-pwauth_suid/xscreensaver
 
 .include "../../mk/pam.buildlink3.mk"
