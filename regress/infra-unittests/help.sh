@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: help.sh,v 1.5 2020/05/16 20:22:41 rillig Exp $
+# $NetBSD: help.sh,v 1.6 2020/08/04 21:35:01 rillig Exp $
 #
 # Test cases for "bmake help", mainly implemented in mk/help/help.awk.
 #
@@ -139,6 +139,27 @@ if test_case_begin 'commented variables with continuation lines'; then
 
 	assert_that 'out' --file-is-lines \
 		'No help found for :all.'
+
+	test_case_end
+fi
+
+
+if test_case_begin 'variable name followed by comma'; then
+
+	create_file 'fetch.mk' <<-EOF
+		#
+		# FETCH_USE_IPV4_ONLY, if defined, will ...
+		#	...
+		#	...
+	EOF
+
+	TOPIC='fetch_use_ipv4_only' awk -f "$pkgsrcdir/mk/help/help.awk" \
+		'fetch.mk' >'out'
+
+	assert_that 'out' --file-is-lines \
+		'No help found for fetch_use_ipv4_only, but it appears in:' \
+		'' \
+		'fetch.mk'
 
 	test_case_end
 fi
