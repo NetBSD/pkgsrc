@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2020/07/31 16:36:55 maya Exp $
+$NetBSD: distinfo,v 1.32 2020/08/04 15:50:19 maya Exp $
 
 SHA1 (libX11-1.6.10.tar.bz2) = e28f6bc0a33ca512b1aeb973a1dd8b3a3c48cd9f
 RMD160 (libX11-1.6.10.tar.bz2) = 3d7ecf53bf8d87347857a0a810ce772f97c4b352
@@ -7,3 +7,4 @@ Size (libX11-1.6.10.tar.bz2) = 2294095 bytes
 SHA1 (patch-Makefile.in) = 93d3b8d9882babf70788e984884a9db46a5367ef
 SHA1 (patch-aa) = 4f502264e7200fd2f9409d8684c53de3bc6f0649
 SHA1 (patch-ac) = 565aa2a636b5c50f67cbd11e7c2adcac8d55418e
+SHA1 (patch-regression) = 55d611dacaa9b64e4275f83bb76843323bc38234
