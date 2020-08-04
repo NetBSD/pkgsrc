@@ -1,4 +1,4 @@
-/* $NetBSD: client.c,v 1.6 2015/12/07 16:52:39 joerg Exp $ */
+/* $NetBSD: client.c,v 1.7 2020/08/04 02:35:09 tnn Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -58,7 +58,7 @@ client_mode(const char *client_port)
 	int fd;
 
 	if ((fd = connect_sockaddr(client_port)) == -1)
-		err(1, "Could not creation connection to %s", client_port);
+		err(1, "Could not create connection to %s", client_port);
 
 loop:
 	sent_bytes = atomic_write(fd, "G", 1);
