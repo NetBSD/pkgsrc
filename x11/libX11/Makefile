@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2020/07/31 16:36:55 maya Exp $
+# $NetBSD: Makefile,v 1.53 2020/08/04 15:50:19 maya Exp $
 
 DISTNAME=		libX11-1.6.10
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
