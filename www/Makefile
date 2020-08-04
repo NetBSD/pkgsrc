@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1472 2020/08/04 00:35:51 joerg Exp $
+# $NetBSD: Makefile,v 1.1473 2020/08/04 00:39:05 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -656,6 +656,7 @@ SUBDIR+=	py-django-celery-beat
 SUBDIR+=	py-django-classy-tags
 SUBDIR+=	py-django-cms
 SUBDIR+=	py-django-cmsplugin_gallery
+SUBDIR+=	py-django-cogwheels
 SUBDIR+=	py-django-contrib-comments
 SUBDIR+=	py-django-cors-headers
 SUBDIR+=	py-django-countries
