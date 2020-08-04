@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.41 2020/05/03 10:57:06 rillig Exp $
+# $NetBSD: help.awk,v 1.42 2020/08/04 21:46:44 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -192,7 +192,7 @@ eval_this_line && NF >= 1 && !/^[\t.]/ && !/^#*$/ && !/^#\t\t/ {
 		# want them anyway, list them in a "Keywords:" line.
 		dprint_skip(w, "it is mixed case");
 
-	} else if (w !~ /^[A-Za-z][-0-9A-Z_a-z]*[0-9A-Za-z](:|\?=|=)?$/) {
+	} else if (w !~ /^[A-Za-z][-0-9A-Z_a-z]*[0-9A-Za-z]([,:]|\?=|=)?$/) {
 		# Keywords must consist only of letters, digits, hyphens
 		# and underscores; except for some trailing type specifier.
 		dprint_skip(w, "it contains special characters");
@@ -212,12 +212,12 @@ eval_this_line && NF >= 1 && !/^[\t.]/ && !/^#*$/ && !/^#\t\t/ {
 		# Upper-case words ending with a colon are probably not
 		# make targets, so ignore them. Common cases are tags
 		# like FIXME and TODO.
-		dprint_skip(w, "it is uppercase and followed by a hyphen");
+		dprint_skip(w, "it is uppercase and followed by a colon");
 
 	} else {
 		sub(/^#[ \t]*/, "", w);
 		sub(/(:|\?=|=)$/, "", w);
-		sub(/:$/, "", w);
+		sub(/[,:]$/, "", w);
 		if (w != "") {
 			if (debug) dprint("Adding keyword \"" w "\"");
 			keywords[w] = yes;
