@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/07/10 19:45:24 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/08/04 11:31:38 adam Exp $
 
-SHA1 (PyPika-0.37.16.tar.gz) = 3ea0e836e6169851e3e31f55b1d96e5246db73c1
-RMD160 (PyPika-0.37.16.tar.gz) = 8d3bb4e8351ec23a1f5dc3873d01c82370a00392
-SHA512 (PyPika-0.37.16.tar.gz) = 64f4f2b99bf72f3954f9fdcf40de382d6c6cd6a5167de5c224fe8704ed4b65b43ac4f040879fbe23b16c834f245d00abc963d745a1313ab05aee1dcb4ef38dab
-Size (PyPika-0.37.16.tar.gz) = 54524 bytes
+SHA1 (PyPika-0.38.0.tar.gz) = c1f5c00f958f0384a593312393447466420fe2a2
+RMD160 (PyPika-0.38.0.tar.gz) = 494f3f8f52bd060b039454e763569b296d36ab6a
+SHA512 (PyPika-0.38.0.tar.gz) = 5cfd42664eaee9bfed54fb7e4397c0a6253666f21a170ea58723957db60b6e4e6a0888ccaf5d9ef48105dace851541db681dc809f1b8daa2554d9a5df4c6948c
+Size (PyPika-0.38.0.tar.gz) = 54325 bytes
