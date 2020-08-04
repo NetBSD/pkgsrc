@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/04 00:31:23 joerg Exp $
+
+SHA1 (django-phnumber-field-4.0.0.tar.gz) = eb32b5b35c6e4e326900bd5d9cfb8dfb59028eee
+RMD160 (django-phnumber-field-4.0.0.tar.gz) = 4cbdd2cff75316808045b0f84d2c3825bbeffbed
+SHA512 (django-phnumber-field-4.0.0.tar.gz) = 0b6a621ff3aa241aeca4eae5eb22f742ddace15d32602161c0829d58dd47c830ea2e351e46f45dda8a80d4bef58324353990eb42aab58e54a5f4457510eb68a0
+Size (django-phnumber-field-4.0.0.tar.gz) = 22016 bytes
