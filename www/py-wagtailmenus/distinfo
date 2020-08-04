@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/04 01:09:08 joerg Exp $
+
+SHA1 (wagtailmenus-3.0.2.tar.gz) = 2530ec68d1f97d809a8bb978772ddcc1e06bf5cb
+RMD160 (wagtailmenus-3.0.2.tar.gz) = d95bc54eb250e81bd853d478f167a29b91becd56
+SHA512 (wagtailmenus-3.0.2.tar.gz) = 3d6d157cb451c2f520d93f1ef3e48bd36ef37233dfb177989474799c8cea895be39f2609e96cf68faa3b60ff8a276a1bd876420ea24f08f16cf5fabd19e01c71
+Size (wagtailmenus-3.0.2.tar.gz) = 2462087 bytes
