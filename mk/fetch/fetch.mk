@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.74 2020/06/18 17:05:55 wiz Exp $
+# $NetBSD: fetch.mk,v 1.75 2020/08/04 21:54:46 rillig Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -208,6 +208,7 @@ fetch-check-interactive: .USEBEFORE
 # FETCH_USE_IPV4_ONLY, if defined, will cause the fetch command to force
 #	connecting to only IPv4 addresses.
 #
+# Keywords: ip4 ipv4 ip6 ipv6
 
 .if defined(FETCH_PROXY)
 FETCH_PROXY.ftp?=	${FETCH_PROXY}
