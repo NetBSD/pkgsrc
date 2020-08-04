@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4282 2020/08/04 01:10:38 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.4283 2020/08/04 01:16:25 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6755,3 +6755,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/py-django-cogwheels version 0.3 [joerg 2020-08-04]
 	Added www/py-wagtailmenus version 3.0.2 [joerg 2020-08-04]
 	Added www/py-wagtail version 2.9.3 [joerg 2020-08-04]
+	Added www/py-django-binary-database-file version 1.0.10 [joerg 2020-08-04]
