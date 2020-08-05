@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4298 2020/08/05 19:59:50 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.4299 2020/08/05 21:49:34 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6780,3 +6780,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/py-mutagen to 1.43.1 [adam 2020-08-05]
 	Updated audio/picard to 2.3.2 [adam 2020-08-05]
 	Updated graphics/inkscape to 1.0nb5 [kamil 2020-08-05]
+	Updated lang/nodejs to 14.7.0nb1 [maya 2020-08-05]
