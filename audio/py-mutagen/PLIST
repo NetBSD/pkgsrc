@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.13 2017/06/20 12:38:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/08/05 16:33:52 adam Exp $
 bin/mid3cp
 bin/mid3iconv
 bin/mid3v2
 bin/moggsplit
 bin/mutagen-inspect
 bin/mutagen-pony
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mutagen/__init__.py
 ${PYSITELIB}/mutagen/__init__.pyc
 ${PYSITELIB}/mutagen/__init__.pyo
@@ -84,6 +88,9 @@ ${PYSITELIB}/mutagen/_vorbis.pyo
 ${PYSITELIB}/mutagen/aac.py
 ${PYSITELIB}/mutagen/aac.pyc
 ${PYSITELIB}/mutagen/aac.pyo
+${PYSITELIB}/mutagen/ac3.py
+${PYSITELIB}/mutagen/ac3.pyc
+${PYSITELIB}/mutagen/ac3.pyo
 ${PYSITELIB}/mutagen/aiff.py
 ${PYSITELIB}/mutagen/aiff.pyc
 ${PYSITELIB}/mutagen/aiff.pyo
@@ -186,6 +193,9 @@ ${PYSITELIB}/mutagen/optimfrog.pyo
 ${PYSITELIB}/mutagen/smf.py
 ${PYSITELIB}/mutagen/smf.pyc
 ${PYSITELIB}/mutagen/smf.pyo
+${PYSITELIB}/mutagen/tak.py
+${PYSITELIB}/mutagen/tak.pyc
+${PYSITELIB}/mutagen/tak.pyo
 ${PYSITELIB}/mutagen/trueaudio.py
 ${PYSITELIB}/mutagen/trueaudio.pyc
 ${PYSITELIB}/mutagen/trueaudio.pyo
