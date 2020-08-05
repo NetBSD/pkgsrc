@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4292 2020/08/05 06:48:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4293 2020/08/05 13:55:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6769,3 +6769,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-composer to 1.10.10 [tpaul 2020-08-05]
 	Updated www/py-hyperlink to 20.0.1 [adam 2020-08-05]
 	Updated misc/py-tqdm to 4.48.2 [adam 2020-08-05]
+	Added devel/py-iniconfig version 1.0.1 [adam 2020-08-05]
+	Updated devel/py-py to 1.9.0 [adam 2020-08-05]
