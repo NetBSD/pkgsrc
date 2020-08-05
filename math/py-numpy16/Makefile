@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/09 00:47:40 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/05 13:47:43 joerg Exp $
 
 DISTNAME=	numpy-1.16.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.numpy.org/
 COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
-# While this builds wtih 3, the package only exists to accomodate
-# things that requuire python2.7.
+# While this builds with 3, the package only exists to accomodate
+# things that require python2.7.
 PYTHON_VERSIONS_ACCEPTED=	27
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
