@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/08/03 21:34:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/08/05 06:24:32 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -927,6 +927,7 @@ ${PYSITELIB}/mercurial/revsetlang.pyo
 ${PYSITELIB}/mercurial/rewriteutil.py
 ${PYSITELIB}/mercurial/rewriteutil.pyc
 ${PYSITELIB}/mercurial/rewriteutil.pyo
+${PLIST.rust}${PYSITELIB}/mercurial/rustext.so
 ${PYSITELIB}/mercurial/scmposix.py
 ${PYSITELIB}/mercurial/scmposix.pyc
 ${PYSITELIB}/mercurial/scmposix.pyo
