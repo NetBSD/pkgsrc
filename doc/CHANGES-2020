@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4297 2020/08/05 16:34:50 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4298 2020/08/05 19:59:50 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6779,3 +6779,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mysql57-server to 5.7.31 [adam 2020-08-05]
 	Updated audio/py-mutagen to 1.43.1 [adam 2020-08-05]
 	Updated audio/picard to 2.3.2 [adam 2020-08-05]
+	Updated graphics/inkscape to 1.0nb5 [kamil 2020-08-05]
