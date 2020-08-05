@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2020/06/02 19:42:26 adam Exp $
+# $NetBSD: Makefile,v 1.92 2020/08/05 14:09:30 adam Exp $
 
-DISTNAME=	pytest-5.4.3
+DISTNAME=	pytest-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -12,11 +12,12 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-iniconfig-[0-9]*:../../devel/py-iniconfig
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=4.0.0:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12:../../devel/py-pluggy
-DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
-DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
+DEPENDS+=	${PYPKGPREFIX}-py>=1.8.2:../../devel/py-py
+DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.56:../../devel/py-hypothesis
