@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4291 2020/08/05 01:27:20 tpaul Exp $
+$NetBSD: CHANGES-2020,v 1.4292 2020/08/05 06:48:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6767,3 +6767,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/xfce4-timer-plugin to 1.7.1 [gutteridge 2020-08-05]
 	Updated x11/xfce4-whiskermenu-plugin to 2.4.6 [gutteridge 2020-08-05]
 	Updated devel/php-composer to 1.10.10 [tpaul 2020-08-05]
+	Updated www/py-hyperlink to 20.0.1 [adam 2020-08-05]
+	Updated misc/py-tqdm to 4.48.2 [adam 2020-08-05]
