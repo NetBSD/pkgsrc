@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2020/05/16 09:03:23 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/05 16:33:52 adam Exp $
 
-DISTNAME=	mutagen-1.40.0
+DISTNAME=	mutagen-1.43.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mutagen/}
@@ -16,12 +16,14 @@ PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
 
+PYTHON_SELF_CONFLICT=	yes
+
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_MESSAGE.manpath=	Fixing man paths.
 SUBST_FILES.manpath=	setup.py
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
