@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/05 12:31:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/08/05 06:46:02 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,9 +8,16 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/hyperlink/__init__.py
 ${PYSITELIB}/hyperlink/__init__.pyc
 ${PYSITELIB}/hyperlink/__init__.pyo
+${PYSITELIB}/hyperlink/_socket.py
+${PYSITELIB}/hyperlink/_socket.pyc
+${PYSITELIB}/hyperlink/_socket.pyo
 ${PYSITELIB}/hyperlink/_url.py
 ${PYSITELIB}/hyperlink/_url.pyc
 ${PYSITELIB}/hyperlink/_url.pyo
+${PYSITELIB}/hyperlink/hypothesis.py
+${PYSITELIB}/hyperlink/hypothesis.pyc
+${PYSITELIB}/hyperlink/hypothesis.pyo
+${PYSITELIB}/hyperlink/py.typed
 ${PYSITELIB}/hyperlink/test/__init__.py
 ${PYSITELIB}/hyperlink/test/__init__.pyc
 ${PYSITELIB}/hyperlink/test/__init__.pyo
@@ -23,12 +30,18 @@ ${PYSITELIB}/hyperlink/test/test_common.pyo
 ${PYSITELIB}/hyperlink/test/test_decoded_url.py
 ${PYSITELIB}/hyperlink/test/test_decoded_url.pyc
 ${PYSITELIB}/hyperlink/test/test_decoded_url.pyo
+${PYSITELIB}/hyperlink/test/test_hypothesis.py
+${PYSITELIB}/hyperlink/test/test_hypothesis.pyc
+${PYSITELIB}/hyperlink/test/test_hypothesis.pyo
 ${PYSITELIB}/hyperlink/test/test_parse.py
 ${PYSITELIB}/hyperlink/test/test_parse.pyc
 ${PYSITELIB}/hyperlink/test/test_parse.pyo
 ${PYSITELIB}/hyperlink/test/test_scheme_registration.py
 ${PYSITELIB}/hyperlink/test/test_scheme_registration.pyc
 ${PYSITELIB}/hyperlink/test/test_scheme_registration.pyo
+${PYSITELIB}/hyperlink/test/test_socket.py
+${PYSITELIB}/hyperlink/test/test_socket.pyc
+${PYSITELIB}/hyperlink/test/test_socket.pyo
 ${PYSITELIB}/hyperlink/test/test_url.py
 ${PYSITELIB}/hyperlink/test/test_url.pyc
 ${PYSITELIB}/hyperlink/test/test_url.pyo
