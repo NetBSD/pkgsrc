@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/05/07 05:31:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/08/05 16:12:11 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -1596,6 +1596,7 @@ share/mysql/test/r/mysqldump-compat.result
 share/mysql/test/r/mysqldump-max.result
 share/mysql/test/r/mysqldump-no-binlog.result
 share/mysql/test/r/mysqldump.result
+share/mysql/test/r/mysqldump_bug29998457.result
 share/mysql/test/r/mysqldump_restore.result
 share/mysql/test/r/mysqldumpslow.result
 share/mysql/test/r/mysqlimport.result
@@ -2590,6 +2591,7 @@ share/mysql/test/suite/binlog/r/binlog_wait_for_executed_gtid_set_invalid_input.
 share/mysql/test/suite/binlog/r/binlog_wait_for_executed_gtid_set_no_gtid.result
 share/mysql/test/suite/binlog/r/binlog_wait_for_executed_gtid_set_unsafe_statement.result
 share/mysql/test/suite/binlog/r/binlog_write_error.result
+share/mysql/test/suite/binlog/r/binlog_writeset_history_protection.result
 share/mysql/test/suite/binlog/r/binlog_wrong_last_committed.result
 share/mysql/test/suite/binlog/r/binlog_xa_handling.result
 share/mysql/test/suite/binlog/r/binlog_xa_modify_gtid_executed_explicitly.result
@@ -2818,6 +2820,7 @@ share/mysql/test/suite/binlog/t/binlog_wait_for_executed_gtid_set_invalid_input.
 share/mysql/test/suite/binlog/t/binlog_wait_for_executed_gtid_set_no_gtid.test
 share/mysql/test/suite/binlog/t/binlog_wait_for_executed_gtid_set_unsafe_statement.test
 share/mysql/test/suite/binlog/t/binlog_write_error.test
+share/mysql/test/suite/binlog/t/binlog_writeset_history_protection.test
 share/mysql/test/suite/binlog/t/binlog_wrong_last_committed.test
 share/mysql/test/suite/binlog/t/binlog_xa_handling.test
 share/mysql/test/suite/binlog/t/binlog_xa_modify_gtid_executed_explicitly.test
@@ -4526,6 +4529,7 @@ share/mysql/test/suite/group_replication/r/gr_startup_verifications_not_gtid.res
 share/mysql/test/suite/group_replication/r/gr_startup_verifications_not_log_slave_updates.result
 share/mysql/test/suite/group_replication/r/gr_startup_verifications_not_table_repositories.result
 share/mysql/test/suite/group_replication/r/gr_stop_async_on_stop_gr.result
+share/mysql/test/suite/group_replication/r/gr_stop_during_pfs.result
 share/mysql/test/suite/group_replication/r/gr_stop_gr_during_dml_01.result
 share/mysql/test/suite/group_replication/r/gr_stop_gr_during_dml_02.result
 share/mysql/test/suite/group_replication/r/gr_stop_procedure_hang.result
@@ -5032,6 +5036,7 @@ share/mysql/test/suite/group_replication/t/gr_startup_verifications_not_table_re
 share/mysql/test/suite/group_replication/t/gr_startup_verifications_not_table_repositories.test
 share/mysql/test/suite/group_replication/t/gr_stop_async_on_stop_gr-master.opt
 share/mysql/test/suite/group_replication/t/gr_stop_async_on_stop_gr.test
+share/mysql/test/suite/group_replication/t/gr_stop_during_pfs.test
 share/mysql/test/suite/group_replication/t/gr_stop_gr_during_dml_01.cnf
 share/mysql/test/suite/group_replication/t/gr_stop_gr_during_dml_01.test
 share/mysql/test/suite/group_replication/t/gr_stop_gr_during_dml_02.cnf
@@ -9732,6 +9737,7 @@ share/mysql/test/suite/rpl/r/rpl_gtid_delete_memory_table_after_start_server.res
 share/mysql/test/suite/rpl/r/rpl_gtid_deleted_binlog_fail_to_connect.result
 share/mysql/test/suite/rpl/r/rpl_gtid_do_table_filter_insensitive.result
 share/mysql/test/suite/rpl/r/rpl_gtid_do_table_filter_sensitive.result
+share/mysql/test/suite/rpl/r/rpl_gtid_drop_mem_table.result
 share/mysql/test/suite/rpl/r/rpl_gtid_drop_table.result
 share/mysql/test/suite/rpl/r/rpl_gtid_dump_error.result
 share/mysql/test/suite/rpl/r/rpl_gtid_empty_transaction.result
@@ -10453,6 +10459,8 @@ share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_insensitive-slave.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_insensitive.test
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_sensitive-slave.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_sensitive.test
+share/mysql/test/suite/rpl/t/rpl_gtid_drop_mem_table.cnf
+share/mysql/test/suite/rpl/t/rpl_gtid_drop_mem_table.test
 share/mysql/test/suite/rpl/t/rpl_gtid_drop_table.cnf
 share/mysql/test/suite/rpl/t/rpl_gtid_drop_table.test
 share/mysql/test/suite/rpl/t/rpl_gtid_dump_error.test
@@ -12810,6 +12818,7 @@ share/mysql/test/suite/sys_vars/t/tmpdir_basic.test
 share/mysql/test/suite/sys_vars/t/transaction_alloc_block_size_basic.test
 share/mysql/test/suite/sys_vars/t/transaction_allow_batching_basic.test
 share/mysql/test/suite/sys_vars/t/transaction_isolation_basic.test
+share/mysql/test/suite/sys_vars/t/transaction_isolation_func-master.opt
 share/mysql/test/suite/sys_vars/t/transaction_isolation_func.test
 share/mysql/test/suite/sys_vars/t/transaction_prealloc_size_basic.test
 share/mysql/test/suite/sys_vars/t/transaction_read_only_basic.test
@@ -14113,6 +14122,7 @@ share/mysql/test/t/mysqldump-max.test
 share/mysql/test/t/mysqldump-no-binlog-master.opt
 share/mysql/test/t/mysqldump-no-binlog.test
 share/mysql/test/t/mysqldump.test
+share/mysql/test/t/mysqldump_bug29998457.test
 share/mysql/test/t/mysqldump_restore.test
 share/mysql/test/t/mysqldumpslow.test
 share/mysql/test/t/mysqlimport.test
