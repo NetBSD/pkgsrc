@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/07/03 07:12:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/08/05 13:55:02 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,7 @@ ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/py/__init__.py
 ${PYSITELIB}/py/__init__.pyc
+${PYSITELIB}/py/__init__.pyi
 ${PYSITELIB}/py/__init__.pyo
 ${PYSITELIB}/py/__metainfo.py
 ${PYSITELIB}/py/__metainfo.pyc
@@ -94,9 +95,23 @@ ${PYSITELIB}/py/_std.pyo
 ${PYSITELIB}/py/_vendored_packages/__init__.py
 ${PYSITELIB}/py/_vendored_packages/__init__.pyc
 ${PYSITELIB}/py/_vendored_packages/__init__.pyo
+${PYSITELIB}/py/_vendored_packages/apipkg-1.4.dist-info/DESCRIPTION.rst
+${PYSITELIB}/py/_vendored_packages/apipkg-1.4.dist-info/INSTALLER
+${PYSITELIB}/py/_vendored_packages/apipkg-1.4.dist-info/METADATA
+${PYSITELIB}/py/_vendored_packages/apipkg-1.4.dist-info/RECORD
+${PYSITELIB}/py/_vendored_packages/apipkg-1.4.dist-info/WHEEL
+${PYSITELIB}/py/_vendored_packages/apipkg-1.4.dist-info/metadata.json
+${PYSITELIB}/py/_vendored_packages/apipkg-1.4.dist-info/top_level.txt
 ${PYSITELIB}/py/_vendored_packages/apipkg.py
 ${PYSITELIB}/py/_vendored_packages/apipkg.pyc
 ${PYSITELIB}/py/_vendored_packages/apipkg.pyo
+${PYSITELIB}/py/_vendored_packages/iniconfig-1.0.0.dist-info/DESCRIPTION.rst
+${PYSITELIB}/py/_vendored_packages/iniconfig-1.0.0.dist-info/INSTALLER
+${PYSITELIB}/py/_vendored_packages/iniconfig-1.0.0.dist-info/METADATA
+${PYSITELIB}/py/_vendored_packages/iniconfig-1.0.0.dist-info/RECORD
+${PYSITELIB}/py/_vendored_packages/iniconfig-1.0.0.dist-info/WHEEL
+${PYSITELIB}/py/_vendored_packages/iniconfig-1.0.0.dist-info/metadata.json
+${PYSITELIB}/py/_vendored_packages/iniconfig-1.0.0.dist-info/top_level.txt
 ${PYSITELIB}/py/_vendored_packages/iniconfig.py
 ${PYSITELIB}/py/_vendored_packages/iniconfig.pyc
 ${PYSITELIB}/py/_vendored_packages/iniconfig.pyo
@@ -106,6 +121,12 @@ ${PYSITELIB}/py/_version.pyo
 ${PYSITELIB}/py/_xmlgen.py
 ${PYSITELIB}/py/_xmlgen.pyc
 ${PYSITELIB}/py/_xmlgen.pyo
+${PYSITELIB}/py/error.pyi
+${PYSITELIB}/py/iniconfig.pyi
+${PYSITELIB}/py/io.pyi
+${PYSITELIB}/py/path.pyi
+${PYSITELIB}/py/py.typed
 ${PYSITELIB}/py/test.py
 ${PYSITELIB}/py/test.pyc
 ${PYSITELIB}/py/test.pyo
+${PYSITELIB}/py/xml.pyi
