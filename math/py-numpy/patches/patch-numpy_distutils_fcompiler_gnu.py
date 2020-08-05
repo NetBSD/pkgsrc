@@ -1,4 +1,4 @@
-$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.16 2020/04/27 19:38:23 adam Exp $
+$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.17 2020/08/05 14:05:46 adam Exp $
 
 Linker needs -shared explictly (at least with GCC 4.7 on SunOS), plus
 any ABI flags as appropriate.
@@ -7,9 +7,9 @@ On Darwin, do not use '-bundle' (to avoid Python.framework).
 Do not use -funroll-loops compiler flag.
 Do not run a shell command when it is "None".
 
---- numpy/distutils/fcompiler/gnu.py.orig	2018-04-23 16:28:56.000000000 +0000
+--- numpy/distutils/fcompiler/gnu.py.orig	2020-07-10 04:52:40.000000000 +0000
 +++ numpy/distutils/fcompiler/gnu.py
-@@ -63,8 +63,10 @@ class GnuFCompiler(FCompiler):
+@@ -60,8 +60,10 @@ class GnuFCompiler(FCompiler):
                      return ('gfortran', m.group(1))
          else:
              # Output probably from --version, try harder:
@@ -21,7 +21,7 @@ Do not run a shell command when it is "None".
                  return ('gfortran', m.group(1))
              m = re.search(
                  r'GNU Fortran.*?\-?([0-9-.]+\.[0-9-.]+)', version_string)
-@@ -91,13 +93,13 @@ class GnuFCompiler(FCompiler):
+@@ -88,13 +90,13 @@ class GnuFCompiler(FCompiler):
      possible_executables = ['g77', 'f77']
      executables = {
          'version_cmd'  : [None, "-dumpversion"],
@@ -38,16 +38,16 @@ Do not run a shell command when it is "None".
      }
      module_dir_switch = None
      module_include_switch = None
-@@ -146,7 +148,7 @@ class GnuFCompiler(FCompiler):
-                     s = 'Env. variable MACOSX_DEPLOYMENT_TARGET set to 10.3'
+@@ -134,7 +136,7 @@ class GnuFCompiler(FCompiler):
+                     s = f'Env. variable MACOSX_DEPLOYMENT_TARGET set to {target}'
                      warnings.warn(s, stacklevel=2)
- 
+                 os.environ['MACOSX_DEPLOYMENT_TARGET'] = target
 -            opt.extend(['-undefined', 'dynamic_lookup', '-bundle'])
 +            opt.extend(['-undefined', 'dynamic_lookup'])
          else:
              opt.append("-shared")
          if sys.platform.startswith('sunos'):
-@@ -237,7 +239,6 @@ class GnuFCompiler(FCompiler):
+@@ -233,7 +235,6 @@ class GnuFCompiler(FCompiler):
              opt = ['-O2']
          else:
              opt = ['-O3']
@@ -55,7 +55,7 @@ Do not run a shell command when it is "None".
          return opt
  
      def _c_arch_flags(self):
-@@ -288,13 +289,13 @@ class Gnu95FCompiler(GnuFCompiler):
+@@ -296,13 +297,13 @@ class Gnu95FCompiler(GnuFCompiler):
      possible_executables = ['gfortran', 'f95']
      executables = {
          'version_cmd'  : ["<F90>", "-dumpversion"],
@@ -73,7 +73,7 @@ Do not run a shell command when it is "None".
          'archiver'     : ["ar", "-cr"],
          'ranlib'       : ["ranlib"],
          'linker_exe'   : [None, "-Wall"]
-@@ -307,7 +308,7 @@ class Gnu95FCompiler(GnuFCompiler):
+@@ -321,7 +322,7 @@ class Gnu95FCompiler(GnuFCompiler):
  
      def _universal_flags(self, cmd):
          """Return a list of -arch flags for every supported architecture."""
