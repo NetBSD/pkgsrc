@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4288 2020/08/04 19:09:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4289 2020/08/05 00:07:52 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6764,3 +6764,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-ncclient to 0.6.8 [adam 2020-08-04]
 	Updated fonts/py-fonttools to 4.13.0 [adam 2020-08-04]
 	Updated devel/py-dotenv to 0.14.0 [adam 2020-08-04]
+	Updated time/xfce4-timer-plugin to 1.7.1 [gutteridge 2020-08-05]
