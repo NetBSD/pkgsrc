@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2020/07/07 20:18:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2020/08/05 14:38:33 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -346,6 +346,7 @@ share/mysql/test/include/allowed_ciphers.inc
 share/mysql/test/include/analyze-sync_with_master.test
 share/mysql/test/include/analyze-timeout.test
 share/mysql/test/include/assert.inc
+share/mysql/test/include/assert_binlog_events.inc
 share/mysql/test/include/assert_command_output.inc
 share/mysql/test/include/assert_grep.inc
 share/mysql/test/include/begin_include_file.inc
@@ -700,6 +701,7 @@ share/mysql/test/include/rpl_sync.inc
 share/mysql/test/include/rpl_udf.inc
 share/mysql/test/include/running_event_scheduler.inc
 share/mysql/test/include/safe_set_to_maybe_ro_var.inc
+share/mysql/test/include/save_binlog_position.inc
 share/mysql/test/include/save_io_thread_pos.inc
 share/mysql/test/include/save_master_pos.inc
 share/mysql/test/include/search_pattern.inc
@@ -6472,9 +6474,11 @@ share/mysql/test/suite/rpl/r/rpl_grant_plugin.result
 share/mysql/test/suite/rpl/r/rpl_group_commit_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_gtid_binary_log_as_relay_log.result
 share/mysql/test/suite/rpl/r/rpl_gtid_binlog_errors.result
+share/mysql/test/suite/rpl/r/rpl_gtid_delete_memory_table_after_start_server.result
 share/mysql/test/suite/rpl/r/rpl_gtid_deleted_binlog_fail_to_connect.result
 share/mysql/test/suite/rpl/r/rpl_gtid_do_table_filter_insensitive.result
 share/mysql/test/suite/rpl/r/rpl_gtid_do_table_filter_sensitive.result
+share/mysql/test/suite/rpl/r/rpl_gtid_drop_mem_table.result
 share/mysql/test/suite/rpl/r/rpl_gtid_drop_table.result
 share/mysql/test/suite/rpl/r/rpl_gtid_empty_transaction.result
 share/mysql/test/suite/rpl/r/rpl_gtid_execution.result
@@ -6584,6 +6588,7 @@ share/mysql/test/suite/rpl/r/rpl_multi_update4.result
 share/mysql/test/suite/rpl/r/rpl_mysql_upgrade.result
 share/mysql/test/suite/rpl/r/rpl_mysqlbinlog_gtid_on.result
 share/mysql/test/suite/rpl/r/rpl_name_const.result
+share/mysql/test/suite/rpl/r/rpl_no_gtid_delete_memory_table_after_start_server.result
 share/mysql/test/suite/rpl/r/rpl_non_direct_mixed_mixing_engines.result
 share/mysql/test/suite/rpl/r/rpl_non_direct_row_mixing_engines.result
 share/mysql/test/suite/rpl/r/rpl_non_direct_stm_mixing_engines.result
@@ -7005,12 +7010,15 @@ share/mysql/test/suite/rpl/t/rpl_group_commit_deadlock.test
 share/mysql/test/suite/rpl/t/rpl_gtid_binary_log_as_relay_log.test
 share/mysql/test/suite/rpl/t/rpl_gtid_binlog_errors-master.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_binlog_errors.test
+share/mysql/test/suite/rpl/t/rpl_gtid_delete_memory_table_after_start_server.test
 share/mysql/test/suite/rpl/t/rpl_gtid_deleted_binlog_fail_to_connect.test
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_insensitive-master.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_insensitive-slave.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_insensitive.test
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_sensitive-slave.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_sensitive.test
+share/mysql/test/suite/rpl/t/rpl_gtid_drop_mem_table.cnf
+share/mysql/test/suite/rpl/t/rpl_gtid_drop_mem_table.test
 share/mysql/test/suite/rpl/t/rpl_gtid_drop_table.cnf
 share/mysql/test/suite/rpl/t/rpl_gtid_drop_table.test
 share/mysql/test/suite/rpl/t/rpl_gtid_empty_transaction.cnf
@@ -7196,6 +7204,7 @@ share/mysql/test/suite/rpl/t/rpl_multi_update4.test
 share/mysql/test/suite/rpl/t/rpl_mysql_upgrade.test
 share/mysql/test/suite/rpl/t/rpl_mysqlbinlog_gtid_on.test
 share/mysql/test/suite/rpl/t/rpl_name_const.test
+share/mysql/test/suite/rpl/t/rpl_no_gtid_delete_memory_table_after_start_server.test
 share/mysql/test/suite/rpl/t/rpl_non_direct_mixed_mixing_engines.test
 share/mysql/test/suite/rpl/t/rpl_non_direct_row_mixing_engines.test
 share/mysql/test/suite/rpl/t/rpl_non_direct_stm_mixing_engines.test
