@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2020/01/03 12:33:19 adam Exp $
+$NetBSD: distinfo,v 1.19 2020/08/05 13:55:02 adam Exp $
 
-SHA1 (py-1.8.1.tar.gz) = b3acb8d29944773f78a4d7cdb1269b2460f226af
-RMD160 (py-1.8.1.tar.gz) = 4c42071e3b8a18d5fdabeb6555307a8f39b8e8fd
-SHA512 (py-1.8.1.tar.gz) = ba18fc5cc7a291c251f04e8565a35e94603eae718aad48252821f9d3b115a7cca4e640ea54d800eb71ec8ce345052d731fec9a115778b068526f394c5c45fb2a
-Size (py-1.8.1.tar.gz) = 205568 bytes
+SHA1 (py-1.9.0.tar.gz) = 8cbe522347596ffc292fd9b1ceaa4564a551ac76
+RMD160 (py-1.9.0.tar.gz) = c18799a8822a4edd8bef3a32fb55a94c55a67da6
+SHA512 (py-1.9.0.tar.gz) = 965b2adfe1b13177629ccfcdf6d0a13460683ca7a01d585163deb1af15d926fc86680d9e51660f6cbb8569f822a4d54ce281c029e363d244ddf67e33b102ad0a
+Size (py-1.9.0.tar.gz) = 210098 bytes
