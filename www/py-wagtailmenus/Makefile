@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/04 01:09:08 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/05 04:16:56 tnn Exp $
 
 DISTNAME=	wagtailmenus-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-django-cogwheels>=0.3:../../www/py-django-cogwheels
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_LANGUAGES=		# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-wagtail
 
 do-test:
 	cd ${WRKSRC} && ${PREFIX}/bin/coverage-${PYVERSSUFFIX} \
