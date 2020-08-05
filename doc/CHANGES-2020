@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4289 2020/08/05 00:07:52 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.4290 2020/08/05 00:09:03 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6765,3 +6765,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/py-fonttools to 4.13.0 [adam 2020-08-04]
 	Updated devel/py-dotenv to 0.14.0 [adam 2020-08-04]
 	Updated time/xfce4-timer-plugin to 1.7.1 [gutteridge 2020-08-05]
+	Updated x11/xfce4-whiskermenu-plugin to 2.4.6 [gutteridge 2020-08-05]
