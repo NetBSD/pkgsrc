@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2020/06/11 08:13:28 adam Exp $
+# $NetBSD: Makefile,v 1.68 2020/08/05 14:05:45 adam Exp $
 
-DISTNAME=	numpy-1.18.5
+DISTNAME=	numpy-1.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.numpy.org/
 COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
