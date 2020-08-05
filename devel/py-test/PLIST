@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/05/16 08:00:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/08/05 14:09:30 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -29,6 +29,12 @@ ${PYSITELIB}/_pytest/_io/__init__.pyo
 ${PYSITELIB}/_pytest/_io/saferepr.py
 ${PYSITELIB}/_pytest/_io/saferepr.pyc
 ${PYSITELIB}/_pytest/_io/saferepr.pyo
+${PYSITELIB}/_pytest/_io/terminalwriter.py
+${PYSITELIB}/_pytest/_io/terminalwriter.pyc
+${PYSITELIB}/_pytest/_io/terminalwriter.pyo
+${PYSITELIB}/_pytest/_io/wcwidth.py
+${PYSITELIB}/_pytest/_io/wcwidth.pyc
+${PYSITELIB}/_pytest/_io/wcwidth.pyo
 ${PYSITELIB}/_pytest/_version.py
 ${PYSITELIB}/_pytest/_version.pyc
 ${PYSITELIB}/_pytest/_version.pyo
@@ -101,12 +107,9 @@ ${PYSITELIB}/_pytest/main.pyo
 ${PYSITELIB}/_pytest/mark/__init__.py
 ${PYSITELIB}/_pytest/mark/__init__.pyc
 ${PYSITELIB}/_pytest/mark/__init__.pyo
-${PYSITELIB}/_pytest/mark/evaluate.py
-${PYSITELIB}/_pytest/mark/evaluate.pyc
-${PYSITELIB}/_pytest/mark/evaluate.pyo
-${PYSITELIB}/_pytest/mark/legacy.py
-${PYSITELIB}/_pytest/mark/legacy.pyc
-${PYSITELIB}/_pytest/mark/legacy.pyo
+${PYSITELIB}/_pytest/mark/expression.py
+${PYSITELIB}/_pytest/mark/expression.pyc
+${PYSITELIB}/_pytest/mark/expression.pyo
 ${PYSITELIB}/_pytest/mark/structures.py
 ${PYSITELIB}/_pytest/mark/structures.pyc
 ${PYSITELIB}/_pytest/mark/structures.pyo
@@ -128,6 +131,7 @@ ${PYSITELIB}/_pytest/pastebin.pyo
 ${PYSITELIB}/_pytest/pathlib.py
 ${PYSITELIB}/_pytest/pathlib.pyc
 ${PYSITELIB}/_pytest/pathlib.pyo
+${PYSITELIB}/_pytest/py.typed
 ${PYSITELIB}/_pytest/pytester.py
 ${PYSITELIB}/_pytest/pytester.pyc
 ${PYSITELIB}/_pytest/pytester.pyo
@@ -167,6 +171,9 @@ ${PYSITELIB}/_pytest/store.pyo
 ${PYSITELIB}/_pytest/terminal.py
 ${PYSITELIB}/_pytest/terminal.pyc
 ${PYSITELIB}/_pytest/terminal.pyo
+${PYSITELIB}/_pytest/timing.py
+${PYSITELIB}/_pytest/timing.pyc
+${PYSITELIB}/_pytest/timing.pyo
 ${PYSITELIB}/_pytest/tmpdir.py
 ${PYSITELIB}/_pytest/tmpdir.pyc
 ${PYSITELIB}/_pytest/tmpdir.pyo
@@ -185,3 +192,7 @@ ${PYSITELIB}/pytest/__init__.pyo
 ${PYSITELIB}/pytest/__main__.py
 ${PYSITELIB}/pytest/__main__.pyc
 ${PYSITELIB}/pytest/__main__.pyo
+${PYSITELIB}/pytest/collect.py
+${PYSITELIB}/pytest/collect.pyc
+${PYSITELIB}/pytest/collect.pyo
+${PYSITELIB}/pytest/py.typed
