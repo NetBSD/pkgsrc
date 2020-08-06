@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.779 2020/07/17 06:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.780 2020/08/06 23:53:16 joerg Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -150,6 +150,7 @@ SUBDIR+=	ruby-rbpdf-font
 SUBDIR+=	scribus-qt4
 SUBDIR+=	scribus-qt5
 SUBDIR+=	seetexk
+SUBDIR+=	sile
 SUBDIR+=	stylewriter
 SUBDIR+=	tcl-pdflib
 SUBDIR+=	tex-2up
