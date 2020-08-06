@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3180 2020/08/06 23:08:56 joerg Exp $
+# $NetBSD: Makefile,v 1.3181 2020/08/06 23:18:14 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -895,6 +895,7 @@ SUBDIR+=	lua-stdlib
 SUBDIR+=	lua-system
 SUBDIR+=	lua-term
 SUBDIR+=	lua-thrift
+SUBDIR+=	lua-vstruct
 SUBDIR+=	lutok
 SUBDIR+=	lwp
 SUBDIR+=	lxqt-build-tools
