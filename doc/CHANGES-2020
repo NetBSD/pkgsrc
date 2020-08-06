@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4305 2020/08/06 14:27:21 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4306 2020/08/06 16:31:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6788,3 +6788,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added news/multimail version 0.52 [fcambus 2020-08-06]
 	Updated databases/py-pymysql to 0.10.0 [adam 2020-08-06]
 	Updated databases/py-sqlalchemy-utils to 0.36.8 [adam 2020-08-06]
+	Updated devel/re2 to 20200801 [adam 2020-08-06]
+	Updated devel/cre2 to 0.3.6 [adam 2020-08-06]
+	Updated net/dnsdist to 1.5.0 [adam 2020-08-06]
+	Updated textproc/freexl to 1.0.6 [adam 2020-08-06]
