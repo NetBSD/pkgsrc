@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/08/06 22:31:15 joerg Exp $
+${LUA_LDIR}/cosmo.lua
+${LUA_LDIR}/cosmo/fill.lua
+${LUA_LDIR}/cosmo/grammar.lua
