@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/08/06 23:52:49 joerg Exp $
+
+Shell portability
+
+--- configure.orig	2020-08-04 23:01:08.814748461 +0000
++++ configure
+@@ -14608,7 +14608,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-    test "x$HASLUAROCKS" == "xyes" || as_fn_error $? "luarocks is required" "$LINENO" 5
++    test "x$HASLUAROCKS" = "xyes" || as_fn_error $? "luarocks is required" "$LINENO" 5
+ 
+ fi
+ 
