@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/08/06 22:31:15 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/06 23:22:13 joerg Exp $
 
-DISTNAME=	lua-cosmoso-16.06.04
+DISTNAME=	lua-cosmo-16.06.04
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
 CATEGORIES=	textproc lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mascarenhas/}
