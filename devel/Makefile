@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3178 2020/08/06 22:47:32 joerg Exp $
+# $NetBSD: Makefile,v 1.3179 2020/08/06 22:57:21 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -860,6 +860,7 @@ SUBDIR+=	lua-compat53
 SUBDIR+=	lua-cov
 SUBDIR+=	lua-coxpcall
 SUBDIR+=	lua-cqueues
+SUBDIR+=	lua-epnf
 SUBDIR+=	lua-event
 SUBDIR+=	lua-fifo
 SUBDIR+=	lua-filesystem
