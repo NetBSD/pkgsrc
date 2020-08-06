@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4306 2020/08/06 16:31:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4307 2020/08/06 23:37:54 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6792,3 +6792,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cre2 to 0.3.6 [adam 2020-08-06]
 	Updated net/dnsdist to 1.5.0 [adam 2020-08-06]
 	Updated textproc/freexl to 1.0.6 [adam 2020-08-06]
+	Added textproc/lua-cosmo version 16.06.04 [joerg 2020-08-06]
+	Added devel/lua-linenoise version 0.9 [joerg 2020-08-06]
+	Added devel/lua-epnf version 0.3 [joerg 2020-08-06]
+	Added devel/lua-repl version 0.9 [joerg 2020-08-06]
+	Added devel/lua-vstruct version 2.1.1 [joerg 2020-08-06]
+	Added math/lua-cassowary version 2.2 [joerg 2020-08-06]
