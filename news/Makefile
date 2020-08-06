@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/07/17 16:20:43 leot Exp $
+# $NetBSD: Makefile,v 1.45 2020/08/06 12:51:40 fcambus Exp $
 #
 
 COMMENT=	Network news
@@ -14,6 +14,7 @@ SUBDIR+=	knews
 SUBDIR+=	leafnode
 SUBDIR+=	libcanlock
 SUBDIR+=	lottanzb
+SUBDIR+=	multimail
 SUBDIR+=	newsbeuter
 SUBDIR+=	newsfetch
 SUBDIR+=	newsx
