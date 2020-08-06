@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/06 12:50:28 fcambus Exp $
+
+SHA1 (mmail-0.52.tar.gz) = 6a0e2d9ed1bdf1c00afae15f008a7f7e4850b0fa
+RMD160 (mmail-0.52.tar.gz) = b518caf178399540b0384bbc54aae0fa0bf172d5
+SHA512 (mmail-0.52.tar.gz) = 2e0b834db289ec94d893deb0250dcc44e826ca7cbf28c6e39b23c3ac9a008e7f5da6a584d0f32547ca057c5ae44c3d84bbe0833bb1b8bb6df4f652174ee139b4
+Size (mmail-0.52.tar.gz) = 221721 bytes
