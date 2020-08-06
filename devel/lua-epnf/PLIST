@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/08/06 22:56:52 joerg Exp $
+${LUA_LDIR}/epnf.lua
