@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1162 2020/08/02 03:15:35 tnn Exp $
+# $NetBSD: Makefile,v 1.1163 2020/08/06 22:31:25 joerg Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -461,6 +461,7 @@ SUBDIR+=	lowdown
 SUBDIR+=	lq-sp
 SUBDIR+=	lua-cjson
 SUBDIR+=	lua-cmark
+SUBDIR+=	lua-cosmo
 SUBDIR+=	lua-dkjson
 SUBDIR+=	lua-etlua
 SUBDIR+=	lua-expat
