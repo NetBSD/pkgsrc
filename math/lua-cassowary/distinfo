@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/06 23:36:51 joerg Exp $
+
+SHA1 (cassowary-2.2.tar.gz) = bcfb1ba764bc9c2a1753520bd3759f306ae535df
+RMD160 (cassowary-2.2.tar.gz) = d415f6aa387fa712f1887cec0caa8982a751a7d5
+SHA512 (cassowary-2.2.tar.gz) = cfbc2475014a7959dbae98be1b94f61c9e859e9d09110d9405fa13e398472738900d0a80a50b80be9d2e2b23a63ad1af65071c36f8ef82a9f6bc6a8fa97ca94a
+Size (cassowary-2.2.tar.gz) = 15570 bytes
