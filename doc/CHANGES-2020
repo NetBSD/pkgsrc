@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4300 2020/08/06 00:25:17 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.4301 2020/08/06 11:09:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6782,3 +6782,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/inkscape to 1.0nb5 [kamil 2020-08-05]
 	Updated lang/nodejs to 14.7.0nb1 [maya 2020-08-05]
 	Updated devel/p5-File-Path to 2.17 [gutteridge 2020-08-06]
+	Added fonts/montserrat version 7.210 [pin 2020-08-06]
