@@ -1,0 +1,1 @@
+bin/luarep @PREFIX@/bin/luarep-@LUADOTVER@

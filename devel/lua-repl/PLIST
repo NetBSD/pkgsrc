@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2020/08/06 23:08:29 joerg Exp $
+bin/luarep-${LUADOTVER}
+${LUA_LDIR}/repl/compat.lua
+${LUA_LDIR}/repl/console.lua
+${LUA_LDIR}/repl/init.lua
+${LUA_LDIR}/repl/plugins/autoreturn.lua
+${LUA_LDIR}/repl/plugins/completion.lua
+${LUA_LDIR}/repl/plugins/example.lua
+${LUA_LDIR}/repl/plugins/filename_completion.lua
+${LUA_LDIR}/repl/plugins/history.lua
+${LUA_LDIR}/repl/plugins/keep_last_eval.lua
+${LUA_LDIR}/repl/plugins/linenoise.lua
+${LUA_LDIR}/repl/plugins/pretty_print.lua
+${LUA_LDIR}/repl/plugins/rcfile.lua
+${LUA_LDIR}/repl/plugins/rlwrap.lua
+${LUA_LDIR}/repl/plugins/semicolon_suppress_output.lua
+${LUA_LDIR}/repl/sync.lua
+${LUA_LDIR}/repl/utils.lua
