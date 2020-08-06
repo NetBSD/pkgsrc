@@ -1,0 +1,2 @@
+Linenoise is a delightfully simple command line library. This Lua module
+is simply a binding for it.
