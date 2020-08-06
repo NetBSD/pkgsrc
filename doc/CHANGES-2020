@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4307 2020/08/06 23:37:54 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.4308 2020/08/06 23:45:48 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6798,3 +6798,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lua-repl version 0.9 [joerg 2020-08-06]
 	Added devel/lua-vstruct version 2.1.1 [joerg 2020-08-06]
 	Added math/lua-cassowary version 2.2 [joerg 2020-08-06]
+	Updated devel/lua-stdlib to 41.2.2 [joerg 2020-08-06]
