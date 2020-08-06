@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/08/06 22:56:52 joerg Exp $
+
+SHA1 (epnf-0.3.tar.gz) = dae64731a3e44fdb8a815a91a6080f7820569420
+RMD160 (epnf-0.3.tar.gz) = e9eca2a52fd91a9e198be0560be97df690b94b6d
+SHA512 (epnf-0.3.tar.gz) = 45a16c755aa96b920dfd4f581af0913f89c5b802f36e6fcca49b8e98350b3d607faa3685457ed76a25f9f4d6da285edff77036039579ed82ba5d4483ae9d7540
+Size (epnf-0.3.tar.gz) = 8095 bytes
+SHA1 (patch-makefile) = e229f3278a5dde00a4ef6736459caca4deeacea6
