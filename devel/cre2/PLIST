@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/08 05:48:07 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/08/06 16:24:44 adam Exp $
 include/cre2.h
 info/cre2.info
 lib/libcre2.la
+lib/pkgconfig/cre2.pc
 share/doc/cre2/COPYING
 share/doc/cre2/LICENSE.re2
 share/doc/cre2/README
+share/doc/cre2/RELEASE-NOTES
