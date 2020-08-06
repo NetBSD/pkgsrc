@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3177 2020/08/05 13:54:15 adam Exp $
+# $NetBSD: Makefile,v 1.3178 2020/08/06 22:47:32 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -866,6 +866,7 @@ SUBDIR+=	lua-filesystem
 SUBDIR+=	lua-fun
 SUBDIR+=	lua-gi
 SUBDIR+=	lua-inspect
+SUBDIR+=	lua-linenoise
 SUBDIR+=	lua-ljsyscall
 SUBDIR+=	lua-loadkit
 SUBDIR+=	lua-lpeg
