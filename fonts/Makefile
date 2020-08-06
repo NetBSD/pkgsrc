@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.342 2020/07/17 06:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.343 2020/08/06 11:08:20 pin Exp $
 #
 
 COMMENT=	Fonts
@@ -167,6 +167,7 @@ SUBDIR+=	mminstance
 SUBDIR+=	monafonts
 SUBDIR+=	monafonts-ttf
 SUBDIR+=	monoid
+SUBDIR+=	montserrat
 SUBDIR+=	mothanna-ttf
 SUBDIR+=	motoya-fonts
 SUBDIR+=	mozilla-fonts
