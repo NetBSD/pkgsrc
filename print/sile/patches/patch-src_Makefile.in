@@ -1,0 +1,24 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2020/08/06 23:52:49 joerg Exp $
+
+Fix libtool use.
+
+--- src/Makefile.in.orig	2020-08-04 23:14:15.897862556 +0000
++++ src/Makefile.in
+@@ -175,7 +175,7 @@ justenoughicu_la_LINK = $(LIBTOOL) $(AM_
+ 	$(justenoughicu_la_CFLAGS) $(CFLAGS) \
+ 	$(justenoughicu_la_LDFLAGS) $(LDFLAGS) -o $@
+ @SYSTEM_LIBTEXPDF_FALSE@am__DEPENDENCIES_3 =  \
+-@SYSTEM_LIBTEXPDF_FALSE@	../libtexpdf/.libs/libtexpdf.la
++@SYSTEM_LIBTEXPDF_FALSE@	../libtexpdf/libtexpdf.la
+ justenoughlibtexpdf_la_DEPENDENCIES = $(am__DEPENDENCIES_3) \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2)
+ am_justenoughlibtexpdf_la_OBJECTS =  \
+@@ -455,7 +455,7 @@ ACLOCAL_AMFLAGS = -I m4
+ @LINKLUA_TRUE@MY_LUA_LIB = $(LUA_LIB)
+ @LINKLUA_FALSE@UNDEFINED = 
+ @LINKLUA_TRUE@UNDEFINED = -no-undefined
+-@SYSTEM_LIBTEXPDF_FALSE@LIBTEXPDF_LIB = ../libtexpdf/.libs/libtexpdf.la
++@SYSTEM_LIBTEXPDF_FALSE@LIBTEXPDF_LIB = ../libtexpdf/libtexpdf.la
+ @SYSTEM_LIBTEXPDF_TRUE@LIBTEXPDF_LIB = -ltexpdf
+ pkglib_LTLIBRARIES = justenoughharfbuzz.la justenoughlibtexpdf.la \
+ 	justenoughfontconfig.la fontmetrics.la svg.la $(am__append_1) \
