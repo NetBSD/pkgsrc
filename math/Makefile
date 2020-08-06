@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2020/08/01 04:39:13 tnn Exp $
+# $NetBSD: Makefile,v 1.468 2020/08/06 23:37:21 joerg Exp $
 
 COMMENT=	Mathematics
 
@@ -223,6 +223,7 @@ SUBDIR+=	libsvm
 SUBDIR+=	linpack
 SUBDIR+=	lp_solve
 SUBDIR+=	ltm
+SUBDIR+=	lua-cassowar
 SUBDIR+=	lumina-calculator
 SUBDIR+=	mapm
 SUBDIR+=	mathomatic
