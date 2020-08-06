@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1476 2020/08/04 01:28:36 joerg Exp $
+# $NetBSD: Makefile,v 1.1477 2020/08/06 12:03:06 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -661,6 +661,7 @@ SUBDIR+=	py-django-cogwheels
 SUBDIR+=	py-django-contrib-comments
 SUBDIR+=	py-django-cors-headers
 SUBDIR+=	py-django-countries
+SUBDIR+=	py-django-debug-toolbar
 SUBDIR+=	py-django-extensions
 SUBDIR+=	py-django-filer
 SUBDIR+=	py-django-filter
