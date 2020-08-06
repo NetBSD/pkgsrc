@@ -1,0 +1,13 @@
+VStruct is a Lua library to provide functions for manipulating binary
+data, in particular for reading binary files or byte buffers into Lua
+values and for writing Lua values back into files or buffers. Supported
+data types include:
+
+- signed and unsigned integers of arbitrary size
+- fixed and floating point numbers
+- fixed-size, length-prefixed, and null-terminated strings
+- booleans and bitmasks
+- bit-packed integers, booleans and bitmasks
+
+In addition, the library supports seeking, alignment, and byte order
+controls, repetition, grouping of data into tables, and named fields.
