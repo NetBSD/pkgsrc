@@ -1,0 +1,8 @@
+REPL.lua provides a reusable Read-Execute-Print loop for Lua. It can be
+used as alternative to the standalone interpreter included with Lua, one
+that supports things like plugins, tab completion, and automatic
+insertion of return in front of expressions.
+
+It can also provide a REPL library you may embed in your application, to
+provide all of the niceties of the standalone interpreter included with
+Lua and then some.
