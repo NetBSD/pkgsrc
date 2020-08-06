@@ -1,30 +1,40 @@
-# $NetBSD: Makefile,v 1.8 2020/07/02 10:26:18 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/06 23:45:07 joerg Exp $
 
-DISTNAME=		stdlib-28
+DISTNAME=		stdlib-41.2.2
 PKGNAME=		${DISTNAME:S/stdlib/${LUA_PKGPREFIX}-stdlib/}
-PKGREVISION=		3
 CATEGORIES=		devel lua
-MASTER_SITES=		https://cloud.github.com/downloads/rrthomas/lua-stdlib/
-EXTRACT_SUFX=		.zip
+MASTER_SITES=		${MASTER_SITE_GITHUB:=lua-stdlib/}
+GITHUB_PROJECT=		lua-stdlib
+GITHUB_TAG=		release-v${PKGVERSION_NOREV}
 
 MAINTAINER=		cheusov@NetBSD.org
-HOMEPAGE=		https://github.com/rrthomas/lua-stdlib
+HOMEPAGE=		https://github.com/lua-stdlib/lua-stdlib/tags
 COMMENT=		Standard library for Lua programming language
 LICENSE=		mit
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 
-INSTALLATION_DIRS+=	${LUA_LDIR} ${LUA_DOCDIR}/modules
+WRKSRC=			${WRKDIR}/lua-stdlib-${GITHUB_TAG}
+
+INSTALLATION_DIRS+=	${LUA_LDIR}/std/debug_init \
+			${LUA_DOCDIR}/std/classes \
+			${LUA_DOCDIR}/std/modules
 
 .include "../../lang/lua/module.mk"
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/src/*.lua \
+	${INSTALL_DATA} ${WRKSRC}/lib/*.lua \
 	                ${DESTDIR}${PREFIX}/${LUA_LDIR}
-	${INSTALL_DATA} ${WRKSRC}/src/*.html \
-	                ${DESTDIR}${PREFIX}/${LUA_DOCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/src/modules/*.html \
-	                ${DESTDIR}${PREFIX}/${LUA_DOCDIR}/modules/
+	${INSTALL_DATA} ${WRKSRC}/lib/std/*.lua \
+	                ${DESTDIR}${PREFIX}/${LUA_LDIR}/std/
+	${INSTALL_DATA} ${WRKSRC}/lib/std/debug_init/*.lua \
+	                ${DESTDIR}${PREFIX}/${LUA_LDIR}/std/debug_init/
+	${INSTALL_DATA} ${WRKSRC}/doc/index.html ${WRKSRC}/doc/ldoc.css \
+			${DESTDIR}${PREFIX}/${LUA_DOCDIR}/std
+	${INSTALL_DATA} ${WRKSRC}/doc/classes/*.html \
+			${DESTDIR}${PREFIX}/${LUA_DOCDIR}/std/classes
+	${INSTALL_DATA} ${WRKSRC}/doc/modules/*.html \
+			${DESTDIR}${PREFIX}/${LUA_DOCDIR}/std/modules
 
 .include "../../mk/bsd.pkg.mk"

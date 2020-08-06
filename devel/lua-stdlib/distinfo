@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:48 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/08/06 23:45:07 joerg Exp $
 
-SHA1 (stdlib-28.zip) = 4ad81a072912f436bba2bba531ab725fe60d1ee2
-RMD160 (stdlib-28.zip) = d6c638bd11cf8199191eaa1ca53e7c14c7b0b5fb
-SHA512 (stdlib-28.zip) = 413b853d09417a676650d9c12f1261b9d53fac011b0d64cb842a4720d97c4bcc30352861c8e21e414e5e51183bb9938ec91c033d02fe1c4c1e11e35ac2807221
-Size (stdlib-28.zip) = 214032 bytes
+SHA1 (stdlib-41.2.2.tar.gz) = 4c85bc8ce1b302696b61614bb4a4ca0d3b3219d8
+RMD160 (stdlib-41.2.2.tar.gz) = d08b092fd90dd3f66574d39c98a96f7dd81fea51
+SHA512 (stdlib-41.2.2.tar.gz) = b477ff90f2c3e49ad83194b1a67592d786c91dbc9dfe199a701fa68bc84b6ba8c820d37ac2fc74c2ebc3fb7a83aac8bcf0af58041ce14fc1dc6b297f3ae054aa
+Size (stdlib-41.2.2.tar.gz) = 398500 bytes
