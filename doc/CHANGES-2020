@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4303 2020/08/06 12:04:14 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.4304 2020/08/06 12:52:02 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6785,3 +6785,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added fonts/montserrat version 7.210 [pin 2020-08-06]
 	Updated lang/rust to 1.45.2 [jperkin 2020-08-06]
 	Added www/py-django-debug-toolbar version 2.2 [joerg 2020-08-06]
+	Added news/multimail version 0.52 [fcambus 2020-08-06]
