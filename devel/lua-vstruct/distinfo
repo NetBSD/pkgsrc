@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/06 23:17:57 joerg Exp $
+
+SHA1 (vstruct-2.1.1.tar.gz) = faab98322060e3e2a19a4dff578e9d454784b72c
+RMD160 (vstruct-2.1.1.tar.gz) = 1838d8fd70976f4efc0865d22f211caa710ad197
+SHA512 (vstruct-2.1.1.tar.gz) = 8959fc9f90aa6ccffd306227098dc888a2218c0bfe7ef783867a012d5f23053cd58ec21f734eee1f1ad539245576e5f7cc8ff75050ef61e47a8af4a1b074bbac
+Size (vstruct-2.1.1.tar.gz) = 39736 bytes
