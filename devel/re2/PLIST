@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/13 14:04:22 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/08/06 16:23:21 adam Exp $
 include/re2/filtered_re2.h
 include/re2/re2.h
 include/re2/set.h
 include/re2/stringpiece.h
-lib/libre2.a
+lib/cmake/re2/re2Config-noconfig.cmake
+lib/cmake/re2/re2Config.cmake
 lib/libre2.so
-lib/libre2.so.0
-lib/libre2.so.0.0.0
 lib/pkgconfig/re2.pc
