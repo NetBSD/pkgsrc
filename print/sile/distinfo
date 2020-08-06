@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/08/06 23:52:48 joerg Exp $
+
+SHA1 (sile-0.10.9.tar.xz) = 7453f470b9daa88c9db0d4fe4f978e64bfa450c1
+RMD160 (sile-0.10.9.tar.xz) = 21ebf989cd4e1cd027cb3004cb446df21a8c3c2a
+SHA512 (sile-0.10.9.tar.xz) = 3e1e53129f3956c47125f594ed23e4a3713ba0799c07ce7bb93b1a416bb4bd96063e4cc5b7563f68d1fdf3140bade9e4890719dba4dff79ee4f3761754ddc593
+Size (sile-0.10.9.tar.xz) = 12072132 bytes
+SHA1 (patch-configure) = 05c5b47f66edee48dd4466187a777517eafef380
+SHA1 (patch-src_Makefile.in) = 875feda6a0feb1b5af01765f3037e9d061c457ce
