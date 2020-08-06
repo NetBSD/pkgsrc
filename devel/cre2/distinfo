@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/05/07 03:13:24 mef Exp $
+$NetBSD: distinfo,v 1.5 2020/08/06 16:24:44 adam Exp $
 
-SHA1 (cre2-0.3.4.tar.gz) = 64d2afca7411ba8144ce219bbc1c86b85ba5e9e7
-RMD160 (cre2-0.3.4.tar.gz) = 4fbc6bcf44fc5b3d42bdc65ea5de6d56825d3faa
-SHA512 (cre2-0.3.4.tar.gz) = 0c142f70042e363421e7e88a52e966286288b64918ac558c0c96ff901f47fcb439a3a4b8a91b8679b087cf290cbd6c70343cccf2191d8cfd1a6e678e4231acf4
-Size (cre2-0.3.4.tar.gz) = 45659 bytes
+SHA1 (cre2-0.3.6.tar.gz) = b249b806e7374dc04baef7bf92dc173adff873ed
+RMD160 (cre2-0.3.6.tar.gz) = 383c1549f0101e59ed8dc1038f35e5cf3aedb076
+SHA512 (cre2-0.3.6.tar.gz) = a2027ce7cf7ab3f34cabc226f109c79dc78dfe2da0a6438f00aa00260990744793d9193ef431055e4ca46a3cccb881fa34140cfaa71e8202acdeffbc7574e4f0
+Size (cre2-0.3.6.tar.gz) = 51119 bytes
