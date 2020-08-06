@@ -1,0 +1,3 @@
+This is a lua port of the cassowary constraint solving toolkit. It allows
+you to use lua to solve algebraic equations and inequalities and find the
+values of unknown variables which satisfy those inequalities.
