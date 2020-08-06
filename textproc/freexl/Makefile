@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/02/27 06:48:22 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/06 16:31:21 adam Exp $
 
-DISTNAME=	freexl-1.0.5
+DISTNAME=	freexl-1.0.6
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/freexl-sources/
 
