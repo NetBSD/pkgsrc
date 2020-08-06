@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4302 2020/08/06 11:43:22 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.4303 2020/08/06 12:04:14 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6784,3 +6784,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-File-Path to 2.17 [gutteridge 2020-08-06]
 	Added fonts/montserrat version 7.210 [pin 2020-08-06]
 	Updated lang/rust to 1.45.2 [jperkin 2020-08-06]
+	Added www/py-django-debug-toolbar version 2.2 [joerg 2020-08-06]
