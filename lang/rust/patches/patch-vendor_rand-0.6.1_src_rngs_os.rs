@@ -1,4 +1,4 @@
-$NetBSD: patch-src_vendor_rand-0.6.1_src_rngs_os.rs,v 1.1 2019/10/02 12:51:43 he Exp $
+$NetBSD: patch-vendor_rand-0.6.1_src_rngs_os.rs,v 1.1 2020/08/06 11:42:56 jperkin Exp $
 
 -Explicitly disable getrandom support on SunOS, the test fails.
 -https://github.com/rust-random/rand/issues/637
