@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/08/06 22:47:16 joerg Exp $
+${LUA_CDIR}/linenoise.so
