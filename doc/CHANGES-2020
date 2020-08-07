@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4309 2020/08/06 23:53:30 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.4310 2020/08/07 00:16:17 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6800,3 +6800,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/lua-cassowary version 2.2 [joerg 2020-08-06]
 	Updated devel/lua-stdlib to 41.2.2 [joerg 2020-08-06]
 	Added print/sile version 0.10.9 [joerg 2020-08-06]
+	Added devel/R-caTools version 1.18.0 [brook 2020-08-07]
