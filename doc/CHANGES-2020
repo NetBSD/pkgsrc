@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4328 2020/08/07 03:39:08 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4329 2020/08/07 03:42:54 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6819,3 +6819,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added geography/R-rgeos version 0.5.2 [brook 2020-08-07]
 	Added geography/R-prettymapr version 0.2.2 [brook 2020-08-07]
 	Added graphics/R-png version 0.1.7 [brook 2020-08-07]
+	Added geography/R-spatstat.utils version 1.17.0 [brook 2020-08-07]
