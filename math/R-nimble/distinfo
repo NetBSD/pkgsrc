@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 02:59:26 brook Exp $
+
+SHA1 (R/nimble_0.9.0.tar.gz) = 5f6f2cb152d8d065f954d2a4a14886e974744ca1
+RMD160 (R/nimble_0.9.0.tar.gz) = cd1a9df18736370c59c5cddbb305f679f6f89d60
+SHA512 (R/nimble_0.9.0.tar.gz) = a2f3ef100a667bca7d88f2b0410679b18df99c684f89bae3d8a0c71e1a2833c9011a126427404cb9c70d46c6cbb253b72a4ce59d81795f444ea4edded5dbcbab
+Size (R/nimble_0.9.0.tar.gz) = 1949890 bytes
