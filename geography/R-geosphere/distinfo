@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 00:25:49 brook Exp $
+
+SHA1 (R/geosphere_1.5-10.tar.gz) = 75eda0622dcb82cc3f710eeb38993849994a2955
+RMD160 (R/geosphere_1.5-10.tar.gz) = fc027ac418fa1418c908e6097371ac6f032563fc
+SHA512 (R/geosphere_1.5-10.tar.gz) = 4cea3b9afadba3c4b002976b7152cf7ff5caa5968a06f0c31e7f9d74632cbccf80e5f6191c21dc7e4155338ed79ffdd013ce257011c3cb207b2c912f1ca70f0a
+Size (R/geosphere_1.5-10.tar.gz) = 774048 bytes
