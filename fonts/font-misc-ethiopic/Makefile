@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/11/02 22:24:40 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.5 2020/08/07 20:31:35 wiz Exp $
 
-DISTNAME=	font-misc-ethiopic-1.0.3
+DISTNAME=	font-misc-ethiopic-1.0.4
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=	.tar.bz2
