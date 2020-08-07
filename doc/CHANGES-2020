@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4314 2020/08/07 01:46:10 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4315 2020/08/07 01:54:38 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6805,3 +6805,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added geography/R-geosphere version 1.5.10 [brook 2020-08-07]
 	Added geography/R-maps version 3.3.0 [brook 2020-08-07]
 	Added geography/R-mapdata version 2.3.0 [brook 2020-08-07]
+	Added www/R-RCurl version 1.98.1.1 [brook 2020-08-07]
