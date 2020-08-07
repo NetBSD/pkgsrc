@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2020/07/29 14:20:30 nia Exp $
+$NetBSD: distinfo,v 1.22 2020/08/07 09:09:48 maya Exp $
 
 SHA1 (firefox-68.11.0esr.source.tar.xz) = 445acbf7b7b8f75374ee6347bb6f45748511bcf9
 RMD160 (firefox-68.11.0esr.source.tar.xz) = 82edab46fe312a47889047fe431784c511684ade
@@ -8,6 +8,7 @@ SHA1 (patch-aa) = 9f7200c411cd2217a80ec10a276c8877bc6b845c
 SHA1 (patch-browser_app_profile_firefox.js) = cf93582b68b8d4e72c3c25682ab9138e185418c8
 SHA1 (patch-build_moz.configure_rust.configure) = b57a9b1451dc426d75774f73d7c05fc98fe6e317
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 11b45e0c7a9399c5b74b170648280a388dd67d89
+SHA1 (patch-config_makefiles_rust.mk) = 25502bfbe32877b35c244c2c19d6ee1dd63cb771
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3cd2c65ab281d802c56216565970450767a3fb24
 SHA1 (patch-dom_webauthn_u2f-hid-rs_src_lib.rs) = c0dfe8b1e7ebbc7c1d6066c204030f13b063b8d7
