@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.7 2020/07/09 07:23:44 adam Exp $
+$NetBSD: patch-setup.py,v 1.8 2020/08/07 06:45:58 adam Exp $
 
 Fix libatomic detection.
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2020-06-22 21:42:24.000000000 +0000
+--- setup.py.orig	2020-08-05 07:00:04.000000000 +0000
 +++ setup.py
-@@ -150,7 +150,7 @@ def check_linker_need_libatomic():
+@@ -151,7 +151,7 @@ def check_linker_need_libatomic():
      """Test if linker on system needs libatomic."""
      code_test = (b'#include <atomic>\n' +
                   b'int main() { return std::atomic<int64_t>{}; }')
@@ -14,8 +14,8 @@ Use dependencies in pkgsrc.
                                 stdin=PIPE,
                                 stdout=PIPE,
                                 stderr=PIPE)
-@@ -235,26 +235,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
-                                  SSL_INCLUDE + UPB_INCLUDE +
+@@ -236,26 +236,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
+                                  RE2_INCLUDE + SSL_INCLUDE + UPB_INCLUDE +
                                   UPB_GRPC_GENERATED_INCLUDE + ZLIB_INCLUDE)
  
 -EXTENSION_LIBRARIES = ()
@@ -42,7 +42,7 @@ Use dependencies in pkgsrc.
  
  DEFINE_MACROS = (('OPENSSL_NO_ASM', 1), ('_WIN32_WINNT', 0x600))
  if not DISABLE_LIBC_COMPATIBILITY:
-@@ -311,7 +292,7 @@ def cython_extensions_and_necessity():
+@@ -312,7 +293,7 @@ def cython_extensions_and_necessity():
      ]
      config = os.environ.get('CONFIG', 'opt')
      prefix = 'libs/' + config + '/'
@@ -51,7 +51,7 @@ Use dependencies in pkgsrc.
          extra_objects = [
              prefix + 'libares.a', prefix + 'libboringssl.a',
              prefix + 'libgpr.a', prefix + 'libgrpc.a'
-@@ -323,7 +304,7 @@ def cython_extensions_and_necessity():
+@@ -324,7 +305,7 @@ def cython_extensions_and_necessity():
      extensions = [
          _extension.Extension(
              name=module_name,

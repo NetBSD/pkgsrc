@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2020/07/31 09:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/08/07 06:45:57 adam Exp $
 
-DISTNAME=	grpc-1.30.2
+DISTNAME=	grpc-1.31.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,6 +21,7 @@ CMAKE_ARGS+=	-DgRPC_BENCHMARK_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_CARES_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_GFLAGS_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_PROTOBUF_PROVIDER=package
+CMAKE_ARGS+=	-DgRPC_RE2_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_SSL_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
 
@@ -37,6 +38,7 @@ CXXFLAGS+=		-march=i586
 .include "../../devel/gflags/buildlink3.mk"
 BUILDLINK_API_DEPENDS.protobuf+=	protobuf>=3.5
 .include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/re2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libcares+=	libcares>=1.15.0nb1
 .include "../../net/libcares/buildlink3.mk"
