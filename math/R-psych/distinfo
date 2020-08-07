@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 02:46:40 brook Exp $
+
+SHA1 (R/psych_1.9.12.31.tar.gz) = 6845f0ba16921b3ada8e05007132a653e7d90b5d
+RMD160 (R/psych_1.9.12.31.tar.gz) = f1f22fd04f5958c3c93c045ef77155a0aab50a7e
+SHA512 (R/psych_1.9.12.31.tar.gz) = 71d395fc46ff5816b873cd2d42ab257100304a61d41599588109d19e3374312be8e04330396633f4c1b906a4db38d4e6be641ad1bb76feab212e9c29efe2330e
+Size (R/psych_1.9.12.31.tar.gz) = 1724122 bytes
