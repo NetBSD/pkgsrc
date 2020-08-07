@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2016/12/19 13:35:53 joerg Exp $
+$NetBSD: distinfo,v 1.4 2020/08/07 12:42:07 mef Exp $
 
 SHA1 (gcc-4.6.4-mint-20130415.patch.bz2) = bd2e88f2b862cc404f47144fb67375b1fe17291b
 RMD160 (gcc-4.6.4-mint-20130415.patch.bz2) = d3cafafb1caa1a1eb915c5f15f4063d6a70ac4ee
@@ -16,6 +16,8 @@ SHA1 (pml-2.03.tar.bz2) = 07b5c70a704b06e24d6a64e8b5333d98804aa178
 RMD160 (pml-2.03.tar.bz2) = 60a31723cb5078a2f889757e6a02b873b444ddb7
 SHA512 (pml-2.03.tar.bz2) = cdd58b71425d2d0194608625a5a21f9c0a69265261d39b248ac9fb87e9d16735ec8cf3006eb8f4da78e89be59ecfd082afe1e4d57e19dc0fb6b32943fa58bc04
 Size (pml-2.03.tar.bz2) = 52753 bytes
+SHA1 (patch-gcc-4.6.4_gcc_cp_cfns.gperf) = da2735f36dc5a2ab19f92cb13f505cea11442fca
+SHA1 (patch-gcc-4.6.4_gcc_cp_cfns.h) = 2a9e8f53bd63c98efa0cda782dacb78b00beb2bc
 SHA1 (patch-gcc-4.6.4_gcc_doc_gcc.texi) = b11ef8d6ad28139623800ddcc5aa67bc45289b07
 SHA1 (patch-pml-2.03_pmlsrc_Makefile.16) = 7fac2276e5e176c6dd53ac8a040f038f54fcb992
 SHA1 (patch-pml-2.03_pmlsrc_Makefile.32) = 768e842b9ebad9627cbe662617e4e534aae3206c
