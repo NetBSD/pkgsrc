@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4331 2020/08/07 03:55:33 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4332 2020/08/07 06:46:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6822,3 +6822,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Added geography/R-spatstat.utils version 1.17.0 [brook 2020-08-07]
 	Added geography/R-spatstat.data version 1.4.3 [brook 2020-08-07]
 	Added geography/R-spatstat version 1.63.2 [brook 2020-08-07]
+	Updated security/py-google-auth to 1.20.1 [adam 2020-08-07]
+	Updated www/py-google-api-python-client to 1.10.0 [adam 2020-08-07]
+	Updated net/grpc to 1.31.0 [adam 2020-08-07]
+	Updated net/py-grpcio to 1.31.0 [adam 2020-08-07]
+	Updated net/py-grpcio-testing to 1.31.0 [adam 2020-08-07]
+	Updated net/py-grpcio-tools to 1.31.0 [adam 2020-08-07]
