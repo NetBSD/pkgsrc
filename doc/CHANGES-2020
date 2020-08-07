@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4326 2020/08/07 03:15:39 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4327 2020/08/07 03:19:38 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6817,3 +6817,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/R-LearnBayes version 2.15.1 [brook 2020-08-07]
 	Added math/R-nimble version 0.9.0 [brook 2020-08-07]
 	Added geography/R-rgeos version 0.5.2 [brook 2020-08-07]
+	Added geography/R-prettymapr version 0.2.2 [brook 2020-08-07]
