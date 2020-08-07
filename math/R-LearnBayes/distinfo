@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 02:52:56 brook Exp $
+
+SHA1 (R/LearnBayes_2.15.1.tar.gz) = f9c2347ad1b681fd3a3b1dc4f08edb32d5b1bf8a
+RMD160 (R/LearnBayes_2.15.1.tar.gz) = 8c8007222e6bf9e4d0be29640431d2c3c9ea9863
+SHA512 (R/LearnBayes_2.15.1.tar.gz) = 3534c49db81a3205b2b806db0a3f5f8540c5cb1cb6f927b9305c3ba80e8b955f1b0877285d7ff360e78416569ad6e82bdc519979538faa58b0e0d37ede6e71e7
+Size (R/LearnBayes_2.15.1.tar.gz) = 794622 bytes
