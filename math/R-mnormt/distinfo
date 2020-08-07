@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 02:43:00 brook Exp $
+
+SHA1 (R/mnormt_1.5-6.tar.gz) = 97b07697cf080583f24ad8ac457ef57af1e49900
+RMD160 (R/mnormt_1.5-6.tar.gz) = e7168c03151d2d4a1cc01fa0de779b0009089618
+SHA512 (R/mnormt_1.5-6.tar.gz) = d579ed4fd598854c19aa3ddbff065a228a680c92cea7b5de98f708bc00d6efcd7e8c07d386a300d280ba0a7f249c7593f5dac79a22ca2d940d04d08afe6a9193
+Size (R/mnormt_1.5-6.tar.gz) = 37884 bytes
