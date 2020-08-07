@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4312 2020/08/07 00:26:07 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4313 2020/08/07 01:33:48 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6803,3 +6803,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/R-caTools version 1.18.0 [brook 2020-08-07]
 	Added geography/R-deldir version 0.1.25 [brook 2020-08-07]
 	Added geography/R-geosphere version 1.5.10 [brook 2020-08-07]
+	Added geography/R-maps version 3.3.0 [brook 2020-08-07]
