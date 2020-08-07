@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 02:33:41 brook Exp $
+
+SHA1 (R/lubridate_1.7.4.tar.gz) = fd99b47fc74bc5e240a32cbcc3bae20a27f973ce
+RMD160 (R/lubridate_1.7.4.tar.gz) = 1a4f75b8c235f827c9a63ba3e8c6513166f60826
+SHA512 (R/lubridate_1.7.4.tar.gz) = b77af2a16c07a24278bf59eab2231524f81c6f4ce92d9e8b5ffe3d4cb8fe8af229c8bbe1c94d596cb858c2f7cef83a7b99b6e15654402f12d911d887dc04ab5b
+Size (R/lubridate_1.7.4.tar.gz) = 449850 bytes
