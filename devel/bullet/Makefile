@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/02/20 14:58:54 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/07 08:57:04 adam Exp $
 
 DISTNAME=	bullet-2.89
 CATEGORIES=	devel
@@ -27,6 +27,9 @@ CMAKE_ARGS+=	-DBUILD_UNIT_TESTS:BOOL=off
 
 PKGCONFIG_OVERRIDE+=	bullet.pc.in
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
