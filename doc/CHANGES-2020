@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4321 2020/08/07 02:43:16 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4322 2020/08/07 02:46:58 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6812,3 +6812,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/R-rjson version 0.2.20 [brook 2020-08-07]
 	Added math/R-tensor version 1.5 [brook 2020-08-07]
 	Added math/R-mnormt version 1.5.6 [brook 2020-08-07]
+	Added math/R-psych version 1.9.12.31 [brook 2020-08-07]
