@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 01:54:20 brook Exp $
+
+SHA1 (R/RCurl_1.98-1.1.tar.gz) = c889ff5224630a184da1f6b49c9d2561dfcf4d40
+RMD160 (R/RCurl_1.98-1.1.tar.gz) = cf46f295abf57c2f9d87611150acb14e5b1406c0
+SHA512 (R/RCurl_1.98-1.1.tar.gz) = e9567628d71dec0abd04f55c3a52b79de1c1c383a8883a5381adc9e192c22bf5710efb598125e547f44a8ce793974d43a70e9b8c696df31998f27f90907e8d21
+Size (R/RCurl_1.98-1.1.tar.gz) = 699474 bytes
+SHA1 (patch-configure) = b241c2321c378966b25495c573275566c03c84f7
+SHA1 (patch-configure.ac) = a998c68186989b4e8eb29c14530f972d744d3fa7
