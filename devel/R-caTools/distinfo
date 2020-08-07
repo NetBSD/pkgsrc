@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 00:14:23 brook Exp $
+
+SHA1 (R/caTools_1.18.0.tar.gz) = 167c3fcb2697a2aeb847ef6e07929e444c1fcf19
+RMD160 (R/caTools_1.18.0.tar.gz) = c12a6b6df09b4e39f359653984317ff821a17828
+SHA512 (R/caTools_1.18.0.tar.gz) = af9f5e3d6b11e7f6e95e59051544f2d54f4f17b3a548fc6695204b9bb94592a5cef50b2cd5ce3787c85e1d022605b7528d1b49b06a6604ec377811a51388930e
+Size (R/caTools_1.18.0.tar.gz) = 64577 bytes
