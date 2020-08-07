@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.901 2020/08/03 23:50:53 joerg Exp $
+# $NetBSD: Makefile,v 1.902 2020/08/07 03:38:53 brook Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -34,6 +34,7 @@ SUBDIR+=	R-labeling
 SUBDIR+=	R-latex2exp
 SUBDIR+=	R-latticeExtra
 SUBDIR+=	R-munsell
+SUBDIR+=	R-png
 SUBDIR+=	R-polyclip
 SUBDIR+=	R-scales
 SUBDIR+=	R-viridis
