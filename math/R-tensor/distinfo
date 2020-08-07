@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 02:39:42 brook Exp $
+
+SHA1 (R/tensor_1.5.tar.gz) = 9196690813d5763969e7be0ffb30482a095a5784
+RMD160 (R/tensor_1.5.tar.gz) = 12cd7985464e537fb1f241ab6a6d7ce6e7004c02
+SHA512 (R/tensor_1.5.tar.gz) = 66ba8446b20f1a46da5d1e008f3777c06bf4fa684ebb715c6b8038cd896bbe5bd9b70f3adb98bf41545a1f141429c779a08612a782ac58f42b888d707acf912a
+Size (R/tensor_1.5.tar.gz) = 2518 bytes
