@@ -1,0 +1,10 @@
+A wrapper for 'libcurl' <http://curl.haxx.se/libcurl/> Provides
+functions to allow one to compose general HTTP requests and provides
+convenient functions to fetch URIs, get & post forms, etc. and process
+the results returned by the Web server. This provides a great deal of
+control over the HTTP/FTP/... connection and the form of the request
+while providing a higher-level interface than is available just using
+R socket connections.  Additionally, the underlying implementation is
+robust and extensive, supporting FTP/FTPS/TFTP (uploads and
+downloads), SSL/HTTPS, telnet, dict, ldap, and also supports cookies,
+redirects, authentication, etc.
