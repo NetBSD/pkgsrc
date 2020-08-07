@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/07/29 13:54:07 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/08/07 07:40:41 maya Exp $
 
 DISTNAME=	ansible-2.9.11
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	https://releases.ansible.com/ansible/
 
