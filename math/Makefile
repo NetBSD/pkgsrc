@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2020/08/07 02:50:20 brook Exp $
+# $NetBSD: Makefile,v 1.473 2020/08/07 02:52:56 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -12,6 +12,7 @@ SUBDIR+=	R-Formula
 SUBDIR+=	R-GRASS
 SUBDIR+=	R-ISLR
 SUBDIR+=	R-ISwR
+SUBDIR+=	R-LearnBayes
 SUBDIR+=	R-MatrixModels
 SUBDIR+=	R-PHYLOGR
 SUBDIR+=	R-R2HTML
