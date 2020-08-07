@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2020/08/07 01:57:10 joerg Exp $
+
+Add target expected from src/Makefile
+
+--- Makefile.orig	2020-08-07 01:55:47.223723390 +0000
++++ Makefile
+@@ -36,7 +36,7 @@ RM= rm -f
+ # == END OF USER SETTINGS -- NO NEED TO CHANGE ANYTHING BELOW THIS LINE =======
+ 
+ # Convenience platforms targets.
+-PLATS= guess aix bsd c89 freebsd generic linux linux-readline macosx mingw posix solaris
++PLATS= guess aix bsd c89 freebsd generic linux linux-readline linux-noreadline macosx mingw posix solaris
+ 
+ # What to install.
+ TO_BIN= lua luac
