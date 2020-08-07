@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.80 2020/07/09 10:48:58 nia Exp $
+# $NetBSD: Makefile,v 1.81 2020/08/07 00:20:08 brook Exp $
 #
 
 COMMENT=	Software for geographical-related uses
 
 SUBDIR+=	R-countrycode
+SUBDIR+=	R-deldir
 SUBDIR+=	R-maptools
 SUBDIR+=	cm2gpx
 SUBDIR+=	cmconvert

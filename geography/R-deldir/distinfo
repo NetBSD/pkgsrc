@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 00:20:08 brook Exp $
+
+SHA1 (R/deldir_0.1-25.tar.gz) = 90ccb72794df6836ff87825dfeeddfcbed80f351
+RMD160 (R/deldir_0.1-25.tar.gz) = ac3ee598240146ff3caaa7400396b3099550fcc3
+SHA512 (R/deldir_0.1-25.tar.gz) = ea18bb37ce0452e2efce78749a2ebf75f78f2508813a95b980061a23f0d427b566089f2a4b720951797c67ea0adc4b6865b7ac028a98969ecaa9cc198dbde10f
+Size (R/deldir_0.1-25.tar.gz) = 103273 bytes
