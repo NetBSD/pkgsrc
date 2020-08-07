@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4338 2020/08/07 20:28:23 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4339 2020/08/07 20:31:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6836,3 +6836,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/meson to 0.55.0nb2 [jperkin 2020-08-07]
 	Updated x11/libX11 to 1.6.11 [wiz 2020-08-07]
 	Updated fonts/font-alias to 1.0.4 [wiz 2020-08-07]
+	Updated fonts/font-misc-ethiopic to 1.0.4 [wiz 2020-08-07]
