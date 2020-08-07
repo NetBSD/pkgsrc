@@ -1,0 +1,5 @@
+Automates the process of creating a scale bar and north arrow in any
+package that uses base graphics to plot in R. Bounding box tools help
+find and manipulate extents. Finally, there is a function to automate
+the process of setting margins, plotting the map, scale bar, and north
+arrow, and resetting graphic parameters upon completion.

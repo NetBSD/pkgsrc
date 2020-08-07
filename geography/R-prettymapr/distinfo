@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 03:19:21 brook Exp $
+
+SHA1 (R/prettymapr_0.2.2.tar.gz) = 76c9c2acbbf64bd7eaa1473ce124e76850891ee3
+RMD160 (R/prettymapr_0.2.2.tar.gz) = 522dbbf87759e28d2a6e78cb0f7aa23f213d50e2
+SHA512 (R/prettymapr_0.2.2.tar.gz) = d48dc807f625d171efee0d929bf1b011cc8d9938f9337acde0f2f01bd4b1549e28d7503cea2b9eda45a4d29f7fa5f32f918355f51501802af0c51750e738ab9d
+Size (R/prettymapr_0.2.2.tar.gz) = 874716 bytes
