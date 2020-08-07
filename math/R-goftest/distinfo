@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 02:50:21 brook Exp $
+
+SHA1 (R/goftest_1.2-2.tar.gz) = 04933372da35d0a1379a3e033d8de46122dbb575
+RMD160 (R/goftest_1.2-2.tar.gz) = 2e05ecfdbe3900ec58e8a02e0a4fc13026d3952a
+SHA512 (R/goftest_1.2-2.tar.gz) = b5e37d2a015c84c0b518871e58c57c833c8b14beabb892aa09fcabf692a0821320e59529cd3dd011f7f316d65f416d48e1c143eeb1bafef547c63f98126918e3
+Size (R/goftest_1.2-2.tar.gz) = 18485 bytes
