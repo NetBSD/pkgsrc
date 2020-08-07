@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4330 2020/08/07 03:44:52 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4331 2020/08/07 03:55:33 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6821,3 +6821,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/R-png version 0.1.7 [brook 2020-08-07]
 	Added geography/R-spatstat.utils version 1.17.0 [brook 2020-08-07]
 	Added geography/R-spatstat.data version 1.4.3 [brook 2020-08-07]
+	Added geography/R-spatstat version 1.63.2 [brook 2020-08-07]
