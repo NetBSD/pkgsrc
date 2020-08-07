@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/07/28 22:43:01 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2020/08/07 13:04:08 jperkin Exp $
 
 DISTNAME=	meson-0.55.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
