@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 01:57:55 brook Exp $
+
+SHA1 (R/rvest_0.3.5.tar.gz) = ceb863b5a8dbb8192b8d2743ca53dd174709b1e4
+RMD160 (R/rvest_0.3.5.tar.gz) = 4164ffb4abcadeaeb502151bcf9a89232ff60bee
+SHA512 (R/rvest_0.3.5.tar.gz) = 0e33cbe7287e44c8516acd2dbeaa72ecf63fb1c0253b3b3af7f6ddc3f126894e5f2a1b70e0a03b6f15981c69665bd554bd2ade634a8c2ce16dcac61b3161086b
+Size (R/rvest_0.3.5.tar.gz) = 1129355 bytes
