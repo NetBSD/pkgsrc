@@ -1,0 +1,24 @@
+Comprehensive open-source toolbox for analysing Spatial Point
+Patterns. Focused mainly on two-dimensional point patterns, including
+multitype/marked points, in any spatial region. Also supports
+three-dimensional point patterns, space-time point patterns in any
+number of dimensions, point patterns on a linear network, and patterns
+of other geometrical objects. Supports spatial covariate data such as
+pixel images. Contains over 2000 functions for plotting spatial data,
+exploratory data analysis, model-fitting, simulation, spatial
+sampling, model diagnostics, and formal inference. Many data types and
+exploratory methods are supported.  Formal hypothesis tests of random
+pattern and tests for covariate effects are also supported. Parametric
+models can be fitted to point pattern data using the functions ppm(),
+kppm(), slrm(), dppm() similar to glm(). Types of models include
+Poisson, Gibbs and Cox point processes, Neyman-Scott cluster
+processes, and determinantal point processes. Models may involve
+dependence on covariates, inter-point interaction, cluster formation
+and dependence on marks. Models are fitted by maximum likelihood,
+logistic regression, minimum contrast, and composite likelihood
+methods. A model can be fitted to a list of point patterns (replicated
+point pattern data) using the function mppm(). The model can include
+random effects and fixed effects depending on the experimental design,
+in addition to all the features listed above.  Fitted point process
+models can be simulated, automatically. Formal hypothesis tests of a
+fitted model are supported along with basic tools for model selection.
