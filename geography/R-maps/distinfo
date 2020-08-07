@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/08/07 01:33:30 brook Exp $
+
+SHA1 (R/maps_3.3.0.tar.gz) = a691cc1a4b3e57b52d202c587c7ef80ad0978ed6
+RMD160 (R/maps_3.3.0.tar.gz) = c4249d4f907742c8174a3e34034bc9b41b2e37ab
+SHA512 (R/maps_3.3.0.tar.gz) = 4310748976ab262f818de589d63d5a5b49bc356c5df0651b123124152701e4c2003387a5cb9b5e8b7fbd0ecc8bbe010c707fc86461f152d544451f1fa65ac647
+Size (R/maps_3.3.0.tar.gz) = 2493744 bytes
+SHA1 (patch-src_Makefile.in) = 84a1fb6a431878a567b53a7f7e5b8c4cdc40b00b
