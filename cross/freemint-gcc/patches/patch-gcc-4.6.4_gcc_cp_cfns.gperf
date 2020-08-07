@@ -1,0 +1,22 @@
+$NetBSD: patch-gcc-4.6.4_gcc_cp_cfns.gperf,v 1.1 2020/08/07 14:09:01 mef Exp $
+
+In file included from ../../gcc-4.6.4/gcc/cp/except.c:912:0:
+cfns.gperf: At top level:
+cfns.gperf:101:1: error: 'gnu_inline' attribute present on 'libc_name_p'
+cfns.gperf:26:14: error: but not here
+
+Found patch in Dragonfly DPorts 
+
+
+--- gcc-4.6.4/gcc/cp/cfns.gperf.orig	2020-08-04 21:52:40.968415964 +0000
++++ gcc-4.6.4/gcc/cp/cfns.gperf
+@@ -18,6 +18,9 @@ along with GCC; see the file COPYING3.  
+ <http://www.gnu.org/licenses/>.  */
+ #ifdef __GNUC__
+ __inline
++#ifdef __GNUC_STDC_INLINE__
++__attribute__ ((__gnu_inline__))
++#endif
+ #endif
+ static unsigned int hash (const char *, unsigned int);
+ #ifdef __GNUC__
