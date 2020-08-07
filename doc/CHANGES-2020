@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4335 2020/08/07 08:34:03 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4336 2020/08/07 13:04:19 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6833,3 +6833,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ansible to 2.9.11nb1 [maya 2020-08-07]
 	Updated www/py-pylint-django to 2.3.0 [adam 2020-08-07]
 	Updated net/rsync to 3.2.3 [adam 2020-08-07]
+	Updated devel/meson to 0.55.0nb2 [jperkin 2020-08-07]
