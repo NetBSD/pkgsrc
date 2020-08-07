@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.468 2020/08/06 23:37:21 joerg Exp $
+# $NetBSD: Makefile,v 1.469 2020/08/07 02:39:42 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -103,6 +103,7 @@ SUBDIR+=	R-stabledist
 SUBDIR+=	R-statmod
 SUBDIR+=	R-stringdist
 SUBDIR+=	R-survey
+SUBDIR+=	R-tensor
 SUBDIR+=	R-tensorA
 SUBDIR+=	R-tibble
 SUBDIR+=	R-tidyr
