@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/06 23:52:48 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/07 01:44:55 joerg Exp $
 
 DISTNAME=	sile-0.10.9
 CATEGORIES=	print
@@ -38,7 +38,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
-CONFIGURE_ARGS+=	LUA=${PREFIX}/bin/lua5.3
+CONFIGURE_ARGS+=	LUA=${LUA_INTERPRETER}
 CONFIGURE_ARGS+=	--with-system-luarocks
 
 .include "../../fonts/fontconfig/buildlink3.mk"
