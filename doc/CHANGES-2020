@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4324 2020/08/07 02:53:12 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4325 2020/08/07 02:59:42 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6815,3 +6815,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/R-psych version 1.9.12.31 [brook 2020-08-07]
 	Added math/R-goftest version 1.2.2 [brook 2020-08-07]
 	Added math/R-LearnBayes version 2.15.1 [brook 2020-08-07]
+	Added math/R-nimble version 0.9.0 [brook 2020-08-07]
