@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4347 2020/08/08 17:56:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4348 2020/08/08 18:35:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6845,3 +6845,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/rspamd to 2.5nb2 [wiz 2020-08-08]
 	Updated news/sfeed_curses to 0.9 [leot 2020-08-08]
 	Updated lang/janet to 1.11.3 [nia 2020-08-08]
+	Updated devel/nasm to 2.15.03 [nia 2020-08-08]
