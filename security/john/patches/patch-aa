@@ -1,23 +1,20 @@
-$NetBSD: patch-aa,v 1.9 2014/09/14 13:20:08 shattered Exp $
+$NetBSD: patch-aa,v 1.10 2020/08/08 02:09:01 leot Exp $
 
---- src/Makefile.orig	2013-05-29 23:21:25.000000000 +0000
+Honors user's {C,LD}FLAGS and do not strip.
+
+--- src/Makefile.orig	2019-04-10 16:53:34.000000000 +0000
 +++ src/Makefile
-@@ -28,14 +28,13 @@ OMPFLAGS =
- #OMPFLAGS = -fopenmp -D_FORTIFY_SOURCE=0
+@@ -30,11 +30,11 @@ OMPFLAGS =
+ #OMPFLAGS = -openmp
  # Sun Studio with OpenMP (set the OMP_NUM_THREADS env var at runtime)
  #OMPFLAGS = -xopenmp
--CFLAGS = -c -Wall -Wdeclaration-after-statement -O2 -fomit-frame-pointer $(OMPFLAGS)
-+CFLAGS = -c $(OMPFLAGS)
+-CFLAGS = -c -Wall -O2 -fomit-frame-pointer $(OMPFLAGS)
++CFLAGS += -c -Wall $(OMPFLAGS)
  # CFLAGS for use on the main john.c file only
  CFLAGS_MAIN = $(CFLAGS)
  ASFLAGS = -c $(OMPFLAGS)
 -LDFLAGS = -s $(OMPFLAGS)
--OPT_NORMAL = -funroll-loops
--# Remove the "-Os" if you're using an ancient version of gcc
--OPT_INLINE = -Os -funroll-loops -finline-functions
-+LDFLAGS += -s $(OMPFLAGS)
-+OPT_NORMAL =
-+OPT_INLINE =
- 
- JOHN_OBJS = \
- 	DES_fmt.o DES_std.o DES_bs.o DES_bs_b.o \
++LDFLAGS += $(OMPFLAGS)
+ OPT_NORMAL = -funroll-loops
+ # Remove the "-Os" if you're using an ancient version of gcc
+ OPT_INLINE = -Os -funroll-loops -finline-functions
