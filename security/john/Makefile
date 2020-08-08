@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/08/08 12:42:22 leot Exp $
+# $NetBSD: Makefile,v 1.31 2020/08/08 12:48:56 leot Exp $
 #
 
 DISTNAME=	john-1.9.0
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DIRS=	src
 TEST_TARGET=	check
-
-USE_TOOLS+=	gmake
 
 .include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
