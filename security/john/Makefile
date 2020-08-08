@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/08/08 02:09:01 leot Exp $
+# $NetBSD: Makefile,v 1.30 2020/08/08 12:42:22 leot Exp $
 #
 
 DISTNAME=	john-1.9.0
+PKGREVISION=	1
 CATEGORIES=	security textproc
 MASTER_SITES=	http://www.openwall.com/john/k/
 EXTRACT_SUFX=	.tar.xz
@@ -13,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DIRS=	src
 TEST_TARGET=	check
+
+USE_TOOLS+=	gmake
 
 .include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -71,7 +74,7 @@ BUILD_TARGET=		generic
 MAKE_FLAGS+=	OPT_NORMAL=
 MAKE_FLAGS+=	OPT_INLINE=
 
-INSTALLATION_DIRS=	bin share/john
+INSTALLATION_DIRS=	bin share/john share/doc/john
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -93,6 +96,10 @@ do-install:
 .for i in alnum.chr alpha.chr ascii.chr digits.chr lm_ascii.chr lower.chr \
     lowernum.chr lowerspace.chr upper.chr uppernum.chr password.lst
 	${INSTALL_DATA} ${WRKSRC}/run/${i} ${DESTDIR}${PREFIX}/share/john
+.endfor
+	# documentation
+.for i in CONFIG EXAMPLES FAQ MODES OPTIONS README RULES
+	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/john
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
