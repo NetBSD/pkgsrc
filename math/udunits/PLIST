@@ -1,12 +1,24 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:05:50 joerg Exp $
-bin/udunits
+@comment $NetBSD: PLIST,v 1.6 2020/08/08 21:55:54 brook Exp $
+bin/udunits2
+include/converter.h
 include/udunits.h
-include/udunits.inc
-lib/libudport.a
-lib/libudunits.a
-man/man1/udunits.1
-man/man1/udunitsperl.1
-man/man3/udunits.3
-man/man3/udunits.3f
-man/man3f/udunits.3f
-share/examples/udunits/udunits.dat
+include/udunits2.h
+info/udunits2.info
+info/udunits2lib.info
+info/udunits2prog.info
+lib/libudunits2.la
+share/doc/udunits/CHANGE_LOG
+share/doc/udunits/COPYRIGHT
+share/doc/udunits/README
+share/doc/udunits/udunits2-accepted.xml
+share/doc/udunits/udunits2-base.xml
+share/doc/udunits/udunits2-common.xml
+share/doc/udunits/udunits2-derived.xml
+share/doc/udunits/udunits2-prefixes.xml
+share/doc/udunits/udunits2.xml
+share/udunits/udunits2-accepted.xml
+share/udunits/udunits2-base.xml
+share/udunits/udunits2-common.xml
+share/udunits/udunits2-derived.xml
+share/udunits/udunits2-prefixes.xml
+share/udunits/udunits2.xml
