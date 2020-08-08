@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4340 2020/08/08 02:09:17 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4341 2020/08/08 12:42:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6838,3 +6838,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/font-alias to 1.0.4 [wiz 2020-08-07]
 	Updated fonts/font-misc-ethiopic to 1.0.4 [wiz 2020-08-07]
 	Updated security/john to 1.9.0 [leot 2020-08-08]
+	Updated security/john to 1.9.0nb1 [leot 2020-08-08]
