@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/03/20 11:34:40 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/08/08 21:58:57 nia Exp $
 
-SHA1 (neofetch-7.0.0.tar.gz) = 7a404655690ec87b5acf3b7a2f174394d862a6de
-RMD160 (neofetch-7.0.0.tar.gz) = a778ebd4f808afe5aee41c6bc2125d52a8407652
-SHA512 (neofetch-7.0.0.tar.gz) = 84dde5b34b0defc24ac472efd4354483e0438c5bbed25f1f39cec53eeeee0a7d8f10dcace736b720f0e1dfbe55342ef3f5e866501bc62aee40a09bef90bf13b5
-Size (neofetch-7.0.0.tar.gz) = 90892 bytes
+SHA1 (neofetch-7.1.0.tar.gz) = 7be4b14fc3673968d7a5c46f36b94505ee9ea0e1
+RMD160 (neofetch-7.1.0.tar.gz) = aeca683fbbb77ed3c16e031d70a73da2d4da6b61
+SHA512 (neofetch-7.1.0.tar.gz) = fe1013fb54585c15ba556054478a2c8c503120387e81bd16bfdfbb6f3a188ed4124585540abf43da9209cbbe0d7fb90d50914cd6620137d00f013cfb6954a042
+Size (neofetch-7.1.0.tar.gz) = 95400 bytes
