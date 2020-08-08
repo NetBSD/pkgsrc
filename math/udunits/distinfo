@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 23:33:45 agc Exp $
+$NetBSD: distinfo,v 1.16 2020/08/08 21:55:54 brook Exp $
 
-SHA1 (udunits-1.12.1.tar.Z) = ee37ca61eb1dcf34165b7573cc1645824bd6968d
-RMD160 (udunits-1.12.1.tar.Z) = fb2f0442673ca47d302782c84ce37b8da1e16535
-SHA512 (udunits-1.12.1.tar.Z) = 816e0f43f785029c4e7829712807c62401650801942cdbd4e60ccb5076784c7be8fa37b75ca02877f4f86e2d0e0849ced8a77f2347e7bb6ad57e16346f2e5c09
-Size (udunits-1.12.1.tar.Z) = 365873 bytes
-SHA1 (patch-aa) = 6d98bef47df79538f3ef1fe99c405f854f2e2bda
-SHA1 (patch-ab) = 9a98e048499d38f8dedba6fb1a169e178dbd77ba
-SHA1 (patch-ac) = 370c742a13fc8642b2a1c5260ac84a1d1345c047
-SHA1 (patch-ad) = d48978bd66d9ef691cd9c70b057a7e5d8a802fb6
+SHA1 (udunits-2.2.26.tar.gz) = 714332946db3d71faca228436eb9f024b0f269f4
+RMD160 (udunits-2.2.26.tar.gz) = 275c5f5f2a4df94eb357659b6d9160de74bfc8f7
+SHA512 (udunits-2.2.26.tar.gz) = 9e5320454646458ac40ba0855b6b8e12f7edbdb4b9a6c687a4c38ad07400e2e0c0f7968069885f83eb73da64886e1c6dd1e462ebc23205df849c3a460cedb640
+Size (udunits-2.2.26.tar.gz) = 1227596 bytes
