@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/08 23:19:05 brook Exp $
+
+SHA1 (R/rgdal_1.4-8.tar.gz) = 376e38a9a900efae9d2442aad78e1d98fad89607
+RMD160 (R/rgdal_1.4-8.tar.gz) = d6f15704417c7ddf79bb1b15ec7ef4194c1e02d0
+SHA512 (R/rgdal_1.4-8.tar.gz) = c3d6ea97f21995494bb4f0e4cbbb36ac16ae7a9b12768addb3821fbaee814cc66d6f219bcbea10378ec817d8e664fdc30df007479d18d60bbb7a39f0d46a986a
+Size (R/rgdal_1.4-8.tar.gz) = 1698902 bytes
