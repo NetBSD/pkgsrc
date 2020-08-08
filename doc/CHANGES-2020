@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4345 2020/08/08 14:35:49 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4346 2020/08/08 15:41:42 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6843,3 +6843,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/php74 to 7.4.9 [taca 2020-08-08]
 	Updated lang/php72 to 7.2.33 [taca 2020-08-08]
 	Updated mail/rspamd to 2.5nb2 [wiz 2020-08-08]
+	Updated news/sfeed_curses to 0.9 [leot 2020-08-08]
