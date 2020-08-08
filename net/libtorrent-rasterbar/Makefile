@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2020/06/03 16:23:10 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/08/08 21:24:25 nia Exp $
 
-DISTNAME=	libtorrent-rasterbar-1.2.7
+DISTNAME=	libtorrent-rasterbar-1.2.8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arvidn/}
 GITHUB_PROJECT=	libtorrent
-GITHUB_RELEASE=	libtorrent_${PKGVERSION_NOREV:S/./_/g}
+GITHUB_RELEASE=	libtorrent-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.libtorrent.org/
