@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.3 2018/12/18 09:24:33 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2020/08/08 18:35:10 nia Exp $
 
 Use correct tools.
 
---- Makefile.in.orig	2018-11-07 21:44:06.000000000 +0000
+--- Makefile.in.orig	2020-07-18 01:04:39.000000000 +0000
 +++ Makefile.in
-@@ -36,7 +36,7 @@ AR		= @AR@
+@@ -37,7 +37,7 @@ AR		= @AR@
  RANLIB		= @RANLIB@
  STRIP		= @STRIP@
  
@@ -13,22 +13,3 @@ Use correct tools.
  PERLFLAGS	= -I$(srcdir)/perllib -I$(srcdir)
  RUNPERL         = $(PERL) $(PERLFLAGS)
  
-@@ -344,12 +344,12 @@ nsis: nsis/nasm.nsi nsis/arch.nsh nsis/v
- manpages: nasm.1 ndisasm.1
- 
- install: nasm$(X) ndisasm$(X)
--	$(MKDIR) $(DESTDIR)$(bindir)
--	$(INSTALL_PROGRAM) nasm$(X) $(DESTDIR)$(bindir)/nasm$(X)
--	$(INSTALL_PROGRAM) ndisasm$(X) $(DESTDIR)$(bindir)/ndisasm$(X)
--	$(MKDIR) $(DESTDIR)$(mandir)/man1
--	$(INSTALL_DATA) $(srcdir)/nasm.1 $(DESTDIR)$(mandir)/man1/nasm.1
--	$(INSTALL_DATA) $(srcdir)/ndisasm.1 $(DESTDIR)$(mandir)/man1/ndisasm.1
-+	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
-+	$(BSD_INSTALL_PROGRAM) nasm$(X) $(DESTDIR)$(bindir)/nasm$(X)
-+	$(BSD_INSTALL_PROGRAM) ndisasm$(X) $(DESTDIR)$(bindir)/ndisasm$(X)
-+	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
-+	$(BSD_INSTALL_MAN) $(srcdir)/nasm.1 $(DESTDIR)$(mandir)/man1/nasm.1
-+	$(BSD_INSTALL_MAN) $(srcdir)/ndisasm.1 $(DESTDIR)$(mandir)/man1/ndisasm.1
- 
- clean:
- 	for d in . $(SUBDIRS) $(XSUBDIRS); do \

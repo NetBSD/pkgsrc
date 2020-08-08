@@ -1,12 +1,12 @@
-$NetBSD: patch-doc_Makefile.in,v 1.3 2018/12/18 09:24:33 adam Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.4 2020/08/08 18:35:10 nia Exp $
 
 Use correct paths and tools.
 Do not build nasmdoc.pdf.
 Avoid cp -u, it is not portable.
 
---- doc/Makefile.in.orig	2018-11-07 21:44:06.000000000 +0000
+--- doc/Makefile.in.orig	2020-07-18 01:04:07.000000000 +0000
 +++ doc/Makefile.in
-@@ -18,7 +18,7 @@ INSTALL		= @INSTALL@
+@@ -20,7 +20,7 @@ INSTALL		= @INSTALL@
  INSTALL_PROGRAM	= @INSTALL_PROGRAM@
  INSTALL_DATA	= @INSTALL_DATA@
  
@@ -15,33 +15,32 @@ Avoid cp -u, it is not portable.
  
  PDFOPT		= @PDFOPT@
  
-@@ -32,7 +32,7 @@ CP_UF		= cp -ufv
+@@ -40,8 +40,8 @@ XZFILES         = @XZFILES@
  HTMLAUX		= nasmdoc.css local.css nasmlogw.png
  
- SRCS		= nasmdoc.src inslist.src changes.src version.src
--OUT		= html nasmdoc.txt nasmdoc.pdf
-+OUT		= html nasmdoc.txt
+ SRCS		= nasmdoc.src inslist.src changes.src warnings.src version.src
+-OUT		= html nasmdoc.txt nasmdoc.pdf $(XZFILES)
+-XZOUT           = nasmdoc.pdf.xz
++OUT		= html nasmdoc.txt $(XZFILES)
++XZOUT           =
  
  .SUFFIXES:
  .SUFFIXES: .pfa .ph
-@@ -45,7 +45,7 @@ inslist.src: inslist.pl ../x86/insns.dat
- .PHONY: html
+@@ -57,7 +57,7 @@ inslist.src: inslist.pl ../x86/insns.dat
+ 
  html: $(HTMLAUX)
- 	$(MKDIR) -p html
+ 	$(MKDIR_P) html
 -	for f in $(HTMLAUX); do $(CP_UF) "$(srcdir)/$$f" html/; done
 +	for f in $(HTMLAUX); do $(CP_F) "$(srcdir)/$$f" html/; done
  	$(MAKE) html/nasmdoc0.html
  
  RDSRC = $(PERL) $(srcdir)/rdsrc.pl -I$(srcdir)/
-@@ -84,7 +84,7 @@ spotless: clean
- 	-$(RM_F) *.hlp nasmdoc.txt *.inf *.pdf *.dvi
- 
- install: all
--	$(MKDIR) -p $(DESTDIR)$(htmldir)
--	$(INSTALL_DATA) html/* $(DESTDIR)$(htmldir)
--	$(MKDIR) -p $(DESTDIR)$(docdir)
+@@ -116,7 +116,7 @@ install: all
+ 	$(MKDIR_P) $(DESTDIR)$(htmldir)
+ 	$(INSTALL_DATA) html/* $(DESTDIR)$(htmldir)
+ 	$(MKDIR_P) $(DESTDIR)$(docdir)
 -	$(INSTALL_DATA) nasmdoc.pdf nasmdoc.txt $(DESTDIR)$(docdir)
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(htmldir)
-+	$(BSD_INSTALL_DATA) html/* $(DESTDIR)$(htmldir)
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(docdir)
-+	$(BSD_INSTALL_DATA) nasmdoc.txt $(DESTDIR)$(docdir)
++	$(INSTALL_DATA) nasmdoc.txt $(DESTDIR)$(docdir)
+ 
+ #
+ # Dummy rules that changes make behavior
