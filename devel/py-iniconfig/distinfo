@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/08/05 13:54:15 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/08/08 18:09:55 joerg Exp $
 
 SHA1 (iniconfig-1.0.1.tar.gz) = 37bae0d794fb63afc8ed588d140d111224a75f54
 RMD160 (iniconfig-1.0.1.tar.gz) = 7c44c7adfc7b5af44e9db1ff1be80ce9d21cb2ee
 SHA512 (iniconfig-1.0.1.tar.gz) = 2a6302d117cdba31cf51b418eb99df05988e252dc4155ad02526431d1dfc388839b533c3dac276254633cc86ed2b378af6bbb19998dd517a33163ad4957601a9
 Size (iniconfig-1.0.1.tar.gz) = 7836 bytes
+SHA1 (patch-setup.py) = 3d6bf4ccca1d04b2cff74fc0561d7e174b752904
