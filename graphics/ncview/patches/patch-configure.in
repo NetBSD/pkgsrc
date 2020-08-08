@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2020/08/08 22:18:27 brook Exp $
+
+Using == with test is not portable; replace with =.
+
+--- configure.in.orig	2020-08-07 15:08:28.220236050 +0000
++++ configure.in
+@@ -39,7 +39,7 @@ AC_CONFIG_HEADER(config.h)
+ AM_INIT_AUTOMAKE([ncview],[ncview_version])
+ 
+ AC_PATH_X
+-if test "x$no_x" == "xyes"; then
++if test "x$no_x" = "xyes"; then
+ 	echo "------------------------------------------------------------------------------------"
+ 	echo "Error, the X libraries and development headers must be installed for ncview to work!"
+ 	echo "------------------------------------------------------------------------------------"
