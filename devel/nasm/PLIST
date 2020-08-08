@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/05/18 21:44:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/08/08 18:35:10 nia Exp $
 bin/ldrdf
 bin/nasm
 bin/ndisasm
@@ -25,6 +25,7 @@ share/doc/nasm/html/local.css
 share/doc/nasm/html/nasmdo10.html
 share/doc/nasm/html/nasmdo11.html
 share/doc/nasm/html/nasmdo12.html
+share/doc/nasm/html/nasmdo13.html
 share/doc/nasm/html/nasmdoc.css
 share/doc/nasm/html/nasmdoc0.html
 share/doc/nasm/html/nasmdoc1.html
