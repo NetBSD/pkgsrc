@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/22 06:57:54 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/08 21:18:30 schmonz Exp $
 
 DISTNAME=	wildmidi-0.4.3
 PKGNAME=	lib${DISTNAME}
@@ -24,7 +24,12 @@ SUBST_MESSAGE.man=	Fixing man page installation path.
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Darwin"
+CMAKE_ARGS+=	-DWANT_OPENAL=ON
+.else
 CMAKE_ARGS+=	-DWANT_OPENAL=OFF
+.endif
+
 .if ${OPSYS} == "Linux"
 CMAKE_ARGS+=	-DWANT_ALSA=ON
 .  include "../../audio/alsa-lib/buildlink3.mk"

@@ -1,0 +1,24 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2020/08/08 21:18:30 schmonz Exp $
+
+Don't build so specially for macOS.
+
+--- src/CMakeLists.txt.orig	2020-08-08 14:29:25.000000000 +0000
++++ src/CMakeLists.txt
+@@ -247,7 +247,7 @@ SET(WILDMIDILIB_LIBDIR "${WILDMIDILIB_IN
+ CONFIGURE_FILE("wildmidi.pc.in" "${CMAKE_BINARY_DIR}/wildmidi.pc" @ONLY)
+ 
+ # install target (*nix OSes)
+-IF (UNIX AND NOT APPLE)
++IF (UNIX)
+     # install our libraries
+     IF (WANT_STATIC)
+         INSTALL(TARGETS libwildmidi_static DESTINATION ${WILDMIDILIB_INSTALLDIR})
+@@ -274,7 +274,7 @@ IF (UNIX AND NOT APPLE)
+     # install supporting man pages and headers
+     INSTALL(FILES ${CMAKE_SOURCE_DIR}/include/wildmidi_lib.h DESTINATION include)
+     INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/docs/man/ DESTINATION man)
+-ENDIF (UNIX AND NOT APPLE)
++ENDIF (UNIX)
+ 
+ # install target (Windows: MinGW or MinGW-w64)
+ IF (WIN32 AND CMAKE_COMPILER_IS_MINGW)

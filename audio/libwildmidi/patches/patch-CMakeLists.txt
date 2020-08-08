@@ -1,0 +1,52 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/08/08 21:18:30 schmonz Exp $
+
+Don't build so specially for macOS.
+
+--- CMakeLists.txt.orig	2018-11-24 08:55:50.000000000 +0000
++++ CMakeLists.txt
+@@ -13,7 +13,7 @@ SET(SOVERSION 2)
+ SET(VERSION 2.1.0)
+ 
+ # Find Macros
+-SET(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
++SET (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+ 
+ INCLUDE(CMakeDependentOption)
+ INCLUDE(CheckCCompilerFlag)
+@@ -44,7 +44,7 @@ OPTION(WANT_OSX_DEPLOYMENT "OSX Deployme
+ IF (WIN32 AND MSVC)
+     OPTION(WANT_MP_BUILD "Build with Multiple Processes (/MP)" OFF)
+ ENDIF ()
+-IF (UNIX AND NOT APPLE AND NOT RISCOS)
++IF (UNIX AND NOT RISCOS)
+     SET(WILDMIDI_CFG "/etc/wildmidi/wildmidi.cfg" CACHE STRING "default config location")
+ ELSE ()
+     SET(WILDMIDI_CFG "wildmidi.cfg" CACHE STRING "default config location")
+@@ -152,6 +152,7 @@ CHECK_C_SOURCE_COMPILES("static __inline
+ # we must not have any unresolved symbols:
+ if (APPLE)
+     SET(EXTRA_LDFLAGS "-Wl,-undefined,error")
++    SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+ ELSE()
+     SET(OLD_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS}")
+     SET(CMAKE_REQUIRED_FLAGS "${OLD_REQUIRED_FLAGS} -Wl,--no-undefined")
+@@ -284,19 +285,11 @@ IF (AMIGA OR AROS)
+ ENDIF ()
+ 
+ IF (APPLE)
+-    SET(APP_BUNDLE_NAME "${CMAKE_PROJECT_NAME}.app")
+-    SET(APP_BUNDLE_DIR "${wildmidi_BINARY_DIR}/${APP_BUNDLE_NAME}")
+     IF (WANT_OSX_DEPLOYMENT)
+         SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+     ENDIF ()
+ ENDIF (APPLE)
+ 
+-IF (APPLE)
+-    SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${APP_BUNDLE_DIR}/Contents/MacOS")
+-ELSE (APPLE)
+-    SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${wildmidi_BINARY_DIR}")
+-ENDIF (APPLE)
+-
+ # Setup up our config file
+ CONFIGURE_FILE("${CMAKE_SOURCE_DIR}/include/config.h.cmake" "${CMAKE_BINARY_DIR}/include/config.h")
+ 
