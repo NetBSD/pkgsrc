@@ -1,11 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 2014/09/14 13:20:08 shattered Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/08/08 02:09:01 leot Exp $
 bin/john
 bin/mailer
 bin/unafs
 bin/unique
 bin/unshadow
+share/john/alnum.chr
+share/john/alpha.chr
 share/john/ascii.chr
 share/john/digits.chr
 share/john/john.conf
 share/john/lm_ascii.chr
+share/john/lower.chr
+share/john/lowernum.chr
+share/john/lowerspace.chr
 share/john/password.lst
+share/john/upper.chr
+share/john/uppernum.chr

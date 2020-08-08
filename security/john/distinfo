@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.15 2015/11/04 01:17:47 agc Exp $
+$NetBSD: distinfo,v 1.16 2020/08/08 02:09:01 leot Exp $
 
-SHA1 (john-1.8.0.tar.xz) = 423901b9b281c26656234ee31b362f1c0c2b680c
-RMD160 (john-1.8.0.tar.xz) = fda9971cd78bdf2b5154586efde2504c9a5974a4
-SHA512 (john-1.8.0.tar.xz) = e2820ecabd7ea4c7404c3d40f064994d0f5746b093c859a58fbf2588492ebcef411d9f3088c8e8ee726284ead969e26fdae834cdae3eb2d32408fc79ed906543
-Size (john-1.8.0.tar.xz) = 4468704 bytes
-SHA1 (patch-aa) = 15ba3d70444435c6705f189b32af109e1f211ff4
-SHA1 (patch-ab) = 4f8c9e1bba14f64b651c6d08337f004a3e278e44
+SHA1 (john-1.9.0.tar.xz) = 5e15e41adb96768cb1ea05af1b3128059df842df
+RMD160 (john-1.9.0.tar.xz) = 16114db2fe5004ce4044a2d56b46ef209b941dc4
+SHA512 (john-1.9.0.tar.xz) = 26e9a245e9f050344ae8c3320e1e24dad6bc2b73e99cc041a50c2d124b2c898c93d048727451ab8a2ba1c8aa4d8d462a8c0c9fea7de39f3479a0c170a5e9ad60
+Size (john-1.9.0.tar.xz) = 8944932 bytes
+SHA1 (patch-aa) = 8bc111b75bb848f7373f339c77075886e0c54098
+SHA1 (patch-ab) = 7cce81d7692b556ee35b90912192ae48c5b98cc7
+SHA1 (patch-src_logger.c) = e97548fe857ee58da21cab2d763155360b70a964
