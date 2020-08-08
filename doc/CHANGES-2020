@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4342 2020/08/08 13:30:37 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4343 2020/08/08 13:32:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6840,3 +6840,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/john to 1.9.0 [leot 2020-08-08]
 	Updated security/john to 1.9.0nb1 [leot 2020-08-08]
 	Updated lang/php73 to 7.3.21 [taca 2020-08-08]
+	Updated lang/php74 to 7.4.9 [taca 2020-08-08]
