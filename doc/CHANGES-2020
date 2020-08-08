@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4351 2020/08/08 19:24:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4352 2020/08/08 19:25:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6849,3 +6849,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/harfbuzz to 2.7.0 [nia 2020-08-08]
 	Updated devel/rgbds to 0.4.1 [nia 2020-08-08]
 	Updated emulators/sameboy to 0.13.5 [nia 2020-08-08]
+	Updated emulators/libretro-sameboy to 0.13.5 [nia 2020-08-08]
