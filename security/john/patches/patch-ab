@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.2 2010/12/13 10:32:35 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2020/08/08 02:09:01 leot Exp $
 
---- src/params.h.orig	2010-06-14 02:38:55.000000000 +0000
+Use @PREFIX@ instead of hardcoding /usr.
+
+--- src/params.h.orig	2019-04-12 01:00:35.000000000 +0000
 +++ src/params.h
-@@ -51,15 +51,15 @@
+@@ -75,15 +75,15 @@
   * notes above.
   */
  #ifndef JOHN_SYSTEMWIDE
@@ -21,18 +23,19 @@ $NetBSD: patch-ab,v 1.2 2010/12/13 10:32:35 wiz Exp $
  #endif
  #define JOHN_PRIVATE_HOME		"~/.john"
  #endif
-@@ -103,8 +103,8 @@
- /*
+@@ -136,9 +136,9 @@
   * File names.
   */
+ #ifdef __DJGPP__
+-#define CFG_FULL_NAME			"$JOHN/john.ini"
++#define CFG_FULL_NAME			"@PREFIX@/share/john/john.ini"
+ #else
 -#define CFG_FULL_NAME			"$JOHN/john.conf"
--#define CFG_ALT_NAME			"$JOHN/john.ini"
-+#define CFG_FULL_NAME			"@PREFIX@/share/john/john.conf"
-+#define CFG_ALT_NAME			"@PREFIX@/share/john/john.ini"
++#define CFG_FULL_NAME			"@PREFIX@/share/john/john.ini"
+ #endif
  #if JOHN_SYSTEMWIDE
- #define CFG_PRIVATE_FULL_NAME		JOHN_PRIVATE_HOME "/john.conf"
- #define CFG_PRIVATE_ALT_NAME		JOHN_PRIVATE_HOME "/john.ini"
-@@ -118,7 +118,7 @@
+ #ifdef __DJGPP__
+@@ -156,7 +156,7 @@
  #endif
  #define LOG_SUFFIX			".log"
  #define RECOVERY_SUFFIX			".rec"
