@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2020/06/02 08:24:15 adam Exp $
+# $NetBSD: Makefile,v 1.68 2020/08/08 14:35:37 wiz Exp $
 
 DISTNAME=	rspamd-2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
@@ -70,6 +70,7 @@ CMAKE_ARGS.SunOS+=	-DHAVE_INOTIFY_INIT=NO
 
 REPLACE_PERL+=	utils/rspamd_stats.pl
 
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/maps.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/modules.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/scores.d
 
