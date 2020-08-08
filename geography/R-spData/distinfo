@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/08 23:35:17 brook Exp $
+
+SHA1 (R/spData_0.3.3.tar.gz) = f69a27c85c0d8c4ad237b77163641ff563b28a8b
+RMD160 (R/spData_0.3.3.tar.gz) = 12cf2914839b8d952104de8b68ad76ac1dd96611
+SHA512 (R/spData_0.3.3.tar.gz) = 608dc84576520907a0f925fe857dbab923b53ebfeb051e853f416b358b8e67c0694fcd40bf7aeb9c70dbd27b6847b8b7b991f66928864864350eed9cb498a58c
+Size (R/spData_0.3.3.tar.gz) = 3484033 bytes
