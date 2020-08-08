@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4356 2020/08/08 21:59:07 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4357 2020/08/08 22:02:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6854,3 +6854,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/dosbox-x to 0.83.4 [nia 2020-08-08]
 	Updated math/udunits to 2.2.26 [brook 2020-08-08]
 	Updated sysutils/neofetch to 7.1.0 [nia 2020-08-08]
+	Updated wm/i3 to 4.18.2 [nia 2020-08-08]
