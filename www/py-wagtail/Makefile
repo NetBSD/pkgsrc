@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2020/08/05 03:27:13 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/08 23:48:33 joerg Exp $
 
 DISTNAME=	wagtail-2.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wagtail/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wagtail.io/
 COMMENT=	Django-based Content Management System
 LICENSE=	modified-bsd
-
-GITHUB_PROJECT=	wagtail
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-django>=2<3.1:../../www/py-django2
 DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=5.0<6.0:../../www/py-django-modelcluster
