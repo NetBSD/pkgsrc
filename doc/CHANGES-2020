@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4353 2020/08/08 21:24:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4354 2020/08/08 21:37:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6851,3 +6851,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/sameboy to 0.13.5 [nia 2020-08-08]
 	Updated emulators/libretro-sameboy to 0.13.5 [nia 2020-08-08]
 	Updated net/libtorrent-rasterbar to 1.2.8 [nia 2020-08-08]
+	Updated emulators/dosbox-x to 0.83.4 [nia 2020-08-08]
