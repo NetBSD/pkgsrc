@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19990 2020/08/08 22:02:47 nia Exp $
+$NetBSD: TODO,v 1.19991 2020/08/08 22:54:48 brook Exp $
 
 Suggested new packages
 ======================
@@ -860,7 +860,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
-	o ncview-2.1.6
 	o netbt-hcidump-5.37
 	o netramet-50
 	o newmail-1.0.2
