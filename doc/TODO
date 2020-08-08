@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19989 2020/08/08 21:57:42 brook Exp $
+$NetBSD: TODO,v 1.19990 2020/08/08 22:02:47 nia Exp $
 
 Suggested new packages
 ======================
@@ -697,7 +697,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o html2wml-0.4.11
 	o http_load-20140814
 	o hugo-0.57.1 [needs gocloud.dev]
-	o i3-4.18.2
 	o icbirc-2.0
 	o icdprog-0.5
 	o icedtea-web-1.6.2
