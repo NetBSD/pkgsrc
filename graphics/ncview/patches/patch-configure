@@ -1,0 +1,50 @@
+$NetBSD: patch-configure,v 1.1 2020/08/08 22:18:27 brook Exp $
+
+Using == with test is not portable; replace with =.
+
+Use pkg-config to define compiler flags for libpng.
+
+--- configure.orig	2020-08-07 23:28:40.807171000 +0000
++++ configure
+@@ -4218,7 +4218,7 @@ else
+ $as_echo "libraries $x_libraries, headers $x_includes" >&6; }
+ fi
+ 
+-if test "x$no_x" == "xyes"; then
++if test "x$no_x" = "xyes"; then
+ 	echo "------------------------------------------------------------------------------------"
+ 	echo "Error, the X libraries and development headers must be installed for ncview to work!"
+ 	echo "------------------------------------------------------------------------------------"
+@@ -5496,6 +5496,10 @@ fi
+ 
+ 
+ fi
++if test x$PNG_INCDIR = x; then
++	PNG_INC_PRESENT=yes
++        PNG_CPPFLAGS=`pkg-config --cflags-only-I libpng`
++else
+ PNG_INC_PRESENT=no
+ if test x$PNG_INCDIR != x; then
+ 	PNG_INC_PRESENT=yes
+@@ -5504,6 +5508,7 @@ else
+ 	echo "** Could not find the png.h file, so -frames support will not be included  **"
+ 	echo "** Install the PNG library (and development headers) to fix this           **"
+ fi
++fi
+ PNG_LIBNAME=libpng.so
+ 
+ # Check whether --with-png_libdir was given.
+@@ -5708,6 +5713,13 @@ if test $PNG_INC_PRESENT = yes; then
+ 
+ $as_echo "#define HAVE_PNG 1" >>confdefs.h
+ 
++	else
++		PNG_PRESENT=yes
++		PNG_LIBS=`pkg-config --libs-only-l libpng`
++		PNG_LDFLAGS=`pkg-config --libs libpng`
++
++$as_echo "#define HAVE_PNG 1" >>confdefs.h
++
+ 	fi
+ fi
+ 
