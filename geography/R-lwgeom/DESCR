@@ -1,0 +1,3 @@
+Access to selected functions found in 'liblwgeom'
+<https://github.com/postgis/postgis/tree/master/liblwgeom>, the
+light-weight geometry library used by 'PostGIS' <http://postgis.net/>.
