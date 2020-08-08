@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 21:34:10 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/08/08 22:18:27 brook Exp $
 
-SHA1 (ncview-1.92d.tar.gz) = 259b7897dfbd4fa4835c9cc5dcbead5796659458
-RMD160 (ncview-1.92d.tar.gz) = 8e5f2e2ac6de9eded47f7d83de9087142588d412
-SHA512 (ncview-1.92d.tar.gz) = 71dc6e805779003119bec4a3858178aeb3dee6d42230ac98835365e394d1582801e2076ff044415b59cee934fe9038c491c4c0aeaa9b8ac2e27887762db7613c
-Size (ncview-1.92d.tar.gz) = 833480 bytes
-SHA1 (patch-aa) = 77ce989232b1a926e7cdfbbbe9e0e22f653bfb23
-SHA1 (patch-ab) = 1294a99091e6d0aca8f3c13d813905bfb23e14c7
+SHA1 (ncview-2.1.7.tar.gz) = fa94e608ba0fe81f5357e5d34dedfc1351847c81
+RMD160 (ncview-2.1.7.tar.gz) = 3862bad211f468d121c02a99e72b34bf81bb9cb7
+SHA512 (ncview-2.1.7.tar.gz) = c39b26e8453f91865e8483abc6ee25d804150dd03ad21469c0e22a60b41f182c108678e22eb86652b66e8ca0997b5f533b2542593f793d673eeeab73b81eaef7
+Size (ncview-2.1.7.tar.gz) = 1280624 bytes
+SHA1 (patch-configure) = 66bcf1b450f8744903ad46a271b0218e19790100
+SHA1 (patch-configure.in) = e3a5695725938f8ece94cc154ced8259f8e2bee8
+SHA1 (patch-m4macros_png.m4) = ddfe55f8a77af60cca5f5908c25ad6ed904581f5
