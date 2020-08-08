@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/08/08 22:52:57 brook Exp $
+
+SHA1 (R/units_0.6-5.tar.gz) = 970efb2a7afbb7693d1d2d1272adc562c46fd28f
+RMD160 (R/units_0.6-5.tar.gz) = b006936f0f9c3b531ed6a4ff1eabf37fcf80e924
+SHA512 (R/units_0.6-5.tar.gz) = 729af00ced12e3394e6742e1db26469170969310fa9dd6c4cb2a9544382cd46575850cf716aa80992dd4634fc62118a47555a2b62fc20c1e84223e7e438209cd
+Size (R/units_0.6-5.tar.gz) = 959970 bytes
+SHA1 (patch-configure) = f57f2b7187678ba9f0973e2c90dd08d1fe4e752f
+SHA1 (patch-configure.ac) = 6f6dab407646bda4fc25abca4af1c730146a79be

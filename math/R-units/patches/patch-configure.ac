@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/08/08 22:52:57 brook Exp $
+
+Use of == with test is not portable; use = instead.
+
+--- configure.ac.orig	2018-06-08 13:06:37.000000000 +0000
++++ configure.ac
+@@ -45,7 +45,7 @@ else
+ fi
+ 
+ AC_CHECK_LIB(expat, XML_ParserCreate, [],[], ${LIBS})
+-if test "${ac_cv_lib_expat_XML_ParserCreate}" == yes; then
++if test "${ac_cv_lib_expat_XML_ParserCreate}" = yes; then
+    LIBS="${LIBS} -lexpat"
+ fi
+ 
