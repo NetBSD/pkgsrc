@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2020/05/22 17:45:24 rillig Exp $
+# $NetBSD: Makefile,v 1.80 2020/08/09 23:12:13 joerg Exp $
 
 DISTNAME=	pari-2.7.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	http://pari.math.u-bordeaux.fr/pub/pari/unix/
 
@@ -16,8 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES+=		c c++
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
-CONFIGURE_ENV+=		PERL5=${PERL5:Q}
+CONFIGURE_ENV+=		PERL5=${PERL5}
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure

@@ -1,6 +1,6 @@
-$NetBSD: patch-config_Makefile.SH,v 1.2 2016/05/07 10:03:25 joerg Exp $
+$NetBSD: patch-config_Makefile.SH,v 1.3 2020/08/09 23:12:13 joerg Exp $
 
---- config/Makefile.SH.orig	2014-12-13 20:52:52.000000000 +0000
+--- config/Makefile.SH.orig	2016-02-25 14:12:36.000000000 +0000
 +++ config/Makefile.SH
 @@ -52,8 +52,6 @@ case "$osname" in
  	dlld_ignore=- ;;

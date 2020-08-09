@@ -1,4 +1,4 @@
-$NetBSD: patch-config_get__PATH,v 1.1 2016/03/03 13:28:22 wiz Exp $
+$NetBSD: patch-config_get__PATH,v 1.2 2020/08/09 23:12:13 joerg Exp $
 
 --- config/get_PATH.orig	2011-09-22 20:02:11.000000000 +0000
 +++ config/get_PATH
@@ -35,7 +35,7 @@ $NetBSD: patch-config_get__PATH,v 1.1 2016/03/03 13:28:22 wiz Exp $
 -  /usr/libexec\
 -  /usr/openwin/bin\
 -  /usr/local/bin\
-+  $LOCALBASE/bin\
++  $PREFIX/bin\
  "
  # /usr/openwin/bin added for xmkmf
  
