@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4388 2020/08/09 15:32:05 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4389 2020/08/09 15:33:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6886,3 +6886,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/libmicrohttpd to 0.9.71 [nia 2020-08-09]
 	Added geography/R-rnaturalearthdata version 0.1.0 [brook 2020-08-09]
 	Added geography/R-rnaturalearth version 0.1.0 [brook 2020-08-09]
+	Updated devel/libidn to 1.36 [nia 2020-08-09]
