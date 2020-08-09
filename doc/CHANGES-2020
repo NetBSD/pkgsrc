@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4378 2020/08/09 15:14:30 brook Exp $
+$NetBSD: CHANGES-2020,v 1.4379 2020/08/09 15:17:06 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6876,3 +6876,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-backports to 3.18.1 [taca 2020-08-09]
 	Updated devel/ruby-bindata to 2.4.8 [taca 2020-08-09]
 	Added geography/R-ggspatial version 1.0.3 [brook 2020-08-09]
+	Added geography/R-osmar version 1.1.7 [brook 2020-08-09]
