@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2020/08/03 22:38:22 tnn Exp $
+# $NetBSD: Makefile,v 1.218 2020/08/09 16:04:44 rillig Exp $
 
 DISTNAME=	graphviz-2.44.1
 CATEGORIES=	graphics
@@ -19,6 +19,9 @@ PRIVILEGED_STAGES+=	clean
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake bison flex groff pkg-config
+# GNU make is needed since BSD Make does not know $< in explicit rules,
+# such as used by lib/cdt/Makefile.am.
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--disable-java
