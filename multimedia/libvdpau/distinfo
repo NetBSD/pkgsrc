@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2019/11/27 13:36:50 nia Exp $
+$NetBSD: distinfo,v 1.10 2020/08/09 15:40:32 nia Exp $
 
-SHA1 (libvdpau-1.3.tar.bz2) = c8a3422e6a04ac23f8bfd4185b7b6b0903b627e9
-RMD160 (libvdpau-1.3.tar.bz2) = fa01066d6fbda721c1306ac581cdb3c55d9f41e5
-SHA512 (libvdpau-1.3.tar.bz2) = c06c23062816e8b207d38d9d53df43a1b193bb9836b48bd6d79a63d76522e87d383c446285b9877fe9c99faa0d290da8a49ccbb58eefa138cc38d0929a8e1330
-Size (libvdpau-1.3.tar.bz2) = 139009 bytes
+SHA1 (libvdpau-1.4.tar.bz2) = e0c38f4342ae4848dab48c7b6c6770a73c4374ad
+RMD160 (libvdpau-1.4.tar.bz2) = 31f64c7a970a83934537aba28889f4bf5590da1b
+SHA512 (libvdpau-1.4.tar.bz2) = 68f502f53f4a95c9af571bd5a3f5048dd1afe30d7576f7e80751c7f29450ef8cb226c1281562b616079d6c177830ec67391d0fae33348a4627ca8c113990cd01
+Size (libvdpau-1.4.tar.bz2) = 139504 bytes
 SHA1 (patch-meson__options.txt) = d1333ab76b8886f764012b07b29ba75b4e488d02
 SHA1 (patch-src_meson.build) = 506ddaa08933957f1c0cb8f09a9f7d758c239e5f
