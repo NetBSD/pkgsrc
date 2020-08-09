@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/07/11 16:15:08 nia Exp $
+# $NetBSD: Makefile,v 1.29 2020/08/09 15:51:07 brook Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
@@ -7,6 +7,7 @@ SUBDIR+=	R-promises
 SUBDIR+=	clusterit
 SUBDIR+=	dqs
 SUBDIR+=	dsh
+SUBDIR+=	fastflow
 SUBDIR+=	ganglia-monitor-core
 SUBDIR+=	gridscheduler
 SUBDIR+=	hwloc
