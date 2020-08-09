@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2020/08/09 17:25:37 nia Exp $
+
+Install config files to examples.
+
+--- Makefile.orig	2018-11-16 08:12:24.000000000 +0000
++++ Makefile
+@@ -108,8 +108,8 @@ install: all
+ 	install -m644 luakit.so $(DESTDIR)$(PREFIX)/lib/luakit/luakit.so
+ 	install -d $(DESTDIR)$(PREFIX)/bin
+ 	install luakit $(DESTDIR)$(PREFIX)/bin/luakit
+-	install -d $(DESTDIR)$(XDGPREFIX)/luakit/
+-	install -m644 config/*.lua $(DESTDIR)$(XDGPREFIX)/luakit/
++	install -d $(DESTDIR)$(PREFIX)/share/examples/luakit/
++	install -m644 config/*.lua $(DESTDIR)$(PREFIX)/share/examples/luakit/
+ 	install -d $(DESTDIR)$(PIXMAPDIR)
+ 	install -m644 extras/luakit.png $(DESTDIR)$(PIXMAPDIR)
+ 	install -d $(DESTDIR)$(APPDIR)
