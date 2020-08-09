@@ -1,0 +1,5 @@
+High Resolution World Vector Map Data from Natural Earth used in rnaturalearth.
+
+Facilitates mapping by making natural earth map data from
+http://www.naturalearthdata.com/ more easily available to R
+users. Focuses on vector data.
