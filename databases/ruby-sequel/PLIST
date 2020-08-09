@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2020/06/07 06:21:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.80 2020/08/09 15:07:20 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -54,6 +54,8 @@ ${GEM_LIBDIR}/doc/release_notes/5.30.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.31.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.32.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.33.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.34.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.35.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
@@ -279,6 +281,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/insert_conflict.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/insert_returning_select.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/instance_filters.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/instance_hooks.rb
+${GEM_LIBDIR}/lib/sequel/plugins/instance_specific_default.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/inverted_subsets.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/json_serializer.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/lazy_attributes.rb
