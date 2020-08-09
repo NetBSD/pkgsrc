@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4374 2020/08/09 15:07:25 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4375 2020/08/09 15:07:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6872,3 +6872,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/ruby-ffi-libarchive to 1.0.3 [taca 2020-08-09]
 	Updated databases/ruby-awesome_nested_set to 3.2.1 [taca 2020-08-09]
 	Updated net/syncthing to 1.7.1 [nia 2020-08-09]
+	Updated databases/ruby-sequel to 5.35.0 [taca 2020-08-09]
