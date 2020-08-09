@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/06/21 07:43:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/09 22:11:29 nikita Exp $
 
-DISTNAME=	nim-1.2.2
+DISTNAME=	nim-1.2.6
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -25,9 +25,9 @@ do-build:
 	printf '#! %s\nexec %s _=%s/nim/bin/nim %s/nim/bin/nim "$$@"\n' \
 		"${SH}" "${SETENV}" "${PREFIX}" "${PREFIX}" \
 		> ${WRKSRC}/nim-wrapper.sh
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./bin/nim c --skipUserCfg --skipParentCfg koch
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch boot -d:release --skipUserCfg --skipParentCfg
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch tools --skipUserCfg --skipParentCfg
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./bin/nim c --skipUserCfg --skipParentCfg --parallelBuild:${_MAKE_JOBS_N} koch
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch boot --parallelBuild:${_MAKE_JOBS_N} -d:release --skipUserCfg --skipParentCfg
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch --stable tools --parallelBuild:${_MAKE_JOBS_N} --skipUserCfg --skipParentCfg
 
 do-install:
 	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
@@ -38,9 +38,11 @@ do-install:
 	${INSTALL} ${WRKSRC}/bin/nimpretty ${DESTDIR}${PREFIX}/bin/nimpretty
 	${INSTALL} ${WRKSRC}/bin/nimsuggest ${DESTDIR}${PREFIX}/bin/nimsuggest
 	${INSTALL} ${WRKSRC}/bin/testament ${DESTDIR}${PREFIX}/bin/testament
+	${INSTALL} ${WRKSRC}/bin/nim-gdb ${DESTDIR}${PREFIX}/bin/nim-gdb
+	${INSTALL} ${WRKSRC}/bin/nim-gdb.bash ${DESTDIR}${PREFIX}/bin/nim-gdb.bash
 
 do-test:
 	cd ${WRKSRC} && ./bin/nim compile koch.nim
-	cd ${WRKSRC} && LD_LIBRARY_PATH=${PREFIX}/lib ./koch tests
+	cd ${WRKSRC} && LD_LIBRARY_PATH=${PREFIX}/lib ./koch test --parallelBuild:${_MAKE_JOBS_N}
 
 .include "../../mk/bsd.pkg.mk"
