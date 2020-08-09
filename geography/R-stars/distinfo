@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/09 15:24:46 brook Exp $
+
+SHA1 (R/stars_0.4-3.tar.gz) = 0a63f476257d92bb9493c172876b2abcd344cf78
+RMD160 (R/stars_0.4-3.tar.gz) = e1627e4e8993906bb832aabf92a4e8c142675606
+SHA512 (R/stars_0.4-3.tar.gz) = 2bbc060ede9c8f88d7599861e0dcda2ee2722f8004448139b8e66133cfbcd7dbf78b28261feeb104acd20fc5c1879f9e594b9f8cfceca710aaaad3c83758d5ec
+Size (R/stars_0.4-3.tar.gz) = 4745035 bytes
