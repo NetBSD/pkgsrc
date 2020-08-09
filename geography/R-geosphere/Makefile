@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2020/08/07 00:25:49 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/09 16:57:20 brook Exp $
 
+R_PKGNAME=	geosphere
+R_PKGVER=	1.5-10
 CATEGORIES=	geography
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/geosphere/
 COMMENT=	Spherical Trigonometry
 LICENSE=	gnu-gpl-v3
-
-R_PKGNAME=	geosphere
-R_PKGVER=	1.5-10
 
 DEPENDS+=	R-sp>=1.2.5:../../math/R-sp
 
