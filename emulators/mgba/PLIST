@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/19 13:06:35 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/08/09 14:37:22 nia Exp $
 bin/mgba
 ${PLIST.qt}bin/mgba-qt
 include/mgba-util/arm-algo.h
@@ -63,6 +63,7 @@ include/mgba/core/tile-cache.h
 include/mgba/core/timing.h
 include/mgba/core/version.h
 include/mgba/debugger/debugger.h
+include/mgba/dllexports.h
 include/mgba/feature/commandline.h
 include/mgba/feature/thread-proxy.h
 include/mgba/feature/video-logger.h
