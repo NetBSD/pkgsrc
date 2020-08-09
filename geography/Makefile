@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2020/08/08 23:35:17 brook Exp $
+# $NetBSD: Makefile,v 1.95 2020/08/09 15:14:14 brook Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -6,6 +6,7 @@ COMMENT=	Software for geographical-related uses
 SUBDIR+=	R-countrycode
 SUBDIR+=	R-deldir
 SUBDIR+=	R-geosphere
+SUBDIR+=	R-ggspatial
 SUBDIR+=	R-lwgeom
 SUBDIR+=	R-mapdata
 SUBDIR+=	R-maps
