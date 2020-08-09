@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/08/09 15:19:41 brook Exp $
+# $NetBSD: Makefile,v 1.98 2020/08/09 15:26:14 brook Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -22,6 +22,7 @@ SUBDIR+=	R-spData
 SUBDIR+=	R-spatstat
 SUBDIR+=	R-spatstat.data
 SUBDIR+=	R-spatstat.utils
+SUBDIR+=	R-stars
 SUBDIR+=	cm2gpx
 SUBDIR+=	cmconvert
 SUBDIR+=	epsg
