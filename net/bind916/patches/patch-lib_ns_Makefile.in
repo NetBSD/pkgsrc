@@ -1,0 +1,28 @@
+$NetBSD: patch-lib_ns_Makefile.in,v 1.1 2020/08/09 15:20:22 taca Exp $
+
+* Take from NetBSD base; add blacklist support.
+
+--- lib/ns/Makefile.in.orig	2020-05-06 09:59:35.000000000 +0000
++++ lib/ns/Makefile.in
+@@ -42,16 +42,19 @@ LIBS =		@LIBS@
+ OBJS =		client.@O@ hooks.@O@ interfacemgr.@O@ lib.@O@ \
+ 		listenlist.@O@ log.@O@ notify.@O@ query.@O@ \
+ 		server.@O@ sortlist.@O@ stats.@O@ update.@O@ \
+-		version.@O@ xfrout.@O@
++		version.@O@ xfrout.@O@ @BLACKLISTLINKOBJS@
+ 
+ SRCS =		client.c hooks.c interfacemgr.c lib.c listenlist.c \
+ 		log.c notify.c query.c server.c sortlist.c stats.c \
+-		update.c version.c xfrout.c
++		update.c version.c xfrout.c @BLACKLISTLINKSRCS@
+ 
+ SUBDIRS =	include
+ TESTDIRS =	@UNITTESTS@
+ TARGETS =	timestamp
+ 
++BLACKLISTLINKOBJS= pfilter.@O@
++BLACKLISTLINKSRCS= pfilter.c
++
+ SO_CFLAGS =	@CFLAGS@ @SO_CFLAGS@
+ SO_LDFLAGS =	@LDFLAGS@ @SO_LDFLAGS@
+ 
