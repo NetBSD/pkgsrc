@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2020/07/01 10:15:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.231 2020/08/09 21:40:42 rillig Exp $
 
 # Notes to package maintainers:
 #
@@ -30,7 +30,7 @@ NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db
 SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	yes
 PKG_PRESERVE=		yes
-CHECK_PERMS=		no
+CHECK_PERMS_SKIP=	*
 
 # These are needed to solve a chicken-and-egg problem where pkgsrc uses
 # newer features of pkg_install, but older NetBSD installations won't
