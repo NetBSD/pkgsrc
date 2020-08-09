@@ -1,0 +1,18 @@
+FastFlow: high-performance parallel patterns and building blocks in C++
+
+FastFlow is a programming library implemented in modern C++ and
+targeting multi/many-cores (there exists an experimental version based
+on ZeroMQ targeting distributed systems). It offers both a set of
+high-level ready-to-use parallel patterns and a set of mechanisms and
+composable components (called building blocks) to support low-latency
+and high-throughput data-flow streaming networks.
+
+FastFlow simplifies the development of parallel applications modelled
+as a structured directed graph of processing nodes. The graph of
+concurrent nodes is constructed by the assembly of sequential and
+parallel building blocks as well as higher-level easy-to-use
+components (i.e. parallel patterns) modelling typical schemas of
+parallel computations (e.g., pipeline, task-farm, parallel-for,
+etc.). FastFlow efficiency stems from the optimized implementation of
+the base communication and synchronization mechanisms and from its
+layered software design.
