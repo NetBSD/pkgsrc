@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/03/20 15:08:08 taca Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/09 15:05:22 taca Exp $
 
-DISTNAME=	awesome_nested_set-3.2.0
+DISTNAME=	awesome_nested_set-3.2.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases ruby
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
