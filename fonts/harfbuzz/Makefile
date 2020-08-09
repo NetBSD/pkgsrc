@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2020/08/08 19:11:13 nia Exp $
+# $NetBSD: Makefile,v 1.132 2020/08/09 00:53:12 joerg Exp $
 
 DISTNAME=	harfbuzz-2.7.0
 CATEGORIES=	fonts
@@ -24,6 +24,7 @@ MESON_ARGS+=	-Dcairo=disabled
 MESON_ARGS+=	-Dfontconfig=disabled
 
 MESON_ARGS+=	-Dintrospection=disabled
+MESON_ARGS+=	-Dbenchmark=disabled
 
 PLIST_VARS+=		graphite2
 .if ${LIBRSVG_TYPE} == "rust"
@@ -66,6 +67,7 @@ PLIST.coretext=		yes
 .endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
+REPLACE_PYTHON+=	src/*.py
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -77,4 +79,5 @@ PYTHON_FOR_BUILD_ONLY=	tool
 # graphite2 support breaks graphics/librsvg-c
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
