@@ -1,0 +1,4 @@
+This package provides infrastructure to access OpenStreetMap data from
+different sources, to work with the data in common R manner, and to
+convert data into available infrastructure provided by existing R
+packages (e.g., into sp and igraph objects).
