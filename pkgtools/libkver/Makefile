@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/05/23 19:23:12 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/08/09 21:37:26 rillig Exp $
 
 PKGNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -9,7 +9,7 @@ COMMENT=		Shared library and sysctl(1) replacement to override system version
 
 .include "../../mk/bsd.prefs.mk"
 
-CHECK_PERMS=		no
+CHECK_PERMS_SKIP=	*
 
 NO_PKGTOOLS_REQD_CHECK=	yes
 USE_BSD_MAKEFILE=	yes
@@ -42,7 +42,7 @@ INSTALLATION_DIRS+=	lib ${PKGMANDIR}/man3 ${PKGMANDIR}/cat3
 INSTALLATION_DIRS+=	sbin
 .endif
 
-INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
+INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
