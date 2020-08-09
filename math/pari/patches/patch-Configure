@@ -1,8 +1,16 @@
-$NetBSD: patch-Configure,v 1.1 2016/03/03 13:28:22 wiz Exp $
+$NetBSD: patch-Configure,v 1.2 2020/08/09 23:12:13 joerg Exp $
 
---- Configure.orig	2015-06-02 14:03:57.000000000 +0000
+--- Configure.orig	2016-02-25 14:12:36.000000000 +0000
 +++ Configure
-@@ -119,14 +119,14 @@ fi
+@@ -53,6 +53,7 @@ for file in $_tools_list; do
+ done
+ if test -z "$zcat" -a -n "$gzip"; then zcat="$gzip -dc"; fi
+ 
++perl=$PERL5
+ ####################### CONFIGURE - ARCHITECTURE ############################
+ . ./get_archos # arch, osname
+ config_log="$TOP/config-$arch-$osname$$.log"
+@@ -119,14 +120,14 @@ fi
  . ./get_static  # static
  # For dynamic linking, before and after installing
  runpath=\"$libdir\"
