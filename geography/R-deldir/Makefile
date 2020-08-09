@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/08/07 00:20:08 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/09 16:38:53 brook Exp $
 
 CATEGORIES=	geography
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/deldir/
