@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2020/08/09 15:38:15 brook Exp $
+# $NetBSD: Makefile,v 1.102 2020/08/09 17:32:12 joerg Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -15,6 +15,7 @@ SUBDIR+=	R-osmar
 SUBDIR+=	R-osmdata
 SUBDIR+=	R-prettymapr
 SUBDIR+=	R-raster
+SUBDIR+=	R-rgdal
 SUBDIR+=	R-rgeos
 SUBDIR+=	R-rnaturalearth
 SUBDIR+=	R-rnaturalearthdata
