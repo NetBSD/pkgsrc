@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19992 2020/08/09 08:46:30 wiz Exp $
+$NetBSD: TODO,v 1.19993 2020/08/09 10:10:12 leot Exp $
 
 Suggested new packages
 ======================
@@ -1010,7 +1010,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ratmen-2.2.3
 	o razor-qt-0.5.2
 	o rbldnsd-0.998
-	o rclone-1.52.3
 	o rdp-1.6
 	o regionset-0.2
 	o rep-gtk-0.90.8.1
