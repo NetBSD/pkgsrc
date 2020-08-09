@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/02/16 04:05:30 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/08/09 15:26:52 taca Exp $
 bin/rmsgcat${RUBY_SUFFIX}
 bin/rmsgfmt${RUBY_SUFFIX}
 bin/rmsginit${RUBY_SUFFIX}
@@ -1383,9 +1383,11 @@ ${GEM_LIBDIR}/test/fixtures/_/quoted_symbol.rb
 ${GEM_LIBDIR}/test/fixtures/backslash.rb
 ${GEM_LIBDIR}/test/fixtures/erb/ascii.rhtml
 ${GEM_LIBDIR}/test/fixtures/erb/ascii.rxml
+${GEM_LIBDIR}/test/fixtures/erb/minus.rhtml
 ${GEM_LIBDIR}/test/fixtures/erb/non_ascii.rhtml
 ${GEM_LIBDIR}/test/fixtures/gladeparser.glade
 ${GEM_LIBDIR}/test/fixtures/gtk_builder_ui_definitions.ui
+${GEM_LIBDIR}/test/fixtures/gtk_builder_ui_definitions.ui~
 ${GEM_LIBDIR}/test/fixtures/hello.rb
 ${GEM_LIBDIR}/test/fixtures/lower_n_.rb
 ${GEM_LIBDIR}/test/fixtures/multi_text_domain.rb
