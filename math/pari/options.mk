@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2016/03/03 13:28:22 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2020/08/09 23:12:13 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 PLIST.doc=		yes
 BUILD_TARGET+=		doc
 INSTALL_TARGET+=	install-doc
-MAKE_ENV+=		PDFTEX=${LOCALBASE}/bin/pdftex
+MAKE_ENV+=		PDFTEX=${PREFIX}/bin/pdftex
 .endif
 
 PLIST_VARS+=		nogmp gmp

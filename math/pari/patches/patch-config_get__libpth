@@ -1,4 +1,4 @@
-$NetBSD: patch-config_get__libpth,v 1.1 2016/03/03 13:28:22 wiz Exp $
+$NetBSD: patch-config_get__libpth,v 1.2 2020/08/09 23:12:13 joerg Exp $
 
 --- config/get_libpth.orig	2014-03-25 08:59:21.000000000 +0000
 +++ config/get_libpth
@@ -30,7 +30,7 @@ $NetBSD: patch-config_get__libpth,v 1.1 2016/03/03 13:28:22 wiz Exp $
 -      /usr/ccs/lib\
 -      /usc/ucblib\
 -      /usr/shlib\
-+      $LOCALBASE/lib\
++      $PREFIX/lib\
        .\
     ";;
  esac
