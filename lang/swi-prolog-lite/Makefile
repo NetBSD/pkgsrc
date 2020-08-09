@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/01/18 21:49:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2020/08/09 23:16:48 joerg Exp $
 
 .include "Makefile.common"
 
@@ -22,6 +22,8 @@ CMAKE_ARGS+=		-DSWIPL_PACKAGES_JAVA=OFF
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_X=OFF
 
 USE_TOOLS+=		bash:run
+
+MAKE_ENV+=		OPENSSL_CONF=/dev/null
 
 .include "../../mk/bsd.prefs.mk"
 
