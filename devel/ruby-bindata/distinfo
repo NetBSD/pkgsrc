@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/04/27 04:01:10 taca Exp $
+$NetBSD: distinfo,v 1.6 2020/08/09 15:11:16 taca Exp $
 
-SHA1 (bindata-2.4.7.gem) = 95ab2614153a1f2b46ec265f8b9f70ab02c9bd83
-RMD160 (bindata-2.4.7.gem) = c6b5bdc27239dfafdb10552f77e89cda936e7771
-SHA512 (bindata-2.4.7.gem) = f5616a372c0f17ae3b1c89f5993954b565058d099ad0783dbaf49081b7847a26a3a2908c957ec6cd2518ffec85686cf3b19e76f96e5244faa6c83b2598f55364
-Size (bindata-2.4.7.gem) = 80384 bytes
+SHA1 (bindata-2.4.8.gem) = 50523a9d44fa746090dd4b7121f61a929b42c493
+RMD160 (bindata-2.4.8.gem) = cf910cd23cc6957c9152babe20b8af7fd41b5760
+SHA512 (bindata-2.4.8.gem) = a6e037720acd520e248aecf0c0f4de413ac1f47665487c876457585853c822d1ee46816ab7cd7060e58566b8288ba77917be51cd6a783c25f619bb8a84724446
+Size (bindata-2.4.8.gem) = 80384 bytes
