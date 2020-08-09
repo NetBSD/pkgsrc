@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4389 2020/08/09 15:33:26 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4390 2020/08/09 15:38:32 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6887,3 +6887,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added geography/R-rnaturalearthdata version 0.1.0 [brook 2020-08-09]
 	Added geography/R-rnaturalearth version 0.1.0 [brook 2020-08-09]
 	Updated devel/libidn to 1.36 [nia 2020-08-09]
+	Added geography/R-rnaturalearthhires version 0.2.0 [brook 2020-08-09]
