@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4385 2020/08/09 15:27:35 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4386 2020/08/09 15:27:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6883,3 +6883,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libgee to 0.20.3 [nia 2020-08-09]
 	Added geography/R-stars version 0.4.3 [brook 2020-08-09]
 	Updated devel/ruby-gettext to 3.3.6 [taca 2020-08-09]
+	Updated www/libmicrohttpd to 0.9.71 [nia 2020-08-09]
