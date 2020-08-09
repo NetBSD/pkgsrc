@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/08/07 02:43:00 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/09 16:42:15 brook Exp $
 
 CATEGORIES=	math R
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/mnormt/
