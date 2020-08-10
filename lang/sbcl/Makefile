@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2020/05/22 13:34:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.88 2020/08/10 23:18:51 rjs Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-1.5.7
-PKGREVISION=		2
+PKGNAME=		sbcl-2.0.7
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
+LICENSE=		mit
 
 # SBCL creates a new release with minor updates and fixes every
 # month.  The maintainer of this package does not have the time
@@ -28,7 +28,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 # Bootstrap section.
 #
 # SBCL needs an existing Common Lisp system to build it...
-# Currently allowed systems are CLISP, CMUCL, OpenMCL, and SBCL itself.
+# Currently allowed systems are CLISP, CMUCL, OpenMCL, ABCL and SBCL itself.
 #
 #  If SBCL is installed in an unusual place when trying to build this
 #  package, you may need to set the full path in SBCL_BOOT_SYSTEM and
@@ -38,6 +38,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 #SBCL_BOOT_SYSTEM=	"lisp -batch"		# CMUCL
 #SBCL_BOOT_SYSTEM=	"openmcl --batch"	# OpenMCL
 #SBCL_BOOT_SYSTEM=	sbcl			# SBCL
+#SBCL_BOOT_SYSTEM=	abcl			# ABCL
 
 .if !defined(SBCL_BOOT_SYSTEM)
 # Use "clisp -ansi -on-error abort" to make the build more reproducible,
@@ -45,12 +46,8 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 SBCL_BOOT_SYSTEM=	clisp -norc -ansi -on-error abort
 BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 UNLIMIT_RESOURCES=	datasize
-.elif ${SBCL_BOOT_SYSTEM} == clisp
-BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
-UNLIMIT_RESOURCES=	datasize
-.elif ${SBCL_BOOT_SYSTEM} == sbcl
-# Get bootstrap version:
-BUILD_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
+.elif ${SBCL_BOOT_SYSTEM} == abcl
+BUILD_DEPENDS+=		abcl-[0-9]*:../../lang/abcl
 .endif
 
 SUBST_CLASSES+=			fix-paths
