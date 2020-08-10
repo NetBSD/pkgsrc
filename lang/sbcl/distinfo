@@ -1,24 +1,15 @@
-$NetBSD: distinfo,v 1.64 2019/11/10 16:58:31 he Exp $
+$NetBSD: distinfo,v 1.65 2020/08/10 23:18:51 rjs Exp $
 
-SHA1 (sbcl-1.5.7-source.tar.bz2) = b16ff3a0c0638bb685ff5f93106553c03a68d978
-RMD160 (sbcl-1.5.7-source.tar.bz2) = 850176b451d83daf52e7b0d2f6095015c5122494
-SHA512 (sbcl-1.5.7-source.tar.bz2) = 8dde1b0d400f93fed085f6b6c33b057c3dec4dfa83afb7431384add6628cb2f910cba006b2579cea547685aeb79fade5ad576b0a42e4f7e1f6c0c3f26acf226e
-Size (sbcl-1.5.7-source.tar.bz2) = 6438048 bytes
-SHA1 (patch-ab) = b087921f7317523fd78396518dfd2cb1c8e6d5f9
+SHA1 (sbcl-2.0.7-source.tar.bz2) = 28d34996f7ed432a7fcff027954017a14b2ed56b
+RMD160 (sbcl-2.0.7-source.tar.bz2) = ef51efc09a7aced7d7397b7ab7a7d32bbc8cd0aa
+SHA512 (sbcl-2.0.7-source.tar.bz2) = 02f39a2d643e2aebfe0e96611a9bca7cd859ff8a64d0e552cb4e39697a72a69fc51eacf40388bb49d64d851ea4005f9098100e490001d028844d0e2adc3b1490
+Size (sbcl-2.0.7-source.tar.bz2) = 6622306 bytes
+SHA1 (patch-ab) = b272bee6fc39ede638cbf71106150044a2977596
 SHA1 (patch-clean.sh) = 8dd795727c2e2cba2c4b5ca8cc4972c89eb6ecaa
 SHA1 (patch-make-genesis-2.sh) = 5d61f2662795c93aabfaa18ef686725d2ed9384a
 SHA1 (patch-make-host-1.sh) = 7ecb23bf3cd4ee091a279503668a539a533b1196
 SHA1 (patch-make-host-2.sh) = c0ac2f16a670a6db2ff69b863d1f990f7ba0bef0
 SHA1 (patch-make-target-1.sh) = 9064623b0cba2fc6869f3d29ea090d55b7bdaf17
 SHA1 (patch-make-target-2.sh) = 7b288c3c320adb89cefa78a2fc93223ea4b3b66f
-SHA1 (patch-slam.sh) = 3edb599272f8f4827b0f5edc5a67d134856ca269
-SHA1 (patch-src_runtime_Config.arm-netbsd) = d9ff13f8a6a3909a9ab9f357abde455adee0b645
-SHA1 (patch-src_runtime_Config.generic-bsd) = bafc489a5cb8096e3dd3d3677a83c2907441e8b7
-SHA1 (patch-src_runtime_Config.generic-netbsd) = 8c18ef7660e40851094b0bd6308638b844709fa2
-SHA1 (patch-src_runtime_Config.ppc-netbsd) = 3ecc105ad817badd3a8d0dc44aa0d801714b4917
-SHA1 (patch-src_runtime_Config.sparc-netbsd) = d1825a9b937c5a768b38c267c1924322a83eecdf
-SHA1 (patch-src_runtime_Config.x86-64-bsd) = 4588e0be197de4c4b9f3ef2d449a9a7bf9c38d8d
-SHA1 (patch-src_runtime_Config.x86-64-netbsd) = 79d14015db51f61226b9e848d27f90e2538a84af
-SHA1 (patch-src_runtime_Config.x86-netbsd) = 3875d12349408231d47e55c9d9bb4e77f2709790
-SHA1 (patch-src_runtime_config.arm-bsd) = 1e8f58e93fc276cb4897d19a8b0411457520326e
-SHA1 (patch-src_runtime_run-program.c) = bae41ea7509c70d0c4a0c01097a7a77d1cbd6bf8
+SHA1 (patch-slam.sh) = 2f4d28b2d1572cd624a54f493cc7e30c3c491a3f
+SHA1 (patch-src_runtime_run-program.c) = 8520dc915051747f3ce4fbe30c4672ddbb68c49d
