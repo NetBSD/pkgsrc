@@ -1,24 +1,26 @@
-$NetBSD: patch-ab,v 1.7 2016/10/12 11:35:48 asau Exp $
+$NetBSD: patch-ab,v 1.8 2020/08/10 23:18:52 rjs Exp $
 
 Honor PREFIX.
 
---- doc/sbcl.1.orig	2016-04-28 14:23:40.000000000 +0000
+--- doc/sbcl.1.orig	2020-07-30 19:30:02.000000000 +0000
 +++ doc/sbcl.1
-@@ -427,7 +427,7 @@ years. See the CREDITS file in the distr
- This variable controls where files like "sbclrc", "sbcl.core", and the
- add-on "contrib" systems are searched for.  If it is not set, then
- sbcl sets it from a compile-time default location which is usually
--\fB/usr/local/lib/sbcl/\fR but may have been changed \fIe.g.\fR by a third-party
-+\fB@PREFIX@/lib/sbcl/\fR but may have been changed \fIe.g.\fR by a third-party
- packager.
+@@ -423,8 +423,8 @@ This variable controls where files like 
+ add-on "contrib" systems are searched for. If it is not set, then sbcl
+ looks in \fB../lib/sbcl/\fR relative to the location of the executable,
+ or in the current directory. If your executable is in the default
+-location \fB/usr/local/bin/\fR then it will look in
+-\fB/usr/local/lib/sbcl/\fR.
++location \fB/usr/@PREFIX@/bin/\fR then it will look in
++\fB/usr/@PREFIX@/lib/sbcl/\fR.
  
  .SH FILES
-@@ -461,7 +461,7 @@ been installed, the command
+ 
+@@ -457,7 +457,7 @@ been installed, the command
  should give you access to the complete manual. Depending on your
  installation it may also be available in HTML and PDF formats in \fIe.g.\fR
  .IP
 -.B /usr/local/share/doc/sbcl/
-+.B @PREFIX@/share/doc/sbcl/
++.B /usr/@PREFIX@/share/doc/sbcl/
  .PP
  See the SBCL homepage 
  .IP
