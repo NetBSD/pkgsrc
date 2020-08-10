@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4401 2020/08/10 14:43:32 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4402 2020/08/10 16:59:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6902,3 +6902,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/bftpd to 5.6 [nia 2020-08-10]
 	Updated devel/py-joblib to 0.16.0 [adam 2020-08-10]
 	Updated textproc/py-nltk to 3.5 [adam 2020-08-10]
+	Updated graphics/kvantum to 0.16.1 [pin 2020-08-10]
