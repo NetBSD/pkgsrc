@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4397 2020/08/10 06:13:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4398 2020/08/10 06:57:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6896,3 +6896,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nim to 1.2.6 [nikita 2020-08-09]
 	Updated databases/py-asyncpg to 0.21.0 [adam 2020-08-10]
 	Updated databases/py-ldap3 to 2.8 [adam 2020-08-10]
+	Updated misc/py-stdnum to 1.14 [adam 2020-08-10]
+	Updated www/py-hstspreload to 2020.8.8 [adam 2020-08-10]
