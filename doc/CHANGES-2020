@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4404 2020/08/10 22:33:06 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4405 2020/08/10 23:20:18 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6908,3 +6908,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/roundcube-plugin-enigma to 1.4.8 [taca 2020-08-10]
 	Updated mail/roundcube-plugin-password to 1.4.8 [taca 2020-08-10]
 	Updated mail/roundcube-plugin-zipdownload to 1.4.8 [taca 2020-08-10]
+	Updated lang/sbcl to 2.0.7 [rjs 2020-08-10]
