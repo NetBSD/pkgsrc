@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/06/24 12:53:04 pin Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/10 16:58:29 pin Exp $
 
-VERSION=	0.16.0
-DISTNAME=	Kvantum-V${VERSION}
-PKGNAME=	kvantum-${VERSION}
+DISTNAME=	Kvantum-0.16.1
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
@@ -12,7 +11,7 @@ HOMEPAGE=	https://github.com/tsujan/Kvantum/
 COMMENT=	SVG-based theme engine for Qt and KDE
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/Kvantum-${VERSION}/Kvantum
+WRKSRC=		${WRKDIR}/${DISTNAME}/Kvantum
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
