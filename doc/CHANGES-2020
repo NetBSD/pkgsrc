@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4402 2020/08/10 16:59:11 pin Exp $
+$NetBSD: CHANGES-2020,v 1.4403 2020/08/10 18:19:00 brook Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6903,3 +6903,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-joblib to 0.16.0 [adam 2020-08-10]
 	Updated textproc/py-nltk to 3.5 [adam 2020-08-10]
 	Updated graphics/kvantum to 0.16.1 [pin 2020-08-10]
+	Added biology/R-popbio version 2.7 [brook 2020-08-10]
