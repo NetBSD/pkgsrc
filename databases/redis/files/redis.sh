@@ -1,8 +1,8 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: redis.sh,v 1.2 2013/06/13 18:26:02 mspo Exp $
+# $NetBSD: redis.sh,v 1.3 2020/08/10 11:23:50 wiz Exp $
 #
-# PROVIDE: redis 
+# PROVIDE: redis
 # REQUIRE: DAEMON network
 # KEYWORD: shutdown
 
