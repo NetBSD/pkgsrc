@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/10 18:18:46 brook Exp $
+
+SHA1 (R/popbio_2.7.tar.gz) = e91f6a45f8369e57810487c146bae1f5419c25b0
+RMD160 (R/popbio_2.7.tar.gz) = 6c0bc74f790dceccdd9bac62053ba77c0da34249
+SHA512 (R/popbio_2.7.tar.gz) = fafc04b6bc7e605d31849b9bc4bafdf8f27290f04b15378cc10f6140d5add4c342de7d9869938295afe5d871803fc0f3909e7c36780f71eda284c91fb077f640
+Size (R/popbio_2.7.tar.gz) = 127044 bytes
