@@ -1,0 +1,4 @@
+Construct and analyze projection matrix models from a demography study
+of marked individuals classified by age or stage. The package covers
+methods described in Matrix Population Models by Caswell (2001) and
+Quantitative Conservation Biology by Morris and Doak (2002).
