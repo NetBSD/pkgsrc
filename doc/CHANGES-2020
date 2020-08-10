@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4399 2020/08/10 08:55:11 mef Exp $
+$NetBSD: CHANGES-2020,v 1.4400 2020/08/10 13:49:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6899,3 +6899,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-stdnum to 1.14 [adam 2020-08-10]
 	Updated www/py-hstspreload to 2020.8.8 [adam 2020-08-10]
 	Updated geography/R-deldir to 0.1.28 [mef 2020-08-10]
+	Updated net/bftpd to 5.6 [nia 2020-08-10]
