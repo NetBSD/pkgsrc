@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/03/07 12:16:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/08/10 06:12:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -277,6 +277,9 @@ ${PYSITELIB}/ldap3/strategy/restartable.pyo
 ${PYSITELIB}/ldap3/strategy/reusable.py
 ${PYSITELIB}/ldap3/strategy/reusable.pyc
 ${PYSITELIB}/ldap3/strategy/reusable.pyo
+${PYSITELIB}/ldap3/strategy/safeSync.py
+${PYSITELIB}/ldap3/strategy/safeSync.pyc
+${PYSITELIB}/ldap3/strategy/safeSync.pyo
 ${PYSITELIB}/ldap3/strategy/sync.py
 ${PYSITELIB}/ldap3/strategy/sync.pyc
 ${PYSITELIB}/ldap3/strategy/sync.pyo
