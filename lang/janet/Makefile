@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/08/08 17:56:42 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/10 14:45:53 nia Exp $
 
 DISTNAME=	janet-1.11.3
 CATEGORIES=	lang
@@ -20,8 +20,6 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	JANET_MANPATH=${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	JANET_PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 MAKE_FLAGS+=	JANET_BUILD='"\"pkgsrc\""'
-
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 REPLACE_INTERPRETER+=	janet
 REPLACE.janet.old=	.*
