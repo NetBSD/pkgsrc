@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2019/04/10 21:37:51 maya Exp $
+$NetBSD: distinfo,v 1.7 2020/08/11 13:38:14 nia Exp $
 
-SHA1 (fuse-ext2-0.0.7.tar.gz) = cdfef525838d2de07a4da6d60b65efce5a1cffa0
-RMD160 (fuse-ext2-0.0.7.tar.gz) = 29cb85f033b65fba4d82d14de907dd4458173c2b
-SHA512 (fuse-ext2-0.0.7.tar.gz) = ac3e9a5bd5587cd382d5119bc7e5716a057be290045d67c03ce8308da36647382065e645124d8e5862304e8ecb61a54c4474fcebb8524233c76e0f27d979846d
-Size (fuse-ext2-0.0.7.tar.gz) = 570156 bytes
+SHA1 (fuse-ext2-0.0.10.tar.gz) = cb92048bf3aac01b55af8c1362ab903b19669f3a
+RMD160 (fuse-ext2-0.0.10.tar.gz) = 6303f369301eb58c78bb495ee1b1bee3f69ccf4a
+SHA512 (fuse-ext2-0.0.10.tar.gz) = b884c0f92b706ae3f03dd75f489990e7cea31fd68526ade48ab5a11e1c9f78ec02a4dbb82450ce2aca12742a799c334a3ab8f2443a96ad003a76f0a86567fa24
+Size (fuse-ext2-0.0.10.tar.gz) = 122746 bytes
 SHA1 (patch-aa) = d9f8189f4bbed569cc2b4bb8f160dcf231cc76ff
 SHA1 (patch-ab) = 830bc968c55b13125700a6fbeff9808610d065f0
 SHA1 (patch-ac) = 253561f1e6a67b5d66d7409af3bf26477ad57b2c
