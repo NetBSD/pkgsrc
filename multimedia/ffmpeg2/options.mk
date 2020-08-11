@@ -1,11 +1,13 @@
-# $NetBSD: options.mk,v 1.19 2020/04/29 15:11:10 nia Exp $
+# $NetBSD: options.mk,v 1.20 2020/08/11 12:13:32 nia Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg2
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
-PKG_OPTIONS_GROUP.ssl=		gnutls openssl
+# XXX: OpenSSL option is broken
+#PKG_OPTIONS_GROUP.ssl=		gnutls openssl
+PKG_OPTIONS_GROUP.ssl=		gnutls
 
 PKG_SUPPORTED_OPTIONS=	ass bluray doc faac fdk-aac fontconfig freetype \
 			lame libvpx opencore-amr opus pulseaudio rtmp \
