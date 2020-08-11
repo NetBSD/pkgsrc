@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/06/17 06:47:21 adam Exp $
+$NetBSD: distinfo,v 1.15 2020/08/11 06:36:08 adam Exp $
 
-SHA1 (responses-0.10.15.tar.gz) = aca4d95d7aede667b53c072a5b415451a0abe29a
-RMD160 (responses-0.10.15.tar.gz) = 6677f9653fd2aa9cd7a298eb7b9330a01eaf062b
-SHA512 (responses-0.10.15.tar.gz) = 513df58b40968e271cfb429ee09ab2ca7c3cf2f6ebe3607276ed1b949670871f8d6993449cfd5871bfd119cda0c0628dce6ebe8ed40595696e550541413f12b0
-Size (responses-0.10.15.tar.gz) = 25350 bytes
+SHA1 (responses-0.10.16.tar.gz) = 14133e8db87044d5f82eb41f2900cd45ba59e10c
+RMD160 (responses-0.10.16.tar.gz) = 06460f58e12e409227737000bd81e9fb1c659f14
+SHA512 (responses-0.10.16.tar.gz) = ec6738d3f7a33f7e3fbc95b1aaa5a10aa038dcbd8c9fdc4dc0ffc263e0cd613e6f2ce8e2fc2b59c91a30dec9677219fbb2630ec4d5d8d4340526fe72e24bd89f
+Size (responses-0.10.16.tar.gz) = 25420 bytes
