@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4407 2020/08/11 12:26:52 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.4408 2020/08/11 13:38:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6912,3 +6912,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-prompt_toolkit2 to 3.0.6 [adam 2020-08-11]
 	Updated net/py-responses to 0.10.16 [adam 2020-08-11]
 	Updated net/mosquitto to 1.6.11 [gdt 2020-08-11]
+	Updated filesystems/fuse-ext2 to 0.0.10 [nia 2020-08-11]
