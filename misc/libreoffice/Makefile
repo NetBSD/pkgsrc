@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.233 2020/07/04 05:02:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.234 2020/08/11 16:07:38 ryoon Exp $
 
-VERREL=		6.4.5
-VERRC=		2
+VERREL=		7.0.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -37,13 +37,15 @@ SUBST_VARS.font-path+=		X11BASE
 
 GCC_REQD+=	7
 
+BUILD_TARGET=	build
+
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MNetBSD*)
 pre-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} Executable_gengal && ${TOOLS_PLATFORM.paxctl} +m instdir/program/gengal.bin
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CHECK_SHLIBS_SUPPORTED=	no
 # configure will be regenerated.
@@ -72,7 +74,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.2.28.tar.gz \
+	xmlsec1-1.2.30.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -112,7 +114,9 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-0.111.zip \
 	ReemKufi-0.7.zip \
-	pdfium-3963.tar.bz2
+	pdfium-4137.tar.bz2 \
+	dtoa-20180411.tgz \
+	skia-m84-c1baf6e1c2a5454148adb516f0f833483b5a0353.tar.xz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -365,6 +369,9 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 #.include "../../graphics/sane-backends/buildlink3.mk"
 #.include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
+# workaround for dtoa.h conflict with python and dtoa:
+# Do not pass -I${PREFIX}/include/python?.? to CPPFLAGS/CFLAGS/CXXFLAGS always.
+BUILDLINK_INCDIRS.${PYPKGPREFIX:S/py/python/}=	# empty
 .include "../../lang/python/tool.mk"
 .include "../../math/coinmp/buildlink3.mk"
 .include "../../math/libnumbertext/buildlink3.mk"
