@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/31 15:26:09 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/11 18:47:39 joerg Exp $
 
 DISTNAME=	libretro-fbneo-20200530
 CATEGORIES=	emulators
@@ -11,6 +11,8 @@ COMMENT=	Libretro core based on the FinalBurn Neo arcade game emulator
 LICENSE=	fbalpha-license
 
 SUPERSEDES+=	libretro-fbalpha-[0-9]*
+
+UNLIMIT_RESOURCES+=	datasize virtualsize
 
 BUILD_DIRS=	src/burner/libretro
 USE_LANGUAGES=	c c++
