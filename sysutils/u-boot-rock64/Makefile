@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/02 09:09:05 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2020/08/11 18:42:49 joerg Exp $
 
 PKGREVISION=		6
 UBOOT_TARGET=		rock64
@@ -23,4 +23,8 @@ DDR_BIN=		rk3328_ddr_333MHz_v1.16.bin
 SITES.${DDR_BIN}=	${MASTER_SITE_GITHUB:=rockchip-linux/rkbin/raw/6ee03f14441f4f2812c713e1027b88e3a24c546b/bin/rk33/}
 DISTFILES+=		${DDR_BIN}
 
+REPLACE_PYTHON+=	tools/dtoc/dtoc.py
+PYTHON_FOR_BUILD_ONLY=	yes
+
+.include "../../lang/python/application.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
