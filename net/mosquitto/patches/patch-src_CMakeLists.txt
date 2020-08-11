@@ -1,8 +1,18 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.3 2020/08/11 12:26:41 gdt Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.4 2020/08/11 18:06:10 gdt Exp $
 
-On NetBSD, don't use -ldl (why?).
+* hunk 1
 
-Sent upstream via email 20190427.
+On NetBSD, don't use -ldl
+
+Sent upstream via email 20190427, again on 20200811, and applied
+upstream on
+20200811.
+
+* hunk 2
+
+\todo Explain why this hunk is here.
+
+\todo File hunk upstream.
 
 --- src/CMakeLists.txt.orig	2020-08-11 11:18:06.000000000 +0000
 +++ src/CMakeLists.txt
