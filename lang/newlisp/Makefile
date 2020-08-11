@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/08/11 15:01:07 hauke Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/11 17:18:59 hauke Exp $
 #
 
 DISTNAME=	newlisp-10.7.5
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.newlisp.org/downloads/
 EXTRACT_SUFX=	.tgz
