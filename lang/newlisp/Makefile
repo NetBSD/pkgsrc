@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/23 13:41:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2020/08/11 15:01:07 hauke Exp $
 #
 
 DISTNAME=	newlisp-10.7.5
@@ -28,5 +28,4 @@ SUBST_SED.interpreter+=		-e 's,/usr/bin/env newlisp,${PREFIX}/bin/newlisp,'
 LDFLAGS+=	-lreadline
 
 .include "../../devel/readline/buildlink3.mk"
-.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
