@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2020/02/05 14:10:35 ryoon Exp $
+# $NetBSD: options.mk,v 1.10 2020/08/11 16:07:38 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups
@@ -45,7 +45,6 @@ CONFIGURE_ARGS+=	--enable-release-build
 .if !empty(PKG_OPTIONS:Mgtk3)
 CONFIGURE_ARGS+=	--enable-gtk3
 PLIST.gtk3=		yes
-.include "../../x11/gtk3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtk3
 .endif
