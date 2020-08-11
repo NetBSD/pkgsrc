@@ -1,0 +1,18 @@
+$NetBSD: patch-external_skia_netbsd.patch.0,v 1.1 2020/08/11 16:07:39 ryoon Exp $
+
+--- external/skia/netbsd.patch.0.orig	2020-08-10 05:53:36.561427096 +0000
++++ external/skia/netbsd.patch.0
+@@ -0,0 +1,13 @@
++NetBSD has no uselocale(3).
++
++--- src/gpu/GrAutoLocaleSetter.h.orig	2020-05-18 08:42:43.094191883 +0000
+++++ src/gpu/GrAutoLocaleSetter.h
++@@ -27,7 +27,7 @@
++ #define HAVE_XLOCALE 0
++ #endif
++ 
++-#if defined(SK_BUILD_FOR_ANDROID) || defined(__UCLIBC__) || defined(_NEWLIB_VERSION)
+++#if defined(SK_BUILD_FOR_ANDROID) || defined(__UCLIBC__) || defined(_NEWLIB_VERSION) || defined(__NetBSD__)
++ #define HAVE_LOCALE_T 0
++ #else
++ #define HAVE_LOCALE_T 1
