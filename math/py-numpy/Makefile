@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/08/05 14:05:45 adam Exp $
+# $NetBSD: Makefile,v 1.69 2020/08/11 05:58:29 mef Exp $
 
 DISTNAME=	numpy-1.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -51,7 +51,7 @@ do-test:
 	cd ${WRKDIR} && \
 	${RUN} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
 
-BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.29.2
+BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.29.21
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
