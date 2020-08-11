@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.158 2020/06/18 20:30:12 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.159 2020/08/11 20:32:58 bacon Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1017,48 +1017,76 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
       <title>Fetch based on a tagged release</title>
 
       <para>If your distfile URL looks similar to
-      <literal>https://github.com/username/exampleproject/archive/v1.0.zip</literal>,
+      <literal>https://github.com/username/example/archive/v1.0.zip</literal>,
       then you are packaging a tagged release.</para>
 
 <programlisting>
-DISTNAME=       exampleproject-1.0
+DISTNAME=       example-1.0
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
-#GITHUB_PROJECT=        # can be omitted if same as DISTNAME
+#GITHUB_PROJECT= example    # can be omitted if same as DISTNAME
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 EXTRACT_SUFX=   .zip
 </programlisting>
 
     </sect3>
 
-    <sect3 id="build.fetch.github.commit">
-      <title>Fetch based on a specific commit</title>
+    <sect3 id="build.fetch.github.commit.prerelease">
+      <title>Fetch based on a specific commit before the first release</title>
 
-      <para>If your distfile URL looks similar to
-      <literal>https://github.com&#x200B;/example&#x200B;/example&#x200B;/archive&#x200B;/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz</literal>,
-      then you are packaging a specific commit not tied to a
-      release.</para>
+      <para>If your distfile looks similar to
+      <literal>https://github.com/username/example/archive/988881adc9fc3655077dc2d4d757d480b5ea0e11</literal> and is from a commit before the first
+      release, then set the package version to 0.0.0.N, where N is the number
+      of commits to the repository, and set GITHUB_TAG to the commit hash.
+      This will (almost) ensure that the first tagged release will have a
+      version greater than this one so that package upgrades will function
+      properly.</para>
 
 <programlisting>
-DISTNAME=       example-1.0
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=example/}
-#GITHUB_PROJECT=        # can be omitted if same as DISTNAME
+DISTNAME=       example-0.0.0.347
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
+#GITHUB_PROJECT= example    # can be omitted if same as DISTNAME
 GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
 </programlisting>
+    </sect3>
 
+    <sect3 id="build.fetch.github.commit.postrelease">
+      <title>Fetch based on a specific commit after a release</title>
+
+      <para>If your distfile looks similar to
+      <literal>https://github.com/username/example/archive/988881adc9fc3655077dc2d4d757d480b5ea0e11</literal> and is from a commit after a release,
+      then include the last release version and the commit count since that
+      release in the package version and set GITHUB_TAG to the commit hash.
+      The latest release and commit count are shown in the output of
+      "git describe --tags":
+      </para>
+
+<screen>
+# git clone https://github.com/username/example
+# cd example
+# git describe --tags
+1.2.3-5-g988881a
+</screen>
+
+<programlisting>
+DISTNAME=       example-1.2.3.5
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
+#GITHUB_PROJECT= example    # can be omitted if same as DISTNAME
+GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
+</programlisting>
     </sect3>
 
     <sect3 id="build.fetch.github.release">
       <title>Fetch based on release</title>
 
       <para>If your distfile URL looks similar to
-      <literal>https://github.com&#x200B;/username/exampleproject&#x200B;/releases&#x200B;/download&#x200B;/rel-1.6&#x200B;/offensive-1.6.zip</literal>,
+      <literal>https://github.com/username/example/releases/download/rel-1.6/offensive-1.6.zip</literal>,
       then you are packaging a release.</para>
 
 <programlisting>
 DISTNAME=       offensive-1.6
 PKGNAME=        ${DISTNAME:S/offensive/proper/}
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
-GITHUB_PROJECT= exampleproject
+GITHUB_PROJECT= example
 GITHUB_RELEASE= rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
 EXTRACT_SUFX=   .zip
 </programlisting>
