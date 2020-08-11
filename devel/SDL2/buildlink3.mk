@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2020/03/18 17:52:02 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2020/08/11 12:13:45 nia Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -15,6 +15,10 @@ pkgbase := SDL2
 
 .if ${PKG_BUILD_OPTIONS.SDL2:Malsa}
 .include "../../audio/alsa-lib/buildlink3.mk"
+.endif
+
+.if ${PKG_BUILD_OPTIONS.SDL2:Mjack}
+.include "../../audio/jack/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.SDL2:Mnas}
