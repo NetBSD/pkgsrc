@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/06/02 08:23:33 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/11 18:48:57 joerg Exp $
 #
 
 DISTNAME=	SOPE-4.0.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
 
@@ -17,7 +17,7 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/SOPE
 HAS_CONFIGURE=	yes
 
-CONFIGURE_ARGS=	--with-gnustep --enable-debug --disable-strip
+CONFIGURE_ARGS=	--with-gnustep --disable-debug --disable-strip
 
 pre-configure:
 	${TEST} -e ${BUILDLINK_DIR}/lib/libmysqlclient.so || \
