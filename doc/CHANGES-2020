@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4406 2020/08/11 06:36:50 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4407 2020/08/11 12:26:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6911,3 +6911,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/sbcl to 2.0.7 [rjs 2020-08-10]
 	Updated devel/py-prompt_toolkit2 to 3.0.6 [adam 2020-08-11]
 	Updated net/py-responses to 0.10.16 [adam 2020-08-11]
+	Updated net/mosquitto to 1.6.11 [gdt 2020-08-11]
