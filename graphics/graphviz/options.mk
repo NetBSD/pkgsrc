@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2020/08/04 23:30:42 gutteridge Exp $
+# $NetBSD: options.mk,v 1.30 2020/08/11 10:03:57 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua ocaml perl poppler svg tcl x11 # guile does not build with guile20
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS=	gd gtk lua perl tcl x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gd ghostscript gtk guile lua ocaml perl poppler quartz svg tcl x11
+PLIST_VARS+=		gd ghostscript gtk guile lua ocaml perl poppler quartz svg swig tcl x11
 
 .if !empty(PKG_OPTIONS:Mgd)
 .  include "../../graphics/gd/buildlink3.mk"
@@ -126,6 +126,7 @@ CONFIGURE_ARGS+=	--disable-perl
 .endif
 
 .if !empty(USING_SWIG:Myes)
+PLIST.swig=		yes
 .  include "../../devel/swig/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-swig
