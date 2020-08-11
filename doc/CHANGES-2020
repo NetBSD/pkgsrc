@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4408 2020/08/11 13:38:25 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4409 2020/08/11 15:29:26 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6913,3 +6913,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-responses to 0.10.16 [adam 2020-08-11]
 	Updated net/mosquitto to 1.6.11 [gdt 2020-08-11]
 	Updated filesystems/fuse-ext2 to 0.0.10 [nia 2020-08-11]
+	Updated graphics/ruby-cairo to 1.16.6 [tsutsui 2020-08-11]
