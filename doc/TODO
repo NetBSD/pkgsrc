@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19994 2020/08/09 22:11:46 nikita Exp $
+$NetBSD: TODO,v 1.19995 2020/08/11 13:38:25 nia Exp $
 
 Suggested new packages
 ======================
@@ -590,7 +590,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.8.7
 	o fuse-bindfs-1.13.7
-	o fuse-ext2-0.0.10
 	o fuse-mp3fs-0.91 [needs fixes to work on NetBSD; started in wip]
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
