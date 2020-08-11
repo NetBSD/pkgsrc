@@ -1,4 +1,4 @@
-/* $NetBSD: diffbreaker.c,v 1.8 2020/06/18 13:40:17 nat Exp $ */
+/* $NetBSD: diffbreaker.c,v 1.9 2020/08/11 18:48:10 joerg Exp $ */
 
 /*-
  * Copyright (c) 2018, 2019 Nathanial Sloss <nathanialsloss@yahoo.com.au>
@@ -631,7 +631,7 @@ main(int argc, char *argv[])
 
 	setup_screen();
 	mark_dirty();
-	print_buffer(currentLine, (size_t)(displayLines + 1));
+	print_buffer(currentLine, (ssize_t)(displayLines + 1));
 	COLORTEXT(2);
 
 	for (;;) {
@@ -670,7 +670,7 @@ main(int argc, char *argv[])
 			if (totalLines <= 0)
 				break;
 		}
-		print_buffer(currentLine, (size_t)(displayLines + 1));
+		print_buffer(currentLine, (ssize_t)(displayLines + 1));
 	}
 
 	delwin(mywin);
