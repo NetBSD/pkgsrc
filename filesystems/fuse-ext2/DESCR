@@ -1,2 +1,5 @@
-Fuse-ext2 is a multi OS FUSE module to mount ext2 and ext3 file system devices
-and/or images with read write support.
+fuse-ext2 is a multi OS FUSE module to mount ext2, ext3, and ext4
+file system devices and/or images with read write support.
+
+Even though write support is available, please do not mount your
+filesystems with write support unless you have nothing to lose.
