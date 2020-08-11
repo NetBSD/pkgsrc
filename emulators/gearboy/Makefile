@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/02 13:24:32 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/11 18:47:39 joerg Exp $
 
 .include "Makefile.common"
 
@@ -6,6 +6,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/drhelius/Gearboy
 COMMENT=	Game Boy / Gameboy Color emulator
 LICENSE=	gnu-gpl-v3
+
+UNLIMIT_RESOURCES+=	datasize virtualsize
 
 USE_TOOLS+=	gmake
 
