@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.96 2019/07/11 15:16:12 sevan Exp $
+# $NetBSD: Darwin.mk,v 1.97 2020/08/11 12:45:54 hauke Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -156,6 +156,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,-O2
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bdynamic
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
 BUILDLINK_TRANSFORM+=	rm:-Wl,-export-dynamic
+BUILDLINK_TRANSFORM+=	rm:-Wl,-no_warn_inits 
 BUILDLINK_TRANSFORM+=	rm:-Wl,-warn-common
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
