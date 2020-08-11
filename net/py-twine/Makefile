@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/16 18:00:31 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/11 18:44:01 joerg Exp $
 
 DISTNAME=	twine-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.7.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.14:../../misc/py-tqdm
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tqdm
 
 USE_LANGUAGES=	# none
 
