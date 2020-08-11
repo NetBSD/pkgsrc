@@ -1,21 +1,21 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.2 2020/04/16 15:19:11 jperkin Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.3 2020/08/11 12:26:41 gdt Exp $
 
 On NetBSD, don't use -ldl (why?).
 
 Sent upstream via email 20190427.
 
---- src/CMakeLists.txt.orig	2020-02-27 23:49:51.000000000 +0000
+--- src/CMakeLists.txt.orig	2020-08-11 11:18:06.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -151,6 +151,8 @@ endif (HAVE_GETADDRINFO_A AND WITH_ADNS)
- if (UNIX)
- 	if (APPLE)
+@@ -152,6 +152,8 @@ if (UNIX)
  		set (MOSQ_LIBS ${MOSQ_LIBS} dl m)
-+	elseif (${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
-+		set (MOSQ_LIBS ${MOSQ_LIBS} m)
+     elseif (${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
+ 	    set (MOSQ_LIBS ${MOSQ_LIBS} m)
++    elseif (${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++	    set (MOSQ_LIBS ${MOSQ_LIBS} m)
      elseif(QNX)
          set(MOSQ_LIBS ${MOSQ_LIBS} m socket)
      else(APPLE)
-@@ -184,9 +186,9 @@ target_link_libraries(mosquitto ${MOSQ_L
+@@ -185,9 +187,9 @@ target_link_libraries(mosquitto ${MOSQ_L
  if (UNIX)
  	if (APPLE)
  		set_target_properties(mosquitto PROPERTIES LINK_FLAGS "-Wl,-exported_symbols_list -Wl,${mosquitto_SOURCE_DIR}/src/linker-macosx.syms")
