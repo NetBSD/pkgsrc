@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/14 12:39:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/08/11 18:44:53 joerg Exp $
 bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,6 +36,9 @@ ${PYSITELIB}/tqdm/_utils.pyo
 ${PYSITELIB}/tqdm/_version.py
 ${PYSITELIB}/tqdm/_version.pyc
 ${PYSITELIB}/tqdm/_version.pyo
+${PYSITELIB}/tqdm/asyncio.py
+${PYSITELIB}/tqdm/asyncio.pyc
+${PYSITELIB}/tqdm/asyncio.pyo
 ${PYSITELIB}/tqdm/auto.py
 ${PYSITELIB}/tqdm/auto.pyc
 ${PYSITELIB}/tqdm/auto.pyo
