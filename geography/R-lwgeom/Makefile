@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/08 23:32:09 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/11 18:46:10 joerg Exp $
 
 R_PKGNAME=	lwgeom
 R_PKGVER=	0.2-5
@@ -10,6 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-units>=0.6.5:../../math/R-units
 
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../math/R/Makefile.extension"
