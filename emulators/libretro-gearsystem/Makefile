@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/02 13:26:27 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/11 18:47:40 joerg Exp $
 
 LIBRETRO_CORE=	gearsystem
 
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/gearsystem/
 COMMENT=	Libretro core based on the Gearsystem Master System emlator
 LICENSE=	gnu-gpl-v3
+
+UNLIMIT_RESOURCES+=	datasize virtualsize
 
 BUILD_DIRS=	platforms/libretro
 
