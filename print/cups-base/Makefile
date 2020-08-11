@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2020/05/26 08:36:55 triaxx Exp $
+# $NetBSD: Makefile,v 1.37 2020/08/11 12:40:54 hauke Exp $
 
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	cups-base-${CUPS_VERS}
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 
 MAINTAINER=	sbd@NetBSD.org
@@ -33,6 +33,8 @@ CONFIGURE_ARGS+=	--with-system-groups=${CUPS_SYSTEM_GROUPS:Q}
 CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-gnutls
+CONFIGURE_ARGS+=	--disable-cdsassl
 CONFIGURE_ARGS+=	--without-bundledir
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
