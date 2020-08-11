@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/06/17 11:45:08 nat Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/11 18:48:10 joerg Exp $
 
 PKGNAME=	diffbreaker-0.2
 #PKGREVISION=	1
@@ -8,11 +8,9 @@ MAINTAINER=	nat@NetBSD.org
 COMMENT=	Tool to manuipulate unified diffs using curses
 LICENSE=	2-clause-bsd
 
-NO_CONFIGURE=	yes
-
 WRKSRC=		${WRKDIR}/diffbreaker
-USE_LANGUAGES=	c
-USE_TOOLS=	make
+
+USE_BSD_MAKEFILE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
