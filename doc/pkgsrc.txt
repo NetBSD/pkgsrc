@@ -6707,36 +6707,56 @@ of the three recipes from below:
 
 21.2.3.1. Fetch based on a tagged release
 
-If your distfile URL looks similar to https://github.com/username/
-exampleproject/archive/v1.0.zip, then you are packaging a tagged release.
+If your distfile URL looks similar to https://github.com/username/example/
+archive/v1.0.zip, then you are packaging a tagged release.
 
-DISTNAME=       exampleproject-1.0
+DISTNAME=       example-1.0
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
-#GITHUB_PROJECT=        # can be omitted if same as DISTNAME
+#GITHUB_PROJECT= example    # can be omitted if same as DISTNAME
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 EXTRACT_SUFX=   .zip
 
-21.2.3.2. Fetch based on a specific commit
+21.2.3.2. Fetch based on a specific commit before the first release
 
-If your distfile URL looks similar to https://github.com?/example?/example?/
-archive?/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz, then you are
-packaging a specific commit not tied to a release.
+If your distfile looks similar to https://github.com/username/example/archive/
+988881adc9fc3655077dc2d4d757d480b5ea0e11 and is from a commit before the first
+release, then set the package version to 0.0.0.N, where N is the number of
+commits to the repository, and set GITHUB_TAG to the commit hash. This will
+(almost) ensure that the first tagged release will have a version greater than
+this one so that package upgrades will function properly.
 
-DISTNAME=       example-1.0
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=example/}
-#GITHUB_PROJECT=        # can be omitted if same as DISTNAME
+DISTNAME=       example-0.0.0.347
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
+#GITHUB_PROJECT= example    # can be omitted if same as DISTNAME
 GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
 
-21.2.3.3. Fetch based on release
+21.2.3.3. Fetch based on a specific commit after a release
 
-If your distfile URL looks similar to https://github.com?/username/
-exampleproject?/releases?/download?/rel-1.6?/offensive-1.6.zip, then you are
-packaging a release.
+If your distfile looks similar to https://github.com/username/example/archive/
+988881adc9fc3655077dc2d4d757d480b5ea0e11 and is from a commit after a release,
+then include the last release version and the commit count since that release
+in the package version and set GITHUB_TAG to the commit hash. The latest
+release and commit count are shown in the output of "git describe --tags":
+
+# git clone https://github.com/username/example
+# cd example
+# git describe --tags
+1.2.3-5-g988881a
+
+DISTNAME=       example-1.2.3.5
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
+#GITHUB_PROJECT= example    # can be omitted if same as DISTNAME
+GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
+
+21.2.3.4. Fetch based on release
+
+If your distfile URL looks similar to https://github.com/username/example/
+releases/download/rel-1.6/offensive-1.6.zip, then you are packaging a release.
 
 DISTNAME=       offensive-1.6
 PKGNAME=        ${DISTNAME:S/offensive/proper/}
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
-GITHUB_PROJECT= exampleproject
+GITHUB_PROJECT= example
 GITHUB_RELEASE= rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
 EXTRACT_SUFX=   .zip
 
@@ -9075,103 +9095,104 @@ BDB185_DEFAULT                   BDBBASE
 BDB_ACCEPTED                     BDB_DEFAULT
 BDB_LIBS                         BDB_TYPE
 BIND_DIR                         BIND_GROUP
-BIND_USER                        BINPKG_SITES
-BIN_INSTALL_FLAGS                BISON_PKGDATADIR
-BLAS_ACCEPTED                    BLAS_LIBS
-BLAS_TYPE                        BOOTSTRAP_DEPENDS
-BOOTSTRAP_SETUPTOOLS             BROKEN
-BROKEN_EXCEPT_ON_PLATFORM        BROKEN_ON_PLATFORM
-BSDSRCDIR                        BSDXSRCDIR
-BSD_MAKE_ENV                     BUILDLINK_AUTO_DIRS
-BUILDLINK_AUTO_VARS              BUILDLINK_CFLAGS
-BUILDLINK_CONTENTS_FILTER        BUILDLINK_CPPFLAGS
-BUILDLINK_DEPMETHOD              BUILDLINK_FILES
-BUILDLINK_FILES_CMD              BUILDLINK_FNAME_TRANSFORM
-BUILDLINK_LDFLAGS                BUILDLINK_LIBS
-BUILDLINK_OPSYS_SUPPORT_PTHREAD  BUILDLINK_PKGNAME
-BUILDLINK_PREFIX                 BUILDLINK_RPATHDIRS
-BUILDLINK_TREE                   BUILD_DEFS
-BUILD_DEFS_EFFECTS               BUILD_DEPENDS
-BUILD_DIRS                       BUILD_ENV_SHELL
-BUILD_MAKE_CMD                   BUILD_MAKE_FLAGS
-BUILD_TARGET                     BUILTIN_FIND_FILES
-BUILTIN_FIND_FILES_VAR           BUILTIN_FIND_GREP
-BUILTIN_FIND_HEADERS             BUILTIN_FIND_HEADERS_VAR
-BUILTIN_PKG                      BUILTIN_TEST_CURSES_DEFINES
-BUILTIN_TEST_CURSES_FUNCS        BUILTIN_VERSION_SCRIPT
-BUILTIN_X11_TYPE                 BUILTIN_X11_VERSION
-CACTI_GROUP                      CACTI_USER
-CANNA_GROUP                      CANNA_USER
-CAT                              CCACHE_BASE
-CCACHE_DIR                       CCACHE_LOGFILE
-CC_VERSION                       CC_VERSION_STRING
-CDRECORD_CONF                    CDROM_PKG_URL_DIR
-CDROM_PKG_URL_HOST               CHECKOUT_DATE
-CHECK_COMPILER                   CHECK_FAKEHOME
-CHECK_FILES                      CHECK_FILES_SKIP
-CHECK_FILES_STRICT               CHECK_HEADERS
-CHECK_HEADERS_SKIP               CHECK_INTERPRETER
-CHECK_INTERPRETER_SKIP           CHECK_PERMS
-CHECK_PERMS_AUTOFIX              CHECK_PERMS_SKIP
-CHECK_PORTABILITY                CHECK_PORTABILITY_EXPERIMENTAL
-CHECK_PORTABILITY_SKIP           CHECK_RELRO
-CHECK_RELRO_SKIP                 CHECK_RELRO_SUPPORTED
-CHECK_SHLIBS                     CHECK_SHLIBS_BLACKLIST
-CHECK_SHLIBS_SKIP                CHECK_SHLIBS_SUPPORTED
-CHECK_SSP                        CHECK_SSP_SKIP
-CHECK_SSP_SUPPORTED              CHECK_STRIPPED
-CHECK_STRIPPED_SKIP              CHECK_WRKREF
-CHECK_WRKREF_EXTRA_DIRS          CHECK_WRKREF_SKIP
-CLAMAV_DBDIR                     CLAMAV_GROUP
-CLAMAV_USER                      CLANGBASE
-CLEANDEPENDS                     CMAKE_DEPENDENCIES_REWRITE
-CMAKE_INSTALL_PREFIX             CMAKE_MODULE_PATH_OVERRIDE
-CMAKE_PKGSRC_BUILD_FLAGS         CMAKE_PREFIX_PATH
-CMAKE_USE_GNU_INSTALL_DIRS       COMMON_LISP_DOCFILES
-COMMON_LISP_EXAMPLES             COMMON_LISP_EXTRAFILES
-COMMON_LISP_PACKAGES             COMMON_LISP_SYSTEM
-COMPILER_RPATH_FLAG              COMPILER_USE_SYMLINKS
-CONFIGURE_ARGS                   CONFIGURE_DIRS
-CONFIGURE_ENV                    CONFIGURE_ENV_SHELL
-CONFIGURE_HAS_INFODIR            CONFIGURE_HAS_MANDIR
-CONFIGURE_SCRIPT                 CONFIG_SHELL
-CONFIG_SHELL_FLAGS               CONF_FILES
-CONF_FILES_MODE                  CONF_FILES_PERMS
-CONSERVER_DEFAULTHOST            CONSERVER_DEFAULTPORT
-CP                               CPP
-CPP_PRECOMP_FLAGS                CREATE_WRKDIR_SYMLINK
-CROSSBASE                        CTFCONVERT
-CTF_FILES_SKIP                   CTF_SUPPORTED
-CTYPE                            CUPS_GROUP
-CUPS_SYSTEM_GROUPS               CUPS_USER
-CURSES_DEFAULT                   CURSES_TYPE
-CVS_EXTRACTDIR                   CVS_MODULE
-CVS_PROJECT                      CVS_REPOSITORIES
-CVS_ROOT                         CVS_ROOT_GNU
-CVS_ROOT_NONGNU                  CVS_ROOT_SOURCEFORGE
-CVS_TAG                          CXX
-CYRUS_GROUP                      CYRUS_IDLE
-CYRUS_USER                       DAEMONTOOLS_GROUP
-DAEMONTOOLS_LOG_USER             DBUS_GROUP
-DBUS_USER                        DEFANG_GROUP
-DEFANG_USER                      DEFAULT_ACCEPTABLE_LICENSES
-DEFAULT_DISTFILES                DEFAULT_IRC_SERVER
-DEFAULT_SERIAL_DEVICE            DEF_UMASK
-DEINSTALLDEPENDS                 DEINSTALL_SRC
-DEINSTALL_TEMPLATES              DELAYED_ERROR_MSG
-DELAYED_WARNING_MSG              DEPENDS
-DEPENDS_TARGET                   DEPENDS_TYPE
-DESTDIR                          DESTDIR_VARNAME
-DIALER_GROUP                     DIGEST_REQD
-DISTDIR                          DISTFILES
-DISTINFO_FILE                    DISTNAME
-DIST_PATH                        DIST_SUBDIR
-DJBDNS_AXFR_USER                 DJBDNS_CACHE_USER
-DJBDNS_DJBDNS_GROUP              DJBDNS_LOG_USER
-DJBDNS_RBL_USER                  DJBDNS_TINY_USER
-DLOPEN_REQUIRE_PTHREADS          DL_AUTO_VARS
-DL_CFLAGS                        DL_LDFLAGS
-DL_LIBS                          DNS
+BIND_USER                        BINOWN
+BINPKG_SITES                     BIN_INSTALL_FLAGS
+BISON_PKGDATADIR                 BLAS_ACCEPTED
+BLAS_LIBS                        BLAS_TYPE
+BOOTSTRAP_DEPENDS                BOOTSTRAP_SETUPTOOLS
+BROKEN                           BROKEN_EXCEPT_ON_PLATFORM
+BROKEN_ON_PLATFORM               BSDSRCDIR
+BSDXSRCDIR                       BSD_MAKE_ENV
+BUILDLINK_AUTO_DIRS              BUILDLINK_AUTO_VARS
+BUILDLINK_CFLAGS                 BUILDLINK_CONTENTS_FILTER
+BUILDLINK_CPPFLAGS               BUILDLINK_DEPMETHOD
+BUILDLINK_FILES                  BUILDLINK_FILES_CMD
+BUILDLINK_FNAME_TRANSFORM        BUILDLINK_LDFLAGS
+BUILDLINK_LIBS                   BUILDLINK_OPSYS_SUPPORT_PTHREAD
+BUILDLINK_PKGNAME                BUILDLINK_PREFIX
+BUILDLINK_RPATHDIRS              BUILDLINK_TREE
+BUILD_DEFS                       BUILD_DEFS_EFFECTS
+BUILD_DEPENDS                    BUILD_DIRS
+BUILD_ENV_SHELL                  BUILD_MAKE_CMD
+BUILD_MAKE_FLAGS                 BUILD_TARGET
+BUILTIN_FIND_FILES               BUILTIN_FIND_FILES_VAR
+BUILTIN_FIND_GREP                BUILTIN_FIND_HEADERS
+BUILTIN_FIND_HEADERS_VAR         BUILTIN_PKG
+BUILTIN_TEST_CURSES_DEFINES      BUILTIN_TEST_CURSES_FUNCS
+BUILTIN_VERSION_SCRIPT           BUILTIN_X11_TYPE
+BUILTIN_X11_VERSION              CACTI_GROUP
+CACTI_USER                       CANNA_GROUP
+CANNA_USER                       CAT
+CCACHE_BASE                      CCACHE_DIR
+CCACHE_LOGFILE                   CC_VERSION
+CC_VERSION_STRING                CDRECORD_CONF
+CDROM_PKG_URL_DIR                CDROM_PKG_URL_HOST
+CHECKOUT_DATE                    CHECK_COMPILER
+CHECK_FAKEHOME                   CHECK_FILES
+CHECK_FILES_SKIP                 CHECK_FILES_STRICT
+CHECK_HEADERS                    CHECK_HEADERS_SKIP
+CHECK_INTERPRETER                CHECK_INTERPRETER_SKIP
+CHECK_PERMS                      CHECK_PERMS_AUTOFIX
+CHECK_PERMS_SKIP                 CHECK_PORTABILITY
+CHECK_PORTABILITY_EXPERIMENTAL   CHECK_PORTABILITY_SKIP
+CHECK_RELRO                      CHECK_RELRO_SKIP
+CHECK_RELRO_SUPPORTED            CHECK_SHLIBS
+CHECK_SHLIBS_BLACKLIST           CHECK_SHLIBS_SKIP
+CHECK_SHLIBS_SUPPORTED           CHECK_SSP
+CHECK_SSP_SKIP                   CHECK_SSP_SUPPORTED
+CHECK_STRIPPED                   CHECK_STRIPPED_SKIP
+CHECK_WRKREF                     CHECK_WRKREF_EXTRA_DIRS
+CHECK_WRKREF_SKIP                CLAMAV_DBDIR
+CLAMAV_GROUP                     CLAMAV_USER
+CLANGBASE                        CLEANDEPENDS
+CMAKE_DEPENDENCIES_REWRITE       CMAKE_INSTALL_PREFIX
+CMAKE_MODULE_PATH_OVERRIDE       CMAKE_PKGSRC_BUILD_FLAGS
+CMAKE_PREFIX_PATH                CMAKE_USE_GNU_INSTALL_DIRS
+COMMON_LISP_DOCFILES             COMMON_LISP_EXAMPLES
+COMMON_LISP_EXTRAFILES           COMMON_LISP_PACKAGES
+COMMON_LISP_SYSTEM               COMPILER_RPATH_FLAG
+COMPILER_USE_SYMLINKS            CONFIGURE_ARGS
+CONFIGURE_DIRS                   CONFIGURE_ENV
+CONFIGURE_ENV_SHELL              CONFIGURE_HAS_INFODIR
+CONFIGURE_HAS_MANDIR             CONFIGURE_SCRIPT
+CONFIG_SHELL                     CONFIG_SHELL_FLAGS
+CONF_FILES                       CONF_FILES_MODE
+CONF_FILES_PERMS                 CONSERVER_DEFAULTHOST
+CONSERVER_DEFAULTPORT            CP
+CPP                              CPP_PRECOMP_FLAGS
+CREATE_WRKDIR_SYMLINK            CROSSBASE
+CTFCONVERT                       CTF_FILES_SKIP
+CTF_SUPPORTED                    CTYPE
+CUPS_GROUP                       CUPS_SYSTEM_GROUPS
+CUPS_USER                        CURSES_DEFAULT
+CURSES_TYPE                      CVS_EXTRACTDIR
+CVS_MODULE                       CVS_PROJECT
+CVS_REPOSITORIES                 CVS_ROOT
+CVS_ROOT_GNU                     CVS_ROOT_NONGNU
+CVS_ROOT_SOURCEFORGE             CVS_TAG
+CXX                              CYRUS_GROUP
+CYRUS_IDLE                       CYRUS_USER
+DAEMONTOOLS_GROUP                DAEMONTOOLS_LOG_USER
+DBUS_GROUP                       DBUS_USER
+DEFANG_GROUP                     DEFANG_USER
+DEFAULT_ACCEPTABLE_LICENSES      DEFAULT_DISTFILES
+DEFAULT_IRC_SERVER               DEFAULT_SERIAL_DEVICE
+DEF_UMASK                        DEINSTALLDEPENDS
+DEINSTALL_SRC                    DEINSTALL_TEMPLATES
+DELAYED_ERROR_MSG                DELAYED_WARNING_MSG
+DEPENDS                          DEPENDS_TARGET
+DEPENDS_TYPE                     DESTDIR
+DESTDIR_VARNAME                  DIALER_GROUP
+DIGEST_REQD                      DISTDIR
+DISTFILES                        DISTINFO_FILE
+DISTNAME                         DIST_PATH
+DIST_SUBDIR                      DJBDNS_AXFR_USER
+DJBDNS_CACHE_USER                DJBDNS_DJBDNS_GROUP
+DJBDNS_LOG_USER                  DJBDNS_RBL_USER
+DJBDNS_TINY_USER                 DLOPEN_REQUIRE_PTHREADS
+DL_AUTO_VARS                     DL_CFLAGS
+DL_LDFLAGS                       DL_LIBS
+DNS                              DOCOWN
 DOWNLOADED_DISTFILE              DT_LAYOUT
 DYNAMIC_SITES_CMD                DYNAMIC_SITES_SCRIPT
 ECHO                             ECHO_N
@@ -9199,7 +9220,8 @@ FEATURE_CPPFLAGS                 FEATURE_LDFLAGS
 FEATURE_LIBS                     FETCH_AFTER_ARGS
 FETCH_BEFORE_ARGS                FETCH_CMD
 FETCH_OUTPUT_ARGS                FETCH_PROXY
-FETCH_RESUME_ARGS                FETCH_USING
+FETCH_RESUME_ARGS                FETCH_TIMEOUT
+FETCH_USE_IPV4_ONLY              FETCH_USING
 FILES_SUBST                      FILES_SUBST_SED
 FIX_SYSTEM_HEADERS               FLUXBOX_USE_GNOME
 FLUXBOX_USE_KDE                  FLUXBOX_USE_XFT
@@ -9300,52 +9322,53 @@ MAKE_DIRS                        MAKE_DIRS_PERMS
 MAKE_ENV                         MAKE_FILE
 MAKE_FLAGS                       MAKE_JOBS
 MAKE_JOBS_SAFE                   MAKE_PROGRAM
-MANINSTALL                       MANZ
-MASTER_SITES                     MASTER_SITE_BACKUP
-MASTER_SITE_LOCAL                MASTER_SITE_MOZILLA
-MASTER_SITE_OVERRIDE             MASTER_SITE_PERL_CPAN
-MASTER_SORT                      MASTER_SORT_RANDOM
-MASTER_SORT_REGEX                MECAB_CHARSET
-MEDIATOMB_GROUP                  MEDIATOMB_USER
-MIPSPROBASE                      MIREDO_GROUP
-MIREDO_USER                      MISSING_FEATURES
-MKDIR                            MLDONKEY_GROUP
-MLDONKEY_HOME                    MLDONKEY_USER
-MONOTONE_GROUP                   MONOTONE_USER
-MOTIFBASE                        MOTIF_TYPE
-MOTIF_TYPE_DEFAULT               MPI_TYPE
-MSGFMT_STRIP_MSGCTXT             MSGFMT_STRIP_MSGID_PLURAL
-MTOOLS_ENABLE_FLOPPYD            MUST
-MV                               MYSQL_CHARSET
-MYSQL_DATADIR                    MYSQL_EXTRA_CHARSET
-MYSQL_GROUP                      MYSQL_PKGSRCDIR
-MYSQL_USER                       MYSQL_VERSIONS_ACCEPTED
-MYSQL_VERSION_DEFAULT            NAGIOSCMD_GROUP
-NAGIOSDIR                        NAGIOS_GROUP
-NAGIOS_USER                      NATIVE_APPEND_ABI
-NATIVE_APPEND_ELF                NATIVE_EXEC_FMT
-NATIVE_MACHINE_PLATFORM          NATIVE_OBJECT_FMT
-NBPAX_PROGRAM_PREFIX             NETBSD_LOGIN_NAME
-NMH_EDITOR                       NMH_MTA
-NMH_PAGER                        NOLOGIN
-NOTE                             NOT_FOR_PLATFORM
-NOT_PAX_ASLR_SAFE                NOT_PAX_MPROTECT_SAFE
-NO_BUILD                         NO_CHECKSUM
-NO_CONFIGURE                     NO_SKIP
-NS_PREFERRED                     NULLMAILER_GROUP
-NULLMAILER_USER                  OASIS
-OASIS_BUILD_ARGS                 OBJHOSTNAME
-OBJMACHINE                       OCAML_FINDLIB_DIRS
-OCAML_FINDLIB_REGISTER           OCAML_FINDLIB_REGISTER_VERBOSE
-OCAML_SITELIBDIR                 OCAML_TOPKG_DOCDIR
-OCAML_USE_DUNE                   OCAML_USE_FINDLIB
-OCAML_USE_JBUILDER               OCAML_USE_OASIS
-OCAML_USE_OASIS_DYNRUN           OCAML_USE_OPAM
-OCAML_USE_OPT_COMPILER           OCAML_USE_TOPKG
-OMF                              ONLY_FOR_COMPILER
-ONLY_FOR_PLATFORM                OPENSSH_CHROOT
-OPENSSH_GROUP                    OPENSSH_USER
-OPSYS                            OPSYS_EMULDIR
+MANCOMPRESSED_IF_MANZ            MANINSTALL
+MANZ                             MASTER_SITES
+MASTER_SITE_BACKUP               MASTER_SITE_LOCAL
+MASTER_SITE_MOZILLA              MASTER_SITE_OVERRIDE
+MASTER_SITE_PERL_CPAN            MASTER_SORT
+MASTER_SORT_RANDOM               MASTER_SORT_REGEX
+MECAB_CHARSET                    MEDIATOMB_GROUP
+MEDIATOMB_USER                   MIPSPROBASE
+MIREDO_GROUP                     MIREDO_USER
+MISSING_FEATURES                 MKDIR
+MLDONKEY_GROUP                   MLDONKEY_HOME
+MLDONKEY_USER                    MONOTONE_GROUP
+MONOTONE_USER                    MOTIFBASE
+MOTIF_TYPE                       MOTIF_TYPE_DEFAULT
+MPI_TYPE                         MSGFMT_STRIP_MSGCTXT
+MSGFMT_STRIP_MSGID_PLURAL        MTOOLS_ENABLE_FLOPPYD
+MUST                             MV
+MYSQL_CHARSET                    MYSQL_DATADIR
+MYSQL_EXTRA_CHARSET              MYSQL_GROUP
+MYSQL_PKGSRCDIR                  MYSQL_USER
+MYSQL_VERSIONS_ACCEPTED          MYSQL_VERSION_DEFAULT
+NAGIOSCMD_GROUP                  NAGIOSDIR
+NAGIOS_GROUP                     NAGIOS_USER
+NATIVE_APPEND_ABI                NATIVE_APPEND_ELF
+NATIVE_EXEC_FMT                  NATIVE_MACHINE_PLATFORM
+NATIVE_OBJECT_FMT                NBPAX_PROGRAM_PREFIX
+NETBSD_LOGIN_NAME                NMH_EDITOR
+NMH_MTA                          NMH_PAGER
+NOLOGIN                          NOTE
+NOT_FOR_PLATFORM                 NOT_PAX_ASLR_SAFE
+NOT_PAX_MPROTECT_SAFE            NO_BUILD
+NO_CHECKSUM                      NO_CONFIGURE
+NO_SKIP                          NS_PREFERRED
+NULLMAILER_GROUP                 NULLMAILER_USER
+OASIS                            OASIS_BUILD_ARGS
+OBJHOSTNAME                      OBJMACHINE
+OCAML_FINDLIB_DIRS               OCAML_FINDLIB_REGISTER
+OCAML_FINDLIB_REGISTER_VERBOSE   OCAML_SITELIBDIR
+OCAML_TOPKG_DOCDIR               OCAML_USE_DUNE
+OCAML_USE_FINDLIB                OCAML_USE_JBUILDER
+OCAML_USE_OASIS                  OCAML_USE_OASIS_DYNRUN
+OCAML_USE_OPAM                   OCAML_USE_OPT_COMPILER
+OCAML_USE_TOPKG                  OMF
+ONLY_FOR_COMPILER                ONLY_FOR_PLATFORM
+OPENSSH_CHROOT                   OPENSSH_GROUP
+OPENSSH_USER                     OPSYS
+OPSYS_EMULDIR                    OS
 OSS_TYPE                         OSX
 OSX_TOLERATE_SDK_SKEW            OS_HAVE_ALSA
 OS_HAVE_RCD                      OS_VARIANT
@@ -9551,20 +9574,21 @@ SUBST_STAGE                      SUBST_VARS
 SUNWSPROBASE                     SUSE_PREFER
 SU_CMD                           SVN_EXTRACTDIR
 SVN_REPO                         SVN_REPOSITORIES
-SVN_REVISION                     TERMCAP_TYPE
-TERMINFO_DEFAULT                 TERMINFO_TYPE
-TEST                             TEST_DEPENDS
-TEST_DIRS                        TEST_ENV
-TEST_ENV_SHELL                   TEST_MAKE_CMD
-TEST_MAKE_FLAGS                  TEST_TARGET
-TEXLIVE_IGNORE_PATTERNS          TEXLIVE_REV
-TEXLIVE_UNVERSIONED              TEXMFSITE
-TEX_FORMATS                      TEX_HYPHEN_DAT
-TEX_HYPHEN_DEF                   TEX_TEXMF_DIRS
-THTTPD_LOG_FACILITY              TO
-TOOLS_ALIASES                    TOOLS_ALWAYS_WRAP
-TOOLS_ARGS                       TOOLS_BROKEN
-TOOLS_CMD                        TOOLS_CREATE
+SVN_REVISION                     TBL
+TERMCAP_TYPE                     TERMINFO_DEFAULT
+TERMINFO_TYPE                    TEST
+TEST_DEPENDS                     TEST_DIRS
+TEST_ENV                         TEST_ENV_SHELL
+TEST_MAKE_CMD                    TEST_MAKE_FLAGS
+TEST_TARGET                      TEXLIVE_IGNORE_PATTERNS
+TEXLIVE_REV                      TEXLIVE_UNVERSIONED
+TEXMFSITE                        TEX_FORMATS
+TEX_HYPHEN_DAT                   TEX_HYPHEN_DEF
+TEX_TEXMF_DIRS                   THTTPD_LOG_FACILITY
+TO                               TOOLS_ALIASES
+TOOLS_ALWAYS_WRAP                TOOLS_ARGS
+TOOLS_BROKEN                     TOOLS_CMD
+TOOLS_CMDLINE_SED                TOOLS_CREATE
 TOOLS_DIR                        TOOLS_FAIL
 TOOLS_GNU_MISSING                TOOLS_LDCONFIG
 TOOLS_NOOP                       TOOLS_PATH
@@ -9597,15 +9621,16 @@ VARBASE                          VARNAME
 VIM_EXTRA_OPTS                   WARNING_MSG
 WCALC_CGIDIR                     WCALC_CGIPATH
 WCALC_HTMLDIR                    WCALC_HTMLPATH
-WDM_MANAGERS                     WRAPPER_REORDER_CMDS
-WRKDIR                           WRKDIR_BASENAME
-WRKDIR_LOCKTYPE                  WRKLOG
-WRKOBJDIR                        WRKSRC
-X10_PORT                         X11
-X11BASE                          X11_PKGSRCDIR
-X11_TYPE                         X509_CERTIFICATE
-X509_KEY                         XAW_TYPE
-XLOCK_DEFAULT_MODE               XMKMF_FLAGS
+WDM_MANAGERS                     WRAPPER_CC
+WRAPPER_REORDER_CMDS             WRKDIR
+WRKDIR_BASENAME                  WRKDIR_LOCKTYPE
+WRKLOG                           WRKOBJDIR
+WRKSRC                           X10_PORT
+X11                              X11BASE
+X11_PKGSRCDIR                    X11_TYPE
+X509_CERTIFICATE                 X509_KEY
+XAW_TYPE                         XLOCK_DEFAULT_MODE
+XMKMF                            XMKMF_FLAGS
 XXX                              XXXX
 YES                              ZSH_STATIC
 __stdc__                         _vargroups
@@ -9686,6 +9711,8 @@ help                             hg
 imake                            increment
 inet_aton                        interp
 interpreter                      intl
+ip4                              ip6
+ipv4                             ipv6
 iso                              kerberos
 krb                              krb5
 ksh                              lapack
