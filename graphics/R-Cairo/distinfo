@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2019/07/31 16:00:30 brook Exp $
+$NetBSD: distinfo,v 1.3 2020/08/11 18:45:25 joerg Exp $
 
 SHA1 (R/Cairo_1.5-10.tar.gz) = 527fa2bf7f88020864aa8c5cffc673d6da15f872
 RMD160 (R/Cairo_1.5-10.tar.gz) = ef6f53d0e6267593d2a2c35404a2516103594474
 SHA512 (R/Cairo_1.5-10.tar.gz) = 220f0f36ba8195e4049f2848fa8b56d55e3895884965a3c8339e42924cf922a99620ff88e99802c5c0d89e039c1c0364b71afdfff9eb9358d79adb26d3bdc831
 Size (R/Cairo_1.5-10.tar.gz) = 87699 bytes
 SHA1 (patch-configure) = eb4918abf1d80c02afbeea52aeccaa8675ee2021
+SHA1 (patch-src_cairotalk.c) = a40d0bfe608bdb1369a4effa8569486a51fca218
