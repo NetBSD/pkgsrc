@@ -1,12 +1,12 @@
-$NetBSD: patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk,v 1.2 2019/02/19 16:28:03 ryoon Exp $
+$NetBSD: patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk,v 1.3 2020/08/11 16:07:39 ryoon Exp $
 
---- external/mariadb-connector-c/UnpackedTarball_mariadb-connector-c.mk.orig	2019-01-23 19:35:25.000000000 +0000
+--- external/mariadb-connector-c/UnpackedTarball_mariadb-connector-c.mk.orig	2020-07-29 19:29:17.000000000 +0000
 +++ external/mariadb-connector-c/UnpackedTarball_mariadb-connector-c.mk
-@@ -32,6 +32,7 @@ $(eval $(call gb_UnpackedTarball_add_pat
-     external/mariadb-connector-c/mariadb-inline.patch.1 \
-     external/mariadb-connector-c/mariadb-CONC-104.patch.1 \
+@@ -27,6 +27,7 @@ $(eval $(call gb_UnpackedTarball_set_pat
+ 
+ $(eval $(call gb_UnpackedTarball_add_patches,mariadb-connector-c,\
      external/mariadb-connector-c/clang-cl.patch.0 \
 +    external/mariadb-connector-c/netbsd.patch \
  ))
  
- # vim: set noet sw=4 ts=4:
+ # TODO are any "plugins" needed?
