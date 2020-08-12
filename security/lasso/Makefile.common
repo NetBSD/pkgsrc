@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.15 2020/01/26 17:32:03 rillig Exp $
+# $NetBSD: Makefile.common,v 1.16 2020/08/12 14:15:33 manu Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
 
-DISTNAME=	lasso-2.5.1
+DISTNAME=	lasso-2.6.1
 CATEGORIES=	security
 MASTER_SITES=	https://dev.entrouvert.org/lasso/
 
