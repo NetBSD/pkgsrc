@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4428 2020/08/12 20:00:53 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4429 2020/08/12 22:44:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6941,3 +6941,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated inputmethod/skk-jisyo to 20200809 [ryoon 2020-08-12]
 	Updated inputmethod/skk-jisyo-cdb to 20200809 [ryoon 2020-08-12]
 	Updated mail/rspamd to 2.5nb3 [schmonz 2020-08-12]
+	Updated x11/xfce4-tumbler to 0.2.9 [gutteridge 2020-08-12]
