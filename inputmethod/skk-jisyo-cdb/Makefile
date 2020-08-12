@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2015/11/25 12:50:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/12 19:14:22 ryoon Exp $
 #
 
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
 PKGNAME=	skk-jisyo-cdb-${SKKJISYO_VERS}
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	${MASTER_SITE_FREEBSD_LOCAL:=matusita/skk-jisyo/}
-EXTRACT_SUFX=	.bz2
+EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/wiki/wiki.cgi?page=SKK%BC%AD%BD%F1
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	tinycdb-[0-9]*:../../databases/tinycdb
 
 USE_LANGUAGES=	# empty
 
-SKKJISYO_VERS=	201212
+SKKJISYO_VERS=	20200809
 
 INSTALLATION_DIRS+=	${PREFIX}/share/skk
 
