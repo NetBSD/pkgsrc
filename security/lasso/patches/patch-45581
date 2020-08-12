@@ -1,0 +1,189 @@
+$NetBSD: patch-45581,v 1.1 2020/08/12 14:15:33 manu Exp $
+
+Fix lasso fail to properly escape single quotes in RelayState
+From upstream https://dev.entrouvert.org/issues/45581
+
+diff --git a/lasso/id-ff/login.c b/lasso/id-ff/login.c
+index 0f4e8926..68693ffe 100644
+--- lasso/id-ff/login.c
++++ lasso/id-ff/login.c
+@@ -988,11 +988,11 @@ lasso_login_build_artifact_msg(LassoLogin *login, LassoHttpMethod http_method)
+ 	}
+ 
+ 	b64_samlArt = xmlStrdup((xmlChar*)login->assertionArtifact);
+-	relayState = xmlURIEscapeStr(
++	relayState = lasso_xmlURIEscapeStr(
+ 			(xmlChar*)LASSO_LIB_AUTHN_REQUEST(profile->request)->RelayState, NULL);
+ 
+ 	if (http_method == LASSO_HTTP_METHOD_REDIRECT) {
+-		xmlChar *escaped_artifact = xmlURIEscapeStr(b64_samlArt, NULL);
++		xmlChar *escaped_artifact = lasso_xmlURIEscapeStr(b64_samlArt, NULL);
+ 		gchar *query = NULL;
+ 
+ 		if (relayState == NULL) {
+diff --git a/lasso/xml/private.h b/lasso/xml/private.h
+index 52a21e56..a2b47aa4 100644
+--- lasso/xml/private.h
++++ lasso/xml/private.h
+@@ -287,6 +287,7 @@ gboolean lasso_eval_xpath_expression(xmlXPathContextPtr xpath_ctx, const char *e
+ 
+ char * lasso_get_relaystate_from_query(const char *query);
+ char * lasso_url_add_parameters(char *url, gboolean free, ...);
++xmlChar * lasso_xmlURIEscapeStr(const xmlChar *from, const xmlChar *list);
+ xmlSecKey* lasso_xmlsec_load_private_key_from_buffer(const char *buffer, size_t length, const char *password, LassoSignatureMethod signature_method, const char *certificate);
+ xmlSecKey* lasso_xmlsec_load_private_key(const char *filename_or_buffer, const char *password,
+ 		LassoSignatureMethod signature_method, const char *certificate);
+diff --git a/lasso/xml/tools.c b/lasso/xml/tools.c
+index 53d7d37b..589a795d 100644
+--- lasso/xml/tools.c
++++ lasso/xml/tools.c
+@@ -36,6 +36,7 @@
+ #define _BSD_SOURCE
+ #include "private.h"
+ #include <string.h>
++#include <strings.h>
+ #include <time.h>
+ #include <ctype.h>
+ #include <stdarg.h>
+@@ -540,7 +541,7 @@ lasso_query_sign(char *query, LassoSignatureContext context)
+ 	}
+ 
+ 	{
+-		const char *t = (char*)xmlURIEscapeStr(algo_href, NULL);
++		const char *t = (char*)lasso_xmlURIEscapeStr(algo_href, NULL);
+ 		new_query = g_strdup_printf("%s&SigAlg=%s", query, t);
+ 		xmlFree(BAD_CAST t);
+ 	}
+@@ -662,7 +663,7 @@ lasso_query_sign(char *query, LassoSignatureContext context)
+ 	/* Base64 encode the signature value */
+ 	b64_sigret = xmlSecBase64Encode(sigret, sigret_size, 0);
+ 	/* escape b64_sigret */
+-	e_b64_sigret = xmlURIEscapeStr((xmlChar*)b64_sigret, NULL);
++	e_b64_sigret = lasso_xmlURIEscapeStr((xmlChar*)b64_sigret, NULL);
+ 
+ 	/* add signature */
+ 	switch (sign_method) {
+@@ -1307,7 +1308,7 @@ lasso_xmlnode_build_deflated_query(xmlNode *xmlnode)
+ 	b64_ret = xmlSecBase64Encode(ret, stream.total_out, 0);
+ 	lasso_release(ret);
+ 
+-	ret = xmlURIEscapeStr(b64_ret, NULL);
++	ret = lasso_xmlURIEscapeStr(b64_ret, NULL);
+ 	rret = g_strdup((char*)ret);
+ 	xmlFree(b64_ret);
+ 	xmlFree(ret);
+@@ -2329,7 +2330,7 @@ lasso_url_add_parameters(char *url,
+ 		if (! key) {
+ 			break;
+ 		}
+-		encoded_key = xmlURIEscapeStr((xmlChar*)key, NULL);
++		encoded_key = lasso_xmlURIEscapeStr((xmlChar*)key, NULL);
+ 		goto_cleanup_if_fail(encoded_key);
+ 
+ 		value = va_arg(ap, char*);
+@@ -2337,7 +2338,7 @@ lasso_url_add_parameters(char *url,
+ 			message(G_LOG_LEVEL_CRITICAL, "lasso_url_add_parameter: key without a value !!");
+ 			break;
+ 		}
+-		encoded_value = xmlURIEscapeStr((xmlChar*)value, NULL);
++		encoded_value = lasso_xmlURIEscapeStr((xmlChar*)value, NULL);
+ 		goto_cleanup_if_fail(encoded_value);
+ 
+ 		if (old_url) {
+@@ -2480,6 +2481,56 @@ lasso_base64_decode(const char *from, char **buffer, int *buffer_len)
+ 	return TRUE;
+ }
+ 
++/**
++ * lasso_xmlURIEscapeStr:
++ * @from: the source URI string
++ * @list: optional list of characters not to escape
++ *
++ * Drop-in replacement for libxml2 xmlURIEscapeStr(), but encoding
++ * everything but [A-Za-z0-9._~-] which are the unreserved chartacters
++ * for RFC3986 section 2.3
++ *
++ * Return value: a buffer containing the URL-encoded string or NULL on error
++ */
++xmlChar *
++lasso_xmlURIEscapeStr(const xmlChar *from, const xmlChar *list)
++{
++	size_t len = 0;
++	const xmlChar *fp;
++	xmlChar *result;
++	int ri;
++
++	if (list == NULL)
++		list = "";
++
++	for (fp = from; *fp; fp++) {
++		if (isalnum(*fp) || index("._~-", *fp) || index(list, *fp))
++			len++;
++		else
++			len += 3;
++	}
++
++	result = g_malloc0(len + 1);
++	ri = 0;
++
++	for (fp = from; *fp; fp++) {
++		if (isalnum(*fp) || index("._~-", *fp) || index(list, *fp)) {
++			result[ri++] = *fp;
++		} else {
++			int msb = (*fp & 0xf0) >> 4;
++			int lsb = *fp & 0x0f;
++
++			result[ri++] = '%';
++			result[ri++] = (msb > 9) ? 'A' + msb - 10 : '0' + msb;
++			result[ri++] = (lsb > 9) ? 'A' + lsb - 10 : '0' + lsb;
++		}
++	}
++
++	result[ri++] = '\0';
++
++	return result;
++}
++
+ /**
+  * lasso_xmlsec_load_private_key_from_buffer:
+  * @buffer: a buffer containing a key in any format
+diff --git a/lasso/xml/xml.c b/lasso/xml/xml.c
+index 565172e1..938844ba 100644
+--- lasso/xml/xml.c
++++ lasso/xml/xml.c
+@@ -3120,7 +3120,7 @@ get_value_by_path(LassoNode *node, char *path, struct XmlSnippet *xml_snippet)
+ 				s = xmlGetProp(t, a->name);
+ 				g_string_append(result, a->name);
+ 				g_string_append(result, "=");
+-				s2 = xmlURIEscapeStr(s, NULL);
++				s2 = lasso_xmlURIEscapeStr(s, NULL);
+ 				g_string_append(result, s2);
+ 				xmlFree(s2);
+ 				xmlFree(s);
+@@ -3140,7 +3140,7 @@ get_value_by_path(LassoNode *node, char *path, struct XmlSnippet *xml_snippet)
+ 				g_string_append(result, (char*)c->name);
+ 				g_string_append(result, "=");
+ 				s = xmlNodeGetContent(c);
+-				s2 = xmlURIEscapeStr(s, NULL);
++				s2 = lasso_xmlURIEscapeStr(s, NULL);
+ 				g_string_append(result, (char*)s2);
+ 				xmlFree(s2);
+ 				xmlFree(s);
+@@ -3263,7 +3263,7 @@ lasso_node_build_query_from_snippets(LassoNode *node)
+ 				g_string_append(s, "&");
+ 			g_string_append(s, field_name);
+ 			g_string_append(s, "=");
+-			t = xmlURIEscapeStr((xmlChar*)v, NULL);
++			t = lasso_xmlURIEscapeStr((xmlChar*)v, NULL);
+ 			g_string_append(s, (char*)t);
+ 			xmlFree(t);
+ 		}
+@@ -3634,7 +3634,7 @@ lasso_node_export_to_saml2_query(LassoNode *node, const char *param_name, const
+ 	value = lasso_node_build_deflated_query(node);
+ 	if (! value)
+ 		goto cleanup;
+-	encoded_param = xmlURIEscapeStr(BAD_CAST param_name, NULL);
++	encoded_param = lasso_xmlURIEscapeStr(BAD_CAST param_name, NULL);
+ 	if (! encoded_param)
+ 		goto cleanup;
+ 	query = g_strdup_printf("%s=%s", encoded_param, value);
