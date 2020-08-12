@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.16 2020/02/24 21:13:56 rillig Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.17 2020/08/12 14:40:33 bacon Exp $ -->
 
 <appendix id="editing">
 <title>Editing guidelines for the pkgsrc guide</title>
@@ -39,6 +39,10 @@
 	<para>The procedure to edit the pkgsrc guide is:</para>
 
 	<procedure>
+
+	<step><para>Make sure you have checked out the htdocs repository
+	into a sibling directory of your pkgsrc directory.  You will need
+	the ability to commit from both pkgsrc and htdocs.</para></step> 
 
 	<step><para>Make sure you have the packages needed to
 	regenerate the pkgsrc guide (and other XML-based NetBSD
