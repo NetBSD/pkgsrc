@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4426 2020/08/12 18:31:55 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4427 2020/08/12 19:15:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6938,3 +6938,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/nsd to 4.3.2 [ryoon 2020-08-12]
 	Updated www/php-nextcloud to 19.0.1 [ryoon 2020-08-12]
 	Updated emulators/qemu to 5.1.0 [ryoon 2020-08-12]
+	Updated inputmethod/skk-jisyo to 20200809 [ryoon 2020-08-12]
+	Updated inputmethod/skk-jisyo-cdb to 20200809 [ryoon 2020-08-12]
