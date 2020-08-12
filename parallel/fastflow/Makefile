@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/09 15:51:07 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/12 00:18:27 brook Exp $
 
 GITHUB_PROJECT=	fastflow
 GITHUB_TAG=	3.0.0
@@ -13,8 +13,11 @@ HOMEPAGE=	https://github.com/fastflow/fastflow/
 COMMENT=	High performance C++ parallel building blocks
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	bash pax
 NO_BUILD=	yes
+
+REPLACE_BASH+=	ff/mapping_string.sh
+REPLACE_BASH+=	tests/runtests.sh
 
 INSTALLATION_DIRS+=	include/ff
 
