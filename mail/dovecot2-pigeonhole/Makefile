@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2020/03/15 22:52:45 adam Exp $
+# $NetBSD: Makefile,v 1.57 2020/08/12 15:58:02 taca Exp $
 
-DISTNAME=	dovecot-2.3-pigeonhole-0.5.10
-PKGNAME=	${DISTNAME:S/-2.3-/-/}
+DISTNAME=	dovecot-2.3.11-pigeonhole-0.5.11
+PKGNAME=	${DISTNAME:S/-2.3.11-/-/}
 CATEGORIES=	mail
 MASTER_SITES=	https://pigeonhole.dovecot.org/releases/2.3/
 
