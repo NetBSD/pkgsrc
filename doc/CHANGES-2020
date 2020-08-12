@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4422 2020/08/12 15:56:43 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4423 2020/08/12 15:58:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6934,3 +6934,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/dovecot2-mysql to 2.3.11.3 [taca 2020-08-12]
 	Updated mail/dovecot2-pgsql to 2.3.11.3 [taca 2020-08-12]
 	Updated mail/dovecot2-sqlite to 2.3.11.3 [taca 2020-08-12]
+	Updated mail/dovecot2-pigeonhole to 0.5.11 [taca 2020-08-12]
