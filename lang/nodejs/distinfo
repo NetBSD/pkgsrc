@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.177 2020/08/07 06:26:54 maya Exp $
+$NetBSD: distinfo,v 1.178 2020/08/12 06:53:28 adam Exp $
 
-SHA1 (node-v14.7.0.tar.xz) = f847feec3dc00be5aa04772c5ac8bde4224429df
-RMD160 (node-v14.7.0.tar.xz) = b0ddaf74aa68b36e0781d09ad31fb007016b710b
-SHA512 (node-v14.7.0.tar.xz) = 275875f2062d91617705b211fd254cdde61694c6a7ff657b66931f0d507220a9fde5a5f5c9e0e562ce80d531a87050b034d4e11bc3cfc4cf04d26ed15d1e0142
-Size (node-v14.7.0.tar.xz) = 33317268 bytes
+SHA1 (node-v14.8.0.tar.xz) = 6fbfe5b947ab87a9382260844618b8862995ccee
+RMD160 (node-v14.8.0.tar.xz) = 02595abd72a465c579449ed6ea02e39bca94b8fd
+SHA512 (node-v14.8.0.tar.xz) = ebb20f7163e20e8074dd9cc5d3ee7f3cbc536c55a7753d39c482ea90e9314d8fdfe1a88203be7f250f6d77b9f13da04d32d99770d300c2ab0dfdee3d7582f068
+Size (node-v14.8.0.tar.xz) = 33342288 bytes
 SHA1 (patch-common.gypi) = f0bd2962bf7c8466db24b35a35154897ecad6316
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
-SHA1 (patch-deps_uvwasi_include_wasi__serdes.h) = 4f418755259c9e717860a0c37b905ea1e799702a
+SHA1 (patch-deps_uvwasi_include_wasi__serdes.h) = 32b85ef5824b96b35aba9280bbe7aa7899d9e5cf
 SHA1 (patch-deps_v8_src_base_atomicops.h) = 05b1f62850c3d4a9a8e94a5263be1c4267cf566d
 SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = b47025f33d2991275bbcd15dbabb28900afab0e1
 SHA1 (patch-deps_v8_src_base_platform_platform-openbsd.cc) = 5e593879dbab095f99e82593272a0de91043f9a8
