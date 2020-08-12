@@ -1,9 +1,9 @@
-$NetBSD: patch-cpus.c,v 1.1 2020/02/06 16:46:17 kamil Exp $
+$NetBSD: patch-softmmu_cpus.c,v 1.1 2020/08/12 18:31:27 ryoon Exp $
 
 Add NVMM support.
 
---- cpus.c.orig	2019-12-12 18:20:47.000000000 +0000
-+++ cpus.c
+--- softmmu/cpus.c.orig	2019-12-12 18:20:47.000000000 +0000
++++ softmmu/cpus.c
 @@ -42,6 +42,7 @@
  #include "sysemu/hax.h"
  #include "sysemu/hvf.h"
