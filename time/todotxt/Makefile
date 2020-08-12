@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/05/16 17:34:13 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/12 12:16:54 leot Exp $
 
-DISTNAME=	todotxt-2.11.0
+DISTNAME=	todotxt-2.12.0
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=todotxt/}
 GITHUB_PROJECT=	todo.txt-cli
