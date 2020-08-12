@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/06/22 11:49:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/12 11:39:55 ryoon Exp $
 
-DISTNAME=	minitube-3.4.2
-PKGREVISION=	1
+DISTNAME=	minitube-3.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flaviotordini/}
 GITHUB_PROJECT=	minitube
