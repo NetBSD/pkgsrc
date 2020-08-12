@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4419 2020/08/12 14:15:33 manu Exp $
+$NetBSD: CHANGES-2020,v 1.4420 2020/08/12 14:16:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6926,3 +6926,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/minitube to 3.5 [ryoon 2020-08-12]
 	Updated time/todotxt to 2.12.0 [leot 2020-08-12]
 	Updated security/lasso to 2.6.1 [manu 2020-08-12]
+	Added editors/emacs27 version 27.1 [ryoon 2020-08-12]
