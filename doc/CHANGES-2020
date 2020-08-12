@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4413 2020/08/12 10:29:49 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4414 2020/08/12 10:30:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6920,3 +6920,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/openldap to 2.4.51 [adam 2020-08-12]
 	Updated databases/lmdb to 0.9.26 [adam 2020-08-12]
 	Updated devel/mdds to 1.6.0 [ryoon 2020-08-12]
+	Updated misc/libreoffice to 7.0.0.3 [ryoon 2020-08-12]
