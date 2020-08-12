@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/05/02 14:56:27 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/08/12 14:24:41 ryoon Exp $
 
 DISTNAME=		gcc-8.3.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -19,8 +19,7 @@ EXTRACT_USING=		bsdtar
 
 # for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
-TOOL_DEPENDS+=			gtexinfo>=5.1:../../devel/gtexinfo
-_TOOLS_USE_PKGSRC.makeinfo=	yes
+TEXINFO_REQD=		5.1
 
 DEPENDS+=		cross-arm-none-eabi-binutils-[0-9]*:../../cross/arm-none-eabi-binutils
 
