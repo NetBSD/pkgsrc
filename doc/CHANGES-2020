@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4416 2020/08/12 10:31:37 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4417 2020/08/12 11:40:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6923,3 +6923,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/libreoffice to 7.0.0.3 [ryoon 2020-08-12]
 	Updated devel/nspr to 4.27 [ryoon 2020-08-12]
 	Updated lang/openjdk11 to 1.11.0.8.10 [ryoon 2020-08-12]
+	Updated net/minitube to 3.5 [ryoon 2020-08-12]
