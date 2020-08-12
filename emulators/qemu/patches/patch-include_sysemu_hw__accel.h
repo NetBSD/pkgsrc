@@ -1,18 +1,18 @@
-$NetBSD: patch-include_sysemu_hw__accel.h,v 1.1 2020/02/06 16:46:17 kamil Exp $
+$NetBSD: patch-include_sysemu_hw__accel.h,v 1.2 2020/08/12 18:31:27 ryoon Exp $
 
 Add NVMM support.
 
---- include/sysemu/hw_accel.h.orig	2019-12-12 18:20:48.000000000 +0000
+--- include/sysemu/hw_accel.h.orig	2020-08-11 19:17:15.000000000 +0000
 +++ include/sysemu/hw_accel.h
-@@ -15,6 +15,7 @@
- #include "sysemu/hax.h"
+@@ -16,6 +16,7 @@
  #include "sysemu/kvm.h"
+ #include "sysemu/hvf.h"
  #include "sysemu/whpx.h"
 +#include "sysemu/nvmm.h"
  
  static inline void cpu_synchronize_state(CPUState *cpu)
  {
-@@ -27,6 +28,9 @@ static inline void cpu_synchronize_state
+@@ -31,6 +32,9 @@ static inline void cpu_synchronize_state
      if (whpx_enabled()) {
          whpx_cpu_synchronize_state(cpu);
      }
@@ -22,7 +22,7 @@ Add NVMM support.
  }
  
  static inline void cpu_synchronize_post_reset(CPUState *cpu)
-@@ -40,6 +44,10 @@ static inline void cpu_synchronize_post_
+@@ -47,6 +51,10 @@ static inline void cpu_synchronize_post_
      if (whpx_enabled()) {
          whpx_cpu_synchronize_post_reset(cpu);
      }
@@ -33,7 +33,7 @@ Add NVMM support.
  }
  
  static inline void cpu_synchronize_post_init(CPUState *cpu)
-@@ -53,6 +61,9 @@ static inline void cpu_synchronize_post_
+@@ -63,6 +71,9 @@ static inline void cpu_synchronize_post_
      if (whpx_enabled()) {
          whpx_cpu_synchronize_post_init(cpu);
      }
@@ -43,7 +43,7 @@ Add NVMM support.
  }
  
  static inline void cpu_synchronize_pre_loadvm(CPUState *cpu)
-@@ -66,6 +77,9 @@ static inline void cpu_synchronize_pre_l
+@@ -79,6 +90,9 @@ static inline void cpu_synchronize_pre_l
      if (whpx_enabled()) {
          whpx_cpu_synchronize_pre_loadvm(cpu);
      }
