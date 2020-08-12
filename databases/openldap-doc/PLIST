@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/13 19:57:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/08/12 08:31:13 adam Exp $
 share/doc/openldap/admin/allmail-en.png
 share/doc/openldap/admin/allusersgroup-en.png
 share/doc/openldap/admin/config_dit.png
@@ -12,7 +12,7 @@ share/doc/openldap/admin/intro_dctree.png
 share/doc/openldap/admin/intro_tree.png
 share/doc/openldap/admin/ldap-sync-refreshandpersist.png
 share/doc/openldap/admin/ldap-sync-refreshonly.png
-share/doc/openldap/admin/n-way-multi-master.png
+share/doc/openldap/admin/n-way-multi-provider.png
 share/doc/openldap/admin/push-based-complete.png
 share/doc/openldap/admin/push-based-standalone.png
 share/doc/openldap/admin/refint.png
