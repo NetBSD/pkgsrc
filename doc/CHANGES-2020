@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4412 2020/08/12 08:32:06 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4413 2020/08/12 10:29:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6919,3 +6919,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 14.8.0 [adam 2020-08-12]
 	Updated databases/openldap to 2.4.51 [adam 2020-08-12]
 	Updated databases/lmdb to 0.9.26 [adam 2020-08-12]
+	Updated devel/mdds to 1.6.0 [ryoon 2020-08-12]
