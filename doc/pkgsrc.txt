@@ -9826,26 +9826,30 @@ E.2. Procedure
 
 The procedure to edit the pkgsrc guide is:
 
- 1. Make sure you have the packages needed to regenerate the pkgsrc guide (and
+ 1. Make sure you have checked out the htdocs repository into a sibling
+    directory of your pkgsrc directory. You will need the ability to commit
+    from both pkgsrc and htdocs.
+
+ 2. Make sure you have the packages needed to regenerate the pkgsrc guide (and
     other XML-based NetBSD documentation) installed. These are automatically
     installed when you install the meta-pkgs/pkgsrc-guide-tools package.
 
- 2. Run cd doc/guide to get to the right directory. All further steps will take
+ 3. Run cd doc/guide to get to the right directory. All further steps will take
     place here.
 
- 3. Edit the XML file(s) in files/.
+ 4. Edit the XML file(s) in files/.
 
- 4. Run bmake to check the pkgsrc guide for valid XML and to build the final
+ 5. Run bmake to check the pkgsrc guide for valid XML and to build the final
     output files. If you get any errors at this stage, you can just edit the
     files, as there are only symbolic links in the working directory, pointing
     to the files in files/.
 
- 5. (cd files && cvs commit)
+ 6. (cd files && cvs commit)
 
- 6. Run bmake clean && bmake to regenerate the output files with the proper RCS
+ 7. Run bmake clean && bmake to regenerate the output files with the proper RCS
     Ids.
 
- 7. Run bmake regen to install and commit the files in both pkgsrc/doc and
+ 8. Run bmake regen to install and commit the files in both pkgsrc/doc and
     htdocs.
 
     Note
