@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4410 2020/08/11 16:02:23 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.4411 2020/08/12 06:53:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6915,3 +6915,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated filesystems/fuse-ext2 to 0.0.10 [nia 2020-08-11]
 	Updated graphics/ruby-cairo to 1.16.6 [tsutsui 2020-08-11]
 	Updated multimedia/adobe-flash-player to 32.0.0.414 [tsutsui 2020-08-11]
+	Updated www/nginx-devel to 1.19.2 [adam 2020-08-12]
+	Updated lang/nodejs to 14.8.0 [adam 2020-08-12]
