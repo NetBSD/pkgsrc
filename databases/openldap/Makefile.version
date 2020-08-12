@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.version,v 1.20 2020/04/29 07:31:52 adam Exp $
+# $NetBSD: Makefile.version,v 1.21 2020/08/12 08:31:13 adam Exp $
 # used by databases/lmdb/Makefile
 # used by databases/openldap/Makefile
 # used by databases/openldap/Makefile.common
 # used by databases/openldap-docs/Makefile
 
-OPENLDAP_VERSION=	2.4.50
+OPENLDAP_VERSION=	2.4.51
 
 DISTNAME=	openldap-${OPENLDAP_VERSION}
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
