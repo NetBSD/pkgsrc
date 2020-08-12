@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/08/12 14:14:48 ryoon Exp $
+
+SHA1 (emacs-27.1.tar.gz) = 47d5c733cc41406e6f78df9784e4eddf92dfe392
+RMD160 (emacs-27.1.tar.gz) = 9ddfd28ab54c4aee168eeecb783d13599e5b5288
+SHA512 (emacs-27.1.tar.gz) = fce6c785e9fd9e53282d8293c0c222b3a8cf433db2c19de98bef9e5c1797ffe17663ce1cf205edea6a7b8ded7842df2def2c859c563f091bd68d03ffa9c39198
+Size (emacs-27.1.tar.gz) = 65782481 bytes
+SHA1 (patch-src_inotify.c) = 1fdc6566ed57e8418f1ddc85bb03518d7d9d6bb3
