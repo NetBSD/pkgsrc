@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2010/08/14 06:32:34 tsutsui Exp $
+$NetBSD: patch-libtme_misc.c,v 1.1 2020/08/13 05:59:52 tsutsui Exp $
+
+- Remove garbage.
 
 --- libtme/misc.c.orig	2010-06-05 19:02:38.000000000 +0000
 +++ libtme/misc.c
