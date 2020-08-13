@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4431 2020/08/13 08:22:52 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4432 2020/08/13 09:27:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6945,3 +6945,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/musescore to 3.5 [gutteridge 2020-08-13]
 	Updated net/wireshark to 3.2.6 [adam 2020-08-13]
 	Updated databases/prometheus to 2.20.1 [adam 2020-08-13]
+	Updated comms/asterisk16 to 16.12.0 [ryoon 2020-08-13]
