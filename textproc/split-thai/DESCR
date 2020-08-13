@@ -1,0 +1,6 @@
+A collection of utilities to split Thai Unicode UTF-8 text by word
+boundaries, also known as word tokenization.  The utilities use emacs,
+swath, and a c++ icu-project program.  All use dictionary-based word
+splitting.
+
+Also included is merged dictionary file of thai words.
