@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2020/03/19 02:27:21 rin Exp $
+# $NetBSD: Makefile,v 1.78 2020/08/13 05:59:51 tsutsui Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -7,16 +7,16 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://csail.mit.edu/~fredette/tme/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-
-MAKE_JOBS_SAFE=		no
-
 HOMEPAGE=		http://csail.mit.edu/~fredette/tme/
 COMMENT=		The Machine Emulator
+LICENSE=		original-bsd
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run pkg-config yacc
+
+MAKE_JOBS_SAFE=		no
 
 .if empty(CFLAGS:M*-g*)
 CONFIGURE_ARGS+=	--disable-debug

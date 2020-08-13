@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2010/06/07 13:34:00 tsutsui Exp $
+$NetBSD: patch-ic_sparc_sparc-execute.c,v 1.1 2020/08/13 05:59:52 tsutsui Exp $
 
---- ic/sparc/sparc-execute.c	2010-02-21 06:58:15.000000000 +0900
-+++ ic/sparc/sparc-execute.c	2010-04-14 22:55:50.000000000 +0900
-@@ -612,7 +612,7 @@
+- Appease gcc warning.
+
+--- ic/sparc/sparc-execute.c.orig	2010-05-22 13:25:10.000000000 +0000
++++ ic/sparc/sparc-execute.c
+@@ -612,7 +612,7 @@ _TME_SPARC_EXECUTE_NAME(struct tme_sparc
  			    != pc_previous)) {
        if (__tme_predict_true(((tme_sparc_ireg_t) (pc + sizeof(tme_uint32_t)))
  			     == ic->tme_sparc_ireg(TME_SPARC_IREG_PC_NEXT))) {
