@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2020/07/27 14:50:19 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/08/13 08:22:32 adam Exp $
 
-DISTNAME=	prometheus-2.20.0
+DISTNAME=	prometheus-2.20.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
