@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/07 12:07:33 maya Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/13 17:05:38 maya Exp $
 
 COMPAT_PKG=		compat80	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		8.0
@@ -10,10 +10,10 @@ LICENSE=		2-clause-bsd AND modified-bsd AND isc AND mit AND zlib \
 			AND gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND gnu-gpl-v2 \
 			AND gnu-lgpl-v3 AND gnu-gpl-v3
 
-DIST_SUBDIR=		20200807
+DIST_SUBDIR=		20191014
 
 EMUL_PLATFORMS=		netbsd-alpha \
-			netbsd-earm netbsd-earmeb netbsd-earmv6hf netbsd-earmv7hf \
+			netbsd-arm netbsd-armeb netbsd-armv6hf netbsd-armv7hf \
 			netbsd-earm netbsd-earmv7hfeb \
 			netbsd-i386 netbsd-m68k	\
 			netbsd-mips64eb netbsd-mips64el \
