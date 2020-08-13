@@ -1,23 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2020/03/13 07:46:54 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2020/08/13 04:27:38 gutteridge Exp $
 
 Never compress man pages.
 
 Use CMAKE_INSTALL_MANDIR.
 
-Use the correct macro for pkg-config invocation.
-https://github.com/musescore/MuseScore/pull/5732
-
 --- CMakeLists.txt.orig	2020-02-06 21:10:58.000000000 +0000
 +++ CMakeLists.txt
-@@ -385,7 +385,7 @@ endif(BUILD_FOR_WINSTORE)
- 
- if (USE_SYSTEM_FREETYPE)
-       if (APPLE)
--            PKGCONFIG (freetype2 2.5.2 FREETYPE_INCLUDE_DIRS FREETYPE_LIBDIR FREETYPE_LIBRARIES FREETYPE_CPP)
-+            PKGCONFIG1 (freetype2 2.5.2 FREETYPE_INCLUDE_DIRS FREETYPE_LIBDIR FREETYPE_LIBRARIES FREETYPE_CPP)
-             if (FREETYPE_INCLUDE_DIRS)
-                   STRING(REGEX REPLACE  "\"" "" FREETYPE_INCLUDE_DIRS ${FREETYPE_INCLUDE_DIRS})
-                   STRING(REGEX REPLACE  "\"" "" FREETYPE_LIBDIR ${FREETYPE_LIBDIR})
 @@ -683,7 +683,7 @@ if (NOT MINGW AND NOT MSVC AND NOT APPLE
      # Compress man pages if gzip is installed (don't on OpenBSD)
      # Note: Compressing man pages is normal on Linux but not OpenBSD
