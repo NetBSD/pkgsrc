@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4433 2020/08/13 15:29:08 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4434 2020/08/13 16:26:14 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6947,3 +6947,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/prometheus to 2.20.1 [adam 2020-08-13]
 	Updated comms/asterisk16 to 16.12.0 [ryoon 2020-08-13]
 	Updated mail/dovecot2-pigeonhole to 0.5.11nb1 [taca 2020-08-13]
+	Updated textproc/swath to 0.6.1nb1 [scole 2020-08-13]
