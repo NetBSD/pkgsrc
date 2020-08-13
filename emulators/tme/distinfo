@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2020/08/13 05:59:51 tsutsui Exp $
+$NetBSD: distinfo,v 1.28 2020/08/13 06:33:59 tsutsui Exp $
 
 SHA1 (tme-0.8.tar.gz) = dd4f3421c20ceed548c5328a21dbb26e80f46b9c
 RMD160 (tme-0.8.tar.gz) = 6bd505c5fa7810d37f436883383c4ba655df2ded
@@ -9,6 +9,7 @@ SHA1 (patch-configure.in) = 9795ad35a16698057f01e78314b5ee215065e450
 SHA1 (patch-host_bsd_Makefile.am) = db0add22732e95b18886877a92e57e1a19d3099f
 SHA1 (patch-host_bsd_Makefile.in) = 0c361aca770ec7e323cef150e0e1b29d6a442306
 SHA1 (patch-host_bsd_bsd-if.c) = 929ddb1cbf3cbbc84dc9b1c8facba42032857dfa
+SHA1 (patch-host_gtk_gtk-screen.c) = 2f4da0467e6028066c70552dceef6df42c42f2c2
 SHA1 (patch-host_posix_posix-serial.c) = b1e009d6432c49672ca07a16ced939c8a46ef6e2
 SHA1 (patch-ic_ieee754_ieee754-misc-auto.sh) = afeb7452ef64bcae71e4dbae21881cff12cb9d4f
 SHA1 (patch-ic_m68k_m6888x.c) = fe42dce7bf5abc69e2c9e15967d5e862ef651a0e
