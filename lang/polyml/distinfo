@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2019/05/02 18:24:58 alnsn Exp $
+$NetBSD: distinfo,v 1.15 2020/08/13 23:49:20 dholland Exp $
 
 SHA1 (polyml-5.7.1.tar.gz) = 454d3827263f514004a2465a2db0cd64ebe6e561
 RMD160 (polyml-5.7.1.tar.gz) = cc0061f191783c4749ef08fee33db4c3a2a269c6
@@ -7,4 +7,5 @@ Size (polyml-5.7.1.tar.gz) = 7218131 bytes
 SHA1 (patch-configure) = 3df85bb0adac4bfd68fffa32c41944f21eaf8c40
 SHA1 (patch-configure.ac) = 63817ba1fd42bae03da67f74b5b97dda32b02118
 SHA1 (patch-libpolyml_elfexport.cpp) = 3dfde6483eca0778504265a8e92cad8ef86d72d3
+SHA1 (patch-libpolyml_polyffi.cpp) = 2a0ae4ce0e0d1238e79c629b27d4fc4e5363e1c7
 SHA1 (patch-modules_IntInfAsInt_Makefile.in) = f29e43ce8b832abdef73dce1d50a3b3e4db821ba
