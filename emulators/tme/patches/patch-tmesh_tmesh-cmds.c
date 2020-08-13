@@ -1,4 +1,6 @@
-$NetBSD: patch-tmesh_tmesh-cmds.c,v 1.1 2013/02/26 23:39:18 joerg Exp $
+$NetBSD: patch-tmesh_tmesh-cmds.c,v 1.2 2020/08/13 05:59:52 tsutsui Exp $
+
+- Don't use string variables as format strings
 
 --- tmesh/tmesh-cmds.c.orig	2013-02-26 21:55:25.000000000 +0000
 +++ tmesh/tmesh-cmds.c

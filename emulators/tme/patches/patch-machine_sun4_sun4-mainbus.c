@@ -1,4 +1,6 @@
-$NetBSD: patch-machine_sun4_sun4-mainbus.c,v 1.1 2013/02/26 23:39:18 joerg Exp $
+$NetBSD: patch-machine_sun4_sun4-mainbus.c,v 1.2 2020/08/13 05:59:52 tsutsui Exp $
+
+- Don't use string variables as format strings 
 
 --- machine/sun4/sun4-mainbus.c.orig	2013-02-26 21:53:41.000000000 +0000
 +++ machine/sun4/sun4-mainbus.c
