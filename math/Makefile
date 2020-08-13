@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.476 2020/08/08 22:52:57 brook Exp $
+# $NetBSD: Makefile,v 1.477 2020/08/13 03:56:34 gutteridge Exp $
 
 COMMENT=	Mathematics
 
@@ -80,8 +80,8 @@ SUBDIR+=	R-mnormt
 SUBDIR+=	R-moonsun
 SUBDIR+=	R-mvtnorm
 SUBDIR+=	R-ncdf
-SUBDIR+=	R-nloptr
 SUBDIR+=	R-nimble
+SUBDIR+=	R-nloptr
 SUBDIR+=	R-nortest
 SUBDIR+=	R-numDeriv
 SUBDIR+=	R-pbkrtest
