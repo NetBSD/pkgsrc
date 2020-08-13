@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2020/08/12 18:31:27 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.68 2020/08/13 10:41:32 wiz Exp $
 bin/elf2dmp
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
@@ -286,14 +286,14 @@ share/icons/hicolor/48x48/apps/qemu.png
 share/icons/hicolor/512x512/apps/qemu.png
 share/icons/hicolor/64x64/apps/qemu.png
 share/icons/hicolor/scalable/apps/qemu.svg
-share/locale/bg/LC_MESSAGES/qemu.mo
-share/locale/de_DE/LC_MESSAGES/qemu.mo
-share/locale/fr_FR/LC_MESSAGES/qemu.mo
-share/locale/hu/LC_MESSAGES/qemu.mo
-share/locale/it/LC_MESSAGES/qemu.mo
-share/locale/sv/LC_MESSAGES/qemu.mo
-share/locale/tr/LC_MESSAGES/qemu.mo
-share/locale/zh_CN/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/bg/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/de_DE/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/fr_FR/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/hu/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/it/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/sv/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/tr/LC_MESSAGES/qemu.mo
+${PLIST.gtk}share/locale/zh_CN/LC_MESSAGES/qemu.mo
 share/qemu/QEMU,cgthree.bin
 share/qemu/QEMU,tcx.bin
 share/qemu/bamboo.dtb
