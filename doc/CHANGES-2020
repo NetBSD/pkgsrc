@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4432 2020/08/13 09:27:44 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4433 2020/08/13 15:29:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6946,3 +6946,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/wireshark to 3.2.6 [adam 2020-08-13]
 	Updated databases/prometheus to 2.20.1 [adam 2020-08-13]
 	Updated comms/asterisk16 to 16.12.0 [ryoon 2020-08-13]
+	Updated mail/dovecot2-pigeonhole to 0.5.11nb1 [taca 2020-08-13]
