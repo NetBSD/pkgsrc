@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4435 2020/08/13 20:53:53 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4436 2020/08/13 21:36:14 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6949,3 +6949,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/dovecot2-pigeonhole to 0.5.11nb1 [taca 2020-08-13]
 	Updated textproc/swath to 0.6.1nb1 [scole 2020-08-13]
 	Added textproc/split-thai version 0.1 [scole 2020-08-13]
+	Updated www/ruby-rouge to 3.22.0 [fcambus 2020-08-13]
