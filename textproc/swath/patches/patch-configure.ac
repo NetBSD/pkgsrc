@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/08/13 16:22:40 scole Exp $
+
+Remove git hub versioning info
+
+--- configure.ac.orig	2020-08-06 11:27:39.000000000 +0000
++++ configure.ac
+@@ -2,9 +2,7 @@ dnl Process this file with autoconf to p
+ 
+ AC_PREREQ(2.50)
+ 
+-AC_INIT(swath,
+-        m4_esyscmd([build-aux/git-version-gen]),
+-        [https://github.com/tlwg/swath/issues])
++AC_INIT([swath], [0.6.1nb1])
+ AC_CONFIG_SRCDIR([src/wordseg.cpp])
+ AC_CONFIG_MACRO_DIR([m4])
+ AC_CONFIG_LIBOBJ_DIR([lib])
