@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/07/30 02:13:56 scole Exp $
+$NetBSD: distinfo,v 1.5 2020/08/13 16:22:40 scole Exp $
 
-SHA1 (swath-0.6.1.tar.xz) = a2c8ce01401220e36c4a9280a1791045382b38c5
-RMD160 (swath-0.6.1.tar.xz) = 4aaca89c33a0b4c84878ada6f4909dfc706ed45f
-SHA512 (swath-0.6.1.tar.xz) = 26f97dffe95ebb2089df54660992a22b3dd36fb3710daae49eea0f6b4de4f3de29f5ebed889dab314aba6f36da34a694baa2909bd2581c9c9293120c91c5c62b
-Size (swath-0.6.1.tar.xz) = 613236 bytes
-SHA1 (patch-src_filterrtf.cpp) = 58bdce561267080937300bded096c6b935afb47e
+SHA1 (swath-0.6.1-f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643.tar.gz) = c14a6eb1d56a5b497a2b952a51a927cef7e99f7d
+RMD160 (swath-0.6.1-f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643.tar.gz) = 3206eadd1f63a648ea0bb52bd4be5d9fe8fe598b
+SHA512 (swath-0.6.1-f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643.tar.gz) = 75cd5409024a883ca393753ba39814be6a9a4d025aab8cc29a4d121564397a7ea1d294288dfa27077f3d8d3d075cd20b089e8cff85ce33e31e305874c1040151
+Size (swath-0.6.1-f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643.tar.gz) = 594203 bytes
+SHA1 (patch-configure.ac) = 5938ef5fc87e3a7353f5c2a7777e97c7aa4088f4
