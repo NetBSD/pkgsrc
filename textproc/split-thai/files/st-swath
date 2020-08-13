@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# simple wrapper for swath to split thai text from stdin, arg, or a
+# file
+#
+# swath settings are split with ' ', longest match, unicode input, and
+# unicode output.  see swath(1)
+#
+
+# use merged dictionary unless specified otherwise
+if [ -z "$SWATHDICT" ]; then
+    dictarg="-d ST_SHARE_DIR/thaidict.tri"
+fi
+
+if [ "$#" -eq 0 ]; then
+    # no args, read from stdin
+    while read line
+    do
+	echo "$line" | swath -b ' ' -m long -u 'u,u' $dictarg
+    done < /dev/stdin
+    exit 0 
+elif [ "$#" -eq 1 -a -e "$1" ]; then
+    # one arg and arg is an existing file
+    swath -b ' ' -m long -u 'u,u' $dictarg < "$1"
+    exit $?
+elif [ "$#" -ge 1 ]; then
+    # one or more args, assume it is all text
+    while [ "$1" != "" ]; do
+	if [ -z "$txt" ]; then
+	    txt="$1"
+	else
+	    txt="$txt $1"
+	fi
+
+	shift
+    done
+    echo "$txt" | swath -b ' ' -m long -u 'u,u' $dictarg
+    exit $?
+else
+    echo "$0: error parsing args"
+    exit 1
+fi
