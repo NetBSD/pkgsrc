@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.7 2013/04/14 02:00:15 dholland Exp $
+$NetBSD: patch-libtme_module.c,v 1.1 2020/08/13 05:59:52 tsutsui Exp $
 
 - XXX: some unexplained/undocumented libtool fix
 - fix printf formats
 - explicitly ignore the variable "rc" in tme_module_close() as the
-Sun compiler is objecting to it being assigned and not used.
+  Sun compiler is objecting to it being assigned and not used.
 
 --- libtme/module.c.orig	2010-06-05 19:04:42.000000000 +0000
 +++ libtme/module.c

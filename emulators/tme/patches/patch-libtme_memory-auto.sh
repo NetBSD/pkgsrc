@@ -1,4 +1,7 @@
-$NetBSD: patch-libtme_memory-auto.sh,v 1.3 2015/11/04 03:33:39 dholland Exp $
+$NetBSD: patch-libtme_memory-auto.sh,v 1.4 2020/08/13 05:59:52 tsutsui Exp $
+
+- Explicitly include required headers
+- Avoid left-shifting negative values
 
 --- libtme/memory-auto.sh.orig	2010-02-15 15:16:28.000000000 +0000
 +++ libtme/memory-auto.sh
@@ -11,7 +14,7 @@ $NetBSD: patch-libtme_memory-auto.sh,v 1.3 2015/11/04 03:33:39 dholland Exp $
  /* macros: */
  
  /* the plain partial read internal macro: */
-@@ -129,7 +130,7 @@ if $header; then
+@@ -129,7 +131,7 @@ if $header; then
  
  /* this returns a mask of all-bits-one in given type: */
  #define _tme_memory_type_mask(type, shift)				\\

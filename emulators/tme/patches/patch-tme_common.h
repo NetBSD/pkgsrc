@@ -1,4 +1,6 @@
-$NetBSD: patch-tme_common.h,v 1.1 2015/09/13 15:08:09 joerg Exp $
+$NetBSD: patch-tme_common.h,v 1.2 2020/08/13 05:59:52 tsutsui Exp $
+
+- Avoid left-shifting negative values
 
 --- tme/common.h.orig	2015-09-03 14:41:12.000000000 +0000
 +++ tme/common.h
