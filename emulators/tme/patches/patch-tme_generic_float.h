@@ -1,4 +1,6 @@
-$NetBSD: patch-tme_generic_float.h,v 1.1 2015/09/13 15:08:09 joerg Exp $
+$NetBSD: patch-tme_generic_float.h,v 1.2 2020/08/13 05:59:52 tsutsui Exp $
+
+- Avoid left-shifting negative values
 
 --- tme/generic/float.h.orig	2015-09-03 14:45:16.000000000 +0000
 +++ tme/generic/float.h

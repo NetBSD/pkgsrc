@@ -1,4 +1,6 @@
-$NetBSD: patch-machine_sun4_sun4-timer.c,v 1.1 2015/09/13 15:08:09 joerg Exp $
+$NetBSD: patch-machine_sun4_sun4-timer.c,v 1.2 2020/08/13 05:59:52 tsutsui Exp $
+
+- Avoid left-shifting negative values
 
 --- machine/sun4/sun4-timer.c.orig	2015-09-03 14:47:23.000000000 +0000
 +++ machine/sun4/sun4-timer.c
