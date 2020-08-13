@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4430 2020/08/13 04:28:42 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.4431 2020/08/13 08:22:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6943,3 +6943,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/rspamd to 2.5nb3 [schmonz 2020-08-12]
 	Updated x11/xfce4-tumbler to 0.2.9 [gutteridge 2020-08-12]
 	Updated audio/musescore to 3.5 [gutteridge 2020-08-13]
+	Updated net/wireshark to 3.2.6 [adam 2020-08-13]
+	Updated databases/prometheus to 2.20.1 [adam 2020-08-13]
