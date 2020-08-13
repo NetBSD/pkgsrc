@@ -1,8 +1,10 @@
-$NetBSD: patch-af,v 1.3 2011/10/07 01:12:51 christos Exp $
+$NetBSD: patch-machine_sun_sun-bwtwo.c,v 1.1 2020/08/13 05:59:52 tsutsui Exp $
 
---- machine/sun/sun-bwtwo.c.orig	2009-11-08 12:03:58.000000000 -0500
-+++ machine/sun/sun-bwtwo.c	2011-10-06 20:52:30.000000000 -0400
-@@ -339,6 +339,7 @@
+- Avoid a compiler bug (phantom integer oveflow) in gcc 4.5.3
+
+--- machine/sun/sun-bwtwo.c.orig	2009-11-08 17:03:58.000000000 +0000
++++ machine/sun/sun-bwtwo.c
+@@ -339,6 +339,7 @@ tme_sun_bwtwo(struct tme_element *elemen
  {
    struct tme_sunbw2 *sunbw2;
    int rc;
@@ -10,7 +12,7 @@ $NetBSD: patch-af,v 1.3 2011/10/07 01:12:51 christos Exp $
  
    /* start the sunbw2 structure: */
    sunbw2 = tme_new0(struct tme_sunbw2, 1);
-@@ -365,12 +366,10 @@
+@@ -365,12 +366,10 @@ tme_sun_bwtwo(struct tme_element *elemen
    case TME_SUNBW2_TYPE_OLD_ONBOARD:
  
      /* set our initial CSR: */
