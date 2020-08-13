@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.2 2019/12/21 23:29:05 joerg Exp $
+$NetBSD: patch-configure,v 1.3 2020/08/13 09:24:25 ryoon Exp $
 
---- configure.orig	2019-07-25 09:38:14.000000000 +0000
+--- configure.orig	2020-07-16 16:00:28.000000000 +0000
 +++ configure
-@@ -9120,7 +9120,7 @@ $as_echo_n "checking for clang -fblocks.
+@@ -8960,7 +8960,7 @@ $as_echo_n "checking for clang -fblocks.
  				AST_CLANG_BLOCKS="-Wno-unknown-warning-option -fblocks"
  				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
@@ -11,7 +11,16 @@ $NetBSD: patch-configure,v 1.2 2019/12/21 23:29:05 joerg Exp $
  				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
  				AST_CLANG_BLOCKS="-fblocks"
  				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -14838,7 +14838,7 @@ fi
+@@ -9057,7 +9057,7 @@ if test "${with_pjproject_bundled+set}" 
+ fi
+ 
+ 
+-if test "${with_pjproject}" == "no" || test "${with_pjproject}" == "n" ; then
++if test "${with_pjproject}" = "no" || test "${with_pjproject}" = "n" ; then
+ 	PJPROJECT_BUNDLED=no
+ fi
+ 
+@@ -14689,7 +14689,7 @@ fi
  
  
  
@@ -20,7 +29,7 @@ $NetBSD: patch-configure,v 1.2 2019/12/21 23:29:05 joerg Exp $
  
  $as_echo "#define HAVE_PERMANENT_DLOPEN 1" >>confdefs.h
  
-@@ -14872,7 +14872,7 @@ fi
+@@ -14723,7 +14723,7 @@ fi
  done
  
  
@@ -29,7 +38,7 @@ $NetBSD: patch-configure,v 1.2 2019/12/21 23:29:05 joerg Exp $
  if test "x$ac_cv_header_sys_poll_h" = xyes; then :
  
  else
-@@ -16887,7 +16887,7 @@ fi
+@@ -16738,7 +16738,7 @@ fi
  done
  
  
@@ -38,7 +47,7 @@ $NetBSD: patch-configure,v 1.2 2019/12/21 23:29:05 joerg Exp $
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -17122,7 +17122,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -16973,7 +16973,7 @@ rm -f core conftest.err conftest.$ac_obj
  LDFLAGS=${old_LDFLAGS}
  rm -f conftest.dynamics
  
