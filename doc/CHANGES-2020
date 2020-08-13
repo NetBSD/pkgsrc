@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4434 2020/08/13 16:26:14 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4435 2020/08/13 20:53:53 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6948,3 +6948,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated comms/asterisk16 to 16.12.0 [ryoon 2020-08-13]
 	Updated mail/dovecot2-pigeonhole to 0.5.11nb1 [taca 2020-08-13]
 	Updated textproc/swath to 0.6.1nb1 [scole 2020-08-13]
+	Added textproc/split-thai version 0.1 [scole 2020-08-13]
