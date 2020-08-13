@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST.sh3el,v 1.2 2020/08/07 12:07:33 maya Exp $
+@comment $NetBSD: PLIST.sh3el,v 1.3 2020/08/13 17:05:38 maya Exp $
 ${EMULSUBDIRSLASH}lib/libcrypto.so.12
 ${EMULSUBDIRSLASH}lib/libcrypto.so.12.0
 ${EMULSUBDIRSLASH}lib/libpcap.so.6
 ${EMULSUBDIRSLASH}lib/libpcap.so.6.0
-${EMULSUBDIRSLASH}lib/libterminfo.so.1
-${EMULSUBDIRSLASH}lib/libterminfo.so.1.0
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXfontcache.so
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXfontcache.so.2
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXfontcache.so.2.0
@@ -53,7 +51,5 @@ ${EMULSUBDIRSLASH}usr/lib/libssl.so.12
 ${EMULSUBDIRSLASH}usr/lib/libssl.so.12.0
 ${EMULSUBDIRSLASH}usr/lib/libstdc++.so.8
 ${EMULSUBDIRSLASH}usr/lib/libstdc++.so.8.0
-${EMULSUBDIRSLASH}usr/lib/libterminfo.so.1
-${EMULSUBDIRSLASH}usr/lib/libterminfo.so.1.0
 ${EMULSUBDIRSLASH}usr/lib/libubsan.so.1
 ${EMULSUBDIRSLASH}usr/lib/libubsan.so.1.0
