@@ -43,8 +43,8 @@ uses recursion"
 
 (defun thai-word-table-save(filename &optional alist)
   "save thai words extracted from a nested-alist table to
-filename in utf8 format.  default is to save 'thai-word-table if
-no alist argument given."
+filename in utf8 format, one word per line.  default is to save
+'thai-word-table if no alist argument given."
   (interactive)
   (let ((thaiwords)
 	(elem)
@@ -95,3 +95,44 @@ is appended instead to the current word list.  Does the same as
       (thai-update-word-table temp_file append)
       (delete-file temp_file)
       thai-word-table)))
+
+(defun thai-word-table-save-defvar(dictfile lispfile)
+  "read a utf8 thai dictionary file and save to a lisp file
+suitable for initializing the 'thai-word-table as a \"defvar\".
+Overwrites the lisp file if it exists."
+  (interactive)
+  (let ((header)
+	(footer)
+	(elem)
+	(coding-system-for-read 'utf-8)
+	(coding-system-for-write 'utf-8)
+	(buffer-file-coding-system 'utf-8))
+    (setq header (list "(defvar thai-word-table"
+		       "(let ((table (list 'thai-words)))"
+		       "(dolist (elt"
+		       "'(" ))
+    (setq footer (list "))"
+		       "(set-nested-alist elt 1 table))"
+		       "table)"
+		       "\"Nested alist of Thai words.\")" ))
+    (with-temp-buffer
+      (insert-file-contents dictfile)
+      (goto-char (point-min))
+      ;; quote each thai word
+      (while (not (eobp))
+	(beginning-of-line)
+	(insert "\"")
+	(end-of-line)
+	(insert "\"")
+	(forward-line 1))
+
+      (goto-char (point-min))
+      (dolist (elem header)
+	(insert elem "\n"))
+
+      (goto-char (point-max))
+      (dolist (elem footer)
+	(insert elem "\n"))
+      (lisp-mode)
+      (indent-region (point-min) (point-max))
+      (write-region nil nil lispfile))))
