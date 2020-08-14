@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4438 2020/08/14 04:48:54 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4439 2020/08/14 04:49:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6952,3 +6952,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rouge to 3.22.0 [fcambus 2020-08-13]
 	Updated inputmethod/dbskkd-cdb to 3.00 [ryoon 2020-08-14]
 	Updated textproc/ruby-kramdown to 2.3.0 [ryoon 2020-08-14]
+	Updated www/ruby-jekyll to 4.1.1 [ryoon 2020-08-14]
