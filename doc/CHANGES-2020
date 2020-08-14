@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4448 2020/08/14 21:05:47 js Exp $
+$NetBSD: CHANGES-2020,v 1.4449 2020/08/14 22:40:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6967,3 +6967,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/go113 to 1.13.15 [bsiegert 2020-08-14]
 	Updated lang/go114 to 1.14.7 [bsiegert 2020-08-14]
 	Updated mail/neomutt to 20200814 [wiz 2020-08-14]
+	Updated www/p5-libwww to 6.46 [wen 2020-08-14]
