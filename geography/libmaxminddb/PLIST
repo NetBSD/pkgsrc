@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/10 20:55:20 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/08/14 14:14:44 fcambus Exp $
 bin/mmdblookup
 include/maxminddb.h
 include/maxminddb_config.h
@@ -19,4 +19,5 @@ man/man3/MMDB_open.3
 man/man3/MMDB_read_node.3
 man/man3/MMDB_strerror.3
 man/man3/MMDB_vget_value.3
+man/man3/defined.3
 man/man3/libmaxminddb.3
