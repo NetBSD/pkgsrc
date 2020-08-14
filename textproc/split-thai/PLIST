@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/13 20:52:09 scole Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/08/14 17:31:34 scole Exp $
 bin/st-emacs
 bin/st-icu
 bin/st-swath
 share/split-thai/README.txt
+share/split-thai/thai-dict.el
+share/split-thai/thai-dict.elc
 share/split-thai/thai-utility.el
 share/split-thai/thai-utility.elc
 share/split-thai/thaidict

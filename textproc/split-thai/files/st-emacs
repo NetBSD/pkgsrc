@@ -12,7 +12,7 @@
 
 ;; load custom dictionary
 (load "ST_SHARE_DIR/thai-utility" nil t)
-(thai-update-word-table-utf8 "ST_SHARE_DIR/thaidict")
+(load "ST_SHARE_DIR/thai-dict" nil t)
 
 ;; split a thai line by spaces, return new line
 (defun process-thai-line(line)
