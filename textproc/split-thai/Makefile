@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/08/13 20:52:09 scole Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/14 17:31:34 scole Exp $
 
-PKGNAME=	split-thai-0.1
+PKGNAME=	split-thai-0.2
 CATEGORIES=	textproc
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utilities to split UTF-8 Thai text into words
@@ -26,6 +26,9 @@ UTF8_ENV=	env LC_ALL=C.UTF-8
 ST_SHARE_DIR=		share/split-thai
 INSTALLATION_DIRS=	bin ${ST_SHARE_DIR}
 
+ST_SHARE_FILES=		README.txt thaidict thai-dict.el thai-dict.elc
+ST_SHARE_FILES+=	thai-utility.el thai-utility.elc thaidict.tri
+
 # xxx REPLACE_EMACS_SCRIPT
 SUBST_CLASSES+=			st-emacs-app
 SUBST_STAGE.st-emacs-app=	pre-configure
@@ -47,7 +50,7 @@ pre-extract:
 post-extract:
 	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch \
 		-f batch-byte-compile thai-utility.el
-	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch -l thai-utility.el \
+	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch -l thai-utility.elc \
 		--eval '(thai-word-table-save "emacs-dict")'
 	cp ${WRKDIR}/${DISTFILES} ${WRKSRC}/icu-dict
 	cd ${PREFIX}/share/swath && \
@@ -58,6 +61,10 @@ post-extract:
 			grep -v '#' | sort | uniq > thaidict
 	cd ${WRKSRC} && \
 		${UTF8_ENV} trietool thaidict add-list -e utf-8 thaidict
+	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch -l thai-utility.elc \
+		--eval '(thai-word-table-save-defvar "thaidict" "thai-dict.el")'
+	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch \
+		-f batch-byte-compile thai-dict.el
 .for i in emacs-dict icu-dict swath-dict
 	@${ECHO} `wc -l ${WRKSRC}/${i} | awk '{print $$1}'` words in ${i}
 .endfor
@@ -73,7 +80,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/st-emacs ${WRKSRC}/st-swath \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/st-icu ${DESTDIR}${PREFIX}/bin
-.for i in README.txt thaidict thai-utility.el thai-utility.elc thaidict.tri
+.for i in ${ST_SHARE_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/split-thai
 .endfor
 
