@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4444 2020/08/14 17:34:33 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4445 2020/08/14 18:29:11 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6963,3 +6963,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/gtk3 to 3.24.22 [adam 2020-08-14]
 	Updated geography/libmaxminddb to 1.4.3 [fcambus 2020-08-14]
 	Updated textproc/split-thai to 0.2 [scole 2020-08-14]
+	Updated lang/go113 to 1.13.15 [bsiegert 2020-08-14]
