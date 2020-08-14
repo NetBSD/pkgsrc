@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2020/07/17 18:04:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2020/08/14 20:01:26 bsiegert Exp $
 
 GITHUB_TAG=	v1.2.1
 DISTNAME=	${GITHUB_TAG}
 DIST_SUBDIR=	go-siphash
 PKGNAME=	${DIST_SUBDIR}-${GITHUB_TAG:S/v//}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dchest/}
 GITHUB_PROJECT=	siphash
