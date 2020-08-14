@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4440 2020/08/14 05:28:44 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.4441 2020/08/14 06:58:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6954,3 +6954,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-kramdown to 2.3.0 [ryoon 2020-08-14]
 	Updated www/ruby-jekyll to 4.1.1 [ryoon 2020-08-14]
 	Updated audio/musescore to 3.5nb1 [gutteridge 2020-08-14]
+	Updated databases/postgresql95 to 9.5.23 [adam 2020-08-14]
+	Updated databases/postgresql96 to 9.6.19 [adam 2020-08-14]
+	Updated databases/postgresql10 to 10.14 [adam 2020-08-14]
+	Updated databases/postgresql11 to 11.9 [adam 2020-08-14]
+	Updated databases/postgresql12 to 12.4 [adam 2020-08-14]
