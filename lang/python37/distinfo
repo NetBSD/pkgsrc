@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2020/08/03 11:11:33 wiz Exp $
+$NetBSD: distinfo,v 1.18 2020/08/14 19:28:44 schmonz Exp $
 
 SHA1 (Python-3.7.8.tar.xz) = ecfc1d291ab35bb7cc3a352dd9451450266f5974
 RMD160 (Python-3.7.8.tar.xz) = 67af3c8cbdfbadd49bbbb56690b3da90799dc687
@@ -9,6 +9,7 @@ SHA1 (patch-Lib_distutils_command_install.py) = 6fc6f5d918b7581fc62cd0fe55857ee9
 SHA1 (patch-Lib_distutils_sysconfig.py) = 6822eafb4dfded86d7f7353831816aeb8119e6cf
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 2e65a8dd5dd3fe25957206c062106fa7a6fc4e69
 SHA1 (patch-Lib_ipaddress.py) = cf3a5f76567875e74461fd87d6089494000611dc
+SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = abe876142a20e60a3c0a0cf80abeecf54855c07c
 SHA1 (patch-Lib_sysconfig.py) = a4f009ed73ebbd9d9c4bf7e12b7981182ed8fd7c
 SHA1 (patch-Lib_test_test__ipaddress.py) = b7b5cf9445c5fb1e20d957e7a271802ad4854ab1
 SHA1 (patch-Makefile.pre.in) = 1393dac225c5a7edcb7947eb707b4526ea884f95
