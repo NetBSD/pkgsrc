@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/08/13 04:27:38 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/14 05:23:09 gutteridge Exp $
 
 DISTNAME=	musescore-3.5
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=musescore/}
 GITHUB_PROJECT=	MuseScore
@@ -16,7 +17,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
 
 # C++11
-GCC_REQD+=	4.7
+GCC_REQD+=	4.8
 
 CONFIGURE_DIRS=	bindir
 CMAKE_ARG_PATH=	..
@@ -32,6 +33,8 @@ CMAKE_ARGS+=	-DBUILD_WEBENGINE=OFF
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/bindir
+
+DEPENDS+=	qt5-qttranslations>=5.15.0:../../x11/qt5-qttranslations
 
 .include "options.mk"
 .include "../../audio/lame/buildlink3.mk"
