@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.6 2017/07/30 22:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/08/14 01:55:04 ryoon Exp $
 #
 
-DISTNAME=	dbskkd-cdb-2.00
-PKGREVISION=	1
+DISTNAME=	dbskkd-cdb-3.00
 CATEGORIES=	inputmethod japanese
-MASTER_SITES=	http://dbskkd-cdb.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jj1bdx/}
+GITHUB_PROJECT=	dbskkd-cdb
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/jj1bdx/dbskkd-cdb
 COMMENT=	SKK dictionary server based on cdb
-LICENSE=	gnu-gpl-v3
+LICENSE=	mit
 
 DOCSDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	libexec \
-			${DOCSDIR} \
-			bin
+			${DOCSDIR}
 
 DEPENDS=	skk-jisyo-cdb-[0-9]*:../../inputmethod/skk-jisyo-cdb
 
@@ -30,13 +30,12 @@ CDBLIB=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tinycdb}/lib \
 MAKE_FLAGS+=		CDBLIB=${CDBLIB:Q}
 MAKE_FLAGS+=		INSTALLDIR=${DESTDIR}${PREFIX}/libexec
 
-INSTALL_DOCS=	CHANGES \
+INSTALL_DOCS=	CHANGES.md \
 		LICENSE	\
-		README \
-		READMEJP \
-		example-daemontools.txt \
-		example-inetd.txt \
-		skk-server-protocol.txt
+		README.md \
+		READMEJP.md \
+		examples.md \
+		skk-server-protocol.md
 
 INSTALL_SCRIPTS=	makeskkcdb.sh \
 			skktocdbm.sh
