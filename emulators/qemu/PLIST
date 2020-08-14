@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2020/08/13 10:41:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.69 2020/08/14 06:08:11 tnn Exp $
 bin/elf2dmp
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
@@ -31,7 +31,6 @@ ${PLIST.ppc}bin/qemu-ppc
 ${PLIST.ppc64}bin/qemu-ppc64
 ${PLIST.ppc64abi32}bin/qemu-ppc64abi32
 ${PLIST.ppc64le}bin/qemu-ppc64le
-${PLIST.pr-helper}bin/qemu-pr-helper
 ${PLIST.riscv32}bin/qemu-riscv32
 ${PLIST.riscv64}bin/qemu-riscv64
 ${PLIST.s390x}bin/qemu-s390x
@@ -78,8 +77,9 @@ ${PLIST.tilegx}bin/qemu-tilegx
 ${PLIST.x86_64}bin/qemu-x86_64
 ${PLIST.xtensa}bin/qemu-xtensa
 ${PLIST.xtensaeb}bin/qemu-xtensaeb
-${PLIST.virtfs-proxy-helper}bin/virtfs-proxy-helper
 ${PLIST.bridge-helper}libexec/qemu-bridge-helper
+${PLIST.pr-helper}libexec/qemu-pr-helper
+${PLIST.virtfs-proxy-helper}libexec/virtfs-proxy-helper
 man/man1/qemu-img.1
 man/man1/qemu.1
 ${PLIST.virtfs-proxy-helper}man/man1/virtfs-proxy-helper.1
