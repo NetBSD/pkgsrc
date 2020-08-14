@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/06/14 15:33:28 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/14 11:05:00 tnn Exp $
 
 DISTNAME=	tealdeer-1.3.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -183,7 +183,7 @@ MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 INSTALLATION_DIRS=	bin share/bash-completion/completions
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${_MAKE_JOBS_N}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --offline --release -j${_MAKE_JOBS_N}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/tldr ${DESTDIR}${PREFIX}/bin/
