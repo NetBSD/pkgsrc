@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/07/17 18:04:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2020/08/14 20:01:28 bsiegert Exp $
 #
 
 DISTNAME=		go-sys-0.0.20200202
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		sys
