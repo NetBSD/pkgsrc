@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/08/14 11:05:00 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/14 20:50:21 tnn Exp $
 
 DISTNAME=	ripgrep-11.0.2
 CATEGORIES=	textproc
@@ -77,9 +77,6 @@ CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	wincolor-1.0.1
 
 INSTALLATION_DIRS=	bin
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --offline --release -j${_MAKE_JOBS_N}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rg ${DESTDIR}${PREFIX}/bin
