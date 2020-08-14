@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.8 2020/06/24 16:10:31 hauke Exp $
+# $NetBSD: hacks.mk,v 1.9 2020/08/14 08:00:57 hauke Exp $
 
 .if !defined(XEMACS_HACKS_MK)
 XEMACS_HACKS_MK=	defined
@@ -7,7 +7,7 @@ XEMACS_HACKS_MK=	defined
 
 ### Position-independent code does not rhyme well with dumped emacsen.
 ###
-.if !empty(CC_VERSION:Mgcc-[6789].*)
+.if !empty(CC_VERSION:Mgcc-[6789].*) || !empty(CC_VERSION:Mgcc-[1-9][0-9].*)
 PKG_HACKS+=		disable-gcc-pie
 CFLAGS+=		-no-pie
 .endif
