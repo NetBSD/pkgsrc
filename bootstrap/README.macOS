@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.39 2020/08/14 07:24:16 schmonz Exp $
+$NetBSD: README.macOS,v 1.1 2020/08/14 07:35:26 schmonz Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
