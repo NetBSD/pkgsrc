@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/14 11:05:00 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/14 20:50:21 tnn Exp $
 
 DISTNAME=	zola-0.11.0
 PKGREVISION=	1
@@ -322,9 +322,6 @@ CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.3
 INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --offline --release -j${_MAKE_JOBS_N}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/zola ${DESTDIR}${PREFIX}/bin
