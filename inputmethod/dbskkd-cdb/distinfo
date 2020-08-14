@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 22:13:34 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/08/14 01:55:04 ryoon Exp $
 
-SHA1 (dbskkd-cdb-2.00.tar.gz) = 645e3a2f2a65c81dd3d04bdf2a4208c94c01f3fe
-RMD160 (dbskkd-cdb-2.00.tar.gz) = 7841a3830663a10d6bd331e73d46c725edd44845
-SHA512 (dbskkd-cdb-2.00.tar.gz) = 3582728d2a1917c00437b273208fa150a5a32dcd462752c6751ddbd574ca7f1476b2aca0d2613471a800bd17f80e2c4b60846f9056ae621996f8f5a5592fa22a
-Size (dbskkd-cdb-2.00.tar.gz) = 9296 bytes
+SHA1 (dbskkd-cdb-3.00.tar.gz) = 3db2bff43b9ac193e1b94049b10915c466ac3fa4
+RMD160 (dbskkd-cdb-3.00.tar.gz) = ffd47aef430a9a3326737c1fe47023da22c2bdb8
+SHA512 (dbskkd-cdb-3.00.tar.gz) = a3fe5a0f2e96828d22a75e4daf36eecaa8d903efe8c8a5f6972178f52dc01cac5df5f3e1d8a2cf684d6b78a9c10c207b655a296ceb456dec9f0e502142de094b
+Size (dbskkd-cdb-3.00.tar.gz) = 9380 bytes
