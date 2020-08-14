@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/06/02 08:23:30 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/14 06:56:26 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/96-plpython-/}
-PKGREVISION=	1
 COMMENT=	PL/Python procedural language for the PostgreSQL backend
 
 DEPENDS+=	postgresql96-server>=${PKGVERSION_NOREV}:../../databases/postgresql96-server
