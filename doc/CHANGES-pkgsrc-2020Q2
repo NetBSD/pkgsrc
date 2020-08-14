@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.9 2020/08/03 09:33:40 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.10 2020/08/14 19:33:48 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -81,4 +81,25 @@ Pullup ticket #6272 - requested by wiz
 net/transmission-gtk: security update
 net/transmission-qt: security update
 net/transmission: security update
+
+Pullup ticket #6292 - requested by wiz
+multimedia/mediainfo: security fix
+
+Pullup ticket #6293 - requested by wiz
+databases/redis: security fix
+
+Pullup ticket #6294 - requested by wiz
+textproc/hunspell: security fix
+
+Pullup ticket #6295 - requested by maya
+x11/libX11: bugfix
+
+Pullup ticket #6296 - requested by maya
+lang/nodejs: aarch64 bugfix, PR port-arm/55533
+
+Pullup ticket #6297 - requested by taca
+security/clamav: security fix
+
+Pullup ticket #6298 - requested by taca
+lang/php73: security fix
 
