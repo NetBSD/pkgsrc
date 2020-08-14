@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/19 18:42:41 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/08/14 06:56:23 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -309,6 +309,7 @@ include/postgresql/server/commands/variable.h
 include/postgresql/server/commands/view.h
 include/postgresql/server/common/base64.h
 include/postgresql/server/common/config_info.h
+include/postgresql/server/common/connect.h
 include/postgresql/server/common/controldata_utils.h
 include/postgresql/server/common/fe_memutils.h
 include/postgresql/server/common/file_perm.h
