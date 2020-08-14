@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.290 2020/08/14 07:24:16 schmonz Exp $
+# $NetBSD: bootstrap,v 1.291 2020/08/14 08:45:30 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -573,18 +573,6 @@ Darwin)
 	if [ $macos_version -ge 1011 ]; then
 		need_mksh=yes
 	fi
-
-	case "$macos_version" in
-	100[7-9])
-		packagemaker=/Applications/PackageMaker.app/Contents/MacOS/PackageMaker
-		;;
-	100[0-4])
-		packagemaker=/Developer/Tools/packagemaker
-		;;
-	*)
-		packagemaker=/Developer/usr/bin/packagemaker
-		;;
-	esac
 
 	unset osrev macos_version
 	;;
