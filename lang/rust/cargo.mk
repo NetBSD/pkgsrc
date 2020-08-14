@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.18 2020/08/06 11:42:56 jperkin Exp $
+# $NetBSD: cargo.mk,v 1.19 2020/08/14 11:05:00 tnn Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -10,11 +10,11 @@
 # CARGO_CRATE_DEPENDS+=	sha1-0.20
 # .include "../../lang/rust/cargo.mk"
 # do-build:
-# 	cargo build --locked --frozen
+# 	cargo build --offline
 #
 #
 # If modifying the list of dependencies, re-run the build once without
-# --locked --frozen to generate a new valid Cargo.lock.
+# --offline to generate a new valid Cargo.lock.
 #
 # a list of CARGO_CRATE_DEPENDS can be generated via "make show-cargo-depends".
 #
