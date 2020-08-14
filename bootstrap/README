@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.23 2020/08/14 07:34:14 schmonz Exp $
+$NetBSD: README,v 1.24 2020/08/14 07:35:26 schmonz Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -93,7 +93,7 @@ Platforms with active use and maintenance
 The following platforms have active users, and people that regularly
 fix problems.
 
-  Darwin (README.MacOSX, macOS)
+  Darwin (README.macOS, macOS)
   FreeBSD
   Linux
   NetBSD
