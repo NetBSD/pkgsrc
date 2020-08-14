@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.21 2020/08/14 21:12:03 tnn Exp $
+# $NetBSD: cargo.mk,v 1.22 2020/08/14 21:19:22 tnn Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -12,8 +12,10 @@
 #
 # If modifying the list of dependencies, re-run the build once without
 # --offline in CARGO_ARGS to generate a new valid Cargo.lock.
+# e.g: make CARGO_ARGS="build --release" build
 #
-# a list of CARGO_CRATE_DEPENDS can be generated via "make show-cargo-depends".
+# a list of CARGO_CRATE_DEPENDS can be generated via
+#      make print-cargo-depends > cargo-depends.mk
 #
 # See also www/geckodriver for a full example.
 
