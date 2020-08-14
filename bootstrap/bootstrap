@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.289 2020/07/21 15:53:10 sjmulder Exp $
+# $NetBSD: bootstrap,v 1.290 2020/08/14 07:24:16 schmonz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -59,7 +59,6 @@ wrkdir="`pwd`/work"
 usage="Usage: $0 "'
     [ --abi [32|64] ]
     [ --binary-kit <tarball> ]
-    [ --binary-macpkg <pkg> ]
     [ --compiler <compiler> ]
     [ --cwrappers <auto|yes|no> ]
     [ --full ]
@@ -82,28 +81,6 @@ usage="Usage: $0 "'
 
 # strip / for BSD/OS, strip - for HP-UX
 opsys=`uname -s | tr -d /-`
-
-mkbinarykit_macpkg()
-{
-	local macdestdir
-	macdestdir=${wrkdir}/macpkg-destdir
-	rm -rf ${macdestdir} || die "cleanup destdir"
-
-	mkdir -p ${macdestdir}${prefix} || die "mkdir destprefix"
-	rmdir ${macdestdir}${prefix} || die "rmdir destprefix"
-	cp -Rp ${prefix} ${macdestdir}${prefix} || die "copy prefix"
-
-	if [ ! -d ${macdestdir}${pkgdbdir} ]; then
-		mkdir -p ${macdestdir}${pkgdbdir} || die "mkdir destdbdir"
-		rmdir ${macdestdir}${pkgdbdir} || die "rmdir destdbdir"
-		cp -Rp ${pkgdbdir} ${macdestdir}${pkgdbdir} || die "copy dbdir"
-	fi
-
-	${sedprog} -e "s|%WRKDIR%|${wrkdir}|g" \
-		-e "s|%TARGETDIR%|${targetdir}|g" -e "s|%DATE%|${date}|g" \
-		< macpkg.pmproj.in > ${wrkdir}/macpkg.pmproj
-	${packagemaker} -build -proj ${wrkdir}/macpkg.pmproj -p "${binary_macpkg}"
-}
 
 mkbinarykit_tar()
 {
@@ -484,10 +461,6 @@ while [ $# -gt 0 ]; do
 			binary_gzip_kit=`get_optarg "$1"` ;;
 	--gzip-binary-kit)
 			binary_gzip_kit="$2"; shift ;;
-	--binary-macpkg=*)
-			binary_macpkg=`get_optarg "$1"` ;;
-	--binary-macpkg)
-			binary_macpkg="$2"; shift ;;
 	--make-jobs=*)	make_jobs=`get_optarg "$1"` ;;
 	--make-jobs)	make_jobs="$2"; shift ;;
 	--full)		full=yes ;;
@@ -1415,7 +1388,6 @@ fi
 
 [ -n "${binary_kit}" ] && mkbinarykit_tar
 [ -n "${binary_gzip_kit}" ] && mkbinarykit_tgz
-[ -n "${binary_macpkg}" ] && mkbinarykit_macpkg
 
 hline="==========================================================================="
 echo ""
