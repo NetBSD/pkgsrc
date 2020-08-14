@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4443 2020/08/14 14:17:18 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4444 2020/08/14 17:34:33 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6962,3 +6962,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/lftp to 4.9.2 [adam 2020-08-14]
 	Updated x11/gtk3 to 3.24.22 [adam 2020-08-14]
 	Updated geography/libmaxminddb to 1.4.3 [fcambus 2020-08-14]
+	Updated textproc/split-thai to 0.2 [scole 2020-08-14]
