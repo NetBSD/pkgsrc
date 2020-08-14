@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/08/14 00:43:24 dholland Exp $
+
+It's not enough to disable ASLR on the output executable. You also
+need to disable it on the thing that gets run during the build.
+
+--- Makefile.in~	2017-11-18 13:45:15.000000000 +0000
++++ Makefile.in
+@@ -579,6 +579,7 @@ poly$(EXEEXT): $(poly_OBJECTS) $(poly_DE
+ polyimport$(EXEEXT): $(polyimport_OBJECTS) $(polyimport_DEPENDENCIES) $(EXTRA_polyimport_DEPENDENCIES) 
+ 	@rm -f polyimport$(EXEEXT)
+ 	$(AM_V_CCLD)$(polyimport_LINK) $(polyimport_OBJECTS) $(polyimport_LDADD) $(LIBS)
++	paxctl +am .libs/polyimport$(EXEEXT) || true
+ install-dist_binSCRIPTS: $(dist_bin_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
+ 	@list='$(dist_bin_SCRIPTS)'; test -n "$(bindir)" || list=; \
