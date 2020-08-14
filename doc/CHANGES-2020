@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4447 2020/08/14 20:10:03 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4448 2020/08/14 21:05:47 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6899,6 +6899,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-stdnum to 1.14 [adam 2020-08-10]
 	Updated www/py-hstspreload to 2020.8.8 [adam 2020-08-10]
 	Updated geography/R-deldir to 0.1.28 [mef 2020-08-10]
+	Updated multimedia/sickgear to 0.21.42 [js 2020-08-10]
 	Updated net/bftpd to 5.6 [nia 2020-08-10]
 	Updated devel/py-joblib to 0.16.0 [adam 2020-08-10]
 	Updated textproc/py-nltk to 3.5 [adam 2020-08-10]
