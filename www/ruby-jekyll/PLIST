@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/06/07 15:29:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/08/14 04:49:21 ryoon Exp $
 bin/jekyll${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rubocop.yml
@@ -40,7 +40,6 @@ ${GEM_LIBDIR}/lib/jekyll/drops/document_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/excerpt_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/jekyll_drop.rb
-${GEM_LIBDIR}/lib/jekyll/drops/page_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/site_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/static_file_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/unified_payload_drop.rb
