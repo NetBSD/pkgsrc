@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/07/17 18:04:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/14 20:01:19 bsiegert Exp $
 
 DISTNAME=	micro-2.0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zyedidia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
