@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/07/14 19:12:31 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/08/14 19:28:44 schmonz Exp $
 
 .include "dist.mk"
 
@@ -157,6 +157,11 @@ SUBST_FILES.findlib+=	Lib/distutils/unixccompiler.py
 SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 SUBST_SED.findlib+=	-e "s!\('-Wl,-t'\)!'${COMPILER_RPATH_FLAG}${PREFIX}/lib', '-L${PREFIX}/lib', \1!"
 SUBST_NOOP_OK.findlib=	yes
+
+SUBST_CLASSES+=		pkgversion
+SUBST_STAGE.pkgversion=	pre-configure
+SUBST_FILES.pkgversion=	Lib/lib2to3/pgen2/driver.py
+SUBST_VARS.pkgversion=	PKGVERSION_NOREV
 
 .include "options.mk"
 
