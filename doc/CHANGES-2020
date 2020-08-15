@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4453 2020/08/15 07:10:46 wen Exp $
+$NetBSD: CHANGES-2020,v 1.4454 2020/08/15 07:59:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6975,3 +6975,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ntpsec to 1.1.9 [tnn 2020-08-15]
 	Updated www/p5-WWW-Mechanize to 2.00 [wen 2020-08-15]
 	Updated www/p5-WWW-Mechanize-Shell to 0.59 [wen 2020-08-15]
+	Updated www/p5-WWW-Mechanize-Cached to 1.54 [wen 2020-08-15]
