@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4456 2020/08/15 08:29:55 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4457 2020/08/15 09:51:06 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6978,3 +6978,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-WWW-Mechanize-Cached to 1.54 [wen 2020-08-15]
 	Updated www/p5-Test-LWP-UserAgent to 0.034 [wen 2020-08-15]
 	Updated sysutils/smartmontools to 7.1 [tnn 2020-08-15]
+	Updated fonts/harfbuzz to 2.7.1 [tnn 2020-08-15]
