@@ -44,10 +44,12 @@ uses recursion"
 (defun thai-word-table-save(filename &optional alist)
   "save thai words extracted from a nested-alist table to
 filename in utf8 format, one word per line.  default is to save
-'thai-word-table if no alist argument given."
-  (interactive)
+'thai-word-table if no alist argument given.  Returns number of
+dictionary words."
+  (interactive "FName of file to save to: \nP")
   (let ((thaiwords)
 	(elem)
+	(line_count)
 	(coding-system-for-read 'utf-8)
 	(coding-system-for-write 'utf-8)
 	(buffer-file-coding-system 'utf-8))
@@ -72,8 +74,29 @@ filename in utf8 format, one word per line.  default is to save
 	  (insert elem "\n")))
 
       (sort-lines nil (point-min) (point-max))
+      (setq line_count (count-lines (point-min) (point-max)))
       (write-region nil nil filename)
-      (buffer-string))))
+      line_count)))
+
+(defun count-words-nested-alist (&optional alist)
+  "Count number of words in a nested alist. if no arg given,
+count 'thai-word-table words"
+  (interactive)
+  (let ((count 0)
+	(elem)
+	(thaiwords))
+    ;; default list or not
+    (setq alist (or alist thai-word-table))
+    (or (nested-alist-p alist)
+	(error "Invalid argument %s" alist))
+    ;; remove 'thai-words from 'thai-word-table
+    (setq alist (cdr alist))
+    (while (setq elem (car alist))
+      (setq alist (cdr alist))
+      (setq thaiwords (extract-thai-na elem ""))
+      (setq count (+ count (length thaiwords))))
+    (message "%d words in nested alist" count)
+    count))
 
 ;; 'thai-tis620 is default for emacs <= 28
 (defun thai-update-word-table-utf8 (file &optional append)
@@ -99,25 +122,32 @@ is appended instead to the current word list.  Does the same as
 (defun thai-word-table-save-defvar(dictfile lispfile)
   "read a utf8 thai dictionary file and save to a lisp file
 suitable for initializing the 'thai-word-table as a \"defvar\".
-Overwrites the lisp file if it exists."
+Overwrites the lisp file if it exists.  Returns count of
+dictionary words."
   (interactive)
   (let ((header)
 	(footer)
 	(elem)
+	(line_count)
 	(coding-system-for-read 'utf-8)
 	(coding-system-for-write 'utf-8)
 	(buffer-file-coding-system 'utf-8))
-    (setq header (list "(defvar thai-word-table"
-		       "(let ((table (list 'thai-words)))"
-		       "(dolist (elt"
-		       "'(" ))
-    (setq footer (list "))"
-		       "(set-nested-alist elt 1 table))"
-		       "table)"
-		       "\"Nested alist of Thai words.\")" ))
+    (setq header (list
+		  ";; file auto-generated from thai-word-table-save-defvar"
+		  ""
+		  "(defvar thai-word-table"
+		  "(let ((table (list 'thai-words)))"
+		  "(dolist (elt"
+		  "'(" ))
+    (setq footer (list
+		  "))"
+		  "(set-nested-alist elt 1 table))"
+		  "table)"
+		  "\"Nested alist of Thai words.\")" ))
     (with-temp-buffer
       (insert-file-contents dictfile)
       (goto-char (point-min))
+      (setq line_count (count-lines (point-min) (point-max)))
       ;; quote each thai word
       (while (not (eobp))
 	(beginning-of-line)
@@ -135,4 +165,18 @@ Overwrites the lisp file if it exists."
 	(insert elem "\n"))
       (lisp-mode)
       (indent-region (point-min) (point-max))
-      (write-region nil nil lispfile))))
+      (write-region nil nil lispfile))
+    line_count))
+
+(defun split-thai-line(&optional separator)
+  "Break Thai words from point to end of line by inserting a
+separator string at word boundaries. (wrapper for 'thai-break-words)"
+  (interactive)
+    (thai-break-words (or separator " ") (line-end-position)))
+
+(defun split-thai(&optional separator)
+  "Break Thai words from point to end of buffer by inserting a
+separator string at word boundaries. (wrapper for
+'thai-break-words)"
+  (interactive)
+    (thai-break-words (or separator " ") (point-max)))
