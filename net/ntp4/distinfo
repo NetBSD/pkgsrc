@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.31 2020/06/21 15:10:47 taca Exp $
+$NetBSD: distinfo,v 1.32 2020/08/15 02:09:25 tnn Exp $
 
-SHA1 (ntp-4.2.8p14.tar.gz) = c6f353278cd5b7c8aa11e1189d3ac80985370b8f
-RMD160 (ntp-4.2.8p14.tar.gz) = c49cb8138678b246661cc1afe68d38f255756a7e
-SHA512 (ntp-4.2.8p14.tar.gz) = b0183b4b2f2c6ea0a49d0aca1fa28a7b5cd21e20696a2f633f5afa37c4ea2c59fa7769af82a55c626db49b9eb5a531608710dc1977c4d518583577ef95940ae8
-Size (ntp-4.2.8p14.tar.gz) = 7007263 bytes
+SHA1 (ntp-4.2.8p15.tar.gz) = e34e5b6f48c3ed1bbcfb03080dec1b8f91e19381
+RMD160 (ntp-4.2.8p15.tar.gz) = 4653211d8c258a4a9edf1b2445a77223330176a2
+SHA512 (ntp-4.2.8p15.tar.gz) = f5ad765e45fc302263dd40e94c287698fd235b94f3684e49f1d5d09d7d8bdd6b8c0fb96ecdabffea3d233e1e79b3c9687b76dc204ba76bad3f554682f4a97794
+Size (ntp-4.2.8p15.tar.gz) = 7015970 bytes
 SHA1 (patch-configure) = cd2b6d9353282b574eea117b4b6e391a39a6267b
 SHA1 (patch-include-ntp__syscall.h) = b0587655e707b9a2e0eb9c937be47fd27e8d5435
 SHA1 (patch-include_ntp__md5.h) = 1bde85704e539ab40133f498409294d071df0cc8
@@ -22,7 +22,7 @@ SHA1 (patch-ntpd_ntp__keyword.h) = 158f7e93459ea30bbf87830b939a81071fa13eaa
 SHA1 (patch-ntpd_ntp__loopfilter.c) = 381e44622a25351c470dbc7bfaef353e47370d79
 SHA1 (patch-ntpd_ntp__proto.c) = 5e5629cc5b8dc785427bc9b267d0cac6fc7b1b39
 SHA1 (patch-ntpd_ntp__restrict.c) = b659db3d7913a72f3a36c3a33ef47cfaf4545095
-SHA1 (patch-ntpd_refclock__jjy.c) = 592d010d2e19bb47beefdcb3fe5645271e2645bb
+SHA1 (patch-ntpd_refclock__jjy.c) = c3e506722c0040b8173220482bc3abcd449c95a5
 SHA1 (patch-ntpd_refclock__jupiter.c) = bb248d2766cadddacdf9cb56bf9b29cbc538bbcb
 SHA1 (patch-ntpd_refclock__neoclock4x.c) = 66c38ba21572cb8804a39766f3b32d1b65cb0946
 SHA1 (patch-ntpd_refclock__oncore.c) = d93efa11cadc37fd9e600f80f2cbf0280be969c6
