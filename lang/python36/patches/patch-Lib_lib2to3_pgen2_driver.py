@@ -1,4 +1,4 @@
-$NetBSD: patch-Lib_lib2to3_pgen2_driver.py,v 1.1 2020/08/14 19:28:44 schmonz Exp $
+$NetBSD: patch-Lib_lib2to3_pgen2_driver.py,v 1.2 2020/08/15 12:35:57 schmonz Exp $
 
 On systems where both of the conditions
 
@@ -13,6 +13,10 @@ staging the install. Then "make package" fails with PLIST mismatches for
 {,Pattern}Grammar.*.pickle.
 
 pkgsrc knows which version we're building. Pass that down instead.
+
+In patch-Lib_distutils_unixccompiler.py, we override Python maintainers'
+expectations for Linux builds in favor of pkgsrc's expectations for
+builds on all platforms. This patch is needed because of that patch.
 
 --- Lib/lib2to3/pgen2/driver.py.orig	2020-06-27 08:35:53.000000000 +0000
 +++ Lib/lib2to3/pgen2/driver.py
