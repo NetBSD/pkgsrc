@@ -1,12 +1,17 @@
-# $NetBSD: options.mk,v 1.6 2020/08/09 00:53:12 joerg Exp $
+# $NetBSD: options.mk,v 1.7 2020/08/15 21:48:34 szptvlfn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.harfbuzz
-PKG_SUPPORTED_OPTIONS+=	icu
-PKG_SUGGESTED_OPTIONS=	icu
+PKG_SUPPORTED_OPTIONS+=	doc icu
+PKG_SUGGESTED_OPTIONS=	doc icu
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		icu
+PLIST_VARS+=		doc icu
+
+.if !empty(PKG_OPTIONS:Mdoc)
+.include "../../textproc/gtk-doc/buildlink3.mk"
+PLIST.doc=	yes
+.endif
 
 .if !empty(PKG_OPTIONS:Micu)
 .include "../../textproc/icu/buildlink3.mk"
