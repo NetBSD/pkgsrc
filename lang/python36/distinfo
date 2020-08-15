@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2020/08/14 19:28:44 schmonz Exp $
+$NetBSD: distinfo,v 1.32 2020/08/15 12:35:57 schmonz Exp $
 
 SHA1 (Python-3.6.11.tar.xz) = 0840e6b726446fccaef483dad84cce8fdc683077
 RMD160 (Python-3.6.11.tar.xz) = d1577bbfb4fb6b9c47389383e2b5ff9abb7db9e3
@@ -8,7 +8,7 @@ SHA1 (patch-Lib_ctypes_util.py) = 3b7aecb2879cce70c76bd4bc60f2ec577a5bed61
 SHA1 (patch-Lib_distutils_command_install.py) = 29204f34296f36ab2b21c745f915ba73caf2b71c
 SHA1 (patch-Lib_distutils_sysconfig.py) = 6822eafb4dfded86d7f7353831816aeb8119e6cf
 SHA1 (patch-Lib_distutils_unixccompiler.py) = e7aa684fa186de7a01486c3d8bfa177afdd22ef9
-SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = abe876142a20e60a3c0a0cf80abeecf54855c07c
+SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 5d6dab14197f27363394ff1aeee22a8ced8026d2
 SHA1 (patch-Lib_sysconfig.py) = a4f009ed73ebbd9d9c4bf7e12b7981182ed8fd7c
 SHA1 (patch-Makefile.pre.in) = b7f2512a8253ebf4c3ca8742a37736bfd8bd52d8
 SHA1 (patch-Modules_makesetup) = a06786eebffadecedba5e3a50a9785fb47613567
