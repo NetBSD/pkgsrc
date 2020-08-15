@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/05/31 16:26:36 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/15 02:16:18 tnn Exp $
 
-DISTNAME=	hitch-1.5.2
+DISTNAME=	hitch-1.6.0
 CATEGORIES=	security
 MASTER_SITES=	https://hitch-tls.org/source/
 
@@ -19,7 +19,7 @@ CHECK_PORTABILITY_SKIP+=	src/tests/*
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 LIBS.SunOS+=		-lnsl -lsocket
 
-BUILD_DEFS+=		HITCH_USER HITCH_GROUP HITCH_CERTS
+BUILD_DEFS+=		HITCH_USER HITCH_GROUP HITCH_CERTS VARBASE
 
 HITCH_USER?=		hitch
 HITCH_GROUP?=		hitch
