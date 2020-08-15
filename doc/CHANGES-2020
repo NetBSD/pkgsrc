@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4451 2020/08/15 02:36:35 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4452 2020/08/15 06:41:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6973,3 +6973,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ntp4 to 4.2.8p15 [tnn 2020-08-15]
 	Updated security/hitch to 1.6.0 [tnn 2020-08-15]
 	Updated time/ntpsec to 1.1.9 [tnn 2020-08-15]
+	Updated www/p5-WWW-Mechanize to 2.00 [wen 2020-08-15]
