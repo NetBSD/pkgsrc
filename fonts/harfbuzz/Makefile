@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2020/08/15 09:49:44 tnn Exp $
+# $NetBSD: Makefile,v 1.134 2020/08/15 21:48:34 szptvlfn Exp $
 
 DISTNAME=	harfbuzz-2.7.1
 CATEGORIES=	fonts
@@ -79,5 +79,4 @@ REPLACE_PYTHON+=	src/*.py
 # graphite2 support breaks graphics/librsvg-c
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
