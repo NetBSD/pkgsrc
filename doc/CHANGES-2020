@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4450 2020/08/15 01:03:50 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4451 2020/08/15 02:36:35 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6969,3 +6969,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20200814 [wiz 2020-08-14]
 	Updated www/p5-libwww to 6.46 [wen 2020-08-14]
 	Updated devel/popt to 1.18 [tnn 2020-08-15]
+	Updated devel/git-lfs to 2.11.0 [tnn 2020-08-15]
+	Updated net/ntp4 to 4.2.8p15 [tnn 2020-08-15]
+	Updated security/hitch to 1.6.0 [tnn 2020-08-15]
+	Updated time/ntpsec to 1.1.9 [tnn 2020-08-15]
