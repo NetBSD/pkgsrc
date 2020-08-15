@@ -8,11 +8,10 @@
 ;;
 
 ;;(toggle-debug-on-error) ;; debug
-(require 'thai-word)
 
-;; load custom dictionary
-(load "ST_SHARE_DIR/thai-utility" nil t)
+;; load custom dictionary first, 'thai-word-table is defvar
 (load "ST_SHARE_DIR/thai-dict" nil t)
+(load "ST_SHARE_DIR/thai-utility" nil t)
 
 ;; split a thai line by spaces, return new line
 (defun process-thai-line(line)
