@@ -1,96 +1,27 @@
-$NetBSD: patch-wscript,v 1.1 2019/03/25 15:40:35 tnn Exp $
+$NetBSD: patch-wscript,v 1.2 2020/08/15 02:31:28 tnn Exp $
 
 - don't hardcode PREFIX
-- waf-2.x support from upstream:
-  https://gitlab.com/NTPsec/ntpsec/commit/ff6f50b1ce7d7c2a552b27c6e8fb19639a7bf82a
 
---- wscript.orig	2019-01-14 05:40:59.000000000 +0000
+--- wscript.orig	2020-05-24 03:00:19.000000000 +0000
 +++ wscript
-@@ -536,20 +536,12 @@ int main(int argc, char **argv) {
+@@ -497,18 +497,10 @@ int main(int argc, char **argv) {
  
      # XXX: hack
-     if ctx.env.DEST_OS in ["freebsd", "openbsd"]:
--        ctx.env.PLATFORM_INCLUDES = ["/usr/local/include"]
--        ctx.env.PLATFORM_LIBPATH = ["/usr/local/lib"]
+     if ctx.env.DEST_OS in ["freebsd"]:
+-        ctx.env.INCLUDES = ["/usr/local/include"]
+-        ctx.env.LIBPATH = ["/usr/local/lib"]
 +        pass
-     elif ctx.env.DEST_OS == "netbsd":
--        ctx.env.PLATFORM_INCLUDES = ["/usr/pkg/include"]
--        ctx.env.PLATFORM_LIBPATH = ["/usr/lib", "/usr/pkg/lib"]
+     elif ctx.env.DEST_OS == "netbsd" and os.path.isdir("/usr/pkg/include"):
+-        ctx.env.INCLUDES = ["/usr/pkg/include"]
+-        ctx.env.LIBPATH = ["/usr/pkg/lib"]
+-        ctx.env.LDFLAGS += ["-rpath=/usr/pkg/lib"]
 +        pass
-     elif ctx.env.DEST_OS == "win32":
-         ctx.load("msvc")
      elif ctx.env.DEST_OS == "darwin":
 -        # macports location
 -        if os.path.isdir("/opt/local/include"):
--            ctx.env.PLATFORM_INCLUDES = ["/opt/local/include"]
+-            ctx.env.INCLUDES = ["/opt/local/include"]
 -        if os.path.isdir("/opt/local/lib"):
--            ctx.env.PLATFORM_LIBPATH = ["/opt/local/lib"]
--        # OS X needs this for IPv6
+-            ctx.env.LIBPATH = ["/opt/local/lib"]
+         # OS X needs this for IPv6
          ctx.define("__APPLE_USE_RFC_3542", 1,
                     comment="Needed for IPv6 support")
-     elif ctx.env.DEST_OS == "sunos":
-@@ -558,6 +550,29 @@ int main(int argc, char **argv) {
-         ctx.define("_POSIX_C_SOURCE", "200112L", quote=False)
-         ctx.define("__EXTENSIONS__", "1", quote=False)
- 
-+    # Borrowed from waf-1.9, when type_name and field_name were valid keywords
-+    SNIP_TYPE = '''
-+    int main(int argc, char **argv) {
-+        (void)argc; (void)argv;
-+        if ((%(type_name)s *) 0) return 0;
-+        if (sizeof (%(type_name)s)) return 0;
-+        return 1;
-+    }
-+    '''
-+
-+    SNIP_FIELD = '''
-+    #include <stddef.h>
-+    int main(int argc, char **argv) {
-+        char *off;
-+        (void)argc; (void)argv;
-+        off = (char*) &((%(type_name)s*)0)->%(field_name)s;
-+        return (size_t) off < sizeof(%(type_name)s);
-+    }
-+    '''
-+
-+    def to_header(header_name):
-+        return ''.join(['#include <%s>\n' % x for x in Utils.to_list(header_name)])
-+
-     structures = (
-         ("struct if_laddrconf", ["sys/types.h", "net/if6.h"], False),
-         ("struct if_laddrreq", ["sys/types.h", "net/if6.h"], False),
-@@ -565,14 +580,12 @@ int main(int argc, char **argv) {
-         ("struct ntptimeval", ["sys/time.h", "sys/timex.h"], False),
-     )
-     for (s, h, r) in structures:
--        ctx.check_cc(type_name=s, header_name=h, mandatory=r)
--
--    # waf's SNIP_FIELD should likely include this header itself
--    # This is needed on some systems to get size_t for following checks
--    ctx.check_cc(auto_add_header_name=True,
--                 header_name="stddef.h",
--                 define_name="",           # omit from config.h
--                 mandatory=False)
-+        ctx.check_cc(
-+            fragment=to_header(h) + SNIP_TYPE % {'type_name': s},
-+            msg='Checking for type %s' % s,
-+            define_name=ctx.have_define(s.upper()),
-+            mandatory=r,
-+        )
- 
-     structure_fields = (
-         ("struct timex", "time_tick", ["sys/time.h", "sys/timex.h"]),
-@@ -582,7 +595,12 @@ int main(int argc, char **argv) {
-         # first in glibc 2.12
-     )
-     for (s, f, h) in structure_fields:
--        ctx.check_cc(type_name=s, field_name=f, header_name=h, mandatory=False)
-+        ctx.check_cc(
-+            fragment=to_header(h) + SNIP_FIELD % {'type_name': s, 'field_name': f},
-+            msg='Checking for field %s in %s' % (f, s),
-+            define_name=ctx.have_define((s + '_' + f).upper()),
-+            mandatory=False,
-+        )
- 
-     # mostly used by timetoa.h and timespecops.h
-     sizeofs = [
