@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/04/19 13:32:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/08/15 23:36:38 nia Exp $
 bin/sndfile-cmp
 bin/sndfile-concat
 bin/sndfile-convert
@@ -34,6 +34,7 @@ share/doc/libsndfile/libsndfile.jpg
 share/doc/libsndfile/lists.html
 share/doc/libsndfile/new_file_type.HOWTO
 share/doc/libsndfile/octave.html
+share/doc/libsndfile/print.css
 share/doc/libsndfile/sndfile_info.html
 share/doc/libsndfile/tutorial.html
 share/doc/libsndfile/win32.html
