@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2020/06/02 08:24:14 adam Exp $
+# $NetBSD: Makefile,v 1.70 2020/08/15 10:52:50 tnn Exp $
 
-DISTNAME=	dbmail-3.2.3
-PKGREVISION=	18
+DISTNAME=	dbmail-3.2.5
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GITHUB:=pjstevns/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dbmail/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
