@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4459 2020/08/15 11:04:45 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4460 2020/08/15 16:53:20 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6981,3 +6981,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/harfbuzz to 2.7.1 [tnn 2020-08-15]
 	Updated mail/dbmail to 3.2.5 [tnn 2020-08-15]
 	Updated sysutils/p5-BackupPC-XS to 0.62 [tnn 2020-08-15]
+	Updated textproc/split-thai to 0.3 [scole 2020-08-15]
