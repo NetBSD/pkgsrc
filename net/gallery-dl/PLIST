@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2020/07/18 17:17:04 leot Exp $
+@comment $NetBSD: PLIST,v 1.44 2020/08/15 20:04:33 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -84,9 +84,6 @@ ${PYSITELIB}/gallery_dl/extractor/behance.pyo
 ${PYSITELIB}/gallery_dl/extractor/blogger.py
 ${PYSITELIB}/gallery_dl/extractor/blogger.pyc
 ${PYSITELIB}/gallery_dl/extractor/blogger.pyo
-${PYSITELIB}/gallery_dl/extractor/bobx.py
-${PYSITELIB}/gallery_dl/extractor/bobx.pyc
-${PYSITELIB}/gallery_dl/extractor/bobx.pyo
 ${PYSITELIB}/gallery_dl/extractor/booru.py
 ${PYSITELIB}/gallery_dl/extractor/booru.pyc
 ${PYSITELIB}/gallery_dl/extractor/booru.pyo
@@ -195,6 +192,9 @@ ${PYSITELIB}/gallery_dl/extractor/imgth.pyo
 ${PYSITELIB}/gallery_dl/extractor/imgur.py
 ${PYSITELIB}/gallery_dl/extractor/imgur.pyc
 ${PYSITELIB}/gallery_dl/extractor/imgur.pyo
+${PYSITELIB}/gallery_dl/extractor/inkbunny.py
+${PYSITELIB}/gallery_dl/extractor/inkbunny.pyc
+${PYSITELIB}/gallery_dl/extractor/inkbunny.pyo
 ${PYSITELIB}/gallery_dl/extractor/instagram.py
 ${PYSITELIB}/gallery_dl/extractor/instagram.pyc
 ${PYSITELIB}/gallery_dl/extractor/instagram.pyo
