@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2015/09/12 14:23:59 tnn Exp $
+# $NetBSD: options.mk,v 1.13 2020/08/15 10:52:50 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbmail
 PKG_SUPPORTED_OPTIONS=	ldap sieve
-PKG_SUGGESTED_OPTIONS=	sieve
+PKG_SUGGESTED_OPTIONS=	ldap sieve
 
 .include "../../mk/bsd.options.mk"
 
@@ -18,6 +18,7 @@ PLIST.sieve=		yes
 FILES_SUBST+=		TIMSIEVED="dbmailtimsieved"
 RCD_SCRIPTS+=		dbmailtimsieved
 .else
+CONFIGURE_ARGS+=	--without-sieve
 FILES_SUBST+=		TIMSIEVED=""
 .endif
 
@@ -28,4 +29,6 @@ FILES_SUBST+=		TIMSIEVED=""
 .include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 PLIST.ldap=		yes
+.else
+CONFIGURE_ARGS+=	--without-ldap
 .endif
