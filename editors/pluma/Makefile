@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/06/02 08:23:44 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/08/16 02:27:36 gutteridge Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -8,7 +8,7 @@ CATEGORIES=	editors
 
 COMMENT=	Small and lightweight UTF-8 text editor for MATE
 
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run perl
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
