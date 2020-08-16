@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/07/25 08:16:14 wen Exp $
+$NetBSD: distinfo,v 1.8 2020/08/16 02:48:39 wen Exp $
 
-SHA1 (File-Util-4.161950.tar.gz) = 129195d418ca350f25fdebb95043c88f28038fac
-RMD160 (File-Util-4.161950.tar.gz) = 04747724fbdafee2b6db50c067827f9b1d69bf39
-SHA512 (File-Util-4.161950.tar.gz) = 1678d0075b2ebcb014a101cfec39e462ab4c4380db48016adb0d4d65a532dc215ecead10fe440df8a00cee9ec882a9e4df25d28228fc30f66918492ef64344de
-Size (File-Util-4.161950.tar.gz) = 129909 bytes
+SHA1 (File-Util-4.201720.tar.gz) = dad3530cd268446d11d63751791a26bb4179fc6c
+RMD160 (File-Util-4.201720.tar.gz) = ce25acd31a54c749550fa7efb092b234973bce24
+SHA512 (File-Util-4.201720.tar.gz) = 7f422d8634b9b73a51117fdc7f95999fd07ac60beddce0cba4eed6a45173f79e727e8e10a4342949d3b0c2a89a985ce1abe66f827d7027c5727dc009fd29e1df
+Size (File-Util-4.201720.tar.gz) = 135070 bytes
