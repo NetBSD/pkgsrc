@@ -1,0 +1,44 @@
+.\"	$NetBSD: import-package.1,v 1.1 2020/08/16 20:57:09 wiz Exp $
+.\"
+.Dd August 16, 2020
+.Dt IMPORT_PACKAGE 1
+.Sh NAME
+.Nm import-package
+.Nd import package to pkgsrc
+.Sh SYNOPSIS
+.Nm
+.Sh DESCRIPTION
+.Nm
+is a script designed to make adding packages into pkgsrc or pkgsrc-wip
+easier.
+To use it, just
+.Ic cd
+to the package directory and run
+.Nm .
+.Pp
+.Nm
+will automatically create a nice import message based on
+.Pa DESCR
+and
+.Va PKGNAME ,
+set up the CVS tags correctly and autodetect what CVSROOT (or git)
+to use.
+.Nm
+also shows you what files will be imported, reminds you
+to run
+.Xr pkglint 1
+and asks for confirmation before doing anything.
+.Sh AUTHORS
+.An Tobias Nygren
+.An Filip Hajny
+.An Thomas Klausner
+.An dieter roelants
+.An Kamil Rytarowski
+.An Ryo ONODERA
+.Sh CAVEATS
+.Nm
+does not create the
+.Pa CHANGES-*
+entry, so please run
+.Dl "PKG_DEVELOPER=yes make cce CTYPE=Added"
+after the import, if importing into pkgsrc.
