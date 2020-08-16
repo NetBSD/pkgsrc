@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/12/19 22:10:35 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/16 23:05:33 tnn Exp $
 
 # using configure options and sources from
 # https://github.com/earlephilhower/esp-quick-toolchain
@@ -83,6 +83,8 @@ CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--enable-lto
 CONFIGURE_ARGS+=	--enable-static=yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-verbose
+
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 post-extract:
 	${LN} -s ${WRKDIR}/newlib-*/newlib ${WRKSRC}/newlib
