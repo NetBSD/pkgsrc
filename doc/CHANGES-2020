@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4472 2020/08/16 03:02:24 wen Exp $
+$NetBSD: CHANGES-2020,v 1.4473 2020/08/16 04:14:56 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6994,3 +6994,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-File-Slurp to 9999.32 [wen 2020-08-16]
 	Updated devel/p5-File-Util to 4.201720 [wen 2020-08-16]
 	Updated devel/p5-Hash-Merge to 0.302 [wen 2020-08-16]
+	Updated wm/marco to 1.24.1 [gutteridge 2020-08-16]
