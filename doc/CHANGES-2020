@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4464 2020/08/16 00:20:46 wen Exp $
+$NetBSD: CHANGES-2020,v 1.4465 2020/08/16 00:35:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6986,3 +6986,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/libsndfile to 1.0.29 [nia 2020-08-15]
 	Updated www/p5-HTTP-Daemon to 6.12 [wen 2020-08-16]
 	Updated devel/p5-Date-Manip to 6.82 [wen 2020-08-16]
+	Updated devel/p5-Devel-Cover to 1.36 [wen 2020-08-16]
