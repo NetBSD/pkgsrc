@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2020/06/13 20:54:32 leot Exp $
+$NetBSD: distinfo,v 1.48 2020/08/16 22:42:09 gutteridge Exp $
 
 SHA1 (sane-backends-1.0.30.tar.gz) = 4f6a2e56d92d15a58dcabcba76a36929a2fd882f
 RMD160 (sane-backends-1.0.30.tar.gz) = 85c57e773d26e8c82304d3d6bce38dcda0f2b8c0
@@ -10,6 +10,7 @@ SHA1 (patch-ah) = 6e747c3b541c9ebb57db6477ac6b6e48b1df0248
 SHA1 (patch-ai) = 14f5467eb865406cbec00b8d47b5c23c4c89f113
 SHA1 (patch-aj) = c2e0733796872f1b074d0491dea4cffa1891bccc
 SHA1 (patch-ak) = f00d3773c14f9955565debc0d16231906a2bba76
+SHA1 (patch-backend_genesys_low.cpp) = 6df874fc4e4909e401db923510f802367f2377f5
 SHA1 (patch-backend_pixma_pixma__bjnp.c) = c48e929910cbe33b91c919de3f47badd2bf063f0
 SHA1 (patch-m4_byteorder.m4) = 23f4b0256fc9980d3472e77ab558b0e24a9495b4
 SHA1 (patch-tools_umax__pp.c) = debe660184a1380a894e8a5414983f5fdb19cded
