@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.56 2020/06/01 06:18:51 adam Exp $
+# $NetBSD: options.mk,v 1.57 2020/08/16 21:54:08 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug echo encrypted-session \
@@ -47,6 +47,16 @@ CONFIGURE_ARGS+=	--without-http_rewrite_module
 
 .if !empty(PKG_OPTIONS:Mdav)
 CONFIGURE_ARGS+=	--with-http_dav_module
+CONFIGURE_ARGS+=	--add-module=../${DAV_EXT_DISTNAME}
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mdav) || make(makesum) || make(mdi)
+DAV_EXT_VERSION=		3.0.0
+DAV_EXT_DISTNAME=		nginx-dav-ext-module-3.0.0
+DAV_EXT_DISTFILE=		${DAV_EXT_DISTNAME}.tar.gz
+SITES.${DAV_EXT_DISTFILE}+=	-https://github.com/arut/nginx-dav-ext-module/archive/v${DAV_EXT_VERSION}.tar.gz
+DISTFILES+=			${DAV_EXT_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mflv)
