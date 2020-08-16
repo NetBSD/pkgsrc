@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2020/03/11 19:15:03 rillig Exp $
+# $NetBSD: Makefile,v 1.121 2020/08/16 20:58:47 wiz Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -21,6 +21,7 @@ SUBDIR+=	genrpm
 SUBDIR+=	gensolpkg
 SUBDIR+=	gimme
 SUBDIR+=	gnome-packagekit
+SUBDIR+=	import-package
 SUBDIR+=	libkver
 SUBDIR+=	libnbcompat
 SUBDIR+=	lintpkgsrc
