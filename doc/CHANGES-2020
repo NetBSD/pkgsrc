@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4468 2020/08/16 01:17:37 wen Exp $
+$NetBSD: CHANGES-2020,v 1.4469 2020/08/16 01:37:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6990,3 +6990,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Devel-Gladiator to 0.08 [wen 2020-08-16]
 	Updated devel/p5-Devel-PPPort to 3.60 [wen 2020-08-16]
 	Updated devel/p5-FFI-CheckLib to 0.27 [wen 2020-08-16]
+	Updated devel/p5-File-Flat to 1.06 [wen 2020-08-16]
