@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4462 2020/08/15 23:36:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4463 2020/08/16 00:15:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6984,3 +6984,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/split-thai to 0.3 [scole 2020-08-15]
 	Updated net/gallery-dl to 1.14.4 [leot 2020-08-15]
 	Updated audio/libsndfile to 1.0.29 [nia 2020-08-15]
+	Updated www/p5-HTTP-Daemon to 6.12 [wen 2020-08-16]
