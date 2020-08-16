@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/08/04 00:31:23 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/16 22:59:50 joerg Exp $
 
-DISTNAME=	django-phnumber-field-4.0.0
+DISTNAME=	django-phonenumber-field-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stefanfoulis/}
