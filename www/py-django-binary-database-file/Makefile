@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/08/04 01:15:13 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/16 22:57:22 joerg Exp $
 
-DISTNAME=	django-binary-database-1.0.10
+DISTNAME=	django-binary-database-file-1.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kimetrica/}
