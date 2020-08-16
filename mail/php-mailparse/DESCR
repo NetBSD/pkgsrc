@@ -1,0 +1,5 @@
+PHP is a programming language designed to be embedded into web pages.
+Mailparse is an extension for parsing and working with email messages.
+It can deal with rfc822 and rfc2045 (MIME) compliant messages.
+
+WWW: https://www.php.net/manual/en/intro.mailparse.php
