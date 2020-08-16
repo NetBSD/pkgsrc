@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2020/08/14 20:01:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2020/08/16 23:14:11 tnn Exp $
 
 COMMENT=	Go generated proto packages
 PKGREVISION=	18
 
 DEPENDS+=	go-genproto-googleapis-rpc-[0-9]*:../../misc/go-genproto-googleapis-rpc
 
-BROKEN=		Tries to modify .buildlink/gopkg
+BROKEN=		"Tries to modify .buildlink/gopkg"
 
 .include "Makefile.common"
 
