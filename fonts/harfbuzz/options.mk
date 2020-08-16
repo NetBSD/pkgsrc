@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2020/08/15 21:48:34 szptvlfn Exp $
+# $NetBSD: options.mk,v 1.8 2020/08/16 10:40:16 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.harfbuzz
 PKG_SUPPORTED_OPTIONS+=	doc icu
@@ -9,8 +9,11 @@ PKG_SUGGESTED_OPTIONS=	doc icu
 PLIST_VARS+=		doc icu
 
 .if !empty(PKG_OPTIONS:Mdoc)
+MESON_ARGS+=	-Ddocs=enabled
 .include "../../textproc/gtk-doc/buildlink3.mk"
 PLIST.doc=	yes
+.else
+MESON_ARGS+=	-Ddocs=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Micu)
