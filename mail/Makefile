@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2020/06/07 10:27:11 nia Exp $
+# $NetBSD: Makefile,v 1.555 2020/08/16 21:21:12 otis Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -270,6 +270,7 @@ SUBDIR+=	perdition-odbc
 SUBDIR+=	perdition-postgresql
 SUBDIR+=	pfqueue
 SUBDIR+=	php-imap
+SUBDIR+=	php-mailparse
 SUBDIR+=	pine
 SUBDIR+=	pine-pgp-filters
 SUBDIR+=	policyd
