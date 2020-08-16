@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/06/18 16:54:25 taca Exp $
+# $NetBSD: Makefile,v 1.26 2020/08/16 13:46:03 taca Exp $
 
-DISTNAME=	Net_SMTP-1.9.1
+DISTNAME=	Net_SMTP-1.9.2
 CATEGORIES+=	net mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
