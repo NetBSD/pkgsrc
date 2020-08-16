@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/04/30 09:23:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/08/16 22:18:49 tnn Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
@@ -20,6 +20,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 CONFIGURE_DIRS+=	build
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+
+CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
 
 CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=		-DBUILD_PROTOBUF=OFF
