@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.36 2018/01/14 14:58:39 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/08/16 22:38:56 tnn Exp $
 
 DISTNAME=	libgii-1.0.2.src
 PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.ggi-project.org/ftp/ggi/v2.2/
-MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=ggi/}
+#MASTER_SITES=	http://www.ggi-project.org/ftp/ggi/v2.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ggi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ggi-project.org/
+#HOMEPAGE=	http://www.ggi-project.org/
+HOMEPAGE=	https://ibiblio.org/ggicore/
 COMMENT=	General Input Interface - API for all possible input sources
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
