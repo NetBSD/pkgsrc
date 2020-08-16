@@ -1,4 +1,4 @@
-.\"	$NetBSD: import-package.1,v 1.1 2020/08/16 20:57:09 wiz Exp $
+.\"	$NetBSD: import-package.1,v 1.2 2020/08/16 20:57:57 wiz Exp $
 .\"
 .Dd August 16, 2020
 .Dt IMPORT_PACKAGE 1
@@ -42,3 +42,8 @@ does not create the
 entry, so please run
 .Dl "PKG_DEVELOPER=yes make cce CTYPE=Added"
 after the import, if importing into pkgsrc.
+Nor does
+.Nm
+add the package directory to the category's
+.Pa Makefile ,
+so please don't forget to do that either.
