@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4482 2020/08/17 17:44:25 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4483 2020/08/17 21:00:14 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7003,3 +7003,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/autogen to 5.18.16 [tnn 2020-08-17]
 	Updated multimedia/hwdecode-demos to 0.9.6p1 [tnn 2020-08-17]
 	Updated textproc/split-thai to 0.4 [scole 2020-08-17]
+	Updated www/stagit to 0.9.4 [fcambus 2020-08-17]
