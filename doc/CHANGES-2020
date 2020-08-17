@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4479 2020/08/17 02:43:28 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4480 2020/08/17 08:45:11 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7000,3 +7000,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added mail/php-mailparse version 3.1.0 [otis 2020-08-16]
 	Added pkgtools/import-package version 1.0 [wiz 2020-08-16]
 	Updated pkgtools/lintpkgsrc to 4.95 [tnn 2020-08-17]
+	Updated devel/autogen to 5.18.16 [tnn 2020-08-17]
