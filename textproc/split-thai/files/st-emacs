@@ -18,7 +18,7 @@
   (with-temp-buffer
     (insert line)
     (goto-char (point-min))
-    (thai-break-words " ")
+    (split-thai-line)
     (buffer-string)))
 
 ;; hack to process stdin
@@ -48,6 +48,6 @@
     (insert (mapconcat 'identity (cdddr command-line-args) " "))
     (insert "\n"))
   (goto-char (point-min))
-  (thai-break-words " ")
+  (split-thai)
   (write-region nil nil "/dev/stdout"))
 (kill-emacs 0)
