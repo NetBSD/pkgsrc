@@ -1,0 +1,1 @@
+bin/ykman @PREFIX@/bin/ykman-@PYVERSSUFFIX@
