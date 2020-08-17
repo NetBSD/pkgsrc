@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.774 2020/07/17 06:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.775 2020/08/17 07:01:33 riastradh Exp $
 #
 
 COMMENT=	Security tools
@@ -454,6 +454,7 @@ SUBDIR+=	py-cybox
 SUBDIR+=	py-denyhosts
 SUBDIR+=	py-ecdsa
 SUBDIR+=	py-ezPyCrypto
+SUBDIR+=	py-fido2
 SUBDIR+=	py-gnupg
 SUBDIR+=	py-google-auth
 SUBDIR+=	py-google-auth-httplib2
