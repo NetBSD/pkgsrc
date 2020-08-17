@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:56 joerg Exp $
+$NetBSD: distinfo,v 1.3 2020/08/17 12:22:50 tnn Exp $
 
-SHA1 (hwdecode-demos-0.9.4.tar.gz) = 9562fab1f84cecd3e1048871ec24a456c7d2a6b4
-RMD160 (hwdecode-demos-0.9.4.tar.gz) = 2e3c2c835ea742ccce568996a4bc1e10d1e4db17
-SHA512 (hwdecode-demos-0.9.4.tar.gz) = 2f2c0a8537340f04b64424db6c36720fc9eccd476b48db0db8de05e3341ff41f905021b8f2fea9d869a8328b4582ea28dc9ac764ded7b9eff0bcc72ffd46179b
-Size (hwdecode-demos-0.9.4.tar.gz) = 641177 bytes
+SHA1 (hwdecode-demos-0.9.6p1-6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea.tar.gz) = be65d3836694184d2a56a18053cb356f194f30fe
+RMD160 (hwdecode-demos-0.9.6p1-6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea.tar.gz) = 4cf6fa9532e1d24616e72d25166bb4a2836edf02
+SHA512 (hwdecode-demos-0.9.6p1-6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea.tar.gz) = 785a8982dc9d5cf737a8379457924aaf0823cae0b0a2c9d15e30e13dfce2afcfca44cf6c4c5b6fd7a11b5370bdb8a28eb1f222b598ef3b004c55237e71d6866b
+Size (hwdecode-demos-0.9.6p1-6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea.tar.gz) = 379926 bytes
+SHA1 (patch-src_vdpau.c) = 0db103af510a0d7d4e004294d567d02d94b20862
