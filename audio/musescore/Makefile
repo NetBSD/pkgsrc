@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/08/14 05:23:09 gutteridge Exp $
+# $NetBSD: Makefile,v 1.11 2020/08/17 20:18:09 leot Exp $
 
 DISTNAME=	musescore-3.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=musescore/}
 GITHUB_PROJECT=	MuseScore

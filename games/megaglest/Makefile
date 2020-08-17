@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/06/02 08:23:55 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/17 20:18:49 leot Exp $
 
 DISTNAME=	megaglest-3.13.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MegaGlest/}
 GITHUB_PROJECT=	megaglest-source

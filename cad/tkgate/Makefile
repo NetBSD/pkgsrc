@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2019/06/08 11:04:30 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2020/08/17 20:18:15 leot Exp $
 #
 
 DISTNAME=	tkgate-1.8.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	http://www.tkgate.org/downloads/
 EXTRACT_SUFX=	.tgz

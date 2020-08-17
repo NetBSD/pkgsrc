@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2020/06/09 11:56:11 markd Exp $
+# $NetBSD: Makefile,v 1.42 2020/08/17 20:17:26 leot Exp $
 
 DISTNAME=	libkdegames-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://www.kde.org/applications/games/

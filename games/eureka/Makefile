@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/15 15:20:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/17 20:18:43 leot Exp $
 
 DISTNAME=	eureka-1.27b-source
 # Some macOS patches were added after the release of 1.27 but unfortunately
@@ -6,6 +6,7 @@ DISTNAME=	eureka-1.27b-source
 # The second patch release is called 1.27b, we use version 1.27.2 for it.
 # Switch back to upstream naming scheme for next major/minor release.
 PKGNAME=	${DISTNAME:S/-source//:S/b/.2/}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eureka-editor/}
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2020/05/17 22:08:10 rillig Exp $
+# $NetBSD: Makefile,v 1.73 2020/08/17 20:17:57 leot Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-tools-${QTVERSION}

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/08/11 12:40:54 hauke Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/17 20:17:40 leot Exp $
 
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	libcups-${CUPS_VERS}
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 
 MAINTAINER=	sbd@NetBSD.org

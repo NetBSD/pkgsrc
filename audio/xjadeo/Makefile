@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 05:26:14 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/08/17 20:18:13 leot Exp $
 
 DISTNAME=	xjadeo-0.8.9
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=x42/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

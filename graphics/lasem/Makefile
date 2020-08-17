@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/06/02 08:22:43 adam Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/17 20:17:30 leot Exp $
 #
 
 DISTNAME=	lasem-0.4.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/lasem/0.4/
 EXTRACT_SUFX=	.tar.xz
