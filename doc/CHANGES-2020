@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4480 2020/08/17 08:45:11 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4481 2020/08/17 13:03:35 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7001,3 +7001,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added pkgtools/import-package version 1.0 [wiz 2020-08-16]
 	Updated pkgtools/lintpkgsrc to 4.95 [tnn 2020-08-17]
 	Updated devel/autogen to 5.18.16 [tnn 2020-08-17]
+	Updated multimedia/hwdecode-demos to 0.9.6p1 [tnn 2020-08-17]
