@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/05/20 06:09:09 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/08/17 10:52:49 jperkin Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 .include "../../mk/oss.buildlink3.mk"
 
-.if ${DEVOSSAUDIO} != /dev/dsp
+.if ${OSS_TYPE} != "none" && ${DEVOSSAUDIO} != /dev/dsp
 SUBST_CLASSES+=		audio
 SUBST_STAGE.audio=	pre-build
 SUBST_MESSAGE.audio=	Adjusting path to audio device
