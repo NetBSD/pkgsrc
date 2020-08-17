@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/04/29 20:24:37 maya Exp $
+# $NetBSD: Makefile,v 1.27 2020/08/17 20:19:28 leot Exp $
 
 DISTNAME=	vic-2.8ucl1.4.0beta-4337
 PKGNAME=	vic-devel-2.8.1.4.0beta.4337
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	mbone tk
 MASTER_SITES=	http://www.NetBSD.org/~sborrill/snapshots/
 

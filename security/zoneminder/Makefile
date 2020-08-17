@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2020/05/16 17:57:45 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2020/08/17 20:20:01 leot Exp $
 
 # See wip/zoneminder for a draft update to 1.29.0.
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ZoneMinder/}
 GITHUB_PROJECT=	ZoneMinder

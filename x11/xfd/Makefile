@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 23:36:08 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/17 20:20:39 leot Exp $
 
 DISTNAME=	xfd-1.1.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2

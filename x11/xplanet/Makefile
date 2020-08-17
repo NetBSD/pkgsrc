@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.96 2020/06/05 12:49:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.97 2020/08/17 20:20:40 leot Exp $
 
 # The 1.3.1 release is a few years old, and upstream recommends that
 # the head of svn be used.  However, we follow pkgsrc norms of
 # packaging releases, with some commits applied as patches.
 DISTNAME=	xplanet-1.3.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xplanet/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/06/02 10:30:45 pin Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/17 20:20:07 leot Exp $
 
 DISTNAME=	lxqt-powermanagement-0.15.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
