@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2020/08/17 05:26:16 tnn Exp $
+# $NetBSD: Makefile,v 1.79 2020/08/17 05:31:36 tnn Exp $
 
 DISTNAME=	libsndfile-1.0.29
 CATEGORIES=	audio
@@ -36,9 +36,9 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../audio/flac/buildlink3.mk"
-.include "../../lang/python/tool.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 BUILDLINK_API_DEPENDS.libogg+=	libogg>=1.1.3
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
