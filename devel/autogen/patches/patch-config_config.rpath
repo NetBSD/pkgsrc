@@ -1,0 +1,16 @@
+$NetBSD: patch-config_config.rpath,v 1.1 2020/08/17 08:43:07 tnn Exp $
+
+Don't leak WRKDIR references.
+pkgsrc wrappers don't like space separated linker flags.
+
+--- config/config.rpath.orig	2018-07-28 15:23:15.000000000 +0000
++++ config/config.rpath
+@@ -173,7 +173,7 @@ if test "$with_gnu_ld" = yes; then
+   # here allows them to be overridden if necessary.
+   # Unlike libtool, we use -rpath here, not --rpath, since the documented
+   # option of GNU ld is called -rpath, not --rpath.
+-  hardcode_libdir_flag_spec='${wl}-rpath ${wl}$libdir'
++  hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
+   case "$host_os" in
+     aix[3-9]*)
+       # On AIX/PPC, the GNU linker is very broken
