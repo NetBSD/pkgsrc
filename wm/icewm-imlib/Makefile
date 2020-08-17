@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/06/05 12:49:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2020/08/17 20:20:16 leot Exp $
 
 PKGNAME=		${DISTNAME:S/-/-imlib-/}
-PKGREVISION=		4
+PKGREVISION=		5
 COMMENT=		Small, fast and light-weight window manager (imlib version)
 
 CONFLICTS+=		icewm-[0-9]* icewm-gnome-[0-9]*

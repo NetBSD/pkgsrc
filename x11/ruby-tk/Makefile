@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2020/03/15 16:54:31 taca Exp $
+# $NetBSD: Makefile,v 1.63 2020/08/17 20:20:35 leot Exp $
 
 DISTNAME=		tk-0.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 
 MAINTAINER=		taca@NetBSD.org

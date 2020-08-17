@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2020/05/17 19:40:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.35 2020/08/17 20:20:30 leot Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		x11
 MASTER_SITES=		http://matchbox-project.org/sources/matchbox-panel/0.9/
 EXTRACT_SUFX=		.tar.bz2

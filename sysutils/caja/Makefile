@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2020/06/02 08:24:44 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/08/17 20:20:03 leot Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	caja-${VERSION}

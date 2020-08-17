@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2020/03/31 22:47:21 gutteridge Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/17 20:20:06 leot Exp $
 #
 
 DISTNAME=	libfm-1.3.0.2
 PKGNAME=	libfm-extra-1.3.0.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 EXTRACT_SUFX=	.tar.xz

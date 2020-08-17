@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2020/08/17 06:58:02 riastradh Exp $
+# $NetBSD: Makefile,v 1.72 2020/08/17 20:20:01 leot Exp $
 
 DISTNAME=	src-firefox-tor-browser-68.11.0esr-9.5-1-build1
 PKGNAME=	tor-browser-9.5.3
+PKGREVISION=	1
 CATEGORIES=	security www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

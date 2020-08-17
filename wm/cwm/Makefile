@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/03/13 08:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/17 20:20:15 leot Exp $
 
 DISTNAME=	cwm-6.6
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
