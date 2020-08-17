@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.99 2020/06/05 12:49:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.100 2020/08/17 20:18:32 leot Exp $
 
 DISTNAME=	emacs-28.0.50_2020-02-10
 PKGVERSION=	28.0.50
 PKGNAME=	emacs28-${PKGVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-28/
 CATEGORIES=	editors
 

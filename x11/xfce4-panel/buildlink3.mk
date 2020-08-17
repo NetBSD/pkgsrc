@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.61 2020/03/10 22:09:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.62 2020/08/17 20:18:02 leot Exp $
 
 BUILDLINK_TREE+=	xfce4-panel
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-panel
 XFCE4_PANEL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-panel+=	xfce4-panel>=4.13.3
-BUILDLINK_ABI_DEPENDS.xfce4-panel+=	xfce4-panel>=4.14.3nb2
+BUILDLINK_ABI_DEPENDS.xfce4-panel+=	xfce4-panel>=4.14.4nb1
 BUILDLINK_PKGSRCDIR.xfce4-panel?=	../../x11/xfce4-panel
 
 .include "../../x11/gtk3/buildlink3.mk"

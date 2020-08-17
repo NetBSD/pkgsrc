@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2020/03/14 00:16:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2020/08/17 20:17:17 leot Exp $
 
 BUILDLINK_TREE+=	oce
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	oce
 OCE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.oce+=	oce>=0.18
-BUILDLINK_ABI_DEPENDS.oce?=	oce>=0.18.3nb1
+BUILDLINK_ABI_DEPENDS.oce?=	oce>=0.18.3nb2
 BUILDLINK_PKGSRCDIR.oce?=	../../cad/oce
 
 BUILDLINK_INCDIRS.oce+=	include/oce

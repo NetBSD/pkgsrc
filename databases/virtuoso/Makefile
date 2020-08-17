@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/06/02 08:23:32 adam Exp $
+# $NetBSD: Makefile,v 1.31 2020/08/17 20:18:22 leot Exp $
 #
 
 DISTNAME=	virtuoso-opensource-6.1.6
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	databases
 MASTER_SITES=	http://sourceforge.net/projects/virtuoso/files/virtuoso/6.1.6/
 

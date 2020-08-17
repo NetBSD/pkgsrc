@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2020/03/10 22:09:59 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2020/08/17 20:18:50 leot Exp $
 
 DISTNAME=	puzzles-20181212
 GIT_COMMIT=	ced51ada363d895eee796dd03923042f97f95321
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	-https://git.tartarus.org/?p=simon/puzzles.git;a=snapshot;h=${GIT_COMMIT};sf=tgz
 
