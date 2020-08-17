@@ -66,5 +66,5 @@ SEE ALSO
 
 BUGS
      st-icu should also use the combined dictionary words.
-     st-emacs and st-icu don't always split thai numbers well.
+     thai text mixed with other languages may not be handled well.
      this file should be converted to a proper manpage.
