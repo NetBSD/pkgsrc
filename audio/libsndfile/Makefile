@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2020/08/15 23:36:38 nia Exp $
+# $NetBSD: Makefile,v 1.78 2020/08/17 05:26:16 tnn Exp $
 
 DISTNAME=	libsndfile-1.0.29
 CATEGORIES=	audio
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autogen autoconf autoreconf automake pkg-config
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 GNU_CONFIGURE=		yes
+PYTHON_FOR_BUILD_ONLY=	tool
 
 TEST_TARGET=		check
 
@@ -35,6 +36,7 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../audio/flac/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libogg+=	libogg>=1.1.3
