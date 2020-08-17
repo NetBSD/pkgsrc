@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2020/08/17 20:17:44 leot Exp $
+# $NetBSD: Makefile,v 1.76 2020/08/17 20:19:00 wiz Exp $
 
 DISTNAME=		libvirt-1.2.9
 PKGREVISION=		37
@@ -20,6 +20,8 @@ USE_LIBTOOL=		yes
 BUILD_DEFS+=		VARBASE
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-xml
+
+CHECK_PORTABILITY_SKIP+=	docs/news.html.in
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	docs/apibuild.py
