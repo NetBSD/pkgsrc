@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/02/23 20:55:45 leot Exp $
+$NetBSD: distinfo,v 1.3 2020/08/17 21:21:48 leot Exp $
 
-SHA1 (stagit-gopher-0.9.3.tar.gz) = fbaf33dc35658d84c6c7f9c672c0b21b2f83c749
-RMD160 (stagit-gopher-0.9.3.tar.gz) = 78e988ef84c92a045503fdba03dc51038d47f7dc
-SHA512 (stagit-gopher-0.9.3.tar.gz) = 608a230b9ec56b3673a796ab2e5217fe08b19332e82c57c99860175e04d2c412427defac900b5ac39126d9aac8b103f98ddf19bfb4e09751c961859ca48cd99b
-Size (stagit-gopher-0.9.3.tar.gz) = 16808 bytes
+SHA1 (stagit-gopher-0.9.4.tar.gz) = fe6bbcb058556bb9afd02ad0968b61557f70980a
+RMD160 (stagit-gopher-0.9.4.tar.gz) = 5e945e477e3683cb604254b71ad10a8efce7f747
+SHA512 (stagit-gopher-0.9.4.tar.gz) = 160d23c880ca59570db016c1fe7bfade129ae4bbd34e7e5112b246dba43ee43df739b63786b6cde6faa8da8ea717bef08d15de8421e854c3e3dd4ea6e9ec5ab4
+Size (stagit-gopher-0.9.4.tar.gz) = 17316 bytes
