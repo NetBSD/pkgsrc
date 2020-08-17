@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.16 2020/07/16 10:11:39 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.17 2020/08/17 02:38:54 tnn Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1648,9 +1648,17 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
                 next;
             }
 
-            open( DIGEST, "digest $sum @{$sumfiles{$sum}}|" )
-              || fail("Run digest: $!");
-            while (<DIGEST>) {
+            my $pid = open3(my $in, my $out, undef, "xargs", "digest", $sum);
+            defined($pid) || fail "fork";
+            my $pid2 = fork();
+            defined($pid2) || fail "fork";
+            if ($pid2) {
+                close($in);
+            } else {
+                print $in "@{$sumfiles{$sum}}";
+                exit 0;
+            }
+            while (<$out>) {
                 if (m/^$sum ?\(([^\)]+)\) = (\S+)/) {
                     if ( $distfiles{$1}{sum} ne $2 ) {
                         print $1, " ($sum)\n";
@@ -1658,7 +1666,9 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
                     }
                 }
             }
-            close(DIGEST);
+            close($out);
+            waitpid( $pid, 0 ) || fail "xargs digest $sum";
+            waitpid( $pid2, 0 ) || fail "pipe write to xargs";
         }
         safe_chdir('/');    # Do not want to stay in $pkgdistdir
     }
