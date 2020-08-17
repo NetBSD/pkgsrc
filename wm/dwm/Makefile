@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/02/03 22:03:41 leot Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/17 20:20:15 leot Exp $
 
 DISTNAME=	dwm-6.2
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://dl.suckless.org/dwm/
 

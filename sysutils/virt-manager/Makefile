@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2020/06/02 08:24:48 adam Exp $
+# $NetBSD: Makefile,v 1.46 2020/08/17 20:20:09 leot Exp $
 
 DISTNAME=	virt-manager-0.9.4
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	sysutils
 MASTER_SITES=	http://virt-manager.org/download/sources/virt-manager/
 

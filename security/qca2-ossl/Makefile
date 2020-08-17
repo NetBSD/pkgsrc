@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2020/03/08 16:51:12 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2020/08/17 20:20:00 leot Exp $
 
 PKGNAME=	qca2-ossl-${DISTNAME:C/.*-//}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Cross-platform crypto API for QT - OpenSSL plugin
 

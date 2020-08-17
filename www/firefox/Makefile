@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.441 2020/07/31 01:26:43 maya Exp $
+# $NetBSD: Makefile,v 1.442 2020/08/17 20:20:21 leot Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		79.0
@@ -6,6 +6,7 @@ MOZ_BRANCH=		79.0
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
