@@ -1,0 +1,16 @@
+$NetBSD: patch-config.rpath,v 1.1 2020/08/17 07:59:55 tnn Exp $
+
+This leaks into the pkgconfig file and the space separator
+confuses pkgsrc wrappers when building dependent packages.
+
+--- config.rpath.orig	2011-11-22 10:54:38.000000000 +0000
++++ config.rpath
+@@ -156,7 +156,7 @@ if test "$with_gnu_ld" = yes; then
+   # here allows them to be overridden if necessary.
+   # Unlike libtool, we use -rpath here, not --rpath, since the documented
+   # option of GNU ld is called -rpath, not --rpath.
+-  hardcode_libdir_flag_spec='${wl}-rpath ${wl}$libdir'
++  hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
+   case "$host_os" in
+     aix[3-9]*)
+       # On AIX/PPC, the GNU linker is very broken
