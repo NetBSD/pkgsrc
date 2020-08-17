@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2020/07/29 07:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2020/08/17 06:58:02 riastradh Exp $
 
 DISTNAME=	src-firefox-tor-browser-68.11.0esr-9.5-1-build1
 PKGNAME=	tor-browser-9.5.3
@@ -128,5 +128,4 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/tor-browser/browser/fonts
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
