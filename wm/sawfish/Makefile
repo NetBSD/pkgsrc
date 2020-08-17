@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2020/05/12 19:32:14 nikita Exp $
+# $NetBSD: Makefile,v 1.98 2020/08/17 20:20:18 leot Exp $
 
 DISTNAME=		sawfish_1.12.0
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		wm x11
 MASTER_SITES=		http://download.tuxfamily.org/sawfish/
 EXTRACT_SUFX=		.tar.xz
