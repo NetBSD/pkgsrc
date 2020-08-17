@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/06/07 12:55:07 markd Exp $
+# $NetBSD: Makefile,v 1.18 2020/08/17 20:20:33 leot Exp $
 
 DISTNAME=	qqc2-desktop-style-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

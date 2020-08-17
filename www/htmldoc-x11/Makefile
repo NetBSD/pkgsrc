@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2019/10/18 11:07:37 micha Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/17 20:20:21 leot Exp $
 
 PKGNAME=	htmldoc-x11-${VERSION}
+PKGREVISION=	1
 
 CONFIGURE_ARGS+=	--with-gui
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2020/06/05 12:49:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.73 2020/08/17 20:19:31 leot Exp $
 
 DISTNAME=	kdeartwork-15.08.3
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	misc
 COMMENT=	Artwork for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}

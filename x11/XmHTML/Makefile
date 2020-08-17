@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2019/09/06 08:46:26 nros Exp $
+# $NetBSD: Makefile,v 1.58 2020/08/17 20:20:23 leot Exp $
 #
 
 DISTNAME=	XmHTML-1.1.10
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmhtml/}
 EXTRACT_SUFX=	.tgz
