@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4483 2020/08/17 21:00:14 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4484 2020/08/17 21:21:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7004,3 +7004,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/hwdecode-demos to 0.9.6p1 [tnn 2020-08-17]
 	Updated textproc/split-thai to 0.4 [scole 2020-08-17]
 	Updated www/stagit to 0.9.4 [fcambus 2020-08-17]
+	Updated net/stagit-gopher to 0.9.4 [leot 2020-08-17]
