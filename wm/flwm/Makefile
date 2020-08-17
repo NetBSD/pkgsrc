@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2019/10/18 10:40:40 micha Exp $
+# $NetBSD: Makefile,v 1.31 2020/08/17 20:20:16 leot Exp $
 
 DISTNAME=	flwm-1.16
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bbidulock/}
 GITHUB_PROJECT=	flwm

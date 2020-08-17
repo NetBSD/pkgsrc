@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/04/20 00:38:59 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2020/08/17 20:19:11 leot Exp $
 
 DISTNAME=		tuxpaint-config-0.0.14
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
 
