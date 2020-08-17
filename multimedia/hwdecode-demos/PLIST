@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2014/09/22 11:55:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/08/17 12:22:50 tnn Exp $
 ${PLIST.vaapi}bin/vaapi_h264
+${PLIST.vaapi}bin/vaapi_jpeg
 ${PLIST.vaapi}bin/vaapi_mpeg2
 ${PLIST.vaapi}bin/vaapi_mpeg4
 ${PLIST.vaapi}bin/vaapi_vc1
@@ -8,6 +9,7 @@ ${PLIST.vdpau}bin/vdpau_mpeg2
 ${PLIST.vdpau}bin/vdpau_mpeg4
 ${PLIST.vdpau}bin/vdpau_vc1
 share/hwdecode-demos/h264.mp4
+share/hwdecode-demos/jpeg.jpg
 share/hwdecode-demos/mpeg2.m2v
 share/hwdecode-demos/mpeg4.mp4
 share/hwdecode-demos/vc1.raw
