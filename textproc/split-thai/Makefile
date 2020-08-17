@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/08/15 16:52:28 scole Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/17 17:43:15 scole Exp $
 
-PKGNAME=	split-thai-0.3
+PKGNAME=	split-thai-0.4
 CATEGORIES=	textproc
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utilities to split UTF-8 Thai text into words
@@ -24,7 +24,8 @@ REPLACE_SH=	st-swath
 UTF8_ENV=	env LC_ALL=C.UTF-8
 
 ST_SHARE_DIR=		share/split-thai
-INSTALLATION_DIRS=	bin ${ST_SHARE_DIR}
+ST_SHARE_BIN=		bin
+INSTALLATION_DIRS=	${ST_SHARE_BIN} ${ST_SHARE_DIR}
 
 ST_SHARE_FILES=		README.txt thaidict thai-dict.el thai-dict.elc
 ST_SHARE_FILES+=	thai-utility.el thai-utility.elc thaidict.tri
@@ -41,6 +42,7 @@ SUBST_STAGE.dictionary-app=	pre-configure
 SUBST_MESSAGE.dictionary-app=	Fixing dictionary paths.
 SUBST_FILES.dictionary-app=	st-emacs st-swath
 SUBST_SED.dictionary-app=	-e 's,ST_SHARE_DIR,${PREFIX}/${ST_SHARE_DIR},g'
+SUBST_SED.dictionary-app+=	-e 's,ST_SHARE_BIN,${PREFIX}/${ST_SHARE_BIN},g'
 
 pre-extract:
 	mkdir -p ${WRKSRC}

@@ -6,6 +6,7 @@
 # swath settings are split with ' ', longest match, unicode input, and
 # unicode output.  see swath(1)
 #
+swath_cmd=ST_SHARE_BIN/swath
 
 # use merged dictionary unless specified otherwise
 if [ -z "$SWATHDICT" ]; then
@@ -16,12 +17,12 @@ if [ "$#" -eq 0 ]; then
     # no args, read from stdin
     while read line
     do
-	echo "$line" | swath -b ' ' -m long -u 'u,u' $dictarg
+	echo "$line" | $swath_cmd -b ' ' -m long -u 'u,u' $dictarg
     done < /dev/stdin
     exit 0 
 elif [ "$#" -eq 1 -a -e "$1" ]; then
     # one arg and arg is an existing file
-    swath -b ' ' -m long -u 'u,u' $dictarg < "$1"
+    $swath_cmd -b ' ' -m long -u 'u,u' $dictarg < "$1"
     exit $?
 elif [ "$#" -ge 1 ]; then
     # one or more args, assume it is all text
@@ -34,7 +35,7 @@ elif [ "$#" -ge 1 ]; then
 
 	shift
     done
-    echo "$txt" | swath -b ' ' -m long -u 'u,u' $dictarg
+    echo "$txt" | $swath_cmd -b ' ' -m long -u 'u,u' $dictarg
     exit $?
 else
     echo "$0: error parsing args"
