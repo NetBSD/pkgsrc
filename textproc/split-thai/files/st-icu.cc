@@ -13,6 +13,13 @@
 using namespace std;
 using namespace icu;
 
+// utf-8 unicode thai values
+// 0x0e1 - 0x0e5b should work for thai_rexp as well...
+const UnicodeString thai_rexp = "[\\u0e00-\\u0e7f]+";
+const UnicodeString thai_consonant = "[\\u0e01-\\u0e2e]+";
+const UnicodeString thai_num_rexp = "[\\u0e50-\\u0e59]+";
+const UnicodeString thai_nonnum_rexp = "[\\u0e01-\\u0e4f\\u0e5a-\\u0e7f]+";
+
 void usage() {
  const char *progname = "st-icu";
 	
@@ -27,11 +34,11 @@ void usage() {
      "returns 0 on succes, or non-zero otherwise" << endl << endl;
 }
 
-// return true if string contains any thai unicode
-bool contains_thai(const UnicodeString &s) {
+// return true if string contains some regexp
+bool matches_regexp(const UnicodeString &s, const UnicodeString &regexp) {
 	UErrorCode status = U_ZERO_ERROR;
-	// matches one or more thai chars, \u0e01-\u0e5b should work too
-	RegexMatcher *matcher = new RegexMatcher("[\u0e00-\u0e7f]+", 0, status);
+
+	RegexMatcher *matcher = new RegexMatcher(regexp, 0, status);
 
 	if (U_FAILURE(status)) {
 		// syntax errors in the regular expression
@@ -46,11 +53,36 @@ bool contains_thai(const UnicodeString &s) {
 		return false;
 }
 
+// add spaces to string with thai numbers
+UnicodeString space_thai_numbers(const UnicodeString &s) {
+	// return string unmodified if no numbers
+	if ( ! matches_regexp(s, thai_num_rexp) ) {
+		return s;
+	}
+
+	UnicodeString rs;
+	UChar32 pch;
+	// add spaces between number and non-number
+	for (int i = 0 ; i < s.length(); i++) {
+		if ( u_isWhitespace(s[i]) ) {
+			rs += s[i];
+		} else if ((u_isdigit(s[i]) && !u_isdigit(pch) && matches_regexp(pch, thai_rexp)) ||
+		 	   (u_isdigit(pch) && !u_isdigit(s[i]) && matches_regexp(s[i], thai_rexp))) {
+		 	rs += " ";
+		 	rs += s[i];
+		} else {
+			rs += s[i];
+		}
+		pch = s[i];
+	}
+	return rs;
+}
+
 // split a unicode string by word boundaries.  if arg contains
 // whitespaces, it will get consolidated to single spaces.
 // if string has no thai characters, return it unmodified
 UnicodeString split_words_consolidated(const UnicodeString &s) {
-	if ( ! contains_thai(s) ) {
+	if ( ! matches_regexp(s, thai_rexp) ) {
 		return s;
 	}
 	
@@ -108,6 +140,8 @@ UnicodeString split_words(const UnicodeString &s) {
 	}
 	if ( tempStr.length() > 0 )
 		rs += split_words_consolidated(tempStr);
+
+	rs = space_thai_numbers(rs);
 	return rs;
 }
 

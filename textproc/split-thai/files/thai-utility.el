@@ -168,15 +168,38 @@ dictionary words."
       (write-region nil nil lispfile))
     line_count))
 
-(defun split-thai-line(&optional separator)
+(defun split-thai-line()
   "Break Thai words from point to end of line by inserting a
 separator string at word boundaries. (wrapper for 'thai-break-words)"
   (interactive)
-    (thai-break-words (or separator " ") (line-end-position)))
+  (thai-break-words " " (line-end-position))
+  (split-thai-numbers (point) (line-end-position)))
 
-(defun split-thai(&optional separator)
+(defun split-thai()
   "Break Thai words from point to end of buffer by inserting a
 separator string at word boundaries. (wrapper for
 'thai-break-words)"
   (interactive)
-    (thai-break-words (or separator " ") (point-max)))
+  (thai-break-words " " (point-max))
+  (split-thai-numbers (point) (point-max)))
+
+(defun split-thai-numbers(start_point end_point)
+  "helper function to separate numbers in a buffer.
+'thai-break-words doesn't always split numbers properly. this may
+improve tokenization somewhat."
+  ;; xxx this really should be fixed in 'thai-word lib
+  (let* (
+	 ;; "\\([๐๑๒๓๔๕๖๗๘๙0123456789]+\\)"
+	 (num_rexp "\\([\u0e50-\u0e59]+\\)") ;; thai numbers
+	 (nonnum_rexp "\\([\u0e00-\u0e4f\u0e5a-\u0e7f]\\)") ;; "non-numbers"
+	 (trailing_rexp (concat num_rexp nonnum_rexp))
+	 (leading_rexp (concat nonnum_rexp num_rexp)))
+    (save-restriction
+      (narrow-to-region start_point end_point)
+      (goto-char (point-min))
+      (while (search-forward-regexp trailing_rexp nil t)
+	(replace-match (concat (match-string 1) " " (match-string 2))))
+      (goto-char (point-min))
+      (while (search-forward-regexp leading_rexp nil t)
+	(replace-match (concat (match-string 1) " " (match-string 2))))
+      (goto-char start_point))))
