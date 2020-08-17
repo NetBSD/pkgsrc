@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/04/27 18:19:15 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/08/17 10:51:44 jperkin Exp $
 #
 
 DISTNAME=		xwave2
@@ -18,7 +18,7 @@ MAKE_JOBS_SAFE=		no
 
 .include "../../mk/oss.buildlink3.mk"
 
-.if ${DEVOSSAUDIO} != /dev/audio
+.if ${OSS_TYPE} != "none" && ${DEVOSSAUDIO} != /dev/audio
 SUBST_CLASSES+=		devaudio
 SUBST_STAGE.devaudio=	pre-configure
 SUBST_FILES.devaudio=	src/XWave
