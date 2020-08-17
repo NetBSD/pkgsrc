@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/06/02 08:22:47 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/08/17 20:17:35 leot Exp $
 
 BUILDLINK_TREE+=	ksmtp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ksmtp
 KSMTP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ksmtp+=	ksmtp>=17.12.1
-BUILDLINK_ABI_DEPENDS.ksmtp?=	ksmtp>=19.12.1nb4
+BUILDLINK_ABI_DEPENDS.ksmtp?=	ksmtp>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.ksmtp?=	../../mail/ksmtp
 
 .include "../../devel/kio/buildlink3.mk"

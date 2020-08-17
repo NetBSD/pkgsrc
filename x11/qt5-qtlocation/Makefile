@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2020/06/02 06:41:01 adam Exp $
+# $NetBSD: Makefile,v 1.46 2020/08/17 20:17:58 leot Exp $
 
 DISTNAME=	qtlocation-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtlocation-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for qtlocation
 
 BUILD_TARGET=		sub-src

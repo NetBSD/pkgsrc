@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2020/06/02 08:22:40 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2020/08/17 20:17:24 leot Exp $
 
 BUILDLINK_TREE+=	m17n-lib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	m17n-lib
 M17N_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.m17n-lib+=	m17n-lib>=1.5.1
-BUILDLINK_ABI_DEPENDS.m17n-lib+=	m17n-lib>=1.8.0nb2
+BUILDLINK_ABI_DEPENDS.m17n-lib+=	m17n-lib>=1.8.0nb3
 BUILDLINK_PKGSRCDIR.m17n-lib?=		../../devel/m17n-lib
 
 pkgbase := m17n-lib

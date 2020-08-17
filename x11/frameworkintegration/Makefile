@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2020/06/07 12:26:56 markd Exp $
+# $NetBSD: Makefile,v 1.37 2020/08/17 20:17:49 leot Exp $
 
 DISTNAME=	frameworkintegration-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
