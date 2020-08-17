@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2020/08/16 23:21:29 tnn Exp $
+# $NetBSD: Makefile,v 1.87 2020/08/17 20:18:54 leot Exp $
 #
 
 DISTNAME=		aqsis-1.8.1
-PKGREVISION=		42
+PKGREVISION=		43
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aqsis/}
 

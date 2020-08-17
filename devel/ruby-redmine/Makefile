@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2020/06/24 03:04:23 taca Exp $
+# $NetBSD: Makefile,v 1.55 2020/08/17 20:18:30 leot Exp $
 
 DISTNAME=	redmine-4.0.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 PREV_PKGPATH=	devel/redmine
 CATEGORIES=	devel
 MASTER_SITES=	http://www.redmine.org/releases/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2020/03/08 16:42:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45 2020/08/17 20:18:29 leot Exp $
 
 PKGNAME=	py-${DISTNAME:S/^py//:S/-/-shared-/1}
-PKGREVISION=	4
+PKGREVISION=	5
 
 .include "../../devel/py-gobject/Makefile.common"
 

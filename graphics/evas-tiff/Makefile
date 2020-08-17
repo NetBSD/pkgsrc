@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2020/05/01 00:08:23 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/17 20:17:28 leot Exp $
 
 PKGNAME=	evas-tiff-${EVAS_VERSION}
+PKGREVISION=	1
 
 COMMENT=	Evas TIFF image loader
 

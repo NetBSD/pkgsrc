@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/07/26 00:51:00 scole Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/17 20:18:31 leot Exp $
 
 DISTNAME=	zeal-0.6.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zealdocs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

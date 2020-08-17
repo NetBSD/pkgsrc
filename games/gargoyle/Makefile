@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/03/10 22:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/17 20:18:44 leot Exp $
 
 DISTNAME=	gargoyle-2019.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garglk/}
 GITHUB_PROJECT=	garglk

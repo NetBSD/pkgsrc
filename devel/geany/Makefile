@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2020/03/10 22:09:35 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2020/08/17 20:18:24 leot Exp $
 
 DISTNAME=	geany-1.36
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://download.geany.org/
 EXTRACT_SUFX=	.tar.bz2

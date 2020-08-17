@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2020/06/05 12:49:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2020/08/17 20:18:27 leot Exp $
 
 DISTNAME=	libkgapi-2.2.0
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=libkgapi/2.2.0/src/}
 EXTRACT_SUFX=	.tar.bz2

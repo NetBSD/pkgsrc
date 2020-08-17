@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/04/14 20:28:38 prlw1 Exp $
+# $NetBSD: Makefile,v 1.7 2020/08/17 20:17:23 leot Exp $
 
 DISTNAME=	libhandy-v0.0.13
 PKGNAME=	${DISTNAME:S/-v/-/1}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	https://source.puri.sm/Librem5/libhandy/-/archive/v${PKGVERSION_NOREV}/
 
