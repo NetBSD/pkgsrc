@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/12/07 19:17:59 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/17 20:17:37 leot Exp $
 
 DISTNAME=	frei0r-plugins-1.7.0
 PKGNAME=	${DISTNAME:S/-plugins//}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://files.dyne.org/frei0r/
 
