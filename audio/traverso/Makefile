@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/06/02 08:23:15 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/17 20:18:12 leot Exp $
 
 DISTNAME=	traverso-0.49.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	https://traverso-daw.org/
 

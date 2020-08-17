@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:42 brook Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/17 20:18:54 leot Exp $
 
 R_PKGNAME=	Cairo
 R_PKGVER=	1.5-10
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

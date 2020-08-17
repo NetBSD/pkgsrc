@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2020/07/20 14:40:36 maya Exp $
+# $NetBSD: Makefile,v 1.99 2020/08/17 20:17:18 leot Exp $
 
 DISTNAME=		glade-3.36.0
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glade/3.36/}
 EXTRACT_SUFX=		.tar.xz

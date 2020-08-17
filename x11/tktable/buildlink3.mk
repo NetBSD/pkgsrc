@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/03/12 11:15:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/08/17 20:18:01 leot Exp $
 
 BUILDLINK_TREE+=	tktable
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tktable
 TKTABLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tktable+=	tktable>=2.10
-BUILDLINK_ABI_DEPENDS.tktable?=	tktable>=2.10nb7
+BUILDLINK_ABI_DEPENDS.tktable?=	tktable>=2.10nb8
 BUILDLINK_PKGSRCDIR.tktable?=	../../x11/tktable
 
 pkgbase := tktable
