@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2020/01/18 21:50:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2020/08/17 20:20:01 leot Exp $
 #
 
 DISTNAME=	TkPasMan-2.2a
 PKGNAME=	${DISTNAME:S/TkPasMan/tkpasman/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	security
 MASTER_SITES=	http://www.xs4all.nl/~wbsoft/linux/projects/
 

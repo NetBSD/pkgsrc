@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/03/08 16:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/17 20:20:23 leot Exp $
 
 DISTNAME=	appmenu-qt-0.2.6
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/appmenu-qt/trunk/0.2.6/+download/
 EXTRACT_SUFX=	.tar.bz2

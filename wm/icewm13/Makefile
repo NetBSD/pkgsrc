@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/03/08 16:51:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/17 20:20:16 leot Exp $
 
 DISTNAME=	icewm-1.3.8
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icewm/}
 

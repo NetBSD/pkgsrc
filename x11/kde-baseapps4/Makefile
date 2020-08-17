@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2020/06/05 12:49:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.57 2020/08/17 20:20:27 leot Exp $
 
 DISTNAME=	kde-baseapps-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 4 integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}

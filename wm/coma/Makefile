@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/10/31 10:30:22 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/17 20:20:15 leot Exp $
 
 DISTNAME=	coma-1.1
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	https://coma.one/releases/
 

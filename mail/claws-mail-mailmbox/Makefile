@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2020/06/01 20:01:17 rillig Exp $
+# $NetBSD: Makefile,v 1.77 2020/08/17 20:19:22 leot Exp $
 #
 
 PLUGIN_NAME=    mailmbox
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

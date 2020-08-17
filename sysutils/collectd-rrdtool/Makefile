@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2020/06/02 08:24:44 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/08/17 20:20:03 leot Exp $
 
 COLLECTD_PACKAGE=	rrdtool
 COLLECTD_PLUGINS=	rrdtool rrdcached
 
 COMMENT=		Statistics collection daemon - rrdtool plugins
-PKGREVISION=		9
+PKGREVISION=		10
 
 .include "../../sysutils/collectd/Makefile.common"
 

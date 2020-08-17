@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/04/05 16:05:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/17 20:19:05 leot Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/mate/Makefile.common"
 
 VERSION=	3.22.21

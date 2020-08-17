@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2020/05/16 17:58:28 nia Exp $
+# $NetBSD: Makefile,v 1.65 2020/08/17 20:19:08 leot Exp $
 
 DISTNAME=	qiv-2.3.2
+PKGREVISION=	1
 CATEGORIES=	graphics x11
 MASTER_SITES=	https://spiegl.de/qiv/download/
 EXTRACT_SUFX=	.tgz

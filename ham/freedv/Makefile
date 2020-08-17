@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/03/10 22:10:16 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/17 20:19:12 leot Exp $
 
 DISTNAME=	freedv-1.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	ham
 MASTER_SITES=	http://files.freedv.org/freedv/
 EXTRACT_SUFX=	.tar.xz

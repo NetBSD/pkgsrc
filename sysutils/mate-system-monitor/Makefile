@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/06/02 08:24:47 adam Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/17 20:20:07 leot Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-system-monitor-1.22.2
