@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/03/10 22:08:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/08/17 20:17:16 leot Exp $
 
 BUILDLINK_TREE+=	lilv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lilv
 LILV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lilv+=	lilv>=0.20.0
-BUILDLINK_ABI_DEPENDS.lilv+=	lilv>=0.24.6nb2
+BUILDLINK_ABI_DEPENDS.lilv+=	lilv>=0.24.8nb1
 BUILDLINK_PKGSRCDIR.lilv?=	../../audio/lilv
 
 .include "../../audio/lv2/buildlink3.mk"

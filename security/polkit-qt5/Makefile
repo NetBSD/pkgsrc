@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2020/06/02 08:22:55 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/08/17 20:17:42 leot Exp $
 
 DISTNAME=	polkit-qt-1-0.112.0
 PKGNAME=	${DISTNAME:S/-qt-1-/-qt5-/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_KDE:=apps/KDE4.x/admin/}
 EXTRACT_SUFX=	.tar.bz2

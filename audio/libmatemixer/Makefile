@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/04/18 12:22:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/17 20:18:08 leot Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	libmatemixer-${VERSION:R}.0
 CATEGORIES=	audio
 

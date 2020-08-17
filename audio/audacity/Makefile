@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.134 2020/05/23 15:52:24 nia Exp $
+# $NetBSD: Makefile,v 1.135 2020/08/17 20:18:03 leot Exp $
 
 DISTNAME=	audacity-2.4.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
 GITHUB_PROJECT=	Audacity
