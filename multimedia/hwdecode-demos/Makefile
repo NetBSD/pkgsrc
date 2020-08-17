@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.17 2018/11/23 08:06:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2020/08/17 12:22:50 tnn Exp $
 #
 
-DISTNAME=	hwdecode-demos-0.9.4
-PKGREVISION=	12
+DISTNAME=	hwdecode-demos-0.9.6p1
 CATEGORIES=	multimedia
-#MASTER_SITES=	http://www.splitted-desktop.com/~gbeauchesne/hwdecode-demos/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gbeauchesne/}
+GITHUB_TAG=	6b4c053b70b612f7375a3ccf6f27e62cd2bc5fea
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.splitted-desktop.com/~gbeauchesne/
+HOMEPAGE=	https://github.com/gbeauchesne/hwdecode-demos/
 COMMENT=	Standalone programs showing off various HW acceleration APIs
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake autoconf automake aclocal
 USE_LIBTOOL=	yes
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoreconf -vif
 
 PLIST_VARS+=	vdpau vaapi
 
