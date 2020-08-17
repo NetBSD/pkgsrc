@@ -1,0 +1,16 @@
+$NetBSD: patch-agen5_Makefile.in,v 1.1 2020/08/17 08:43:07 tnn Exp $
+
+This is completely bogus. These binaries do get installed in ${PREFIX}/bin.
+Building them with -no-install leaks WRKDIR rpath references.
+
+--- agen5/Makefile.in.orig	2018-08-26 17:45:20.000000000 +0000
++++ agen5/Makefile.in
+@@ -482,7 +482,7 @@ SNV_LIB = $(top_builddir)/snprintfv/libs
+ nodist_autogen_SOURCES = ag.c
+ autogen_SOURCES = $(gen_csrc)
+ autogen_LDADD = $(LO_LIB) $(SNV_LIB) $(GUILE_LIBS)
+-autogen_LDFLAGS = $(DYNAMIC_AG) $(AG_STATIC_AUTOGEN) -no-install
++autogen_LDFLAGS = $(DYNAMIC_AG) $(AG_STATIC_AUTOGEN)
+ autogen_CFLAGS = $(GUILE_CFLAGS)
+ stamp_script = $(srcdir)/mk-stamps.sh
+ AM_YFLAGS = -d

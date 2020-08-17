@@ -1,0 +1,16 @@
+$NetBSD: patch-columns_Makefile.in,v 1.1 2020/08/17 08:43:07 tnn Exp $
+
+This is completely bogus. These binaries do get installed in ${PREFIX}/bin.
+Building them with -no-install leaks WRKDIR rpath references.
+
+--- columns/Makefile.in.orig	2018-08-26 17:44:45.000000000 +0000
++++ columns/Makefile.in
+@@ -389,7 +389,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-columns_LDFLAGS = -no-install
++columns_LDFLAGS =
+ csrc = opts.h columns.c opts.c
+ nodist_columns_SOURCES = cols.c
+ LO_LIB = $(top_builddir)/autoopts/libopts.la

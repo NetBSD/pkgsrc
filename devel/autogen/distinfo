@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.15 2016/07/16 20:00:14 wiz Exp $
+$NetBSD: distinfo,v 1.16 2020/08/17 08:43:07 tnn Exp $
 
-SHA1 (autogen-5.18.10.tar.xz) = ca867cd8a065f40cc390230db463a62bd0e2da4b
-RMD160 (autogen-5.18.10.tar.xz) = ffd55c154b1cb88e7b29d1a65976dfc1032efed2
-SHA512 (autogen-5.18.10.tar.xz) = cfb06566aebe2aa833f2a032c513aa1d57a803eee82f03d6f6fe3806a0f570d5dbf8331015d2afde89a3d4e4c967b6a367d3e2820addb3ff6a5ac6d481a058be
-Size (autogen-5.18.10.tar.xz) = 1017960 bytes
-SHA1 (patch-ad) = 37ed9a3fc8c450f9a556258988c5642836a0c936
+SHA1 (autogen-5.18.16.tar.xz) = f854764cb34f6f0b9f620c2d149d09b845c2d1e2
+RMD160 (autogen-5.18.16.tar.xz) = 789d4932f1704508cedf3bee6718778cfb587175
+SHA512 (autogen-5.18.16.tar.xz) = 5f12c982dbe27873f5649a96049bf019ff183c90cc0c8a9196556b0ca02e72940cd422f6d6601f68cc7d8763b1124f2765c3b1a6335fc92ba07f84b03d2a53a1
+Size (autogen-5.18.16.tar.xz) = 1046276 bytes
 SHA1 (patch-ae) = 7249600bfc3cdcafdf55a100db775e9d1a9403f0
+SHA1 (patch-agen5_Makefile.in) = 154fe94b21d5189fa94cffbf5e2543cf90a97cc2
 SHA1 (patch-agen5_fmemopen.c) = 1cc126824f6a07fb9be080f8d143a6f2353bea78
 SHA1 (patch-autoopts_mk-tpl-config.sh) = 9c5b1012efeed5db73a4cade08d6a53f410adae2
+SHA1 (patch-columns_Makefile.in) = a1da38b3a0a24ac300a4a7baea968642e449efd2
+SHA1 (patch-config_config.rpath) = 791aa6bbe52c681b5461205c2341ce015d638ecf
+SHA1 (patch-getdefs_Makefile.in) = c16060d8d69d7c04c9a35ed94af705a39060f8ba

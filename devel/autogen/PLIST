@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/07/16 20:00:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/08/17 08:43:07 tnn Exp $
 bin/autogen
 bin/autoopts-config
 bin/columns
@@ -56,8 +56,6 @@ share/autogen/agtexi-file.tpl
 share/autogen/autoopts.m4
 share/autogen/bits.tpl
 share/autogen/cmd-doc.tlib
-share/autogen/confmacs.tlib
-share/autogen/conftest.tpl
 share/autogen/def2pot.tpl
 share/autogen/fsm-macro.tlib
 share/autogen/fsm-trans.tlib
@@ -67,7 +65,7 @@ share/autogen/gpl.lic
 share/autogen/gplv2.lic
 share/autogen/lgpl.lic
 share/autogen/lgplv2.lic
-share/autogen/libopts-41.1.16.tar.gz
+share/autogen/libopts-42.1.17.tar.gz
 share/autogen/liboptschk.m4
 share/autogen/man2mdoc
 share/autogen/man2texi
