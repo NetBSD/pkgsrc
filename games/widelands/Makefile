@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/07/27 15:21:42 nia Exp $
+# $NetBSD: Makefile,v 1.13 2020/08/18 17:57:59 leot Exp $
 
 DISTNAME=	widelands-build21-source
 PKGNAME=	widelands-21
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://launchpad.net/widelands/build${PKGVERSION_NOREV}/build${PKGVERSION_NOREV}/+download/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/03/08 16:50:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/18 17:58:10 leot Exp $
 
 DISTNAME=	movit-1.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	https://movit.sesse.net/
 
