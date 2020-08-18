@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/01/17 17:08:01 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/08/18 17:37:48 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
@@ -20,8 +20,11 @@ bin/zerk
 include/gps.h
 include/libgpsmm.h
 lib/libgps.so
-lib/libgps.so.25
-lib/libgps.so.25.0.0
+lib/libgps.so.27
+lib/libgps.so.27.0.0
+lib/libgpsdpacket.so
+lib/libgpsdpacket.so.27
+lib/libgpsdpacket.so.27.0.0
 lib/pkgconfig/libgps.pc
 ${PYSITELIB}/gps-${PKGVERSION}.egg-info
 ${PYSITELIB}/gps/__init__.py
@@ -31,7 +34,7 @@ ${PYSITELIB}/gps/clienthelpers.py
 ${PYSITELIB}/gps/fake.py
 ${PYSITELIB}/gps/gps.py
 ${PYSITELIB}/gps/misc.py
-${PYSITELIB}/gps/packet.so
+${PYSITELIB}/gps/packet.py
 ${PYSITELIB}/gps/watch_options.py
 man/man1/cgps.1
 man/man1/gegps.1
@@ -60,5 +63,12 @@ man/man5/srec.5
 man/man8/gpsd.8
 man/man8/gpsdctl.8
 man/man8/gpsinit.8
+man/man8/ppscheck.8
 sbin/gpsd
 sbin/gpsdctl
+share/gpsd/doc/AUTHORS
+share/gpsd/doc/COPYING
+share/gpsd/doc/NEWS
+share/gpsd/doc/README.adoc
+share/gpsd/doc/build.adoc
+share/gpsd/icons/gpsd-logo.png
