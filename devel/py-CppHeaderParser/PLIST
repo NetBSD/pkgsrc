@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2020/08/18 20:20:33 riastradh Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/CppHeaderParser/CppHeaderParser.py
+${PYSITELIB}/CppHeaderParser/CppHeaderParser.pyc
+${PYSITELIB}/CppHeaderParser/CppHeaderParser.pyo
+${PYSITELIB}/CppHeaderParser/__init__.py
+${PYSITELIB}/CppHeaderParser/__init__.pyc
+${PYSITELIB}/CppHeaderParser/__init__.pyo
+${PYSITELIB}/CppHeaderParser/doc/CppHeaderParser.html
+${PYSITELIB}/CppHeaderParser/examples/SampleClass.h
+${PYSITELIB}/CppHeaderParser/examples/readSampleClass.py
+${PYSITELIB}/CppHeaderParser/examples/readSampleClass.pyc
+${PYSITELIB}/CppHeaderParser/examples/readSampleClass.pyo
