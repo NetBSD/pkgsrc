@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:27 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/08/18 20:14:07 riastradh Exp $
 
-SHA1 (pefile-1.2.10-139.tar.gz) = a1bc91758ed1ff8c2df661511023360fcf9bbf77
-RMD160 (pefile-1.2.10-139.tar.gz) = 3d1d676134bc138f7b90abb6d0d8661066a10e1c
-SHA512 (pefile-1.2.10-139.tar.gz) = df8161a3d7659fdff26a21adc398063d909a4c0a390b6116b3d5ee293ee7d9363b524acf1b59a0758bf1556a842b35e78108e5df75433ed392b0813f98cf9d51
-Size (pefile-1.2.10-139.tar.gz) = 57322 bytes
+SHA1 (pefile-2019.4.18.tar.gz) = 4cadf66db1e8640733054f7b2e1920900dfed704
+RMD160 (pefile-2019.4.18.tar.gz) = b1445655604ec9b0e8aa53f45e4ee27179a77221
+SHA512 (pefile-2019.4.18.tar.gz) = 33c53120fd6a0fde22f4076c19ed8f69fc2b53b16d0c581133446d0d770e290dcb2ddd1e9941e8d8debc28c1cb4ff64ff055c2b8c0958015d9121de72ae20c76
+Size (pefile-2019.4.18.tar.gz) = 62374 bytes
