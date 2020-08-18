@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/11/20 20:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/18 02:35:25 tnn Exp $
 
 DISTNAME=	ttfs
-PKGNAME=	go-ttf-0.0.20161118
+PKGNAME=	go-ttf-2.008
 CATEGORIES=	fonts
 MASTER_SITES=	https://go.googlesource.com/image/+archive/${COMMIT_ID}/font/gofont/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	https://blog.golang.org/go-fonts
 COMMENT=	Family of high-quality WGL4 TrueType fonts created for the Go project
 LICENSE=	modified-bsd
 
-COMMIT_ID=	d2f07f8aaaa906f1a64eee0e327fc681cdb2944f
+COMMIT_ID=	f03a046406d4d7fbfd4ed29f554da8f6114049fc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 WRKSRC=		${WRKDIR}
