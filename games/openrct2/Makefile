@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/08/17 20:18:50 leot Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/18 02:50:51 tnn Exp $
 
 DISTNAME=	openrct2-0.2.4
 PKGREVISION=	8
@@ -25,6 +25,17 @@ CXXFLAGS+=	-DORCT2_RESOURCE_DIR=\"${PREFIX}/share/openrct2\"
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
+
+# XXX it cannot be built without an Internet connection.
+# Fails during install stage: 
+# CMake Error at cmake_install.cmake:48 (file):
+#  file DOWNLOAD HASH mismatch
+#
+#    for file: [/wrk/games/openrct2/work/.destdir/p/share/openrct2/title/title-sequences.zip]
+#      expected hash: [304d13a126c15bf2c86ff13b81a2f2cc1856ac8d]
+#        actual hash: [da39a3ee5e6b4b0d3255bfef95601890afd80709]
+#             status: [6;"Couldn't resolve host name"]
+#
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
