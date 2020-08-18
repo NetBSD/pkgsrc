@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/12/04 13:25:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/08/18 01:01:56 joerg Exp $
 bin/csv2ods-${PYVERSSUFFIX}
 bin/mailodf-${PYVERSSUFFIX}
 bin/odf2mht-${PYVERSSUFFIX}
@@ -117,3 +117,14 @@ ${PYSITELIB}/odf/userfield.pyo
 ${PYSITELIB}/odf/xforms.py
 ${PYSITELIB}/odf/xforms.pyc
 ${PYSITELIB}/odf/xforms.pyo
+man/man1/csv2ods-${PYVERSSUFFIX}.1
+man/man1/mailodf-${PYVERSSUFFIX}.1
+man/man1/odf2mht-${PYVERSSUFFIX}.1
+man/man1/odf2xhtml-${PYVERSSUFFIX}.1
+man/man1/odf2xml-${PYVERSSUFFIX}.1
+man/man1/odfimgimport-${PYVERSSUFFIX}.1
+man/man1/odflint-${PYVERSSUFFIX}.1
+man/man1/odfmeta-${PYVERSSUFFIX}.1
+man/man1/odfoutline-${PYVERSSUFFIX}.1
+man/man1/odfuserfield-${PYVERSSUFFIX}.1
+man/man1/xml2odf-${PYVERSSUFFIX}.1
