@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/18 20:13:03 riastradh Exp $
+
+SHA1 (bitstring-3.1.7.tar.gz) = 46c3b9725779e816ac9c0c02d536921c131d0c05
+RMD160 (bitstring-3.1.7.tar.gz) = 2f0c442431ab73694074c257567ff0b8dce0ad7f
+SHA512 (bitstring-3.1.7.tar.gz) = 3c05222b6a6a885664adebb1ea455ef4e199c91698b89bc136a7d3f5f7ceb38868c9883509ba4067c163e1521f85c36abbff9763a590cbfa99705fd08d2a6a6f
+Size (bitstring-3.1.7.tar.gz) = 195788 bytes
