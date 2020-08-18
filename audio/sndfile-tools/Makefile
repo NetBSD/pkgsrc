@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/08/17 20:18:11 leot Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/18 17:57:39 leot Exp $
 
 DISTNAME=	sndfile-tools-1.04
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/libsndfile/files/
 EXTRACT_SUFX=	.tar.bz2
