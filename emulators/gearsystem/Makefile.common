@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2020/06/02 13:25:00 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/08/18 05:46:32 tnn Exp $
 # used by emulators/gearsystem/Makefile
 # used by emulators/libretro-gearsystem/Makefile
 
@@ -14,4 +14,5 @@ DISTINFO_FILE=	${.CURDIR}/../../emulators/gearsystem/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/gearsystem/patches
 
 CHECK_PORTABILITY_SKIP+=	platforms/*/dependencies/SDL-*/premake/*/build-scripts/*
-CHECK_PORTABILITY_SKIP+=	platforms/ios/dependencies/SDL-*/build-scripts/*
+CHECK_PORTABILITY_SKIP+=	platforms/*/dependencies/SDL-*/Xcode/SDL/pkg-support/*
+CHECK_PORTABILITY_SKIP+=	platforms/*/dependencies/SDL-*/build-scripts/*
