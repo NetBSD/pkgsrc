@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.146 2019/11/04 01:11:38 gdt Exp $
+# $NetBSD: Makefile,v 1.147 2020/08/18 00:42:27 tnn Exp $
 
 DISTNAME=	tiff-4.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
 
@@ -18,6 +19,7 @@ CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
 CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
+CONFIGURE_ARGS+=	--disable-webp
 
 PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
