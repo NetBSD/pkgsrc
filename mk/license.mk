@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.106 2020/07/13 20:25:57 wiz Exp $
+# $NetBSD: license.mk,v 1.107 2020/08/18 20:18:32 riastradh Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -146,7 +146,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	ms-pl \
 	ofl-v1.0 ofl-v1.1 \
 	openssl \
-	original-bsd modified-bsd 2-clause-bsd \
+	original-bsd modified-bsd 2-clause-bsd 0-clause-bsd \
 	osl \
 	paratype \
 	php \
