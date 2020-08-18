@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4493 2020/08/18 14:28:27 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.4494 2020/08/18 17:11:29 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7020,3 +7020,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/samba4 to 4.12.6 [adam 2020-08-18]
 	Updated lang/chibi-scheme to 0.9.1 [leot 2020-08-18]
 	Added www/py-django-binary-database-files version 1.0.13 [joerg 2020-08-18]
+	Updated textproc/split-thai to 0.5 [scole 2020-08-18]
