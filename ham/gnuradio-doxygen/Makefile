@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/05/19 13:58:24 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2020/08/18 17:58:03 leot Exp $
 
 PKGNAME=	gnuradio-doxygen-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Doxygen documentation of GNU Radio
 
 BUILD_DIRS=	build/docs

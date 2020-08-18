@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2020/08/17 20:17:31 leot Exp $
+# $NetBSD: Makefile,v 1.54 2020/08/18 17:57:29 leot Exp $
 
 DISTNAME=	libksane-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/10/20 11:10:47 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/18 17:57:39 leot Exp $
 
 DISTNAME=	PyAudio-0.2.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyA/a/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyAudio/}
 

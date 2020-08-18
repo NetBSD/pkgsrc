@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2020/03/26 21:51:49 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/18 17:57:35 leot Exp $
 #
 
 DISTNAME=	darkice-1.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://darkice.googlecode.com/files/
 
