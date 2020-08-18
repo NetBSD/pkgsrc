@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20001 2020/08/17 13:20:07 wiz Exp $
+$NetBSD: TODO,v 1.20002 2020/08/18 04:41:02 tnn Exp $
 
 Suggested new packages
 ======================
@@ -654,7 +654,7 @@ Suggested package updates
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnuradio-3.8.1.0 [in wip]
+	o gnuradio-3.8.1.0 [in wip] [can remove math/py-scipy12 after updating]
 	o gnustep-back-0.27.0
 	o gnustep-base-1.26.0
 	o gnustep-gui-0.24.1
