@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2019/12/02 11:46:08 nia Exp $
+# $NetBSD: Makefile,v 1.40 2020/08/18 17:57:24 leot Exp $
 
 DISTNAME=	jack-audio-connection-kit-0.125.0
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${DISTNAME:S/audio-connection-kit-//}
 CATEGORIES=	audio
 MASTER_SITES=	http://jackaudio.org/downloads/
