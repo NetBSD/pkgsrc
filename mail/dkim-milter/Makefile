@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/01/25 10:45:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2020/08/18 03:30:03 tnn Exp $
 
 DISTNAME=	dkim-milter-2.8.3
 PKGREVISION=	6
@@ -11,6 +11,7 @@ COMMENT=	Open source DKIM filter software from Sendmail, Inc
 LICENSE=	sendmail-open-source-license
 
 PKG_DESTDIR_SUPPORT=	destdir
+NOT_FOR_UNPRIVILEGED=	yes
 
 MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dkim-filter
