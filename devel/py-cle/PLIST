@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/09 14:02:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/08/18 20:24:58 riastradh Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -40,6 +40,9 @@ ${PYSITELIB}/cle/backends/elf/elfcore.pyo
 ${PYSITELIB}/cle/backends/elf/hashtable.py
 ${PYSITELIB}/cle/backends/elf/hashtable.pyc
 ${PYSITELIB}/cle/backends/elf/hashtable.pyo
+${PYSITELIB}/cle/backends/elf/lsda.py
+${PYSITELIB}/cle/backends/elf/lsda.pyc
+${PYSITELIB}/cle/backends/elf/lsda.pyo
 ${PYSITELIB}/cle/backends/elf/metaelf.py
 ${PYSITELIB}/cle/backends/elf/metaelf.pyc
 ${PYSITELIB}/cle/backends/elf/metaelf.pyo
@@ -196,6 +199,9 @@ ${PYSITELIB}/cle/backends/regions.pyo
 ${PYSITELIB}/cle/backends/relocation.py
 ${PYSITELIB}/cle/backends/relocation.pyc
 ${PYSITELIB}/cle/backends/relocation.pyo
+${PYSITELIB}/cle/backends/static_archive.py
+${PYSITELIB}/cle/backends/static_archive.pyc
+${PYSITELIB}/cle/backends/static_archive.pyo
 ${PYSITELIB}/cle/backends/symbol.py
 ${PYSITELIB}/cle/backends/symbol.pyc
 ${PYSITELIB}/cle/backends/symbol.pyo
@@ -205,6 +211,12 @@ ${PYSITELIB}/cle/backends/tls/__init__.pyo
 ${PYSITELIB}/cle/backends/tls/elf_tls.py
 ${PYSITELIB}/cle/backends/tls/elf_tls.pyc
 ${PYSITELIB}/cle/backends/tls/elf_tls.pyo
+${PYSITELIB}/cle/backends/tls/elfcore_tls.py
+${PYSITELIB}/cle/backends/tls/elfcore_tls.pyc
+${PYSITELIB}/cle/backends/tls/elfcore_tls.pyo
+${PYSITELIB}/cle/backends/tls/minidump_tls.py
+${PYSITELIB}/cle/backends/tls/minidump_tls.pyc
+${PYSITELIB}/cle/backends/tls/minidump_tls.pyo
 ${PYSITELIB}/cle/backends/tls/pe_tls.py
 ${PYSITELIB}/cle/backends/tls/pe_tls.pyc
 ${PYSITELIB}/cle/backends/tls/pe_tls.pyo

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/01/09 14:02:31 wiz Exp $
+$NetBSD: distinfo,v 1.5 2020/08/18 20:24:57 riastradh Exp $
 
-SHA1 (archinfo-8.20.1.7.tar.gz) = cd1170cd130430bc8f78b95058aad799c3d91423
-RMD160 (archinfo-8.20.1.7.tar.gz) = cbe8430db7131b0b2199b30ea81a058e78ff9d94
-SHA512 (archinfo-8.20.1.7.tar.gz) = ce57fbb8688aefca6e9ebbd3c8fb76278c027f8688beb0457e7c418d6f837003d5e94af59a71f2a47b51c95f3aa9639d093f24b87249374d8b57413fd47c5d02
-Size (archinfo-8.20.1.7.tar.gz) = 43408 bytes
+SHA1 (archinfo-8.20.7.27.tar.gz) = ee8a369eb9acbb6db9b9dfb671787eca8d036693
+RMD160 (archinfo-8.20.7.27.tar.gz) = 41bedc6d1b3acbb0ad94f8c3dec3b9cd610f12dc
+SHA512 (archinfo-8.20.7.27.tar.gz) = bc3b781f05946750f1554ce43dfb717c47d76693539fd0da85765cf0b6f0ffe9653475a63ede7b8138d5f1dd945ca205b4ff037788984bcd551ec04225d97bb0
+Size (archinfo-8.20.7.27.tar.gz) = 44534 bytes
