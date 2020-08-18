@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4486 2020/08/18 03:40:21 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4487 2020/08/18 04:02:03 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7009,3 +7009,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/modeline to 20060729 [tnn 2020-08-18]
 	Updated x11/modeline to 20060729 [tnn 2020-08-18]
 	Updated fonts/go-ttf to 2.008 [tnn 2020-08-18]
+	Removed lang/java-lang-spec [tnn 2020-08-18]
+	Removed lang/java-vm-spec [tnn 2020-08-18]
