@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/08/18 14:27:16 joerg Exp $
+
+SHA1 (django-binary-database-files-1.0.13-cedd9f4608eb0da343cf15cfcaf5400a0754cc28.tar.gz) = 74c359eff5cd2039a9bc2badf7f4de581439c4ad
+RMD160 (django-binary-database-files-1.0.13-cedd9f4608eb0da343cf15cfcaf5400a0754cc28.tar.gz) = 880660c927751ba1cb0def0b97f3b10915a8f893
+SHA512 (django-binary-database-files-1.0.13-cedd9f4608eb0da343cf15cfcaf5400a0754cc28.tar.gz) = a275dc6763f98baf1170c0e160e3b9f2c515af7ee1bfb1229d0106c634c9a77af3b399d8cac781692fad56355f83cc260fd7a22f610600dcd1bbaebd3ce11598
+Size (django-binary-database-files-1.0.13-cedd9f4608eb0da343cf15cfcaf5400a0754cc28.tar.gz) = 31835 bytes
+SHA1 (patch-binary__database__files_storage.py) = a76139fecdee6af2a1fe12d886ad6e76d8ce599a
+SHA1 (patch-binary__database__files_tests_tests.py) = d578a3cbdfb53f8547f689c9e761113abc795fc3

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/08/16 22:57:22 joerg Exp $
+# $NetBSD: Makefile,v 1.1 2020/08/18 14:27:16 joerg Exp $
 
-DISTNAME=	django-binary-database-file-1.0.10
+DISTNAME=	django-binary-database-files-1.0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kimetrica/}
@@ -11,14 +11,16 @@ COMMENT=	In-database file storage backend for Django
 LICENSE=	modified-bsd
 
 GITHUB_PROJECT=	django-binary-database-files
-GITHUB_TAG=	34afac4439f62e62aefd77cc3438fb9888aa8aa5
+GITHUB_TAG=	cedd9f4608eb0da343cf15cfcaf5400a0754cc28
 
-DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
 
 USE_LANGUAGES=		# none
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_LANGUAGES=		# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${PREFIX}/bin/django-admin-${PYVERSSUFFIX} test \
