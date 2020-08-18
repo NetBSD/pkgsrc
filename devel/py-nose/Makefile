@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/08/28 15:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/08/18 20:12:37 riastradh Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,10 @@ SUBST_VARS.manpath=	PKGMANDIR
 
 post-extract:
 	${MV} ${WRKSRC}/nosetests.1 ${WRKSRC}/nosetests${PYVERSSUFFIX}.1
+
+pre-test:
+	${RUN} cd ${WRKSRC} && \
+	${PYTHONBIN} setup.py build_tests
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
