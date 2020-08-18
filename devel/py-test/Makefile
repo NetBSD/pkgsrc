@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/08/05 14:09:30 adam Exp $
+# $NetBSD: Makefile,v 1.93 2020/08/18 20:14:54 riastradh Exp $
 
 DISTNAME=	pytest-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -24,6 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.56:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-${PKGVERSION}:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 5.0.0
