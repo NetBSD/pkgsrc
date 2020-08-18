@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4489 2020/08/18 04:51:52 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4490 2020/08/18 05:03:41 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7007,7 +7007,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/stagit-gopher to 0.9.4 [leot 2020-08-17]
 	Updated www/py-wagtail to 2.10 [joerg 2020-08-18]
 	Updated x11/modeline to 20060729 [tnn 2020-08-18]
-	Updated x11/modeline to 20060729 [tnn 2020-08-18]
 	Updated fonts/go-ttf to 2.008 [tnn 2020-08-18]
 	Removed lang/java-lang-spec [tnn 2020-08-18]
 	Removed lang/java-vm-spec [tnn 2020-08-18]
@@ -7017,3 +7016,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed ham/gnuradio-pager [tnn 2020-08-18]
 	Removed ham/gnuradio-wxgui [tnn 2020-08-18]
 	Updated textproc/markdown-mode to 2.4 [tnn 2020-08-18]
+	Updated graphics/gimp-fix-ca to 3.0.2 [tnn 2020-08-18]
