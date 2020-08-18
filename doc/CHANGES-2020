@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4488 2020/08/18 04:35:39 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4489 2020/08/18 04:51:52 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7016,3 +7016,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed ham/gnuradio-noaa [tnn 2020-08-18]
 	Removed ham/gnuradio-pager [tnn 2020-08-18]
 	Removed ham/gnuradio-wxgui [tnn 2020-08-18]
+	Updated textproc/markdown-mode to 2.4 [tnn 2020-08-18]
