@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/08/03 18:27:49 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/18 05:29:46 tnn Exp $
 
-PKGNAME=	sd-mux-ctrl-0.0.20200217
 DISTNAME=	sd-mux-9dd189d973da64e033a0c5c2adb3d94b23153d94
+PKGNAME=	sd-mux-ctrl-0.0.20200217
 CATEGORIES=	misc
 MASTER_SITES=	https://git.tizen.org/cgit/tools/testlab/sd-mux/snapshot/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +13,7 @@ LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
