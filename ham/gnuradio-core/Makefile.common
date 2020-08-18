@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.25 2020/08/01 07:49:26 tnn Exp $
+# $NetBSD: Makefile.common,v 1.26 2020/08/18 04:35:39 tnn Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
-# used by ham/gnuradio-atsc/Makefile
 # used by ham/gnuradio-channels/Makefile
 # used by ham/gnuradio-companion/Makefile
 # used by ham/gnuradio-core/Makefile
@@ -11,12 +10,9 @@
 # used by ham/gnuradio-digital/Makefile
 # used by ham/gnuradio-doxygen/Makefile
 # used by ham/gnuradio-dtv/Makefile
-# used by ham/gnuradio-fcd/Makefile
 # used by ham/gnuradio-fec/Makefile
 
 # used by ham/gnuradio-fcd/Makefile
-# used by ham/gnuradio-noaa/Makefile
-# used by ham/gnuradio-pager/Makefile
 # used by ham/gnuradio-qtgui/Makefile
 # used by ham/gnuradio-trellis/Makefile
 
@@ -26,7 +22,6 @@
 # used by ham/gnuradio-vocoder/Makefile
 # used by ham/gnuradio-wavelet/Makefile
 
-# used by ham/gnuradio-wxgui/Makefile
 # used by ham/gnuradio-zeromq/Makefile
 
 .include	"../../ham/gnuradio-core/Makefile.version"
