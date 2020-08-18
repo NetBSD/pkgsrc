@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4484 2020/08/17 21:21:59 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4485 2020/08/18 01:17:05 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7005,3 +7005,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/split-thai to 0.4 [scole 2020-08-17]
 	Updated www/stagit to 0.9.4 [fcambus 2020-08-17]
 	Updated net/stagit-gopher to 0.9.4 [leot 2020-08-17]
+	Updated www/py-wagtail to 2.10 [joerg 2020-08-18]
