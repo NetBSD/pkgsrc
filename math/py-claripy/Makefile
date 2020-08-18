@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/09 14:02:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/18 20:14:43 riastradh Exp $
 
 DISTNAME=	claripy-8.20.1.7
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
@@ -13,6 +13,17 @@ COMMENT=	Abstraction layer for constraint solvers
 LICENSE=	2-clause-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+DEPENDS+=	${PYPKGPREFIX}-cachetools>=0:../../devel/py-cachetools
+DEPENDS+=	${PYPKGPREFIX}-decorator>=0:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-future>=0:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-smt>=0:../../math/py-smt
+DEPENDS+=	${PYPKGPREFIX}-z3>=0:../../math/py-z3
+
+do-test:
+	${RUN} cd ${WRKSRC}/tests && \
+	${SETENV} ${TEST_ENV} \
+	${PYTHONBIN} -m unittest discover
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
