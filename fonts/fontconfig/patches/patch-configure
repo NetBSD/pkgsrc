@@ -1,6 +1,8 @@
-$NetBSD: patch-configure,v 1.5 2018/09/02 20:30:43 wiz Exp $
+$NetBSD: patch-configure,v 1.6 2020/08/18 08:19:17 tnn Exp $
 
 Do not look for libuuid on Darwin, it is built-in.
+On other operating systems, pkgsrc fontconfig is patched to use
+bunled libuuid.
 
 Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
 
@@ -65,7 +67,7 @@ Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
  # Check for uuid
  #
 -if test "$os_win32" != "yes"; then
-+if test "$os_win32" != "yes" -a "$os_darwin" != "yes"; then
++if false; then
  	use_pkgconfig_for_uuid=yes
  	if test -n "${UUID_LIBS}"; then
  		save_UUID_LIBS=$UUID_LIBS
