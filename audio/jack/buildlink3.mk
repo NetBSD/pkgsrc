@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2019/09/09 08:12:09 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2020/08/18 17:57:24 leot Exp $
 
 BUILDLINK_TREE+=	jack
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	jack
 JACK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jack+=	jack>=0.121.3
+BUILDLINK_ABI_DEPENDS.jack?=	jack>=0.125.0nb3
 BUILDLINK_PKGSRCDIR.jack?=	../../audio/jack
 
 BDB_ACCEPTED=	db4 db5

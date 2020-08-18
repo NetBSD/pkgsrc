@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2020/05/23 00:04:18 mef Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/18 17:58:03 leot Exp $
 
 PKGNAME=	gnuradio-ctrlport-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	New set of hooks into GNU Radio to allow a remote client to attach
 .include	"../../ham/gnuradio-core/Makefile.common"
 .include	"../../ham/gnuradio-core/Nocore.mk"

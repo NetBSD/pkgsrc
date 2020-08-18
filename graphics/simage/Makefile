@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/06/05 12:49:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2020/08/18 17:57:29 leot Exp $
 
 DISTNAME=		simage-1.7.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		https://bitbucket.org/Coin3D/coin/downloads/
 

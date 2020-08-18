@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2020/04/17 15:50:03 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2020/08/18 17:57:25 leot Exp $
 
 BUILDLINK_TREE+=	portaudio
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	portaudio
 PORTAUDIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.portaudio+=	portaudio>=19
+BUILDLINK_ABI_DEPENDS.portaudio?=		portaudio>=190600.20161030nb6
 BUILDLINK_PKGSRCDIR.portaudio?=		../../audio/portaudio
 BUILDLINK_INCDIRS.portaudio?=		include/portaudio2
 BUILDLINK_LIBDIRS.portaudio+=		lib/portaudio2

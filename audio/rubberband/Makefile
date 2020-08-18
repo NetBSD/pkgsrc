@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/07/30 08:57:14 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/18 17:57:25 leot Exp $
 
 DISTNAME=	rubberband-1.8.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://breakfastquay.com/files/releases/
 EXTRACT_SUFX=	.tar.bz2
