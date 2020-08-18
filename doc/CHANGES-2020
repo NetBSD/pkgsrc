@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4491 2020/08/18 07:39:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4492 2020/08/18 10:25:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7019,3 +7019,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/gimp-fix-ca to 3.0.2 [tnn 2020-08-18]
 	Updated net/iperf3 to 3.9 [adam 2020-08-18]
 	Updated net/samba4 to 4.12.6 [adam 2020-08-18]
+	Updated lang/chibi-scheme to 0.9.1 [leot 2020-08-18]
