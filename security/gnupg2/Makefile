@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2020/07/24 10:47:45 adam Exp $
+# $NetBSD: Makefile,v 1.116 2020/08/18 09:39:23 schmonz Exp $
 
 DISTNAME=	gnupg-2.2.21
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -37,6 +37,7 @@ LDFLAGS.NetBSD+=	-lintl
 LDFLAGS.Darwin+=	-lintl -lresolv
 LDFLAGS.FreeBSD+=	-lintl
 LDFLAGS.SunOS+=		-lintl -lsocket
+LDFLAGS.Linux+=		-lrt
 
 .include "options.mk"
 
