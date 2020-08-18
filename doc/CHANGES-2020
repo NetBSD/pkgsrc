@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4490 2020/08/18 05:03:41 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4491 2020/08/18 07:39:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7017,3 +7017,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed ham/gnuradio-wxgui [tnn 2020-08-18]
 	Updated textproc/markdown-mode to 2.4 [tnn 2020-08-18]
 	Updated graphics/gimp-fix-ca to 3.0.2 [tnn 2020-08-18]
+	Updated net/iperf3 to 3.9 [adam 2020-08-18]
+	Updated net/samba4 to 4.12.6 [adam 2020-08-18]
