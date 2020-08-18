@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2020/08/17 20:17:25 leot Exp $
+# $NetBSD: Makefile,v 1.119 2020/08/18 08:19:17 tnn Exp $
 
 DISTNAME=	fontconfig-2.13.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
-#LICENSE=	x11?
+#LICENSE=	x11? AND modified-bsd # (for uuid.h)
 
 # https://bugs.freedesktop.org/show_bug.cgi?id=101280
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
@@ -90,6 +90,13 @@ TEST_TARGET=	check
 CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
+.if ${OPSYS} != "Darwin"
+CFLAGS+=	-I${WRKDIR}
+post-extract:
+	mkdir -p ${WRKDIR}/uuid
+	cp ${FILESDIR}/uuid.h ${WRKDIR}/uuid/.
+.endif
+
 pre-configure:
 	-cd ${BUILDLINK_X11_DIR:Q} && ${FIND} . -path "*fontconfig*" -type l -delete
 
@@ -98,9 +105,6 @@ post-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.if ${OPSYS} != "Darwin"
-.include "../../devel/libuuid/buildlink3.mk"
-.endif
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 .include "../../graphics/freetype2/buildlink3.mk"
