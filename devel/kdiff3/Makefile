@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2020/08/17 20:18:26 leot Exp $
+# $NetBSD: Makefile,v 1.69 2020/08/18 17:57:43 leot Exp $
 
 VERSION=	1.8.3
 DISTNAME=	kdiff3-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=kdiff3/}
 EXTRACT_SUFX=	.tar.xz
