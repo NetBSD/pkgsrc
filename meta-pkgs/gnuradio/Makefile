@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:32:55 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/18 17:19:06 tnn Exp $
 
 META_PACKAGE=	yes
 
@@ -9,13 +9,12 @@ CATEGORIES=	meta-pkgs ham
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 LICENSE=	gnu-gpl-v3
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/gnuradio/
 COMMENT=	Collection of GNU Radio (meta package, easy to install whole thing)
 
-# 20 package for now
-DEPENDS+=	gnuradio-atsc-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-atsc
 DEPENDS+=	gnuradio-channels-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-channels
 DEPENDS+=	gnuradio-companion-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-companion
 DEPENDS+=	gnuradio-core-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core
@@ -24,11 +23,8 @@ DEPENDS+=	gnuradio-ctrlport-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-ctrlport
 DEPENDS+=	gnuradio-digital-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-digital
 DEPENDS+=	gnuradio-doxygen-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-doxygen
 DEPENDS+=	gnuradio-dtv-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-dtv
-DEPENDS+=	gnuradio-fcd-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-fcd
 DEPENDS+=	gnuradio-fec-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-fec
 
-DEPENDS+=	gnuradio-noaa-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-noaa
-DEPENDS+=	gnuradio-pager-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-pager
 DEPENDS+=	gnuradio-qtgui-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-qtgui
 DEPENDS+=	gnuradio-trellis-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-trellis
 DEPENDS+=	gnuradio-uhd-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-uhd
@@ -37,7 +33,6 @@ DEPENDS+=	gnuradio-utils-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-utils
 DEPENDS+=	gnuradio-video-sdl-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-video-sdl
 DEPENDS+=	gnuradio-vocoder-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-vocoder
 DEPENDS+=	gnuradio-wavelet-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-wavelet
-DEPENDS+=	gnuradio-wxgui-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-wxgui
 
 DEPENDS+=	gnuradio-zeromq-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-zeromq
 
