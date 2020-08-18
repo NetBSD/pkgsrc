@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.3 2010/12/27 13:15:05 obache Exp $
+$NetBSD: patch-an,v 1.4 2020/08/18 05:12:55 tnn Exp $
 
---- machine/m_netbsd20.c.orig	2004-07-12 09:03:09.000000000 +0200
+--- machine/m_netbsd20.c.orig	2020-08-18 05:08:35.740015522 +0000
 +++ machine/m_netbsd20.c
-@@ -0,0 +1,895 @@
+@@ -0,0 +1,898 @@
 +/*	NetBSD: m_netbsd15.c,v 1.22 2004/02/13 11:36:24 wiz Exp 	*/
 +
 +/*
@@ -488,7 +488,10 @@ $NetBSD: patch-an,v 1.3 2010/12/27 13:15:05 obache Exp $
 +		if (pp->p_stat != 0 && (show_system || ((pp->p_flag & P_SYSTEM) == 0))) {
 +			total_procs++;
 +			process_states[(unsigned char) pp->p_stat]++;
-+			if (pp->p_stat != LSZOMB && pp->p_stat != LSDEAD &&
++			if (pp->p_stat != LSZOMB &&
++#ifdef LSDEAD
++			    pp->p_stat != LSDEAD &&
++#endif
 +			    (show_idle || (pp->p_pctcpu != 0) || 
 +			    (pp->p_stat == LSRUN || pp->p_stat == LSONPROC)) &&
 +			    (!show_uid || pp->p_ruid == (uid_t)sel->uid)) {
