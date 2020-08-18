@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2020/06/02 13:24:32 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/08/18 05:44:43 tnn Exp $
 # used by emulators/gearboy/Makefile
 # used by emulators/libretro-gearboy/Makefile
 
@@ -14,4 +14,5 @@ DISTINFO_FILE=	${.CURDIR}/../../emulators/gearboy/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/gearboy/patches
 
 CHECK_PORTABILITY_SKIP+=	platforms/*/dependencies/SDL-*/premake/*/build-scripts/*
-CHECK_PORTABILITY_SKIP+=	platforms/ios/dependencies/SDL-*/build-scripts/*
+CHECK_PORTABILITY_SKIP+=	platforms/*/dependencies/SDL-*/Xcode/SDL/pkg-support/*
+CHECK_PORTABILITY_SKIP+=	platforms/*/dependencies/SDL-*/build-scripts/*
