@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/08/01 09:00:31 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2020/08/18 04:35:39 tnn Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -21,10 +21,7 @@ SUBDIR+=	gnuradio-ctrlport
 SUBDIR+=	gnuradio-digital
 SUBDIR+=	gnuradio-doxygen
 SUBDIR+=	gnuradio-dtv
-SUBDIR+=	gnuradio-fcd
 SUBDIR+=	gnuradio-fec
-SUBDIR+=	gnuradio-noaa
-SUBDIR+=	gnuradio-pager
 SUBDIR+=	gnuradio-qtgui
 SUBDIR+=	gnuradio-trellis
 SUBDIR+=	gnuradio-uhd
@@ -32,7 +29,6 @@ SUBDIR+=	gnuradio-utils
 SUBDIR+=	gnuradio-video-sdl
 SUBDIR+=	gnuradio-vocoder
 SUBDIR+=	gnuradio-wavelet
-SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gpredict
 SUBDIR+=	gr-fcdproplus
