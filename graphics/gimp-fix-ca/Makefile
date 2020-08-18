@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.57 2020/08/17 20:18:59 leot Exp $
+# $NetBSD: Makefile,v 1.58 2020/08/18 05:02:21 tnn Exp $
 
-DISTNAME=		gimp-fix-ca-3.0.1
-PKGREVISION=		42
+DISTNAME=		gimp-fix-ca-3.0.2
 CATEGORIES=		graphics
-MASTER_SITES=		http://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file=
-EXTRACT_SUFX=		.c
+MASTER_SITES=		-http://gimper.net/resources/fix-ca.218/download?version=218
+EXTRACT_SUFX=		.zip
 
 MAINTAINER=		dsainty@NetBSD.org
 HOMEPAGE=		http://kcd.sourceforge.net/fix-ca.php
 COMMENT=		GIMP plugin to correct chromatic aberration (CA)
+LICENSE=		gnu-gpl-v2
 
-FETCH_BEFORE_ARGS+=	-o ${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	lib/gimp/2.0/plug-ins
@@ -25,10 +24,10 @@ pre-build:
 
 do-build:
 	cd ${WRKDIR} && \
-	    LIBS=${LINK_PTHREAD:Q} gimptool --build ${DISTNAME}${EXTRACT_SUFX}
+	    LIBS=${LINK_PTHREAD:Q} gimptool --build fix-ca.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} \
+	${INSTALL_PROGRAM} ${WRKSRC}/fix-ca \
 		${DESTDIR}${PREFIX}/lib/gimp/2.0/plug-ins/fix-ca
 
 .include "../../graphics/gimp/buildlink3.mk"
