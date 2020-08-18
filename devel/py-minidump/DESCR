@@ -1,0 +1,3 @@
+Python library to parse and read Microsoft minidump file format. Can
+create minidumps on Windows machines using the windows API (implemented
+with ctypes).
