@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2020/03/20 11:58:04 nia Exp $
+# $NetBSD: Makefile,v 1.61 2020/08/18 01:09:32 tnn Exp $
 
 DISTNAME=	mjpegtools-2.1.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
@@ -25,6 +26,8 @@ CONFIGURE_ARGS+=	--with-pic
 SHLIBTOOL_OVERRIDE=	# empty
 PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
 INFO_FILES=		yes
+REPLACE_BASH=		scripts/*.sh
+CHECK_PORTABILITY_SKIP=	scripts/lavtc.sh
 
 .include "../../mk/bsd.prefs.mk"
 
