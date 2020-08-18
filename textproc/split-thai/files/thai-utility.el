@@ -98,13 +98,13 @@ count 'thai-word-table words"
     (message "%d words in nested alist" count)
     count))
 
-;; 'thai-tis620 is default for emacs <= 28
 (defun thai-update-word-table-utf8 (file &optional append)
   "Update Thai word table by replacing the current word list with
-FILE, which is in utf-8.  If called with a prefix argument, FILE
-is appended instead to the current word list.  Does the same as
+FILE, which is utf-8.  If called with a prefix argument, FILE is
+appended instead to the current word list.  Does the same as
 'thai-update-word-table, except that function expects
-'thai-tis620 encoding"
+'thai-tis620 encoding which appears to be the default format for
+at least emacs version <= 28"
   (interactive "FThai word table file: \nP")
   (let* ((coding-system-for-read 'utf-8)
 	 (coding-system-for-write 'utf-8)
@@ -146,23 +146,19 @@ dictionary words."
 		  "\"Nested alist of Thai words.\")" ))
     (with-temp-buffer
       (insert-file-contents dictfile)
-      (goto-char (point-min))
-      (setq line_count (count-lines (point-min) (point-max)))
       ;; quote each thai word
-      (while (not (eobp))
-	(beginning-of-line)
-	(insert "\"")
-	(end-of-line)
-	(insert "\"")
-	(forward-line 1))
-
+      (goto-char (point-min))
+      (while (search-forward-regexp "\\ct+" nil t)
+	(replace-match (concat "\"" (match-string 0) "\"")))
+      (setq line_count (count-lines (point-min) (point-max)))
+      ;; insert lisp code for defvar 
       (goto-char (point-min))
       (dolist (elem header)
 	(insert elem "\n"))
-
       (goto-char (point-max))
       (dolist (elem footer)
 	(insert elem "\n"))
+      ;; indent for lisp and save
       (lisp-mode)
       (indent-region (point-min) (point-max))
       (write-region nil nil lispfile))
@@ -170,15 +166,14 @@ dictionary words."
 
 (defun split-thai-line()
   "Break Thai words from point to end of line by inserting a
-separator string at word boundaries. (wrapper for 'thai-break-words)"
+space at word boundaries. (wrapper for 'thai-break-words)"
   (interactive)
   (thai-break-words " " (line-end-position))
   (split-thai-numbers (point) (line-end-position)))
 
 (defun split-thai()
   "Break Thai words from point to end of buffer by inserting a
-separator string at word boundaries. (wrapper for
-'thai-break-words)"
+space at word boundaries. (wrapper for 'thai-break-words)"
   (interactive)
   (thai-break-words " " (point-max))
   (split-thai-numbers (point) (point-max)))
@@ -188,9 +183,7 @@ separator string at word boundaries. (wrapper for
 'thai-break-words doesn't always split numbers properly. this may
 improve tokenization somewhat."
   ;; xxx this really should be fixed in 'thai-word lib
-  (let* (
-	 ;; "\\([๐๑๒๓๔๕๖๗๘๙0123456789]+\\)"
-	 (num_rexp "\\([\u0e50-\u0e59]+\\)") ;; thai numbers
+  (let* ((num_rexp "\\([\u0e50-\u0e59]+\\)") ;; thai numbers
 	 (nonnum_rexp "\\([\u0e00-\u0e4f\u0e5a-\u0e7f]\\)") ;; "non-numbers"
 	 (trailing_rexp (concat num_rexp nonnum_rexp))
 	 (leading_rexp (concat nonnum_rexp num_rexp)))
