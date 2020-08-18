@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/05/09 19:07:00 leot Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/18 10:25:16 leot Exp $
 
-DISTNAME=	chibi-scheme-0.8.0
+DISTNAME=	chibi-scheme-0.9.1
 CATEGORIES=	lang
 MASTER_SITES=	http://synthcode.com/scheme/chibi/
 EXTRACT_SUFX=	.tgz
