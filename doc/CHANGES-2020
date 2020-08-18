@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4494 2020/08/18 17:11:29 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4495 2020/08/18 17:37:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7021,3 +7021,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/chibi-scheme to 0.9.1 [leot 2020-08-18]
 	Added www/py-django-binary-database-files version 1.0.13 [joerg 2020-08-18]
 	Updated textproc/split-thai to 0.5 [scole 2020-08-18]
+	Updated geography/gpsd to 3.21 [gdt 2020-08-18]
