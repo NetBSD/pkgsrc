@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/09 14:02:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/18 20:24:57 riastradh Exp $
 
-DISTNAME=	archinfo-8.20.1.7
+.include "../../devel/py-angr/version.mk"
+
+DISTNAME=	archinfo-${ANGR_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/archinfo/}
