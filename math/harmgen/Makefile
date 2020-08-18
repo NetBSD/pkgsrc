@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/02/28 22:11:33 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/18 17:58:05 leot Exp $
 
 DISTNAME=	harmgen-3.1.3
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://flaterco.com/files/xtide/
 EXTRACT_SUFX=	.tar.xz
