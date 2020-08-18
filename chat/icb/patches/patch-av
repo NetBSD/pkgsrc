@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
+$NetBSD: patch-av,v 1.6 2020/08/18 02:17:26 gutteridge Exp $
 
 --- icb/unix.c.orig	1995-02-24 21:20:31.000000000 +0000
 +++ icb/unix.c
-@@ -7,20 +7,27 @@
+@@ -7,20 +7,23 @@
  #include <stdio.h>
  #include "icb.h"
  #include "externs.h"
@@ -17,11 +17,11 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  
 -#ifndef SYSV
 -
- #ifdef linux
- #include <bsd/sgtty.h>
- #else
+-#ifdef linux
+-#include <bsd/sgtty.h>
+-#else
  #include <sgtty.h>
- #endif
+-#endif
  
 +#if defined(__linux__) || defined(__NetBSD__) || defined(__sun)
 +#include <termios.h>
@@ -33,7 +33,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  #define TTYSTRUCT sgttyb
  #define stty(fd,buf) ioctl((fd),TIOCSETN,(buf))
  #define gtty(fd,buf) ioctl((fd),TIOCGETP,(buf))
-@@ -30,6 +37,7 @@
+@@ -30,6 +33,7 @@
  #define stty(fd,buf) ioctl((fd),TCSETA,(buf))
  #define gtty(fd,buf) ioctl((fd),TCGETA,(buf))
  #endif /* SYSV */
@@ -41,7 +41,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  
  char *getlogin();
  
-@@ -65,13 +73,16 @@ gettime()
+@@ -65,13 +69,16 @@ gettime()
  
  /* set line buffering for an open file pointer */
  /* output will be flushed every newline */
@@ -60,7 +60,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  }
  
  
-@@ -79,13 +90,13 @@ FILE *fp;
+@@ -79,13 +86,13 @@ FILE *fp;
  pushback(c)
  char c;
  {
@@ -77,7 +77,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  }
  
  
-@@ -94,25 +105,25 @@ char c;
+@@ -94,25 +101,25 @@ char c;
  
  getterm()
  {
@@ -111,7 +111,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  	/* get local special chars */
   	if (ioctl(0, TIOCGLTC, &lt) < 0) {
  		ttyinfo.redraw = '\022'; /* ^R */
-@@ -121,10 +132,10 @@ getterm()
+@@ -121,10 +128,10 @@ getterm()
  		ttyinfo.redraw = lt.t_rprntc;
  		ttyinfo.werase = lt.t_werasc;
  	}
@@ -124,7 +124,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  
  	/* get the current window size */
  	getwinsize();
-@@ -134,7 +145,7 @@ getterm()
+@@ -134,7 +141,7 @@ getterm()
  
  /* set up terminal modes optimal for icb */
  
@@ -133,7 +133,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  {
  	struct TTYSTRUCT tty;
  
-@@ -145,14 +156,14 @@ icbterm()
+@@ -145,14 +152,14 @@ icbterm()
  	bcopy((char *)&origtty, (char *)&tty, (unsigned)sizeof(struct TTYSTRUCT));
  
  	/* turn on cbreak - turn off echo */
@@ -153,7 +153,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  
  	echomode = 0;
  	/* set the new flags */
-@@ -165,7 +176,7 @@ icbterm()
+@@ -165,7 +172,7 @@ icbterm()
  
  /* restore term to original settings */
  
@@ -162,7 +162,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  {
  	if (badttyinfo)
  		return;
-@@ -206,7 +217,11 @@ char *s;
+@@ -206,7 +213,11 @@ char *s;
  	struct passwd *pw;
  	char login[17];
  	char *p = login;
@@ -174,7 +174,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  
  	/* has to start with a tilde */
  	if (*s++ != '~')
-@@ -258,11 +273,11 @@ echo()
+@@ -258,11 +269,11 @@ echo()
  	}
  
  	/* turn on echo */
@@ -190,7 +190,7 @@ $NetBSD: patch-av,v 1.5 2013/01/11 13:24:32 joerg Exp $
  
  	echomode = 1;
  
-@@ -287,11 +302,11 @@ noecho()
+@@ -287,11 +298,11 @@ noecho()
  	}
  
  	/* turn off echo */
