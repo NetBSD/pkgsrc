@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4500 2020/08/19 10:41:54 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.4501 2020/08/19 13:10:00 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7044,3 +7044,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/xentools46 [bouyer 2020-04-15]
 	Removed sysutils/xenkernel48 [bouyer 2020-04-15]
 	Removed sysutils/xentools48 [bouyer 2020-04-15]
+	Removed sysutils/xenstoretools [bouyer 2020-04-15]
