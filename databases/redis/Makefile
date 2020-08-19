@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2020/08/03 14:07:02 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2020/08/19 16:32:40 jperkin Exp $
 
 DISTNAME=	redis-6.0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "options.mk"
 
 RCD_SCRIPTS+=		redis
 RCD_SCRIPT_SRC.redis=	${FILESDIR}/redis.sh
