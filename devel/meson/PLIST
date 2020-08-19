@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/07/27 16:08:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/08/19 09:20:06 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,7 +66,6 @@ ${PYSITELIB}/mesonbuild/cmake/client.pyo
 ${PYSITELIB}/mesonbuild/cmake/common.py
 ${PYSITELIB}/mesonbuild/cmake/common.pyc
 ${PYSITELIB}/mesonbuild/cmake/common.pyo
-${PYSITELIB}/mesonbuild/cmake/data/preload.cmake
 ${PYSITELIB}/mesonbuild/cmake/executor.py
 ${PYSITELIB}/mesonbuild/cmake/executor.pyc
 ${PYSITELIB}/mesonbuild/cmake/executor.pyo
@@ -187,9 +186,6 @@ ${PYSITELIB}/mesonbuild/dependencies/coarrays.pyo
 ${PYSITELIB}/mesonbuild/dependencies/cuda.py
 ${PYSITELIB}/mesonbuild/dependencies/cuda.pyc
 ${PYSITELIB}/mesonbuild/dependencies/cuda.pyo
-${PYSITELIB}/mesonbuild/dependencies/data/CMakeLists.txt
-${PYSITELIB}/mesonbuild/dependencies/data/CMakeListsLLVM.txt
-${PYSITELIB}/mesonbuild/dependencies/data/CMakePathInfo.txt
 ${PYSITELIB}/mesonbuild/dependencies/dev.py
 ${PYSITELIB}/mesonbuild/dependencies/dev.pyc
 ${PYSITELIB}/mesonbuild/dependencies/dev.pyo
@@ -238,6 +234,9 @@ ${PYSITELIB}/mesonbuild/mconf.pyo
 ${PYSITELIB}/mesonbuild/mdist.py
 ${PYSITELIB}/mesonbuild/mdist.pyc
 ${PYSITELIB}/mesonbuild/mdist.pyo
+${PYSITELIB}/mesonbuild/mesondata.py
+${PYSITELIB}/mesonbuild/mesondata.pyc
+${PYSITELIB}/mesonbuild/mesondata.pyo
 ${PYSITELIB}/mesonbuild/mesonlib.py
 ${PYSITELIB}/mesonbuild/mesonlib.pyc
 ${PYSITELIB}/mesonbuild/mesonlib.pyo
