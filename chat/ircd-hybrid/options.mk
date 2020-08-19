@@ -1,18 +1,20 @@
-# $NetBSD: options.mk,v 1.7 2020/02/04 20:40:18 fox Exp $
+# $NetBSD: options.mk,v 1.8 2020/08/19 17:53:15 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ircd-hybrid
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
-PKG_OPTIONS_GROUP.ssl=		gnutls ssl wolfssl
+PKG_OPTIONS_GROUP.ssl=		gnutls openssl wolfssl
 
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_OPTIONS_LEGACY_OPTS+=	ssl:openssl
+
+PKG_SUGGESTED_OPTIONS=	openssl
 
 .include "../../mk/bsd.options.mk"
 
 ###
 ### SSL support
 ###
-.if !empty(PKG_OPTIONS:Mssl)
+.if !empty(PKG_OPTIONS:Mopenssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tls=openssl
 .elif !empty(PKG_OPTIONS:Mgnutls)
