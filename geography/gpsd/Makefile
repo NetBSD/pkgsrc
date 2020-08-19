@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/08/19 12:30:04 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2020/08/19 14:22:50 gdt Exp $
 
 DISTNAME=	gpsd-3.21
 CATEGORIES=	geography
@@ -50,6 +50,12 @@ SUBST_MESSAGE.pyenv=	Fixing Python path in test script
 SUBST_STAGE.pyenv=	pre-build
 SUBST_FILES.pyenv+=	tests/test_misc.py
 SUBST_SED.pyenv=	-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
+
+# \todo: RELRO fails, and it appears to be an upstream problem.
+# Reported upstream on 20200819.
+# https://lists.nongnu.org/archive/html/gpsd-dev/2020-08/msg00091.html
+# Currently believed to be an upstream problem; please fix upstream
+# rather than here.
 
 # \todo: Determine if CC/CXX are needed (e.g, when using other than gcc).
 #	CC=${CC:Q} CXX=${CXX:Q}
