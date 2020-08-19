@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2020/05/30 18:11:22 he Exp $
+# $NetBSD: Makefile,v 1.79 2020/08/19 19:54:11 bouyer Exp $
 
 DISTNAME=	xfig-3.2.7b
 CATEGORIES=	graphics
@@ -12,6 +12,7 @@ COMMENT=	CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
 LICENSE=	mit
 
 DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev
+TOOL_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 XAW_TYPE?=		3d
 
