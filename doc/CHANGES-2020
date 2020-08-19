@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4497 2020/08/19 07:09:25 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4498 2020/08/19 09:03:44 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7030,3 +7030,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py36-html-docs to 3.6.12 [adam 2020-08-19]
 	Updated lang/python37 to 3.7.9 [adam 2020-08-19]
 	Updated lang/py37-html-docs to 3.7.9 [adam 2020-08-19]
+	Updated www/curl to 7.72.0 [leot 2020-08-19]
