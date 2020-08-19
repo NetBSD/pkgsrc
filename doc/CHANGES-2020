@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4506 2020/08/19 16:53:37 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4507 2020/08/19 18:28:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7049,3 +7049,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/ircd-hybrid to 8.2.32 [fox 2020-08-19]
 	Updated databases/redis to 6.0.6nb2 [jperkin 2020-08-19]
 	Updated textproc/split-thai to 0.6 [scole 2020-08-19]
+	Updated www/spawn-fcgi to 1.6.4nb1 [wiz 2020-08-19]
