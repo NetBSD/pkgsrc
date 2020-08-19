@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4496 2020/08/19 05:49:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4497 2020/08/19 07:09:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7026,3 +7026,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/sqlite3-docs to 3.33.0 [adam 2020-08-19]
 	Updated databases/sqlite3-tcl to 3.33.0 [adam 2020-08-19]
 	Updated devel/lemon to 1.0.3.33.0 [adam 2020-08-19]
+	Updated lang/python36 to 3.6.12 [adam 2020-08-19]
+	Updated lang/py36-html-docs to 3.6.12 [adam 2020-08-19]
+	Updated lang/python37 to 3.7.9 [adam 2020-08-19]
+	Updated lang/py37-html-docs to 3.7.9 [adam 2020-08-19]
