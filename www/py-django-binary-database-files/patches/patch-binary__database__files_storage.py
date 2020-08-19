@@ -1,7 +1,7 @@
-$NetBSD: patch-binary__database__files_storage.py,v 1.1 2020/08/18 14:27:16 joerg Exp $
+$NetBSD: patch-binary__database__files_storage.py,v 1.2 2020/08/19 00:29:46 joerg Exp $
 
 1df96f9f7caf621c4c0d94bc09b27584e1c5aa9d
-b52960824eb95a3e98c8d0a8c8ac08b38a6821ca
+73cd278717a4dd9020979d6d08eb56365a728357
 
 --- binary_database_files/storage.py.orig	2020-08-10 14:31:32.000000000 +0000
 +++ binary_database_files/storage.py
@@ -26,7 +26,16 @@ b52960824eb95a3e98c8d0a8c8ac08b38a6821ca
          return o
  
      def _save(self, name, content):
-@@ -110,15 +115,22 @@ class DatabaseStorage(FileSystemStorage)
+@@ -109,21 +109,31 @@ class DatabaseStorage(FileSystemStorage):
+         full_path = safe_join(self.location, name)
+         return full_path[len(root_path) + 1 :]
+ 
++    def _path(self, instance_name):
++        return safe_join(settings.MEDIA_ROOT, instance_name)
++
+     def path(self, name):
+         """
+         Return a local filesystem path where the file can be retrieved using
          Python's built-in open() function.
  
          File names are normalized to the MEDIA_ROOT.
@@ -35,7 +44,7 @@ b52960824eb95a3e98c8d0a8c8ac08b38a6821ca
 +        be raised.
          """
 -        return safe_join(settings.MEDIA_ROOT, self.get_instance_name(name))
-+        localpath = safe_join(settings.MEDIA_ROOT, self.get_instance_name(name))
++        localpath = self._path(self.get_instance_name(name))
 +        if not os.path.exists(localpath):
 +            raise NotImplementedError
 +        return localpath
@@ -46,8 +55,19 @@ b52960824eb95a3e98c8d0a8c8ac08b38a6821ca
          if models.File.objects.filter(name=name).exists():
              return True
 -        return super(DatabaseStorage, self).exists(name)
-+        localpath = safe_join(settings.MEDIA_ROOT, self.get_instance_name(name))
++        localpath = self._path(name)
 +        return os.path.exists(localpath)
  
      def delete(self, name):
          """Delete the file with filename `name` from the database and filesystem."""
+@@ -135,7 +145,9 @@ class DatabaseStorage(FileSystemStorage):
+                 os.remove(hash_fn)
+         except models.File.DoesNotExist:
+             pass
+-        return super(DatabaseStorage, self).delete(name)
++        localpath = self._path(name)
++        if os.path.exists(localpath):
++            return super(DatabaseStorage, self).delete(name)
+ 
+     def url(self, name):
+         """Return the web-accessible URL for the file with filename `name`.
