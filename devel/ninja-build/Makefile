@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2020/07/06 10:48:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/19 08:52:44 adam Exp $
 
-DISTNAME=	ninja-1.10.0
+DISTNAME=	ninja-1.10.1
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ninja-build/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	ninja
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://ninja-build.org/
