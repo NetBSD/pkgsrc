@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4503 2020/08/19 15:05:59 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.4504 2020/08/19 15:27:20 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7046,3 +7046,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/xentools48 [bouyer 2020-08-19]
 	Removed sysutils/xenstoretools [bouyer 2020-08-19]
 	Updated security/ccid to 1.4.33 [gdt 2020-08-19]
+	Updated chat/ircd-hybrid to 8.2.32 [fox 2020-08-19]
