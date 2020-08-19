@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4501 2020/08/19 13:10:00 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.4502 2020/08/19 13:36:12 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7036,12 +7036,12 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/gdbus-codegen to 2.64.5 [adam 2020-08-19]
 	Updated devel/glib2 to 2.64.5 [adam 2020-08-19]
 	Updated devel/glib2-tools to 2.64.5 [adam 2020-08-19]
-	Removed sysutils/xenkernel42 [bouyer 2020-04-15]
-	Removed sysutils/xentools42 [bouyer 2020-04-15]
-	Removed sysutils/xenkernel45 [bouyer 2020-04-15]
-	Removed sysutils/xentools45 [bouyer 2020-04-15]
-	Removed sysutils/xenkernel46 [bouyer 2020-04-15]
-	Removed sysutils/xentools46 [bouyer 2020-04-15]
-	Removed sysutils/xenkernel48 [bouyer 2020-04-15]
-	Removed sysutils/xentools48 [bouyer 2020-04-15]
-	Removed sysutils/xenstoretools [bouyer 2020-04-15]
+	Removed sysutils/xenkernel42 [bouyer 2020-08-19]
+	Removed sysutils/xentools42 [bouyer 2020-08-19]
+	Removed sysutils/xenkernel45 [bouyer 2020-08-19]
+	Removed sysutils/xentools45 [bouyer 2020-08-19]
+	Removed sysutils/xenkernel46 [bouyer 2020-08-19]
+	Removed sysutils/xentools46 [bouyer 2020-08-19]
+	Removed sysutils/xenkernel48 [bouyer 2020-08-19]
+	Removed sysutils/xentools48 [bouyer 2020-08-19]
+	Removed sysutils/xenstoretools [bouyer 2020-08-19]
