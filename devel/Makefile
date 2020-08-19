@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3184 2020/08/18 23:38:47 riastradh Exp $
+# $NetBSD: Makefile,v 1.3185 2020/08/19 12:41:43 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -2161,6 +2161,7 @@ SUBDIR+=	py-ZopeSchema
 SUBDIR+=	py-ZopeTestrunner
 SUBDIR+=	py-absl-py
 SUBDIR+=	py-adb
+SUBDIR+=	py-ailment
 SUBDIR+=	py-aiocontextvars
 SUBDIR+=	py-aiofiles
 SUBDIR+=	py-aiounittest
@@ -2655,7 +2656,7 @@ SUBDIR+=	py-wheel
 SUBDIR+=	py-whichcraft
 SUBDIR+=	py-windbg
 SUBDIR+=	py-wrapt
-9SUBDIR+=	py-xbe
+SUBDIR+=	py-xbe
 SUBDIR+=	py-xdg
 SUBDIR+=	py-xdis
 SUBDIR+=	py-xopen
