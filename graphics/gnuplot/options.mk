@@ -1,9 +1,11 @@
-# $NetBSD: options.mk,v 1.16 2019/12/09 12:57:22 rin Exp $
+# $NetBSD: options.mk,v 1.17 2020/08/19 22:09:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
-PKG_SUPPORTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc lua pdf qt5 wxwidgets x11
+PKG_SUPPORTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc lua qt5 wxwidgets x11
 PKG_SUGGESTED_OPTIONS=	cairo cerf gd x11
 
+# remove after pkgsrc-2020Q3
+PKG_OPTIONS_LEGACY_OPTS+=	pdf:cairo
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	gnuplot-pdf-doc qt x11
@@ -27,12 +29,6 @@ CONFIGURE_ARGS+=	--without-cairo
 .include "../../lang/lua/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-lua
-.endif
-
-# PDF output is also provided by cairo
-.if !empty(PKG_OPTIONS:Mpdf)
-CONFIGURE_ARGS+=	--with-pdf
-.include "../../print/pdflib-lite/buildlink3.mk"
 .endif
 
 # to build doc/gnuplot.pdf
