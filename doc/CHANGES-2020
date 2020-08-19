@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4498 2020/08/19 09:03:44 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4499 2020/08/19 09:35:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7031,3 +7031,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/python37 to 3.7.9 [adam 2020-08-19]
 	Updated lang/py37-html-docs to 3.7.9 [adam 2020-08-19]
 	Updated www/curl to 7.72.0 [leot 2020-08-19]
+	Updated devel/ninja-build to 1.10.1 [adam 2020-08-19]
+	Updated devel/meson to 0.55.1 [adam 2020-08-19]
+	Updated devel/gdbus-codegen to 2.64.5 [adam 2020-08-19]
+	Updated devel/glib2 to 2.64.5 [adam 2020-08-19]
+	Updated devel/glib2-tools to 2.64.5 [adam 2020-08-19]
