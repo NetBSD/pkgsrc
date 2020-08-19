@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4495 2020/08/18 17:37:55 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.4496 2020/08/19 05:49:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7022,3 +7022,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/py-django-binary-database-files version 1.0.13 [joerg 2020-08-18]
 	Updated textproc/split-thai to 0.5 [scole 2020-08-18]
 	Updated geography/gpsd to 3.21 [gdt 2020-08-18]
+	Updated databases/sqlite3 to 3.33.0 [adam 2020-08-19]
+	Updated databases/sqlite3-docs to 3.33.0 [adam 2020-08-19]
+	Updated databases/sqlite3-tcl to 3.33.0 [adam 2020-08-19]
+	Updated devel/lemon to 1.0.3.33.0 [adam 2020-08-19]
