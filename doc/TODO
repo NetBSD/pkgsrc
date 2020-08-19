@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20004 2020/08/19 19:07:05 wiz Exp $
+$NetBSD: TODO,v 1.20005 2020/08/19 23:02:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -374,7 +374,7 @@ Suggested package updates
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.10.27
+	o ImageMagick-7.0.10.28
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -404,7 +404,7 @@ Suggested package updates
 	o alephone-20150620
 	o alevt-1.6.2
 	o allegro-5.10
-	o alsa-lib-1.2.2
+	o alsa-lib-1.2.3.2
 	o alsa-plugins-1.1.0
 	o amarok-2.9.0
 	o amavis-perl-0.3.12 [called just amavis]
@@ -450,6 +450,7 @@ Suggested package updates
 	o bin86-0.16.21
 	o binkd-1.04
 	o bird6-1.5.0
+	o bison-3.7
 	o bitlbee-3.6.1
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -592,12 +593,15 @@ Suggested package updates
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
+	o gawk-5.1.0
 	o gcal-4
 	o gcc-9.1
+	o gcc10-10.2.0
 	o gcin-1.5.5
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gdb-9.1
+	o gdbm-1.18
 	o gdm-2.32.2
 	o gdm-3.0.3
 	o geeklog-2.2.0
@@ -614,6 +618,7 @@ Suggested package updates
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
 	o gliv-1.9.7
+	o global-6.6.4
 	o glom-1.14.2
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
 	o gnet1-1.1.9
@@ -662,6 +667,8 @@ Suggested package updates
 	o grantlee-5.0.0
 	o greed-4.1
 	o gromacs-5.1.2
+	o grpc-1.31.1
+	o gsasl-1.8.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
@@ -760,6 +767,7 @@ Suggested package updates
 	o lgeneral-1.3.1
 	o libbpg-0.9.6
 	o libcarddav-14.0.4
+	o libcdio-paranoia-2.0.1
 	o libdrm-2.4.102
 	o libflash-0.4.13
 	o libgfshare-2.0.0
@@ -971,11 +979,14 @@ Suggested package updates
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.19.1 [drops python-2.x support]
 	o py-cassa-1.11.0
+	o py-certbot-1.7.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
+	o py-faker-4.1.2
 	o py-google-api-core-1.22.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-josepy-1.4.0
 	o py-keybinder-0.3.1
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
