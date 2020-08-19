@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4505 2020/08/19 16:32:57 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.4506 2020/08/19 16:53:37 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7048,3 +7048,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ccid to 1.4.33 [gdt 2020-08-19]
 	Updated chat/ircd-hybrid to 8.2.32 [fox 2020-08-19]
 	Updated databases/redis to 6.0.6nb2 [jperkin 2020-08-19]
+	Updated textproc/split-thai to 0.6 [scole 2020-08-19]
