@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/08/19 14:22:50 gdt Exp $
+# $NetBSD: Makefile,v 1.52 2020/08/19 23:46:52 gdt Exp $
 
 DISTNAME=	gpsd-3.21
 CATEGORIES=	geography
@@ -51,12 +51,6 @@ SUBST_STAGE.pyenv=	pre-build
 SUBST_FILES.pyenv+=	tests/test_misc.py
 SUBST_SED.pyenv=	-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
 
-# \todo: RELRO fails, and it appears to be an upstream problem.
-# Reported upstream on 20200819.
-# https://lists.nongnu.org/archive/html/gpsd-dev/2020-08/msg00091.html
-# Currently believed to be an upstream problem; please fix upstream
-# rather than here.
-
 # \todo: Determine if CC/CXX are needed (e.g, when using other than gcc).
 #	CC=${CC:Q} CXX=${CXX:Q}
 do-build:
@@ -68,11 +62,11 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && \
-	${SETENV} ${INSTALL_ENV} ${SCONSBIN} install
+	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${SCONSBIN} install
 
 do-test:
 	cd ${WRKSRC} && \
-	${SETENV} ${INSTALL_ENV} ${SCONSBIN} check
+	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${SCONSBIN} check
 
 # Upstream does not document the minimum version; hope this is ok.
 # \todo Pick a ruby version dynamically.
