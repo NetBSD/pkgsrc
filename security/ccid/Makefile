@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2020/08/19 14:53:37 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2020/08/19 15:05:50 gdt Exp $
 #
 
-DISTNAME=	ccid-1.4.27
+DISTNAME=	ccid-1.4.33
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -38,7 +38,7 @@ pre-configure:
 	cd ${WRKSRC} && ${SH} bootstrap
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/ccid/README
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/ccid/README.md
 	${INSTALL_DATA} ${WRKSRC}/contrib/RSA_SecurID/RSA_SecurID_getpasswd \
 	${DESTDIR}${PREFIX}/bin/RSA_SecurID_getpasswd
 	${INSTALL_DATA} ${WRKSRC}/contrib/RSA_SecurID/RSA_SecurID_getpasswd.1 \
