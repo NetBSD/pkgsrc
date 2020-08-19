@@ -183,7 +183,7 @@ space at word boundaries. (wrapper for 'thai-break-words)"
 'thai-break-words doesn't always split numbers properly. this may
 improve tokenization somewhat."
   ;; xxx this really should be fixed in 'thai-word lib
-  (let* ((num_rexp "\\([\u0e50-\u0e59]+\\)") ;; thai numbers
+  (let* ((num_rexp "\\([0-9\u0e50-\u0e59]+\\)") ;; numbers
 	 (nonnum_rexp "\\([\u0e00-\u0e4f\u0e5a-\u0e7f]\\)") ;; "non-numbers"
 	 (trailing_rexp (concat num_rexp nonnum_rexp))
 	 (leading_rexp (concat nonnum_rexp num_rexp)))
