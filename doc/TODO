@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20003 2020/08/19 18:28:52 wiz Exp $
+$NetBSD: TODO,v 1.20004 2020/08/19 19:07:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -369,25 +369,12 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o ImageMagick-7.0.10.27
-	o calibre-4.22
-	o hiredis-1.0.0
-	o ilmbase-2.5.3
-	o khal-0.10.2
-	o khard-0.17.0
-	o openexr-2.5.3
-	o poppler-20.08.0
-	o protobuf-3.13.0
-	o py-google-api-core-1.22.1
-	o py-parso-0.8.0
-	o py-test-cov-2.10.1
-	o rebar-3.13.2
 	o Chinput-3.0.1
 	o DarwinStreamingServer-6.0.3
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.10.25
+	o ImageMagick-7.0.10.27
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -396,9 +383,9 @@ Suggested package updates
 	o R-akima-11
 	o R-mapproj-3
 	o R-ncdf-1.6.8
-	o Sigil-1.2.0 [needs QtWebEngine]
 	o SOGo-4.3.1
 	o SOPE-4.3.1
+	o Sigil-1.2.0 [needs QtWebEngine]
 	o TECkit-2.5.10
 	o TiffIO-140a
 	o YoSucker-81
@@ -480,7 +467,7 @@ Suggested package updates
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
-	o calibre-4.21.0
+	o calibre-4.22
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -715,7 +702,7 @@ Suggested package updates
 	o icewm-1.7.0
 	o icinga-base-2.11.2
 	o ike-2.0.1 [pkg/37032]
-	o ilmbase-2.5.2
+	o ilmbase-2.5.3
 	o imapsync-1.678
 	o imp-6.2.12
 	o ingo-3.2.8
@@ -756,6 +743,7 @@ Suggested package updates
 	o kdevplatform-1.7.1
 	o keybinder-0.3.1
 	o khal-0.10.2
+	o khard-0.17.0
 	o kipi-plugins-4.14.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1
@@ -891,7 +879,7 @@ Suggested package updates
 	o opal-3.16.2
 	o openafs-1.8
 	o opencsg-1.4.0
-	o openexr-2.5.2
+	o openexr-2.5.3
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openoffice-4.1.7
@@ -973,6 +961,7 @@ Suggested package updates
 	o prelude-lml-3.1.0
 	o prelude-manager-3.1.0
 	o profit-2.5.3
+	o protobuf-3.13.0
 	o psmisc-22.20
 	o pspp-0.10.1
 	o ptlib-2.16.2
@@ -984,6 +973,7 @@ Suggested package updates
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
+	o py-google-api-core-1.22.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
@@ -999,6 +989,7 @@ Suggested package updates
 	o py-simpletal-5.1
 	o py-sphinx-autoapi-1.4.0
 	o py-sybase-0.37
+	o py-test-cov-2.10.1
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1018,6 +1009,7 @@ Suggested package updates
 	o razor-qt-0.5.2
 	o rbldnsd-0.998
 	o rdp-1.6
+	o rebar-3.13.2
 	o regionset-0.2
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
