@@ -1,11 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/06/20 19:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.33 2020/08/19 15:09:40 gdt Exp $
 
 DISTNAME=	pcsc-lite-1.9.0
 CATEGORIES=	security
-# Note that the MASTER_SITES URL is not stable with version changes,
-# and one can end up with an old version if DISTNAME is changed but
-# not the magic number in MASTER_SITES.
-# https://alioth.debian.org/frs/?group_id=30105&release_id=2031#pcsclite-_1.8.18-title-content
 MASTER_SITES=	https://pcsclite.apdu.fr/files/
 EXTRACT_SUFX=	.tar.bz2
 
