@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.775 2020/08/17 07:01:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.776 2020/08/19 16:25:56 riastradh Exp $
 #
 
 COMMENT=	Security tools
@@ -161,6 +161,7 @@ SUBDIR+=	libcrack
 SUBDIR+=	libcurvecpr
 SUBDIR+=	libdecaf
 SUBDIR+=	libdes
+SUBDIR+=	libfido2
 SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgabe
@@ -503,6 +504,7 @@ SUBDIR+=	py-urllib2-kerberos
 SUBDIR+=	py-xmlsec
 SUBDIR+=	py-yara
 SUBDIR+=	py-yubiauth
+SUBDIR+=	py-yubikey-manager
 SUBDIR+=	pyca
 SUBDIR+=	qca2
 SUBDIR+=	qca2-gnupg
@@ -638,6 +640,7 @@ SUBDIR+=	xmlsec1
 SUBDIR+=	yafic
 SUBDIR+=	yara
 SUBDIR+=	ykclient
+SUBDIR+=	ykman
 SUBDIR+=	ykpers
 SUBDIR+=	zebedee
 SUBDIR+=	zkt
