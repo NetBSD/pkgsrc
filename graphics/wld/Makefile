@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/17 20:17:33 leot Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/19 08:16:21 nia Exp $
 
 DISTNAME=	wld-0.0.0.20200220
 PKGREVISION=	2
@@ -28,6 +28,12 @@ WLD_DRIVERS+=	nouveau
 MAKE_FLAGS+=	DRM_DRIVERS=${WLD_DRIVERS:Q}
 
 PKGCONFIG_OVERRIDE+=	wld.pc.in
+
+.include "../../devel/wayland/platform.mk"
+
+.if empty(PLATFORM_SUPPORTS_WAYLAND:M[Yy][Ee][Ss])
+PKG_SKIP_REASON+=	"Platform does not support Wayland"
+.endif
 
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
