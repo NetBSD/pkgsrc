@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.80 2020/08/18 17:57:25 leot Exp $
+# $NetBSD: Makefile,v 1.81 2020/08/19 20:05:44 nia Exp $
 
 DISTNAME=	libsndfile-1.0.29
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erikd/}
 GITHUB_PROJECT=	libsndfile
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/libsndfile/
@@ -16,7 +17,7 @@ TOOL_DEPENDS+=	autogen-[0-9]*:../../devel/autogen
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autogen autoconf autoreconf automake pkg-config
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 GNU_CONFIGURE=		yes
 PYTHON_FOR_BUILD_ONLY=	tool
@@ -32,9 +33,6 @@ BUILDLINK_PASSTHRU_DIRS.Darwin+=	/Developer
 .if !empty(PKGSRC_COMPILER:Msunpro)
 CXXFLAGS+=		-features=extensions
 .endif
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
