@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20002 2020/08/18 04:41:02 tnn Exp $
+$NetBSD: TODO,v 1.20003 2020/08/19 18:28:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -370,6 +370,7 @@ Suggested package updates
 =========================
 
 	o ImageMagick-7.0.10.27
+	o calibre-4.22
 	o hiredis-1.0.0
 	o ilmbase-2.5.3
 	o khal-0.10.2
