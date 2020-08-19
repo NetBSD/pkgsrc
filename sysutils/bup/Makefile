@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/06/16 21:12:53 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2020/08/19 13:42:52 pho Exp $
 
 DISTNAME=	bup-0.30.1
 CATEGORIES=	sysutils
@@ -48,6 +48,9 @@ TEST_TARGET=	test
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+# Even if converters/pandoc is installed, pretend as if it weren't.
+MAKE_FLAGS+=	PANDOC=
 
 USE_TOOLS+=		bash gmake perl:run
 REPLACE_PERL+=		wvtest
