@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4509 2020/08/20 00:51:33 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.4510 2020/08/20 09:52:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7052,3 +7052,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/spawn-fcgi to 1.6.4nb1 [wiz 2020-08-19]
 	Updated net/mosquitto to 1.6.12 [gdt 2020-08-19]
 	Updated net/unifi to 5.14.22 [gdt 2020-08-20]
+	Updated net/py-botocore to 1.17.46 [adam 2020-08-20]
+	Updated net/py-boto3 to 1.14.46 [adam 2020-08-20]
+	Updated net/py-awscli to 1.18.123 [adam 2020-08-20]
