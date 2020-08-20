@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4510 2020/08/20 09:52:23 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4511 2020/08/20 11:19:43 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7055,3 +7055,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-botocore to 1.17.46 [adam 2020-08-20]
 	Updated net/py-boto3 to 1.14.46 [adam 2020-08-20]
 	Updated net/py-awscli to 1.18.123 [adam 2020-08-20]
+	Added www/py-wagtailnews version 2.7.1 [joerg 2020-08-20]
