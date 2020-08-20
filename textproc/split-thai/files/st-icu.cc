@@ -7,8 +7,8 @@
 #include <unicode/brkiter.h>
 #include <unicode/regex.h>
 #include <unicode/ucnv.h>
-#include <unicode/ustream.h>
 #include <unicode/ustdio.h>
+#include <unicode/ustream.h>
 
 using namespace std;
 using namespace icu;
@@ -18,6 +18,7 @@ using namespace icu;
 const UnicodeString thai_rexp = "[\\u0e00-\\u0e7f]+";
 const UnicodeString thai_consonant = "[\\u0e01-\\u0e2e]+";
 const UnicodeString thai_num_rexp = "[\\u0e50-\\u0e59]+";
+const UnicodeString number_rexp = "[0-9\\u0e50-\\u0e59]+";
 const UnicodeString thai_nonnum_rexp = "[\\u0e01-\\u0e4f\\u0e5a-\\u0e7f]+";
 
 void usage() {
@@ -56,7 +57,7 @@ bool matches_regexp(const UnicodeString &s, const UnicodeString &regexp) {
 // add spaces to string with thai numbers
 UnicodeString space_thai_numbers(const UnicodeString &s) {
 	// return string unmodified if no numbers
-	if ( ! matches_regexp(s, thai_num_rexp) ) {
+	if ( ! matches_regexp(s, number_rexp) ) {
 		return s;
 	}
 
@@ -105,7 +106,7 @@ UnicodeString split_words_consolidated(const UnicodeString &s) {
 	}
 
 	// only one word found, trim and done
-	if ( vbreak.size() == 1 ) {
+	if ( vbreak.size() <= 1 ) {
 		UnicodeString ss(s);
 		return ss.trim();
 	}
