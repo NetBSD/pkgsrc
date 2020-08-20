@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4512 2020/08/20 11:32:02 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.4513 2020/08/20 11:37:48 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7057,3 +7057,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-awscli to 1.18.123 [adam 2020-08-20]
 	Added www/py-wagtailnews version 2.7.1 [joerg 2020-08-20]
 	Added sysutils/xenstoretools version 4.11.3 [bouyer 2020-08-20]
+	Updated www/py-djangorestframework to 3.11.1 [joerg 2020-08-20]
