@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.3 2020/07/17 16:23:21 bsiegert Exp $
+# $NetBSD: go-module.mk,v 1.4 2020/08/20 06:50:49 tnn Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -70,6 +70,9 @@ post-extract:
 	${MKDIR} ${WRKDIR}/.goproxy/${i:H}
 	cp ${DISTDIR}/${DIST_SUBDIR}/${i:C/[\/!]/_/g} ${WRKDIR}/.goproxy/${i}
 .endfor
+
+pre-clean:
+	${RUN} [ -d ${WRKDIR}/.gopath ] && chmod -R +w ${WRKDIR}/.gopath || true
 
 _VARGROUPS+=		go
 _PKG_VARS.go=		GO_BUILD_PATTERN
