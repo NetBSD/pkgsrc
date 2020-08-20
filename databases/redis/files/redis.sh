@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: redis.sh,v 1.3 2020/08/10 11:23:50 wiz Exp $
+# $NetBSD: redis.sh,v 1.4 2020/08/20 23:37:30 wiz Exp $
 #
 # PROVIDE: redis
 # REQUIRE: DAEMON network
@@ -14,7 +14,7 @@ name="redis"
 rcvar=$name
 command="@PREFIX@/bin/redis-server"
 redis_user="@REDIS_USER@"
-redis_flags="${redis_flags:- --bind 127.0.0.1 --daemonize yes}"
+redis_flags="@PKG_SYSCONFDIR@/redis.conf"
 
 if [ -f /etc/rc.subr ]; then
         load_rc_config $name
