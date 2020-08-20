@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4517 2020/08/20 19:28:08 fox Exp $
+$NetBSD: CHANGES-2020,v 1.4518 2020/08/20 22:27:13 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7062,3 +7062,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/split-thai to 0.7 [scole 2020-08-20]
 	Added audio/ncspot version 0.2.1 [pin 2020-08-20]
 	Updated sysutils/py-Glances to 3.1.5 [fox 2020-08-20]
+	Updated devel/fossil to 2.12.1 [js 2020-08-20]
