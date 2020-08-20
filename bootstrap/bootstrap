@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.291 2020/08/14 08:45:30 jperkin Exp $
+# $NetBSD: bootstrap,v 1.292 2020/08/20 13:04:01 bacon Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -70,6 +70,7 @@ usage="Usage: $0 "'
     [ --pkginfodir <pkginfodir> ]
     [ --pkgmandir <pkgmandir> ]
     [ --prefer-pkgsrc <list|yes|no> ]
+    [ --prefer-native <list|yes|no> ]
     [ --prefix <prefix> ]
     [ --preserve-path ]
     [ --quiet ]
@@ -448,6 +449,10 @@ while [ $# -gt 0 ]; do
 			prefer_pkgsrc=`get_optarg "$1"` ;;
 	--prefer-pkgsrc)
 			prefer_pkgsrc="$2"; shift ;;
+	--prefer-native=*)
+			prefer_native=`get_optarg "$1"` ;;
+	--prefer-native)
+			prefer_native="$2"; shift ;;
 	--preserve-path) preserve_path=yes ;;
 	--mk-fragment=*)
 			mk_fragment=`get_optarg "$1"` ;;
@@ -1064,8 +1069,27 @@ echo "PKGINFODIR=		$pkginfodir" >> ${TARGET_MKCONF}
 echo "PKGMANDIR=		$pkgmandir" >> ${TARGET_MKCONF}
 echo "" >> ${TARGET_MKCONF}
 
+case $opsys in
+Linux)
+	# Default to PREFER_PKGSRC=yes unless user specifies --prefer-native=yes
+	# Linux systems likely have software from other packages managers
+	# like yum or apt that can leak into pkgsrc and cause issues as they
+	# age, undergo ABI changes, or get added/removed behind our backs.
+	# Let pkgsrc maintain all dependencies to avoid these problems.
+	if [ -z "$prefer_pkgsrc" ] && [ "$prefer_native" != "yes" ]; then
+		prefer_pkgsrc="yes"
+	fi
+	;;
+esac
+
 if [ -n "$prefer_pkgsrc" ]; then
+	echo "# WARNING: Changing PREFER_* after bootstrap will require rebuilding all" >> ${TARGET_MKCONF}
+	echo "# packages with a dependency that switched between native/pkgsrc." >> ${TARGET_MKCONF}
 	echo "PREFER_PKGSRC=		$prefer_pkgsrc" >> ${TARGET_MKCONF}
+	echo "" >> ${TARGET_MKCONF}
+fi
+if [ -n "$prefer_native" ]; then
+	echo "PREFER_NATIVE=		$prefer_native" >> ${TARGET_MKCONF}
 	echo "" >> ${TARGET_MKCONF}
 fi
 
