@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.6 2020/08/20 11:30:25 bouyer Exp $
+bin/xenstore
+bin/xenstore-chmod
+bin/xenstore-control
+bin/xenstore-exists
+bin/xenstore-list
+bin/xenstore-ls
+bin/xenstore-read
+bin/xenstore-rm
+bin/xenstore-watch
+bin/xenstore-write
+include/xenstore-compat/xs.h
+include/xenstore-compat/xs_lib.h
+include/xenstore.h
+include/xenstore_lib.h
+include/xs.h
+include/xs_lib.h
+lib/libxenstore.a
+lib/libxenstore.so
+lib/libxenstore.so.3.0
+lib/libxenstore.so.3.0.3
+share/pkgconfig/xenstore.pc
