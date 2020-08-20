@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.896 2020/08/19 13:10:00 bouyer Exp $
+# $NetBSD: Makefile,v 1.897 2020/08/20 13:55:36 jperkin Exp $
 #
 
 COMMENT=	System utilities
@@ -777,6 +777,7 @@ SUBDIR+=	xdu
 SUBDIR+=	xe-guest-utilities
 SUBDIR+=	xenkernel411
 SUBDIR+=	xenkernel413
+SUBDIR+=	xenstoretools
 SUBDIR+=	xentools411
 SUBDIR+=	xentools413
 SUBDIR+=	xenvstat
