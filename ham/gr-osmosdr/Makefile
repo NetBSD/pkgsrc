@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/08/20 01:52:38 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2020/08/20 01:55:06 tnn Exp $
 
 DISTNAME=		gr-osmosdr-0.1.4
 PKGREVISION=		18
@@ -48,7 +48,6 @@ REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 .include	"../../ham/hackrf/buildlink3.mk"
 .include	"../../ham/soapy-sdr/buildlink3.mk"
 
-BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.8
 .include	"../../ham/gnuradio-core/buildlink3.mk"
 .include	"../../ham/gnuradio-uhd/buildlink3.mk"
 
