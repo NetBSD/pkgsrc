@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2020/07/10 07:23:43 adam Exp $
+# $NetBSD: Makefile,v 1.40 2020/08/20 09:46:52 adam Exp $
 
-DISTNAME=	botocore-1.17.20
+DISTNAME=	botocore-1.17.46
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/botocore/}
