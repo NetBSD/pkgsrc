@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/08/20 09:17:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2020/08/20 11:31:04 bouyer Exp $
 #
 
 # Values from XenServer 7.0 = 7, 0, 0, 125243
@@ -23,7 +23,7 @@ HOMEPAGE=	http://www.xenserver.com/
 COMMENT=	NetBSD VM tools for Citrix XenServer
 LICENSE=	gnu-gpl-v2
 
-#DEPENDS+=	xenstoretools-[0-9]*:../../sysutils/xenstoretools
+DEPENDS+=	xenstoretools-[0-9]*:../../sysutils/xenstoretools
 
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
 
