@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4513 2020/08/20 11:37:48 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.4514 2020/08/20 14:01:48 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7058,3 +7058,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/py-wagtailnews version 2.7.1 [joerg 2020-08-20]
 	Added sysutils/xenstoretools version 4.11.3 [bouyer 2020-08-20]
 	Updated www/py-djangorestframework to 3.11.1 [joerg 2020-08-20]
+	Updated textproc/miller to 5.9.0 [fcambus 2020-08-20]
