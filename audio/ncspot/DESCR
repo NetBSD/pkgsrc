@@ -1,0 +1,6 @@
+ncurses Spotify client written in Rust using librespot. It is heavily inspired
+by ncurses MPD clients, such as ncmpc.  My motivation was to provide a simple
+and resource friendly alternative to the official client as well as to support
+platforms that currently don't have a Spotify client, such as the *BSDs.
+
+Note: ncspot requires a Spotify premium account.
