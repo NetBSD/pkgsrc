@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1481 2020/08/18 14:27:15 joerg Exp $
+# $NetBSD: Makefile,v 1.1482 2020/08/20 11:20:12 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -825,6 +825,7 @@ SUBDIR+=	py-uwsgitop
 SUBDIR+=	py-w3lib
 SUBDIR+=	py-wagtail
 SUBDIR+=	py-wagtailmenus
+SUBDIR+=	py-wagtailnews
 SUBDIR+=	py-waitress
 SUBDIR+=	py-webassets
 SUBDIR+=	py-webcolors
