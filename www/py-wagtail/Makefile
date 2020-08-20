@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/08/18 01:16:13 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/20 12:58:35 joerg Exp $
 
 DISTNAME=	wagtail-2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtail/}
 
@@ -11,6 +12,7 @@ COMMENT=	Django-based Content Management System
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django>=2<3.1:../../www/py-django2
+DEPENDS+=	${PYPKGPREFIX}-django-filter>=2.2.0:../../www/py-django-filter
 DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=5.0<6.0:../../www/py-django-modelcluster
 DEPENDS+=	${PYPKGPREFIX}-django-taggit>=1.0<2.0:../../www/py-django-taggit
 DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.2<5.0:../../www/py-django-treebeard
@@ -37,6 +39,9 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-django2
 
 REPLACE_PYTHON+=	wagtail/project_template/manage.py
+
+pre-install:
+	${FIND} ${WRKSRC} -name '*.orig' -delete
 
 do-test:
 	cd ${WRKSRC} && ${PREFIX}/bin/coverage-${PYVERSSUFFIX} run -m django test --settings=wagtail.tests.settings
