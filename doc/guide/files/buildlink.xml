@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $NetBSD: buildlink.xml,v 1.43 2020/06/20 09:47:05 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.44 2020/08/20 13:31:58 bacon Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -602,16 +602,39 @@ PREFER_NATIVE=  getopt skey tcp_wrappers
       file to be listed in <varname>PREFER_NATIVE</varname>,
       otherwise it is simply ignored in that list.</para>
 
-      <para>Setting <varname>PREFER_NATIVE</varname> should be performed
-      straight after bootstrap and <varname>PREFER_PKGSRC</varname> during
-      bootstrap.
+      <para><varname>PREFER_PKGSRC</varname> and
+      <varname>PREFER_NATIVE</varname> should be set during bootstrap
+      to ensure that the bootstrap process does not use inapropriate
+      native tools as dependencies for core packages.
+
+<screen>
+&rprompt; <userinput>./bootstrap --prefer-pkgsrc yes --prefer-native openssl</userinput>
+</screen>
+
       Switching between settings globally at a later date can introduce
       complications with dependency resolution. This is caused by packages
-      built with the opposite preference being installed alongside each other.</para>
-      
-<screen>
-&rprompt; <userinput>./bootstrap --prefer-pkgsrc yes</userinput>
-</screen>
+      built with the opposite preference being installed alongside each
+      other.  Hence, any changes to these variables after bootstrap will
+      necessitate rebuilding all packages depending on one whose preference
+      has been changed.  This is not trivial and should be avoided.</para>
+
+      <para>When using pkgsrc on Linux systems, there is high risk of
+      "leakage", where programs installed by pkgsrc may inadvertently use a
+      command or library not installed by pkgsrc, e.g. those installed by
+      yum or apt.  Such foreign dependencies may be installed, removed, or
+      upgraded to a version incompatible with the pkgsrc package at any
+      time, causing pkgsrc packages to subsequently malfunction.  Pkgsrc
+      cannot prevent this, as it has no control over other package managers.
+      Another potential problem is that under Redhat Enterprise and related
+      Linux systems, yum packages are only patched and never upgraded, so
+      eventually they may become too outdated for use by pkgsrc.  Even
+      intentionally using foreign dependencies, not considered leakage, can
+      lead to these problems, so it is generally discouraged.  In order to
+      minimize such problems, PREFER_PKGSRC defaults to "yes" on Linux systems.
+      This ensures that pkgsrc is aware of any changes to dependency packages
+      and can rebuild or upgrade the entire dependency tree as needed.  This
+      default can be overridden by setting --prefer-pkgsrc to "no" or a list of
+      packages, or by setting --prefer-native to "yes".</para>
     </sect2>
   </sect1>
 </chapter>
