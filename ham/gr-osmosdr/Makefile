@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/05/06 14:04:43 adam Exp $
+# $NetBSD: Makefile,v 1.25 2020/08/20 01:52:38 tnn Exp $
 
 DISTNAME=		gr-osmosdr-0.1.4
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		ham
 MASTER_SITES+=		http://git.osmocom.org/gr-osmosdr/snapshot/
 
@@ -19,6 +19,8 @@ CMAKE_ARGS+=	-Wno-dev
 # --   * Ettus USRP Devices
 CMAKE_ARGS+=	-DGNURADIO_UHD_INCLUDE_DIRS=${PREFIX}/include/uhd
 CMAKE_ARGS+=	-DGNURADIO_BLOCKS_INCLUDE_DIRS=${PREFIX}/include
+# TODO: make it PKG_OPTION
+CMAKE_ARGS+=	-DENABLE_DOXYGEN=OFF
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
@@ -44,9 +46,10 @@ REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 # gr-fcdproplus does not build at the moment
 #.include	"../../ham/gr-fcdproplus/buildlink3.mk"
 .include	"../../ham/hackrf/buildlink3.mk"
+.include	"../../ham/soapy-sdr/buildlink3.mk"
 
+BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.8
 .include	"../../ham/gnuradio-core/buildlink3.mk"
-.include	"../../ham/gnuradio-fcd/buildlink3.mk"
 .include	"../../ham/gnuradio-uhd/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
