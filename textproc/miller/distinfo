@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2020/08/04 15:35:53 fcambus Exp $
+$NetBSD: distinfo,v 1.18 2020/08/20 14:01:27 fcambus Exp $
 
-SHA1 (mlr-5.8.0.tar.gz) = 82f44a8e56c8358159dbb04980d975e1cbc63e5e
-RMD160 (mlr-5.8.0.tar.gz) = 1874caa249973e12badddceabb1177470399d0e8
-SHA512 (mlr-5.8.0.tar.gz) = 6472872246e69574e8e57f4eb077eb4162e68d7db46a5ce2b1d5cfeab5fa660ec73baf0347ca5f82cc27dfd76fbeca7e8ee3316ebc8325ca86bd7f44ac680542
-Size (mlr-5.8.0.tar.gz) = 1267923 bytes
+SHA1 (mlr-5.9.0.tar.gz) = ed7e896f9d88cc7c9c082d7cc5ed5cd1082ab7be
+RMD160 (mlr-5.9.0.tar.gz) = a8e5e43023c77831301eff884b5d46c41b21c3f0
+SHA512 (mlr-5.9.0.tar.gz) = 45c67b0841417787ed1bd4c96f1d63d695c6b28dc7386eeb167aa5194ae0080c61be2aa69d39f80200bc3787dcfdb74a437005df2474bcd94eda03d510984eae
+Size (mlr-5.9.0.tar.gz) = 1270452 bytes
