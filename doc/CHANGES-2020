@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4508 2020/08/19 23:33:49 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.4509 2020/08/20 00:51:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7051,3 +7051,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/split-thai to 0.6 [scole 2020-08-19]
 	Updated www/spawn-fcgi to 1.6.4nb1 [wiz 2020-08-19]
 	Updated net/mosquitto to 1.6.12 [gdt 2020-08-19]
+	Updated net/unifi to 5.14.22 [gdt 2020-08-20]
