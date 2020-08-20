@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.77 2020/06/01 19:42:48 adam Exp $
+$NetBSD: distinfo,v 1.78 2020/08/20 16:40:57 gavan Exp $
 
 SHA1 (exim-4.94.tar.xz) = 60323c206be7d9f535c4bd369b470a514e489cd5
 RMD160 (exim-4.94.tar.xz) = 6b51d059d9667c732df9ccb87f0de9b341c35281
@@ -9,3 +9,4 @@ SHA1 (patch-OS_Makefile-Default) = 6af17f036ed02a3bc37c1f303269eea447fcb691
 SHA1 (patch-lookups_Makefile) = cfc40dba3f75ef37b9887f7767139ad50cf9d4e5
 SHA1 (patch-scripts_exim__install) = aa0a31e77d5f76e33bc92140c14d39c79f710b95
 SHA1 (patch-src_exicyclog.src) = cea5f04f52c9264fd7d279c046686dac2dc57a65
+SHA1 (patch-src_store.c) = db12aefb50c2741cb525b7363c4bafbe353dfc5f
