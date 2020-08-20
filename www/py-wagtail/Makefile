@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/20 12:58:35 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/20 13:18:45 joerg Exp $
 
 DISTNAME=	wagtail-2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-filter>=2.2.0:../../www/py-django-filter
 DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=5.0<6.0:../../www/py-django-modelcluster
 DEPENDS+=	${PYPKGPREFIX}-django-taggit>=1.0<2.0:../../www/py-django-taggit
 DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.2<5.0:../../www/py-django-treebeard
-DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.7.4<4.0:../../www/py-djangorestframework
+DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.11.1<4.0:../../www/py-djangorestframework
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.0.0<8.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-Willow>=1.3<1.5.0:../../graphics/py-Willow
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.8<5.0:../../www/py-beautifulsoup4
