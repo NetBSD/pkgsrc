@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2020/08/14 19:28:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.87 2020/08/21 19:39:28 schmonz Exp $
 
 .include "dist.mk"
 
@@ -184,6 +184,7 @@ SUBST_NOOP_OK.findlib=	yes
 SUBST_CLASSES+=		pkgversion
 SUBST_STAGE.pkgversion=	pre-configure
 SUBST_FILES.pkgversion=	Lib/lib2to3/pgen2/driver.py
+SUBST_FILES.pkgversion+=Lib/distutils/command/install_egg_info.py
 SUBST_VARS.pkgversion=	PKGVERSION_NOREV
 
 .include "options.mk"
