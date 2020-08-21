@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/01 16:01:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/08/21 08:00:51 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -110,7 +110,7 @@ ${PYSITELIB}/xmlschema/validators/schema.pyc
 ${PYSITELIB}/xmlschema/validators/schema.pyo
 ${PYSITELIB}/xmlschema/validators/schemas/XMLSchema-hasFacetAndProperty_minimal.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/XMLSchema-instance_minimal.xsd
-${PYSITELIB}/xmlschema/validators/schemas/XMLSchema-versioning_minimal.xsd
+${PYSITELIB}/xmlschema/validators/schemas/XMLSchema-versioning.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/XSD_1.0/XMLSchema.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/XSD_1.0/datatypes.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/XSD_1.1/XMLSchema.xsd
