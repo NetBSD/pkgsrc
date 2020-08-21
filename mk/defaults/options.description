@@ -217,6 +217,7 @@ ffmpegthumbnailer	Enable ffmpeg thumbnailing support.
 fftw			Use the fftw library for Discrete Fourier Transforms.
 fftw-fortran		Enable Fortran support.
 filter-design		Adding filter_design capability.
+fido			Enable U2F/FIDO/FIDO2/WebAuthn support.
 finger			Enable finger support.
 flac			Enable FLAC support.
 flambda			Enable Flambda optimisation passes
