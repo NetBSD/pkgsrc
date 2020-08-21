@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.97 2020/08/11 12:45:54 hauke Exp $
+# $NetBSD: Darwin.mk,v 1.98 2020/08/21 21:29:16 sjmulder Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -13,17 +13,20 @@
 #		10.1.x	5.x.y
 # Jaguar	10.2.x	6.x.y
 # Panther	10.3.x	7.x.y
-# Tiger		10.4.x	8.x.y	2.x (gcc 4.0, 4.0.1 from 2.2)
-# Leopard	10.5.x	9.x.y	3.x (gcc 4.0.1, 4.0.1 and 4.2.1 from 3.1)
+# Tiger		10.4.x	8.x.y	2.x  (gcc 4.0, 4.0.1 from 2.2)
+# Leopard	10.5.x	9.x.y	3.x  (gcc 4.0.1, 4.0.1 and 4.2.1 from 3.1)
 # Snow Leopard	10.6.x	10.x.y	3.2+ (gcc 4.0.1 and 4.2.1)
-# Lion		10.7.x	11.x.y	4.1 (llvm gcc 4.2.1)
-# Mountain Lion	10.8.x	12.x.y	4.5 (llvm gcc 4.2.1)
-# Mavericks	10.9.x	13.x.y	6 (llvm clang 6.0)
-# Yosemite	10.10.x	14.x.y	6 (llvm clang 6.0)
-# El Capitan	10.11.x	15.x.y	7 (llvm clang 7.0)
-# Sierra	10.12.x	16.x.y	8.3 (llvm clang 8.0)
-# High Sierra	10.13.x	17.x.y	9.3 (llvm clang 9.0)
+# Lion		10.7.x	11.x.y	4.1  (llvm gcc 4.2.1)
+# Mountain Lion	10.8.x	12.x.y	4.5  (llvm gcc 4.2.1)
+# Mavericks	10.9.x	13.x.y	6    (llvm clang 6.0)
+# Yosemite	10.10.x	14.x.y	6    (llvm clang 6.0)
+# El Capitan	10.11.x	15.x.y	7    (llvm clang 7.0)
+# Sierra	10.12.x	16.x.y	8.3  (llvm clang 8.0)
+# High Sierra	10.13.x	17.x.y	9.3  (llvm clang 9.0)
 # Mojave	10.14.x	18.x.y	10.2 (llvm clang 10.0)
+# Catalina	10.15.x 19.x.y
+# Big Sur	11.0*   20.0    12.0 (llvm clang 12.0)
+#  *) 11.0 on ARM, 10.16 on Intel Macs, for now
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
 .if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
