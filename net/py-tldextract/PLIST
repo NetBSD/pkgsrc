@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/03/06 08:48:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/08/21 12:37:48 adam Exp $
 bin/tldextract-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/tldextract/__init__.pyo
 ${PYSITELIB}/tldextract/__main__.py
 ${PYSITELIB}/tldextract/__main__.pyc
 ${PYSITELIB}/tldextract/__main__.pyo
+${PYSITELIB}/tldextract/_version.py
+${PYSITELIB}/tldextract/_version.pyc
+${PYSITELIB}/tldextract/_version.pyo
 ${PYSITELIB}/tldextract/cli.py
 ${PYSITELIB}/tldextract/cli.pyc
 ${PYSITELIB}/tldextract/cli.pyo
