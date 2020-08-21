@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4533 2020/08/21 20:43:29 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4534 2020/08/21 20:46:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7087,3 +7087,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-llvmlite to 0.34.0 [adam 2020-08-21]
 	Updated math/py-numba to 0.51.0 [adam 2020-08-21]
 	Updated textproc/xapian to 1.4.17 [schmonz 2020-08-21]
+	Updated textproc/xapian-omega to 1.4.17 [schmonz 2020-08-21]
