@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/01/18 21:33:13 nia Exp $
+# $NetBSD: Makefile,v 1.57 2020/08/21 21:17:04 adam Exp $
 
 DISTNAME=	atari800-4.2.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -20,6 +20,7 @@ USE_TOOLS+=		gmake unzip
 CONFIGURE_ARGS+=	--disable-sdltest
 CONFIGURE_ARGS+=	--with-sound=sdl
 CONFIGURE_ARGS+=	--with-video=sdl
+CONFIGURE_ARGS.Darwin+=	--disable-rserial
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	${PREFIX}/share/atari800
