@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2020/07/07 20:08:46 adam Exp $
+$NetBSD: distinfo,v 1.19 2020/08/21 20:33:16 adam Exp $
 
-SHA1 (numba-0.50.1.tar.gz) = 0965f268b851f3c9a61eec9dba10c1f5e5403468
-RMD160 (numba-0.50.1.tar.gz) = 8ce054c9332282dbd1fead6a9b7e575a138e3082
-SHA512 (numba-0.50.1.tar.gz) = 5ab19542f86cb1a5755be7e9d53c99a5de7155aa095c3fd69e46a1193a867ae740995b37a6b308647aad8e9640acba3c73cbc5b977115776e1e256d0227ee743
-Size (numba-0.50.1.tar.gz) = 2005823 bytes
+SHA1 (numba-0.51.0.tar.gz) = 17c034a05759afeb02a359649f3fc35d471a8a8c
+RMD160 (numba-0.51.0.tar.gz) = b713cdaf2ccec41755e0badec5aa7c1835a6b21f
+SHA512 (numba-0.51.0.tar.gz) = 1cd65ca6dc01a35732c8ef42bed97b07cd82e4c37352df1f3d11d9bea03604416893d990fc21a6d232401a79d3c8ee3c58536e6b23de3518c779670e0b29f1ca
+Size (numba-0.51.0.tar.gz) = 2056825 bytes
 SHA1 (patch-numba_np_ufunc_workqueue.c) = 35edad2c8eaf06197872bd04325524dd8de8f0e9
