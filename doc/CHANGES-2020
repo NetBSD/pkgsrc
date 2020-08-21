@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4525 2020/08/21 12:32:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4526 2020/08/21 12:43:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7075,3 +7075,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/py-m3u8 to 0.7.1 [adam 2020-08-21]
 	Updated devel/protobuf to 3.13.0 [adam 2020-08-21]
 	Updated devel/py-protobuf to 3.13.0 [adam 2020-08-21]
+	Updated net/py-tldextract to 2.2.3 [adam 2020-08-21]
+	Updated devel/py-zope.exceptions to 4.4 [adam 2020-08-21]
+	Updated devel/py-ZopeComponent to 4.6.2 [adam 2020-08-21]
+	Updated devel/py-ZopeTestrunner to 5.2 [adam 2020-08-21]
