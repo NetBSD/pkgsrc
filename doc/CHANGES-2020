@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4531 2020/08/21 19:51:21 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.4532 2020/08/21 20:33:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7084,3 +7084,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/bind911 to 9.11.22 [taca 2020-08-21]
 	Updated games/woof to 2.1.0 [micha 2020-08-21]
 	Added lang/go115 version 1.15 [bsiegert 2020-08-21]
+	Updated devel/py-llvmlite to 0.34.0 [adam 2020-08-21]
+	Updated math/py-numba to 0.51.0 [adam 2020-08-21]
