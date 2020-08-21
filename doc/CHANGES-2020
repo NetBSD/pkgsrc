@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4530 2020/08/21 16:32:51 micha Exp $
+$NetBSD: CHANGES-2020,v 1.4531 2020/08/21 19:51:21 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7083,3 +7083,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20200821 [wiz 2020-08-21]
 	Updated net/bind911 to 9.11.22 [taca 2020-08-21]
 	Updated games/woof to 2.1.0 [micha 2020-08-21]
+	Added lang/go115 version 1.15 [bsiegert 2020-08-21]
