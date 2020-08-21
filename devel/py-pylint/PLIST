@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/05/05 18:21:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/08/21 21:55:41 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -84,9 +84,30 @@ ${PYSITELIB}/pylint/checkers/utils.pyo
 ${PYSITELIB}/pylint/checkers/variables.py
 ${PYSITELIB}/pylint/checkers/variables.pyc
 ${PYSITELIB}/pylint/checkers/variables.pyo
-${PYSITELIB}/pylint/config.py
-${PYSITELIB}/pylint/config.pyc
-${PYSITELIB}/pylint/config.pyo
+${PYSITELIB}/pylint/config/__init__.py
+${PYSITELIB}/pylint/config/__init__.pyc
+${PYSITELIB}/pylint/config/__init__.pyo
+${PYSITELIB}/pylint/config/configuration_mixin.py
+${PYSITELIB}/pylint/config/configuration_mixin.pyc
+${PYSITELIB}/pylint/config/configuration_mixin.pyo
+${PYSITELIB}/pylint/config/find_default_config_files.py
+${PYSITELIB}/pylint/config/find_default_config_files.pyc
+${PYSITELIB}/pylint/config/find_default_config_files.pyo
+${PYSITELIB}/pylint/config/man_help_formatter.py
+${PYSITELIB}/pylint/config/man_help_formatter.pyc
+${PYSITELIB}/pylint/config/man_help_formatter.pyo
+${PYSITELIB}/pylint/config/option.py
+${PYSITELIB}/pylint/config/option.pyc
+${PYSITELIB}/pylint/config/option.pyo
+${PYSITELIB}/pylint/config/option_manager_mixin.py
+${PYSITELIB}/pylint/config/option_manager_mixin.pyc
+${PYSITELIB}/pylint/config/option_manager_mixin.pyo
+${PYSITELIB}/pylint/config/option_parser.py
+${PYSITELIB}/pylint/config/option_parser.pyc
+${PYSITELIB}/pylint/config/option_parser.pyo
+${PYSITELIB}/pylint/config/options_provider_mixin.py
+${PYSITELIB}/pylint/config/options_provider_mixin.pyc
+${PYSITELIB}/pylint/config/options_provider_mixin.pyo
 ${PYSITELIB}/pylint/constants.py
 ${PYSITELIB}/pylint/constants.pyc
 ${PYSITELIB}/pylint/constants.pyo
