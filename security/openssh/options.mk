@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.38 2019/11/04 21:12:56 rillig Exp $
+# $NetBSD: options.mk,v 1.39 2020/08/21 01:49:24 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
-PKG_SUPPORTED_OPTIONS=	editline kerberos openssl pam legacymodsz
+PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam legacymodsz
 PKG_SUGGESTED_OPTIONS=	editline openssl
 
 .include "../../mk/bsd.prefs.mk"
@@ -52,4 +52,9 @@ PLIST.pam=	yes
 .if !empty(PKG_OPTIONS:Meditline)
 .include "../../devel/editline/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editline}
+.endif
+
+.if !empty(PKG_OPTIONS:Mfido)
+.include "../../security/libfido2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-security-key-builtin
 .endif
