@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/04/16 09:28:39 manu Exp $
+# $NetBSD: Makefile,v 1.33 2020/08/21 00:42:23 pho Exp $
 
 DISTNAME=	libobjc2-1.8.1
 PKGNAME=	${DISTNAME:S/libobjc2/gnustep-objc/}
@@ -25,11 +25,16 @@ GNUSTEP_OVERRIDE_INSTALL=	YES
 INSTALLATION_DIRS=              lib include/objc
 
 do-configure:
-	cd ${WRKSRC} && ${CMAKE} -Wno-dev .
+	cd ${WRKSRC} && ${CMAKE} -Wno-dev $(CMAKE_ARGS) .
 
 
 .include "../../devel/gnustep-make/buildlink3.mk"
 .include "../../mk/compiler.mk"
+
+# Building tests with GCC is not supported.
+.if empty(CC_VERSION:Mclang-*)
+CMAKE_ARGS+=	-DTESTS:BOOL=FALSE
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
