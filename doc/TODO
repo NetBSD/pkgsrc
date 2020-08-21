@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20005 2020/08/19 23:02:43 wiz Exp $
+$NetBSD: TODO,v 1.20006 2020/08/21 12:32:55 adam Exp $
 
 Suggested new packages
 ======================
@@ -969,7 +969,6 @@ Suggested package updates
 	o prelude-lml-3.1.0
 	o prelude-manager-3.1.0
 	o profit-2.5.3
-	o protobuf-3.13.0
 	o psmisc-22.20
 	o pspp-0.10.1
 	o ptlib-2.16.2
