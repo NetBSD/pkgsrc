@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2020/08/15 12:35:56 schmonz Exp $
+$NetBSD: distinfo,v 1.76 2020/08/21 19:39:28 schmonz Exp $
 
 SHA1 (Python-2.7.18.tar.xz) = 678d4cf483a1c92efd347ee8e1e79326dc82810b
 RMD160 (Python-2.7.18.tar.xz) = 40a514bb05c9e631454ea8466e28f5bb229428ad
@@ -9,6 +9,7 @@ SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
 SHA1 (patch-Lib_ctypes_util.py) = 6fa516c7b43f08992427a0afcbe80c17bcc070f1
 SHA1 (patch-Lib_distutils_command_build__ext.py) = ea4feba4e93dbcff07050c82a00d591bb650e934
 SHA1 (patch-Lib_distutils_command_install.py) = e6aef090b444b455fe351308d251e670329b7dc3
+SHA1 (patch-Lib_distutils_command_install__egg__info.py) = 94716025231f5fb25436a4fa741e802ff284f98d
 SHA1 (patch-Lib_distutils_unixccompiler.py) = db16c9aca2f29730945f28247b88b18828739bbb
 SHA1 (patch-Lib_distutils_util.py) = 5bcfad96f8e490351160f1a7c1f4ece7706a33fa
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 5d6dab14197f27363394ff1aeee22a8ced8026d2
