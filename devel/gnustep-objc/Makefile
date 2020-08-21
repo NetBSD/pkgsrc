@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/08/21 00:42:23 pho Exp $
+# $NetBSD: Makefile,v 1.34 2020/08/21 00:44:55 pho Exp $
 
 DISTNAME=	libobjc2-1.8.1
 PKGNAME=	${DISTNAME:S/libobjc2/gnustep-objc/}
@@ -25,7 +25,7 @@ GNUSTEP_OVERRIDE_INSTALL=	YES
 INSTALLATION_DIRS=              lib include/objc
 
 do-configure:
-	cd ${WRKSRC} && ${CMAKE} -Wno-dev $(CMAKE_ARGS) .
+	cd ${WRKSRC} && ${CMAKE} -Wno-dev ${CMAKE_ARGS} .
 
 
 .include "../../devel/gnustep-make/buildlink3.mk"
