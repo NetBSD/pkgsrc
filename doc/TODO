@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20006 2020/08/21 12:32:55 adam Exp $
+$NetBSD: TODO,v 1.20007 2020/08/21 21:56:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -999,7 +999,6 @@ Suggested package updates
 	o py-simpletal-5.1
 	o py-sphinx-autoapi-1.4.0
 	o py-sybase-0.37
-	o py-test-cov-2.10.1
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
