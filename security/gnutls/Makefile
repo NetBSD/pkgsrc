@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.214 2020/06/09 09:53:11 nia Exp $
+# $NetBSD: Makefile,v 1.215 2020/08/21 14:06:12 schmonz Exp $
 
 DISTNAME=	gnutls-3.6.14
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
@@ -63,6 +64,34 @@ SUBST_MESSAGE.shell=	Fixing path to bash.
 EGDIR=		${PREFIX}/share/examples/gnutls
 
 INSTALLATION_DIRS=	${EGDIR} include/gnutls
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "x86_64"
+GNUTLS_GAS_VERSION!=	\
+	( env LC_ALL=C as --version 2>&1 | ${GREP} 'GNU assembler version' | ${AWK} '{print $$4}') 2>/dev/null || ${ECHO} 0
+.  if ${GNUTLS_GAS_VERSION} != 0
+GNUTLS_GAS_NEW_ENOUGH=	no
+# for ssse3, >=2.22
+# better to BUILD_DEPENDS on binutils's gas
+GNUTLS_GAS_ACCEPTABLE_PATTERNS=	\
+	2.2[2-9]		\
+	2.2[2-9].*		\
+	2.2[2-9]-[0-9]*.*	\
+	2.[3-9][0-9]		\
+	2.[3-9][0-9].*		\
+	2.[3-9][0-9]-[0-9]*.*	\
+	[3-9]*.*
+.    for gas_pattern in ${GNUTLS_GAS_ACCEPTABLE_PATTERNS}
+.      if !empty(GNUTLS_GAS_VERSION:M${gas_pattern})
+GNUTLS_GAS_NEW_ENOUGH=	yes
+.      endif
+.    endfor
+.    if !empty(GNUTLS_GAS_NEW_ENOUGH:M[nN][oO])
+CONFIGURE_ARGS+=	--disable-hardware-acceleration
+.    endif
+.  endif
+.endif
 
 post-install:
 	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${DESTDIR}${EGDIR}
