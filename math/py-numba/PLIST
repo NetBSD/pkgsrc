@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/06/16 17:07:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/08/21 20:33:15 adam Exp $
 bin/numba-${PYVERSSUFFIX}
 bin/pycc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -151,6 +151,9 @@ ${PYSITELIB}/numba/core/dispatcher.pyo
 ${PYSITELIB}/numba/core/entrypoints.py
 ${PYSITELIB}/numba/core/entrypoints.pyc
 ${PYSITELIB}/numba/core/entrypoints.pyo
+${PYSITELIB}/numba/core/environment.py
+${PYSITELIB}/numba/core/environment.pyc
+${PYSITELIB}/numba/core/environment.pyo
 ${PYSITELIB}/numba/core/errors.py
 ${PYSITELIB}/numba/core/errors.pyc
 ${PYSITELIB}/numba/core/errors.pyo
@@ -522,6 +525,12 @@ ${PYSITELIB}/numba/cuda/cudadrv/ndarray.pyo
 ${PYSITELIB}/numba/cuda/cudadrv/nvvm.py
 ${PYSITELIB}/numba/cuda/cudadrv/nvvm.pyc
 ${PYSITELIB}/numba/cuda/cudadrv/nvvm.pyo
+${PYSITELIB}/numba/cuda/cudadrv/rtapi.py
+${PYSITELIB}/numba/cuda/cudadrv/rtapi.pyc
+${PYSITELIB}/numba/cuda/cudadrv/rtapi.pyo
+${PYSITELIB}/numba/cuda/cudadrv/runtime.py
+${PYSITELIB}/numba/cuda/cudadrv/runtime.pyc
+${PYSITELIB}/numba/cuda/cudadrv/runtime.pyo
 ${PYSITELIB}/numba/cuda/cudaimpl.py
 ${PYSITELIB}/numba/cuda/cudaimpl.pyc
 ${PYSITELIB}/numba/cuda/cudaimpl.pyo
@@ -603,6 +612,9 @@ ${PYSITELIB}/numba/cuda/simulator/cudadrv/drvapi.pyo
 ${PYSITELIB}/numba/cuda/simulator/cudadrv/nvvm.py
 ${PYSITELIB}/numba/cuda/simulator/cudadrv/nvvm.pyc
 ${PYSITELIB}/numba/cuda/simulator/cudadrv/nvvm.pyo
+${PYSITELIB}/numba/cuda/simulator/cudadrv/runtime.py
+${PYSITELIB}/numba/cuda/simulator/cudadrv/runtime.pyc
+${PYSITELIB}/numba/cuda/simulator/cudadrv/runtime.pyo
 ${PYSITELIB}/numba/cuda/simulator/kernel.py
 ${PYSITELIB}/numba/cuda/simulator/kernel.pyc
 ${PYSITELIB}/numba/cuda/simulator/kernel.pyo
@@ -697,9 +709,15 @@ ${PYSITELIB}/numba/cuda/tests/cudadrv/test_profiler.pyo
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_reset_device.py
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_reset_device.pyc
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_reset_device.pyo
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_runtime.py
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_runtime.pyc
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_runtime.pyo
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_select_device.py
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_select_device.pyc
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_select_device.pyo
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_streams.py
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_streams.pyc
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_streams.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/__init__.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/__init__.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/__init__.pyo
@@ -760,6 +778,9 @@ ${PYSITELIB}/numba/cuda/tests/cudapy/test_debuginfo.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_device_func.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_device_func.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_device_func.pyo
+${PYSITELIB}/numba/cuda/tests/cudapy/test_dispatcher.py
+${PYSITELIB}/numba/cuda/tests/cudapy/test_dispatcher.pyc
+${PYSITELIB}/numba/cuda/tests/cudapy/test_dispatcher.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_errors.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_errors.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_errors.pyo
@@ -838,6 +859,9 @@ ${PYSITELIB}/numba/cuda/tests/cudapy/test_nondet.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_operator.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_operator.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_operator.pyo
+${PYSITELIB}/numba/cuda/tests/cudapy/test_optimization.py
+${PYSITELIB}/numba/cuda/tests/cudapy/test_optimization.pyc
+${PYSITELIB}/numba/cuda/tests/cudapy/test_optimization.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_powi.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_powi.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_powi.pyo
@@ -941,6 +965,9 @@ ${PYSITELIB}/numba/experimental/jitclass/boxing.pyo
 ${PYSITELIB}/numba/experimental/jitclass/decorators.py
 ${PYSITELIB}/numba/experimental/jitclass/decorators.pyc
 ${PYSITELIB}/numba/experimental/jitclass/decorators.pyo
+${PYSITELIB}/numba/experimental/structref.py
+${PYSITELIB}/numba/experimental/structref.pyc
+${PYSITELIB}/numba/experimental/structref.pyo
 ${PYSITELIB}/numba/extending.py
 ${PYSITELIB}/numba/extending.pyc
 ${PYSITELIB}/numba/extending.pyo
@@ -1348,12 +1375,18 @@ ${PYSITELIB}/numba/tests/doc_examples/test_examples.pyo
 ${PYSITELIB}/numba/tests/doc_examples/test_jitclass.py
 ${PYSITELIB}/numba/tests/doc_examples/test_jitclass.pyc
 ${PYSITELIB}/numba/tests/doc_examples/test_jitclass.pyo
+${PYSITELIB}/numba/tests/doc_examples/test_literal_container_usage.py
+${PYSITELIB}/numba/tests/doc_examples/test_literal_container_usage.pyc
+${PYSITELIB}/numba/tests/doc_examples/test_literal_container_usage.pyo
 ${PYSITELIB}/numba/tests/doc_examples/test_literally_usage.py
 ${PYSITELIB}/numba/tests/doc_examples/test_literally_usage.pyc
 ${PYSITELIB}/numba/tests/doc_examples/test_literally_usage.pyo
 ${PYSITELIB}/numba/tests/doc_examples/test_rec_array.py
 ${PYSITELIB}/numba/tests/doc_examples/test_rec_array.pyc
 ${PYSITELIB}/numba/tests/doc_examples/test_rec_array.pyo
+${PYSITELIB}/numba/tests/doc_examples/test_structref_usage.py
+${PYSITELIB}/numba/tests/doc_examples/test_structref_usage.pyc
+${PYSITELIB}/numba/tests/doc_examples/test_structref_usage.pyo
 ${PYSITELIB}/numba/tests/doc_examples/test_typed_dict_usage.py
 ${PYSITELIB}/numba/tests/doc_examples/test_typed_dict_usage.pyc
 ${PYSITELIB}/numba/tests/doc_examples/test_typed_dict_usage.pyo
@@ -1894,6 +1927,9 @@ ${PYSITELIB}/numba/tests/test_stencils.pyo
 ${PYSITELIB}/numba/tests/test_storeslice.py
 ${PYSITELIB}/numba/tests/test_storeslice.pyc
 ${PYSITELIB}/numba/tests/test_storeslice.pyo
+${PYSITELIB}/numba/tests/test_struct_ref.py
+${PYSITELIB}/numba/tests/test_struct_ref.pyc
+${PYSITELIB}/numba/tests/test_struct_ref.pyo
 ${PYSITELIB}/numba/tests/test_support.py
 ${PYSITELIB}/numba/tests/test_support.pyc
 ${PYSITELIB}/numba/tests/test_support.pyo
