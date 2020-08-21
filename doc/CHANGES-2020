@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4527 2020/08/21 14:06:26 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4528 2020/08/21 14:53:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7080,3 +7080,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ZopeComponent to 4.6.2 [adam 2020-08-21]
 	Updated devel/py-ZopeTestrunner to 5.2 [adam 2020-08-21]
 	Updated security/gnutls to 3.6.14nb1 [schmonz 2020-08-21]
+	Updated mail/neomutt to 20200821 [wiz 2020-08-21]
