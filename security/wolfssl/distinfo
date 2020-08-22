@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/04/23 19:11:08 fox Exp $
+$NetBSD: distinfo,v 1.3 2020/08/22 01:27:48 fox Exp $
 
-SHA1 (wolfssl-4.4.0.zip) = 16acf542e7785fd220d5d11e4ce217dbe6e18c38
-RMD160 (wolfssl-4.4.0.zip) = 5585f4411f8226bc5f3f792c7eba3e717810b78e
-SHA512 (wolfssl-4.4.0.zip) = 1791ec16e9374eb332d269b9eb18eaf8a936260b0398faaa542886bbbdd09774154ea1a9f2a179f3afab0d07bbc58771dc232ee7ae90a9973b88593f4681e1f4
-Size (wolfssl-4.4.0.zip) = 8420038 bytes
+SHA1 (wolfssl-4.5.0.zip) = 02429a1461cdcba2bdd1e86b553eadadd077b64d
+RMD160 (wolfssl-4.5.0.zip) = b2aaf83d979e48bbe23b42e31456e5d2c36ef854
+SHA512 (wolfssl-4.5.0.zip) = cfc6c8b49a889c691a058ee5f4891656bcb2d969ab2351e0fa2e729b0bab71f3125481a6b6f662b902730c7a4eb379a032d2d8a2ab053e105d3e0a6015ac37bd
+Size (wolfssl-4.5.0.zip) = 8747110 bytes
 SHA1 (patch-certs_intermediate_genintcerts.sh) = bdcf9a1fd14170aaf780ab9677fd8bc6e4ddc75c
-SHA1 (patch-configure) = 7252cceec28c8f4a1338207429873e0e19ce15d9
