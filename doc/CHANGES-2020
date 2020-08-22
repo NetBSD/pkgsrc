@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4536 2020/08/22 01:28:14 fox Exp $
+$NetBSD: CHANGES-2020,v 1.4537 2020/08/22 10:21:31 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7091,3 +7091,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test-cov to 2.10.1 [adam 2020-08-21]
 	Updated devel/py-pylint to 2.6.0 [adam 2020-08-21]
 	Updated security/wolfssl to 4.5.0 [fox 2020-08-22]
+	Updated net/gh to 0.11.1 [bsiegert 2020-08-22]
