@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.231 2020/07/04 05:11:25 ryoon Exp $
+$NetBSD: distinfo,v 1.232 2020/08/22 23:12:51 wiz Exp $
 
 SHA1 (thunderbird-68.10.0.source.tar.xz) = a71d9bbd9d587e521b5a7b0ff4b4d13c79bdb4cf
 RMD160 (thunderbird-68.10.0.source.tar.xz) = 01e0e995fbf43c05219594eb871461ca44fefe35
@@ -10,6 +10,7 @@ SHA1 (patch-build_moz.configure_rust.configure) = b57a9b1451dc426d75774f73d7c05f
 SHA1 (patch-comm_mail_installer_package-manifest.in) = 14e8977f690e579a8caf73326248323615e04803
 SHA1 (patch-comm_mail_installer_removed-files.in) = f360ccac70a7afaee65e4617c015535084eee035
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = aa9664c1ba850e7c45b654dcf5d7d591d4994a86
+SHA1 (patch-config_makefiles_rust.mk) = 25502bfbe32877b35c244c2c19d6ee1dd63cb771
 SHA1 (patch-dom_base_nsAttrName.h) = 57a1a15cde53a1c8e22b1b38efdd40b9c0f1f91b
 SHA1 (patch-dom_media_CubebUtils.cpp) = 5022ead470ba2b3b75bc423e320be0cc18279b6b
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = 795b510b525019f49169d1a594cd3e455e706500
