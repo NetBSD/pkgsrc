@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4535 2020/08/21 21:56:03 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4536 2020/08/22 01:28:14 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7090,3 +7090,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/xapian-omega to 1.4.17 [schmonz 2020-08-21]
 	Updated devel/py-test-cov to 2.10.1 [adam 2020-08-21]
 	Updated devel/py-pylint to 2.6.0 [adam 2020-08-21]
+	Updated security/wolfssl to 4.5.0 [fox 2020-08-22]
