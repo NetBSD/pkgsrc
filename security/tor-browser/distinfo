@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2020/08/17 06:58:32 riastradh Exp $
+$NetBSD: distinfo,v 1.27 2020/08/22 23:12:34 wiz Exp $
 
 SHA1 (src-firefox-tor-browser-68.11.0esr-9.5-1-build1.tar.xz) = be69e804180d7cc1fb500b1a497f79ab41c4f0db
 RMD160 (src-firefox-tor-browser-68.11.0esr-9.5-1-build1.tar.xz) = 625ab420108a64c3f50f2c482190ece3afcbd974
@@ -14,6 +14,7 @@ SHA1 (patch-browser_app_profile_000-tor-browser.js) = 84a0a15605fff0e22f3150bce9
 SHA1 (patch-browser_app_profile_firefox.js) = cf93582b68b8d4e72c3c25682ab9138e185418c8
 SHA1 (patch-build_moz.configure_rust.configure) = b57a9b1451dc426d75774f73d7c05fc98fe6e317
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 11b45e0c7a9399c5b74b170648280a388dd67d89
+SHA1 (patch-config_makefiles_rust.mk) = 25502bfbe32877b35c244c2c19d6ee1dd63cb771
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3cd2c65ab281d802c56216565970450767a3fb24
 SHA1 (patch-dom_webauthn_u2f-hid-rs_src_lib.rs) = c0dfe8b1e7ebbc7c1d6066c204030f13b063b8d7
