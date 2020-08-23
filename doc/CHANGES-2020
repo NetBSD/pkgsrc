@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4540 2020/08/22 20:49:08 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4541 2020/08/23 08:26:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7095,3 +7095,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-anita to 2.5 [gson 2020-08-22]
 	Updated devel/p5-Test-BDD-Cucumber to 0.72 [schmonz 2020-08-22]
 	Updated mail/neomutt to 20200821nb1 [wiz 2020-08-22]
+	Updated devel/nspr to 4.28 [ryoon 2020-08-23]
