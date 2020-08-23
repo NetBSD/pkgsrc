@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2020/08/12 14:14:48 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2020/08/23 20:12:34 wiz Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=			dbus gconf gnutls imagemagick svg xaw3d xft2 xml
+PKG_SUPPORTED_OPTIONS=			dbus gconf gnutls imagemagick jansson svg xaw3d xft2 xml
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
@@ -22,7 +22,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw lucid
 
 # svg is omitted because it is rarely needed and either very
 # heavyweight or unmaintained.
-PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 xaw3d xft2 xml x11
+PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 jansson xaw3d xft2 xml x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -34,6 +34,15 @@ PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 xaw3d xft2 xml x11
 .  include "../../sysutils/dbus/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-dbus
+.endif
+
+###
+### Support JSON
+###
+.if !empty(PKG_OPTIONS:Mjansson)
+.  include "../../textproc/jansson/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-json
 .endif
 
 ###
