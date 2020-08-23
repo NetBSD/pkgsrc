@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2020/08/20 17:56:10 pin Exp $
+$NetBSD: distinfo,v 1.2 2020/08/23 14:57:42 kamil Exp $
 
 SHA1 (addr2line-0.13.0.crate) = c7a6843df774a95b4db5a5511b58ab22c44f228a
 RMD160 (addr2line-0.13.0.crate) = 22c733c5358313e9ca7fb95d1dbd695d03fcb552
@@ -1560,4 +1560,5 @@ SHA1 (xi-unicode-0.2.1.crate) = a7e8a8e9860652c65a55686568762f812fb3886a
 RMD160 (xi-unicode-0.2.1.crate) = 1d50fd64d44638e4d44f154c4dc4f56bb7f3ce50
 SHA512 (xi-unicode-0.2.1.crate) = cd5dde20cde2c9180247df4f6912139a436f7ab71ef86dac66418c0459df665c09fc3c5b497f8157a6209da32b3e9fda5f50d1ef06c1c8cc2557c4b90363e586
 Size (xi-unicode-0.2.1.crate) = 88229 bytes
-SHA1 (patch-Cargo.toml) = 67719b3b51ecbb424b67d34b53688a71bcf480f1
+SHA1 (patch-Cargo.toml) = df5ac3791121c92707f34df5cc0ef31cab7785df
+SHA1 (patch-src_main.rs) = 3e9dcb8341463460c480e309cc782f23edece48c
