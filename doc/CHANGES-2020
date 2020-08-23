@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4547 2020/08/23 20:12:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4548 2020/08/23 22:28:25 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7102,3 +7102,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/keepassxc to 2.6.1 [ryoon 2020-08-23]
 	Updated audio/ncspot to 0.2.1nb1 [kamil 2020-08-23]
 	Updated editors/emacs27 to 27.1nb2 [wiz 2020-08-23]
+	Updated textproc/libxlsxwriter to 0.9.9 [sjmulder 2020-08-23]
