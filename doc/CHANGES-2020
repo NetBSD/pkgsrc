@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4544 2020/08/23 10:03:38 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4545 2020/08/23 13:32:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7099,3 +7099,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/nss to 3.56 [ryoon 2020-08-23]
 	Updated www/squid4 to 4.13 [taca 2020-08-23]
 	Updated net/bind916 to 9.16.6 [taca 2020-08-23]
+	Updated security/keepassxc to 2.6.1 [ryoon 2020-08-23]
