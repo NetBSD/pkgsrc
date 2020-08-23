@@ -1,10 +1,20 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2020/08/20 16:24:59 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2020/08/23 14:57:43 kamil Exp $
 
 Use portaudio by default
 
---- Cargo.toml.orig	2020-07-17 22:02:08.000000000 +0000
+Use libc for setlocale() to fix non-ASCII character printing.
+https://github.com/hrkfdn/ncspot/issues/221
+
+--- Cargo.toml.orig	2020-08-13 08:27:21.000000000 +0000
 +++ Cargo.toml
-@@ -48,11 +48,5 @@ version = "0.15"
+@@ -42,17 +42,12 @@ clipboard = { version = "0.5", optional 
+ url = "1.7"
+ strum = "0.17.1"
+ strum_macros = "0.17.1"
++libc = "0.2"
+ 
+ [dependencies.cursive]
+ version = "0.15"
  default-features = false
  
  [features]
