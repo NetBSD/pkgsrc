@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_isc_unix_socket.c,v 1.1 2020/08/09 15:20:22 taca Exp $
+$NetBSD: patch-lib_isc_unix_socket.c,v 1.2 2020/08/23 10:03:00 taca Exp $
 
 * Apply fixes from NetBSD base system.
 * Fix build on SmartOS. In this special case, _XOPEN_SOURCE has to be only
   defined on SmartOS.
 
---- lib/isc/unix/socket.c.orig	2020-06-10 21:01:43.000000000 +0000
+--- lib/isc/unix/socket.c.orig	2020-08-10 09:31:13.000000000 +0000
 +++ lib/isc/unix/socket.c
 @@ -11,6 +11,15 @@
  
@@ -150,8 +150,8 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  /*
   * Dequeue an item off the given socket's read queue, set the result code
   * in the done event to the one provided, and send it to the task it was
-@@ -3117,6 +3184,64 @@ finish:
- 	UNLOCK(&sock->lock);
+@@ -3115,6 +3182,64 @@ finish:
+ 	}
  }
  
 +static void
@@ -215,16 +215,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  /*
   * Process read/writes on each fd here.  Avoid locking
   * and unlocking twice if both reads and writes are possible.
-@@ -3164,7 +3289,7 @@ process_fd(isc__socketthread_t *thread, 
- 		if (sock->listener) {
- 			internal_accept(sock);
- 		} else {
--			internal_recv(sock);
-+			dispatch_recv(sock);
- 		}
- 	}
- 
-@@ -3172,7 +3297,7 @@ process_fd(isc__socketthread_t *thread, 
+@@ -3162,7 +3287,7 @@ process_fd(isc__socketthread_t *thread, 
  		if (sock->connecting) {
  			internal_connect(sock);
  		} else {
@@ -233,7 +224,16 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  		}
  	}
  
-@@ -5287,7 +5412,7 @@ static isc_once_t hasreuseport_once = IS
+@@ -3170,7 +3295,7 @@ process_fd(isc__socketthread_t *thread, 
+ 		if (sock->listener) {
+ 			internal_accept(sock); /* unlocks sock */
+ 		} else {
+-			internal_recv(sock);
++			dispatch_recv(sock);
+ 			UNLOCK(&sock->lock);
+ 		}
+ 	} else {
+@@ -5274,7 +5399,7 @@ static isc_once_t hasreuseport_once = IS
  static bool hasreuseport = false;
  
  static void
@@ -242,7 +242,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  /*
   * SO_REUSEPORT works very differently on *BSD and on Linux (because why not).
   * We only want to use it on Linux, if it's available. On BSD we want to dup()
-@@ -5341,6 +5466,8 @@ _socktype(isc_sockettype_t type) {
+@@ -5328,6 +5453,8 @@ _socktype(isc_sockettype_t type) {
  		return ("tcp");
  	case isc_sockettype_unix:
  		return ("unix");
@@ -251,7 +251,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  	default:
  		return ("not-initialized");
  	}
-@@ -5353,7 +5480,7 @@ _socktype(isc_sockettype_t type) {
+@@ -5340,7 +5467,7 @@ _socktype(isc_sockettype_t type) {
  		xmlrc = (a);        \
  		if (xmlrc < 0)      \
  			goto error; \
@@ -260,7 +260,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  int
  isc_socketmgr_renderxml(isc_socketmgr_t *mgr0, void *writer0) {
  	isc__socketmgr_t *mgr = (isc__socketmgr_t *)mgr0;
-@@ -5460,7 +5587,7 @@ error:
+@@ -5447,7 +5574,7 @@ error:
  			result = ISC_R_NOMEMORY; \
  			goto error;              \
  		}                                \
@@ -269,7 +269,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  
  isc_result_t
  isc_socketmgr_renderjson(isc_socketmgr_t *mgr0, void *stats0) {
-@@ -5582,3 +5709,112 @@ isc_socketmgr_createinctx(isc_mem_t *mct
+@@ -5569,3 +5696,112 @@ isc_socketmgr_createinctx(isc_mem_t *mct
  
  	return (result);
  }

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2020/08/09 15:20:21 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/08/23 10:03:00 taca Exp $
 
-SHA1 (bind-9.16.5.tar.xz) = a5b0fffd3a53c06368772c185688207dd57058f1
-RMD160 (bind-9.16.5.tar.xz) = 28228bd5d7531026e9b0cc324235d347e704bf57
-SHA512 (bind-9.16.5.tar.xz) = 789fc19f60e81f67ef13ebacd030ea5d8f8cc42cf5f06a01ee2eefe9b7c6d3b10603a3a6a3df85b0e5d770fcf462ce8dddc3a7e5f7f2dab27aa5879ee5380eb7
-Size (bind-9.16.5.tar.xz) = 3474044 bytes
+SHA1 (bind-9.16.6.tar.xz) = f8a4c1bd074cc0305a4c50971e71da5a3b810d78
+RMD160 (bind-9.16.6.tar.xz) = 3b296d967a6a5a709b599efbffc9697060c5f91b
+SHA512 (bind-9.16.6.tar.xz) = 37f57db6d1633cc85a4d954a69bbb3372c65ac43fef965df5aee8dcdd32153bb5b0c6d0d5f00f353dd4464c71d74dc8e801937b930e2b8f6799fa77af5f243e0
+Size (bind-9.16.6.tar.xz) = 3228368 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb
@@ -46,12 +46,12 @@ SHA1 (patch-lib_isc_include_isc_types.h) = bc0cdeb762d974b7be6e602b7dc2aac17fa7f
 SHA1 (patch-lib_isc_netmgr_netmgr.c) = 63168c8901646e7b2079e1dc3324087508bb1e62
 SHA1 (patch-lib_isc_netmgr_tcp.c) = f71556e21a6416af012b8d37a9ffb7c3ed4aa986
 SHA1 (patch-lib_isc_rwlock.c) = 1d114248ddee20db7a7429afab446f8b2f0dca82
-SHA1 (patch-lib_isc_siphash.c) = 1527f960967148cece7337a453fe868e812fd5f1
+SHA1 (patch-lib_isc_siphash.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-lib_isc_stats.c) = 024a372d9919fa751b894f8fc8267691297f00f4
 SHA1 (patch-lib_isc_task.c) = 103a23c74888edd3ddee0793ce6531cd2e6b87f3
 SHA1 (patch-lib_isc_unix_include_isc_align.h) = 1bbd78f1617a40079d1044175cfe037bbd1d95b2
 SHA1 (patch-lib_isc_unix_net.c) = c654f60a1feefdba9bf980dcfa46ce37f46918aa
-SHA1 (patch-lib_isc_unix_socket.c) = 48fb35ae552164ce2ce3fb0df76db8df4271d2ee
+SHA1 (patch-lib_isc_unix_socket.c) = 3178214a578e977ecdcf6e44ac04b25690176a03
 SHA1 (patch-lib_isc_unix_time.c) = fac9e66754e099f53ba8c499f5f179825a0b0fbd
 SHA1 (patch-lib_ns_Makefile.in) = 5626877ffe97261518f976bb8dd827cdb53668ed
 SHA1 (patch-lib_ns_client.c) = e0453a7483a4f899023e0c5ab970cda241976b90
