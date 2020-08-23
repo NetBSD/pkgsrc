@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20007 2020/08/21 21:56:03 adam Exp $
+$NetBSD: TODO,v 1.20008 2020/08/23 09:53:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,7 @@ Suggested package updates
 	o bin86-0.16.21
 	o binkd-1.04
 	o bird6-1.5.0
-	o bison-3.7
+	o bison-3.7.1
 	o bitlbee-3.6.1
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -536,6 +536,7 @@ Suggested package updates
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.2.9
 	o enlightenment-0.23.1
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
@@ -601,7 +602,7 @@ Suggested package updates
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gdb-9.1
-	o gdbm-1.18
+	o gdbm-1.18.1
 	o gdm-2.32.2
 	o gdm-3.0.3
 	o geeklog-2.2.0
@@ -880,6 +881,7 @@ Suggested package updates
 	o oath-toolkit-2.6.1
 	o objc-3.3.1
 	o ocaml-4.10.0 [wip]
+	o ocaml-4.11.0
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
 	o olvwm-4.5
@@ -994,7 +996,7 @@ Suggested package updates
 	o py-parso-0.8.0
 	o py-ptt-1.10.2
 	o py-rsa-4.6 [drops python-2.x support]
-	o py-setuptools-49.6.0 [drops python-2.x support]
+	o py-setuptools-50.0.0 [drops python-2.x support]
 	o py-setuptools_scm-4.1.2
 	o py-simpletal-5.1
 	o py-sphinx-autoapi-1.4.0
