@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/03/24 19:42:34 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/08/23 23:09:01 wiedi Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -50,11 +50,16 @@ share/nano/c.nanorc
 share/nano/changelog.nanorc
 share/nano/cmake.nanorc
 share/nano/css.nanorc
-share/nano/debian.nanorc
 share/nano/default.nanorc
 share/nano/elisp.nanorc
-share/nano/fortran.nanorc
-share/nano/gentoo.nanorc
+share/nano/email.nanorc
+share/nano/extra/ada.nanorc
+share/nano/extra/debian.nanorc
+share/nano/extra/fortran.nanorc
+share/nano/extra/gentoo.nanorc
+share/nano/extra/haskell.nanorc
+share/nano/extra/povray.nanorc
+share/nano/extra/spec.nanorc
 share/nano/go.nanorc
 share/nano/groff.nanorc
 share/nano/guile.nanorc
@@ -65,8 +70,7 @@ share/nano/json.nanorc
 share/nano/lua.nanorc
 share/nano/makefile.nanorc
 share/nano/man.nanorc
-share/nano/mgp.nanorc
-share/nano/mutt.nanorc
+share/nano/markdown.nanorc
 share/nano/nanohelp.nanorc
 share/nano/nanorc.nanorc
 share/nano/nftables.nanorc
@@ -76,13 +80,11 @@ share/nano/patch.nanorc
 share/nano/perl.nanorc
 share/nano/php.nanorc
 share/nano/po.nanorc
-share/nano/postgresql.nanorc
-share/nano/pov.nanorc
 share/nano/python.nanorc
 share/nano/ruby.nanorc
 share/nano/rust.nanorc
 share/nano/sh.nanorc
-share/nano/spec.nanorc
+share/nano/sql.nanorc
 share/nano/tcl.nanorc
 share/nano/tex.nanorc
 share/nano/texinfo.nanorc
