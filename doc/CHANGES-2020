@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4550 2020/08/23 22:32:10 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.4551 2020/08/23 23:09:49 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7105,3 +7105,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libxlsxwriter to 0.9.9 [sjmulder 2020-08-23]
 	Updated math/sc-im to 0.7.0nb16 [sjmulder 2020-08-23]
 	Updated sysutils/nnn to 3.4 [sjmulder 2020-08-23]
+	Updated editors/nano to 5.1 [wiedi 2020-08-23]
