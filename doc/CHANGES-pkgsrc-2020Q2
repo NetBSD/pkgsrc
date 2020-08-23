@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.10 2020/08/14 19:33:48 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.11 2020/08/23 18:59:36 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -102,4 +102,16 @@ security/clamav: security fix
 
 Pullup ticket #6298 - requested by taca
 lang/php73: security fix
+
+Pullup ticket #6299 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6300 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #6301 - requested by taca
+www/apache24: security fix
+
+Pullup ticket #6302 - requested by taca
+mail/roundcube: security fix
 
