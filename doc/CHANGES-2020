@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4542 2020/08/23 08:31:57 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4543 2020/08/23 09:52:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7097,3 +7097,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20200821nb1 [wiz 2020-08-22]
 	Updated devel/nspr to 4.28 [ryoon 2020-08-23]
 	Updated devel/nss to 3.56 [ryoon 2020-08-23]
+	Updated www/squid4 to 4.13 [taca 2020-08-23]
