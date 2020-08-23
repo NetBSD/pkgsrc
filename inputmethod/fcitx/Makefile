@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/08/17 20:19:14 leot Exp $
+# $NetBSD: Makefile,v 1.26 2020/08/23 08:15:48 ryoon Exp $
 #
 
 DISTNAME=		fcitx-4.2.9.6
@@ -65,6 +65,7 @@ post-extract:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../textproc/enchant2/buildlink3.mk"
