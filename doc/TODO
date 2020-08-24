@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20027 2020/08/24 08:42:47 wiz Exp $
+$NetBSD: TODO,v 1.20028 2020/08/24 08:45:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1060,7 +1060,6 @@ Suggested package updates
 	o softhsm-2.0.0
 	o sparse-0.5.0
 	o spcaview-20060501
-	o spdlog-1.7.0
 	o spl-1.0pre6
 	o sqlrelay-1.4.0
 	o squeak-5.0
