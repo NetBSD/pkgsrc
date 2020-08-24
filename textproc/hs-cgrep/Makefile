@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/11 13:10:10 pho Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/24 15:31:12 pho Exp $
 
 DISTNAME=	cgrep-6.6.30
 #PKGNAME=	${DISTNAME} # This package should probably be renamed to textproc/cgrep
@@ -7,6 +7,12 @@ CATEGORIES=	textproc
 MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Context-aware grep for source codes
 LICENSE=	gnu-gpl-v2
+
+# Do not install the LICENCE file because ../../mk/haskell.mk can not
+# correctly substitute the path to doc files when the package installs
+# no libraries.
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/share/doc
 
 .include "../../mk/haskell.mk"
 .include "../../converters/hs-aeson/buildlink3.mk"
