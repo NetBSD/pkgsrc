@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/08/20 11:30:25 bouyer Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/24 10:33:27 bouyer Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include	"version.mk"
@@ -8,7 +8,7 @@ DIST_IPXE=	ipxe-git-${VERSION_IPXE}.tar.gz
 DIST_SUBDIR=		xen411
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools411-${VERSION}
-PKGREVISION=		5
+#PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
