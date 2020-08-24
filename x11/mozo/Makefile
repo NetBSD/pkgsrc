@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/08/17 20:20:32 leot Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/24 04:41:43 gutteridge Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mozo-${VERSION:R}.0
