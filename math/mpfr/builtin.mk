@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2019/11/02 16:16:20 rillig Exp $
+# $NetBSD: builtin.mk,v 1.6 2020/08/24 08:20:14 wiz Exp $
 
 BUILTIN_PKG:=	mpfr
 
@@ -6,9 +6,9 @@ BUILTIN_FIND_HEADERS_VAR:=	H_MPFR
 BUILTIN_FIND_HEADERS.H_MPFR=	mpfr.h mpfr/mpfr.h
 
 BUILTIN_VERSION_SCRIPT.mpfr=	${AWK} \
-	'/\#define[ \t]*MPFR_VERSION_STRING[ \t]/ { \
-	v = substr($$3, 2, length($$3)-2) } \
-	END { gsub("-p",".",v); print v }'
+				'/\#define[ \t]*MPFR_VERSION_STRING[ \t]/ { \
+				v = substr($$3, 2, length($$3)-2) } \
+				END { gsub("-p",".",v); print v }'
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -50,11 +50,11 @@ USE_BUILTIN.mpfr=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.mpfr}
 .        if !empty(USE_BUILTIN.mpfr:M[yY][eE][sS])
 USE_BUILTIN.mpfr!=	\
-        if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.mpfr:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.mpfr:Q}; then	\
 		${ECHO} yes;						\
-        else								\
+	else								\
 		${ECHO} no;						\
-        fi
+	fi
 .        endif
 .      endfor
 .    endif
