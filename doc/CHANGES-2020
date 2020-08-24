@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4553 2020/08/24 04:54:41 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.4554 2020/08/24 07:38:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7108,3 +7108,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/nano to 5.1 [wiedi 2020-08-23]
 	Updated meta-pkgs/mate to 1.24.0nb2 [gutteridge 2020-08-24]
 	Updated x11/xfce4-tumbler to 0.3.0 [gutteridge 2020-08-24]
+	Updated editors/featherpad to 0.15.0 [pin 2020-08-24]
