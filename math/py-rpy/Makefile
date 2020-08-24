@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2020/01/26 05:26:25 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2020/08/24 06:40:20 tnn Exp $
 
 DISTNAME=	rpy2-2.9.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpy2/}
@@ -24,7 +25,7 @@ REPLACE_PYTHON=		rpy/tests.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/R/buildlink3.mk"
