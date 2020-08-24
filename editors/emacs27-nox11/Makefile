@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/08/12 14:17:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/24 22:29:16 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/emacs/emacs27/:S/-/-nox11-/}
+PKGREVISION=	1
 CONFLICTS+=	emacs27-[0-9]*
 
 FILESDIR=	${.CURDIR}/../../editors/emacs27/files
