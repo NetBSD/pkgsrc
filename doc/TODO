@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20023 2020/08/24 08:31:35 wiz Exp $
+$NetBSD: TODO,v 1.20024 2020/08/24 08:35:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -782,7 +782,6 @@ Suggested package updates
 	o libtecla-1.6.3
 	o libv4l-0.8.5
 	o libvirt-2.3
-	o libvpx-1.9.0
 	o libwnck3-3.32.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
