@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.575 2020/08/21 19:50:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.576 2020/08/24 18:51:59 bsiegert Exp $
 #
 
 COMMENT=	Programming languages
@@ -99,7 +99,6 @@ SUBDIR+=	go
 SUBDIR+=	go-bin
 SUBDIR+=	go-hcl
 SUBDIR+=	go110
-SUBDIR+=	go113
 SUBDIR+=	go114
 SUBDIR+=	go115
 SUBDIR+=	go14
