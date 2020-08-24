@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2020/06/25 19:48:03 hauke Exp $
+# $NetBSD: Makefile,v 1.73 2020/08/24 07:52:03 wiz Exp $
 
-DISTNAME=	gawk-5.0.1
+DISTNAME=	gawk-5.1.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gawk/}
 EXTRACT_SUFX=	.tar.xz
@@ -47,8 +47,6 @@ INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 post-install:
 	${LN} -fs ${PREFIX}/bin/gawk ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/awk
 	${LN} -fs ${PREFIX}/${PKGMANDIR}/man1/gawk.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/awk.1
-
-BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.10.36
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
