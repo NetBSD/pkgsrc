@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2020/05/18 10:40:11 adam Exp $
+# $NetBSD: Makefile,v 1.31 2020/08/24 08:07:45 wiz Exp $
 
-DISTNAME=		khal-0.10.1
-PKGREVISION=		1
+DISTNAME=		khal-0.10.2
 CATEGORIES=		time net
 MASTER_SITES=		${MASTER_SITE_PYPI:=k/khal/}
 
@@ -21,7 +20,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_
 DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=		${PYPKGPREFIX}-tzlocal-[0-9]*:../../time/py-tzlocal
-DEPENDS+=		${PYPKGPREFIX}-urwid>=1.1.0:../../devel/py-urwid
+DEPENDS+=		${PYPKGPREFIX}-urwid>=1.3.0:../../devel/py-urwid
 DEPENDS+=		${PYPKGPREFIX}-vdirsyncer>=0.5.2:../../time/py-vdirsyncer
 DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 # not needed, but recommended, so let's just depend on it
