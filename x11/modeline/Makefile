@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/08/18 02:01:43 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/24 06:30:58 tnn Exp $
 
 DISTNAME=		modeline_vfr.c
 PKGNAME=		modeline-20060729
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.bohne-lang.de/spec/linux/modeline/
 EXTRACT_SUFX=		# empty
@@ -16,7 +17,7 @@ INSTALLATION_DIRS=	bin
 
 do-extract:
 	${MKDIR} ${WRKSRC}
-	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}
 
 do-build:
 	cd ${WRKSRC}; ${CC} ${CFLAGS} ${DISTNAME} -o ${DISTNAME:S/.c//}
