@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20025 2020/08/24 08:38:48 wiz Exp $
+$NetBSD: TODO,v 1.20026 2020/08/24 08:40:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -971,7 +971,6 @@ Suggested package updates
 	o py-certbot-1.7.0
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
-	o py-google-api-core-1.22.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-josepy-1.4.0
