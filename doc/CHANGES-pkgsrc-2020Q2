@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.11 2020/08/23 18:59:36 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.12 2020/08/24 19:11:58 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -114,4 +114,13 @@ www/apache24: security fix
 
 Pullup ticket #6302 - requested by taca
 mail/roundcube: security fix
+
+Pullup ticket #6303 - requested by taca
+mail/dovecot2: security fix
+
+Pullup ticket #6304 - requested by taca
+mail/dovecot2-pigeonhole: dependent update
+
+Pullup ticket #6305 - requested by bouyer
+graphics/xfig: build fix
 
