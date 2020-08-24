@@ -16,7 +16,7 @@
 #
 # $ pkg_notify category/package
 #
-# $Id: pkg_notify,v 1.5 2016/10/10 07:42:53 wiz Exp $
+# $Id: pkg_notify,v 1.6 2020/08/24 13:43:41 wiz Exp $
 
 use Net::FTP;
 use LWP::UserAgent;
@@ -576,23 +576,22 @@ foreach (@packages) {
 	$master_site = $master_site."/".$hash."/$sfpkgdir";
     }
 
-    # github - look at releases page
-    if ($master_site =~ /github.com/) {
+    # github
+    if ($master_site =~ /github.com/ || $homepage =~ /github.com/) {
 	my $project = `cd $pkgpath && $make show-var VARNAME=GITHUB_PROJECT`;
 	chomp($project);
-	$master_site =~ s/(.*github.com\/[^\/]+)\/?/$1\/$project\/releases\//;
-	$distname = "v$version";
-	$dist = "v";
+	if ($master_site =~ /github.com/) {
+	    # look at releases page
+	    $master_site =~ s/(.*github.com\/[^\/]+)\/?/$1\/$project\/releases\//;
+	} else {
+	    # homepage only - look at releases page
+	    $master_site = $homepage . "/releases/";
+	}
+	$distname = `cd $pkgpath && $make show-var VARNAME=GITHUB_RELEASE`;
+	chomp($distname);
+	$dist = "";
     }
 
-    # github - homepage only - look at releases page
-    if ($homepage =~ /github.com/) {
-	my $project = `cd $pkgpath && $make show-var VARNAME=GITHUB_PROJECT`;
-	chomp($project);
-	$master_site = $homepage . "/releases/";
-	$distname = "v$version";
-	$dist = "v";
-    }
 
     if (($distname eq "") || ($master_site eq "")) {
 	print "missing DISTNAME or MASTER_SITES for package $pkgname\n";
