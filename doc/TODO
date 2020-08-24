@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20017 2020/08/24 08:09:08 wiz Exp $
+$NetBSD: TODO,v 1.20018 2020/08/24 08:14:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -374,7 +374,6 @@ Suggested package updates
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.10.28
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
