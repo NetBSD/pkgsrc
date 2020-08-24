@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2020/04/05 16:05:39 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.11 2020/08/24 04:41:40 gutteridge Exp $
 # used by meta-pkgs/mate/Makefile
 # used by print/atril/Makefile
 # used by sysutils/caja/Makefile
@@ -44,7 +44,10 @@ EXTRACT_SUFX=	.tar.xz
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool msgfmt pkg-config
+USE_TOOLS+=	gmake msgfmt pkg-config
+
+# Fails without GNU msgfmt
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 MAINTAINER=	youri@NetBSD.org
 LICENSE=	gnu-gpl-v3
@@ -52,8 +55,6 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 
-# Fails without GNU msgfmt
-USE_BUILTIN.gettext=    no
 
 .include "../../lang/python/pyversion.mk"
 .include "../../x11/gtk3/buildlink3.mk"
