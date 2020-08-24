@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4575 2020/08/24 08:49:07 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4576 2020/08/24 10:36:58 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7130,3 +7130,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-sphinx-autoapi to 1.4.0 [wiz 2020-08-24]
 	Updated devel/spdlog to 1.7.0 [wiz 2020-08-24]
 	Updated converters/TECkit to 2.5.10 [wiz 2020-08-24]
+	Updated sysutils/xentools411 to 4.11.4 [bouyer 2020-08-24]
+	Updated sysutils/xenkernel411 to 4.11.4nb1 [bouyer 2020-08-24]
