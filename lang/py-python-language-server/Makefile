@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/18 13:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/24 08:32:43 wiz Exp $
 
 DISTNAME=	python-language-server-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pylint
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pylint, py-parso via py-jedi
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pyls pyls-${PYVERSSUFFIX}
