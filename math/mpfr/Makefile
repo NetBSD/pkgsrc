@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2020/01/26 17:31:38 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2020/08/24 08:20:14 wiz Exp $
 
-DISTNAME=		mpfr-4.0.2
-PKGREVISION=		1
+DISTNAME=		mpfr-4.1.0
 CATEGORIES=		math
 MASTER_SITES=		http://www.mpfr.org/${DISTNAME}/
 EXTRACT_SUFX=		.tar.bz2
