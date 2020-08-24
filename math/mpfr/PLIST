@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/28 16:18:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/08/24 08:20:14 wiz Exp $
 include/mpf2mpfr.h
 include/mpfr.h
 info/mpfr.info
@@ -16,4 +16,5 @@ share/doc/mpfr/examples/can_round.c
 share/doc/mpfr/examples/divworst.c
 share/doc/mpfr/examples/rndo-add.c
 share/doc/mpfr/examples/sample.c
+share/doc/mpfr/examples/threads.c
 share/doc/mpfr/examples/version.c
