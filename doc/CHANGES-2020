@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4562 2020/08/24 08:07:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4563 2020/08/24 08:09:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7117,3 +7117,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/tor-browser-https-everywhere to 2020.8.13 [wiz 2020-08-24]
 	Updated lang/vala to 0.48.8 [wiz 2020-08-24]
 	Updated time/khal to 0.10.2 [wiz 2020-08-24]
+	Updated misc/khard to 0.17.0 [wiz 2020-08-24]
