@@ -1,4 +1,4 @@
-$NetBSD: patch-XSA321,v 1.1 2020/07/16 09:57:17 bouyer Exp $
+$NetBSD: patch-XSA321,v 1.2 2020/08/24 10:35:35 bouyer Exp $
 
 From: Jan Beulich <jbeulich@suse.com>
 Subject: vtd: improve IOMMU TLB flush
@@ -197,6 +197,15 @@ Reviewed-by: Jan Beulich <jbeulich@suse.com>
  
      for_each_drhd_unit ( drhd )
      {
+@@ -2725,7 +2716,7 @@ static int __init intel_iommu_quarantine
+             dma_set_pte_addr(*pte, maddr);
+             dma_set_pte_readable(*pte);
+         }
+-        iommu_flush_cache_page(parent, 1);
++        iommu_sync_cache(parent, PAGE_SIZE);
+ 
+         unmap_vtd_domain_page(parent);
+         parent = map_vtd_domain_page(maddr);
 From: <security@xenproject.org>
 Subject: x86/iommu: introduce a cache sync hook
 
