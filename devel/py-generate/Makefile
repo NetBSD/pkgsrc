@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/11/03 10:18:27 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/08/24 06:00:47 tnn Exp $
 
 DISTNAME=	generate-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ LIBS.SunOS+=	-lnsl -lsocket
 LIBS.QNX=	-lsocket
 
 EGG_NAME=	${DISTNAME:S/${PKGVERSION_NOREV}/2.2/}
+
+DIST_SUBDIR=	generate-20151222
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
