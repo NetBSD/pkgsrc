@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20022 2020/08/24 08:26:34 wiz Exp $
+$NetBSD: TODO,v 1.20023 2020/08/24 08:31:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -981,7 +981,6 @@ Suggested package updates
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
-	o py-parso-0.8.0
 	o py-ptt-1.10.2
 	o py-rsa-4.6 [drops python-2.x support]
 	o py-setuptools-50.0.0 [drops python-2.x support]
