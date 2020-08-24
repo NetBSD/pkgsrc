@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20019 2020/08/24 08:17:13 wiz Exp $
+$NetBSD: TODO,v 1.20020 2020/08/24 08:18:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -488,7 +488,6 @@ Suggested package updates
 	o colortail-0.3.3
 	o compiz-0.8.10
 	o cone-0.92
-	o confuse-3.3
 	o cook-2.31
 	o courier-0.77.0
 	o courier-authlib-0.66.2
