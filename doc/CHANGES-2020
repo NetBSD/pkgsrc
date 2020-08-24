@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4557 2020/08/24 07:57:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4558 2020/08/24 07:59:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7112,3 +7112,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/bison to 3.7.1 [wiz 2020-08-24]
 	Updated lang/gawk to 5.1.0 [wiz 2020-08-24]
 	Updated devel/gopls to 0.4.4 [wiz 2020-08-24]
+	Updated databases/gdbm to 1.18.1 [wiz 2020-08-24]
