@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/08/18 17:58:18 leot Exp $
+# $NetBSD: Makefile,v 1.35 2020/08/24 04:41:42 gutteridge Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-settings-daemon-${VERSION:R}.0
