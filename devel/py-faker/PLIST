@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/06/18 21:32:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/08/24 08:26:24 wiz Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -260,12 +260,18 @@ ${PYSITELIB}/faker/providers/bank/de_DE/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/bank/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/bank/en_PH/__init__.py
+${PYSITELIB}/faker/providers/bank/en_PH/__init__.pyc
+${PYSITELIB}/faker/providers/bank/en_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/es_ES/__init__.py
 ${PYSITELIB}/faker/providers/bank/es_ES/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/es_ES/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/fi_FI/__init__.py
 ${PYSITELIB}/faker/providers/bank/fi_FI/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/fi_FI/__init__.pyo
+${PYSITELIB}/faker/providers/bank/fil_PH/__init__.py
+${PYSITELIB}/faker/providers/bank/fil_PH/__init__.pyc
+${PYSITELIB}/faker/providers/bank/fil_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/bank/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/fr_FR/__init__.pyo
@@ -287,6 +293,9 @@ ${PYSITELIB}/faker/providers/bank/pt_PT/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.py
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.pyo
+${PYSITELIB}/faker/providers/bank/tl_PH/__init__.py
+${PYSITELIB}/faker/providers/bank/tl_PH/__init__.pyc
+${PYSITELIB}/faker/providers/bank/tl_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/barcode/__init__.py
 ${PYSITELIB}/faker/providers/barcode/__init__.pyc
 ${PYSITELIB}/faker/providers/barcode/__init__.pyo
@@ -296,6 +305,9 @@ ${PYSITELIB}/faker/providers/barcode/en_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/barcode/en_US/__init__.py
 ${PYSITELIB}/faker/providers/barcode/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/barcode/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/barcode/es_ES/__init__.py
+${PYSITELIB}/faker/providers/barcode/es_ES/__init__.pyc
+${PYSITELIB}/faker/providers/barcode/es_ES/__init__.pyo
 ${PYSITELIB}/faker/providers/barcode/fr_CA/__init__.py
 ${PYSITELIB}/faker/providers/barcode/fr_CA/__init__.pyc
 ${PYSITELIB}/faker/providers/barcode/fr_CA/__init__.pyo
@@ -596,6 +608,9 @@ ${PYSITELIB}/faker/providers/internet/en_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/internet/en_US/__init__.py
 ${PYSITELIB}/faker/providers/internet/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/internet/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/internet/es_ES/__init__.py
+${PYSITELIB}/faker/providers/internet/es_ES/__init__.pyc
+${PYSITELIB}/faker/providers/internet/es_ES/__init__.pyo
 ${PYSITELIB}/faker/providers/internet/fa_IR/__init__.py
 ${PYSITELIB}/faker/providers/internet/fa_IR/__init__.pyc
 ${PYSITELIB}/faker/providers/internet/fa_IR/__init__.pyo
