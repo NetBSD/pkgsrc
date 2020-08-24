@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20013 2020/08/24 08:01:06 wiz Exp $
+$NetBSD: TODO,v 1.20014 2020/08/24 08:02:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1126,7 +1126,6 @@ Suggested package updates
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-https-everywhere-2020.8.13
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ts-0.7.5
