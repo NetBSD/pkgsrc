@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20020 2020/08/24 08:18:21 wiz Exp $
+$NetBSD: TODO,v 1.20021 2020/08/24 08:20:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -845,7 +845,6 @@ Suggested package updates
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mpdas-0.4.1
-	o mpfr-4.1.0
 	o mserv-devel-0.41
 	o multitail-6.4.2
 	o munin-common-2.0.52
