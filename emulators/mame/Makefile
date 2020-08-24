@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.119 2020/08/18 17:57:46 leot Exp $
+# $NetBSD: Makefile,v 1.120 2020/08/24 12:46:25 wiz Exp $
 
-DISTNAME=	mame-0.222
-PKGREVISION=	2
+DISTNAME=	mame-0.223
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -42,6 +41,9 @@ MAKE_FLAGS+=		NOASM=1
 BUILDLINK_TRANSFORM+=	rm:-m32
 BUILDLINK_TRANSFORM+=	rm:-m64
 .endif
+
+# Need to use gnu++14 instead of c++14 to get __builtin_alloca() (!)
+BUILDLINK_TRANSFORM+=	opt:-std=c++14:-std=gnu++14
 
 # -Werror is problematic
 MAKE_ENV=	NOWERROR=1
