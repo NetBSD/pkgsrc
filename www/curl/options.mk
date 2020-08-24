@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2019/09/18 07:21:08 adam Exp $
+# $NetBSD: options.mk,v 1.19 2020/08/24 20:03:12 leot Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=		inet6 libssh2 gssapi ldap rtmp idn http2
@@ -56,6 +56,7 @@ CONFIGURE_ARGS+=	--without-libidn2
 .if !empty(PKG_OPTIONS:Mhttp2)
 USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--with-nghttp2=${BUILDLINK_PREFIX.nghttp2}
+TEST_DEPENDS+=		nghttp2-tools-[0-9]*:../../www/nghttp2-tools
 .include "../../www/nghttp2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-nghttp2
