@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2020/07/13 20:33:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2020/08/24 12:46:25 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -434,6 +434,7 @@ share/mame/hash/next.xml
 share/mame/hash/ngp.xml
 share/mame/hash/ngpc.xml
 share/mame/hash/nimbus.xml
+share/mame/hash/novag_ssensor4.xml
 share/mame/hash/nuon.xml
 share/mame/hash/octopus.xml
 share/mame/hash/odyssey2.xml
@@ -544,6 +545,7 @@ share/mame/hash/segacd.xml
 share/mame/hash/sf7000.xml
 share/mame/hash/sg1000.xml
 share/mame/hash/sgi_mips.xml
+share/mame/hash/sgi_mips_hdd.xml
 share/mame/hash/sgx.xml
 share/mame/hash/sitcom.xml
 share/mame/hash/smarttv_cart.xml
