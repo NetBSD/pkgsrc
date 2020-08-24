@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4554 2020/08/24 07:38:23 pin Exp $
+$NetBSD: CHANGES-2020,v 1.4555 2020/08/24 07:50:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7109,3 +7109,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/mate to 1.24.0nb2 [gutteridge 2020-08-24]
 	Updated x11/xfce4-tumbler to 0.3.0 [gutteridge 2020-08-24]
 	Updated editors/featherpad to 0.15.0 [pin 2020-08-24]
+	Updated devel/bison to 3.7.1 [wiz 2020-08-24]
