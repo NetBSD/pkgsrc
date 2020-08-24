@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/08/24 17:23:11 pho Exp $
+# $NetBSD: Makefile,v 1.14 2020/08/24 17:48:51 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -49,6 +49,12 @@ USE_TOOLS+=			autoconf gmake perl:run
 GNU_CONFIGURE=			yes
 USE_GNU_CONFIGURE_HOST=		no
 USE_LIBTOOL=			yes
+
+# TODO: Disable the splitter entirely so that we can drop the runtime
+# dependency on perl. The purpose of the splitter is to perform a dead
+# code elimination by breaking .o files into many pieces. This only
+# makes sense when linking executables statically, which is rarely
+# done these days.
 
 
 # -----------------------------------------------------------------------------
