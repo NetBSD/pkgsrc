@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2012/08/10 18:00:14 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2020/08/24 06:30:58 tnn Exp $
 
 Check that the proper arguments are given.
 
---- modeline_vfr.c.orig	2012-08-10 12:53:32.000000000 +0000
+--- modeline_vfr.c.orig	2020-08-24 06:27:34.226844393 +0000
 +++ modeline_vfr.c
 @@ -6,7 +6,7 @@
  *
@@ -13,17 +13,8 @@ Check that the proper arguments are given.
  * Output: Modeline
  *
  * Example use:
-@@ -20,7 +20,7 @@
- #include<stdlib.h>
- 
- int
--main( char argc, char** argv )
-+main( int argc, char** argv )
- {
- 	float		hr,vr;
- 	float		dcf;
-@@ -44,6 +44,12 @@ main( char argc, char** argv )
- 	float	step =10;
+@@ -44,6 +44,12 @@ main( int argc, char** argv )
+ 	float	step =10.0;
  	float 	s_rr;
  
 +	if (argc != 4) {
