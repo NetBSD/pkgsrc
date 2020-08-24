@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/10/08 11:25:55 darcy Exp $
+# $NetBSD: Makefile,v 1.27 2020/08/24 06:00:47 tnn Exp $
 #
 
 DISTNAME=	generate-2.8
@@ -18,6 +18,8 @@ MAKE_ENV+=	${BSD_MAKE_ENV} LIBS=${LIBS:Q}
 USE_TOOLS+=	gmake
 LIBS.SunOS=	-lsocket -lnsl
 LIBS.QNX=	-lsocket
+
+DIST_SUBDIR=	generate-20151222
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/generate ${DESTDIR}${PREFIX}/bin
