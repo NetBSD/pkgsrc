@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/08/21 12:37:48 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/24 05:20:00 tnn Exp $
 
 DISTNAME=	tldextract-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/john-kurkowski/tldextract
 COMMENT=	Accurately separate the TLD from the registered domain and subdomains
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-file>=1.4:../../devel/py-requests-file
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-pylint-[0-9]*:../../devel/py-test-pylint
 
