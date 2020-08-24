@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20008 2020/08/23 09:53:53 wiz Exp $
+$NetBSD: TODO,v 1.20009 2020/08/24 07:50:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,6 @@ Suggested package updates
 	o bin86-0.16.21
 	o binkd-1.04
 	o bird6-1.5.0
-	o bison-3.7.1
 	o bitlbee-3.6.1
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -468,7 +467,7 @@ Suggested package updates
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
-	o calibre-4.22
+	o calibre-4.23.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
