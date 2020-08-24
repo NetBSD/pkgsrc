@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2017/03/06 09:58:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/08/24 20:40:00 ryoon Exp $
 info/skk.info
 ${EMACS_LISPPREFIX}/skk/ccc.el
 ${EMACS_LISPPREFIX}/skk/ccc.elc
@@ -29,6 +29,8 @@ ${EMACS_LISPPREFIX}/skk/skk-cus.el
 ${EMACS_LISPPREFIX}/skk/skk-cus.elc
 ${EMACS_LISPPREFIX}/skk/skk-dcomp.el
 ${EMACS_LISPPREFIX}/skk/skk-dcomp.elc
+${EMACS_LISPPREFIX}/skk/skk-decor.el
+${EMACS_LISPPREFIX}/skk/skk-decor.elc
 ${EMACS_LISPPREFIX}/skk/skk-develop.el
 ${EMACS_LISPPREFIX}/skk/skk-develop.elc
 ${EMACS_LISPPREFIX}/skk/skk-emacs.el
