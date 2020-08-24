@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2020/03/15 22:52:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.69.4.1 2020/08/24 19:03:13 bsiegert Exp $
 bin/doveadm
 bin/doveconf
 bin/dovecot-sysreport
@@ -27,6 +27,7 @@ include/dovecot/auth-master-connection.h
 include/dovecot/auth-master.h
 include/dovecot/auth-penalty.h
 include/dovecot/auth-policy.h
+include/dovecot/auth-request-handler-private.h
 include/dovecot/auth-request-handler.h
 include/dovecot/auth-request-stats.h
 include/dovecot/auth-request-var-expand.h
@@ -403,6 +404,7 @@ include/dovecot/mdbox-settings.h
 include/dovecot/mdbox-storage-rebuild.h
 include/dovecot/mdbox-storage.h
 include/dovecot/mdbox-sync.h
+include/dovecot/mech-digest-md5-private.h
 include/dovecot/mech-otp-skey-common.h
 include/dovecot/mech-plain-common.h
 include/dovecot/mech-scram.h
@@ -449,6 +451,7 @@ include/dovecot/ostream-null.h
 include/dovecot/ostream-private.h
 include/dovecot/ostream-rawlog.h
 include/dovecot/ostream-unix.h
+include/dovecot/ostream-wrapper.h
 include/dovecot/ostream-zlib.h
 include/dovecot/ostream.h
 include/dovecot/passdb-blocking.h

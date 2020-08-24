@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.22 2020/06/02 08:24:14 adam Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2020/08/24 19:03:13 bsiegert Exp $
 
-PKGREVISION= 1
 .include "../../mail/dovecot2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dovecot/dovecot-sqlite/}
