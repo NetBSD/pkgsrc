@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4577 2020/08/24 11:08:33 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4578 2020/08/24 11:58:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7134,3 +7134,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xenkernel411 to 4.11.4nb1 [bouyer 2020-08-24]
 	Updated sysutils/ansible to 2.9.12 [adam 2020-08-24]
 	Updated devel/py-cffi to 1.14.2 [adam 2020-08-24]
+	Updated lang/gcc10 to 10.2.0 [wiz 2020-08-24]
