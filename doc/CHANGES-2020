@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4579 2020/08/24 12:46:34 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4580 2020/08/24 13:45:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7136,3 +7136,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-cffi to 1.14.2 [adam 2020-08-24]
 	Updated lang/gcc10 to 10.2.0 [wiz 2020-08-24]
 	Updated emulators/mame to 0.223 [wiz 2020-08-24]
+	Updated pkgtools/pkg_notify to 0.4.7 [wiz 2020-08-24]
