@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4583 2020/08/24 18:53:33 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.4584 2020/08/24 20:40:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7140,3 +7140,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.30 [fox 2020-08-24]
 	Removed math/p5-Math-Systems [wiz 2020-08-24]
 	Removed lang/go113 [bsiegert 2020-08-24]
+	Updated inputmethod/skk to 17.1 [ryoon 2020-08-24]
