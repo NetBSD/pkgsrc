@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20018 2020/08/24 08:14:43 wiz Exp $
+$NetBSD: TODO,v 1.20019 2020/08/24 08:17:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -662,7 +662,6 @@ Suggested package updates
 	o grantlee-5.0.0
 	o greed-4.1
 	o gromacs-5.1.2
-	o grpc-1.31.1
 	o gsasl-1.8.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
