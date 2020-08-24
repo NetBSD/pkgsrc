@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20026 2020/08/24 08:40:27 wiz Exp $
+$NetBSD: TODO,v 1.20027 2020/08/24 08:42:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -983,7 +983,6 @@ Suggested package updates
 	o py-rsa-4.6 [drops python-2.x support]
 	o py-setuptools-50.0.0 [drops python-2.x support]
 	o py-simpletal-5.1
-	o py-sphinx-autoapi-1.4.0
 	o py-sybase-0.37
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
