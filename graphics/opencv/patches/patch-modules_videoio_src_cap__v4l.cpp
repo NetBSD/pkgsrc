@@ -1,18 +1,26 @@
-$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.6 2019/12/16 08:24:39 adam Exp $
+$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.7 2020/08/24 07:08:03 tnn Exp $
 
 Conditionalize settings not available in NetBSD's v4l2 emulation.
+Avoid non-standard integer types.
 
---- modules/videoio/src/cap_v4l.cpp.orig	2019-10-09 11:42:29.000000000 +0000
+--- modules/videoio/src/cap_v4l.cpp.orig	2019-12-19 15:16:47.000000000 +0000
 +++ modules/videoio/src/cap_v4l.cpp
-@@ -218,6 +218,7 @@ make & enjoy!
+@@ -218,6 +218,14 @@ make & enjoy!
  #include <fcntl.h>
  #include <errno.h>
  #include <sys/ioctl.h>
 +#include <inttypes.h>
++#include <stdint.h>
++#ifndef __u32
++#define __u32 uint32_t
++#endif
++#ifndef __s32
++#define __s32 int32_t
++#endif
  #include <sys/types.h>
  #include <sys/mman.h>
  
-@@ -239,24 +240,30 @@ make & enjoy!
+@@ -239,24 +247,30 @@ make & enjoy!
  #endif
  
  // https://github.com/opencv/opencv/issues/13335
@@ -43,7 +51,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
  
  #ifndef V4L2_PIX_FMT_Y10
  #define V4L2_PIX_FMT_Y10 v4l2_fourcc('Y', '1', '0', ' ')
-@@ -493,13 +500,17 @@ bool CvCaptureCAM_V4L::autosetup_capture
+@@ -554,13 +568,17 @@ bool CvCaptureCAM_V4L::autosetup_capture
              V4L2_PIX_FMT_NV12,
              V4L2_PIX_FMT_NV21,
              V4L2_PIX_FMT_SBGGR8,
@@ -61,7 +69,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
              V4L2_PIX_FMT_Y10,
              V4L2_PIX_FMT_GREY,
      };
-@@ -545,9 +556,13 @@ bool CvCaptureCAM_V4L::convertableToRgb(
+@@ -616,9 +634,13 @@ bool CvCaptureCAM_V4L::convertableToRgb(
      case V4L2_PIX_FMT_UYVY:
      case V4L2_PIX_FMT_SBGGR8:
      case V4L2_PIX_FMT_SN9C10X:
@@ -75,7 +83,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      case V4L2_PIX_FMT_Y10:
      case V4L2_PIX_FMT_GREY:
      case V4L2_PIX_FMT_BGR24:
-@@ -582,7 +597,9 @@ void CvCaptureCAM_V4L::v4l2_create_frame
+@@ -653,7 +675,9 @@ void CvCaptureCAM_V4L::v4l2_create_frame
              channels = 1;
              size.height = size.height * 3 / 2; // "1.5" channels
              break;
@@ -85,7 +93,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
          case V4L2_PIX_FMT_Y10:
              depth = IPL_DEPTH_16U;
              /* fallthru */
-@@ -1408,11 +1425,13 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+@@ -1528,11 +1552,13 @@ void CvCaptureCAM_V4L::convertToRgb(cons
                  (unsigned char*)buffers[MAX_V4L_BUFFERS].start,
                  (unsigned char*)frame.imageData);
          return;
@@ -99,7 +107,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      default:
          break;
      }
-@@ -1450,6 +1469,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+@@ -1571,6 +1597,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
      case V4L2_PIX_FMT_RGB24:
          cv::cvtColor(cv::Mat(imageSize, CV_8UC3, currentBuffer.start), destination, COLOR_RGB2BGR);
          return;
@@ -107,7 +115,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      case V4L2_PIX_FMT_Y16:
      {
          cv::Mat temp(imageSize, CV_8UC1, buffers[MAX_V4L_BUFFERS].start);
-@@ -1464,6 +1484,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
+@@ -1585,6 +1612,7 @@ void CvCaptureCAM_V4L::convertToRgb(cons
          cv::cvtColor(temp, destination, COLOR_GRAY2BGR);
          return;
      }
@@ -115,7 +123,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      case V4L2_PIX_FMT_GREY:
          cv::cvtColor(cv::Mat(imageSize, CV_8UC1, currentBuffer.start), destination, COLOR_GRAY2BGR);
          break;
-@@ -1576,8 +1597,10 @@ static inline int capPropertyToV4L2(int 
+@@ -1697,8 +1725,10 @@ static inline int capPropertyToV4L2(int 
          return -1;
      case cv::CAP_PROP_FOURCC:
          return -1;
@@ -126,7 +134,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      case cv::CAP_PROP_FORMAT:
          return -1;
      case cv::CAP_PROP_MODE:
-@@ -1592,8 +1615,10 @@ static inline int capPropertyToV4L2(int 
+@@ -1713,8 +1743,10 @@ static inline int capPropertyToV4L2(int 
          return V4L2_CID_HUE;
      case cv::CAP_PROP_GAIN:
          return V4L2_CID_GAIN;
@@ -137,7 +145,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      case cv::CAP_PROP_CONVERT_RGB:
          return -1;
      case cv::CAP_PROP_WHITE_BALANCE_BLUE_U:
-@@ -1604,8 +1629,10 @@ static inline int capPropertyToV4L2(int 
+@@ -1725,8 +1757,10 @@ static inline int capPropertyToV4L2(int 
          return -1;
      case cv::CAP_PROP_SHARPNESS:
          return V4L2_CID_SHARPNESS;
@@ -148,7 +156,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      case cv::CAP_PROP_GAMMA:
          return V4L2_CID_GAMMA;
      case cv::CAP_PROP_TEMPERATURE:
-@@ -1616,34 +1643,54 @@ static inline int capPropertyToV4L2(int 
+@@ -1737,34 +1771,54 @@ static inline int capPropertyToV4L2(int 
          return -1;
      case cv::CAP_PROP_WHITE_BALANCE_RED_V:
          return V4L2_CID_RED_BALANCE;
