@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4569 2020/08/24 08:31:35 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4570 2020/08/24 08:35:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7124,3 +7124,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/mpfr to 4.1.0 [wiz 2020-08-24]
 	Updated devel/py-faker to 4.1.2 [wiz 2020-08-24]
 	Updated lang/py-parso to 0.8.0 [wiz 2020-08-24]
+	Updated multimedia/libvpx to 1.9.0 [wiz 2020-08-24]
