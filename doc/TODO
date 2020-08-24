@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20029 2020/08/24 08:49:07 wiz Exp $
+$NetBSD: TODO,v 1.20030 2020/08/24 11:58:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -591,7 +591,6 @@ Suggested package updates
 	o gap-4r4p9
 	o gcal-4
 	o gcc-9.1
-	o gcc10-10.2.0
 	o gcin-1.5.5
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
