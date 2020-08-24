@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2019/10/23 12:17:33 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/08/24 07:50:19 wiz Exp $
 bin/bison
 info/bison.info
 man/man1/bison.1
@@ -25,6 +25,7 @@ share/bison/skeletons/lalr1.d
 share/bison/skeletons/lalr1.java
 share/bison/skeletons/location.cc
 share/bison/skeletons/stack.hh
+share/bison/skeletons/traceon.m4
 share/bison/skeletons/variant.hh
 share/bison/skeletons/yacc.c
 share/bison/xslt/bison.xsl
@@ -51,6 +52,9 @@ share/doc/bison/examples/c++/simple.yy
 share/doc/bison/examples/c++/variant-11.yy
 share/doc/bison/examples/c++/variant.yy
 share/doc/bison/examples/c/README.md
+share/doc/bison/examples/c/bistromathic/Makefile
+share/doc/bison/examples/c/bistromathic/README.md
+share/doc/bison/examples/c/bistromathic/parse.y
 share/doc/bison/examples/c/calc/Makefile
 share/doc/bison/examples/c/calc/README.md
 share/doc/bison/examples/c/calc/calc.y
@@ -61,6 +65,9 @@ share/doc/bison/examples/c/lexcalc/scan.l
 share/doc/bison/examples/c/mfcalc/Makefile
 share/doc/bison/examples/c/mfcalc/calc.h
 share/doc/bison/examples/c/mfcalc/mfcalc.y
+share/doc/bison/examples/c/pushcalc/Makefile
+share/doc/bison/examples/c/pushcalc/README.md
+share/doc/bison/examples/c/pushcalc/calc.y
 share/doc/bison/examples/c/reccalc/Makefile
 share/doc/bison/examples/c/reccalc/README.md
 share/doc/bison/examples/c/reccalc/parse.y
@@ -70,9 +77,11 @@ share/doc/bison/examples/c/rpcalc/rpcalc.y
 share/doc/bison/examples/d/Makefile
 share/doc/bison/examples/d/README.md
 share/doc/bison/examples/d/calc.y
-share/doc/bison/examples/java/Calc.y
-share/doc/bison/examples/java/Makefile
 share/doc/bison/examples/java/README.md
+share/doc/bison/examples/java/calc/Calc.y
+share/doc/bison/examples/java/calc/Makefile
+share/doc/bison/examples/java/simple/Calc.y
+share/doc/bison/examples/java/simple/Makefile
 ${PLIST.nls}share/locale/af/LC_MESSAGES/bison-gnulib.mo
 ${PLIST.nls}share/locale/ast/LC_MESSAGES/bison-runtime.mo
 ${PLIST.nls}share/locale/be/LC_MESSAGES/bison-gnulib.mo
@@ -165,6 +174,7 @@ ${PLIST.nls}share/locale/sr/LC_MESSAGES/bison.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/bison-gnulib.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/bison-runtime.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/bison.mo
+${PLIST.nls}share/locale/ta/LC_MESSAGES/bison-runtime.mo
 ${PLIST.nls}share/locale/th/LC_MESSAGES/bison-runtime.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/bison-gnulib.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/bison-runtime.mo
