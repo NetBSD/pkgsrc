@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20028 2020/08/24 08:45:05 wiz Exp $
+$NetBSD: TODO,v 1.20029 2020/08/24 08:49:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -385,7 +385,6 @@ Suggested package updates
 	o SOGo-4.3.1
 	o SOPE-4.3.1
 	o Sigil-1.2.0 [needs QtWebEngine]
-	o TECkit-2.5.10
 	o TiffIO-140a
 	o YoSucker-81
 	o abcmidi-20170416
@@ -1100,7 +1099,6 @@ Suggested package updates
 	o telepathy-mission-control5-5.16.3
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
-	o thunderbird-enigmail-2.1.7.1
 	o tig-2.2
 	o tigervnc-1.10.1 [quite unstable]
 	o tightvnc-2.7.10
