@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4551 2020/08/23 23:09:49 wiedi Exp $
+$NetBSD: CHANGES-2020,v 1.4552 2020/08/24 04:43:32 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7106,3 +7106,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/sc-im to 0.7.0nb16 [sjmulder 2020-08-23]
 	Updated sysutils/nnn to 3.4 [sjmulder 2020-08-23]
 	Updated editors/nano to 5.1 [wiedi 2020-08-23]
+	Updated meta-pkgs/mate to 1.24.0nb2 [gutteridge 2020-08-24]
