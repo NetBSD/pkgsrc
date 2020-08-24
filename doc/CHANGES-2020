@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4580 2020/08/24 13:45:32 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4581 2020/08/24 15:10:29 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7137,3 +7137,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/gcc10 to 10.2.0 [wiz 2020-08-24]
 	Updated emulators/mame to 0.223 [wiz 2020-08-24]
 	Updated pkgtools/pkg_notify to 0.4.7 [wiz 2020-08-24]
+	Updated audio/fasttracker2 to 1.30 [fox 2020-08-24]
