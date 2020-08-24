@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20015 2020/08/24 08:05:40 wiz Exp $
+$NetBSD: TODO,v 1.20016 2020/08/24 08:07:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -745,7 +745,6 @@ Suggested package updates
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o keybinder-0.3.1
-	o khal-0.10.2
 	o khard-0.17.0
 	o kipi-plugins-4.14.0
 	o kismet-2011.03r2 [pkg/45692]
