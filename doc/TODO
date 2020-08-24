@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20009 2020/08/24 07:50:28 wiz Exp $
+$NetBSD: TODO,v 1.20010 2020/08/24 07:52:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ Suggested package updates
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
-	o gawk-5.1.0
 	o gcal-4
 	o gcc-9.1
 	o gcc10-10.2.0
