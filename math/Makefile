@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.478 2020/08/18 23:38:47 riastradh Exp $
+# $NetBSD: Makefile,v 1.479 2020/08/24 16:29:12 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -294,7 +294,6 @@ SUBDIR+=	p5-Math-Random-MT-Auto
 SUBDIR+=	p5-Math-Random-MT-Perl
 SUBDIR+=	p5-Math-Round
 SUBDIR+=	p5-Math-Spline
-SUBDIR+=	p5-Math-Systems
 SUBDIR+=	p5-Math-Utils
 SUBDIR+=	p5-Math-VecStat
 SUBDIR+=	p5-Number-Compare
