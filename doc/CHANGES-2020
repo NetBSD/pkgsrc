@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4582 2020/08/24 16:29:12 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4583 2020/08/24 18:53:33 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7139,3 +7139,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkg_notify to 0.4.7 [wiz 2020-08-24]
 	Updated audio/fasttracker2 to 1.30 [fox 2020-08-24]
 	Removed math/p5-Math-Systems [wiz 2020-08-24]
+	Removed lang/go113 [bsiegert 2020-08-24]
