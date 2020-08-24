@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2019/11/02 22:56:54 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/08/24 20:40:00 ryoon Exp $
 
-DISTNAME=	ddskk-16.2
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/^ddskk/skk/}
+DISTNAME=	ddskk-ddskk-17.1_Neppu
+PKGNAME=	${EMACS_PKGNAME_PREFIX}skk-17.1
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/
-MASTER_SITES+=	http://openlab.ring.gr.jp/skk/maintrunk/old-releases/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=skk-dev/}
+GITHUB_PROJECT=	ddskk
+GITHUB_TAG=	ddskk-17.1_Neppu
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/index.html

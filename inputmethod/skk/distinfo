@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2017/03/06 09:58:51 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2020/08/24 20:40:00 ryoon Exp $
 
-SHA1 (ddskk-16.2.tar.gz) = 88fab51839e821ec60730ada8772d395faecb1f5
-RMD160 (ddskk-16.2.tar.gz) = 448f4073d9b7c4188e853b2c94bfb49560a9b7a7
-SHA512 (ddskk-16.2.tar.gz) = 591d66e2d217a289ce8273ed7da10c0ed72029e961efde0537044f7ad3f5f46943cf5c71ec1d97a27743fcea91a9fab81c86e2772047892f53e2852bf58ef45c
-Size (ddskk-16.2.tar.gz) = 886618 bytes
+SHA1 (ddskk-ddskk-17.1_Neppu.tar.gz) = 7f708465c5bb62df88c4293c58cb11599102907e
+RMD160 (ddskk-ddskk-17.1_Neppu.tar.gz) = 565c596b6168f5571c23d7cbf2f4c176b4c69f18
+SHA512 (ddskk-ddskk-17.1_Neppu.tar.gz) = e0b924111a6289acd29ee5a5d94ea70730fe8f4e1dd5ed279520263efab0c69a6940e5b1b6182e45ed30c0b1ddca9e44ff75b7b3fdab5c8a3e1b2b9f82cc20fa
+Size (ddskk-ddskk-17.1_Neppu.tar.gz) = 952635 bytes
+SHA1 (patch-Makefile) = a04d6c460fae99d247a9b237192619477c1aed02
