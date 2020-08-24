@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/07/21 08:04:58 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/24 08:32:43 wiz Exp $
 
 DISTNAME=	jedi-0.17.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 TEST_DEPENDS+=	${PYPKGPREFIX}-docopt-[0-9]*:../../devel/py-docopt
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-parso
 
 USE_LANGUAGES=	# none
 
