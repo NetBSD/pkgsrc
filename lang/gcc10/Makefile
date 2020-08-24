@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/05/17 19:47:19 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/24 11:58:38 wiz Exp $
 
 GCC_PKGNAME=		gcc10
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC10_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC10_DIST_VERSION}
-PKGREVISION=	1
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc10-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
