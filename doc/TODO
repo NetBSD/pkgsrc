@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20014 2020/08/24 08:02:41 wiz Exp $
+$NetBSD: TODO,v 1.20015 2020/08/24 08:05:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1142,7 +1142,6 @@ Suggested package updates
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
-	o vala-0.48.8
 	o varnish-5.1.3
 	o varnish-6.0
 	o vbetool-1.1
