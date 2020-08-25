@@ -1,9 +1,11 @@
-$NetBSD: patch-src_zm_thread_cpp,v 1.2 2013/03/24 16:47:47 joerg Exp $
+$NetBSD: patch-src_zm_thread_cpp,v 1.3 2020/08/25 16:42:21 gdt Exp $
 
 pthread_mutex_timedlock() is not available on NetBSD 5.0, and not required
 in ZoneMinder.
 
---- src/zm_thread.cpp.orig	2011-06-21 09:19:11.000000000 +0000
+Work around varying notion of an undefined mpid on pthread/not.
+
+--- src/zm_thread.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_thread.cpp
 @@ -72,6 +72,7 @@ void Mutex::lock()
          throw ThreadException( stringtf( "Unable to lock pthread mutex: %s", strerror(errno) ) );
@@ -21,7 +23,33 @@ in ZoneMinder.
  
  void Mutex::unlock()
  {
-@@ -336,4 +338,5 @@ void Thread::kill( int signal )
+@@ -232,9 +234,15 @@ template <class T> void ThreadData<T>::u
+     Debug( 9, "Updated value, %p", this );
+ }
+ 
++#ifndef USE_PTHREAD
++#define MPID_UNDEFINED -1
++#else /* USE_PTHREAD */
++#define MPID_UNDEFINED NULL
++#endif /* USE_PTHREAD */
++
+ Thread::Thread() :
+     mThreadCondition( mThreadMutex ),
+-    mPid( -1 ),
++    mPid( MPID_UNDEFINED ),
+     mStarted( false ),
+     mRunning( false )
+ {
+@@ -308,7 +316,7 @@ void Thread::join()
+     if ( isThread() )
+         throw ThreadException( "Can't self join thread" );
+     mThreadMutex.lock();
+-    if ( mPid >= 0 )
++    if ( mPid != MPID_UNDEFINED )
+     {
+         if ( mStarted )
+         {
+@@ -337,4 +345,5 @@ void Thread::kill( int signal )
  }
  
  // Some explicit template instantiations
