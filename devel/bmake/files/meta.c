@@ -1,4 +1,4 @@
-/*      $NetBSD: meta.c,v 1.5 2020/05/24 21:10:17 nia Exp $ */
+/*      $NetBSD: meta.c,v 1.6 2020/08/25 21:43:33 js Exp $ */
 
 /*
  * Implement 'meta' mode.
@@ -44,6 +44,10 @@ char * dirname(char *);
 #include <errno.h>
 #if !defined(HAVE_CONFIG_H) || defined(HAVE_ERR_H)
 #include <err.h>
+#endif
+
+#ifdef HAVE_SYS_SELECT_H
+#include <sys/select.h>
 #endif
 
 #include "make.h"
