@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4589 2020/08/25 14:35:49 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4590 2020/08/25 14:36:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7147,3 +7147,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-jsbeautifier to 1.13.0 [adam 2020-08-25]
 	Updated devel/cbindgen to 0.14.4 [ryoon 2020-08-25]
 	Updated www/firefox to 80.0 [ryoon 2020-08-25]
+	Updated www/firefox-l10n to 80.0 [ryoon 2020-08-25]
