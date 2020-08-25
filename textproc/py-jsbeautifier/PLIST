@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/05/02 08:35:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/08/25 11:03:20 adam Exp $
 bin/js-beautify-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/jsbeautifier/__init__.pyo
 ${PYSITELIB}/jsbeautifier/__version__.py
 ${PYSITELIB}/jsbeautifier/__version__.pyc
 ${PYSITELIB}/jsbeautifier/__version__.pyo
+${PYSITELIB}/jsbeautifier/cli/__init__.py
+${PYSITELIB}/jsbeautifier/cli/__init__.pyc
+${PYSITELIB}/jsbeautifier/cli/__init__.pyo
 ${PYSITELIB}/jsbeautifier/core/__init__.py
 ${PYSITELIB}/jsbeautifier/core/__init__.pyc
 ${PYSITELIB}/jsbeautifier/core/__init__.pyo
