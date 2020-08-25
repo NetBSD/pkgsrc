@@ -1,4 +1,6 @@
-$NetBSD: patch-src_zm__utils.h,v 1.2 2015/04/05 08:51:08 dsainty Exp $
+$NetBSD: patch-src_zm__utils.h,v 1.3 2020/08/25 16:42:21 gdt Exp $
+
+\todo Explain
 
 --- src/zm_utils.h.orig	2015-04-01 17:20:39.840273017 +1300
 +++ src/zm_utils.h	2015-04-01 17:28:57.376293647 +1300

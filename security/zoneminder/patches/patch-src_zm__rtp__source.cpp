@@ -1,4 +1,6 @@
-$NetBSD: patch-src_zm__rtp__source.cpp,v 1.2 2018/07/14 15:03:57 gdt Exp $
+$NetBSD: patch-src_zm__rtp__source.cpp,v 1.3 2020/08/25 16:42:21 gdt Exp $
+
+Fix type issue with tv_sec; see earlier patches.
 
 --- src/zm_rtp_source.cpp.orig	2015-02-05 02:52:37.000000000 +0000
 +++ src/zm_rtp_source.cpp
@@ -17,7 +19,7 @@ $NetBSD: patch-src_zm__rtp__source.cpp,v 1.2 2018/07/14 15:03:57 gdt Exp $
      {
 -        Debug( 5, "lastSrNtpTime: %ld.%06ld, rtpTime: %x", mLastSrTimeNtp.tv_sec, mLastSrTimeNtp.tv_usec, rtpTime );
 -        Debug( 5, "ntpTime: %ld.%06ld, rtpTime: %x", ntpTime.tv_sec, ntpTime.tv_usec, rtpTime );
-+      Debug( 5, "lastSrNtpTime: %jd.%06ld, rtpTime: %x", (intmax_t) mLastSrTimeNtp.tv_sec, mLastSrTimeNtp.tv_usec, rtpTime );
++        Debug( 5, "lastSrNtpTime: %jd.%06ld, rtpTime: %x", (intmax_t) mLastSrTimeNtp.tv_sec, mLastSrTimeNtp.tv_usec, rtpTime );
 +        Debug( 5, "ntpTime: %jd.%06ld, rtpTime: %x", (intmax_t) ntpTime.tv_sec, ntpTime.tv_usec, rtpTime );
  
          double diffNtpTime = tvDiffSec( mBaseTimeNtp, ntpTime );

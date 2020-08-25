@@ -1,4 +1,6 @@
-$NetBSD: patch-web_Makefile.am,v 1.1 2013/03/24 16:47:47 joerg Exp $
+$NetBSD: patch-web_Makefile.am,v 1.2 2020/08/25 16:42:21 gdt Exp $
+
+Don't set owners; see previous
 
 --- web/Makefile.am.orig	2013-03-24 15:56:43.000000000 +0000
 +++ web/Makefile.am
