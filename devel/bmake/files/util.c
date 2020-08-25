@@ -1,9 +1,9 @@
-/*	$NetBSD: util.c,v 1.16 2020/05/24 21:10:17 nia Exp $	*/
+/*	$NetBSD: util.c,v 1.17 2020/08/25 21:43:33 js Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.16 2020/05/24 21:10:17 nia Exp $
+ *	$Id: util.c,v 1.17 2020/08/25 21:43:33 js Exp $
  */
 #if defined(__MINT__) || defined(__linux__)
 #include <signal.h>
@@ -12,16 +12,20 @@
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.16 2020/05/24 21:10:17 nia Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.17 2020/08/25 21:43:33 js Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.16 2020/05/24 21:10:17 nia Exp $");
+__RCSID("$NetBSD: util.c,v 1.17 2020/08/25 21:43:33 js Exp $");
 #endif
 #endif
 
 #include <errno.h>
 #include <time.h>
 #include <signal.h>
+
+#ifndef SA_RESTART
+#define SA_RESTART 0
+#endif
 
 #if !defined(HAVE_STRERROR)
 extern int errno, sys_nerr;
