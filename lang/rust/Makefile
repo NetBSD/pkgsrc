@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.188 2020/08/06 11:42:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.189 2020/08/25 08:54:25 schmonz Exp $
 
 DISTNAME=	rustc-1.45.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -407,7 +408,8 @@ do-install:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-	for f in ${DESTDIR}${PREFIX}/lib/librustc_macros-*.dylib; do \
+	for f in ${DESTDIR}${PREFIX}/lib/librustc_macros-*.dylib \
+	    ${DESTDIR}${PREFIX}/lib/libchalk_derive-*.dylib; do \
 		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 	done
 .endif
