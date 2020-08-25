@@ -1,9 +1,21 @@
-# $NetBSD: Makefile,v 1.21 2020/08/17 20:19:12 leot Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/25 13:45:52 gdt Exp $
 
-DISTNAME=	chirp-0.4.1
-PKGREVISION=	14
+# Chirp does not have what would normally called releasees.  They have
+# "daily builds" which are like releases except that:
+#   they are called chirp-daily instead of chirp
+#   they have YYYYMMDD version numbers
+#   they don't have the usual release testing
+# Upstream says
+#    they will not go back to regular version numbers
+#    the preferred name is chirp, not chirp-daily
+# via
+#   https://chirp.danplanet.com/issues/8067
+#   https://chirp.danplanet.com/news/15
+PKGVERSION=	20200807
+PKGNAME=	chirp-${PKGVERSION}
+DISTNAME=	chirp-daily-${PKGVERSION_NOREV}
 CATEGORIES=	ham
-MASTER_SITES=	https://chirp.danplanet.com/download/${PKGVERSION}/
+MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_daily/daily-${PKGVERSION_NOREV}/
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://chirp.danplanet.com/projects/chirp/wiki/Home
@@ -11,9 +23,10 @@ COMMENT=	Tool for programming Amateur Radio HTs
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	#none
-REPLACE_PYTHON=	*.py chirp/*.py chirpui/*.py
+REPLACE_PYTHON=	*.py chirp/*.py chirp/ui/*.py
 
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-future>=0.18.0:../../devel/py-future
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
@@ -28,9 +41,7 @@ SUBST_SED.fix-manpaths=		-e 's,share/man/man1,${PKGMANDIR}/man1,g'
 SUBST_CLASSES+=			fix-sharepaths
 SUBST_STAGE.fix-sharepaths=	pre-configure
 SUBST_MESSAGE.fix-sharepaths=	Fixing /usr/share paths
-SUBST_FILES.fix-sharepaths=	chirpw
-SUBST_FILES.fix-sharepaths+=	chirp/generic_xml.py
-SUBST_FILES.fix-sharepaths+=	chirpui/mainapp.py
+SUBST_FILES.fix-sharepaths=	chirp/platform.py
 SUBST_SED.fix-sharepaths=	-e 's,/usr/share,${PREFIX}/share,g'
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
