@@ -1,20 +1,20 @@
-$NetBSD: patch-src_zmc_cpp,v 1.2 2013/03/24 16:47:47 joerg Exp $
+$NetBSD: patch-src_zmc_cpp,v 1.3 2020/08/25 16:42:21 gdt Exp $
 
 Use a more appropriate initialisation for a long, and use the definition out
 of <limits.h>, for portability.
 
---- src/zmc.cpp.orig	2011-06-21 09:19:11.000000000 +0000
+--- src/zmc.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zmc.cpp
-@@ -19,7 +19,7 @@
+@@ -57,7 +57,7 @@ possible, this should run at more or les
  
  #include <getopt.h>
  #include <signal.h>
--#include <values.h>
-+#include <limits.h>
- 
- #include "zm.h"
- #include "zm_db.h"
-@@ -224,7 +224,7 @@ int main( int argc, char *argv[] )
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <limits.h>
+ #else
+ #include <values.h>
+@@ -283,7 +283,7 @@ int main( int argc, char *argv[] )
  		sigprocmask( SIG_BLOCK, &block_set, 0 );
  		for ( int i = 0; i < n_monitors; i++ )
  		{
