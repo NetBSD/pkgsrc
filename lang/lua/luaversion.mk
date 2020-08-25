@@ -1,6 +1,6 @@
-# $NetBSD: luaversion.mk,v 1.14 2020/07/02 21:42:23 nia Exp $
+# $NetBSD: luaversion.mk,v 1.15 2020/08/25 22:46:24 gutteridge Exp $
 
-# This file determins which Lua version is used as a dependency for
+# This file determines which Lua version is used as a dependency for
 # a package.
 #
 # === User-settable variables ===
