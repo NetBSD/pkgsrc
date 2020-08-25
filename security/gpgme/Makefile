@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2020/08/03 15:32:31 adam Exp $
+# $NetBSD: Makefile,v 1.99 2020/08/25 08:54:52 schmonz Exp $
 
 DISTNAME=	gpgme-1.14.0
 CATEGORIES=	security
@@ -29,7 +29,8 @@ LIBS.SunOS+=		-lnsl -lsocket
 
 BUILDLINK_TRANSFORM+=	rm:-Wsuggest-override
 
-TEST_TARGET=		check
+TEST_TARGET=		all
+TEST_DIRS=		tests
 
 .include "options.mk"
 
