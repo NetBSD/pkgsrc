@@ -1,17 +1,28 @@
-$NetBSD: patch-src_zmu.cpp,v 1.2 2018/07/14 15:03:57 gdt Exp $
+$NetBSD: patch-src_zmu.cpp,v 1.3 2020/08/25 16:42:21 gdt Exp $
 
---- src/zmu.cpp.orig	2015-02-05 02:52:37.000000000 +0000
+time types
+
+--- src/zmu.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zmu.cpp
-@@ -457,7 +457,7 @@ int main( int argc, char *argv[] )
+@@ -519,14 +519,14 @@ int main( int argc, char *argv[] )
+ 					if ( timestamp.tv_sec )
+ 						strftime( timestamp_str, sizeof(timestamp_str), "%Y-%m-%d %H:%M:%S", localtime( &timestamp.tv_sec ) );
+ 					if ( image_idx == -1 )
+-						printf( "Time of last image capture: %s.%02ld\n", timestamp_str, timestamp.tv_usec/10000 );
++						printf( "Time of last image capture: %s.%02ld\n", timestamp_str, (long) timestamp.tv_usec/10000 );
+ 					else
+-						printf( "Time of image %d capture: %s.%02ld\n", image_idx, timestamp_str, timestamp.tv_usec/10000 );
++						printf( "Time of image %d capture: %s.%02ld\n", image_idx, timestamp_str, (long) timestamp.tv_usec/10000 );
+ 				}
  				else
  				{
  					if ( have_output ) printf( "%c", separator );
 -					printf( "%ld.%02ld", timestamp.tv_sec, timestamp.tv_usec/10000 );
-+					printf( "%jd.%02ld", (intmax_t) timestamp.tv_sec, timestamp.tv_usec/10000 );
++					printf( "%jd.%02ld", (intmax_t) timestamp.tv_sec, (long) timestamp.tv_usec/10000 );
  					have_output = true;
  				}
  			}
-@@ -724,12 +724,12 @@ int main( int argc, char *argv[] )
+@@ -793,12 +793,12 @@ int main( int argc, char *argv[] )
  						if ( monitor && monitor->connect() )
  						{
  							struct timeval tv = monitor->GetTimestamp();
@@ -22,11 +33,11 @@ $NetBSD: patch-src_zmu.cpp,v 1.2 2018/07/14 15:03:57 gdt Exp $
  								monitor->GetState(),
  								monitor->GetTriggerState(),
 -								tv.tv_sec, tv.tv_usec/10000,
-+								(intmax_t) tv.tv_sec, tv.tv_usec/10000,
++								(intmax_t) tv.tv_sec, (long) tv.tv_usec/10000,
  								monitor->GetLastReadIndex(),
  								monitor->GetLastWriteIndex(),
  								monitor->GetLastEvent(),
-@@ -741,12 +741,12 @@ int main( int argc, char *argv[] )
+@@ -810,12 +810,12 @@ int main( int argc, char *argv[] )
  					else
  					{
  						struct timeval tv = { 0, 0 };
@@ -37,7 +48,7 @@ $NetBSD: patch-src_zmu.cpp,v 1.2 2018/07/14 15:03:57 gdt Exp $
  							0,
  							0,
 -							tv.tv_sec, tv.tv_usec/10000,
-+							(intmax_t) tv.tv_sec, tv.tv_usec/10000,
++							(intmax_t) tv.tv_sec, (long) tv.tv_usec/10000,
  							0,
  							0,
  							0,
