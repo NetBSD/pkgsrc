@@ -1,0 +1,15 @@
+$NetBSD: patch-core_scripts_bareos-config-lib.sh.in,v 1.1 2020/08/25 08:32:14 kardel Exp $
+
+	add $PREFIX/{bin,sbin} to PATH to avoid tripping over
+	missing commands (like db programs)
+
+--- core/scripts/bareos-config-lib.sh.in.orig	2020-08-25 07:03:03.539870629 +0000
++++ core/scripts/bareos-config-lib.sh.in
+@@ -4,6 +4,7 @@ BAREOS_CONFIG_DIR=${BAREOS_CONFIG_DIR:-@
+ BAREOS_SBIN_DIR=${BAREOS_SBIN_DIR:-@sbindir@}
+ DBCHECK="${BAREOS_SBIN_DIR}/bareos-dbcheck -c ${BAREOS_CONFIG_DIR} -B"
+ AWK="@AWK@"
++PATH=${PATH}:@bindir@:@sbindir@
+ 
+ SEC_GROUPS="tape disk"
+ 
