@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4596 2020/08/26 10:28:12 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4597 2020/08/26 10:28:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7154,3 +7154,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/p5-Archive-Tar to 2.38 [gutteridge 2020-08-25]
 	Updated databases/py-barman to 2.11 [jperkin 2020-08-26]
 	Updated x11/libX11 to 1.6.12 [wiz 2020-08-26]
+	Updated x11/modular-xorg-server to 1.20.9 [wiz 2020-08-26]
