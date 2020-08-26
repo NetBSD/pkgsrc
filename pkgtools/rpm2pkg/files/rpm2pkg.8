@@ -1,4 +1,4 @@
-.\"	$NetBSD: rpm2pkg.8,v 1.9 2019/12/01 06:03:58 rin Exp $
+.\"	$NetBSD: rpm2pkg.8,v 1.10 2020/08/26 21:09:47 gutteridge Exp $
 .\"
 .\" Copyright (c) 2001, 2011 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd January 12, 2011
+.Dd August 26, 2020
 .Dt RPM2PKG 8
 .Os
 .Sh NAME
@@ -74,7 +74,7 @@ Produce a
 .Nx
 package list
 .Ar package_list
-from what was actually extracted from the RPM files archives.
+from what was actually extracted from the RPM file's archives.
 .It Fl i Ar ignored_dir
 Do not extract files contained in the
 .Ar ignored_dir
@@ -86,7 +86,7 @@ when extracting files.
 .It Fl s Ar strip_path_count
 Strip
 .Ar strip_path_count
-leading directories in file names.
+leading directories in file paths.
 .El
 .Sh EXAMPLES
 .Nm
@@ -132,9 +132,9 @@ This will extract the
 .Ar bar.rpm
 file in
 .Pa /usr/pkg
-while striping the leading directory of files path in
+while stripping the leading directory of file paths in
 .Ar bar.rpm .
-This is useful for dealing with RPM archives that contains files like
+This is useful for dealing with RPM archives that contain files like
 .Pa usr/bin/foo ,
 which you would like to go in
 .Pa /usr/pkg/bin .
