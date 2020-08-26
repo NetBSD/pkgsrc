@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4604 2020/08/26 14:13:37 micha Exp $
+$NetBSD: CHANGES-2020,v 1.4605 2020/08/26 14:23:20 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7178,3 +7178,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/smake to 1.3nb13 [micha 2020-08-26]
 	Updated archivers/star to 1.6.1nb10 [micha 2020-08-26]
 	Updated shells/bosh to 20200812 [micha 2020-08-26]
+	Updated shells/pbosh to 20200812 [micha 2020-08-26]
