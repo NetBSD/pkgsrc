@@ -1,12 +1,12 @@
-$NetBSD: patch-certbot__nginx___internal_constants.py,v 1.2 2020/07/10 10:24:23 adam Exp $
+$NetBSD: patch-certbot__nginx___internal_constants.py,v 1.3 2020/08/26 11:10:15 adam Exp $
 
 Look for nginx.conf in PKG_SYSCONFDIR
 
---- certbot_nginx/_internal/constants.py.orig	2020-07-07 17:13:20.000000000 +0000
+--- certbot_nginx/_internal/constants.py.orig	2020-08-04 18:20:15.000000000 +0000
 +++ certbot_nginx/_internal/constants.py
-@@ -1,19 +1,8 @@
- """nginx plugin constants."""
- import platform
+@@ -4,19 +4,8 @@ import platform
+ from acme.magic_typing import Any
+ from acme.magic_typing import Dict
  
 -FREEBSD_DARWIN_SERVER_ROOT = "/usr/local/etc/nginx"
 -LINUX_SERVER_ROOT = "/etc/nginx"
@@ -23,5 +23,5 @@ Look for nginx.conf in PKG_SYSCONFDIR
 -    server_root=server_root_tmp,
 +    server_root="@PKG_SYSCONFDIR@/nginx",
      ctl="nginx",
- )
- """CLI defaults."""
+     sleep_seconds=1
+ ) # type: Dict[str, Any]
