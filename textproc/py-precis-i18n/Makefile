@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/09/05 10:43:10 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/26 11:49:41 adam Exp $
 
-DISTNAME=	precis_i18n-1.0.1
+DISTNAME=	precis_i18n-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/precis-i18n/}
