@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/08/24 04:41:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/26 22:53:22 gutteridge Exp $
 
 PKGREVISION= 6
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 
 COMMENT=	MATE system monitor
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+USE_TOOLS+=	intltool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 USE_LANGUAGES=	c c++11
