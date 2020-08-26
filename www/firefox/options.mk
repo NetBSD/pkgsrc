@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.57 2020/08/04 14:00:03 tnn Exp $
+# $NetBSD: options.mk,v 1.58 2020/08/26 10:27:40 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -65,9 +65,6 @@ CONFIGURE_ARGS+=	--disable-pulseaudio
 CONFIGURE_ARGS+=	--enable-dbus
 .else
 CONFIGURE_ARGS+=	--disable-dbus
-.  if ${OPSYS} == "Linux"
-PKG_FAIL_REASON+=	"The dbus PKG_OPTION cannot be disabled on Linux."
-.  endif
 .endif
 
 #PLIST_VARS+=		branding nobranding
