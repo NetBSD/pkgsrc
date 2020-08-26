@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4606 2020/08/26 18:40:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4607 2020/08/26 19:18:19 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7152,6 +7152,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/libcdio-paranoia to 2.0.1 [wiz 2020-08-25]
 	Updated security/zoneminder to 1.29.0nb2 [gdt 2020-08-25]
 	Updated archivers/p5-Archive-Tar to 2.38 [gutteridge 2020-08-25]
+	Updated print/tex-ifplatform to 0.4anb2 [dholland 2020-08-26]
 	Updated databases/py-barman to 2.11 [jperkin 2020-08-26]
 	Updated x11/libX11 to 1.6.12 [wiz 2020-08-26]
 	Updated x11/modular-xorg-server to 1.20.9 [wiz 2020-08-26]
