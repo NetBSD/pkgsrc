@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/07 08:19:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/08/26 11:37:24 adam Exp $
 bin/jupyter-kernel-${PYVERSSUFFIX}
 bin/jupyter-kernelspec-${PYVERSSUFFIX}
 bin/jupyter-run-${PYVERSSUFFIX}
@@ -137,6 +137,9 @@ ${PYSITELIB}/jupyter_client/tests/test_kernelspec.pyo
 ${PYSITELIB}/jupyter_client/tests/test_localinterfaces.py
 ${PYSITELIB}/jupyter_client/tests/test_localinterfaces.pyc
 ${PYSITELIB}/jupyter_client/tests/test_localinterfaces.pyo
+${PYSITELIB}/jupyter_client/tests/test_manager.py
+${PYSITELIB}/jupyter_client/tests/test_manager.pyc
+${PYSITELIB}/jupyter_client/tests/test_manager.pyo
 ${PYSITELIB}/jupyter_client/tests/test_multikernelmanager.py
 ${PYSITELIB}/jupyter_client/tests/test_multikernelmanager.pyc
 ${PYSITELIB}/jupyter_client/tests/test_multikernelmanager.pyo
