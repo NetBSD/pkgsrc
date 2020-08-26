@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4605 2020/08/26 14:23:20 micha Exp $
+$NetBSD: CHANGES-2020,v 1.4606 2020/08/26 18:40:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7179,3 +7179,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/star to 1.6.1nb10 [micha 2020-08-26]
 	Updated shells/bosh to 20200812 [micha 2020-08-26]
 	Updated shells/pbosh to 20200812 [micha 2020-08-26]
+	Updated mail/mailman to 2.1.34 [wiz 2020-08-26]
