@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/08/08 15:41:31 leot Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/26 19:53:10 leot Exp $
 
-DISTNAME=	sfeed_curses-0.9
+DISTNAME=	sfeed_curses-0.9.2
 CATEGORIES=	news
 MASTER_SITES=	http://codemadness.org/releases/sfeed_curses/
 
