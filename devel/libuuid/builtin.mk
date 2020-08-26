@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2019/11/03 10:39:19 rillig Exp $
+# $NetBSD: builtin.mk,v 1.12 2020/08/26 13:47:14 schmonz Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -77,6 +77,10 @@ BUILDLINK_TARGETS+=	libuuid-fake-pc
 .    if ${OPSYS} == "SunOS"
 BUILDLINK_PASSTHRU_DIRS+=	/lib
 LIBUUID_LDADD=			-L/lib
+.    endif
+
+.    if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=		rm:-luuid
 .    endif
 
 libuuid-fake-pc:
