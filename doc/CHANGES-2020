@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4602 2020/08/26 13:52:51 micha Exp $
+$NetBSD: CHANGES-2020,v 1.4603 2020/08/26 13:58:31 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7176,4 +7176,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-precis-i18n to 1.0.2 [adam 2020-08-26]
 	Updated devel/py-pip to 20.2.2 [adam 2020-08-26]
 	Updated devel/smake to 1.3nb13 [micha 2020-08-26]
-	Updated archivers/smake to 1.6.1nb10 [micha 2020-08-26]
+	Updated archivers/star to 1.6.1nb10 [micha 2020-08-26]
