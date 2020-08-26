@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/05/15 09:40:46 nia Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/08/26 18:40:35 wiz Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
