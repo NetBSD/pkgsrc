@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4599 2020/08/26 11:37:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4600 2020/08/26 11:51:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7173,3 +7173,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-nginx to 1.7.0 [adam 2020-08-26]
 	Updated www/py-h11 to 0.10.0 [adam 2020-08-26]
 	Updated devel/py-jupyter_client to 6.1.7 [adam 2020-08-26]
+	Updated textproc/py-precis-i18n to 1.0.2 [adam 2020-08-26]
+	Updated devel/py-pip to 20.2.2 [adam 2020-08-26]
