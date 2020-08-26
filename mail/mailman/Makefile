@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2020/05/15 09:42:43 nia Exp $
+# $NetBSD: Makefile,v 1.93 2020/08/26 18:40:35 wiz Exp $
 
-DISTNAME=	mailman-2.1.33
-PKGNAME=	mailman-2.1.33
+DISTNAME=	mailman-2.1.34
 CATEGORIES=	mail www
-MASTER_SITES=	https://launchpad.net/mailman/2.1/2.1.33/+download/
+MASTER_SITES=	https://launchpad.net/mailman/2.1/2.1.34/+download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,8 +29,7 @@ DOCDIR=			${PREFIX}/share/doc/mailman
 MAILMAN_USER?=		mailman
 MAILMAN_GROUP?=		mailman
 MAILMAN_CGIGROUP?=	${APACHE_GROUP}
-MAILMAN_MAILGROUP?=	daemon	# group sendmail runs under;
-                                # use 'nobody' for postfix
+MAILMAN_MAILGROUP?=	daemon	# group sendmail runs under; use 'nobody' for postfix
 MAILMAN_CGIEXT?=	.cgi
 
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
@@ -68,7 +66,7 @@ RCD_SCRIPTS=		mailman
 INSTALL_TEMPLATES+=	${FILESDIR}/INSTALL
 DEINSTALL_TEMPLATES+=	${FILESDIR}/DEINSTALL
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.1.14.1
+PYTHON_VERSIONS_ACCEPTED=	27 # Mailman 2.1.x is stuck in Python 2.7
 REPLACE_PYTHON+=		Mailman/Archiver/pipermail.py
 REPLACE_PYTHON+=		Mailman/Post.py
 REPLACE_PYTHON+=		bin/msgfmt.py
@@ -90,6 +88,7 @@ CONFIGURE_ARGS+=	--with-urlhost=localhost
 
 BUILD_DEFS+=		MAILMAN_DATADIR
 BUILD_DEFS+=		MAILMAN_CGIEXT
+BUILD_DEFS+=		VARBASE
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailman.conf.dist
