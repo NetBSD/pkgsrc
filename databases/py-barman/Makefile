@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/05/27 19:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/26 10:20:19 jperkin Exp $
 
-DISTNAME=	barman-2.5
+DISTNAME=	barman-2.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/barman/}
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-argh>=0.21.2:../../devel/py-argh
+DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.4.2:../../databases/py-psycopg2
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
