@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2020/07/27 16:51:52 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/08/27 12:28:47 joerg Exp $
 
 SHA1 (deepdiff-5.0.2.tar.gz) = 1d1484d74f22a43b32db7f6806509d7dd96bb8c7
 RMD160 (deepdiff-5.0.2.tar.gz) = 1cfd4d27219fe8b01db5dbca91e7ece0cba1fa70
 SHA512 (deepdiff-5.0.2.tar.gz) = 2211903eefc49cdd4d926c2e3a83fe1e6d7891404a35e10e73be9dc7801d2b6d83f30630e501658c67450ed014227c5d13c3b19489fbb34b3afa836369d5f8f5
 Size (deepdiff-5.0.2.tar.gz) = 357103 bytes
+SHA1 (patch-setup.py) = ccf3596de4113679f4ed6bbc8f1bc3ebf6232aa5
