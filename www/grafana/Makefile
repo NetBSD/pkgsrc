@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/08/27 13:11:41 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2020/08/27 16:54:11 jperkin Exp $
 
 DISTNAME=	grafana-7.1.5
 CATEGORIES=	www
@@ -76,7 +76,8 @@ do-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GO} run build.go build
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} bin/*/grafana-{cli,server} ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-cli ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-server ${DESTDIR}${PREFIX}/bin/
 	cd ${WRKDIR}/linux/${DISTNAME}/public && \
 		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
 	cd ${WRKSRC} && ${PAX} -rw conf \
