@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/07/16 09:56:47 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/27 13:44:53 bouyer Exp $
 
 VERSION=	4.13.1
 PKGREVISION=	1
@@ -14,8 +14,7 @@ COMMENT=	Xen 4.13.x Kernel
 
 LICENSE=	gnu-gpl-v2
 
-ONLY_FOR_PLATFORM=	Linux-2.6*-x86_64
-ONLY_FOR_PLATFORM+=	NetBSD-*.*-x86_64
+ONLY_FOR_PLATFORM=	NetBSD-*.*-x86_64
 
 SSP_SUPPORTED=	no
 
