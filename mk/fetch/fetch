@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.19 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: fetch,v 1.20 2020/08/27 11:45:45 jperkin Exp $
 #
 # Copyright (c) 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -103,7 +103,7 @@
 ######################################################################
 
 : ${PKGSRCDIR:=/usr/pkgsrc}
-: ${CHECKSUM:=${PKGSRCDIR}/mk/checksum/checksum}
+: ${CHECKSUM:=false}
 : ${CP:=cp}
 : ${ECHO:=echo}
 : ${FETCH_CMD:=ftp}
