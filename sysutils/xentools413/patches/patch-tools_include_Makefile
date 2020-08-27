@@ -1,0 +1,13 @@
+$NetBSD: patch-tools_include_Makefile,v 1.1 2020/08/27 08:22:33 bouyer Exp $
+
+--- tools/include/Makefile.orig	2020-08-27 00:04:16.538336097 +0200
++++ tools/include/Makefile	2020-08-27 00:05:22.129359415 +0200
+@@ -69,7 +69,7 @@
+ 	$(INSTALL_DATA) xen/foreign/*.h $(DESTDIR)$(includedir)/xen/foreign
+ 	$(INSTALL_DATA) xen/hvm/*.h $(DESTDIR)$(includedir)/xen/hvm
+ 	$(INSTALL_DATA) xen/io/*.h $(DESTDIR)$(includedir)/xen/io
+-	$(INSTALL_DATA) xen/sys/*.h $(DESTDIR)$(includedir)/xen/sys
++	$(INSTALL_DATA) xen/sys/*.h $(DESTDIR)$(includedir)/xen/sys || true
+ 	$(INSTALL_DATA) xen/xsm/*.h $(DESTDIR)$(includedir)/xen/xsm
+ 
+ .PHONY: uninstall
