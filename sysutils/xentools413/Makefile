@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/08/27 13:39:04 bouyer Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/27 19:34:19 bouyer Exp $
 #
 VERSION=	4.13.1
 
@@ -35,14 +35,10 @@ DEPENDS+=	${PYPKGPREFIX}-curses>=0:../../devel/py-curses
 
 PKG_SYSCONFSUBDIR=	xen
 
-
-.if exists(/usr/include/xen/xenio.h)
-ONLY_FOR_PLATFORM=	NetBSD-*-x86_64
-.else
 ONLY_FOR_PLATFORM=	NetBSD-9.99.6[4-9]-x86_64 NetBSD-9.99.[7-9]*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-9.[1-9]-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-9.[1-9]_*-x86_64
-.endif
+ONLY_FOR_PLATFORM+=	NetBSD-9.0_STABLE-x86_64
 
 SSP_SUPPORTED=		no
 
