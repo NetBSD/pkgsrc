@@ -1,10 +1,10 @@
-$NetBSD: patch-src_netbsd.c,v 1.3 2016/04/11 01:49:28 riastradh Exp $
+$NetBSD: patch-src_netbsd.c,v 1.4 2020/08/27 11:25:29 nia Exp $
 
 Many fixes and addons for conky to work on NetBSD.
 
 --- src/netbsd.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/netbsd.c
-@@ -30,337 +30,805 @@
+@@ -30,337 +30,803 @@
  
  #include "netbsd.h"
  #include "net_stat.h"
@@ -146,9 +146,7 @@ Many fixes and addons for conky to work on NetBSD.
 +	 * report inactive memory as memeasyfree.
 +	 */
 +	info.memeasyfree -= info.bufmem;
- 
--	if (sep == NULL) {
--		warn("memory allocation failed");
++
 +	return 0;
 +}
 +
@@ -160,7 +158,9 @@ Many fixes and addons for conky to work on NetBSD.
 +	long long r, t, last_recv, last_trans;
 +	struct ifaddrs *ifap, *ifa;
 +	struct if_data *ifd;
-+
+ 
+-	if (sep == NULL) {
+-		warn("memory allocation failed");
 +	/* get delta */
 +	delta = current_update_time - last_update_time;
 +	if (delta <= 0.0001) {
@@ -432,13 +432,9 @@ Many fixes and addons for conky to work on NetBSD.
 +	total = 0;
 +	for (j = 0; j < CPUSTATES; j++)
 +		total += cp_time[j];
- 
--		ns->last_read_recv = ifnet.if_ibytes;
++
 +	used = total - cp_time[CP_IDLE];
- 
--		if (ifnet.if_obytes < ns->last_read_trans) {
--			ns->trans += ((long long) 4294967295U - ns->last_read_trans) +
--				ifnet.if_obytes;
++
 +	if ((total - cpu[0].oldtotal) != 0) {
 +		info.cpu_usage[0] = ((double) (used - cpu[0].oldused)) /
 +		(double) (total - cpu[0].oldtotal);
@@ -465,9 +461,13 @@ Many fixes and addons for conky to work on NetBSD.
 +		total = 0;
 +		for (j = 0; j < CPUSTATES; j++)
 +			total += cp_time[i*CPUSTATES + j];
-+
+ 
+-		ns->last_read_recv = ifnet.if_ibytes;
 +		used = total - cp_time[i*CPUSTATES + CP_IDLE];
-+
+ 
+-		if (ifnet.if_obytes < ns->last_read_trans) {
+-			ns->trans += ((long long) 4294967295U - ns->last_read_trans) +
+-				ifnet.if_obytes;
 +		if ((total - cpu[i+1].oldtotal) != 0) {
 +			info.cpu_usage[i+1] = ((double) (used - cpu[i+1].oldused)) /
 +			(double) (total - cpu[i+1].oldtotal);
@@ -484,23 +484,23 @@ Many fixes and addons for conky to work on NetBSD.
 +	free(cp_time);
 +	return 0;
 +}
-+
+ 
+-		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
+-		ns->last_read_recv = ifnet.if_ibytes;
+-		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
+-		ns->last_read_trans = ifnet.if_obytes;
 +int update_load_average(void)
 +{
 +	double v[3];
 +
 +	getloadavg(v, 3);
  
--		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
--		ns->last_read_recv = ifnet.if_ibytes;
--		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
--		ns->last_read_trans = ifnet.if_obytes;
+-		ns->recv_speed = (ns->recv - last_recv) / delta;
+-		ns->trans_speed = (ns->trans - last_trans) / delta;
 +	info.loadavg[0] = (float) v[0];
 +	info.loadavg[1] = (float) v[1];
 +	info.loadavg[2] = (float) v[2];
- 
--		ns->recv_speed = (ns->recv - last_recv) / delta;
--		ns->trans_speed = (ns->trans - last_trans) / delta;
++
 +	return 0;
 +}
 +
@@ -704,15 +704,15 @@ Many fixes and addons for conky to work on NetBSD.
 -	{0, 0, 0, 0, 0}
 -};
 +	(void)fd;
- 
--long cpu_used, oldtotal, oldused;
++
 +	if (envsys_get_val(dq_tz, (void *)&temp) < 0)
 +		return 0.0;
  
--void update_cpu_usage()
+-long cpu_used, oldtotal, oldused;
 +	return (temp / 1000000.0) - 273.15;
 +}
-+
+ 
+-void update_cpu_usage()
 +void
 +get_bat_life(char *bat, char *buf)
  {
@@ -740,12 +740,12 @@ Many fixes and addons for conky to work on NetBSD.
 -	fresh.load[2] = cp_time[CP_SYS];
 -	fresh.load[3] = cp_time[CP_IDLE];
 -	fresh.load[4] = cp_time[CP_IDLE];
--
--	used = fresh.load[0] + fresh.load[1] + fresh.load[2];
--	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
 +	strcpy(row, "cur-value");
 +	dq_charge.row = &row[0];
  
+-	used = fresh.load[0] + fresh.load[1] + fresh.load[2];
+-	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
+-
 -	if ((total - oldtotal) != 0) {
 -		info.cpu_usage = ((double) (used - oldused)) /
 -			(double) (total - oldtotal);
@@ -893,36 +893,38 @@ Many fixes and addons for conky to work on NetBSD.
 +	} else {
 +		strncpy(p_client_buffer, "Running on battery", client_buffer_size);
 +	}
-+}
-+
+ }
+ 
+-/* char *get_acpi_fan() */
+-void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size)
 +int
 +get_battery_perct(const char *bat)
-+{
-+	int64_t designcap, lastfulcap;
+ {
+-	if (!p_client_buffer || client_buffer_size <= 0) {
+-		return;
 +	int bat_num, batperct;
 +	char b_name[32];
-+	char *lastfulcap_prop = "last full cap";
-+	char *designcap_prop = "design cap";
-+	Devquery dq_cap = { P_INT64, NULL, NULL, NULL};
++	int64_t cur_charge, max_charge;
++	Devquery dq_charge = { P_INT64, NULL, "charge", NULL};
 +
 +	sscanf(bat, "BAT%d", &bat_num);
-+	sprintf(b_name, "acpibat%d", bat_num);
++	snprintf(b_name, sizeof(b_name), "acpibat%d", bat_num);
 +
-+	dq_cap.dev = &b_name[0];
-+	dq_cap.key = designcap_prop;
++	dq_charge.dev = b_name;
 +
-+	if (envsys_get_val(dq_cap, (void *)&designcap) < 0)
-+		designcap = 0;
++	dq_charge.row = "max-value";
 +
-+	dq_cap.key = lastfulcap_prop;
++	if (envsys_get_val(dq_charge, (void *)&max_charge) < 0) {
++		return 0;
++	}
 +
-+	if (envsys_get_val(dq_cap, (void *)&lastfulcap) < 0)
-+		lastfulcap = 0;
++	dq_charge.row = "cur-value";
 +
-+	batperct = (designcap > 0 && lastfulcap > 0) ?
-+		(int) (((float) lastfulcap / designcap) * 100) : 0;
-+
-+	return batperct > 100 ? 100 : batperct;
++	if (envsys_get_val(dq_charge, (void *)&cur_charge) < 0) {
++		return 0;
+ 	}
+ 
++	return (int)(((float) cur_charge / max_charge) * 100);
 +}
 +
 +int
@@ -930,44 +932,40 @@ Many fixes and addons for conky to work on NetBSD.
 +{
 +	int batperct = get_battery_perct(bat);
 +	return (int)(batperct * 2.56 - 1);
- }
- 
--/* char *get_acpi_fan() */
- void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size)
- {
--	if (!p_client_buffer || client_buffer_size <= 0) {
--		return;
-+	/* not implemented */
++}
++
++void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size)
++{
+ 	/* not implemented */
+-	memset(p_client_buffer, 0, client_buffer_size);
 +	if (p_client_buffer && client_buffer_size > 0) {
 +		memset(p_client_buffer, 0, client_buffer_size);
- 	}
-+}
++	}
+ }
  
--	/* not implemented */
--	memset(p_client_buffer, 0, client_buffer_size);
+-int get_entropy_avail(unsigned int *val)
 +/*
 + * Here comes the mighty envsys backend
 + */
 +void
 +sysmon_open()
-+{
+ {
+-	return 1;
 +    sysmon_fd = open(_DEV_SYSMON, O_RDONLY);
  }
  
--int get_entropy_avail(unsigned int *val)
+-int get_entropy_poolsize(unsigned int *val)
 +void
 +sysmon_close()
  {
 -	return 1;
 +	if (sysmon_fd > -1)
 +		close(sysmon_fd);
- }
- 
--int get_entropy_poolsize(unsigned int *val)
++}
++
 +int8_t
 +envsys_get_val(Devquery dq, void *val)
- {
--	return 1;
++{
 +	char *descr;
 +	const char *cval;
 +	prop_dictionary_t dict;
