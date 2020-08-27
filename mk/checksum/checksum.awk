@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: checksum.awk,v 1.1 2020/08/27 11:45:45 jperkin Exp $
+# $NetBSD: checksum.awk,v 1.2 2020/08/27 11:56:38 jperkin Exp $
 #
 ###########################################################################
 #
@@ -152,7 +152,7 @@ BEGIN {
 
 		#
 		# Handle patch files inline.  As they need to be modified (by
-		# removing the $NetBSD: checksum.awk,v 1.1 2020/08/27 11:45:45 jperkin Exp $) they are parsed individually by
+		# removing the NetBSD RCD Id) they are parsed individually by
 		# digest(1), and so we calculate the checksums now rather than
 		# saving for later processing to simplify things.
 		#
