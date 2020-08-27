@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2020/08/14 20:01:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2020/08/27 13:05:20 jperkin Exp $
 
-DISTNAME=	grafana-6.7.3
-PKGREVISION=	3
+DISTNAME=	grafana-7.1.5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,9 +22,8 @@ EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
 GO_DIST_BASE=		${DISTNAME}
 GO_SRCPATH=		github.com/grafana/grafana
 
-#BUILD_DEPENDS+=	yarn>=1.15.0:../../devel/yarn
-
 CHECK_PORTABILITY_SKIP=		packaging/* devenv/*
+CHECK_PORTABILITY_SKIP+=	packages/grafana-toolkit/docker/*
 
 CHECK_RELRO_SKIP+=		bin/grafana-cli
 CHECK_RELRO_SKIP+=		bin/grafana-server
@@ -40,16 +38,19 @@ LOGDIR=		${VARBASE}/log/grafana
 SUBST_CLASSES+=		fix-cfg
 SUBST_STAGE.fix-cfg=	pre-configure
 SUBST_MESSAGE.fix-cfg=	Adding pkgsrc paths in sample config
-SUBST_FILES.fix-cfg=	conf/sample.ini
+SUBST_FILES.fix-cfg=	conf/sample.ini pkg/cmd/grafana-server/main.go
 SUBST_SED.fix-cfg=	-e 's,^;\(data = \).*,\1${DATADIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(logs = \).*,\1${LOGDIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(plugins = \).*,\1${PLUGINDIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(static_root_path = \).*,\1${PUBLICDIR},g'
+SUBST_VARS.fix-cfg=	DATADIR PKG_SYSCONFDIR PREFIX
 
 BUILD_DEFS+=		GRAFANA_USER GRAFANA_GROUP VARBASE
 FILES_SUBST+=		GRAFANA_USER=${GRAFANA_USER:Q}
 FILES_SUBST+=		GRAFANA_GROUP=${GRAFANA_GROUP:Q}
 FILES_SUBST+=		DATADIR=${DATADIR:Q}
+
+.include "go-modules.mk"
 
 .include "../../lang/go/go-vars.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -66,21 +67,20 @@ PKG_USERS=		${GRAFANA_USER}:${GRAFANA_GROUP}
 RCD_SCRIPTS=		grafana
 
 INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	share/examples/grafana
 INSTALLATION_DIRS+=	share/grafana/public
 
 CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
 
-#post-build:
-#	cd ${WRKSRC} && yarn install --pure-lockfile && yarn build
+do-build:
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GO} run build.go build
 
 do-install:
-	cd ${WRKDIR} && ${PAX} -rw bin ${DESTDIR}${PREFIX}
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} bin/*/grafana-{cli,server} ${DESTDIR}${PREFIX}/bin/
 	cd ${WRKDIR}/linux/${DISTNAME}/public && \
 		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
 	cd ${WRKSRC} && ${PAX} -rw conf \
 		${DESTDIR}${PREFIX}/share/grafana/
 
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
