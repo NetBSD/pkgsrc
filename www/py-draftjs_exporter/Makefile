@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/03 23:57:49 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/27 12:24:17 joerg Exp $
 
 DISTNAME=	draftjs_exporter-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 GITHUB_PROJECT=	draftjs_exporter
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.2.0<5:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.4<4.9.2:../../www/py-beautifulsoup4
