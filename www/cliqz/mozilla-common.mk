@@ -1,11 +1,11 @@
-# $NetBSD: mozilla-common.mk,v 1.12 2020/07/24 07:29:32 fox Exp $
+# $NetBSD: mozilla-common.mk,v 1.13 2020/08/27 12:25:58 joerg Exp $
 #
 # Common Makefile fragment for mozilla packages based on gecko 2.0.
 # derived from www/firefox
 #
 # Customized for Cliqz
 
-UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	datasize virtualsize
 
 .include "../../mk/bsd.prefs.mk"
 
