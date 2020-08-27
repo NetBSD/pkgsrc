@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2020/02/19 16:48:02 triaxx Exp $
+# $NetBSD: Makefile,v 1.106 2020/08/27 16:05:39 triaxx Exp $
 
-DISTNAME=	fetchmail-6.4.2
+DISTNAME=	fetchmail-6.4.8
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
