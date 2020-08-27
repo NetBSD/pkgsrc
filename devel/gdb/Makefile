@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2020/06/03 16:50:19 kamil Exp $
+# $NetBSD: Makefile,v 1.70 2020/08/27 13:11:18 kamil Exp $
 
 DISTNAME=	gdb-8.3.1
 CATEGORIES=	devel
@@ -66,6 +66,12 @@ MAKE_ENV+= gdb_cv_struct_lwp=yes
 
 CONFIGURE_ARGS+=	--with-separate-debug-dir=/usr/libdata/debug
 .endif
+
+CONFIGURE_DIRS=		${WRKDIR}/build
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
+
+post-extract:
+	${MKDIR} ${WRKDIR}/build
 
 post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
