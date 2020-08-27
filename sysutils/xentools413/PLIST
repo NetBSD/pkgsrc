@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/26 11:12:10 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/08/27 08:22:33 bouyer Exp $
 ${PYSITELIB}/grub/ExtLinuxConf.py
 ${PYSITELIB}/grub/ExtLinuxConf.pyc
 ${PYSITELIB}/grub/GrubConf.py
@@ -124,9 +124,6 @@ include/xen/physdev.h
 include/xen/platform.h
 include/xen/pmu.h
 include/xen/sched.h
-include/xen/sys/evtchn.h
-include/xen/sys/gntdev.h
-include/xen/sys/privcmd.h
 include/xen/sysctl.h
 include/xen/tmem.h
 include/xen/trace.h
@@ -308,6 +305,8 @@ libexec/xen/bin/xenctx
 libexec/xen/bin/xenpaging
 libexec/xen/bin/xenpvnetboot
 libexec/xen/boot/hvmloader
+libexec/xen/boot/ipxe.bin
+libexec/xen/boot/seabios.bin
 libexec/xen/boot/xen-shim
 man/man1/xenstore-chmod.1
 man/man1/xenstore-ls.1

@@ -1,15 +1,25 @@
-# $NetBSD: Makefile,v 1.7 2020/07/26 08:49:38 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/27 08:22:33 bouyer Exp $
 #
 VERSION=	4.13.1
 
 DIST_SUBDIR=		xen413
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools413-${VERSION}
-#PKGREVISION=		2
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
 DISTFILES=		${DISTNAME}.tar.gz
+
+SEABIOS_VERSION=	1.12.1
+SEABIOS_DIST=		seabios-${SEABIOS_VERSION}.tar.gz
+DISTFILES+=		${SEABIOS_DIST}
+SITES.${SEABIOS_DIST}=	-http://xenbits.xen.org/gitweb/?p=seabios.git;a=snapshot;h=refs/tags/rel-${SEABIOS_VERSION};sf=tgz
+
+IPXE_VERSION=		1dd56dbd11082fb622c2ed21cfaced4f47d798a6	
+IPXE_DIST=		ipxe-${IPXE_VERSION}.tar.gz
+DISTFILES+=		${IPXE_DIST}	
+SITES.${IPXE_DIST}=	-https://github.com/ipxe/ipxe/archive/${IPXE_VERSION}.tar.gz
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		https://xenproject.org/
@@ -43,19 +53,21 @@ EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 
 USE_TOOLS+=		pod2man gmake pkg-config makeinfo perl bash cmake
-USE_LANGUAGES=		c
+USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		YES
 #CONFIGURE_ARGS+=	--enable-xenapi
-CONFIGURE_ARGS+=	--disable-seabios
-CONFIGURE_ARGS+=	--disable-ipxe
+#CONFIGURE_ARGS+=	--disable-seabios
+#CONFIGURE_ARGS+=	--disable-ipxe
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 MAKE_ENV+=		PREFIX=${prefix:Q} WRKSRC=${WRKSRC}
 MAKE_ENV+=		APPEND_LIB=${LDFLAGS:Q}
 MAKE_ENV+=		XEN_EXAMPLES_DIR=${EGDIR}
-MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
+MAKE_ENV+=		MV=${MV:Q} CP=${CP:Q}
+MAKE_ENV+=		PYTHON=${PYTHONBIN:Q} PYTHON_COMMAND=${PYTHONBIN:Q}
+MAKE_ENV+=		SED=${SED:Q}  
 MAKE_ENV+=		V=YES
 MAKE_ENV+=		NO_WERROR=1
 
@@ -119,6 +131,8 @@ CONF_FILES_PERMS+=	${EGDIR}/scripts/${s} ${PKG_SYSCONFDIR}/scripts/${s} \
 
 pre-build:
 	rm -f ${WRKSRC}/check/check_x11_devel
+	rm -f ${WRKSRC}/tools/include/xen-sys/NetBSD/evtchn.h
+	rm -f ${WRKSRC}/tools/include/xen-sys/NetBSD/privcmd.h
 	${CP} -f ${FILESDIR}/locking.sh  ${WRKSRC}/tools/hotplug/NetBSD/
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${WRKSRC}/docs/man/xenstore-chmod.1.pod |\
