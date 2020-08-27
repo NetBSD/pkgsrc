@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/08/21 08:00:51 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/27 12:28:59 joerg Exp $
 
 DISTNAME=	xmlschema-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/brunato/xmlschema
 COMMENT=	XML Schema validator and decoder
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-elementpath>=1.4.0:../../textproc/py-elementpath
 TEST_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
