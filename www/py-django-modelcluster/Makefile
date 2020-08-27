@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/04 00:35:05 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/27 12:24:17 joerg Exp $
 
 DISTNAME=	django-modelcluster-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	modified-bsd
 
 GITHUB_PROJECT=	django-modelcluster
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2015.2:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-django-taggit>=0.20:../../www/py-django-taggit
