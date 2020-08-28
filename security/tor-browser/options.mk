@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.6 2020/06/07 13:06:00 wiz Exp $
+# $NetBSD: options.mk,v 1.6.2.1 2020/08/28 19:05:42 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor-browser
-PKG_SUPPORTED_OPTIONS+=	alsa debug debug-info mozilla-jemalloc pulseaudio
+PKG_SUPPORTED_OPTIONS+=	alsa dbus debug debug-info mozilla-jemalloc pulseaudio
 
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa mozilla-jemalloc
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa dbus mozilla-jemalloc
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -18,6 +18,13 @@ CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
+.endif
+
+.if !empty(PKG_OPTIONS:Mdbus)
+CONFIGURE_ARGS+=	--enable-dbus
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-dbus
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
