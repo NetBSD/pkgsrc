@@ -2,14 +2,16 @@ NAME
      st-emacs
      st-icu
      st-swath
+     tgrep
 
 SYNOPSIS
      st-emacs|st-icu|st-swath [filename|text1 text2 ...|'blank']
+     tgrep [options] FILE ...
 
 DESCRIPTION
      This package is a collection of utilities to separate Thai words
      by spaces (word tokenization).  They can separate stdin, files,
-     or text as arguments.  It includes 3 separate utilities:
+     or text as arguments.  It includes these utilities:
 
      st-emacs:  emacs-script using emacs lisp thai-word library
                 https://www.gnu.org/software/emacs/
@@ -18,30 +20,38 @@ DESCRIPTION
      st-swath:  sh script wrapper to simplfy args to the swath program
                 https://linux.thai.net/projects/swath
 
+     tgrep:     grep-like utility using perl, see "tgrep -h"
+
 EXAMPLES
-      split one or more text strings
+      split one or more text strings:
       # st-swath แมวและหมา
       # st-swath "แมวหมา" พ่อและแม่
       
-      read stdin
+      read stdin:
       # echo "แมวและหมา" | st-swath
 
-      read from a file
+      read from a file:
       # st-swath < thaifile.txt
       # st-swath somefile.txt
 
-      They can also read directly from stdin
+      They can also read directly from stdin:
       # st-icu
         แมวหมา   (typed in)
         แมว หมา  (output line by line)
+
+      grep for thai words:
+      # grep แมว thaifile.txt
 
 ENVIRONMENT
      You will most likely need to set the environment variables LC_ALL
      or LC_CTYPE for proper unicode handling, e.g., en_US.UTF-8 or
      C.UTF-8.  These tools are only setup to handle UTF-8 encodings.
 
+     A terminal capable of entering and displaying UTF-8, and some
+     actual UTF-8 fonts installed on the system will also be needed.
+     
 EXIT STATUS
-     0 for success, non zero otherwise
+     0 for success, non zero otherwise.  For tgrep, see "tgrep -h"
 
 NOTES
      Note that it is not possible to split Thai words 100% accurately
@@ -66,5 +76,6 @@ SEE ALSO
 
 BUGS
      st-icu should also use the combined dictionary words.
-     thai text mixed with other languages may not be handled well.
-     this file should be converted to a proper manpage.
+     thai text mixed with other languages may not be handled well when
+     splitting.
+     this file should be converted to proper manpages.
