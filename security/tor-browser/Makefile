@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68.2.2 2020/07/30 16:10:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.68.2.3 2020/08/28 19:05:42 bsiegert Exp $
 
-DISTNAME=	src-firefox-tor-browser-68.11.0esr-9.5-1-build1
-PKGNAME=	tor-browser-9.5.3
+DISTNAME=	src-firefox-tor-browser-68.12.0esr-9.5-1-build1
+PKGNAME=	tor-browser-9.5.4
 CATEGORIES=	security www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -128,5 +128,4 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/tor-browser/browser/fonts
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
