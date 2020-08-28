@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2020/01/20 21:54:03 nia Exp $
+# $NetBSD: options.mk,v 1.3 2020/08/28 03:12:26 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.enlightenment16
 
-PKG_SUPPORTED_OPTIONS=		pango pulseaudio vera-ttf
+PKG_OPTIONS_OPTIONAL_GROUPS=	sound
+PKG_OPTIONS_GROUP.sound=	pulseaudio alsa
+
+PKG_SUPPORTED_OPTIONS=		pango vera-ttf
 PKG_SUGGESTED_OPTIONS=		pango pulseaudio vera-ttf
 
 .include "../../mk/bsd.options.mk"
@@ -19,6 +22,11 @@ CONFIGURE_ARGS+=	--enable-sound=pulseaudio
 CONFIGURE_ARGS+=	--with-sndldr=sndfile
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Malsa)
+CONFIGURE_ARGS+=	--enable-sound=alsa
+CONFIGURE_ARGS+=	--with-sndldr=sndfile
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--enable-sound=no
 CONFIGURE_ARGS+=	--with-sndldr=none
