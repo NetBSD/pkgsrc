@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2020/05/28 15:26:23 triaxx Exp $
+$NetBSD: distinfo,v 1.6.2.1 2020/08/28 15:44:32 bsiegert Exp $
 
 SHA1 (mozjs60_60.8.0.orig.tar.xz) = b66207ee477c110995029f173e6b026f2e013591
 RMD160 (mozjs60_60.8.0.orig.tar.xz) = fef033969a51dc56c84669d33401f60bd499de6d
@@ -9,6 +9,8 @@ SHA1 (patch-.._.._python_mozbuild_mozbuild_backend_recursivemake.py) = dda670432
 SHA1 (patch-.._.._python_mozbuild_mozbuild_virtualenv.py) = 231d96ae8f66da1db36a4371c28d97a4db4c0f5c
 SHA1 (patch-.._public_TypeDecls.h) = 846e0707755cbe7e97cc380f66bfe6da0daf996e
 SHA1 (patch-gc_Memory.cpp) = ba865bee4b99ce6298404b41b465b281fd23555f
+SHA1 (patch-js_src_jit_AtomicOperations.h) = fc9ff5be98f045500675a73c34eaa9855cea2bec
+SHA1 (patch-js_src_jit_none_AtomicOperations-feeling-lucky.h) = 06108aad94437a12b2b80491dab917fe4bb0de37
 SHA1 (patch-jsdate.cpp) = f9314460476ffbc00fe85a75bddc964807d0153f
 SHA1 (patch-threading_posix_Thread.cpp) = c48a642fa98d8112c149142a4af4ac633d3ae332
 SHA1 (patch-util_NativeStack.cpp) = 68d2d80291a856c74bac2e6870317f143bb61355
