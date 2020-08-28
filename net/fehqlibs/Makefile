@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/07/31 19:04:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2020/08/28 19:58:42 schmonz Exp $
 
-DISTNAME=		fehQlibs-15
+DISTNAME=		fehQlibs-15a
 PKGNAME=		${DISTNAME:S/Qlibs-/qlibs-0.9./}
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/fehQlibs/
