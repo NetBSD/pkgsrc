@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4622 2020/08/28 19:37:33 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4623 2020/08/28 19:59:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7197,3 +7197,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ugrep to 2.5.3 [scole 2020-08-28]
 	Updated devel/RE-flex to 2.1.4 [scole 2020-06-28]
 	Updated textproc/swath to 0.6.1nb3 [scole 2020-08-28]
+	Updated net/fehqlibs to 0.9.15a [schmonz 2020-08-28]
