@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/05/17 15:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/28 11:02:23 micha Exp $
 
 DISTNAME=	gdb-7.11
 PKGREVISION=	6
@@ -24,8 +24,8 @@ CONFIGURE_ENV+=			CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 # In gdb/configure, depcomp is parsed with sed.
 SUBST_CLASSES+=			fix-depcomp
-SUBST_STAGE.fix-depcomp+=	pre-configure
-SUBST_MESSAGE.fix-depcomp+=	Read depcomp directly
+SUBST_STAGE.fix-depcomp=	pre-configure
+SUBST_MESSAGE.fix-depcomp=	Read depcomp directly
 SUBST_FILES.fix-depcomp+=	gdb/configure
 SUBST_SED.fix-depcomp+=		-e 's,< ./depcomp,${_OVERRIDE_PATH.depcomp},'
 
