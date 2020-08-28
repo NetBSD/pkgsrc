@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/06/02 08:22:45 adam Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2020/08/28 15:44:32 bsiegert Exp $
 
 DISTNAME=	mozjs60_60.8.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -56,6 +56,12 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-60/js-config.h
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-60.pc
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
+# 64 bit atomics
+.include "../../devel/libatomic/buildlink3.mk"
+.endif
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/icu/buildlink3.mk"
