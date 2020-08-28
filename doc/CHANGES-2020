@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4613 2020/08/28 03:12:53 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.4614 2020/08/28 11:27:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7187,3 +7187,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xentools413 to 4.13.1nb1 [bouyer 2020-08-26]
 	Updated www/grafana to 7.1.5 [jperkin 2020-08-27]
 	Updated wm/enlightenment16 to 1.0.22 [gutteridge 2020-08-28]
+	Updated devel/libuv to 1.39.0 [adam 2020-08-28]
+	Updated lang/nodejs to 14.9.0 [adam 2020-08-28]
