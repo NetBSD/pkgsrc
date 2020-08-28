@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.18 2020/07/07 01:01:27 manu Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.19 2020/08/28 14:55:18 gdt Exp $
 
 *** GlusterFS clients ***
 This is required in /etc/sysctl.conf in order to avoid hangs on I/O operations
@@ -10,12 +10,6 @@ This is required in /etc/sysctl.conf in order to avoid hangs on I/O operations
 In order to use mount -t glusterfs, please install this link
 	ln -s ${PREFIX}/sbin/mount_glusterfs /sbin/mount_glusterfs
 
-* Only for netbsd-5 branch (later NetBSD GENERIC kernels have it enabled):
-A kernel with the following option is required:
-	file-system     PUFFS
-	pseudo-device   putter
-	pseudo-device   pud
-
 *** GlusterFS servers ***
 glusterfs servers will need extended attributes in exported filesystems.
 This is currently only supported in UFS1 (newfs -O1). You will need to
@@ -23,9 +17,5 @@ create the directories below on exported filesystems' roots, and then
 mount with -o extattr
 	.attribute/system
 	.attribute/user
-
-* For netbsd-6 branch and earlier (later NetBSD GENERIC kernels have it),
-the kernel must have the following option enabled:
-	options		UFS_EXTATTR
 
 ===========================================================================
