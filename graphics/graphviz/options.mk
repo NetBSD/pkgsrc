@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.30 2020/08/11 10:03:57 wiz Exp $
+# $NetBSD: options.mk,v 1.31 2020/08/28 17:09:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua ocaml perl poppler svg tcl x11 # guile does not build with guile20
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
 .endif
-PKG_SUGGESTED_OPTIONS=	gd gtk lua perl tcl x11
+PKG_SUGGESTED_OPTIONS=	gd lua perl tcl x11
 # Explanation of consequence of options, to help those trying to slim down:
 #   guile ocaml lua tcl perl: extension language support
 #   x11: Omits all linking with x11, which means x11 graphics supports as
