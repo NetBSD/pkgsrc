@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2020/05/22 10:56:25 adam Exp $
+# $NetBSD: Makefile,v 1.42.2.1 2020/08/28 16:13:26 bsiegert Exp $
 
-DISTNAME=	chrony-3.5
-PKGREVISION=	2
+DISTNAME=	chrony-3.5.1
 CATEGORIES=	net
 MASTER_SITES=	http://download.tuxfamily.org/chrony/
 
