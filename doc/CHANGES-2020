@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4624 2020/08/28 20:00:45 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4625 2020/08/28 20:01:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7199,3 +7199,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/swath to 0.6.1nb3 [scole 2020-08-28]
 	Updated net/fehqlibs to 0.9.15a [schmonz 2020-08-28]
 	Updated net/ucspi-tcp6 to 1.11.6 [schmonz 2020-08-28]
+	Updated net/ucspi-ssl to 0.999.11.6 [schmonz 2020-08-28]
