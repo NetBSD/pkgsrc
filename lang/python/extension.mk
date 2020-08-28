@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.57 2020/06/10 16:11:07 leot Exp $
+# $NetBSD: extension.mk,v 1.58 2020/08/28 00:47:57 gutteridge Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -9,7 +9,7 @@
 # extensions to python, which by definition are those that place files
 # in ${PYSITELIB}.  Extensions can be implemented via setuptools as
 # eggs (see egg.mk), via distutils (confusing, with an egg-info file,
-# even though they are not eggs), or via more ad hocs methods.
+# even though they are not eggs), or via more ad hoc methods.
 
 .if defined(PYDISTUTILSPKG)
 .include "../../mk/bsd.prefs.mk"
