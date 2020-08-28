@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2020/07/31 19:04:57 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2020/08/28 19:58:42 schmonz Exp $
 
-SHA1 (fehQlibs-15.tgz) = d89cea3ba7095889c9a3eabaedb69d10b545f93b
-RMD160 (fehQlibs-15.tgz) = e59a22b2c69729ae731d639967b82c0ff6bc0994
-SHA512 (fehQlibs-15.tgz) = 2be10d6ccc45a3a7919bff8126d2fc95ce39a7db4bd5dd1683af0849ef6bf4a8a34618a62e1739a093a28d21a1eaa547afa32fe231516dfebb30def7ce6afdc8
-Size (fehQlibs-15.tgz) = 81201 bytes
+SHA1 (fehQlibs-15a.tgz) = 609b50c85ab47349412c6e920259f372d419bad8
+RMD160 (fehQlibs-15a.tgz) = 30c299ce1dc138ceb9139c6a89a138d222028afe
+SHA512 (fehQlibs-15a.tgz) = f4bfc4241d12543b283848d2136f20b1e889040db5f4944a849b63adecbbfd32ed7170b487330fb9287a349457de18bd87ea28451e01c085a14caecb2e551966
+Size (fehQlibs-15a.tgz) = 81917 bytes
 SHA1 (patch-Makefile) = a5e168aa600f49908f3e5e825fe3b649e7a84f2b
 SHA1 (patch-install) = 860256635a5a19805ec3ed97f11833a35f67d3bb
