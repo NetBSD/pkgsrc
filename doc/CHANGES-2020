@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4616 2020/08/28 16:21:20 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.4617 2020/08/28 17:02:44 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7191,3 +7191,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 14.9.0 [adam 2020-08-28]
 	Updated textproc/split-thai to 0.8 [scole 2020-08-28]
 	Updated pkgtools/pkgin to 20.8.0 [jperkin 2020-08-28]
+	Updated textproc/swath to 0.6.1nb2 [scole 2020-08-28]
