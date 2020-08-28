@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4617 2020/08/28 17:02:44 scole Exp $
+$NetBSD: CHANGES-2020,v 1.4618 2020/08/28 17:09:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7192,3 +7192,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/split-thai to 0.8 [scole 2020-08-28]
 	Updated pkgtools/pkgin to 20.8.0 [jperkin 2020-08-28]
 	Updated textproc/swath to 0.6.1nb2 [scole 2020-08-28]
+	Updated graphics/graphviz to 2.44.1nb2 [wiz 2020-08-28]
