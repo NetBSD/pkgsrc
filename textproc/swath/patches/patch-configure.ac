@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/08/13 16:22:40 scole Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/08/28 19:35:46 scole Exp $
 
 Remove git hub versioning info
 
@@ -11,7 +11,7 @@ Remove git hub versioning info
 -AC_INIT(swath,
 -        m4_esyscmd([build-aux/git-version-gen]),
 -        [https://github.com/tlwg/swath/issues])
-+AC_INIT([swath], [0.6.1nb1])
++AC_INIT([swath], [0.6.1nb3])
  AC_CONFIG_SRCDIR([src/wordseg.cpp])
  AC_CONFIG_MACRO_DIR([m4])
  AC_CONFIG_LIBOBJ_DIR([lib])

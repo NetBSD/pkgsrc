@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/08/28 16:59:43 scole Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/28 19:35:46 scole Exp $
 #
 
 DISTNAME=	swath-0.6.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tlwg/}
 GITHUB_TAG=	f5b0a9b804cc3f4a3d40f2de3d54a99d1c0a5643
