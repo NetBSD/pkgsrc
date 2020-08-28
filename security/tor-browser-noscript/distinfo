@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2.2.2 2020/07/30 13:06:33 bsiegert Exp $
+$NetBSD: distinfo,v 1.2.2.3 2020/08/28 19:07:20 bsiegert Exp $
 
-SHA1 (noscript-11.0.34.xpi) = 0bd3b80832cf628a0b4e579fcc1fc50ccc8ed4af
-RMD160 (noscript-11.0.34.xpi) = 47ebd45c34a84ed545b6f1457e476778206038f8
-SHA512 (noscript-11.0.34.xpi) = 1732b2763d365edbbab95360c959d03216d31869f9125de7f99ee444687aef3bf7960196378dab79fd8e05776616ce4ae7ac36d46a19d895c80018891827dada
-Size (noscript-11.0.34.xpi) = 587588 bytes
+SHA1 (noscript-11.0.41.xpi) = 8ef865cb7c67b0529be8812456410e5bbe8ba39f
+RMD160 (noscript-11.0.41.xpi) = b6052099a375ae3feca989977ecfb5af9b14f77c
+SHA512 (noscript-11.0.41.xpi) = d28dfe02881d6e2bfcc89dc6e1cfe76e2d8167c0dcfed0a2cf556810522b84d052ca02bd21f73f572d923582e583f243f87895cf724af74407a217b17aef62f2
+Size (noscript-11.0.41.xpi) = 594369 bytes
