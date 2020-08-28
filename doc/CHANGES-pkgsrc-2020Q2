@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.12 2020/08/24 19:11:58 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q2,v 1.1.2.13 2020/08/28 19:07:55 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q2 branch:
 
@@ -123,4 +123,34 @@ mail/dovecot2-pigeonhole: dependent update
 
 Pullup ticket #6305 - requested by bouyer
 graphics/xfig: build fix
+
+Pullup ticket #6306 - requested by bouyer
+misc/xygrib: build fix
+
+Pullup ticket #6307 - requested by bouyer
+sysutils/xenkernel413: security fix
+
+Pullup ticket #6308 - requested by bouyer
+sysutils/xenkernel411: security fix
+
+Pullup ticket #6309 - requested by ryoon
+www/php-nextcloud: security fix
+
+Pullup ticket #6310 - requested by he
+lang/mozjs60: PowerPC build fix
+
+Pullup ticket #6311 - requested by taca
+net/bind911: security fix
+
+Pullup ticket #6316 - requested by hannken
+net/chrony: security fix
+
+Pullup ticket #6313 - requested by wiz
+security/tor-browser: security fix
+
+Pullup ticket #6314 - requested by wiz
+security/tor-browser-https-everywhere: dependent update
+
+Pullup ticket #6315 - requested by wiz
+security/tor-browser-noscript: dependent update
 
