@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/05/06 14:04:16 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/08/29 09:54:36 nia Exp $
 
-DISTNAME=	innoextract-1.8
-PKGREVISION=	2
+DISTNAME=	innoextract-1.9
 CATEGORIES=	archivers
 MASTER_SITES=	https://constexpr.org/innoextract/files/
 
@@ -14,7 +13,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}
-CMAKE_ARGS+=	-DUSE_CXX11=OFF
+CMAKE_ARGS+=	-DSET_OPTIMIZATION_FLAGS=OFF
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
