@@ -1,4 +1,4 @@
-#	$NetBSD: QNX.sys.mk,v 1.2 2016/09/08 14:28:12 joerg Exp $
+#	$NetBSD: QNX.sys.mk,v 1.3 2020/08/29 20:11:21 js Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix
@@ -79,7 +79,7 @@ SHELL?=		sh
 
 SIZE?=		size
 
-TSORT?= 	tsort -q
+TSORT?= 	cat
 
 YACC?=		yacc
 YFLAGS?=
