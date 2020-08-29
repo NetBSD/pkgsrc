@@ -1,0 +1,37 @@
+$NetBSD: patch-fdm.conf.5,v 1.1 2020/08/29 13:43:54 leot Exp $
+
+Add support for OAUTHBEARER (OAuth 2.0 bearer tokens, as documented by
+RFC 7628) for IMAP.
+
+Patch shared upstream via:
+
+ <https://github.com/nicm/fdm/pull/84>
+
+--- fdm.conf.5.orig	2019-02-12 22:08:26.000000000 +0000
++++ fdm.conf.5
+@@ -473,6 +473,7 @@ not be read from
+ .Op Ic no-login
+ .Op Ic starttls
+ .Op Ic insecure
++.Op Ic oauthbearer
+ .Xc
+ .It Xo Ic imap Ic server Ar host
+ .Op Ic port Ar port
+@@ -492,6 +493,7 @@ not be read from
+ .Op Ic no-cram-md5
+ .Op Ic no-login
+ .Op Ic insecure
++.Op Ic oauthbearer
+ .Xc
+ These define an IMAP or IMAPS account.
+ The parameters are as for a POP3 or POP3S account, aside from the additional
+@@ -530,6 +532,9 @@ after connection.
+ .Ic insecure
+ allows the use of insecure protocols, which currently includes SSLv2, SSLv3
+ and TLS1.0.
++.Pp
++.Ic oauthbearer
++attempts to use OAuth 2.0 bearer token as authentication method.
+ .It Xo Ic imap Ic pipe Ar command
+ .Op Ar userpass
+ .Op Ar folders
