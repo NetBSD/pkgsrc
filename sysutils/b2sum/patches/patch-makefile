@@ -1,0 +1,20 @@
+$NetBSD: patch-makefile,v 1.1 2020/08/29 09:32:35 nia Exp $
+
+Build ref rather than sse version, so this works on non-x86
+
+--- makefile.orig	2016-06-19 16:55:55.000000000 +0000
++++ makefile
+@@ -6,11 +6,10 @@ NO_OPENMP_0=-fopenmp
+ NO_OPENMP_1=
+ CC?=gcc
+ CFLAGS?=-O3 -march=native -Werror=declaration-after-statement
+-CFLAGS+=-std=c99 -I../sse
++CFLAGS+=-std=c99 -I../ref
+ CFLAGS+=$(NO_OPENMP_$(NO_OPENMP))
+ LIBS=
+-#FILES=b2sum.c ../ref/blake2b-ref.c ../ref/blake2s-ref.c ../ref/blake2bp-ref.c ../ref/blake2sp-ref.c 
+-FILES=b2sum.c ../sse/blake2b.c ../sse/blake2s.c ../sse/blake2bp.c ../sse/blake2sp.c 
++FILES=b2sum.c ../ref/blake2b-ref.c ../ref/blake2s-ref.c ../ref/blake2bp-ref.c ../ref/blake2sp-ref.c 
+ all: $(FILES)
+ 	$(CC) $(FILES) $(CFLAGS) $(LIBS) -o $(PROG)
+ 
