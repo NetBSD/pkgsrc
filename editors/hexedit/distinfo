@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2020/02/05 15:30:25 fcambus Exp $
+$NetBSD: distinfo,v 1.15 2020/08/29 13:17:53 fcambus Exp $
 
-SHA1 (hexedit-1.4.2.tar.gz) = 4389a1866e7a5cac213131431e5ce757568ef693
-RMD160 (hexedit-1.4.2.tar.gz) = 5b4fd5caa7423ddf0e2341c213cce1abc3fa9a05
-SHA512 (hexedit-1.4.2.tar.gz) = fb3c05a1783cf4147c5148ef2087f53fd7468da4dfbf2e2e4ee2b3e42eeb8a11492e5533d88c0ccf3d851f4bc34822b15da3eb9ae3509fea2573c88536f548e6
-Size (hexedit-1.4.2.tar.gz) = 30179 bytes
+SHA1 (hexedit-1.5.tar.gz) = e49d5a613d2c4540b03563db5eb8e827793f77b2
+RMD160 (hexedit-1.5.tar.gz) = ad4c3f60b19c927d7ea0ce416cb6be7e00cd5291
+SHA512 (hexedit-1.5.tar.gz) = 9d8e5c8c0cda0af17ffeaf528e3dacd7fc2878dfc0755cb055dae5c56f05c961353c1d1723b05897314b49a44a6eb96de5d3a599c6b29967425507eea7cc7ca5
+Size (hexedit-1.5.tar.gz) = 30544 bytes
 SHA1 (patch-ae) = 49627dd5704fb9cd7b6ac08d01d3324ff2d2babd
