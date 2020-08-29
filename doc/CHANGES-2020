@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4626 2020/08/29 09:24:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4627 2020/08/29 09:54:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7201,3 +7201,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ucspi-tcp6 to 1.11.6 [schmonz 2020-08-28]
 	Updated net/ucspi-ssl to 0.999.11.6 [schmonz 2020-08-28]
 	Updated devel/lua-cqueues to 20200726 [nia 2020-08-29]
+	Updated archivers/innoextract to 1.9 [nia 2020-08-29]
