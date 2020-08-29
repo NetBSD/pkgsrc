@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4633 2020/08/29 18:45:34 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4634 2020/08/29 21:17:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7208,3 +7208,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox68 to 68.12.0 [nia 2020-08-29]
 	Updated www/firefox78-l10n to 78.2.0 [nia 2020-08-29]
 	Updated www/firefox68-l10n to 68.12.0 [nia 2020-08-29]
+	Updated graphics/blender to 2.83.5 [ryoon 2020-08-29]
