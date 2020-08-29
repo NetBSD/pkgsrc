@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4625 2020/08/28 20:01:58 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4626 2020/08/29 09:24:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7200,3 +7200,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/fehqlibs to 0.9.15a [schmonz 2020-08-28]
 	Updated net/ucspi-tcp6 to 1.11.6 [schmonz 2020-08-28]
 	Updated net/ucspi-ssl to 0.999.11.6 [schmonz 2020-08-28]
+	Updated devel/lua-cqueues to 20200726 [nia 2020-08-29]
