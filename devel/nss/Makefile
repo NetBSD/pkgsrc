@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2020/08/23 08:31:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.190 2020/08/29 17:41:59 tnn Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.56.0
@@ -54,11 +54,11 @@ SO_SUFFIX=		so.1.0
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 .if !empty(PKGSRC_COMPILER:Mclang) || !empty(PKGSRC_COMPILER:Mgcc)
-MAKE_ENV.SunOS+=	NS_USE_GCC=YES
+MAKE_ENV+=		NS_USE_GCC=YES
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
-MAKE_ENV.SunOS+=	CC_IS_CLANG=YES
+MAKE_ENV+=		CC_IS_CLANG=YES
 .endif
 
 SUBST_CLASSES+=		64bit
