@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/07/13 19:45:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.7 2020/08/29 09:23:56 nia Exp $
 
-DISTNAME=	cqueues-20200603
+DISTNAME=	cqueues-20200726
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wahern/}
@@ -21,7 +21,7 @@ INSTALL_TARGET=	install${_LUA_DOT_VERSION}
 
 MAKE_FLAGS+=	LUA_APIS=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
-LUA_VERSIONS_ACCEPTED=	53 52 51
+LUA_VERSIONS_ACCEPTED=	54 53 52 51
 
 .include "../../lang/lua/module.mk"
 .include "../../security/openssl/buildlink3.mk"
