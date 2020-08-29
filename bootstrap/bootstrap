@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.292 2020/08/20 13:04:01 bacon Exp $
+# $NetBSD: bootstrap,v 1.293 2020/08/29 20:11:21 js Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -754,6 +754,10 @@ QNX)
 	groupsprog="id -gn"
 	whoamiprog="id -un"
 	machine_arch=`uname -p | sed -e 's/x86/i386/'`
+	# libarchive checks for "rm -f" with no arguments being accepted. This
+	# does not work on QNX. Interestingly, libarchive doesn't seem to
+	# actually need it during the build.
+	export ACCEPT_INFERIOR_RM_PROGRAM=yes
 	;;
 SCO_SV)
 	root_group=root
