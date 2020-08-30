@@ -1,21 +1,32 @@
-$NetBSD: patch-lib_ns_pfilter.c,v 1.1 2020/08/09 15:20:22 taca Exp $
+$NetBSD: patch-lib_ns_pfilter.c,v 1.2 2020/08/30 19:26:45 christos Exp $
 
 * Take from NetBSD base.
 
---- lib/ns/pfilter.c.orig	2020-05-27 15:17:34.821165296 +0000
-+++ lib/ns/pfilter.c
-@@ -0,0 +1,44 @@
+--- lib/ns/pfilter.c.orig	2020-08-30 14:56:09.038428676 -0400
++++ lib/ns/pfilter.c	2020-08-30 15:07:25.182798415 -0400
+@@ -0,0 +1,55 @@
++
++#include "config.h"
 +
 +#include <isc/platform.h>
 +#include <isc/util.h>
 +#include <ns/types.h>
 +#include <ns/client.h>
 +
++#ifdef HAVE_BLACKLIST
 +#include <blacklist.h>
++#define blocklist blacklist
++#define blocklist_open blacklist_open
++#define blocklist_sa_r blacklist_sa_r
++#endif
++
++#ifdef HAVE_BLOCKLIST
++#include <blocklist.h>
++#endif
 +
 +#include <ns/pfilter.h>
 +
-+static struct blacklist *blstate;
++static struct blocklist *blstate;
 +static int blenable;
 +
 +void
@@ -34,7 +45,7 @@ $NetBSD: patch-lib_ns_pfilter.c,v 1.1 2020/08/09 15:20:22 taca Exp $
 +		return;
 +
 +	if (blstate == NULL)
-+		blstate = blacklist_open();
++		blstate = blocklist_open();
 +
 +	if (blstate == NULL)
 +		return;
@@ -45,7 +56,7 @@ $NetBSD: patch-lib_ns_pfilter.c,v 1.1 2020/08/09 15:20:22 taca Exp $
 +	if ((fd = isc_nmhandle_getfd(client->handle)) == -1)
 +		return;
 +
-+	blacklist_sa_r(blstate, 
++	blocklist_sa_r(blstate, 
 +	    res != ISC_R_SUCCESS, fd,
 +	    &client->peeraddr.type.sa, client->peeraddr.length, msg);
 +}
