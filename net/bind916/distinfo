@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2020/08/23 10:03:00 taca Exp $
+$NetBSD: distinfo,v 1.3 2020/08/30 19:26:45 christos Exp $
 
 SHA1 (bind-9.16.6.tar.xz) = f8a4c1bd074cc0305a4c50971e71da5a3b810d78
 RMD160 (bind-9.16.6.tar.xz) = 3b296d967a6a5a709b599efbffc9697060c5f91b
@@ -17,10 +17,10 @@ SHA1 (patch-bin_tests_system_rpz_tests.sh) = 1bc5e0d5c0cc50608e6314c2d2664bd1dc3
 SHA1 (patch-bin_tools_arpaname.c) = 868da4454d06dc823680cf06a764fa40b8474708
 SHA1 (patch-bin_tools_nsec3hash.c) = 87c3891db62c45cd8ed2b484b17f7bf2e319bef3
 SHA1 (patch-config.guess) = b3edcb0b841ed7251f313af22ca21b5259ab0d04
-SHA1 (patch-config.h.in) = 1df3dd99685700144c05775b8594981fb9bb9bc0
+SHA1 (patch-config.h.in) = b03a56721762a96439237f7e1fcaa4275c52be49
 SHA1 (patch-config.sub) = 021f252966d9499f76fcbc6e0dd84eb9d5babf5e
 SHA1 (patch-config.threads.in) = fc5cc7097d87523a34c0e630cb8dd1d081d859e5
-SHA1 (patch-configure) = 619a7b81131e945361756e9d1971be2ff1a79851
+SHA1 (patch-configure) = 6467eaf143293852e9edf3bebe92413a1c083151
 SHA1 (patch-contrib_dlz_config.dlz.in) = 6c53d61aaaf1a952a867e4c4da0194db94f511d7
 SHA1 (patch-contrib_dlz_modules_wildcard_dlz__wildcard__dynamic.c) = 37ba5f06f4970abaae6d98c4305f6372537a313f
 SHA1 (patch-lib_dns_byaddr.c) = 647ddaaaf040233e18d1a87d83bc2bd63d2a20e3
@@ -58,7 +58,7 @@ SHA1 (patch-lib_ns_client.c) = e0453a7483a4f899023e0c5ab970cda241976b90
 SHA1 (patch-lib_ns_include_ns_client.h) = 56009c601d54491ffd16f6438d55206705a5aa23
 SHA1 (patch-lib_ns_include_ns_pfilter.h) = cc86752971b4f9f7492283c4ad3ff29bc1bae237
 SHA1 (patch-lib_ns_interfacemgr.c) = fc31720734b02155acd7fa9b370a6ebb82022532
-SHA1 (patch-lib_ns_pfilter.c) = c2e7c747a7f1faf3c82871581b6eb561a5c31d77
+SHA1 (patch-lib_ns_pfilter.c) = 14d3d55768ee9abe444ed81ee0839cb9ac67af1f
 SHA1 (patch-lib_ns_query.c) = fb9ee13205a95a7fc52893406dbeaf3145640ea6
 SHA1 (patch-lib_ns_update.c) = 30468795b1d8ea5b81ad799a395a8a37ec7fa2d0
 SHA1 (patch-lib_ns_xfrout.c) = 82fe2dd10feaef58a042103b9d417bfeb49d12b7
