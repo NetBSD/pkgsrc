@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/08/30 18:26:17 nia Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/30 21:29:10 nia Exp $
 
 DISTNAME=	rust-1.46.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -75,9 +75,6 @@ RUST_ARCH:=	x86_64-unknown-linux-musl
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
-.  if empty(OS_VERSION:M[0-8].*)
-DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
-.  endif
 RUST_ARCH:=	x86_64-unknown-netbsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
@@ -128,6 +125,7 @@ TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
 # The llvm utilities need a specific libstdc++ version from compat80
 .  if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-8].*)
+DEPENDS+=		compat80-[0-9]*:../../emulators/compat80
 RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
 FORCE_RPATH=
 .  else
