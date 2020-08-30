@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/08/19 08:11:49 nia Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/30 13:27:30 js Exp $
 
 DISTNAME=	guile-2.2.7
 PKGNAME=	${DISTNAME:S/guile/guile22/}
@@ -21,6 +21,9 @@ CONFIGURE_ARGS+=	--disable-shared
 CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 # Needed to work around broken configure check for accept4()
 LDFLAGS.SunOS+=		-lsocket -lnsl
+# Workaround for Xcode 11 clang bug
+# https://bitbucket.org/multicoreware/x265/issues/514/wrong-code-generated-on-macos-1015
+CFLAGS.Darwin+=		-fno-stack-check
 
 .if !empty(GUILE_SUBDIR)
 # Installation prefix is non-default.
