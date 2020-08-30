@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2020/08/20 01:55:06 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2020/08/30 21:35:53 tnn Exp $
 
-DISTNAME=		gr-osmosdr-0.1.4
-PKGREVISION=		18
+DISTNAME=		gr-osmosdr-0.2.2
 CATEGORIES=		ham
-MASTER_SITES+=		http://git.osmocom.org/gr-osmosdr/snapshot/
+# main git repo doesn't allow snapshots to be downloaded
+#MASTER_SITES=		https://git.osmocom.org/gr-osmosdr/snapshot/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=osmocom/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://git.osmocom.org/gr-osmosdr
@@ -24,8 +26,7 @@ CMAKE_ARGS+=	-DENABLE_DOXYGEN=OFF
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
-# Python 36 and 37 result in build errors; 27 builds ok.
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_ACCEPTED=	37
 REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
 .include	"../../devel/boost-headers/buildlink3.mk"
@@ -37,14 +38,10 @@ REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
 .include	"../../ham/uhd/buildlink3.mk"
 .include	"../../lang/python/application.mk"
-.include	"../../lang/python/extension.mk"
 
 .include	"../../ham/rtl-sdr/buildlink3.mk"
 .include	"../../ham/libmirisdr/buildlink3.mk"
 .include	"../../ham/osmo-sdr/buildlink3.mk"
-# \todo Re-enable gr-fcdproplus when it works, or optionize it.
-# gr-fcdproplus does not build at the moment
-#.include	"../../ham/gr-fcdproplus/buildlink3.mk"
 .include	"../../ham/hackrf/buildlink3.mk"
 .include	"../../ham/soapy-sdr/buildlink3.mk"
 
