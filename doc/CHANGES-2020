@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4645 2020/08/30 12:09:44 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4646 2020/08/30 12:51:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7221,3 +7221,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-BDD-Cucumber to 0.73 [schmonz 2020-08-30]
 	Added audio/id3ren version 0.0.20130521 [jmcneill 2020-08-30]
 	Updated audio/ncmpc to 0.39 [nia 2020-08-30]
+	Updated emulators/sameboy to 0.13.6 [nia 2020-08-30]
