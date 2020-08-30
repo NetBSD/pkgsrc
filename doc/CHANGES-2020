@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4647 2020/08/30 12:51:16 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4648 2020/08/30 18:26:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7223,3 +7223,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/ncmpc to 0.39 [nia 2020-08-30]
 	Updated emulators/sameboy to 0.13.6 [nia 2020-08-30]
 	Updated emulators/libretro-sameboy to 0.13.6 [nia 2020-08-30]
+	Updated lang/rust-bin to 1.46.0 [nia 2020-08-30]
