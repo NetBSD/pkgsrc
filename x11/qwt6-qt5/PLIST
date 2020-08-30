@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/08/30 08:05:57 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/08/30 08:19:06 tnn Exp $
 qt5/plugins/designer/libqwt_designer_plugin.so
 qwt-${VERSION}/doc/html/analogclock.png
 qwt-${VERSION}/doc/html/annotated.html
@@ -1653,3 +1653,4 @@ qwt-${VERSION}/lib/libqwt.so
 qwt-${VERSION}/lib/libqwt.so.6
 qwt-${VERSION}/lib/libqwt.so.6.1
 qwt-${VERSION}/lib/libqwt.so.6.1.5
+qwt-${VERSION}/lib/pkgconfig/Qt5Qwt6.pc
