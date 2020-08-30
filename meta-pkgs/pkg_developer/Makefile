@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:42 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/30 08:22:39 tnn Exp $
 #
 
-DISTNAME=	pkg_developer-1.2.1
+DISTNAME=	pkg_developer-1.2.2
 CATEGORIES=	meta-pkgs pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,6 +15,7 @@ META_PACKAGE=	yes
 DEPENDS+=	checkperms>=1.0:../../sysutils/checkperms
 DEPENDS+=	createbuildlink>=3.13:../../pkgtools/createbuildlink
 DEPENDS+=	digest>=20060302:../../pkgtools/digest
+DEPENDS+=	import-package>=1.0:../../pkgtools/import-package
 DEPENDS+=	lintpkgsrc>=4.82:../../pkgtools/lintpkgsrc
 DEPENDS+=	pkg_chk>=1.77:../../pkgtools/pkg_chk
 DEPENDS+=	pkg_tarup>=1.6.5:../../pkgtools/pkg_tarup
