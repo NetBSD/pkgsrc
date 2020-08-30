@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.776 2020/08/19 16:25:56 riastradh Exp $
+# $NetBSD: Makefile,v 1.777 2020/08/30 23:54:20 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -391,6 +391,7 @@ SUBDIR+=	php-ssh2-0
 SUBDIR+=	php-suhosin
 SUBDIR+=	pinentry
 SUBDIR+=	pinentry-fltk
+SUBDIR+=	pinentry-gnome3
 SUBDIR+=	pinentry-gtk2
 SUBDIR+=	pinentry-mac
 SUBDIR+=	pinentry-qt4
