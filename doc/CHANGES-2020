@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4639 2020/08/30 06:04:27 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4640 2020/08/30 07:32:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7214,3 +7214,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 80.0nb1 [ryoon 2020-08-29]
 	Updated mbone/mdd to 20190819 [manu 2020-08-30]
 	Updated net/unifi to 5.14.23 [tnn 2020-08-30]
+	Updated mail/mutt to 1.14.7 [tron 2020-08-30]
