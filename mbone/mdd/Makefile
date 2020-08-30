@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/08/29 00:50:12 manu Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/30 00:35:01 manu Exp $
 #
 
-DISTNAME=	mdd-20180824
+DISTNAME=	mdd-20190819
 CATEGORIES=	mbone
 MASTER_SITES=	http://ftp.espci.fr/pub/mdd/
 EXTRACT_SUFX=	.tgz

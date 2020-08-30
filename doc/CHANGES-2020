@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4637 2020/08/29 22:25:01 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4638 2020/08/30 00:35:01 manu Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7212,3 +7212,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/rcm to 1.3.4 [leot 2020-08-29]
 	Added graphics/libv4l1 version 1.18.1 [ryoon 2020-08-29]
 	Updated www/firefox to 80.0nb1 [ryoon 2020-08-29]
+	Updated mbone/mdd to 20190819 [manu 2020-08-30]
