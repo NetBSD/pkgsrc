@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/28 19:00:37 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/08/30 08:05:57 tnn Exp $
 qt5/plugins/designer/libqwt_designer_plugin.so
 qwt-${VERSION}/doc/html/analogclock.png
 qwt-${VERSION}/doc/html/annotated.html
@@ -749,17 +749,9 @@ qwt-${VERSION}/doc/html/doxygen.png
 qwt-${VERSION}/doc/html/dynsections.js
 qwt-${VERSION}/doc/html/folderclosed.png
 qwt-${VERSION}/doc/html/folderopen.png
-qwt-${VERSION}/doc/html/form_0.png
-qwt-${VERSION}/doc/html/form_1.png
-qwt-${VERSION}/doc/html/form_2.png
-qwt-${VERSION}/doc/html/form_3.png
-qwt-${VERSION}/doc/html/form_4.png
-qwt-${VERSION}/doc/html/form_5.png
-qwt-${VERSION}/doc/html/formula.repository
 qwt-${VERSION}/doc/html/friedberg-bars-600x400.png
 qwt-${VERSION}/doc/html/friedberg-tube-600x400.png
 qwt-${VERSION}/doc/html/functions.html
-qwt-${VERSION}/doc/html/functions_0x7e.html
 qwt-${VERSION}/doc/html/functions_b.html
 qwt-${VERSION}/doc/html/functions_c.html
 qwt-${VERSION}/doc/html/functions_d.html
@@ -794,7 +786,6 @@ qwt-${VERSION}/doc/html/functions_eval_y.html
 qwt-${VERSION}/doc/html/functions_f.html
 qwt-${VERSION}/doc/html/functions_func.html
 qwt-${VERSION}/doc/html/functions_func.js
-qwt-${VERSION}/doc/html/functions_func_0x7e.html
 qwt-${VERSION}/doc/html/functions_func_b.html
 qwt-${VERSION}/doc/html/functions_func_c.html
 qwt-${VERSION}/doc/html/functions_func_d.html
@@ -1661,4 +1652,4 @@ qwt-${VERSION}/include/qwt_widget_overlay.h
 qwt-${VERSION}/lib/libqwt.so
 qwt-${VERSION}/lib/libqwt.so.6
 qwt-${VERSION}/lib/libqwt.so.6.1
-qwt-${VERSION}/lib/libqwt.so.6.1.4
+qwt-${VERSION}/lib/libqwt.so.6.1.5
