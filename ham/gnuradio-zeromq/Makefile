@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2020/08/18 17:58:04 leot Exp $
+# $NetBSD: Makefile,v 1.23 2020/08/30 21:16:02 tnn Exp $
 
 PKGNAME=	gnuradio-zeromq-${VERSION}
-PKGREVISION=	5
 COMMENT=	All of the zeromq blocks, utilities, and examples
 
 #  zmq.hpp: No such file or directory
@@ -15,9 +14,12 @@ COMMENT=	All of the zeromq blocks, utilities, and examples
 .include	"../../ham/gnuradio-core/Makefile.common"
 .include	"../../ham/gnuradio-core/Nocore.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
-CMAKE_ARGS+=	-DENABLE_GR_ZEROMQ=True
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_ARGS+=	-DENABLE_GR_ZEROMQ=ON
 CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
+CMAKE_ARGS+=	-DENABLE_GRC=ON
+
+PLIST_MINUS+=	companion
 
 post-patch:
 	${CP}	${PKGDIR}/files/zmq.hpp ${WRKSRC}/gr-zeromq/include/
