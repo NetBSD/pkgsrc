@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2020/03/17 03:45:55 rillig Exp $
+# $NetBSD: Makefile,v 1.262 2020/08/30 13:36:01 js Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -120,6 +120,7 @@ CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Dldflags=${LDFLAGS:Q}
 MAKE_ENV+=		LC_ALL="C"
+LDFLAGS.QNX+=		-lm
 
 .if ${OPSYS} == "SunOS"
 USE_TOOLS+=	bash
