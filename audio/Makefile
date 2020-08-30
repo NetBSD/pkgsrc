@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.608 2020/08/20 16:26:26 pin Exp $
+# $NetBSD: Makefile,v 1.609 2020/08/30 10:41:12 jmcneill Exp $
 #
 
 COMMENT=	Audio tools
@@ -201,6 +201,7 @@ SUBDIR+=	ices-mp3
 SUBDIR+=	id3
 SUBDIR+=	id3ed
 SUBDIR+=	id3lib
+SUBDIR+=	id3ren
 SUBDIR+=	id3v2
 SUBDIR+=	ifp-line
 SUBDIR+=	jack
