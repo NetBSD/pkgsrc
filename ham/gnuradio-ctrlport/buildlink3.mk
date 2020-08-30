@@ -1,13 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/10/13 12:51:08 mef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/08/30 20:51:34 tnn Exp $
 
-BUILDLINK_TREE+=	gnuradio-dtv
+BUILDLINK_TREE+=	gnuradio-ctrlport
 
-.if !defined(GNURADIO_DTV_BUILDLINK3_MK)
-GNURADIO_DTV_BUILDLINK3_MK:=
+.if !defined(GNURADIO_CTRLPORT_BUILDLINK3_MK)
+GNURADIO_CTRLPORT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnuradio-dtv+=	gnuradio-dtv>=3.7.5
-BUILDLINK_ABI_DEPENDS.gnuradio-dtv+=	gnuradio-dtv>=3.7.5
-BUILDLINK_PKGSRCDIR.gnuradio-dtv?=	../../ham/gnuradio-dtv
-.endif # GNURADIO_DTV_BUILDLINK3_MK
+BUILDLINK_API_DEPENDS.gnuradio-ctrlport+=	gnuradio-ctrlport>=3.8.1.0
+BUILDLINK_ABI_DEPENDS.gnuradio-ctrlport+=	gnuradio-ctrlport>=3.8.1.0
+BUILDLINK_PKGSRCDIR.gnuradio-ctrlport?=		../../ham/gnuradio-ctrlport
+.endif # GNURADIO_CTRLPORT_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-gnuradio-dtv
+BUILDLINK_TREE+=	-gnuradio-ctrlport
