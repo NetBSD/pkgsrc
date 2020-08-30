@@ -1,4 +1,6 @@
-$NetBSD: patch-pri,v 1.1 2019/10/28 19:00:37 bouyer Exp $
+$NetBSD: patch-qwtconfig.pri,v 1.1 2020/08/30 08:05:57 tnn Exp $
+
+Don't hardcode PREFIX.
 
 --- qwtconfig.pri.orig	2019-01-02 17:21:31.556467499 +0100
 +++ qwtconfig.pri	2019-10-25 18:51:20.912266571 +0200
