@@ -1,4 +1,4 @@
-$NetBSD: patch-libs.mk,v 1.4 2020/08/24 08:35:07 wiz Exp $
+$NetBSD: patch-libs.mk,v 1.5 2020/08/30 12:33:29 js Exp $
 
 Do not install debug library.
 
@@ -23,3 +23,23 @@ Do not install debug library.
  
  SO_VERSION_MAJOR := 6
  SO_VERSION_MINOR := 3
+@@ -384,15 +383,15 @@ ifeq ($(CONFIG_VP9_ENCODER),yes)
+   RC_RTC_OBJS=$(call objs,$(RC_RTC_SRCS))
+   RC_RTC_OBJS=$(call objs,$(RC_RTC_SRCS))
+   OBJS-yes += $(RC_RTC_OBJS)
+-  LIBS-yes += $(BUILD_PFX)libvp9rc.a $(BUILD_PFX)libvp9rc_g.a
+-  $(BUILD_PFX)libvp9rc_g.a: $(RC_RTC_OBJS)
++  LIBS-yes += $(BUILD_PFX)libvp9rc.a
++  $(BUILD_PFX)libvp9rc.a: $(RC_RTC_OBJS)
+ endif
+ 
+ ifeq ($(CONFIG_VP9_ENCODER)$(CONFIG_RATE_CTRL),yesyes)
+   SIMPLE_ENCODE_OBJS=$(call objs,$(SIMPLE_ENCODE_SRCS))
+   OBJS-yes += $(SIMPLE_ENCODE_OBJS)
+-  LIBS-yes += $(BUILD_PFX)libsimple_encode.a $(BUILD_PFX)libsimple_encode_g.a
+-  $(BUILD_PFX)libsimple_encode_g.a: $(SIMPLE_ENCODE_OBJS)
++  LIBS-yes += $(BUILD_PFX)libsimple_encode.a
++  $(BUILD_PFX)libsimple_encode.a: $(SIMPLE_ENCODE_OBJS)
+ endif
+ 
+ endif # ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
