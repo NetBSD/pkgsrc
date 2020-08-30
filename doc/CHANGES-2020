@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4638 2020/08/30 00:35:01 manu Exp $
+$NetBSD: CHANGES-2020,v 1.4639 2020/08/30 06:04:27 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7213,3 +7213,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/libv4l1 version 1.18.1 [ryoon 2020-08-29]
 	Updated www/firefox to 80.0nb1 [ryoon 2020-08-29]
 	Updated mbone/mdd to 20190819 [manu 2020-08-30]
+	Updated net/unifi to 5.14.23 [tnn 2020-08-30]
