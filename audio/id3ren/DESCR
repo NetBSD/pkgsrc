@@ -1,0 +1,7 @@
+id3ren is used to rename batches of mp3 files by reading the ID3 tag
+at the end of the file which contains the song name, artist, album, year,
+and a comment.
+
+The secondary function of id3ren is a tagger, which can create, modify,
+or remove ID3 tags. The id3 fields can be set on the command line,
+entered interactively, or "guessed" from the path and the filename.
