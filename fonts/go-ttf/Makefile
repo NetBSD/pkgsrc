@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2020/08/18 02:35:25 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/30 20:29:46 tnn Exp $
 
 DISTNAME=	ttfs
 PKGNAME=	go-ttf-2.008
 CATEGORIES=	fonts
-MASTER_SITES=	https://go.googlesource.com/image/+archive/${COMMIT_ID}/font/gofont/
+#MASTER_SITES=	https://go.googlesource.com/image/+archive/${COMMIT_ID}/font/gofont/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://blog.golang.org/go-fonts
