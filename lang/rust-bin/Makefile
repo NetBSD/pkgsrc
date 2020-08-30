@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/07/15 15:13:57 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/08/30 18:26:17 nia Exp $
 
-DISTNAME=	rust-1.44.0
+DISTNAME=	rust-1.46.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -94,25 +94,21 @@ do-install:
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
 .  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
-	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then				\
-		otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
-		    | ${GREP} '@rpath' | while read rpath rest; do		\
-			install_name_tool -change $$rpath			\
-			    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
-			    ${DESTDIR}${PREFIX}/bin/${bin};			\
-		done								\
-	; fi
+	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
+	    | ${GREP} '@rpath' | while read rpath rest; do		\
+		install_name_tool -change $$rpath			\
+		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
+		    ${DESTDIR}${PREFIX}/bin/${bin};			\
+	done
 .  endfor
 .  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump 		\
 		llvm-profdata llvm-readobj llvm-size llvm-strip
-	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then				\
-		otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
-		    | ${GREP} '@rpath' | while read rpath rest; do		\
-			install_name_tool -change $$rpath			\
-			    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib/rustlib/${RUST_ARCH}/lib,g'` \
-			    ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}; \
-		done								\
-	; fi
+	otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
+	    | ${GREP} '@rpath' | while read rpath rest; do		\
+		install_name_tool -change $$rpath			\
+		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib/rustlib/${RUST_ARCH}/lib,g'` \
+		    ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}; \
+	done
 .  endfor
 .  for lib in lib lib/rustlib/${RUST_ARCH}/lib lib/rustlib/${RUST_ARCH}/codegen-backends
 	for f in ${DESTDIR}${PREFIX}/${lib}/lib*.dylib; do		\
@@ -144,17 +140,13 @@ FORCE_RPATH=		--force-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
 .  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
-	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
-		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
-			${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin} \
-	; fi
+	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
+		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
 .  endfor
 .  for bin in llvm-ar llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
 		llvm-readobj llvm-size llvm-strip
-	if [ -f ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} ]; then \
-		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
-			${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
-	; fi
+	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
+		${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .  endfor
 .  for lib in lib lib/rustlib/${RUST_ARCH}/lib \
 		lib/rustlib/${RUST_ARCH}/codegen-backends
