@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4649 2020/08/30 20:10:14 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4650 2020/08/30 21:37:51 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7225,3 +7225,21 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-sameboy to 0.13.6 [nia 2020-08-30]
 	Updated lang/rust-bin to 1.46.0 [nia 2020-08-30]
 	Updated www/p5-Template-Toolkit to 3.009 [wiz 2020-08-30]
+	Updated ham/gnuradio-core to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-channels to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-companion to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-ctrlport to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-digital to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-dtv to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-fec to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-qtgui to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-trellis to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-uhd to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-utils to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-video-sdl to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-vocoder to 3.8.1.0 [tnn 2020-08-30]
+	Updated ham/gnuradio-wavelet to 3.8.1.0 [tnn 2020-08-30]
+	Updated meta-pkgs/gnuradio to 3.8.1.0 [tnn 2020-08-30]
+	Removed math/py-scipy12 successor math/py-scipy [tnn 2020-08-30]
+	Removed x11/py-qwt-qt4 successor x11/py-qwt-qt5 [tnn 2020-08-30]
+	Updated ham/gr-osmosdr to 0.2.2 [tnn 2020-08-30]
