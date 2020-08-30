@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile,v 1.1 2020/08/30 10:41:01 jmcneill Exp $
+
+Use PKG_SYSCONFDIR instead of hard-coding /etc.
+
+--- src/Makefile.orig	2013-05-21 13:56:15.000000000 +0000
++++ src/Makefile
+@@ -1,5 +1,5 @@
+ CFLAGSDEBUG = -g -O2 -Wall -DDEBUG
+-CFLAGS = -s -O2 -Wall
++CFLAGS = -s -O2 -Wall -DPKG_SYSCONFDIR=\"$(PKG_SYSCONFDIR)\"
+ CC = gcc
+ RM = rm -f
+ INSTALL = install -D -s -m 755
