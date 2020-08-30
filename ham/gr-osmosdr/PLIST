@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 13:00:27 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/08/30 21:35:53 tnn Exp $
 bin/osmocom_fft
-bin/osmocom_siggen
 bin/osmocom_siggen_nogui
 bin/osmocom_spectrum_sense
 include/osmosdr/api.h
@@ -11,9 +10,13 @@ include/osmosdr/sink.h
 include/osmosdr/source.h
 include/osmosdr/swig/osmosdr_swig.i
 include/osmosdr/swig/osmosdr_swig_doc.i
+include/osmosdr/time_spec.h
+lib/cmake/osmosdr/gnuradio-osmosdrConfig.cmake
+lib/cmake/osmosdr/gnuradio-osmosdrTargets-release.cmake
+lib/cmake/osmosdr/gnuradio-osmosdrTargets.cmake
 lib/libgnuradio-osmosdr.so
-lib/libgnuradio-osmosdr.so.${PKGVERSION}
-lib/pkgconfig/gnuradio-osmosdr.pc
+lib/libgnuradio-osmosdr.so.0.2.0
+lib/libgnuradio-osmosdr.so.0.2.0.0
 ${PYSITELIB}/osmosdr/__init__.py
 ${PYSITELIB}/osmosdr/__init__.pyc
 ${PYSITELIB}/osmosdr/__init__.pyo
@@ -24,6 +27,6 @@ ${PYSITELIB}/osmosdr/osmocom_siggen_base.pyo
 ${PYSITELIB}/osmosdr/osmosdr_swig.py
 ${PYSITELIB}/osmosdr/osmosdr_swig.pyc
 ${PYSITELIB}/osmosdr/osmosdr_swig.pyo
-share/gnuradio/grc/blocks/osmosdr_sink.xml
-share/gnuradio/grc/blocks/osmosdr_source.xml
-share/gnuradio/grc/blocks/rtlsdr_source.xml
+share/gnuradio/grc/blocks/osmosdr_sink.block.yml
+share/gnuradio/grc/blocks/osmosdr_source.block.yml
+share/gnuradio/grc/blocks/rtlsdr_source.block.yml
