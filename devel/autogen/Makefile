@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/08/17 08:43:07 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2020/08/30 14:00:56 tnn Exp $
 
 DISTNAME=	autogen-5.18.16
 CATEGORIES=	devel
@@ -23,6 +23,7 @@ MAKE_ENV+=	PERL5=${PERL5}
 # XXX
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 BUILDLINK_TRANSFORM+=	rm:-Werror
+CONFIGURE_ENV.Darwin+=	ac_cv_func_utimensat=no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/guile22/buildlink3.mk"
