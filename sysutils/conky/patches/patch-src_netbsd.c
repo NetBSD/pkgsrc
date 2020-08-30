@@ -1,10 +1,10 @@
-$NetBSD: patch-src_netbsd.c,v 1.4 2020/08/27 11:25:29 nia Exp $
+$NetBSD: patch-src_netbsd.c,v 1.5 2020/08/30 11:04:48 nia Exp $
 
 Many fixes and addons for conky to work on NetBSD.
 
 --- src/netbsd.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/netbsd.c
-@@ -30,337 +30,803 @@
+@@ -30,337 +30,815 @@
  
  #include "netbsd.h"
  #include "net_stat.h"
@@ -12,17 +12,28 @@ Many fixes and addons for conky to work on NetBSD.
 +#include <sys/types.h>
 +#include <sys/statvfs.h>
 +#include <ifaddrs.h>
- 
--static kvm_t *kd = NULL;
--int kd_init = 0, nkd_init = 0;
--u_int32_t sensvalue;
--char errbuf[_POSIX2_LINE_MAX];
++
 +#define P_BOOL		0
 +#define P_UINT8		1
 +#define P_INT64		2
 +#define P_STRING	3
- 
--static int init_kvm(void)
++
++static char const *freq_sysctls[] = {
++#if defined(__powerpc__)
++	"machdep.intrepid.frequency.current",
++#endif
++#if defined(__mips__)
++	"machdep.loongson.frequency.current",
++#endif
++#if defined(__i386__) || defined(__x86_64__)
++	"machdep.est.frequency.current",
++	"machdep.powernow.frequency.current",
++#endif
++	"machdep.cpu.frequency.current",
++	"machdep.frequency.current",
++	NULL
++};
++
 +typedef struct Devquery {
 +	int			type;
 +	char		*dev;
@@ -35,9 +46,14 @@ Many fixes and addons for conky to work on NetBSD.
 +static short	cpu_setup = 0;
 +
 +int				sysmon_fd;
-+
+ 
+-static kvm_t *kd = NULL;
+-int kd_init = 0, nkd_init = 0;
+-u_int32_t sensvalue;
+-char errbuf[_POSIX2_LINE_MAX];
 +static inline void proc_find_top(struct process **cpu, struct process **mem);
-+
+ 
+-static int init_kvm(void)
 +int8_t envsys_get_val(Devquery, void *);
 +
 +void
@@ -146,7 +162,9 @@ Many fixes and addons for conky to work on NetBSD.
 +	 * report inactive memory as memeasyfree.
 +	 */
 +	info.memeasyfree -= info.bufmem;
-+
+ 
+-	if (sep == NULL) {
+-		warn("memory allocation failed");
 +	return 0;
 +}
 +
@@ -158,9 +176,7 @@ Many fixes and addons for conky to work on NetBSD.
 +	long long r, t, last_recv, last_trans;
 +	struct ifaddrs *ifap, *ifa;
 +	struct if_data *ifd;
- 
--	if (sep == NULL) {
--		warn("memory allocation failed");
++
 +	/* get delta */
 +	delta = current_update_time - last_update_time;
 +	if (delta <= 0.0001) {
@@ -434,7 +450,8 @@ Many fixes and addons for conky to work on NetBSD.
 +		total += cp_time[j];
 +
 +	used = total - cp_time[CP_IDLE];
-+
+ 
+-		ns->last_read_recv = ifnet.if_ibytes;
 +	if ((total - cpu[0].oldtotal) != 0) {
 +		info.cpu_usage[0] = ((double) (used - cpu[0].oldused)) /
 +		(double) (total - cpu[0].oldtotal);
@@ -462,12 +479,11 @@ Many fixes and addons for conky to work on NetBSD.
 +		for (j = 0; j < CPUSTATES; j++)
 +			total += cp_time[i*CPUSTATES + j];
  
--		ns->last_read_recv = ifnet.if_ibytes;
-+		used = total - cp_time[i*CPUSTATES + CP_IDLE];
- 
 -		if (ifnet.if_obytes < ns->last_read_trans) {
 -			ns->trans += ((long long) 4294967295U - ns->last_read_trans) +
 -				ifnet.if_obytes;
++		used = total - cp_time[i*CPUSTATES + CP_IDLE];
++
 +		if ((total - cpu[i+1].oldtotal) != 0) {
 +			info.cpu_usage[i+1] = ((double) (used - cpu[i+1].oldused)) /
 +			(double) (total - cpu[i+1].oldtotal);
@@ -492,111 +508,85 @@ Many fixes and addons for conky to work on NetBSD.
 +int update_load_average(void)
 +{
 +	double v[3];
-+
-+	getloadavg(v, 3);
  
 -		ns->recv_speed = (ns->recv - last_recv) / delta;
 -		ns->trans_speed = (ns->trans - last_trans) / delta;
+-	}
++	getloadavg(v, 3);
++
 +	info.loadavg[0] = (float) v[0];
 +	info.loadavg[1] = (float) v[1];
 +	info.loadavg[2] = (float) v[2];
 +
 +	return 0;
-+}
-+
+ }
+ 
+-void update_total_processes()
 +int open_acpi_temperature(const char *name)
-+{
+ {
+-	/* It's easier to use kvm here than sysctl */
 +	(void)name; /* useless on NetBSD */
 +	return -1;
 +}
-+
+ 
+-	int n_processes;
 +int get_entropy_avail(unsigned int *val)
 +{
 +	return 1;
 +}
-+
+ 
+-	info.procs = 0;
 +int get_entropy_poolsize(unsigned int *val)
 +{
 +	return 1;
 +}
-+
-+/* void */
-+char
-+get_freq(char *p_client_buffer, size_t client_buffer_size,
-+	const char *p_format, int divisor, unsigned int cpu)
-+{
-+	int freq = cpu;
-+
-+	if (!p_client_buffer || client_buffer_size <= 0 || !p_format
-+		|| divisor <= 0) {
-+		return 0;
- 	}
-+
-+	size_t size = sizeof(freq);
-+
-+	if (sysctlbyname("machdep.est.frequency.current",
-+			NULL, &size, NULL, 0) == 0) {
-+		sysctlbyname("machdep.est.frequency.current", &freq, &size, NULL, 0);
-+		snprintf(p_client_buffer, client_buffer_size, p_format,
-+			(float) freq / divisor);
-+	} else if (sysctlbyname("machdep.tsc_freq", NULL, &size, NULL, 0) == 0) {
-+		sysctlbyname("machdep.tsc_freq", &freq, &size, NULL, 0);
-+		snprintf(p_client_buffer, client_buffer_size, p_format,
-+			(float) freq / (1000000 * divisor));
-+	} else
-+		snprintf(p_client_buffer, client_buffer_size, p_format, 0.0f);
-+
-+	return 1;
- }
- 
--void update_total_processes()
-+void update_diskio()
- {
--	/* It's easier to use kvm here than sysctl */
-+	return; /* XXX: implement? hifi: not sure how */
-+}
- 
--	int n_processes;
-+int update_top()
-+{
-+	proc_find_top(info.cpu, info.memu);
- 
--	info.procs = 0;
-+	return 0;
-+}
  
 -	if (init_kvm() < 0) {
 -		return;
--	} else {
++char
++get_freq(char *p_client_buffer, size_t client_buffer_size,
++		const char *p_format, int divisor, unsigned int cpu) {
++	const char **s;
++	char name[64];
++	int freq = 0;
++	size_t freq_size = sizeof(freq);
++
++	snprintf(name, sizeof(name), "machdep.cpufreq.cpu%u.current", cpu - 1);
++	if (sysctlbyname(name, &freq, &freq_size, NULL, 0) == -1) {
++		for (s = freq_sysctls; *s != NULL; ++s) {
++			if (sysctlbyname(*s, &freq, &freq_size, NULL, 0) != -1)
++				break;
++		}
++	}
++	if (freq > 0) {
++		snprintf(p_client_buffer, client_buffer_size, p_format,
++			 (float)freq / divisor);
+ 	} else {
 -		kvm_getproc2(kd, KERN_PROC_ALL, 0, sizeof(struct kinfo_proc2),
 -			&n_processes);
-+int comparecpu(const void *a, const void *b)
-+{
-+	if (((struct process *) a)->amount > ((struct process *) b)->amount) {
-+		return -1;
-+	}
-+	if (((struct process *) a)->amount < ((struct process *) b)->amount) {
-+		return 1;
++		snprintf(p_client_buffer, client_buffer_size, p_format, 0.0f);
  	}
++	return 1;
++}
  
 -	info.procs = n_processes;
-+	return 0;
++
++void update_diskio()
++{
++	return; /* XXX: implement? hifi: not sure how */
  }
  
 -void update_running_processes()
-+int comparemem(const void *a, const void *b)
++int update_top()
  {
 -	struct kinfo_proc2 *p;
 -	int n_processes;
 -	int i, cnt = 0;
-+    if (((struct process *) a)->rss > ((struct process *) b)->rss) {
-+		return -1;
-+	}
++	proc_find_top(info.cpu, info.memu);
  
 -	info.run_procs = 0;
-+	if (((struct process *) a)->rss < ((struct process *) b)->rss) {
-+		return 1;
-+	}
++	return 0;
++}
  
 -	if (init_kvm() < 0) {
 -		return;
@@ -607,11 +597,47 @@ Many fixes and addons for conky to work on NetBSD.
 -			if (p[i].p_stat == LSRUN || p[i].p_stat == LSIDL
 -					|| p[i].p_stat == LSONPROC) {
 -				cnt++;
+-			}
+-		}
++int comparecpu(const void *a, const void *b)
++{
++	if (((struct process *) a)->amount > ((struct process *) b)->amount) {
++		return -1;
++	}
++	if (((struct process *) a)->amount < ((struct process *) b)->amount) {
++		return 1;
+ 	}
+ 
+-	info.run_procs = cnt;
++	return 0;
+ }
+ 
+-struct cpu_load_struct {
+-	unsigned long load[5];
+-};
++int comparemem(const void *a, const void *b)
++{
++    if (((struct process *) a)->rss > ((struct process *) b)->rss) {
++		return -1;
++	}
+ 
+-struct cpu_load_struct fresh = {
+-	{0, 0, 0, 0, 0}
+-};
++	if (((struct process *) a)->rss < ((struct process *) b)->rss) {
++		return 1;
++	}
+ 
+-long cpu_used, oldtotal, oldused;
 +	return 0;
 +}
-+
+ 
+-void update_cpu_usage()
 +inline void proc_find_top(struct process **cpu, struct process **mem)
-+{
+ {
+-	long used, total;
+-	static u_int64_t cp_time[CPUSTATES];
+-	size_t len = sizeof(cp_time);
 +        struct kinfo_proc2 *p;
 +        int n_processes;
 +        int i, j = 0;
@@ -647,12 +673,10 @@ Many fixes and addons for conky to work on NetBSD.
 +				processes[j].rss = p[i].p_vm_rssize * pagesize;
 +				processes[j].vsize = p[i].p_vm_vsize;
 +				j++;
- 			}
--		}
--	}
++			}
 +        }
  
--	info.run_procs = cnt;
+-	info.cpu_usage = 0;
 +        qsort(processes, j - 1, sizeof(struct process), comparemem);
 +        for (i = 0; i < 10; i++) {
 +			struct process *tmp, *ttmp;
@@ -668,7 +692,10 @@ Many fixes and addons for conky to work on NetBSD.
 +				free(ttmp);
 +			}
 +        }
-+
+ 
+-	if (sysctlbyname("kern.cp_time", &cp_time, &len, NULL, 0) < 0) {
+-		warn("cannot get kern.cp_time");
+-	}
 +        qsort(processes, j - 1, sizeof(struct process), comparecpu);
 +        for (i = 0; i < 10; i++) {
 +			struct process *tmp, *ttmp;
@@ -689,68 +716,53 @@ Many fixes and addons for conky to work on NetBSD.
 +			free(processes[i].name);
 +        }
 +        free(processes);
- }
- 
--struct cpu_load_struct {
--	unsigned long load[5];
--};
++}
++
 +double
 +get_acpi_temperature(int fd)
 +{
 +	Devquery dq_tz = { P_INT64, "acpitz0", "temperature", "cur-value" };
 +	int64_t temp;
  
--struct cpu_load_struct fresh = {
--	{0, 0, 0, 0, 0}
--};
-+	(void)fd;
-+
-+	if (envsys_get_val(dq_tz, (void *)&temp) < 0)
-+		return 0.0;
- 
--long cpu_used, oldtotal, oldused;
-+	return (temp / 1000000.0) - 273.15;
-+}
- 
--void update_cpu_usage()
-+void
-+get_bat_life(char *bat, char *buf)
- {
--	long used, total;
--	static u_int64_t cp_time[CPUSTATES];
--	size_t len = sizeof(cp_time);
-+	char row[32];
-+	int64_t cur_charge, max_charge;
-+	Devquery dq_charge = { P_INT64, bat, "charge", NULL};
- 
--	info.cpu_usage = 0;
-+	strcpy(row, "max-value");
-+	dq_charge.row = &row[0];
- 
--	if (sysctlbyname("kern.cp_time", &cp_time, &len, NULL, 0) < 0) {
--		warn("cannot get kern.cp_time");
-+	if (envsys_get_val(dq_charge, (void *)&max_charge) < 0) {
-+		/* did not get any information from envsys */
-+		strcpy(buf, "N/A");
-+		return;
- 	}
- 
 -	fresh.load[0] = cp_time[CP_USER];
 -	fresh.load[1] = cp_time[CP_NICE];
 -	fresh.load[2] = cp_time[CP_SYS];
 -	fresh.load[3] = cp_time[CP_IDLE];
 -	fresh.load[4] = cp_time[CP_IDLE];
-+	strcpy(row, "cur-value");
-+	dq_charge.row = &row[0];
++	(void)fd;
  
 -	used = fresh.load[0] + fresh.load[1] + fresh.load[2];
 -	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
--
++	if (envsys_get_val(dq_tz, (void *)&temp) < 0)
++		return 0.0;
+ 
 -	if ((total - oldtotal) != 0) {
 -		info.cpu_usage = ((double) (used - oldused)) /
 -			(double) (total - oldtotal);
 -	} else {
 -		info.cpu_usage = 0;
++	return (temp / 1000000.0) - 273.15;
++}
++
++void
++get_bat_life(char *bat, char *buf)
++{
++	char row[32];
++	int64_t cur_charge, max_charge;
++	Devquery dq_charge = { P_INT64, bat, "charge", NULL};
++
++	strcpy(row, "max-value");
++	dq_charge.row = &row[0];
++
++	if (envsys_get_val(dq_charge, (void *)&max_charge) < 0) {
++		/* did not get any information from envsys */
++		strcpy(buf, "N/A");
++		return;
++	}
++
++	strcpy(row, "cur-value");
++	dq_charge.row = &row[0];
++
 +	if (envsys_get_val(dq_charge, (void *)&cur_charge) < 0) {
 +		/* did not get any information from envsys */
 +		strcpy(buf, "N/A");
