@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4648 2020/08/30 18:26:28 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4649 2020/08/30 20:10:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7224,3 +7224,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/sameboy to 0.13.6 [nia 2020-08-30]
 	Updated emulators/libretro-sameboy to 0.13.6 [nia 2020-08-30]
 	Updated lang/rust-bin to 1.46.0 [nia 2020-08-30]
+	Updated www/p5-Template-Toolkit to 3.009 [wiz 2020-08-30]
