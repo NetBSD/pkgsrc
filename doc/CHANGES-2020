@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4643 2020/08/30 09:02:57 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4644 2020/08/30 10:42:58 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7219,3 +7219,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/py-qwt-qt5 version 1.02.00 [tnn 2020-08-30]
 	Removed ham/gnuradio-wxgui [tnn 2020-08-30]
 	Updated devel/p5-Test-BDD-Cucumber to 0.73 [schmonz 2020-08-30]
+	Added audio/id3ren version 0.0.20130521 [jmcneill 2020-08-30]
