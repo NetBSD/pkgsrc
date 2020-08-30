@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2020/08/09 15:20:21 taca Exp $
+# $NetBSD: options.mk,v 1.2 2020/08/30 19:26:45 christos Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind916
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
-PKG_SUPPORTED_OPTIONS+=	bind-json-statistics-server blacklist
+PKG_SUPPORTED_OPTIONS+=	bind-json-statistics-server blacklist blocklist
 PKG_SUPPORTED_OPTIONS+=	threads readline lmdb mysql pgsql ldap dlz-filesystem
 PKG_SUPPORTED_OPTIONS+=	geoip tuning dnstap # pkcs11
 PKG_SUGGESTED_OPTIONS+=	readline
@@ -23,8 +23,10 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .endif
 
 .if ${OPSYS} == "NetBSD"
-.  if !empty(OS_VERSION:M[8-9].*)
+.   if exists(/usr/include/blacklist.h)
 PKG_SUGGESTED_OPTIONS+=	blacklist
+.   elif exists(/usr/include/blocklist.h)
+PKG_SUGGESTED_OPTIONS+=	blocklist
 .  endif
 .endif
 
@@ -69,6 +71,12 @@ CONFIGURE_ARGS+=	--with-dlz-filesystem
 CONFIGURE_ARGS+=	--with-blacklist=yes
 .else
 CONFIGURE_ARGS+=	--with-blacklist=no
+.endif
+
+.if !empty(PKG_OPTIONS:Mblocklist)
+CONFIGURE_ARGS+=	--with-blocklist=yes
+.else
+CONFIGURE_ARGS+=	--with-blocklist=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mgeoip)
