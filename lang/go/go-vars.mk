@@ -1,4 +1,4 @@
-# $NetBSD: go-vars.mk,v 1.1 2019/12/09 09:59:31 jperkin Exp $
+# $NetBSD: go-vars.mk,v 1.2 2020/08/30 05:52:10 tnn Exp $
 #
 # Makefile fragment to be included by any package that uses go-package.mk.
 #
@@ -15,5 +15,6 @@
 # go uses its own special linker which does not at this time support CTF/SSP.
 #
 CTF_SUPPORTED=		no
+RELRO_SUPPORTED=	no
 SSP_SUPPORTED=		no
 STRIP_DEBUG_SUPPORTED=	no
