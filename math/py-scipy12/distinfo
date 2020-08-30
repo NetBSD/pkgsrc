@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2020/05/20 21:51:08 mef Exp $
-
-SHA1 (scipy-1.2.3.tar.gz) = 8f2fc8342acc9369a3479e1a40fb71abed3d534d
-RMD160 (scipy-1.2.3.tar.gz) = bbeff15b5f61d1f6e4ec57448f571e5427d0c477
-SHA512 (scipy-1.2.3.tar.gz) = d7739fa2f25689fc14ddf09477207c990b39b593a85f5c74687df1ffe097f6eee1bb2123aaa286189309f6d3b25cdd7757053d8b1008d1d6b3367a8e3a0a53b1
-Size (scipy-1.2.3.tar.gz) = 23335997 bytes
-SHA1 (patch-scipy_special___round.h) = bc05a935e6423ce8395450ad3b30e88826939422
