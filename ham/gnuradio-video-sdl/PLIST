@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2015/09/01 04:14:55 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/08/30 21:11:08 tnn Exp $
 include/gnuradio/swig/video_sdl_swig.i
 include/gnuradio/swig/video_sdl_swig_doc.i
 include/gnuradio/video_sdl/api.h
 include/gnuradio/video_sdl/sink_s.h
 include/gnuradio/video_sdl/sink_uc.h
+lib/cmake/gnuradio/gnuradio-video-sdlConfig.cmake
+lib/cmake/gnuradio/gnuradio-video-sdlTargets-release.cmake
+lib/cmake/gnuradio/gnuradio-video-sdlTargets.cmake
 lib/libgnuradio-video-sdl.so
+lib/libgnuradio-video-sdl.so.3.8.1
 lib/libgnuradio-video-sdl.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-video-sdl.pc
 ${PYSITELIB}/gnuradio/video_sdl/__init__.py
@@ -14,5 +18,5 @@ ${PYSITELIB}/gnuradio/video_sdl/_video_sdl_swig.so
 ${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.py
 ${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.pyc
 ${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.pyo
-share/gnuradio/grc/blocks/video_block_tree.xml
-share/gnuradio/grc/blocks/video_sdl_sink.xml
+share/gnuradio/grc/blocks/video.tree.yml
+share/gnuradio/grc/blocks/video_sdl_sink.block.yml
