@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4641 2020/08/30 08:24:57 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.4642 2020/08/30 08:41:49 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7013,7 +7013,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed ham/gnuradio-fcd [tnn 2020-08-18]
 	Removed ham/gnuradio-noaa [tnn 2020-08-18]
 	Removed ham/gnuradio-pager [tnn 2020-08-18]
-	Removed ham/gnuradio-wxgui [tnn 2020-08-18]
 	Updated textproc/markdown-mode to 2.4 [tnn 2020-08-18]
 	Updated graphics/gimp-fix-ca to 3.0.2 [tnn 2020-08-18]
 	Updated net/iperf3 to 3.9 [adam 2020-08-18]
@@ -7218,3 +7217,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/qwt6-qt5 to 6.1.5 [tnn 2020-08-30]
 	Updated meta-pkgs/pkg_developer to 1.2.2 [tnn 2020-08-30]
 	Added x11/py-qwt-qt5 version 1.02.00 [tnn 2020-08-30]
+	Removed ham/gnuradio-wxgui [tnn 2020-08-30]
