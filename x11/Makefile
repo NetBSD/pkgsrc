@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.902 2020/07/10 20:02:23 rhialto Exp $
+# $NetBSD: Makefile,v 1.903 2020/08/30 08:23:52 tnn Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -329,6 +329,7 @@ SUBDIR+=	py-qt4
 SUBDIR+=	py-qt5
 SUBDIR+=	py-qt5-qscintilla
 SUBDIR+=	py-qwt-qt4
+SUBDIR+=	py-qwt-qt5
 SUBDIR+=	py-sip
 SUBDIR+=	py-sip-qt4
 SUBDIR+=	py-sip-qt5
