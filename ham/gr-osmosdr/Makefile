@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/08/30 21:35:53 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2020/08/30 21:52:43 tnn Exp $
 
 DISTNAME=		gr-osmosdr-0.2.2
 CATEGORIES=		ham
@@ -40,8 +40,6 @@ REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 .include	"../../lang/python/application.mk"
 
 .include	"../../ham/rtl-sdr/buildlink3.mk"
-.include	"../../ham/libmirisdr/buildlink3.mk"
-.include	"../../ham/osmo-sdr/buildlink3.mk"
 .include	"../../ham/hackrf/buildlink3.mk"
 .include	"../../ham/soapy-sdr/buildlink3.mk"
 
