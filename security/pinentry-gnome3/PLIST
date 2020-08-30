@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/08/30 23:53:23 wiz Exp $
+bin/pinentry-gnome3
