@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2020/05/19 13:58:24 joerg Exp $
+# $NetBSD: options.mk,v 1.7 2020/08/30 20:43:46 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuradio
 PKG_SUPPORTED_OPTIONS=	ninja-build filter-design alsa
@@ -19,15 +19,15 @@ CMAKE_ARGS+=	-GNinja
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 do-build:
-	cd ${WRKSRC}/${BUILD_DIRS} && ${PKGSRC_SETENV} ${MAKE_ENV} ninja
+	(cd ${WRKSRC}/build; ninja)
 .else
 do-build:
-	cd ${WRKSRC}/${BUILD_DIRS} && ${BUILD_MAKE_CMD}
+	(cd ${WRKSRC}/build; ${BUILD_MAKE_CMD})
 .endif
 
 .if !empty(PKG_OPTIONS:Mfilter-design)
 # Running gr_filter_design asks for the package
-DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy12
+DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 .endif
 
 .if !empty(PKG_OPTIONS:Malsa)
