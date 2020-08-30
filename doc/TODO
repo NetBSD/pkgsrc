@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20040 2020/08/30 08:54:19 wiz Exp $
+$NetBSD: TODO,v 1.20041 2020/08/30 21:37:51 tnn Exp $
 
 Suggested new packages
 ======================
@@ -640,7 +640,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnuradio-3.8.1.0 [in wip] [can remove math/py-scipy12 after updating]
 	o gnustep-back-0.27.0
 	o gnustep-base-1.26.0
 	o gnustep-gui-0.24.1
