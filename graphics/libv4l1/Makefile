@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/29 22:18:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/30 05:41:22 tnn Exp $
 
 LIBV4L_VERS=	1.18.1
 DISTNAME=	v4l-utils-${LIBV4L_VERS}
@@ -18,10 +18,13 @@ FORTIFY_SUPPORTED=	no
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
-NEWHEADER!=	${GREP} V4L2_SEL_TGT_CROP /usr/include/sys/videoio.h || echo "no"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+NEWHEADER!=	${GREP} V4L2_SEL_TGT_CROP /usr/include/sys/videoio.h > /dev/null 2>&1 || echo "no"
+.endif
 
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && !exists(/usr/include/sys/videoio.h)
 PLIST.needs_videoio=	yes
