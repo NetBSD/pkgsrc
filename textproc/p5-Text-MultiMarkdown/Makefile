@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/08/31 19:55:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 18:12:02 wiz Exp $
 
 DISTNAME=	Text-MultiMarkdown-1.000035
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/
 

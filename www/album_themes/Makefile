@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2019/11/04 22:09:50 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/31 18:12:30 wiz Exp $
 #
 
 DISTNAME=	album_data
 PKGNAME=	album_themes-20081222
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://marginalhacks.com/bin/
 DIST_SUBDIR=	${PKGNAME_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 23:33:26 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/08/31 18:10:58 wiz Exp $
 
 PKGNAME=	p5-pkgsrc-Dewey-1.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	pkgtools perl5
 
 MAINTAINER=	wiz@NetBSD.org

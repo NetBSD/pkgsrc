@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/06/20 16:13:30 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/31 18:09:33 wiz Exp $
 
 DISTNAME=	uw-ttyp0-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	https://people.mpi-inf.mpg.de/~uwe/misc/uw-ttyp0/
 

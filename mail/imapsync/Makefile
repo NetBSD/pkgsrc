@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/08/31 18:09:56 wiz Exp $
 
 DISTNAME=	imapsync-1.607
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	https://releases.pagure.org/imapsync/
 EXTRACT_SUFX=	.tgz

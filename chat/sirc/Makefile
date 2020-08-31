@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2019/11/02 22:18:25 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2020/08/31 18:06:43 wiz Exp $
 
 DISTNAME=	sirc-2.211
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	chat
 MASTER_SITES=	http://www.iagora.com/~espel/sirc/
 DISTFILES=	${DEFAULT_DISTFILES} \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:19:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/31 18:07:41 wiz Exp $
 
 DISTNAME=	Clone-Choose-0.010
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/H/HE/HERMES/
 

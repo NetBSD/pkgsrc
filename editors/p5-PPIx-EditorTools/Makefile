@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/31 18:09:23 wiz Exp $
 
 DISTNAME=	PPIx-EditorTools-0.21
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Y/YA/YANICK/}
 

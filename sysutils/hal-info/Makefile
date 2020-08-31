@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2020/03/12 17:34:33 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/08/31 18:11:27 wiz Exp $
 
 DISTNAME=		hal-info-20091130
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 

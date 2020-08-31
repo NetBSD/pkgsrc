@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/31 18:10:58 wiz Exp $
 
 PKGNAME=	pkg_p5up2date-0.06
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

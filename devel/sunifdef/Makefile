@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/31 18:09:21 wiz Exp $
 #
 
 DISTNAME=	sunifdef-3.1.3
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 #MASTER_SITES=	http://www.strudl.org/public_ftp/sunifdef/nix/stable/
 

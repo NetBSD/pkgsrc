@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 10:15:53 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/31 18:08:01 wiz Exp $
 
 DISTNAME=	File-Flock-2014.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MU/MUIR/modules/
 

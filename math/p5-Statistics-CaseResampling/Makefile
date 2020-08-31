@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 13:21:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/31 18:10:18 wiz Exp $
 
 DISTNAME=	Statistics-CaseResampling-0.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Statistics/}
 

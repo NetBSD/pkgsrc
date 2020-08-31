@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 13:23:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/31 18:11:25 wiz Exp $
 
 COLLECTD_PACKAGE=	dbi
 
 COMMENT=		Statistics collection daemon - dbi plugin
-PKGREVISION=		2
+PKGREVISION=		3
 
 .include "../../sysutils/collectd/Makefile.common"
 

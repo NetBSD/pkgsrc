@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:22:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/31 18:10:58 wiz Exp $
 
 PKGNAME=	pkg_distinst-0.02
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

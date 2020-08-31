@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:35:34 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/31 18:12:18 wiz Exp $
 
 DISTNAME=	latexdiff.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	48926
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

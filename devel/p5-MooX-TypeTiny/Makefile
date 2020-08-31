@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/04/16 12:18:29 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/31 18:08:27 wiz Exp $
 
 DISTNAME=	MooX-TypeTiny-0.001004
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/H/HA/HAARG/
 

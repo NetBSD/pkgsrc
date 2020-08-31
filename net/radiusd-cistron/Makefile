@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2019/11/03 11:45:51 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2020/08/31 18:10:52 wiz Exp $
 
 DISTNAME=	radiusd-cistron-1.6.8
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.cistron.nl/pub/people/miquels/radius/
 

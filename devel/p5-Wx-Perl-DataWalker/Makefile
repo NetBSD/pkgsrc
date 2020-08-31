@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2020/08/17 20:18:29 leot Exp $
+# $NetBSD: Makefile,v 1.49 2020/08/31 18:09:14 wiz Exp $
 #
 
 DISTNAME=	Wx-Perl-DataWalker-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wx/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2019/11/28 12:09:58 mef Exp $
+# $NetBSD: Makefile,v 1.28 2020/08/31 18:13:09 wiz Exp $
 
 DISTNAME=	Starman-0.4015
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 
