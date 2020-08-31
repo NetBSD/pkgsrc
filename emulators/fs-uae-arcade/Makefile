@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/05/23 09:12:57 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/31 23:07:02 wiz Exp $
 
 DISTNAME=	fs-uae-arcade-3.0.5
 CATEGORIES=	emulators
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	fs-uae>=${PKGVERSION_NOREV}:../../emulators/fs-uae
 DEPENDS+=	${PYPKGPREFIX}-lhafile-[0-9]*:../../archivers/py-lhafile
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
 .include "../../mk/bsd.prefs.mk"
@@ -24,6 +23,7 @@ INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-arcade
 PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-arcade
@@ -49,4 +49,5 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

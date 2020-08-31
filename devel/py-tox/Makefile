@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/05/16 17:38:40 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/31 23:07:02 wiz Exp $
 
 DISTNAME=	tox-3.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.0:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.3.0<1.0:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.4.17:../../devel/py-py
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.0.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.9.4:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=1.11.2:../../devel/py-virtualenv
@@ -27,7 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=1.2.3:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.3.0:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.22.2:../../devel/py-test-xdist
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	test:test setuptools
+
 
 USE_LANGUAGES=	# none
 

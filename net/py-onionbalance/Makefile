@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/25 05:58:16 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/08/31 23:07:03 wiz Exp $
 
 DISTNAME=	OnionBalance-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,7 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.5:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-future>=0.14.0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-stem>=1.8:../../devel/py-stem
 DEPENDS+=	${PYPKGPREFIX}-yaml>=4.2:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
@@ -29,6 +28,7 @@ USE_LANGUAGES=	# none
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -36,4 +36,5 @@ post-install:
 	${MV} onionbalance-config onionbalance-config-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
