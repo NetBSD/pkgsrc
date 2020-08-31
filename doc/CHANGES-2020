@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4653 2020/08/31 08:45:53 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4654 2020/08/31 12:46:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7246,3 +7246,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/pinentry-gnome3 version 1.1.0 [wiz 2020-08-30]
 	Updated audio/fasttracker2 to 1.31 [fox 2020-08-31]
 	Updated archivers/brotli to 1.0.9 [wiz 2020-08-31]
+	Updated games/gemrb to 0.8.7 [nia 2020-08-31]
