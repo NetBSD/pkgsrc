@@ -1,0 +1,5 @@
+setuptools is a collection of enhancements to the Python distutils
+that allow you to more easily build and distribute Python packages,
+especially ones that have dependencies on other packages.
+
+This package contains the last version that supports Python 2.x.
