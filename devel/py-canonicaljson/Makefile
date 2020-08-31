@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/04/18 12:49:47 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 22:03:45 js Exp $
 
-DISTNAME=	canonicaljson-1.1.4
+DISTNAME=	canonicaljson-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/canonicaljson/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.6.5:../../converters/py-simplejson
+DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.14.0:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-frozendict>=1.0:../../devel/py-frozendict
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
