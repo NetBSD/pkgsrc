@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/08/31 17:18:43 ryoon Exp $
+
+SHA1 (libde265-1.0.6.tar.gz) = 4ff710b7b203c682bab20ed5fc9baf221ed6555a
+RMD160 (libde265-1.0.6.tar.gz) = 0b9d2858c3c3383efb153b3275b3f33295aeb4d1
+SHA512 (libde265-1.0.6.tar.gz) = a7681cf5796e34f2f0a7019b1990af62b6394fb5f5d267060c9c9f879551b297a9ee90ebfac5a51af118706e187f4939e4419a597a1afb427595da70feb9fbbb
+Size (libde265-1.0.6.tar.gz) = 837596 bytes
