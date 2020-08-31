@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2019/10/17 14:46:32 mef Exp $
+# $NetBSD: Makefile,v 1.39 2020/08/31 18:07:58 wiz Exp $
 
 DISTNAME=	ExtUtils-F77-1.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 

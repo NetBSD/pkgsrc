@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/05/31 16:05:54 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/31 18:06:53 wiz Exp $
 
+PKGREVISION= 1
 .include "../../cross/mingw-w64-x86_64-winpthreads/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/mingw-w64-v/mingw-w64-x86_64-winpthreads-/}

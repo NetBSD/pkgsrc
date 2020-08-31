@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2019/08/11 13:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/08/31 18:06:46 wiz Exp $
 
 DISTNAME=	doc2html
 PKGNAME=	doc2html-3.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	converters
 #MASTER_SITES=	http://www.htdig.org/files/contrib/parsers/
 

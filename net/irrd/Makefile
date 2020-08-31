@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2019/08/11 13:22:09 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/08/31 18:10:34 wiz Exp $
 
 DISTNAME=		irrd2.3.9
 PKGNAME=		irrd-2.3.9
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		net
 MASTER_SITES=		http://www.irrd.net/
 EXTRACT_SUFX=		.tgz

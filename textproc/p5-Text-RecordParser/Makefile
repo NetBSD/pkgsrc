@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2019/11/04 21:43:42 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/08/31 18:12:03 wiz Exp $
 #
 
 DISTNAME=	Text-RecordParser-1.6.5
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

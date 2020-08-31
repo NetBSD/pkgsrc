@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/05/13 19:58:32 fcambus Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/31 18:06:46 wiz Exp $
 #
 
 DISTNAME=	2vcard-0.6
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	https://www.netmeister.org/apps/
 

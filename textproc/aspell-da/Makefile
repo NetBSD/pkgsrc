@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:23:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/08/31 18:11:40 wiz Exp $
 
 DISTNAME=	aspell-da-1.7.42
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	http://da.speling.org/filer/
 EXTRACT_SUFX=	.tar.bz2

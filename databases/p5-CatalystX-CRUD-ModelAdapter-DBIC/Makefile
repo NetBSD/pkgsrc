@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:18:22 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/31 18:06:58 wiz Exp $
 
 DISTNAME=	CatalystX-CRUD-ModelAdapter-DBIC-0.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 

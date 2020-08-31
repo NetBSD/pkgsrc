@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/05/16 19:40:59 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/31 18:06:38 wiz Exp $
 
 DISTNAME=	canu-1.8
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	biology java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

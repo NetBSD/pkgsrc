@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/31 18:07:08 wiz Exp $
 
 DISTNAME=	Search-QueryParser-SQL-0.010
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Search/}
 
