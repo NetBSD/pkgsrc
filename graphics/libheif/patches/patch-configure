@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/08/31 17:24:12 ryoon Exp $
+
+* POSIX shell portability.
+
+--- configure.orig	2020-08-14 12:12:13.000000000 +0000
++++ configure
+@@ -17595,7 +17595,7 @@ if test "x$enable_tests" = "xyes"; then 
+     CFLAG_VISIBILITY=
+ 
+ fi
+- if test "x$HAVE_TESTS" == "x1"; then
++ if test "x$HAVE_TESTS" = "x1"; then
+   HAVE_TESTS_TRUE=
+   HAVE_TESTS_FALSE='#'
+ else
