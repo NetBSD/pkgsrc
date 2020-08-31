@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.41 2020/07/01 08:54:30 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.42 2020/08/31 23:05:33 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -27,6 +27,7 @@ _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
 _SUPPORTED_PACKAGES+=	more-itertools devel/py-more-itertools2 devel/py-more-itertools
 _SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
+_SUPPORTED_PACKAGES+=	setuptools devel/py-setuptools44 devel/py-setuptools
 _SUPPORTED_PACKAGES+=	sphinx textproc/py-sphinx1 textproc/py-sphinx
 _SUPPORTED_PACKAGES+=	test devel/py-test4 devel/py-test
 _SUPPORTED_PACKAGES+=	zipp archivers/py-zipp1 archivers/py-zipp
