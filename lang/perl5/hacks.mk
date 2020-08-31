@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.25 2019/11/03 19:04:05 rillig Exp $
+# $NetBSD: hacks.mk,v 1.26 2020/08/31 18:00:37 wiz Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -36,8 +36,8 @@ CFLAGS+=		-fno-tree-ter
 
 ### [Thu May 14 23:17:20 JST 2015 : ryoon]
 ### Force to use /usr/sfw/lib/amd64/libgcc_s.co.1 instead.
-.if !empty(MACHINE_PLATFORM:MSunOS-5.10-x86_64)
-.  if !empty(CC_VERSION:Mgcc-3.4.3)
+.if ${MACHINE_PLATFORM} == SunOS-5.10-x86_64
+.  if ${CC_VERSION} == gcc-3.4.3
 BUILDLINK_PASSTHRU_RPATHDIRS+=	/usr/sfw/lib/amd64
 LDFLAGS+=	${COMPILER_RPATH_FLAG}/usr/sfw/lib/amd64
 .  endif
