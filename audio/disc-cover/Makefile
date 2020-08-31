@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2019/08/11 13:17:52 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/08/31 18:06:32 wiz Exp $
 
 DISTNAME=	disc-cover-1.5.6
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	http://www.vanhemert.co.uk/files/
 

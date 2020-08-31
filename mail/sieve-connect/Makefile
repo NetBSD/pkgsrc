@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/08/11 13:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/31 18:10:09 wiz Exp $
 #
 
 DISTNAME=		sieve-connect-0.89
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		https://people.spodhuis.org/phil.pennock/software/
 EXTRACT_SUFX=		.tar.bz2

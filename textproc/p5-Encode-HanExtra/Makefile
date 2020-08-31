@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/11/04 21:43:40 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/08/31 18:11:46 wiz Exp $
 
 DISTNAME=	Encode-HanExtra-0.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Encode/}
 

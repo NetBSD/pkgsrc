@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/04/26 13:59:43 mef Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/31 18:08:52 wiz Exp $
 
 DISTNAME=	Struct-Dumb-0.12
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PE/PEVANS/
 

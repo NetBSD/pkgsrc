@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/05/04 04:45:49 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 18:07:50 wiz Exp $
 
 DISTNAME=	Devel-CallChecker-0.008
+PKGREVISION=	1
 CATEGORIES=	devel
 PKGNAME=	p5-${DISTNAME}
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/

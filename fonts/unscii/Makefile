@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/04/28 11:46:29 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/31 18:09:33 wiz Exp $
 
 DISTNAME=	unscii-1.1-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://pelulamu.net/unscii/
 

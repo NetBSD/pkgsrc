@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/08/11 13:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/31 18:11:36 wiz Exp $
 
 DISTNAME=	trash-0.9.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ali-rantakari/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

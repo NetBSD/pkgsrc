@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2020/03/20 11:58:23 nia Exp $
+# $NetBSD: Makefile,v 1.29 2020/08/31 18:11:35 wiz Exp $
 
 DISTNAME=	sarah-0.9.1b
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sarah/}
 

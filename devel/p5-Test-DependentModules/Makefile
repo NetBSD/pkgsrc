@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:20:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:00 wiz Exp $
 
 DISTNAME=	Test-DependentModules-0.27
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
