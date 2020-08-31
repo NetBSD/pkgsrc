@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/05/09 17:53:53 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/31 18:06:54 wiz Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-pdp11-aout-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz

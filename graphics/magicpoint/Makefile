@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2020/08/17 20:19:05 leot Exp $
+# $NetBSD: Makefile,v 1.106 2020/08/31 18:09:41 wiz Exp $
 
 DISTNAME=		magicpoint-1.13a
-PKGREVISION=		33
+PKGREVISION=		34
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/
 

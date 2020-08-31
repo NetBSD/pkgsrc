@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/08/17 20:18:34 leot Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/31 18:09:23 wiz Exp $
 
 DISTNAME=	l3afpad-0.8.18.1.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stevenhoneyman/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

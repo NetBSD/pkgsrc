@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2019/11/16 10:36:06 mef Exp $
+# $NetBSD: Makefile,v 1.26 2020/08/31 18:11:30 wiz Exp $
 
 DISTNAME=	File-Copy-Recursive-0.45
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-module/File/}
 

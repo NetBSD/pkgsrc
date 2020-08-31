@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2019/12/01 04:21:56 kim Exp $
+# $NetBSD: Makefile,v 1.23 2020/08/31 18:11:34 wiz Exp $
 #
 
 DISTNAME=		pflogsumm-1.1.5
 PKGREVISION=		#
+PKGREVISION=		1
 CATEGORIES=		sysutils mail
 MASTER_SITES=		https://jimsun.linxnet.com/downloads/
 

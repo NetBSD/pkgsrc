@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:19:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/31 18:08:16 wiz Exp $
 #
 
 DISTNAME=	List-Pairwise-1.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=List/}
 

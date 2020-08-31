@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2020/06/21 01:36:03 mef Exp $
+# $NetBSD: Makefile,v 1.16 2020/08/31 18:09:24 wiz Exp $
 #
 
 VERSION=	0.3
 PKGNAME=	p5-Padre-Plugin-Debugger-${VERSION}
 GITHUB_PROJECT=	${PKGBASE:S/p5-//:tl}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	editors devel perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pmakholm/}
 GITHUB_TAG=	v${VERSION}

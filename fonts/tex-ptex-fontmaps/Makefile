@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/05/10 03:56:41 markd Exp $
+# $NetBSD: Makefile,v 1.10 2020/08/31 18:09:32 wiz Exp $
 
 DISTNAME=	ptex-fontmaps
 PKGNAME=	tex-${DISTNAME}-20200217.0
+PKGREVISION=	1
 TEXLIVE_REV=	54473
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

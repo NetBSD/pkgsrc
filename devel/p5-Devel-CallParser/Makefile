@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/07/27 02:17:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/31 18:07:50 wiz Exp $
 
 DISTNAME=	Devel-CallParser-0.002
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/
 

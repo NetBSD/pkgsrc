@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/04/11 11:58:08 mef Exp $
+# $NetBSD: Makefile,v 1.28 2020/08/31 18:07:40 wiz Exp $
 
 DISTNAME=	Class-Trigger-0.15
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
