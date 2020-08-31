@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/08/09 00:00:56 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2020/08/31 23:07:01 wiz Exp $
 
 DISTNAME=	ipython-7.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.1:../../devel/py-prompt_toolkit2
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2:../../devel/py-traitlets
 .include "../../mk/bsd.prefs.mk"
@@ -28,6 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
@@ -37,4 +37,5 @@ post-install:
 	${MV} ${PKGMANDIR}/man1/ipython.1 ${PKGMANDIR}/man1/ipython-${PYVERSSUFFIX}.1 || ${TRUE}
 
 .include "../../lang/python/distutils.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

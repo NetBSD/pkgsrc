@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/12 09:10:31 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 23:07:06 wiz Exp $
 
 DISTNAME=	manuel-1.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/benji-york/manuel
 COMMENT=	Build tested documentation
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
+
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
