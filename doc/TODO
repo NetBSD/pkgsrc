@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20044 2020/08/31 16:32:22 wiz Exp $
+$NetBSD: TODO,v 1.20045 2020/08/31 16:40:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -982,7 +982,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qbzr-0.23.2
 	o qdirstat-1.7
 	o qlandkartegt-1.8.1 [pkg/53376]
-	o qrencode-4.1.0
 	o qt4-creator-3.4.0
 	o racket-7.1
 	o radiance-4R1
