@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/08/18 17:57:51 leot Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/31 12:46:21 nia Exp $
 
-DISTNAME=	gemrb-0.8.6
-PKGREVISION=	2
+DISTNAME=	gemrb-0.8.7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gemrb/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gemrb.org/
@@ -14,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+GCC_REQD+=	4.7 # -std=gnu++11
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gemrb
 
