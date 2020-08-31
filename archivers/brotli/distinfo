@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2019/04/19 17:56:52 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/08/31 08:45:44 wiz Exp $
 
-SHA1 (brotli-1.0.7.tar.gz) = ee64a380152aa20fbc1098fe3799104884c570c1
-RMD160 (brotli-1.0.7.tar.gz) = f46d51bb06fa08ed80d9d2d6bc72cbd243b0653e
-SHA512 (brotli-1.0.7.tar.gz) = a82362aa36d2f2094bca0b2808d9de0d57291fb3a4c29d7c0ca0a37e73087ec5ac4df299c8c363e61106fccf2fe7f58b5cf76eb97729e2696058ef43b1d3930a
-Size (brotli-1.0.7.tar.gz) = 23827908 bytes
-SHA1 (patch-CMakeLists.txt) = f5d1d5f4471ce820cfb9c574be61fae4693de4d6
+SHA1 (brotli-1.0.9.tar.gz) = ddfefdf2593b3f03eec221a7f4ceaa710e5a2e6b
+RMD160 (brotli-1.0.9.tar.gz) = aef7f7c6f4f1cea3c8dd84563598de17a6118c0e
+SHA512 (brotli-1.0.9.tar.gz) = b8e2df955e8796ac1f022eb4ebad29532cb7e3aa6a4b6aee91dbd2c7d637eee84d9a144d3e878895bb5e62800875c2c01c8f737a1261020c54feacf9f676b5f5
+Size (brotli-1.0.9.tar.gz) = 486984 bytes
+SHA1 (patch-CMakeLists.txt) = ab1b60d2ae23e7976339c127dab7f5296c8a791b
