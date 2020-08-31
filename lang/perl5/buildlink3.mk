@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.64 2019/08/11 13:02:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.65 2020/08/31 18:00:37 wiz Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -14,16 +14,17 @@ BUILDLINK_API_DEPENDS.perl+=	perl>=${_perl5_ver_}
 # with the next incompatible version of perl:
 BUILDLINK_API_DEPENDS.perl+=	perl<5.32.0
 
+BUILDLINK_ABI_DEPENDS.perl?=	perl>=5.32.0nb1
 BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 
 _TOOLS_USE_PKGSRC.perl=	yes
 
-PERL5=		${LOCALBASE}/bin/perl
+PERL5=		${PREFIX}/bin/perl
 
 pkgbase := perl
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.perl:Mthreads)
+.if ${PKG_BUILD_OPTIONS.perl:Mthreads}
 .  include "../../mk/pthread.buildlink3.mk"
 .endif
 
