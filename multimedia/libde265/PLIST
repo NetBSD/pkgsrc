@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2020/08/31 17:18:43 ryoon Exp $
+bin/acceleration_speed
+bin/bjoentegaard
+bin/block-rate-estim
+bin/dec265
+bin/enc265
+bin/gen-enc-table
+bin/hdrcopy
+bin/rd-curves
+bin/tests
+bin/yuv-distortion
+include/libde265/de265-version.h
+include/libde265/de265.h
+lib/libde265.la
+lib/pkgconfig/libde265.pc
