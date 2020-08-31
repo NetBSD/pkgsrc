@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/08/30 21:29:10 nia Exp $
+# $NetBSD: Makefile,v 1.13 2020/08/31 09:58:10 nia Exp $
 
 DISTNAME=	rust-1.46.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -20,14 +20,7 @@ ONLY_FOR_PLATFORM+=	Linux-*-aarch64
 ONLY_FOR_PLATFORM+=	Linux-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-x86_64
 
-CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-ar
-CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-nm
-CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-objcopy
-CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-objdump
-CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-profdata
-CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-readobj
-CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-size
-CHECK_RELRO_SKIP+=	lib/rustlib/x86_64-unknown-netbsd/bin/llvm-strip
+CHECK_RELRO_SKIP+=	lib/rustlib/*/bin/*
 
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
