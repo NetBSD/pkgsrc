@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4659 2020/08/31 16:40:02 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4660 2020/08/31 17:19:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7252,3 +7252,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/libopenmpt to 0.5.2 [fcambus 2020-08-31]
 	Updated security/py-google-auth to 1.21.0 [wiz 2020-08-31]
 	Updated converters/qrencode to 4.1.0 [wiz 2020-08-31]
+	Added multimedia/libde265 version 1.0.6 [ryoon 2020-08-31]
