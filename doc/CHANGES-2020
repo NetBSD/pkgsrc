@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4654 2020/08/31 12:46:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4655 2020/08/31 13:08:00 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7247,3 +7247,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.31 [fox 2020-08-31]
 	Updated archivers/brotli to 1.0.9 [wiz 2020-08-31]
 	Updated games/gemrb to 0.8.7 [nia 2020-08-31]
+	Updated mail/postfix to 3.5.7 [otis 2020-08-31]
