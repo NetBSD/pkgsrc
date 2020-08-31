@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.272 2020/08/24 08:12:45 wiz Exp $
+# $NetBSD: Makefile,v 1.273 2020/08/31 17:29:24 ryoon Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
 
+PKGREVISION=	1
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	Package for display and interactive manipulation of images
 
@@ -92,6 +93,7 @@ CTF_FILES_SKIP+=	lib/libMagickWand-7.Q16HDRI.so.*
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
