@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2020/08/30 13:36:01 js Exp $
+# $NetBSD: Makefile,v 1.263 2020/08/31 18:00:37 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -10,79 +10,72 @@ CONFLICTS+=	perl-base-[0-9]* perl-thread-[0-9]*
 # CONFLICTS packages older than CORE modules version.
 # based on 'corelist -v ${PKGVERSION}'
 # update based on 'corelist -diff ${PREV_PKGVERSION} ${PKGVERSION}'
-CONFLICTS+=	p5-Archive-Tar<1.96
-CONFLICTS+=	p5-Attribute-Handlers<0.96
+CONFLICTS+=	p5-Archive-Tar<2.36
+CONFLICTS+=	p5-Attribute-Handlers<1.01
 CONFLICTS+=	p5-AutoLoader<5.74
-CONFLICTS+=	p5-CGI<3.65
-#		older for www/p5-CGI-Fast
-CONFLICTS+=	p5-CPAN<2.0500			# 2.05
-CONFLICTS+=	p5-CPAN-Meta<2.140640
-CONFLICTS+=	p5-CPAN-Meta-Requirements<2.125
-CONFLICTS+=	p5-CPAN-Meta-YAML<0.012
-CONFLICTS+=	p5-Compress-Raw-Bzip2<2.064
-CONFLICTS+=	p5-Compress-Raw-Zlib<2.064
-CONFLICTS+=	p5-DB_File<1.831
-CONFLICTS+=	p5-Devel-PPPort<3.21
-CONFLICTS+=	p5-Digest<1.17
-CONFLICTS+=	p5-Digest-MD5<2.53
-CONFLICTS+=	p5-Digest-SHA<5.88
-CONFLICTS+=	p5-Encode<2.60
-CONFLICTS+=	p5-ExtUtils-CBuilder<0.28.02.16	# 0.280216
-CONFLICTS+=	p5-ExtUtils-Command<1.18
-CONFLICTS+=	p5-ExtUtils-Embed<1.32
-CONFLICTS+=	p5-ExtUtils-Install<1.67
-CONFLICTS+=	p5-ExtUtils-MakeMaker<6.98
-CONFLICTS+=	p5-ExtUtils-Manifest<1.63
-CONFLICTS+=	p5-ExtUtils-ParseXS<3.24
-CONFLICTS+=	p5-File-Path<2.09
-CONFLICTS+=	p5-File-Temp<0.23.04	# 0.2304
-CONFLICTS+=	p5-Getopt-Long<2.42
-CONFLICTS+=	p5-HTTP-Tiny<0.043
-CONFLICTS+=	p5-I18N-LangTags<0.40
-CONFLICTS+=	p5-IO<1.3100			# 1.31
-CONFLICTS+=	p5-IO-Compress<2.064		# IO::Compress::*, Compress::*
+CONFLICTS+=	p5-CPAN<2.2700			# 2.27
+CONFLICTS+=	p5-CPAN-Meta<2.150010
+CONFLICTS+=	p5-CPAN-Meta-Requirements<2.140
+CONFLICTS+=	p5-CPAN-Meta-YAML<0.018
+CONFLICTS+=	p5-Compress-Raw-Bzip2<2.093
+CONFLICTS+=	p5-Compress-Raw-Zlib<2.093
+CONFLICTS+=	p5-DB_File<1.853
+CONFLICTS+=	p5-Devel-PPPort<3.57
+CONFLICTS+=	p5-Digest<1.17.01
+CONFLICTS+=	p5-Digest-MD5<2.55.01
+CONFLICTS+=	p5-Digest-SHA<6.02
+CONFLICTS+=	p5-Encode<3.06
+CONFLICTS+=	p5-ExtUtils-CBuilder<0.28.02.34	# 0.280234
+CONFLICTS+=	p5-ExtUtils-Command<7.44
+CONFLICTS+=	p5-ExtUtils-Embed<1.35
+CONFLICTS+=	p5-ExtUtils-Install<2.14
+CONFLICTS+=	p5-ExtUtils-MakeMaker<7.44
+CONFLICTS+=	p5-ExtUtils-Manifest<1.72
+CONFLICTS+=	p5-ExtUtils-ParseXS<3.40
+CONFLICTS+=	p5-File-Path<2.16
+CONFLICTS+=	p5-File-Temp<0.23.09	# 0.2309
+CONFLICTS+=	p5-Getopt-Long<2.51
+CONFLICTS+=	p5-HTTP-Tiny<0.076
+CONFLICTS+=	p5-I18N-LangTags<0.44
+CONFLICTS+=	p5-IO<1.4300			# 1.43
+CONFLICTS+=	p5-IO-Compress<2.093		# IO::Compress::*, Compress::*
 CONFLICTS+=	p5-IO-Zlib<1.10
-CONFLICTS+=	p5-IPC-Cmd<0.92
-CONFLICTS+=	p5-IPC-SysV<2.04
-CONFLICTS+=	p5-JSON-PP<2.27203
-CONFLICTS+=	p5-Locale-Codes<3.30
-CONFLICTS+=	p5-Locale-Maketext<1.25
-CONFLICTS+=	p5-Locale-Maketext-Simple<0.21
-CONFLICTS+=	p5-MIME-Base64<3.14
-CONFLICTS+=	p5-Math-Complex<1.59
-CONFLICTS+=	p5-Memoize<1.03
-CONFLICTS+=	p5-Module-Build<0.42050		# 0.4205
-CONFLICTS+=	p5-Module-CoreList<3.10
-CONFLICTS+=	p5-Module-Load<0.32
-CONFLICTS+=	p5-NEXT<0.65
-CONFLICTS+=	p5-Package-Constants<0.04
-CONFLICTS+=	p5-Parse-CPAN-Meta<1.4414
-CONFLICTS+=	p5-Pod-Escapes<1.06
-CONFLICTS+=	p5-Pod-Parser<1.62
-CONFLICTS+=	p5-Pod-Simple<3.28
-CONFLICTS+=	p5-Pod-Usage<1.63
-CONFLICTS+=	p5-Storable<2.49
-CONFLICTS+=	p5-Sys-Syslog<0.33
-CONFLICTS+=	p5-Term-ANSIColor<4.02
-CONFLICTS+=	p5-Term-Cap<1.15
-CONFLICTS+=	p5-Term-ReadLine<1.14
+CONFLICTS+=	p5-IPC-Cmd<1.04
+CONFLICTS+=	p5-IPC-SysV<2.07
+CONFLICTS+=	p5-JSON-PP<4.04
+CONFLICTS+=	p5-Locale-Maketext<1.29
+CONFLICTS+=	p5-Locale-Maketext-Simple<0.21.01
+CONFLICTS+=	p5-MIME-Base64<3.15
+CONFLICTS+=	p5-Math-Complex<1.59.01
+CONFLICTS+=	p5-Memoize<1.03.01
+CONFLICTS+=	p5-Module-CoreList<5.202006200
+CONFLICTS+=	p5-Module-Load<0.34
+CONFLICTS+=	p5-NEXT<0.67.01
+CONFLICTS+=	p5-Parse-CPAN-Meta<2.150010
+CONFLICTS+=	p5-Pod-Escapes<1.07
+CONFLICTS+=	p5-Pod-Simple<3.40
+CONFLICTS+=	p5-Pod-Usage<1.69
+CONFLICTS+=	p5-Storable<3.21
+CONFLICTS+=	p5-Sys-Syslog<0.36
+CONFLICTS+=	p5-Term-ANSIColor<5.01
+CONFLICTS+=	p5-Term-Cap<1.17
+CONFLICTS+=	p5-Term-ReadLine<1.17
 #			older for sysutils/shelldap
-CONFLICTS+=	p5-Test-Harness<3.30
-CONFLICTS+=	p5-Test-Simple<1.001002
-CONFLICTS+=	p5-Text-Tabs+Wrap<2013.0523	# Text::Tabs + Text::Wrap
-CONFLICTS+=	p5-Tie-File<1.00
+CONFLICTS+=	p5-Test-Harness<3.42
+CONFLICTS+=	p5-Test-Simple<1.302175
+CONFLICTS+=	p5-Tie-File<1.06
 CONFLICTS+=	p5-Tie-RefHash<1.39
-CONFLICTS+=	p5-Time-HiRes<1.9726
-CONFLICTS+=	p5-Time-Local<1.23.00		# 1.2300
-CONFLICTS+=	p5-Time-Piece<1.27
-CONFLICTS+=	p5-Unicode-Collate<1.04
-CONFLICTS+=	p5-Unicode-Normalize<1.17
-CONFLICTS+=	p5-XSLoader<0.16
-CONFLICTS+=	p5-autodie<2.23
-CONFLICTS+=	p5-constant<1.31
-CONFLICTS+=	p5-experimental<0.007
-CONFLICTS+=	p5-parent<0.228
-CONFLICTS+=	p5-version<0.9908
+CONFLICTS+=	p5-Time-HiRes<1.9764
+CONFLICTS+=	p5-Time-Local<1.28
+CONFLICTS+=	p5-Time-Piece<1.34.01
+CONFLICTS+=	p5-Unicode-Collate<1.27
+CONFLICTS+=	p5-Unicode-Normalize<1.27
+CONFLICTS+=	p5-XSLoader<0.30
+CONFLICTS+=	p5-autodie<2.32
+CONFLICTS+=	p5-constant<1.33
+CONFLICTS+=	p5-experimental<0.020
+CONFLICTS+=	p5-parent<0.238
+CONFLICTS+=	p5-version<0.9924
 
 SUPERSEDES+=	p5-Tie-File<=0.99
 SUPERSEDES+=	p5-Memoize<=1.03
@@ -186,7 +179,7 @@ CONFIGURE_ARGS+=	-Duseshrplib
 USE_TOOLS+=		hostname ln rm sed test
 SUBST_VARS.policysh+=	TOOLS_HOSTNAME_CMD
 SUBST_VARS.policysh+=	TOOLS_LN
-TOOLS_ALIASES.sed+=	${TOOLS_SED:T}
+TOOLS_ALIASES.sed=	${TOOLS_SED:T}
 SUBST_VARS.policysh+=	TOOLS_SED
 SUBST_VARS.policysh+=	TOOLS_SH
 SUBST_VARS.policysh+=	TOOLS_TEST
@@ -297,8 +290,8 @@ PERL5_PACKLIST_DESTDIR=	no
 FILES_SUBST+=		PERL5_COMMENT=\#
 FILES_SUBST+=		PERL5_PACKLIST=
 
+.PHONY: perl5-post-install
 post-install: perl5-post-install
-
 perl5-post-install:
 	${RUN}if ${TEST} -x ${DESTDIR}${PREFIX}/bin/a2p; then		\
 		strip ${DESTDIR}${PREFIX}/bin/a2p;			\
