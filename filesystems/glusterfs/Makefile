@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2020/07/27 16:06:08 manu Exp $
+# $NetBSD: Makefile,v 1.101 2020/08/31 23:55:38 gdt Exp $
 
 DISTNAME=	glusterfs-8.0
 PKGREVISION=	1
@@ -81,19 +81,13 @@ SUBST_STAGE.mtab=	post-build
 SUBST_FILES.mtab=	doc/mount.glusterfs.8
 SUBST_FILES.mtab=	libglusterfs/src/compat.h
 SUBST_FILES.mtab=	xlators/mount/fuse/utils/mount.glusterfs.in
-SUBST_SED.mtab=		-e "s,/etc/mtab,/proc/mounts,g"
+SUBST_SED.mtab=		-e "s,mtab,/proc/mounts,g"
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	pre-build
 SUBST_FILES.etc+=	libglusterfs/src/logging.c
-SUBST_FILES.etc+=	extras/ocf/volume
 SUBST_FILES.etc+=	doc/glusterfsd.8
 SUBST_SED.etc=		-e "s,/etc/gluster,${PREFIX}/etc/gluster,g"
-
-SUBST_CLASSES+=		vol
-SUBST_STAGE.vol=	post-build
-SUBST_FILES.vol=	extras/Makefile
-SUBST_SED.vol=		-e "/vol_DATA/s/glusterd.vol/glusterd.vol.sample/g"
 
 #EGDIR=			${PREFIX}/etc/glusterfs
 #CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
