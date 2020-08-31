@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/31 14:34:29 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/31 23:07:04 wiz Exp $
 
 DISTNAME=	speedtest-cli-2.1.2
 CATEGORIES=	net
@@ -11,9 +11,10 @@ COMMENT=	Command line client for use with speedtest.net
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 REPLACE_PYTHON=	*.py
+
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
@@ -23,4 +24,5 @@ post-install:
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/07/06 22:56:03 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/31 23:07:01 wiz Exp $
 
 DISTNAME=	logilab-common-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,9 @@ HOMEPAGE=	https://www.logilab.org/project/logilab-common
 COMMENT=	Useful miscellaneous modules used by Logilab projects
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.4.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.0:../../lang/py-six
+
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -30,4 +31,5 @@ post-install:
 	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/logilab-pytest-${PYVERSSUFFIX}.1
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/08/17 20:20:28 leot Exp $
+# $NetBSD: Makefile,v 1.19 2020/08/31 23:07:07 wiz Exp $
 
 DISTNAME=	kitty-0.16.0
 PKGREVISION=	3
@@ -24,7 +24,7 @@ BUILDLINK_TRANSFORM+=	rm:-flto
 # comes with ncurses.
 USE_NCURSES=	yes
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools:tool
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-build
@@ -35,7 +35,7 @@ SUBST_SED.python+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},g"
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
+PYTHON_VERSIONED_DEPENDENCIES+=	sphinx:tool
 
 do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package
@@ -75,4 +75,5 @@ do-install:
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

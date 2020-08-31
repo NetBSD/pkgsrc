@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/07/10 10:24:23 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/08/31 23:07:06 wiz Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -12,8 +12,9 @@ DEPENDS+=	${PYPKGPREFIX}-acme>=1.4.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-certbot>=1.4.0:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=1.5.5:../../devel/py-pyparsing
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 PKG_SYSCONFVAR=		nginx
 
@@ -24,4 +25,5 @@ SUBST_FILES.paths=	certbot_nginx/_internal/constants.py
 SUBST_VARS.paths=	PKG_SYSCONFDIR
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

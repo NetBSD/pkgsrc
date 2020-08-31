@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/05/21 08:26:21 adam Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/31 23:07:06 wiz Exp $
 
 DISTNAME=	Markdown-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,8 +10,9 @@ HOMEPAGE=	https://Python-Markdown.github.io/
 COMMENT=	XHTML generator using a simple markup
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=36:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 USE_LANGUAGES=	# none
 
@@ -20,4 +21,5 @@ post-install:
 	${MV} markdown_py markdown_py${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
