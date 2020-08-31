@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2020/05/06 14:34:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.64 2020/08/31 20:05:00 ryoon Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -410,6 +410,8 @@ lib/seamonkey/chrome/comm/content/communicator/blockedSite.xhtml
 lib/seamonkey/chrome/comm/content/communicator/bookmarks/bookmarksPanel.js
 lib/seamonkey/chrome/comm/content/communicator/bookmarks/bookmarksPanel.xul
 lib/seamonkey/chrome/comm/content/communicator/bookmarks/sidebarUtils.js
+lib/seamonkey/chrome/comm/content/communicator/buildconfig.css
+lib/seamonkey/chrome/comm/content/communicator/buildconfig.html
 lib/seamonkey/chrome/comm/content/communicator/certError.css
 lib/seamonkey/chrome/comm/content/communicator/certError.js
 lib/seamonkey/chrome/comm/content/communicator/certError.xhtml
@@ -677,7 +679,6 @@ lib/seamonkey/chrome/comm/content/editor/editorMailOverlay.xul
 lib/seamonkey/chrome/comm/content/editor/editorNavigatorOverlay.xul
 lib/seamonkey/chrome/comm/content/editor/editorOverlay.xul
 lib/seamonkey/chrome/comm/content/editor/editorPrefsOverlay.xul
-lib/seamonkey/chrome/comm/content/editor/editorSmileyOverlay.xul
 lib/seamonkey/chrome/comm/content/editor/editorTasksOverlay.xul
 lib/seamonkey/chrome/comm/content/editor/editorUtilities.js
 lib/seamonkey/chrome/comm/content/editor/images/bringtofront-disabled.gif
@@ -784,7 +785,6 @@ lib/seamonkey/chrome/comm/content/editor/images/tag-xmp.gif
 lib/seamonkey/chrome/comm/content/editor/pref-composer.xul
 lib/seamonkey/chrome/comm/content/editor/pref-editing.js
 lib/seamonkey/chrome/comm/content/editor/pref-editing.xul
-lib/seamonkey/chrome/comm/content/editor/pref-toolbars.xul
 lib/seamonkey/chrome/comm/content/editor/publishprefs.js
 lib/seamonkey/chrome/comm/content/navigator/browser-places.js
 lib/seamonkey/chrome/comm/content/navigator/content.js
@@ -1593,8 +1593,6 @@ lib/seamonkey/chrome/devtools/modules/devtools/client/webide/modules/config-view
 lib/seamonkey/chrome/devtools/modules/devtools/client/webide/modules/project-list.js
 lib/seamonkey/chrome/devtools/modules/devtools/client/webide/modules/runtime-list.js
 lib/seamonkey/chrome/devtools/modules/devtools/client/webide/modules/runtimes.js
-lib/seamonkey/chrome/devtools/modules/devtools/client/webide/modules/simulator-process.js
-lib/seamonkey/chrome/devtools/modules/devtools/client/webide/modules/simulators.js
 lib/seamonkey/chrome/devtools/modules/devtools/client/webide/modules/tab-store.js
 lib/seamonkey/chrome/devtools/modules/devtools/client/webide/modules/utils.js
 lib/seamonkey/chrome/devtools/modules/devtools/server/actors/actor-registry.js
@@ -1614,7 +1612,6 @@ lib/seamonkey/chrome/devtools/modules/devtools/server/actors/device.js
 lib/seamonkey/chrome/devtools/modules/devtools/server/actors/emulation.js
 lib/seamonkey/chrome/devtools/modules/devtools/server/actors/environment.js
 lib/seamonkey/chrome/devtools/modules/devtools/server/actors/errordocs.js
-lib/seamonkey/chrome/devtools/modules/devtools/server/actors/eventlooplag.js
 lib/seamonkey/chrome/devtools/modules/devtools/server/actors/frame.js
 lib/seamonkey/chrome/devtools/modules/devtools/server/actors/framerate.js
 lib/seamonkey/chrome/devtools/modules/devtools/server/actors/gcli.js
@@ -1734,7 +1731,6 @@ lib/seamonkey/chrome/devtools/modules/devtools/shared/fronts/css-properties.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/fronts/csscoverage.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/fronts/device.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/fronts/emulation.js
-lib/seamonkey/chrome/devtools/modules/devtools/shared/fronts/eventlooplag.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/fronts/framerate.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/fronts/gcli.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/fronts/highlighters.js
@@ -1893,7 +1889,6 @@ lib/seamonkey/chrome/devtools/modules/devtools/shared/specs/csscoverage.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/specs/device.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/specs/emulation.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/specs/environment.js
-lib/seamonkey/chrome/devtools/modules/devtools/shared/specs/eventlooplag.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/specs/frame.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/specs/framerate.js
 lib/seamonkey/chrome/devtools/modules/devtools/shared/specs/gcli.js
@@ -2202,6 +2197,7 @@ lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/help_print.gif
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/image.gif
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/link.gif
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/locationbar.png
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/locationbar_search.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/mail_flag.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/mail_flag_column.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/mail_junk_column.png
@@ -2218,8 +2214,7 @@ lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/offline.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/online.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/personalbar.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/reload.gif
-lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/search.png
-lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/search_personal_toolbar.gif
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/search_navigation_toolbar.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/sidebar.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/tabbed_browsing_bar.png
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/images/table.gif
@@ -2320,9 +2315,19 @@ lib/seamonkey/chrome/en-US/locale/en-US/communicator/search/engineManager.proper
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/search/search-panel.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/search/search.properties
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/search/searchbar.dtd
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/amazon.xml
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/duckduckgo-en-US.xml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/duckduckgo.xml
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/ebay.xml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/google.xml
-lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/list.txt
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/amazon.ico
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/duckduckgo.ico
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/ebay.ico
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/google.ico
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/startpage.ico
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/wikipedia.ico
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/yahoo.ico
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/list.json
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/wikipedia.xml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/yahoo.xml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/setDesktopBackground.dtd
@@ -2401,7 +2406,6 @@ lib/seamonkey/chrome/en-US/locale/en-US/devtools/shared/gcli.properties
 lib/seamonkey/chrome/en-US/locale/en-US/devtools/shared/gclicommands.properties
 lib/seamonkey/chrome/en-US/locale/en-US/devtools/shared/shared.properties
 lib/seamonkey/chrome/en-US/locale/en-US/devtools/shared/styleinspector.properties
-lib/seamonkey/chrome/en-US/locale/en-US/editor-region/region.properties
 lib/seamonkey/chrome/en-US/locale/en-US/editor/EdAdvancedEdit.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/editor/EdColorPicker.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/editor/EdConvertToTable.dtd
@@ -2442,7 +2446,6 @@ lib/seamonkey/chrome/en-US/locale/en-US/editor/editorPrefsOverlay.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/editor/editorSmileyOverlay.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/editor/pref-composer.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/editor/pref-editing.dtd
-lib/seamonkey/chrome/en-US/locale/en-US/editor/pref-toolbars.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global-platform/mac/accessible.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global-platform/mac/intl.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global-platform/mac/platformKeys.properties
@@ -3107,8 +3110,10 @@ lib/seamonkey/chrome/toolkit/content/extensions/ext-protocolHandlers.js
 lib/seamonkey/chrome/toolkit/content/extensions/ext-proxy.js
 lib/seamonkey/chrome/toolkit/content/extensions/ext-runtime.js
 lib/seamonkey/chrome/toolkit/content/extensions/ext-storage.js
+lib/seamonkey/chrome/toolkit/content/extensions/ext-tabs-base.js
 lib/seamonkey/chrome/toolkit/content/extensions/ext-theme.js
 lib/seamonkey/chrome/toolkit/content/extensions/ext-toolkit.js
+lib/seamonkey/chrome/toolkit/content/extensions/ext-toolkit.json
 lib/seamonkey/chrome/toolkit/content/extensions/ext-topSites.js
 lib/seamonkey/chrome/toolkit/content/extensions/ext-webNavigation.js
 lib/seamonkey/chrome/toolkit/content/extensions/ext-webRequest.js
@@ -3642,8 +3647,6 @@ lib/seamonkey/chrome/webide/content/runtime-listing.xhtml
 lib/seamonkey/chrome/webide/content/runtime-panel.js
 lib/seamonkey/chrome/webide/content/runtimedetails.js
 lib/seamonkey/chrome/webide/content/runtimedetails.xhtml
-lib/seamonkey/chrome/webide/content/simulator.js
-lib/seamonkey/chrome/webide/content/simulator.xhtml
 lib/seamonkey/chrome/webide/content/webide.js
 lib/seamonkey/chrome/webide/content/webide.xul
 lib/seamonkey/chrome/webide/content/wifi-auth.js
@@ -3659,7 +3662,6 @@ lib/seamonkey/chrome/webide/skin/noise.png
 lib/seamonkey/chrome/webide/skin/panel-listing.css
 lib/seamonkey/chrome/webide/skin/rocket.svg
 lib/seamonkey/chrome/webide/skin/runtimedetails.css
-lib/seamonkey/chrome/webide/skin/simulator.css
 lib/seamonkey/chrome/webide/skin/throbber.svg
 lib/seamonkey/chrome/webide/skin/webide.css
 lib/seamonkey/chrome/webide/skin/wifi-auth.css
@@ -3922,7 +3924,6 @@ lib/seamonkey/modules/DownloadsTaskbar.jsm
 lib/seamonkey/modules/E10SUtils.jsm
 lib/seamonkey/modules/EventEmitter.jsm
 lib/seamonkey/modules/Extension.jsm
-lib/seamonkey/modules/ExtensionAPI.jsm
 lib/seamonkey/modules/ExtensionChild.jsm
 lib/seamonkey/modules/ExtensionChildDevToolsUtils.jsm
 lib/seamonkey/modules/ExtensionCommon.jsm
@@ -3935,7 +3936,6 @@ lib/seamonkey/modules/ExtensionSearchHandler.jsm
 lib/seamonkey/modules/ExtensionSettingsStore.jsm
 lib/seamonkey/modules/ExtensionStorage.jsm
 lib/seamonkey/modules/ExtensionStorageSync.jsm
-lib/seamonkey/modules/ExtensionTabs.jsm
 lib/seamonkey/modules/ExtensionUtils.jsm
 lib/seamonkey/modules/FeedUtils.jsm
 lib/seamonkey/modules/Feeds.jsm
@@ -4094,7 +4094,6 @@ lib/seamonkey/modules/TelemetryUtils.jsm
 lib/seamonkey/modules/ThirdPartyCookieProbe.jsm
 lib/seamonkey/modules/Timer.jsm
 lib/seamonkey/modules/Troubleshoot.jsm
-lib/seamonkey/modules/UITelemetry.jsm
 lib/seamonkey/modules/UpdatePing.jsm
 lib/seamonkey/modules/UpdateUtils.jsm
 lib/seamonkey/modules/UserAgentOverrides.jsm
@@ -4135,7 +4134,6 @@ lib/seamonkey/modules/addons/LightweightThemeImageOptimizer.jsm
 lib/seamonkey/modules/addons/PluginProvider.jsm
 lib/seamonkey/modules/addons/ProductAddonChecker.jsm
 lib/seamonkey/modules/addons/SpellCheckDictionaryBootstrap.js
-lib/seamonkey/modules/addons/WebExtensionBootstrap.js
 lib/seamonkey/modules/addons/XPIInstall.jsm
 lib/seamonkey/modules/addons/XPIProvider.jsm
 lib/seamonkey/modules/addons/XPIProviderUtils.js
