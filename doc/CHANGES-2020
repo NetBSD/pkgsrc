@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4655 2020/08/31 13:08:00 otis Exp $
+$NetBSD: CHANGES-2020,v 1.4656 2020/08/31 15:01:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7248,3 +7248,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/brotli to 1.0.9 [wiz 2020-08-31]
 	Updated games/gemrb to 0.8.7 [nia 2020-08-31]
 	Updated mail/postfix to 3.5.7 [otis 2020-08-31]
+	Updated net/gallery-dl to 1.14.5 [leot 2020-08-31]
