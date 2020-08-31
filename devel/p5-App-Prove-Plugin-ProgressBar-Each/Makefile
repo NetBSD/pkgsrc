@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2019/11/03 10:15:50 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/31 18:07:28 wiz Exp $
 
 GIT_COMMIT=	f5f4dbf
 
 DISTNAME=	motemen-App-Prove-Plugin-ProgressBar-Each-g${GIT_COMMIT}
 PKGNAME=	p5-App-Prove-Plugin-ProgressBar-Each-0.01
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	-https://codeload.github.com/motemen/App-Prove-Plugin-ProgressBar-Each/tar.gz/${GIT_COMMIT}
 

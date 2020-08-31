@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2020/08/18 17:57:38 leot Exp $
+# $NetBSD: Makefile,v 1.68 2020/08/31 18:06:36 wiz Exp $
 #
 
 DISTNAME=	paprefs-0.9.10
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/paprefs/
 

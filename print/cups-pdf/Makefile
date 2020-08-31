@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2019/11/04 19:57:58 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/31 18:11:00 wiz Exp $
 
 COMMENT=		PDF backend for CUPS
 
 DISTNAME=		cups-pdf-2.6.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		print
 
 HOMEPAGE=		https://www.cups-pdf.de/

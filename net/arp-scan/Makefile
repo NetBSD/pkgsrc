@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/08/31 18:10:31 wiz Exp $
 #
 
 DISTNAME=	arp-scan-1.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://www.nta-monitor.com/files/arp-scan/
 

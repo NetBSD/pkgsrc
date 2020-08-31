@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2020/08/17 20:19:55 leot Exp $
+# $NetBSD: Makefile,v 1.116 2020/08/31 18:11:01 wiz Exp $
 
 DISTNAME=	glabels-3.4.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glabels/3.4/}
 EXTRACT_SUFX=	.tar.xz

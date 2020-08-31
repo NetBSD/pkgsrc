@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/08/11 13:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/31 18:07:57 wiz Exp $
 
 DISTNAME=	ExtUtils-CChecker-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PE/PEVANS/
 

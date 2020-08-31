@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/04/18 01:37:02 mef Exp $
+# $NetBSD: Makefile,v 1.14 2020/08/31 18:08:57 wiz Exp $
 
 DISTNAME=	Term-Table-0.015
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/E/EX/EXODIST/
 

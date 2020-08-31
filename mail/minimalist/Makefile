@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:21:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/08/31 18:09:58 wiz Exp $
 #
 
 DISTNAME=	minimalist-2.5.4-1
 PKGNAME=	minimalist-2.5.4.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 #MASTER_SITES=	http://www.mml.org.ua/LIST/
 EXTRACT_SUFX=	.tgz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:18:24 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/08/31 18:06:59 wiz Exp $
 
 DISTNAME=	DBD-Google-0.51
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	databases perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 

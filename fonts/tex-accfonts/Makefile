@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:31:07 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/31 18:09:32 wiz Exp $
 
 DISTNAME=	accfonts
 PKGNAME=	tex-${DISTNAME}-0.25
-PKGREVISION=	4
+PKGREVISION=	5
 TEXLIVE_REV=	18835
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

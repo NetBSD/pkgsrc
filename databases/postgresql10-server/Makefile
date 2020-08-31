@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/08/14 06:56:22 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/08/31 18:07:10 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/10-server-/}
+PKGREVISION=	1
 COMMENT=	PostgreSQL database server programs
 
 # mips has no TAS implementation

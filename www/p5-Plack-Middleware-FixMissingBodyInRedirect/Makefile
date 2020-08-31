@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/11/04 22:10:07 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/31 18:13:06 wiz Exp $
 
 DISTNAME=	Plack-Middleware-FixMissingBodyInRedirect-0.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/12/06 20:04:29 markd Exp $
+# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:45 wiz Exp $
 
 DISTNAME=	pdfcrop
 PKGNAME=	tex-${DISTNAME}-1.37
-PKGREVISION=	4
+PKGREVISION=	5
 TEXLIVE_REV=	29348
 
 MAINTAINER=	minskim@NetBSD.org

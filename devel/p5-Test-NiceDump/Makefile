@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/11/08 14:50:23 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 18:09:05 wiz Exp $
 
 DISTNAME=	Test-NiceDump-1.0.1
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DA/DAKKAR/
 

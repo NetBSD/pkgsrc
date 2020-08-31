@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 22:10:05 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/31 18:12:58 wiz Exp $
 
 DISTNAME=	HTTP-Tiny-Mech-1.001002
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/K/KE/KENTNL/
 

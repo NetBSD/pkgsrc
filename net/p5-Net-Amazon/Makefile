@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2019/11/03 11:45:47 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/31 18:10:40 wiz Exp $
 
 DISTNAME=	Net-Amazon-0.62
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

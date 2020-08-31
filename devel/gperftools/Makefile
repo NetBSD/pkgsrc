@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/11/28 12:19:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/31 18:07:21 wiz Exp $
 
 DISTNAME=	gperftools-2.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gperftools/}
 GITHUB_PROJECT=	gperftools

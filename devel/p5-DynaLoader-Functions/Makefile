@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/04 04:42:10 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 18:07:56 wiz Exp $
 
 DISTNAME=	DynaLoader-Functions-0.003
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/
 

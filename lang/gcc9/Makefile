@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/05/17 22:36:07 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/31 18:09:49 wiz Exp $
 
 GCC9_VERSION=	9.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 
 DISTNAME=	gcc-${GCC9_VERSION}
 PKGNAME=	gcc9-${GCC9_VERSION}

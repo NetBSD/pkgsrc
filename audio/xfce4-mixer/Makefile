@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2020/08/17 20:18:12 leot Exp $
+# $NetBSD: Makefile,v 1.69 2020/08/31 18:06:37 wiz Exp $
 
-PKGREVISION= 17
+PKGREVISION= 18
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-mixer-4.11.0

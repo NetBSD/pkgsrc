@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2019/11/03 10:15:59 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/08/31 18:08:31 wiz Exp $
 #
 
 DISTNAME=	MooseX-Role-Tempdir-0.101
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
