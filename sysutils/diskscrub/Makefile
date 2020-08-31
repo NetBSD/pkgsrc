@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:23:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/31 18:11:27 wiz Exp $
 
 DISTNAME=	scrub-2.5.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://diskscrub.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

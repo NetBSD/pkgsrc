@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:23:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/31 18:11:35 wiz Exp $
 
 DISTNAME=	smbldap-tools-${VERS}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils net databases
 #MASTER_SITES=	http://download.gna.org/smbldap-tools/sources/${VERS}/
 

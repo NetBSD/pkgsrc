@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2020/08/17 20:19:48 leot Exp $
+# $NetBSD: Makefile,v 1.100 2020/08/31 18:10:35 wiz Exp $
 
-PKGREVISION= 17
+PKGREVISION= 18
 .include "Makefile.common"
 
 RCD_SCRIPTS=		mldonkey

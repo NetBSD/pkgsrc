@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 11:45:48 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/31 18:10:51 wiz Exp $
 
 DISTNAME=	XMLRPC-Lite-0.717
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PH/PHRED/
 

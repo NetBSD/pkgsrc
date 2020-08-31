@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/18 01:12:03 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 18:09:14 wiz Exp $
 
 DISTNAME=	XString-0.002
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2020/08/17 20:17:43 leot Exp $
+# $NetBSD: Makefile,v 1.91 2020/08/31 18:11:24 wiz Exp $
 
 DISTNAME=	brasero-3.12.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/31 18:12:05 wiz Exp $
 
 DISTNAME=	Text-VisualWidth-PP-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/
 

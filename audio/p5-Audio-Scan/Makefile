@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:17:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2020/08/31 18:06:35 wiz Exp $
 
 DISTNAME=	Audio-Scan-1.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AG/AGRUNDMA/}
 

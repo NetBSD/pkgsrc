@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/09/16 00:03:25 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/31 18:10:10 wiz Exp $
 
+PKGREVISION= 1
 .include "../../mail/libytnef/Makefile.common"
 
 COMMENT=	Programs using libytnef to parse and handle TNEF attachments

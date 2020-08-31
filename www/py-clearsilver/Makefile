@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2019/09/02 13:20:02 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/08/31 18:13:15 wiz Exp $
 
 PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=			3
+PKGREVISION=			4
 
 .include "../../www/clearsilver/Makefile.common"
 

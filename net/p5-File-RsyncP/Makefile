@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/31 18:10:38 wiz Exp $
 
 DISTNAME=	File-RsyncP-0.74
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CB/CBARRATT/}
 

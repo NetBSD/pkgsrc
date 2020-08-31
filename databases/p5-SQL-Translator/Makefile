@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2019/11/02 15:38:06 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/08/31 18:07:07 wiz Exp $
 
 DISTNAME=	SQL-Translator-1.60
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SQL/}
 

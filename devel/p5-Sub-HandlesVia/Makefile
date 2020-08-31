@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/16 12:34:18 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 18:08:53 wiz Exp $
 
 DISTNAME=	Sub-HandlesVia-0.013
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/
 

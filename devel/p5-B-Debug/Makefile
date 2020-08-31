@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 10:15:50 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/31 18:07:30 wiz Exp $
 
 DISTNAME=	B-Debug-1.26
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/R/RU/RURBAN/
 

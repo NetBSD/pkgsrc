@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2020/04/20 13:23:19 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2020/08/31 18:11:24 wiz Exp $
 
 DISTNAME=		cdbkup-1.0
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdbkup/}
 

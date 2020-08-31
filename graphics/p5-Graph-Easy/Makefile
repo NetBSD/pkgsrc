@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/08/11 13:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/08/31 18:09:43 wiz Exp $
 
 DISTNAME=		Graph-Easy-0.76
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics perl5
 MASTER_SITES=		https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/
 

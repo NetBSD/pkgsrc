@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:18:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/31 18:07:26 wiz Exp $
 
 DISTNAME=	Alien-Packages-0.003
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Alien/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/05/03 11:57:33 markd Exp $
+# $NetBSD: Makefile,v 1.25 2020/08/31 18:11:04 wiz Exp $
 
 DISTNAME=	pdftex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2020
+PKGREVISION=	1
 TEXLIVE_REV=	54227
 
 MAINTAINER=	minskim@NetBSD.org

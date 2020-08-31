@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/31 18:10:20 wiz Exp $
 
 DISTNAME=		cowsay-3.04
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tnalpgge/}
 GITHUB_PROJECT=		rank-amateur-cowsay

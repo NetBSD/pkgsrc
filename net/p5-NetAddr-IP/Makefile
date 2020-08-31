@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2019/11/03 11:45:48 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2020/08/31 18:10:48 wiz Exp $
 
 DISTNAME=	NetAddr-IP-4.079
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=NetAddr/}
 

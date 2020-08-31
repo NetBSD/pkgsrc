@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2020/08/17 20:19:08 leot Exp $
+# $NetBSD: Makefile,v 1.55 2020/08/31 18:09:45 wiz Exp $
 #
 
 VERSION=	0.10.0
 DISTNAME=	ristretto-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://archive.xfce.org/src/apps/ristretto/${VERSION:R}/
 

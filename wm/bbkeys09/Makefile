@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2020/08/17 20:20:15 leot Exp $
+# $NetBSD: Makefile,v 1.19 2020/08/31 18:12:29 wiz Exp $
 #
 
 DISTNAME=	bbkeys-0.9.1
 PKGNAME=	bbkeys09-0.9.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbkeys/}
 

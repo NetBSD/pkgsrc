@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2020/08/16 23:05:33 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/31 18:06:55 wiz Exp $
 
 # using configure options and sources from
 # https://github.com/earlephilhower/esp-quick-toolchain
 
 DISTNAME=		gcc-xtensa-4.8.2
 PKGNAME=		${DISTNAME:C/gcc-xtensa/xtensa-lx106-elf-gcc/}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jcmvbkbc/}
 GITHUB_PROJECT=		gcc-xtensa

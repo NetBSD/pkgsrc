@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:23:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/31 18:11:31 wiz Exp $
 
 DISTNAME=	IO-BufferedSelect-1.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 

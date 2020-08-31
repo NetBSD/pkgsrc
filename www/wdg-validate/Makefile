@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2020/01/26 17:32:25 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2020/08/31 18:13:17 wiz Exp $
 #
 
 DISTNAME=	validate-1.2.2
 PKGNAME=	wdg-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
 DISTFILES=	${DISTNAME} wdg-sgml-lib-1.1.4.tar.gz README

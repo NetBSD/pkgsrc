@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2020/08/17 20:20:00 leot Exp $
+# $NetBSD: Makefile,v 1.55 2020/08/31 18:11:20 wiz Exp $
 #
 
 POLICYKIT_GNOME_VER=	0.9.2
 DISTNAME=		PolicyKit-gnome-${POLICYKIT_GNOME_VER}
 PKGNAME=		policykit-gnome-${POLICYKIT_GNOME_VER}
-PKGREVISION=		43
+PKGREVISION=		44
 CATEGORIES=		security
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2

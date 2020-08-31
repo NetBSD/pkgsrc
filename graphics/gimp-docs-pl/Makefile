@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/31 18:09:39 wiz Exp $
 #
 
 HELPLANGUAGE=		pl
 
 DISTNAME=		gimp-help-${GIMPDOCVER}-html-${HELPLANGUAGE}
 PKGNAME=		gimp-docs-${HELPLANGUAGE}-${DISTNAME:S/gimp-help-//:S/-html-${HELPLANGUAGE}//}
-PKGREVISION=		2
+PKGREVISION=		3
 
 # There is no po/pl/gimp.po in 2.8.1 tarball.
 # Use msgfmt and msginit from devel/gettext-tools.

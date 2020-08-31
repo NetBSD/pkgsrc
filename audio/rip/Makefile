@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/01/26 05:26:13 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/31 18:06:36 wiz Exp $
 #
 
 DISTNAME=	rip-1.07
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio perl5
 MASTER_SITES=	http://rip.sourceforge.net/download/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/08/31 18:06:52 wiz Exp $
 
 DISTNAME=	txt2pdbdoc-1.4.4
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	converters
 MASTER_SITES=	http://homepage.mac.com/pauljlucas/software/
 

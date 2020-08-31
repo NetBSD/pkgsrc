@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2019/08/11 13:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2020/08/31 18:09:51 wiz Exp $
 
 DISTNAME=	mos201src
 PKGNAME=	moscow_ml-2.01
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	lang
 MASTER_SITES=	http://www.itu.dk/people/sestoft/mosml/
 

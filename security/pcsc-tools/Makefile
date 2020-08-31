@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2019/08/11 13:22:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/08/31 18:11:20 wiz Exp $
 
 DISTNAME=	pcsc-tools-1.4.27
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 

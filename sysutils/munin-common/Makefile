@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/04/09 15:00:47 tm Exp $
+# $NetBSD: Makefile,v 1.4 2020/08/31 18:11:29 wiz Exp $
 #
 
 PKGNAME=	${DISTNAME:S/munin/munin-common/}
+PKGREVISION=	1
 COMMENT=	Common components between a munin node and master
 
 .include "../../sysutils/munin-common/Makefile.common"

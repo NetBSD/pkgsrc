@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2019/10/27 13:55:28 mef Exp $
+# $NetBSD: Makefile,v 1.27 2020/08/31 18:08:35 wiz Exp $
 
 DISTNAME=	OOTools-2.41
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SK/SKNPP/
 

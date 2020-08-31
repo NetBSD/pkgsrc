@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/03/20 11:58:31 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/31 18:12:19 wiz Exp $
 #
 
 DISTNAME=	hebcal-3.11
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hebcal/}
 

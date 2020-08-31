@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:22:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/08/31 18:10:26 wiz Exp $
 #
 
 DISTNAME=	topless-1.52
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc sysutils
 MASTER_SITES=	http://people.freebsd.org/~daichi/src/
 

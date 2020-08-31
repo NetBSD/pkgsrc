@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2020/05/10 14:13:46 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/08/31 18:11:10 wiz Exp $
 #
 
 DISTNAME=	Authen-PAM-0.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	security
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/N/NI/NIKIP/
 

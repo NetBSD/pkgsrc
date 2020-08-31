@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/01/26 17:31:49 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/08/31 18:10:33 wiz Exp $
 
 DISTNAME=		dnstracer-1.10
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		http://www.mavetju.org/download/
 EXTRACT_SUFX=		.tar.bz2

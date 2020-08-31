@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/03/22 20:58:24 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/08/31 18:08:44 wiz Exp $
 
 DISTNAME=		Proc-ProcessTable-0.59
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Proc/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2020/08/31 18:11:26 wiz Exp $
 
 COLLECTD_PACKAGE=	snmp
 
 COMMENT=		Statistics collection daemon - snmp plugin
-PKGREVISION=		3
+PKGREVISION=		4
 
 .include "../../sysutils/collectd/Makefile.common"
 

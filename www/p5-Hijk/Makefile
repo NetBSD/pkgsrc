@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:24:48 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/08/31 18:12:59 wiz Exp $
 
 DISTNAME=	Hijk-0.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/G/GU/GUGOD/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2019/09/14 19:58:30 gutteridge Exp $
+# $NetBSD: Makefile,v 1.19 2020/08/31 18:06:59 wiz Exp $
 
 DISTNAME=	DBD-Mock-1.49
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 

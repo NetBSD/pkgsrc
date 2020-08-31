@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2020/01/07 18:21:02 adam Exp $
+# $NetBSD: Makefile,v 1.65 2020/08/31 18:12:31 wiz Exp $
 
 DISTNAME=	awstats-7.7
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 

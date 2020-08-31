@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/01/26 17:31:05 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/08/31 18:09:22 wiz Exp $
 #
 
 DISTNAME=		valgrind-3.13.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sourceware.org/pub/valgrind/
 EXTRACT_SUFX=		.tar.bz2

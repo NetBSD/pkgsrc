@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/11/04 22:10:06 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/08/31 18:13:04 wiz Exp $
 
 DISTNAME=	POE-Component-Server-PSGI-0.6
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 

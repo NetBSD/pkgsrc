@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/03/21 12:29:01 mef Exp $
+# $NetBSD: Makefile,v 1.22 2020/08/31 18:07:42 wiz Exp $
 
 DISTNAME=	Config-GitLike-1.18
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 

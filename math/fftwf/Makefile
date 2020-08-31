@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/08/31 18:10:11 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../math/fftw/Makefile.common"
 
 PKGNAME=	${DISTNAME:C/fftw/fftwf/}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2020/03/22 21:09:42 nia Exp $
+# $NetBSD: Makefile,v 1.92 2020/08/31 18:10:41 wiz Exp $
 
 DISTNAME=		Net-DNS-1.23
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 MASTER_SITES+=		http://www.net-dns.org/download/

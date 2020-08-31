@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2020/01/26 17:31:57 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/08/31 18:10:54 wiz Exp $
 #
 
 DISTNAME=		udpcast-20060619
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net
 MASTER_SITES=		http://www.udpcast.linux.lu/download/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/03/02 17:07:58 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2020/08/31 18:10:36 wiz Exp $
 
 DISTNAME=	check_spamd-1.6.0
 PKGNAME=	nagios-plugin-${DISTNAME:S/check_//1}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net mail
 MASTER_SITES=	# http://exchange.nagios.org/components/com_mtree/
 EXTRACT_SUFX=	.pl

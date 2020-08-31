@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/03/09 21:47:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2020/08/31 18:10:39 wiz Exp $
 
 DISTNAME=	GeoIP2-2.006002
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MAXMIND/}
 

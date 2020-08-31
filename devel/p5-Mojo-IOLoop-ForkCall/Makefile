@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 12:39:25 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/31 18:08:26 wiz Exp $
 
 GITHUB_PROJECT=	Mojo-IOLoop-ForkCall
 DISTNAME=	Mojo-IOLoop-ForkCall-0.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jberger/}
 

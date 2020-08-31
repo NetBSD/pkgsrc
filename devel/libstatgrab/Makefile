@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2020/03/24 16:54:37 nia Exp $
+# $NetBSD: Makefile,v 1.37 2020/08/31 18:07:23 wiz Exp $
 
 DISTNAME=	libstatgrab-0.92
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libstatgrab/}
 GITHUB_PROJECT=	libstatgrab

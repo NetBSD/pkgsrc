@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/11/04 21:43:40 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/31 18:11:48 wiz Exp $
 #
 
 DISTNAME=	Lingua-EN-Inflect-Number-1.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NE/NEILB/}
 

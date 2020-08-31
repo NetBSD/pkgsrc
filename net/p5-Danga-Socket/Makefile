@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 12:29:55 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/08/31 18:10:38 wiz Exp $
 
 DISTNAME=	Danga-Socket-1.61
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/B/BR/BRADFITZ/
 

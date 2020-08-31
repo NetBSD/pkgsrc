@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/11/19 13:08:36 mef Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/31 18:13:03 wiz Exp $
 
 DISTNAME=	LWP-MediaTypes-6.04
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 

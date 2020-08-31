@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/08/17 20:18:21 leot Exp $
+# $NetBSD: Makefile,v 1.81 2020/08/31 18:07:09 wiz Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia, until there is a good basis to be sure
@@ -6,7 +6,7 @@
 MAJOR=		3.0
 DISTNAME=	postgis-${MAJOR}.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 

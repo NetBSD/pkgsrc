@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/08/31 18:09:39 wiz Exp $
 #
 
 HELPLANGUAGE=		ru
 
 DISTNAME=		gimp-help-${GIMPDOCVER}-html-${HELPLANGUAGE}
 PKGNAME=		gimp-docs-${HELPLANGUAGE}-${DISTNAME:S/gimp-help-//:S/-html-${HELPLANGUAGE}//}
-PKGREVISION=		2
+PKGREVISION=		3
 
 .include "../../graphics/gimp-docs-en/Makefile.common"
 

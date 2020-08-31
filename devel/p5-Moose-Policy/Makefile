@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:19:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/31 18:08:28 wiz Exp $
 #
 
 DISTNAME=	Moose-Policy-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
 

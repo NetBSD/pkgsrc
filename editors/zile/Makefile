@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2020/07/03 11:37:44 hauke Exp $
+# $NetBSD: Makefile,v 1.36 2020/08/31 18:09:27 wiz Exp $
 
 DISTNAME=	zile-2.4.14
 #PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/gnu/zile/
 

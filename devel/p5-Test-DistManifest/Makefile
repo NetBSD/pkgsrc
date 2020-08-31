@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2019/11/03 10:16:04 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:00 wiz Exp $
 #
 
 DISTNAME=	Test-DistManifest-1.014
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/E/ET/ETHER/
 
