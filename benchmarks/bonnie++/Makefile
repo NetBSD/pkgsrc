@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2020/05/18 05:23:26 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2020/08/31 18:06:37 wiz Exp $
 #
 
 DISTNAME=	bonnie++-1.97.3
 CATEGORIES=	benchmarks
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	http://www.coker.com.au/bonnie++/experimental/
 EXTRACT_SUFX=	.tgz
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/11/03 11:45:46 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/08/31 18:10:38 wiz Exp $
 
 DISTNAME=	File-Rsync-0.49
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../..//authors/id/L/LE/LEAKIN/}
 

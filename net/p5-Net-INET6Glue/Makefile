@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:22:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/08/31 18:10:44 wiz Exp $
 
 DISTNAME=	Net-INET6Glue-0.603
 PKGNAME=	p5-${DISTNAME:S/603/6.3/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/modules\/by-module\//authors\/id\/S\/SU\/SULLR\//}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 13:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/31 18:10:01 wiz Exp $
 #
 
 DISTNAME=	Email-Reply-1.204
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/
 

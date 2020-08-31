@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:17:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/08/31 18:06:34 wiz Exp $
 
 DISTNAME=	mp3cut-1.13
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	audio perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/J/JV/JV/
 

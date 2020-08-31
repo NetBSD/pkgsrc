@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2019/11/03 10:39:08 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/08/31 18:07:17 wiz Exp $
 
 DISTNAME=		cogito-0.18.2
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		devel
 MASTER_SITES=		http://www.kernel.org/pub/software/scm/cogito/
 EXTRACT_SUFX=		.tar.bz2

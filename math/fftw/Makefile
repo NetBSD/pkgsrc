@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2019/08/11 13:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2020/08/31 18:10:11 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Collection of fast C routines to compute DFTs
 

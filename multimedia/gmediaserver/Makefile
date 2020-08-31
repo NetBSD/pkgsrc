@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 23:33:11 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/31 18:10:27 wiz Exp $
 
 DISTNAME=		gmediaserver-0.13.0
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		multimedia net
 MASTER_SITES=		http://download.savannah.gnu.org/releases/gmediaserver/
 

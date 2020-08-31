@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/08/31 18:12:22 wiz Exp $
 
 DISTNAME=	DateTime-Format-CLDR-1.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MA/MAROS/
 

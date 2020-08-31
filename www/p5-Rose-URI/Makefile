@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2020/08/31 18:13:08 wiz Exp $
 
 DISTNAME=	Rose-URI-1.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/J/JS/JSIRACUSA/
 
