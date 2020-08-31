@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/11/03 17:14:26 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.16 2020/08/31 16:39:53 wiz Exp $
 
-DISTNAME=	qrencode-4.0.2
+DISTNAME=	qrencode-4.1.0
 CATEGORIES=	converters
 MASTER_SITES=	https://fukuchi.org/works/qrencode/
 EXTRACT_SUFX=	.tar.bz2
