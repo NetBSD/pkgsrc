@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4663 2020/08/31 18:01:16 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4664 2020/08/31 18:01:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7256,3 +7256,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/libheif version 1.8.0 [ryoon 2020-08-31]
 	Updated graphics/ImageMagick to 7.0.10.28nb1 [ryoon 2020-08-31]
 	Updated lang/perl5 to 5.32.0 [wiz 2020-08-31]
+	Updated databases/p5-gdbm to 5.32.0 [wiz 2020-08-31]
