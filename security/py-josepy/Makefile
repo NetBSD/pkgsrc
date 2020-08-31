@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/08/25 10:37:35 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/08/31 23:07:06 wiz Exp $
 
 DISTNAME=	josepy-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.8:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
@@ -21,7 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cache>=1.0:../../devel/py-test-cache
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=0.5:../../devel/py-test-flake8
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 USE_LANGUAGES=	# none
 

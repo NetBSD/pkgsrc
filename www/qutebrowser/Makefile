@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/08/17 20:20:22 leot Exp $
+# $NetBSD: Makefile,v 1.5 2020/08/31 23:07:07 wiz Exp $
 
 DISTNAME=	qutebrowser-1.13.1
 PKGREVISION=	1
@@ -20,7 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools:tool
+
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -30,4 +31,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/egg.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
