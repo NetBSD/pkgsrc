@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4651 2020/08/30 23:54:31 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4652 2020/08/31 02:03:28 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7244,3 +7244,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed x11/py-qwt-qt4 successor x11/py-qwt-qt5 [tnn 2020-08-30]
 	Updated ham/gr-osmosdr to 0.2.2 [tnn 2020-08-30]
 	Added security/pinentry-gnome3 version 1.1.0 [wiz 2020-08-30]
+	Updated audio/fasttracker2 to 1.31 [fox 2020-08-31]
