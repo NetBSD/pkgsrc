@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.68 2020/08/31 19:55:35 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.69 2020/08/31 20:04:45 wiz Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -18,6 +18,7 @@ BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 
 _TOOLS_USE_PKGSRC.perl=	yes
 
+# do not change this LOCALBASE to PREFIX; that breaks the install of perl modules
 PERL5=		${LOCALBASE}/bin/perl
 
 pkgbase := perl
