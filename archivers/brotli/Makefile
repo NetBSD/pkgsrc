@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/04/19 17:56:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/08/31 08:45:44 wiz Exp $
 
-DISTNAME=	brotli-1.0.7
-PKGREVISION=	1
+DISTNAME=	brotli-1.0.9
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
