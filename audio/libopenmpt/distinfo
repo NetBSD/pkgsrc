@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2020/07/28 12:44:18 fcambus Exp $
+$NetBSD: distinfo,v 1.29 2020/08/31 15:03:53 fcambus Exp $
 
-SHA1 (libopenmpt-0.5.1+release.autotools.tar.gz) = 007fc3ba904e539a336c4ac93f3557b04a74162d
-RMD160 (libopenmpt-0.5.1+release.autotools.tar.gz) = 22cd3e8f973c88359510c524e0a078eb9c9921bc
-SHA512 (libopenmpt-0.5.1+release.autotools.tar.gz) = 570787cfcf0b85ca10e753fe49b8a94ff69e1c881ffec5a1aee27a2bc1e142a62ae8cd79de5ab8cf4c7536688de13e9cb675b559a0aa755ad994a24010433a9f
-Size (libopenmpt-0.5.1+release.autotools.tar.gz) = 1465318 bytes
+SHA1 (libopenmpt-0.5.2+release.autotools.tar.gz) = b25a37b94db297ee0b64a7d823c381716ade71d9
+RMD160 (libopenmpt-0.5.2+release.autotools.tar.gz) = 90f8246e3c214c5cbf6df0a2c9f72a6e27b4df15
+SHA512 (libopenmpt-0.5.2+release.autotools.tar.gz) = 39143af8ef4e84cf4ec9e94724c09a12533fa7bcc0e106c506a032546a8e846ae8946f40417981eabbb7403d8e6dba53548c96a7200807e1a99bd50f278c6628
+Size (libopenmpt-0.5.2+release.autotools.tar.gz) = 1466960 bytes
