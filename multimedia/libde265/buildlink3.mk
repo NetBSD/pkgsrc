@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2020/08/31 17:18:43 ryoon Exp $
+
+BUILDLINK_TREE+=	libde265
+
+.if !defined(LIBDE265_BUILDLINK3_MK)
+LIBDE265_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libde265+=	libde265>=1.0.6
+BUILDLINK_PKGSRCDIR.libde265?=		../../multimedia/libde265
+
+.endif	# LIBDE265_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libde265
