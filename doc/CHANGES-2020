@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4657 2020/08/31 15:04:04 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4658 2020/08/31 16:32:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7250,3 +7250,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/postfix to 3.5.7 [otis 2020-08-31]
 	Updated net/gallery-dl to 1.14.5 [leot 2020-08-31]
 	Updated audio/libopenmpt to 0.5.2 [fcambus 2020-08-31]
+	Updated security/py-google-auth to 1.21.0 [wiz 2020-08-31]
