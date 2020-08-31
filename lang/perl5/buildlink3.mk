@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.66 2020/08/31 18:05:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.67 2020/08/31 18:17:03 wiz Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -14,7 +14,6 @@ BUILDLINK_API_DEPENDS.perl+=	perl>=${_perl5_ver_}
 # with the next incompatible version of perl:
 BUILDLINK_API_DEPENDS.perl+=	perl<5.34.0
 
-BUILDLINK_ABI_DEPENDS.perl?=	perl>=5.32.0
 BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 
 _TOOLS_USE_PKGSRC.perl=	yes
