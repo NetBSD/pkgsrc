@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2019/11/13 19:40:48 nia Exp $
+$NetBSD: MESSAGE,v 1.3 2020/08/31 12:46:21 nia Exp $
 
 To install the DRM-free version of Baldur's Gate:
 
@@ -9,5 +9,6 @@ $ mkdir ~/.gemrb
 $ cp ${PREFIX}/share/examples/gemrb/GemRB.cfg.sample ~/.gemrb/gemrb.cfg
 
 Edit ~/.gemrb/gemrb.cfg and change the GamePath to ~/BaldursGate.
+Uncomment GemRBPath=${PREFIX}/share/gemrb.
 
 ===========================================================================
