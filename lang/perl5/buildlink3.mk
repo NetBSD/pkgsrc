@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.67 2020/08/31 18:17:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.68 2020/08/31 19:55:35 ryoon Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 
 _TOOLS_USE_PKGSRC.perl=	yes
 
-PERL5=		${PREFIX}/bin/perl
+PERL5=		${LOCALBASE}/bin/perl
 
 pkgbase := perl
 .include "../../mk/pkg-build-options.mk"
