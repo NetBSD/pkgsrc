@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.221 2020/08/31 18:13:16 wiz Exp $
+# $NetBSD: Makefile,v 1.222 2020/08/31 20:05:00 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	8
-SM_VER=		2.53.2
+SM_VER=		2.53.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -54,6 +53,7 @@ CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpt.py
 
 CHECK_WRKREF_SKIP=	lib/seamonkey/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=	lib/seamonkey/chrome/comm/content/communicator/buildconfig.html
 
 CKSUM_CRATES+=	mozilla/third_party/rust/libc
 
