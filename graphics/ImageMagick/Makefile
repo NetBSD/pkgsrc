@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.274 2020/08/31 18:09:36 wiz Exp $
+# $NetBSD: Makefile,v 1.275 2020/09/01 12:21:03 ryoon Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -94,7 +94,6 @@ CTF_FILES_SKIP+=	lib/libMagickWand-7.Q16HDRI.so.*
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
-.include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
