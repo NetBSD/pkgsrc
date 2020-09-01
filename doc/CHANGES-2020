@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4681 2020/09/01 14:03:49 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4682 2020/09/01 14:07:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7275,3 +7275,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/python36 to 3.6.12nb1 [schmonz 2020-09-01]
 	Updated lang/python37 to 3.7.9nb1 [schmonz 2020-09-01]
 	Updated benchmarks/dnsperf to 2.3.4 [taca 2020-09-01]
+	Updated security/zkt to 1.1.4 [taca 2020-09-01]
