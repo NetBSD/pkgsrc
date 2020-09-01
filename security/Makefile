@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.777 2020/08/30 23:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.778 2020/09/01 04:06:46 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -491,6 +491,7 @@ SUBDIR+=	py-requests-kerberos
 SUBDIR+=	py-requests-ntlm
 SUBDIR+=	py-requests-oauthlib
 SUBDIR+=	py-rsa
+SUBDIR+=	py-rsa40
 SUBDIR+=	py-service_identity
 SUBDIR+=	py-signedjson
 SUBDIR+=	py-simplesha3
