@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2020/07/09 16:12:57 nia Exp $
+# $NetBSD: Makefile,v 1.611 2020/09/01 08:04:55 wiz Exp $
 
 COMMENT=	Databases
 
@@ -195,7 +195,6 @@ SUBDIR+=	p5-DBIx-Introspector
 SUBDIR+=	p5-DBIx-Schema
 SUBDIR+=	p5-DBIx-SearchBuilder
 SUBDIR+=	p5-DBM-Deep
-SUBDIR+=	p5-DB_File
 SUBDIR+=	p5-DB_File-Lock
 SUBDIR+=	p5-Dancer-Plugin-DBIC
 SUBDIR+=	p5-Data-Table
