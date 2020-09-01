@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4673 2020/09/01 04:14:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4674 2020/09/01 08:04:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7266,3 +7266,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/py-rsa40 version 4.0 [wiz 2020-09-01]
 	Updated security/py-rsa to 4.6 [wiz 2020-09-01]
 	Updated www/py-google-api-python-client to 1.11.0 [wiz 2020-09-01]
+	Removed databases/p5-DB_File [wiz 2020-09-01]
