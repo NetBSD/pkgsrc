@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2020/08/31 18:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.264 2020/09/01 13:53:34 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -78,6 +78,8 @@ CONFLICTS+=	p5-parent<0.238
 CONFLICTS+=	p5-version<0.9924
 
 SUPERSEDES+=	p5-Tie-File<=0.99
+SUPERSEDES+=	p5-Time-HiRes-[0-9]*
+SUPERSEDES+=	p5-DB_File-[0-9]*
 SUPERSEDES+=	p5-Memoize<=1.03
 SUPERSEDES+=	p5-I18N-LangTags<=0.39
 SUPERSEDES+=	p5-Locale-Maketext<=1.23
