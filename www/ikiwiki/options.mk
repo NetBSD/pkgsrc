@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2020/02/13 19:03:57 schmonz Exp $
+# $NetBSD: options.mk,v 1.22 2020/09/01 08:04:23 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cgi imagemagick l10n python w3m
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS=		cgi ikiwiki-sudo
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=	p5-CGI-FormBuilder>=3.05:../../www/p5-CGI-FormBuilder
 DEPENDS+=	p5-CGI-Session-[0-9]*:../../www/p5-CGI-Session
-DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
+#DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 .endif
 
 .if !empty(PKG_OPTIONS:Mcvs)
