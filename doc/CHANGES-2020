@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4678 2020/09/01 09:13:43 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4679 2020/09/01 09:15:04 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7270,3 +7270,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed time/p5-Time-HiRes successor lang/perl5 [wiz 2020-09-01]
 	Updated net/dbip-asn-lite to 2020.09 [fcambus 2020-09-01]
 	Updated net/dbip-city-lite to 2020.09 [fcambus 2020-09-01]
+	Updated net/dbip-country-lite to 2020.09 [fcambus 2020-09-01]
