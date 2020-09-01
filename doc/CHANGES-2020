@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4679 2020/09/01 09:15:04 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4680 2020/09/01 09:29:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7271,3 +7271,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-asn-lite to 2020.09 [fcambus 2020-09-01]
 	Updated net/dbip-city-lite to 2020.09 [fcambus 2020-09-01]
 	Updated net/dbip-country-lite to 2020.09 [fcambus 2020-09-01]
+	Updated lang/python27 to 2.7.18nb2 [schmonz 2020-09-01]
+	Updated lang/python36 to 3.6.12nb1 [schmonz 2020-09-01]
+	Updated lang/python37 to 3.7.9nb1 [schmonz 2020-09-01]
