@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/03 23:06:35 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/01 04:08:42 wiz Exp $
 
 DISTNAME=	adb-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,8 @@ COMMENT=	Pure Python implementation of the Android ADB and Fastboot protocols
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-libusb1>=1.0.16:../../devel/py-libusb1
-DEPENDS+=	${PYPKGPREFIX}-rsa-[0-9]*:../../security/py-rsa
+
+PYTHON_VERSIONED_DEPENDENCIES+=	rsa
 
 USE_LANGUAGES=	# none
 
@@ -20,4 +21,5 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pyfastboot ${DESTDIR}${PREFIX}/bin/pyfastboot-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
