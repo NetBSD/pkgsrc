@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/08/31 18:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/01 08:01:25 wiz Exp $
 
 DISTNAME=		Reply-0.42
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DO/DOY/}
 
@@ -34,7 +34,7 @@ DEPENDS+=		p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
 DEPENDS+=		p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
 DEPENDS+=		p5-Term-ANSIColor-[0-9]*:../../devel/p5-Term-ANSIColor
 DEPENDS+=		p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
-DEPENDS+=		p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+#DEPENDS+=		p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=		p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
 USE_LANGUAGES=		# empty
