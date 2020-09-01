@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/08/31 18:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/09/01 08:01:26 wiz Exp $
 
 DISTNAME=	Hijk-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	mit
 # for make test
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
-BUILD_DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+#BUILD_DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 BUILD_DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 BUILD_DEPENDS+=	p5-Plack>=0:../../www/p5-Plack
 
