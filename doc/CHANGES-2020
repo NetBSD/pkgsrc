@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4670 2020/08/31 23:06:12 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4671 2020/09/01 04:06:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7263,3 +7263,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-canonicaljson to 1.3.0 [js 2020-08-31]
 	Added devel/py-setuptools44 version 44.1.1 [wiz 2020-08-31]
 	Updated devel/py-setuptools to 47.3.2 [wiz 2020-08-31]
+	Added security/py-rsa40 version 4.0 [wiz 2020-09-01]
