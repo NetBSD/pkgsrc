@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2019/11/04 17:47:30 rillig Exp $
+# $NetBSD: options.mk,v 1.15 2020/09/01 22:56:54 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -20,6 +20,11 @@ PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
 ### Perl cannot be compiled with threading support ATM.
 ###
 .if !empty(MACHINE_PLATFORM:MHaiku-*-*)
+PERL5_BUILD_THREADS_SUPPORT=	no
+.endif
+
+# miniperl fails with locking errors during build on QNX.
+.if ${OPSYS} == "QNX"
 PERL5_BUILD_THREADS_SUPPORT=	no
 .endif
 
