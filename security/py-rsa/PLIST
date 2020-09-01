@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/07 10:41:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/09/01 04:09:14 wiz Exp $
 bin/pyrsa-decrypt-${PYVERSSUFFIX}
 bin/pyrsa-encrypt-${PYVERSSUFFIX}
 bin/pyrsa-keygen-${PYVERSSUFFIX}
@@ -32,9 +32,6 @@ ${PYSITELIB}/rsa/core.pyo
 ${PYSITELIB}/rsa/key.py
 ${PYSITELIB}/rsa/key.pyc
 ${PYSITELIB}/rsa/key.pyo
-${PYSITELIB}/rsa/machine_size.py
-${PYSITELIB}/rsa/machine_size.pyc
-${PYSITELIB}/rsa/machine_size.pyo
 ${PYSITELIB}/rsa/parallel.py
 ${PYSITELIB}/rsa/parallel.pyc
 ${PYSITELIB}/rsa/parallel.pyo
