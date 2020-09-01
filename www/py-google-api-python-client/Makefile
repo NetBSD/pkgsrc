@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2020/08/07 06:42:14 adam Exp $
+# $NetBSD: Makefile,v 1.38 2020/09/01 04:14:12 wiz Exp $
 
-DISTNAME=	google-api-python-client-1.10.0
+DISTNAME=	google-api-python-client-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-python-client/}
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-uritemplate>=3.0.0:../../textproc/py-uritemplate
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-oauth2client-[0-9]*:../../security/py-oauth2client
+TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 
 USE_LANGUAGES=	# none
