@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:10:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/01 08:01:25 wiz Exp $
 
 DISTNAME=	LaTeXML-0.8.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc www
 MASTER_SITES=	https://dlmf.nist.gov/LaTeXML/releases/
 
@@ -22,7 +22,7 @@ DEPENDS+=	p5-Parse-RecDescent-[0-9]*:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-Pod-Parser-[0-9]*:../../textproc/p5-Pod-Parser
 DEPENDS+=	p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
 DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
-DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+#DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-XML-LibXSLT-[0-9]*:../../textproc/p5-XML-LibXSLT
