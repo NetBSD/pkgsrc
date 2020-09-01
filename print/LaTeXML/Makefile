@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/09/01 08:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/01 08:04:22 wiz Exp $
 
 DISTNAME=	LaTeXML-0.8.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc www
 MASTER_SITES=	https://dlmf.nist.gov/LaTeXML/releases/
 
@@ -11,7 +11,7 @@ COMMENT=	LaTeX to XML/HTML/MathML Converter
 LICENSE=	public-domain
 
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
+#DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
 DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
