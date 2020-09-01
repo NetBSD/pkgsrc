@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/31 23:04:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/01 04:05:27 wiz Exp $
 
 DISTNAME=	setuptools-44.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,21 +13,18 @@ LICENSE=	python-software-foundation OR zpl-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fixture-config
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-virtualenv-[0-9]*:../../devel/py-test-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-.include "../../lang/python/distutils.mk"
-.if ${_PYTHON_VERSION:M3[6-9]}
-TEST_DEPENDS+=	${PYPKGPREFIX}-paver-[0-9]*:../../lang/py-paver
-.else
-TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
-.endif
-
 REPLACE_PYTHON+=	setuptools/command/easy_install.py
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 PYSETUPTESTTARGET=	pytest
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
