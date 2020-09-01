@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4685 2020/09/01 19:25:11 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4686 2020/09/01 21:28:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7279,3 +7279,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/bulk-medium to 20200901 [taca 2020-09-01]
 	Removed net/bind914 [taca 2020-09-01]
 	Updated www/kore to 4.0.0 [fcambus 2020-09-01]
+	Updated mail/rss2email to 3.12.2 [schmonz 2020-09-01]
