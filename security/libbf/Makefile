@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2019/11/04 21:12:54 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/09/02 22:16:49 kim Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/
+MASTER_SITES=	http://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.schneier.com/blowfish.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2020/08/31 18:11:22 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2020/09/02 22:16:49 kim Exp $
 #
 # used by shells/standalone-tcsh/Makefile
 # used by shells/static-tcsh/Makefile
@@ -8,7 +8,7 @@ PKGREVISION?=	0			# use ?= to allow for overrides.
 PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/
-MASTER_SITES+=	ftp://ftp.funet.fi/pub/mirrors/ftp.astron.com/pub/tcsh/
+MASTER_SITES+=	http://ftp.funet.fi/pub/mirrors/ftp.astron.com/pub/tcsh/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org	# use ?= to allow for overrides.
 HOMEPAGE=	https://www.tcsh.org/
