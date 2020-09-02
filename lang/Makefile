@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.577 2020/09/02 16:13:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.578 2020/09/02 16:15:05 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -62,6 +62,7 @@ SUBDIR+=	gauche
 SUBDIR+=	gawk
 SUBDIR+=	gcc-aux
 SUBDIR+=	gcc10
+SUBDIR+=	gcc10-libs
 SUBDIR+=	gcc2
 SUBDIR+=	gcc3
 SUBDIR+=	gcc3-c
