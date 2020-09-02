@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.165 2020/08/09 16:50:13 brook Exp $
+# $NetBSD: sites.mk,v 1.166 2020/09/02 22:16:48 kim Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -15,7 +15,7 @@ MASTER_SITE_GNU+=       \
 	https://ftp.nluug.nl/pub/gnu/ \
 	ftp://ftp.lip6.fr/pub/gnu/ \
 	http://mirrors.kernel.org/gnu/ \
-	ftp://ftp.funet.fi/pub/gnu/prep/ \
+	http://ftp.funet.fi/pub/gnu/prep/ \
 	http://ftp.gnu.org/pub/gnu/
 
 MASTER_SITE_GITHUB+=    \
@@ -39,7 +39,7 @@ MASTER_SITE_OSDN+=	\
 MASTER_SITE_PERL_CPAN+= \
 	https://cpan.perl.org/CPAN/modules/by-module/ \
 	ftp://cpan.pair.com/modules/by-module/ \
-	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/ \
+	http://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/ \
 	ftp://ftp.fi.muni.cz/pub/CPAN/modules/by-module/
 
 MASTER_SITE_R_CRAN+=    \
@@ -62,7 +62,7 @@ MASTER_SITE_R_CRAN+=    \
 	http://www.stats.bris.ac.uk/R/src/
 
 MASTER_SITE_TEX_CTAN+= \
-	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
+	http://ftp.funet.fi/pub/TeX/CTAN/ \
 	ftp://ftp.dante.de/tex-archive/ \
 	ftp://www.dnsbalance.ring.gr.jp/pub/text/CTAN/ \
 	http://www.dnsbalance.ring.gr.jp/archives/text/CTAN/
@@ -217,7 +217,7 @@ MASTER_SITE_CYGWIN+= \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
 	http://mirrors.xmission.com/cygwin/ \
 	ftp://ftp.dnsbalance.ring.gr.jp/pub/pc/gnu-win32/ \
-	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
+	http://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
 
 MASTER_SITE_IFARCHIVE+= \
 	http://ifarchive.flavorplex.com/if-archive/ \

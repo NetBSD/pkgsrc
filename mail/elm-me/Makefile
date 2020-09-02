@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2020/05/21 00:00:46 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/09/02 22:16:48 kim Exp $
 
 DISTNAME=		elm-2.4ME+93
 PKGNAME=		elm-me-2.4.93
 PKGREVISION=		6
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.funet.fi/pub/unix/mail/elm/elm-2.4ME+/
+MASTER_SITES=		http://ftp.funet.fi/pub/unix/mail/elm/elm-2.4ME+/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.instinct.org/elm/
