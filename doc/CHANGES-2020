@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4689 2020/09/02 10:00:56 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4690 2020/09/02 10:01:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7283,3 +7283,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/merkaartor to 0.18.4 [gdt 2020-09-02]
 	Removed graphics/libv4l1 [ryoon 2020-09-02]
 	Updated graphics/libv4l to 1.18.1 [ryoon 2020-09-02]
+	Updated www/firefox to 80.0.1 [ryoon 2020-09-02]
