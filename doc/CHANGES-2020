@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4686 2020/09/01 21:28:58 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.4687 2020/09/02 00:33:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7280,3 +7280,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed net/bind914 [taca 2020-09-01]
 	Updated www/kore to 4.0.0 [fcambus 2020-09-01]
 	Updated mail/rss2email to 3.12.2 [schmonz 2020-09-01]
+	Updated geography/merkaartor to 0.18.4 [gdt 2020-09-02]
