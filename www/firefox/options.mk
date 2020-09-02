@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.59 2020/08/29 22:24:27 ryoon Exp $
+# $NetBSD: options.mk,v 1.60 2020/09/02 10:00:23 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -81,12 +81,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 PLIST_VARS+=		webrtc
 .if !empty(PKG_OPTIONS:Mwebrtc)
-.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M9.99.[7-9]*)) || \
-    (${OPSYS} == "Linux")
-.include "../../graphics/libv4l1/buildlink3.mk"
-.else
 .include "../../graphics/libv4l/buildlink3.mk"
-.endif
 CONFIGURE_ARGS+=	--enable-webrtc
 PLIST.webrtc=		yes
 .else
