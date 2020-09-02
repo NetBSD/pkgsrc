@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3186 2020/08/31 23:04:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3187 2020/09/02 23:44:50 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1894,6 +1894,7 @@ SUBDIR+=	p5-Term-Size-Perl
 SUBDIR+=	p5-Term-Table
 SUBDIR+=	p5-Term-UI
 SUBDIR+=	p5-Test-API
+SUBDIR+=	p5-Test-Alien-CPP
 SUBDIR+=	p5-Test-Aggregate
 SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
