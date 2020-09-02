@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:11:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/09/02 13:19:04 mef Exp $
 
-DISTNAME=	Lingua-Stem-0.84
+DISTNAME=	Lingua-Stem-2.30
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lingua/}
 
@@ -20,7 +19,6 @@ DEPENDS+=	p5-Snowball-Norwegian>=1.0:../../textproc/p5-Snowball-Norwegian
 DEPENDS+=	p5-Snowball-Swedish>=1.01:../../textproc/p5-Snowball-Swedish
 DEPENDS+=	p5-Text-German-[0-9]*:../../textproc/p5-Text-German
 
-PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Lingua/Stem/.packlist
 
 .include "../../lang/perl5/module.mk"
