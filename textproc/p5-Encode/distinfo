@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2019/04/07 07:28:23 wen Exp $
+$NetBSD: distinfo,v 1.38 2020/09/02 12:26:11 mef Exp $
 
-SHA1 (Encode-3.01.tar.gz) = 39db23dce79fda1c775099663d3ce59745847871
-RMD160 (Encode-3.01.tar.gz) = 101383a9880eff73fa87b057f559fe6a608b53bc
-SHA512 (Encode-3.01.tar.gz) = b01d376852c7a0142eb54fbc4e23efbc78b035729e36ed2e0f8317928e7ca8f41fe845bf121796b28994af66c79550353ab7c26764d6c488a687aebfc5c47963
-Size (Encode-3.01.tar.gz) = 2054014 bytes
+SHA1 (Encode-3.05.tar.gz) = 7102e5137a3b2245b0b86ee8d9fed724de4e7165
+RMD160 (Encode-3.05.tar.gz) = be92f5a97b950474713d525f65d3d3e3662227bd
+SHA512 (Encode-3.05.tar.gz) = 463a3356358b95ab13be456cdb69994b7e38aecba2417933f67ea5d36d55252bf673c0499ceb3440ada2053b63f878a7840037bbe00b0140a2d98eb101ac9ad4
+Size (Encode-3.05.tar.gz) = 2054438 bytes
