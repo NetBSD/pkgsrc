@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_include_libv4l2rds.h,v 1.1 2020/08/29 22:18:42 ryoon Exp $
+$NetBSD: patch-lib_include_libv4l2rds.h,v 1.1 2020/09/02 09:54:33 ryoon Exp $
 
 --- lib/include/libv4l2rds.h.orig	2017-01-22 17:33:34.000000000 +0000
 +++ lib/include/libv4l2rds.h

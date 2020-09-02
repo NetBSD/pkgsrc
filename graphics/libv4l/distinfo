@@ -1,18 +1,19 @@
-$NetBSD: distinfo,v 1.18 2020/02/26 17:28:51 maya Exp $
+$NetBSD: distinfo,v 1.19 2020/09/02 09:54:33 ryoon Exp $
 
-SHA1 (libv4l-0.4.3.tar.gz) = 2539aa6b04650b97c9fc7ba95721f1e362a73031
-RMD160 (libv4l-0.4.3.tar.gz) = 4f0435d955f15602ac093385607417fab71deb17
-SHA512 (libv4l-0.4.3.tar.gz) = 3c474b431e632170fd9546a40ac5b4d2526198e95f0a96d4e4581746f662ab2ac4ac97811582567118a3dbee468288ced322ef1251ea82b474f1a0948a3a533d
-Size (libv4l-0.4.3.tar.gz) = 83022 bytes
-SHA1 (patch-aa) = 2e6e4d525be190a890c03ca3d00ba77f7e06d124
-SHA1 (patch-ab) = 5ade487d6d64d280f3fdae8afad99fbd0b6e5eda
-SHA1 (patch-ac) = 5457af836909f1c9f759c6a780daeb13968ec91f
-SHA1 (patch-ad) = 998090cf0748a9ecb51455de1fc5c0371795f226
-SHA1 (patch-ae) = ac2be9e54fd8bb5ecedb67c72b27d702abe75603
-SHA1 (patch-af) = 755ea097776507f28e91050171f3ff9f879a5354
-SHA1 (patch-ah) = c3f6a185fe8380b5c6b1f81cb62f0f4afef24449
-SHA1 (patch-ai) = 8f22e4050d5e20981bfdd1fc51e572e42347c2b5
-SHA1 (patch-aj) = 521abdfba83a34716ce0909f75d784fe0b6ecc8a
-SHA1 (patch-ak) = 64995ff50b0f306703d42177920fe5ce230fee85
-SHA1 (patch-al) = 8d020ef01f9956b37f718a529306e5f13aaa03a3
-SHA1 (patch-am) = 21573a1e8cb19dd1d96b4e4898b72ef4ea22a984
+SHA1 (v4l-utils-1.18.1.tar.bz2) = 05017f531d4082efce26392c01d085dd4da10f18
+RMD160 (v4l-utils-1.18.1.tar.bz2) = 7eb9e7aaf0ef4249477479cb4573501935046998
+SHA512 (v4l-utils-1.18.1.tar.bz2) = 2e9f77abc2fd65bd6a5508831185a941553441384719293f99ece7e6c53c37bb142eb3719532b11f1cef48df691667d2a4235d920338d672738d40659d499056
+Size (v4l-utils-1.18.1.tar.bz2) = 1995211 bytes
+SHA1 (patch-configure) = 5831acf2dbe102537632036ccf3b8a33be68ccb3
+SHA1 (patch-lib_include_libv4l1-videodev.h) = 84256cb64dd755b8a12edd9844bc362c35f10dd4
+SHA1 (patch-lib_include_libv4l2rds.h) = ca375e9bac291c8cc295a3393e0497eb12a01cb9
+SHA1 (patch-lib_include_libv4lconvert.h) = e5807fa26d4e73a001f829640902cf22c14b6dfe
+SHA1 (patch-lib_libv4l-mplane_libv4l-mplane.c) = df0d6f863ce3b7ff4b2ad87b8cd348785d0200c7
+SHA1 (patch-lib_libv4l1_libv4l1.c) = 9aa0fd6dccd372f81e409c6ac0768be94957ab31
+SHA1 (patch-lib_libv4l2_libv4l2.c) = f086f39fd25684f91be773637d1922416d224dc4
+SHA1 (patch-lib_libv4l2_log.c) = bcab0be4b49a38271bbc2b4a1d56f9289a471d40
+SHA1 (patch-lib_libv4l2_v4l2convert.c) = f5fefb20f83005b0f91010af6ec9b7f9f76fabe0
+SHA1 (patch-lib_libv4l2rds_libv4l2rds.c) = f6779f323a64bb12ea14829241363f2fc0f9ee2c
+SHA1 (patch-lib_libv4lconvert_control_libv4lcontrol.c) = e4a96570f22d837bbf7248231464a143c339e8ea
+SHA1 (patch-lib_libv4lconvert_libv4lsyscall-priv.h) = 2795b366f05365bf7a7caa142ff4b93b38603787
+SHA1 (patch-lib_libv4lconvert_processing_libv4lprocessing.h) = ecb02a055df546eb0f4bcea96f1a55e312495cdd

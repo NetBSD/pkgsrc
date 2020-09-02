@@ -1,38 +1,59 @@
-# $NetBSD: Makefile,v 1.18 2019/11/14 15:25:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2020/09/02 09:54:33 ryoon Exp $
 
-DISTNAME=	libv4l-0.4.3
-PKGREVISION=	4
+LIBV4L_VERS=	1.18.1
+DISTNAME=	v4l-utils-${LIBV4L_VERS}
 CATEGORIES=	graphics
-#MASTER_SITES=	http://people.atrpms.net/~hdegoede/
+PKGNAME=	libv4l-${LIBV4L_VERS}
+MASTER_SITES=	https://www.linuxtv.org/downloads/v4l-utils/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://people.atrpms.net/~hdegoede/
 COMMENT=	Video4Linux userspace library
 LICENSE=	gnu-gpl-v2
 
+FORTIFY_SUPPORTED=	no
+GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 
-USE_TOOLS+=	gmake
+CONFIGURE_ARGS+=	--disable-libdvbv5
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--disable-v4l-utils
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") \
-	&& !exists(/usr/include/sys/videoio.h)
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+NEWHEADER!=	${GREP} V4L2_SEL_TGT_CROP /usr/include/sys/videoio.h > /dev/null 2>&1 || echo "no"
+.endif
+
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && !exists(/usr/include/sys/videoio.h)
 PLIST.needs_videoio=	yes
 INSTALLATION_DIRS+=	include/sys
 
 pre-configure:
 	${MKDIR} ${BUILDLINK_DIR}/include/sys
 	cp ${FILESDIR}/videoio.h ${BUILDLINK_DIR}/include/sys
-	cp ${FILESDIR}/videodev.h ${BUILDLINK_DIR}/include
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/videoio.h ${DESTDIR}${PREFIX}/include/sys
-.elif !exists(/usr/include/linux/videodev.h)
+
+.elif (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && ${NEWHEADER} == "no"
+
+pre-configure:
+	${MKDIR} ${BUILDLINK_DIR}/include/sys
+	cp ${FILESDIR}/videoio.h ${BUILDLINK_DIR}/include/sys
+
+.elif ${OPSYS} == "Linux" && !exists(/usr/include/linux/videodev.h)
 pre-configure:
 	${MKDIR} ${BUILDLINK_DIR}/include/linux
 	cp ${FILESDIR}/videodev.h ${BUILDLINK_DIR}/include/linux
 	${LN} -sf ${BUILDLINK_DIR}/include/linux/videodev.h \
+		${BUILDLINK_DIR}/include/
+	cp ${FILESDIR}/videodev2.h ${BUILDLINK_DIR}/include/linux
+	${LN} -sf ${BUILDLINK_DIR}/include/linux/videodev2.h \
 		${BUILDLINK_DIR}/include/
 .endif
 
