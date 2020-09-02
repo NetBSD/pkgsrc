@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2020/08/17 20:18:28 leot Exp $
+# $NetBSD: Makefile,v 1.107 2020/09/02 21:42:48 wiz Exp $
 
 DISTNAME=		meld-3.21.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
