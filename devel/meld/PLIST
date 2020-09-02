@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.36 2020/04/26 16:17:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2020/09/02 21:42:48 wiz Exp $
 bin/meld
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/meld/__init__.py
 ${PYSITELIB}/meld/__init__.pyc
 ${PYSITELIB}/meld/__init__.pyo
@@ -195,8 +198,6 @@ ${PYSITELIB}/meld/vcview.pyo
 ${PYSITELIB}/meld/windowstate.py
 ${PYSITELIB}/meld/windowstate.pyc
 ${PYSITELIB}/meld/windowstate.pyo
-@pkgdir share/meld/icons
-@pkgdir share/meld/ui
 man/man1/meld.1
 share/applications/org.gnome.meld.desktop
 share/doc/${PKGNAME}/COPYING
