@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2020/08/31 18:09:40 wiz Exp $
+# $NetBSD: Makefile,v 1.222 2020/09/02 03:23:10 gutteridge Exp $
 
 DISTNAME=	graphviz-2.44.1
 PKGREVISION=	3
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
 
 CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
 CHECK_PORTABILITY_SKIP+=	windows/*
-
-PRIVILEGED_STAGES+=	clean
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
