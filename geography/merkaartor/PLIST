@@ -1,15 +1,27 @@
-@comment $NetBSD: PLIST,v 1.6 2011/04/11 20:15:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/09/02 00:24:26 gdt Exp $
 bin/merkaartor
-lib/merkaartor/plugins/background/libMCadastreFranceBackgroundPlugin.la
-lib/merkaartor/plugins/background/libMGdalBackgroundPlugin.la
-lib/merkaartor/plugins/background/libMGeoTiffBackgroundPlugin.la
-lib/merkaartor/plugins/background/libMMsBingMapBackgroundPlugin.la
-lib/merkaartor/plugins/background/libMWalkingPapersBackgroundPlugin.la
-lib/merkaartor/plugins/background/libMYahooBackgroundPlugin.la
-lib/merkaartor/plugins/background/libMYahooTiledBackgroundPlugin.la
-lib/merkaartor/plugins/styles/libskulpture.la
-share/applications/merkaartor.desktop
+lib/merkaartor/plugins/background/libMGdalBackgroundPlugin.so
+lib/merkaartor/plugins/background/libMGeoTiffBackgroundPlugin.so
+lib/merkaartor/plugins/background/libMMsBingMapBackgroundPlugin.so
+lib/merkaartor/plugins/background/libMWalkingPapersBackgroundPlugin.so
+share/applications/org.merkaartor.merkaartor.desktop
+share/icons/hicolor/128x128/apps/merkaartor.png
+share/icons/hicolor/16x16/apps/merkaartor.png
+share/icons/hicolor/192x192/apps/merkaartor.png
+share/icons/hicolor/22x22/apps/merkaartor.png
+share/icons/hicolor/24x24/apps/merkaartor.png
+share/icons/hicolor/256x256/apps/merkaartor.png
+share/icons/hicolor/32x32/apps/merkaartor.png
+share/icons/hicolor/36x36/apps/merkaartor.png
+share/icons/hicolor/40x40/apps/merkaartor.png
+share/icons/hicolor/42x42/apps/merkaartor.png
 share/icons/hicolor/48x48/apps/merkaartor.png
+share/icons/hicolor/512x512/apps/merkaartor.png
+share/icons/hicolor/64x64/apps/merkaartor.png
+share/icons/hicolor/72x72/apps/merkaartor.png
+share/icons/hicolor/80x80/apps/merkaartor.png
+share/icons/hicolor/8x8/apps/merkaartor.png
+share/icons/hicolor/96x96/apps/merkaartor.png
 share/merkaartor/BookmarksList.xml
 share/merkaartor/Projections.xml
 share/merkaartor/TmsServersList.xml
@@ -17,6 +29,8 @@ share/merkaartor/WmsServersList.xml
 share/merkaartor/translations/merkaartor_ar.qm
 share/merkaartor/translations/merkaartor_cs.qm
 share/merkaartor/translations/merkaartor_de.qm
+share/merkaartor/translations/merkaartor_de_AT.qm
+share/merkaartor/translations/merkaartor_en.qm
 share/merkaartor/translations/merkaartor_es.qm
 share/merkaartor/translations/merkaartor_et.qm
 share/merkaartor/translations/merkaartor_fr.qm
@@ -32,4 +46,6 @@ share/merkaartor/translations/merkaartor_ru.qm
 share/merkaartor/translations/merkaartor_sk.qm
 share/merkaartor/translations/merkaartor_sv.qm
 share/merkaartor/translations/merkaartor_uk.qm
-share/merkaartor/world_background.osb
+share/merkaartor/translations/merkaartor_vi.qm
+share/merkaartor/translations/merkaartor_zh_CN.qm
+share/merkaartor/translations/merkaartor_zh_TW.qm
