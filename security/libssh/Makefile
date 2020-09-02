@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/04/12 21:05:01 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/09/02 11:45:51 nia Exp $
 #
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
@@ -6,6 +6,7 @@
 VER=		0.9.4
 DISTNAME=	libssh-${VER}
 PKGNAME=	libssh-0.94
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh.org/files/${VER:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +24,7 @@ TEST_TARGET=		test
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=		-DUNIT_TESTING=ON
+CMAKE_ARGS+=		-DWITH_EXAMPLES=OFF
 
 LDFLAGS.SunOS+=		-lnsl -lsocket
 
