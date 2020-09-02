@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/11/07 10:21:43 he Exp $
+$NetBSD: distinfo,v 1.2 2020/09/02 23:03:18 mef Exp $
 
-SHA1 (Alien-Libxml2-0.11.tar.gz) = 1c20b47dad28b07e6593448529b580a20c0d2c34
-RMD160 (Alien-Libxml2-0.11.tar.gz) = 6a16240a3c02d1a2fbf40a0793fb717d2929b605
-SHA512 (Alien-Libxml2-0.11.tar.gz) = ddc55ca0a22afff9651423a79a3f3d653a0c21a2ddec8e2038828c09d385f73f47c1f0c6aabb5ecfdf41741bdc06afb065eb7aa3d0fc1890e5c5c5b5a449cb1b
-Size (Alien-Libxml2-0.11.tar.gz) = 19224 bytes
+SHA1 (Alien-Libxml2-0.16.tar.gz) = 34eb3b676d1ee026d95345384d243111acd39576
+RMD160 (Alien-Libxml2-0.16.tar.gz) = cb21d051062082cee290269de5f4e6583e5f0543
+SHA512 (Alien-Libxml2-0.16.tar.gz) = 54d3f670047b26934140be28bec5ab27c655daa459409bda00655d6f652f5099b07d2e286f59825a36e7dc56bca1e92a0af19c33582fa90f3f26aff4202334ac
+Size (Alien-Libxml2-0.16.tar.gz) = 19890 bytes
