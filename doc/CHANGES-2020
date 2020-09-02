@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4700 2020/09/02 17:47:48 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4701 2020/09/02 18:12:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7294,3 +7294,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/gcc9-libs version 9.3.0nb4 [ryoon 2020-09-02]
 	Added lang/gcc10-libs version 10.2.0nb2 [ryoon 2020-09-02]
 	Updated x11/dmenu to 5.0 [leot 2020-09-02]
+	Updated devel/py-configobj to 5.0.6nb2 [wiz 2020-09-02]
