@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4702 2020/09/02 21:42:29 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4703 2020/09/02 21:59:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7296,3 +7296,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/dmenu to 5.0 [leot 2020-09-02]
 	Updated devel/py-configobj to 5.0.6nb2 [wiz 2020-09-02]
 	Updated devel/py-setuptools to 50.0.1 [wiz 2020-09-02]
+	Updated devel/p5-Test2-Suite to 0.000135 [mef 2020-09-02]
