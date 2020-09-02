@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.904 2020/08/31 17:25:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.905 2020/09/02 09:55:16 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -342,7 +342,6 @@ SUBDIR+=	libscigraphica
 SUBDIR+=	libsixel
 SUBDIR+=	libspiro
 SUBDIR+=	libv4l
-SUBDIR+=	libv4l1
 SUBDIR+=	libvideogfx
 SUBDIR+=	libwebp
 SUBDIR+=	libwmf
