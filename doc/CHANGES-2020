@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4695 2020/09/02 12:40:17 mef Exp $
+$NetBSD: CHANGES-2020,v 1.4696 2020/09/02 13:15:21 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7289,3 +7289,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-Simple to 1.302177 [mef 2020-09-02]
 	Updated textproc/p5-Filter to 1.60 [mef 2020-09-02]
 	Updated textproc/p5-Kwalify to 1.23 [mef 2020-09-02]
+	Updated textproc/p5-Encode to 3.07 [otis 2020-09-02]
