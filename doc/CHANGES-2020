@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4699 2020/09/02 16:14:30 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4700 2020/09/02 17:47:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7293,3 +7293,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Lingua-Stem to 2.30 [mef 2020-09-02]
 	Added lang/gcc9-libs version 9.3.0nb4 [ryoon 2020-09-02]
 	Added lang/gcc10-libs version 10.2.0nb2 [ryoon 2020-09-02]
+	Updated x11/dmenu to 5.0 [leot 2020-09-02]
