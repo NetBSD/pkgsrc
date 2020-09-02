@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_libv4lconvert_control_libv4lcontrol.c,v 1.1 2020/08/29 22:18:42 ryoon Exp $
+$NetBSD: patch-lib_libv4lconvert_control_libv4lcontrol.c,v 1.1 2020/09/02 09:54:33 ryoon Exp $
 
 --- lib/libv4lconvert/control/libv4lcontrol.c.orig	2020-05-02 12:16:20.000000000 +0000
 +++ lib/libv4lconvert/control/libv4lcontrol.c

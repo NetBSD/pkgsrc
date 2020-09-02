@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_libv4l2_libv4l2.c,v 1.1 2020/08/29 22:18:42 ryoon Exp $
+$NetBSD: patch-lib_libv4l2_libv4l2.c,v 1.1 2020/09/02 09:54:33 ryoon Exp $
 
 --- lib/libv4l2/libv4l2.c.orig	2017-12-27 13:50:55.000000000 +0000
 +++ lib/libv4l2/libv4l2.c
