@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20052 2020/09/01 14:09:46 taca Exp $
+$NetBSD: TODO,v 1.20053 2020/09/02 21:42:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -971,7 +971,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
-	o py-setuptools-50.0.0 [broken on NetBSD: https://github.com/pypa/setuptools/issues/2364]
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-wxWidgets-4.0.0
