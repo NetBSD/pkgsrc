@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4691 2020/09/02 10:02:09 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4692 2020/09/02 12:26:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7285,3 +7285,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libv4l to 1.18.1 [ryoon 2020-09-02]
 	Updated www/firefox to 80.0.1 [ryoon 2020-09-02]
 	Updated www/firefox-l10n to 80.0.1 [ryoon 2020-09-02]
+	Updated textproc/p5-Encode to 3.05 [mef 2020-09-02]
