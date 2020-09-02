@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4697 2020/09/02 13:19:17 mef Exp $
+$NetBSD: CHANGES-2020,v 1.4698 2020/09/02 16:12:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7291,3 +7291,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Kwalify to 1.23 [mef 2020-09-02]
 	Updated textproc/p5-Encode to 3.07 [otis 2020-09-02]
 	Updated textproc/p5-Lingua-Stem to 2.30 [mef 2020-09-02]
+	Added lang/gcc9-libs version 9.3.0nb4 [ryoon 2020-09-02]
