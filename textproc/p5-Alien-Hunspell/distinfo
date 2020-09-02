@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/28 04:18:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2020/09/02 23:47:55 mef Exp $
 
-SHA1 (Alien-Hunspell-0.11.tar.gz) = 3dbb2fcaa154f78f95f1568f8ee8740e7854da38
-RMD160 (Alien-Hunspell-0.11.tar.gz) = 1408ad5555a40151a9082833f81e246e9b8c6c1a
-SHA512 (Alien-Hunspell-0.11.tar.gz) = 3d8ac3db7f60299f9d0e8c7fae6d1d18df9f90f89ccf668f97efcc1bbbd378734fe7da08a14981a91606be1924bf5c8500c4906b87bb4d0e51c3857dca098b79
-Size (Alien-Hunspell-0.11.tar.gz) = 16229 bytes
+SHA1 (Alien-Hunspell-0.16.tar.gz) = d3684ee74302d14453081efa01bbccf1eb7b8bc1
+RMD160 (Alien-Hunspell-0.16.tar.gz) = 285a6b0cd0c8d692f813df2fcd3c0ded63ac8582
+SHA512 (Alien-Hunspell-0.16.tar.gz) = d48933066aef0559f4af0e98ccc4a5b86b46ca78efbefd551056414eeb4c96d5cc88075b2567fea6fe1663c2eaf110557e741cdcc029e7f2d5b0eebf22692a67
+Size (Alien-Hunspell-0.16.tar.gz) = 17991 bytes
