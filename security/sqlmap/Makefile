@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2020/08/31 18:11:22 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/09/03 17:28:00 leot Exp $
 
-DISTNAME=	sqlmap-1.4.7
-PKGREVISION=	1
+DISTNAME=	sqlmap-1.4.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -25,6 +24,7 @@ REPLACE_BASH+=	sqlmap/extra/shutils/pycodestyle.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/pydiatra.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/pyflakes.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/pypi.sh
+REPLACE_BASH+=	sqlmap/extra/shutils/recloak.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/strip.sh
 
 REPLACE_PERL+=	sqlmap/extra/icmpsh/icmpsh-m.pl
