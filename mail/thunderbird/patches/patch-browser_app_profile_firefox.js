@@ -1,8 +1,8 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.3 2020/06/15 15:44:22 nia Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.4 2020/09/03 15:26:22 ryoon Exp $
 
---- browser/app/profile/firefox.js.orig	2020-06-02 14:07:51.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2020-08-28 21:32:23.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -1862,6 +1862,12 @@ pref("prio.publicKeyB", "26E6674E65425B8
+@@ -1921,6 +1921,12 @@ pref("fission.frontend.simulate-messages
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
