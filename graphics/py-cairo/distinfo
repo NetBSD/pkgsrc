@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2019/11/06 12:53:10 wiz Exp $
+$NetBSD: distinfo,v 1.27 2020/09/03 15:45:12 wiz Exp $
 
-SHA1 (pycairo-1.18.2.tar.gz) = c2474a12318433c15d94a5f48a80578609cf712a
-RMD160 (pycairo-1.18.2.tar.gz) = 49a2ed4c9cf5c2606e7cf7c9693bceff40a1bebf
-SHA512 (pycairo-1.18.2.tar.gz) = 279ea80413ba55d493d51455685da09afa1f5c45e2930c3fca3e417a8afe6645a0d8131201f79482de59e5ec56cfef62eac65ed88fe88866bfcc06503dcc59e0
-Size (pycairo-1.18.2.tar.gz) = 200462 bytes
+SHA1 (pycairo-1.19.1.tar.gz) = af8f72fd7bf9f3a234357e38589bbd58d3a0ba0d
+RMD160 (pycairo-1.19.1.tar.gz) = db531fc2fa3baaf71f635f960e2782ed6a0a6317
+SHA512 (pycairo-1.19.1.tar.gz) = a7955a2566d5e5586154b62f3aeef824e1e6076cbd3eb86af8288fedcc7d61c4e36a53691298cf9df2e2df7fc96292f96dec92c5d4343e6c1b4c971e97d0650f
+Size (pycairo-1.19.1.tar.gz) = 205196 bytes
