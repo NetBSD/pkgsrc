@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4713 2020/09/03 11:01:59 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4714 2020/09/03 11:42:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7307,3 +7307,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/onefetch version 2.3.0 [pin 2020-09-03]
 	Updated games/woof to 2.1.1 [micha 2020-09-03]
 	Updated www/go-ffuf to 1.1.0 [leot 2020-09-03]
+	Updated www/py-curl to 7.43.0.6 [leot 2020-09-03]
