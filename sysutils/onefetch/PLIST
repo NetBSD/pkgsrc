@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/03 09:28:26 pin Exp $
+bin/onefetch
