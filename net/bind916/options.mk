@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/08/30 19:26:45 christos Exp $
+# $NetBSD: options.mk,v 1.3 2020/09/03 20:35:17 otis Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind916
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
@@ -45,6 +45,8 @@ PKG_SUGGESTED_OPTIONS+=	blocklist
 .include "../../databases/lmdb/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-lmdb=${PREFIX}
 PLIST.lmdb=		yes
+.else
+CONFIGURE_ARGS+=	--with-lmdb=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
