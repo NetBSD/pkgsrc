@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2019/11/03 10:39:12 rillig Exp $
+# $NetBSD: builtin.mk,v 1.10 2020/09/03 08:58:42 prlw1 Exp $
 
 BUILTIN_PKG:=	gmp
 
@@ -68,9 +68,7 @@ CHECK_BUILTIN.gmp?=	no
 .if !empty(CHECK_BUILTIN.gmp:M[Nn][Oo])
 .  if !empty(USE_BUILTIN.gmp:M[Yy][Ee][Ss])
 GMP_INCLUDE=		${H_GMP:H}
-CONFIGURE_ARGS+=	--with-gmp-include=${GMP_INCLUDE}
 BUILDLINK_INCDIRS.gmp=	${GMP_INCLUDE}
-CONFIGURE_ARGS+=	--with-gmp-lib=${BUILDLINK_PREFIX.gmp}/lib${LIBABISUFFIX}
 BUILDLINK_LIBDIRS.gmp=	lib${LIBABISUFFIX}
 CPPFLAGS+=		-I${GMP_INCLUDE}
 CFLAGS+=		-I${GMP_INCLUDE}
