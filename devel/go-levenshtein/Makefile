@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/08/14 20:01:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/03 07:29:45 bsiegert Exp $
 
 DISTNAME=	go-levenshtein-1.2.3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agext/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 GITHUB_PROJECT=	levenshtein
 GITHUB_TAG=	v${PKGVERSION_NOREV}
