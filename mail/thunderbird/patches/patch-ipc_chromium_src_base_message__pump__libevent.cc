@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_message__pump__libevent.cc,v 1.3 2019/09/21 10:55:17 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_message__pump__libevent.cc,v 1.4 2020/09/03 15:26:22 ryoon Exp $
 
---- ipc/chromium/src/base/message_pump_libevent.cc.orig	2019-09-09 23:43:28.000000000 +0000
+--- ipc/chromium/src/base/message_pump_libevent.cc.orig	2020-08-28 21:32:41.000000000 +0000
 +++ ipc/chromium/src/base/message_pump_libevent.cc
 @@ -22,6 +22,7 @@
  

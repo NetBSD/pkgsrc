@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.12 2019/09/21 10:55:17 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.13 2020/09/03 15:26:22 ryoon Exp $
 
---- ipc/chromium/src/base/platform_thread_posix.cc.orig	2019-09-09 23:43:28.000000000 +0000
+--- ipc/chromium/src/base/platform_thread_posix.cc.orig	2020-08-28 21:32:41.000000000 +0000
 +++ ipc/chromium/src/base/platform_thread_posix.cc
 @@ -12,7 +12,9 @@
  #if defined(OS_MACOSX)
