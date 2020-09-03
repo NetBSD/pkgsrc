@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/08/25 13:47:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2020/09/03 07:29:52 bsiegert Exp $
 
 DISTNAME=		v${VERSION}
 PKGNAME=		${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
-PKGREVISION=		4
+PKGREVISION=		5
 VERSION=		2.0.1
 GITHUB_PROJECT=		vultr
 GITHUB_TAG=		${DISTNAME}

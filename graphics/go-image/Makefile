@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/08/14 20:01:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24 2020/09/03 07:29:49 bsiegert Exp $
 
 DISTNAME=		go-image-20170405
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		image
