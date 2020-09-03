@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/05/11 13:38:37 kleink Exp $
+$NetBSD: distinfo,v 1.12 2020/09/03 19:20:23 kleink Exp $
 
-SHA1 (WTForms-2.3.1.tar.gz) = 2b74b691f4765dd1e373954764376ae2f8822f1c
-RMD160 (WTForms-2.3.1.tar.gz) = 5a4d70bfa4ccac0bda1109f877acaaf7387faebe
-SHA512 (WTForms-2.3.1.tar.gz) = 40b810d2d0ce6d2e7880615fb5c3b3e55cfade8e352be5d626d0de16f00a9ef4626ffa106b67d0cbef15e42513073db52ba1ceb04cb18146bba0ba9c26236fdd
-Size (WTForms-2.3.1.tar.gz) = 162773 bytes
+SHA1 (WTForms-2.3.3.tar.gz) = faac5040f471c830730dcbaf652bcee8d9e87e94
+RMD160 (WTForms-2.3.3.tar.gz) = e000e8d8d490317618a4376d737f500d647aeae4
+SHA512 (WTForms-2.3.3.tar.gz) = 934cf1483beec37d698d13a81e44a733d082baad1f418d3087306fd908df809d37fffe000ed1ecabf65d2c31b57034bf6f25c3b77cfc5598ae1f65bf4a115fe5
+Size (WTForms-2.3.3.tar.gz) = 162945 bytes
