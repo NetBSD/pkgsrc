@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/09/02 18:12:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/03 15:46:06 wiz Exp $
 
 DISTNAME=	configobj-5.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,5 +15,5 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

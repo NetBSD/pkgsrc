@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/05/18 06:09:40 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/09/03 15:46:06 wiz Exp $
 
 DISTNAME=	bzr-gtk-${VER}
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	Various GTK+ frontends to Bazaar commands
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo118
 
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_ACCEPTED= 27 # py-gtk2
