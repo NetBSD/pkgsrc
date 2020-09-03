@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/03 19:07:19 otis Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/03 19:07:59 otis Exp $
 
 DISTNAME=	libheif-1.8.0
 CATEGORIES=	graphics
@@ -17,8 +17,6 @@ USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libheif.pc.in
-
-#BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
