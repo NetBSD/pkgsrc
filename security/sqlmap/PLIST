@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/06/11 20:55:10 leot Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/09/03 17:28:00 leot Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -183,6 +183,7 @@ ${PYSITELIB}/sqlmap/extra/shutils/pycodestyle.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pydiatra.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pyflakes.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pypi.sh
+${PYSITELIB}/sqlmap/extra/shutils/recloak.sh
 ${PYSITELIB}/sqlmap/extra/shutils/strip.sh
 ${PYSITELIB}/sqlmap/extra/vulnserver/__init__.py
 ${PYSITELIB}/sqlmap/extra/vulnserver/__init__.pyc
@@ -1073,6 +1074,9 @@ ${PYSITELIB}/sqlmap/sqlmap.pyo
 ${PYSITELIB}/sqlmap/sqlmapapi.py
 ${PYSITELIB}/sqlmap/sqlmapapi.pyc
 ${PYSITELIB}/sqlmap/sqlmapapi.pyo
+${PYSITELIB}/sqlmap/tamper/0eunion.py
+${PYSITELIB}/sqlmap/tamper/0eunion.pyc
+${PYSITELIB}/sqlmap/tamper/0eunion.pyo
 ${PYSITELIB}/sqlmap/tamper/__init__.py
 ${PYSITELIB}/sqlmap/tamper/__init__.pyc
 ${PYSITELIB}/sqlmap/tamper/__init__.pyo
@@ -1091,6 +1095,9 @@ ${PYSITELIB}/sqlmap/tamper/base64encode.pyo
 ${PYSITELIB}/sqlmap/tamper/between.py
 ${PYSITELIB}/sqlmap/tamper/between.pyc
 ${PYSITELIB}/sqlmap/tamper/between.pyo
+${PYSITELIB}/sqlmap/tamper/binary.py
+${PYSITELIB}/sqlmap/tamper/binary.pyc
+${PYSITELIB}/sqlmap/tamper/binary.pyo
 ${PYSITELIB}/sqlmap/tamper/bluecoat.py
 ${PYSITELIB}/sqlmap/tamper/bluecoat.pyc
 ${PYSITELIB}/sqlmap/tamper/bluecoat.pyo
@@ -1118,9 +1125,15 @@ ${PYSITELIB}/sqlmap/tamper/commentbeforeparentheses.pyo
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.py
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.pyc
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.pyo
+${PYSITELIB}/sqlmap/tamper/dunion.py
+${PYSITELIB}/sqlmap/tamper/dunion.pyc
+${PYSITELIB}/sqlmap/tamper/dunion.pyo
 ${PYSITELIB}/sqlmap/tamper/equaltolike.py
 ${PYSITELIB}/sqlmap/tamper/equaltolike.pyc
 ${PYSITELIB}/sqlmap/tamper/equaltolike.pyo
+${PYSITELIB}/sqlmap/tamper/equaltorlike.py
+${PYSITELIB}/sqlmap/tamper/equaltorlike.pyc
+${PYSITELIB}/sqlmap/tamper/equaltorlike.pyo
 ${PYSITELIB}/sqlmap/tamper/escapequotes.py
 ${PYSITELIB}/sqlmap/tamper/escapequotes.pyc
 ${PYSITELIB}/sqlmap/tamper/escapequotes.pyo
@@ -1154,6 +1167,9 @@ ${PYSITELIB}/sqlmap/tamper/lowercase.pyo
 ${PYSITELIB}/sqlmap/tamper/luanginx.py
 ${PYSITELIB}/sqlmap/tamper/luanginx.pyc
 ${PYSITELIB}/sqlmap/tamper/luanginx.pyo
+${PYSITELIB}/sqlmap/tamper/misunion.py
+${PYSITELIB}/sqlmap/tamper/misunion.pyc
+${PYSITELIB}/sqlmap/tamper/misunion.pyo
 ${PYSITELIB}/sqlmap/tamper/modsecurityversioned.py
 ${PYSITELIB}/sqlmap/tamper/modsecurityversioned.pyc
 ${PYSITELIB}/sqlmap/tamper/modsecurityversioned.pyo
@@ -1184,6 +1200,9 @@ ${PYSITELIB}/sqlmap/tamper/randomcase.pyo
 ${PYSITELIB}/sqlmap/tamper/randomcomments.py
 ${PYSITELIB}/sqlmap/tamper/randomcomments.pyc
 ${PYSITELIB}/sqlmap/tamper/randomcomments.pyo
+${PYSITELIB}/sqlmap/tamper/schemasplit.py
+${PYSITELIB}/sqlmap/tamper/schemasplit.pyc
+${PYSITELIB}/sqlmap/tamper/schemasplit.pyo
 ${PYSITELIB}/sqlmap/tamper/sp_password.py
 ${PYSITELIB}/sqlmap/tamper/sp_password.pyc
 ${PYSITELIB}/sqlmap/tamper/sp_password.pyo
