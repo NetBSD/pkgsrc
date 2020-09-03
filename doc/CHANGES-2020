@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4712 2020/09/03 10:27:59 micha Exp $
+$NetBSD: CHANGES-2020,v 1.4713 2020/09/03 11:01:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7306,3 +7306,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/miller to 5.9.1 [fcambus 2020-09-03]
 	Added sysutils/onefetch version 2.3.0 [pin 2020-09-03]
 	Updated games/woof to 2.1.1 [micha 2020-09-03]
+	Updated www/go-ffuf to 1.1.0 [leot 2020-09-03]
