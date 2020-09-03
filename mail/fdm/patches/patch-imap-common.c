@@ -1,4 +1,4 @@
-$NetBSD: patch-imap-common.c,v 1.1 2020/08/29 13:43:54 leot Exp $
+$NetBSD: patch-imap-common.c,v 1.2 2020/09/03 10:46:39 leot Exp $
 
 Add support for OAUTHBEARER (OAuth 2.0 bearer tokens, as documented by
 RFC 7628) for IMAP.
@@ -52,7 +52,7 @@ Patch shared upstream via:
 +	char			*src, *b64;
 +
 +	xasprintf(&src,
-+	    "n,a=%s,\001host=%s\001port=%d\001auth=Bearer %s\001\001",
++	    "n,a=%s,\001host=%s\001port=%s\001auth=Bearer %s\001\001",
 +	    data->user, data->server.host, data->server.port, data->pass);
 +	b64 = imap_base64_encode(src);
 +	xfree(src);
