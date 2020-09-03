@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/07 11:16:10 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/09/03 20:30:56 nia Exp $
 bin/mbedtls_aescrypt2
 bin/mbedtls_benchmark
 bin/mbedtls_cert_app
@@ -12,6 +12,8 @@ bin/mbedtls_dh_genprime
 bin/mbedtls_dh_server
 bin/mbedtls_dtls_client
 bin/mbedtls_dtls_server
+bin/mbedtls_ecdh_curve25519
+bin/mbedtls_ecdsa
 bin/mbedtls_gen_entropy
 bin/mbedtls_gen_key
 bin/mbedtls_gen_random_ctr_drbg
@@ -19,6 +21,7 @@ bin/mbedtls_gen_random_havege
 bin/mbedtls_generic_sum
 bin/mbedtls_hello
 bin/mbedtls_key_app
+bin/mbedtls_key_app_writer
 bin/mbedtls_key_ladder_demo
 bin/mbedtls_key_ladder_demo.sh
 bin/mbedtls_mini_client
@@ -35,16 +38,21 @@ bin/mbedtls_rsa_decrypt
 bin/mbedtls_rsa_encrypt
 bin/mbedtls_rsa_genkey
 bin/mbedtls_rsa_sign
+bin/mbedtls_rsa_sign_pss
 bin/mbedtls_rsa_verify
+bin/mbedtls_rsa_verify_pss
 bin/mbedtls_selftest
 bin/mbedtls_ssl_client1
 bin/mbedtls_ssl_client2
+bin/mbedtls_ssl_context_info
 bin/mbedtls_ssl_fork_server
 bin/mbedtls_ssl_mail_client
 bin/mbedtls_ssl_pthread_server
 bin/mbedtls_ssl_server
+bin/mbedtls_ssl_server2
 bin/mbedtls_strerror
 bin/mbedtls_udp_proxy
+bin/mbedtls_zeroize
 include/mbedtls/aes.h
 include/mbedtls/aesni.h
 include/mbedtls/arc4.h
