@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/11/04 22:10:12 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/09/03 15:46:06 wiz Exp $
 
 DISTNAME=	graphite-web-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-django>=1.3.1:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.3.1:../../www/py-django-tagging
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo118
 
 EGG_NAME=	${DISTNAME:S/graphite-/graphite_/}
 
