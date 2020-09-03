@@ -1,11 +1,9 @@
-# $NetBSD: options.mk,v 1.23 2020/06/29 11:53:09 nia Exp $
+# $NetBSD: options.mk,v 1.24 2020/09/03 15:26:22 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 
 PKG_SUPPORTED_OPTIONS=	alsa dbus debug mozilla-jemalloc \
-			official-mozilla-branding pulseaudio \
-			mozilla-lightning
-PKG_SUGGESTED_OPTIONS+=	mozilla-lightning
+			official-mozilla-branding pulseaudio
 
 PLIST_VARS+=		branding nobranding debug jemalloc
 
@@ -47,14 +45,6 @@ BUILDLINK_TRANSFORM+=	rm:-g
 CONFIGURE_ARGS+=	--enable-pulseaudio
 .else
 CONFIGURE_ARGS+=	--disable-pulseaudio
-.endif
-
-.if !empty(PKG_OPTIONS:Mmozilla-lightning)
-CONFIGURE_ARGS+=	--enable-calendar
-PLIST_SRC+=		PLIST.lightning
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/bin/distribution/extensions/lightning.xpi
-.else
-CONFIGURE_ARGS+=	--disable-calendar
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
