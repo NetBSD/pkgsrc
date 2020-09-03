@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.43 2020/09/01 04:06:27 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.44 2020/09/03 15:44:54 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw X cherrypy dialog html2text ipython jsonlib more-itertools python-digest sphinx test zipp
+#       Possible values: Pmw X cairo cherrypy dialog eliot html2text ipython jsonlib more-itertools python-digest rsa setuptools sphinx test zipp
 #       Default: (nothing)
 #
 
@@ -19,6 +19,7 @@
 _SUPPORTED_PACKAGES=	# empty
 _SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
 _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
+_SUPPORTED_PACKAGES+=	cairo graphics/py-cairo118 graphics/py-cairo
 _SUPPORTED_PACKAGES+=	cherrypy www/py-cherrypy17 www/py-cherrypy
 _SUPPORTED_PACKAGES+=	dialog devel/py-dialog2 devel/py-dialog
 _SUPPORTED_PACKAGES+=	eliot sysutils/py-eliot17 sysutils/py-eliot
