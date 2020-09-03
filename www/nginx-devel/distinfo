@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2020/08/12 06:52:13 adam Exp $
+$NetBSD: distinfo,v 1.55 2020/09/03 09:49:08 jperkin Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -32,6 +32,10 @@ SHA1 (nginx-1.19.2.tar.gz) = 063c394c6813bec05783822b56530df240db44ed
 RMD160 (nginx-1.19.2.tar.gz) = c7a3a50a71f2a4922ebf2fbbda38d4e0c826c165
 SHA512 (nginx-1.19.2.tar.gz) = f6232d58a91db486cf36cc027ab84f04ad25aeafe586051043f0f3295dad5f475094f7cedad142ef0f56ff15a0971d700d6ec34b68697c462364650c49be8fcc
 Size (nginx-1.19.2.tar.gz) = 1048727 bytes
+SHA1 (nginx-dav-ext-module-3.0.0.tar.gz) = 524407402df7e73df9def85345c8bea324dceede
+RMD160 (nginx-dav-ext-module-3.0.0.tar.gz) = 8d099215bde79492565a39c3c8feb7695138138e
+SHA512 (nginx-dav-ext-module-3.0.0.tar.gz) = d0193ba90f1ef46c4e470630c4394bdf99d94fd2e3bd8be6cb2ba1655ec59944b1269025f032b79dc2c6dad366e54389ef6a6da2ddeb91d535a4027f2162fbde
+Size (nginx-dav-ext-module-3.0.0.tar.gz) = 14558 bytes
 SHA1 (nginx-rtmp-module-1.2.1.tar.gz) = 7c6ae1afc117e3bf946b0d81f99d41fe538a7245
 RMD160 (nginx-rtmp-module-1.2.1.tar.gz) = 5fc0b4ac0b2c0a6d70957a5256754db8a9e934cf
 SHA512 (nginx-rtmp-module-1.2.1.tar.gz) = 4a0af5e9afa4deb0b53de8de7ddb2cfa6430d372e1ef9e421f01b509548bd134d427345442ac1ce667338cc2a1484dc2ab732e316e878ac7d3537dc527d5f922
