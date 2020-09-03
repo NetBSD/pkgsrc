@@ -1,8 +1,8 @@
-$NetBSD: patch-xpcom_base_nscore.h,v 1.3 2019/09/21 10:55:17 ryoon Exp $
+$NetBSD: patch-xpcom_base_nscore.h,v 1.4 2020/09/03 15:26:22 ryoon Exp $
 
---- xpcom/base/nscore.h.orig	2019-09-09 23:43:45.000000000 +0000
+--- xpcom/base/nscore.h.orig	2020-08-28 21:33:30.000000000 +0000
 +++ xpcom/base/nscore.h
-@@ -76,7 +76,7 @@
+@@ -77,7 +77,7 @@
   *           NS_HIDDEN_(int) NS_FASTCALL func2(char *foo);
   */
  

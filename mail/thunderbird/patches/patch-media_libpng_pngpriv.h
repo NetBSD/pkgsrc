@@ -1,6 +1,6 @@
-$NetBSD: patch-media_libpng_pngpriv.h,v 1.1 2018/12/16 08:12:16 ryoon Exp $
+$NetBSD: patch-media_libpng_pngpriv.h,v 1.2 2020/09/03 15:26:22 ryoon Exp $
 
---- media/libpng/pngpriv.h.orig	2018-12-04 23:11:54.000000000 +0000
+--- media/libpng/pngpriv.h.orig	2020-08-28 21:33:11.000000000 +0000
 +++ media/libpng/pngpriv.h
 @@ -36,8 +36,10 @@
   * still required (as of 2011-05-02.)
