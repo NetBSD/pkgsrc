@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2020/08/25 13:45:52 gdt Exp $
+$NetBSD: distinfo,v 1.5 2020/09/03 15:00:33 gdt Exp $
 
-SHA1 (chirp-daily-20200807.tar.gz) = f263bb2d8050ff4ecacbf713adfc50e240b1b9a7
-RMD160 (chirp-daily-20200807.tar.gz) = 67dc773cf63324c5a4fcd8235b86107d0f117006
-SHA512 (chirp-daily-20200807.tar.gz) = 28d5ca132930d5525f24e7899fc370fbdbe9ce22b81fdbc7fee58afdd60a099b4ebcbd42963e92569d011c98eaa556225b018ab1d2d862b3a1a22362f0647325
-Size (chirp-daily-20200807.tar.gz) = 933776 bytes
+SHA1 (chirp-daily-20200902.tar.gz) = 55831901d43ef43d07d40ec7c06479ed8519ca0b
+RMD160 (chirp-daily-20200902.tar.gz) = 07660fb6f6c1f896eb1fcd78e71c6d17cdec4048
+SHA512 (chirp-daily-20200902.tar.gz) = 08a422fe35be9e8e5466073c09d44f3f056b3bc24437aa5d6e38ef7720dd9d265345991ad457934a3554c61c4688802116bf54332b48987d7ee81e8e6c7bab8e
+Size (chirp-daily-20200902.tar.gz) = 933980 bytes
 SHA1 (patch-chirp_platform.py) = f8c0f7ffb0fa08b2b3a591a9ccdf4efca7838646
 SHA1 (patch-chirp_ui_mainapp.py) = 4e201ed531a34800687fa1dcaa18c8406c22d925
 SHA1 (patch-setup.py) = 28302403b4cd397b9654aeead4ab7910164312c2
