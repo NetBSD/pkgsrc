@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4711 2020/09/03 09:30:26 pin Exp $
+$NetBSD: CHANGES-2020,v 1.4712 2020/09/03 10:27:59 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7305,3 +7305,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/mame to 0.224 [wiz 2020-09-03]
 	Updated textproc/miller to 5.9.1 [fcambus 2020-09-03]
 	Added sysutils/onefetch version 2.3.0 [pin 2020-09-03]
+	Updated games/woof to 2.1.1 [micha 2020-09-03]
