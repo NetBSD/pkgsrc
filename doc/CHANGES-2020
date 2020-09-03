@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4719 2020/09/03 15:45:22 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4720 2020/09/03 16:50:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7313,3 +7313,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird to 78.2.1 [ryoon 2020-09-03]
 	Added graphics/py-cairo118 version 1.18.2nb1 [wiz 2020-09-03]
 	Updated graphics/py-cairo to 1.19.1 [wiz 2020-09-03]
+	Updated mail/thunderbird-l10n to 78.2.1 [ryoon 2020-09-03]
