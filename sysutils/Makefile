@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.897 2020/08/20 13:55:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.898 2020/09/03 09:29:51 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -405,6 +405,7 @@ SUBDIR+=	ntfsprogs
 SUBDIR+=	nvnet
 SUBDIR+=	nvramtool
 SUBDIR+=	oak
+SUBDIR+=	onefetch
 SUBDIR+=	open-vm-tools
 SUBDIR+=	openstack_init
 SUBDIR+=	openxenmanager
