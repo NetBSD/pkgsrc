@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/07/07 11:16:10 nia Exp $
+$NetBSD: distinfo,v 1.14 2020/09/03 20:30:56 nia Exp $
 
-SHA1 (mbedtls-2.23.0.tar.gz) = 5b0f0f71e96dfbdf93b8f9582df76cbd63faaacf
-RMD160 (mbedtls-2.23.0.tar.gz) = 1b5fc17ec0b8df90c8dc8f5e6bef2ddd7fc4d477
-SHA512 (mbedtls-2.23.0.tar.gz) = c2a04f659bf63522f10f6660c2d196d7f39a057ff5a382734ba3b839f463ead4e5c9bc0d21fb909d56fcd2ee4c711248be14861f388cd383385484d364247634
-Size (mbedtls-2.23.0.tar.gz) = 3877508 bytes
+SHA1 (mbedtls-2.24.0.tar.gz) = 1bd2b5f5b8b8f970331a6da0065d64b424abdbed
+RMD160 (mbedtls-2.24.0.tar.gz) = 2cc3e3460d75ec4a6c8f11e524c4afff5f78cb40
+SHA512 (mbedtls-2.24.0.tar.gz) = 5437ea57eb8b8af9446a796876aa2bfe3c59c88f926b1638c7e8a021a8bef9f4bc6cb1b254e7387e2afe095bd27c518060719726bbaf5478582a56c34315cfb8
+Size (mbedtls-2.24.0.tar.gz) = 3912697 bytes
