@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4706 2020/09/02 23:48:06 mef Exp $
+$NetBSD: CHANGES-2020,v 1.4707 2020/09/03 06:47:43 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7300,3 +7300,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Alien-Libxml2 to 0.16 [mef 2020-09-02]
 	Added devel/p5-Test-Alien-CPP version 1.02 [mef 2020-09-02]
 	Updated textproc/p5-Alien-Hunspell to 0.16 [mef 2020-09-02]
+	Updated lang/go115 to 1.15.1 [bsiegert 2020-09-03]
