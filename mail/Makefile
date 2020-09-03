@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.555 2020/08/16 21:21:12 otis Exp $
+# $NetBSD: Makefile,v 1.556 2020/09/03 16:56:05 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -382,7 +382,6 @@ SUBDIR+=	sympa
 SUBDIR+=	t-prot
 SUBDIR+=	teapop
 SUBDIR+=	thunderbird
-SUBDIR+=	thunderbird-enigmail
 SUBDIR+=	thunderbird-l10n
 SUBDIR+=	thunderbird52
 SUBDIR+=	thunderbird52-l10n
