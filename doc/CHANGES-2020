@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4717 2020/09/03 15:28:35 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4718 2020/09/03 15:44:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7311,3 +7311,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/py-googlemaps to 4.4.2 [kleink 2020-09-03]
 	Updated ham/chirp to 20200902 [gdt 2020-09-03]
 	Updated mail/thunderbird to 78.2.1 [ryoon 2020-09-03]
+	Added graphics/py-cairo118 version 1.18.2nb1 [wiz 2020-09-03]
