@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4722 2020/09/03 17:04:55 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4723 2020/09/03 17:28:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7316,3 +7316,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird-l10n to 78.2.1 [ryoon 2020-09-03]
 	Removed mail/thunderbird-enigmail [wiz 2020-09-03]
 	Updated devel/p5-Coro to 6.57 [wiz 2020-09-03]
+	Updated security/sqlmap to 1.4.9 [leot 2020-09-03]
