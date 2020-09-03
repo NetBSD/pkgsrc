@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.74 2020/08/16 21:54:08 wiz Exp $
+$NetBSD: distinfo,v 1.75 2020/09/03 09:48:07 jperkin Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -55,5 +55,4 @@ Size (set-misc-nginx-module-0.32.tar.gz) = 29329 bytes
 SHA1 (patch-aa) = 47f0c19b47b115f00ea6e9432d5bb12058c3bc1c
 SHA1 (patch-ab) = 7d126a4372aa8575ef01a4bfd9aec9898861c763
 SHA1 (patch-auto_cc_conf) = 5e6a479ba419cd16dedeb3b4c47dc685d126ef6a
-SHA1 (patch-auto_lib_pcre_conf) = 8cf03fe38e7f75ef6892cc8b93be5cb18c381e97
 SHA1 (patch-src_event_modules_ngx__eventport__module.c) = c8e919f48d68bd5bffc4ad11d9c79dc6da3a0de2
