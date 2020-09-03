@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2020/08/24 08:20:14 wiz Exp $
+# $NetBSD: builtin.mk,v 1.7 2020/09/03 08:58:42 prlw1 Exp $
 
 BUILTIN_PKG:=	mpfr
 
@@ -66,9 +66,7 @@ CHECK_BUILTIN.mpfr?=	no
 .if !empty(CHECK_BUILTIN.mpfr:M[Nn][Oo])
 .  if !empty(USE_BUILTIN.mpfr:M[Yy][Ee][Ss])
 MPFR_INCLUDE=		${H_MPFR:H}
-CONFIGURE_ARGS+=	--with-mpfr-include=${MPFR_INCLUDE}
 BUILDLINK_INCDIRS.mpfr=	${MPFR_INCLUDE}
-CONFIGURE_ARGS+=	--with-mpfr-lib=${BUILDLINK_PREFIX.mpfr}/lib${LIBABISUFFIX}
 BUILDLINK_LIBDIRS.mpfr=	lib${LIBABISUFFIX}
 CPPFLAGS+=		-I${MPFR_INCLUDE}
 CFLAGS+=		-I${MPFR_INCLUDE}
