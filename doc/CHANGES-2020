@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4723 2020/09/03 17:28:22 leot Exp $
+$NetBSD: CHANGES-2020,v 1.4724 2020/09/03 19:20:44 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7317,3 +7317,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed mail/thunderbird-enigmail [wiz 2020-09-03]
 	Updated devel/p5-Coro to 6.57 [wiz 2020-09-03]
 	Updated security/sqlmap to 1.4.9 [leot 2020-09-03]
+	Updated www/py-wtforms to 2.3.3 [kleink 2020-09-03]
