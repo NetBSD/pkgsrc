@@ -1,6 +1,6 @@
-$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.2 2019/09/21 10:55:17 ryoon Exp $
+$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.3 2020/09/03 15:26:22 ryoon Exp $
 
---- toolkit/components/terminator/nsTerminator.cpp.orig	2019-09-09 23:43:45.000000000 +0000
+--- toolkit/components/terminator/nsTerminator.cpp.orig	2020-08-28 21:33:46.000000000 +0000
 +++ toolkit/components/terminator/nsTerminator.cpp
 @@ -36,7 +36,7 @@
  #if defined(XP_WIN)
@@ -11,7 +11,7 @@ $NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.2 2019/09/21 1
  #endif
  
  #include "mozilla/ArrayUtils.h"
-@@ -170,7 +170,10 @@ void RunWatchdog(void* arg) {
+@@ -180,7 +180,10 @@ void RunWatchdog(void* arg) {
  #if defined(XP_WIN)
      Sleep(1000 /* ms */);
  #else
@@ -21,5 +21,5 @@ $NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.2 2019/09/21 1
 +    tickd.tv_nsec = 0;
 +    nanosleep(&tickd, NULL);
  #endif
- 
      if (gHeartbeat++ < timeToLive) {
+ #if !defined(MOZ_VALGRIND) || !defined(MOZ_CODE_COVERAGE)

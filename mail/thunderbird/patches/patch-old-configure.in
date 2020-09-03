@@ -1,8 +1,8 @@
-$NetBSD: patch-old-configure.in,v 1.3 2020/06/15 15:44:22 nia Exp $
+$NetBSD: patch-old-configure.in,v 1.4 2020/09/03 15:26:22 ryoon Exp $
 
---- old-configure.in.orig	2020-06-02 14:07:57.000000000 +0000
+--- old-configure.in.orig	2020-08-28 21:33:19.000000000 +0000
 +++ old-configure.in
-@@ -1987,6 +1987,19 @@ MOZ_WEBM_ENCODER=1
+@@ -1795,6 +1795,19 @@ MOZ_WEBM_ENCODER=1
  AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
@@ -22,3 +22,12 @@ $NetBSD: patch-old-configure.in,v 1.3 2020/06/15 15:44:22 nia Exp $
  dnl ========================================================
  dnl NegotiateAuth
  dnl ========================================================
+@@ -2512,7 +2525,7 @@ AC_SUBST_LIST(MOZ_CAIRO_LIBS)
+ AC_SUBST_LIST(MOZ_CAIRO_OSLIBS)
+ AC_SUBST(MOZ_TREE_PIXMAN)
+ 
+-BINDGEN_SYSTEM_FLAGS="$_BINDGEN_CFLAGS $NSPR_CFLAGS $NSS_CFLAGS $MOZ_PIXMAN_CFLAGS $MOZ_CAIRO_CFLAGS"
++BINDGEN_SYSTEM_FLAGS="$_BINDGEN_CFLAGS $NSPR_CFLAGS $NSS_CFLAGS $MOZ_PIXMAN_CFLAGS $MOZ_CAIRO_CFLAGS -I${PREFIX}/include/nss/nss"
+ AC_SUBST(BINDGEN_SYSTEM_FLAGS)
+ BINDGEN_SYSTEM_TOML_FLAGS="$BINDGEN_SYSTEM_FLAGS"
+ AC_SUBST_TOML_LIST(BINDGEN_SYSTEM_TOML_FLAGS)

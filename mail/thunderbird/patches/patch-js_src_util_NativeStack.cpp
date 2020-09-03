@@ -1,6 +1,6 @@
-$NetBSD: patch-js_src_util_NativeStack.cpp,v 1.3 2019/09/21 10:55:17 ryoon Exp $
+$NetBSD: patch-js_src_util_NativeStack.cpp,v 1.4 2020/09/03 15:26:22 ryoon Exp $
 
---- js/src/util/NativeStack.cpp.orig	2019-09-09 23:43:33.000000000 +0000
+--- js/src/util/NativeStack.cpp.orig	2020-08-28 21:32:56.000000000 +0000
 +++ js/src/util/NativeStack.cpp
 @@ -13,7 +13,7 @@
  #  if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
@@ -18,7 +18,7 @@ $NetBSD: patch-js_src_util_NativeStack.cpp,v 1.3 2019/09/21 10:55:17 ryoon Exp $
 -#elif defined(SOLARIS)
 +#elif defined(__sun)
  
- JS_STATIC_ASSERT(JS_STACK_GROWTH_DIRECTION < 0);
+ static_assert(JS_STACK_GROWTH_DIRECTION < 0);
  
 @@ -128,6 +128,7 @@ void* js::GetNativeStackBaseImpl() {
  #    elif defined(PTHREAD_NP_H) || defined(_PTHREAD_NP_H_) || defined(NETBSD)

@@ -1,6 +1,6 @@
-$NetBSD: patch-toolkit_modules_subprocess_subprocess__shared__unix.js,v 1.1 2019/09/21 10:55:17 ryoon Exp $
+$NetBSD: patch-toolkit_modules_subprocess_subprocess__shared__unix.js,v 1.2 2020/09/03 15:26:22 ryoon Exp $
 
---- toolkit/modules/subprocess/subprocess_shared_unix.js.orig	2019-09-09 23:43:44.000000000 +0000
+--- toolkit/modules/subprocess/subprocess_shared_unix.js.orig	2020-08-28 21:34:00.000000000 +0000
 +++ toolkit/modules/subprocess/subprocess_shared_unix.js
 @@ -12,7 +12,15 @@
  
