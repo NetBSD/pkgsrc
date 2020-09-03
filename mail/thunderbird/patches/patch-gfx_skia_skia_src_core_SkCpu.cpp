@@ -1,8 +1,8 @@
-$NetBSD: patch-gfx_skia_skia_src_core_SkCpu.cpp,v 1.1 2019/09/21 10:55:17 ryoon Exp $
+$NetBSD: patch-gfx_skia_skia_src_core_SkCpu.cpp,v 1.2 2020/09/03 15:26:22 ryoon Exp $
 
---- gfx/skia/skia/src/core/SkCpu.cpp.orig	2019-09-09 23:43:27.000000000 +0000
+--- gfx/skia/skia/src/core/SkCpu.cpp.orig	2020-08-28 21:32:36.000000000 +0000
 +++ gfx/skia/skia/src/core/SkCpu.cpp
-@@ -70,7 +70,7 @@
+@@ -72,7 +72,7 @@
          return features;
      }
  
