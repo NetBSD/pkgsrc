@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.1 2018/12/16 08:12:16 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.2 2020/09/03 15:26:22 ryoon Exp $
 
---- toolkit/moz.configure.orig	2018-12-04 23:12:01.000000000 +0000
+--- toolkit/moz.configure.orig	2020-08-28 21:33:59.000000000 +0000
 +++ toolkit/moz.configure
-@@ -932,11 +932,11 @@ include('nss.configure')
+@@ -804,11 +804,11 @@ set_config('MOZ_IPDL_TESTS',
  # ==============================================================
  option('--disable-skia', help='Disable use of Skia')
  
