@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4724 2020/09/03 19:20:44 kleink Exp $
+$NetBSD: CHANGES-2020,v 1.4725 2020/09/03 20:23:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7318,3 +7318,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Coro to 6.57 [wiz 2020-09-03]
 	Updated security/sqlmap to 1.4.9 [leot 2020-09-03]
 	Updated www/py-wtforms to 2.3.3 [kleink 2020-09-03]
+	Added mail/thunderbird68 version 68.12.0 [ryoon 2020-09-03]
