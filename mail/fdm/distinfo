@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2020/08/29 13:43:54 leot Exp $
+$NetBSD: distinfo,v 1.15 2020/09/03 10:46:38 leot Exp $
 
 SHA1 (fdm-2.0.tar.gz) = 4da70cca5791457489d9e0a018706a6696609eab
 RMD160 (fdm-2.0.tar.gz) = b07dc4ee0b8de3362177d74bd935d1ae4dad961d
@@ -10,7 +10,7 @@ SHA1 (patch-deliver-imap.c) = 3be95a6ef4ba8946a72e8bb4c0c4c32384044e3f
 SHA1 (patch-deliver.h) = 618d73f8fa2d69112ae85d858261d7f77a4e5c98
 SHA1 (patch-fdm.conf.5) = 4d43169edec6958ff591487be34f041054bfb476
 SHA1 (patch-fetch.h) = 225c3d83282057781cacd7ba84af1d16bd4b7616
-SHA1 (patch-imap-common.c) = e45a163e7ee4c8e386157babea8c43a7b26b77d1
+SHA1 (patch-imap-common.c) = 264f43c3703fa282f4431d7ba4b9fced08df1968
 SHA1 (patch-lex.c) = 457abcef58add76cd4b76351a1961c45abc2f783
 SHA1 (patch-parse.y) = 56e27e155b6d99e3539d4dfe7f90d5c607fb4153
 SHA1 (patch-shm-mmap.c) = 3cd0c54c982ddd4702ad921ebf5f1b890b503cd4
