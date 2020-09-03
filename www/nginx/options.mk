@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.57 2020/08/16 21:54:08 wiz Exp $
+# $NetBSD: options.mk,v 1.58 2020/09/03 09:48:07 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug echo encrypted-session \
@@ -35,11 +35,21 @@ CONFIGURE_ARGS+=	--with-debug
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mail_ssl_module
 CONFIGURE_ARGS+=	--with-http_ssl_module
+SUBST_CLASSES+=		fix-ssl
+SUBST_STAGE.fix-ssl=	pre-configure
+SUBST_FILES.fix-ssl=	auto/lib/openssl/conf
+SUBST_SED.fix-ssl=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.openssl},g'
+SUBST_NOOP_OK.fix-ssl=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mpcre)
 .include "../../devel/pcre/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pcre-jit
+SUBST_CLASSES+=		fix-pcre
+SUBST_STAGE.fix-pcre=	pre-configure
+SUBST_FILES.fix-pcre=	auto/lib/pcre/conf
+SUBST_SED.fix-pcre=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre},g'
+SUBST_NOOP_OK.fix-pcre=	yes
 .else
 CONFIGURE_ARGS+=	--without-pcre
 CONFIGURE_ARGS+=	--without-http_rewrite_module
@@ -50,6 +60,11 @@ CONFIGURE_ARGS+=	--with-http_dav_module
 CONFIGURE_ARGS+=	--add-module=../${DAV_EXT_DISTNAME}
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+SUBST_CLASSES+=		fix-xslt
+SUBST_STAGE.fix-xslt=	pre-configure
+SUBST_FILES.fix-xslt=	auto/lib/libxslt/conf
+SUBST_SED.fix-xslt=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.libxslt},g'
+SUBST_NOOP_OK.fix-xslt=	yes
 .endif
 .if !empty(PKG_OPTIONS:Mdav) || make(makesum) || make(mdi)
 DAV_EXT_VERSION=		3.0.0
@@ -66,6 +81,11 @@ CONFIGURE_ARGS+=	--with-http_flv_module
 .if !empty(PKG_OPTIONS:Mgeoip)
 .include "../../net/GeoIP/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-http_geoip_module
+SUBST_CLASSES+=		fix-geo
+SUBST_STAGE.fix-geo=	pre-configure
+SUBST_FILES.fix-geo=	auto/lib/geoip/conf
+SUBST_SED.fix-geo=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.GeoIP},g'
+SUBST_NOOP_OK.fix-geo=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mhttp2)
@@ -210,6 +230,11 @@ DISTFILES+=		${PUSH_DISTFILE}
 .if !empty(PKG_OPTIONS:Mimage-filter)
 .include "../../graphics/gd/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-http_image_filter_module
+SUBST_CLASSES+=		fix-gd
+SUBST_STAGE.fix-gd=	pre-configure
+SUBST_FILES.fix-gd=	auto/lib/libgd/conf
+SUBST_SED.fix-gd=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.gd},g'
+SUBST_NOOP_OK.fix-gd=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mslice)
