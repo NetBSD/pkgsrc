@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2019/01/27 13:26:38 wen Exp $
-
-SHA1 (Unicode-Normalize-1.26.tar.gz) = b382363d1c722838d732968f02e61087346f4339
-RMD160 (Unicode-Normalize-1.26.tar.gz) = e6471ee42156792f959e8a06c0d9bf98074fd5dc
-SHA512 (Unicode-Normalize-1.26.tar.gz) = 7f624d2e3dd6fd7412b537898100e1cc96ea3c704b2ee6adcbbc5a0a67ac3f36a56cbc262bc79e7792af08c07153d855f651301797f29a85a8bb51a8ba077e0d
-Size (Unicode-Normalize-1.26.tar.gz) = 35586 bytes
-SHA1 (patch-Makefile.PL) = 8124fac4b9786ae579d8013a560ae067648965a7
