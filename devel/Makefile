@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3191 2020/09/04 10:40:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3192 2020/09/04 10:42:39 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1141,7 +1141,6 @@ SUBDIR+=	p5-CPAN-DistnameInfo
 SUBDIR+=	p5-CPAN-FindDependencies
 SUBDIR+=	p5-CPAN-Inject
 SUBDIR+=	p5-CPAN-Meta-Check
-SUBDIR+=	p5-CPAN-Meta-Requirements
 SUBDIR+=	p5-CPAN-Meta-YAML
 SUBDIR+=	p5-CPAN-Mini
 SUBDIR+=	p5-CPAN-ParseDistribution
