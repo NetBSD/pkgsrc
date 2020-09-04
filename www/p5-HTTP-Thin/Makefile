@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/08/31 18:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/04 11:39:46 wiz Exp $
 
 DISTNAME=	HTTP-Thin-0.006
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PERIGRIN/}
 
@@ -15,7 +15,6 @@ DEPENDS+=	p5-Class-Method-Modifiers-[0-9]*:../../devel/p5-Class-Method-Modifiers
 DEPENDS+=	p5-Hash-MultiValue-[0-9]*:../../devel/p5-Hash-MultiValue
 DEPENDS+=	p5-Safe-Isa-[0-9]*:../../devel/p5-Safe-Isa
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
-DEPENDS+=	p5-HTTP-Tiny-[0-9]*:../../www/p5-HTTP-Tiny
 
 PERL5_PACKLIST=	auto/HTTP/Thin/.packlist
 
