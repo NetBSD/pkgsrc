@@ -96,3 +96,6 @@ _OPSYS_PREFER.zlib?=	pkgsrc
 _OPSYS_PREFER.bzip2?=	pkgsrc
 _OPSYS_PREFER.curses?=	pkgsrc
 _OPSYS_PREFER.termcap?=	pkgsrc
+
+# rm -f needs an argument on QNX.
+CONFIGURE_ENV+=		ACCEPT_INFERIOR_RM_PROGRAM=yes
