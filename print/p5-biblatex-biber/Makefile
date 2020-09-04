@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/09/04 11:46:12 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/09/04 14:08:37 wiz Exp $
 
 DISTNAME=	biber-2.14
 PKGNAME=	p5-biblatex-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=plk/}
 GITHUB_PROJECT=	biber
@@ -47,7 +47,6 @@ DEPENDS+=		p5-Text-BibTeX>=0.76:../../textproc/p5-Text-BibTeX
 DEPENDS+=		p5-Text-CSV-[0-9]*:../../textproc/p5-Text-CSV
 DEPENDS+=		p5-Text-CSV_XS-[0-9]*:../../textproc/p5-Text-CSV_XS
 DEPENDS+=		p5-Text-Roman-[0-9]*:../../textproc/p5-Text-Roman
-DEPENDS+=		p5-Unicode-Collate>=1.19:../../converters/p5-Unicode-Collate
 DEPENDS+=		p5-Unicode-LineBreak>=2016.003:../../textproc/p5-Unicode-LineBreak
 DEPENDS+=		p5-XML-LibXML-Simple-[0-9]*:../../textproc/p5-XML-LibXML-Simple
 DEPENDS+=		p5-XML-LibXML>=1.70:../../textproc/p5-XML-LibXML
