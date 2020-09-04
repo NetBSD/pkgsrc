@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3210 2020/09/04 12:17:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3211 2020/09/04 12:19:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1663,7 +1663,6 @@ SUBDIR+=	p5-MouseX-Getopt
 SUBDIR+=	p5-MouseX-NativeTraits
 SUBDIR+=	p5-MouseX-Types
 SUBDIR+=	p5-MouseX-Types-Path-Class
-SUBDIR+=	p5-NEXT
 SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-Net-LDAP-Batch
 SUBDIR+=	p5-Net-LDAP-Class
