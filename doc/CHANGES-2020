@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4755 2020/09/04 11:20:39 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4756 2020/09/04 11:22:10 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7349,3 +7349,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-ExtUtils-Command successor lang/perl5 [wiz 2020-09-04]
 	Updated devel/pango to 1.46.1 [prlw1 2020-09-04]
 	Removed devel/p5-ExtUtils-MakeMaker successor lang/perl5 [wiz 2020-09-04]
+	Added graphics/graphene version 1.10.2 [prlw1 2020-09-04]
