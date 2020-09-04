@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2020/07/02 20:00:23 nia Exp $
+# $NetBSD: Makefile,v 1.177 2020/09/04 10:15:12 wiz Exp $
 #
 
 COMMENT=	Archivers
@@ -79,7 +79,6 @@ SUBDIR+=	p5-Archive-Any
 SUBDIR+=	p5-Archive-Any-Lite
 SUBDIR+=	p5-Archive-Extract
 SUBDIR+=	p5-Archive-Peek
-SUBDIR+=	p5-Archive-Tar
 SUBDIR+=	p5-Archive-Tar-Wrapper
 SUBDIR+=	p5-Archive-Zip
 SUBDIR+=	p5-Compress-Bzip2

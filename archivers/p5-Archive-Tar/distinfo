@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.46 2020/08/25 23:01:15 gutteridge Exp $
-
-SHA1 (Archive-Tar-2.38.tar.gz) = 344e5f089005547a13e6b1348c09bbcd599647f8
-RMD160 (Archive-Tar-2.38.tar.gz) = 09260dcf8fdce77598c27d2b028ed5aadb2afa5c
-SHA512 (Archive-Tar-2.38.tar.gz) = 7b14fe481747d200b4239a716c15a8595b4228f54ae93412b5f752e3dbe00e71260d226087764546c2aca3c3a9c0b3ecece73b1b1e31d965f0070dd8b3670dc7
-Size (Archive-Tar-2.38.tar.gz) = 64790 bytes
