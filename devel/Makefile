@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3194 2020/09/04 10:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3195 2020/09/04 11:01:01 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1217,8 +1217,6 @@ SUBDIR+=	p5-Clone-Fast
 SUBDIR+=	p5-Clone-PP
 SUBDIR+=	p5-Compiler-Lexer
 SUBDIR+=	p5-Compress-PPMd
-SUBDIR+=	p5-Compress-Raw-Bzip2
-SUBDIR+=	p5-Compress-Raw-Zlib
 SUBDIR+=	p5-Config-Any
 SUBDIR+=	p5-Config-Any-Merge
 SUBDIR+=	p5-Config-Auto
