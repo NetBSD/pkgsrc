@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3214 2020/09/04 13:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3215 2020/09/04 13:32:40 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1846,7 +1846,6 @@ SUBDIR+=	p5-Template-Plugin-ListMoreUtils
 SUBDIR+=	p5-Template-Plugin-ListUtil
 SUBDIR+=	p5-Template-Plugin-VMethods
 SUBDIR+=	p5-Term-Animation
-SUBDIR+=	p5-Term-Cap
 SUBDIR+=	p5-Term-Encoding
 SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Term-ProgressBar-Quiet
