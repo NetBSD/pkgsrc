@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4749 2020/09/04 11:06:02 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4750 2020/09/04 11:10:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7344,3 +7344,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-Compress-Raw-Zlib successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-Devel-PPPort successor lang/perl5 [wiz 2020-09-04]
 	Removed security/p5-Digest successor lang/perl5 [wiz 2020-09-04]
+	Removed security/p5-Digest-SHA successor lang/perl5 [wiz 2020-09-04]
