@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3224 2020/09/04 14:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3225 2020/09/04 14:29:40 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1578,7 +1578,6 @@ SUBDIR+=	p5-Module-Install-Substitute
 SUBDIR+=	p5-Module-Install-XSUtil
 SUBDIR+=	p5-Module-Manifest
 SUBDIR+=	p5-Module-Manifest-Skip
-SUBDIR+=	p5-Module-Metadata
 SUBDIR+=	p5-Module-Pluggable
 SUBDIR+=	p5-Module-Refresh
 SUBDIR+=	p5-Module-Runtime
