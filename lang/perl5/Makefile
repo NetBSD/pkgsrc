@@ -1,81 +1,17 @@
-# $NetBSD: Makefile,v 1.266 2020/09/04 10:44:33 wiz Exp $
+# $NetBSD: Makefile,v 1.267 2020/09/04 14:07:51 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Practical Extraction and Report Language
 
 CONFLICTS+=	perl-base-[0-9]* perl-thread-[0-9]*
 
-# CONFLICTS packages older than CORE modules version.
-# based on 'corelist -v ${PKGVERSION}'
-# update based on 'corelist -diff ${PREV_PKGVERSION} ${PKGVERSION}'
-CONFLICTS+=	p5-Archive-Tar<2.36
-CONFLICTS+=	p5-Attribute-Handlers<1.01
-CONFLICTS+=	p5-AutoLoader<5.74
-CONFLICTS+=	p5-CPAN<2.2700			# 2.27
-CONFLICTS+=	p5-CPAN-Meta<2.150010
-CONFLICTS+=	p5-CPAN-Meta-Requirements<2.140
-CONFLICTS+=	p5-CPAN-Meta-YAML<0.018
-CONFLICTS+=	p5-Compress-Raw-Bzip2<2.093
-CONFLICTS+=	p5-Compress-Raw-Zlib<2.093
-CONFLICTS+=	p5-DB_File<1.853
-CONFLICTS+=	p5-Devel-PPPort<3.57
-CONFLICTS+=	p5-Digest<1.17.01
-CONFLICTS+=	p5-Digest-MD5<2.55.01
-CONFLICTS+=	p5-Digest-SHA<6.02
-CONFLICTS+=	p5-Encode<3.06
-CONFLICTS+=	p5-ExtUtils-CBuilder<0.28.02.34	# 0.280234
-CONFLICTS+=	p5-ExtUtils-Command<7.44
-CONFLICTS+=	p5-ExtUtils-Embed<1.35
-CONFLICTS+=	p5-ExtUtils-Install<2.14
-CONFLICTS+=	p5-ExtUtils-MakeMaker<7.44
-CONFLICTS+=	p5-ExtUtils-Manifest<1.72
-CONFLICTS+=	p5-ExtUtils-ParseXS<3.40
-CONFLICTS+=	p5-File-Path<2.16
-CONFLICTS+=	p5-File-Temp<0.23.09	# 0.2309
-CONFLICTS+=	p5-Getopt-Long<2.51
-CONFLICTS+=	p5-HTTP-Tiny<0.076
-CONFLICTS+=	p5-I18N-LangTags<0.44
-CONFLICTS+=	p5-IO<1.4300			# 1.43
-CONFLICTS+=	p5-IO-Compress<2.093		# IO::Compress::*, Compress::*
-CONFLICTS+=	p5-IO-Zlib<1.10
-CONFLICTS+=	p5-IPC-Cmd<1.04
-CONFLICTS+=	p5-IPC-SysV<2.07
-CONFLICTS+=	p5-JSON-PP<4.04
-CONFLICTS+=	p5-Locale-Maketext<1.29
-CONFLICTS+=	p5-Locale-Maketext-Simple<0.21.01
-CONFLICTS+=	p5-MIME-Base64<3.15
-CONFLICTS+=	p5-Math-Complex<1.59.01
-CONFLICTS+=	p5-Memoize<1.03.01
-CONFLICTS+=	p5-Module-CoreList<5.202006200
-CONFLICTS+=	p5-Module-Load<0.34
-CONFLICTS+=	p5-NEXT<0.67.01
-CONFLICTS+=	p5-Parse-CPAN-Meta<2.150010
-CONFLICTS+=	p5-Pod-Escapes<1.07
-CONFLICTS+=	p5-Pod-Simple<3.40
-CONFLICTS+=	p5-Pod-Usage<1.69
-CONFLICTS+=	p5-Storable<3.21
-CONFLICTS+=	p5-Sys-Syslog<0.36
-CONFLICTS+=	p5-Term-ANSIColor<5.01
-CONFLICTS+=	p5-Term-Cap<1.17
-CONFLICTS+=	p5-Term-ReadLine<1.17
-#			older for sysutils/shelldap
-CONFLICTS+=	p5-Test-Harness<3.42
-CONFLICTS+=	p5-Test-Simple<1.302175
-CONFLICTS+=	p5-Tie-File<1.06
-CONFLICTS+=	p5-Tie-RefHash<1.39
-CONFLICTS+=	p5-Time-HiRes<1.9764
-CONFLICTS+=	p5-Time-Local<1.28
-CONFLICTS+=	p5-Time-Piece<1.34.01
-CONFLICTS+=	p5-Unicode-Collate<1.27
-CONFLICTS+=	p5-Unicode-Normalize<1.27
-CONFLICTS+=	p5-XSLoader<0.30
-CONFLICTS+=	p5-autodie<2.32
-CONFLICTS+=	p5-constant<1.33
-CONFLICTS+=	p5-experimental<0.020
-CONFLICTS+=	p5-parent<0.238
-CONFLICTS+=	p5-version<0.9924
+# when updating perl, you can remove packages that are included
+# in perl core, see
+# corelist -diff ${PREV_PKGVERSION} ${PKGVERSION}
 
 SUPERSEDES+=	p5-Tie-File<=0.99
 SUPERSEDES+=	p5-Time-HiRes-[0-9]*
