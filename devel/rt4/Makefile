@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2020/08/31 18:09:20 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/09/04 09:29:10 wiz Exp $
 
 DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	2
-#PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
@@ -39,7 +38,6 @@ DEPENDS+=	p5-Devel-StackTrace>=1.19:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 DEPENDS+=	p5-Email-Address>=1.897:../../mail/p5-Email-Address
 DEPENDS+=	p5-Email-Address-List-[0-9]*:../../mail/p5-Email-Address-List
-DEPENDS+=	p5-Encode>=2.64:../../textproc/p5-Encode
 # Errno is a part of perl base.
 # File::Glob is a part of perl base.
 DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
