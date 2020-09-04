@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/08/31 18:09:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/09/04 13:45:15 wiz Exp $
 
 DISTNAME=	Test-Output-1.031
 PKGNAME=	p5-Test-Output-1.03.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -13,7 +13,6 @@ LICENSE=	artistic-2.0
 
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Capture-Tiny>=0.17:../../devel/p5-Capture-Tiny
-DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Test/Output/.packlist
 

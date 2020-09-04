@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/08/31 18:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/04 13:45:15 wiz Exp $
 
 DISTNAME=	Sub-Info-0.002
 PKGNAME=	p5-${DISTNAME}
@@ -11,9 +11,7 @@ HOMEPAGE=	https://cpan.metacpan.org/authors/id/E/EX/EXODIST/
 COMMENT=	Tool to inspect subroutines
 LICENSE=	${PERL5_LICENSE}
 
-# for make test
-BUILD_DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Importer-[0-9]*:../../devel/p5-Importer
+TEST_DEPENDS+=	p5-Importer-[0-9]*:../../devel/p5-Importer
 
 PERL5_PACKLIST=	auto/Sub/Info/.packlist
 

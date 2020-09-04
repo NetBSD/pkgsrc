@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/08/31 18:08:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2020/09/04 13:45:14 wiz Exp $
 
 DISTNAME=	MooseX-App-Cmd-0.32
 PKGNAME=	p5-${DISTNAME}
@@ -23,14 +22,12 @@ DEPENDS+=	p5-MooseX-Getopt>=0.18:../../devel/p5-MooseX-Getopt
 DEPENDS+=	p5-MouseX-Getopt>=0:../../devel/p5-MouseX-Getopt
 DEPENDS+=	p5-namespace-clean>=0:../../devel/p5-namespace-clean
 
-# For test target
-BUILD_DEPENDS+=	p5-MooseX-ConfigFromFile>=0.08:../../devel/p5-MooseX-ConfigFromFile
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001014:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-BUILD_DEPENDS+=	p5-MooseX-NonMoose-[0-9]*:../../devel/p5-MooseX-NonMoose
+TEST_DEPENDS+=	p5-MooseX-ConfigFromFile>=0.08:../../devel/p5-MooseX-ConfigFromFile
+TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TEST_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+TEST_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TEST_DEPENDS+=	p5-MooseX-NonMoose-[0-9]*:../../devel/p5-MooseX-NonMoose
 # for others
 BUILD_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/08/31 18:12:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/09/04 13:45:17 wiz Exp $
 
 DISTNAME=	Catalyst-Model-Adaptor-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Catalyst-Runtime-[0-9]*:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
-
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
