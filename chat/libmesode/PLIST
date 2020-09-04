@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/04 10:13:16 nia Exp $
+include/mesode.h
+lib/libmesode.la
+lib/pkgconfig/libmesode.pc
