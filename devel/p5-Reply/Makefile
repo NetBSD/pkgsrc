@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/09/01 08:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/04 11:36:49 wiz Exp $
 
 DISTNAME=		Reply-0.42
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DO/DOY/}
 
@@ -28,7 +28,6 @@ DEPENDS+=		p5-Data-Dumper-[0-9]*:../../devel/p5-Data-Dumper
 DEPENDS+=		p5-Devel-LexAlias-[0-9]*:../../devel/p5-Devel-LexAlias
 DEPENDS+=		p5-Eval-Closure>=0.11:../../devel/p5-Eval-Closure
 DEPENDS+=		p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
-DEPENDS+=		p5-Getopt-Long>=2.36:../../devel/p5-Getopt-Long
 DEPENDS+=		p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
 DEPENDS+=		p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
 DEPENDS+=		p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
