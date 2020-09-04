@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3218 2020/09/04 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3219 2020/09/04 13:51:32 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1978,7 +1978,6 @@ SUBDIR+=	p5-Tie-Cycle
 SUBDIR+=	p5-Tie-Function
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Tie-LLHash
-SUBDIR+=	p5-Tie-RefHash
 SUBDIR+=	p5-Tie-RefHash-Weak
 SUBDIR+=	p5-Tie-RegexpHash
 SUBDIR+=	p5-Tie-Simple
