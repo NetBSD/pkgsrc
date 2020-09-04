@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4793 2020/09/04 14:12:52 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4794 2020/09/04 14:14:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7387,3 +7387,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/perl5 to 5.32.0nb1 [wiz 2020-09-04]
 	Removed converters/p5-Unicode-Collate successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-XSLoader successor lang/perl5 [wiz 2020-09-04]
+	Removed devel/p5-autodie successor lang/perl5 [wiz 2020-09-04]
