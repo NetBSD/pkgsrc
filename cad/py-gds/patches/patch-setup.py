@@ -1,4 +1,6 @@
-$NetBSD: patch-setup.py,v 1.1 2020/05/31 20:49:33 joerg Exp $
+$NetBSD: patch-setup.py,v 1.2 2020/09/04 16:05:20 mef Exp $
+
+Allow UTF-8 README.md
 
 --- setup.py.orig	2020-05-31 17:53:41.141364832 +0000
 +++ setup.py
