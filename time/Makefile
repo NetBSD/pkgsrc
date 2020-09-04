@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2020/09/01 08:05:29 wiz Exp $
+# $NetBSD: Makefile,v 1.214 2020/09/04 13:54:15 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -118,7 +118,6 @@ SUBDIR+=	p5-Time-Elapsed
 SUBDIR+=	p5-Time-Format
 SUBDIR+=	p5-Time-Format_XS
 SUBDIR+=	p5-Time-Interval
-SUBDIR+=	p5-Time-Local
 SUBDIR+=	p5-Time-Period
 SUBDIR+=	p5-Time-Piece
 SUBDIR+=	p5-Time-Progress
