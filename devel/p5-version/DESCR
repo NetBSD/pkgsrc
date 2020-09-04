@@ -1,8 +1,0 @@
-Provides the same version objects as included in Perl v5.9.x (and
-hopefully in the 5.10.0 release).  In fact, if you attempt to use
-this module with a version of Perl >= v5.9.0, this module will not
-do anything, since the code already exists in the Perl core.  Note
-that the CPAN release cannot be installed with the interim 5.9.0,
-5.9.1, and 5.9.2 releases (since it duplicates code in the core).
-If you are testing bleadperl, you will need to check out the latest
-release of 5.9.x to get the changes included in 0.50.
