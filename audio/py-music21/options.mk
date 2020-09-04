@@ -1,15 +1,20 @@
-# $NetBSD: options.mk,v 1.1 2020/01/17 05:41:44 gutteridge Exp $
+# $NetBSD: options.mk,v 1.2 2020/09/04 01:11:31 gutteridge Exp $
 
 # audio/musescore is also an application dependency that gets called
 # by music21's show() method, but it's a pretty heavy dependency for
 # some edge functionality, so it's been left off here.
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-music21
-PKG_SUPPORTED_OPTIONS=	lilypond
-PKG_SUGGESTED_OPTIONS=	lilypond
+PKG_SUPPORTED_OPTIONS=	lilypond py-game
+PKG_SUGGESTED_OPTIONS=	lilypond py-game
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mlilypond)
 DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
+.endif
+
+# py-game is required for MIDI realtime playback.
+.if !empty(PKG_OPTIONS:Mpy-game)
+DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 .endif
