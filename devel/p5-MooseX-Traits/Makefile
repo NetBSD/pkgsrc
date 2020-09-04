@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/08/31 18:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/09/04 13:45:14 wiz Exp $
 
 DISTNAME=	MooseX-Traits-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -16,11 +16,9 @@ DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
 BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Traits/.packlist

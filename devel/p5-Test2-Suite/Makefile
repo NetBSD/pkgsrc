@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/09/02 21:58:49 mef Exp $
+# $NetBSD: Makefile,v 1.36 2020/09/04 13:45:16 wiz Exp $
 
 DISTNAME=		Test2-Suite-0.000135
 PKGNAME=		p5-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=		p5-Sub-Info>=0.002:../../devel/p5-Sub-Info
 DEPENDS+=		p5-Term-Table>=0.013:../../devel/p5-Term-Table
 DEPENDS+=		p5-Scope-Guard-[0-9]*:../../devel/p5-Scope-Guard
 
-TEST_DEPENDS+=		p5-Test-Simple>=1.302158:../../devel/p5-Test-Simple
 TEST_DEPENDS+=		p5-Term-Size-Any-[0-9]*:../../devel/p5-Term-Size-Any
 
 PERL5_PACKLIST=		auto/Test2/Suite/.packlist

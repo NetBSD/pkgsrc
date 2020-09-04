@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/08/31 18:08:11 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.19 2020/09/04 13:45:14 wiz Exp $
 
 DISTNAME=	IO-Handle-Util-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/IO/Handle/Util/.packlist
-
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter

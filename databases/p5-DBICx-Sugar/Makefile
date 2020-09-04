@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/08/31 18:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/09/04 13:45:13 wiz Exp $
 
 DISTNAME=	DBICx-Sugar-0.0200
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,6 @@ BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 BUILD_DEPENDS+=	p5-Test-API-[0-9]*:../../devel/p5-Test-API
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Modern-[0-9]*:../../devel/p5-Test-Modern
-BUILD_DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 BUILD_DEPENDS+=	p5-DBIx-Class-Schema-Loader-[0-9]*:../../databases/p5-DBIx-Class-Schema-Loader

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:12:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/09/04 13:45:17 wiz Exp $
 
 DISTNAME=	Catalyst-Authentication-Store-Htpasswd-1.006
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,6 @@ DEPENDS+=	p5-Crypt-PasswdMD5-[0-9]*:../../security/p5-Crypt-PasswdMD5
 DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 BUILD_DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst-[0-9]*:../../www/p5-Test-WWW-Mechanize-Catalyst
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 
 REPLACE_PERL+=	lib/Catalyst/Authentication/Store/*.pm
 REPLACE_PERL+=	lib/Catalyst/Authentication/Store/Htpasswd/*.pm
