@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.540 2020/08/03 18:28:07 jmcneill Exp $
+# $NetBSD: Makefile,v 1.541 2020/09/04 12:00:48 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -225,7 +225,6 @@ SUBDIR+=	p5-File-MMagic
 SUBDIR+=	p5-File-MMagic-XS
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Locale-Codes
-SUBDIR+=	p5-Locale-Maketext
 SUBDIR+=	p5-Locale-Maketext-Fuzzy
 SUBDIR+=	p5-Locale-Maketext-Lexicon
 SUBDIR+=	p5-Locale-Maketext-Simple
