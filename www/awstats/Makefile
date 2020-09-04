@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2020/08/31 18:12:31 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2020/09/04 13:53:37 wiz Exp $
 
 DISTNAME=	awstats-7.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	p5-Geo-IPfree-[0-9]*:../../net/p5-Geo-IPfree
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-Net-XWhois-[0-9]*:../../net/p5-Net-XWhois
-DEPENDS+=	p5-Time-Local-[0-9]*:../../time/p5-Time-Local
 
 NO_BUILD=		yes
 USE_TOOLS+=		perl:run pax
