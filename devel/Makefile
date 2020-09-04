@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3201 2020/09/04 11:25:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3202 2020/09/04 11:29:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1397,7 +1397,6 @@ SUBDIR+=	p5-File-MimeInfo
 SUBDIR+=	p5-File-Modified
 SUBDIR+=	p5-File-NFSLock
 SUBDIR+=	p5-File-Next
-SUBDIR+=	p5-File-Path
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-File-Path-Tiny
 SUBDIR+=	p5-File-PathConvert
