@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4753 2020/09/04 11:14:31 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.4754 2020/09/04 11:14:58 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7347,4 +7347,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed security/p5-Digest-SHA successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-ExtUtils-CBuilder successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-ExtUtils-Command successor lang/perl5 [wiz 2020-09-04]
+	Updated devel/pango to 1.46.1 [prlw1 2020-09-04]
 	Updated devel/pango to 1.46.1 [prlw1 2020-09-04]
