@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/09/04 11:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/04 14:14:05 wiz Exp $
 
 DISTNAME=	MaxMind-DB-Reader-1.000014
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MAXMIND/}
 
@@ -23,7 +23,6 @@ DEPENDS+=	p5-Module-Implementation>=0:../../devel/p5-Module-Implementation
 DEPENDS+=	p5-Moo>=1.003000:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-StrictConstructor>=0:../../devel/p5-MooX-StrictConstructor
 DEPENDS+=	p5-Role-Tiny>=1.003002:../../devel/p5-Role-Tiny
-DEPENDS+=	p5-autodie>=0:../../devel/p5-autodie
 DEPENDS+=	p5-namespace-autoclean>=0:../../devel/p5-namespace-autoclean
 TEST_DEPENDS+=	p5-Path-Class>=0.27:../../devel/p5-Path-Class
 TEST_DEPENDS+=	p5-Test-Bits>=0:../../devel/p5-Test-Bits
