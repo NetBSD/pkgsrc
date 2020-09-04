@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4791 2020/09/04 14:08:01 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4792 2020/09/04 14:09:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7385,3 +7385,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed time/p5-Time-Local successor lang/perl5 [wiz 2020-09-04]
 	Removed time/p5-Time-Piece successor lang/perl5 [wiz 2020-09-04]
 	Updated lang/perl5 to 5.32.0nb1 [wiz 2020-09-04]
+	Removed converters/p5-Unicode-Collate successor lang/perl5 [wiz 2020-09-04]
