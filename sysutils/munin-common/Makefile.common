@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2020/09/01 08:01:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/09/04 10:39:25 wiz Exp $
 #
 # used by sysutils/munin-common/Makefile
 # used by sysutils/munin-master/Makefile
@@ -13,9 +13,7 @@ MAINTAINER=	tm@NetBSD.org
 HOMEPAGE=	http://munin-monitoring.org/
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	p5-CPAN-Meta>=2.141170:../../devel/p5-CPAN-Meta
 BUILD_DEPENDS+=	p5-Module-Build>=0.42050:../../devel/p5-Module-Build
-#BUILD_DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 DEPENDS=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/munin-common/distinfo
