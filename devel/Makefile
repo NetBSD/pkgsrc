@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3193 2020/09/04 10:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3194 2020/09/04 10:55:08 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1473,7 +1473,6 @@ SUBDIR+=	p5-IO-All
 SUBDIR+=	p5-IO-Async
 SUBDIR+=	p5-IO-Capture
 SUBDIR+=	p5-IO-CaptureOutput
-SUBDIR+=	p5-IO-Compress
 SUBDIR+=	p5-IO-Digest
 SUBDIR+=	p5-IO-Event
 SUBDIR+=	p5-IO-HTML
