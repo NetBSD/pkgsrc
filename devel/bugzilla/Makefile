@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2020/08/31 18:07:17 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/09/04 09:29:10 wiz Exp $
 
 DISTNAME=	bugzilla-5.0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
@@ -46,7 +46,6 @@ DEPENDS+=	p5-JSON-RPC-[0-9]*:../../www/p5-JSON-RPC
 DEPENDS+=	p5-Test-Taint-[0-9]*:../../devel/p5-Test-Taint
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Scrubber-[0-9]*:../../www/p5-HTML-Scrubber
-DEPENDS+=	p5-Encode-[0-9]*:../../textproc/p5-Encode
 DEPENDS+=	p5-Encode-Detect-[0-9]*:../../textproc/p5-Encode-Detect
 DEPENDS+=	p5-Email-Reply-[0-9]*:../../mail/p5-Email-Reply
 DEPENDS+=	p5-HTML-FormatText-WithLinks-[0-9]*:../../textproc/p5-HTML-FormatText-WithLinks
