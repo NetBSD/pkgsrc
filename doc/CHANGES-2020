@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4730 2020/09/04 09:28:51 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4731 2020/09/04 09:29:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7324,3 +7324,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-Strict to 0.52 [wen 2020-09-04]
 	Updated audio/py-music21 to 6.1.0 [gutteridge 2020-09-04]
 	Updated textproc/p5-Text-MultiMarkdown to 1.000035nb2 [wiz 2020-09-04]
+	Removed textproc/p5-Encode successor lang/perl5 [wiz 2020-09-04]
