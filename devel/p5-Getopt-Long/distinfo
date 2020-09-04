@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.17 2019/10/19 12:52:40 mef Exp $
-
-SHA1 (Getopt-Long-2.51.tar.gz) = c82316e543a3968ebc05635c6d6180bb9b1be382
-RMD160 (Getopt-Long-2.51.tar.gz) = d11c0ac795731d5b0fd06836e7648c32a038224e
-SHA512 (Getopt-Long-2.51.tar.gz) = e70b2c30f5f85d7bf387381782a22b55f76598e1b4e19102fbf463c4333e91090ad2da49965be6211821d4f7f109aa7e4153348a9142f38fdb1a39299c997c02
-Size (Getopt-Long-2.51.tar.gz) = 43623 bytes
-SHA1 (patch-Makefile.PL) = 6be5f0773432d6a28c5f1b43afdcf6fed0fd0b54
