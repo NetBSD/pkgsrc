@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3207 2020/09/04 11:49:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3208 2020/09/04 12:09:46 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1540,7 +1540,6 @@ SUBDIR+=	p5-MRO-Compat
 SUBDIR+=	p5-Mac-Carbon
 SUBDIR+=	p5-Mac-SystemDirectory
 SUBDIR+=	p5-Make
-SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
 SUBDIR+=	p5-Memoize-Memcached
 SUBDIR+=	p5-Menlo
