@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4772 2020/09/04 12:09:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4773 2020/09/04 12:15:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7366,3 +7366,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed converters/p5-MIME-Base64 successor lang/perl5 [wiz 2020-09-04]
 	Removed math/p5-Math-Complex successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-Memoize successor lang/perl5 [wiz 2020-09-04]
+	Removed devel/p5-Module-CoreList successor lang/perl5 [wiz 2020-09-04]
