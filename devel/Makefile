@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3223 2020/09/04 14:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3224 2020/09/04 14:23:38 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2040,7 +2040,6 @@ SUBDIR+=	p5-strictures
 SUBDIR+=	p5-subversion
 SUBDIR+=	p5-syntax
 SUBDIR+=	p5-thrift
-SUBDIR+=	p5-version
 SUBDIR+=	p8-platform
 SUBDIR+=	palmpower
 SUBDIR+=	pango
