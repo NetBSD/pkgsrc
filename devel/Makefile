@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3211 2020/09/04 12:19:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3212 2020/09/04 12:25:04 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1709,7 +1709,6 @@ SUBDIR+=	p5-Params-Coerce
 SUBDIR+=	p5-Params-Util
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Params-ValidationCompiler
-SUBDIR+=	p5-Parse-CPAN-Meta
 SUBDIR+=	p5-Parse-CPAN-Packages
 SUBDIR+=	p5-Parse-ErrorString-Perl
 SUBDIR+=	p5-Parse-ExuberantCTags
