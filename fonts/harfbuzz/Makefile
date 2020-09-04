@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.134 2020/08/15 21:48:34 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.135 2020/09/04 10:50:08 prlw1 Exp $
 
-DISTNAME=	harfbuzz-2.7.1
+DISTNAME=	harfbuzz-2.7.2
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
