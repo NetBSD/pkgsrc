@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2020/08/31 18:09:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/09/04 13:45:15 wiz Exp $
 
 DISTNAME=	Test-TempDir-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -17,7 +17,6 @@ DEPENDS+=	p5-Moose>=0.87:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types-Path-Class>=0:../../devel/p5-MooseX-Types-Path-Class
 DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
 DEPENDS+=	p5-Sub-Exporter>=0:../../devel/p5-Sub-Exporter
-DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 
 USE_LANGUAGES=	# empty

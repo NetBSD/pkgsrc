@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/08/31 18:12:24 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.24 2020/09/04 13:45:16 wiz Exp $
 
 DISTNAME=	MooseX-Types-DateTime-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +20,6 @@ DEPENDS+=	p5-Time-Duration-Parse>=0.06:../../time/p5-Time-Duration-Parse
 DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=	# empty
