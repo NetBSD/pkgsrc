@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4787 2020/09/04 13:49:25 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4788 2020/09/04 13:51:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7381,3 +7381,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-Test-Harness successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-Test-Simple successor lang/perl5 [wiz 2020-09-04]
 	Removed textproc/p5-Text-Tabs+Wrap [wiz 2020-09-04]
+	Removed devel/p5-Tie-RefHash successor lang/perl5 [wiz 2020-09-04]
