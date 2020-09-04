@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.234 2020/08/17 20:17:24 leot Exp $
+# $NetBSD: Makefile,v 1.235 2020/09/04 11:14:08 prlw1 Exp $
 
-DISTNAME=	pango-1.44.7
-PKGREVISION=	3
+DISTNAME=	pango-1.46.1
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,7 +23,9 @@ SUBST_VARS.wrksrc=	WRKSRC
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/pango.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/pangocairo.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/pangofc.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/pangoft2.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/pangoot.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/pangoxft.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
@@ -46,7 +47,7 @@ post-install:
 
 BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=0.19.7
 .include "../../converters/fribidi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.59
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.60
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
