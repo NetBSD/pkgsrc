@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/08/31 18:10:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/04 09:39:57 wiz Exp $
 
 DISTNAME=		swaks-20190914.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}files/
 
@@ -11,7 +11,6 @@ COMMENT=		Featureful, flexible, scriptable SMTP test tool
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
-DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 #DEPENDS+=		p5-Authen-NTLM (not in pkgsrc)
 DEPENDS+=		p5-Authen-SASL-[0-9]*:../../security/p5-Authen-SASL
