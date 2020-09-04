@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/08/31 18:07:24 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2020/09/04 11:32:24 wiz Exp $
 
 GITHUB_TAG=	81f185261c8863c5b84344ee31192870be939faf
 DISTNAME=	ninka-1.3.2pre20180106
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dmgerman/}
 
@@ -15,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=		p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=		p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
-DEPENDS+=		p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=		p5-Spreadsheet-WriteExcel-[0-9]*:../../math/p5-Spreadsheet-WriteExcel
 DEPENDS+=		p5-IO-CaptureOutput-[0-9]*:../../devel/p5-IO-CaptureOutput
 TEST_DEPENDS+=		p5-Test-Pod>=0:../../devel/p5-Test-Pod

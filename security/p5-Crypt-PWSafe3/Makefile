@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:11:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/09/04 11:32:25 wiz Exp $
 
 DISTNAME=	Crypt-PWSafe3-1.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
 
@@ -16,7 +16,6 @@ DEPENDS+=	p5-Crypt-ECB-[0-9]*:../../security/p5-Crypt-ECB
 DEPENDS+=	p5-Crypt-Random-[0-9]*:../../security/p5-Crypt-Random
 DEPENDS+=	p5-Crypt-Twofish-[0-9]*:../../security/p5-Crypt-Twofish
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
-DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=	p5-Data-UUID-[0-9]*:../../devel/p5-Data-UUID
 
 PERL5_PACKLIST=		auto/Crypt/PWSafe3/.packlist
