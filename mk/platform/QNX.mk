@@ -49,7 +49,7 @@ IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANINSTALL?=	maninstall catinstall
 
 _OPSYS_SYSTEM_RPATH?=	/lib:/usr/lib	# STANDARD_LIBRARY_PATH
-_OPSYS_LIB_DIRS?=	/lib /usr/lib
+_OPSYS_LIB_DIRS?=	/lib /usr/lib /usr/qnx650
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 
 .if exists(/usr/include/netinet6)
