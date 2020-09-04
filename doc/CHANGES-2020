@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4736 2020/09/04 10:13:29 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4737 2020/09/04 10:15:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7330,3 +7330,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed converters/p5-Unicode-Normalize successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-Storable successor lang/perl5 [wiz 2020-09-04]
 	Added chat/libmesode version 0.9.3 [nia 2020-09-04]
+	Removed archivers/p5-Archive-Tar successor lang/perl5 [wiz 2020-09-04]
