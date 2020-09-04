@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4800 2020/09/04 15:01:32 taca Exp $
+$NetBSD: CHANGES-2020,v 1.4801 2020/09/04 16:05:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7394,3 +7394,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-Module-Metadata successor lang/perl5 [wiz 2020-09-04]
 	Updated lang/php73 to 7.3.22 [taca 2020-09-04]
 	Updated lang/php74 to 7.4.10 [taca 2020-09-04]
+	Updated cad/py-gds to 1.6 [mef 2020-09-04]
