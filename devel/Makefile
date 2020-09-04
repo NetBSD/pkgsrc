@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3198 2020/09/04 11:14:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3199 2020/09/04 11:20:39 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1364,7 +1364,6 @@ SUBDIR+=	p5-ExtUtils-F77
 SUBDIR+=	p5-ExtUtils-Helpers
 SUBDIR+=	p5-ExtUtils-InstallPaths
 SUBDIR+=	p5-ExtUtils-LibBuilder
-SUBDIR+=	p5-ExtUtils-MakeMaker
 SUBDIR+=	p5-ExtUtils-MakeMaker-CPANfile
 SUBDIR+=	p5-ExtUtils-MakeMaker-Coverage
 SUBDIR+=	p5-ExtUtils-Manifest
