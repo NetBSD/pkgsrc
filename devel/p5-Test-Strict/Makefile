@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/09/04 01:09:46 wen Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/04 11:32:25 wiz Exp $
 
 DISTNAME=	Test-Strict-0.52
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MA/MANWAR/
 
@@ -10,7 +11,6 @@ HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MA/MANWAR/
 COMMENT=	Check syntax, presence of use strict; and test coverage
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-File-Temp>=0.01:../../devel/p5-File-Temp
 BUILD_DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 
 PERL5_PACKLIST=	auto/Test/Strict/.packlist
