@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/08/31 23:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/09/04 20:34:30 wiz Exp $
 
 DISTNAME=	jsonschema-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/Julian/jsonschema
 COMMENT=	Implementation of JSON Schema for Python
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.14.0:../../devel/py-pyrsistent
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
