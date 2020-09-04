@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/09/04 09:39:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/04 10:13:40 wiz Exp $
 
 DISTNAME=	pulledpork-0.7.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shirkdog/}
 
@@ -18,14 +18,10 @@ REPLACE_PERL+=	contrib/oink-conv.pl
 WRKSRC=		${WRKDIR}/pulledpork-${PKGVERSION_NOREV}
 BUILD_DEFS+=	VARBASE
 
-# File/Find.pm is a part of lang/perl5
-# File/Basename.pm is a part of lang/perl5
-# File/Copy.pm is a part of lang/perl5
 DEPENDS+=	p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-Sys-Syslog-[0-9]*:../../sysutils/p5-Sys-Syslog
 DEPENDS+=	p5-File-Path-[0-9]*:../../devel/p5-File-Path
 DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
-DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-PathTools-[0-9]*:../../devel/p5-PathTools
 DEPENDS+=	p5-Data-Dumper-[0-9]*:../../devel/p5-Data-Dumper
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
