@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3195 2020/09/04 11:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3196 2020/09/04 11:03:15 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1320,7 +1320,6 @@ SUBDIR+=	p5-Devel-LexAlias
 SUBDIR+=	p5-Devel-NYTProf
 SUBDIR+=	p5-Devel-OverloadInfo
 SUBDIR+=	p5-Devel-OverrideGlobalRequire
-SUBDIR+=	p5-Devel-PPPort
 SUBDIR+=	p5-Devel-PartialDump
 SUBDIR+=	p5-Devel-PatchPerl
 SUBDIR+=	p5-Devel-Pragma
