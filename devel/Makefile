@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3220 2020/09/04 14:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3221 2020/09/04 14:14:46 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2010,7 +2010,6 @@ SUBDIR+=	p5-aliased
 SUBDIR+=	p5-asa
 SUBDIR+=	p5-autobox
 SUBDIR+=	p5-autobox-Core
-SUBDIR+=	p5-autodie
 SUBDIR+=	p5-autovivification
 SUBDIR+=	p5-bareword-filehandles
 SUBDIR+=	p5-boolean
