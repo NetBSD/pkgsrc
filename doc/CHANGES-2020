@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4765 2020/09/04 11:49:26 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4766 2020/09/04 11:50:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7359,3 +7359,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-IO-Zlib successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-IPC-Cmd successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-IPC-SysV successor lang/perl5 [wiz 2020-09-04]
+	Updated audio/ncspot to 0.2.2 [pin 2020-09-04]
