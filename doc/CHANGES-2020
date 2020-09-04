@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4740 2020/09/04 10:22:46 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4741 2020/09/04 10:38:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7334,3 +7334,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added chat/profanity version 0.9.5 [nia 2020-09-04]
 	Removed devel/p5-AutoLoader successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-CPAN successor lang/perl5 [wiz 2020-09-04]
+	Updated textproc/po4a to 0.57nb3 [wiz 2020-09-04]
