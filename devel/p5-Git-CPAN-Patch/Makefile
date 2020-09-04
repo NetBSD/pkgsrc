@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/09/04 12:21:15 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/09/04 12:22:53 wiz Exp $
 
 DISTNAME=	Git-CPAN-Patch-2.3.4
 PKGNAME=	p5-${DISTNAME}
@@ -42,6 +42,7 @@ TEST_DEPENDS+=	p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
 TEST_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 TEST_DEPENDS+=	p5-Data-Printer-[0-9]*:../../devel/p5-Data-Printer
 TEST_DEPENDS+=	p5-Devel-CheckOS-[0-9]*:../../devel/p5-Devel-CheckOS
+TEST_DEPENDS+=	p5-Package-Constants-[0-9]*:../../devel/p5-Package-Constants
 TEST_DEPENDS+=	p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
 TEST_DEPENDS+=	p5-Search-Elasticsearch-[0-9]*:../../devel/p5-Search-Elasticsearch
 TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
