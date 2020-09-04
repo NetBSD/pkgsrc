@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3219 2020/09/04 13:51:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3220 2020/09/04 14:12:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2002,7 +2002,6 @@ SUBDIR+=	p5-Variable-Magic
 SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-Wx-Perl-DataWalker
-SUBDIR+=	p5-XSLoader
 SUBDIR+=	p5-XString
 SUBDIR+=	p5-XXX
 SUBDIR+=	p5-accessors
