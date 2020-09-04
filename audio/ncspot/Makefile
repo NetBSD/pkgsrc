@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/08/23 14:57:42 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/04 11:49:46 pin Exp $
 
-DISTNAME=	ncspot-0.2.1
-PKGREVISION=	1
+DISTNAME=	ncspot-0.2.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -62,9 +61,9 @@ CARGO_CRATE_DEPENDS+=	bytes-0.5.6
 CARGO_CRATE_DEPENDS+=	cc-1.0.58
 CARGO_CRATE_DEPENDS+=	cexpr-0.4.0
 CARGO_CRATE_DEPENDS+=	cfg-if-0.1.10
-CARGO_CRATE_DEPENDS+=	chrono-0.4.13
+CARGO_CRATE_DEPENDS+=	chrono-0.4.15
 CARGO_CRATE_DEPENDS+=	clang-sys-0.29.3
-CARGO_CRATE_DEPENDS+=	clap-2.33.2
+CARGO_CRATE_DEPENDS+=	clap-2.33.3
 CARGO_CRATE_DEPENDS+=	clipboard-0.5.0
 CARGO_CRATE_DEPENDS+=	clipboard-win-2.2.0
 CARGO_CRATE_DEPENDS+=	cloudabi-0.0.3
@@ -95,11 +94,12 @@ CARGO_CRATE_DEPENDS+=	darling_core-0.10.2
 CARGO_CRATE_DEPENDS+=	darling_core-0.9.0
 CARGO_CRATE_DEPENDS+=	darling_macro-0.10.2
 CARGO_CRATE_DEPENDS+=	darling_macro-0.9.0
-CARGO_CRATE_DEPENDS+=	dbus-0.6.5
+CARGO_CRATE_DEPENDS+=	dbus-0.8.4
 CARGO_CRATE_DEPENDS+=	derive_builder-0.7.2
 CARGO_CRATE_DEPENDS+=	derive_builder_core-0.5.0
 CARGO_CRATE_DEPENDS+=	digest-0.8.1
 CARGO_CRATE_DEPENDS+=	directories-2.0.2
+CARGO_CRATE_DEPENDS+=	dirs-1.0.5
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.5
 CARGO_CRATE_DEPENDS+=	dotenv-0.13.0
 CARGO_CRATE_DEPENDS+=	dtoa-0.4.6
@@ -169,7 +169,7 @@ CARGO_CRATE_DEPENDS+=	language-tags-0.2.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lazycell-1.3.0
 CARGO_CRATE_DEPENDS+=	lewton-0.9.4
-CARGO_CRATE_DEPENDS+=	libc-0.2.74
+CARGO_CRATE_DEPENDS+=	libc-0.2.76
 CARGO_CRATE_DEPENDS+=	libdbus-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	libloading-0.5.2
 CARGO_CRATE_DEPENDS+=	libm-0.2.1
@@ -183,6 +183,7 @@ CARGO_CRATE_DEPENDS+=	linear-map-1.2.0
 CARGO_CRATE_DEPENDS+=	lock_api-0.3.4
 CARGO_CRATE_DEPENDS+=	log-0.3.9
 CARGO_CRATE_DEPENDS+=	log-0.4.11
+CARGO_CRATE_DEPENDS+=	mac-notification-sys-0.3.0
 CARGO_CRATE_DEPENDS+=	malloc_buf-0.0.6
 CARGO_CRATE_DEPENDS+=	maplit-1.0.2
 CARGO_CRATE_DEPENDS+=	matches-0.1.8
@@ -202,6 +203,7 @@ CARGO_CRATE_DEPENDS+=	ncurses-5.99.0
 CARGO_CRATE_DEPENDS+=	net2-0.2.34
 CARGO_CRATE_DEPENDS+=	nix-0.9.0
 CARGO_CRATE_DEPENDS+=	nom-5.1.2
+CARGO_CRATE_DEPENDS+=	notify-rust-4.0.0
 CARGO_CRATE_DEPENDS+=	num-0.3.0
 CARGO_CRATE_DEPENDS+=	num-bigint-0.2.6
 CARGO_CRATE_DEPENDS+=	num-complex-0.2.4
@@ -218,7 +220,7 @@ CARGO_CRATE_DEPENDS+=	objc-foundation-0.1.1
 CARGO_CRATE_DEPENDS+=	objc_id-0.1.1
 CARGO_CRATE_DEPENDS+=	object-0.20.0
 CARGO_CRATE_DEPENDS+=	ogg-0.7.0
-CARGO_CRATE_DEPENDS+=	once_cell-1.4.0
+CARGO_CRATE_DEPENDS+=	once_cell-1.4.1
 CARGO_CRATE_DEPENDS+=	opaque-debug-0.2.3
 CARGO_CRATE_DEPENDS+=	openssl-0.10.30
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.2
@@ -249,6 +251,7 @@ CARGO_CRATE_DEPENDS+=	protobuf-codegen-2.14.0
 CARGO_CRATE_DEPENDS+=	protobuf-codegen-pure-2.14.0
 CARGO_CRATE_DEPENDS+=	publicsuffix-1.5.4
 CARGO_CRATE_DEPENDS+=	quick-error-1.2.3
+CARGO_CRATE_DEPENDS+=	quote-0.3.15
 CARGO_CRATE_DEPENDS+=	quote-0.6.13
 CARGO_CRATE_DEPENDS+=	quote-1.0.7
 CARGO_CRATE_DEPENDS+=	rand-0.3.23
@@ -321,10 +324,14 @@ CARGO_CRATE_DEPENDS+=	strsim-0.7.0
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
 CARGO_CRATE_DEPENDS+=	strsim-0.9.3
 CARGO_CRATE_DEPENDS+=	strum-0.17.1
+CARGO_CRATE_DEPENDS+=	strum-0.8.0
 CARGO_CRATE_DEPENDS+=	strum_macros-0.17.1
+CARGO_CRATE_DEPENDS+=	strum_macros-0.8.0
 CARGO_CRATE_DEPENDS+=	subtle-1.0.0
+CARGO_CRATE_DEPENDS+=	syn-0.11.11
 CARGO_CRATE_DEPENDS+=	syn-0.15.44
 CARGO_CRATE_DEPENDS+=	syn-1.0.38
+CARGO_CRATE_DEPENDS+=	synom-0.11.3
 CARGO_CRATE_DEPENDS+=	synstructure-0.12.4
 CARGO_CRATE_DEPENDS+=	take-0.1.0
 CARGO_CRATE_DEPENDS+=	tempfile-3.1.0
@@ -336,7 +343,7 @@ CARGO_CRATE_DEPENDS+=	thiserror-1.0.20
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.20
 CARGO_CRATE_DEPENDS+=	thread_local-1.0.1
 CARGO_CRATE_DEPENDS+=	time-0.1.43
-CARGO_CRATE_DEPENDS+=	tinyvec-0.3.3
+CARGO_CRATE_DEPENDS+=	tinyvec-0.3.4
 CARGO_CRATE_DEPENDS+=	tokio-0.1.22
 CARGO_CRATE_DEPENDS+=	tokio-0.2.22
 CARGO_CRATE_DEPENDS+=	tokio-buf-0.1.1
@@ -371,6 +378,7 @@ CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.4
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.13
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.6.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.8
+CARGO_CRATE_DEPENDS+=	unicode-xid-0.0.4
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.1.0
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.1
 CARGO_CRATE_DEPENDS+=	url-1.7.2
@@ -403,10 +411,13 @@ CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winreg-0.5.1
 CARGO_CRATE_DEPENDS+=	winreg-0.6.2
 CARGO_CRATE_DEPENDS+=	winreg-0.7.0
+CARGO_CRATE_DEPENDS+=	winrt-0.4.0
+CARGO_CRATE_DEPENDS+=	winrt-notification-0.2.2
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	x11-clipboard-0.3.3
 CARGO_CRATE_DEPENDS+=	xcb-0.8.2
 CARGO_CRATE_DEPENDS+=	xi-unicode-0.2.1
+CARGO_CRATE_DEPENDS+=	xml-rs-0.6.1
 
 INSTALLATION_DIRS=	bin
 
@@ -422,6 +433,7 @@ do-install:
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libxcb?=	build
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
