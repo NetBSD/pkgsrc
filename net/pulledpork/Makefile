@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/09/04 11:29:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/09/04 11:36:49 wiz Exp $
 
 DISTNAME=	pulledpork-0.7.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shirkdog/}
 
@@ -20,7 +20,6 @@ BUILD_DEFS+=	VARBASE
 
 DEPENDS+=	p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-Sys-Syslog-[0-9]*:../../sysutils/p5-Sys-Syslog
-DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-PathTools-[0-9]*:../../devel/p5-PathTools
 DEPENDS+=	p5-Data-Dumper-[0-9]*:../../devel/p5-Data-Dumper
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
