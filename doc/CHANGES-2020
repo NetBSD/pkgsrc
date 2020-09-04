@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4743 2020/09/04 10:42:39 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4744 2020/09/04 10:46:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7337,3 +7337,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/po4a to 0.57nb3 [wiz 2020-09-04]
 	Removed devel/p5-CPAN-Meta successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-CPAN-Meta-Requirements successor lang/perl5 [wiz 2020-09-04]
+	Removed devel/p5-CPAN-Meta-YAML [wiz 2020-09-04]
