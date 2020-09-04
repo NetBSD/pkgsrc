@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4761 2020/09/04 11:37:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4762 2020/09/04 11:40:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7355,3 +7355,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-File-Path successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-File-Temp successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-Getopt-Long successor lang/perl5 [wiz 2020-09-04]
+	Removed www/p5-HTTP-Tiny successor lang/perl5 [wiz 2020-09-04]
