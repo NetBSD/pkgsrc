@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/08/31 18:09:04 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2020/09/04 13:45:15 wiz Exp $
 
 DISTNAME=		Test-MinimumVersion-0.101082
 PKGNAME=		p5-${DISTNAME:C/([0-9][0-9][0-9])([0-9][0-9][0-9])/\1.\2/}
@@ -17,8 +16,6 @@ DEPENDS+=		p5-File-Find-Rule-Perl-[0-9]*:../../devel/p5-File-Find-Rule-Perl
 DEPENDS+=		p5-Perl-MinimumVersion>=1.20:../../devel/p5-Perl-MinimumVersion
 DEPENDS+=		p5-YAML-Tiny>=1.40:../../textproc/p5-YAML-Tiny
 #DEPENDS+=		{perl>=5.10.0,p5-version>=0.7000}:../../devel/p5-version
-
-BUILD_DEPENDS+=		p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/MinimumVersion/.packlist

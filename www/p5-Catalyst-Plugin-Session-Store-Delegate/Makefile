@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/08/31 18:12:45 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/09/04 13:45:17 wiz Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-Store-Delegate-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Emulate-Class-Accessor-Fast-[0-9]*:../../devel/p5-MooseX-Emulate-Class-Accessor-Fast
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
-
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/Plugin/Session/Store/Delegate/.packlist
