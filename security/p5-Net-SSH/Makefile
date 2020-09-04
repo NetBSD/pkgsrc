@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/08/31 18:11:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2020/09/04 09:39:58 wiz Exp $
 
 DISTNAME=		Net-SSH-Perl-2.14
 PKGNAME=		p5-${DISTNAME:C/-Perl//}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		security net perl5
 MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/S/SC/SCHWIGON/
 
@@ -16,7 +16,6 @@ DEPENDS+=		p5-CryptX>=0.032:../../security/p5-CryptX
 DEPENDS+=		p5-Digest-BubbleBabble>=0.01:../../security/p5-Digest-BubbleBabble
 DEPENDS+=		p5-Math-GMP>=1.04:../../math/p5-Math-GMP
 DEPENDS+=		p5-String-CRC32>=1.2:../../textproc/p5-String-CRC32
-DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		p5-Crypt-Curve25519>=0.05:../../security/p5-Crypt-Curve25519
 DEPENDS+=		p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=		p5-Crypt-IDEA-[0-9]*:../../security/p5-Crypt-IDEA
