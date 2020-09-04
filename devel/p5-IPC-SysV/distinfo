@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2016/06/19 12:18:46 mef Exp $
-
-SHA1 (IPC-SysV-2.07.tar.gz) = b1dd7f125389902fb07e31cd15d8296e1d570358
-RMD160 (IPC-SysV-2.07.tar.gz) = e76b151741ccffdadfe568a471ce91a27debb271
-SHA512 (IPC-SysV-2.07.tar.gz) = 2f12f48fe3cf453c51543b78674c274caddcbf2c7fe38fa713ee810bb5c37df2e1e6543e2526dbe59a8d805ec5a0d114929559b58478d8b143c80417d070089c
-Size (IPC-SysV-2.07.tar.gz) = 68726 bytes
