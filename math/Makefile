@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.480 2020/08/30 21:29:15 tnn Exp $
+# $NetBSD: Makefile,v 1.481 2020/09/04 12:07:40 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -274,7 +274,6 @@ SUBDIR+=	p5-Math-BigInt-GMP
 SUBDIR+=	p5-Math-BigInt-Pari
 SUBDIR+=	p5-Math-BigInteger
 SUBDIR+=	p5-Math-Calc-Units
-SUBDIR+=	p5-Math-Complex
 SUBDIR+=	p5-Math-Derivative
 SUBDIR+=	p5-Math-FFT
 SUBDIR+=	p5-Math-GMP
