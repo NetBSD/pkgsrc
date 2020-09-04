@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4727 2020/09/03 20:31:07 nia Exp $
+$NetBSD: CHANGES-2020,v 1.4728 2020/09/04 01:11:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7321,3 +7321,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added mail/thunderbird68 version 68.12.0 [ryoon 2020-09-03]
 	Added mail/thunderbird68-l10n version 68.12.0 [ryoon 2020-09-03]
 	Updated security/mbedtls to 2.24.0 [nia 2020-09-03]
+	Updated devel/p5-Test-Strict to 0.52 [wen 2020-09-04]
