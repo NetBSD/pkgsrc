@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2020/09/04 10:13:16 nia Exp $
+# $NetBSD: Makefile,v 1.250 2020/09/04 10:15:17 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -95,6 +95,7 @@ SUBDIR+=	pidgin-otr
 SUBDIR+=	pidgin-sametime
 SUBDIR+=	pidgin-silc
 SUBDIR+=	pircbot
+SUBDIR+=	profanity
 SUBDIR+=	prosody
 SUBDIR+=	psi
 SUBDIR+=	psybnc
