@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/08/31 18:11:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/04 14:12:10 wiz Exp $
 
 DISTNAME=	Crypt-SMIME-0.25
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIKAGE/
 
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MI/MIKAGE/
 COMMENT=	Perl5 S/MIME message signing, verification, encryption and decryption
 LICENSE=	${PERL5_LICENSE}
-
-DEPENDS+=	p5-XSLoader>=0:../../devel/p5-XSLoader
 
 PERL5_PACKLIST=	auto/Crypt/SMIME/.packlist
 
