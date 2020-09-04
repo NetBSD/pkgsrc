@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2020/07/08 15:10:38 nia Exp $
+# $NetBSD: Makefile,v 1.178 2020/09/04 09:44:17 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -98,7 +98,6 @@ SUBDIR+=	p5-Unicode-IMAPUtf7
 SUBDIR+=	p5-Unicode-Map
 SUBDIR+=	p5-Unicode-Map8
 SUBDIR+=	p5-Unicode-MapUTF8
-SUBDIR+=	p5-Unicode-Normalize
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-Unicode-UTF8simple
 SUBDIR+=	p5-chkjis
