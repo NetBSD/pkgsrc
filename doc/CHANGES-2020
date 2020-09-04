@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4798 2020/09/04 14:29:40 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4799 2020/09/04 14:59:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7392,3 +7392,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-parent successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-version successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-Module-Metadata successor lang/perl5 [wiz 2020-09-04]
+	Updated lang/php73 to 7.3.22 [taca 2020-09-04]
