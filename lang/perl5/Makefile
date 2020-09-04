@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2020/09/04 10:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.266 2020/09/04 10:44:33 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -16,6 +16,7 @@ CONFLICTS+=	p5-AutoLoader<5.74
 CONFLICTS+=	p5-CPAN<2.2700			# 2.27
 CONFLICTS+=	p5-CPAN-Meta<2.150010
 CONFLICTS+=	p5-CPAN-Meta-Requirements<2.140
+CONFLICTS+=	p5-CPAN-Meta-YAML<0.018
 CONFLICTS+=	p5-Compress-Raw-Bzip2<2.093
 CONFLICTS+=	p5-Compress-Raw-Zlib<2.093
 CONFLICTS+=	p5-DB_File<1.853
