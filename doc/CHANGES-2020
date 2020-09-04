@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4782 2020/09/04 13:30:51 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4783 2020/09/04 13:32:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7376,3 +7376,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-Pod-Usage successor lang/perl5 [wiz 2020-09-04]
 	Removed sysutils/p5-Sys-Syslog successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-Term-ANSIColor successor lang/perl5 [wiz 2020-09-04]
+	Removed devel/p5-Term-Cap successor lang/perl5 [wiz 2020-09-04]
