@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/04 20:34:11 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/04 21:16:22 js Exp $
 
 DISTNAME=	matrix-synapse-1.19.1
 CATEGORIES=	chat
@@ -44,11 +44,13 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensio
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.7:../../databases/py-psycopg2
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	perl:run
 REPLACE_PERL+=	scripts/sync_room_to_group.pl
 
 SYNAPSE_USER?=	synapse
 SYNAPSE_GROUP?=	${SYNAPSE_USER}
 SYNAPSE_DATA?=	${VARBASE}/db/matrix-synapse
+BUILD_DEFS+=	SYNAPSE_USER SYNAPSE_GROUP SYNAPSE_DATA VARBASE
 
 OWN_DIRS_PERMS+=	${SYNAPSE_DATA} ${SYNAPSE_USER} ${SYNAPSE_GROUP} 0770
 
