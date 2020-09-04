@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4795 2020/09/04 14:18:49 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4796 2020/09/04 14:21:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7389,3 +7389,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-XSLoader successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-autodie successor lang/perl5 [wiz 2020-09-04]
 	Removed devel/p5-experimental successor lang/perl5 [wiz 2020-09-04]
+	Removed devel/p5-parent successor lang/perl5 [wiz 2020-09-04]
