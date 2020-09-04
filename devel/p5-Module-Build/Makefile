@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/08/31 18:08:21 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2020/09/04 10:39:25 wiz Exp $
 
 DISTNAME=	Module-Build-0.4231
 PKGNAME=	p5-${DISTNAME}0
@@ -13,7 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-inc-latest-[0-9]*:../../devel/p5-inc-latest
 
-TEST_DEPENDS+=	p5-CPAN-Meta>=2.142060:../../devel/p5-CPAN-Meta
 TEST_DEPENDS+=	p5-PAR-Dist-[0-9]*:../../devel/p5-PAR-Dist
 # For the tests:
 USE_TOOLS+=	perl
