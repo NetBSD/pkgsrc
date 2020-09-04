@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4734 2020/09/04 09:44:17 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4735 2020/09/04 09:48:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7328,3 +7328,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed security/p5-Digest-MD5 successor lang/perl5 [wiz 2020-09-04]
 	Updated print/p5-biblatex-biber to 2.14nb2 [wiz 2020-09-04]
 	Removed converters/p5-Unicode-Normalize successor lang/perl5 [wiz 2020-09-04]
+	Removed devel/p5-Storable successor lang/perl5 [wiz 2020-09-04]
