@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/05/23 17:42:32 fox Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/09/04 13:02:57 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -356,6 +356,7 @@ share/din/factory/get-selection.help.tcl
 share/din/factory/get-style.help.tcl
 share/din/factory/get-var.help.tcl
 share/din/factory/globals
+share/din/factory/harmonics
 share/din/factory/harmonics.help.tcl
 share/din/factory/harmonics.patch.tcl
 share/din/factory/help.tcl
@@ -415,6 +416,7 @@ share/din/factory/p_Sine_Mixer
 share/din/factory/p_Spiraler
 share/din/factory/p_Starrer
 share/din/factory/p_Superformula
+share/din/factory/phases
 share/din/factory/pitch-vol.ed
 share/din/factory/pitch.crv
 share/din/factory/point-modulation.ed
@@ -460,7 +462,6 @@ share/din/factory/set-var.help.tcl
 share/din/factory/settings.tcl
 share/din/factory/setup-user-dir.tcl
 share/din/factory/sin.lib
-share/din/factory/sine_levels
 share/din/factory/sine_mixer_sin.crv
 share/din/factory/sine_mixer_sin.ed
 share/din/factory/sounding-board.osc
