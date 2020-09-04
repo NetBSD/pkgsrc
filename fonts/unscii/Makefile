@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/08/31 18:09:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/04 11:36:49 wiz Exp $
 
 DISTNAME=	unscii-1.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://pelulamu.net/unscii/
 
@@ -17,7 +17,6 @@ USE_TOOLS+=	perl:build
 BUILD_DEPENDS+=	bdftopcf-[0-9]*:../../fonts/bdftopcf
 BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 BUILD_DEPENDS+=	p5-Text-CharWidth-[0-9]*:../../textproc/p5-Text-CharWidth
-BUILD_DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
 
 REPLACE_PERL+=	*.pl
 
