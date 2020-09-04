@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/04/19 12:43:24 rillig Exp $
+$NetBSD: distinfo,v 1.2 2020/09/04 01:09:46 wen Exp $
 
-SHA1 (Test-Strict-0.47.tar.gz) = 567b46694ab5ad808d7d59f849dd0f55d7a0f9c1
-RMD160 (Test-Strict-0.47.tar.gz) = 44bfaf2c5dce70be1df8a5edb61fb383d6f61647
-SHA512 (Test-Strict-0.47.tar.gz) = 56ffc488cb2502af228ad03f3da7bf11f04c0cacc7f1ea13b3aa8e0578f0df36a9be092f71db973748c8db15f45873a384f2e24844468b9a300d2386692c21b9
-Size (Test-Strict-0.47.tar.gz) = 20679 bytes
+SHA1 (Test-Strict-0.52.tar.gz) = 9043431fb1026b3b3cae0348132f3595e0150172
+RMD160 (Test-Strict-0.52.tar.gz) = 776ce2684beb621c9d55e705b27011230ae32133
+SHA512 (Test-Strict-0.52.tar.gz) = 2d2e27f8fa5156bae4b54c2a9da5f5bd37c820ca9f9594f51c0915695f74f16880445d8a47de5a86d0277482b8234d4ab8e1c8a7ba00871c950268be40f543b5
+Size (Test-Strict-0.52.tar.gz) = 20932 bytes
