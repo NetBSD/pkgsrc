@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3188 2020/09/04 09:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3189 2020/09/04 10:19:23 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1115,7 +1115,6 @@ SUBDIR+=	p5-Array-RefElem
 SUBDIR+=	p5-Async-Interrupt
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Lexical
-SUBDIR+=	p5-AutoLoader
 SUBDIR+=	p5-AutoXS-Header
 SUBDIR+=	p5-Autodia
 SUBDIR+=	p5-B-COW
