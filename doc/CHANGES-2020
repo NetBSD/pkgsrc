@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4780 2020/09/04 13:18:18 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4781 2020/09/04 13:25:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7374,3 +7374,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed textproc/p5-Pod-Simple successor lang/perl5 [wiz 2020-09-04]
 	Updated audio/din to 48 [fox 2020-09-04]
 	Removed devel/p5-Pod-Usage successor lang/perl5 [wiz 2020-09-04]
+	Removed sysutils/p5-Sys-Syslog successor lang/perl5 [wiz 2020-09-04]
