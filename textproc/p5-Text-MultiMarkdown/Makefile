@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/08/31 18:12:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/04 09:28:41 wiz Exp $
 
 DISTNAME=	Text-MultiMarkdown-1.000035
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/
 
@@ -11,14 +11,16 @@ HOMEPAGE=	https://metacpan.org/release/Text-MultiMarkdown
 COMMENT=	Convert MultiMarkdown syntax to (X)HTML
 LICENSE=	modified-bsd
 
-DEPENDS+=	p5-Digest-MD5>=0:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Text-Markdown>=1.0.26:../../textproc/p5-Text-Markdown
+DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TEST_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 PERL5_PACKLIST=	auto/Text/MultiMarkdown/.packlist
 USE_LANGUAGES=	# none
 
 REPLACE_PERL+=	script/MultiMarkdown.pl
 
-.include "../../textproc/p5-Encode/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
