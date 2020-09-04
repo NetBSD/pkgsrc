@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/08/31 18:07:52 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/09/04 13:45:14 wiz Exp $
 
 DISTNAME=	Devel-Events-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -20,9 +20,7 @@ DEPENDS+=	p5-MooseX-AttributeHelpers>=0.03:../../devel/p5-MooseX-AttributeHelper
 DEPENDS+=	p5-Set-Object-[0-9]*:../../devel/p5-Set-Object
 DEPENDS+=	p5-Sub-Uplevel-[0-9]*:../../devel/p5-Sub-Uplevel
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
+TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 CHECK_INTERPRETER_SKIP+=	${PERL5_INSTALLVENDORLIB:S|^${PREFIX}/||}/Devel/Events.pm
 CHECK_INTERPRETER_SKIP+=	${PERL5_INSTALLVENDORLIB:S|^${PREFIX}/||}/Devel/Events/*

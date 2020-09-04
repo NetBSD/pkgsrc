@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:08:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2020/09/04 13:45:14 wiz Exp $
 
 DISTNAME=	Hash-Util-FieldHash-Compat-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -24,8 +23,6 @@ PERL5_PACKLIST=	auto/Hash/Util/FieldHash/Compat/.packlist
 # Data for 2015-06-01
 # Tie::RefHash::Weak was not in CORE (or so I think)
 DEPENDS+=	p5-Tie-RefHash-Weak>=0.08:../../devel/p5-Tie-RefHash-Weak
-
-BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
