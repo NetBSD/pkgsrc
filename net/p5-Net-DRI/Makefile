@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/08/31 18:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/04 12:16:21 wiz Exp $
 
 DISTNAME=	Net-DRI-0.96
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -19,7 +19,6 @@ DEPENDS+=	p5-Class-Accessor-Chained-[0-9]*:../../devel/p5-Class-Accessor-Chained
 DEPENDS+=	p5-IO-Socket-SSL>=1.31:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Email-Valid-[0-9]*:../../mail/p5-Email-Valid
 DEPENDS+=	p5-XML-LibXML>=1.61:../../textproc/p5-XML-LibXML
-DEPENDS+=	p5-Module-Load-[0-9]*:../../devel/p5-Module-Load
 DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
 
