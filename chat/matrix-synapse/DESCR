@@ -1,0 +1,5 @@
+Synapse is a reference "homeserver" implementation of Matrix from the core
+development team at matrix.org, written in Python/Twisted.  It is intended to
+showcase the concept of Matrix and let folks see the spec in the context of a
+codebase and let you run your own homeserver and generally help bootstrap the
+ecosystem.
