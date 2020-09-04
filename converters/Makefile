@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2020/09/04 11:52:59 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2020/09/04 12:06:19 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -85,7 +85,6 @@ SUBDIR+=	p5-Jcode
 SUBDIR+=	p5-MARC-Charset
 SUBDIR+=	p5-MARC-Crosswalk-DublinCore
 SUBDIR+=	p5-MIME-Base32
-SUBDIR+=	p5-MIME-Base64
 SUBDIR+=	p5-MIME-Base64-URLSafe
 SUBDIR+=	p5-Sereal
 SUBDIR+=	p5-Sereal-Decoder
