@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2020/08/15 21:48:34 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.44 2020/09/04 10:50:08 prlw1 Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -40,22 +40,24 @@ include/harfbuzz/hb-unicode.h
 include/harfbuzz/hb-version.h
 include/harfbuzz/hb.h
 lib/cmake/harfbuzz/harfbuzz-config.cmake
+${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 lib/libharfbuzz-gobject.so
 lib/libharfbuzz-gobject.so.0
-lib/libharfbuzz-gobject.so.0.20701.0
+lib/libharfbuzz-gobject.so.0.20702.0
 ${PLIST.icu}lib/libharfbuzz-icu.so
 ${PLIST.icu}lib/libharfbuzz-icu.so.0
-${PLIST.icu}lib/libharfbuzz-icu.so.0.20701.0
+${PLIST.icu}lib/libharfbuzz-icu.so.0.20702.0
 lib/libharfbuzz-subset.so
 lib/libharfbuzz-subset.so.0
-lib/libharfbuzz-subset.so.0.20701.0
+lib/libharfbuzz-subset.so.0.20702.0
 lib/libharfbuzz.so
 lib/libharfbuzz.so.0
-lib/libharfbuzz.so.0.20701.0
+lib/libharfbuzz.so.0.20702.0
 lib/pkgconfig/harfbuzz-gobject.pc
 ${PLIST.icu}lib/pkgconfig/harfbuzz-icu.pc
 lib/pkgconfig/harfbuzz-subset.pc
 lib/pkgconfig/harfbuzz.pc
+${PLIST.introspection}share/gir-1.0/HarfBuzz-0.0.gir
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/HarfBuzz.png
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/HarfBuzz.svg
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/a-clustering-example-for-levels-0-and-1.html
