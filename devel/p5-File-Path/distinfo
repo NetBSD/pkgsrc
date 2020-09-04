@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2020/08/06 00:24:55 gutteridge Exp $
-
-SHA1 (File-Path-2.17.tar.gz) = 32d9da754c54286aaaf60d2656d7267d2ef235aa
-RMD160 (File-Path-2.17.tar.gz) = c23e0397cb38950d4f47c53591cd7f145e597899
-SHA512 (File-Path-2.17.tar.gz) = 96823d91991bccbfa141bd2d20f9ed576890bda73bc88d6f6a6d15095dc472868b330f3be1dbaca7d4c5d66dddaebacc408fed29e54d895cd1066ffe3afc3b7d
-Size (File-Path-2.17.tar.gz) = 31879 bytes
