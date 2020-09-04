@@ -1,0 +1,33 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/09/04 10:15:17 nia Exp $
+
+- Add NetBSD as a non-libdl platform.
+- Fix == usage.
+
+--- configure.ac.orig	2020-07-01 16:49:19.000000000 +0000
++++ configure.ac
+@@ -22,6 +22,7 @@ AC_CANONICAL_HOST
+ PLATFORM="unknown"
+ AS_CASE([$host_os],
+     [freebsd*], [PLATFORM="freebsd"],
++    [netbsd*], [PLATFORM="netbsd"],
+     [openbsd*], [PLATFORM="openbsd"],
+     [darwin*], [PLATFORM="osx"],
+     [cygwin], [PLATFORM="cygwin"],
+@@ -81,7 +82,7 @@ elif test "x$enable_python_plugins" != x
+         rm -f Python.framework
+         ln -s $PYTHON_FRAMEWORK Python.framework ])
+     AC_CHECK_PROG(PYTHON_CONFIG_EXISTS, python-config, yes, no)
+-    if test "$PYTHON_CONFIG_EXISTS" == "yes"; then
++    if test "$PYTHON_CONFIG_EXISTS" = "yes"; then
+         AX_PYTHON_DEVEL
+         AM_CONDITIONAL([BUILD_PYTHON_API], [true])
+         AC_DEFINE([HAVE_PYTHON], [1], [Python support])
+@@ -108,7 +109,7 @@ else
+     elif test "x$enable_c_plugins" != xno; then
+         # libdl doesn't exist as a separate library in OpenBSD/FreeBSD and is
+         # provided in the standard libraries.
+-        AS_IF([test "x$PLATFORM" = xopenbsd -o "x$PLATFORM" = xfreebsd],
++        AS_IF([test "x$PLATFORM" = xopenbsd -o "x$PLATFORM" = xfreebsd -o "x$PLATFORM" = xnetbsd],
+             [AM_CONDITIONAL([BUILD_C_API], [true]) AC_DEFINE([HAVE_C], [1], [C support])],
+             [AC_CHECK_LIB([dl], [main],
+                 [AM_CONDITIONAL([BUILD_C_API], [true]) LIBS="$LIBS -ldl" AC_DEFINE([HAVE_C], [1], [C support])],
