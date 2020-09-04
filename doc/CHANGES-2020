@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4802 2020/09/04 16:53:35 pin Exp $
+$NetBSD: CHANGES-2020,v 1.4803 2020/09/04 20:35:23 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7396,3 +7396,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/php74 to 7.4.10 [taca 2020-09-04]
 	Updated cad/py-gds to 1.6 [mef 2020-09-04]
 	Updated www/badwolf to 1.0.3 [pin 2020-09-04]
+	Added chat/matrix-synapse version 1.19.1 [js 2020-09-04]
