@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/08/31 18:07:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/04 11:36:49 wiz Exp $
 
 DISTNAME=	Calltree-perl_pl
 PKGNAME=	calltree-perl-0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 #MASTER_SITES=	http://gw55.quarry.iu.teragrid.org/mediawiki/images/3/39/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -13,7 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Static code analysis for perl script
 LICENSE=	modified-bsd
 
-DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
 DEPENDS+=	p5-PPI-[0-9]*:../../devel/p5-PPI
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
