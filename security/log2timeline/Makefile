@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/08/31 18:11:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.13 2020/09/04 14:22:58 wiz Exp $
 
 DISTNAME=	log2timeline_${L2T_VERSION}
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	security
 MASTER_SITES=	http://log2timeline.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
@@ -39,7 +38,6 @@ DEPENDS+=	p5-Net-Pcap>=0:../../net/p5-Net-Pcap
 DEPENDS+=	p5-Params-Validate>=0:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Parse-Win32Registry>=0:../../misc/p5-Parse-Win32Registry
 DEPENDS+=	p5-XML-LibXML>=0:../../textproc/p5-XML-LibXML
-DEPENDS+=	p5-version>=0:../../devel/p5-version
 
 PERL5_PACKLIST=	auto/Log2t/.packlist
 USE_LANGUAGES=	# none
