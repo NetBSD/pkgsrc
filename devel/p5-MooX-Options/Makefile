@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/09/04 11:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/09/04 14:28:39 wiz Exp $
 
 DISTNAME=	MooX-Options-4.103
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
 
@@ -19,7 +19,6 @@ DEPENDS+=	p5-Moo>=2.002002:../../devel/p5-Moo
 # used in tests; cannot depend on it since it depends on us
 #DEPENDS+=	p5-MooX-Cmd-[0-9]*:../../devel/p5-MooX-Cmd
 DEPENDS+=	p5-MooX-ConfigFromFile-[0-9]*:../../devel/p5-MooX-ConfigFromFile
-DEPENDS+=	p5-Module-Metadata>=1.000019:../../devel/p5-Module-Metadata
 DEPENDS+=	p5-Path-Class>=0.32:../../devel/p5-Path-Class
 DEPENDS+=	p5-Term-Size-Any-[0-9]*:../../devel/p5-Term-Size-Any
 DEPENDS+=	p5-Unicode-LineBreak-[0-9]*:../../textproc/p5-Unicode-LineBreak
