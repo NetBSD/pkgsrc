@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.898 2020/09/03 09:29:51 pin Exp $
+# $NetBSD: Makefile,v 1.899 2020/09/04 13:25:32 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -441,7 +441,6 @@ SUBDIR+=	p5-Sys-CpuLoad
 SUBDIR+=	p5-Sys-Filesystem
 SUBDIR+=	p5-Sys-Hostname-Long
 SUBDIR+=	p5-Sys-SigAction
-SUBDIR+=	p5-Sys-Syslog
 SUBDIR+=	p5-Sys-Utmp
 SUBDIR+=	p5-UPS-Nut
 SUBDIR+=	p5-Unburden-Home-Dir
