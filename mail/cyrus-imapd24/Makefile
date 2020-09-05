@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/08/31 18:09:54 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2020/09/05 22:14:44 mef Exp $
 
 DISTNAME=	cyrus-imapd-2.4.20
 PKGREVISION=	11
@@ -64,11 +64,6 @@ RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 
 REPLACE_PERL+=		tools/rehash
-
-SUBST_CLASSES+=		sh
-SUBST_STAGE.sh=		post-build
-SUBST_FILES.sh=		perl/imap/blib/script/cyradm
-SUBST_SED.sh+=		-e 's|^\#!.*|\#!/bin/sh|'
 
 PERL5_PACKLIST= \
 	auto/Cyrus/IMAP/.packlist			\
