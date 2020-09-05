@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2020/02/19 09:41:50 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/09/05 07:06:43 wiz Exp $
 
-DISTNAME=	ruamel.yaml-0.16.10
+DISTNAME=	ruamel.yaml-0.16.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruamel.yaml/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/ruamel/yaml
+HOMEPAGE=	https://sourceforge.net/p/ruamel-yaml/
 COMMENT=	YAML parser/emitter
 LICENSE=	mit
 
