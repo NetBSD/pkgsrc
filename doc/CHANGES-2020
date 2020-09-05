@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4805 2020/09/05 07:05:29 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4806 2020/09/05 07:06:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7399,3 +7399,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added chat/matrix-synapse version 1.19.1 [js 2020-09-04]
 	Updated audio/py-music21 to 6.1.0nb1 [gutteridge 2020-09-05]
 	Updated devel/py-ruamel-yaml-clib to 0.2.2 [wiz 2020-09-05]
+	Updated devel/py-ruamel-yaml to 0.16.12 [wiz 2020-09-05]
