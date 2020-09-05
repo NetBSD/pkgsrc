@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4813 2020/09/05 11:34:32 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4814 2020/09/05 11:41:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7407,3 +7407,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/libnumbertext to 1.0.6 [ryoon 2020-09-05]
 	Updated misc/libreoffice to 7.0.1.2 [ryoon 2020-09-05]
 	Updated parallel/threadingbuildingblocks to 2020.3 [ryoon 2020-09-05]
+	Updated graphics/blender to 2.90.0 [ryoon 2020-09-05]
