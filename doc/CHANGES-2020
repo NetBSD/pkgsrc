@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4807 2020/09/05 07:14:14 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4808 2020/09/05 10:15:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7401,3 +7401,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ruamel-yaml-clib to 0.2.2 [wiz 2020-09-05]
 	Updated devel/py-ruamel-yaml to 0.16.12 [wiz 2020-09-05]
 	Updated print/p5-LaTeX-Driver to 1.1.1 [wiz 2020-09-05]
+	Updated devel/py-setuptools to 50.2.0 [ryoon 2020-09-05]
