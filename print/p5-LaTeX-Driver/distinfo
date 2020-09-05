@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2016/05/07 02:48:28 wen Exp $
+$NetBSD: distinfo,v 1.8 2020/09/05 07:14:05 wiz Exp $
 
-SHA1 (LaTeX-Driver-0.300.2.tar.gz) = 40fae697bc8ea82ea32f539f88b0bed19880bb58
-RMD160 (LaTeX-Driver-0.300.2.tar.gz) = fe52bf63df9d31f45b51b946bd8db8314358e7bd
-SHA512 (LaTeX-Driver-0.300.2.tar.gz) = 09f485071004d151c2d3ced576ac7b5423fd2d014a3950e0bc8bc2bb1e507b4aa6f041a7d54ad085632a0988d48d69ad726439adcabb8d8a81e10fb613e78271
-Size (LaTeX-Driver-0.300.2.tar.gz) = 54084 bytes
-SHA1 (patch-Makefile.PL) = 3ecf72c3d42282069cbf599f3d4eddc169ea46f3
+SHA1 (LaTeX-Driver-1.1.1.tar.gz) = c80fbe76f2a94853e30e1c8f026d6dce8af448b6
+RMD160 (LaTeX-Driver-1.1.1.tar.gz) = a8c0540d6a426b2272f8afcf0d34ea499fdc900f
+SHA512 (LaTeX-Driver-1.1.1.tar.gz) = 859bb007ec42236203cf4d3c156a5dcac216a312e904c145016e36587c95c47ca92c5928b04066a8fd383e196a4692423d3634bc66113e6a53960532c5e50287
+Size (LaTeX-Driver-1.1.1.tar.gz) = 56176 bytes
+SHA1 (patch-Makefile.PL) = 2670deb2f83460719567f89cdd8e785a4a26f76f
