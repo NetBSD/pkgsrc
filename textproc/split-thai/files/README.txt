@@ -2,10 +2,11 @@ NAME
      st-emacs
      st-icu
      st-swath
+     st-wordbreak
      tgrep
 
 SYNOPSIS
-     st-emacs|st-icu|st-swath [filename|text1 text2 ...|'blank']
+     st-emacs|st-icu|st-swath|st-wordbreak [filename|text1 text2 ...|'blank']
      tgrep [options] FILE ...
 
 DESCRIPTION
@@ -13,14 +14,16 @@ DESCRIPTION
      by spaces (word tokenization).  They can separate stdin, files,
      or text as arguments.  It includes these utilities:
 
-     st-emacs:  emacs-script using emacs lisp thai-word library
-                https://www.gnu.org/software/emacs/
-     st-icu:    basic C++ program using the ICU library
-                http://site.icu-project.org/
-     st-swath:  sh script wrapper to simplfy args to the swath program
-                https://linux.thai.net/projects/swath
+     st-emacs:     emacs-script using emacs lisp thai-word library
+                   https://www.gnu.org/software/emacs/
+     st-icu:       basic C++ program using the ICU library
+                   http://site.icu-project.org/
+     st-swath:     sh script wrapper to simplfy args to the swath program
+                   https://linux.thai.net/projects/swath
+     st-wordbreak: perl script to brute-force separate thai words,
+                   see "st-wordbreak -h"
 
-     tgrep:     grep-like utility using perl, see "tgrep -h"
+     tgrep:        grep-like utility using perl, see "tgrep -h"
 
 EXAMPLES
       split one or more text strings:
@@ -62,9 +65,9 @@ NOTES
      and corresponding .tri file, and emacs lisp .el files for reading
      and dumping out dictionary files.
 
-     st-emacs and st-swath are setup to use the combined dictionary
-     with words from the emacs 'thai-word library, swath dictionary
-     words, and the icu thai library words.
+     st-emacs, st-swath, and st-wordbreak are setup to use the
+     combined dictionary with words from the emacs 'thai-word library,
+     swath dictionary words, and the icu thai library words.
 
      st-icu uses its own built in library.  To customise the icu
      dictionary, you apparently would have to modify
@@ -79,3 +82,4 @@ BUGS
      thai text mixed with other languages may not be handled well when
      splitting.
      this file should be converted to proper manpages.
+     these utilities need better names.
