@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2020/09/02 21:42:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.52 2020/09/05 10:14:31 ryoon Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
@@ -149,6 +149,9 @@ ${PYSITELIB}/setuptools/_distutils/command/install_lib.pyo
 ${PYSITELIB}/setuptools/_distutils/command/install_scripts.py
 ${PYSITELIB}/setuptools/_distutils/command/install_scripts.pyc
 ${PYSITELIB}/setuptools/_distutils/command/install_scripts.pyo
+${PYSITELIB}/setuptools/_distutils/command/py37compat.py
+${PYSITELIB}/setuptools/_distutils/command/py37compat.pyc
+${PYSITELIB}/setuptools/_distutils/command/py37compat.pyo
 ${PYSITELIB}/setuptools/_distutils/command/register.py
 ${PYSITELIB}/setuptools/_distutils/command/register.pyc
 ${PYSITELIB}/setuptools/_distutils/command/register.pyo
