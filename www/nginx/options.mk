@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.58 2020/09/03 09:48:07 jperkin Exp $
+# $NetBSD: options.mk,v 1.59 2020/09/05 00:35:13 otis Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug echo encrypted-session \
 			form-input flv geoip gtools gzip headers-more http2 \
-			image-filter luajit mail-proxy memcache naxsi \
+			image-filter luajit mail-proxy memcache naxsi njs \
 			pcre perl push realip rtmp secure-link set-misc slice \
 			ssl status stream-ssl-preread sub uwsgi
 PKG_SUGGESTED_OPTIONS=	pcre ssl
@@ -280,3 +280,15 @@ RTMP_DISTFILE=		${RTMP_DISTNAME}.tar.gz
 SITES.${RTMP_DISTFILE}=	-https://github.com/arut/nginx-rtmp-module/archive/v${RTMP_VERSION}.tar.gz
 DISTFILES+=		${RTMP_DISTFILE}
 .endif
+
+.if !empty(PKG_OPTIONS:Mnjs)
+CONFIGURE_ARGS+=	--add-module=../${NJS_EXT_DISTNAME}/nginx
+.endif
+.if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi)
+NJS_EXT_VERSION=		0.4.3
+NJS_EXT_DISTNAME=		njs-${NJS_EXT_VERSION}
+NJS_EXT_DISTFILE=		${NJS_EXT_DISTNAME}.tar.gz
+SITES.${NJS_EXT_DISTFILE}+=	-https://github.com/nginx/njs/archive/${NJS_EXT_VERSION}.tar.gz
+DISTFILES+=			${NJS_EXT_DISTFILE}
+.endif
+
