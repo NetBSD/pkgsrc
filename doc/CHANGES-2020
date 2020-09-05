@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4815 2020/09/05 11:47:42 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4816 2020/09/05 18:04:35 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7409,3 +7409,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated parallel/threadingbuildingblocks to 2020.3 [ryoon 2020-09-05]
 	Updated graphics/blender to 2.90.0 [ryoon 2020-09-05]
 	Added graphics/blender-lts version 2.83.5 [ryoon 2020-09-05]
+	Updated textproc/split-thai to 0.9 [scole 2020-09-05]
