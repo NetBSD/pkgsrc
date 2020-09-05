@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.256 2020/09/03 15:26:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.257 2020/09/05 12:27:43 wiz Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -31,6 +31,9 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_NAME}/${MOZILLA_NAME}
 NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_NAME}/${MOZILLA_NAME}-bin
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA_NAME}
+
+# Workaround for https://bugs.llvm.org/show_bug.cgi?id=46366
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-fexperimental-new-pass-manager
 
 .include "../../mk/bsd.prefs.mk"
 
