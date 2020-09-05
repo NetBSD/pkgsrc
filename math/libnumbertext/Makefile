@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/05/16 19:10:29 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/05 11:25:39 ryoon Exp $
 
-DISTNAME=	libnumbertext-1.0.5
+DISTNAME=	libnumbertext-1.0.6
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Numbertext/}
 EXTRACT_SUFX=	.tar.xz
