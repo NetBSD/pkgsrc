@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/08/31 18:12:18 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/09/05 18:02:36 scole Exp $
 
-PKGNAME=	split-thai-0.8
-PKGREVISION=	1
+PKGNAME=	split-thai-0.9
 CATEGORIES=	textproc
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utilities to split UTF-8 Thai text into words
@@ -21,7 +20,7 @@ BUILD_DEPENDS+=	libdatrie-[0-9]*:../../devel/libdatrie
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	swath-[0-9]*:../../textproc/swath
 
-REPLACE_PERL=	tgrep
+REPLACE_PERL=	st-wordbreak tgrep
 REPLACE_SH=	st-swath
 
 UTF8_ENV=	env LC_ALL=C.UTF-8
@@ -43,14 +42,14 @@ SUBST_SED.st-emacs-app=		-e 's,!/bin/emacs,!${PREFIX}/bin/emacs,g'
 SUBST_CLASSES+=			dictionary-app
 SUBST_STAGE.dictionary-app=	pre-configure
 SUBST_MESSAGE.dictionary-app=	Fixing dictionary paths.
-SUBST_FILES.dictionary-app=	st-emacs st-swath
+SUBST_FILES.dictionary-app=	st-emacs st-swath st-wordbreak
 SUBST_SED.dictionary-app=	-e 's,ST_SHARE_DIR,${PREFIX}/${ST_SHARE_DIR},g'
 SUBST_SED.dictionary-app+=	-e 's,ST_SHARE_BIN,${PREFIX}/${ST_SHARE_BIN},g'
 
 pre-extract:
 	mkdir -p ${WRKSRC}
 	cd files && cp README.txt st-emacs st-icu.cc st-swath \
-		tgrep thai-utility.el thaidict.abm ${WRKSRC}
+		st-wordbreak tgrep thai-utility.el thaidict.abm ${WRKSRC}
 
 post-extract:
 	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch \
@@ -83,7 +82,7 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/st-emacs ${WRKSRC}/st-swath \
-		${WRKSRC}/tgrep ${DESTDIR}${PREFIX}/bin
+		${WRKSRC}/st-wordbreak ${WRKSRC}/tgrep ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/st-icu ${DESTDIR}${PREFIX}/bin
 .for i in ${ST_SHARE_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/split-thai
