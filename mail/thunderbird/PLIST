@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2020/09/03 15:26:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.78 2020/09/05 12:28:09 wiz Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -2935,11 +2935,13 @@ lib/thunderbird/chrome/devtools/skin/toolbox.css
 lib/thunderbird/chrome/devtools/skin/tooltips.css
 lib/thunderbird/chrome/devtools/skin/webconsole.css
 lib/thunderbird/chrome/devtools/skin/widgets.css
-lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
-lib/thunderbird/chrome/en-US/locale/branding/brand.properties
+${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
+${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
 lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-alarms.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-event-dialog-attendees.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-event-dialog.dtd
@@ -3368,8 +3370,8 @@ lib/thunderbird/chrome/marionette/content/server.js
 lib/thunderbird/chrome/marionette/content/stream-utils.js
 lib/thunderbird/chrome/marionette/content/sync.js
 lib/thunderbird/chrome/marionette/content/transport.js
-lib/thunderbird/chrome/messenger/content/branding/about-background.png
-lib/thunderbird/chrome/messenger/content/branding/about-logo.png
+${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
+${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-logo.png
 lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.svg
 lib/thunderbird/chrome/messenger/content/branding/about.png
