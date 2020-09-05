@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4803 2020/09/04 20:35:23 js Exp $
+$NetBSD: CHANGES-2020,v 1.4804 2020/09/05 00:07:37 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7397,3 +7397,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated cad/py-gds to 1.6 [mef 2020-09-04]
 	Updated www/badwolf to 1.0.3 [pin 2020-09-04]
 	Added chat/matrix-synapse version 1.19.1 [js 2020-09-04]
+	Updated audio/py-music21 to 6.1.0nb1 [gutteridge 2020-09-05]
