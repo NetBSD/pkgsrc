@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.907 2020/09/04 11:23:07 prlw1 Exp $
+# $NetBSD: Makefile,v 1.908 2020/09/05 11:48:33 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -58,6 +58,7 @@ SUBDIR+=	babl
 SUBDIR+=	barcode
 SUBDIR+=	bktr2jpeg
 SUBDIR+=	blender
+SUBDIR+=	blender-lts
 SUBDIR+=	blinkenthemes
 SUBDIR+=	blinkentools
 SUBDIR+=	breeze-icons
