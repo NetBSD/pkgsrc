@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4842 2020/09/06 20:11:01 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4843 2020/09/06 20:12:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7435,3 +7435,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated biology/bioperl to 1.7.7 [wiz 2020-09-06]
 	Updated databases/p5-DBD-CSV to 0.55 [wiz 2020-09-06]
 	Updated databases/p5-DBD-Mock to 1.55 [wiz 2020-09-06]
+	Updated databases/p5-DBD-ODBC to 1.61 [wiz 2020-09-06]
