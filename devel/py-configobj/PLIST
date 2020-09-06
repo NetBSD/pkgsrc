@@ -1,13 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/04 20:32:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/09/06 23:25:42 wiz Exp $
 ${PYSITELIB}/_version.py
 ${PYSITELIB}/_version.pyc
 ${PYSITELIB}/_version.pyo
-${PLIST.py2x}${PYSITELIB}/${EGG_FILE}
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/requires.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/configobj.py
 ${PYSITELIB}/configobj.pyc
 ${PYSITELIB}/configobj.pyo
