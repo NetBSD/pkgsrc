@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4874 2020/09/06 23:03:23 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4875 2020/09/06 23:05:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7467,3 +7467,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Data-Visitor to 0.31 [wiz 2020-09-06]
 	Updated devel/p5-Devel-ebug to 0.63 [wiz 2020-09-06]
 	Updated devel/p5-Dist-Zilla to 6.015 [wiz 2020-09-06]
+	Updated devel/p5-ExtUtils-F77 to 1.24 [wiz 2020-09-06]
