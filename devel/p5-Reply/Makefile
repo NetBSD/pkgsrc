@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/09/04 13:35:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/09/06 12:03:13 wiz Exp $
 
 DISTNAME=		Reply-0.42
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DO/DOY/}
 
@@ -21,7 +21,6 @@ LICENSE=		mit
 # p5-IO-Pager-[0-9]*
 # p5-Proc-InvokeEditor-[0-9]*
 # p5-Term-ReadKey-[0-9]*
-# p5-Term-ReadLine-Gnu-[0-9]*:
 
 DEPENDS+=		p5-Config-INI-Reader-Ordered-[0-9]*:../../devel/p5-Config-INI-Reader-Ordered
 DEPENDS+=		p5-Data-Dumper-[0-9]*:../../devel/p5-Data-Dumper
@@ -31,7 +30,7 @@ DEPENDS+=		p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=		p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
 DEPENDS+=		p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
 DEPENDS+=		p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
-#DEPENDS+=		p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+DEPENDS+=		p5-Term-ReadLine-Gnu-[0-9]*:../../devel/p5-Term-ReadLine-Gnu
 DEPENDS+=		p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
 USE_LANGUAGES=		# empty
