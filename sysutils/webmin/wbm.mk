@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.16 2020/06/01 23:07:27 mef Exp $
+# $NetBSD: wbm.mk,v 1.17 2020/09/06 02:38:53 mef Exp $
 #
 # Makefile fragment for Webmin modules
 #
@@ -43,6 +43,8 @@ HOMEPAGE?=	http://www.webmin.com/standard.html
 
 USE_TOOLS+=	perl:run perl
 DEPENDS+=	webmin>=${WBM_VERSION}:../../sysutils/webmin
+
+DISTINFO_FILE?=	../../sysutils/webmin/distinfo
 
 .for m in ${WBM_DEPEND_MODULES}
 DEPENDS+=	wbm-${m}>=${WBM_VERSION}:../../sysutils/wbm-${m}
