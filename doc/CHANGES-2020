@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4823 2020/09/06 11:55:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4824 2020/09/06 12:03:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7416,3 +7416,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20200906 [leot 2020-09-06]
 	Added devel/p5-Term-ReadLine-Gnu version 1.36 [wiz 2020-09-06]
 	Updated security/kpcli to 3.3nb4 [wiz 2020-09-06]
+	Updated devel/p5-Reply to 0.42nb9 [wiz 2020-09-06]
