@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/09/04 11:21:41 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/06 13:24:40 wiz Exp $
 
 DISTNAME=	graphene-1.10.2
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ebassi/graphene/releases/download/${PKGVERSION_NOREV:R}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ebassi/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
