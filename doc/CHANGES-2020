@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4850 2020/09/06 21:27:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4851 2020/09/06 21:29:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7443,3 +7443,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/p5-DBI-Shell to 11.97 [wiz 2020-09-06]
 	Added databases/p5-SQL-Abstract-Classic version 1.91 [wiz 2020-09-06]
 	Updated databases/p5-DBIx-Class to 0.082842 [wiz 2020-09-06]
+	Updated databases/p5-DBIx-Class-Helpers to 2.036000 [wiz 2020-09-06]
