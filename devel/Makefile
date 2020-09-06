@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3226 2020/09/04 23:35:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3227 2020/09/06 11:54:55 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1851,6 +1851,7 @@ SUBDIR+=	p5-Term-ProgressBar-Quiet
 SUBDIR+=	p5-Term-ProgressBar-Simple
 SUBDIR+=	p5-Term-Prompt
 SUBDIR+=	p5-Term-ReadKey
+SUBDIR+=	p5-Term-ReadLine-Gnu
 SUBDIR+=	p5-Term-ReadLine-Perl
 SUBDIR+=	p5-Term-ReadLine-TTYtter
 SUBDIR+=	p5-Term-ReadPassword
