@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2019/06/08 10:40:54 rillig Exp $
+# $NetBSD: Makefile.common,v 1.45 2020/09/06 01:54:14 ryoon Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -38,7 +38,7 @@ PKG_FAIL_REASON+=	"EMACS_TYPE is xemacs."
 # (Set these to avoid crashing out below.)
 EMACS_PKGDIR=		../../editors/xemacs
 EMACS_PACKAGE=		xemacs
-.elif ${MY_EMACS_TYPE} == "emacs27"
+.elif ${MY_EMACS_TYPE} == "emacs28"
 EMACS_PKGDIR=		../../editors/emacs-snapshot
 EMACS_PACKAGE=		${EMACS_BASE_TYPE}
 .elif !empty(MY_EMACS_TYPE:M*nox)
