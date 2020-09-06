@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4869 2020/09/06 22:32:38 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4870 2020/09/06 22:36:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7462,3 +7462,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-CPAN-Perl-Releases to 5.20200820 [wiz 2020-09-06]
 	Updated devel/p5-CPAN-Uploader to 0.103015 [wiz 2020-09-06]
 	Updated devel/p5-Class-Tiny to 1.008 [wiz 2020-09-06]
+	Updated devel/p5-Config-File to 1.54 [wiz 2020-09-06]
