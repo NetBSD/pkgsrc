@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4847 2020/09/06 20:48:06 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4848 2020/09/06 20:56:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7440,3 +7440,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/zathura-pdf-mupdf to 0.3.6 [leot 2020-09-06]
 	Updated databases/p5-DBD-SQLite to 1.66 [wiz 2020-09-06]
 	Updated databases/p5-DBD-postgresql to 3.14.2 [wiz 2020-09-06]
+	Updated databases/p5-DBI-Shell to 11.97 [wiz 2020-09-06]
