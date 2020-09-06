@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3228 2020/09/06 23:17:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3229 2020/09/06 23:18:45 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1915,6 +1915,7 @@ SUBDIR+=	p5-Test-Log4perl
 SUBDIR+=	p5-Test-LongString
 SUBDIR+=	p5-Test-Manifest
 SUBDIR+=	p5-Test-Memory-Cycle
+SUBDIR+=	p5-Test-Metrics-Any
 SUBDIR+=	p5-Test-MinimumVersion
 SUBDIR+=	p5-Test-Mock-LWP
 SUBDIR+=	p5-Test-MockModule
