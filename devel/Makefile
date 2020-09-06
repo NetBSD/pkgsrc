@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3227 2020/09/06 11:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3228 2020/09/06 23:17:22 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1548,6 +1548,7 @@ SUBDIR+=	p5-MetaCPAN-API
 SUBDIR+=	p5-MetaCPAN-Client
 SUBDIR+=	p5-Method-Signatures
 SUBDIR+=	p5-Method-Signatures-Simple
+SUBDIR+=	p5-Metrics-Any
 SUBDIR+=	p5-Mixin-ExtraFields
 SUBDIR+=	p5-Mixin-ExtraFields-Param
 SUBDIR+=	p5-Mixin-Linewise
