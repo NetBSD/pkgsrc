@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4818 2020/09/06 03:12:01 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.4819 2020/09/06 05:10:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7410,5 +7410,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/blender to 2.90.0 [ryoon 2020-09-05]
 	Added graphics/blender-lts version 2.83.5 [ryoon 2020-09-05]
 	Updated textproc/split-thai to 0.9 [scole 2020-09-05]
-	Updated sysutils/webmin to 1.953nb1 [mef 2020-09-06]
+	Updated sysutils/webmin to 1.955 [mef 2020-09-06]
 	Updated mail/notmuch to 0.31 [ryoon 2020-09-06]
