@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4837 2020/09/06 19:57:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4838 2020/09/06 20:00:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7430,3 +7430,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/p5-JSON-MaybeXS to 1.004002 [wiz 2020-09-06]
 	Updated converters/p5-Sereal-Decoder to 4.018 [wiz 2020-09-06]
 	Updated converters/p5-Sereal-Encoder to 4.018 [wiz 2020-09-06]
+	Updated converters/p5-Sereal to 4.018 [wiz 2020-09-06]
