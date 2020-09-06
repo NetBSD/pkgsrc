@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:06:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/09/06 20:00:49 wiz Exp $
 
-DISTNAME=	Sereal-4.014
+DISTNAME=	Sereal-4.018
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	converters perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/Y/YV/YVES/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/distribution/Sereal/lib/Sereal.pm
 COMMENT=	Fast, compact, powerful binary (de-)serialization
-#LICENSE=	# Copyright (C) 2012, 2013 by Steffen Mueller
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Sereal-Decoder>=4.007:../../converters/p5-Sereal-Decoder
 DEPENDS+=	p5-Sereal-Encoder>=4.007:../../converters/p5-Sereal-Encoder
