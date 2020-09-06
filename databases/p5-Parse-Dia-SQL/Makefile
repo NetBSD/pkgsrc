@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/09/04 10:39:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/09/06 21:37:39 wiz Exp $
 
-DISTNAME=	Parse-Dia-SQL-0.30
+DISTNAME=	Parse-Dia-SQL-0.31
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
