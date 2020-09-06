@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2020/08/31 18:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/09/06 20:07:47 wiz Exp $
 
-DISTNAME=	BioPerl-1.007002
+DISTNAME=	BioPerl-1.7.7
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
 CATEGORIES=	biology perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bio/}
 
@@ -11,7 +10,6 @@ HOMEPAGE=	http://www.bioperl.org/
 COMMENT=	Perl tools for computational molecular biology
 LICENSE=	${PERL5_LICENSE}
 
-#BUILD_DEPENDS+=	{perl>=5.19.6,p5-Module-Build>0.42}:../../devel/p5-Module-Build
 BUILD_DEPENDS+=		p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 
 DEPENDS+=	p5-Algorithm-Munkres-[0-9]*:../../math/p5-Algorithm-Munkres
@@ -55,10 +53,11 @@ BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 USE_TOOLS+=		pax
 
-REPLACE_PERL+=		scripts/*/*.pl Bio/LiveSeq/Chain.pm
+REPLACE_PERL+=		examples/*.pl
+REPLACE_PERL+=		examples/*/*.pl
 
-PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=		auto/Bio/.packlist
+PERL5_MODULE_TYPE=	Module::Install
+PERL5_PACKLIST=		auto/BioPerl/.packlist
 
 INSTALLATION_DIRS=	share/examples/bioperl
 
