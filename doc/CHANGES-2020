@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4860 2020/09/06 22:10:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4861 2020/09/06 22:11:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7453,3 +7453,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Coro to 6.57nb1 [wiz 2020-09-06]
 	Updated databases/p5-SQL-Abstract to 1.87 [wiz 2020-09-06]
 	Updated databases/p5-SQL-Translator to 1.61 [wiz 2020-09-06]
+	Updated databases/p5-Tie-DBI to 1.08 [wiz 2020-09-06]
