@@ -1,0 +1,4 @@
+Metrics::Any provides a central location for modules to report
+monitoring metrics, such as counters of the number of times
+interesting events have happened, and programs to collect up and
+send those metrics to monitoring services.
