@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/09/02 23:00:12 mef Exp $
+# $NetBSD: Makefile,v 1.15 2020/09/06 22:16:31 wiz Exp $
 
-DISTNAME=	Alien-Base-ModuleBuild-1.14
+DISTNAME=	Alien-Base-ModuleBuild-1.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/P/PL/PLICEASE/
 
