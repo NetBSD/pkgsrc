@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4879 2020/09/06 23:18:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4880 2020/09/06 23:24:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7472,3 +7472,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-File-LibMagic to 1.23 [wiz 2020-09-06]
 	Added devel/p5-Metrics-Any version 0.06 [wiz 2020-09-06]
 	Added devel/p5-Test-Metrics-Any version 0.01 [wiz 2020-09-06]
+	Updated devel/p5-IO-Async to 0.77 [wiz 2020-09-06]
