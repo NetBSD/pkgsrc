@@ -1,27 +1,15 @@
-$NetBSD: patch-aa,v 1.8 2016/02/03 05:07:11 mef Exp $
+$NetBSD: patch-aa,v 1.9 2020/09/06 23:09:45 wiz Exp $
 
-(1)
-Incompatible change in the newer ExtUtils-MakeMaker:
-It places .o files where the source file lives (lib/File/ in this case),
-whereas the older MakeMaker placed it in the current working dir
-(toplevel in this case). 
+Ensure we use the required ldflags for the platform.
 
-Thanks Matthias Ferdinand 
-http://mail-index.netbsd.org/pkgsrc-users/2015/09/19/msg022238.html
-
-(2)
--- Ensure we use the required ldflags for the platform.
-
---- Makefile.PL.orig	2015-09-23 15:35:22.000000000 +0900
-+++ Makefile.PL	2015-09-23 15:36:22.000000000 +0900
-@@ -21,8 +21,8 @@ my %WriteMakefileArgs = (
+--- Makefile.PL.orig	2020-08-29 03:54:44.000000000 +0000
++++ Makefile.PL
+@@ -18,7 +18,7 @@ my %WriteMakefileArgs = (
+     "ExtUtils::MakeMaker" => 0
    },
    "DISTNAME" => "File-LibMagic",
-   "INC" => "-I. -Ic",
--  "LDFROM" => "LibMagic\$(OBJ_EXT)",
 -  "LIBS" => "-lmagic",
-+  "LDFROM" => "LibMagic\$(OBJ_EXT)",
-+  'LIBS' => "$ENV{LDFLAGS}  -lmagic -lz", # e.g., '-lm'
++  "LIBS" => "$ENV{LDFLAGS} -lmagic -lz",
    "LICENSE" => "perl",
    "MIN_PERL_VERSION" => "5.008",
    "NAME" => "File::LibMagic",
