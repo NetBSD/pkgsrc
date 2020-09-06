@@ -1,4 +1,4 @@
-$NetBSD: patch-youtube__dl_extractor_rai.py,v 1.1 2019/12/09 11:45:59 leot Exp $
+$NetBSD: patch-youtube__dl_extractor_rai.py,v 1.2 2020/09/06 09:54:34 leot Exp $
 
 [rai] Fix extraction for recent raiplay.it updates
 
@@ -13,6 +13,7 @@ $NetBSD: patch-youtube__dl_extractor_rai.py,v 1.1 2019/12/09 11:45:59 leot Exp $
   ContentItem)
 - Adjust RaiPlayPlaylistIE to recent raiplay.it updates and instruct it about
   ContentSet-s.
+- Update a RaiIE test and remove two tests that are no longer availables
 
 This fix issue #22923, #22906 and supersedes #23006.
 
@@ -22,7 +23,12 @@ Shared upstream via:
 
 --- youtube_dl/extractor/rai.py.orig
 +++ youtube_dl/extractor/rai.py
-@@ -17,7 +17,6 @@
+@@ -1,3 +1,4 @@
++# coding: utf-8
+ from __future__ import unicode_literals
+ 
+ import re
+@@ -17,7 +18,6 @@
      parse_duration,
      strip_or_none,
      try_get,
@@ -30,7 +36,7 @@ Shared upstream via:
      unified_strdate,
      unified_timestamp,
      update_url_query,
-@@ -30,6 +29,7 @@ class RaiBaseIE(InfoExtractor):
+@@ -30,6 +30,7 @@ class RaiBaseIE(InfoExtractor):
      _UUID_RE = r'[\da-f]{8}-[\da-f]{4}-[\da-f]{4}-[\da-f]{4}-[\da-f]{12}'
      _GEO_COUNTRIES = ['IT']
      _GEO_BYPASS = False
@@ -38,7 +44,7 @@ Shared upstream via:
  
      def _extract_relinker_info(self, relinker_url, video_id):
          if not re.match(r'https?://', relinker_url):
-@@ -122,41 +122,19 @@ def _extract_subtitles(url, subtitle_url):
+@@ -122,41 +123,19 @@ def _extract_subtitles(url, subtitle_url):
  
  
  class RaiPlayIE(RaiBaseIE):
@@ -84,7 +90,7 @@ Shared upstream via:
          },
          'params': {
              'skip_download': True,
-@@ -168,16 +146,15 @@ class RaiPlayIE(RaiBaseIE):
+@@ -168,16 +147,15 @@ class RaiPlayIE(RaiBaseIE):
  
      def _real_extract(self, url):
          mobj = re.match(self._VALID_URL, url)
@@ -104,7 +110,7 @@ Shared upstream via:
          self._sort_formats(relinker_info['formats'])
  
          thumbnails = []
-@@ -185,7 +162,7 @@ def _real_extract(self, url):
+@@ -185,7 +163,7 @@ def _real_extract(self, url):
              for _, value in media.get('images').items():
                  if value:
                      thumbnails.append({
@@ -113,7 +119,7 @@ Shared upstream via:
                      })
  
          timestamp = unified_timestamp(try_get(
-@@ -225,7 +202,7 @@ class RaiPlayLiveIE(RaiBaseIE):
+@@ -225,7 +203,7 @@ class RaiPlayLiveIE(RaiBaseIE):
              'display_id': 'rainews24',
              'ext': 'mp4',
              'title': 're:^Diretta di Rai News 24 [0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}$',
@@ -122,7 +128,7 @@ Shared upstream via:
              'uploader': 'Rai News 24',
              'creator': 'Rai News 24',
              'is_live': True,
-@@ -238,20 +215,32 @@ class RaiPlayLiveIE(RaiBaseIE):
+@@ -238,20 +216,32 @@ class RaiPlayLiveIE(RaiBaseIE):
      def _real_extract(self, url):
          display_id = self._match_id(url)
  
@@ -130,14 +136,14 @@ Shared upstream via:
 +        media = self._download_json(
 +            '%s.json' % urljoin(RaiBaseIE._BASE_URL, 'dirette/' + display_id),
 +            display_id, 'Downloading channel JSON')
++
++        title = media['name']
++        video = media['video']
++        video_id = media['id'].replace('ContentItem-', '')
  
 -        video_id = self._search_regex(
 -            r'data-uniquename=["\']ContentItem-(%s)' % RaiBaseIE._UUID_RE,
 -            webpage, 'content id')
-+        title = media['name']
-+        video = media['video']
-+        video_id = media['id'].replace('ContentItem-', '')
-+
 +        relinker_info = self._extract_relinker_info(video['content_url'], video_id)
 +        self._sort_formats(relinker_info['formats'])
  
@@ -163,7 +169,7 @@ Shared upstream via:
  
  class RaiPlayPlaylistIE(InfoExtractor):
      _VALID_URL = r'https?://(?:www\.)?raiplay\.it/programmi/(?P<id>[^/?#&]+)'
-@@ -260,7 +249,7 @@ class RaiPlayPlaylistIE(InfoExtractor):
+@@ -260,7 +250,7 @@ class RaiPlayPlaylistIE(InfoExtractor):
          'info_dict': {
              'id': 'nondirloalmiocapo',
              'title': 'Non dirlo al mio capo',
@@ -172,7 +178,7 @@ Shared upstream via:
          },
          'playlist_mincount': 12,
      }]
-@@ -268,21 +257,25 @@ class RaiPlayPlaylistIE(InfoExtractor):
+@@ -268,21 +258,25 @@ class RaiPlayPlaylistIE(InfoExtractor):
      def _real_extract(self, url):
          playlist_id = self._match_id(url)
  
@@ -180,14 +186,14 @@ Shared upstream via:
 +        media = self._download_json(
 +            '%s.json' % urljoin(RaiBaseIE._BASE_URL, 'programmi/' + playlist_id),
 +            playlist_id, 'Downloading program JSON')
-+
-+        title = media['name']
-+        description = media['program_info']['description']
  
 -        title = self._html_search_meta(
 -            ('programma', 'nomeProgramma'), webpage, 'title')
 -        description = unescapeHTML(self._html_search_meta(
 -            ('description', 'og:description'), webpage, 'description'))
++        title = media['name']
++        description = media['program_info']['description']
++
 +        content_sets = [s['id'] for b in media['blocks'] for s in b['sets']]
  
          entries = []
@@ -210,3 +216,49 @@ Shared upstream via:
  
          return self.playlist_result(entries, playlist_id, title, description)
  
+@@ -316,7 +310,7 @@ class RaiIE(RaiBaseIE):
+     }, {
+         # with ContentItem in og:url
+         'url': 'http://www.rai.it/dl/RaiTV/programmi/media/ContentItem-efb17665-691c-45d5-a60c-5301333cbb0c.html',
+-        'md5': '11959b4e44fa74de47011b5799490adf',
++        'md5': '6865dd00cf0bbf5772fdd89d59bd768a',
+         'info_dict': {
+             'id': 'efb17665-691c-45d5-a60c-5301333cbb0c',
+             'ext': 'mp4',
+@@ -326,18 +320,6 @@ class RaiIE(RaiBaseIE):
+             'duration': 2214,
+             'upload_date': '20161103',
+         }
+-    }, {
+-        # drawMediaRaiTV(...)
+-        'url': 'http://www.report.rai.it/dl/Report/puntata/ContentItem-0c7a664b-d0f4-4b2c-8835-3f82e46f433e.html',
+-        'md5': '2dd727e61114e1ee9c47f0da6914e178',
+-        'info_dict': {
+-            'id': '59d69d28-6bb6-409d-a4b5-ed44096560af',
+-            'ext': 'mp4',
+-            'title': 'Il pacco',
+-            'description': 'md5:4b1afae1364115ce5d78ed83cd2e5b3a',
+-            'thumbnail': r're:^https?://.*\.jpg$',
+-            'upload_date': '20141221',
+-        },
+     }, {
+         # initEdizione('ContentItem-...'
+         'url': 'http://www.tg1.rai.it/dl/tg1/2010/edizioni/ContentSet-9b6e0cba-4bef-4aef-8cf0-9f7f665b7dfb-tg1.html?item=undefined',
+@@ -349,17 +331,6 @@ class RaiIE(RaiBaseIE):
+             'upload_date': '20170401',
+         },
+         'skip': 'Changes daily',
+-    }, {
+-        # HDS live stream with only relinker URL
+-        'url': 'http://www.rai.tv/dl/RaiTV/dirette/PublishingBlock-1912dbbf-3f96-44c3-b4cf-523681fbacbc.html?channel=EuroNews',
+-        'info_dict': {
+-            'id': '1912dbbf-3f96-44c3-b4cf-523681fbacbc',
+-            'ext': 'flv',
+-            'title': 'EuroNews',
+-        },
+-        'params': {
+-            'skip_download': True,
+-        },
+     }, {
+         # HLS live stream with ContentItem in og:url
+         'url': 'http://www.rainews.it/dl/rainews/live/ContentItem-3156f2f2-dc70-4953-8e2f-70d7489d4ce9.html',
