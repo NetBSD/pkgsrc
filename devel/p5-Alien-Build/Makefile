@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2020/08/31 18:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/09/06 22:17:57 wiz Exp $
 
-DISTNAME=	Alien-Build-2.21
+DISTNAME=	Alien-Build-2.29
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/P/PL/PLICEASE/
 
