@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4830 2020/09/06 19:30:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4831 2020/09/06 19:43:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7423,3 +7423,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/p5-Compress-Bzip2 to 2.28 [wiz 2020-09-06]
 	Updated audio/p5-MP3-Tag to 1.15 [wiz 2020-09-06]
 	Updated audio/p5-MPEG-Audio-Frame to 0.10 [wiz 2020-09-06]
+	Updated biology/p5-Bio-ASN1-EntrezGene to 1.73 [wiz 2020-09-06]
