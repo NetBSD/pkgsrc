@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/09/03 17:06:29 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/09/06 21:54:32 wiz Exp $
 
 DISTNAME=	Coro-6.57
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Coro/}
 
@@ -17,6 +18,12 @@ DEPENDS+=	p5-AnyEvent-[0-9]*:../../devel/p5-AnyEvent
 MAKE_JOBS_SAFE=	no
 PERL5_PACKLIST=	auto/Coro/.packlist
 REPLACE_PERL+=	Coro/jit-amd64-unix.pl Coro/jit-x86-unix.pl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+MAKE_ENV+=	CORO_JIT=n
+.endif
 
 # test failures on NetBSD as of 6.57:
 # t/00_basic.t .... Failed 3/5 subtests
