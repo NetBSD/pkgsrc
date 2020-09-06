@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2020/08/31 18:07:01 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2020/09/06 21:27:04 wiz Exp $
 
-DISTNAME=	DBIx-Class-0.082841
+DISTNAME=	DBIx-Class-0.082842
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
@@ -17,7 +16,7 @@ DEPENDS+=	p5-Class-Inspector>=1.24:../../devel/p5-Class-Inspector
 DEPENDS+=	p5-Class-Method-Modifiers>=1.06:../../devel/p5-Class-Method-Modifiers
 DEPENDS+=	p5-Config-Any>=0.20:../../devel/p5-Config-Any
 DEPENDS+=	p5-Context-Preserve>=0.01:../../devel/p5-Context-Preserve
-DEPENDS+=	p5-Data-Page>=2.00:../../devel/p5-Data-Page
+#DEPENDS+=	p5-Data-Page>=2.00:../../devel/p5-Data-Page
 DEPENDS+=	p5-Data-Compare>=1.22:../../devel/p5-Data-Compare
 DEPENDS+=	p5-Data-Dumper-Concise>=2.020:../../devel/p5-Data-Dumper-Concise
 DEPENDS+=	p5-Devel-GlobalDestruction>=0.09:../../devel/p5-Devel-GlobalDestruction
@@ -26,8 +25,9 @@ DEPENDS+=	p5-MRO-Compat>=0.12:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Module-Find>=0.07:../../devel/p5-Module-Find
 DEPENDS+=	p5-Moo>=2.000:../../devel/p5-Moo
 DEPENDS+=	p5-Path-Class>=0.18:../../devel/p5-Path-Class
-DEPENDS+=	p5-SQL-Abstract>=1.81:../../databases/p5-SQL-Abstract
-DEPENDS+=	p5-SQL-Abstract-Limit>=0.13:../../databases/p5-SQL-Abstract-Limit
+#DEPENDS+=	p5-SQL-Abstract>=1.81:../../databases/p5-SQL-Abstract
+DEPENDS+=	p5-SQL-Abstract-Classic-[0-9]*:../../databases/p5-SQL-Abstract-Classic
+#DEPENDS+=	p5-SQL-Abstract-Limit>=0.13:../../databases/p5-SQL-Abstract-Limit
 DEPENDS+=	p5-Scope-Guard>=0.03:../../devel/p5-Scope-Guard
 DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Try-Tiny>=0.07:../../devel/p5-Try-Tiny
@@ -49,8 +49,6 @@ REPLACE_PERL=	script/dbicadmin
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/DBIx/Class/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-
-BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.609
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
