@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4877 2020/09/06 23:09:53 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4878 2020/09/06 23:17:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7470,3 +7470,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-ExtUtils-F77 to 1.24 [wiz 2020-09-06]
 	Updated devel/p5-File-Flat to 1.07 [wiz 2020-09-06]
 	Updated devel/p5-File-LibMagic to 1.23 [wiz 2020-09-06]
+	Added devel/p5-Metrics-Any version 0.06 [wiz 2020-09-06]
