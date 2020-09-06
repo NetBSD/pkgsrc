@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4873 2020/09/06 22:43:43 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4874 2020/09/06 23:03:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7466,3 +7466,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Convert-Binary-C to 0.79 [wiz 2020-09-06]
 	Updated devel/p5-Data-Visitor to 0.31 [wiz 2020-09-06]
 	Updated devel/p5-Devel-ebug to 0.63 [wiz 2020-09-06]
+	Updated devel/p5-Dist-Zilla to 6.015 [wiz 2020-09-06]
