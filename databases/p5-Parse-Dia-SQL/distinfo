@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/17 08:49:51 wiz Exp $
+$NetBSD: distinfo,v 1.5 2020/09/06 21:37:39 wiz Exp $
 
-SHA1 (Parse-Dia-SQL-0.30.tar.gz) = 0b6f90b5642c21f7d816116a26efa870023889b1
-RMD160 (Parse-Dia-SQL-0.30.tar.gz) = 6d66e6619cc91d3e0346590636d3cd78f769b900
-SHA512 (Parse-Dia-SQL-0.30.tar.gz) = c804f9770b4c1d1417d2248303907680d95331bd6147298da3b87dfa546dfcbc2750c9a38cdb1977a204746727ba5fb64839af0fb57a7144c04772575bd0ee02
-Size (Parse-Dia-SQL-0.30.tar.gz) = 134491 bytes
+SHA1 (Parse-Dia-SQL-0.31.tar.gz) = 9be6c87bf9d30bbfb578c7601f8535fbb0f5e0a9
+RMD160 (Parse-Dia-SQL-0.31.tar.gz) = 9a364c3f6bfa4002457e61c9a83a2ca8ebd75ef8
+SHA512 (Parse-Dia-SQL-0.31.tar.gz) = 5e9a93b7f74366ccb671942c8d93f3efbaff89b70c7f5b629336d0a411cb2f4a42e140c34512f09c4fc2e105d3195b9aab8263cb3aa76e8a42a5c5e422dd936f
+Size (Parse-Dia-SQL-0.31.tar.gz) = 136942 bytes
