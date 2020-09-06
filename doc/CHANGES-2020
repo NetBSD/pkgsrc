@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4820 2020/09/06 09:11:18 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.4821 2020/09/06 09:54:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7413,3 +7413,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/webmin to 1.955 [mef 2020-09-06]
 	Updated mail/notmuch to 0.31 [ryoon 2020-09-06]
 	Updated lang/yabasic to 2.87.0 [fcambus 2020-09-06]
+	Updated net/youtube-dl to 20200906 [leot 2020-09-06]
