@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4843 2020/09/06 20:12:08 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4844 2020/09/06 20:22:25 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7436,3 +7436,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/p5-DBD-CSV to 0.55 [wiz 2020-09-06]
 	Updated databases/p5-DBD-Mock to 1.55 [wiz 2020-09-06]
 	Updated databases/p5-DBD-ODBC to 1.61 [wiz 2020-09-06]
+	Updated print/zathura to 0.4.7 [leot 2020-09-06]
