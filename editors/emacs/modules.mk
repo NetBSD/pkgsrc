@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.27 2020/08/12 14:19:50 ryoon Exp $
+# $NetBSD: modules.mk,v 1.28 2020/09/06 02:59:16 ryoon Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -355,7 +355,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 .if defined(EMACS_BUILDLINK)
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
 #  development version usually claims three digit, say, 27.0.50 etc
-.  if ${EMACS_TYPE} == emacs27
+.  if ${EMACS_TYPE} == emacs28
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}/lisp:${_EMACS_DIR}/site-lisp
 .  else
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}/lisp:${_EMACS_DIR}/site-lisp
