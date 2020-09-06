@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2020/08/31 18:06:35 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2020/09/06 19:28:06 wiz Exp $
 
-DISTNAME=	MP3-Tag-1.14
+DISTNAME=	MP3-Tag-1.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	audio perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MP3/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	https://metacpan.org/release/MP3-Tag
