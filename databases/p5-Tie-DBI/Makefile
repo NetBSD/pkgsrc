@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:07:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2020/09/06 22:11:48 wiz Exp $
 
-DISTNAME=	Tie-DBI-1.06
+DISTNAME=	Tie-DBI-1.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 
@@ -11,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Tie-DBI
 COMMENT=	Tie hashes to DBI relational databases
 LICENSE=	${PERL5_LICENSE}
+
+DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 ALL_ENV+=	DBI_DSN=dbi:DBM:dbm_mldbm=Storable
 
