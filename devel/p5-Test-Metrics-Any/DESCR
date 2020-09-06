@@ -1,0 +1,2 @@
+This test module helps write unit tests which assert that the code
+under test reports metrics via Metrics::Any.
