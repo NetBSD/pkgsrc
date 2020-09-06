@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4826 2020/09/06 12:12:24 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4827 2020/09/06 15:01:27 roy Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7419,3 +7419,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Reply to 0.42nb9 [wiz 2020-09-06]
 	Updated mail/sieve-connect to 0.89nb5 [wiz 2020-09-06]
 	Updated archivers/p5-Archive-Zip to 1.68 [wiz 2020-09-06]
+	Updated net/dhcpcd to 9.2.0 [roy 2020-09-06]
