@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4866 2020/09/06 22:20:12 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4867 2020/09/06 22:30:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7459,3 +7459,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Alien-Base-ModuleBuild to 1.15 [wiz 2020-09-06]
 	Updated devel/p5-Alien-Build to 2.29 [wiz 2020-09-06]
 	Updated devel/p5-AnyEvent-RabbitMQ to 1.22 [wiz 2020-09-06]
+	Updated devel/p5-CPAN-Perl-Releases to 5.20200820 [wiz 2020-09-06]
