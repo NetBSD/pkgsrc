@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4829 2020/09/06 19:28:15 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4830 2020/09/06 19:30:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7422,3 +7422,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dhcpcd to 9.2.0 [roy 2020-09-06]
 	Updated archivers/p5-Compress-Bzip2 to 2.28 [wiz 2020-09-06]
 	Updated audio/p5-MP3-Tag to 1.15 [wiz 2020-09-06]
+	Updated audio/p5-MPEG-Audio-Frame to 0.10 [wiz 2020-09-06]
