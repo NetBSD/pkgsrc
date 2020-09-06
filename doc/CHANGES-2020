@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4834 2020/09/06 19:49:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4835 2020/09/06 19:51:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7427,3 +7427,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated comms/p5-Device-Modem to 1.59 [wiz 2020-09-06]
 	Updated converters/p5-Convert-UUlib to 1.71 [wiz 2020-09-06]
 	Updated converters/p5-Cpanel-JSON-XS to 4.23 [wiz 2020-09-06]
+	Updated converters/p5-JSON-MaybeXS to 1.004002 [wiz 2020-09-06]
