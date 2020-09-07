@@ -1,7 +1,9 @@
-$NetBSD: patch-t_main__tests.t,v 1.1 2016/07/25 09:18:55 wen Exp $
+$NetBSD: patch-t_main__tests.t,v 1.2 2020/09/07 11:20:47 wiz Exp $
+
 Add patch to be able to run tests without the need to install rlib,
 which is not in ports and which can easily be replaced by the FindBin
 The patch come from FreeBSD ports.
+
 --- t/main_tests.t.orig	2016-07-25 08:39:51.000000000 +0000
 +++ t/main_tests.t
 @@ -3,7 +3,9 @@
