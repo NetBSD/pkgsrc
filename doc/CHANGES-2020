@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4939 2020/09/07 11:42:16 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4940 2020/09/07 11:43:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7533,3 +7533,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/p5-Mail-AuthenticationResults to 1.20200824.1 [wiz 2020-09-07]
 	Updated mail/p5-Mail-Box to 3.009 [wiz 2020-09-07]
 	Removed mail/p5-Mail-ClamAV [wiz 2020-09-07]
+	Updated mail/p5-Mail-DKIM to 1.20200824 [wiz 2020-09-07]
