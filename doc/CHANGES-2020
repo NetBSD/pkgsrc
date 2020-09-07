@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5050 2020/09/07 20:50:24 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5051 2020/09/07 20:51:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7644,3 +7644,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-HTTP-Tinyish to 0.17 [wiz 2020-09-07]
 	Updated www/p5-LWP-Protocol-https to 6.09 [wiz 2020-09-07]
 	Updated www/p5-Net-Curl to 0.45 [wiz 2020-09-07]
+	Updated www/p5-Plack-Middleware-Debug to 0.18 [wiz 2020-09-07]
