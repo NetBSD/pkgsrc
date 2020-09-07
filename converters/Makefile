@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2020/09/04 14:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.182 2020/09/07 10:37:16 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -79,6 +79,7 @@ SUBDIR+=	p5-Data-Hexify
 SUBDIR+=	p5-JSON
 SUBDIR+=	p5-JSON-Any
 SUBDIR+=	p5-JSON-MaybeXS
+SUBDIR+=	p5-JSON-Parse
 SUBDIR+=	p5-JSON-XS
 SUBDIR+=	p5-JSON-XS-VersionOneAndTwo
 SUBDIR+=	p5-Jcode
