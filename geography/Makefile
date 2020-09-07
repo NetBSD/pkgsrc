@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2020/09/07 10:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2020/09/07 10:56:44 wiz Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -65,6 +65,7 @@ SUBDIR+=	opencpn-plugin-weather_routing
 SUBDIR+=	osm-gps-map
 SUBDIR+=	osm2pgsql
 SUBDIR+=	p5-Class-Measure
+SUBDIR+=	p5-GIS-Distance
 SUBDIR+=	p5-Geo-Coordinates-UTM
 SUBDIR+=	p5-Geo-Distance
 SUBDIR+=	p5-Geo-Ellipsoid
