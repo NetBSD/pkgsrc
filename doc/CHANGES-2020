@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4933 2020/09/07 11:27:06 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4934 2020/09/07 11:29:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7527,3 +7527,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/p5-SVG to 2.85 [wiz 2020-09-07]
 	Updated graphics/p5-cairo to 1.107 [wiz 2020-09-07]
 	Updated graphics/p5-cairo-gobject to 1.005 [wiz 2020-09-07]
+	Updated mail/p5-Email-MIME-ContentType to 1.024 [wiz 2020-09-07]
