@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4943 2020/09/07 11:45:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4944 2020/09/07 11:46:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7537,3 +7537,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/p5-Mail-IMAPClient to 3.42 [wiz 2020-09-07]
 	Updated mail/p5-Mail-Message to 3.009 [wiz 2020-09-07]
 	Updated mail/p5-Net-validMX to 2.5.0 [wiz 2020-09-07]
+	Updated math/p5-Alien-GMP to 1.16 [wiz 2020-09-07]
