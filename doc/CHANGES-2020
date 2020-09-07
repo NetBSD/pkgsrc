@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4920 2020/09/07 10:28:39 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4921 2020/09/07 10:37:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7514,3 +7514,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-asa to 1.04 [wiz 2020-09-07]
 	Updated devel/p5-glib2 to 1.3293 [wiz 2020-09-07]
 	Updated filesystems/p5-Path-Tiny to 0.114 [wiz 2020-09-07]
+	Added converters/p5-JSON-Parse version 0.57 [wiz 2020-09-07]
