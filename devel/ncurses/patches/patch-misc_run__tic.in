@@ -1,0 +1,29 @@
+$NetBSD: patch-misc_run__tic.in,v 1.1 2020/09/07 11:11:41 schmonz Exp $
+
+Run the built tic with the built libncurses, not the installed one, as
+the build system intends (but fails) to do. This fixes "make package",
+for instance, when tic needs to use a newly provided symbol.
+
+This fix applies to fewer dynamic linkers than ${WRKSRC}/misc/shlib --
+not the macOS dyld, for instance -- so making the provided script work
+as intended will be more widely effective than this patch.
+
+--- misc/run_tic.in.orig	2020-02-02 23:34:34.000000000 +0000
++++ misc/run_tic.in
+@@ -76,10 +76,13 @@ then
+ 			;;
+ 		esac
+ 		export PATH
+-		if test @DFT_LWR_MODEL@ = shared
++		if test @DFT_LWR_MODEL@ = shared || test @DFT_LWR_MODEL@ = libtool
+ 		then
+-			SHLIB="sh $srcdir/shlib"
+-			TIC_PATH="$SHLIB tic"
++			#SHLIB="sh $srcdir/shlib"
++			#TIC_PATH="$SHLIB tic"
++			# shlib is supposed to set this (or OPSYS equivalent)
++			# for its child, but sure seems not to
++			TIC_PATH="@SETENV@ LD_LIBRARY_PATH=${DESTDIR}${prefix}/lib tic"
+ 		else
+ 			TIC_PATH="tic"
+ 		fi
