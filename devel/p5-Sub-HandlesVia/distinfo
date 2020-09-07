@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/04/16 12:34:18 mef Exp $
+$NetBSD: distinfo,v 1.2 2020/09/07 10:05:14 wiz Exp $
 
-SHA1 (Sub-HandlesVia-0.013.tar.gz) = 65c7be77881613edd499cb20fc1c7a47948058a8
-RMD160 (Sub-HandlesVia-0.013.tar.gz) = 6bce7df0fc6878697c7229bec943bed7c070ba30
-SHA512 (Sub-HandlesVia-0.013.tar.gz) = 0fcadaa4a19b0136c1a85d6000f4528532f74082cd9a2b08f81aafc0125b1a9924a8b4399fc7e8a39b5c6d875bd1539ea05fcd3d77befef3fb83d60fe9f6642c
-Size (Sub-HandlesVia-0.013.tar.gz) = 98942 bytes
+SHA1 (Sub-HandlesVia-0.014.tar.gz) = 81feb6e7144e65d731b7e34439b3a506bf375043
+RMD160 (Sub-HandlesVia-0.014.tar.gz) = 07cf63c25893b36a07e551b78868724e9d63b5f2
+SHA512 (Sub-HandlesVia-0.014.tar.gz) = ef2fe4fa1d9ab4ffce35338721537ab0bf17d8031a2c9d1a901c6244239117ac013360f6e09839b7e876420d4c311c0b5d4e298f1b56e3ec95765864ecb4cb79
+Size (Sub-HandlesVia-0.014.tar.gz) = 99062 bytes
