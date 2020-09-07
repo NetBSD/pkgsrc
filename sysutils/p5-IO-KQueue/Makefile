@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:11:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/09/07 14:32:13 wiz Exp $
 
-DISTNAME=	IO-KQueue-0.34
+DISTNAME=	IO-KQueue-0.39
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
@@ -12,6 +11,7 @@ COMMENT=	Perl interface to the BSD kqueue system call
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-perl-headers-[0-9]*:../../devel/p5-perl-headers
+DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib
 
 .include "../../mk/bsd.prefs.mk"
 
