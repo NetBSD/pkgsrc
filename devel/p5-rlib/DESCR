@@ -1,0 +1,3 @@
+rlib allows @INC to be modified with relative path names. Where
+the pathname is relative from depends on where the module is used
+from.
