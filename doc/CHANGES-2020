@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4958 2020/09/07 12:05:51 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4959 2020/09/07 12:17:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7552,3 +7552,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/p5-Business-ISSN to 1.004 [wiz 2020-09-07]
 	Updated misc/p5-Locale-Codes to 3.65 [wiz 2020-09-07]
 	Updated net/p5-Danga-Socket to 1.62 [wiz 2020-09-07]
+	Updated net/p5-Net-Amazon-S3 to 0.91 [wiz 2020-09-07]
