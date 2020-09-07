@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/09/02 23:03:18 mef Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/07 22:08:49 otis Exp $
 
 DISTNAME=	Alien-Libxml2-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 PERL5_PACKLIST=	auto/Alien/Libxml2/.packlist
 
 DEPENDS+=	p5-Alien-Build>=1.60:../../devel/p5-Alien-Build
+DEPENDS+=	p5-PkgConfig>=0.24026:../../devel/p5-PkgConfig
 
 #INSTALLATION_DIRS+=	${EGSUBDIR}
 
