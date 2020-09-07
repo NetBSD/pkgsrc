@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4996 2020/09/07 16:57:16 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.4997 2020/09/07 16:59:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7590,3 +7590,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Text-Xslate to 3.5.8 [wiz 2020-09-07]
 	Updated security/gnutls to 3.6.15 [leot 2020-09-07]
 	Updated cross/dasm to 2.20.13 [rhialto 2020-09-07]
+	Updated textproc/p5-XML-LibXML to 2.0205 [wiz 2020-09-07]
