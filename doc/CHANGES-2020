@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5019 2020/09/07 17:52:15 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5020 2020/09/07 17:53:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7613,3 +7613,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/p5-DateTime-Format-Strptime to 1.7700 [wiz 2020-09-07]
 	Updated time/p5-DateTime-Locale to 1.28 [wiz 2020-09-07]
 	Updated time/p5-DateTime-TimeZone to 2.39 [wiz 2020-09-07]
+	Updated time/p5-POSIX-strftime-Compiler to 0.44 [wiz 2020-09-07]
