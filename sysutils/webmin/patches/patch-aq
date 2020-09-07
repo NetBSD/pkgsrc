@@ -1,4 +1,7 @@
-$NetBSD: patch-aq,v 1.1 2008/07/25 02:55:27 tonnerre Exp $
+$NetBSD: patch-aq,v 1.2 2020/09/07 10:34:52 mef Exp $
+
+Fix various cross site scripting, arbitrary command execution and various
+other vulnerabilities in webmin (CVE-2008-0720).
 
 --- postgresql/old/search_form.cgi.orig	2007-09-21 23:26:53.000000000 +0200
 +++ postgresql/old/search_form.cgi
