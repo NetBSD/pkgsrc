@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4935 2020/09/07 11:30:19 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4936 2020/09/07 11:31:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7529,3 +7529,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/p5-cairo-gobject to 1.005 [wiz 2020-09-07]
 	Updated mail/p5-Email-MIME-ContentType to 1.024 [wiz 2020-09-07]
 	Updated mail/p5-Email-MIME to 1.949 [wiz 2020-09-07]
+	Updated mail/p5-Email-Sender to 1.300034 [wiz 2020-09-07]
