@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/09/07 10:24:23 wiz Exp $
 
-DISTNAME=	asa-1.03
+DISTNAME=	asa-1.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AD/ADAMK/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/asa
