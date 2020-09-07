@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4895 2020/09/07 09:32:13 adam Exp $
+$NetBSD: CHANGES-2020,v 1.4896 2020/09/07 09:32:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7489,3 +7489,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Module-Install-RTx to 0.42 [wiz 2020-09-07]
 	Updated databases/openldap to 2.4.52 [adam 2020-09-07]
 	Updated databases/py-ldap3 to 2.8.1 [adam 2020-09-07]
+	Updated devel/p5-Module-ScanDeps to 1.29 [wiz 2020-09-07]
