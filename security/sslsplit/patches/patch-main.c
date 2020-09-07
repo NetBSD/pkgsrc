@@ -1,4 +1,4 @@
-$NetBSD: patch-main.c,v 1.1 2019/12/30 22:17:29 rhialto Exp $
+$NetBSD: patch-main.c,v 1.2 2020/09/07 07:58:11 schmonz Exp $
 
 Our libnet11 package does not have the libnet_version() function,
 apparently similar to OpenBSD.
@@ -10,7 +10,7 @@ apparently similar to OpenBSD.
  #ifndef WITHOUT_MIRROR
  	fprintf(stderr, "compiled against libnet %s\n", LIBNET_VERSION);
 -#ifndef __OpenBSD__
-+#if !defined(__OpenBSD__) && !defined(__NetBSD__)
++#if !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__)
  	const char *lnv = libnet_version();
  	if (!strncmp(lnv, "libnet version ", 15))
  		lnv += 15;
