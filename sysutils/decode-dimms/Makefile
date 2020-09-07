@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/08/31 18:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/09/07 14:50:25 pgoyette Exp $
 
 # Track upstream's HEAD
-PKG_DATE=	20191031
-PKGREVISION=	3
-GIT_COMMIT=	fde115730417ff24025f6f0f54d879f6b0789aca
+PKG_DATE=	20200907
+GIT_COMMIT=	349b18f5660548f8aaae4014a8fbb1a3e71d89c2
 DISTNAME=	i2c-tools-${GIT_COMMIT}
 PKGNAME=	decode-dimms-4.1.${PKG_DATE}
 CATEGORIES=	sysutils
