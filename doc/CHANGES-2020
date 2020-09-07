@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4931 2020/09/07 11:23:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4932 2020/09/07 11:25:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7525,3 +7525,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/p5-Image-ExifTool to 12.00 [wiz 2020-09-07]
 	Updated graphics/p5-Image-Info to 1.42 [wiz 2020-09-07]
 	Updated graphics/p5-SVG to 2.85 [wiz 2020-09-07]
+	Updated graphics/p5-cairo to 1.107 [wiz 2020-09-07]
