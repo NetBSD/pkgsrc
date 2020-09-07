@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.28 2015/02/28 00:13:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/09/07 13:08:28 gdt Exp $
 bin/gpg
 bin/gpg-zip
-bin/gpgsplit
 bin/gpgv
 info/gnupg1.info
 libexec/gnupg/gpgkeys_curl
