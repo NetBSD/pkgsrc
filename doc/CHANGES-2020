@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4899 2020/09/07 09:38:14 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4900 2020/09/07 09:41:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7493,3 +7493,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Module-Starter to 1.770 [wiz 2020-09-07]
 	Updated devel/p5-MooX-TypeTiny to 0.002003 [wiz 2020-09-07]
 	Updated devel/p5-Moose to 2.2013 [wiz 2020-09-07]
+	Updated devel/p5-MooseX-MethodAttributes to 0.32 [wiz 2020-09-07]
