@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/28 14:43:03 wen Exp $
+$NetBSD: distinfo,v 1.5 2020/09/07 14:39:22 wiz Exp $
 
-SHA1 (List-Compare-0.53.tar.gz) = 8406fca7e39bc7a934eb1b3a09ffc945ce8ca69b
-RMD160 (List-Compare-0.53.tar.gz) = 00bba70277e8674d213c468ac4d1cb8944894671
-SHA512 (List-Compare-0.53.tar.gz) = b467e9395afa8297f5f59d745d22048373cfd60dc0c8ce56d0ad95e8f9fddcda487d99c906b9fb5ac1b28aa53873a7c9689347866c3aa907aecd31b4a127627a
-Size (List-Compare-0.53.tar.gz) = 88437 bytes
+SHA1 (List-Compare-0.55.tar.gz) = 57fa1d834fcb62727f12caea39a2c047e1e23fcf
+RMD160 (List-Compare-0.55.tar.gz) = a0db9cf555a8cbaf2ad3394f5fcca6036faed480
+SHA512 (List-Compare-0.55.tar.gz) = 0f7e2325449298940f14b369b0c82c326c6e596123939285b8e7cce9cc36e8a78620eb4ff96594c55c26c1acecb46966d4d40eb5f591e76798614257c300d705
+Size (List-Compare-0.55.tar.gz) = 84975 bytes
