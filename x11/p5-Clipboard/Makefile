@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/09/07 20:53:48 wiz Exp $
 
-DISTNAME=	Clipboard-0.20
+DISTNAME=	Clipboard-0.26
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHLOMIF/}
 
@@ -17,8 +16,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	xclip-[0-9]*:../../x11/xclip
 .endif
 
-MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Clipboard/.packlist
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
