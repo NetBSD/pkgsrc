@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/08/31 18:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/09/07 17:53:32 wiz Exp $
 
-DISTNAME=	Schedule-Cron-Events-1.95
+DISTNAME=	Schedule-Cron-Events-1.96
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Schedule/}
 
