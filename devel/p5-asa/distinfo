@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/06/07 14:42:26 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2020/09/07 10:24:23 wiz Exp $
 
-SHA1 (asa-1.03.tar.gz) = 9d899781e3173d9151ab24a56dee1c806c6ee376
-RMD160 (asa-1.03.tar.gz) = 9b963184ff08b6fea551b51b58e0e3a16afa8f6b
-SHA512 (asa-1.03.tar.gz) = 22cbccb93c8c9e96ec6e2cfa159f20a5220d722eb369a3c28a9ebae246fa145fb915db5d043722d52894d45f58015cc549f6aa0ba1dd4cbe498ad73cee918a1c
-Size (asa-1.03.tar.gz) = 30840 bytes
-SHA1 (patch-Makefile.PL) = 0fbb146b445039e30c442a58bbdb8f7f232a50f0
+SHA1 (asa-1.04.tar.gz) = 581443ade76e184f1f1a98caaa9d1d607d236809
+RMD160 (asa-1.04.tar.gz) = cdfa14532f3099aab0092ac98ddc1018548efbca
+SHA512 (asa-1.04.tar.gz) = 8584036c1c520741fe1bd4fb2875a86a46e2abd07d441078ef64bd90a31ba13b001079b020263add298ff004e094f8380b2ec590aacfc808cc1ba4be6b177b0a
+Size (asa-1.04.tar.gz) = 27573 bytes
