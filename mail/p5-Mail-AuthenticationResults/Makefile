@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/07 11:31:59 wiz Exp $
 
-DISTNAME=	Mail-AuthenticationResults-1.20200331.1
+DISTNAME=	Mail-AuthenticationResults-1.20200824.1
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Mail-AuthenticationResults
 COMMENT=	Object Oriented Authentication-Results Headers
 LICENSE=	${PERL5_LICENSE}
 
+DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 
 PERL5_PACKLIST=		auto/Mail/AuthenticationResults/.packlist
