@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2020/08/31 18:12:11 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2020/09/07 16:59:46 wiz Exp $
 
-DISTNAME=	XML-LibXML-2.0134
+DISTNAME=	XML-LibXML-2.0205
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -11,6 +10,8 @@ HOMEPAGE=	https://metacpan.org/release/XML-LibXML
 COMMENT=	Perl interface to the libxml2 library
 LICENSE=	${PERL5_LICENSE}
 
+BUILD_DEPENDS+=	p5-Alien-Build-[0-9]*:../../devel/p5-Alien-Build
+BUILD_DEPENDS+=	p5-Alien-Libxml2-[0-9]*:../../textproc/p5-Alien-Libxml2
 DEPENDS+=	p5-XML-SAX>=0.11:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-NamespaceSupport>=1.07:../../textproc/p5-XML-NamespaceSupport
 
@@ -21,9 +22,9 @@ CONFLICTS+=	p5-XML-LibXML-Common-[0-9]*
 # includes XML::LibXML::XPathContext module
 CONFLICTS+=	p5-XML-LibXML-XPathContext-[0-9]*
 
-MAKE_ENV+=		SKIP_SAX_INSTALL=1 # Must be done in the INSTALL script
-MAKE_PARAMS+=		INC="-I${BUILDLINK_PREFIX.libxml2}/include/libxml2"
-MAKE_PARAMS+=		LIBS="-L${BUILDLINK_PREFIX.libxml2}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxml2}/lib -lxml2"
+#MAKE_ENV+=		SKIP_SAX_INSTALL=1 # Must be done in the INSTALL script
+#MAKE_PARAMS+=		INC="-I${BUILDLINK_PREFIX.libxml2}/include/libxml2"
+#MAKE_PARAMS+=		LIBS="-L${BUILDLINK_PREFIX.libxml2}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxml2}/lib -lxml2"
 PERL5_PACKLIST=		auto/XML/LibXML/.packlist
 
 FILES_SUBST+=		PERL5_INSTALLVENDORLIB=${PERL5_INSTALLVENDORLIB:Q}
