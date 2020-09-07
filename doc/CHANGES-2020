@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4927 2020/09/07 11:20:55 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4928 2020/09/07 11:21:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7521,3 +7521,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/p5-Geo-Distance to 0.24 [wiz 2020-09-07]
 	Added devel/p5-rlib version 0.02 [wiz 2020-09-07]
 	Updated geography/p5-Geo-ShapeFile to 3.00 [wiz 2020-09-07]
+	Updated graphics/p5-GD to 2.72 [wiz 2020-09-07]
