@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Module_Install_RTx.pm,v 1.1 2019/07/16 06:20:18 spz Exp $
+$NetBSD: patch-lib_Module_Install_RTx.pm,v 1.2 2020/09/07 09:31:22 wiz Exp $
 
 fix up installpaths
 
@@ -13,7 +13,7 @@ fix up installpaths
 -    $self->makemaker_args( INSTALLVENDORARCH => "/usr/share/man" );
 +    $self->makemaker_args( INSTALLVENDORMAN1DIR => "@PREFIX@/@PKGMANDIR@/man1" );
 +    $self->makemaker_args( INSTALLVENDORMAN3DIR => "@PREFIX@/@PKGMANDIR@/man3" );
-+    $self->makemaker_args( INSTALLVENDORARCH => "$RT::PluginPath/$name/$Config{api_versionstring}/$Config{archname}" );
++    $self->makemaker_args( INSTALLVENDORARCH => "$RT::PluginPath/$name/$RT::Config{api_versionstring}/$RT::Config{archname}" );
  
      if (%has_etc) {
          print "For first-time installation, type 'make initdb'.\n";
