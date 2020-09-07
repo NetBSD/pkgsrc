@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4885 2020/09/07 06:55:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4886 2020/09/07 06:56:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7478,3 +7478,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-IO-Tee to 0.66 [wiz 2020-09-07]
 	Updated devel/p5-IPC-Run to 20200505.0 [wiz 2020-09-07]
 	Updated devel/p5-Importer to 0.026 [wiz 2020-09-07]
+	Updated devel/p5-List-AllUtils to 0.18 [wiz 2020-09-07]
