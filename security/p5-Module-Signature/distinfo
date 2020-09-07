@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.17 2018/09/02 07:33:35 wiz Exp $
+$NetBSD: distinfo,v 1.18 2020/09/07 14:28:55 wiz Exp $
 
-SHA1 (Module-Signature-0.83.tar.gz) = 52520ebbeadd7babae73071eb18495c443a857e4
-RMD160 (Module-Signature-0.83.tar.gz) = 964665fb8a8de6c91416d9fed19878740707d70f
-SHA512 (Module-Signature-0.83.tar.gz) = 6d53140a11779bc8549745204c49f1d7b2167f8f09282acc06c46b8c2cdc12779bb6797ae0535c364cb7458fff91fc9e378761cc1746dd0fcbeaadcff6caeb86
-Size (Module-Signature-0.83.tar.gz) = 82161 bytes
-SHA1 (patch-Makefile.PL) = 6b4ecf714f86778e678c54e7e8637b0ff1c314e4
+SHA1 (Module-Signature-0.87.tar.gz) = ede0ee92b606c42f877b394bb684fd26ca61eb8f
+RMD160 (Module-Signature-0.87.tar.gz) = 0a52138061fde1ececd13ddba2ade9ee6e06f4cf
+SHA512 (Module-Signature-0.87.tar.gz) = d0afeab528d0b8a46b8a6a1f9714ab7efefb386f5b93113e733fa18b23b38c98c6a13f10e9091c0cbf392956cd02484d09482d31cd9146ed6de11adb7cd81124
+Size (Module-Signature-0.87.tar.gz) = 97211 bytes
