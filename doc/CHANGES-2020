@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5031 2020/09/07 20:23:47 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5032 2020/09/07 20:24:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7625,3 +7625,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/p5-Exporter-Declare version 0.114 [wiz 2020-09-07]
 	Added devel/p5-Mock-Quick version 1.111 [wiz 2020-09-07]
 	Updated www/p5-AnyEvent-HTTP to 2.25 [wiz 2020-09-07]
+	Updated www/p5-Apache-LogFormat-Compiler to 0.36 [wiz 2020-09-07]
