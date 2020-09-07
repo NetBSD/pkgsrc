@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:25 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/09/07 06:58:09 wiz Exp $
 
-SHA1 (Log-Dispatch-Perl-0.04.tar.gz) = 4c20d3acbad5c79ab3666eb0311b05b29a0af8f6
-RMD160 (Log-Dispatch-Perl-0.04.tar.gz) = 953c66abc5e9bc8a81e118cad1e562e03be30b89
-SHA512 (Log-Dispatch-Perl-0.04.tar.gz) = d4901916721f8c62e3e3b5d4f2555c4a476cbcec46571dbac7bfc8f3cff4ddcddfbf38247858dfbec1e10c229ed1762c8b28f1c2be5e5aabdfa497e628fdb354
-Size (Log-Dispatch-Perl-0.04.tar.gz) = 4461 bytes
+SHA1 (Log-Dispatch-Perl-0.05.tar.gz) = cbd92470b2bdad5112a8d5ace38cd9b7d852797e
+RMD160 (Log-Dispatch-Perl-0.05.tar.gz) = 0c6f6b9937ff4d15ee73e2a0c75dba8380efe499
+SHA512 (Log-Dispatch-Perl-0.05.tar.gz) = ca67950d81f2bf22d5d16555f0dfc74bc17a717bb4c39a62b687738005b61170c434783f1f4991218791693b3eff16eaf1675dd93d122aa6c237a75752fae390
+Size (Log-Dispatch-Perl-0.05.tar.gz) = 28568 bytes
