@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3229 2020/09/06 23:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3230 2020/09/07 11:19:45 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2037,6 +2037,7 @@ SUBDIR+=	p5-pango
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-pip
 SUBDIR+=	p5-prefork
+SUBDIR+=	p5-rlib
 SUBDIR+=	p5-signatures
 SUBDIR+=	p5-strictures
 SUBDIR+=	p5-subversion
