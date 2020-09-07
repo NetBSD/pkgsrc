@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3231 2020/09/07 19:55:51 otis Exp $
+# $NetBSD: Makefile,v 1.3232 2020/09/07 20:01:44 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1372,6 +1372,7 @@ SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-ExtUtils-XSBuilder
 SUBDIR+=	p5-ExtUtils-XSpp
 SUBDIR+=	p5-FFI-CheckLib
+SUBDIR+=	p5-Fennec-Lite
 SUBDIR+=	p5-File-BOM
 SUBDIR+=	p5-File-BaseDir
 SUBDIR+=	p5-File-Binary
