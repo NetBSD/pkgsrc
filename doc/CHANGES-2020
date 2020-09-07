@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5028 2020/09/07 20:13:37 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5029 2020/09/07 20:16:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7622,3 +7622,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/p5-PkgConfig version 0.24026 [otis 2020-09-07]
 	Added devel/p5-Fennec-Lite version 0.004 [wiz 2020-09-07]
 	Added devel/p5-Meta-Builder version 0.004 [wiz 2020-09-07]
+	Added devel/p5-Exporter-Declare version 0.114 [wiz 2020-09-07]
