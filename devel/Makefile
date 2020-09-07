@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3230 2020/09/07 11:19:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3231 2020/09/07 19:55:51 otis Exp $
 #
 
 COMMENT=	Development utilities
@@ -1746,6 +1746,7 @@ SUBDIR+=	p5-PerlIO-via-Timeout
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
 SUBDIR+=	p5-PerlX-Maybe
+SUBDIR+=	p5-PkgConfig
 SUBDIR+=	p5-Probe-Perl
 SUBDIR+=	p5-Proc-Background
 SUBDIR+=	p5-Proc-Daemon
