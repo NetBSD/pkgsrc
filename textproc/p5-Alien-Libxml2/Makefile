@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/09/07 22:28:11 otis Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/07 22:29:07 otis Exp $
 
 DISTNAME=	Alien-Libxml2-0.16
-PKGNAME=	p5-${DISTNAME}A
+PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Alien/}
