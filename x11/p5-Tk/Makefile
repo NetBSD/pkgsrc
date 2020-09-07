@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2020/08/31 18:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2020/09/07 20:58:27 wiz Exp $
 
-DISTNAME=	Tk-804.034
+DISTNAME=	Tk-804.035
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	x11 tk perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tk/}
 
@@ -14,7 +13,6 @@ MAKE_JOBS_SAFE=	no
 
 BUILD_DEPENDS+=	p5-HTML-Parser>=3.19:../../www/p5-HTML-Parser
 
-USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config
 PERL5_PACKLIST=		auto/Tk/.packlist
 
