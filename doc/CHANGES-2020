@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4916 2020/09/07 10:21:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4917 2020/09/07 10:23:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7510,3 +7510,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test2-Plugin-NoWarnings to 0.09 [wiz 2020-09-07]
 	Updated devel/p5-TheSchwartz to 1.15 [wiz 2020-09-07]
 	Updated devel/p5-Type-Tiny to 1.010006 [wiz 2020-09-07]
+	Updated devel/p5-Type-Tiny-XS to 0.021 [wiz 2020-09-07]
