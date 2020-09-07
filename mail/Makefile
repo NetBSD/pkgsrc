@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.558 2020/09/03 20:26:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.559 2020/09/07 11:42:16 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -225,7 +225,6 @@ SUBDIR+=	p5-Mail-AuthenticationResults
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-Box-IMAP4
 SUBDIR+=	p5-Mail-Box-POP3
-SUBDIR+=	p5-Mail-ClamAV
 SUBDIR+=	p5-Mail-DKIM
 SUBDIR+=	p5-Mail-DeliveryStatus-BounceParser
 SUBDIR+=	p5-Mail-Ezmlm
