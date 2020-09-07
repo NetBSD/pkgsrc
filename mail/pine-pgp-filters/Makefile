@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2019/11/02 16:25:26 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.15 2020/09/07 06:38:27 wiz Exp $
 
-DISTNAME=		pine-pgp-filters-1.6
+DISTNAME=		pine-pgp-filters-1.8
 CATEGORIES=		security mail
-PKGREVISION=		1
-#MASTER_SITES=		https://dougbarton.us/PGP/scripts/ppf/
+MASTER_SITES=		https://dougbarton.us/PGP/ppf/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		https://dougbarton.us/PGP/scripts/ppf/
+#HOMEPAGE=		https://dougbarton.us/PGP/ppf/
 COMMENT=		Filters to integrate Pine with gnupg or pgp
 
 HAS_CONFIGURE=		yes
@@ -16,7 +14,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 DOCDIR=		${PREFIX}/share/doc/pine-pgp-filters
 DOCFILES=	BUGS CHANGES INSTALL LICENSE README
 
-DEPENDS+=	gnupg>=1.4.9:../../security/gnupg
+DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 
 INSTALLATION_DIRS=	${DOCDIR}
 
