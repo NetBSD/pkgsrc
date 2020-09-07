@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2019/11/12 13:58:52 mef Exp $
+$NetBSD: distinfo,v 1.18 2020/09/07 14:56:16 wiz Exp $
 
-SHA1 (Text-Template-1.58.tar.gz) = 779e15dc9b9ad5280a7eb7dac6f30c77f9793e3b
-RMD160 (Text-Template-1.58.tar.gz) = 8c8cd560a0b61a358994fadb072b6564a8e48b92
-SHA512 (Text-Template-1.58.tar.gz) = 23bf03529c7607806c16573b5c0d08ba0b87cf7eb859538d1944bc13952741a88c15588e8de173053a51640c5bdad99c5cc246a67cc05be7eff32853887fbb11
-Size (Text-Template-1.58.tar.gz) = 49656 bytes
+SHA1 (Text-Template-1.59.tar.gz) = 3afd16160d6b8409554e05c62d950ea00ce66ed7
+RMD160 (Text-Template-1.59.tar.gz) = 922a574c70fbe0fa694ae9a67a09a4c0cd8507c1
+SHA512 (Text-Template-1.59.tar.gz) = 18c56dfe10aa3e7af7ea4821c1d8002d89eb7fdf46917877e7e132cfee59783a91953255f79a355f435eff16304ae206e59557328ef51593745ae6c50e3acab7
+Size (Text-Template-1.59.tar.gz) = 50318 bytes
