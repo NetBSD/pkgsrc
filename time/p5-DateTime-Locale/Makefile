@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2020/08/31 18:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2020/09/07 17:51:23 wiz Exp $
 
-DISTNAME=	DateTime-Locale-1.25
+DISTNAME=	DateTime-Locale-1.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
@@ -21,11 +20,13 @@ DEPENDS+=	p5-namespace-autoclean>=0.19:../../devel/p5-namespace-autoclean
 BUILD_DEPENDS+=	p5-File-ShareDir-Install>=0.03:../../devel/p5-File-ShareDir-Install
 
 TEST_DEPENDS+=	p5-CPAN-Meta-Check>=0.011:../../devel/p5-CPAN-Meta-Check
-TEST_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
-TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
-TEST_DEPENDS+=	p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
 TEST_DEPENDS+=	p5-IPC-System-Simple>=0:../../devel/p5-IPC-System-Simple
+TEST_DEPENDS+=	p5-Test2-Suite-[0-9]*:../../devel/p5-Test2-Suite
+TEST_DEPENDS+=	p5-Test2-Plugin-NoWarnings-[0-9]*:../../devel/p5-Test2-Plugin-NoWarnings
+TEST_DEPENDS+=	p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
+#TEST_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
+#TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+#TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/DateTime/Locale/.packlist
