@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4894 2020/09/07 09:31:30 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4895 2020/09/07 09:32:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7487,3 +7487,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Make to 2.002 [wiz 2020-09-07]
 	Updated devel/p5-MetaCPAN-Client to 2.028000 [wiz 2020-09-07]
 	Updated devel/p5-Module-Install-RTx to 0.42 [wiz 2020-09-07]
+	Updated databases/openldap to 2.4.52 [adam 2020-09-07]
+	Updated databases/py-ldap3 to 2.8.1 [adam 2020-09-07]
