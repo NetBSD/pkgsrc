@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/03/04 15:32:37 wiz Exp $
+$NetBSD: distinfo,v 1.12 2020/09/07 14:29:35 wiz Exp $
 
-SHA1 (Mozilla-CA-20180117.tar.gz) = 0d87ffd8a64b66a3c45ac57dca95bf6ca5471853
-RMD160 (Mozilla-CA-20180117.tar.gz) = 03c53ea8c8651cea27d1d79652e601bcb21e103f
-SHA512 (Mozilla-CA-20180117.tar.gz) = 8b4187f47638ba8d670b3f5cafc1de4040dfec1dde6a932411c79b41a8a454bcd3b66f9818c6d28135e29551ce93bc3ddb61e648c7810b30cb147ea0beaaedba
-Size (Mozilla-CA-20180117.tar.gz) = 137157 bytes
+SHA1 (Mozilla-CA-20200520.tar.gz) = 74f34d452b328338d0b28256a960ea22e1bad774
+RMD160 (Mozilla-CA-20200520.tar.gz) = 2edd61bf919ce9e428150375ea1ec76990aec5c8
+SHA512 (Mozilla-CA-20200520.tar.gz) = 5bc7c43c55baa3f878fd2dbf1c85d6b20dcdc9e54ae073d1be4f6b808fa5a4b1205428b7967b5f752b31a62464a8b5cc67b32b3f70b834a4da9c39efe3d5d59f
+Size (Mozilla-CA-20200520.tar.gz) = 137637 bytes
