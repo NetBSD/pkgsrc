@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4989 2020/09/07 14:54:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4990 2020/09/07 14:55:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7583,3 +7583,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Syntax-SourceHighlight to 2.1.2 [wiz 2020-09-07]
 	Updated textproc/p5-Text-Aligner to 0.16 [wiz 2020-09-07]
 	Updated textproc/p5-Text-BibTeX to 0.88 [wiz 2020-09-07]
+	Updated textproc/p5-Text-CSV_XS to 1.44 [wiz 2020-09-07]
