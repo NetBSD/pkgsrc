@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/09/06 02:38:53 mef Exp $
+# $NetBSD: Makefile,v 1.56 2020/09/07 10:42:44 mef Exp $
 
 .include "version.mk"
 
@@ -32,17 +32,17 @@ MESSAGE_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
 BUILD_DEFS+=		VARBASE
 
 # patching always fails due to version is written closed the patching line,
-SUBST_CLASSES+=         os
-SUBST_STAGE.os=         pre-configure
-SUBST_FILES.os=         man/module.info init/module.info
-SUBST_MESSAGE.os=       Add DragonFly
-SUBST_SED.os=           -e 's/macos netbsd/macos netbsd dragonfly/'
+SUBST_CLASSES+=		os
+SUBST_STAGE.os=		pre-configure
+SUBST_FILES.os=		man/module.info init/module.info
+SUBST_MESSAGE.os=	Add DragonFly
+SUBST_SED.os=		-e 's/macos netbsd/macos netbsd dragonfly/'
 
-SUBST_CLASSES+=         dragonfly
-SUBST_STAGE.os=         pre-configure
-SUBST_FILES.os=         cron/module.info
-SUBST_MESSAGE.os=       Add DragonFly
-SUBST_SED.os=           -e 's/macos openbsd/macos openbsd dragonfly/'
+SUBST_CLASSES+=			dragonfly
+SUBST_STAGE.dragonfly=		pre-configure
+SUBST_FILES.dragonfly=		cron/module.info
+SUBST_MESSAGE.dragonfly=	Add DragonFly
+SUBST_SED.dragonfly=		-e 's/macos openbsd/macos openbsd dragonfly/'
 
 WEBMIN_MINIMAL_MODULES=	acl cron init inittab man proc servers webmin webminlog
 
