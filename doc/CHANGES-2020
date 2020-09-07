@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4906 2020/09/07 09:56:12 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4907 2020/09/07 10:05:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7500,3 +7500,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Perl-Tidy to 20200822 [wiz 2020-09-07]
 	Updated devel/p5-Search-Elasticsearch to 6.81 [wiz 2020-09-07]
 	Updated devel/p5-String-Util to 1.31 [wiz 2020-09-07]
+	Updated devel/p5-Sub-HandlesVia to 0.014 [wiz 2020-09-07]
