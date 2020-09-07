@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/09/07 10:36:58 wiz Exp $
+
+SHA1 (JSON-Parse-0.57.tar.gz) = ba33014668b386310f237d025fd55adda37633bb
+RMD160 (JSON-Parse-0.57.tar.gz) = 25d2bbb1b7b7bcc524e39616c439b3a682000ac6
+SHA512 (JSON-Parse-0.57.tar.gz) = 96be06e9cf219622f6064eed3dc553589f5f49f6473ae5382d98179cc5d0a0ad9ff1e79014de41312d40e503b98ad034d2ca898e30d051a804817e3f2245ff65
+Size (JSON-Parse-0.57.tar.gz) = 79465 bytes
