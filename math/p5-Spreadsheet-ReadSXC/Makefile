@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/09/07 11:58:29 wiz Exp $
 #
 
-DISTNAME=	Spreadsheet-ReadSXC-0.20
+DISTNAME=	Spreadsheet-ReadSXC-0.24
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Spreadsheet/}
 
@@ -15,6 +14,7 @@ USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Spreadsheet/ReadSXC/.packlist
 
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+DEPENDS+=	p5-PerlIO-gzip-[0-9]*:../../devel/p5-PerlIO-gzip
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 .include "../../lang/perl5/module.mk"
