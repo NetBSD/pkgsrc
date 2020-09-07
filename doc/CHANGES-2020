@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4993 2020/09/07 14:57:14 pgoyette Exp $
+$NetBSD: CHANGES-2020,v 1.4994 2020/09/07 15:18:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7587,3 +7587,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Text-CSV_XS to 1.44 [wiz 2020-09-07]
 	Updated textproc/p5-Text-Table to 1.134 [wiz 2020-09-07]
 	Updated textproc/p5-Text-Template to 1.59 [wiz 2020-09-07]
+	Updated textproc/p5-Text-Xslate to 3.5.8 [wiz 2020-09-07]
