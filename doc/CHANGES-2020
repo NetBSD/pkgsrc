@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4992 2020/09/07 14:56:25 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4993 2020/09/07 14:57:14 pgoyette Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7573,6 +7573,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/p5-Net-OpenSSH to 0.79 [wiz 2020-09-07]
 	Updated sysutils/p5-IO-KQueue to 0.39 [wiz 2020-09-07]
 	Updated sysutils/p5-Sys-CpuLoad to 0.31 [wiz 2020-09-07]
+	Updated sysutils/decode-dimms to 4.1.20200907 [pgoyette 2020-09-07]
 	Removed textproc/p5-Cz-Cstools [wiz 2020-09-07]
 	Updated textproc/p5-List-Compare to 0.55 [wiz 2020-09-07]
 	Updated textproc/p5-PDF-API2 to 2.038 [wiz 2020-09-07]
