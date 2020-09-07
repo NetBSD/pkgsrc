@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/09/07 17:42:27 wiz Exp $
 
-DISTNAME=	DateTime-Format-ISO8601-0.08
+DISTNAME=	DateTime-Format-ISO8601-0.14
 PKGNAME=	p5-${DISTNAME}00
-PKGREVISION=	7
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
@@ -14,13 +13,9 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-DateTime>=0.18:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Builder>=0.77:../../time/p5-DateTime-Format-Builder
 
-# Recommended dependencies:
-BUILD_DEPENDS+=	p5-File-Find-Rule>=0.24:../../devel/p5-File-Find-Rule
-BUILD_DEPENDS+=	p5-Test-Distribution>=1.22:../../devel/p5-Test-Distribution
-BUILD_DEPENDS+=	p5-Test-Pod>=0.95:../../devel/p5-Test-Pod
+TEST_DEPENDS+=	p5-Test2-Suite-[0-9]*:../../devel/p5-Test2-Suite
 
 PERL5_PACKLIST=		auto/DateTime/Format/ISO8601/.packlist
-PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
