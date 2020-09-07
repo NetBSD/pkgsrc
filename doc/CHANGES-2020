@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4964 2020/09/07 13:08:40 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4965 2020/09/07 13:09:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7558,3 +7558,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/p5-Net-GitHub to 1.01 [wiz 2020-09-07]
 	Updated net/p5-Net-IPv6Addr to 1.01 [wiz 2020-09-07]
 	Updated net/p5-Net-SFTP-Foreign to 1.91 [wiz 2020-09-07]
+	Updated net/p5-NetAddr-MAC to 0.97 [wiz 2020-09-07]
