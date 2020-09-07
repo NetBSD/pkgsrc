@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4897 2020/09/07 09:33:55 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4898 2020/09/07 09:35:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7491,3 +7491,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-ldap3 to 2.8.1 [adam 2020-09-07]
 	Updated devel/p5-Module-ScanDeps to 1.29 [wiz 2020-09-07]
 	Updated devel/p5-Module-Starter to 1.770 [wiz 2020-09-07]
+	Updated devel/p5-MooX-TypeTiny to 0.002003 [wiz 2020-09-07]
