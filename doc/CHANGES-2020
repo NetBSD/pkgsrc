@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5055 2020/09/07 21:05:14 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5056 2020/09/07 21:06:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7649,3 +7649,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/p5-Clipboard to 0.26 [wiz 2020-09-07]
 	Updated x11/p5-Tk to 804.035 [wiz 2020-09-07]
 	Updated x11/p5-gtk2 to 1.24993 [wiz 2020-09-07]
+	Updated textproc/p5-YAML-PP to 0.024 [wiz 2020-09-07]
