@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5038 2020/09/07 20:38:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5039 2020/09/07 20:39:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7632,3 +7632,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-CGI to 4.50 [wiz 2020-09-07]
 	Updated www/p5-CGI-Compile to 0.25 [wiz 2020-09-07]
 	Updated www/p5-CGI-Minimal to 1.30 [wiz 2020-09-07]
+	Updated www/p5-Catalyst-Devel to 1.41 [wiz 2020-09-07]
