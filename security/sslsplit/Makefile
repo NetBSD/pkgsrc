@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/07 07:58:11 schmonz Exp $
 
 DISTNAME=	sslsplit-0.5.5
 PKGREVISION=	1
@@ -17,6 +17,7 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	LIBEVENT_BASE=${BUILDLINK_PREFIX.libevent}
 MAKE_ENV+=	OPENSSL_BASE=${BUILDLINK_PREFIX.openssl}
 MAKE_ENV+=	LIBNET_BASE=${BUILDLINK_PREFIX.libnet11}
+MAKE_ENV+=	LIBPCAP_BASE=${BUILDLINK_PREFIX.libpcap}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
@@ -26,5 +27,6 @@ do-install:
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libnet11/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
