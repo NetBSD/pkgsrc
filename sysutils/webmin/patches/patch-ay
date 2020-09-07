@@ -1,4 +1,6 @@
-$NetBSD: patch-ay,v 1.3 2012/11/02 19:02:51 shattered Exp $
+$NetBSD: patch-ay,v 1.4 2020/09/07 10:34:52 mef Exp $
+
+Set &html_escape and more
 
 --- mailboxes/mail_search.cgi.orig	2012-06-29 22:31:50.000000000 +0000
 +++ mailboxes/mail_search.cgi

@@ -1,4 +1,6 @@
-$NetBSD: patch-aw,v 1.2 2012/11/02 19:02:51 shattered Exp $
+$NetBSD: patch-aw,v 1.3 2020/09/07 10:34:52 mef Exp $
+
+Set &html_escape for the safety
 
 --- ldap-useradmin/search_group.cgi.orig	2011-04-27 00:19:01.000000000 +0200
 +++ ldap-useradmin/search_group.cgi	2011-06-15 23:37:06.000000000 +0200
