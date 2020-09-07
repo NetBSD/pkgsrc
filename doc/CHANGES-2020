@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5048 2020/09/07 20:48:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5049 2020/09/07 20:49:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7642,3 +7642,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-HTTP-Entity-Parser to 0.24 [wiz 2020-09-07]
 	Updated www/p5-HTTP-Message to 6.25 [wiz 2020-09-07]
 	Updated www/p5-HTTP-Tinyish to 0.17 [wiz 2020-09-07]
+	Updated www/p5-LWP-Protocol-https to 6.09 [wiz 2020-09-07]
