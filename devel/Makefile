@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3232 2020/09/07 20:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3233 2020/09/07 20:13:26 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1545,6 +1545,7 @@ SUBDIR+=	p5-Memoize-ExpireLRU
 SUBDIR+=	p5-Memoize-Memcached
 SUBDIR+=	p5-Menlo
 SUBDIR+=	p5-Menlo-Legacy
+SUBDIR+=	p5-Meta-Builder
 SUBDIR+=	p5-MetaCPAN-API
 SUBDIR+=	p5-MetaCPAN-Client
 SUBDIR+=	p5-Method-Signatures
