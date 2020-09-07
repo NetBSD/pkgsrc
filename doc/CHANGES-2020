@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4913 2020/09/07 10:15:41 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4914 2020/09/07 10:17:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7507,3 +7507,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-MockModule to 0.173.0 [wiz 2020-09-07]
 	Updated devel/p5-Test-Requires to 0.11 [wiz 2020-09-07]
 	Updated devel/p5-Test-TempDir to 0.11 [wiz 2020-09-07]
+	Updated devel/p5-Test2-Plugin-NoWarnings to 0.09 [wiz 2020-09-07]
