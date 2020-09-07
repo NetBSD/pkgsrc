@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4978 2020/09/07 14:32:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4979 2020/09/07 14:35:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7572,3 +7572,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/p5-Net-DNS-SEC to 1.17 [wiz 2020-09-07]
 	Updated security/p5-Net-OpenSSH to 0.79 [wiz 2020-09-07]
 	Updated sysutils/p5-IO-KQueue to 0.39 [wiz 2020-09-07]
+	Updated sysutils/p5-Sys-CpuLoad to 0.31 [wiz 2020-09-07]
