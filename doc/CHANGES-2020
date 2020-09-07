@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5033 2020/09/07 20:28:17 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5034 2020/09/07 20:32:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7627,3 +7627,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-AnyEvent-HTTP to 2.25 [wiz 2020-09-07]
 	Updated www/p5-Apache-LogFormat-Compiler to 0.36 [wiz 2020-09-07]
 	Updated www/p5-Apache-Test to 1.42 [wiz 2020-09-07]
+	Updated www/p5-Apache2-AuthCookie to 3.30 [wiz 2020-09-07]
