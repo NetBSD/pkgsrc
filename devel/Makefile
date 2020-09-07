@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3233 2020/09/07 20:13:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3234 2020/09/07 20:16:04 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1353,6 +1353,7 @@ SUBDIR+=	p5-Exception-Class
 SUBDIR+=	p5-Exception-Handler
 SUBDIR+=	p5-Expect
 SUBDIR+=	p5-Expect-Simple
+SUBDIR+=	p5-Exporter-Declare
 SUBDIR+=	p5-Exporter-Lite
 SUBDIR+=	p5-Exporter-Tiny
 SUBDIR+=	p5-ExtUtils-AutoInstall
