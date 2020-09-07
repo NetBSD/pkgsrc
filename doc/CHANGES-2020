@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4883 2020/09/07 06:52:52 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4884 2020/09/07 06:54:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7476,3 +7476,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/pine-pgp-filters to 1.8 [wiz 2020-09-07]
 	Updated devel/p5-IO-Pager to 1.03 [wiz 2020-09-07]
 	Updated devel/p5-IO-Tee to 0.66 [wiz 2020-09-07]
+	Updated devel/p5-IPC-Run to 20200505.0 [wiz 2020-09-07]
