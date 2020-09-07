@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4889 2020/09/07 06:59:02 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4890 2020/09/07 07:00:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7482,3 +7482,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Log-Dispatch to 2.70 [wiz 2020-09-07]
 	Updated devel/p5-Log-Dispatch-Perl to 0.05 [wiz 2020-09-07]
 	Updated devel/p5-Log-Dispatchouli to 2.022 [wiz 2020-09-07]
+	Updated devel/p5-Log-Handler to 0.90 [wiz 2020-09-07]
