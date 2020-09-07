@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/08/31 18:10:41 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/09/07 12:17:33 wiz Exp $
 
-DISTNAME=	Net-Amazon-S3-0.89
+DISTNAME=	Net-Amazon-S3-0.91
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -24,6 +23,7 @@ DEPENDS+=	p5-MooseX-StrictConstructor>=0.16:../../devel/p5-MooseX-StrictConstruc
 DEPENDS+=	p5-MooseX-Types-DateTime>=0.07:../../time/p5-MooseX-Types-DateTime
 DEPENDS+=	p5-MooseX-Types-DateTime-MoreCoercions>=0.07:../../time/p5-MooseX-Types-DateTime-MoreCoercions
 DEPENDS+=	p5-Regexp-Common>=0:../../textproc/p5-Regexp-Common
+DEPENDS+=	p5-Safe-Isa-[0-9]*:../../devel/p5-Safe-Isa
 DEPENDS+=	p5-Sub-Override>=0:../../devel/p5-Sub-Override
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-XML-LibXML>=0:../../textproc/p5-XML-LibXML
@@ -33,6 +33,7 @@ TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 TEST_DEPENDS+=	p5-Test-MockTime-[0-9]*:../../time/p5-Test-MockTime
 TEST_DEPENDS+=	p5-Test-LoadAllModules-[0-9]*:../../devel/p5-Test-LoadAllModules
+TEST_DEPENDS+=	p5-Test-LWP-UserAgent-[0-9]*:../../www/p5-Test-LWP-UserAgent
 #Warning: prerequisite File::Find::Rule 0 not found.
 #Warning: prerequisite MIME::Types 0 not found.
 #Warning: prerequisite Term::Encoding 0 not found.
