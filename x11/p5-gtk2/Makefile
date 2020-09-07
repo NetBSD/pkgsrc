@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2020/08/31 18:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2020/09/07 21:05:04 wiz Exp $
 
-DISTNAME=	Gtk2-1.24992
+DISTNAME=	Gtk2-1.24993
 PKGNAME=	${DISTNAME:C:Gtk2:p5-gtk2:}
-PKGREVISION=	11
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
@@ -21,11 +20,9 @@ USE_TOOLS+=	pkg-config
 PERL5_PACKLIST=	auto/Gtk2/.packlist
 
 BUILDLINK_API_DEPENDS.p5-glib2+=	p5-glib2>=1.280
-BUILDLINK_API_DEPENDS.p5-cairo+=	p5-cairo>=1.000
-BUILDLINK_API_DEPENDS.p5-pango+=	p5-pango>=1.220
-
 .include "../../devel/p5-glib2/buildlink3.mk"
 .include "../../graphics/p5-cairo/buildlink3.mk"
+BUILDLINK_API_DEPENDS.p5-pango+=	p5-pango>=1.220
 .include "../../devel/p5-pango/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../x11/gtk2/buildlink3.mk"
