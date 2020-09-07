@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4967 2020/09/07 13:39:03 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4968 2020/09/07 13:52:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7561,3 +7561,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/p5-NetAddr-MAC to 0.97 [wiz 2020-09-07]
 	Updated net/p5-RT-Client-REST to 0.60 [wiz 2020-09-07]
 	Updated net/p5-SNMP-Info to 3.70 [wiz 2020-09-07]
+	Updated security/p5-Authen-TacacsPlus to 0.28 [wiz 2020-09-07]
