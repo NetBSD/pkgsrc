@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4985 2020/09/07 14:47:11 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4986 2020/09/07 14:47:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7579,3 +7579,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-PDF-Table to 0.12 [wiz 2020-09-07]
 	Updated textproc/p5-PPIx-QuoteLike to 0.012 [wiz 2020-09-07]
 	Updated textproc/p5-Pod-Elemental to 0.103005 [wiz 2020-09-07]
+	Updated textproc/p5-String-RewritePrefix to 0.008 [wiz 2020-09-07]
