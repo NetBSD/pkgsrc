@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4975 2020/09/07 14:29:43 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4976 2020/09/07 14:30:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7569,3 +7569,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/p5-IO-Socket-SSL to 2.068 [wiz 2020-09-07]
 	Updated security/p5-Module-Signature to 0.87 [wiz 2020-09-07]
 	Updated security/p5-Mozilla-CA to 20200520 [wiz 2020-09-07]
+	Updated security/p5-Net-DNS-SEC to 1.17 [wiz 2020-09-07]
