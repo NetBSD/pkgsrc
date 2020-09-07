@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5001 2020/09/07 17:11:52 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5002 2020/09/07 17:16:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7595,3 +7595,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-XML-LibXML-Simple to 1.01 [wiz 2020-09-07]
 	Updated textproc/p5-XML-LibXSLT to 1.99 [wiz 2020-09-07]
 	Updated textproc/p5-XML-Parser to 2.46 [wiz 2020-09-07]
+	Updated textproc/p5-XML-RSS to 1.61 [wiz 2020-09-07]
