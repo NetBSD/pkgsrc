@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4960 2020/09/07 12:43:17 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4961 2020/09/07 12:47:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7554,3 +7554,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/p5-Danga-Socket to 1.62 [wiz 2020-09-07]
 	Updated net/p5-Net-Amazon-S3 to 0.91 [wiz 2020-09-07]
 	Updated net/p5-Net-DNS to 1.26 [wiz 2020-09-07]
+	Updated net/p5-Net-Frame-Dump to 1.18 [wiz 2020-09-07]
