@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5006 2020/09/07 17:25:40 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5007 2020/09/07 17:26:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7600,3 +7600,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-YAML to 1.30 [wiz 2020-09-07]
 	Updated textproc/p5-YAML-LibYAML to 0.82 [wiz 2020-09-07]
 	Updated textproc/p5-YAML-LibYAML to 0.82 [wiz 2020-09-07]
+	Updated textproc/p5-YAML-Syck to 1.32 [wiz 2020-09-07]
