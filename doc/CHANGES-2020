@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5052 2020/09/07 20:52:41 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5053 2020/09/07 20:53:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7646,3 +7646,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Net-Curl to 0.45 [wiz 2020-09-07]
 	Updated www/p5-Plack-Middleware-Debug to 0.18 [wiz 2020-09-07]
 	Updated www/p5-libwww to 6.47 [wiz 2020-09-07]
+	Updated x11/p5-Clipboard to 0.26 [wiz 2020-09-07]
