@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4924 2020/09/07 10:56:56 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4925 2020/09/07 11:14:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7518,3 +7518,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/p5-Finance-Quote to 1.49 [wiz 2020-09-07]
 	Added geography/p5-Class-Measure version 0.08 [wiz 2020-09-07]
 	Added geography/p5-GIS-Distance version 0.18 [wiz 2020-09-07]
+	Updated geography/p5-Geo-Distance to 0.24 [wiz 2020-09-07]
