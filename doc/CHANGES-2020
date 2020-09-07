@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5035 2020/09/07 20:34:07 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5036 2020/09/07 20:35:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7629,3 +7629,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Apache-Test to 1.42 [wiz 2020-09-07]
 	Updated www/p5-Apache2-AuthCookie to 3.30 [wiz 2020-09-07]
 	Updated www/p5-Apache2-AuthCookieDBI to 2.19 [wiz 2020-09-07]
+	Updated www/p5-CGI to 4.50 [wiz 2020-09-07]
