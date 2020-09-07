@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2020/08/31 18:12:15 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2020/09/07 17:26:15 wiz Exp $
 
-DISTNAME=	YAML-Syck-1.31
+DISTNAME=	YAML-Syck-1.32
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
-CATEGORIES=	perl5 textproc
+CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=YAML/}
 
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/AUDREYT/YAML-Syck-1.07
 COMMENT=	Fast, lightweight YAML loader and dumper
 LICENSE=	mit AND 2-clause-bsd
-
-USE_LANGUAGES=	c
 
 PERL5_PACKLIST=		auto/YAML/Syck/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
