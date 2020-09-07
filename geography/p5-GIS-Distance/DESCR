@@ -1,0 +1,3 @@
+This module calculates distances between geographic points on, at
+the moment, planet Earth. Various formulas are available that
+provide different levels of accuracy versus speed.
