@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4908 2020/09/07 10:09:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4909 2020/09/07 10:11:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7502,3 +7502,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-String-Util to 1.31 [wiz 2020-09-07]
 	Updated devel/p5-Sub-HandlesVia to 0.014 [wiz 2020-09-07]
 	Updated devel/p5-System-Command to 1.121 [wiz 2020-09-07]
+	Updated devel/p5-Test-Compile to 2.4.1 [wiz 2020-09-07]
