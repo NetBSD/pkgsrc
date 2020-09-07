@@ -1,10 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2009/08/16 18:21:04 bouyer Exp $
+$NetBSD: patch-lib_XML_SAX_PurePerl.pm,v 1.1 2020/09/07 17:21:34 wiz Exp $
 
-From http://rt.cpan.org/Public/Bug/Display.html?id=43174
-
---- SAX/PurePerl.pm.orig	2009-08-16 17:34:04.000000000 +0200
-+++ SAX/PurePerl.pm	2009-08-16 17:36:40.000000000 +0200
-@@ -308,21 +308,27 @@
+--- lib/XML/SAX/PurePerl.pm.orig	2019-06-14 01:57:58.000000000 +0000
++++ lib/XML/SAX/PurePerl.pm
+@@ -308,21 +308,27 @@ sub CDSect {
      
      $self->start_cdata({});
      
