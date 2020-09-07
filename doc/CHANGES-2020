@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4892 2020/09/07 07:02:44 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4893 2020/09/07 09:25:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7485,3 +7485,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Log-Handler to 0.90 [wiz 2020-09-07]
 	Updated devel/p5-Log-Log4perl to 1.51 [wiz 2020-09-07]
 	Updated devel/p5-Make to 2.002 [wiz 2020-09-07]
+	Updated devel/p5-MetaCPAN-Client to 2.028000 [wiz 2020-09-07]
