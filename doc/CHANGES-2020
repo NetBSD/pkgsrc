@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4954 2020/09/07 12:00:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4955 2020/09/07 12:01:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7548,3 +7548,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/p5-Spreadsheet-Read to 0.81 [wiz 2020-09-07]
 	Updated math/p5-Spreadsheet-ReadSXC to 0.24 [wiz 2020-09-07]
 	Updated misc/p5-Business-ISBN-Data to 20191107 [wiz 2020-09-07]
+	Updated misc/p5-Business-ISBN to 3.005 [wiz 2020-09-07]
