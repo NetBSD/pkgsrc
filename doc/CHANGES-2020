@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4971 2020/09/07 13:54:57 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4972 2020/09/07 13:56:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7565,3 +7565,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/p5-Crypt-ECB to 2.22 [wiz 2020-09-07]
 	Updated security/p5-Crypt-SMIME to 0.26 [wiz 2020-09-07]
 	Updated security/p5-Crypt-X509 to 0.53 [wiz 2020-09-07]
+	Updated security/p5-CryptX to 0.069 [wiz 2020-09-07]
