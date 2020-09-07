@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4981 2020/09/07 14:39:30 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4982 2020/09/07 14:45:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7575,3 +7575,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/p5-Sys-CpuLoad to 0.31 [wiz 2020-09-07]
 	Removed textproc/p5-Cz-Cstools [wiz 2020-09-07]
 	Updated textproc/p5-List-Compare to 0.55 [wiz 2020-09-07]
+	Updated textproc/p5-PDF-API2 to 2.038 [wiz 2020-09-07]
