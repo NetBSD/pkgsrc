@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4941 2020/09/07 11:44:37 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4942 2020/09/07 11:45:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7535,3 +7535,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed mail/p5-Mail-ClamAV [wiz 2020-09-07]
 	Updated mail/p5-Mail-DKIM to 1.20200824 [wiz 2020-09-07]
 	Updated mail/p5-Mail-IMAPClient to 3.42 [wiz 2020-09-07]
+	Updated mail/p5-Mail-Message to 3.009 [wiz 2020-09-07]
