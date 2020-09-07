@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4949 2020/09/07 11:51:47 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4950 2020/09/07 11:54:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7543,3 +7543,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/p5-Math-BigInt-Pari to 1.3006 [wiz 2020-09-07]
 	Updated math/p5-Math-GMP to 2.20 [wiz 2020-09-07]
 	Updated math/p5-Math-Matrix to 0.91 [wiz 2020-09-07]
+	Updated math/p5-Math-Random-MT-Auto to 6.23 [wiz 2020-09-07]
