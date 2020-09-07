@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1169 2020/09/04 13:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.1170 2020/09/07 14:37:45 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -526,7 +526,6 @@ SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Convert-BER
 SUBDIR+=	p5-Convert-PEM
 SUBDIR+=	p5-Convert-Translit
-SUBDIR+=	p5-Cz-Cstools
 SUBDIR+=	p5-Data-FormValidator
 SUBDIR+=	p5-Data-HexDump
 SUBDIR+=	p5-Dist-Zilla-Plugin-PodWeaver
