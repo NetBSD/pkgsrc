@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2018/08/29 06:27:47 wiz Exp $
-share/Module-Signature/ANDK2018.pub
+@comment $NetBSD: PLIST,v 1.6 2020/09/07 14:28:55 wiz Exp $
+share/Module-Signature/ANDK2020.pub
 share/Module-Signature/AUDREYT2018.pub
 share/Module-Signature/NIKLASHOLM2018.pub
-share/Module-Signature/PAUSE2019.pub
+share/Module-Signature/PAUSE2020.pub
