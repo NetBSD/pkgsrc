@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2020/01/08 13:55:32 wen Exp $
+$NetBSD: distinfo,v 1.24 2020/09/07 15:17:57 wiz Exp $
 
-SHA1 (Text-Xslate-v3.5.7.tar.gz) = e59d1c9b3b092879afa068fff71bc54d86227280
-RMD160 (Text-Xslate-v3.5.7.tar.gz) = 1cb6aeddf932bd0340cb24b8e88698838efb0e3f
-SHA512 (Text-Xslate-v3.5.7.tar.gz) = 99e06bc0ae43bde2074f303544f2ecf594123a75b1116e063d136676d088f9067c5785be7b2ecd89ad76774c65b1f52a78002f74c9e6814b189774fa58957806
-Size (Text-Xslate-v3.5.7.tar.gz) = 216362 bytes
+SHA1 (Text-Xslate-v3.5.8.tar.gz) = 8b2a6ce6455c820c97b15148cadd994f6d6fe5ee
+RMD160 (Text-Xslate-v3.5.8.tar.gz) = 78299afba5059ad02e617e326bb09ec4541e0e95
+SHA512 (Text-Xslate-v3.5.8.tar.gz) = aace9c026cf2fde48685adc984380c8dc18afbfb25f73e3149e92b5702eeeaa220d8f6204e652a69ec43430c0ee4a499caebd47e24bf924aa853efb6eef03f8e
+Size (Text-Xslate-v3.5.8.tar.gz) = 216321 bytes
