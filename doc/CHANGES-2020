@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4956 2020/09/07 12:02:09 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4957 2020/09/07 12:03:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7550,3 +7550,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/p5-Business-ISBN-Data to 20191107 [wiz 2020-09-07]
 	Updated misc/p5-Business-ISBN to 3.005 [wiz 2020-09-07]
 	Updated misc/p5-Business-ISSN to 1.004 [wiz 2020-09-07]
+	Updated misc/p5-Locale-Codes to 3.65 [wiz 2020-09-07]
