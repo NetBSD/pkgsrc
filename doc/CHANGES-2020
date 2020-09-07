@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.4902 2020/09/07 09:45:24 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.4903 2020/09/07 09:49:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7496,3 +7496,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-MooseX-MethodAttributes to 0.32 [wiz 2020-09-07]
 	Updated devel/p5-POE to 1.368 [wiz 2020-09-07]
 	Updated devel/p5-PPIx-Regexp to 0.073 [wiz 2020-09-07]
+	Updated devel/p5-Path-Dispatcher to 1.08 [wiz 2020-09-07]
