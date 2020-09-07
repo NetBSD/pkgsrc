@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.3 2007/06/07 15:13:47 obache Exp $
+$NetBSD: patch-af,v 1.4 2020/09/07 10:34:52 mef Exp $
+
+Add dragonfly
 
 --- servers/servers-lib.pl.orig	2007-06-01 01:21:09.000000000 +0000
 +++ servers/servers-lib.pl
