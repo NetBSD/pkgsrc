@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5010 2020/09/07 17:35:40 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5011 2020/09/07 17:37:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7604,3 +7604,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-ack to 3.4.0 [wiz 2020-09-07]
 	Updated textproc/p5-podlators to 4.14 [wiz 2020-09-07]
 	Updated time/p5-Calendar-Simple to 2.0.0 [wiz 2020-09-07]
+	Updated time/p5-Data-ICal to 0.24 [wiz 2020-09-07]
