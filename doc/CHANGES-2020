@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5041 2020/09/07 20:41:39 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5042 2020/09/07 20:42:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7635,3 +7635,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Catalyst-Devel to 1.41 [wiz 2020-09-07]
 	Updated www/p5-Catalyst-Manual to 5.9011 [wiz 2020-09-07]
 	Updated www/p5-Catalyst-Plugin-ConfigLoader to 0.35 [wiz 2020-09-07]
+	Updated www/p5-Catalyst-Plugin-Session-State-Cookie to 0.18 [wiz 2020-09-07]
