@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2020/08/31 18:07:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/08 13:16:35 wiz Exp $
 
 DISTNAME=	Clone-Choose-0.010
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	devel perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/H/HE/HERMES/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HE/HERMES/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Clone-Choose

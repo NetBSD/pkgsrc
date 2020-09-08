@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2020/09/08 13:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/08 13:16:40 wiz Exp $
 
 DISTNAME=	Test2-Tools-Explain-0.02
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PETDANCE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Test2::Tools::Explain

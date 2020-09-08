@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:11:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/08 13:16:44 wiz Exp $
 
 DISTNAME=	man2html3.0.1
 PKGNAME=	${DISTNAME:S/html/html-/}
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES+=	https://acadix.biz/Ports/distfiles/
 MASTER_SITES+=	http://hydra.nac.uci.edu/indiv/ehood/tar/
-MASTER_SITES+=	ftp://ftp.cpan.org/pub/CPAN/modules/by-authors/Earl_Hood/
+MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../../authors/Earl_Hood/}
 MASTER_SITES+=	http://people.freebsd.org/~demon/
 
 MAINTAINER=	bacon@NetBSD.org

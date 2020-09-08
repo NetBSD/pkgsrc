@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2020/09/08 13:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/08 13:16:40 wiz Exp $
 
 DISTNAME=	Test-Strict-0.52
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MA/MANWAR/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MANWAR/}
 
 MAINTAINER=	pkgsrc-users@pkgsrc.org
 HOMEPAGE=	https://metacpan.org/pod/Test::Strict

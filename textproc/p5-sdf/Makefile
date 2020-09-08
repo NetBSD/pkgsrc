@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2020/09/08 13:09:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/08 13:16:45 wiz Exp $
 
 DISTNAME=	sdf-2.001
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	textproc perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/I/IA/IANC/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IA/IANC/}
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://metacpan.org/source/IANC/sdf-2.001beta1

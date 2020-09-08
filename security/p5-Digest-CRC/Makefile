@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2020/08/31 18:11:16 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2020/09/08 13:16:43 wiz Exp $
 
 DISTNAME=	Digest-CRC-0.22.2
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	security perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/O/OL/OLIMAUL/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OL/OLIMAUL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Digest-CRC
