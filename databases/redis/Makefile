@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2020/08/20 23:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2020/09/08 17:46:36 adam Exp $
 
-DISTNAME=	redis-6.0.6
-PKGREVISION=	3
+DISTNAME=	redis-6.0.7
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
