@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2020/05/16 06:49:39 rillig Exp $
+# $NetBSD: Makefile,v 1.77 2020/09/08 11:48:35 wiz Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -26,7 +26,6 @@ SUBDIR+=	ledger
 SUBDIR+=	ledger2beancount
 SUBDIR+=	libofx
 SUBDIR+=	magento
-SUBDIR+=	moneyguru
 SUBDIR+=	p5-Algorithm-LUHN
 SUBDIR+=	p5-Data-Currency
 SUBDIR+=	p5-Finance-Currency-Convert-WebserviceX
