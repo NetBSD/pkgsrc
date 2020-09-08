@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2020/08/12 14:19:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.211 2020/09/08 12:11:36 wiz Exp $
 #
 
 COMMENT=	Editors
@@ -115,7 +115,6 @@ SUBDIR+=	p5-Padre-Plugin-SVN
 SUBDIR+=	p5-Padre-Plugin-SpellCheck
 SUBDIR+=	p5-Padre-Plugin-Vi
 SUBDIR+=	p5-Padre-Plugin-XS
-SUBDIR+=	p5-Wx-Scintilla
 SUBDIR+=	pico
 SUBDIR+=	pluma
 SUBDIR+=	poedit
