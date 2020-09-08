@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2020/09/04 09:39:58 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2020/09/08 13:16:43 wiz Exp $
 
 DISTNAME=		Net-SSH-Perl-2.14
 PKGNAME=		p5-${DISTNAME:C/-Perl//}
 PKGREVISION=		4
 CATEGORIES=		security net perl5
-MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/S/SC/SCHWIGON/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SC/SCHWIGON/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Net-SSH-Perl
