@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5067 2020/09/08 13:49:20 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5068 2020/09/08 17:45:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7662,3 +7662,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/inkscape to 1.0.1 [ryoon 2020-09-08]
 	Updated textproc/fmtlib to 7.0.3 [adam 2020-09-08]
 	Updated multimedia/mkvtoolnix to 50.0.0 [adam 2020-09-08]
+	Updated devel/py-prompt_toolkit2 to 3.0.7 [adam 2020-09-08]
+	Updated devel/py-ipython to 7.18.1 [adam 2020-09-08]
+	Updated security/py-paramiko to 2.7.2 [adam 2020-09-08]
+	Updated finance/py-stripe to 2.51.0 [adam 2020-09-08]
