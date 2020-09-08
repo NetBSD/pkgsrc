@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/08/31 18:09:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/08 13:09:56 wiz Exp $
 
 DISTNAME=	Test-Exit-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AR/ARODLAND/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/A/AR/ARODLAND/
+HOMEPAGE=	https://metacpan.org/pod/Test::Exit
 COMMENT=	Test that some code calls exit() without terminating testing
 LICENSE=	${PERL5_LICENSE}
 

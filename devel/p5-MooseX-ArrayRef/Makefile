@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/08/31 18:08:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/08 13:09:54 wiz Exp $
 
 DISTNAME=	MooseX-ArrayRef-0.005
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/
+HOMEPAGE=	https://metacpan.org/pod/MooseX::ArrayRef
 COMMENT=	Blessed arrayrefs with Moose
 LICENSE=	${PERL5_LICENSE}
 

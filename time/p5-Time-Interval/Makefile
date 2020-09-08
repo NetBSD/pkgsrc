@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/08/31 18:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/09/08 13:10:00 wiz Exp $
 
 DISTNAME=	Time-Interval-1.234
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	time
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AH/AHICOX/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/A/AH/AHICOX/
+HOMEPAGE=	https://metacpan.org/pod/distribution/Time-Interval/Interval.pod
 COMMENT=	Converts time intervals of days, hours, minutes, and seconds
 LICENSE=	${PERL5_LICENSE}
 
