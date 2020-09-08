@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5061 2020/09/08 11:54:20 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5062 2020/09/08 12:11:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7655,3 +7655,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-MetaCPAN-Client to 2.028000nb1 [wiz 2020-09-08]
 	Removed finance/moneyguru [wiz 2020-09-08]
 	Removed www/p5-WWW-Curl [wiz 2020-09-08]
+	Removed editors/p5-Wx-Scintilla [wiz 2020-09-08]
