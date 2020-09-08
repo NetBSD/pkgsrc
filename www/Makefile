@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1483 2020/09/04 11:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.1484 2020/09/08 11:54:20 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -563,7 +563,6 @@ SUBDIR+=	p5-URI-ws
 SUBDIR+=	p5-VRML
 SUBDIR+=	p5-WWW-Amazon-Wishlist
 SUBDIR+=	p5-WWW-CSRF
-SUBDIR+=	p5-WWW-Curl
 SUBDIR+=	p5-WWW-Facebook-API
 SUBDIR+=	p5-WWW-Form-UrlEncoded
 SUBDIR+=	p5-WWW-Mechanize
