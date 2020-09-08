@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/04 10:15:17 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/08 19:13:49 nia Exp $
 
 DISTNAME=	profanity-0.9.5
 CATEGORIES=	chat
@@ -17,6 +17,8 @@ FAKE_NCURSES=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+USE_CURSES=	wide
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
