@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5068 2020/09/08 17:45:04 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5069 2020/09/08 18:00:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7666,3 +7666,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ipython to 7.18.1 [adam 2020-09-08]
 	Updated security/py-paramiko to 2.7.2 [adam 2020-09-08]
 	Updated finance/py-stripe to 2.51.0 [adam 2020-09-08]
+	Updated databases/redis to 6.0.7 [adam 2020-09-08]
+	Updated sysutils/ansible to 2.9.13 [adam 2020-09-08]
+	Updated security/libgpg-error to 1.39 [adam 2020-09-08]
+	Updated devel/memcached to 1.6.7 [adam 2020-09-08]
