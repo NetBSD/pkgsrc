@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5064 2020/09/08 12:42:17 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5065 2020/09/08 12:43:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7658,3 +7658,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed editors/p5-Wx-Scintilla [wiz 2020-09-08]
 	Updated security/p5-Crypt-SSLeay to 0.72nb9 [wiz 2020-09-08]
 	Updated net/p5-Net-Gnats to 0.22nb4 [wiz 2020-09-08]
+	Removed devel/p5-ExtUtils-MakeMaker-Coverage [wiz 2020-09-08]
