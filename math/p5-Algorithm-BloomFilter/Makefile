@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:10:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/08 13:09:58 wiz Exp $
 
 DISTNAME=	Algorithm-BloomFilter-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/
+HOMEPAGE=	https://metacpan.org/pod/Algorithm::BloomFilter
 COMMENT=	Simple bloom filter data structure
 LICENSE=	${PERL5_LICENSE}
 

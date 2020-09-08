@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/02 23:42:06 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/08 13:09:56 wiz Exp $
 
 DISTNAME=	Test-Alien-CPP-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/
+HOMEPAGE=	https://metacpan.org/pod/Test::Alien::CPP
 COMMENT=	Testing tools for Alien modules for projects that use C++
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/09/04 13:45:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/09/08 13:09:56 wiz Exp $
 
 DISTNAME=	Term-Table-0.015
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/E/EX/EXODIST/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/E/EX/EXODIST/
+HOMEPAGE=	https://metacpan.org/pod/Term::Table
 COMMENT=	Format a header and rows into a table
 LICENSE=	${PERL5_LICENSE}
 

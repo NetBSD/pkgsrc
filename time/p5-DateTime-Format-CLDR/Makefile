@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/08/31 18:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/09/08 13:09:59 wiz Exp $
 
 DISTNAME=	DateTime-Format-CLDR-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	time perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MA/MAROS/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MA/MAROS/
+HOMEPAGE=	https://metacpan.org/pod/DateTime::Format::CLDR
 COMMENT=	Parse and format CLDR, Common Locale Date Repository, time patterns
 LICENSE=	${PERL5_LICENSE}
 

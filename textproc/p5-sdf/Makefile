@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2020/08/31 18:12:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/08 13:09:59 wiz Exp $
 
 DISTNAME=	sdf-2.001
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	textproc perl5
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/I/IA/IANC/
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/I/IA/IANC/
+HOMEPAGE=	https://metacpan.org/source/IANC/sdf-2.001beta1
 COMMENT=	Simple Document Format to generate multiple output formats
 LICENSE=	2-clause-bsd
 
