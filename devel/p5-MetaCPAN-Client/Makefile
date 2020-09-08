@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/09/07 07:05:04 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/09/08 11:45:23 wiz Exp $
 
 DISTNAME=	MetaCPAN-Client-2.028000
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MI/MICKEY/
 
@@ -33,6 +34,7 @@ TEST_DEPENDS+=	p5-Ref-Util-[0-9]*:../../devel/p5-Ref-Util
 
 PERL5_PACKLIST=		auto/MetaCPAN/Client/.packlist
 USE_LANGUAGES=		# none
+REPLACE_PERL+=		fav.pl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
