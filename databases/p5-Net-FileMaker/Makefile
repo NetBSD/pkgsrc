@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2020/09/08 13:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/09/08 13:16:34 wiz Exp $
 
 DISTNAME=	Net-FileMaker-0.064
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	databases perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SQ/SQUEEK/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SQ/SQUEEK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Net::FileMaker

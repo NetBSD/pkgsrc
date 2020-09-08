@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/09/08 13:16:42 wiz Exp $
 
 DISTNAME=	XML-RPC-1.1
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	perl5 net
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/C/CA/CAVAC/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CA/CAVAC/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/XML-RPC
