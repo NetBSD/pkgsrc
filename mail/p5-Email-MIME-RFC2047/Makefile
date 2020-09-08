@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2020/09/08 13:09:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/09/08 13:16:41 wiz Exp $
 
 DISTNAME=	Email-MIME-RFC2047-0.97
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	mail
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/N/NW/NWELLNHOF/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NW/NWELLNHOF/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Email::MIME::RFC2047

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2020/08/31 18:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/09/08 13:16:41 wiz Exp $
 #
 
 DISTNAME=	mailsort-1.26
 PKGREVISION=	7
 CATEGORIES=	mail
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/A/AZ/AZS/mailsort/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AZ/AZS/mailsort/}
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://metacpan.org/release/AZS/mailsort-1.26
