@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.217 2020/08/31 18:09:40 wiz Exp $
+# $NetBSD: Makefile,v 1.218 2020/09/08 13:25:14 ryoon Exp $
 
-DISTNAME=	inkscape-1.0
-PKGREVISION=	7
+DISTNAME=	inkscape-1.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,7 @@ HOMEPAGE=	https://www.inkscape.org/
 COMMENT=	Scalable Vector Graphics (SVG) editor
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/inkscape-1.0_2020-05-01_4035a4fb49
+WRKSRC=		${WRKDIR}/inkscape-1.0.1_2020-09-07_3bc2e813f5
 
 .if !exists(/usr/bin/iconv)
 BUILD_DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
