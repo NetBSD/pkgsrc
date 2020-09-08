@@ -1,8 +1,0 @@
-This module is a namespace placeholder for a future high level perl-oriented
-interface to libcurl. Currently, you need to use the direct libcurl 'easy'
-interface, by using the 'WWW::Curl::easy' module.
-
-The perl module WWW::Curl::easy provides an interface to the cURL library
-"libcurl".
-
-See http://curl.haxx.se/ for more information on cURL and libcurl.
