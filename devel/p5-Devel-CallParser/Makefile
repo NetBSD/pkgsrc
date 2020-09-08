@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/08/31 18:07:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/08 13:09:53 wiz Exp $
 
 DISTNAME=	Devel-CallParser-0.002
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/
+HOMEPAGE=	https://metacpan.org/pod/Devel::CallParser
 COMMENT=	Custom parsing attached to subroutines
 LICENSE=	${PERL5_LICENSE}
 

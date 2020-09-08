@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:10:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/09/08 13:09:58 wiz Exp $
 
 DISTNAME=	Email-MIME-RFC2047-0.97
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/N/NW/NWELLNHOF/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/N/NW/NWELLNHOF/
+HOMEPAGE=	https://metacpan.org/pod/Email::MIME::RFC2047
 COMMENT=	Encoding of non-ASCII MIME headers
 LICENSE=	${PERL5_LICENSE}
 

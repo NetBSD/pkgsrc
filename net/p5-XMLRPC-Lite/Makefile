@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/09/08 13:09:58 wiz Exp $
 
 DISTNAME=	XMLRPC-Lite-0.717
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PH/PHRED/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/P/PH/PHRED/
+HOMEPAGE=	https://metacpan.org/pod/XMLRPC::Lite
 COMMENT=	Client and server implementation of XML-RPC protocol
 LICENSE=	${PERL5_LICENSE}
 
