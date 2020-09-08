@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2020/08/31 23:07:01 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2020/09/08 17:38:42 adam Exp $
 
-DISTNAME=	ipython-7.17.0
+DISTNAME=	ipython-7.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-backcall-[0-9]*:../../devel/py-backcall
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-jedi>=0.10:../../editors/py-jedi
+DEPENDS+=	${PYPKGPREFIX}-jedi>=0.16:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.1:../../devel/py-prompt_toolkit2
