@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2020/09/08 12:42:08 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/09/08 13:16:42 wiz Exp $
 
 DISTNAME=	Net-Gnats-0.22
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	net perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RI/RICHE/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RI/RICHE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Net-Gnats

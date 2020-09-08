@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2020/09/08 13:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/09/08 13:16:40 wiz Exp $
 
 DISTNAME=	Test-Requires-Git-1.008
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	devel
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/B/BO/BOOK/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BO/BOOK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Test::Requires::Git
