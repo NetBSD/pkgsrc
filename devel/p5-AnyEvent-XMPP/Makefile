@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/09/04 12:05:14 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/09/08 13:09:53 wiz Exp $
 
 DISTNAME=	AnyEvent-XMPP-0.55
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MS/MSTPLBG/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/E/EL/ELMEX/
+HOMEPAGE=	https://metacpan.org/pod/AnyEvent::XMPP
 COMMENT=	Implementation of the XMPP Protocol
 LICENSE=	${PERL5_LICENSE}
 

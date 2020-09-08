@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/08/31 18:12:39 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2020/09/08 13:10:00 wiz Exp $
 
 DISTNAME=	CGI-Application-Plugin-Session-1.05
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/F/FR/FREW/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/F/FR/FREW/
+HOMEPAGE=	https://metacpan.org/pod/CGI::Application::Plugin::Session
 COMMENT=	Add CGI::Session support to CGI::Application
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/08/31 18:08:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/08 13:09:56 wiz Exp $
 
 DISTNAME=	Test-CPAN-Meta-JSON-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/B/BA/BARBIE/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/B/BA/BARBIE/
+HOMEPAGE=	https://metacpan.org/pod/Test::CPAN::Meta::JSON
 COMMENT=	Validate a META.json file within a CPAN distribution
 LICENSE=	artistic-2.0
 

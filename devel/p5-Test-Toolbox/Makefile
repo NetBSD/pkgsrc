@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:09:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/08 13:09:57 wiz Exp $
 
 DISTNAME=	Test-Toolbox-0.4
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIKO/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MI/MIKO/
+HOMEPAGE=	https://metacpan.org/pod/distribution/Test-Toolbox/lib/Test/Toolbox.pod
 COMMENT=	Test::Toolbox - tools for testing
 LICENSE=	${PERL5_LICENSE}
 

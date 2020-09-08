@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/09/08 13:09:56 wiz Exp $
 
 DISTNAME=	Test-DependentModules-0.27
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/
+HOMEPAGE=	https://metacpan.org/pod/Test::DependentModules
 COMMENT=	Test all modules which depend on your module
 LICENSE=	artistic-2.0
 

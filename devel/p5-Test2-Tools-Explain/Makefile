@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/08/31 18:09:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/08 13:09:57 wiz Exp $
 
 DISTNAME=	Test2-Tools-Explain-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/
+HOMEPAGE=	https://metacpan.org/pod/Test2::Tools::Explain
 COMMENT=	Explain tools for Perl's Test2 framework
 LICENSE=	artistic-2.0
 

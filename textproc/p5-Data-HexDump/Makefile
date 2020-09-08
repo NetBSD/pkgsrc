@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:11:46 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2020/09/08 13:09:59 wiz Exp $
 
 DISTNAME=	Data-HexDump-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/F/FT/FTASSIN/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/F/FT/FTASSIN/
+HOMEPAGE=	https://metacpan.org/pod/Data::HexDump
 COMMENT=	Hexadecial Dumper
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:11:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/08 13:09:58 wiz Exp $
 
 DISTNAME=	Data-Password-passwdqc-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SH/SHERWIN/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/S/SH/SHERWIN/
+HOMEPAGE=	https://metacpan.org/pod/Data::Password::passwdqc
 COMMENT=	Perl5 check password strength and generate password using passwdqc
 LICENSE=	${PERL5_LICENSE}
 

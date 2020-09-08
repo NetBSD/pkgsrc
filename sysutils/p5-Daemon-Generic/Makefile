@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:11:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/09/08 13:09:59 wiz Exp $
 
 DISTNAME=	Daemon-Generic-0.85
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MU/MUIR/modules/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MU/MUIR/modules/
+HOMEPAGE=	https://metacpan.org/pod/Daemon::Generic
 COMMENT=	Framework to provide start/stop/reload for a daemon
 LICENSE=	${PERL5_LICENSE}
 
