@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/08/31 18:08:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/08 13:09:54 wiz Exp $
 
 DISTNAME=	IO-Event-0.813
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MU/MUIR/modules/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MU/MUIR/modules/
+HOMEPAGE=	https://metacpan.org/release/IO-Event
 COMMENT=	Tied Filehandles for Nonblocking IO with Object Callbacks
 LICENSE=	${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/08/31 18:09:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/09/08 13:09:57 wiz Exp $
 
 DISTNAME=	Test-Requires-Git-1.008
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/B/BO/BOOK/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/B/BO/BOOK/
+HOMEPAGE=	https://metacpan.org/pod/Test::Requires::Git
 COMMENT=	Check your test requirements against the available version of Git
 LICENSE=	${PERL5_LICENSE}
 
