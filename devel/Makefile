@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3235 2020/09/07 20:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3236 2020/09/08 11:41:04 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1292,7 +1292,6 @@ SUBDIR+=	p5-Debug-Client
 SUBDIR+=	p5-Debug-ShowStuff
 SUBDIR+=	p5-Declare-Constraints-Simple
 SUBDIR+=	p5-Devel-Autoflush
-SUBDIR+=	p5-Devel-BeginLift
 SUBDIR+=	p5-Devel-CallChecker
 SUBDIR+=	p5-Devel-CallParser
 SUBDIR+=	p5-Devel-Caller
