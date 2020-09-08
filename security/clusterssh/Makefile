@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2020/09/08 13:09:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/09/08 13:16:43 wiz Exp $
 
 DISTNAME=	App-ClusterSSH-4.03_06
 PKGNAME=	p5-${DISTNAME:S/_/./}
 PKGREVISION=	5
 CATEGORIES=	security
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DU/DUNCS/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DU/DUNCS/}
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/App::ClusterSSH

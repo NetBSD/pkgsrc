@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2020/09/08 13:09:58 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/09/08 13:16:43 wiz Exp $
 
 DISTNAME=	CryptX-0.069
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIK/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/CryptX
