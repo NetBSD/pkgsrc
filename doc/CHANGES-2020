@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5062 2020/09/08 12:11:36 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5063 2020/09/08 12:19:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7656,3 +7656,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed finance/moneyguru [wiz 2020-09-08]
 	Removed www/p5-WWW-Curl [wiz 2020-09-08]
 	Removed editors/p5-Wx-Scintilla [wiz 2020-09-08]
+	Updated security/p5-Crypt-SSLeay to 0.72nb9 [wiz 2020-09-08]
