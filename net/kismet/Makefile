@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2020/08/31 18:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2020/09/08 21:28:34 wiz Exp $
 
 DISTNAME=		kismet-2008-05-R1
 PKGNAME=		kismet-2008.05.01
@@ -19,9 +19,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 REPLACE_PERL+=		scripts/gpsmap-helper-earthamaps
 LIBS.NetBSD+=		-lm
 
-# might be appended to in options.mk
-PLIST_SRC=		PLIST
-
 .include "../../mk/bsd.prefs.mk"
 
 KISMET_USER?=			kismet
@@ -38,11 +35,11 @@ PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/ap_manuf ${PKG_SYSCONFDIR}/ap_manuf
 CONF_FILES+=		${EGDIR}/client_manuf ${PKG_SYSCONFDIR}/client_manuf
-CONF_FILES+=		${EGDIR}/kismet.conf.default		\
+CONF_FILES+=		${EGDIR}/kismet.conf.default \
 				${PKG_SYSCONFDIR}/kismet.conf
 CONF_FILES+=		${EGDIR}/kismet_drone.conf.default	\
 				${PKG_SYSCONFDIR}/kismet_drone.conf
-CONF_FILES+=		${EGDIR}/kismet_ui.conf.default		\
+CONF_FILES+=		${EGDIR}/kismet_ui.conf.default \
 				${PKG_SYSCONFDIR}/kismet_ui.conf
 OWN_DIRS_PERMS+=	${VARBASE}/log/kismet ${KISMET_USER} ${KISMET_GROUP} 0700
 
@@ -63,8 +60,6 @@ post-install:
 	    ${DESTDIR}${EGDIR}/kismet_drone.conf.default
 	${INSTALL_DATA} ${WRKSRC}/conf/kismet_ui.conf		\
 	    ${DESTDIR}${EGDIR}/kismet_ui.conf.default
-
-.include "options.mk"
 
 .if exists(/usr/include/net/bpf.h)
 CFLAGS+=	-DHAVE_NET_BPF_H
