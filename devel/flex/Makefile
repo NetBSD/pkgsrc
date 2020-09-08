@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2017/10/20 06:22:24 triaxx Exp $
+# $NetBSD: Makefile,v 1.62 2020/09/08 11:21:17 jperkin Exp $
 
 DISTNAME=	flex-2.6.4
 CATEGORIES=	devel lang
@@ -12,9 +12,10 @@ LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gm4:run	makeinfo gettext
+USE_TOOLS+=		gm4:run	gmake makeinfo gettext
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 
@@ -34,13 +35,6 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_func_reallocarray=no
 
 # https://github.com/westes/flex/issues/241
 CFLAGS.Linux+=		-D_GNU_SOURCE
-
-#.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		bash:build
-REPLACE_BASH=		tests/testwrapper.sh tests/options.cn
-USE_TOOLS+=		gmake	# bmake has problems with the test suite
-#.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
