@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5086 2020/09/09 12:40:29 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5087 2020/09/09 12:46:03 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7690,3 +7690,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/fontforge to 20200314 [wiz 2020-09-09]
 	Updated chat/znc to 1.8.2 [ryoon 2020-09-09]
 	Added net/phetch version 1.0.3 [pin 2020-09-09]
+	Updated multimedia/adobe-flash-player to 32.0.0.433 [tsutsui 2020-09-09]
