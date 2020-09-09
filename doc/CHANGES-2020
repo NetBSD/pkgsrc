@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5075 2020/09/09 07:08:12 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5076 2020/09/09 07:25:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7678,3 +7678,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-composer to 1.10.11 [tpaul 2020-09-09]
 	Updated devel/blosc to 1.20.1 [adam 2020-09-09]
 	Updated lang/nodejs to 14.10.0 [adam 2020-09-09]
+	Updated fonts/cascadia-ttf to 2008.25 [wiz 2020-09-09]
