@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5084 2020/09/09 10:32:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5085 2020/09/09 11:04:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7688,3 +7688,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libspiro to 1.1.0.20200505 [wiz 2020-09-09]
 	Updated www/kore to 4.0.1 [fcambus 2020-09-09]
 	Updated fonts/fontforge to 20200314 [wiz 2020-09-09]
+	Updated chat/znc to 1.8.2 [ryoon 2020-09-09]
