@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5088 2020/09/09 13:03:56 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5089 2020/09/09 13:27:27 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7692,3 +7692,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/phetch version 1.0.3 [pin 2020-09-09]
 	Updated multimedia/adobe-flash-player to 32.0.0.433 [tsutsui 2020-09-09]
 	Updated graphics/krita to 4.3.0nb4 [ryoon 2020-09-09]
+	Updated chat/ircd-hybrid to 8.2.33 [fox 2020-09-09]
