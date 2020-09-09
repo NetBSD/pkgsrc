@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2020/09/03 11:32:57 leot Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/09/09 08:16:31 leot Exp $
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
-${PLIST.py2x}${PYSITELIB}/${EGG_FILE}
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pycurl.so
 share/doc/pycurl${PYVERSSUFFIX}/AUTHORS
 share/doc/pycurl${PYVERSSUFFIX}/COPYING-LGPL
