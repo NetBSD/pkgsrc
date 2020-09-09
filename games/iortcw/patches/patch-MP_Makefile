@@ -1,10 +1,40 @@
-$NetBSD: patch-MP_Makefile,v 1.1 2019/11/17 17:56:48 nia Exp $
+$NetBSD: patch-MP_Makefile,v 1.2 2020/09/09 11:22:27 nia Exp $
 
-Always call it x86_64 regardless of operating system.
+Pass through ARCH_STRING properly on *BSD.
 
 --- MP/Makefile.orig	2019-03-16 18:09:48.000000000 +0000
 +++ MP/Makefile
-@@ -761,7 +761,6 @@ ifneq (,$(findstring "$(PLATFORM)", "fre
+@@ -8,8 +8,8 @@ COMPILE_PLATFORM=$(shell uname | sed -e 
+ COMPILE_ARCH=$(shell uname -m | sed -e 's/i.86/x86/' | sed -e 's/^arm.*/arm/')
+ ARM_VER_CHECK=$(shell uname -m)
+ 
+-ifeq ($(COMPILE_PLATFORM),sunos)
+-  # Solaris uname and GNU uname differ
++ifneq (,$(findstring "$(COMPILE_PLATFORM)", "sunos" "netbsd"))
++  # Solaris/NetBSD uname and GNU uname differ
+   COMPILE_ARCH=$(shell uname -p | sed -e 's/i.86/x86/')
+ endif
+ 
+@@ -369,7 +369,7 @@ MKDIR=mkdir -p
+ EXTRA_FILES=
+ CLIENT_EXTRA_FILES=
+ 
+-ifneq (,$(findstring "$(COMPILE_PLATFORM)", "linux" "gnu_kfreebsd" "kfreebsd-gnu" "gnu"))
++ifneq (,$(findstring "$(COMPILE_PLATFORM)", "linux" "bsd" "gnu"))
+   TOOLS_CFLAGS += -DARCH_STRING=\"$(COMPILE_ARCH)\"
+ endif
+ 
+@@ -752,7 +752,8 @@ else # ifdef MINGW
+ ifneq (,$(findstring "$(PLATFORM)", "freebsd" "openbsd" "netbsd"))
+ 
+   BASE_CFLAGS = -Wall -fno-strict-aliasing \
+-    -pipe -DUSE_ICON -DMAP_ANONYMOUS=MAP_ANON
++    -pipe -DUSE_ICON -DMAP_ANONYMOUS=MAP_ANON \
++    -DARCH_STRING=\\\"$(FILE_ARCH)\\\"
+   CLIENT_CFLAGS += $(SDL_CFLAGS)
+ 
+   OPTIMIZEVM = -O3
+@@ -761,7 +762,6 @@ ifneq (,$(findstring "$(PLATFORM)", "fre
    ifeq ($(ARCH),x86_64)
      OPTIMIZEVM = -O3
      OPTIMIZE = $(OPTIMIZEVM) -ffast-math
