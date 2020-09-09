@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5082 2020/09/09 08:44:55 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5083 2020/09/09 09:19:47 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7686,3 +7686,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libuninameslist to 20200413 [wiz 2020-09-09]
 	Updated www/ruby-rouge to 3.23.0 [fcambus 2020-09-09]
 	Updated graphics/libspiro to 1.1.0.20200505 [wiz 2020-09-09]
+	Updated www/kore to 4.0.1 [fcambus 2020-09-09]
