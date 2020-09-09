@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1344 2020/09/01 14:13:57 taca Exp $
+# $NetBSD: Makefile,v 1.1345 2020/09/09 12:39:51 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -610,6 +610,7 @@ SUBDIR+=	pear-SOAP
 SUBDIR+=	pen
 SUBDIR+=	perlbal
 SUBDIR+=	pfnet
+SUBDIR+=	phetch
 SUBDIR+=	php-baikal
 SUBDIR+=	php-ftp
 SUBDIR+=	php-geoip
