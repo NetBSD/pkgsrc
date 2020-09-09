@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5076 2020/09/09 07:25:26 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5077 2020/09/09 07:27:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7679,3 +7679,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/blosc to 1.20.1 [adam 2020-09-09]
 	Updated lang/nodejs to 14.10.0 [adam 2020-09-09]
 	Updated fonts/cascadia-ttf to 2008.25 [wiz 2020-09-09]
+	Updated devel/py-setuptools to 50.3.0 [adam 2020-09-09]
+	Updated devel/py-pip to 20.2.3 [adam 2020-09-09]
