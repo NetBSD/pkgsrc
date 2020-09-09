@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.71 2020/05/24 12:00:51 markd Exp $
+$NetBSD: distinfo,v 1.72 2020/09/09 10:32:08 wiz Exp $
 
-SHA1 (fontforge-20190801.tar.gz) = b0a248b8c7709550347a8d8cf6d2dbbb2e28d252
-RMD160 (fontforge-20190801.tar.gz) = 1b8e8ba52dc35034e250c0b2cd9c4acef01794f2
-SHA512 (fontforge-20190801.tar.gz) = 78f3e1e94e38e26dcf52c6a0e038753033dc47052b7492f0ac0aaf1b8962e4e4bbf07c2550ef6014ea7290a6429bf669acb0691735efe0aee368480b4b7e6236
-Size (fontforge-20190801.tar.gz) = 20766334 bytes
-SHA1 (patch-configure) = aef6f9b16cbde58d3ae691c79c0cb5011f8bb8af
+SHA1 (fontforge-20200314.tar.xz) = 63c13a6f1773b04f87342a2553e28be844401498
+RMD160 (fontforge-20200314.tar.xz) = c7368a53f6a5b6649f7bc18a957368006870b67b
+SHA512 (fontforge-20200314.tar.xz) = 09f5dc93f87ca63668d72d108690604489d6b3cec7eedff1c07ad6d1ce5eae442ab60e79e71ae8b99e9808f3551011788025a86ffc3a9738518d99761d849975
+Size (fontforge-20200314.tar.xz) = 13850076 bytes
 SHA1 (patch-fontforge_splinefont.h) = be7739b6145b3c622913efa9f2d679860c35cccb
-SHA1 (patch-po_Makefile.in) = 75990b7371e5ce525deba693c651dbd5222e558b
