@@ -1,10 +1,16 @@
-# $NetBSD: options.mk,v 1.10 2020/08/11 16:07:38 ryoon Exp $
+# $NetBSD: options.mk,v 1.11 2020/09/09 10:48:25 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+
+# "checking the installed JDK... configure: error: JDK is too old, you need at least 9"
+#
+# Only enable Java on platforms where OpenJDK>=9 is the default,
+# see mk/java-vm.mk
+.if !empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64)
 PKG_SUGGESTED_OPTIONS+=	java
 .endif
 
