@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/07/15 14:02:10 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/09/09 08:38:03 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -141,6 +141,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/php
 ${GEM_LIBDIR}/lib/rouge/demos/plaintext
 ${GEM_LIBDIR}/lib/rouge/demos/plist
 ${GEM_LIBDIR}/lib/rouge/demos/pony
+${GEM_LIBDIR}/lib/rouge/demos/postscript
 ${GEM_LIBDIR}/lib/rouge/demos/powershell
 ${GEM_LIBDIR}/lib/rouge/demos/praat
 ${GEM_LIBDIR}/lib/rouge/demos/prolog
@@ -178,6 +179,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/sql
 ${GEM_LIBDIR}/lib/rouge/demos/ssh
 ${GEM_LIBDIR}/lib/rouge/demos/supercollider
 ${GEM_LIBDIR}/lib/rouge/demos/swift
+${GEM_LIBDIR}/lib/rouge/demos/systemd
 ${GEM_LIBDIR}/lib/rouge/demos/tap
 ${GEM_LIBDIR}/lib/rouge/demos/tcl
 ${GEM_LIBDIR}/lib/rouge/demos/terraform
@@ -372,6 +374,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/php/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/plain_text.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/plist.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/pony.rb
+${GEM_LIBDIR}/lib/rouge/lexers/postscript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/powershell.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/praat.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/prolog.rb
@@ -411,6 +414,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/sql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ssh.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/supercollider.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/swift.rb
+${GEM_LIBDIR}/lib/rouge/lexers/systemd.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/tap.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/tcl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/terraform.rb
