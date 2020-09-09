@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20065 2020/09/09 07:39:51 wiz Exp $
+$NetBSD: TODO,v 1.20066 2020/09/09 07:41:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -775,7 +775,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libressl-3.2.0
 	o libspiro-1.1.0.20200505
 	o libtecla-1.6.3
-	o libuninameslist-20200413
 	o libv4l-1.20.0
 	o libvirt-2.3
 	o libwnck3-3.32.0

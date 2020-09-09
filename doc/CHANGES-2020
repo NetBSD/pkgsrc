@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5079 2020/09/09 07:39:51 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5080 2020/09/09 07:41:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7683,3 +7683,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pip to 20.2.3 [adam 2020-09-09]
 	Updated security/p11-kit to 0.23.21 [wiz 2020-09-09]
 	Updated audio/strawberry to 0.7.2 [wiz 2020-09-09]
+	Updated textproc/libuninameslist to 20200413 [wiz 2020-09-09]
