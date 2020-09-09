@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5089 2020/09/09 13:27:27 fox Exp $
+$NetBSD: CHANGES-2020,v 1.5090 2020/09/09 15:07:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7693,3 +7693,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/adobe-flash-player to 32.0.0.433 [tsutsui 2020-09-09]
 	Updated graphics/krita to 4.3.0nb4 [ryoon 2020-09-09]
 	Updated chat/ircd-hybrid to 8.2.33 [fox 2020-09-09]
+	Updated databases/openldap to 2.4.53 [adam 2020-09-09]
+	Updated devel/py-typing-extensions to 3.7.4.3 [adam 2020-09-09]
