@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5077 2020/09/09 07:27:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5078 2020/09/09 07:29:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7681,3 +7681,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/cascadia-ttf to 2008.25 [wiz 2020-09-09]
 	Updated devel/py-setuptools to 50.3.0 [adam 2020-09-09]
 	Updated devel/py-pip to 20.2.3 [adam 2020-09-09]
+	Updated security/p11-kit to 0.23.21 [wiz 2020-09-09]
