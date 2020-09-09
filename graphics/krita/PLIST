@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/19 15:11:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/09/09 13:03:20 ryoon Exp $
 bin/krita
 lib/kritaplugins/krita_colorspaces_extensions.so
 lib/kritaplugins/krita_flaketools.so
@@ -57,6 +57,8 @@ lib/kritaplugins/kritagridpaintop.so
 lib/kritaplugins/kritahairypaintop.so
 lib/kritaplugins/kritahalftone.so
 lib/kritaplugins/kritahatchingpaintop.so
+lib/kritaplugins/kritaheifexport.so
+lib/kritaplugins/kritaheifimport.so
 lib/kritaplugins/kritaheightmapexport.so
 lib/kritaplugins/kritaheightmapimport.so
 lib/kritaplugins/kritahistogramdocker.so
@@ -256,6 +258,7 @@ share/applications/krita_brush.desktop
 share/applications/krita_csv.desktop
 share/applications/krita_exr.desktop
 share/applications/krita_gif.desktop
+share/applications/krita_heif.desktop
 share/applications/krita_heightmap.desktop
 share/applications/krita_jp2.desktop
 share/applications/krita_jpeg.desktop

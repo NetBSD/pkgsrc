@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2020/08/31 18:09:41 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2020/09/09 13:03:20 ryoon Exp $
 
 DISTNAME=		krita-4.3.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics misc kde
 MASTER_SITES=		${MASTER_SITE_KDE:=krita/${PKGVERSION_NOREV}/}
 
@@ -64,6 +64,7 @@ BUILDLINK_API_DEPENDS.boost-header+=	boost-headers>=1.73.0nb1
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
+.include "../../graphics/libheif/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
