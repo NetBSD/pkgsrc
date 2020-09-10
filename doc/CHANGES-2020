@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5111 2020/09/10 16:36:33 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5112 2020/09/10 16:38:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7745,3 +7745,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.34 [fox 2020-09-10]
 	Removed devel/ruby-railties51 [taca 2020-09-10]
 	Removed mail/ruby-actionmailer51 [taca 2020-09-10]
+	Removed databases/ruby-activerecord51 [taca 2020-09-10]
