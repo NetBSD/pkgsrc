@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/03/15 23:35:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/09/10 09:27:26 adam Exp $
 bin/pydisassemble-${PYVERSSUFFIX}
 bin/uncompyle6-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -122,6 +122,12 @@ ${PYSITELIB}/uncompyle6/parsers/reducecheck/and_check.pyo
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/and_not_check.py
 ${PLIST.py3x}${PYSITELIB}/uncompyle6/parsers/reducecheck/and_not_check.pyc
 ${PLIST.py3x}${PYSITELIB}/uncompyle6/parsers/reducecheck/and_not_check.pyo
+${PYSITELIB}/uncompyle6/parsers/reducecheck/aug_assign.py
+${PYSITELIB}/uncompyle6/parsers/reducecheck/aug_assign.pyc
+${PYSITELIB}/uncompyle6/parsers/reducecheck/aug_assign.pyo
+${PYSITELIB}/uncompyle6/parsers/reducecheck/except_handler.py
+${PYSITELIB}/uncompyle6/parsers/reducecheck/except_handler.pyc
+${PYSITELIB}/uncompyle6/parsers/reducecheck/except_handler.pyo
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/except_handler_else.py
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/except_handler_else.pyc
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/except_handler_else.pyo
