@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5098 2020/09/10 11:26:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5099 2020/09/10 13:03:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7710,3 +7710,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-supervisor to 4.2.1 [adam 2020-09-10]
 	Updated fonts/py-fonttools to 4.14.0 [adam 2020-09-10]
 	Added sysutils/wmbattery version 2.54 [nia 2020-09-10]
+	Updated net/syncthing to 1.8.0 [gdt 2020-09-10]
