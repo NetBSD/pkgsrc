@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/10 11:26:01 nia Exp $
+bin/wmbattery
+man/man1/wmbattery.1
+share/icons/wmbattery/battery_blink.xpm
+share/icons/wmbattery/battery_high.xpm
+share/icons/wmbattery/battery_low.xpm
+share/icons/wmbattery/battery_medium.xpm
+share/icons/wmbattery/battery_none.xpm
+share/icons/wmbattery/bigfont.xpm
+share/icons/wmbattery/charging.xpm
+share/icons/wmbattery/dial_bright.xpm
+share/icons/wmbattery/dial_dim.xpm
+share/icons/wmbattery/face.xpm
+share/icons/wmbattery/nocharging.xpm
+share/icons/wmbattery/plugged.xpm
+share/icons/wmbattery/smallfont.xpm
+share/icons/wmbattery/unplugged.xpm
