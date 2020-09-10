@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/06/20 16:21:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/09/10 09:25:02 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -42,6 +42,9 @@ ${PYSITELIB}/xdis/codetype/code38.pyo
 ${PYSITELIB}/xdis/cross_dis.py
 ${PYSITELIB}/xdis/cross_dis.pyc
 ${PYSITELIB}/xdis/cross_dis.pyo
+${PYSITELIB}/xdis/disasm.py
+${PYSITELIB}/xdis/disasm.pyc
+${PYSITELIB}/xdis/disasm.pyo
 ${PYSITELIB}/xdis/dropbox/__init__.py
 ${PYSITELIB}/xdis/dropbox/__init__.pyc
 ${PYSITELIB}/xdis/dropbox/__init__.pyo
@@ -60,9 +63,6 @@ ${PYSITELIB}/xdis/load.pyo
 ${PYSITELIB}/xdis/magics.py
 ${PYSITELIB}/xdis/magics.pyc
 ${PYSITELIB}/xdis/magics.pyo
-${PYSITELIB}/xdis/main.py
-${PYSITELIB}/xdis/main.pyc
-${PYSITELIB}/xdis/main.pyo
 ${PYSITELIB}/xdis/marsh.py
 ${PYSITELIB}/xdis/marsh.pyc
 ${PYSITELIB}/xdis/marsh.pyo
