@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2020/09/04 10:15:17 nia Exp $
+# $NetBSD: Makefile,v 1.251 2020/09/10 02:39:01 jnemeth Exp $
 #
 
 COMMENT=	Communication programs
@@ -74,6 +74,7 @@ SUBDIR+=	libtelepathy
 SUBDIR+=	libtlen
 SUBDIR+=	loudmouth
 SUBDIR+=	lurch-purple
+SUBDIR+=	matrix-synapse
 SUBDIR+=	matterircd
 SUBDIR+=	mcabber
 SUBDIR+=	meanwhile
