@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/05/27 14:56:16 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/09/10 10:24:30 adam Exp $
 
-SHA1 (supervisor-4.2.0.tar.gz) = f4f409c33771b1ac9954b3fd2d4ad092575b9f47
-RMD160 (supervisor-4.2.0.tar.gz) = c3938f714bc9aef35c94274d52d741297c1937b3
-SHA512 (supervisor-4.2.0.tar.gz) = 626d806f4b03be7cbff795afd1bdb3ff5ca5ecf44f035909ea1aa9360da9fa3047b2fe05543190bf1442f01dcdd403be19fcd907519bf7e26615900bc4bf9d0f
-Size (supervisor-4.2.0.tar.gz) = 456056 bytes
+SHA1 (supervisor-4.2.1.tar.gz) = 39df05359470b617120dbe13cfa8f762e21b4b54
+RMD160 (supervisor-4.2.1.tar.gz) = 9f2048cb324a1a8613d43d926aab846eef54642e
+SHA512 (supervisor-4.2.1.tar.gz) = c560ef959f8d580fb20c1812aa2a838c9feaeb3726a754e8084fa8c7406ff9258139b55b081558b8d8f33e4672cdfad40695170f55412a5e85a6c1aed0f11657
+Size (supervisor-4.2.1.tar.gz) = 460935 bytes
