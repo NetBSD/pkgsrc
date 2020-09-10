@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5101 2020/09/10 14:31:30 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5102 2020/09/10 15:00:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7735,3 +7735,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-activestorage60 to 6.0.3.3 [taca 2020-09-10]
 	Updated textproc/ruby-actiontext60 to 6.0.3.3 [taca 2020-09-10]
 	Updated www/ruby-rails60 to 6.0.3.3 [taca 2020-09-10]
+	Added devel/py-smmap version 3.0.4 [taca 2020-09-10]
