@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5092 2020/09/10 07:41:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5093 2020/09/10 09:27:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7697,3 +7697,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-typing-extensions to 3.7.4.3 [adam 2020-09-09]
 	Updated x11/xfce4-notifyd to 0.6.2 [gutteridge 2020-09-10]
 	Added www/lua-web-sanitize version 1.0.0 [nia 2020-09-10]
+	Updated databases/py-sqlalchemy to 1.3.19 [adam 2020-09-10]
+	Updated net/py-smb to 1.2.2 [adam 2020-09-10]
+	Updated devel/py-xdis to 5.0.4 [adam 2020-09-10]
+	Updated lang/py-uncompyle6 to 3.7.4 [adam 2020-09-10]
