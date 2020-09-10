@@ -1,6 +1,6 @@
 This package contains high quality, free, readable fonts from Chrome OS
 that are width-compatible with some common Microsoft Office fonts:
 
-- Arimo (compatible with Arial)
-- Cousine (compatible with Courier New)
-- Tinos (compatible with Times New Roman)
+- Arimo (sans-serif; compatible with Arial)
+- Cousine (monospace; compatible with Courier New)
+- Tinos (serif; compatible with Times New Roman)
