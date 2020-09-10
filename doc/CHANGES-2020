@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5105 2020/09/10 15:12:27 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5106 2020/09/10 15:45:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7739,3 +7739,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-gitdb version 4.0.5 [taca 2020-09-10]
 	Added devel/py-gitpython version 3.1.8 [taca 2020-09-10]
 	Updated devel/transifex-client to 0.13.11 [taca 2020-09-10]
+	Updated meta-pkgs/bulk-large to 20200911 [taca 2020-09-10]
