@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5107 2020/09/10 16:29:03 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5108 2020/09/10 16:31:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7741,3 +7741,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/transifex-client to 0.13.11 [taca 2020-09-10]
 	Updated meta-pkgs/bulk-large to 20200911 [taca 2020-09-10]
 	Removed www/ruby-rails51 [taca 2020-09-10]
+	Removed www/ruby-coffee-rails4 [taca 2020-09-10]
