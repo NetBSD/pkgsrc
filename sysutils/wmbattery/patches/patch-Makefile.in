@@ -1,0 +1,29 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/09/10 11:26:01 nia Exp $
+
+Adds checks for USE_ENVSYS provided by configure.ac.
+
+--- Makefile.in.orig	2020-09-01 05:47:00.995267854 +0000
++++ Makefile.in
+@@ -21,6 +21,7 @@ LDFLAGS		= @LDFLAGS@
+ LIBS		= @LIBS@ @Xlib_LIBS@ @Xext_LIBS@ @libXpm_LIBS@
+ USE_HAL         = @USE_HAL@
+ USE_UPOWER      = @USE_UPOWER@
++USE_ENVSYS	= @USE_ENVSYS@
+ 
+ all: wmbattery
+ 
+@@ -80,6 +81,14 @@ upower.o: upower.c
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) -c upower.c -o upower.o
+ endif
+ 
++ifdef USE_ENVSYS
++CPPFLAGS += -DENVSYS
++LIBS += -lprop
++OBJS += envsys.o
++envsys.o: envsys.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c envsys.c -o envsys.o
++endif
++
+ wmbattery: $(OBJS)
+ 	$(CC) -o wmbattery $(LDFLAGS) $(OBJS) $(LIBS)
+ 
