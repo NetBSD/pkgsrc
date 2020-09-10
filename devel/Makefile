@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3238 2020/09/10 14:59:59 taca Exp $
+# $NetBSD: Makefile,v 1.3239 2020/09/10 15:03:17 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2279,6 +2279,7 @@ SUBDIR+=	py-game
 SUBDIR+=	py-gcovr
 SUBDIR+=	py-generate
 SUBDIR+=	py-gflags
+SUBDIR+=	py-gitdb
 SUBDIR+=	py-gitinspector
 SUBDIR+=	py-gitinspector-devel
 SUBDIR+=	py-gobject
