@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5109 2020/09/10 16:33:25 fox Exp $
+$NetBSD: CHANGES-2020,v 1.5110 2020/09/10 16:34:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7743,3 +7743,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed www/ruby-rails51 [taca 2020-09-10]
 	Removed www/ruby-coffee-rails4 [taca 2020-09-10]
 	Updated audio/fasttracker2 to 1.34 [fox 2020-09-10]
+	Removed devel/ruby-railties51 [taca 2020-09-10]
