@@ -1,4 +1,4 @@
-$NetBSD: patch-boost_process_detail_posix_handles.hpp,v 1.1 2020/09/09 06:38:52 tnn Exp $
+$NetBSD: patch-boost_process_detail_posix_handles.hpp,v 1.2 2020/09/10 07:54:52 tnn Exp $
 
 dirfd(3) on NetBSD is implemented as a macro and cannot use namespace prefix.
 
@@ -8,8 +8,8 @@ dirfd(3) on NetBSD is implemented as a macro and cannot use namespace prefix.
      else
          ec.clear();
  
-+#if defined(__NetBSD__)
-+    auto my_fd = (dir.get())->dd_fd;
++#ifdef dirfd
++    auto my_fd = dirfd(dir.get());
 +#else
      auto my_fd = ::dirfd(dir.get());
 +#endif
@@ -20,8 +20,8 @@ dirfd(3) on NetBSD is implemented as a macro and cannot use namespace prefix.
              return;
          }
  
-+#if defined(__NetBSD__)
-+        auto my_fd = (dir)->dd_fd;
++#ifdef dirfd
++        auto my_fd = dirfd(dir);
 +#else
          auto my_fd = ::dirfd(dir);
 +#endif
