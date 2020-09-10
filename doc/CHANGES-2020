@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5119 2020/09/10 16:56:10 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5120 2020/09/10 22:11:56 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7753,3 +7753,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/ruby-activemodel51 [taca 2020-09-10]
 	Removed devel/ruby-activesupport51 [taca 2020-09-10]
 	Removed databases/ruby-arel80 [taca 2020-09-10]
+	Updated security/vault to 1.5.3 [he 2020-09-10]
