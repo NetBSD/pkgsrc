@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/10 07:40:55 nia Exp $
+${LUA_LDIR}/web_sanitize.lua
+${LUA_LDIR}/web_sanitize/css.lua
+${LUA_LDIR}/web_sanitize/css_types.lua
+${LUA_LDIR}/web_sanitize/css_whitelist.lua
+${LUA_LDIR}/web_sanitize/data.lua
+${LUA_LDIR}/web_sanitize/html.lua
+${LUA_LDIR}/web_sanitize/init.lua
+${LUA_LDIR}/web_sanitize/query.lua
+${LUA_LDIR}/web_sanitize/query/parse_query.lua
+${LUA_LDIR}/web_sanitize/query/scan_html.lua
+${LUA_LDIR}/web_sanitize/whitelist.lua
