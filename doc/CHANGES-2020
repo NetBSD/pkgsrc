@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5090 2020/09/09 15:07:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5091 2020/09/10 00:35:15 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7695,3 +7695,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/ircd-hybrid to 8.2.33 [fox 2020-09-09]
 	Updated databases/openldap to 2.4.53 [adam 2020-09-09]
 	Updated devel/py-typing-extensions to 3.7.4.3 [adam 2020-09-09]
+	Updated x11/xfce4-notifyd to 0.6.2 [gutteridge 2020-09-10]
