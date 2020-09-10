@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2020/07/29 14:34:18 adam Exp $
+$NetBSD: distinfo,v 1.21 2020/09/10 10:07:00 adam Exp $
 
-SHA1 (Paste-3.4.3.tar.gz) = cbd3e42e9c2e5bc1f6159188275d48941b5c548a
-RMD160 (Paste-3.4.3.tar.gz) = 230019387a450ac2f92dd1effb3e3af63ae663e0
-SHA512 (Paste-3.4.3.tar.gz) = 0869a3330a74cc14f88fb5ce24183328ec38fed1fc5cd669b428f09ee2fcafc770e95c2f4dc8de86dfce4d66861bad26c9502cccb81966c519ca4593ada094b1
-Size (Paste-3.4.3.tar.gz) = 630569 bytes
+SHA1 (Paste-3.4.4.tar.gz) = d918a86cb77759d592c6191fcf142c4a676b725f
+RMD160 (Paste-3.4.4.tar.gz) = a14b97fdbeb0979cbe729b043acc42e4de77fb31
+SHA512 (Paste-3.4.4.tar.gz) = f977fa02b6800be27f703115b87987dcf8a1e4edd681f253b20fb363bfe625109b424ec6a0faba066e1d074f55a2ba336e17654f899b3100c9e3c3252d38b5a6
+Size (Paste-3.4.4.tar.gz) = 630575 bytes
