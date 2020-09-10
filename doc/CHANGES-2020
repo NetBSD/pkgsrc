@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5103 2020/09/10 15:03:37 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5104 2020/09/10 15:06:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7737,3 +7737,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rails60 to 6.0.3.3 [taca 2020-09-10]
 	Added devel/py-smmap version 3.0.4 [taca 2020-09-10]
 	Added devel/py-gitdb version 4.0.5 [taca 2020-09-10]
+	Added devel/py-gitpython version 3.1.8 [taca 2020-09-10]
