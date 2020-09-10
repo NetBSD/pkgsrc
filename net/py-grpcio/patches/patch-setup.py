@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.8 2020/08/07 06:45:58 adam Exp $
+$NetBSD: patch-setup.py,v 1.9 2020/09/10 07:18:33 adam Exp $
 
 Fix libatomic detection.
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2020-08-05 07:00:04.000000000 +0000
+--- setup.py.orig	2020-09-08 21:38:30.000000000 +0000
 +++ setup.py
-@@ -151,7 +151,7 @@ def check_linker_need_libatomic():
+@@ -166,7 +166,7 @@ def check_linker_need_libatomic():
      """Test if linker on system needs libatomic."""
      code_test = (b'#include <atomic>\n' +
                   b'int main() { return std::atomic<int64_t>{}; }')
@@ -14,9 +14,9 @@ Use dependencies in pkgsrc.
                                 stdin=PIPE,
                                 stdout=PIPE,
                                 stderr=PIPE)
-@@ -236,26 +236,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
-                                  RE2_INCLUDE + SSL_INCLUDE + UPB_INCLUDE +
-                                  UPB_GRPC_GENERATED_INCLUDE + ZLIB_INCLUDE)
+@@ -252,26 +252,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
+                                  UPB_GRPC_GENERATED_INCLUDE +
+                                  UPBDEFS_GRPC_GENERATED_INCLUDE + ZLIB_INCLUDE)
  
 -EXTENSION_LIBRARIES = ()
 -if "linux" in sys.platform:
@@ -40,9 +40,9 @@ Use dependencies in pkgsrc.
 -    EXTENSION_LIBRARIES += ('cares',)
 +EXTENSION_LIBRARIES = ('grpc',)
  
- DEFINE_MACROS = (('OPENSSL_NO_ASM', 1), ('_WIN32_WINNT', 0x600))
- if not DISABLE_LIBC_COMPATIBILITY:
-@@ -312,7 +293,7 @@ def cython_extensions_and_necessity():
+ DEFINE_MACROS = (('_WIN32_WINNT', 0x600),)
+ asm_files = []
+@@ -349,7 +330,7 @@ def cython_extensions_and_necessity():
      ]
      config = os.environ.get('CONFIG', 'opt')
      prefix = 'libs/' + config + '/'
@@ -51,11 +51,12 @@ Use dependencies in pkgsrc.
          extra_objects = [
              prefix + 'libares.a', prefix + 'libboringssl.a',
              prefix + 'libgpr.a', prefix + 'libgrpc.a'
-@@ -324,7 +305,7 @@ def cython_extensions_and_necessity():
+@@ -361,8 +342,7 @@ def cython_extensions_and_necessity():
      extensions = [
          _extension.Extension(
              name=module_name,
--            sources=[module_file] + list(CYTHON_HELPER_C_FILES) + core_c_files,
+-            sources=([module_file] + list(CYTHON_HELPER_C_FILES) +
+-                     core_c_files + asm_files),
 +            sources=[module_file] + list(CYTHON_HELPER_C_FILES),
              include_dirs=list(EXTENSION_INCLUDE_DIRECTORIES),
              libraries=list(EXTENSION_LIBRARIES),
