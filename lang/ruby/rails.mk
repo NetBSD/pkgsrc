@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.89 2020/09/10 14:30:02 taca Exp $
+# $NetBSD: rails.mk,v 1.90 2020/09/10 16:53:03 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_DEFAULT
 #	Select default Ruby on Rails version.
 #
-#	Possible values: 51 52 60
+#	Possible values: 52 60
 #	Default: 52
 #
 #
@@ -27,7 +27,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_ACCEPTED
 #	The Ruby on Rails versions that are acceptable for the package.
 #
-#	Possible values: 51 52 60
+#	Possible values: 52 60
 #	Default: (empty)
 #
 # RUBY_RAILS_STRICT_DEP
@@ -41,13 +41,12 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS
 #	Selected Ruby on Rails version.
 #
-#	Possible values: 51 52 60
+#	Possible values: 52 60
 #
 
 #
 # current Ruby on Rails versions.
 #
-RUBY_RAILS51_VERSION?=	5.1.7
 RUBY_RAILS52_VERSION?=	5.2.4.4
 RUBY_RAILS60_VERSION?=	6.0.3.3
 
@@ -56,7 +55,7 @@ RUBY_RAILS_DEFAULT?=	52
 
 RUBY_RAILS_STRICT_DEP?=	no
 
-RUBY_RAILS_SUPPORTED=	52 51 60
+RUBY_RAILS_SUPPORTED=	52 60
 
 .if empty(RUBY_RAILS_SUPPORTED:M${RUBY_RAILS_DEFAULT})
 .  error Unsupported RUBY_RAILS_DEFAULT: ${RUBY_RAILS_DEFAULT}
@@ -93,8 +92,6 @@ RUBY_RAILS?=	${RUBY_RAILS_SUPPORTED}
 RAILS_VERSION:=	${RUBY_RAILS60_VERSION}
 .elif ${RUBY_RAILS} == "52"
 RAILS_VERSION:=	${RUBY_RAILS52_VERSION}
-.elif ${RUBY_RAILS} == "51"
-RAILS_VERSION:=	${RUBY_RAILS51_VERSION}
 .endif
 
 #
@@ -129,10 +126,8 @@ RUBY_ACTIVESUPPORT_DEPENDS= \
 	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:../../devel/ruby-activesupport${RUBY_RAILS}
 RUBY_ACTIVEMODEL_DEPENDS= \
 	${RUBY_PKGPREFIX}-activemodel${_RAILS_DEP}:../../devel/ruby-activemodel${RUBY_RAILS}
-.if ${RUBY_RAILS} >= 51
 RUBY_ACTIONPACK_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionpack${_RAILS_DEP}:../../www/ruby-actionpack${RUBY_RAILS}
-.endif
 RUBY_ACTIVERECORD_DEPENDS= \
 	${RUBY_PKGPREFIX}-activerecord${_RAILS_DEP}:../../databases/ruby-activerecord${RUBY_RAILS}
 RUBY_ACTIONMAILER_DEPENDS= \
@@ -145,14 +140,10 @@ RUBY_ACTIONVIEW_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionview${_RAILS_DEP}:../../www/ruby-actionview${RUBY_RAILS}
 RUBY_ACTIVEJOB_DEPENDS= \
 	${RUBY_PKGPREFIX}-activejob${_RAILS_DEP}:../../devel/ruby-activejob${RUBY_RAILS}
-.if ${RUBY_RAILS} >= 51
 RUBY_ACTIONCABLE_DEPENDS= \
 	${RUBY_PKGPREFIX}-actioncable${_RAILS_DEP}:../../www/ruby-actioncable${RUBY_RAILS}
-.endif
-.if ${RUBY_RAILS} >= 51
 RUBY_ACTIVESTORAGE_DEPENDS= \
 	${RUBY_PKGPREFIX}-activestorage${_RAILS_DEP}:../../devel/ruby-activestorage${RUBY_RAILS}
-.endif
 .if ${RUBY_RAILS} >= 60
 RUBY_ACTIONMAILBOX_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionmailbox${_RAILS_DEP}:../../mail/ruby-actionmailbox${RUBY_RAILS}
