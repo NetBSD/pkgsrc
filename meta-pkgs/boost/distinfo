@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.132 2020/09/09 06:38:52 tnn Exp $
+$NetBSD: distinfo,v 1.133 2020/09/10 07:54:52 tnn Exp $
 
 SHA1 (boost_1_73_0.tar.bz2) = 6d6ed02b29c860fd21b274fc4e1f820855e765e9
 RMD160 (boost_1_73_0.tar.bz2) = 3cd711ac0f6ee60d63f5f77df4957beaa6e0bf3d
@@ -20,7 +20,7 @@ SHA1 (patch-boost_math_special__functions_expm1.hpp) = 724fbd40b3780da8af6ce10bb
 SHA1 (patch-boost_math_special__functions_log1p.hpp) = df6fd088da736a4640663b64841383432f1a1201
 SHA1 (patch-boost_math_tools_config.hpp) = 9d7ef331414526057a6ac1a0ba1af815f017dfc3
 SHA1 (patch-boost_numeric_ublas_storage.hpp) = 282b5a3b5d09216ded14fae166169d64db72590e
-SHA1 (patch-boost_process_detail_posix_handles.hpp) = 2841be73b01d4949cc1f6ac9a16e59a30f1bc882
+SHA1 (patch-boost_process_detail_posix_handles.hpp) = 4084feb75142107244db86ca7d44da8037c5c745
 SHA1 (patch-boost_process_detail_posix_is__running.hpp) = cc9084735774bd33c5ff6ff936a039fa30f989dd
 SHA1 (patch-boost_property__tree_detail_xml__parser__read__rapidxml.hpp) = 3499fcc37e72396d23a9fce0f1c97891adf12a9f
 SHA1 (patch-boost_regex_config.hpp) = 6b752c7c23168c591cd391739c7a4539bef44c12
