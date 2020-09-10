@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5114 2020/09/10 16:42:11 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5115 2020/09/10 16:44:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7748,3 +7748,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed databases/ruby-activerecord51 [taca 2020-09-10]
 	Removed www/ruby-actioncable51 [taca 2020-09-10]
 	Removed www/ruby-actionpack51 [taca 2020-09-10]
+	Removed www/ruby-actionview51 [taca 2020-09-10]
