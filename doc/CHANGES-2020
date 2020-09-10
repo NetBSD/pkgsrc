@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5099 2020/09/10 13:03:24 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.5100 2020/09/10 14:15:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7711,3 +7711,14 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/py-fonttools to 4.14.0 [adam 2020-09-10]
 	Added sysutils/wmbattery version 2.54 [nia 2020-09-10]
 	Updated net/syncthing to 1.8.0 [gdt 2020-09-10]
+	Updated devel/ruby-activesupport52 to 5.2.4.4 [taca 2020-09-10]
+	Updated devel/ruby-activemodel52 to 5.2.4.4 [taca 2020-09-10]
+	Updated devel/ruby-activejob52 to 5.2.4.4 [taca 2020-09-10]
+	Updated www/ruby-actionview52 to 5.2.4.4 [taca 2020-09-10]
+	Updated www/ruby-actionpack52 to 5.2.4.4 [taca 2020-09-10]
+	Updated www/ruby-actioncable52 to 5.2.4.4 [taca 2020-09-10]
+	Updated databases/ruby-activerecord52 to 5.2.4.4 [taca 2020-09-10]
+	Updated devel/ruby-activestorage52 to 5.2.4.4 [taca 2020-09-10]
+	Updated mail/ruby-actionmailer52 to 5.2.4.4 [taca 2020-09-10]
+	Updated devel/ruby-railties52 to 5.2.4.4 [taca 2020-09-10]
+	Updated www/ruby-rails52 to 5.2.4.4 [taca 2020-09-10]
