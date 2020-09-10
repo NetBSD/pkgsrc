@@ -1,5 +1,6 @@
-Google Croscore fonts package contains a collections of fonts that
-offers improved on-screen readability characteristics and the
-pan-European WGL character set and solves the needs of developers
-looking for width-compatible fonts to address document portability
-across platforms.
+This package contains high quality, free, readable fonts from Chrome OS
+that are width-compatible with some common Microsoft Office fonts:
+
+- Arimo (compatible with Arial)
+- Cousine (compatible with Courier New)
+- Tinos (compatible with Times New Roman)
