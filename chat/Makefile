@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2020/09/11 02:47:16 js Exp $
+# $NetBSD: Makefile,v 1.255 2020/09/11 23:48:53 js Exp $
 #
 
 COMMENT=	Communication programs
@@ -107,7 +107,6 @@ SUBDIR+=	py-hangups
 SUBDIR+=	py-mastodon
 SUBDIR+=	py-mautrix
 SUBDIR+=	py-nbxmpp
-SUBDIR+=	py-tulir-hangups
 SUBDIR+=	py-xmpppy
 SUBDIR+=	quassel
 SUBDIR+=	quirc
