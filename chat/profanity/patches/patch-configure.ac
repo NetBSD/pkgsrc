@@ -1,7 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/09/04 10:15:17 nia Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/09/11 20:44:17 js Exp $
 
 - Add NetBSD as a non-libdl platform.
 - Fix == usage.
+- Remove hardcoded homebrew path on macOS.
 
 --- configure.ac.orig	2020-07-01 16:49:19.000000000 +0000
 +++ configure.ac
@@ -31,3 +32,20 @@ $NetBSD: patch-configure.ac,v 1.1 2020/09/04 10:15:17 nia Exp $
              [AM_CONDITIONAL([BUILD_C_API], [true]) AC_DEFINE([HAVE_C], [1], [C support])],
              [AC_CHECK_LIB([dl], [main],
                  [AM_CONDITIONAL([BUILD_C_API], [true]) LIBS="$LIBS -ldl" AC_DEFINE([HAVE_C], [1], [C support])],
+@@ -214,15 +215,7 @@ AS_IF([test "x$enable_icons_and_clipboar
+             [AC_MSG_ERROR([gtk+-2.0 or higher is required for icons])],
+             [AC_MSG_NOTICE([gtk+-2.0 not found, icons and clipboard not enabled])])])])
+ 
+-AS_IF([test "x$PLATFORM" = xosx],
+-    [AC_CHECK_FILE([/usr/local/opt/readline/lib],
+-        [LIBS="-lreadline $LIBS"
+-            AM_CPPFLAGS="-I/usr/local/opt/readline/include $AM_CPPFLAGS"
+-            AM_LDFLAGS="-L/usr/local/opt/readline/lib $AM_LDFLAGS"
+-            AC_SUBST(AM_LDFLAGS)],
+-        [AC_MSG_ERROR([libreadline is required for profanity])])],
+-
+-      [test "x$PLATFORM" = xopenbsd],
++AS_IF([test "x$PLATFORM" = xopenbsd],
+       [AC_CHECK_FILE([/usr/local/include/ereadline],
+           [LIBS="-lereadline $LIBS"
+               AM_CPPFLAGS="-I/usr/local/include/ereadline $AM_CPPFLAGS"
