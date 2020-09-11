@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/09/11 02:04:16 js Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/11 02:38:31 js Exp $
 
 PKGNAME=	${PYPKGPREFIX}-tulir-hangups-0.4.12
+PKGREVISION=	1
 DISTNAME=	v${PKGVERSION_NOREV}
 EGG_NAME=	tulir_hangups-${PKGVERSION_NOREV}
 GITHUB_PROJECT=	hangups
