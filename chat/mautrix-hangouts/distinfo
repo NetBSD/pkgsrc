@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/09/11 05:49:03 wiz Exp $
+$NetBSD: distinfo,v 1.3 2020/09/11 23:44:28 js Exp $
 
-SHA1 (mautrix-hangouts-0.1.1.tar.gz) = 1852c58d78abc671f5affce940e8cb858b82a694
-RMD160 (mautrix-hangouts-0.1.1.tar.gz) = 2b781701bc726fa1f5f168d0b676378224cc9a20
-SHA512 (mautrix-hangouts-0.1.1.tar.gz) = dd8e260edb1e22258de53fc86e4b198a3730e777fe6cb1afe7afc2ed2e347637fbf40e818770bbfd518cd024f2023f151636799356aedc7eb68a31e18e044ef8
-Size (mautrix-hangouts-0.1.1.tar.gz) = 82709 bytes
+SHA1 (mautrix-hangouts-0.1.2.tar.gz) = 769f585a6a84f6865c316099ff04b469c7af014e
+RMD160 (mautrix-hangouts-0.1.2.tar.gz) = 1716d2e4729bd85e829159fdca6934dad30f8087
+SHA512 (mautrix-hangouts-0.1.2.tar.gz) = dfb6f5fb465d4e1d33a8df1ff8183b8b38d8da3e2807ab172df9acd600bed04c927fbd895bf58a4a7c424ba956c21e2677dca7d5b0755a1403db3eb7e81c7c73
+Size (mautrix-hangouts-0.1.2.tar.gz) = 82665 bytes
