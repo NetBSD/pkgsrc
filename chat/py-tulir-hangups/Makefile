@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/11 01:59:05 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/11 02:04:16 js Exp $
 
 PKGNAME=	${PYPKGPREFIX}-tulir-hangups-0.4.12
 DISTNAME=	v${PKGVERSION_NOREV}
@@ -7,6 +7,7 @@ GITHUB_PROJECT=	hangups
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
+DIST_SUBDIR=	tulir-hangups
 
 MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/tulir/hangups
