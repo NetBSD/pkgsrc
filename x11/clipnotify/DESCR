@@ -1,0 +1,2 @@
+clipnotify is a simple program that, using the XFIXES extension to X11,
+waits until a new selection is available and then exits.
