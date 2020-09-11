@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.253 2020/09/11 01:59:05 js Exp $
+# $NetBSD: Makefile,v 1.254 2020/09/11 02:47:16 js Exp $
 #
 
 COMMENT=	Communication programs
@@ -76,6 +76,7 @@ SUBDIR+=	loudmouth
 SUBDIR+=	lurch-purple
 SUBDIR+=	matrix-synapse
 SUBDIR+=	matterircd
+SUBDIR+=	mautrix-hangouts
 SUBDIR+=	mcabber
 SUBDIR+=	meanwhile
 SUBDIR+=	miniircd
