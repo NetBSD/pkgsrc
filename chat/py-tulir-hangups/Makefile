@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/09/11 02:38:31 js Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/11 05:42:44 wiz Exp $
 
-PKGNAME=	${PYPKGPREFIX}-tulir-hangups-0.4.12
+DISTNAME=	tulir-hangups-0.4.12
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
-DISTNAME=	v${PKGVERSION_NOREV}
-EGG_NAME=	tulir_hangups-${PKGVERSION_NOREV}
-GITHUB_PROJECT=	hangups
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
-DIST_SUBDIR=	tulir-hangups
+GITHUB_PROJECT=	hangups
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/tulir/hangups
@@ -27,6 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.6.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.1:../../devel/py-urwid
 
 USE_LANGUAGES=	# none
+EGG_NAME=	tulir_hangups-${PKGVERSION_NOREV}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
