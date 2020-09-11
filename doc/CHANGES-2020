@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5130 2020/09/11 14:47:51 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5131 2020/09/11 17:18:37 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7767,3 +7767,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-google-api-core to 1.22.2 [adam 2020-09-11]
 	Added x11/clipnotify version 1.0.2 [leot 2020-09-11]
 	Updated www/webkit-gtk to 2.30.0 [leot 2020-09-11]
+	Updated net/samba4 to 4.12.6nb2 [jperkin 2020-09-11]
