@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5126 2020/09/11 09:25:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5127 2020/09/11 09:40:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7761,3 +7761,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added chat/mautrix-hangouts version 0.1.1 [js 2020-09-11]
 	Updated lang/nodejs to 14.10.1 [adam 2020-09-11]
 	Updated databases/redis to 6.0.8 [adam 2020-09-11]
+	Updated www/py-django-admin-sortable2 to 0.7.7 [adam 2020-09-11]
+	Updated www/py-django-admin-rangefilter to 0.6.2 [adam 2020-09-11]
