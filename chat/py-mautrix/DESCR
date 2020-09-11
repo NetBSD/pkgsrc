@@ -1,0 +1,22 @@
+A Python 3.6+ asyncio Matrix framework.
+
+Components:
+
+  - Basic HTTP request sender (mautrix.api)
+  - Client API endpoints as functions (mautrix.client.api)
+  - Medium-level application service framework (mautrix.appservice)
+    - Basic transaction and user/alias query support (based on Cadair's
+      python-appservice-framework)
+    - Basic room state storage
+    - Intent wrapper around the client API functions (design based on
+      matrix-appservice-bridge)
+  - Medium-level end-to-end encryption framework (mautrix.crypto)
+    - Handles all the complicated e2ee key exchange
+  - High-level bridging utility framework (mautrix.bridge)
+    - Base class for bridges
+    - Common bridge configuration and appservice registration generation things
+    - Double-puppeting helper
+    - End-to-bridge encryption helper
+  - High-level client framework (mautrix.client)
+    - Syncing and event handling helper.
+    - End-to-end encryption helper.

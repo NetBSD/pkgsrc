@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2020/09/10 02:39:01 jnemeth Exp $
+# $NetBSD: Makefile,v 1.252 2020/09/11 01:18:55 js Exp $
 #
 
 COMMENT=	Communication programs
@@ -104,6 +104,7 @@ SUBDIR+=	py-axolotl
 SUBDIR+=	py-axolotl-curve25519
 SUBDIR+=	py-hangups
 SUBDIR+=	py-mastodon
+SUBDIR+=	py-mautrix
 SUBDIR+=	py-nbxmpp
 SUBDIR+=	py-xmpppy
 SUBDIR+=	quassel
