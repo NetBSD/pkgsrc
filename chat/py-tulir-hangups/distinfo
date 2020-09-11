@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/09/11 01:59:05 js Exp $
+
+SHA1 (v0.4.12.tar.gz) = 0058e5fea202d4769aa4601758ceca75d0159c0f
+RMD160 (v0.4.12.tar.gz) = 8b0a5e746fb9c271414fdcd83f46dc295ca976c2
+SHA512 (v0.4.12.tar.gz) = 226cc6820aeb54581d47f30e507419d5ee8fc5b5f5d63cbb9be699ebf82fd66e3456cde86dc7b77d56f0c7d6af7181279608ca8bdf571518eee3d4e1088f1201
+Size (v0.4.12.tar.gz) = 177971 bytes
