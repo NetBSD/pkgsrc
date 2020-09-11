@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.904 2020/08/30 21:33:38 tnn Exp $
+# $NetBSD: Makefile,v 1.905 2020/09/11 13:28:13 leot Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -25,6 +25,7 @@ SUBDIR+=	blt
 SUBDIR+=	c++-gtk-utils
 SUBDIR+=	caribou
 SUBDIR+=	clipit
+SUBDIR+=	clipnotify
 SUBDIR+=	clisp-gtk2
 SUBDIR+=	clisp-mit-clx
 SUBDIR+=	clisp-new-clx
