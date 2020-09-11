@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/09/11 15:05:06 nia Exp $
+# $NetBSD: Makefile,v 1.20 2020/09/11 15:14:12 nia Exp $
 
 DISTNAME=	elixir-1.10.4
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	erlang>=21.0:../../lang/erlang
 
 UNLIMIT_RESOURCES=	datasize virtualsize
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake:run
 BUILD_TARGET=	compile
 TEST_TARGET=	test
 
