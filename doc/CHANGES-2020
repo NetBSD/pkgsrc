@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5131 2020/09/11 17:18:37 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.5132 2020/09/11 23:44:40 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7768,3 +7768,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/clipnotify version 1.0.2 [leot 2020-09-11]
 	Updated www/webkit-gtk to 2.30.0 [leot 2020-09-11]
 	Updated net/samba4 to 4.12.6nb2 [jperkin 2020-09-11]
+	Updated chat/mautrix-hangouts to 0.1.2 [js 2020-09-11]
