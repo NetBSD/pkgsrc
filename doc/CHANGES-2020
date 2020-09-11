@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5123 2020/09/11 01:19:16 js Exp $
+$NetBSD: CHANGES-2020,v 1.5124 2020/09/11 01:59:21 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7757,3 +7757,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xf86-video-vesa to 2.5.0 [wiz 2020-09-10]
 	Added textproc/py-commonmark version 0.9.1 [js 2020-09-11]
 	Added chat/py-mautrix version 0.7.1 [js 2020-09-11]
+	Added chat/py-tulir-hangups version 0.4.12 [js 2020-09-11]
