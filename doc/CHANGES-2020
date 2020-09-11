@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5121 2020/09/10 22:27:14 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5122 2020/09/11 00:49:37 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7755,3 +7755,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed databases/ruby-arel80 [taca 2020-09-10]
 	Updated security/vault to 1.5.3 [he 2020-09-10]
 	Updated x11/xf86-video-vesa to 2.5.0 [wiz 2020-09-10]
+	Added textproc/py-commonmark version 0.9.1 [js 2020-09-11]
