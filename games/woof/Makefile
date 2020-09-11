@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/09/03 10:26:47 micha Exp $
+# $NetBSD: Makefile,v 1.11 2020/09/11 10:28:09 micha Exp $
 
 DISTNAME=	woof_2.1.1
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -36,6 +36,15 @@ SUBST_STAGE.uint=	pre-configure
 SUBST_MESSAGE.uint=	Preparing m_misc.c file ...
 SUBST_FILES.uint=	Source/m_misc.c
 SUBST_SED.uint=		-e 's,uint_t,woof_uint_t,'
+
+# XDG desktop file and icon are installed by the build system with the logic:
+#     if(UNIX AND NOT APPLE)
+# Remove Apple exception because pkgsrc users maybe have X11 on Apple machines
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Preparing data/CMakeLists.txt file ...
+SUBST_FILES.xdg=	data/CMakeLists.txt
+SUBST_SED.xdg=		-e 's,UNIX AND NOT APPLE,UNIX,'
 
 pre-configure:
 	cd ${WRKSRC}; mkdir build
