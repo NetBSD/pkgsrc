@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/11 01:18:55 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/11 01:21:41 js Exp $
 
 GITHUB_PROJECT=	mautrix-python
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ HOMEPAGE=	https://github.com/tulir/mautrix-python
 COMMENT=	Python 3 asyncio Matrix framework
 LICENSE=	mpl-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3:../../www/py-aiohttp
+DEPENDS+=	${PYPGKPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
 
 WRKSRC=		${WRKDIR}/mautrix-python-0.7.1
