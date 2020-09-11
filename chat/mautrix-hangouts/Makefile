@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/09/11 23:44:28 js Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/11 23:45:35 js Exp $
 
 DISTNAME=	mautrix-hangouts-0.1.2
 CATEGORIES=	chat python
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-alembic>=1<2:../../databases/py-alembic
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.94<0.17:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.8<0.10:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
-DEPENDS+=	${PYPKGPREFIX}-hangups>=0.4.11<0.5:../../chat/py-tulir-hangups
+DEPENDS+=	${PYPKGPREFIX}-hangups>=0.4.11<0.5:../../chat/py-hangups
 DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.7<0.8:../../chat/py-mautrix
 
 USE_TOOLS+=	pax
