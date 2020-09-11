@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2020/07/28 14:24:03 leot Exp $
+@comment $NetBSD: PLIST,v 1.63 2020/09/11 14:47:34 leot Exp $
 bin/WebKitWebDriver
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
@@ -94,7 +94,9 @@ include/webkitgtk-4.0/webkit2/WebKitWebView.h
 include/webkitgtk-4.0/webkit2/WebKitWebViewBase.h
 include/webkitgtk-4.0/webkit2/WebKitWebViewSessionState.h
 include/webkitgtk-4.0/webkit2/WebKitWebsiteData.h
+include/webkitgtk-4.0/webkit2/WebKitWebsiteDataAccessPermissionRequest.h
 include/webkitgtk-4.0/webkit2/WebKitWebsiteDataManager.h
+include/webkitgtk-4.0/webkit2/WebKitWebsitePolicies.h
 include/webkitgtk-4.0/webkit2/WebKitWindowProperties.h
 include/webkitgtk-4.0/webkit2/webkit-web-extension.h
 include/webkitgtk-4.0/webkit2/webkit2.h
@@ -216,17 +218,16 @@ ${PLIST.introspection}lib/girepository-1.0/WebKit2-4.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.16.7
+lib/libjavascriptcoregtk-4.0.so.18.17.8
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.44.6
+lib/libwebkit2gtk-4.0.so.37.49.4
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
 lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
 libexec/webkit2gtk-4.0/MiniBrowser
 libexec/webkit2gtk-4.0/WebKitNetworkProcess
-libexec/webkit2gtk-4.0/WebKitPluginProcess
 libexec/webkit2gtk-4.0/WebKitWebProcess
 libexec/webkit2gtk-4.0/jsc
 ${PLIST.introspection}share/gir-1.0/JavaScriptCore-4.0.gir
