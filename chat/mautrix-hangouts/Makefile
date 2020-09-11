@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/09/11 02:47:16 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/11 05:49:03 wiz Exp $
 
-PKGNAME=	mautrix-hangouts-0.1.1
-DISTNAME=	v${PKGVERSION_NOREV}
-GITHUB_PROJECT=	mautrix-hangouts
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-EGG_NAME=	mautrix_hangouts-${PKGVERSION_NOREV}+dev.unknown
+DISTNAME=	mautrix-hangouts-0.1.1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/tulir/mautrix-hangouts
@@ -23,11 +19,12 @@ DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-tulir-hangups>=0.4.12<0.5:../../chat/py-tulir-hangups
 DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.7<0.8:../../chat/py-mautrix
 
-WRKSRC=		${WRKDIR}/mautrix-hangouts-${PKGVERSION_NOREV}
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+EGG_NAME=	mautrix_hangouts-${PKGVERSION_NOREV}+dev.unknown
 
 INSTALLATION_DIRS+=	share/mautrix-hangouts
 
