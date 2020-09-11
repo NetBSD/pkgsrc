@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2020/08/31 18:10:53 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2020/09/11 17:18:09 jperkin Exp $
 
 DISTNAME=	samba-4.12.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -57,8 +57,10 @@ FILES_SUBST+=		SMB_PID=${SMB_PID}
 # a full dependency since it's not actually needed by samba.
 USE_TOOLS+=		gmake mktemp perl:run pkg-config
 
+.if ${OPSYS} == "NetBSD"
 USE_GNU_ICONV=		yes	# FIXME: something doesn't work on NetBSD
 BROKEN_GETTEXT_DETECTION= yes
+.endif
 
 # Debugging
 #CONFIGURE_ARGS+=	-vvv
