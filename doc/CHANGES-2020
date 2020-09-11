@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5125 2020/09/11 02:47:42 js Exp $
+$NetBSD: CHANGES-2020,v 1.5126 2020/09/11 09:25:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7759,3 +7759,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added chat/py-mautrix version 0.7.1 [js 2020-09-11]
 	Added chat/py-tulir-hangups version 0.4.12 [js 2020-09-11]
 	Added chat/mautrix-hangouts version 0.1.1 [js 2020-09-11]
+	Updated lang/nodejs to 14.10.1 [adam 2020-09-11]
+	Updated databases/redis to 6.0.8 [adam 2020-09-11]
