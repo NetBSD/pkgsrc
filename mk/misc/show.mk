@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.23 2020/07/04 18:08:35 rillig Exp $
+# $NetBSD: show.mk,v 1.24 2020/09/12 20:48:13 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -166,9 +166,6 @@ show-all: show-all-${g}
 # using the :sh modifier may show warnings, for example because ${WRKDIR}
 # doesn't exist.
 
-_SHOW_ALL.d4=	$$$$		# see regress/infra-unittests/show-all.sh
-_SHOW_ALL.d8=	$$$$$$$$	# see regress/infra-unittests/show-all.sh
-
 show-all-${g}: .PHONY
 	@${RUN} printf '%s:\n' ${g:Q}
 
@@ -185,7 +182,7 @@ show-all-${g}: .PHONY
 	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
 	  printf '  %-6s%-${w}s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '        %-${w}s %s \\\n' ${${v}:O:C,\\$$,${_SHOW_ALL.d8},g:@x@'' ${x:Q}@}; \
+	  printf '        %-${w}s %s \\\n' ${${v}:O:C,\\\$,\$\$\$\$,g:@x@'' ${x:Q}@}; \
 	  printf '        %-${w}s # end of %s (sorted)\n' '' ${v:Q};	\
 	fi
 
@@ -199,7 +196,7 @@ show-all-${g}: .PHONY
 	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
 	  printf '  %-6s%-${w}s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '        %-${w}s %s \\\n' ${${v}:C,\\$$,${_SHOW_ALL.d8},g:@x@'' ${x:Q}@}; \
+	  printf '        %-${w}s %s \\\n' ${${v}:C,\\\$,\$\$\$\$,g:@x@'' ${x:Q}@}; \
 	  printf '        %-${w}s # end of %s\n' '' ${v:Q};		\
 	fi
 
@@ -209,7 +206,7 @@ show-all-${g}: .PHONY
 	${RUN}								\
 	if ${!defined(${v}) :? true : false}; then			\
 	  printf '  %-6s%-${w}s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
-	elif value=${${v}:U:C,\\$$,${_SHOW_ALL.d4},gW:Q} && test "x$$value" = "x"; then \
+	elif value=${${v}:U:C,\\\$,\$\$,gW:Q} && test "x$$value" = "x"; then \
 	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
 	  case "$$value" in (*[\	\ ]) eol="# ends with space";; (*) eol=""; esac; \
