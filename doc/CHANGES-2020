@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5137 2020/09/12 11:05:57 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5138 2020/09/12 14:54:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7774,3 +7774,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-markdown-math to 0.7 [gutteridge 2020-09-12]
 	Updated fonts/vlgothic-ttf to 20200720 [tsutsui 2020-09-12]
 	Added security/amass version 3.10.3 [leot 2020-09-12]
+	Added net/amazon-ecs-cli version 1.20.0 [leot 2020-09-12]
