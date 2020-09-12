@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1345 2020/09/09 12:39:51 pin Exp $
+# $NetBSD: Makefile,v 1.1346 2020/09/12 14:53:55 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -23,6 +23,7 @@ SUBDIR+=	aiccu
 SUBDIR+=	airport2basestationconfig
 SUBDIR+=	airportbasestationconfig
 SUBDIR+=	airportmodemutility
+SUBDIR+=	amazon-ecs-cli
 SUBDIR+=	amule
 SUBDIR+=	aoe-vblade
 SUBDIR+=	apollo
