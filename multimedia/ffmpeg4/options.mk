@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2020/04/29 15:11:10 nia Exp $
+# $NetBSD: options.mk,v 1.16 2020/09/12 00:45:22 manu Exp $
 
 # Global and legacy options
 
@@ -7,10 +7,10 @@ PKG_OPTIONS_GROUP.ssl=		gnutls mbedtls openssl
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg4
 PKG_SUPPORTED_OPTIONS=	ass av1 bluray doc fdk-aac fontconfig freetype jack \
-			lame libvpx opencore-amr opus pulseaudio rpi rtmp \
+			lame libvpx libwebp opencore-amr opus pulseaudio rpi rtmp \
 			speex tesseract theora vorbis x11 x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	ass av1 bluray freetype fontconfig gnutls lame \
-			libvpx opus speex theora vorbis x11 x264 x265 xvid
+			libvpx libwebp opus speex theora vorbis x11 x264 x265 xvid
 
 PKG_OPTIONS_LEGACY_OPTS+=	xcb:x11
 
@@ -247,6 +247,14 @@ CONFIGURE_ARGS+=	--enable-libvpx
 .include "../../multimedia/libvpx/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libvpx
+.endif
+
+# WEBP support
+.if !empty(PKG_OPTIONS:Mlibwebp)
+CONFIGURE_ARGS+=	--enable-libwebp
+.include "../../graphics/libwebp/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libwebp
 .endif
 
 # X11 screen capture support using libxcb
