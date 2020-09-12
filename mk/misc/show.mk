@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.25 2020/09/12 21:00:10 rillig Exp $
+# $NetBSD: show.mk,v 1.26 2020/09/12 21:27:15 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -153,10 +153,10 @@ _LABEL._USE_VARS=	use
 _LABEL._DEF_VARS=	def
 
 show-all: .PHONY
-.for g in ${"${.TARGETS:Mshow-all*}":?${_VARGROUPS:O:u}:}
-.  for w in ${_VARGROUP_WIDTH.${g}:U23}
+.for grp in ${"${.TARGETS:Mshow-all*}":?${_VARGROUPS:O:u}:}
+.  for width in ${_VARGROUP_WIDTH.${grp}:U23}
 
-show-all: show-all-${g}
+show-all: show-all-${grp}
 
 # In the following code, the variables are evaluated as late as possible.
 # This is especially important for variables that use the :sh modifier,
@@ -166,51 +166,51 @@ show-all: show-all-${g}
 # using the :sh modifier may show warnings, for example because ${WRKDIR}
 # doesn't exist.
 
-show-all-${g}: .PHONY
-	@${RUN} printf '%s:\n' ${g:Q}
+show-all-${grp}: .PHONY
+	@${RUN} printf '%s:\n' ${grp:Q}
 
-.    for c in ${_SHOW_ALL_CATEGORIES}
-.      for v in ${${c}.${g}}
+.    for cat in ${_SHOW_ALL_CATEGORIES}
+.      for var in ${${cat}.${grp}}
 
-.        if ${_SORTED_VARS.${g}:U:@pattern@ ${v:M${pattern}} @:M*}
+.        if ${_SORTED_VARS.${grp}:U:@pattern@ ${var:M${pattern}} @:M*}
 
 # multi-valued variables, values are sorted
 	${RUN}								\
-	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %-6s%-${w}s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
-	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
-	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
+	if ${!defined(${var}) :? true : false}; then			\
+	  printf '  %-6s%-${width}s # undefined\n' ${_LABEL.${cat}} ${var:Q}; \
+	elif value=${${var}:U:M*:Q} && test "x$$value" = "x"; then	\
+	  printf '  %-6s%-${width}s # empty\n' ${_LABEL.${cat}} ${var:Q}=; \
 	else								\
-	  printf '  %-6s%-${w}s \\''\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '        %-${w}s %s \\''\n' ${${v}:O:C,\\\$,\$\$\$\$,g:@x@'' ${x:Q}@}; \
-	  printf '        %-${w}s # end of %s (sorted)\n' '' ${v:Q};	\
+	  printf '  %-6s%-${width}s \\''\n' ${_LABEL.${cat}} ${var:Q}=;	\
+	  printf '        %-${width}s %s \\''\n' ${${var}:O:C,\\\$,\$\$\$\$,g:@word@'' ${word:Q}@}; \
+	  printf '        %-${width}s # end of %s (sorted)\n' '' ${var:Q}; \
 	fi
 
-.        elif ${_LISTED_VARS.${g}:U:@pattern@ ${v:M${pattern}} @:M*}
+.        elif ${_LISTED_VARS.${grp}:U:@pattern@ ${var:M${pattern}} @:M*}
 
 # multi-valued variables, preserving original order
 	${RUN}								\
-	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %-6s%-${w}s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
-	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
-	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
+	if ${!defined(${var}) :? true : false}; then			\
+	  printf '  %-6s%-${width}s # undefined\n' ${_LABEL.${cat}} ${var:Q}; \
+	elif value=${${var}:U:M*:Q} && test "x$$value" = "x"; then	\
+	  printf '  %-6s%-${width}s # empty\n' ${_LABEL.${cat}} ${var:Q}=; \
 	else								\
-	  printf '  %-6s%-${w}s \\''\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '        %-${w}s %s \\''\n' ${${v}:C,\\\$,\$\$\$\$,g:@x@'' ${x:Q}@}; \
-	  printf '        %-${w}s # end of %s\n' '' ${v:Q};		\
+	  printf '  %-6s%-${width}s \\''\n' ${_LABEL.${cat}} ${var:Q}=;	\
+	  printf '        %-${width}s %s \\''\n' ${${var}:C,\\\$,\$\$\$\$,g:@word@'' ${word:Q}@}; \
+	  printf '        %-${width}s # end of %s\n' '' ${var:Q};	\
 	fi
 
 .        else
 
 # single-valued variables
 	${RUN}								\
-	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %-6s%-${w}s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
-	elif value=${${v}:U:C,\\\$,\$\$,gW:Q} && test "x$$value" = "x"; then \
-	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
+	if ${!defined(${var}) :? true : false}; then			\
+	  printf '  %-6s%-${width}s # undefined\n' ${_LABEL.${cat}} ${var:Q}; \
+	elif value=${${var}:U:C,\\\$,\$\$,gW:Q} && test "x$$value" = "x"; then \
+	  printf '  %-6s%-${width}s # empty\n' ${_LABEL.${cat}} ${var:Q}=; \
 	else								\
 	  case "$$value" in (*[\	\ ]) eol="# ends with space";; (*) eol=""; esac; \
-	  printf '  %-6s%-${w}s %s\n' ${_LABEL.${c}} ${v:Q}= "$$value$$eol"; \
+	  printf '  %-6s%-${width}s %s\n' ${_LABEL.${cat}} ${var:Q}= "$$value$$eol"; \
 	fi
 
 .        endif
