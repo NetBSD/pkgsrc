@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.112 2020/06/13 00:53:20 gdt Exp $
+# $NetBSD: Makefile,v 1.113 2020/09/12 05:58:40 rillig Exp $
 
 # Update to 4.3 is on hold because of failure to build firefox,
 # openjdk and perhaps others.  Upgrading requires a proposal on
 # tech-pkg and consensus that it is safe.
+# See https://lists.gnu.org/archive/html/info-gnu/2020-01/msg00004.html
 DISTNAME=	make-4.2.1
 PKGNAME=	g${DISTNAME}
 PKGREVISION=	1
