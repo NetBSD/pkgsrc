@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/08/26 11:49:41 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/12 06:33:47 wiz Exp $
 
 DISTNAME=	precis_i18n-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,8 +10,9 @@ HOMEPAGE=	https://github.com/byllyfish/precis_i18n
 COMMENT=	PRECIS-i18n: Internationalized Usernames and Passwords
 LICENSE=	mit
 
-EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
