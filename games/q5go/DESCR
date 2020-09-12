@@ -1,0 +1,18 @@
+This is a tool for Go players which performs the following functions:
+
+* SGF editor
+* Analysis frontend for KataGo, Leela Zero or compatible engines
+* GTP interface
+* IGS client
+* Export to a variety of formats
+
+The basic goal for this program is to provide an everyday SGF editor
+that is fast, easy and convenient to use and does everything you
+could want out of such a tool. Some of the more unusual features
+include a Go diagram exporting function for sites like lifein19x19.com
+or Sensei's library, as well as SVG vector graphics or slide export.
+q5go also supports some non-standard Go variants. For beginners,
+tutorials that explain the rules and basic tactics are included.
+
+This program is based on the old Qt3 version of qGo, but ported to
+Qt5 and modernized.
