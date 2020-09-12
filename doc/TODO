@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20068 2020/09/09 10:32:21 wiz Exp $
+$NetBSD: TODO,v 1.20069 2020/09/12 15:17:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -658,6 +658,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gsasl-1.8.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gstreamer1-1.18
 	o gthumb-3.4.0
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
@@ -732,7 +733,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kaffe-1.1.9
 	o kapooka-0.3
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
-	o kdevelop-5.5
+	o kdevelop-5.6
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o keybinder-0.3.1
@@ -978,6 +979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qdirstat-1.7
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qt4-creator-3.4.0
+	o qt5-5.15.1
 	o racket-7.1
 	o radiance-4R1
 	o rails-5.0.1
