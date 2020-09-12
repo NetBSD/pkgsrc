@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/01 04:26:05 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2020/09/12 00:22:35 gutteridge Exp $
 
-SHA1 (python-markdown-math-0.6.tar.gz) = cf528c8ce2fb5ed6eb89a027c4de5319c7c61cdf
-RMD160 (python-markdown-math-0.6.tar.gz) = dad66ad78c848d8ebe39cb96b5287dff9412f64c
-SHA512 (python-markdown-math-0.6.tar.gz) = af5773dc5b6d8968d811487a86fd027042d381b8b5b37683b519f03f21097bafd3d174881d8201cb6524e0975cd6868781e116cec6406fa20ffd3c6b9f9d4e87
-Size (python-markdown-math-0.6.tar.gz) = 6406 bytes
+SHA1 (python-markdown-math-0.7.tar.gz) = cbe418862f9240ade74002d9a477aa22d1614667
+RMD160 (python-markdown-math-0.7.tar.gz) = bf893ec6d3708eea1535e1f5821646c9e20fe10b
+SHA512 (python-markdown-math-0.7.tar.gz) = 05bfff71c758785591c388a95b176205a8707428cbda91734c4f1b5d39cd030d9106782e92aca8f1de18be227b1489ad2cb09981b4455ba1d1177974cd0cbecd
+Size (python-markdown-math-0.7.tar.gz) = 8320 bytes
