@@ -1,24 +1,36 @@
-# $NetBSD: bsd.build-vars.mk,v 1.13 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: bsd.build-vars.mk,v 1.14 2020/09/12 06:51:15 rillig Exp $
 #
 # Package-settable variables:
 #
-# BUILD_DIRS is the list of directories in which to perform the build
-#	process.  If the directories are relative paths, then they
-#	are assumed to be relative to ${WRKSRC}.
+# BUILD_DIRS
+#	The directories in which to perform the build process.
+#	Relative paths are relative to ${WRKSRC}.
 #
-# MAKE_ENV is the shell environment that is exported to the make
-#	process.
+# MAKE_ENV
+#	The shell environment that is exported to the make process.
 #
-# MAKE_FLAGS is a list of arguments that is pass to the make process.
+# MAKE_FLAGS
+#	The flags that are passed to the make commands during the build
+#	(the "inner" make when building the package itself, not the
+#	"outer" make on the pkgsrc level).
 #
-# MAKE_FILE is the path to the makefile that is processed by the make
-#	executable.  If the path is relative, then it is assumed to
-#	be relative to each directory listed in BUILD_DIRS.
+#	Typical flags are -s for silent mode (works for GNU make as
+#	well as for bmake), or variable assignments that override
+#	anything specified in the Makefile, such as CFLAGS=-O0.
+#
+# MAKE_FILE
+#	The path to the makefile that is processed by the make executable.
+#	Relative paths are relative to each of the directories from
+#	BUILD_DIRS.
 #
 # System-provided variables:
 #
-# MAKE_PROGRAM is the path to the make executable that is run to
-#	process the source makefiles. See mk/tools/make.mk.
+# MAKE_PROGRAM
+#	The path to the make executable that is run to process the source
+#	makefiles. See mk/tools/make.mk.
+#
+# See also:
+#	https://www.netbsd.org/docs/pkgsrc/pkgsrc.html#build.build
 #
 
 _VARGROUPS+=		build-vars
