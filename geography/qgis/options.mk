@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2020/06/24 21:49:20 gdt Exp $
+# $NetBSD: options.mk,v 1.19 2020/09/12 00:19:28 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qgis
 PKG_SUPPORTED_OPTIONS=	python
@@ -11,7 +11,6 @@ PKG_SUGGESTED_OPTIONS+=	python
 
 .include "../../mk/bsd.options.mk"
 
-# \todo Flip sense of option (if it isn't just removed).
 .if empty(PKG_OPTIONS:Mpython)
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=FALSE
 PYTHON_FOR_BUILD_ONLY=	YES
