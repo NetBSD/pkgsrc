@@ -210,6 +210,7 @@ fastcgi			Use FastCGI as the CGI manager.
 fax			Enable fax support
 fcitx			Enable Fcitx inputmethod support
 fd-small		Build smaller misc/fd package.
+fdk-aac		Enable Fraunhofer FDK AAC codec support.
 ffcall			Support foreign function calls, to interface with other programming languages.
 ffi			Support foreign function interface, to interface with other programming languages.
 ffmpeg			Enable ffmpeg support.
@@ -480,6 +481,7 @@ libusb			Enable USB access.
 libusb-1		Enable USB access via libusb-1.
 libvisual		Enable libvisual (audio visualisation) support.
 libvpx			Enable libvpx support.
+libwebp			Enable libwebp support.
 libwildmidi		Enable MIDI support using libwildmidi.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
 libxml2			Use the libxml2 library for XML support.
@@ -823,6 +825,7 @@ tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
 termcap			Enable termcap support.
 terminfo		Use terminfo.
+tesseract		Enable OCR support using Tesseract.
 tests			Build and install tests.
 theora			Use the theora codecs.
 threads			Enable threads support.
