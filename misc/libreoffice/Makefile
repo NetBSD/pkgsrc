@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2020/09/05 11:26:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.238 2020/09/12 03:49:46 gutteridge Exp $
 
 VERREL=		7.0.1
 VERRC=		2
@@ -347,7 +347,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-# hardbuzz with graphite2 support is required.
+# harfbuzz with graphite2 support is required.
 .if ${LIBRSVG_TYPE} == "rust"
 #BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.4.2
 .include "../../fonts/harfbuzz/buildlink3.mk"
