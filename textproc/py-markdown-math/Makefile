@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/03/01 04:26:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/12 00:22:35 gutteridge Exp $
 
-VERSION=	0.6
+VERSION=	0.7
 DISTNAME=	python-markdown-math-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	textproc python
@@ -11,7 +11,9 @@ HOMEPAGE=	https://github.com/mitya57/python-markdown-math
 COMMENT=	Python extension adding math formula support to py-markdown
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+DEPENDS+=	${PYPKGPREFIX}-markdown>=3.0:../../textproc/py-markdown
 
 USE_LANGUAGES=	# none
 
