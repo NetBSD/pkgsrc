@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/06/21 13:51:49 gdt Exp $
-@comment $NetBSD: PLIST,v 1.11 2020/06/21 13:51:49 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/09/12 23:56:44 gdt Exp $
 bin/qgis
 bin/qgis_bench
 include/qgis/Bezier3D.h
@@ -325,6 +324,7 @@ include/qgis/qgsfillsymbollayer.h
 include/qgis/qgsfilterlineedit.h
 include/qgis/qgsfindfilesbypatternwidget.h
 include/qgis/qgsfloatingwidget.h
+include/qgis/qgsfocuskeeper.h
 include/qgis/qgsfocuswatcher.h
 include/qgis/qgsfontbutton.h
 include/qgis/qgsfontutils.h
@@ -2558,6 +2558,7 @@ share/qgis/resources/themes/Blend of Gray/icons/handle-horizontal.svg
 share/qgis/resources/themes/Blend of Gray/icons/handle-vertical.svg
 share/qgis/resources/themes/Blend of Gray/icons/qcheckbox-checked-disabled.svg
 share/qgis/resources/themes/Blend of Gray/icons/qcheckbox-checked.svg
+share/qgis/resources/themes/Blend of Gray/icons/qcheckbox-intermediary.svg
 share/qgis/resources/themes/Blend of Gray/icons/qcheckbox-unchecked-disabled.svg
 share/qgis/resources/themes/Blend of Gray/icons/qcheckbox-unchecked.svg
 share/qgis/resources/themes/Blend of Gray/icons/qradiobox-checked-disabled.svg
@@ -2581,6 +2582,7 @@ share/qgis/resources/themes/Night Mapping/icons/handle-horizontal.svg
 share/qgis/resources/themes/Night Mapping/icons/handle-vertical.svg
 share/qgis/resources/themes/Night Mapping/icons/qcheckbox-checked-disabled.svg
 share/qgis/resources/themes/Night Mapping/icons/qcheckbox-checked.svg
+share/qgis/resources/themes/Night Mapping/icons/qcheckbox-intermediary.svg
 share/qgis/resources/themes/Night Mapping/icons/qcheckbox-unchecked-disabled.svg
 share/qgis/resources/themes/Night Mapping/icons/qcheckbox-unchecked.svg
 share/qgis/resources/themes/Night Mapping/icons/qradiobox-checked-disabled.svg
