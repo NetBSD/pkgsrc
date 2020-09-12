@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5134 2020/09/12 00:19:18 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.5135 2020/09/12 00:23:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7771,3 +7771,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/mautrix-hangouts to 0.1.2 [js 2020-09-11]
 	Removed chat/py-tulir-hangups [js 2020-09-11]
 	Updated wm/xfce4-wm to 4.14.4 [gutteridge 2020-09-12]
+	Updated textproc/py-markdown-math to 0.7 [gutteridge 2020-09-12]
