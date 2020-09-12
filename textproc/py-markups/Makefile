@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/12 12:20:11 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/12 12:22:01 tnn Exp $
 
 VERSION=	3.0.0
 DISTNAME=	Markups-${VERSION}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-markdown-math-[0-9]*:../../textproc/py-markdown-math
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-textile-[0-9]*:../../textproc/py-textile
 
-PYTHON_VERSIONS_INCOMPATIBLE=   27	# py-markdown-math
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-markdown-math
 
 USE_LANGUAGES=	# none
 
