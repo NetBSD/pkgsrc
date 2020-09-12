@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5133 2020/09/11 23:50:09 js Exp $
+$NetBSD: CHANGES-2020,v 1.5134 2020/09/12 00:19:18 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7770,3 +7770,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/samba4 to 4.12.6nb2 [jperkin 2020-09-11]
 	Updated chat/mautrix-hangouts to 0.1.2 [js 2020-09-11]
 	Removed chat/py-tulir-hangups [js 2020-09-11]
+	Updated wm/xfce4-wm to 4.14.4 [gutteridge 2020-09-12]
