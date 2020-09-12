@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.24 2020/09/12 20:48:13 rillig Exp $
+# $NetBSD: show.mk,v 1.25 2020/09/12 21:00:10 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -181,8 +181,8 @@ show-all-${g}: .PHONY
 	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
 	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
-	  printf '  %-6s%-${w}s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '        %-${w}s %s \\\n' ${${v}:O:C,\\\$,\$\$\$\$,g:@x@'' ${x:Q}@}; \
+	  printf '  %-6s%-${w}s \\''\n' ${_LABEL.${c}} ${v:Q}=;		\
+	  printf '        %-${w}s %s \\''\n' ${${v}:O:C,\\\$,\$\$\$\$,g:@x@'' ${x:Q}@}; \
 	  printf '        %-${w}s # end of %s (sorted)\n' '' ${v:Q};	\
 	fi
 
@@ -195,8 +195,8 @@ show-all-${g}: .PHONY
 	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
 	  printf '  %-6s%-${w}s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
-	  printf '  %-6s%-${w}s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '        %-${w}s %s \\\n' ${${v}:C,\\\$,\$\$\$\$,g:@x@'' ${x:Q}@}; \
+	  printf '  %-6s%-${w}s \\''\n' ${_LABEL.${c}} ${v:Q}=;		\
+	  printf '        %-${w}s %s \\''\n' ${${v}:C,\\\$,\$\$\$\$,g:@x@'' ${x:Q}@}; \
 	  printf '        %-${w}s # end of %s\n' '' ${v:Q};		\
 	fi
 
