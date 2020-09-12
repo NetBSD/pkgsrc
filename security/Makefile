@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.781 2020/09/04 11:10:02 wiz Exp $
+# $NetBSD: Makefile,v 1.782 2020/09/12 11:05:37 leot Exp $
 #
 
 COMMENT=	Security tools
@@ -20,6 +20,7 @@ SUBDIR+=	acmesh
 SUBDIR+=	aide
 SUBDIR+=	aide06
 SUBDIR+=	amap
+SUBDIR+=	amass
 SUBDIR+=	antonym
 SUBDIR+=	ap-modsecurity2
 SUBDIR+=	apg
