@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/12 11:05:15 leot Exp $
+bin/amass
+share/examples/amass/config.ini
+share/examples/amass/wordlists/all.txt
+share/examples/amass/wordlists/bitquark_subdomains_top100K.txt
+share/examples/amass/wordlists/deepmagic.com_top500prefixes.txt
+share/examples/amass/wordlists/deepmagic.com_top50kprefixes.txt
+share/examples/amass/wordlists/fierce_hostlist.txt
+share/examples/amass/wordlists/jhaddix_all.txt
+share/examples/amass/wordlists/sorted_knock_dnsrecon_fierce_recon-ng.txt
+share/examples/amass/wordlists/subdomains-top1mil-110000.txt
+share/examples/amass/wordlists/subdomains-top1mil-20000.txt
+share/examples/amass/wordlists/subdomains-top1mil-5000.txt
+share/examples/amass/wordlists/subdomains.lst
