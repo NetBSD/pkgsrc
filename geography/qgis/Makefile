@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/08/30 08:06:57 tnn Exp $
+# $NetBSD: Makefile,v 1.100 2020/09/12 17:44:26 gdt Exp $
 
 # This is intentionally 3.10 Long Term Release.  Please do not update
 # to 3.14, and instead discuss whether/how we want multiple versions.
@@ -20,7 +20,12 @@ USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		cmake bison flex perl pkg-config
-# Due to gmake specific quoting of $ and spaces in filenames, we must use gmake
+# Due to gmake spaces in filenames, we must use gmake.  An example is
+# "resources/function_help/json/Date and Time".
+# Further, gmake expects files that contain a $ such as "$area" to
+# appear, unsurprisingly, as "$$area" on the RHS of dependency rules.
+# NetBSD make, expects "$$$$area".  While cmake 3.17 produced
+# "$$area", cmake 3.18 produces "$$$$area", perhaps only on NetBSD.
 USE_TOOLS+=		gmake
 
 PLIST_SRC=		PLIST
