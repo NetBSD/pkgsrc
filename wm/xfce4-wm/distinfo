@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.32 2020/05/13 01:56:42 gutteridge Exp $
+$NetBSD: distinfo,v 1.33 2020/09/12 00:18:59 gutteridge Exp $
 
-SHA1 (xfwm4-4.14.2.tar.bz2) = 32ad3b845d8f7b6b08949b4d527ef04a4268d75d
-RMD160 (xfwm4-4.14.2.tar.bz2) = 22da60e047352418754b94f65e0a04257517452d
-SHA512 (xfwm4-4.14.2.tar.bz2) = 9e28f7782ce6c1734f9a50efec75d4c03a193bf078fd29f42c11770cef134c4516c256cb9c4b92a71bbbbfca81f37ba0ce19477831bb1da858c839135005b8f2
-Size (xfwm4-4.14.2.tar.bz2) = 1158799 bytes
+SHA1 (xfwm4-4.14.4.tar.bz2) = 247c22834a11193c6f4ef7cc32e5a3bea92a5a13
+RMD160 (xfwm4-4.14.4.tar.bz2) = 2a134a25bf376f15065ad656306e1a2296d367a5
+SHA512 (xfwm4-4.14.4.tar.bz2) = ca3c94d1835076b904aca9f531dccebd9d78a1c85e0f7af7ac7aaba1a067e0f11f5224bdc20dc233038dc752ae1ac85602608c168a4d91643ac7538b448c04bf
+Size (xfwm4-4.14.4.tar.bz2) = 1164972 bytes
 SHA1 (patch-defaults_defaults) = 116409b6ee52344984bf6547c9f6cf06d6d66b92
 SHA1 (patch-src_misc.c) = 9536fd9111712d96575c383bf5f88626ad741a9e
