@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5136 2020/09/12 10:03:38 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.5137 2020/09/12 11:05:57 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7773,3 +7773,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/xfce4-wm to 4.14.4 [gutteridge 2020-09-12]
 	Updated textproc/py-markdown-math to 0.7 [gutteridge 2020-09-12]
 	Updated fonts/vlgothic-ttf to 20200720 [tsutsui 2020-09-12]
+	Added security/amass version 3.10.3 [leot 2020-09-12]
