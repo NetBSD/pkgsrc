@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.492 2020/07/26 05:22:35 dholland Exp $
+# $NetBSD: Makefile,v 1.493 2020/09/12 22:14:15 wiz Exp $
 #
 
 COMMENT=	Games
@@ -333,6 +333,7 @@ SUBDIR+=	py-ranking
 SUBDIR+=	py-renpy
 SUBDIR+=	py-trueskill
 SUBDIR+=	pysolfc
+SUBDIR+=	q5go
 SUBDIR+=	qonk
 SUBDIR+=	qqwing
 SUBDIR+=	qstat
