@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/12 22:14:01 wiz Exp $
+bin/q5go
+share/doc/q5go/AUTHORS
+share/doc/q5go/COPYING
+share/doc/q5go/ChangeLog
+share/doc/q5go/NEWS
+share/doc/q5go/README.md
+share/doc/q5go/TODO
+share/doc/q5go/html/note.png
+share/doc/q5go/html/tip.png
+share/doc/q5go/html/warning.png
+share/q5go/translations/Makefile.am
+share/q5go/translations/Makefile.in
+share/q5go/translations/qgo_cz.qm
+share/q5go/translations/qgo_de.qm
+share/q5go/translations/qgo_dk.qm
+share/q5go/translations/qgo_es.qm
+share/q5go/translations/qgo_fr.qm
+share/q5go/translations/qgo_it.qm
+share/q5go/translations/qgo_la.qm
+share/q5go/translations/qgo_nl.qm
+share/q5go/translations/qgo_pl.qm
+share/q5go/translations/qgo_pt.qm
+share/q5go/translations/qgo_ru.qm
+share/q5go/translations/qgo_tr.qm
+share/q5go/translations/qgo_zh.qm
+share/q5go/translations/qgo_zh_cn.qm
