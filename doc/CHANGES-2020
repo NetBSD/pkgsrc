@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5168 2020/09/13 13:29:48 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5169 2020/09/13 13:53:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7805,3 +7805,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/jbig2dec to 0.19 [leot 2020-09-13]
 	Updated graphics/ImageMagick to 7.0.10.29 [wiz 2020-09-13]
 	Updated graphics/p5-PerlMagick to 7.0.10.29 [wiz 2020-09-13]
+	Updated devel/MoarVM to 2020.05 [mef 2020-09-13]
