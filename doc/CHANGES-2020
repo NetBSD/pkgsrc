@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5171 2020/09/13 14:08:50 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5172 2020/09/13 14:16:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7808,3 +7808,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/MoarVM to 2020.05 [mef 2020-09-13]
 	Updated lang/nqp to 2020.05 [mef 2020-09-13]
 	Updated devel/MoarVM to 2020.08 [mef 2020-09-13]
+	Updated print/ghostscript-agpl to 9.53.0 [leot 2020-09-13]
