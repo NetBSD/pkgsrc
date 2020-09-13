@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5142 2020/09/13 04:58:41 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5143 2020/09/13 07:19:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7779,3 +7779,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added games/q5go version 1.1.1 [wiz 2020-09-12]
 	Updated x11/deforaos-panel to 0.4.1 [khorben 2020-09-13]
 	Updated x11/deforaos-integration to 0.1.1 [khorben 2020-09-13]
+	Updated archivers/arqiver to 0.6.1 [pin 2020-09-13]
