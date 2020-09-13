@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/06/07 06:31:20 taca Exp $
+$NetBSD: distinfo,v 1.5 2020/09/13 15:38:41 taca Exp $
 
-SHA1 (cucumber-cucumber-expressions-10.2.0.gem) = 8339fb2c8bca38ad88b66d20f9cd28ef9dfa8f02
-RMD160 (cucumber-cucumber-expressions-10.2.0.gem) = fcfde1257595773c11a68d05fd16668cccfe9046
-SHA512 (cucumber-cucumber-expressions-10.2.0.gem) = 9996bc084d10a56f7efe70220b4a0496fb540e4f288c1819be458d6e9e58443749dfb5e1ba6c6bfd36a95a8de51067cf27285ad175ebc9e0404233fdd4bfdba2
-Size (cucumber-cucumber-expressions-10.2.0.gem) = 22528 bytes
+SHA1 (cucumber-cucumber-expressions-10.3.0.gem) = 408954c20c2ae021a79741d1e8a72bc0370ae92f
+RMD160 (cucumber-cucumber-expressions-10.3.0.gem) = 8879dbb7f1b2740c70649b3801ba897edd8bf7b6
+SHA512 (cucumber-cucumber-expressions-10.3.0.gem) = d560c62f625f6b284a94974cef5227a3623fead9c8c4f45ea9fed2300b37c405ba69161d6c6f5e159b2a36be5eeb05b122789cafcafec0dc84efbb366bd0166f
+Size (cucumber-cucumber-expressions-10.3.0.gem) = 23552 bytes
