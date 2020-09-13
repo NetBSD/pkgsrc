@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5162 2020/09/13 10:51:43 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5163 2020/09/13 10:52:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7799,3 +7799,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/libxkbcommon to 1.0.1 [wiz 2020-09-13]
 	Updated devel/orc to 0.4.32 [wiz 2020-09-13]
 	Updated mail/thunderbird to 78.2.2 [ryoon 2020-09-13]
+	Updated mail/thunderbird-l10n to 78.2.2 [ryoon 2020-09-13]
