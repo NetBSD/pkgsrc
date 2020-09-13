@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/08/03 21:31:30 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2020/09/13 11:05:01 wiz Exp $
 
-DISTNAME=	hg-evolve-10.0.1
+DISTNAME=	hg-evolve-10.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
