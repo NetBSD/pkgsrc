@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/18 15:18:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/09/13 15:36:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -34,7 +34,6 @@ ${GEM_LIBDIR}/lib/cucumber/core/test/step.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/tag.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/timer.rb
 ${GEM_LIBDIR}/lib/cucumber/core/version.rb
-${GEM_LIBDIR}/spec/capture_warnings.rb
 ${GEM_LIBDIR}/spec/coverage.rb
 ${GEM_LIBDIR}/spec/cucumber/core/compiler_spec.rb
 ${GEM_LIBDIR}/spec/cucumber/core/event_bus_spec.rb
