@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2020/09/07 09:45:15 wiz Exp $
+$NetBSD: distinfo,v 1.31 2020/09/13 07:49:44 wiz Exp $
 
-SHA1 (PPIx-Regexp-0.073.tar.gz) = 787bb0727252163cfaf946d3e66c9a1593de57d3
-RMD160 (PPIx-Regexp-0.073.tar.gz) = 344921c307f1abae23e71ca4a7324be41c3c0b43
-SHA512 (PPIx-Regexp-0.073.tar.gz) = 5f0e1f3c7896dbb0597193b8c939290a30b38fccded0e3a9b3c6253affc5bc1d40f4ebf4389dcb6360772c45bdf787d9beb9222a1d25f56b9f4f04b062be8e5b
-Size (PPIx-Regexp-0.073.tar.gz) = 233740 bytes
+SHA1 (PPIx-Regexp-0.074.tar.gz) = 88e81f5ad4db87f1160cc5575eeb53e349138fe8
+RMD160 (PPIx-Regexp-0.074.tar.gz) = e89c8c5c87e616dd244a06f3cbad4857211c50f5
+SHA512 (PPIx-Regexp-0.074.tar.gz) = ac4ca82b76ed382be304fdfda6f033e005ed03fe741d40c728a496a6fe92b23449ff5266623acf4992eea544e69c74a1b31952be5797714734a7f3cdfafad556
+Size (PPIx-Regexp-0.074.tar.gz) = 232558 bytes
