@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/05/25 13:34:53 taca Exp $
+$NetBSD: distinfo,v 1.3 2020/09/13 15:56:58 taca Exp $
 
-SHA1 (pastel-0.7.4.gem) = 68ea8b694964603d54254ad2d7c6caa5b6d93603
-RMD160 (pastel-0.7.4.gem) = cb12f85c69ebdc437f8872b506ce5519babec21b
-SHA512 (pastel-0.7.4.gem) = 162d835d1eaf1bd011097063b2ee7d33b0a0da2db2ead88c1f6d0e31db27823e2a964fbc8ddddf57abae03871a6f80b4e9cf41389e8b3ae755ffc421fb4181a0
-Size (pastel-0.7.4.gem) = 15360 bytes
+SHA1 (pastel-0.8.0.gem) = 67c7bbaeb9e5a178ea3c6bbbc043dcb1d40a5416
+RMD160 (pastel-0.8.0.gem) = e8a895252b040b3551a0741d48d98dba00f3c7dc
+SHA512 (pastel-0.8.0.gem) = fb6bb1be1af633e68bd5bb50b5dcc4d2e3b7e53607f883155288bcaf4306fbfea1ed044b8a13d9212f36cd42fa6aaec7a9011faad0b6c99b84f00057aa91b67f
+Size (pastel-0.8.0.gem) = 15872 bytes
