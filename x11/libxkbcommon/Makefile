@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/01/27 10:53:28 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2020/09/13 09:25:37 wiz Exp $
 
-DISTNAME=	libxkbcommon-0.10.0
+DISTNAME=	libxkbcommon-1.0.1
 CATEGORIES=	x11
 MASTER_SITES=	https://xkbcommon.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -29,5 +29,6 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./xkbcommon-x11.map
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.10
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
