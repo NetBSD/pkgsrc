@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/03/08 13:28:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/09/13 15:16:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -407,6 +407,7 @@ ${GEM_LIBDIR}/lib/backports/2.3.0/hash/to_proc.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/numeric.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/numeric/negative.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/numeric/positive.rb
+${GEM_LIBDIR}/lib/backports/2.3.0/string.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/string/uminus.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/string/uplus.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/struct.rb
