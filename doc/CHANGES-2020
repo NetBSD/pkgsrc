@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5170 2020/09/13 14:04:10 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5171 2020/09/13 14:08:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7807,3 +7807,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/p5-PerlMagick to 7.0.10.29 [wiz 2020-09-13]
 	Updated devel/MoarVM to 2020.05 [mef 2020-09-13]
 	Updated lang/nqp to 2020.05 [mef 2020-09-13]
+	Updated devel/MoarVM to 2020.08 [mef 2020-09-13]
