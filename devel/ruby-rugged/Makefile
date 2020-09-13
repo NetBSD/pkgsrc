@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2020/04/27 07:04:14 taca Exp $
+# $NetBSD: Makefile,v 1.25 2020/09/13 16:07:08 taca Exp $
 
-DISTNAME=	rugged-1.0.0
+DISTNAME=	rugged-1.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
