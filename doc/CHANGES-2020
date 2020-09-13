@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5167 2020/09/13 13:29:34 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5168 2020/09/13 13:29:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7804,3 +7804,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-hg-evolve to 10.0.2 [wiz 2020-09-13]
 	Updated graphics/jbig2dec to 0.19 [leot 2020-09-13]
 	Updated graphics/ImageMagick to 7.0.10.29 [wiz 2020-09-13]
+	Updated graphics/p5-PerlMagick to 7.0.10.29 [wiz 2020-09-13]
