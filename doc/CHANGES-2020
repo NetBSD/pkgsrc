@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5147 2020/09/13 07:51:23 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5148 2020/09/13 07:54:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7784,3 +7784,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Log-Log4perl to 1.52 [wiz 2020-09-13]
 	Updated devel/p5-PPIx-Regexp to 0.074 [wiz 2020-09-13]
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9913 [wiz 2020-09-13]
+	Updated devel/p5-Perl-Tidy to 20200907 [wiz 2020-09-13]
