@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5186 2020/09/13 15:20:48 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5187 2020/09/13 15:22:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7823,3 +7823,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hoe to 3.22.2 [taca 2020-09-13]
 	Updated devel/ruby-backports to 3.18.2 [taca 2020-09-13]
 	Updated devel/ruby-ffi-yajl to 2.3.4 [taca 2020-09-13]
+	Updated devel/ruby-concurrent-ruby to 1.1.7 [taca 2020-09-13]
