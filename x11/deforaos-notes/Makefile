@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2020/08/17 20:20:24 leot Exp $
+# $NetBSD: Makefile,v 1.16 2020/09/13 21:19:06 khorben Exp $
 
 DISTNAME=	Notes-0.2.0
 PKGNAME=	deforaos-notes-0.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Notes/
 
@@ -38,7 +38,6 @@ post-install:
 .include "options.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../mail/deforaos-mailer/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
