@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/15 17:16:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/13 16:14:19 taca Exp $
 bin/gherkin-ruby${RUBY_SUFFIX}
 bin/gherkin${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -24,7 +24,9 @@ ${GEM_LIBDIR}/lib/gherkin/token_matcher.rb
 ${GEM_LIBDIR}/lib/gherkin/token_scanner.rb
 ${GEM_LIBDIR}/spec/capture_warnings.rb
 ${GEM_LIBDIR}/spec/gherkin/dialect_spec.rb
+${GEM_LIBDIR}/spec/gherkin/gherkin_line_spec.rb
 ${GEM_LIBDIR}/spec/gherkin/gherkin_spec.rb
+${GEM_LIBDIR}/spec/gherkin/parser_spec.rb
 ${GEM_LIBDIR}/spec/gherkin/query_spec.rb
 ${GEM_LIBDIR}/spec/gherkin/stream/parser_message_stream_spec.rb
 ${GEM_LIBDIR}/spec/gherkin/stream/subprocess_message_stream_spec.rb
