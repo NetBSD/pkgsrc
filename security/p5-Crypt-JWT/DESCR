@@ -1,0 +1,9 @@
+This perl module implements JSON Web Token (JWT). The implementation
+covers not only JSON Web Signature (JWS), but also JSON Web Encryption
+(JWE).
+
+The module implements all algorithms defined in JSON Web Algorithms
+(JWA).
+
+This module supports Compact JWS/JWE and Flattened JWS/JWE JSON
+serialization, general JSON serialization is not supported yet.
