@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 15:06:12 taca Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/13 15:01:40 taca Exp $
 
-DISTNAME=	mixlib-archive-1.0.5
+DISTNAME=	mixlib-archive-1.0.7
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
