@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5179 2020/09/13 15:02:05 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5180 2020/09/13 15:05:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7816,3 +7816,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-bundler1 to 1.17.3nb2 [taca 2020-09-13]
 	Updated archivers/ruby-ffi-libarchive to 1.0.4 [taca 2020-09-13]
 	Updated archivers/ruby-mixlib-archive to 1.0.7 [taca 2020-09-13]
+	Updated databases/ruby-activeldap to 6.0.3 [taca 2020-09-13]
