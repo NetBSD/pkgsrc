@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5144 2020/09/13 07:46:46 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5145 2020/09/13 07:48:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7781,3 +7781,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/deforaos-integration to 0.1.1 [khorben 2020-09-13]
 	Updated archivers/arqiver to 0.6.1 [pin 2020-09-13]
 	Updated devel/p5-Alien-Build to 2.32 [wiz 2020-09-13]
+	Updated devel/p5-Log-Log4perl to 1.52 [wiz 2020-09-13]
