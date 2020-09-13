@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5174 2020/09/13 14:28:52 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5175 2020/09/13 14:53:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7811,3 +7811,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/ghostscript-agpl to 9.53.0 [leot 2020-09-13]
 	Updated fonts/ghostscript-cidfonts-ryumin to 9.53.0 [leot 2020-09-13]
 	Updated lang/nqp to 2020.08.2 [mef 2020-09-13]
+	Updated www/ruby-rails52 to 5.2.4.4nb1 [taca 2020-09-13]
