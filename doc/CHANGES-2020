@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5160 2020/09/13 09:25:47 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5161 2020/09/13 09:27:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7797,3 +7797,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/enchant2 to 2.2.11 [wiz 2020-09-13]
 	Updated security/libssh to 0.95 [wiz 2020-09-13]
 	Updated x11/libxkbcommon to 1.0.1 [wiz 2020-09-13]
+	Updated devel/orc to 0.4.32 [wiz 2020-09-13]
