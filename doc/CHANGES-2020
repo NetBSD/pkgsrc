@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5196 2020/09/13 15:55:22 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5197 2020/09/13 15:57:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7833,3 +7833,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-logging to 2.3.0 [taca 2020-09-13]
 	Updated devel/ruby-minitest to 5.14.2 [taca 2020-09-13]
 	Updated devel/ruby-parser to 3.15.0 [taca 2020-09-13]
+	Updated devel/ruby-pastel to 0.8.0 [taca 2020-09-13]
