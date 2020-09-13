@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/09/08 13:09:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/09/13 09:13:45 wiz Exp $
 
-DISTNAME=	FusionInventory-Agent-2.3.21
+DISTNAME=	FusionInventory-Agent-2.5
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GB/GBOUGARD/}
 
@@ -14,6 +13,9 @@ LICENSE=	gnu-gpl-v2
 PKG_SYSCONFSUBDIR?=	fusioninventory
 EGDIR=			${PREFIX}/share/examples/fusioninventory
 CONF_FILES+=		${EGDIR}/agent.cfg ${PKG_SYSCONFDIR}/agent.cfg
+CONF_FILES+=		${EGDIR}/inventory-server-plugin.cfg ${PKG_SYSCONFDIR}/inventory-server-plugin.cfg
+CONF_FILES+=		${EGDIR}/server-test-plugin.cfg ${PKG_SYSCONFDIR}/server-test-plugin.cfg
+CONF_FILES+=		${EGDIR}/ssl-server-plugin.cfg ${PKG_SYSCONFDIR}/ssl-server-plugin.cfg
 
 BUILD_DEFS+=	VARBASE
 
@@ -47,7 +49,7 @@ PERL5_MODULE_TYPE=	Module::Install::Bundled
 MAKE_PARAMS+=	PREFIX=${PREFIX} LOCALSTATEDIR=${VARBASE}/fusioninventory
 MAKE_PARAMS+=	SYSCONFDIR=${PKG_SYSCONFDIR} PKGMANDIR=${PKGMANDIR}
 
-MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+USE_TOOLS+=	perl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
