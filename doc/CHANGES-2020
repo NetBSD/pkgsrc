@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5193 2020/09/13 15:50:36 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5194 2020/09/13 15:52:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7830,3 +7830,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-cucumber-wire to 4.0.1 [taca 2020-09-13]
 	Removed devel/ruby-google-protobuf [taca 2020-09-13]
 	Updated devel/ruby-i18n to 1.8.5 [taca 2020-09-13]
+	Updated devel/ruby-logging to 2.3.0 [taca 2020-09-13]
