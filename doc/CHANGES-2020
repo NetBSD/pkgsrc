@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5150 2020/09/13 07:57:48 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5151 2020/09/13 08:06:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7787,3 +7787,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Perl-Tidy to 20200907 [wiz 2020-09-13]
 	Updated devel/p5-Sub-HandlesVia to 0.015 [wiz 2020-09-13]
 	Updated mail/p5-Mail-DKIM to 1.20200907 [wiz 2020-09-13]
+	Updated net/p5-Net-DNS to 1.27 [wiz 2020-09-13]
