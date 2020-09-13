@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5152 2020/09/13 08:07:28 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5153 2020/09/13 08:17:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7789,3 +7789,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/p5-Mail-DKIM to 1.20200907 [wiz 2020-09-13]
 	Updated net/p5-Net-DNS to 1.27 [wiz 2020-09-13]
 	Updated textproc/p5-YAML-PP to 0.026 [wiz 2020-09-13]
+	Added security/p5-Crypt-JWT version 0.029 [wiz 2020-09-13]
