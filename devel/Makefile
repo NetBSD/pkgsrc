@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3244 2020/09/10 16:50:13 taca Exp $
+# $NetBSD: Makefile,v 1.3245 2020/09/13 15:43:18 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2752,7 +2752,6 @@ SUBDIR+=	ruby-gio2
 SUBDIR+=	ruby-glib2
 SUBDIR+=	ruby-globalid
 SUBDIR+=	ruby-gobject-introspection
-SUBDIR+=	ruby-google-protobuf
 SUBDIR+=	ruby-hashery
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
