@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19 2019/11/06 12:30:50 wiz Exp $
+$NetBSD: distinfo,v 1.20 2020/09/13 09:27:07 wiz Exp $
 
-SHA1 (orc-0.4.31.tar.xz) = 5d714f43f6c8a5d909b5f483e2e70447d6fe478a
-RMD160 (orc-0.4.31.tar.xz) = dc411fa9b2e6359924f51c9eae89e6a07fbe699b
-SHA512 (orc-0.4.31.tar.xz) = 4e97597e70982dbfc239d1ef9a8913b0155e5aaac15d91162d7f73a1095bd944e27fbe6d6194b9f74af07b985a44b1d9dddbe917425e1ad9e8da17ce86495696
-Size (orc-0.4.31.tar.xz) = 177768 bytes
+SHA1 (orc-0.4.32.tar.xz) = 1a0ff7f917913d6fabbc9ecea56496361ff7f3bf
+RMD160 (orc-0.4.32.tar.xz) = ce932fd372795226899c47b681455efefe448180
+SHA512 (orc-0.4.32.tar.xz) = 63e2ab05bc23e07cd5c1ed3192515ec3b1f666abb4f9ea5de4bd72461f3a5d7066860e2ad38f35d0acd81fadfa06f2a18d61838eae89c74dec6a78099a343567
+Size (orc-0.4.32.tar.xz) = 180340 bytes
 SHA1 (patch-ab) = 8536500f42ed59f9159597e2b7d51772d103faa5
