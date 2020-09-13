@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2020/08/17 20:18:41 leot Exp $
+# $NetBSD: Makefile,v 1.32 2020/09/13 14:16:31 leot Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 DISTFILES=	# empty
-PKGREVISION=	23
 CATEGORIES=	fonts
 
 MAINTAINER=	makoto@ki.nu
@@ -32,6 +31,7 @@ SUBST_STAGE.ttf_path=	post-build
 SUBST_MESSAGE.ttf_path=	Fixing ttf install directory in cidfmap
 SUBST_FILES.ttf_path=	${GS_CIDFMAP}
 SUBST_SED.ttf_path=	-e 's|%%PREFIX%%|${PREFIX}|'
+SUBST_NOOP_OK.ttf_path=	yes
 .endif
 
 # To edit %%PREFIX%% in cidfmap before installation by SUBST,
