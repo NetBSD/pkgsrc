@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5188 2020/09/13 15:34:22 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5189 2020/09/13 15:37:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7825,3 +7825,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-ffi-yajl to 2.3.4 [taca 2020-09-13]
 	Updated devel/ruby-concurrent-ruby to 1.1.7 [taca 2020-09-13]
 	Updated devel/ruby-cucumber-messages to 13.0.1 [taca 2020-09-13]
+	Updated devel/ruby-cucumber-core to 8.0.1 [taca 2020-09-13]
