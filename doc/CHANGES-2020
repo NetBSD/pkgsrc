@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5200 2020/09/13 16:07:46 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5201 2020/09/13 16:14:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7837,3 +7837,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-pkg-config to 1.4.2 [taca 2020-09-13]
 	Updated devel/ruby-posix-spawn to 0.3.15 [taca 2020-09-13]
 	Updated devel/ruby-rugged to 1.0.1 [taca 2020-09-13]
+	Updated lang/ruby-cucumber-gherkin to 15.0.2 [taca 2020-09-13]
