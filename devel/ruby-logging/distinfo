@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2017/04/22 16:22:56 taca Exp $
+$NetBSD: distinfo,v 1.12 2020/09/13 15:52:06 taca Exp $
 
-SHA1 (logging-2.2.2.gem) = e479c395bbed64429620d004198d0267ff3fc4cc
-RMD160 (logging-2.2.2.gem) = 99feff3e439d9b59f04edd303e8c8681fc274ac6
-SHA512 (logging-2.2.2.gem) = 9eeaec06f61dec5f79b7b656b77504026d6d91baea52594fa508f1587a8300ebb3d5c30461c7b4a41eb86f7b98530e4f6ab7853946fa14f00b84884be780b64a
-Size (logging-2.2.2.gem) = 87552 bytes
+SHA1 (logging-2.3.0.gem) = b35cf3d50819a51398ff764d0d2a9de689415e2a
+RMD160 (logging-2.3.0.gem) = f0ad0f8d79b1231860b41d2e86ff247d929ea71e
+SHA512 (logging-2.3.0.gem) = 32c0c3570022b2bdaf91fa11c3401bae0069f0450f1c5bc7063ab897e8e542eb4bf2952e533b5189b1f132f8b6a3931a52d8069b27090538ff0772754f154796
+Size (logging-2.3.0.gem) = 89088 bytes
