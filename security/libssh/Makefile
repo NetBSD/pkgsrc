@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2020/09/02 11:45:51 nia Exp $
+# $NetBSD: Makefile,v 1.39 2020/09/13 09:22:57 wiz Exp $
 #
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
 
-VER=		0.9.4
+VER=		0.9.5
 DISTNAME=	libssh-${VER}
-PKGNAME=	libssh-0.94
-PKGREVISION=	1
+PKGNAME=	libssh-0.95
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh.org/files/${VER:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,7 @@ USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE+=	libssh.pc.cmake
 TEST_TARGET=		test
 
-CONFIGURE_DIRS=		${WRKDIR}/build
+CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=		-DUNIT_TESTING=ON
 CMAKE_ARGS+=		-DWITH_EXAMPLES=OFF
@@ -33,7 +32,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=strict-overflow
 .include "options.mk"
 
 post-extract:
-	${MKDIR} ${WRKDIR}/build
+	${MKDIR} ${WRKSRC}/build
 
 .include "../../devel/argp/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
