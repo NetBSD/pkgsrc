@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5140 2020/09/12 22:14:24 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5141 2020/09/13 04:33:00 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7777,3 +7777,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/amazon-ecs-cli version 1.20.0 [leot 2020-09-12]
 	Updated textproc/ugrep to 2.5.5 [wiz 2020-09-12]
 	Added games/q5go version 1.1.1 [wiz 2020-09-12]
+	Updated x11/deforaos-panel to 0.4.1 [khorben 2020-09-13]
