@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5157 2020/09/13 09:13:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5158 2020/09/13 09:19:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7794,3 +7794,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Catalyst-Runtime to 5.90128 [wiz 2020-09-13]
 	Updated www/p5-HTTP-Message to 6.26 [wiz 2020-09-13]
 	Updated net/p5-FusionInventory-Agent to 2.5 [wiz 2020-09-13]
+	Updated textproc/enchant2 to 2.2.11 [wiz 2020-09-13]
