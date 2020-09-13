@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.16 2020/09/12 22:51:10 khorben Exp $
+$NetBSD: distinfo,v 1.17 2020/09/13 04:32:35 khorben Exp $
 
-SHA1 (Panel-0.4.0.tar.gz) = decc1a10808184bea07ac0b34b960c30ffc952da
-RMD160 (Panel-0.4.0.tar.gz) = 3fe467c8ab6401eaaa40ab2a5f6a3c3a89f98fe7
-SHA512 (Panel-0.4.0.tar.gz) = b0de763fe6c905293a2821e99c4d894520030512653379d35e0794a2f9d3a23e1895f54d10397f479684b361a24e8c122d1f9fea73a9865160df183c9eb1dc2d
-Size (Panel-0.4.0.tar.gz) = 158643 bytes
-SHA1 (patch-data_Panel.pc.in) = 7b68412fa282e819a0d24747eab6c05c86be2a3f
+SHA1 (Panel-0.4.1.tar.gz) = b98086d00891013e0c42d35c06434ab80bdec974
+RMD160 (Panel-0.4.1.tar.gz) = ff8d3338f0782ddcf6611a1b4fa3afc465f37efa
+SHA512 (Panel-0.4.1.tar.gz) = 2af6c8a61fd17a606dd32a481099d49e655382e96f26bd48f6e9029e44f5c7151d521ec039912f7bbec92e5e9e07b84499633316e41860b2d897aa3276fd6217
+Size (Panel-0.4.1.tar.gz) = 158083 bytes
