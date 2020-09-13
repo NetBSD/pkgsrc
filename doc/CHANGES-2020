@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5182 2020/09/13 15:11:33 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5183 2020/09/13 15:13:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7819,3 +7819,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/ruby-activeldap to 6.0.3 [taca 2020-09-13]
 	Updated databases/ruby-moneta to 1.4.0 [taca 2020-09-13]
 	Updated databases/ruby-ldap to 0.9.20 [taca 2020-09-13]
+	Updated databases/ruby-sequel to 5.36.0 [taca 2020-09-13]
