@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.58 2020/08/31 18:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2020/09/13 14:16:30 leot Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
-PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ArtifexSoftware/}
 GITHUB_PROJECT=	ghostpdl-downloads
-GITHUB_RELEASE=	gs${GS_VERSION:S/.//}
+GITHUB_RELEASE=	gs${GS_VERSION:S/.//g}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -111,10 +110,7 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.10.0
 .include "../../graphics/freetype2/buildlink3.mk"
-# XXX: Strictly speaking jbig2dec>=0.16, however now jbig2dec is only checked
-# XXX: via pkg-config and jbig2dec-0.17 is the first version that provides a
-# XXX: .pc file.
-BUILDLINK_API_DEPENDS.jbig2dec+=	jbig2dec>=0.17
+BUILDLINK_API_DEPENDS.jbig2dec+=	jbig2dec>=0.19
 .include "../../graphics/jbig2dec/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
