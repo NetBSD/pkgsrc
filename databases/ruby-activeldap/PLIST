@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/26 08:37:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/09/13 15:05:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING
@@ -101,6 +101,7 @@ ${GEM_LIBDIR}/test/add-phonetic-attribute-options-to-slapd.ldif
 ${GEM_LIBDIR}/test/al-test-utils.rb
 ${GEM_LIBDIR}/test/command.rb
 ${GEM_LIBDIR}/test/config.yaml.sample
+${GEM_LIBDIR}/test/enable-dynamic-groups.ldif
 ${GEM_LIBDIR}/test/enable-start-tls.ldif
 ${GEM_LIBDIR}/test/fixtures/lower_case_object_class_schema.rb
 ${GEM_LIBDIR}/test/run-test.rb

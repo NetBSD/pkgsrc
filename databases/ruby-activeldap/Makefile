@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2020/05/21 16:09:04 taca Exp $
+# $NetBSD: Makefile,v 1.23 2020/09/13 15:05:13 taca Exp $
 
-DISTNAME=	activeldap-6.0.2
+DISTNAME=	activeldap-6.0.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/activeldap-/activeldap${RUBY_RAILS}-/}
 CATEGORIES=	databases
 
