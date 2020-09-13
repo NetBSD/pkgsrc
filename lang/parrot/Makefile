@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2020/08/31 18:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2020/09/13 12:59:25 mef Exp $
 #
 
 DISTNAME=		parrot-${PARROT_VERSION}
@@ -51,6 +51,12 @@ PLIST_SRC+=		${PLIST_SRC_DFLT}
 .if (${OPSYS} != "Darwin")
 PLIST_SRC+=		PLIST.shared
 .endif
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-patch
+SUBST_MESSAGE.path=	To avoid work/.tools/bin/perl recorded in installation
+SUBST_FILES.path=	config/gen/config_pm/myconfig.in
+SUBST_SED.path=		-e 's,@perl@,${PREFIX}/bin/perl,'
 
 REPLACE_PERL+=		tools/build/ops2c.pl
 REPLACE_PERL+=		tools/build/pmc2c.pl
