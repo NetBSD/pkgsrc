@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/03/24 16:34:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/09/13 14:16:30 leot Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -32,8 +32,8 @@ include/ghostscript/gserrors.h
 include/ghostscript/iapi.h
 include/ghostscript/ierrors.h
 lib/libgs.so
-lib/libgs.so.${PKGVERSION}
 lib/libgs.so.9
+lib/libgs.so.9.53
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
 man/de/man1/gsnd.1
@@ -478,12 +478,9 @@ share/ghostscript/${PKGVERSION}/lib/cdj550.upp
 share/ghostscript/${PKGVERSION}/lib/cdj690.upp
 share/ghostscript/${PKGVERSION}/lib/cdj690ec.upp
 share/ghostscript/${PKGVERSION}/lib/cid2code.ps
-share/ghostscript/${PKGVERSION}/lib/dmp_init.ps
-share/ghostscript/${PKGVERSION}/lib/dmp_site.ps
 share/ghostscript/${PKGVERSION}/lib/dnj750c.upp
 share/ghostscript/${PKGVERSION}/lib/dnj750m.upp
 share/ghostscript/${PKGVERSION}/lib/docie.ps
-share/ghostscript/${PKGVERSION}/lib/escp_24.src
 share/ghostscript/${PKGVERSION}/lib/font2pcl.ps
 share/ghostscript/${PKGVERSION}/lib/ghostpdf.ppd
 share/ghostscript/${PKGVERSION}/lib/gs_ce_e.ps
