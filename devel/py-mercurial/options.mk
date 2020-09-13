@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2020/08/05 06:24:32 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2020/09/13 15:09:34 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mercurial
-PKG_SUPPORTED_OPTIONS=		rust
+# 5.5.1 needs some "*-pre" crates that are not available
+PKG_SUPPORTED_OPTIONS=		# rust
 PKG_SUGGESTED_OPTIONS=		# rust
 
 .include "../../mk/bsd.options.mk"
