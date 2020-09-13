@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2020/09/05 12:28:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.79 2020/09/13 10:51:03 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -489,7 +489,14 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/icons/left-align.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/link.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/login.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/mark.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message-encrypted-notok.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message-encrypted-ok.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message-secure.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message-signed-mismatch.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message-signed-ok.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message-signed-unknown.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message-signed-unverified.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message-signed-verified.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/message.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/more.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/move-bottom.svg
@@ -711,23 +718,11 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/shared/preferences/prefere
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/preferences/security.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/searchBox.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/searchDialog.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/shared/smime/smime-compose.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/tabmail.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/themeableDialog.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/smime/certFetchingStatus.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/hdrCryptoNotOk.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/hdrCryptoOk.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/hdrSignNotOk.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/hdrSignOk.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/hdrSignOkUnverified.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/hdrSignOkVerified.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/hdrSignUnknown.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/sbCryptoOk.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/icons/sbSignOk.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/smime/msgCompSecurityInfo.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/msgHdrViewSMIMEOverlay.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/smime/msgReadSecurityInfo.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/smime-compose.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/subscribe.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/tabmail.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/tagColors.css
@@ -2937,11 +2932,13 @@ lib/thunderbird/chrome/devtools/skin/webconsole.css
 lib/thunderbird/chrome/devtools/skin/widgets.css
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
+lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
+lib/thunderbird/chrome/en-US/locale/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
-lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
 ${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
 ${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
+lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-alarms.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-event-dialog-attendees.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-event-dialog.dtd
@@ -3372,6 +3369,8 @@ lib/thunderbird/chrome/marionette/content/sync.js
 lib/thunderbird/chrome/marionette/content/transport.js
 ${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
 ${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-logo.png
+lib/thunderbird/chrome/messenger/content/branding/about-background.png
+lib/thunderbird/chrome/messenger/content/branding/about-logo.png
 lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.svg
 lib/thunderbird/chrome/messenger/content/branding/about.png
@@ -4324,7 +4323,6 @@ lib/thunderbird/chrome/openpgp/content/openpgp/modules/fixExchangeMsg.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/funcs.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/glodaUtils.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/gpg.jsm
-lib/thunderbird/chrome/openpgp/content/openpgp/modules/httpProxy.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/key.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/keyLookupHelper.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/keyObj.jsm
@@ -5979,7 +5977,6 @@ lib/thunderbird/modules/themes/light/icon.svg
 lib/thunderbird/modules/themes/light/manifest.json
 lib/thunderbird/modules/third_party/fathom/fathom.jsm
 lib/thunderbird/modules/third_party/jsesc/jsesc.js
-lib/thunderbird/modules/twitter-text.jsm
 lib/thunderbird/modules/twitter.jsm
 lib/thunderbird/modules/txEXSLTRegExFunctions.jsm
 lib/thunderbird/modules/vtt.jsm

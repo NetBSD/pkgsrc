@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.257 2020/09/05 12:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.258 2020/09/13 10:51:03 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		78.2.1
+TB_VER=		78.2.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +16,8 @@ USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
 MOZILLA_DIR=	# empty
 PLIST_SRC+=	${PLIST_SRC_DFLT}
+
+DEPENDS+=	libotr-[0-9]*:../../chat/libotr
 
 ALL_ENV+=	MOZ_APP_NAME=${MOZILLA_NAME}
 
