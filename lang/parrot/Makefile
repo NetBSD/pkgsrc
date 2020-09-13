@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2020/09/13 12:59:25 mef Exp $
+# $NetBSD: Makefile,v 1.102 2020/09/13 13:03:37 mef Exp $
 #
 
 DISTNAME=		parrot-${PARROT_VERSION}
@@ -53,7 +53,7 @@ PLIST_SRC+=		PLIST.shared
 .endif
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	pre-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	To avoid work/.tools/bin/perl recorded in installation
 SUBST_FILES.path=	config/gen/config_pm/myconfig.in
 SUBST_SED.path=		-e 's,@perl@,${PREFIX}/bin/perl,'
