@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5154 2020/09/13 08:44:50 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5155 2020/09/13 08:58:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7791,3 +7791,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-YAML-PP to 0.026 [wiz 2020-09-13]
 	Added security/p5-Crypt-JWT version 0.029 [wiz 2020-09-13]
 	Updated www/p5-Catalyst-Devel to 1.42 [wiz 2020-09-13]
+	Updated www/p5-Catalyst-Runtime to 5.90128 [wiz 2020-09-13]
