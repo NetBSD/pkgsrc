@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/04/27 15:38:48 taca Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/14 16:31:12 taca Exp $
 
-DISTNAME=	license-acceptance-1.0.19
+DISTNAME=	license-acceptance-2.1.2
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,8 +10,8 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-pastel>=0.7<1:../../devel/ruby-pastel
 DEPENDS+=	${RUBY_PKGPREFIX}-tomlrb>=1.2<2:../../devel/ruby-tomlrb
-DEPENDS+=	${RUBY_PKGPREFIX}-tty-box>=0.3<1:../../devel/ruby-tty-box
-DEPENDS+=	${RUBY_PKGPREFIX}-tty-prompt>=0.18<1:../../devel/ruby-tty-prompt
+DEPENDS+=	${RUBY_PKGPREFIX}-tty-box>=0.6<1:../../devel/ruby-tty-box
+DEPENDS+=	${RUBY_PKGPREFIX}-tty-prompt>=0.20<1:../../devel/ruby-tty-prompt
 
 USE_LANGUAGES=	# none
 
