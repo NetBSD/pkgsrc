@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5219 2020/09/14 13:18:58 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5220 2020/09/14 13:21:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7858,3 +7858,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-zeitwerk to 2.4.0 [taca 2020-09-14]
 	Updated graphics/ruby-chunky_png to 1.3.12 [taca 2020-09-14]
 	Updated graphics/ruby-image_size to 2.1.0 [taca 2020-09-14]
+	Updated misc/ruby-slop to 4.8.2 [taca 2020-09-14]
