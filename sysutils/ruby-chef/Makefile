@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/05/25 15:12:57 taca Exp $
+# $NetBSD: Makefile,v 1.16 2020/09/14 16:59:37 taca Exp $
 
 DISTNAME=	chef-16.0.287
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -37,12 +38,13 @@ DEPENDS+=	${RUBY_PKGPREFIX}-plist>=3.2<4:../../textproc/ruby-plist
 DEPENDS+=	${RUBY_PKGPREFIX}-iniparse>=1.4<2:../../devel/ruby-iniparse
 #DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-syslog-logger>=1.6<2:../../sysutils/ruby-syslog-logger
-DEPENDS+=	${RUBY_PKGPREFIX}-uuidtools>=2.1.5<2.2:../../devel/ruby-uuidtools
+DEPENDS+=	${RUBY_PKGPREFIX}-uuidtools>=2.1.5:../../devel/ruby-uuidtools
 DEPENDS+=	${RUBY_PKGPREFIX}-proxifier>=1.0<2:../../net/ruby-proxifier
 DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.10:../../misc/ruby-bundler
 
 USE_LANGUAGES=	# none
 
+OVERRIDE_GEMSPEC+=	uuidtools>=2.1.5
 RUBYGEM_OPTIONS+=	--format-executable
 
 pre-configure:
