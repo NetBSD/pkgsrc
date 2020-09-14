@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/06/02 06:41:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/09/14 20:08:27 adam Exp $
 lib/pkgconfig/Qt5Qml.pc
 lib/pkgconfig/Qt5Quick.pc
 lib/pkgconfig/Qt5QuickTest.pc
@@ -717,6 +717,7 @@ qt5/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickmaskex
 qt5/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticleaffector_p.h
 qt5/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticleemitter_p.h
 qt5/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticleextruder_p.h
+qt5/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticleflatset_p.h
 qt5/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticlegroup_p.h
 qt5/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticlepainter_p.h
 qt5/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticlesmodule_p.h

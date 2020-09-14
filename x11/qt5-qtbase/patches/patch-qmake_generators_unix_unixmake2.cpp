@@ -1,8 +1,8 @@
-$NetBSD: patch-qmake_generators_unix_unixmake2.cpp,v 1.5 2020/01/21 20:25:37 adam Exp $
+$NetBSD: patch-qmake_generators_unix_unixmake2.cpp,v 1.6 2020/09/14 20:08:26 adam Exp $
 
 Append external variables.
 
---- qmake/generators/unix/unixmake2.cpp.orig	2019-12-07 06:27:07.000000000 +0000
+--- qmake/generators/unix/unixmake2.cpp.orig	2020-09-02 10:15:07.000000000 +0000
 +++ qmake/generators/unix/unixmake2.cpp
 @@ -191,12 +191,12 @@ UnixMakefileGenerator::writeMakeParts(QT
      t << "####### Compiler, tools and options\n\n";
@@ -19,9 +19,9 @@ Append external variables.
 +    t << "CXXFLAGS     += " << var("QMAKE_CXXFLAGS") << " $(DEFINES)\n";
 +    t << "INCPATH      +=";
      {
-         QString isystem = var("QMAKE_CFLAGS_ISYSTEM");
          const ProStringList &incs = project->values("INCLUDEPATH");
-@@ -220,8 +220,8 @@ UnixMakefileGenerator::writeMakeParts(QT
+         for(int i = 0; i < incs.size(); ++i) {
+@@ -215,8 +215,8 @@ UnixMakefileGenerator::writeMakeParts(QT
  
      if(!project->isActiveConfig("staticlib")) {
          t << "LINK          = " << var("QMAKE_LINK") << Qt::endl;

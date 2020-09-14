@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/08/31 18:13:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/09/14 20:08:29 adam Exp $
 
 DISTNAME=	qtspeech-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtspeech-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	Qt5 module to make text to speech and speech recognition easy
 
 MAKE_ENV+=		QTDIR=${QTDIR}
