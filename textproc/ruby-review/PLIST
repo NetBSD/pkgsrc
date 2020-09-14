@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/05 06:05:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/09/14 15:10:18 taca Exp $
 bin/review-catalog-converter${RUBY_SUFFIX}
 bin/review-check${RUBY_SUFFIX}
 bin/review-checkdep${RUBY_SUFFIX}
@@ -147,11 +147,11 @@ ${GEM_LIBDIR}/lib/review/template.rb
 ${GEM_LIBDIR}/lib/review/textbuilder.rb
 ${GEM_LIBDIR}/lib/review/textmaker.rb
 ${GEM_LIBDIR}/lib/review/textutils.rb
-${GEM_LIBDIR}/lib/review/tocparser.rb
 ${GEM_LIBDIR}/lib/review/tocprinter.rb
 ${GEM_LIBDIR}/lib/review/topbuilder.rb
 ${GEM_LIBDIR}/lib/review/update.rb
 ${GEM_LIBDIR}/lib/review/version.rb
+${GEM_LIBDIR}/lib/review/volumeprinter.rb
 ${GEM_LIBDIR}/lib/review/webmaker.rb
 ${GEM_LIBDIR}/lib/review/webtocprinter.rb
 ${GEM_LIBDIR}/lib/review/yamlloader.rb
@@ -287,7 +287,6 @@ ${GEM_LIBDIR}/test/test_rstbuilder.rb
 ${GEM_LIBDIR}/test/test_template.rb
 ${GEM_LIBDIR}/test/test_textmaker_cmd.rb
 ${GEM_LIBDIR}/test/test_textutils.rb
-${GEM_LIBDIR}/test/test_tocparser.rb
 ${GEM_LIBDIR}/test/test_topbuilder.rb
 ${GEM_LIBDIR}/test/test_update.rb
 ${GEM_LIBDIR}/test/test_webtocprinter.rb
