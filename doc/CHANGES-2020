@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5256 2020/09/14 15:55:30 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5257 2020/09/14 16:06:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7896,3 +7896,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-sinatra to 2.1.0 [taca 2020-09-14]
 	Updated www/ruby-sinatra-contrib to 2.1.0 [taca 2020-09-14]
 	Updated www/ruby-unicorn to 5.7.0 [taca 2020-09-14]
+	Updated textproc/ruby-multi_json to 1.15.0 [taca 2020-09-14]
