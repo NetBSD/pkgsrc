@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/08/24 08:26:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/09/14 19:57:18 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -947,6 +947,9 @@ ${PYSITELIB}/faker/providers/person/nl_NL/__init__.pyo
 ${PYSITELIB}/faker/providers/person/no_NO/__init__.py
 ${PYSITELIB}/faker/providers/person/no_NO/__init__.pyc
 ${PYSITELIB}/faker/providers/person/no_NO/__init__.pyo
+${PYSITELIB}/faker/providers/person/or_IN/__init__.py
+${PYSITELIB}/faker/providers/person/or_IN/__init__.pyc
+${PYSITELIB}/faker/providers/person/or_IN/__init__.pyo
 ${PYSITELIB}/faker/providers/person/pl_PL/__init__.py
 ${PYSITELIB}/faker/providers/person/pl_PL/__init__.pyc
 ${PYSITELIB}/faker/providers/person/pl_PL/__init__.pyo
@@ -1319,9 +1322,6 @@ ${PYSITELIB}/faker/utils/checksums.pyo
 ${PYSITELIB}/faker/utils/datasets.py
 ${PYSITELIB}/faker/utils/datasets.pyc
 ${PYSITELIB}/faker/utils/datasets.pyo
-${PYSITELIB}/faker/utils/datetime_safe.py
-${PYSITELIB}/faker/utils/datetime_safe.pyc
-${PYSITELIB}/faker/utils/datetime_safe.pyo
 ${PYSITELIB}/faker/utils/decorators.py
 ${PYSITELIB}/faker/utils/decorators.pyc
 ${PYSITELIB}/faker/utils/decorators.pyo
