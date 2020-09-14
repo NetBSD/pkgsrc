@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/02/06 14:54:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/09/14 15:48:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/AUTHORS.md
@@ -23,6 +23,8 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/examples/chat.rb
+${GEM_LIBDIR}/examples/rainbows.conf
+${GEM_LIBDIR}/examples/rainbows.rb
 ${GEM_LIBDIR}/examples/simple.rb
 ${GEM_LIBDIR}/examples/stream.ru
 ${GEM_LIBDIR}/lib/sinatra.rb
