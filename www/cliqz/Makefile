@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/08/31 18:12:32 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2020/09/14 18:19:38 joerg Exp $
 
 DISTNAME=	cliqz-1.38.0
 PKGREVISION=	3
@@ -156,7 +156,7 @@ post-patch:
 	done;
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./magic_build_and_package.sh
+	${RUN}cd ${WRKSRC} && ${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} ./magic_build_and_package.sh
 
 INSTALLATION_DIRS+=	share/applications share/pixmaps bin lib/cliqz
 do-install:
