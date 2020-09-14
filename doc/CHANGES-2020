@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5269 2020/09/14 16:34:04 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5270 2020/09/14 16:38:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7909,3 +7909,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-shoulda-matchers to 4.4.1 [taca 2020-09-14]
 	Updated misc/ruby-license-acceptance to 2.1.2 [taca 2020-09-14]
 	Updated security/ruby-chef-vault to 4.0.11 [taca 2020-09-14]
+	Updated sysutils/ruby-facter to 4.0.37 [taca 2020-09-14]
