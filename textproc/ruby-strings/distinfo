@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 09:31:54 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/09/14 00:08:12 taca Exp $
 
-SHA1 (strings-0.1.8.gem) = e933bfd8d5767670c2b07377488892b54b6a56ce
-RMD160 (strings-0.1.8.gem) = 645005c5cae3b40f36eb22bb9334c48a3cb070e1
-SHA512 (strings-0.1.8.gem) = c3803661d64ca759524677275211b671e981b0297f7e331c386f6d63ffcef7868da1e538eb985c0698f0dc2569358a677135dbd22b66e98c4d001044eed747a3
-Size (strings-0.1.8.gem) = 20992 bytes
+SHA1 (strings-0.2.0.gem) = 706df3792be851c257c25c93a40dac0f24a4ad6b
+RMD160 (strings-0.2.0.gem) = 02f05da9e5875f803ccc1a0328bed6f5c856fbac
+SHA512 (strings-0.2.0.gem) = e7795e0eaeae8a9cc27b1c5963c8fb414d198c79fc4814cee772bb6fd17a0a2b1890545584f94456472fa117a2e909e55c480f722e48d653005cfb24ae1cbc45
+Size (strings-0.2.0.gem) = 14336 bytes
