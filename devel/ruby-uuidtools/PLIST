@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/02 15:28:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/09/14 13:09:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/LICENSE.txt
@@ -19,5 +19,6 @@ ${GEM_LIBDIR}/tasks/git.rake
 ${GEM_LIBDIR}/tasks/metrics.rake
 ${GEM_LIBDIR}/tasks/rspec.rake
 ${GEM_LIBDIR}/tasks/yard.rake
+${GEM_LIBDIR}/uuidtools.gemspec
 ${GEM_LIBDIR}/website/index.html
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
