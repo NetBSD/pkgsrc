@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5249 2020/09/14 15:29:21 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5250 2020/09/14 15:31:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7888,3 +7888,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-capybara to 3.33.0 [taca 2020-09-14]
 	Updated www/ruby-em-http-request to 1.1.7 [taca 2020-09-14]
 	Updated www/ruby-faye-websocket to 0.11.0 [taca 2020-09-14]
+	Updated www/ruby-websocket-driver to 0.7.3 [taca 2020-09-14]
