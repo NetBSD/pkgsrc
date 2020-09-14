@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5274 2020/09/14 19:08:56 tpaul Exp $
+$NetBSD: CHANGES-2020,v 1.5275 2020/09/14 19:39:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7915,3 +7915,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/unixodbc to 2.3.9 [adam 2020-09-14]
 	Updated graphics/jasper to 2.0.20 [adam 2020-09-14]
 	Updated devel/php-composer to 1.10.13 [tpaul 2020-09-14]
+	Updated sysutils/memtester to 4.4.0 [schmonz 2020-09-14]
