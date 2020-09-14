@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:12:29 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/09/14 18:21:36 joerg Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -66,13 +66,6 @@ SUBST_FILES.root_prefix=	bin/fvwm-themes-config-destdir.in
 SUBST_SED.root_prefix=		-e 's|\/^$$ROOT_PREFIX\/\/|\|\^${DESTDIR}\|\||'
 SUBST_STAGE.root_prefix=	pre-configure
 SUBST_MESSAGE.root_prefix=	root_prefix tweak implementing
-
-#### 6 ####
-SUBST_CLASSES+=			theme-cfg
-SUBST_FILES.theme-cfg=		${DESTDIR}${PREFIX}/share/fvwm2/themes/current/theme.cfg
-SUBST_SED.theme-cfg=		-e 's|${WRKDR}/.destdir||'
-SUBST_STAGE.theme-cfg=		post-install
-SUBST_MESSAGE.theme-cfg=	theme-cfg tweak implementing
 
 # Copied from bin/ and add -destdir onto its name.
 # See following two targets.
