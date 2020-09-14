@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/06/07 14:21:52 taca Exp $
+$NetBSD: distinfo,v 1.6 2020/09/14 13:43:10 taca Exp $
 
-SHA1 (recog-2.3.8.gem) = d321be1dda18830ac5c59cc12897366a6cf9d766
-RMD160 (recog-2.3.8.gem) = adc79093ca9af3be9330f15ab7fde2b7d68a9649
-SHA512 (recog-2.3.8.gem) = 09284aea5344cd0b1559e3ffc53c7e3b285608a075f1a96178b748ca193fc9ec09fcf6d9f745d35151a90633b547851f4cdf90a0c878ac9cceb6de567f9ab80e
-Size (recog-2.3.8.gem) = 293376 bytes
+SHA1 (recog-2.3.14.gem) = 2d8e1db2ec0adbd968653f9ebe489ca9dd91d1ac
+RMD160 (recog-2.3.14.gem) = 6b0644768d936b38f3b5d1cb6242055fcc361997
+SHA512 (recog-2.3.14.gem) = 1154ca3d610fe8f554a15846b49f978d3798c9a43893c40d58c8421e8012c0823368d374ecadd351fc1479037c898966dc2dba9debb4c46ce6b743c7782a848f
+Size (recog-2.3.14.gem) = 331776 bytes
