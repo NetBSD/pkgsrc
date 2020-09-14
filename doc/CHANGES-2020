@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5273 2020/09/14 17:47:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5274 2020/09/14 19:08:56 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7914,3 +7914,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-chef to 16.0.287nb1 [taca 2020-09-14]
 	Updated databases/unixodbc to 2.3.9 [adam 2020-09-14]
 	Updated graphics/jasper to 2.0.20 [adam 2020-09-14]
+	Updated devel/php-composer to 1.10.13 [tpaul 2020-09-14]
