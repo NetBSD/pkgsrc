@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5231 2020/09/14 14:00:57 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5232 2020/09/14 14:02:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7870,3 +7870,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-winrm-fs to 1.3.5 [taca 2020-09-14]
 	Updated print/ruby-pdf-core to 0.8.1 [taca 2020-09-14]
 	Updated print/ruby-prawn to 2.3.0 [taca 2020-09-14]
+	Updated security/ruby-bcrypt to 3.1.16 [taca 2020-09-14]
