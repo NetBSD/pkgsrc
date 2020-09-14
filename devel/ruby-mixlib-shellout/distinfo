@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/03/24 17:52:35 taca Exp $
+$NetBSD: distinfo,v 1.12 2020/09/14 16:22:14 taca Exp $
 
-SHA1 (mixlib-shellout-3.0.9.gem) = ec201d9d1581b45f581afd334c2d5f6b727408d0
-RMD160 (mixlib-shellout-3.0.9.gem) = a9c7ba87db7ea73fd90c3561c27488cd753fbebe
-SHA512 (mixlib-shellout-3.0.9.gem) = 0ae1262616447b156fad428d0f05a71f3f1c1c56c098e9031da0af55fd34b627283c4b2088a49fecb8ff6a99dcb4cb86af165c9c8d804c64caa7763162fa4cd9
-Size (mixlib-shellout-3.0.9.gem) = 24576 bytes
+SHA1 (mixlib-shellout-3.1.6.gem) = fe4f71a8a3e617128b74a04ccad400d82fb41997
+RMD160 (mixlib-shellout-3.1.6.gem) = db44dcb4f8a2212d6fa057d80d936c6feffdbeb6
+SHA512 (mixlib-shellout-3.1.6.gem) = 66f86731957a01a262e10404cde24c174cc30c4e12ae3b980eccce221f4b8d6c2bae5107ae01459fd83643f3550e36ae84b1dc9850255d61fefd7f1003ff1ebf
+Size (mixlib-shellout-3.1.6.gem) = 26624 bytes
