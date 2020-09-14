@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/13 18:35:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/14 19:36:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,12 +8,18 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/pamqp/__init__.py
 ${PYSITELIB}/pamqp/__init__.pyc
 ${PYSITELIB}/pamqp/__init__.pyo
+${PYSITELIB}/pamqp/base.py
+${PYSITELIB}/pamqp/base.pyc
+${PYSITELIB}/pamqp/base.pyo
 ${PYSITELIB}/pamqp/body.py
 ${PYSITELIB}/pamqp/body.pyc
 ${PYSITELIB}/pamqp/body.pyo
-${PYSITELIB}/pamqp/codec/__init__.py
-${PYSITELIB}/pamqp/codec/__init__.pyc
-${PYSITELIB}/pamqp/codec/__init__.pyo
+${PYSITELIB}/pamqp/commands.py
+${PYSITELIB}/pamqp/commands.pyc
+${PYSITELIB}/pamqp/commands.pyo
+${PYSITELIB}/pamqp/common.py
+${PYSITELIB}/pamqp/common.pyc
+${PYSITELIB}/pamqp/common.pyo
 ${PYSITELIB}/pamqp/constants.py
 ${PYSITELIB}/pamqp/constants.pyc
 ${PYSITELIB}/pamqp/constants.pyo
@@ -35,6 +41,4 @@ ${PYSITELIB}/pamqp/header.pyo
 ${PYSITELIB}/pamqp/heartbeat.py
 ${PYSITELIB}/pamqp/heartbeat.pyc
 ${PYSITELIB}/pamqp/heartbeat.pyo
-${PYSITELIB}/pamqp/specification.py
-${PYSITELIB}/pamqp/specification.pyc
-${PYSITELIB}/pamqp/specification.pyo
+${PYSITELIB}/pamqp/py.typed
