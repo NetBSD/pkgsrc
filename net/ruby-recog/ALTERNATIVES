@@ -1,3 +1,5 @@
+bin/recog_cleanup @PREFIX@/bin/recog_cleanup@RUBY_SUFFIX@
 bin/recog_export @PREFIX@/bin/recog_export@RUBY_SUFFIX@
 bin/recog_match @PREFIX@/bin/recog_match@RUBY_SUFFIX@
+bin/recog_standardize @PREFIX@/bin/recog_standardize@RUBY_SUFFIX@
 bin/recog_verify @PREFIX@/bin/recog_verify@RUBY_SUFFIX@
