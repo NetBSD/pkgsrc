@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/03/20 14:52:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/09/14 14:00:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING
@@ -31,11 +31,12 @@ ${GEM_LIBDIR}/lib/prawn/document/span.rb
 ${GEM_LIBDIR}/lib/prawn/encoding.rb
 ${GEM_LIBDIR}/lib/prawn/errors.rb
 ${GEM_LIBDIR}/lib/prawn/font.rb
-${GEM_LIBDIR}/lib/prawn/font/afm.rb
-${GEM_LIBDIR}/lib/prawn/font/dfont.rb
-${GEM_LIBDIR}/lib/prawn/font/ttc.rb
-${GEM_LIBDIR}/lib/prawn/font/ttf.rb
 ${GEM_LIBDIR}/lib/prawn/font_metric_cache.rb
+${GEM_LIBDIR}/lib/prawn/fonts/afm.rb
+${GEM_LIBDIR}/lib/prawn/fonts/dfont.rb
+${GEM_LIBDIR}/lib/prawn/fonts/otf.rb
+${GEM_LIBDIR}/lib/prawn/fonts/ttc.rb
+${GEM_LIBDIR}/lib/prawn/fonts/ttf.rb
 ${GEM_LIBDIR}/lib/prawn/graphics.rb
 ${GEM_LIBDIR}/lib/prawn/graphics/blend_mode.rb
 ${GEM_LIBDIR}/lib/prawn/graphics/cap_style.rb
@@ -175,7 +176,6 @@ ${GEM_LIBDIR}/manual/text/win_ansi_charset.rb
 ${GEM_LIBDIR}/prawn.gemspec
 ${GEM_LIBDIR}/spec/data/curves.pdf
 ${GEM_LIBDIR}/spec/extensions/encoding_helpers.rb
-${GEM_LIBDIR}/spec/manual_spec.rb
 ${GEM_LIBDIR}/spec/prawn/document/bounding_box_spec.rb
 ${GEM_LIBDIR}/spec/prawn/document/column_box_spec.rb
 ${GEM_LIBDIR}/spec/prawn/document/security_spec.rb
@@ -213,5 +213,6 @@ ${GEM_LIBDIR}/spec/prawn/text_spec.rb
 ${GEM_LIBDIR}/spec/prawn/text_with_inline_formatting_spec.rb
 ${GEM_LIBDIR}/spec/prawn/transformation_stack_spec.rb
 ${GEM_LIBDIR}/spec/prawn/view_spec.rb
+${GEM_LIBDIR}/spec/prawn_manual_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
