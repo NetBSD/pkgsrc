@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5222 2020/09/14 13:28:43 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5223 2020/09/14 13:30:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7861,3 +7861,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-slop to 4.8.2 [taca 2020-09-14]
 	Updated misc/ruby-sprockets-rails to 3.2.2 [taca 2020-09-14]
 	Updated net/ruby-amq-protocol to 2.3.2 [taca 2020-09-14]
+	Updated net/ruby-dnsruby to 1.61.4 [taca 2020-09-14]
