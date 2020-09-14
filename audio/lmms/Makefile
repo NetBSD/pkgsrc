@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2020/08/18 17:57:37 leot Exp $
+# $NetBSD: Makefile,v 1.66 2020/09/14 12:31:33 nia Exp $
 
 DISTNAME=	lmms_1.2.2
 PKGNAME=	${DISTNAME:S/_/-/1}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	lmms
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://lmms.io/
 COMMENT=	Cross-platform music production software
 LICENSE=	gnu-gpl-v2
