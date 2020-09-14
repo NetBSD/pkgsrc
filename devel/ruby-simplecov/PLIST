@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/03/08 15:25:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/09/14 13:06:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
@@ -21,6 +21,10 @@ ${GEM_LIBDIR}/lib/simplecov/configuration.rb
 ${GEM_LIBDIR}/lib/simplecov/coverage_statistics.rb
 ${GEM_LIBDIR}/lib/simplecov/defaults.rb
 ${GEM_LIBDIR}/lib/simplecov/exit_codes.rb
+${GEM_LIBDIR}/lib/simplecov/exit_codes/exit_code_handling.rb
+${GEM_LIBDIR}/lib/simplecov/exit_codes/maximum_coverage_drop_check.rb
+${GEM_LIBDIR}/lib/simplecov/exit_codes/minimum_coverage_by_file_check.rb
+${GEM_LIBDIR}/lib/simplecov/exit_codes/minimum_overall_coverage_check.rb
 ${GEM_LIBDIR}/lib/simplecov/file_list.rb
 ${GEM_LIBDIR}/lib/simplecov/filter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter.rb
@@ -30,6 +34,7 @@ ${GEM_LIBDIR}/lib/simplecov/last_run.rb
 ${GEM_LIBDIR}/lib/simplecov/lines_classifier.rb
 ${GEM_LIBDIR}/lib/simplecov/load_global_config.rb
 ${GEM_LIBDIR}/lib/simplecov/no_defaults.rb
+${GEM_LIBDIR}/lib/simplecov/process.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/bundler_filter.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/hidden_filter.rb
