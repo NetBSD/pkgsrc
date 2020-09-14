@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/03/20 15:26:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/09/14 14:26:02 taca Exp $
 bin/htmldiff${RUBY_SUFFIX}
 bin/ldiff${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -18,6 +18,7 @@ ${GEM_LIBDIR}/docs/artistic.txt
 ${GEM_LIBDIR}/lib/diff-lcs.rb
 ${GEM_LIBDIR}/lib/diff/lcs.rb
 ${GEM_LIBDIR}/lib/diff/lcs/array.rb
+${GEM_LIBDIR}/lib/diff/lcs/backports.rb
 ${GEM_LIBDIR}/lib/diff/lcs/block.rb
 ${GEM_LIBDIR}/lib/diff/lcs/callbacks.rb
 ${GEM_LIBDIR}/lib/diff/lcs/change.rb
@@ -28,8 +29,15 @@ ${GEM_LIBDIR}/lib/diff/lcs/ldiff.rb
 ${GEM_LIBDIR}/lib/diff/lcs/string.rb
 ${GEM_LIBDIR}/spec/change_spec.rb
 ${GEM_LIBDIR}/spec/diff_spec.rb
+${GEM_LIBDIR}/spec/fixtures/aX
+${GEM_LIBDIR}/spec/fixtures/bXaX
 ${GEM_LIBDIR}/spec/fixtures/ds1.csv
 ${GEM_LIBDIR}/spec/fixtures/ds2.csv
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff-c
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff-e
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff-f
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff-u
 ${GEM_LIBDIR}/spec/hunk_spec.rb
 ${GEM_LIBDIR}/spec/issues_spec.rb
 ${GEM_LIBDIR}/spec/lcs_spec.rb
