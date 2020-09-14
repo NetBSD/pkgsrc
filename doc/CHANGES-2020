@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5275 2020/09/14 19:39:38 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5276 2020/09/14 19:43:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7916,3 +7916,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/jasper to 2.0.20 [adam 2020-09-14]
 	Updated devel/php-composer to 1.10.13 [tpaul 2020-09-14]
 	Updated sysutils/memtester to 4.4.0 [schmonz 2020-09-14]
+	Updated net/py-pamqp to 3.0.1 [adam 2020-09-14]
+	Updated net/py-aio-pika to 6.7.0 [adam 2020-09-14]
