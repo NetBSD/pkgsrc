@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5242 2020/09/14 15:05:54 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5243 2020/09/14 15:10:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7881,3 +7881,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-diff-lcs to 1.4.4 [taca 2020-09-14]
 	Updated sysutils/ruby-specinfra to 2.82.19 [taca 2020-09-14]
 	Updated textproc/ruby-rdiscount to 2.2.0.2 [taca 2020-09-14]
+	Updated textproc/ruby-review to 4.2.0 [taca 2020-09-14]
