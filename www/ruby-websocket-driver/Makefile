@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/06/14 15:51:21 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/14 15:30:58 taca Exp $
 
-DISTNAME=	websocket-driver-0.7.2
+DISTNAME=	websocket-driver-0.7.3
 CATEGORIES=	www
 
 MAINTAINER=	tsutsui@NetBSD.org
