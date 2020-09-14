@@ -1,6 +1,6 @@
-$NetBSD: patch-libgrive_src_protocol_Json.cc,v 1.2 2015/03/10 14:08:02 joerg Exp $
+$NetBSD: patch-libgrive_src_protocol_Json.cc,v 1.3 2020/09/14 18:20:57 joerg Exp $
 
-Update for json-c 0.11 and later
+Update for json-c 0.14 and later
 On NetBSD/ARM, int32_t is not long, so add template specialisation for that.
 
 --- libgrive/src/protocol/Json.cc.orig	2013-05-02 16:40:04.000000000 +0000
@@ -58,3 +58,65 @@ On NetBSD/ARM, int32_t is not long, so add template specialisation for that.
  template <>
  Json::Json( const boost::uint64_t& l ) :
  	m_json( ::json_object_new_int64( l ) )
+@@ -254,7 +282,7 @@ Json Json::operator[]( const std::size_t
+ bool Json::Has( const std::string& key ) const
+ {
+ 	assert( m_json != 0 ) ;
+-	return ::json_object_object_get_ex( m_json, key.c_str(), 0 ) == TRUE ;
++	return ::json_object_object_get_ex( m_json, key.c_str(), 0 );
+ }
+ 
+ bool Json::Get( const std::string& key, Json& json ) const
+@@ -294,14 +322,14 @@ void Json::Add( const Json& json )
+ bool Json::Bool() const
+ {
+ 	assert( m_json != 0 ) ;
+-	return ::json_object_get_boolean( m_json ) == TRUE ;
++	return ::json_object_get_boolean( m_json );
+ }
+ 
+ template <>
+ bool Json::Is<bool>() const
+ {
+ 	assert( m_json != 0 ) ;
+-	return ::json_object_is_type( m_json, json_type_boolean ) == TRUE ;
++	return ::json_object_is_type( m_json, json_type_boolean );
+ }
+ 
+ template <>
+@@ -320,7 +348,7 @@ template <>
+ bool Json::Is<std::string>() const
+ {
+ 	assert( m_json != 0 ) ;
+-	return ::json_object_is_type( m_json, json_type_string ) == TRUE ;
++	return ::json_object_is_type( m_json, json_type_string );
+ }
+ 
+ template <>
+@@ -339,7 +367,7 @@ template <>
+ bool Json::Is<int>() const
+ {
+ 	assert( m_json != 0 ) ;
+-	return ::json_object_is_type( m_json, json_type_int ) == TRUE ;
++	return ::json_object_is_type( m_json, json_type_int );
+ }
+ 
+ template <>
+@@ -402,7 +430,7 @@ template <>
+ bool Json::Is<Json::Object>() const
+ {
+ 	assert( m_json != 0 ) ;
+-	return ::json_object_is_type( m_json, json_type_object ) == TRUE ;
++	return ::json_object_is_type( m_json, json_type_object );
+ }
+ 
+ template <>
+@@ -426,7 +454,7 @@ template <>
+ bool Json::Is<Json::Array>() const
+ {
+ 	assert( m_json != 0 ) ;
+-	return ::json_object_is_type( m_json, json_type_array ) == TRUE ;
++	return ::json_object_is_type( m_json, json_type_array );
+ }
+ 
+ template <>
