@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/03/24 18:19:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/09/14 14:53:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -20,6 +20,7 @@ ${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/crop_text.ps1
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/find_group.ps1
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/find_iis_component.ps1
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/find_installed_application.ps1
+${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/find_installed_gem.ps1
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/find_installed_hot_fix.ps1
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/find_scheduled_task.ps1
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/find_service.ps1
