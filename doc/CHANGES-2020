@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5247 2020/09/14 15:23:23 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5248 2020/09/14 15:26:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7886,3 +7886,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ruby-iso8601 to 0.13.0 [taca 2020-09-14]
 	Updated time/ruby-timers to 4.3.2 [taca 2020-09-14]
 	Updated www/ruby-capybara to 3.33.0 [taca 2020-09-14]
+	Updated www/ruby-em-http-request to 1.1.7 [taca 2020-09-14]
