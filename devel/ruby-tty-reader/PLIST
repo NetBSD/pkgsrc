@@ -1,20 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 14:53:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/14 00:14:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/benchmarks/speed_read_char.rb
-${GEM_LIBDIR}/benchmarks/speed_read_line.rb
-${GEM_LIBDIR}/bin/console
-${GEM_LIBDIR}/bin/setup
-${GEM_LIBDIR}/examples/keypress.rb
-${GEM_LIBDIR}/examples/keypress_nonblock.rb
-${GEM_LIBDIR}/examples/line.rb
-${GEM_LIBDIR}/examples/multi_prompt.rb
-${GEM_LIBDIR}/examples/multiline.rb
-${GEM_LIBDIR}/examples/noecho.rb
-${GEM_LIBDIR}/examples/shell.rb
 ${GEM_LIBDIR}/lib/tty-reader.rb
 ${GEM_LIBDIR}/lib/tty/reader.rb
 ${GEM_LIBDIR}/lib/tty/reader/console.rb
@@ -26,17 +14,4 @@ ${GEM_LIBDIR}/lib/tty/reader/mode.rb
 ${GEM_LIBDIR}/lib/tty/reader/version.rb
 ${GEM_LIBDIR}/lib/tty/reader/win_api.rb
 ${GEM_LIBDIR}/lib/tty/reader/win_console.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/unit/history_spec.rb
-${GEM_LIBDIR}/spec/unit/key_event_spec.rb
-${GEM_LIBDIR}/spec/unit/line_spec.rb
-${GEM_LIBDIR}/spec/unit/publish_keypress_event_spec.rb
-${GEM_LIBDIR}/spec/unit/read_keypress_spec.rb
-${GEM_LIBDIR}/spec/unit/read_line_spec.rb
-${GEM_LIBDIR}/spec/unit/read_multiline_spec.rb
-${GEM_LIBDIR}/spec/unit/subscribe_spec.rb
-${GEM_LIBDIR}/tasks/console.rake
-${GEM_LIBDIR}/tasks/coverage.rake
-${GEM_LIBDIR}/tasks/spec.rake
-${GEM_LIBDIR}/tty-reader.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
