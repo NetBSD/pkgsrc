@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5237 2020/09/14 14:17:35 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5238 2020/09/14 14:23:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7876,3 +7876,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.3 [taca 2020-09-14]
 	Updated security/ruby-rex-text to 0.2.28 [taca 2020-09-14]
 	Updated net/ruby-train-core to 3.3.21 [taca 2020-09-14]
+	Updated sysutils/puppet to 6.18.0 [taca 2020-09-14]
