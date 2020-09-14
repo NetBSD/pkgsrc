@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5239 2020/09/14 14:25:10 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5240 2020/09/14 14:26:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7878,3 +7878,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-train-core to 3.3.21 [taca 2020-09-14]
 	Updated sysutils/puppet to 6.18.0 [taca 2020-09-14]
 	Updated textproc/ruby-csv to 3.1.7 [taca 2020-09-14]
+	Updated textproc/ruby-diff-lcs to 1.4.4 [taca 2020-09-14]
