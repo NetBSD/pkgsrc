@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/21 22:21:03 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/09/14 22:33:46 mef Exp $
 ${HS_INTF}/package-description
 ${HS_INTF}/package-id
-share/doc/x86_64-netbsd-ghc-8.8.1/nats-${PKGVERSION}/LICENSE
+share/doc/x86_64-netbsd-${HS_VER}/nats-${PKGVERSION}/LICENSE
