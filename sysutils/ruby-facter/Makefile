@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2020/06/13 15:51:06 taca Exp $
+# $NetBSD: Makefile,v 1.35 2020/09/14 16:37:41 taca Exp $
 
-DISTNAME=	facter-4.0.26
+DISTNAME=	facter-4.0.37
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/puppetlabs/facter-ng
+HOMEPAGE=	https://github.com/puppetlabs/facter
 COMMENT=	Cross-platform Ruby library for retrieving facts from OS
 LICENSE=	gnu-gpl-v2
 
