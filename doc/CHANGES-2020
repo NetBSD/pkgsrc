@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5227 2020/09/14 13:43:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5228 2020/09/14 13:47:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7866,3 +7866,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-nio4r to 2.5.3 [taca 2020-09-14]
 	Updated net/ruby-public_suffix to 4.0.6 [taca 2020-09-14]
 	Updated net/ruby-recog to 2.3.14 [taca 2020-09-14]
+	Updated net/ruby-ruby_smb to 2.0.4 [taca 2020-09-14]
