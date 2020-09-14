@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5203 2020/09/13 21:01:07 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5204 2020/09/14 00:08:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7840,3 +7840,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/ruby-cucumber-gherkin to 15.0.2 [taca 2020-09-13]
 	Updated x11/wmweather to 2.4.7 [wiz 2020-09-13]
 	Updated net/youtube-dl to 20200914 [leot 2020-09-13]
+	Updated textproc/ruby-strings to 0.2.0 [taca 2020-09-14]
