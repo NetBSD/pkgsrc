@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/03/24 15:48:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/09/14 14:02:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/bcrypt_ext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/appveyor.yml
