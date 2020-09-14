@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5217 2020/09/14 13:12:51 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5218 2020/09/14 13:16:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7856,3 +7856,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-stomp to 1.4.10 [taca 2020-09-14]
 	Updated devel/ruby-uuidtools to 2.2.0 [taca 2020-09-14]
 	Updated devel/ruby-zeitwerk to 2.4.0 [taca 2020-09-14]
+	Updated graphics/ruby-chunky_png to 1.3.12 [taca 2020-09-14]
