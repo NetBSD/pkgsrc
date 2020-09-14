@@ -1,16 +1,15 @@
-$NetBSD: distinfo,v 1.33 2020/07/29 07:03:59 adam Exp $
+$NetBSD: distinfo,v 1.34 2020/09/14 17:47:13 adam Exp $
 
-SHA1 (jasper-2.0.19.tar.gz) = 32522a49abf12b2c0138d3cd705a8d9e0a0be839
-RMD160 (jasper-2.0.19.tar.gz) = 5c6377651ecbeed7f196be2586ce8b9401fcf2e0
-SHA512 (jasper-2.0.19.tar.gz) = b4e1930057587d3417678fc19c661bef21d87a7d6f79fc9486282531097792c4dc074845405c66dc036620344a900349f985a248009934333c5858242ffec655
-Size (jasper-2.0.19.tar.gz) = 1314817 bytes
-SHA1 (patch-CMakeLists.txt) = 7629fcab6bc854c51a0895449b2cdd214409fa3c
+SHA1 (jasper-2.0.20.tar.gz) = 8e525c7a5fbeaaf07d52fac609546573a1bac477
+RMD160 (jasper-2.0.20.tar.gz) = c11fff401be5a8a93f139fe8f531449493205736
+SHA512 (jasper-2.0.20.tar.gz) = d936cd1b447dc9e78472f5e8a92a7b23da90f5ae7d8487836966b6b32ec328e895a2eea5e2c9a958ec91d39f1cefe8636ddf1a6292dc116bace9d38c89a3f31f
+Size (jasper-2.0.20.tar.gz) = 1318727 bytes
+SHA1 (patch-CMakeLists.txt) = a848a73c9e717e5d6b0a98f3c27d0dcfc1dda8a5
+SHA1 (patch-build_cmake_modules_JasOpenGL.cmake) = 832cf84b0840fe1159d81c8ce92f24971da16838
 SHA1 (patch-src_appl_jiv.c) = 123f1db81a95b4ddd679ccea6f1b2c4887bf574d
-SHA1 (patch-src_libjasper_base_jas__stream.c) = 2e9ad538ab2c0191063fef06202949b435b0085e
 SHA1 (patch-src_libjasper_include_jasper_jas__config.h.in) = a512b563fb34587dab80bdea7f99ea1f1b338d1c
-SHA1 (patch-src_libjasper_jp2_jp2__cod.c) = bfbe752e105d75fbad71a01080013c7a5a8645d8
+SHA1 (patch-src_libjasper_jp2_jp2__cod.c) = d27de060384eaa80f5807bbec9be9daab839418e
 SHA1 (patch-src_libjasper_jp2_jp2__dec.c) = 2f340a0b25933873127c321b09600146cf3f765c
 SHA1 (patch-src_libjasper_jp2_jp2__enc.c) = 9a78860496f1d0ce35f94843f6a7d754a5565716
-SHA1 (patch-src_libjasper_jpc_jpc__dec.c) = f76765ff7656af6b44cd4035b26656909abe45f9
 SHA1 (patch-src_libjasper_jpc_jpc__enc.c) = 83068e4f4ec96b7f9816f3dac1f68ef6efde986f
 SHA1 (patch-src_libjasper_pnm_pnm__enc.c) = a2d5d53cd28f653f9e6e302f76c187fba50b1ce2
