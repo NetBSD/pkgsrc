@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2020/06/02 06:41:03 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/09/14 20:08:29 adam Exp $
 
-SHA1 (qtwayland-everywhere-src-5.15.0.tar.xz) = b4acd5f872228537b2b3f34ae53e2731cf59282c
-RMD160 (qtwayland-everywhere-src-5.15.0.tar.xz) = 6b368419ed44eb0b6a825b64f7e4e93a92982212
-SHA512 (qtwayland-everywhere-src-5.15.0.tar.xz) = e3d8fb79b7d3b10a94caccca1567c3a978b3517e13740aa6218d0a0b4cb180f6bdc3b533e113248908033f344ab5fcffd6fac751a1513c2d62834afe408ee714
-Size (qtwayland-everywhere-src-5.15.0.tar.xz) = 562408 bytes
+SHA1 (qtwayland-everywhere-src-5.15.1.tar.xz) = b92862df567d2b0039dea4d371913c02fb58273e
+RMD160 (qtwayland-everywhere-src-5.15.1.tar.xz) = 774861f522a32de88f73f81ab6e0042c181a0a2f
+SHA512 (qtwayland-everywhere-src-5.15.1.tar.xz) = d6619f35b3ab163372a0d49a2221c487d5936b6d9ebeb92a7fd41521c424d550eea7c5c584e07f15bde1ec5ece1bd5774845eb9956ce793e546197ffdb28d594
+Size (qtwayland-everywhere-src-5.15.1.tar.xz) = 563508 bytes
 SHA1 (patch-config.tests_wayland__scanner_wayland__scanner.pro) = 3b6338a1d2c1425ce71b41e6515824ffc7e67fbc
 SHA1 (patch-features_wayland-scanner-client-wayland-protocol-include.prf) = e35ebe8543309373b12670eb2abc911263d15039
 SHA1 (patch-qtwayland.pro) = 8a46a9cdf35c0a21cb19d764ff6d7546965bdd44
