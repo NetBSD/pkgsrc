@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/15 17:12:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/09/14 00:16:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -10,17 +10,18 @@ ${GEM_LIBDIR}/lib/tty/prompt/block_paginator.rb
 ${GEM_LIBDIR}/lib/tty/prompt/choice.rb
 ${GEM_LIBDIR}/lib/tty/prompt/choices.rb
 ${GEM_LIBDIR}/lib/tty/prompt/confirm_question.rb
+${GEM_LIBDIR}/lib/tty/prompt/const.rb
 ${GEM_LIBDIR}/lib/tty/prompt/converter_dsl.rb
 ${GEM_LIBDIR}/lib/tty/prompt/converter_registry.rb
 ${GEM_LIBDIR}/lib/tty/prompt/converters.rb
 ${GEM_LIBDIR}/lib/tty/prompt/distance.rb
 ${GEM_LIBDIR}/lib/tty/prompt/enum_list.rb
+${GEM_LIBDIR}/lib/tty/prompt/errors.rb
 ${GEM_LIBDIR}/lib/tty/prompt/evaluator.rb
 ${GEM_LIBDIR}/lib/tty/prompt/expander.rb
 ${GEM_LIBDIR}/lib/tty/prompt/keypress.rb
 ${GEM_LIBDIR}/lib/tty/prompt/list.rb
 ${GEM_LIBDIR}/lib/tty/prompt/mask_question.rb
-${GEM_LIBDIR}/lib/tty/prompt/messages.rb
 ${GEM_LIBDIR}/lib/tty/prompt/multi_list.rb
 ${GEM_LIBDIR}/lib/tty/prompt/multiline.rb
 ${GEM_LIBDIR}/lib/tty/prompt/paginator.rb
@@ -29,12 +30,13 @@ ${GEM_LIBDIR}/lib/tty/prompt/question/checks.rb
 ${GEM_LIBDIR}/lib/tty/prompt/question/modifier.rb
 ${GEM_LIBDIR}/lib/tty/prompt/question/validation.rb
 ${GEM_LIBDIR}/lib/tty/prompt/result.rb
+${GEM_LIBDIR}/lib/tty/prompt/selected_choices.rb
 ${GEM_LIBDIR}/lib/tty/prompt/slider.rb
 ${GEM_LIBDIR}/lib/tty/prompt/statement.rb
 ${GEM_LIBDIR}/lib/tty/prompt/suggestion.rb
 ${GEM_LIBDIR}/lib/tty/prompt/symbols.rb
+${GEM_LIBDIR}/lib/tty/prompt/test.rb
 ${GEM_LIBDIR}/lib/tty/prompt/timer.rb
 ${GEM_LIBDIR}/lib/tty/prompt/utils.rb
 ${GEM_LIBDIR}/lib/tty/prompt/version.rb
-${GEM_LIBDIR}/lib/tty/test_prompt.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
