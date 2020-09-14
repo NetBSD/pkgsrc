@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2020/05/18 10:40:11 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/14 07:36:25 adam Exp $
 
-DISTNAME=	iso8601-0.1.12
+DISTNAME=	iso8601-0.1.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/iso8601/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/iso8601/
+HOMEPAGE=	https://github.com/micktwomey/pyiso8601
 COMMENT=	Simple Python module to parse ISO 8601 dates
 LICENSE=	mit
 
