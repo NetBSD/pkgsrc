@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/06/21 14:26:39 taca Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/14 15:16:14 taca Exp $
 
-DISTNAME=	iso8601-0.12.2
+DISTNAME=	iso8601-0.13.0
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
