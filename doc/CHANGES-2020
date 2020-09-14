@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5210 2020/09/14 07:40:31 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5211 2020/09/14 08:15:29 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7848,3 +7848,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-tty-prompt to 0.22.0 [taca 2020-09-14]
 	Updated time/py-iso8601 to 0.1.13 [adam 2020-09-14]
 	Updated security/py-asyncssh to 2.4.2 [adam 2020-09-14]
+	Updated games/woof to 2.2.0 [micha 2020-09-14]
