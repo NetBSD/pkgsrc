@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2020/03/08 19:47:47 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/09/14 22:57:16 mef Exp $
 bin/perl6
 bin/perl6-debug
+bin/perl6-debug-m
 bin/perl6-gdb-m
 bin/perl6-lldb-m
+bin/perl6-m
 bin/perl6-valgrind-m
 bin/raku
 bin/raku-debug
@@ -56,6 +58,7 @@ share/perl6/lib/Perl6/ModuleLoader.moarvm
 share/perl6/lib/Perl6/Ops.moarvm
 share/perl6/lib/Perl6/Optimizer.moarvm
 share/perl6/lib/Perl6/Pod.moarvm
+share/perl6/lib/Perl6/SysConfig.moarvm
 share/perl6/lib/Perl6/World.moarvm
 share/perl6/runtime/CORE.c.setting.moarvm
 share/perl6/runtime/CORE.d.setting.moarvm

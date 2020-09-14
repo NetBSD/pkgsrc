@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/08/31 18:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/09/14 22:57:16 mef Exp $
 
-DISTNAME=	rakudo-2020.02.1
-PKGREVISION=	1
+DISTNAME=	rakudo-2020.08.2
 CATEGORIES=	lang perl6
 MASTER_SITES=	https://rakudo.org/dl/rakudo/
 
@@ -39,7 +38,7 @@ post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/precomp/*
 	sed -i "s,/usr/bin/env raku,${PREFIX}/bin/raku," ${WRKSRC}/tools/install-dist.p6
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/install-dist.p6 ${DESTDIR}${PREFIX}/share/perl6/bin/
-	
+
 
 .include "../../devel/MoarVM/buildlink3.mk"
 .include "../../lang/nqp/buildlink3.mk"
