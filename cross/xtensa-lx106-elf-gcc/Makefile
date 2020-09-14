@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/08/31 18:06:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/14 18:15:34 joerg Exp $
 
 # using configure options and sources from
 # https://github.com/earlephilhower/esp-quick-toolchain
@@ -11,7 +11,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=jcmvbkbc/}
 GITHUB_PROJECT=		gcc-xtensa
 GITHUB_TAG=		a0936f8b396491bc7894c8bc5e80971cc9138e94
 
-DIST_SUBDIR=		${PKGNAME}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 # Custom xtensa newlib       
 DISTFILES=		${DEFAULT_DISTFILES}
