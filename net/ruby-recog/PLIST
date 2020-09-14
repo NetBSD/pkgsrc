@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/07 14:21:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/09/14 13:43:10 taca Exp $
+bin/recog_cleanup${RUBY_SUFFIX}
 bin/recog_export${RUBY_SUFFIX}
 bin/recog_match${RUBY_SUFFIX}
 bin/recog_standardize${RUBY_SUFFIX}
@@ -20,6 +21,7 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/recog_cleanup
 ${GEM_LIBDIR}/bin/recog_export
 ${GEM_LIBDIR}/bin/recog_match
 ${GEM_LIBDIR}/bin/recog_standardize
@@ -38,6 +40,9 @@ ${GEM_LIBDIR}/features/support/aruba.rb
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/features/verify.feature
 ${GEM_LIBDIR}/identifiers/README.md
+${GEM_LIBDIR}/identifiers/hw_device.txt
+${GEM_LIBDIR}/identifiers/hw_family.txt
+${GEM_LIBDIR}/identifiers/hw_product.txt
 ${GEM_LIBDIR}/identifiers/os_architecture.txt
 ${GEM_LIBDIR}/identifiers/os_device.txt
 ${GEM_LIBDIR}/identifiers/os_family.txt
@@ -88,6 +93,7 @@ ${GEM_LIBDIR}/xml/apache_modules.xml
 ${GEM_LIBDIR}/xml/apache_os.xml
 ${GEM_LIBDIR}/xml/architecture.xml
 ${GEM_LIBDIR}/xml/dns_versionbind.xml
+${GEM_LIBDIR}/xml/favicons.xml
 ${GEM_LIBDIR}/xml/fingerprints.xsd
 ${GEM_LIBDIR}/xml/ftp_banners.xml
 ${GEM_LIBDIR}/xml/h323_callresp.xml
