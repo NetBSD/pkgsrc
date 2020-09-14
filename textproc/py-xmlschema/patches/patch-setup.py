@@ -1,19 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2020/05/31 20:49:34 joerg Exp $
+$NetBSD: patch-setup.py,v 1.2 2020/09/14 08:57:38 adam Exp $
 
---- setup.py.orig	2020-05-31 18:07:15.361949598 +0000
+Fix for Python 3.6.
+
+--- setup.py.orig	2020-09-13 19:12:09.000000000 +0000
 +++ setup.py
-@@ -8,12 +8,13 @@
+@@ -10,7 +10,7 @@
  #
- # @author Davide Brunato <brunato@sissa.it>
- #
-+import sys
- import importlib
- from setuptools import setup
- from setuptools.command.develop import develop
- from setuptools.command.install import install
+ from setuptools import setup, find_packages
  
 -with open("README.rst") as readme:
-+with open("README.rst", **({'encoding': 'UTF-8'} if sys.version_info.major>=3 else {})) as readme:
++with open("README.rst", encoding='utf-8') as readme:
      long_description = readme.read()
  
  
