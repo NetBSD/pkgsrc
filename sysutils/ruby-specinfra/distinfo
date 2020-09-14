@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/06/15 14:13:49 taca Exp $
+$NetBSD: distinfo,v 1.8 2020/09/14 14:53:08 taca Exp $
 
-SHA1 (specinfra-2.82.17.gem) = cddf9bdf68af1fe294a342172cf448b507f240e7
-RMD160 (specinfra-2.82.17.gem) = e70af8918e11a8ccc34149505c3993141e04035d
-SHA512 (specinfra-2.82.17.gem) = 7497455122bcbdb7fa60e9ff7d63f9c1c3f6c65b622f35c8602386da17cd85602d4e18bf35dcfd565dfa5f13b94230b4d12a96f219ad3866b73b44cf1d88a20a
-Size (specinfra-2.82.17.gem) = 89088 bytes
+SHA1 (specinfra-2.82.19.gem) = c311c16062c370a4fb7d78cee6663dfbd68ae083
+RMD160 (specinfra-2.82.19.gem) = e5f76a36b301b70a561a9c6d323cc71ae0ed299a
+SHA512 (specinfra-2.82.19.gem) = a4fd723670ac401457828ecbbf4343e91ad48a0542559966c44535d3e2e3c4061b1bc76bdb0e927a333caf4418770be7a8f90873cd3bd9c0a97064fd74b13155
+Size (specinfra-2.82.19.gem) = 89600 bytes
