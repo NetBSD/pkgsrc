@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2019/08/05 14:44:20 prlw1 Exp $
+# $NetBSD: options.mk,v 1.7 2020/09/14 16:54:35 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
 PKG_SUPPORTED_OPTIONS=	milter clamav-experimental unit-test
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--enable-milter
 PLIST.milter=		yes
 CONF_SAMPLES+=		clamav-milter.conf
 SMF_INSTANCES+=		clamav-milter
+RCD_SCRIPTS+=		clamav-milter
 .else
 CONFIGURE_ARGS+=	--disable-milter
 # XXX --disable-milter doesn't work as expected, so we need this
