@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 09:31:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/14 00:08:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bin/console
-${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/lib/strings.rb
 ${GEM_LIBDIR}/lib/strings/align.rb
 ${GEM_LIBDIR}/lib/strings/extensions.rb
@@ -15,26 +12,4 @@ ${GEM_LIBDIR}/lib/strings/padder.rb
 ${GEM_LIBDIR}/lib/strings/truncate.rb
 ${GEM_LIBDIR}/lib/strings/version.rb
 ${GEM_LIBDIR}/lib/strings/wrap.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/unit/align/align_left_spec.rb
-${GEM_LIBDIR}/spec/unit/align/align_right_spec.rb
-${GEM_LIBDIR}/spec/unit/align/align_spec.rb
-${GEM_LIBDIR}/spec/unit/align_spec.rb
-${GEM_LIBDIR}/spec/unit/ansi_spec.rb
-${GEM_LIBDIR}/spec/unit/extensions_spec.rb
-${GEM_LIBDIR}/spec/unit/fold/fold_spec.rb
-${GEM_LIBDIR}/spec/unit/fold_spec.rb
-${GEM_LIBDIR}/spec/unit/pad/pad_spec.rb
-${GEM_LIBDIR}/spec/unit/pad_spec.rb
-${GEM_LIBDIR}/spec/unit/padder/parse_spec.rb
-${GEM_LIBDIR}/spec/unit/sanitize_spec.rb
-${GEM_LIBDIR}/spec/unit/truncate/truncate_spec.rb
-${GEM_LIBDIR}/spec/unit/truncate_spec.rb
-${GEM_LIBDIR}/spec/unit/wrap/insert_ansi_spec.rb
-${GEM_LIBDIR}/spec/unit/wrap/wrap_spec.rb
-${GEM_LIBDIR}/spec/unit/wrap_spec.rb
-${GEM_LIBDIR}/strings.gemspec
-${GEM_LIBDIR}/tasks/console.rake
-${GEM_LIBDIR}/tasks/coverage.rake
-${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
