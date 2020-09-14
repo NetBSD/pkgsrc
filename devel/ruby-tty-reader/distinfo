@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 14:53:44 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/09/14 00:14:42 taca Exp $
 
-SHA1 (tty-reader-0.7.0.gem) = ee0dad40fc7fc4a837bfdb031786f70619ce0cf4
-RMD160 (tty-reader-0.7.0.gem) = 5c3bc6221bfb4386ca8f30f3c1b0c811493dac04
-SHA512 (tty-reader-0.7.0.gem) = 29f41a15ff9d86300d9cb6067028a2bf540d258d8a8ca11892e26d40e423854ce32706a33a5cb75037d99d8d30d42998ecc6876a99f3c30bbddacffe61fbf70e
-Size (tty-reader-0.7.0.gem) = 25600 bytes
+SHA1 (tty-reader-0.8.0.gem) = 9c1262dc2e59c372c817930783ef3b245021366a
+RMD160 (tty-reader-0.8.0.gem) = c34ad94478ddc96488b87a836801861f404a8e87
+SHA512 (tty-reader-0.8.0.gem) = 584df3cb4335a24b9bce962e84832606c1b2b62bb5d81633c55ac93cdf731a560c7559a79b2e662b9e080bc6b48a6ba400b0a1e322086f819e464820ed28e42d
+Size (tty-reader-0.8.0.gem) = 18432 bytes
