@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2017/02/22 11:53:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/09/14 17:47:13 adam Exp $
 bin/imgcmp
 bin/imginfo
 bin/jasper
 ${PLIST.opengl}bin/jiv
 include/jasper/jas_cm.h
+include/jasper/jas_compiler.h
 include/jasper/jas_config.h
 include/jasper/jas_debug.h
 include/jasper/jas_dll.h
@@ -31,5 +32,3 @@ man/man1/imginfo.1
 man/man1/jasper.1
 ${PLIST.opengl}man/man1/jiv.1
 share/doc/JasPer/README
-share/doc/JasPer/jasper.pdf
-share/doc/JasPer/jpeg2000.pdf
