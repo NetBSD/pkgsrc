@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5245 2020/09/14 15:16:46 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5246 2020/09/14 15:20:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7884,3 +7884,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-review to 4.2.0 [taca 2020-09-14]
 	Updated textproc/ruby-treetop to 1.6.11 [taca 2020-09-14]
 	Updated time/ruby-iso8601 to 0.13.0 [taca 2020-09-14]
+	Updated time/ruby-timers to 4.3.2 [taca 2020-09-14]
