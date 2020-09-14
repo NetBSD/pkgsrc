@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/25 14:35:40 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/09/14 14:24:42 taca Exp $
 
-SHA1 (csv-3.1.5.gem) = 823fbc697255420eabca3b5cbf8b590a49c5b6ef
-RMD160 (csv-3.1.5.gem) = 3745fdae5666692beeaa83b0e862ad5e449e4c40
-SHA512 (csv-3.1.5.gem) = 0a43d993ac1e971cb5138e05da63dc51c00e6517691ed86ff96cf3a62be8932a9e63d712e923826b749afe8ededb8063878604740228fa29bf3d17a6801053a3
-Size (csv-3.1.5.gem) = 43008 bytes
+SHA1 (csv-3.1.7.gem) = b772df0f006dbb9d65f40566a7d4621a26fdb98b
+RMD160 (csv-3.1.7.gem) = fe19d4f9bffcb676f26a531fed1b20c714166d64
+SHA512 (csv-3.1.7.gem) = 8989e1ccde153c791b5de1f5397abb6ea883b8002fb4f7a1f754c6290cb55063879a3ef41d831289da8f6e906a08a55cadd01a857a7c6d0940894aae40ed57ab
+Size (csv-3.1.7.gem) = 50176 bytes
