@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/03/24 17:48:28 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/14 16:13:29 taca Exp $
 
-DISTNAME=	mixlib-authentication-3.0.4
+DISTNAME=	mixlib-authentication-3.0.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
