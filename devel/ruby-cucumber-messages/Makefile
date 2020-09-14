@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/09/13 15:33:54 taca Exp $
+# $NetBSD: Makefile,v 1.9 2020/09/14 16:11:14 taca Exp $
 
-DISTNAME=	cucumber-messages-13.0.1
+DISTNAME=	cucumber-messages-13.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
