@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/06/07 15:18:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/09/14 15:22:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/History.md
@@ -37,6 +37,7 @@ ${GEM_LIBDIR}/lib/capybara/rack_test/errors.rb
 ${GEM_LIBDIR}/lib/capybara/rack_test/form.rb
 ${GEM_LIBDIR}/lib/capybara/rack_test/node.rb
 ${GEM_LIBDIR}/lib/capybara/rails.rb
+${GEM_LIBDIR}/lib/capybara/registration_container.rb
 ${GEM_LIBDIR}/lib/capybara/registrations/drivers.rb
 ${GEM_LIBDIR}/lib/capybara/registrations/patches/puma_ssl.rb
 ${GEM_LIBDIR}/lib/capybara/registrations/servers.rb
