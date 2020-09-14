@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:18 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/14 15:05:28 taca Exp $
 
-DISTNAME=		rdiscount-2.2.0.1
+DISTNAME=		rdiscount-2.2.0.2
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc
 
