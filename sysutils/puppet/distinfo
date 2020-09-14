@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2020/06/07 15:02:54 taca Exp $
+$NetBSD: distinfo,v 1.26 2020/09/14 14:22:35 taca Exp $
 
-SHA1 (puppet-6.16.0.gem) = 49a9dc980823e78fb0c38f67341dfad8b2bb8255
-RMD160 (puppet-6.16.0.gem) = 845906e54339fe46b7da111850f1d3b8bcf737f9
-SHA512 (puppet-6.16.0.gem) = c9705fb98fc0dcfafcc277b21096b9429ac77660592b6eb9ea4668a8d37beba8b7ff43239496efb7867d3078e14384dd7fe0a305bb1e334202eb3f90b6f449a7
-Size (puppet-6.16.0.gem) = 2873856 bytes
+SHA1 (puppet-6.18.0.gem) = ce2ff08b9636beaef1a04053cbf0c2113f847b3f
+RMD160 (puppet-6.18.0.gem) = 8f85c200fd1ed021e8a419e9f37ae1e6c9220fd5
+SHA512 (puppet-6.18.0.gem) = f32c7c9f070662b60588a453b84ae9abd01583281f4a08102d6d3efb1895e5576f5b060a14521469114289588a0aad4d4b79c03680b57e74a5b6082bdcb0022c
+Size (puppet-6.18.0.gem) = 2894336 bytes
 SHA1 (patch-aa) = 8b25b975647023902f5d84cc2980f777f23e789c
 SHA1 (patch-ab) = 2e80fc9ca8a9326d69c72149e6fd97738cfd2e1e
 SHA1 (patch-ac) = 38fd0797438e9d6dcbc88e99354dae4ef0b9cba0
