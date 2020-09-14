@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5224 2020/09/14 13:34:34 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5225 2020/09/14 13:37:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7863,3 +7863,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-amq-protocol to 2.3.2 [taca 2020-09-14]
 	Updated net/ruby-dnsruby to 1.61.4 [taca 2020-09-14]
 	Updated net/ruby-net-ldap to 0.16.3 [taca 2020-09-14]
+	Updated net/ruby-nio4r to 2.5.3 [taca 2020-09-14]
