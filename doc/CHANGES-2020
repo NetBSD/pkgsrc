@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5260 2020/09/14 16:11:35 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5261 2020/09/14 16:13:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7900,3 +7900,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-json to 2.3.1 [taca 2020-09-14]
 	Updated textproc/ruby-json-pure to 2.3.1 [taca 2020-09-14]
 	Updated devel/ruby-cucumber-messages to 13.1.0 [taca 2020-09-14]
+	Updated devel/ruby-mixlib-authentication to 3.0.7 [taca 2020-09-14]
