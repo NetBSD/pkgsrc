@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5264 2020/09/14 16:20:07 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5265 2020/09/14 16:22:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7904,3 +7904,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-mixlib-cli to 2.1.8 [taca 2020-09-14]
 	Updated devel/ruby-mixlib-config to 3.0.9 [taca 2020-09-14]
 	Updated devel/ruby-mixlib-log to 3.0.9 [taca 2020-09-14]
+	Updated devel/ruby-mixlib-shellout to 3.1.6 [taca 2020-09-14]
