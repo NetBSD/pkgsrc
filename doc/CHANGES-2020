@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5271 2020/09/14 16:55:01 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5272 2020/09/14 16:59:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7911,3 +7911,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-chef-vault to 4.0.11 [taca 2020-09-14]
 	Updated sysutils/ruby-facter to 4.0.37 [taca 2020-09-14]
 	Updated security/clamav to 0.102.4nb1 [taca 2020-09-14]
+	Updated sysutils/ruby-chef to 16.0.287nb1 [taca 2020-09-14]
