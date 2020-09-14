@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/01/24 10:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/09/14 18:23:41 joerg Exp $
 
 DISTNAME=		ltm-1.2.0
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=libtom/}
 GITHUB_PROJECT=		libtommath
