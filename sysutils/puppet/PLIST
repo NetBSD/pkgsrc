@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/06/07 15:02:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/09/14 14:22:35 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -1170,6 +1170,7 @@ ${GEM_LIBDIR}/lib/puppet/util/windows/com.rb
 ${GEM_LIBDIR}/lib/puppet/util/windows/error.rb
 ${GEM_LIBDIR}/lib/puppet/util/windows/eventlog.rb
 ${GEM_LIBDIR}/lib/puppet/util/windows/file.rb
+${GEM_LIBDIR}/lib/puppet/util/windows/monkey_patches/dir.rb
 ${GEM_LIBDIR}/lib/puppet/util/windows/principal.rb
 ${GEM_LIBDIR}/lib/puppet/util/windows/process.rb
 ${GEM_LIBDIR}/lib/puppet/util/windows/registry.rb
@@ -1229,6 +1230,8 @@ ${GEM_LIBDIR}/man/man8/puppet-status.8
 ${GEM_LIBDIR}/man/man8/puppet.8
 ${GEM_LIBDIR}/spec/fixtures/faulty_face/puppet/face/syntax.rb
 ${GEM_LIBDIR}/spec/fixtures/hiera.yaml
+${GEM_LIBDIR}/spec/fixtures/integration/application/apply/environments/spec/modules/amod/lib/puppet/provider/applytest/applytest.rb
+${GEM_LIBDIR}/spec/fixtures/integration/application/apply/environments/spec/modules/amod/lib/puppet/type/applytest.rb
 ${GEM_LIBDIR}/spec/fixtures/integration/node/environment/sitedir/00_a.pp
 ${GEM_LIBDIR}/spec/fixtures/integration/node/environment/sitedir/01_b.pp
 ${GEM_LIBDIR}/spec/fixtures/integration/node/environment/sitedir/03_empty.pp
@@ -1361,7 +1364,9 @@ ${GEM_LIBDIR}/spec/fixtures/unit/data_providers/environments/production/modules/
 ${GEM_LIBDIR}/spec/fixtures/unit/data_providers/environments/production/modules/xyz/functions/data.pp
 ${GEM_LIBDIR}/spec/fixtures/unit/data_providers/environments/production/modules/xyz/manifests/init.pp
 ${GEM_LIBDIR}/spec/fixtures/unit/data_providers/environments/production/modules/xyz/metadata.json
+${GEM_LIBDIR}/spec/fixtures/unit/forge/bacula-releases.json
 ${GEM_LIBDIR}/spec/fixtures/unit/forge/bacula.json
+${GEM_LIBDIR}/spec/fixtures/unit/forge/bacula.tar.gz
 ${GEM_LIBDIR}/spec/fixtures/unit/functions/hiera/hiera/backend/hieraspec_backend.rb
 ${GEM_LIBDIR}/spec/fixtures/unit/functions/lookup/data/common.yaml
 ${GEM_LIBDIR}/spec/fixtures/unit/functions/lookup/hiera/backend/custom_backend.rb
@@ -1623,9 +1628,12 @@ ${GEM_LIBDIR}/spec/fixtures/yaml/test.local.yaml
 ${GEM_LIBDIR}/spec/integration/agent/logging_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/agent_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/apply_spec.rb
+${GEM_LIBDIR}/spec/integration/application/config_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/doc_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/filebucket_spec.rb
+${GEM_LIBDIR}/spec/integration/application/help_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/lookup_spec.rb
+${GEM_LIBDIR}/spec/integration/application/module_spec.rb
 ${GEM_LIBDIR}/spec/integration/application/plugin_spec.rb
 ${GEM_LIBDIR}/spec/integration/configurer_spec.rb
 ${GEM_LIBDIR}/spec/integration/data_binding_spec.rb
@@ -1635,14 +1643,6 @@ ${GEM_LIBDIR}/spec/integration/environments/default_manifest_spec.rb
 ${GEM_LIBDIR}/spec/integration/environments/setting_hooks_spec.rb
 ${GEM_LIBDIR}/spec/integration/environments/settings_interpolation_spec.rb
 ${GEM_LIBDIR}/spec/integration/environments/settings_spec.rb
-${GEM_LIBDIR}/spec/integration/faces/config_spec.rb
-${GEM_LIBDIR}/spec/integration/faces/documentation_spec.rb
-${GEM_LIBDIR}/spec/integration/file_bucket/file_spec.rb
-${GEM_LIBDIR}/spec/integration/file_serving/content_spec.rb
-${GEM_LIBDIR}/spec/integration/file_serving/fileset_spec.rb
-${GEM_LIBDIR}/spec/integration/file_serving/metadata_spec.rb
-${GEM_LIBDIR}/spec/integration/file_serving/terminus_helper_spec.rb
-${GEM_LIBDIR}/spec/integration/file_system/uniquefile_spec.rb
 ${GEM_LIBDIR}/spec/integration/http/client_spec.rb
 ${GEM_LIBDIR}/spec/integration/indirector/catalog/compiler_spec.rb
 ${GEM_LIBDIR}/spec/integration/indirector/direct_file_server_spec.rb
@@ -1650,8 +1650,6 @@ ${GEM_LIBDIR}/spec/integration/indirector/facts/facter_spec.rb
 ${GEM_LIBDIR}/spec/integration/indirector/file_content/file_server_spec.rb
 ${GEM_LIBDIR}/spec/integration/indirector/file_metadata/file_server_spec.rb
 ${GEM_LIBDIR}/spec/integration/indirector/report/yaml.rb
-${GEM_LIBDIR}/spec/integration/module_tool/forge_spec.rb
-${GEM_LIBDIR}/spec/integration/module_tool/tar/mini_spec.rb
 ${GEM_LIBDIR}/spec/integration/network/authconfig_spec.rb
 ${GEM_LIBDIR}/spec/integration/network/formats_spec.rb
 ${GEM_LIBDIR}/spec/integration/network/http/api/indirected_routes_spec.rb
@@ -1674,17 +1672,8 @@ ${GEM_LIBDIR}/spec/integration/parser/scope_spec.rb
 ${GEM_LIBDIR}/spec/integration/parser/script_compiler_spec.rb
 ${GEM_LIBDIR}/spec/integration/parser/undef_param_spec.rb
 ${GEM_LIBDIR}/spec/integration/provider/file/windows_spec.rb
-${GEM_LIBDIR}/spec/integration/provider/service/init_spec.rb
-${GEM_LIBDIR}/spec/integration/provider/service/systemd_spec.rb
-${GEM_LIBDIR}/spec/integration/provider/service/windows_spec.rb
-${GEM_LIBDIR}/spec/integration/reference/providers_spec.rb
-${GEM_LIBDIR}/spec/integration/reports_spec.rb
 ${GEM_LIBDIR}/spec/integration/resource/catalog_spec.rb
 ${GEM_LIBDIR}/spec/integration/resource/type_collection_spec.rb
-${GEM_LIBDIR}/spec/integration/ssl/certificate_request_spec.rb
-${GEM_LIBDIR}/spec/integration/ssl/host_spec.rb
-${GEM_LIBDIR}/spec/integration/ssl/key_spec.rb
-${GEM_LIBDIR}/spec/integration/test/test_helper_spec.rb
 ${GEM_LIBDIR}/spec/integration/transaction/report_spec.rb
 ${GEM_LIBDIR}/spec/integration/transaction_spec.rb
 ${GEM_LIBDIR}/spec/integration/type/exec_spec.rb
@@ -1698,6 +1687,7 @@ ${GEM_LIBDIR}/spec/integration/util/execution_spec.rb
 ${GEM_LIBDIR}/spec/integration/util/rdoc/parser_spec.rb
 ${GEM_LIBDIR}/spec/integration/util/settings_spec.rb
 ${GEM_LIBDIR}/spec/integration/util/windows/adsi_spec.rb
+${GEM_LIBDIR}/spec/integration/util/windows/monkey_patches/dir_spec.rb
 ${GEM_LIBDIR}/spec/integration/util/windows/principal_spec.rb
 ${GEM_LIBDIR}/spec/integration/util/windows/process_spec.rb
 ${GEM_LIBDIR}/spec/integration/util/windows/registry_spec.rb
@@ -1749,7 +1739,6 @@ ${GEM_LIBDIR}/spec/shared_behaviours/an_indirector_face.rb
 ${GEM_LIBDIR}/spec/shared_behaviours/documentation_on_faces.rb
 ${GEM_LIBDIR}/spec/shared_behaviours/file_server_terminus.rb
 ${GEM_LIBDIR}/spec/shared_behaviours/file_serving.rb
-${GEM_LIBDIR}/spec/shared_behaviours/file_serving_model.rb
 ${GEM_LIBDIR}/spec/shared_behaviours/hiera_indirections.rb
 ${GEM_LIBDIR}/spec/shared_behaviours/iterative_functions.rb
 ${GEM_LIBDIR}/spec/shared_behaviours/memory_terminus.rb
@@ -1776,6 +1765,7 @@ ${GEM_LIBDIR}/spec/unit/application/facts_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/filebucket_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/indirection_base_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/lookup_spec.rb
+${GEM_LIBDIR}/spec/unit/application/man_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/resource_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/ssl_spec.rb
 ${GEM_LIBDIR}/spec/unit/application_spec.rb
@@ -1812,7 +1802,6 @@ ${GEM_LIBDIR}/spec/unit/face/facts_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/generate_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/help_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/key_spec.rb
-${GEM_LIBDIR}/spec/unit/face/man_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/module/install_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/module/list_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/module/search_spec.rb
@@ -2018,7 +2007,6 @@ ${GEM_LIBDIR}/spec/unit/interface/face_collection_spec.rb
 ${GEM_LIBDIR}/spec/unit/interface/option_builder_spec.rb
 ${GEM_LIBDIR}/spec/unit/interface/option_spec.rb
 ${GEM_LIBDIR}/spec/unit/interface_spec.rb
-${GEM_LIBDIR}/spec/unit/man_spec.rb
 ${GEM_LIBDIR}/spec/unit/module_spec.rb
 ${GEM_LIBDIR}/spec/unit/module_tool/application_spec.rb
 ${GEM_LIBDIR}/spec/unit/module_tool/applications/checksummer_spec.rb
@@ -2346,6 +2334,7 @@ ${GEM_LIBDIR}/spec/unit/ssl/validator_spec.rb
 ${GEM_LIBDIR}/spec/unit/ssl/verifier_spec.rb
 ${GEM_LIBDIR}/spec/unit/status_spec.rb
 ${GEM_LIBDIR}/spec/unit/task_spec.rb
+${GEM_LIBDIR}/spec/unit/test/test_helper_spec.rb
 ${GEM_LIBDIR}/spec/unit/transaction/additional_resource_generator_spec.rb
 ${GEM_LIBDIR}/spec/unit/transaction/event_manager_spec.rb
 ${GEM_LIBDIR}/spec/unit/transaction/event_spec.rb
