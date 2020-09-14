@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/03/20 16:30:27 taca Exp $
+$NetBSD: distinfo,v 1.14 2020/09/14 15:48:10 taca Exp $
 
-SHA1 (sinatra-contrib-2.0.8.1.gem) = 400d357e0d491fb2a0a02eaffedcfd19e4b21470
-RMD160 (sinatra-contrib-2.0.8.1.gem) = 52e2cd74b157e7b1b1f40086f8583c148c818ae8
-SHA512 (sinatra-contrib-2.0.8.1.gem) = 1899933dfaa647ce569210cac65d43aed271395502f5596c3f4b754b5767615974ef3026cda23613d0e1c3251d50b0e0df6811ff438c2112291d399d34ed69b2
-Size (sinatra-contrib-2.0.8.1.gem) = 33792 bytes
+SHA1 (sinatra-contrib-2.1.0.gem) = 93b6cf507ca40dbef581f47c5d639b06c277dc02
+RMD160 (sinatra-contrib-2.1.0.gem) = d76634a66478de842ccb5f0e832edcea305580a5
+SHA512 (sinatra-contrib-2.1.0.gem) = 03696d0d3b5ca39339e2ff0eed83520ffbe56e1e4af2a33f8be702cc487d69856b8d0704bae94528018f0ec7560a89c239b7694bbc15e5a365d1bf1ee054f682
+Size (sinatra-contrib-2.1.0.gem) = 34304 bytes
