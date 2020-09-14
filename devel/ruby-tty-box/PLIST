@@ -1,32 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 14:46:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/14 00:11:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bin/console
-${GEM_LIBDIR}/bin/setup
-${GEM_LIBDIR}/examples/basic.rb
-${GEM_LIBDIR}/examples/commander.rb
-${GEM_LIBDIR}/examples/connected.rb
-${GEM_LIBDIR}/examples/messages.rb
-${GEM_LIBDIR}/examples/newline.rb
 ${GEM_LIBDIR}/lib/tty-box.rb
 ${GEM_LIBDIR}/lib/tty/box.rb
 ${GEM_LIBDIR}/lib/tty/box/border.rb
 ${GEM_LIBDIR}/lib/tty/box/version.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/unit/align_spec.rb
-${GEM_LIBDIR}/spec/unit/border/parse_spec.rb
-${GEM_LIBDIR}/spec/unit/border_spec.rb
-${GEM_LIBDIR}/spec/unit/custom_frame_spec.rb
-${GEM_LIBDIR}/spec/unit/frame_spec.rb
-${GEM_LIBDIR}/spec/unit/padding_spec.rb
-${GEM_LIBDIR}/spec/unit/position_spec.rb
-${GEM_LIBDIR}/spec/unit/style_spec.rb
-${GEM_LIBDIR}/spec/unit/title_spec.rb
-${GEM_LIBDIR}/tasks/console.rake
-${GEM_LIBDIR}/tasks/coverage.rake
-${GEM_LIBDIR}/tasks/spec.rake
-${GEM_LIBDIR}/tty-box.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
