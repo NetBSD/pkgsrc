@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5252 2020/09/14 15:36:00 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5253 2020/09/14 15:38:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7891,3 +7891,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-websocket-driver to 0.7.3 [taca 2020-09-14]
 	Updated www/ruby-jekyll-feed to 0.15.0 [taca 2020-09-14]
 	Updated www/ruby-loofah to 2.7.0 [taca 2020-09-14]
+	Updated www/ruby-puma to 4.3.6 [taca 2020-09-14]
