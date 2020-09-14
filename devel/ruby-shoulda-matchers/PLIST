@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/14 13:31:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/09/14 16:28:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/docs/errors/NonCaseSwappableValueError.md
 ${GEM_LIBDIR}/lib/shoulda-matchers.rb
@@ -75,8 +74,10 @@ ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/association_matchers/required_m
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/association_matchers/source_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/association_matchers/through_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/define_enum_for_matcher.rb
+${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_attached_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_db_column_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_db_index_matcher.rb
+${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_implicit_order_column.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_readonly_attribute_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_rich_text_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_secure_token_matcher.rb
@@ -100,7 +101,6 @@ ${GEM_LIBDIR}/lib/shoulda/matchers/doublespeak/world.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/error.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/independent.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/independent/delegate_method_matcher.rb
-${GEM_LIBDIR}/lib/shoulda/matchers/independent/delegate_method_matcher/stubbed_target.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/independent/delegate_method_matcher/target_not_defined_error.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/integrations.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/integrations/configuration.rb
