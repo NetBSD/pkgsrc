@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2019/04/25 07:32:40 maya Exp $
+# $NetBSD: Makefile,v 1.36 2020/09/15 09:48:26 prlw1 Exp $
 
-DISTNAME=		libpqxx-6.2.2
-PKGREVISION=		1
+DISTNAME=		libpqxx-7.1.2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jtv/}
 GITHUB_PROJECT=		libpqxx
@@ -11,18 +10,15 @@ HOMEPAGE=		http://pqxx.org/development/libpqxx/
 COMMENT=		C++ interface to postgresql-lib
 LICENSE=		modified-bsd
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c++17
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libpqxx.pc.in
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf gmake
+USE_TOOLS+=		gmake pkg-config
 
 PYTHON_FOR_BUILD_ONLY=	yes
+REPLACE_PYTHON+=	tools/m4esc.py
 REPLACE_PYTHON+=	tools/splitconfig
-REPLACE_PYTHON+=	tools/template2mak.py
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 .include "options.mk"
 
