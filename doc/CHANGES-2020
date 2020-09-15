@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5279 2020/09/14 22:57:26 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5280 2020/09/15 09:48:49 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7952,3 +7952,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/qt5-qtx11extras to 5.15.1 [adam 2020-09-14]
 	Updated x11/qt5-qtxmlpatterns to 5.15.1 [adam 2020-09-14]
 	Updated lang/rakudo to 2020.08.2 [mef 2020-09-14]
+	Updated databases/libpqxx to 7.1.2 [prlw1 2020-09-15]
