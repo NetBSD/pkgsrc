@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5283 2020/09/15 12:21:51 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.5284 2020/09/15 19:13:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7956,3 +7956,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/cups-filters to 1.28.2 [prlw1 2020-09-15]
 	Updated audio/musescore to 3.5nb4 [wiz 2020-09-15]
 	Updated net/unison-snapshot to 2.51.2.20200915 [gdt 2020-09-15]
+	Updated net/tor to 0.4.4.5 [wiz 2020-09-15]
