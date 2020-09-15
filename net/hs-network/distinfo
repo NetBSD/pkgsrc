@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/01/01 03:10:36 pho Exp $
+$NetBSD: distinfo,v 1.4 2020/09/15 15:34:05 jperkin Exp $
 
 SHA1 (network-3.1.1.1.tar.gz) = 21cc751e5ad5aa9902a5ec2f9e87fee8cf9d8a14
 RMD160 (network-3.1.1.1.tar.gz) = 67e11c8f060e42001c95b6e2de5d5498d65d02de
 SHA512 (network-3.1.1.1.tar.gz) = caafd3c0730d0f6378230e0acdf285ca50480f02a44963c1f9ae9dc3d53cd496dd3171d7ff4bf79a1e072b85698d74f82d8075b999d5ba1d17ab1429c8094ca8
 Size (network-3.1.1.1.tar.gz) = 118478 bytes
+SHA1 (patch-include_HsNet.h) = 18eb8ef826a829bf28b53f88c19b87d741d97015
