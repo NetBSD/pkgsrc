@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/08/02 00:25:20 tnn Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/09/15 19:30:53 adam Exp $
 bin/pylupdate5-${PYVERSSUFFIX}
 bin/pyrcc5-${PYVERSSUFFIX}
 bin/pyuic5-${PYVERSSUFFIX}
@@ -769,6 +769,9 @@ share/sip${PYVERSSUFFIX}/PyQt5/QtTest/qtestkeyboard.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtTest/qtestmouse.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtTest/qtestsystem.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtTest/qtesttouch.sip
+share/sip${PYVERSSUFFIX}/PyQt5/QtTextToSpeech/QtTextToSpeechmod.sip
+share/sip${PYVERSSUFFIX}/PyQt5/QtTextToSpeech/qtexttospeech.sip
+share/sip${PYVERSSUFFIX}/PyQt5/QtTextToSpeech/qvoice.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtWebChannel/QtWebChannelmod.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtWebChannel/qwebchannel.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtWebChannel/qwebchannelabstracttransport.sip
