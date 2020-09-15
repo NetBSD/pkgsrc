@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 11:58:11 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/15 20:18:47 hauke Exp $
 
-DISTNAME=	siproxd-0.8.2
-PKGREVISION=	2
+DISTNAME=	siproxd-0.8.3
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://siproxd.sourceforge.net/
-COMMENT=	Session Initiation Protocol Application-Level Gateway (SIP ALG)
+COMMENT=	Session Initiation Protocol (SIP) Application-Level Gateway
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
+USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
