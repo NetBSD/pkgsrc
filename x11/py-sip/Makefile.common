@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2020/07/10 20:02:23 rhialto Exp $
+# $NetBSD: Makefile.common,v 1.8 2020/09/15 19:30:03 adam Exp $
 #
 # used by x11/py-sip/Makefile
 # used by x11/py-sip-qt4/Makefile
 # used by x11/py-sip-qt5/Makefile
 
-DISTNAME=	sip-4.19.23
+DISTNAME=	sip-4.19.24
 CATEGORIES=	x11 devel python
 MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/sip/${PKGVERSION_NOREV}/
 
@@ -59,4 +59,3 @@ SUBST_CLASSES+=		pyversfx
 SUBST_STAGE.pyversfx=	pre-configure
 SUBST_FILES.pyversfx=	sipgen/sipgen.sbf
 SUBST_VARS.pyversfx=	PYVERSSUFFIX
-
