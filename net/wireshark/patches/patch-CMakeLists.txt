@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2020/04/09 14:37:15 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2020/09/15 10:19:20 wiz Exp $
 
 Do not make application bundle on Darwin.
 Avoid
@@ -6,7 +6,7 @@ Avoid
   	install FILES given directory
   	"${WRKDIR}/.buildlink/cmake-Modules" to install.
 
---- CMakeLists.txt.orig	2020-04-08 22:27:01.000000000 +0000
+--- CMakeLists.txt.orig	2020-08-12 17:53:19.000000000 +0000
 +++ CMakeLists.txt
 @@ -1359,7 +1359,7 @@ else ()
  	set(EXTCAP_INSTALL_LIBDIR "${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}/extcap" CACHE INTERNAL "The extcap dir")
