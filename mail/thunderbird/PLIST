@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2020/09/13 10:51:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.80 2020/09/15 12:54:37 wiz Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -2932,8 +2932,6 @@ lib/thunderbird/chrome/devtools/skin/webconsole.css
 lib/thunderbird/chrome/devtools/skin/widgets.css
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
-lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
-lib/thunderbird/chrome/en-US/locale/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
 ${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
@@ -3369,8 +3367,6 @@ lib/thunderbird/chrome/marionette/content/sync.js
 lib/thunderbird/chrome/marionette/content/transport.js
 ${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
 ${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-logo.png
-lib/thunderbird/chrome/messenger/content/branding/about-background.png
-lib/thunderbird/chrome/messenger/content/branding/about-logo.png
 lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.svg
 lib/thunderbird/chrome/messenger/content/branding/about.png
