@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.179 2020/09/05 10:19:04 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.180 2020/09/15 09:40:08 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -234,8 +234,13 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 # Force the use of clang from pkgsrc, regardless of the setting of
 # PKGSRC_COMPILER.
-# \todo This breaks the use of ccache, which should be fixed, probably
-# by adding support for this kind of forcing to pkgsrc infrastructure.
+# When being compiled with GCC, Firefox will still need Clang for
+# some purposes (why?)
+# \todo pkgsrc cwrappers creates symlinks which make GCC pretend to be clang.
+# this conflicts with Firefox's clang dependency, so currently GCC
+# cannot be used to build Firefox.
+# http://mail-index.netbsd.org/tech-pkg/2020/09/09/msg023783.html
+# \todo This breaks the use of ccache, which should be fixed
 PKG_CC=		${PREFIX}/bin/clang
 PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=	build
