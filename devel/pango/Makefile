@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2020/09/04 11:14:08 prlw1 Exp $
+# $NetBSD: Makefile,v 1.236 2020/09/15 10:45:41 prlw1 Exp $
 
 DISTNAME=	pango-1.46.1
 CATEGORIES=	devel fonts
@@ -54,7 +54,7 @@ BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.11.91
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=2.0
+BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=2.7.2
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .if ${LIBRSVG_TYPE} == "rust"
 .include "../../graphics/graphite2/buildlink3.mk"
