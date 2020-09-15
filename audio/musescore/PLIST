@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/08/13 04:27:38 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/09/15 11:44:08 wiz Exp $
 bin/mscore
 bin/musescore
 man/man1/mscore.1
@@ -56,6 +56,7 @@ share/mscore-${PKGVERSION}/locale/qt_ru.qm
 share/mscore-${PKGVERSION}/locale/qt_sk.qm
 share/mscore-${PKGVERSION}/locale/qt_sl.qm
 share/mscore-${PKGVERSION}/locale/qt_sv.qm
+share/mscore-${PKGVERSION}/locale/qt_tr.qm
 share/mscore-${PKGVERSION}/locale/qt_uk.qm
 share/mscore-${PKGVERSION}/locale/qt_zh_CN.qm
 share/mscore-${PKGVERSION}/locale/qt_zh_TW.qm
@@ -79,6 +80,7 @@ share/mscore-${PKGVERSION}/locale/qtbase_lv.qm
 share/mscore-${PKGVERSION}/locale/qtbase_pl.qm
 share/mscore-${PKGVERSION}/locale/qtbase_ru.qm
 share/mscore-${PKGVERSION}/locale/qtbase_sk.qm
+share/mscore-${PKGVERSION}/locale/qtbase_tr.qm
 share/mscore-${PKGVERSION}/locale/qtbase_uk.qm
 share/mscore-${PKGVERSION}/locale/qtbase_zh_TW.qm
 share/mscore-${PKGVERSION}/locale/qtmultimedia_ar.qm
@@ -98,6 +100,7 @@ share/mscore-${PKGVERSION}/locale/qtmultimedia_ko.qm
 share/mscore-${PKGVERSION}/locale/qtmultimedia_pl.qm
 share/mscore-${PKGVERSION}/locale/qtmultimedia_ru.qm
 share/mscore-${PKGVERSION}/locale/qtmultimedia_sk.qm
+share/mscore-${PKGVERSION}/locale/qtmultimedia_tr.qm
 share/mscore-${PKGVERSION}/locale/qtmultimedia_uk.qm
 share/mscore-${PKGVERSION}/locale/qtmultimedia_zh_TW.qm
 share/mscore-${PKGVERSION}/locale/qtscript_ar.qm
@@ -119,6 +122,7 @@ share/mscore-${PKGVERSION}/locale/qtscript_lv.qm
 share/mscore-${PKGVERSION}/locale/qtscript_pl.qm
 share/mscore-${PKGVERSION}/locale/qtscript_ru.qm
 share/mscore-${PKGVERSION}/locale/qtscript_sk.qm
+share/mscore-${PKGVERSION}/locale/qtscript_tr.qm
 share/mscore-${PKGVERSION}/locale/qtscript_uk.qm
 share/mscore-${PKGVERSION}/locale/qtxmlpatterns_bg.qm
 share/mscore-${PKGVERSION}/locale/qtxmlpatterns_ca.qm
