@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5281 2020/09/15 11:00:14 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.5282 2020/09/15 11:44:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7954,3 +7954,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rakudo to 2020.08.2 [mef 2020-09-14]
 	Updated databases/libpqxx to 7.1.2 [prlw1 2020-09-15]
 	Updated print/cups-filters to 1.28.2 [prlw1 2020-09-15]
+	Updated audio/musescore to 3.5nb4 [wiz 2020-09-15]
