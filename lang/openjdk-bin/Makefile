@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/05/29 10:57:09 abs Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/15 20:09:00 ryoon Exp $
 
-DISTNAME=	openjdk-13.0.2_linux-x64_bin
+DISTNAME=	openjdk-15_linux-x64_bin
 PKGNAME=	${DISTNAME:S/_linux-x64_bin//:S/openjdk-/openjdk-bin-/}
-PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/
+MASTER_SITES=	https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://jdk.java.net/
