@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.23 2020/01/03 13:26:08 leot Exp $
+@comment $NetBSD: PLIST,v 1.24 2020/09/15 10:59:49 prlw1 Exp $
 bin/driverless
+bin/driverless-fax
 bin/foomatic-rip
 bin/ttfread
 include/cupsfilters/colord.h
@@ -22,10 +23,12 @@ lib/pkgconfig/libfontembed.pc
 libexec/cups-browsed
 libexec/cups/backend/beh
 libexec/cups/backend/driverless
+libexec/cups/backend/driverless-fax
 libexec/cups/backend/implicitclass
 libexec/cups/backend/parallel
 libexec/cups/backend/serial
 libexec/cups/driver/driverless
+libexec/cups/driver/driverless-fax
 libexec/cups/filter/bannertopdf
 libexec/cups/filter/commandtoescpx
 libexec/cups/filter/commandtopclx
