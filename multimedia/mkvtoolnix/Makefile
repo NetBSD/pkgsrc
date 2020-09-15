@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2020/09/08 13:49:05 adam Exp $
+# $NetBSD: Makefile,v 1.160 2020/09/15 16:42:51 adam Exp $
 
 DISTNAME=	mkvtoolnix-50.0.0
 CATEGORIES=	multimedia
@@ -53,6 +53,7 @@ do-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libebml+= libebml>=1.4.0
 .include "../../devel/libebml/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmatroska+= libmatroska>=1.6.1
 .include "../../multimedia/libmatroska/buildlink3.mk"
