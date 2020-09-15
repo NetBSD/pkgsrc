@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5285 2020/09/15 19:31:39 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5286 2020/09/15 20:09:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7959,3 +7959,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/tor to 0.4.4.5 [wiz 2020-09-15]
 	Updated x11/py-sip to 4.19.24 [adam 2020-09-15]
 	Updated x11/py-qt5 to 5.15.1 [adam 2020-09-15]
+	Updated lang/openjdk-bin to 15 [ryoon 2020-09-15]
