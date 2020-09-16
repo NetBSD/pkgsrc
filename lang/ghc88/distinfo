@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2020/08/24 17:23:11 pho Exp $
+$NetBSD: distinfo,v 1.13 2020/09/16 17:26:31 jperkin Exp $
 
 SHA1 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = 04981802730423aa12999e59679be198d540222a
 RMD160 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = f617e67f2c2f07c7211cb391a4bc2e7b304045e2
@@ -32,6 +32,7 @@ SHA1 (patch-libraries_Cabal_Cabal_Distribution_Simple_GHC.hs) = a4c82b1282c0580a
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
 SHA1 (patch-libraries_base_System_CPUTime_Posix_Times.hsc) = 2bfb779d534d12073287274ce5e90b99e457a860
 SHA1 (patch-libraries_base_System_Environment.hs) = 7d79a91f295915b4408d5f41d5405739d7189215
+SHA1 (patch-libraries_base_configure) = f06a961a6507f635aafe50dab3ff4396c012bdec
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimespec.hsc) = 588270767f8a9cbde0648fc99807891fef65d721
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimeval.hs) = b2811ec4a845e6b2b44414e940b6108178b597c5
 SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = e94936c139ca15d45cac4a7feb74a601567913ab
