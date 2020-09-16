@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5287 2020/09/15 20:19:28 hauke Exp $
+$NetBSD: CHANGES-2020,v 1.5288 2020/09/16 21:01:34 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7961,3 +7961,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/py-qt5 to 5.15.1 [adam 2020-09-15]
 	Updated lang/openjdk-bin to 15 [ryoon 2020-09-15]
 	Updated net/siproxd to 0.8.3 [hauke 2020-09-15]
+	Updated www/gnurl to 7.72.0 [nikita 2020-09-16]
