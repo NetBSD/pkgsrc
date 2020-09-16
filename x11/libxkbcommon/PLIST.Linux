@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2020/09/16 07:33:24 wiz Exp $
+libexec/xkbcommon/xkbcli-interactive-evdev
+man/man1/xkbcli-interactive-evdev.1
