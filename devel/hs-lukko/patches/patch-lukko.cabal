@@ -1,0 +1,49 @@
+$NetBSD: patch-lukko.cabal,v 1.1 2020/09/16 17:48:41 jperkin Exp $
+
+Newer Solaris/illumos have flock(3C).
+
+--- lukko.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ lukko.cabal
+@@ -32,7 +32,7 @@ description:
+   \  cpp-options: -DHAS_OFD_LOCKING
+   \  cpp-options: -DHAS_FLOCK
+   .
+-  elif !(os(solaris) || os(aix))
++  elif !(os(aix))
+   \  cpp-options: -DHAS_FLOCK
+   @
+   .
+@@ -88,7 +88,7 @@ library
+     cpp-options:     -DUSE_OFD_LOCKING
+     exposed-modules: Lukko.OFD
+ 
+-  elif !(os(solaris) || os(aix))
++  elif !(os(aix))
+     hs-source-dirs: src-flock
+     hs-source-dirs: src-unix
+     cpp-options:    -DUSE_FLOCK
+@@ -98,7 +98,7 @@ library
+     cpp-options:    -DUSE_NOOP
+ 
+   -- Cabal check is silly
+-  if (!os(windows) && !(os(solaris) || os(aix)))
++  if (!os(windows) && !(os(aix)))
+     exposed-modules: Lukko.FLock
+ 
+   other-modules:
+@@ -134,7 +134,7 @@ test-suite test-thread
+     cpp-options: -DHAS_OFD_LOCKING
+     cpp-options: -DHAS_FLOCK
+ 
+-  elif !(os(solaris) || os(aix))
++  elif !(os(aix))
+     cpp-options: -DHAS_FLOCK
+ 
+ test-suite test-process
+@@ -155,5 +155,5 @@ test-suite test-process
+     cpp-options: -DHAS_OFD_LOCKING
+     cpp-options: -DHAS_FLOCK
+ 
+-  elif !(os(solaris) || os(aix))
++  elif !(os(aix))
+     cpp-options: -DHAS_FLOCK
