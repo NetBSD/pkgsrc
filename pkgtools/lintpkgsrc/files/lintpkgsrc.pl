@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.17 2020/08/17 02:38:54 tnn Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.18 2020/09/16 02:03:57 gutteridge Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -263,7 +263,7 @@ sub main() {
         }
 
         if ( $opt{r} ) {
-            verbose("Unlinking listed prebuiltpackages\n");
+            verbose("Unlinking listed prebuilt packages\n");
             foreach my $pkgfile (@matched_prebuiltpackages) {
                 unlink($pkgfile);
             }
