@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/12/31 08:46:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/09/17 10:05:44 jperkin Exp $
 include/libfilezilla/apply.hpp
 include/libfilezilla/buffer.hpp
 include/libfilezilla/encode.hpp
@@ -24,6 +24,7 @@ include/libfilezilla/process.hpp
 include/libfilezilla/rate_limited_layer.hpp
 include/libfilezilla/rate_limiter.hpp
 include/libfilezilla/recursive_remove.hpp
+include/libfilezilla/rwmutex.hpp
 include/libfilezilla/shared.hpp
 include/libfilezilla/signature.hpp
 include/libfilezilla/socket.hpp
