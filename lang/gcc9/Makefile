@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2020/09/02 16:11:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2020/09/17 12:26:38 ryoon Exp $
 
 GCC_PKGNAME=	gcc9
 .include "version.mk"
-PKGREVISION=	3
+PKGREVISION=	4
 
 DISTNAME=	gcc-${GCC9_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC9_DIST_VERSION}
@@ -177,6 +177,12 @@ SUBST_STAGE.ccs=	pre-configure
 SUBST_FILES.ccs=	contrib/make_sunver.pl
 SUBST_SED.ccs=		-e 's,/usr/ccs/bin,/usr/bin,g'
 .endif
+
+SUBST_CLASSES+=		vars
+SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	gcc/Makefile.in
+SUBST_VARS.vars=	MACHINE_GNU_PLATFORM
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
