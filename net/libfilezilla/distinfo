@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.25 2020/09/17 10:05:44 jperkin Exp $
+$NetBSD: distinfo,v 1.26 2020/09/17 14:48:08 wiz Exp $
 
 SHA1 (libfilezilla-0.24.1.tar.bz2) = 0cc47178917abc8e33b1c08bbe4f4d9a1de8180e
 RMD160 (libfilezilla-0.24.1.tar.bz2) = e4439b7039f35536b447f523489a478f1ea34dde
 SHA512 (libfilezilla-0.24.1.tar.bz2) = f9075bb88e5c10617d21fb7b49f7e9bd38567eeca3c4a1cd8b1e20354b1e3da95f05618897cefa6758c7843efd9833230843f77a0c23e7019cf22c950e7e8e8c
 Size (libfilezilla-0.24.1.tar.bz2) = 560439 bytes
-SHA1 (patch-lib_socket.cpp) = 3239e3a1563661fa4a9194e312b784dcd9ef5998
-SHA1 (patch-lib_string.cpp) = 66f30d1e5220d955fd04588a4c7b94a5e5274439
+SHA1 (patch-lib_socket.cpp) = c0bd9a42d312fb4990eca74ecdae34da1edb5d2d
+SHA1 (patch-lib_string.cpp) = 63b46564105f7265e51597898df467899398a11f

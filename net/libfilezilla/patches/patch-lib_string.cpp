@@ -1,6 +1,8 @@
-$NetBSD: patch-lib_string.cpp,v 1.6 2020/09/17 10:05:44 jperkin Exp $
+$NetBSD: patch-lib_string.cpp,v 1.7 2020/09/17 14:48:08 wiz Exp $
 
 Explicitly use std::wcsnrtombs.
+
+https://trac.filezilla-project.org/ticket/12280
 
 --- lib/string.cpp.orig	2020-07-07 12:06:31.000000000 +0000
 +++ lib/string.cpp
