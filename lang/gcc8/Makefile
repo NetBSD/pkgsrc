@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/09/17 22:04:15 ryoon Exp $
 
 GCC_PKGNAME=		gcc8
-PKGREVISION=		1
+PKGREVISION=		2
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC8_DIST_VERSION}
@@ -71,6 +71,12 @@ SUBST_STAGE.fixinc=	pre-configure
 SUBST_FILES.fixinc=	gcc/Makefile.in
 SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 .endif
+
+SUBST_CLASSES+=		vars
+SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	gcc/Makefile.in
+SUBST_VARS.vars=	MACHINE_GNU_PLATFORM
 
 .include "options.mk"
 
