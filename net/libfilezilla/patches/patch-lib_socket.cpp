@@ -1,6 +1,8 @@
-$NetBSD: patch-lib_socket.cpp,v 1.1 2020/09/17 10:05:44 jperkin Exp $
+$NetBSD: patch-lib_socket.cpp,v 1.2 2020/09/17 14:48:08 wiz Exp $
 
 Spell struct correctly.
+
+https://trac.filezilla-project.org/ticket/12280
 
 --- lib/socket.cpp.orig	2020-08-21 13:35:14.000000000 +0000
 +++ lib/socket.cpp
