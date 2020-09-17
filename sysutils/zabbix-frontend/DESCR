@@ -8,3 +8,5 @@ of servers, virtual machines and network devices can be monitored
 simultaneously. Along with storing the data, visualization features are
 available (overviews, maps, graphs, screens, etc), as well as very flexible
 ways of analyzing the data for the purpose of alerting.
+
+This is an LTS release of Zabbix, supported until October 31, 2021.
