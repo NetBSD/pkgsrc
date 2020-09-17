@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5294 2020/09/17 11:48:07 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.5295 2020/09/17 12:27:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7968,3 +7968,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-m2crypto to 0.36.0 [jperkin 2020-09-17]
 	Updated net/libfilezilla to 0.24.1 [jperkin 2020-09-17]
 	Updated ham/chirp to 20200909 [gdt 2020-09-17]
+	Updated lang/gcc9 to 9.3.0nb4 [ryoon 2020-09-17]
