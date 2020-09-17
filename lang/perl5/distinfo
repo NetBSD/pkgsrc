@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.166 2020/09/04 10:10:28 js Exp $
+$NetBSD: distinfo,v 1.167 2020/09/17 10:02:20 mrg Exp $
 
 SHA1 (perl-5.32.0.tar.xz) = 0426c89d8ad5542def3e0065c299d449230aeb6c
 RMD160 (perl-5.32.0.tar.xz) = d28af2b0b2fc762f9d0dbf267f81e16d5657bd60
@@ -16,3 +16,4 @@ SHA1 (patch-hints_linux.sh) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
 SHA1 (patch-hints_netbsd.sh) = 0d549a48800372d75fe34b783529a78cba90f646
 SHA1 (patch-hints_solaris__2.sh) = 364a28ca57dbabe1f902b601e336532996db6a0e
 SHA1 (patch-installperl) = 0ad5988b7cadfb13d9646a59a57f6cf884a6238a
+SHA1 (patch-numeric.c) = 53dc8da40ad21d97072e8e2000f0a16c3353ff41
