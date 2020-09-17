@@ -1,0 +1,20 @@
+$NetBSD: patch-zsh__completion,v 1.1 2020/09/17 08:50:01 schmonz Exp $
+
+Add SUBST_VARS tokens.
+
+--- zsh_completion.orig	2020-01-22 13:59:54.000000000 +0000
++++ zsh_completion
+@@ -1,11 +1,11 @@
+ #compdef etckeeper
+ 
+ local _VCS=$(sed -n "s,^VCS=\([\"']\?\)\(.*\)\1$,\2,p" \
+-    ${ETCKEEPER_CONF_DIR:-/etc/etckeeper}/etckeeper.conf 2>/dev/null)
++    ${ETCKEEPER_CONF_DIR:-@PKG_SYSCONFDIR@}/etckeeper.conf 2>/dev/null)
+ 
+ _arguments '--help[show this help message and exit]' \
+     '--version[show version information]' \
+-    ":etckeeper command:(/etc/etckeeper/*.d(/:t:r))" \
++    ":etckeeper command:(@PKG_SYSCONFDIR@/*.d(/:t:r))" \
+     '*::subcmd:->subcmd' && return 0
+ 
+ case "$words[1]" in
