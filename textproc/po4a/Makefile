@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2020/09/04 10:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2020/09/17 21:13:18 schmonz Exp $
 
-DISTNAME=	po4a-0.57
-PKGREVISION=	3
+DISTNAME=	po4a-0.60
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mquinson/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -30,7 +29,7 @@ USE_TOOLS+=		pkg-config perl:run msgmerge:run msgfmt:run
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/po4a/.packlist
 
-REPLACE_PERL=		scripts/msguntypot po4a po4a-gettextize po4a-normalize
+REPLACE_PERL=		msguntypot po4a po4a-gettextize po4a-normalize
 REPLACE_PERL+=		po4a-translate po4a-updatepo
 REPLACE_PERL+=		lib/Locale/Po4a/*
 
