@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5298 2020/09/17 13:53:28 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5299 2020/09/17 13:53:40 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7972,3 +7972,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/gcc9-libs to 9.3.0nb5 [ryoon 2020-09-17]
 	Updated www/php-nextcloud to 19.0.3 [ryoon 2020-09-17]
 	Updated sysutils/zabbix-frontend to 4.0.24 [otis 2020-09-17]
+	Updated sysutils/zabbix to 4.0.24 [otis 2020-09-17]
