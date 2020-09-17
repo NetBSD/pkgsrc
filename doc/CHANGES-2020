@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5289 2020/09/16 22:15:19 js Exp $
+$NetBSD: CHANGES-2020,v 1.5290 2020/09/17 08:50:16 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7963,3 +7963,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/siproxd to 0.8.3 [hauke 2020-09-15]
 	Updated www/gnurl to 7.72.0 [nikita 2020-09-16]
 	Updated chat/matrix-synapse to 1.19.2 [js 2020-09-16]
+	Updated www/logswan to 2.1.7 [fcambus 2020-09-17]
