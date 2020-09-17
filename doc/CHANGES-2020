@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5293 2020/09/17 10:05:56 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.5294 2020/09/17 11:48:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7967,3 +7967,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/etckeeper to 1.18.14 [schmonz 2020-09-17]
 	Updated security/py-m2crypto to 0.36.0 [jperkin 2020-09-17]
 	Updated net/libfilezilla to 0.24.1 [jperkin 2020-09-17]
+	Updated ham/chirp to 20200909 [gdt 2020-09-17]
