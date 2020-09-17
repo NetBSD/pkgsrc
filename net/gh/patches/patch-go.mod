@@ -1,4 +1,6 @@
-$NetBSD: patch-go.mod,v 1.2 2020/09/17 17:19:01 bsiegert Exp $
+$NetBSD: patch-go.mod,v 1.3 2020/09/17 19:33:01 leot Exp $
+
+Bump termenv version to supports more platforms.
 
 --- go.mod.orig	2020-09-16 16:53:21.000000000 +0000
 +++ go.mod
