@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5304 2020/09/17 22:04:54 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5305 2020/09/17 22:05:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7979,3 +7979,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libhighlight to 3.58 [schmonz 2020-09-17]
 	Updated textproc/po4a to 0.60 [schmonz 2020-09-17]
 	Updated lang/gcc8 to 8.4.0nb2 [ryoon 2020-09-17]
+	Updated lang/gcc8-libs to 8.4.0nb3 [ryoon 2020-09-17]
