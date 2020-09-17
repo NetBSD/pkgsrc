@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2020/09/17 17:19:01 bsiegert Exp $
+$NetBSD: distinfo,v 1.5 2020/09/17 19:33:01 leot Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
@@ -1312,4 +1312,4 @@ SHA1 (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.zip) = 8a68a1277f
 RMD160 (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.zip) = 889fa0aa26be6887e99b3c29bf888ca8b2c8584c
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.zip) = 2d4572b36ce14552416910255337ef98833bd02ea13447607aba491a72bff493d65f76092ee2e0d4078ed5c12188685817fcc7e06e9337c687a48286ef1b1888
 Size (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.zip) = 391809 bytes
-SHA1 (patch-go.mod) = a3855255bb46ff7c3634115eef8468f7543753ac
+SHA1 (patch-go.mod) = 329bb2c1968053982499df3c06dd5fd16b0152a6
