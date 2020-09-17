@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5296 2020/09/17 12:28:55 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5297 2020/09/17 12:39:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7970,3 +7970,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated ham/chirp to 20200909 [gdt 2020-09-17]
 	Updated lang/gcc9 to 9.3.0nb4 [ryoon 2020-09-17]
 	Updated lang/gcc9-libs to 9.3.0nb5 [ryoon 2020-09-17]
+	Updated www/php-nextcloud to 19.0.3 [ryoon 2020-09-17]
