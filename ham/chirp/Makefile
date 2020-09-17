@@ -1,5 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2020/09/03 15:00:33 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2020/09/17 11:47:59 gdt Exp $
 
+PKGVERSION=	20200909
+PKGNAME=	chirp-${PKGVERSION}
+DISTNAME=	chirp-daily-${PKGVERSION_NOREV}
+CATEGORIES=	ham
+MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_daily/daily-${PKGVERSION_NOREV}/
 # Chirp does not have what would normally called releasees.  They have
 # "daily builds" which are like releases except that:
 #   they are called chirp-daily instead of chirp
@@ -11,11 +16,6 @@
 # via
 #   https://chirp.danplanet.com/issues/8067
 #   https://chirp.danplanet.com/news/15
-PKGVERSION=	20200902
-PKGNAME=	chirp-${PKGVERSION}
-DISTNAME=	chirp-daily-${PKGVERSION_NOREV}
-CATEGORIES=	ham
-MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_daily/daily-${PKGVERSION_NOREV}/
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://chirp.danplanet.com/projects/chirp/wiki/Home
