@@ -1,9 +1,9 @@
-$NetBSD: patch-go.mod,v 1.1 2020/08/22 10:21:14 bsiegert Exp $
+$NetBSD: patch-go.mod,v 1.2 2020/09/17 17:19:01 bsiegert Exp $
 
---- go.mod.orig	2020-07-28 13:29:13.000000000 +0000
+--- go.mod.orig	2020-09-16 16:53:21.000000000 +0000
 +++ go.mod
-@@ -27,4 +27,7 @@ require (
- 	gopkg.in/yaml.v3 v3.0.0-20200506231410-2ff61e1afc86
+@@ -29,4 +29,7 @@ require (
+ 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
  )
  
 -replace github.com/shurcooL/graphql => github.com/cli/shurcooL-graphql v0.0.0-20200707151639-0f7232a2bf7e
