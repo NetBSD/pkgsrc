@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5299 2020/09/17 13:53:40 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5300 2020/09/17 15:01:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7420,6 +7420,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/sieve-connect to 0.89nb5 [wiz 2020-09-06]
 	Updated archivers/p5-Archive-Zip to 1.68 [wiz 2020-09-06]
 	Updated net/dhcpcd to 9.2.0 [roy 2020-09-06]
+	Updated sysutils/tealdeer to 1.4.1 [bsiegert 2020-09-06]
 	Updated archivers/p5-Compress-Bzip2 to 2.28 [wiz 2020-09-06]
 	Updated audio/p5-MP3-Tag to 1.15 [wiz 2020-09-06]
 	Updated audio/p5-MPEG-Audio-Frame to 0.10 [wiz 2020-09-06]
@@ -7973,3 +7974,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/php-nextcloud to 19.0.3 [ryoon 2020-09-17]
 	Updated sysutils/zabbix-frontend to 4.0.24 [otis 2020-09-17]
 	Updated sysutils/zabbix to 4.0.24 [otis 2020-09-17]
+	Updated devel/gopls to 0.5.0 [bsiegert 2020-09-17]
