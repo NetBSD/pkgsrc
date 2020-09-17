@@ -1,4 +1,3 @@
-===> Extracting for gh-1.0.0nb1
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.zip
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.1.1.mod
