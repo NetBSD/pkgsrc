@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.58 2020/06/10 15:22:32 wiz Exp $
+$NetBSD: distinfo,v 1.59 2020/09/18 11:04:20 wiz Exp $
 
-SHA1 (FileZilla_3.48.1_src.tar.bz2) = 746ac692f3c454045a4933a68081b7af7e678c83
-RMD160 (FileZilla_3.48.1_src.tar.bz2) = 7d52dc1c1550f04b129240dd09c6a605b7ff14b4
-SHA512 (FileZilla_3.48.1_src.tar.bz2) = 58792f92bb4f6102166924abaf843c023faeca7f2979aaa47c26f2bb3f8449902b4a43c50a800d56584d39c9ddf64a6d3334558e46f56bda3b8515c7a3ff0a12
-Size (FileZilla_3.48.1_src.tar.bz2) = 4774251 bytes
-SHA1 (patch-configure) = 2d6520abe8ec4fe33b790d29c07bcc8d53379dac
+SHA1 (FileZilla_3.50.0_src.tar.bz2) = 2b1e5478d4cd49bddbed3d7a0959f1dc79e0a852
+RMD160 (FileZilla_3.50.0_src.tar.bz2) = 86fb23f39f890ff180a1cb83fad30f3f0dc3418b
+SHA512 (FileZilla_3.50.0_src.tar.bz2) = 5edcb18aa7e4a0a59678d589d20996d7f6311f717e55a70c9dacafe42e3df6cba79be778bef34ff399672941dfb78a4732b83f21016b721702c763f0408b3e40
+Size (FileZilla_3.50.0_src.tar.bz2) = 4791977 bytes
