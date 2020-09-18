@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2020/06/21 19:53:01 morr Exp $
+@comment $NetBSD: PLIST,v 1.52 2020/09/18 23:55:51 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -86,6 +86,13 @@ share/vim/${VIM_SUBDIR}/compiler/context.vim
 share/vim/${VIM_SUBDIR}/compiler/cs.vim
 share/vim/${VIM_SUBDIR}/compiler/csslint.vim
 share/vim/${VIM_SUBDIR}/compiler/cucumber.vim
+share/vim/${VIM_SUBDIR}/compiler/dart.vim
+share/vim/${VIM_SUBDIR}/compiler/dart2js.vim
+share/vim/${VIM_SUBDIR}/compiler/dart2native.vim
+share/vim/${VIM_SUBDIR}/compiler/dartanalyser.vim
+share/vim/${VIM_SUBDIR}/compiler/dartdevc.vim
+share/vim/${VIM_SUBDIR}/compiler/dartdoc.vim
+share/vim/${VIM_SUBDIR}/compiler/dartfmt.vim
 share/vim/${VIM_SUBDIR}/compiler/decada.vim
 share/vim/${VIM_SUBDIR}/compiler/dot.vim
 share/vim/${VIM_SUBDIR}/compiler/erlang.vim
@@ -98,9 +105,11 @@ share/vim/${VIM_SUBDIR}/compiler/fortran_g77.vim
 share/vim/${VIM_SUBDIR}/compiler/fortran_lf95.vim
 share/vim/${VIM_SUBDIR}/compiler/fpc.vim
 share/vim/${VIM_SUBDIR}/compiler/g95.vim
+share/vim/${VIM_SUBDIR}/compiler/gawk.vim
 share/vim/${VIM_SUBDIR}/compiler/gcc.vim
 share/vim/${VIM_SUBDIR}/compiler/gfortran.vim
 share/vim/${VIM_SUBDIR}/compiler/ghc.vim
+share/vim/${VIM_SUBDIR}/compiler/gjs.vim
 share/vim/${VIM_SUBDIR}/compiler/gnat.vim
 share/vim/${VIM_SUBDIR}/compiler/go.vim
 share/vim/${VIM_SUBDIR}/compiler/haml.vim
@@ -111,7 +120,11 @@ share/vim/${VIM_SUBDIR}/compiler/intel.vim
 share/vim/${VIM_SUBDIR}/compiler/irix5_c.vim
 share/vim/${VIM_SUBDIR}/compiler/irix5_cpp.vim
 share/vim/${VIM_SUBDIR}/compiler/javac.vim
+share/vim/${VIM_SUBDIR}/compiler/jest.vim
 share/vim/${VIM_SUBDIR}/compiler/jikes.vim
+share/vim/${VIM_SUBDIR}/compiler/jjs.vim
+share/vim/${VIM_SUBDIR}/compiler/jshint.vim
+share/vim/${VIM_SUBDIR}/compiler/jsonlint.vim
 share/vim/${VIM_SUBDIR}/compiler/mcs.vim
 share/vim/${VIM_SUBDIR}/compiler/mips_c.vim
 share/vim/${VIM_SUBDIR}/compiler/mipspro_c89.vim
@@ -128,8 +141,10 @@ share/vim/${VIM_SUBDIR}/compiler/php.vim
 share/vim/${VIM_SUBDIR}/compiler/pylint.vim
 share/vim/${VIM_SUBDIR}/compiler/pyunit.vim
 share/vim/${VIM_SUBDIR}/compiler/rake.vim
+share/vim/${VIM_SUBDIR}/compiler/rhino.vim
 share/vim/${VIM_SUBDIR}/compiler/rspec.vim
 share/vim/${VIM_SUBDIR}/compiler/rst.vim
+share/vim/${VIM_SUBDIR}/compiler/rubocop.vim
 share/vim/${VIM_SUBDIR}/compiler/ruby.vim
 share/vim/${VIM_SUBDIR}/compiler/rubyunit.vim
 share/vim/${VIM_SUBDIR}/compiler/rustc.vim
@@ -138,12 +153,17 @@ share/vim/${VIM_SUBDIR}/compiler/se.vim
 share/vim/${VIM_SUBDIR}/compiler/splint.vim
 share/vim/${VIM_SUBDIR}/compiler/stack.vim
 share/vim/${VIM_SUBDIR}/compiler/standard.vim
+share/vim/${VIM_SUBDIR}/compiler/stylelint.vim
 share/vim/${VIM_SUBDIR}/compiler/tcl.vim
 share/vim/${VIM_SUBDIR}/compiler/tex.vim
 share/vim/${VIM_SUBDIR}/compiler/tidy.vim
+share/vim/${VIM_SUBDIR}/compiler/ts-node.vim
+share/vim/${VIM_SUBDIR}/compiler/tsc.vim
+share/vim/${VIM_SUBDIR}/compiler/typedoc.vim
 share/vim/${VIM_SUBDIR}/compiler/xbuild.vim
 share/vim/${VIM_SUBDIR}/compiler/xmllint.vim
 share/vim/${VIM_SUBDIR}/compiler/xmlwf.vim
+share/vim/${VIM_SUBDIR}/compiler/xo.vim
 share/vim/${VIM_SUBDIR}/defaults.vim
 share/vim/${VIM_SUBDIR}/delmenu.vim
 share/vim/${VIM_SUBDIR}/doc/arabic.txt
@@ -499,6 +519,8 @@ share/vim/${VIM_SUBDIR}/ftplugin/text.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tmux.vim
 share/vim/${VIM_SUBDIR}/ftplugin/treetop.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tt2html.vim
+share/vim/${VIM_SUBDIR}/ftplugin/typescript.vim
+share/vim/${VIM_SUBDIR}/ftplugin/typescriptreact.vim
 share/vim/${VIM_SUBDIR}/ftplugin/udevconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/udevperm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/udevrules.vim
@@ -774,6 +796,7 @@ share/vim/${VIM_SUBDIR}/syntax/acedb.vim
 share/vim/${VIM_SUBDIR}/syntax/ada.vim
 share/vim/${VIM_SUBDIR}/syntax/aflex.vim
 share/vim/${VIM_SUBDIR}/syntax/ahdl.vim
+share/vim/${VIM_SUBDIR}/syntax/aidl.vim
 share/vim/${VIM_SUBDIR}/syntax/alsaconf.vim
 share/vim/${VIM_SUBDIR}/syntax/amiga.vim
 share/vim/${VIM_SUBDIR}/syntax/aml.vim
@@ -978,6 +1001,7 @@ share/vim/${VIM_SUBDIR}/syntax/haste.vim
 share/vim/${VIM_SUBDIR}/syntax/hastepreproc.vim
 share/vim/${VIM_SUBDIR}/syntax/hb.vim
 share/vim/${VIM_SUBDIR}/syntax/help.vim
+share/vim/${VIM_SUBDIR}/syntax/help_ru.vim
 share/vim/${VIM_SUBDIR}/syntax/hercules.vim
 share/vim/${VIM_SUBDIR}/syntax/hex.vim
 share/vim/${VIM_SUBDIR}/syntax/hgcommit.vim
@@ -1389,6 +1413,7 @@ share/vim/${VIM_SUBDIR}/tools/demoserver.py
 share/vim/${VIM_SUBDIR}/tools/efm_filter.pl
 share/vim/${VIM_SUBDIR}/tools/efm_filter.txt
 share/vim/${VIM_SUBDIR}/tools/efm_perl.pl
+share/vim/${VIM_SUBDIR}/tools/emoji_list.vim
 share/vim/${VIM_SUBDIR}/tools/mve.awk
 share/vim/${VIM_SUBDIR}/tools/mve.txt
 share/vim/${VIM_SUBDIR}/tools/pltags.pl
