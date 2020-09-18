@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5311 2020/09/18 11:54:09 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5312 2020/09/18 13:13:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7986,3 +7986,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/filezilla to 3.50.0 [wiz 2020-09-18]
 	Updated devel/glib2 to 2.64.5nb1 [wiz 2020-09-18]
 	Updated net/remmina to 1.4.8 [ryoon 2020-09-18]
+	Updated databases/py-tortoise-orm to 0.16.15 [adam 2020-09-18]
+	Updated databases/py-apsw to 3.33.0 [adam 2020-09-18]
