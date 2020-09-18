@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/06/20 00:11:27 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/09/18 11:53:28 ryoon Exp $
 bin/remmina
 bin/remmina-file-wrapper
 include/remmina/plugin.h
@@ -89,12 +89,14 @@ share/icons/hicolor/scalable/panel/remmina-panel-inverted.svg
 share/icons/hicolor/scalable/panel/remmina-panel.svg
 share/locale/ar/LC_MESSAGES/remmina.mo
 share/locale/ast/LC_MESSAGES/remmina.mo
+share/locale/ber/LC_MESSAGES/remmina.mo
 share/locale/bg/LC_MESSAGES/remmina.mo
 share/locale/bn/LC_MESSAGES/remmina.mo
 share/locale/br/LC_MESSAGES/remmina.mo
 share/locale/bs/LC_MESSAGES/remmina.mo
 share/locale/ca/LC_MESSAGES/remmina.mo
 share/locale/ca@valencia/LC_MESSAGES/remmina.mo
+share/locale/ckb/LC_MESSAGES/remmina.mo
 share/locale/cs/LC_MESSAGES/remmina.mo
 share/locale/da/LC_MESSAGES/remmina.mo
 share/locale/de/LC_MESSAGES/remmina.mo
@@ -118,6 +120,7 @@ share/locale/id/LC_MESSAGES/remmina.mo
 share/locale/ie/LC_MESSAGES/remmina.mo
 share/locale/it/LC_MESSAGES/remmina.mo
 share/locale/ja/LC_MESSAGES/remmina.mo
+share/locale/kab/LC_MESSAGES/remmina.mo
 share/locale/kk/LC_MESSAGES/remmina.mo
 share/locale/km/LC_MESSAGES/remmina.mo
 share/locale/kn/LC_MESSAGES/remmina.mo
