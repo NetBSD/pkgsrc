@@ -1,0 +1,9 @@
+With on-site Mob Programming, you just pass on the keyboard to hand over
+to the next person. This is a challenge for a distributed team.
+
+We hand over with WIP commits on a temporary git branch. A quick
+handover is essential. At the end of the mob session, we squash the WIP
+commits into expressive commits and merge into master.
+
+We created the mob tool to simplify this process. mob notifies you when
+it's time to handover. mob can moo.
