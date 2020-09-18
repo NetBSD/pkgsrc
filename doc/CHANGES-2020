@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5312 2020/09/18 13:13:12 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5313 2020/09/18 14:37:58 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7988,3 +7988,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/remmina to 1.4.8 [ryoon 2020-09-18]
 	Updated databases/py-tortoise-orm to 0.16.15 [adam 2020-09-18]
 	Updated databases/py-apsw to 3.33.0 [adam 2020-09-18]
+	Added net/wireguard-tools version 1.0.20200827 [js 2020-09-18]
