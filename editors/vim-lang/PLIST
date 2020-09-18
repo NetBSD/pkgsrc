@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/06/21 19:53:01 morr Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/09/18 23:58:29 morr Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -174,6 +174,8 @@ share/vim/${VIM_SUBDIR}/keymap/czech_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/dvorak.vim
 share/vim/${VIM_SUBDIR}/keymap/esperanto.vim
 share/vim/${VIM_SUBDIR}/keymap/esperanto_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/french-azerty.vim
+share/vim/${VIM_SUBDIR}/keymap/german-qwertz.vim
 share/vim/${VIM_SUBDIR}/keymap/greek.vim
 share/vim/${VIM_SUBDIR}/keymap/greek_cp1253.vim
 share/vim/${VIM_SUBDIR}/keymap/greek_cp737.vim
@@ -207,6 +209,7 @@ share/vim/${VIM_SUBDIR}/keymap/russian-jcuken.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-jcukenmac.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-jcukenwin.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-jcukenwintype.vim
+share/vim/${VIM_SUBDIR}/keymap/russian-typograph.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-yawerty.vim
 share/vim/${VIM_SUBDIR}/keymap/serbian-latin.vim
 share/vim/${VIM_SUBDIR}/keymap/serbian-latin_utf-8.vim
@@ -225,6 +228,8 @@ share/vim/${VIM_SUBDIR}/keymap/slovak_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/tamil_tscii.vim
 share/vim/${VIM_SUBDIR}/keymap/thaana-phonetic_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/thaana.vim
+share/vim/${VIM_SUBDIR}/keymap/turkish-f.vim
+share/vim/${VIM_SUBDIR}/keymap/turkish-q.vim
 share/vim/${VIM_SUBDIR}/keymap/ukrainian-dvorak.vim
 share/vim/${VIM_SUBDIR}/keymap/ukrainian-jcuken.vim
 share/vim/${VIM_SUBDIR}/keymap/vietnamese-telex_utf-8.vim
