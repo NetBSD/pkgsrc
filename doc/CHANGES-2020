@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5308 2020/09/18 09:28:54 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5309 2020/09/18 11:04:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7983,3 +7983,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-z3solver to 4.8.9.0 [khorben 2020-09-18]
 	Updated graphics/ansilove to 4.1.3 [fcambus 2020-09-18]
 	Added devel/mob version 0.0.25 [schmonz 2020-09-18]
+	Updated net/filezilla to 3.50.0 [wiz 2020-09-18]
