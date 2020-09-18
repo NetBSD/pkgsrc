@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3245 2020/09/13 15:43:18 taca Exp $
+# $NetBSD: Makefile,v 1.3246 2020/09/18 09:28:32 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -923,6 +923,7 @@ SUBDIR+=	meson
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
 SUBDIR+=	mm-common
+SUBDIR+=	mob
 SUBDIR+=	monotone
 SUBDIR+=	monotone-server
 SUBDIR+=	monotone-viz
