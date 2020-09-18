@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/18 14:37:43 js Exp $
+bin/wg
+share/man/man8/wg.8
