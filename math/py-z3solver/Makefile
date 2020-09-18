@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/03/20 16:24:34 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/18 05:00:48 khorben Exp $
 
-DISTNAME=	z3-solver-4.5.1.0.post2
-PKGNAME=	${PYPKGPREFIX}-z3solver-4.5.1.0.post2
+DISTNAME=	z3-solver-4.8.9.0
+PKGNAME=	${PYPKGPREFIX}-z3solver-4.8.9.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/z3-solver/}
 
@@ -11,8 +11,6 @@ COMMENT=	Theorem prover from Microsoft Research
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 CONFLICTS+=	z3-[0-9]*
 
