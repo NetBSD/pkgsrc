@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5337 2020/09/19 20:06:58 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5338 2020/09/19 21:12:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8013,3 +8013,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/lldb to 10.0.1nb1 [he 2020-09-19]
 	Updated net/tor to 0.4.4.5nb1 [leot 2020-09-19]
 	Updated cad/gtkwave to 3.3.106 [mef 2020-09-19]
+	Added devel/R-pkgKitten version 0.1.5 [mef 2020-09-19]
