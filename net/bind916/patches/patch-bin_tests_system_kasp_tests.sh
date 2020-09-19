@@ -1,8 +1,8 @@
-$NetBSD: patch-bin_tests_system_kasp_tests.sh,v 1.1 2020/08/09 15:20:22 taca Exp $
+$NetBSD: patch-bin_tests_system_kasp_tests.sh,v 1.2 2020/09/19 13:09:27 taca Exp $
 
 Fix shell portability.
 
---- bin/tests/system/kasp/tests.sh.orig	2020-07-03 10:44:14.000000000 +0000
+--- bin/tests/system/kasp/tests.sh.orig	2020-09-04 10:44:49.000000000 +0000
 +++ bin/tests/system/kasp/tests.sh
 @@ -320,7 +320,7 @@ check_key() {
  	# Check file existence.
@@ -139,7 +139,7 @@ Fix shell portability.
  		grep "Published: " "$STATE_FILE" > /dev/null && log_error "unexpected publish in $STATE_FILE"
  		grep "Active: " "$STATE_FILE" > /dev/null && log_error "unexpected active in $STATE_FILE"
  		grep "Retired: " "$STATE_FILE" > /dev/null && log_error "unexpected retired in $STATE_FILE"
-@@ -1324,7 +1324,7 @@ set_keytimes_algorithm_policy() {
+@@ -1589,7 +1589,7 @@ set_keytimes_algorithm_policy() {
  	set_keytime    "KEY1" "PUBLISHED" "${created}"
  	set_keytime    "KEY1" "ACTIVE"    "${created}"
  	# Key was pregenerated.
@@ -148,7 +148,7 @@ Fix shell portability.
  		keyfile=$(key_get KEY1 BASEFILE)
  		grep "; Publish:" "${keyfile}.key" > published.test${n}.key1
  		published=$(awk '{print $3}' < published.test${n}.key1)
-@@ -1351,7 +1351,7 @@ set_keytimes_algorithm_policy() {
+@@ -1616,7 +1616,7 @@ set_keytimes_algorithm_policy() {
  	set_keytime    "KEY2" "PUBLISHED" "${created}"
  	set_keytime    "KEY2" "ACTIVE"    "${created}"
  	# Key was pregenerated.
@@ -157,7 +157,7 @@ Fix shell portability.
  		keyfile=$(key_get KEY2 BASEFILE)
  		grep "; Publish:" "${keyfile}.key" > published.test${n}.key2
  		published=$(awk '{print $3}' < published.test${n}.key2)
-@@ -1374,7 +1374,7 @@ set_keytimes_algorithm_policy() {
+@@ -1639,7 +1639,7 @@ set_keytimes_algorithm_policy() {
  	set_keytime    "KEY3" "PUBLISHED" "${created}"
  	set_keytime    "KEY3" "ACTIVE"    "${created}"
  	# Key was pregenerated.
@@ -166,7 +166,7 @@ Fix shell portability.
  		keyfile=$(key_get KEY3 BASEFILE)
  		grep "; Publish:" "${keyfile}.key" > published.test${n}.key3
  		published=$(awk '{print $3}' < published.test${n}.key3)
-@@ -2541,12 +2541,12 @@ rollover_predecessor_keytimes() {
+@@ -2822,12 +2822,12 @@ rollover_predecessor_keytimes() {
  	set_addkeytime  "KEY1" "PUBLISHED"   "${_created}" "${_addtime}"
  	set_addkeytime  "KEY1" "SYNCPUBLISH" "${_created}" "${_addtime}"
  	set_addkeytime  "KEY1" "ACTIVE"      "${_created}" "${_addtime}"
@@ -181,16 +181,16 @@ Fix shell portability.
  }
  
  # Key properties.
-@@ -2994,7 +2994,7 @@ csk_rollover_predecessor_keytimes() {
- 	set_addkeytime      "KEY1" "PUBLISHED"   "${_created}" "${_addksktime}"
- 	set_addkeytime      "KEY1" "SYNCPUBLISH" "${_created}" "${_addzsktime}"
- 	set_addkeytime      "KEY1" "ACTIVE"      "${_created}" "${_addzsktime}"
+@@ -3306,7 +3306,7 @@ csk_rollover_predecessor_keytimes() {
+ 	set_addkeytime      "KEY1" "PUBLISHED"   "${_created}" "${_addtime}"
+ 	set_addkeytime      "KEY1" "SYNCPUBLISH" "${_created}" "${_addtime}"
+ 	set_addkeytime      "KEY1" "ACTIVE"      "${_created}" "${_addtime}"
 -	[ "$Lcsk" == 0 ] || set_retired_removed "KEY1" "${Lcsk}" "${IretCSK}"
 +	[ "$Lcsk" = 0 ] || set_retired_removed "KEY1" "${Lcsk}" "${IretCSK}"
  }
  
  #
-@@ -3908,8 +3908,8 @@ dnssec_verify
+@@ -4272,8 +4272,8 @@ dnssec_verify
  n=$((n+1))
  echo_i "check that of zone ${ZONE} migration to dnssec-policy uses the same keys ($n)"
  ret=0
@@ -201,7 +201,7 @@ Fix shell portability.
  status=$((status+ret))
  
  # Test migration to dnssec-policy, existing keys do not match key algorithm.
-@@ -4024,8 +4024,8 @@ dnssec_verify
+@@ -4388,8 +4388,8 @@ dnssec_verify
  n=$((n+1))
  echo_i "check that of zone ${ZONE} migration to dnssec-policy keeps existing keys ($n)"
  ret=0
@@ -212,7 +212,7 @@ Fix shell portability.
  status=$((status+ret))
  
  # Test migration to dnssec-policy, existing keys do not match key length.
-@@ -4141,8 +4141,8 @@ dnssec_verify
+@@ -4505,8 +4505,8 @@ dnssec_verify
  n=$((n+1))
  echo_i "check that of zone ${ZONE} migration to dnssec-policy keeps existing keys ($n)"
  ret=0
