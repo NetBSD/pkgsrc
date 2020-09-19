@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5329 2020/09/19 13:51:11 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5330 2020/09/19 13:52:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8005,3 +8005,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-xdebug to 2.9.7 [taca 2020-09-19]
 	Updated security/clamav to 0.103.0 [taca 2020-09-19]
 	Updated sysutils/apcupsd to 3.14.14 [taca 2020-09-19]
+	Updated x11/xf86-input-keyboard to 1.9.0nb3 [taca 2020-09-19]
