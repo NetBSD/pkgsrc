@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5332 2020/09/19 14:04:51 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5333 2020/09/19 14:15:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8008,3 +8008,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xf86-input-keyboard to 1.9.0nb3 [taca 2020-09-19]
 	Updated net/samba4 to 4.12.7 [taca 2020-09-19]
 	Updated security/sudo to 1.8.31p2 [taca 2020-09-19]
+	Added multimedia/mp4tools version 3.8 [schmonz 2020-09-19]
