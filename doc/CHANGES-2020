@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5334 2020/09/19 15:51:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5335 2020/09/19 17:25:56 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8010,3 +8010,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/sudo to 1.8.31p2 [taca 2020-09-19]
 	Added multimedia/mp4tools version 3.8 [schmonz 2020-09-19]
 	Updated net/unison2.51 to 2.51.2nb22 [wiz 2020-09-19]
+	Updated devel/lldb to 10.0.1nb1 [he 2020-09-19]
