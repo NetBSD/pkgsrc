@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5328 2020/09/19 13:42:10 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5329 2020/09/19 13:51:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8004,3 +8004,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-pkg-config to 1.4.3 [taca 2020-09-19]
 	Updated devel/php-xdebug to 2.9.7 [taca 2020-09-19]
 	Updated security/clamav to 0.103.0 [taca 2020-09-19]
+	Updated sysutils/apcupsd to 3.14.14 [taca 2020-09-19]
