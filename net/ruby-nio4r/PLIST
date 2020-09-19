@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/09/14 13:36:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/09/19 12:54:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/nio4r_ext.${RUBY_DLEXT}
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/echo_server.rb
@@ -26,6 +25,7 @@ ${GEM_LIBDIR}/ext/libev/ev_select.c
 ${GEM_LIBDIR}/ext/libev/ev_vars.h
 ${GEM_LIBDIR}/ext/libev/ev_win32.c
 ${GEM_LIBDIR}/ext/libev/ev_wrap.h
+${GEM_LIBDIR}/ext/nio4r/.clang-format
 ${GEM_LIBDIR}/ext/nio4r/bytebuffer.c
 ${GEM_LIBDIR}/ext/nio4r/extconf.rb
 ${GEM_LIBDIR}/ext/nio4r/libev.h
