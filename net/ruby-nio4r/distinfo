@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/09/14 13:36:45 taca Exp $
+$NetBSD: distinfo,v 1.6 2020/09/19 12:54:33 taca Exp $
 
-SHA1 (nio4r-2.5.3.gem) = fd27002109e65ef2707a89b65f1aedb97cab6884
-RMD160 (nio4r-2.5.3.gem) = cc002b0b9cb96836bd6c2dfcee707765720cab34
-SHA512 (nio4r-2.5.3.gem) = dad68688faacf110f08e3252222fed7696e557944c56dadf47a1fb037c5627ab88fa82e70c2e28f802f81ed6c93e38bf85daf28dc42a51f40e455558609b0b58
-Size (nio4r-2.5.3.gem) = 110592 bytes
+SHA1 (nio4r-2.5.4.gem) = bbdc75e235865a739ed525a8dbe98b62204f0308
+RMD160 (nio4r-2.5.4.gem) = bc0028000487f3f057300a1a8ca51ecd5e572c39
+SHA512 (nio4r-2.5.4.gem) = f7e383516ac6b55fd49339280e624a4c35f9cd2d31915b3d117189506522d967fc53a43cde75e8601f3fe0530e1322aeaa8c94a09289ddbefb2afd8d067341ec
+Size (nio4r-2.5.4.gem) = 110080 bytes
