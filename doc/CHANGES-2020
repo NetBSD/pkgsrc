@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5324 2020/09/19 13:26:27 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5325 2020/09/19 13:28:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8000,3 +8000,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/bind916 to 9.16.7 [taca 2020-09-19]
 	Updated www/drupal7 to 7.73 [taca 2020-09-19]
 	Updated www/drupal8 to 8.9.6 [taca 2020-09-19]
+	Updated graphics/wxsvg to 1.5.22 [schmonz 2020-09-19]
