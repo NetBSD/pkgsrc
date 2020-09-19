@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/09/15 12:21:44 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/19 14:38:17 gdt Exp $
 
 DISTNAME=	unison-2.51.2.20200915
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=     a076f63a6ebd0285ee7e4444c05d3eb3dcead6ca
@@ -17,7 +18,7 @@ MAKE_FLAGS+=	CFLAGS=""
 
 .include "../../mk/ocaml.mk"
 
-.if (${OCAML_USE_OPT_COMPILER} == "true")
+.if (${OCAML_USE_OPT_COMPILER} == "yes")
 MAKE_FLAGS+=	NATIVE=true
 .else
 MAKE_FLAGS+=	NATIVE=false
