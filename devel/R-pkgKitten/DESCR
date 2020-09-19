@@ -1,0 +1,4 @@
+Provides a function kitten() which creates cute little packages which
+pass R package checks. This sets it apart from package.skeleton()
+which it calls, and which leaves imperfect files behind. As this is
+not exactly helpful for beginners, kitten() offers an alternative.
