@@ -1,4 +1,6 @@
-$NetBSD: patch-ap,v 1.4 2012/02/19 18:21:58 bouyer Exp $
+$NetBSD: patch-ap,v 1.5 2020/09/19 13:50:48 taca Exp $
+
+* Fix installation for pkgsrc.
 
 --- platforms/sun/Makefile.orig	2008-06-01 23:57:56.000000000 +0200
 +++ platforms/sun/Makefile	2012-02-19 19:20:10.000000000 +0100

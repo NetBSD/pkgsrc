@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2006/11/15 21:46:25 bouyer Exp $
+$NetBSD: patch-ac,v 1.5 2020/09/19 13:50:48 taca Exp $
+
+* Use proper directory.
 
 --- include/defines.h.orig	2006-11-15 17:33:07.000000000 +0100
 +++ include/defines.h	2006-11-15 17:33:22.000000000 +0100
