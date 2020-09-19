@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2020/08/17 20:20:09 leot Exp $
+# $NetBSD: Makefile,v 1.89 2020/09/19 21:02:57 rhialto Exp $
 
 DISTNAME=	xcdroast-1.18
 PKGREVISION=	8
@@ -32,7 +32,7 @@ CONF_FILES=	/dev/null ${PKG_SYSCONFDIR}/xcdroast.conf
 SUBST_CLASSES+=			devossaudio
 SUBST_STAGE.devossaudio=	pre-build
 SUBST_MESSAGE.devossaudio=	Fixing path to audio device.
-SUBST_FILES.devossaudio=	src/io.c src/wavplay.c
+SUBST_FILES.devossaudio=	src/wavplay.c
 SUBST_VARS.devossaudio=		DEVOSSAUDIO
 
 INSTALLATION_DIRS=	${DOCDIR}
