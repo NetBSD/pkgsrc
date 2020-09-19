@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/06/21 16:48:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/09/19 13:25:40 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -1143,6 +1143,7 @@ share/drupal/core/lib/Drupal/Core/Block/BlockBase.php
 share/drupal/core/lib/Drupal/Core/Block/BlockManager.php
 share/drupal/core/lib/Drupal/Core/Block/BlockManagerInterface.php
 share/drupal/core/lib/Drupal/Core/Block/BlockPluginInterface.php
+share/drupal/core/lib/Drupal/Core/Block/BlockPluginTrait.php
 share/drupal/core/lib/Drupal/Core/Block/MainContentBlockPluginInterface.php
 share/drupal/core/lib/Drupal/Core/Block/MessagesBlockPluginInterface.php
 share/drupal/core/lib/Drupal/Core/Block/Plugin/Block/Broken.php
@@ -3676,6 +3677,9 @@ share/drupal/core/modules/comment/src/Tests/Views/CommentTestBase.php
 share/drupal/core/modules/comment/templates/comment.html.twig
 share/drupal/core/modules/comment/templates/field--comment.html.twig
 share/drupal/core/modules/comment/tests/fixtures/update/drupal-8.empty-comment-fields.3052147.php
+share/drupal/core/modules/comment/tests/modules/comment_base_field_test/comment_base_field_test.info.yml
+share/drupal/core/modules/comment/tests/modules/comment_base_field_test/config/install/comment.type.test_comment_type.yml
+share/drupal/core/modules/comment/tests/modules/comment_base_field_test/src/Entity/CommentTestBaseField.php
 share/drupal/core/modules/comment/tests/modules/comment_empty_title_test/comment_empty_title_test.info.yml
 share/drupal/core/modules/comment/tests/modules/comment_empty_title_test/comment_empty_title_test.module
 share/drupal/core/modules/comment/tests/modules/comment_test/comment_test.info.yml
@@ -3684,6 +3688,7 @@ share/drupal/core/modules/comment/tests/modules/comment_test/comment_test.routin
 share/drupal/core/modules/comment/tests/modules/comment_test/src/Controller/CommentTestController.php
 share/drupal/core/modules/comment/tests/modules/comment_test_views/comment_test_views.info.yml
 share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/views.view.test_comment.yml
+share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/views.view.test_comment_count.yml
 share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/views.view.test_comment_field_name.yml
 share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/views.view.test_comment_operations.yml
 share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/views.view.test_comment_rest.yml
@@ -3756,6 +3761,7 @@ share/drupal/core/modules/comment/tests/src/Functional/Views/DefaultViewRecentCo
 share/drupal/core/modules/comment/tests/src/Functional/Views/NodeCommentsTest.php
 share/drupal/core/modules/comment/tests/src/Functional/Views/RowRssTest.php
 share/drupal/core/modules/comment/tests/src/Functional/Views/WizardTest.php
+share/drupal/core/modules/comment/tests/src/Kernel/CommentBaseFieldTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentBundlesTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentDefaultFormatterCacheTagsTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentFieldAccessTest.php
@@ -4223,8 +4229,10 @@ share/drupal/core/modules/content_moderation/tests/modules/content_moderation_te
 share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.latest.yml
 share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_base_table_test.yml
 share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_field_state_test.yml
+share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_filter_via_relationship.yml
 share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_revision_test.yml
 share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_state_filter_base_table.yml
+share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_state_filter_base_table_filter_group_or.yml
 share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_state_filter_base_table_filter_on_revision.yml
 share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_state_filter_entity_test.yml
 share/drupal/core/modules/content_moderation/tests/modules/content_moderation_test_views/config/install/views.view.test_content_moderation_state_filter_revision_table.yml
@@ -5727,6 +5735,7 @@ share/drupal/core/modules/image/tests/modules/image_module_test/config/schema/im
 share/drupal/core/modules/image/tests/modules/image_module_test/image_module_test.info.yml
 share/drupal/core/modules/image/tests/modules/image_module_test/image_module_test.module
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/Field/FieldFormatter/DummyAjaxFormatter.php
+share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/Field/FieldFormatter/DummyImageFormatter.php
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/Field/FieldType/DummyAjaxItem.php
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/Field/FieldWidget/DummyAjaxWidget.php
 share/drupal/core/modules/image/tests/modules/image_module_test/src/Plugin/ImageEffect/AjaxTestImageEffect.php
@@ -7040,6 +7049,7 @@ share/drupal/core/modules/menu_link_content/tests/src/Kernel/PathAliasMenuLinkCo
 share/drupal/core/modules/menu_link_content/tests/src/Kernel/Plugin/migrate/process/LinkUriTest.php
 share/drupal/core/modules/menu_link_content/tests/src/Kernel/Plugin/migrate/source/MenuLinkTest.php
 share/drupal/core/modules/menu_link_content/tests/src/Kernel/Plugin/migrate/source/d6/MenuLinkTranslationTest.php
+share/drupal/core/modules/menu_link_content/tests/src/Unit/MenuLinkContentEntityAccessTest.php
 share/drupal/core/modules/menu_link_content/tests/src/Unit/MenuLinkPluginTest.php
 share/drupal/core/modules/menu_ui/config/install/menu_ui.settings.yml
 share/drupal/core/modules/menu_ui/config/schema/menu_ui.schema.yml
@@ -8161,6 +8171,7 @@ share/drupal/core/modules/rdf/tests/src/Kernel/Field/TelephoneFieldRdfaTest.php
 share/drupal/core/modules/rdf/tests/src/Kernel/Field/TextFieldRdfaTest.php
 share/drupal/core/modules/rdf/tests/src/Kernel/Migrate/d7/MigrateRdfMappingTest.php
 share/drupal/core/modules/rdf/tests/src/Kernel/Plugin/migrate/source/d7/RdfMappingTest.php
+share/drupal/core/modules/rdf/tests/src/Kernel/RdfCommentStorageLoadTest.php
 share/drupal/core/modules/rdf/tests/src/Kernel/RdfaAttributesTest.php
 share/drupal/core/modules/rdf/tests/src/Traits/EasyRdf_ParsedUri.php
 share/drupal/core/modules/rdf/tests/src/Traits/RdfParsingTrait.php
@@ -9424,6 +9435,7 @@ share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTest
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestConstraints.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestDefaultAccess.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestDefaultValue.php
+share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestExternal.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestFieldMethods.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestFieldOverride.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestLabel.php
@@ -9763,6 +9775,7 @@ share/drupal/core/modules/system/tests/modules/menu_test/src/Plugin/Menu/LocalTa
 share/drupal/core/modules/system/tests/modules/menu_test/src/TestControllers.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Theme/TestThemeNegotiator.php
 share/drupal/core/modules/system/tests/modules/module_autoload_test/module_autoload_test.info.yml
+share/drupal/core/modules/system/tests/modules/module_autoload_test/module_autoload_test.module
 share/drupal/core/modules/system/tests/modules/module_autoload_test/src/SomeClass.php
 share/drupal/core/modules/system/tests/modules/module_cachebin/module_cachebin.info.yml
 share/drupal/core/modules/system/tests/modules/module_cachebin/module_cachebin.services.yml
@@ -9798,6 +9811,7 @@ share/drupal/core/modules/system/tests/modules/new_dependency_test/new_dependenc
 share/drupal/core/modules/system/tests/modules/new_dependency_test/src/InjectedService.php
 share/drupal/core/modules/system/tests/modules/new_dependency_test/src/Service.php
 share/drupal/core/modules/system/tests/modules/new_dependency_test/src/ServiceWithDependency.php
+share/drupal/core/modules/system/tests/modules/new_dependency_test/src/SetterInjection.php
 share/drupal/core/modules/system/tests/modules/new_dependency_test_with_service/new_dependency_test_with_service.info.yml
 share/drupal/core/modules/system/tests/modules/new_dependency_test_with_service/new_dependency_test_with_service.services.yml
 share/drupal/core/modules/system/tests/modules/new_dependency_test_with_service/src/NewService.php
@@ -10880,6 +10894,7 @@ share/drupal/core/modules/tracker/src/Tests/Views/TrackerTestBase.php
 share/drupal/core/modules/tracker/tests/modules/tracker_test_views/test_views/views.view.test_tracker_user_uid.yml
 share/drupal/core/modules/tracker/tests/modules/tracker_test_views/tracker_test_views.info.yml
 share/drupal/core/modules/tracker/tests/src/Functional/TrackerNodeAccessTest.php
+share/drupal/core/modules/tracker/tests/src/Functional/TrackerRecentContentLinkTest.php
 share/drupal/core/modules/tracker/tests/src/Functional/TrackerTest.php
 share/drupal/core/modules/tracker/tests/src/Functional/Views/TrackerTestBase.php
 share/drupal/core/modules/tracker/tests/src/Kernel/Migrate/d7/MigrateTrackerNodeTest.php
@@ -11725,10 +11740,14 @@ share/drupal/core/modules/views/tests/modules/user_batch_action_test/config/inst
 share/drupal/core/modules/views/tests/modules/user_batch_action_test/config/schema/user_batch_action_test.schema.yml
 share/drupal/core/modules/views/tests/modules/user_batch_action_test/src/Plugin/Action/BatchUserAction.php
 share/drupal/core/modules/views/tests/modules/user_batch_action_test/user_batch_action_test.info.yml
+share/drupal/core/modules/views/tests/modules/views_config_entity_test/config/schema/views_config_entity_test.schema.yml
+share/drupal/core/modules/views/tests/modules/views_config_entity_test/src/Entity/ViewsConfigEntityTest.php
+share/drupal/core/modules/views/tests/modules/views_config_entity_test/src/ViewsConfigEntityTestViewsData.php
+share/drupal/core/modules/views/tests/modules/views_config_entity_test/views_config_entity_test.info.yml
 share/drupal/core/modules/views/tests/modules/views_entity_test/views_entity_test.info.yml
 share/drupal/core/modules/views/tests/modules/views_entity_test/views_entity_test.module
 share/drupal/core/modules/views/tests/modules/views_test_cacheable_metadata_calculation/config/install/views.view.test_cacheable_metadata_calculation.yml
-share/drupal/core/modules/views/tests/modules/views_test_cacheable_metadata_calculation/src/Plugin/views/access/CachableMetadataCalculationTest.php
+share/drupal/core/modules/views/tests/modules/views_test_cacheable_metadata_calculation/src/Plugin/views/access/CacheableMetadataCalculationTest.php
 share/drupal/core/modules/views/tests/modules/views_test_cacheable_metadata_calculation/views_test_cacheable_metadata_calculation.info.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/config/schema/views_test_config.views.schema.yml
 share/drupal/core/modules/views/tests/modules/views_test_config/test_views/views.view.base_and_revision.yml
@@ -12050,7 +12069,7 @@ share/drupal/core/modules/views/tests/src/FunctionalJavascript/Plugin/views/Hand
 share/drupal/core/modules/views/tests/src/FunctionalJavascript/Plugin/views/Handler/FieldTest.php
 share/drupal/core/modules/views/tests/src/FunctionalJavascript/Plugin/views/Handler/GroupedExposedFilterTest.php
 share/drupal/core/modules/views/tests/src/Kernel/BasicTest.php
-share/drupal/core/modules/views/tests/src/Kernel/CachableMetadataCalculationTest.php
+share/drupal/core/modules/views/tests/src/Kernel/CacheableMetadataCalculationTest.php
 share/drupal/core/modules/views/tests/src/Kernel/Entity/EntityViewsWithMultivalueBasefieldTest.php
 share/drupal/core/modules/views/tests/src/Kernel/Entity/FilterEntityBundleTest.php
 share/drupal/core/modules/views/tests/src/Kernel/Entity/LatestRevisionFilterTest.php
@@ -12168,6 +12187,7 @@ share/drupal/core/modules/views/tests/src/Unit/Plugin/display/PathPluginBaseTest
 share/drupal/core/modules/views/tests/src/Unit/Plugin/field/CounterTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/field/FieldPluginBaseTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/field/FieldTest.php
+share/drupal/core/modules/views/tests/src/Unit/Plugin/filter/InOperatorTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/pager/PagerPluginBaseTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/query/SqlTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/views/display/BlockTest.php
@@ -13559,6 +13579,7 @@ share/drupal/core/tests/Drupal/KernelTests/Core/Database/QueryTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Database/RangeQueryTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Database/RegressionTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Database/ReplicaKillSwitchTest.php
+share/drupal/core/tests/Drupal/KernelTests/Core/Database/ReservedWordTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Database/SchemaLegacyTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Database/SchemaTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Database/SelectCloneTest.php
@@ -14138,6 +14159,7 @@ share/drupal/core/tests/Drupal/Tests/Core/Asset/library_test_files/css_js_settin
 share/drupal/core/tests/Drupal/Tests/Core/Asset/library_test_files/css_weights.libraries.yml
 share/drupal/core/tests/Drupal/Tests/Core/Asset/library_test_files/data_types.libraries.yml
 share/drupal/core/tests/Drupal/Tests/Core/Asset/library_test_files/dependencies.libraries.yml
+share/drupal/core/tests/Drupal/Tests/Core/Asset/library_test_files/empty.libraries.yml
 share/drupal/core/tests/Drupal/Tests/Core/Asset/library_test_files/example_contrib_module.libraries.yml
 share/drupal/core/tests/Drupal/Tests/Core/Asset/library_test_files/example_module.libraries.yml
 share/drupal/core/tests/Drupal/Tests/Core/Asset/library_test_files/example_module_missing_information.libraries.yml
