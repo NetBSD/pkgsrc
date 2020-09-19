@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3246 2020/09/18 09:28:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.3247 2020/09/19 21:12:52 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -41,6 +41,7 @@ SUBDIR+=	R-glue
 SUBDIR+=	R-ini
 SUBDIR+=	R-inline
 SUBDIR+=	R-iterators
+SUBDIR+=	R-pkgKitten
 SUBDIR+=	R-lazyeval
 SUBDIR+=	R-lifecycle
 SUBDIR+=	R-lintr
