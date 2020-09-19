@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5317 2020/09/19 03:38:30 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5318 2020/09/19 12:54:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7993,3 +7993,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/matrix-synapse to 1.19.3 [js 2020-09-18]
 	Updated editors/vim-share to 8.2.1709 [morr 2020-09-18]
 	Updated multimedia/gpac to 0.8.1 [schmonz 2020-09-19]
+	Updated net/ruby-nio4r to 2.5.4 [taca 2020-09-19]
