@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/09/19 03:14:16 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/09/19 03:38:07 schmonz Exp $
 bin/DashCast
 bin/MP42TS
 bin/MP4Box
@@ -140,7 +140,7 @@ ${PLIST.x11}lib/gpac/gm_x11_out.${LIBEXT}
 lib/gpac/gm_xvid_dec.${LIBEXT}
 lib/libgpac.so
 lib/libgpac.so.8
-lib/libgpac.so.8.0.0
+lib/libgpac.so.8.1.0
 man/man1/gpac.1
 man/man1/mp4box.1
 man/man1/mp4client.1
