@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5336 2020/09/19 18:22:13 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5337 2020/09/19 20:06:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8012,3 +8012,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/unison2.51 to 2.51.2nb22 [wiz 2020-09-19]
 	Updated devel/lldb to 10.0.1nb1 [he 2020-09-19]
 	Updated net/tor to 0.4.4.5nb1 [leot 2020-09-19]
+	Updated cad/gtkwave to 3.3.106 [mef 2020-09-19]
