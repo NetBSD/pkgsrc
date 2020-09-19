@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2020/08/17 20:19:21 leot Exp $
+# $NetBSD: Makefile,v 1.117 2020/09/19 15:27:15 mef Exp $
 
 DISTNAME=	smalltalk-3.2.5
 PKGREVISION=	16
@@ -27,6 +27,12 @@ CONFIGURE_ARGS+=	--without-emacs
 IGNORE_LIBTOOLIZE=	lib/smalltalk/libc.la
 INFO_FILES=		YES
 TEST_TARGET=		check
+
+SUBST_CLASSES+=		paxctl
+SUBST_FILES.paxctl=	Makefile.in
+SUBST_STAGE.paxctl=	pre-configure
+SUBST_MESSAGE.paxctl=	Give paxctl path to Makefile.in after patch
+SUBST_SED.paxctl=	-e 's,@PAXCTL@,${TOOLS_PLATFORM.paxctl},'
 
 REPLACE_PERL=		packages/vfs/deb packages/vfs/mailfs
 REPLACE_SED=		examples/pepe.sed examples/xml.sed
