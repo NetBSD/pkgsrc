@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+$NetBSD: patch-aa,v 1.2 2020/09/19 13:41:42 taca Exp $
 
 Fix compilation error DragonFly.
 
---- clamdtop/clamdtop.c.orig	2009-06-01 19:20:12.000000000 +0300
-+++ clamdtop/clamdtop.c	2009-06-11 07:31:58.000000000 +0300
-@@ -33,6 +33,7 @@
- #endif
- 
+--- clamdtop/clamdtop.c.orig	2020-09-13 00:27:09.000000000 +0000
++++ clamdtop/clamdtop.c
+@@ -36,6 +36,7 @@
+ #ifdef HAVE_UNISTD_H
  #include <unistd.h>
+ #endif
 +#include <stdarg.h>
  #include <stdio.h>
  #include <stdlib.h>
