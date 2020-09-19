@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/19 14:14:01 schmonz Exp $
+bin/mp4joiner
+bin/mp4splitter
+share/doc/mp4tools/AUTHORS
+share/doc/mp4tools/COPYING
+share/doc/mp4tools/ChangeLog
+share/doc/mp4tools/INSTALL
+share/doc/mp4tools/README
+share/locale/de/LC_MESSAGES/mp4tools.mo
+share/locale/es/LC_MESSAGES/mp4tools.mo
+share/locale/es_VE/LC_MESSAGES/mp4tools.mo
+share/locale/fr/LC_MESSAGES/mp4tools.mo
+share/locale/hu/LC_MESSAGES/mp4tools.mo
+share/locale/it/LC_MESSAGES/mp4tools.mo
+share/locale/ko/LC_MESSAGES/mp4tools.mo
+share/locale/pl/LC_MESSAGES/mp4tools.mo
+share/locale/pt/LC_MESSAGES/mp4tools.mo
+share/locale/pt_BR/LC_MESSAGES/mp4tools.mo
+share/locale/ru/LC_MESSAGES/mp4tools.mo
+share/locale/si/LC_MESSAGES/mp4tools.mo
+share/locale/tr/LC_MESSAGES/mp4tools.mo
+share/locale/zh_CN/LC_MESSAGES/mp4tools.mo
+share/locale/zh_TW/LC_MESSAGES/mp4tools.mo
