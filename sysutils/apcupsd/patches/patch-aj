@@ -1,4 +1,8 @@
-$NetBSD: patch-aj,v 1.9 2016/01/28 15:51:34 prlw1 Exp $
+$NetBSD: patch-aj,v 1.10 2020/09/19 13:50:48 taca Exp $
+
+* Fix for pkgsrc environment.
+* Add Dragonfly support.
+* Add apccontrol script on NetBSD.
 
 --- configure.orig	2015-01-04 20:35:43.000000000 +0000
 +++ configure

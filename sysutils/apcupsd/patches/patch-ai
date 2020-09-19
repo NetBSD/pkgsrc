@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.5 2011/08/01 14:54:51 bouyer Exp $
+$NetBSD: patch-ai,v 1.6 2020/09/19 13:50:48 taca Exp $
+
+* Fix installation for pkgsrc.
 
 --- platforms/netbsd/Makefile.orig	2011-08-01 15:45:29.000000000 +0200
 +++ platforms/netbsd/Makefile	2011-08-01 15:45:49.000000000 +0200

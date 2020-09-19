@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.8 2016/01/28 15:51:34 prlw1 Exp $
+$NetBSD: patch-af,v 1.9 2020/09/19 13:50:48 taca Exp $
+
+* Fix installation for pkgsrc.
 
 --- src/Makefile.orig	2014-11-04 19:17:43.000000000 +0000
 +++ src/Makefile

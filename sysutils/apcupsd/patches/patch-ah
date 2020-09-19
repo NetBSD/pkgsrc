@@ -1,14 +1,96 @@
-$NetBSD: patch-ah,v 1.4 2007/06/15 21:15:39 bouyer Exp $
+$NetBSD: patch-ah,v 1.5 2020/09/19 13:50:48 taca Exp $
 
---- platforms/netbsd/apcupsd.in.orig    2002-05-28 15:34:05.000000000 +0200
-+++ platforms/netbsd/apcupsd.in 2007-01-05 20:52:42.000000000 +0100
-@@ -6,6 +6,9 @@
- # chkconfig: 2345 20 99
- # description: apcupsd monitors power and takes action if necessary
+Use standard NetBSD rc(8) scheme.
+
+--- platforms/netbsd/apcupsd.in.orig	2002-05-28 13:34:53.000000000 +0000
++++ platforms/netbsd/apcupsd.in
+@@ -1,49 +1,50 @@
+-#! /bin/sh
++#!/bin/sh
  #
+ # apcupsd      This shell script takes care of starting and stopping
+ #	       the apcupsd UPS monitoring daemon.
+ #
+-# chkconfig: 2345 20 99
+-# description: apcupsd monitors power and takes action if necessary
 +# PROVIDE: apcupsd
 +# REQUIRE: DAEMON
-+#
- APCPID=@PIDDIR@/apcupsd.pid
- APCLOCK=@PIDDIR@/apcupsd.lock
+ #
+-APCPID=@PIDDIR@/apcupsd.pid
+-APCLOCK=@PIDDIR@/apcupsd.lock
  DISTVER="@DISTVER@"
+ 
+-return="  Done."
++if [ -f /etc/rc.subr ]; then
++	. /etc/rc.subr
++fi
+ 
++name="apcupsd"
++rcvar=$name
++command="@sbindir@/${name}"
++pidfile="@PIDDIR@/${name}.pid"
++apclock="@PIDDIR@/${name}.lock"
++command_args="--kill-on-powerfail"
++extra_commands="info"
+ 
+-case "$1" in
+-    start)
+-	rm -f @PWRFAILDIR@/powerfail
+-	rm -f @nologdir@/nologin
+-	echo -n "Starting apcupsd power management"
+-	@sbindir@/apcupsd --kill-on-powerfail || return="  Failed."
+-	touch $APCLOCK
+-	echo -e "$return"
+-    ;;
+-    stop)
+-	echo -n "Stopping apcupsd power management"
+-	if [ -f ${APCPID} ]; then
+-		THEPID=`cat ${APCPID}`
+-		kill ${THEPID} || return=" Failed."
+-		rm -f ${APCPID}
+-	else
+-		return=" Failed."
+-	fi
+-	rm -f $APCLOCK
+-	echo -e "$return"
+-    ;;
+-    restart)
+-       $0 stop
+-       $0 start
+-    ;;
+-    status)
+-       @sbindir@/apcaccess status
+-    ;;
+-    *)
+-    echo "Usage: $0 {start|stop|restart|status}"
+-    exit 1
+-esac
++apcupsd_start_precmd()
++{
++    rm -f @PWRFAILDIR@/powerfail
++}
+ 
+-exit 0
++apcupsd_start_postcmd()
++{
++    touch $apclock
++}
++
++apcupsd_stop_postcmd()
++{
++    rm -f $apclock
++}
++
++apcupsd_info()
++{
++    @sbindir@/apcaccess status
++}
++
++
++start_precmd=apcupsd_start_precmd
++start_postcmd=apcupsd_start_postcmd
++stop_postcmd=apcupsd_stop_postcmd
++info_cmd=apcupsd_info
++
++load_rc_config $name
++run_rc_command "$1"
