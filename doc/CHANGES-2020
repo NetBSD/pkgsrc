@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5320 2020/09/19 13:05:03 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5321 2020/09/19 13:07:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7996,3 +7996,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-nio4r to 2.5.4 [taca 2020-09-19]
 	Updated sysutils/ruby-facter to 4.0.38 [taca 2020-09-19]
 	Updated www/ruby-puma to 5.0.0 [taca 2020-09-19]
+	Updated net/bind911 to 9.11.23 [taca 2020-09-19]
