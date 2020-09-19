@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2007/06/15 21:15:39 bouyer Exp $
+$NetBSD: patch-ab,v 1.7 2020/09/19 13:50:48 taca Exp $
+
+* Accept connection from localhost default.
+* Use proper directory.
 
 --- platforms/etc/apcupsd.conf.in.orig	2007-06-15 22:21:18.000000000 +0200
 +++ platforms/etc/apcupsd.conf.in	2007-06-15 22:28:16.000000000 +0200
