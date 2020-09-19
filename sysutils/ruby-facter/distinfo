@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2020/09/14 16:37:41 taca Exp $
+$NetBSD: distinfo,v 1.32 2020/09/19 12:59:25 taca Exp $
 
-SHA1 (facter-4.0.37.gem) = 65aefe5d5fdfcffc45a301f3b459d918a819c23a
-RMD160 (facter-4.0.37.gem) = be3628a3b88c10762ceae97856c1a77ed40f59bf
-SHA512 (facter-4.0.37.gem) = 58e3f1dac3539006b4d4be59d729d3a1767fa330b542fa9b6d59d3693df8de4c25f2962ffe8f30dd886da5ad898ed851e5c20729973867e93fda9262820953b4
-Size (facter-4.0.37.gem) = 131072 bytes
+SHA1 (facter-4.0.38.gem) = 8bbb90615270220dda07f4f27fdc5428ac85c178
+RMD160 (facter-4.0.38.gem) = a77736ca3a158e5bce0d3e6acb3b3e6a3b6a03c1
+SHA512 (facter-4.0.38.gem) = 63666827c2a70bfdd9f732aeaf9aefd21a92cf591447621baadd1d3e7be11ed2c590eed14506b89d89c5d5e01140cc337503e7bcc6140657fbf7bda54b94704d
+Size (facter-4.0.38.gem) = 131072 bytes
