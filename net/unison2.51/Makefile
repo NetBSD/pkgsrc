@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/08/17 20:19:51 leot Exp $
+# $NetBSD: Makefile,v 1.28 2020/09/19 15:51:23 wiz Exp $
 
 # Currently, 2.51.x is the standard approach, and thus this package
 # produces a "unison-2.51.x" package which installs a "unison" binary.
@@ -6,7 +6,7 @@
 # multiple unison packages, with whichever is the standard approach
 # using the unversioned name.
 DISTNAME=	unison-2.51.2
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -31,7 +31,7 @@ MAKE_ENV+=	HOME=${WRKDIR:Q}
 
 .include "../../mk/ocaml.mk"
 
-.if (${OCAML_USE_OPT_COMPILER} == "true")
+.if (${OCAML_USE_OPT_COMPILER} == "yes")
 MAKE_FLAGS+=	NATIVE=true
 .else
 MAKE_FLAGS+=	NATIVE=false
