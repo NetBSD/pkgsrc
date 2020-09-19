@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
+$NetBSD: patch-configure,v 1.3 2020/09/19 13:09:27 taca Exp $
 
 * Add DragonFly support.
 * Use proper link options for NetBSD.
 * Link proper postgresql library.
 * Take from NetBSD base, adding support for blacklistd.
 
---- configure.orig	2020-07-03 06:44:14.000000000 -0400
-+++ configure	2020-08-30 15:10:37.131653135 -0400
-@@ -637,6 +637,10 @@
+--- configure.orig	2020-09-04 10:44:49.000000000 +0000
++++ configure
+@@ -637,6 +637,10 @@ BUILD_LDFLAGS
  BUILD_CPPFLAGS
  BUILD_CFLAGS
  BUILD_CC
@@ -18,7 +18,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  DLZ_DRIVER_MYSQL_LIBS
  DLZ_DRIVER_MYSQL_INCLUDES
  DLZ_SYSTEM_TEST
-@@ -732,6 +736,8 @@
+@@ -732,6 +736,8 @@ JSON_C_LIBS
  JSON_C_CFLAGS
  LIBXML2_LIBS
  LIBXML2_CFLAGS
@@ -27,7 +27,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  NZD_MANS
  NZDTARGETS
  NZDSRCS
-@@ -1719,6 +1725,8 @@
+@@ -1721,6 +1727,8 @@ Optional Packages:
    --with-dlz-stub=ARG     Build with stub DLZ driver [yes|no]. (Required to
                            use stub driver with DLZ)
    --with-make-clean       run "make clean" at end of configure [yes|no]
@@ -36,7 +36,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  
  Some influential environment variables:
    CC          C compiler command
-@@ -3917,7 +3925,7 @@
+@@ -3919,7 +3927,7 @@ fi
  
  # On IRIX 5.3, sys/types and inttypes.h are conflicting.
  for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
@@ -45,7 +45,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default
-@@ -18385,7 +18393,265 @@
+@@ -18454,7 +18462,265 @@ esac
  
  
  
@@ -311,7 +311,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  # Check whether --with-zlib was given.
  if test "${with_zlib+set}" = set; then :
    withval=$with_zlib;
-@@ -22517,7 +22783,7 @@
+@@ -22586,7 +22852,7 @@ else
  
  fi
  	        ;; #(
@@ -320,7 +320,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  
  		 LDFLAGS="${LDFLAGS} -Wl,-E"
  		 SO_CFLAGS="-fpic"
-@@ -22549,9 +22815,9 @@
+@@ -22618,9 +22884,9 @@ fi
  	        ;; #(
    *-solaris*) :
  
@@ -333,7 +333,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  	        ;; #(
    ia64-hp-hpux*) :
  
-@@ -22980,8 +23246,8 @@
+@@ -23049,8 +23315,8 @@ $as_echo "no" >&6; }
  	fi
  	if test -n "-L$use_dlz_postgres_lib -lpq"
  	then
@@ -344,16 +344,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  	fi
  
  
-@@ -24465,6 +24731,8 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
-@@ -26186,6 +26454,8 @@
+@@ -26255,6 +26523,8 @@ report() {
  	test "X$PYTHON" = "X" || echo "    Python tools (--with-python)"
  	test "X$LIBXML2_LIBS" = "X" || echo "    XML statistics (--with-libxml2)"
  	test "X$JSON_C_LIBS" = "X" || echo "    JSON statistics (--with-json-c): $JSON_C_CFLAGS $JSON_C_LIBS"
@@ -362,7 +353,7 @@ $NetBSD: patch-configure,v 1.2 2020/08/30 19:26:45 christos Exp $
  	test "X$ZLIB_LIBS" = "X" || echo "    HTTP zlib compression (--with-zlib)"
  	test "X$NZD_TOOLS" = "X" || echo "    LMDB database to store configuration for 'addzone' zones (--with-lmdb)"
  	test "no" = "$with_libidn2" || echo "    IDN support (--with-libidn2)"
-@@ -26264,6 +26534,8 @@
+@@ -26333,6 +26603,8 @@ report() {
      test "X$PYTHON" = "X" && echo "    Python tools (--with-python)"
      test "X$LIBXML2_LIBS" = "X" && echo "    XML statistics (--with-libxml2)"
      test "X$JSON_C_LIBS" = "X" && echo "    JSON statistics (--with-json-c)"
