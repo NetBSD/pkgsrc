@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5321 2020/09/19 13:07:32 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5322 2020/09/19 13:09:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7997,3 +7997,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-facter to 4.0.38 [taca 2020-09-19]
 	Updated www/ruby-puma to 5.0.0 [taca 2020-09-19]
 	Updated net/bind911 to 9.11.23 [taca 2020-09-19]
+	Updated net/bind916 to 9.16.7 [taca 2020-09-19]
