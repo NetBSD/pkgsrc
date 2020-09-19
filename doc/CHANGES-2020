@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5319 2020/09/19 12:59:49 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5320 2020/09/19 13:05:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -7995,3 +7995,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/gpac to 0.8.1 [schmonz 2020-09-19]
 	Updated net/ruby-nio4r to 2.5.4 [taca 2020-09-19]
 	Updated sysutils/ruby-facter to 4.0.38 [taca 2020-09-19]
+	Updated www/ruby-puma to 5.0.0 [taca 2020-09-19]
