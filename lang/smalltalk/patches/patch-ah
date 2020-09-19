@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.5 2017/12/29 03:56:42 dholland Exp $
+$NetBSD: patch-ah,v 1.6 2020/09/19 15:27:15 mef Exp $
 
 - Link against pthreads.
 - Run paxctl +am after linking gst and gst-tool so they don't crash
@@ -28,11 +28,11 @@ when subsequently run during the build.
  gst$(EXEEXT): $(gst_OBJECTS) $(gst_DEPENDENCIES) $(EXTRA_gst_DEPENDENCIES) 
  	@rm -f gst$(EXEEXT)
  	$(gst_LINK) $(gst_OBJECTS) $(gst_LDADD) $(LIBS)
-+	paxctl +am .libs/gst || true
++	@PAXCTL@ +am .libs/gst || true
  gst-tool$(EXEEXT): $(gst_tool_OBJECTS) $(gst_tool_DEPENDENCIES) $(EXTRA_gst_tool_DEPENDENCIES) 
  	@rm -f gst-tool$(EXEEXT)
  	$(gst_tool_LINK) $(gst_tool_OBJECTS) $(gst_tool_LDADD) $(LIBS)
-+	paxctl +am .libs/gst-tool || true
++	@PAXCTL@  +am .libs/gst-tool || true
  winewrapper$(EXEEXT): $(winewrapper_OBJECTS) $(winewrapper_DEPENDENCIES) $(EXTRA_winewrapper_DEPENDENCIES) 
  	@rm -f winewrapper$(EXEEXT)
  	$(LINK) $(winewrapper_OBJECTS) $(winewrapper_LDADD) $(LIBS)
