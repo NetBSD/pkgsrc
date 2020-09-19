@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 21:43:34 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/09/19 14:02:31 rhialto Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -20,12 +20,6 @@ WRKSRC=			${WRKDIR}
 BUILD_DIRS=		lib clit18
 MAKE_FILE=		Makefile
 USE_TOOLS+=		gmake
-
-SUBST_CLASSES+=		d2u
-SUBST_STAGE.d2u=	pre-configure
-SUBST_MESSAGE.d2u=	Stripping CRLF line ends.
-SUBST_FILES.d2u+=	*.h *.c */*.h */*.c */*/*.h */*/*.c
-SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
 
 SUBST_CLASSES+=		flags
 SUBST_STAGE.flags=	pre-configure
