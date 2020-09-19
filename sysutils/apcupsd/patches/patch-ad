@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2012/05/07 12:55:23 shattered Exp $
+$NetBSD: patch-ad,v 1.6 2020/09/19 13:50:48 taca Exp $
+
+* apccontrol script.
 
 --- platforms/netbsd/apccontrol.in.orig	2012-04-21 20:53:17.000000000 +0000
 +++ platforms/netbsd/apccontrol.in

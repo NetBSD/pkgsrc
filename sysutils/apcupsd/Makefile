@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2020/08/17 20:20:02 leot Exp $
+# $NetBSD: Makefile,v 1.92 2020/09/19 13:50:48 taca Exp $
 
-DISTNAME=		apcupsd-3.14.13r2365
-PKGREVISION=		6
+DISTNAME=		apcupsd-3.14.14
 CATEGORIES=		sysutils
-#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.apcupsd.org/
@@ -17,9 +15,10 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	apcupsd
-WRKSRC=			${WRKDIR}/apcupsd
 
 CTF_SUPPORTED=		no # https://smartos.org/bugview/OS-6533
+
+BUILD_DEFS+=		VARBASE
 
 .include "options.mk"
 
@@ -94,8 +93,8 @@ SUBST_MESSAGE.strip=	Fixing conflicting STRIP variable name
 #
 
 HTMLDOCS=	manual.html apcupsd.png charging.png commlost.png \
-	main_configs.png multimon.png onbatt.png online.png status.png \
-	thanks.png wininstall6.png
+		main_configs.png multimon.png onbatt.png online.png \
+		status.png thanks.png wininstall6.png
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/platforms/etc/apcupsd.conf \

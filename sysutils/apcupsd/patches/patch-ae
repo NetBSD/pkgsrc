@@ -1,4 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2011/08/01 14:54:51 bouyer Exp $
+$NetBSD: patch-ae,v 1.8 2020/09/19 13:50:48 taca Exp $
+
+* Fix for pkgsrc environment.
+* Add Dragonfly support.
+* Add apccontrol script on NetBSD.
 
 --- autoconf/configure.in.orig	2010-09-02 16:23:39.000000000 +0200
 +++ autoconf/configure.in	2011-08-01 15:40:05.000000000 +0200
