@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.303 2020/08/31 17:20:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.304 2020/09/19 14:15:22 schmonz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -151,6 +151,7 @@ SUBDIR+=	mkvtoolnix
 SUBDIR+=	mkvtoolnix-old
 SUBDIR+=	mlt
 SUBDIR+=	movit
+SUBDIR+=	mp4tools
 SUBDIR+=	mp4v2
 SUBDIR+=	mpeg-lib
 SUBDIR+=	mpeg_encode
