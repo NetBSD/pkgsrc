@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1346 2020/09/12 14:53:55 leot Exp $
+# $NetBSD: Makefile,v 1.1347 2020/09/19 19:42:11 js Exp $
 #
 
 COMMENT=	Networking tools
@@ -962,6 +962,7 @@ SUBDIR+=	whois3
 SUBDIR+=	whoson
 SUBDIR+=	wide-dhcpv6
 SUBDIR+=	wimon
+SUBDIR+=	wireguard-tools
 SUBDIR+=	wireshark
 SUBDIR+=	wistumbler
 SUBDIR+=	wistumbler2
