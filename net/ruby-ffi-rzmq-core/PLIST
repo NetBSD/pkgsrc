@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/20 08:39:57 ryoon Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ffi-rzmq-core.gemspec
+${GEM_LIBDIR}/lib/ffi-rzmq-core.rb
+${GEM_LIBDIR}/lib/ffi-rzmq-core/constants.rb
+${GEM_LIBDIR}/lib/ffi-rzmq-core/libc.rb
+${GEM_LIBDIR}/lib/ffi-rzmq-core/libzmq.rb
+${GEM_LIBDIR}/lib/ffi-rzmq-core/libzmq4.rb
+${GEM_LIBDIR}/lib/ffi-rzmq-core/structures.rb
+${GEM_LIBDIR}/lib/ffi-rzmq-core/utilities.rb
+${GEM_LIBDIR}/lib/ffi-rzmq-core/version.rb
+${GEM_LIBDIR}/spec/libc_spec.rb
+${GEM_LIBDIR}/spec/libzmq4_spec.rb
+${GEM_LIBDIR}/spec/libzmq_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/structures_spec.rb
+${GEM_LIBDIR}/spec/support/version_checking.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
