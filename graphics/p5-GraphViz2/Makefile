@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:09:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/09/20 07:44:23 wiz Exp $
 
-DISTNAME=	GraphViz2-2.47
+DISTNAME=	GraphViz2-2.48
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GraphViz2/}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/GraphViz2
