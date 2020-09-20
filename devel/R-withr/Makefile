@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:41 brook Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/20 14:46:00 mef Exp $
 
 R_PKGNAME=	withr
-R_PKGVER=	2.1.2
+R_PKGVER=	2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Run code 'with' temporarily modified global state
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
+TEST_DEPENDS+=	R-RSQLite-[0-9]*:../../databases/R-RSQLite
 
 USE_LANGUAGES=	# none
 
