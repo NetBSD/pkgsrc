@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5342 2020/09/19 23:54:41 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5343 2020/09/20 00:28:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8018,3 +8018,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/R-rematch2 version 2.1.2 [mef 2020-09-19]
 	Updated devel/nspr to 4.29 [ryoon 2020-09-19]
 	Updated devel/nss to 3.57 [ryoon 2020-09-19]
+	Updated devel/R-usethis to 1.6.1 [mef 2020-09-20]
