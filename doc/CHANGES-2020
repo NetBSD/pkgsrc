@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5351 2020/09/20 04:41:50 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5352 2020/09/20 05:41:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8027,3 +8027,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-pkgload to 1.1.0 [mef 2020-09-20]
 	Updated devel/R-roxygen2 to 7.1.1 [mef 2020-09-20]
 	Updated devel/R-lintr to 2.0.1 [mef 2020-09-20]
+	Added devel/ruby-bond version 0.5.1 [ryoon 2020-09-20]
