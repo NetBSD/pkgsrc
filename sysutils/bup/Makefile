@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2020/08/31 18:11:24 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2020/09/20 16:44:54 gdt Exp $
 
-DISTNAME=	bup-0.30.1
-PKGREVISION=	1
+DISTNAME=	bup-0.31
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # bup has two problems that make packaging difficult.  One is that
@@ -31,7 +30,6 @@ COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
-DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
@@ -81,5 +79,7 @@ post-install:
 
 .include "options.mk"
 
+READLINE_DEFAULT=	readline
+.include "../../mk/readline.buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
