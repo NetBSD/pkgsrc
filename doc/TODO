@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20082 2020/09/18 08:00:30 wiz Exp $
+$NetBSD: TODO,v 1.20083 2020/09/20 07:00:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -371,6 +371,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.10.30
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-20.1.8
@@ -466,7 +467,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
 	o calibre-4.23.0
 	o calligra-3.0.1 [in wip; koffice successor]
+	o cantata-2.4.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o cascadia-ttf-2009.14
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o cddbd-1.5.2
@@ -602,6 +605,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geoclue-2.1.10
 	o gfract-0.33
 	o ghdl-0.33
+	o ghostscript-agpl-9.53.1
 	o gjs-1.64.3 [wip]
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -772,6 +776,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-3.2.0
+	o libsndfile-1.0.30
 	o libtecla-1.6.3
 	o libv4l-1.20.0
 	o libvirt-2.3
@@ -990,6 +995,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rbldnsd-0.998
 	o rdp-1.6
+	o re2c-2.0.3
 	o rebar-3.13.2
 	o regionset-0.2
 	o rep-gtk-0.90.8.1
@@ -1143,6 +1149,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o windowlab-1.40
 	o wine-5.0
 	o wine-devel-3.7
+	o wireshark-3.3.0
 	o wkhtmltopdf-0.12.5
 	o wmi-11
 	o worker-3.12.0
