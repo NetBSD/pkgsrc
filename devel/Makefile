@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3249 2020/09/19 23:17:53 mef Exp $
+# $NetBSD: Makefile,v 1.3250 2020/09/20 05:42:39 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2702,6 +2702,7 @@ SUBDIR+=	ruby-backports
 SUBDIR+=	ruby-bindata
 SUBDIR+=	ruby-bit-struct
 SUBDIR+=	ruby-blankslate
+SUBDIR+=	ruby-bond
 SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-byebug
