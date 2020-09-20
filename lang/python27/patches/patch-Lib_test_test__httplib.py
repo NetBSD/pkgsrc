@@ -1,4 +1,9 @@
-$NetBSD: patch-Lib_test_test__httplib.py,v 1.1 2020/09/20 11:06:23 mgorny Exp $
+$NetBSD: patch-Lib_test_test__httplib.py,v 1.2 2020/09/20 12:10:27 mgorny Exp $
+
+bpo-39603 (no CVE): header injection via HTTP method
+
+taken from:
+https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=138e2caeb4827ccfd1eaff2cf63afb79dfeeb3c4
 
 --- Lib/test/test_httplib.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Lib/test/test_httplib.py
