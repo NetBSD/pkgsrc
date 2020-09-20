@@ -7,5 +7,5 @@ virtual machine, and has automatic memory management with incremental
 garbage collection, making it ideal for configuration, scripting, and
 rapid prototyping.
 
-This version of Lua isn't the most recent version but it's still widely
-used, due to popularity of LuaJIT 2.0 which is compatible with Lua 5.1.
+This version of Lua was last updated in 2012 and is not maintained
+by upstream.
