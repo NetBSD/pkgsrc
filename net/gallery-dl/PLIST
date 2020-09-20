@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2020/08/15 20:04:33 leot Exp $
+@comment $NetBSD: PLIST,v 1.45 2020/09/20 20:22:48 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -261,6 +261,9 @@ ${PYSITELIB}/gallery_dl/extractor/mastodon.pyo
 ${PYSITELIB}/gallery_dl/extractor/message.py
 ${PYSITELIB}/gallery_dl/extractor/message.pyc
 ${PYSITELIB}/gallery_dl/extractor/message.pyo
+${PYSITELIB}/gallery_dl/extractor/myhentaigallery.py
+${PYSITELIB}/gallery_dl/extractor/myhentaigallery.pyc
+${PYSITELIB}/gallery_dl/extractor/myhentaigallery.pyo
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.py
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyc
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyo
