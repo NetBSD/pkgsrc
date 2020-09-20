@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/20 08:57:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/20 15:44:04 taca Exp $
 
 DISTNAME=	iruby-0.4.0
 CATEGORIES=	devel
@@ -18,6 +18,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-fiddle-[0-9]*:../../devel/ruby-fiddle
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi-rzmq-[0-9]*:../../net/ruby-ffi-rzmq
 
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.0.0:../../devel/py-ipython
+
+USE_LANGUAGES=	# none
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
