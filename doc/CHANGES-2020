@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5347 2020/09/20 03:09:25 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5348 2020/09/20 03:28:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8023,3 +8023,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-remotes to 2.2.0 [mef 2020-09-20]
 	Updated devel/R-callr to 3.4.4 [mef 2020-09-20]
 	Updated devel/R-covr to 3.5.1 [mef 2020-09-20]
+	Updated devel/R-testthat to 2.3.2 [mef 2020-09-20]
