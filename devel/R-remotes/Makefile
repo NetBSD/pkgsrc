@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 18:33:40 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/20 01:50:10 mef Exp $
 
 R_PKGNAME=	remotes
-R_PKGVER=	2.1.0
+R_PKGVER=	2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
