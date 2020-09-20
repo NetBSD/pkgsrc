@@ -1,4 +1,9 @@
-$NetBSD: patch-Lib_test_test__urllib2.py,v 1.1 2020/09/20 11:06:23 mgorny Exp $
+$NetBSD: patch-Lib_test_test__urllib2.py,v 1.2 2020/09/20 12:10:27 mgorny Exp $
+
+bpo-39503 (CVE-2020-8492): ReDoS on AbstractBasicAuthHandler
+
+taken from:
+https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=2273e65e11dd0234f2f51ebaef61fc6e848d4059
 
 --- Lib/test/test_urllib2.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Lib/test/test_urllib2.py
