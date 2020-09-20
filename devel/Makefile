@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3252 2020/09/20 08:36:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.3253 2020/09/20 08:58:52 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2767,6 +2767,7 @@ SUBDIR+=	ruby-iniparse
 SUBDIR+=	ruby-inline
 SUBDIR+=	ruby-instance_storage
 SUBDIR+=	ruby-io-like
+SUBDIR+=	ruby-iruby
 SUBDIR+=	ruby-kgio
 SUBDIR+=	ruby-lazy_priority_queue
 SUBDIR+=	ruby-libyajl2
