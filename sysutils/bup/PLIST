@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2019/11/19 15:01:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/09/20 16:44:54 gdt Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
-lib/bup/bup/_release.py
 lib/bup/bup/bloom.py
 lib/bup/bup/client.py
 lib/bup/bup/compat.py
@@ -14,24 +13,30 @@ lib/bup/bup/hashsplit.py
 lib/bup/bup/helpers.py
 lib/bup/bup/hlinkdb.py
 lib/bup/bup/index.py
+lib/bup/bup/io.py
 lib/bup/bup/ls.py
 lib/bup/bup/metadata.py
 lib/bup/bup/midx.py
 lib/bup/bup/options.py
 lib/bup/bup/path.py
+lib/bup/bup/pwdgrp.py
+lib/bup/bup/py2raise.py
 lib/bup/bup/repo.py
 lib/bup/bup/rm.py
 lib/bup/bup/shquote.py
+lib/bup/bup/source_info.py
 lib/bup/bup/ssh.py
 lib/bup/bup/version.py
 lib/bup/bup/vfs.py
 lib/bup/bup/vint.py
 lib/bup/bup/xstat.py
+lib/bup/cmd/bup
 lib/bup/cmd/bup-bloom
 lib/bup/cmd/bup-cat-file
 lib/bup/cmd/bup-daemon
 lib/bup/cmd/bup-damage
 lib/bup/cmd/bup-drecurse
+lib/bup/cmd/bup-features
 lib/bup/cmd/bup-fsck
 lib/bup/cmd/bup-ftp
 lib/bup/cmd/bup-fuse
