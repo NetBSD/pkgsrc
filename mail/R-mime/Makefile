@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:43 brook Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/20 06:03:19 mef Exp $
 
 R_PKGNAME=	mime
-R_PKGVER=	0.7
+R_PKGVER=	0.9
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
