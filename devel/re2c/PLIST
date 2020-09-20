@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/29 16:17:41 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/20 08:32:30 wiz Exp $
 bin/re2c
+bin/re2go
 man/man1/re2c.1
+man/man1/re2go.1
+share/re2c/stdlib/unicode_categories.re
