@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5365 2020/09/20 07:46:10 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5366 2020/09/20 07:47:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8041,3 +8041,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-MockModule to 0.175.0 [wiz 2020-09-20]
 	Updated graphics/p5-GraphViz2 to 2.48 [wiz 2020-09-20]
 	Updated security/p5-Crypt-SMIME to 0.27 [wiz 2020-09-20]
+	Updated textproc/p5-XML-LibXML to 2.0206 [wiz 2020-09-20]
