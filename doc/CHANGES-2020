@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5381 2020/09/20 09:26:51 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5382 2020/09/20 09:33:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8057,3 +8057,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ruby-iruby version 0.4.0 [ryoon 2020-09-20]
 	Updated net/youtube-dl to 20200920 [leot 2020-09-20]
 	Updated textproc/R-rmarkdown to 2.3 [mef 2020-09-20]
+	Updated textproc/R-DT to 0.15 [mef 2020-09-20]
