@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5372 2020/09/20 08:30:25 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5373 2020/09/20 08:32:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8048,3 +8048,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/p5-LDAP [wiz 2020-09-20]
 	Updated print/ghostscript-agpl to 9.53.1 [wiz 2020-09-20]
 	Updated audio/libsndfile to 1.0.30 [wiz 2020-09-20]
+	Updated devel/re2c to 2.0.3 [wiz 2020-09-20]
