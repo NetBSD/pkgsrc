@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5395 2020/09/20 15:25:02 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5396 2020/09/20 15:42:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8071,3 +8071,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/mikutter-plugins-twitter to 4.1 [tsutsui 2020-09-20]
 	Updated www/R-httr to 1.4.2 [mef 2020-09-20]
 	Updated www/php-ja-wordpress to 5.5.1 [taca 2020-09-20]
+	Updated devel/ruby-regexp_parser to 1.8.0 [taca 2020-09-20]
