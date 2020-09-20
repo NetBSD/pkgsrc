@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5367 2020/09/20 07:53:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5368 2020/09/20 07:56:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8043,3 +8043,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/p5-Crypt-SMIME to 0.27 [wiz 2020-09-20]
 	Updated textproc/p5-XML-LibXML to 2.0206 [wiz 2020-09-20]
 	Updated www/p5-Apache-Session to 1.94 [wiz 2020-09-20]
+	Updated www/p5-Mojolicious to 8.59 [wiz 2020-09-20]
