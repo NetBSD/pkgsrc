@@ -1,0 +1,11 @@
+Bond is on a mission to improve autocompletion in ruby, especially
+for irb/ripl. Aside from doing everything irb's can do and fixing
+its quirks, Bond can autocomplete argument(s) to methods, uniquely
+completing per module, per method and per argument. Bond brings
+ruby autocompletion closer to bash/zsh as it provides a configuration
+system and a DSL for creating custom completions and completion
+rules. With this configuration system, users can customize their
+autocompletions and share it with others. Bond can also load
+completions that ship with gems. Bond is able to offer more than
+irb's completion since it uses the full line of input when completing
+as opposed to irb's last-word approach.
