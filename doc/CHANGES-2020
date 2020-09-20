@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5387 2020/09/20 11:25:51 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5388 2020/09/20 14:30:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8063,3 +8063,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/python27 to 2.7.18nb3 [mgorny 2020-09-20]
 	Updated sysutils/qdirstat to 1.7 [markd 2020-09-20]
 	Updated pkgtools/pkg_notify to 0.4.8 [wiz 2020-09-20]
+	Updated math/py-sympy to 1.6.2 [ryoon 2020-09-20]
