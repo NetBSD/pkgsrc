@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2020/08/31 18:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.192 2020/09/20 22:30:07 gdt Exp $
 
 DISTNAME=	rustc-1.45.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -509,12 +509,13 @@ stage0-bootstrap: install
 #.include "../../devel/jemalloc/buildlink3.mk"
 
 # Bootstrap built on 8.0, build on later version
-# requires compat80 package
+# requires compat80 package.
 # (I wish this worked on powerpc, but it doesn't since
 # I can't build with the internal LLVM, ref.
 # https://github.com/rust-lang/rust/issues/65862)
 .if (${OPSYS} == "NetBSD") && \
 		((${MACHINE_ARCH} == "i386") || \
+		 (${MACHINE_ARCH} == "sparc64") || \
 		 (${MACHINE_ARCH} == "powerpc")) \
 	&& (empty(OS_VERSION:M[012345678].*) || \
 	    !empty(OS_VERSION:M8.99.*))
