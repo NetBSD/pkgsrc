@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5353 2020/09/20 06:03:33 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5354 2020/09/20 07:04:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8029,3 +8029,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-lintr to 2.0.1 [mef 2020-09-20]
 	Added devel/ruby-bond version 0.5.1 [ryoon 2020-09-20]
 	Updated mail/R-mime to 0.9 [mef 2020-09-20]
+	Updated archivers/p5-Archive-Tar-Wrapper to 0.38 [wiz 2020-09-20]
