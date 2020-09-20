@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5360 2020/09/20 07:27:50 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5361 2020/09/20 07:28:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8036,3 +8036,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/p5-SQL-Translator to 1.62 [wiz 2020-09-20]
 	Updated devel/p5-Data-ObjectDriver to 0.20 [wiz 2020-09-20]
 	Updated devel/p5-Log-Log4perl to 1.53 [wiz 2020-09-20]
+	Updated devel/p5-PerlIO-utf8_strict to 0.008 [wiz 2020-09-20]
