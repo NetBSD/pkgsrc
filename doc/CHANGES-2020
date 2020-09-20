@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5358 2020/09/20 07:15:31 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5359 2020/09/20 07:20:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8034,3 +8034,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-CPAN-Meta-JSON to 0.16nb2 [wiz 2020-09-20]
 	Updated databases/p5-DBD-Mock to 1.57 [wiz 2020-09-20]
 	Updated databases/p5-SQL-Translator to 1.62 [wiz 2020-09-20]
+	Updated devel/p5-Data-ObjectDriver to 0.20 [wiz 2020-09-20]
