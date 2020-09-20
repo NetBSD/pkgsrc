@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:37 brook Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/20 14:34:25 mef Exp $
 
 R_PKGNAME=	RSQLite
-R_PKGVER=	2.1.2
+R_PKGVER=	2.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +12,7 @@ DEPENDS+=	R-bit64>=0.9.7:../../devel/R-bit64
 DEPENDS+=	R-blob>=1.2.0:../../devel/R-blob
 DEPENDS+=	R-memoise>=1.1.0:../../devel/R-memoise
 DEPENDS+=	R-pkgconfig>=2.0.2:../../devel/R-pkgconfig
-DEPENDS+=	R-DBI>=1.0.0:../../math/R-DBI
+DEPENDS+=	R-DBI>=1.1.0:../../math/R-DBI
 
 USE_LANGUAGES+=	c c++
 
