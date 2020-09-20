@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5356 2020/09/20 07:08:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5357 2020/09/20 07:09:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8032,3 +8032,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/p5-Archive-Tar-Wrapper to 0.38 [wiz 2020-09-20]
 	Updated databases/p5-BerkeleyDB to 0.64 [wiz 2020-09-20]
 	Updated devel/p5-Test-CPAN-Meta-JSON to 0.16nb2 [wiz 2020-09-20]
+	Updated databases/p5-DBD-Mock to 1.57 [wiz 2020-09-20]
