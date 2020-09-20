@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2020/08/09 00:01:09 joerg Exp $
+$NetBSD: distinfo,v 1.57 2020/09/20 03:17:40 joerg Exp $
 
 SHA1 (kdelibs-4.14.38.tar.xz) = 2271f8b38cd5b6b55fa31c567271e3ca37ef641a
 RMD160 (kdelibs-4.14.38.tar.xz) = edf16e14842237950655bf44c073070c5bb7d74b
@@ -25,7 +25,7 @@ SHA1 (patch-kdecore_util_kshareddatacache_p.h) = 6d064fe75fbecd489b0343960333864
 SHA1 (patch-kdeui_icons_kiconcache.cpp) = c360192afd21efedc6dad8a6ccdd61573ee0dbac
 SHA1 (patch-khtml_dom_dom2_traversal.h) = b001fc3825fcfea8f25b7219057e59d5b87723e4
 SHA1 (patch-khtml_misc_AtomicString.cpp) = eff036bcd09e031651eba1e3a2136e313d184f2b
-SHA1 (patch-kimgio_jp2.cpp) = f2fa84cb1ab17697fd07c2507bba1ff21d1dc9ee
+SHA1 (patch-kimgio_jp2.cpp) = 165ff6b2e6176366739c78c1ca9dc2065c2d008d
 SHA1 (patch-kinit_CMakeLists.txt) = bcbf273d79702a4f1a617df0c86c2d5771447364
 SHA1 (patch-kinit_kinit.cpp) = 75dfe546c92169e692ddb45cd1a056a1b4042bb6
 SHA1 (patch-kio_CMakeLists.txt) = 3033fe7d31555e83f197f889cf1aa15949a3c14e
