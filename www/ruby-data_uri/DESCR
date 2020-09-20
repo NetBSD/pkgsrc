@@ -1,0 +1,3 @@
+Data URIs allow resources to be embedded inside a URI. The URI::Data
+class provides support for parsing these URIs using the normal
+URI.parse method.
