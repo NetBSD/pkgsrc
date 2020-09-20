@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/09/20 16:44:54 gdt Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/09/20 22:28:00 gdt Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
@@ -77,6 +77,7 @@ man/man1/bup-cat-file.1
 man/man1/bup-daemon.1
 man/man1/bup-damage.1
 man/man1/bup-drecurse.1
+man/man1/bup-features.1
 man/man1/bup-fsck.1
 man/man1/bup-ftp.1
 man/man1/bup-fuse.1
