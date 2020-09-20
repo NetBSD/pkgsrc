@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 18:26:15 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/20 21:47:31 mef Exp $
 
 R_PKGNAME=	whisker
-R_PKGVER=	0.3-2
+R_PKGVER=	0.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
