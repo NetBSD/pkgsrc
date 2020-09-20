@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 19:11:22 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/20 04:13:53 mef Exp $
 
 R_PKGNAME=	pkgload
-R_PKGVER=	1.0.2
+R_PKGVER=	1.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +15,11 @@ DEPENDS+=	R-rprojroot>=1.3.2:../../devel/R-rprojroot
 DEPENDS+=	R-withr>=2.1.2:../../devel/R-withr
 DEPENDS+=	R-rstudioapi>=0.10:../../math/R-rstudioapi
 
-USE_LANGUAGES=	c
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-Rcpp-[0-9]*:../../devel/R-Rcpp
+TEST_DEPENDS+=	R-callr-[0-9]*:../../devel/R-callr
+
+USE_LANGUAGES=	c c++
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
