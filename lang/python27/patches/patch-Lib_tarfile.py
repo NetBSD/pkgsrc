@@ -1,4 +1,9 @@
-$NetBSD: patch-Lib_tarfile.py,v 1.1 2020/09/20 11:06:23 mgorny Exp $
+$NetBSD: patch-Lib_tarfile.py,v 1.2 2020/09/20 12:10:27 mgorny Exp $
+
+bpo-39017 (CVE-2019-20907): infinite loop in tarfile.py
+
+taken from:
+https://gitweb.gentoo.org/fork/cpython.git/commit/?h=gentoo-2.7-vanilla&id=893e6e3aee483d262df70656a68f63f601720fcd
 
 --- Lib/tarfile.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Lib/tarfile.py
