@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5349 2020/09/20 04:14:35 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5350 2020/09/20 04:29:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8025,3 +8025,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-covr to 3.5.1 [mef 2020-09-20]
 	Updated devel/R-testthat to 2.3.2 [mef 2020-09-20]
 	Updated devel/R-pkgload to 1.1.0 [mef 2020-09-20]
+	Updated devel/R-roxygen2 to 7.1.1 [mef 2020-09-20]
