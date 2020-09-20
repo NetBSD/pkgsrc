@@ -1,0 +1,5 @@
+The intention of this gem is to provide a very basic FFI wrapper
+around the Zeromq libzmq C API. This gem isn't intended to be used
+directly by any Ruby programmer looking to write Zeromq code. They
+should use a higher-level gem like ffi-rzmq which pulls in this
+gem for its FFI definitions.
