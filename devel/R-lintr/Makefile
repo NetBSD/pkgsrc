@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/02/13 13:25:05 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/20 04:41:37 mef Exp $
 
 R_PKGNAME=	lintr
-R_PKGVER=	2.0.0
+R_PKGVER=	2.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	A 'Linter' for R Code
+COMMENT=	'Linter' for R Code
 LICENSE=	mit	# + file LICENSE
 
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
@@ -21,6 +21,8 @@ DEPENDS+=	R-cyclocomp-[0-9]*:../../devel/R-cyclocomp
 DEPENDS+=	R-stringdist-[0-9]*:../../math/R-stringdist
 DEPENDS+=	R-xmlparsedata-[0-9]*:../../textproc/R-xmlparsedata
 
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
 
 USE_LANGUAGES=	# none
 
