@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3251 2020/09/20 08:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3252 2020/09/20 08:36:02 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2819,6 +2819,7 @@ SUBDIR+=	ruby-posix-spawn
 SUBDIR+=	ruby-power_assert
 SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-protobuf-cucumber
+SUBDIR+=	ruby-pycall
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties52
 SUBDIR+=	ruby-railties60
