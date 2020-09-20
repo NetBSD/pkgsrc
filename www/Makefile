@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1490 2020/09/10 16:44:08 taca Exp $
+# $NetBSD: Makefile,v 1.1491 2020/09/20 08:52:11 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -867,6 +867,7 @@ SUBDIR+=	ruby-crass
 SUBDIR+=	ruby-css-parser
 SUBDIR+=	ruby-cssmin
 SUBDIR+=	ruby-csspool
+SUBDIR+=	ruby-data_uri
 SUBDIR+=	ruby-div
 SUBDIR+=	ruby-em-http-request
 SUBDIR+=	ruby-em-websocket
