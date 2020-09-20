@@ -1,14 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2019/08/08 19:53:45 brook Exp $
+# $NetBSD: Makefile,v 1.6 2020/09/20 23:29:09 mef Exp $
 
 R_PKGNAME=	RandomFields
-R_PKGVER=	3.3.6
-CATEGORIES=	math
+R_PKGVER=	3.3.8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Simulation and analysis of random fields
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-sp>=1.3.1:../../math/R-sp
+DEPENDS+=	R-RandomFieldsUtils>=0.5.1:../../math/R-RandomFieldsUtils
+
+# Packages suggested but not available:
+#   'tkrplot', 'spam', 'soma', 'optimx', 'pso', 'GenSA'
+TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
+TEST_DEPENDS+=	R-mvtnorm-[0-9]*:../../math/R-mvtnorm
+TEST_DEPENDS+=	R-tcltk2-[0-9]*:../../devel/R-tcltk2
 
 USE_LANGUAGES+=	c c++ fortran
 
