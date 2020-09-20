@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3250 2020/09/20 05:42:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.3251 2020/09/20 08:02:45 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1502,7 +1502,6 @@ SUBDIR+=	p5-Inline
 SUBDIR+=	p5-Inline-C
 SUBDIR+=	p5-InlineX-C2XS
 SUBDIR+=	p5-Internals
-SUBDIR+=	p5-LDAP
 SUBDIR+=	p5-LEOCHARRE-CLI2
 SUBDIR+=	p5-LEOCHARRE-Debug
 SUBDIR+=	p5-LEOCHARRE-Dir
