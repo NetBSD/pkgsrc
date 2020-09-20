@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.78 2020/09/01 09:26:54 schmonz Exp $
+$NetBSD: distinfo,v 1.79 2020/09/20 11:06:23 mgorny Exp $
 
 SHA1 (Python-2.7.18.tar.xz) = 678d4cf483a1c92efd347ee8e1e79326dc82810b
 RMD160 (Python-2.7.18.tar.xz) = 40a514bb05c9e631454ea8466e28f5bb229428ad
@@ -13,10 +13,15 @@ SHA1 (patch-Lib_distutils_command_install.py) = e6aef090b444b455fe351308d251e670
 SHA1 (patch-Lib_distutils_command_install__egg__info.py) = ec7f9e0cd04489b1f6497c44d75bff6864ad1047
 SHA1 (patch-Lib_distutils_unixccompiler.py) = db16c9aca2f29730945f28247b88b18828739bbb
 SHA1 (patch-Lib_distutils_util.py) = 5bcfad96f8e490351160f1a7c1f4ece7706a33fa
+SHA1 (patch-Lib_httplib.py) = 685891e4ea58062036c87e69e8a0911dd377e64f
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 5d6dab14197f27363394ff1aeee22a8ced8026d2
 SHA1 (patch-Lib_multiprocessing_process.py) = 15699bd8ec822bf54a0631102e00e0a34f882803
 SHA1 (patch-Lib_plistlib.py) = 96ae702995d434e2d7ec0ac62e37427a90b61d13
 SHA1 (patch-Lib_sysconfig.py) = 8a7a0e5cbfec279a05945dffafea1b1131a76f0e
+SHA1 (patch-Lib_tarfile.py) = 105bd378ccd1574ef765cf417269759363148876
+SHA1 (patch-Lib_test_test__httplib.py) = 867d48f677fce23b05c512c0839e704d89e70f14
+SHA1 (patch-Lib_test_test__urllib2.py) = 651d99068f5d25fa9dc1e9be7e923db64920b378
+SHA1 (patch-Lib_urllib2.py) = 8c3b3b1796b57fe544f118313da157d38263b0e5
 SHA1 (patch-Makefile.pre.in) = ceaf34237588b527478ce1f9163c9168382fa201
 SHA1 (patch-Modules___multiprocessing_multiprocessing.h) = 7ca8fe22ba4bdcde6d39dd50fe2e86c25994c146
 SHA1 (patch-Modules___multiprocessing_semaphore.c) = 03b9c33ef38da383d5f7c2c84c17fe38cdd2911e
