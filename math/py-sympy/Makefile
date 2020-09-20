@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/01/31 04:51:40 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2020/09/20 14:30:01 ryoon Exp $
 
-DISTNAME=	sympy-1.5.1
+DISTNAME=	sympy-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sympy/}
