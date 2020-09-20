@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/02/01 02:54:55 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/20 09:33:39 mef Exp $
 
 R_PKGNAME=	DT
-R_PKGVER=	0.11
+R_PKGVER=	0.15
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	A Wrapper of the JavaScript Library 'DataTables'
+COMMENT=	Wrapper of the JavaScript Library 'DataTables'
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
