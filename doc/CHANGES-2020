@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5388 2020/09/20 14:30:45 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5389 2020/09/20 14:34:36 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8064,3 +8064,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/qdirstat to 1.7 [markd 2020-09-20]
 	Updated pkgtools/pkg_notify to 0.4.8 [wiz 2020-09-20]
 	Updated math/py-sympy to 1.6.2 [ryoon 2020-09-20]
+	Updated databases/R-RSQLite to 2.2.0 [mef 2020-09-20]
