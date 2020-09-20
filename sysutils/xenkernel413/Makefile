@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/08/27 13:44:53 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/20 03:18:33 joerg Exp $
 
 VERSION=	4.13.1
 PKGREVISION=	1
@@ -43,7 +43,7 @@ EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
 		-Wno-error=ignored-attributes -Wno-error=constant-conversion \
 		-Wno-error=address-of-packed-member \
 		-Wno-error=initializer-overrides \
-		-Wno-error=tautological-compare
+		-Wno-error=tautological-compare -Wno-error=pragma-pack
 .elif !empty(PKGSRC_COMPILER:Mgcc)
 EXTRA_CFLAGS+=	 -falign-functions=16
 .endif
