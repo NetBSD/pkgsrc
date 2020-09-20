@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5392 2020/09/20 15:12:04 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.5393 2020/09/20 15:13:34 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8068,3 +8068,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-withr to 2.2.0 [mef 2020-09-20]
 	Updated math/R-rstudioapi to 0.11 [mef 2020-09-20]
 	Updated net/mikutter to 4.1.1 [tsutsui 2020-09-20]
+	Updated net/mikutter-plugins-twitter to 4.1 [tsutsui 2020-09-20]
