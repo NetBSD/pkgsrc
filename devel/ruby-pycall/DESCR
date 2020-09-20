@@ -1,0 +1,4 @@
+This library provides the features to directly call and partially
+interoperate with Python from the Ruby language. You can import
+arbitrary Python modules into Ruby modules, call Python functions
+with automatic type conversion from Ruby to Python.
