@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2020/09/20 22:30:07 gdt Exp $
+# $NetBSD: Makefile,v 1.193 2020/09/20 22:50:21 gdt Exp $
 
 DISTNAME=	rustc-1.45.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -508,18 +508,28 @@ stage0-bootstrap: install
 #.include "../../www/http-parser/buildlink3.mk"
 #.include "../../devel/jemalloc/buildlink3.mk"
 
-# Bootstrap built on 8.0, build on later version
-# requires compat80 package.
+## Issues specific to: bootstrap AND NetBSD follow
+
 # (I wish this worked on powerpc, but it doesn't since
 # I can't build with the internal LLVM, ref.
 # https://github.com/rust-lang/rust/issues/65862)
+
 .if (${OPSYS} == "NetBSD") && \
 		((${MACHINE_ARCH} == "i386") || \
 		 (${MACHINE_ARCH} == "sparc64") || \
 		 (${MACHINE_ARCH} == "powerpc")) \
 	&& (empty(OS_VERSION:M[012345678].*) || \
 	    !empty(OS_VERSION:M8.99.*))
+# Bootstrap kits are built on 8.0, so that a single bootstrap can run
+# on multiple systems.  Thus later versions need the compat80 package.
+# \todo Explain why this is limited to a small list of architectures,
+# and in particular why not x86_64.
 DEPENDS+=	compat80>=0:../../emulators/compat80
+# Bootstrap kits use openssl, which on NetBSD 8 comes from pkgsrc.
+# Therefore the pkgsrc openssl libs need to be present as well.
+# Observed on i386, and presumed true on the other
+# bootstrap-built-for-8 systems.
+BUILD_DEPENDS+=	openssl>1.1:../../security/openssl
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
