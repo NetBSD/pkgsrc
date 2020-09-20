@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/07/31 18:36:27 brook Exp $
+$NetBSD: distinfo,v 1.7 2020/09/20 23:57:25 mef Exp $
 
-SHA1 (R/Rcmdr_2.5-3.tar.gz) = 71332ecf6271810aa574ebb5b3ab216eacff7eee
-RMD160 (R/Rcmdr_2.5-3.tar.gz) = 79a75294cb40d8e25337cd4de95eba635b95ff64
-SHA512 (R/Rcmdr_2.5-3.tar.gz) = 97edadd21355a83c55050d55d485249b02106b82b327d160a9be3aaf9d8fec4dbf5e75bcc6d868f5e45fff2cdd8a1f7fce4622e20569784e61ce668b687752ad
-Size (R/Rcmdr_2.5-3.tar.gz) = 5651856 bytes
+SHA1 (R/Rcmdr_2.7-0.tar.gz) = 9e7e1d8a12c7baf8ac1cd5d92291c37d22652aa7
+RMD160 (R/Rcmdr_2.7-0.tar.gz) = 4127678ee7dc11c7875632a6f4ec4a27a3b80784
+SHA512 (R/Rcmdr_2.7-0.tar.gz) = 559c290a0fbcb19db12f416f8b3c4f56976d2013f922a5f1adc6c9768b27984cba45ab055c8a5f7d017c343b0ff73cc6c782be0559f56636964e5cafe13ef34a
+Size (R/Rcmdr_2.7-0.tar.gz) = 4819819 bytes
