@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/04/28 13:31:36 tsutsui Exp $
+$NetBSD: distinfo,v 1.4 2020/09/20 15:13:03 tsutsui Exp $
 
 SHA1 (mikutter-plugins/api_request_file_cache-1.0.tar.gz) = c877f72de6abdf0c8ffc70b030ce6f123dc27c7c
 RMD160 (mikutter-plugins/api_request_file_cache-1.0.tar.gz) = eb44243b2615bf29234d67b2e8f3ee7eb75f38ae
@@ -52,10 +52,10 @@ SHA1 (mikutter-plugins/saved_search-1.1.tar.gz) = ac0c530dd405d57469f2e88a7480fe
 RMD160 (mikutter-plugins/saved_search-1.1.tar.gz) = b4fd2d16eeb66882c56c9beecbfd856287fbf2ab
 SHA512 (mikutter-plugins/saved_search-1.1.tar.gz) = 175d26349f749c4de95af46290303a1002ca58bb04d1cc9030ad07a9c2b8df8ecd439859571e1cead08ce1cc364b58822fca787756b7289c2252fcef337bfb92
 Size (mikutter-plugins/saved_search-1.1.tar.gz) = 5547 bytes
-SHA1 (mikutter-plugins/streaming-2.0.tar.gz) = 59d903e17b5ed30986d9a2cb8702b8524c73b79e
-RMD160 (mikutter-plugins/streaming-2.0.tar.gz) = e5409889f871c464be64e9700f1ce041f3c6893f
-SHA512 (mikutter-plugins/streaming-2.0.tar.gz) = edb3948251922af88104d94058348160ec8b435f7b2c7bf138564ac7bbda219f97486977244e703a8ddb68ba961ef381a4f6f34f9b5d1c5b480a72bf3b6ae744
-Size (mikutter-plugins/streaming-2.0.tar.gz) = 3642 bytes
+SHA1 (mikutter-plugins/streaming-2.1.tar.gz) = 8d5fa24a73c70d8e7df3fc7af8032e72a96ad109
+RMD160 (mikutter-plugins/streaming-2.1.tar.gz) = 08f6c774dddd1dcc958107611b9146632fcc016b
+SHA512 (mikutter-plugins/streaming-2.1.tar.gz) = 6ca030f43bbbfba47a794419752487d4431a09c1f211c8d992787d639f5bb27bc638d6edc9ea78b02917fd209faeee612541c7c8899fed8f7049bff3802929dc
+Size (mikutter-plugins/streaming-2.1.tar.gz) = 3647 bytes
 SHA1 (mikutter-plugins/twitter-1.1.tar.gz) = 3f422fb6fee9d335bedacbbb40394776f1995dcd
 RMD160 (mikutter-plugins/twitter-1.1.tar.gz) = bd098423615ecfb8a886cbdf4486ab6ebe8d3873
 SHA512 (mikutter-plugins/twitter-1.1.tar.gz) = a8b6e85f3ae104050f992fc36d93cb719ed0da198e0c747b8c24f790d6d806522e9ce57737f7473db1d5ac2fc4082572c3bc476ce0d2e8f6ebc184da6f3d9b63
