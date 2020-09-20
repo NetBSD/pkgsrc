@@ -1,0 +1,13 @@
+$NetBSD: patch-Lib_tarfile.py,v 1.1 2020/09/20 11:06:23 mgorny Exp $
+
+--- Lib/tarfile.py.orig	2020-04-19 21:13:39.000000000 +0000
++++ Lib/tarfile.py
+@@ -1400,6 +1400,8 @@ class TarInfo(object):
+ 
+             length, keyword = match.groups()
+             length = int(length)
++            if length == 0:
++                raise InvalidHeaderError("invalid header")
+             value = buf[match.end(2) + 1:match.start(1) + length - 1]
+ 
+             keyword = keyword.decode("utf8")
