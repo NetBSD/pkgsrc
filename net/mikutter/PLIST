@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2020/07/04 06:53:51 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.51 2020/09/20 15:11:43 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -74,11 +74,13 @@ share/mikutter/core/mui/cairo_sub_parts_share.rb
 share/mikutter/core/mui/cairo_sub_parts_voter.rb
 share/mikutter/core/mui/cairo_textselector.rb
 share/mikutter/core/mui/cairo_timeline.rb
+share/mikutter/core/mui/gtk_compatlistview.rb
 share/mikutter/core/mui/gtk_contextmenu.rb
 share/mikutter/core/mui/gtk_crud.rb
 share/mikutter/core/mui/gtk_dark_matter_prification.rb
 share/mikutter/core/mui/gtk_extension.rb
 share/mikutter/core/mui/gtk_form_dsl.rb
+share/mikutter/core/mui/gtk_form_dsl_listview.rb
 share/mikutter/core/mui/gtk_form_dsl_multi_select.rb
 share/mikutter/core/mui/gtk_form_dsl_select.rb
 share/mikutter/core/mui/gtk_hierarchycal_selectbox.rb
@@ -123,6 +125,10 @@ share/mikutter/core/skin/data/list.png
 share/mikutter/core/skin/data/loading.png
 share/mikutter/core/skin/data/message.png
 share/mikutter/core/skin/data/notfound.png
+share/mikutter/core/skin/data/notify_popup_off.svg
+share/mikutter/core/skin/data/notify_popup_on.svg
+share/mikutter/core/skin/data/notify_sound_off.svg
+share/mikutter/core/skin/data/notify_sound_on.svg
 share/mikutter/core/skin/data/overbutton.png
 share/mikutter/core/skin/data/overbutton_mouseover.png
 share/mikutter/core/skin/data/post.png
@@ -299,6 +305,7 @@ share/mikutter/plugin/current_world/.mikutter.yml
 share/mikutter/plugin/current_world/current_world.rb
 share/mikutter/plugin/current_world/error.rb
 share/mikutter/plugin/extract/.mikutter.yml
+share/mikutter/plugin/extract/datasource_select_box.rb
 share/mikutter/plugin/extract/edit_window.rb
 share/mikutter/plugin/extract/extract.rb
 share/mikutter/plugin/extract/extract_tab_list.rb
@@ -432,12 +439,15 @@ share/mikutter/plugin/mastodon/model/instance.rb
 share/mikutter/plugin/mastodon/model/mention.rb
 share/mikutter/plugin/mastodon/model/model.rb
 share/mikutter/plugin/mastodon/model/poll.rb
+share/mikutter/plugin/mastodon/model/rest_authorized_type.rb
+share/mikutter/plugin/mastodon/model/rest_public_type.rb
+share/mikutter/plugin/mastodon/model/sse_authorized_type.rb
+share/mikutter/plugin/mastodon/model/sse_public_type.rb
 share/mikutter/plugin/mastodon/model/status.rb
 share/mikutter/plugin/mastodon/model/tag.rb
 share/mikutter/plugin/mastodon/model/world.rb
 share/mikutter/plugin/mastodon/parser.rb
 share/mikutter/plugin/mastodon/patch.rb
-share/mikutter/plugin/mastodon/rest.rb
 share/mikutter/plugin/mastodon/score.rb
 share/mikutter/plugin/mastodon/setting.rb
 share/mikutter/plugin/mastodon/spell.rb
@@ -445,8 +455,12 @@ share/mikutter/plugin/mastodon/subparts_status_info.rb
 share/mikutter/plugin/mastodon/util.rb
 share/mikutter/plugin/mastodon_account_viewer/.mikutter.yml
 share/mikutter/plugin/mastodon_account_viewer/mastodon_account_viewer.rb
+share/mikutter/plugin/mastodon_rest/.mikutter.yml
+share/mikutter/plugin/mastodon_rest/mastodon_rest.rb
 share/mikutter/plugin/mastodon_sse_streaming/.mikutter.yml
 share/mikutter/plugin/mastodon_sse_streaming/client.rb
+share/mikutter/plugin/mastodon_sse_streaming/connection.rb
+share/mikutter/plugin/mastodon_sse_streaming/cooldown_time.rb
 share/mikutter/plugin/mastodon_sse_streaming/mastodon_sse_streaming.rb
 share/mikutter/plugin/modelviewer/.mikutter.yml
 share/mikutter/plugin/modelviewer/modelviewer.rb

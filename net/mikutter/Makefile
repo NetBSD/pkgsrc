@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.194 2020/07/04 06:53:51 tsutsui Exp $
+# $NetBSD: Makefile,v 1.195 2020/09/20 15:11:43 tsutsui Exp $
 #
 
-DISTNAME=	mikutter-4.0.6
+DISTNAME=	mikutter-4.1.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-delayer>=1.0.2:../../devel/ruby-delayer
 DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=2.1.3:../../devel/ruby-delayer-deferred
 DEPENDS+=	${RUBY_PKGPREFIX}-diva>=1.0.2:../../devel/ruby-diva
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.3.5:../../devel/ruby-gettext
-DEPENDS+=	${RUBY_PKGPREFIX}-gtk2>=3.3.8:../../x11/ruby-gtk2
+DEPENDS+=	${RUBY_PKGPREFIX}-gtk2>=3.4.1:../../x11/ruby-gtk2
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-memoist>=0.16.2:../../devel/ruby-memoist
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta-[0-9]*:../../databases/ruby-moneta
