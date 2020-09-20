@@ -1,0 +1,3 @@
+This gem wraps the ZeroMQ networking library using the ruby FFI
+(foreign function interface). It's a pure ruby wrapper so this gem
+can be loaded and run by any ruby runtime that supports FFI.
