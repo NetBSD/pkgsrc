@@ -1,14 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:41 brook Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/20 01:25:06 mef Exp $
 
 R_PKGNAME=	xfun
-R_PKGVER=	0.8
+R_PKGVER=	0.17
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Miscellaneous functions by 'Yihui Xie'
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+# Packages suggested but not available:
+#  'testit', 'pak'
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-tinytex-[0-9]*:../../print/R-tinytex
+
+USE_LANGUAGES=	c c++
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
