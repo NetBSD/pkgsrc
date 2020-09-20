@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/08/01 13:40:43 mef Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/20 03:09:14 mef Exp $
 
 R_PKGNAME=	covr
-R_PKGVER=	3.5.0
+R_PKGVER=	3.5.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,11 +22,11 @@ DEPENDS+=	R-rex>=0:../../devel/R-rex
 
 TEST_DEPENDS+=	R-memoise-[0-9]*:../../devel/R-memoise
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
-TEST_DEPENDS+=	R-rstudioapi-[0-9]*:../../math/R-rstudioapi
+TEST_DEPENDS+=	R-rstudioapi>=0.2:../../math/R-rstudioapi
 TEST_DEPENDS+=	R-htmltools-[0-9]*:../../textproc/R-htmltools
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
-TEST_DEPENDS+=	R-DT-[0-9]*:../../textproc/R-DT
-TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
+TEST_DEPENDS+=	R-DT>=0.2:../../textproc/R-DT
+TEST_DEPENDS+=	R-xml2>=1.0.0:../../textproc/R-xml2
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
