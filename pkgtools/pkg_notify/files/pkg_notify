@@ -16,7 +16,7 @@
 #
 # $ pkg_notify category/package
 #
-# $Id: pkg_notify,v 1.6 2020/08/24 13:43:41 wiz Exp $
+# $Id: pkg_notify,v 1.7 2020/09/20 11:25:41 wiz Exp $
 
 use Net::FTP;
 use LWP::UserAgent;
@@ -125,7 +125,6 @@ sub find_version {
 	my $wasbad = 0;
 
 	if ($line =~ /([^0-9a-z]$dist|^$dist)([^\/\"<>\@]+)$extract_sufx/) {
-
 	    $realdist = $dist.$2.$extract_sufx;
 	    my $lsvers = $2;
 
@@ -494,6 +493,33 @@ sub sort_master_sites {
 # used to record last connection
 my $last_master_host = "";
 
+sub compute_dist_and_version {
+    my ($major, $minor, $distname) = @_;
+
+    my $nostrip = 0;
+    # nice archive, has a comprehensive versioning
+    if (defined($minor) && ($distname =~ /(.+?)($major[\._]?$minor.*$)/)) {
+	$dist = $1;
+	$version = $2;
+	$nicearc = 1;
+	# archive appears to only have a major
+    } elsif (defined($major) && ($distname =~ /(.+)($major.*)/)) {
+	$dist = $1;
+	$version = $2;
+	# ok, archive versioning is a pure mess
+	# assume version is everything not being PKGNAME
+    } else {
+	$dist = $pkgname;
+	$version = $distname;
+	$version =~ s/$pkgname//;
+
+	# don't strip extensions
+	$nostrip = 1;
+    }
+
+    return $nostrip;
+}
+    
 foreach (@packages) {
     chomp;
 
@@ -522,26 +548,7 @@ foreach (@packages) {
     # will we strip version numbers from extensions ?
     my $nostrip = 0;
 
-    $nicearc = 0;
-    # nice archive, has a comprehensive versioning
-    if (defined($minor) && ($distname =~ /(.+?)($major[\._]?$minor.*$)/)) {
-	$dist = $1;
-	$version = $2;
-	$nicearc = 1;
-	# archive appears to only have a major
-    } elsif (defined($major) && ($distname =~ /(.+)($major.*)/)) {
-	$dist = $1;
-	$version = $2;
-	# ok, archive versioning is a pure mess
-	# assume version is everything not being PKGNAME
-    } else {
-	$dist = $pkgname;
-	$version = $distname;
-	$version =~ s/$pkgname//;
-
-	# don't strip extensions
-	$nostrip = 1;
-    }
+    $nostrip = compute_dist_and_version($major, $minor, $distname);
 
     # MASTER_SITES is MASTER_SITE_LOCAL, skip
     if (file_rx_check("$pkgpath/Makefile",
@@ -587,9 +594,20 @@ foreach (@packages) {
 	    # homepage only - look at releases page
 	    $master_site = $homepage . "/releases/";
 	}
+	my $olddistname = $distname;
+	# override distname, which is usually a nicer package name version
 	$distname = `cd $pkgpath && $make show-var VARNAME=GITHUB_RELEASE`;
 	chomp($distname);
-	$dist = "";
+	if ($distname eq "") {
+	    $distname = `cd $pkgpath && $make show-var VARNAME=GITHUB_TAG`;
+	    chomp($distname);
+	}
+	if ($distname eq "") {
+	    # revert to previous value
+	    $distname = $olddistname;
+	}
+	# update
+	$nostrip = compute_dist_and_version($major, $minor, $distname);
     }
 
 
