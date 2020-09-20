@@ -7,5 +7,5 @@ virtual machine, and has automatic memory management with incremental
 garbage collection, making it ideal for configuration, scripting, and
 rapid prototyping.
 
-This version is less popular than two other popular Lua versions and
-you should probably consider switching to a newer version.
+This version of lua was last updated in 2015 and is not maintained
+by upstream.
