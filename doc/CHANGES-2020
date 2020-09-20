@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5406 2020/09/20 21:58:48 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5407 2020/09/20 22:51:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8082,3 +8082,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-rex to 1.2.0 [mef 2020-09-20]
 	Updated devel/R-whisker to 0.4 [mef 2020-09-20]
 	Updated math/R-DAAG to 1.24 [mef 2020-09-20]
+	Updated math/R-DBI to 1.1.0 [mef 2020-09-20]
