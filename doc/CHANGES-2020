@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5369 2020/09/20 07:59:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5370 2020/09/20 08:02:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8045,3 +8045,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Apache-Session to 1.94 [wiz 2020-09-20]
 	Updated www/p5-Mojolicious to 8.59 [wiz 2020-09-20]
 	Updated www/p5-WWW-Mechanize to 2.01 [wiz 2020-09-20]
+	Removed devel/p5-LDAP [wiz 2020-09-20]
