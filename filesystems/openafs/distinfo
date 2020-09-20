@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2017/10/08 02:41:39 sevan Exp $
+$NetBSD: distinfo,v 1.17 2020/09/20 22:15:00 jakllsch Exp $
 
 SHA1 (openafs-1.6.21-src.tar.bz2) = ea48a2fde9ed4732e8041216c9e24dd500e24ea4
 RMD160 (openafs-1.6.21-src.tar.bz2) = 834b42debfcbf0a003280ac0300b3af65625ad48
@@ -12,6 +12,7 @@ SHA1 (patch-src_config_afs__sysnames.h) = 26819b314797a149def42f5b63cbeb19ef6309
 SHA1 (patch-src_config_param.armv6_nbsd80.h) = eea7a8f8a141d285ba5a2bb4317950f0b860528f
 SHA1 (patch-src_config_param.nbsd70.h) = 700216e464d801aee3ada0a597a5e2b3a4dab510
 SHA1 (patch-src_config_param.nbsd80.h) = cc9445a1b06ac977d93c9fe0b68cc67475beec08
+SHA1 (patch-src_config_param.nbsd90.h) = d70f8983635b42a04a1dfa312c130c1afb669cb3
 SHA1 (patch-src_des_andrew-conf.h) = 6ea03fcaf988d3d91bc1d3386e239496fc3069f0
 SHA1 (patch-src_des_conf-arm32-bsd.h) = ff1b2a3cc35ab272913c95adab28c3304234a891
 SHA1 (patch-src_lwp_lwp.c) = c4a92a29621ceaf54c56cd20772c18f76b0fe745
