@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5401 2020/09/20 21:27:03 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5402 2020/09/20 21:33:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8077,3 +8077,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.15.0 [leot 2020-09-20]
 	Updated devel/R-checkmate to 2.0.0 [mef 2020-09-20]
 	Updated graphics/hicolor-icon-theme to 0.17nb1 [wiz 2020-09-20]
+	Updated devel/R-cli to 2.0.2 [mef 2020-09-20]
