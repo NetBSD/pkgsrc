@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/09/20 16:44:54 gdt Exp $
+# $NetBSD: Makefile,v 1.47 2020/09/20 16:46:08 gdt Exp $
 
 DISTNAME=	bup-0.31
 CATEGORIES=	sysutils
@@ -14,6 +14,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 #   https://github.com/bup/bup/archive/0.30.tar.gz
 #   https://github.com/bup/bup/archive/28876cde4a3dac518e773860aa7969c106f5390d.tar.gz
 
+# \todo Update man pages to 0.31.
 # EXTRACT_SUFX default value is set too late, so using it in SITES.* fails.
 EXTRACT_SUFX=		.tar.gz
 MAN_TAG=		bd52b8fffc37788fc00071a8e46842e60ef30926
@@ -79,6 +80,7 @@ post-install:
 
 .include "options.mk"
 
+# \todo Investigate "bup ftp" crash with NetBSD editline and resolve.
 READLINE_DEFAULT=	readline
 .include "../../mk/readline.buildlink3.mk"
 .include "../../lang/python/application.mk"
