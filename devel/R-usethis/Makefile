@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 19:09:29 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/20 00:27:59 mef Exp $
 
 R_PKGNAME=	usethis
-R_PKGVER=	1.5.1
+R_PKGVER=	1.6.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,8 +24,16 @@ DEPENDS+=	R-clisymbols>=1.2.0:../../textproc/R-clisymbols
 DEPENDS+=	R-yaml>=2.2.0:../../textproc/R-yaml
 DEPENDS+=	R-curl>=2.7:../../www/R-curl
 DEPENDS+=	R-gh>=1.0.1:../../www/R-gh
+DEPENDS+=	R-rematch2-[0-9]*:../../devel/R-rematch2
+
+TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
 
 USE_LANGUAGES=	# none
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
+
+
+# Packages suggested but not available: 'magick', 'pkgdown', 'styler'
+# 
+# Package required and available but unsuitable version: 'gh'
