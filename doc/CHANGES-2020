@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5397 2020/09/20 15:44:46 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5398 2020/09/20 16:46:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8073,3 +8073,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/php-ja-wordpress to 5.5.1 [taca 2020-09-20]
 	Updated devel/ruby-regexp_parser to 1.8.0 [taca 2020-09-20]
 	Updated devel/R-devtools to 2.3.1 [mef 2020-09-20]
+	Updated sysutils/bup to 0.31 [gdt 2020-09-20]
