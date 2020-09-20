@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5403 2020/09/20 21:33:54 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5404 2020/09/20 21:44:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8079,3 +8079,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/hicolor-icon-theme to 0.17nb1 [wiz 2020-09-20]
 	Updated devel/R-cli to 2.0.2 [mef 2020-09-20]
 	Updated devel/R-purrr to 0.3.4 [mef 2020-09-20]
+	Updated devel/R-rex to 1.2.0 [mef 2020-09-20]
