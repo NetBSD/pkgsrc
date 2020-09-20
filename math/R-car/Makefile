@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/08/08 19:53:47 brook Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/20 23:46:00 mef Exp $
 
 R_PKGNAME=	car
-R_PKGVER=	3.0-3
-CATEGORIES=	math
+R_PKGVER=	3.0-9
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Companion to 'Applied Regression'
@@ -15,6 +14,10 @@ DEPENDS+=	R-carData>=3.0.0:../../math/R-carData
 DEPENDS+=	R-lme4>=1.1.21:../../math/R-lme4
 DEPENDS+=	R-pbkrtest>=0.4.4:../../math/R-pbkrtest
 DEPENDS+=	R-quantreg>=5.42.1:../../math/R-quantreg
+
+# Packages suggested but not available:
+#   'alr4', 'coxme', 'leaps', 'lmtest', 'rgl'
+TEST_DEPENDS+=	R-lmtest-[0-9]*:../../math/R-lmtest
 
 USE_LANGUAGES=	# none
 
