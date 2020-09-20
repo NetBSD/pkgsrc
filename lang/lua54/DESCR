@@ -7,4 +7,4 @@ virtual machine, and has automatic memory management with incremental
 garbage collection, making it ideal for configuration, scripting, and
 rapid prototyping.
 
-This version is a preferred choice for new Lua modules.
+This version is the current stable release.
