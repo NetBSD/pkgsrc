@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5382 2020/09/20 09:33:47 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5383 2020/09/20 09:38:21 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8058,3 +8058,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20200920 [leot 2020-09-20]
 	Updated textproc/R-rmarkdown to 2.3 [mef 2020-09-20]
 	Updated textproc/R-DT to 0.15 [mef 2020-09-20]
+	Updated lang/llvm to 10.0.1nb1 [he 2020-09-20]
