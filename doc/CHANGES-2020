@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5390 2020/09/20 14:46:10 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5391 2020/09/20 14:51:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8066,3 +8066,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-sympy to 1.6.2 [ryoon 2020-09-20]
 	Updated databases/R-RSQLite to 2.2.0 [mef 2020-09-20]
 	Updated devel/R-withr to 2.2.0 [mef 2020-09-20]
+	Updated math/R-rstudioapi to 0.11 [mef 2020-09-20]
