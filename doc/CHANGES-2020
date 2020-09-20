@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5363 2020/09/20 07:39:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5364 2020/09/20 07:44:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8039,3 +8039,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-PerlIO-utf8_strict to 0.008 [wiz 2020-09-20]
 	Updated devel/p5-Search-Elasticsearch to 7.30 [wiz 2020-09-20]
 	Updated devel/p5-Test-MockModule to 0.175.0 [wiz 2020-09-20]
+	Updated graphics/p5-GraphViz2 to 2.48 [wiz 2020-09-20]
