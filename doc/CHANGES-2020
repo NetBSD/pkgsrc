@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5409 2020/09/20 23:00:22 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5410 2020/09/20 23:12:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8085,3 +8085,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R-DBI to 1.1.0 [mef 2020-09-20]
 	Updated math/R-ISwR to 2.0.8 [mef 2020-09-20]
 	Updated math/R-PHYLOGR to 1.0.11 [mef 2020-09-20]
+	Updated math/R-RNetCDF to 2.4.2 [mef 2020-09-20]
