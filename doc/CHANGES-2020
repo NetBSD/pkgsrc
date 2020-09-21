@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5412 2020/09/21 00:17:14 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.5413 2020/09/21 00:29:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8087,4 +8087,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R-PHYLOGR to 1.0.11 [mef 2020-09-20]
 	Updated math/R-RNetCDF to 2.4.2 [mef 2020-09-20]
 	Updated math/R-RandomFields to 3.3.8 [mef 2020-09-20]
+	Updated math/R-RcmdrMisc to 2.7.1 [mef 2020-09-20]
+	Updated math/R-car to 3.0.9 [mef 2020-09-20]
+	Updated math/R-Rcmdr to 2.7.0 [mef 2020-09-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2020Q3 branch [gdt 2020-09-21]
+	Added benchmarks/R-microbenchmark vesrion 1.4.7 [mef 2020-09-21]
