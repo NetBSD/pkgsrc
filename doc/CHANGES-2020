@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5413 2020/09/21 00:29:44 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5414 2020/09/21 03:04:06 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8092,3 +8092,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R-Rcmdr to 2.7.0 [mef 2020-09-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2020Q3 branch [gdt 2020-09-21]
 	Added benchmarks/R-microbenchmark vesrion 1.4.7 [mef 2020-09-21]
+	Updated pkgtools/pkg to 1.10.99.7 [khorben 2020-09-21]
