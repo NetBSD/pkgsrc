@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2020/08/09 23:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.89 2020/09/21 03:32:27 mef Exp $
 
 DISTNAME=	gnustep-base-1.27.0
 #PKGREVISION=	1
@@ -38,6 +38,12 @@ PTHREAD_LIBS=		-lpthread
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 PTHREAD_LIBS+=		-lpth
 .endif
+
+SUBST_CLASSES+=		pthread
+SUBST_STAGE.pthread=	pre-configure
+SUBST_FILES.pthread=	configure
+SUBST_SED.pthread=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LIBS},'
+SUBST_MESSAGE.pthread=	Fix @PTHREAD_LIBS@ left out in file configure
 
 CONFIGURE_ARGS+=	--with-library-flags=${GNUSTEP_LDFLAGS:Q}
 
