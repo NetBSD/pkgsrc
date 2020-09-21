@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2020/09/19 15:27:15 mef Exp $
+# $NetBSD: Makefile,v 1.118 2020/09/21 08:19:45 mef Exp $
 
 DISTNAME=	smalltalk-3.2.5
 PKGREVISION=	16
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--without-emacs
 IGNORE_LIBTOOLIZE=	lib/smalltalk/libc.la
 INFO_FILES=		YES
 TEST_TARGET=		check
+
+USE_TOOLS+=		perl
 
 SUBST_CLASSES+=		paxctl
 SUBST_FILES.paxctl=	Makefile.in
