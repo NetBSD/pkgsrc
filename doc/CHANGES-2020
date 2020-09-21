@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5414 2020/09/21 03:04:06 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5415 2020/09/21 22:46:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8093,3 +8093,4 @@ Changes to the packages collection and infrastructure in 2020:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2020Q3 branch [gdt 2020-09-21]
 	Added benchmarks/R-microbenchmark vesrion 1.4.7 [mef 2020-09-21]
 	Updated pkgtools/pkg to 1.10.99.7 [khorben 2020-09-21]
+	Updated devel/p5-Coro to 6.57nb2 [wiz 2020-09-21]
