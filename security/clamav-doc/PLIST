@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/05 14:47:33 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/09/21 08:27:08 mef Exp $
 share/doc/clamav/html/UserManual.html
 share/doc/clamav/html/UserManual/Installation-Unix.html
 share/doc/clamav/html/UserManual/Installation-Unix/Steps-Debian-Ubuntu.html
@@ -8,6 +8,7 @@ share/doc/clamav/html/UserManual/Installation-Windows.html
 share/doc/clamav/html/UserManual/Introduction.html
 share/doc/clamav/html/UserManual/OnAccess.html
 share/doc/clamav/html/UserManual/Signatures.html
+share/doc/clamav/html/UserManual/Signatures/AllowLists.html
 share/doc/clamav/html/UserManual/Signatures/AuthenticodeRules.html
 share/doc/clamav/html/UserManual/Signatures/BodySignatureFormat.html
 share/doc/clamav/html/UserManual/Signatures/BytecodeSignatures.html
@@ -22,7 +23,6 @@ share/doc/clamav/html/UserManual/Signatures/FunctionalityLevels.html
 share/doc/clamav/html/UserManual/Signatures/HashSignatures.html
 share/doc/clamav/html/UserManual/Signatures/LogicalSignatures.html
 share/doc/clamav/html/UserManual/Signatures/PhishSigs.html
-share/doc/clamav/html/UserManual/Signatures/Whitelists.html
 share/doc/clamav/html/UserManual/Signatures/YaraRules.html
 share/doc/clamav/html/UserManual/Usage.html
 share/doc/clamav/html/UserManual/Usage/Configuration.html
