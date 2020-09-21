@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.25 2020/04/17 13:36:26 joerg Exp $
+# $NetBSD: clang.mk,v 1.26 2020/09/21 13:09:21 schmonz Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -95,6 +95,16 @@ CWRAPPERS_APPEND.cc+=	-Qunused-arguments
 CWRAPPERS_PREPEND.cc+=	-Qunused-arguments -fcommon
 _WRAP_EXTRA_ARGS.CXX+=	-Qunused-arguments
 CWRAPPERS_APPEND.cxx+=	-Qunused-arguments
+
+# Xcode 12 has a zealous new default. Turn it off until we're ready,
+# while allowing callers (or users, via CFLAGS/CPPFLAGS) to override.
+.if ${OPSYS} == "Darwin"
+_NOERROR_IMPLICIT_cmd=	${CCPATH} -\#\#\# -E -x c /dev/null 2>&1 \
+			| ${GREP} -q Werror=implicit-function-declaration \
+			&& ${ECHO} -Wno-error=implicit-function-declaration \
+			|| ${TRUE}
+CWRAPPERS_PREPEND.cc+=	${_NOERROR_IMPLICIT_cmd:sh}
+.endif
 
 .for _version_ in ${_CXX_STD_VERSIONS}
 _CXX_STD_FLAG.${_version_}?=	-std=${_version_}
