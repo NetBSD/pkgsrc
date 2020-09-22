@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.542 2020/09/04 12:01:53 wiz Exp $
+# $NetBSD: Makefile,v 1.543 2020/09/22 01:50:23 mrg Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -235,6 +235,7 @@ SUBDIR+=	p5-Msgcat
 SUBDIR+=	p5-Parse-Win32Registry
 SUBDIR+=	p5-Search
 SUBDIR+=	p5-Vroom
+SUBDIR+=	p5-Weather-PurpleAir-API
 SUBDIR+=	parchive
 SUBDIR+=	parley
 SUBDIR+=	pciids
