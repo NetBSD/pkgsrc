@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5420 2020/09/22 09:59:17 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5421 2020/09/22 10:04:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8101,3 +8101,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/fehqlibs to 0.9.15b [schmonz 2020-09-22]
 	Updated net/ucspi-tcp6 to 1.11.6a [schmonz 2020-09-22]
 	Updated net/ucspi-ssl to 0.999.11.6a [schmonz 2020-09-22]
+	Updated sysutils/memtester to 4.5.0 [schmonz 2020-09-22]
