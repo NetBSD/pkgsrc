@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/08/19 22:09:06 schmonz Exp $
+# $NetBSD: options.mk,v 1.10 2020/09/22 09:59:05 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucspi-ssl
 PKG_SUPPORTED_OPTIONS+=	inet6 perl
@@ -15,12 +15,12 @@ PLIST_VARS+=		perl
 .if !empty(PKG_OPTIONS:Mperl)
 .include "../../lang/perl5/buildlink3.mk"
 USE_TOOLS+=		perl:run
-DJB_CONFIG_CMDS+=	${ECHO} ${PERL5} > conf-perl;
+DJB_CONFIG_CMDS+=	${ECHO} ${PERL5} > conf-perl; \
+			${ECHO} it-sslperl >> src/it=d
 PLIST.perl=		yes
 do-install-sslperl:
 	${INSTALL_PROGRAM} ${WRKSRC}/command/sslperl ${DESTDIR}${PREFIX}/bin
 .else
-DJB_BUILD_ARGS+=	- sslperl
 do-install-sslperl:
 	${DO_NADA}
 .endif
