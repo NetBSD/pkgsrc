@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/02/09 11:56:43 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/22 08:06:19 mef Exp $
 
 R_PKGNAME=	rversions
-R_PKGVER=	2.0.1
+R_PKGVER=	2.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
