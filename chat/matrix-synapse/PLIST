@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/04 20:34:11 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/22 21:21:51 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -42,6 +42,9 @@ ${PYSITELIB}/synapse/api/errors.pyo
 ${PYSITELIB}/synapse/api/filtering.py
 ${PYSITELIB}/synapse/api/filtering.pyc
 ${PYSITELIB}/synapse/api/filtering.pyo
+${PYSITELIB}/synapse/api/presence.py
+${PYSITELIB}/synapse/api/presence.pyc
+${PYSITELIB}/synapse/api/presence.pyo
 ${PYSITELIB}/synapse/api/ratelimiting.py
 ${PYSITELIB}/synapse/api/ratelimiting.pyc
 ${PYSITELIB}/synapse/api/ratelimiting.pyo
@@ -879,6 +882,9 @@ ${PYSITELIB}/synapse/rest/client/v2_alpha/room_upgrade_rest_servlet.pyo
 ${PYSITELIB}/synapse/rest/client/v2_alpha/sendtodevice.py
 ${PYSITELIB}/synapse/rest/client/v2_alpha/sendtodevice.pyc
 ${PYSITELIB}/synapse/rest/client/v2_alpha/sendtodevice.pyo
+${PYSITELIB}/synapse/rest/client/v2_alpha/shared_rooms.py
+${PYSITELIB}/synapse/rest/client/v2_alpha/shared_rooms.pyc
+${PYSITELIB}/synapse/rest/client/v2_alpha/shared_rooms.pyo
 ${PYSITELIB}/synapse/rest/client/v2_alpha/sync.py
 ${PYSITELIB}/synapse/rest/client/v2_alpha/sync.pyc
 ${PYSITELIB}/synapse/rest/client/v2_alpha/sync.pyo
@@ -1364,14 +1370,18 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/05cache_instance.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/06dlols_unique_idx.py
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/06dlols_unique_idx.pyc
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/06dlols_unique_idx.pyo
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/07persist_ui_auth_ips.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/08_media_safe_from_quarantine.sql.postgres
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/08_media_safe_from_quarantine.sql.sqlite
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/09shadow_ban.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/10drop_local_rejections_stream.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/10federation_pos_instance_name.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/11user_id_seq.py
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/11user_id_seq.pyc
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/11user_id_seq.pyo
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/12room_stats.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/13remove_presence_allow_inbound.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/15unread_count.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_signatures.sql
@@ -1465,9 +1475,6 @@ ${PYSITELIB}/synapse/storage/persist_events.pyo
 ${PYSITELIB}/synapse/storage/prepare_database.py
 ${PYSITELIB}/synapse/storage/prepare_database.pyc
 ${PYSITELIB}/synapse/storage/prepare_database.pyo
-${PYSITELIB}/synapse/storage/presence.py
-${PYSITELIB}/synapse/storage/presence.pyc
-${PYSITELIB}/synapse/storage/presence.pyo
 ${PYSITELIB}/synapse/storage/purge_events.py
 ${PYSITELIB}/synapse/storage/purge_events.pyc
 ${PYSITELIB}/synapse/storage/purge_events.pyo
