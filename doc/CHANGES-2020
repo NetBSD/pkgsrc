@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5415 2020/09/21 22:46:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5416 2020/09/22 01:50:23 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8091,6 +8091,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R-car to 3.0.9 [mef 2020-09-20]
 	Updated math/R-Rcmdr to 2.7.0 [mef 2020-09-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2020Q3 branch [gdt 2020-09-21]
-	Added benchmarks/R-microbenchmark vesrion 1.4.7 [mef 2020-09-21]
+	Added benchmarks/R-microbenchmark version 1.4.7 [mef 2020-09-21]
 	Updated pkgtools/pkg to 1.10.99.7 [khorben 2020-09-21]
 	Updated devel/p5-Coro to 6.57nb2 [wiz 2020-09-21]
+	Added devel/p5-File-Valet version 1.0.7 [mrg 2020-09-21]
+	Added misc/p5-Weather-PurpleAir-API version 0.04 [mrg 2020-09-21]
