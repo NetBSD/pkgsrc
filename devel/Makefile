@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3253 2020/09/20 08:58:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.3254 2020/09/22 01:50:23 mrg Exp $
 #
 
 COMMENT=	Development utilities
@@ -1416,6 +1416,7 @@ SUBDIR+=	p5-File-Tempdir
 SUBDIR+=	p5-File-Touch
 SUBDIR+=	p5-File-Type
 SUBDIR+=	p5-File-Util
+SUBDIR+=	p5-File-Valet
 SUBDIR+=	p5-File-Which
 SUBDIR+=	p5-File-chdir
 SUBDIR+=	p5-File-pushd
