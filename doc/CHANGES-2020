@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5416 2020/09/22 01:50:23 mrg Exp $
+$NetBSD: CHANGES-2020,v 1.5417 2020/09/22 08:39:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8096,3 +8096,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Coro to 6.57nb2 [wiz 2020-09-21]
 	Added devel/p5-File-Valet version 1.0.7 [mrg 2020-09-21]
 	Added misc/p5-Weather-PurpleAir-API version 0.04 [mrg 2020-09-21]
+	Updated devel/R-rversions to 2.0.2 [mef 2020-09-22]
+	Updated devel/R-pkgbuild to 1.1.0 [mef 2020-09-22]
