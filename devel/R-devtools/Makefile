@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/09/21 23:14:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/22 10:58:11 mef Exp $
 
 R_PKGNAME=	devtools
 R_PKGVER=	2.3.1
@@ -7,8 +7,6 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tools to make developing R packages easier
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
-
-BROKEN=		"R-pkgbuild>=1.1.0 and R-rversions>=2.0.2 not available in pkgsrc right now."
 
 DEPENDS+=	R-callr>=3.4.4:../../devel/R-callr
 DEPENDS+=	R-cli>=2.0.2:../../devel/R-cli
@@ -33,11 +31,11 @@ DEPENDS+=	R-httr>=1.4.2:../../www/R-httr
 #DEPENDS+=	R-rversions>=2.0.2:../../devel/R-rversions
 
 # Packages suggested but not available:
-#   'BiocManager', 'foghorn', 'gmailr', 'lintr', 'mockery', 'pkgdown',
-#   'rhub', 'spelling'
+# 'BiocManager', 'foghorn', 'gmailr', 'pkgdown', 'rhub'
 
 TEST_DEPENDS+=	R-bitops-[0-9]*:../../math/R-bitops
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-curl>=4.3:../../www/R-curl
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-lintr>=2.0.1:../../devel/R-lintr
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
@@ -46,17 +44,8 @@ TEST_DEPENDS+=	R-rmarkdown>=2.3:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-spelling>=2.1:../../textproc/R-spelling
 TEST_DEPENDS+=	R-testthat>=2.3.2:../../devel/R-testthat
 TEST_DEPENDS+=	R-usethis-[0-9]*:../../devel/R-usethis
-TEST_DEPENDS+=	R-curl>=4.3:../../www/R-curl
-TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
-TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
 
 USE_LANGUAGES=	# none
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
-
-# Packages suggested but not available:
-#   'BiocManager', 'foghorn', 'gmailr', 'pkgdown', 'rhub'
-
-# Packages required and available but unsuitable versions:
-#   'DT', 'jsonlite', 'rstudioapi', 'curl', 'rmarkdown'
