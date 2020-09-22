@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/19 14:14:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/22 05:36:13 mef Exp $
 
 DISTNAME=		MP4Tools-3.8
 PKGNAME=		${DISTNAME:tl}
@@ -17,6 +17,7 @@ USE_TOOLS+=		pkg-config gmake msgfmt msgmerge xgettext
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE_WX_VERSION=	no
+CONFIGURE_ENV+=          ac_cv_path_FFMPEG_PATH=${PREFIX}/bin/ffmpeg4
 
 .include "../../graphics/wxsvg/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
