@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5417 2020/09/22 08:39:55 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5418 2020/09/22 09:50:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8098,3 +8098,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added misc/p5-Weather-PurpleAir-API version 0.04 [mrg 2020-09-21]
 	Updated devel/R-rversions to 2.0.2 [mef 2020-09-22]
 	Updated devel/R-pkgbuild to 1.1.0 [mef 2020-09-22]
+	Updated net/fehqlibs to 0.9.15b [schmonz 2020-09-22]
