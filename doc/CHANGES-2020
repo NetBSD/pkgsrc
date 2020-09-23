@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5422 2020/09/22 21:22:13 js Exp $
+$NetBSD: CHANGES-2020,v 1.5423 2020/09/23 19:03:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8103,3 +8103,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ucspi-ssl to 0.999.11.6a [schmonz 2020-09-22]
 	Updated sysutils/memtester to 4.5.0 [schmonz 2020-09-22]
 	Updated chat/matrix-synapse to 1.20.0 [js 2020-09-22]
+	Updated security/tor-browser-noscript to 11.0.46 [wiz 2020-09-23]
