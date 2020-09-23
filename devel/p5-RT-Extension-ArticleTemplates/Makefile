@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/09/23 22:08:57 mef Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/23 23:34:52 mef Exp $
 
 DISTNAME=	RT-Extension-ArticleTemplates-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -33,7 +33,7 @@ PERL5_API_cmd=	${TOOLS_CMD.perl} -e 'use Config; print $$Config{api_versionstrin
 PERL5_ARCH=	${PERL5_ARCH_cmd:sh}
 PERL5_ARCH_cmd=	${TOOLS_CMD.perl} -e 'use Config; print $$Config{archname};'
 
-PERL5_PACKLIST_DIR=	${PREFIX}/share/rt4/plugins/${PERL5_API}/${PERL5_ARCH}
+PERL5_PACKLIST_DIR=	${PREFIX}/share/rt4/plugins/RT-Extension-ArticleTemplates
 PERL5_PACKLIST=		auto/RT/Extension/ArticleTemplates/.packlist
 
 .include "../../lang/perl5/module.mk"
