@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/08/31 18:09:37 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2020/09/23 08:16:50 jperkin Exp $
 
 DISTNAME=	asymptote-2.41
 PKGREVISION=	5
@@ -49,6 +49,19 @@ SUBST_SED.python+=	-e "s|/usr/bin/env python|${PYTHONBIN:Q}|g"
 # DragonFly has stripped makeinfo in the base - without texi2dvi.
 OPSYSVARS+=			TOOL_DEPENDS
 TOOL_DEPENDS.DragonFly+=	gtexinfo-[0-9]*:../../devel/gtexinfo
+
+#
+# Ghostscript running in a pipe fails with:
+#
+# ../asy -dir ../base -config "" -render=0 -f pdf -noprc helix.asy
+# GPL Ghostscript 9.53.0:
+#   *** EPS files may not contain multiple pages.
+#   *** Use of the %d filename format is required to output pages to multiple EPS files.
+# GPL Ghostscript 9.53.0: Unrecoverable error, exit code 1
+#
+# leaving asy hanging indefinitely.
+#
+NOT_FOR_BULK_PLATFORM+=	SunOS-*
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1x \
