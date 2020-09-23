@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2020/09/19 17:25:01 he Exp $
+# $NetBSD: Makefile,v 1.30 2020/09/23 06:58:46 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	lldb-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
 PKGREVISION=	1
-CATEGORIES=	lang devel
+CATEGORIES=	devel lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
