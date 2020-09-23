@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/09/23 22:08:08 mef Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/23 22:08:57 mef Exp $
 
 DISTNAME=	RT-Extension-ArticleTemplates-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 PERL5_MODULE_TYPE=	Module::Install
 
-BUILD_DEPENDS+= p5-Module-Install-RTx>=0.40:../../devel/p5-Module-Install-RTx
-BUILD_DEPENDS+= p5-Module-Install-ReadmeFromPod>=0.30:../../devel/p5-Module-Install-ReadmeFromPod
+BUILD_DEPENDS+=	p5-Module-Install-RTx>=0.40:../../devel/p5-Module-Install-RTx
+BUILD_DEPENDS+=	p5-Module-Install-ReadmeFromPod>=0.30:../../devel/p5-Module-Install-ReadmeFromPod
 
 USE_TOOLS=	perl
 
