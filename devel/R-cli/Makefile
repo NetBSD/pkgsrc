@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/09/20 21:22:02 mef Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/23 05:23:06 mef Exp $
 
 R_PKGNAME=	cli
 R_PKGVER=	2.0.2
@@ -10,6 +10,8 @@ LICENSE=	mit
 
 DEPENDS+=	R-assertthat>=0.2.1:../../devel/R-assertthat
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
+DEPENDS+=	R-fansi-[0-9]*:../../devel/R-fansi
+DEPENDS+=	R-glue-[0-9]*:../../devel/R-glue
 
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
 TEST_DEPENDS+=	R-prettycode-[0-9]*:../../devel/R-prettycode
