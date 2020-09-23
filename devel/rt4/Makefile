@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2020/09/04 11:09:02 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2020/09/23 22:54:14 mef Exp $
 
 DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
@@ -196,7 +196,7 @@ RT_CONFIG_FILES=	RT_Config.pm RT_SiteConfig.pm
 CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_} \
 			${PKG_SYSCONFDIR}/${_file_} \
 			${APACHE_USER} ${APACHE_GROUP} \
-			640
+			444
 .endfor
 
 OWN_DIRS+=		${RT_VAR_DIR} ${RT_LOCAL_DIR} ${RT_LOCAL_DIR}/etc
