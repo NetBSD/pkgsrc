@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5426 2020/09/24 05:37:37 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.5427 2020/09/24 09:40:31 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8107,3 +8107,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/coreutils to 8.31nb2 [jperkin 2020-09-23]
 	Updated www/firefox78 to 78.3.0 [nia 2020-09-24]
 	Updated converters/bdf2psf to 1.197 [fcambus 2020-09-24]
+	Updated graphics/libansilove to 1.2.5 [fcambus 2020-09-24]
