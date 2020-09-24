@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2020/08/31 18:09:26 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2020/09/24 11:51:47 hauke Exp $
 
 PKGNAME=	${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 COMMENT=	XEmacs text editor version 21.4
 
 # extra options for x11 support, not for sharing with xemacs-current-nox11
@@ -12,6 +12,15 @@ PKG_SUGGESTED_OPTIONS+=		x11
 
 .include "options.mk"
 
+SUBST_CLASSES+=			desktop-file
+SUBST_STAGE.desktop-file=	pre-configure
+SUBST_MESSAGE.desktop-file=	Fixing paths in XEmacs desktop file
+SUBST_VARS.desktop-file=	PREFIX LIBDIR
+SUBST_FILES.desktop-file=	etc/xemacs.desktop
+
+INSTALLATION_DIRS+=		share/applications
+
 .include "Makefile.common"
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
