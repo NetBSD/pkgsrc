@@ -1,4 +1,4 @@
-# $NetBSD: xemacs.desktop,v 1.1 2020/09/24 11:51:47 hauke Exp $
+# $NetBSD: xemacs.desktop,v 1.2 2020/09/24 17:02:01 hauke Exp $
 
 [Desktop Entry]
 Type=Application
@@ -8,5 +8,5 @@ Comment=Highly customizable open source text editor and application development 
 MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
 Exec=@PREFIX@/bin/xemacs %F
 Icon=@LIBDIR@/etc/xemacs-icon.xpm
-Categories=Development;Office;System;Utility
+Categories=Development;IDE;Utility;TextEditor
 StartupWMClass=XEmacs
