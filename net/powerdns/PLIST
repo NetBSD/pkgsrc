@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/07/02 13:01:38 otis Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/09/24 19:09:53 otis Exp $
 ${PLIST.tools}bin/calidns
 ${PLIST.tools}bin/dnsbulktest
 ${PLIST.tools}bin/dnsgram
@@ -47,6 +47,9 @@ ${PLIST.tools}man/man1/sdig.1
 man/man1/zone2json.1
 man/man1/zone2sql.1
 sbin/pdns_server
+share/doc/pdns/bind-dnssec.4.2.0_to_4.3.0_schema.sqlite3.sql
+share/doc/pdns/bind-dnssec.schema.sqlite3.sql
+${PLIST.sqlite}share/doc/pdns/4.3.0_to_4.3.1_schema.sqlite3.sql
 ${PLIST.sqlite}share/doc/pdns/4.2.0_to_4.3.0_schema.sqlite3.sql
 ${PLIST.sqlite}share/doc/pdns/3.4.0_to_4.0.0_schema.sqlite3.sql
 ${PLIST.sqlite}share/doc/pdns/4.0.0_to_4.2.0_schema.sqlite3.sql
