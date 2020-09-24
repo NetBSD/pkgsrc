@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2020/09/20 22:50:21 gdt Exp $
+# $NetBSD: Makefile,v 1.194 2020/09/24 11:01:51 gdt Exp $
 
 DISTNAME=	rustc-1.45.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -528,8 +528,9 @@ DEPENDS+=	compat80>=0:../../emulators/compat80
 # Bootstrap kits use openssl, which on NetBSD 8 comes from pkgsrc.
 # Therefore the pkgsrc openssl libs need to be present as well.
 # Observed on i386, and presumed true on the other
-# bootstrap-built-for-8 systems.
-BUILD_DEPENDS+=	openssl>1.1:../../security/openssl
+# bootstrap-built-for-8 systems.  It also is linked against by cargo,
+# so it must be a run-time dependency as well.
+.include "../../security/openssl/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
