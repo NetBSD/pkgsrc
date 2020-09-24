@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/20 04:29:28 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/24 00:44:53 mef Exp $
 
 R_PKGNAME=	roxygen2
 R_PKGVER=	7.1.1
@@ -17,6 +17,7 @@ DEPENDS+=	R-commonmark>=1.7:../../textproc/R-commonmark
 DEPENDS+=	R-stringi>=1.4.3:../../textproc/R-stringi
 DEPENDS+=	R-stringr>=1.0.0:../../textproc/R-stringr
 DEPENDS+=	R-xml2>=1.2.2:../../textproc/R-xml2
+DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 
 #  Packages suggested but not available: 'R.methodsS3', 'R.oo'
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
