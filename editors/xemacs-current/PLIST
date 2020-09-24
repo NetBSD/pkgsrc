@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/11/17 14:17:17 hauke Exp $
+@comment $NetBSD: PLIST,v 1.25 2020/09/24 11:51:48 hauke Exp $
 bin/ellcc
 bin/gnuattach
 bin/gnuclient
@@ -694,6 +694,7 @@ lib/${DISTNAME}/etc/xemacs-icon2.xbm
 lib/${DISTNAME}/etc/xemacs-icon2.xpm
 lib/${DISTNAME}/etc/xemacs-icon3.xpm
 lib/${DISTNAME}/etc/xemacs.1
+${PLIST.x11}lib/${DISTNAME}/etc/xemacs.desktop
 lib/${DISTNAME}/etc/xemacs.xbm
 lib/${DISTNAME}/etc/xemacs.xpm
 lib/${DISTNAME}/lisp/ChangeLog
@@ -1252,5 +1253,6 @@ lib/${DISTNAME}/lisp/x-win-sun.el
 lib/${DISTNAME}/lisp/x-win-sun.elc
 lib/${DISTNAME}/lisp/x-win-xfree86.el
 lib/${DISTNAME}/lisp/x-win-xfree86.elc
+${PLIST.x11}share/applications/xemacs.desktop
 @pkgdir lib/xemacs/site-lisp
 @pkgdir lib/xemacs/site-modules

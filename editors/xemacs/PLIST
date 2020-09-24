@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/02/15 13:13:24 hauke Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/09/24 11:51:47 hauke Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -393,6 +393,7 @@ lib/${DISTNAME}/etc/xemacs-icon2.xpm
 lib/${DISTNAME}/etc/xemacs-icon3.xpm
 lib/${DISTNAME}/etc/xemacs-ja.1
 lib/${DISTNAME}/etc/xemacs.1
+${PLIST.x11}lib/${DISTNAME}/etc/xemacs.desktop
 lib/${DISTNAME}/etc/xemacs.xbm
 lib/${DISTNAME}/etc/xemacs.xpm
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/DOC
@@ -1264,6 +1265,7 @@ man/man1/gnuserv.1
 man/man1/xemacs-ctags.1
 man/man1/xemacs-etags.1
 man/man1/xemacs.1
+${PLIST.x11}share/applications/xemacs.desktop
 @pkgdir lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules
 @pkgdir lib/xemacs/site-modules
 @pkgdir lib/xemacs/site-lisp
