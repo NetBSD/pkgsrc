@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/09/23 08:16:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2020/09/24 13:25:09 mef Exp $
 
 DISTNAME=	asymptote-2.41
 PKGREVISION=	5
@@ -61,7 +61,7 @@ TOOL_DEPENDS.DragonFly+=	gtexinfo-[0-9]*:../../devel/gtexinfo
 #
 # leaving asy hanging indefinitely.
 #
-NOT_FOR_BULK_PLATFORM+=	SunOS-*
+NOT_FOR_BULK_PLATFORM+=	SunOS-* NetBSD-*
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1x \
