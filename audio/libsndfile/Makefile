@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/09/20 08:30:16 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2020/09/25 12:43:11 tnn Exp $
 
 DISTNAME=	libsndfile-1.0.30
 CATEGORIES=	audio
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/libsndfile/
 COMMENT=	Library for reading and writing audio files
 LICENSE=	gnu-lgpl-v2.1
-
-TOOL_DEPENDS+=	autogen-[0-9]*:../../devel/autogen
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
