@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/09/24 11:21:40 mef Exp $
+# $NetBSD: Makefile,v 1.51 2020/09/25 10:20:12 mef Exp $
 
 DISTNAME=		ncview-2.1.7
 CATEGORIES=		graphics
@@ -12,6 +12,7 @@ LICENSE=		gnu-gpl-v3
 GNU_CONFIGURE=		yes
 USE_TOOLS=		pkg-config
 CONFIG_SHELL=		bash
+USE_TOOLS+=		bash
 
 CONFIGURE_ARGS+=	--with-udunits2_incdir=${BUILDLINK_PREFIX.udunits}/include
 CONFIGURE_ARGS+=	--with-udunits2_libdir=${BUILDLINK_PREFIX.udunits}/lib
