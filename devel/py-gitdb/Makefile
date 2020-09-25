@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/09/10 15:02:35 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/25 08:28:26 adam Exp $
 
 DISTNAME=	gitdb-4.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gitdb/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
@@ -12,7 +12,9 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-smmap-[0-9]*:../../devel/py-smmap
 
-#TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
