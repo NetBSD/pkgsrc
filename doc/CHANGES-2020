@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5429 2020/09/25 03:57:21 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.5430 2020/09/25 13:56:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8110,3 +8110,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libansilove to 1.2.5 [fcambus 2020-09-24]
 	Updated net/powerdns to 4.3.1 [otis 2020-09-24]
 	Updated biology/gnome-chemistry-utils to 0.14.16nb3 [gutteridge 2020-09-25]
+	Updated pkgtools/pkglint to 20.3.0 [rillig 2020-09-25]
