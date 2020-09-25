@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2020/09/24 11:01:51 gdt Exp $
+# $NetBSD: Makefile,v 1.195 2020/09/25 12:21:02 gdt Exp $
 
 DISTNAME=	rustc-1.45.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -527,10 +527,14 @@ stage0-bootstrap: install
 DEPENDS+=	compat80>=0:../../emulators/compat80
 # Bootstrap kits use openssl, which on NetBSD 8 comes from pkgsrc.
 # Therefore the pkgsrc openssl libs need to be present as well.
-# Observed on i386, and presumed true on the other
-# bootstrap-built-for-8 systems.  It also is linked against by cargo,
-# so it must be a run-time dependency as well.
-.include "../../security/openssl/buildlink3.mk"
+# (Observed on i386, and presumed true on the other
+# bootstrap-built-for-8 systems.)  Then, when the package is built,
+# cargo links against pkgsrc openssl, so it must be a run-time
+# dependency as well.  Forcing USE_BUILTIN.openssl=no results in a
+# mysterious heimdal error, but straight DEPENDS seems to result in a
+# satisfactory package build.
+# While this is icky, it is for the time being better than no rust package.
+DEPENDS+=	openssl>=1.1:../../security/openssl
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
