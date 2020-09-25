@@ -1,0 +1,24 @@
+$NetBSD: patch-data_keys,v 1.1 2020/09/25 12:25:10 nia Exp $
+
+Make volume binds useful for NetBSD.
+
+--- data/keys.orig	2015-02-08 10:44:45.333187008 +0000
++++ data/keys
+@@ -65,9 +65,14 @@ Mod1 F2 :Exec fbrun
+ 
+ # volume settings, using common keycodes
+ # if these don't work, use xev to find out your real keycodes
+-176 :Exec amixer sset Master,0 1+
+-174 :Exec amixer sset Master,0 1-
+-160 :Exec amixer sset Master,0 toggle
++# NetBSD
++176 :Exec mixerctl -w outputs.master+=5
++174 :Exec mixerctl -w outputs.master-=5
++160 :Exec mixerctl -w outputs.master=0
++# Linux ALSA
++#176 :Exec amixer sset Master,0 1+
++#174 :Exec amixer sset Master,0 1-
++#160 :Exec amixer sset Master,0 toggle
+ 
+ # current window commands
+ Mod1 F4 :Close
