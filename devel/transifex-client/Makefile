@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/09/10 15:11:57 taca Exp $
+# $NetBSD: Makefile,v 1.21 2020/09/25 11:25:44 jperkin Exp $
 
 DISTNAME=	transifex-client-0.13.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-slugify>=1.2.6:../../devel/py-slugify
 DEPENDS+=	${PYPKGPREFIX}-gitpython>=3.0.0:../../devel/py-gitpython
 
 EXTRACT_USING=	bsdtar
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} tx tx-${PYVERSSUFFIX} || ${TRUE}
