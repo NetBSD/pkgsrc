@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2020/08/31 18:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2020/09/25 03:56:49 gutteridge Exp $
 #
 
 DISTNAME=	gnome-chemistry-utils-0.14.16
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	biology
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gchemutils/0.14/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +22,8 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 
 CONFIGURE_ARGS+=	--disable-update-databases
 
+ICON_THEMES=	yes
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
@@ -32,4 +34,5 @@ CONFIGURE_ARGS+=	--disable-update-databases
 .include "../../biology/bodr/buildlink3.mk"
 .include "../../biology/openbabel/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
