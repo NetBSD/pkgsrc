@@ -1,0 +1,32 @@
+$NetBSD: patch-meson.build,v 1.1 2020/09/25 08:51:41 jperkin Exp $
+
+Remove silly asserts that do nothing except break portability.
+
+--- meson.build.orig	2020-05-13 09:51:07.000000000 +0000
++++ meson.build
+@@ -170,10 +170,6 @@ check_symbols_required = [
+   ['TIOCGWINSZ', 'sys/ioctl.h'],
+ ]
+ 
+-foreach symbol: check_symbols_required
+-  assert(cxx.has_header_symbol(symbol[1], symbol[0]), symbol[0] + ' not found')
+-endforeach
+-
+ # Check for functions
+ 
+ check_functions_required = [
+@@ -389,14 +385,10 @@ linker_flags = [
+ foreach flag: linker_flags
+   if cc.has_link_argument(flag[0])
+     add_project_link_arguments(flag[0], language: 'c')
+-  elif flag[1]
+-    assert(false, flag[0] + ' is required but not supported')
+   endif
+ 
+   if cxx.has_link_argument(flag[0])
+     add_project_link_arguments(flag[0], language: 'cpp')
+-  elif flag[1]
+-    assert(false, flag[0] + ' is required but not supported')
+   endif
+ endforeach
+ 
