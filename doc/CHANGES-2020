@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5431 2020/09/26 00:23:39 js Exp $
+$NetBSD: CHANGES-2020,v 1.5432 2020/09/26 10:33:25 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8112,3 +8112,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated biology/gnome-chemistry-utils to 0.14.16nb3 [gutteridge 2020-09-25]
 	Updated pkgtools/pkglint to 20.3.0 [rillig 2020-09-25]
 	Updated chat/matrix-synapse to 1.20.1 [js 2020-09-26]
+	Updated www/py-robobrowser to 0.5.3nb1 [leot 2020-09-26]
