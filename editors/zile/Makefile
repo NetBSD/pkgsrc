@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/09/26 12:08:43 mef Exp $
+# $NetBSD: Makefile,v 1.38 2020/09/26 12:41:02 wiz Exp $
 
 DISTNAME=	zile-2.4.14
 #PKGREVISION=	1
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-silent-rules
 INFO_FILES=		yes
 
 BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
-BUILD_DEPENDS+=	p5-Locale-Msgfmt:../../devel/p5-Locale-Msgfmt
+BUILD_DEPENDS+=	p5-Locale-Msgfmt-[0-9]*:../../devel/p5-Locale-Msgfmt
 
 # we only want the charset.alias file, so no buildlinkery for libiconv
 DEPENDS+=       libiconv-[0-9]*:../../converters/libiconv
