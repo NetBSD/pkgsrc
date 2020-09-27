@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/08/17 20:20:28 leot Exp $
+# $NetBSD: Makefile,v 1.38 2020/09/27 13:12:17 mef Exp $
 
 DISTNAME=	labltk-8.06.3
 PKGREVISION=	6
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake
 MAKE_JOBS_SAFE=	no
+MAKE_ENV+=	BYTECC='cc  -fPIC'
+
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-x11include ${X11BASE}/include
