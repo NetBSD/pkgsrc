@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5433 2020/09/27 01:13:11 manu Exp $
+$NetBSD: CHANGES-2020,v 1.5434 2020/09/27 14:54:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8114,3 +8114,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/matrix-synapse to 1.20.1 [js 2020-09-26]
 	Updated www/py-robobrowser to 0.5.3nb1 [leot 2020-09-26]
 	Updated filesystems/glusterfs to 8.2 [manu 2020-09-26]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2020Q3 branch [gdt 2020-09-27]
