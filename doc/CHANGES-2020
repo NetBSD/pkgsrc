@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5437 2020/09/27 16:32:01 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5438 2020/09/27 21:27:43 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8118,3 +8118,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20200925 [wiz 2020-09-27]
 	Updated devel/cbindgen to 0.14.5 [ryoon 2020-09-27]
 	Removed x11/Xrender successor x11/libXrender [wiz 2020-09-27]
+	Updated emulators/qemu to 5.1.0nb4 [jakllsch 2020-09-27]
