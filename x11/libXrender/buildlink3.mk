@@ -1,12 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2018/03/07 11:57:37 wiz Exp $
-
-.include "../../mk/bsd.fast.prefs.mk"
-
-.if ${X11_TYPE} != "modular" && \
-    !exists(${X11BASE}/lib/pkgconfig/xrender.pc) && \
-    !exists(${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xrender.pc)
-.include "../../x11/Xrender/buildlink3.mk"
-.else
+# $NetBSD: buildlink3.mk,v 1.8 2020/09/27 16:32:01 wiz Exp $
 
 BUILDLINK_TREE+=	libXrender
 
@@ -21,5 +13,3 @@ BUILDLINK_PKGSRCDIR.libXrender?=	../../x11/libXrender
 .  endif # LIBXRENDER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libXrender
-
-.endif
