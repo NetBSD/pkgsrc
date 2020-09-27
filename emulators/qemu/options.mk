@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.11 2020/06/22 12:13:20 nia Exp $
+# $NetBSD: options.mk,v 1.12 2020/09/27 21:27:27 jakllsch Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
-PKG_SUPPORTED_OPTIONS=	gtk3 iscsi sdl spice
+PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi sdl spice
 PKG_SUGGESTED_OPTIONS+=	iscsi
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -25,6 +25,12 @@ PKG_SUGGESTED_OPTIONS+=	sdl
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		gtk virtfs-proxy-helper
+
+.if !empty(PKG_OPTIONS:Mdebug-info)
+CONFIGURE_ARGS+=	--enable-debug-info
+.else
+CONFIGURE_ARGS+=	--disable-debug-info
+.endif
 
 .if !empty(PKG_OPTIONS:Mgtk3)
 PLIST.gtk=		yes
