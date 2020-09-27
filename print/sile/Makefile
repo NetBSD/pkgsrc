@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/08/17 20:19:57 leot Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/27 02:06:50 mef Exp $
 
 DISTNAME=	sile-0.10.9
 PKGREVISION=	1
@@ -37,7 +37,7 @@ DEPENDS+=	${LUA_PKGPREFIX}-cosmo-[0-9]*:../../textproc/lua-cosmo
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake bash
 
 CONFIGURE_ARGS+=	LUA=${LUA_INTERPRETER}
 CONFIGURE_ARGS+=	--with-system-luarocks
