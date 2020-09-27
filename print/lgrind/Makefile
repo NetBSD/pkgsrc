@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/11/25 12:53:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2020/09/27 02:01:25 mef Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Source pretty printer for LaTeX
 
 BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+# I can't find file `tcrm1000'. 
+BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 WRKSRC=		${WRKDIR}/lgrind
