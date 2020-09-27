@@ -1,4 +1,4 @@
-$NetBSD: patch-xlators_mount_fuse_src_fuse-bridge.c,v 1.1 2020/07/27 16:06:08 manu Exp $
+$NetBSD: patch-xlators_mount_fuse_src_fuse-bridge.c,v 1.2 2020/09/27 01:13:11 manu Exp $
 
 Make FUSE notification optional at configure time
 From upstream https://review.gluster.org/24731
