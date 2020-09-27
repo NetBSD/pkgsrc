@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5436 2020/09/27 15:50:11 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5437 2020/09/27 16:32:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8117,3 +8117,4 @@ Changes to the packages collection and infrastructure in 2020:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2020Q3 branch [gdt 2020-09-27]
 	Updated mail/neomutt to 20200925 [wiz 2020-09-27]
 	Updated devel/cbindgen to 0.14.5 [ryoon 2020-09-27]
+	Removed x11/Xrender successor x11/libXrender [wiz 2020-09-27]
