@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.5 2020/07/08 14:46:14 jperkin Exp $
+# $NetBSD: rust.mk,v 1.6 2020/09/27 18:38:35 nia Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -36,11 +36,7 @@
 RUST_REQ?=	1.20.0
 RUST_RUNTIME?=	no
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
-RUST_TYPE?=	bin
-.else
 RUST_TYPE?=	src
-.endif
 
 .if ${RUST_TYPE} == "bin"
 .  if ${RUST_RUNTIME} == "no"
