@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2020/03/26 02:37:14 joerg Exp $
+$NetBSD: distinfo,v 1.5 2020/09/27 13:48:21 mef Exp $
 
 SHA1 (verilog-10.1.1.tar.gz) = 7f4cead8cabb90cc4525951357c43866ca710749
 RMD160 (verilog-10.1.1.tar.gz) = 77c933b712ab027b13a81e3eead7ee4f565741b7
@@ -7,6 +7,6 @@ Size (verilog-10.1.1.tar.gz) = 1684925 bytes
 SHA1 (patch-Makefile.in) = 9e66fedfa8487be3b7f82c152504404545f8bd06
 SHA1 (patch-aa) = cf075110416f6db0892129796cd83b8ae8de55fa
 SHA1 (patch-cadpli_Makefile.in) = ed21a5f529ac449c26b831cbd5fde052d9ed5466
-SHA1 (patch-tgt-pcb_Makefile.in) = a1f77b1763cdcb19bc304708c83f34359f9a3917
+SHA1 (patch-tgt-pcb_Makefile.in) = 0ea212a678aabd7e3d131322fd1a867b3e22611f
 SHA1 (patch-vhdlpp_Makefile.in) = feed15f8e8e60c73b0f1f25a62d30fec7fa25a01
 SHA1 (patch-vvp_Makefile.in) = 67bef8f6bbf03c8cf548785f5d8124e03771026a
