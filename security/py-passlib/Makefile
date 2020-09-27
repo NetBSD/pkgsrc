@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/24 11:36:53 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/27 10:38:25 kleink Exp $
 
 DISTNAME=	passlib-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/passlib/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/ecollins/passlib
+HOMEPAGE=	https://foss.heptapod.net/python-libs/passlib/-/wikis/home
 COMMENT=	Comprehensive password hashing framework supporting over 30 schemes
 LICENSE=	modified-bsd
 
