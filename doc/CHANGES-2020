@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5439 2020/09/27 21:30:06 jakllsch Exp $
+$NetBSD: CHANGES-2020,v 1.5440 2020/09/27 22:02:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8120,3 +8120,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed x11/Xrender successor x11/libXrender [wiz 2020-09-27]
 	Updated emulators/qemu to 5.1.0nb4 [jakllsch 2020-09-27]
 	Updated emulators/qemu to 5.1.0nb5 [jakllsch 2020-09-27]
+	Updated finance/gnucash to 4.2 [wiz 2020-09-27]
