@@ -1,4 +1,7 @@
-$NetBSD: patch-rpc_rpc_lib_rpcsvc.c,v 1.2 2020/07/27 16:06:08 manu Exp $
+$NetBSD: patch-rpc_rpc_lib_rpcsvc.c,v 1.3 2020/09/27 01:13:11 manu Exp $
+
+NetBSD build fixes
+From upstream https://review.gluster.org/24648
 
 NetBSD build fixes
 From upstream https://review.gluster.org/24648

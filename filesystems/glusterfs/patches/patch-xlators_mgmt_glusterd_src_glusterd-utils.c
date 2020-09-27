@@ -1,4 +1,4 @@
-$NetBSD: patch-xlators_mgmt_glusterd_src_glusterd-utils.c,v 1.1 2020/07/27 16:06:08 manu Exp $
+$NetBSD: patch-xlators_mgmt_glusterd_src_glusterd-utils.c,v 1.2 2020/09/27 01:13:11 manu Exp $
 
 fix NULL pointer reference
 From upstream https://review.gluster.org/24726

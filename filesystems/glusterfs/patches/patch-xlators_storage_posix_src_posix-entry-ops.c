@@ -1,4 +1,4 @@
-$NetBSD: patch-xlators_storage_posix_src_posix-entry-ops.c,v 1.1 2020/07/27 16:06:08 manu Exp $
+$NetBSD: patch-xlators_storage_posix_src_posix-entry-ops.c,v 1.2 2020/09/27 01:13:12 manu Exp $
 
 Properly screen the .attribute directory where NetBSD UFS1 stores 
 extended attributes.
