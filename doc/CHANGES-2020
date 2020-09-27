@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5432 2020/09/26 10:33:25 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5433 2020/09/27 01:13:11 manu Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8113,3 +8113,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.3.0 [rillig 2020-09-25]
 	Updated chat/matrix-synapse to 1.20.1 [js 2020-09-26]
 	Updated www/py-robobrowser to 0.5.3nb1 [leot 2020-09-26]
+	Updated filesystems/glusterfs to 8.2 [manu 2020-09-26]
