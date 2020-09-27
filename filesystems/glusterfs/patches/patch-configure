@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2020/07/27 16:06:08 manu Exp $
+$NetBSD: patch-configure,v 1.5 2020/09/27 01:13:11 manu Exp $
 
 Make FUSE notification optional at configure time
 From upstream https://review.gluster.org/24731
