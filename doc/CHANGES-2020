@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5434 2020/09/27 14:54:18 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.5435 2020/09/27 14:58:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8115,3 +8115,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-robobrowser to 0.5.3nb1 [leot 2020-09-26]
 	Updated filesystems/glusterfs to 8.2 [manu 2020-09-26]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2020Q3 branch [gdt 2020-09-27]
+	Updated mail/neomutt to 20200925 [wiz 2020-09-27]
