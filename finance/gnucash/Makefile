@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.298 2020/08/31 18:09:30 wiz Exp $
+# $NetBSD: Makefile,v 1.299 2020/09/27 22:02:14 wiz Exp $
 
-DISTNAME=		gnucash-4.1
-PKGREVISION=		2
+DISTNAME=		gnucash-4.2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -54,7 +53,6 @@ CMAKE_ARGS+=		-DCOMPILE_GSCHEMAS=OFF
 
 REPLACE_PERL+=		common/gnc-test-env.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
-REPLACE_PERL+=		libgnucash/quotes/gnc-fq-dump
 REPLACE_PERL+=		util/elegant-sort.pl
 
 PLIST_SRC=		PLIST
