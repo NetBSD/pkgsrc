@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.905 2020/09/11 13:28:13 leot Exp $
+# $NetBSD: Makefile,v 1.906 2020/09/27 16:32:01 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -9,7 +9,6 @@ SUBDIR+=	Xaw-Xpm
 SUBDIR+=	Xbae
 SUBDIR+=	Xfixes
 SUBDIR+=	XmHTML
-SUBDIR+=	Xrender
 SUBDIR+=	antiright
 SUBDIR+=	appmenu-qt
 SUBDIR+=	appres
