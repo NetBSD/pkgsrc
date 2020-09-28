@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5460 2020/09/28 23:47:42 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5461 2020/09/28 23:55:55 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8144,3 +8144,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-bumpversion version 0.5.3 [khorben 2020-09-28]
 	Added finance/py-eth-hash version 0.2.0 [khorben 2020-09-28]
 	Added finance/py-eth-typing version 2.2.2 [khorben 2020-09-28]
+	Added textproc/py-black version 20.8b1 [khorben 2020-09-28]
