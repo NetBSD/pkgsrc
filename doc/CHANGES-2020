@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5446 2020/09/28 10:04:22 micha Exp $
+$NetBSD: CHANGES-2020,v 1.5447 2020/09/28 10:54:39 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8128,3 +8128,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/webkit-gtk to 2.30.1 [leot 2020-09-28]
 	Updated security/amass to 3.10.4 [leot 2020-09-28]
 	Updated games/woof to 2.3.0 [micha 2020-09-28]
+	Updated mail/msmtp to 1.8.12 [leot 2020-09-28]
