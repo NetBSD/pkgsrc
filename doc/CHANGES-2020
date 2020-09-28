@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5455 2020/09/28 19:32:28 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5456 2020/09/28 20:05:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8139,3 +8139,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/stellarium to 0.20.3 [adam 2020-09-28]
 	Updated lang/python38 to 3.8.6 [adam 2020-09-28]
 	Updated lang/py38-html-docs to 3.8.6 [adam 2020-09-28]
+	Updated net/phetch to 1.0.5 [pin 2020-09-28]
