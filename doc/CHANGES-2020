@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5440 2020/09/27 22:02:25 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5441 2020/09/28 07:38:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8121,3 +8121,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/qemu to 5.1.0nb4 [jakllsch 2020-09-27]
 	Updated emulators/qemu to 5.1.0nb5 [jakllsch 2020-09-27]
 	Updated finance/gnucash to 4.2 [wiz 2020-09-27]
+	Updated devel/bison to 3.7.2 [adam 2020-09-28]
+	Updated devel/cmake to 3.18.3 [adam 2020-09-28]
