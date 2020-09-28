@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5456 2020/09/28 20:05:55 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5457 2020/09/28 22:56:55 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8140,3 +8140,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/python38 to 3.8.6 [adam 2020-09-28]
 	Updated lang/py38-html-docs to 3.8.6 [adam 2020-09-28]
 	Updated net/phetch to 1.0.5 [pin 2020-09-28]
+	Updated devel/py-angr to 9.0.4378 [khorben 2020-09-28]
