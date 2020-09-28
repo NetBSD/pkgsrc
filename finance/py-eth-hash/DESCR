@@ -1,0 +1,9 @@
+This is a low-level library, intended to be used internally by other Ethereum
+tools. If you're looking for a convenient hashing tool, check out
+eth_utils.keccak() which will be a little friendlier, and provide access to
+other helpful utilities.
+
+Read more in the documentation on ReadTheDocs.
+
+Note: the similarly named pyethash has a completely different use: it generates
+proofs of work.
