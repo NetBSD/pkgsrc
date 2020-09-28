@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5453 2020/09/28 14:12:48 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5454 2020/09/28 19:23:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8135,3 +8135,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libheif to 1.9.1 [ryoon 2020-09-28]
 	Updated mail/thunderbird to 78.3.1 [ryoon 2020-09-28]
 	Updated mail/thunderbird-l10n to 78.3.1 [ryoon 2020-09-28]
+	Updated net/wireshark to 3.2.7 [adam 2020-09-28]
+	Updated misc/stellarium to 0.20.3 [adam 2020-09-28]
