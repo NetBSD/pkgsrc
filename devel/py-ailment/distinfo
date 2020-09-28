@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/08/18 20:24:57 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2020/09/28 22:56:38 khorben Exp $
 
-SHA1 (ailment-8.20.7.27.tar.gz) = 631f653a154c1718e27b7a5bc077bab3007f399b
-RMD160 (ailment-8.20.7.27.tar.gz) = a5662156984e8a918538eaff7a3d2388f0b0ad09
-SHA512 (ailment-8.20.7.27.tar.gz) = 0692602a55b7146bbb68b455e07b9e9c12c4f8fbe7dc03cc1833e0353e05ee2de8c4409e7f3b1f48035788d43a44d3ac69664440f9cc21847d00f79d75c80d9f
-Size (ailment-8.20.7.27.tar.gz) = 13972 bytes
+SHA1 (ailment-9.0.4378.tar.gz) = cca278c5eeb479d093373e400649a672cc027ac9
+RMD160 (ailment-9.0.4378.tar.gz) = 196934245c0ec636256b4adc876fccf8cf75b43c
+SHA512 (ailment-9.0.4378.tar.gz) = ee33d9737aedabc727fc41e164777e6f66b2c22926158080028e92c99dd61d3920c608cdb098c2ec11afe8eb1d153938139f59ee43c21069d5a834c32aaa5de5
+Size (ailment-9.0.4378.tar.gz) = 9223 bytes
