@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5443 2020/09/28 09:07:49 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5444 2020/09/28 09:17:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8125,3 +8125,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cmake to 3.18.3 [adam 2020-09-28]
 	Updated x11/xterm to 360 [pin 2020-09-28]
 	Added sysutils/fff version 2.2 [pin 2020-09-28]
+	Updated www/webkit-gtk to 2.30.1 [leot 2020-09-28]
