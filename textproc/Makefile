@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1171 2020/09/11 00:48:57 js Exp $
+# $NetBSD: Makefile,v 1.1172 2020/09/28 23:56:19 khorben Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -828,6 +828,7 @@ SUBDIR+=	py-antlr4
 SUBDIR+=	py-anyjson
 SUBDIR+=	py-babelfish
 SUBDIR+=	py-biplist
+SUBDIR+=	py-black
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-cjson
