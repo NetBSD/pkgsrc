@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5459 2020/09/28 23:40:58 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5460 2020/09/28 23:47:42 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8143,3 +8143,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-angr to 9.0.4378 [khorben 2020-09-28]
 	Added devel/py-bumpversion version 0.5.3 [khorben 2020-09-28]
 	Added finance/py-eth-hash version 0.2.0 [khorben 2020-09-28]
+	Added finance/py-eth-typing version 2.2.2 [khorben 2020-09-28]
