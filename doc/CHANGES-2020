@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5441 2020/09/28 07:38:03 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5442 2020/09/28 09:00:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8123,3 +8123,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/gnucash to 4.2 [wiz 2020-09-27]
 	Updated devel/bison to 3.7.2 [adam 2020-09-28]
 	Updated devel/cmake to 3.18.3 [adam 2020-09-28]
+	Updated x11/xterm to 360 [pin 2020-09-28]
