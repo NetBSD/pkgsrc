@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/09/28 09:06:21 pin Exp $
+bin/fff
+man/man1/fff.1
+share/doc/fff/README.md
