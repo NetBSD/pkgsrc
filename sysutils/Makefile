@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.900 2020/09/10 11:26:01 nia Exp $
+# $NetBSD: Makefile,v 1.901 2020/09/28 09:07:18 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -186,6 +186,7 @@ SUBDIR+=	fastfs
 SUBDIR+=	fatback
 SUBDIR+=	fdtools
 SUBDIR+=	fdupes
+SUBDIR+=	fff
 SUBDIR+=	file
 SUBDIR+=	filelight
 SUBDIR+=	findnewest
