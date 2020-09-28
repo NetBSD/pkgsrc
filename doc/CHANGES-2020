@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5454 2020/09/28 19:23:54 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5455 2020/09/28 19:32:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8137,3 +8137,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird-l10n to 78.3.1 [ryoon 2020-09-28]
 	Updated net/wireshark to 3.2.7 [adam 2020-09-28]
 	Updated misc/stellarium to 0.20.3 [adam 2020-09-28]
+	Updated lang/python38 to 3.8.6 [adam 2020-09-28]
+	Updated lang/py38-html-docs to 3.8.6 [adam 2020-09-28]
