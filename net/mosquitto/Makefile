@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/08/19 23:33:38 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2020/09/28 18:56:03 tm Exp $
 
 VERSION=	1.6.12
+PKGREVISION=	1
 DISTNAME=	mosquitto-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
