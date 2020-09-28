@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/18 20:24:57 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/28 22:56:38 khorben Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,18 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ailment/__init__.py
 ${PYSITELIB}/ailment/__init__.pyc
 ${PYSITELIB}/ailment/__init__.pyo
-${PYSITELIB}/ailment/analyses/__init__.py
-${PYSITELIB}/ailment/analyses/__init__.pyc
-${PYSITELIB}/ailment/analyses/__init__.pyo
-${PYSITELIB}/ailment/analyses/block_simplifier.py
-${PYSITELIB}/ailment/analyses/block_simplifier.pyc
-${PYSITELIB}/ailment/analyses/block_simplifier.pyo
-${PYSITELIB}/ailment/analyses/callsite_maker.py
-${PYSITELIB}/ailment/analyses/callsite_maker.pyc
-${PYSITELIB}/ailment/analyses/callsite_maker.pyo
-${PYSITELIB}/ailment/analyses/simplifier.py
-${PYSITELIB}/ailment/analyses/simplifier.pyc
-${PYSITELIB}/ailment/analyses/simplifier.pyo
 ${PYSITELIB}/ailment/block.py
 ${PYSITELIB}/ailment/block.pyc
 ${PYSITELIB}/ailment/block.pyo

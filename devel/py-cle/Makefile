@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/08/18 20:24:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2020/09/28 22:56:38 khorben Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_PROJECT=	cle
-GITHUB_TAG=	103190d3899dc1b7e784edab23d0276245925b7d
+GITHUB_TAG=	v${ANGR_VERSION}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/angr/cle/
