@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/05/09 11:08:25 leot Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/09/28 10:54:27 leot Exp $
 bin/msmtp
 bin/msmtpd
 info/msmtp.info
@@ -6,6 +6,7 @@ man/man1/msmtp.1
 man/man1/msmtpd.1
 share/examples/msmtp/msmtprc-user.example
 share/locale/de/LC_MESSAGES/msmtp.mo
+share/locale/eo/LC_MESSAGES/msmtp.mo
 share/locale/fr/LC_MESSAGES/msmtp.mo
 share/locale/pt_BR/LC_MESSAGES/msmtp.mo
 share/locale/sr/LC_MESSAGES/msmtp.mo
