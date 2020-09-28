@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/08/18 20:24:57 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/28 22:56:38 khorben Exp $
 
 .include "version.mk"
 
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_PROJECT=	angr
-GITHUB_TAG=	bd3edf575855a4e0316e8717b5297021de879b37
+GITHUB_TAG=	v${ANGR_VERSION}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/angr/angr/
