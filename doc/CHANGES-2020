@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5444 2020/09/28 09:17:46 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5445 2020/09/28 09:21:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8126,3 +8126,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xterm to 360 [pin 2020-09-28]
 	Added sysutils/fff version 2.2 [pin 2020-09-28]
 	Updated www/webkit-gtk to 2.30.1 [leot 2020-09-28]
+	Updated security/amass to 3.10.4 [leot 2020-09-28]
