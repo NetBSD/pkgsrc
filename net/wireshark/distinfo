@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.133 2020/09/15 10:19:20 wiz Exp $
+$NetBSD: distinfo,v 1.134 2020/09/28 19:22:03 adam Exp $
 
-SHA1 (wireshark-3.2.6.tar.xz) = e8f3e6cb9072670c8bdbbff7e5fe3ccd5203d35e
-RMD160 (wireshark-3.2.6.tar.xz) = 09dcd3a088aa339e18871b053c9c8d8414b25a6a
-SHA512 (wireshark-3.2.6.tar.xz) = 71905836370b916a92e7a76e4f93cb10a658374c7a95aa47b607b2b142abebdb0d1562f642782a5a946a167dfb28169572330a7603cf0d7ab6016ce7f12fac78
-Size (wireshark-3.2.6.tar.xz) = 31635628 bytes
+SHA1 (wireshark-3.2.7.tar.xz) = b564c2e729066cb7c952463fef6163e23a5fea1e
+RMD160 (wireshark-3.2.7.tar.xz) = 81787ab8814cba0452da9cb45fcfd988da5ec587
+SHA512 (wireshark-3.2.7.tar.xz) = c17913fe6c193ccc6b0dbf86932d625a1f3b670aef805296e5db2639118218e06d513910ad50ab3926204f94a0010425b0d498176f987516d64fdd6a52d2517b
+Size (wireshark-3.2.7.tar.xz) = 31659996 bytes
 SHA1 (patch-CMakeLists.txt) = 8faf8f63d75d5733a69b52ce9fbf291bd90a5575
-SHA1 (patch-cmake_modules_FindLIBSSH.cmake) = fc8d508bd21290b1705a219056f9b2338ec15116
