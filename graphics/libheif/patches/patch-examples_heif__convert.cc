@@ -1,17 +1,15 @@
-$NetBSD: patch-examples_heif__convert.cc,v 1.1 2020/09/03 19:07:19 otis Exp $
+$NetBSD: patch-examples_heif__convert.cc,v 1.2 2020/09/28 13:38:13 ryoon Exp $
 
 Include alloca.h on SunOS
 
---- examples/heif_convert.cc.orig	2020-08-13 16:57:45.000000000 +0000
+--- examples/heif_convert.cc.orig	2020-09-23 14:02:39.000000000 +0000
 +++ examples/heif_convert.cc
-@@ -35,6 +35,10 @@
- 
+@@ -27,7 +27,7 @@
+ #include "config.h"
  #endif
  
-+#if defined(sun) || defined(__sun)
-+#include <alloca.h>
-+#endif
-+
- #include <fstream>
- #include <iostream>
- #include <sstream>
+-#if defined(_MSC_VER) || defined(__MINGW32__)
++#if defined(_MSC_VER) || defined(__MINGW32__) || defined(__NetBSD__)
+ # include <malloc.h>
+ #else
+ # include <alloca.h>
