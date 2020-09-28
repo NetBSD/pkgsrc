@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.103 2020/08/26 10:28:39 wiz Exp $
+$NetBSD: distinfo,v 1.104 2020/09/28 01:08:15 khorben Exp $
 
 SHA1 (xorg-server-1.20.9.tar.bz2) = 4b70ac63fa864f0569712d634a61496d015c3b86
 RMD160 (xorg-server-1.20.9.tar.bz2) = 33a2370d1d9ce68774d0ac6fa803f2a4ce19b698
 SHA512 (xorg-server-1.20.9.tar.bz2) = d9b5f93e1b9763a89187d8b272aa7d4ce9709641b8539f4536708af153310e5a4931bffd4229c51a3b0e3b12da7838750aa71b635751fb4c0bb27438cce4e5e6
 Size (xorg-server-1.20.9.tar.bz2) = 6302902 bytes
 SHA1 (patch-configure) = ce2c732c3d8493445744a927a25b9cd3b45880f8
+SHA1 (patch-hw_kdrive_ephyr_hostx.c) = b681ee28bc7af06774f10bc882d355d42ac965d3
 SHA1 (patch-hw_xfree86_common_xf86AutoConfig.c) = 70adf85be9fc6222a335686e7e9e9f385aca02f9
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
 SHA1 (patch-hw_xfree86_dri2_dri2.c) = 0bf58305059321e10f6f58186301dbb7cb858c2a
