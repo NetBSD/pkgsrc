@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/08/26 14:11:03 micha Exp $
+# $NetBSD: Makefile,v 1.15 2020/09/28 10:39:31 micha Exp $
 
 DISTNAME=	schily-2020-08-12
 PKGNAME=	bosh-20200812
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-TOOL_DEPENDS+=	smake-[0-9]*:../../devel/smake
+TOOL_DEPENDS+=	smake>=1.3nb11:../../devel/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
 # Honor CPPFLAGS, CFLAGS and LDFLAGS
