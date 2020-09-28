@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/08/18 20:24:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2020/09/28 22:56:38 khorben Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_PROJECT=	claripy
-GITHUB_TAG=	8a25e094d0752881d8c771b3f8f017837680c115
+GITHUB_TAG=	v${ANGR_VERSION}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/angr/claripy/
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-cachetools>=0:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-decorator>=0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-future>=0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-smt>=0:../../math/py-smt
-DEPENDS+=	${PYPKGPREFIX}-z3>=0:../../math/py-z3
+DEPENDS+=	${PYPKGPREFIX}-z3solver>=0:../../math/py-z3solver
 
 do-test:
 	${RUN} cd ${WRKSRC}/tests && \
