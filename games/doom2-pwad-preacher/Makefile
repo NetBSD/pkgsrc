@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/30 16:06:41 micha Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/28 11:06:19 micha Exp $
 
 DISTNAME=		preacher
 # Use release date from preacher.txt as package version
@@ -10,7 +10,7 @@ MASTER_SITES+=		ftp://mirrors.syringanetworks.net/idgames/levels/doom2/Ports/p-r
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		micha@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Doom II mod
 LICENSE=		doom-pwad-license
 
