@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/08/18 20:24:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/28 22:56:38 khorben Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_PROJECT=	pyvex
-GITHUB_TAG=	63c707cd7c20bd6310566cc5b27af92523a910a5
+GITHUB_TAG=	v${ANGR_VERSION}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/angr/pyvex/
