@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/09/29 01:01:20 scole Exp $
+# $NetBSD: Makefile,v 1.12 2020/09/29 17:56:56 scole Exp $
 
-PKGNAME=	split-thai-1.0
+PKGNAME=	split-thai-1.1
 CATEGORIES=	textproc
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utilities to split UTF-8 Thai text into words
