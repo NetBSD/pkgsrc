@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2020/09/29 02:50:51 khorben Exp $
+#
+# used by devel/deepstate/Makefile
+# used by devel/deepstate-afl/Makefile
+# used by devel/deepstate-honggfuzz/Makefile
+# used by devel/py-deepstate/Makefile
+
+VERSION=	0.1
+DISTNAME=	deepstate-${VERSION}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=trailofbits/}
+GITHUB_PROJECT=	deepstate
+GITHUB_TAG=	61ae1ed422194bd879e50ee5b2bce93537310473
+
+MAINTAINER=	khorben@defora.org
+HOMEPAGE=	https://github.com/trailofbits/deepstate/
+COMMENT=	Augments C/C++ Test-Driven Development with Symbolic Execution
+LICENSE=	apache-2.0
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/deepstate/distinfo
