@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5502 2020/09/29 22:49:57 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5503 2020/09/29 22:58:47 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8199,3 +8199,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-beautifulsoup4 to 4.9.2 [adam 2020-09-29]
 	Updated chat/py-hangups to 0.4.12 [leot 2020-09-29]
 	Updated net/py-rpyc to 3.4.2 [khorben 2020-09-29]
+	Updated net/py-rpyc to 3.4.4 [khorben 2020-09-29]
