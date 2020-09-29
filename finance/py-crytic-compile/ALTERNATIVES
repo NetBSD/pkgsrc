@@ -1,0 +1,1 @@
+bin/crytic-compile @PREFIX@/bin/crytic-compile-@PYVERSSUFFIX@
