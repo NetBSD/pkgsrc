@@ -1,0 +1,16 @@
+Library to help smart contract compilation. It includes support for:
+- Direct solc compilation
+- Truffle
+- Embark
+- Dapp
+- Etherlime
+- Etherscan
+- Brownie
+- Waffle
+- Buidler
+
+The plugin is used in Crytic tools, including:
+- Slither
+- Echidna
+- Manticore
+- evm-cfg-builder
