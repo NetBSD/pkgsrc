@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5498 2020/09/29 17:04:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5499 2020/09/29 17:59:13 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8192,3 +8192,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-zeroconf to 0.28.5 [adam 2020-09-29]
 	Updated archivers/py-zipp to 3.2.0 [adam 2020-09-29]
 	Updated devel/py-urwid to 2.1.2 [adam 2020-09-29]
+	Updated textproc/split-thai to 1.1 [scole 2020-09-29]
