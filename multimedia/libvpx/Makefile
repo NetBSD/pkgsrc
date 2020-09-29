@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2020/08/31 18:10:29 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2020/09/29 13:03:13 adam Exp $
 
 DISTNAME=	libvpx-1.9.0
 PKGREVISION=	1
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	--target=x86-darwin9-gcc
 CONFIGURE_ARGS+=	--target=x86-darwin8-gcc
 .    endif
 .  elif ${MACHINE_ARCH} == "x86_64"
-.    if !empty(OS_VERSION:M1[8-9].*)
+.    if !empty(OS_VERSION:M1[8-9].*) || !empty(OS_VERSION:M2[0-9].*)
 CONFIGURE_ARGS+=	--target=x86_64-darwin17-gcc
 .    elif !empty(OS_VERSION:M1[0-7].*)
 CONFIGURE_ARGS+=	--target=x86_64-darwin${OS_VERSION:C/\.[0-9]*//g}-gcc
