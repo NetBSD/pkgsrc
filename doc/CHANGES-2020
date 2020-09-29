@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5475 2020/09/29 02:41:59 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5476 2020/09/29 02:51:08 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8159,3 +8159,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/py-rpyc version 3.3.0 [khorben 2020-09-29]
 	Added devel/py-cooldict version 1.4 [khorben 2020-09-29]
 	Updated net/py-dpkt to 1.9.4 [khorben 2020-09-29]
+	Added devel/deepstate version 0.1 [khorben 2020-09-29]
