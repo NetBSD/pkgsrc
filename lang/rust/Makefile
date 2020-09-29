@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2020/09/29 16:24:28 gdt Exp $
+# $NetBSD: Makefile,v 1.197 2020/09/29 16:45:16 gdt Exp $
 
 DISTNAME=	rustc-1.45.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -132,14 +132,6 @@ MAKE_JOBS_SAFE=	no
 #
 # NetBSD 8.1 earmv7hf: unknown configure option
 #   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54621
-#
-# NetBSD 9 i386: bootstrap fails with missing libcurl.so.4
-#   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=55368
-
-# Stale PRs (a reason to believe they no longer apply)
-#
-# NetBSD 8.1 sparc64: bootstrap fails with libssl.so.14 missing
-#   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54622
 
 .endif
 
