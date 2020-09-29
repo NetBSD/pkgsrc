@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2019/12/31 13:05:10 triaxx Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/29 18:43:47 adam Exp $
 
-DISTNAME=	python-digitalocean-1.14.0
-PKGREVISION=	1
+DISTNAME=	python-digitalocean-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	net python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=koalalorenzo/}
-GITHUB_PROJECT=	${DISTNAME:C/-[^-]*$//}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-digitalocean/}
 
 MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://github.com/koalalorenzo/python-digitalocean
