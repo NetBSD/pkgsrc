@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/09/29 02:29:07 khorben Exp $
+
+SHA1 (rpyc-3.3.0.tar.gz) = 0241d44da9a6c7b6d9ed2773e632bb160723e9aa
+RMD160 (rpyc-3.3.0.tar.gz) = 863bdc7e995183fecf3eab21e9cdee07e4c1c1b8
+SHA512 (rpyc-3.3.0.tar.gz) = c586ab79d2ab3a8e14128c7ac5ae49a3311de0723453f801edb805819b06037ae015825fda32ac7620d99fdeceacbcbc5d1b4fadc3c7b2ac778e883ba9406793
+Size (rpyc-3.3.0.tar.gz) = 53541 bytes
