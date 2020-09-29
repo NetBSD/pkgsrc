@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5480 2020/09/29 03:12:59 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5481 2020/09/29 06:05:22 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8164,3 +8164,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/deepstate-libfuzzer version 0.1 [khorben 2020-09-29]
 	Added devel/deepstate-honggfuzz version 0.1 [khorben 2020-09-29]
 	Added devel/py-deepstate version 0.1 [khorben 2020-09-29]
+	Updated graphics/libheif to 1.9.1nb1 [triaxx 2020-09-29]
