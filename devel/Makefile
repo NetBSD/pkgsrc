@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3256 2020/09/29 00:03:25 khorben Exp $
+# $NetBSD: Makefile,v 1.3257 2020/09/29 00:19:45 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2531,6 +2531,7 @@ SUBDIR+=	py-requests-toolbelt
 SUBDIR+=	py-requests-unixsocket
 SUBDIR+=	py-restructuredtext_lint
 SUBDIR+=	py-retry_decorator
+SUBDIR+=	py-rlp
 SUBDIR+=	py-rope
 SUBDIR+=	py-rply
 SUBDIR+=	py-ruamel-base
