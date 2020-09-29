@@ -1,0 +1,8 @@
+Python module capable of decoding and disassembling WebAssembly modules
+and bytecode, according to the MVP specification of the WASM binary
+format.
+
+As there is no official text format defined yet, the text format
+implemented doesn't correspond to any existing definition and is a
+simple `mnemonic op1, op2, ...` format. Functions are formatted in a
+way similar to how Google Chrome does in the debug console.
