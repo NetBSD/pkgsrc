@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5500 2020/09/29 18:48:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5501 2020/09/29 21:43:10 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8197,3 +8197,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-digitalocean to 1.15.0 [adam 2020-09-29]
 	Updated finance/py-stripe to 2.53.0 [adam 2020-09-29]
 	Updated www/py-beautifulsoup4 to 4.9.2 [adam 2020-09-29]
+	Updated chat/py-hangups to 0.4.12 [leot 2020-09-29]
