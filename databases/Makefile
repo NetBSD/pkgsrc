@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2020/09/10 16:55:19 taca Exp $
+# $NetBSD: Makefile,v 1.615 2020/09/29 02:14:20 khorben Exp $
 
 COMMENT=	Databases
 
@@ -338,6 +338,7 @@ SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-aiosqlite
 SUBDIR+=	py-alembic
+SUBDIR+=	py-ana
 SUBDIR+=	py-apsw
 SUBDIR+=	py-asyncpg
 SUBDIR+=	py-barman
