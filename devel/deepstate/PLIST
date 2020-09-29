@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/29 02:50:51 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/29 03:01:16 khorben Exp $
+bin/futurize
+bin/pasteurize
 include/deepstate/Compiler.h
 include/deepstate/DeepState.h
 include/deepstate/DeepState.hpp
