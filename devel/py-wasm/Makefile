@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/29 19:28:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/29 20:02:09 jperkin Exp $
 
 DISTNAME=	wasm-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,9 +12,9 @@ HOMEPAGE=	https://github.com/athre0z/wasm
 COMMENT=	WebAssembly decoder & disassembler
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-
 USE_LANGUAGES=	c++
+
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/wasmdump \
@@ -22,4 +22,5 @@ post-install:
 
 # TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
