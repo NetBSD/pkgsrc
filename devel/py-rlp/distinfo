@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/09/29 00:18:53 khorben Exp $
+
+SHA1 (pyrlp-1.2.0.tar.gz) = bebc1163631e21b30b529c0058838b741fca5047
+RMD160 (pyrlp-1.2.0.tar.gz) = 50abca33a77eedb2d7095fef6ab67de66b0485a9
+SHA512 (pyrlp-1.2.0.tar.gz) = 19fe6ce84ad43111f74807f6d4dfdde6dfe58eec0a36cce111083cd03ae2766494a66d3b211cd3593783b5f03bf7471961ae346beb8bdd917539b83fff435abe
+Size (pyrlp-1.2.0.tar.gz) = 38972 bytes

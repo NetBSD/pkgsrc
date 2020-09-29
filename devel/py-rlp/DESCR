@@ -1,0 +1,3 @@
+A Python implementation of Recursive Length Prefix encoding (RLP). You can find
+the specification of the standard in the Ethereum wiki and the documentation of
+this package on readthedocs.
