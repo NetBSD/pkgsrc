@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/09/29 00:05:36 khorben Exp $
+
+SHA1 (eth-utils-1.9.5.tar.gz) = e0a6fee26224767595eada8e0dd42ef371c994c5
+RMD160 (eth-utils-1.9.5.tar.gz) = 73480adf2a6db088b2683216d87eb9159a3f2bf3
+SHA512 (eth-utils-1.9.5.tar.gz) = 531e76122befe3d22e749c6c31012777fb7a31e201c4623b1f864f4728745d90623b91af28511a1f7caa9938d4d69536516e9cc8dfda08fb23a2b70beab1318d
+Size (eth-utils-1.9.5.tar.gz) = 51064 bytes
