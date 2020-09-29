@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5463 2020/09/29 00:05:48 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5464 2020/09/29 00:19:05 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8147,3 +8147,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/py-black version 20.8b1 [khorben 2020-09-28]
 	Added devel/py-cytoolz version 0.10.1 [khorben 2020-09-29]
 	Added finance/py-eth-utils version 1.9.5 [khorben 2020-09-29]
+	Added devel/py-rlp version 1.2.0 [khorben 2020-09-29]
