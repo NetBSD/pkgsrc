@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/09/18 13:11:58 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/09/29 09:54:38 adam Exp $
 
-SHA1 (tortoise-orm-0.16.15.tar.gz) = 0ecbb6879f23f0d00c923b8b2214eba5e5af8531
-RMD160 (tortoise-orm-0.16.15.tar.gz) = 9880241449c9538dfd6f7efa12dc1237b41749ae
-SHA512 (tortoise-orm-0.16.15.tar.gz) = 32b1eef7a575210f682704ffffb55c0be4b9f70fb04be8b24f53be571254d86d03f07d1f663d2b60dad5a9cc23fbefbe865373beb094ca2e532b9b4c124a3669
-Size (tortoise-orm-0.16.15.tar.gz) = 91162 bytes
+SHA1 (tortoise-orm-0.16.16.tar.gz) = 79e83a2e6fdfa0c09ede01a9a1bf4dd8f9fb55d5
+RMD160 (tortoise-orm-0.16.16.tar.gz) = 26ab03b119e7299a13b8e205205ec9ae6199ca8d
+SHA512 (tortoise-orm-0.16.16.tar.gz) = a1f63956023d07beaedc0055a7941208dd2324a3568fa9dfc3fa67a78636b5f36352d961fc3d15bd5379efe552124d644fadfaf8b74878dea8905b0b2fa0f392
+Size (tortoise-orm-0.16.16.tar.gz) = 93710 bytes
