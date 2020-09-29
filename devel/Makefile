@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3261 2020/09/29 02:32:58 khorben Exp $
+# $NetBSD: Makefile,v 1.3262 2020/09/29 02:51:42 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -258,6 +258,7 @@ SUBDIR+=	dconf
 SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
 SUBDIR+=	debugcon_printf
+SUBDIR+=	deepstate
 SUBDIR+=	deforaos-asm
 SUBDIR+=	deforaos-coder
 SUBDIR+=	deforaos-configure
