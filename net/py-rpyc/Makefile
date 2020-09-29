@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/09/29 02:29:07 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/29 22:49:46 khorben Exp $
 
-DISTNAME=	rpyc-3.3.0
+DISTNAME=	rpyc-3.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpyc/}
