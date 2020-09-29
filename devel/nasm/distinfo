@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2020/08/08 18:35:10 nia Exp $
+$NetBSD: distinfo,v 1.34 2020/09/29 14:08:36 adam Exp $
 
-SHA1 (nasm-2.15.03.tar.xz) = 7cb89bb12f80eb016038da9716e814987ef57d00
-RMD160 (nasm-2.15.03.tar.xz) = 7a36dac68c7eb6cb0baafe84dd7a4565ae172e3b
-SHA512 (nasm-2.15.03.tar.xz) = be98e8e0a3b5f5296bc941a7bbcbf44c4084c65d11aed60d17a803b9647d59bd14ec06e780ac22c4bbe8869625eb8e6139d18a88e25310edfce0fe0fc0172950
-Size (nasm-2.15.03.tar.xz) = 984060 bytes
+SHA1 (nasm-2.15.05.tar.xz) = d338409a03fc6d1508102881a675a00275fcb879
+RMD160 (nasm-2.15.05.tar.xz) = a69cec7112525a27a39247e75626654f58759627
+SHA512 (nasm-2.15.05.tar.xz) = 512f90a2584f1c5811429274b97c64a2cedf37b9fdeffb1bcd0ea64afd9ecc19a2d7877ca8f1e05393aa324153fc9f39ea51dacbf8d25a7d5a2d7728c925dba7
+Size (nasm-2.15.05.tar.xz) = 995732 bytes
 SHA1 (patch-Makefile.in) = 30f8292c622e86e870427be0ca530ccb8dc3feaa
 SHA1 (patch-doc_Makefile.in) = 0baf4cb8ce01403fbe93b3168d7bc00472cbcb61
