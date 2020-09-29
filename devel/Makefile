@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3255 2020/09/28 23:16:15 khorben Exp $
+# $NetBSD: Makefile,v 1.3256 2020/09/29 00:03:25 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2222,6 +2222,7 @@ SUBDIR+=	py-cursespanel
 SUBDIR+=	py-curtsies
 SUBDIR+=	py-cyordereddict
 SUBDIR+=	py-cython
+SUBDIR+=	py-cytoolz
 SUBDIR+=	py-d2to1
 SUBDIR+=	py-daemon
 SUBDIR+=	py-daemonize
