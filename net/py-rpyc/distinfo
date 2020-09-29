@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/09/29 22:58:36 khorben Exp $
+$NetBSD: distinfo,v 1.4 2020/09/29 23:11:52 khorben Exp $
 
-SHA1 (rpyc-3.4.4.tar.gz) = 0f219fcd058eee7b39526f0a9b90b03d5b980048
-RMD160 (rpyc-3.4.4.tar.gz) = 021af77b7ff7a15279d09c8f92f4a445cce76ef5
-SHA512 (rpyc-3.4.4.tar.gz) = 0a176b05df28d92e67cb45372b46260611c1bc89f997c5a6760a760dff8792d5bb93505fdeccbd25c5ae7b04cf7aeeb7fd8964d4f124b00e50fbd3d55d7ba7b1
-Size (rpyc-3.4.4.tar.gz) = 56199 bytes
+SHA1 (rpyc-4.0.2.tar.gz) = 291d7070dc7f784f46fd311fef6139e0824db833
+RMD160 (rpyc-4.0.2.tar.gz) = a00cd83db0403d93fff0a66825a03ff12ff508fb
+SHA512 (rpyc-4.0.2.tar.gz) = 91fd1e5a65bdb5a5d8c424bc0c8cb0688ae76ae644278855cd7c22f9af47d7a6da3a80f7383643c2161521633425b6a2486960aefbe2e02864f93d53568bca2d
+Size (rpyc-4.0.2.tar.gz) = 53877 bytes
