@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5468 2020/09/29 01:04:30 scole Exp $
+$NetBSD: CHANGES-2020,v 1.5469 2020/09/29 01:36:21 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8152,3 +8152,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added finance/py-pyevmasm version 0.2.3 [khorben 2020-09-29]
 	Updated devel/py-manticore to 0.3.4 [khorben 2020-09-29]
 	Updated textproc/split-thai to 1.0 [scole 2020-09-29]
+	Added devel/py-wasm version 1.2 [khorben 2020-09-29]
