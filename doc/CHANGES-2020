@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5492 2020/09/29 14:12:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5493 2020/09/29 14:30:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8182,3 +8182,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added emulators/pcsxr version 1.9.95.20190306 [nia 2020-09-29]
 	Updated devel/nasm to 2.15.05 [adam 2020-09-29]
 	Updated textproc/py-xmlschema to 1.2.5 [adam 2020-09-29]
+	Updated print/ghostscript-agpl to 9.53.2 [ryoon 2020-09-29]
