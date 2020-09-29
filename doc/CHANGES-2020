@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5471 2020/09/29 02:19:16 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5472 2020/09/29 02:27:56 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8155,3 +8155,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-wasm version 1.2 [khorben 2020-09-29]
 	Added databases/py-ana version 0.6 [khorben 2020-09-29]
 	Added devel/py-bintrees version 2.1.0 [khorben 2020-09-29]
+	Added devel/py-plumbum version 1.6.1.post0 [khorben 2020-09-29]
