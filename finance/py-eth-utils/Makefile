@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/29 00:05:36 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/29 19:37:33 jperkin Exp $
 
 DISTNAME=	eth-utils-1.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -33,6 +33,8 @@ DEPENDS+=	${PYPKGPREFIX}-toolz-[0-9]*:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-cytoolz-[0-9]*:../../devel/py-cytoolz
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-eth-typing
 
 # TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
 .include "../../lang/python/egg.mk"
