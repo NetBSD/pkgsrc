@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2020/06/14 13:46:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2020/09/29 08:55:54 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/cs/man6/wesnothd.6
@@ -27,6 +27,7 @@ man/pl/man6/wesnothd.6
 man/pt/man6/wesnothd.6
 man/pt_BR/man6/wesnoth.6
 man/pt_BR/man6/wesnothd.6
+man/ru/man6/wesnoth.6
 man/ru/man6/wesnothd.6
 man/sk/man6/wesnothd.6
 man/sr/man6/wesnothd.6
@@ -1871,6 +1872,7 @@ share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/_main.cfg
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/ai/ca_aggressive_attack_no_suicide.lua
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/ai/ca_retreat.lua
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/campaign_image.png
+share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/l10n/hu/green_isle--overlay.png
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/great_continent.png
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/green_isle.png
 share/wesnoth/data/campaigns/The_Rise_Of_Wesnoth/images/maps/l10n/de/green_isle--overlay.png
@@ -3149,6 +3151,9 @@ share/wesnoth/data/core/images/help/l10n/fr/tooltip.png
 share/wesnoth/data/core/images/help/l10n/gl/hpxp.png
 share/wesnoth/data/core/images/help/l10n/gl/recruit.png
 share/wesnoth/data/core/images/help/l10n/gl/tooltip.png
+share/wesnoth/data/core/images/help/l10n/hu/hpxp.png
+share/wesnoth/data/core/images/help/l10n/hu/recruit.png
+share/wesnoth/data/core/images/help/l10n/hu/tooltip.png
 share/wesnoth/data/core/images/help/l10n/it/hpxp.png
 share/wesnoth/data/core/images/help/l10n/it/recruit.png
 share/wesnoth/data/core/images/help/l10n/it/tooltip.png
@@ -3344,6 +3349,7 @@ share/wesnoth/data/core/images/maps/l10n/la/wesnoth--overlay.png
 share/wesnoth/data/core/images/maps/l10n/lt/titlescreen--overlay.png
 share/wesnoth/data/core/images/maps/l10n/pt/titlescreen--overlay.png
 share/wesnoth/data/core/images/maps/l10n/pt/wesnoth--overlay.png
+share/wesnoth/data/core/images/maps/l10n/ru/titlescreen--overlay.png
 share/wesnoth/data/core/images/maps/l10n/ru/wesnoth--overlay.png
 share/wesnoth/data/core/images/maps/l10n/sr/wesnoth--overlay.png
 share/wesnoth/data/core/images/maps/l10n/sr@ijekavian/wesnoth--overlay.png
@@ -14835,8 +14841,6 @@ share/wesnoth/fonts/Lato-Black.ttf
 share/wesnoth/fonts/Lato-BlackItalic.ttf
 share/wesnoth/fonts/Lato-Bold.ttf
 share/wesnoth/fonts/Lato-BoldItalic.ttf
-share/wesnoth/fonts/Lato-Hairline.ttf
-share/wesnoth/fonts/Lato-HairlineItalic.ttf
 share/wesnoth/fonts/Lato-Heavy.ttf
 share/wesnoth/fonts/Lato-HeavyItalic.ttf
 share/wesnoth/fonts/Lato-Italic.ttf
