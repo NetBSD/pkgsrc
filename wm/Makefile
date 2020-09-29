@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2020/07/23 19:55:19 pin Exp $
+# $NetBSD: Makefile,v 1.151 2020/09/29 12:22:35 nia Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -42,6 +42,7 @@ SUBDIR+=	fvwm
 SUBDIR+=	fvwm-devel
 SUBDIR+=	fvwm-themes
 SUBDIR+=	fvwm1
+SUBDIR+=	fvwm3
 SUBDIR+=	golem
 SUBDIR+=	herbstluftwm
 SUBDIR+=	i3
