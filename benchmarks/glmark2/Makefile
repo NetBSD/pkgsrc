@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 11:55:29 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/09/29 16:17:56 prlw1 Exp $
 
-DISTNAME=	glmark2-2017.07
-PKGREVISION=	1
+DISTNAME=	glmark2-2020.04
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glmark2/}
-GITHUB_TAG=	168d2f1650c84be3f13d1a5b76ccec8cbb89188e
+GITHUB_TAG=	c493520253fbfe3676c8b34b6f91a7c9a838fc8e
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://github.com/glmark2/glmark2
 COMMENT=	OpenGL 2.0 and ES 2.0 benchmark
 LICENSE=	gnu-gpl-v3 AND modified-bsd
 
-USE_LANGUAGES=	c c++11
-
-PYTHON_VERSIONS_ACCEPTED=	27
+USE_LANGUAGES=	c c++14
 
 USE_TOOLS+=	pkg-config
 
@@ -25,6 +22,9 @@ SUBST_MESSAGE.rmdl=	remove -ldl
 SUBST_FILES.rmdl=	src/wscript_build
 SUBST_SED.rmdl=		-e "s/, 'dl'//"
 .endif
+
+LDFLAGS+=	${PTHREAD_LDFLAGS}
+LIBS+=		${PTHREAD_LIBS}
 
 #./waf configure --with-flavors=<drm-gl,drm-glesv2,mir-gl,mir-glesv2,wayland-gl,wayland-glesv2,x11-gl,x11-glesv2> [--data-path=DATA_PATH --prefix=PREFIX]
 # drm-gl requires libdrm and "gbm"
@@ -45,6 +45,7 @@ do-install:
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
