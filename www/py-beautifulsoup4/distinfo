@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/05/27 13:00:40 adam Exp $
+$NetBSD: distinfo,v 1.16 2020/09/29 18:47:29 adam Exp $
 
-SHA1 (beautifulsoup4-4.9.1.tar.gz) = 72ff373be412536b091471d5e8fa7720f7135985
-RMD160 (beautifulsoup4-4.9.1.tar.gz) = b72ed53263f07c843ce34513a9d62128051e2fc3
-SHA512 (beautifulsoup4-4.9.1.tar.gz) = a1fe9cbfe8616d2ff25cc836769ff02d51ed86b06ca9a37366867b145440b7f64b866346600ed74820f0407c8e70eaac3d58700766a99b5ff7433cb736a57b3c
-Size (beautifulsoup4-4.9.1.tar.gz) = 374759 bytes
+SHA1 (beautifulsoup4-4.9.2.tar.gz) = 021f08e3e51383c93a3cde3d238ab68f3d002ba9
+RMD160 (beautifulsoup4-4.9.2.tar.gz) = 3e2a74e057819961513a3547b0b3092f0874bace
+SHA512 (beautifulsoup4-4.9.2.tar.gz) = 3bac5d57404e0be1e77a1bd560750e831c8636fc5f9b3c05b375c0cf44d6846ed73127a2a7d1d8ca657c21ec33854b8194f76b62820fb627d80a5906229a7454
+Size (beautifulsoup4-4.9.2.tar.gz) = 375880 bytes
