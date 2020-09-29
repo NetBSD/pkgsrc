@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/09/29 00:02:32 khorben Exp $
+
+SHA1 (cytoolz-0.10.1.tar.gz) = ff59cc6d99e8840867a7fb46351f1b5c5c60dc67
+RMD160 (cytoolz-0.10.1.tar.gz) = 1093edea2b7306f75f46d7ce04268320ed9fa09c
+SHA512 (cytoolz-0.10.1.tar.gz) = 55c4fca8d4ace766a8241a25a6c4924971b7e7068ee79ad65fa8aac136aa1f88e57337c0ec278ee9e8544c6e96dd31138b39d7cc28cd91ff0e53a71f8dec55d1
+Size (cytoolz-0.10.1.tar.gz) = 475647 bytes
