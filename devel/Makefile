@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3259 2020/09/29 02:19:43 khorben Exp $
+# $NetBSD: Makefile,v 1.3260 2020/09/29 02:28:09 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2402,6 +2402,7 @@ SUBDIR+=	py-pip
 SUBDIR+=	py-pkgconfig
 SUBDIR+=	py-pkginfo
 SUBDIR+=	py-pluggy
+SUBDIR+=	py-plumbum
 SUBDIR+=	py-ply
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
