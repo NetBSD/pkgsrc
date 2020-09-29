@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5481 2020/09/29 06:05:22 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.5482 2020/09/29 08:56:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8165,3 +8165,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/deepstate-honggfuzz version 0.1 [khorben 2020-09-29]
 	Added devel/py-deepstate version 0.1 [khorben 2020-09-29]
 	Updated graphics/libheif to 1.9.1nb1 [triaxx 2020-09-29]
+	Updated games/scummvm to 2.2.0 [adam 2020-09-29]
+	Updated games/wesnoth to 1.14.14 [adam 2020-09-29]
