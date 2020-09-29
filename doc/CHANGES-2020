@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5461 2020/09/28 23:55:55 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5462 2020/09/29 00:02:43 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8145,3 +8145,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added finance/py-eth-hash version 0.2.0 [khorben 2020-09-28]
 	Added finance/py-eth-typing version 2.2.2 [khorben 2020-09-28]
 	Added textproc/py-black version 20.8b1 [khorben 2020-09-28]
+	Added devel/py-cytoolz version 0.10.1 [khorben 2020-09-29]
