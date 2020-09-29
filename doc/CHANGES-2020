@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5496 2020/09/29 16:18:28 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.5497 2020/09/29 16:50:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8186,3 +8186,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.35 [fox 2020-09-29]
 	Updated security/openssh to 8.4.1 [ryoon 2020-09-29]
 	Updated benchmarks/glmark2 to 2020.04 [prlw1 2020-09-29]
+	Updated textproc/jsoncpp to 1.9.4 [adam 2020-09-29]
+	Updated graphics/jasper to 2.0.21 [adam 2020-09-29]
