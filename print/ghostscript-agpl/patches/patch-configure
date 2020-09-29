@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.6 2020/09/13 14:16:31 leot Exp $
+$NetBSD: patch-configure,v 1.7 2020/09/29 14:29:42 ryoon Exp $
 
 Use system zlib for linking.
 Add rpath.
 Get all LDFLAGS for FreeType2.
 Use correct install_name with path on Darwin.
 
---- configure.orig	2020-09-10 15:37:32.000000000 +0000
+--- configure.orig	2020-09-25 12:33:30.000000000 +0000
 +++ configure
-@@ -4027,7 +4027,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
+@@ -4028,7 +4028,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
  CFLAGSAUX_DEBUGTMP="\$(CFLAGS_DEBUG)"
  CFLAGSAUX_PROFILETMP="\$(CFLAGS_PROFILE)"
  LDFLAGSAUXTMP="\$(LDFLAGS)"
@@ -16,7 +16,7 @@ Use correct install_name with path on Darwin.
  
  # purposefully do not include "help" output for this
  # Check whether --enable-save_confaux was given.
-@@ -4659,9 +4659,7 @@ case $host in
+@@ -4660,9 +4660,7 @@ case $host in
          CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
          CFLAGS_LARGEFILE="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
          # the trailing space is required!
@@ -27,7 +27,7 @@ Use correct install_name with path on Darwin.
          if test $GCC = yes; then
              CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
              CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
-@@ -7692,7 +7690,7 @@ fi
+@@ -7693,7 +7691,7 @@ fi
  fi
  
  if test x$with_libpaper != xno; then
@@ -36,16 +36,7 @@ Use correct install_name with path on Darwin.
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
-@@ -7994,7 +7992,7 @@ $as_echo_n "checking for system freetype
-                 { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
- $as_echo "yes" >&6; }
-                 FT_CFLAGS="$CFLAGS `$PKGCONFIG --cflags freetype2`"
--                FT_LIBS="`$PKGCONFIG --libs-only-l freetype2`"
-+                FT_LIBS="`$PKGCONFIG --libs freetype2`"
-                 FT_BRIDGE=1
-                 SHARE_FT=1
-             else
-@@ -11608,10 +11606,10 @@ case $host in
+@@ -11620,10 +11618,10 @@ case $host in
      ;;
      *-darwin*)
        DYNAMIC_CFLAGS="-fPIC $DYNAMIC_CFLAGS"
@@ -60,7 +51,7 @@ Use correct install_name with path on Darwin.
        DYNAMIC_LIBS=""
        SO_LIB_EXT=".dylib"
      ;;
-@@ -11627,10 +11625,10 @@ case $host in
+@@ -11639,10 +11637,10 @@ case $host in
          #fi
          # ^^^ untested
        fi
