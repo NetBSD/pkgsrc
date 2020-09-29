@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5478 2020/09/29 03:04:07 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5479 2020/09/29 03:06:25 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8162,3 +8162,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/deepstate version 0.1 [khorben 2020-09-29]
 	Added devel/deepstate-afl version 0.1 [khorben 2020-09-29]
 	Added devel/deepstate-libfuzzer version 0.1 [khorben 2020-09-29]
+	Added devel/deepstate-honggfuzz version 0.1 [khorben 2020-09-29]
