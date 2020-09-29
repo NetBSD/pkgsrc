@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/20 12:39:14 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.4 2020/09/29 02:40:24 khorben Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/dpkt/__init__.py
 ${PYSITELIB}/dpkt/__init__.pyc
 ${PYSITELIB}/dpkt/__init__.pyo
@@ -9,6 +13,15 @@ ${PYSITELIB}/dpkt/ah.pyo
 ${PYSITELIB}/dpkt/aim.py
 ${PYSITELIB}/dpkt/aim.pyc
 ${PYSITELIB}/dpkt/aim.pyo
+${PYSITELIB}/dpkt/aoe.py
+${PYSITELIB}/dpkt/aoe.pyc
+${PYSITELIB}/dpkt/aoe.pyo
+${PYSITELIB}/dpkt/aoeata.py
+${PYSITELIB}/dpkt/aoeata.pyc
+${PYSITELIB}/dpkt/aoeata.pyo
+${PYSITELIB}/dpkt/aoecfg.py
+${PYSITELIB}/dpkt/aoecfg.pyc
+${PYSITELIB}/dpkt/aoecfg.pyo
 ${PYSITELIB}/dpkt/arp.py
 ${PYSITELIB}/dpkt/arp.pyc
 ${PYSITELIB}/dpkt/arp.pyo
@@ -21,6 +34,9 @@ ${PYSITELIB}/dpkt/bgp.pyo
 ${PYSITELIB}/dpkt/cdp.py
 ${PYSITELIB}/dpkt/cdp.pyc
 ${PYSITELIB}/dpkt/cdp.pyo
+${PYSITELIB}/dpkt/compat.py
+${PYSITELIB}/dpkt/compat.pyc
+${PYSITELIB}/dpkt/compat.pyo
 ${PYSITELIB}/dpkt/crc32c.py
 ${PYSITELIB}/dpkt/crc32c.pyc
 ${PYSITELIB}/dpkt/crc32c.pyo
@@ -39,6 +55,9 @@ ${PYSITELIB}/dpkt/dpkt.pyo
 ${PYSITELIB}/dpkt/dtp.py
 ${PYSITELIB}/dpkt/dtp.pyc
 ${PYSITELIB}/dpkt/dtp.pyo
+${PYSITELIB}/dpkt/edp.py
+${PYSITELIB}/dpkt/edp.pyc
+${PYSITELIB}/dpkt/edp.pyo
 ${PYSITELIB}/dpkt/esp.py
 ${PYSITELIB}/dpkt/esp.pyc
 ${PYSITELIB}/dpkt/esp.pyo
@@ -60,6 +79,9 @@ ${PYSITELIB}/dpkt/hsrp.pyo
 ${PYSITELIB}/dpkt/http.py
 ${PYSITELIB}/dpkt/http.pyc
 ${PYSITELIB}/dpkt/http.pyo
+${PYSITELIB}/dpkt/http2.py
+${PYSITELIB}/dpkt/http2.pyc
+${PYSITELIB}/dpkt/http2.pyo
 ${PYSITELIB}/dpkt/icmp.py
 ${PYSITELIB}/dpkt/icmp.pyc
 ${PYSITELIB}/dpkt/icmp.pyo
@@ -78,6 +100,9 @@ ${PYSITELIB}/dpkt/ip.pyo
 ${PYSITELIB}/dpkt/ip6.py
 ${PYSITELIB}/dpkt/ip6.pyc
 ${PYSITELIB}/dpkt/ip6.pyo
+${PYSITELIB}/dpkt/ipip.py
+${PYSITELIB}/dpkt/ipip.pyc
+${PYSITELIB}/dpkt/ipip.pyo
 ${PYSITELIB}/dpkt/ipx.py
 ${PYSITELIB}/dpkt/ipx.pyc
 ${PYSITELIB}/dpkt/ipx.pyo
@@ -105,6 +130,9 @@ ${PYSITELIB}/dpkt/ospf.pyo
 ${PYSITELIB}/dpkt/pcap.py
 ${PYSITELIB}/dpkt/pcap.pyc
 ${PYSITELIB}/dpkt/pcap.pyo
+${PYSITELIB}/dpkt/pcapng.py
+${PYSITELIB}/dpkt/pcapng.pyc
+${PYSITELIB}/dpkt/pcapng.pyo
 ${PYSITELIB}/dpkt/pim.py
 ${PYSITELIB}/dpkt/pim.pyc
 ${PYSITELIB}/dpkt/pim.pyo

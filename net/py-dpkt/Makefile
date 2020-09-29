@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/09/02 13:19:48 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/09/29 02:40:24 khorben Exp $
 
-DISTNAME=	dpkt-1.8
+DISTNAME=	dpkt-1.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
-MASTER_SITES=	http://dpkt.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kbandla/}
+GITHUB_PROJECT=	dpkt
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://github.com/kbandla/dpkt
@@ -13,7 +14,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.8
-
-.include "../../lang/python/distutils.mk"
+# TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
