@@ -1,0 +1,1 @@
+bin/evmasm @PREFIX@/bin/evmasm-@PYVERSSUFFIX@
