@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5486 2020/09/29 10:43:57 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.5487 2020/09/29 10:46:18 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8174,3 +8174,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/catch2 to 2.13.1 [wiz 2020-09-29]
 	Updated geography/gama to 2.10 [gdt 2020-09-29]
 	Updated devel/glib2 to 2.66.0 [prlw1 2020-09-29]
+	Updated devel/gobject-introspection to 1.66.0 [prlw1 2020-09-29]
