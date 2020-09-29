@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5474 2020/09/29 02:32:24 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5475 2020/09/29 02:41:59 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8158,3 +8158,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-plumbum version 1.6.1.post0 [khorben 2020-09-29]
 	Added net/py-rpyc version 3.3.0 [khorben 2020-09-29]
 	Added devel/py-cooldict version 1.4 [khorben 2020-09-29]
+	Updated net/py-dpkt to 1.9.4 [khorben 2020-09-29]
