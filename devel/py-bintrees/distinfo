@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/09/29 02:19:06 khorben Exp $
+
+SHA1 (bintrees-2.1.0.zip) = 5eedbe2848114c787daac2647806cffddc54abd5
+RMD160 (bintrees-2.1.0.zip) = 533a75a01a8329949b3b914228379b431ca4e810
+SHA512 (bintrees-2.1.0.zip) = 56d83e826992915c4085d76daa767e033a221ff346cac307c0a820d692d85e503517f1c339deccf315d0985ff6b4a8ebd139c173d054802586a9b68a7783bc01
+Size (bintrees-2.1.0.zip) = 107829 bytes
