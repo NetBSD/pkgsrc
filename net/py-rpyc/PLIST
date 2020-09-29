@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/09/29 22:58:36 khorben Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/09/29 23:11:52 khorben Exp $
 bin/rpyc_classic.py
 bin/rpyc_registry.py
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
@@ -8,10 +8,17 @@ ${PYSITELIB}/${EGG_FILE}/not-zip-safe
 ${PYSITELIB}/${EGG_FILE}/requires.txt
 ${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/rpyc/__init__.py
+${PYSITELIB}/rpyc/__init__.pyc
+${PYSITELIB}/rpyc/__init__.pyo
 ${PYSITELIB}/rpyc/core/__init__.py
+${PYSITELIB}/rpyc/core/__init__.pyc
+${PYSITELIB}/rpyc/core/__init__.pyo
 ${PYSITELIB}/rpyc/core/async.py
 ${PYSITELIB}/rpyc/core/async.pyc
 ${PYSITELIB}/rpyc/core/async.pyo
+${PYSITELIB}/rpyc/core/async_.py
+${PYSITELIB}/rpyc/core/async_.pyc
+${PYSITELIB}/rpyc/core/async_.pyo
 ${PYSITELIB}/rpyc/core/brine.py
 ${PYSITELIB}/rpyc/core/brine.pyc
 ${PYSITELIB}/rpyc/core/brine.pyo
@@ -25,6 +32,8 @@ ${PYSITELIB}/rpyc/core/netref.py
 ${PYSITELIB}/rpyc/core/netref.pyc
 ${PYSITELIB}/rpyc/core/netref.pyo
 ${PYSITELIB}/rpyc/core/protocol.py
+${PYSITELIB}/rpyc/core/protocol.pyc
+${PYSITELIB}/rpyc/core/protocol.pyo
 ${PYSITELIB}/rpyc/core/reactor.py
 ${PYSITELIB}/rpyc/core/reactor.pyc
 ${PYSITELIB}/rpyc/core/reactor.pyo
@@ -37,15 +46,6 @@ ${PYSITELIB}/rpyc/core/stream.pyo
 ${PYSITELIB}/rpyc/core/vinegar.py
 ${PYSITELIB}/rpyc/core/vinegar.pyc
 ${PYSITELIB}/rpyc/core/vinegar.pyo
-${PYSITELIB}/rpyc/experimental/__init__.py
-${PYSITELIB}/rpyc/experimental/__init__.pyc
-${PYSITELIB}/rpyc/experimental/__init__.pyo
-${PYSITELIB}/rpyc/experimental/retunnel.py
-${PYSITELIB}/rpyc/experimental/retunnel.pyc
-${PYSITELIB}/rpyc/experimental/retunnel.pyo
-${PYSITELIB}/rpyc/experimental/splitbrain.py
-${PYSITELIB}/rpyc/experimental/splitbrain.pyc
-${PYSITELIB}/rpyc/experimental/splitbrain.pyo
 ${PYSITELIB}/rpyc/lib/__init__.py
 ${PYSITELIB}/rpyc/lib/__init__.pyc
 ${PYSITELIB}/rpyc/lib/__init__.pyo
@@ -68,6 +68,8 @@ ${PYSITELIB}/rpyc/utils/factory.py
 ${PYSITELIB}/rpyc/utils/factory.pyc
 ${PYSITELIB}/rpyc/utils/factory.pyo
 ${PYSITELIB}/rpyc/utils/helpers.py
+${PYSITELIB}/rpyc/utils/helpers.pyc
+${PYSITELIB}/rpyc/utils/helpers.pyo
 ${PYSITELIB}/rpyc/utils/registry.py
 ${PYSITELIB}/rpyc/utils/registry.pyc
 ${PYSITELIB}/rpyc/utils/registry.pyo
