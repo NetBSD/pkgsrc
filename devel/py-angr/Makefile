@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/09/28 22:56:38 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2020/09/29 04:06:46 khorben Exp $
 
 .include "version.mk"
 
@@ -56,7 +56,7 @@ SOEXT.Darwin=	dylib
 SOEXT.*=	so
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 do-test:
 	${RUN} cd ${WRKSRC} && \
