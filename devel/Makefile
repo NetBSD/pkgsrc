@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3258 2020/09/29 01:36:54 khorben Exp $
+# $NetBSD: Makefile,v 1.3259 2020/09/29 02:19:43 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2168,6 +2168,7 @@ SUBDIR+=	py-backports_abc
 SUBDIR+=	py-bcolz
 SUBDIR+=	py-behave
 SUBDIR+=	py-binaryornot
+SUBDIR+=	py-bintrees
 SUBDIR+=	py-bitstring
 SUBDIR+=	py-blessings
 SUBDIR+=	py-blinker
