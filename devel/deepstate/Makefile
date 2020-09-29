@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/09/29 02:50:51 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/29 03:01:16 khorben Exp $
+
+PKGREVISION=	1
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
@@ -25,16 +27,17 @@ DEPENDS+=	${PYPKGPREFIX}-z3solver-[0-9]*:../../math/py-z3solver
 
 PYTHON_VERSIONS_ACCEPTED=	37 36
 
+CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
+
 CMAKE_ARGS+=	-DPYTHON=${PREFIX}/bin/python${PYVERSSUFFIX}
-CONFIGURE_DIRS=	${WRKSRC}/build
 
 pre-configure:
-	${MKDIR} ${CONFIGURE_DIRS}
+	cd ${WRKSRC} && ${MKDIR} ${CONFIGURE_DIRS}
 
 post-install:
 .for binaryfile in futurize pasteurize
-	${MV} ${FAKEHOMEDIR}/.local/bin/${binaryfile} ${DESTDIR}${PREFIX}/bin
+	${MV} ${FAKEHOMEDIR}/.local/bin/${binaryfile} ${DESTDIR}${PREFIX}/bin/${binaryfile}
 .endfor
 
 .include "Makefile.common"
