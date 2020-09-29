@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5490 2020/09/29 12:22:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5491 2020/09/29 12:23:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8179,3 +8179,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-cffi to 1.14.3 [adam 2020-09-29]
 	Updated devel/meson to 0.55.3 [adam 2020-09-29]
 	Added wm/fvwm3 version 1.0.0 [nia 2020-09-29]
+	Added emulators/pcsxr version 1.9.95.20190306 [nia 2020-09-29]
