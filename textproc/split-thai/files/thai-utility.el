@@ -43,14 +43,13 @@ uses recursion"
 	      (extract-thai-na (cdr nlist) thaistr))))))
 
 (defun thai-word-table-in-p(thaiword)
-  "return t if thaiword is in 'thai-word-table, nil otherwise"
-  (let ((first (string-to-char (substring-no-properties thaiword 0 1)))
-	(elem)
-	(thaiwords))
-    (setq elem (assq first (cdr thai-word-table)))
-    (setq thaiwords (extract-thai-na elem ""))
-    (if (and elem thaiwords (member thaiword thaiwords))
-	t nil)))
+ "return t if thaiword is in 'thai-word-table, nil otherwise"
+  (let ((result
+	 (lookup-nested-alist
+	  thaiword thai-word-table (length thaiword) 0 t)))
+    (and (listp result)
+	 (integerp (car result))
+	 (= 1 (car result)))))
 
 (defun thai-word-table-save(filename &optional alist)
   "save thai words extracted from a nested-alist table to
