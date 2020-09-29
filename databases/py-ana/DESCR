@@ -1,0 +1,15 @@
+ANA is a project to provide easy distributed data storage for stuff.
+It provides every object with a UUID and, when pickled, will first serialize
+the object's state to a central location and then "pickle" the object into just
+its UUID. This is really handy when you have to distribute objects in some
+distributed system, and you'd rather not pickle the whole object every time you
+need to send it.
+
+ANA violates some of pickle's assumptions.
+Users of pickle often have an implicit assumption that the objects they
+unpickle will be different (identity-wise) than the objects that they pickle.
+This is not the case with ANA; in fact, it has an object cache specifically to
+avoid this. Furthermore, depending on the mode of operation, ANA might store
+the objects centrally, by UUID, where it will be accessed by other instances of
+ANA. Because of these things, the objects serialized with ANA should be
+immutable, if you know what's good for you.
