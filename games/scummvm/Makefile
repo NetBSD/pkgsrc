@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2020/08/18 17:57:58 leot Exp $
+# $NetBSD: Makefile,v 1.91 2020/09/29 08:44:25 adam Exp $
 
-DISTNAME=	scummvm-2.1.2
-PKGREVISION=	3
+DISTNAME=	scummvm-2.2.0
 CATEGORIES=	games
 MASTER_SITES=	https://www.scummvm.org/frs/scummvm/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -30,6 +29,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
