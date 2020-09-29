@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3257 2020/09/29 00:19:45 khorben Exp $
+# $NetBSD: Makefile,v 1.3258 2020/09/29 01:36:54 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2630,6 +2630,7 @@ SUBDIR+=	py-vcversioner
 SUBDIR+=	py-vine
 SUBDIR+=	py-virtualenv
 SUBDIR+=	py-visitor
+SUBDIR+=	py-wasm
 SUBDIR+=	py-wcwidth
 SUBDIR+=	py-wheel
 SUBDIR+=	py-whichcraft
