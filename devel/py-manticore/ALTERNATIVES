@@ -1,0 +1,2 @@
+bin/manticore @PREFIX@/bin/manticore-@PYVERSSUFFIX@
+bin/manticore-verifier @PREFIX@/bin/manticore-verifier-@PYVERSSUFFIX@
