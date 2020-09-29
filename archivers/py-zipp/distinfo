@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/03/12 07:36:21 wiz Exp $
+$NetBSD: distinfo,v 1.7 2020/09/29 17:02:01 adam Exp $
 
-SHA1 (zipp-3.1.0.tar.gz) = 4002f19d959b7de827b39265518b184140da6d6d
-RMD160 (zipp-3.1.0.tar.gz) = 7f7b4ed35f065e3f8e2b985abbfd560f2d6879ee
-SHA512 (zipp-3.1.0.tar.gz) = bb8dea71eccc4f3b18fc816dae700582c3feb72f346e115bb2d1adc336f121304a285e4d5dad48d15b386b9e137c6e1d1793ef50d22b6bd697812a661817684e
-Size (zipp-3.1.0.tar.gz) = 14808 bytes
+SHA1 (zipp-3.2.0.tar.gz) = c54fde681399584ef990308807231ea245711d2f
+RMD160 (zipp-3.2.0.tar.gz) = 53e754c7387ca8f7d68c0e8ccec0df641d8cb327
+SHA512 (zipp-3.2.0.tar.gz) = fc0c8a9f1fbbcdd0f70c536e7498605e0a338dd99abd65f16b360cb16f96c7860d422ce2b55f7b2c1bfd7e5c5b5ca3bf818a48bae19bfbf190d91d4778aed31a
+Size (zipp-3.2.0.tar.gz) = 16238 bytes
