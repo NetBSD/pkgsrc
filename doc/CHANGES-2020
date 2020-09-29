@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5488 2020/09/29 10:57:35 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.5489 2020/09/29 12:20:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8176,3 +8176,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/glib2 to 2.66.0 [prlw1 2020-09-29]
 	Updated devel/gobject-introspection to 1.66.0 [prlw1 2020-09-29]
 	Updated net/avahi to 0.8 [prlw1 2020-09-29]
+	Updated devel/py-cffi to 1.14.3 [adam 2020-09-29]
+	Updated devel/meson to 0.55.3 [adam 2020-09-29]
