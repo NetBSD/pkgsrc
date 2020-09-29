@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/09/29 10:56:56 prlw1 Exp $
+
+Strange hardcoded place to put a socket.
+
+--- configure.orig	2020-02-18 07:03:14.638650833 +0000
++++ configure
+@@ -24638,7 +24638,7 @@ _ACEOF
+ #
+ # Avahi runtime dir
+ #
+-avahi_runtime_dir="/run"
++avahi_runtime_dir="${localstatedir}/run"
+ avahi_socket="${avahi_runtime_dir}/avahi-daemon/socket"
+ 
+ 
