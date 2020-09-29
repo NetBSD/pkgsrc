@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2020/09/29 12:23:03 nia Exp $
+
+Note for NetBSD users with native X11:
+
+Please ensure your userspace is at least as new as 9.0_STABLE, otherwise,
+a bug will prevent any games from being loaded by PCSX-R.
+
+===========================================================================
