@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5489 2020/09/29 12:20:15 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5490 2020/09/29 12:22:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8178,3 +8178,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/avahi to 0.8 [prlw1 2020-09-29]
 	Updated devel/py-cffi to 1.14.3 [adam 2020-09-29]
 	Updated devel/meson to 0.55.3 [adam 2020-09-29]
+	Added wm/fvwm3 version 1.0.0 [nia 2020-09-29]
