@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2020/09/29 02:50:51 khorben Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/09/29 03:17:19 khorben Exp $
 #
 # used by devel/deepstate/Makefile
 # used by devel/deepstate-afl/Makefile
 # used by devel/deepstate-honggfuzz/Makefile
+# used by devel/deepstate-libfuzzer/Makefile
 # used by devel/py-deepstate/Makefile
 
 VERSION=	0.1
