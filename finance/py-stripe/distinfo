@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2020/09/08 17:44:37 adam Exp $
+$NetBSD: distinfo,v 1.27 2020/09/29 18:45:33 adam Exp $
 
-SHA1 (stripe-2.51.0.tar.gz) = 8e17394ef42ba5a4103c4712c4e061e9be0bd0bd
-RMD160 (stripe-2.51.0.tar.gz) = f9d52c00203880832d6c0742b75d1970b2b12279
-SHA512 (stripe-2.51.0.tar.gz) = 6dce1a3037f971b328859f8c9c00e7951a3bbc78121610b4e22fe890eddf0662cb9cbd60baafd175e6629fcc51b3c32b634902c2a84ffeb5e05c219ea572a45a
-Size (stripe-2.51.0.tar.gz) = 219804 bytes
+SHA1 (stripe-2.53.0.tar.gz) = 67a9e8db7775b139545c38869c669e923e3acc83
+RMD160 (stripe-2.53.0.tar.gz) = ef2be41190d335a23f7bf2872ce515fe652442b3
+SHA512 (stripe-2.53.0.tar.gz) = bc0c322debcdf19da6fed5e88a10f20481561f6bfe35ffae67edf55ec71117784b1b3822db92ea3201f2973a3904792e6b9e05c7f1531074a92dab5fa5924211
+Size (stripe-2.53.0.tar.gz) = 219266 bytes
