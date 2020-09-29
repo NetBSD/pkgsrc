@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1349 2020/09/20 08:46:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.1350 2020/09/29 02:30:07 khorben Exp $
 #
 
 COMMENT=	Networking tools
@@ -730,6 +730,7 @@ SUBDIR+=	py-pypiserver
 SUBDIR+=	py-pysendfile
 SUBDIR+=	py-requestbuilder
 SUBDIR+=	py-responses
+SUBDIR+=	py-rpyc
 SUBDIR+=	py-rt
 SUBDIR+=	py-s3cmd
 SUBDIR+=	py-s3transfer
