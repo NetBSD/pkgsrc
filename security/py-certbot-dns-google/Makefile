@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/08/31 23:07:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/09/30 09:03:46 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -12,12 +12,9 @@ DEPENDS+=	${PYPKGPREFIX}-certbot>=1.1.0:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=1.5.5:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-oauth2client>=4.0:../../security/py-oauth2client
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-google-api-python-client
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
-
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
