@@ -1,8 +1,8 @@
-$NetBSD: patch-mono_eglib_giconv.c,v 1.1 2020/02/12 13:43:31 kamil Exp $
+$NetBSD: patch-mono_eglib_giconv.c,v 1.2 2020/09/30 19:50:14 ryoon Exp $
 
 Support POSIX iconv(3) on modern NetBSD.
 
---- mono/eglib/giconv.c.orig	2019-12-10 07:50:32.000000000 +0000
+--- mono/eglib/giconv.c.orig	2020-04-30 07:46:10.000000000 +0000
 +++ mono/eglib/giconv.c
 @@ -37,6 +37,14 @@
  #define FORCE_INLINE(RET_TYPE) inline RET_TYPE __attribute__((always_inline))
@@ -19,12 +19,12 @@ Support POSIX iconv(3) on modern NetBSD.
  
  #define UNROLL_DECODE_UTF8 0
  #define UNROLL_ENCODE_UTF8 0
-@@ -196,7 +204,7 @@ g_iconv (GIConv cd, gchar **inbytes, gsi
- 		} else {
+@@ -197,7 +205,7 @@ g_iconv (GIConv cd, gchar **inbytes, gsi
  			outleftptr = NULL;
  		}
--#if defined(__NetBSD__)
-+#if defined(__NetBSD__) && !NETBSD_POSIX_ICONV
+ // AIX needs this for C++ and GNU iconv
+-#if defined(__NetBSD__) || defined(_AIX)
++#if (defined(__NetBSD__) && !NETBSD_POSIX_ICONV) || defined(_AIX)
  		return iconv (cd->cd, (const gchar **)inbytes, inleftptr, outbytes, outleftptr);
  #else
  		return iconv (cd->cd, inbytes, inleftptr, outbytes, outleftptr);
