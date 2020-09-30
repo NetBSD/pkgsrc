@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/08/31 23:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/09/30 09:03:45 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -7,26 +7,25 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
 
 COMMENT=	Client for the Let's Encrypt CA
 
-DEPENDS+=	${PYPKGPREFIX}-acme>=1.4.0:../../security/py-acme
+DEPENDS+=	${PYPKGPREFIX}-acme>=1.6.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.2.3:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-josepy>=1.1.0:../../security/py-josepy
-DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=1.3:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ZopeComponent-[0-9]*:../../devel/py-ZopeComponent
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 # Needed for the test target
 # https://github.com/certbot/certbot/issues/2956
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test
-PYTHON_VERSIONED_DEPENDENCIES+= setuptools
 
 BUILD_DEFS+=		VARBASE
 
@@ -36,6 +35,7 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-build
 SUBST_MESSAGE.path=	Fixing default paths
 SUBST_FILES.path=	certbot/compat/misc.py
+SUBST_FILES.path+=	tests/cli_test.py
 SUBST_SED.path=		-e 's,/etc/letsencrypt,${PKG_SYSCONFDIR},g'
 SUBST_SED.path+=	-e 's,/var/lib/letsencrypt,${VARBASE}/letsencrypt,g'
 SUBST_SED.path+=	-e 's,/var/log/letsencrypt,${VARBASE}/letsencrypt/log,g'
@@ -51,5 +51,4 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/certbot-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
