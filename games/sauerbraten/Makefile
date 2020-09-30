@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/30 21:41:46 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/30 07:30:22 nia Exp $
 
 DISTNAME=	sauerbraten_2013_04_04_collect_edition_linux
 PKGNAME=	sauerbraten-2013_04_04
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sauerbraten/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sauerbraten.org/
 COMMENT=	First-person shooter game based on Cube 2
 LICENSE=	zlib AND cc-by-nc-sa-v3.0-license
