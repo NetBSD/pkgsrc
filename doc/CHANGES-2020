@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5514 2020/09/30 09:50:28 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5515 2020/09/30 09:54:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8232,3 +8232,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/mame to 0.225 [wiz 2020-09-30]
 	Updated security/openssl to 1.1.1h [wiz 2020-09-30]
 	Updated textproc/asciidoc to 9.0.2 [wiz 2020-09-30]
+	Updated sysutils/py-borgbackup to 1.1.13 [wiz 2020-09-30]
