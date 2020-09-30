@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2020/09/06 13:43:05 wiz Exp $
+$NetBSD: distinfo,v 1.57 2020/09/30 13:53:51 otis Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -28,10 +28,10 @@ SHA1 (naxsi-0.56.tar.gz) = 42ce137bd3e52a612793bcea43f3ffbb8376910a
 RMD160 (naxsi-0.56.tar.gz) = a5c97194ef3db415a4bab07c44f9e9f2860b9e1a
 SHA512 (naxsi-0.56.tar.gz) = 4660751849bce303af6010b7257532404710106a94817e78d4bc4b566f8019620f24f30207f1d4366b88132a5124e34b164dc67ed80b6710f4bad66115564cbd
 Size (naxsi-0.56.tar.gz) = 192120 bytes
-SHA1 (nginx-1.19.2.tar.gz) = 063c394c6813bec05783822b56530df240db44ed
-RMD160 (nginx-1.19.2.tar.gz) = c7a3a50a71f2a4922ebf2fbbda38d4e0c826c165
-SHA512 (nginx-1.19.2.tar.gz) = f6232d58a91db486cf36cc027ab84f04ad25aeafe586051043f0f3295dad5f475094f7cedad142ef0f56ff15a0971d700d6ec34b68697c462364650c49be8fcc
-Size (nginx-1.19.2.tar.gz) = 1048727 bytes
+SHA1 (nginx-1.19.3.tar.gz) = 3b50c30022aceb455da7a15616dc4bbff01eb511
+RMD160 (nginx-1.19.3.tar.gz) = 9d929897b18ab5ceb246b967bad7fcfade43716a
+SHA512 (nginx-1.19.3.tar.gz) = 337fbbb562d1577a2a219bd132c82098a06a49f1ce40ced905fdf255238c4f70dd1f889ec8ae971a4fe5e753f98a356cadc9c766bc089f817d711b12143efcc8
+Size (nginx-1.19.3.tar.gz) = 1052581 bytes
 SHA1 (nginx-dav-ext-module-3.0.0.tar.gz) = 524407402df7e73df9def85345c8bea324dceede
 RMD160 (nginx-dav-ext-module-3.0.0.tar.gz) = 8d099215bde79492565a39c3c8feb7695138138e
 SHA512 (nginx-dav-ext-module-3.0.0.tar.gz) = d0193ba90f1ef46c4e470630c4394bdf99d94fd2e3bd8be6cb2ba1655ec59944b1269025f032b79dc2c6dad366e54389ef6a6da2ddeb91d535a4027f2162fbde
@@ -48,10 +48,10 @@ SHA1 (ngx_devel_kit-0.3.1.tar.gz) = e15316e13a7b19a3d2502becbb26043a464a135a
 RMD160 (ngx_devel_kit-0.3.1.tar.gz) = 5c52a463544294096611aa9dec1c76e937a1aa23
 SHA512 (ngx_devel_kit-0.3.1.tar.gz) = de1e3349d8dd08e5982279b2219dc8a8006739f0409b8e0f5c50d93434beff1fbafba43e9c5ac85a5fab90afc5c0a7244a340610339c36f82f2cba7233e72de9
 Size (ngx_devel_kit-0.3.1.tar.gz) = 66542 bytes
-SHA1 (njs-0.4.3.tar.gz) = 19f4c4425146f1ec3871ae05508863c3d553e61d
-RMD160 (njs-0.4.3.tar.gz) = 5a53fb5fdfb20c76c1c52efa01bb7642ad8e09fa
-SHA512 (njs-0.4.3.tar.gz) = b3b4294817997a06661f00f53d38e0cde08e022f41b3663f9d17a91b343fb944e21184114f09d89995096faee491187c3ae424407f2855ed0670c0cccf928cd7
-Size (njs-0.4.3.tar.gz) = 460997 bytes
+SHA1 (njs-0.4.4.tar.gz) = a2e0406388a668c0e76952c54bae53c324625a1a
+RMD160 (njs-0.4.4.tar.gz) = fa9972d23204cfd928b25e9d156d6974726a2384
+SHA512 (njs-0.4.4.tar.gz) = 1bf88d23f99532bb32e96de79e49cc27b60d6231207eb06ea2f6a6884d725f7bbe7b426664aa4c872f7c40549f81489c04c2ae4a7ddd2d03c8cf1d66b9c62c78
+Size (njs-0.4.4.tar.gz) = 486870 bytes
 SHA1 (set-misc-nginx-module-0.32.tar.gz) = 2433bb7a138c3b13812ec2af7070cdc67435918f
 RMD160 (set-misc-nginx-module-0.32.tar.gz) = eff9be78f884f7c3e09e88af6bdf4cdd9aaea05d
 SHA512 (set-misc-nginx-module-0.32.tar.gz) = 5590526f60c99630f99a49bfa9e3455baee6d58cd2a1419eab1367a838dafb87a50f5e2607aa8ac557b90dbf633dcf61069c997b3526cddc8f2fc45820a7bc3b
