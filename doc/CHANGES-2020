@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5504 2020/09/29 23:12:02 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5505 2020/09/30 00:38:58 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8201,3 +8201,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-rpyc to 3.4.2 [khorben 2020-09-29]
 	Updated net/py-rpyc to 3.4.4 [khorben 2020-09-29]
 	Updated net/py-rpyc to 4.0.2 [khorben 2020-09-29]
+	Updated net/py-rpyc to 4.1.2 [khorben 2020-09-30]
