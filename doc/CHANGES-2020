@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5506 2020/09/30 03:07:40 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.5507 2020/09/30 05:46:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8203,3 +8203,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-rpyc to 4.0.2 [khorben 2020-09-29]
 	Updated net/py-rpyc to 4.1.2 [khorben 2020-09-30]
 	Updated wm/blackbox70 to 0.76nb1 [gutteridge 2020-09-30]
+	Updated www/py-draftjs_exporter to 4.1.1 [adam 2020-09-30]
