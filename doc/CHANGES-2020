@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5507 2020/09/30 05:46:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5508 2020/09/30 07:02:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8204,3 +8204,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-rpyc to 4.1.2 [khorben 2020-09-30]
 	Updated wm/blackbox70 to 0.76nb1 [gutteridge 2020-09-30]
 	Updated www/py-draftjs_exporter to 4.1.1 [adam 2020-09-30]
+	Updated www/py-uvicorn to 0.12.0 [adam 2020-09-30]
+	Updated www/py-django-cors-headers to 3.5.0 [adam 2020-09-30]
+	Updated finance/py-stripe to 2.54.0 [adam 2020-09-30]
+	Updated sysutils/py-structlog to 20.1.0 [adam 2020-09-30]
