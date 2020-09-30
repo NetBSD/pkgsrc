@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/03/24 18:06:28 taca Exp $
+# $NetBSD: Makefile,v 1.14 2020/09/30 08:57:21 jperkin Exp $
 
 DISTNAME=	chef-zero-15.0.0
 CATEGORIES=	sysutils
@@ -15,6 +15,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-hashie>=2.0.5<5:../../misc/ruby-hashie
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=2.0.6<3:../../www/ruby-rack
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+RUBY_VERSIONS_INCOMPATIBLE=	25
 
 pre-configure:
 	cd ${WRKSRC}/bin && ${CHMOD} ${BINMODE} chef-zero
