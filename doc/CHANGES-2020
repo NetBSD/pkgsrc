@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5516 2020/09/30 11:53:19 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5517 2020/09/30 13:14:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8234,3 +8234,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/asciidoc to 9.0.2 [wiz 2020-09-30]
 	Updated sysutils/py-borgbackup to 1.1.13 [wiz 2020-09-30]
 	Updated net/powerdns-recursor to 4.3.4 [otis 2020-09-30]
+	Updated databases/prometheus to 2.21.0 [adam 2020-09-30]
+	Updated sysutils/node_exporter to 1.0.1 [adam 2020-09-30]
