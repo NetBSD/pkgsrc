@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/08/03 14:03:18 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/09/30 06:47:17 adam Exp $
 
-SHA1 (uvicorn-0.11.8.tar.gz) = 5997b25979bad5a32f0cd0478d28da24b1d312a7
-RMD160 (uvicorn-0.11.8.tar.gz) = 4d3db0f1f35213380d22fc7eb3d87c8c0487b4f8
-SHA512 (uvicorn-0.11.8.tar.gz) = baf3d4a8ca62f2766523c4099abf260e7248a0d566ddb4729eebc3aa2ad757a16225bd1f3fa2cb125dded4e7c02fa000e4bf53f242c87c437a5ccc750bc4091f
-Size (uvicorn-0.11.8.tar.gz) = 29721 bytes
+SHA1 (uvicorn-0.12.0.tar.gz) = 775f6b5f1431909c315c5d6a4d6188d514f6c25c
+RMD160 (uvicorn-0.12.0.tar.gz) = 7933a98c568f7135babb7cc12ee904c86028019c
+SHA512 (uvicorn-0.12.0.tar.gz) = dccc9e2955deaa292c043d80b9abbea8cb60234bc81da01447a2ba12b5d22b94ea05ffa6166c6884638facbcc10cc23f9820be4e8fbe7aa29754380129c56188
+Size (uvicorn-0.12.0.tar.gz) = 31521 bytes
