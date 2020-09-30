@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/08/17 20:20:09 leot Exp $
+# $NetBSD: Makefile,v 1.68 2020/09/30 10:28:08 jperkin Exp $
 
 PKGREVISION= 1
 .include "../../sysutils/ups-nut/Makefile.common"
@@ -17,10 +17,26 @@ INSTALLATION_DIRS+=	${PREFIX}/${PKGMANDIR}/man8
 CONFIGURE_ARGS+=	--with-cgi
 CONFIGURE_ARGS+=	--with-cgipath=${NUT_CGIDIR:Q}
 
+#
+# This is horrendous, but configure script assumes everything is in /usr/X11R6
+# and hardcodes the list of libraries.  libXpm is optional in gd/buildlink3.mk
+# and the configure script assumes it, however it doesn't appear necessary so
+# is removed for now.
+#
+.include "../../mk/jpeg.buildlink3.mk"
+GD_LIBS=		-lm
+.for bl3 lib in gd gd png png zlib z ${JPEG_TYPE} jpeg freetype2 freetype
+GD_LIBS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${bl3}}/lib
+GD_LIBS+=		-L${BUILDLINK_PREFIX.${bl3}}/lib -l${lib}
+GD_INCS+=		-I${BUILDLINK_PREFIX.${bl3}}/include
+.endfor
+CONFIGURE_ARGS+=       --with-gd-libs="${GD_LIBS}"
+CONFIGURE_ARGS+=       --with-gd-includes="${GD_INCS}"
+
 BUILD_DEFS+=		NUT_STATEDIR
 
 CONF_FILES=		${NUT_EGDIR}/hosts.conf.sample ${NUT_CONFDIR}/hosts.conf
-CONF_FILES+=		${NUT_EGDIR}/upsset.conf.sample		 \
+CONF_FILES+=		${NUT_EGDIR}/upsset.conf.sample \
 			${NUT_CONFDIR}/upsset.conf
 CONF_FILES+=		${NUT_EGDIR}/upsstats-single.html.sample \
 			${NUT_CONFDIR}/upsstats-single.html
