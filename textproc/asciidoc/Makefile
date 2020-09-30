@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2020/07/08 19:05:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.52 2020/09/30 09:50:18 wiz Exp $
 
-DISTNAME=	asciidoc-py3-9.0.1
+DISTNAME=	asciidoc-py3-9.0.2
 PKGNAME=	${DISTNAME:S/-py3//}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=asciidoc/}
@@ -30,7 +30,6 @@ REPLACE_PYTHON+=	filters/latex/latex2img.py
 REPLACE_PYTHON+=	filters/music/music2png.py
 REPLACE_PYTHON+=	filters/graphviz/graphviz2png.py
 REPLACE_PYTHON+=	filters/unwraplatex.py
-REPLACE_PYTHON+=	tests/asciidocapi.py
 REPLACE_PYTHON+=	tests/testasciidoc.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
