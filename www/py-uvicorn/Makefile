@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/09/30 06:47:17 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/09/30 09:38:44 jperkin Exp $
 
 DISTNAME=	uvicorn-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,14 +16,14 @@ DEPENDS+=	${PYPKGPREFIX}-httptools>=0.1.1:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.14.0:../../devel/py-uvloop
 DEPENDS+=	${PYPKGPREFIX}-websockets>=8.0:../../www/py-websockets
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 .endif
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
