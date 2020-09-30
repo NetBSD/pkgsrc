@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5511 2020/09/30 09:04:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5512 2020/09/30 09:22:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8229,3 +8229,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-dns-route53 to 1.8.0 [adam 2020-09-30]
 	Updated security/py-certbot-dns-sakuracloud to 1.8.0 [adam 2020-09-30]
 	Updated security/py-certbot-nginx to 1.8.0 [adam 2020-09-30]
+	Updated emulators/mame to 0.225 [wiz 2020-09-30]
