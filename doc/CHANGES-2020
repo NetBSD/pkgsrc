@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5508 2020/09/30 07:02:41 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5509 2020/09/30 07:56:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8208,3 +8208,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-django-cors-headers to 3.5.0 [adam 2020-09-30]
 	Updated finance/py-stripe to 2.54.0 [adam 2020-09-30]
 	Updated sysutils/py-structlog to 20.1.0 [adam 2020-09-30]
+	Updated net/py-lexicon to 3.4.3 [adam 2020-09-30]
+	Updated net/py-botocore to 1.18.8 [adam 2020-09-30]
+	Updated net/py-boto3 to 1.15.8 [adam 2020-09-30]
+	Updated net/py-awscli to 1.18.149 [adam 2020-09-30]
