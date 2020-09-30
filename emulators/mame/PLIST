@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2020/09/03 07:47:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2020/09/30 09:22:48 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -135,6 +135,7 @@ share/mame/hash/bbc_flop_6502.xml
 share/mame/hash/bbc_flop_68000.xml
 share/mame/hash/bbc_flop_80186.xml
 share/mame/hash/bbc_flop_arm.xml
+share/mame/hash/bbc_flop_hybrid.xml
 share/mame/hash/bbc_flop_torch.xml
 share/mame/hash/bbc_flop_z80.xml
 share/mame/hash/bbc_hdd.xml
@@ -184,6 +185,7 @@ share/mame/hash/cgenie_flop_rom.xml
 share/mame/hash/channelf.xml
 share/mame/hash/chessmstdm.xml
 share/mame/hash/clickstart_cart.xml
+share/mame/hash/clipper_flop.xml
 share/mame/hash/coco_cart.xml
 share/mame/hash/coco_flop.xml
 share/mame/hash/coleco.xml
@@ -252,7 +254,6 @@ share/mame/hash/fm7_cass.xml
 share/mame/hash/fm7_disk.xml
 share/mame/hash/fmtowns_cd.xml
 share/mame/hash/fmtowns_flop.xml
-share/mame/hash/g7400.xml
 share/mame/hash/galaxy.xml
 share/mame/hash/gamate.xml
 share/mame/hash/gameboy.xml
@@ -301,8 +302,10 @@ share/mame/hash/i7000_card.xml
 share/mame/hash/ibm5140.xml
 share/mame/hash/ibm5150.xml
 share/mame/hash/ibm5150_cass.xml
+share/mame/hash/ibm5150_hdd.xml
 share/mame/hash/ibm5170.xml
 share/mame/hash/ibm5170_cdrom.xml
+share/mame/hash/ibm5170_hdd.xml
 share/mame/hash/ibm6580.xml
 share/mame/hash/ibmpcjr_cart.xml
 share/mame/hash/ibmpcjr_flop.xml
@@ -440,7 +443,6 @@ share/mame/hash/nimbus.xml
 share/mame/hash/novag_ssensor4.xml
 share/mame/hash/nuon.xml
 share/mame/hash/octopus.xml
-share/mame/hash/odyssey2.xml
 share/mame/hash/ondra.xml
 share/mame/hash/orao.xml
 share/mame/hash/orion_cart.xml
@@ -647,6 +649,7 @@ share/mame/hash/vic1001_cass.xml
 share/mame/hash/vic1001_flop.xml
 share/mame/hash/victor9k_flop.xml
 share/mame/hash/vidbrain.xml
+share/mame/hash/videopac.xml
 share/mame/hash/vii.xml
 share/mame/hash/vip.xml
 share/mame/hash/visicom.xml
