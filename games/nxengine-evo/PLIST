@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/30 08:07:56 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/09/30 08:18:51 nia Exp $
 bin/nxengine-evo
 share/applications/nxengine-evo.desktop
 share/icons/hicolor/128x128/apps/nxengine-evo.png
@@ -670,4 +670,3 @@ share/nxengine-evo/data/system.json
 share/nxengine-evo/data/tilekey.dat
 share/nxengine-evo/data/wavetable.dat
 share/nxengine-evo/nxengine-evo
-@pkgdir libexec
