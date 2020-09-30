@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2020/08/20 09:52:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/09/30 07:56:29 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -27,6 +27,24 @@ ${PYSITELIB}/awscli/argprocess.pyo
 ${PYSITELIB}/awscli/arguments.py
 ${PYSITELIB}/awscli/arguments.pyc
 ${PYSITELIB}/awscli/arguments.pyo
+${PYSITELIB}/awscli/bcdoc/__init__.py
+${PYSITELIB}/awscli/bcdoc/__init__.pyc
+${PYSITELIB}/awscli/bcdoc/__init__.pyo
+${PYSITELIB}/awscli/bcdoc/docevents.py
+${PYSITELIB}/awscli/bcdoc/docevents.pyc
+${PYSITELIB}/awscli/bcdoc/docevents.pyo
+${PYSITELIB}/awscli/bcdoc/docstringparser.py
+${PYSITELIB}/awscli/bcdoc/docstringparser.pyc
+${PYSITELIB}/awscli/bcdoc/docstringparser.pyo
+${PYSITELIB}/awscli/bcdoc/restdoc.py
+${PYSITELIB}/awscli/bcdoc/restdoc.pyc
+${PYSITELIB}/awscli/bcdoc/restdoc.pyo
+${PYSITELIB}/awscli/bcdoc/style.py
+${PYSITELIB}/awscli/bcdoc/style.pyc
+${PYSITELIB}/awscli/bcdoc/style.pyo
+${PYSITELIB}/awscli/bcdoc/textwriter.py
+${PYSITELIB}/awscli/bcdoc/textwriter.pyc
+${PYSITELIB}/awscli/bcdoc/textwriter.pyo
 ${PYSITELIB}/awscli/clidocs.py
 ${PYSITELIB}/awscli/clidocs.pyc
 ${PYSITELIB}/awscli/clidocs.pyo
@@ -1249,7 +1267,9 @@ ${PYSITELIB}/awscli/examples/codepipeline/get-job-details.rst
 ${PYSITELIB}/awscli/examples/codepipeline/get-pipeline-state.rst
 ${PYSITELIB}/awscli/examples/codepipeline/get-pipeline.rst
 ${PYSITELIB}/awscli/examples/codepipeline/list-action-types.rst
+${PYSITELIB}/awscli/examples/codepipeline/list-pipeline-executions.rst
 ${PYSITELIB}/awscli/examples/codepipeline/list-pipelines.rst
+${PYSITELIB}/awscli/examples/codepipeline/list-webhooks.rst
 ${PYSITELIB}/awscli/examples/codepipeline/poll-for-jobs.rst
 ${PYSITELIB}/awscli/examples/codepipeline/start-pipeline-execution.rst
 ${PYSITELIB}/awscli/examples/codepipeline/update-pipeline.rst
@@ -1802,6 +1822,7 @@ ${PYSITELIB}/awscli/examples/ec2/create-traffic-mirror-filter.rst
 ${PYSITELIB}/awscli/examples/ec2/create-traffic-mirror-session.rst
 ${PYSITELIB}/awscli/examples/ec2/create-traffic-mirror-target.rst
 ${PYSITELIB}/awscli/examples/ec2/create-transit-gateway-peering-attachment.rst
+${PYSITELIB}/awscli/examples/ec2/create-transit-gateway-prefix-list-reference.rst
 ${PYSITELIB}/awscli/examples/ec2/create-transit-gateway-route-table.rst
 ${PYSITELIB}/awscli/examples/ec2/create-transit-gateway-route.rst
 ${PYSITELIB}/awscli/examples/ec2/create-transit-gateway-vpc-attachment.rst
@@ -1848,6 +1869,7 @@ ${PYSITELIB}/awscli/examples/ec2/delete-traffic-mirror-session.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-traffic-mirror-target.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-transit-gateway-multicast-domain.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-transit-gateway-peering-attachment.rst
+${PYSITELIB}/awscli/examples/ec2/delete-transit-gateway-prefix-list-reference.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-transit-gateway-route-table.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-transit-gateway-route.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-transit-gateway-vpc-attachment.rst
@@ -2014,6 +2036,7 @@ ${PYSITELIB}/awscli/examples/ec2/get-password-data.rst
 ${PYSITELIB}/awscli/examples/ec2/get-reserved-instances-exchange-quote.rst
 ${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-attachment-propagations.rst
 ${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-multicast-domain-associations.rst
+${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-prefix-list-references.rst
 ${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-route-table-associations.rst
 ${PYSITELIB}/awscli/examples/ec2/get-transit-gateway-route-table-propagations.rst
 ${PYSITELIB}/awscli/examples/ec2/import-client-vpn-client-certificate-revocation-list.rst
@@ -2044,7 +2067,9 @@ ${PYSITELIB}/awscli/examples/ec2/modify-subnet-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-traffic-mirror-filter-network-services.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-traffic-mirror-filter-rule.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-traffic-mirror-session.rst
+${PYSITELIB}/awscli/examples/ec2/modify-transit-gateway-prefix-list-reference.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-transit-gateway-vpc-attachment.rst
+${PYSITELIB}/awscli/examples/ec2/modify-transit-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-volume-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-volume.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-attribute.rst
@@ -2054,6 +2079,7 @@ ${PYSITELIB}/awscli/examples/ec2/modify-vpc-endpoint-service-permissions.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-endpoint.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-peering-connection-options.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-tenancy.rst
+${PYSITELIB}/awscli/examples/ec2/modify-vpn-connection-options.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpn-connection.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpn-tunnel-certificate.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpn-tunnel-options.rst
@@ -2632,7 +2658,18 @@ ${PYSITELIB}/awscli/examples/greengrass/update-logger-definition.rst
 ${PYSITELIB}/awscli/examples/greengrass/update-resource-definition.rst
 ${PYSITELIB}/awscli/examples/greengrass/update-subscription-definition.rst
 ${PYSITELIB}/awscli/examples/guardduty/accept-invitation.rst
+${PYSITELIB}/awscli/examples/guardduty/archive-findings.rst
+${PYSITELIB}/awscli/examples/guardduty/create-detector.rst
+${PYSITELIB}/awscli/examples/guardduty/create-filter.rst
 ${PYSITELIB}/awscli/examples/guardduty/create-ip-set.rst
+${PYSITELIB}/awscli/examples/guardduty/create-members.rst
+${PYSITELIB}/awscli/examples/guardduty/create-publishing-destination.rst
+${PYSITELIB}/awscli/examples/guardduty/create-sample-findings.rst
+${PYSITELIB}/awscli/examples/guardduty/create-threat-intel-set.rst
+${PYSITELIB}/awscli/examples/guardduty/decline-invitations.rst
+${PYSITELIB}/awscli/examples/guardduty/delete-detector.rst
+${PYSITELIB}/awscli/examples/guardduty/delete-filter.rst
+${PYSITELIB}/awscli/examples/guardduty/disable-organization-admin-account.rst
 ${PYSITELIB}/awscli/examples/guardduty/disassociate-from-master-account.rst
 ${PYSITELIB}/awscli/examples/guardduty/get-detector.rst
 ${PYSITELIB}/awscli/examples/guardduty/get-findings.rst
@@ -2890,6 +2927,7 @@ ${PYSITELIB}/awscli/examples/iot/cancel-job-execution.rst
 ${PYSITELIB}/awscli/examples/iot/cancel-job.rst
 ${PYSITELIB}/awscli/examples/iot/clear-default-authorizer.rst
 ${PYSITELIB}/awscli/examples/iot/confirm-topic-rule-destination.rst
+${PYSITELIB}/awscli/examples/iot/create-audit-suppression.rst
 ${PYSITELIB}/awscli/examples/iot/create-authorizer.rst
 ${PYSITELIB}/awscli/examples/iot/create-billing-group.rst
 ${PYSITELIB}/awscli/examples/iot/create-certificate-from-csr.rst
@@ -2915,6 +2953,7 @@ ${PYSITELIB}/awscli/examples/iot/create-thing.rst
 ${PYSITELIB}/awscli/examples/iot/create-topic-rule-destination.rst
 ${PYSITELIB}/awscli/examples/iot/create-topic-rule.rst
 ${PYSITELIB}/awscli/examples/iot/delete-account-audit-configuration.rst
+${PYSITELIB}/awscli/examples/iot/delete-audit-suppression.rst
 ${PYSITELIB}/awscli/examples/iot/delete-authorizer.rst
 ${PYSITELIB}/awscli/examples/iot/delete-billing-group.rst
 ${PYSITELIB}/awscli/examples/iot/delete-ca-certificate.rst
@@ -2945,6 +2984,7 @@ ${PYSITELIB}/awscli/examples/iot/deprecate-thing-type.rst
 ${PYSITELIB}/awscli/examples/iot/describe-account-audit-configuration.rst
 ${PYSITELIB}/awscli/examples/iot/describe-audit-finding.rst
 ${PYSITELIB}/awscli/examples/iot/describe-audit-mitigation-actions-task.rst
+${PYSITELIB}/awscli/examples/iot/describe-audit-suppression.rst
 ${PYSITELIB}/awscli/examples/iot/describe-audit-task.rst
 ${PYSITELIB}/awscli/examples/iot/describe-authorizer.rst
 ${PYSITELIB}/awscli/examples/iot/describe-billing-group.rst
@@ -2992,6 +3032,7 @@ ${PYSITELIB}/awscli/examples/iot/list-attached-policies.rst
 ${PYSITELIB}/awscli/examples/iot/list-audit-findings.rst
 ${PYSITELIB}/awscli/examples/iot/list-audit-mitigation-actions-executions.rst
 ${PYSITELIB}/awscli/examples/iot/list-audit-mitigation-actions-tasks.rst
+${PYSITELIB}/awscli/examples/iot/list-audit-suppressions.rst
 ${PYSITELIB}/awscli/examples/iot/list-audit-tasks.rst
 ${PYSITELIB}/awscli/examples/iot/list-authorizers.rst
 ${PYSITELIB}/awscli/examples/iot/list-billing-groups.rst
@@ -3051,6 +3092,7 @@ ${PYSITELIB}/awscli/examples/iot/test-invoke-authorizer.rst
 ${PYSITELIB}/awscli/examples/iot/transfer-certificate.rst
 ${PYSITELIB}/awscli/examples/iot/untag-resource.rst
 ${PYSITELIB}/awscli/examples/iot/update-account-audit-configuration.rst
+${PYSITELIB}/awscli/examples/iot/update-audit-suppression.rst
 ${PYSITELIB}/awscli/examples/iot/update-authorizer.rst
 ${PYSITELIB}/awscli/examples/iot/update-billing-group.rst
 ${PYSITELIB}/awscli/examples/iot/update-ca-certificate.rst
@@ -3273,15 +3315,22 @@ ${PYSITELIB}/awscli/examples/ivs/batch-get-channel.rst
 ${PYSITELIB}/awscli/examples/ivs/batch-get-stream-key.rst
 ${PYSITELIB}/awscli/examples/ivs/create-channel.rst
 ${PYSITELIB}/awscli/examples/ivs/create-stream-key.rst
+${PYSITELIB}/awscli/examples/ivs/delete-playback-key-pair.rst
 ${PYSITELIB}/awscli/examples/ivs/delete-stream-key.rst
 ${PYSITELIB}/awscli/examples/ivs/get-channel.rst
+${PYSITELIB}/awscli/examples/ivs/get-playback-key-pair.rst
 ${PYSITELIB}/awscli/examples/ivs/get-stream-key.rst
 ${PYSITELIB}/awscli/examples/ivs/get-stream.rst
+${PYSITELIB}/awscli/examples/ivs/import-playback-key-pair.rst
 ${PYSITELIB}/awscli/examples/ivs/list-channels.rst
+${PYSITELIB}/awscli/examples/ivs/list-playback-key-pairs.rst
 ${PYSITELIB}/awscli/examples/ivs/list-stream-keys.rst
 ${PYSITELIB}/awscli/examples/ivs/list-streams.rst
+${PYSITELIB}/awscli/examples/ivs/list-tags-for-resource.rst
 ${PYSITELIB}/awscli/examples/ivs/put-metadata.rst
 ${PYSITELIB}/awscli/examples/ivs/stop-stream.rst
+${PYSITELIB}/awscli/examples/ivs/tag-resource.rst
+${PYSITELIB}/awscli/examples/ivs/untag-resource.rst
 ${PYSITELIB}/awscli/examples/ivs/update-channel.rst
 ${PYSITELIB}/awscli/examples/kafka/create-cluster.rst
 ${PYSITELIB}/awscli/examples/kafka/create-configuration.rst
@@ -3910,6 +3959,7 @@ ${PYSITELIB}/awscli/examples/rds/reboot-db-instance.rst
 ${PYSITELIB}/awscli/examples/rds/remove-option-from-option-group.rst
 ${PYSITELIB}/awscli/examples/rds/remove-role-from-db-instance.rst
 ${PYSITELIB}/awscli/examples/rds/remove-source-identifier-from-subscription.rst
+${PYSITELIB}/awscli/examples/rds/restore-db-cluster-from-s3.rst
 ${PYSITELIB}/awscli/examples/rds/restore-db-cluster-from-snapshot.rst
 ${PYSITELIB}/awscli/examples/rds/restore-db-cluster-to-point-in-time.rst
 ${PYSITELIB}/awscli/examples/rds/restore-db-instance-from-db-snapshot.rst
@@ -4103,6 +4153,7 @@ ${PYSITELIB}/awscli/examples/route53/get-hosted-zone.rst
 ${PYSITELIB}/awscli/examples/route53/list-health-checks.rst
 ${PYSITELIB}/awscli/examples/route53/list-hosted-zones-by-name.rst
 ${PYSITELIB}/awscli/examples/route53/list-hosted-zones.rst
+${PYSITELIB}/awscli/examples/route53/list-query-logging-configs.rst
 ${PYSITELIB}/awscli/examples/route53/list-resource-record-sets.rst
 ${PYSITELIB}/awscli/examples/route53domains/check-domain-availability.rst
 ${PYSITELIB}/awscli/examples/route53domains/check-domain-transferability.rst
@@ -4325,6 +4376,7 @@ ${PYSITELIB}/awscli/examples/securityhub/tag-resource.rst
 ${PYSITELIB}/awscli/examples/securityhub/untag-resource.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-action-target.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-insight.rst
+${PYSITELIB}/awscli/examples/securityhub/update-security-hub-configuration.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-standards-control.rst
 ${PYSITELIB}/awscli/examples/serverlessrepo/put-application-policy.rst
 ${PYSITELIB}/awscli/examples/service-quotas/get-aws-default-service-quota.rst
