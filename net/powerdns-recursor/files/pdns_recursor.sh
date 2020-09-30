@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pdns_recursor.sh,v 1.1.1.1 2009/04/21 14:16:47 roy Exp $
+# $NetBSD: pdns_recursor.sh,v 1.2 2020/09/30 11:53:07 otis Exp $
 #
 
 # PROVIDE: pdns_recursor
@@ -12,7 +12,7 @@ name="pdns_recursor"
 rcvar=$name
 command="@PREFIX@/sbin/pdns_recursor"
 command_args="--daemon=yes 2>/dev/null"
-pidfile=/var/run/${name}.pid
+pidfile=/var/run/pdns-recursor/${name}.pid
 required_files="@PKG_SYSCONFDIR@/recursor.conf"
 
 load_rc_config $name
