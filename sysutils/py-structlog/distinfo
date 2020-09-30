@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/10/19 14:41:27 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/09/30 07:01:52 adam Exp $
 
-SHA1 (structlog-19.2.0.tar.gz) = 680046b43650724d9faa5b51b7ea528b458000b6
-RMD160 (structlog-19.2.0.tar.gz) = 28af19ef74217986f119fa0217e6ec7d5de98f93
-SHA512 (structlog-19.2.0.tar.gz) = 9211ed7ebc146d90b10e5527583b9bfc243a0c18af30da2e88279cbd40b1d6639ed88e12a51a29f43c8a02703f8829422cb4b90971acd7e03e2f624bec6c4fe2
-Size (structlog-19.2.0.tar.gz) = 327709 bytes
+SHA1 (structlog-20.1.0.tar.gz) = 8e0fe9ee26c4d39a0b96be7ceeea12e3565ba691
+RMD160 (structlog-20.1.0.tar.gz) = 30cdae480081f30c8f51aba859eec94758e7d2af
+SHA512 (structlog-20.1.0.tar.gz) = 87e4909e4a8cee396cc9b78212f13819632c303448bea28e78d574b981435aa29dc5620d59785788ae165af805761cbf97fa4d1ec49a3bf3b887ae76c91b18f3
+Size (structlog-20.1.0.tar.gz) = 332376 bytes
