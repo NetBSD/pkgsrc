@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/07 11:18:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/09/30 07:01:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,6 +26,9 @@ ${PYSITELIB}/structlog/_loggers.pyo
 ${PYSITELIB}/structlog/_utils.py
 ${PYSITELIB}/structlog/_utils.pyc
 ${PYSITELIB}/structlog/_utils.pyo
+${PYSITELIB}/structlog/contextvars.py
+${PYSITELIB}/structlog/contextvars.pyc
+${PYSITELIB}/structlog/contextvars.pyo
 ${PYSITELIB}/structlog/dev.py
 ${PYSITELIB}/structlog/dev.pyc
 ${PYSITELIB}/structlog/dev.pyo
@@ -38,6 +41,9 @@ ${PYSITELIB}/structlog/processors.pyo
 ${PYSITELIB}/structlog/stdlib.py
 ${PYSITELIB}/structlog/stdlib.pyc
 ${PYSITELIB}/structlog/stdlib.pyo
+${PYSITELIB}/structlog/testing.py
+${PYSITELIB}/structlog/testing.pyc
+${PYSITELIB}/structlog/testing.pyo
 ${PYSITELIB}/structlog/threadlocal.py
 ${PYSITELIB}/structlog/threadlocal.pyc
 ${PYSITELIB}/structlog/threadlocal.pyo
