@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/30 08:07:56 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/09/30 08:11:05 nia Exp $
 
 PKGNAME=	nxengine-evo-2.6.4
 CATEGORIES=	games
@@ -53,5 +53,6 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
