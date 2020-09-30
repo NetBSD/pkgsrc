@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.97 2020/09/03 07:47:42 wiz Exp $
+$NetBSD: distinfo,v 1.98 2020/09/30 09:22:48 wiz Exp $
 
-SHA1 (mame-0.224.tar.gz) = d69a043b08891a94f7b91a4b22d379e92932abc6
-RMD160 (mame-0.224.tar.gz) = c0fcef9ca22a0ad43d147bf3af4b2953b94eafbd
-SHA512 (mame-0.224.tar.gz) = a5e01dd017cb78a5aea56f48d7bc2375f2c2b8d4c30b47b1e3f543ee74fb9777c01d8e8305655034e28e6929ce8bd82e9b066333f15718b44ded3adcd6df9b5b
-Size (mame-0.224.tar.gz) = 195459458 bytes
+SHA1 (mame-0.225.tar.gz) = 4a79917040b7be3276405d5497dd43e468e57680
+RMD160 (mame-0.225.tar.gz) = a227f3386c03e962cf3b45a42723fc87541809bd
+SHA512 (mame-0.225.tar.gz) = 7160d0d5d849280305efa6129c7d41ee7ffb301c2378059d3d7ca7118cf9f46a76c6dfd65df1a7ddbdfb146a02325803e3eb251a60a26905230ab7a052a8f62f
+Size (mame-0.225.tar.gz) = 195554245 bytes
 SHA1 (patch-3rdparty_asio_include_asio_detail_config.hpp) = 9b0d6139e853d8efb9d51270bbfa5382feac42a7
 SHA1 (patch-3rdparty_asio_include_asio_detail_impl_kqueue__reactor.ipp) = ad5e2171731864528331f2f1d2d43608b1b4ed01
 SHA1 (patch-3rdparty_bgfx_examples_common_font_font__manager.cpp) = 3b52b49bc9bb9e8810a478f13dcc306512acab21
 SHA1 (patch-3rdparty_genie_build_gmake.darwin_genie.make) = bb2e8c06d4b5f5869fb48e06390d5ca94a190056
 SHA1 (patch-makefile) = d04055d8c0a9c3c4965ebe017811936ef01b03a0
 SHA1 (patch-scripts_genie.lua) = 6c72b76c9a9ea952a787bf3994680f8711c8b64a
-SHA1 (patch-src_devices_bus_hp9845__io_98036.cpp) = 4385c4e52dcc4e84690c39f945abd9e2cc97f258
