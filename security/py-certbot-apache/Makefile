@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/08/31 23:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/09/30 09:03:46 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -9,13 +9,11 @@ COMMENT=	Apache plugin for Certbot
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=0.29.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-augeas-[0-9]*:../../sysutils/py-augeas
-DEPENDS+=	${PYPKGPREFIX}-certbot>=0.39.0:../../security/py-certbot
+DEPENDS+=	${PYPKGPREFIX}-certbot>=1.6.0:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ZopeComponent-[0-9]*:../../devel/py-ZopeComponent
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
-
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

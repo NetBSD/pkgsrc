@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/08/26 11:10:14 adam Exp $
+$NetBSD: distinfo,v 1.15 2020/09/30 09:03:46 adam Exp $
 
-SHA1 (certbot-dns-dnsmadeeasy-1.7.0.tar.gz) = e56f1958740551901781c2921a05838400c9cc03
-RMD160 (certbot-dns-dnsmadeeasy-1.7.0.tar.gz) = 1366da552a3ad5c97d3fca7cb50e19c888332110
-SHA512 (certbot-dns-dnsmadeeasy-1.7.0.tar.gz) = d0c834281851aae2ea9a8d342c1ae3628ddde2c5ff2c659eec9417f94305c668d95d2fca25d2e5e7713dc2a28cb1fd1e6dc85caefca7cbe0d83a900857c2ac98
-Size (certbot-dns-dnsmadeeasy-1.7.0.tar.gz) = 12950 bytes
+SHA1 (certbot-dns-dnsmadeeasy-1.8.0.tar.gz) = f376439647585d789b18c624f60367243c1c81ab
+RMD160 (certbot-dns-dnsmadeeasy-1.8.0.tar.gz) = 73d87e228f1e378f4559661394c085ce1b56c1c3
+SHA512 (certbot-dns-dnsmadeeasy-1.8.0.tar.gz) = 237f6c372d040358bec984fd9e86e9e7688241520ee03c78f7ed4c5cbed1d86eef614eb49426a059cb5681fb8e791dcb3a7cf1387ed9ec047bdeca19427284db
+Size (certbot-dns-dnsmadeeasy-1.8.0.tar.gz) = 12983 bytes
