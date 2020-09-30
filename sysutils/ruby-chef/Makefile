@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/09/14 16:59:37 taca Exp $
+# $NetBSD: Makefile,v 1.17 2020/09/30 16:14:50 jperkin Exp $
 
 DISTNAME=	chef-16.0.287
 PKGREVISION=	1
@@ -46,6 +46,8 @@ USE_LANGUAGES=	# none
 
 OVERRIDE_GEMSPEC+=	uuidtools>=2.1.5
 RUBYGEM_OPTIONS+=	--format-executable
+
+RUBY_VERSIONS_INCOMPATIBLE=	25	# ruby-chef-zero
 
 pre-configure:
 	cd ${WRKSRC}/bin && ${FIND} . -type f -exec ${CHMOD} ${BINMODE} {} \;
