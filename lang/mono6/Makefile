@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:09:51 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/09/30 19:50:14 ryoon Exp $
 
-DISTNAME=	mono-6.8.0.105
-PKGREVISION=	6
+DISTNAME=	mono-6.10.0.104
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.xz
@@ -117,15 +116,9 @@ SUBST_MESSAGE.fix-cfgdir=	Fixing configuration files install dir
 SUBST_FILES.fix-cfgdir=		mcs/tools/mconfig/Makefile
 SUBST_SED.fix-cfgdir=		-e 's,$$(sysconfdir)/mono,${EGDIR},g'
 
-SUBST_CLASSES+=			fix-python
-SUBST_STAGE.fix-python=		pre-configure
-SUBST_MESSAGE.fix-python=	Fixing python binary name
-SUBST_FILES.fix-python+=	mono/mini/Makefile.am.in
-SUBST_FILES.fix-python+=	mono/tests/Makefile.am
-SUBST_SED.fix-python=		-e 's,python,${PYTHONBIN},'
-
 # Uses [[ ... ]], not needed during the build.
 CHECK_PORTABILITY_SKIP+=	acceptance-tests/microbench-perf.sh.in
+CHECK_PORTABILITY_SKIP+=	external/llvm-project/polly/lib/External/isl/configure
 
 .include "../../mk/bsd.prefs.mk"
 
