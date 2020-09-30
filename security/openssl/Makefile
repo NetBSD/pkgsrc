@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.263 2020/08/31 18:11:09 wiz Exp $
+# $NetBSD: Makefile,v 1.264 2020/09/30 09:25:30 wiz Exp $
 
-DISTNAME=	openssl-1.1.1g
-PKGREVISION=	3
+DISTNAME=	openssl-1.1.1h
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
