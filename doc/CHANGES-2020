@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5518 2020/09/30 13:56:40 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5519 2020/09/30 13:56:52 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8237,3 +8237,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/prometheus to 2.21.0 [adam 2020-09-30]
 	Updated sysutils/node_exporter to 1.0.1 [adam 2020-09-30]
 	Updated www/nginx-devel to 1.19.3 [otis 2020-09-30]
+	Updated www/nginx to 1.18.0nb2 [otis 2020-09-30]
