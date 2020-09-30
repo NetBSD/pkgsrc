@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/09/30 08:11:05 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/09/30 08:18:51 nia Exp $
 
 PKGNAME=	nxengine-evo-2.6.4
 CATEGORIES=	games
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	nxengine-evo.tar.gz
 DISTFILES+=	cavestoryen.zip
@@ -23,7 +22,6 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	libexec
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
 INSTALLATION_DIRS+=	share/nxengine-evo/data
