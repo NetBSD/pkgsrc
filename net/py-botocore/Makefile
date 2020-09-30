@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2020/08/20 09:46:52 adam Exp $
+# $NetBSD: Makefile,v 1.41 2020/09/30 07:53:21 adam Exp $
 
-DISTNAME=	botocore-1.17.46
+DISTNAME=	botocore-1.18.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/botocore/}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.3:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.20:../../www/py-urllib3
 
