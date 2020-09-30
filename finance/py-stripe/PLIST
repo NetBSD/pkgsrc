@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/08/21 07:55:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/09/30 06:52:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -248,6 +248,9 @@ ${PYSITELIB}/stripe/api_resources/reversal.pyo
 ${PYSITELIB}/stripe/api_resources/review.py
 ${PYSITELIB}/stripe/api_resources/review.pyc
 ${PYSITELIB}/stripe/api_resources/review.pyo
+${PYSITELIB}/stripe/api_resources/setup_attempt.py
+${PYSITELIB}/stripe/api_resources/setup_attempt.pyc
+${PYSITELIB}/stripe/api_resources/setup_attempt.pyo
 ${PYSITELIB}/stripe/api_resources/setup_intent.py
 ${PYSITELIB}/stripe/api_resources/setup_intent.pyc
 ${PYSITELIB}/stripe/api_resources/setup_intent.pyo
