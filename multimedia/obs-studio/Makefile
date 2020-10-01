@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2020/10/01 14:01:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2020/10/01 19:54:32 nia Exp $
 
 DISTNAME=	obs-studio-26.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=obsproject/}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://obsproject.com/
 COMMENT=	Video recording and live streaming software
 LICENSE=	gnu-gpl-v2
