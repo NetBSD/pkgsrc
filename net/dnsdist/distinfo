@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2020/08/06 16:28:03 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/10/01 10:27:58 otis Exp $
 
-SHA1 (dnsdist-1.5.0.tar.bz2) = 34fd90b536976d0ed4dd72e9904519261d0bdbab
-RMD160 (dnsdist-1.5.0.tar.bz2) = 0dd88ed4b3abc8da54d568c35f29f6503b9b626a
-SHA512 (dnsdist-1.5.0.tar.bz2) = df6f8caae001f152f0d264176c570778842979484d16e4199afe0e2591006392444245dd8ce23287cdcf9613e2c40a9e3564f5236e5f5a6fd67b89d6ea0d9ed4
-Size (dnsdist-1.5.0.tar.bz2) = 1067645 bytes
+SHA1 (dnsdist-1.5.1.tar.bz2) = cd1e44374e51d90e897154a5157e060db990f5dd
+RMD160 (dnsdist-1.5.1.tar.bz2) = 9f77b200cb8d079b9f77f411c311393a81271be1
+SHA512 (dnsdist-1.5.1.tar.bz2) = 68fe5f55fd081ed80a620933af9f8310be0e21c86ba449a9c557975b5c83f4b64e3002e6032dc002582d081e70e1ec2ff080c5d8389fd46a9896bdafd5a41f9f
+Size (dnsdist-1.5.1.tar.bz2) = 1068061 bytes
 SHA1 (patch-dnsdist-console.cc) = 4675ca40e738e3d9e15d9a3c6993e1adce102a30
 SHA1 (patch-dnsdist.cc) = 8d3f167e38b6b67bb4d9b7f06dcc0245cf6c904f
 SHA1 (patch-ext_json11_json11.cpp) = 9fb12578d80103b8b92e984a483cbda98fd83db8
