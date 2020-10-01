@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/06/29 14:29:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/10/01 06:53:12 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -39,6 +39,9 @@ ${PYSITELIB}/sanic/constants.pyo
 ${PYSITELIB}/sanic/cookies.py
 ${PYSITELIB}/sanic/cookies.pyc
 ${PYSITELIB}/sanic/cookies.pyo
+${PYSITELIB}/sanic/deprecated.py
+${PYSITELIB}/sanic/deprecated.pyc
+${PYSITELIB}/sanic/deprecated.pyo
 ${PYSITELIB}/sanic/errorpages.py
 ${PYSITELIB}/sanic/errorpages.pyc
 ${PYSITELIB}/sanic/errorpages.pyo
@@ -78,6 +81,9 @@ ${PYSITELIB}/sanic/static.pyo
 ${PYSITELIB}/sanic/testing.py
 ${PYSITELIB}/sanic/testing.pyc
 ${PYSITELIB}/sanic/testing.pyo
+${PYSITELIB}/sanic/utils.py
+${PYSITELIB}/sanic/utils.pyc
+${PYSITELIB}/sanic/utils.pyo
 ${PYSITELIB}/sanic/views.py
 ${PYSITELIB}/sanic/views.pyc
 ${PYSITELIB}/sanic/views.pyo
