@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2020/05/22 10:56:31 adam Exp $
+# $NetBSD: Makefile,v 1.66 2020/10/01 19:45:02 nils Exp $
 #
 
-DISTNAME=		snort-2.9.15.1
-PKGREVISION=		3
+DISTNAME=		snort-2.9.16.1
 CATEGORIES=		net security
 MASTER_SITES=		https://www.snort.org/downloads/archive/snort/
 
@@ -21,7 +20,8 @@ CONFLICTS+=		snort-prelude-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+= 		pkg-config
+USE_TOOLS+=		pkg-config
+USE_TOOLS+=		bash
 PKG_SYSCONFSUBDIR=	snort
 RCD_SCRIPTS=		snort
 SNORT_USER?=		snort
@@ -33,13 +33,13 @@ PKG_GROUPS_VARS+=	SNORT_GROUP
 PKG_USERS_VARS=		SNORT_USER
 FILES_SUBST+=		SNORT_USER=${SNORT_USER} SNORT_GROUP=${SNORT_GROUP}
 BUILD_DEFS+=		VARBASE
-MAKE_JOBS_SAFE=		NO
+MAKE_JOBS_SAFE=		NO # could not compile it on a multi-core system
 OWN_DIRS_PERMS=		${VARBASE}/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
 DOC_FILES=		BUGS INSTALL NEWS PROBLEMS README TODO USAGE WISHLIST
 OWN_DIRS=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/rules
 OWN_DIRS+=		${PKG_SYSCONFDIR}/so_rules ${PKG_SYSCONFDIR}/preproc_rules
 OWN_DIRS+=		${PREFIX}/lib ${PREFIX}/lib/snort_dynamicrules
-INSTALLATION_DIRS+=	${EGDIR}/rules 
+INSTALLATION_DIRS+=	${EGDIR}/rules
 AUTO_MKDIRS=		yes
 
 CONF_FILES=		${EGDIR}/attribute_table.dtd \
@@ -64,6 +64,8 @@ CONF_FILES+=		${EGDIR}/rules/black_list.rules \
 			${PKG_SYSCONFDIR}/rules/black_list.rules
 CONF_FILES+=		${EGDIR}/rules/white_list.rules \
 			${PKG_SYSCONFDIR}/rules/white_list.rules
+
+REPLACE_BASH+=		tools/appid_detector_builder.sh
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
