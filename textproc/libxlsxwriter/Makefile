@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/08/23 22:27:52 sjmulder Exp $
+# $NetBSD: Makefile,v 1.14 2020/10/01 21:10:41 sjmulder Exp $
 
-DISTNAME=	libxlsxwriter-0.9.9
+DISTNAME=	libxlsxwriter-1.0.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmcnamara/}
 GITHUB_TAG=	RELEASE_${PKGVERSION_NOREV}
@@ -20,6 +20,7 @@ USE_TOOLS+=	gmake
 .include "../../lang/python/pyversion.mk"
 
 MAKE_ENV+=	PYTEST=py.test-${PYVERSSUFFIX}
+MAKE_ENV+=	OPT_LEVEL=
 # minizip/ioapi.c has broken logic for checking for fopen64 etc
 CFLAGS+=	-DIOAPI_NO_64 -D_FILE_OFFSET_BITS=64
 
