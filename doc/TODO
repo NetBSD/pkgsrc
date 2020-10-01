@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20103 2020/10/01 09:16:21 wiz Exp $
+$NetBSD: TODO,v 1.20104 2020/10/01 11:58:36 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -780,7 +780,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libuv-1.40.0
 	o libv4l-1.20.0
 	o libvirt-2.3
-	o libwnck3-3.32.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
