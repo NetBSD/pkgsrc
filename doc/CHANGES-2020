@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5530 2020/10/01 09:16:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5531 2020/10/01 09:35:24 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8252,3 +8252,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-city-lite to 2020.10 [fcambus 2020-10-01]
 	Updated net/dbip-country-lite to 2020.10 [fcambus 2020-10-01]
 	Updated textproc/json-c to 0.15 [wiz 2020-10-01]
+	Updated graphics/libansilove to 1.2.6 [fcambus 2020-10-01]
