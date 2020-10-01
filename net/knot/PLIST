@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.16 2019/04/15 16:23:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/10/01 03:37:02 ryoon Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
 bin/knsupdate
 bin/kzonecheck
+bin/kzonesign
 include/knot/module.h
 include/libdnssec/binary.h
 include/libdnssec/crypto.h
@@ -77,11 +78,14 @@ man/man1/khost.1
 man/man1/knsec3hash.1
 man/man1/knsupdate.1
 man/man1/kzonecheck.1
+man/man1/kzonesign.1
 man/man5/knot.conf.5
+man/man8/kcatalogprint.8
 man/man8/keymgr.8
 man/man8/kjournalprint.8
 man/man8/knotc.8
 man/man8/knotd.8
+sbin/kcatalogprint
 sbin/keymgr
 sbin/kjournalprint
 sbin/knotc
