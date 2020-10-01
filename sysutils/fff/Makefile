@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2020/09/28 09:06:21 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/01 08:36:50 pin Exp $
 
 DISTNAME=	fff-2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dylanaraps/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/dylanaraps/fff/
 COMMENT=	Simple file manager written in bash
 LICENSE=	mit
