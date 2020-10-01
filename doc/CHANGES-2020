@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5539 2020/10/01 12:02:05 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.5540 2020/10/01 12:05:30 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8261,3 +8261,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/gtk3 to 3.24.23 [prlw1 2020-10-01]
 	Updated devel/libwnck3 to 3.36.0 [prlw1 2020-10-01]
 	Updated x11/py-Xlib to 0.28 [prlw1 2020-10-01]
+	Updated devel/accerciser to 3.38.0 [prlw1 2020-10-01]
