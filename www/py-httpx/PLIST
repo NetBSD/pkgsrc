@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/03 14:21:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/10/01 06:51:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,9 +23,9 @@ ${PYSITELIB}/httpx/_client.pyo
 ${PYSITELIB}/httpx/_config.py
 ${PYSITELIB}/httpx/_config.pyc
 ${PYSITELIB}/httpx/_config.pyo
-${PYSITELIB}/httpx/_content_streams.py
-${PYSITELIB}/httpx/_content_streams.pyc
-${PYSITELIB}/httpx/_content_streams.pyo
+${PYSITELIB}/httpx/_content.py
+${PYSITELIB}/httpx/_content.pyc
+${PYSITELIB}/httpx/_content.pyo
 ${PYSITELIB}/httpx/_decoders.py
 ${PYSITELIB}/httpx/_decoders.pyc
 ${PYSITELIB}/httpx/_decoders.pyo
@@ -35,6 +35,9 @@ ${PYSITELIB}/httpx/_exceptions.pyo
 ${PYSITELIB}/httpx/_models.py
 ${PYSITELIB}/httpx/_models.pyc
 ${PYSITELIB}/httpx/_models.pyo
+${PYSITELIB}/httpx/_multipart.py
+${PYSITELIB}/httpx/_multipart.pyc
+${PYSITELIB}/httpx/_multipart.pyo
 ${PYSITELIB}/httpx/_status_codes.py
 ${PYSITELIB}/httpx/_status_codes.pyc
 ${PYSITELIB}/httpx/_status_codes.pyo
@@ -44,9 +47,6 @@ ${PYSITELIB}/httpx/_transports/__init__.pyo
 ${PYSITELIB}/httpx/_transports/asgi.py
 ${PYSITELIB}/httpx/_transports/asgi.pyc
 ${PYSITELIB}/httpx/_transports/asgi.pyo
-${PYSITELIB}/httpx/_transports/urllib3.py
-${PYSITELIB}/httpx/_transports/urllib3.pyc
-${PYSITELIB}/httpx/_transports/urllib3.pyo
 ${PYSITELIB}/httpx/_transports/wsgi.py
 ${PYSITELIB}/httpx/_transports/wsgi.pyc
 ${PYSITELIB}/httpx/_transports/wsgi.pyo
