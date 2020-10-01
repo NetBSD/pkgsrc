@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2020/09/04 11:49:46 pin Exp $
+# $NetBSD: Makefile,v 1.4 2020/10/01 08:38:02 pin Exp $
 
 DISTNAME=	ncspot-0.2.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/hrkfdn/ncspot/
 COMMENT=	Cross-platform ncurses Spotify client written in Rust
 LICENSE=	2-clause-bsd
