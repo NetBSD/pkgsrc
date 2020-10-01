@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5547 2020/10/01 19:47:01 nils Exp $
+$NetBSD: CHANGES-2020,v 1.5548 2020/10/01 20:16:08 nils Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8269,3 +8269,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libxls to 1.6.1 [sjmulder 2020-10-01]
 	Updated math/sc-im to 0.7.0nb17 [sjmulder 2020-10-01]
 	Updated net/snort to 2.9.16.1 [nils 2020-10-01]
+	Updated sysutils/logrotate to 3.17.0 [nils 2020-10-01]
