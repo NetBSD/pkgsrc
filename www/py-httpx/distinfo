@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/06/03 14:21:26 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/10/01 06:51:31 adam Exp $
 
-SHA1 (httpx-0.13.3.tar.gz) = 37906a156699303a108bb8e1e8fe8442152c4269
-RMD160 (httpx-0.13.3.tar.gz) = 53753cf6e3a7f7a074903c6023c819ca5192be69
-SHA512 (httpx-0.13.3.tar.gz) = 4c71614bc4910363ac8c3617f5ffb44cd0ab60f9a0736588f13f91e7bef2cc9c84b8e4b1b01c46f1e2af52945ccd627448e2f35bab3d16291d02c27feb7f611c
-Size (httpx-0.13.3.tar.gz) = 59369 bytes
+SHA1 (httpx-0.15.4.tar.gz) = 463ec1f2555305ab509f59254ff08e1279f8dbd1
+RMD160 (httpx-0.15.4.tar.gz) = 1450476f35ca50a49b52913e2ab59613d206ef87
+SHA512 (httpx-0.15.4.tar.gz) = bf392829e132451a9014f76d255c337209dc9f7fd2b40a586cb18c1d97ceb61ecee023235c40d8cbf2fe84a45b88e9de0ecc4f70e88471615471b88f9773b3f8
+Size (httpx-0.15.4.tar.gz) = 82006 bytes
