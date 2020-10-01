@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5551 2020/10/01 21:04:27 nils Exp $
+$NetBSD: CHANGES-2020,v 1.5552 2020/10/01 21:11:01 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8273,3 +8273,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/micro to 2.0.7 [sjmulder 2020-10-01]
 	Updated devel/protobuf-c to 1.3.3 [gdt 2020-10-01]
 	Updated net/pulledpork to 0.7.4 [nils 2020-10-01]
+	Updated textproc/libxlsxwriter to 1.0.0 [sjmulder 2020-10-01]
