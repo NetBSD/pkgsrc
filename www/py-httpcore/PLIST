@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/03 14:18:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/01 06:48:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/httpcore/_async/connection.pyo
 ${PYSITELIB}/httpcore/_async/connection_pool.py
 ${PYSITELIB}/httpcore/_async/connection_pool.pyc
 ${PYSITELIB}/httpcore/_async/connection_pool.pyo
+${PYSITELIB}/httpcore/_async/http.py
+${PYSITELIB}/httpcore/_async/http.pyc
+${PYSITELIB}/httpcore/_async/http.pyo
 ${PYSITELIB}/httpcore/_async/http11.py
 ${PYSITELIB}/httpcore/_async/http11.pyc
 ${PYSITELIB}/httpcore/_async/http11.pyo
@@ -32,6 +35,9 @@ ${PYSITELIB}/httpcore/_async/http_proxy.pyo
 ${PYSITELIB}/httpcore/_backends/__init__.py
 ${PYSITELIB}/httpcore/_backends/__init__.pyc
 ${PYSITELIB}/httpcore/_backends/__init__.pyo
+${PYSITELIB}/httpcore/_backends/anyio.py
+${PYSITELIB}/httpcore/_backends/anyio.pyc
+${PYSITELIB}/httpcore/_backends/anyio.pyo
 ${PYSITELIB}/httpcore/_backends/asyncio.py
 ${PYSITELIB}/httpcore/_backends/asyncio.pyc
 ${PYSITELIB}/httpcore/_backends/asyncio.pyo
@@ -41,12 +47,18 @@ ${PYSITELIB}/httpcore/_backends/auto.pyo
 ${PYSITELIB}/httpcore/_backends/base.py
 ${PYSITELIB}/httpcore/_backends/base.pyc
 ${PYSITELIB}/httpcore/_backends/base.pyo
+${PYSITELIB}/httpcore/_backends/curio.py
+${PYSITELIB}/httpcore/_backends/curio.pyc
+${PYSITELIB}/httpcore/_backends/curio.pyo
 ${PYSITELIB}/httpcore/_backends/sync.py
 ${PYSITELIB}/httpcore/_backends/sync.pyc
 ${PYSITELIB}/httpcore/_backends/sync.pyo
 ${PYSITELIB}/httpcore/_backends/trio.py
 ${PYSITELIB}/httpcore/_backends/trio.pyc
 ${PYSITELIB}/httpcore/_backends/trio.pyo
+${PYSITELIB}/httpcore/_bytestreams.py
+${PYSITELIB}/httpcore/_bytestreams.pyc
+${PYSITELIB}/httpcore/_bytestreams.pyo
 ${PYSITELIB}/httpcore/_exceptions.py
 ${PYSITELIB}/httpcore/_exceptions.pyc
 ${PYSITELIB}/httpcore/_exceptions.pyo
@@ -62,6 +74,9 @@ ${PYSITELIB}/httpcore/_sync/connection.pyo
 ${PYSITELIB}/httpcore/_sync/connection_pool.py
 ${PYSITELIB}/httpcore/_sync/connection_pool.pyc
 ${PYSITELIB}/httpcore/_sync/connection_pool.pyo
+${PYSITELIB}/httpcore/_sync/http.py
+${PYSITELIB}/httpcore/_sync/http.pyc
+${PYSITELIB}/httpcore/_sync/http.pyo
 ${PYSITELIB}/httpcore/_sync/http11.py
 ${PYSITELIB}/httpcore/_sync/http11.pyc
 ${PYSITELIB}/httpcore/_sync/http11.pyo
