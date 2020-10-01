@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5543 2020/10/01 14:01:42 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5544 2020/10/01 19:12:57 nils Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8265,3 +8265,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xenkernel413 to 4.13.1nb2 [bouyer 2020-10-01]
 	Updated x11/gtksourceview4 to 4.8.0 [prlw1 2020-10-01]
 	Updated multimedia/obs-studio to 26.0.0 [ryoon 2020-10-01]
+	Updated net/daq to 2.0.7 [nils 2020-10-01]
