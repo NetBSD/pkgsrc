@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.331 2020/07/17 06:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.332 2020/10/01 09:14:10 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -163,6 +163,7 @@ SUBDIR+=	osf1_lib
 SUBDIR+=	p11
 SUBDIR+=	palmosemulator
 SUBDIR+=	pcemu
+SUBDIR+=	pcsxr
 SUBDIR+=	pearpc
 SUBDIR+=	py-keystone
 SUBDIR+=	py-unicorn
