@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5526 2020/10/01 08:02:23 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5527 2020/10/01 08:20:17 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8248,3 +8248,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-sanic to 20.9.0 [adam 2020-10-01]
 	Updated devel/py-more-itertools to 8.5.0 [adam 2020-10-01]
 	Updated net/phetch to 1.0.6 [pin 2020-10-01]
+	Updated net/dbip-asn-lite to 2020.10 [fcambus 2020-10-01]
