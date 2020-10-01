@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/03/10 22:48:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/10/01 13:40:33 prlw1 Exp $
 include/gtksourceview-4/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 include/gtksourceview-4/gtksourceview/gtksource-enumtypes.h
 include/gtksourceview-4/gtksourceview/gtksource.h
@@ -41,12 +41,12 @@ include/gtksourceview-4/gtksourceview/gtksourceundomanager.h
 include/gtksourceview-4/gtksourceview/gtksourceutils.h
 include/gtksourceview-4/gtksourceview/gtksourceversion.h
 include/gtksourceview-4/gtksourceview/gtksourceview.h
-lib/girepository-1.0/GtkSource-4.typelib
+${PLIST.introspection}lib/girepository-1.0/GtkSource-4.typelib
 lib/libgtksourceview-4.so
 lib/libgtksourceview-4.so.0
 lib/libgtksourceview-4.so.0.0.0
 lib/pkgconfig/gtksourceview-4.pc
-share/gir-1.0/GtkSource-4.gir
+${PLIST.introspection}share/gir-1.0/GtkSource-4.gir
 share/gtksourceview-4/language-specs/R.lang
 share/gtksourceview-4/language-specs/abnf.lang
 share/gtksourceview-4/language-specs/actionscript.lang
@@ -86,6 +86,9 @@ share/gtksourceview-4/language-specs/dpatch.lang
 share/gtksourceview-4/language-specs/dtd.lang
 share/gtksourceview-4/language-specs/dtl.lang
 share/gtksourceview-4/language-specs/eiffel.lang
+share/gtksourceview-4/language-specs/erb-html.lang
+share/gtksourceview-4/language-specs/erb-js.lang
+share/gtksourceview-4/language-specs/erb.lang
 share/gtksourceview-4/language-specs/erlang.lang
 share/gtksourceview-4/language-specs/fcl.lang
 share/gtksourceview-4/language-specs/fish.lang
@@ -198,7 +201,6 @@ share/gtksourceview-4/language-specs/typescript-js-functions-classes.lang
 share/gtksourceview-4/language-specs/typescript-js-literals.lang
 share/gtksourceview-4/language-specs/typescript-js-modules.lang
 share/gtksourceview-4/language-specs/typescript-js-statements.lang
-share/gtksourceview-4/language-specs/typescript-js-values.lang
 share/gtksourceview-4/language-specs/typescript-jsx.lang
 share/gtksourceview-4/language-specs/typescript-type-expressions.lang
 share/gtksourceview-4/language-specs/typescript-type-generics.lang
@@ -212,6 +214,7 @@ share/gtksourceview-4/language-specs/xml.lang
 share/gtksourceview-4/language-specs/xslt.lang
 share/gtksourceview-4/language-specs/yacc.lang
 share/gtksourceview-4/language-specs/yaml.lang
+share/gtksourceview-4/language-specs/yara.lang
 share/gtksourceview-4/styles/classic.xml
 share/gtksourceview-4/styles/cobalt.xml
 share/gtksourceview-4/styles/kate.xml
