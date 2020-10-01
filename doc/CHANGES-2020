@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5523 2020/10/01 03:37:23 wen Exp $
+$NetBSD: CHANGES-2020,v 1.5524 2020/10/01 03:38:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8242,3 +8242,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/grep to 3.5 [ryoon 2020-09-30]
 	Updated lang/mono6 to 6.10.0.104 [ryoon 2020-09-30]
 	Updated www/moodle to 3.9.2 [wen 2020-10-01]
+	Updated net/knot to 3.0.0 [ryoon 2020-10-01]
