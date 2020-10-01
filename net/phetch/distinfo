@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2020/09/28 20:05:25 pin Exp $
+$NetBSD: distinfo,v 1.3 2020/10/01 08:02:00 pin Exp $
 
 SHA1 (atty-0.2.14.crate) = 9b4bfe6daebdd3d13a8a605bf44f64d4e831e804
 RMD160 (atty-0.2.14.crate) = 63c38cbe0fc07a4533253427a164612b456094cf
@@ -84,10 +84,10 @@ SHA1 (openssl-sys-0.9.53.crate) = b88bef0ae8081f9ad3d86303b73a5e7f722424ec
 RMD160 (openssl-sys-0.9.53.crate) = ecd2ba0ec31ee721899801059383b35aaaab2996
 SHA512 (openssl-sys-0.9.53.crate) = da0b34b5a58abf1b7e40dcdc1d9f4f6f0f8a4d5d8bb7b7417025a6ecf73145e80304541d2944050c162d7a9b1835434a9d7d2fb670d5cf1065055c09e35f940d
 Size (openssl-sys-0.9.53.crate) = 45434 bytes
-SHA1 (phetch-1.0.5.tar.gz) = 6e5699eb742694971e5553abeea91cb57dd07ff7
-RMD160 (phetch-1.0.5.tar.gz) = a82298ccc7bad5579b9ff84112281fc0e240c22e
-SHA512 (phetch-1.0.5.tar.gz) = 52de0f7a1ed68f112553b0ddd5a26dc113ee3b323dbdbc6c0fc6f5d6754b9be3c46c7c7d635e4a3be8332bbe42b0798883ce743b92110db89013372145be0f6d
-Size (phetch-1.0.5.tar.gz) = 7556326 bytes
+SHA1 (phetch-1.0.6.tar.gz) = 2a8749abbe2a435655ffc63d0beb871a794a1f43
+RMD160 (phetch-1.0.6.tar.gz) = 449567ddda92c7379490d2eeff37a8cd9692fa6f
+SHA512 (phetch-1.0.6.tar.gz) = 4600aee31d28e1d19cd5cc52ec70370455f43314cc2f427db3697af38dee076828692165a7d33a93e3dbd3882bca2e0041d4757b09cd2e7923b1778f58e1817d
+Size (phetch-1.0.6.tar.gz) = 7556350 bytes
 SHA1 (pkg-config-0.3.17.crate) = 61ed3f397e181cd188a7cf9d7f80f5d9a52abc5d
 RMD160 (pkg-config-0.3.17.crate) = 4b14f27e39f76fd3018919c46552268ed018be1e
 SHA512 (pkg-config-0.3.17.crate) = 42be78556adc07dffa8933ab1436d5d6a776018898377d58dfdc9f961981f9f21397301b41536c55d8a3772bf74a38069899d1a5cddce5c24a032017137044bc
