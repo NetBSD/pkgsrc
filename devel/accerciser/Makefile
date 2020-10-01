@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2020/08/17 20:18:22 leot Exp $
+# $NetBSD: Makefile,v 1.40 2020/10/01 12:05:13 prlw1 Exp $
 
-DISTNAME=	accerciser-3.34.0
-PKGREVISION=	3
+DISTNAME=	accerciser-3.38.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,7 +21,7 @@ REPLACE_PYTHON+=	src/accerciser.in
 
 TOOL_DEPENDS+=		gettext-tools>=0.19.8:../../devel/gettext-tools
 _TOOLS_USE_PKGSRC.msgfmt= yes
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
 
 DEPENDS+=	libwnck3-[0-9]*:../../devel/libwnck3
 DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
