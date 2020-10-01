@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5525 2020/10/01 06:59:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5526 2020/10/01 08:02:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8247,3 +8247,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-httpx to 0.15.4 [adam 2020-10-01]
 	Updated www/py-sanic to 20.9.0 [adam 2020-10-01]
 	Updated devel/py-more-itertools to 8.5.0 [adam 2020-10-01]
+	Updated net/phetch to 1.0.6 [pin 2020-10-01]
