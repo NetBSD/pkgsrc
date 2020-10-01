@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5541 2020/10/01 12:42:07 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.5542 2020/10/01 13:40:50 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8263,3 +8263,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/py-Xlib to 0.28 [prlw1 2020-10-01]
 	Updated devel/accerciser to 3.38.0 [prlw1 2020-10-01]
 	Updated sysutils/xenkernel413 to 4.13.1nb2 [bouyer 2020-10-01]
+	Updated x11/gtksourceview4 to 4.8.0 [prlw1 2020-10-01]
