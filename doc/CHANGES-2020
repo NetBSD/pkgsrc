@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5548 2020/10/01 20:16:08 nils Exp $
+$NetBSD: CHANGES-2020,v 1.5549 2020/10/01 20:23:42 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8270,3 +8270,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/sc-im to 0.7.0nb17 [sjmulder 2020-10-01]
 	Updated net/snort to 2.9.16.1 [nils 2020-10-01]
 	Updated sysutils/logrotate to 3.17.0 [nils 2020-10-01]
+	Updated editors/micro to 2.0.7 [sjmulder 2020-10-01]
