@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5537 2020/10/01 11:55:06 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.5538 2020/10/01 11:58:36 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8259,3 +8259,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/at-spi2-atk to 2.38.0 [prlw1 2020-10-01]
 	Updated devel/py-at-spi2 to 2.38.0 [prlw1 2020-10-01]
 	Updated x11/gtk3 to 3.24.23 [prlw1 2020-10-01]
+	Updated devel/libwnck3 to 3.36.0 [prlw1 2020-10-01]
