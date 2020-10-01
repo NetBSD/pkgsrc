@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5546 2020/10/01 19:35:53 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.5547 2020/10/01 19:47:01 nils Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8268,3 +8268,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/daq to 2.0.7 [nils 2020-10-01]
 	Updated textproc/libxls to 1.6.1 [sjmulder 2020-10-01]
 	Updated math/sc-im to 0.7.0nb17 [sjmulder 2020-10-01]
+	Updated net/snort to 2.9.16.1 [nils 2020-10-01]
