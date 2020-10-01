@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2020/02/18 23:00:26 sevan Exp $
+# $NetBSD: options.mk,v 1.10 2020/10/01 19:45:02 nils Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snort
 
@@ -95,7 +95,6 @@ SUBST_MESSAGE.conf=	Fixing configuration script.
 ###
 .if !empty(PKG_OPTIONS:Msnort-flexresp2)
 .include "../../devel/libnet11/buildlink3.mk"
-.include "../../net/libdnet/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libnet-includes=${BUILDLINK_PREFIX.libnet11}/include/libnet11
 CONFIGURE_ARGS+=	--with-libnet-libraries=${BUILDLINK_PREFIX.libnet11}/lib/libnet11
 CONFIGURE_ARGS+=	--enable-flexresp2
