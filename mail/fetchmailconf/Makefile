@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2020/08/27 16:05:39 triaxx Exp $
+# $NetBSD: Makefile,v 1.107 2020/10/02 08:20:27 triaxx Exp $
 
-DISTNAME=	fetchmail-6.4.8
+DISTNAME=	fetchmail-6.4.12
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.fetchmail.info/
 COMMENT=	Configuration tool for fetchmail
+LICENSE=	gnu-gpl-v1 AND gnu-gpl-v2 AND modified-bsd AND public-domain AND gnu-lgpl-v2.1
 
 DEPENDS+=	${DISTNAME}{,nb*}:../../mail/fetchmail
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
