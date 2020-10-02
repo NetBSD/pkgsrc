@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/09/03 07:29:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2020/10/02 19:44:47 bsiegert Exp $
 
-DISTNAME=	gopkgs-1.3.2
+DISTNAME=	gopkgs-2.1.2
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	20
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uudashr/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	gopkgs
@@ -13,8 +12,14 @@ HOMEPAGE=	https://github.com/uudashr/gopkgs
 COMMENT=	Tool to get the list of available Go packages
 LICENSE=	mit
 
-GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-GO_SRCPATH=	github.com/uudashr/gopkgs
+WRKSRC=		${WRKDIR}/${DISTNAME}/v2
 
-.include "../../lang/go/go-package.mk"
+GO_BUILD_PATTERN=	./cmd/gopkgs
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/gopkgs ${DESTDIR}${PREFIX}/bin
+
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
