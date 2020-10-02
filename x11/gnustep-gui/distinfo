@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.28 2015/11/04 03:28:31 agc Exp $
+$NetBSD: distinfo,v 1.29 2020/10/02 23:47:28 mef Exp $
 
-SHA1 (gnustep-gui-0.22.0.tar.gz) = dc9654ea3437810a9b4bfd3d2193a25628a88b41
-RMD160 (gnustep-gui-0.22.0.tar.gz) = 20153480d712a148e9e504f09273f70e1ba2f6d2
-SHA512 (gnustep-gui-0.22.0.tar.gz) = b9704ac2147f9154acf4077fa8fe691180966535789d2495409d8688738597af1e025eebb5397180a680d3aeb285233608de05b5ec89cb2f7ef2b152865a7afb
-Size (gnustep-gui-0.22.0.tar.gz) = 2734733 bytes
-SHA1 (patch-Headers_AppKit_NSNibDeclarations.h) = 6195f4771b515b20a7bdf998c2f2eec37b5fb856
-SHA1 (patch-Source_NSBitmapImageRep+GIF.m) = 6615553063802931102f160571ed13ffd5c86968
-SHA1 (patch-Source_NSBitmapImageRep+PNG.m) = 089f3bbb54f1fb3449cf34d69e09a82fb4dffc59
+SHA1 (gnustep-gui/gui-0_28_0.tar.gz) = 32496c4ebc5260358b65e3b02f422ad20b9915b3
+RMD160 (gnustep-gui/gui-0_28_0.tar.gz) = 53106237f12251b3f5d62c1acc503abb5c23ee75
+SHA512 (gnustep-gui/gui-0_28_0.tar.gz) = ccef19bbdf7bf51b992b941ed1bbd2e1aeabe83e2fd040a75b9fbfd77c90722f80de416e61ac37ee5d6eb5ced26efe0a1aeec49374db9c8c4237bc5b59182371
+Size (gnustep-gui/gui-0_28_0.tar.gz) = 2933423 bytes

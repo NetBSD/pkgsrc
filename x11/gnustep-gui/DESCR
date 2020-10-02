@@ -1,1 +1,7 @@
-  This package contains the GUI and AppKit classes for GNUstep.
+The GNUstep gui library is a library of graphical user interface classes
+written completely in the Objective-C language; the classes are based
+upon Apple's Cocoa framwork (which came from the OpenStep
+specification).  These classes include graphical objects such as
+buttons, text fields, popup lists, browser lists, and windows; there are
+also many associated classes for handling events, colors, fonts,
+pasteboards and images.
