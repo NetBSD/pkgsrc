@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20106 2020/10/02 09:20:08 wiz Exp $
+$NetBSD: TODO,v 1.20107 2020/10/02 09:21:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -934,7 +934,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pim6sd-20040824a
 	o pinfo-0.6.10
 	o pioneers-15.5
-	o pkgconf-1.7.3
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.11
