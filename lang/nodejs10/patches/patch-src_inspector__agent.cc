@@ -1,13 +1,13 @@
-$NetBSD: patch-src_inspector__agent.cc,v 1.1 2019/12/09 20:05:40 adam Exp $
+$NetBSD: patch-src_inspector__agent.cc,v 1.2 2020/10/02 12:23:54 adam Exp $
 
---- src/inspector_agent.cc.orig	2017-05-30 17:32:13.000000000 +0000
+--- src/inspector_agent.cc.orig	2020-09-15 13:25:39.000000000 +0000
 +++ src/inspector_agent.cc
-@@ -96,7 +96,7 @@ static int RegisterDebugSignalHandler()
-   // Don't shrink the thread's stack on FreeBSD.  Said platform decided to
-   // follow the pthreads specification to the letter rather than in spirit:
-   // https://lists.freebsd.org/pipermail/freebsd-current/2014-March/048885.html
--#ifndef __FreeBSD__
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__) 
-   CHECK_EQ(0, pthread_attr_setstacksize(&attr, PTHREAD_STACK_MIN));
- #endif  // __FreeBSD__
-   CHECK_EQ(0, pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED));
+@@ -102,7 +102,7 @@ static int StartDebugSignalHandler() {
+   CHECK_EQ(0, uv_sem_init(&start_io_thread_semaphore, 0));
+   pthread_attr_t attr;
+   CHECK_EQ(0, pthread_attr_init(&attr));
+-#if defined(PTHREAD_STACK_MIN) && !defined(__FreeBSD__)
++#if defined(PTHREAD_STACK_MIN) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+   // PTHREAD_STACK_MIN is 2 KB with musl libc, which is too small to safely
+   // receive signals. PTHREAD_STACK_MIN + MINSIGSTKSZ is 8 KB on arm64, which
+   // is the musl architecture with the biggest MINSIGSTKSZ so let's use that
