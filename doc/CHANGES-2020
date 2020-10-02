@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5568 2020/10/02 12:01:19 wen Exp $
+$NetBSD: CHANGES-2020,v 1.5569 2020/10/02 12:26:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8282,6 +8282,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-numpy to 1.19.2 [adam 2020-10-02]
 	Updated devel/ccache to 3.7.12 [adam 2020-10-02]
 	Updated www/py-uvicorn to 0.12.1 [adam 2020-10-02]
+	Updated math/py-numba to 0.51.2 [adam 2020-10-02]
+	Updated textproc/py-markovify to 0.8.3 [adam 2020-10-02]
 	Updated mail/fetchmail to 6.4.12 [triaxx 2020-10-02]
 	Updated mail/fetchmailconf to 6.4.12 [triaxx 2020-10-02]
 	Updated net/mtr to 0.94 [wiz 2020-10-02]
@@ -8291,3 +8293,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added emulators/xroar version 0.36.2 [ryoon 2020-10-02]
 	Updated math/R-car to 3.0.10 [wen 2020-10-02]
 	Updated www/p5-HTTP-CookieJar to 0.010 [wen 2020-10-02]
+	Updated devel/libuv to 1.40.0 [adam 2020-10-02]
+	Updated lang/nodejs10 to 10.22.1 [adam 2020-10-02]
+	Updated lang/nodejs12 to 12.18.4 [adam 2020-10-02]
+	Updated lang/nodejs to 14.13.0 [adam 2020-10-02]
