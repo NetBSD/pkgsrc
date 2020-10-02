@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/02 10:25:03 ryoon Exp $
+bin/xroar
+info/xroar.info
+man/man1/xroar.1
