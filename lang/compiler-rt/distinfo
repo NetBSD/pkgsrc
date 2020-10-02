@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.10 2020/09/26 02:08:10 khorben Exp $
+$NetBSD: distinfo,v 1.11 2020/10/02 14:20:34 khorben Exp $
 
 SHA1 (compiler-rt-10.0.1.src.tar.xz) = ee6077b4728b3c750e476938cead11cea45b49ff
 RMD160 (compiler-rt-10.0.1.src.tar.xz) = 7912cb7c636894f0682b91d04ea0dfe512f01124
 SHA512 (compiler-rt-10.0.1.src.tar.xz) = a1d2e3f5ad529a04f87059903b31fc3c9803cd86f44aed1aebd87ce7e423d8dd2b6776be12e85a0374a6215f581420438d224c130aad5e6355920af32c02aa7b
 Size (compiler-rt-10.0.1.src.tar.xz) = 2085712 bytes
 SHA1 (patch-cmake_config-ix.cmake) = e950d8781f00638310b523b6933889a9d15611c5
-SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cpp) = f812d5a5f6870e1ed2fe31d0bca1f79d8c16fa9a
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp) = 53c60eb4a1e7be5a60c7b4fff2d245daef54653d
