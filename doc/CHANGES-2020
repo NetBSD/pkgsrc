@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5557 2020/10/02 07:44:31 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5558 2020/10/02 08:11:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8280,3 +8280,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-IO-HTML to 1.004 [wen 2020-10-02]
 	Updated www/py-httpx to 0.15.5 [adam 2020-10-02]
 	Updated math/py-numpy to 1.19.2 [adam 2020-10-02]
+	Updated devel/ccache to 3.7.12 [adam 2020-10-02]
+	Updated www/py-uvicorn to 0.12.1 [adam 2020-10-02]
