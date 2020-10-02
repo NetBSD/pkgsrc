@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/12/29 01:08:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/10/02 16:49:36 ryoon Exp $
 cross/x86_64-w64-mingw32/mingw/include/agtctl_i.c
 cross/x86_64-w64-mingw32/mingw/include/agtsvr_i.c
 cross/x86_64-w64-mingw32/mingw/include/cdoex_i.c
@@ -69,6 +69,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libbasesrv.a
 cross/x86_64-w64-mingw32/mingw/lib/libbatmeter.a
 cross/x86_64-w64-mingw32/mingw/lib/libbatt.a
 cross/x86_64-w64-mingw32/mingw/lib/libbcrypt.a
+cross/x86_64-w64-mingw32/mingw/lib/libbluetoothapis.a
 cross/x86_64-w64-mingw32/mingw/lib/libbootvid.a
 cross/x86_64-w64-mingw32/mingw/lib/libbrowser.a
 cross/x86_64-w64-mingw32/mingw/lib/libbthci.a
@@ -127,7 +128,9 @@ cross/x86_64-w64-mingw32/mingw/lib/libcscdll.a
 cross/x86_64-w64-mingw32/mingw/lib/libcscui.a
 cross/x86_64-w64-mingw32/mingw/lib/libcsrsrv.a
 cross/x86_64-w64-mingw32/mingw/lib/libd2d1.a
+cross/x86_64-w64-mingw32/mingw/lib/libd3d10.a
 cross/x86_64-w64-mingw32/mingw/lib/libd3d11.a
+cross/x86_64-w64-mingw32/mingw/lib/libd3d12.a
 cross/x86_64-w64-mingw32/mingw/lib/libd3d8thk.a
 cross/x86_64-w64-mingw32/mingw/lib/libd3d9.a
 cross/x86_64-w64-mingw32/mingw/lib/libd3dcompiler.a
@@ -205,6 +208,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libdimsroam.a
 cross/x86_64-w64-mingw32/mingw/lib/libdinput.a
 cross/x86_64-w64-mingw32/mingw/lib/libdinput8.a
 cross/x86_64-w64-mingw32/mingw/lib/libdiskcopy.a
+cross/x86_64-w64-mingw32/mingw/lib/libdismapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libdmconfig.a
 cross/x86_64-w64-mingw32/mingw/lib/libdmdskmgr.a
 cross/x86_64-w64-mingw32/mingw/lib/libdmivcitf.a
@@ -297,6 +301,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libhnetcfg.a
 cross/x86_64-w64-mingw32/mingw/lib/libhnetwiz.a
 cross/x86_64-w64-mingw32/mingw/lib/libhostmib.a
 cross/x86_64-w64-mingw32/mingw/lib/libhotplug.a
+cross/x86_64-w64-mingw32/mingw/lib/libhtmlhelp.a
 cross/x86_64-w64-mingw32/mingw/lib/libhtrn_jis.a
 cross/x86_64-w64-mingw32/mingw/lib/libhttpapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libhttpext.a
@@ -375,6 +380,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libkerberos.a
 cross/x86_64-w64-mingw32/mingw/lib/libkernel32.a
 cross/x86_64-w64-mingw32/mingw/lib/libkeymgr.a
 cross/x86_64-w64-mingw32/mingw/lib/libks.a
+cross/x86_64-w64-mingw32/mingw/lib/libksecdd.a
 cross/x86_64-w64-mingw32/mingw/lib/libksguid.a
 cross/x86_64-w64-mingw32/mingw/lib/libksuser.a
 cross/x86_64-w64-mingw32/mingw/lib/libktmw32.a
@@ -411,6 +417,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libmf3216.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfc42.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfc42u.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfplat.a
+cross/x86_64-w64-mingw32/mingw/lib/libmfreadwrite.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfuuid.a
 cross/x86_64-w64-mingw32/mingw/lib/libmgmtapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libmidimap.a
@@ -424,6 +431,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libmlang.a
 cross/x86_64-w64-mingw32/mingw/lib/libmll_hp.a
 cross/x86_64-w64-mingw32/mingw/lib/libmll_mtf.a
 cross/x86_64-w64-mingw32/mingw/lib/libmll_qic.a
+cross/x86_64-w64-mingw32/mingw/lib/libmmdevapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libmmfutil.a
 cross/x86_64-w64-mingw32/mingw/lib/libmmutilse.a
 cross/x86_64-w64-mingw32/mingw/lib/libmobsync.a
@@ -527,6 +535,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libndisnpp.a
 cross/x86_64-w64-mingw32/mingw/lib/libnetapi32.a
 cross/x86_64-w64-mingw32/mingw/lib/libnetcfgx.a
 cross/x86_64-w64-mingw32/mingw/lib/libnetid.a
+cross/x86_64-w64-mingw32/mingw/lib/libnetio.a
 cross/x86_64-w64-mingw32/mingw/lib/libnetlogon.a
 cross/x86_64-w64-mingw32/mingw/lib/libnetman.a
 cross/x86_64-w64-mingw32/mingw/lib/libnetoc.a
@@ -601,7 +610,9 @@ cross/x86_64-w64-mingw32/mingw/lib/libpolstore.a
 cross/x86_64-w64-mingw32/mingw/lib/libportabledeviceguids.a
 cross/x86_64-w64-mingw32/mingw/lib/libpowrprof.a
 cross/x86_64-w64-mingw32/mingw/lib/libprintui.a
+cross/x86_64-w64-mingw32/mingw/lib/libprntvpt.a
 cross/x86_64-w64-mingw32/mingw/lib/libprofmap.a
+cross/x86_64-w64-mingw32/mingw/lib/libpropsys.a
 cross/x86_64-w64-mingw32/mingw/lib/libpsapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libpsbase.a
 cross/x86_64-w64-mingw32/mingw/lib/libpschdprf.a
@@ -646,7 +657,7 @@ cross/x86_64-w64-mingw32/mingw/lib/librpcref.a
 cross/x86_64-w64-mingw32/mingw/lib/librpcrt4.a
 cross/x86_64-w64-mingw32/mingw/lib/librpcss.a
 cross/x86_64-w64-mingw32/mingw/lib/librsaenh.a
-cross/x86_64-w64-mingw32/mingw/lib/librstrmgr.a
+cross/x86_64-w64-mingw32/mingw/lib/librstrtmgr.a
 cross/x86_64-w64-mingw32/mingw/lib/librtm.a
 cross/x86_64-w64-mingw32/mingw/lib/librtutils.a
 cross/x86_64-w64-mingw32/mingw/lib/libruntimeobject.a
@@ -744,6 +755,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libtsd32.a
 cross/x86_64-w64-mingw32/mingw/lib/libtsoc.a
 cross/x86_64-w64-mingw32/mingw/lib/libtxfw32.a
 cross/x86_64-w64-mingw32/mingw/lib/libucrt.a
+cross/x86_64-w64-mingw32/mingw/lib/libucrtapp.a
 cross/x86_64-w64-mingw32/mingw/lib/libucrtbase.a
 cross/x86_64-w64-mingw32/mingw/lib/libudhisapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libufat.a
@@ -804,6 +816,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libwdsutil.a
 cross/x86_64-w64-mingw32/mingw/lib/libwebcheck.a
 cross/x86_64-w64-mingw32/mingw/lib/libwebclnt.a
 cross/x86_64-w64-mingw32/mingw/lib/libwebhits.a
+cross/x86_64-w64-mingw32/mingw/lib/libwebsocket.a
 cross/x86_64-w64-mingw32/mingw/lib/libwecapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libwer.a
 cross/x86_64-w64-mingw32/mingw/lib/libwevtapi.a
@@ -812,10 +825,13 @@ cross/x86_64-w64-mingw32/mingw/lib/libwiadss.a
 cross/x86_64-w64-mingw32/mingw/lib/libwiarpc.a
 cross/x86_64-w64-mingw32/mingw/lib/libwiaservc.a
 cross/x86_64-w64-mingw32/mingw/lib/libwiashext.a
+cross/x86_64-w64-mingw32/mingw/lib/libwimgapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libwindowsapp.a
 cross/x86_64-w64-mingw32/mingw/lib/libwindowscodecs.a
 cross/x86_64-w64-mingw32/mingw/lib/libwinfax.a
 cross/x86_64-w64-mingw32/mingw/lib/libwinhttp.a
+cross/x86_64-w64-mingw32/mingw/lib/libwinhvemulation.a
+cross/x86_64-w64-mingw32/mingw/lib/libwinhvplatform.a
 cross/x86_64-w64-mingw32/mingw/lib/libwininet.a
 cross/x86_64-w64-mingw32/mingw/lib/libwinipsec.a
 cross/x86_64-w64-mingw32/mingw/lib/libwinmm.a
