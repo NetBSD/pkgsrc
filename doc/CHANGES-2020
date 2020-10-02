@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5559 2020/10/02 08:23:35 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.5560 2020/10/02 08:26:44 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8283,3 +8283,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ccache to 3.7.12 [adam 2020-10-02]
 	Updated www/py-uvicorn to 0.12.1 [adam 2020-10-02]
 	Updated mail/fetchmail to 6.4.12 [triaxx 2020-10-02]
+	Updated mail/fetchmailconf to 6.4.12 [triaxx 2020-10-02]
