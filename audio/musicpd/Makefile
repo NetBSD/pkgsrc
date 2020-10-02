@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.225 2020/08/18 17:57:38 leot Exp $
+# $NetBSD: Makefile,v 1.226 2020/10/02 09:47:09 wiz Exp $
 
-DISTNAME=	mpd-0.21.25
+DISTNAME=	mpd-0.22
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=	2
 CATEGORIES=	audio
-MASTER_SITES=	https://www.musicpd.org/download/mpd/0.21/
+MASTER_SITES=	https://www.musicpd.org/download/mpd/0.22/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,10 +16,10 @@ CONFLICTS=	mpd-[0-9]*
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-# c++14
-GCC_REQD+=	6
+# c++17
+GCC_REQD+=	8
 
-MESON_ARGS+=	-Ddocumentation=true
+MESON_ARGS+=	-Ddocumentation=enabled
 
 # worrying libraries with limited maintainance:
 # - audiofile, many CVEs, no activity since 2016
@@ -112,7 +111,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/mpdconf.example ${DESTDIR}${EGDIR}
 
 .include "../../devel/meson/build.mk"
-BUILDLINK_ABI_DEPENDS.flac+=	flac>=1.2
+BUILDLINK_API_DEPENDS.flac+=	flac>=1.2
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
