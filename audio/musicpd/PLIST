@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/01/04 20:46:27 nia Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/10/02 09:47:09 wiz Exp $
 bin/mpd
 man/man1/mpd.1
 man/man5/mpd.conf.5
@@ -9,6 +9,8 @@ share/doc/mpd/README.md
 share/doc/mpd/html/.buildinfo
 share/doc/mpd/html/_sources/developer.rst.txt
 share/doc/mpd/html/_sources/index.rst.txt
+share/doc/mpd/html/_sources/mpd.1.rst.txt
+share/doc/mpd/html/_sources/mpd.conf.5.rst.txt
 share/doc/mpd/html/_sources/plugins.rst.txt
 share/doc/mpd/html/_sources/protocol.rst.txt
 share/doc/mpd/html/_sources/user.rst.txt
@@ -30,6 +32,8 @@ share/doc/mpd/html/_static/underscore.js
 share/doc/mpd/html/developer.html
 share/doc/mpd/html/genindex.html
 share/doc/mpd/html/index.html
+share/doc/mpd/html/mpd.1.html
+share/doc/mpd/html/mpd.conf.5.html
 share/doc/mpd/html/objects.inv
 share/doc/mpd/html/plugins.html
 share/doc/mpd/html/protocol.html
