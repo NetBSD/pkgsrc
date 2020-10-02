@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5567 2020/10/02 10:32:52 wen Exp $
+$NetBSD: CHANGES-2020,v 1.5568 2020/10/02 12:01:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8290,3 +8290,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/musicpd to 0.22 [wiz 2020-10-02]
 	Added emulators/xroar version 0.36.2 [ryoon 2020-10-02]
 	Updated math/R-car to 3.0.10 [wen 2020-10-02]
+	Updated www/p5-HTTP-CookieJar to 0.010 [wen 2020-10-02]
