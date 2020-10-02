@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/08/05 14:05:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/10/02 07:44:15 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PLIST.py2x}bin/f2py2
 ${PLIST.py3x}bin/f2py3
@@ -12,6 +12,7 @@ ${PYSITELIB}/numpy/LICENSE.txt
 ${PYSITELIB}/numpy/__config__.py
 ${PYSITELIB}/numpy/__config__.pyc
 ${PYSITELIB}/numpy/__config__.pyo
+${PYSITELIB}/numpy/__init__.cython-30.pxd
 ${PYSITELIB}/numpy/__init__.pxd
 ${PYSITELIB}/numpy/__init__.py
 ${PYSITELIB}/numpy/__init__.pyc
