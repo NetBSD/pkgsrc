@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5555 2020/10/02 02:14:56 wen Exp $
+$NetBSD: CHANGES-2020,v 1.5556 2020/10/02 07:17:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8277,3 +8277,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/sc-im to 0.7.0nb18 [sjmulder 2020-10-01]
 	Updated www/mediawiki to 1.35.0 [wen 2020-10-02]
 	Updated www/py-django3 to 3.1.2 [wen 2020-10-02]
+	Updated devel/p5-IO-HTML to 1.004 [wen 2020-10-02]
