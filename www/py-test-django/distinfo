@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2020/04/06 16:55:46 adam Exp $
+$NetBSD: distinfo,v 1.20 2020/10/02 19:31:39 adam Exp $
 
-SHA1 (pytest-django-3.9.0.tar.gz) = 70eebe8d1c6a707461ed7b07ac5b58ca5f28424f
-RMD160 (pytest-django-3.9.0.tar.gz) = 8829f90cd33fae7e0a7e455f4d5e31a18ed12add
-SHA512 (pytest-django-3.9.0.tar.gz) = 92985e66f47c91363d19fe2bfe8ccab14212be577692f90923dbbae4c8d406cf698796d485af2b721863392810fc07c6f11ada0c61589cd1861f0d34a732effe
-Size (pytest-django-3.9.0.tar.gz) = 70498 bytes
+SHA1 (pytest-django-3.10.0.tar.gz) = ea0ccf405d596d52e101d6c54e7bf5203b150396
+RMD160 (pytest-django-3.10.0.tar.gz) = 6962ffbf6711d72a3a1a1e8365a52827335bd66d
+SHA512 (pytest-django-3.10.0.tar.gz) = 62386a1577ea879968c16255ca7bf2e4fe742569a794d5bf7f0be92141dd6d1ee2fcff27930d5357f1f7d62e5d835784653c04a74315028c1ed69a599cebdf7c
+Size (pytest-django-3.10.0.tar.gz) = 73732 bytes
