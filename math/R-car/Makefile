@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/09/20 23:46:00 mef Exp $
+# $NetBSD: Makefile,v 1.9 2020/10/02 10:31:59 wen Exp $
 
 R_PKGNAME=	car
-R_PKGVER=	3.0-9
+R_PKGVER=	3.0-10
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Companion to 'Applied Regression'
