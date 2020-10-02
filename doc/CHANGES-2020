@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5575 2020/10/02 19:35:05 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5576 2020/10/02 19:45:06 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8323,3 +8323,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-djangorestframework to 3.12.1 [adam 2020-10-02]
 	Updated www/py-test-django to 3.10.0 [adam 2020-10-02]
 	Updated www/py-livereload to 2.6.3 [adam 2020-10-02]
+	Updated devel/go-gopkgs to 2.1.2 [bsiegert 2020-10-02]
