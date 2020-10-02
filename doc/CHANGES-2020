@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5570 2020/10/02 13:01:44 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.5571 2020/10/02 15:45:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8298,3 +8298,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs12 to 12.18.4 [adam 2020-10-02]
 	Updated lang/nodejs to 14.13.0 [adam 2020-10-02]
 	Updated sysutils/xenkernel411 to 4.11.4nb2 [bouyer 2020-10-02]
+	Updated www/firefox to 81.0.1 [ryoon 2020-10-02]
