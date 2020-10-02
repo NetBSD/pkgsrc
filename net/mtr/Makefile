@@ -1,16 +1,8 @@
-# $NetBSD: Makefile,v 1.114 2020/08/17 20:19:49 leot Exp $
+# $NetBSD: Makefile,v 1.115 2020/10/02 09:19:59 wiz Exp $
 
-DISTNAME=	mtr-0.93
-PKGREVISION=	4
+DISTNAME=	mtr-0.94
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bitwizard.nl/mtr/
-
-PATCH_SITES=		https://github.com/traviscross/mtr/commit/
-PATCH_DIST_STRIP=	-p1
-# For improved errors
-PATCHFILES=		919422d1dee7d35a236035f190f491a4a2113772.patch
-# Fix find_source_addr
-PATCHFILES+=		9fe183d61f5382bd6dae1df1db6439a27e8edde2.patch
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.bitwizard.nl/mtr/
