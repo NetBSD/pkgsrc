@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.2 2020/05/12 11:13:51 nia Exp $
+# $NetBSD: Makefile.common,v 1.3 2020/10/02 16:49:37 ryoon Exp $
 #
 # used by cross/mingw-w64-i686-gcc-winpthreads/Makefile
 # used by cross/mingw-w64-x86_64-gcc-winpthreads/Makefile
 
-DISTNAME=		gcc-9.2.0
+DISTNAME=		gcc-10.2.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz
