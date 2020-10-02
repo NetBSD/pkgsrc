@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/12/15 21:38:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/10/02 19:27:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -38,6 +38,9 @@ ${PYSITELIB}/rest_framework/authtoken/migrations/0001_initial.pyo
 ${PYSITELIB}/rest_framework/authtoken/migrations/0002_auto_20160226_1747.py
 ${PYSITELIB}/rest_framework/authtoken/migrations/0002_auto_20160226_1747.pyc
 ${PYSITELIB}/rest_framework/authtoken/migrations/0002_auto_20160226_1747.pyo
+${PYSITELIB}/rest_framework/authtoken/migrations/0003_tokenproxy.py
+${PYSITELIB}/rest_framework/authtoken/migrations/0003_tokenproxy.pyc
+${PYSITELIB}/rest_framework/authtoken/migrations/0003_tokenproxy.pyo
 ${PYSITELIB}/rest_framework/authtoken/migrations/__init__.py
 ${PYSITELIB}/rest_framework/authtoken/migrations/__init__.pyc
 ${PYSITELIB}/rest_framework/authtoken/migrations/__init__.pyo
@@ -229,7 +232,7 @@ ${PYSITELIB}/rest_framework/static/rest_framework/js/bootstrap.min.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/coreapi-0.1.1.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/csrf.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/default.js
-${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-3.4.1.min.js
+${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-3.5.1.min.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/prettify-min.js
 ${PYSITELIB}/rest_framework/status.py
 ${PYSITELIB}/rest_framework/status.pyc
