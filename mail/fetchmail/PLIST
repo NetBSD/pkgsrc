@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/08/27 16:05:39 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/10/02 08:20:27 triaxx Exp $
 bin/fetchmail
 man/man1/fetchmail.1
 share/doc/fetchmail/COPYING
@@ -22,6 +22,7 @@ share/locale/it/LC_MESSAGES/fetchmail.mo
 share/locale/ja/LC_MESSAGES/fetchmail.mo
 share/locale/nl/LC_MESSAGES/fetchmail.mo
 share/locale/pl/LC_MESSAGES/fetchmail.mo
+share/locale/ro/LC_MESSAGES/fetchmail.mo
 share/locale/ru/LC_MESSAGES/fetchmail.mo
 share/locale/sq/LC_MESSAGES/fetchmail.mo
 share/locale/sr/LC_MESSAGES/fetchmail.mo

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2019/11/02 16:25:21 rillig Exp $
+# $NetBSD: options.mk,v 1.20 2020/10/02 08:20:27 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=		kerberos4 kerberos gssapi ssl
@@ -24,9 +24,6 @@ CONFIGURE_ARGS+=	--with-gssapi=no
 .if !empty(PKG_OPTIONS:Mkerberos4)
 PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-kerberos=yes
-.  if empty(MACHINE_PLATFORM:MNetBSD-1.[0-4]*-i386)
-REPLACE_KERBEROS_LIBS=	yes
-.  endif
 .else
 CONFIGURE_ARGS+=	--with-kerberos=no
 .endif
