@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/10/02 11:59:37 wen Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/02 12:18:41 wiz Exp $
 
 DISTNAME=	HTTP-CookieJar-0.010
 PKGNAME=	p5-${DISTNAME}
@@ -10,9 +10,10 @@ HOMEPAGE=	http://metacpan.org/dist/HTTP-CookiesiJar/
 COMMENT=	Minimalist HTTP user agent cookie jar
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-HTTP-Date>=0:../../www/p5-HTTP-Date
-BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep \
-		p5-Test-Requires>=0:../../devel/p5-Test-Requires
+DEPENDS+=	p5-HTTP-Date-[0-9]*:../../www/p5-HTTP-Date
+TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TEST_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 PERL5_PACKLIST=	auto/HTTP/CookieJar/.packlist
 
