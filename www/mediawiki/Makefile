@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2020/08/31 18:12:35 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2020/10/02 01:51:10 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://releases.wikimedia.org/mediawiki/${VER}/
 
@@ -22,8 +21,8 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-VER=			1.34
-PVER=			1
+VER=			1.35
+PVER=			0
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
