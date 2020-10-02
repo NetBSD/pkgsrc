@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5563 2020/10/02 09:26:27 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5564 2020/10/02 09:47:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8287,3 +8287,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/mtr to 0.94 [wiz 2020-10-02]
 	Updated devel/pkgconf to 1.7.3 [wiz 2020-10-02]
 	Updated www/py-yarl to 1.6.0 [wiz 2020-10-02]
+	Updated audio/musicpd to 0.22 [wiz 2020-10-02]
