@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2020/08/17 20:20:39 leot Exp $
+# $NetBSD: Makefile,v 1.146 2020/10/02 13:26:09 nia Exp $
 
 PKGREVISION= 24
 .include "Makefile.common"
@@ -9,6 +9,7 @@ CONFLICTS+=	xlockmore-lite-[0-9]*
 
 CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-mesa
+CONFIGURE_ARGS+=	--without-ftgl
 CONFIGURE_ARGS+=	--without-ttf
 XPM_ENV=		no_xpm= xpm_includes=${BUILDLINK_PREFIX.libXpm}/include xpm_libraries=${BUILDLINK_PREFIX.libXpm}/lib
 CONFIGURE_ENV+=		ac_cv_path_xpm=${XPM_ENV:Q}
