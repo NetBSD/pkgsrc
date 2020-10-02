@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5561 2020/10/02 09:20:08 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5562 2020/10/02 09:21:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8285,3 +8285,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/fetchmail to 6.4.12 [triaxx 2020-10-02]
 	Updated mail/fetchmailconf to 6.4.12 [triaxx 2020-10-02]
 	Updated net/mtr to 0.94 [wiz 2020-10-02]
+	Updated devel/pkgconf to 1.7.3 [wiz 2020-10-02]
