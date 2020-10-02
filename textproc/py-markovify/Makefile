@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/06/18 12:26:24 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/02 08:35:31 adam Exp $
 
-DISTNAME=	markovify-0.8.2
+DISTNAME=	markovify-0.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markovify/}
