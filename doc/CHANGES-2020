@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5564 2020/10/02 09:47:19 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5565 2020/10/02 10:25:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8288,3 +8288,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/pkgconf to 1.7.3 [wiz 2020-10-02]
 	Updated www/py-yarl to 1.6.0 [wiz 2020-10-02]
 	Updated audio/musicpd to 0.22 [wiz 2020-10-02]
+	Updated emulators/xroar to 0.36.2 [ryoon 2020-10-02]
