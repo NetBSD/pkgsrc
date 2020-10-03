@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5582 2020/10/03 09:12:19 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5583 2020/10/03 09:23:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8334,3 +8334,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/mikutter to 4.1.2 [tsutsui 2020-10-03]
 	Added emulators/bsnes version 115 [nia 2020-10-03]
 	Updated fonts/twemoji-color-font-ttf to 13.0.1 [nia 2020-10-03]
+	Updated x11/picom to 8.1 [nia 2020-10-03]
