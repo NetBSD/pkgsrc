@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/12/05 09:42:43 adam Exp $
+$NetBSD: distinfo,v 1.12 2020/10/03 18:28:21 adam Exp $
 
-SHA1 (validators-0.14.1.tar.gz) = 9f9635389e32934000fe960f6ee94429b71f0fc9
-RMD160 (validators-0.14.1.tar.gz) = e594f629d8046586d5851c59fad6e5d64d036f44
-SHA512 (validators-0.14.1.tar.gz) = ea9f87facd921de6c9c770bcc37027176d05f062b541153eeb84110133f29cb6477d1687cd82e3054cab317b5d66078b4de56f3cbbe17694f56bfdf141c05696
-Size (validators-0.14.1.tar.gz) = 25673 bytes
+SHA1 (validators-0.18.1.tar.gz) = 6abf9055cb7bb335f5fb877fc0c189f6aed4ebf6
+RMD160 (validators-0.18.1.tar.gz) = 6cafa8876d0ed92e8a6a2895db10fcf33f1a5d7c
+SHA512 (validators-0.18.1.tar.gz) = 3aaecd5dd389862b2c1c9ceeb0adf76d9723ccdbfd02bea33f0145f60a23b6b3d850a859f9b69e9d0bbc32e6000a1996716037ba9cbeedc17cfed6b6e0b5222e
+Size (validators-0.18.1.tar.gz) = 29581 bytes

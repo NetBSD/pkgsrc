@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/05/17 21:38:47 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/10/03 18:28:21 adam Exp $
 
-DISTNAME=	validators-0.14.1
+DISTNAME=	validators-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validators/}
@@ -14,14 +14,14 @@ DEPENDS+=	${PYPKGPREFIX}-decorator>=3.4.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=2.4.0:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.2:../../devel/py-isort
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
