@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5604 2020/10/03 16:52:56 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.5605 2020/10/03 16:59:50 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8356,3 +8356,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/unicode-character-database to 13.0.0 [tsutsui 2020-10-03]
 	Updated textproc/unicode-emoji to 13.1 [tsutsui 2020-10-03]
 	Updated mail/rspamd to 2.6 [triaxx 2020-10-03]
+	Updated inputmethod/ibus to 1.5.23 [tsutsui 2020-10-03]
