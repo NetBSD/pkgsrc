@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/06/11 10:58:05 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/10/03 06:02:18 adam Exp $
 
-DISTNAME=	flake8-3.8.3
+DISTNAME=	flake8-3.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flake8/}
@@ -26,7 +26,6 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-meta
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
-TEST_DEPENDS+=	${PYPKGPREFIX}-test<5:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
