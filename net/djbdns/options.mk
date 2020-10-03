@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.23 2019/11/03 11:45:33 rillig Exp $
+# $NetBSD: options.mk,v 1.24 2020/10/03 12:59:36 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
-PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2
+PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2 djbdns-listenmultiple
 PKG_SUPPORTED_OPTIONS+=		djbdns-mergequeries djbdns-tinydns64
 PKG_SUGGESTED_OPTIONS+=		djbdns-mergequeries djbdns-tinydns64
 
@@ -17,7 +17,7 @@ PATCH_DIST_STRIP.${CACHESTATS_PATCH}=	-p1
 .if !empty(PKG_OPTIONS:Mdjbdns-ignoreip2)
 IGNOREIP2_PATCH=		djbdns-1.05-ignoreip2.patch
 PATCHFILES+=			${IGNOREIP2_PATCH}
-SITES.${IGNOREIP2_PATCH}=	http://www.tinydns.org/
+SITES.${IGNOREIP2_PATCH}=	https://web.archive.org/web/20140104070725/http://tinydns.org/
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-mergequeries)
@@ -27,6 +27,21 @@ post-patch: patch-mergequeries
 patch-mergequeries:
 	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-mergequeries
 	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-mergequeries-boundscheck
+.endif
+
+.if !empty(PKG_OPTIONS:Mdjbdns-listenmultiple)
+TINYMULTI_PATCH=			djbdns-1.05-multiip.diff
+CACHEMULTI_PATCH=			dnscache-1.05-multiple-ip.patch
+PATCHFILES+=				${TINYMULTI_PATCH} ${CACHEMULTI_PATCH}
+SITES.${TINYMULTI_PATCH}=		https://ohse.de/uwe/patches/
+SITES.${CACHEMULTI_PATCH}=		https://web.archive.org/web/20070905064205/http://danp.net/djbdns/
+PATCH_DIST_STRIP.${TINYMULTI_PATCH}=	-p1
+PATCH_DIST_STRIP.${CACHEMULTI_PATCH}=	-p1
+BUILD_DEFS+=				DJBDNS_IP_SEPARATOR
+PATCH_DIST_CAT.${TINYMULTI_PATCH}=	${SED} -e "s|','|'${DJBDNS_IP_SEPARATOR}'|g" \
+					< ${TINYMULTI_PATCH}
+PATCH_DIST_CAT.${CACHEMULTI_PATCH}=	${SED} -e "s|'/'|'${DJBDNS_IP_SEPARATOR}'|g" \
+					< ${CACHEMULTI_PATCH}
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-tinydns64)
