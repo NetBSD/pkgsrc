@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/07/03 19:35:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/10/03 18:28:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,12 @@ ${PYSITELIB}/validators/__init__.pyo
 ${PYSITELIB}/validators/between.py
 ${PYSITELIB}/validators/between.pyc
 ${PYSITELIB}/validators/between.pyo
+${PYSITELIB}/validators/btc_address.py
+${PYSITELIB}/validators/btc_address.pyc
+${PYSITELIB}/validators/btc_address.pyo
+${PYSITELIB}/validators/card.py
+${PYSITELIB}/validators/card.pyc
+${PYSITELIB}/validators/card.pyo
 ${PYSITELIB}/validators/domain.py
 ${PYSITELIB}/validators/domain.pyc
 ${PYSITELIB}/validators/domain.pyo
