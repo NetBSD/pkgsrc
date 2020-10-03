@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/06 20:43:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/10/03 06:08:06 adam Exp $
 bin/radon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,12 @@ ${PYSITELIB}/radon/cli/tools.pyo
 ${PYSITELIB}/radon/complexity.py
 ${PYSITELIB}/radon/complexity.pyc
 ${PYSITELIB}/radon/complexity.pyo
+${PYSITELIB}/radon/contrib/__init__.py
+${PYSITELIB}/radon/contrib/__init__.pyc
+${PYSITELIB}/radon/contrib/__init__.pyo
+${PYSITELIB}/radon/contrib/flake8.py
+${PYSITELIB}/radon/contrib/flake8.pyc
+${PYSITELIB}/radon/contrib/flake8.pyo
 ${PYSITELIB}/radon/metrics.py
 ${PYSITELIB}/radon/metrics.pyc
 ${PYSITELIB}/radon/metrics.pyo
