@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/07/23 12:38:44 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/10/03 09:47:12 nia Exp $
 
-SHA1 (cfm-0.6.3.tar.gz) = 864747d2fbd8b6905e6a28b3e25fb5ce49830feb
-RMD160 (cfm-0.6.3.tar.gz) = 5d43bf4625dad5cc87da8b88426ba4f8a1d59773
-SHA512 (cfm-0.6.3.tar.gz) = 7e9db3f49b107d97917683870176fb05a21a664cf610e76234bdc74b98a4d254bb4bb7efffb9fe34f314c0316bbc5e9b3a6f523e867b13de32578cab8e4615e3
-Size (cfm-0.6.3.tar.gz) = 72922 bytes
+SHA1 (cfm-0.6.5.tar.gz) = 361a7db4b72512bdd647ec04e153c6db2b98664f
+RMD160 (cfm-0.6.5.tar.gz) = e6f4f5139095626edb72eb3c39473ffd30fa7d62
+SHA512 (cfm-0.6.5.tar.gz) = 5e4ba27ca37a22f8f695579d0fb7b5175098a4333e069394bfaba7f50dbed5c317b351ce13753dc65eb70d31236f9aa8f7b8d5af77028c2ed598d9cae3caad47
+Size (cfm-0.6.5.tar.gz) = 71025 bytes
 SHA1 (patch-Makefile) = f60dbb3f7c800742ba7ce6d27355d72154b5f3cd
