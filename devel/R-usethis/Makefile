@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/09/20 00:27:59 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/03 13:38:52 mef Exp $
 
 R_PKGNAME=	usethis
-R_PKGVER=	1.6.1
+R_PKGVER=	1.6.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,5 +35,5 @@ USE_LANGUAGES=	# none
 
 
 # Packages suggested but not available: 'magick', 'pkgdown', 'styler'
-# 
+#
 # Package required and available but unsuitable version: 'gh'
