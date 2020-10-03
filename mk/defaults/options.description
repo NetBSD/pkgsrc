@@ -135,6 +135,7 @@ disable-compile-inits	Disable compile time implicit initialization.
 disable-filter-url	Disable php://filter URL feature.
 djbdns-cachestats	Patch to add stats for cache hits/misses.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
+djbdns-listenmultiple	Patches to specify more than one listening IP.
 djbdns-mergequeries	Patch to address dnscache poisoning weakness.
 djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
 djbfft-pentium		Optimize for Pentium{,MMX} processors.
