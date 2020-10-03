@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5578 2020/10/03 06:13:54 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5579 2020/10/03 06:50:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8329,3 +8329,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-joblib to 0.17.0 [adam 2020-10-03]
 	Updated devel/py-radon to 4.3.2 [adam 2020-10-03]
 	Updated security/py-ecdsa to 0.16.0 [adam 2020-10-03]
+	Updated devel/yarn to 1.22.10 [adam 2020-10-03]
+	Updated devel/gperftools to 2.8 [adam 2020-10-03]
