@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.333 2020/10/02 10:26:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.334 2020/10/03 08:40:56 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -22,6 +22,7 @@ SUBDIR+=	b-em
 SUBDIR+=	blastem
 SUBDIR+=	blinkensim
 SUBDIR+=	bochs
+SUBDIR+=	bsnes
 SUBDIR+=	cannonball
 SUBDIR+=	caprice32
 SUBDIR+=	ckmame
