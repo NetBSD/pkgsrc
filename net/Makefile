@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1350 2020/09/29 02:30:07 khorben Exp $
+# $NetBSD: Makefile,v 1.1351 2020/10/03 10:12:53 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -329,6 +329,7 @@ SUBDIR+=	libquvi
 SUBDIR+=	libquvi-scripts
 SUBDIR+=	libradius
 SUBDIR+=	librsync
+SUBDIR+=	libslirp
 SUBDIR+=	libsoup
 SUBDIR+=	libsscript
 SUBDIR+=	libtelnet
