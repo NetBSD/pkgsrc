@@ -1,16 +1,26 @@
-# $NetBSD: Makefile,v 1.5 2017/04/14 13:08:15 leot Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/03 18:09:10 adam Exp $
 
-DISTNAME=	hpack-3.0.0
+DISTNAME=	hpack-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hpack/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hyper.rtfd.org/
+HOMEPAGE=	https://github.com/python-hyper/hpack
 COMMENT=	Pure-Python HPACK header compression
 LICENSE=	mit
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
 USE_LANGUAGES=	# none
+
+PYSETUPTESTTARGET=	pytest
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+pre-test:
+	${MKDIR} ${WRKSRC}/test/test_fixtures/raw-data
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
