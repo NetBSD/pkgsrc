@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5588 2020/10/03 10:29:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5589 2020/10/03 12:05:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8340,3 +8340,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/openttd to 1.10.3 [nia 2020-10-03]
 	Updated audio/fluidsynth to 2.1.5 [nia 2020-10-03]
 	Updated lang/janet to 1.12.2 [nia 2020-10-03]
+	Updated net/phetch to 1.0.7 [pin 2020-10-03]
