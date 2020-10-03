@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/09/22 11:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/10/03 13:49:39 mef Exp $
 
 R_PKGNAME=	devtools
-R_PKGVER=	2.3.1
+R_PKGVER=	2.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,10 +20,10 @@ DEPENDS+=	R-remotes>=2.2.0:../../devel/R-remotes
 DEPENDS+=	R-roxygen2>=7.1.1:../../devel/R-roxygen2
 DEPENDS+=	R-sessioninfo>=1.1.1:../../devel/R-sessioninfo
 DEPENDS+=	R-testthat>=2.3.2:../../devel/R-testthat
-DEPENDS+=	R-usethis>=1.6.0:../../devel/R-usethis
+DEPENDS+=	R-usethis>=1.6.3:../../devel/R-usethis
 DEPENDS+=	R-withr>=2.2.0:../../devel/R-withr
 DEPENDS+=	R-rstudioapi>=0.11:../../math/R-rstudioapi
-DEPENDS+=	R-ellipsis>=0.3.0:../../math/R-ellipsis
+DEPENDS+=	R-ellipsis>=0.3.1:../../math/R-ellipsis
 DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
 DEPENDS+=	R-DT>=0.15:../../textproc/R-DT
