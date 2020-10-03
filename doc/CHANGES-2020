@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5601 2020/10/03 15:16:19 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.5602 2020/10/03 15:41:48 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8353,3 +8353,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/MoarVM to 2020.09 [mef 2020-10-03]
 	Updated textproc/ruby-nokogiri to 1.10.10 [tsutsui 2020-10-03]
 	Updated textproc/cldr-emoji-annotation to 37.0.13.0.0.2 [tsutsui 2020-10-03]
+	Updated textproc/unicode-character-database to 13.0.0 [tsutsui 2020-10-03]
