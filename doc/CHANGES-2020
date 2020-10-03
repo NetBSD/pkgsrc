@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5587 2020/10/03 10:26:20 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5588 2020/10/03 10:29:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8339,3 +8339,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/libslirp version 4.3.1 [nia 2020-10-03]
 	Updated games/openttd to 1.10.3 [nia 2020-10-03]
 	Updated audio/fluidsynth to 2.1.5 [nia 2020-10-03]
+	Updated lang/janet to 1.12.2 [nia 2020-10-03]
