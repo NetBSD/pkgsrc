@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2020/10/03 12:59:36 schmonz Exp $
+# $NetBSD: options.mk,v 1.25 2020/10/03 19:08:52 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2 djbdns-listenmultiple
@@ -17,7 +17,7 @@ PATCH_DIST_STRIP.${CACHESTATS_PATCH}=	-p1
 .if !empty(PKG_OPTIONS:Mdjbdns-ignoreip2)
 IGNOREIP2_PATCH=		djbdns-1.05-ignoreip2.patch
 PATCHFILES+=			${IGNOREIP2_PATCH}
-SITES.${IGNOREIP2_PATCH}=	https://web.archive.org/web/20140104070725/http://tinydns.org/
+SITES.${IGNOREIP2_PATCH}=	${MASTER_SITE_LOCAL}
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-mergequeries)
@@ -34,7 +34,7 @@ TINYMULTI_PATCH=			djbdns-1.05-multiip.diff
 CACHEMULTI_PATCH=			dnscache-1.05-multiple-ip.patch
 PATCHFILES+=				${TINYMULTI_PATCH} ${CACHEMULTI_PATCH}
 SITES.${TINYMULTI_PATCH}=		https://ohse.de/uwe/patches/
-SITES.${CACHEMULTI_PATCH}=		https://web.archive.org/web/20070905064205/http://danp.net/djbdns/
+SITES.${CACHEMULTI_PATCH}=		${MASTER_SITE_LOCAL}
 PATCH_DIST_STRIP.${TINYMULTI_PATCH}=	-p1
 PATCH_DIST_STRIP.${CACHEMULTI_PATCH}=	-p1
 BUILD_DEFS+=				DJBDNS_IP_SEPARATOR
