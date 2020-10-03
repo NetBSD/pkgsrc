@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/08/31 18:07:21 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/10/03 06:49:48 adam Exp $
 
-DISTNAME=	gperftools-2.7
-PKGREVISION=	4
+DISTNAME=	gperftools-2.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gperftools/}
 GITHUB_PROJECT=	gperftools
@@ -18,8 +17,6 @@ USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 # on some platforms heap checker is not build by default
 CONFIGURE_ARGS+=	--enable-heap-checker
-# enable deprecated ucontext
-CFLAGS.Darwin+=		-D_XOPEN_SOURCE=1
 
 # for backtrace()
 .include "../../mk/bsd.prefs.mk"
