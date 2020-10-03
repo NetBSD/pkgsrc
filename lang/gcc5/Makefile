@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/08/31 18:09:48 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/10/03 14:04:18 schmonz Exp $
 
 GCC_PKGNAME=		gcc5
 PKGREVISION=		6
@@ -23,7 +23,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c99 c++03
 USE_TOOLS+=		gmake makeinfo sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
 
