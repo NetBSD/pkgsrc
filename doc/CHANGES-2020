@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5608 2020/10/03 18:46:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5609 2020/10/03 21:57:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8365,3 +8365,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-validators to 0.18.1 [adam 2020-10-03]
 	Updated www/py-wtforms-components to 0.10.4 [adam 2020-10-03]
 	Updated www/py-wtforms-alchemy to 0.17.0 [adam 2020-10-03]
+	Updated devel/py-cpplint to 1.5.4 [adam 2020-10-03]
+	Updated devel/py-gitpython to 3.1.9 [adam 2020-10-03]
