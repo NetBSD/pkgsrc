@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/05 03:47:10 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/03 15:42:44 tsutsui Exp $
 share/unicode/emoji/ReadMe.txt
-share/unicode/emoji/emoji-data.txt
 share/unicode/emoji/emoji-sequences.txt
 share/unicode/emoji/emoji-test.txt
-share/unicode/emoji/emoji-variation-sequences.txt
 share/unicode/emoji/emoji-zwj-sequences.txt
