@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5593 2020/10/03 12:59:46 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5594 2020/10/03 13:39:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8345,3 +8345,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated cad/verilator to 4.100 [ryoon 2020-10-03]
 	Updated x11/gnustep-back to 0.28.0 [mef 2020-10-03]
 	Updated net/djbdns to 1.05nb15 [schmonz 2020-10-03]
+	Updated devel/R-usethis to 1.6.3 [mef 2020-10-03]
