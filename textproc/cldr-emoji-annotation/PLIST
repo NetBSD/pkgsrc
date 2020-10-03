@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/09/14 03:46:58 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/10/03 15:16:01 tsutsui Exp $
 share/pkgconfig/cldr-emoji-annotation.pc
 share/unicode/cldr/common/annotations/af.xml
 share/unicode/cldr/common/annotations/am.xml
@@ -14,6 +14,7 @@ share/unicode/cldr/common/annotations/br.xml
 share/unicode/cldr/common/annotations/bs.xml
 share/unicode/cldr/common/annotations/ca.xml
 share/unicode/cldr/common/annotations/ccp.xml
+share/unicode/cldr/common/annotations/ceb.xml
 share/unicode/cldr/common/annotations/chr.xml
 share/unicode/cldr/common/annotations/cs.xml
 share/unicode/cldr/common/annotations/cy.xml
@@ -60,6 +61,7 @@ share/unicode/cldr/common/annotations/kk.xml
 share/unicode/cldr/common/annotations/km.xml
 share/unicode/cldr/common/annotations/kn.xml
 share/unicode/cldr/common/annotations/ko.xml
+share/unicode/cldr/common/annotations/kok.xml
 share/unicode/cldr/common/annotations/ku.xml
 share/unicode/cldr/common/annotations/ky.xml
 share/unicode/cldr/common/annotations/lo.xml
@@ -77,6 +79,7 @@ share/unicode/cldr/common/annotations/nl.xml
 share/unicode/cldr/common/annotations/nn.xml
 share/unicode/cldr/common/annotations/or.xml
 share/unicode/cldr/common/annotations/pa.xml
+share/unicode/cldr/common/annotations/pcm.xml
 share/unicode/cldr/common/annotations/pl.xml
 share/unicode/cldr/common/annotations/ps.xml
 share/unicode/cldr/common/annotations/pt.xml
@@ -98,6 +101,7 @@ share/unicode/cldr/common/annotations/sr_Latn.xml
 share/unicode/cldr/common/annotations/sr_Latn_BA.xml
 share/unicode/cldr/common/annotations/sv.xml
 share/unicode/cldr/common/annotations/sw.xml
+share/unicode/cldr/common/annotations/sw_KE.xml
 share/unicode/cldr/common/annotations/ta.xml
 share/unicode/cldr/common/annotations/te.xml
 share/unicode/cldr/common/annotations/th.xml
@@ -108,6 +112,7 @@ share/unicode/cldr/common/annotations/uk.xml
 share/unicode/cldr/common/annotations/ur.xml
 share/unicode/cldr/common/annotations/uz.xml
 share/unicode/cldr/common/annotations/vi.xml
+share/unicode/cldr/common/annotations/yo.xml
 share/unicode/cldr/common/annotations/yue.xml
 share/unicode/cldr/common/annotations/yue_Hans.xml
 share/unicode/cldr/common/annotations/zh.xml
@@ -191,6 +196,7 @@ share/unicode/cldr/common/annotationsDerived/nl.xml
 share/unicode/cldr/common/annotationsDerived/nn.xml
 share/unicode/cldr/common/annotationsDerived/or.xml
 share/unicode/cldr/common/annotationsDerived/pa.xml
+share/unicode/cldr/common/annotationsDerived/pcm.xml
 share/unicode/cldr/common/annotationsDerived/pl.xml
 share/unicode/cldr/common/annotationsDerived/ps.xml
 share/unicode/cldr/common/annotationsDerived/pt.xml
@@ -212,6 +218,7 @@ share/unicode/cldr/common/annotationsDerived/sr_Latn.xml
 share/unicode/cldr/common/annotationsDerived/sr_Latn_BA.xml
 share/unicode/cldr/common/annotationsDerived/sv.xml
 share/unicode/cldr/common/annotationsDerived/sw.xml
+share/unicode/cldr/common/annotationsDerived/sw_KE.xml
 share/unicode/cldr/common/annotationsDerived/ta.xml
 share/unicode/cldr/common/annotationsDerived/te.xml
 share/unicode/cldr/common/annotationsDerived/th.xml
