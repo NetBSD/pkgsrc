@@ -1,11 +1,13 @@
-$NetBSD: patch-Configurations_unix-Makefile.tmpl,v 1.2 2020/03/31 15:02:31 sevan Exp $
+$NetBSD: patch-Configurations_unix-Makefile.tmpl,v 1.2.4.1 2020/10/03 19:28:58 bsiegert Exp $
 
 Use pkgsrc layout.
 Do not install HTML documentation.
+Avoid -B $NUM argument to m4 (ignored by most m4 implementations, not
+supported by others)
 
---- Configurations/unix-Makefile.tmpl.orig	2020-03-31 14:23:39.098512410 +0000
-+++ Configurations/unix-Makefile.tmpl
-@@ -274,8 +274,9 @@ libdir={- File::Spec::Win32->file_name_i
+--- Configurations/unix-Makefile.tmpl.orig	2020-04-21 14:22:39.000000000 +0200
++++ Configurations/unix-Makefile.tmpl	2020-09-28 15:17:07.747914097 +0200
+@@ -274,8 +274,9 @@
            ? $libdir : '$(INSTALLTOP)/$(LIBDIR)' -}
  {- output_on() if $config{target} !~ /^mingw/; "" -}
  
@@ -16,7 +18,7 @@ Do not install HTML documentation.
  HTMLDIR=$(DOCDIR)/html
  
  # MANSUFFIX is for the benefit of anyone who may want to have a suffix
-@@ -544,54 +545,54 @@ install_sw: install_dev install_engines 
+@@ -544,54 +545,54 @@
  
  uninstall_sw: uninstall_runtime uninstall_engines uninstall_dev
  
@@ -100,3 +102,12 @@ Do not install HTML documentation.
  	fi
  
  install_dev: install_runtime_libs
+@@ -1058,7 +1059,7 @@
+           if ($args{generator}->[0] =~ /\.pl$/) {
+               $generator = 'CC="$(CC)" $(PERL)'.$generator_incs.' '.$generator;
+           } elsif ($args{generator}->[0] =~ /\.m4$/) {
+-              $generator = 'm4 -B 8192'.$generator_incs.' '.$generator.' >'
++              $generator = 'm4 '.$generator_incs.' '.$generator.' >'
+           } elsif ($args{generator}->[0] =~ /\.S$/) {
+               $generator = undef;
+           } else {
