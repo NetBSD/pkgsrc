@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/03 10:12:54 nia Exp $
+include/slirp/libslirp-version.h
+include/slirp/libslirp.h
+lib/libslirp.so
+lib/libslirp.so.0
+lib/libslirp.so.0.2.2
+lib/pkgconfig/slirp.pc
