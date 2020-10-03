@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20112 2020/10/03 10:26:20 nia Exp $
+$NetBSD: TODO,v 1.20113 2020/10/03 12:53:06 mef Exp $
 
 Suggested new packages
 ======================
@@ -640,7 +640,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnustep-back-0.27.0
 	o gnustep-base-1.26.0
 	o gnustep-make-2.7.0
 	o gnustep-objc-1.8.1
