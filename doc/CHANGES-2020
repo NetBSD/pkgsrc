@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5594 2020/10/03 13:39:03 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5595 2020/10/03 13:46:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8346,3 +8346,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/gnustep-back to 0.28.0 [mef 2020-10-03]
 	Updated net/djbdns to 1.05nb15 [schmonz 2020-10-03]
 	Updated devel/R-usethis to 1.6.3 [mef 2020-10-03]
+	Updated math/R-ellipsis to 0.3.1 [mef 2020-10-03]
