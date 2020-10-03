@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.174 2020/09/20 15:11:43 tsutsui Exp $
+$NetBSD: distinfo,v 1.175 2020/10/03 08:28:36 tsutsui Exp $
 
-SHA1 (mikutter-4.1.1.tar.gz) = 8a7425fdf04adc5d28a30920c888a5c0da81ca21
-RMD160 (mikutter-4.1.1.tar.gz) = aa08285ac635fff2b69e92950f391d56a832e219
-SHA512 (mikutter-4.1.1.tar.gz) = 6f5ae675e8e39690c1993798831ea68208dc064239f4e0855efaf3ef28eb21f6e702fbc25f6097ebeba0b2fda95a8dc0e0650f18a8f8c47e1dcdfe3513ced4ba
-Size (mikutter-4.1.1.tar.gz) = 2327771 bytes
+SHA1 (mikutter-4.1.2.tar.gz) = d2c2470d929d61bb93ebdb01f5cd0ba119c15f4c
+RMD160 (mikutter-4.1.2.tar.gz) = 2aba50fa5b2a5365daf598778f5f6aa85a6209cb
+SHA512 (mikutter-4.1.2.tar.gz) = 5cdde918325de62ee6acb06e78d3306a5041901daa383b424ce8e5053b577ecef881b082770815513125e366c66b0b4d77081effdc103bd6abcac1cbb1954928
+Size (mikutter-4.1.2.tar.gz) = 2327765 bytes
+SHA1 (patch-core_mui_gtk__photo__pixbuf.rb) = 0d0a50bcd7f1c170d4ccf95e6c2d6fe918c8632d
 SHA1 (patch-mikutter.rb) = 32883f84e9c628954d46744c07f1247b8fc731bc
