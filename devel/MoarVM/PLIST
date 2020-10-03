@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/03/08 15:47:54 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/10/03 14:05:15 mef Exp $
 bin/moar
 include/moar/6model/6model.h
 include/moar/6model/bootstrap.h
@@ -70,8 +70,12 @@ include/moar/core/dll.h
 include/moar/core/exceptions.h
 include/moar/core/ext.h
 include/moar/core/fixedsizealloc.h
+include/moar/core/fixkey_hash_table.h
+include/moar/core/fixkey_hash_table_funcs.h
 include/moar/core/frame.h
 include/moar/core/hll.h
+include/moar/core/index_hash_table.h
+include/moar/core/index_hash_table_funcs.h
 include/moar/core/instance.h
 include/moar/core/intcache.h
 include/moar/core/interp.h
@@ -81,9 +85,15 @@ include/moar/core/nativecall_dyncall.h
 include/moar/core/nativecall_libffi.h
 include/moar/core/oplabels.h
 include/moar/core/ops.h
+include/moar/core/ptr_hash_table.h
+include/moar/core/ptr_hash_table_funcs.h
 include/moar/core/regionalloc.h
+include/moar/core/str_hash_table.h
+include/moar/core/str_hash_table_funcs.h
 include/moar/core/threadcontext.h
 include/moar/core/threads.h
+include/moar/core/uni_hash_table.h
+include/moar/core/uni_hash_table_funcs.h
 include/moar/core/validation.h
 include/moar/core/vector.h
 include/moar/debug/debugserver.h
@@ -196,8 +206,6 @@ include/moar/strings/unicode_prop_macros.h
 include/moar/strings/utf16.h
 include/moar/strings/utf8.h
 include/moar/strings/utf8_c8.h
-include/moar/strings/uthash.h
-include/moar/strings/uthash_types.h
 include/moar/strings/windows1252.h
 include/moar/types.h
 lib/libmoar.so
