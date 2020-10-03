@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5584 2020/10/03 09:47:24 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5585 2020/10/03 10:13:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8336,3 +8336,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/twemoji-color-font-ttf to 13.0.1 [nia 2020-10-03]
 	Updated x11/picom to 8.1 [nia 2020-10-03]
 	Updated sysutils/cfm to 0.6.5 [nia 2020-10-03]
+	Added net/libslirp version 4.3.1 [nia 2020-10-03]
