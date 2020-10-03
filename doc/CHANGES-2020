@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5605 2020/10/03 16:59:50 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.5606 2020/10/03 18:13:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8357,3 +8357,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/unicode-emoji to 13.1 [tsutsui 2020-10-03]
 	Updated mail/rspamd to 2.6 [triaxx 2020-10-03]
 	Updated inputmethod/ibus to 1.5.23 [tsutsui 2020-10-03]
+	Updated net/py-hpack to 4.0.0 [adam 2020-10-03]
+	Updated www/py-hyperframe to 6.0.0 [adam 2020-10-03]
+	Updated www/py-h2 to 4.0.0 [adam 2020-10-03]
+	Updated www/py-beautifulsoup4 to 4.9.3 [adam 2020-10-03]
