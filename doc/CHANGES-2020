@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5606 2020/10/03 18:13:26 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5607 2020/10/03 18:29:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8361,3 +8361,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-hyperframe to 6.0.0 [adam 2020-10-03]
 	Updated www/py-h2 to 4.0.0 [adam 2020-10-03]
 	Updated www/py-beautifulsoup4 to 4.9.3 [adam 2020-10-03]
+	Updated textproc/py-humanize to 3.0.1 [adam 2020-10-03]
+	Updated textproc/py-validators to 0.18.1 [adam 2020-10-03]
