@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5591 2020/10/03 12:23:00 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5592 2020/10/03 12:53:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8343,3 +8343,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/phetch to 1.0.7 [pin 2020-10-03]
 	Updated graphics/kvantum to 0.17.0 [pin 2020-10-03]
 	Updated cad/verilator to 4.100 [ryoon 2020-10-03]
+	Updated x11/gnustep-back to 0.28.0 [mef 2020-10-03]
