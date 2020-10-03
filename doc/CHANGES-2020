@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5597 2020/10/03 13:53:56 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5598 2020/10/03 13:59:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8349,3 +8349,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R-ellipsis to 0.3.1 [mef 2020-10-03]
 	Updated devel/R-devtools to 2.3.2 [mef 2020-10-03]
 	Updated devel/R-withr to 2.3.0 [mef 2020-10-03]
+	Updated devel/R-xfun to 0.18 [mef 2020-10-03]
