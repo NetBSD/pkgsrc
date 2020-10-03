@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5577 2020/10/02 23:47:50 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5578 2020/10/03 06:13:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8325,3 +8325,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-livereload to 2.6.3 [adam 2020-10-02]
 	Updated devel/go-gopkgs to 2.1.2 [bsiegert 2020-10-02]
 	Updated x11/gnustep-gui to 0.28.0 [mef 2020-10-02]
+	Updated devel/py-flake8 to 3.8.4 [adam 2020-10-03]
+	Updated devel/py-joblib to 0.17.0 [adam 2020-10-03]
+	Updated devel/py-radon to 4.3.2 [adam 2020-10-03]
+	Updated security/py-ecdsa to 0.16.0 [adam 2020-10-03]
