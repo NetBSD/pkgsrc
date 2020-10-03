@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:32 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/10/03 18:44:56 adam Exp $
 
-SHA1 (WTForms-Alchemy-0.13.0.tar.gz) = 78adff759ec29fac2426ed12c8f3798de8e7dd0c
-RMD160 (WTForms-Alchemy-0.13.0.tar.gz) = ed1476d13d989316d47128353934af990e571e8c
-SHA512 (WTForms-Alchemy-0.13.0.tar.gz) = 86673f6d8647286efd1ccb7b0435d289855f6560b9fdbb302953d80ebecc3786d237cf3028bd6b68d9a066e6e73b810bc316a462ca98030ad3bd75257549161a
-Size (WTForms-Alchemy-0.13.0.tar.gz) = 43782 bytes
+SHA1 (WTForms-Alchemy-0.17.0.tar.gz) = 2e0f5fd9e78a22dfc5e3aa8acf67080f3c42568c
+RMD160 (WTForms-Alchemy-0.17.0.tar.gz) = 492950993bf649ae2a0d1f51916d05ede696204b
+SHA512 (WTForms-Alchemy-0.17.0.tar.gz) = ba604096278da24d844f1757406df74eb75352cf42f7219c35ea4a72bc2510b203a4e7f30c3539252643c28d7e5eac48b4bc3bce9030df77e9d17c2b8752c795
+Size (WTForms-Alchemy-0.17.0.tar.gz) = 51639 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/09/16 19:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/10/03 18:44:56 adam Exp $
 
-DISTNAME=	WTForms-Alchemy-0.13.0
+DISTNAME=	WTForms-Alchemy-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	databases python www
+CATEGORIES=	www databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WTForms-Alchemy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,13 +10,15 @@ HOMEPAGE=	https://github.com/kvesteri/wtforms-alchemy
 COMMENT=	Generates WTForms forms from SQLAlchemy models
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.8.0:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0.0:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-utils>=0.32.6:../../databases/py-sqlalchemy-utils
 DEPENDS+=	${PYPKGPREFIX}-wtforms>=1.0.4:../../www/py-wtforms
 DEPENDS+=	${PYPKGPREFIX}-wtforms-components>=0.9.2:../../www/py-wtforms-components
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-utils>=0.23.1:../../databases/py-sqlalchemy-utils
-DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
