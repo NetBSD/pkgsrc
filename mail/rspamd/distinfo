@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.34 2020/08/12 20:00:30 schmonz Exp $
+$NetBSD: distinfo,v 1.35 2020/10/03 16:49:27 triaxx Exp $
 
-SHA1 (rspamd-2.5.tar.gz) = e3c3afb0cbdb50763421be73d7d3cab187a8fdb5
-RMD160 (rspamd-2.5.tar.gz) = a6ae3429f5b439e8067b7b50bd3b5f55d72101f5
-SHA512 (rspamd-2.5.tar.gz) = 6068309da98eeb75f95188414b12ce9443aef31200853f820646e70e1dbf2d9d1e2c661a86df2183c175cc01cfb09f6a5c7b8ba358901a56ec6cdb9d9fef4540
-Size (rspamd-2.5.tar.gz) = 4490310 bytes
+SHA1 (rspamd-2.6.tar.gz) = 56622201f414de9d4f06f28e799b22bd699616a0
+RMD160 (rspamd-2.6.tar.gz) = 4e37802bdff8eaed12ec2d85438997d65e2fe861
+SHA512 (rspamd-2.6.tar.gz) = 79e4c1aa763aef753c8d7b2a941ed92b384e96c25e6d1b3bd1321c5acc0ecb934d033a3bf19cb94c89809fd92edec25192cffe97de9e5251681e1a71216b734a
+Size (rspamd-2.6.tar.gz) = 5079444 bytes
 SHA1 (patch-CMakeLists.txt) = b0b0dd855351acb68793d84896101e1c424b7ded
 SHA1 (patch-cmake_Toolset.cmake) = d4900720b85a8e3078c4fdaa76757fcbbd4f89bd
 SHA1 (patch-contrib_fpconv_fpconv.c) = b1ec2b07570674458e69020ccbf25f0374d894f6
