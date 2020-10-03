@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/04/14 13:08:15 leot Exp $
+$NetBSD: distinfo,v 1.6 2020/10/03 18:09:10 adam Exp $
 
-SHA1 (hpack-3.0.0.tar.gz) = d230ec65b27dc18e545f90fe9f804586666de890
-RMD160 (hpack-3.0.0.tar.gz) = 3aa077f29a21fb1cd06a3fccd7b05709591f57f9
-SHA512 (hpack-3.0.0.tar.gz) = ffac4bdf19f8826027d8f89fe07e1837eacabbf18d1ff18e0cb13505c6714afd62125aa5cc594c75273725be71cc6e17b2315257fabb7779ce51de8c877267a3
-Size (hpack-3.0.0.tar.gz) = 43321 bytes
-SHA1 (patch-setup.py) = 2f72bac372d14182f4a553904d8db588d40aaa91
+SHA1 (hpack-4.0.0.tar.gz) = 5f4432e5ca99075562d1b4734d4ee0f4a7aef0d3
+RMD160 (hpack-4.0.0.tar.gz) = 6aedf9f459392ec55f894bd5549e181764c1799b
+SHA512 (hpack-4.0.0.tar.gz) = 7a303d00176288cefb4b9c562aad8d15f4e15865d6f6c8c8a086cc2ebf605547c5b2ca0498ba24d758f0a9e37877b585de1b55b232eae271b9eaf2d1238106ca
+Size (hpack-4.0.0.tar.gz) = 49117 bytes
