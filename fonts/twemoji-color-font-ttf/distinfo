@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/04/20 10:04:07 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/10/03 09:12:06 nia Exp $
 
-SHA1 (TwitterColorEmoji-SVGinOT-Linux-12.0.1.tar.gz) = 03dc56e1f7cee6d8f738e69a633d6d30deae95e6
-RMD160 (TwitterColorEmoji-SVGinOT-Linux-12.0.1.tar.gz) = 225da10ef1393471dbb4fae660a2c45b2b13c982
-SHA512 (TwitterColorEmoji-SVGinOT-Linux-12.0.1.tar.gz) = 53aee799ce336475fbbce3572349aece882b836b852fd8c54034db23acdf464851bb1f369bade5ad2b049595a8a0777ae90ccf0484a784ca1ca9d48975f48a7d
-Size (TwitterColorEmoji-SVGinOT-Linux-12.0.1.tar.gz) = 5536435 bytes
+SHA1 (TwitterColorEmoji-SVGinOT-Linux-13.0.1.tar.gz) = c0686bf18b61342f878ac1fd8de9cc66c53ece30
+RMD160 (TwitterColorEmoji-SVGinOT-Linux-13.0.1.tar.gz) = eb9d1346b95093d7b25dfe9287f790bb587d7876
+SHA512 (TwitterColorEmoji-SVGinOT-Linux-13.0.1.tar.gz) = a76fcd57debf71c0dee1e067cc746d419aacca9b8dccdbe0d11acade87885b676780ac0b044190daacc55dc183d207ae4fd513794e06ccd8502958ddeddaca83
+Size (TwitterColorEmoji-SVGinOT-Linux-13.0.1.tar.gz) = 6272081 bytes
