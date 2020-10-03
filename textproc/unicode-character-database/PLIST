@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/09/14 03:12:15 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/10/03 15:41:30 tsutsui Exp $
 share/unicode/ucd/ArabicShaping.txt
 share/unicode/ucd/BidiBrackets.txt
 share/unicode/ucd/BidiCharacterTest.txt
@@ -63,6 +63,9 @@ share/unicode/ucd/auxiliary/SentenceBreakTest.txt
 share/unicode/ucd/auxiliary/WordBreakProperty.txt
 share/unicode/ucd/auxiliary/WordBreakTest.html
 share/unicode/ucd/auxiliary/WordBreakTest.txt
+share/unicode/ucd/emoji/ReadMe.txt
+share/unicode/ucd/emoji/emoji-data.txt
+share/unicode/ucd/emoji/emoji-variation-sequences.txt
 share/unicode/ucd/extracted/DerivedBidiClass.txt
 share/unicode/ucd/extracted/DerivedBinaryProperties.txt
 share/unicode/ucd/extracted/DerivedCombiningClass.txt
