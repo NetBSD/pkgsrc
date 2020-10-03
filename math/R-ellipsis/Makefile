@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/02/09 11:53:47 mef Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/03 13:45:51 mef Exp $
 
 R_PKGNAME=	ellipsis
-R_PKGVER=	0.3.0
-CATEGORIES=	math
+R_PKGVER=	0.3.1
+#ATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Tools for working with ...
+COMMENT=	Collection of functions to catch problems and alert the user
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-rlang>=0.3.0:../../devel/R-rlang
