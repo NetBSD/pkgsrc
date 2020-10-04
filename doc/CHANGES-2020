@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5615 2020/10/04 03:41:39 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5616 2020/10/04 03:45:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8374,3 +8374,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/ruby27-base to 2.7.2 [taca 2020-10-04]
 	Updated lang/ruby27 to 2.7.2 [taca 2020-10-04]
 	Updated lang/ruby26-base to 2.6.6nb1 [taca 2020-10-04]
+	Updated lang/ruby25-base to 2.5.8nb1 [taca 2020-10-04]
