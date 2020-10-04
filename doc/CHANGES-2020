@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5619 2020/10/04 06:06:12 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5620 2020/10/04 06:11:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8378,3 +8378,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added benchmarks/R-rbenchmark version 1.0.0 [mef 2020-10-04]
 	Updated lang/pear to 1.10.12nb1 [taca 2020-10-04]
 	Updated www/pear-HTTP_Request2 to 2.4.2 [taca 2020-10-04]
+	Updated devel/R-Rcpp to 1.0.5 [mef 2020-10-04]
