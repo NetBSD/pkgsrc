@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/11 01:18:55 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/04 11:41:16 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -430,6 +430,9 @@ ${PYSITELIB}/mautrix/util/manhole.pyo
 ${PYSITELIB}/mautrix/util/markdown.py
 ${PYSITELIB}/mautrix/util/markdown.pyc
 ${PYSITELIB}/mautrix/util/markdown.pyo
+${PYSITELIB}/mautrix/util/opt_prometheus.py
+${PYSITELIB}/mautrix/util/opt_prometheus.pyc
+${PYSITELIB}/mautrix/util/opt_prometheus.pyo
 ${PYSITELIB}/mautrix/util/program.py
 ${PYSITELIB}/mautrix/util/program.pyc
 ${PYSITELIB}/mautrix/util/program.pyo
