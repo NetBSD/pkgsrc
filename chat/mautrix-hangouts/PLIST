@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/11 02:47:16 js Exp $
-bin/mautrix-hangouts
+@comment $NetBSD: PLIST,v 1.2 2020/10/04 18:36:41 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mautrix_hangouts/__init__.py
