@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5630 2020/10/04 11:54:59 js Exp $
+$NetBSD: CHANGES-2020,v 1.5631 2020/10/04 14:02:44 pgoyette Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8391,3 +8391,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-inquirer version 1.0.3 [js 2020-10-04]
 	Updated chat/py-mautrix to 0.7.11 [js 2020-10-04]
 	Added chat/maubot version 0.1.0 [js 2020-10-04]
+	Updated sysutils/decode-dimms to 4.2.20201004 [pgoyette 2020-10-04]
