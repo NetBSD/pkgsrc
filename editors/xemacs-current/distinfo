@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2019/11/27 15:11:45 hauke Exp $
+$NetBSD: distinfo,v 1.37.8.1 2020/10/04 09:28:06 bsiegert Exp $
 
 SHA1 (xemacs-21.5.34.tar.gz) = ed1fe3ff6ce6eeb9ff75ac0ee34c6530e1c355ce
 RMD160 (xemacs-21.5.34.tar.gz) = 2f6a5bc7fd72508722dded16ee7742db3e87ffaf
@@ -13,4 +13,5 @@ SHA1 (patch-modules_common_Makefile.common) = d62a23a05e72cc196557e2f7fbbccea791
 SHA1 (patch-src_Makefile.in.in) = 7a7ea5fe03b11e8690f44f4dbef17e793fbf50f2
 SHA1 (patch-src_dired.c) = d850495e567224dc7a43e1db74f4e305a906f177
 SHA1 (patch-src_lisp.h) = c5f3b5f920ec6d451a5d5c5d1e414d6ae3d6660f
+SHA1 (patch-src_process.c) = 4cca9085f0e34ad1adf44ea006df7c2c370beeb9
 SHA1 (patch-src_unexelf.c) = 96b2cf1d2512ad23fca98db9b48c34533bba8b66
