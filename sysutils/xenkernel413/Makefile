@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/09/20 03:18:33 joerg Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2020/10/04 20:44:32 bsiegert Exp $
 
 VERSION=	4.13.1
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel413-${VERSION}
 CATEGORIES=	sysutils
