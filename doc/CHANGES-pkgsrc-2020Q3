@@ -1,4 +1,20 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.1 2020/10/03 19:16:24 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.2 2020/10/04 20:44:53 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
+
+Pullup ticket #6328 - requested by martin
+security/openssl: sparc64 build fix
+
+Pullup ticket #6329 - requested by gdt
+lang/rust: NetBSD build fix
+
+Pullup ticket #6331 - requested by hauke
+editors/xemacs: Linux build fix
+
+Pullup ticket #6330 - requested by martin
+www/firefox52: sparc64 build fix
+
+Pullup ticket #6332 - requested by bouyer
+sysutils/xenkernel411: security fix
+sysutils/xenkernel413: security fix
 
