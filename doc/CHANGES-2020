@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5627 2020/10/04 11:19:19 js Exp $
+$NetBSD: CHANGES-2020,v 1.5628 2020/10/04 11:41:28 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8389,3 +8389,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/doxygen to 1.8.20 [ryoon 2020-10-04]
 	Updated sysutils/onefetch to 2.4.0 [pin 2020-10-04]
 	Added devel/py-inquirer version inquirer [js 2020-10-04]
+	Updated chat/py-mautrix to 0.7.11 [js 2020-10-04]
