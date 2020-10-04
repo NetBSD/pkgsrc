@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5622 2020/10/04 06:19:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5623 2020/10/04 06:29:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8381,3 +8381,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-Rcpp to 1.0.5 [mef 2020-10-04]
 	Updated archivers/php-pecl-zip to 1.19.1 [taca 2020-10-04]
 	Updated devel/php-xdebug to 2.9.8 [taca 2020-10-04]
+	Updated mail/roundcube to 1.4.9 [taca 2020-10-04]
+	Updated mail/roundcube-plugin-enigma to 1.4.9 [taca 2020-10-04]
+	Updated mail/roundcube-plugin-password to 1.4.9 [taca 2020-10-04]
+	Updated mail/roundcube-plugin-zipdownload to 1.4.9 [taca 2020-10-04]
