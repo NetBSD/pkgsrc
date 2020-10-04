@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5609 2020/10/03 21:57:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5610 2020/10/04 00:08:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8367,3 +8367,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-wtforms-alchemy to 0.17.0 [adam 2020-10-03]
 	Updated devel/py-cpplint to 1.5.4 [adam 2020-10-03]
 	Updated devel/py-gitpython to 3.1.9 [adam 2020-10-03]
+	Updated databases/postgresql-postgis2 to 3.0.2 [gdt 2020-10-04]
