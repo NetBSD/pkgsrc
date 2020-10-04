@@ -1,4 +1,4 @@
-$NetBSD: patch-decode-dimms.1,v 1.3 2020/09/07 14:50:25 pgoyette Exp $
+$NetBSD: patch-decode-dimms.1,v 1.4 2020/10/04 14:02:06 pgoyette Exp $
 
 Document the -s option (use spdmem(4)'s sysctl for input)
 
@@ -23,7 +23,7 @@ Document the -s option (use spdmem(4)'s sysctl for input)
  .SH PARAMETERS
  .TP
  .B \-f, --format
-@@ -60,12 +59,20 @@
+@@ -60,13 +59,21 @@
  .B \-X
  Same as -x except treat multibyte hex data as little endian
  .TP
@@ -41,7 +41,8 @@ Document the -s option (use spdmem(4)'s sysctl for input)
  Display the usage summary
  .SH BUGS
  To report bugs or send fixes, please write to the Linux I2C mailing list
- <linux-i2c@vger.kernel.org>.
+ <linux-i2c@vger.kernel.org> with Cc to the current maintainer:
+ Jean Delvare <jdelvare@suse.de>.
 -.SH SEE ALSO
 -.BR decode-vaio (1)
  .SH AUTHORS
