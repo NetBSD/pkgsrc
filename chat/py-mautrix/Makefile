@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/09/12 03:25:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/04 11:41:16 js Exp $
 
-DISTNAME=	mautrix-python-0.7.1
+DISTNAME=	mautrix-python-0.7.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
-PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_PROJECT=	mautrix-python
@@ -17,6 +16,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-yarl>=1.5.1:../../www/py-yarl
 
 USE_LANGUAGES=	# none
 EGG_NAME=	mautrix-${PKGVERSION_NOREV}
