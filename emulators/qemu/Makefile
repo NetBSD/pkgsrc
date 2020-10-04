@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.252 2020/09/27 21:29:57 jakllsch Exp $
+# $NetBSD: Makefile,v 1.253 2020/10/04 20:39:25 thorpej Exp $
 
 DISTNAME=	qemu-5.1.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -33,6 +33,10 @@ SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
+DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		palcode-clipper
+SITES.palcode-clipper=	http://ftp.netbsd.org/pub/NetBSD/arch/alpha/qemu/
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
@@ -137,6 +141,9 @@ PLIST.${pvar}=		yes
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.STATIC
 
 TEST_TARGET=		check
+
+post-extract:
+	cp ${WRKDIR}/palcode-clipper ${WRKSRC}/pc-bios/palcode-clipper
 
 # Some dependencies aren't correct and this tries to be re-made on install,
 # failing due to configure bugs.
