@@ -1,0 +1,12 @@
+$NetBSD: patch-requirements.txt,v 1.1 2020/10/04 11:19:02 js Exp $
+
+Make requirements less strict.
+
+--- requirements.txt.orig	2018-07-20 10:55:27.000000000 +0000
++++ requirements.txt
+@@ -1,4 +1,4 @@
+-prompt_toolkit==1.0.14
++prompt_toolkit>=1.0.14
+ Pygments>=2.2.0
+ regex>=2016.11.21
+ 
