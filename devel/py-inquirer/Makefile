@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/10/04 11:19:02 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/04 11:47:54 js Exp $
 
-DISTNAME=	PyInquirer-1.0.3
-PKGNAME=	${PYPKGPREFIX}-inquirer
+DISTNAME=	PyInquirer-${PKGVERSION_NOREV}
+PKGNAME=	${PYPKGPREFIX}-inquirer-1.0.3
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=P/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyInquirer/}
 
 MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/CITGuru/PyInquirer/
