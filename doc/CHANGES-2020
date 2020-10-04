@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5628 2020/10/04 11:41:28 js Exp $
+$NetBSD: CHANGES-2020,v 1.5629 2020/10/04 11:53:46 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8390,3 +8390,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/onefetch to 2.4.0 [pin 2020-10-04]
 	Added devel/py-inquirer version inquirer [js 2020-10-04]
 	Updated chat/py-mautrix to 0.7.11 [js 2020-10-04]
+	Added chat/maubot version 0.1.0 [js 2020-10-04]
