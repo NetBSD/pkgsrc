@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5624 2020/10/04 06:31:33 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5625 2020/10/04 09:45:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8386,3 +8386,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/roundcube-plugin-password to 1.4.9 [taca 2020-10-04]
 	Updated mail/roundcube-plugin-zipdownload to 1.4.9 [taca 2020-10-04]
 	Updated www/contao35 to 3.5.40nb1 [taca 2020-10-04]
+	Updated devel/doxygen to 1.8.20 [ryoon 2020-10-04]
