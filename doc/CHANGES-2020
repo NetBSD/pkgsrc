@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5621 2020/10/04 06:17:35 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5622 2020/10/04 06:19:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8380,3 +8380,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/pear-HTTP_Request2 to 2.4.2 [taca 2020-10-04]
 	Updated devel/R-Rcpp to 1.0.5 [mef 2020-10-04]
 	Updated archivers/php-pecl-zip to 1.19.1 [taca 2020-10-04]
+	Updated devel/php-xdebug to 2.9.8 [taca 2020-10-04]
