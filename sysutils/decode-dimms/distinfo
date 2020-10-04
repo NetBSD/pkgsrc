@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2020/09/07 14:50:25 pgoyette Exp $
+$NetBSD: distinfo,v 1.21 2020/10/04 14:02:06 pgoyette Exp $
 
-SHA1 (i2c-tools-349b18f5660548f8aaae4014a8fbb1a3e71d89c2.tar.gz) = 94b8b1dbf98e470bd918f88ede17b687b51b2ef4
-RMD160 (i2c-tools-349b18f5660548f8aaae4014a8fbb1a3e71d89c2.tar.gz) = e40d4e4a5c47f30a8f5f3cf99df9ffd558e1362f
-SHA512 (i2c-tools-349b18f5660548f8aaae4014a8fbb1a3e71d89c2.tar.gz) = dc2c766e8587580882c8fb945fdf267753e2653cd3f6c8e32b51eb87d73b3c463d78f0a1f607161c8749031a91a1e8b5bcace57a97c181772fb55eea5d01c531
-Size (i2c-tools-349b18f5660548f8aaae4014a8fbb1a3e71d89c2.tar.gz) = 101130 bytes
+SHA1 (i2c-tools-9cba52b9626413307b994af44695b8a9c0e058be.tar.gz) = b7dc885a3b21d4751fdd02213c3bed3fa2e8f0d4
+RMD160 (i2c-tools-9cba52b9626413307b994af44695b8a9c0e058be.tar.gz) = 617b32ea7b1af7cee900eb0b8d8cee572e14610b
+SHA512 (i2c-tools-9cba52b9626413307b994af44695b8a9c0e058be.tar.gz) = 1008fbf6135fa1e1ed53c679cb76b3f4d6d2cfe1ed8f79516625c80b57c5b9b03e6cec391402f43d1cfd35cd75d642e13413a0f52cb1c164d3525a3493860fc1
+Size (i2c-tools-9cba52b9626413307b994af44695b8a9c0e058be.tar.gz) = 102950 bytes
 SHA1 (patch-decode-dimms) = 8f8f03cb1bae03a5572bb65f88dfce216f98549f
-SHA1 (patch-decode-dimms.1) = fc221f7fbff2580d1e49026c2dca3872c5fd8de7
+SHA1 (patch-decode-dimms.1) = 349c0af6c639f7752e03f78d089bbb414bc1a2e7
