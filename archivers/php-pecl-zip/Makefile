@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/06/13 16:20:28 taca Exp $
+# $NetBSD: Makefile,v 1.4 2020/10/04 06:17:10 taca Exp $
 #
 
 MODNAME=	zip
-PECL_VERSION=	1.19.0
+PECL_VERSION=	1.19.1
 PKGNAME=	${PHP_PKG_PREFIX}-pecl-${MODNAME}-${PECL_VERSION}
 CATEGORIES=	archivers
 
