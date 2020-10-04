@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5612 2020/10/04 03:13:18 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5613 2020/10/04 03:15:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8370,3 +8370,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/postgresql-postgis2 to 3.0.2 [gdt 2020-10-04]
 	Updated lang/php73 to 7.3.23 [taca 2020-10-04]
 	Updated lang/php74 to 7.4.11 [taca 2020-10-04]
+	Updated lang/php72 to 7.2.34 [taca 2020-10-04]
