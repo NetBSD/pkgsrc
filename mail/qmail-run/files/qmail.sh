@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.9 2018/12/30 19:09:05 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.10 2020/10/05 12:17:20 schmonz Exp $
 #
 # @PKGNAME@ master script for administrators to control qmail
 # services. Usage resembles the qmailctl script from "Life with qmail".
@@ -36,7 +36,9 @@ qmailrcd() {
 	for service in "$@"; do
 		if [ -f /etc/rc.subr ]; then
 			load_rc_config $service
-			checkyesno $service && $rcd_dir/${service} $rc_arg
+			if checkyesno $service; then
+				$rcd_dir/${service} $rc_arg
+			fi
 		else
 			$rcd_dir/${service} $rc_arg
 		fi
