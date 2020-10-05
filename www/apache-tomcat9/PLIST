@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/04/16 15:08:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/10/05 12:09:54 otis Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -161,15 +161,6 @@ share/tomcat/webapps/docs/default-servlet.html
 share/tomcat/webapps/docs/deployer-howto.html
 share/tomcat/webapps/docs/developers.html
 share/tomcat/webapps/docs/elapi/index.html
-share/tomcat/webapps/docs/funcspecs/fs-admin-apps.html
-share/tomcat/webapps/docs/funcspecs/fs-admin-objects.html
-share/tomcat/webapps/docs/funcspecs/fs-admin-opers.html
-share/tomcat/webapps/docs/funcspecs/fs-default.html
-share/tomcat/webapps/docs/funcspecs/fs-jdbc-realm.html
-share/tomcat/webapps/docs/funcspecs/fs-jndi-realm.html
-share/tomcat/webapps/docs/funcspecs/fs-memory-realm.html
-share/tomcat/webapps/docs/funcspecs/index.html
-share/tomcat/webapps/docs/funcspecs/mbean-names.html
 share/tomcat/webapps/docs/graal.html
 share/tomcat/webapps/docs/host-manager-howto.html
 share/tomcat/webapps/docs/html-host-manager-howto.html
@@ -631,8 +622,9 @@ share/tomcat/webapps/manager/WEB-INF/jsp/connectorTrustedCerts.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp
 share/tomcat/webapps/manager/WEB-INF/web.xml
+share/tomcat/webapps/manager/css/manager.css
 share/tomcat/webapps/manager/images/asf-logo.svg
-share/tomcat/webapps/manager/images/tomcat.gif
+share/tomcat/webapps/manager/images/tomcat.svg
 share/tomcat/webapps/manager/index.jsp
 share/tomcat/webapps/manager/status.xsd
 share/tomcat/webapps/manager/xform.xsl
