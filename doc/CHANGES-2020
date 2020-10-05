@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5639 2020/10/05 11:33:53 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5640 2020/10/05 12:10:05 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8400,3 +8400,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/qrencode to 4.1.1 [wiz 2020-10-05]
 	Updated multimedia/libde265 to 1.0.7 [wiz 2020-10-05]
 	Updated graphics/ImageMagick to 7.0.10.32 [wiz 2020-10-05]
+	Updated www/apache-tomcat9 to 9.0.38 [otis 2020-10-05]
