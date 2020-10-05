@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2020/08/30 20:58:23 tnn Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/10/05 21:21:36 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -3100,7 +3100,7 @@ share/doc/gnuradio-${PKGVERSION}/html/doc.png
 share/doc/gnuradio-${PKGVERSION}/html/docs_2doxygen_2other_2group__defs_8dox.html
 share/doc/gnuradio-${PKGVERSION}/html/docs_2doxygen_2other_2main__page_8dox.html
 share/doc/gnuradio-${PKGVERSION}/html/doxygen.css
-share/doc/gnuradio-${PKGVERSION}/html/doxygen.png
+share/doc/gnuradio-${PKGVERSION}/html/doxygen.svg
 share/doc/gnuradio-${PKGVERSION}/html/dpll__bb_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/dpll__bb_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/dpll__bb_8h__incl.md5
@@ -6271,7 +6271,7 @@ share/doc/gnuradio-${PKGVERSION}/html/search/classes_e.html
 share/doc/gnuradio-${PKGVERSION}/html/search/classes_e.js
 share/doc/gnuradio-${PKGVERSION}/html/search/classes_f.html
 share/doc/gnuradio-${PKGVERSION}/html/search/classes_f.js
-share/doc/gnuradio-${PKGVERSION}/html/search/close.png
+share/doc/gnuradio-${PKGVERSION}/html/search/close.svg
 share/doc/gnuradio-${PKGVERSION}/html/search/defines_0.html
 share/doc/gnuradio-${PKGVERSION}/html/search/defines_0.js
 share/doc/gnuradio-${PKGVERSION}/html/search/defines_1.html
@@ -6516,7 +6516,7 @@ share/doc/gnuradio-${PKGVERSION}/html/search/groups_e.html
 share/doc/gnuradio-${PKGVERSION}/html/search/groups_e.js
 share/doc/gnuradio-${PKGVERSION}/html/search/groups_f.html
 share/doc/gnuradio-${PKGVERSION}/html/search/groups_f.js
-share/doc/gnuradio-${PKGVERSION}/html/search/mag_sel.png
+share/doc/gnuradio-${PKGVERSION}/html/search/mag_sel.svg
 share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_0.html
 share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_0.js
 share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_1.html
@@ -8778,7 +8778,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/multiply__const_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/multiply__const__v_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/multiply__matrix_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute_8h.xml
-share/doc/gnuradio-${PKGVERSION}/xml/namespace_0d75.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespace_0d0.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift_1_1server.xml
@@ -9145,6 +9145,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/wavfile__sink_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/wavfile__source_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/window_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/wvps__ff_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/xml.xsd
 share/doc/gnuradio-${PKGVERSION}/xml/xor__blk_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xoroshiro128p_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/zeromq_8dox.xml
