@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5635 2020/10/04 22:57:24 fox Exp $
+$NetBSD: CHANGES-2020,v 1.5636 2020/10/05 11:27:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8396,3 +8396,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/mautrix-hangouts to 0.1.3 [js 2020-10-04]
 	Updated emulators/qemu to 5.1.0nb6 [thorpej 2020-10-04]
 	Updated textproc/bat to 0.16.0 [fox 2020-10-04]
+	Updated audio/libshout to 2.4.4 [wiz 2020-10-05]
