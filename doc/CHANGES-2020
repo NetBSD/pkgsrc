@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5646 2020/10/05 15:21:18 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5647 2020/10/05 15:55:35 roy Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8408,3 +8408,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/py-zipp to 3.3.0 [adam 2020-10-05]
 	Updated devel/git-lfs to 2.12.0 [tnn 2020-10-05]
 	Updated archivers/torrentzip to 1.0.6 [wiz 2020-10-05]
+	Updated net/dhcpcd to 9.3.0 [roy 2020-10-05]
