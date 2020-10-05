@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2020/08/18 08:19:17 tnn Exp $
+# $NetBSD: Makefile,v 1.120 2020/10/05 09:36:34 nia Exp $
 
 DISTNAME=	fontconfig-2.13.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -77,6 +77,7 @@ FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
 	80-delicious.conf 90-synthetic.conf
 # pkgsrc addition
 FC_STDCONF+=	30-pkgsrc-aliases.conf
+FC_STDCONF+=	70-no-bitmap-webfonts.conf
 .for f in ${FC_STDCONF}
 CONF_FILES+=	${TMPLDIR}/${f} ${PKG_SYSCONFDIR}/conf.d/${f}
 .endfor
@@ -102,6 +103,7 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
+	${INSTALL_DATA} ${FILESDIR}/70-no-bitmap-webfonts.conf ${DESTDIR}${TMPLDIR}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
