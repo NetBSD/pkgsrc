@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5644 2020/10/05 12:34:44 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5645 2020/10/05 12:50:24 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8406,3 +8406,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/apache-tomcat85 to 8.5.58 [otis 2020-10-05]
 	Updated lang/npm to 6.14.8 [adam 2020-10-05]
 	Updated archivers/py-zipp to 3.3.0 [adam 2020-10-05]
+	Updated devel/git-lfs to 2.12.0 [tnn 2020-10-05]
