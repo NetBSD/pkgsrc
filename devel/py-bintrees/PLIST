@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/29 02:19:06 khorben Exp $
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2020/10/05 21:22:39 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/bintrees/__init__.py
 ${PYSITELIB}/bintrees/__init__.pyc
 ${PYSITELIB}/bintrees/__init__.pyo
@@ -15,7 +15,6 @@ ${PYSITELIB}/bintrees/avltree.pyo
 ${PYSITELIB}/bintrees/bintree.py
 ${PYSITELIB}/bintrees/bintree.pyc
 ${PYSITELIB}/bintrees/bintree.pyo
-${PYSITELIB}/bintrees/cython_trees.so
 ${PYSITELIB}/bintrees/rbtree.py
 ${PYSITELIB}/bintrees/rbtree.pyc
 ${PYSITELIB}/bintrees/rbtree.pyo
