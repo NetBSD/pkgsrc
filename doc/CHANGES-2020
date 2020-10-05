@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5650 2020/10/05 19:36:14 nils Exp $
+$NetBSD: CHANGES-2020,v 1.5651 2020/10/05 20:16:55 nils Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8412,3 +8412,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ImageMagick to 7.0.10.33 [triaxx 2020-10-05]
 	Updated x11/mate-panel to 1.24.1 [gutteridge 2020-10-05]
 	Updated www/py-pelican to 4.5.0 [nils 2020-10-05]
+	Updated www/siege to 4.0.7 [nils 2020-10-05]
