@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2018/09/02 20:30:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2020/10/05 09:36:34 nia Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-conflist
@@ -498,6 +498,7 @@ share/fontconfig/conf.avail/65-fonts-persian.conf
 share/fontconfig/conf.avail/65-khmer.conf
 share/fontconfig/conf.avail/65-nonlatin.conf
 share/fontconfig/conf.avail/69-unifont.conf
+share/fontconfig/conf.avail/70-no-bitmap-webfonts.conf
 share/fontconfig/conf.avail/70-no-bitmaps.conf
 share/fontconfig/conf.avail/70-yes-bitmaps.conf
 share/fontconfig/conf.avail/80-delicious.conf
