@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/02/11 08:00:57 he Exp $
+$NetBSD: distinfo,v 1.3 2020/10/05 07:19:33 he Exp $
 
-SHA1 (opendnssec-2.1.6.tar.gz) = 3aca59010c2067578ede0dbc216f15d70f9447e9
-RMD160 (opendnssec-2.1.6.tar.gz) = e88f305fa2c97f4bd33cd3861080de306a44ed06
-SHA512 (opendnssec-2.1.6.tar.gz) = 9dad545d4ec92bb6fc74fd568160f0515cdfa23af4a901ce147f2c82b684224237687461a13c0e37ce6d3813494e4292dfa98cfb17f871d444eb69baf72a1afd
-Size (opendnssec-2.1.6.tar.gz) = 1122405 bytes
+SHA1 (opendnssec-2.1.7.tar.gz) = 0277e4f54098bea74809e3d8e6cad1a435570349
+RMD160 (opendnssec-2.1.7.tar.gz) = bee3d27a7d7e52a0125f2b14771d62aedafa66ba
+SHA512 (opendnssec-2.1.7.tar.gz) = 6f2ca2115195fd2fcd0b22186c41c9e64ec24d98b34a10a8a75d64b4671b5afe3a655f32bbd241a0df84affda1f6cecd4daac0e6fa7081e4c9fa02d1bb4ed1eb
+Size (opendnssec-2.1.7.tar.gz) = 1123558 bytes
 SHA1 (patch-conf_Makefile.in) = 83fdf2650bfe63688b072dcb8019d44b62f6f016
