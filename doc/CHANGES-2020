@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5643 2020/10/05 12:19:21 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5644 2020/10/05 12:34:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8404,3 +8404,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/qmail-run to 20201005 [schmonz 2020-10-05]
 	Updated net/djbdns-run to 20201005 [schmonz 2020-10-05]
 	Updated www/apache-tomcat85 to 8.5.58 [otis 2020-10-05]
+	Updated lang/npm to 6.14.8 [adam 2020-10-05]
+	Updated archivers/py-zipp to 3.3.0 [adam 2020-10-05]
