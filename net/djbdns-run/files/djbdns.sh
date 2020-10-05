@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: djbdns.sh,v 1.3 2019/01/07 14:01:55 schmonz Exp $
+# $NetBSD: djbdns.sh,v 1.4 2020/10/05 12:17:47 schmonz Exp $
 #
 # @PKGNAME@ master script for administrators to control djbdns
 # services.
@@ -36,7 +36,9 @@ djbdnsrcd() {
 	for service in "$@"; do
 		if [ -f /etc/rc.subr ]; then
 			load_rc_config $service
-			checkyesno $service && $rcd_dir/${service} $rc_arg
+			if checkyesno $service; then
+				$rcd_dir/${service} $rc_arg
+			fi
 		else
 			$rcd_dir/${service} $rc_arg
 		fi
