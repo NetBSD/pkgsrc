@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:28:18 joerg Exp $
-bin/trrntzip
-share/doc/torrentzip/README
+@comment $NetBSD: PLIST,v 1.3 2020/10/05 15:21:07 wiz Exp $
+bin/torrentzip
+libexec/torrentzip/TrrntZip.NET.exe
