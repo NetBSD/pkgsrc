@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/04/24 21:51:54 nils Exp $
+$NetBSD: distinfo,v 1.6 2020/10/05 19:34:51 nils Exp $
 
-SHA1 (pelican-4.2.0.tar.gz) = 45188a2cc77a38af7c445504d62df1075be9ad5b
-RMD160 (pelican-4.2.0.tar.gz) = 11b2454ada05caa970781cb54ea499f60039fac3
-SHA512 (pelican-4.2.0.tar.gz) = 9c9f41306739acc4c6c6a7ddf50d955d958af7be1da197b42859b95405b18ab5b597fee4f9aabdf98cd508204558bff9c4f0c11bf4e5367b16e32568682a21e6
-Size (pelican-4.2.0.tar.gz) = 1332348 bytes
+SHA1 (pelican-4.5.0.tar.gz) = 7a402e232337fb91da5bb9b995ab7f5f1f2b8847
+RMD160 (pelican-4.5.0.tar.gz) = d88a28e854f947d13627f6b972e48773b4c93a2a
+SHA512 (pelican-4.5.0.tar.gz) = e8532e9ab5073fc5fc17ecdf31c0fe5617cd72778d8ca90d2833f660ea74ca81db3a83b1868588bc3287d90d23f64c5ef60ae99ae1a148fa27b47b5c59f51299
+Size (pelican-4.5.0.tar.gz) = 1394816 bytes
