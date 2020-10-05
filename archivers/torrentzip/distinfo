@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/03/23 17:06:45 joerg Exp $
+$NetBSD: distinfo,v 1.5 2020/10/05 15:21:07 wiz Exp $
 
-SHA1 (trrntzip_v02_src.tar.gz) = ad2487d7e9edc6608358104df8367da3d535fd2b
-RMD160 (trrntzip_v02_src.tar.gz) = 1a6718babc3cfb42e99fadbb53360ecb4f15b5b9
-SHA512 (trrntzip_v02_src.tar.gz) = 802dd1bf55e0a31df75d8195c9d2d5610be8cb7f14d14278eba72b580aff3ad415711999db05a5425303380ebfc82a68896e276319e0ead5635d0a07615ba700
-Size (trrntzip_v02_src.tar.gz) = 46971 bytes
-SHA1 (patch-aa) = 639626aab0ab5f3a359cde057d83f0291f1476cb
-SHA1 (patch-configure.ac) = f6657e42c74ad4722c852c733c819ebb0c58e8ef
-SHA1 (patch-src_platform.c) = ef7d4dae6b40dfea623a882141316ddf80e4c6eb
+SHA1 (TrrntZip.NET106.zip) = 6b35fb54590cab45027197c7fb789c98825a3220
+RMD160 (TrrntZip.NET106.zip) = 97715595f70e257a0ba4706c52f44282cf910e45
+SHA512 (TrrntZip.NET106.zip) = aa413d4b9ace603b9b419de4fb3d8adb27c24303ee912434d295640aa5bf907aed4bfff3b759918305e30253c74a5e9aa6a23bbf7dc4e69979ac4feaccd8f092
+Size (TrrntZip.NET106.zip) = 123732 bytes

@@ -1,26 +1,29 @@
-# $NetBSD: Makefile,v 1.6 2019/11/02 22:54:28 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.7 2020/10/05 15:21:07 wiz Exp $
 
-DISTNAME=	trrntzip_v02_src
-PKGNAME=	torrentzip-0.2
+DISTNAME=	TrrntZip.NET106
+PKGNAME=	torrentzip-1.0.6
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trrntzip/}
+MASTER_SITES=	https://romvault.com/trrntzip/download/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/trrntzip/
-COMMENT=	Create identical zip archives from identical files
+HOMEPAGE=	https://romvault.com/trrntzip/
+COMMENT=	Convert zip archives to torrentzip format
+LICENSE=	apache-2.0
 
-USE_TOOLS+=		aclocal autoconf automake autoheader
-GNU_CONFIGURE=		yes
-INSTALLATION_DIRS=	share/doc/torrentzip
+DEPENDS+=	mono-[0-9]*:../../lang/mono6
 
-WRKSRC=	${WRKDIR}/trrntzip
+WRKSRC=		${WRKDIR}
+USE_LANGUAGES=	# none
 
-pre-configure:
-	cd ${WRKSRC} && sh autogen.sh
+INSTALLATION_DIRS=	bin libexec/torrentzip
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/torrentzip
+do-build:
+	${ECHO} '#!/bin/sh' > ${WRKDIR}/torrentzip
+	${ECHO} "${PREFIX}/bin/mono ${PREFIX}/libexec/torrentzip/TrrntZip.NET.exe "'"$$@"' >> ${WRKSRC}/torrentzip
 
-.include "../../devel/zlib/buildlink3.mk"
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/torrentzip ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/TrrntZip.NET.exe ${DESTDIR}${PREFIX}/libexec/torrentzip
+
 .include "../../mk/bsd.pkg.mk"
