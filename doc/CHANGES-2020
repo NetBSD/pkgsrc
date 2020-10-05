@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5654 2020/10/05 21:24:25 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5655 2020/10/05 22:10:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8417,3 +8417,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-google-api-core to 1.22.4 [adam 2020-10-05]
 	Updated devel/py-bintrees to 2.1.0nb1 [wiz 2020-10-05]
 	Updated devel/py-plumbum to 1.6.1.post0nb1 [wiz 2020-10-05]
+	Updated cad/dinotrace to 9.4f [mef 2020-10-05]
