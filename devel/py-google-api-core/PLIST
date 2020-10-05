@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/12 06:06:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/10/05 21:12:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -112,3 +112,6 @@ ${PYSITELIB}/google/api_core/retry_async.pyo
 ${PYSITELIB}/google/api_core/timeout.py
 ${PYSITELIB}/google/api_core/timeout.pyc
 ${PYSITELIB}/google/api_core/timeout.pyo
+${PYSITELIB}/google/api_core/version.py
+${PYSITELIB}/google/api_core/version.pyc
+${PYSITELIB}/google/api_core/version.pyo
