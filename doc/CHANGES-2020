@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5648 2020/10/05 17:23:56 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.5649 2020/10/05 17:36:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8410,3 +8410,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/torrentzip to 1.0.6 [wiz 2020-10-05]
 	Updated net/dhcpcd to 9.3.0 [roy 2020-10-05]
 	Updated graphics/ImageMagick to 7.0.10.33 [triaxx 2020-10-05]
+	Updated x11/mate-panel to 1.24.1 [gutteridge 2020-10-05]
