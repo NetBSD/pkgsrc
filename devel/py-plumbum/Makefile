@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/09/29 02:27:30 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/05 21:24:16 wiz Exp $
 
 DISTNAME=	plumbum-1.6.1.post0
+PKGREVISION=	1
 CATEGORIES=	devel
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/plumbum/}
@@ -10,5 +11,5 @@ HOMEPAGE=	http://plumbum.readthedocs.org/
 COMMENT=	Plumbum: shell combinators library
 LICENSE=	mit
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
