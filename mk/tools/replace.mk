@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.290 2019/06/06 11:54:33 jperkin Exp $
+# $NetBSD: replace.mk,v 1.291 2020/10/06 17:36:50 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1372,7 +1372,7 @@ ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 #
 .if defined(GNU_CONFIGURE)
 .  for _t_ in ${_USE_TOOLS}
-.    if defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
+.    if defined(_TOOLS_VARNAME.${_t_}) && defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
 TOOLS_VALUE_GNU.${_t_}?=	${TOOLS_CMDLINE.${_t_}}
 .    endif
 .    if defined(TOOLS_VALUE_GNU.${_t_})
