@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5662 2020/10/06 10:26:59 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5663 2020/10/06 10:52:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8427,3 +8427,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-responses to 0.12.0 [adam 2020-10-06]
 	Updated devel/spdlog to 1.8.1 [wiz 2020-10-06]
 	Added net/mkvserver_mk2 version 0.0.0.20200117 [ryoon 2020-10-06]
+	Updated devel/py-hypothesis to 5.37.0 [wiz 2020-10-06]
