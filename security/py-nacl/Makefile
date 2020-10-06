@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/05/29 06:07:23 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/10/06 10:51:22 wiz Exp $
 
 DISTNAME=	PyNaCl-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/^py//}
@@ -13,9 +13,9 @@ LICENSE=	apache-2.0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.4.1:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.27.0:../../devel/py-hypothesis
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
 
 MAKE_ENV+=	SODIUM_INSTALL=system
 
