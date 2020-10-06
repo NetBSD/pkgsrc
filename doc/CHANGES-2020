@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5665 2020/10/06 12:06:15 nils Exp $
+$NetBSD: CHANGES-2020,v 1.5666 2020/10/06 17:50:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8430,3 +8430,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-hypothesis to 5.37.0 [wiz 2020-10-06]
 	Updated www/nginx-devel to 1.19.3nb1 [nils 2020-10-06]
 	Updated www/nginx to 1.18.0nb3 [nils 2020-10-06]
+	Updated devel/py-mercurial to 5.5.2 [wiz 2020-10-06]
