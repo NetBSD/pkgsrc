@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2019/11/02 22:25:46 mrg Exp $
+$NetBSD: distinfo,v 1.9 2020/10/06 00:26:51 mrg Exp $
 
-SHA1 (csound-6.13.0.tar.gz) = 1775f3bdd273364995ba52a79c32795928cb3ec2
-RMD160 (csound-6.13.0.tar.gz) = 780b93bb5547e5a3807affabfe1c9f0315d5fec3
-SHA512 (csound-6.13.0.tar.gz) = 51a30cb426fc77ac648f6a9fb669b9298e6608b39ae3b12181d16ecf1fb6f2ed3db31471615a60d2ce7906b91fdb911b38c8dfa3f93699768f490f87a2bcbbbd
-Size (csound-6.13.0.tar.gz) = 26328673 bytes
-SHA1 (patch-CMakeLists.txt) = e526ab5157e8b7d636a983418f0d504b0ced6fe5
+SHA1 (csound-6.15.0.tar.gz) = d8c04b42db03551e801faf7c8a8a969dbdd78fbc
+RMD160 (csound-6.15.0.tar.gz) = ed7c7971ac2a2c06cbe8f71b512d32ddb845c4c3
+SHA512 (csound-6.15.0.tar.gz) = 3462a544357b9ef7d8f2e6c7aed5f0659524fab08669950436da856c9854f81f658f1bd50061e7e6bfd28663a578ef2e0ea75ac4f0f9c72d476dddd82aa26185
+Size (csound-6.15.0.tar.gz) = 31879171 bytes
+SHA1 (patch-CMakeLists.txt) = a9e8c15acbfe9586c0e5bdbd459cb4bc160a5f75
 SHA1 (patch-Engine_linevent.c) = b141da5b28d775f44f5804a08c22371be0cad3aa
 SHA1 (patch-Frontends_csound_csound_main.c) = 0004c7fedd7b57077587c7a2e6e4ce112b264304
 SHA1 (patch-InOut_libsnd.c) = b460ef3ef7117fd9c194eff3f62a64435243ccc4
