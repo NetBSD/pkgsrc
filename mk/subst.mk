@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.102 2020/06/29 18:04:13 rillig Exp $
+# $NetBSD: subst.mk,v 1.103 2020/10/06 17:48:02 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -20,20 +20,6 @@
 # SUBST_SHOW_DIFF
 #	Whether to log each changed file as a unified diff, for all
 #	SUBST classes. Defaults to "no".
-#
-# SUBST_NOOP_OK
-#	Whether it is ok to have patterns in SUBST_FILES that don't
-#	contain any of the patterns from SUBST_SED or SUBST_VARS and
-#	thus are not modified at all.
-#
-#	This setting only detects redundant filename patterns.  It does
-#	not detect redundant patterns in SUBST_SED.
-#
-#	Identity substitutions like s|man|man| do not count as no-ops
-#	since their replacement part usually comes from a variable, such
-#	as PKGMANDIR.
-#
-#	Defaults to no.  Will be removed after 2020Q3.
 #
 # Package-settable variables:
 #
@@ -92,7 +78,15 @@
 #	Whether to allow filename patterns in SUBST_FILES that don't
 #	contain any of the patterns from SUBST_SED.
 #
-#	Defaults to no, since May 2020.
+#	Defaults to no, which means that each filename pattern in
+#	SUBST_FILES must contain any of the patterns from SUBST_SED.
+#
+#	Identity substitutions like s|man|man| do not count as no-ops
+#	since their replacement part usually comes from a variable, such
+#	as PKGMANDIR.
+#
+#	This setting only detects redundant filename patterns.  It does
+#	not detect redundant patterns in SUBST_SED.
 #
 #	Typical reasons to change this to yes are:
 #
@@ -110,10 +104,9 @@
 #
 
 SUBST_SHOW_DIFF?=	no
-SUBST_NOOP_OK?=		no	# will be forced to "no" after 2020Q3
 
 _VARGROUPS+=		subst
-_USER_VARS.subst=	SUBST_SHOW_DIFF SUBST_NOOP_OK
+_USER_VARS.subst=	SUBST_SHOW_DIFF
 _PKG_VARS.subst=	SUBST_CLASSES
 .for c in ${SUBST_CLASSES}
 .  for pv in SUBST_STAGE SUBST_MESSAGE SUBST_FILES SUBST_SED SUBST_VARS	\
@@ -155,7 +148,7 @@ _SUBST_KEEP.${class}?=		LC_ALL=C ${DIFF} -u "$$file" "$$tmpfile" || true
 _SUBST_KEEP.${class}?=		${DO_NADA}
 SUBST_SKIP_TEXT_CHECK.${class}?= \
 				no
-SUBST_NOOP_OK.${class}?=	${SUBST_NOOP_OK}
+SUBST_NOOP_OK.${class}?=	no
 _SUBST_WARN.${class}=		${${SUBST_NOOP_OK.${class}:tl} == yes:?${INFO_MSG}:${WARNING_MSG}} "[subst.mk:${class}]"
 
 .  if !empty(SUBST_SKIP_TEXT_CHECK.${class}:M[Yy][Ee][Ss])
