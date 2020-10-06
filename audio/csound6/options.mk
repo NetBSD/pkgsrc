@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/12/08 02:01:07 nia Exp $
+# $NetBSD: options.mk,v 1.3 2020/10/06 00:26:51 mrg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.csound6
 PKG_SUPPORTED_OPTIONS=	jack portaudio pulseaudio
@@ -36,7 +36,7 @@ PLIST_VARS+=		portaudio
 .if !empty(PKG_OPTIONS:Mportaudio)
 .include "../../audio/portaudio/buildlink3.mk"
 CMAKE_ARGS+=		-DUSE_PORTAUDIO=ON
-CMAKE_ARGS+=		-DPORTAUDIO_INCLUDE_PATH=${BUILDLINK_DIR}/include/portaudio2
+CMAKE_ARGS+=		-DCMAKE_INCLUDE_PATH=${BUILDLINK_PREFIX.portaudio}/include/portaudio2
 CMAKE_ARGS+=		-DCMAKE_LIBRARY_PATH=${BUILDLINK_PREFIX.portaudio}/lib/portaudio2
 PLIST.portaudio=	yes
 .else
