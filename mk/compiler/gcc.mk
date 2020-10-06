@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.214 2020/09/02 16:16:43 ryoon Exp $
+# $NetBSD: gcc.mk,v 1.215 2020/10/06 17:36:50 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -912,6 +912,8 @@ _GCCBINDIR=	${_CC:H}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 _GCC_BIN_PREFIX=	${MACHINE_GNU_PLATFORM}-
 .endif
+_GCC_BIN_PREFIX?=	# empty
+GCC_VERSION_SUFFIX?=	# empty
 .if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}gcc${GCC_VERSION_SUFFIX})
 _GCC_VARS+=	CC
 _GCC_CC=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gcc${GCC_VERSION_SUFFIX}
@@ -1119,7 +1121,7 @@ ${_GCC_${_var_}}:
 PKGSRC_FORTRAN?=gfortran
 
 _GCC_NEEDS_A_FORTRAN=	no
-.if empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !exists(${FCPATH})
+.if empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !(defined(FCPATH) && exists(${FCPATH}))
 _GCC_NEEDS_A_FORTRAN=	yes
 .else
 .  for _pattern_ in 0.* 1.[0-4] 1.[0-4].*
