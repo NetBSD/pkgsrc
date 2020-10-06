@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2020/08/31 18:06:52 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2020/10/06 02:06:05 mef Exp $
 
 DISTNAME=		avr-libc-2.0.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		cross
 MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-versioned-doc
 CONFIGURE_ARGS+=	CC=${PREFIX}/bin/avr-gcc
 CONFIGURE_ARGS+=	CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/avr/include"
 
-BUILD_DEPENDS+=		doxygen>=1.8.12:../../devel/doxygen
+BUILD_DEPENDS+=		doxygen>=1.8.20:../../devel/doxygen
 BUILD_DEPENDS+=		tex-hanging-[0-9]*:../../print/tex-hanging
 BUILD_DEPENDS+=		tex-stackengine-[0-9]*:../../print/tex-stackengine
 BUILD_DEPENDS+=		tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
