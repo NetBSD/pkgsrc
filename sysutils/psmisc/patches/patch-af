@@ -1,6 +1,9 @@
-$NetBSD: patch-af,v 1.6 2014/09/23 22:18:21 jperkin Exp $
+$NetBSD: patch-af,v 1.7 2020/10/06 00:19:05 mcf Exp $
 
 Need limits.h for PATH_MAX
+
+Fix sscanf usage bug on musl libc and uclibc (upstream commit
+https://gitlab.com/psmisc/psmisc/-/commit/ca2b176889729a7347bd95b832b9a5bb39fec229)
 
 --- src/pstree.c.orig	2000-12-18 05:59:23.000000000 +0000
 +++ src/pstree.c
@@ -65,7 +68,7 @@ Need limits.h for PATH_MAX
  	if ((file = fopen (path, "r")) != NULL)
  	  {
  	    empty = 0;
-@@ -513,6 +519,10 @@ read_proc (void)
+@@ -513,16 +519,19 @@ read_proc (void)
  		perror (path);
  		exit (1);
  	      }
@@ -76,7 +79,18 @@ Need limits.h for PATH_MAX
              fread(readbuf, BUFSIZ, 1, file) ;
              if (ferror(file) == 0) 
              {
-@@ -532,11 +542,12 @@ read_proc (void)
+               memset(comm, '\0', COMM_LEN+1);
+               tmpptr = strrchr(readbuf, ')'); /* find last ) */
+-              *tmpptr = '\0';
+               /* We now have readbuf with pid and cmd, and tmpptr+2
+                * with the rest */
+               /*printf("readbuf: %s\n", readbuf);*/
+-              if (sscanf(readbuf, "%*d (%15c", comm) == 1)
++              if (sscanf(readbuf, "%*d (%15[^)]", comm) == 1)
+               {
+                 /*printf("tmpptr: %s\n", tmpptr+2);*/
+                 if (sscanf(tmpptr+2, "%*c %d", &ppid) == 1)
+@@ -532,11 +541,12 @@ read_proc (void)
  		(file, "%d (%s) %c %d", &dummy, comm, (char *) &dummy,
  		 &ppid) == 4)
  	      */
@@ -90,7 +104,7 @@ Need limits.h for PATH_MAX
  		    if ((fd = open (path, O_RDONLY)) < 0)
  		      {
  			perror (path);
-@@ -641,7 +652,11 @@ main (int argc, char **argv)
+@@ -641,7 +651,11 @@ main (int argc, char **argv)
      switch (c)
        {
        case 'a':

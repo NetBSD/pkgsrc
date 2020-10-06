@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2020/03/20 11:58:22 nia Exp $
+# $NetBSD: Makefile,v 1.33 2020/10/06 00:19:05 mcf Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
-PKGREVISION=		3
+PKGREVISION=		4
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=psmisc/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
