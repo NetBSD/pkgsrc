@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5658 2020/10/06 04:02:08 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5659 2020/10/06 05:38:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8421,3 +8421,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/csound6 to 6.15.0 [mrg 2020-10-05]
 	Updated comms/openobex to 1.7.2 [mef 2020-10-06]
 	Updated cad/dinotrace-mode to 9.4f [mef 2020-10-06]
+	Updated security/py-google-auth to 1.22.1 [adam 2020-10-06]
+	Updated www/py-h11 to 0.11.0 [adam 2020-10-06]
