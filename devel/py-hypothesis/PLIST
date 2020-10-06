@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.30 2020/06/20 07:06:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/10/06 10:52:29 wiz Exp $
+bin/hypothesis
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,6 +10,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/hypothesis/__init__.py
 ${PYSITELIB}/hypothesis/__init__.pyc
 ${PYSITELIB}/hypothesis/__init__.pyo
+${PYSITELIB}/hypothesis/_error_if_old.py
+${PYSITELIB}/hypothesis/_error_if_old.pyc
+${PYSITELIB}/hypothesis/_error_if_old.pyo
 ${PYSITELIB}/hypothesis/_settings.py
 ${PYSITELIB}/hypothesis/_settings.pyc
 ${PYSITELIB}/hypothesis/_settings.pyo
@@ -24,6 +28,9 @@ ${PYSITELIB}/hypothesis/core.pyo
 ${PYSITELIB}/hypothesis/database.py
 ${PYSITELIB}/hypothesis/database.pyc
 ${PYSITELIB}/hypothesis/database.pyo
+${PYSITELIB}/hypothesis/entry_points.py
+${PYSITELIB}/hypothesis/entry_points.pyc
+${PYSITELIB}/hypothesis/entry_points.pyo
 ${PYSITELIB}/hypothesis/errors.py
 ${PYSITELIB}/hypothesis/errors.pyc
 ${PYSITELIB}/hypothesis/errors.pyo
@@ -33,6 +40,9 @@ ${PYSITELIB}/hypothesis/executors.pyo
 ${PYSITELIB}/hypothesis/extra/__init__.py
 ${PYSITELIB}/hypothesis/extra/__init__.pyc
 ${PYSITELIB}/hypothesis/extra/__init__.pyo
+${PYSITELIB}/hypothesis/extra/cli.py
+${PYSITELIB}/hypothesis/extra/cli.pyc
+${PYSITELIB}/hypothesis/extra/cli.pyo
 ${PYSITELIB}/hypothesis/extra/dateutil.py
 ${PYSITELIB}/hypothesis/extra/dateutil.pyc
 ${PYSITELIB}/hypothesis/extra/dateutil.pyo
@@ -45,12 +55,12 @@ ${PYSITELIB}/hypothesis/extra/django/_fields.pyo
 ${PYSITELIB}/hypothesis/extra/django/_impl.py
 ${PYSITELIB}/hypothesis/extra/django/_impl.pyc
 ${PYSITELIB}/hypothesis/extra/django/_impl.pyo
-${PYSITELIB}/hypothesis/extra/django/models.py
-${PYSITELIB}/hypothesis/extra/django/models.pyc
-${PYSITELIB}/hypothesis/extra/django/models.pyo
 ${PYSITELIB}/hypothesis/extra/dpcontracts.py
 ${PYSITELIB}/hypothesis/extra/dpcontracts.pyc
 ${PYSITELIB}/hypothesis/extra/dpcontracts.pyo
+${PYSITELIB}/hypothesis/extra/ghostwriter.py
+${PYSITELIB}/hypothesis/extra/ghostwriter.pyc
+${PYSITELIB}/hypothesis/extra/ghostwriter.pyo
 ${PYSITELIB}/hypothesis/extra/lark.py
 ${PYSITELIB}/hypothesis/extra/lark.pyc
 ${PYSITELIB}/hypothesis/extra/lark.pyo
@@ -69,6 +79,9 @@ ${PYSITELIB}/hypothesis/extra/pytestplugin.pyo
 ${PYSITELIB}/hypothesis/extra/pytz.py
 ${PYSITELIB}/hypothesis/extra/pytz.pyc
 ${PYSITELIB}/hypothesis/extra/pytz.pyo
+${PYSITELIB}/hypothesis/extra/redis.py
+${PYSITELIB}/hypothesis/extra/redis.pyc
+${PYSITELIB}/hypothesis/extra/redis.pyo
 ${PYSITELIB}/hypothesis/internal/__init__.py
 ${PYSITELIB}/hypothesis/internal/__init__.pyc
 ${PYSITELIB}/hypothesis/internal/__init__.pyo
@@ -96,6 +109,12 @@ ${PYSITELIB}/hypothesis/internal/conjecture/data.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/datatree.py
 ${PYSITELIB}/hypothesis/internal/conjecture/datatree.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/datatree.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/dfa/__init__.py
+${PYSITELIB}/hypothesis/internal/conjecture/dfa/__init__.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/dfa/__init__.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/dfa/lstar.py
+${PYSITELIB}/hypothesis/internal/conjecture/dfa/lstar.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/dfa/lstar.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.py
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.pyo
@@ -120,12 +139,18 @@ ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/__init__.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/common.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/common.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/common.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/dfas.py
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/dfas.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/dfas.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/floats.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/floats.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/floats.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/learned_dfas.py
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/learned_dfas.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/learned_dfas.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.pyo
@@ -208,6 +233,9 @@ ${PYSITELIB}/hypothesis/strategies/_internal/flatmapped.pyo
 ${PYSITELIB}/hypothesis/strategies/_internal/functions.py
 ${PYSITELIB}/hypothesis/strategies/_internal/functions.pyc
 ${PYSITELIB}/hypothesis/strategies/_internal/functions.pyo
+${PYSITELIB}/hypothesis/strategies/_internal/ipaddress.py
+${PYSITELIB}/hypothesis/strategies/_internal/ipaddress.pyc
+${PYSITELIB}/hypothesis/strategies/_internal/ipaddress.pyo
 ${PYSITELIB}/hypothesis/strategies/_internal/lazy.py
 ${PYSITELIB}/hypothesis/strategies/_internal/lazy.pyc
 ${PYSITELIB}/hypothesis/strategies/_internal/lazy.pyo
@@ -217,6 +245,9 @@ ${PYSITELIB}/hypothesis/strategies/_internal/misc.pyo
 ${PYSITELIB}/hypothesis/strategies/_internal/numbers.py
 ${PYSITELIB}/hypothesis/strategies/_internal/numbers.pyc
 ${PYSITELIB}/hypothesis/strategies/_internal/numbers.pyo
+${PYSITELIB}/hypothesis/strategies/_internal/random.py
+${PYSITELIB}/hypothesis/strategies/_internal/random.pyc
+${PYSITELIB}/hypothesis/strategies/_internal/random.pyo
 ${PYSITELIB}/hypothesis/strategies/_internal/recursive.py
 ${PYSITELIB}/hypothesis/strategies/_internal/recursive.pyc
 ${PYSITELIB}/hypothesis/strategies/_internal/recursive.pyo
@@ -235,9 +266,6 @@ ${PYSITELIB}/hypothesis/strategies/_internal/strings.pyo
 ${PYSITELIB}/hypothesis/strategies/_internal/types.py
 ${PYSITELIB}/hypothesis/strategies/_internal/types.pyc
 ${PYSITELIB}/hypothesis/strategies/_internal/types.pyo
-${PYSITELIB}/hypothesis/types.py
-${PYSITELIB}/hypothesis/types.pyc
-${PYSITELIB}/hypothesis/types.pyo
 ${PYSITELIB}/hypothesis/utils/__init__.py
 ${PYSITELIB}/hypothesis/utils/__init__.pyc
 ${PYSITELIB}/hypothesis/utils/__init__.pyo
