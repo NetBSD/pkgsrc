@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.54 2020/10/06 00:26:51 mrg Exp $
+# $NetBSD: Makefile,v 1.55 2020/10/06 20:54:55 mrg Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=csound/}
 GITHUB_PROJECT=		csound
 
 MAINTAINER=		mrg@eterna.com.au
-HOMEPAGE=		https://sourceforge.net/projects/csound/
+HOMEPAGE=		https://github.com/csound
 COMMENT=		Software synthesizer and sequencer
 LICENSE=		gnu-lgpl-v2.1 # or later
 
@@ -21,8 +22,6 @@ CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DBUILD_HDF5_OPCODES=OFF
 # CMAKE_INSTALL_RPATH doesn't work for some reason, so do it here.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/csound6
-
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 5.01
 
 INSTALLATION_DIRS=	bin
 
@@ -44,16 +43,17 @@ post-install:
 		${LN} -s csound bin/csound6
 
 .include "options.mk"
+
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/liblo/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../x11/fltk13/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
