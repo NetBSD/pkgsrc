@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/08/11 06:36:08 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/10/06 05:43:30 adam Exp $
 
-DISTNAME=	responses-0.10.16
+DISTNAME=	responses-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/responses/}
@@ -12,6 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25.10:../../www/py-urllib3
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
