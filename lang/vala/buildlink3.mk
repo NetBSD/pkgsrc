@@ -1,16 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.27 2020/08/17 20:17:34 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2020/10/06 19:50:37 wiz Exp $
 
 BUILDLINK_TREE+=	vala
 
 .if !defined(VALA_BUILDLINK3_MK)
 VALA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.vala+=	vala>=0.48
-BUILDLINK_ABI_DEPENDS.vala?=	vala>=0.48.7nb1
+BUILDLINK_API_DEPENDS.vala+=	vala>=0.50
 BUILDLINK_PKGSRCDIR.vala?=	../../lang/vala
 
-VALAC=		${PREFIX}/bin/valac-0.48
-VAPIGEN=	${PREFIX}/bin/vapigen-0.48
+VALAC=		${PREFIX}/bin/valac-0.50
+VAPIGEN=	${PREFIX}/bin/vapigen-0.50
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ENV+=	VALAC=${VALAC} VAPIGEN=${VAPIGEN}
 .endif
