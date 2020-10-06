@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5656 2020/10/06 00:27:51 mrg Exp $
+$NetBSD: CHANGES-2020,v 1.5657 2020/10/06 03:46:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8419,3 +8419,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-plumbum to 1.6.1.post0nb1 [wiz 2020-10-05]
 	Updated cad/dinotrace to 9.4f [mef 2020-10-05]
 	Updated audio/csound6 to 6.15.0 [mrg 2020-10-05]
+	Updated comms/openobex to 1.7.2 [mef 2020-10-06]
