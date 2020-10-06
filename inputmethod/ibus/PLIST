@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/10/03 16:43:17 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/10/06 04:27:39 mef Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -143,6 +143,7 @@ share/ibus/dicts/emoji-br.dict
 share/ibus/dicts/emoji-bs.dict
 share/ibus/dicts/emoji-ca.dict
 share/ibus/dicts/emoji-ccp.dict
+share/ibus/dicts/emoji-ceb.dict
 share/ibus/dicts/emoji-chr.dict
 share/ibus/dicts/emoji-cs.dict
 share/ibus/dicts/emoji-cy.dict
@@ -189,6 +190,7 @@ share/ibus/dicts/emoji-kk.dict
 share/ibus/dicts/emoji-km.dict
 share/ibus/dicts/emoji-kn.dict
 share/ibus/dicts/emoji-ko.dict
+share/ibus/dicts/emoji-kok.dict
 share/ibus/dicts/emoji-ku.dict
 share/ibus/dicts/emoji-ky.dict
 share/ibus/dicts/emoji-lo.dict
@@ -206,6 +208,7 @@ share/ibus/dicts/emoji-nl.dict
 share/ibus/dicts/emoji-nn.dict
 share/ibus/dicts/emoji-or.dict
 share/ibus/dicts/emoji-pa.dict
+share/ibus/dicts/emoji-pcm.dict
 share/ibus/dicts/emoji-pl.dict
 share/ibus/dicts/emoji-ps.dict
 share/ibus/dicts/emoji-pt.dict
@@ -227,6 +230,7 @@ share/ibus/dicts/emoji-sr_Latn.dict
 share/ibus/dicts/emoji-sr_Latn_BA.dict
 share/ibus/dicts/emoji-sv.dict
 share/ibus/dicts/emoji-sw.dict
+share/ibus/dicts/emoji-sw_KE.dict
 share/ibus/dicts/emoji-ta.dict
 share/ibus/dicts/emoji-te.dict
 share/ibus/dicts/emoji-th.dict
@@ -237,6 +241,7 @@ share/ibus/dicts/emoji-uk.dict
 share/ibus/dicts/emoji-ur.dict
 share/ibus/dicts/emoji-uz.dict
 share/ibus/dicts/emoji-vi.dict
+share/ibus/dicts/emoji-yo.dict
 share/ibus/dicts/emoji-yue.dict
 share/ibus/dicts/emoji-yue_Hans.dict
 share/ibus/dicts/emoji-zh.dict
