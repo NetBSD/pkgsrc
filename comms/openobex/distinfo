@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2017/02/17 17:00:30 joerg Exp $
+$NetBSD: distinfo,v 1.12 2020/10/06 03:46:02 mef Exp $
 
-SHA1 (openobex-1.7.1-Source.tar.gz) = b70e10ac21737fd1280cfb4d7408f623118ed355
-RMD160 (openobex-1.7.1-Source.tar.gz) = fd06ffd6fd4fd8457c81c300b4e7c790def49f52
-SHA512 (openobex-1.7.1-Source.tar.gz) = df38b363bd4c6eb6c0181fc7858fb03ac2bdfa85d8496faaa514d5cc4473b33c883956d4e1c94c3fefa5e44e5eed35a8dfcab889ce6ca8c29694f2b18334754e
-Size (openobex-1.7.1-Source.tar.gz) = 131091 bytes
+SHA1 (openobex-1.7.2-Source.tar.gz) = 4a5098a62889134cbd2b54997e7ff3e959e601e6
+RMD160 (openobex-1.7.2-Source.tar.gz) = 69aa4026f468d63e8ca32517b84773ba2738a925
+SHA512 (openobex-1.7.2-Source.tar.gz) = 22f1b0d99e7186da9fa12b510ef9dbb6f7d76777d58b235ab2f627703d07b6f6b0488cdc9c6d8c0ab7bc86d6d19117c55fff9273fed02736c0210f9b1788bf4d
+Size (openobex-1.7.2-Source.tar.gz) = 127248 bytes
 SHA1 (patch-lib_api.c) = 4ea3f2b8179a52a4d1266395a4f20b572582903f
 SHA1 (patch-lib_cloexec.h) = 374794dd6d46b9448b51f98230545afa3cb26ddf
