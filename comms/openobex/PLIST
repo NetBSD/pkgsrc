@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/11/24 13:43:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/10/06 03:46:02 mef Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -21,7 +21,7 @@ share/doc/openobex/html/dir_000001.html
 share/doc/openobex/html/dir_000002.html
 share/doc/openobex/html/doc.png
 share/doc/openobex/html/doxygen.css
-share/doc/openobex/html/doxygen.png
+share/doc/openobex/html/doxygen.svg
 share/doc/openobex/html/dynsections.js
 share/doc/openobex/html/files.html
 share/doc/openobex/html/folderclosed.png
