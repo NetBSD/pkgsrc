@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/03 08:27:07 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/10/06 20:58:50 mrg Exp $
 share/doc/csound6/A4.html
 share/doc/csound6/ATSadd.html
 share/doc/csound6/ATSaddnz.html
@@ -364,6 +364,7 @@ share/doc/csound6/aftouch.html
 share/doc/csound6/agauss.html
 share/doc/csound6/agogobel.html
 share/doc/csound6/alinrand.html
+share/doc/csound6/allpole.html
 share/doc/csound6/alpass.html
 share/doc/csound6/alwayson.html
 share/doc/csound6/ampdb.html
@@ -373,7 +374,11 @@ share/doc/csound6/ampmidicurve.html
 share/doc/csound6/ampmidid.html
 share/doc/csound6/apcauchy.html
 share/doc/csound6/apoisson.html
+share/doc/csound6/apoleparams.html
 share/doc/csound6/apow.html
+share/doc/csound6/arduinoRead.html
+share/doc/csound6/arduinoStart.html
+share/doc/csound6/arduinoStop.html
 share/doc/csound6/areson.html
 share/doc/csound6/aresonk.html
 share/doc/csound6/array.html
@@ -406,6 +411,7 @@ share/doc/csound6/binit.html
 share/doc/csound6/biquad.html
 share/doc/csound6/biquada.html
 share/doc/csound6/birnd.html
+share/doc/csound6/bob.html
 share/doc/csound6/bpf.html
 share/doc/csound6/bpfcos.html
 share/doc/csound6/bqrez.html
@@ -421,6 +427,7 @@ share/doc/csound6/button.html
 share/doc/csound6/buzz.html
 share/doc/csound6/c2r.html
 share/doc/csound6/cabasa.html
+share/doc/csound6/capB.html
 share/doc/csound6/cauchy.html
 share/doc/csound6/cauchyi.html
 share/doc/csound6/cbrt.html
@@ -457,6 +464,11 @@ share/doc/csound6/clockon.html
 share/doc/csound6/cmp.html
 share/doc/csound6/cmplxprod.html
 share/doc/csound6/cngoto.html
+share/doc/csound6/cntCreate.html
+share/doc/csound6/cntCycles.html
+share/doc/csound6/cntRead.html
+share/doc/csound6/cntReset.html
+share/doc/csound6/cntState.html
 share/doc/csound6/comb.html
 share/doc/csound6/combinv.html
 share/doc/csound6/compilecsd.html
@@ -478,6 +490,8 @@ share/doc/csound6/cosinv.html
 share/doc/csound6/cosseg.html
 share/doc/csound6/cossegb.html
 share/doc/csound6/cossegr.html
+share/doc/csound6/count.html
+share/doc/csound6/count_i.html
 share/doc/csound6/cps2pch.html
 share/doc/csound6/cpsmidi.html
 share/doc/csound6/cpsmidib.html
@@ -691,6 +705,8 @@ share/doc/csound6/examples/adsynt2.csd
 share/doc/csound6/examples/aftouch.csd
 share/doc/csound6/examples/ahh.aiff
 share/doc/csound6/examples/ahhc.aiff
+share/doc/csound6/examples/allpole-2.csd
+share/doc/csound6/examples/allpole.csd
 share/doc/csound6/examples/alpass.csd
 share/doc/csound6/examples/alwayson.csd
 share/doc/csound6/examples/ampdb.csd
@@ -698,6 +714,8 @@ share/doc/csound6/examples/ampdbfs.csd
 share/doc/csound6/examples/ampmidi.csd
 share/doc/csound6/examples/ampmidicurve.csd
 share/doc/csound6/examples/ampmidid.csd
+share/doc/csound6/examples/apoleparams.csd
+share/doc/csound6/examples/arduinoRead.csd
 share/doc/csound6/examples/areson.csd
 share/doc/csound6/examples/aresonk.csd
 share/doc/csound6/examples/array.csd
@@ -720,6 +738,7 @@ share/doc/csound6/examples/bbcuts.csd
 share/doc/csound6/examples/beadsynt.csd
 share/doc/csound6/examples/beats.ats
 share/doc/csound6/examples/beats.mp3
+share/doc/csound6/examples/beats.ogg
 share/doc/csound6/examples/beats.wav
 share/doc/csound6/examples/beosc.csd
 share/doc/csound6/examples/betarand.csd
@@ -733,6 +752,7 @@ share/doc/csound6/examples/biquada.csd
 share/doc/csound6/examples/birnd.csd
 share/doc/csound6/examples/bitshift.csd
 share/doc/csound6/examples/bitwise.csd
+share/doc/csound6/examples/bob.csd
 share/doc/csound6/examples/bpf.csd
 share/doc/csound6/examples/bpfcos.csd
 share/doc/csound6/examples/bqrez.csd
@@ -744,6 +764,7 @@ share/doc/csound6/examples/buzz.csd
 share/doc/csound6/examples/c2r.csd
 share/doc/csound6/examples/cabasa.csd
 share/doc/csound6/examples/cage.ats
+share/doc/csound6/examples/capB.csd
 share/doc/csound6/examples/cauchy.csd
 share/doc/csound6/examples/cauchyi.csd
 share/doc/csound6/examples/cbrt.csd
@@ -794,6 +815,7 @@ share/doc/csound6/examples/cosinv.csd
 share/doc/csound6/examples/cosseg.csd
 share/doc/csound6/examples/cossegb.csd
 share/doc/csound6/examples/cossegr.csd
+share/doc/csound6/examples/counter.csd
 share/doc/csound6/examples/cps2pch.csd
 share/doc/csound6/examples/cps2pch_19et.csd
 share/doc/csound6/examples/cps2pch_ftable.csd
@@ -818,6 +840,7 @@ share/doc/csound6/examples/csbeats.csd
 share/doc/csound6/examples/ctrl14.csd
 share/doc/csound6/examples/ctrl21.csd
 share/doc/csound6/examples/ctrl7.csd
+share/doc/csound6/examples/ctrlinit.csd
 share/doc/csound6/examples/cudanal.csd
 share/doc/csound6/examples/cudasliding.csd
 share/doc/csound6/examples/cudasynth.csd
@@ -936,6 +959,7 @@ share/doc/csound6/examples/filter2.csd
 share/doc/csound6/examples/fin.csd
 share/doc/csound6/examples/fini.csd
 share/doc/csound6/examples/fink.csd
+share/doc/csound6/examples/finneganswake1.flac
 share/doc/csound6/examples/fiopen.csd
 share/doc/csound6/examples/flanger.csd
 share/doc/csound6/examples/flashtxt.csd
@@ -958,7 +982,9 @@ share/doc/csound6/examples/fluidOut.csd
 share/doc/csound6/examples/fluidProgramSelect.csd
 share/doc/csound6/examples/fluidSetInterpMethod.csd
 share/doc/csound6/examples/fluidcomplex.csd
+share/doc/csound6/examples/flute-C-octave0.wav
 share/doc/csound6/examples/flute.aiff
+share/doc/csound6/examples/flutec3.wav
 share/doc/csound6/examples/fmanal.csd
 share/doc/csound6/examples/fmax.csd
 share/doc/csound6/examples/fmb3.csd
@@ -987,7 +1013,10 @@ share/doc/csound6/examples/fouti.csd
 share/doc/csound6/examples/foutir.csd
 share/doc/csound6/examples/fox.ats
 share/doc/csound6/examples/fox.mtx.wav
+share/doc/csound6/examples/fox.pvx
 share/doc/csound6/examples/fox.wav
+share/doc/csound6/examples/fox_nopoles.lpc
+share/doc/csound6/examples/fox_poles.lpc
 share/doc/csound6/examples/fprintks-2.csd
 share/doc/csound6/examples/fprintks.csd
 share/doc/csound6/examples/fprints.csd
@@ -999,6 +1028,7 @@ share/doc/csound6/examples/ftaudio.csd
 share/doc/csound6/examples/ftchnls.csd
 share/doc/csound6/examples/ftconv.csd
 share/doc/csound6/examples/ftcps.csd
+share/doc/csound6/examples/ftexists.csd
 share/doc/csound6/examples/ftfree.csd
 share/doc/csound6/examples/ftgen-2.csd
 share/doc/csound6/examples/ftgen.csd
@@ -1010,6 +1040,7 @@ share/doc/csound6/examples/ftmorf.csd
 share/doc/csound6/examples/ftprint.csd
 share/doc/csound6/examples/ftsamplebank.csd
 share/doc/csound6/examples/ftsave.csd
+share/doc/csound6/examples/ftset.csd
 share/doc/csound6/examples/ftslice.csd
 share/doc/csound6/examples/ftsr.csd
 share/doc/csound6/examples/fwavblnk.aiff
@@ -1109,10 +1140,12 @@ share/doc/csound6/examples/hvs2-2.csd
 share/doc/csound6/examples/hvs2.csd
 share/doc/csound6/examples/hypot.csd
 share/doc/csound6/examples/i_statement.csd
+share/doc/csound6/examples/ifdef.csd
 share/doc/csound6/examples/ifft.csd
 share/doc/csound6/examples/ifthen.csd
 share/doc/csound6/examples/igoto.csd
 share/doc/csound6/examples/ihold.csd
+share/doc/csound6/examples/image.png
 share/doc/csound6/examples/imageopcodes.csd
 share/doc/csound6/examples/imageopcodesdemo2.csd
 share/doc/csound6/examples/impuls20.aiff
@@ -1146,6 +1179,9 @@ share/doc/csound6/examples/k35.csd
 share/doc/csound6/examples/kgoto.csd
 share/doc/csound6/examples/kickroll.het
 share/doc/csound6/examples/kickroll.wav
+share/doc/csound6/examples/lag.csd
+share/doc/csound6/examples/lagud.csd
+share/doc/csound6/examples/lastcycle.csd
 share/doc/csound6/examples/leftbrace.csd
 share/doc/csound6/examples/lenarray.csd
 share/doc/csound6/examples/lessequal.csd
@@ -1190,6 +1226,10 @@ share/doc/csound6/examples/loscilx.csd
 share/doc/csound6/examples/lowpass2.csd
 share/doc/csound6/examples/lowres.csd
 share/doc/csound6/examples/lowresx.csd
+share/doc/csound6/examples/lpcanal-2.csd
+share/doc/csound6/examples/lpcanal.csd
+share/doc/csound6/examples/lpcfilter-2.csd
+share/doc/csound6/examples/lpcfilter.csd
 share/doc/csound6/examples/lpf18.csd
 share/doc/csound6/examples/lpfreson.csd
 share/doc/csound6/examples/lphasor.csd
@@ -1203,6 +1243,7 @@ share/doc/csound6/examples/lpreson-2.csd
 share/doc/csound6/examples/lpreson.csd
 share/doc/csound6/examples/lpshold.csd
 share/doc/csound6/examples/lpsholdp.csd
+share/doc/csound6/examples/lufs.csd
 share/doc/csound6/examples/m.csd
 share/doc/csound6/examples/mac.csd
 share/doc/csound6/examples/maca.csd
@@ -1232,6 +1273,7 @@ share/doc/csound6/examples/mediank.csd
 share/doc/csound6/examples/meow.sdif
 share/doc/csound6/examples/metro-2.csd
 share/doc/csound6/examples/metro.csd
+share/doc/csound6/examples/metro2.csd
 share/doc/csound6/examples/mfb.csd
 share/doc/csound6/examples/midiarp.csd
 share/doc/csound6/examples/midic7.csd
@@ -1311,6 +1353,7 @@ share/doc/csound6/examples/nreverb_ftable.csd
 share/doc/csound6/examples/nrpn.csd
 share/doc/csound6/examples/nsamp.csd
 share/doc/csound6/examples/nstance.csd
+share/doc/csound6/examples/nstrnum_nstrstr.csd
 share/doc/csound6/examples/ntof.csd
 share/doc/csound6/examples/ntrpol.csd
 share/doc/csound6/examples/octave.csd
@@ -1368,6 +1411,7 @@ share/doc/csound6/examples/padsynth_gen.csd
 share/doc/csound6/examples/pan.csd
 share/doc/csound6/examples/pan2.csd
 share/doc/csound6/examples/pareq.csd
+share/doc/csound6/examples/part2txt.csd
 share/doc/csound6/examples/partials.csd
 share/doc/csound6/examples/partikkel-2.csd
 share/doc/csound6/examples/partikkel-panlaws.csd
@@ -1431,7 +1475,9 @@ share/doc/csound6/examples/printk.csd
 share/doc/csound6/examples/printk2.csd
 share/doc/csound6/examples/printks.csd
 share/doc/csound6/examples/printks2.csd
+share/doc/csound6/examples/println.csd
 share/doc/csound6/examples/prints.csd
+share/doc/csound6/examples/printsk.csd
 share/doc/csound6/examples/product.csd
 share/doc/csound6/examples/productarray.csd
 share/doc/csound6/examples/pset-midi.csd
@@ -1453,6 +1499,7 @@ share/doc/csound6/examples/pvsarp.csd
 share/doc/csound6/examples/pvsarp2.csd
 share/doc/csound6/examples/pvsbandp.csd
 share/doc/csound6/examples/pvsbandr.csd
+share/doc/csound6/examples/pvsbandwidth.csd
 share/doc/csound6/examples/pvsbin.csd
 share/doc/csound6/examples/pvsblur.csd
 share/doc/csound6/examples/pvsbuffer.csd
@@ -1461,6 +1508,7 @@ share/doc/csound6/examples/pvsbufread2.csd
 share/doc/csound6/examples/pvscale.csd
 share/doc/csound6/examples/pvscent.csd
 share/doc/csound6/examples/pvsceps.csd
+share/doc/csound6/examples/pvscfs.csd
 share/doc/csound6/examples/pvscross.csd
 share/doc/csound6/examples/pvsdiskin.csd
 share/doc/csound6/examples/pvsdisp.csd
@@ -1475,6 +1523,7 @@ share/doc/csound6/examples/pvshift.csd
 share/doc/csound6/examples/pvsifd.csd
 share/doc/csound6/examples/pvsinfo.csd
 share/doc/csound6/examples/pvslock.csd
+share/doc/csound6/examples/pvslpc.csd
 share/doc/csound6/examples/pvsmaska.csd
 share/doc/csound6/examples/pvsmix.csd
 share/doc/csound6/examples/pvsmooth.csd
@@ -1516,6 +1565,7 @@ share/doc/csound6/examples/reinit.csd
 share/doc/csound6/examples/repluck.csd
 share/doc/csound6/examples/reshapearray.csd
 share/doc/csound6/examples/reson.csd
+share/doc/csound6/examples/resonbnk.csd
 share/doc/csound6/examples/resonk.csd
 share/doc/csound6/examples/resonr.csd
 share/doc/csound6/examples/resonx.csd
@@ -1542,6 +1592,7 @@ share/doc/csound6/examples/rv_stereo.wav
 share/doc/csound6/examples/s.csd
 share/doc/csound6/examples/samphold.csd
 share/doc/csound6/examples/sandpaper.csd
+share/doc/csound6/examples/saxophone-alto-C-octave0.wav
 share/doc/csound6/examples/sc_lag.csd
 share/doc/csound6/examples/sc_lagud.csd
 share/doc/csound6/examples/sc_phasor.csd
@@ -1623,6 +1674,8 @@ share/doc/csound6/examples/sr.csd
 share/doc/csound6/examples/stack.csd
 share/doc/csound6/examples/statevar.csd
 share/doc/csound6/examples/statvar.csd
+share/doc/csound6/examples/sterrain.csd
+share/doc/csound6/examples/sterrain2.csd
 share/doc/csound6/examples/stix.csd
 share/doc/csound6/examples/strcat.csd
 share/doc/csound6/examples/strcatk.csd
@@ -1637,6 +1690,7 @@ share/doc/csound6/examples/string-128.matrix
 share/doc/csound6/examples/strlower.csd
 share/doc/csound6/examples/strrindex.csd
 share/doc/csound6/examples/strset.csd
+share/doc/csound6/examples/strstrip.csd
 share/doc/csound6/examples/strsub.csd
 share/doc/csound6/examples/subinstr.csd
 share/doc/csound6/examples/subinstr_named.csd
@@ -1719,6 +1773,8 @@ share/doc/csound6/examples/trcross.csd
 share/doc/csound6/examples/trfilter.csd
 share/doc/csound6/examples/trhighest.csd
 share/doc/csound6/examples/trigger.csd
+share/doc/csound6/examples/trighold.csd
+share/doc/csound6/examples/trigphasor.csd
 share/doc/csound6/examples/trigseq.csd
 share/doc/csound6/examples/trim.csd
 share/doc/csound6/examples/trirand.csd
@@ -1798,6 +1854,7 @@ share/doc/csound6/examples/vpow.csd
 share/doc/csound6/examples/vpow_i-2.csd
 share/doc/csound6/examples/vpow_i.csd
 share/doc/csound6/examples/vpowv.csd
+share/doc/csound6/examples/vps.csd
 share/doc/csound6/examples/vpvoc.csd
 share/doc/csound6/examples/vrandh.csd
 share/doc/csound6/examples/vrandi.csd
@@ -1807,6 +1864,7 @@ share/doc/csound6/examples/vtablei.csd
 share/doc/csound6/examples/vtablek.csd
 share/doc/csound6/examples/vtablewa.csd
 share/doc/csound6/examples/vtablewk.csd
+share/doc/csound6/examples/wave.wav
 share/doc/csound6/examples/waveset.csd
 share/doc/csound6/examples/websocket.csd
 share/doc/csound6/examples/websocket.html
@@ -1826,6 +1884,8 @@ share/doc/csound6/examples/wii.csd
 share/doc/csound6/examples/window.csd
 share/doc/csound6/examples/wrap.csd
 share/doc/csound6/examples/wterrain.csd
+share/doc/csound6/examples/wterrain2_1.csd
+share/doc/csound6/examples/wterrain2_2.csd
 share/doc/csound6/examples/x.csd
 share/doc/csound6/examples/xadsr.csd
 share/doc/csound6/examples/xscanmap.csd
@@ -1944,6 +2004,7 @@ share/doc/csound6/ftaudio.html
 share/doc/csound6/ftchnls.html
 share/doc/csound6/ftconv.html
 share/doc/csound6/ftcps.html
+share/doc/csound6/ftexists.html
 share/doc/csound6/ftfree.html
 share/doc/csound6/ftgen.html
 share/doc/csound6/ftgenonce.html
@@ -1958,7 +2019,9 @@ share/doc/csound6/ftprint.html
 share/doc/csound6/ftsamplebank.html
 share/doc/csound6/ftsave.html
 share/doc/csound6/ftsavek.html
+share/doc/csound6/ftset.html
 share/doc/csound6/ftslice.html
+share/doc/csound6/ftslicei.html
 share/doc/csound6/ftsr.html
 share/doc/csound6/functional.html
 share/doc/csound6/gain.html
@@ -1986,6 +2049,7 @@ share/doc/csound6/grain3.html
 share/doc/csound6/granule.html
 share/doc/csound6/greaterequal.html
 share/doc/csound6/greaterthan.html
+share/doc/csound6/gtf.html
 share/doc/csound6/guiro.html
 share/doc/csound6/harmon.html
 share/doc/csound6/harmon2.html
@@ -2046,6 +2110,7 @@ share/doc/csound6/images/callouts/7.png
 share/doc/csound6/images/callouts/8.png
 share/doc/csound6/images/callouts/9.png
 share/doc/csound6/images/caution.png
+share/doc/csound6/images/cornoid.png
 share/doc/csound6/images/delayk.png
 share/doc/csound6/images/engine.png
 share/doc/csound6/images/flanger.png
@@ -2068,6 +2133,7 @@ share/doc/csound6/images/fltabs_joysticks-tab.png
 share/doc/csound6/images/fltabs_rollers-tab.png
 share/doc/csound6/images/fltabs_sliders-tab.png
 share/doc/csound6/images/fltext.png
+share/doc/csound6/images/folium.png
 share/doc/csound6/images/gen01.png
 share/doc/csound6/images/gen01_1.png
 share/doc/csound6/images/gen01_2.png
@@ -2181,12 +2247,18 @@ share/doc/csound6/images/image3.png
 share/doc/csound6/images/image4.png
 share/doc/csound6/images/image5.png
 share/doc/csound6/images/image6.png
+share/doc/csound6/images/image6a.png
 share/doc/csound6/images/image7.png
+share/doc/csound6/images/image7a.png
+share/doc/csound6/images/image7b.png
 share/doc/csound6/images/image8.png
+share/doc/csound6/images/image9.png
+share/doc/csound6/images/image9a.png
 share/doc/csound6/images/imode1.png
 share/doc/csound6/images/imode2.png
 share/doc/csound6/images/imode3.png
 share/doc/csound6/images/important.png
+share/doc/csound6/images/limacon.png
 share/doc/csound6/images/linen.jpg
 share/doc/csound6/images/noise-filter.png
 share/doc/csound6/images/note.png
@@ -2194,13 +2266,18 @@ share/doc/csound6/images/pdhalf.png
 share/doc/csound6/images/pdhalfy.png
 share/doc/csound6/images/poisson_equation.png
 share/doc/csound6/images/rnd31_rand.png
+share/doc/csound6/images/scarabeus.png
 share/doc/csound6/images/sfr2.png
+share/doc/csound6/images/src/WindowFunctions.ipynb
+share/doc/csound6/images/src/gen16.ipynb
 share/doc/csound6/images/symbols.png
+share/doc/csound6/images/talbot.png
 share/doc/csound6/images/tip.png
 share/doc/csound6/images/toot07.gif
 share/doc/csound6/images/toot08.gif
 share/doc/csound6/images/toot09.gif
 share/doc/csound6/images/transeg.png
+share/doc/csound6/images/trisextic.png
 share/doc/csound6/images/virtualkeyboard.png
 share/doc/csound6/images/warning.png
 share/doc/csound6/images/wguide1.png
@@ -2308,6 +2385,9 @@ share/doc/csound6/ktableseg.html
 share/doc/csound6/ktrirand.html
 share/doc/csound6/kunirand.html
 share/doc/csound6/kweibull.html
+share/doc/csound6/lag.html
+share/doc/csound6/lagud.html
+share/doc/csound6/lastcycle.html
 share/doc/csound6/leftbrace.html
 share/doc/csound6/lenarray.html
 share/doc/csound6/lessequal.html
@@ -2364,6 +2444,8 @@ share/doc/csound6/lowpass2.html
 share/doc/csound6/lowres.html
 share/doc/csound6/lowresx.html
 share/doc/csound6/lpanal.html
+share/doc/csound6/lpcanal.html
+share/doc/csound6/lpcfilter.html
 share/doc/csound6/lpf18.html
 share/doc/csound6/lpfreson.html
 share/doc/csound6/lphasor.html
@@ -2378,6 +2460,7 @@ share/doc/csound6/lpreson.html
 share/doc/csound6/lpshold.html
 share/doc/csound6/lpsholdp.html
 share/doc/csound6/lpslot.html
+share/doc/csound6/lufs.html
 share/doc/csound6/m.html
 share/doc/csound6/mac.html
 share/doc/csound6/maca.html
@@ -2401,6 +2484,7 @@ share/doc/csound6/mdelay.html
 share/doc/csound6/median.html
 share/doc/csound6/mediank.html
 share/doc/csound6/metro.html
+share/doc/csound6/metro2.html
 share/doc/csound6/mfb.html
 share/doc/csound6/midglobal.html
 share/doc/csound6/midiarp.html
@@ -2436,7 +2520,6 @@ share/doc/csound6/minarray.html
 share/doc/csound6/mincer.html
 share/doc/csound6/mirror.html
 share/doc/csound6/mixer.html
-share/doc/csound6/mkdb.html
 share/doc/csound6/mode.html
 share/doc/csound6/modmatrix.html
 share/doc/csound6/modulus.html
@@ -2560,6 +2643,7 @@ share/doc/csound6/p5gdata.html
 share/doc/csound6/pan.html
 share/doc/csound6/pan2.html
 share/doc/csound6/pareq.html
+share/doc/csound6/part2txt.html
 share/doc/csound6/partials.html
 share/doc/csound6/partikkel.html
 share/doc/csound6/partikkelget.html
@@ -2619,7 +2703,9 @@ share/doc/csound6/printk.html
 share/doc/csound6/printk2.html
 share/doc/csound6/printks.html
 share/doc/csound6/printks2.html
+share/doc/csound6/println.html
 share/doc/csound6/prints.html
+share/doc/csound6/printsk.html
 share/doc/csound6/product.html
 share/doc/csound6/productarray.html
 share/doc/csound6/pset.html
@@ -2648,6 +2734,7 @@ share/doc/csound6/pvsanal.html
 share/doc/csound6/pvsarp.html
 share/doc/csound6/pvsbandp.html
 share/doc/csound6/pvsbandr.html
+share/doc/csound6/pvsbandwidth.html
 share/doc/csound6/pvsbin.html
 share/doc/csound6/pvsblur.html
 share/doc/csound6/pvsbuffer.html
@@ -2656,6 +2743,7 @@ share/doc/csound6/pvsbufread2.html
 share/doc/csound6/pvscale.html
 share/doc/csound6/pvscent.html
 share/doc/csound6/pvsceps.html
+share/doc/csound6/pvscfs.html
 share/doc/csound6/pvscross.html
 share/doc/csound6/pvsdemix.html
 share/doc/csound6/pvsdiskin.html
@@ -2673,6 +2761,7 @@ share/doc/csound6/pvsin.html
 share/doc/csound6/pvsinfo.html
 share/doc/csound6/pvsinit.html
 share/doc/csound6/pvslock.html
+share/doc/csound6/pvslpc.html
 share/doc/csound6/pvsmaska.html
 share/doc/csound6/pvsmix.html
 share/doc/csound6/pvsmooth.html
@@ -2724,6 +2813,7 @@ share/doc/csound6/remove.html
 share/doc/csound6/repluck.html
 share/doc/csound6/reshapearray.html
 share/doc/csound6/reson.html
+share/doc/csound6/resonbnk.html
 share/doc/csound6/resonk.html
 share/doc/csound6/resonr.html
 share/doc/csound6/resonx.html
@@ -2745,6 +2835,7 @@ share/doc/csound6/rireturn.html
 share/doc/csound6/rms.html
 share/doc/csound6/rnd.html
 share/doc/csound6/rnd31.html
+share/doc/csound6/rndseed.html
 share/doc/csound6/round.html
 share/doc/csound6/rspline.html
 share/doc/csound6/rtclock.html
@@ -2767,6 +2858,7 @@ share/doc/csound6/scanu.html
 share/doc/csound6/schedkwhen.html
 share/doc/csound6/schedkwhennamed.html
 share/doc/csound6/schedule.html
+share/doc/csound6/schedulek.html
 share/doc/csound6/schedwhen.html
 share/doc/csound6/scoreline.html
 share/doc/csound6/scoreline_i.html
@@ -2866,9 +2958,9 @@ share/doc/csound6/sqrt.html
 share/doc/csound6/squinewave.html
 share/doc/csound6/sr.html
 share/doc/csound6/src_conv.html
-share/doc/csound6/srconv.html
 share/doc/csound6/stack.html
 share/doc/csound6/statevar.html
+share/doc/csound6/sterrain.html
 share/doc/csound6/stix.html
 share/doc/csound6/strcat.html
 share/doc/csound6/strcatk.html
@@ -2891,6 +2983,7 @@ share/doc/csound6/strlowerk.html
 share/doc/csound6/strrindex.html
 share/doc/csound6/strrindexk.html
 share/doc/csound6/strset.html
+share/doc/csound6/strstrip.html
 share/doc/csound6/strsub.html
 share/doc/csound6/strsubk.html
 share/doc/csound6/strtod.html
@@ -2914,6 +3007,7 @@ share/doc/csound6/t.html
 share/doc/csound6/tab.html
 share/doc/csound6/tab2array.html
 share/doc/csound6/tab2pvs.html
+share/doc/csound6/tab_i.html
 share/doc/csound6/tabifd.html
 share/doc/csound6/table.html
 share/doc/csound6/table3.html
@@ -2946,6 +3040,8 @@ share/doc/csound6/tabplay.html
 share/doc/csound6/tabrec.html
 share/doc/csound6/tabrowlin.html
 share/doc/csound6/tabsum.html
+share/doc/csound6/tabw.html
+share/doc/csound6/tabw_i.html
 share/doc/csound6/tambourine.html
 share/doc/csound6/tan.html
 share/doc/csound6/tanh.html
@@ -2979,6 +3075,8 @@ share/doc/csound6/trcross.html
 share/doc/csound6/trfilter.html
 share/doc/csound6/trhighest.html
 share/doc/csound6/trigger.html
+share/doc/csound6/trighold.html
+share/doc/csound6/trigphasor.html
 share/doc/csound6/trigseq.html
 share/doc/csound6/trim.html
 share/doc/csound6/trirand.html
@@ -3075,6 +3173,7 @@ share/doc/csound6/vpow.html
 share/doc/csound6/vpow_i.html
 share/doc/csound6/vpowv.html
 share/doc/csound6/vpowv_i.html
+share/doc/csound6/vps.html
 share/doc/csound6/vpvoc.html
 share/doc/csound6/vrandh.html
 share/doc/csound6/vrandi.html
@@ -3115,6 +3214,7 @@ share/doc/csound6/window.html
 share/doc/csound6/wrap.html
 share/doc/csound6/writescratch.html
 share/doc/csound6/wterrain.html
+share/doc/csound6/wterrain2.html
 share/doc/csound6/x.html
 share/doc/csound6/xadsr.html
 share/doc/csound6/xin.html
