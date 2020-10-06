@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/05/16 08:43:55 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/10/06 10:51:21 wiz Exp $
 
 DISTNAME=	chardet-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,12 +11,14 @@ COMMENT=	Character encoding auto-detection in Python
 LICENSE=	gnu-lgpl-v2.1
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
+
+PYTHON_VERSIONED_DEPENDENCIES=	hypothesis:test
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} chardetect chardetect-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
