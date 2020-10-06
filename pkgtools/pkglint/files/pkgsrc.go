@@ -370,7 +370,7 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 		action == Added && f[2] == "version",
 		action == Updated && f[2] == "to",
 		action == Downgraded && f[2] == "to",
-		action == Removed && (f[2] == "successor" || n == 4),
+		action == Removed && (f[2] == "successor" || f[2] == "version" || n == 4),
 		(action == Renamed || action == Moved) && f[2] == "to":
 		return &Change{
 			Location: line.Location,
@@ -1318,8 +1318,10 @@ func (ch *Change) Target() PkgsrcPath {
 	return NewPkgsrcPath(NewPath(ch.target))
 }
 
-// Successor returns the successor for a Removed package.
-func (ch *Change) Successor() string {
+// SuccessorOrVersion returns the successor for a Removed package,
+// or the version number of its last appearance.
+// As of 2020-10-06, no cross-validation is done on this field though.
+func (ch *Change) SuccessorOrVersion() string {
 	assert(ch.Action == Removed)
 	return ch.target
 }
