@@ -477,6 +477,10 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 	test("\tRemoved pkgpath successor pkgpath [author 2019-01-01]",
 		nil...)
 
+	// Since 2020-10-06
+	test("\tRemoved pkgpath version 1.3.4 [author 2019-01-01]",
+		nil...)
+
 	// "and" is wrong
 	test("\tRemoved pkgpath and pkgpath [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
@@ -1529,17 +1533,19 @@ func (s *Suite) Test_Change_Target(c *check.C) {
 	t.ExpectAssert(func() { downgraded.Target() })
 }
 
-func (s *Suite) Test_Change_Successor(c *check.C) {
+func (s *Suite) Test_Change_SuccessorOrVersion(c *check.C) {
 	t := s.Init(c)
 
 	loc := Location{"doc/CHANGES-2019", 5}
 	removed := Change{loc, Removed, "category/path", "", "author", "2019-01-01"}
 	removedSucc := Change{loc, Removed, "category/path", "category/successor", "author", "2019-01-01"}
+	removedVersion := Change{loc, Removed, "category/path", "1.3.4", "author", "2019-01-01"}
 	downgraded := Change{loc, Downgraded, "category/path", "1.0", "author", "2019-01-01"}
 
-	t.CheckEquals(removed.Successor(), "")
-	t.CheckEquals(removedSucc.Successor(), "category/successor")
-	t.ExpectAssert(func() { downgraded.Successor() })
+	t.CheckEquals(removed.SuccessorOrVersion(), "")
+	t.CheckEquals(removedSucc.SuccessorOrVersion(), "category/successor")
+	t.CheckEquals(removedVersion.SuccessorOrVersion(), "1.3.4")
+	t.ExpectAssert(func() { downgraded.SuccessorOrVersion() })
 }
 
 func (s *Suite) Test_Change_IsAbove(c *check.C) {
