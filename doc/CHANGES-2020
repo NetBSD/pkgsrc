@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5664 2020/10/06 11:59:22 nils Exp $
+$NetBSD: CHANGES-2020,v 1.5665 2020/10/06 12:06:15 nils Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8429,3 +8429,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/mkvserver_mk2 version 0.0.0.20200117 [ryoon 2020-10-06]
 	Updated devel/py-hypothesis to 5.37.0 [wiz 2020-10-06]
 	Updated www/nginx-devel to 1.19.3nb1 [nils 2020-10-06]
+	Updated www/nginx to 1.18.0nb3 [nils 2020-10-06]
