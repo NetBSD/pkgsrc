@@ -1,0 +1,10 @@
+Matroska Server Mk2
+
+This project is the result of years of thinking, trying and finally
+succeeding.
+
+This software makes it possible to stream (almost) anything remuxed
+as matroska live in real-time over http to multiple clients.
+
+This is probably also one of the first real world usages of FFmpeg's
+http server component (which I wrote as part of GSoC 2015).
