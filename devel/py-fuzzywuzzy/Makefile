@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/16 17:13:40 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/06 10:51:21 wiz Exp $
 
 DISTNAME=	fuzzywuzzy-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-Levenshtein-[0-9]*:../../textproc/py-Levenshtein
 TEST_DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
 
 USE_LANGUAGES=	# none
 

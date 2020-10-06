@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/07/01 08:52:38 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/06 10:51:22 wiz Exp $
 
 DISTNAME=	eliot-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,10 +14,10 @@ DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 DEPENDS+=	${PYPKGPREFIX}-boltons>=19.0.1:../../devel/py-boltons
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.11.8:../../devel/py-pyrsistent
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=1.14.0:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
 
 USE_LANGUAGES=	# none
 
