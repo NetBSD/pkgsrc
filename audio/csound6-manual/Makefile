@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/26 17:30:41 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/10/06 20:58:50 mrg Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
 PKGNAME=		csound6-manual-${CSOUND_VERSION}
@@ -14,7 +14,7 @@ HOMEPAGE=		https://www.csounds.com/
 COMMENT=		Csound6 Reference Manual
 LICENSE=		gnu-fdl-v1.2
 
-CSOUND_VERSION=		6.13.0
+CSOUND_VERSION=		6.15.0
 WRKSRC=			${WRKDIR}/html
 USE_TOOLS+=		gmake pax
 EXTRACT_USING=		bsdtar

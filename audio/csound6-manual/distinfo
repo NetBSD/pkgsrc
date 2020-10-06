@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/11/02 22:49:23 mrg Exp $
+$NetBSD: distinfo,v 1.4 2020/10/06 20:58:50 mrg Exp $
 
-SHA1 (Csound6.13.0_manual_html.zip) = 3fb4c2a504a10e76411f881c8678cca5101c1244
-RMD160 (Csound6.13.0_manual_html.zip) = b959eece3c7e7051f2b8ae7bf4fe4ae620b1de77
-SHA512 (Csound6.13.0_manual_html.zip) = 87de3efc9aba736751d5bd93bb7bb9d47a3fc4c2e9df4552c9c1f3030f84e1aa29fa421f5360a22993cf0f6f7baae1d70bfb54201e5110f44f5a8c81d955deb5
-Size (Csound6.13.0_manual_html.zip) = 16436055 bytes
+SHA1 (Csound6.15.0_manual_html.zip) = 557911150af20d1b69b44cd9a84518c899b5faf3
+RMD160 (Csound6.15.0_manual_html.zip) = 92f671e05732e92faf4589ffdc9edc949082048a
+SHA512 (Csound6.15.0_manual_html.zip) = cf7df42f3b6d869a5e9f531c64a50287f9385927b26c48ff3c334b2ed95d17334be85a3ef671008504d1a365b1412e2715dcff61a41e3c83b60621df25d67946
+Size (Csound6.15.0_manual_html.zip) = 20674415 bytes
