@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/03/08 16:48:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/10/06 00:11:47 gutteridge Exp $
 
 BUILDLINK_TREE+=	groonga
 
@@ -16,19 +16,19 @@ BUILDLINK_INCDIRS.groonga+=	include/groonga
 pkgbase := groonga
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_OPTIONS:Mgroonga-suggest-learner)
+.if ${PKG_BUILD_OPTIONS.groonga:Mgroonga-suggest-learner}
 .include "../../devel/msgpack/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mlz4)
+.if ${PKG_BUILD_OPTIONS.groonga:Mlz4}
 .include "../../archivers/lz4/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mmecab)
+.if ${PKG_BUILD_OPTIONS.groonga:Mmecab}
 .include "../../textproc/mecab/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mzlib)
+.if ${PKG_BUILD_OPTIONS.groonga:Mzlib}
 .include "../../devel/zlib/buildlink3.mk"
 .endif
 
