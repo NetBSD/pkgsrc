@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5668 2020/10/06 18:41:00 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.5669 2020/10/06 19:50:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8433,3 +8433,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-mercurial to 5.5.2 [wiz 2020-10-06]
 	mk/subst.mk: removed SUBST_NOOP_OK [rillig 2020-10-06]
 	Updated pkgtools/pkglint to 20.3.1 [rillig 2020-10-06]
+	Updated lang/vala to 0.50.1 [wiz 2020-10-06]
