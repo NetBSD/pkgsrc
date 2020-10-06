@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/29 19:33:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/06 10:50:23 wiz Exp $
 
 DISTNAME=	pyrlp-1.2.0
 PKGNAME=	${PYPKGPREFIX}-rlp-1.2.0
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 #BUILD_DEPENDS+=	# TODO: pytest-xdist>=0
 #BUILD_DEPENDS+=	# TODO: pytest-watch>=4.1.0,<5
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-BUILD_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
+BUILD_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython5
 BUILD_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
 #BUILD_DEPENDS+=	# TODO: pytest==3.3.2>=0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
