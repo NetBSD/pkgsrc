@@ -236,7 +236,8 @@ func (ck *HomepageChecker) checkBadUrls() {
 
 	if !ck.hasAnySuffix(host,
 		".dl.sourceforge.net",
-		"downloads.sourceforge.net") {
+		"downloads.sourceforge.net",
+		"cpan.metacpan.org") {
 		return
 	}
 
