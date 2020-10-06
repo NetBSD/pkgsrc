@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/04/04 03:22:02 mef Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/10/06 02:06:05 mef Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -666,7 +666,6 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dir_000016.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/doc.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dox.css
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/doxygen.css
-${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/doxygen.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dtoa__conv_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/eedef_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/eeprom_8h_source.html
