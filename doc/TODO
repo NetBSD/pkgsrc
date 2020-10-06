@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20119 2020/10/05 22:10:16 mef Exp $
+$NetBSD: TODO,v 1.20120 2020/10/06 09:25:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1049,7 +1049,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.0.0
 	o sparse-0.5.0
 	o spcaview-20060501
-	o spdlog-1.8.1
 	o spl-1.0pre6
 	o sqlrelay-1.4.0
 	o squeak-5.0
