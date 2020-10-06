@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/12 11:47:40 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/06 10:51:21 wiz Exp $
 
 DISTNAME=	python-subunit-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -13,8 +13,9 @@ LICENSE=	apache-2.0 OR modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-extras-[0-9]*:../../devel/py-extras
 DEPENDS+=	${PYPKGPREFIX}-testtools>=0.9.34:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
+
+PYTHON_VERSIONED_DEPENDENCIES=	hypothesis:test
 
 USE_LANGUAGES=	# none
 
@@ -30,4 +31,5 @@ do-test:
 	cd ${WRKSRC}/python && ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

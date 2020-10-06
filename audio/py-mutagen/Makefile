@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/08/05 16:33:52 adam Exp $
+# $NetBSD: Makefile,v 1.25 2020/10/06 10:51:21 wiz Exp $
 
 DISTNAME=	mutagen-1.43.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,7 @@ HOMEPAGE=	https://github.com/quodlibet/mutagen
 COMMENT=	Audio metadata handling for Python
 LICENSE=	gnu-gpl-v2
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test hypothesis:test
 
 USE_LANGUAGES=	# none
 

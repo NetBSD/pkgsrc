@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/06/14 13:53:06 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/10/06 10:51:21 wiz Exp $
 
 DISTNAME=	zstandard-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,11 +11,13 @@ COMMENT=	Zstandard bindings for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.11:../../devel/py-cffi
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+
+PYTHON_VERSIONED_DEPENDENCIES=	hypothesis:test
 
 PYSETUPBUILDARGS+=	--system-zstd
 
 BUILDLINK_API_DEPENDS.zstd+=	zstd>=1.4.5
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
