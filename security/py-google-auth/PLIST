@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/20 07:17:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/10/06 05:35:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,12 +12,21 @@ ${PYSITELIB}/google/auth/__init__.pyo
 ${PYSITELIB}/google/auth/_cloud_sdk.py
 ${PYSITELIB}/google/auth/_cloud_sdk.pyc
 ${PYSITELIB}/google/auth/_cloud_sdk.pyo
+${PYSITELIB}/google/auth/_credentials_async.py
+${PYSITELIB}/google/auth/_credentials_async.pyc
+${PYSITELIB}/google/auth/_credentials_async.pyo
 ${PYSITELIB}/google/auth/_default.py
 ${PYSITELIB}/google/auth/_default.pyc
 ${PYSITELIB}/google/auth/_default.pyo
+${PYSITELIB}/google/auth/_default_async.py
+${PYSITELIB}/google/auth/_default_async.pyc
+${PYSITELIB}/google/auth/_default_async.pyo
 ${PYSITELIB}/google/auth/_helpers.py
 ${PYSITELIB}/google/auth/_helpers.pyc
 ${PYSITELIB}/google/auth/_helpers.pyo
+${PYSITELIB}/google/auth/_jwt_async.py
+${PYSITELIB}/google/auth/_jwt_async.pyc
+${PYSITELIB}/google/auth/_jwt_async.pyo
 ${PYSITELIB}/google/auth/_oauth2client.py
 ${PYSITELIB}/google/auth/_oauth2client.pyc
 ${PYSITELIB}/google/auth/_oauth2client.pyo
@@ -78,6 +87,9 @@ ${PYSITELIB}/google/auth/jwt.pyo
 ${PYSITELIB}/google/auth/transport/__init__.py
 ${PYSITELIB}/google/auth/transport/__init__.pyc
 ${PYSITELIB}/google/auth/transport/__init__.pyo
+${PYSITELIB}/google/auth/transport/_aiohttp_requests.py
+${PYSITELIB}/google/auth/transport/_aiohttp_requests.pyc
+${PYSITELIB}/google/auth/transport/_aiohttp_requests.pyo
 ${PYSITELIB}/google/auth/transport/_http_client.py
 ${PYSITELIB}/google/auth/transport/_http_client.pyc
 ${PYSITELIB}/google/auth/transport/_http_client.pyo
@@ -102,6 +114,18 @@ ${PYSITELIB}/google/oauth2/__init__.pyo
 ${PYSITELIB}/google/oauth2/_client.py
 ${PYSITELIB}/google/oauth2/_client.pyc
 ${PYSITELIB}/google/oauth2/_client.pyo
+${PYSITELIB}/google/oauth2/_client_async.py
+${PYSITELIB}/google/oauth2/_client_async.pyc
+${PYSITELIB}/google/oauth2/_client_async.pyo
+${PYSITELIB}/google/oauth2/_credentials_async.py
+${PYSITELIB}/google/oauth2/_credentials_async.pyc
+${PYSITELIB}/google/oauth2/_credentials_async.pyo
+${PYSITELIB}/google/oauth2/_id_token_async.py
+${PYSITELIB}/google/oauth2/_id_token_async.pyc
+${PYSITELIB}/google/oauth2/_id_token_async.pyo
+${PYSITELIB}/google/oauth2/_service_account_async.py
+${PYSITELIB}/google/oauth2/_service_account_async.pyc
+${PYSITELIB}/google/oauth2/_service_account_async.pyo
 ${PYSITELIB}/google/oauth2/credentials.py
 ${PYSITELIB}/google/oauth2/credentials.pyc
 ${PYSITELIB}/google/oauth2/credentials.pyo
