@@ -279,11 +279,13 @@ func (s *Suite) Test_HomepageChecker_checkBadUrls(c *check.C) {
 	vt.Varname("HOMEPAGE")
 	vt.Values(
 		"http://garr.dl.sourceforge.net/project/name/dir/subdir/",
-		"https://downloads.sourceforge.net/project/name/dir/subdir/")
+		"https://downloads.sourceforge.net/project/name/dir/subdir/",
+		"https://cpan.metacpan.org/authors/id/I/IM/IMALPASS/")
 
 	vt.Output(
 		"WARN: filename.mk:1: A direct download URL is not a user-friendly homepage.",
-		"WARN: filename.mk:2: A direct download URL is not a user-friendly homepage.")
+		"WARN: filename.mk:2: A direct download URL is not a user-friendly homepage.",
+		"WARN: filename.mk:3: A direct download URL is not a user-friendly homepage.")
 }
 
 func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
