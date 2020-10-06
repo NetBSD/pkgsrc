@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.77 2020/09/30 13:52:26 otis Exp $
+$NetBSD: distinfo,v 1.78 2020/10/06 12:04:30 nils Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -24,10 +24,10 @@ SHA1 (lua-nginx-module-0.10.15.tar.gz) = d09f8353ca573ae6a4b33af252433197d6e45b1
 RMD160 (lua-nginx-module-0.10.15.tar.gz) = 1e3801a632eee54458c53a05293cf301653240ec
 SHA512 (lua-nginx-module-0.10.15.tar.gz) = 1feea538464275e6e571860592628ad639b2259c8aab7f38575b81c0b355f1ade32a91643267bc9ec16519e3bcf3d132511513dc8c949f74a3bff975c85d8ff7
 Size (lua-nginx-module-0.10.15.tar.gz) = 655110 bytes
-SHA1 (naxsi-0.56.tar.gz) = 42ce137bd3e52a612793bcea43f3ffbb8376910a
-RMD160 (naxsi-0.56.tar.gz) = a5c97194ef3db415a4bab07c44f9e9f2860b9e1a
-SHA512 (naxsi-0.56.tar.gz) = 4660751849bce303af6010b7257532404710106a94817e78d4bc4b566f8019620f24f30207f1d4366b88132a5124e34b164dc67ed80b6710f4bad66115564cbd
-Size (naxsi-0.56.tar.gz) = 192120 bytes
+SHA1 (naxsi-1.1a.tar.gz) = 02b70622e90ad72b79627580a836d57ae64b6f59
+RMD160 (naxsi-1.1a.tar.gz) = 006619fe97bfc89a76cb18fa0914e548ea3d9bc5
+SHA512 (naxsi-1.1a.tar.gz) = 2b087eb2f8873f901ff52f0b20411e89d8fb50c4bc61af67a3aa8d21afd5342328163c81ad6f54773ae61fa381c7ca66b0d5369de3664340eeba4a03b3daac43
+Size (naxsi-1.1a.tar.gz) = 233269 bytes
 SHA1 (nginx-1.18.0.tar.gz) = 47b2c5ccd12e2a7088b03d629ff6b9ab18215180
 RMD160 (nginx-1.18.0.tar.gz) = 224ad8782243ddd1f702bad11f2da38b60e31a38
 SHA512 (nginx-1.18.0.tar.gz) = 8c21eeb62ab6e32e436932500f700bd2fb99fd2d29e43c08a5bfed4714c189c29c7141db551fcd5d2437303b7439f71758f7407dfd3e801e704e45e7daa78ddb

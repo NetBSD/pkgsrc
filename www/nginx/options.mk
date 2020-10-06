@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.60 2020/09/30 13:52:26 otis Exp $
+# $NetBSD: options.mk,v 1.61 2020/10/06 12:04:30 nils Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug echo encrypted-session \
@@ -20,7 +20,7 @@ PLIST.naxsi=			yes
 CONFIGURE_ARGS+=		--add-module=../${NAXSI_DISTNAME}/naxsi_src
 .endif
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi)
-NAXSI_VERSION=			0.56
+NAXSI_VERSION=			1.1a
 NAXSI_DISTNAME=			naxsi-${NAXSI_VERSION}
 NAXSI_DISTFILE=			${NAXSI_DISTNAME}.tar.gz
 SITES.${NAXSI_DISTFILE}=	-https://github.com/nbs-system/naxsi/archive/${NAXSI_VERSION}.tar.gz
