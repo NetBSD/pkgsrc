@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2020/08/18 17:57:34 leot Exp $
+# $NetBSD: Makefile,v 1.54 2020/10/06 00:26:51 mrg Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
-PKGREVISION=		8
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=csound/}
 GITHUB_PROJECT=		csound
@@ -12,8 +11,7 @@ HOMEPAGE=		https://sourceforge.net/projects/csound/
 COMMENT=		Software synthesizer and sequencer
 LICENSE=		gnu-lgpl-v2.1 # or later
 
-CSOUND_VERSION=		6.13.0
-#WRKSRC=		${WRKDIR}/Csound${CSOUND_VERSION}
+CSOUND_VERSION=		6.15.0
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex
 CFLAGS+=		-g -D__PKGSRC_PREFIX__=\"${PREFIX}/\" -DBETA
@@ -43,17 +41,19 @@ CHECK_PORTABILITY_SKIP+= \
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
 		rm -f bin/csound6 && \
-		${LN} -s ../lib/csound6/csound bin/csound6
+		${LN} -s csound bin/csound6
 
 .include "options.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/liblo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
