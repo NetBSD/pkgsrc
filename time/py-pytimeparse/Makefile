@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 16:28:41 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/06 08:37:23 adam Exp $
 
-DISTNAME=		pytimeparse-1.1.8
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		python time
-MASTER_SITES=		${MASTER_SITE_PYPI:=p/pytimeparse/}
+DISTNAME=	pytimeparse-1.1.8
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	time python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytimeparse/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://timeparse.readthedocs.io/
-COMMENT=		Parse various kinds of time expressions
-LICENSE=		mit
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/wroberts/pytimeparse
+COMMENT=	Time expression parser
+LICENSE=	mit
 
-.include "../../lang/python/application.mk"
+USE_LANGUAGES=	# none
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
