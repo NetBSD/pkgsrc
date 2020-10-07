@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2020/10/06 20:54:55 mrg Exp $
+# $NetBSD: Makefile,v 1.56 2020/10/07 05:12:23 mrg Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=csound/}
 GITHUB_PROJECT=		csound
@@ -15,7 +15,8 @@ LICENSE=		gnu-lgpl-v2.1 # or later
 CSOUND_VERSION=		6.15.0
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex
-CFLAGS+=		-g -D__PKGSRC_PREFIX__=\"${PREFIX}/\" -DBETA
+CFLAGS+=		-g -DBETA
+CFLAGS+=		-DCS_DEFAULT_PLUGINDIR=\"${PREFIX}/lib/csound/plugins64-6.0\"
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DBUILD_RELEASE=1
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
