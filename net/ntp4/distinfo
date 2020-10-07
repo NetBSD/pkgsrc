@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2020/08/15 02:09:25 tnn Exp $
+$NetBSD: distinfo,v 1.33 2020/10/07 09:09:39 sjmulder Exp $
 
 SHA1 (ntp-4.2.8p15.tar.gz) = e34e5b6f48c3ed1bbcfb03080dec1b8f91e19381
 RMD160 (ntp-4.2.8p15.tar.gz) = 4653211d8c258a4a9edf1b2445a77223330176a2
@@ -27,13 +27,13 @@ SHA1 (patch-ntpd_refclock__jupiter.c) = bb248d2766cadddacdf9cb56bf9b29cbc538bbcb
 SHA1 (patch-ntpd_refclock__neoclock4x.c) = 66c38ba21572cb8804a39766f3b32d1b65cb0946
 SHA1 (patch-ntpd_refclock__oncore.c) = d93efa11cadc37fd9e600f80f2cbf0280be969c6
 SHA1 (patch-ntpd_refclock__ulink.c) = 55003f758fd71621db60ffad8a1880588098389e
-SHA1 (patch-ntpd_refclock__wwvb.c) = e1a7fc80df6dba9595788a8b8c56729619048ee4
+SHA1 (patch-ntpd_refclock__wwvb.c) = 3a8003bcd94f74a4e1914054d5d30751feb97825
 SHA1 (patch-ntpdate_ntpdate.c) = 17e2534ab7a54e5af16059ca8c02c9995d79d83c
 SHA1 (patch-ntpdc_Makefile.in) = 6afaf915ee8c6b244f94d3733545231e69dfd14d
 SHA1 (patch-ntpq_ntpq.c) = 0776827a712e2f6636b9d322ae7445d184f3709f
 SHA1 (patch-sntp_libevent_build-aux_config.guess) = 5f5fff42d04daef5fcbba2bc09b015fb4489ca59
 SHA1 (patch-sntp_libevent_build-aux_config.sub) = 178e8b39138e49db7702c4bb84fe92550d14a978
-SHA1 (patch-sntp_libopts_autoopts.h) = d4cbaa31df97e04f3637349a3d5eb1addfa847db
+SHA1 (patch-sntp_libopts_autoopts.h) = 9f46171eb6982d1ee57b70286e9436aef763554d
 SHA1 (patch-sntp_libopts_enum.c) = 7d6624ed84a6ea6f85b4de4c37480041a7603252
 SHA1 (patch-sntp_libopts_usage.c) = ec77942c98965c13de625b930db3458d5b81d28b
 SHA1 (patch-sntp_loc_pkgsrc) = 6e46ffc0cc2afcfdc1d01297cbe04cb80d103575
