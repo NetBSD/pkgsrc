@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_base_nscore.h,v 1.4 2020/03/13 17:59:27 wiz Exp $
+$NetBSD: patch-xpcom_base_nscore.h,v 1.5 2020/10/07 11:10:35 wiz Exp $
 
 * Support llvm/clang
 
