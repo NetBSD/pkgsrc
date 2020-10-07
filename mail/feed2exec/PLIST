@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/29 19:09:54 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/10/07 19:46:53 schmonz Exp $
+bin/feed2exec
 ${PYSITELIB}/feed2exec-0.0.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
 ${PYSITELIB}/feed2exec-0.0.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
 ${PYSITELIB}/feed2exec-0.0.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
@@ -11,15 +12,18 @@ ${PYSITELIB}/feed2exec/__init__.pyo
 ${PYSITELIB}/feed2exec/__main__.py
 ${PYSITELIB}/feed2exec/__main__.pyc
 ${PYSITELIB}/feed2exec/__main__.pyo
+${PYSITELIB}/feed2exec/controller.py
+${PYSITELIB}/feed2exec/controller.pyc
+${PYSITELIB}/feed2exec/controller.pyo
 ${PYSITELIB}/feed2exec/email.py
 ${PYSITELIB}/feed2exec/email.pyc
 ${PYSITELIB}/feed2exec/email.pyo
-${PYSITELIB}/feed2exec/feeds.py
-${PYSITELIB}/feed2exec/feeds.pyc
-${PYSITELIB}/feed2exec/feeds.pyo
 ${PYSITELIB}/feed2exec/logging.py
 ${PYSITELIB}/feed2exec/logging.pyc
 ${PYSITELIB}/feed2exec/logging.pyo
+${PYSITELIB}/feed2exec/model.py
+${PYSITELIB}/feed2exec/model.pyc
+${PYSITELIB}/feed2exec/model.pyo
 ${PYSITELIB}/feed2exec/plugins/__init__.py
 ${PYSITELIB}/feed2exec/plugins/__init__.pyc
 ${PYSITELIB}/feed2exec/plugins/__init__.pyo
@@ -110,5 +114,4 @@ ${PYSITELIB}/feed2exec/tests/test_plugins.pyo
 ${PYSITELIB}/feed2exec/utils.py
 ${PYSITELIB}/feed2exec/utils.pyc
 ${PYSITELIB}/feed2exec/utils.pyo
-bin/feed2exec
 share/bash-completion/completions/feed2exec
