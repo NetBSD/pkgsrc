@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.293 2020/08/29 20:11:21 js Exp $
+# $NetBSD: bootstrap,v 1.294 2020/10/07 10:44:14 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -562,7 +562,8 @@ Darwin)
 	osrev=`uname -r`
 
 	# Combine major.minor product version for simpler numerical tests.
-	macos_version=`sw_vers -productVersion | awk -F. '{print $1 $2}'`
+	macos_version=`sw_vers -productVersion | \
+	    awk -F. '{ printf("%02d%02d", $1, $2) }'`
 
 	# Newer native sed does not support multibyte correctly.
 	if [ $macos_version -ge 1008 ]; then
