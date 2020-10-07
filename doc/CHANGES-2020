@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5672 2020/10/07 11:12:57 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5673 2020/10/07 12:57:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8437,3 +8437,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/csound6-manual to 6.15.0 [mrg 2020-10-06]
 	Updated emulators/gxemul to 0.6.2nb1. [thorpej 2020-10-06]
 	Updated security/tor-browser to 10.0 [wiz 2020-10-07]
+	Updated misc/py-tqdm to 4.50.1 [adam 2020-10-07]
+	Updated www/py-google-api-python-client to 1.12.3 [adam 2020-10-07]
