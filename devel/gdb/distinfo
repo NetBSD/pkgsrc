@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.34 2020/04/11 12:47:28 bsiegert Exp $
+$NetBSD: distinfo,v 1.35 2020/10/07 04:34:01 mcf Exp $
 
 SHA1 (gdb-8.3.1.tar.gz) = 8e68fc5d524caeb6684a8b6ed24e75396e40c471
 RMD160 (gdb-8.3.1.tar.gz) = 82c6d7d2c96b4716f9f338b116122b7395b07e90
 SHA512 (gdb-8.3.1.tar.gz) = e81949fa011046b07ee6886a378bcbd420e4571367005035007dc70f0d28d975d08fb7d9062b49f0a3e6d2ca8149ea60f9ab485ea98a04198d1ca49d38dbd2fe
 Size (gdb-8.3.1.tar.gz) = 38130999 bytes
 SHA1 (patch-Makefile.in) = 48f65798f96fdda2a35eb8b18a7cc2993023bcc7
+SHA1 (patch-gdb_doc_Makefile.in) = f7205fe715779e8aed05d230d43320286f74fdd0
 SHA1 (patch-gdb_testsuite_Makefile.in) = 295fa86f16e520a7df907743988cc3dbdb606c2a
 SHA1 (patch-opcodes_i386-dis_c) = 57b2b2ce85567faf112ec9f435b9aed0ffc943fb
 SHA1 (patch-sim_ppc_emul_netbsd.c) = 34fcb884c3c82e8eae6cd6f8c87ce42e9354c347
