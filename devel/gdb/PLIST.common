@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST.common,v 1.15 2020/10/06 21:13:38 mcf Exp $
+@comment $NetBSD: PLIST.common,v 1.16 2020/10/07 04:34:01 mcf Exp $
+${PLIST.gcore}bin/gcore
 bin/gdb
 bin/gdb-add-index
 include/gdb/jit-reader.h
 info/annotate.info
 info/gdb.info
 info/stabs.info
+${PLIST.gcore}man/man1/gcore.1
 man/man1/gdb-add-index.1
 man/man1/gdb.1
 man/man1/gdbserver.1
@@ -49,4 +51,3 @@ share/gdb/syscalls/sparc-linux.xml
 share/gdb/syscalls/sparc64-linux.xml
 share/gdb/system-gdbinit/elinos.py
 share/gdb/system-gdbinit/wrs-linux.py
-${PLIST.gcore}bin/gcore

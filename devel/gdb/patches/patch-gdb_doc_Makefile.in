@@ -1,0 +1,15 @@
+$NetBSD: patch-gdb_doc_Makefile.in,v 1.3 2020/10/07 04:34:01 mcf Exp $
+
+Add missing HAVE_NATIVE_GCORE_HOST variable so that gcore.1 gets
+installed properly on non-Linux platforms.
+
+--- gdb/doc/Makefile.in.orig	Tue Oct  6 09:03:59 2020
++++ gdb/doc/Makefile.in
+@@ -179,6 +179,7 @@ MAN5S = gdbinit.5
+ MANS = $(MAN1S) $(MAN5S)
+ 
+ HAVE_NATIVE_GCORE_TARGET = @HAVE_NATIVE_GCORE_TARGET@
++HAVE_NATIVE_GCORE_HOST = @HAVE_NATIVE_GCORE_HOST@
+ 
+ ###
+ 
