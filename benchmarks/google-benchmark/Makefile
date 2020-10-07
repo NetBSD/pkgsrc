@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/06/11 17:01:06 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/10/07 20:49:56 wiz Exp $
 
-DISTNAME=	benchmark-1.5.1
+DISTNAME=	benchmark-1.5.2
 PKGNAME=	google-${DISTNAME}
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -16,6 +16,11 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBENCHMARK_ENABLE_GTEST_TESTS=OFF
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+# as of 1.5.2
+# 97% tests passed, 2 tests failed out of 59
+# The following tests FAILED:
+# 49 - reporter_output_test (Child aborted)
+# 51 - user_counters_test (Child aborted)
 TEST_TARGET=	test
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
