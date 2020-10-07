@@ -1,8 +1,8 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.5 2020/03/13 17:59:27 wiz Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.6 2020/10/07 11:10:35 wiz Exp $
 
 * Add Sun audio support
 
---- media/libcubeb/src/moz.build.orig	2020-03-05 20:57:11.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2020-04-03 19:35:03.000000000 +0000
 +++ media/libcubeb/src/moz.build
 @@ -23,6 +23,12 @@ if CONFIG['MOZ_ALSA']:
      ]

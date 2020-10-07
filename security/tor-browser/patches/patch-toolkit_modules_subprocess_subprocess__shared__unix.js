@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_modules_subprocess_subprocess__shared__unix.js,v 1.1 2020/03/13 17:59:27 wiz Exp $
+$NetBSD: patch-toolkit_modules_subprocess_subprocess__shared__unix.js,v 1.2 2020/10/07 11:10:35 wiz Exp $
 
 Fix broken native messaging on NetBSD and possibly other BSDs too:
 https://bugzilla.mozilla.org/show_bug.cgi?id=1543602
