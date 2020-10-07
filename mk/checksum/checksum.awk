@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: checksum.awk,v 1.2 2020/08/27 11:56:38 jperkin Exp $
+# $NetBSD: checksum.awk,v 1.3 2020/10/07 18:09:52 jperkin Exp $
 #
 ###########################################################################
 #
@@ -126,7 +126,7 @@ BEGIN {
 		if (NF != 4) {
 			continue
 		}
-		if ($0 ~ /^(\#|\$|Size)/) {
+		if ($0 ~ /^(#|\$|Size)/) {
 			continue
 		}
 
@@ -210,7 +210,7 @@ BEGIN {
 		if (NF != 4) {
 			continue
 		}
-		if ($0 ~ /^(\#|\$|Size)/) {
+		if ($0 ~ /^(#|\$|Size)/) {
 			continue
 		}
 
