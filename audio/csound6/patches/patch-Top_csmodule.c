@@ -1,6 +1,5 @@
-$NetBSD: patch-Top_csmodule.c,v 1.4 2019/11/02 22:25:46 mrg Exp $
+$NetBSD: patch-Top_csmodule.c,v 1.5 2020/10/07 05:12:23 mrg Exp $
 
-Fix the installation path for csound6 plugins.
 Add NetBSD and DragonFlyBSD support.
 
 --- Top/csmodule.c.orig	2019-07-12 14:54:19.000000000 -0700
@@ -23,18 +22,6 @@ Add NetBSD and DragonFlyBSD support.
  #  define ENABLE_OPCODEDIR_WARNINGS 1
  #  ifdef CS_DEFAULT_PLUGINDIR
  #    undef CS_DEFAULT_PLUGINDIR
-@@ -159,9 +159,9 @@
- #  define ENABLE_OPCODEDIR_WARNINGS 0
- #  ifndef CS_DEFAULT_PLUGINDIR
- #    ifndef USE_DOUBLE
--#      define CS_DEFAULT_PLUGINDIR  "/usr/local/lib/csound/plugins"
-+#      define CS_DEFAULT_PLUGINDIR  __PKGSRC_PREFIX__ "lib/csound6/plugins-6.0"
- #    else
--#      define CS_DEFAULT_PLUGINDIR  "/usr/local/lib/csound/plugins64"
-+#      define CS_DEFAULT_PLUGINDIR  __PKGSRC_PREFIX__ "lib/csound6/plugins-6.0"
- #    endif
- #  endif
- #endif
 @@ -264,7 +264,7 @@
      err = csoundOpenLibrary(&h, libraryPath);
      if (UNLIKELY(err)) {
