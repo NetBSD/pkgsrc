@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5674 2020/10/07 19:46:03 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5675 2020/10/07 19:47:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8440,3 +8440,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-tqdm to 4.50.1 [adam 2020-10-07]
 	Updated www/py-google-api-python-client to 1.12.3 [adam 2020-10-07]
 	Added devel/py-cachecontrol version 0.12.6 [schmonz 2020-10-07]
+	Updated mail/feed2exec to 0.16.0 [schmonz 2020-10-07]
