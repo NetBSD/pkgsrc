@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/03/31 10:31:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/07 19:46:53 schmonz Exp $
 
-DISTNAME=		feed2exec-0.15.0
-PKGREVISION=		2
+DISTNAME=		feed2exec-0.16.0
 CATEGORIES=		mail python
 MASTER_SITES=		https://gitlab.com/anarcat/feed2exec/-/archive/${PKGVERSION_NOREV}/
 
@@ -18,9 +17,10 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=		${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
+DEPENDS+=		${PYPKGPREFIX}-cachecontrol-[0-9]*:../../devel/py-cachecontrol
 DEPENDS+=		${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=		${PYPKGPREFIX}-dateparser-[0-9]*:../../time/py-dateparser
-DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
+DEPENDS+=		${PYPKGPREFIX}-feedparser<6.0:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=		${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
