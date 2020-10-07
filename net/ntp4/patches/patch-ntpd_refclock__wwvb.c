@@ -1,16 +1,15 @@
-$NetBSD: patch-ntpd_refclock__wwvb.c,v 1.1 2020/06/21 15:10:47 taca Exp $
+$NetBSD: patch-ntpd_refclock__wwvb.c,v 1.2 2020/10/07 09:09:39 sjmulder Exp $
 
-* Changes from NetBSD base.
+* Changes from NetBSD base w/ Linux fix
 
 --- ntpd/refclock_wwvb.c.orig	2014-12-30 00:29:38.000000000 +0000
 +++ ntpd/refclock_wwvb.c
-@@ -154,7 +154,8 @@ static	void	wwvb_control	(int, const str
+@@ -154,7 +154,7 @@ static	void	wwvb_control	(int, const str
  				 struct refclockstat *, struct peer *);
  #define		WWVB_CONTROL	wwvb_control
  #else
 -#define		WWVB_CONTROL	noentry
-+#define		WWVB_CONTROL	(void)(*)
-+noentry
++#define		WWVB_CONTROL	(void*)noentry
  #endif /* HAVE_PPSAPI */
  
  /*
