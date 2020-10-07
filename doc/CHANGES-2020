@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5678 2020/10/07 20:50:06 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5679 2020/10/07 21:27:43 kim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8444,3 +8444,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/expat to 2.2.10 [wiz 2020-10-07]
 	Updated devel/appstream-glib to 0.7.18 [wiz 2020-10-07]
 	Updated benchmarks/google-benchmark to 1.5.2 [wiz 2020-10-07]
+	Updated textproc/oniguruma to 6.9.6rc1 [kim 2020-10-07]
