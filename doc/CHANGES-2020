@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5671 2020/10/07 00:44:37 thorpej Exp $
+$NetBSD: CHANGES-2020,v 1.5672 2020/10/07 11:12:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8436,3 +8436,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/vala to 0.50.1 [wiz 2020-10-06]
 	Updated audio/csound6-manual to 6.15.0 [mrg 2020-10-06]
 	Updated emulators/gxemul to 0.6.2nb1. [thorpej 2020-10-06]
+	Updated security/tor-browser to 10.0 [wiz 2020-10-07]
