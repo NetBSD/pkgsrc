@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/10/07 00:43:04 thorpej Exp $
+# $NetBSD: Makefile,v 1.69 2020/10/07 13:25:20 ryoon Exp $
 
 DISTNAME=	gxemul-0.6.2
 PKGREVISION=	1
@@ -26,6 +26,7 @@ do-install:
 .for f in README HISTORY LICENSE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
+	${RM} ${WRKSRC}/doc/networking.html.orig
 	cd ${WRKSRC}/doc && pax -rwppm . ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gxemul
