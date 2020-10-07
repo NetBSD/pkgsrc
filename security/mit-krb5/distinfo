@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.71 2020/10/05 23:24:44 gdt Exp $
+$NetBSD: distinfo,v 1.72 2020/10/07 22:40:56 gdt Exp $
 
-SHA1 (krb5-1.18.tar.gz) = 95573bea40844bba1032b7d8a7c3c43ccc44fdb1
-RMD160 (krb5-1.18.tar.gz) = 6595de6f7dc77746c986e3dad6a016d206efe4d9
-SHA512 (krb5-1.18.tar.gz) = 36a01ea310b4b3d0a3d209b641739575239e1ca5e93b3de99cb1fec83e82f9a70ad0761dd6eb77cda5c18c53044ab80168b00725642a0c2dfde0e492c42af6a9
-Size (krb5-1.18.tar.gz) = 8706395 bytes
+SHA1 (krb5-1.18.2.tar.gz) = 547c4e4afa06dd39c888a9ee89397ec3c3425c90
+RMD160 (krb5-1.18.2.tar.gz) = 5943e2bb26477a6251a9b2fa5f5fecd1ffe276c3
+SHA512 (krb5-1.18.2.tar.gz) = 7cbb1b28e677fea3e0794e93951f3caaa2c49bb1175dd187951e72a466cc69d96c3b833d838000fe911c1a437d96a558e550f27c53a8b332fb9dfc7cbb7ec44c
+Size (krb5-1.18.2.tar.gz) = 8713927 bytes
 SHA1 (patch-Makefile.in) = 24f915d7a4340b9a4a454b9b67c94147fdc49c34
 SHA1 (patch-aclocal.m4) = 07b5d9ae38c74eaea6ba62aed9062dca1bf7f3fb
 SHA1 (patch-build-tools_krb5-config.in) = 4ab922df1d86d86f9ef043f2c5cdf048c0477d3a
