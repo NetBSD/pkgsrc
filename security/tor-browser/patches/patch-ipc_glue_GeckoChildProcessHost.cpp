@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.4 2020/03/13 17:59:27 wiz Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.5 2020/10/07 11:10:35 wiz Exp $
 
 * Support Solaris
 * Fix NetBSD linking
