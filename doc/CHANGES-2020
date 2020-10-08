@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5682 2020/10/08 07:31:27 he Exp $
+$NetBSD: CHANGES-2020,v 1.5683 2020/10/08 08:29:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8448,3 +8448,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/mit-krb5 to 1.18.2 [gdt 2020-10-07]
 	Updated devel/valgrind to 3.16.1 [mcf 2020-10-08]
 	Updated net/unbound to 1.12.0 [he 2020-10-08]
+	Updated devel/py-rope to 0.18.0 [adam 2020-10-08]
+	Updated devel/py-test-timeout to 1.4.2 [adam 2020-10-08]
