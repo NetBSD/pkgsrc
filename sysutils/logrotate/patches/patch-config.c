@@ -1,16 +1,20 @@
-$NetBSD: patch-config.c,v 1.6 2019/03/20 10:34:10 he Exp $
+$NetBSD: patch-config.c,v 1.7 2020/10/08 07:50:51 wiz Exp $
 
 Fix NetBSD compilation.
 
---- config.c.orig	2016-12-02 13:12:33.000000000 +0000
+--- config.c.orig	2020-07-10 08:22:39.000000000 +0000
 +++ config.c
-@@ -23,7 +23,9 @@
+@@ -19,7 +19,13 @@
  #include <wctype.h>
  #include <fnmatch.h>
  #include <sys/mman.h>
 -#include <libgen.h>
 +#ifndef _LIBGEN_H_
 +#  include <libgen.h>
++#endif
++
++#ifndef secure_getenv
++#define secure_getenv getenv
 +#endif
  
  #if !defined(PATH_MAX) && defined(__FreeBSD__)
