@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/10/08 17:13:12 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2020/10/08 21:46:26 khorben Exp $
 
 DISTNAME=	bintrees-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bintrees/}
 EXTRACT_SUFX=	.zip
@@ -14,9 +14,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
