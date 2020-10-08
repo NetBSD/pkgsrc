@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.28 2020/09/06 02:59:16 ryoon Exp $
+# $NetBSD: modules.mk,v 1.29 2020/10/08 00:15:35 gutteridge Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -15,16 +15,16 @@
 #	* You can't install an ELP for both Emacs and XEmacs
 #	  simultaneously.
 #
-#	* XEmacs package's names are prefix'ed by "xemacs-".
+#	* XEmacs packages' names are prefixed by "xemacs-".
 #
 # Note to package developers:
 #
-#	* XEmacs package's names are prefix'ed by "xemacs-".
+#	* XEmacs packages' names are prefixed by "xemacs-".
 #
 #	  This is to make sure ELPs for XEmacs keep their own dependency
-#	  tree (for example, if an ELP "bar" depends on another ELP "foo",
+#	  tree. For example, if an ELP "bar" depends on another ELP "foo",
 #	  "xemacs-bar" depends on "xemacs-foo".  "foo" (installed for GNU
-#	  Emacs) is useless for "xemacs-bar" in this case.).
+#	  Emacs) is useless for "xemacs-bar" in this case.
 #
 #	  Make sure too that "foo" and "xemacs-foo" conflict each other,
 #	  since they can share some files.  (Making all ELPs separately
@@ -32,7 +32,7 @@
 #
 #	* Assume each ELP supports all Emacs versions by default.  If the
 #	  ELP supports only certain Emacs versions, define EMACS_VERSIONS
-#	  _ACCEPTED explicitly before including mk/emacs.mk.
+#	  _ACCEPTED explicitly before including emacs/modules.mk.
 #
 # Variables for users:
 #
@@ -110,7 +110,7 @@
 #		Description:
 #			Path to the directory Info files should be
 #			installed into.  Unlike EMACS_ETCPREFIX or
-#			EMACS_LISPPREFIX, subdirectory is not needed.
+#			EMACS_LISPPREFIX, a subdirectory is not needed.
 #		Possible values:
 #			${PREFIX}/${PKGINFODIR}
 #			${PREFIX}/lib/xemacs/site-packages/info
@@ -264,13 +264,13 @@ _EMACS_CONFLICTS.xemacs=	${PKGBASE:C|^xemacs-||}-[0-9]*
 #
 # Version decision
 #
-# 1. Pick up an emacs version.
+# 1. Pick up an Emacs version.
 #
 #	add a dependency to the version;
 #
-# 2. Check if a given package can be used for the emacs version.
+# 2. Check if a given package can be used for the Emacs version.
 #
-# 	if (package accepts the emacs version)
+# 	if (package accepts the Emacs version)
 #		nothing to do;
 #	else
 #		abort;
@@ -354,7 +354,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 
 .if defined(EMACS_BUILDLINK)
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
-#  development version usually claims three digit, say, 27.0.50 etc
+# A development version usually claims three digits, say, 27.0.50 etc.
 .  if ${EMACS_TYPE} == emacs28
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}/lisp:${_EMACS_DIR}/site-lisp
 .  else
