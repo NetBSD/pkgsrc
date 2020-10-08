@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.332 2020/08/31 18:09:38 wiz Exp $
+# $NetBSD: Makefile,v 1.333 2020/10/08 11:19:15 ryoon Exp $
 
-DISTNAME=	gimp-2.10.20
-PKGREVISION=	2
+DISTNAME=	gimp-2.10.22
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -82,6 +81,7 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.24
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
+.include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libmypaint/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/mypaint-brushes/buildlink3.mk"
@@ -93,6 +93,7 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.24
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../print/poppler-data/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
 PLIST.remote=	yes
