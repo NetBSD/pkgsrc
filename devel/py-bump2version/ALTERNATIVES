@@ -1,0 +1,2 @@
+bin/bumpversion @PREFIX@/bin/bumpversion-@PYVERSSUFFIX@
+bin/bump2version @PREFIX@/bin/bump2version-@PYVERSSUFFIX@
