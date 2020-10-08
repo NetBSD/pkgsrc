@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5690 2020/10/08 11:19:39 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5691 2020/10/08 12:38:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8458,3 +8458,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/babl to 0.1.82 [ryoon 2020-10-08]
 	Updated graphics/gegl to 0.4.26 [ryoon 2020-10-08]
 	Updated graphics/gimp to 2.10.22 [ryoon 2020-10-08]
+	Updated devel/apache-ant to 1.10.9 [wiz 2020-10-08]
