@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1353 2020/10/08 02:56:29 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1354 2020/10/08 17:39:31 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -903,6 +903,7 @@ SUBDIR+=	tigervnc
 SUBDIR+=	tightvnc
 SUBDIR+=	tightvncviewer
 SUBDIR+=	tinc
+SUBDIR+=	tinydyndns
 SUBDIR+=	tinyfugue
 SUBDIR+=	tkined
 SUBDIR+=	tn5250
