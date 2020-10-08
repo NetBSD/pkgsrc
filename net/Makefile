@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1352 2020/10/06 10:27:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.1353 2020/10/08 02:56:29 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -364,8 +364,8 @@ SUBDIR+=	miniupnpd
 SUBDIR+=	miredo
 SUBDIR+=	mirror
 SUBDIR+=	miruo
-SUBDIR+=	mkvserver_mk2
 SUBDIR+=	mitmproxy
+SUBDIR+=	mkvserver_mk2
 SUBDIR+=	mldonkey
 SUBDIR+=	mldonkey-gui
 SUBDIR+=	modpcap
