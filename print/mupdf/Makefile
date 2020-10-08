@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2020/05/22 10:55:50 adam Exp $
+# $NetBSD: Makefile,v 1.85 2020/10/08 22:50:16 leot Exp $
 
-DISTNAME=	mupdf-1.17.0-source
+DISTNAME=	mupdf-1.18.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://mupdf.com/
 COMMENT=	Lightweight PDF, XPS and E-book viewer and toolkit
 LICENSE=	gnu-agpl-v3
 
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
@@ -22,7 +21,6 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		XCFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		build=release
-MAKE_ENV+=		HAVE_LIBCRYPTO=no	# Needs openssl-1.1.0
 MAKE_ENV+=		USE_SYSTEM_LIBS=yes
 
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
@@ -37,6 +35,7 @@ post-extract:
 	    ${WRKSRC}/thirdparty/curl \
 	    ${WRKSRC}/thirdparty/freeglut \
 	    ${WRKSRC}/thirdparty/freetype \
+	    ${WRKSRC}/thirdparty/gumbo-parser \
 	    ${WRKSRC}/thirdparty/harfbuzz \
 	    ${WRKSRC}/thirdparty/jbig2dec \
 	    ${WRKSRC}/thirdparty/lcms2 \
@@ -64,4 +63,5 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.7
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../www/gumbo-parser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
