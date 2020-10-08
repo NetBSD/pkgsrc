@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/10/08 19:09:05 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/08 22:44:41 khorben Exp $
 
 DISTNAME=	pyrlp-1.2.0
-PKGNAME=	${PYPKGPREFIX}-rlp-1.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ethereum/}
@@ -17,23 +17,26 @@ EGG_NAME=	rlp-1.2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-bump2version-[0-9]*:../../devel/py-bump2version
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-#BUILD_DEPENDS+=	# TODO: pytest-xdist>=0
-#BUILD_DEPENDS+=	# TODO: pytest-watch>=4.1.0,<5
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 BUILD_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython5
 BUILD_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
-#BUILD_DEPENDS+=	# TODO: pytest==3.3.2>=0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-watch>=4.1.0:../../devel/py-test-watch
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 DEPENDS+=	${PYPKGPREFIX}-eth-utils-[0-9]*:../../finance/py-eth-utils
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-bump2version py-twine
 
-# TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
+do-test:
+	cd ${WRKSRC} && tox-${PYVERSSUFFIX}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
