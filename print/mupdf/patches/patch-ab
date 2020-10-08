@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.22 2020/05/07 20:42:56 leot Exp $
+$NetBSD: patch-ab,v 1.23 2020/10/08 22:50:16 leot Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -14,9 +14,9 @@ $NetBSD: patch-ab,v 1.22 2020/05/07 20:42:56 leot Exp $
   If no lcms2 is available just pass `-DFZ_ENABLE_ICC=0' to disable it via
   CFLAGS.
 
---- Makerules.orig	2020-05-05 11:29:09.000000000 +0000
+--- Makerules.orig	2020-10-07 10:35:03.000000000 +0000
 +++ Makerules
-@@ -6,17 +6,6 @@ OS := $(OS:MSYS%=MINGW)
+@@ -6,19 +6,6 @@ OS := $(OS:MSYS%=MINGW)
  OS := $(OS:Windows_NT=MINGW)
  OS := $(OS:Darwin=MACOS)
  
@@ -27,14 +27,16 @@ $NetBSD: patch-ab,v 1.22 2020/05/07 20:42:56 leot Exp $
 -
 -ifeq ($(OS),MACOS)
 -  LDREMOVEUNREACH := -Wl,-dead_strip
+-  SO := dylib
 -else
 -  LDREMOVEUNREACH := -Wl,--gc-sections
+-  SO := so
 -endif
 -
  CFLAGS += -Wsign-compare
  
  SANITIZE_FLAGS += -fsanitize=address
-@@ -78,77 +67,63 @@ ifneq "$(CLUSTER)" ""
+@@ -102,93 +89,79 @@ ifneq "$(CLUSTER)" ""
    CFLAGS += -DCLUSTER
  endif
  
@@ -50,15 +52,21 @@ $NetBSD: patch-ab,v 1.22 2020/05/07 20:42:56 leot Exp $
 -  AR = xcrun ar
 -  LD = xcrun ld
 -  RANLIB = xcrun ranlib
-+HAVE_OBJCOPY := no
- 
+-
 -else ifeq ($(OS),Linux)
 -  HAVE_OBJCOPY := yes
--
++HAVE_OBJCOPY := no
+ 
 -  ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
 +ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
  	SYS_FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2)
  	SYS_FREETYPE_LIBS := $(shell pkg-config --libs freetype2)
+-  endif
+-  ifeq ($(shell pkg-config --exists gumbo && echo yes),yes)
++endif
++ifeq ($(shell pkg-config --exists gumbo && echo yes),yes)
+ 	SYS_GUMBO_CFLAGS := $(shell pkg-config --cflags gumbo)
+ 	SYS_GUMBO_LIBS := $(shell pkg-config --libs gumbo)
 -  endif
 -  ifeq ($(shell pkg-config --exists harfbuzz && echo yes),yes)
 +endif
@@ -94,6 +102,24 @@ $NetBSD: patch-ab,v 1.22 2020/05/07 20:42:56 leot Exp $
 -  endif
 +endif
  
+-  HAVE_LEPTONICA := $(shell pkg-config --exists 'lept >= 1.7.4' && echo yes)
+-  ifeq ($(HAVE_LEPTONICA),yes)
++HAVE_LEPTONICA := $(shell pkg-config --exists 'lept >= 1.7.4' && echo yes)
++ifeq ($(HAVE_LEPTONICA),yes)
+ 	SYS_LEPTONICA_CFLAGS := $(shell pkg-config --cflags lept)
+ 	SYS_LEPTONICA_LIBS := $(shell pkg-config --libs lept)
+-  endif
++endif
+ 
+-  HAVE_TESSERACT := $(shell pkg-config --exists 'tesseract-ocr >= 4.0.0' && echo yes)
+-  ifeq ($(HAVE_TESSERACT),yes)
++HAVE_TESSERACT := $(shell pkg-config --exists 'tesseract-ocr >= 4.0.0' && echo yes)
++ifeq ($(HAVE_TESSERACT),yes)
+ 	SYS_TESSERACT_CFLAGS := $(shell pkg-config --cflags tesseract)
+ 	SYS_TESSERACT_LIBS := $(shell pkg-config --libs tesseract)
+-  endif
++endif
+ 
 -  HAVE_SYS_CURL := $(shell pkg-config --exists libcurl && echo yes)
 -  ifeq ($(HAVE_SYS_CURL),yes)
 +HAVE_SYS_CURL := $(shell pkg-config --exists libcurl && echo yes)
@@ -105,13 +131,11 @@ $NetBSD: patch-ab,v 1.22 2020/05/07 20:42:56 leot Exp $
  
 -  HAVE_GLUT := yes
 -  ifeq ($(HAVE_GLUT),yes)
--	SYS_GLUT_CFLAGS :=
--	SYS_GLUT_LIBS := -lglut -lGL
--  endif
-+HAVE_GLUT ?= $(shell pkg-config --exists glut && echo yes)
++HAVE_GLUT := yes
 +ifeq ($(HAVE_GLUT),yes)
-+	SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut)
-+	SYS_GLUT_LIBS := $(shell pkg-config --libs glut)
+ 	SYS_GLUT_CFLAGS :=
+ 	SYS_GLUT_LIBS := -lglut -lGL
+-  endif
 +endif
  
 -  HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
