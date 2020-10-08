@@ -150,6 +150,7 @@ dnssd			Enable DNS Service Discovery Protocol support.
 dnssec			Enable DNSSEC validation.
 dnstap			Enable DNSTAP packet logging support.
 doc			Include the documentation.
+doh			Enable DNS-over-HTTPS support.
 doxygen			Include doxygen based document.
 drac			Enable DRAC support.
 dri			Enable Direct Rendering support.
@@ -758,6 +759,7 @@ snort-prelude		Enable support for the Prelude Hybrid IDS system.
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 softhsm			Enable SoftHSM for key management.
+softhsm2		Enable SoftHSM version 2 for key management.
 spacetime		Enable memory profiling with Spacetime
 spamassassin		Enable SpamAssassin support.
 spamassassin-perl-warnings	Enable Perl warnings at run-time.
