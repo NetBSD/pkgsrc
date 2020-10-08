@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/10/08 17:38:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/08 20:20:26 schmonz Exp $
 
 DISTNAME=		tinydyndns-0.4.2
 DJBDNS_DISTNAME=	djbdns-1.05
@@ -17,22 +17,29 @@ DEPENDS+=		cvm-[0-9]*:../../security/cvm
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
 WRKSRC=			${WRKDIR}/${DJBDNS_DISTNAME}
-MAKE_FILE=		Makefile.tinydyndns
-BUILD_TARGET=		tinydyndns
+
+USE_TOOLS+=		gmake
+MAKE_FILE=		Makefile.${PKGBASE}
+BUILD_TARGET=		${PKGBASE}
+INSTALL_TARGET=		install-${PKGBASE}
 
 DJB_RESTRICTED=		no
 
 SUBST_CLASSES+=		djberrno
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	${MAKE_FILE}
+SUBST_SED.paths=	-e 's|/usr/local/bin/|${DESTDIR}${PREFIX}/bin/|g'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 post-extract:
 	cd ${WRKDIR} && mv ${PKGNAME_NOREV}/* ${DJBDNS_DISTNAME}
 
-do-install:
+post-install:
 	cd ${WRKSRC} && for i in conf data update; do			\
-	  ${INSTALL_PROGRAM} tinydyndns-$$i ${DESTDIR}${PREFIX}/bin;	\
-	  ${INSTALL_MAN} tinydyndns-$$i.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8; \
+	  ${INSTALL_MAN} ${PKGBASE}-$$i.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8; \
 	done
 
 .include "../../mk/djbware.mk"
