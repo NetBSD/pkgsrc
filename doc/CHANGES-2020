@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5685 2020/10/08 10:43:10 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5686 2020/10/08 10:43:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8452,3 +8452,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test-timeout to 1.4.2 [adam 2020-10-08]
 	Updated security/amass to 3.10.5 [leot 2020-10-08]
 	Added emulators/suse131_openal version 13.1 [nia 2020-10-08]
+	Added emulators/suse131_32_openal version 13.1 [nia 2020-10-08]
