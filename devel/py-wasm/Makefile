@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/09/29 20:02:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2020/10/08 22:06:38 khorben Exp $
 
 DISTNAME=	wasm-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,9 +18,8 @@ PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/wasmdump \
-		${DESTDIR}${PREFIX}/bin/wasmdump-${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/wasmdump-${PYVERSSUFFIX} || ${TRUE}
 
-# TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
