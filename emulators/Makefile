@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.334 2020/10/03 08:40:56 nia Exp $
+# $NetBSD: Makefile,v 1.335 2020/10/08 10:42:48 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -323,6 +323,7 @@ SUBDIR+=	suse131_32_lsb
 SUBDIR+=	suse131_32_motif
 SUBDIR+=	suse131_32_mozilla-nspr
 SUBDIR+=	suse131_32_mozilla-nss
+SUBDIR+=	suse131_32_openal
 SUBDIR+=	suse131_32_openldap
 SUBDIR+=	suse131_32_openssl
 SUBDIR+=	suse131_32_pulseaudio
@@ -372,6 +373,7 @@ SUBDIR+=	suse131_lsb
 SUBDIR+=	suse131_motif
 SUBDIR+=	suse131_mozilla-nspr
 SUBDIR+=	suse131_mozilla-nss
+SUBDIR+=	suse131_openal
 SUBDIR+=	suse131_openldap
 SUBDIR+=	suse131_openssl
 SUBDIR+=	suse131_pulseaudio
