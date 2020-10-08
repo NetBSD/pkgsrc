@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5681 2020/10/08 03:31:41 mcf Exp $
+$NetBSD: CHANGES-2020,v 1.5682 2020/10/08 07:31:27 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8447,3 +8447,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/oniguruma to 6.9.6rc1 [kim 2020-10-07]
 	Updated security/mit-krb5 to 1.18.2 [gdt 2020-10-07]
 	Updated devel/valgrind to 3.16.1 [mcf 2020-10-08]
+	Updated net/unbound to 1.12.0 [he 2020-10-08]
