@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2018/04/11 06:59:07 maya Exp $
+# $NetBSD: Makefile.common,v 1.22 2020/10/08 10:42:49 nia Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -40,6 +40,7 @@
 # used by emulators/suse131_motif/Makefile
 # used by emulators/suse131_mozilla-nspr/Makefile
 # used by emulators/suse131_mozilla-nss/Makefile
+# used by emulators/suse131_openal/Makefile
 # used by emulators/suse131_openldap/Makefile
 # used by emulators/suse131_openssl/Makefile
 # used by emulators/suse131_pulseaudio/Makefile
