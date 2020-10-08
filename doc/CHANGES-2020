@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5694 2020/10/08 16:55:14 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5695 2020/10/08 17:39:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8462,3 +8462,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/cascadia-ttf to 2009.22 [wiz 2020-10-08]
 	Updated audio/fasttracker2 to 1.36 [fox 2020-10-08]
 	Updated textproc/expat to 2.2.10nb1 [wiz 2020-10-08]
+	Added net/tinydyndns version 0.4.2 [schmonz 2020-10-08]
