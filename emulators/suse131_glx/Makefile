@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/06/17 17:21:38 tsutsui Exp $
+# $NetBSD: Makefile,v 1.12 2020/10/08 10:33:22 nia Exp $
 
 PKGNAME=	suse_glx-${SUSE_VERSION}
 PKGREVISION=	5
@@ -17,7 +17,7 @@ RPMPKGS+=	libwayland-server0-1.2.1-1.1.${SUSE_ARCH}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for OpenGL/Mesa
 
-EMUL_MODULES.linux=	x11 drm
+EMUL_MODULES.linux=	expat x11 drm
 
 .include "../../emulators/suse131_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
