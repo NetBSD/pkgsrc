@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
+$NetBSD: patch-ac,v 1.26 2020/10/08 22:50:16 leot Exp $
 
 - libtool support 
 - Install target cleanup
@@ -8,14 +8,14 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
   be invoked during the building phase)
 - Install mupdf with curl support as `mupdf-curl'
 
---- Makefile.orig	2020-05-05 11:29:09.000000000 +0000
+--- Makefile.orig	2020-10-07 10:35:03.000000000 +0000
 +++ Makefile
-@@ -51,68 +51,68 @@ ifneq ($(verbose),yes)
+@@ -55,20 +55,20 @@ ifneq ($(verbose),yes)
  endif
  
  MKTGTDIR = mkdir -p $(dir $@)
 -CC_CMD = $(QUIET_CC) $(MKTGTDIR) ; $(CC) $(CFLAGS) -MMD -MP -o $@ -c $<
--CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; $(CXX) $(CFLAGS) -MMD -MP -o $@ -c $<
+-CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; $(CXX) $(CFLAGS) $(XCXXFLAGS) -MMD -MP -o $@ -c $<
 -AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; $(AR) cr $@ $^
 +CC_CMD = $(QUIET_CC) $(MKTGTDIR) ; $(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -MMD -MP -o $@ -c $<
 +CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; $(LIBTOOL) --mode=compile $(CXX) $(CFLAGS) -MMD -MP -o $@ -c $<
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
 +LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
  TAGS_CMD = $(QUIET_TAGS) ctags -R --c-kinds=+p
  WINDRES_CMD = $(QUIET_WINDRES) $(MKTGTDIR) ; $(WINDRES) $< $@
- OBJCOPY_CMD = $(QUIET_OBJCOPY) $(MKTGTDIR) ; $(LD) -r -b binary -o $@ $<
+ OBJCOPY_CMD = $(QUIET_OBJCOPY) $(MKTGTDIR) ; $(LD) -r -b binary -z noexecstack -o $@ $<
  
  # --- Rules ---
  
@@ -36,16 +36,17 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  	$(AR_CMD)
  	$(RANLIB_CMD)
  
- $(OUT)/%.exe: %.c
- 	$(LINK_CMD)
+@@ -78,52 +78,52 @@ $(OUT)/%.exe: %.c
+ $(OUT)/%.$(SO):
+ 	$(LINK_CMD) $(LIB_LDFLAGS) $(THIRD_LIBS) $(LIBCRYPTO_LIBS)
  
 -$(OUT)/source/helpers/mu-threads/%.o : source/helpers/mu-threads/%.c
 +$(OUT)/source/helpers/mu-threads/%.lo : source/helpers/mu-threads/%.c
- 	$(CC_CMD) $(THREADING_CFLAGS)
+ 	$(CC_CMD) $(LIB_CFLAGS) $(THREADING_CFLAGS)
  
 -$(OUT)/source/helpers/pkcs7/%.o : source/helpers/pkcs7/%.c
 +$(OUT)/source/helpers/pkcs7/%.lo : source/helpers/pkcs7/%.c
- 	$(CC_CMD) $(LIBCRYPTO_CFLAGS)
+ 	$(CC_CMD) $(LIB_CFLAGS) $(LIBCRYPTO_CFLAGS)
  
 -$(OUT)/source/tools/%.o : source/tools/%.c
 +$(OUT)/source/tools/%.lo : source/tools/%.c
@@ -53,7 +54,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  
 -$(OUT)/generated/%.o : generated/%.c
 +$(OUT)/generated/%.lo : generated/%.c
- 	$(CC_CMD) -O0
+ 	$(CC_CMD) $(LIB_CFLAGS) -O0
  
 -$(OUT)/platform/x11/%.o : platform/x11/%.c
 +$(OUT)/platform/x11/%.lo : platform/x11/%.c
@@ -70,12 +71,16 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  ifeq ($(HAVE_OBJCOPY),yes)
 -  $(OUT)/source/fitz/noto.o : source/fitz/noto.c
 +  $(OUT)/source/fitz/noto.lo : source/fitz/noto.c
- 	$(CC_CMD) -Wall -Wdeclaration-after-statement -DHAVE_OBJCOPY $(THIRD_CFLAGS)
+ 	$(CC_CMD) -Wall -Wdeclaration-after-statement -DHAVE_OBJCOPY $(LIB_CFLAGS) $(THIRD_CFLAGS)
  endif
  
 -$(OUT)/source/%.o : source/%.c
 +$(OUT)/source/%.lo : source/%.c
- 	$(CC_CMD) -Wall -Wdeclaration-after-statement $(THIRD_CFLAGS)
+ 	$(CC_CMD) -Wall -Wdeclaration-after-statement $(LIB_CFLAGS) $(THIRD_CFLAGS)
+ 
+-$(OUT)/source/%.o : source/%.cpp
++$(OUT)/source/%.lo : source/%.cpp
+ 	$(CXX_CMD) -Wall $(LIB_CFLAGS) $(THIRD_CFLAGS)
  
 -$(OUT)/platform/%.o : platform/%.c
 +$(OUT)/platform/%.lo : platform/%.c
@@ -93,17 +98,21 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  
 -THIRD_OBJ := $(THIRD_SRC:%.c=$(OUT)/%.o)
 -THIRD_OBJ := $(THIRD_OBJ:%.cc=$(OUT)/%.o)
+-THIRD_OBJ := $(THIRD_OBJ:%.cpp=$(OUT)/%.o)
 +THIRD_OBJ := $(THIRD_SRC:%.c=$(OUT)/%.lo)
 +THIRD_OBJ := $(THIRD_OBJ:%.cc=$(OUT)/%.lo)
++THIRD_OBJ := $(THIRD_OBJ:%.cpp=$(OUT)/%.lo)
  
  MUPDF_SRC := $(sort $(wildcard source/fitz/*.c))
- MUPDF_SRC += $(sort $(wildcard source/pdf/*.c))
-@@ -121,14 +121,14 @@ MUPDF_SRC += $(sort $(wildcard source/sv
+ MUPDF_SRC += $(sort $(wildcard source/fitz/*.cpp))
+@@ -133,15 +133,15 @@ MUPDF_SRC += $(sort $(wildcard source/sv
  MUPDF_SRC += $(sort $(wildcard source/html/*.c))
  MUPDF_SRC += $(sort $(wildcard source/cbz/*.c))
  
 -MUPDF_OBJ := $(MUPDF_SRC:%.c=$(OUT)/%.o)
+-MUPDF_OBJ := $(MUPDF_OBJ:%.cpp=$(OUT)/%.o)
 +MUPDF_OBJ := $(MUPDF_SRC:%.c=$(OUT)/%.lo)
++MUPDF_OBJ := $(MUPDF_OBJ:%.cpp=$(OUT)/%.lo)
  
  THREAD_SRC := source/helpers/mu-threads/mu-threads.c
 -THREAD_OBJ := $(THREAD_SRC:%.c=$(OUT)/%.o)
@@ -116,7 +125,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  
  # --- Generated embedded font files ---
  
-@@ -149,13 +149,13 @@ generated/%.ttf.c : %.ttf $(HEXDUMP_EXE)
+@@ -162,13 +162,13 @@ generated/%.ttf.c : %.ttf $(HEXDUMP_EXE)
  generated/%.ttc.c : %.ttc $(HEXDUMP_EXE) ; $(QUIET_GEN) $(MKTGTDIR) ; $(HEXDUMP_EXE) -s $@ $<
  
  ifeq ($(HAVE_OBJCOPY),yes)
@@ -136,10 +145,10 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  endif
  
  generate: $(FONT_GEN)
-@@ -189,17 +189,17 @@ generate: source/pdf/js/util.js.h
+@@ -214,10 +214,10 @@ MUPDF_LIB = $(OUT)/libmupdf.$(SO)
  
- # --- Library ---
- 
+ $(MUPDF_LIB) : $(MUPDF_OBJ) $(THIRD_OBJ) $(THREAD_OBJ) $(PKCS7_OBJ)
+ else
 -MUPDF_LIB = $(OUT)/libmupdf.a
 -THIRD_LIB = $(OUT)/libmupdf-third.a
 -THREAD_LIB = $(OUT)/libmupdf-threads.a
@@ -151,6 +160,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  
  $(MUPDF_LIB) : $(MUPDF_OBJ)
  $(THIRD_LIB) : $(THIRD_OBJ)
+@@ -230,7 +230,7 @@ $(THIRD_LIB) : $(THIRD_OBJ)
  $(THREAD_LIB) : $(THREAD_OBJ)
  $(PKCS7_LIB) : $(PKCS7_OBJ)
  
@@ -159,7 +169,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  
  # --- Main tools and viewers ---
  
-@@ -210,13 +210,13 @@ MUTOOL_SRC += source/tools/murun.c
+@@ -241,13 +241,13 @@ MUTOOL_SRC += source/tools/murun.c
  MUTOOL_SRC += source/tools/mutrace.c
  MUTOOL_SRC += source/tools/cmapdump.c
  MUTOOL_SRC += $(sort $(wildcard source/tools/pdf*.c))
@@ -175,7 +185,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  MURASTER_EXE := $(OUT)/muraster
  $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(THREAD_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS) $(LIBCRYPTO_LIBS)
-@@ -224,7 +224,7 @@ TOOL_APPS += $(MURASTER_EXE)
+@@ -255,7 +255,7 @@ TOOL_APPS += $(MURASTER_EXE)
  
  ifeq ($(HAVE_GLUT),yes)
    MUVIEW_GLUT_SRC += $(sort $(wildcard platform/gl/*.c))
@@ -184,7 +194,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
    MUVIEW_GLUT_EXE := $(OUT)/mupdf-gl
    $(MUVIEW_GLUT_EXE) : $(MUVIEW_GLUT_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(GLUT_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(LIBCRYPTO_LIBS) $(WIN32_LDFLAGS) $(GLUT_LIBS)
-@@ -232,10 +232,10 @@ ifeq ($(HAVE_GLUT),yes)
+@@ -263,10 +263,10 @@ ifeq ($(HAVE_GLUT),yes)
  endif
  
  ifeq ($(HAVE_X11),yes)
@@ -199,7 +209,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
    $(MUVIEW_X11_EXE) : $(MUVIEW_X11_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS)
    VIEW_APPS += $(MUVIEW_X11_EXE)
-@@ -243,9 +243,9 @@ endif
+@@ -274,9 +274,9 @@ endif
  
  ifeq ($(HAVE_WIN32),yes)
    MUVIEW_WIN32_EXE := $(OUT)/mupdf-w32
@@ -212,7 +222,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
    $(MUVIEW_WIN32_EXE) : $(MUVIEW_WIN32_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(WIN32_LDFLAGS) $(WIN32_LIBS) $(LIBCRYPTO_LIBS)
    VIEW_APPS += $(MUVIEW_WIN32_EXE)
-@@ -254,12 +254,12 @@ endif
+@@ -285,12 +285,12 @@ endif
  ifeq ($(HAVE_X11),yes)
  ifeq ($(HAVE_CURL),yes)
  ifeq ($(HAVE_PTHREAD),yes)
@@ -231,7 +241,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
    $(MUVIEW_X11_CURL_EXE) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(CURL_LIB)
  	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS) $(CURL_LIBS) $(PTHREAD_LIBS)
    VIEW_APPS += $(MUVIEW_X11_CURL_EXE)
-@@ -269,19 +269,19 @@ endif
+@@ -300,19 +300,19 @@ endif
  
  # --- Generated dependencies ---
  
@@ -263,7 +273,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  
  # --- Examples ---
  
-@@ -294,10 +294,10 @@ $(OUT)/multi-threaded: docs/examples/mul
+@@ -325,10 +325,10 @@ $(OUT)/multi-threaded: docs/examples/mul
  
  # --- Update version string header ---
  
@@ -278,7 +288,7 @@ $NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
  
  # --- Format man pages ---
  
-@@ -325,27 +325,30 @@ tools: $(TOOL_APPS)
+@@ -356,27 +356,30 @@ tools: $(TOOL_APPS)
  apps: $(TOOL_APPS) $(VIEW_APPS)
  
  install: libs apps
