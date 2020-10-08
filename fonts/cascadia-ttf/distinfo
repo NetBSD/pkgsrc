@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/09/09 07:25:17 wiz Exp $
+$NetBSD: distinfo,v 1.4 2020/10/08 12:41:10 wiz Exp $
 
-SHA1 (CascadiaCode-2008.25.zip) = 7c5f3d8ff5c917548ea2536ddae0894175398edd
-RMD160 (CascadiaCode-2008.25.zip) = 542bfb334b32461639fe0ab1fee1a3e1d64d9162
-SHA512 (CascadiaCode-2008.25.zip) = 7452791e69ef6af65acb1aae541600a3060c25ad879d0f819d0adb9ee031a820a2cacff8f40f93595b7b36c48073d48e0769035452b1d1b02f78946319fbbf5a
-Size (CascadiaCode-2008.25.zip) = 8745667 bytes
+SHA1 (CascadiaCode-2009.22.zip) = 8423ef7978f0a04fb446dd0bb68ab59214d6e9ac
+RMD160 (CascadiaCode-2009.22.zip) = b814d5c76c53ad684dbe69b96a0c07e819bee53e
+SHA512 (CascadiaCode-2009.22.zip) = 3ddc0b243b10fa36ffb89d7f63cce50b39bdc6b263ab124c9c34840eb7e775fc84366dffc1785b3b5cd48b1fda045f5f90d8e0301ffac754a0b7b9d8063b3d04
+Size (CascadiaCode-2009.22.zip) = 8217333 bytes
