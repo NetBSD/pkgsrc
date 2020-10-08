@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2020/10/07 22:40:56 gdt Exp $
+# $NetBSD: Makefile,v 1.110 2020/10/08 19:52:36 gdt Exp $
 
 BRANCHNAME=	1.18
 DISTNAME=	krb5-${BRANCHNAME}.2
@@ -11,6 +11,14 @@ MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	https://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system
 
+# There is a file NOTICE in the sources, which is enormous.  Most
+# licenses appear to be some flavor of X11, 3-clause BSD, 4-clause
+# BSD.
+# 20201007: gdt emailed upstream asking for clarification on the AES
+# license, which is not entirely clearly Free, by the text.
+#LICENSE=
+
+# \todo Debug and/or report upstream.
 MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
