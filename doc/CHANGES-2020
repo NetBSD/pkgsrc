@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5697 2020/10/08 21:43:44 mcf Exp $
+$NetBSD: CHANGES-2020,v 1.5698 2020/10/08 22:37:13 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8465,3 +8465,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/tinydyndns version 0.4.2 [schmonz 2020-10-08]
 	Added devel/py-bump2version version 1.0.1 [khorben 2020-10-08]
 	Updated sysutils/p5-Linux-Inotify2 to 2.2 [mcf 2020-10-08]
+	Added www/gumbo-parser version 0.10.1 [leot 2020-10-08]
