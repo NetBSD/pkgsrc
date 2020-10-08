@@ -1,0 +1,3 @@
+tinydyndns provides a simple and powerful dynamic DNS solution. Delegate
+a subdomain to tinydyndns. Then, to update the DNS record
+floyd.dyn.smarden.org, check the POP mailbox floyd@dyn.smarden.org.
