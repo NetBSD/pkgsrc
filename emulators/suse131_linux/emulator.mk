@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.10 2019/03/17 01:10:58 tsutsui Exp $
+# $NetBSD: emulator.mk,v 1.11 2020/10/08 10:42:49 nia Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -57,6 +57,7 @@ DEPENDS_suse-13.1.lsb?=		suse_lsb${_SUSE_VERSION_REQD}:../../emulators/suse131_l
 DEPENDS_suse-13.1.motif?=	suse_motif${_SUSE_VERSION_REQD}:../../emulators/suse131_motif
 DEPENDS_suse-13.1.nss?=		suse_mozilla-nss${_SUSE_VERSION_REQD}:../../emulators/suse131_mozilla-nss
 DEPENDS_suse-13.1.nspr?=	suse_mozilla-nspr${_SUSE_VERSION_REQD}:../../emulators/suse131_mozilla-nspr
+DEPENDS_suse-13.1.openal?=	suse_openal${_SUSE_VERSION_REQD}:../../emulators/suse131_openal
 DEPENDS_suse-13.1.openldap?=	suse_openldap${_SUSE_VERSION_REQD}:../../emulators/suse131_openldap
 DEPENDS_suse-13.1.openssl?=	suse_openssl${_SUSE_VERSION_REQD}:../../emulators/suse131_openssl
 DEPENDS_suse-13.1.png?=		suse_libpng${_SUSE_VERSION_REQD}:../../emulators/suse131_libpng

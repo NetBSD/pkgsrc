@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.32 2019/03/17 01:13:21 tsutsui Exp $
+# $NetBSD: linux.mk,v 1.33 2020/10/08 10:42:49 nia Exp $
 #
 # Linux binary emulation framework
 #
@@ -98,6 +98,7 @@ _EMUL_MODULES+=		lsb
 _EMUL_MODULES+=		motif
 _EMUL_MODULES+=		nspr
 _EMUL_MODULES+=		nss
+_EMUL_MODULES+=		openal
 _EMUL_MODULES+=		openldap
 _EMUL_MODULES+=		openssl
 _EMUL_MODULES+=		png
