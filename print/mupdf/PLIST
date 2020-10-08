@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/05/07 20:42:56 leot Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/10/08 22:50:16 leot Exp $
 bin/mupdf
 ${PLIST.curl}bin/mupdf-curl
 ${PLIST.opengl}bin/mupdf-gl
@@ -87,6 +87,8 @@ share/doc/mupdf/building.html
 share/doc/mupdf/coding-overview.html
 share/doc/mupdf/coding-progressive.html
 share/doc/mupdf/coding-style.html
+share/doc/mupdf/ecosystem.html
+share/doc/mupdf/ecosystem.png
 share/doc/mupdf/examples/bbox-device.js
 share/doc/mupdf/examples/create-thumbnail.js
 share/doc/mupdf/examples/draw-device.js
@@ -98,8 +100,10 @@ share/doc/mupdf/examples/multi-threaded.c
 share/doc/mupdf/examples/pdf-create-lowlevel.js
 share/doc/mupdf/examples/pdf-create.js
 share/doc/mupdf/examples/pdf-dejpx.js
+share/doc/mupdf/examples/pdf-extract-rich-media.js
 share/doc/mupdf/examples/pdf-merge.js
 share/doc/mupdf/examples/pdf-portfolio.js
+share/doc/mupdf/examples/pdf-trace.js
 share/doc/mupdf/examples/trace-device.js
 share/doc/mupdf/index.html
 share/doc/mupdf/manual-mupdf-gl.html
