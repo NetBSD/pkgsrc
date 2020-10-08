@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2020/05/22 10:55:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2020/10/08 22:50:16 leot Exp $
 
 BUILDLINK_TREE+=	mupdf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mupdf
 MUPDF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mupdf+=	mupdf>=1.14.0
-BUILDLINK_ABI_DEPENDS.mupdf?=	mupdf>=1.17.0nb1
+BUILDLINK_ABI_DEPENDS.mupdf?=	mupdf>=1.18.0
 BUILDLINK_PKGSRCDIR.mupdf?=	../../print/mupdf
 
 pkgbase := mupdf
@@ -27,6 +27,7 @@ pkgbase := mupdf
 .include "../../graphics/jbig2dec/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../www/gumbo-parser/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif	# MUPDF_BUILDLINK3_MK

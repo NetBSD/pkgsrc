@@ -1,25 +1,25 @@
-$NetBSD: patch-Makethird,v 1.11 2019/08/03 14:47:41 leot Exp $
+$NetBSD: patch-Makethird,v 1.12 2020/10/08 22:50:16 leot Exp $
 
 - Do not pass thirdparty lcms2 CFLAGS (mupdf is always built without lcms2)
 - mujs building support with libtool
 
---- Makethird.orig	2019-07-23 12:23:08.000000000 +0000
+--- Makethird.orig	2020-10-07 10:35:03.000000000 +0000
 +++ Makethird
-@@ -216,8 +216,6 @@ else
+@@ -284,8 +284,6 @@ else
  
  THIRD_SRC += $(sort $(wildcard thirdparty/lcms2/src/cms*.c))
  
 -THIRD_CFLAGS += -Ithirdparty/lcms2/include -DHAVE_LCMS2MT
 -
  $(OUT)/thirdparty/lcms2/%.o: thirdparty/lcms2/%.c
- 	$(CC_CMD) -Ithirdparty/lcms2/include
+ 	$(CC_CMD) $(LIB_CFLAGS) -Ithirdparty/lcms2/include
  
-@@ -233,7 +231,7 @@ else
+@@ -301,7 +299,7 @@ else
  THIRD_SRC += thirdparty/mujs/one.c
  THIRD_CFLAGS += -Ithirdparty/mujs
  
 -$(OUT)/thirdparty/mujs/%.o: thirdparty/mujs/%.c
 +$(OUT)/thirdparty/mujs/%.lo: thirdparty/mujs/%.c
- 	$(CC_CMD)
+ 	$(CC_CMD) $(LIB_CFLAGS)
  
  endif
