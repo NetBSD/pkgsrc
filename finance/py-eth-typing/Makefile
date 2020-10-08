@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/09/29 19:36:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/08 19:09:05 khorben Exp $
 
 DISTNAME=	eth-typing-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ethereum/}
 GITHUB_PROJECT=	eth-typing
@@ -13,7 +14,7 @@ HOMEPAGE=	https://github.com/ethereum/eth-typing
 COMMENT=	Common type annotations for ethereum python packages
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-bumpversion-[0-9]*:../../devel/py-bumpversion
+BUILD_DEPENDS+=	${PYPKGPREFIX}-bump2version-[0-9]*:../../devel/py-bump2version
 #BUILD_DEPENDS+=	# TODO: pytest-watch>=4.1.0,<5
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 BUILD_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
@@ -30,7 +31,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-mypy py-twine
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-bump2version py-mypy py-twine
 
 # TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
 .include "../../lang/python/egg.mk"
