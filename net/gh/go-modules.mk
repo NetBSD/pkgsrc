@@ -1,3 +1,5 @@
+# $NetBSD: go-modules.mk,v 1.3 2020/10/08 20:12:24 leot Exp $
+
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.zip
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.1.1.mod
