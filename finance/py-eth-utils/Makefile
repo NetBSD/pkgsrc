@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/09/29 19:37:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/08 19:09:05 khorben Exp $
 
 DISTNAME=	eth-utils-1.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ethereum/}
 GITHUB_PROJECT=	eth-utils
@@ -24,7 +25,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 #BUILD_DEPENDS+=	# TODO: pytest>=3.4.1,<4.0.0
 #BUILD_DEPENDS+=	# TODO: pytest-pythonpath>=0.3,<1.0
-BUILD_DEPENDS+=	${PYPKGPREFIX}-bumpversion-[0-9]*:../../devel/py-bumpversion
+BUILD_DEPENDS+=	${PYPKGPREFIX}-bump2version-[0-9]*:../../devel/py-bump2version
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-eth-hash-[0-9]*:../../finance/py-eth-hash
@@ -34,7 +35,7 @@ DEPENDS+=	${PYPKGPREFIX}-cytoolz-[0-9]*:../../devel/py-cytoolz
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-eth-typing
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-bump2version py-eth-typing
 
 # TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
 .include "../../lang/python/egg.mk"
