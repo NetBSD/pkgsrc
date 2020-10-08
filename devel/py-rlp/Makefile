@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/10/06 10:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/10/08 19:09:05 khorben Exp $
 
 DISTNAME=	pyrlp-1.2.0
 PKGNAME=	${PYPKGPREFIX}-rlp-1.2.0
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ethereum/}
 GITHUB_PROJECT=	pyrlp
@@ -14,7 +15,7 @@ LICENSE=	mit
 
 EGG_NAME=	rlp-1.2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-bumpversion-[0-9]*:../../devel/py-bumpversion
+BUILD_DEPENDS+=	${PYPKGPREFIX}-bump2version-[0-9]*:../../devel/py-bump2version
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 #BUILD_DEPENDS+=	# TODO: pytest-xdist>=0
 #BUILD_DEPENDS+=	# TODO: pytest-watch>=4.1.0,<5
@@ -31,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-eth-utils-[0-9]*:../../finance/py-eth-utils
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-twine
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-bump2version py-twine
 
 # TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
 .include "../../lang/python/egg.mk"
