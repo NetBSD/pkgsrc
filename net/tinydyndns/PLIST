@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/08 17:38:38 schmonz Exp $
+bin/tinydyndns-conf
+bin/tinydyndns-data
+bin/tinydyndns-update
+man/man8/tinydyndns-conf.8
+man/man8/tinydyndns-data.8
+man/man8/tinydyndns-update.8
