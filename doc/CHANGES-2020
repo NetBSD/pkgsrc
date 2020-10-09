@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5711 2020/10/09 15:24:09 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5712 2020/10/09 15:29:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8481,3 +8481,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated news/sfeed_curses to 0.9.3 [leot 2020-10-09]
 	Updated sysutils/entr to 4.6 [leot 2020-10-09]
 	Updated security/snallygaster to 0.0.9 [leot 2020-10-09]
+	Updated net/sacc to 1.02 [leot 2020-10-09]
