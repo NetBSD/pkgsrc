@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5700 2020/10/09 06:45:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5701 2020/10/09 06:45:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8468,3 +8468,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/gumbo-parser version 0.10.1 [leot 2020-10-08]
 	Updated print/mupdf to 1.18.0 [leot 2020-10-08]
 	Updated x11/xcb-proto to 1.14.1 [wiz 2020-10-09]
+	Updated x11/py-xcbgen to 1.14.1 [wiz 2020-10-09]
