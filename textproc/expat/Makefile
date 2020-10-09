@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/10/08 16:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2020/10/09 12:00:56 wiz Exp $
 
 DISTNAME=	expat-2.2.10
 PKGREVISION=	1
@@ -17,6 +17,8 @@ USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--without-examples
 CONFIGURE_ARGS+=	--without-tests
+# workaround suggested by upstream; xmlwf.1 is in tarball, so docbook not needed
+CONFIGURE_ENV+=		DOCBOOK_TO_MAN=false
 CONFIGURE_ARGS+=	--without-docbook
 
 USE_LANGUAGES=	c c++
@@ -31,12 +33,9 @@ PKGCONFIG_OVERRIDE+=	expat.pc.in
 
 DOCDIR=	${PREFIX}/share/doc/expat
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/reference.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/style.css ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/xmlwf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
