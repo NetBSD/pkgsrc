@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5718 2020/10/09 16:14:39 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5719 2020/10/09 16:15:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8488,3 +8488,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/moreutils to 0.64 [leot 2020-10-09]
 	Updated misc/libreoffice to 7.0.2.2 [ryoon 2020-10-09]
 	Updated mail/thunderbird to 78.3.2 [ryoon 2020-10-09]
+	Updated mail/thunderbird-l10n to 78.3.2 [ryoon 2020-10-09]
