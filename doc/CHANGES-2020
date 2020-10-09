@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5713 2020/10/09 15:34:34 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5714 2020/10/09 15:39:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8483,3 +8483,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/snallygaster to 0.0.9 [leot 2020-10-09]
 	Updated net/sacc to 1.02 [leot 2020-10-09]
 	Updated www/tscrape to 0.6 [leot 2020-10-09]
+	Updated security/sqlmap to 1.4.10 [leot 2020-10-09]
