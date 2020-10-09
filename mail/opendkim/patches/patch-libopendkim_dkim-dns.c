@@ -1,0 +1,92 @@
+$NetBSD$
+
+- https://github.com/trusteddomainproject/OpenDKIM/pull/99
+
+--- libopendkim/dkim-dns.c.orig	2020-10-09 02:30:56.209138165 +0000
++++ libopendkim/dkim-dns.c
+@@ -247,85 +247,3 @@ dkim_res_waitreply(void *srv, void *qh,
+ 
+ 	return DKIM_DNS_SUCCESS;
+ }
+-
+-/*
+-**  DKIM_RES_SETNS -- set nameserver list
+-**
+-**  Parameters:
+-**  	srv -- service handle
+-**  	nslist -- nameserver list, as a string
+-**
+-**  Return value:
+-**  	DKIM_DNS_SUCCESS -- success
+-**  	DKIM_DNS_ERROR -- error
+-*/
+-
+-int
+-dkim_res_nslist(void *srv, const char *nslist)
+-{
+-#ifdef HAVE_RES_SETSERVERS
+-	int nscount = 0;
+-	char *tmp;
+-	char *ns;
+-	char *last = NULL;
+-	struct sockaddr_in in;
+-# ifdef AF_INET6
+-	struct sockaddr_in6 in6;
+-# endif /* AF_INET6 */
+-	struct state *res;
+-	res_sockaddr_union nses[MAXNS];
+-
+-	assert(srv != NULL);
+-	assert(nslist != NULL);
+-
+-	memset(nses, '\0', sizeof nses);
+-
+-	tmp = strdup(nslist);
+-	if (tmp == NULL)
+-		return DKIM_DNS_ERROR;
+-
+-	for (ns = strtok_r(tmp, ",", &last);
+-	     ns != NULL && nscount < MAXNS;
+-	     ns = strtok_r(NULL, ",", &last)
+-	{
+-		memset(&in, '\0', sizeof in);
+-# ifdef AF_INET6
+-		memset(&in6, '\0', sizeof in6);
+-# endif /* AF_INET6 */
+-
+-		if (inet_pton(AF_INET, ns, (struct in_addr *) &in.sin_addr,
+-		              sizeof in.sin_addr) == 1)
+-		{
+-			in.sin_family= AF_INET;
+-			in.sin_port = htons(DNSPORT);
+-			memcpy(&nses[nscount].sin, &in,
+-			       sizeof nses[nscount].sin);
+-			nscount++;
+-		}
+-# ifdef AF_INET6
+-		else if (inet_pton(AF_INET6, ns,
+-		                   (struct in6_addr *) &in6.sin6_addr,
+-		                   sizeof in6.sin6_addr) == 1)
+-		{
+-			in6.sin6_family= AF_INET6;
+-			in6.sin6_port = htons(DNSPORT);
+-			memcpy(&nses[nscount].sin6, &in6,
+-			       sizeof nses[nscount].sin6);
+-			nscount++;
+-		}
+-# endif /* AF_INET6 */
+-		else
+-		{
+-			free(tmp);
+-			return DKIM_DNS_ERROR;
+-		}
+-	}
+-
+-	res = srv;
+-	res_setservers(res, nses, nscount);
+-
+-	free(tmp);
+-#endif /* HAVE_RES_SETSERVERS */
+-
+-	return DKIM_DNS_SUCCESS;
+-}
