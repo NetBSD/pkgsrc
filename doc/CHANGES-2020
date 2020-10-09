@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5699 2020/10/08 22:50:36 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5700 2020/10/09 06:45:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8467,3 +8467,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/p5-Linux-Inotify2 to 2.2 [mcf 2020-10-08]
 	Added www/gumbo-parser version 0.10.1 [leot 2020-10-08]
 	Updated print/mupdf to 1.18.0 [leot 2020-10-08]
+	Updated x11/xcb-proto to 1.14.1 [wiz 2020-10-09]
