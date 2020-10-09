@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5716 2020/10/09 15:47:06 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5717 2020/10/09 15:55:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8486,3 +8486,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/sqlmap to 1.4.10 [leot 2020-10-09]
 	Updated net/py-rt to 2.0.1 [leot 2020-10-09]
 	Updated misc/moreutils to 0.64 [leot 2020-10-09]
+	Updated misc/libreoffice to 7.0.2.2 [ryoon 2020-10-09]
