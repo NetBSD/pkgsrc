@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.30 2020/10/09 16:00:16 jperkin Exp $
+# $NetBSD: metadata.mk,v 1.31 2020/10/09 20:18:30 jperkin Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -28,7 +28,7 @@ _METADATA_TARGETS+=	${_BUILD_INFO_FILE}
 # Skip system libraries on Darwin releases where they do not exist.
 #
 .if defined(DARWIN_NO_SYSTEM_LIBS)
-DARWIN_REQUIRES_FILTER=	${GREP} -v '\t/usr/lib'
+DARWIN_REQUIRES_FILTER=	${EGREP} -v '\t(/System/Library|/usr/lib)'
 .else
 DARWIN_REQUIRES_FILTER=	${CAT}
 .endif
