@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/04 10:22:31 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/10/09 07:31:44 nia Exp $
 bin/dosbox-x
 share/applications/dosbox-x.desktop
 share/dosbox-x/CHANGELOG
 share/dosbox-x/FREECG98.BMP
 share/dosbox-x/dosbox-x.reference.conf
-share/pixmaps/dosbox.png
+share/pixmaps/dosbox-x.png
