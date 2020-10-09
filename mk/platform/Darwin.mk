@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.98 2020/08/21 21:29:16 sjmulder Exp $
+# $NetBSD: Darwin.mk,v 1.99 2020/10/09 16:00:16 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -118,6 +118,16 @@ _OPSYS_INCLUDE_DIRS?=	${OSX_SDK_PATH}/usr/include
 .  else
 PKG_FAIL_REASON+=	"No suitable Xcode SDK or Command Line Tools installed."
 .  endif
+.endif
+
+#
+# Newer macOS releases remove library files from the file system.  The only way
+# to test them is via dlopen(), which is obviously impractical for many things.
+#
+# This define turns off anything that can't reasonably supported this.
+#
+.if ${OS_VERSION:R} >= 20
+DARWIN_NO_SYSTEM_LIBS=	# defined
 .endif
 
 .if ${OS_VERSION:R} >= 6
