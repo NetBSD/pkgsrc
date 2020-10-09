@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/10/09 07:31:44 nia Exp $
+# $NetBSD: Makefile,v 1.22 2020/10/09 07:40:44 nia Exp $
 
 DISTNAME=	dosbox-x-0.83.6
 CATEGORIES=	emulators
@@ -72,5 +72,6 @@ do-install:
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
