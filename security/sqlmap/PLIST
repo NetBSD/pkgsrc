@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/09/03 17:28:00 leot Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/10/09 15:39:27 leot Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1203,6 +1203,9 @@ ${PYSITELIB}/sqlmap/tamper/randomcomments.pyo
 ${PYSITELIB}/sqlmap/tamper/schemasplit.py
 ${PYSITELIB}/sqlmap/tamper/schemasplit.pyc
 ${PYSITELIB}/sqlmap/tamper/schemasplit.pyo
+${PYSITELIB}/sqlmap/tamper/sleep2getlock.py
+${PYSITELIB}/sqlmap/tamper/sleep2getlock.pyc
+${PYSITELIB}/sqlmap/tamper/sleep2getlock.pyo
 ${PYSITELIB}/sqlmap/tamper/sp_password.py
 ${PYSITELIB}/sqlmap/tamper/sp_password.pyc
 ${PYSITELIB}/sqlmap/tamper/sp_password.pyo
