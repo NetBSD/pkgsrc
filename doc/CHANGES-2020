@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5707 2020/10/09 08:29:12 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5708 2020/10/09 09:35:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8477,3 +8477,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/haproxy to 2.2.4 [adam 2020-10-09]
 	Updated multimedia/mkvtoolnix to 51.0.0 [adam 2020-10-09]
 	Added databases/postgresql-timescaledb version 1.7.4 [otis 2020-10-09]
+	Updated security/cvm to 0.97nb2 [schmonz 2020-10-09]
