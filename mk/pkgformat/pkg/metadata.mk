@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.29 2020/07/06 18:29:11 maya Exp $
+# $NetBSD: metadata.mk,v 1.30 2020/10/09 16:00:16 jperkin Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -23,6 +23,15 @@ _BUILD_INFO_FILE=	${PKG_DB_TMPDIR}/+BUILD_INFO
 _BUILD_DATE_cmd=	${DATE} "+%Y-%m-%d %H:%M:%S %z"
 _BUILD_HOST_cmd=	${UNAME} -a
 _METADATA_TARGETS+=	${_BUILD_INFO_FILE}
+
+#
+# Skip system libraries on Darwin releases where they do not exist.
+#
+.if defined(DARWIN_NO_SYSTEM_LIBS)
+DARWIN_REQUIRES_FILTER=	${GREP} -v '\t/usr/lib'
+.else
+DARWIN_REQUIRES_FILTER=	${CAT}
+.endif
 
 ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 	${RUN}${MKDIR} ${.TARGET:H}
@@ -85,7 +94,7 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 	Mach-O)								\
 		libs=`${AWK} '/\/lib.*\.dylib/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then	\
-			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '/compatibility version/ { print $$1 }' | ${SORT} -u`; \
+			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${DARWIN_REQUIRES_FILTER} | ${AWK} '/compatibility version/ { print $$1 }' | ${SORT} -u`; \
 		fi;							\
 		;;							\
 	PE)								\
