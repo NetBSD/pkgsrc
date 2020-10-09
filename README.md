@@ -56,9 +56,10 @@ To work in the Git mirror, which is updated every few hours from CVS:
 Additional links
 ----------------
 
-- [The pkgsrc guide](https://www.netbsd.org/docs/pkgsrc/)
-- [pkgsrc in the NetBSD Wiki](https://wiki.netbsd.org/pkgsrc/)
-- [Searchable index of packages in pkgsrc](http://pkgsrc.se/)
+- [pkgsrc guide](https://www.netbsd.org/docs/pkgsrc/) - the authoritative document on pkgsrc, also available as `doc/pkgsrc.txt`
+- [pkgsrc in the NetBSD Wiki](https://wiki.netbsd.org/pkgsrc/) - miscellaneous articles and tutorials
+- [pkgsrc.se](http://pkgsrc.se/) - a searchable web index of pkgsrc
 - [pkgsrc-wip](https://pkgsrc.org/wip/) - a project to get more people actively involved with creating packages for pkgsrc
-- [pkgsrc on Twitter](https://twitter.com/pkgsrc)
-- [pkgsrcCon](https://pkgsrc.org/pkgsrcCon)
+- [pkgsrc on Twitter](https://twitter.com/pkgsrc) - announcements to the world
+- [pkgsrcCon](https://pkgsrc.org/pkgsrcCon) - we get together
+- [BulkTracker](https://bulktracker.appspot.com/) - a web application that tracks pkgsrc bulk builds
