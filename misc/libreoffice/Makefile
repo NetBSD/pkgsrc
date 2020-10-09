@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.239 2020/09/12 20:43:58 gutteridge Exp $
+# $NetBSD: Makefile,v 1.240 2020/10/09 15:54:33 ryoon Exp $
 
-VERREL=		7.0.1
+VERREL=		7.0.2
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
