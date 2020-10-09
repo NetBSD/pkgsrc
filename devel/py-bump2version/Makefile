@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/10/08 21:52:29 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/09 03:33:09 gutteridge Exp $
 
 DISTNAME=	bump2version-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_INCOMPATIBLE_VERSIONS=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/bumpversion ${DESTDIR}${PREFIX}/bin/bumpversion-${PYVERSSUFFIX} || ${TRUE}
