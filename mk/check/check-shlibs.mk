@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.32 2020/03/23 09:24:35 jperkin Exp $
+# $NetBSD: check-shlibs.mk,v 1.33 2020/10/09 16:00:16 jperkin Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -64,6 +64,9 @@ CHECK_SHLIBS_NATIVE_ENV+=	PLATFORM_RPATH=${_OPSYS_SYSTEM_RPATH:Q}
 CHECK_SHLIBS_NATIVE_ENV+=	READELF=${TOOLS_PATH.readelf:Q}
 .  elif ${OBJECT_FMT} == "Mach-O"
 CHECK_SHLIBS_NATIVE=		${PKGSRCDIR}/mk/check/check-shlibs-macho.awk
+.    if defined(DARWIN_NO_SYSTEM_LIBS)
+CHECK_SHLIBS_NATIVE_ENV+=	SKIP_SYSTEM_LIBS=1
+.    endif
 .  endif
 CHECK_SHLIBS_NATIVE_ENV+=	CROSS_DESTDIR=${_CROSS_DESTDIR:Q}
 CHECK_SHLIBS_NATIVE_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
