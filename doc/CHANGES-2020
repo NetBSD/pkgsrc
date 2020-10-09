@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5704 2020/10/09 07:32:12 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5705 2020/10/09 07:40:40 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8473,3 +8473,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/libtorrent-rasterbar to 1.2.10 [adam 2020-10-09]
 	Updated lang/nodejs12 to 12.19.0 [adam 2020-10-09]
 	Updated emulators/dosbox-x to 0.83.6 [nia 2020-10-09]
+	Updated converters/bdf2sfd to 1.1.4 [fcambus 2020-10-09]
