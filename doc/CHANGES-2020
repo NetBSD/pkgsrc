@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5714 2020/10/09 15:39:37 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5715 2020/10/09 15:43:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8484,3 +8484,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/sacc to 1.02 [leot 2020-10-09]
 	Updated www/tscrape to 0.6 [leot 2020-10-09]
 	Updated security/sqlmap to 1.4.10 [leot 2020-10-09]
+	Updated net/py-rt to 2.0.1 [leot 2020-10-09]
