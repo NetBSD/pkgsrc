@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5708 2020/10/09 09:35:19 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5709 2020/10/09 15:14:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8478,3 +8478,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/mkvtoolnix to 51.0.0 [adam 2020-10-09]
 	Added databases/postgresql-timescaledb version 1.7.4 [otis 2020-10-09]
 	Updated security/cvm to 0.97nb2 [schmonz 2020-10-09]
+	Updated news/sfeed_curses to 0.9.3 [leot 2020-10-09]
