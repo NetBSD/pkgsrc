@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5709 2020/10/09 15:14:17 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5710 2020/10/09 15:21:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8479,3 +8479,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added databases/postgresql-timescaledb version 1.7.4 [otis 2020-10-09]
 	Updated security/cvm to 0.97nb2 [schmonz 2020-10-09]
 	Updated news/sfeed_curses to 0.9.3 [leot 2020-10-09]
+	Updated sysutils/entr to 4.6 [leot 2020-10-09]
