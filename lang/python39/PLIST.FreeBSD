@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2020/10/10 20:19:47 adam Exp $
+lib/python${PY_VER_SUFFIX}/lib-dynload/ossaudiodev.so
