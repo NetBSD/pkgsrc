@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/10/09 08:28:05 otis Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/10 11:20:10 mef Exp $
 
 GITHUB_PROJECT=	timescaledb
 DISTNAME=	timescaledb-1.7.4
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-USE_TOOLS+=	cmake gmake
+USE_TOOLS+=	cmake gmake bash
 
 CONFIGURE_ARGS+=	-DUSE_OPENSSL=0
 CONFIGURE_ARGS+=	-DREGRESS_CHECKS=OFF
