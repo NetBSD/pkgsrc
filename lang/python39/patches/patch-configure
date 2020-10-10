@@ -1,0 +1,61 @@
+$NetBSD: patch-configure,v 1.1 2020/10/10 20:20:12 adam Exp $
+
+Use gnu99 instead of c99 to avoid "alloca() undefined" problems.
+Fix linking on Darwin; don't use -stack_size.
+Changes for consistency across pkgsrc platforms.
+Simplify _sysconfigdata to include only platform name.
+
+--- configure.orig	2020-10-05 15:07:58.000000000 +0000
++++ configure
+@@ -6961,7 +6961,7 @@ UNIVERSAL_ARCH_FLAGS=
+ # tweak BASECFLAGS based on compiler and platform
+ case $GCC in
+ yes)
+-    CFLAGS_NODIST="$CFLAGS_NODIST -std=c99"
++    CFLAGS_NODIST="$CFLAGS_NODIST -std=gnu99"
+ 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
+ $as_echo_n "checking for -Wextra... " >&6; }
+@@ -9617,7 +9617,6 @@ then
+ 		# to ensure that tests don't crash
+ 		# Note: This matches the value of THREAD_STACK_SIZE in
+ 		# thread_pthread.h
+-		LINKFORSHARED="-Wl,-stack_size,1000000 $LINKFORSHARED"
+ 
+ 		if test "$enable_framework"
+ 		then
+@@ -14437,10 +14436,10 @@ _ACEOF
+ if ac_fn_c_try_compile "$LINENO"; then :
+ 
+ 
+-if $GREP noonsees conftest.$ac_objext >/dev/null ; then
++if strings -a conftest.$ac_objext | grep noonsees >/dev/null ; then
+   ax_cv_c_float_words_bigendian=yes
+ fi
+-if $GREP seesnoon conftest.$ac_objext >/dev/null ; then
++if strings -a conftest.$ac_objext | grep seesnoon >/dev/null ; then
+   if test "$ax_cv_c_float_words_bigendian" = unknown; then
+     ax_cv_c_float_words_bigendian=no
+   else
+@@ -15326,8 +15325,6 @@ fi
+ 
+ 
+ case $ac_sys_system in
+-    Linux*|GNU*|Darwin|VxWorks)
+-	EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX};;
+     *)
+ 	EXT_SUFFIX=${SHLIB_SUFFIX};;
+ esac
+@@ -15383,11 +15380,7 @@ fi
+ 
+ 
+ 
+-if test x$PLATFORM_TRIPLET = x; then
+-  LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}"
+-else
+-  LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}-${PLATFORM_TRIPLET}"
+-fi
++LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}"
+ 
+ 
+ # Check whether right shifting a negative integer extends the sign bit
