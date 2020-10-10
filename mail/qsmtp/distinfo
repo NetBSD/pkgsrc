@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/07/04 14:11:40 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2020/10/10 10:01:38 schmonz Exp $
 
-SHA1 (Qsmtp-0.37.tar.xz) = 768567e10adf47d651735bd8e7289a6b8a18d24a
-RMD160 (Qsmtp-0.37.tar.xz) = abf841db63e94142f309fcac93c29a29c1a4d692
-SHA512 (Qsmtp-0.37.tar.xz) = 911d9d956ef7d0c6ad150745db489dd96eca0b665d99c0db648b4382c0d21fc759ad4a138e7adf69c6749574ad619114e7f06f62c131d0ae103e9b0493d39ef3
-Size (Qsmtp-0.37.tar.xz) = 250100 bytes
-SHA1 (patch-CMakeLists.txt) = a764e2e2dd79043e9dd45fd213e95ab776a81299
-SHA1 (patch-include_qdns.h) = de5f47f62cb7482d1ed96814123f6f1abad4506b
-SHA1 (patch-qsmtpd_antispam.c) = 8df576496c31712e49f4679be172074d7712c089
-SHA1 (patch-qsmtpd_auth.c) = 48958cc70850e2016c755eb53c777998d1477018
-SHA1 (patch-qsmtpd_data.c) = 94a8c51a63c1d6db2433c932388bbac260f462c2
-SHA1 (patch-tests_mmap__test.c) = a39835b6fba0a183e8ff47bdeb7f26889cbb4b53
-SHA1 (patch-tests_qsdata__test.c) = 8b07628c00c05edee79fd6918ce6bc1a24747ebb
+SHA1 (Qsmtp-0.38.tar.xz) = 1e3e3fd605a8f691726b7967a78b1f2e94b2f9e4
+RMD160 (Qsmtp-0.38.tar.xz) = 8f9283b2f728782ace5586430b7982c305d8211d
+SHA512 (Qsmtp-0.38.tar.xz) = b1e5d3806eeb47488d91fff3dc60c88420bfa9edf77d2d68f51cdfea913c5c0298d13b9dd66a69100c9a9d1d4b7b1abadac11b253192b029329a13e77f895296
+Size (Qsmtp-0.38.tar.xz) = 252632 bytes

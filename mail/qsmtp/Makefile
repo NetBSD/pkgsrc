@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/07/04 14:11:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/10 10:01:38 schmonz Exp $
 
-DISTNAME=		Qsmtp-0.37
-PKGREVISION=		2
+DISTNAME=		Qsmtp-0.38
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tar.xz
@@ -13,8 +12,6 @@ LICENSE=		gnu-gpl-v2
 
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DAUTOQMAIL=${QMAILDIR}
-CMAKE_ARGS+=		-DDOC_DESTINATION_DIRECTORY="share/doc/qsmtp/"
-CMAKE_ARGS.Darwin+=	-DALLOW_INSECURE_BZERO=ON
 
 BUILD_DEFS+=		QMAILDIR
 
