@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.14 2018/08/22 20:48:36 maya Exp $
+# $NetBSD: bsd.builtin.mk,v 1.15 2020/10/10 14:17:03 triaxx Exp $
 #
 # Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -166,3 +166,4 @@ _BUILTIN_PKGS+=	${_pkg_}
 .include "../../mk/buildlink3/find-libs.mk"
 .include "../../mk/buildlink3/find-headers.mk"
 .include "../../mk/buildlink3/find-files.mk"
+.include "../../mk/buildlink3/find-pkgconfig-files.mk"
