@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/07/11 15:14:30 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/10 08:16:08 nia Exp $
 
-DISTNAME=	lyaml-6.2.5
+DISTNAME=	lyaml-6.2.6
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gvvaughan/}
