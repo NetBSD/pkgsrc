@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2020/01/18 23:35:56 rillig Exp $
+# $NetBSD: Makefile,v 1.62 2020/10/10 08:26:56 nia Exp $
 
 DISTNAME=		rxvt-2.7.10
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rxvt/}
-MASTER_SITES+=		ftp://mason.primenet.com.au/pub/rxvt/
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		https://sourceforge.net/projects/rxvt
