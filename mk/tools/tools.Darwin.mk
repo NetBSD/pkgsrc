@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.59 2018/10/17 08:30:43 jperkin Exp $
+# $NetBSD: tools.Darwin.mk,v 1.60 2020/10/10 09:31:50 jperkin Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -48,7 +48,11 @@ TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
 TOOLS_PLATFORM.gerep?=		/usr/bin/egrep
 TOOLS_PLATFORM.gfrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
-.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+#
+# Big Sur does not support running XCode programs through a symlink, which
+# breaks the .tools/bin directory.
+#
+.if ${OS_VERSION:R} > 9 && ${OS_VERSION:R} < 20
 TOOLS_PLATFORM.gmake?=		/usr/bin/gnumake
 TOOLS_PLATFORM.gm4?=		/usr/bin/gm4
 .endif
