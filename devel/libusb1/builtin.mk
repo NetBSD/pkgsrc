@@ -1,15 +1,15 @@
-# $NetBSD: builtin.mk,v 1.4 2020/05/25 06:47:40 plunky Exp $
+# $NetBSD: builtin.mk,v 1.5 2020/10/10 14:17:02 triaxx Exp $
 
 BUILTIN_PKG:=	libusb1
 
-BUILTIN_FIND_HEADERS_VAR:=	H_LIBUSB
-BUILTIN_FIND_HEADERS.H_LIBUSB=	libusb.h
+BUILTIN_FIND_PKGCONFIG_FILES_VAR:=		PC_LIBUSB1
+BUILTIN_FIND_PKGCONFIG_FILES.PC_LIBUSB1=	libusb-1.0.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
 .if !defined(IS_BUILTIN.libusb1)
 IS_BUILTIN.libusb1=	no
-.  if empty(H_LIBUSB:M__nonexistent__)
+.  if empty(PC_LIBUSB1:M__nonexistent__)
 IS_BUILTIN.libusb1=	yes
 .  endif
 .endif
@@ -21,29 +21,19 @@ USE_BUILTIN.libusb1=	${IS_BUILTIN.libusb1}
 
 .if !empty(USE_BUILTIN.libusb1:M[yY][eE][sS])
 .  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
-do-configure-pre-hook: override-libusb-pkgconfig
+do-configure-pre-hook: link-libusb-pkgconfig
 
-BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
-LIBUSB_PKGCFGF=	libusb-1.0.pc
+BLKDIR_PKGCFG=		${BUILDLINK_DIR}/lib/pkgconfig
+LIBUSB1_PKGCFGF=	${BUILTIN_FIND_PKGCONFIG_FILES.PC_LIBUSB1}
 
-override-libusb-pkgconfig: override-message-libusb-pkgconfig
-override-message-libusb-pkgconfig:
-	@${STEP_MSG} "Generating pkg-config file for builtin libusb1 package."
+.PHONY: link-libusb-pkgconfig link-message-libusb-pkgconfig
+link-libusb-pkgconfig: link-message-libusb-pkgconfig
+link-message-libusb-pkgconfig:
+	@${STEP_MSG} "Linking ${PC_LIBUSB1} file into ${BUILDLINK_DIR}."
 
-override-libusb-pkgconfig:
+link-libusb-pkgconfig:
 	${RUN}						\
 	${MKDIR} ${BLKDIR_PKGCFG};			\
-	{						\
-	${ECHO} "prefix=${LIBUSB_PREFIX}";		\
-	${ECHO} "exec_prefix=\$${prefix}";		\
-	${ECHO} "libdir=\$${exec_prefix}/lib";		\
-	${ECHO} "includedir=\$${prefix}/include";	\
-	${ECHO} "";					\
-	${ECHO} "Name: libusb-1.0";				\
-	${ECHO} "Description: library for USB access";	\
-	${ECHO} "Version: ${BUILTIN_VERSION.libusb1}";	\
-	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -lusb";	\
-	${ECHO} "Cflags: -I\$${includedir}";		\
-	} >> ${BLKDIR_PKGCFG}/${LIBUSB_PKGCFGF};
+	${LN} -sf ${PC_LIBUSB1} ${BLKDIR_PKGCFG}/${LIBUSB1_PKGCFGF}
 .  endif
 .endif
