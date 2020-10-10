@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5722 2020/10/10 10:01:47 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5723 2020/10/10 16:29:36 martin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8492,3 +8492,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/lua-utf8 to 0.1.3 [nia 2020-10-10]
 	Updated textproc/lua-lyaml to 6.2.6 [nia 2020-10-10]
 	Updated mail/qsmtp to 0.38 [schmonz 2020-10-10]
+	Updated emulators/qemu to 5.1.0nb7 [martin 2020-10-10]
