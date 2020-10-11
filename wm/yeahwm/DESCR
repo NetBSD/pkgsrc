@@ -1,0 +1,17 @@
+YeahWM is a h* window manager for X based on evilwm and aewm.
+
+Features:
+
+   * Sloppy Focus.
+   * BeOS-like tabbed titles, which can be repositioned.
+   * Support for Xinerama.
+   * Simple Appearance.
+   * Good keyboard control.
+   * Creative usage of the mouse.
+   * Respects aspect size hints.
+   * Solid resize and move operations.
+   * Virtual Desktops.
+   * "Magic" screen edges for desktop switching.
+   * Snapping to other windows and screen borders when moving windows.
+   * Small binary size(ca. 23kb).
+   * Little resource usage.
