@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5730 2020/10/11 13:05:13 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.5731 2020/10/11 13:22:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8502,3 +8502,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/diffbreaker to version 0.3 [nat 2020-10-11]
 	Added wm/yeahwm version 0.3.5 [nia 2020-10-11]
 	Updated devel/cbindgen to 0.15.0 [ryoon 2020-10-11]
+	Added audio/librespot version 0.1.3 [pin 2020-10-11]
