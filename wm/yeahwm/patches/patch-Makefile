@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2020/10/11 08:56:37 nia Exp $
+
+Let pkgsrc take care of stripping.
+
+--- Makefile.orig	2004-11-21 18:11:04.000000000 +0000
++++ Makefile
+@@ -56,7 +56,6 @@ all: yeahwm
+ 
+ yeahwm: $(OBJS)
+ 	$(CC) $(CFLAGS) $(OBJS) -o $@ $(LDFLAGS)
+-	strip yeahwm
+ 
+ allinone:
+ 	cat yeahwm.h $(SRCS) | sed 's/^#include.*yeahwm.*$$//' > allinone.c
