@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/08/11 18:48:10 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/11 01:57:03 nat Exp $
 
-PKGNAME=	diffbreaker-0.2
+PKGNAME=	diffbreaker-0.3
 #PKGREVISION=	1
 CATEGORIES=	devel
 
