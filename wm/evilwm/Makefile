@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/01/26 17:32:20 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/10/11 08:53:28 nia Exp $
 
 DISTNAME=	evilwm-1.1.1
 PKGREVISION=	1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.6809.org.uk/evilwm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.6809.org.uk/evilwm/
 COMMENT=	Minimalist Window Manager for X
+LICENSE=	evilwm-license
 
 USE_TOOLS+=	gmake
 
