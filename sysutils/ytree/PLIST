@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/11 16:40:39 nia Exp $
+bin/ytree
+man/man1/ytree.1
