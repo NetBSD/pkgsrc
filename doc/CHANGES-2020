@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5728 2020/10/11 01:59:43 nat Exp $
+$NetBSD: CHANGES-2020,v 1.5729 2020/10/11 08:56:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8500,3 +8500,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/python39 version 3.9.0 [adam 2020-10-10]
 	Added lang/py39-html-docs version 3.9.0 [adam 2020-10-10]
 	Updated devel/diffbreaker to version 0.3 [nat 2020-10-11]
+	Added wm/yeahwm version 0.3.5 [nia 2020-10-11]
