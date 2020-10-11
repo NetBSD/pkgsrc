@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2020/10/11 13:21:35 pin Exp $
+# $NetBSD: Makefile,v 1.611 2020/10/11 13:41:19 pin Exp $
 #
 
 COMMENT=	Audio tools
@@ -435,6 +435,7 @@ SUBDIR+=	sphinxtrain
 SUBDIR+=	spiralloops
 SUBDIR+=	spiralsynth
 SUBDIR+=	splay
+SUBDIR+=	spotify-qt
 SUBDIR+=	sptk
 SUBDIR+=	strawberry
 SUBDIR+=	streamripper
