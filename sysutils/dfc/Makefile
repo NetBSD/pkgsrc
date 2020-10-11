@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/04 21:28:44 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/11 21:43:26 kim Exp $
 
 DISTNAME=	dfc-3.1.1
 PKGREVISION=	1
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DMAN_PATH=${PREFIX}/${PKGMANDIR}
+CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/dfc
 INSTALLATION_DIRS=	${EGDIR}
