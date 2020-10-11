@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2020/10/10 20:11:51 nia Exp $
+# $NetBSD: Makefile,v 1.153 2020/10/11 08:56:37 nia Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -109,5 +109,6 @@ SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xmonad
 SUBDIR+=	xmonad-contrib
+SUBDIR+=	yeahwm
 
 .include "../mk/misc/category.mk"
