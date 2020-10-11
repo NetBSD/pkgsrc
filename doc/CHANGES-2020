@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5734 2020/10/11 16:40:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5735 2020/10/11 20:46:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8506,3 +8506,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added audio/spotify-qt version 2.12 [pin 2020-10-11]
 	Updated math/R to 4.0.3 [wen 2020-10-11]
 	Added sysutils/ytree version 2.02 [nia 2020-10-11]
+	Updated net/gallery-dl to 1.15.1 [leot 2020-10-11]
