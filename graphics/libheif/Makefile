@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/09/29 06:04:58 triaxx Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/11 23:47:31 joerg Exp $
 
 DISTNAME=	libheif-1.9.1
 PKGREVISION=	1
@@ -16,6 +16,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
+
+CONFIGURE_ARGS+=	--disable-go
 
 PKGCONFIG_OVERRIDE+=	libheif.pc.in
 
