@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.609 2020/08/30 10:41:12 jmcneill Exp $
+# $NetBSD: Makefile,v 1.610 2020/10/11 13:21:35 pin Exp $
 #
 
 COMMENT=	Audio tools
@@ -253,6 +253,7 @@ SUBDIR+=	libopenspc
 SUBDIR+=	libopus
 SUBDIR+=	libopusenc
 SUBDIR+=	libreplaygain
+SUBDIR+=	librespot
 SUBDIR+=	libsamplerate
 SUBDIR+=	libsbsms
 SUBDIR+=	libshout
