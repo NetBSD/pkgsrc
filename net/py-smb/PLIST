@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/12/20 21:15:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/10/12 11:58:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -73,6 +73,9 @@ ${PYSITELIB}/smb/utils/md4.pyo
 ${PYSITELIB}/smb/utils/pyDes.py
 ${PYSITELIB}/smb/utils/pyDes.pyc
 ${PYSITELIB}/smb/utils/pyDes.pyo
+${PYSITELIB}/smb/utils/rc4.py
+${PYSITELIB}/smb/utils/rc4.pyc
+${PYSITELIB}/smb/utils/rc4.pyo
 ${PYSITELIB}/smb/utils/sha256.py
 ${PYSITELIB}/smb/utils/sha256.pyc
 ${PYSITELIB}/smb/utils/sha256.pyo
