@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5735 2020/10/11 20:46:16 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5736 2020/10/12 11:59:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8507,3 +8507,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/R to 4.0.3 [wen 2020-10-11]
 	Added sysutils/ytree version 2.02 [nia 2020-10-11]
 	Updated net/gallery-dl to 1.15.1 [leot 2020-10-11]
+	Updated security/py-passlib to 1.7.4 [adam 2020-10-12]
+	Updated net/py-smb to 1.2.4 [adam 2020-10-12]
