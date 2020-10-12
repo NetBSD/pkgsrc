@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5736 2020/10/12 11:59:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5737 2020/10/12 12:04:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8509,3 +8509,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.15.1 [leot 2020-10-11]
 	Updated security/py-passlib to 1.7.4 [adam 2020-10-12]
 	Updated net/py-smb to 1.2.4 [adam 2020-10-12]
+	Updated audio/ncspot to 0.2.3 [pin 2020-10-12]
