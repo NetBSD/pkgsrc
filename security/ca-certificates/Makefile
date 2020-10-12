@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/06/08 09:55:36 kim Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/12 21:52:30 kim Exp $
 
 PKGNAME=	ca-certificates-20200601
-DISTNAME=	${PKGNAME:C/-([^-]*)$/_\1/}
+PKGREVISION=	1
+DISTNAME=	${PKGNAME_NOREV:C/-([^-]*)$/_\1/}
 CATEGORIES=	security
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/c/ca-certificates/
 EXTRACT_SUFX=	.tar.xz
@@ -20,7 +21,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 DATADIR=	${PREFIX}/share/${PKGBASE}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-MANDIR=		${PREFIX}/share/man/man8
+MANDIR=		${PREFIX}/${PKGMANDIR}/man8
 
 # Set paths depending on whether we depend on builtin or pkgsrc
 # openssl.  \todo Arguably, we should consider installing into both
