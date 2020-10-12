@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/09/27 02:06:50 mef Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/12 11:15:29 joerg Exp $
 
-DISTNAME=	sile-0.10.9
-PKGREVISION=	1
+DISTNAME=	sile-0.10.12
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sile-typesetter/}
 GITHUB_PROJECT=	sile
@@ -32,6 +31,9 @@ DEPENDS+=	${LUA_PKGPREFIX}-expat-[0-9]*:../../textproc/lua-expat
 DEPENDS+=	${LUA_PKGPREFIX}-cosmo-[0-9]*:../../textproc/lua-cosmo
 
 # Tests require additional font downloads
+#pre-test:
+#	${LN} -fs ${PREFIX}/bin/busted${_LUA_DOT_VERSION} ${TOOLS_DIR}/bin/busted
+#TEST_DEPENDS+=	${LUA_PKGPREFIX}-busted-[0-9]*:../../devel/lua-busted
 #USE_TOOLS+=	perl:test
 #TEST_TARGET=	test
 
