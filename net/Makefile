@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1354 2020/10/08 17:39:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.1355 2020/10/12 22:26:34 kim Exp $
 #
 
 COMMENT=	Networking tools
@@ -117,6 +117,7 @@ SUBDIR+=	dnsmasq
 SUBDIR+=	dnstop
 SUBDIR+=	dnstracer
 SUBDIR+=	docsis
+SUBDIR+=	doh
 SUBDIR+=	driftnet
 SUBDIR+=	drill
 SUBDIR+=	dtcp
