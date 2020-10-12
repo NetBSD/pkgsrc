@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.218 2020/10/11 15:22:56 wen Exp $
+# $NetBSD: Makefile,v 1.219 2020/10/12 21:51:58 bacon Exp $
 
 DISTNAME=	R-4.0.3
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -168,8 +169,7 @@ fix-darwin-install-name:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .if !exists(/System/Library/Frameworks/Accelerate.framework)
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .endif
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"

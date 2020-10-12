@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/08/05 13:47:43 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/12 21:52:03 bacon Exp $
 
 DISTNAME=	numpy-1.16.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
 EXTRACT_SUFX=	.zip
@@ -58,9 +59,9 @@ BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.29.2
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
+# Consider allowing mk/blas.buildlink3.mk to handle Accelerate.framework
 .if ${OPSYS} != "Darwin"
 # blas and lapack are not needed; numpy will use Accelerate.framework
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

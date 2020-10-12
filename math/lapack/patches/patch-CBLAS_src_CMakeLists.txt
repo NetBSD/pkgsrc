@@ -1,0 +1,25 @@
+$NetBSD: patch-CBLAS_src_CMakeLists.txt,v 1.1 2020/10/12 21:51:57 bacon Exp $
+
+Support combined build of shared and static libraries.
+
+--- CBLAS/src/CMakeLists.txt.orig	2017-11-13 04:15:54.000000000 +0000
++++ CBLAS/src/CMakeLists.txt
+@@ -126,3 +126,18 @@ target_include_directories(cblas PUBLIC
+ )
+ target_link_libraries(cblas PRIVATE ${BLAS_LIBRARIES})
+ lapack_install_library(cblas)
++
++if(BUILD_SHARED_LIBS AND BUILD_STATIC_LIBS)
++  add_library(cblas_static STATIC ${SOURCES})
++  set_target_properties(
++    cblas_static PROPERTIES
++    LINKER_LANGUAGE C
++    OUTPUT_NAME cblas
++    )
++  target_include_directories(cblas_static PUBLIC
++    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
++    $<INSTALL_INTERFACE:include>
++  )
++  target_link_libraries(cblas_static PRIVATE ${BLAS_LIBRARIES})
++  lapack_install_library(cblas_static)
++endif()

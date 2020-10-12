@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2020/08/04 01:16:19 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2020/10/12 21:52:04 bacon Exp $
 
 DISTNAME=	scipy-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
 
@@ -60,9 +61,8 @@ do-test:
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.17.3
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

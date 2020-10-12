@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:21 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/12 21:51:57 bacon Exp $
 
 DISTNAME=	Ipopt-3.11.5
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.coin-or.org/download/source/Ipopt/
 EXTRACT_SUFX=	.tgz
@@ -16,6 +17,5 @@ USE_TOOLS+=	pkg-config
 
 TEST_TARGET=	test
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

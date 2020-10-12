@@ -1,13 +1,19 @@
-# $NetBSD: Makefile,v 1.40 2020/02/28 21:48:53 plunky Exp $
+# $NetBSD: Makefile,v 1.41 2020/10/12 21:51:57 bacon Exp $
 
-.include "Makefile.common"
+MAINTAINER=	thomas.orgis@uni-hamburg.de
+COMMENT=	Linear Algebra PACKage (Netlib reference implementation)
+PKGREVISION=	1
 
-COMMENT=	Linear Algebra PACKage
+LAPACK_COMPONENT=	lapack
+LAPACK_COMPONENT_CMAKE_ARGS= \
+	-DUSE_OPTIMIZED_BLAS=ON \
+	-DBLAS_LIBRARIES=${BLAS_LIBS:Q} \
+	-DUSE_OPTIMIZED_LAPACK=OFF \
+	-DCBLAS=OFF -DLAPACKE=OFF -DLAPACK=ON
 
-# use external blas
-CMAKE_ARGS+=	-DBLAS_LIBRARIES:STRING=${BLAS_LIBS}
-
-BUILD_TARGET=	lapack
-
+# This always uses Netlib BLAS. Other optimized BLAS packages bring
+# their own LAPACK, hence cblas and lapacke packages use
+# mk/blas.buildlink3.mk instead.
 .include "../../math/blas/buildlink3.mk"
+.include "../../math/lapack/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

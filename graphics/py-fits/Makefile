@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/05/25 05:29:32 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/10/12 21:52:01 bacon Exp $
 
 DISTNAME=	pyfits-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfits/}
 

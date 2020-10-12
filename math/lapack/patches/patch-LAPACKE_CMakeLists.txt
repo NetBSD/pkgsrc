@@ -1,0 +1,46 @@
+$NetBSD: patch-LAPACKE_CMakeLists.txt,v 1.1 2020/10/12 21:51:57 bacon Exp $
+
+Support combined build of shared and static libraries.
+
+--- LAPACKE/CMakeLists.txt.orig	2020-01-03 19:33:52.766364829 +0100
++++ LAPACKE/CMakeLists.txt	2020-01-03 19:49:05.115280246 +0100
+@@ -94,6 +94,26 @@
+ target_link_libraries(lapacke PRIVATE ${LAPACK_LIBRARIES})
+ 
+ lapack_install_library(lapacke)
++
++if(BUILD_SHARED_LIBS AND BUILD_STATIC_LIBS)
++  add_library(lapacke_static STATIC ${SOURCES})
++  set_target_properties(
++    lapacke_static PROPERTIES
++    OUTPUT_NAME lapacke
++    )
++   target_include_directories(lapacke_static PUBLIC
++    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
++    $<INSTALL_INTERFACE:include>
++  )
++
++  if(LAPACKE_WITH_TMG)
++    target_link_libraries(lapacke_static PRIVATE tmglib)
++  endif()
++  target_link_libraries(lapacke_static PRIVATE ${LAPACK_LIBRARIES})
++
++  lapack_install_library(lapacke_static)
++endif()
++
+ install(
+   FILES ${LAPACKE_INCLUDE} ${LAPACK_BINARY_DIR}/include/lapacke_mangling.h
+   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+@@ -126,7 +146,8 @@
+   COMPONENT Development
+   )
+ 
+-install(EXPORT lapacke-targets
+-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapacke-${LAPACK_VERSION}
+-  COMPONENT Development
+-  )
++#install(EXPORT lapacke-targets
++#  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapacke-${LAPACK_VERSION}
++#  COMPONENT Development
++#  )
++
