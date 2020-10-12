@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/06/17 15:03:46 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/12 21:52:04 bacon Exp $
 
 DISTNAME=	scikit-image-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
 

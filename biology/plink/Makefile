@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/01/13 22:06:42 bacon Exp $
+# $NetBSD: Makefile,v 1.9 2020/10/12 21:51:58 bacon Exp $
 
 DISTNAME=	plink-1.07-src
 PKGNAME=	${DISTNAME:-src=}
+PKGREVISION=	1
 CATEGORIES=	biology
 #MASTER_SITES=	http://pngu.mgh.harvard.edu/~purcell/plink/dist/
 EXTRACT_SUFX=	.zip
@@ -36,7 +37,6 @@ do-test:
 
 .include "../../devel/libf2c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

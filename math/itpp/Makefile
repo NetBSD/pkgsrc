@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2017/08/16 20:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/12 21:52:02 bacon Exp $
 
 DISTNAME=	itpp-4.0.7
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=itpp/}
 
@@ -15,8 +16,7 @@ USE_TOOLS=	gmake
 
 USE_LANGUAGES+=	c c++ fortran77
 
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
