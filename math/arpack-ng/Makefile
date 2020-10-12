@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/02/28 21:51:40 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/12 21:52:02 bacon Exp $
 
 DISTNAME=	arpack-ng-3.7.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencollab/}
 
@@ -26,6 +27,5 @@ pre-configure:
 
 INSTALLATION_DIRS=	lib
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
