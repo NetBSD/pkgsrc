@@ -1,0 +1,2 @@
+A libcurl-using application that resolves a host name using
+DNS-over-HTTPS (DoH).
