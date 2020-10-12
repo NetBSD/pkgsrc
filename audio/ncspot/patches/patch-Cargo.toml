@@ -1,10 +1,10 @@
-$NetBSD: patch-Cargo.toml,v 1.3 2020/09/04 11:49:46 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.4 2020/10/12 12:04:14 pin Exp $
 
 Use portaudio by default
 
---- Cargo.toml.orig	2020-09-01 05:54:45.000000000 +0000
+--- Cargo.toml.orig	2020-10-10 19:00:54.000000000 +0000
 +++ Cargo.toml
-@@ -50,11 +50,5 @@ version = "0.15"
+@@ -51,12 +51,6 @@ version = "0.15"
  default-features = false
  
  [features]
@@ -15,5 +15,6 @@ Use portaudio by default
  portaudio_backend = ["librespot-playback/portaudio-backend"]
 -termion_backend = ["cursive/termion-backend"]
 -mpris = ["dbus"]
--default = ["share_clipboard", "pulseaudio_backend", "mpris", "cursive/pancurses-backend"]
-+default = ["portaudio_backend", "cursive/pancurses-backend"]
+ notify = ["notify-rust"]
+-default = ["share_clipboard", "pulseaudio_backend", "mpris", "notify", "cursive/pancurses-backend"]
++default = ["portaudio_backend", "notify", "cursive/pancurses-backend"]
