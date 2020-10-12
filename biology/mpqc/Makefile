@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/08/31 18:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/10/12 21:51:58 bacon Exp $
 
 DISTNAME=	mpqc-2.3.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpqc/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,7 +39,6 @@ CHECK_INTERPRETER_SKIP=	bin/tkmolrender
 
 .include "../../x11/tk/interpreter.mk"
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2020/09/20 23:29:09 mef Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/12 21:52:01 bacon Exp $
 
 R_PKGNAME=	RandomFields
 R_PKGVER=	3.3.8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Simulation and analysis of random fields
+PKGREVISION=	1
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-sp>=1.3.1:../../math/R-sp
@@ -20,5 +21,5 @@ USE_LANGUAGES+=	c c++ fortran
 
 .include "../../math/R/Makefile.extension"
 .include "../../math/R-RandomFieldsUtils/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.22 2020/02/28 21:48:53 plunky Exp $
+$NetBSD: distinfo,v 1.23 2020/10/12 21:51:57 bacon Exp $
 
-SHA1 (lapack-3.9.0.tgz) = 9da5f17521260e9f0cfefd9dfc5616d9ef10efb0
-RMD160 (lapack-3.9.0.tgz) = 136c181f31fd056956a96cec723ceb5a4fdf3feb
-SHA512 (lapack-3.9.0.tgz) = 90c2c8372c2567b15c25653ed64e7c86a2cb0f1dda116f33716c6877490415210217af5badb67cb50e9d428f56ff83d33a3dad60b6ed7d31919164f6e7e98e0f
-Size (lapack-3.9.0.tgz) = 9347104 bytes
-SHA1 (patch-TESTING_MATGEN_CMakeLists.txt) = 695655299ccc48eec4c38c75d50144b3a13ee8db
-SHA1 (patch-TESTING_dbal.in) = 3a6a726b6504a07fb1c0908a3893ea46aca670ea
+SHA1 (lapack-3.9.0.tar.gz) = 0451d180eed2b12b94aaae77e772d7573e87bec4
+RMD160 (lapack-3.9.0.tar.gz) = 333bf17b3e2503c26cdd2139566fdc788be1d0c3
+SHA512 (lapack-3.9.0.tar.gz) = 424956ad941a60a4b71e0d451ad48db12a692f8a71a90f3ca7f71d6ecc1922f392746ea84df1c47a46577ed2db32e9e47ec44ad248207c5ac7da179becb712ef
+Size (lapack-3.9.0.tar.gz) = 7534567 bytes
+SHA1 (patch-BLAS_SRC_CMakeLists.txt) = c8c69e6e0c67337af999863c4f5c64618d1374d7
+SHA1 (patch-CBLAS_cblas.pc.in) = 3befb18c1b7f2f82c6da83ea10f913c817acf09f
+SHA1 (patch-CBLAS_src_CMakeLists.txt) = faa1ad6c322830cb62e0f5bdab33732c0372cce3
+SHA1 (patch-CMakeLists.txt) = ea2bec54dd2c283a96862ef760826bf6e633613e
+SHA1 (patch-LAPACKE_CMakeLists.txt) = b5d4fb36550e1ae47e7e68ffec0e10afa3ac8864
+SHA1 (patch-LAPACKE_lapacke.pc.in) = 7f0d91aaceac7f9980650ec90dbda95cf09b768f
+SHA1 (patch-SRC_CMakeLists.txt) = 2908cdeb0d94f51ec16b02b8a6426dd6cde7e10f
+SHA1 (patch-TESTING_MATGEN_CMakeLists.txt) = 84d4cde8fef49c6efc9f50a3219b0299375934d5

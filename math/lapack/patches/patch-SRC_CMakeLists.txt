@@ -1,0 +1,30 @@
+$NetBSD: patch-SRC_CMakeLists.txt,v 1.1 2020/10/12 21:51:57 bacon Exp $
+
+Support combined build of shared and static libraries.
+
+--- SRC/CMakeLists.txt.orig	2019-11-21 08:57:43.000000000 +0100
++++ SRC/CMakeLists.txt	2020-01-03 19:53:12.452257316 +0100
+@@ -518,3 +518,23 @@
+ endif()
+ 
+ lapack_install_library(lapack)
++
++if(BUILD_SHARED_LIBS AND BUILD_STATIC_LIBS)
++  add_library(lapack_static STATIC ${SOURCES})
++  set_target_properties(
++    lapack_static PROPERTIES
++    OUTPUT_NAME lapack
++    )
++
++  if(USE_XBLAS)
++    target_link_libraries(lapack_static PRIVATE ${XBLAS_LIBRARY})
++  endif()
++  target_link_libraries(lapack_static PRIVATE ${BLAS_LIBRARIES})
++
++  if (_is_coverage_build)
++    target_link_libraries(lapack_static PRIVATE gcov)
++    add_coverage(lapack_static)
++  endif()
++
++  lapack_install_library(lapack_static)
++endif()

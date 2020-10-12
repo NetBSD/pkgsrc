@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/06/17 14:54:57 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/12 21:52:03 bacon Exp $
 
 DISTNAME=	PyWavelets-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyWavelets/}
 

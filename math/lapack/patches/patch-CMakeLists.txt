@@ -1,0 +1,153 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/10/12 21:51:57 bacon Exp $
+
+Avoid installation of LAPACK CMake and pkg-config files when not installing
+LAPACK, also allowing explicitly to switch off LAPACK build for BLAS-only
+packaging.
+
+--- CMakeLists.txt.orig	2020-03-03 15:36:43.155560348 +0100
++++ CMakeLists.txt	2020-03-03 15:36:34.827560837 +0100
+@@ -112,8 +112,10 @@
+ 
+ 
+ # --------------------------------------------------
+-set(LAPACK_INSTALL_EXPORT_NAME lapack-targets)
+ 
++if(LAPACK)
++
++set(LAPACK_INSTALL_EXPORT_NAME lapack-targets)
+ macro(lapack_install_library lib)
+   install(TARGETS ${lib}
+     EXPORT ${LAPACK_INSTALL_EXPORT_NAME}
+@@ -123,6 +125,18 @@
+   )
+ endmacro()
+ 
++else()
++
++macro(lapack_install_library lib)
++  install(TARGETS ${lib}
++    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT Development
++    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT RuntimeLibraries
++    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT RuntimeLibraries
++  )
++endmacro()
++
++endif()
++
+ set(PKG_CONFIG_DIR ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+ 
+ # --------------------------------------------------
+@@ -252,6 +266,10 @@
+ 
+ option(USE_OPTIMIZED_LAPACK "Whether or not to use an optimized LAPACK library instead of included netlib LAPACK" OFF)
+ 
++option(LAPACK "Whether to build or use LAPACK (to enable a BLAS-only build)")
++
++if(LAPACK)
++
+ # --------------------------------------------------
+ # LAPACK
+ # User did not provide a LAPACK Library but specified to search for one
+@@ -293,6 +311,8 @@
+     CACHE STRING "Linker flags for shared libs" FORCE)
+ endif()
+ 
++endif()
++
+ if(BUILD_TESTING)
+   add_subdirectory(TESTING)
+ endif()
+@@ -374,14 +394,18 @@
+   set(ALL_TARGETS ${ALL_TARGETS} blas)
+ endif()
+ 
++if(LAPACK)
+ if(NOT LATESTLAPACK_FOUND)
+   set(ALL_TARGETS ${ALL_TARGETS} lapack)
++  set(BUILD_LAPACK ON)
++endif()
+ endif()
+ 
+ if(BUILD_TESTING OR LAPACKE_WITH_TMG)
+   set(ALL_TARGETS ${ALL_TARGETS} tmglib)
+ endif()
+ 
++if(LAPACK)
+ # Export lapack targets, not including lapacke, from the
+ # install tree, if any.
+ set(_lapack_config_install_guard_target "")
+@@ -395,6 +419,7 @@
+   # lapack-config.cmake to load targets from the install tree.
+   list(GET ALL_TARGETS 0 _lapack_config_install_guard_target)
+ endif()
++endif()
+ 
+ # Include cblas in targets exported from the build tree.
+ if(CBLAS)
+@@ -406,6 +431,7 @@
+   set(ALL_TARGETS ${ALL_TARGETS} lapacke)
+ endif()
+ 
++if(LAPACK)
+ # Export lapack and lapacke targets from the build tree, if any.
+ set(_lapack_config_build_guard_target "")
+ if(ALL_TARGETS)
+@@ -415,32 +441,34 @@
+   # for lapack-config.cmake to load targets from the build tree.
+   list(GET ALL_TARGETS 0 _lapack_config_build_guard_target)
+ endif()
++endif()
+ 
+-configure_file(${LAPACK_SOURCE_DIR}/CMAKE/lapack-config-build.cmake.in
+-  ${LAPACK_BINARY_DIR}/lapack-config.cmake @ONLY)
+-
++if(BUILD_LAPACK)
++  configure_file(${LAPACK_SOURCE_DIR}/CMAKE/lapack-config-build.cmake.in
++    ${LAPACK_BINARY_DIR}/lapack-config.cmake @ONLY)
+ 
+-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/lapack.pc.in ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc @ONLY)
++  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/lapack.pc.in ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc @ONLY)
+   install(FILES
+-  ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc
+-  DESTINATION ${PKG_CONFIG_DIR}
+-  COMPONENT Development
+-  )
++    ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc
++    DESTINATION ${PKG_CONFIG_DIR}
++    COMPONENT Development
++    )
+ 
+-configure_file(${LAPACK_SOURCE_DIR}/CMAKE/lapack-config-install.cmake.in
+-  ${LAPACK_BINARY_DIR}/CMakeFiles/lapack-config.cmake @ONLY)
++  configure_file(${LAPACK_SOURCE_DIR}/CMAKE/lapack-config-install.cmake.in
++    ${LAPACK_BINARY_DIR}/CMakeFiles/lapack-config.cmake @ONLY)
+ 
+-include(CMakePackageConfigHelpers)
+-write_basic_package_version_file(
+-  ${LAPACK_BINARY_DIR}/lapack-config-version.cmake
+-  VERSION ${LAPACK_VERSION}
+-  COMPATIBILITY SameMajorVersion
+-  )
++  include(CMakePackageConfigHelpers)
++  write_basic_package_version_file(
++    ${LAPACK_BINARY_DIR}/lapack-config-version.cmake
++    VERSION ${LAPACK_VERSION}
++    COMPATIBILITY SameMajorVersion
++    )
+ 
+-install(FILES
+-  ${LAPACK_BINARY_DIR}/CMakeFiles/lapack-config.cmake
+-  ${LAPACK_BINARY_DIR}/lapack-config-version.cmake
+-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapack-${LAPACK_VERSION}
+-  COMPONENT Development
+-  )
+-  
+\ Kein Zeilenumbruch am Dateiende.
++  install(FILES
++    ${LAPACK_BINARY_DIR}/CMakeFiles/lapack-config.cmake
++    ${LAPACK_BINARY_DIR}/lapack-config-version.cmake
++    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapack-${LAPACK_VERSION}
++    COMPONENT Development
++    )
++endif()
++  

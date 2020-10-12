@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/08/08 19:53:50 brook Exp $
+# $NetBSD: Makefile,v 1.13 2020/10/12 21:52:01 bacon Exp $
 
 R_PKGNAME=	gstat
 R_PKGVER=	2.0-2
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,5 +17,5 @@ DEPENDS+=	R-zoo>=1.8.3:../../math/R-zoo
 USE_LANGUAGES+=	c fortran
 
 .include "../../math/R/Makefile.extension"
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

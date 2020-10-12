@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/09/04 16:05:20 mef Exp $
+# $NetBSD: Makefile,v 1.14 2020/10/12 21:51:59 bacon Exp $
 
 DISTNAME=	gdspy-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gdspy/}
 EXTRACT_SUFX=	.zip
