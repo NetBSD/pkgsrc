@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/14 19:31:40 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/12 21:52:04 bacon Exp $
 
 DISTNAME=	tables-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 

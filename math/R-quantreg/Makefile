@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/08/08 19:53:53 brook Exp $
+# $NetBSD: Makefile,v 1.8 2020/10/12 21:52:01 bacon Exp $
 
 R_PKGNAME=	quantreg
 R_PKGVER=	5.42.1
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,6 +15,5 @@ DEPENDS+=	R-SparseM>=1.77:../../math/R-SparseM
 USE_LANGUAGES=	c fortran
 
 .include "../../math/R/Makefile.extension"
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
