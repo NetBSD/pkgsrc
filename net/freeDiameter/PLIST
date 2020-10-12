@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/04/28 16:56:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/10/12 14:26:52 wiz Exp $
 bin/freeDiameterd
 bin/freeDiameterd-${PKGVERSION}
 ${PLIST.ext}bin/freediameter-sip-ppr
@@ -15,6 +15,7 @@ ${PLIST.ext}lib/freeDiameter/app_radgw.fdx
 ${PLIST.ext}lib/freeDiameter/app_redirect.fdx
 ${PLIST.ext}lib/freeDiameter/app_sip.fdx
 ${PLIST.ext}lib/freeDiameter/auth.rgwx
+lib/freeDiameter/dbg_dict_dump.fdx
 lib/freeDiameter/dbg_loglevel.fdx
 lib/freeDiameter/dbg_monitor.fdx
 lib/freeDiameter/dbg_msg_dumps.fdx
