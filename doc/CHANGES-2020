@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5742 2020/10/12 22:27:01 kim Exp $
+$NetBSD: CHANGES-2020,v 1.5743 2020/10/12 23:46:12 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8515,3 +8515,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/rclone to 1.53.1 [leot 2020-10-12]
 	Updated textproc/oniguruma to 6.9.6rc2 [kim 2020-10-12]
 	Added net/doh version 0.1.20200514 [kim 2020-10-12]
+	Updated www/firefox to 81.0.2 [maya 2020-10-12]
+	Updated www/firefox-l10n to 81.0.2 [maya 2020-10-12]
