@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/09/29 14:08:36 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/10/12 12:54:01 wiz Exp $
 
 DISTNAME=	nasm-2.15.05
 CATEGORIES=	devel lang
@@ -10,13 +10,12 @@ HOMEPAGE=	https://www.nasm.us/
 COMMENT=	General-purpose x86 assembler
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-
 USE_TOOLS+=		gmake makeinfo perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/nasm
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/nasm/html
+CONFIGURE_ENV+=		ASCIIDOC=false
+CONFIGURE_ENV+=		XMLTO=false
 
 BUILD_TARGET=		everything
 INSTALL_TARGET=		install_everything
