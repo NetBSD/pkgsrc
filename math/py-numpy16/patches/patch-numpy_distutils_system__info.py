@@ -1,6 +1,6 @@
-$NetBSD: patch-numpy_distutils_system__info.py,v 1.1 2020/04/27 16:52:56 adam Exp $
+$NetBSD: patch-numpy_distutils_system__info.py,v 1.2 2020/10/12 21:52:03 bacon Exp $
 
-Disable openblas detection.  In pkgsrc, py-numpy should use math/blas.
+Disable openblas detection.  In pkgsrc, use mk/blas.buildlink.mk.
 
 --- numpy/distutils/system_info.py.orig	2018-04-02 21:18:11.535155000 +0000
 +++ numpy/distutils/system_info.py

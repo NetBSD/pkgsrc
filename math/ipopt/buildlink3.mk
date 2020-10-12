@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2013/11/14 15:04:12 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/10/12 21:51:57 bacon Exp $
 
 BUILDLINK_TREE+=	Ipopt
 
@@ -6,10 +6,10 @@ BUILDLINK_TREE+=	Ipopt
 IPOPT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.Ipopt+=	Ipopt>=3.11.5
+BUILDLINK_ABI_DEPENDS.Ipopt?=	Ipopt>=3.11.5nb1
 BUILDLINK_PKGSRCDIR.Ipopt?=	../../math/ipopt
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .endif	# IPOPT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-Ipopt

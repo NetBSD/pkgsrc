@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2020/02/28 21:48:53 plunky Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/10/12 21:51:57 bacon Exp $
+lib/libblas.a
 lib/libblas.so
 lib/libblas.so.3
 lib/libblas.so.${PKGVERSION}
+lib/pkgconfig/blas.pc
