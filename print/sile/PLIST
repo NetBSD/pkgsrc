@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/06 23:52:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/12 11:15:29 joerg Exp $
 bin/sile
 include/libtexpdf/agl.h
 include/libtexpdf/bmpimage.h
@@ -75,6 +75,7 @@ lib/sile/svg.la
 man/man1/sile.1
 share/doc/sile/CHANGELOG.md
 share/doc/sile/README.md
+share/licenses/sile/LICENSE
 share/sile/classes/bible.lua
 share/sile/classes/book.lua
 share/sile/classes/diglot.lua
