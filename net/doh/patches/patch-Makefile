@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2020/10/12 22:25:42 kim Exp $
+
+Create the installation directory of the manual page and
+fix the mode of the installed manual page.
+
+--- Makefile.orig	2020-05-13 21:49:04.000000000 +0000
++++ Makefile	2020-10-12 20:13:27.374209780 +0000
+@@ -12,7 +12,8 @@
+ install:
+ 	install -d $(DESTDIR)$(BINDIR)
+ 	install -m 0755 $(TARGET) $(DESTDIR)$(BINDIR)
+-	install -m 0744 $(MANUAL) $(MANDIR)/man1/
++	install -d $(DESTDIR)$(MANDIR)/man1
++	install -m 0644 $(MANUAL) $(DESTDIR)$(MANDIR)/man1
+ 
+ clean:
+ 	rm -f $(OBJS) $(TARGET)
