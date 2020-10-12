@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/09/14 20:08:27 adam Exp $
+# $NetBSD: Makefile,v 1.49 2020/10/12 19:32:54 mcf Exp $
 
 DISTNAME=	qtlocation-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtlocation-${QTVERSION}
@@ -16,6 +16,12 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
 	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
+
+PLIST_VARS+=		dbus
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.if ${PKG_BUILD_OPTIONS.qt5-qtbase:Mdbus}
+PLIST.dbus=		yes
+.endif
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
