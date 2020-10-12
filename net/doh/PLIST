@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/12 22:25:42 kim Exp $
+bin/doh
+man/man1/doh.1
