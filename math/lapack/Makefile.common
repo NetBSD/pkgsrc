@@ -1,46 +1,43 @@
-# $NetBSD: Makefile.common,v 1.11 2020/02/28 21:48:53 plunky Exp $
+# $NetBSD: Makefile.common,v 1.12 2020/10/12 21:51:57 bacon Exp $
 # used by math/blas/Makefile
+# used by math/cblas/Makefile
+# used by math/lapacke/Makefile
 # used by math/lapack/Makefile
 
-DISTNAME=	lapack-3.9.0
-CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
-EXTRACT_SUFX=	.tgz
+# Common Makefile for packages derived from the Netlib BLAS/LAPACK sources.
+# Package Makefile sets LAPACK_COMPONENT and LAPACK_COMPONENT_CMAKE_ARGS to
+# choose the library to install.
+# LAPACK_COMPONENT can be "lapack", "lapacke", or "cblas"
 
-MAINTAINER=	adam@NetBSD.org
+DISTNAME=	lapack-${NETLIB_BLAS_VERSION}
+PKGNAME=	${LAPACK_COMPONENT}-${NETLIB_BLAS_VERSION}
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Reference-LAPACK/}
+GITHUB_PROJECT=	lapack
+GITHUB_TAG=	v${NETLIB_BLAS_VERSION}
+
 HOMEPAGE=	https://www.netlib.org/lapack/
 LICENSE=	modified-bsd
 
-DISTINFO_FILE=	${.CURDIR}/../../math/lapack/distinfo
+# All parts are in the same section
 PATCHDIR=	${.CURDIR}/../../math/lapack/patches
+DISTINFO_FILE=	${.CURDIR}/../../math/lapack/distinfo
 
 USE_LANGUAGES=	c fortran
 USE_CMAKE=	yes
 
-OBJDIR=		obj
+WRKSRC=		${WRKDIR}/${DISTNAME}
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	${WRKSRC}
 
-CONFIGURE_DIRS=	${OBJDIR}
-CMAKE_ARG_PATH=	..
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
-CMAKE_ARGS+=	-DBUILD_DEPRECATED:BOOL=ON
-CMAKE_ARGS+=	-DBUILD_TESTING:BOOL=ON
+# Note: We patch the build to install both static and
+# shared libraries.
+CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
+		-DBUILD_SHARED_LIBS=ON \
+		-DBUILD_STATIC_LIBS=ON \
+		${LAPACK_COMPONENT_CMAKE_ARGS}
 
-TEST_TARGET=	all test
-TEST_ENV=	LD_LIBRARY_PATH=${WRKSRC}/${OBJDIR}/lib
+.include "../../math/lapack/version.mk"
 
-pre-configure:
-	cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
-
-do-install:
-	cd ${WRKSRC}/${OBJDIR} &&					\
-	    ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV}			\
-	    ${CMAKE} -DCMAKE_INSTALL_COMPONENT=RuntimeLibraries		\
-		-P cmake_install.cmake
-
-INSTALLATION_DIRS=	lib
-
-# blas fails using the gold linker with:
-# fatal error: --sysroot=: must take a non-empty argument
-# Work around it on DragonFly by specifying the classic gnu linker
-
-MAKE_ENV.DragonFly+=	LDVER=ld.bfd
+post-extract:
+	${RUN} ${MKDIR} ${WRKSRC}/build

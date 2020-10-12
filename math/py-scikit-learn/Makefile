@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/05/27 19:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/10/12 21:52:04 bacon Exp $
 
 DISTNAME=	scikit-learn-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
 
@@ -23,9 +24,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+# Consider letting mk/blas.buildlink3.mk handle this check
 .if !exists(/System/Library/Frameworks/Accelerate.framework)
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .endif
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.11.0
 .include "../../math/py-numpy/buildlink3.mk"

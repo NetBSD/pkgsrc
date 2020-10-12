@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.37 2020/02/28 21:48:53 plunky Exp $
+# $NetBSD: Makefile,v 1.38 2020/10/12 21:51:57 bacon Exp $
 
 .include "../../math/lapack/Makefile.common"
 
-PKGNAME=	${DISTNAME:S/lapack/blas/}
+PKGREVISION=	1
 
-COMMENT=	Basic Linear Algebra Subprograms (Fortran)
+COMMENT=	Basic Linear Algebra System (Netlib reference implementation)
 
-# not actually true but pretend as we package it separately
-CMAKE_ARGS+=	-DLATESTLAPACK_FOUND:BOOL=TRUE
-
-BUILD_TARGET=	blas
-
-TEST_DIRS=	${WRKSRC}/${OBJDIR}/BLAS
+LAPACK_COMPONENT=	blas
+LAPACK_COMPONENT_CMAKE_ARGS=	\
+	-DUSE_OPTIMIZED_BLAS=OFF \
+	-DCBLAS=OFF -DLAPACKE=OFF -DLAPACK=OFF
 
 .include "../../mk/bsd.pkg.mk"

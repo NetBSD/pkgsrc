@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/06/15 18:13:14 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/12 21:52:02 bacon Exp $
 
 DISTNAME=	Theano-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Theano/}
 

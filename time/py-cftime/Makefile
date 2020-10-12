@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/07/01 15:57:35 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/12 21:52:04 bacon Exp $
 
 DISTNAME=	cftime-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cftime/}
 
