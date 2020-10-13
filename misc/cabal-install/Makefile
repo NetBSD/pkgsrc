@@ -1,12 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2020/01/19 07:51:26 pho Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/13 12:08:10 pho Exp $
 
 DISTNAME=	cabal-install-3.0.0.0
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Command-line interface for Cabal and Hackage
 LICENSE=	modified-bsd
+
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	pre-configure
+SUBST_MESSAGE.mandir=	Fixing man page installation path
+SUBST_FILES.mandir+=	Setup.hs
+SUBST_VARS.mandir+=	PKGMANDIR
 
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
