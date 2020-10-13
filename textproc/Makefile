@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1172 2020/09/28 23:56:19 khorben Exp $
+# $NetBSD: Makefile,v 1.1173 2020/10/13 10:36:59 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -935,6 +935,7 @@ SUBDIR+=	py-rebulk
 SUBDIR+=	py-regex
 SUBDIR+=	py-relatorio
 SUBDIR+=	py-rst2pdf
+SUBDIR+=	py-sgmllib3k
 SUBDIR+=	py-smartypants
 SUBDIR+=	py-snowballstemmer
 SUBDIR+=	py-sphinx
