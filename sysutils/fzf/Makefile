@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2020/09/03 07:29:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2020/10/13 02:35:39 maya Exp $
 
-DISTNAME=	fzf-0.18.0
-PKGREVISION=	9
+DISTNAME=	fzf-0.23.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junegunn/}
 
@@ -34,6 +33,7 @@ do-install:
 
 .include "../../devel/go-isatty/buildlink3.mk"
 .include "../../devel/go-shellwords/buildlink3.mk"
+.include "../../devel/go-walker/buildlink3.mk"
 .include "../../textproc/go-runewidth/buildlink3.mk"
 .include "../../security/go-crypto/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
