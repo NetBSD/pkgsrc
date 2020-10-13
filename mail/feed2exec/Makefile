@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/10/07 19:46:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2020/10/13 12:16:38 schmonz Exp $
 
 DISTNAME=		feed2exec-0.16.0
 CATEGORIES=		mail python
@@ -20,7 +20,7 @@ DEPENDS+=		${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=		${PYPKGPREFIX}-cachecontrol-[0-9]*:../../devel/py-cachecontrol
 DEPENDS+=		${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=		${PYPKGPREFIX}-dateparser-[0-9]*:../../time/py-dateparser
-DEPENDS+=		${PYPKGPREFIX}-feedparser<6.0:../../textproc/py-feedparser
+DEPENDS+=		${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=		${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
