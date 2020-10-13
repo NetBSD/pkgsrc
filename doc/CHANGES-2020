@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5752 2020/10/13 17:14:36 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.5753 2020/10/13 17:47:28 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8531,3 +8531,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-httpx to 0.16.1 [adam 2020-10-13]
 	Added shells/shellcheck version 0.7.1 [jperkin 2020-10-13]
 	Updated net/unison-snapshot to 2.51.2.20201013 [gdt 2020-10-13]
+	Updated math/blas to 3.9.0nb1 [bacon 2020-10-13]
