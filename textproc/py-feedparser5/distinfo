@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2015/10/31 14:18:32 schmonz Exp $
+$NetBSD: distinfo,v 1.1 2020/10/13 12:16:39 schmonz Exp $
 
 SHA1 (feedparser-5.2.1.tar.gz) = 84f05bf1d1443cc55b9893e2cb5aa2b16ab55dec
 RMD160 (feedparser-5.2.1.tar.gz) = d48648b794bdd8af38e77b8337ac2241d79bca4c
