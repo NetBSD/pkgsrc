@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/13 12:08:58 pho Exp $
+bin/cabal
+man/man1/cabal.1
+share/doc/x86_64-netbsd-ghc-8.8.4/${PKGNAME}/LICENSE
+@pkgdir lib/${PKGNAME}/ghc-8.8.4
