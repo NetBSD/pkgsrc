@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5746 2020/10/13 03:59:16 maya Exp $
+$NetBSD: CHANGES-2020,v 1.5747 2020/10/13 09:05:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8521,3 +8521,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/go-walker version 0.1.1 [maya 2020-10-13]
 	Updated sysutils/fzf to 0.23.1 [maya 2020-10-13]
 	Added sysutils/u-boot-orangepi-pc version 2018.11 [maya 2020-10-13]
+	Updated databases/openldap to 2.4.54 [adam 2020-10-13]
+	Updated www/py-aiohttp to 3.6.3 [adam 2020-10-13]
