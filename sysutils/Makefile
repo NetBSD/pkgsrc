@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.903 2020/10/13 00:34:06 maya Exp $
+# $NetBSD: Makefile,v 1.904 2020/10/13 03:52:29 maya Exp $
 #
 
 COMMENT=	System utilities
@@ -676,6 +676,7 @@ SUBDIR+=	u-boot-orangepi-2
 SUBDIR+=	u-boot-orangepi-lite
 SUBDIR+=	u-boot-orangepi-lite2
 SUBDIR+=	u-boot-orangepi-one
+SUBDIR+=	u-boot-orangepi-pc
 SUBDIR+=	u-boot-orangepi-plus2e
 SUBDIR+=	u-boot-orangepi-zero
 SUBDIR+=	u-boot-orangepi-zero-plus
