@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5753 2020/10/13 17:47:28 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.5754 2020/10/13 17:47:42 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8532,3 +8532,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added shells/shellcheck version 0.7.1 [jperkin 2020-10-13]
 	Updated net/unison-snapshot to 2.51.2.20201013 [gdt 2020-10-13]
 	Updated math/blas to 3.9.0nb1 [bacon 2020-10-13]
+	Updated math/lapack to 3.9.0nb1 [bacon 2020-10-13]
