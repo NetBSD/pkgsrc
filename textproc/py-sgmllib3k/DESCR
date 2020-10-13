@@ -1,0 +1,2 @@
+sgmllib was dropped in Python 3. This is a quick, dirty, and
+unmaintained 2to3 port of this old module.
