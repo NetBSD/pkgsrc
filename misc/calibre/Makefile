@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2020/08/17 20:19:29 leot Exp $
+# $NetBSD: Makefile,v 1.242 2020/10/13 12:16:38 schmonz Exp $
 
 DISTNAME=	calibre-3.40.1
 PKGREVISION=	19
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
-DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text-2019.8.11
 DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
 DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown

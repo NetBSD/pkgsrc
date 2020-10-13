@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/06/02 08:23:14 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/10/13 12:16:38 schmonz Exp $
 
 DISTNAME=	quodlibet-4.3.0
 PKGREVISION=	4
@@ -12,7 +12,7 @@ HOMEPAGE=	https://quodlibet.readthedocs.io/
 COMMENT=	Ex Falso / Quod Libet - Music Library / Editor / Player
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
 
