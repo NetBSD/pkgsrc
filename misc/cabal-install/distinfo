@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 07:51:26 pho Exp $
+$NetBSD: distinfo,v 1.2 2020/10/13 12:08:10 pho Exp $
 
 SHA1 (cabal-install-3.0.0.0.tar.gz) = 2fe37726db987af6c23b933bb0e9b81446061449
 RMD160 (cabal-install-3.0.0.0.tar.gz) = 7217d6334bdf98f18341fb0aff8208b20717f695
 SHA512 (cabal-install-3.0.0.0.tar.gz) = 0b15313fc11bc6b6018e01b6a3a65242306977c16ce9333ea1191c1ce0020b180451235a7a65b47bc01791e05d1b246bf9d573fc7e981a46fcfc7da0fed04cca
 Size (cabal-install-3.0.0.0.tar.gz) = 654045 bytes
 SHA1 (patch-Distribution_Client_Security_HTTP.hs) = ba58ab3c0481b2b269e401121f2dc6f2b2bcf503
+SHA1 (patch-Setup.hs) = 0785a7a574d17447f8109263bbf52acec909fef6
 SHA1 (patch-cabal-install.cabal) = 33633ae6970f52fcdf2a842bdc98f641c308957b
