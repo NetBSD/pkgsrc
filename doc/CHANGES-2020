@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5748 2020/10/13 10:04:42 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5749 2020/10/13 10:37:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8524,3 +8524,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/openldap to 2.4.54 [adam 2020-10-13]
 	Updated www/py-aiohttp to 3.6.3 [adam 2020-10-13]
 	Updated mail/swaks to 20201010.0 [schmonz 2020-10-13]
+	Added textproc/py-sgmllib3k version 1.0.0 [schmonz 2020-10-13]
