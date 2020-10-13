@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3270 2020/10/08 21:56:10 khorben Exp $
+# $NetBSD: Makefile,v 1.3271 2020/10/13 02:33:10 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -474,6 +474,7 @@ SUBDIR+=	go-tmc
 SUBDIR+=	go-tools
 SUBDIR+=	go-try
 SUBDIR+=	go-viper
+SUBDIR+=	go-walker
 SUBDIR+=	go-wordwrap
 SUBDIR+=	go-xerrors
 SUBDIR+=	go-yaml
