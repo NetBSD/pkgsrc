@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/08/31 18:11:21 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/10/13 01:47:25 maya Exp $
 
 DISTNAME=		racoon2
 PKGNAME=		racoon2-20180701
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=zoulasc/}
 GITHUB_PROJECT=		racoon2
@@ -26,6 +26,12 @@ REPLACE.perl.old=	@perl_bindir@
 REPLACE.perl.new=	${PERL5}
 REPLACE_FILES.perl=	pskgen/pskgen.in
 
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	pre-configure
+SUBST_MESSAGE.destdir=	Respect destdir and PKG_SYSCONFDIR
+SUBST_FILES.destdir=	pskgen/autogen.spmd.pwd.in
+SUBST_SED.destdir=	-e 's,@prefix@/etc/racoon2/,${DESTDIR}${PKG_SYSCONFDIR}/,g'
+
 SUBST_CLASSES+=		cf-path
 SUBST_STAGE.cf-path=	pre-configure
 SUBST_MESSAGE.cf-path=	Fixing config file paths.
@@ -43,7 +49,7 @@ SUBST_FILES.hk-path=	samples/child-up.in samples/child-down.in \
 			samples/ph1-up.in samples/ph1-down.in
 SUBST_SED.hk-path=	-e 's,cd @prefix@/etc/racoon2/,cd ${PKG_SYSCONFDIR}/,g'
 
-PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
