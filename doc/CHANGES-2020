@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5749 2020/10/13 10:37:22 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5750 2020/10/13 11:15:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8525,3 +8525,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-aiohttp to 3.6.3 [adam 2020-10-13]
 	Updated mail/swaks to 20201010.0 [schmonz 2020-10-13]
 	Added textproc/py-sgmllib3k version 1.0.0 [schmonz 2020-10-13]
+	Updated devel/py-prompt_toolkit2 to 3.0.8 [adam 2020-10-13]
+	Updated misc/py-sniffio to 1.2.0 [adam 2020-10-13]
+	Updated www/py-httpcore to 0.12.0 [adam 2020-10-13]
+	Updated www/py-httpx to 0.16.1 [adam 2020-10-13]
