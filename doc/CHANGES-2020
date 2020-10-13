@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5754 2020/10/13 17:47:42 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.5755 2020/10/13 21:18:47 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8533,3 +8533,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/unison-snapshot to 2.51.2.20201013 [gdt 2020-10-13]
 	Updated math/blas to 3.9.0nb1 [bacon 2020-10-13]
 	Updated math/lapack to 3.9.0nb1 [bacon 2020-10-13]
+	Updated devel/py-guppy3 to 3.1.0 [gutteridge 2020-10-13]
