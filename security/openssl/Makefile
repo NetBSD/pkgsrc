@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2020/09/30 09:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.265 2020/10/13 07:37:29 maya Exp $
 
 DISTNAME=	openssl-1.1.1h
 CATEGORIES=	security
@@ -39,6 +39,8 @@ CONFIGURE_ENV+=		PERL=${PERL5:Q}
 OPENSSL_HOST.SunOS-i386=	solaris-x86-gcc
 OPENSSL_HOST.SunOS-x86_64=	solaris64-x86_64-gcc
 OPENSSL_HOST.Darwin-aarch64=	darwin64-arm64-cc
+
+LDFLAGS.SunOS+=	-lrt
 
 .if defined(OPENSSL_HOST.${OPSYS}-${MACHINE_ARCH})
 CONFIG_SHELL=		${PERL5}
