@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2020/08/17 20:19:20 leot Exp $
+# $NetBSD: Makefile,v 1.105 2020/10/13 09:46:03 hauke Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 MASTER_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}	# for bootstrap kits
@@ -247,7 +247,7 @@ TOOLS_PLATFORM.unzip=
 .endif
 
 # Include binutils for objcopy and GNU strip on SmartOS
-.if ${OS_VARIANT} == "SmartOS"
+.if ${OS_VARIANT} == "SmartOS" || ${OS_VARIANT} == "OmniOS"
 .include "../../devel/binutils/buildlink3.mk"
 BUILDLINK_DEPMETHOD.binutils?=	build
 MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
