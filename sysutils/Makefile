@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.902 2020/10/11 16:40:39 nia Exp $
+# $NetBSD: Makefile,v 1.903 2020/10/13 00:34:06 maya Exp $
 #
 
 COMMENT=	System utilities
@@ -184,6 +184,7 @@ SUBDIR+=	fakeroot
 SUBDIR+=	fam
 SUBDIR+=	fastfs
 SUBDIR+=	fatback
+SUBDIR+=	fd-find
 SUBDIR+=	fdtools
 SUBDIR+=	fdupes
 SUBDIR+=	fff

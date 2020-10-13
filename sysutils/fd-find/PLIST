@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/13 00:34:06 maya Exp $
+bin/fdfind
+man/man1/fdfind.1
