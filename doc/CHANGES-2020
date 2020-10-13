@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5750 2020/10/13 11:15:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5751 2020/10/13 11:16:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8529,3 +8529,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-sniffio to 1.2.0 [adam 2020-10-13]
 	Updated www/py-httpcore to 0.12.0 [adam 2020-10-13]
 	Updated www/py-httpx to 0.16.1 [adam 2020-10-13]
+	Added shells/shellcheck version 0.7.1 [jperkin 2020-10-13]
