@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5744 2020/10/13 00:34:26 maya Exp $
+$NetBSD: CHANGES-2020,v 1.5745 2020/10/13 02:42:36 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8518,3 +8518,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 81.0.2 [maya 2020-10-12]
 	Updated www/firefox-l10n to 81.0.2 [maya 2020-10-12]
 	Added sysutils/fd-find version 8.1.1 [maya 2020-10-13]
+	Added devel/go-walker version 0.1.1 [maya 2020-10-13]
+	Updated sysutils/fzf to 0.23.1 [maya 2020-10-13]
