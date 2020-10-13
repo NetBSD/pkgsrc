@@ -3,12 +3,10 @@ profiling and analysis. It includes a prototypical specification language that
 can be used to formally specify aspects of Python programs and generate tests
 and documentation from a common source.
 
-Modules which constitute the environment:
-
-- Heapy: debugging and optimization regarding memory related issues in Python
-  programs
-- GSL (Guppy Specification Language): describes aspects of a system, especially
-  its API, in a way that can be automatically converted to tests as well as to
-  documents
-- Guppy: umbrella package combining Heapy and GSL with support utilities such as
-  the Glue module that keeps things together
+This package contains the following subpackages:
+* etc - Support modules. Contains especially the Glue protocol module.
+* gsl - The Guppy Specification Language implementation. This can be used
+  to create documents and tests from a common source.
+* heapy - The heap analysis toolset. It can be used to find information about
+  the objects in the heap and display the information in various ways.
+* sets - Bitsets and 'nodesets' implemented in C.
