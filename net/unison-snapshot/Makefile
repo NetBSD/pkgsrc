@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/09/19 14:38:17 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/13 17:14:29 gdt Exp $
 
-DISTNAME=	unison-2.51.2.20200915
-PKGREVISION=	1
+DISTNAME=	unison-2.51.2.20201013
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=     a076f63a6ebd0285ee7e4444c05d3eb3dcead6ca
+GITHUB_TAG=     v2.51.3_rc2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/unison/
@@ -29,6 +28,8 @@ MAKE_FLAGS+=	NATIVE=false
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
 MAKE_FLAGS+=	THREADS=true
 .endif
+
+TEST_TARGET=		test
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	share/doc/unison
