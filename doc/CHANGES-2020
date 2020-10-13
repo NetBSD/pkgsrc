@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5747 2020/10/13 09:05:59 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5748 2020/10/13 10:04:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8523,3 +8523,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/u-boot-orangepi-pc version 2018.11 [maya 2020-10-13]
 	Updated databases/openldap to 2.4.54 [adam 2020-10-13]
 	Updated www/py-aiohttp to 3.6.3 [adam 2020-10-13]
+	Updated mail/swaks to 20201010.0 [schmonz 2020-10-13]
