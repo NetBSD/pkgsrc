@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/10/13 12:08:10 pho Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/13 12:27:11 pho Exp $
 
 DISTNAME=	cabal-install-3.0.0.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	pho@cielonegro.org
@@ -14,6 +14,15 @@ SUBST_STAGE.mandir=	pre-configure
 SUBST_MESSAGE.mandir=	Fixing man page installation path
 SUBST_FILES.mandir+=	Setup.hs
 SUBST_VARS.mandir+=	PKGMANDIR
+
+# cabal-install installs a LICENSE file under
+# share/doc/${PLATFORM}-ghc-${GHC_VERSION}/${PKGNAME}. Variables in
+# paths are usually handled by ../../mk/haskell.mk, but in this case
+# it can't, because the package installs no libraries and therefore
+# doesn't have the package-description file. Remove share/doc to work
+# around this.
+post-install:
+	${RM} -r ${DESTDIR}${PREFIX}/share/doc
 
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
