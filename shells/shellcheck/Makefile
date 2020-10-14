@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2020/10/13 11:16:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/14 00:23:34 gutteridge Exp $
 
 DISTNAME=	ShellCheck-0.7.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	shells devel
 
 MAINTAINER=	pkgsrc-users@pkgsrc.org
+HOMEPAGE=	https://www.shellcheck.net/
 COMMENT=	Shell script analysis tool
 LICENSE=	gnu-gpl-v3
 
