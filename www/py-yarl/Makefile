@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2020/10/02 09:26:18 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/10/14 13:26:36 adam Exp $
 
-DISTNAME=	yarl-1.6.0
+DISTNAME=	yarl-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yarl/}
@@ -17,8 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
-.if ${PYPKGPREFIX} == "py36" || ${PYPKGPREFIX} == "py37"
+.if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 .endif
 
