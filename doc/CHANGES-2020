@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5766 2020/10/14 16:28:55 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5767 2020/10/14 16:37:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8546,3 +8546,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-borgbackup to 1.1.14 [wiz 2020-10-14]
 	Updated graphics/py-cairo to 1.20.0 [wiz 2020-10-14]
 	Updated devel/py-hypothesis to 5.37.1 [wiz 2020-10-14]
+	Updated audio/strawberry to 0.8.1 [wiz 2020-10-14]
