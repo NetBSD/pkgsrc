@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2018/07/17 21:52:25 alnsn Exp $
+$NetBSD: distinfo,v 1.9 2020/10/14 16:39:50 wiz Exp $
 
-SHA1 (lua-5.3.5.tar.gz) = 112eb10ff04d1b4c9898e121d6bdf54a81482447
-RMD160 (lua-5.3.5.tar.gz) = f260c6f60139cb1464d87b5a7d9673e3f305f368
-SHA512 (lua-5.3.5.tar.gz) = 4f9516acc4659dfd0a9e911bfa00c0788f0ad9348e5724fe8fb17aac59e9c0060a64378f82be86f8534e49c6c013e7488ad17321bafcc787831d3d67406bd0f4
-Size (lua-5.3.5.tar.gz) = 303543 bytes
+SHA1 (lua-5.3.6.tar.gz) = f27d20d6c81292149bc4308525a9d6733c224fa5
+RMD160 (lua-5.3.6.tar.gz) = cc715df991bccaec75a022404902200d984b002e
+SHA512 (lua-5.3.6.tar.gz) = ccc380d5e114d54504de0bfb0321ca25ec325d6ff1bfee44b11870b660762d1a9bf120490c027a0088128b58bb6b5271bbc648400cab84d2dc22b512c4841681
+Size (lua-5.3.6.tar.gz) = 303770 bytes
 SHA1 (patch-Makefile) = d7f67017cdd8add3e0ea2d1e857042bc4f130bf5
 SHA1 (patch-src_Makefile) = 2bb9cb27a7da00a62973838ed679e947b27033c0
 SHA1 (patch-src_luaconf.h) = cbe3f9cb9aef10ef52bc26404aa1fc6a960d434d
