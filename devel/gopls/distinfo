@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/09/17 14:59:35 bsiegert Exp $
+$NetBSD: distinfo,v 1.6 2020/10/14 16:23:33 wiz Exp $
 
 SHA1 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 0937ac1d493b480c07bf48073bffe60c2ba902f1
 RMD160 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 722a12078a5d845bfcf238c63a7b7d3a563b48be
@@ -252,10 +252,10 @@ SHA1 (gopkg.in_yaml.v2_@v_v2.2.4.zip) = c5522ade8691550e5dc841c84809180b4a12b8d0
 RMD160 (gopkg.in_yaml.v2_@v_v2.2.4.zip) = 7022398f8f84a9194506a17fbc7d812a36565027
 SHA512 (gopkg.in_yaml.v2_@v_v2.2.4.zip) = a8fa21d2f84f8c6f28250e9ec7d678ae160963eaa0a373f345fe67804925b2647239a6117ad6f253f458f34ec9f62bc21e8f2071fc9dfe76dbd2a7ded1e1a0e0
 Size (gopkg.in_yaml.v2_@v_v2.2.4.zip) = 80160 bytes
-SHA1 (gopls-0.5.0.tar.gz) = 894697a0b4a2420a0f1d0bada5bb833f506434e6
-RMD160 (gopls-0.5.0.tar.gz) = a94af765be1caefb2749a8be8525e7be1aa18b2a
-SHA512 (gopls-0.5.0.tar.gz) = e956effc2da039235e83516cda6a43ad485fdda8faea94e157287e1c6c6a58246403d1bbf3daebabb902681dfd0f989e00feb8608ddd2b9377fbff23a0af9ec1
-Size (gopls-0.5.0.tar.gz) = 2565991 bytes
+SHA1 (gopls-0.5.1.tar.gz) = 03fbc27350e3c545b33d9b2c85c3ec0816135814
+RMD160 (gopls-0.5.1.tar.gz) = 66867c8683c33545dc9801d608c417832212a60d
+SHA512 (gopls-0.5.1.tar.gz) = d73c71fbac6a241447cbb5fca67068da7a1612e3d122675526e322fb6b165c9c643c4b183102293da13d780a6f7288a50a2724f3c300c3970f7c1ba8e149f75c
+Size (gopls-0.5.1.tar.gz) = 2585103 bytes
 SHA1 (honnef.co_go_tools_@v_v0.0.1-2020.1.5.mod) = 884230fa57f95c4a81621167b2e0e4fbfaa02aad
 RMD160 (honnef.co_go_tools_@v_v0.0.1-2020.1.5.mod) = 944c4428ae3ccd14ee1418d612a5a61e8586fc5b
 SHA512 (honnef.co_go_tools_@v_v0.0.1-2020.1.5.mod) = d814675e448688f6a506397bedb262fb2583c913ec1f8ca9ffc11206bdcd7e1f4ee3c561aee366eb2cdaede8c522a6f58f116236f3033bc7e91ec139bdd140f9
