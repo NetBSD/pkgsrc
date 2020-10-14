@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/03/17 01:14:52 tsutsui Exp $
+# $NetBSD: Makefile,v 1.8 2020/10/14 18:49:43 nia Exp $
 
 DISTNAME=	suse-${SUSE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators meta-pkgs
 MASTER_SITES=	# empty
 
@@ -45,6 +45,7 @@ EMUL_MODULES.linux+=	lsb
 EMUL_MODULES.linux+=	motif
 EMUL_MODULES.linux+=	nspr
 EMUL_MODULES.linux+=	nss
+EMUL_MODULES.linux+=	openal
 EMUL_MODULES.linux+=	openldap
 EMUL_MODULES.linux+=	openssl
 EMUL_MODULES.linux+=	png
