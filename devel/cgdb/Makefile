@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2020/03/20 11:57:26 nia Exp $
+# $NetBSD: Makefile,v 1.29 2020/10/14 05:32:16 kamil Exp $
 
-DISTNAME=	cgdb-0.6.8
-PKGREVISION=	1
+DISTNAME=	cgdb-0.7.1
 CATEGORIES=	devel
 MASTER_SITES=	http://cgdb.me/files/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	http://cgdb.sourceforge.net/
 COMMENT=	Curses-based interface to the GNU Debugger (GDB)
 LICENSE=	gnu-gpl-v2
-
-BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake flex
@@ -28,5 +25,7 @@ MAKE_ENV+=	AM_LDFLAGS=-L${WRKSRC}/lib/util/src
 .if ${CURSES_TYPE} == "curses"
 CONFIGURE_ARGS+=	--with-curses
 .endif
+
+USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.pkg.mk"
