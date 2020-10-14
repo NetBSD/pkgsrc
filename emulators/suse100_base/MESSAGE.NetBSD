@@ -1,14 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.5 2020/10/05 16:30:00 nia Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.6 2020/10/14 18:09:13 nia Exp $
 
 Do not forget to modload the compat_linux or compat_linux32 modules.
 Linux binaries require these in order to work. In older NetBSD versions
 these will be autoloaded. Edit /etc/modules.conf to load the modules
 automatically on boot.
-
-Most Linux binaries also require procfs to be mounted with -o linux. This
-can be automated by adding the following to your /etc/fstab:
-
-procfs /emul/linux/proc procfs ro,linux
 
 ===========================================================================
