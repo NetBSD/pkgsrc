@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2020/08/31 20:05:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.65 2020/10/14 10:45:20 nia Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -2149,7 +2149,6 @@ lib/seamonkey/chrome/en-US/locale/en-US/branding/aboutRights.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/branding/aboutRights.properties
 lib/seamonkey/chrome/en-US/locale/en-US/branding/brand.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/branding/brand.properties
-lib/seamonkey/chrome/en-US/locale/en-US/communicator-region/region.properties
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/about.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/aboutPrivateBrowsing.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/aboutSessionRestore.dtd
@@ -4549,3 +4548,9 @@ lib/seamonkey/res/table-remove-row.gif
 lib/seamonkey/run-mozilla.sh
 lib/seamonkey/seamonkey
 lib/seamonkey/seamonkey-bin
+share/applications/seamonkey.desktop
+share/icons/hicolor/128x128/apps/seamonkey.png
+share/icons/hicolor/16x16/apps/seamonkey.png
+share/icons/hicolor/32x32/apps/seamonkey.png
+share/icons/hicolor/48x48/apps/seamonkey.png
+share/icons/hicolor/64x64/apps/seamonkey.png

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.168 2020/08/31 20:05:00 ryoon Exp $
+$NetBSD: distinfo,v 1.169 2020/10/14 10:45:20 nia Exp $
 
-SHA1 (seamonkey-2.53.3.source.tar.xz) = 3e3331c89da9b10e44bf681936d67fb26e30ef2c
-RMD160 (seamonkey-2.53.3.source.tar.xz) = 4ab6423f1563b429c35330036ddff61e3fbe2a1b
-SHA512 (seamonkey-2.53.3.source.tar.xz) = f9465fdf3925d517d8b5dd9d4dd5162b50f39e5a35f61383f4dec89784b5fc4273724195ae98abe30bfb6458ab615f6ac9dcd3a233e7add211fbfdaad0ff5328
-Size (seamonkey-2.53.3.source.tar.xz) = 294208732 bytes
+SHA1 (seamonkey-2.53.4.source.tar.xz) = a46e653d40ce6b1fc0384fa02f52197d9047afd6
+RMD160 (seamonkey-2.53.4.source.tar.xz) = f2d7a0ea8db59f06ce52d8cb38470a342b490938
+SHA512 (seamonkey-2.53.4.source.tar.xz) = 3450d6251f309bee96aa792cdce66b946d841089e0031ccbcf606845b1e0c951d58a8117a9e61e2d2435c1df614110944e5eac7ae9bd08429146bfe7334137fb
+Size (seamonkey-2.53.4.source.tar.xz) = 294513316 bytes
 SHA1 (patch-ldap_c-sdk_include_portable.h) = b262539b92c6822a5ae8c98743d2d71b27bb076a
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = d70faf66d802de613caa6a12cc36d9021caab41d
 SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 174e1766565f576c79019a05c81f010a3ceaee2f
