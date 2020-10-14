@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5755 2020/10/13 21:18:47 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.5756 2020/10/14 05:32:37 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8534,3 +8534,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/blas to 3.9.0nb1 [bacon 2020-10-13]
 	Updated math/lapack to 3.9.0nb1 [bacon 2020-10-13]
 	Updated devel/py-guppy3 to 3.1.0 [gutteridge 2020-10-13]
+	Updated devel/cgdb to 0.7.1 [kamil 2020-10-14]
