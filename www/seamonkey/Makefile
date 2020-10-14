@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.222 2020/08/31 20:05:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.223 2020/10/14 10:45:20 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-SM_VER=		2.53.3
+SM_VER=		2.53.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -70,6 +70,10 @@ SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
 SUBST_SED.cksum+=	-e 's,${from},${to},g'
 .endfor
 
+INSTALLATION_DIRS+=	lib/seamonkey/extensions
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
+
 post-extract:
 	mv ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.S
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/mozilla/media/libcubeb/src
@@ -79,6 +83,10 @@ pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
+	${SED}	-e 's/@MOZ_APP_DISPLAYNAME@/SeaMonkey/g' \
+		-e 's/@MOZ_APP_NAME@/seamonkey/g' \
+		${WRKSRC}/mozilla/toolkit/mozapps/installer/linux/rpm/mozilla.desktop > \
+		${WRKDIR}/seamonkey.desktop
 # If there is no .mozconfig, codegen.pp target fails.
 #	touch ${WRKSRC}/.mozconfig
 
@@ -96,9 +104,19 @@ post-install:
 	  cd "${WRKDIR}/${OBJDIR}/extensions/$$subdir" &&				\
 	  ${UNZIP_CMD} -aqo $$e;					\
 	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/seamonkey/extensions
 	cd ${WRKDIR}/${OBJDIR}/extensions && pax -rw .				\
 	   ${DESTDIR}${PREFIX}/lib/seamonkey/extensions/.
 	rm -rf ${WRKDIR}/${OBJDIR}/extensions
+	${INSTALL_DATA} ${WRKDIR}/seamonkey.desktop \
+		${DESTDIR}${PREFIX}/share/applications/seamonkey.desktop
+	${INSTALL_DATA} ${WRKSRC}/suite/branding/seamonkey/default.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/32x32/apps/seamonkey.png
+.for s in 16 48 64 128
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
+	${INSTALL_DATA} ${WRKSRC}/suite/branding/seamonkey/default${s}.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/seamonkey.png
+.endfor
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
