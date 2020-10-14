@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type='manifest' name='export'>
+<service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+	<dependency name='fs-root' grouping='require_all' restart_on='none' type='service'>
+		<service_fmri value='svc:/system/filesystem/root' />
+	</dependency>
+	<dependency name='network-service' grouping='require_all' restart_on='none' type='service'>
+		<service_fmri value='svc:/network/service'/>
+	</dependency>
+	<dependency name='filesystem' grouping='require_all' restart_on='none' type='service'>
+		<service_fmri value='svc:/system/filesystem/local'/>
+	</dependency>
+	<dependency name='multi-user-server' grouping='optional_all' restart_on='none' type='service'>
+		<service_fmri value='svc:/milestone/multi-user-server' />
+	</dependency>
+
+
+	<instance name='xymonclient' enabled='false'>
+		<exec_method type='method' name='start' exec='@PREFIX@/libexec/xymon/client/runclient.sh start' timeout_seconds='10'>
+			<method_context>
+				<method_credential user='xymon'/>
+			</method_context>
+		</exec_method>
+		
+		<exec_method type='method' name='stop' exec='@PREFIX@/libexec/xymon/client/runclient.sh stop' timeout_seconds='10'>
+			<method_context>
+				<method_credential user='xymon' />
+			</method_context>
+		</exec_method>
+		
+		<exec_method type='method' name='restart' exec='@PREFIX@/libexec/xymon/client/runclient.sh restart' timeout_seconds='10'>
+			<method_context>
+				<method_credential user='xymon' />
+			</method_context>
+		</exec_method>
+		
+		<template>
+			<common_name>
+				<loctext xml:lang='C'>Xymon System Monitor Client</loctext>
+			</common_name>
+			<documentation>
+				<manpage title='xymonclient' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
+			</documentation>
+		</template>
+	</instance>
+
+</service>
+</service_bundle>
