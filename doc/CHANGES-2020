@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5756 2020/10/14 05:32:37 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.5757 2020/10/14 10:45:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8535,3 +8535,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/lapack to 3.9.0nb1 [bacon 2020-10-13]
 	Updated devel/py-guppy3 to 3.1.0 [gutteridge 2020-10-13]
 	Updated devel/cgdb to 0.7.1 [kamil 2020-10-14]
+	Updated www/seamonkey to 2.53.4 [nia 2020-10-14]
