@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2019/10/17 20:35:58 adam Exp $
+# $NetBSD: options.mk,v 1.15 2020/10/14 12:10:44 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex qt
@@ -22,6 +22,7 @@ DEPENDS+=	tex-a4wide>=2010nb1:../../print/tex-a4wide
 DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
 DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 DEPENDS+=	tex-epstopdf-[0-9]*:../../graphics/tex-epstopdf
+DEPENDS+=	tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 
