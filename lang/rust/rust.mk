@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.6 2020/09/27 18:38:35 nia Exp $
+# $NetBSD: rust.mk,v 1.7 2020/10/14 08:23:49 triaxx Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -12,7 +12,7 @@
 #	either bootstrap-from-source or an official binary.
 #
 #	Official Rust binaries are only published for certain platforms,
-#	including Darwin, Linux, and NetBSD x86_64.
+#	including Darwin, FreeBSD, Linux, and NetBSD x86_64.
 #
 #	Possible values: src bin
 #	Default: src
