@@ -1,4 +1,4 @@
-$NetBSD: patch-sysupgrade.sh,v 1.4 2020/10/13 00:50:08 maya Exp $
+$NetBSD: patch-sysupgrade.sh,v 1.5 2020/10/14 09:50:49 maya Exp $
 
 * Don't reject https in sysupgrade_fetch()
 * Add ARCHIVE_EXTENSION variable (Fix PR pkg/53697)
@@ -133,7 +133,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.4 2020/10/13 00:50:08 maya Exp $
      done
  
      shtk_cli_info "Performing postinstall checks"
-@@ -409,10 +426,12 @@ sysupgrade_postinstall() {
+@@ -409,10 +426,13 @@ sysupgrade_postinstall() {
  
  # Cleans up the cache directory.
  sysupgrade_clean() {
@@ -142,7 +142,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.4 2020/10/13 00:50:08 maya Exp $
      [ ${#} -eq 0 ] || shtk_cli_usage_error "clean does not take any arguments"
  
      shtk_cli_info "Cleaning downloaded files"
--    rm -f "$(shtk_config_get CACHEDIR)"/*.*gz*
+     rm -f "$(shtk_config_get CACHEDIR)"/*.*gz*
 +    rm -f "$(shtk_config_get CACHEDIR)"/*.${arch_ext}*
  }
  
