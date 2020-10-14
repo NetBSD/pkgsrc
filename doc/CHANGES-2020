@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5764 2020/10/14 16:26:04 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5765 2020/10/14 16:27:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8544,3 +8544,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/catch2 to 2.13.2 [wiz 2020-10-14]
 	Updated devel/gopls to 0.5.1 [wiz 2020-10-14]
 	Updated sysutils/py-borgbackup to 1.1.14 [wiz 2020-10-14]
+	Updated graphics/py-cairo to 1.20.0 [wiz 2020-10-14]
