@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/09/29 10:32:06 wiz Exp $
+$NetBSD: distinfo,v 1.7 2020/10/14 16:20:06 wiz Exp $
 
-SHA1 (Catch2-2.13.1.tar.gz) = cd82d3964b6b211e6f5e768f42b950b798871006
-RMD160 (Catch2-2.13.1.tar.gz) = 18e9991ef8d461f21c6d766658f74ecb0a75500b
-SHA512 (Catch2-2.13.1.tar.gz) = 2c5394d4ca8346d7d64203048f4ba503c2f813aa2ea7d065ffb9c63f532b7f18daee3e1a4a37314575e33f14259182edd1db030ed254b97a2e3f11d295555397
-Size (Catch2-2.13.1.tar.gz) = 651476 bytes
+SHA1 (Catch2-2.13.2.tar.gz) = 16621762ee1f8d7d07d29e42322d08ebd071b1fa
+RMD160 (Catch2-2.13.2.tar.gz) = 9bf18e333da67f70a40bc428501204ed0f847895
+SHA512 (Catch2-2.13.2.tar.gz) = 90d94d89be231aa23b6d2fd780587addd73fbd96b2d803346e9b0537d27d868e79ff6f6430da6af3df3e4eceb4643a2914a1dd71a15f4173eddb3899d2f6a205
+Size (Catch2-2.13.2.tar.gz) = 653400 bytes
