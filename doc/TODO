@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20129 2020/10/12 12:04:42 pin Exp $
+$NetBSD: TODO,v 1.20130 2020/10/14 00:21:54 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -245,10 +245,6 @@ Suggested new packages
 	http://www.adaptivecomputing.com/products/open-source/torque/
 	Open source batch jobs resource manager, successor to OpenPBS.
 	(Check me when taking on it - asau.)
-
-	shellcheck
-	http://www.shellcheck.net/about.html
-	Static analysis program for POSIX sh, written in haskell
 
 	softether
 	http://www.softether.org/
