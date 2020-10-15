@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2020/10/14 10:45:20 nia Exp $
+# $NetBSD: Makefile,v 1.224 2020/10/15 07:15:40 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.seamonkey-project.org/
-COMMENT=	Full-featured gecko-based browser
+COMMENT=	All-in-one Internet application suite
 LICENSE=	mpl-2.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
