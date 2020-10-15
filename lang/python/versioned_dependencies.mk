@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.45 2020/10/06 10:47:34 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.46 2020/10/15 12:42:10 schmonz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -23,6 +23,8 @@ _SUPPORTED_PACKAGES+=	cairo graphics/py-cairo118 graphics/py-cairo
 _SUPPORTED_PACKAGES+=	cherrypy www/py-cherrypy17 www/py-cherrypy
 _SUPPORTED_PACKAGES+=	dialog devel/py-dialog2 devel/py-dialog
 _SUPPORTED_PACKAGES+=	eliot sysutils/py-eliot17 sysutils/py-eliot
+# XXX feedparser 6.x is not only py27-incompatible, but also 5.x-API-incompatible
+#_SUPPORTED_PACKAGES+=	feedparser textproc/py-feedparser5 textproc/py-feedparser
 _SUPPORTED_PACKAGES+=	html2text textproc/py-html2text-2019.8.11 textproc/py-html2text
 _SUPPORTED_PACKAGES+=	hypothesis devel/py-hypothesis4 devel/py-hypothesis
 _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
