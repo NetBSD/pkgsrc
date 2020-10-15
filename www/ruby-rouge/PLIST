@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/09/09 08:38:03 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/10/15 10:26:28 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -56,6 +56,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/eex
 ${GEM_LIBDIR}/lib/rouge/demos/eiffel
 ${GEM_LIBDIR}/lib/rouge/demos/elixir
 ${GEM_LIBDIR}/lib/rouge/demos/elm
+${GEM_LIBDIR}/lib/rouge/demos/email
 ${GEM_LIBDIR}/lib/rouge/demos/epp
 ${GEM_LIBDIR}/lib/rouge/demos/erb
 ${GEM_LIBDIR}/lib/rouge/demos/erlang
@@ -92,6 +93,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/io
 ${GEM_LIBDIR}/lib/rouge/demos/irb
 ${GEM_LIBDIR}/lib/rouge/demos/irb_output
 ${GEM_LIBDIR}/lib/rouge/demos/isbl
+${GEM_LIBDIR}/lib/rouge/demos/j
 ${GEM_LIBDIR}/lib/rouge/demos/janet
 ${GEM_LIBDIR}/lib/rouge/demos/java
 ${GEM_LIBDIR}/lib/rouge/demos/javascript
@@ -211,6 +213,7 @@ ${GEM_LIBDIR}/lib/rouge/formatter.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html_inline.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html_legacy.rb
+${GEM_LIBDIR}/lib/rouge/formatters/html_line_highlighter.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html_line_table.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html_linewise.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html_pygments.rb
@@ -279,6 +282,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/eex.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/eiffel.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/elixir.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/elm.rb
+${GEM_LIBDIR}/lib/rouge/lexers/email.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/epp.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/erb.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/erlang.rb
@@ -316,6 +320,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/io.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/irb.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/isbl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/isbl/builtins.rb
+${GEM_LIBDIR}/lib/rouge/lexers/j.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/janet.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/java.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/javascript.rb
