@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5776 2020/10/15 16:12:50 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5777 2020/10/15 16:16:35 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8559,3 +8559,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-nbformat to 5.0.8 [adam 2020-10-15]
 	Updated databases/py-alembic to 1.4.3 [adam 2020-10-15]
 	Updated www/apache-tomcat9 to 9.0.39 [otis 2020-10-15]
+	Updated www/apache-tomcat85 to 8.5.59 [otis 2020-10-15]
