@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/17 20:26:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/10/15 13:49:22 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/nbformat/__init__.py
 ${PYSITELIB}/nbformat/__init__.pyc
@@ -15,6 +15,9 @@ ${PYSITELIB}/nbformat/converter.pyo
 ${PYSITELIB}/nbformat/current.py
 ${PYSITELIB}/nbformat/current.pyc
 ${PYSITELIB}/nbformat/current.pyo
+${PYSITELIB}/nbformat/json_compat.py
+${PYSITELIB}/nbformat/json_compat.pyc
+${PYSITELIB}/nbformat/json_compat.pyo
 ${PYSITELIB}/nbformat/notebooknode.py
 ${PYSITELIB}/nbformat/notebooknode.pyc
 ${PYSITELIB}/nbformat/notebooknode.pyo
@@ -34,6 +37,7 @@ ${PYSITELIB}/nbformat/tests/base.py
 ${PYSITELIB}/nbformat/tests/base.pyc
 ${PYSITELIB}/nbformat/tests/base.pyo
 ${PYSITELIB}/nbformat/tests/invalid.ipynb
+${PYSITELIB}/nbformat/tests/many_tracebacks.ipynb
 ${PYSITELIB}/nbformat/tests/test2.ipynb
 ${PYSITELIB}/nbformat/tests/test3.ipynb
 ${PYSITELIB}/nbformat/tests/test4.ipynb
