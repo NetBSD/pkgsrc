@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/21 19:50:22 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/15 12:43:33 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go115/AUTHORS
@@ -313,6 +313,8 @@ go115/misc/cgo/test/testdata/issue29563/weak2.c
 go115/misc/cgo/test/testdata/issue30527.go
 go115/misc/cgo/test/testdata/issue30527/a.go
 go115/misc/cgo/test/testdata/issue30527/b.go
+go115/misc/cgo/test/testdata/issue41761.go
+go115/misc/cgo/test/testdata/issue41761a/a.go
 go115/misc/cgo/test/testdata/issue8756.go
 go115/misc/cgo/test/testdata/issue8756/issue8756.go
 go115/misc/cgo/test/testdata/issue8828.go
@@ -2320,6 +2322,8 @@ go115/src/cmd/go/testdata/script/test_generated_main.txt
 go115/src/cmd/go/testdata/script/test_go111module_cache.txt
 go115/src/cmd/go/testdata/script/test_import_error_stack.txt
 go115/src/cmd/go/testdata/script/test_json.txt
+go115/src/cmd/go/testdata/script/test_json_exit.txt
+go115/src/cmd/go/testdata/script/test_json_interleaved.txt
 go115/src/cmd/go/testdata/script/test_json_panic_exit.txt
 go115/src/cmd/go/testdata/script/test_main.txt
 go115/src/cmd/go/testdata/script/test_main_archive.txt
@@ -2360,6 +2364,7 @@ go115/src/cmd/go/testdata/script/test_vendor.txt
 go115/src/cmd/go/testdata/script/test_vet.txt
 go115/src/cmd/go/testdata/script/test_write_profiles_on_timeout.txt
 go115/src/cmd/go/testdata/script/test_xtestonly_works.txt
+go115/src/cmd/go/testdata/script/testing_issue40908.txt
 go115/src/cmd/go/testdata/script/vendor_complex.txt
 go115/src/cmd/go/testdata/script/vendor_gopath_issue11409.txt
 go115/src/cmd/go/testdata/script/vendor_import.txt
@@ -6011,6 +6016,7 @@ go115/src/runtime/internal/atomic/asm_mips64x.s
 go115/src/runtime/internal/atomic/asm_mipsx.s
 go115/src/runtime/internal/atomic/asm_ppc64x.s
 go115/src/runtime/internal/atomic/asm_s390x.s
+go115/src/runtime/internal/atomic/asm_wasm.s
 go115/src/runtime/internal/atomic/atomic_386.go
 go115/src/runtime/internal/atomic/atomic_amd64.go
 go115/src/runtime/internal/atomic/atomic_arm.go
@@ -8921,13 +8927,18 @@ go115/test/fixedbugs/issue39472.go
 go115/test/fixedbugs/issue39541.go
 go115/test/fixedbugs/issue39651.go
 go115/test/fixedbugs/issue40367.go
+go115/test/fixedbugs/issue40629.go
 go115/test/fixedbugs/issue4066.go
+go115/test/fixedbugs/issue40746.go
 go115/test/fixedbugs/issue4085a.go
 go115/test/fixedbugs/issue4085b.go
+go115/test/fixedbugs/issue40917.go
+go115/test/fixedbugs/issue40954.go
 go115/test/fixedbugs/issue4097.go
 go115/test/fixedbugs/issue4099.go
 go115/test/fixedbugs/issue4162.go
 go115/test/fixedbugs/issue4167.go
+go115/test/fixedbugs/issue41711.go
 go115/test/fixedbugs/issue4215.go
 go115/test/fixedbugs/issue4232.go
 go115/test/fixedbugs/issue4251.go
