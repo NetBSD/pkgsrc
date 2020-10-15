@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.48 2019/11/03 10:39:12 rillig Exp $
+# $NetBSD: builtin.mk,v 1.49 2020/10/15 23:32:07 mcf Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -126,6 +126,13 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
 .        if empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
 	    empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)
 CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl="yes"
+.        endif
+.      else
+CONFIGURE_ENV+=		gt_cv_func_gnugettext_libc="yes"
+CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libc="yes"
+.        if empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
+	    empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)
+CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libc="yes"
 .        endif
 .      endif
 .    endif
