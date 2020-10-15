@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/07/17 17:20:05 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/10/15 12:01:14 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go114/AUTHORS
@@ -457,6 +457,8 @@ go114/misc/cgo/testshared/testdata/exe2/exe2.go
 go114/misc/cgo/testshared/testdata/exe3/exe3.go
 go114/misc/cgo/testshared/testdata/execgo/exe.go
 go114/misc/cgo/testshared/testdata/explicit/explicit.go
+go114/misc/cgo/testshared/testdata/gcdata/main/main.go
+go114/misc/cgo/testshared/testdata/gcdata/p/p.go
 go114/misc/cgo/testshared/testdata/global/main.go
 go114/misc/cgo/testshared/testdata/globallib/global.go
 go114/misc/cgo/testshared/testdata/iface/main.go
@@ -2178,6 +2180,7 @@ go114/src/cmd/go/testdata/script/test_flag.txt
 go114/src/cmd/go/testdata/script/test_generated_main.txt
 go114/src/cmd/go/testdata/script/test_go111module_cache.txt
 go114/src/cmd/go/testdata/script/test_import_error_stack.txt
+go114/src/cmd/go/testdata/script/test_json_interleaved.txt
 go114/src/cmd/go/testdata/script/test_json_panic_exit.txt
 go114/src/cmd/go/testdata/script/test_main_archive.txt
 go114/src/cmd/go/testdata/script/test_main_panic.txt
@@ -8614,9 +8617,13 @@ go114/test/fixedbugs/issue38117.go
 go114/test/fixedbugs/issue3925.go
 go114/test/fixedbugs/issue39459.go
 go114/test/fixedbugs/issue39541.go
+go114/test/fixedbugs/issue39651.go
+go114/test/fixedbugs/issue40367.go
+go114/test/fixedbugs/issue40629.go
 go114/test/fixedbugs/issue4066.go
 go114/test/fixedbugs/issue4085a.go
 go114/test/fixedbugs/issue4085b.go
+go114/test/fixedbugs/issue40917.go
 go114/test/fixedbugs/issue4097.go
 go114/test/fixedbugs/issue4099.go
 go114/test/fixedbugs/issue4162.go
