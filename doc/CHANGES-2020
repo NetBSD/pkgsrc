@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5775 2020/10/15 13:54:12 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5776 2020/10/15 16:12:50 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8558,3 +8558,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-authlib to 0.15.1 [adam 2020-10-15]
 	Updated www/py-nbformat to 5.0.8 [adam 2020-10-15]
 	Updated databases/py-alembic to 1.4.3 [adam 2020-10-15]
+	Updated www/apache-tomcat9 to 9.0.39 [otis 2020-10-15]
