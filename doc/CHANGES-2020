@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5779 2020/10/15 16:35:01 fox Exp $
+$NetBSD: CHANGES-2020,v 1.5780 2020/10/15 19:22:44 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8562,3 +8562,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/apache-tomcat85 to 8.5.59 [otis 2020-10-15]
 	Updated www/apache-tomcat7 to 7.0.106 [otis 2020-10-15]
 	Updated print/foliate to 2.5.0 [fox 2020-10-15]
+	Updated textproc/hfstospell to 0.5.2 [bsiegert 2020-10-15]
