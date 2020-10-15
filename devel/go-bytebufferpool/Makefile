@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/09/03 07:29:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2020/10/15 13:08:14 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	go-bytebufferpool-1.0.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=valyala/}
 GITHUB_PROJECT=	bytebufferpool
