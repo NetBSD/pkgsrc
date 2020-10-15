@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2020/08/18 17:58:17 leot Exp $
+# $NetBSD: Makefile,v 1.116 2020/10/15 20:26:35 mrg Exp $
 
 DISTNAME=	kde-runtime-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
@@ -75,7 +75,6 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
-.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 #.include "../../lang/python/application.mk"
 # not the libssh the package wants
