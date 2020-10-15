@@ -1,7 +1,16 @@
-The SeaMonkey project is a community effort to deliver production-quality
-releases of code derived from the application formerly known as "Mozilla
-Application Suite". Whereas the main focus of the Mozilla Foundation is on
-Mozilla Firefox and Mozilla Thunderbird, our group of dedicated volunteers
-works to ensure that you can have "everything but the kitchen sink" (a web
-browser, mail client, HTML composer, address book, and calendar), and have
-it stable enough for corporate use.
+The SeaMonkey project is a community effort to develop the SeaMonkey Internet
+Application Suite.
+
+- The Internet browser at the core of the SeaMonkey Internet Application
+Suite uses the same rendering engine and application platform as Mozilla
+Firefox, with popular features like tabbed browsing, feed detection, popup
+blocking, smart location bar, find as you type and a lot of other functionality
+for a smooth web experience.
+
+- SeaMonkey's Mail and Newsgroups client shares lots of code with Thunderbird
+and features adaptive Junk mail filtering, tags and mail views, web feeds
+reading, tabbed messaging, multiple accounts, S/MIME, address books with
+LDAP support and is ready for both private and corporate use.
+
+- Additional components include an easy-to-use HTML Editor, the ChatZilla
+IRC chat application and web development tools like a DOM Inspector.
