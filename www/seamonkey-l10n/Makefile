@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2020/08/31 20:05:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2020/10/15 08:10:39 nia Exp $
 #
 
-SM_VER=		2.53.3
+SM_VER=		2.53.4
 PKGNAME=	seamonkey-l10n-${SM_VER:S/b/beta/}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.seamonkey-project.org/
 COMMENT=	Language packs for www/seamonkey
 
-DEPENDS+=	seamonkey>=${PKGVERSION_NOREV}:../../www/seamonkey
+#DEPENDS+=	seamonkey>=${PKGVERSION_NOREV}:../../www/seamonkey
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${SM_LOCALES:C/.*/seamonkey-${SM_VER}.&.langpack.xpi/}
