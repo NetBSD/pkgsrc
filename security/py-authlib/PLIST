@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/10/10 18:04:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/10/15 13:46:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -221,6 +221,12 @@ ${PYSITELIB}/authlib/jose/rfc7516/models.pyo
 ${PYSITELIB}/authlib/jose/rfc7517/__init__.py
 ${PYSITELIB}/authlib/jose/rfc7517/__init__.pyc
 ${PYSITELIB}/authlib/jose/rfc7517/__init__.pyo
+${PYSITELIB}/authlib/jose/rfc7517/_cryptography_key.py
+${PYSITELIB}/authlib/jose/rfc7517/_cryptography_key.pyc
+${PYSITELIB}/authlib/jose/rfc7517/_cryptography_key.pyo
+${PYSITELIB}/authlib/jose/rfc7517/jwk.py
+${PYSITELIB}/authlib/jose/rfc7517/jwk.pyc
+${PYSITELIB}/authlib/jose/rfc7517/jwk.pyo
 ${PYSITELIB}/authlib/jose/rfc7517/models.py
 ${PYSITELIB}/authlib/jose/rfc7517/models.pyc
 ${PYSITELIB}/authlib/jose/rfc7517/models.pyo
