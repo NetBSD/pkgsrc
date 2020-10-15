@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/10/05 12:19:13 otis Exp $
+# $NetBSD: Makefile,v 1.17 2020/10/15 16:16:24 otis Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -10,8 +10,11 @@ HOMEPAGE=	https://tomcat.apache.org/
 COMMENT=	Implementation of Java Servlet and JavaServer Pages technologies
 LICENSE=	apache-2.0
 
-CONFLICTS+=	jakarta-tomcat55-[0-9]*
-CONFLICTS+=	jakarta-tomcat-[0-9]*
+CONFLICTS+=	apache-tomcat55-[0-9]*
+CONFLICTS+=	apache-tomcat6-[0-9]*
+CONFLICTS+=	apache-tomcat7-[0-9]*
+CONFLICTS+=	apache-tomcat8-[0-9]*
+CONFLICTS+=	apache-tomcat9-[0-9]*
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
@@ -21,7 +24,7 @@ USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
-TOMCAT_VER=		8.5.58
+TOMCAT_VER=		8.5.59
 TOMCAT_HOME=		${PREFIX}/share/tomcat
 EGDIR=			${PREFIX}/share/examples/tomcat
 DOCDIR=			${PREFIX}/share/doc/tomcat
