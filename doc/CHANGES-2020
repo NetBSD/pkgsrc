@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5770 2020/10/15 01:26:39 tpaul Exp $
+$NetBSD: CHANGES-2020,v 1.5771 2020/10/15 04:42:45 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8550,3 +8550,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/lua53 to 5.3.6 [wiz 2020-10-14]
 	Updated lang/lua54 to 5.4.1 [wiz 2020-10-14]
 	Updated devel/php-composer to 1.10.15 [tpaul 2020-10-15]
+	Updated www/bozohttpd to 20201014 [mrg 2020-10-15]
