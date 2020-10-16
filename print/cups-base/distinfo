@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2020/05/26 08:36:55 triaxx Exp $
+$NetBSD: distinfo,v 1.22 2020/10/16 15:29:25 prlw1 Exp $
 
 SHA1 (cups-2.3.3-source.tar.gz) = 7a01c9fba5d784eb61eda03fd40e513fd2a1b5b8
 RMD160 (cups-2.3.3-source.tar.gz) = e08afd09666e79d0416f46e14fb8c6b0a6beebd7
@@ -16,6 +16,7 @@ SHA1 (patch-conf-cups-files.conf.in) = b2eccf54e108d8c9e70094acfd9618a66779a84a
 SHA1 (patch-conf_Makefile) = ba1c6f9e5c1bb8074038f65f4d17bf55e556738e
 SHA1 (patch-config-scripts_cups-compiler.m4) = 71c706121fdf7db699a9b9365ac63779e3c23f67
 SHA1 (patch-config-scripts_cups-directories.m4) = 68ff0c9ed333d5b00d11694fca7875c83bf9197d
+SHA1 (patch-config-scripts_cups-dnssd.m4) = 7dd3b0d754e92f3b3f53732163a8001e5fb430c5
 SHA1 (patch-config-scripts_cups-gssapi.m4) = 965e54194de9f34f0f252f4993dcf8a8db935003
 SHA1 (patch-config-scripts_cups-libtool.m4) = d255bda2b740a04167e20be1662e3b9c242ed8f2
 SHA1 (patch-cups-tls.c) = b02bc528b6d551283373f271529d6f1956e1c7df
