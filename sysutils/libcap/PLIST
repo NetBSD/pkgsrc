@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/08 14:29:53 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/16 22:33:49 mcf Exp $
 include/sys/capability.h
+include/sys/psx_syscall.h
 lib/libcap.a
 lib/libcap.so
 lib/libcap.so.2
 lib/libcap.so.${PKGVERSION}
+lib/libpsx.a
 lib/pkgconfig/libcap.pc
+lib/pkgconfig/libpsx.pc
 man/man1/capsh.1
 man/man3/cap_clear.3
 man/man3/cap_clear_flag.3
@@ -20,20 +23,32 @@ man/man3/cap_get_bound.3
 man/man3/cap_get_fd.3
 man/man3/cap_get_file.3
 man/man3/cap_get_flag.3
+man/man3/cap_get_mode.3
 man/man3/cap_get_pid.3
 man/man3/cap_get_proc.3
+man/man3/cap_get_secbits.3
 man/man3/cap_init.3
+man/man3/cap_mode_name.3
 man/man3/cap_set_fd.3
 man/man3/cap_set_file.3
 man/man3/cap_set_flag.3
+man/man3/cap_set_mode.3
 man/man3/cap_set_proc.3
+man/man3/cap_set_secbits.3
+man/man3/cap_setgroups.3
+man/man3/cap_setuid.3
 man/man3/cap_size.3
 man/man3/cap_to_name.3
 man/man3/cap_to_text.3
 man/man3/capgetp.3
 man/man3/capsetp.3
 man/man3/libcap.3
+man/man3/libpsx.3
+man/man3/psx_syscall.3
+man/man3/psx_syscall3.3
+man/man3/psx_syscall6.3
 man/man8/getcap.8
+man/man8/getpcaps.8
 man/man8/setcap.8
 sbin/capsh
 sbin/getcap
