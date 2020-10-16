@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/05/16 18:07:56 maya Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/10/16 15:29:25 prlw1 Exp $
 bin/cancel
 bin/cupstestppd
 bin/ippeveprinter
@@ -697,6 +697,7 @@ share/doc/cups/help/man-cupstestppd.html
 share/doc/cups/help/man-filter.html
 share/doc/cups/help/man-ippevepcl.html
 share/doc/cups/help/man-ippeveprinter.html
+${PLIST.ippfind}share/doc/cups/help/man-ippfind.html
 share/doc/cups/help/man-ipptool.html
 share/doc/cups/help/man-ipptoolfile.html
 share/doc/cups/help/man-lp.html
