@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/03/22 12:24:58 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/10/16 11:46:39 rin Exp $
 #
 
 DISTNAME=	acpica-unix2-20160930
@@ -51,8 +51,13 @@ do-test:
 
 .include "../../mk/compiler.mk"
 
+# XXX
 .if !empty(CC_VERSION:Mgcc-[89]*)
 CFLAGS+=	-Wno-error=format-truncation
+.endif
+.if !empty(CC_VERSION:Mgcc-9*)
+CFLAGS+=	-Wno-error=format-overflow \
+		-Wno-error=stringop-truncation
 .endif
 
 .include "../../mk/bsd.pkg.mk"
