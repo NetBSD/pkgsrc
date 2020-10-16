@@ -9,11 +9,10 @@ Caching resolver for the local machine:
 - Run "@RCD_SCRIPTS_DIR@/dnscache start".
 
 Authoritative name server:
-- Set tinydns=YES in /etc/rc.conf.
+- Set tinydns=YES axfrdns=YES in /etc/rc.conf.
 - Create @PKG_SYSCONFDIR@/tinydns/data with suitable contents.
 - Run "@RCD_SCRIPTS_DIR@/tinydns start".
-- For TCP service (if needed), set axfrdns=YES in /etc/rc.conf
-  and run "@RCD_SCRIPTS_DIR@/axfrdns start".
+  and "@RCD_SCRIPTS_DIR@/axfrdns start".
 
 RBL name server:
 - Set rbldns=YES in /etc/rc.conf (and rbldns_ip to a suitable IP address).
