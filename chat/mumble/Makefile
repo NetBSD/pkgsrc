@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2020/08/18 17:57:41 leot Exp $
+# $NetBSD: Makefile,v 1.24 2020/10/16 07:42:48 nia Exp $
 
-DISTNAME=	mumble-1.3.2
-PKGREVISION=	2
+DISTNAME=	mumble-1.3.3
 CATEGORIES=	chat audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mumble-voip/}
 GITHUB_PROJECT=	mumble
@@ -15,7 +14,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 PYTHON_FOR_BUILD_ONLY=	tool
@@ -50,10 +49,8 @@ CONFIG_OPTIONS+=	CONFIG+=no-ice
 .if ${OSS_TYPE} != "none"
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
-SUBST_MESSAGE.oss=	Correct path to OSS device.
+SUBST_MESSAGE.oss=	Setting the OSS library.
 SUBST_FILES.oss+=	src/mumble/mumble.pro
-SUBST_FILES.oss+=	src/mumble/OSS.cpp
-SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_VARS.oss+=	LIBOSSAUDIO
 .endif
 
