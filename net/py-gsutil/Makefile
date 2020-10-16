@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/08/03 08:44:24 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/10/16 07:41:10 bsiegert Exp $
 
-DISTNAME=	gsutil-4.52
+DISTNAME=	gsutil-4.53
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gsutil/}
@@ -18,14 +18,13 @@ REPLACE_PYTHON+=	gslib/vendored/oauth2client/samples/django/django_user/manage.p
 REPLACE_PYTHON+=	gslib/vendored/oauth2client/samples/django/google_user/manage.py
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-SocksiPy-branch>=1.01:../../net/py-socksipy-branch
 DEPENDS+=	${PYPKGPREFIX}-argcomplete>=1.9.4:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-crcmod>=1.7:../../security/py-crcmod
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
-DEPENDS+=	${PYPKGPREFIX}-gcs-oauth2-boto-plugin>=2.5:../../net/py-gcs-oauth2-boto-plugin
+DEPENDS+=	${PYPKGPREFIX}-gcs-oauth2-boto-plugin>=2.7:../../net/py-gcs-oauth2-boto-plugin
 DEPENDS+=	${PYPKGPREFIX}-google-apitools>=0.5.30:../../www/py-google-apitools
 DEPENDS+=	${PYPKGPREFIX}-google-reauth>=0.1.0:../../security/py-google-reauth
-DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.11.3:../../www/py-httplib2
+DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.18:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-monotonic>=1.4:../../time/py-monotonic
 DEPENDS+=	${PYPKGPREFIX}-retry_decorator>=1.0.0:../../devel/py-retry_decorator
