@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/06/25 10:01:51 leot Exp $
+# $NetBSD: options.mk,v 1.4 2020/10/16 15:29:25 prlw1 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups-base
 PKG_SUPPORTED_OPTIONS=	acl dnssd kerberos pam tcpwrappers
@@ -58,6 +58,7 @@ CONFIGURE_ARGS+=	--disable-dbus
 CONFIGURE_ARGS+=	--enable-dnssd
 PLIST.dnssd=		yes
 PLIST.dnssd-backend=	yes
+PLIST.ippfind=		yes
 .else
 CONFIGURE_ARGS+=	--disable-dnssd
 .endif
