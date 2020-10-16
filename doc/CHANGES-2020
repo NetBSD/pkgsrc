@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5787 2020/10/16 11:35:09 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5788 2020/10/16 15:11:35 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8571,3 +8571,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/djbdns-run to 20201016 [schmonz 2020-10-16]
 	Updated net/tinydyndns to 0.4.2nb1 [schmonz 2020-10-16]
 	Updated finance/gnucash-docs to 4.2 [wiz 2020-10-16]
+	Updated print/cups-base to 2.3.3nb6 [prlw1 2020-10-16]
