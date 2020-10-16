@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: axfrdns.sh,v 1.10 2019/01/07 14:01:55 schmonz Exp $
+# $NetBSD: axfrdns.sh,v 1.11 2020/10/16 09:28:15 schmonz Exp $
 #
 # @PKGNAME@ script to control axfrdns (DNS zone-transfer and TCP service).
 #
@@ -13,7 +13,7 @@ name="axfrdns"
 
 # User-settable rc.conf variables and their default values:
 : ${axfrdns_postenv:=""}
-: ${tinydns_ip:="@TINYDNS_LISTENIP@"}
+: ${axfrdns_ip:="@TINYDNS_LISTENIP@"}
 : ${axfrdns_datalimit:="300000"}
 : ${axfrdns_pretcpserver:=""}
 : ${axfrdns_tcpserver:="@PREFIX@/bin/tcpserver"}
@@ -47,16 +47,16 @@ axfrdns_precmd() {
 	fi
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
-	# service. Use argv0(1) to set procname to "axfrdns".
+	# service. Use argv0(1) to set procname to "nbaxfrdns".
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${axfrdns_postenv} \
 ROOT=@PKG_SYSCONFDIR@/tinydns \
-IP=${tinydns_ip} \
+IP=${axfrdns_ip} \
 @PREFIX@/bin/envuidgid @DJBDNS_AXFR_USER@ \
 @PREFIX@/bin/softlimit -d ${axfrdns_datalimit} ${axfrdns_pretcpserver} \
 @PREFIX@/bin/argv0 ${axfrdns_tcpserver} ${procname} \
 ${axfrdns_tcpflags} -x ${axfrdns_tcprules}.cdb \
 -- \
-${tinydns_ip} ${axfrdns_tcpport} \
+${axfrdns_ip} ${axfrdns_tcpport} \
 @PREFIX@/bin/${name} \
 </dev/null 2>&1 | \
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @DJBDNS_LOG_USER@ ${axfrdns_logcmd}"
