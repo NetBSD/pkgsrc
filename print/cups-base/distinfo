@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.22 2020/10/16 15:29:25 prlw1 Exp $
+$NetBSD: distinfo,v 1.23 2020/10/16 16:31:43 prlw1 Exp $
 
 SHA1 (cups-2.3.3-source.tar.gz) = 7a01c9fba5d784eb61eda03fd40e513fd2a1b5b8
 RMD160 (cups-2.3.3-source.tar.gz) = e08afd09666e79d0416f46e14fb8c6b0a6beebd7
 SHA512 (cups-2.3.3-source.tar.gz) = 7d6f4a01794c5599cc71525778ea785fd17271c31ac146a56e8fc374a88f99e4035d018dae48e37e541455e9cc93b302e892b2e93ec558c1b4bfc46dad68c92d
 Size (cups-2.3.3-source.tar.gz) = 8140741 bytes
 SHA1 (patch-ae) = b81d7a2ce457f0d6994d6a084c63aa0a870bb881
-SHA1 (patch-af) = e72b6089ce1bf0c9bfa2eb60fbf5aa41f53f2ef1
+SHA1 (patch-af) = 7f32b1ddaa18d1e58670e5214b954e3b8476a22b
 SHA1 (patch-ai) = d4aa1b59c77fa2cbf614eb661d9a791311b399c2
 SHA1 (patch-airprint-conf_mime.convs.in) = e0813b7e1da2337191bc6bfc2a6888f4173b8717
 SHA1 (patch-airprint-scheduler_conf.c) = 504e752c1699049cdbe11d8b04814670ddda81d4
