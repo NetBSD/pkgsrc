@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5794 2020/10/17 11:42:48 js Exp $
+$NetBSD: CHANGES-2020,v 1.5795 2020/10/17 12:29:42 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8577,3 +8577,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/oniguruma to 6.9.6rc3 [kim 2020-10-17]
 	Updated mail/swaks to 20201014.0 [schmonz 2020-10-17]
 	Updated chat/matrix-synapse to 1.21.2 [js 2020-10-17]
+	Updated multimedia/sickgear to 0.22.5 [js 2020-10-17]
