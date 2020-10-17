@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/08/31 22:03:45 js Exp $
+$NetBSD: distinfo,v 1.3 2020/10/17 13:53:55 js Exp $
 
-SHA1 (canonicaljson-1.3.0.tar.gz) = c8dd6ca407c6f495ce0665fc3320e9f4dc73ebe1
-RMD160 (canonicaljson-1.3.0.tar.gz) = a800239cce38a9f05944665763d7101d8ecd207f
-SHA512 (canonicaljson-1.3.0.tar.gz) = b11e48800a19b9b6a933df90eaa8402fdf07e7913ed372644c7502a066f1edf686241271904d0e419a8390c599b2f7c3c0d35af43761c7b0c70c35f31e762f37
-Size (canonicaljson-1.3.0.tar.gz) = 9572 bytes
+SHA1 (canonicaljson-1.4.0.tar.gz) = 936d97488e9305ab08d4fa55359de47f14d8a823
+RMD160 (canonicaljson-1.4.0.tar.gz) = 1e9629d32087229181be9b2d61f0aa73a3c75538
+SHA512 (canonicaljson-1.4.0.tar.gz) = 02335921858f726f5403083ea6e1327500095de6a5971917e05e6f9eb8be094ac5b6594334d2b21da4292cde35a968019701c43addccb53209ec9e6a69c468d1
+Size (canonicaljson-1.4.0.tar.gz) = 9863 bytes
