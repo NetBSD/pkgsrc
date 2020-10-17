@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/08/31 22:03:45 js Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/17 13:53:55 js Exp $
 
-DISTNAME=	canonicaljson-1.3.0
+DISTNAME=	canonicaljson-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/canonicaljson/}
