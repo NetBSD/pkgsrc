@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/10/04 18:36:41 js Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/17 16:22:23 js Exp $
 
 DISTNAME=	mautrix-hangouts-0.1.3
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,6 +11,7 @@ HOMEPAGE=	https://github.com/tulir/mautrix-hangouts
 COMMENT=	Matrix-Hangouts puppeting bridge
 LICENSE=	gnu-agpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.2<2:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1<2:../../databases/py-alembic
