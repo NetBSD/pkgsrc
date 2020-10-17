@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/09/22 21:21:51 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/10/17 11:42:35 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -717,6 +717,7 @@ ${PYSITELIB}/synapse/res/templates/add_threepid.html
 ${PYSITELIB}/synapse/res/templates/add_threepid.txt
 ${PYSITELIB}/synapse/res/templates/add_threepid_failure.html
 ${PYSITELIB}/synapse/res/templates/add_threepid_success.html
+${PYSITELIB}/synapse/res/templates/auth_success.html
 ${PYSITELIB}/synapse/res/templates/invalid_token.html
 ${PYSITELIB}/synapse/res/templates/mail-Element.css
 ${PYSITELIB}/synapse/res/templates/mail-Vector.css
@@ -730,20 +731,22 @@ ${PYSITELIB}/synapse/res/templates/notif_mail.html
 ${PYSITELIB}/synapse/res/templates/notif_mail.txt
 ${PYSITELIB}/synapse/res/templates/password_reset.html
 ${PYSITELIB}/synapse/res/templates/password_reset.txt
+${PYSITELIB}/synapse/res/templates/password_reset_confirmation.html
 ${PYSITELIB}/synapse/res/templates/password_reset_failure.html
 ${PYSITELIB}/synapse/res/templates/password_reset_success.html
+${PYSITELIB}/synapse/res/templates/recaptcha.html
 ${PYSITELIB}/synapse/res/templates/registration.html
 ${PYSITELIB}/synapse/res/templates/registration.txt
 ${PYSITELIB}/synapse/res/templates/registration_failure.html
 ${PYSITELIB}/synapse/res/templates/registration_success.html
 ${PYSITELIB}/synapse/res/templates/room.html
 ${PYSITELIB}/synapse/res/templates/room.txt
-${PYSITELIB}/synapse/res/templates/saml_error.html
 ${PYSITELIB}/synapse/res/templates/sso_account_deactivated.html
 ${PYSITELIB}/synapse/res/templates/sso_auth_confirm.html
 ${PYSITELIB}/synapse/res/templates/sso_auth_success.html
 ${PYSITELIB}/synapse/res/templates/sso_error.html
 ${PYSITELIB}/synapse/res/templates/sso_redirect_confirm.html
+${PYSITELIB}/synapse/res/templates/terms.html
 ${PYSITELIB}/synapse/rest/__init__.py
 ${PYSITELIB}/synapse/rest/__init__.pyc
 ${PYSITELIB}/synapse/rest/__init__.pyo
@@ -756,6 +759,9 @@ ${PYSITELIB}/synapse/rest/admin/_base.pyo
 ${PYSITELIB}/synapse/rest/admin/devices.py
 ${PYSITELIB}/synapse/rest/admin/devices.pyc
 ${PYSITELIB}/synapse/rest/admin/devices.pyo
+${PYSITELIB}/synapse/rest/admin/event_reports.py
+${PYSITELIB}/synapse/rest/admin/event_reports.pyc
+${PYSITELIB}/synapse/rest/admin/event_reports.pyo
 ${PYSITELIB}/synapse/rest/admin/groups.py
 ${PYSITELIB}/synapse/rest/admin/groups.pyc
 ${PYSITELIB}/synapse/rest/admin/groups.pyo
@@ -978,6 +984,15 @@ ${PYSITELIB}/synapse/rest/saml2/metadata_resource.pyo
 ${PYSITELIB}/synapse/rest/saml2/response_resource.py
 ${PYSITELIB}/synapse/rest/saml2/response_resource.pyc
 ${PYSITELIB}/synapse/rest/saml2/response_resource.pyo
+${PYSITELIB}/synapse/rest/synapse/__init__.py
+${PYSITELIB}/synapse/rest/synapse/__init__.pyc
+${PYSITELIB}/synapse/rest/synapse/__init__.pyo
+${PYSITELIB}/synapse/rest/synapse/client/__init__.py
+${PYSITELIB}/synapse/rest/synapse/client/__init__.pyc
+${PYSITELIB}/synapse/rest/synapse/client/__init__.pyo
+${PYSITELIB}/synapse/rest/synapse/client/password_reset.py
+${PYSITELIB}/synapse/rest/synapse/client/password_reset.pyc
+${PYSITELIB}/synapse/rest/synapse/client/password_reset.pyo
 ${PYSITELIB}/synapse/rest/well_known.py
 ${PYSITELIB}/synapse/rest/well_known.pyc
 ${PYSITELIB}/synapse/rest/well_known.pyo
@@ -1370,10 +1385,13 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/05cache_instance.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/06dlols_unique_idx.py
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/06dlols_unique_idx.pyc
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/06dlols_unique_idx.pyo
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/07add_method_to_thumbnail_constraint.sql.postgres
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/07add_method_to_thumbnail_constraint.sql.sqlite
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/07persist_ui_auth_ips.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/08_media_safe_from_quarantine.sql.postgres
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/08_media_safe_from_quarantine.sql.sqlite
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/09shadow_ban.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/10_pushrules_enabled_delete_obsolete.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/10drop_local_rejections_stream.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/10federation_pos_instance_name.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/11user_id_seq.py
@@ -1381,7 +1399,13 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/11user_id_seq.pyc
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/11user_id_seq.pyo
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/12room_stats.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/13remove_presence_allow_inbound.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/14events_instance_name.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/14events_instance_name.sql.postgres
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/15_catchup_destination_rooms.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/15unread_count.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/16populate_stats_process_rooms_fix.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/17_catchup_last_successful.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/18stream_positions.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_signatures.sql
