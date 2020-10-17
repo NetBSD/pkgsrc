@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.184 2020/10/17 07:22:15 mrg Exp $
+$NetBSD: distinfo,v 1.185 2020/10/17 21:48:41 mrg Exp $
 
 SHA1 (node-v14.13.1.tar.xz) = 2bed8e2334d0a71a2e430539ae075e519642732e
 RMD160 (node-v14.13.1.tar.xz) = 64015436572aed17a85acf2078be7e2e6a746607
@@ -25,3 +25,4 @@ SHA1 (patch-src_node__postmortem__metadata.cc) = 9938482d724ad6636af5dc3fa719ec2
 SHA1 (patch-tools_gyp_pylib_gyp_generator_make.py) = 34d4f113d85b4502bc8240fac50dc37554ab4ebb
 SHA1 (patch-tools_gyp_pylib_gyp_xcode__emulation.py) = 4ee24115f5e97ffbd23aaa6dc62f408d381d4e22
 SHA1 (patch-tools_install.py) = 8058eb63387971b97a1c3573d1875befeb873e77
+SHA1 (patch-tools_v8_gypfiles_v8.gyp) = 49cfd4fa8a8122c6f74965a2e87bbca6d0e44efc
