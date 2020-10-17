@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/10/04 11:53:27 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/17 16:44:37 js Exp $
 
 DISTNAME=	maubot-0.1.0
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maubot/}
 
@@ -24,8 +25,9 @@ DEPENDS+=	${PYPKGPREFIX}-inquirer>=1<2:../../devel/py-inquirer
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2<3:../../textproc/py-jinja2
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+ 
+# 36 is too old, 39 doesn't work.
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36 39
 
 INSTALLATION_DIRS+=	share/maubot
 
