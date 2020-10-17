@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5795 2020/10/17 12:29:42 js Exp $
+$NetBSD: CHANGES-2020,v 1.5796 2020/10/17 12:54:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8578,3 +8578,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/swaks to 20201014.0 [schmonz 2020-10-17]
 	Updated chat/matrix-synapse to 1.21.2 [js 2020-10-17]
 	Updated multimedia/sickgear to 0.22.5 [js 2020-10-17]
+	Updated cad/gtkwave to 3.3.107 [mef 2020-10-17]
