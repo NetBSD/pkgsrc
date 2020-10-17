@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/17 13:39:45 maya Exp $
+bin/delta
