@@ -1,7 +1,8 @@
-# $NetBSD: url2pkg_test.py,v 1.26 2019/11/18 07:56:02 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.27 2020/10/17 22:39:01 rillig Exp $
 
 import pytest
 from url2pkg import *
+from textwrap import dedent
 
 mkcvsid = '# $''NetBSD$'
 g: Globals
@@ -943,15 +944,61 @@ def test_Adjuster_adjust_cargo__not_found(tmp_path: Path):
     assert str_vars(adjuster.build_vars) == []
 
 
-def test_Adjuster_adjust_cargo__found(tmp_path: Path):
+def test_Adjuster_adjust_cargo__before_0_39(tmp_path: Path):
     adjuster = Adjuster(g, '', Lines())
     adjuster.abs_wrksrc = tmp_path
-    (tmp_path / 'Cargo.lock').write_text('"checksum cargo-pkg 1.2.3 1234"')
+    (tmp_path / 'Cargo.lock').write_text(dedent('''\
+        [[package]]
+        name = "aes-ctr"
+        version = "0.3.0"
+        source = "registry+https://github.com/rust-lang/crates.io-index"
+        dependencies = [
+         "aes-soft 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
+         "aesni 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
+         "ctr 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
+         "stream-cipher 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
+        ]
+        
+        [metadata]
+        ...
+        "checksum aes-ctr 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "..."
+        ...
+        '''))
 
     adjuster.adjust_cargo()
 
     assert str_vars(adjuster.build_vars) == [
-        'CARGO_CRATE_DEPENDS+=cargo-pkg-1.2.3',
+        'CARGO_CRATE_DEPENDS+=aes-ctr-0.3.0',
+    ]
+
+
+def test_Adjuster_adjust_cargo__since_0_39(tmp_path: Path):
+    """
+    https://github.com/rust-lang/cargo/pull/7070/commits/34bca035ae133abe7e62acd0e90698943d471080
+
+    There is no [metadata] section anymore.
+    The checksum has been moved directly into the [[package]] section.
+    """
+    adjuster = Adjuster(g, '', Lines())
+    adjuster.abs_wrksrc = tmp_path
+    (tmp_path / 'Cargo.lock').write_text(dedent('''\
+        [[package]]
+        name = "aes-ctr"
+        version = "0.3.0"
+        source = "registry+https://github.com/rust-lang/crates.io-index"
+        checksum = "d2e5b0458ea3beae0d1d8c0f3946564f8e10f90646cf78c06b4351052058d1ee"
+        dependencies = [
+         "aes-soft",
+         "aesni",
+         "ctr",
+         "stream-cipher",
+        ]
+        '''))
+
+    adjuster.adjust_cargo()
+
+    assert str_vars(adjuster.build_vars) == [
+        'CARGO_CRATE_DEPENDS+=aes-ctr-0.3.0',
     ]
 
 
