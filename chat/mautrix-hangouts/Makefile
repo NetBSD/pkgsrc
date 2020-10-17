@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/10/17 16:44:37 js Exp $
+# $NetBSD: Makefile,v 1.8 2020/10/17 17:19:19 js Exp $
 
 DISTNAME=	mautrix-hangouts-0.1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,7 +25,7 @@ USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
 # 36 is too old, 39 doesn't work.
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36 39
 
 EGG_NAME=	mautrix_hangouts-${PKGVERSION_NOREV}+dev.unknown
 
