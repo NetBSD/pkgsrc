@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.27 2019/11/18 07:50:51 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.28 2020/10/17 22:39:01 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -922,9 +922,32 @@ class Adjuster:
         if not self.wrksrc_isfile('Cargo.lock'):
             return
 
-        # "checksum cargo-package-name cargo-package-version
-        for (name, version) in self.wrksrc_grep('Cargo.lock', r'^"checksum\s(\S+)\s(\S+)'):
-            self.build_vars.append(Var('CARGO_CRATE_DEPENDS', '+=', f'{name}-{version}'))
+        # pull name and version from package entries
+        with self.wrksrc_open('Cargo.lock') as f:
+            name = ''
+            version = ''
+            for line in f:
+                if line.startswith('[[package]]'):
+                    # new package, reset name and version to be safe
+                    name = ''
+                    version = ''
+                    continue
+
+                m = re.match(r'^name\s=\s"(\S+)"', line)
+                if m:
+                    name = m[1]
+
+                m = re.match(r'^version\s=\s"(\S+)"', line)
+                if m:
+                    version = m[1]
+
+                if re.match(r'^source\s=\s"(\S+)"', line):
+                    if name != '' and version != '':
+                        self.build_vars.append(Var(
+                            'CARGO_CRATE_DEPENDS', '+=', f'{name}-{version}'
+                        ))
+                    name = ''
+                    version = ''
 
         self.includes.append('../../lang/rust/cargo.mk')
 
@@ -1033,7 +1056,7 @@ class Adjuster:
         lines = Lines(*self.makefile_lines.lines[: marker_index])
 
         if lines.get('PKGNAME') == '' and \
-                (self.pkgname_prefix != '' or self.pkgname_transform != ''):
+            (self.pkgname_prefix != '' or self.pkgname_transform != ''):
             distname_index = lines.index(r'^DISTNAME=(\t+)')
             if distname_index != -1:
                 pkgname_line = f'PKGNAME=\t{self.pkgname_prefix}${{DISTNAME{self.pkgname_transform}}}'
