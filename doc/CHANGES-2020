@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5798 2020/10/17 13:54:06 js Exp $
+$NetBSD: CHANGES-2020,v 1.5799 2020/10/17 19:10:32 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8582,3 +8582,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ripgrep to 12.1.1 [maya 2020-10-17]
 	Added textproc/git-delta version 0.4.4 [maya 2020-10-17]
 	Updated devel/py-canonicaljson to 1.4.0 [js 2020-10-17]
+	Updated textproc/go-text to 0.3.3 [bsiegert 2020-10-17]
