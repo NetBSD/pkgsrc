@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/10/17 11:42:35 js Exp $
+# $NetBSD: Makefile,v 1.10 2020/10/17 13:57:50 js Exp $
 
 DISTNAME=	matrix-synapse-1.21.2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
@@ -16,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.5.1:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-frozendict>=1:../../devel/py-frozendict
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
-DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=1.2.0:../../devel/py-canonicaljson
+DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=1.4.0:../../devel/py-canonicaljson
 DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.0:../../security/py-signedjson
 DEPENDS+=	${PYPKGPREFIX}-nacl>=1.2.1:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
@@ -36,7 +37,7 @@ DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=8.2.0:../../textproc/py-phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.8.0:../../net/py-prometheus_client
-DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-attrs>=19.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.9:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
