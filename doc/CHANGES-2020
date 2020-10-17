@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5800 2020/10/17 22:03:31 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5801 2020/10/17 22:39:12 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8584,3 +8584,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-canonicaljson to 1.4.0 [js 2020-10-17]
 	Updated textproc/go-text to 0.3.3 [bsiegert 2020-10-17]
 	Updated cad/klayout to 0.25.9 [mef 2020-10-17]
+	Updated pkgtools/url2pkg to 20.3.0 [rillig 2020-10-17]
