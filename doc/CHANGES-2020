@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5804 2020/10/18 08:28:20 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5805 2020/10/18 09:24:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8588,3 +8588,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/musescore to 3.5.2 [gutteridge 2020-10-18]
 	Updated misc/p5-Weather-PurpleAir-API to 0.07 [mrg 2020-10-18]
 	Updated x11/xterm to 361 [pin 2020-10-18]
+	Added databases/postgresql13 version 13.0 [adam 2020-10-18]
