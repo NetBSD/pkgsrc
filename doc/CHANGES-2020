@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5809 2020/10/18 14:36:03 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5810 2020/10/18 14:44:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8593,3 +8593,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/tinydyndns-run version 20201018 [schmonz 2020-10-18]
 	Updated textproc/asciidoc to 9.0.3 [wiz 2020-10-18]
 	Updated textproc/enchant2 to 2.2.12 [wiz 2020-10-18]
+	Updated audio/musicpd to 0.22.1 [wiz 2020-10-18]
