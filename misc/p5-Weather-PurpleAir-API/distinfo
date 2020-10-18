@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/09/22 01:50:23 mrg Exp $
+$NetBSD: distinfo,v 1.2 2020/10/18 05:03:37 mrg Exp $
 
-SHA1 (Weather-PurpleAir-API-0.04.tar.gz) = ac94c51e3e864ea0be7724eb44ec90f6a0efe2b9
-RMD160 (Weather-PurpleAir-API-0.04.tar.gz) = 520ab78fc0f9f99a1b715ac3e916872bf48e736a
-SHA512 (Weather-PurpleAir-API-0.04.tar.gz) = ff276ec2d844fe420d0bfe855e79ee9f56b566496eef56203c77c0688d716a39fa9a8c68419fac178ee49a73e768499635d015f20fb27b973dfd50cb34d05886
-Size (Weather-PurpleAir-API-0.04.tar.gz) = 687774 bytes
+SHA1 (Weather-PurpleAir-API-0.07.tar.gz) = b97e0508538bddb6cb4c7421d8faca2355a2c28f
+RMD160 (Weather-PurpleAir-API-0.07.tar.gz) = 036b5518c579167f11c45304760f4f8a4e041e2a
+SHA512 (Weather-PurpleAir-API-0.07.tar.gz) = 7c41b06ae61aebd687a40da52da2a6113bc2a094d3096d0ee058134a747ed8f53bf02b0bf01c4216f98385f2d1118f7a8b3f5047743981c9578931bc879f54fa
+Size (Weather-PurpleAir-API-0.07.tar.gz) = 688145 bytes
