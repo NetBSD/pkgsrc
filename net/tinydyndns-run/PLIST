@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/18 12:41:33 schmonz Exp $
+bin/tinydyndns-call-update
+bin/tinydyndns-make-client
+bin/tinydyndns-passwd
+bin/tinydyndns-pop3d
+bin/tinydyndns-pwhash
+share/doc/tinydyndns-run/README.pkgsrc
+share/examples/tinydyndns-run/passwd
