@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.81 2020/08/19 09:03:10 leot Exp $
+@comment $NetBSD: PLIST,v 1.82 2020/10/18 14:50:45 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -6,6 +6,7 @@ include/curl/curlver.h
 include/curl/easy.h
 include/curl/mprintf.h
 include/curl/multi.h
+include/curl/options.h
 include/curl/stdcheaders.h
 include/curl/system.h
 include/curl/typecheck-gcc.h
@@ -50,6 +51,7 @@ man/man3/CURLINFO_PRIMARY_PORT.3
 man/man3/CURLINFO_PRIVATE.3
 man/man3/CURLINFO_PROTOCOL.3
 man/man3/CURLINFO_PROXYAUTH_AVAIL.3
+man/man3/CURLINFO_PROXY_ERROR.3
 man/man3/CURLINFO_PROXY_SSL_VERIFYRESULT.3
 man/man3/CURLINFO_REDIRECT_COUNT.3
 man/man3/CURLINFO_REDIRECT_TIME.3
@@ -322,6 +324,7 @@ man/man3/CURLOPT_SSLVERSION.3
 man/man3/CURLOPT_SSL_CIPHER_LIST.3
 man/man3/CURLOPT_SSL_CTX_DATA.3
 man/man3/CURLOPT_SSL_CTX_FUNCTION.3
+man/man3/CURLOPT_SSL_EC_CURVES.3
 man/man3/CURLOPT_SSL_ENABLE_ALPN.3
 man/man3/CURLOPT_SSL_ENABLE_NPN.3
 man/man3/CURLOPT_SSL_FALSESTART.3
@@ -378,6 +381,9 @@ man/man3/curl_easy_duphandle.3
 man/man3/curl_easy_escape.3
 man/man3/curl_easy_getinfo.3
 man/man3/curl_easy_init.3
+man/man3/curl_easy_option_by_id.3
+man/man3/curl_easy_option_by_name.3
+man/man3/curl_easy_option_next.3
 man/man3/curl_easy_pause.3
 man/man3/curl_easy_perform.3
 man/man3/curl_easy_recv.3
@@ -456,5 +462,3 @@ man/man3/libcurl-tutorial.3
 man/man3/libcurl-url.3
 man/man3/libcurl.3
 share/aclocal/libcurl.m4
-share/doc/curl/FAQ
-share/doc/curl/TheArtOfHttpScripting
