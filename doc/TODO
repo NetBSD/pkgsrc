@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20139 2020/10/14 16:40:02 wiz Exp $
+$NetBSD: TODO,v 1.20140 2020/10/18 03:34:00 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -829,7 +829,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mserv-devel-0.41
 	o multitail-6.4.2
 	o muse-0.9.2
-	o musescore-3.5.1
 	o myodbc-5.3.4
 	o mysql-connector-c++-8.0.17
 	o mysql-server-8.0.20
