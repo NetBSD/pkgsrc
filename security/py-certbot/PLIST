@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/07/10 10:24:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/10/18 18:45:03 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -114,6 +114,9 @@ ${PYSITELIB}/certbot/_internal/renewal.pyo
 ${PYSITELIB}/certbot/_internal/reporter.py
 ${PYSITELIB}/certbot/_internal/reporter.pyc
 ${PYSITELIB}/certbot/_internal/reporter.pyo
+${PYSITELIB}/certbot/_internal/snap_config.py
+${PYSITELIB}/certbot/_internal/snap_config.pyc
+${PYSITELIB}/certbot/_internal/snap_config.pyo
 ${PYSITELIB}/certbot/_internal/storage.py
 ${PYSITELIB}/certbot/_internal/storage.pyc
 ${PYSITELIB}/certbot/_internal/storage.pyo
