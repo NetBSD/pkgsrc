@@ -1,0 +1,2 @@
+This package creates the config files, supporting scripts, and
+NetBSD-style rc.d scripts needed to run tinydyndns.
