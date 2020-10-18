@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5803 2020/10/18 05:04:41 mrg Exp $
+$NetBSD: CHANGES-2020,v 1.5804 2020/10/18 08:28:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8587,3 +8587,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/url2pkg to 20.3.0 [rillig 2020-10-17]
 	Updated audio/musescore to 3.5.2 [gutteridge 2020-10-18]
 	Updated misc/p5-Weather-PurpleAir-API to 0.07 [mrg 2020-10-18]
+	Updated x11/xterm to 361 [pin 2020-10-18]
