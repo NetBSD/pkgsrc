@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5812 2020/10/18 18:18:13 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5813 2020/10/18 18:45:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8597,3 +8597,19 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/curl to 7.73.0 [wiz 2020-10-18]
 	Updated devel/py-ZopeInterface to 5.1.2 [adam 2020-10-18]
 	Updated devel/py-ZopeEvent to 4.5.0 [adam 2020-10-18]
+	Updated security/py-acme to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-apache to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-digitalocean to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-dnsimple to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-gehirn to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-google to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-linode to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-luadns to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-nsone to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-ovh to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-rfc2136 to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-route53 to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-dns-sakuracloud to 1.9.0 [adam 2020-10-18]
+	Updated security/py-certbot-nginx to 1.9.0 [adam 2020-10-18]
