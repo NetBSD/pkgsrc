@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/10/15 10:26:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/18 18:17:54 adam Exp $
 
-DISTNAME=	zope.event-4.4
+DISTNAME=	zope.event-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.e/ZopeE/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.event/}
@@ -12,5 +12,8 @@ LICENSE=	zpl-2.1
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
