@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5815 2020/10/19 08:19:00 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5816 2020/10/19 12:31:36 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8615,3 +8615,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-nginx to 1.9.0 [adam 2020-10-18]
 	Updated net/tinydyndns-run to 20201019 [schmonz 2020-10-19]
 	Updated mail/mblaze to 1.0 [schmonz 2020-10-19]
+	Updated security/monocypher to 3.1.1 [mef 2020-10-19]
