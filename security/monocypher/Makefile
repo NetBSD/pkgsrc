@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/03/16 09:17:09 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/19 12:30:30 mef Exp $
 
-DISTNAME=	monocypher-2.0.5
+DISTNAME=	monocypher-3.1.1
 CATEGORIES=	security
 MASTER_SITES=	https://monocypher.org/download/
 
@@ -11,7 +11,7 @@ LICENSE=	cc0-1.0-universal OR 2-clause-bsd
 
 USE_TOOLS+=	gmake
 MAKE_FILE=	makefile
-MAKE_ENV+=	MAN_DIR=${DESTDIR}/${PKGMANDIR}
+MAKE_ENV+=	MANDIR=${DESTDIR}/${PKGMANDIR}
 TEST_TARGET=	test
 
 # We default to binaries portable to more than one arch.
