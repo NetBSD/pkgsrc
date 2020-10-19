@@ -1,4 +1,6 @@
-$NetBSD: patch-3rdParty_asio_include_asio_detail_impl_kqueue__reactor.ipp,v 1.1 2020/03/30 19:36:39 joerg Exp $
+$NetBSD: patch-3rdParty_asio_include_asio_detail_impl_kqueue__reactor.ipp,v 1.2 2020/10/19 17:07:22 nia Exp $
+
+Support newer NetBSD with udata that doesn't need casting.
 
 --- 3rdParty/asio/include/asio/detail/impl/kqueue_reactor.ipp.orig	2020-03-09 00:37:54.000000000 +0000
 +++ 3rdParty/asio/include/asio/detail/impl/kqueue_reactor.ipp
