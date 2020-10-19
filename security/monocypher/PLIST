@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/16 09:17:09 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/19 12:30:30 mef Exp $
 include/monocypher.h
 lib/libmonocypher.a
 lib/libmonocypher.so
-lib/libmonocypher.so.2
+lib/libmonocypher.so.3
 lib/pkgconfig/monocypher.pc
