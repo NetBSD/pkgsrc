@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5820 2020/10/19 15:02:17 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5821 2020/10/19 15:10:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8632,3 +8632,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rails60 to 6.0.3.4 [taca 2020-10-19]
 	Updated time/ruby-tzinfo-data to 1.2020.3 [taca 2020-10-19]
 	Updated www/ruby-rack-cache to 1.12.1 [taca 2020-10-19]
+	Updated databases/ruby-sequel to 5.37.0 [taca 2020-10-19]
