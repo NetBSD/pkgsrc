@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/09/23 13:58:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/10/19 15:14:37 taca Exp $
 bin/defncopy-ttds${RUBY_SUFFIX}
 bin/tsql-ttds${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -9,7 +9,6 @@ ${GEM_LIBDIR}/.gitattributes
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/BACKERS.md
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/Gemfile
