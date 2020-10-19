@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5834 2020/10/19 22:12:20 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.5835 2020/10/19 22:50:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8648,3 +8648,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-urllib3 to 1.25.11 [adam 2020-10-19]
 	Updated www/py-uvicorn to 0.12.2 [adam 2020-10-19]
 	Updated net/unison-snapshot to 2.51.3rc3 [gdt 2020-10-19]
+	Updated textproc/xfce4-dict to 0.8.4 [gutteridge 2020-10-19]
