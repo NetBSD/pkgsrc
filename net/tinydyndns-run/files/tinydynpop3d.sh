@@ -1,4 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
+#
+# $NetBSD: tinydynpop3d.sh,v 1.2 2020/10/19 07:15:55 schmonz Exp $
+#
+# @PKGNAME@ script to authenticate tinydyndns updates.
+#
 
 # PROVIDE: tinydynpop3d named
 
@@ -6,7 +11,7 @@ name="tinydynpop3d"
 
 # User-settable rc.conf variables and their default values:
 : ${tinydynpop3d_postenv:="CVM_PWFILE_PWCMP=crypt"}
-: ${tinydynpop3d_datalimit:="4000000"}
+: ${tinydynpop3d_datalimit:="180000000"}
 : ${tinydynpop3d_pretcpserver:=""}
 : ${tinydynpop3d_tcpserver:="@PREFIX@/bin/tcpserver"}
 : ${tinydynpop3d_tcpflags:="-vRH"}
