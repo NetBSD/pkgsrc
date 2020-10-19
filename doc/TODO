@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20146 2020/10/19 15:16:01 taca Exp $
+$NetBSD: TODO,v 1.20147 2020/10/19 17:54:01 nia Exp $
 
 Suggested new packages
 ======================
@@ -750,7 +750,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
-	o libgit2-1.1.0
 	o libgnomekbd-3.4.0.2
 	o libgphoto2-2.5.16
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
