@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2019/09/05 13:04:55 ryoon Exp $
+# $NetBSD: options.mk,v 1.13 2020/10/19 14:37:17 mef Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -22,7 +22,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw lucid
 
 # svg is omitted because it is rarely needed and either very
 # heavyweight or unmaintained.
-PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 xaw3d xft2 xml x11
+PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 xaw3d xft2 xml x11 imagemagick
 
 .include "../../mk/bsd.options.mk"
 
@@ -93,7 +93,7 @@ CONFIGURE_ARGS+=	--without-gconf
 ### Support ImageMagick (not recognized for now, sorry)
 ###
 .  if !empty(PKG_OPTIONS:Mimagemagick)
-.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 # DEPENDS+=	py[0-9]*-wand-[0-9]*:../../graphics/py-wand
 .  else
 CONFIGURE_ARGS+=	--without-imagemagick
