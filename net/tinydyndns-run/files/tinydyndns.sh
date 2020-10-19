@@ -1,4 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
+#
+# $NetBSD: tinydyndns.sh,v 1.2 2020/10/19 07:15:55 schmonz Exp $
+#
+# @PKGNAME@ script to control tinydyndns (dynamic DNS service).
+#
 
 # PROVIDE: tinydyndns named
 # REQUIRE: NETWORKING mountcritremote syslogd

@@ -1,4 +1,8 @@
 #!@SH@
+#
+# $NetBSD: tinydyndns-passwd.sh,v 1.2 2020/10/19 07:15:55 schmonz Exp $
+#
+# @PKGNAME@ program to update password for a dynamic-DNS hostname.
 
 TINYDYN_ETC="@PKG_SYSCONFDIR@"
 TINYDYN_DOMAIN=$(@HEAD@ -1 ${TINYDYN_ETC}/domain)
