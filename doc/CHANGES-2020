@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5826 2020/10/19 17:07:33 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5827 2020/10/19 17:24:59 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8637,3 +8637,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/statzone to 1.0.4 [fcambus 2020-10-19]
 	Updated games/woof to 2.3.2 [micha 2020-10-19]
 	Updated games/devilutionx to 1.1.0 [nia 2020-10-19]
+	Updated security/py-libtaxii to 1.1.118 [khorben 2020-10-19]
