@@ -1,4 +1,8 @@
 #!@SH@
+#
+# $NetBSD: tinydyndns-make-client.sh,v 1.2 2020/10/19 07:15:55 schmonz Exp $
+#
+# @PKGNAME@ program to generate a dynamic DNS client.
 
 if [ -z "$1" ]; then
 	echo "Usage: $0 hostname" >&2

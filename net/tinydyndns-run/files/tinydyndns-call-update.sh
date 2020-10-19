@@ -1,8 +1,8 @@
 #!@SH@
 #
-# $NetBSD: tinydyndns-call-update.sh,v 1.1 2020/10/18 12:41:33 schmonz Exp $
+# $NetBSD: tinydyndns-call-update.sh,v 1.2 2020/10/19 07:15:55 schmonz Exp $
 #
-# @PKGNAME@ program to update DNS record for POP3 authenticated user
+# @PKGNAME@ program to update DNS record for POP3 authenticated user.
 
 if [ $# -eq 0 ]; then
 	@ECHO@ "usage: $0 program" >&2
