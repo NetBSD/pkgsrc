@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5832 2020/10/19 18:14:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5833 2020/10/19 18:58:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8643,3 +8643,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libgit2 to 1.1.0 [nia 2020-10-19]
 	Updated net/syncthing to 1.10.0 [nia 2020-10-19]
 	Updated audio/amsynth to 1.11.0 [nia 2020-10-19]
+	Updated devel/py-argcomplete to 1.12.1 [adam 2020-10-19]
+	Updated textproc/py-lxml to 4.6.1 [adam 2020-10-19]
+	Updated www/py-urllib3 to 1.25.11 [adam 2020-10-19]
+	Updated www/py-uvicorn to 0.12.2 [adam 2020-10-19]
