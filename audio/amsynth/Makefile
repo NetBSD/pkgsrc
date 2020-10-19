@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/08/31 18:06:32 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/19 18:13:49 nia Exp $
 
-DISTNAME=	amsynth-1.10.0
-PKGREVISION=	3
+DISTNAME=	amsynth-1.11.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=amsynth/}
 GITHUB_PROJECT=	amsynth
