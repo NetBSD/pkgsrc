@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5829 2020/10/19 17:48:57 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5830 2020/10/19 17:54:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8640,3 +8640,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-libtaxii to 1.1.118 [khorben 2020-10-19]
 	Updated sysutils/cfm to 0.6.6 [nia 2020-10-19]
 	Updated lang/elixir to 1.11.1 [nia 2020-10-19]
+	Updated devel/libgit2 to 1.1.0 [nia 2020-10-19]
