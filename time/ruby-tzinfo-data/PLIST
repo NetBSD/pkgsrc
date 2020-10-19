@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/27 13:37:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/10/19 14:58:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -593,7 +593,6 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/US/Indiana__m__Starke.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/US/Michigan.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/US/Mountain.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/US/Pacific.rb
-${GEM_LIBDIR}/lib/tzinfo/data/definitions/US/Pacific__m__New.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/US/Samoa.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/UTC.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Universal.rb
