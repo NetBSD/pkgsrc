@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5833 2020/10/19 18:58:59 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5834 2020/10/19 22:12:20 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8647,3 +8647,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-lxml to 4.6.1 [adam 2020-10-19]
 	Updated www/py-urllib3 to 1.25.11 [adam 2020-10-19]
 	Updated www/py-uvicorn to 0.12.2 [adam 2020-10-19]
+	Updated net/unison-snapshot to 2.51.3rc3 [gdt 2020-10-19]
