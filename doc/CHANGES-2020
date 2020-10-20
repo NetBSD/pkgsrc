@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5838 2020/10/20 11:06:50 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5839 2020/10/20 13:06:58 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8653,3 +8653,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 14.14.0 [adam 2020-10-20]
 	Updated databases/prometheus to 2.22.0 [adam 2020-10-20]
 	Updated sysutils/onefetch to 2.5.0 [pin 2020-10-20]
+	Updated converters/bdf2sfd to 1.1.5 [fcambus 2020-10-20]
