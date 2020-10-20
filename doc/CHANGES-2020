@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5835 2020/10/19 22:50:19 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.5836 2020/10/20 00:27:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8649,3 +8649,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-uvicorn to 0.12.2 [adam 2020-10-19]
 	Updated net/unison-snapshot to 2.51.3rc3 [gdt 2020-10-19]
 	Updated textproc/xfce4-dict to 0.8.4 [gutteridge 2020-10-19]
+	Updated time/p5-DateTime-TimeZone to 2.42 [gutteridge 2020-10-20]
