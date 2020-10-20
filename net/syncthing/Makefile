@@ -1,22 +1,9 @@
-# $NetBSD: Makefile,v 1.121 2020/10/20 06:12:00 nia Exp $
+# $NetBSD: Makefile,v 1.122 2020/10/20 14:41:43 gdt Exp $
 
 # Upstream used to frequently break protocol compatibility, but since
-# 2018 or so this has been much better.  While users of pkgsrc
-# syncthing on multiple systems can update synchronously, an important
-# use case is interoperating with syncthing-android.
-#
-# Therefore, pkgsrc will update to a new syncthing version
-# (e.g. 0.14.x vs 1.0.x) if either there is no protocol break, or if a
-# corresponding syncthing-android version becomes available in the
-# f-droid.org repository:
-#   https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid
-# Updates that could possibly break protocol compatibility with the
-# current syncthing-android in f-droid must be tested against the
-# android version from f-droid prior to commiting.  (This is an
-# attempt to avoid having to version syncthing in pkgsrc.)
-#
-# Minor version updates may be committed without asking.  Major
-# updates not following the above policy will be reverted.
+# 2018 or so this has been much better.  Any updates with protocol
+# breaks require MAINTAINER approval; other updates can be done
+# following normal customs.
 DISTNAME=	syncthing-source-v1.10.0
 PKGNAME=	${DISTNAME:S,source-v,,}
 PKGREVISION=	1
