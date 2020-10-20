@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/11/03 19:04:03 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2020/10/20 12:00:26 nia Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
 # These platforms cannot build 32-on-64 binaries.
 NOT_FOR_PLATFORM+=	*-*-alpha
 NOT_FOR_PLATFORM+=	DragonFly-*-x86_64
+NOT_FOR_PLATFORM+=	NetBSD-*-aarch64
+NOT_FOR_PLATFORM+=	NetBSD-*-aarch64eb
 
 # This package has LP64 issues, so must build as 32-bit binary.
 M32=
