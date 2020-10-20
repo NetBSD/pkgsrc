@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.413 2020/10/12 23:45:35 maya Exp $
+$NetBSD: distinfo,v 1.414 2020/10/20 20:15:29 maya Exp $
 
-SHA1 (firefox-81.0.2.source.tar.xz) = a2e60ae6cca73a4410fcb1c310f2858da44dad9e
-RMD160 (firefox-81.0.2.source.tar.xz) = b108bdbbb04a835d5205045ec7e9a0a9b3d105b6
-SHA512 (firefox-81.0.2.source.tar.xz) = 8a3ef4819120e93b860344ef05b4ef05262e3f127053ef66b3c1eb4b157932913f72fd4ba5500e86c2ef29f25be58e0c6e2c47a1c1ecde2abe77ece5f948fd75
-Size (firefox-81.0.2.source.tar.xz) = 337759612 bytes
+SHA1 (firefox-82.0.source.tar.xz) = aa8485a65038f1390eb9c367f5b6195cb7ca3bb8
+RMD160 (firefox-82.0.source.tar.xz) = f2afbc309b0a304c6082731f9a652a750d307ac7
+SHA512 (firefox-82.0.source.tar.xz) = 887bceb0fffe257534b53cd019d35087752042ee7e9db089e01b1a930a30deb0c3dc6b32167552362092bdcec794dd5698046548d3419e17ecd2def366d1bde8
+Size (firefox-82.0.source.tar.xz) = 334793772 bytes
 SHA1 (patch-aa) = 11060461fdaca5661e89651b8ded4a59d2abc4d7
 SHA1 (patch-browser_app_profile_firefox.js) = 89cea0a66457c96ad0b94aaa524aa5942ad781d0
-SHA1 (patch-build_moz.configure_rust.configure) = ee9e207e67709f3c9455b4d22f5f254890e99ca8
+SHA1 (patch-build_moz.configure_rust.configure) = c114ad9226d775373e0af2a55cf95958337765f5
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 781a063fa6ab345face53fd88404ead11ab335b2
 SHA1 (patch-config_makefiles_rust.mk) = dcdc4a4cfc839ec838c8d657b93916beb5c372f2
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
