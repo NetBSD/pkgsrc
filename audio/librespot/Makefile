@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/10/20 19:06:59 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/20 23:14:11 tnn Exp $
 
 DISTNAME=	librespot-0.1.3
 CATEGORIES=	audio
@@ -287,15 +287,14 @@ CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.1.4
 
 INSTALLATION_DIRS=	bin
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.portaudio}/${BUILDLINK_LIBDIRS.portaudio}
 MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 CARGO_NO_DEFAULT_FEATURES=	yes
-CARGO_FEATURES=			portaudio-backend
+
+.include "options.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/librespot ${DESTDIR}${PREFIX}/bin
 
-.include "../../audio/portaudio/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
