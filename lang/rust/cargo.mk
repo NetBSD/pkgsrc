@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.22 2020/08/14 21:19:22 tnn Exp $
+# $NetBSD: cargo.mk,v 1.23 2020/10/20 19:03:07 tnn Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -66,7 +66,10 @@ print-cargo-depends:
 			print "CARGO_CRATE_DEPENDS+=\t" name "-" vers;	\
 			}' ${WRKSRC}/Cargo.lock
 
-DEFAULT_CARGO_ARGS=	build --offline --release -j${_MAKE_JOBS_N}
+DEFAULT_CARGO_ARGS=	build --offline --release -j${_MAKE_JOBS_N}	\
+			  ${CARGO_NO_DEFAULT_FEATURES:M[yY][eE][sS]:C/[yY][eE][sS]/--no-default-features/}	\
+			  ${CARGO_FEATURES:C/.*/--features/W}	\
+			  ${CARGO_FEATURES:S/ /,/Wg}
 CARGO_ARGS?=		${DEFAULT_CARGO_ARGS}
 
 .if !target(do-build)
