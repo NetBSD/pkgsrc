@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2020/09/30 09:22:48 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2020/10/20 11:14:41 nia Exp $
 
 DISTNAME=	mame-0.225
 CATEGORIES=	emulators
@@ -92,7 +92,11 @@ pre-build:
 	${RM} -f ${WRKDIR}/.buildlink/include/png*
 
 do-install:
+.if ${MACHINE_ARCH} == "x86_64"
 	${INSTALL_PROGRAM} ${WRKSRC}/mame64 ${DESTDIR}${PREFIX}/bin/mame
+.else
+	${INSTALL_PROGRAM} ${WRKSRC}/mame ${DESTDIR}${PREFIX}/bin/mame
+.endif
 	set -e; \
 	for prg in castool chdman floptool imgtool jedutil ldresample ldverify \
 		nltool nlwav pngcmp regrep romcmp split srcclean unidasm; do \
