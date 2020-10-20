@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.53 2020/10/18 09:24:02 adam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.54 2020/10/20 21:53:31 otis Exp $
 #
 # User-settable variables:
 #
@@ -13,6 +13,7 @@
 # PG_LIB_EXT
 # PGSQL_TYPE
 # PGPKGSRCDIR
+# PGSQL_VERSION
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
