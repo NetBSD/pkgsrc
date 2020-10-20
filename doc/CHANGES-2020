@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5840 2020/10/20 13:08:25 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.5841 2020/10/20 20:17:19 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8655,3 +8655,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/onefetch to 2.5.0 [pin 2020-10-20]
 	Updated converters/bdf2sfd to 1.1.5 [fcambus 2020-10-20]
 	Updated www/logswan to 2.1.8 [fcambus 2020-10-20]
+	Updated www/firefox to 82.0 [maya 2020-10-20]
+	Updated www/firefox-l10n to 82.0 [maya 2020-10-20]
