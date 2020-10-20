@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/10/18 17:06:35 he Exp $
+# $NetBSD: Makefile,v 1.24 2020/10/20 06:34:23 jperkin Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -32,6 +32,7 @@ post-extract:
 	${MKDIR} ${WRKDIR}/build
 
 post-install:
+	${RM} -f ${WRKSRC}/include/__libunwind_config.h.orig
 	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
 
 BUILDLINK_DEPMETHOD.llvm=	build
