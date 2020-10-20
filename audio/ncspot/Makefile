@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/10/20 18:40:31 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/20 19:03:07 tnn Exp $
 
 DISTNAME=	ncspot-0.2.3
 PKGREVISION=	1
@@ -428,9 +428,9 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
 MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
-CARGO_ARGS=	${DEFAULT_CARGO_ARGS} --no-default-features --features ${CARGO_FEATURES:S/ /,/Wg}
 
-CARGO_FEATURES+=	share_clipboard
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		share_clipboard
 
 .include "options.mk"
 
