@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2020/09/30 09:03:46 adam Exp $
+$NetBSD: distinfo,v 1.21 2020/10/20 14:15:51 mef Exp $
 
-SHA1 (certbot-apache-1.8.0.tar.gz) = 82863277fc6a88a0c37a2056b35d5e8e1c45091f
-RMD160 (certbot-apache-1.8.0.tar.gz) = af6a5467e0ba3804a536d0107d7b7343d322757e
-SHA512 (certbot-apache-1.8.0.tar.gz) = 22eea08407e498383c1ec4576f8e5f1776acc5faa474677855c5724faa2b8e0f13ad491dcf3791a4b45bbbd80ce5c3f2146ab27c94551e2f1deec3a8b4ce0120
-Size (certbot-apache-1.8.0.tar.gz) = 221998 bytes
+SHA1 (certbot-apache-1.9.0.tar.gz) = fe2dabcacf5bdee4e01485d0441f88c4c246fc26
+RMD160 (certbot-apache-1.9.0.tar.gz) = de7e2a38df1fe9f478dbfb4743698cc4fc34fc2e
+SHA512 (certbot-apache-1.9.0.tar.gz) = 5447b0fbd7f67004fe9294c65a8243ab76bda9e927f7cc8d569a231cff3cfe65523691c61329c19150bacc548019a6b66191762bf37a223fda9cbd0ad9bbba31
+Size (certbot-apache-1.9.0.tar.gz) = 221424 bytes
