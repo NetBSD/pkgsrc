@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/08/31 18:09:48 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2020/10/20 11:33:10 nia Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
@@ -13,6 +13,9 @@ MAINTAINER=	wennmach@NetBSD.org
 HOMEPAGE=	https://www.g95.org/
 COMMENT=	Fortran 95 compiler from g95.org
 LICENSE=	gnu-gpl-v2
+
+NOT_FOR_PLATFORM+=	*-*-aarch64
+NOT_FOR_PLATFORM+=	*-*-aarch64eb
 
 USE_TOOLS+=		gmake gtar automake autoconf
 TOOLS_BROKEN+=		perl
