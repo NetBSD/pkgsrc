@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2020/08/24 11:58:38 wiz Exp $
+$NetBSD: distinfo,v 1.5 2020/10/20 18:37:36 tnn Exp $
 
 SHA1 (gcc-10.2.0.tar.xz) = 8de0aecd3a52bb92b43082df8a9256356d1f03be
 RMD160 (gcc-10.2.0.tar.xz) = 73f182e7d40e5c2988b2b8cd80cfca601f20e9fc
@@ -11,6 +11,7 @@ Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 9cdcde21ab174052911447d20762ddfd40aa8791
 SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
+SHA1 (patch-gcc_config.host) = 8920ce841f6088b365c9b590e3ea9535bd880b40
 SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = f4d8ab855d0755dfe533053cedde6940cb837ce0
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
 SHA1 (patch-gcc_ggc-common.c) = 3e325767922ab7d2079fdb9a3d6b6aa531a2fea5
@@ -19,6 +20,7 @@ SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
 SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
 SHA1 (patch-libffi_configure) = 22006b20d7f655e2455a7ad613d676703b6c1ccc
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 27b84a11378fb648dfaad0c70abedd77a0a1c1a8
+SHA1 (patch-libgcc_config.host) = ca62e9ecba9e6efe8b18dfb0d73a2ea47a818bec
 SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
 SHA1 (patch-libgfortran_io_format.c) = 9bbc5e4f6277bdec785b3690fd08259939a2aa1a
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
