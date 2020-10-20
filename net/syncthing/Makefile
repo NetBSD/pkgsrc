@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.122 2020/10/20 14:41:43 gdt Exp $
+# $NetBSD: Makefile,v 1.123 2020/10/20 18:00:17 gdt Exp $
 
-# Upstream used to frequently break protocol compatibility, but since
-# 2018 or so this has been much better.  Any updates with protocol
-# breaks require MAINTAINER approval; other updates can be done
-# following normal customs.
+# Rotocol breaks require tech-pkg@ discussion and MAINTAINER approval.
 DISTNAME=	syncthing-source-v1.10.0
 PKGNAME=	${DISTNAME:S,source-v,,}
 PKGREVISION=	1
