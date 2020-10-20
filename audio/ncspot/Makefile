@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/10/20 19:03:07 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2020/10/20 22:54:40 tnn Exp $
 
 DISTNAME=	ncspot-0.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -425,12 +425,9 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
-RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
 MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		share_clipboard
 
 .include "options.mk"
 
@@ -440,5 +437,4 @@ do-install:
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
