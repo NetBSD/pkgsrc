@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/08/31 18:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/10/20 11:22:27 nia Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -66,6 +66,9 @@ REPLACE_PERL+=	src/net/http/cgi/testdata/test.cgi
 REPLACE_PERL+=	src/regexp/syntax/make_perl_groups.pl
 REPLACE_PERL+=	src/syscall/*.pl
 REPLACE_PERL+=	test/errchk
+
+NOT_FOR_PLATFORM+=	*-*-aarch64
+NOT_FOR_PLATFORM+=	*-*-aarch64eb
 
 # uses its own linker which does not support relro in 1.4.x
 CHECK_RELRO_SKIP=	go14/bin/go
