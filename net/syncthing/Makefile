@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.123 2020/10/20 18:00:17 gdt Exp $
+# $NetBSD: Makefile,v 1.124 2020/10/20 18:00:32 gdt Exp $
 
-# Rotocol breaks require tech-pkg@ discussion and MAINTAINER approval.
+# Protocol breaks require tech-pkg@ discussion and MAINTAINER approval.
 DISTNAME=	syncthing-source-v1.10.0
 PKGNAME=	${DISTNAME:S,source-v,,}
 PKGREVISION=	1
