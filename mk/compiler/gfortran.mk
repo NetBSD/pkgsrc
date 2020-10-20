@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.15 2020/03/26 12:44:46 gdt Exp $
+# $NetBSD: gfortran.mk,v 1.16 2020/10/20 19:35:07 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,6 +40,11 @@ COMPILER_GFORTRAN_MK=	defined
 # is so old that we intend what seems like a bug to choose the modern version
 # in that case.
 POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:S/gcc-//:C/.[0-9].[0-9]$//}
+
+# gcc9 doesn't work on NetBSD/aarch64, but gcc10 does.
+.if !empty(POSSIBLE_GFORTRAN_VERSION:M9) && !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)
+POSSIBLE_GFORTRAN_VERSION=	10
+.endif
 
 .if !empty(PKGSRC_COMPILER:Mgcc) && \
     exists(${PKGSRCDIR}/lang/gcc${POSSIBLE_GFORTRAN_VERSION}/buildlink3.mk)
