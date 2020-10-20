@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/08 17:11:12 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/10/20 22:16:16 tnn Exp $
 bin/rsync_bpc
 share/BackupPC/bin/BackupPC
 share/BackupPC/bin/BackupPC_Admin_SCGI
@@ -64,13 +64,16 @@ share/BackupPC/htdocs/1111111.gif
 share/BackupPC/htdocs/BackupPC_retro_v2.css
 share/BackupPC/htdocs/BackupPC_retro_v3.css
 share/BackupPC/htdocs/BackupPC_stnd.css
+share/BackupPC/htdocs/apple-touch-icon.png
+share/BackupPC/htdocs/favicon-16x16.png
+share/BackupPC/htdocs/favicon-32x32.png
 share/BackupPC/htdocs/favicon.ico
 share/BackupPC/htdocs/icon-dir.png
 share/BackupPC/htdocs/icon-file.png
 share/BackupPC/htdocs/icon-hardlink.png
 share/BackupPC/htdocs/icon-symlink.png
-share/BackupPC/htdocs/logo.gif
 share/BackupPC/htdocs/logo320.png
+share/BackupPC/htdocs/safari-pinned-tab.svg
 share/BackupPC/htdocs/sorttable.js
 share/BackupPC/lib/BackupPC/CGI/AdminOptions.pm
 share/BackupPC/lib/BackupPC/CGI/Archive.pm
@@ -84,8 +87,8 @@ share/BackupPC/lib/BackupPC/CGI/GeneralInfo.pm
 share/BackupPC/lib/BackupPC/CGI/HostInfo.pm
 share/BackupPC/lib/BackupPC/CGI/LOGlist.pm
 share/BackupPC/lib/BackupPC/CGI/Lib.pm
+share/BackupPC/lib/BackupPC/CGI/Metrics.pm
 share/BackupPC/lib/BackupPC/CGI/Queue.pm
-share/BackupPC/lib/BackupPC/CGI/RSS.pm
 share/BackupPC/lib/BackupPC/CGI/ReloadServer.pm
 share/BackupPC/lib/BackupPC/CGI/Restore.pm
 share/BackupPC/lib/BackupPC/CGI/RestoreFile.pm

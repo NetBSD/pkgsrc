@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.5 2019/11/08 17:11:12 tnn Exp $
+$NetBSD: distinfo,v 1.6 2020/10/20 22:16:16 tnn Exp $
 
-SHA1 (BackupPC-4.3.1.tar.gz) = ff27af8622701a4be367b9fd8223c32ebf86d3d0
-RMD160 (BackupPC-4.3.1.tar.gz) = 9285231af956d20d288cc3c22bdec69b6ecd7b60
-SHA512 (BackupPC-4.3.1.tar.gz) = acabc8d79779bfa599192af88938dbdbf7bf12e82564f3c25398cc4bc04207ea21494974bec20779433f0207fd82b17107c538437309950d619ca3a9856e721f
-Size (BackupPC-4.3.1.tar.gz) = 638366 bytes
-SHA1 (rsync-bpc-3.1.2.1.tar.gz) = 771005e68f1205e495f08c6d53d7965e39c611da
-RMD160 (rsync-bpc-3.1.2.1.tar.gz) = 7329f040e0f5a3e4b5409ca7ceeb1d610df81090
-SHA512 (rsync-bpc-3.1.2.1.tar.gz) = 347513b24582486281fd8a2e1c7dd621a0e912a76aa2d8d4d614ca6c1052148c3bbbfe4452d389e670e7da0aa7059202a28a3c76413503e59da660ff7b172128
-Size (rsync-bpc-3.1.2.1.tar.gz) = 867946 bytes
-SHA1 (patch-configure.pl) = 1c00cb8f87bbcfaf720ccead39e2050ba95db64d
-SHA1 (patch-rsync-bpc_lib_sysacls.c) = bae4f643e36e82b54e59049135028a8ecc992e7a
+SHA1 (BackupPC-4.4.0.tar.gz) = 49952907267df93060456c8ef0fefc266f58a4d7
+RMD160 (BackupPC-4.4.0.tar.gz) = 8bb40d0fc07305df5765bac7ae6962815d5756fd
+SHA512 (BackupPC-4.4.0.tar.gz) = 0c88447ab000c4a452034d5d8a074cd56801c7b38b0886e686e446c73ecfd0a40f0aa08703f76d16c31b24aec85c10c4ed1815d0cb67be5a1d66e5caeb3de418
+Size (BackupPC-4.4.0.tar.gz) = 657309 bytes
+SHA1 (rsync-bpc-3.1.3.0.tar.gz) = 132db2fdcf181806bdefc931426ac465d333b21d
+RMD160 (rsync-bpc-3.1.3.0.tar.gz) = 18e1376564b3b01deb92d075dda40838931a51e2
+SHA512 (rsync-bpc-3.1.3.0.tar.gz) = 24ae86c6108720d7f0ba6d144053ccba6499623018bc2bcff8f1d8e289f9c015f80e73244e965a7fcdccb5f9b2a876f1a54ceed42a19a80fd7c87c6b05c7701d
+Size (rsync-bpc-3.1.3.0.tar.gz) = 883808 bytes
+SHA1 (patch-configure.pl) = 7d0d778a02cb02c8699e2daf31c17e9ab43ec262
+SHA1 (patch-rsync-bpc_lib_sysacls.c) = c8260733c25caab524aba30c7c913c4bde14d25a

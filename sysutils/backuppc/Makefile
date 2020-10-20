@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/08/31 18:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/10/20 22:16:16 tnn Exp $
 
-DISTNAME=	BackupPC-4.3.1
+DISTNAME=	BackupPC-4.4.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=backuppc/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -12,7 +11,7 @@ HOMEPAGE=	http://backuppc.sourceforge.net/
 COMMENT=	Fast, agentless backup system supporting *NIX, Windows and OSX clients
 LICENSE=	gnu-gpl-v3
 
-RSYNC_BPC=	rsync-bpc-3.1.2.1
+RSYNC_BPC=	rsync-bpc-3.1.3.0
 RSYNC_BPC_TGZ=	${RSYNC_BPC}.tar.gz
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	${RSYNC_BPC_TGZ}
@@ -24,7 +23,7 @@ DEPENDS+=	par2-[0-9]*:../../archivers/par2
 #DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=	p5-File-Listing-[0-9]*:../../devel/p5-File-Listing
-DEPENDS+=	p5-BackupPC-XS-[0-9]*:../../sysutils/p5-BackupPC-XS
+DEPENDS+=	p5-BackupPC-XS>=0.62:../../sysutils/p5-BackupPC-XS
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c
@@ -109,6 +108,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/BackupPC ${BACKUPPC_USER} ${BACKUPPC_GROUP} 0750
 OWN_DIRS_PERMS+=	${VARBASE}/BackupPC/${d} ${BACKUPPC_USER} ${BACKUPPC_GROUP} 0750
 .endfor
 OWN_DIRS_PERMS+=	${VARBASE}/log/BackupPC ${BACKUPPC_USER} ${BACKUPPC_GROUP} 0750
+OWN_DIRS_PERMS+=	${VARBASE}/run/BackupPC ${BACKUPPC_USER} ${BACKUPPC_GROUP} 0750
 
 EGDIR=			${PREFIX}/share/examples/BackupPC
 CONF_FILES_PERMS+=	${EGDIR}/config.pl ${PKG_SYSCONFDIR}/config.pl ${BACKUPPC_USER} ${BACKUPPC_GROUP} 0640
