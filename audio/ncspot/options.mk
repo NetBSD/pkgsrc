@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2020/10/20 18:40:31 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2020/10/20 22:54:40 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ncspot
 PKG_OPTIONS_OPTIONAL_GROUPS=	backend ui
 PKG_OPTIONS_GROUP.backend=	alsa portaudio pulseaudio rodio
 PKG_OPTIONS_GROUP.ui=		ncursesw termion
 
-PKG_SUPPORTED_OPTIONS=	dbus
+PKG_SUPPORTED_OPTIONS=	dbus xcb
 PKG_SUGGESTED_OPTIONS=	portaudio ncursesw
 
 .include "../../mk/bsd.options.mk"
@@ -45,9 +45,14 @@ CARGO_FEATURES+=	cursive/termion-backend
 
 .if !empty(PKG_OPTIONS:Mdbus)
 CARGO_FEATURES+=	mpris
-CARGO_FEATURES+=	notif
+CARGO_FEATURES+=	notify
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
 .  include "../../sysutils/dbus/buildlink3.mk"
-.else
+.endif
 
+.if !empty(PKG_OPTIONS:Mxcb)
+CARGO_FEATURES+=	share_clipboard
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
+RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
+.include "../../x11/libxcb/buildlink3.mk"
 .endif
