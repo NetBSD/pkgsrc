@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5841 2020/10/20 20:17:19 maya Exp $
+$NetBSD: CHANGES-2020,v 1.5842 2020/10/20 22:17:35 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8657,3 +8657,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/logswan to 2.1.8 [fcambus 2020-10-20]
 	Updated www/firefox to 82.0 [maya 2020-10-20]
 	Updated www/firefox-l10n to 82.0 [maya 2020-10-20]
+	Updated sysutils/backuppc to 4.4.0 [tnn 2020-10-20]
