@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/09/09 07:06:56 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/10/21 19:44:56 nia Exp $
 
 DISTNAME=	blosc-1.20.1
 CATEGORIES=	devel
@@ -12,7 +12,8 @@ COMMENT=	Blocking, shuffling, and lossless compression library
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99 c++
 USE_TOOLS+=	pkg-config
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/blosc
 TEST_TARGET=	test
