@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.28 2019/04/02 07:17:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.28.12.1 2020/10/21 17:08:49 spz Exp $
 bin/freetype-config
 include/freetype2/freetype/config/ftconfig.h
 include/freetype2/freetype/config/ftheader.h
 include/freetype2/freetype/config/ftmodule.h
 include/freetype2/freetype/config/ftoption.h
 include/freetype2/freetype/config/ftstdlib.h
+include/freetype2/freetype/config/integer-types.h
+include/freetype2/freetype/config/mac-support.h
+include/freetype2/freetype/config/public-macros.h
 include/freetype2/freetype/freetype.h
 include/freetype2/freetype/ftadvanc.h
 include/freetype2/freetype/ftbbox.h
