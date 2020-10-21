@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/08/31 18:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/10/21 02:07:12 gutteridge Exp $
 
 DISTNAME=	mozjs-52.7.4
 PKGREVISION=	14
@@ -43,11 +43,6 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .if ${MACHINE_ARCH} == "i386"
 # Needs 8 byte atomics.
 CXXFLAGS+=		-march=i586
-.elif ${MACHINE_ARCH} == "powerpc"
-# PowerPC doesn't have the necessary hardware-backed atomics, it needs
-# GCC's libatomic. Tested with GCC 4.8.5 and 7.3 on NetBSD 8.0/powerpc.
-USE_PKGSRC_GCC=		yes
-USE_PKGSRC_GCC_RUNTIME=	yes
 .endif
 
 # fails, does not find hg/git checkout
@@ -59,6 +54,12 @@ pre-configure:
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/lib/libjs_static.ajs
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
+# 64 bit atomics
+.include "../../devel/libatomic/buildlink3.mk"
+.endif
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
