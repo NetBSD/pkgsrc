@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5853 2020/10/21 12:30:13 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5854 2020/10/21 13:36:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8678,3 +8678,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-zeroconf to 0.28.6 [adam 2020-10-21]
 	Updated net/py-smb to 1.2.5 [adam 2020-10-21]
 	Updated devel/py-iniconfig to 1.1.1 [adam 2020-10-21]
+	Updated databases/mysql57-client to 5.7.32 [adam 2020-10-21]
+	Updated databases/mysql57-server to 5.7.32 [adam 2020-10-21]
