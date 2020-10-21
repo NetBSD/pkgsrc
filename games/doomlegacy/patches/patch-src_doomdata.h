@@ -1,7 +1,8 @@
-$NetBSD: patch-src_doomdata.h,v 1.1 2020/05/19 11:20:16 micha Exp $
+$NetBSD: patch-src_doomdata.h,v 1.2 2020/10/21 11:43:31 micha Exp $
 
 Refer to subsectors with 32-Bit values (required for extended nodes).
-Upstream feature request:
+
+Created upstream feature request:
 https://sourceforge.net/p/doomlegacy/feature-requests/95/
 
 --- src/doomdata.h.orig	2020-04-20 10:32:30.000000000 +0000

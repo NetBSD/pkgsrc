@@ -1,4 +1,4 @@
-$NetBSD: patch-src_p__local.h,v 1.2 2020/05/20 16:04:12 micha Exp $
+$NetBSD: patch-src_p__local.h,v 1.3 2020/10/21 11:43:31 micha Exp $
 
 Add support to internally create blockmap.
 https://sourceforge.net/p/doomlegacy/feature-requests/96/

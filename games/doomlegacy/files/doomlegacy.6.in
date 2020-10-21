@@ -89,7 +89,7 @@ Ignore BLOCKMAP lump in WAD file and create a new blockmap internally.
 Try this option if you encounter problems with collision detection
 (e.g. able to walk through a fence or unable to activate a switch).
 .PP
-Only available with pkgsrc blockmap patch.
+[Only available with pkgsrc blockmap patch]
 .RE
 .TP 25
 .BI -deh " file [file ...]
