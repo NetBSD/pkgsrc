@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.3 2020/10/21 17:11:27 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.4 2020/10/21 21:52:28 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -23,4 +23,25 @@ graphics/freetype2: security update
 
 Pullup ticket #6347 - requested by maya
 pkgtools/x11-links: dependency-driven update                                   
+
+Pullup ticket #6333 - requested by taca
+lang/php73: security update
+
+Pullup ticket #6334 - requested by taca
+lang/php74: security update
+
+Pullup ticket #6335 - requested by taca
+lang/php72: security update
+
+Pullup ticket #6336 - requested by taca
+lang/ruby27-base: security update
+
+Pullup ticket #6337 - requested by taca
+lang/ruby26-base: security patch
+
+Pullup ticket #6338 - requested by taca
+lang/ruby25-base: security patch
+
+Pullup ticket #6339 - requested by taca
+www/contao35: security patch
 
