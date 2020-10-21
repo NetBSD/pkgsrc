@@ -1,4 +1,4 @@
-$NetBSD: patch-sysupgrade.sh,v 1.5 2020/10/14 09:50:49 maya Exp $
+$NetBSD: patch-sysupgrade.sh,v 1.6 2020/10/21 21:34:21 kamil Exp $
 
 * Don't reject https in sysupgrade_fetch()
 * Add ARCHIVE_EXTENSION variable (Fix PR pkg/53697)
@@ -19,7 +19,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.5 2020/10/14 09:50:49 maya Exp $
      shtk_config_set ETCUPDATE "yes"
      shtk_config_set KERNEL "AUTO"
      shtk_config_set SETS "AUTO"
-+    shtk_config_set ARCHIVE_EXTENSION "tgz"
++    shtk_config_set ARCHIVE_EXTENSION "tar.xz"
  }
  
  
