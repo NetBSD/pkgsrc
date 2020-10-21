@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/10/17 07:42:23 kim Exp $
+# $NetBSD: Makefile,v 1.21 2020/10/21 09:27:40 kim Exp $
 
-DISTNAME=	onig-6.9.6-rc3
+DISTNAME=	onig-6.9.6-rc4
 PKGNAME=	${DISTNAME:S/onig/oniguruma/:S/-rev/pl/:S/-rc/rc/}
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kkos/}
