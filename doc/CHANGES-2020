@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5842 2020/10/20 22:17:35 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.5843 2020/10/21 06:58:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8658,3 +8658,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 82.0 [maya 2020-10-20]
 	Updated www/firefox-l10n to 82.0 [maya 2020-10-20]
 	Updated sysutils/backuppc to 4.4.0 [tnn 2020-10-20]
+	Updated devel/py-pep517 to 0.9.1 [adam 2020-10-21]
+	Updated archivers/py-zipp to 3.3.1 [adam 2020-10-21]
+	Updated print/py-reportlab to 3.5.53 [adam 2020-10-21]
+	Updated textproc/py-rst2pdf to 0.98 [adam 2020-10-21]
