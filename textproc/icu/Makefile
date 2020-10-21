@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2020/06/02 08:34:35 adam Exp $
+# $NetBSD: Makefile,v 1.134 2020/10/21 19:39:53 nia Exp $
 
 DISTNAME=	icu4c-67_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -16,12 +16,14 @@ LICENSE=	mit
 WRKSRC=			${WRKDIR}/icu/source
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake pkg-config
-GCC_REQD+=		4.8
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ENV+=		U_MAKE=${TOOLS_GMAKE}
+
+# error: 'max_align_t' in namespace 'std' does not name a type
+GCC_REQD+=		4.9
 
 CHECK_SSP_SKIP=		lib/libicudata.so*
 
