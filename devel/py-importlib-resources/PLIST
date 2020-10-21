@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/05/12 18:42:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/10/21 08:40:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,6 +22,10 @@ ${PLIST.py3x}${PYSITELIB}/importlib_resources/_py3.pyo
 ${PYSITELIB}/importlib_resources/abc.py
 ${PYSITELIB}/importlib_resources/abc.pyc
 ${PYSITELIB}/importlib_resources/abc.pyo
+${PYSITELIB}/importlib_resources/py.typed
+${PYSITELIB}/importlib_resources/readers.py
+${PYSITELIB}/importlib_resources/readers.pyc
+${PYSITELIB}/importlib_resources/readers.pyo
 ${PYSITELIB}/importlib_resources/tests/__init__.py
 ${PYSITELIB}/importlib_resources/tests/__init__.pyc
 ${PYSITELIB}/importlib_resources/tests/__init__.pyo
@@ -49,6 +53,12 @@ ${PYSITELIB}/importlib_resources/tests/data02/two/resource2.txt
 ${PYSITELIB}/importlib_resources/tests/data03/__init__.py
 ${PYSITELIB}/importlib_resources/tests/data03/__init__.pyc
 ${PYSITELIB}/importlib_resources/tests/data03/__init__.pyo
+${PYSITELIB}/importlib_resources/tests/data03/namespace/portion1/__init__.py
+${PYSITELIB}/importlib_resources/tests/data03/namespace/portion1/__init__.pyc
+${PYSITELIB}/importlib_resources/tests/data03/namespace/portion1/__init__.pyo
+${PYSITELIB}/importlib_resources/tests/data03/namespace/portion2/__init__.py
+${PYSITELIB}/importlib_resources/tests/data03/namespace/portion2/__init__.pyc
+${PYSITELIB}/importlib_resources/tests/data03/namespace/portion2/__init__.pyo
 ${PYSITELIB}/importlib_resources/tests/data03/namespace/resource1.txt
 ${PYSITELIB}/importlib_resources/tests/test_files.py
 ${PYSITELIB}/importlib_resources/tests/test_files.pyc
