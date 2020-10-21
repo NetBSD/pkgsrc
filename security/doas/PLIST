@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/23 23:00:51 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/21 19:32:39 pin Exp $
 bin/doas
+bin/vidoas
 man/man1/doas.1
 man/man5/doas.conf.5
