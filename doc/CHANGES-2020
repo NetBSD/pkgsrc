@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5857 2020/10/21 19:23:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5858 2020/10/21 19:29:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8683,3 +8683,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/x11-links to 1.32 [maya 2020-10-21]
 	Updated lang/mono6 to 6.12.0.90 [wiz 2020-10-21]
 	Updated www/firefox78 to 78.4.0 [nia 2020-10-21]
+	Updated www/firefox78-l10n to 78.4.0 [nia 2020-10-21]
