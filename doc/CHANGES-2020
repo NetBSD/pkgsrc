@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5856 2020/10/21 19:19:09 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5857 2020/10/21 19:23:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8682,3 +8682,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mysql57-server to 5.7.32 [adam 2020-10-21]
 	Updated pkgtools/x11-links to 1.32 [maya 2020-10-21]
 	Updated lang/mono6 to 6.12.0.90 [wiz 2020-10-21]
+	Updated www/firefox78 to 78.4.0 [nia 2020-10-21]
