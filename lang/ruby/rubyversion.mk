@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.222 2020/05/21 15:57:59 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.222.4.1 2020/10/21 19:54:09 spz Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -215,7 +215,7 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 # current supported Ruby's version
 RUBY25_VERSION=		2.5.8
 RUBY26_VERSION=		2.6.6
-RUBY27_VERSION=		2.7.1
+RUBY27_VERSION=		2.7.2
 
 # current API compatible version; used for version of shared library
 RUBY25_API_VERSION=	2.5.0
@@ -347,7 +347,7 @@ RUBY_ABI_VERSION=	${RUBY_VERSION}
 RUBY_RDOC_VERSION=	6.2.1
 
 RUBY_DID_YOU_MEAN_VERSION=	1.4.0
-RUBY_IRB_VERSION=		1.2.3
+RUBY_IRB_VERSION=		1.2.6
 
 # bundled gems
 RUBY_MINITEST_VERSION=		5.13.0
