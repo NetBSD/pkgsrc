@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2020/02/19 17:47:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/10/21 06:49:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -57,6 +57,9 @@ ${PYSITELIB}/reportlab/graphics/barcode/code93.pyo
 ${PYSITELIB}/reportlab/graphics/barcode/common.py
 ${PYSITELIB}/reportlab/graphics/barcode/common.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/common.pyo
+${PYSITELIB}/reportlab/graphics/barcode/dmtx.py
+${PYSITELIB}/reportlab/graphics/barcode/dmtx.pyc
+${PYSITELIB}/reportlab/graphics/barcode/dmtx.pyo
 ${PYSITELIB}/reportlab/graphics/barcode/eanbc.py
 ${PYSITELIB}/reportlab/graphics/barcode/eanbc.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/eanbc.pyo
