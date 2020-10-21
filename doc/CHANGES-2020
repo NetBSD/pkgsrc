@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5850 2020/10/21 10:05:03 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5851 2020/10/21 11:45:49 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8673,3 +8673,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xenkernel413 to 4.13.1nb3 [bouyer 2020-10-21]
 	Updated textproc/oniguruma to 6.9.6rc4 [kim 2020-10-21]
 	Updated devel/bison to 3.7.3 [wiz 2020-10-21]
+	Updated games/doomlegacy to 1.48.6 [micha 2020-10-21]
