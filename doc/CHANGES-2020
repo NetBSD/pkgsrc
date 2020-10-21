@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5845 2020/10/21 08:41:47 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5846 2020/10/21 08:47:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8666,3 +8666,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/ghostscript-agpl to 9.53.3 [adam 2020-10-21]
 	Updated devel/py-importlib-resources to 3.0.0 [adam 2020-10-21]
 	Updated devel/py-importlib-metadata to 2.0.0 [adam 2020-10-21]
+	Updated net/fehqlibs to 0.9.16 [schmonz 2020-10-21]
