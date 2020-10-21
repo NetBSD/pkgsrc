@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/05/12 18:42:30 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/10/21 08:40:54 adam Exp $
 
-DISTNAME=	importlib_resources-1.5.0
+DISTNAME=	importlib_resources-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib_resources/}
@@ -13,6 +13,7 @@ LICENSE=	apache-2.0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
+DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
 DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
