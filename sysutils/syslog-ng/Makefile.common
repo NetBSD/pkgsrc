@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2020/05/31 17:30:17 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2020/10/21 19:46:14 nia Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
@@ -17,7 +17,7 @@ PATCHDIR=	${.CURDIR}/../../sysutils/syslog-ng/patches
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/syslog-ng/distinfo
 
 USE_LANGUAGES=	c c99
-USE_TOOLS+=	flex pkg-config gmake awk:run
+USE_TOOLS+=	flex pkg-config gmake awk:run yacc
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_FEATURES+=	strnlen
