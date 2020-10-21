@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/04/10 07:58:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/10/21 08:58:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -586,6 +586,9 @@ ${PYSITELIB}/sqlalchemy/util/__init__.pyo
 ${PYSITELIB}/sqlalchemy/util/_collections.py
 ${PYSITELIB}/sqlalchemy/util/_collections.pyc
 ${PYSITELIB}/sqlalchemy/util/_collections.pyo
+${PYSITELIB}/sqlalchemy/util/_preloaded.py
+${PYSITELIB}/sqlalchemy/util/_preloaded.pyc
+${PYSITELIB}/sqlalchemy/util/_preloaded.pyo
 ${PYSITELIB}/sqlalchemy/util/compat.py
 ${PYSITELIB}/sqlalchemy/util/compat.pyc
 ${PYSITELIB}/sqlalchemy/util/compat.pyo
