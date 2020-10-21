@@ -1,10 +1,9 @@
-$NetBSD: patch-src_p__setup.c,v 1.2 2020/05/20 16:04:12 micha Exp $
+$NetBSD: patch-src_p__setup.c,v 1.3 2020/10/21 11:43:31 micha Exp $
 
-Add support for DeeP and ZDoom extended nodes.
-Upstream feature request:
+Add support for extended nodes and internal blockmap creation.
+
+Created upstream feature requests:
 https://sourceforge.net/p/doomlegacy/feature-requests/95/
-
-Add support to internally create blockmap.
 https://sourceforge.net/p/doomlegacy/feature-requests/96/
 
 --- src/p_setup.c.orig	2020-05-11 09:40:34.000000000 +0000
@@ -70,7 +69,7 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
              for (k=0 ; k<4 ; k++)
                  no->bbox[j][k] = LE_SWAP16(mn->bbox[j][k])<<FRACBITS;
          }
-@@ -1840,6 +1860,7 @@ boolean P_SetupLevel (int      to_episod
+@@ -1851,6 +1871,7 @@ boolean P_SetupLevel (int      to_episod
      const char  *errstr;
      char  *sl_mapname = NULL;
      int   i;
@@ -78,7 +77,7 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
  
      GenPrintf( (verbose? (EMSG_ver|EMSG_now) : (EMSG_console|EMSG_now)),
                 "Setup Level\n" );
-@@ -1985,18 +2006,69 @@ boolean P_SetupLevel (int      to_episod
+@@ -1999,18 +2020,69 @@ boolean P_SetupLevel (int      to_episod
          goto load_reject;
      }
  
