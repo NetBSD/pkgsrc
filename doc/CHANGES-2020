@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5851 2020/10/21 11:45:49 micha Exp $
+$NetBSD: CHANGES-2020,v 1.5852 2020/10/21 11:48:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8674,3 +8674,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/oniguruma to 6.9.6rc4 [kim 2020-10-21]
 	Updated devel/bison to 3.7.3 [wiz 2020-10-21]
 	Updated games/doomlegacy to 1.48.6 [micha 2020-10-21]
+	Updated textproc/py-humanize to 3.1.0 [adam 2020-10-21]
+	Updated net/py-zeroconf to 0.28.6 [adam 2020-10-21]
