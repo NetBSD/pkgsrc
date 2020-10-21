@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/10/12 11:58:48 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/10/21 12:08:16 adam Exp $
 
-DISTNAME=	pysmb-1.2.4
+DISTNAME=	pysmb-1.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysmb/}
