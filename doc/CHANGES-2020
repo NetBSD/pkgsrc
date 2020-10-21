@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5843 2020/10/21 06:58:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5844 2020/10/21 08:28:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8662,3 +8662,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/py-zipp to 3.3.1 [adam 2020-10-21]
 	Updated print/py-reportlab to 3.5.53 [adam 2020-10-21]
 	Updated textproc/py-rst2pdf to 0.98 [adam 2020-10-21]
+	Updated graphics/freetype2 to 2.10.4 [adam 2020-10-21]
+	Updated print/ghostscript-agpl to 9.53.3 [adam 2020-10-21]
