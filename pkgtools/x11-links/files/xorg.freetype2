@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.27 2019/07/21 21:30:14 rjs Exp $
+# $NetBSD: xorg.freetype2,v 1.27.10.1 2020/10/21 17:08:59 spz Exp $
 #
 bin/freetype-config
 include/freetype2/config/ftconfig.h
@@ -14,6 +14,9 @@ include/freetype2/freetype/config/ftheader.h
 include/freetype2/freetype/config/ftmodule.h
 include/freetype2/freetype/config/ftoption.h
 include/freetype2/freetype/config/ftstdlib.h
+include/freetype2/freetype/config/integer-types.h
+include/freetype2/freetype/config/mac-support.h
+include/freetype2/freetype/config/public-macros.h
 include/freetype2/freetype/freetype.h
 include/freetype2/freetype/ftadvanc.h
 include/freetype2/freetype/ftautoh.h
