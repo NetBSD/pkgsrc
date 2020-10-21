@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.2 2020/10/04 20:44:53 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.3 2020/10/21 17:11:27 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -17,4 +17,10 @@ www/firefox52: sparc64 build fix
 Pullup ticket #6332 - requested by bouyer
 sysutils/xenkernel411: security fix
 sysutils/xenkernel413: security fix
+
+Pullup ticket #6346 - requested by maya
+graphics/freetype2: security update
+
+Pullup ticket #6347 - requested by maya
+pkgtools/x11-links: dependency-driven update                                   
 
