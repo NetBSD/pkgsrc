@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/01 15:23:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2020/10/21 19:54:09 spz Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -362,6 +362,7 @@ ${RUBY_LIB}/irb.rb
 ${RUBY_LIB}/irb/cmd/chws.rb
 ${RUBY_LIB}/irb/cmd/fork.rb
 ${RUBY_LIB}/irb/cmd/help.rb
+${RUBY_LIB}/irb/cmd/info.rb
 ${RUBY_LIB}/irb/cmd/load.rb
 ${RUBY_LIB}/irb/cmd/nop.rb
 ${RUBY_LIB}/irb/cmd/pushws.rb
@@ -1494,7 +1495,7 @@ ${GEM_HOME}/specifications/default/psych-${RUBY_PSYCH_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/racc-${RUBY_RACC_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/rdoc-${RUBY_RDOC_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/readline-0.0.2.gemspec
-${GEM_HOME}/specifications/default/reline-0.1.3.gemspec
+${GEM_HOME}/specifications/default/reline-0.1.5.gemspec
 ${GEM_HOME}/specifications/default/rexml-${RUBY_REXML_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/rss-${RUBY_RSS_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/sdbm-${RUBY_SDBM_VERSION}.gemspec
