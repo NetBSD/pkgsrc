@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/08/23 20:12:34 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2020/10/21 10:51:58 kleink Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -177,6 +177,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=motif
 APPLICATIONS_DIR=	Applications
 PLIST_SRC+=		PLIST.cocoa
 CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs
+CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs.pdmp
 .  else
 .include "../../x11/gnustep-gui/buildlink3.mk"
 MAKE_FILE=		Makefile
