@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5859 2020/10/21 19:33:02 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5860 2020/10/21 20:03:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8685,3 +8685,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox78 to 78.4.0 [nia 2020-10-21]
 	Updated www/firefox78-l10n to 78.4.0 [nia 2020-10-21]
 	Updated security/doas to 6.3p2 [pin 2020-10-21]
+	Updated net/grpc to 1.33.1 [adam 2020-10-21]
+	Updated net/py-grpcio to 1.33.1 [adam 2020-10-21]
+	Updated net/py-grpcio-testing to 1.33.1 [adam 2020-10-21]
+	Updated net/py-grpcio-tools to 1.33.1 [adam 2020-10-21]
