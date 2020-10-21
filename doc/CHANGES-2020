@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5854 2020/10/21 13:36:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5855 2020/10/21 15:19:01 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8680,3 +8680,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-iniconfig to 1.1.1 [adam 2020-10-21]
 	Updated databases/mysql57-client to 5.7.32 [adam 2020-10-21]
 	Updated databases/mysql57-server to 5.7.32 [adam 2020-10-21]
+	Updated pkgtools/x11-links to 1.32 [maya 2020-10-21]
