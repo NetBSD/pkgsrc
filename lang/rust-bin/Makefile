@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/10/10 17:13:48 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/10/22 18:15:41 nia Exp $
 
 DISTNAME=	rust-1.47.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -110,8 +110,6 @@ fix-darwin-install-name:
 			    $$f;					\
 		done;							\
 	done
-	install_name_tool -id ${PREFIX}/lib/rustlib/${RUST_ARCH}/lib/python2.7/site-packages/lldb/_lldb.so \
-		${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib/python2.7/site-packages/lldb/_lldb.so
 .  endfor
 .else
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
