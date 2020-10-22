@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/10/15 11:17:08 adam Exp $
+# $NetBSD: Makefile,v 1.10.16.1 2020/10/22 16:10:42 bsiegert Exp $
 
-DISTNAME=	libtaxii-1.1.111
+DISTNAME=	libtaxii-1.1.118
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 #MASTER_SITES=	${MASTER_SITE_PYPI:=l/libtaxii/}
