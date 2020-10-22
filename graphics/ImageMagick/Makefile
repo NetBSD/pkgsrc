@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2020/10/05 11:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2020/10/22 11:07:45 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -84,6 +84,7 @@ SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
 # failed to convert strong functions and variables: Invalid type identifier
 CTF_FILES_SKIP+=	lib/libMagickCore-7.Q16HDRI.so.*
 CTF_FILES_SKIP+=	lib/libMagickWand-7.Q16HDRI.so.*
+CTF_FILES_SKIP+=	lib/libMagickCore-6.Q16.so.*	# CPU limit exceeded
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
