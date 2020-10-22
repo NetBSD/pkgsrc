@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/08/19 16:25:56 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2020/10/22 20:29:44 tnn Exp $
 
-SHA1 (libfido2-1.4.0.tar.gz) = 3436a2e723bb424fc744807179965df2f2f1e601
-RMD160 (libfido2-1.4.0.tar.gz) = 052a692a1d95b00f6594d14d78fa309c525f9c97
-SHA512 (libfido2-1.4.0.tar.gz) = 5cf2f2d70bdba893fd33bf3ca91940c7eded5ed1728b517ff3fc46cbde58bf64f16da4104138b20dcea1d9a1cec730e532bc4938cdcba4ad86343e51a1c3c513
-Size (libfido2-1.4.0.tar.gz) = 391439 bytes
-SHA1 (patch-src_CMakeLists.txt) = 27cd482566e324beb74a78f5f887c10f0cbb8008
+SHA1 (libfido2-1.5.0.tar.gz) = 555893f22e3031cd766058767c17c725350c814c
+RMD160 (libfido2-1.5.0.tar.gz) = f7f714ed5899c6bf764e172f3c62d0a7f0134059
+SHA512 (libfido2-1.5.0.tar.gz) = 240e2368e43846fddf5e98bbcc247468833565bcde4ec27976b88c814d787f1a477241a82b064818aa0eb0a98ff46a65d80b8243f4d0bbd763270e42492354e2
+Size (libfido2-1.5.0.tar.gz) = 407259 bytes
+SHA1 (patch-src_CMakeLists.txt) = 071e20b297758b34ab0785fa8ccfabe354c37281
