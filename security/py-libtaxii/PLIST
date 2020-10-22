@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/15 11:17:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.2.16.1 2020/10/22 16:10:42 bsiegert Exp $
 bin/collection_information_client
 bin/collection_information_client.py
 bin/discovery_client
@@ -85,6 +85,9 @@ ${PYSITELIB}/libtaxii/taxii_default_query.pyo
 ${PYSITELIB}/libtaxii/test/__init__.py
 ${PYSITELIB}/libtaxii/test/__init__.pyc
 ${PYSITELIB}/libtaxii/test/__init__.pyo
+${PYSITELIB}/libtaxii/test/argument_parser_test.py
+${PYSITELIB}/libtaxii/test/argument_parser_test.pyc
+${PYSITELIB}/libtaxii/test/argument_parser_test.pyo
 ${PYSITELIB}/libtaxii/test/clients_test.py
 ${PYSITELIB}/libtaxii/test/clients_test.pyc
 ${PYSITELIB}/libtaxii/test/clients_test.pyo
