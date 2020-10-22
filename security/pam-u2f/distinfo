@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/10/22 23:37:21 tnn Exp $
+
+SHA1 (pam_u2f-1.1.0.tar.gz) = a12e29afe7a491cbb92e335a2d8166edf09dcc0d
+RMD160 (pam_u2f-1.1.0.tar.gz) = 7c919073f9898a5e189448b901e99d301ed46618
+SHA512 (pam_u2f-1.1.0.tar.gz) = 0ffcc32f0bbee279ad02f9c1cd928e2cf1df2fdebe718d869c16b7fece8edafd73cf08c5dfd6a2bc08434ed1970e16e4f89b6dae3b027a961ab43b26818b634f
+Size (pam_u2f-1.1.0.tar.gz) = 415677 bytes
