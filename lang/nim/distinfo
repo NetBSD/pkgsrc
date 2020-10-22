@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2020/08/09 22:11:29 nikita Exp $
+$NetBSD: distinfo,v 1.14 2020/10/22 10:54:48 nikita Exp $
 
-SHA1 (nim-1.2.6.tar.xz) = 1f8718eda5a6a6954e3f5c791b1f36e9a6e19bba
-RMD160 (nim-1.2.6.tar.xz) = a09d358db1a1febb6324f06caaa693706d680a26
-SHA512 (nim-1.2.6.tar.xz) = ef59bbb0d4b05bd13624ea7da7182f1d73ffb31c7b34f5928b7e0411809fd70d1898fba9bb02441dc9ce802cd8accaf59448aef5b457e64de73c2ffbbcd53fbc
-Size (nim-1.2.6.tar.xz) = 5688752 bytes
+SHA1 (nim-1.4.0.tar.xz) = 2e81e738ff6947c3a95082c87401f95cc25d37dd
+RMD160 (nim-1.4.0.tar.xz) = e83f35a7179d8a7e987b4bd696ccc1fad296836e
+SHA512 (nim-1.4.0.tar.xz) = cc8a875f9403725865889ad46cc8c87999ead5efa46f2a35577373ac8e3f0315fc28625791a2096f23ee679bcd29ebe6233cce5abb04bd51e96f57e1c6687be1
+Size (nim-1.4.0.tar.xz) = 4706936 bytes
 SHA1 (patch-bin_nim-gdb) = 0d4e9ae4cc8687ca7821891b63808fa1d175069c
