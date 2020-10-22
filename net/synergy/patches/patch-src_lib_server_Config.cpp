@@ -1,4 +1,4 @@
-$NetBSD: patch-src_lib_server_CConfig.cpp,v 1.3 2015/02/03 18:49:34 tnn Exp $
+$NetBSD: patch-src_lib_server_Config.cpp,v 1.1 2020/10/22 13:47:34 tnn Exp $
 
 Fix for some EOF problem. Not sure it's still required as the
 previous patch has been adapted to upstream changes.
