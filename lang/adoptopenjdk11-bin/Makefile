@@ -1,8 +1,19 @@
 # $NetBSD: Makefile,v 1.4 2020/05/29 10:57:06 abs Exp $
 
-DISTNAME=	OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10
-PKGNAME=	${DISTNAME:S/OpenJDK11U-jdk_x64_linux_hotspot_/adoptopenjdk11-bin-/:S/_/./:tl}
-PKGREVISION=	1
+EMUL_PLATFORMS=         darwin-x86_64 linux-x86_64
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${EMUL_OPSYS} == "linux"
+JDK_TARGET=linux
+EMUL_MODULES.linux=	compat locale x11
+.elif ${EMUL_OPSYS} == "darwin"
+JDK_TARGET=mac
+.endif
+
+DISTNAME=	OpenJDK11U-jdk_x64_${JDK_TARGET}_hotspot_11.0.7_10
+PKGNAME=	${DISTNAME:S/OpenJDK11U-jdk_x64_${JDK_TARGET}_hotspot_/adoptopenjdk11-bin-/:S/_/./:tl}
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdoptOpenJDK/}
 GITHUB_PROJECT=	openjdk11-binaries
@@ -13,7 +24,11 @@ HOMEPAGE=	https://adoptopenjdk.net/
 COMMENT=	AdoptOpenJDK 11 Java Development Kit binary distribution
 LICENSE=	gnu-gpl-v2 # with classpath exception
 
-WRKSRC=		${WRKDIR}/${GITHUB_RELEASE}
+.if ${EMUL_OPSYS} == "linux"
+WRKSRC=         ${WRKDIR}/${GITHUB_RELEASE}
+.elif ${EMUL_OPSYS} == "darwin"
+WRKSRC=         ${WRKDIR}/${GITHUB_RELEASE}/Contents/Home
+.endif
 BUILD_DIRS=	# empty; instead of NO_BUILD=yes to create wrappers
 
 # Contains pre-built binaries
@@ -21,9 +36,6 @@ CHECK_RELRO_SUPPORTED=	no
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 CTF_SUPPORTED=		no
-
-EMUL_PLATFORMS=		linux-x86_64
-EMUL_MODULES.linux=	compat locale x11
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none

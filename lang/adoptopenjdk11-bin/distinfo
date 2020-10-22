@@ -4,3 +4,8 @@ SHA1 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz) = 5627bcceee613c4764c12
 RMD160 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz) = edb5bf55203fbaed96d6550e893a5b2f329300c8
 SHA512 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz) = fa19880289ce8fa4a72fddd5633cf86a33d9f81346a5a7e51c06d7fc48f1953da01f020d15151d74a624ecc22a9f8f2c8ee4f996a4b3ac2ec79f0fb5207a40f8
 Size (OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz) = 193346198 bytes
+
+SHA1 (OpenJDK11U-jdk_x64_mac_hotspot_11.0.7_10.tar.gz) = cfdcae152d753c19b28561a855b8955267982cc0
+RMD160 (OpenJDK11U-jdk_x64_mac_hotspot_11.0.7_10.tar.gz) = 7d924b45bcac2e03d1cb0b02b9fb64a42010eda5
+SHA512 (OpenJDK11U-jdk_x64_mac_hotspot_11.0.7_10.tar.gz) = 92faff545f92ad3264bb8f92ebd52a90db7c49d9c99230f12a2c033c94dda3fb863dcc626609d7d22ccdf7c35aaa4a153220bf75bb0b3ad34a4eb66338860fc6
+Size (OpenJDK11U-jdk_x64_mac_hotspot_11.0.7_10.tar.gz) = 184353243 bytes
