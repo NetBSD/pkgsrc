@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/09/30 07:56:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2020/10/22 08:05:27 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -894,6 +894,7 @@ ${PYSITELIB}/awscli/examples/backup/create-backup-plan.rst
 ${PYSITELIB}/awscli/examples/backup/create-backup-vault.rst
 ${PYSITELIB}/awscli/examples/backup/get-backup-plan-from-template.rst
 ${PYSITELIB}/awscli/examples/backup/get-backup-plan.rst
+${PYSITELIB}/awscli/examples/backup/list-backup-jobs.rst
 ${PYSITELIB}/awscli/examples/batch/cancel-job.rst
 ${PYSITELIB}/awscli/examples/batch/create-compute-environment.rst
 ${PYSITELIB}/awscli/examples/batch/create-job-queue.rst
@@ -1207,6 +1208,7 @@ ${PYSITELIB}/awscli/examples/codecommit/evaluate-pull-request-approval-rules.rst
 ${PYSITELIB}/awscli/examples/codecommit/get-approval-rule-template.rst
 ${PYSITELIB}/awscli/examples/codecommit/get-blob.rst
 ${PYSITELIB}/awscli/examples/codecommit/get-branch.rst
+${PYSITELIB}/awscli/examples/codecommit/get-comment-reactions.rst
 ${PYSITELIB}/awscli/examples/codecommit/get-comment.rst
 ${PYSITELIB}/awscli/examples/codecommit/get-comments-for-compared-commit.rst
 ${PYSITELIB}/awscli/examples/codecommit/get-comments-for-pull-request.rst
@@ -1239,6 +1241,7 @@ ${PYSITELIB}/awscli/examples/codecommit/override-pull-request-approval-rules.rst
 ${PYSITELIB}/awscli/examples/codecommit/post-comment-for-compared-commit.rst
 ${PYSITELIB}/awscli/examples/codecommit/post-comment-for-pull-request.rst
 ${PYSITELIB}/awscli/examples/codecommit/post-comment-reply.rst
+${PYSITELIB}/awscli/examples/codecommit/put-comment-reaction.rst
 ${PYSITELIB}/awscli/examples/codecommit/put-file.rst
 ${PYSITELIB}/awscli/examples/codecommit/put-repository-triggers.rst
 ${PYSITELIB}/awscli/examples/codecommit/tag-resource.rst
@@ -1285,6 +1288,7 @@ ${PYSITELIB}/awscli/examples/codestar-notifications/subscribe.rst
 ${PYSITELIB}/awscli/examples/codestar-notifications/tag-resource.rst
 ${PYSITELIB}/awscli/examples/codestar-notifications/unsubscribe.rst
 ${PYSITELIB}/awscli/examples/codestar-notifications/untag-resource.rst
+${PYSITELIB}/awscli/examples/codestar-notifications/update-notification-rule.rst
 ${PYSITELIB}/awscli/examples/codestar/associate-team-member.rst
 ${PYSITELIB}/awscli/examples/codestar/create-project.rst
 ${PYSITELIB}/awscli/examples/codestar/create-user-profile.rst
@@ -1841,6 +1845,7 @@ ${PYSITELIB}/awscli/examples/ec2/delete-client-vpn-route.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-customer-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-dhcp-options.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-egress-only-internet-gateway.rst
+${PYSITELIB}/awscli/examples/ec2/delete-fleets.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-flow-logs.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-fpga-image.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-internet-gateway.rst
@@ -1885,6 +1890,7 @@ ${PYSITELIB}/awscli/examples/ec2/delete-vpn-connection.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-vpn-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/deprovision-byoip-cidr.rst
 ${PYSITELIB}/awscli/examples/ec2/deregister-image.rst
+${PYSITELIB}/awscli/examples/ec2/deregister-instance-event-notification-attributes.rst
 ${PYSITELIB}/awscli/examples/ec2/deregister-transit-gateway-multicast-group-members.rst
 ${PYSITELIB}/awscli/examples/ec2/deregister-transit-gateway-multicast-group-source.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-account-attributes.rst
@@ -1908,6 +1914,9 @@ ${PYSITELIB}/awscli/examples/ec2/describe-elastic-gpus.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-export-image-tasks.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-export-tasks.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-fast-snapshot-restores.rst
+${PYSITELIB}/awscli/examples/ec2/describe-fleet-history.rst
+${PYSITELIB}/awscli/examples/ec2/describe-fleet-instances.rst
+${PYSITELIB}/awscli/examples/ec2/describe-fleets.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-flow-logs.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-fpga-image-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-fpga-images.rst
@@ -1923,6 +1932,7 @@ ${PYSITELIB}/awscli/examples/ec2/describe-import-image-tasks.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-import-snapshot-tasks.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-instance-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-instance-credit-specifications.rst
+${PYSITELIB}/awscli/examples/ec2/describe-instance-event-notification-attributes.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-instance-status.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-instance-type-offerings.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-instance-types.rst
@@ -2028,6 +2038,7 @@ ${PYSITELIB}/awscli/examples/ec2/get-console-screenshot.rst
 ${PYSITELIB}/awscli/examples/ec2/get-default-credit-specification.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ebs-default-kms-key-id.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ebs-encryption-by-default.rst
+${PYSITELIB}/awscli/examples/ec2/get-groups-for-capacity-reservation.rst
 ${PYSITELIB}/awscli/examples/ec2/get-host-reservation-purchase-preview.rst
 ${PYSITELIB}/awscli/examples/ec2/get-launch-template-data.rst
 ${PYSITELIB}/awscli/examples/ec2/get-managed-prefix-list-associations.rst
@@ -2043,10 +2054,12 @@ ${PYSITELIB}/awscli/examples/ec2/import-client-vpn-client-certificate-revocation
 ${PYSITELIB}/awscli/examples/ec2/import-image.rst
 ${PYSITELIB}/awscli/examples/ec2/import-key-pair.rst
 ${PYSITELIB}/awscli/examples/ec2/import-snapshot.rst
+${PYSITELIB}/awscli/examples/ec2/modify-availability-zone-group.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-capacity-reservation.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-client-vpn-endpoint.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-default-credit-specification.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-ebs-default-kms-key-id.rst
+${PYSITELIB}/awscli/examples/ec2/modify-fleet.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-fpga-image-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-hosts.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-id-format.rst
@@ -2056,6 +2069,7 @@ ${PYSITELIB}/awscli/examples/ec2/modify-instance-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-capacity-reservation-attributes.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-credit-specification.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-event-start-time.rst
+${PYSITELIB}/awscli/examples/ec2/modify-instance-metadata-options.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-placement.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-launch-template.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-managed-prefix-list.rst
@@ -2092,6 +2106,7 @@ ${PYSITELIB}/awscli/examples/ec2/purchase-reserved-instances-offering.rst
 ${PYSITELIB}/awscli/examples/ec2/purchase-scheduled-instances.rst
 ${PYSITELIB}/awscli/examples/ec2/reboot-instances.rst
 ${PYSITELIB}/awscli/examples/ec2/register-image.rst
+${PYSITELIB}/awscli/examples/ec2/register-instance-event-notification-attributes.rst
 ${PYSITELIB}/awscli/examples/ec2/register-transit-gateway-multicast-group-members.rst
 ${PYSITELIB}/awscli/examples/ec2/register-transit-gateway-multicast-group-source.rst
 ${PYSITELIB}/awscli/examples/ec2/reject-transit-gateway-peering-attachment.rst
@@ -2247,6 +2262,16 @@ ${PYSITELIB}/awscli/examples/ecs/update-service-primary-task-set.rst
 ${PYSITELIB}/awscli/examples/ecs/update-service.rst
 ${PYSITELIB}/awscli/examples/ecs/update-task-set.rst
 ${PYSITELIB}/awscli/examples/ecs/wait/services-stable.rst
+${PYSITELIB}/awscli/examples/efs/create-file-system.rst
+${PYSITELIB}/awscli/examples/efs/create-mount-target.rst
+${PYSITELIB}/awscli/examples/efs/delete-file-system.rst
+${PYSITELIB}/awscli/examples/efs/delete-mount-target.rst
+${PYSITELIB}/awscli/examples/efs/describe-file-systems.rst
+${PYSITELIB}/awscli/examples/efs/describe-mount-targets.rst
+${PYSITELIB}/awscli/examples/efs/describe-tags.rst
+${PYSITELIB}/awscli/examples/efs/list-tags-for-resource.rst
+${PYSITELIB}/awscli/examples/efs/tag-resource.rst
+${PYSITELIB}/awscli/examples/efs/untag-resource.rst
 ${PYSITELIB}/awscli/examples/eks/create-cluster.rst
 ${PYSITELIB}/awscli/examples/eks/delete-cluster.rst
 ${PYSITELIB}/awscli/examples/eks/describe-cluster.rst
