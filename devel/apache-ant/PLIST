@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/07/17 23:40:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26.2.1 2020/10/22 16:48:07 bsiegert Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -274,6 +274,7 @@ share/doc/java/ant/api/org/apache/tools/ant/ProjectHelper.OnMissingExtensionPoin
 share/doc/java/ant/api/org/apache/tools/ant/ProjectHelper.html
 share/doc/java/ant/api/org/apache/tools/ant/ProjectHelperRepository.html
 share/doc/java/ant/api/org/apache/tools/ant/PropertyHelper.Delegate.html
+share/doc/java/ant/api/org/apache/tools/ant/PropertyHelper.PropertyEnumerator.html
 share/doc/java/ant/api/org/apache/tools/ant/PropertyHelper.PropertyEvaluator.html
 share/doc/java/ant/api/org/apache/tools/ant/PropertyHelper.PropertySetter.html
 share/doc/java/ant/api/org/apache/tools/ant/PropertyHelper.html
