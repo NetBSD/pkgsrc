@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.783 2020/09/13 08:17:06 wiz Exp $
+# $NetBSD: Makefile,v 1.784 2020/10/22 23:44:09 tnn Exp $
 #
 
 COMMENT=	Security tools
@@ -365,6 +365,7 @@ SUBDIR+=	pam-pwauth_suid
 SUBDIR+=	pam-radius
 SUBDIR+=	pam-saml
 SUBDIR+=	pam-tacplus
+SUBDIR+=	pam-u2f
 SUBDIR+=	pam-yubico
 SUBDIR+=	pam_ssh_agent_auth
 SUBDIR+=	paperkey
