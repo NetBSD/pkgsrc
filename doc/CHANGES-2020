@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5863 2020/10/22 12:37:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5864 2020/10/22 13:48:05 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8697,3 +8697,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-markdown2 to 2.3.10 [adam 2020-10-22]
 	Updated devel/py-coverage to 5.3 [adam 2020-10-22]
 	Updated devel/py-test to 6.1.1 [adam 2020-10-22]
+	Updated net/synergy to 1.12.0 [tnn 2020-10-22]
