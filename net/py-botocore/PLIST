@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/09/30 07:53:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/10/22 08:03:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -647,6 +647,8 @@ ${PYSITELIB}/botocore/data/s3/2006-03-01/service-2.json
 ${PYSITELIB}/botocore/data/s3/2006-03-01/waiters-2.json
 ${PYSITELIB}/botocore/data/s3control/2018-08-20/paginators-1.json
 ${PYSITELIB}/botocore/data/s3control/2018-08-20/service-2.json
+${PYSITELIB}/botocore/data/s3outposts/2017-07-25/paginators-1.json
+${PYSITELIB}/botocore/data/s3outposts/2017-07-25/service-2.json
 ${PYSITELIB}/botocore/data/sagemaker-a2i-runtime/2019-11-07/paginators-1.json
 ${PYSITELIB}/botocore/data/sagemaker-a2i-runtime/2019-11-07/service-2.json
 ${PYSITELIB}/botocore/data/sagemaker-runtime/2017-05-13/examples-1.json
