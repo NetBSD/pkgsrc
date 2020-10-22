@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5862 2020/10/22 11:01:49 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.5863 2020/10/22 12:37:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8691,3 +8691,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-grpcio-tools to 1.33.1 [adam 2020-10-21]
 	Updated sysutils/sysupgrade to 1.5nb7 [kamil 2020-10-21]
 	Updated lang/nim to 1.4.0 [nikita 2020-10-22]
+	Updated net/py-botocore to 1.19.2 [adam 2020-10-22]
+	Updated net/py-boto3 to 1.16.2 [adam 2020-10-22]
+	Updated net/py-awscli to 1.18.162 [adam 2020-10-22]
+	Updated textproc/py-markdown2 to 2.3.10 [adam 2020-10-22]
+	Updated devel/py-coverage to 5.3 [adam 2020-10-22]
+	Updated devel/py-test to 6.1.1 [adam 2020-10-22]
