@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/10/03 12:05:28 pin Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/22 09:50:24 pin Exp $
 
 DISTNAME=	phetch-1.0.7
 CATEGORIES=	net
@@ -9,6 +9,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/xvxx/phetch/
 COMMENT=	Quick lil gopher client for your terminal
 LICENSE=	mit
+
+USE_LANGUAGES+=		c	# rust, but needs a toolchain to link
 
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-0.1.7
