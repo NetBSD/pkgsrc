@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/08/31 18:09:36 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2020/10/22 11:09:05 jperkin Exp $
 
 PKGREVISION= 6
 .include "Makefile.common"
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--without-perl
 PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in
 PKGCONFIG_OVERRIDE+=	wand/GraphicsMagickWand.pc.in
 PKGCONFIG_OVERRIDE+=	Magick++/lib/GraphicsMagick++.pc.in
+
+CTF_FILES_SKIP+=	lib/libGraphicsMagick.so.*	# CPU limit exceeded
 
 TEST_TARGET=	check
 
