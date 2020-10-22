@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5869 2020/10/22 20:53:55 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.5870 2020/10/22 23:44:09 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8704,3 +8704,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libfido2 to 1.5.0 [tnn 2020-10-22]
 	Updated graphics/libansilove to 1.2.7 [fcambus 2020-10-22]
 	Updated graphics/ansilove to 4.1.4 [fcambus 2020-10-22]
+	Added security/pam-u2f version 1.1.0 [tnn 2020-10-22]
