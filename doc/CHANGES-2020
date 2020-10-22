@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5861 2020/10/21 21:35:18 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.5862 2020/10/22 11:01:49 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8690,3 +8690,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-grpcio-testing to 1.33.1 [adam 2020-10-21]
 	Updated net/py-grpcio-tools to 1.33.1 [adam 2020-10-21]
 	Updated sysutils/sysupgrade to 1.5nb7 [kamil 2020-10-21]
+	Updated lang/nim to 1.4.0 [nikita 2020-10-22]
