@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/23 17:14:45 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/10/22 20:19:39 tnn Exp $
 include/cbor.h
 include/cbor/arrays.h
 include/cbor/bytestrings.h
 include/cbor/callbacks.h
+include/cbor/cbor_export.h
 include/cbor/common.h
 include/cbor/configuration.h
 include/cbor/data.h
@@ -20,8 +21,7 @@ include/cbor/serialization.h
 include/cbor/streaming.h
 include/cbor/strings.h
 include/cbor/tags.h
-lib/libcbor.a
 lib/libcbor.so
-lib/libcbor.so.0
-lib/libcbor.so.0.0.0
+lib/libcbor.so.0.8
+lib/libcbor.so.${PKGVERSION}
 lib/pkgconfig/libcbor.pc
