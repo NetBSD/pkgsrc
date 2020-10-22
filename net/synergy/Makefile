@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.64 2020/05/22 10:56:31 adam Exp $
+# $NetBSD: Makefile,v 1.65 2020/10/22 13:47:34 tnn Exp $
 
-DISTNAME=		synergy-core-1.11.1
+DISTNAME=		synergy-core-1.12.0
 PKGNAME=		${DISTNAME:S/-core//}
-PKGREVISION=		2
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_PROJECT=		synergy-core
 GITHUB_TAG=		v${PKGVERSION_NOREV}-stable
+DISTFILES=		${DEFAULT_DISTFILES} googletest-1.10.0.tar.gz
+SITES.googletest-1.10.0.tar.gz=	\
+	-${MASTER_SITE_GITHUB:=google/}googletest/archive/release-1.10.0.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synergy-project.org/
@@ -14,20 +16,10 @@ COMMENT=		Let a user share a mouse and keyboard among computers
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++11
-# Main configuration is CMake, but subdirectories are GNU configure.
-# We need to set GNU_CONFIGURE=yes for config.{guess,sub} overrides to kick in.
-# We override the do-configure target to prevent pkgsrc from running both
-# configuration mechanisms.
 USE_CMAKE=		yes
-GNU_CONFIGURE=		yes
 CMAKE_ARGS+=		-DSYNERGY_BUILD_LEGACY_GUI=OFF
 
-CONFIG_SUB_OVERRIDE+=	ext/gmock/build-aux/config.sub
-CONFIG_SUB_OVERRIDE+=	ext/gtest/build-aux/config.sub
-CONFIG_GUESS_OVERRIDE+=	ext/gmock/build-aux/config.guess
-CONFIG_GUESS_OVERRIDE+=	ext/gtest/build-aux/config.guess
-
-CONFIGURE_ENV+=		GIT_COMMIT=1b4c0761
+CONFIGURE_ENV+=		GIT_COMMIT=cb8064e8
 
 EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
 		org.synergy-foss.org.synergys.plist synergy.conf.example \
@@ -40,10 +32,9 @@ SUBST_FILES.fix-paths=		src/lib/arch/unix/ArchFileUnix.cpp
 SUBST_FILES.fix-paths+=		src/lib/arch/unix/ArchDaemonUnix.h
 SUBST_SED.fix-paths=		-e 's,"/etc,"${PKG_SYSCONFDIR},g'
 
-BUILDLINK_TRANSFORM+=		rm:-march=native
-
-.PHONY: do-configure
-do-configure: do-configure-cmake
+post-extract:
+	${RM} -rf ${WRKSRC}/ext/googletest
+	${LN} -s ${WRKDIR}/googletest-* ${WRKSRC}/ext/googletest
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/${PKGBASE}
 
@@ -80,6 +71,7 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
+.include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .if !exists(/System/Library/Frameworks/Carbon.framework)
