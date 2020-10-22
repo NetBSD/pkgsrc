@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/08/31 18:09:48 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/10/22 11:15:04 jperkin Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -176,6 +176,8 @@ SUBST_STAGE.ccs=	pre-configure
 SUBST_FILES.ccs=	contrib/make_sunver.pl
 SUBST_SED.ccs=		-e 's,/usr/ccs/bin,/usr/bin,g'
 .endif
+
+CTF_FILES_SKIP+=	*/gengtype	# CPU limit exceeded
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
