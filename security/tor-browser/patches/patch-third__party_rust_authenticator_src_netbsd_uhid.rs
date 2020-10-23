@@ -1,9 +1,13 @@
-$NetBSD: patch-dom_webauthn_u2f-hid-rs_src_netbsd_uhid.rs,v 1.1 2020/08/17 06:58:32 riastradh Exp $
+$NetBSD: patch-third__party_rust_authenticator_src_netbsd_uhid.rs,v 1.1.2.2 2020/10/23 17:27:13 bsiegert Exp $
 
 Add NetBSD support for U2F.
 
---- dom/webauthn/u2f-hid-rs/src/netbsd/uhid.rs.orig	2020-07-15 16:19:08.143860020 +0000
-+++ dom/webauthn/u2f-hid-rs/src/netbsd/uhid.rs
+Submitted upstream:
+
+https://github.com/mozilla/authenticator-rs/pull/116
+
+--- third_party/rust/authenticator/src/netbsd/uhid.rs.orig	2020-07-15 16:29:34.213005315 +0000
++++ third_party/rust/authenticator/src/netbsd/uhid.rs
 @@ -0,0 +1,79 @@
 +/* This Source Code Form is subject to the terms of the Mozilla Public
 + * License, v. 2.0. If a copy of the MPL was not distributed with this

@@ -1,14 +1,14 @@
-$NetBSD: patch-.mozconfig,v 1.2 2020/03/13 17:59:27 wiz Exp $
+$NetBSD: patch-.mozconfig,v 1.2.6.1 2020/10/23 17:27:12 bsiegert Exp $
 
 mozbuild.configure.options.InvalidOptionError: --disable-eme is not available in this configuration
 disable tor-launcher - assume tor is started as system process
 
---- .mozconfig.orig	2019-11-15 18:55:41.526147002 +0000
+--- .mozconfig.orig	2020-09-19 17:21:46.000000000 +0000
 +++ .mozconfig
-@@ -20,8 +20,7 @@ ac_add_options --disable-tests
- ac_add_options --disable-debug
+@@ -26,8 +26,7 @@ ac_add_options --disable-debug
  ac_add_options --disable-crashreporter
  ac_add_options --disable-webrtc
+ ac_add_options --disable-parental-controls
 -# Let's make sure no preference is enabling either Adobe's or Google's CDM.
 -ac_add_options --disable-eme
 +ac_add_options --disable-tor-launcher

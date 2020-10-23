@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2020/08/31 18:11:22 wiz Exp $
+# $NetBSD: Makefile,v 1.75.2.1 2020/10/23 17:27:12 bsiegert Exp $
 
-DISTNAME=	src-firefox-tor-browser-68.12.0esr-9.5-1-build1
-PKGNAME=	tor-browser-9.5.4
-PKGREVISION=	1
+DISTNAME=	src-firefox-tor-browser-78.3.0esr-10.0-2-build2
+PKGNAME=	tor-browser-10.0
 CATEGORIES=	security www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -25,7 +24,7 @@ DEPENDS+=	tor-browser-noscript>=11.0.32:../../security/tor-browser-noscript
 #
 # replace all patches with the one from the correspoding www/firefox${ESR_RELEASE}
 # compare e.g. the output of
-# diff -r -I NetBSD . ../../www/firefox68
+# diff -r -I NetBSD . ../../www/firefox78
 # BUT keep:
 # patch-.mozconfig (if still necessary)
 # patch-browser_app_profile_000-tor-browser.js
@@ -49,6 +48,37 @@ SUBST_SED.fonts+=	-e 's,<dir>fonts</dir>,<dir>${PREFIX}/lib/tor-browser/browser/
 SUBST_MESSAGE.fonts=	Fixing path to bundled fonts directory.
 
 MOZILLA_DIR=	# empty
+
+# Workaround for https://bugs.llvm.org/show_bug.cgi?id=46366
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-fexperimental-new-pass-manager
+
+#
+# Generate list of subst entries for various .cargo-checksum.json files.  These
+# are all handled together in one big substitution to simplify things rather
+# than one substitution entry per file, but are kept separate below to ease
+# updating and verification.
+#
+
+CKSUM_CRATES+=	third_party/rust/libc
+
+# patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs
+CKSUMS+=	a3540eab4dbc52e006e84e288bad17e1dae3865fea49020e0ed8b5a7724a9532
+CKSUMS+=	5e58a2109f5eff0f497dfac150c161c1d517a2227b49e086da96c3d66522ac3a
+
+CKSUM_CRATES+=	third_party/rust/getrandom
+
+# patch-third__party_rust_getrandom_src_lib.rs
+CKSUMS+=	0e52f6bde42d7bb05c297ce1c25b9879d61b28caba98f6226a152bff538db6c2
+CKSUMS+=	394425b4ba03c21c494e64d993678f7014575b1e3d590b9ee452b5c2d83ec4ac
+
+SUBST_CLASSES+=		cksum
+SUBST_STAGE.cksum=	pre-configure
+.for crate in ${CKSUM_CRATES}
+SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+.endfor
+.for from to in ${CKSUMS}
+SUBST_SED.cksum+=	-e 's,${from},${to},g'
+.endfor
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -75,7 +105,7 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/tor-browser-bin
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
 BUILDLINK_TRANSFORM.SunOS+=	rm:-ffunction-sections
 
-.include "../../www/firefox68/mozilla-common.mk"
+.include "../../www/firefox78/mozilla-common.mk"
 .include "options.mk"
 
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py

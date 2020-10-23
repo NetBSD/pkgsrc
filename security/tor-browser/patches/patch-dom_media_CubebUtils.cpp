@@ -1,10 +1,8 @@
-$NetBSD: patch-dom_media_CubebUtils.cpp,v 1.2 2020/03/13 17:59:27 wiz Exp $
+$NetBSD: patch-dom_media_CubebUtils.cpp,v 1.2.6.1 2020/10/23 17:27:12 bsiegert Exp $
 
-Add Sun audio support.
-
---- dom/media/CubebUtils.cpp.orig	2019-07-06 01:48:31.000000000 +0000
+--- dom/media/CubebUtils.cpp.orig	Wed Jan  8 01:23:31 2020
 +++ dom/media/CubebUtils.cpp
-@@ -163,7 +163,7 @@ const char kBrandBundleURL[] = "chrome:/
+@@ -140,7 +140,7 @@ const char kBrandBundleURL[] = "chrome://branding/loca
  
  const char* AUDIOSTREAM_BACKEND_ID_STR[] = {
      "jack",  "pulse",       "alsa",  "audiounit", "audioqueue", "wasapi",
