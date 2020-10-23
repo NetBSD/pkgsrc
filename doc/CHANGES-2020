@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5870 2020/10/22 23:44:09 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.5871 2020/10/23 07:23:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8705,3 +8705,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libansilove to 1.2.7 [fcambus 2020-10-22]
 	Updated graphics/ansilove to 4.1.4 [fcambus 2020-10-22]
 	Added security/pam-u2f version 1.1.0 [tnn 2020-10-22]
+	Updated devel/py-atpublic to 2.1.1 [adam 2020-10-23]
+	Updated devel/py-gitpython to 3.1.10 [adam 2020-10-23]
