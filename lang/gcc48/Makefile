@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/08/31 18:09:48 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2020/10/23 00:45:47 gutteridge Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -6,7 +6,7 @@ GCC_PKGNAME=	gcc48
 DISTNAME=	gcc-${GCC48_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC48_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
-## lang/gcc48-libs needs to be bump to be at least 1 more than the
+## lang/gcc48-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
 PKGREVISION=	9
 CATEGORIES=	lang
