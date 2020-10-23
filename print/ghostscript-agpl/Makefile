@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/09/13 14:16:30 leot Exp $
+# $NetBSD: Makefile,v 1.59.2.1 2020/10/23 11:17:44 spz Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -18,6 +18,7 @@ COMMENT=	Postscript interpreter
 LICENSE=	gnu-agpl-v3
 
 .include	"Makefile.common"
+PKGREVISION=	1
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
