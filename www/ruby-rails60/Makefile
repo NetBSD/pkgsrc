@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/09/13 14:55:23 taca Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2020/10/23 16:25:02 bsiegert Exp $
 
 DISTNAME=	rails-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-rails${RUBY_RAILS}-${RAILS_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
