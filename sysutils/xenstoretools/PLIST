@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/08/20 11:30:25 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/10/23 12:44:44 sborrill Exp $
 bin/xenstore
 bin/xenstore-chmod
 bin/xenstore-control
@@ -15,8 +15,14 @@ include/xenstore.h
 include/xenstore_lib.h
 include/xs.h
 include/xs_lib.h
+include/xentoolcore.h
 lib/libxenstore.a
 lib/libxenstore.so
 lib/libxenstore.so.3.0
 lib/libxenstore.so.3.0.3
+lib/libxentoolcore.a
+lib/libxentoolcore.so
+lib/libxentoolcore.so.1
+lib/libxentoolcore.so.1.0
 share/pkgconfig/xenstore.pc
+share/pkgconfig/xentoolcore.pc
