@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5876 2020/10/23 16:25:06 micha Exp $
+$NetBSD: CHANGES-2020,v 1.5877 2020/10/23 16:27:55 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8713,3 +8713,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/webkit-gtk to 2.30.2 [leot 2020-10-23]
 	Updated www/php-nextcloud to 20.0.0 [ryoon 2020-10-23]
 	Updated archivers/star to 1.6.1nb11 [micha 2020-10-23]
+	Updated shells/bosh to 20201009 [micha 2020-10-23]
