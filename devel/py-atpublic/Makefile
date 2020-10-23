@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/07/09 11:35:14 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/10/23 07:21:23 adam Exp $
 
-DISTNAME=	atpublic-1.0
+DISTNAME=	atpublic-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/atpublic/}
@@ -13,6 +13,11 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
