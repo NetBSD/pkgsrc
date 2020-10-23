@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5878 2020/10/23 16:29:34 micha Exp $
+$NetBSD: CHANGES-2020,v 1.5879 2020/10/23 20:52:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8715,3 +8715,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/star to 1.6.1nb11 [micha 2020-10-23]
 	Updated shells/bosh to 20201009 [micha 2020-10-23]
 	Updated shells/pbosh to 20201009 [micha 2020-10-23]
+	Added editors/kiro-editor version 0.4.0 [pin 2020-10-23]
