@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/03 08:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/10/23 09:20:59 tnn Exp $
 #
 
 DISTNAME=		pam_dbm-0.2
@@ -17,10 +17,6 @@ BDB_ACCEPTED=		db1
 
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
-
-# Fix (workaround?) a bug with openpam/NetBSD
-# The bug is described in PR security/39313.
-CFLAGS.NetBSD+=		-DNO_STATIC_MODULES
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/authtest ${DESTDIR}${PREFIX}/sbin/pam_dbm-authtest
