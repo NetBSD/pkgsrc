@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/08 19:13:49 nia Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2020/10/23 17:42:47 bsiegert Exp $
 
 DISTNAME=	profanity-0.9.5
 CATEGORIES=	chat
@@ -37,6 +37,7 @@ BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.9.1
 .include "../../chat/libmesode/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
 .include "../../chat/libsignal-protocol-c/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.22.0
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
