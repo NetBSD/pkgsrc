@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5873 2020/10/23 12:16:12 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5874 2020/10/23 15:01:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8710,3 +8710,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/smake to 1.3nb14 [micha 2020-10-23]
 	Updated misc/py-tqdm to 4.50.2 [adam 2020-10-23]
 	Updated devel/py-test-forked to 1.3.0 [adam 2020-10-23]
+	Updated www/webkit-gtk to 2.30.2 [leot 2020-10-23]
