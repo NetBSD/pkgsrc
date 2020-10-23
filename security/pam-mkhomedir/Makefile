@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/05/04 14:52:26 he Exp $
+# $NetBSD: Makefile,v 1.10 2020/10/23 09:20:59 tnn Exp $
 
 DISTNAME=	pam-mkhomedir-1
 PKGREVISION=	1
@@ -29,10 +29,6 @@ do-build:
 do-install:
 	${SHLIBTOOL} --mode=install ${INSTALL_PROGRAM} -c		\
 		${WRKSRC}/pam_mkhomedir.la ${DESTDIR}${PREFIX}/lib/security
-
-# Fix (workaround?) a bug with openpam/NetBSD
-# The bug is described in PR security/39313.
-CFLAGS.NetBSD+=		-DNO_STATIC_MODULES
 
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
