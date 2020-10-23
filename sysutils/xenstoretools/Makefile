@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:11:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/10/23 12:44:44 sborrill Exp $
 #
 
 # VERSION is set in xentool411/version.mk
-PKGREVISION=		1
+PKGREVISION=		2
 .include		"../../sysutils/xentools411/version.mk"
 
 DIST_SUBDIR=		xen411
@@ -25,7 +25,7 @@ COMMENT=		Xenstore Tools for Xen 4.11.x
 LICENSE=		gnu-gpl-v2
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/xentools411/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/xentools411/patches
-INSTALL_DIRS=		tools/xenstore
+INSTALL_DIRS=		tools/xenstore tools/libs/toolcore
 INSTALL_MAKE_FLAGS+=	XENSTORE_XENSTORED=n
 
 .if !exists(/usr/bin/iasl)
