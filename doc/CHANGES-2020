@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5872 2020/10/23 11:14:30 micha Exp $
+$NetBSD: CHANGES-2020,v 1.5873 2020/10/23 12:16:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8708,3 +8708,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-atpublic to 2.1.1 [adam 2020-10-23]
 	Updated devel/py-gitpython to 3.1.10 [adam 2020-10-23]
 	Updated devel/smake to 1.3nb14 [micha 2020-10-23]
+	Updated misc/py-tqdm to 4.50.2 [adam 2020-10-23]
+	Updated devel/py-test-forked to 1.3.0 [adam 2020-10-23]
