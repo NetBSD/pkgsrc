@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2020/05/21 20:58:32 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.15.4.1 2020/10/23 17:36:23 bsiegert Exp $
 
 BUILDLINK_TREE+=	openexr
 
@@ -10,6 +10,9 @@ BUILDLINK_ABI_DEPENDS.openexr+=	openexr>=2.5.1
 BUILDLINK_PKGSRCDIR.openexr?=	../../graphics/openexr
 
 PTHREAD_OPTS+=	require
+
+# C++14
+GCC_REQD+=	6
 
 .include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
