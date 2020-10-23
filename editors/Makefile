@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2020/09/08 12:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2020/10/23 20:51:42 pin Exp $
 #
 
 COMMENT=	Editors
@@ -69,6 +69,7 @@ SUBDIR+=	kakoune
 SUBDIR+=	kate
 SUBDIR+=	kile
 SUBDIR+=	kilo
+SUBDIR+=	kiro-editor
 SUBDIR+=	l3afpad
 SUBDIR+=	le
 SUBDIR+=	leafpad
