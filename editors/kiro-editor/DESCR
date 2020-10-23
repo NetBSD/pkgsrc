@@ -1,0 +1,21 @@
+Tiny UTF-8 text editor on terminal written in Rust. Kiro was started as a Rust
+port of awesome minimal text editor kilo and has grown with various extensions
+and improvements.
+
+It provides basic features as a minimal text editor:
+- Open/Save text files
+- Create new text files and empty text buffer on memory
+- Edit a text (put/delete characters, insert/delete lines, ...)
+- Simple syntax highlighting
+- Simple incremental text search
+
+Kiro extends kilo to improve editing:
+-Support editing UTF-8 characters
+-Undo/Redo
+-24bit colors (true colors) and 256 colors support using gruvbox retro color
+palette with 16 colors fallback
+-More efficient screen rendering and highlighting
+-Open multiple files (switch buffers by Ctrl-X/Alt-X)
+-Resizing terminal window supported. Screen size is responsible
+-Incremental text search is fixed and improved (kiro only highlights current
+match and only hits once per line).
