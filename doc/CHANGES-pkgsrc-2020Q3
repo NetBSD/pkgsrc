@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.4 2020/10/21 21:52:28 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.5 2020/10/23 12:27:01 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -44,4 +44,7 @@ lang/ruby25-base: security patch
 
 Pullup ticket #6339 - requested by taca
 www/contao35: security patch
+
+Pullup ticket #6354 - requested by maya
+print/ghostscript-agpl: dependecy update triggered build fix
 
