@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/11/04 21:12:57 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/10/23 09:20:59 tnn Exp $
 #
 
 DISTNAME=	pam-krb5-4.6
@@ -13,8 +13,6 @@ LICENSE=	original-bsd OR gnu-gpl-v2
 USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	yes
-
-CPPFLAGS.NetBSD+=	-DNO_STATIC_MODULES
 
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
