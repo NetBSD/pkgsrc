@@ -1,9 +1,13 @@
-$NetBSD: patch-dom_webauthn_u2f-hid-rs_src_lib.rs,v 1.1 2020/08/17 06:58:32 riastradh Exp $
+$NetBSD: patch-third__party_rust_authenticator_src_lib.rs,v 1.1.2.2 2020/10/23 17:27:13 bsiegert Exp $
 
 Add NetBSD support for U2F.
 
---- dom/webauthn/u2f-hid-rs/src/lib.rs.orig	2020-06-22 22:55:03.000000000 +0000
-+++ dom/webauthn/u2f-hid-rs/src/lib.rs
+Submitted upstream:
+
+https://github.com/mozilla/authenticator-rs/pull/116
+
+--- third_party/rust/authenticator/src/lib.rs.orig	2020-07-08 19:27:16.000000000 +0000
++++ third_party/rust/authenticator/src/lib.rs
 @@ -5,7 +5,7 @@
  #[macro_use]
  mod util;
@@ -21,13 +25,13 @@ Add NetBSD support for U2F.
 +#[path = "netbsd/mod.rs"]
 +pub mod platform;
 +
- #[cfg(any(target_os = "macos"))]
- extern crate core_foundation;
- 
-@@ -36,6 +40,7 @@ pub mod platform;
- #[cfg(not(any(
+ #[cfg(any(target_os = "openbsd"))]
+ #[path = "openbsd/mod.rs"]
+ pub mod platform;
+@@ -41,6 +45,7 @@ pub mod platform;
      target_os = "linux",
      target_os = "freebsd",
+     target_os = "openbsd",
 +    target_os = "netbsd",
      target_os = "macos",
      target_os = "windows"
