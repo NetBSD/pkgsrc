@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2020/10/24 18:49:21 js Exp $
+# $NetBSD: Makefile,v 1.44 2020/10/24 21:48:50 js Exp $
 
 DISTNAME=	aiohttp-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
 
@@ -15,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-chardet>=2.0<4.0:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.5<7.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.0<2.0:../../www/py-yarl
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.5:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator-[0-9]*:../../devel/py-async_generator
 TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -27,7 +29,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 36
 DEPENDS+=	${PYPKGPREFIX}-idna-ssl>=1.0:../../www/py-idna_ssl
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.5:../../devel/py-typing-extensions
 .endif
 
 .include "../../devel/py-cython/buildlink3.mk"
