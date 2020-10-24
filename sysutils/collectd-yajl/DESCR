@@ -1,0 +1,2 @@
+YAJL-based plugins for collectd (ceph, log_logstash, sysevent).
+Plugins that also depend on CURL are in the collectd-curl package.

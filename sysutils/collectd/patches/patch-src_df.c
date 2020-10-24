@@ -1,12 +1,12 @@
-$NetBSD: patch-src_df.c,v 1.5 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_df.c,v 1.6 2020/10/24 22:39:45 wiz Exp $
 
 Older NetBSD doesn't have float_t.
 
---- src/df.c.orig	2016-11-30 08:52:01.312911569 +0000
-+++ src/df.c
+--- src/df.c.orig	2020-03-08 16:57:09.000000000 +0100
++++ src/df.c	2020-07-06 19:28:15.661572605 +0200
 @@ -28,6 +28,14 @@
- #include "utils_ignorelist.h"
- #include "utils_mount.h"
+ #include "utils/ignorelist/ignorelist.h"
+ #include "utils/mount/mount.h"
  
 +#if defined(__NetBSD__)
 +#include <sys/param.h>

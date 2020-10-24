@@ -1,12 +1,12 @@
-$NetBSD: patch-src_irq.c,v 1.5 2017/11/21 15:18:23 fhajny Exp $
+$NetBSD: patch-src_irq.c,v 1.6 2020/10/24 22:39:45 wiz Exp $
 
 Provide a port to NetBSD.
 
---- src/irq.c.orig	2017-11-18 09:03:27.354750373 +0000
-+++ src/irq.c
-@@ -27,10 +27,20 @@
- #include "plugin.h"
- #include "utils_ignorelist.h"
+--- src/irq.c.orig	2020-03-08 16:57:09.000000000 +0100
++++ src/irq.c	2020-07-06 19:50:01.057574443 +0200
+@@ -27,10 +27,18 @@
+ #include "utils/common/common.h"
+ #include "utils/ignorelist/ignorelist.h"
  
 -#if !KERNEL_LINUX
 +#if !KERNEL_LINUX && !KERNEL_NETBSD
@@ -14,19 +14,17 @@ Provide a port to NetBSD.
  #endif
  
 +#if KERNEL_NETBSD
-+
 +#include <sys/param.h>
 +#include <sys/types.h>
 +#include <sys/sysctl.h>
 +#include <sys/evcnt.h>
 +#include <malloc.h>
-+
 +#endif /* KERNEL_NETBSD */
 +
  /*
   * (Module-)Global variables
   */
-@@ -75,6 +85,7 @@ static void irq_submit(const char *irq_n
+@@ -75,6 +83,7 @@ static void irq_submit(const char *irq_n
    plugin_dispatch_values(&vl);
  } /* void irq_submit */
  
@@ -34,7 +32,7 @@ Provide a port to NetBSD.
  static int irq_read(void) {
    FILE *fh;
    char buffer[1024];
-@@ -167,6 +178,64 @@ static int irq_read(void) {
+@@ -165,6 +174,64 @@ static int irq_read(void) {
  
    return 0;
  } /* int irq_read */
