@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST.common,v 1.16 2020/10/07 04:34:01 mcf Exp $
+@comment $NetBSD: PLIST.common,v 1.17 2020/10/24 18:22:08 kamil Exp $
 ${PLIST.gcore}bin/gcore
 bin/gdb
 bin/gdb-add-index
+${PLIST.gdbserver}bin/gdbserver
 include/gdb/jit-reader.h
 info/annotate.info
 info/gdb.info
@@ -43,6 +44,7 @@ share/gdb/syscalls/i386-linux.xml
 share/gdb/syscalls/mips-n32-linux.xml
 share/gdb/syscalls/mips-n64-linux.xml
 share/gdb/syscalls/mips-o32-linux.xml
+share/gdb/syscalls/netbsd.xml
 share/gdb/syscalls/ppc-linux.xml
 share/gdb/syscalls/ppc64-linux.xml
 share/gdb/syscalls/s390-linux.xml
