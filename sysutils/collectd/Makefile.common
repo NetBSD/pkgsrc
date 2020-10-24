@@ -1,23 +1,40 @@
-# $NetBSD: Makefile.common,v 1.24 2020/06/02 11:12:05 nia Exp $
+# $NetBSD: Makefile.common,v 1.25 2020/10/24 22:39:45 wiz Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
 # used by sysutils/collectd-curl/Makefile
 # used by sysutils/collectd-dbi/Makefile
 # used by sysutils/collectd-dns/Makefile
-# used by sysutils/collectd-memcached/Makefile
+# used by sysutils/collectd-gmond/Makefile
+# used by sysutils/collectd-gps/Makefile
+# used by sysutils/collectd-grpc/Makefile
+# used by sysutils/collectd-kafka/Makefile
+# used by sysutils/collectd-lua/Makefile
+# used by sysutils/collectd-memcachec/Makefile
+# used by sysutils/collectd-mongodb/Makefile
 # used by sysutils/collectd-mysql/Makefile
 # used by sysutils/collectd-network/Makefile
+# used by sysutils/collectd-notify_desktop/Makefile
 # used by sysutils/collectd-notify-email/Makefile
+# used by sysutils/collectd-nut/Makefile
+# used by sysutils/collectd-openldap/Makefile
+# used by sysutils/collectd-pinba/Makefile
 # used by sysutils/collectd-postgresql/Makefile
+# used by sysutils/collectd-redis/Makefile
 # used by sysutils/collectd-riemann/Makefile
 # used by sysutils/collectd-rrdtool/Makefile
 # used by sysutils/collectd-snmp/Makefile
+# used by sysutils/collectd-tokyotyrant/Makefile
+# used by sysutils/collectd-varnish/Makefile
+# used by sysutils/collectd-virt/Makefile
 # used by sysutils/collectd-write_prometheus/Makefile
+# used by sysutils/collectd-xen/Makefile
+# used by sysutils/collectd-xmms/Makefile
+# used by sysutils/collectd-yajl/Makefile
 # used by sysutils/p5-collectd/Makefile
 # used by sysutils/py-collectd/Makefile
 
-DISTNAME=	collectd-5.8.0
+DISTNAME=	collectd-5.11.0
 MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
@@ -54,22 +71,29 @@ GENERATE_PLIST+=	${ECHO} "lib/collectd/${plugin}.la";
 
 BUILD_DEFS+=		VARBASE
 
-# Disable all libs support by default
-DISABLED_LIBS=		aquaero5 credis curl dbi esmtp ganglia gcrypt	\
-			iptc lvm2app memcached mnl modbus mongoc mysql	\
-			netsnmp notify oping owcapi pcap perl pq	\
-			rabbitmq routeros rrd sensors sigrok statgrab	\
-			tokyotyrant upsclient varnish xml2 xmms yajl
-CONFIGURE_ARGS+=	--with-java=no --with-mic=no --with-oracle=no	\
-			--with-perl-bindings=no --with-python=no	\
+# special case for grpc++ below
+COLLECTD_LIBS=		aquaero5 atasmart curl dbi dpdk esmtp ganglia	\
+			gcrypt gps hiredis iptc iptc jansson jevents	\
+			ldap memcached microhttpd mnl modbus mongoc	\
+			mosquitto mysql netapp netsnmp netsnmpagent	\
+			oping owcapi pcap perl pq pqos protobuf		\
+			protobuf-c python qpid-proton rabbitmq rdkafka	\
+			routeros rrd sensors slurm ssl statgra		\
+			tokyotyrant udev upsclient varnish xenctrl xmms	\
+			yajl
+
+CONFIGURE_ARGS+=	--with-cuda=no --with-java=no --with-mic=no	\
+			--with-oracle=no --with-perl-bindings=no	\
 			--disable-all-plugins
-.for lib in ${DISABLED_LIBS}
-CONFIGURE_ARGS+=	--with-lib${lib}=no
+
+.for lib in ${COLLECTD_LIBS}
+CONFIGURE_ARGS+=	--with-lib${lib}=${COLLECTD_LIB.${lib}:Uno}
 .endfor
+# can't use ENABLE_LIB.grpc++ as a variable name
+CONFIGURE_ARGS+=	--with-libgrpc++=${COLLECTD_LIB.grpcpp:Uno}
+
 CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
-CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 
 CONFIGURE_ARGS.NetBSD+=	ac_cv_func_getfsstat=no
 # aarch64 accidentally had this function for a bit.
@@ -86,5 +110,4 @@ SUBST_SED.ver=		-e 's,m4_esyscmd(./version-gen.sh),${PKGVERSION_NOREV},'
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

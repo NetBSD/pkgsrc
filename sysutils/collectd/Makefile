@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2020/08/31 18:11:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/10/24 22:39:45 wiz Exp $
 
 .include "../../sysutils/collectd/Makefile.common"
-
-PKGREVISION=	5
 
 COMMENT=	Statistics collection daemon base
 
@@ -11,20 +9,20 @@ RCD_SCRIPTS=	collectd
 .include "../../mk/bsd.prefs.mk"
 
 # Simple plugins that have no dependencies
-DEFAULT_PLUGINS+=	aggregation apcups csv email exec filecount	\
-			hddtemp logfile match_empty_counter match_hashed\
-			match_regex match_timediff match_value mbmon	\
-			ntpd olsrd openvpn powerdns statsd table tail	\
-			tail_csv target_notification target_replace	\
-			target_scale target_set	target_v5upgrade	\
-			teamspeak2 threshold unixsock uuid write_graphite
+DEFAULT_PLUGINS=	aggregation apcups check_uptime chrony csv	\
+			email exec filecount hddtemp logfile logparser	\
+			match_empty_counter match_hashed match_regex	\
+			match_timediff match_value mbmon memcached	\
+			notify_nagios ntpd olsrd openvpn powerdns	\
+			statsd table tail tail_csv target_notification	\
+			target_replace target_scale target_set		\
+			target_v5upgrade teamspeak2 threshold unixsock	\
+			uuid write_graphite write_influxdb_udp write_log\
+			write_sensu write_syslog write_tsdb zookeeper
 
 .for option in ${DEFAULT_PLUGINS}
 CONFIGURE_ARGS+=	--enable-${option}
 .endfor
-
-# Several libs not generated in time for linking collectd
-MAKE_JOBS_SAFE=		no
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/collectd
 

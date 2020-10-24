@@ -1,12 +1,12 @@
-$NetBSD: patch-src_swap.c,v 1.5 2017/11/21 15:18:23 fhajny Exp $
+$NetBSD: patch-src_swap.c,v 1.6 2020/10/24 22:39:45 wiz Exp $
 
 Extend support for NetBSD, and add per-swap-device
 reporting for HAVE_SWAPCTL_THREE_ARGS.
 
---- src/swap.c.orig	2017-11-18 09:03:27.366749826 +0000
-+++ src/swap.c
-@@ -78,9 +78,12 @@ static _Bool report_bytes = 0;
- static _Bool report_by_device = 0;
+--- src/swap.c.orig	2020-03-08 16:57:09.000000000 +0100
++++ src/swap.c	2020-07-06 20:21:18.416804717 +0200
+@@ -80,9 +80,12 @@ static bool report_bytes;
+ static bool report_by_device;
  /* #endif KERNEL_LINUX */
  
 -#elif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS
@@ -16,10 +16,10 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
 +#if KERNEL_NETBSD
 +static _Bool report_bytes = 0;
 +#endif
- static _Bool report_by_device = 0;
+ static bool report_by_device;
  /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS */
  
-@@ -118,7 +121,7 @@ static int swap_config(oconfig_item_t *c
+@@ -120,7 +123,7 @@ static int swap_config(oconfig_item_t *c
    for (int i = 0; i < ci->children_num; i++) {
      oconfig_item_t *child = ci->children + i;
      if (strcasecmp("ReportBytes", child->key) == 0)
@@ -28,16 +28,16 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
        cf_util_get_boolean(child, &report_bytes);
  #else
        WARNING("swap plugin: The \"ReportBytes\" option "
-@@ -152,7 +155,7 @@ static int swap_init(void) /* {{{ */
+@@ -154,7 +157,7 @@ static int swap_init(void) /* {{{ */
    pagesize = (derive_t)sysconf(_SC_PAGESIZE);
- /* #endif KERNEL_LINUX */
+   /* #endif KERNEL_LINUX */
  
 -#elif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS
 +#elif HAVE_SWAPCTL && (HAVE_SWAPCTL_TWO_ARGS || HAVE_SWAPCTL_THREE_ARGS)
    /* getpagesize(3C) tells me this does not fail.. */
    pagesize = (derive_t)getpagesize();
- /* #endif HAVE_SWAPCTL */
-@@ -210,7 +213,7 @@ static void swap_submit_usage(char const
+   /* #endif HAVE_SWAPCTL */
+@@ -212,7 +215,7 @@ static void swap_submit_usage(char const
                                 free, other_name, other_value, NULL);
  } /* }}} void swap_submit_usage */
  
@@ -46,7 +46,7 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  __attribute__((nonnull(1))) static void
  swap_submit_derive(char const *type_instance, /* {{{ */
                     derive_t value) {
-@@ -577,6 +580,43 @@ static int swap_read(void) /* {{{ */
+@@ -549,6 +552,43 @@ static int swap_read(void) /* {{{ */
    /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS */
  
  #elif HAVE_SWAPCTL && HAVE_SWAPCTL_THREE_ARGS
@@ -90,7 +90,7 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  static int swap_read(void) /* {{{ */
  {
    struct swapent *swap_entries;
-@@ -615,12 +655,32 @@ static int swap_read(void) /* {{{ */
+@@ -587,12 +627,32 @@ static int swap_read(void) /* {{{ */
    /* TODO: Report per-device stats. The path name is available from
     * swap_entries[i].se_path */
    for (int i = 0; i < swap_num; i++) {
@@ -126,7 +126,7 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  
    if (total < used) {
      ERROR(
-@@ -631,8 +691,15 @@ static int swap_read(void) /* {{{ */
+@@ -603,8 +663,15 @@ static int swap_read(void) /* {{{ */
    }
  
    swap_submit_usage(NULL, used, total - used, NULL, NAN);

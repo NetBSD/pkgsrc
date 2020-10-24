@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2017/06/14 13:42:53 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2020/10/24 22:39:47 wiz Exp $
 
 COLLECTD_PACKAGE=	network
 
 COMMENT=		Statistics collection daemon - network plugin
 
+.include "../../security/libgcrypt/buildlink3.mk"
+COLLECTD_LIB.gcrypt=	${BUILDLINK_PREFIX.libgcrypt}/bin/libgcrypt-config
+
 .include "../../sysutils/collectd/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-libgcrypt=${BUILDLINK_PREFIX.libgcrypt}/bin/libgcrypt-config
-
-.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
