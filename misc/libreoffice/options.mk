@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.11 2020/09/09 10:48:25 nia Exp $
+# $NetBSD: options.mk,v 1.12 2020/10/24 16:51:49 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
-PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups
+PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups ldap dbus
+PKG_SUGGESTED_OPTIONS=	ldap dbus
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -16,7 +17,7 @@ PKG_SUGGESTED_OPTIONS+=	java
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	java gtk3 cups
+PLIST_VARS+=	java gtk3 ldap
 
 .if !empty(PKG_OPTIONS:Mjava)
 .include "../../mk/java-env.mk"
@@ -55,6 +56,21 @@ PLIST.gtk3=		yes
 CONFIGURE_ARGS+=	--disable-gtk3
 .endif
 
-.if empty(PKG_OPTIONS:Mcups)
+.if !empty(PKG_OPTIONS:Mcups)
+CONFIGURE_ARGS+=	--enable-cups
+.else
 CONFIGURE_ARGS+=	--disable-cups
+.endif
+
+.if !empty(PKG_OPTIONS:Mdbus)
+CONFIGURE_ARGS+=	--enable-dbus
+.else
+CONFIGURE_ARGS+=	--disable-dbus
+.endif
+
+.if !empty(PKG_OPTIONS:Mldap)
+CONFIGURE_ARGS+=	--enable-ldap
+PLIST.ldap=		yes
+.else
+CONFIGURE_ARGS+=	--disable-ldap
 .endif
