@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.28 2020/08/31 18:07:42 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/10/24 23:42:23 wen Exp $
 
-DISTNAME=	Config-AutoConf-0.318
+DISTNAME=	Config-AutoConf-0.319
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
-MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AM/AMBS/irConfig/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Config-AutoConf
 COMMENT=	Perl 5 module to implement some of AutoConf macros in pure perl
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	#
+USE_LANGUAGES=	c
 PERL5_PACKLIST=		auto/Config/AutoConf/.packlist
 
 DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
