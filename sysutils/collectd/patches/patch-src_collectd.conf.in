@@ -1,8 +1,9 @@
-$NetBSD: patch-src_collectd.conf.in,v 1.2 2015/06/10 20:05:26 fhajny Exp $
+$NetBSD: patch-src_collectd.conf.in,v 1.3 2020/10/24 22:39:45 wiz Exp $
 
 Fix default dirs.
---- src/collectd.conf.in.orig	2015-05-20 12:05:42.672060002 +0000
-+++ src/collectd.conf.in
+
+--- src/collectd.conf.in.orig	2020-03-19 09:52:56.000000000 +0100
++++ src/collectd.conf.in	2020-07-06 19:18:19.842344185 +0200
 @@ -12,7 +12,7 @@
  
  #Hostname    "localhost"
@@ -12,7 +13,7 @@ Fix default dirs.
  #PIDFile     "@localstatedir@/run/@PACKAGE_NAME@.pid"
  #PluginDir   "@libdir@/@PACKAGE_NAME@"
  #TypesDB     "@prefix@/share/@PACKAGE_NAME@/types.db"
-@@ -315,16 +315,16 @@
+@@ -389,16 +389,16 @@
  #  LongRunAvgLatency false
  #  ConvertSpecialMetricTypes true
  #  <Daemon "osd.0">
@@ -33,7 +34,7 @@ Fix default dirs.
  #  </Daemon>
  #</Plugin>
  
-@@ -340,7 +340,7 @@
+@@ -427,7 +427,7 @@
  #</Plugin>
  #
  #<Plugin csv>
@@ -42,7 +43,7 @@ Fix default dirs.
  #	StoreRates false
  #</Plugin>
  
-@@ -683,7 +683,7 @@
+@@ -1029,7 +1029,7 @@
  #	<Database db_name2>
  #		Alias "squeeze"
  #		Host "localhost"
@@ -51,7 +52,7 @@ Fix default dirs.
  #		SlaveStats true
  #		SlaveNotifications true
  #	</Database>
-@@ -956,14 +956,14 @@
+@@ -1347,14 +1347,14 @@
  #  <Server "server_name">
  #    Collect "latency"
  #    Collect "udp-answers" "udp-queries"
@@ -69,7 +70,7 @@ Fix default dirs.
  #</Plugin>
  
  #<Plugin processes>
-@@ -1011,14 +1011,14 @@
+@@ -1466,14 +1466,14 @@
  
  #<Plugin rrdcached>
  #	DaemonAddress "unix:/tmp/rrdcached.sock"
@@ -86,7 +87,7 @@ Fix default dirs.
  #	CreateFilesAsync false
  #	CacheTimeout 120
  #	CacheFlush   900
-@@ -1174,7 +1174,7 @@
+@@ -1711,7 +1711,7 @@
  #       Type "kpackets_wire_per_sec.realtime"
  #       ValueFrom 4
  #   </Metric>
@@ -95,7 +96,7 @@ Fix default dirs.
  #       Instance "snort-eth0"
  #       Interval 600
  #       Collect "dropped" "mbps" "alerts" "kpps"
-@@ -1231,7 +1231,7 @@
+@@ -1773,7 +1773,7 @@
  #</Plugin>
  
  #<Plugin unixsock>

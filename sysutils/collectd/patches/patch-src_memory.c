@@ -1,33 +1,24 @@
-$NetBSD: patch-src_memory.c,v 1.5 2017/11/21 15:18:23 fhajny Exp $
+$NetBSD: patch-src_memory.c,v 1.6 2020/10/24 22:39:45 wiz Exp $
 
 Add a port for NetBSD using VM_UVMEXP2, and preferring
 sysctl over sysctlbyname.
 
---- src/memory.c.orig	2017-11-18 09:03:27.358750191 +0000
-+++ src/memory.c
-@@ -66,6 +66,10 @@ static mach_port_t port_host;
- static vm_size_t pagesize;
+--- src/memory.c.orig	2020-06-19 21:12:44.000000000 +0200
++++ src/memory.c	2020-07-09 21:13:27.000000000 +0200
+@@ -69,7 +69,12 @@ static vm_size_t pagesize;
  /* #endif HAVE_HOST_STATISTICS */
  
-+#elif HAVE_SYSCTL
-+static int pagesize;
-+/* #endif HAVE_SYSCTL */
-+
  #elif HAVE_SYSCTLBYNAME
++#if HAVE_SYSCTL && defined(KERNEL_NETBSD)
++static int pagesize;
++#include <unistd.h> /* getpagesize() */
++#else
  /* no global variables */
++#endif
  /* #endif HAVE_SYSCTLBYNAME */
-@@ -80,10 +84,6 @@ static kstat_t *ksp;
- static kstat_t *ksz;
- /* #endif HAVE_LIBKSTAT */
  
--#elif HAVE_SYSCTL
--static int pagesize;
--/* #endif HAVE_SYSCTL */
--
- #elif HAVE_LIBSTATGRAB
- /* no global variables */
- /* endif HAVE_LIBSTATGRAB */
-@@ -94,6 +94,10 @@ static int pagesize;
+ #elif KERNEL_LINUX
+@@ -97,6 +102,10 @@ static int pagesize;
  #error "No applicable input method."
  #endif
  
@@ -35,41 +26,23 @@ sysctl over sysctlbyname.
 +# include <uvm/uvm_extern.h>
 +#endif
 +
- static _Bool values_absolute = 1;
- static _Bool values_percentage = 0;
+ static bool values_absolute = true;
+ static bool values_percentage;
  
-@@ -120,6 +124,14 @@ static int memory_init(void) {
-   host_page_size(port_host, &pagesize);
- /* #endif HAVE_HOST_STATISTICS */
+@@ -124,7 +133,11 @@ static int memory_init(void) {
+   /* #endif HAVE_HOST_STATISTICS */
  
-+#elif HAVE_SYSCTL
-+  pagesize = getpagesize();
-+  if (pagesize <= 0) {
-+    ERROR("memory plugin: Invalid pagesize: %i", pagesize);
-+    return (-1);
-+  }
-+/* #endif HAVE_SYSCTL */
-+
  #elif HAVE_SYSCTLBYNAME
++#if HAVE_SYSCTL && defined(KERNEL_NETBSD)
++  pagesize = getpagesize();
++#else
  /* no init stuff */
++#endif /* HAVE_SYSCTL && defied(KERNEL_NETBSD) */
  /* #endif HAVE_SYSCTLBYNAME */
-@@ -142,14 +154,6 @@ static int memory_init(void) {
  
- /* #endif HAVE_LIBKSTAT */
- 
--#elif HAVE_SYSCTL
--  pagesize = getpagesize();
--  if (pagesize <= 0) {
--    ERROR("memory plugin: Invalid pagesize: %i", pagesize);
--    return -1;
--  }
--/* #endif HAVE_SYSCTL */
--
- #elif HAVE_LIBSTATGRAB
- /* no init stuff */
- /* #endif HAVE_LIBSTATGRAB */
-@@ -221,6 +225,46 @@ static int memory_read_internal(value_li
- /* #endif HAVE_HOST_STATISTICS */
+ #elif defined(KERNEL_LINUX)
+@@ -225,6 +238,45 @@ static int memory_read_internal(value_li
+   /* #endif HAVE_HOST_STATISTICS */
  
  #elif HAVE_SYSCTLBYNAME
 +
@@ -111,16 +84,15 @@ sysctl over sysctlbyname.
 +/* #endif HAVE_SYSCTL && defined(KERNEL_NETBSD) */
 +
 +#else /* Other HAVE_SYSCTLBYNAME providers */
-+
    /*
     * vm.stats.vm.v_page_size: 4096
     * vm.stats.vm.v_page_count: 246178
-@@ -259,6 +303,8 @@ static int memory_read_internal(value_li
+@@ -263,6 +315,8 @@ static int memory_read_internal(value_li
                  (gauge_t)sysctl_vals[3], "active", (gauge_t)sysctl_vals[4],
                  "inactive", (gauge_t)sysctl_vals[5], "cache",
                  (gauge_t)sysctl_vals[6]);
 +
 +#endif /* HAVE_SYSCTL && KERNEL_NETBSD */
- /* #endif HAVE_SYSCTLBYNAME */
+   /* #endif HAVE_SYSCTLBYNAME */
  
  #elif KERNEL_LINUX

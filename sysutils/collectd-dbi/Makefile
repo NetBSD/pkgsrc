@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2020/08/31 18:11:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/24 22:39:45 wiz Exp $
 
 COLLECTD_PACKAGE=	dbi
 
 COMMENT=		Statistics collection daemon - dbi plugin
-PKGREVISION=		3
+
+.include "../../databases/libdbi/buildlink3.mk"
+COLLECTD_LIB.dbi=	${BUILDLINK_PREFIX.libdbi}
 
 .include "../../sysutils/collectd/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-libdbi=${BUILDLINK_PREFIX.libdbi}
-
-.include "../../databases/libdbi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

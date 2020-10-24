@@ -1,19 +1,29 @@
-$NetBSD: patch-src_cpu.c,v 1.3 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_cpu.c,v 1.4 2020/10/24 22:39:45 wiz Exp $
 
 Port this too to NetBSD.
 
---- src/cpu.c.orig	2016-11-30 08:52:01.308911943 +0000
-+++ src/cpu.c
-@@ -81,7 +81,7 @@
+--- src/cpu.c.orig	2020-03-08 16:57:09.000000000 +0100
++++ src/cpu.c	2020-07-07 12:08:28.927383000 +0200
+@@ -78,13 +78,16 @@
+ #endif
+ #endif /* HAVE_SYS_DKSTAT_H */
  
- #if HAVE_SYSCTL
+-#define CAN_USE_SYSCTL 0
+ #if (defined(HAVE_SYSCTL) && defined(HAVE_SYSCTLBYNAME)) || defined(__OpenBSD__)
+ /* Implies BSD variant */
  #if defined(CTL_HW) && defined(HW_NCPU) && defined(CTL_KERN) &&                \
 -    defined(KERN_CPTIME) && defined(CPUSTATES)
 +    (defined(KERN_CPTIME) || defined(KERN_CP_TIME)) && defined(CPUSTATES)
  #define CAN_USE_SYSCTL 1
- #else
- #define CAN_USE_SYSCTL 0
-@@ -673,6 +673,24 @@ static int cpu_read(void) {
++#else
++#define CAN_USE_SYSCTL 0
+ #endif
++#else
++#define CAN_USE_SYSCTL 0
+ #endif /* HAVE_SYSCTL_H && HAVE_SYSCTLBYNAME || __OpenBSD__ */
+ 
+ #define COLLECTD_CPU_STATE_USER 0
+@@ -746,6 +749,24 @@ static int cpu_read(void) {
  
    memset(cpuinfo, 0, sizeof(cpuinfo));
  
@@ -38,7 +48,7 @@ Port this too to NetBSD.
  #if defined(KERN_CPTIME2)
    if (numcpu > 1) {
      for (int i = 0; i < numcpu; i++) {
-@@ -710,6 +728,7 @@ static int cpu_read(void) {
+@@ -779,6 +800,7 @@ static int cpu_read(void) {
        cpuinfo[0][i] = cpuinfo_tmp[i];
      }
    }
