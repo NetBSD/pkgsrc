@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5885 2020/10/24 23:31:55 wen Exp $
+$NetBSD: CHANGES-2020,v 1.5886 2020/10/24 23:43:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8755,3 +8755,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/collectd-yajl version 5.11.0 [wiz 2020-10-24]
 	Removed sysutils/collectd-memcached [wiz 2020-10-24]
 	Updated converters/p5-Unicode-MapUTF8 to 1.14 [wen 2020-10-24]
+	Updated devel/p5-Config-AutoConf to 0.319 [wen 2020-10-24]
