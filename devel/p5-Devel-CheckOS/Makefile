@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/08/31 18:07:51 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/10/24 23:53:49 wen Exp $
 
-DISTNAME=	Devel-CheckOS-1.83
+DISTNAME=	Devel-CheckOS-1.85
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -12,7 +11,6 @@ COMMENT=	Perl extension to check what OS we are running on
 LICENSE=	gnu-gpl-v2 OR artistic
 
 DEPENDS+=	p5-File-Find-Rule>=0.28:../../devel/p5-File-Find-Rule
-#DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.19}:../../devel/p5-File-Temp
 
 PERL5_PACKLIST=		auto/Devel/CheckOS/.packlist
 
