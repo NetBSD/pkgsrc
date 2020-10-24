@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.904 2020/10/13 03:52:29 maya Exp $
+# $NetBSD: Makefile,v 1.905 2020/10/24 22:40:01 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -90,20 +90,39 @@ SUBDIR+=	checkpassword-pam
 SUBDIR+=	checkperms
 SUBDIR+=	clex
 SUBDIR+=	collectd
+SUBDIR+=	collectd-CGP
 SUBDIR+=	collectd-amqp
 SUBDIR+=	collectd-curl
 SUBDIR+=	collectd-dbi
 SUBDIR+=	collectd-dns
+SUBDIR+=	collectd-gmond
+SUBDIR+=	collectd-gps
+SUBDIR+=	collectd-grpc
+SUBDIR+=	collectd-haproxy
+SUBDIR+=	collectd-kafka
 SUBDIR+=	collectd-lua
-SUBDIR+=	collectd-memcached
+SUBDIR+=	collectd-memcachec
+SUBDIR+=	collectd-mongodb
 SUBDIR+=	collectd-mysql
 SUBDIR+=	collectd-network
 SUBDIR+=	collectd-notify-email
+SUBDIR+=	collectd-notify_desktop
+SUBDIR+=	collectd-nut
+SUBDIR+=	collectd-openldap
+SUBDIR+=	collectd-pinba
 SUBDIR+=	collectd-postgresql
+SUBDIR+=	collectd-redis
 SUBDIR+=	collectd-riemann
 SUBDIR+=	collectd-rrdtool
 SUBDIR+=	collectd-snmp
+SUBDIR+=	collectd-tokyotyrant
+SUBDIR+=	collectd-varnish
+SUBDIR+=	collectd-virt
+SUBDIR+=	collectd-web
 SUBDIR+=	collectd-write_prometheus
+SUBDIR+=	collectd-xen
+SUBDIR+=	collectd-xmms
+SUBDIR+=	collectd-yajl
 SUBDIR+=	conky
 SUBDIR+=	consolekit
 SUBDIR+=	consul
