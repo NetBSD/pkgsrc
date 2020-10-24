@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5881 2020/10/24 16:11:52 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.5882 2020/10/24 16:33:48 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8718,3 +8718,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added editors/kiro-editor version 0.4.0 [pin 2020-10-23]
 	Updated databases/libpqxx to 7.2.0 [prlw1 2020-10-24]
 	Removed devel/libpthread_dbg [kamil 2020-10-24]
+	Added emulators/rpcemu version 0.9.3 [js 2020-10-24]
