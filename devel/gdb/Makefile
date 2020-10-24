@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2020/10/07 04:34:01 mcf Exp $
+# $NetBSD: Makefile,v 1.73 2020/10/24 18:22:08 kamil Exp $
 
-DISTNAME=	gdb-8.3.1
-PKGREVISION=	2
+DISTNAME=	gdb-10.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
@@ -19,7 +18,7 @@ USE_PKGLOCALEDIR=		yes
 USE_LIBTOOL=			yes
 USE_TOOLS+=			gmake msgfmt makeinfo perl:build bash:run
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
-INSTALL_TARGET=			install install-info
+INSTALL_TARGET=			install-gdb install-gdbsupport
 TEST_TARGET=			check
 INFO_FILES=			yes
 CONFIGURE_ENV+=			CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
@@ -28,7 +27,9 @@ CONFIGURE_ENV+=			CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 SUBST_CLASSES+=			fix-depcomp
 SUBST_STAGE.fix-depcomp+=	pre-configure
 SUBST_MESSAGE.fix-depcomp+=	Read depcomp directly
-SUBST_FILES.fix-depcomp+=	gdb/configure
+SUBST_FILES.fix-depcomp+=	gdb/configure gdbserver/configure
+SUBST_FILES.fix-depcomp+=	gdbsupport/configure
+SUBST_FILES.fix-depcomp+=	gnulib/configure libctf/configure
 SUBST_SED.fix-depcomp+=		-e 's,< ./depcomp,${_OVERRIDE_PATH.depcomp},'
 
 CONFIGURE_ARGS+=	--disable-binutils
@@ -38,8 +39,6 @@ CONFIGURE_ARGS+=	--disable-gas
 CONFIGURE_ARGS+=	--disable-ld
 
 CONFIGURE_ARGS+=	--enable-targets=all
-
-AUTO_MKDIRS=		yes
 
 .include "options.mk"
 
@@ -54,17 +53,19 @@ PLIST_VARS+=	gcore
 PLIST.gcore=	yes
 .endif
 
+PLIST_VARS+=	gdbserver
+.if ${OPSYS} == "Linux" || \
+	(${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
+INSTALL_TARGET+=	install-gdbserver
+PLIST.gdbserver=	yes
+.endif
+
 .if ${OPSYS} == "SunOS"
 # Work around a bug in gdb's configure
 CONFIGURE_ENV+=		ac_cv_header_curses_h=yes
 .elif ${OPSYS} == "NetBSD"
 .include "../../mk/curses.buildlink3.mk"
-CONFIGURE_ARGS+= -with-curses
-CONFIGURE_ENV+= gdb_cv_var_elf=yes
-MAKE_ENV+= gdb_cv_var_elf=yes
-CONFIGURE_ENV+= gdb_cv_struct_lwp=yes
-MAKE_ENV+= gdb_cv_struct_lwp=yes
-
+CONFIGURE_ARGS+=	--with-curses
 CONFIGURE_ARGS+=	--with-separate-debug-dir=/usr/libdata/debug
 .endif
 
@@ -73,21 +74,6 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
-
-post-install:
-	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
-#
-# PATH of libiberty.a differs between clang and gcc: (and conflicts to other toolchain)
-# Rename to avoid conflict to native and other toolchain
-# and clang differs its path so, (the same as avr-binutils).
-
-	(cd ${DESTDIR}${PREFIX};				\
-	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a;	\
-	  do if [ -f lib/$$d ]; then				\
-		${MV}	lib/$$d	 lib/gdb/libiberty.a;		\
-		break;						\
-	     fi;						\
-	  done;	)
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
