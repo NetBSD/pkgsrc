@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5880 2020/10/24 11:36:05 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.5881 2020/10/24 16:11:52 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8717,3 +8717,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/pbosh to 20201009 [micha 2020-10-23]
 	Added editors/kiro-editor version 0.4.0 [pin 2020-10-23]
 	Updated databases/libpqxx to 7.2.0 [prlw1 2020-10-24]
+	Removed devel/libpthread_dbg [kamil 2020-10-24]
