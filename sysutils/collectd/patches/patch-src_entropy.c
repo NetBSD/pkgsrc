@@ -1,15 +1,15 @@
-$NetBSD: patch-src_entropy.c,v 1.10 2017/11/21 15:18:23 fhajny Exp $
+$NetBSD: patch-src_entropy.c,v 1.11 2020/10/24 22:39:45 wiz Exp $
 
 Provide a NetBSD implementation for graphing available entropy.
 This version tries to keep /dev/urandom open (for repeated use),
 instead of constantly re-opening/closing it, since the latter will
 needlessly reduce the kernel's entropy estimate.
 
---- src/entropy.c.orig	2017-11-18 09:03:27.354750373 +0000
-+++ src/entropy.c
+--- src/entropy.c.orig	2020-03-08 16:57:09.000000000 +0100
++++ src/entropy.c	2020-07-06 19:39:37.204772249 +0200
 @@ -29,23 +29,16 @@
- #include "common.h"
  #include "plugin.h"
+ #include "utils/common/common.h"
  
 -#if !KERNEL_LINUX
 +static void entropy_submit (value_t);
