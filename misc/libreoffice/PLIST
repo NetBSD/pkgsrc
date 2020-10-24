@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2020/08/11 16:07:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.40 2020/10/24 16:51:49 tnn Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -145,7 +145,7 @@ ${PKGNAME}/lib/libreoffice/program/libintrospectionlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocadaptlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocationlo.so
 ${PKGNAME}/lib/libreoffice/program/libiolo.so
-${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
+${PLIST.ldap}${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
 ${PKGNAME}/lib/libreoffice/program/liblnglo.so
 ${PKGNAME}/lib/libreoffice/program/liblnthlo.so
 ${PKGNAME}/lib/libreoffice/program/liblocalebe1lo.so
