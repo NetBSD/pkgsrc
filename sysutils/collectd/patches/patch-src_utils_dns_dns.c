@@ -1,10 +1,10 @@
-$NetBSD: patch-src_utils__dns.c,v 1.3 2020/02/03 09:12:32 triaxx Exp $
+$NetBSD: patch-src_utils_dns_dns.c,v 1.1 2020/10/24 22:39:45 wiz Exp $
 
 Resolve conflict with pkgsrc PCAP on NetBSD 7 and 8.
 
---- src/utils_dns.c.orig	2017-11-18 09:03:27.370749644 +0000
-+++ src/utils_dns.c
-@@ -91,6 +91,12 @@
+--- src/utils/dns/dns.c.orig	2020-03-08 16:57:09.000000000 +0100
++++ src/utils/dns/dns.c	2020-07-20 12:55:29.000000000 +0200
+@@ -85,6 +85,12 @@
  #endif
  
  #if HAVE_PCAP_H

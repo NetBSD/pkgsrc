@@ -1,10 +1,10 @@
-$NetBSD: patch-src_processes.c,v 1.8 2017/11/21 16:02:20 he Exp $
+$NetBSD: patch-src_processes.c,v 1.9 2020/10/24 22:39:45 wiz Exp $
 
 Add a port to NetBSD.
 
---- src/processes.c.orig	2017-06-06 18:13:54.693164693 +0000
-+++ src/processes.c
-@@ -97,14 +97,16 @@
+--- src/processes.c.orig	2020-03-08 16:57:09.000000000 +0100
++++ src/processes.c	2020-07-06 20:15:33.891304651 +0200
+@@ -102,14 +102,16 @@
  /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
@@ -23,7 +23,7 @@ Add a port to NetBSD.
  
  #elif HAVE_PROCINFO_H
  #include <procinfo.h>
-@@ -286,10 +288,15 @@ static void ps_fill_details(const procst
+@@ -315,10 +317,15 @@ static void ps_fill_details(const procst
  /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
@@ -41,8 +41,8 @@ Add a port to NetBSD.
  
  #elif HAVE_PROCINFO_H
  static struct procentry64 procentry[MAXPROCENTRY];
-@@ -673,10 +680,21 @@ static int ps_init(void) {
- /* #endif KERNEL_LINUX */
+@@ -774,10 +781,21 @@ static int ps_init(void) {
+     /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
 -    (HAVE_STRUCT_KINFO_PROC_FREEBSD || HAVE_STRUCT_KINFO_PROC_OPENBSD)
@@ -59,15 +59,15 @@ Add a port to NetBSD.
 +#endif
 +
    pagesize = getpagesize();
- /* #endif HAVE_LIBKVM_GETPROCS && (HAVE_STRUCT_KINFO_PROC_FREEBSD ||
-- * HAVE_STRUCT_KINFO_PROC_OPENBSD) */
-+ * HAVE_STRUCT_KINFO_PROC_OPENBSD || HAVE_STRUCT_KINFO_PROC2_NETBSD) */
+   /* #endif HAVE_LIBKVM_GETPROCS && (HAVE_STRUCT_KINFO_PROC_FREEBSD ||
+-   * HAVE_STRUCT_KINFO_PROC_OPENBSD) */
++   * HAVE_STRUCT_KINFO_PROC_OPENBSD || HAVE_STRUCT_KINFO_PROC2_NETBSD) */
  
  #elif HAVE_PROCINFO_H
    pagesize = getpagesize();
-@@ -2074,6 +2092,197 @@ static int ps_read(void) {
+@@ -2296,6 +2314,196 @@ static int ps_read(void) {
      ps_submit_proc_list(ps_ptr);
- /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_FREEBSD */
+     /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_FREEBSD */
  
 +#elif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC2_NETBSD
 +  int running  = 0;
@@ -258,7 +258,6 @@ Add a port to NetBSD.
 +  for (ps_ptr = list_head_g; ps_ptr != NULL; ps_ptr = ps_ptr->next)
 +       ps_submit_proc_list (ps_ptr);
 +/* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC2_NETBSD */
-+
 +
  #elif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_OPENBSD
    int running = 0;

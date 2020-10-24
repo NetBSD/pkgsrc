@@ -1,4 +1,4 @@
-$NetBSD: patch-src_netstat__udp.c,v 1.1 2015/09/12 19:04:56 he Exp $
+$NetBSD: patch-src_netstat__udp.c,v 1.2 2020/10/24 22:39:45 wiz Exp $
 
 Add a plugin which reports the UDP summary statistics.
 Useful for busyish DNS name servers.
@@ -28,7 +28,7 @@ Useful for busyish DNS name servers.
 + **/
 +
 +#include "collectd.h"
-+#include "common.h"
++#include "utils/common/common.h"
 +#include "plugin.h"
 +
 +#if !defined(KERNEL_NETBSD)
