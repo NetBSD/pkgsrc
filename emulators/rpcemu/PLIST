@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/24 16:33:34 js Exp $
+bin/rpcemu-interpreter
