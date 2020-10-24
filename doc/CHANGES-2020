@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5886 2020/10/24 23:43:16 wen Exp $
+$NetBSD: CHANGES-2020,v 1.5887 2020/10/24 23:54:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8756,3 +8756,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/collectd-memcached [wiz 2020-10-24]
 	Updated converters/p5-Unicode-MapUTF8 to 1.14 [wen 2020-10-24]
 	Updated devel/p5-Config-AutoConf to 0.319 [wen 2020-10-24]
+	Updated devel/p5-Devel-CheckOS to 1.85 [wen 2020-10-24]
