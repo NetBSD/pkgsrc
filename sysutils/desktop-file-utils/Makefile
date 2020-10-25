@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/09/01 10:21:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.44 2020/10/25 12:45:52 nia Exp $
 
 DISTNAME=	desktop-file-utils-0.26
 CATEGORIES=	sysutils gnome
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/wiki/Software/desktop-file-utils
 COMMENT=	Utilities to manage desktop entries
 LICENSE=	gnu-gpl-v2
+
+# cc1: error: unrecognized command line option "-std=gnu11"
+GCC_REQD+=	4.7
 
 USE_TOOLS+=		pkg-config
 
