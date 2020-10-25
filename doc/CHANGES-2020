@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5889 2020/10/25 03:20:15 wen Exp $
+$NetBSD: CHANGES-2020,v 1.5890 2020/10/25 03:23:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8758,4 +8758,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Config-AutoConf to 0.319 [wen 2020-10-24]
 	Updated devel/p5-Devel-CheckOS to 1.85 [wen 2020-10-24]
 	Updated math/R-carData to 3.0.4 [wen 2020-10-25]
-	Updated math/R-Formula to 1.2.4 [wen 2020-10-25] 
+	Updated math/R-Formula to 1.2.4 [wen 2020-10-25]
+	Updated textproc/p5-PPIx-QuoteLike to 0.013 [wen 2020-10-25]
