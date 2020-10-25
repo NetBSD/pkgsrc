@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5892 2020/10/25 03:56:00 wen Exp $
+$NetBSD: CHANGES-2020,v 1.5893 2020/10/25 08:22:44 gson Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8762,3 +8762,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-PPIx-QuoteLike to 0.013 [wen 2020-10-25]
 	Updated net/aget to 0.4.1 [wen 2020-10-25]
 	Updated sysutils/cfengine3 to 3.15.2 [wen 2020-10-25]
+	Updated emulators/qemu to 5.1.0nb8 [gson 2020-10-25]
