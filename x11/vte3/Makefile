@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/10/06 19:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2020/10/25 13:15:43 nia Exp $
 
 DISTNAME=	vte-0.60.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
@@ -20,6 +20,10 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
 USE_LANGUAGES=		c c++17
 # for c++17
 GCC_REQD+=		7
+
+# Otherwise, this will fail on Linux distributions that don't
+# have libsystemd.
+MESON_ARGS+=		-D_systemd=false
 
 .include "../../devel/meson/build.mk"
 .include "../../converters/fribidi/buildlink3.mk"
