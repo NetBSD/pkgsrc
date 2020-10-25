@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.165 2020/10/10 16:29:21 martin Exp $
+$NetBSD: distinfo,v 1.166 2020/10/25 08:21:35 gson Exp $
 
 SHA1 (palcode-clipper) = e25ae10a10e0801e47b62b9ee2d10c8ccb4ee940
 RMD160 (palcode-clipper) = a637f1cc38dabfdff36e3f02b6dd02d7c63cb8db
@@ -21,6 +21,7 @@ SHA1 (patch-hw_alpha_dp264.c) = 856304784f098863728ecac3d0a9287aa22190d7
 SHA1 (patch-hw_alpha_typhoon.c) = 1bed5cd6f355c4163585c5331356ebf38c5c3a16
 SHA1 (patch-hw_core_uboot__image.h) = 17eef02349343c5fcfb7a4069cb6f8fd11efcb59
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
+SHA1 (patch-hw_display_tcx.c) = 58f6c90bda734ec83b702b1b13d24c3e3219c7bd
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_pci-host_sabre.c) = 75c076757ed96fc9f89cb0159f00c6cedcb39a27
