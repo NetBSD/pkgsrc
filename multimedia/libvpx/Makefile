@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2020/09/29 13:03:13 adam Exp $
+# $NetBSD: Makefile,v 1.85 2020/10/25 12:43:45 nia Exp $
 
 DISTNAME=	libvpx-1.9.0
 PKGREVISION=	1
@@ -12,7 +12,7 @@ HOMEPAGE=	https://chromium.googlesource.com/webm/libvpx
 COMMENT=	On2 VP8 library from Google
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake bash:build perl:build
 HAS_CONFIGURE=		yes
@@ -23,16 +23,13 @@ CONFIGURE_ARGS+=	--enable-runtime-cpu-detect
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-unit-tests
 
+# Uses -std=c++11
+GCC_REQD+=		4.8
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-# PR pkg/48508: GCC 4.4 or later is required to compile ssse3 code on NetBSD & Solaris.
-# Because building pkgsrc with gcc < 4.4 doesn't really work in the
-# first place, for simplicitly, just set GCC_REQD unconditionally
-# rather than trying to limit by OS.
-GCC_REQD+=	4.4
-
-BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
+TOOL_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 .endif
 
 REPLACE_BASH=		configure
