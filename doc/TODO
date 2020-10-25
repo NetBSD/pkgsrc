@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20150 2020/10/24 18:22:23 kamil Exp $
+$NetBSD: TODO,v 1.20151 2020/10/25 03:36:17 wen Exp $
 
 Suggested new packages
 ======================
@@ -390,7 +390,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aewm++-1.1.5
 	o afbinit-1.0.1
 	o afterstep-2.2.12
-	o aget-0.4.1
 	o aide-0.16
 	o akonadi-16.08.1
 	o alephone-20150620
