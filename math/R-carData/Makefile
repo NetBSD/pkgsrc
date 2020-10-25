@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/08/08 19:53:47 brook Exp $
+# $NetBSD: Makefile,v 1.4 2020/10/25 03:13:49 wen Exp $
 
 R_PKGNAME=	carData
-R_PKGVER=	3.0-2
+R_PKGVER=	3.0-4
 CATEGORIES=	math
 
 MAINTAINER=	wen@NetBSD.org
