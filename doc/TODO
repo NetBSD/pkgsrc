@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20152 2020/10/25 03:56:00 wen Exp $
+$NetBSD: TODO,v 1.20153 2020/10/25 08:19:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o alephone-20150620
 	o alevt-1.6.2
 	o allegro-5.10
-	o alsa-lib-1.2.3.2
+	o alsa-lib-1.2.4
 	o alsa-plugins-1.1.0
 	o amarok-2.9.0
 	o amavis-perl-0.3.12 [called just amavis]
@@ -593,6 +593,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geoclue-2.1.10
 	o gfract-0.33
 	o ghdl-0.33
+	o git-base-2.29.1
 	o gjs-1.64.3 [wip]
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -680,6 +681,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o html2wml-0.4.11
 	o http_load-20140814
 	o hugo-0.57.1 [needs gocloud.dev]
+	o i3-4.18.3
 	o icbirc-2.0
 	o icdprog-0.5
 	o icedtea-web-1.6.2
@@ -724,6 +726,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevelop-5.6
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
+	o keepassxc-2.6.2
 	o keybinder-0.3.1
 	o kipi-plugins-4.14.0
 	o kismet-2011.03r2 [pkg/45692]
@@ -740,14 +743,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ldapsdk-6.0.7
 	o lgeneral-1.3.1
 	o libatomic-10.2.0
+	o libbluray-1.2.1
 	o libbpg-0.9.6
 	o libcarddav-14.0.4
 	o libdrm-2.4.102
 	o libflash-0.4.13
+	o libgcrypt-1.8.7
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgphoto2-2.5.16
+	o libimagequant-2.13.0
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libkgeomap-4.14.0
@@ -924,6 +930,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o polkit-0.118
 	o poppass-4.0.14
 	o poppler-20.10.0
+	o poppler-data-0.4.10
 	o postal-0.72
 	o pound-3.0d
 	o povray-3.7.0.0
@@ -947,7 +954,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-feedparser-6.0.0 [drops python-2.x support, backward-incompatible with 5.x]
 	o py-hgview-1.9.0
-	o py-hypothesis-5.37.3
+	o py-hypothesis-5.38.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-markdown-3.2.2 [drops python-2.x support]
@@ -1050,7 +1057,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o stegavorto-2011.05.26
 	o strace-4.23
 	o stratagus-2.2.5.5
-	o strawberry-0.8.2
+	o strawberry-0.8.3
 	o streamtuner-2.2.0
 	o sudo-1.9.3p1
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
@@ -1099,7 +1106,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ucview-0.33
 	o udpcast-20120424
 	o ufoai-2.3.1
-	o ugrep-3.0.2
+	o ugrep-3.0.4
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
 	o units-2.12
