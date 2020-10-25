@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/04/07 21:36:58 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/10/25 12:59:26 nia Exp $
 
 DISTNAME=	googletest-1.10.0
 CATEGORIES=	devel
@@ -13,7 +13,10 @@ LICENSE=	modified-bsd
 INSTALLATION_DIRS=	bin
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+
+# cc1plus: error: unrecognized command line option "-std=c++11"
+GCC_REQD+=		4.8
 
 PKGCONFIG_OVERRIDE+=	googlemock/cmake/gmock.pc.in
 PKGCONFIG_OVERRIDE+=	googlemock/cmake/gmock_main.pc.in
