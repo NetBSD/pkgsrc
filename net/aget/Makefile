@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2020/10/25 03:34:42 wen Exp $
 #
 
-DISTNAME=	aget-0.4
-PKGREVISION=	1
+DISTNAME=	aget-0.4.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.enderunix.org/aget/
 
