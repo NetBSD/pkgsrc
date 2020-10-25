@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5901 2020/10/25 22:39:24 jnemeth Exp $
+$NetBSD: CHANGES-2020,v 1.5902 2020/10/25 22:39:40 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8771,3 +8771,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-multidict to 5.0.0 [wen 2020-10-25]
 	Added devel/git-filter-repo version 2.29.0 [tnn 2020-10-25]
 	Updated databases/mysql56-client to 5.6.50 [jnemeth 2020-10-25]
+	Updated databases/mysql56-server to 5.6.50 [jnemeth 2020-10-25]
