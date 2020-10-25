@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3272 2020/10/24 16:05:36 kamil Exp $
+# $NetBSD: Makefile,v 1.3273 2020/10/25 19:34:04 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -364,6 +364,7 @@ SUBDIR+=	git-base
 SUBDIR+=	git-contrib
 SUBDIR+=	git-cvs
 SUBDIR+=	git-docs
+SUBDIR+=	git-filter-repo
 SUBDIR+=	git-gitk
 SUBDIR+=	git-lfs
 SUBDIR+=	git-remote-hg
