@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5897 2020/10/25 14:59:23 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5898 2020/10/25 15:16:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8767,3 +8767,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/knot to 3.0.1 [ryoon 2020-10-25]
 	Updated time/ruby-tzinfo-data to 1.2020.4 [taca 2020-10-25]
 	Updated www/lighttpd to 1.4.55nb3 [schmonz 2020-10-25]
+	Updated www/p5-CGI to 4.51 [wen 2020-10-25]
