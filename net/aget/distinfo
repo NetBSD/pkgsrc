@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:34:52 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/10/25 03:34:42 wen Exp $
 
-SHA1 (aget-0.4.tar.gz) = acd428c919c105401f4b1c19a082c71f470fe9af
-RMD160 (aget-0.4.tar.gz) = f2a342ee513c9225e6f124ebc35b3d297cdfcb62
-SHA512 (aget-0.4.tar.gz) = 3877cd6ef5fe922ed3658faa5c4b9fd62ad4ac71cce5a94f808207f7327a54ae4b4592a4d3e2cd15a2ccbb190e3e96ef4d952bb64b5e97ab581e661def22a088
-Size (aget-0.4.tar.gz) = 11152 bytes
+SHA1 (aget-0.4.1.tar.gz) = 6f7bc1676fd506207a1a168c587165b902d9d609
+RMD160 (aget-0.4.1.tar.gz) = 4a23d722b0e4d6c632c40006aa5e67d5acfd4b88
+SHA512 (aget-0.4.1.tar.gz) = 23fd4a7786b905bb10fb8de62dea294e014e0c2ad276614c642ebd3865b262eb88e08308df9a68f418de19a984ad138561d82c67e0226dfb5f56520e8ed15ad7
+Size (aget-0.4.1.tar.gz) = 12783 bytes
 SHA1 (patch-aa) = 2c01b67e4b7251927b46442cd9951baa1ec772d3
 SHA1 (patch-ab) = 9fd3a4eaf9bfdad2326b7d6f49d9a0baff57ea3a
 SHA1 (patch-ac) = 09c189a304b3d7fafa6a5f73d62101b6221d724f
