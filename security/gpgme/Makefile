@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/08/25 08:54:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.100 2020/10/25 12:53:54 nia Exp $
 
 DISTNAME=	gpgme-1.14.0
 CATEGORIES=	security
@@ -17,6 +17,9 @@ GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--enable-languages="cl cpp"
+
+# configure: error: A compiler with c++11 support is required for the c++ binding.
+GCC_REQD+=		4.8
 
 SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	src/gpgme-config.in
