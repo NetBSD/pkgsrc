@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5907 2020/10/26 10:06:49 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5908 2020/10/26 10:07:44 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8778,3 +8778,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-feedparser to 6.0.2 [schmonz 2020-10-26]
 	Updated net/gallery-dl to 1.15.2 [leot 2020-10-26]
 	Updated news/sfeed to 0.9.19 [leot 2020-10-26]
+	Updated news/sfeed_curses to 0.9.4 [leot 2020-10-26]
