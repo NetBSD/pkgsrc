@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5910 2020/10/26 10:38:36 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5911 2020/10/26 14:15:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8781,3 +8781,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated news/sfeed_curses to 0.9.4 [leot 2020-10-26]
 	Updated shells/oksh to 6.7.1 [schmonz 2020-10-26]
 	Updated devel/mob to 0.0.26 [schmonz 2020-10-26]
+	Updated x11/kitty to 0.19.1 [pin 2020-10-26]
