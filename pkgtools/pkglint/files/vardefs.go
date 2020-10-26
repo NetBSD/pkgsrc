@@ -370,6 +370,48 @@ func (reg *VarTypeRegistry) enumFrom(
 	return enum(defval)
 }
 
+// enumFromVarnames parses the variable assignments from the given file and
+// extracts group 1 from each pattern. These groups form the allowed enum
+// values.
+func (reg *VarTypeRegistry) enumFromVarnames(
+	src *Pkgsrc, filename PkgsrcPath, defval string,
+	patterns ...regex.Pattern) *BasicType {
+
+	mklines := src.LoadMkExisting(filename)
+	if mklines == nil {
+		return enum(defval)
+	}
+
+	values := make(map[string]bool)
+	for _, mkline := range mklines.mklines {
+		if !mkline.IsVarassign() {
+			continue
+		}
+
+		varname := mkline.Varname()
+		for _, pattern := range patterns {
+			m, value := match1(varname, pattern)
+			if m && !contains(value, "$") {
+				values[intern(value)] = true
+			}
+		}
+	}
+
+	if len(values) > 0 {
+		joined := keysJoined(values)
+		if trace.Tracing {
+			trace.Stepf("Enum from %s with values: %s", filename, joined)
+		}
+		return enum(joined)
+	}
+
+	G.Logger.TechFatalf(
+		mklines.lines.Filename,
+		"Must contain at least 1 variable definition for %s.",
+		string(patterns[0]))
+	return nil // unreachable
+}
+
 // enumFromDirs reads the package directories from category, takes all
 // that have a single number in them (such as php72) and ranks them
 // from earliest to latest.
@@ -522,6 +564,10 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		"mk/java-vm.mk",
 		"openjdk8 oracle-jdk8 openjdk7 sun-jdk7 jdk16 jdk15 kaffe",
 		"_PKG_JVMS.*")
+	javaVersions := reg.enumFromVarnames(src,
+		"mk/java-vm.mk",
+		"yes 8 9",
+		`^_PKG_JVMS\.(.*)$`)
 
 	operatingSystems := reg.enumFromFiles(src,
 		"mk/platform",
@@ -1726,7 +1772,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkgload("USE_GNU_ICONV", BtYes)
 	reg.pkg("USE_IMAKE", BtYes)
 	reg.pkg("USE_JAVA", enum("run yes build"))
-	reg.pkg("USE_JAVA2", enum("YES yes no 1.4 1.5 6 7 8"))
+	reg.pkg("USE_JAVA2", javaVersions)
 	reg.pkglist("USE_LANGUAGES", reg.compilerLanguages(src))
 	reg.pkg("USE_LIBTOOL", BtYes)
 	reg.pkg("USE_MAKEINFO", BtYes)
