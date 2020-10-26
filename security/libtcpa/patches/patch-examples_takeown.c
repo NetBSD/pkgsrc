@@ -1,4 +1,6 @@
-$NetBSD: patch-examples_takeown.c,v 1.1 2020/03/27 20:57:12 joerg Exp $
+$NetBSD: patch-examples_takeown.c,v 1.2 2020/10/26 10:04:12 schmonz Exp $
+
+Fix build with OpenSSL 1.1.
 
 --- examples/takeown.c.orig	2020-03-27 18:49:41.521284560 +0000
 +++ examples/takeown.c

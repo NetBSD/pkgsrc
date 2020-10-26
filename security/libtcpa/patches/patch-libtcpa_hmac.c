@@ -1,4 +1,6 @@
-$NetBSD: patch-libtcpa_hmac.c,v 1.1 2020/03/27 20:57:12 joerg Exp $
+$NetBSD: patch-libtcpa_hmac.c,v 1.2 2020/10/26 10:04:12 schmonz Exp $
+
+Fix build with OpenSSL 1.1.
 
 --- libtcpa/hmac.c.orig	2020-03-27 18:46:13.942881974 +0000
 +++ libtcpa/hmac.c

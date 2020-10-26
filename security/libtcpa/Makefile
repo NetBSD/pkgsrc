@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 21:48:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2020/10/26 10:04:12 schmonz Exp $
 #
 
 DISTNAME=		tpm-1.1b
@@ -9,8 +9,9 @@ MASTER_SITES=		${HOMEPAGE}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} tcpa_man_20031210.tgz
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.research.ibm.com/gsal/tcpa/
+HOMEPAGE=		https://web.archive.org/web/20090129204118/http://www.research.ibm.com/gsal/tcpa/
 COMMENT=		TCPA libraries and test programs from IBM
+LICENSE=		modified-bsd
 
 WRKSRC=			${WRKDIR}/TPM
 
