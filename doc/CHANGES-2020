@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5908 2020/10/26 10:07:44 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5909 2020/10/26 10:22:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8779,3 +8779,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.15.2 [leot 2020-10-26]
 	Updated news/sfeed to 0.9.19 [leot 2020-10-26]
 	Updated news/sfeed_curses to 0.9.4 [leot 2020-10-26]
+	Updated shells/oksh to 6.7.1 [schmonz 2020-10-26]
