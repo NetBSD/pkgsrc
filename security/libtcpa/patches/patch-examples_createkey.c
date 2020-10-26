@@ -1,4 +1,6 @@
-$NetBSD: patch-examples_createkey.c,v 1.1 2020/03/27 20:57:12 joerg Exp $
+$NetBSD: patch-examples_createkey.c,v 1.2 2020/10/26 10:04:12 schmonz Exp $
+
+Fix build with OpenSSL 1.1.
 
 --- examples/createkey.c.orig	2020-03-27 18:50:53.384965280 +0000
 +++ examples/createkey.c

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2020/03/27 20:57:11 joerg Exp $
+$NetBSD: distinfo,v 1.8 2020/10/26 10:04:12 schmonz Exp $
 
 SHA1 (tpm-1.1b.tar.gz) = be59de89ae7ab633e23d4a03c855e3063aaf4c20
 RMD160 (tpm-1.1b.tar.gz) = 82fa9e9a9f60cb588319c2d73ca94e948fbc9b26
@@ -8,10 +8,10 @@ SHA1 (tcpa_man_20031210.tgz) = 87c496f9e7c74424b0af981033f6017d4a8b0bc3
 RMD160 (tcpa_man_20031210.tgz) = ccb26800b1c7f57bd9154474456fa4041406d2a5
 SHA512 (tcpa_man_20031210.tgz) = 6be36b22fd7da51c1c226d198faf1bba9d2c3526a5ef6b68fa92e5a5b1f6a62f42d2e3d97431946e88f586ac6548648ae2b2fe7d071f5ab96565d6e082c4dc83
 Size (tcpa_man_20031210.tgz) = 7794 bytes
-SHA1 (patch-aa) = 6da066464bd105fda446da801e2d4ca9f11b9394
-SHA1 (patch-ab) = 978df91511c61a1067781e54994bad028a047d6a
-SHA1 (patch-ac) = 3793ca470d634974aabc32c698db4cfcfce4ca75
-SHA1 (patch-examples_createkey.c) = 1d26a6de2875cbb3921e08dadf7924415b707dbd
-SHA1 (patch-examples_takeown.c) = 05ff728a73b488d9540292cbed5d16bf553e6eff
-SHA1 (patch-libtcpa_hmac.c) = 88862b22b8f357181ec0bfea709ce205070f833d
-SHA1 (patch-libtcpa_keys.c) = c91d1d48e584542ad2635ad054a04f96d4316b19
+SHA1 (patch-aa) = ed7bafe053eb263021e736e708b01e0144c5a100
+SHA1 (patch-ab) = 455a41bd84c10b2700ae755f90fe2d3f8ef5173a
+SHA1 (patch-ac) = 90582ea03a9103c72925a5830c670839fc6a81d8
+SHA1 (patch-examples_createkey.c) = 0a4d7988eddd56e476f288d6acd7f73745e7b392
+SHA1 (patch-examples_takeown.c) = b71780435fca920f4b5fced4c85fbeabc6079c5f
+SHA1 (patch-libtcpa_hmac.c) = eebbd921fd15af7bf2ff7d090e0257faf51a9bad
+SHA1 (patch-libtcpa_keys.c) = 6ca7855fbbbf4fdfb57c992de4a4b3a4cb1f7ee7
