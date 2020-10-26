@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5906 2020/10/26 09:54:00 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5907 2020/10/26 10:06:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8777,3 +8777,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-tortoise-orm to 0.16.17 [adam 2020-10-26]
 	Updated textproc/py-feedparser to 6.0.2 [schmonz 2020-10-26]
 	Updated net/gallery-dl to 1.15.2 [leot 2020-10-26]
+	Updated news/sfeed to 0.9.19 [leot 2020-10-26]
