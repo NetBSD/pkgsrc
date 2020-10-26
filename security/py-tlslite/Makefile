@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/05/23 19:23:16 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/10/26 10:34:16 schmonz Exp $
 
 DISTNAME=		tlslite-0.4.9
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=		tlslite
 GITHUB_TAG=		cd82fadb6bb958522b7457c5ed95890283437a4f
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://trevp.net/tlslite/
+HOMEPAGE=		https://web.archive.org/web/20190101103952/http://trevp.net/tlslite/
 COMMENT=		SSL 3.0, TLS 1.0, and TLS 1.1 in Python
 LICENSE=		public-domain
 
