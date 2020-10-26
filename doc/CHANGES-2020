@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5911 2020/10/26 14:15:52 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5912 2020/10/26 15:00:53 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8782,3 +8782,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/oksh to 6.7.1 [schmonz 2020-10-26]
 	Updated devel/mob to 0.0.26 [schmonz 2020-10-26]
 	Updated x11/kitty to 0.19.1 [pin 2020-10-26]
+	Updated www/py-flask-admin to 1.5.7 [kleink 2020-10-26]
