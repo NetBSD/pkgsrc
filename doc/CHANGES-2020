@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5904 2020/10/26 09:07:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5905 2020/10/26 09:36:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8775,3 +8775,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/doas to 6.3p2nb1 [pin 2020-10-26]
 	Updated www/py-aiohttp to 3.7.1 [adam 2020-10-26]
 	Updated databases/py-tortoise-orm to 0.16.17 [adam 2020-10-26]
+	Updated textproc/py-feedparser to 6.0.2 [schmonz 2020-10-26]
