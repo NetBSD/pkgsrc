@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/10/11 23:47:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/10/26 10:57:15 triaxx Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -28,16 +28,16 @@ include/gutenprint/util.h
 include/gutenprint/vars.h
 include/gutenprint/weave.h
 include/gutenprint/xml.h
-include/gutenprintui2/curve.h
-include/gutenprintui2/gammacurve.h
-include/gutenprintui2/gutenprintui.h
-include/gutenprintui2/typebuiltins.h
-lib/gimp/2.0/plug-ins/gutenprint
+${PLIST.gimp}include/gutenprintui2/curve.h
+${PLIST.gimp}include/gutenprintui2/gammacurve.h
+${PLIST.gimp}include/gutenprintui2/gutenprintui.h
+${PLIST.gimp}include/gutenprintui2/typebuiltins.h
+${PLIST.gimp}lib/gimp/2.0/plug-ins/gutenprint
 lib/gutenprint/${INSTALLVERSION}/config.summary
 lib/libgutenprint.la
-lib/libgutenprintui2.la
+${PLIST.gimp}lib/libgutenprintui2.la
 lib/pkgconfig/gutenprint.pc
-lib/pkgconfig/gutenprintui2.pc
+${PLIST.gimp}lib/pkgconfig/gutenprintui2.pc
 libexec/cups/driver/gutenprint.${INSTALLVERSION}
 libexec/cups/filter/commandtocanon
 libexec/cups/filter/commandtoepson
