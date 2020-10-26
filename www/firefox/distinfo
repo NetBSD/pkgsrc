@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.415 2020/10/23 12:37:14 tnn Exp $
+$NetBSD: distinfo,v 1.416 2020/10/26 21:20:59 maya Exp $
 
 SHA1 (firefox-82.0.source.tar.xz) = aa8485a65038f1390eb9c367f5b6195cb7ca3bb8
 RMD160 (firefox-82.0.source.tar.xz) = f2afbc309b0a304c6082731f9a652a750d307ac7
@@ -29,6 +29,7 @@ SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac01f
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 2d2ff8b4f9fe883b345d0ffc0d8e81aacf37a292
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
+SHA1 (patch-race_recurse.mk) = 6a732be998d7718969f38873092f902650e4b748
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = fb285a1d716a251aa133ab50609f72cbd1032536
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
