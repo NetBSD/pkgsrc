@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5922 2020/10/27 22:38:48 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5923 2020/10/27 22:52:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8797,3 +8797,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-setuptools to 50.3.2 [adam 2020-10-27]
 	Updated textproc/py-rapidjson to 0.9.3 [adam 2020-10-27]
 	Updated devel/py-xdis to 5.0.5 [adam 2020-10-27]
+	Updated devel/py-aiofiles to 0.6.0 [adam 2020-10-27]
+	Updated www/py-aiohttp to 3.7.2 [adam 2020-10-27]
