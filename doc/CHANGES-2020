@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5920 2020/10/27 17:01:32 maya Exp $
+$NetBSD: CHANGES-2020,v 1.5921 2020/10/27 18:11:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8793,3 +8793,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/php-nextcloud to 20.0.1 [ryoon 2020-10-27]
 	Updated www/firefox to 82.0.1 [maya 2020-10-27]
 	Updated www/firefox-l10n to 82.0.1 [maya 2020-10-27]
+	Updated multimedia/libass to 0.15.0 [adam 2020-10-27]
+	Updated devel/py-setuptools to 50.3.2 [adam 2020-10-27]
