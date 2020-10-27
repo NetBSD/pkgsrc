@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/10/17 16:44:37 js Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/27 20:41:51 js Exp $
 
 DISTNAME=	maubot-0.1.0
 PKGREVISION=	1
@@ -26,8 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2<3:../../textproc/py-jinja2
 
 USE_LANGUAGES=	# none
  
-# 36 is too old, 39 doesn't work.
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 39
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 INSTALLATION_DIRS+=	share/maubot
 
