@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5921 2020/10/27 18:11:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5922 2020/10/27 22:38:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8795,3 +8795,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox-l10n to 82.0.1 [maya 2020-10-27]
 	Updated multimedia/libass to 0.15.0 [adam 2020-10-27]
 	Updated devel/py-setuptools to 50.3.2 [adam 2020-10-27]
+	Updated textproc/py-rapidjson to 0.9.3 [adam 2020-10-27]
+	Updated devel/py-xdis to 5.0.5 [adam 2020-10-27]
