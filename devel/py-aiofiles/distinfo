@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/06/01 15:37:40 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/10/27 22:48:38 adam Exp $
 
-SHA1 (aiofiles-0.5.0.tar.gz) = b598b209987a978760aeafb22889b5762ddf8f51
-RMD160 (aiofiles-0.5.0.tar.gz) = 9f71a47d9e6af23a3e665a2aafc578b9f47316e5
-SHA512 (aiofiles-0.5.0.tar.gz) = 92a706f74fbfcd36773fbfd7a73cda2d18d8e673f1084f360e78924ae9c00e729fdf30e21f2b0a48c67f057220d64ee0ec80767992c76fcce40b4473a7043aeb
-Size (aiofiles-0.5.0.tar.gz) = 9543 bytes
+SHA1 (aiofiles-0.6.0.tar.gz) = 3f75a50a0acb3551d5cd8cc5f995000e0a6ad228
+RMD160 (aiofiles-0.6.0.tar.gz) = 852d3ae36105cb08d4b2ed3009f07b40e035c0e5
+SHA512 (aiofiles-0.6.0.tar.gz) = f9aa6c45dbabd29b713327ec295614ef3988f543b9d2d5bad5de2310c3954f2631ac2b884ed7a181e93191a20b05b48ca69bc00ffbd1c08f63b0ba67b90cd6f7
+Size (aiofiles-0.6.0.tar.gz) = 11841 bytes
