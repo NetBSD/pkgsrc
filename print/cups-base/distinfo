@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2020/10/16 16:31:43 prlw1 Exp $
+$NetBSD: distinfo,v 1.24 2020/10/27 09:29:11 jperkin Exp $
 
 SHA1 (cups-2.3.3-source.tar.gz) = 7a01c9fba5d784eb61eda03fd40e513fd2a1b5b8
 RMD160 (cups-2.3.3-source.tar.gz) = e08afd09666e79d0416f46e14fb8c6b0a6beebd7
@@ -30,3 +30,4 @@ SHA1 (patch-scheduler-conf.h) = cd5c49579795c69b50abbff2b0f9604ffe8bfa5a
 SHA1 (patch-scheduler-main.c) = a5410c7f78756506d23d705dfa93a756fe3e513e
 SHA1 (patch-scheduler_auth.c) = 686b26286b7ad88363ddc7b394aefbfb3ad26c2d
 SHA1 (patch-scheduler_dirsvc.c) = 1dba98dc171df733acb99e5f31ad838845a917bc
+SHA1 (patch-tools_ippfind.c) = f0774fcf5ece380fd6fa09adb3c068910ddfa367
