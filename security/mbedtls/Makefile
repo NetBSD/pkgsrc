@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/09/03 20:30:56 nia Exp $
+# $NetBSD: Makefile,v 1.20 2020/10/27 00:06:59 mcf Exp $
 
 DISTNAME=	mbedtls-2.24.0
 CATEGORIES=	security
@@ -38,8 +38,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Prefix bundled programs so they don't conflict with other packages
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${FIND} * -type f -exec \
-	    ${MV} '{}' mbedtls_'{}' ';'
+	cd ${DESTDIR}${PREFIX}/bin && for f in *; do \
+		${MV} "$$f" "mbedtls_$$f"; \
+	done
 
 do-test:
 	LD_LIBRARY_PATH=${WRKSRC}/library \
