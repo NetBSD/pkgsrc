@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5924 2020/10/27 23:05:15 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.5925 2020/10/27 23:07:00 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8800,3 +8800,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-aiofiles to 0.6.0 [adam 2020-10-27]
 	Updated www/py-aiohttp to 3.7.2 [adam 2020-10-27]
 	Updated graphics/libansilove to 1.2.8 [fcambus 2020-10-27]
+	Updated audio/libopenmpt to 0.5.3 [fcambus 2020-10-27]
