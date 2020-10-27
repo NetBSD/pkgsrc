@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5917 2020/10/27 12:13:10 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5918 2020/10/27 12:38:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8789,3 +8789,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/memcached to 1.6.8 [adam 2020-10-27]
 	Updated net/tinydyndns-run to 20201027 [schmonz 2020-10-27]
 	Updated audio/ncspot to 0.2.4 [pin 2020-10-27]
+	Updated sysutils/webmin to 1.960 [mef 2020-10-27]
