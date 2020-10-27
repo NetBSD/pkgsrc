@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/05/29 19:56:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/10/27 23:03:55 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 bin/tox-quickstart-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -61,6 +61,9 @@ ${PYSITELIB}/tox/hookspecs.pyo
 ${PYSITELIB}/tox/interpreters/__init__.py
 ${PYSITELIB}/tox/interpreters/__init__.pyc
 ${PYSITELIB}/tox/interpreters/__init__.pyo
+${PYSITELIB}/tox/interpreters/common.py
+${PYSITELIB}/tox/interpreters/common.pyc
+${PYSITELIB}/tox/interpreters/common.pyo
 ${PYSITELIB}/tox/interpreters/py_spec.py
 ${PYSITELIB}/tox/interpreters/py_spec.pyc
 ${PYSITELIB}/tox/interpreters/py_spec.pyo
