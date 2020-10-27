@@ -1,8 +1,8 @@
-$NetBSD: patch-src_hyperloglog.c,v 1.1 2018/04/23 14:57:57 fhajny Exp $
+$NetBSD: patch-src_hyperloglog.c,v 1.2 2020/10/27 10:22:34 adam Exp $
 
 Fix the case of the missing llroundl on NetBSD. Patch by Matthias Petermann.
 
---- src/hyperloglog.c.orig	2018-03-26 16:04:15.000000000 +0000
+--- src/hyperloglog.c.orig	2020-10-27 07:12:01.000000000 +0000
 +++ src/hyperloglog.c
 @@ -34,6 +34,16 @@
  #include <stdint.h>
@@ -20,4 +20,4 @@ Fix the case of the missing llroundl on NetBSD. Patch by Matthias Petermann.
 +
  /* The Redis HyperLogLog implementation is based on the following ideas:
   *
-  * * The use of a 64 bit hash function as proposed in [1], in order to don't
+  * * The use of a 64 bit hash function as proposed in [1], in order to estimate
