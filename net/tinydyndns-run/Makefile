@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/10/19 07:15:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2020/10/27 10:25:33 schmonz Exp $
 #
 
-DISTNAME=		tinydyndns-run-20201019
+DISTNAME=		tinydyndns-run-20201027
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -26,6 +26,7 @@ CONF_FILES_MODE=	0600
 CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/passwd \
 			${PKG_SYSCONFDIR}/passwd
 
+PKG_GROUPS=		${DJBDNS_DJBDNS_GROUP}
 PKG_USERS+=		${TINYDYN_USER}:${DJBDNS_DJBDNS_GROUP}
 RCD_SCRIPTS=		tinydyn tinydyndns tinydynpop3d
 FILES_SUBST+=		TINYDYN_USER=${TINYDYN_USER:Q}
