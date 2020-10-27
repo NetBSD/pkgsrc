@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5925 2020/10/27 23:07:00 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.5926 2020/10/27 23:09:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8801,3 +8801,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-aiohttp to 3.7.2 [adam 2020-10-27]
 	Updated graphics/libansilove to 1.2.8 [fcambus 2020-10-27]
 	Updated audio/libopenmpt to 0.5.3 [fcambus 2020-10-27]
+	Updated devel/py-tox to 3.20.1 [adam 2020-10-27]
+	Updated www/py-sanic to 20.9.1 [adam 2020-10-27]
