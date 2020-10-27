@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.29 2020/09/07 10:35:00 mef Exp $
+$NetBSD: distinfo,v 1.30 2020/10/27 12:37:52 mef Exp $
 
-SHA1 (webmin-1.955.tar.gz) = db4ed7590eb23ad8608110816c9f18b6d46874c2
-RMD160 (webmin-1.955.tar.gz) = 20fb35b0d1af39982085b3c32e2649f95d5b0579
-SHA512 (webmin-1.955.tar.gz) = f287ff2cb39b9d1fcb2d22ea10dae1571583d250d64ccdd83ce57215055c8370bbbb32f57f504bfa82c4d2dab8693914c888f7ad7c9cc3a911c14b1e87a1982c
-Size (webmin-1.955.tar.gz) = 46859996 bytes
+SHA1 (webmin-1.960.tar.gz) = 714b07b9478eb7499c0e6107b295d75ea5ec8c2a
+RMD160 (webmin-1.960.tar.gz) = ac862e11732ac7f5b25e703748e13466779b6032
+SHA512 (webmin-1.960.tar.gz) = 430404ee7a068868f927188d3cc9b048ea48b4782de0d2d775dddec4aa5d0e682fd47bae615cc71a629c9b309cf2325a57a1b9fc6ff8585d608eef4c95a600d1
+Size (webmin-1.960.tar.gz) = 46897761 bytes
 SHA1 (patch-aa) = 74a647da70fcd5afc9fa878554bc1288ec5ba979
 SHA1 (patch-ab) = 890f57542f17e891ae80bf5f3b0158c71baaa479
 SHA1 (patch-ac) = 327ecd47b4926eb3b9c6dc5f986d5f6232364030
