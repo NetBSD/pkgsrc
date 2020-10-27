@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/25 11:49:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/10/27 07:01:25 mef Exp $
 bin/cf-agent
 bin/cf-check
 bin/cf-execd
@@ -462,6 +462,7 @@ share/examples/cfengine/some.cf
 share/examples/cfengine/sort.cf
 share/examples/cfengine/splitstring.cf
 share/examples/cfengine/sql_table_structure.cf
+share/examples/cfengine/storage-cifs.cf
 share/examples/cfengine/storage.cf
 share/examples/cfengine/strcmp.cf
 share/examples/cfengine/strftime.cf
@@ -485,6 +486,7 @@ share/examples/cfengine/syslog.cf
 share/examples/cfengine/syslog2.cf
 share/examples/cfengine/template.cf
 share/examples/cfengine/template2.cf
+share/examples/cfengine/template_method-inline_mustache.cf
 share/examples/cfengine/test_environment.cf
 share/examples/cfengine/tidy_all_files.cf
 share/examples/cfengine/translatepath.cf
