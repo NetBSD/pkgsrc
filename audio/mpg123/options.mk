@@ -1,33 +1,30 @@
-# $NetBSD: options.mk,v 1.6 2020/08/01 23:44:06 tsutsui Exp $
+# $NetBSD: options.mk,v 1.7 2020/10/27 08:53:57 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mpg123
 PKG_OPTIONS_OPTIONAL_GROUPS=	fpu
 PKG_SUPPORTED_OPTIONS=		mpg123-fifo
 PKG_SUGGESTED_OPTIONS+=		mpg123-fifo
+PKG_OPTIONS_GROUP.fpu=		mpg123-with-fpu
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if (${MACHINE_ARCH} == "i386")
-.  if empty(MACHINE_PLATFORM:MDarwin-11.*-i386) && \
-      empty(MACHINE_PLATFORM:MSunOS-*) && \
-      empty(MACHINE_PLATFORM:MNetBSD-[89]*-i386)
-PKG_OPTIONS_GROUP.fpu=		mpg123-x86-dither mpg123-with-fpu
-PKG_SUGGESTED_OPTIONS+=		mpg123-x86-dither
-.  else
-PKG_OPTIONS_GROUP.fpu=		mpg123-with-fpu
-PKG_SUGGESTED_OPTIONS+=		mpg123-with-fpu
-.  endif
-.elif !empty(MACHINE_ARCH:M*arm*) && empty(MACHINE_ARCH:M*hf*)
-PKG_OPTIONS_GROUP.fpu=		mpg123-with-fpu 
-.elif (${MACHINE_ARCH} == "aarch64")
-PKG_OPTIONS_GROUP.fpu=		mpg123-neon64 mpg123-aarch64
+# x86-dither causes text relocations and doesn't work with the Sun linker
+# Don't enable it by default.
+.if ${MACHINE_ARCH} == "i386"
+PKG_OPTIONS_GROUP.fpu+=		mpg123-x86-dither
+.endif
+
+.if ${MACHINE_ARCH} == "aarch64"
+PKG_OPTIONS_GROUP.fpu+=		mpg123-neon64 mpg123-aarch64
 PKG_SUGGESTED_OPTIONS+=		mpg123-aarch64
-.elif (${MACHINE_ARCH} == "powerpc")
-PKG_OPTIONS_GROUP.fpu=		mpg123-altivec mpg123-with-fpu
+.elif ${MACHINE_ARCH} == "powerpc"
+PKG_OPTIONS_GROUP.fpu+=		mpg123-altivec
 PKG_SUGGESTED_OPTIONS+=		mpg123-altivec
 .else
-PKG_OPTIONS_GROUP.fpu=		mpg123-with-fpu
+# Avoid using floating point on softfloat ARM.
+.  if !(!empty(MACHINE_ARCH:M*arm*) && empty(MACHINE_ARCH:M*hf*))
 PKG_SUGGESTED_OPTIONS+=		mpg123-with-fpu
+.  endif
 .endif
 
 .include "../../mk/bsd.options.mk"
