@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5930 2020/10/28 16:56:35 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5931 2020/10/28 19:33:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8808,3 +8808,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox-l10n to 82.0.2 [maya 2020-10-28]
 	Updated www/firefox to 82.0.2 [maya 2020-10-28]
 	Updated emulators/mame to 0.226 [wiz 2020-10-28]
+	Updated math/liblinear to 2.41 [adam 2020-10-28]
+	Updated net/py-lexicon to 3.4.4 [adam 2020-10-28]
