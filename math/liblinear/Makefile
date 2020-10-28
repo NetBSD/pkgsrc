@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/11/15 22:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/28 19:32:32 adam Exp $
 
-DISTNAME=	liblinear-2.11
-PKGREVISION=	1
+DISTNAME=	liblinear-2.41
 CATEGORIES=	math
 MASTER_SITES=	https://www.csie.ntu.edu.tw/~cjlin/liblinear/
 
@@ -14,10 +13,11 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 BUILD_TARGET=	all lib
-AUTO_MKDIRS=	yes
 
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+
+INSTALLATION_DIRS+=	bin include lib share/doc/${PKGBASE} share/examples/${PKGBASE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/predict ${DESTDIR}${PREFIX}/bin/liblinear-predict
@@ -29,4 +29,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/heart_scale \
 		${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 
+.include "../../math/blas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
