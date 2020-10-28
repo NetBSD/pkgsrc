@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.61 2020/10/06 12:04:30 nils Exp $
+# $NetBSD: options.mk,v 1.62 2020/10/28 20:21:34 otis Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug echo encrypted-session \
@@ -20,7 +20,7 @@ PLIST.naxsi=			yes
 CONFIGURE_ARGS+=		--add-module=../${NAXSI_DISTNAME}/naxsi_src
 .endif
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi)
-NAXSI_VERSION=			1.1a
+NAXSI_VERSION=			1.2
 NAXSI_DISTNAME=			naxsi-${NAXSI_VERSION}
 NAXSI_DISTFILE=			${NAXSI_DISTNAME}.tar.gz
 SITES.${NAXSI_DISTFILE}=	-https://github.com/nbs-system/naxsi/archive/${NAXSI_VERSION}.tar.gz
@@ -135,7 +135,7 @@ CONFIGURE_ENV+=		LUAJIT_INC=${PREFIX}/include/luajit-2.0
 CONFIGURE_ARGS+=	--add-module=../${LUA_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi)
-LUA_VERSION=		0.10.15
+LUA_VERSION=		0.10.17
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-https://github.com/openresty/lua-nginx-module/archive/v${LUA_VERSION}.tar.gz
@@ -146,7 +146,7 @@ DISTFILES+=		${LUA_DISTFILE}
 CONFIGURE_ARGS+=		--add-module=../${ECHOMOD_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mecho) || make(makesum) || make(mdi)
-ECHOMOD_VERSION=		0.61
+ECHOMOD_VERSION=		0.62
 ECHOMOD_DISTNAME=		echo-nginx-module-${ECHOMOD_VERSION}
 ECHOMOD_DISTFILE=		${ECHOMOD_DISTNAME}.tar.gz
 SITES.${ECHOMOD_DISTFILE}=	-https://github.com/openresty/echo-nginx-module/archive/v${ECHOMOD_VERSION}.tar.gz
