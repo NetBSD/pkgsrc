@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.215 2020/10/06 17:36:50 rillig Exp $
+# $NetBSD: gcc.mk,v 1.216 2020/10/28 13:19:25 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1074,7 +1074,8 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .if (defined(_USE_GCC_SHLIB) && !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss])) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 #  Special case packages which are themselves a dependency of gcc runtime.
 .  if ${PKGPATH} != devel/libtool-base && ${PKGPATH} != devel/binutils && \
-      empty(PKGPATH:Mlang/gcc4?) && empty(PKGPATH:Mlang/gcc[5-9])
+      empty(PKGPATH:Mlang/gcc4?) && empty(PKGPATH:Mlang/gcc[5-9]) && \
+      empty(PKGPATH:Mlang/gcc10)
 .    if !empty(_GCC_PKGBASE:Mgcc48)
 .      include "../../lang/gcc48-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc49)
@@ -1087,6 +1088,10 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .      include "../../lang/gcc7-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc8)
 .      include "../../lang/gcc8-libs/buildlink3.mk"
+.    elif !empty(_GCC_PKGBASE:Mgcc9)
+.      include "../../lang/gcc9-libs/buildlink3.mk"
+.    elif !empty(_GCC_PKGBASE:Mgcc10)
+.      include "../../lang/gcc10-libs/buildlink3.mk"
 .    else
 PKG_FAIL_REASON+=	"No USE_PKGSRC_GCC_RUNTIME support for ${CC_VERSION}"
 .    endif
