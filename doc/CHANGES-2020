@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5927 2020/10/28 11:50:41 pin Exp $
+$NetBSD: CHANGES-2020,v 1.5928 2020/10/28 12:01:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8804,3 +8804,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-tox to 3.20.1 [adam 2020-10-27]
 	Updated www/py-sanic to 20.9.1 [adam 2020-10-27]
 	Added x11/xnotify version 0.7.1 [pin 2020-10-28]
+	Added editors/kibi version 0.2.1 [pin 2020-10-28]
