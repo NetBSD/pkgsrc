@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5934 2020/10/28 20:24:46 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5935 2020/10/28 20:30:56 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8814,3 +8814,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 14.15.0 [adam 2020-10-28]
 	Updated www/nginx-devel to 1.19.4 [otis 2020-10-28]
 	Updated www/nginx-devel to 1.19.4 [otis 2020-10-28]
+	Updated www/nginx to 1.18.0nb4 [otis 2020-10-28]
