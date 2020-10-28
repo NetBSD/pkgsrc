@@ -1,61 +1,54 @@
-$NetBSD: patch-Makefile,v 1.3 2017/11/10 16:18:47 khorben Exp $
+$NetBSD: patch-Makefile,v 1.4 2020/10/28 19:32:33 adam Exp $
 
 Use LIBTOOL.
 Add support for LDFLAGS.
 
---- Makefile.orig	2017-03-28 22:22:33.000000000 +0000
+--- Makefile.orig	2020-07-29 09:11:00.000000000 +0000
 +++ Makefile
-@@ -1,37 +1,30 @@
+@@ -1,34 +1,29 @@
  CXX ?= g++
  CC ?= gcc
 -CFLAGS = -Wall -Wconversion -O3 -fPIC
 -LIBS = blas/blas.a
 +LIBS = blas/libblas.la
- SHVER = 3
+ SHVER = 4
 -OS = $(shell uname)
  #LIBS = -lblas
  
  all: train predict
  
--lib: linear.o tron.o blas/blas.a
+-lib: linear.o newton.o blas/blas.a
 -	if [ "$(OS)" = "Darwin" ]; then \
 -		SHARED_LIB_FLAG="-dynamiclib -Wl,-install_name,liblinear.so.$(SHVER)"; \
 -	else \
 -		SHARED_LIB_FLAG="-shared -Wl,-soname,liblinear.so.$(SHVER)"; \
 -	fi; \
--	$(CXX) $${SHARED_LIB_FLAG} linear.o tron.o blas/blas.a -o liblinear.so.$(SHVER)
--
--train: tron.o linear.o train.c blas/blas.a
--	$(CXX) $(CFLAGS) -o train train.c tron.o linear.o $(LIBS)
--
--predict: tron.o linear.o predict.c blas/blas.a
--	$(CXX) $(CFLAGS) -o predict predict.c tron.o linear.o $(LIBS)
-+lib: linear.lo tron.lo $(LIBS)
+-	$(CXX) $${SHARED_LIB_FLAG} linear.o newton.o blas/blas.a -o liblinear.so.$(SHVER)
++lib: linear.lo newton.lo $(LIBS)
 +	${LIBTOOL} --mode=link $(CXX) -o liblinear.la $(LDFLAGS) $> -rpath ${PREFIX}/lib -version-info ${SHVER}:0
  
--tron.o: tron.cpp tron.h
--	$(CXX) $(CFLAGS) -c -o tron.o tron.cpp
-+train: tron.lo linear.lo train.c $(LIBS)
+-train: newton.o linear.o train.c blas/blas.a
+-	$(CXX) $(CFLAGS) -o train train.c newton.o linear.o $(LIBS)
++train: newton.lo linear.lo train.c $(LIBS)
 +	${LIBTOOL} --mode=link $(CXX) $(CFLAGS) -o train $(LDFLAGS) $>
  
--linear.o: linear.cpp linear.h
--	$(CXX) $(CFLAGS) -c -o linear.o linear.cpp
-+predict: tron.lo linear.lo predict.c $(LIBS)
+-predict: newton.o linear.o predict.c blas/blas.a
+-	$(CXX) $(CFLAGS) -o predict predict.c newton.o linear.o $(LIBS)
++predict: newton.lo linear.lo predict.c $(LIBS)
 +	${LIBTOOL} --mode=link $(CXX) $(CFLAGS) -o predict $(LDFLAGS) $>
  
--blas/blas.a: blas/*.c blas/*.h
-+tron.lo: tron.cpp tron.h
-+	${LIBTOOL} --mode=compile $(CXX) $(CFLAGS) -c -o tron.o tron.cpp
-+
+-newton.o: newton.cpp newton.h
++newton.lo: newton.cpp newton.h
++	${LIBTOOL} --mode=compile \
+ 	$(CXX) $(CFLAGS) -c -o newton.o newton.cpp
+ 
+-linear.o: linear.cpp linear.h
 +linear.lo: linear.cpp linear.h
-+	${LIBTOOL} --mode=compile $(CXX) $(CFLAGS) -c -o linear.o linear.cpp
-+
++	${LIBTOOL} --mode=compile \
+ 	$(CXX) $(CFLAGS) -c -o linear.o linear.cpp
+ 
+-blas/blas.a: blas/*.c blas/*.h
 +$(LIBS): blas/*.c blas/*.h
  	make -C blas OPTFLAGS='$(CFLAGS)' CC='$(CC)';
  
  clean:
--	make -C blas clean
--	make -C matlab clean
-+	$(MAKE) -C blas clean
-+	$(MAKE) -C matlab clean
- 	rm -f *~ tron.o linear.o train predict liblinear.so.$(SHVER)
