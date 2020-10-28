@@ -1,17 +1,12 @@
-$NetBSD: patch-makefile,v 1.23 2019/01/07 15:51:23 wiz Exp $
+$NetBSD: patch-makefile,v 1.24 2020/10/28 16:56:24 wiz Exp $
 
 Treat all BSDs the same.
 
 Do not set compiler optimization.
 
---- makefile.orig	2018-08-29 00:35:24.000000000 +0000
+--- makefile.orig	2020-10-27 01:00:36.000000000 +0000
 +++ makefile
-@@ -190,19 +190,19 @@ GENIEOS := solaris
- endif
- ifeq ($(firstword $(filter FreeBSD,$(UNAME))),FreeBSD)
- OS := freebsd
--GENIEOS := freebsd
-+GENIEOS := bsd
+@@ -200,15 +200,15 @@ GENIEOS := bsd
  endif
  ifeq ($(firstword $(filter GNU/kFreeBSD,$(UNAME))),GNU/kFreeBSD)
  OS := freebsd
@@ -30,7 +25,7 @@ Do not set compiler optimization.
  endif
  ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
  OS := macosx
-@@ -566,10 +566,6 @@ PROFILER =
+@@ -599,10 +599,6 @@ PROFILER =
  SYMBOLS = 1
  endif
  
