@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2020/09/30 09:22:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.48 2020/10/28 16:56:24 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -118,7 +118,8 @@ share/mame/hash/apple2gs.xml
 share/mame/hash/apple3.xml
 share/mame/hash/applix_flop.xml
 share/mame/hash/apricot_flop.xml
-share/mame/hash/aquarius.xml
+share/mame/hash/aquarius_cart.xml
+share/mame/hash/aquarius_cass.xml
 share/mame/hash/arb.xml
 share/mame/hash/arcadia.xml
 share/mame/hash/archimedes.xml
@@ -163,7 +164,6 @@ share/mame/hash/c128_rom.xml
 share/mame/hash/c2color_cart.xml
 share/mame/hash/c64_cart.xml
 share/mame/hash/c64_cass.xml
-share/mame/hash/c64_flop_clcracked.xml
 share/mame/hash/c64_flop_misc.xml
 share/mame/hash/c64_flop_orig.xml
 share/mame/hash/c65_flop.xml
@@ -338,8 +338,7 @@ share/mame/hash/juku.xml
 share/mame/hash/jupace_cass.xml
 share/mame/hash/jupace_snap.xml
 share/mame/hash/k28m2.xml
-share/mame/hash/kaypro484.xml
-share/mame/hash/kayproii.xml
+share/mame/hash/kaypro.xml
 share/mame/hash/kc_cart.xml
 share/mame/hash/kc_cass.xml
 share/mame/hash/kc_flop.xml
@@ -347,6 +346,7 @@ share/mame/hash/kim1_cass.xml
 share/mame/hash/korvet_flop.xml
 share/mame/hash/lantutor.xml
 share/mame/hash/laser2001_cart.xml
+share/mame/hash/laser2001_flop.xml
 share/mame/hash/leapfrog_didj_cart.xml
 share/mame/hash/leapfrog_leappad_cart.xml
 share/mame/hash/leapfrog_ltleappad_cart.xml
@@ -583,6 +583,7 @@ share/mame/hash/spectrum_mgt_flop.xml
 share/mame/hash/spectrum_microdrive.xml
 share/mame/hash/spectrum_wafadrive.xml
 share/mame/hash/squale_cart.xml
+share/mame/hash/ssem_quik.xml
 share/mame/hash/st_cart.xml
 share/mame/hash/st_flop.xml
 share/mame/hash/stepone_flop.xml
