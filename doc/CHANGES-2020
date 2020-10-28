@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5935 2020/10/28 20:30:56 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5936 2020/10/28 21:10:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8815,3 +8815,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nginx-devel to 1.19.4 [otis 2020-10-28]
 	Updated www/nginx-devel to 1.19.4 [otis 2020-10-28]
 	Updated www/nginx to 1.18.0nb4 [otis 2020-10-28]
+	Updated databases/openldap to 2.4.55 [adam 2020-10-28]
+	Updated databases/lmdb to 0.9.27 [adam 2020-10-28]
