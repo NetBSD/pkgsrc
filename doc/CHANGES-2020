@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5929 2020/10/28 15:37:59 maya Exp $
+$NetBSD: CHANGES-2020,v 1.5930 2020/10/28 16:56:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8807,3 +8807,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added editors/kibi version 0.2.1 [pin 2020-10-28]
 	Updated www/firefox-l10n to 82.0.2 [maya 2020-10-28]
 	Updated www/firefox to 82.0.2 [maya 2020-10-28]
+	Updated emulators/mame to 0.226 [wiz 2020-10-28]
