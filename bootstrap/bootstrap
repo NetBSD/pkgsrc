@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.294 2020/10/07 10:44:14 jperkin Exp $
+# $NetBSD: bootstrap,v 1.295 2020/10/28 16:52:43 maya Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1235,6 +1235,10 @@ yes)	echo_msg "Bootstrapping sed"
 esac
 
 # bootstrap pkg_install
+extra_libarchive_depends() {
+	$sedprog -n -e 's/Libs.private: //p' $wrkdir/libarchive/build/pkgconfig/libarchive.pc
+}
+
 echo_msg "Bootstrapping pkgtools"
 copy_src $pkgsrcdir/archivers/libarchive/files libarchive
 run_cmd "(cd $wrkdir/libarchive; env $BSTRAP_ENV \
@@ -1253,6 +1257,7 @@ LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C \
 --with-pkgdbdir=$pkgdbdir --infodir=$infodir \
 --mandir=$mandir $pkg_install_args && \
 STATIC_LIBARCHIVE=$wrkdir/libarchive/.libs/libarchive.a \
+STATIC_LIBARCHIVE_LDADD=`extra_libarchive_depends` \
 PKGSRC_MACHINE_ARCH="$machine_arch" $bmake $make_quiet_flags -j$make_jobs)"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/add/pkg_add $wrkdir/sbin/pkg_add"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/admin/pkg_admin $wrkdir/sbin/pkg_admin"

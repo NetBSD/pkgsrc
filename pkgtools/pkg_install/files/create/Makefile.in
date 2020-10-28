@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.29 2015/12/27 12:36:42 joerg Exp $
+# $NetBSD: Makefile.in,v 1.30 2020/10/28 16:52:43 maya Exp $
 
 srcdir=		@srcdir@
 
@@ -33,7 +33,7 @@ LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -lz -lfetch @LIBS@
 LIBS+=		-lssl -lcrypto
 .endif
 .else
-LIBS=		-linstall ${STATIC_LIBARCHIVE} @LIBS@
+LIBS=		-linstall ${STATIC_LIBARCHIVE} ${STATIC_LIBARCHIVE_LDADD} @LIBS@
 CPPFLAGS+=	-DBOOTSTRAP
 .endif
 
