@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2020/10/28 11:16:46 he Exp $
+# $NetBSD: Makefile,v 1.199 2020/10/28 11:41:26 he Exp $
 
 DISTNAME=	rustc-1.46.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -76,9 +76,11 @@ CHECK_SSP_SUPPORTED=	no
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf)
+    !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || \
+    !empty(TARGET:Marmv7-unknown-netbsd-eabihf)
 # Bootstrapping on NetBSD/powerpc requires no debug-info from rustc
 # (both for amd64->powerpc built and powerpc->powerpc built bootstrap bits)
+# Also try to downsize the armv7 build.
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-debug-assertions
 CONFIGURE_ARGS+=	--disable-llvm-release-debuginfo
@@ -90,9 +92,12 @@ CONFIGURE_ARGS+=	--debuginfo-level-tests=0
 .endif
 
 # Only build the ARM target on/for this host, due to resource constraints
-# (X86 needs to go along due to 2-stage build process)
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || \
-    !empty(TARGET:Marmv7-unknown-netbsd-eabihf)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf)
+CONFIGURE_ARGS+=	--set llvm.targets="ARM"
+.endif
+# When cross-building for ARM on X86, X86 needs to go along due
+# to 2-stage build process
+.if !empty(TARGET:Marmv7-unknown-netbsd-eabihf)
 CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .endif
 
