@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/17 00:54:00 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2020/10/29 09:31:41 otis Exp $
 #
 
-DISTNAME=	apache-ivy-2.4.0-bin
-PKGREVISION=	1
+DISTNAME=	apache-ivy-2.5.0-bin
+#PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/ivy/${PKGNAME:S/apache-ivy-//}/}
