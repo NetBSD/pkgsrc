@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5940 2020/10/29 09:34:40 otis Exp $
+$NetBSD: CHANGES-2020,v 1.5941 2020/10/29 10:59:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8822,3 +8822,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test to 6.1.2 [adam 2020-10-29]
 	Updated databases/py-pypika to 0.43.0 [adam 2020-10-29]
 	Updated devel/apache-ivy to 2.5.0 [otis 2020-10-29]
+	Updated security/keepassxc to 2.6.2 [ryoon 2020-10-29]
