@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5942 2020/10/29 12:55:36 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.5943 2020/10/29 23:14:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8824,3 +8824,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/apache-ivy to 2.5.0 [otis 2020-10-29]
 	Updated security/keepassxc to 2.6.2 [ryoon 2020-10-29]
 	Updated devel/libmtp to 1.1.18 [bsiegert 2020-10-29]
+	Updated net/unison2.51 to 2.51.3 [gdt 2020-10-29]
