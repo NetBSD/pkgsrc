@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.18 2020/07/26 19:20:13 adam Exp $
+$NetBSD: distinfo,v 1.18.2.1 2020/10/29 08:00:30 bsiegert Exp $
 
 SHA1 (libunwind-10.0.1.src.tar.xz) = f5c9398aedd1a41c7667208abdabc9274b7a19ae
 RMD160 (libunwind-10.0.1.src.tar.xz) = 9602856d899cf8681c7baabbb17765fa07849093
 SHA512 (libunwind-10.0.1.src.tar.xz) = 8d717ba951ca25ca133a5d204cd7cca693402003a5a91cd2bc2bb0427486ccd37beac45aa54a6e7830c5358ecb64d1d674f7522e3192be7f9dba8384ad757f26
 Size (libunwind-10.0.1.src.tar.xz) = 92724 bytes
+SHA1 (patch-include_____libunwind__config.h) = b1727e79e7a00e4e5c412584dcfc357a696e2d6a
+SHA1 (patch-src_UnwindRegistersRestore.S) = bd8aa0754a87315efbe6cedcb81febcb32c8a020
+SHA1 (patch-src_UnwindRegistersSave.S) = 6c976325c8d871550d75fa51047e6a0b92f00f52
+SHA1 (patch-src_config.h) = c41a01427316ce7713a5b357a3a7a76a71ad8e6f
+SHA1 (patch-src_libunwind.cpp) = 6da6a2ac31364113e9b1f3e9377669dbc56cfa2a
