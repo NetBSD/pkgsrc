@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.185 2020/09/02 10:01:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.185.2.1 2020/10/29 12:18:54 spz Exp $
 
-FIREFOX_VER=	80.0.1
+FIREFOX_VER=	82.0.2
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox
-LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 # as of 70.0.1
+LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 # as of 81.0
 
 DEPENDS+=	firefox>=${PKGVERSION_NOREV}:../../www/firefox
 
@@ -29,7 +29,7 @@ FIREFOX_LOCALES= \
 	he hi-IN hr hsb hu hy-AM ia id is it ja ka kab kk km kn	ko	\
 	lij lt lv mk mr ms my nb-NO ne-NP nl nn-NO oc			\
 	pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE		\
-	ta te th tl tr trs uk uz vi xh zh-CN zh-TW
+	ta te th tl tr trs uk ur uz vi xh zh-CN zh-TW
 
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox/distribution/extensions
 
