@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.180 2020/09/15 09:40:08 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.180.2.1 2020/10/29 12:18:54 spz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -19,7 +19,7 @@ ALL_ENV+=			PYTHON3=${LOCALBASE}/bin/python3.7
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
+USE_TOOLS+=		pkg-config perl gmake autoconf213 gm4 unzip zip
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
 # firefox needs a compiler that supports gnu++14 and gnu++17.
@@ -223,7 +223,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.26
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.55
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.56
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
