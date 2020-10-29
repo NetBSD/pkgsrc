@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2019/12/29 15:31:23 adam Exp $
+# $NetBSD: Makefile,v 1.22.6.1 2020/10/29 08:00:30 bsiegert Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	libunwind-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -31,6 +32,7 @@ post-extract:
 	${MKDIR} ${WRKDIR}/build
 
 post-install:
+	${RM} -f ${WRKSRC}/include/__libunwind_config.h.orig
 	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
 
 BUILDLINK_DEPMETHOD.llvm=	build
