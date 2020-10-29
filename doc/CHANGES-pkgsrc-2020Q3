@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.6 2020/10/29 07:53:28 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.7 2020/10/29 08:00:52 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -84,4 +84,7 @@ print/ghostscript-agpl: dependecy update triggered build fix
 
 Pullup ticket #6329 (part 2) - requested by maya
 lang/rust: NetBSD 9 build fix (accidentally broken)
+
+Pullup ticket #6343 - requested by he
+lang/libunwind: PowerPC build fix
 
