@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/10/15 01:26:30 tpaul Exp $
+# $NetBSD: Makefile,v 1.11 2020/10/29 02:34:16 tpaul Exp $
 
-VERSION=	1.10.15
+VERSION=	2.0.3
 PKGNAME=	${PHP_PKG_PREFIX}-composer-${VERSION}
 DISTNAME=	composer
 CATEGORIES=	devel
