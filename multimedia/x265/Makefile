@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/05/30 06:10:40 adam Exp $
+# $NetBSD: Makefile,v 1.31 2020/10/29 21:47:00 nia Exp $
 
 DISTNAME=	x265_3.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -11,8 +11,14 @@ COMMENT=	High Efficiency Video Coding (HEVC)
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
+
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
-BUILD_DEPENDS+=	nasm>=2.13.0:../../devel/nasm
+.  if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
+# Avoid text relocations
+CMAKE_ARGS+=	-DENABLE_ASSEMBLY+OFF
+.  else
+TOOL_DEPENDS+=	nasm>=2.13.0:../../devel/nasm
+.  endif
 .endif
 
 CMAKE_ARGS+=	-DENABLE_PIC=ON
