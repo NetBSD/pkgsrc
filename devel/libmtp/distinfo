@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2020/04/03 20:15:19 nia Exp $
+$NetBSD: distinfo,v 1.15 2020/10/29 12:55:19 bsiegert Exp $
 
-SHA1 (libmtp-1.1.17.tar.gz) = b9d29f6f99f682e3b8c4f05cb6b1c8de3a454688
-RMD160 (libmtp-1.1.17.tar.gz) = a6ee084464d610a307388701f56f014c9669c8bb
-SHA512 (libmtp-1.1.17.tar.gz) = f2648e259529bd3dfe74a7049a79c4b0042bcaf63cc1fec8b232b66312d62e9620280e4f725312c9ef8207f1f1ceac19f460a0a8772a3cc6c7f0b00ead01add2
-Size (libmtp-1.1.17.tar.gz) = 829529 bytes
+SHA1 (libmtp-1.1.18.tar.gz) = b2a1fe4cb2b908ee1ca5b1c7eb3615b9dbdb109f
+RMD160 (libmtp-1.1.18.tar.gz) = 72e35ac820a5507bf1059dc89f62add39e20c8c6
+SHA512 (libmtp-1.1.18.tar.gz) = 1a8d503effd83217c339a1aea3a16954d718059edf3110cb2f21cff74cdd1243e7f4880d4e12f8fbdc9a5deed366c4151babe6ecd6f4cf4b7330a27e27bf7cc8
+Size (libmtp-1.1.18.tar.gz) = 832463 bytes
 SHA1 (patch-configure) = f57b708684696e496b1d61783e48fe4b63618d65
 SHA1 (patch-hotplug.sh.in) = 72216bb36bd0f6274c16c09d121fcffb567ab120
 SHA1 (patch-m4_byteorder.m4) = e6c1170d9099f13c637b3a73d67618d318c7a73d
