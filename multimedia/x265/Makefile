@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/10/29 21:47:00 nia Exp $
+# $NetBSD: Makefile,v 1.32 2020/10/29 21:47:39 nia Exp $
 
 DISTNAME=	x265_3.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/source
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 .  if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 # Avoid text relocations
-CMAKE_ARGS+=	-DENABLE_ASSEMBLY+OFF
+CMAKE_ARGS+=	-DENABLE_ASSEMBLY=OFF
 .  else
 TOOL_DEPENDS+=	nasm>=2.13.0:../../devel/nasm
 .  endif
