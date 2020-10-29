@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/10/29 21:47:39 nia Exp $
+# $NetBSD: Makefile,v 1.33 2020/10/29 23:58:07 wiz Exp $
 
 DISTNAME=	x265_3.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -11,6 +11,8 @@ COMMENT=	High Efficiency Video Coding (HEVC)
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 .  if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
