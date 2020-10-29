@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.5 2019/03/21 10:02:58 jaapb Exp $
+$NetBSD: distinfo,v 1.6 2020/10/29 23:14:15 gdt Exp $
 
-SHA1 (unison-2.51.2.tar.gz) = 63e3b526254ab6356a3fabf74be533982c2962c2
-RMD160 (unison-2.51.2.tar.gz) = d73c88be2a5c3c677939f4adede4c0f772ecff33
-SHA512 (unison-2.51.2.tar.gz) = 4ec4a1603ce5e561084dcd59621a0cc72c1ea40e3e23e36408c436c51bde3eb82774f671aba85c016f87982417800e8a27b978be59c92aa62ce9e4be1a072011
-Size (unison-2.51.2.tar.gz) = 1398790 bytes
-SHA1 (patch-src_Makefile) = 3172ed284bea2d21ccb475439c53ce65a45b79f6
-SHA1 (patch-src_files.ml) = 3a15b35f6a5e5242e4c3e198dabc38ca89bbdbe0
-SHA1 (patch-src_recon.ml) = 8aa1b2a4109fe183eedf209a91efc3f2164a3b3a
-SHA1 (patch-src_system_system__generic.ml) = e3c9ac74b266331d7c253b9e8ce4e0046699c6bd
-SHA1 (patch-src_uigtk2.ml) = 87a9c1e678f4056c0a32bfb3c3b7320652a171a2
+SHA1 (unison-2.51.3.tar.gz) = 6ef63d07da4bf8c1a2fd3ac1f58dbf609de57bea
+RMD160 (unison-2.51.3.tar.gz) = 9e3cac2b30afb9b5cda94147dafb0b475b3f3017
+SHA512 (unison-2.51.3.tar.gz) = 202bc592cf18d3ac76d7e29ec71add5d6e33a96b4b885e0e2add9a5a621db2290184f268c70e4f05e4884d6cdfed09f6fcd3dde85681c39628a10ea552917c8f
+Size (unison-2.51.3.tar.gz) = 1370060 bytes
+SHA1 (patch-src_Makefile) = ff73628825232b9494844c020b78d2978f753d07
