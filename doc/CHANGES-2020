@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5937 2020/10/29 02:34:25 tpaul Exp $
+$NetBSD: CHANGES-2020,v 1.5938 2020/10/29 07:48:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8818,3 +8818,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/openldap to 2.4.55 [adam 2020-10-28]
 	Updated databases/lmdb to 0.9.27 [adam 2020-10-28]
 	Updated devel/php-composer to 2.0.3 [tpaul 2020-10-29]
+	Updated x11/xnotify to 0.7.3 [pin 2020-10-29]
