@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20155 2020/10/26 09:36:34 schmonz Exp $
+$NetBSD: TODO,v 1.20156 2020/10/29 10:59:14 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -726,7 +726,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevelop-5.6
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
-	o keepassxc-2.6.2
 	o keybinder-0.3.1
 	o kipi-plugins-4.14.0
 	o kismet-2011.03r2 [pkg/45692]
