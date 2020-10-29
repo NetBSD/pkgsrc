@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.5 2020/10/23 12:27:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.6 2020/10/29 07:53:28 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -45,6 +45,43 @@ lang/ruby25-base: security patch
 Pullup ticket #6339 - requested by taca
 www/contao35: security patch
 
+Pullup ticket #6345 - requested by khorben
+security/py-libtaxii: security fix
+
+Pullup ticket #6355 - requested by bouyer
+sysutils/xenkernel411: security fix
+sysutils/xenkernel413: security fix
+
+Pullup ticket #6340 - requested by wiz
+devel/apache-ant: security fix
+
+Pullup ticket #6348 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6349 - requested by nia
+www/firefox78-l10n: dependent update
+
+Pullup ticket #6344 - requested by taca
+www/ruby-rails60: security fix
+
+Pullup ticket #6341 - requested by wiz
+security/tor-browser: security fix
+
+Pullup ticket #6350 - requested by nia
+wm/xfce4-wm: NetBSD 8 build fix
+
+Pullup ticket #6351 - requested by nia
+x11/vte3: NetBSD 8 build fix
+
+Pullup ticket #6352 - requested by nia
+graphics/openexr: NetBSD 8 build fix
+
+Pullup ticket #6353 - requested by nia
+chat/profanity: NetBSD 8 build fix
+
 Pullup ticket #6354 - requested by maya
 print/ghostscript-agpl: dependecy update triggered build fix
+
+Pullup ticket #6329 (part 2) - requested by maya
+lang/rust: NetBSD 9 build fix (accidentally broken)
 
