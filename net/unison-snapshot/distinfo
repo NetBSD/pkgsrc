@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/10/19 22:12:13 gdt Exp $
+$NetBSD: distinfo,v 1.5 2020/10/29 23:19:25 gdt Exp $
 
-SHA1 (unison-2.51.3rc3.tar.gz) = 6f4d819614786288d161205f99a3eba5f4eba4a1
-RMD160 (unison-2.51.3rc3.tar.gz) = 80e55253e83635476917555dcb1b10dce9e7b09b
-SHA512 (unison-2.51.3rc3.tar.gz) = 988fa67fcbf46832e46295c12e3faeade6b6785f64b9ca55e7e2d877bccee0585b3b7865c61b4abbbd06100b2850ec3460d3016d2faa4dffd9c54383179709dc
-Size (unison-2.51.3rc3.tar.gz) = 1370077 bytes
+SHA1 (unison-2.51.3.70-5a4fbbe0fd58f475bb187a640db2ca2ea7fd6ec4.tar.gz) = 02fcdcbe5032427d4775fb8ca2dd003ff37705b8
+RMD160 (unison-2.51.3.70-5a4fbbe0fd58f475bb187a640db2ca2ea7fd6ec4.tar.gz) = 3d7a2e5b39154c2b17ca96bf9fce87049dd3141f
+SHA512 (unison-2.51.3.70-5a4fbbe0fd58f475bb187a640db2ca2ea7fd6ec4.tar.gz) = 5814850b59c8ff7f71ca5cb34f5b24b966f63f713df0ef0c1cf00ea1d7fc7c8993dc4759bde171285e404611bd1755e5697968ddd7c0150f7fa338dbaa7a79a1
+Size (unison-2.51.3.70-5a4fbbe0fd58f475bb187a640db2ca2ea7fd6ec4.tar.gz) = 1373050 bytes
