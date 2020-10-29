@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/06/14 11:32:37 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2020/10/29 09:31:41 otis Exp $
 
-SHA1 (apache-ivy-2.4.0-bin.tar.gz) = 97a206e3b6ec2ce9793d2ee151fa997a12647c7f
-RMD160 (apache-ivy-2.4.0-bin.tar.gz) = 2be86881a298bfca2df3385e5adbece0cd6bd4d6
-SHA512 (apache-ivy-2.4.0-bin.tar.gz) = 66f354355bcfa8b8e26233da39ee67b511b8e33510cb6634aff1bd52a4bd7bd98745f7b30115644b312de568e478916a49fc89aa89d3f8b12f6e4971a015cce3
-Size (apache-ivy-2.4.0-bin.tar.gz) = 3241536 bytes
+SHA1 (apache-ivy-2.5.0-bin.tar.gz) = 0a62c4d5bc73bcf325e4d5a0d6ba68ea7b11fe1c
+RMD160 (apache-ivy-2.5.0-bin.tar.gz) = 54cc58d96beaab3d9e57258a806c04f0ab0a5504
+SHA512 (apache-ivy-2.5.0-bin.tar.gz) = 3c80985dba14fd8fc21aff5622c4bbfb73efa4301926c2132223fe3d9d3313cbfcd7f9150b774850640483aa668792cbb9200e70fa727b9951da1a59eba66b0c
+Size (apache-ivy-2.5.0-bin.tar.gz) = 2727761 bytes
