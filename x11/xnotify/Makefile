@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/10/28 11:49:08 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/10/29 07:47:42 pin Exp $
 
-DISTNAME=	xnotify-0.7.1
+DISTNAME=	xnotify-0.7.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 
