@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5948 2020/10/30 07:17:43 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5949 2020/10/30 09:55:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8830,3 +8830,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/php73 to 7.3.24 [taca 2020-10-30]
 	Updated lang/php74 to 7.4.12 [taca 2020-10-30]
 	Updated net/samba4 to 4.12.9 [taca 2020-10-30]
+	Updated databases/py-psycopg2 to 2.8.6 [adam 2020-10-30]
+	Updated databases/repmgr to 5.2.0 [adam 2020-10-30]
