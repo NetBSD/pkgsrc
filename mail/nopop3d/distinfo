@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/10/30 10:19:22 schmonz Exp $
+
+SHA1 (notqmail-1.08.tar.gz) = 7647b9920134cd433b31c5e27563f0728fbd0056
+RMD160 (notqmail-1.08.tar.gz) = ea1417fe5aebc24cb1d06e9992d941e91045e3b0
+SHA512 (notqmail-1.08.tar.gz) = eca97f74a20522e85435fa76015a72adcc040e1acc401cbdbd7f55f41a720fabc6f251e606ff1d236e44de295f066538ec42aca415b4344c1cd15964f38c7085
+Size (notqmail-1.08.tar.gz) = 225713 bytes
