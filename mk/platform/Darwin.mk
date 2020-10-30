@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.100 2020/10/09 17:43:48 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.101 2020/10/30 17:28:25 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -88,7 +88,7 @@ _OPSYS_SYSTEM_RPATH?=	/usr/lib
 
 .if !defined(OSX_VERSION)
 OSX_VERSION!=		sw_vers -productVersion
-.  if ${OSX_VERSION:R:R} != ${OSX_VERSION:R}
+.  if "${OSX_VERSION:R:R}" != "${OSX_VERSION:R}"
 OSX_VERSION:=		${OSX_VERSION:R}
 .  endif
 MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
