@@ -1,0 +1,5 @@
+nopop3d is not a POP3 server. It can be useful as part of a simple
+authentication service that happens to be implemented as POP3.
+
+nopop3d consists of qmail-pop3d with several POP3 verbs and all the file
+access removed.
