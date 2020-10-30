@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/30 10:19:22 schmonz Exp $
+bin/nopop3d
