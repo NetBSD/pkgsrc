@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.908 2020/10/28 11:50:07 pin Exp $
+# $NetBSD: Makefile,v 1.909 2020/10/30 14:22:28 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -110,7 +110,6 @@ SUBDIR+=	hot-babe
 SUBDIR+=	hs-X11
 SUBDIR+=	hs-X11-xft
 SUBDIR+=	hsetroot
-SUBDIR+=	hyena
 SUBDIR+=	i3lock
 SUBDIR+=	iceauth
 SUBDIR+=	ico
