@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5957 2020/10/30 15:35:26 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5958 2020/10/30 15:48:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8843,3 +8843,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added audio/libdssialsacompat version 1.0.8a [nia 2020-10-30]
 	Added audio/dssi version 1.1.1 [nia 2020-10-30]
 	Updated cad/klayout to 0.26.8 [mef 2020-10-30]
+	Added audio/zynaddsubfx version 3.0.5 [nia 2020-10-30]
