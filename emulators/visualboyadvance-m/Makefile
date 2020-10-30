@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/18 17:57:48 leot Exp $
+# $NetBSD: Makefile,v 1.6 2020/10/30 08:47:38 nia Exp $
 
 DISTNAME=	visualboyadvance-m-2.1.4
 PKGREVISION=	2
@@ -11,6 +11,12 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://vba-m.com/
 COMMENT=	Game Boy and Game Boy Advance Emulator
 LICENSE=	gnu-gpl-v2
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+.endif
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
