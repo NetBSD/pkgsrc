@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5952 2020/10/30 12:59:47 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5953 2020/10/30 14:23:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8838,3 +8838,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-grpcio to 1.33.2 [adam 2020-10-30]
 	Updated net/py-grpcio-testing to 1.33.2 [adam 2020-10-30]
 	Updated net/py-grpcio-tools to 1.33.2 [adam 2020-10-30]
+	Removed x11/hyena [nia 2020-10-30]
