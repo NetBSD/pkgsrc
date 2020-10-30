@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5946 2020/10/30 07:13:05 taca Exp $
+$NetBSD: CHANGES-2020,v 1.5947 2020/10/30 07:14:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8828,3 +8828,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/unison-snapshot to 2.51.3.70 [gdt 2020-10-29]
 	Updated geography/gama to 2.11 [gdt 2020-10-29]
 	Updated lang/php73 to 7.3.24 [taca 2020-10-30]
+	Updated lang/php74 to 7.4.12 [taca 2020-10-30]
