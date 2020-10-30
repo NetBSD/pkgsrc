@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/07/07 12:40:58 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/10/30 16:15:38 nia Exp $
 bin/lmms
 include/lmms/AboutDialog.h
 include/lmms/ActionGroup.h
@@ -231,6 +231,7 @@ include/lmms/update_event.h
 include/lmms/versioninfo.h
 include/lmms/volume.h
 lib/libqx11embedcontainer.a
+lib/lmms/RemoteZynAddSubFx
 lib/lmms/ladspa/alias_1407.so
 lib/lmms/ladspa/allpass_1895.so
 lib/lmms/ladspa/am_pitchshift_1433.so
@@ -350,6 +351,7 @@ lib/lmms/ladspa/wave_terrain_1412.so
 lib/lmms/ladspa/xfade_1915.so
 lib/lmms/ladspa/zm1_1428.so
 lib/lmms/libOPL2.so
+lib/lmms/libZynAddSubFxCore.so
 lib/lmms/libamplifier.so
 lib/lmms/libaudiofileprocessor.so
 lib/lmms/libbassbooster.so
@@ -389,6 +391,7 @@ lib/lmms/libvstbase.so
 lib/lmms/libvsteffect.so
 lib/lmms/libwatsyn.so
 lib/lmms/libwaveshaper.so
+lib/lmms/libzynaddsubfx.so
 man/man1/lmms.1
 share/applications/lmms.desktop
 share/bash-completion/completions/lmms
