@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2020/10/30 15:29:27 nia Exp $
+# $NetBSD: Makefile,v 1.614 2020/10/30 15:47:01 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -502,5 +502,6 @@ SUBDIR+=	xmms-wma
 SUBDIR+=	xmp
 SUBDIR+=	xmradio
 SUBDIR+=	xwave
+SUBDIR+=	zynaddsubfx
 
 .include "../mk/misc/category.mk"
