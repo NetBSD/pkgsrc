@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5951 2020/10/30 10:23:51 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5952 2020/10/30 12:59:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8834,3 +8834,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/repmgr to 5.2.0 [adam 2020-10-30]
 	Added mail/nopop3d version 20201030 [schmonz 2020-10-30]
 	Updated net/tinydyndns-run to 20201030 [schmonz 2020-10-30]
+	Updated net/grpc to 1.33.2 [adam 2020-10-30]
+	Updated net/py-grpcio to 1.33.2 [adam 2020-10-30]
+	Updated net/py-grpcio-testing to 1.33.2 [adam 2020-10-30]
+	Updated net/py-grpcio-tools to 1.33.2 [adam 2020-10-30]
