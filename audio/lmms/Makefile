@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2020/09/14 12:31:33 nia Exp $
+# $NetBSD: Makefile,v 1.67 2020/10/30 16:15:38 nia Exp $
 
 DISTNAME=	lmms_1.2.2
 PKGNAME=	${DISTNAME:S/_/-/1}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LMMS/}
 GITHUB_PROJECT=	lmms
@@ -53,6 +53,7 @@ CHECK_PORTABILITY_SKIP+=	cmake/linux/package_linux.sh.in
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/fltk13/buildlink3.mk" # used for zynaddsubfx
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .  include "../../x11/qt5-qtx11extras/buildlink3.mk"
