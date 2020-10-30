@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5949 2020/10/30 09:55:44 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5950 2020/10/30 10:20:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8832,3 +8832,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/samba4 to 4.12.9 [taca 2020-10-30]
 	Updated databases/py-psycopg2 to 2.8.6 [adam 2020-10-30]
 	Updated databases/repmgr to 5.2.0 [adam 2020-10-30]
+	Added mail/nopop3d version 20201030 [schmonz 2020-10-30]
