@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/05/19 12:48:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/10/30 09:55:13 adam Exp $
 bin/repmgr
 bin/repmgrd
 ${PLIST.llvm}lib/postgresql/bitcode/repmgr.index.bc
@@ -18,7 +18,10 @@ share/postgresql/extension/repmgr--4.4--5.0.sql
 share/postgresql/extension/repmgr--4.4.sql
 share/postgresql/extension/repmgr--5.0--5.1.sql
 share/postgresql/extension/repmgr--5.0.sql
+share/postgresql/extension/repmgr--5.1--5.2.sql
 share/postgresql/extension/repmgr--5.1.sql
+share/postgresql/extension/repmgr--5.2.sql
 share/postgresql/extension/repmgr--unpackaged--4.0.sql
 share/postgresql/extension/repmgr--unpackaged--5.1.sql
+share/postgresql/extension/repmgr--unpackaged--5.2.sql
 share/postgresql/extension/repmgr.control
