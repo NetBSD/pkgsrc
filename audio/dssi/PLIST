@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2020/10/30 15:29:27 nia Exp $
+bin/dssi_analyse_plugin
+bin/dssi_list_plugins
+bin/dssi_osc_send
+bin/dssi_osc_update
+bin/jack-dssi-host
+bin/karplong
+bin/less_trivial_synth
+bin/trivial_sampler
+bin/trivial_synth
+include/dssi.h
+lib/dssi/karplong.la
+lib/dssi/less_trivial_synth.la
+lib/dssi/trivial_sampler.la
+lib/dssi/trivial_synth.la
+lib/pkgconfig/dssi.pc
+man/man1/dssi_analyse_plugin.1
+man/man1/dssi_list_plugins.1
+man/man1/dssi_osc_send.1
+man/man1/dssi_osc_update.1
+man/man1/jack-dssi-host.1
+@exec ${MKDIR} %D/lib/dssi/trivial_sampler
+@exec ${MKDIR} %D/lib/dssi/less_trivial_synth
