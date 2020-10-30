@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5955 2020/10/30 15:24:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5956 2020/10/30 15:30:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8841,3 +8841,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed x11/hyena [nia 2020-10-30]
 	Updated print/qpdf to 10.0.2 [ryoon 2020-10-30]
 	Added audio/libdssialsacompat version 1.0.8a [nia 2020-10-30]
+	Added audio/dssi version 1.1.1 [nia 2020-10-30]
