@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/10/30 15:47:01 nia Exp $
+
+SHA1 (zynaddsubfx-3.0.5.tar.bz2) = 8f4ad3cd0f26d360dd97124b2a0c7b6262853e61
+RMD160 (zynaddsubfx-3.0.5.tar.bz2) = c622a69863ef81012544f87472bdbdcacf091bde
+SHA512 (zynaddsubfx-3.0.5.tar.bz2) = 1e4d5a6393937e6c7103e6d0e97df76f2d129350854c2f338aa888591091b1508c63e9b52c8e5a176e282ff2f6b72c6a87de54875c412771aff26e8ece2c84e8
+Size (zynaddsubfx-3.0.5.tar.bz2) = 8141703 bytes
+SHA1 (patch-DPF_distrho_extra_Mutex.hpp) = a4bc825c95019daaf094cd9427c4d16bc1664bf8
