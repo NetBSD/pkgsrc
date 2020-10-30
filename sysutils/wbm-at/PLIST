@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:27 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/10/30 22:08:55 mef Exp $
 share/examples/webmin/at/config
 share/webmin/at/CHANGELOG
 share/webmin/at/acl_security.pl
 share/webmin/at/at-lib.pl
 share/webmin/at/backup_config.pl
+share/webmin/at/bootup.cgi
 share/webmin/at/cgi_args.pl
 share/webmin/at/config-coherent-linux
 share/webmin/at/config-corel-linux
@@ -65,12 +66,16 @@ share/webmin/at/lang/af.auto
 share/webmin/at/lang/ar.auto
 share/webmin/at/lang/be.auto
 share/webmin/at/lang/bg
+share/webmin/at/lang/bg.auto
 share/webmin/at/lang/ca
+share/webmin/at/lang/ca.auto
 share/webmin/at/lang/cs
 share/webmin/at/lang/cs.auto
 share/webmin/at/lang/da.auto
 share/webmin/at/lang/de
+share/webmin/at/lang/de.auto
 share/webmin/at/lang/el
+share/webmin/at/lang/el.auto
 share/webmin/at/lang/en
 share/webmin/at/lang/es
 share/webmin/at/lang/es.auto
@@ -85,20 +90,26 @@ share/webmin/at/lang/hr.auto
 share/webmin/at/lang/hu
 share/webmin/at/lang/hu.auto
 share/webmin/at/lang/it
+share/webmin/at/lang/it.auto
 share/webmin/at/lang/ja.auto
 share/webmin/at/lang/ko.auto
 share/webmin/at/lang/lt.auto
 share/webmin/at/lang/lv.auto
 share/webmin/at/lang/ms
+share/webmin/at/lang/ms.auto
 share/webmin/at/lang/mt.auto
 share/webmin/at/lang/nl
+share/webmin/at/lang/nl.auto
 share/webmin/at/lang/no
+share/webmin/at/lang/no.auto
 share/webmin/at/lang/pl
+share/webmin/at/lang/pl.auto
 share/webmin/at/lang/pt.auto
 share/webmin/at/lang/pt_BR
 share/webmin/at/lang/pt_BR.auto
 share/webmin/at/lang/ro.auto
 share/webmin/at/lang/ru
+share/webmin/at/lang/ru.auto
 share/webmin/at/lang/sk
 share/webmin/at/lang/sk.auto
 share/webmin/at/lang/sl.auto
@@ -205,3 +216,5 @@ share/webmin/at/openserver-lib.pl
 share/webmin/at/rbac-mapping
 share/webmin/at/save_allow.cgi
 share/webmin/at/solaris-lib.pl
+share/webmin/at/start.cgi
+share/webmin/at/stop.cgi
