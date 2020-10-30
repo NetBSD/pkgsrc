@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/10/30 15:29:27 nia Exp $
+
+SHA1 (dssi-1.1.1.tar.gz) = fd08bc8579871d94a6fd43fb241fb2dd1b0f5dc6
+RMD160 (dssi-1.1.1.tar.gz) = 758bace54128d856d724d388494b5926488100b9
+SHA512 (dssi-1.1.1.tar.gz) = faf35ae851b889ad17a8ba624c713af8a5f33bb93db8e34842e8b778a0e36c3eab9ab712a40e4ca7ecd96954f3e70504d89a75b3826dd138332085e176c0d34d
+Size (dssi-1.1.1.tar.gz) = 712038 bytes
