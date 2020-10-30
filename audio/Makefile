@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.611 2020/10/11 13:41:19 pin Exp $
+# $NetBSD: Makefile,v 1.612 2020/10/30 15:22:23 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -226,6 +226,7 @@ SUBDIR+=	libcddb
 SUBDIR+=	libcuefile
 SUBDIR+=	libdca
 SUBDIR+=	libdiscid
+SUBDIR+=	libdssialsacompat
 SUBDIR+=	libebur128
 SUBDIR+=	libfishsound
 SUBDIR+=	libgpod
