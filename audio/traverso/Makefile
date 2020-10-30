@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/08/18 17:57:40 leot Exp $
+# $NetBSD: Makefile,v 1.5 2020/10/30 11:07:21 nia Exp $
 
 DISTNAME=	traverso-0.49.6
 PKGREVISION=	3
@@ -12,7 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+
+# note: C++11 'constexpr' only available with -std=c++11 or -std=gnu++11
+USE_LANGUAGES=	c c++11
 
 CMAKE_ARGS+=	-DWANT_MP3_ENCODE=ON
 
