@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/09/13 14:28:35 mef Exp $
+$NetBSD: distinfo,v 1.10 2020/10/31 12:25:12 mef Exp $
 
-SHA1 (nqp-2020.08.2.tar.gz) = fdb8bcdb7497d8b9584961f68380b02d5729621e
-RMD160 (nqp-2020.08.2.tar.gz) = 06aa7fa20bec76ba2c6295ebbdacc2ec19347a01
-SHA512 (nqp-2020.08.2.tar.gz) = 2fb222ea74903e62c83cab5e7bca8ca73dc7570d641a89df71552ebb68a1298673c3db550ea512ddc9fde345bb8ceb1566fa196e080e1e66aa5ff4a2650c1335
-Size (nqp-2020.08.2.tar.gz) = 3952493 bytes
+SHA1 (nqp-2020.10.tar.gz) = 3d3f6b1ebd410c1ce3c5f0a65197a0eaa069d000
+RMD160 (nqp-2020.10.tar.gz) = fef7a499c6958d79eefba23c6d01f226afd541b4
+SHA512 (nqp-2020.10.tar.gz) = 279715fa0b2012852cc31b9e7898092510a1ba76005576a3ffe38f9dc8e9c002a4161be8f0b66e38c501e656a8124a320dbf2c90c89f53e57d0950e1baa1ea2b
+Size (nqp-2020.10.tar.gz) = 3954398 bytes
