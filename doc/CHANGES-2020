@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5971 2020/10/31 21:02:48 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5972 2020/10/31 21:15:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8857,3 +8857,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-hypothesis to 5.41.0 [wiz 2020-10-31]
 	Updated graphics/libimagequant to 2.13.0 [wiz 2020-10-31]
 	Updated games/dMagnetic to 0.26 [wiz 2020-10-31]
+	Updated devel/git to 2.29.2 [adam 2020-10-31]
+	Updated devel/py-gitpython to 3.1.11 [adam 2020-10-31]
