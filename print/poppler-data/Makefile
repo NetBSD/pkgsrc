@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/04/29 09:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/10/31 13:53:03 wiz Exp $
 
-DISTNAME=	poppler-data-0.4.9
+DISTNAME=	poppler-data-0.4.10
 CATEGORIES=	print
 MASTER_SITES=	https://poppler.freedesktop.org/
 
