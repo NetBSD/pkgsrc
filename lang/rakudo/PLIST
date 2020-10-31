@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/09/14 22:57:16 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/10/31 12:32:17 mef Exp $
 bin/perl6
 bin/perl6-debug
 bin/perl6-debug-m
@@ -17,7 +17,6 @@ bin/rakudo-m
 bin/rakudo-valgrind-m
 share/perl6/bin/install-dist.p6
 share/perl6/core/dist/E14CAA5C7DE5B1A1BAC1ED1155377A9AF4962C18
-share/perl6/core/precomp/.lock
 share/perl6/core/repo.lock
 share/perl6/core/short/0D7FDBBC72083980348BED148BF46BD198D51DE8/E14CAA5C7DE5B1A1BAC1ED1155377A9AF4962C18
 share/perl6/core/short/2216470A6AACB2EDEC4887E9EADEC834847AFC5D/E14CAA5C7DE5B1A1BAC1ED1155377A9AF4962C18
