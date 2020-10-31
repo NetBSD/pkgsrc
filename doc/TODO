@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20157 2020/10/29 12:08:16 wiz Exp $
+$NetBSD: TODO,v 1.20158 2020/10/31 13:51:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -748,7 +748,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcarddav-14.0.4
 	o libdrm-2.4.102
 	o libflash-0.4.13
-	o libgcrypt-1.8.7
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2

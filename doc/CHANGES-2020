@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5963 2020/10/31 12:32:34 mef Exp $
+$NetBSD: CHANGES-2020,v 1.5964 2020/10/31 13:51:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8849,3 +8849,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/MoarVM to 2020.10 [mef 2020-10-31]
 	Updated lang/nqp to 2020.10 [mef 2020-10-31]
 	Updated lang/rakudo to 2020.10 [mef 2020-10-31]
+	Updated security/libgcrypt to 1.8.7 [wiz 2020-10-31]
