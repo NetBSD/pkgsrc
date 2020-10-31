@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5966 2020/10/31 13:55:26 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5967 2020/10/31 19:36:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8852,3 +8852,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libgcrypt to 1.8.7 [wiz 2020-10-31]
 	Updated print/poppler-data to 0.4.10 [wiz 2020-10-31]
 	Updated wm/i3 to 4.18.3 [wiz 2020-10-31]
+	Updated devel/nss to 3.58nb1 [wiz 2020-10-31]
