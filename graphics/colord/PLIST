@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/31 09:49:46 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/10/31 13:29:41 bsiegert Exp $
 bin/cd-create-profile
 bin/cd-fix-profile
 bin/cd-iccdump
@@ -174,3 +174,4 @@ share/locale/uk/LC_MESSAGES/colord.mo
 share/locale/zh_CN/LC_MESSAGES/colord.mo
 share/locale/zh_TW/LC_MESSAGES/colord.mo
 share/polkit-1/actions/org.freedesktop.color.policy
+share/vala/vapi/colord.vapi
