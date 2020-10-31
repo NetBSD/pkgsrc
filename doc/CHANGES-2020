@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5969 2020/10/31 19:40:40 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5970 2020/10/31 19:41:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8855,3 +8855,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/nss to 3.58nb1 [wiz 2020-10-31]
 	Updated multimedia/libbluray to 1.2.1 [wiz 2020-10-31]
 	Updated devel/py-hypothesis to 5.41.0 [wiz 2020-10-31]
+	Updated graphics/libimagequant to 2.13.0 [wiz 2020-10-31]
