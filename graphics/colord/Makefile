@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/06/02 08:23:59 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/10/31 13:29:41 bsiegert Exp $
 
 DISTNAME=	colord-1.3.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -48,10 +48,15 @@ SUBST_FILES.prefix+=	src/cd-main.c
 SUBST_FILES.prefix+=	client/cd-util.c
 SUBST_VARS.prefix=	PREFIX VARBASE
 
+INSTALLATION_DIRS+=	share/vala/vapi
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
 BUILD_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/lib/colord/colord.vapi ${DESTDIR}${PREFIX}/share/vala/vapi/
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
