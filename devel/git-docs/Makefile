@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:07:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/10/31 21:10:01 adam Exp $
 
 PKGNAME=	git-docs-${GIT_VERSION}
-PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (documentation)
 
 CONFLICTS+=		scmgit-docs-[0-9]*
