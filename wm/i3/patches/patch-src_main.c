@@ -1,6 +1,8 @@
-$NetBSD: patch-src_main.c,v 1.6 2019/08/16 10:59:55 wiz Exp $
+$NetBSD: patch-src_main.c,v 1.7 2020/10/31 13:55:17 wiz Exp $
+
 * NetBSD versions lower than 7 does not have shm_open and shm_unlink
   see patch-src_log.c 
+
 --- src/main.c.orig	2019-08-03 13:14:38.000000000 +0000
 +++ src/main.c
 @@ -161,11 +161,13 @@ void main_set_x11_cb(bool enable) {

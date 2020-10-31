@@ -1,6 +1,8 @@
-$NetBSD: patch-src_log.c,v 1.6 2019/08/16 10:59:55 wiz Exp $
+$NetBSD: patch-src_log.c,v 1.7 2020/10/31 13:55:17 wiz Exp $
+
 * NetBSD versions below and 7 miss shm_open and shm_unlink
 * NetBSD versions below 8 miss pthread_condattr_pshared 
+
 --- src/log.c.orig	2019-08-03 13:14:38.000000000 +0000
 +++ src/log.c
 @@ -123,6 +123,7 @@ void init_logging(void) {
