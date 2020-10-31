@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/12/03 14:29:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/10/31 19:36:30 wiz Exp $
 bin/certutil
 bin/cmsutil
 bin/crlutil
@@ -80,6 +80,7 @@ include/nss/nss/p12.h
 include/nss/nss/p12plcy.h
 include/nss/nss/p12t.h
 include/nss/nss/pk11func.h
+include/nss/nss/pk11hpke.h
 include/nss/nss/pk11pqg.h
 include/nss/nss/pk11priv.h
 include/nss/nss/pk11pub.h
