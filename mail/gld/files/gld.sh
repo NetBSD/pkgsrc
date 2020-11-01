@@ -1,11 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gld.sh,v 1.5 2005/01/19 15:48:41 xtraeme Exp $
+# $NetBSD: gld.sh,v 1.6 2020/11/01 14:21:44 spz Exp $
 #
 
 # PROVIDE: gld
 # BEFORE: mail
-# REQUIRE: DAEMON LOGIN mysqld
+# REQUIRE: DAEMON LOGIN @GLDDB@
 
 . /etc/rc.subr
 
@@ -14,19 +14,20 @@ rcvar=$name
 command="@PREFIX@/bin/${name}"
 required_files="@PKG_SYSCONFDIR@/$name.conf"
 pidfile="@VARBASE@/run/${name}.pid"
-extra_commands="gld_waitmysql_seconds"
+extra_commands="gld_waitdb_seconds"
 
 : ${gld_waitmysql_seconds:=5}
-start_precmd="waitmysql $gld_waitmysql_seconds"
+: ${gld_waitdb_seconds:=$gld_waitmysql_seconds}
+start_precmd="waitdb $gld_waitdb_seconds"
 
 if [ "$1" != "stop" -o "$1" != "status" ]; then
 	echo $(check_process $command) > $pidfile
 fi
 
-waitmysql()
+waitdb()
 {
 	_sec=$1
-	echo "$name: waiting for MySQL ${_sec} seconds..."
+	echo "$name: waiting for @GLDDB@ ${_sec} seconds..."
 	sleep ${_sec}
 }
 
