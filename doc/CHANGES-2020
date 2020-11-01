@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5987 2020/11/01 16:04:00 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.5988 2020/11/01 16:48:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8874,3 +8874,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-city-lite to 2020.11 [fcambus 2020-11-01]
 	Updated net/dbip-country-lite to 2020.11 [fcambus 2020-11-01]
 	Updated audio/asunder to 2.9.6 [triaxx 2020-11-01]
+	Updated games/dMagnetic to 0.27 [wiz 2020-11-01]
