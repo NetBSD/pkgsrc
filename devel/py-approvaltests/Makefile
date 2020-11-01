@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/20 14:37:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/01 13:52:43 schmonz Exp $
 
 GITHUB_PROJECT=	ApprovalTests.Python
-GITHUB_TAG=	0.2.6
-DISTNAME=	0.2.6
+GITHUB_TAG=	0.2.7
+DISTNAME=	0.2.7
 PKGNAME=	${PYPKGPREFIX}-approvaltests-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=approvals/}
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.5.27:../../x11/py-pyperclip
 
-WRKSRC=		${WRKDIR}/ApprovalTests.Python-0.2.6
+WRKSRC=		${WRKDIR}/ApprovalTests.Python-${GITHUB_TAG}
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
