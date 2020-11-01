@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2020/07/06 15:27:19 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/01 13:30:13 schmonz Exp $
 bin/leahneukirchen-redo
 bin/leahneukirchen-redo-always
 bin/leahneukirchen-redo-ifchange
 bin/leahneukirchen-redo-ifcreate
-share/doc/leahneukirchen-redo/NOTES
+share/doc/leahneukirchen-redo/README.md
