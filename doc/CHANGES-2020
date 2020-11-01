@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5981 2020/11/01 14:54:45 morr Exp $
+$NetBSD: CHANGES-2020,v 1.5982 2020/11/01 15:07:09 morr Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8868,3 +8868,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/leahneukirchen-redo to 0.3 [schmonz 2020-11-01]
 	Updated devel/py-approvaltests to 0.2.7 [schmonz 2020-11-01]
 	Updated editors/vim-share to 8.2.1933 [morr 2020-11-01]
+	Updated www/wordpress to 5.5.3 [morr 2020-11-01]
