@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/11/01 05:48:20 tsutsui Exp $
+
+- workaround to build using Makefile.bsd
+
+--- Makefile.in.orig	2020-10-12 01:49:56.000000000 +0000
++++ Makefile.in
+@@ -6,8 +6,7 @@ CP		= cp
+ 
+ # default
+ 
+-default :
+-	$(MAKE) $(TARGET)
++default : $(TARGET)
+ 
+ # rules
+ 
