@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/08 00:53:01 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/01 05:48:21 tsutsui Exp $
 bin/nanotodon
+share/doc/nanotodon/README.md

@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.base,v 1.1 2020/11/01 05:48:20 tsutsui Exp $
+
+- enable optimiazation
+
+--- Makefile.base.orig	2020-10-12 01:49:56.000000000 +0000
++++ Makefile.base
+@@ -3,7 +3,7 @@ OBJS_TARGET	= nanotodon.o config.o messa
+ 
+ CFLAGS = -g
+ # optimization
+-#CFLAGS+= -O2
++CFLAGS+= -O2
+ # Use $XDG_CONFIG_HOME or ~/.config dir to save config files
+ CFLAGS+= -DSUPPORT_XDG_BASE_DIR
+ 
