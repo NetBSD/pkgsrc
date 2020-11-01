@@ -557,6 +557,7 @@ mozilla-single-profile	Enable single profiles on mozilla browsers.
 mp3tunes		Enable support for mp3tunes.com.
 mp4v2			Enable MP4 support using mp4v2.
 mpcdec			Enable Musepack decoder library support.
+mpcenc                  Enable Musepack encoder library support.
 mpeg3			Enable libmpeg3 MPEG decoding library support.
 mpg123			Enable MP3 support using mpg123.
 mpg123-altivec		Enable altivec optimized dithering code.
