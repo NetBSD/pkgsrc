@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2018/07/04 13:40:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2020/11/01 14:21:43 spz Exp $
 #
 
 DISTNAME=		gld-1.7
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		mail
 MASTER_SITES=		https://www.gasmi.net/down/
 EXTRACT_SUFX=		.tgz
