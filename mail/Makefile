@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.561 2020/10/30 10:20:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.562 2020/11/01 20:55:21 joerg Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -298,6 +298,7 @@ SUBDIR+=	py-aiosmtpd
 SUBDIR+=	py-authres
 SUBDIR+=	py-email_validator
 SUBDIR+=	py-flufl.bounce
+SUBDIR+=	py-imapclient
 SUBDIR+=	py-libgmail
 SUBDIR+=	py-policyd-spf
 SUBDIR+=	py-sendmail-admin
