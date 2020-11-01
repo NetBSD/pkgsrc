@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5983 2020/11/01 15:11:30 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.5984 2020/11/01 15:19:02 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8870,3 +8870,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/vim-share to 8.2.1933 [morr 2020-11-01]
 	Updated www/wordpress to 5.5.3 [morr 2020-11-01]
 	Updated converters/bdf2psf to 1.198 [fcambus 2020-11-01]
+	Updated net/dbip-asn-lite to 2020.11 [fcambus 2020-11-01]
