@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:35:10 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/11/01 11:28:35 wiz Exp $
 
 DISTNAME=		netpgpverify-${VERSION}
 CATEGORIES=		security
@@ -20,6 +20,6 @@ TEST_TARGET=		tst
 VERSION!=	${AWK} '/\#define.*NETPGP_VERIFY_H_/ {print $$3}' ${FILESDIR}/verify.h
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
+	${CP} -R ${FILESDIR} ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"

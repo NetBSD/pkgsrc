@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.8 2016/06/30 21:19:59 agc Exp $
+# $NetBSD: Makefile.in,v 1.9 2020/11/01 11:28:35 wiz Exp $
 
 PROG=netpgpverify
 
@@ -16,7 +16,7 @@ MANDIR=@MANDIR@
 all: ${PROG}
 
 ${PROG}: ${OBJS}
-	${CC} ${OBJS} -o ${PROG}
+	${CC} ${LDFLAGS} ${CFLAGS} ${OBJS} -o ${PROG}
 
 install:
 	install -c -s ${PROG} ${DESTDIR}${PREFIX}/bin
