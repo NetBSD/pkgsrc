@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5991 2020/11/01 19:37:24 maya Exp $
+$NetBSD: CHANGES-2020,v 1.5992 2020/11/01 20:55:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8878,3 +8878,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20201101.1 [leot 2020-11-01]
 	Updated sysutils/spice-server to 0.14.3 [maya 2020-11-01]
 	Updated sysutils/spice-protocol to 0.14.3 [maya 2020-11-01]
+	Added mail/py-imapclient version 2.1.0 [joerg 2020-11-01]
