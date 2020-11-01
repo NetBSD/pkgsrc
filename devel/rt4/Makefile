@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/09/23 22:54:14 mef Exp $
+# $NetBSD: Makefile,v 1.38 2020/11/01 10:31:22 spz Exp $
 
 DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -90,13 +90,13 @@ DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-HTML-Mason>=1.43:../../www/p5-HTML-Mason
 
 # Mailgate dependencies
+# Net::SSL is a part of p5-Crypt-SSLeay.
 DEPENDS+=	p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
 #DEPENDS+=	{perl>=5,p5-Getopt-Long-[0-9]*}:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
 # LWP::UserAgent is a part of p5-libwww.
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Mozilla-CA-[0-9]*:../../security/p5-Mozilla-CA
-# Net::SSL is a part of p5-Crypt-SSLeay.
 #DEPENDS+=	{perl>=5.6.0,p5-Pod-Usage-[0-9]*}:../../devel/p5-Pod-Usage
 
 # CLI dependencies
