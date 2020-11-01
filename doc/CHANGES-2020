@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5974 2020/11/01 05:16:11 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.5975 2020/11/01 05:48:43 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8861,3 +8861,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-gitpython to 3.1.11 [adam 2020-10-31]
 	Updated net/freerdp2 to 2.1.2 [markd 2020-11-1]
 	Updated misc/tmux to 3.1c [khorben 2020-11-01]
+	Updated net/nanotodon to 0.2.0 [tsutsui 2020-11-01]
