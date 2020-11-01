@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/10/24 16:53:41 js Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/01 20:18:30 js Exp $
 
 DISTNAME=	rpcemu-0.9.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.marutan.net/rpcemu/cgi/download.php?sFName=${PKGVERSION_NOREV}/
 
@@ -18,7 +18,9 @@ INSTALLATION_DIRS+=	bin
 
 post-patch:
 	${RUN} cd ${WRKSRC}/src && \
-		${PATCH} -p0 <${FILESDIR}/rpcemu-0.9.1-mac-v1.patch
+		${PATCH} -p1 <${FILESDIR}/rpcemu-0.9.3-mac-patch-v1.patch
+	${RUN} ${MKDIR} ${WRKSRC}/src/macosx
+	${RUN} cp ${FILESDIR}/Info.plist ${WRKSRC}/src/macosx/Info.plist
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake src/qt5/rpcemu.pro
