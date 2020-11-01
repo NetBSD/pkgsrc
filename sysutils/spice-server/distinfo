@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1 2020/02/06 21:57:42 kamil Exp $
+$NetBSD: distinfo,v 1.2 2020/11/01 19:36:37 maya Exp $
 
-SHA1 (spice-0.14.2.tar.bz2) = 83a93e47546d496cf2dcc3f4641db3a285044b9e
-RMD160 (spice-0.14.2.tar.bz2) = 30aaafe30af5a9781d630b9f076973dbc4f59eac
-SHA512 (spice-0.14.2.tar.bz2) = 1093b618ea4a7ff31944429ce2903abecfc8d20c35f2d9c8c837a6e053ee429c0115e40665542637a717869209523ac05d15cdb5e77563102d5d3915e4aaaf76
-Size (spice-0.14.2.tar.bz2) = 1406009 bytes
-SHA1 (patch-server_red-stream.c) = 453ee9b8e5007c552f2ef3b46f508c7cdba6d14c
-SHA1 (patch-server_red-worker.c) = f684dafdc9eab808e36759fba19340586c90cb62
+SHA1 (spice-0.14.3.tar.bz2) = f5968dd5df5f64805d093b4c85b4165959e6c65b
+RMD160 (spice-0.14.3.tar.bz2) = fe99d8d0db4b275b1d19dc9a7231144133c5bfa0
+SHA512 (spice-0.14.3.tar.bz2) = 9ecdc455ff25c71ac1fe6c576654b51efbfb860110bd6828065d23f7462d5c5cac772074d1a40f033386258d970b77275b2007bcfdffb23fdff2137154ea46e4
+Size (spice-0.14.3.tar.bz2) = 1504304 bytes
+SHA1 (patch-server_red-stream.c) = ba48da44bf4a3a94cf85df3bc486e182bea6afaf
+SHA1 (patch-server_red-worker.c) = 8478e2ce8959061bd15ea226debc76744378c8cf
+SHA1 (patch-server_tests_test-websocket.c) = 8ae8bc975bf81e7683e9f15d1e158899e52f7cc4
 SHA1 (patch-tools_reds__stat.c) = 3464bbb8b25aa871adfbc501412f84ad925f6509

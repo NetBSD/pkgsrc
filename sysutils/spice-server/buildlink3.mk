@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/03/08 16:48:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/11/01 19:36:37 maya Exp $
 
 BUILDLINK_TREE+=	spice-server
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	spice-server
 SPICE_SERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.spice-server+=	spice-server>=0.14.2
-BUILDLINK_ABI_DEPENDS.spice-server?=	spice-server>=0.14.2nb1
+BUILDLINK_ABI_DEPENDS.spice-server+=	spice-server>=0.14.2nb1
 BUILDLINK_PKGSRCDIR.spice-server?=	../../sysutils/spice-server
 
 .include "../../audio/libopus/buildlink3.mk"
