@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/29 12:40:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/11/01 23:06:39 mef Exp $
 bin/obabel
 bin/obconformer
 bin/obdistgen
@@ -148,7 +148,7 @@ lib/cmake/openbabel3/OpenBabel3_EXPORTS-release.cmake
 lib/cmake/openbabel3/OpenBabel3_EXPORTS.cmake
 lib/libcoordgen.so
 lib/libcoordgen.so.1
-lib/libcoordgen.so.1.4.1
+lib/libcoordgen.so.1.4.2
 lib/libinchi.so
 lib/libinchi.so.0
 lib/libinchi.so.0.4.1
