@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5989 2020/11/01 18:39:11 leot Exp $
+$NetBSD: CHANGES-2020,v 1.5990 2020/11/01 19:37:01 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8876,3 +8876,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/asunder to 2.9.6 [triaxx 2020-11-01]
 	Updated games/dMagnetic to 0.27 [wiz 2020-11-01]
 	Updated net/youtube-dl to 20201101.1 [leot 2020-11-01]
+	Updated sysutils/spice-server to 0.14.3 [maya 2020-11-01]
