@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/06 21:57:42 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/01 19:36:37 maya Exp $
 include/spice-server/spice-audio.h
 include/spice-server/spice-char.h
 include/spice-server/spice-core.h
-include/spice-server/spice-experimental.h
 include/spice-server/spice-input.h
 include/spice-server/spice-migration.h
 include/spice-server/spice-qxl.h
