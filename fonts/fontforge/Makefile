@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2020/09/09 10:32:08 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2020/11/01 10:56:19 markd Exp $
 
 DISTNAME=	fontforge-20200314
 CATEGORIES=	fonts editors
@@ -21,6 +21,7 @@ GCC_REQD+=	4.8
 
 CONFIGURE_DIRS+=	build
 CMAKE_ARGS+=		..
+CMAKE_ARGS+=	-DENABLE_DOCS=NO
 
 PY_PATCHPLIST=		yes
 
