@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/04/20 14:37:46 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2020/11/01 13:52:43 schmonz Exp $
 
-SHA1 (ApprovalTests.Python/0.2.6.tar.gz) = 02d0720f83c99334c753aae67e622701e11e7a83
-RMD160 (ApprovalTests.Python/0.2.6.tar.gz) = 28391ed9a8204d82636034c19073224d38c57737
-SHA512 (ApprovalTests.Python/0.2.6.tar.gz) = ef9ad8280b43c415d5181b5f3a8fab368aabe1831e681a0fbfabd895ead3231807104a109b943d9d30853dfd3e250cbbd6eff55c8732648d96beabb3aa475303
-Size (ApprovalTests.Python/0.2.6.tar.gz) = 22616 bytes
+SHA1 (ApprovalTests.Python/0.2.7.tar.gz) = 6e344e8cd183a167ea0fd56d912583b98a97b518
+RMD160 (ApprovalTests.Python/0.2.7.tar.gz) = d26884953131a990040696e8cd266d9db8ecdb3a
+SHA512 (ApprovalTests.Python/0.2.7.tar.gz) = a43c6e3a513cb2dfdf7502ef10579eb3e4f7e7c79825526dd35d2616afdd5d2be800f852e3211f173d7dd9a91262c791c1367a294be4f1c40490aae9c4935506
+Size (ApprovalTests.Python/0.2.7.tar.gz) = 26978 bytes
