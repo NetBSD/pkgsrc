@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2020/10/24 16:51:49 tnn Exp $
+@comment $NetBSD: PLIST,v 1.41 2020/11/01 12:17:29 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -4668,6 +4668,7 @@ ${PKGNAME}/lib/libreoffice/share/autocorr/acor_sr-RS.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_sv-SE.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_tr-TR.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_vi-VN.dat
+${PKGNAME}/lib/libreoffice/share/autocorr/acor_vro-EE.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_zh-CN.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_zh-TW.dat
 ${PKGNAME}/lib/libreoffice/share/autotext/af/standard.bau
@@ -6640,6 +6641,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/imapmenu.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/inspectortextpanel.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/interimdockparent.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/interimparent.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/interimtearableparent.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/labelbox.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/lightingwindow.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/linkwarndialog.ui

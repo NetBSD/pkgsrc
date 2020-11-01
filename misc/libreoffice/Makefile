@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.241 2020/10/24 16:51:49 tnn Exp $
+# $NetBSD: Makefile,v 1.242 2020/11/01 12:17:29 ryoon Exp $
 
-VERREL=		7.0.2
-VERRC=		2
+VERREL=		7.0.3
+VERRC=		1
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -116,7 +116,7 @@ MORE_DISTFILES= \
 	ReemKufi-0.7.zip \
 	pdfium-4137.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m84-c1baf6e1c2a5454148adb516f0f833483b5a0353.tar.xz
+	skia-m85-e684c6daef6bfb774a325a069eda1f76ca6ac26c.tar.xz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
