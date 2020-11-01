@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5972 2020/10/31 21:15:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5973 2020/11/01 00:21:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8859,3 +8859,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/dMagnetic to 0.26 [wiz 2020-10-31]
 	Updated devel/git to 2.29.2 [adam 2020-10-31]
 	Updated devel/py-gitpython to 3.1.11 [adam 2020-10-31]
+	Updated net/freerdp2 to 2.1.2 [markd 2020-11-1]
