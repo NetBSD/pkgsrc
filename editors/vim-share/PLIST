@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2020/09/18 23:55:51 morr Exp $
+@comment $NetBSD: PLIST,v 1.53 2020/11/01 14:53:00 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -150,6 +150,7 @@ share/vim/${VIM_SUBDIR}/compiler/rubyunit.vim
 share/vim/${VIM_SUBDIR}/compiler/rustc.vim
 share/vim/${VIM_SUBDIR}/compiler/sass.vim
 share/vim/${VIM_SUBDIR}/compiler/se.vim
+share/vim/${VIM_SUBDIR}/compiler/shellcheck.vim
 share/vim/${VIM_SUBDIR}/compiler/splint.vim
 share/vim/${VIM_SUBDIR}/compiler/stack.vim
 share/vim/${VIM_SUBDIR}/compiler/standard.vim
