@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/05/22 10:56:29 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/11/01 05:48:21 tsutsui Exp $
 
-GITHUB_TAG=	v0.1.1
-DISTNAME=	nanotodon-${GITHUB_TAG:S/v//}
-PKGREVISION=	4
+GITHUB_TAG=	0.2.0
+DISTNAME=	nanotodon-${GITHUB_TAG}
+#PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taka-tuos/}
 
@@ -13,12 +13,21 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c99
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/doc/nanotodon
 
-BUILD_TARGET=	default
+BUILD_TARGET=		default
+MAKE_FILE=		Makefile.bsd
+
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing hardcoded paths and link options in Makefiles.
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	Makefile.bsd
+SUBST_SED.prefix+=	-e 's|/usr/pkg/|${PREFIX}/|g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nanotodon ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README.md \
+	    ${DESTDIR}${PREFIX}/share/doc/nanotodon
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
