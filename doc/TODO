@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20164 2020/10/31 19:41:35 wiz Exp $
+$NetBSD: TODO,v 1.20165 2020/11/01 14:09:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,6 +367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.10.35
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-20.1.8
@@ -421,6 +422,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aribas-1.64
 	o arirang-1.70
 	o asapm-3.1
+	o asciidoc-9.0.4
 	o asn1c-0.9.27
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
@@ -462,6 +464,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cantata-2.4.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o catch2-2.13.3
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o cddbd-1.5.2
@@ -639,6 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.5.2
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
@@ -650,7 +654,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gsasl-1.8.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
-	o gstreamer1-1.18
+	o gstreamer1-1.18.1
 	o gthumb-3.4.0
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
@@ -825,6 +829,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mserv-devel-0.41
 	o multitail-6.4.2
 	o muse-0.9.2
+	o musicpd-0.22.2
 	o myodbc-5.3.4
 	o mysql-connector-c++-8.0.17
 	o mysql-server-8.0.20
@@ -951,6 +956,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-markdown-3.2.2 [drops python-2.x support]
+	o py-more-itertools-8.6.0
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
@@ -1133,7 +1139,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o windowlab-1.40
 	o wine-5.0
 	o wine-devel-3.7
-	o wireshark-3.3.1
+	o wireshark-3.4.0
 	o wkhtmltopdf-0.12.5
 	o wmi-11
 	o worker-3.12.0
