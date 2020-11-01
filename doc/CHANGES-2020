@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5975 2020/11/01 05:48:43 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.5976 2020/11/01 09:33:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8862,3 +8862,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/freerdp2 to 2.1.2 [markd 2020-11-1]
 	Updated misc/tmux to 3.1c [khorben 2020-11-01]
 	Updated net/nanotodon to 0.2.0 [tsutsui 2020-11-01]
+	Updated audio/spotify-qt to 3.0 [pin 2020-11-01]
