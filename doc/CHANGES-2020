@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5979 2020/11/01 13:30:22 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.5980 2020/11/01 13:52:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8866,3 +8866,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/netpgpverify to 20201101 [wiz 2020-11-01]
 	Updated misc/libreoffice to 7.0.3.1 [ryoon 2020-11-01]
 	Updated devel/leahneukirchen-redo to 0.3 [schmonz 2020-11-01]
+	Updated devel/py-approvaltests to 0.2.7 [schmonz 2020-11-01]
