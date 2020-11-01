@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5986 2020/11/01 15:22:16 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.5987 2020/11/01 16:04:00 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8873,3 +8873,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-asn-lite to 2020.11 [fcambus 2020-11-01]
 	Updated net/dbip-city-lite to 2020.11 [fcambus 2020-11-01]
 	Updated net/dbip-country-lite to 2020.11 [fcambus 2020-11-01]
+	Updated audio/asunder to 2.9.6 [triaxx 2020-11-01]
