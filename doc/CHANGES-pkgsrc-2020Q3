@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.8 2020/10/29 12:21:05 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.9 2020/11/01 10:58:30 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -91,4 +91,10 @@ lang/libunwind: PowerPC build fix
 Pullup ticket #6356 - requested by maya
 www/firefox: security update
 www/firefox-l10n: security update
+
+Pullup ticket #6360 - requested by khorben
+misc/tmux: security fix
+
+Pullup ticket #6361 - requested by taca
+net/samba4: security fix
 
