@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5977 2020/11/01 11:28:44 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.5978 2020/11/01 12:18:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8864,3 +8864,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/nanotodon to 0.2.0 [tsutsui 2020-11-01]
 	Updated audio/spotify-qt to 3.0 [pin 2020-11-01]
 	Updated security/netpgpverify to 20201101 [wiz 2020-11-01]
+	Updated misc/libreoffice to 7.0.3.1 [ryoon 2020-11-01]
