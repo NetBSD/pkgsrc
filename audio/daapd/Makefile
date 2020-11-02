@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/07/04 13:40:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2020/11/02 10:34:48 nia Exp $
 
 DISTNAME=		daapd-0.2.4b
 PKGREVISION=		1
@@ -21,8 +21,6 @@ RCD_SCRIPTS=		daapd
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=		${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
-
-.include "options.mk"
 
 MAKE_ENV+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
