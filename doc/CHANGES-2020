@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6004 2020/11/02 15:13:57 taca Exp $
+$NetBSD: CHANGES-2020,v 1.6005 2020/11/02 17:17:31 martin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8894,3 +8894,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-bleach to 3.2.1 [adam 2020-11-02]
 	Updated textproc/py-readme_renderer to 28.0 [adam 2020-11-02]
 	Updated devel/ruby-ffi-compiler to 1.0.1nb1 [taca 2020-11-02]
+	Updated emulators/qemu to 5.1.0nb9 [martin 2020-11-02]
