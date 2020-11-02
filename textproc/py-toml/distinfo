@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/05/14 05:37:14 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/11/02 10:14:29 adam Exp $
 
-SHA1 (toml-0.10.1.tar.gz) = 1e1de9572d86421f71f1c93a67b100031444eca3
-RMD160 (toml-0.10.1.tar.gz) = 9223688105a04772bf18f1c9e103602afc73a409
-SHA512 (toml-0.10.1.tar.gz) = 9dc813f84b56bee6519c70efe49a834d6695c82d429f0b7cc6e6153a1fb14d3fb627dea24df2d2664354f27108389d51475609272d59fc7e4b64a2c17d74f33f
-Size (toml-0.10.1.tar.gz) = 19487 bytes
+SHA1 (toml-0.10.2.tar.gz) = 00137fc72f31100edd1c03670081b03053b6c836
+RMD160 (toml-0.10.2.tar.gz) = 0bf696ef18e4bb20549157b5f2a864dd71222738
+SHA512 (toml-0.10.2.tar.gz) = ede2c8fed610a3827dba828f6e7ab7a8dbd5745e8ef7c0cd955219afdc83b9caea714deee09e853627f05ad1c525dc60426a6e9e16f58758aa028cb4d3db4b39
+Size (toml-0.10.2.tar.gz) = 22253 bytes
