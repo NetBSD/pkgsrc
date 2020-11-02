@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.616 2020/11/02 14:00:47 nia Exp $
+# $NetBSD: Makefile,v 1.617 2020/11/02 14:04:41 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -62,7 +62,6 @@ SUBDIR+=	csound5
 SUBDIR+=	csound5-manual
 SUBDIR+=	csound6
 SUBDIR+=	csound6-manual
-SUBDIR+=	daapd
 SUBDIR+=	dap
 SUBDIR+=	darkice
 SUBDIR+=	deforaos-mixer
