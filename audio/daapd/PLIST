@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:04:57 jperkin Exp $
-bin/daapd
-man/man8/daapd.8
-share/examples/daapd/daapd.conf
