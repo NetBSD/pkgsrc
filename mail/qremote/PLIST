@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/02 10:24:58 schmonz Exp $
+bin/qmail-curvecpclient
+bin/qmail-curvecpmessage
+bin/qmail-qremote
+bin/qmail-rsmtp

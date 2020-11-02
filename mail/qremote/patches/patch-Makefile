@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile,v 1.1 2020/11/02 10:24:58 schmonz Exp $
+
+Find binaries where we built them.
+
+--- Makefile.orig	2013-04-16 06:11:06.000000000 +0000
++++ Makefile
+@@ -1199,9 +1199,9 @@ load qmail-tcpclient.o library.a socket.
+ 	./load qmail-tcpclient library.a `cat socket.lib`
+ 
+ qmail-curvecpclient:
+-	test -f "nacl-20110221/build/`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`/bin/curvecpclient" || ( cd nacl-20110221; ./do )
+-	cp "nacl-20110221/build/`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`/bin/curvecpclient" qmail-curvecpclient
++	test -f "nacl-20110221/build/pkgsrchostname/bin/curvecpclient" || ( cd nacl-20110221; ./do )
++	cp "nacl-20110221/build/pkgsrchostname/bin/curvecpclient" qmail-curvecpclient
+ 
+ qmail-curvecpmessage:
+-	test -f "nacl-20110221/build/`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`/bin/curvecpmessage" || ( cd nacl-20110221; ./do )
+-	cp "nacl-20110221/build/`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`/bin/curvecpmessage" qmail-curvecpmessage
++	test -f "nacl-20110221/build/pkgsrchostname/bin/curvecpmessage" || ( cd nacl-20110221; ./do )
++	cp "nacl-20110221/build/pkgsrchostname/bin/curvecpmessage" qmail-curvecpmessage
