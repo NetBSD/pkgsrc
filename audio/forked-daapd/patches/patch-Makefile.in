@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/11/02 14:00:47 nia Exp $
+
+Install config files to examples.
+
+--- Makefile.in.orig	2020-07-23 22:52:00.000000000 +0000
++++ Makefile.in
+@@ -600,16 +600,16 @@ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(datadir)/examples/forked-daapd'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(datadir)/examples/forked-daapd" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(datadir)/examples/forked-daapd'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(datadir)/examples/forked-daapd" || exit $$?; \
+ 	done
+ 
+ uninstall-sysconfDATA:

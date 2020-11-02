@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.615 2020/11/02 10:13:25 nia Exp $
+# $NetBSD: Makefile,v 1.616 2020/11/02 14:00:47 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -116,6 +116,7 @@ SUBDIR+=	flac2mp3
 SUBDIR+=	flactag
 SUBDIR+=	flite
 SUBDIR+=	fluidsynth
+SUBDIR+=	forked-daapd
 SUBDIR+=	freealut
 SUBDIR+=	freepats
 SUBDIR+=	freeswitch-music
