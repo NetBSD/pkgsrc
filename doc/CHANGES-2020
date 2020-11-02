@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5995 2020/11/02 10:25:20 nia Exp $
+$NetBSD: CHANGES-2020,v 1.5996 2020/11/02 10:26:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8883,3 +8883,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed multimedia/libmp4v2 successor multimedia/mp4v2 [nia 2020-11-02]
 	Updated textproc/py-toml to 0.10.2 [adam 2020-11-02]
 	Updated databases/py-aiosqlite to 0.16.0 [adam 2020-11-02]
+	Added mail/qremote version 20131231 [schmonz 2020-11-02]
