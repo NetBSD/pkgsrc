@@ -1,0 +1,27 @@
+$NetBSD: patch-nacl-20110221_do,v 1.1 2020/11/02 10:24:58 schmonz Exp $
+
+Taken from security/nacl:
+
+Don't bake build host into anything.
+Show build output.
+
+--- nacl-20110221/do.orig	2012-08-25 06:57:17.000000000 +0000
++++ nacl-20110221/do
+@@ -6,7 +6,7 @@
+ 
+ version=`cat version`
+ project=nacl
+-shorthostname=`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`
++shorthostname='pkgsrchostname'
+ 
+ top="`pwd`/build/$shorthostname"
+ bin="$top/bin"
+@@ -38,7 +38,7 @@ mkdir -p "$bin"
+ mkdir -p "$lib"
+ mkdir -p "$include"
+ 
+-exec >"$top/log"
++exec | tee "$top/log"
+ exec 2>&1
+ exec 5>"$top/data"
+ exec </dev/null
