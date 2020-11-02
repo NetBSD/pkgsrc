@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.166 2020/10/25 08:21:35 gson Exp $
+$NetBSD: distinfo,v 1.167 2020/11/02 17:17:15 martin Exp $
 
 SHA1 (palcode-clipper) = e25ae10a10e0801e47b62b9ee2d10c8ccb4ee940
 RMD160 (palcode-clipper) = a637f1cc38dabfdff36e3f02b6dd02d7c63cb8db
@@ -51,3 +51,4 @@ SHA1 (patch-target_i386_Makefile.objs) = be8ab2e72521ccd0a71db6b37feb9957b27ac97
 SHA1 (patch-target_i386_helper.c) = 54363fe53688ea4030665b3bbb3ee7aba7ba5348
 SHA1 (patch-target_i386_kvm-stub.c) = 4cd2b7a8d8d8a317829f982b5acff7fdf2479d9f
 SHA1 (patch-target_i386_nvmm-all.c) = 091c56c88c2366abef907ca99e5bfa9933a2b6ab
+SHA1 (patch-target_sparc_translate.c) = 7ec2add2fd808facb48b9a66ccc345599251bf76
