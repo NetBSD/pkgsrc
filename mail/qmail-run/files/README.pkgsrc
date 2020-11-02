@@ -35,7 +35,7 @@ POP3 (for Maildirs only) on port 110:
 - Run "@RCD_SCRIPTS_DIR@/qmailpop3d start".
 
 TLS encryption for SMTP, submission, POP3, and remote delivery:
-- Create cert and DH params (follow steps in `pkg_info -qD qmail`).
+- Create cert and DH params (see @PREFIX@/share/doc/qmail/README.tls).
 - Run "@RCD_SCRIPTS_DIR@/qmail restart".
 
 Sender Policy Framework:
