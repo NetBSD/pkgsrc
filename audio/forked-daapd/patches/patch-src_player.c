@@ -1,6 +1,8 @@
-$NetBSD: patch-src_player.c,v 1.1 2020/11/02 14:00:47 nia Exp $
+$NetBSD: patch-src_player.c,v 1.2 2020/11/02 20:17:15 nia Exp $
 
 Pointlessly checking for FreeBSD here.
+
+https://github.com/ejurgensen/forked-daapd/pull/1114
 
 --- src/player.c.orig	2020-07-23 06:49:22.000000000 +0000
 +++ src/player.c
