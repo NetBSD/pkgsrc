@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6008 2020/11/02 20:20:23 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6009 2020/11/02 21:34:17 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8898,3 +8898,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/unison-snapshot to 2.51.3.70 [gdt 2020-11-02]
 	Updated editors/featherpad to 0.16.0 [pin 2020-11-02]
 	Updated editors/feathernotes to 0.8.0 [pin 2020-11-02]
+	Updated devel/php-composer to 2.0.4 [tpaul 2020-11-02]
