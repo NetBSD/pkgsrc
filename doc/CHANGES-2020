@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6003 2020/11/02 14:48:18 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6004 2020/11/02 15:13:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8893,3 +8893,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkgin to 20.11.0 [jperkin 2020-11-02]
 	Updated www/py-bleach to 3.2.1 [adam 2020-11-02]
 	Updated textproc/py-readme_renderer to 28.0 [adam 2020-11-02]
+	Updated devel/ruby-ffi-compiler to 1.0.1nb1 [taca 2020-11-02]
