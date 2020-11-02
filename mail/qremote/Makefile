@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/02 10:24:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/02 10:53:04 schmonz Exp $
 
 DISTNAME=		qremote-20131231
 CATEGORIES=		mail
@@ -29,6 +29,7 @@ do-install:
 	for i in qremote curvecpclient curvecpmessage rsmtp; do \
 	  ${INSTALL_PROGRAM} ${WRKSRC}/qmail-$${i} ${DESTDIR}${PREFIX}/bin; \
 	done
+	${INSTALL_PROGRAM} ${WRKSRC}/showdnsmx ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
