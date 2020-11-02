@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/01/16 14:36:15 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/11/02 15:13:27 taca Exp $
 
 SHA1 (ffi-compiler-1.0.1.gem) = 51cf896232764a4bc0ffad439f416749f1b4f34b
 RMD160 (ffi-compiler-1.0.1.gem) = f2c24bc3081db02f90edfb78b73475bf9aaf5f35
 SHA512 (ffi-compiler-1.0.1.gem) = 7a13625ab1c5748d05ec93d68708dd9435ec92dcd0c823109c44173fdaf8710aec5f5b4fb11966475f10ae91401c7ca3c620f9d36bb9ca665114e1ed70f4edd0
 Size (ffi-compiler-1.0.1.gem) = 18432 bytes
+SHA1 (patch-lib_ffi-compiler_compile__task.rb) = a29a3bbb2d3d4f622374ae90b957ad2839caf7ea
