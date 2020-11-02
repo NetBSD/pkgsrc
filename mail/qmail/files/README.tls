@@ -7,20 +7,26 @@ It is documented more fully by its author here:
 <URL:https://schmonz.com/qmail/tlsonlyremote/>
 
 
-For qmail to opportunistically encrypt outgoing mail, obtain a
-certificate (e.g., from Let's Encrypt) and make it available as
-@SERVERCERT@.
+For qmail to opportunistically encrypt incoming mail, and to require
+encryption before authentication for submitted messages, first obtain a
+certificate (e.g., from Let's Encrypt), make it available as
+@SERVERCERT@, and apply these permissions:
 
 # chmod 640 @SERVERCERT@
 # chown @QMAIL_DAEMON_USER@:@QMAIL_QMAIL_GROUP@ @SERVERCERT@
-# ln -s @SERVERCERT@ @CLIENTCERT@
+
+Generate DH params:
+
 # update_tmprsadh
 
-Once you have a certificate, regularly regenerate DH params from cron(8):
+Have cron(8) regularly regenerate them:
 
     01 01 * * * @PREFIX@/bin/update_tmprsadh > /dev/null 2>&1
 
+Then install the qmail-run package and use its qmailsmtpd and
+qmailofmipd rc.d scripts.
 
-For qmail to opportunistically encrypt incoming mail, and to require
-encryption before authentication for submitted messages, install the
-qmail-run package and use its qmailsmtpd and qmailofmipd rc.d scripts.
+For qmail to opportunistically encrypt outgoing mail, use the same
+certificate:
+
+# ln -s @SERVERCERT@ @CLIENTCERT@
