@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6007 2020/11/02 20:18:16 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6008 2020/11/02 20:20:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8897,3 +8897,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/qemu to 5.1.0nb9 [martin 2020-11-02]
 	Updated net/unison-snapshot to 2.51.3.70 [gdt 2020-11-02]
 	Updated editors/featherpad to 0.16.0 [pin 2020-11-02]
+	Updated editors/feathernotes to 0.8.0 [pin 2020-11-02]
