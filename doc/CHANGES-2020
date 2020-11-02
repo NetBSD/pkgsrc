@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6000 2020/11/02 14:02:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6001 2020/11/02 14:05:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8889,3 +8889,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/libantlr3c version 3.4 [nia 2020-11-02]
 	Added www/libwebsockets version 4.1.4 [nia 2020-11-02]
 	Added audio/forked-daapd version 27.2 [nia 2020-11-02]
+	Removed audio/daapd successor audio/forked-daapd [nia 2020-11-02]
