@@ -1,20 +1,18 @@
-# $NetBSD: options.mk,v 1.9 2019/12/14 18:34:18 nia Exp $
+# $NetBSD: options.mk,v 1.10 2020/11/02 10:07:02 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.snd
 PKG_SUPPORTED_OPTIONS=
-# ruby, forth, alsa, oss, jack, pulseaudio, gmp, ladspa
+
 PKG_OPTIONS_REQUIRED_GROUPS=	frontend
 PKG_OPTIONS_GROUP.frontend=	gtk motif
 
-PKG_SUPPORTED_OPTIONS+=		alsa jack portaudio pulseaudio ladspa
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa
+PKG_SUPPORTED_OPTIONS+=		ladspa
+
+# Audio backends can seemingly only coeexist on Linux
+PKG_SUPPORTED_OPTIONS.Linux+=	alsa jack pulseaudio
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa jack
+
 PKG_SUGGESTED_OPTIONS+=		gtk ladspa
-
-.include "../../mk/oss.buildlink3.mk"
-
-.if ${OSS_TYPE} == "none" && ${OPSYS} != "Linux"
-PKG_SUGGESTED_OPTIONS+=		portaudio
-.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -30,13 +28,6 @@ CONFIGURE_ARGS+=	--with-jack
 .include "../../audio/jack/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-jack
-.endif
-
-.if !empty(PKG_OPTIONS:Mportaudio)
-CONFIGURE_ARGS+=	--with-portaudio
-.include "../../audio/portaudio/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-portaudio
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
