@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/12 00:23:27 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/11/02 20:20:01 pin Exp $
 bin/feathernotes
 share/applications/feathernotes.desktop
 share/feathernotes/translations/feathernotes_cs.qm
@@ -10,6 +10,7 @@ share/feathernotes/translations/feathernotes_fr.qm
 share/feathernotes/translations/feathernotes_he.qm
 share/feathernotes/translations/feathernotes_hu.qm
 share/feathernotes/translations/feathernotes_id.qm
+share/feathernotes/translations/feathernotes_it.qm
 share/feathernotes/translations/feathernotes_ja.qm
 share/feathernotes/translations/feathernotes_lt.qm
 share/feathernotes/translations/feathernotes_nb_NO.qm
