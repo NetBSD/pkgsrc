@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5997 2020/11/02 11:13:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.5998 2020/11/02 12:26:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8886,3 +8886,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added mail/qremote version 20131231 [schmonz 2020-11-02]
 	Updated www/py-django2 to 2.2.17 [adam 2020-11-02]
 	Updated www/py-django3 to 3.1.3 [adam 2020-11-02]
+	Added devel/libantlr3c version 3.4 [nia 2020-11-02]
