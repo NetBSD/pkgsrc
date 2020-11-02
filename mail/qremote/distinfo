@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2020/11/02 10:24:58 schmonz Exp $
+
+SHA1 (qremote-20131231.tar.bz2) = 4d47ac62f1d570b4229c6132f460f70001f244e9
+RMD160 (qremote-20131231.tar.bz2) = 770a685bd91a9392b9225cc19319a0354eff5ba4
+SHA512 (qremote-20131231.tar.bz2) = 234691baf85c2256ac4a2dcfc23a3e136fecf22ecabac2b992dd157439d8bf83813c7ee2a1a8430386bbea6ce8526469cb407b67860605cb6a09963ec96df10c
+Size (qremote-20131231.tar.bz2) = 217306 bytes
+SHA1 (patch-Makefile) = d327047caa52b974e6017eb5e7b393a82059cdd4
+SHA1 (patch-nacl-20110221_do) = 0f11d6a2d0c452de457f3b5e565527b5f4a689ec
+SHA1 (patch-qmail-remote.c) = 0fd024911347d12e854b6f7aaefd4e234262c2c1
