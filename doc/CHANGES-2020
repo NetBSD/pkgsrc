@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6005 2020/11/02 17:17:31 martin Exp $
+$NetBSD: CHANGES-2020,v 1.6006 2020/11/02 18:53:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8895,3 +8895,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-readme_renderer to 28.0 [adam 2020-11-02]
 	Updated devel/ruby-ffi-compiler to 1.0.1nb1 [taca 2020-11-02]
 	Updated emulators/qemu to 5.1.0nb9 [martin 2020-11-02]
+	Updated net/unison-snapshot to 2.51.3.70 [gdt 2020-11-02]
