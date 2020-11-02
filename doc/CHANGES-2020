@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.5992 2020/11/01 20:55:01 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.5993 2020/11/02 10:14:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8879,3 +8879,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/spice-server to 0.14.3 [maya 2020-11-01]
 	Updated sysutils/spice-protocol to 0.14.3 [maya 2020-11-01]
 	Added mail/py-imapclient version 2.1.0 [joerg 2020-11-01]
+	Removed audio/libtunepimp [nia 2020-11-02]
