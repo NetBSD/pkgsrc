@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1492 2020/10/08 22:36:54 leot Exp $
+# $NetBSD: Makefile,v 1.1493 2020/11/02 12:32:20 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -189,6 +189,7 @@ SUBDIR+=	libproxy
 SUBDIR+=	libpsl
 SUBDIR+=	librest07
 SUBDIR+=	libsass
+SUBDIR+=	libwebsockets
 SUBDIR+=	libwww
 SUBDIR+=	liferea
 SUBDIR+=	lighttpd
