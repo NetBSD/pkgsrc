@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/11/02 12:25:56 nia Exp $
+
+SHA1 (libantlr3c-3.4.tar.gz) = faa9ab43ab4d3774f015471c3f011cc247df6a18
+RMD160 (libantlr3c-3.4.tar.gz) = cbfc13e54f02d87cd82e0c4ca2136fa3fb43dff4
+SHA512 (libantlr3c-3.4.tar.gz) = 8edb243d745ff5bf3b15940f124d1255a9ca965cb656a73a558aed7fa07effcd7620f23dc692e5d5169a03200254836dd57af3ce444ba225281a5b721497e211
+Size (libantlr3c-3.4.tar.gz) = 546039 bytes
+SHA1 (patch-configure) = 43b8cf7f549fc38ef4e8eb61651dfadb2357dbd2
