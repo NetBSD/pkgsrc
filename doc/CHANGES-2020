@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6001 2020/11/02 14:05:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6002 2020/11/02 14:25:49 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8890,3 +8890,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/libwebsockets version 4.1.4 [nia 2020-11-02]
 	Added audio/forked-daapd version 27.2 [nia 2020-11-02]
 	Removed audio/daapd successor audio/forked-daapd [nia 2020-11-02]
+	Updated pkgtools/pkgin to 20.11.0 [jperkin 2020-11-02]
