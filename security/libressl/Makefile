@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/26 17:32:04 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/02 08:17:43 schmonz Exp $
 
 DISTNAME=	libressl-2.7.4
 CATEGORIES=	security
@@ -49,6 +49,6 @@ PLIST.man=	yes
 post-install:
 	cd ${WRKSRC}/apps/openssl; ${INSTALL_DATA} ${CONFS} ${DESTDIR}${EGDIR}
 	mv ${DESTDIR}${PREFIX}/libressl/lib/pkgconfig ${DESTDIR}${PREFIX}/lib
-	${RM} -r ${DESTDIR}${PREFIX}/etc/libressl
+	${RM} -r ${DESTDIR}${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"
