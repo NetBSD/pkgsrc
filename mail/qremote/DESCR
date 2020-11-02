@@ -1,0 +1,7 @@
+qremote is an experimental drop-in replacement for qmail's qmail-remote
+with CurveCP support.
+
+qmail-qremote resolves IP addresses for SMTP server and then calls
+either tcpclient or qmail-curvecpclient for TCP or CurveCP connections,
+respectively. Once the connection is established, qmail-rsmtp executes
+to send mail via SMTP.
