@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2020/10/30 15:47:01 nia Exp $
+# $NetBSD: Makefile,v 1.615 2020/11/02 10:13:25 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -265,7 +265,6 @@ SUBDIR+=	libsmf
 SUBDIR+=	libsndfile
 SUBDIR+=	libsoxr
 SUBDIR+=	libspiff
-SUBDIR+=	libtunepimp
 SUBDIR+=	libvisual
 SUBDIR+=	libvisual-bmp
 SUBDIR+=	libvisual-plugins
