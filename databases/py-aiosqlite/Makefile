@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/07/15 14:07:51 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/02 10:16:13 adam Exp $
 
-DISTNAME=	aiosqlite-0.15.0
+DISTNAME=	aiosqlite-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiosqlite/}
