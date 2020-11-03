@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20165 2020/11/01 14:09:56 wiz Exp $
+$NetBSD: TODO,v 1.20166 2020/11/03 11:00:23 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -635,9 +635,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnustep-base-1.26.0
-	o gnustep-make-2.7.0
-	o gnustep-objc-1.8.1
 	o gobby-0.5.0
 	o gok-2.30.1
 	o golem-0.0.6
