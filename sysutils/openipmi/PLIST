@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/03 20:55:34 otis Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/03 21:44:11 otis Exp $
 bin/ipmi_sim
 bin/ipmi_ui
 bin/ipmicmd
@@ -97,7 +97,7 @@ man/man5/ipmi_lan.5
 man/man5/ipmi_sim_cmd.5
 man/man7/ipmi_cmdlang.7
 man/man7/openipmi_conparms.7
-share/examples/OpenIPMI/ipmisim1.emu
-share/examples/OpenIPMI/lan.conf
+share/examples/openipmi/ipmisim1.emu
+share/examples/openipmi/lan.conf
 @pkgdir man/man8
 @pkgdir etc/ipmi
