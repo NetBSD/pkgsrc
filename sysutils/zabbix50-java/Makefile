@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/03 22:52:41 otis Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/03 23:35:41 otis Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
@@ -15,10 +15,6 @@ CONFIGURE_ENV+=	JAR=${PKG_JAVA_HOME}/bin/jar
 
 USE_JAVA=	run
 PKG_JVMS_ACCEPTED=	openjdk8
-
-EGDIR=		share/examples/zabbix
-
-INSTALLATION_DIRS+=	${EGDIR} share/zabbix
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
