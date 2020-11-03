@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type="manifest" name="export">
+  <service name="@SMF_PREFIX@/@SMF_NAME@" type="service" version="1">
+    <dependency name="fs-local" grouping="require_all" restart_on="none" type="service">
+      <service_fmri value="svc:/system/filesystem/local"/>
+    </dependency>
+    <dependency name="network-service" grouping="require_all" restart_on="none" type="service">
+      <service_fmri value="svc:/network/service"/>
+    </dependency>
+    <dependency name="system-log" grouping="optional_all" restart_on="none" type="service">
+      <service_fmri value="svc:/system/system-log"/>
+    </dependency>
+    <method_context>
+        <method_credential user="@ZABBIX_USER@" group="@ZABBIX_GROUP@"/>
+    </method_context>
+    <instance name="@SMF_INSTANCES@" enabled="false">
+      <dependency name="config-file" grouping="require_all" restart_on="refresh" type="path">
+        <service_fmri value="file://localhost@PKG_SYSCONFDIR@/zabbix_agentd.conf"/>
+      </dependency>
+      <exec_method name="start" type="method" exec="@PREFIX@/sbin/zabbix_agentd -c @PKG_SYSCONFDIR@/zabbix_agentd.conf" timeout_seconds="0"/>
+      <exec_method name="stop" type="method" exec=":kill" timeout_seconds="0"/>
+      <template>
+        <common_name>
+          <loctext xml:lang="C">Zabbix agent</loctext>
+        </common_name>
+      </template>
+    </instance>
+  </service>
+</service_bundle>
