@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/03 16:41:26 bsiegert Exp $
+
+SHA1 (maeparser-1.2.4.tar.gz) = 51654efcd3ca8b9c027ac58e735ec6c313bfe087
+RMD160 (maeparser-1.2.4.tar.gz) = 595c8881aa1a368c8d6cfcd9af13076c58f9b403
+SHA512 (maeparser-1.2.4.tar.gz) = b8862099c725007b81e7da574fa1c9f1ae00481a6427a1ae7b07dda6043b9c08008fc9e352858e6830fb8cecc1cf70edb5681299e8c91050e9f0ad1606e527e3
+Size (maeparser-1.2.4.tar.gz) = 38285 bytes

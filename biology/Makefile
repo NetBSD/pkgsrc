@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/08/10 18:18:46 brook Exp $
+# $NetBSD: Makefile,v 1.57 2020/11/03 16:41:26 bsiegert Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -30,6 +30,7 @@ SUBDIR+=	hmmer
 SUBDIR+=	htslib
 SUBDIR+=	kallisto
 SUBDIR+=	lucy
+SUBDIR+=	maeparser
 SUBDIR+=	mopac
 SUBDIR+=	mpqc
 SUBDIR+=	mummer
