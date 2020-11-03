@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2020/04/16 09:21:51 manu Exp $
+$NetBSD: distinfo,v 1.31 2020/11/03 11:24:31 triaxx Exp $
 
 SHA1 (gnustep-make-2.8.0.tar.gz) = 5ebc1f89a600ba112874319e4bd0f3699866a7bd
 RMD160 (gnustep-make-2.8.0.tar.gz) = 924687b3cb75f094a7cb5be9e4e1d6abd74c6c4c
@@ -8,3 +8,4 @@ SHA1 (patch-aa) = 2b727a92404aeead88c9699fee144bfb0114370b
 SHA1 (patch-ab) = 5bd17b33f9b8381f77371228057cf6109f76d5b0
 SHA1 (patch-ad) = ee7dfbf7d6a7c35b1141b598b54dde3a2bd237de
 SHA1 (patch-ae) = efd4d53184cb1e34ae129e52235de86f77e8a06a
+SHA1 (patch-target.make) = 5a46d7f391d6107a3cd61ad3db5e0bd2c1e1dfaf
