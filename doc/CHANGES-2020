@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6018 2020/11/03 22:54:38 otis Exp $
+$NetBSD: CHANGES-2020,v 1.6019 2020/11/03 22:54:58 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8908,3 +8908,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added databases/promscale version 0.1.1 [tnn 2020-11-03]
 	Added sysutils/openipmi version 2.0.29 [otis 2020-11-03]
 	Added sysutils/zabbix50-agent version 5.0.5 [otis 2020-11-03]
+	Added sysutils/zabbix50-frontend version 5.0.5 [otis 2020-11-03]
