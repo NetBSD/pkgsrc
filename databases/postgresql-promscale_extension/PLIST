@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/03 22:59:35 tnn Exp $
+lib/postgresql/promscale.so
+share/postgresql/extension/promscale--0.1--${PKGVERSION}.sql
+share/postgresql/extension/promscale--${PKGVERSION}.sql
+share/postgresql/extension/promscale--0.1.sql
+share/postgresql/extension/promscale.control
