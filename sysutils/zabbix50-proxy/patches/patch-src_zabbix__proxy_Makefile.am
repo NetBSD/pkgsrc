@@ -1,0 +1,12 @@
+$NetBSD: patch-src_zabbix__proxy_Makefile.am,v 1.1 2020/11/03 22:45:39 otis Exp $
+
+Install config file to component's example directory.
+
+--- src/zabbix_proxy/Makefile.am.orig	2020-08-24 09:42:55.000000000 +0000
++++ src/zabbix_proxy/Makefile.am
+@@ -97,4 +97,4 @@ install-data-hook:
+ 	$(MKDIR_P) "$(DESTDIR)$(PROXY_CONFIG_FILE).d"
+ 	$(MKDIR_P) "$(DESTDIR)$(EXTERNAL_SCRIPTS_PATH)"
+ 	$(MKDIR_P) "$(DESTDIR)$(LOAD_MODULE_PATH)"
+-	test -f "$(DESTDIR)$(PROXY_CONFIG_FILE)" || cp "../../conf/zabbix_proxy.conf" "$(DESTDIR)$(PROXY_CONFIG_FILE)"
++	$(INSTALL_DATA) "../../conf/zabbix_proxy.conf" "$(DESTDIR)/${PREFIX}/share/examples/%%PKGBASE%%"
