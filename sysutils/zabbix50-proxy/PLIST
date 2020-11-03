@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/03 22:45:38 otis Exp $
+bin/zabbix_proxy_js
+man/man8/zabbix_proxy.8
+sbin/zabbix_proxy
+share/examples/${PKGBASE}/zabbix_proxy.conf
+${PLIST.sqldb}share/${PKGBASE}/double.sql
+share/${PKGBASE}/schema.sql
+${PLIST.pgsql}share/${PKGBASE}/timescaledb.sql
+@pkgdir share/${PKGBASE}/externalscripts
+@pkgdir lib/modules
+@pkgdir etc/zabbix_proxy.conf.d
