@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/03 16:41:26 bsiegert Exp $
+include/maeparser/Buffer.hpp
+include/maeparser/MaeBlock.hpp
+include/maeparser/MaeConstants.hpp
+include/maeparser/MaeParser.hpp
+include/maeparser/MaeParserConfig.hpp
+include/maeparser/Reader.hpp
+include/maeparser/Writer.hpp
+lib/cmake/maeparser-config-noconfig.cmake
+lib/cmake/maeparser-config.cmake
+lib/libmaeparser.so
+lib/libmaeparser.so.1
+lib/libmaeparser.so.${PKGVERSION}
