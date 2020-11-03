@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.618 2020/11/03 20:24:47 tnn Exp $
+# $NetBSD: Makefile,v 1.619 2020/11/03 23:01:59 tnn Exp $
 
 COMMENT=	Databases
 
@@ -292,6 +292,7 @@ SUBDIR+=	postgres_exporter
 SUBDIR+=	postgresql-pgroonga
 SUBDIR+=	postgresql-pljava
 SUBDIR+=	postgresql-postgis2
+SUBDIR+=	postgresql-promscale_extension
 SUBDIR+=	postgresql-redislog
 SUBDIR+=	postgresql-timescaledb
 SUBDIR+=	postgresql10
