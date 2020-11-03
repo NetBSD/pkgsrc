@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2020/11/03 20:55:34 otis Exp $
+bin/ipmilan
+bin/openipmi_eventd
+man/man8/ipmilan.8
+@pkgdir man/man8
