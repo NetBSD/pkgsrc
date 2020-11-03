@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/03 11:44:58 nia Exp $
+bin/lemonbar
+man/man1/lemonbar.1
