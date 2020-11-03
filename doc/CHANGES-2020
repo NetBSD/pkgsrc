@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6012 2020/11/03 11:45:15 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6013 2020/11/03 12:34:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8902,3 +8902,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-asciidoctor to 2.0.11 [taca 2020-11-03]
 	Updated devel/check to 0.15.2 [schmonz 2020-11-03]
 	Added x11/lemonbar version 1.3 [nia 2020-11-03]
+	Updated sysutils/gsettings-desktop-schemas to 3.38.0 [nia 2020-11-03]
