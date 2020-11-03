@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/03 22:44:43 otis Exp $
+bin/zabbix_js
+man/man8/zabbix_server.8
+sbin/zabbix_server
+share/examples/${PKGBASE}/zabbix_server.conf
+share/${PKGBASE}/data.sql
+share/${PKGBASE}/images.sql
+share/${PKGBASE}/schema.sql
+share/${PKGBASE}/double.sql
+${PLIST.pgsql}share/${PKGBASE}/timescaledb.sql
+@pkgdir share/${PKGBASE}/externalscripts
+@pkgdir share/${PKGBASE}/alertscripts
+@pkgdir lib/modules
+@pkgdir etc/zabbix_server.conf.d
