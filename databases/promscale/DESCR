@@ -1,0 +1,7 @@
+Promscale allows Prometheus to store data in a PostgreSQL instance using the
+TimescaleDB extension. Promscale can also act directly as a
+Prometheus Data Source for Grafana, or other software.
+
+By allowing a user to use SQL, in addition to PromQL, this platform empowers
+the user to ask complex analytical queries from their metrics data, and thus
+extract more meaningful insights.
