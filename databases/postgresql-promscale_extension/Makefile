@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/03 22:59:35 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/03 23:05:49 tnn Exp $
 
 DISTNAME=	promscale_extension-0.1.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -12,7 +12,7 @@ DISTFILES+=	timescale-extension-utils-rs-098962027183e1cd36acd6e1a47390f1cadbd33
 SITES.timescale-extension-utils-rs-098962027183e1cd36acd6e1a47390f1cadbd33.tar.gz+=	-${MASTER_SITE_GITHUB:=timescale/}timescale-extension-utils-rs/archive/098962027183e1cd36acd6e1a47390f1caedbd33.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/timescale/timescaledb
+HOMEPAGE=	https://github.com/timescale/promscale_extension
 COMMENT=	The Promscale extension for PostgreSQL
 LICENSE=	apache-2.0
 
