@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6016 2020/11/03 20:26:37 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6017 2020/11/03 20:51:48 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8906,3 +8906,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added biology/maeparser version 1.2.4 [bsiegert 2020-11-03]
 	Added biology/coordgenlibs version 1.4.2 [bsiegert 2020-11-03]
 	Added databases/promscale version 0.1.1 [tnn 2020-11-03]
+	Added sysutils/openipmi version 2.0.29 [otis 2020-11-03]
