@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/11/03 22:52:41 otis Exp $
+
+SHA1 (zabbix-5.0.5.tar.gz) = 65683f4ada7ae91f26215a53683d12ec726a960d
+RMD160 (zabbix-5.0.5.tar.gz) = 0d65e30d3d91ba8819572468425cf18c4e2c33bc
+SHA512 (zabbix-5.0.5.tar.gz) = 5397672fa170e12120526793b48d01764013467cc259eca61991bc52251c25888dd318ccffa6ed30ac3643104e715ceb70baaeec6eeaddb115ed294c22f5e619
+Size (zabbix-5.0.5.tar.gz) = 19153153 bytes
+SHA1 (patch-configure) = cf647b9ee52a96882d31f8783ac19b66e3e65105
