@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2019/11/23 07:08:29 mef Exp $
+$NetBSD: distinfo,v 1.20 2020/11/03 11:09:19 schmonz Exp $
 
-SHA1 (check-0.13.0.tar.gz) = 6c865bbc1330aae9b1c07520a83f2db51a3df3dc
-RMD160 (check-0.13.0.tar.gz) = 478133ab1544cc33abb34ecbf1a3876c86a61830
-SHA512 (check-0.13.0.tar.gz) = 7943021c5bc3b5ca7bc552f6fe1287e384724d69e5bb128d58256692e810b194e506fc1b65ea4fed27d065e2176e7371483e918beb48125abfe3b6f1ca68eb8f
-Size (check-0.13.0.tar.gz) = 301386 bytes
+SHA1 (check-0.15.2.tar.gz) = 0389149a760a37e915f585bf84f268d9880a0faf
+RMD160 (check-0.15.2.tar.gz) = 4204c4741bd4dfbb30f720387dca4668f9ce14d5
+SHA512 (check-0.15.2.tar.gz) = cf81ca63142f33779df2e3542e049b9034d30bc502a663a4379bbfe85c7ee8fd80ce382583e781651d99fe830895122dab5b6793f87425b571c3927f0ba3b60e
+Size (check-0.15.2.tar.gz) = 306136 bytes
