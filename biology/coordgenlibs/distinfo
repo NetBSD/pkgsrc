@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/03 20:17:59 bsiegert Exp $
+
+SHA1 (coordgenlibs-1.4.2.tar.gz) = cd6b1a6be1e1735324625e21192b53ec475f5667
+RMD160 (coordgenlibs-1.4.2.tar.gz) = 15e5d8dbe875fbdadae963b73d66c1070e08c7c3
+SHA512 (coordgenlibs-1.4.2.tar.gz) = a1cd2611893cc04e1423fdc32c428a574cfc03d9a76cfb935dd5aa991157f462e78a8460b9f6748f422a2d0d78bed93759e5c3f03e361665331ed8df8cb78fad
+Size (coordgenlibs-1.4.2.tar.gz) = 155306 bytes
