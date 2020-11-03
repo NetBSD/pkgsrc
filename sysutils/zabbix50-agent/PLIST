@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/03 22:46:23 otis Exp $
+bin/zabbix_get
+bin/zabbix_sender
+man/man1/zabbix_get.1
+man/man1/zabbix_sender.1
+man/man8/zabbix_agentd.8
+sbin/zabbix_agentd
+share/examples/${PKGBASE}/zabbix_agentd.conf
+@pkgdir share/${PKGBASE}
+@pkgdir lib/modules
+@pkgdir etc/zabbix_agentd.conf.d
