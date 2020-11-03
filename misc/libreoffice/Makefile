@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.242 2020/11/01 12:17:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.243 2020/11/03 16:39:14 nia Exp $
 
 VERREL=		7.0.3
 VERRC=		1
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -332,9 +333,6 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../converters/orcus/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/mysql57-client/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mldap)
-.include "../../databases/openldap-client/buildlink3.mk"
-.endif
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
@@ -382,18 +380,11 @@ BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../net/libcmis/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups-base/buildlink3.mk"
-.endif
 # Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
 #.include "../../print/poppler-cpp/buildlink3.mk"
 #.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mdbus)
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.endif
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
