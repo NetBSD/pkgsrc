@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6020 2020/11/03 22:55:14 otis Exp $
+$NetBSD: CHANGES-2020,v 1.6021 2020/11/03 22:55:37 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8910,3 +8910,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/zabbix50-agent version 5.0.5 [otis 2020-11-03]
 	Added sysutils/zabbix50-frontend version 5.0.5 [otis 2020-11-03]
 	Added sysutils/zabbix50-java version 5.0.5 [otis 2020-11-03]
+	Added sysutils/zabbix50-proxy version 5.0.5 [otis 2020-11-03]
