@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/11/03 20:55:34 otis Exp $
+
+Fix bash-ism
+
+--- configure.orig	2020-06-12 14:14:25.000000000 +0000
++++ configure
+@@ -13061,7 +13061,7 @@ if test "x$ac_cv_header_tcl_tcl_h" = xye
+ fi
+ 
+ 
+-	 if test "x$FOUND_TCL_HEADER" == "xyes"; then
++	 if test "x$FOUND_TCL_HEADER" = "xyes"; then
+ 	    tclcflags="-I /usr/include/tcl$ver"
+             TCL_CFLAGS="$tclcflags"
+ 	 fi
