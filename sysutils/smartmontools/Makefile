@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/08/15 08:28:48 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2020/11/03 20:51:25 otis Exp $
 
 DISTNAME=		smartmontools-7.1
 CATEGORIES=		sysutils
@@ -30,6 +30,7 @@ RCD_SCRIPTS=		smartd
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/smartmontools
 CONFIGURE_ARGS+=	--with-scriptpath=${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+CONFIGURE_ARGS+=	--with-nvme-devicescan
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 INSTALLATION_DIRS=	${EGDIR}
