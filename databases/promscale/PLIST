@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/03 20:18:56 tnn Exp $
+bin/promscale
