@@ -1,0 +1,1 @@
+bin/asciidoctor @PREFIX@/bin/asciidoctor@RUBY_SUFFIX@
