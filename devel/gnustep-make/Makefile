@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2020/11/03 11:24:31 triaxx Exp $
+# $NetBSD: Makefile,v 1.62 2020/11/03 12:40:11 triaxx Exp $
 
 DISTNAME=	gnustep-make-2.8.0
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -11,7 +11,7 @@ COMMENT=	GNUstep makefile package
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES+=		c99 objc c++ objc-c++
-USE_TOOLS+=		csh
+USE_TOOLS+=		bash csh
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 CONFIGURE_ARGS+=	--disable-importing-config-file
