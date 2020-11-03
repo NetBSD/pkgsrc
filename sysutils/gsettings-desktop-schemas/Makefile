@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/03/08 16:51:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/11/03 12:34:24 nia Exp $
 
-DISTNAME=	gsettings-desktop-schemas-3.24.0
-PKGREVISION=	1
+DISTNAME=	gsettings-desktop-schemas-3.38.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gsettings-desktop-schemas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,16 +10,17 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Collection of GSettings schemas for the GNOME desktop
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
-# Necessary because of configure test
-USE_LANGUAGES=		c
 
 PKGCONFIG_OVERRIDE+=	gsettings-desktop-schemas.pc.in
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/glib2/schemas.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:=	build
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.31
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
