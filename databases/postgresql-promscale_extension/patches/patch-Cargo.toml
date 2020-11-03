@@ -1,0 +1,21 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2020/11/03 22:59:35 tnn Exp $
+
+Provide unpublished crate manually rather than fetch with git.
+
+--- Cargo.toml.orig	2020-09-28 18:57:02.000000000 +0000
++++ Cargo.toml
+@@ -8,12 +8,11 @@ edition = "2018"
+ crate-type = ["staticlib"]
+ 
+ [dependencies.timescale-extension-utils]
+-git = "https://github.com/timescale/timescale-extension-utils"
+-branch = "master"
++path = "timescale-extension-utils"
+ 
+ [profile.release]
+ lto = true
+ 
+ [features]
+-default = []
++default = ["parse_headers"]
+ parse_headers = ["timescale-extension-utils/parse_headers"]
