@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/11/03 22:46:23 otis Exp $
+
+Fix bash-ism.
+
+--- configure.orig	2020-07-13 07:56:36.000000000 +0000
++++ configure
+@@ -8494,7 +8494,7 @@ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ 
+-            if test "$found_mysql_tls" == "yes"; then
++            if test "$found_mysql_tls" = "yes"; then
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for TLS ciphersuites in MySQL library" >&5
+ $as_echo_n "checking for TLS ciphersuites in MySQL library... " >&6; }
