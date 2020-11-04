@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/10/20 09:56:52 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/11/04 21:53:18 tnn Exp $
 
 DISTNAME=	prometheus-2.22.0
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -38,7 +39,7 @@ EXAMPLE_FILES+=	consoles/index.html.example consoles/node-cpu.html \
 EXAMPLE_FILES+=	console_libraries/menu.lib console_libraries/prom.lib
 WEBUI_DIR=	${PREFIX}/share/prometheus
 
-INSTALLATION_DIRS+=	${PREFIX}/${EXAMPLE_DIR} ${WEBUI_DIR}
+INSTALLATION_DIRS+=	bin ${EXAMPLE_DIR} ${WEBUI_DIR}
 
 .for f in ${EXAMPLE_FILES}
 CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -47,7 +48,9 @@ CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml \
 		${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
-	cd ${WRKDIR} && ${PAX} -rw bin ${DESTDIR}${PREFIX}
+.for f in prometheus promtool
+	${INSTALL_PROGRAM} ${WRKDIR}/bin/${f} ${DESTDIR}${PREFIX}/bin
+.endfor
 .for f in consoles console_libraries
 	cd ${WRKSRC} && ${PAX} -rw ${f} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
 .endfor

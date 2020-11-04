@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2020/09/30 13:12:20 adam Exp $
-bin/adapter-usage
-bin/example_write_adapter
+@comment $NetBSD: PLIST,v 1.6 2020/11/04 21:53:18 tnn Exp $
 bin/prometheus
 bin/promtool
-bin/remote_storage_adapter
 share/examples/prometheus/console_libraries/menu.lib
 share/examples/prometheus/console_libraries/prom.lib
 share/examples/prometheus/consoles/index.html.example
