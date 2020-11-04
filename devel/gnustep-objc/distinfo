@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2020/04/17 13:32:23 joerg Exp $
+$NetBSD: distinfo,v 1.14 2020/11/04 08:36:52 triaxx Exp $
 
 SHA1 (libobjc2-1.8.1.tar.gz) = 28b53704d481de4414bfe6ae94f2a84358ef766d
 RMD160 (libobjc2-1.8.1.tar.gz) = 1beaf2a2ee4ef1370bbb2fac4f7b1d233f0a9e09
 SHA512 (libobjc2-1.8.1.tar.gz) = 518f36e96a82a076fc67fe384226bd97310cd10a53c7b0951db9f3658aa534582b245d5cb97956fe91c38338c3fc8f1e569dd8af36f6d12e32bf1460251d02eb
 Size (libobjc2-1.8.1.tar.gz) = 173635 bytes
-SHA1 (patch-GNUmakefile) = 0760597d10e72019f5159f9b14996bf7244e6f99
+SHA1 (patch-GNUmakefile) = 7e6b8f09599c2b568346b392cd5d7654b1c747a4
 SHA1 (patch-objcxx_eh.cc) = 8804d075cb46380165e40af5f4abd5d8d413b92a
 SHA1 (patch-objcxx_eh.h) = 68a3709ed9d029e6ae4c7a6cc375678ee7c21b1e
