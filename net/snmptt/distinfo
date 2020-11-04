@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:35:37 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/11/04 18:32:26 otis Exp $
 
-SHA1 (snmptt_1.3.tgz) = 441077d806c877545c2ce5688e0c1ecf5cca9bbb
-RMD160 (snmptt_1.3.tgz) = 3f12f45720c263ccf0d27c8b391537da08083cbe
-SHA512 (snmptt_1.3.tgz) = 8a8917c07879007eddafbbaac83ddbf8954e43df9086b7b5b29d88680e739f5b48d231e76ff11548349f25eb271d483ebcce6ad9a20746ba61ddd6a55201e415
-Size (snmptt_1.3.tgz) = 146314 bytes
+SHA1 (snmptt_1.4.2.tgz) = 359b519ea973c0f0ea9f4dd838b340dd9091bae9
+RMD160 (snmptt_1.4.2.tgz) = e031eb7ae0601fd0a7c250f5022f6a869af4f969
+SHA512 (snmptt_1.4.2.tgz) = b8782aa5789227253c1b65c98771de7eba319f1f29b56224415f89d0c687515cd099f0ba7d0e304d43a9d054fa66335fe09d99545f50415745ac86b8b56a2b9d
+Size (snmptt_1.4.2.tgz) = 142697 bytes
