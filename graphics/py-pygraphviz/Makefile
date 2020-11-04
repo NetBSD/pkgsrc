@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/08/17 20:19:08 leot Exp $
+# $NetBSD: Makefile,v 1.9 2020/11/04 10:01:29 adam Exp $
 
-DISTNAME=	pygraphviz-1.5
+DISTNAME=	pygraphviz-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygraphviz/}
 EXTRACT_SUFX=	.zip
@@ -17,6 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
 USE_TOOLS+=	pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/egg.mk"
