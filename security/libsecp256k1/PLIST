@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/04 20:32:18 js Exp $
+include/secp256k1.h
+include/secp256k1_ecdh.h
+include/secp256k1_preallocated.h
+include/secp256k1_recovery.h
+lib/libsecp256k1.la
+lib/pkgconfig/libsecp256k1.pc
