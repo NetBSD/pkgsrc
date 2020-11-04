@@ -5,7 +5,17 @@ pkgsrc
 variety of UNIX-like systems.
 
 It produces binary packages, which can be managed with tools such as
-[pkgin](http://pkgin.net/).
+[pkgin](http://pkgin.net/). pkgsrc is highly configurable, supporting
+building packages for an arbitrary installation prefix (the default is
+`/usr/pkg`), allowing multiple branches to coeexist on one machine, a
+build options framework, and a compiler trasformation framework, among
+other advanced features. Unprivileged use and installation is also supported.
+
+pkgsrc is the default package manager for [NetBSD](https://www.NetBSD.org),
+[SmartOS](https://www.joyent.com/smartos), and [MINIX 3](https://minix3.org/).
+It's also supported as a first-class option in [OmniOS CE](https://omniosce.org/)
+and [Oasis Linux](https://github.com/oasislinux/oasis).
+
 
 Bootstrapping
 -------------
