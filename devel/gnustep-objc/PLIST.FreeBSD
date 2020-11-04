@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2014/03/25 22:40:46 asau Exp $
-lib/libobjc.so.4
