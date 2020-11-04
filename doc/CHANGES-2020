@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6023 2020/11/03 23:01:59 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.6024 2020/11/04 10:24:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8913,3 +8913,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/zabbix50-proxy version 5.0.5 [otis 2020-11-03]
 	Added sysutils/zabbix50-server version 5.0.5 [otis 2020-11-03]
 	Added databases/postgresql-promscale_extension version 0.1.1 [tnn 2020-11-03]
+	Updated graphics/py-pygraphviz to 1.6 [adam 2020-11-04]
+	Updated textproc/py-regex to 2020.10.28 [adam 2020-11-04]
+	Updated devel/py-ipython to 7.19.0 [adam 2020-11-04]
+	Updated devel/py-pip to 20.2.4 [adam 2020-11-04]
