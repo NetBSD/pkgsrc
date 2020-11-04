@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/08/30 08:00:16 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/11/04 12:12:48 nia Exp $
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg-crossfade.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg-slide-show.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg.h
@@ -8,41 +8,16 @@ include/gnome-desktop-3.0/libgnome-desktop/gnome-languages.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-pnp-ids.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-rr-config.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-rr.h
+include/gnome-desktop-3.0/libgnome-desktop/gnome-systemd.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-wall-clock.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-xkb-info.h
 lib/girepository-1.0/GnomeDesktop-3.0.typelib
-lib/libgnome-desktop-3.la
+lib/libgnome-desktop-3.so
+lib/libgnome-desktop-3.so.19
+lib/libgnome-desktop-3.so.19.0.9
 lib/pkgconfig/gnome-desktop-3.0.pc
 share/gir-1.0/GnomeDesktop-3.0.gir
 share/gnome/gnome-version.xml
-share/gtk-doc/html/gnome-desktop3/GnomeDesktopThumbnailFactory.html
-share/gtk-doc/html/gnome-desktop3/GnomeIdleMonitor.html
-share/gtk-doc/html/gnome-desktop3/GnomeWallClock.html
-share/gtk-doc/html/gnome-desktop3/GnomeXkbInfo.html
-share/gtk-doc/html/gnome-desktop3/annotation-glossary.html
-share/gtk-doc/html/gnome-desktop3/background.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-Language-Utilities.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-bg.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-pnp-ids.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr-config.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3.devhelp2
-share/gtk-doc/html/gnome-desktop3/home.png
-share/gtk-doc/html/gnome-desktop3/idle-monitor.html
-share/gtk-doc/html/gnome-desktop3/index.html
-share/gtk-doc/html/gnome-desktop3/intro.html
-share/gtk-doc/html/gnome-desktop3/languages.html
-share/gtk-doc/html/gnome-desktop3/left-insensitive.png
-share/gtk-doc/html/gnome-desktop3/left.png
-share/gtk-doc/html/gnome-desktop3/randr.html
-share/gtk-doc/html/gnome-desktop3/right-insensitive.png
-share/gtk-doc/html/gnome-desktop3/right.png
-share/gtk-doc/html/gnome-desktop3/style.css
-share/gtk-doc/html/gnome-desktop3/thumbnail.html
-share/gtk-doc/html/gnome-desktop3/up-insensitive.png
-share/gtk-doc/html/gnome-desktop3/up.png
-share/gtk-doc/html/gnome-desktop3/wall-clock.html
-share/gtk-doc/html/gnome-desktop3/xkb-info.html
 share/locale/af/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/am/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/an/LC_MESSAGES/gnome-desktop-3.0.mo
@@ -59,6 +34,7 @@ share/locale/br/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/bs/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/ca/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-desktop-3.0.mo
+share/locale/ckb/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/crh/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/cs/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/csb/LC_MESSAGES/gnome-desktop-3.0.mo
@@ -110,6 +86,7 @@ share/locale/lv/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mai/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mg/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mi/LC_MESSAGES/gnome-desktop-3.0.mo
+share/locale/mjw/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mk/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/ml/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mn/LC_MESSAGES/gnome-desktop-3.0.mo
