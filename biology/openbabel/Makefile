@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2020/08/17 20:17:17 leot Exp $
+# $NetBSD: Makefile,v 1.43 2020/11/04 19:54:12 bsiegert Exp $
 #
 
 GITHUB_PROJECT=	openbabel
 DISTNAME=	openbabel-${RELVERSION:S/-/./g}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openbabel/}
 GITHUB_TAG=	${PKGBASE}-${RELVERSION}
@@ -31,10 +31,13 @@ CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
 post-extract:
 	${MKDIR} ${WRKDIR}/build
 
+.include "../../biology/coordgenlibs/buildlink3.mk"
+.include "../../biology/maeparser/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/rapidjson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
