@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6027 2020/11/04 12:22:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6028 2020/11/04 12:28:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8920,3 +8920,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/gnome-desktop3 to 3.38.1 [nia 2020-11-04]
 	Added sysutils/gnome-tracker version 3.0.1 [nia 2020-11-04]
 	Updated sysutils/gnome-tracker-miners to 3.0.1 [nia 2020-11-04]
+	Added archivers/gnome-autoar version 0.2.4 [nia 2020-11-04]
