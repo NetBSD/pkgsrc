@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2020/09/04 10:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2020/11/04 12:27:58 nia Exp $
 #
 
 COMMENT=	Archivers
@@ -27,6 +27,7 @@ SUBDIR+=	fastjar
 SUBDIR+=	fcrackzip
 SUBDIR+=	freeze
 SUBDIR+=	gcpio
+SUBDIR+=	gnome-autoar
 SUBDIR+=	go-xz
 SUBDIR+=	gsharutils
 SUBDIR+=	gtar
