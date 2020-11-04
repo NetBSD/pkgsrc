@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2014/07/21 11:55:37 asau Exp $
-lib/libgnustep-gui.so.0.22
