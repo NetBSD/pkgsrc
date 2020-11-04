@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/16 09:28:39 manu Exp $
-lib/libobjc.so
-lib/libobjc.so.4
-lib/libobjc.so.4.6
-lib/libobjcxx.so
-lib/libobjcxx.so.4
-lib/libobjcxx.so.4.6
+@comment $NetBSD: PLIST,v 1.8 2020/11/04 08:36:52 triaxx Exp $
 include/objc/Availability.h
 include/objc/Object.h
 include/objc/Protocol.h
@@ -23,3 +17,9 @@ include/objc/runtime-deprecated.h
 include/objc/runtime.h
 include/objc/slot.h
 include/objc/toydispatch.h
+lib/libobjc.so
+lib/libobjc.so.4
+lib/libobjc.so.4.6
+${PLIST.objcxx}lib/libobjcxx.so
+${PLIST.objcxx}lib/libobjcxx.so.4
+${PLIST.objcxx}lib/libobjcxx.so.4.6

@@ -1,19 +1,24 @@
-$NetBSD: patch-GNUmakefile,v 1.2 2020/04/16 09:28:39 manu Exp $
+$NetBSD: patch-GNUmakefile,v 1.3 2020/11/04 08:36:53 triaxx Exp $
 
-Install fixes
+* Replace absolute paths by DESTDIR
+* Replace install by pkgsrc's INSTALL_*
+* Add conditionnal test for installation of LIBOBJCXX on FreeBSD
 
---- GNUmakefile.orig	2015-08-07 13:33:41.000000000 +0200
-+++ GNUmakefile	2020-04-15 03:22:59.875513487 +0200
-@@ -78,22 +78,22 @@
+--- GNUmakefile.orig	2015-08-07 11:33:41.000000000 +0000
++++ GNUmakefile
+@@ -78,21 +78,25 @@ endif
  
  install: all
  	$(SILENT)echo Installing libraries...
- 	$(SILENT)install -d $(LIB_DIR)
+-	$(SILENT)install -d $(LIB_DIR)
 -	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).so.$(VERSION) $(LIB_DIR)
 -	$(SILENT)install -m 444 $(STRIP) $(LIBOBJCXX).so.$(VERSION) $(LIB_DIR)
 -	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).a $(LIB_DIR)
++	$(SILENT)install -d $(LIB_DIR)
 +	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).so.$(VERSION) $(DESTDIR)/$(LIB_DIR)
++ifneq ($(findstring freebsd, $(shell $(CC) -dumpmachine)), freebsd)
 +	$(SILENT)install -m 444 $(STRIP) $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)/$(LIB_DIR)
++endif
 +	#$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).a $(LIB_DIR)
  	$(SILENT)echo Creating symbolic links...
 -	$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(LIB_DIR)/$(LIBOBJC).so
@@ -25,9 +30,11 @@ Install fixes
 +	$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJC).so
 +	$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJC).so.$(MAJOR_VERSION)
 +	#$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJC).so.$(MAJOR_VERSION).$(MINOR_VERSION)
++ifneq ($(findstring freebsd, $(shell $(CC) -dumpmachine)), freebsd)
 +	$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJCXX).so
 +	$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJCXX).so.$(MAJOR_VERSION)
 +	#$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJCXX).so.$(MAJOR_VERSION).$(MINOR_VERSION)
++endif
  	$(SILENT)echo Installing headers...
 -	$(SILENT)install -d $(HEADER_DIR)/objc
 -	$(SILENT)install -m 444 objc/*.h $(HEADER_DIR)/objc
@@ -38,4 +45,3 @@ Install fixes
  	$(SILENT)echo "To use the newly installed objc2 library with GNUstep,"
  	$(SILENT)echo "please change to your gnustep-make directory and"
  	$(SILENT)echo "type 'configure; make install' to tell gnustep-make"
- 	$(SILENT)echo "to use the new library (you will then need to configure" 
