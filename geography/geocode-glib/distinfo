@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/04 15:53:21 nia Exp $
+
+SHA1 (geocode-glib-3.26.2.tar.xz) = b8fb9aed83f33685fafc2952383dbc5b46a78d31
+RMD160 (geocode-glib-3.26.2.tar.xz) = 137e493d87627b67bb6caac7cd4f9c73da003123
+SHA512 (geocode-glib-3.26.2.tar.xz) = b3ef81fac6959f6c4725ca721125cdafbbec69233f321872e17f9035266ed7616018ef54a9082fbd0a83395d18c664144cfe3b431d63744be433f058071cd435
+Size (geocode-glib-3.26.2.tar.xz) = 72956 bytes
