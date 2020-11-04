@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6026 2020/11/04 12:20:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6027 2020/11/04 12:22:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8919,3 +8919,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pip to 20.2.4 [adam 2020-11-04]
 	Updated x11/gnome-desktop3 to 3.38.1 [nia 2020-11-04]
 	Added sysutils/gnome-tracker version 3.0.1 [nia 2020-11-04]
+	Updated sysutils/gnome-tracker-miners to 3.0.1 [nia 2020-11-04]
