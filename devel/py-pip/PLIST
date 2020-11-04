@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/07/29 10:00:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/11/04 10:23:45 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -285,6 +285,9 @@ ${PYSITELIB}/pip/_internal/resolution/resolvelib/candidates.pyo
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/factory.py
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/factory.pyc
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/factory.pyo
+${PYSITELIB}/pip/_internal/resolution/resolvelib/found_candidates.py
+${PYSITELIB}/pip/_internal/resolution/resolvelib/found_candidates.pyc
+${PYSITELIB}/pip/_internal/resolution/resolvelib/found_candidates.pyo
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/provider.py
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/provider.pyc
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/provider.pyo
