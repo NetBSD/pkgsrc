@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6031 2020/11/04 13:03:28 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6032 2020/11/04 15:53:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8923,3 +8923,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added archivers/gnome-autoar version 0.2.4 [nia 2020-11-04]
 	Added sysutils/nautilus version 3.38.1 [nia 2020-11-04]
 	Added archivers/file-roller version 3.38.0 [nia 2020-11-04]
+	Added geography/geocode-glib version 3.26.2 [nia 2020-11-04]
