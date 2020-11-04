@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6033 2020/11/04 16:09:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6034 2020/11/04 16:47:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8925,3 +8925,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added archivers/file-roller version 3.38.0 [nia 2020-11-04]
 	Added geography/geocode-glib version 3.26.2 [nia 2020-11-04]
 	Updated devel/libgweather to 3.36.1 [nia 2020-11-04]
+	Updated geography/geoclue to 2.5.6 [nia 2020-11-04]
