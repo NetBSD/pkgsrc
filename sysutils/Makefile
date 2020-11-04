@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.907 2020/11/03 22:53:40 otis Exp $
+# $NetBSD: Makefile,v 1.908 2020/11/04 12:19:20 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -235,6 +235,7 @@ SUBDIR+=	gkrellm-server
 SUBDIR+=	gkrellm-share
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-nds-thumbnailer
+SUBDIR+=	gnome-tracker
 SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfsmm
 SUBDIR+=	gnuit
