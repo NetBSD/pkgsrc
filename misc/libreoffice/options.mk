@@ -1,6 +1,9 @@
-# $NetBSD: options.mk,v 1.15 2020/11/04 15:17:56 nia Exp $
+# $NetBSD: options.mk,v 1.16 2020/11/04 18:35:32 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
+
+# XXX: gtk3 option breaks scrollbars
+# why is gtk3 required regardless?
 PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups ldap dbus
 PKG_SUGGESTED_OPTIONS=	cups ldap dbus
 
