@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/06 15:16:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/04 20:27:24 schmonz Exp $
 
 DISTNAME=	redo-1.4
 PKGNAME=	jdebp-${DISTNAME}
@@ -33,7 +33,7 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ./package/makeinstall
 	cd ${WRKSRC} && ./package/export ${DESTDIR}${PREFIX}/
-	for i in bin man/man1; do cd ${DESTDIR}${PREFIX}/$${i}; \
+	for i in bin ${PKGMANDIR}/man1; do cd ${DESTDIR}${PREFIX}/$${i}; \
 	  for j in *; do mv $${j} jdebp-$${j}; done; \
 	done
 
