@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.909 2020/11/04 12:22:17 nia Exp $
+# $NetBSD: Makefile,v 1.910 2020/11/04 12:34:55 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -411,6 +411,7 @@ SUBDIR+=	mtx
 SUBDIR+=	munin-common
 SUBDIR+=	munin-master
 SUBDIR+=	munin-node
+SUBDIR+=	nautilus
 SUBDIR+=	nbase
 SUBDIR+=	ncdu
 SUBDIR+=	ndesk-dbus
@@ -429,8 +430,8 @@ SUBDIR+=	nvnet
 SUBDIR+=	nvramtool
 SUBDIR+=	oak
 SUBDIR+=	onefetch
-SUBDIR+=	openipmi
 SUBDIR+=	open-vm-tools
+SUBDIR+=	openipmi
 SUBDIR+=	openstack_init
 SUBDIR+=	openxenmanager
 SUBDIR+=	osname
