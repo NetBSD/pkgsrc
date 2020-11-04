@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.58 2020/11/04 13:02:52 nia Exp $
+
+SHA1 (file-roller-3.38.0.tar.xz) = b1e3057b489c3798b441de49c5e61b868d67ae37
+RMD160 (file-roller-3.38.0.tar.xz) = 8722a12156d2e553ac5de1a7894a3e4c46c45dc8
+SHA512 (file-roller-3.38.0.tar.xz) = 9c2e3c105397bceb08e30c9796b9242633fe49772aed2e7f67461c34a51be1493e922301b1fc29bdcb0fa50d220f4a7db2ee7642f629007ce2bef00334d7110e
+Size (file-roller-3.38.0.tar.xz) = 877960 bytes
