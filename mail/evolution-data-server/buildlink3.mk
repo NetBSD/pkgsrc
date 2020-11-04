@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.77 2020/08/17 20:17:34 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.78 2020/11/04 14:56:53 nia Exp $
 
 BUILDLINK_TREE+=	evolution-data-server
 
@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.evolution-data-server?=	../../mail/evolution-data-server
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
