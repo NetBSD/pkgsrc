@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/03 22:44:43 otis Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/04 18:28:57 otis Exp $
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-agent/Makefile
 #
@@ -32,7 +32,13 @@ CONF_FILES+=	${EGDIR}/zabbix_server.conf ${PKG_SYSCONFDIR}/zabbix_server.conf
 RCD_SCRIPTS=	zabbix_server
 SMF_NAME=	zabbix-server
 
-INSTALLATION_DIRS+=	${EGDIR} share/${PKGBASE}
+MISCDIRS=	images snmptrap
+
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	share/${PKGBASE}
+.for MISCDIR in ${MISCDIRS}
+INSTALLATION_DIRS+=	share/${PKGBASE}/misc/${MISCDIR}
+.endfor
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -60,6 +66,10 @@ pre-configure:
 post-install:
 	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \
 		${PAX} -rw . ${DESTDIR}${PREFIX}/share/${PKGBASE}/
+.for MISCDIR in ${MISCDIRS}
+	cd ${WRKSRC}/misc/${MISCDIR}; \
+		${PAX} -rw . ${DESTDIR}${PREFIX}/share/${PKGBASE}/misc/${MISCDIR}
+.endfor
 	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/Makefile*
 
 .include "options.mk"
