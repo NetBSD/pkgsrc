@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/04 21:44:40 nia Exp $
+
+SHA1 (gnome-dictionary-3.26.1.tar.xz) = e80a4d7a7aad4a37b92e8b168d47145be83987d9
+RMD160 (gnome-dictionary-3.26.1.tar.xz) = 2cc3598c4edc75e0fce395d272b86470dc595633
+SHA512 (gnome-dictionary-3.26.1.tar.xz) = da7169795740295c13f02143f5263603f0f6c621e96cecf88a4ee089114399d59f083987bc4571821467da64dc43f00bebbe4ea66b46a035088f85d35d6aee27
+Size (gnome-dictionary-3.26.1.tar.xz) = 662048 bytes
