@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.55 2020/11/04 12:34:55 nia Exp $
+
+SHA1 (nautilus-3.38.1.tar.xz) = 24cda721c68d2542bb4d802c111d621e0e27e6c9
+RMD160 (nautilus-3.38.1.tar.xz) = 76c84ac2fa8ac7461520c78d26a5652a136ebdad
+SHA512 (nautilus-3.38.1.tar.xz) = 5b0f7bb3fd49d953976d1f71294c70eb3a4df883941d3a0134c63bd562367df45ffa982b40b9273bf8d85cd7cb6e5f0d9828ad2a71cfb82865cca91f624ea195
+Size (nautilus-3.38.1.tar.xz) = 3220728 bytes
