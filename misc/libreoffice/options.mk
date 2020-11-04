@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.14 2020/11/03 16:39:14 nia Exp $
+# $NetBSD: options.mk,v 1.15 2020/11/04 15:17:56 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups ldap dbus
-PKG_SUGGESTED_OPTIONS=	cups ldap dbus gtk3
+PKG_SUGGESTED_OPTIONS=	cups ldap dbus
 
 .include "../../mk/bsd.prefs.mk"
 
