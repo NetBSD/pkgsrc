@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2019/10/30 17:26:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.34 2020/11/04 14:36:01 nia Exp $
 etc/xdg/autostart/org.gnome.Evolution-alarm-notify.desktop
 include/evolution-data-server/camel/camel-address.h
 include/evolution-data-server/camel/camel-async-closure.h
@@ -349,7 +349,6 @@ lib/evolution-data-server/camel-providers/libcamelsmtp.urls
 lib/evolution-data-server/libedbus-private.so
 lib/evolution-data-server/registry-modules/module-cache-reaper.so
 lib/evolution-data-server/registry-modules/module-google-backend.so
-lib/evolution-data-server/registry-modules/module-oauth2-services.so
 lib/evolution-data-server/registry-modules/module-outlook-backend.so
 lib/evolution-data-server/registry-modules/module-secret-monitor.so
 lib/evolution-data-server/registry-modules/module-trust-prompt.so
