@@ -1,0 +1,46 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/11/04 20:32:18 js Exp $
+
+Don't check for homebrew and MacPorts.
+
+--- configure.ac.orig	2020-10-21 08:00:28.000000000 +0000
++++ configure.ac
+@@ -32,39 +32,6 @@ if test x"$ac_cv_prog_cc_c89" = x"no"; t
+ fi
+ AM_PROG_AS
+ 
+-case $host_os in
+-  *darwin*)
+-     if  test x$cross_compiling != xyes; then
+-       AC_PATH_PROG([BREW],brew,)
+-       if test x$BREW != x; then
+-         dnl These Homebrew packages may be keg-only, meaning that they won't be found
+-         dnl in expected paths because they may conflict with system files. Ask
+-         dnl Homebrew where each one is located, then adjust paths accordingly.
+-
+-         openssl_prefix=`$BREW --prefix openssl 2>/dev/null`
+-         gmp_prefix=`$BREW --prefix gmp 2>/dev/null`
+-         if test x$openssl_prefix != x; then
+-           PKG_CONFIG_PATH="$openssl_prefix/lib/pkgconfig:$PKG_CONFIG_PATH"
+-           export PKG_CONFIG_PATH
+-           CRYPTO_CPPFLAGS="-I$openssl_prefix/include"
+-         fi
+-         if test x$gmp_prefix != x; then
+-           GMP_CPPFLAGS="-I$gmp_prefix/include"
+-           GMP_LIBS="-L$gmp_prefix/lib"
+-         fi
+-       else
+-         AC_PATH_PROG([PORT],port,)
+-         dnl if homebrew isn't installed and macports is, add the macports default paths
+-         dnl as a last resort.
+-         if test x$PORT != x; then
+-           CPPFLAGS="$CPPFLAGS -isystem /opt/local/include"
+-           LDFLAGS="$LDFLAGS -L/opt/local/lib"
+-         fi
+-       fi
+-     fi
+-   ;;
+-esac
+-
+ CFLAGS="-W $CFLAGS"
+ 
+ warn_CFLAGS="-std=c89 -pedantic -Wall -Wextra -Wcast-align -Wnested-externs -Wshadow -Wstrict-prototypes -Wundef -Wno-unused-function -Wno-long-long -Wno-overlength-strings"
