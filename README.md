@@ -11,7 +11,7 @@ building packages for an arbitrary installation prefix (the default is
 build options framework, and a compiler trasformation framework, among
 other advanced features. Unprivileged use and installation is also supported.
 
-pkgsrc is the default package manager for [NetBSD](https://www.NetBSD.org),
+pkgsrc is the default package manager for [NetBSD](https://www.NetBSD.org)
 and [SmartOS](https://www.joyent.com/smartos).
 It's also supported as a first-class option in [OmniOS CE](https://omniosce.org/)
 and [Oasis Linux](https://github.com/oasislinux/oasis).
