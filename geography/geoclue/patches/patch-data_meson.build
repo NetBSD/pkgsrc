@@ -1,0 +1,24 @@
+$NetBSD: patch-data_meson.build,v 1.1 2020/11/04 16:46:59 nia Exp $
+
+Install config files to examples.
+
+--- data/meson.build.orig	2020-02-26 13:19:24.000000000 +0000
++++ data/meson.build
+@@ -11,7 +11,7 @@ if get_option('enable-backend')
+     configure_file(output: 'geoclue.conf',
+                    input: 'geoclue.conf.in',
+                    configuration: conf,
+-                   install_dir: conf_dir)
++                   install_dir: join_paths(datadir, 'examples', 'geoclue'))
+ 
+     conf = configuration_data()
+     conf.set('libexecdir', libexecdir)
+@@ -33,7 +33,7 @@ if get_option('enable-backend')
+     # DBus Service policy file
+     dbus_service_dir = get_option('dbus-sys-dir')
+     if dbus_service_dir == ''
+-        dbus_service_dir = join_paths(sysconfdir, 'dbus-1', 'system.d')
++        dbus_service_dir = join_paths(datadir, 'examples', 'dbus-1', 'system.d')
+     endif
+     configure_file(output: 'org.freedesktop.GeoClue2.conf',
+                    input: 'org.freedesktop.GeoClue2.conf.in',
