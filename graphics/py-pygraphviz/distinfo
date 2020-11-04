@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/10/11 10:11:31 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/11/04 10:01:29 adam Exp $
 
-SHA1 (pygraphviz-1.5.zip) = 0171c160cc9cbec28162204b514f8595e2c88dac
-RMD160 (pygraphviz-1.5.zip) = e91ecb50f79f0c0ba5b668ca5b2eb6b491443caa
-SHA512 (pygraphviz-1.5.zip) = 6d3df6642a7e23ecb6b687761480b80a3ee5886508ef50b81697041425be7d09d623bf46990c5cea3ef36817a28d9e5c2905eb32267296f55524fdedb2199ea2
-Size (pygraphviz-1.5.zip) = 117810 bytes
+SHA1 (pygraphviz-1.6.zip) = 848dd67e5a2f3485c00ab46d56f44339fe70b3f4
+RMD160 (pygraphviz-1.6.zip) = 678553828ebae0ce9d77eac1f489b37a2cbb5579
+SHA512 (pygraphviz-1.6.zip) = 6dd389b3fd8c46fd5c8a5a450623f2fe080f720bcf0812618549d092cf917b56ef515f4235fdb89123ece422c6e295705bb08076a3d3e9b193955fcda624acb3
+Size (pygraphviz-1.6.zip) = 117043 bytes
