@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6037 2020/11/04 20:35:34 js Exp $
+$NetBSD: CHANGES-2020,v 1.6038 2020/11/04 20:55:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8929,3 +8929,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/snmptt to 1.4.2 [otis 2020-11-04]
 	Updated sysutils/onefetch to 2.6.0 [pin 2020-11-04]
 	Added security/libsecp256k1 version 0.1 [js 2020-11-04]
+	Added sysutils/broot version 1.0.4 [pin 2020-11-04]
