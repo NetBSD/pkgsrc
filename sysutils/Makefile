@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.910 2020/11/04 12:34:55 nia Exp $
+# $NetBSD: Makefile,v 1.911 2020/11/04 20:55:25 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -63,6 +63,7 @@ SUBDIR+=	bkpupsd
 SUBDIR+=	boxbackup-client
 SUBDIR+=	boxbackup-server
 SUBDIR+=	brasero
+SUBDIR+=	broot
 SUBDIR+=	bsdec2-image-upload
 SUBDIR+=	bsdinstall
 SUBDIR+=	bsign
