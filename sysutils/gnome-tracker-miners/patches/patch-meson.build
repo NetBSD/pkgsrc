@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2020/11/04 12:22:17 nia Exp $
+
+Install config files to examples.
+
+--- meson.build.orig	2020-11-04 11:43:43.378300133 +0000
++++ meson.build
+@@ -426,7 +426,7 @@ uninstalled_tracker_extract_path = join_
+ 
+ gsettings_schema_dir = join_paths(get_option('prefix'), get_option('datadir'), 'glib-2.0', 'schemas')
+ po_dir = join_paths(meson.current_source_dir(), 'po')
+-xdg_autostart_dir = join_paths(get_option('sysconfdir'), 'xdg', 'autostart')
++xdg_autostart_dir = join_paths(get_option('prefix'), get_option('datadir'), 'examples', 'xdg', 'autostart')
+ 
+ glib_compile_schemas = find_program('glib-compile-schemas')
+ glib_mkenums = find_program('glib-mkenums')
