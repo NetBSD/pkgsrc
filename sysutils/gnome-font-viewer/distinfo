@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/04 22:07:20 nia Exp $
+
+SHA1 (gnome-font-viewer-3.34.0.tar.xz) = a02792d8121032e64bf5134ee08856459c864ac7
+RMD160 (gnome-font-viewer-3.34.0.tar.xz) = 38e1f4792491bee8057f994043c1435957a524b8
+SHA512 (gnome-font-viewer-3.34.0.tar.xz) = 1be6230da5ff47a129db43b5f5467d3fed8925fad7a6637f24d72c8c99c80d8dd1635eaef1b7c7f650a86132a54cde8326d3418075f5818d0154dc8d503927c7
+Size (gnome-font-viewer-3.34.0.tar.xz) = 157756 bytes
