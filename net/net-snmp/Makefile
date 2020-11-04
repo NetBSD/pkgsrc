@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2020/08/31 18:10:37 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2020/11/04 15:51:31 otis Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -106,6 +106,7 @@ CFLAGS.Darwin+=		-framework IOKit
 REQD_DIRS=	${PREFIX}/share/snmp
 RCD_SCRIPTS=	snmpd snmptrapd
 SMF_NAME=	snmp
+SMF_INSTANCES=	default snmptrapd
 
 USE_TOOLS+=		sh:run
 REPLACE_INTERPRETER+=	bash
