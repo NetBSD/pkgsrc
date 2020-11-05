@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2020/09/29 10:56:56 prlw1 Exp $
+# $NetBSD: Makefile,v 1.97 2020/11/05 09:08:50 ryoon Exp $
 
 DISTNAME=		avahi-0.8
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=lathiat/avahi/releases/download/v${PKGVERSION_NOREV}/}
 

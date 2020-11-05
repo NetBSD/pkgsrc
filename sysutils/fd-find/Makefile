@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/10/13 00:34:06 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/05 09:09:07 ryoon Exp $
 
 DISTNAME=	fd-find-8.1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 GITHUB_PROJECT=	fd
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}

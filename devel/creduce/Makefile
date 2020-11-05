@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/08/31 18:07:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/11/05 09:07:52 ryoon Exp $
 
 DISTNAME=	creduce-2.10.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://embed.cs.utah.edu/creduce/
 

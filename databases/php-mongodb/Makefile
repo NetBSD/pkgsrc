@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/06/02 08:23:26 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/11/05 09:07:42 ryoon Exp $
 
 MODNAME=	mongodb
 PECL_VERSION=	1.5.3
@@ -7,7 +7,7 @@ CATEGORIES+=	databases
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://docs.mongodb.org/ecosystem/drivers/php/
 COMMENT=	MongoDB database driver
-PKGREVISION=	4
+PKGREVISION=	5
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json

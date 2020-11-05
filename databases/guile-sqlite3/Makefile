@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/06/22 07:57:36 nikita Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/05 09:07:41 ryoon Exp $
 
 DISTNAME=	v0.1.2
 DIST_SUBDIR=	${PKGNAME_NOREV}
 PKGNAME=	guile-sqlite3-${DISTNAME:S/v//}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://notabug.org/guile-sqlite3/guile-sqlite3/archive/
 
