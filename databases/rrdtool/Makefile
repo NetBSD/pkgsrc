@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.142 2020/08/31 18:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2020/11/05 09:06:45 ryoon Exp $
 
-PKGREVISION= 6
+PKGREVISION= 7
 .include "Makefile.common"
 
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf

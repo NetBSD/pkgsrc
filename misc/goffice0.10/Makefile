@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2020/08/17 20:17:35 leot Exp $
+# $NetBSD: Makefile,v 1.44 2020/11/05 09:06:59 ryoon Exp $
 
 DISTNAME=		goffice-0.10.47
 PKGNAME=		${DISTNAME:S/goffice/goffice0.10/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/goffice/0.10/}
 EXTRACT_SUFX=		.tar.xz

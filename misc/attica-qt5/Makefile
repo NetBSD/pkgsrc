@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/08/17 20:17:35 leot Exp $
+# $NetBSD: Makefile,v 1.31 2020/11/05 09:06:59 ryoon Exp $
 
 DISTNAME=	attica-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
