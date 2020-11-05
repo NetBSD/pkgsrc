@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2020/08/18 17:57:30 leot Exp $
+# $NetBSD: Makefile,v 1.43 2020/11/05 09:07:04 ryoon Exp $
 
 DISTNAME=	knewstuff-${KF5VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 
 HOMEPAGE=	https://community.kde.org/Frameworks

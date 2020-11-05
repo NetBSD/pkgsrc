@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/07/27 16:38:51 adam Exp $
+# $NetBSD: Makefile,v 1.11 2020/11/05 09:07:13 ryoon Exp $
 
 DISTNAME=	libpsl-0.21.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rockdaboot/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

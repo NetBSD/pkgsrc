@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2020/08/17 20:17:41 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2020/11/05 09:07:06 ryoon Exp $
 
 BUILDLINK_TREE+=	kauth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kauth
 KAUTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kauth+=	kauth>=5.19.0
-BUILDLINK_ABI_DEPENDS.kauth?=	kauth>=5.70.0nb1
+BUILDLINK_ABI_DEPENDS.kauth?=	kauth>=5.70.0nb3
 BUILDLINK_PKGSRCDIR.kauth?=	../../security/kauth
 
 .include "../../devel/kcoreaddons/buildlink3.mk"

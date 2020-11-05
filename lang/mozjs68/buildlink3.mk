@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/06/02 08:22:45 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/11/05 09:06:57 ryoon Exp $
 
 BUILDLINK_TREE+=	mozjs68
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mozjs68
 MOZJS68_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mozjs68+=	mozjs68>=68.6.0
-BUILDLINK_ABI_DEPENDS.mozjs68?=	mozjs68>=68.6.0nb3
+BUILDLINK_ABI_DEPENDS.mozjs68?=	mozjs68>=68.6.0nb5
 BUILDLINK_PKGSRCDIR.mozjs68?=	../../lang/mozjs68
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/09/08 21:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/11/05 09:07:23 ryoon Exp $
 
 DISTNAME=	cantata-2.4.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CDrummond/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

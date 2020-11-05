@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2019/12/29 15:31:22 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2020/11/05 09:06:56 ryoon Exp $
 
 BUILDLINK_TREE+=	clang
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	clang
 CLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clang+=	clang>=9.0.1
+BUILDLINK_ABI_DEPENDS.clang?=	clang>=10.0.1nb2
 BUILDLINK_PKGSRCDIR.clang?=	../../lang/clang
 
 .include "../../textproc/libxml2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2020/08/17 20:17:58 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2020/11/05 09:07:20 ryoon Exp $
 
 BUILDLINK_TREE+=	qt5-qtlocation
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtlocation
 QT5_QTLOCATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtlocation+=	qt5-qtlocation>=5.9.1
-BUILDLINK_ABI_DEPENDS.qt5-qtlocation+=	qt5-qtlocation>=5.15.0nb1
+BUILDLINK_ABI_DEPENDS.qt5-qtlocation+=	qt5-qtlocation>=5.15.1nb1
 BUILDLINK_PKGSRCDIR.qt5-qtlocation?=	../../x11/qt5-qtlocation
 
 BUILDLINK_INCDIRS.qt5-qtlocation+=	qt5/include

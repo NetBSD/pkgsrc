@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2020/08/17 20:17:57 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2020/11/05 09:07:19 ryoon Exp $
 
 BUILDLINK_TREE+=	qt5-odbc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-odbc
 QT5_ODBC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-odbc+=	qt5-odbc>=5.5.1
-BUILDLINK_ABI_DEPENDS.qt5-odbc+=	qt5-odbc>=5.15.0nb1
+BUILDLINK_ABI_DEPENDS.qt5-odbc+=	qt5-odbc>=5.15.1nb1
 BUILDLINK_PKGSRCDIR.qt5-odbc?=		../../x11/qt5-odbc
 
 BUILDLINK_LIBDIRS.qt5-odbc+=		qt5/plugins

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/06/02 08:22:50 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/11/05 09:07:02 ryoon Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=	5
+PKGREVISION=	6
 
 COMMENT+=	Ugly plugins
 
