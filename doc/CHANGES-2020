@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6053 2020/11/05 17:12:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6054 2020/11/05 18:14:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8944,3 +8944,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/openblas_openmp version 0.3.7 [bacon 2020-11-05]
 	Added math/openblas_pthread version 0.3.7 [bacon 2020-11-05]
 	Updated lang/gjs to 1.64.3 [nia 2020-11-05]
+	Updated textproc/py-ICU to 2.6 [adam 2020-11-05]
+	Updated databases/py-pypika to 0.43.1 [adam 2020-11-05]
