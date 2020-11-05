@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6056 2020/11/05 21:17:02 js Exp $
+$NetBSD: CHANGES-2020,v 1.6057 2020/11/05 22:42:02 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8948,3 +8948,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-ICU to 2.6 [adam 2020-11-05]
 	Updated databases/py-pypika to 0.43.1 [adam 2020-11-05]
 	Updated sysutils/broot to 1.0.5 [pin 2020-11-05]
+	Updated devel/lua-mode to 20201010 [nikita 2020-11-05]
