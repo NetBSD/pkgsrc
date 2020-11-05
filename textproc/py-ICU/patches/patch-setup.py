@@ -1,8 +1,8 @@
-$NetBSD: patch-setup.py,v 1.2 2020/07/15 15:04:18 adam Exp $
+$NetBSD: patch-setup.py,v 1.3 2020/11/05 18:11:55 adam Exp $
 
 Add NetBSD support.
 
---- setup.py.orig	2020-05-26 22:08:37.000000000 +0000
+--- setup.py.orig	2020-11-02 21:26:44.000000000 +0000
 +++ setup.py
 @@ -86,6 +86,7 @@ CONFIGURE_WITH_ICU_CONFIG = {
      'win32': False,   # no icu-config
@@ -27,17 +27,16 @@ Add NetBSD support.
 +    'netbsd': [],
  }
  
- VER_FLAGS = {
-@@ -119,6 +122,8 @@ VER_FLAGS = {
-                '-DPYICU_ICU_MAX_VER="%s"' %(ICU_MAX_MAJOR_VERSION)],
-     'cygwin': ['-DPYICU_VER="%s"' %(VERSION),
-                '-DPYICU_ICU_MAX_VER="%s"' %(ICU_MAX_MAJOR_VERSION)],
-+    'netbsd': ['-DPYICU_VER="%s"' %(VERSION),
-+               '-DPYICU_ICU_MAX_VER="%s"' %(ICU_MAX_MAJOR_VERSION)],
+ if sys.platform == 'win32' and sys.version_info < (3,9):
+@@ -121,6 +124,7 @@ PEDANTIC_FLAGS = {
+     'win32': [],
+     'sunos5': [],
+     'cygwin': ['-pedantic'],
++    'netbsd': [],
  }
  
- PEDANTIC_FLAGS = {
-@@ -137,6 +142,7 @@ CFLAGS = {
+ CFLAGS = {
+@@ -130,6 +134,7 @@ CFLAGS = {
      'win32': ['/Zc:wchar_t', '/EHsc'],
      'sunos5': ['-std=c++11'],
      'cygwin': ['-D_GNU_SOURCE=1', '-std=c++11'],
@@ -45,7 +44,7 @@ Add NetBSD support.
  }
  
  # added to CFLAGS when setup is invoked with --debug
-@@ -147,6 +153,7 @@ DEBUG_CFLAGS = {
+@@ -140,6 +145,7 @@ DEBUG_CFLAGS = {
      'win32': ['/Od', '/DDEBUG'],
      'sunos5': ['-DDEBUG'],
      'cygwin': ['-Og', '-g', '-DDEBUG'],
@@ -53,7 +52,7 @@ Add NetBSD support.
  }
  
  LFLAGS = {
-@@ -156,6 +163,7 @@ LFLAGS = {
+@@ -149,6 +155,7 @@ LFLAGS = {
      'win32': ['/LIBPATH:c:/icu/lib'],
      'sunos5': [],
      'cygwin': [],
@@ -61,7 +60,7 @@ Add NetBSD support.
  }
  
  LIBRARIES = {
-@@ -165,6 +173,7 @@ LIBRARIES = {
+@@ -158,6 +165,7 @@ LIBRARIES = {
      'win32': ['icuin', 'icuuc', 'icudt'],
      'sunos5': ['icui18n', 'icuuc', 'icudata'],
      'cygwin': ['icui18n', 'icuuc', 'icudata'],
@@ -69,7 +68,7 @@ Add NetBSD support.
  }
  
  platform = sys.platform
-@@ -172,6 +181,8 @@ if platform.startswith(('linux', 'gnu'))
+@@ -165,6 +173,8 @@ if platform.startswith(('linux', 'gnu'))
      platform = 'linux'
  elif platform.startswith('freebsd'):
      platform = 'freebsd'
