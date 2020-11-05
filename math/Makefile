@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.482 2020/11/05 16:35:29 bacon Exp $
+# $NetBSD: Makefile,v 1.483 2020/11/05 16:56:01 bacon Exp $
 
 COMMENT=	Mathematics
 
@@ -256,6 +256,8 @@ SUBDIR+=	octave
 SUBDIR+=	odepack
 SUBDIR+=	openaxiom
 SUBDIR+=	openblas
+SUBDIR+=	openblas_openmp
+SUBDIR+=	openblas_pthread
 SUBDIR+=	openfst
 SUBDIR+=	ordCalc
 SUBDIR+=	otter
