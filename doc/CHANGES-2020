@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6046 2020/11/05 08:59:12 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6047 2020/11/05 09:17:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8937,3 +8937,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-anita to 2.6 [gson 2020-11-05]
 	Added sysutils/gnome-characters version 3.34.0 [nia 2020-11-05]
 	Updated textproc/icu to 68.1 [ryoon 2020-11-05]
+	Updated x11/xkbcomp to 1.4.4 [wiz 2020-11-05]
