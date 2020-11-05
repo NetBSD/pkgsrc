@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6050 2020/11/05 16:37:33 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.6051 2020/11/05 16:54:19 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8941,3 +8941,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libdazzle to 3.38.0 [nia 2020-11-05]
 	Updated devel/ruby-rugged to 1.1.0 [taca 2020-11-05]
 	Added math/openblas version 0.3.7 [bacon 2020-11-05]
+	Added math/openblas_openmp version 0.3.7 [bacon 2020-11-05]
