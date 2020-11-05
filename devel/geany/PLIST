@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/02/04 01:53:20 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/11/05 00:54:04 gutteridge Exp $
 bin/geany
 include/geany/app.h
 include/geany/build.h
@@ -20,6 +20,7 @@ include/geany/plugindata.h
 include/geany/pluginutils.h
 include/geany/prefs.h
 include/geany/project.h
+include/geany/scintilla/Compat.h
 include/geany/scintilla/SciLexer.h
 include/geany/scintilla/Sci_Position.h
 include/geany/scintilla/Scintilla.h
@@ -102,6 +103,7 @@ share/geany/filedefs/filetypes.ada
 share/geany/filedefs/filetypes.asciidoc
 share/geany/filedefs/filetypes.asm
 share/geany/filedefs/filetypes.batch
+share/geany/filedefs/filetypes.bibtex
 share/geany/filedefs/filetypes.c
 share/geany/filedefs/filetypes.caml
 share/geany/filedefs/filetypes.cmake
@@ -147,6 +149,7 @@ share/geany/filedefs/filetypes.restructuredtext
 share/geany/filedefs/filetypes.ruby
 share/geany/filedefs/filetypes.rust
 share/geany/filedefs/filetypes.sh
+share/geany/filedefs/filetypes.smalltalk
 share/geany/filedefs/filetypes.sql
 share/geany/filedefs/filetypes.tcl
 share/geany/filedefs/filetypes.txt2tags
@@ -240,6 +243,7 @@ share/locale/he/LC_MESSAGES/geany.mo
 share/locale/hi/LC_MESSAGES/geany.mo
 share/locale/hu/LC_MESSAGES/geany.mo
 share/locale/id/LC_MESSAGES/geany.mo
+share/locale/ie/LC_MESSAGES/geany.mo
 share/locale/it/LC_MESSAGES/geany.mo
 share/locale/ja/LC_MESSAGES/geany.mo
 share/locale/kk/LC_MESSAGES/geany.mo
