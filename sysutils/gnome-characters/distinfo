@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/05 08:35:47 nia Exp $
+
+SHA1 (gnome-characters-3.34.0.tar.xz) = 8cb8b5c5ecef60a01199fa28216c17c91b711446
+RMD160 (gnome-characters-3.34.0.tar.xz) = 5095463970b2b0e5c9d9877f6a0208aed05aff4c
+SHA512 (gnome-characters-3.34.0.tar.xz) = 4dc2f0027c7079034d50c2743607391a0e529bcaf4f8fdd495b05aa776027609a43686f4621bcf30f09a29fa6f4d5fba6ed6166e51ab66f03dedf3032bc65632
+Size (gnome-characters-3.34.0.tar.xz) = 188012 bytes
