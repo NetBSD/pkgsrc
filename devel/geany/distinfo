@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2020/02/04 01:53:20 gutteridge Exp $
+$NetBSD: distinfo,v 1.18 2020/11/05 00:54:04 gutteridge Exp $
 
-SHA1 (geany-1.36.tar.bz2) = 6a9b42286a4b00c4c5f5b1b60db704704ca85c50
-RMD160 (geany-1.36.tar.bz2) = e3a2e9e2e4dc1e6662a47f76a51ef12d3bc66c7b
-SHA512 (geany-1.36.tar.bz2) = 15005772b64e8321d7fa8552363df425eb25e9d7b0760c561c8fb3f34d7acae2bf25da8e04fda38a2a1b64cc31ff613b7ff2786d432ff014050c138c7473c810
-Size (geany-1.36.tar.bz2) = 4644521 bytes
+SHA1 (geany-1.37.tar.bz2) = 250c377eb9e59eb739f6c20006b70d8b5ccaae79
+RMD160 (geany-1.37.tar.bz2) = 364fe71d4f8772444cd2182137717de6749badf3
+SHA512 (geany-1.37.tar.bz2) = ffaa906eaa6198d24e91e21dafc4acc0811c8d90f714a36f646d70aa9f4eee7c53c29a063c39db41857de3c7729282ca7f88419ddc6b67b73ac35e91a376ea62
+Size (geany-1.37.tar.bz2) = 4689385 bytes
