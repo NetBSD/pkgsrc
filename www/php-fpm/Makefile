@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/06/02 08:24:58 adam Exp $
+# $NetBSD: Makefile,v 1.34 2020/11/05 09:09:22 ryoon Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 
 HOMEPAGE=	https://php-fpm.org/
 MAINTAINER=	pkgsrc-users@NetBSD.org
