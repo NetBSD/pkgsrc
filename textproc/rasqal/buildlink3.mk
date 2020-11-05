@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2020/06/02 08:22:59 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2020/11/05 09:07:11 ryoon Exp $
 
 BUILDLINK_TREE+=	rasqal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rasqal
 RASQAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rasqal+=	rasqal>=0.9.17
-BUILDLINK_ABI_DEPENDS.rasqal+=	rasqal>=0.9.33nb19
+BUILDLINK_ABI_DEPENDS.rasqal+=	rasqal>=0.9.33nb20
 BUILDLINK_PKGSRCDIR.rasqal?=	../../textproc/rasqal
 
 .include "../../devel/gmp/buildlink3.mk"
