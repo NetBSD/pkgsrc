@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2020/06/02 06:39:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2020/11/05 08:58:41 ryoon Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -164,6 +164,7 @@ include/unicode/unorm.h
 include/unicode/unorm2.h
 include/unicode/unum.h
 include/unicode/unumberformatter.h
+include/unicode/unumberrangeformatter.h
 include/unicode/unumsys.h
 include/unicode/uobject.h
 include/unicode/upluralrules.h
@@ -204,28 +205,28 @@ lib/icu/current
 lib/icu/pkgdata.inc
 lib/libicudata.a
 lib/libicudata.so
+lib/libicudata.so.68
 lib/libicudata.so.${PKGVERSION}
-lib/libicudata.so.67
 lib/libicui18n.a
 lib/libicui18n.so
+lib/libicui18n.so.68
 lib/libicui18n.so.${PKGVERSION}
-lib/libicui18n.so.67
 lib/libicuio.a
 lib/libicuio.so
+lib/libicuio.so.68
 lib/libicuio.so.${PKGVERSION}
-lib/libicuio.so.67
 lib/libicutest.a
 lib/libicutest.so
+lib/libicutest.so.68
 lib/libicutest.so.${PKGVERSION}
-lib/libicutest.so.67
 lib/libicutu.a
 lib/libicutu.so
+lib/libicutu.so.68
 lib/libicutu.so.${PKGVERSION}
-lib/libicutu.so.67
 lib/libicuuc.a
 lib/libicuuc.so
+lib/libicuuc.so.68
 lib/libicuuc.so.${PKGVERSION}
-lib/libicuuc.so.67
 lib/pkgconfig/icu-i18n.pc
 lib/pkgconfig/icu-io.pc
 lib/pkgconfig/icu-uc.pc
@@ -250,6 +251,6 @@ sbin/gennorm2
 sbin/gensprep
 sbin/icupkg
 share/icu/${PKGVERSION}/LICENSE
-share/icu/${PKGVERSION}/config/${MH_NAME}
+share/icu/${PKGVERSION}/config/mh-bsd-gcc
 share/icu/${PKGVERSION}/install-sh
 share/icu/${PKGVERSION}/mkinstalldirs
