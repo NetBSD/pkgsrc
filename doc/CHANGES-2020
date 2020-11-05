@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6055 2020/11/05 21:15:35 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6056 2020/11/05 21:17:02 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8929,6 +8929,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/snmptt to 1.4.2 [otis 2020-11-04]
 	Updated sysutils/onefetch to 2.6.0 [pin 2020-11-04]
 	Added security/libsecp256k1 version 0.1 [js 2020-11-04]
+	Updated finance/electrum to 4.0.4 [js 2020-11-04]
 	Added sysutils/broot version 1.0.4 [pin 2020-11-04]
 	Added textproc/gnome-dictionary version 3.26.1 [nia 2020-11-04]
 	Added sysutils/gnome-font-viewer version 3.34.0 [nia 2020-11-04]
