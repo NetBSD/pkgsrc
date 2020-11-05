@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2020/10/17 13:39:45 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/05 08:31:29 maya Exp $
 
 DISTNAME=	git-delta-0.4.4
 CATEGORIES=	textproc
 EXTRACT_SUFX=	.crate
 
-MAINTAINER=	maya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dandavison/delta/
 COMMENT=	Viewer for git and diff output
 LICENSE=	mit
