@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6041 2020/11/04 22:07:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6042 2020/11/05 00:54:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8932,3 +8932,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/broot version 1.0.4 [pin 2020-11-04]
 	Added textproc/gnome-dictionary version 3.26.1 [nia 2020-11-04]
 	Added sysutils/gnome-font-viewer version 3.34.0 [nia 2020-11-04]
+	Updated devel/geany to 1.37 [gutteridge 2020-11-05]
