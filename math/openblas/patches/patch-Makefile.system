@@ -1,0 +1,52 @@
+$NetBSD: patch-Makefile.system,v 1.1 2020/11/05 16:31:45 bacon Exp $
+
+Fully control the library name via LIBNAMESUFFIX
+And a bit of ARCH_
+
+--- Makefile.system.orig	2019-08-11 21:23:27.000000000 +0000
++++ Makefile.system
+@@ -1242,31 +1242,15 @@ ifndef LIBSUFFIX
+ LIBSUFFIX = a
+ endif
+ 
+-ifneq ($(DYNAMIC_ARCH), 1)
+-ifndef SMP
+-LIBNAME		= $(LIBPREFIX)_$(LIBCORE)$(REVISION).$(LIBSUFFIX)
+-LIBNAME_P	= $(LIBPREFIX)_$(LIBCORE)$(REVISION)_p.$(LIBSUFFIX)
+-else
+-LIBNAME		= $(LIBPREFIX)_$(LIBCORE)p$(REVISION).$(LIBSUFFIX)
+-LIBNAME_P	= $(LIBPREFIX)_$(LIBCORE)p$(REVISION)_p.$(LIBSUFFIX)
+-endif
+-else
+-ifndef SMP
+-LIBNAME		= $(LIBPREFIX)$(REVISION).$(LIBSUFFIX)
+-LIBNAME_P	= $(LIBPREFIX)$(REVISION)_p.$(LIBSUFFIX)
+-else
+-LIBNAME		= $(LIBPREFIX)p$(REVISION).$(LIBSUFFIX)
+-LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$(LIBSUFFIX)
+-endif
+-endif
+-
++LIBNAME		= $(LIBPREFIX).$(LIBSUFFIX)
++LIBNAME_P	= $(LIBPREFIX)_p.$(LIBSUFFIX)
+ 
+ LIBDLLNAME   = $(LIBPREFIX).dll
+ IMPLIBNAME   = lib$(LIBNAMEBASE).dll.a
+ ifneq ($(OSNAME), AIX)
+-LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so)
++LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so).$(MAJOR_VERSION)
+ else
+-LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.a)
++LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.a).$(MAJOR_VERSION)
+ endif
+ LIBDYNNAME   = $(LIBNAME:.$(LIBSUFFIX)=.dylib)
+ LIBDEFNAME   = $(LIBNAME:.$(LIBSUFFIX)=.def)
+@@ -1297,7 +1281,7 @@ LIB_COMPONENTS = CBLAS
+ endif
+ 
+ export OSNAME
+-export ARCH
++export ARCH_
+ export CORE
+ export LIBCORE
+ export PGCPATH
