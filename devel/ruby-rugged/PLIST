@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/04/27 07:04:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/11/05 14:23:20 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -65,27 +65,25 @@ ${GEM_LIBDIR}/lib/rugged/walker.rb
 ${GEM_LIBDIR}/vendor/libgit2/AUTHORS
 ${GEM_LIBDIR}/vendor/libgit2/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/COPYING
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/AddCFlagIfSupported.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/CheckPrototypeDefinition.c.in
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/CheckPrototypeDefinition.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/EnableWarnings.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindCoreFoundation.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindGSSAPI.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindGSSFramework.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindHTTP_Parser.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindIconv.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindPCRE.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindPCRE2.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindPkgLibraries.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindSecurity.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindStatNsec.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindmbedTLS.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/IdeSplitSources.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/PkgBuildConfig.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/SanitizeBool.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/SelectGSSAPI.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/SelectHTTPSBackend.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/SelectHashes.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/AddCFlagIfSupported.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/EnableWarnings.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindCoreFoundation.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindGSSAPI.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindGSSFramework.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindHTTP_Parser.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindIconv.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindPCRE.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindPCRE2.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindPkgLibraries.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindSecurity.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindStatNsec.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/FindmbedTLS.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/IdeSplitSources.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/PkgBuildConfig.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/SanitizeBool.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/SelectGSSAPI.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/SelectHTTPSBackend.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/SelectHashes.cmake
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/http_parser.c
@@ -110,6 +108,7 @@ ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/util.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/util.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/pcre/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/deps/pcre/COPYING
+${GEM_LIBDIR}/vendor/libgit2/deps/pcre/LICENCE
 ${GEM_LIBDIR}/vendor/libgit2/deps/pcre/cmake/COPYING-CMAKE-SCRIPTS
 ${GEM_LIBDIR}/vendor/libgit2/deps/pcre/cmake/FindEditline.cmake
 ${GEM_LIBDIR}/vendor/libgit2/deps/pcre/cmake/FindPackageHandleStandardArgs.cmake
@@ -270,6 +269,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/annotated_commit.h
 ${GEM_LIBDIR}/vendor/libgit2/src/apply.c
 ${GEM_LIBDIR}/vendor/libgit2/src/apply.h
 ${GEM_LIBDIR}/vendor/libgit2/src/array.h
+${GEM_LIBDIR}/vendor/libgit2/src/assert_safe.h
 ${GEM_LIBDIR}/vendor/libgit2/src/attr.c
 ${GEM_LIBDIR}/vendor/libgit2/src/attr.h
 ${GEM_LIBDIR}/vendor/libgit2/src/attr_file.c
@@ -393,6 +393,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/merge_driver.h
 ${GEM_LIBDIR}/vendor/libgit2/src/merge_file.c
 ${GEM_LIBDIR}/vendor/libgit2/src/message.c
 ${GEM_LIBDIR}/vendor/libgit2/src/message.h
+${GEM_LIBDIR}/vendor/libgit2/src/midx.c
+${GEM_LIBDIR}/vendor/libgit2/src/midx.h
 ${GEM_LIBDIR}/vendor/libgit2/src/mwindow.c
 ${GEM_LIBDIR}/vendor/libgit2/src/mwindow.h
 ${GEM_LIBDIR}/vendor/libgit2/src/net.c
@@ -449,7 +451,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/rebase.c
 ${GEM_LIBDIR}/vendor/libgit2/src/refdb.c
 ${GEM_LIBDIR}/vendor/libgit2/src/refdb.h
 ${GEM_LIBDIR}/vendor/libgit2/src/refdb_fs.c
-${GEM_LIBDIR}/vendor/libgit2/src/refdb_fs.h
 ${GEM_LIBDIR}/vendor/libgit2/src/reflog.c
 ${GEM_LIBDIR}/vendor/libgit2/src/reflog.h
 ${GEM_LIBDIR}/vendor/libgit2/src/refs.c
@@ -476,6 +477,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/sortedcache.h
 ${GEM_LIBDIR}/vendor/libgit2/src/stash.c
 ${GEM_LIBDIR}/vendor/libgit2/src/status.c
 ${GEM_LIBDIR}/vendor/libgit2/src/status.h
+${GEM_LIBDIR}/vendor/libgit2/src/strarray.c
 ${GEM_LIBDIR}/vendor/libgit2/src/stream.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/mbedtls.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/mbedtls.h
