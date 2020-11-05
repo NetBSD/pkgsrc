@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2020/06/02 08:23:08 adam Exp $
+# $NetBSD: Makefile,v 1.36 2020/11/05 09:07:23 ryoon Exp $
 #
 
 DISTNAME=	cddb.bundle-0.2
 PKGNAME=	${DISTNAME:S/./-/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	audio gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
 

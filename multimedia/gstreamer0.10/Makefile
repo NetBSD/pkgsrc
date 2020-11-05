@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2020/08/31 18:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2020/11/05 09:07:02 ryoon Exp $
 
 DISTNAME=		gstreamer-0.10.36
 PKGNAME=		${DISTNAME:S/gstreamer/gstreamer0.10/}
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		https://gstreamer.freedesktop.org/src/gstreamer/
 EXTRACT_SUFX=		.tar.bz2

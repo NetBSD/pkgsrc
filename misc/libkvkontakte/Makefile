@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2020/08/18 17:57:30 leot Exp $
+# $NetBSD: Makefile,v 1.51 2020/11/05 09:07:01 ryoon Exp $
 
 DISTNAME=	libkvkontakte-5.0.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_KDE:=libkvkontakte/5.0.0/src/}
 

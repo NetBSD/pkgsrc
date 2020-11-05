@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2020/08/17 20:17:58 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2020/11/05 09:07:20 ryoon Exp $
 
 BUILDLINK_TREE+=	qt5-qtmacextras
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtmacextras
 QT5_QTMACEXTRAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtmacextras+=	qt5-qtmacextras>=5.9.1
-BUILDLINK_ABI_DEPENDS.qt5-qtmacextras+=	qt5-qtmacextras>=5.15.0nb1
+BUILDLINK_ABI_DEPENDS.qt5-qtmacextras+=	qt5-qtmacextras>=5.15.1nb1
 BUILDLINK_PKGSRCDIR.qt5-qtmacextras?=	../../x11/qt5-qtmacextras
 
 BUILDLINK_INCDIRS.qt5-qtmacextras+=	qt5/include
