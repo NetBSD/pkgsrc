@@ -164,6 +164,7 @@ dvdcss			Enable CSS support for DVDs.
 dvdnav			Enable libdvdnav support to navigate DVDs.
 dvdread			Enable reproduction of DVDs.
 dvi			Enable device independent file format (mostly TeX) support.
+dynamic-arch		Auto-detect CPU features at runtime
 eaccelerator-disassembler	Include disassembler.
 eaccelerator-doc-comment-inclusion	Retain doc-comments in internal php structures.
 eai			Enable EAI (Email Address Internationalization) support.
