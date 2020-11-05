@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/11/05 16:53:16 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/05 17:06:10 bacon Exp $
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 
 OPENBLAS_VARIANT= openblas_openmp
-.include "../../wip/openblas/Makefile.common"
+.include "../../math/openblas/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
