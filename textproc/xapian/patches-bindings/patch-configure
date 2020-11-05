@@ -1,12 +1,28 @@
-$NetBSD: patch-configure,v 1.2 2017/08/07 22:24:05 schmonz Exp $
+$NetBSD: patch-configure,v 1.3 2020/11/05 10:59:44 schmonz Exp $
 
 - Remove hackaround for old OpenBSD bugs that break builds with other
   STL implementations.
 - Link directly with static-only libtclstub.a (fixes build on NetBSD).
+- Remove workaround for old macOS to fix Big Sur build.
 
---- configure.orig	2017-04-24 02:19:58.000000000 +0000
+--- configure.orig	2020-08-21 03:38:47.000000000 +0000
 +++ configure
-@@ -18051,7 +18051,7 @@ fi
+@@ -3309,14 +3309,6 @@ case $host in
+ *86*-darwin8*|*-darwin[91]*)
+       ;;
+ *-darwin*)
+-  case $MACOSX_DEPLOYMENT_TARGET in
+-  "")
+-    OVERRIDE_MACOSX_DEPLOYMENT_TARGET=10.3 ;;
+-  10.[012])
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Overriding MACOSX_DEPLOYMENT_TARGET from $MACOSX_DEPLOYMENT_TARGET to 10.3" >&5
+-$as_echo "$as_me: WARNING: Overriding MACOSX_DEPLOYMENT_TARGET from $MACOSX_DEPLOYMENT_TARGET to 10.3" >&2;}
+-    OVERRIDE_MACOSX_DEPLOYMENT_TARGET=10.3 ;;
+-  esac
+   ;;
+ esac
+  if test -n "$OVERRIDE_MACOSX_DEPLOYMENT_TARGET"; then
+@@ -18048,7 +18040,7 @@ fi
  	    for x in "/tcl$tcl_version" "" ; do
  	      TCLCONFIG_SH=$tcl_libdir_runtime$x/tclConfig.sh
  	      if test -r "$TCLCONFIG_SH" ; then
@@ -15,7 +31,7 @@ $NetBSD: patch-configure,v 1.2 2017/08/07 22:24:05 schmonz Exp $
  		break
  	      fi
  	    done
-@@ -19581,9 +19581,6 @@ SWIG_CXXFLAGS=
+@@ -19524,9 +19516,6 @@ SWIG_CXXFLAGS=
  if test yes = "$GXX" ; then
                      SWIG_CXXFLAGS="-fno-strict-aliasing"
  
