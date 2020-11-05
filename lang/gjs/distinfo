@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/11/05 17:12:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2020/11/05 17:58:56 nia Exp $
 
 SHA1 (gjs-1.64.3.tar.xz) = f3a6372321cda99f78feaf3ebdc6391532741f67
 RMD160 (gjs-1.64.3.tar.xz) = cf7057847308b17f39d348dc952feb0bce20a1a8
 SHA512 (gjs-1.64.3.tar.xz) = 9d92e52a7fef07853f3beb181798f89deb60b97b928d916cd827c99a6ab8f83abf7c352a1aa46be476a50e2efadfaf09befa54ccab0d51b0ac7127f2fe794801
 Size (gjs-1.64.3.tar.xz) = 422436 bytes
-SHA1 (patch-tools_run__iwyu.sh) = a03e6cc832d41c63c81448332e6ee822ff809a41
