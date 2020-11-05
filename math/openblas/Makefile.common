@@ -1,0 +1,142 @@
+# $NetBSD: Makefile.common,v 1.1 2020/11/05 16:31:45 bacon Exp $
+#
+# used by math/openblas_pthread/Makefile
+# used by math/openblas_openmp/Makefile
+# used by math/openblas/Makefile
+#
+# This is the common Makefile for OpenBLAS builds. It depends on
+# OPENBLAS_VARIANT = (openblas|openblas_pthread|openblas_openmp)
+# being set.
+
+DISTNAME=	OpenBLAS-${OPENBLAS_VERSION}
+PKGNAME=	${OPENBLAS_VARIANT}-${OPENBLAS_VERSION}
+DIST_SUBDIR=	openblas-${OPENBLAS_VERSION}
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_GITHUB:=xianyi/} \
+		http://www.netlib.org/lapack/timing/
+DISTFILES=	${DISTNAME}.tar.gz ${LARGE_FILE} ${TIMING_FILE}
+LARGE_FILE=	large.tgz
+TIMING_FILE=	timing.tgz
+GITHUB_PROJECT=	OpenBLAS
+GITHUB_TAG=	v${OPENBLAS_VERSION}
+
+DISTINFO_FILE=	${.CURDIR}/../../math/openblas/distinfo
+PATCHDIR=	${.CURDIR}/../../math/openblas/patches
+
+HOMEPAGE=	https://github.com/xianyi/OpenBLAS
+COMMENT=	Optimized BLAS library based on GotoBLAS2
+LICENSE=	modified-bsd
+
+# Needs source patching and/or GCC_REQD for NetBSD
+# NetBSD gfortran framework needs improvements for this and other packages
+# Untested on other platforms
+ONLY_FOR_PLATFORM=	Linux-*-*
+
+USE_LANGUAGES=	c fortran
+USE_TOOLS+=	gmake perl:build
+
+NO_CONFIGURE=	yes
+
+TEST_TARGET=	tests
+
+# Work around CFLAGS breakage:
+# https://github.com/xianyi/OpenBLAS/issues/818
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	CXXFLAGS=${CXXFLAGS:Q}
+MAKE_FLAGS+=	FFLAGS=${FFLAGS:Q}
+# Also set compilers explicitly, overriding Makefile.rule
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CXX=${CXX:Q}
+MAKE_FLAGS+=	FC=${FC:Q}
+
+# You may override the autodetected thread count limit.
+# Default is detected from build host, which may differ from run host.
+BUILD_DEFS+=	OPENBLAS_THREAD_LIMIT
+
+.include "../../mk/bsd.prefs.mk"
+
+# Default checks number of cores of build host.
+# Do we want a pkgsrc-wide default?
+OPENBLAS_THREAD_LIMIT?=	# empty
+.if !empty(OPENBLAS_THREAD_LIMIT)
+MAKE_FLAGS+=		NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
+.endif
+BENCHMARK_MAXTHREADS?=	8
+
+.if ${MACHINE_ARCH:M*64} == ""
+MAKE_FLAGS+=		BINARY32=1
+.else
+MAKE_FLAGS+=		BINARY64=1
+.endif
+# Those come in separate BLAS-agnostic packages.
+# ... except we start headaches about ILP64?
+MAKE_FLAGS+=		NO_CBLAS=1 NO_LAPACKE=1
+
+# Separate headers and cmake stuff.
+MAKE_FLAGS+=	OPENBLAS_INCLUDE_DIR=${PREFIX}/include/${OPENBLAS_VARIANT}
+MAKE_FLAGS+=	OPENBLAS_CMAKE_DIR=${PREFIX}/lib/cmake/${OPENBLAS_VARIANT}
+
+# TODO: Set INTERFACE64=1 with additional OPENBLAS_VARIANTs.
+# Need to settle on a convention for SYMBOLSUFFIX first, see
+# https://github.com/xianyi/OpenBLAS/issues/646 .
+.if ${OPENBLAS_VARIANT} == openblas
+MAKE_FLAGS+=	USE_OPENMP=0 USE_THREAD=0 USE_LOCKING=1
+BENCHMARK_ENV=	USE_SIMPLE_THREADED_LEVEL3=1
+.elif ${OPENBLAS_VARIANT} == openblas_pthread
+BENCHMARK_ENV=	OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
+MAKE_FLAGS+=	LIBNAMESUFFIX=pthread USE_OPENMP=0 USE_THREAD=1
+.elif ${OPENBLAS_VARIANT} == openblas_openmp
+BENCHMARK_ENV=	OMP_NUM_THREADS=${BENCHMARK_MAXTHREADS}
+MAKE_FLAGS+=	LIBNAMESUFFIX=openmp USE_OPENMP=1 NO_AFFINITY=1
+.endif
+
+SUBST_CLASSES+=		arch
+SUBST_STAGE.arch=	pre-build
+SUBST_SED.arch+=	-e "s+(ARCH)+(ARCH_)+"
+SUBST_FILES.arch+=	Makefile.tail
+SUBST_FILES.arch+=	driver/level3/Makefile
+SUBST_FILES.arch+=	driver/others/Makefile
+SUBST_FILES.arch+=	exports/Makefile
+SUBST_FILES.arch+=	interface/Makefile
+SUBST_FILES.arch+=	kernel/Makefile
+SUBST_FILES.arch+=	kernel/Makefile.L3
+SUBST_FILES.arch+=	lapack/laswp/Makefile
+SUBST_FILES.arch+=	lapack-netlib/SRC/Makefile
+SUBST_FILES.arch+=	lapack-netlib/SRC/VARIANTS/Makefile
+SUBST_FILES.arch+=	lapack-netlib/TESTING/MATGEN/Makefile
+SUBST_FILES.arch+=	lapack-netlib/LAPACKE/src/Makefile
+SUBST_FILES.arch+=	lapack-netlib/LAPACKE/utils/Makefile
+SUBST_FILES.arch+=	reference/Makefile
+SUBST_FILES.arch+=	Makefile.system
+
+SUBST_CLASSES+=		threads
+SUBST_STAGE.threads=	pre-build
+SUBST_SED.threads+=	-e "s+OPENBLAS_NUM_THREADS+OMP_NUM_THREADS+g"
+SUBST_FILES.threads+=	test/Makefile
+SUBST_FILES.threads+=	ctest/Makefile
+
+# Fix up pkgconfig file installation.
+SUBST_CLASSES+=		pc
+SUBST_STAGE.pc=		pre-build
+SUBST_SED.pc+=		-e 's+-lopenblas+-l${OPENBLAS_VARIANT}+'
+SUBST_SED.pc+=		-e 's+openblas.pc"+${OPENBLAS_VARIANT}.pc"+'
+SUBST_FILES.pc+=	Makefile.install openblas.pc.in
+
+PLIST_SRC=	${.CURDIR}/../../math/openblas/PLIST
+PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}
+
+post-extract:
+	(cd ${DISTDIR}/${DIST_SUBDIR} && \
+		${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC})
+
+# This builds some benchmark programs you can call from ${WRKSRC} afterwards.
+.PHONY: benchmark
+benchmark: build
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BENCHMARK_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} hpl)
+	(cd ${WRKSRC}/benchmark && ${SETENV} ${MAKE_ENV} \
+		${BENCHMARK_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
+
+.include "../../math/openblas/version.mk"
+
+.include "options.mk"

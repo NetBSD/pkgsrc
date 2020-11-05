@@ -1,0 +1,22 @@
+$NetBSD: patch-exports+Makefile,v 1.1 2020/11/05 16:31:45 bacon Exp $
+
+Improve dynamic lib naming
+
+--- exports/Makefile.orig	2019-08-11 21:23:27.000000000 +0000
++++ exports/Makefile
+@@ -173,6 +173,7 @@ endif
+ #http://stackoverflow.com/questions/7656425/makefile-ifeq-logical-or
+ ifeq ($(OSNAME), $(filter $(OSNAME),FreeBSD OpenBSD NetBSD DragonFly))
+ 
++EXTRALIB += -lgfortran
+ so : ../$(LIBSONAME)
+ 
+ ifeq (, $(SYMBOLPREFIX)$(SYMBOLSUFFIX))
+@@ -184,6 +185,7 @@ else
+ endif
+ 	$(CC) $(CFLAGS) $(LDFLAGS)  -shared -o ../$(LIBSONAME) \
+ 	-Wl,--whole-archive $< -Wl,--no-whole-archive \
++	-Wl,-soname,$(LIBPREFIX).so.$(MAJOR_VERSION) \
+ 	$(FEXTRALIB) $(EXTRALIB)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -w -o linktest linktest.c ../$(LIBSONAME) $(FEXTRALIB) && echo OK.
+ 	rm -f linktest
