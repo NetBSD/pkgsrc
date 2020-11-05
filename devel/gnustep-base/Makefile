@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2020/09/21 03:32:27 mef Exp $
+# $NetBSD: Makefile,v 1.90 2020/11/05 09:06:47 ryoon Exp $
 
 DISTNAME=	gnustep-base-1.27.0
 #PKGREVISION=	1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2020/10/02 23:47:28 mef Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2020/11/05 09:07:14 ryoon Exp $
 
 BUILDLINK_TREE+=	gnustep-gui
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnustep-gui
 GNUSTEP_GUI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnustep-gui+=	gnustep-gui>=0.28
-BUILDLINK_ABI_DEPENDS.gnustep-gui+=	gnustep-gui>=0.28
+BUILDLINK_ABI_DEPENDS.gnustep-gui+=	gnustep-gui>=0.28.0nb1
 BUILDLINK_PKGSRCDIR.gnustep-gui?=	../../x11/gnustep-gui
 
 .include "../../devel/gnustep-base/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2020/06/02 08:22:34 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2020/11/05 09:06:46 ryoon Exp $
 
 BUILDLINK_TREE+=	GConf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	GConf
 GCONF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.8.0.1
-BUILDLINK_ABI_DEPENDS.GConf+=	GConf>=3.2.3nb5
+BUILDLINK_ABI_DEPENDS.GConf+=	GConf>=3.2.3nb7
 BUILDLINK_PKGSRCDIR.GConf?=	../../devel/GConf
 
 .include "../../devel/gettext-lib/buildlink3.mk"

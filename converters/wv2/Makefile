@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2020/06/02 08:22:33 adam Exp $
+# $NetBSD: Makefile,v 1.45 2020/11/05 09:06:44 ryoon Exp $
 #
 
 DISTNAME=		wv2-0.2.3
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		converters
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 EXTRACT_SUFX=		.tar.bz2
