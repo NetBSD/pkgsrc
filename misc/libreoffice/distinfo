@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.105 2020/11/01 12:17:29 ryoon Exp $
+$NetBSD: distinfo,v 1.106 2020/11/05 09:23:43 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -242,6 +242,7 @@ SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 86a0cb3a7db719
 SHA1 (patch-external_skia_Library__skia.mk) = bf97a0724bd8cb5e249b63e60e85e2e7217cfdad
 SHA1 (patch-external_skia_UnpackedTarball__skia.mk) = ac6bad52e9ba77375c8a9e009620a55661a45fcd
 SHA1 (patch-external_skia_netbsd.patch.0) = 115f0db3358c8ec816fc5eb2fe725c2c620d6c96
+SHA1 (patch-i18npool_source_calendar_calendar__gregorian.cxx) = 5ea36d612bb0a54136c27c2ffaaa983746e3a502
 SHA1 (patch-i18nutil_source_utility_unicode.cxx) = 014d48574a379f92f2d0afe3c91d2c2956708dd8
 SHA1 (patch-instsetoo__native_inc__openoffice_unix_find-requires-x11.sh) = e871e2096c367e742dc5758fe60ae819846def29
 SHA1 (patch-sal_osl_unx_system.hxx) = 478dd47dc512d283a554600951010bbaa10c2c0e
