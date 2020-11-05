@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6057 2020/11/05 22:42:02 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.6058 2020/11/05 22:52:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8949,3 +8949,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-pypika to 0.43.1 [adam 2020-11-05]
 	Updated sysutils/broot to 1.0.5 [pin 2020-11-05]
 	Updated devel/lua-mode to 20201010 [nikita 2020-11-05]
+	Updated news/sfeed_curses to 0.9.5 [leot 2020-11-05]
