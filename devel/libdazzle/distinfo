@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/06/10 19:17:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2020/11/05 09:28:29 nia Exp $
 
-SHA1 (libdazzle-3.36.0.tar.xz) = ed76bceb1153ab25b8e6b8c7dc0f292fa383fd30
-RMD160 (libdazzle-3.36.0.tar.xz) = 212d790063b884134709c6d08d52d856e701c5e5
-SHA512 (libdazzle-3.36.0.tar.xz) = d020161a1c744192657a551f53c4a7bb61bf8e9df93401085168c75aaf1305d548bf56a39b7a9e202656f453451a6615f1950992f78e3a23cba4324999f1e37f
-Size (libdazzle-3.36.0.tar.xz) = 446400 bytes
+SHA1 (libdazzle-3.38.0.tar.xz) = 1e99e3b3bb1b1c57b9df75ffadca375a049d2a75
+RMD160 (libdazzle-3.38.0.tar.xz) = dcef5df588c735a4046b63967ef1597117721561
+SHA512 (libdazzle-3.38.0.tar.xz) = 76dee75fab5a508c274f45cf5f51bac4edc80786942ccc64e49ffe1721607d88f9067b0a7751f44a48bfe38ee87b6986d449e8c5e6b704c6ec32de84d21f7e69
+Size (libdazzle-3.38.0.tar.xz) = 447304 bytes
