@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/05 09:07:31 ryoon Exp $
 #
 
 DISTNAME=	bodr-9
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bodr/}
 

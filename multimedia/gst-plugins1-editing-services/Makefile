@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/06/02 08:24:26 adam Exp $
+# $NetBSD: Makefile,v 1.11 2020/11/05 09:08:47 ryoon Exp $
 
 DISTNAME=	gstreamer-editing-services-1.16.2
 PKGNAME=	${DISTNAME:S/gstreamer-/gst-plugins1-/1}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-editing-services/
 EXTRACT_SUFX=	.tar.xz
