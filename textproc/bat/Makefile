@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/10/04 22:56:13 fox Exp $
+# $NetBSD: Makefile,v 1.16 2020/11/05 09:09:12 ryoon Exp $
 
 DISTNAME=	bat-0.16.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

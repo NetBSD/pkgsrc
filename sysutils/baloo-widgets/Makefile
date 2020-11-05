@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2020/08/17 20:20:02 leot Exp $
+# $NetBSD: Makefile,v 1.28 2020/11/05 09:09:05 ryoon Exp $
 
 DISTNAME=	baloo-widgets-${_KDE_VERSION}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	sysutils
 COMMENT=	The BalooWidgets library
 LICENSE=	gnu-gpl-v3

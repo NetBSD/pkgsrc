@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2020/09/21 08:48:39 mef Exp $
+# $NetBSD: Makefile,v 1.120 2020/11/05 09:08:34 ryoon Exp $
 
 DISTNAME=	smalltalk-3.2.5
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=smalltalk/}
 

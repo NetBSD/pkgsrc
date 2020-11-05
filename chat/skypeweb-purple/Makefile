@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2020/06/02 08:23:20 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/11/05 09:07:36 ryoon Exp $
 
 VERSION=	1.5
 DISTNAME=	skype4pidgin-${VERSION}
 PKGNAME=	skypeweb-purple-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EionRobb/}
 # default picks from PKGNAME
