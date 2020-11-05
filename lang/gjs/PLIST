@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/06 15:50:31 fox Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/05 17:12:00 nia Exp $
 bin/gjs
 bin/gjs-console
 include/gjs-1.0/gjs/context.h
 include/gjs-1.0/gjs/coverage.h
+include/gjs-1.0/gjs/error-types.h
 include/gjs-1.0/gjs/gjs.h
 include/gjs-1.0/gjs/macros.h
+include/gjs-1.0/gjs/mem.h
 include/gjs-1.0/gjs/profiler.h
-include/gjs-1.0/util/error.h
 lib/gjs/girepository-1.0/GjsPrivate-1.0.typelib
-lib/libgjs.la
+lib/libgjs.so
+lib/libgjs.so.0
+lib/libgjs.so.0.0.0
 lib/pkgconfig/gjs-1.0.pc
 share/gjs-1.0/lsan/lsan.supp
 share/gjs-1.0/valgrind/gjs.supp
