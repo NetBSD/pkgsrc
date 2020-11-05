@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2020/08/17 20:20:33 leot Exp $
+# $NetBSD: Makefile,v 1.57 2020/11/05 09:09:26 ryoon Exp $
 
 DISTNAME=	pygtksourceview-2.10.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtksourceview/2.10/}
 EXTRACT_SUFX=	.tar.bz2

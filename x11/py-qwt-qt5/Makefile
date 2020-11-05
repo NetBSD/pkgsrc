@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/08/30 08:21:15 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/05 09:09:26 ryoon Exp $
 
 VERSION=	1.02.00
 DISTNAME=	pyqt-qwt-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-qwt-qt5-${DISTNAME:S/pyqt-qwt-//}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GauiStori/}
 GITHUB_PROJECT=	PyQt-Qwt

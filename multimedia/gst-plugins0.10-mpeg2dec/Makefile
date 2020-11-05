@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/06/02 08:24:25 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/05 09:08:46 ryoon Exp $
 #
 
 GST_PLUGINS0.10_NAME=	mpeg2dec
 GST_PLUGINS0.10_DIRS=	ext/mpeg2dec
-PKGREVISION=		4
+PKGREVISION=		5
 
 .include "../../multimedia/gst-plugins0.10-ugly/Makefile.common"
 

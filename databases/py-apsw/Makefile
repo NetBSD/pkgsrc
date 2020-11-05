@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2020/09/18 13:12:56 adam Exp $
+# $NetBSD: Makefile,v 1.34 2020/11/05 09:07:48 ryoon Exp $
 
 DISTNAME=	apsw-${GITHUB_RELEASE}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
 EXTRACT_SUFX=	.zip
