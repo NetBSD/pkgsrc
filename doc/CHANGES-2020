@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6044 2020/11/05 08:04:23 gson Exp $
+$NetBSD: CHANGES-2020,v 1.6045 2020/11/05 08:36:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8935,3 +8935,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/geany to 1.37 [gutteridge 2020-11-05]
 	Updated textproc/oniguruma to 6.9.6 [kim 2020-11-05]
 	Updated misc/py-anita to 2.6 [gson 2020-11-05]
+	Added sysutils/gnome-characters version 3.34.0 [nia 2020-11-05]
