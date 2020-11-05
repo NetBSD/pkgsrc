@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2018/02/02 23:57:50 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2020/11/05 09:19:22 ryoon Exp $
 
 SHA1 (libe-book-0.1.3.tar.bz2) = dcd5ba54d86fdb836e2085b75860d5e09b24e936
 RMD160 (libe-book-0.1.3.tar.bz2) = 36d0627d1f2efc5b2fdce9c8f9f701b02ce71aa2
 SHA512 (libe-book-0.1.3.tar.bz2) = 9afa2949f702a34fd6278145ce8d18d504326ed5a103bbc872d0493fcf3e2166d41d094bb0d74b80aa913ca6d082f5bd3259799a4a3c7359331ccdfa1e029a21
 Size (libe-book-0.1.3.tar.bz2) = 510498 bytes
+SHA1 (patch-src_lib_EBOOKCharsetConverter.cpp) = bb7e3fa0325178c0decd129cda05872e7ac728b4
