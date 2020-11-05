@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6042 2020/11/05 00:54:55 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.6043 2020/11/05 07:08:43 kim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8933,3 +8933,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/gnome-dictionary version 3.26.1 [nia 2020-11-04]
 	Added sysutils/gnome-font-viewer version 3.34.0 [nia 2020-11-04]
 	Updated devel/geany to 1.37 [gutteridge 2020-11-05]
+	Updated textproc/oniguruma to 6.9.6 [kim 2020-11-05]
