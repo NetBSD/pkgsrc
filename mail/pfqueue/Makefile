@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/06/02 08:24:15 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/11/05 09:08:36 ryoon Exp $
 #
 
 DISTNAME=	pfqueue-0.5.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfqueue/}
 

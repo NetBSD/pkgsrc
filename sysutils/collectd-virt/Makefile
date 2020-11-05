@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/10/24 22:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/05 09:09:07 ryoon Exp $
 
 COLLECTD_PACKAGE=	virt
 
 COMMENT=		Statistics collection daemon - virt plugin
+PKGREVISION=		1
 
 .include "../../sysutils/libvirt/buildlink3.mk"
 COLLECTD_LIB.virt=	${BUILDLINK_PREFIX.libvirt}

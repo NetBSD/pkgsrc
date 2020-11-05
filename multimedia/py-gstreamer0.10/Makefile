@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2020/06/02 08:24:28 adam Exp $
+# $NetBSD: Makefile,v 1.46 2020/11/05 09:08:49 ryoon Exp $
 
 DISTNAME=		gst-python-0.10.22
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/gst-python/gstreamer0.10/}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		multimedia
 MASTER_SITES=		https://gstreamer.freedesktop.org/src/gst-python/
 EXTRACT_SUFX=		.tar.bz2
