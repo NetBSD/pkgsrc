@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.69 2020/08/17 20:17:36 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.70 2020/11/05 09:07:00 ryoon Exp $
 
 BUILDLINK_TREE+=	kdepimlibs
 
@@ -11,7 +11,7 @@ kdepimlibs4-preconfigure:
 	mv ${BUILDLINK_DIR}/include/gpgme++ ${BUILDLINK_DIR}/include/gpgme++.xxx
 
 BUILDLINK_API_DEPENDS.kdepimlibs+=	kdepimlibs4>=4.0.0
-BUILDLINK_ABI_DEPENDS.kdepimlibs+=	kdepimlibs4>=4.14.10nb27
+BUILDLINK_ABI_DEPENDS.kdepimlibs+=	kdepimlibs4>=4.14.10nb28
 BUILDLINK_PKGSRCDIR.kdepimlibs?=	../../misc/kdepimlibs4
 
 .include "../../mk/bsd.fast.prefs.mk"

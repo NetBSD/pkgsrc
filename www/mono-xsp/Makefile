@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2020/06/02 08:23:01 adam Exp $
+# $NetBSD: Makefile,v 1.52 2020/11/05 09:07:13 ryoon Exp $
 
 DISTNAME=	xsp-3.8
 PKGNAME=	mono-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	www
 MASTER_SITES=	https://download.mono-project.com/sources/xsp/
 

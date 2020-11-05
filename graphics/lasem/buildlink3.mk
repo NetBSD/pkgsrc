@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2020/08/17 20:17:30 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2020/11/05 09:06:54 ryoon Exp $
 
 BUILDLINK_TREE+=	lasem
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lasem
 LASEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lasem+=	lasem>=0.2.0
-BUILDLINK_ABI_DEPENDS.lasem?=	lasem>=0.4.1nb19
+BUILDLINK_ABI_DEPENDS.lasem?=	lasem>=0.4.1nb20
 BUILDLINK_PKGSRCDIR.lasem?=	../../graphics/lasem
 
 .include "../../devel/glib2/buildlink3.mk"

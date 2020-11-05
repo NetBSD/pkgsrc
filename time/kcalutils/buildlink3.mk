@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2020/08/18 17:57:31 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2020/11/05 09:07:11 ryoon Exp $
 
 BUILDLINK_TREE+=	kcalutils
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kcalutils
 KCALUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcalutils+=	kcalutils>=17.12.1
-BUILDLINK_ABI_DEPENDS.kcalutils?=		kcalutils>=20.04.1nb2
+BUILDLINK_ABI_DEPENDS.kcalutils?=		kcalutils>=20.04.1nb3
 BUILDLINK_PKGSRCDIR.kcalutils?=		../../time/kcalutils
 
 .include "../../misc/kidentitymanagement/buildlink3.mk"

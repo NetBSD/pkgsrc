@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/08/17 20:17:56 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2020/11/05 09:07:19 ryoon Exp $
 
 BUILDLINK_TREE+=	py-qt5-qscintilla
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-qt5-qscintilla
 PY_QT5_QSCINTILLA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-qt5-qscintilla+=	${PYPKGPREFIX}-qt5-qscintilla>=2.11.2
-BUILDLINK_ABI_DEPENDS.py-qt5-qscintilla+=	${PYPKGPREFIX}-qt5-qscintilla>=2.11.5nb1
+BUILDLINK_ABI_DEPENDS.py-qt5-qscintilla+=	${PYPKGPREFIX}-qt5-qscintilla>=2.11.5nb2
 BUILDLINK_PKGSRCDIR.py-qt5-qscintilla?=		../../x11/py-qt5-qscintilla
 
 .include "../../x11/py-sip/buildlink3.mk"
