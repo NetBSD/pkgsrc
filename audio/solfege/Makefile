@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2020/08/17 20:18:11 leot Exp $
+# $NetBSD: Makefile,v 1.79 2020/11/05 09:07:30 ryoon Exp $
 
 DISTNAME=		solfege-3.22.2
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GNU:=solfege/}
 EXTRACT_SUFX=		.tar.xz

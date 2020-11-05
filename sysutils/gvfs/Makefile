@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2020/08/17 20:20:05 leot Exp $
+# $NetBSD: Makefile,v 1.113 2020/11/05 09:09:08 ryoon Exp $
 #
 
 DISTNAME=	gvfs-1.6.7
-PKGREVISION=	51
+PKGREVISION=	52
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.6/}
 EXTRACT_SUFX=	.tar.bz2

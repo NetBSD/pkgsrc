@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/08/17 20:20:17 leot Exp $
+# $NetBSD: Makefile,v 1.47 2020/11/05 09:09:17 ryoon Exp $
 
 DISTNAME=		jwm-2.3.7
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		wm x11
 MASTER_SITES=		http://www.joewing.net/programs/jwm/releases/
 EXTRACT_SUFX=		.tar.xz

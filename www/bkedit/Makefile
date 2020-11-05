@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2020/06/02 08:24:55 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/11/05 09:09:19 ryoon Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
 PKGNAME=		${DISTNAME:S/_//}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		www
 MASTER_SITES=		http://www.vakuumverpackt.de/nettools/bk_edit/
 

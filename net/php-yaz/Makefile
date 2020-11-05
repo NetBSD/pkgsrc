@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/06/02 08:24:34 adam Exp $
+# $NetBSD: Makefile,v 1.46 2020/11/05 09:08:56 ryoon Exp $
 
 MODNAME=		yaz
 PECL_VERSION=		1.2.2
@@ -7,7 +7,7 @@ CATEGORIES+=		net
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		PHP extension for YAZ
-PKGREVISION=		8
+PKGREVISION=		9
 LICENSE=		modified-bsd
 
 CONFIGURE_ARGS+=	--with-${PKGMODNAME}=shared,${BUILDLINK_PREFIX.yaz}

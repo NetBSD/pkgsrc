@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2020/08/17 20:19:13 leot Exp $
+# $NetBSD: Makefile,v 1.80 2020/11/05 09:08:28 ryoon Exp $
 #
 
 DISTNAME=	gmfsk-0.6
-PKGREVISION=	62
+PKGREVISION=	63
 CATEGORIES=	ham
 MASTER_SITES=	http://gmfsk.connect.fi/
 

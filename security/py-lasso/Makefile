@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2020/08/31 18:11:21 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2020/11/05 09:09:04 ryoon Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 COMMENT=	Liberty Alliance Single Sign On binding for Python
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat

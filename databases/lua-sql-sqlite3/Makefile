@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/06/02 08:23:25 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/05 09:07:41 ryoon Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../databases/lua-sql-mysql/Makefile.common"
 
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/luasql/sql-sqlite3/}

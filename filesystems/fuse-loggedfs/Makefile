@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/06/02 08:23:47 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/11/05 09:08:05 ryoon Exp $
 
 DISTNAME=	loggedfs-0.4
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=loggedfs/}
 EXTRACT_SUFX=	.tar.bz2

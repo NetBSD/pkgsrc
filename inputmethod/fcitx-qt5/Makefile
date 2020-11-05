@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/08/17 20:19:14 leot Exp $
+# $NetBSD: Makefile,v 1.14 2020/11/05 09:08:30 ryoon Exp $
 
 DISTNAME=	fcitx-qt5-1.2.3
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx-qt5/
 EXTRACT_SUFX=	.tar.xz

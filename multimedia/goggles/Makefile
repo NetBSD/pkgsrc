@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/08/17 20:19:38 leot Exp $
+# $NetBSD: Makefile,v 1.24 2020/11/05 09:08:45 ryoon Exp $
 
 DISTNAME=		goggles-0.9.1
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		multimedia
 #MASTER_SITES=		http://www.fifthplanet.net/files/
 EXTRACT_SUFX=		.tar.bz2

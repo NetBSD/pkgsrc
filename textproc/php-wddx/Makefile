@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2020/06/02 08:24:51 adam Exp $
+# $NetBSD: Makefile,v 1.22 2020/11/05 09:09:14 ryoon Exp $
 
 MODNAME=		wddx
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for WDDX support
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFLICTS=	php-wddx-[0-9]*
 

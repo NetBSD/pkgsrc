@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/08/17 20:20:29 leot Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/05 09:09:25 ryoon Exp $
 
 DISTNAME=	lxqt-notificationd-0.15.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

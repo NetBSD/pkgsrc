@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2020/09/15 19:30:53 adam Exp $
+# $NetBSD: Makefile,v 1.63 2020/11/05 09:09:26 ryoon Exp $
 
 DISTNAME=	PyQt5-5.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
+PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5/}
 

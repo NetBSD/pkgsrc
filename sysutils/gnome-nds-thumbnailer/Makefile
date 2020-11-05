@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2020/08/17 20:20:05 leot Exp $
+# $NetBSD: Makefile,v 1.40 2020/11/05 09:09:07 ryoon Exp $
 #
 
 DISTNAME=	gnome-nds-thumbnailer-1.2.1
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	sysutils graphics emulators
 MASTER_SITES=	https://download.gnome.org/sources/gnome-nds-thumbnailer/1.2/
 EXTRACT_SUFX=	.tar.bz2

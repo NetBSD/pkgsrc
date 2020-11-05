@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/06/02 08:23:38 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/05 09:07:56 ryoon Exp $
 
 DISTNAME=	libhid-0.2.16
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://sourceforge.net/projects/salix-sbo/files/13.37/libhid/
 MASTER_SITES+=	https://alioth.debian.org/frs/download.php/file/1958/

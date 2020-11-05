@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/07/08 14:50:05 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/05 09:09:21 ryoon Exp $
 
 DISTNAME=	lua-psl-0.3
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
+PKGREVISION=	1
 CATEGORIES=	www lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=daurnimator/}
 GITHUB_PROJECT=	lua-psl
