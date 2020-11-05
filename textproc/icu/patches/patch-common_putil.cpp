@@ -1,9 +1,9 @@
-$NetBSD: patch-common_putil.cpp,v 1.3 2017/04/22 20:11:45 adam Exp $
+$NetBSD: patch-common_putil.cpp,v 1.4 2020/11/05 08:58:41 ryoon Exp $
 
---- common/putil.cpp.orig	2017-04-10 14:22:16.000000000 +0000
+--- common/putil.cpp.orig	2020-10-28 21:21:12.000000000 +0000
 +++ common/putil.cpp
-@@ -136,6 +140,14 @@ using namespace Microsoft::WRL::Wrappers
- #endif
+@@ -128,6 +128,14 @@
+ 
  
  /*
 + * Mac OS X 10.4 doesn't use its localtime_r() declaration in <time.h> if either _ANSI_SOURCE or _POSIX_C_SOURCE is #defined.
