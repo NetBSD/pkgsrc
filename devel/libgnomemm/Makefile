@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2020/08/17 20:17:22 leot Exp $
+# $NetBSD: Makefile,v 1.76 2020/11/05 09:06:50 ryoon Exp $
 
 DISTNAME=	libgnomemm-2.30.0
-PKGREVISION=	40
+PKGREVISION=	41
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomemm/2.30/}
 EXTRACT_SUFX=	.tar.bz2

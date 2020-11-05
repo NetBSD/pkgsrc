@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2020/08/17 20:17:21 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2020/11/05 09:06:48 ryoon Exp $
 
 BUILDLINK_TREE+=	kpeople
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kpeople
 KPEOPLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kpeople+=	kpeople>=5.19.0
-BUILDLINK_ABI_DEPENDS.kpeople?=	kpeople>=5.70.0nb1
+BUILDLINK_ABI_DEPENDS.kpeople?=	kpeople>=5.70.0nb2
 BUILDLINK_PKGSRCDIR.kpeople?=	../../devel/kpeople
 
 .include "../../devel/kservice/buildlink3.mk"

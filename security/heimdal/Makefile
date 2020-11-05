@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.143 2020/07/26 09:30:14 bsiegert Exp $
+# $NetBSD: Makefile,v 1.144 2020/11/05 09:07:06 ryoon Exp $
 
 DISTNAME=	heimdal-1.5.3
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	security
 # Original distfile is unavailable on Github
 #GITHUB_TAG=	${DISTNAME}

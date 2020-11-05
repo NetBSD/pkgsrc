@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/08/17 20:17:25 leot Exp $
+# $NetBSD: Makefile,v 1.27 2020/11/05 09:06:52 ryoon Exp $
 
 DISTNAME=	threadweaver-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
