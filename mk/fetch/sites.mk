@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.166 2020/09/02 22:16:48 kim Exp $
+# $NetBSD: sites.mk,v 1.167 2020/11/05 09:07:24 nia Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -73,8 +73,6 @@ MASTER_SITE_SUNSITE+=   \
 	ftp://ftp.lip6.fr/pub/linux/sunsite/
 
 MASTER_SITE_GNOME+=     \
-	http://ftp.gnome.org/pub/GNOME/ \
-	ftp://ftp.gnome.org/pub/GNOME/ \
 	https://download.gnome.org/
 
 MASTER_SITE_KDE+=	\
