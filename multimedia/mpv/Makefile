@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2020/11/05 09:08:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.117 2020/11/06 12:30:16 nia Exp $
 
 DISTNAME=	mpv-0.32.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 # needs sem_timedwait(3)
 NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
-
-NOT_PAX_MPROTECT_SAFE+=	bin/mpv
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
