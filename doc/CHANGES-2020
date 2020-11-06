@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6059 2020/11/06 00:51:37 js Exp $
+$NetBSD: CHANGES-2020,v 1.6060 2020/11/06 08:59:54 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8951,3 +8951,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/lua-mode to 20201010 [nikita 2020-11-05]
 	Updated news/sfeed_curses to 0.9.5 [leot 2020-11-05]
 	Updated devel/fossil to 2.13 [js 2020-11-06]
+	Updated www/firefox to 82.0.2nb2 [maya 2020-11-06]
