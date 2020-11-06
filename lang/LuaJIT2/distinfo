@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2018/06/02 20:01:21 he Exp $
+$NetBSD: distinfo,v 1.11 2020/11/06 12:15:53 nia Exp $
 
 SHA1 (LuaJIT-2.0.5.tar.gz) = 10427215da7d424fd9e48adbea087966053cdb6f
 RMD160 (LuaJIT-2.0.5.tar.gz) = 5176d34fa112c4586394398c3a5c9ce1ad4d4c72
@@ -7,3 +7,5 @@ Size (LuaJIT-2.0.5.tar.gz) = 849845 bytes
 SHA1 (patch-Makefile) = edea30d017c9d2938d951bfdee88020906945aee
 SHA1 (patch-src_Makefile) = d7236260dc17f470d7d6e41a57a22dcd3a501c28
 SHA1 (patch-src_lj__arch.h) = 4c34706db4c678b368bb3e38b07505abde01e590
+SHA1 (patch-src_lj__ccallback.c) = 8032bc451a504ae9538fb0ae4cc1ee729ede3a70
+SHA1 (patch-src_lj__mcode.c) = c150e0b07ab441e983ace21e0e813fd4334290b5
