@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2020/09/04 10:50:08 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.45 2020/11/06 15:06:49 nia Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -18,7 +18,6 @@ include/harfbuzz/hb-gobject-enums.h
 include/harfbuzz/hb-gobject-structs.h
 include/harfbuzz/hb-gobject.h
 ${PLIST.graphite2}include/harfbuzz/hb-graphite2.h
-${PLIST.icu}include/harfbuzz/hb-icu.h
 include/harfbuzz/hb-map.h
 include/harfbuzz/hb-ot-color.h
 include/harfbuzz/hb-ot-deprecated.h
@@ -44,9 +43,6 @@ ${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 lib/libharfbuzz-gobject.so
 lib/libharfbuzz-gobject.so.0
 lib/libharfbuzz-gobject.so.0.20702.0
-${PLIST.icu}lib/libharfbuzz-icu.so
-${PLIST.icu}lib/libharfbuzz-icu.so.0
-${PLIST.icu}lib/libharfbuzz-icu.so.0.20702.0
 lib/libharfbuzz-subset.so
 lib/libharfbuzz-subset.so.0
 lib/libharfbuzz-subset.so.0.20702.0
@@ -54,7 +50,6 @@ lib/libharfbuzz.so
 lib/libharfbuzz.so.0
 lib/libharfbuzz.so.0.20702.0
 lib/pkgconfig/harfbuzz-gobject.pc
-${PLIST.icu}lib/pkgconfig/harfbuzz-icu.pc
 lib/pkgconfig/harfbuzz-subset.pc
 lib/pkgconfig/harfbuzz.pc
 ${PLIST.introspection}share/gir-1.0/HarfBuzz-0.0.gir
