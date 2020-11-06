@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2020/08/18 17:57:34 leot Exp $
+# $NetBSD: Makefile,v 1.88 2020/11/06 11:16:38 nia Exp $
 
 DISTNAME=		cmus-2.8.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cmus/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -52,10 +52,9 @@ PLIST.coreaudio=	yes
 CFLAGS+=	-march=i586
 .endif
 
-NOT_PAX_MPROTECT_SAFE+=	bin/cmus
+#NOT_PAX_MPROTECT_SAFE+=	bin/cmus
 
 .include "options.mk"
-
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
