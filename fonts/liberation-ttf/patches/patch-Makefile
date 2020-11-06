@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2020/11/06 18:07:37 maya Exp $
+
+Allow overriding python.
+
+--- Makefile.orig	2020-06-08 04:37:53.000000000 +0000
++++ Makefile
+@@ -4,7 +4,7 @@
+ # 4web:                        dtto for TTF, WOFF, SVG, and EOT
+ 
+ FONTFORGE    = fontforge
+-PYTHON       = python3
++PYTHON       ?= python3
+ FONTLINT     = fontlint
+ 
+ # TTF->EOT converters in fallback order
