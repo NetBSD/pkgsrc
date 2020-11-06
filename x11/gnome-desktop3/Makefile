@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/11/04 12:12:48 nia Exp $
+# $NetBSD: Makefile,v 1.41 2020/11/06 13:34:37 mef Exp $
 
 DISTNAME=	gnome-desktop-3.38.1
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.1
 
 USE_TOOLS+=		pkg-config xgettext
 USE_PKGLOCALEDIR=	yes
+DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
 
