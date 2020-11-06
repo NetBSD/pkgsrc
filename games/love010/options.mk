@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/06/28 09:29:16 nia Exp $
+# $NetBSD: options.mk,v 1.4 2020/11/06 12:15:54 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.love
 
@@ -12,8 +12,6 @@ PKG_SUGGESTED_OPTIONS=	luajit
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mluajit)
-# JIT needs WX mappings
-NOT_PAX_MPROTECT_SAFE+=		love0.10/bin/love
 .  include "../../lang/LuaJIT2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=		--with-lua=lua
