@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6062 2020/11/06 09:22:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6063 2020/11/06 12:46:27 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8955,3 +8955,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/mozjs68 to 68.6.0nb7 [maya 2020-11-06]
 	Updated security/py-cryptodome to 3.9.9 [adam 2020-11-06]
 	Updated textproc/py-elementpath to 2.0.4 [adam 2020-11-06]
+	Updated www/grafana to 7.3.1 [tnn 2020-11-06]
