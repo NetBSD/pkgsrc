@@ -1,33 +1,35 @@
-# $NetBSD: Makefile,v 1.15 2017/11/01 05:17:06 maya Exp $
+# $NetBSD: Makefile,v 1.16 2020/11/06 18:07:37 maya Exp $
 
-DISTNAME=	liberation-fonts-ttf-2.00.1
+DISTNAME=	liberation-fonts-ttf-2.1.1
 PKGNAME=	${DISTNAME:S/-fonts//}
-PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	https://releases.pagure.org/liberation-fonts/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=liberationfonts/}
+GITHUB_PROJECT=	liberation-fonts
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.redhat.com/promo/fonts/
 COMMENT=	TrueType fonts from RedHat
 LICENSE=	ofl-v1.1
 
-NO_BUILD=	yes
+USE_TOOLS+=	gmake
+
 NO_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-ttf//}
 
-DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-FONTDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf=	${FONTDIR}
+DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-INSTALLATION_DIRS=	${DOCDIR} ${FONTDIR}
+INSTALLATION_DIRS+=	${DOCSDIR}
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools
+BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
+
+REPLACE_PYTHON+=	scripts/setisFixedPitch-fonttools.py
 
 do-install:
-	set -e; \
-	cd ${WRKSRC} && for f in *.ttf ; do \
-		${INSTALL_DATA} $$f ${DESTDIR}${FONTDIR}/$$f ; \
-	done
+.for docfile in AUTHORS LICENSE README.md TODO ChangeLog
+	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCSDIR}
+.endfor
 
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/ChangeLog \
-		${WRKSRC}/LICENSE ${WRKSRC}/README ${WRKSRC}/TODO \
-		${DESTDIR}${DOCDIR}
-
+.include "../../mk/fonts.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
