@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.16 2020/03/22 09:46:10 nia Exp $
+# $NetBSD: fonts.mk,v 1.17 2020/11/06 18:04:27 maya Exp $
 #
 # Install .otf and .ttf font files.
 #
@@ -8,8 +8,6 @@
 #
 # OTF_FONTS_DIR is the install directory for .otf files
 
-NO_CONFIGURE?=	yes
-NO_BUILD?=	yes
 USE_LANGUAGES?=	# none
 
 TTF_FONTS_DIR?=		${PREFIX}/share/fonts/X11/TTF

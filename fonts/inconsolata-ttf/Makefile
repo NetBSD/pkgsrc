@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/07/29 08:43:17 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/06 18:04:25 maya Exp $
 
 PKGNAME=	inconsolata-ttf-2.001
 CATEGORIES=	fonts
@@ -24,6 +24,9 @@ do-extract:
 .for file in ${DISTFILES}
 	${CP} ${_DISTDIR}/${file} ${WRKSRC}/${file}
 .endfor
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
