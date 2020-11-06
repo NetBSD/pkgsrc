@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/03 20:18:56 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/06 16:00:15 tnn Exp $
 
 DISTNAME=	promscale-0.1.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
@@ -12,9 +12,8 @@ LICENSE=	apache-2.0
 
 .include "go-modules.mk"
 
-GO_BUILD_PATTERN=	./...
+GO_BUILD_PATTERN=	./cmd/promscale/...
 INSTALLATION_DIRS+=	bin
-WRKSRC=			${WRKDIR}/${DISTNAME}/cmd/promscale
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/promscale ${DESTDIR}${PREFIX}/bin
