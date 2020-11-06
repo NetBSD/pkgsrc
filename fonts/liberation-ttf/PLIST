@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:32 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/11/06 18:07:37 maya Exp $
 share/doc/liberation-ttf/AUTHORS
 share/doc/liberation-ttf/ChangeLog
 share/doc/liberation-ttf/LICENSE
-share/doc/liberation-ttf/README
+share/doc/liberation-ttf/README.md
 share/doc/liberation-ttf/TODO
 share/fonts/X11/TTF/LiberationMono-Bold.ttf
 share/fonts/X11/TTF/LiberationMono-BoldItalic.ttf
