@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:31:58 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/11/06 18:04:27 maya Exp $
 
 DISTNAME=	un-fonts-extra-1.0.2-080608
 PKGNAME=	${DISTNAME:S/fonts-extra/extra-ttf/:S/-0/.200/}
@@ -13,6 +13,9 @@ COMMENT=	Extra set of Un Korean TrueType fonts
 CONFLICTS+=	un-ttf-[0-9]*
 
 WRKSRC=		${WRKDIR}/un-fonts
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
