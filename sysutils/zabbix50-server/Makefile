@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/05 09:09:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/06 15:02:53 mef Exp $
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-agent/Makefile
 #
@@ -57,6 +57,9 @@ SUBST_SED.fix-pkgbase=		-e 's,%%PKGBASE%%,${PKGBASE},g'
 PLIST_SUBST+=			PKGBASE=${PKGBASE}
 
 CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1
+
+REPLACE_BASH+=			misc/snmptrap/snmptrap.sh \
+				misc/images/png_to_xml.sh
 
 .include "../../mk/bsd.prefs.mk"
 
