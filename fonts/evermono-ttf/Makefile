@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/04/06 08:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/06 18:04:25 maya Exp $
 
 DISTNAME=	evermono
 VERSION=	7.0.0
@@ -17,9 +17,12 @@ DIST_SUBDIR=	evermono-ttf-${VERSION}
 WRKSRC=		${WRKDIR}/evermono-${VERSION}
 USE_LANGUAGES=	# none
 
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
 INSTALLATION_DIRS+=	${FONTDIR} share/doc/evermono-ttf
 
-post-install:
+do-install:
 	${INSTALL_DATA} ${WRKSRC}/emono-licence.txt ${DESTDIR}${PREFIX}/share/doc/evermono-ttf/
 
 .include "../../mk/fonts.mk"

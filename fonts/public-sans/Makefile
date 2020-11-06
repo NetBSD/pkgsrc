@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/12 15:21:10 mef Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/06 18:04:26 maya Exp $
 
 VERSION=	1.008
 DISTNAME=	public-sans-v${VERSION}
@@ -11,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/uswds/public-sans/
 COMMENT=	Strong, neutral typeface for text or display
 LICENSE=	ofl-v1.1
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

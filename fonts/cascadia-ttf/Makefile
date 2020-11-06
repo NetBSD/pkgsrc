@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/10/08 12:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/06 18:04:24 maya Exp $
 
 DISTNAME=	CascadiaCode-2009.22
 PKGNAME=	${DISTNAME:S/CascadiaCode/cascadia-ttf/}
@@ -14,6 +14,9 @@ COMMENT=	Microsoft Cascadia Code font
 LICENSE=	ofl-v1.1
 
 WRKSRC=		${WRKDIR}
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

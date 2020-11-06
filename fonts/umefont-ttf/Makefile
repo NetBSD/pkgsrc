@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/04/04 11:15:24 maya Exp $
+# $NetBSD: Makefile,v 1.61 2020/11/06 18:04:27 maya Exp $
 #
 
 DISTNAME=	umefont_610
@@ -16,6 +16,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/([a-z]+)-//}
 
 CONFLICTS=	umefont<=0.421
 SUPERSEDES=	umefont<=0.421
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGBASE}
 

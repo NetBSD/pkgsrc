@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/06 11:06:42 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/06 18:04:26 maya Exp $
 
 DISTNAME=	Montserrat-7.210
 PKGNAME=	${DISTNAME:tl}
@@ -16,7 +16,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}
 
-post-install:
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}
 
 .include "../../mk/fonts.mk"
