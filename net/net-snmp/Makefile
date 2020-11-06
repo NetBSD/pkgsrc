@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2020/11/04 15:51:31 otis Exp $
+# $NetBSD: Makefile,v 1.134 2020/11/06 08:45:04 otis Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -142,6 +142,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/snmp/
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
