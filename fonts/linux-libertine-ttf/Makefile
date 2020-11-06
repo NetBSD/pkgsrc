@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/24 14:06:49 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/11/06 18:04:25 maya Exp $
 
 DISTNAME=	LinLibertineTTF_5.3.0_2012_07_02
 PKGNAME=	${DISTNAME:S/LinLibertineTTF_/linux-libertine-ttf-/:C/_[^_].*$//}
@@ -12,6 +12,9 @@ COMMENT=	Free TrueType font family
 LICENSE=	gnu-gpl-v2 OR ofl-v1.0
 
 WRKSRC=		${WRKDIR}
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

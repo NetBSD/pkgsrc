@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/07/27 15:02:55 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/06 18:04:25 maya Exp $
 
 DISTNAME=	Koruri-${KORURI_VERSION}
 PKGNAME=	koruri-ttf-${KORURI_VERSION}
@@ -16,6 +16,9 @@ LICENSE=	apache-2.0
 KORURI_VERSION=	20180915
 
 USE_LANGUAGES=	# none
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

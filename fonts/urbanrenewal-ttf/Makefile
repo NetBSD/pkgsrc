@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:12 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/06 18:04:27 maya Exp $
 #
 
 DISTNAME=	urbanrenewal
@@ -25,6 +25,9 @@ INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 .if ${OPSYS} == "FreeBSD"
 TOOLS_PLATFORM.unzip=	# empty
 .endif
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}

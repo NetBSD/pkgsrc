@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/06 09:29:23 maya Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/06 18:04:26 maya Exp $
 
 DISTNAME=	Symbola
 PKGNAME=	symbola-ttf-9.17
@@ -16,6 +16,9 @@ COMMENT=	Basic Latin, Greek, Cyrillic, and many Symbol blocks from Unicode
 LICENSE=	public-domain
 
 WRKSRC=		${WRKDIR}
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

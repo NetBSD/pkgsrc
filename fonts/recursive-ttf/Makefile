@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/17 16:17:21 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/06 18:04:26 maya Exp $
 
 GITHUB_PROJECT=	recursive
 GITHUB_RELEASE=	1.030
@@ -15,6 +15,9 @@ LICENSE=	ofl-v1.1
 
 # \todo: Build from source.
 # \todo: Build OTF (current static source choice only includes TTF)
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

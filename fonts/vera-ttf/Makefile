@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/04/04 07:35:18 maya Exp $
+# $NetBSD: Makefile,v 1.21 2020/11/06 18:04:27 maya Exp $
 #
 
 # The "vera-ttf" package must always contain unmodified TTF files according
@@ -19,6 +19,9 @@ COMMENT=	Bitstream Vera TrueType fonts
 LICENSE=	vera-ttf-license
 
 INSTALLATION_DIRS+=	share/doc/vera-ttf share/examples/vera-ttf
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/local.conf ${DESTDIR}${PREFIX}/share/examples/vera-ttf

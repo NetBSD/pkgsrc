@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/05 14:14:27 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/06 18:04:25 maya Exp $
 
 DISTNAME=	comic-neue-2.3
 CATEGORIES=	fonts
@@ -11,6 +11,9 @@ COMMENT=	Font that fixes the shortcomings of Comic Sans
 LICENSE=	ofl-v1.1
 
 WRKSRC=		${WRKDIR}
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 post-install:
 	${FIND} ${DESTDIR}${PREFIX} -name '.*' -print0 | ${XARGS} -0 rm -f

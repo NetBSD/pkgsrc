@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/04/06 08:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/06 18:04:27 maya Exp $
 
 VERSION=	0.83
 PKGNAME=	ubuntu-fonts-${VERSION}
@@ -12,6 +12,9 @@ HOMEPAGE=	http://font.ubuntu.com/
 COMMENT=	TrueType font family from Ubuntu
 LICENSE=	ubuntu-font-license
 
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}
 
@@ -23,7 +26,7 @@ INSTALL_DOCS=	CONTRIBUTING.txt		\
 		TRADEMARKS.txt			\
 		copyright.txt
 
-post-install:
+do-install:
 .for docfile in ${INSTALL_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCDIR}
 .endfor

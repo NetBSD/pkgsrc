@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/04 10:28:53 maya Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/06 18:04:27 maya Exp $
 #
 
 DISTNAME=	uralic-ttf-0.0.20040603
@@ -15,6 +15,9 @@ COMMENT=	Font for Uralic languages with Russian-based writing systems
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

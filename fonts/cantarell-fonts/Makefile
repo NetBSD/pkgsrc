@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/03/22 09:48:36 nia Exp $
+# $NetBSD: Makefile,v 1.12 2020/11/06 18:04:24 maya Exp $
 
 DISTNAME=	cantarell-fonts-0.201
 CATEGORIES=	fonts gnome
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/CantarellFonts
 COMMENT=	Contemporary Humanist sans serif font designed for on-screen reading
 LICENSE=	ofl-v1.1
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
