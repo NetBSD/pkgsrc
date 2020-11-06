@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/11/02 21:34:08 tpaul Exp $
+$NetBSD: distinfo,v 1.13 2020/11/06 23:45:11 tpaul Exp $
 
-SHA1 (php-composer/2.0.4/composer.phar) = b789b4edcd84b28cfe1d40c78fa915e4fed94a84
-RMD160 (php-composer/2.0.4/composer.phar) = 36c25aba96c6fecfde6a59106de81c6236aee939
-SHA512 (php-composer/2.0.4/composer.phar) = 08c10a22fe95c5e058435828c60084ea9700e5b27c888ea5807f3e3979b187112d66ddb4ce9f9324e9369714961c3aacf8b8bbdb408a66923a2737b53b08ac81
-Size (php-composer/2.0.4/composer.phar) = 2180422 bytes
+SHA1 (php-composer/2.0.5/composer.phar) = 8463931b18289f03eca64c7961a4f3bf25b772f3
+RMD160 (php-composer/2.0.5/composer.phar) = aa94431b202ba3b07b1611259450224e39e83d54
+SHA512 (php-composer/2.0.5/composer.phar) = 4c212a9751191eb62a32d428ea60e4eef167fab46ddae85b75a7683e4e4c7e658acfc8c086414fecff54e6af71fd144a24710f4575dc919082f2e21b2f4a06b9
+Size (php-composer/2.0.5/composer.phar) = 2192986 bytes
