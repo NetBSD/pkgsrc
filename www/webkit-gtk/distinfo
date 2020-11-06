@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.140 2020/10/23 15:01:48 leot Exp $
+$NetBSD: distinfo,v 1.141 2020/11/06 22:21:35 leot Exp $
 
 SHA1 (webkitgtk-2.30.2.tar.xz) = e27d336570226645f861b5a00116c17da39f9df4
 RMD160 (webkitgtk-2.30.2.tar.xz) = 9544d4796cfb33bae33c41719764a775b3b6bd29
@@ -23,11 +23,15 @@ SHA1 (patch-Source_WTF_wtf_PlatformOS.h) = 80aa6ff20f10407d447fdb41606d4bb498935
 SHA1 (patch-Source_WTF_wtf_PlatformUse.h) = 595486b48e7d89378208c0a209a121ef136415e6
 SHA1 (patch-Source_WTF_wtf_RAMSize.cpp) = c4fd7f67cbb414318577c93d642f26827ba638c0
 SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = 22a71daac8443f079ad8bcc7285cfd7319c972b3
+SHA1 (patch-Source_WTF_wtf_text_icu_UTextProvider.h) = 9ff5aa3ffcec45866106a99b2bc0bdd656b0ff9e
+SHA1 (patch-Source_WTF_wtf_text_icu_UTextProviderLatin1.cpp) = bb5bf01d8a4ab78d2fd16bbb84d4dc46f13313ee
+SHA1 (patch-Source_WTF_wtf_text_icu_UTextProviderUTF16.cpp) = 74b5c0b87da1b0acf8ca3324cfbad55cf73294d2
 SHA1 (patch-Source_WebCore_Scripts_check-xcfilelists.sh) = b292baf2494bcd459d9af91386263123046c6615
 SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 9b323aa1fa8e6e5599ac0a7ae08fbbed4348c70e
 SHA1 (patch-Source_WebCore_crypto_algorithms_CryptoAlgorithmAES__GCM.cpp) = 03337c5eec54d6974dfea1766b14cb2c1b9f7750
 SHA1 (patch-Source_WebCore_inspector_InspectorFrontendHost.cpp) = daf6351a1a0b5a49592a2bb6db0d54620c7b09e3
 SHA1 (patch-Source_WebCore_platform_graphics_filters_FEMorphology.cpp) = 16b36d2d91fd7f43156b9ee09bcafd19602ebbd9
+SHA1 (patch-Source_WebCore_platform_text_TextCodecICU.cpp) = a3ac5b8ed98c52a50581fffc52394a46255d22bc
 SHA1 (patch-Source_WebCore_rendering_RenderLayerBacking.h) = ecf722df1d1cca13573786b34fe1e3d85edf1e1e
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
 SHA1 (patch-Source_WebKit_CMakeLists.txt) = 228cc4734de3b08a3877ac839b1ffa2fbf2d3aa8
@@ -37,6 +41,7 @@ SHA1 (patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp) = 35b62538d09af8
 SHA1 (patch-Source_WebKit_Platform_classifier_ResourceLoadStatisticsClassifier.cpp) = 920376ec8697780637f376b2fff312b7e214a7f6
 SHA1 (patch-Source_WebKit_Scripts_check-xcfilelists.sh) = 22cc5ba1ababc6395aa0ef467db0c27c2fbf6878
 SHA1 (patch-Source_WebKit_Scripts_generate-unified-sources.sh) = def930cf3f706ac657b2f8835c8c0278ade8f663
+SHA1 (patch-Source_WebKit_UIProcess_CoordinatedGraphics_DrawingAreaProxyCoordinatedGraphics.cpp) = 42086291df0fc2d691feeea9668d8452aff4b79e
 SHA1 (patch-Source_bmalloc_bmalloc_BPlatform.h) = 28d1f657fde427062a729b26398e96825082fc4d
 SHA1 (patch-Source_bmalloc_bmalloc_VMAllocate.h) = b1eb6ab93f2ce272cfee94a544d19806feb9a625
 SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 03b72552414e7114bfa7ddc2d68fd97009a5ff7d
