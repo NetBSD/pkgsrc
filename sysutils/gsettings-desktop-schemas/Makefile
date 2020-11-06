@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/11/03 12:34:24 nia Exp $
+# $NetBSD: Makefile,v 1.14 2020/11/06 17:48:05 nia Exp $
 
 DISTNAME=	gsettings-desktop-schemas-3.38.0
 CATEGORIES=	sysutils gnome
@@ -11,7 +11,6 @@ COMMENT=	Collection of GSettings schemas for the GNOME desktop
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=		msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	gsettings-desktop-schemas.pc.in
 
