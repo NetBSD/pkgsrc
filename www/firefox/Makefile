@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.454 2020/11/05 09:09:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.455 2020/11/06 08:56:37 maya Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		82.0
@@ -6,7 +6,7 @@ MOZ_BRANCH_MINOR=	.2
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -37,8 +37,7 @@ LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
 LDFLAGS.Linux+=		-lnspr4
 LDFLAGS.SunOS+=		-lm
 
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}-bin
+# XXX not sure how to test this! likely unnecessary
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
 
 # Avoid ld "invalid section index" errors.
