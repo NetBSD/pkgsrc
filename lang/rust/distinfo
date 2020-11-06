@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.119 2020/10/28 11:16:46 he Exp $
+$NetBSD: distinfo,v 1.120 2020/11/06 20:13:49 he Exp $
 
 SHA1 (rust-1.45.0-x86_64-sun-solaris.tar.gz) = f0c0ce644e0f72b240ecd797b22df271f6e24a5a
 RMD160 (rust-1.45.0-x86_64-sun-solaris.tar.gz) = ebf9813d4e4626cdfa5d4bdceb8e4912b0d12ed2
@@ -111,6 +111,7 @@ SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = d49503d19c30a64d571eb7fa79e7
 SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = 199ae71ae2e42bb67e54354a051fc9faa71f9bfe
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = 7588a46aaa277ef04b33ac6d904b9d1d81579f2a
 SHA1 (patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h) = 977de4b2a9d37f7e7c782f2407c15591e032b6c6
+SHA1 (patch-src_llvm-project_llvm_lib_Target_PowerPC_PPCInstrInfo.td) = b2e8c29a279d511b51414241b3fe6a2f14c26502
 SHA1 (patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp) = 2675b93a1d636b297a3e1e84b915a15a3da67939
 SHA1 (patch-src_tools_cargo_src_cargo_core_profiles.rs) = 3aac5d54a6fe96b9559552e67e497488142d4e80
 SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 10e6c1253adac0262b000aec7636fa0d2ebb666c
