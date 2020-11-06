@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.37 2020/08/20 22:26:58 js Exp $
+$NetBSD: distinfo,v 1.38 2020/11/06 00:51:25 js Exp $
 
-SHA1 (fossil-src-2.12.1.tar.gz) = d29aa49cc94a7507bdf7a827beeab61c869b1d35
-RMD160 (fossil-src-2.12.1.tar.gz) = f4ff1a7619b7b12db993e7d512f9baa05eec79dd
-SHA512 (fossil-src-2.12.1.tar.gz) = 08b7fef5a3071e968dedbc645aebf2e873ecf80049b5986d38f851a407b2b8b0c854cfcdfa5ec80eac5bc1b158c5fac3bb4b263d1adb8be470529e67dc6e8cee
-Size (fossil-src-2.12.1.tar.gz) = 6011181 bytes
+SHA1 (fossil-src-2.13.tar.gz) = 14b8285e000a96ed4474608cf51ea3284a2b0e98
+RMD160 (fossil-src-2.13.tar.gz) = 2f9aa5461af25381ec017f4027fc2286b46b5278
+SHA512 (fossil-src-2.13.tar.gz) = bd756aaac2f39005b690230c5a4ef4d618a3200a8eb499aa964285050c247edfb0abfa5db5522269e0a5ee2737c71393a523dc2d7e37eae076364185137964f8
+Size (fossil-src-2.13.tar.gz) = 6121223 bytes
 SHA1 (patch-src_sqlite3.c) = cccf9af1ba8695dedcc5487234541d11f4538f8d
