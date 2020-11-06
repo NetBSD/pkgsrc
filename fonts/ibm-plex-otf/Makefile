@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/28 11:46:29 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/06 18:04:25 maya Exp $
 
 PKGNAME=	ibm-plex-otf-4.0.2
 GITHUB_PROJECT=	plex
@@ -15,6 +15,9 @@ COMMENT=	IBM plex typeface (OpenType)
 LICENSE=	ofl-v1.1
 
 USE_LANGUAGES=	# none
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
