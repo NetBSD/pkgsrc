@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6068 2020/11/06 21:47:14 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.6069 2020/11/06 23:45:23 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8962,3 +8962,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.46.0nb1 [he 2020-11-06]
 	Updated sysutils/xenkernel413 to 4.13.2 [bouyer 2020-11-06]
 	Updated sysutils/xentools413 to 4.13.2 [bouyer 2020-11-06]
+	Updated devel/php-composer to 2.0.5 [tpaul 2020-11-06]
