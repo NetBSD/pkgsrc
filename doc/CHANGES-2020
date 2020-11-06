@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6063 2020/11/06 12:46:27 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.6064 2020/11/06 15:16:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8956,3 +8956,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-cryptodome to 3.9.9 [adam 2020-11-06]
 	Updated textproc/py-elementpath to 2.0.4 [adam 2020-11-06]
 	Updated www/grafana to 7.3.1 [tnn 2020-11-06]
+	Added fonts/harfbuzz-icu version 2.7.2 [nia 2020-11-06]
