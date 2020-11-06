@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6066 2020/11/06 18:10:41 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.6067 2020/11/06 20:15:32 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8959,3 +8959,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added fonts/harfbuzz-icu version 2.7.2 [nia 2020-11-06]
 	Updated fonts/liberation-ttf to 2.1.1 [maya 2020-11-06]
 	Added security/authelia version 4.22.0 [tnn 2020-11-06]
+	Updated lang/rust to 1.46.0nb1 [he 2020-11-06]
