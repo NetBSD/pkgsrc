@@ -1,29 +1,10 @@
-$NetBSD: distinfo,v 1.4 2020/10/21 09:04:10 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2020/11/06 21:45:49 bouyer Exp $
 
-SHA1 (xen413/xen-4.13.1.tar.gz) = 194a314171120dad0b3c5433104c92343ec884ba
-RMD160 (xen413/xen-4.13.1.tar.gz) = 29cfb90b9da0ede99c1228b8e5964a99547c205d
-SHA512 (xen413/xen-4.13.1.tar.gz) = b56d20704155d98d803496cba83eb928e0f986a750831cd5600fc88d0ae772fe1456571654375054043d2da8daca255cc98385ebf08b1b1a75ecf7f4b7a0ee90
-Size (xen413/xen-4.13.1.tar.gz) = 39024612 bytes
+SHA1 (xen413/xen-4.13.2.tar.gz) = d514f1de9582c58676420bb2c9fb1c765b44fbff
+RMD160 (xen413/xen-4.13.2.tar.gz) = 96727c20bd84338f8c67c7c584c01ef877bbcb18
+SHA512 (xen413/xen-4.13.2.tar.gz) = cd3092281c97e9421e303aa288aac04dcccd5536ba7c0ff4d51fbf3d07b5ffacfe3456ba06f5cf63577dafbf8cf3a5d9825ceb5e9ef8ca1427900cc3e57b50a3
+Size (xen413/xen-4.13.2.tar.gz) = 39037826 bytes
 SHA1 (patch-Config.mk) = 9372a09efd05c9fbdbc06f8121e411fcb7c7ba65
-SHA1 (patch-XSA286) = 93bf307619151cd4389db95557d8af0e1b29ea0a
-SHA1 (patch-XSA317) = 3a3e7bf8f115bebaf56001afcf68c2bd501c00a5
-SHA1 (patch-XSA319) = 4954bdc849666e1c735c3281256e4850c0594ee8
-SHA1 (patch-XSA320) = db978d49298660fb750dc6b50c2a1ddd099c8fa0
-SHA1 (patch-XSA321) = 257dfc7e15a63b2149a9b9aed4e6e3b10f01f551
-SHA1 (patch-XSA328) = eb86e10b7279318006a8593561e3932b76adbc0c
-SHA1 (patch-XSA333) = 47660b70b2c998436587600bb9a25c2f494afa49
-SHA1 (patch-XSA334) = d11e778775314dff561d67da629d71704cc0bd8c
-SHA1 (patch-XSA336) = d3cfcb7a9800475967417e4b5b47698ed6a6b5a5
-SHA1 (patch-XSA337) = 3fcfab120c9b4c5e4dc55a4138f68aceaed9bebf
-SHA1 (patch-XSA338) = 0adcebec2c25a389155a10de84bf999ff2e5425d
-SHA1 (patch-XSA339) = 4f97076bda8150d1b1c68f6000d563f3c3314c02
-SHA1 (patch-XSA340) = 23888acfe25fc82ff085fa9acfbb36c156a15bc3
-SHA1 (patch-XSA342) = a61c4e28a8c8219b88e3bab534a109b2b29e2cc3
-SHA1 (patch-XSA343) = f4656c110229fdc63b57b8af76fc6e60386ef3cd
-SHA1 (patch-XSA344) = 616fb56027ee289bb3b7b061e2f9f6f6d81e358b
-SHA1 (patch-XSA345) = 5fd7f8c04c6fd81c3ba49c01063075325f2b4779
-SHA1 (patch-XSA346) = 834b2c3b89aa2569a61ee990000592bc0a044999
-SHA1 (patch-XSA347) = ffb4a0fa152196e26c34f733eeff62c02b79cf49
 SHA1 (patch-xen_Makefile) = 465388d80de414ca3bb84faefa0f52d817e423a6
 SHA1 (patch-xen_Rules.mk) = c743dc63f51fc280d529a7d9e08650292c171dac
 SHA1 (patch-xen_arch_x86_Rules.mk) = 0bedfc53a128a87b6a249ae04fbdf6a053bfb70b
