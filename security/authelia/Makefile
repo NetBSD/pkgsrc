@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/06 18:07:54 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/06 18:15:37 tnn Exp $
 
 DISTNAME=	authelia-4.22.0
 CATEGORIES=	security
@@ -14,7 +14,7 @@ EXTRACT_DIR.${FE_DISTNAME}=	${WRKSRC}
 BR_DISTNAME=			broccoli-1.0.3.tar.gz
 DISTFILES+=			${BR_DISTNAME}
 SITES.${BR_DISTNAME}=		\
-	-${MASTER_SITE_GITHUB:=aletheia-icu/}/archive/v1.0.3.tar.gz
+	-${MASTER_SITE_GITHUB:=aletheia-icu/}broccoli/archive/v1.0.3.tar.gz
 EXTRACT_DIR.${BR_DISTNAME}=	${WRKDIR}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
