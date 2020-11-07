@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6078 2020/11/07 20:31:16 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6079 2020/11/07 21:27:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8972,3 +8972,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-ujson to 4.0.1 [wiz 2020-11-07]
 	Updated textproc/py-jsonrpc-server to 0.4.0 [wiz 2020-11-07]
 	Updated sysutils/onefetch to 2.7.0 [pin 2020-11-07]
+	Updated lang/llvm to 10.0.1nb3 [he 2020-11-07]
