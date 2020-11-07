@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6075 2020/11/07 16:32:24 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6076 2020/11/07 18:55:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8969,3 +8969,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-composer to 2.0.6 [tpaul 2020-11-07]
 	Removed devel/py-hgnested [wiz 2020-11-07]
 	Updated devel/py-tortoisehg to 5.6 [wiz 2020-11-07]
+	Updated textproc/py-ujson to 4.0.1 [wiz 2020-11-07]
