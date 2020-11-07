@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/11/07 12:51:04 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2020/11/07 14:53:30 tnn Exp $
 
 DISTNAME=	BackupPC-4.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=backuppc/}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://backuppc.sourceforge.net/
 COMMENT=	Fast, agentless backup system supporting *NIX, Windows and OSX clients
 LICENSE=	gnu-gpl-v3
 
-RSYNC_BPC=	rsync-bpc-3.1.3.0
+RSYNC_BPC=	rsync-bpc-3.1.2.2
 RSYNC_BPC_TGZ=	${RSYNC_BPC}.tar.gz
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	${RSYNC_BPC_TGZ}
