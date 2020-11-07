@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2020/11/05 09:09:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2020/11/07 10:05:11 nia Exp $
 
 DISTNAME=	vte-0.60.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.60/}
 EXTRACT_SUFX=	.tar.xz
@@ -25,6 +25,7 @@ GCC_REQD+=		7
 # have libsystemd.
 MESON_ARGS+=		-D_systemd=false
 
+.include "options.mk"
 .include "../../devel/meson/build.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -34,7 +35,6 @@ MESON_ARGS+=		-D_systemd=false
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
