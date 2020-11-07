@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/09/20 10:55:55 nros Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/11/07 16:32:13 wiz Exp $
 bin/thg
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
@@ -40,6 +40,9 @@ ${PYSITELIB}/tortoisehg/hgqt/chunks.pyo
 ${PYSITELIB}/tortoisehg/hgqt/clone.py
 ${PYSITELIB}/tortoisehg/hgqt/clone.pyc
 ${PYSITELIB}/tortoisehg/hgqt/clone.pyo
+${PYSITELIB}/tortoisehg/hgqt/close_branch.py
+${PYSITELIB}/tortoisehg/hgqt/close_branch.pyc
+${PYSITELIB}/tortoisehg/hgqt/close_branch.pyo
 ${PYSITELIB}/tortoisehg/hgqt/cmdcore.py
 ${PYSITELIB}/tortoisehg/hgqt/cmdcore.pyc
 ${PYSITELIB}/tortoisehg/hgqt/cmdcore.pyo
@@ -97,6 +100,9 @@ ${PYSITELIB}/tortoisehg/hgqt/grep.pyo
 ${PYSITELIB}/tortoisehg/hgqt/guess.py
 ${PYSITELIB}/tortoisehg/hgqt/guess.pyc
 ${PYSITELIB}/tortoisehg/hgqt/guess.pyo
+${PYSITELIB}/tortoisehg/hgqt/hgconfig.py
+${PYSITELIB}/tortoisehg/hgqt/hgconfig.pyc
+${PYSITELIB}/tortoisehg/hgqt/hgconfig.pyo
 ${PYSITELIB}/tortoisehg/hgqt/hgemail.py
 ${PYSITELIB}/tortoisehg/hgqt/hgemail.pyc
 ${PYSITELIB}/tortoisehg/hgqt/hgemail.pyo
@@ -148,15 +154,15 @@ ${PYSITELIB}/tortoisehg/hgqt/mq.pyo
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.py
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.pyc
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.pyo
-${PYSITELIB}/tortoisehg/hgqt/pbranch.py
-${PYSITELIB}/tortoisehg/hgqt/pbranch.pyc
-${PYSITELIB}/tortoisehg/hgqt/pbranch.pyo
 ${PYSITELIB}/tortoisehg/hgqt/phabreview.py
 ${PYSITELIB}/tortoisehg/hgqt/phabreview.pyc
 ${PYSITELIB}/tortoisehg/hgqt/phabreview.pyo
 ${PYSITELIB}/tortoisehg/hgqt/phabreview_ui.py
 ${PYSITELIB}/tortoisehg/hgqt/phabreview_ui.pyc
 ${PYSITELIB}/tortoisehg/hgqt/phabreview_ui.pyo
+${PYSITELIB}/tortoisehg/hgqt/pick.py
+${PYSITELIB}/tortoisehg/hgqt/pick.pyc
+${PYSITELIB}/tortoisehg/hgqt/pick.pyo
 ${PYSITELIB}/tortoisehg/hgqt/postreview.py
 ${PYSITELIB}/tortoisehg/hgqt/postreview.pyc
 ${PYSITELIB}/tortoisehg/hgqt/postreview.pyo
@@ -250,9 +256,6 @@ ${PYSITELIB}/tortoisehg/hgqt/revset.pyo
 ${PYSITELIB}/tortoisehg/hgqt/run.py
 ${PYSITELIB}/tortoisehg/hgqt/run.pyc
 ${PYSITELIB}/tortoisehg/hgqt/run.pyo
-${PYSITELIB}/tortoisehg/hgqt/rupdate.py
-${PYSITELIB}/tortoisehg/hgqt/rupdate.pyc
-${PYSITELIB}/tortoisehg/hgqt/rupdate.pyo
 ${PYSITELIB}/tortoisehg/hgqt/serve.py
 ${PYSITELIB}/tortoisehg/hgqt/serve.pyc
 ${PYSITELIB}/tortoisehg/hgqt/serve.pyo
@@ -289,12 +292,15 @@ ${PYSITELIB}/tortoisehg/hgqt/thgrepo.pyo
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.py
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.pyc
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.pyo
-${PYSITELIB}/tortoisehg/hgqt/topics.py
-${PYSITELIB}/tortoisehg/hgqt/topics.pyc
-${PYSITELIB}/tortoisehg/hgqt/topics.pyo
+${PYSITELIB}/tortoisehg/hgqt/topic.py
+${PYSITELIB}/tortoisehg/hgqt/topic.pyc
+${PYSITELIB}/tortoisehg/hgqt/topic.pyo
 ${PYSITELIB}/tortoisehg/hgqt/update.py
 ${PYSITELIB}/tortoisehg/hgqt/update.pyc
 ${PYSITELIB}/tortoisehg/hgqt/update.pyo
+${PYSITELIB}/tortoisehg/hgqt/updatecheck.py
+${PYSITELIB}/tortoisehg/hgqt/updatecheck.pyc
+${PYSITELIB}/tortoisehg/hgqt/updatecheck.pyo
 ${PYSITELIB}/tortoisehg/hgqt/visdiff.py
 ${PYSITELIB}/tortoisehg/hgqt/visdiff.pyc
 ${PYSITELIB}/tortoisehg/hgqt/visdiff.pyo
@@ -385,6 +391,9 @@ ${PYSITELIB}/tortoisehg/util/thgstatus.pyo
 ${PYSITELIB}/tortoisehg/util/thread2.py
 ${PYSITELIB}/tortoisehg/util/thread2.pyc
 ${PYSITELIB}/tortoisehg/util/thread2.pyo
+${PYSITELIB}/tortoisehg/util/typelib.py
+${PYSITELIB}/tortoisehg/util/typelib.pyc
+${PYSITELIB}/tortoisehg/util/typelib.pyo
 ${PYSITELIB}/tortoisehg/util/version.py
 ${PYSITELIB}/tortoisehg/util/version.pyc
 ${PYSITELIB}/tortoisehg/util/version.pyo
@@ -415,7 +424,6 @@ share/doc/tortoisehg/html/_images/init.png
 share/doc/tortoisehg/html/_images/nautilus.png
 share/doc/tortoisehg/html/_images/overlayicons.png
 share/doc/tortoisehg/html/_images/patchqueue.png
-share/doc/tortoisehg/html/_images/pbranch.png
 share/doc/tortoisehg/html/_images/rejects.png
 share/doc/tortoisehg/html/_images/repository-menu.png
 share/doc/tortoisehg/html/_images/serve.png
@@ -456,19 +464,13 @@ share/doc/tortoisehg/html/_sources/shelve.txt
 share/doc/tortoisehg/html/_sources/sync.txt
 share/doc/tortoisehg/html/_sources/whatsnew.txt
 share/doc/tortoisehg/html/_sources/workbench.txt
-share/doc/tortoisehg/html/_static/ajax-loader.gif
 share/doc/tortoisehg/html/_static/alabaster.css
 share/doc/tortoisehg/html/_static/basic.css
-share/doc/tortoisehg/html/_static/comment-bright.png
-share/doc/tortoisehg/html/_static/comment-close.png
-share/doc/tortoisehg/html/_static/comment.png
 share/doc/tortoisehg/html/_static/custom.css
 share/doc/tortoisehg/html/_static/doctools.js
 share/doc/tortoisehg/html/_static/documentation_options.js
-share/doc/tortoisehg/html/_static/down-pressed.png
-share/doc/tortoisehg/html/_static/down.png
 share/doc/tortoisehg/html/_static/file.png
-share/doc/tortoisehg/html/_static/jquery-3.2.1.js
+share/doc/tortoisehg/html/_static/jquery-3.4.1.js
 share/doc/tortoisehg/html/_static/jquery.js
 share/doc/tortoisehg/html/_static/language_data.js
 share/doc/tortoisehg/html/_static/minus.png
@@ -479,9 +481,6 @@ share/doc/tortoisehg/html/_static/thg_logo_92x50.png
 share/doc/tortoisehg/html/_static/tortoisehg.css
 share/doc/tortoisehg/html/_static/underscore-1.3.1.js
 share/doc/tortoisehg/html/_static/underscore.js
-share/doc/tortoisehg/html/_static/up-pressed.png
-share/doc/tortoisehg/html/_static/up.png
-share/doc/tortoisehg/html/_static/websupport.js
 share/doc/tortoisehg/html/archive.html
 share/doc/tortoisehg/html/clone.html
 share/doc/tortoisehg/html/commit.html
@@ -549,6 +548,7 @@ share/locale/tr/LC_MESSAGES/tortoisehg.mo
 share/locale/uk/LC_MESSAGES/tortoisehg.mo
 share/locale/zh_CN/LC_MESSAGES/tortoisehg.mo
 share/locale/zh_TW/LC_MESSAGES/tortoisehg.mo
+share/nautilus-python/extensions/nautilus-thg.py
 share/pixmaps/tortoisehg/icons/16x16/actions/hg-add.png
 share/pixmaps/tortoisehg/icons/16x16/actions/thg-repoconfig.png
 share/pixmaps/tortoisehg/icons/16x16/actions/thg-userconfig.png
@@ -727,4 +727,3 @@ share/pixmaps/tortoisehg/icons/settings_user.ico
 share/pixmaps/tortoisehg/icons/shelve.ico
 share/pixmaps/tortoisehg/icons/thg_logo.ico
 share/pixmaps/tortoisehg/icons/thg_logo_92x50.png
-share/tortoisehg/mergetools.rc
