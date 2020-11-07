@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_isc_unix_socket.c,v 1.3 2020/11/07 14:26:21 taca Exp $
+$NetBSD: patch-lib_isc_unix_socket.c,v 1.4 2020/11/07 14:28:31 taca Exp $
 
 * Apply fixes from NetBSD base system.
 * Fix build on SmartOS. In this special case, _XOPEN_SOURCE has to be only
@@ -323,7 +323,7 @@ $NetBSD: patch-lib_isc_unix_socket.c,v 1.3 2020/11/07 14:26:21 taca Exp $
 +	thread->fdstate[sock->fd] = MANAGED;
 +
 +#if defined(USE_EPOLL)
-+	therad->epoll_events[sock->fd] = 0;
++	thread->epoll_events[sock->fd] = 0;
 +#endif
 +	UNLOCK(&thread->fdlock[lockid]);
 +
