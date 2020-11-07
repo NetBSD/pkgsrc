@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/11 12:36:28 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/07 07:17:07 mef Exp $
 bin/gcr-viewer
 include/gck-1/gck/gck-deprecated.h
 include/gck-1/gck/gck-enum-types.h
@@ -211,6 +211,7 @@ share/locale/bn_IN/LC_MESSAGES/gcr.mo
 share/locale/bs/LC_MESSAGES/gcr.mo
 share/locale/ca/LC_MESSAGES/gcr.mo
 share/locale/ca@valencia/LC_MESSAGES/gcr.mo
+share/locale/ckb/LC_MESSAGES/gcr.mo
 share/locale/cs/LC_MESSAGES/gcr.mo
 share/locale/cy/LC_MESSAGES/gcr.mo
 share/locale/da/LC_MESSAGES/gcr.mo
