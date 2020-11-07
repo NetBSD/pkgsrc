@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/11/05 09:07:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2020/11/07 09:27:38 nia Exp $
 
 DISTNAME=	libpsl-0.21.1
 PKGREVISION=	1
@@ -15,16 +15,17 @@ LICENSE=	mit
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		msgfmt msgmerge xgettext
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--enable-runtime=libicu
+CONFIGURE_ARGS+=	--enable-runtime=libidn2
 PKGCONFIG_OVERRIDE+=	libpsl.pc.in
 TEST_TARGET=		check
 
-PYTHON_FOR_BUILD_ONLY=	yes
-REPLACE_PYTHON=		src/psl-make-dafsa
+PYTHON_FOR_BUILD_ONLY=	tool
 
-.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
+.include "../../textproc/libunistring/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
