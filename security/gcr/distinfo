@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/12/11 12:36:28 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2020/11/07 07:17:07 mef Exp $
 
-SHA1 (gcr-3.28.0.tar.xz) = 65cddbc1e12266233aca4d1857a93b42ef52f620
-RMD160 (gcr-3.28.0.tar.xz) = 8180637d78b7ca893aff5bca6d6050fb7e14d4be
-SHA512 (gcr-3.28.0.tar.xz) = 8d5e650cb369fa889b0adfdc1dc1cb5f8b184881256e6c0a2ed456074a54ceb61d64c0929c093bec66c0d5a15c1718f6e3736a1b25b6d7076081df93b49419e0
-Size (gcr-3.28.0.tar.xz) = 1329044 bytes
+SHA1 (gcr-3.38.0.tar.xz) = ec77b51962010555445c84981f30a32f6426323e
+RMD160 (gcr-3.38.0.tar.xz) = bfe464c4e7135a1ae753c9c2c93f6b53635f4416
+SHA512 (gcr-3.38.0.tar.xz) = 24c35ac514a67a1dee6a5738e829b55921a490b060ffa597421cea0abac3ddc62695370d2c7b3504c0adfd55b1ade878ad3ca5e6cb869428b4a19f4a11563bc6
+Size (gcr-3.38.0.tar.xz) = 1029784 bytes
