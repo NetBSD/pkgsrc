@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6070 2020/11/07 07:17:25 mef Exp $
+$NetBSD: CHANGES-2020,v 1.6071 2020/11/07 11:06:58 gson Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8964,3 +8964,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xentools413 to 4.13.2 [bouyer 2020-11-06]
 	Updated devel/php-composer to 2.0.5 [tpaul 2020-11-06]
 	Updated security/gcr to 3.38.0 [mef 2020-11-07]
+	Updated misc/py-anita to 2.7 [gson 2020-11-07]
