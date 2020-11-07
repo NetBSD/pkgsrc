@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2020/08/29 16:26:06 wiz Exp $
+$NetBSD: distinfo,v 1.18 2020/11/07 09:23:55 wiz Exp $
 
 SHA1 (qtwebkit-5.212.0-alpha4.tar.xz) = a2e2840cd751013f6e9fd0d15601d1ea4beb81d5
 RMD160 (qtwebkit-5.212.0-alpha4.tar.xz) = af000947daa429945d80e3c23e5cfd0eb13793be
@@ -23,5 +23,9 @@ SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = e8972f4b703a9ff45ce313609d2
 SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp) = ec7c7533c2d5a4258170745bfc49655848d0780c
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurface.h) = d1d986afd5525143fc786a959240a72167f03352
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurfaceToken.h) = 838acb2d7ecf41e5f6989d98459d103f4268cdcf
+SHA1 (patch-Source_WebCore_platform_text_TextCodecICU.cpp) = 4b3418cedac05d7f4b2fad4df09df2c7b4b46b3f
+SHA1 (patch-Source_WebCore_platform_text_icu_UTextProvider.h) = fb0885eb9db3001ddd8df90059cdb47dbfd79fe3
+SHA1 (patch-Source_WebCore_platform_text_icu_UTextProviderLatin1.cpp) = 29b414e1ae18a0786f31d80143f665d6d68bcbe3
+SHA1 (patch-Source_WebCore_platform_text_icu_UTextProviderUTF16.cpp) = b175e1973a2019d746fda174dfc5708a3ca57d9b
 SHA1 (patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp) = d18013d0e07d7ad7e9d84cb6ef2d418d9bba4c7e
 SHA1 (patch-Source_cmake_OptionsQt.cmake) = 35cc2b9904897cd2f1d540b473ce2905d95a0143
