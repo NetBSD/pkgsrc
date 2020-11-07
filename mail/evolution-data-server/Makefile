@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2020/11/05 09:06:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.196 2020/11/07 09:28:40 mef Exp $
 
 DISTNAME=	evolution-data-server-3.35.1
 PKGREVISION=	12
@@ -20,6 +20,7 @@ USE_LANGUAGES=	c c++14
 GCC_REQD+=	5
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CMAKE_ARGS+=	-DWITH_LIBDB=OFF
 CMAKE_ARGS+=	-DENABLE_GOA=OFF
@@ -55,6 +56,7 @@ _TOOLS_USE_PKGSRC.xgettext=	yes
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../net/libgdata/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
