@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/05/18 13:34:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/07 18:56:56 wiz Exp $
 
-DISTNAME=	python-jsonrpc-server-0.3.4
+DISTNAME=	python-jsonrpc-server-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	textproc net devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-jsonrpc-server/}
@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
 .endif
-DEPENDS+=	${PYPKGPREFIX}-ujson-[0-9]*:../../textproc/py-ujson
+DEPENDS+=	${PYPKGPREFIX}-ujson>=3:../../textproc/py-ujson
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
