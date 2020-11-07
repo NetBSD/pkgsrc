@@ -11,7 +11,7 @@ fi
 
 name="backuppc"
 rcvar=$name
-status_cmd="backuppc_status"
+start_precmd="backuppc_precmd"
 reload_cmd="backuppc_reload"
 backuppc_user="@BACKUPPC_USER@"
 backuppc_group="@BACKUPPC_GROUP@"
@@ -21,6 +21,12 @@ command_args="-d"
 command_interpreter="@PREFIX@/bin/perl"
 
 load_rc_config $name
+
+backuppc_precmd() {
+    mkdir -p "@VARBASE@/run/BackupPC"
+    chown "${backuppc_user}:${backuppc_group}" "@VARBASE@/run/BackupPC"
+    chmod 750 "@VARBASE@/run/BackupPC"
+}
 
 backuppc_reload()
 {
