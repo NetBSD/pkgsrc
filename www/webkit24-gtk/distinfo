@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2020/09/14 18:19:16 joerg Exp $
+$NetBSD: distinfo,v 1.13 2020/11/07 02:59:45 ryoon Exp $
 
 SHA1 (webkitgtk-2.4.11.tar.xz) = e425ae86084ab6335dadb368c9e8f53600665d54
 RMD160 (webkitgtk-2.4.11.tar.xz) = e1f72498f911465f5ba152313dd9c62ae8d5eee6
@@ -22,6 +22,10 @@ SHA1 (patch-Source_WebCore_css_makegrammar.pl) = f28b3b7d011f01ac458ea96fb97ae77
 SHA1 (patch-Source_WebCore_dom_Document.cpp) = c7f810b09a17b0a0e7534cfeacc7a2f2ac833c60
 SHA1 (patch-Source_WebCore_platform_graphics_SegmentedFontData.cpp) = dd37d10a794d832e87b4074ff08e8f2f2630b0e7
 SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp) = 6d3b9ee1559a18c17229698e44246f13c77278c9
+SHA1 (patch-Source_WebCore_platform_text_TextCodecICU.cpp) = f0f3dc1bbed6fed2d1614114df7aa19d7f25a86c
+SHA1 (patch-Source_WebCore_platform_text_icu_UTextProvider.h) = a1fed5b0c7846b6df45bdde6031771850d931422
+SHA1 (patch-Source_WebCore_platform_text_icu_UTextProviderLatin1.cpp) = 356e698ea77b681bfc765527c13175e4bcd5e5ea
+SHA1 (patch-Source_WebCore_platform_text_icu_UTextProviderUTF16.cpp) = 741bb400e32192848a4fdef8b8e0b207f3daa937
 SHA1 (patch-Source_autotools_SetupCompilerFlags.m4) = 2802b09bc3bcb92a291f471cef4f3dbf6201a582
 SHA1 (patch-Tools_DumpRenderTree_gtk_DumpRenderTree.cpp) = 994d1671ff2d8e3a961b9b7ed34f69215ed46f91
 SHA1 (patch-ai) = 8e174c68e4ba06fdd6edd64fd6df3328faf9055f
