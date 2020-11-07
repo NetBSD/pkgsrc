@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6072 2020/11/07 13:49:40 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6073 2020/11/07 15:25:14 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8966,3 +8966,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/gcr to 3.38.0 [mef 2020-11-07]
 	Updated misc/py-anita to 2.7 [gson 2020-11-07]
 	Updated time/leapsunpack to 0.06 [schmonz 2020-11-07]
+	Updated devel/php-composer to 2.0.6 [tpaul 2020-11-07]
