@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/10/10 18:58:33 bsiegert Exp $
+$NetBSD: distinfo,v 1.6 2020/11/08 21:59:23 bsiegert Exp $
 
-SHA1 (tools-34804b1.tar.gz) = 667786ee95080b0cb6b13828fdd2728b63c75ce4
-RMD160 (tools-34804b1.tar.gz) = 85a495aafc30c0bcc96c3aa02b475aa0d14d5283
-SHA512 (tools-34804b1.tar.gz) = ad04a4576affa4cff053a6e22a705aab8f2b9605665642934b6ef9689aecd4c6cd726eecc7ae68f7a7820dfc909a3a9cde0e66345370d2cdc01b125f4525b0a4
-Size (tools-34804b1.tar.gz) = 2692853 bytes
+SHA1 (tools-e84cfc6.tar.gz) = f0757f3b54b9b1fc33ebbb64f25146aa64e210f8
+RMD160 (tools-e84cfc6.tar.gz) = 74239e9abb75fec4123ba8a0f9026c652a588351
+SHA512 (tools-e84cfc6.tar.gz) = d24105764028b5b4a23080831d134a50ee19905f850305bdbdc34464246f242f0e20c76a6b8162ebac256fc0f83af1fc01b4ef729ce203a95d21c481a95062f0
+Size (tools-e84cfc6.tar.gz) = 2613608 bytes
