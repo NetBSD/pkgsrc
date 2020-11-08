@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/06/06 09:11:20 wen Exp $
+$NetBSD: distinfo,v 1.9 2020/11/08 02:33:04 mef Exp $
 
-SHA1 (Text-Format-0.61.tar.gz) = c78811f24000317c9bdb768420830302d3dbee5e
-RMD160 (Text-Format-0.61.tar.gz) = 25bc4366c9fa23ac4b474a5a32ce4355f623f4be
-SHA512 (Text-Format-0.61.tar.gz) = bbd2b658ae7369e043ab1006cc8d947ac4b9deb7ab565bf79fd6bafc758c1729405f2cd015bbd0b68def492e5e67f8b9f89ab080494e684d8dee1d2f04dc8304
-Size (Text-Format-0.61.tar.gz) = 27814 bytes
+SHA1 (Text-Format-0.62.tar.gz) = 08bd36406207da8a64bda430243841ee38fdf218
+RMD160 (Text-Format-0.62.tar.gz) = ef890a2cc5801bc7548a2d792e02b6f8bdbdac51
+SHA512 (Text-Format-0.62.tar.gz) = d59e2e981b2d53a62390b5e05a95fc611cada7b1bc056c0f3d53f91873e700371306fd12f3ee53e2f0e70d2015ce8bdc65d3f4c24742711e452e4956b6233689
+Size (Text-Format-0.62.tar.gz) = 27841 bytes
