@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2020/11/08 23:51:18 otis Exp $
+$NetBSD: distinfo,v 1.16 2020/11/08 23:55:43 otis Exp $
 
 SHA1 (php-7.4.12.tar.xz) = d220ea35fefec870bd81e81116a178c57bb87321
 RMD160 (php-7.4.12.tar.xz) = 73c684b5b1acdd296b471fd89d06cb205cfd57ab
@@ -6,12 +6,12 @@ SHA512 (php-7.4.12.tar.xz) = 6c06fb74f8e479ead000b0e2e56602c217d012f1a80e47e1515
 Size (php-7.4.12.tar.xz) = 10311980 bytes
 SHA1 (patch-configure) = 5e9c9c06f6d819d5ba2832d648f41363f40f3108
 SHA1 (patch-disable-filter-url) = 0a2c19c18f089448a8d842e99738b292ab9e5640
-SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = edca1147cda6dbbe809a2f0a4bdb20bbc08192ee
-SHA1 (patch-ext_intl_collator_collator__sort.c) = 2859c8b400aa3407b16487e571dd402d0ce3e896
-SHA1 (patch-ext_intl_dateformat_dateformat__attr.c) = 0311330874122cc29720a45a5294dd3b7dd75daa
-SHA1 (patch-ext_intl_normalizer_normalizer__normalize.c) = 183a7b82b951096542ff4d85e59ceb0bf9c07da6
-SHA1 (patch-ext_intl_timezone_timezone__class.cpp) = d89440cdb417607069b8e5bba00a9aa641efe966
-SHA1 (patch-ext_intl_timezone_timezone__methods.cpp) = 50fb08d6b2b79bb02e9770972ad9720225eef442
+SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = c6702b071a1881ed35a1c1adc0e07ce53335e2e7
+SHA1 (patch-ext_intl_collator_collator__sort.c) = 7fdb751cabb24eb4097cfb5cf23ba217a9893530
+SHA1 (patch-ext_intl_dateformat_dateformat__attr.c) = 08a26ec534b67ed029426e4aa3bd26cb6761aead
+SHA1 (patch-ext_intl_normalizer_normalizer__normalize.c) = 10a215438db81c9f1f002f9409ebd56de6d65617
+SHA1 (patch-ext_intl_timezone_timezone__class.cpp) = da8e7a227c04f366aa9aab08c5042826baa965fe
+SHA1 (patch-ext_intl_timezone_timezone__methods.cpp) = 48dc73ca68df2454549bb81de6da6753bbb097bc
 SHA1 (patch-ext_phar_Makefile.frag) = 53ea5c58b0bc27d236118d5750a74b1cba43e5dd
 SHA1 (patch-ext_tidy_config.m4) = 380f4e8927582b2781faf58b17ad81b6dc967ba7
 SHA1 (patch-ext_xsl_php__xsl.h) = a9877bff7bacc77926a4541a0ac171c00ad1a627

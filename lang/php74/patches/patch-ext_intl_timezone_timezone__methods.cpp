@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_intl_timezone_timezone__methods.cpp,v 1.1 2020/11/08 23:51:18 otis Exp $
+$NetBSD: patch-ext_intl_timezone_timezone__methods.cpp,v 1.2 2020/11/08 23:55:44 otis Exp $
+
+Use stdbool true/false macros.
 
 --- ext/intl/timezone/timezone_methods.cpp.orig	2020-10-27 15:01:59.000000000 +0000
 +++ ext/intl/timezone/timezone_methods.cpp
