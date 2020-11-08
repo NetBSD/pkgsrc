@@ -1,0 +1,24 @@
+$NetBSD: patch-xclip-pastefile,v 1.1 2020/11/08 15:25:58 kim Exp $
+
+https://github.com/astrand/xclip/commit/db74a39e15f1a75bb1f828103ae7a8d2b4d8ccc3.patch
+
+From: "Dmitrij D. Czarkoff" <czarkoff@gmail.com>
+Date: Tue, 13 Sep 2016 17:57:12 +0200
+Subject: [PATCH] Add "-f -" flags to tar
+
+BSD implementations of tar use tape device as default file, so "tar xv" would
+extract files from tape device instead of standard input.
+---
+ xclip-pastefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/xclip-pastefile b/xclip-pastefile
+index bb3209f..4ac2eae 100755
+--- xclip-pastefile
++++ xclip-pastefile
+@@ -4,4 +4,4 @@ if [ "x$1" != "x" ]; then
+     echo "Usage: $0" >&2
+     exit 1
+ fi
+-xclip -selection secondary -o | gunzip -c | tar xv
++xclip -selection secondary -o | gunzip -c | tar xvf -
