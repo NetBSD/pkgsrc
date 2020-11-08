@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/10/15 13:08:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/08 21:59:21 bsiegert Exp $
 
 DISTNAME=		go-quicktest-1.10.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=frankban/}
 GITHUB_PROJECT=		quicktest
