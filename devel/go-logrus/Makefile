@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/10/15 13:08:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2020/11/08 21:59:19 bsiegert Exp $
 
 DISTNAME=	logrus-1.0.6
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sirupsen/}
 GITHUB_PROJECT=	logrus

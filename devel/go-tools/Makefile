@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2020/10/15 13:08:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45 2020/11/08 21:59:23 bsiegert Exp $
 
 DISTNAME=		tools
-PKGNAME=		go-tools-1.11.20181009
-PKGREVISION=		21
+PKGNAME=		go-tools-1.15.20201026
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		${DISTNAME}
-GITHUB_TAG=		34804b1
+GITHUB_TAG=		e84cfc6
 
 MAINTAINER=		bsiegert@NetBSD.org
 HOMEPAGE=		https://golang.org/
@@ -47,6 +47,9 @@ CHECK_RELRO_SKIP+=	bin/stress
 CHECK_RELRO_SKIP+=	bin/stringer
 CHECK_RELRO_SKIP+=	bin/tip
 CHECK_RELRO_SKIP+=	bin/toolstash
+
+pre-patch:
+	${RM} -rf ${WRKSRC}/gopls
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && mv bin/analyze ${GOTOOLDIR}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/10/15 13:08:31 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2020/11/08 21:59:35 bsiegert Exp $
 
 DISTNAME=	sentences-1.0.6
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	23
+PKGREVISION=	24
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neurosnap/}
 CATEGORIES=	textproc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
