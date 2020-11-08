@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/09/07 17:42:27 wiz Exp $
+$NetBSD: distinfo,v 1.7 2020/11/08 06:56:47 wen Exp $
 
-SHA1 (DateTime-Format-ISO8601-0.14.tar.gz) = 0df5caf01949f053a3fa4a86c617ae6bea62b4e9
-RMD160 (DateTime-Format-ISO8601-0.14.tar.gz) = 9b87ff6facb4600e19509877232f86e1dd9b2b94
-SHA512 (DateTime-Format-ISO8601-0.14.tar.gz) = a5575df8ed275588eebe383c969d9f7f9182b49415da930cd5c6a30197248006ec53fc80d3d8ecdc6c097e16294b8252af77863dd388ef0d3617ee5657937d7f
-Size (DateTime-Format-ISO8601-0.14.tar.gz) = 44616 bytes
+SHA1 (DateTime-Format-ISO8601-0.15.tar.gz) = f9bbb29647858c3927d5cdd56add33bfee4dd81a
+RMD160 (DateTime-Format-ISO8601-0.15.tar.gz) = 9050f6664033392c92e4c95fd61ef8d57abafc64
+SHA512 (DateTime-Format-ISO8601-0.15.tar.gz) = c376b9fa95e90d049cf07021b5a71b74062eb2e451308f2975a52488e576b62875ee90b9a42b76398ce9e100e85eb2498f6f1dfa2501ece3b3e6b8595b354b3c
+Size (DateTime-Format-ISO8601-0.15.tar.gz) = 44826 bytes
