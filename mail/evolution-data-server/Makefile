@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2020/11/07 09:28:40 mef Exp $
+# $NetBSD: Makefile,v 1.197 2020/11/08 00:56:53 mef Exp $
 
 DISTNAME=	evolution-data-server-3.35.1
 PKGREVISION=	12
@@ -20,7 +20,6 @@ USE_LANGUAGES=	c c++14
 GCC_REQD+=	5
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CMAKE_ARGS+=	-DWITH_LIBDB=OFF
 CMAKE_ARGS+=	-DENABLE_GOA=OFF
