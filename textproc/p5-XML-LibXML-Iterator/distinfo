@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/09/07 17:00:26 wiz Exp $
+$NetBSD: distinfo,v 1.9 2020/11/08 03:08:18 mef Exp $
 
-SHA1 (XML-LibXML-Iterator-1.05.tar.gz) = 23f11d4fc2456debd706939b26066ef9ef07e9d7
-RMD160 (XML-LibXML-Iterator-1.05.tar.gz) = ffd319b3491063b9c374d53f5b5ab06c2a57103e
-SHA512 (XML-LibXML-Iterator-1.05.tar.gz) = 9e50aa5fe0a03ccddbb3c34354d9f056689677f5d172e624d83e63b3fa0138a07956b6a3d29f98ce9ae75c5a01d12092875c0ba37c1ebbf959af7c486c6583f3
-Size (XML-LibXML-Iterator-1.05.tar.gz) = 15396 bytes
+SHA1 (XML-LibXML-Iterator-1.06.tar.gz) = ca3a6e6538e0a2a4ab12d83fe801414a9bbbb181
+RMD160 (XML-LibXML-Iterator-1.06.tar.gz) = 9cd73ecc172a51e1bfa8499a9eb44c5c5d1e2138
+SHA512 (XML-LibXML-Iterator-1.06.tar.gz) = d0f8cd36a7bbac78da40cd4da85f44cdfae7f9552f13effe1f69df859e4da7af48c2eae131b42532cc13b3ef3f2e560d889288b1449ab1452d453ff255dfb875
+Size (XML-LibXML-Iterator-1.06.tar.gz) = 18753 bytes
