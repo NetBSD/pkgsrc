@@ -1,8 +1,10 @@
-$NetBSD: patch-ag,v 1.11 2020/06/22 06:24:15 wiz Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.1 2020/11/08 17:42:46 tron Exp $
 
---- doc/Makefile.in.orig	2020-06-18 21:30:08.000000000 +0000
-+++ doc/Makefile.in
-@@ -561,7 +561,7 @@ install-data-local: makedoc-all instdoc
+Install manual package under unique name to avoid package conflicts
+
+--- doc/Makefile.in.orig	2020-11-07 20:18:32.000000000 +0000
++++ doc/Makefile.in	2020-11-08 15:01:59.064036129 +0000
+@@ -561,7 +561,7 @@
  	elif [ -f $(srcdir)/muttrc.man ] ; then \
  	  ./instdoc $(srcdir)/muttrc.man $(DESTDIR)$(mandir)/man5/muttrc.5 ; \
  	fi
