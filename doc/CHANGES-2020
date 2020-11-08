@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6089 2020/11/08 20:39:10 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6090 2020/11/08 21:57:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8988,3 +8988,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/mutt to 2.0.0 [tron 2020-11-08]
 	Updated lang/go114 to 1.14.11 [bsiegert 2020-11-08]
 	Updated lang/go115 to 1.15.4 [bsiegert 2020-11-08]
+	Removed devel/py-hglist [wiz 2020-11-08]
