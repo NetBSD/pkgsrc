@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/06/22 06:24:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/11/08 17:42:45 tron Exp $
 bin/flea
 bin/mutt
 bin/mutt_dotlock
@@ -67,6 +67,8 @@ share/doc/mutt/samples/iconv/iconv.solaris-2.6-cjk.rc
 share/doc/mutt/samples/iconv/iconv.solaris-2.6.rc
 share/doc/mutt/samples/iconv/iconv.solaris-2.7.rc
 share/doc/mutt/samples/markdown2html
+share/doc/mutt/samples/mutt_oauth2.py
+share/doc/mutt/samples/mutt_oauth2.py.README
 share/doc/mutt/samples/mutt_xtitle
 share/doc/mutt/samples/pgp2.rc
 share/doc/mutt/samples/pgp5.rc
