@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2016/11/23 23:41:30 wiedi Exp $
+# $NetBSD: Makefile,v 1.21 2020/11/08 15:25:58 kim Exp $
 
 DISTNAME=	xclip-0.13
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=astrand/}
 
