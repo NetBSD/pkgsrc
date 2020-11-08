@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6080 2020/11/08 04:19:34 mef Exp $
+$NetBSD: CHANGES-2020,v 1.6081 2020/11/08 06:51:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8979,3 +8979,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-XML-LibXML-Iterator to 1.06 [mef 2020-11-08]
 	Updated textproc/p5-XML-RSS to 1.62 [mef 2020-11-08]
 	Updated textproc/p5-Pod-Markdown to 3.300 [mef 2020-11-08]
+	Updated time/p5-DateTime-TimeZone to 2.44 [wen 2020-11-08]
