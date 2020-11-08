@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/10/15 12:43:33 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/11/08 20:38:09 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go115/AUTHORS
@@ -2691,6 +2691,7 @@ go115/src/cmd/link/internal/ld/testdata/issue32233/lib/lib.go
 go115/src/cmd/link/internal/ld/testdata/issue32233/main/main.go
 go115/src/cmd/link/internal/ld/testdata/issue38192/main.go
 go115/src/cmd/link/internal/ld/testdata/issue38192/oneline.s
+go115/src/cmd/link/internal/ld/testdata/issue39757/issue39757main.go
 go115/src/cmd/link/internal/ld/typelink.go
 go115/src/cmd/link/internal/ld/util.go
 go115/src/cmd/link/internal/ld/xcoff.go
@@ -8939,6 +8940,8 @@ go115/test/fixedbugs/issue4099.go
 go115/test/fixedbugs/issue4162.go
 go115/test/fixedbugs/issue4167.go
 go115/test/fixedbugs/issue41711.go
+go115/test/fixedbugs/issue42032.go
+go115/test/fixedbugs/issue42076.go
 go115/test/fixedbugs/issue4215.go
 go115/test/fixedbugs/issue4232.go
 go115/test/fixedbugs/issue4251.go
