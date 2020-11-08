@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6085 2020/11/08 13:54:43 fox Exp $
+$NetBSD: CHANGES-2020,v 1.6086 2020/11/08 14:59:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8984,3 +8984,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/onefetch to 2.7.1 [pin 2020-11-08]
 	Updated audio/fasttracker2 to 1.38 [fox 2020-11-08]
 	Updated chat/ircd-hybrid to 8.2.34 [fox 2020-11-08]
+	Updated time/p5-DateTime-Format-Natural to 1.11 [wen 2020-11-08]
