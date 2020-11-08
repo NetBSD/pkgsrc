@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/08/31 18:11:43 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/11/08 00:59:48 sjmulder Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
@@ -28,5 +28,8 @@ INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
 
 REPLACE_PERL=	grog/grog.pl
 REPLACE_PERL+=	afmtodit/afmtodit.pl
+
+# 'checking for working mmap...' conftest hangs
+BROKEN_ON_PLATFORM+=	Darwin-*-aarch64
 
 .include "../../mk/bsd.pkg.mk"
