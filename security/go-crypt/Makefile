@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2020/10/15 13:08:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2020/11/08 21:59:31 bsiegert Exp $
 
 # Making up a version number, as this is a snapshot after the latest release
 DISTNAME=	crypt-0.0.2b
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	23
+PKGREVISION=	24
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xordataexchange/}
 CATEGORIES=	security
 GITHUB_TAG=	749e360c8f236773f28fc6d3ddfce4a470795227
