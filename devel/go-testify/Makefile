@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2020/10/15 13:08:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2020/11/08 21:59:23 bsiegert Exp $
 
 DISTNAME=	go-testify-1.2.1
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stretchr/}
 GITHUB_PROJECT=	testify

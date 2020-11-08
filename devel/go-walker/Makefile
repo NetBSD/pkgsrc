@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/10/15 13:08:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/08 21:59:24 bsiegert Exp $
 
 DISTNAME=	go-walker-0.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=saracen/}
 DIST_SUBDIR=	${GITHUB_PROJECT}

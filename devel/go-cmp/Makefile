@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/10/15 13:08:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/08 21:59:12 bsiegert Exp $
 
 DISTNAME=	go-cmp-0.4.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 GITHUB_PROJECT=	go-cmp
 GITHUB_TAG=	v${PKGVERSION_NOREV}
