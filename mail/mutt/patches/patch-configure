@@ -1,8 +1,11 @@
-$NetBSD: patch-al,v 1.12 2018/11/26 12:26:19 tron Exp $
+$NetBSD: patch-configure,v 1.1 2020/11/08 17:42:45 tron Exp $
 
---- configure.orig	2018-11-25 17:43:07.000000000 +0000
-+++ configure	2018-11-26 11:59:44.000000000 +0000
-@@ -9712,7 +9712,7 @@
+- Allow build as an unpriviliged user
+- Fix Kerberos related build failure under Solaris
+
+--- configure.orig	2020-11-07 20:18:30.000000000 +0000
++++ configure	2020-11-08 15:02:04.178022629 +0000
+@@ -10072,7 +10072,7 @@
  
  if test x$mutt_cv_setgid = xyes; then
          DOTLOCK_GROUP='mail'
@@ -11,7 +14,7 @@ $NetBSD: patch-al,v 1.12 2018/11/26 12:26:19 tron Exp $
  else
          DOTLOCK_GROUP=''
          DOTLOCK_PERMISSION=755
-@@ -10022,6 +10022,7 @@
+@@ -10382,6 +10382,7 @@
      case "`$KRB5CFGPATH --version`" in
        "Kerberos 5 "*)	GSSAPI_IMPL="MIT";;
        ?eimdal*)		GSSAPI_IMPL="Heimdal";;
@@ -19,7 +22,7 @@ $NetBSD: patch-al,v 1.12 2018/11/26 12:26:19 tron Exp $
        *)		GSSAPI_IMPL="Unknown";;
     esac
    else
-@@ -10271,7 +10272,7 @@
+@@ -10631,7 +10632,7 @@
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: GSSAPI libraries not found" >&5
  $as_echo "GSSAPI libraries not found" >&6; }
      fi
