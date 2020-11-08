@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.8 2018/11/26 12:26:19 tron Exp $
+$NetBSD: patch-lib.h,v 1.1 2020/11/08 17:42:46 tron Exp $
 
 On some systems, curses.h defines TRUE and FALSE, so conditionalise
 them here to avoid compiler complaints about duplicate definitions.
 
---- lib.h.orig	2018-10-06 23:43:41.000000000 +0100
-+++ lib.h	2018-11-26 12:02:07.000000000 +0000
+--- lib.h.orig	2020-11-03 17:50:37.000000000 +0000
++++ lib.h	2020-11-08 15:01:50.511710523 +0000
 @@ -54,8 +54,12 @@
  #  define N_(a) a
  # endif

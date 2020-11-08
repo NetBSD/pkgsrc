@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.85 2020/08/30 07:32:30 tron Exp $
+$NetBSD: distinfo,v 1.86 2020/11/08 17:42:45 tron Exp $
 
-SHA1 (mutt-1.14.7.tar.gz) = 10927a00d0f9e6e53036937098764476a96e2c96
-RMD160 (mutt-1.14.7.tar.gz) = 9bc17efb20a73cb8fd4b01fdfdb702fc97a3781e
-SHA512 (mutt-1.14.7.tar.gz) = dc9739b5f0a99ca70fcbd495c71fbead23e3481f9c9e426feb827997c9c42e5f28355084f54788820c96a079dedb649fcc20e69436fb3c4df7e46f372b533e7c
-Size (mutt-1.14.7.tar.gz) = 5009968 bytes
-SHA1 (patch-ab) = 3d094b6bdb2b2ffac8ce6a1d3a306714c9f01835
-SHA1 (patch-af) = fd9eb93b580ce4f2115c3db16b199578fa99ce94
-SHA1 (patch-ag) = a9bfc6041a9b763e77d9174073a3cd905c7b5f93
-SHA1 (patch-al) = 0cb26ce9f89c1f0651eb46117f62ae6275bfaf97
+SHA1 (mutt-2.0.0.tar.gz) = 2554e214f2f0e6ff148a33805af6b00bb57ee988
+RMD160 (mutt-2.0.0.tar.gz) = 778578909487e7182dd0418416e63a002832ca6b
+SHA512 (mutt-2.0.0.tar.gz) = 2f48bf7eb9bb79a477e3fb9bf4bcde6033d7aaa8922eee20b6e6a05f49a1aea152a7987b99f335343175d87180062064c90c5a7b5bfa82aed188eeab0ac4a90b
+Size (mutt-2.0.0.tar.gz) = 5287742 bytes
+SHA1 (patch-Makefile.in) = 646eab10790053fff80bf8012ea85f40412b330c
+SHA1 (patch-color.c) = 69964830c13d4113e78a19539aad1e560825182a
+SHA1 (patch-configure) = cbd7ff52b0b358fff41988d286267046f56ee8d5
+SHA1 (patch-doc_Makefile.in) = 8086887afeec554d0c78047a48ec3eb33d38f26c
+SHA1 (patch-lib.h) = f10c32fc891a3c70c7379e092159e207b6c27b8b

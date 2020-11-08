@@ -1,8 +1,11 @@
-$NetBSD: patch-ab,v 1.18 2018/11/26 12:26:19 tron Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2020/11/08 17:42:45 tron Exp $
 
---- Makefile.in.orig	2018-11-25 17:43:43.000000000 +0000
-+++ Makefile.in	2018-11-26 12:03:30.000000000 +0000
-@@ -398,7 +398,7 @@
+- Fix location of locale files
+- Allow build as an unpriviliged user
+
+--- Makefile.in.orig	2020-11-07 20:18:32.000000000 +0000
++++ Makefile.in	2020-11-08 14:57:59.053299992 +0000
+@@ -393,7 +393,7 @@
  DBX = @DBX@
  DEBUGGER = @DEBUGGER@
  DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" \
@@ -11,7 +14,7 @@ $NetBSD: patch-ab,v 1.18 2018/11/26 12:26:19 tron Exp $
  	-DHAVE_CONFIG_H=1
  
  DEPDIR = @DEPDIR@
-@@ -1667,11 +1667,6 @@
+@@ -1680,11 +1680,6 @@
  		rm -f $(DESTDIR)$(bindir)/mutt.dotlock ;		\
  		ln -sf $(DESTDIR)$(bindir)/mutt_dotlock $(DESTDIR)$(bindir)/mutt.dotlock ; \
  	fi
