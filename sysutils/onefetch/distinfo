@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/11/07 20:30:56 pin Exp $
+$NetBSD: distinfo,v 1.6 2020/11/08 12:20:28 pin Exp $
 
 SHA1 (addr2line-0.13.0.crate) = c7a6843df774a95b4db5a5511b58ab22c44f228a
 RMD160 (addr2line-0.13.0.crate) = 22c733c5358313e9ca7fb95d1dbd695d03fcb552
@@ -404,10 +404,10 @@ SHA1 (once_cell-1.4.1.crate) = cf7daba227fbaccac5f0abfc990dd34e2c864b12
 RMD160 (once_cell-1.4.1.crate) = b262e961c01f25cbf482d43b8a396bedb2cba5bb
 SHA512 (once_cell-1.4.1.crate) = 7d075cb115e6146a9e08e27fe123865bb54fb73c1da6c84f3ac991ff9f6f83bbb55245a9741279a12b72f143e3ed4ada3da7b13764e7655dfe64b70c5d6c1958
 Size (once_cell-1.4.1.crate) = 24366 bytes
-SHA1 (onefetch-2.7.0.tar.gz) = bd1190258c542243fbce3e1280882451180bea02
-RMD160 (onefetch-2.7.0.tar.gz) = 4490ceca7f2dacc045ce5a99f7ab115d2e98041d
-SHA512 (onefetch-2.7.0.tar.gz) = 224c74117e6d48d2ac796f53c0d124bf8eaa1aba675b8b8c7c8b96c68b836cd85a0cfec0668c3e2b7473d4c27987fd20ca63c07c0d3b7eae06c362980598d438
-Size (onefetch-2.7.0.tar.gz) = 1363958 bytes
+SHA1 (onefetch-2.7.1.tar.gz) = 0523def395b9c076614c8227855c1dc2d30c307e
+RMD160 (onefetch-2.7.1.tar.gz) = b56b357d9ac015d6dceff60f31f5a4d0d984c0d7
+SHA512 (onefetch-2.7.1.tar.gz) = 42f91245d29525e8c6f85b00758f8d4b62936625924fa65b12abbebb5c5cb209c78d80b571385afebf1477fa40601c4da414b70c6e0431f2df474a7d8b16d9a5
+Size (onefetch-2.7.1.tar.gz) = 1364820 bytes
 SHA1 (opaque-debug-0.2.3.crate) = 5c0e84db3bd62194151c1f6f50a3725e3959431c
 RMD160 (opaque-debug-0.2.3.crate) = 732009e9003be68f169257f26b2353d220347a43
 SHA512 (opaque-debug-0.2.3.crate) = 7aa44aedd3fa5a6ed3d60239c23dce4cb7b27693e110140e6b332579bf1c1b773244f12271ced975e53caf68f3f381a7edaada573efb982d2e13d638a3a6dd40
