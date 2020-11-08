@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6088 2020/11/08 20:12:52 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6089 2020/11/08 20:39:10 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8987,3 +8987,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/p5-DateTime-Format-Natural to 1.11 [wen 2020-11-08]
 	Updated mail/mutt to 2.0.0 [tron 2020-11-08]
 	Updated lang/go114 to 1.14.11 [bsiegert 2020-11-08]
+	Updated lang/go115 to 1.15.4 [bsiegert 2020-11-08]
