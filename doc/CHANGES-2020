@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6083 2020/11/08 12:20:47 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6084 2020/11/08 13:40:47 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8982,3 +8982,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/p5-DateTime-TimeZone to 2.44 [wen 2020-11-08]
 	Updated time/p5-DateTime-Format-ISO8601 to 0.15 [wen 2020-11-08]
 	Updated sysutils/onefetch to 2.7.1 [pin 2020-11-08]
+	Updated audio/fasttracker2 to 1.38 [fox 2020-11-08]
