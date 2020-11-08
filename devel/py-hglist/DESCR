@@ -1,2 +1,0 @@
-Hglist is an extension to Mercurial that adds an "hg list"/"hg ls"
-command. It is designed to provide better output than "hg manifest".

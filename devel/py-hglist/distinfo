@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:08 agc Exp $
-
-SHA1 (hglist-0.3.tar.gz) = aff7fdce5949c014a433ffe9adcdfe36cddc6e09
-RMD160 (hglist-0.3.tar.gz) = b63a7b93a16f9421fa47f8cbb9704326ce7bb8f9
-SHA512 (hglist-0.3.tar.gz) = 33d85fec968d819c4c1a98294542eb919d06ac7eae14cd702de663d3a3e4231b3949a4f601574ced74c2de0ed505f851b594f809a020ac5a90bc90b4260852b0
-Size (hglist-0.3.tar.gz) = 14503 bytes
