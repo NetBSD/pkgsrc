@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.28 2020/03/20 16:07:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/11/09 14:46:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/tzinfo.rb
+${GEM_LIBDIR}/lib/tzinfo/annual_rules.rb
 ${GEM_LIBDIR}/lib/tzinfo/country.rb
 ${GEM_LIBDIR}/lib/tzinfo/country_timezone.rb
 ${GEM_LIBDIR}/lib/tzinfo/data_source.rb
@@ -13,6 +14,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data_sources/constant_offset_data_timezone_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/data_sources/country_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/data_sources/data_timezone_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/data_sources/linked_timezone_info.rb
+${GEM_LIBDIR}/lib/tzinfo/data_sources/posix_time_zone_parser.rb
 ${GEM_LIBDIR}/lib/tzinfo/data_sources/ruby_data_source.rb
 ${GEM_LIBDIR}/lib/tzinfo/data_sources/timezone_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/data_sources/transitions_data_timezone_info.rb
@@ -46,6 +48,7 @@ ${GEM_LIBDIR}/lib/tzinfo/timezone_offset.rb
 ${GEM_LIBDIR}/lib/tzinfo/timezone_period.rb
 ${GEM_LIBDIR}/lib/tzinfo/timezone_proxy.rb
 ${GEM_LIBDIR}/lib/tzinfo/timezone_transition.rb
+${GEM_LIBDIR}/lib/tzinfo/transition_rule.rb
 ${GEM_LIBDIR}/lib/tzinfo/transitions_timezone_period.rb
 ${GEM_LIBDIR}/lib/tzinfo/untaint_ext.rb
 ${GEM_LIBDIR}/lib/tzinfo/version.rb
