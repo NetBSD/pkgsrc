@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/11/01 09:33:24 pin Exp $
+$NetBSD: distinfo,v 1.3 2020/11/09 14:08:30 pin Exp $
 
-SHA1 (spotify-qt-3.0.tar.gz) = 2245b8a7fa2df14b62a916b6d04a7592b5f84786
-RMD160 (spotify-qt-3.0.tar.gz) = c6abee08afcc11265da8354fd3be9cac831087fe
-SHA512 (spotify-qt-3.0.tar.gz) = 76f6b4407f93089034a89c8436940dc63dd0e9f275ea940da412fd163431a133383e5b3ad02fcb95478b80128ad90e79c2f6802ae02af5e7226df303c912fe42
-Size (spotify-qt-3.0.tar.gz) = 317325 bytes
+SHA1 (spotify-qt-3.1.tar.gz) = d0e8d7b06a89f53fe16cce0971accfce84df430f
+RMD160 (spotify-qt-3.1.tar.gz) = dc909e71256f1d9e9c0b13673c73c789ec80101f
+SHA512 (spotify-qt-3.1.tar.gz) = 7fe69759c90119f9579e65f89662250a411b82bb55017f8873d75d41d1c4175d6cd316cc0ea0aad9357f3aadc343fd75704f195c7db556f0c909c3c0b34c0122
+Size (spotify-qt-3.1.tar.gz) = 320034 bytes
