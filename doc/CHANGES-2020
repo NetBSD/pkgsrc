@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6099 2020/11/09 12:16:32 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6100 2020/11/09 13:15:49 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9000,3 +9000,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated news/flnews to 0.18 [micha 2020-11-09]
 	Updated sysutils/py-sh to 1.14.1 [adam 2020-11-09]
 	Updated devel/py-dotenv to 0.15.0 [adam 2020-11-09]
+	Updated news/bystand to 1.2.0 [micha 2020-11-09]
