@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/04/20 14:08:47 micha Exp $
+$NetBSD: distinfo,v 1.3 2020/11/09 13:14:23 micha Exp $
 
-SHA1 (bystand-1.1.0.zip) = 3c6591080b19268a81e5c63f2faaeb5588c5956f
-RMD160 (bystand-1.1.0.zip) = a2cf672541ea1a46df55fc3dc6a94fbe44c691e0
-SHA512 (bystand-1.1.0.zip) = f693d8251ae0eeb84d1cc401d0869d791c7742ddd727ce360609e0e03cd5bec5bfed055fde8f775b039a4be148aa6666cab58eeade8066d1b9d2704d6906a2f8
-Size (bystand-1.1.0.zip) = 33253 bytes
+SHA1 (bystand-1.2.0.zip) = 622e6b7d9dcf8ecbb824dd5af2fca934051b8565
+RMD160 (bystand-1.2.0.zip) = d5dbda3c60ce280598d5f70258a7f4eee3c2cd98
+SHA512 (bystand-1.2.0.zip) = 9ee2d9b5b6550f3229fe95eea8b6ade8aeea0fec640149f87f5da72e98e19f572ba392df28eba64aa996fc51d56e593392bdb737024710be85d424ed16b6adb5
+Size (bystand-1.2.0.zip) = 33704 bytes
