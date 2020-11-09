@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6110 2020/11/09 14:42:59 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6111 2020/11/09 14:43:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9015,3 +9015,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/catch2 to 2.13.3 [wiz 2020-11-09]
 	Updated fonts/fontforge to 20201107 [wiz 2020-11-09]
 	Updated devel/py-mercurial to 5.6 [wiz 2020-11-09]
+	Updated devel/py-hg-evolve to 10.1.0 [wiz 2020-11-09]
