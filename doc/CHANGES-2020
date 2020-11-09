@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6098 2020/11/09 12:04:11 micha Exp $
+$NetBSD: CHANGES-2020,v 1.6099 2020/11/09 12:16:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8998,3 +8998,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/strawberry to 0.8.3 [wiz 2020-11-09]
 	Updated graphics/ImageMagick to 7.0.10.37 [wiz 2020-11-09]
 	Updated news/flnews to 0.18 [micha 2020-11-09]
+	Updated sysutils/py-sh to 1.14.1 [adam 2020-11-09]
+	Updated devel/py-dotenv to 0.15.0 [adam 2020-11-09]
