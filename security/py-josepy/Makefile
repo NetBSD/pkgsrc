@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/08/31 23:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/11/09 13:38:39 adam Exp $
 
-DISTNAME=	josepy-1.4.0
+DISTNAME=	josepy-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security
+CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/josepy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
