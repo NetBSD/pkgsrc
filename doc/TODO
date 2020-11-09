@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20170 2020/11/09 09:53:30 leot Exp $
+$NetBSD: TODO,v 1.20171 2020/11/09 10:35:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aribas-1.64
 	o arirang-1.70
 	o asapm-3.1
-	o asciidoc-9.0.4
 	o asn1c-0.9.27
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
