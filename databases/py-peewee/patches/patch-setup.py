@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.2 2019/01/08 08:37:59 adam Exp $
+$NetBSD: patch-setup.py,v 1.3 2020/11/09 09:29:12 adam Exp $
 
 Find libsqlite3.
 
@@ -7,7 +7,7 @@ Find libsqlite3.
 @@ -73,8 +73,9 @@ def _have_sqlite_extension_support():
      success = False
      try:
-         compiler.link_executable(
+         compiler.link_shared_object(
 -            compiler.compile([src_file], output_dir=tmp_dir),
 +            compiler.compile([src_file], output_dir=tmp_dir, include_dirs=['@BUILDLINK_PREFIX.sqlite3@/include']),
              bin_file,
