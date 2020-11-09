@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6114 2020/11/09 15:08:27 maya Exp $
+$NetBSD: CHANGES-2020,v 1.6115 2020/11/09 23:46:26 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9019,3 +9019,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ruby-tzinfo to 2.0.3 [taca 2020-11-09]
 	Updated www/firefox to 82.0.3 [maya 2020-11-09]
 	Updated www/firefox-l10n to 82.0.3 [maya 2020-11-09]
+	Updated x11/mate-terminal to 1.24.1 [gutteridge 2020-11-09]
