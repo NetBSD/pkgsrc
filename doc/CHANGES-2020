@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6094 2020/11/09 10:42:43 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6095 2020/11/09 10:53:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8994,3 +8994,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pathspec to 0.8.1 [adam 2020-11-09]
 	Updated textproc/asciidoc to 9.0.4 [wiz 2020-11-09]
 	Updated textproc/enchant2 to 2.2.13 [wiz 2020-11-09]
+	Updated audio/musicpd to 0.22.3 [wiz 2020-11-09]
