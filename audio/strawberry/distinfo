@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/10/14 16:37:26 wiz Exp $
+$NetBSD: distinfo,v 1.8 2020/11/09 11:33:56 wiz Exp $
 
-SHA1 (strawberry-0.8.1.tar.xz) = 3ac7f2fc4143c7a708c6591b7adcd16ea51cba40
-RMD160 (strawberry-0.8.1.tar.xz) = f45d655d093de7c87dbcb498d0b62f2920c8b620
-SHA512 (strawberry-0.8.1.tar.xz) = 99c4c11cdb540ec36285b7e6e7fba65d69aa8eb125fba2cf8a053c61adf9e987d415a35fa4dbf76a580a73296cfe2e4072a2872f821810d826292cdae47941b3
-Size (strawberry-0.8.1.tar.xz) = 10278268 bytes
+SHA1 (strawberry-0.8.3.tar.xz) = 3f971ee3b59db4ded03750ceaf39cc76bcbb6399
+RMD160 (strawberry-0.8.3.tar.xz) = 67b4d541a73bb664cb2d943d03fb11c5de95ff3f
+SHA512 (strawberry-0.8.3.tar.xz) = e64c49a6b479677486ae7868107e945a63a028cbaa6dcfb68c9c0784fe0ea8a1133264832367d092628fb1094ca90d87d6ab49199d4aab7f56f2620eb4e9b2f7
+Size (strawberry-0.8.3.tar.xz) = 10280356 bytes
