@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6092 2020/11/09 09:35:19 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6093 2020/11/09 10:35:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8992,3 +8992,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.46.0nb2 [schmonz 2020-11-09]
 	Updated databases/py-peewee to 3.14.0 [adam 2020-11-09]
 	Updated devel/py-pathspec to 0.8.1 [adam 2020-11-09]
+	Updated textproc/asciidoc to 9.0.4 [wiz 2020-11-09]
