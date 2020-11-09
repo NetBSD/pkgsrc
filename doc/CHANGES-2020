@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6097 2020/11/09 11:39:56 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6098 2020/11/09 12:04:11 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8997,3 +8997,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/musicpd to 0.22.3 [wiz 2020-11-09]
 	Updated audio/strawberry to 0.8.3 [wiz 2020-11-09]
 	Updated graphics/ImageMagick to 7.0.10.37 [wiz 2020-11-09]
+	Updated news/flnews to 0.18 [micha 2020-11-09]
