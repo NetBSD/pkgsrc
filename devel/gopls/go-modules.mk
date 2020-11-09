@@ -1,4 +1,5 @@
-# $NetBSD: go-modules.mk,v 1.3 2020/10/14 16:29:26 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.4 2020/11/09 14:25:31 wiz Exp $
+
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
