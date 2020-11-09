@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20173 2020/11/09 10:53:52 wiz Exp $
+$NetBSD: TODO,v 1.20174 2020/11/09 11:34:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1053,7 +1053,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o stegavorto-2011.05.26
 	o strace-4.23
 	o stratagus-2.2.5.5
-	o strawberry-0.8.3
 	o streamtuner-2.2.0
 	o sudo-1.9.3p1
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
