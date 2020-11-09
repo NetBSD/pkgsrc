@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6107 2020/11/09 14:25:41 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6108 2020/11/09 14:26:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9012,3 +9012,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-hypothesis to 5.41.2 [wiz 2020-11-09]
 	Updated multimedia/libde265 to 1.0.8 [wiz 2020-11-09]
 	Updated devel/gopls to 0.5.2 [wiz 2020-11-09]
+	Updated devel/catch2 to 2.13.3 [wiz 2020-11-09]
