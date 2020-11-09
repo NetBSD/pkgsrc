@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6108 2020/11/09 14:26:04 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6109 2020/11/09 14:28:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9013,3 +9013,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/libde265 to 1.0.8 [wiz 2020-11-09]
 	Updated devel/gopls to 0.5.2 [wiz 2020-11-09]
 	Updated devel/catch2 to 2.13.3 [wiz 2020-11-09]
+	Updated fonts/fontforge to 20201107 [wiz 2020-11-09]
