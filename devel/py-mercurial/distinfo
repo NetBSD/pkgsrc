@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.94 2020/10/06 17:50:47 wiz Exp $
+$NetBSD: distinfo,v 1.95 2020/11/09 14:42:46 wiz Exp $
 
 SHA1 (aho-corasick-0.7.10.crate) = 46a5f4bc5d99c97eca60043752a0fd47d01fca7d
 RMD160 (aho-corasick-0.7.10.crate) = 925013ea0bce7c4a0ca5e1b017af0a1e553061fd
@@ -396,10 +396,10 @@ SHA1 (memory-module-sys-0.3.0.crate) = 9c253ccc4ced836c054d37f6b92cc0b992b5bbf5
 RMD160 (memory-module-sys-0.3.0.crate) = 3f6784e77d53af7281174a8feebc8dbde1591960
 SHA512 (memory-module-sys-0.3.0.crate) = 01df13b8073996098fa038292bb7113630a017e513896ceddfa5c9c760b1738aec5601957f5ca1c1defa205d8b6905b28edb2ef1c0f960600d29a1cd76baf972
 Size (memory-module-sys-0.3.0.crate) = 13808 bytes
-SHA1 (mercurial-5.5.2.tar.gz) = 49ae4debda55a0e78d5b90008ddb79d92bca539a
-RMD160 (mercurial-5.5.2.tar.gz) = 6de828c1b8dc08e68fd9c08b9b108ffcfed3e601
-SHA512 (mercurial-5.5.2.tar.gz) = e154592deed6168a32e7fd075fa034908ca72826ae49a92c84a6ad82b820753906578f064ac623018442d83d125a551eecc057179e66ac7217398a192e903629
-Size (mercurial-5.5.2.tar.gz) = 7761053 bytes
+SHA1 (mercurial-5.6.tar.gz) = 3dbceb8b41bcd0ddf9d0bd039da5375762770805
+RMD160 (mercurial-5.6.tar.gz) = a5ca3e749b38869f0b32ee127f3170116e4a40e1
+SHA512 (mercurial-5.6.tar.gz) = fb0dcbeda972ec7c74d88d3a525e36d07d0b0c20809d58552d9187482863eb079b8f3e374cba3bde24685bde8a603cd5a580cf3cf52acdafcc841b05c81c0f81
+Size (mercurial-5.6.tar.gz) = 7840943 bytes
 SHA1 (micro-timer-0.3.0.crate) = e6a16e55091106648edce4cc0900f17965e648bf
 RMD160 (micro-timer-0.3.0.crate) = d04755052bd4e55ea39fb2676019297572024ef7
 SHA512 (micro-timer-0.3.0.crate) = 9a7150cc19f0a3b006df87097d6f3699313604005ef4fa2a770ae8eeec40f699bf00af19f5561e2b5b72913bd41103bcb2b21670359b5202bd5af828575f40e7
@@ -975,3 +975,4 @@ Size (yaml-rust-0.3.5.crate) = 42087 bytes
 SHA1 (patch-D8480) = d97094c64addcc243e54cfde48734ecfe130c3d6
 SHA1 (patch-D8574) = 56cecc1c83558803186e84d90ef67b4dce68f8e9
 SHA1 (patch-rust_hg-core_src_lib.rs) = 38dc2a8c5f5ba9318cfa89e408cc7322e8429b8f
+SHA1 (patch-tests_test-transaction-rollback-on-sigpipe.t) = 8d7152cf2c913fa418cd0dfd179358f2f6aa9ed5
