@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20169 2020/11/09 09:41:17 wiz Exp $
+$NetBSD: TODO,v 1.20170 2020/11/09 09:53:30 leot Exp $
 
 Suggested new packages
 ======================
@@ -816,7 +816,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mined-2015.25
 	o mini_sendmail-1.3.9
 	o mit-scheme-bin-9.2
-	o mitmproxy-5.3
+	o mitmproxy-5.3 [leot]
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
