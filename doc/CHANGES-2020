@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6101 2020/11/09 13:26:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6102 2020/11/09 13:38:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9005,3 +9005,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-google-auth-oauthlib to 0.4.2 [adam 2020-11-09]
 	Updated devel/py-google-api-core to 1.23.0 [adam 2020-11-09]
 	Updated www/py-google-api-python-client to 1.12.5 [adam 2020-11-09]
+	Updated lang/py-mypy to 0.790 [adam 2020-11-09]
+	Updated security/py-josepy to 1.5.0 [adam 2020-11-09]
