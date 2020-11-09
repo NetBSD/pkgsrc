@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/07/01 16:05:25 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/11/09 13:36:24 adam Exp $
 
-DISTNAME=	mypy-0.782
+DISTNAME=	mypy-0.790
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -18,7 +18,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-REPLACE_PYTHON=	mypy/typeshed/tests/*.py
+REPLACE_PYTHON+=	mypy/typeshed/scripts/update-stubtest-whitelist.py
+REPLACE_PYTHON+=	mypy/typeshed/tests/*.py
 
 post-install:
 .for bin in dmypy mypy mypyc stubgen stubtest
