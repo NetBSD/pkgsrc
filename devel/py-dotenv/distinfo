@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/08/04 19:08:53 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/11/09 12:16:14 adam Exp $
 
-SHA1 (python-dotenv-0.14.0.tar.gz) = 4633a9cd3bff20e5f708888d7710bcd835c97a49
-RMD160 (python-dotenv-0.14.0.tar.gz) = ac762a9f8b0cf6d1ff6d1391ca9357cb743273e9
-SHA512 (python-dotenv-0.14.0.tar.gz) = e8f6d575cd76cb231d14d98befe8a75017c927e0de39fbffc0ecb852b2aab1ada964cf37ed51c50968a4e8a96822a794c960a058a6deb6a2f0a8f8061d0560df
-Size (python-dotenv-0.14.0.tar.gz) = 29029 bytes
+SHA1 (python-dotenv-0.15.0.tar.gz) = e0ea42d768f0ab27ef18f8f28aeeadad977f091e
+RMD160 (python-dotenv-0.15.0.tar.gz) = d2151df3f565b673d9d8dfa5db1aa0fd3532acf2
+SHA512 (python-dotenv-0.15.0.tar.gz) = f1f16d2688041259027b12920ac5f47c2d1d96cfc3ec8a362a05ddfb13fee2cf4926c20ad38eda521fcafb6eef8d7895d86dedadef1b1ea2ecd7e33734b07cbe
+Size (python-dotenv-0.15.0.tar.gz) = 30008 bytes
