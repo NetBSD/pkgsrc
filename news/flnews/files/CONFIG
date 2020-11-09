@@ -23,7 +23,7 @@ CFG_IP6_DISABLE=@IP6@
 
 # Disable compression
 # Set this to 1 if NNTP COMPRESS extension should never be used, even if the
-# required libraries (currently libz) are installed and usable.
+# required libraries (currently libz) are installed and usable
 # Otherwise the compression negotiation can be enabled and disabled in the GUI
 # (disabled by default)
 CFG_CMPR_DISABLE=0
@@ -33,7 +33,7 @@ CFG_CMPR_DISABLE=0
 CFG_DB_DISABLE=@XDBE@
 
 # Disable National Language Support (NLS)
-# Set this to 1 to disable NLS even if system report it as available.
+# Set this to 1 to disable NLS even if system report it as available
 CFG_NLS_DISABLE=@NLS@
 
 # The TLS module can do some simple checks and generate warnings if it thinks
@@ -48,6 +48,21 @@ CFG_TLS_WARNING_DISABLE=1
 # Note: Not all CAs provide CRL distribution points in their certificates
 # Set this to 0 to check the whole chain for revoked certificates
 CFG_TLS_CRLS_DISABLE=0
+
+# Disable XDG support
+# Set this to 0 to install XDG conformant desktop entries and icon themes
+CFG_XDG_DISABLE=@XDG@
+
+# [For Apple macOS only] FLTK library must be compiled to use Cocoa backend
+# Setting this to 1 moves the menu bar to top of desktop
+CFG_COCOA_SYS_MENUBAR=0
+
+# Allow NNTP AUTHINFO USER/PASS client authentication without TLS
+# The default is 0 and requires TLS encryption for authentication
+# You can set this to 1 to use a local stunnel for the encryption
+# !!! Attention: Setting this to 1 may reveal your login data to the public !!!
+# !!!            An external program must encrypt the network connection !!!
+CFG_NNTP_AUTH_UNENCRYPTED=0
 # ==============================================================================
 
 
@@ -161,10 +176,18 @@ CFG_LICENSE_PATH="$CFG_PREFIX/share/$CFG_NAME"
 # (must be an absolute path without trailing slash)
 # The FHS defines "/usr[/local]/share/nls" for NLS catalogs but the whole
 # hierarchy below "share" is dedicated to files that are portable between
-# architectures - what our catalogs are not!
+# architectures - what our NLS catalogs are not!
 CFG_NLS_PATH="$CFG_PREFIX/lib/$CFG_NAME/nls"
 
-# If you require reproducible builds for a binary package of a distribution,
+# Installation path for desktop files
+# (must be an absolute path without trailing slash)
+CFG_XDG_DESKTOP_PATH="$CFG_PREFIX/share/applications"
+
+# Installation path for icons
+# (must be an absolute path without trailing slash)
+CFG_XDG_ICON_THEME_PATH="$CFG_PREFIX/share/icons"
+
+# If you need reproducible builds for a binary package of a distribution,
 # set this to '1'.
 CFG_REPRODUCIBLE=1
 # ==============================================================================
