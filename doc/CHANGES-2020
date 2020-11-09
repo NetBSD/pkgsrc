@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6105 2020/11/09 14:21:53 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6106 2020/11/09 14:22:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9010,3 +9010,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/spotify-qt to 3.1 [pin 2020-11-09]
 	Updated textproc/ugrep to 3.0.4 [wiz 2020-11-09]
 	Updated devel/py-hypothesis to 5.41.2 [wiz 2020-11-09]
+	Updated multimedia/libde265 to 1.0.8 [wiz 2020-11-09]
