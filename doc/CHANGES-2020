@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6113 2020/11/09 15:08:13 maya Exp $
+$NetBSD: CHANGES-2020,v 1.6114 2020/11/09 15:08:27 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9018,3 +9018,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-hg-evolve to 10.1.0 [wiz 2020-11-09]
 	Updated time/ruby-tzinfo to 2.0.3 [taca 2020-11-09]
 	Updated www/firefox to 82.0.3 [maya 2020-11-09]
+	Updated www/firefox-l10n to 82.0.3 [maya 2020-11-09]
