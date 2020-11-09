@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/10/06 17:50:47 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2020/11/09 14:42:46 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,10 +28,13 @@ INSTALLATION_DIRS+=	share/doc/mercurial
 .include "version.mk"
 .include "options.mk"
 
-# Known test failures as of 5.5.2
-# test-doctest:
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6320
-# Ran 850 tests, 79 skipped, 2 failed.
+# Known test failures as of 5.6
+# None, but:
+# Needed since 5.6 for one test only, see
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6429
+USE_TOOLS+=		bash:test
+#
+# Ran 864 tests, 80 skipped, 0 failed.
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
 
