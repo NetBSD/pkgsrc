@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2020/09/09 10:32:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2020/11/09 14:27:54 wiz Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -302,6 +302,8 @@ share/fontforge/pixmaps/selectwhite.png
 share/fontforge/pixmaps/selectyellow.png
 share/fontforge/pixmaps/shadow.png
 share/fontforge/pixmaps/skew.png
+share/fontforge/pixmaps/splash2019.png
+share/fontforge/pixmaps/splash2020.png
 share/fontforge/pixmaps/styleschangeweight.png
 share/fontforge/pixmaps/styleschangexheight.png
 share/fontforge/pixmaps/stylesextendcondense.png
@@ -391,6 +393,7 @@ share/locale/ml/LC_MESSAGES/FontForge.mo
 share/locale/pl/LC_MESSAGES/FontForge.mo
 share/locale/pt/LC_MESSAGES/FontForge.mo
 share/locale/ru/LC_MESSAGES/FontForge.mo
+share/locale/tr_TR/LC_MESSAGES/FontForge.mo
 share/locale/uk/LC_MESSAGES/FontForge.mo
 share/locale/vi/LC_MESSAGES/FontForge.mo
 share/locale/zh_CN/LC_MESSAGES/FontForge.mo
