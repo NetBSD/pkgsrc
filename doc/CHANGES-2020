@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6091 2020/11/09 07:49:30 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6092 2020/11/09 09:35:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8990,3 +8990,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/go115 to 1.15.4 [bsiegert 2020-11-08]
 	Removed devel/py-hglist [wiz 2020-11-08]
 	Updated lang/rust to 1.46.0nb2 [schmonz 2020-11-09]
+	Updated databases/py-peewee to 3.14.0 [adam 2020-11-09]
+	Updated devel/py-pathspec to 0.8.1 [adam 2020-11-09]
