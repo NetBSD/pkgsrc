@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6120 2020/11/10 02:19:46 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6121 2020/11/10 02:59:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9025,3 +9025,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added wm/mutter version 3.38.1 [nia 2020-11-10]
 	Added x11/gnome-session version 3.38.0 [nia 2020-11-10]
 	Added time/gnome-calendar version 3.38.1 [nia 2020-11-10]
+	Updated www/firefox78 to 78.4.1 [nia 2020-11-10]
