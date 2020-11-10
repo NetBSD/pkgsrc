@@ -1,0 +1,15 @@
+$NetBSD: patch-.._.._build_moz.configure_toolchain.configure,v 1.1 2020/11/10 11:27:10 nia Exp $
+
+Builds fine on MacOS with newer toolchain
+
+--- ../../build/moz.configure/toolchain.configure.orig	2020-09-25 09:22:51.000000000 +0000
++++ ../../build/moz.configure/toolchain.configure
+@@ -141,7 +141,7 @@ with only_when(host_is_osx | target_is_o
+     @imports(_from='biplist', _import='readPlist')
+     def macos_sdk(sdk, host):
+         sdk_min_version = Version('10.11')
+-        sdk_max_version = Version('10.15.4')
++        sdk_max_version = Version('10.15.6')
+ 
+         if sdk:
+             sdk = sdk[0]
