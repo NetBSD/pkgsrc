@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2020/07/17 06:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2020/11/10 18:28:17 nia Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -12,6 +12,7 @@ SUBDIR+=	courier
 SUBDIR+=	deforaos-desktop
 SUBDIR+=	fxtv-capture
 SUBDIR+=	gimp-docs
+SUBDIR+=	gnome3
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer0.10-plugins

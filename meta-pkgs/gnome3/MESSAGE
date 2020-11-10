@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2020/11/10 18:28:17 nia Exp $
+
+GNOME requires sysutils/dbus to be running as a system service before
+it will start.
+
+Make sure XCURSOR_PATH is set to ${PREFIX}/share/icons, e.g. in your
+~/.xsession, have the following:
+
+export XCURSOR_PATH=${PREFIX}/share/icons
+exec gnome-session
+
+===========================================================================
