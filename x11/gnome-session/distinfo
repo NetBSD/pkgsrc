@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.51 2020/11/10 02:15:01 nia Exp $
+
+SHA1 (gnome-session-3.38.0.tar.xz) = 2e367bad7e2a483f3adda2f5b09cc03209700332
+RMD160 (gnome-session-3.38.0.tar.xz) = d28eb1c82f045b129815a1b4038549229cc30efc
+SHA512 (gnome-session-3.38.0.tar.xz) = f49a7337b64722bc502ff3d952d8e249d2435be662c3bdfb7c7740338585c2e0b292869902be4c10faebde00998d7ead8deb82fe719a38575c6ebec2b94aa19b
+Size (gnome-session-3.38.0.tar.xz) = 481300 bytes
+SHA1 (patch-meson__options.txt) = 6c0c9968c4546f60547cc0cf235e6d546532e85b
+SHA1 (patch-tools_meson.build) = a2ab4b52be4933a86f64fc08d8cf89542f5a15ca
