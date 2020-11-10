@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.46 2020/09/06 03:11:31 ryoon Exp $
+$NetBSD: distinfo,v 1.47 2020/11/10 14:39:44 ryoon Exp $
 
-SHA1 (notmuch-0.31.tar.xz) = 22216a1042eb56ad77736486b3a0e3f9bae0dbf0
-RMD160 (notmuch-0.31.tar.xz) = fb81323f925597cd6dbcb7bc555138d4ed492e40
-SHA512 (notmuch-0.31.tar.xz) = 928acc07b9dbed4275e7d39d94202bea7685e9d433a7bf4c07e40e191ed4fe8cf15ac04c18792e46f4605ffac548b942998005d8176a58ad76c82d4085a408e5
-Size (notmuch-0.31.tar.xz) = 713144 bytes
-SHA1 (patch-Makefile.global) = f436bdb163e3110a8d097f3c88198aefb126eafc
-SHA1 (patch-Makefile.local) = d0a83ff130de36164f1667236860aa31d481d025
+SHA1 (notmuch-0.31.2.tar.xz) = 0bc325f82c44ec2144d4bd42500be7f23d7eb410
+RMD160 (notmuch-0.31.2.tar.xz) = 566a65c82b23946bc2bde8a3505384555041097d
+SHA512 (notmuch-0.31.2.tar.xz) = b134ef79648cb6fe9f17b2f1b600d651d57359ae9fa576c808b794aa64a09955f0597a624cc3c498da4ef56e44bca6bb485bc402c2dff48cd000959f9a9ceeaa
+Size (notmuch-0.31.2.tar.xz) = 713388 bytes
 SHA1 (patch-configure) = 540b17f70befb7eced5f0a0361c3232a71cc48a1
-SHA1 (patch-doc_conf.py) = 7492c878c96da68df16827aa0d6407c2e9808701
 SHA1 (patch-emacs_Makefile.local) = 4a36a2c165852a098a45c8b99c8372d65d33b07c
