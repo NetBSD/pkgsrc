@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2020/10/11 08:56:37 nia Exp $
+# $NetBSD: Makefile,v 1.154 2020/11/10 01:56:20 nia Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -60,6 +60,7 @@ SUBDIR+=	matchbox-wm
 SUBDIR+=	mate-netbook
 SUBDIR+=	mlvwm
 SUBDIR+=	musca
+SUBDIR+=	mutter
 SUBDIR+=	notion
 SUBDIR+=	novawm
 SUBDIR+=	obconf
