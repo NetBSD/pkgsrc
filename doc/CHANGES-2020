@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6136 2020/11/10 15:03:24 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.6137 2020/11/10 16:37:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9042,3 +9042,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ruby-tzinfo1 to 1.2.8 [taca 2020-11-10]
 	Updated mail/notmuch to 0.31.2 [ryoon 2020-11-10]
 	Updated net/sayaka to 3.4.6 [tsutsui 2020-11-10]
+	Added audio/gsound version 1.0.2 [nia 2020-11-10]
