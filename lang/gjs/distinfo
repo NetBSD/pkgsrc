@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/11/05 17:58:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/11/10 11:33:50 nia Exp $
 
-SHA1 (gjs-1.64.3.tar.xz) = f3a6372321cda99f78feaf3ebdc6391532741f67
-RMD160 (gjs-1.64.3.tar.xz) = cf7057847308b17f39d348dc952feb0bce20a1a8
-SHA512 (gjs-1.64.3.tar.xz) = 9d92e52a7fef07853f3beb181798f89deb60b97b928d916cd827c99a6ab8f83abf7c352a1aa46be476a50e2efadfaf09befa54ccab0d51b0ac7127f2fe794801
-Size (gjs-1.64.3.tar.xz) = 422436 bytes
+SHA1 (gjs-1.66.1.tar.xz) = c03c2a7c8653e40464b160a5c8cd71c0cddab146
+RMD160 (gjs-1.66.1.tar.xz) = cddea5febfe1e2c93eafc1e4bcaa3e2d6149619a
+SHA512 (gjs-1.66.1.tar.xz) = 601d0c645ab1586e7d770f753bf68653816dc631faf89b5e70216320f6b7707e4aaa3507111fb6ff3331f76656050e32e8b1441720bf080de957e03e4565a43f
+Size (gjs-1.66.1.tar.xz) = 439992 bytes
+SHA1 (patch-gjs_jsapi-util.cpp) = 91b267616071bde63afb835d82859bd44a364da1
