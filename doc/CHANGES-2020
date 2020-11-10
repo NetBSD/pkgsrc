@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6127 2020/11/10 12:10:46 fox Exp $
+$NetBSD: CHANGES-2020,v 1.6128 2020/11/10 12:34:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9033,3 +9033,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/gjs to 1.66.1 [nia 2020-11-10]
 	Added x11/gnome-shell version 3.38.1 [nia 2020-11-10]
 	Updated audio/fasttracker2 to 1.39 [fox 2020-11-10]
+	Added graphics/gnome-screenshot version 3.38.0 [nia 2020-11-10]
