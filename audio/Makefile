@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.617 2020/11/02 14:04:41 nia Exp $
+# $NetBSD: Makefile,v 1.618 2020/11/10 16:36:15 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -145,6 +145,7 @@ SUBDIR+=	gqmpeg-skins
 SUBDIR+=	gramofile
 SUBDIR+=	grip
 SUBDIR+=	gsm
+SUBDIR+=	gsound
 SUBDIR+=	gst-plugins0.10-a52
 SUBDIR+=	gst-plugins0.10-alsa
 SUBDIR+=	gst-plugins0.10-cdparanoia
