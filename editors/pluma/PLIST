@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/05 16:05:45 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/11/10 00:53:30 gutteridge Exp $
 bin/pluma
 include/pluma/pluma-app.h
 include/pluma/pluma-commands.h
@@ -583,6 +583,7 @@ share/locale/it/LC_MESSAGES/pluma.mo
 share/locale/ja/LC_MESSAGES/pluma.mo
 share/locale/jv/LC_MESSAGES/pluma.mo
 share/locale/ka/LC_MESSAGES/pluma.mo
+share/locale/kab/LC_MESSAGES/pluma.mo
 share/locale/kk/LC_MESSAGES/pluma.mo
 share/locale/kn/LC_MESSAGES/pluma.mo
 share/locale/ko/LC_MESSAGES/pluma.mo
