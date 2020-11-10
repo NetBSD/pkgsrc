@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6132 2020/11/10 13:49:44 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6133 2020/11/10 14:30:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9039,3 +9039,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/adobe-flash-player to 32.0.0.453 [tsutsui 2020-11-10]
 	Updated textproc/py-xmlschema to 1.3.0 [adam 2020-11-10]
 	Updated net/py-lexicon to 3.4.5 [adam 2020-11-10]
+	Updated time/ruby-tzinfo1 to 1.2.8 [taca 2020-11-10]
