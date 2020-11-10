@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.9 2020/11/01 10:58:30 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.10 2020/11/10 17:23:53 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -97,4 +97,10 @@ misc/tmux: security fix
 
 Pullup ticket #6361 - requested by taca
 net/samba4: security fix
+
+Pullup ticket #6357 - requested by wiz
+security/tor-browser-noscript: security fix
+
+Pullup ticket #6358 - requested by wiz
+security/tor-browser: security fix
 
