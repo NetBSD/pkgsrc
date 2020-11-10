@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6115 2020/11/09 23:46:26 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.6116 2020/11/10 00:54:20 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9020,3 +9020,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 82.0.3 [maya 2020-11-09]
 	Updated www/firefox-l10n to 82.0.3 [maya 2020-11-09]
 	Updated x11/mate-terminal to 1.24.1 [gutteridge 2020-11-09]
+	Updated editors/pluma to 1.24.1 [gutteridge 2020-11-10]
