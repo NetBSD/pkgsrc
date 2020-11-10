@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8.4.1 2020/10/23 17:27:12 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8.4.2 2020/11/10 17:23:29 bsiegert Exp $
 bin/tor-browser
 lib/tor-browser/actors/AboutHttpsOnlyErrorChild.jsm
 lib/tor-browser/actors/AboutHttpsOnlyErrorParent.jsm
@@ -5305,11 +5305,16 @@ lib/tor-browser/chrome/torbutton/modules/utils.js
 lib/tor-browser/chrome/torbutton/skin/about-wordmark.png
 lib/tor-browser/chrome/torbutton/skin/aboutDialog.css
 lib/tor-browser/chrome/torbutton/skin/aboutTor.css
+lib/tor-browser/chrome/torbutton/skin/aboutTorFonts.css
 lib/tor-browser/chrome/torbutton/skin/forwardArrow.png
 lib/tor-browser/chrome/torbutton/skin/icon-newsletter.png
+lib/tor-browser/chrome/torbutton/skin/illo-purple.svg
+lib/tor-browser/chrome/torbutton/skin/illo.svg
 lib/tor-browser/chrome/torbutton/skin/preferences-mobile.css
 lib/tor-browser/chrome/torbutton/skin/preferences.css
 lib/tor-browser/chrome/torbutton/skin/searchLogo.png
+lib/tor-browser/chrome/torbutton/skin/tape-purple.svg
+lib/tor-browser/chrome/torbutton/skin/tape.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-display.css
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-first.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-last.svg
