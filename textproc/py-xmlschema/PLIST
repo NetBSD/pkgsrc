@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/09/14 08:57:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/11/10 13:46:26 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -14,9 +14,6 @@ ${PYSITELIB}/xmlschema/__init__.pyo
 ${PYSITELIB}/xmlschema/cli.py
 ${PYSITELIB}/xmlschema/cli.pyc
 ${PYSITELIB}/xmlschema/cli.pyo
-${PYSITELIB}/xmlschema/compat.py
-${PYSITELIB}/xmlschema/compat.pyc
-${PYSITELIB}/xmlschema/compat.pyo
 ${PYSITELIB}/xmlschema/converters.py
 ${PYSITELIB}/xmlschema/converters.pyc
 ${PYSITELIB}/xmlschema/converters.pyo
@@ -44,6 +41,21 @@ ${PYSITELIB}/xmlschema/qnames.pyo
 ${PYSITELIB}/xmlschema/resources.py
 ${PYSITELIB}/xmlschema/resources.pyc
 ${PYSITELIB}/xmlschema/resources.pyo
+${PYSITELIB}/xmlschema/schemas/HFP/XMLSchema-hasFacetAndProperty_minimal.xsd
+${PYSITELIB}/xmlschema/schemas/VC/XMLSchema-versioning.xsd
+${PYSITELIB}/xmlschema/schemas/WSDL/soap-encoding.xsd
+${PYSITELIB}/xmlschema/schemas/WSDL/soap-envelope.xsd
+${PYSITELIB}/xmlschema/schemas/WSDL/wsdl-soap.xsd
+${PYSITELIB}/xmlschema/schemas/WSDL/wsdl.xsd
+${PYSITELIB}/xmlschema/schemas/XHTML/xhtml1-strict.xsd
+${PYSITELIB}/xmlschema/schemas/XLINK/xlink.xsd
+${PYSITELIB}/xmlschema/schemas/XML/xml_minimal.xsd
+${PYSITELIB}/xmlschema/schemas/XSD_1.0/XMLSchema.xsd
+${PYSITELIB}/xmlschema/schemas/XSD_1.0/datatypes.xsd
+${PYSITELIB}/xmlschema/schemas/XSD_1.1/XMLSchema.xsd
+${PYSITELIB}/xmlschema/schemas/XSD_1.1/datatypes.xsd
+${PYSITELIB}/xmlschema/schemas/XSD_1.1/xsd11-extra.xsd
+${PYSITELIB}/xmlschema/schemas/XSI/XMLSchema-instance_minimal.xsd
 ${PYSITELIB}/xmlschema/testing/__init__.py
 ${PYSITELIB}/xmlschema/testing/__init__.pyc
 ${PYSITELIB}/xmlschema/testing/__init__.pyo
@@ -101,17 +113,6 @@ ${PYSITELIB}/xmlschema/validators/notations.pyo
 ${PYSITELIB}/xmlschema/validators/schema.py
 ${PYSITELIB}/xmlschema/validators/schema.pyc
 ${PYSITELIB}/xmlschema/validators/schema.pyo
-${PYSITELIB}/xmlschema/validators/schemas/XMLSchema-hasFacetAndProperty_minimal.xsd
-${PYSITELIB}/xmlschema/validators/schemas/XMLSchema-instance_minimal.xsd
-${PYSITELIB}/xmlschema/validators/schemas/XMLSchema-versioning.xsd
-${PYSITELIB}/xmlschema/validators/schemas/XSD_1.0/XMLSchema.xsd
-${PYSITELIB}/xmlschema/validators/schemas/XSD_1.0/datatypes.xsd
-${PYSITELIB}/xmlschema/validators/schemas/XSD_1.1/XMLSchema.xsd
-${PYSITELIB}/xmlschema/validators/schemas/XSD_1.1/datatypes.xsd
-${PYSITELIB}/xmlschema/validators/schemas/XSD_1.1/xsd11-extra.xsd
-${PYSITELIB}/xmlschema/validators/schemas/xhtml1-strict.xsd
-${PYSITELIB}/xmlschema/validators/schemas/xlink.xsd
-${PYSITELIB}/xmlschema/validators/schemas/xml_minimal.xsd
 ${PYSITELIB}/xmlschema/validators/simple_types.py
 ${PYSITELIB}/xmlschema/validators/simple_types.pyc
 ${PYSITELIB}/xmlschema/validators/simple_types.pyo
@@ -121,6 +122,9 @@ ${PYSITELIB}/xmlschema/validators/wildcards.pyo
 ${PYSITELIB}/xmlschema/validators/xsdbase.py
 ${PYSITELIB}/xmlschema/validators/xsdbase.pyc
 ${PYSITELIB}/xmlschema/validators/xsdbase.pyo
+${PYSITELIB}/xmlschema/wsdl.py
+${PYSITELIB}/xmlschema/wsdl.pyc
+${PYSITELIB}/xmlschema/wsdl.pyo
 ${PYSITELIB}/xmlschema/xpath.py
 ${PYSITELIB}/xmlschema/xpath.pyc
 ${PYSITELIB}/xmlschema/xpath.pyo
