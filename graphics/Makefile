@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.910 2020/11/10 12:34:04 nia Exp $
+# $NetBSD: Makefile,v 1.911 2020/11/10 13:36:51 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -82,6 +82,7 @@ SUBDIR+=	clutter-mx
 SUBDIR+=	cnxtview
 SUBDIR+=	cogl
 SUBDIR+=	colord
+SUBDIR+=	colord-gtk
 SUBDIR+=	comix
 SUBDIR+=	compface
 SUBDIR+=	cpia2view
