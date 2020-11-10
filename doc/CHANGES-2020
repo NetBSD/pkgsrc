@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6117 2020/11/10 01:21:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6118 2020/11/10 01:56:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9022,3 +9022,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/mate-terminal to 1.24.1 [gutteridge 2020-11-09]
 	Updated editors/pluma to 1.24.1 [gutteridge 2020-11-10]
 	Added sysutils/gnome-settings-daemon version 3.38.1 [nia 2020-11-10]
+	Added wm/mutter version 3.38.1 [nia 2020-11-10]
