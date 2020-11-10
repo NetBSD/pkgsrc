@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20184 2020/11/10 01:21:54 nia Exp $
+$NetBSD: TODO,v 1.20185 2020/11/10 18:23:41 nia Exp $
 
 Suggested new packages
 ======================
@@ -612,7 +612,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnome-chess-3.12.3
 	o gnome-color-manager-2.32.0
 	o gnome-commander-1.6.4
-	o gnome-control-center-3.8.3
 	o gnome-devel-docs-2.30.0
 	o gnome-disk-utility-2.32.0
 	o gnome-keyring-3.20.1 [wip]
