@@ -1,0 +1,15 @@
+$NetBSD: patch-plugins_xsettings_meson.build,v 1.1 2020/11/10 01:21:24 nia Exp $
+
+Install config files to examples.
+
+--- plugins/xsettings/meson.build.orig	2020-10-08 20:37:58.241902000 +0000
++++ plugins/xsettings/meson.build
+@@ -48,7 +48,7 @@ endforeach
+ 
+ install_data(
+   files('00-xrdb'),
+-  install_dir: join_paths(gsd_sysconfdir, 'xdg/Xwayland-session.d')
++  install_dir: join_paths(get_option('datadir'), 'examples/xdg/Xwayland-session.d')
+ )
+ 
+ test_py = find_program('test.py')

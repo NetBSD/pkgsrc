@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.913 2020/11/05 08:35:47 nia Exp $
+# $NetBSD: Makefile,v 1.914 2020/11/10 01:21:24 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -238,6 +238,7 @@ SUBDIR+=	gnome-characters
 SUBDIR+=	gnome-font-viewer
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-nds-thumbnailer
+SUBDIR+=	gnome-settings-daemon
 SUBDIR+=	gnome-tracker
 SUBDIR+=	gnome-tracker-miners
 SUBDIR+=	gnome-vfs
