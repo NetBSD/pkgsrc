@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.914 2020/11/10 01:21:24 nia Exp $
+# $NetBSD: Makefile,v 1.915 2020/11/10 18:22:23 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -235,6 +235,7 @@ SUBDIR+=	gkrellm-est
 SUBDIR+=	gkrellm-server
 SUBDIR+=	gkrellm-share
 SUBDIR+=	gnome-characters
+SUBDIR+=	gnome-control-center
 SUBDIR+=	gnome-font-viewer
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-nds-thumbnailer
