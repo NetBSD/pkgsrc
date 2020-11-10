@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/02/03 15:06:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/10 14:30:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/tzinfo.rb
+${GEM_LIBDIR}/lib/tzinfo/annual_rules.rb
 ${GEM_LIBDIR}/lib/tzinfo/country.rb
 ${GEM_LIBDIR}/lib/tzinfo/country_index_definition.rb
 ${GEM_LIBDIR}/lib/tzinfo/country_info.rb
@@ -17,6 +18,7 @@ ${GEM_LIBDIR}/lib/tzinfo/info_timezone.rb
 ${GEM_LIBDIR}/lib/tzinfo/linked_timezone.rb
 ${GEM_LIBDIR}/lib/tzinfo/linked_timezone_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/offset_rationals.rb
+${GEM_LIBDIR}/lib/tzinfo/posix_time_zone_parser.rb
 ${GEM_LIBDIR}/lib/tzinfo/ruby_core_support.rb
 ${GEM_LIBDIR}/lib/tzinfo/ruby_country_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/ruby_data_source.rb
@@ -31,9 +33,11 @@ ${GEM_LIBDIR}/lib/tzinfo/timezone_proxy.rb
 ${GEM_LIBDIR}/lib/tzinfo/timezone_transition.rb
 ${GEM_LIBDIR}/lib/tzinfo/timezone_transition_definition.rb
 ${GEM_LIBDIR}/lib/tzinfo/transition_data_timezone_info.rb
+${GEM_LIBDIR}/lib/tzinfo/transition_rule.rb
 ${GEM_LIBDIR}/lib/tzinfo/zoneinfo_country_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/zoneinfo_data_source.rb
 ${GEM_LIBDIR}/lib/tzinfo/zoneinfo_timezone_info.rb
+${GEM_LIBDIR}/test/tc_annual_rules.rb
 ${GEM_LIBDIR}/test/tc_country.rb
 ${GEM_LIBDIR}/test/tc_country_index_definition.rb
 ${GEM_LIBDIR}/test/tc_country_info.rb
@@ -45,6 +49,7 @@ ${GEM_LIBDIR}/test/tc_info_timezone.rb
 ${GEM_LIBDIR}/test/tc_linked_timezone.rb
 ${GEM_LIBDIR}/test/tc_linked_timezone_info.rb
 ${GEM_LIBDIR}/test/tc_offset_rationals.rb
+${GEM_LIBDIR}/test/tc_posix_time_zone_parser.rb
 ${GEM_LIBDIR}/test/tc_ruby_core_support.rb
 ${GEM_LIBDIR}/test/tc_ruby_country_info.rb
 ${GEM_LIBDIR}/test/tc_ruby_data_source.rb
@@ -63,6 +68,7 @@ ${GEM_LIBDIR}/test/tc_timezone_transition.rb
 ${GEM_LIBDIR}/test/tc_timezone_transition_definition.rb
 ${GEM_LIBDIR}/test/tc_timezone_utc.rb
 ${GEM_LIBDIR}/test/tc_transition_data_timezone_info.rb
+${GEM_LIBDIR}/test/tc_transition_rule.rb
 ${GEM_LIBDIR}/test/tc_zoneinfo_country_info.rb
 ${GEM_LIBDIR}/test/tc_zoneinfo_data_source.rb
 ${GEM_LIBDIR}/test/tc_zoneinfo_timezone_info.rb
