@@ -4,26 +4,28 @@ different timezones.
 Data Sources
 ------------
 
-TZInfo requires a source of timezone data. There are two built-in options:
+TZInfo requires a source of timezone data.  There are two built-in options:
 
-1. The TZInfo::Data library (the tzinfo-data gem). TZInfo::Data contains a set 
-   of Ruby modules that are generated from the [IANA Time Zone Database](http://www.iana.org/time-zones).
-2. A zoneinfo directory. Most Unix-like systems include a zoneinfo directory 
-   containing timezone definitions. These are also generated from the 
-   [IANA Time Zone Database](http://www.iana.org/time-zones).
+1. The TZInfo::Data library (the tzinfo-data gem).  TZInfo::Data contains a
+   set of Ruby modules that are generated from the [IANA Time Zone
+   Database](http://www.iana.org/time-zones).
 
-By default, TZInfo::Data will be used. If TZInfo::Data is not available (i.e. 
-if `require 'tzinfo/data'` fails), then TZInfo will search for a zoneinfo
-directory instead (using the search path specified by 
-`TZInfo::ZoneinfoDataSource::DEFAULT_SEARCH_PATH`).
+2. A zoneinfo directory.  Most Unix-like systems include a zoneinfo
+   directory containing timezone definitions. These are also generated from
+   the [IANA Time Zone Database](http://www.iana.org/time-zones).
 
-If no data source can be found, a `TZInfo::DataSourceNotFound` exception will be
-raised when TZInfo is used. Further information is available 
-[in the wiki](http://tzinfo.github.io/datasourcenotfound) to help with 
-resolving `TZInfo::DataSourceNotFound` errors.
+By default, TZInfo::Data will be used.  If TZInfo::Data is not available
+(i.e.  if "require 'tzinfo/data'" fails), then TZInfo will search for a
+zoneinfo directory instead (using the search path specified by
+TZInfo::ZoneinfoDataSource::DEFAULT_SEARCH_PATH).
 
-The default data source selection can be overridden using 
-`TZInfo::DataSource.set`.
+If no data source can be found, a TZInfo::DataSourceNotFound exception will
+be raised when TZInfo is used.  Further information is available [in the
+wiki](http://tzinfo.github.io/datasourcenotfound) to help with resolving
+TZInfo::DataSourceNotFound errors.
 
-Custom data sources can also be used. See `TZInfo::DataSource.set` for
-further details.
+The default data source selection can be overridden using
+TZInfo::DataSource.set.
+
+Custom data sources can also be used. See TZInfo::DataSource.set for further
+details.
