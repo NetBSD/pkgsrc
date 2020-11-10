@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2020/11/10 12:06:59 nia Exp $
+
+Install config files to examples.
+
+--- meson.build.orig	2020-10-05 18:36:07.906838400 +0000
++++ meson.build
+@@ -52,7 +52,7 @@ sysconfdir = join_paths(prefix, get_opti
+ pkgdatadir = join_paths(datadir, meson.project_name())
+ pkglibdir = join_paths(libdir, meson.project_name())
+ 
+-autostartdir = join_paths(sysconfdir, 'xdg', 'autostart')
++autostartdir = join_paths(datadir, 'examples', 'xdg', 'autostart')
+ convertdir = join_paths(datadir, 'GConf', 'gsettings')
+ desktopdir = join_paths(datadir, 'applications')
+ icondir = join_paths(datadir, 'icons')
