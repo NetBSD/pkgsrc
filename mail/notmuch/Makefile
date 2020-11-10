@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2020/09/06 03:11:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2020/11/10 14:39:44 ryoon Exp $
 
-DISTNAME=	notmuch-0.31
+DISTNAME=	notmuch-0.31.2
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -44,9 +44,6 @@ SUBST_FILES.gpg+=	configure
 SUBST_VARS.gpg=		GPGME_GPG
 
 LDFLAGS.SunOS+=	-lnsl
-
-post-extract:
-	${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
 
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.gmime3+=	gmime3>=3.0.3
