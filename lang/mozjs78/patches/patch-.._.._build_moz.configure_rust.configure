@@ -1,0 +1,17 @@
+$NetBSD: patch-.._.._build_moz.configure_rust.configure,v 1.1 2020/11/10 11:27:10 nia Exp $
+
+* Do not match rumprun toolchain for NetBSD,
+  narrowed should be one not two.
+
+--- ../../build/moz.configure/rust.configure.orig	2020-09-25 09:22:51.000000000 +0000
++++ ../../build/moz.configure/rust.configure
+@@ -337,7 +337,8 @@ def rust_triple_alias(host_or_target, ho
+             narrowed = [
+                 c for c in candidates
+                 if c.target.raw_os == host_or_target.raw_os and
+-                   c.target.raw_cpu == host_or_target.raw_cpu
++                   c.target.raw_cpu == host_or_target.raw_cpu and
++                   not c.rust_target.endswith("-rumprun-netbsd")
+             ]
+             if len(narrowed) == 1:
+                 return narrowed[0].rust_target
