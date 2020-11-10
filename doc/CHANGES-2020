@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6130 2020/11/10 13:37:12 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6131 2020/11/10 13:40:06 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9036,3 +9036,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/gnome-screenshot version 3.38.0 [nia 2020-11-10]
 	Added devel/libhandy1 version 1.0.1 [nia 2020-11-10]
 	Added graphics/colord-gtk version 0.2.0 [nia 2020-11-10]
+	Updated multimedia/adobe-flash-player to 32.0.0.453 [tsutsui 2020-11-10]
