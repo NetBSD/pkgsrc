@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2020/11/10 01:21:24 nia Exp $
+
+Install config files to examples.
+
+--- meson.build.orig	2020-10-08 20:37:58.145899300 +0000
++++ meson.build
+@@ -25,7 +25,7 @@ gsd_includedir = join_paths(gsd_prefix, 
+ gsd_libdir = join_paths(gsd_prefix, get_option('libdir'))
+ gsd_libexecdir = join_paths(gsd_prefix, get_option('libexecdir'))
+ gsd_localedir = join_paths(gsd_prefix, get_option('localedir'))
+-gsd_sysconfdir = join_paths(gsd_prefix, get_option('sysconfdir'))
++gsd_sysconfdir = join_paths(gsd_prefix, get_option('datadir'), 'examples')
+ 
+ gsd_pkgdatadir = join_paths(gsd_datadir, meson.project_name())
+ gsd_pkgincludedir = join_paths(gsd_includedir, gsd_api_name)
