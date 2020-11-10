@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/21 14:58:09 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/11/10 12:38:03 nia Exp $
 
-SHA1 (libhandy-v0.0.13.tar.gz) = c4f0c2d4ce324ba0782bfd3b8ceffbdd7e11db7d
-RMD160 (libhandy-v0.0.13.tar.gz) = 4801d121d283a284a2c846f05e912837db81587a
-SHA512 (libhandy-v0.0.13.tar.gz) = b9eaef775a93c200aa3f526b627827ed4530ff2a4c826ab24abdbd944075c0939232bd2c3388b8b8e34c6729cb11017a7af2bd3ff9eec78fbdc7e7dd9f11d24b
-Size (libhandy-v0.0.13.tar.gz) = 443408 bytes
+SHA1 (libhandy-1.0.1.tar.xz) = 259521454efc10ae071e1f0105c3eeef54c3c03d
+RMD160 (libhandy-1.0.1.tar.xz) = 1061b8bec2222019e45fedcecdcf14390b4c7230
+SHA512 (libhandy-1.0.1.tar.xz) = c2cde909b3e7af10bc23fdfee36dea374fec71f8c3f319730eca0b4cafe8f7d1130a0b08b554afe72047fbfe033a6ef11921c065c0576f2e994a9d267ddc3a42
+Size (libhandy-1.0.1.tar.xz) = 385836 bytes
