@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6138 2020/11/10 17:46:20 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6139 2020/11/10 18:23:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9043,3 +9043,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/notmuch to 0.31.2 [ryoon 2020-11-10]
 	Updated net/sayaka to 3.4.6 [tsutsui 2020-11-10]
 	Added audio/gsound version 1.0.2 [nia 2020-11-10]
+	Added sysutils/gnome-control-center version 3.38.1 [nia 2020-11-10]
