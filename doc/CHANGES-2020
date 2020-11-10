@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6122 2020/11/10 03:04:47 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6123 2020/11/10 11:14:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9027,3 +9027,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added time/gnome-calendar version 3.38.1 [nia 2020-11-10]
 	Updated www/firefox78 to 78.4.1 [nia 2020-11-10]
 	Updated www/firefox78-l10n to 78.4.1 [nia 2020-11-10]
+	Updated finance/py-braintree to 4.5.0 [adam 2020-11-10]
+	Updated www/py-asgiref to 3.3.1 [adam 2020-11-10]
