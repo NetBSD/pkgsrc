@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2020/09/04 13:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.216 2020/11/10 02:19:23 nia Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -26,6 +26,7 @@ SUBDIR+=	gcal
 SUBDIR+=	gchore
 SUBDIR+=	glclock
 SUBDIR+=	globe
+SUBDIR+=	gnome-calendar
 SUBDIR+=	gnome-pomodoro
 SUBDIR+=	gnutime
 SUBDIR+=	gnyaclock
