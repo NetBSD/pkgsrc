@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2020/11/10 18:22:23 nia Exp $
+
+SHA1 (gnome-control-center-3.38.1.tar.xz) = 087b86ad75e7c6c9bcbb847b3bd72da0c9de7253
+RMD160 (gnome-control-center-3.38.1.tar.xz) = fc8e43309154ffdf1361966c8d703b6ad9a3ad5f
+SHA512 (gnome-control-center-3.38.1.tar.xz) = 1627788b88fa556279aaf68fb34ec438c0bfa972446876a02013a4ec3f7680eaab9c25ce623fcb244a48133360cac017012bad965c52240a7612a32d9fa565e1
+Size (gnome-control-center-3.38.1.tar.xz) = 6437928 bytes
+SHA1 (patch-meson.build) = b790a2af9fc48e520393fa7f0a15236aa6b409f5
+SHA1 (patch-panels_common_meson.build) = dee53989c12235d6d26ad5bf5bb2b91d4b57838f
+SHA1 (patch-panels_datetime_date-endian.c) = e8c642b22a989066e53637932b0bb3677d6b0990
+SHA1 (patch-panels_info-overview_cc-info-overview-panel.c) = f93d03c6ebf9b16d0f1cee8f6b073a10c95f32f0
+SHA1 (patch-panels_info-overview_meson.build) = d6a7fe161f18fc061d6673b686ea04c55c34a513
+SHA1 (patch-panels_meson.build) = 365e4db1824f79ed64ed8b7558590f4d2db39e6f
+SHA1 (patch-shell_cc-panel-loader.c) = a9021eb224e16d44ec64a6df6372b84944702925
