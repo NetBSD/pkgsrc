@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/10 02:19:23 nia Exp $
+
+SHA1 (gnome-calendar-3.38.1.tar.xz) = db74a12cb4becf36df672ce3f1fc64b96d975f49
+RMD160 (gnome-calendar-3.38.1.tar.xz) = 5471760bae552871e4e74c567b47e726b95bac15
+SHA512 (gnome-calendar-3.38.1.tar.xz) = 24ddb69852139954f0b29b3333b712bb56f79fa8cdefba567cad99ddeb1bd5a4af644fdfc8ac0c7c404be49437df0395722d5d7e7e5221847b2eb4b83c9b5f05
+Size (gnome-calendar-3.38.1.tar.xz) = 547168 bytes
