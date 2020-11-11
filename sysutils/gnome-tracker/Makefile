@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/05 09:07:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/11 14:26:32 nia Exp $
 
 DISTNAME=	tracker-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -44,6 +44,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/tracker-testutils-3.0.pc
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
