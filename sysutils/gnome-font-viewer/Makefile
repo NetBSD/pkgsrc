@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/04 22:07:20 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/11 14:28:55 nia Exp $
 
 DISTNAME=	gnome-font-viewer-3.34.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -11,6 +11,13 @@ COMMENT=	View fonts on your system
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
+
+.include "../../mk/bsd.prefs.mk"
+
+# msgfmt: unknown option -- xml
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
