@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.51 2020/04/01 08:36:16 tm Exp $
-share/doc/phpmyadmin/CODE_OF_CONDUCT.md
+@comment $NetBSD: PLIST,v 1.52 2020/11/11 11:56:14 tm Exp $
 share/doc/phpmyadmin/CONTRIBUTING.md
 share/doc/phpmyadmin/ChangeLog
-share/doc/phpmyadmin/DCO
 share/doc/phpmyadmin/LICENSE
 share/doc/phpmyadmin/README
 share/doc/phpmyadmin/RELEASE-DATE-${PKGVERSION}
@@ -1671,6 +1669,7 @@ share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_int.php
+share/phpmyadmin/vendor/paragonie/random_compat/phpunit-autoload.php
 share/phpmyadmin/vendor/phpmyadmin/motranslator/.github/stale.yml
 share/phpmyadmin/vendor/phpmyadmin/motranslator/CHANGES.md
 share/phpmyadmin/vendor/phpmyadmin/motranslator/CONTRIBUTING.md
