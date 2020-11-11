@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6149 2020/11/11 16:50:26 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.6150 2020/11/11 19:24:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9054,3 +9054,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/guile-pg to 0.48 [gdt 2020-11-11]
 	Updated net/tsocks to 1.8beta5nb4 [jperkin 2020-11-11]
 	Updated net/inetutils to 1.9.4nb3 [jperkin 2020-11-11]
+	Updated meta-pkgs/gnome3 to 0.0.0.20201111 [nia 2020-11-11]
