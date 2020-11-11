@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/05 09:09:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/11 15:47:50 jmcneill Exp $
 
 DISTNAME=	tracker-miners-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -25,12 +25,15 @@ MESON_ARGS+=	-Dsystemd_user_services=false
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=		sha
+SUBST_CLASSES+=		sha shabuild
 SUBST_STAGE.sha=	pre-configure
 SUBST_MESSAGE.sha=	Fixing the name of the SHA256 tool.
-SUBST_FILES.sha+=	meson.build
 SUBST_FILES.sha+=	src/tracker-extract/calculate-hash.sh
-SUBST_SED.sha+=		-e "s,sha256sum,sha256,g"
+SUBST_SED.sha+=		-e "s,sha256sum,shasum -a 256,g"
+SUBST_STAGE.shabuild=	pre-configure
+SUBST_MESSAGE.shabuild=	Fixing the name of the SHA256 tool.
+SUBST_FILES.shabuild+=	meson.build
+SUBST_SED.shabuild+=	-e "s,sha256sum,shasum,g"
 .endif
 
 SUBST_CLASSES+=		asciidoc
@@ -55,4 +58,5 @@ CONF_FILES+=	${PREFIX}/share/examples/xdg/autostart/tracker-miner-fs-3.desktop \
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/gnome-tracker/buildlink3.mk"
 .include "../../sysutils/upower/buildlink3.mk"
+.include "../../textproc/enca/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
