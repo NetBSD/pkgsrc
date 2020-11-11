@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6143 2020/11/11 08:09:39 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.6144 2020/11/11 09:52:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9048,3 +9048,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/acmesh to 2.8.7 [kim 2020-11-10]
 	Updated sysutils/intel-microcode-netbsd to 20201110 [msaitoh 2020-11-11]
 	Updated fonts/unscii to 2.1 [nikita 2020-11-11]
+	Removed lang/spidermonkey52 [nia 2020-11-11]
