@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6141 2020/11/10 19:04:58 kim Exp $
+$NetBSD: CHANGES-2020,v 1.6142 2020/11/11 05:44:44 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9046,3 +9046,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/gnome-control-center version 3.38.1 [nia 2020-11-10]
 	Added meta-pkgs/gnome3 version 0.0.0.20201110 [nia 2020-11-10]
 	Updated security/acmesh to 2.8.7 [kim 2020-11-10]
+	Updated sysutils/intel-microcode-netbsd to 20201110 [msaitoh 2020-11-11]
