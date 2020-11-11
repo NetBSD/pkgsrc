@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6142 2020/11/11 05:44:44 msaitoh Exp $
+$NetBSD: CHANGES-2020,v 1.6143 2020/11/11 08:09:39 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9047,3 +9047,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added meta-pkgs/gnome3 version 0.0.0.20201110 [nia 2020-11-10]
 	Updated security/acmesh to 2.8.7 [kim 2020-11-10]
 	Updated sysutils/intel-microcode-netbsd to 20201110 [msaitoh 2020-11-11]
+	Updated fonts/unscii to 2.1 [nikita 2020-11-11]
