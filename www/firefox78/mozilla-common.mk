@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2020/11/11 16:13:51 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2020/11/11 19:10:05 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -6,38 +6,16 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-# Python 2.7 and Python 3.6 or later are required simultaneously.
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-.if !empty(PYTHON_VERSION_DEFAULT:M3[6789])
-TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
-ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
-.else
-TOOL_DEPENDS+=			python37-[0-9]*:../../lang/python37
-ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.7
-.endif
+ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
-.include "../../mk/compiler.mk"
-
-# firefox needs a compiler that supports gnu++14 and gnu++17.
-# However, passing --std=gnu++17 (from wrappers, as a result of
-# USE_LANGUAGES), results in problems for some Rust modules (as of
-# 74.0).  Therefore, do not declare the languages that are actually
-# needed.
-# \todo In pkgsrc infrastructure, separate the concept of needing a
-# compiler that can implement a standard, and the concept of forcibly
-# adding a --std flag.  (The build system of a package should be
-# setting the --std flag that is needed, rather than relying on the
-# defaults of a particular compiler version.)
-# NB: Even when building firefox with PKGSRC_COMPILER=gcc, the package
-# will depend on and use clang, doing so outside the normal compiler
-# selection framework.
-USE_LANGUAGES+=		c99 c++
+USE_LANGUAGES+=		c c++
 
 TOOL_DEPENDS+=		cbindgen>=0.14.2:../../devel/cbindgen
 .if ${MACHINE_ARCH} == "sparc64"
@@ -46,12 +24,8 @@ CONFIGURE_ARGS+=	--disable-nodejs
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 .endif
 
-# Depend on Python3 sqlite3 module.
-.if !empty(PYTHON_VERSION_DEFAULT:M3[6789])
-BUILD_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-sqlite3-[0-9]*:../../databases/py-sqlite3
-.else
-BUILD_DEPENDS+=		py37-sqlite3-[0-9]*:../../databases/py-sqlite3
-.endif
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
@@ -170,6 +144,18 @@ create-rm-wrapper:
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
+.PHONY: fix-clang-wrapper
+pre-configure: fix-clang-wrapper
+fix-clang-wrapper:
+.if empty(PKGSRC_COMPILER:M*clang*)
+# Firefox requires Clang during the build, even when building with GCC.
+# XXX: When using GCC, pkgsrc provides 'clang' wrappers that are actually gcc.
+# This breaks the build.
+	${LN} -sf ${PREFIX}/bin/clang ${WRKDIR}/.cwrapper/bin/clang
+	${LN} -sf ${PREFIX}/bin/clang++ ${WRKDIR}/.cwrapper/bin/clang++
+	${LN} -sf ${PREFIX}/bin/clang-cpp ${WRKDIR}/.cwrapper/bin/clang-cpp
+.endif
+
 # The configure test for __thread succeeds, but later we end up with:
 # dist/bin/libxul.so: undefined reference to `__tls_get_addr'
 CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
@@ -204,12 +190,6 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.53
 #.include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
-# Force the use of clang from pkgsrc, regardless of the setting of
-# PKGSRC_COMPILER.
-# \todo This breaks the use of ccache, which should be fixed, probably
-# by adding support for this kind of forcing to pkgsrc infrastructure.
-PKG_CC=		${PREFIX}/bin/clang
-PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .if !empty(MACHINE_PLATFORM:MNetBSD-8.*-*)
@@ -243,4 +223,4 @@ PLIST_VARS+=		wayland
 .if ${PKG_BUILD_OPTIONS.gtk3:Mwayland}
 PLIST.wayland=		yes
 .endif
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/tool.mk"
