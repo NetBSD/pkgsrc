@@ -1,12 +1,16 @@
-$NetBSD: patch-ab,v 1.10 2020/11/11 10:45:52 mef Exp $
+$NetBSD: patch-ab,v 1.11 2020/11/11 11:03:12 mef Exp $
 
---- base.make.in.orig	2020-04-05 18:00:40.000000000 +0000
-+++ base.make.in
-@@ -42,6 +42,7 @@ ifeq ($(BASE_MAKE_LOADED),)
+--- base.make.in.orig	2020-04-05 20:00:40.000000000 +0200
++++ base.make.in	2020-04-14 15:07:00.418458617 +0200
+@@ -40,9 +40,10 @@
+     GNUSTEP_BASE_MINOR_VERSION = @MINOR_VERSION@
+     GNUSTEP_BASE_SUBMINOR_VERSION = @SUBMINOR_VERSION@
  
      FND_LDFLAGS =
-     FND_LIBS = -lgnustep-base
+-    FND_LIBS = -lgnustep-base
++    FND_LIBS = -lgnustep-base
 +    OBJC_LIBS = -lpthread
      FND_DEFINE = -DGNUSTEP_BASE_LIBRARY=1
      GNUSTEP_DEFINE = -DGNUSTEP
    else
+     #
