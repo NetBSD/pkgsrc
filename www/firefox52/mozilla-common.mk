@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.8 2020/06/04 13:47:19 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.9 2020/11/11 11:11:30 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -101,38 +101,10 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-PLIST_VARS+=	sps vorbis tremor glskia throwwrapper mozglue avx86
-
-.include "../../mk/endian.mk"
-.if ${MACHINE_ENDIAN} == "little"
-PLIST.glskia=	yes
-.endif
+PLIST_VARS+=	avx86
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PLIST.avx86=	yes	# see media/libav/README_MOZILLA: only used on x86
-.endif
-
-.if ${MACHINE_ARCH} != "sparc64"
-# For some reasons the configure test for GCC bug 26905 still triggers on
-# sparc64, which makes mozilla skip the installation of a few wrapper headers.
-# Other archs end up with one additional file in the SDK headers
-PLIST.throwwrapper=	yes
-.endif
-
-.if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*)
-PLIST.sps=	yes
-.endif
-
-.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
-PLIST.tremor=	yes
-.else
-PLIST.vorbis=	yes
-.endif
-
-# See ${WRKSRC}/mozglue/build/moz.build: libmozglue is built and
-# installed as a shared library on these platforms.
-.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" # or Android
-PLIST.mozglue=	yes
 .endif
 
 # See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing
@@ -179,14 +151,12 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.12
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.28.1
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
