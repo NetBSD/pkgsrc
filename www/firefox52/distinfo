@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2020/09/30 07:26:49 martin Exp $
+$NetBSD: distinfo,v 1.25 2020/11/11 11:15:38 nia Exp $
 
 SHA1 (firefox-52.9.0esr.source.tar.xz) = df3d47518b380fe934e32a288515c25435fd82a7
 RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
@@ -57,9 +57,11 @@ SHA1 (patch-ipc_chromium_src_base_time__posix.cc) = ba4e0872490f870e7d2f468e1fe8
 SHA1 (patch-ipc_chromium_src_build_build__config.h) = 9e4f15226c494f5015dbea3a0df6af851449ae15
 SHA1 (patch-ipc_chromium_src_chrome_common_transport__dib.h) = 33ea11a8c23f2fefcb318342ac9e94d3885cb3b1
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = b9c202645a4b6f691a6eb81ef0daf4278d10dcc4
+SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = b2a34e470e4fc789f777aa101a5911e19d56dc26
 SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = f0b554c169643b8447b4f29168d61ea257b18782
 SHA1 (patch-js_src_jit_none_AtomicOperations-sparc.h) = b44992a869d6d08809a9edc28f1ad6f40632d392
 SHA1 (patch-js_src_moz.build) = ce9110506086d15a011d0985b58dd4e7d1b6ec5f
+SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 6196d576b98126bbbab2014c373c7a442ee6dc12
 SHA1 (patch-js_src_vm_StructuredClone.cpp) = 7e992825e996c43419318893b704a2aa380b0d2a
 SHA1 (patch-js_xpconnect_src_XPCConvert.cpp) = 915777e9bb5366be41866cdb6ea0ad2b1c006dde
 SHA1 (patch-js_xpconnect_src_XPCWrappedNative.cpp) = 6630b8cb20a2a2b8337e8c1250e741fd65be1e54
