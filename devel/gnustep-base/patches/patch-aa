@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.18 2020/11/11 10:45:52 mef Exp $
+$NetBSD: patch-aa,v 1.19 2020/11/11 11:03:12 mef Exp $
 
---- configure.orig	2020-04-05 18:00:40.000000000 +0000
-+++ configure
-@@ -6030,6 +6030,7 @@ if test "$LIBOBJC" = ""; then
+--- configure.orig	2020-04-05 20:00:40.000000000 +0200
++++ configure	2020-04-14 14:56:23.350836708 +0200
+@@ -6029,8 +6029,9 @@
+ if test "$LIBOBJC" = ""; then
    as_fn_error $? "The command 'gnustep-config --objc-libs' (provided by the gnustep-make package) returned no Objective-C library.  Unable to continue configuring without Objective-C support." "$LINENO" 5
    exit 1
  fi
-+LIBOBJC="$LIBOBJC -lpthread"
++LIBOBJC="$LIBOBJC @PTHREAD_LIBS@"
  
  #--------------------------------------------------------------------
  # Miscellaneous flags
+ #--------------------------------------------------------------------
