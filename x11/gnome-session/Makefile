@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2020/11/10 02:15:01 nia Exp $
+# $NetBSD: Makefile,v 1.197 2020/11/11 17:55:59 nia Exp $
 
 DISTNAME=		gnome-session-3.38.0
 CATEGORIES=		x11 gnome
@@ -14,6 +14,13 @@ TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 USE_TOOLS+=		pkg-config msgfmt xgettext
+
+.include "../../mk/bsd.prefs.mk"
+
+# msgfmt: unknown option -- xml
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 .include "../../graphics/MesaLib/features.mk"
 
