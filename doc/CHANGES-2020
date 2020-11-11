@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6147 2020/11/11 14:25:29 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.6148 2020/11/11 16:23:05 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9052,3 +9052,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/phpmyadmin to 4.9.7 [tm 2020-11-11]
 	Updated misc/py-anita to 2.8 [gson 2020-11-11]
 	Updated databases/guile-pg to 0.48 [gdt 2020-11-11]
+	Updated net/tsocks to 1.8beta5nb4 [jperkin 2020-11-11]
