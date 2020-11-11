@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/01/18 21:48:21 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/11/11 08:04:28 nikita Exp $
 
 BUILDLINK_TREE+=	unbound
 
@@ -11,6 +11,11 @@ BUILDLINK_PKGSRCDIR.unbound?=	../../net/unbound
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+pkgbase := unbound
+.include "../../mk/pkg-build-options.mk"
+.if ${PKG_BUILD_OPTIONS.unbound:Mdoh}
+.include "../../www/nghttp2/buildlink3.mk"
+.endif
 .endif	# UNBOUND_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-unbound
