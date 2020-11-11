@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.183 2020/11/11 10:11:21 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.184 2020/11/11 15:30:46 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -21,6 +21,8 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 gm4 unzip zip
 UNLIMIT_RESOURCES+=	datasize virtualsize
+
+.include "../../mk/compiler.mk"
 
 # firefox needs a compiler that supports gnu++14 and gnu++17.
 # However, passing --std=gnu++17 (from wrappers, as a result of
