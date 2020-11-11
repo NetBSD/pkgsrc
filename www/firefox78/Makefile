@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/11/11 19:10:05 nia Exp $
+# $NetBSD: Makefile,v 1.12 2020/11/11 23:04:44 wiz Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		78.4
@@ -116,7 +116,9 @@ post-build:
 	  < ${FILESDIR}/desktop.in					\
 	  > ${WRKDIR}/desktop
 
-INSTALLATION_DIRS+=	share/applications share/pixmaps
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/pixmaps
+
 post-install:
 	${ECHO} '#! /bin/sh' > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 	${ECHO} '${PREFIX}/lib/${MOZILLA}/${MOZILLA} "$$@"' >> \
