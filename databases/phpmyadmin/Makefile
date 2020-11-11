@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.164 2020/05/22 19:26:38 rillig Exp $
+# $NetBSD: Makefile,v 1.165 2020/11/11 11:56:14 tm Exp $
 
-DISTNAME=	phpMyAdmin-4.9.5-all-languages
+DISTNAME=	phpMyAdmin-4.9.7-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
 CATEGORIES=	databases www
 MASTER_SITES=	https://files.phpmyadmin.net/phpMyAdmin/${PKGVERSION_NOREV}/
@@ -28,6 +28,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.0:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 .endif
 
+USE_LANGUAGE=	# none
 USE_TOOLS+=	pax
 
 APACHE_USER?=	www
@@ -46,7 +47,7 @@ FILES_SUBST+=	APACHE_GROUP=${APACHE_GROUP} APACHE_USER=${APACHE_USER}
 FILES_SUBST+=	PMCONFDIR=${PMCONFDIR} PMVARDIR=${PMVARDIR}
 MESSAGE_SUBST+=	PMCONFDIR=${PMCONFDIR} PMCONFFILE=${PMCONFFILE}
 
-DOC_FILES=	ChangeLog CODE_OF_CONDUCT.md CONTRIBUTING.md DCO LICENSE \
+DOC_FILES=	ChangeLog CONTRIBUTING.md LICENSE \
 		README RELEASE-DATE-${PKGVERSION_NOREV}
 
 EXDIR=		${PREFIX}/share/examples/phpmyadmin
