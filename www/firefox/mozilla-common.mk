@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.182 2020/10/20 20:15:29 maya Exp $
+# $NetBSD: mozilla-common.mk,v 1.183 2020/11/11 10:11:21 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -11,10 +11,10 @@ PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 .if !empty(PYTHON_VERSION_DEFAULT:M3[6789])
 TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
-ALL_ENV+=			PYTHON3=${LOCALBASE}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
+ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
 .else
 TOOL_DEPENDS+=			python37-[0-9]*:../../lang/python37
-ALL_ENV+=			PYTHON3=${LOCALBASE}/bin/python3.7
+ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.7
 .endif
 
 HAS_CONFIGURE=		yes
@@ -141,41 +141,13 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-PLIST_VARS+=	sps vorbis tremor glskia throwwrapper mozglue ffvpx
-
-.include "../../mk/endian.mk"
-.if ${MACHINE_ENDIAN} == "little"
-PLIST.glskia=	yes
-.endif
+PLIST_VARS+=	ffvpx
 
 .if ${MACHINE_ARCH} == "aarch64" || \
     !empty(MACHINE_ARCH:M*arm*) || \
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "x86_64"
 PLIST.ffvpx=	yes	# see media/ffvpx/ffvpxcommon.mozbuild
-.endif
-
-.if ${MACHINE_ARCH} != "sparc64"
-# For some reasons the configure test for GCC bug 26905 still triggers on
-# sparc64, which makes mozilla skip the installation of a few wrapper headers.
-# Other archs end up with one additional file in the SDK headers
-PLIST.throwwrapper=	yes
-.endif
-
-.if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*)
-PLIST.sps=	yes
-.endif
-
-.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
-PLIST.tremor=	yes
-.else
-PLIST.vorbis=	yes
-.endif
-
-# See ${WRKSRC}/mozglue/build/moz.build: libmozglue is built and
-# installed as a shared library on these platforms.
-.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" # or Android
-PLIST.mozglue=	yes
 .endif
 
 # See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing

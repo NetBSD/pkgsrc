@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.60 2020/09/02 10:00:23 ryoon Exp $
+# $NetBSD: options.mk,v 1.61 2020/11/11 10:11:21 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
-PLIST_VARS+=		jemalloc debug
+PLIST_VARS+=		debug
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus webrtc
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
-PLIST.jemalloc=		yes
 CONFIGURE_ARGS+=	--enable-jemalloc
 CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
@@ -67,16 +66,12 @@ CONFIGURE_ARGS+=	--enable-dbus
 CONFIGURE_ARGS+=	--disable-dbus
 .endif
 
-#PLIST_VARS+=		branding nobranding
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 CONFIGURE_ARGS+=	--enable-official-branding
 LICENSE=		mozilla-trademark-license
 RESTRICTED=		Trademark holder prohibits distribution of modified versions.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-#PLIST.branding=		yes
-.else
-#PLIST.nobranding=	yes
 .endif
 
 PLIST_VARS+=		webrtc
