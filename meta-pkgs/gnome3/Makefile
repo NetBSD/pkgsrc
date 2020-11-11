@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/11/10 18:28:17 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/11 19:23:05 nia Exp $
 
-PKGNAME=	gnome3-0.0.0.20201110
+PKGNAME=	gnome3-0.0.0.20201111
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +17,7 @@ META_PACKAGE=	yes
 #
 # https://wiki.gnome.org/Design/Apps/
 
+DEPENDS+=	accountsservice-[0-9]*:../../sysutils/accountsservice
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 #DEPENDS+=	cheese-[0-9]*:../../graphics/cheese
 DEPENDS+=	file-roller-[0-9]*:../../archivers/file-roller
