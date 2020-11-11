@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6144 2020/11/11 09:52:37 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6145 2020/11/11 11:58:31 tm Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9049,3 +9049,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/intel-microcode-netbsd to 20201110 [msaitoh 2020-11-11]
 	Updated fonts/unscii to 2.1 [nikita 2020-11-11]
 	Removed lang/spidermonkey52 [nia 2020-11-11]
+	Updated databases/phpmyadmin to 4.9.7 [tm 2020-11-11]
