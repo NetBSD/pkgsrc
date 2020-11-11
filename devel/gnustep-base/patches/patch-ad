@@ -1,8 +1,9 @@
-$NetBSD: patch-ad,v 1.9 2020/11/11 10:45:52 mef Exp $
+$NetBSD: patch-ad,v 1.10 2020/11/11 11:03:12 mef Exp $
 
---- Source/GNUmakefile.orig	2020-04-05 18:00:40.000000000 +0000
-+++ Source/GNUmakefile
-@@ -103,7 +103,7 @@ GNU_MFILES = \
+--- Source/GNUmakefile.orig	2020-04-05 20:00:40.000000000 +0200
++++ Source/GNUmakefile	2020-04-14 15:07:59.290740281 +0200
+@@ -102,9 +102,9 @@
+ GNU_MFILES = \
  GSLocale.m \
  preface.m
  
@@ -11,3 +12,4 @@ $NetBSD: patch-ad,v 1.9 2020/11/11 10:45:52 mef Exp $
    OBJC_LIBS += -pthread
  endif
  
+ ifeq ($(GNUSTEP_TARGET_OS), mingw32)
