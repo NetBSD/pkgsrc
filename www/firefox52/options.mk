@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/06/04 13:47:19 nia Exp $
+# $NetBSD: options.mk,v 1.6 2020/11/11 11:11:30 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=		gtk3
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio dbus
-PLIST_VARS+=		jemalloc debug
+PLIST_VARS+=		debug
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus
@@ -58,7 +58,6 @@ CONFIGURE_ARGS+=	--with-oss
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
-PLIST.jemalloc=		yes
 CONFIGURE_ARGS+=	--enable-jemalloc
 CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
