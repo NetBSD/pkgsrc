@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.580 2020/11/10 11:27:10 nia Exp $
+# $NetBSD: Makefile,v 1.581 2020/11/11 09:52:00 nia Exp $
 #
 
 COMMENT=	Programming languages
@@ -283,7 +283,6 @@ SUBDIR+=	smlnj11072
 SUBDIR+=	snobol
 SUBDIR+=	spidermonkey
 SUBDIR+=	spidermonkey185
-SUBDIR+=	spidermonkey52
 SUBDIR+=	spl
 SUBDIR+=	squeak
 SUBDIR+=	squeak-vm
