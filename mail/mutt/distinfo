@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2020/11/08 17:42:45 tron Exp $
+$NetBSD: distinfo,v 1.87 2020/11/11 18:57:15 otis Exp $
 
 SHA1 (mutt-2.0.0.tar.gz) = 2554e214f2f0e6ff148a33805af6b00bb57ee988
 RMD160 (mutt-2.0.0.tar.gz) = 778578909487e7182dd0418416e63a002832ca6b
@@ -9,3 +9,4 @@ SHA1 (patch-color.c) = 69964830c13d4113e78a19539aad1e560825182a
 SHA1 (patch-configure) = cbd7ff52b0b358fff41988d286267046f56ee8d5
 SHA1 (patch-doc_Makefile.in) = 8086887afeec554d0c78047a48ec3eb33d38f26c
 SHA1 (patch-lib.h) = f10c32fc891a3c70c7379e092159e207b6c27b8b
+SHA1 (patch-mutt__random.c) = 73a9a4fd24b8cf4f6354930d2c7dd91d29d46231
