@@ -1,6 +1,6 @@
-#! @SH@
+#!@SH@
 
-libtsocks="@PREFIX@/lib/libtsocks.so"
+libtsocks="@PREFIX@/lib/libtsocks.@SOEXT@"
 
 usage() {
 	echo "usage:"
@@ -10,23 +10,26 @@ usage() {
 }
 
 tsocks_on() {
-	case $LD_PRELOAD in
+	case $@PRELOAD_VAR@ in
 	*"$libtsocks"*)
 		;;
-	"")	LD_PRELOAD="$libtsocks"
+	"")	@PRELOAD_VAR@="$libtsocks"
 		;;
-	*)	LD_PRELOAD="$LD_PRELOAD $libtsocks"
+	*)	@PRELOAD_VAR@="$@PRELOAD_VAR@ $libtsocks"
 		;;
 	esac
-	export LD_PRELOAD
+	export @PRELOAD_VAR@
+	if [ "@PRELOAD_VAR@" = "DYLD_INSERT_LIBRARIES" ]; then
+		export DYLD_FORCE_FLAT_NAMESPACE=1
+	fi
 }
 
 tsocks_off() {
-	LD_PRELOAD=`echo $LD_PRELOAD | sed 's,$libtsocks[ :]?,,'`
-	if [ "$LD_PRELOAD" ]; then
-		export LD_PRELOAD
+	@PRELOAD_VAR@=`echo $@PRELOAD_VAR@ | sed 's,$libtsocks[ :]?,,'`
+	if [ "$@PRELOAD_VAR@" ]; then
+		export @PRELOAD_VAR@
 	else
-		unset LD_PRELOAD
+		unset @PRELOAD_VAR@
 	fi
 }
 
@@ -43,7 +46,10 @@ off)
 	;;
 
 show | sh)
-	echo "LD_PRELOAD=\"$LD_PRELOAD\""
+	echo "@PRELOAD_VAR@=\"$@PRELOAD_VAR@\""
+	if [ "@PRELOAD_VAR@" = "DYLD_INSERT_LIBRARIES" ]; then
+		echo "DYLD_FORCE_FLAT_NAMESPACE=${DYLD_FORCE_FLAT_NAMESPACE}"
+	fi
 	;;
 -h | -?)
 	usage
