@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/11/05 09:09:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2020/11/11 11:15:38 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		52.9
@@ -6,7 +6,7 @@ MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox${MOZ_BRANCH:C/\..*$//}-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -31,8 +31,6 @@ LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
 LDFLAGS.Linux+=		-lnspr4
 LDFLAGS.SunOS+=		-lm
 
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
 
 ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
