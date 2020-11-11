@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2018/05/22 17:32:50 maya Exp $
-include/mozjs-52/mozilla/LinuxSignal.h
