@@ -1,9 +1,6 @@
-$NetBSD: patch-go.mod,v 1.4 2020/11/08 21:59:28 bsiegert Exp $
+$NetBSD: patch-go.mod,v 1.5 2020/11/11 10:20:43 leot Exp $
 
 Bump termenv version to supports more platforms.
-
-github.com/muesli/termenv version 0.7.1 or higher is required on NetBSD,
-older versions do not contain platform support.
 
 --- go.mod.orig	2020-09-16 16:53:21.000000000 +0000
 +++ go.mod
