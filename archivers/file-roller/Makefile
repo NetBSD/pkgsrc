@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2020/11/04 13:02:52 nia Exp $
+# $NetBSD: Makefile,v 1.149 2020/11/11 14:27:25 nia Exp $
 
 DISTNAME=	file-roller-3.38.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=/sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -14,6 +14,13 @@ USE_TOOLS+=	pkg-config
 
 MESON_ARGS+=	-Dpackagekit=false
 MESON_ARGS+=	-Dnautilus-actions=false
+
+.include "../../mk/bsd.prefs.mk"
+
+# msgfmt: unknown option -- xml
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
