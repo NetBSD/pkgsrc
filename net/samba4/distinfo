@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.53 2020/10/30 07:17:16 taca Exp $
+$NetBSD: distinfo,v 1.54 2020/11/12 06:37:18 adam Exp $
 
-SHA1 (samba-4.12.9.tar.gz) = ec12a1e9577b70e1d1239e88ae54b2625885cf9f
-RMD160 (samba-4.12.9.tar.gz) = a34871667c3dd51b9c8866ffb0a677de90a10196
-SHA512 (samba-4.12.9.tar.gz) = 8bd3122bcaab2f5a16a73902a9b628384063a8116a08f0254541e05c148016839b3215c60ff0d3291a332e7884708950ad64137204b0ac19801012d3b6684fa6
-Size (samba-4.12.9.tar.gz) = 18236198 bytes
+SHA1 (samba-4.13.2.tar.gz) = 07cccec91790c2fac51d5ce8337878308b45f229
+RMD160 (samba-4.13.2.tar.gz) = 7bb6b908f239e5959773c853e7e2259295435dae
+SHA512 (samba-4.13.2.tar.gz) = 60b8597b7fad13dd55ffec4c750ee4f5f39220d8e8d52232d3a8c4d830a5ff29254716a7230b0182e0717585e5a34b01373527caecd1d32f2170c6063a97d070
+Size (samba-4.13.2.tar.gz) = 18418249 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = e4c0ed3dacfcf5613a5b397b3c6cf88509497da7
@@ -18,19 +18,19 @@ SHA1 (patch-lib_tdb_common_mutex.c) = 12dbcf870e6ba17ef7f92a8ce7f0b7462f820232
 SHA1 (patch-lib_tevent_tevent.c) = 4a20506e2bfbab85bad664299b884575326e73fd
 SHA1 (patch-lib_tevent_tevent__threads.c) = 14867888dd0b7c4613914752ab368c39bfdbb943
 SHA1 (patch-lib_tevent_wscript) = fbbe2024096b57d651d90064f53489a974db9d7a
-SHA1 (patch-lib_tsocket_tsocket.h) = d8699b21a591a4c531ee91e7fa45bfe269164da6
-SHA1 (patch-lib_tsocket_tsocket__bsd.c) = 3143adde8c4711599608592f737cbe0fab912fa0
 SHA1 (patch-lib_util_smb__threads.h) = 93bbc4276ad927ad6faf305af093064f47c09254
 SHA1 (patch-lib_util_tfork.c) = cd70dcff5f2ce94ffe642e0f029f03ee07dff27d
 SHA1 (patch-libcli_dns_wscript__build) = 4103a144aa1bb4662fd7a62270941f1a3d01fe89
 SHA1 (patch-nsswitch_stress-nss-libwbclient.c) = bf327282a59aefeeb2d6bf9eccf9b3a832033066
 SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 2773ec9269d1fe0d7ce7ed220f6a7122d187fabe
 SHA1 (patch-nsswitch_wscript__build) = e8a6251e031ffa13d6347fade8891f7afd65d3eb
+SHA1 (patch-source3_libsmb_libsmb__stat.c) = 1f88759babfd64b525df8087ea143c7bc3171549
 SHA1 (patch-source3_libsmb_pylibsmb.c) = 50c3aaecf345449e02642e387eeac3dd7043e77a
 SHA1 (patch-source3_smbd_process.c) = 532d2426b9bd2a215d133bc489741558aa07f849
 SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = 47f55ec16b667a0a4d38de5ac89a117f2ac8f898
 SHA1 (patch-source4_heimdal__build_roken.h) = f467a541fa09e2aa483d10ed9d49df9167a3443a
 SHA1 (patch-source4_heimdal_include_heim__threads.h) = c93e0c80790ea2045333822c80e66d371bf2249c
 SHA1 (patch-source4_scripting_wsript_build) = bd4feddcaadf1c3d2d25eb7914e7b5843e4e9511
+SHA1 (patch-source4_torture_libsmbclient_libsmbclient.c) = 38bb8b53581d5f0b5b0e9f0fce58f51148e91c20
 SHA1 (patch-source4_utils_oLschema2ldif_wscript__build) = b0cbbcd4ebedd443dc9f9a59d1dad2e039bb9663
 SHA1 (patch-third__party_socket__wrapper_socket__wrapper.c) = 0cc01c932f21e9f6219fb9d204e6fdf3682938f8
