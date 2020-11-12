@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6151 2020/11/12 06:24:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6152 2020/11/12 06:39:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9056,3 +9056,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/tsocks to 1.8beta5nb4 [jperkin 2020-11-11]
 	Updated net/inetutils to 1.9.4nb3 [jperkin 2020-11-11]
 	Updated meta-pkgs/gnome3 to 0.0.0.20201111 [nia 2020-11-11]
+	Updated databases/ldb to 2.2.0 [adam 2020-11-12]
+	Updated net/samba4 to 4.13.2 [adam 2020-11-12]
