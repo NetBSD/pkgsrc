@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/02/14 11:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/12 11:03:07 adam Exp $
 
-DISTNAME=	css-parser-1.0.4
+DISTNAME=	css-parser-1.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/css-parser/}
@@ -12,7 +12,8 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON+=	src/css_parser/*.py src/css_parser/scripts/*.py
+REPLACE_PYTHON+=	src/css_parser/*.py
+REPLACE_PYTHON+=	src/css_parser/scripts/*.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
