@@ -1,6 +1,30 @@
-$NetBSD: distinfo,v 1.109 2020/09/15 19:12:55 wiz Exp $
+$NetBSD: distinfo,v 1.110 2020/11/12 22:56:00 wiz Exp $
 
-SHA1 (tor-0.4.4.5.tar.gz) = f5a4ef9d51c9f9b7a9666a8c667162cc4ff562ec
-RMD160 (tor-0.4.4.5.tar.gz) = a39f09ed99df8572f19adf12df41fcf94f90d7e3
-SHA512 (tor-0.4.4.5.tar.gz) = 8b7bedf998c66b33cb7b248ef33eb551dd75cca7eabf2133f716948d5bc83408d0be2ec1968e1c860b1067746b5645ea6e8f23478458b5eb2f5573ea7ecaecb7
-Size (tor-0.4.4.5.tar.gz) = 7808696 bytes
+SHA1 (digest-0.7.2.crate) = 5b9c88bbbd10db277eb81489d4fd98222c81f654
+RMD160 (digest-0.7.2.crate) = e1754858a8cc3376e4b1faaa2ab950f5c5a9ff26
+SHA512 (digest-0.7.2.crate) = 8232be4fbc7a77d437933d18423ed6c113abbc84084ceb998fac26413b374266975fd3c00e90131985c800dd0b83ff006dd9e77629d2e6ee19638bd67295ff85
+Size (digest-0.7.2.crate) = 8386 bytes
+SHA1 (generic-array-0.9.0.crate) = 1cd2878b30397e19cd189367dd8a4ea71a14e2ec
+RMD160 (generic-array-0.9.0.crate) = 45975a0df06c24fe628f007f7cd77fc1c8ceb1d9
+SHA512 (generic-array-0.9.0.crate) = e2a00d8856a4231a5c29bae592b2a84b98c70737058104fd67570af1220259994d11cb4506f1a1412f3c8a04576fe2617ef015600f677ecfccc8ff7a07425400
+Size (generic-array-0.9.0.crate) = 10702 bytes
+SHA1 (libc-0.2.39.crate) = 426579d6ce98e82c0531ebff2464582d0aea0567
+RMD160 (libc-0.2.39.crate) = 19f01e69a28f2d606d09eb8a8661e8ddceed782f
+SHA512 (libc-0.2.39.crate) = 4b399306da2f4d85e84db5a0a2212bc784b6ab1fb0d4731b58256e47684b5a244dcad8a12088035985e933ca2880dca5ada7dc822443d1cf474f4e73bbe59aa1
+Size (libc-0.2.39.crate) = 325829 bytes
+SHA1 (rand-0.5.0-pre.2.crate) = e55aa9ab4bb44ac92d40da0d99a64efdb2e33464
+RMD160 (rand-0.5.0-pre.2.crate) = 74a094353fee28574d1ec86b9587ca30701685a0
+SHA512 (rand-0.5.0-pre.2.crate) = 7f7f9c77367c2f6c310ad8f15074b85af615c8c0777a1bcbdd2e56410ea057e932fe20263e747d78e1b940abe02d6ada9e4d66ec743b169eb78895b220f5aa7b
+Size (rand-0.5.0-pre.2.crate) = 132485 bytes
+SHA1 (rand_core-0.2.0-pre.0.crate) = 21ea25e01766a26dbbd71997c5c3f358f3454980
+RMD160 (rand_core-0.2.0-pre.0.crate) = cbd3dc9ad06727ca36c296f4d33ec695e25b7bb9
+SHA512 (rand_core-0.2.0-pre.0.crate) = b14f88e529fe99b7b9774fc8e1233b44192e253a8a27bfc4da1a7ae99104b6b697068bd19faab85df3427e557a5182892f81f481dd89e8eb6921ec390ca752e9
+Size (rand_core-0.2.0-pre.0.crate) = 19211 bytes
+SHA1 (tor-0.4.4.6.tar.gz) = e5bf072a0e3dbc34c346ff721f830c46e9c774b3
+RMD160 (tor-0.4.4.6.tar.gz) = 2806d9a607399fd8162f92d4cee4753c8ad36c3d
+SHA512 (tor-0.4.4.6.tar.gz) = 84f981bed6d8c89d3de437e35dd2ad2ca3ee5efd7ce6b78e3e00bf40f644f495b960a7a741be5dd7ba096d73d5f941974722a44e9d3ef4fbcd02b20274d565fb
+Size (tor-0.4.4.6.tar.gz) = 7806477 bytes
+SHA1 (typenum-1.9.0.crate) = 76b18bc10204c28798cd32d10fd0df349d4cb5e4
+RMD160 (typenum-1.9.0.crate) = 6468f8efe8e91edac71dfd4e28c46581a2f0d457
+SHA512 (typenum-1.9.0.crate) = 8b72af1e370cf9d9308287baf4fc7c6096c4923d1c52fe0313c23c84077d74196aa4d997ecf195842d8242c871b0fd0da111f7914664be1841c97315e3ba6abb
+Size (typenum-1.9.0.crate) = 57747 bytes
