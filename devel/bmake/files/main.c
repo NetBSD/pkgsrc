@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.16 2020/05/24 21:10:17 nia Exp $	*/
+/*	$NetBSD: main.c,v 1.17 2020/11/12 16:05:47 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,7 +69,7 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: main.c,v 1.16 2020/05/24 21:10:17 nia Exp $";
+static char rcsid[] = "$NetBSD: main.c,v 1.17 2020/11/12 16:05:47 jperkin Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
@@ -81,7 +81,7 @@ __COPYRIGHT("@(#) Copyright (c) 1988, 1989, 1990, 1993\
 #if 0
 static char sccsid[] = "@(#)main.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.16 2020/05/24 21:10:17 nia Exp $");
+__RCSID("$NetBSD: main.c,v 1.17 2020/11/12 16:05:47 jperkin Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -1062,8 +1062,16 @@ main(int argc, char **argv)
 #endif
 	}
 
+	/*
+	 * Hardcode default pkgsrc MACHINE_ARCH.  There is only one legitimate
+	 * way to override the variable, and that is through the environment,
+	 * handled above.  We need to use PKGSRC_MACHINE_ARCH as some OS define
+	 * MACHINE_ARCH in their system headers.
+	 */
 	if (!machine_arch) {
-#if defined(MAKE_NATIVE) && defined(HAVE_SYSCTL) && defined(CTL_HW) && defined(HW_MACHINE_ARCH)
+#if defined(PKGSRC_MACHINE_ARCH)
+	    machine_arch = PKGSRC_MACHINE_ARCH;
+#elif defined(MAKE_NATIVE) && defined(HAVE_SYSCTL) && defined(CTL_HW) && defined(HW_MACHINE_ARCH)
 	    static char machine_arch_buf[sizeof(utsname.machine)];
 	    int mib[2] = { CTL_HW, HW_MACHINE_ARCH };
 	    size_t len = sizeof(machine_arch_buf);
