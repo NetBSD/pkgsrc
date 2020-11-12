@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/02/26 11:38:00 leot Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/12 23:44:23 adam Exp $
 
-DISTNAME=	pyperclip-1.6.0
+DISTNAME=	pyperclip-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	x11
+CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyperclip/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +12,10 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
 DEPENDS+=	xclip-[0-9]*:../../x11/xclip
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

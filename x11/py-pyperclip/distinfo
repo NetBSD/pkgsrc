@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/02/26 11:38:00 leot Exp $
+$NetBSD: distinfo,v 1.5 2020/11/12 23:44:23 adam Exp $
 
-SHA1 (pyperclip-1.6.0.tar.gz) = a5e84ed1cc405d7f1f649c8ecf94be09dcad7f9b
-RMD160 (pyperclip-1.6.0.tar.gz) = 649129f6d68e51931a3499efc1e374b8d10f9c6b
-SHA512 (pyperclip-1.6.0.tar.gz) = faf1cd8568a911b263c167fedace8f5f6756e108e3a2484dffa8d3da441311fb3277fd703d5eaea662181250d7b2cc975e9f8ca484dfa2d1cd4470171bbb972d
-Size (pyperclip-1.6.0.tar.gz) = 14273 bytes
+SHA1 (pyperclip-1.8.1.tar.gz) = 5d77b44ea41a8de80c8b179856ace652d8faf473
+RMD160 (pyperclip-1.8.1.tar.gz) = 411c26c2ea6981a5ba274e48252b9ad66d8f57bd
+SHA512 (pyperclip-1.8.1.tar.gz) = 2de700e829124e13d2117b5668d8ef95b1835fe1d2e6a71c2f9b9b2ad1e80347f165dadaa4e269a4cf097d7070dd5ff5cd8a3e65529dcb9135f121ab45dd9b2d
+Size (pyperclip-1.8.1.tar.gz) = 20938 bytes
