@@ -1,26 +1,5 @@
-# $NetBSD: Makefile,v 1.78 2020/11/05 09:09:05 ryoon Exp $
-
-DISTNAME=	src-firefox-tor-browser-78.4.0esr-10.0-2-build2
-PKGNAME=	tor-browser-10.0.2
-PKGREVISION=	1
-CATEGORIES=	security www
-MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.xz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	tor-browser-linux64-${PKGVERSION_NOREV}_en-US${EXTRACT_SUFX}
-#DISTFILES+=	src-tor-launcher-0.2.21.8${EXTRACT_SUFX}
-
-MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	https://www.torproject.org/projects/torbrowser.html.en
-COMMENT=	Tor Browser based on Firefox
-LICENSE=	mpl-1.1
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/src-//}
-
-DEPENDS+=	tor-[0-9]*:../../net/tor
-DEPENDS+=	tor-browser-https-everywhere>=2020.5.20:../../security/tor-browser-https-everywhere
-DEPENDS+=	tor-browser-noscript>=11.0.32:../../security/tor-browser-noscript
-
+# $NetBSD: Makefile,v 1.79 2020/11/12 21:07:45 wiz Exp $
+#
 # How to update this package:
 #
 # replace all patches with the one from the correspoding www/firefox${ESR_RELEASE}
@@ -36,6 +15,57 @@ DEPENDS+=	tor-browser-noscript>=11.0.32:../../security/tor-browser-noscript
 # when packaged up, read MESSAGE and test by visiting https://check.torproject.org
 # and https://panopticlick.eff.org
 
+DISTNAME=	src-firefox-tor-browser-78.4.0esr-10.0-2-build2
+PKGNAME=	tor-browser-10.0.2
+PKGREVISION=	2
+CATEGORIES=	security www
+MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	tor-browser-linux64-${PKGVERSION_NOREV}_en-US${EXTRACT_SUFX}
+#DISTFILES+=	src-tor-launcher-0.2.21.8${EXTRACT_SUFX}
+
+MAINTAINER=	wiz@NetBSD.org
+HOMEPAGE=	https://www.torproject.org/projects/torbrowser.html.en
+COMMENT=	Tor Browser based on Firefox
+LICENSE=	mpl-1.1
+
+UNLIMIT_RESOURCES+=	datasize virtualsize
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/src-//}
+
+MOZILLA_DIR=	# empty
+
+DEPENDS+=	tor-[0-9]*:../../net/tor
+DEPENDS+=	tor-browser-https-everywhere>=2020.5.20:../../security/tor-browser-https-everywhere
+DEPENDS+=	tor-browser-noscript>=11.0.32:../../security/tor-browser-noscript
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ARGS+=	--enable-tor-browser-data-outside-app-dir
+CONFIGURE_ARGS+=	--with-tor-browser-version=${PKGVERSION_NOREV}
+CFLAGS+=		-DTOR_BROWSER_DATA_IN_HOME_DIR=1
+CFLAGS+=		-DTOR_BROWSER_DATA_OUTSIDE_APP_DIR=1
+CFLAGS+=		-fPIC
+
+# workaround for link of libxul.so etc.
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS.DragonFly+=	-lplc4 -lnspr4
+LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
+LDFLAGS.Linux+=		-lnspr4
+LDFLAGS.SunOS+=		-lm
+
+ALL_ENV+=		MOZ_APP_NAME=${PKGBASE}
+
+# Avoid ld "invalid section index" errors.
+BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
+BUILDLINK_TRANSFORM.SunOS+=	rm:-ffunction-sections
+BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
+
+# Workaround for https://bugs.llvm.org/show_bug.cgi?id=46366
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-fexperimental-new-pass-manager
+
 # Remove hardcoded build directory.
 SUBST_CLASSES+=			fix-build-dir
 SUBST_STAGE.fix-build-dir=	pre-configure
@@ -48,10 +78,15 @@ SUBST_FILES.fonts+=	tor-browser_en-US/Browser/TorBrowser/Data/fontconfig/fonts.c
 SUBST_SED.fonts+=	-e 's,<dir>fonts</dir>,<dir>${PREFIX}/lib/tor-browser/browser/fonts</dir>,'
 SUBST_MESSAGE.fonts=	Fixing path to bundled fonts directory.
 
-MOZILLA_DIR=	# empty
+.include "../../www/firefox78/mozilla-common.mk"
+.include "options.mk"
 
-# Workaround for https://bugs.llvm.org/show_bug.cgi?id=46366
-BUILDLINK_TRANSFORM.NetBSD+=	rm:-fexperimental-new-pass-manager
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpt.py
+
+CHECK_WRKREF_SKIP+=	lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
 
 #
 # Generate list of subst entries for various .cargo-checksum.json files.  These
@@ -81,56 +116,21 @@ SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
 SUBST_SED.cksum+=	-e 's,${from},${to},g'
 .endfor
 
-.include "../../mk/bsd.prefs.mk"
-
-CONFIGURE_ARGS+=	--enable-tor-browser-data-outside-app-dir
-CONFIGURE_ARGS+=	--with-tor-browser-version=${PKGVERSION_NOREV}
-CFLAGS+=		-DTOR_BROWSER_DATA_IN_HOME_DIR=1
-CFLAGS+=		-DTOR_BROWSER_DATA_OUTSIDE_APP_DIR=1
-CFLAGS+=		-fPIC
-
-# workaround for link of libxul.so etc.
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
-LDFLAGS.DragonFly+=	-lplc4 -lnspr4
-LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
-LDFLAGS.Linux+=		-lnspr4
-LDFLAGS.SunOS+=		-lm
-
-ALL_ENV+=		MOZ_APP_NAME=${PKGBASE}
-
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/tor-browser
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/tor-browser-bin
-
-# Avoid ld "invalid section index" errors.
-BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
-BUILDLINK_TRANSFORM.SunOS+=	rm:-ffunction-sections
-
-.include "../../www/firefox78/mozilla-common.mk"
-.include "options.mk"
-
-CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
-CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
-CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpidl.py
-CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpt.py
-
-CHECK_WRKREF_SKIP+=	lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
-
 MOZILLA=	${PKGBASE}
 MOZILLA_ICON=	${WRKSRC}/browser/branding/official/default48.png
 MOZILLA_NAME=	TorBrowser
 
 post-extract:
 	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
-	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
 	mv ${WRKDIR}/tor-browser_en-US ${WRKSRC}
 #	mv ${WRKDIR}/tor-launcher* ${WRKSRC}/browser/extensions/tor-launcher
 
 pre-configure:
-	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC} && autoconf
-	cd ${WRKSRC}/${OBJDIR} && touch old-configure.vars
 	cd ${WRKSRC}/js/src && autoconf
+	cd ${WRKSRC} && mkdir ${OBJDIR}
+	cd ${WRKSRC}/${OBJDIR} && touch old-configure.vars
+	# Do not fetch Rust Cargo file via network during build
 
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
