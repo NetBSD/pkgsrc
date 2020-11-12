@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2020/07/20 22:19:58 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2020/11/12 06:37:18 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads avahi fam ldap pam winbind # cups # cups option is broken for me.
@@ -17,7 +17,7 @@ PKG_SUGGESTED_OPTIONS+=	ads
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		ads cups dbus fam ldap pam winbind
+PLIST_VARS+=		ads cups fam ldap pam winbind
 
 ###
 ### Access Control List support.
@@ -104,8 +104,6 @@ CONFIGURE_ARGS+=	--without-winbind
 ###
 .if !empty(PKG_OPTIONS:Mavahi)
 .include "../../net/avahi/buildlink3.mk"
-# avahi also pulls in dbus, which affects whether the snapper module gets built
-PLIST.dbus=		yes
 CONFIGURE_ARGS+=	--enable-avahi
 .else
 CONFIGURE_ARGS+=	--disable-avahi
