@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6157 2020/11/12 10:03:37 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.6158 2020/11/12 10:30:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9063,3 +9063,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/tiramisu version 1.0 [pin 2020-11-12]
 	Updated graphics/eog to 3.38.0 [nia 2020-11-12]
 	Updated audio/grip to 4.2.0 [triaxx 2020-11-12]
+	Updated net/py-smbc to 1.0.23 [adam 2020-11-12]
+	Updated devel/py-requests to 2.25.0 [adam 2020-11-12]
