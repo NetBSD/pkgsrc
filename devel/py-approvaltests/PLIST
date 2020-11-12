@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2020/11/01 13:52:43 schmonz Exp $
-${PYSITELIB}/approvaltests-${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/approvaltests-${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/approvaltests-${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/approvaltests-${EGG_INFODIR}/requires.txt
-${PYSITELIB}/approvaltests-${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2020/11/12 23:53:54 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/approvaltests/__init__.py
 ${PYSITELIB}/approvaltests/__init__.pyc
 ${PYSITELIB}/approvaltests/__init__.pyo
