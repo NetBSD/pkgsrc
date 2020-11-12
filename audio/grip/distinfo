@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/01/12 21:55:07 triaxx Exp $
+$NetBSD: distinfo,v 1.7 2020/11/12 10:03:18 triaxx Exp $
 
-SHA1 (grip-4.0.1.tar.gz) = cd3e895d065f233f58be7df13b0c99078e184861
-RMD160 (grip-4.0.1.tar.gz) = a3cfb3d3d792b5a66ec9d7aac9f93aa1d6120a7a
-SHA512 (grip-4.0.1.tar.gz) = 3c5d13e83ae5b0ac03f887fd96b254700f25850ec8794daf4ff454efea0bd59e6a201e0104ffb72c5cc07fee67efe13d0891354faf09452a667131e04d9e1ac3
-Size (grip-4.0.1.tar.gz) = 1004917 bytes
+SHA1 (grip-4.2.0.tar.gz) = 7336eb3bbda7286e805ba26290b8d8671e684246
+RMD160 (grip-4.2.0.tar.gz) = 087a2ffc4247b4716585f7834c9fb993afa21548
+SHA512 (grip-4.2.0.tar.gz) = 26cb32064019da1d1683c44caa3c52ae513cec5b1fb435930e8e4c62433a70f14145d92f2215bf54a5bface96945d3e5e879302e2824029650d2a34218528e94
+Size (grip-4.2.0.tar.gz) = 1209972 bytes
