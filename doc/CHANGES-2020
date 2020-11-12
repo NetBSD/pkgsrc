@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6150 2020/11/11 19:24:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6151 2020/11/12 06:24:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9048,6 +9048,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/acmesh to 2.8.7 [kim 2020-11-10]
 	Updated sysutils/intel-microcode-netbsd to 20201110 [msaitoh 2020-11-11]
 	Updated fonts/unscii to 2.1 [nikita 2020-11-11]
+	Updated databases/openldap to 2.4.56 [adam 2020-11-11]
 	Removed lang/spidermonkey52 [nia 2020-11-11]
 	Updated databases/phpmyadmin to 4.9.7 [tm 2020-11-11]
 	Updated misc/py-anita to 2.8 [gson 2020-11-11]
