@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.20 2020/05/24 21:10:17 nia Exp $	*/
+/*	$NetBSD: job.c,v 1.21 2020/11/12 16:01:36 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.20 2020/05/24 21:10:17 nia Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.21 2020/11/12 16:01:36 jperkin Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.20 2020/05/24 21:10:17 nia Exp $");
+__RCSID("$NetBSD: job.c,v 1.21 2020/11/12 16:01:36 jperkin Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -370,10 +370,12 @@ static void JobSigLock(sigset_t *);
 static void JobSigUnlock(sigset_t *);
 static void JobSigReset(void);
 
+#ifdef __FreeBSD__
 #if !defined(MALLOC_OPTIONS)
 # define MALLOC_OPTIONS "A"
 #endif
 const char *malloc_options= MALLOC_OPTIONS;
+#endif
 
 static unsigned
 nfds_per_job(void)
