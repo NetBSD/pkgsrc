@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6166 2020/11/12 16:45:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6167 2020/11/12 21:05:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9077,3 +9077,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/din to 49 [fox 2020-11-12]
 	Updated net/youtube-dl to 20201112 [leot 2020-11-12]
 	Updated graphics/gnome-backgrounds to 3.38.0 [nia 2020-11-12]
+	Updated lang/nodejs10 to 10.23.0 [adam 2020-11-12]
+	Updated net/wireshark to 3.4.0 [adam 2020-11-12]
+	Updated databases/sqlitebrowser to 3.12.1 [adam 2020-11-12]
