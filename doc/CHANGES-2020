@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6170 2020/11/12 21:36:51 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.6171 2020/11/12 22:24:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9083,3 +9083,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/tor-browser to 10.0.2nb2 [wiz 2020-11-12]
 	Updated security/tor-browser-noscript to 11.1.5 [wiz 2020-11-12]
 	Updated www/ruby-rouge to 3.25.0 [fcambus 2020-11-12]
+	Updated security/tor-browser to 10.0.4 [wiz 2020-11-12]
