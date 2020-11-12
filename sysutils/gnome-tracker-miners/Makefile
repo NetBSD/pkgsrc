@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/11 15:47:50 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/12 09:54:28 nia Exp $
 
 DISTNAME=	tracker-miners-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -13,6 +13,7 @@ COMMENT=	Desktop-neutral metadata-based search framework
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 USE_TOOLS+=	pkg-config xgettext
 
