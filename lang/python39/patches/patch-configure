@@ -1,13 +1,34 @@
-$NetBSD: patch-configure,v 1.1 2020/10/10 20:20:12 adam Exp $
+$NetBSD: patch-configure,v 1.2 2020/11/12 10:58:21 sjmulder Exp $
 
-Use gnu99 instead of c99 to avoid "alloca() undefined" problems.
-Fix linking on Darwin; don't use -stack_size.
-Changes for consistency across pkgsrc platforms.
-Simplify _sysconfigdata to include only platform name.
+ - Use gnu99 instead of c99 to avoid "alloca() undefined" problems.
+ - Fix linking on Darwin; don't use -stack_size.
+ - Changes for consistency across pkgsrc platforms.
+ - Simplify _sysconfigdata to include only platform name.
+ - Support for macOS 11 and Apple Silicon (ARM). Backported from:
+   https://github.com/python/cpython/pull/22855
 
 --- configure.orig	2020-10-05 15:07:58.000000000 +0000
 +++ configure
-@@ -6961,7 +6961,7 @@ UNIVERSAL_ARCH_FLAGS=
+@@ -1510,8 +1510,8 @@ Optional Packages:
+                           specify the kind of universal binary that should be
+                           created. this option is only valid when
+                           --enable-universalsdk is set; options are:
+-                          ("32-bit", "64-bit", "3-way", "intel", "intel-32",
+-                          "intel-64", or "all") see Mac/README.rst
++                          ("universal2", "32-bit", "64-bit", "3-way", "intel",
++                          "intel-32", "intel-64", or "all") see Mac/README.rst
+   --with-framework-name=FRAMEWORK
+                           specify the name for the python framework on macOS
+                           only valid when --enable-framework is set. see
+@@ -6954,14 +6954,14 @@ fi
+ 
+ 
+ 
+-# The -arch flags for universal builds on OSX
++# The -arch flags for universal builds on macOS
+ UNIVERSAL_ARCH_FLAGS=
+ 
+ 
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -16,7 +37,51 @@ Simplify _sysconfigdata to include only platform name.
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -9617,7 +9617,6 @@ then
+@@ -7481,6 +7481,11 @@ $as_echo "$CC" >&6; }
+                LIPO_32BIT_FLAGS="-extract ppc7400 -extract i386"
+                ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
+                ;;
++            universal2)
++               UNIVERSAL_ARCH_FLAGS="-arch arm64 -arch x86_64"
++               LIPO_32BIT_FLAGS=""
++               ARCH_RUN_32BIT="true"
++		;;
+             intel)
+                UNIVERSAL_ARCH_FLAGS="-arch i386 -arch x86_64"
+                LIPO_32BIT_FLAGS="-extract i386"
+@@ -7502,7 +7507,7 @@ $as_echo "$CC" >&6; }
+                ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
+                ;;
+             *)
+-               as_fn_error $? "proper usage is --with-universal-arch=32-bit|64-bit|all|intel|3-way" "$LINENO" 5
++               as_fn_error $? "proper usage is --with-universal-arch=universal2|32-bit|64-bit|all|intel|3-way" "$LINENO" 5
+                ;;
+             esac
+ 
+@@ -9334,7 +9339,7 @@ fi
+     		MACOSX_DEFAULT_ARCH="ppc"
+     		;;
+     	*)
+-    		as_fn_error $? "Unexpected output of 'arch' on OSX" "$LINENO" 5
++    		as_fn_error $? "Unexpected output of 'arch' on macOS" "$LINENO" 5
+     		;;
+     	esac
+     else
+@@ -9344,9 +9349,12 @@ fi
+     		;;
+     	ppc)
+     		MACOSX_DEFAULT_ARCH="ppc64"
++		;;
++    	arm64)
++    		MACOSX_DEFAULT_ARCH="arm64"
+     		;;
+     	*)
+-    		as_fn_error $? "Unexpected output of 'arch' on OSX" "$LINENO" 5
++    		as_fn_error $? "Unexpected output of 'arch' on macOS" "$LINENO" 5
+     		;;
+     	esac
+ 
+@@ -9617,7 +9625,6 @@ then
  		# to ensure that tests don't crash
  		# Note: This matches the value of THREAD_STACK_SIZE in
  		# thread_pthread.h
@@ -24,7 +89,39 @@ Simplify _sysconfigdata to include only platform name.
  
  		if test "$enable_framework"
  		then
-@@ -14437,10 +14436,10 @@ _ACEOF
+@@ -11989,6 +11996,31 @@ $as_echo "no" >&6; }
+ 
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for _dyld_shared_cache_contains_path" >&5
++$as_echo_n "checking for _dyld_shared_cache_contains_path... " >&6; }
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++#include <mach-o/dyld.h>
++int
++main ()
++{
++void *x=_dyld_shared_cache_contains_path
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++
++$as_echo "#define HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH 1" >>confdefs.h
++
++   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++else
++  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for memfd_create" >&5
+ $as_echo_n "checking for memfd_create... " >&6; }
+@@ -14437,10 +14469,10 @@ _ACEOF
  if ac_fn_c_try_compile "$LINENO"; then :
  
  
@@ -37,7 +134,7 @@ Simplify _sysconfigdata to include only platform name.
    if test "$ax_cv_c_float_words_bigendian" = unknown; then
      ax_cv_c_float_words_bigendian=no
    else
-@@ -15326,8 +15325,6 @@ fi
+@@ -15326,8 +15358,6 @@ fi
  
  
  case $ac_sys_system in
@@ -46,7 +143,7 @@ Simplify _sysconfigdata to include only platform name.
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -15383,11 +15380,7 @@ fi
+@@ -15383,11 +15413,7 @@ fi
  
  
  
