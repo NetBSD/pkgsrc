@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.15 2020/11/11 10:21:34 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.16 2020/11/12 10:03:24 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -165,14 +165,6 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 .if ${OPSYS} == "SunOS"
 # native libbz2.so hides BZ2_crc32Table
 PREFER.bzip2?=	pkgsrc
-.endif
-
-.if ${OPSYS} == "OpenBSD"
-PLIST_SUBST+=	DLL_SUFFIX=".so.1.0"
-.elif ${OPSYS} == "Darwin"
-PLIST_SUBST+=	DLL_SUFFIX=".dylib"
-.else
-PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
