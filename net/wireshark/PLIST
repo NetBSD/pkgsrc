@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2020/09/28 19:22:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2020/11/12 21:05:20 adam Exp $
 bin/capinfos
 bin/captype
 bin/dumpcap
@@ -30,6 +30,7 @@ include/wireshark/epan/bridged_pids.h
 include/wireshark/epan/capture_dissectors.h
 include/wireshark/epan/charsets.h
 include/wireshark/epan/chdlctypes.h
+include/wireshark/epan/cisco_pid.h
 include/wireshark/epan/color_filters.h
 include/wireshark/epan/column-info.h
 include/wireshark/epan/column-utils.h
@@ -52,6 +53,7 @@ include/wireshark/epan/disabled_protos.h
 include/wireshark/epan/dissectors/file-rbm.h
 include/wireshark/epan/dissectors/packet-6lowpan.h
 include/wireshark/epan/dissectors/packet-a21.h
+include/wireshark/epan/dissectors/packet-acdr.h
 include/wireshark/epan/dissectors/packet-acp133.h
 include/wireshark/epan/dissectors/packet-acse.h
 include/wireshark/epan/dissectors/packet-actrace.h
@@ -81,6 +83,7 @@ include/wireshark/epan/dissectors/packet-btavrcp.h
 include/wireshark/epan/dissectors/packet-bthci_acl.h
 include/wireshark/epan/dissectors/packet-bthci_cmd.h
 include/wireshark/epan/dissectors/packet-bthci_evt.h
+include/wireshark/epan/dissectors/packet-bthci_iso.h
 include/wireshark/epan/dissectors/packet-bthci_sco.h
 include/wireshark/epan/dissectors/packet-btl2cap.h
 include/wireshark/epan/dissectors/packet-btle.h
@@ -145,6 +148,7 @@ include/wireshark/epan/dissectors/packet-epmd.h
 include/wireshark/epan/dissectors/packet-erf.h
 include/wireshark/epan/dissectors/packet-ess.h
 include/wireshark/epan/dissectors/packet-eth.h
+include/wireshark/epan/dissectors/packet-f1ap.h
 include/wireshark/epan/dissectors/packet-f5ethtrailer.h
 include/wireshark/epan/dissectors/packet-fc.h
 include/wireshark/epan/dissectors/packet-fcbls.h
@@ -160,6 +164,7 @@ include/wireshark/epan/dissectors/packet-fix.h
 include/wireshark/epan/dissectors/packet-fmp.h
 include/wireshark/epan/dissectors/packet-frame.h
 include/wireshark/epan/dissectors/packet-ftam.h
+include/wireshark/epan/dissectors/packet-ftdi-ft.h
 include/wireshark/epan/dissectors/packet-geonw.h
 include/wireshark/epan/dissectors/packet-giop.h
 include/wireshark/epan/dissectors/packet-gluster.h
@@ -237,6 +242,7 @@ include/wireshark/epan/dissectors/packet-llc.h
 include/wireshark/epan/dissectors/packet-lnet.h
 include/wireshark/epan/dissectors/packet-logotypecertextn.h
 include/wireshark/epan/dissectors/packet-lpp.h
+include/wireshark/epan/dissectors/packet-lppa.h
 include/wireshark/epan/dissectors/packet-lte-rrc.h
 include/wireshark/epan/dissectors/packet-mac-lte.h
 include/wireshark/epan/dissectors/packet-mausb.h
@@ -416,6 +422,7 @@ include/wireshark/epan/dissectors/packet-xmpp-jingle.h
 include/wireshark/epan/dissectors/packet-xmpp-other.h
 include/wireshark/epan/dissectors/packet-xmpp-utils.h
 include/wireshark/epan/dissectors/packet-xmpp.h
+include/wireshark/epan/dissectors/packet-xnap.h
 include/wireshark/epan/dissectors/packet-ypbind.h
 include/wireshark/epan/dissectors/packet-yppasswd.h
 include/wireshark/epan/dissectors/packet-ypserv.h
@@ -567,6 +574,7 @@ include/wireshark/wsutil/crc7.h
 include/wireshark/wsutil/crc8.h
 include/wireshark/wsutil/curve25519.h
 include/wireshark/wsutil/eax.h
+include/wireshark/wsutil/epochs.h
 include/wireshark/wsutil/filesystem.h
 include/wireshark/wsutil/frequency-utils.h
 include/wireshark/wsutil/g711.h
@@ -606,14 +614,14 @@ include/wireshark/wsutil/ws_printf.h
 include/wireshark/wsutil/wsjson.h
 include/wireshark/wsutil/xtea.h
 lib/libwireshark.so
-lib/libwireshark.so.13
-lib/libwireshark.so.13.0.7
+lib/libwireshark.so.14
+lib/libwireshark.so.14.0.0
 lib/libwiretap.so
-lib/libwiretap.so.10
-lib/libwiretap.so.10.0.7
+lib/libwiretap.so.11
+lib/libwiretap.so.11.0.0
 lib/libwsutil.so
-lib/libwsutil.so.11
-lib/libwsutil.so.11.0.0
+lib/libwsutil.so.12
+lib/libwsutil.so.12.0.0
 lib/pkgconfig/wireshark.pc
 lib/wireshark/cmake/FindGLIB2.cmake
 lib/wireshark/cmake/FindWSLibrary.cmake
@@ -630,23 +638,24 @@ lib/wireshark/extcap/ciscodump
 lib/wireshark/extcap/randpktdump
 lib/wireshark/extcap/sshdump
 lib/wireshark/extcap/udpdump
-lib/wireshark/plugins/3.2/codecs/g711.so
-${PLIST.spandsp}lib/wireshark/plugins/3.2/codecs/g722.so
-${PLIST.spandsp}lib/wireshark/plugins/3.2/codecs/g726.so
-lib/wireshark/plugins/3.2/codecs/l16mono.so
-lib/wireshark/plugins/3.2/epan/ethercat.so
-lib/wireshark/plugins/3.2/epan/gryphon.so
-lib/wireshark/plugins/3.2/epan/irda.so
-lib/wireshark/plugins/3.2/epan/mate.so
-lib/wireshark/plugins/3.2/epan/opcua.so
-lib/wireshark/plugins/3.2/epan/profinet.so
-lib/wireshark/plugins/3.2/epan/stats_tree.so
-lib/wireshark/plugins/3.2/epan/transum.so
-lib/wireshark/plugins/3.2/epan/unistim.so
-lib/wireshark/plugins/3.2/epan/wimax.so
-lib/wireshark/plugins/3.2/epan/wimaxasncp.so
-lib/wireshark/plugins/3.2/epan/wimaxmacphy.so
-lib/wireshark/plugins/3.2/wiretap/usbdump.so
+lib/wireshark/plugins/3.4/codecs/g711.so
+${PLIST.spandsp}lib/wireshark/plugins/3.4/codecs/g722.so
+${PLIST.spandsp}lib/wireshark/plugins/3.4/codecs/g726.so
+lib/wireshark/plugins/3.4/codecs/l16mono.so
+lib/wireshark/plugins/3.4/codecs/opus_dec.so
+lib/wireshark/plugins/3.4/epan/ethercat.so
+lib/wireshark/plugins/3.4/epan/gryphon.so
+lib/wireshark/plugins/3.4/epan/irda.so
+lib/wireshark/plugins/3.4/epan/mate.so
+lib/wireshark/plugins/3.4/epan/opcua.so
+lib/wireshark/plugins/3.4/epan/profinet.so
+lib/wireshark/plugins/3.4/epan/stats_tree.so
+lib/wireshark/plugins/3.4/epan/transum.so
+lib/wireshark/plugins/3.4/epan/unistim.so
+lib/wireshark/plugins/3.4/epan/wimax.so
+lib/wireshark/plugins/3.4/epan/wimaxasncp.so
+lib/wireshark/plugins/3.4/epan/wimaxmacphy.so
+lib/wireshark/plugins/3.4/wiretap/usbdump.so
 man/man1/androiddump.1
 man/man1/capinfos.1
 man/man1/captype.1
@@ -733,6 +742,7 @@ share/wireshark/diameter/HP.xml
 share/wireshark/diameter/Huawei.xml
 share/wireshark/diameter/Inovar.xml
 share/wireshark/diameter/Juniper.xml
+share/wireshark/diameter/Metaswitch.xml
 share/wireshark/diameter/Microsoft.xml
 share/wireshark/diameter/Nokia.xml
 share/wireshark/diameter/NokiaSolutionsAndNetworks.xml
@@ -843,6 +853,7 @@ share/wireshark/radius/dictionary.dlink
 share/wireshark/radius/dictionary.dragonwave
 share/wireshark/radius/dictionary.efficientip
 share/wireshark/radius/dictionary.eltex
+share/wireshark/radius/dictionary.enterasys
 share/wireshark/radius/dictionary.epygi
 share/wireshark/radius/dictionary.equallogic
 share/wireshark/radius/dictionary.ericsson
@@ -864,6 +875,7 @@ share/wireshark/radius/dictionary.h3c
 share/wireshark/radius/dictionary.hp
 share/wireshark/radius/dictionary.huawei
 share/wireshark/radius/dictionary.iana
+share/wireshark/radius/dictionary.identity_engines
 share/wireshark/radius/dictionary.iea
 share/wireshark/radius/dictionary.infoblox
 share/wireshark/radius/dictionary.infonet
