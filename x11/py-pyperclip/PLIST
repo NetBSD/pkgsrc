@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/02/26 11:38:00 leot Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/11/12 23:44:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,3 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pyperclip/__init__.py
 ${PYSITELIB}/pyperclip/__init__.pyc
 ${PYSITELIB}/pyperclip/__init__.pyo
+${PYSITELIB}/pyperclip/__main__.py
+${PYSITELIB}/pyperclip/__main__.pyc
+${PYSITELIB}/pyperclip/__main__.pyo
