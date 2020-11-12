@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6163 2020/11/12 11:30:15 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.6164 2020/11/12 12:25:17 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9074,3 +9074,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/prometheus to 2.22.1 [adam 2020-11-12]
 	Updated graphics/jasper to 2.0.22 [adam 2020-11-12]
 	Updated sysutils/xenkernel411 to 4.11.4nb4 [bouyer 2020-11-12]
+	Updated audio/din to 49 [fox 2020-11-12]
