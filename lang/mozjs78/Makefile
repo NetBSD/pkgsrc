@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/10 11:27:10 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/12 10:26:54 nia Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -38,16 +38,10 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 PKGCONFIG_OVERRIDE+=	build/js.pc.in
 PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
 
-# Python 2.7 and Python 3.6 or later are required simultaneously.
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-.if !empty(PYTHON_VERSION_DEFAULT:M3[6789])
-TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
-ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
-.else
-TOOL_DEPENDS+=			python37-[0-9]*:../../lang/python37
-ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.7
-.endif
+TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
 pre-configure:
 	cd ${WRKSRC} && autoconf-2.13 old-configure.in > old-configure \
