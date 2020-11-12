@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6152 2020/11/12 06:39:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6153 2020/11/12 09:02:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9058,3 +9058,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/gnome3 to 0.0.0.20201111 [nia 2020-11-11]
 	Updated databases/ldb to 2.2.0 [adam 2020-11-12]
 	Updated net/samba4 to 4.13.2 [adam 2020-11-12]
+	Updated www/py-urllib3 to 1.26.1 [adam 2020-11-12]
+	Updated www/py-bottle to 0.12.19 [adam 2020-11-12]
