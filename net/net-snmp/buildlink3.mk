@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2020/01/18 21:48:20 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2020/11/12 10:33:44 otis Exp $
 
 BUILDLINK_TREE+=	net-snmp
 
@@ -16,6 +16,7 @@ pkgbase := net-snmp
 .  include "../../security/openssl/buildlink3.mk"
 .endif
 
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .endif # NET_SNMP_BUILDLINK3_MK
 
