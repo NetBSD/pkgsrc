@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/11/05 09:06:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2020/11/12 10:06:04 nia Exp $
 
 DISTNAME=	mozjs60_60.8.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -42,6 +42,7 @@ PKGCONFIG_OVERRIDE+=	build/js.pc.in
 PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
 
 PYTHON_VERSIONS_ACCEPTED=	27
+TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 pre-configure:
 	cd ${WRKSRC} && autoconf-2.13
