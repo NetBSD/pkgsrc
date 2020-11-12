@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6159 2020/11/12 10:35:33 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.6160 2020/11/12 10:47:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9066,3 +9066,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-smbc to 1.0.23 [adam 2020-11-12]
 	Updated devel/py-requests to 2.25.0 [adam 2020-11-12]
 	Updated sysutils/xenkernel413 to 4.13.2nb1 [bouyer 2020-11-12]
+	Updated net/py-botocore to 1.19.16 [adam 2020-11-12]
+	Updated net/py-boto3 to 1.16.16 [adam 2020-11-12]
+	Updated net/py-awscli to 1.18.176 [adam 2020-11-12]
