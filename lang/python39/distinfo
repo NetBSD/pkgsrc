@@ -1,21 +1,41 @@
-$NetBSD: distinfo,v 1.1 2020/10/10 20:19:47 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/11/12 10:58:20 sjmulder Exp $
 
 SHA1 (Python-3.9.0.tar.xz) = ff1fc8c37d5d4b09ec3bf0d84f3e5b97745c6704
 RMD160 (Python-3.9.0.tar.xz) = 822fd1ea11f3ca303a08317f6db61f2a1e03e5ef
 SHA512 (Python-3.9.0.tar.xz) = b141039c9701a8cb0d15cd11a279153077524af4d0599e7d2c7279d4c18d05fda06b33ef82342d875de996c7117b7dc6eb154dc3669d38a1efa99801aeec6c5e
 Size (Python-3.9.0.tar.xz) = 18866140 bytes
+SHA1 (patch-Lib___osx__support.py) = 4ccccb81381cd7bf4a8bbc3e376d1234cf2266d5
+SHA1 (patch-Lib_ctypes_macholib_dyld.py) = d7f3e0c63d6926db253fbe923dd97995478d528c
+SHA1 (patch-Lib_ctypes_test_test__macholib.py) = bd887357759975b7a497c4079bc730e9c578ceed
 SHA1 (patch-Lib_ctypes_util.py) = 032cc99ebad93ddddfd89073c60424a952e3faa3
 SHA1 (patch-Lib_distutils_command_install.py) = 6fc6f5d918b7581fc62cd0fe55857ee932c3a341
 SHA1 (patch-Lib_distutils_sysconfig.py) = 6822eafb4dfded86d7f7353831816aeb8119e6cf
+SHA1 (patch-Lib_distutils_tests_test__build__ext.py) = 145a0f01b3602c582e033081a35d4d86245575f9
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 2e65a8dd5dd3fe25957206c062106fa7a6fc4e69
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 5d6dab14197f27363394ff1aeee22a8ced8026d2
 SHA1 (patch-Lib_sysconfig.py) = a4f009ed73ebbd9d9c4bf7e12b7981182ed8fd7c
+SHA1 (patch-Lib_test_test__bytes.py) = 72559fdcb09f2c0b0c7b62649c249775d359d72e
+SHA1 (patch-Lib_test_test__platform.py) = 36311733729ac95159b3177dc0c16e6f4aa2f2b9
+SHA1 (patch-Lib_test_test__unicode.py) = 14fe4dd1011dbe262459f735a643774e0d38c99e
+SHA1 (patch-Mac_BuildScript_build-installer.py) = 24641c70facfded736ccc2be069d0e2ae63f63fd
+SHA1 (patch-Mac_Tools_pythonw.c) = fe128efe942853f0825c1a1fa17842201716dfdf
 SHA1 (patch-Makefile.pre.in) = d42f9f5bca1dd663f64122dc95b49111452fe6e8
+SHA1 (patch-Modules___ctypes_callbacks.c) = 95750090d396a647fc12f7f7fad8c591ca4dcdec
+SHA1 (patch-Modules___ctypes_callproc.c) = 86f27c466a67ebf72d863febece33aa8b1f9f719
+SHA1 (patch-Modules___ctypes_ctypes.h) = 641c0af4d550c9140549ce2f2df6239c2c954a06
+SHA1 (patch-Modules___ctypes_malloc__closure.c) = 7e8f491ce66acb6d07e8830ee881edbf0aaac538
+SHA1 (patch-Modules___decimal_libmpdec_mpdecimal.h) = 8d302abacc5737fe7620d4738fff6c5c3ed387c7
+SHA1 (patch-Modules_getpath.c) = d7114d21d7d9c7167fad259b115cb02e4153c531
 SHA1 (patch-Modules_makesetup) = a06786eebffadecedba5e3a50a9785fb47613567
 SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
+SHA1 (patch-Modules_posixmodule.c) = c592ef4ebe650f672a15ff9887cbeed2ca73b666
 SHA1 (patch-Modules_socketmodule.c) = 02c447f980a08e2185df78d2f13373574f414304
 SHA1 (patch-Modules_socketmodule.h) = 61fe96a79d4ccf3e7768eb79dd7e29a50a85328b
+SHA1 (patch-Modules_timemodule.c) = 8c8e9e43b6d165c1a7df6142a6bcd430003ed165
+SHA1 (patch-Python_bootstrap__hash.c) = cbc2839675182a344591ba672187b166f166499b
+SHA1 (patch-Python_pytime.c) = 1bb39b7060c1f337562208dc6611672eaf2f586b
 SHA1 (patch-Python_thread__pthread.h) = fb81eaa604b4ed7c1b64c3f4731d58a8aee257be
-SHA1 (patch-configure) = fdb9594b1f738c38672bf247dd91da95d9160a3c
-SHA1 (patch-pyconfig.h.in) = 4bc6e95441cb5faae94d1d52aeaaa10ae01385b6
-SHA1 (patch-setup.py) = 5cd3600318a883a4308b0bb2d51e3feadf9f5ff5
+SHA1 (patch-configure) = 371a65a2cb10fe7709d30a16358b48bc2e0a4aa6
+SHA1 (patch-configure.ac) = 4ce75ef922e015adf095cb481c829b11c0454efe
+SHA1 (patch-pyconfig.h.in) = 7c1c997c089f882fbd334b81c04a03dbaebb2c41
+SHA1 (patch-setup.py) = a9e467f8aed7085a982af6a1273b883550d06610

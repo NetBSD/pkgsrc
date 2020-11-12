@@ -1,10 +1,12 @@
-$NetBSD: patch-pyconfig.h.in,v 1.1 2020/10/10 20:20:12 adam Exp $
+$NetBSD: patch-pyconfig.h.in,v 1.2 2020/11/12 10:58:21 sjmulder Exp $
 
-detect netcan/can.h on NetBSD
+ - detect netcan/can.h on NetBSD
+ - Support for macOS 11 and Apple Silicon (ARM). Backported from:
+   https://github.com/python/cpython/pull/22855
 
---- pyconfig.h.in.orig	2019-09-06 08:21:57.000000000 +0000
+--- pyconfig.h.in.orig	2020-10-05 15:07:58.000000000 +0000
 +++ pyconfig.h.in
-@@ -631,6 +631,9 @@
+@@ -637,6 +637,9 @@
  /* Define to 1 if you have the <linux/memfd.h> header file. */
  #undef HAVE_LINUX_MEMFD_H
  
@@ -13,4 +15,14 @@ detect netcan/can.h on NetBSD
 +
  /* Define to 1 if you have the <linux/netlink.h> header file. */
  #undef HAVE_LINUX_NETLINK_H
+ 
+@@ -778,6 +781,9 @@
+ /* Define if you have the 'prlimit' functions. */
+ #undef HAVE_PRLIMIT
+ 
++/* Define if you have the '_dyld_shared_cache_contains_path' function. */
++#undef HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH
++
+ /* Define to 1 if you have the <process.h> header file. */
+ #undef HAVE_PROCESS_H
  
