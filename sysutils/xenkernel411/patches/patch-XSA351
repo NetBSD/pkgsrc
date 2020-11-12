@@ -1,0 +1,283 @@
+$NetBSD: patch-XSA351,v 1.1 2020/11/12 11:29:25 bouyer Exp $
+
+From: =?UTF-8?q?Roger=20Pau=20Monn=C3=A9?= <roger.pau@citrix.com>
+Subject: x86/msr: fix handling of MSR_IA32_PERF_{STATUS/CTL}
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Currently a PV hardware domain can also be given control over the CPU
+frequency, and such guest is allowed to write to MSR_IA32_PERF_CTL.
+However since commit 322ec7c89f6 the default behavior has been changed
+to reject accesses to not explicitly handled MSRs, preventing PV
+guests that manage CPU frequency from reading
+MSR_IA32_PERF_{STATUS/CTL}.
+
+Additionally some HVM guests (Windows at least) will attempt to read
+MSR_IA32_PERF_CTL and will panic if given back a #GP fault:
+
+  vmx.c:3035:d8v0 RDMSR 0x00000199 unimplemented
+  d8v0 VIRIDIAN CRASH: 3b c0000096 fffff806871c1651 ffffda0253683720 0
+
+Move the handling of MSR_IA32_PERF_{STATUS/CTL} to the common MSR
+handling shared between HVM and PV guests, and add an explicit case
+for reads to MSR_IA32_PERF_{STATUS/CTL}.
+
+Restore previous behavior and allow PV guests with the required
+permissions to read the contents of the mentioned MSRs. Non privileged
+guests will get 0 when trying to read those registers, as writes to
+MSR_IA32_PERF_CTL by such guest will already be silently dropped.
+
+Fixes: 322ec7c89f6 ('x86/pv: disallow access to unknown MSRs')
+Fixes: 84e848fd7a1 ('x86/hvm: disallow access to unknown MSRs')
+Signed-off-by: Roger Pau Monné <roger.pau@citrix.com>
+Signed-off-by: Andrew Cooper <andrew.cooper3@citrix.com>
+Reviewed-by: Roger Pau Monné <roger.pau@citrix.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+(cherry picked from commit 3059178798a23ba870ff86ff54d442a07e6651fc)
+
+diff --git a/xen/arch/x86/msr.c b/xen/arch/x86/msr.c
+index 256e58d82b..3495ac9f4a 100644
+--- xen/arch/x86/msr.c.orig
++++ xen/arch/x86/msr.c
+@@ -141,6 +141,7 @@ int init_vcpu_msr_policy(struct vcpu *v)
+ 
+ int guest_rdmsr(const struct vcpu *v, uint32_t msr, uint64_t *val)
+ {
++    const struct domain *d = v->domain;
+     const struct cpuid_policy *cp = v->domain->arch.cpuid;
+     const struct msr_domain_policy *dp = v->domain->arch.msr;
+     const struct msr_vcpu_policy *vp = v->arch.msr;
+@@ -212,6 +213,25 @@ int guest_rdmsr(const struct vcpu *v, uint32_t msr, uint64_t *val)
+         break;
+ 
+         /*
++         * These MSRs are not enumerated in CPUID.  They have been around
++         * since the Pentium 4, and implemented by other vendors.
++         *
++         * Some versions of Windows try reading these before setting up a #GP
++         * handler, and Linux has several unguarded reads as well.  Provide
++         * RAZ semantics, in general, but permit a cpufreq controller dom0 to
++         * have full access.
++         */
++    case MSR_IA32_PERF_STATUS:
++    case MSR_IA32_PERF_CTL:
++        if ( !(cp->x86_vendor & (X86_VENDOR_INTEL | X86_VENDOR_CENTAUR)) )
++            goto gp_fault;
++
++        *val = 0;
++        if ( likely(!is_cpufreq_controller(d)) || rdmsr_safe(msr, *val) == 0 )
++            break;
++        goto gp_fault;
++
++        /*
+          * TODO: Implement when we have better topology representation.
+     case MSR_INTEL_CORE_THREAD_COUNT:
+          */
+@@ -241,6 +261,7 @@ int guest_wrmsr(struct vcpu *v, uint32_t msr, uint64_t val)
+     case MSR_INTEL_CORE_THREAD_COUNT:
+     case MSR_INTEL_PLATFORM_INFO:
+     case MSR_ARCH_CAPABILITIES:
++    case MSR_IA32_PERF_STATUS:
+         /* Read-only */
+     case MSR_TSX_FORCE_ABORT:
+     case MSR_TSX_CTRL:
+@@ -345,6 +366,21 @@ int guest_wrmsr(struct vcpu *v, uint32_t msr, uint64_t val)
+         break;
+     }
+ 
++        /*
++         * This MSR is not enumerated in CPUID.  It has been around since the
++         * Pentium 4, and implemented by other vendors.
++         *
++         * To match the RAZ semantics, implement as write-discard, except for
++         * a cpufreq controller dom0 which has full access.
++         */
++    case MSR_IA32_PERF_CTL:
++        if ( !(cp->x86_vendor & (X86_VENDOR_INTEL | X86_VENDOR_CENTAUR)) )
++            goto gp_fault;
++
++        if ( likely(!is_cpufreq_controller(d)) || wrmsr_safe(msr, val) == 0 )
++            break;
++        goto gp_fault;
++
+     default:
+         return X86EMUL_UNHANDLEABLE;
+     }
+diff --git a/xen/arch/x86/pv/emul-priv-op.c b/xen/arch/x86/pv/emul-priv-op.c
+index 8120ded330..755f00db33 100644
+--- xen/arch/x86/pv/emul-priv-op.c.orig
++++ xen/arch/x86/pv/emul-priv-op.c
+@@ -816,12 +816,6 @@ static inline uint64_t guest_misc_enable(uint64_t val)
+     return val;
+ }
+ 
+-static inline bool is_cpufreq_controller(const struct domain *d)
+-{
+-    return ((cpufreq_controller == FREQCTL_dom0_kernel) &&
+-            is_hardware_domain(d));
+-}
+-
+ static int read_msr(unsigned int reg, uint64_t *val,
+                     struct x86_emulate_ctxt *ctxt)
+ {
+@@ -1096,14 +1090,6 @@ static int write_msr(unsigned int reg, uint64_t val,
+             return X86EMUL_OKAY;
+         break;
+ 
+-    case MSR_IA32_PERF_CTL:
+-        if ( boot_cpu_data.x86_vendor != X86_VENDOR_INTEL )
+-            break;
+-        if ( likely(!is_cpufreq_controller(currd)) ||
+-             wrmsr_safe(reg, val) == 0 )
+-            return X86EMUL_OKAY;
+-        break;
+-
+     case MSR_IA32_THERM_CONTROL:
+     case MSR_IA32_ENERGY_PERF_BIAS:
+         if ( boot_cpu_data.x86_vendor != X86_VENDOR_INTEL )
+diff --git a/xen/include/xen/sched.h b/xen/include/xen/sched.h
+index c0cc5d9336..7e4ad5d51b 100644
+--- xen/include/xen/sched.h.orig
++++ xen/include/xen/sched.h
+@@ -920,6 +920,22 @@ extern enum cpufreq_controller {
+     FREQCTL_none, FREQCTL_dom0_kernel, FREQCTL_xen
+ } cpufreq_controller;
+ 
++static always_inline bool is_cpufreq_controller(const struct domain *d)
++{
++    /*
++     * A PV dom0 can be nominated as the cpufreq controller, instead of using
++     * Xen's cpufreq driver, at which point dom0 gets direct access to certain
++     * MSRs.
++     *
++     * This interface only works when dom0 is identity pinned and has the same
++     * number of vCPUs as pCPUs on the system.
++     *
++     * It would be far better to paravirtualise the interface.
++     */
++    return (is_pv_domain(d) && is_hardware_domain(d) &&
++            cpufreq_controller == FREQCTL_dom0_kernel);
++}
++
+ #define CPUPOOLID_NONE    -1
+ 
+ struct cpupool *cpupool_get_by_id(int poolid);
+From: Andrew Cooper <andrew.cooper3@citrix.com>
+Subject: x86/msr: Disallow guest access to the RAPL MSRs
+
+Researchers have demonstrated using the RAPL interface to perform a
+differential power analysis attack to recover AES keys used by other cores in
+the system.
+
+Furthermore, even privileged guests cannot use this interface correctly, due
+to MSR scope and vcpu scheduling issues.  The interface would want to be
+paravirtualised to be used sensibly.
+
+Disallow access to the RAPL MSRs completely, as well as other MSRs which
+potentially access fine grain power information.
+
+This is part of XSA-351.
+
+Signed-off-by: Andrew Cooper <andrew.cooper3@citrix.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+
+diff --git a/xen/arch/x86/msr.c b/xen/arch/x86/msr.c
+index 3495ac9f4a..99c848ff41 100644
+--- xen/arch/x86/msr.c.orig
++++ xen/arch/x86/msr.c
+@@ -156,6 +156,15 @@ int guest_rdmsr(const struct vcpu *v, uint32_t msr, uint64_t *val)
+     case MSR_TSX_FORCE_ABORT:
+     case MSR_TSX_CTRL:
+     case MSR_MCU_OPT_CTRL:
++    case MSR_RAPL_POWER_UNIT:
++    case MSR_PKG_POWER_LIMIT  ... MSR_PKG_POWER_INFO:
++    case MSR_DRAM_POWER_LIMIT ... MSR_DRAM_POWER_INFO:
++    case MSR_PP0_POWER_LIMIT  ... MSR_PP0_POLICY:
++    case MSR_PP1_POWER_LIMIT  ... MSR_PP1_POLICY:
++    case MSR_PLATFORM_ENERGY_COUNTER:
++    case MSR_PLATFORM_POWER_LIMIT:
++    case MSR_F15H_CU_POWER ... MSR_F15H_CU_MAX_POWER:
++    case MSR_AMD_RAPL_POWER_UNIT ... MSR_AMD_PKG_ENERGY_STATUS:
+         /* Not offered to guests. */
+         goto gp_fault;
+ 
+@@ -266,6 +275,15 @@ int guest_wrmsr(struct vcpu *v, uint32_t msr, uint64_t val)
+     case MSR_TSX_FORCE_ABORT:
+     case MSR_TSX_CTRL:
+     case MSR_MCU_OPT_CTRL:
++    case MSR_RAPL_POWER_UNIT:
++    case MSR_PKG_POWER_LIMIT  ... MSR_PKG_POWER_INFO:
++    case MSR_DRAM_POWER_LIMIT ... MSR_DRAM_POWER_INFO:
++    case MSR_PP0_POWER_LIMIT  ... MSR_PP0_POLICY:
++    case MSR_PP1_POWER_LIMIT  ... MSR_PP1_POLICY:
++    case MSR_PLATFORM_ENERGY_COUNTER:
++    case MSR_PLATFORM_POWER_LIMIT:
++    case MSR_F15H_CU_POWER ... MSR_F15H_CU_MAX_POWER:
++    case MSR_AMD_RAPL_POWER_UNIT ... MSR_AMD_PKG_ENERGY_STATUS:
+         /* Not offered to guests. */
+         goto gp_fault;
+ 
+diff --git a/xen/include/asm-x86/msr-index.h b/xen/include/asm-x86/msr-index.h
+index 480d1d8102..a685dcdcca 100644
+--- xen/include/asm-x86/msr-index.h.orig
++++ xen/include/asm-x86/msr-index.h
+@@ -96,6 +96,38 @@
+ /* Lower 6 bits define the format of the address in the LBR stack */
+ #define MSR_IA32_PERF_CAP_LBR_FORMAT	0x3f
+ 
++/*
++ * Intel Runtime Average Power Limiting (RAPL) interface.  Power plane base
++ * addresses (MSR_*_POWER_LIMIT) are model specific, but have so-far been
++ * consistent since their introduction in SandyBridge.
++ *
++ * Offsets of functionality from the power plane base is architectural, but
++ * not all power planes support all functionality.
++ */
++#define MSR_RAPL_POWER_UNIT		0x00000606
++
++#define MSR_PKG_POWER_LIMIT		0x00000610
++#define MSR_PKG_ENERGY_STATUS		0x00000611
++#define MSR_PKG_PERF_STATUS		0x00000613
++#define MSR_PKG_POWER_INFO		0x00000614
++
++#define MSR_DRAM_POWER_LIMIT		0x00000618
++#define MSR_DRAM_ENERGY_STATUS		0x00000619
++#define MSR_DRAM_PERF_STATUS		0x0000061b
++#define MSR_DRAM_POWER_INFO		0x0000061c
++
++#define MSR_PP0_POWER_LIMIT		0x00000638
++#define MSR_PP0_ENERGY_STATUS		0x00000639
++#define MSR_PP0_POLICY			0x0000063a
++
++#define MSR_PP1_POWER_LIMIT		0x00000640
++#define MSR_PP1_ENERGY_STATUS		0x00000641
++#define MSR_PP1_POLICY			0x00000642
++
++/* Intel Platform-wide power interface. */
++#define MSR_PLATFORM_ENERGY_COUNTER	0x0000064d
++#define MSR_PLATFORM_POWER_LIMIT	0x0000065c
++
+ #define MSR_IA32_BNDCFGS		0x00000d90
+ #define IA32_BNDCFGS_ENABLE		0x00000001
+ #define IA32_BNDCFGS_PRESERVE		0x00000002
+@@ -218,6 +250,8 @@
+ #define MSR_K8_VM_CR			0xc0010114
+ #define MSR_K8_VM_HSAVE_PA		0xc0010117
+ 
++#define MSR_F15H_CU_POWER		0xc001007a
++#define MSR_F15H_CU_MAX_POWER		0xc001007b
+ #define MSR_AMD_FAM15H_EVNTSEL0		0xc0010200
+ #define MSR_AMD_FAM15H_PERFCTR0		0xc0010201
+ #define MSR_AMD_FAM15H_EVNTSEL1		0xc0010202
+@@ -231,6 +265,10 @@
+ #define MSR_AMD_FAM15H_EVNTSEL5		0xc001020a
+ #define MSR_AMD_FAM15H_PERFCTR5		0xc001020b
+ 
++#define MSR_AMD_RAPL_POWER_UNIT		0xc0010299
++#define MSR_AMD_CORE_ENERGY_STATUS	0xc001029a
++#define MSR_AMD_PKG_ENERGY_STATUS	0xc001029b
++
+ #define MSR_AMD_L7S0_FEATURE_MASK	0xc0011002
+ #define MSR_AMD_THRM_FEATURE_MASK	0xc0011003
+ #define MSR_K8_FEATURE_MASK		0xc0011004
