@@ -1,14 +1,19 @@
-# $NetBSD: options.mk,v 1.7 2020/08/17 06:58:02 riastradh Exp $
+# $NetBSD: options.mk,v 1.8 2020/11/12 21:07:45 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor-browser
-PKG_SUPPORTED_OPTIONS+=	alsa dbus debug debug-info mozilla-jemalloc pulseaudio
 
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa dbus mozilla-jemalloc
+PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
+PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
+PLIST_VARS+=		debug
 
-.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus webrtc
+.else
+PKG_SUGGESTED_OPTIONS+=	dbus
+.endif
 
-.if ${OPSYS} != "NetBSD"
-PKG_SUGGESTED_OPTIONS+=		pulseaudio
+.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-8].*)
+PKG_SUGGESTED_OPTIONS+=	webrtc
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -20,41 +25,30 @@ CONFIGURE_ARGS+=	--enable-alsa
 CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
-.if !empty(PKG_OPTIONS:Mdbus)
-CONFIGURE_ARGS+=	--enable-dbus
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-dbus
-.endif
-
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
 CONFIGURE_ARGS+=	--enable-jemalloc
+CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
 .endif
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mgcc)
-.  if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
-# Modern gcc does not run any "tracking" passes when compiling with -O0,
-# which makes the generated debug info mostly useless. So explicitly
-# request them.
-O0TRACKING=-fvar-tracking-assignments -fvar-tracking
-.  endif
-.endif
-
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}" --enable-debug-symbols --disable-optimize
+CONFIGURE_ARGS+=	--enable-debug="-g -O0"
+CONFIGURE_ARGS+=	--disable-optimize
+CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
+PLIST.debug=		yes
 .else
 .  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
+CONFIGURE_ARGS+=	--enable-optimize=-Og
+CONFIGURE_ARGS+=	--disable-install-strip
 .  else
 CONFIGURE_ARGS+=	--disable-debug-symbols
-.  endif
-CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip
+.  endif
+CONFIGURE_ARGS+=	--disable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
@@ -62,4 +56,20 @@ CONFIGURE_ARGS+=	--enable-install-strip
 CONFIGURE_ARGS+=	--enable-pulseaudio
 .else
 CONFIGURE_ARGS+=	--disable-pulseaudio
+.endif
+
+.if !empty(PKG_OPTIONS:Mdbus)
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-dbus
+.else
+CONFIGURE_ARGS+=	--disable-dbus
+.endif
+
+PLIST_VARS+=		webrtc
+.if !empty(PKG_OPTIONS:Mwebrtc)
+.include "../../graphics/libv4l/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-webrtc
+PLIST.webrtc=		yes
+.else
+CONFIGURE_ARGS+=	--disable-webrtc
 .endif

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2020/10/31 00:55:27 wiz Exp $
+$NetBSD: distinfo,v 1.31 2020/11/12 21:07:45 wiz Exp $
 
 SHA1 (src-firefox-tor-browser-78.4.0esr-10.0-2-build2.tar.xz) = 58c2c7954b7b751c71f6cbd7944c4be3281d2105
 RMD160 (src-firefox-tor-browser-78.4.0esr-10.0-2-build2.tar.xz) = e773a61f364bd2a1c01fcd06fa714cb8ae7b7e56
@@ -26,11 +26,12 @@ SHA1 (patch-gfx_thebes_gfxPlatform.cpp) = f6f8996f0818a1b890698c7cc5054d49cb1e89
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 4a6606da590cfb8d855bde58b9c6f90e98d0870c
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1d8ffb8039e48798777f11658
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 260c29bacd8bf265951b7a412f850bf2b292c836
+SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = c75e9ea7124c18be1a051106fcc407ddd1e82e46
 SHA1 (patch-js_src_jsfriendapi.h) = 6bbb895b882ee24929f011751c42732215e153a2
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
+SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = ca117633d2aae52d82ec349a0bfb0c03b87898b4
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 31536f36cb33f16da309527b50eda9b721608115
-SHA1 (patch-media_libcubeb_src_cubeb__sun.c) = a8e03bc95850f83fd7ee3985c7cdb700981aa019
 SHA1 (patch-media_libcubeb_src_moz.build) = e4e64a1135cf4157ae5b6f7c1710ebd076953479
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac01f
