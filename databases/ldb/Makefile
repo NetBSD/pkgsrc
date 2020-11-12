@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/07/06 14:29:42 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/11/12 06:26:57 adam Exp $
 
 # Before updating, make sure net/samba4 supports the newer version.
-DISTNAME=	ldb-2.1.4
+DISTNAME=	ldb-2.2.0
 CATEGORIES=	databases
 MASTER_SITES=	http://www.samba.org/ftp/ldb/
 
