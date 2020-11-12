@@ -1,0 +1,14 @@
+Desktop notifications, the UNIX way.
+tiramisu is a notification daemon based on dunst that outputs notifications
+to STDOUT in order to allow the user to process notifications any way they
+prefer.
+
+By allowing users to determine what is done with notifications, there is
+infinitely more possibilities presented to the end-user than a simple
+notification daemon that displays a block of text on the screen and nothing
+more.
+
+Users could have notifications display in a pre-existing bar, make a control
+panel of some sort that shows notifications, push notifications to their phone
+if their computer has been idle for an amount of time, make notifications more
+accessible with text-to-speech, and so much more.
