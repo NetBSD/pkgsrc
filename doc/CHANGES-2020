@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6156 2020/11/12 09:46:02 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6157 2020/11/12 10:03:37 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9062,3 +9062,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-bottle to 0.12.19 [adam 2020-11-12]
 	Added sysutils/tiramisu version 1.0 [pin 2020-11-12]
 	Updated graphics/eog to 3.38.0 [nia 2020-11-12]
+	Updated audio/grip to 4.2.0 [triaxx 2020-11-12]
