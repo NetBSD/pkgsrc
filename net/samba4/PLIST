@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2020/08/18 07:39:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2020/11/12 06:37:18 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -103,7 +103,6 @@ include/tsocket.h
 include/tsocket_internal.h
 include/util/attr.h
 include/util/blocking.h
-include/util/byteorder.h
 include/util/data_blob.h
 include/util/debug.h
 include/util/discard.h
@@ -253,6 +252,7 @@ ${PYSITELIB}/samba/dcerpc/wkssvc.so
 ${PYSITELIB}/samba/dcerpc/xattr.so
 ${PYSITELIB}/samba/dckeytab.so
 ${PYSITELIB}/samba/descriptor.py
+${PYSITELIB}/samba/dnsresolver.py
 ${PYSITELIB}/samba/dnsserver.py
 ${PYSITELIB}/samba/domain_update.py
 ${PYSITELIB}/samba/drs_utils.py
@@ -271,6 +271,7 @@ ${PYSITELIB}/samba/gp_parse/gp_csv.py
 ${PYSITELIB}/samba/gp_parse/gp_inf.py
 ${PYSITELIB}/samba/gp_parse/gp_ini.py
 ${PYSITELIB}/samba/gp_parse/gp_pol.py
+${PYSITELIB}/samba/gp_scripts_ext.py
 ${PYSITELIB}/samba/gp_sec_ext.py
 ${PYSITELIB}/samba/gpclass.py
 ${PYSITELIB}/samba/gpo.so
@@ -372,6 +373,8 @@ ${PYSITELIB}/samba/tests/blackbox/mdfind.py
 ${PYSITELIB}/samba/tests/blackbox/ndrdump.py
 ${PYSITELIB}/samba/tests/blackbox/netads_json.py
 ${PYSITELIB}/samba/tests/blackbox/samba_dnsupdate.py
+${PYSITELIB}/samba/tests/blackbox/smbcacls.py
+${PYSITELIB}/samba/tests/blackbox/smbcacls_basic.py
 ${PYSITELIB}/samba/tests/blackbox/smbcontrol.py
 ${PYSITELIB}/samba/tests/blackbox/smbcontrol_process.py
 ${PYSITELIB}/samba/tests/blackbox/traffic_learner.py
@@ -431,6 +434,12 @@ ${PYSITELIB}/samba/tests/kcc/graph.py
 ${PYSITELIB}/samba/tests/kcc/graph_utils.py
 ${PYSITELIB}/samba/tests/kcc/kcc_utils.py
 ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
+${PYSITELIB}/samba/tests/krb5/kcrypto.py
+${PYSITELIB}/samba/tests/krb5/raw_testcase.py
+${PYSITELIB}/samba/tests/krb5/rfc4120_pyasn1.py
+${PYSITELIB}/samba/tests/krb5/s4u_tests.py
+${PYSITELIB}/samba/tests/krb5/simple_tests.py
+${PYSITELIB}/samba/tests/krb5/xrealm_tests.py
 ${PYSITELIB}/samba/tests/krb5_credentials.py
 ${PYSITELIB}/samba/tests/ldap_raw.py
 ${PYSITELIB}/samba/tests/ldap_referrals.py
@@ -538,6 +547,8 @@ lib/samba/bind9/dlz_bind9.${SOEXT}
 lib/samba/bind9/dlz_bind9_10.${SOEXT}
 lib/samba/bind9/dlz_bind9_11.${SOEXT}
 lib/samba/bind9/dlz_bind9_12.${SOEXT}
+lib/samba/bind9/dlz_bind9_14.${SOEXT}
+lib/samba/bind9/dlz_bind9_16.${SOEXT}
 lib/samba/bind9/dlz_bind9_9.${SOEXT}
 lib/samba/gensec/krb5.${SOEXT}
 ${PLIST.ads}lib/samba/idmap/ad.${SOEXT}
@@ -771,13 +782,13 @@ lib/samba/vfs/recycle.${SOEXT}
 lib/samba/vfs/shadow_copy.${SOEXT}
 lib/samba/vfs/shadow_copy2.${SOEXT}
 lib/samba/vfs/shell_snap.${SOEXT}
-${PLIST.dbus}lib/samba/vfs/snapper.${SOEXT}
 lib/samba/vfs/streams_depot.${SOEXT}
 lib/samba/vfs/streams_xattr.${SOEXT}
 lib/samba/vfs/syncops.${SOEXT}
 lib/samba/vfs/time_audit.${SOEXT}
 lib/samba/vfs/unityed_media.${SOEXT}
 lib/samba/vfs/virusfilter.${SOEXT}
+lib/samba/vfs/widelinks.${SOEXT}
 lib/samba/vfs/worm.${SOEXT}
 lib/samba/vfs/xattr_tdb.${SOEXT}
 man/man1/dbwrap_tool.1
@@ -870,13 +881,13 @@ man/man8/vfs_recycle.8
 man/man8/vfs_shadow_copy.8
 man/man8/vfs_shadow_copy2.8
 man/man8/vfs_shell_snap.8
-${PLIST.dbus}man/man8/vfs_snapper.8
 man/man8/vfs_streams_depot.8
 man/man8/vfs_streams_xattr.8
 man/man8/vfs_syncops.8
 man/man8/vfs_time_audit.8
 man/man8/vfs_unityed_media.8
 man/man8/vfs_virusfilter.8
+man/man8/vfs_widelinks.8
 man/man8/vfs_worm.8
 man/man8/vfs_xattr_tdb.8
 man/man8/winbind_krb5_locator.8
@@ -910,7 +921,8 @@ share/examples/samba/deluser.sh
 @pkgdir share/examples/samba/pam_smbpass
 share/examples/samba/samba.schema
 share/examples/samba/smb.conf.default
-share/samba/setup/DB_CONFIG
+share/samba/samba/admx/en-US/samba.adml
+share/samba/samba/admx/samba.admx
 share/samba/setup/ad-schema/AD_DS_Attributes__Windows_Server_2012_R2.ldf
 share/samba/setup/ad-schema/AD_DS_Attributes__Windows_Server_2016.ldf
 share/samba/setup/ad-schema/AD_DS_Classes__Windows_Server_2012_R2.ldf
@@ -933,7 +945,6 @@ share/samba/setup/adprep/WindowsServerDocs/Sch59.ldf.diff
 share/samba/setup/adprep/WindowsServerDocs/Schema-Updates.md
 share/samba/setup/adprep/fix-forest-rev.ldf
 share/samba/setup/aggregate_schema.ldif
-share/samba/setup/cn=samba.ldif
 share/samba/setup/display-specifiers/DisplaySpecifiers-Win2k0.txt
 share/samba/setup/display-specifiers/DisplaySpecifiers-Win2k3.txt
 share/samba/setup/display-specifiers/DisplaySpecifiers-Win2k3R2.txt
@@ -941,26 +952,12 @@ share/samba/setup/display-specifiers/DisplaySpecifiers-Win2k8.txt
 share/samba/setup/display-specifiers/DisplaySpecifiers-Win2k8R2.txt
 share/samba/setup/dns_update_list
 share/samba/setup/extended-rights.ldif
-share/samba/setup/fedorads-index.ldif
-share/samba/setup/fedorads-linked-attributes.ldif
-share/samba/setup/fedorads-pam.ldif
-share/samba/setup/fedorads-samba.ldif
-share/samba/setup/fedorads-sasl.ldif
 share/samba/setup/idmap_init.ldif
 share/samba/setup/krb5.conf
-share/samba/setup/memberof.conf
-share/samba/setup/mmr_serverids.conf
-share/samba/setup/mmr_syncrepl.conf
-share/samba/setup/modules.conf
 share/samba/setup/named.conf
 share/samba/setup/named.conf.dlz
 share/samba/setup/named.conf.update
 share/samba/setup/named.txt
-share/samba/setup/olc_mmr.conf
-share/samba/setup/olc_seed.ldif
-share/samba/setup/olc_serverid.conf
-share/samba/setup/olc_syncrepl.conf
-share/samba/setup/olc_syncrepl_seed.conf
 share/samba/setup/prefixMap.txt
 share/samba/setup/provision.ldif
 share/samba/setup/provision.reg
@@ -997,15 +994,10 @@ share/samba/setup/provision_users.ldif
 share/samba/setup/provision_users_add.ldif
 share/samba/setup/provision_users_modify.ldif
 share/samba/setup/provision_well_known_sec_princ.ldif
-share/samba/setup/refint.conf
-share/samba/setup/schema-map-fedora-ds-1.0
-share/samba/setup/schema-map-openldap-2.3
 share/samba/setup/schema_samba4.ldif
 share/samba/setup/secrets.ldif
 share/samba/setup/secrets_dns.ldif
 share/samba/setup/secrets_init.ldif
-share/samba/setup/secrets_sasl_ldap.ldif
-share/samba/setup/secrets_simple_ldap.ldif
 share/samba/setup/share.ldif
 share/samba/setup/spn_update_list
 share/samba/setup/ypServ30.ldif
