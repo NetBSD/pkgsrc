@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6158 2020/11/12 10:30:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6159 2020/11/12 10:35:33 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9065,3 +9065,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/grip to 4.2.0 [triaxx 2020-11-12]
 	Updated net/py-smbc to 1.0.23 [adam 2020-11-12]
 	Updated devel/py-requests to 2.25.0 [adam 2020-11-12]
+	Updated sysutils/xenkernel413 to 4.13.2nb1 [bouyer 2020-11-12]
