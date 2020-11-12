@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2020/11/11 19:10:05 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2020/11/12 10:03:24 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -161,14 +161,6 @@ fix-clang-wrapper:
 CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 # In unspecified case, clock_gettime(CLOCK_MONOTONIC, ...) fails.
 CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
-
-.if ${OPSYS} == "OpenBSD"
-PLIST_SUBST+=	DLL_SUFFIX=".so.1.0"
-.elif ${OPSYS} == "Darwin"
-PLIST_SUBST+=	DLL_SUFFIX=".dylib"
-.else
-PLIST_SUBST+=	DLL_SUFFIX=".so"
-.endif
 
 # PR pkg/55456
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
