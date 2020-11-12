@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.915 2020/11/10 18:22:23 nia Exp $
+# $NetBSD: Makefile,v 1.916 2020/11/12 09:06:42 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -644,6 +644,7 @@ SUBDIR+=	tealdeer
 SUBDIR+=	tegra-firmware
 SUBDIR+=	tenshi
 SUBDIR+=	testdisk
+SUBDIR+=	tiramisu
 SUBDIR+=	tits
 SUBDIR+=	tkcron
 SUBDIR+=	tkdesk
