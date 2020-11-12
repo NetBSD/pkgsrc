@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6162 2020/11/12 11:18:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6163 2020/11/12 11:30:15 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9073,3 +9073,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-css-parser to 1.0.6 [adam 2020-11-12]
 	Updated databases/prometheus to 2.22.1 [adam 2020-11-12]
 	Updated graphics/jasper to 2.0.22 [adam 2020-11-12]
+	Updated sysutils/xenkernel411 to 4.11.4nb4 [bouyer 2020-11-12]
