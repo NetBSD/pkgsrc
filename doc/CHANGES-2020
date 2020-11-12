@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6165 2020/11/12 14:41:49 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6166 2020/11/12 16:45:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9076,3 +9076,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xenkernel411 to 4.11.4nb4 [bouyer 2020-11-12]
 	Updated audio/din to 49 [fox 2020-11-12]
 	Updated net/youtube-dl to 20201112 [leot 2020-11-12]
+	Updated graphics/gnome-backgrounds to 3.38.0 [nia 2020-11-12]
