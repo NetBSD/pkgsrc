@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/08/03 13:58:05 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/11/12 09:02:10 adam Exp $
 
-DISTNAME=	bottle-0.12.18
-PKGREVISION=	1
+DISTNAME=	bottle-0.12.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bottle/}
