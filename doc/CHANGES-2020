@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6154 2020/11/12 09:07:23 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6155 2020/11/12 09:44:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9061,3 +9061,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-urllib3 to 1.26.1 [adam 2020-11-12]
 	Updated www/py-bottle to 0.12.19 [adam 2020-11-12]
 	Added sysutils/tiramisu version 1.0 [pin 2020-11-12]
+	Added graphics/eog version 3.38.0 [nia 2020-11-12]
