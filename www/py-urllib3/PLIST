@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/07/27 10:06:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/11/12 09:00:07 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -91,6 +91,9 @@ ${PYSITELIB}/urllib3/util/__init__.pyo
 ${PYSITELIB}/urllib3/util/connection.py
 ${PYSITELIB}/urllib3/util/connection.pyc
 ${PYSITELIB}/urllib3/util/connection.pyo
+${PYSITELIB}/urllib3/util/proxy.py
+${PYSITELIB}/urllib3/util/proxy.pyc
+${PYSITELIB}/urllib3/util/proxy.pyo
 ${PYSITELIB}/urllib3/util/queue.py
 ${PYSITELIB}/urllib3/util/queue.pyc
 ${PYSITELIB}/urllib3/util/queue.pyo
@@ -106,6 +109,9 @@ ${PYSITELIB}/urllib3/util/retry.pyo
 ${PYSITELIB}/urllib3/util/ssl_.py
 ${PYSITELIB}/urllib3/util/ssl_.pyc
 ${PYSITELIB}/urllib3/util/ssl_.pyo
+${PYSITELIB}/urllib3/util/ssltransport.py
+${PYSITELIB}/urllib3/util/ssltransport.pyc
+${PYSITELIB}/urllib3/util/ssltransport.pyo
 ${PYSITELIB}/urllib3/util/timeout.py
 ${PYSITELIB}/urllib3/util/timeout.pyc
 ${PYSITELIB}/urllib3/util/timeout.pyo
