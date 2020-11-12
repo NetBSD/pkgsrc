@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2018/06/13 19:10:25 youri Exp $
+$NetBSD: distinfo,v 1.20 2020/11/12 16:44:59 nia Exp $
 
-SHA1 (gnome-backgrounds-3.28.0.tar.xz) = 78ea9bb8932c8ff1ddb0f19b750a78a18ac00498
-RMD160 (gnome-backgrounds-3.28.0.tar.xz) = bf0751a3f01c36716403c54c436b6e685c6a1b44
-SHA512 (gnome-backgrounds-3.28.0.tar.xz) = bc4aed99e83725994ee455ea86d28ee50c396901cb1d1626778ee4fa22256ed57209f3edb31e2197bf6841f8d0149ae7ce97d17b6fa5bcfdc63c65c14f2d52d2
-Size (gnome-backgrounds-3.28.0.tar.xz) = 26134776 bytes
+SHA1 (gnome-backgrounds-3.38.0.tar.xz) = 3963b1a52ec02b918f8ba8194576a08213fa0c0a
+RMD160 (gnome-backgrounds-3.38.0.tar.xz) = 58db9c509134b054553f0e2693752241c8aef34e
+SHA512 (gnome-backgrounds-3.38.0.tar.xz) = 01000409d6d54af81e520b8b292c24bb64e763a493c69cf71cabb9f885c7feee5a1805db40e2d0544834c40b7866f889c106e9816fd8e8b8f5273b0a099f1488
+Size (gnome-backgrounds-3.38.0.tar.xz) = 41179824 bytes
