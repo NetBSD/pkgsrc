@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.29 2020/06/18 13:55:15 nia Exp $
+$NetBSD: distinfo,v 1.30 2020/11/13 14:06:48 nia Exp $
 
-SHA1 (psi-1.4/psi-1.4.tar.xz) = 55c61cc0c1e3990f5a97619dc79fbe320f778770
-RMD160 (psi-1.4/psi-1.4.tar.xz) = 2f047baa0e2af16c949f6bb33667124253e231e4
-SHA512 (psi-1.4/psi-1.4.tar.xz) = 9bb8da58809270e5387e024f5ea031e28441e66cde53cde219beebe7b46bfa5c41d0a86110d1936d0ac2e15483ffb947f8998cbeeb415f72553cb78b67c57ed1
-Size (psi-1.4/psi-1.4.tar.xz) = 2119840 bytes
+SHA1 (psi-1.5/psi-1.5.tar.xz) = 8950a80111f2dabb9c4fa3dc27c0544a970685ce
+RMD160 (psi-1.5/psi-1.5.tar.xz) = fbea608528f90d90b3acf76014e1a6312e39d340
+SHA512 (psi-1.5/psi-1.5.tar.xz) = c2e17dad346b5f7e8c97dc8959d99eaf4c30c1ba11c2d04b562af7b30482d5dbdc3a86508c4c29881ea0fc72db5a9d5fb4017768732cafee6a1d3025a39d8520
+Size (psi-1.5/psi-1.5.tar.xz) = 2125104 bytes
 SHA1 (patch-src_accountmanagedlg.cpp) = ca40ab15b01121a327b4774fb9f6284341f055bd
-SHA1 (patch-src_avatars.cpp) = 0f96f4359f7a853725d9871b893d50d54009b013
-SHA1 (patch-src_contactlistdragview.cpp) = 542c027e91a0945a821a34aedd713834612d3672
 SHA1 (patch-src_options_opt__application.cpp) = b0ddccbd3ffec0d89daa85e92f0ef06bc2d7fe68
-SHA1 (patch-src_rosteravatarframe.cpp) = 34879bfa7d76c542d8882e762b6610059dbafa30
