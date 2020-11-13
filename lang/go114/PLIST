@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/10/15 12:01:14 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/11/13 18:27:35 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go114/AUTHORS
@@ -183,6 +183,7 @@ go114/lib/time/zoneinfo.zip
 go114/misc/android/README
 go114/misc/android/go_android_exec.go
 go114/misc/arm/a
+go114/misc/cgo/errors/badsym_test.go
 go114/misc/cgo/errors/errors_test.go
 go114/misc/cgo/errors/ptr_test.go
 go114/misc/cgo/errors/testdata/err1.go
