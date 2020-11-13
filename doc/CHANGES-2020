@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6174 2020/11/13 01:58:49 msaitoh Exp $
+$NetBSD: CHANGES-2020,v 1.6175 2020/11/13 09:42:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9088,3 +9088,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/py-pyperclip to 1.8.1 [adam 2020-11-12]
 	Updated devel/py-approvaltests to 0.2.8 [adam 2020-11-12]
 	Updated sysutils/intel-microcode-netbsd to 20201112 [msaitoh 2020-11-13]
+	Updated chat/dino to 0.2.0 [nia 2020-11-13]
