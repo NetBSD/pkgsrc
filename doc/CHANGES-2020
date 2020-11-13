@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6178 2020/11/13 18:46:44 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6179 2020/11/13 18:48:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9092,3 +9092,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/psi to 1.5 [nia 2020-11-13]
 	Updated lang/go114 to 1.14.12 [bsiegert 2020-11-13]
 	Updated lang/go115 to 1.15.5 [bsiegert 2020-11-13]
+	Updated net/gallery-dl to 1.15.3 [leot 2020-11-13]
