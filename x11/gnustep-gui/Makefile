@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/11/05 09:07:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2020/11/13 02:47:45 mef Exp $
 
 GITHUB_PROJECT=	libs-gui
 GITHUB_TAG=	gui-0_28_0
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 MAKE_FILE=		GNUmakefile
 
-PLIST_SUBST=	API_VERSION=${PKGVERSION:C/\.[0-9]$//}
+PLIST_SUBST=	API_VERSION=${PKGVERSION:C/\.[0-9][nb]*[0-9]*$//}
 
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
