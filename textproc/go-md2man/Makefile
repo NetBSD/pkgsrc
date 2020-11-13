@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/11/08 21:59:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2020/11/13 19:26:22 bsiegert Exp $
 
 DISTNAME=	go-md2man-1.0.8
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cpuguy83/}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	textproc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
