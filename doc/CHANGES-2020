@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6176 2020/11/13 14:07:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6177 2020/11/13 18:27:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9090,3 +9090,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/intel-microcode-netbsd to 20201112 [msaitoh 2020-11-13]
 	Updated chat/dino to 0.2.0 [nia 2020-11-13]
 	Updated chat/psi to 1.5 [nia 2020-11-13]
+	Updated lang/go114 to 1.14.12 [bsiegert 2020-11-13]
