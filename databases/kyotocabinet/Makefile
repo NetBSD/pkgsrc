@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/02/26 15:59:05 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/13 16:12:02 nia Exp $
 #
 
 DISTNAME=	kyotocabinet-1.2.77
@@ -30,6 +30,10 @@ PTHREAD_AUTO_VARS=	yes
 .if !empty(CC_VERSION:Mgcc-*) && !empty(MACHINE_ARCH:Mi[34]86)
 GNU_ARCH.i386=		i586
 CFLAGS+=		-march=i586
+.endif
+
+.if ${MACHINE_ARCH} == "powerpc"
+.include "../../devel/libatomic/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
