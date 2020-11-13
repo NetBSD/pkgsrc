@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/11/05 09:07:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/13 09:41:46 nia Exp $
 
-DISTNAME=	dino-0.1.0
-PKGREVISION=	3
+DISTNAME=	dino-0.2.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dino/}
 GITHUB_PROJECT=	dino
@@ -13,7 +12,6 @@ COMMENT=	Modern XMPP (Jabber) chat client
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES+=		c
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -31,6 +29,7 @@ BUILDLINK_DEPMETHOD.vala=	build
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
