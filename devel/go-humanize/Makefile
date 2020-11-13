@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/11/08 21:59:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2020/11/13 19:26:09 bsiegert Exp $
 
 DISTNAME=	go-humanize-1.0.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dustin/}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	devel
 GITHUB_PROJECT=	go-humanize
 GITHUB_TAG=	v${PKGVERSION_NOREV}

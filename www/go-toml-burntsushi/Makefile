@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/11/08 21:59:38 bsiegert Exp $
+# $NetBSD: Makefile,v 1.30 2020/11/13 19:26:25 bsiegert Exp $
 
 DISTNAME=	toml-0.3.1
 PKGNAME=	go-${DISTNAME:S/toml/toml-burntsushi/}
-PKGREVISION=	20
+PKGREVISION=	21
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BurntSushi/}
 CATEGORIES=	www
 GITHUB_PROJECT=	toml
