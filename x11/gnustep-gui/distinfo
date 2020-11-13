@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.29 2020/10/02 23:47:28 mef Exp $
+$NetBSD: distinfo,v 1.30 2020/11/13 02:47:45 mef Exp $
 
 SHA1 (gnustep-gui/gui-0_28_0.tar.gz) = 32496c4ebc5260358b65e3b02f422ad20b9915b3
 RMD160 (gnustep-gui/gui-0_28_0.tar.gz) = 53106237f12251b3f5d62c1acc503abb5c23ee75
 SHA512 (gnustep-gui/gui-0_28_0.tar.gz) = ccef19bbdf7bf51b992b941ed1bbd2e1aeabe83e2fd040a75b9fbfd77c90722f80de416e61ac37ee5d6eb5ced26efe0a1aeec49374db9c8c4237bc5b59182371
 Size (gnustep-gui/gui-0_28_0.tar.gz) = 2933423 bytes
+SHA1 (patch-Source_GSCharacterPanel.m) = 05a2d7e252f5134e37f71dd0f27c8e15b6f38a5e
