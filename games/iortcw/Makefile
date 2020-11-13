@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/09/09 11:22:27 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/11/13 16:17:06 nia Exp $
 
 DISTNAME=	iortcw-1.51c
 PKGREVISION=	8
@@ -50,8 +50,6 @@ MAKE_FLAGS+=	COMPILE_ARCH=${MACHINE_ARCH}
 IORTCW_ARCH=	x86
 .elif ${MACHINE_ARCH} == "x86_64"
 IORTCW_ARCH=	x86_64
-.elif ${MACHINE_ARCH} == "powerpc"
-IORTCW_ARCH=	ppc
 .elif !empty(MACHINE_ARCH:Mpowerpc64*)
 IORTCW_ARCH=	ppc64
 .elif ${MACHINE_ARCH} == "sparc64"
