@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/11/08 21:59:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2020/11/13 19:26:25 bsiegert Exp $
 
 DISTNAME=	spritewell-0.5.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	20
+PKGREVISION=	21
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wellington/}
 CATEGORIES=	www
 GITHUB_PROJECT=	spritewell
