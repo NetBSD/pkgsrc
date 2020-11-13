@@ -1,8 +1,12 @@
-# $NetBSD: options.mk,v 1.5 2019/11/02 22:18:24 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2020/11/13 14:06:48 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.psi
-PKG_SUPPORTED_OPTIONS+=	aspell enchant whiteboard xscreensaver
-PKG_SUGGESTED_OPTIONS+=	aspell enchant
+
+#PKG_SUPPORTED_OPTIONS+=	aspell hunspell enchant whiteboard xscreensaver
+#PKG_SUGGESTED_OPTIONS+=	aspell hunspell enchant
+
+PKG_SUPPORTED_OPTIONS+=	aspell hunspell whiteboard xscreensaver
+PKG_SUGGESTED_OPTIONS+=	aspell hunspell
 
 # from an idea stolen from ../../misc/openoffice3.
 PSI_SUPPORTED_LANGUAGES=	be cs de eo es es-es fr it ja mk pl pt-br ru \
@@ -41,6 +45,15 @@ CONFIGURE_ARGS+=	--disable-aspell
 .include "../../textproc/enchant2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-enchant
+.endif
+
+# enable hunspell
+.if !empty(PKG_OPTIONS:Mhunspell)
+CONFIGURE_ARGS+=	--with-hunspell-inc=${BUILDLINK_PREFIX.hunspell}/include
+CONFIGURE_ARGS+=	--with-hunspell-lib=${BUILDLINK_PREFIX.hunspell}/lib
+.include "../../textproc/hunspell/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-hunspell
 .endif
 
 # enable whiteboarding
