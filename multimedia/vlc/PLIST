@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2020/08/29 09:17:48 nia Exp $
+@comment $NetBSD: PLIST,v 1.67 2020/11/13 16:26:38 nia Exp $
 @pkgdir share/vlc/http/dialogs
 @pkgdir share/vlc/http/images
 @pkgdir share/vlc/http/js
@@ -430,6 +430,7 @@ lib/vlc/plugins/video_chroma/libi420_nv12_plugin.la
 ${PLIST.x86simd}lib/vlc/plugins/video_chroma/libi420_rgb_mmx_plugin.la
 lib/vlc/plugins/video_chroma/libi420_rgb_plugin.la
 ${PLIST.x86simd}lib/vlc/plugins/video_chroma/libi420_rgb_sse2_plugin.la
+${PLIST.altivec}lib/vlc/plugins/video_chroma/libi420_yuy2_altivec_plugin.la
 ${PLIST.x86simd}lib/vlc/plugins/video_chroma/libi420_yuy2_mmx_plugin.la
 lib/vlc/plugins/video_chroma/libi420_yuy2_plugin.la
 ${PLIST.x86simd}lib/vlc/plugins/video_chroma/libi420_yuy2_sse2_plugin.la
