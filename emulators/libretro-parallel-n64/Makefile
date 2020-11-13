@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/31 16:03:04 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/13 16:15:54 nia Exp $
 
 DISTNAME=	libretro-parallel-n64-20200528
 CATEGORIES=	emulators
@@ -34,6 +34,10 @@ CFLAGS+=	-DNO_ASM -DARM_FIX
 .else
 MAKE_FLAGS+=	WITH_DYNAREC=
 CFLAGS+=	-DNO_ASM
+.endif
+
+.if ${MACHINE_ARCH} == "powerpc"
+.include "../../devel/libatomic/buildlink3.mk"
 .endif
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./libretro/link.T
