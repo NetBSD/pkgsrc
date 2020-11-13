@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/08/18 17:58:10 leot Exp $
+# $NetBSD: Makefile,v 1.13 2020/11/13 16:24:20 nia Exp $
 
 DISTNAME=	lightspark-0.8.2
 PKGREVISION=	8
@@ -24,6 +24,12 @@ GCC_REQD+=	4.6
 
 CONF_FILES+=	${PREFIX}/share/examples/lightspark/xdg/lightspark.conf \
 		${PKG_SYSCONFDIR}/xdg/lightspark.conf
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "powerpc"
+.include "../../devel/libatomic/buildlink3.mk"
+.endif
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
