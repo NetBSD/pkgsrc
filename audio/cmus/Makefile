@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2020/11/06 12:21:17 nia Exp $
+# $NetBSD: Makefile,v 1.90 2020/11/13 16:10:43 nia Exp $
 
 DISTNAME=		cmus-2.8.0
 PKGREVISION=		7
@@ -47,9 +47,14 @@ CONFIGURE_ARGS+=	CONFIG_SUN=n
 PLIST.coreaudio=	yes
 .endif
 
-.if ${MACHINE_ARCH} == "i386"
 # 64 bit atomic ops are required
+
+.if ${MACHINE_ARCH} == "i386"
 CFLAGS+=	-march=i586
+.endif
+
+.if ${MACHINE_ARCH} == "powerpc"
+.include "../../devel/libatomic/buildlink3.mk"
 .endif
 
 .include "options.mk"
