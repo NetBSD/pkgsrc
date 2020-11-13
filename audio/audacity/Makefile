@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2020/08/18 17:57:34 leot Exp $
+# $NetBSD: Makefile,v 1.137 2020/11/13 16:09:47 nia Exp $
 
 DISTNAME=	audacity-2.4.1
 PKGREVISION=	2
@@ -53,9 +53,14 @@ CONFIGURE_ARGS+=	--with-soundtouch="system"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386"
 # 64 bit atomic ops are required
+
+.if ${MACHINE_ARCH} == "i386"
 CXXFLAGS+=		-march=i586
+.endif
+
+.if ${MACHINE_ARCH} == "powerpc"
+.include "../../devel/libatomic/buildlink3.mk"
 .endif
 
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
