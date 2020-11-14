@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/11/05 09:07:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2020/11/14 22:40:18 mef Exp $
 
 GITHUB_PROJECT=	libs-back
 GITHUB_TAG=	back-0_28_0
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 LDFLAGS=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_FILE=		GNUmakefile
 
-PLIST_SUBST=	API_VERSION=${PKGVERSION:C/\.[0-9]$//:C/\.//}
+PLIST_SUBST=	API_VERSION=${PKGVERSION_NOREV:C/\.[0-9]$//:C/\.//}
 
 pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${GNUSTEP_ROOT}/lib/GNUstep/Fonts
