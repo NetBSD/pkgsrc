@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6182 2020/11/14 14:08:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6183 2020/11/14 21:28:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9097,3 +9097,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/unison-snapshot to 2.51.3.70nb2 [gdt 2020-11-14]
 	Updated devel/protobuf to 3.14.0 [adam 2020-11-14]
 	Updated devel/py-protobuf to 3.14.0 [adam 2020-11-14]
+	Updated lang/rust to 1.47.0 [he 2020-11-14]
