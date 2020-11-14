@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2020/11/14 18:16:16 he Exp $
+# $NetBSD: Makefile,v 1.207 2020/11/14 21:25:32 he Exp $
 
 DISTNAME=	rustc-1.47.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -18,7 +18,7 @@ GCC_REQD+=	5
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bash grep gmake perl:build pkg-config
+USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
