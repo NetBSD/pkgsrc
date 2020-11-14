@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2020/11/12 21:02:43 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/11/14 09:54:23 jperkin Exp $
 
 SHA1 (node-v10.23.0.tar.gz) = 641cefc66f2360dbf409f8bb7f94bf3096cb9da4
 RMD160 (node-v10.23.0.tar.gz) = 71fefc0b9451395f74750f956102e2b4cfa67144
@@ -18,6 +18,8 @@ SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = aa84bf1dbaac5808529f6b0150
 SHA1 (patch-deps_v8_src_compiler_types.h) = 711cc94535200374104c3cd1f0fbbd00994701a6
 SHA1 (patch-deps_v8_src_globals.h) = 6695a381000844ad9837bdbc3edbe9040ec4d5ff
 SHA1 (patch-deps_v8_src_log-utils.h) = 765e4e4af2cb11e38c033174ac92fbb6ee1fd480
+SHA1 (patch-deps_v8_src_objects_intl-objects.cc) = 7d5a9cb3dd02fb1fa99c8f0645d015dff37f282f
+SHA1 (patch-deps_v8_src_runtime_runtime-intl.cc) = dffa78003abb45e2bae0ee3cd75b1daee64160e1
 SHA1 (patch-deps_v8_tools_run-llprof.sh) = 39aa3faf77492ef8dd35b411b7b0e4605b469af3
 SHA1 (patch-node.gypi) = 4a104dba6c22702211009bc60a6be6f87554e2fa
 SHA1 (patch-src_cares__wrap.cc) = a26a162f130468cbc0650a33b27b71377d273704
