@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2020/11/14 12:44:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.206 2020/11/14 18:16:16 he Exp $
 
 DISTNAME=	rustc-1.47.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -502,6 +502,11 @@ stage0-bootstrap: install
 # \todo Explain why this is limited to a small list of architectures,
 # and in particular why not x86_64.
 DEPENDS+=	compat80>=0:../../emulators/compat80
+.endif
+
+.if (${MACHINE_ARCH} == "powerpc")
+# LLVM needs libatomic for 64-bit atomics on powerpc
+.include "../../devel/libatomic/buildlink3.mk"
 .endif
 
 .if (${OPSYS} == "NetBSD") && \
