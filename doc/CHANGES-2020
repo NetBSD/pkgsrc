@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6180 2020/11/13 21:24:54 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.6181 2020/11/14 01:29:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9094,3 +9094,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/go115 to 1.15.5 [bsiegert 2020-11-13]
 	Updated net/gallery-dl to 1.15.3 [leot 2020-11-13]
 	Updated lang/python39 to 3.9.0nb1 [sjmulder 2020-11-13]
+	Updated net/unison-snapshot to 2.51.3.70nb2 [gdt 2020-11-14]
