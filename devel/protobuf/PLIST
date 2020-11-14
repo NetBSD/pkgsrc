@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/10/04 10:37:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/11/14 14:07:40 adam Exp $
 bin/protoc
 include/google/protobuf/any.h
 include/google/protobuf/any.pb.h
@@ -47,7 +47,6 @@ include/google/protobuf/generated_message_table_driven.h
 include/google/protobuf/generated_message_util.h
 include/google/protobuf/has_bits.h
 include/google/protobuf/implicit_weak_message.h
-include/google/protobuf/inlined_string_field.h
 include/google/protobuf/io/coded_stream.h
 include/google/protobuf/io/gzip_stream.h
 include/google/protobuf/io/io_win32.h
@@ -84,7 +83,6 @@ include/google/protobuf/stubs/bytestream.h
 include/google/protobuf/stubs/callback.h
 include/google/protobuf/stubs/casts.h
 include/google/protobuf/stubs/common.h
-include/google/protobuf/stubs/fastmem.h
 include/google/protobuf/stubs/hash.h
 include/google/protobuf/stubs/logging.h
 include/google/protobuf/stubs/macros.h
