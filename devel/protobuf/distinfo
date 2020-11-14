@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.39 2020/08/21 11:29:18 adam Exp $
+$NetBSD: distinfo,v 1.40 2020/11/14 14:07:40 adam Exp $
 
-SHA1 (protobuf-cpp-3.13.0.tar.gz) = 3a7d5c07404764298aa8d77aa13910baffc491f3
-RMD160 (protobuf-cpp-3.13.0.tar.gz) = 830be272ab19ebdabeb5e086e2a0b626f9c1611c
-SHA512 (protobuf-cpp-3.13.0.tar.gz) = 89a3d6207d14cc9afbd50a514a7c0f781c0e530bdbbe720e7e2f645301cdf59fb6772d5a95aea4a35ebcb2e17a738d8fdba8314fbc3aa6f34a97427ccf0c7342
-Size (protobuf-cpp-3.13.0.tar.gz) = 4638758 bytes
+SHA1 (protobuf-cpp-3.14.0.tar.gz) = 4cc1a23af0590bf799b61782a937d8b24d7e7986
+RMD160 (protobuf-cpp-3.14.0.tar.gz) = fe51ace0b3af284d0539be82199acd9d14ff5244
+SHA512 (protobuf-cpp-3.14.0.tar.gz) = 021a377a2bcfb1ee540e49371d1d7297d77359fd0de7b4a079918e8580258a7ee14256a9b392853dc6744e88d63b2fae723ab61cc9af599828f07f48b0161c74
+Size (protobuf-cpp-3.14.0.tar.gz) = 4655133 bytes
 SHA1 (patch-configure) = 22a1fc4e701b348772b3e2e4c68aad3b97032cc5
 SHA1 (patch-third__party_googletest_googlemock_configure) = fe3b812e819130d87d99316144507d2454461cd1
