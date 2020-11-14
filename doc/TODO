@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20187 2020/11/12 21:05:51 adam Exp $
+$NetBSD: TODO,v 1.20188 2020/11/14 14:08:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -930,7 +930,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o prelude-lml-3.1.0
 	o prelude-manager-3.1.0
 	o profit-2.5.3
-	o protobuf-3.13.0.1
 	o psmisc-22.20
 	o pspp-0.10.1
 	o ptlib-2.16.2
