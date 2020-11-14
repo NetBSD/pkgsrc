@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/07/30 07:02:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/11/14 14:08:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,9 +12,6 @@ ${PYSITELIB}/google/protobuf/__init__.pyo
 ${PYSITELIB}/google/protobuf/any_pb2.py
 ${PYSITELIB}/google/protobuf/any_pb2.pyc
 ${PYSITELIB}/google/protobuf/any_pb2.pyo
-${PYSITELIB}/google/protobuf/any_test_pb2.py
-${PYSITELIB}/google/protobuf/any_test_pb2.pyc
-${PYSITELIB}/google/protobuf/any_test_pb2.pyo
 ${PYSITELIB}/google/protobuf/api_pb2.py
 ${PYSITELIB}/google/protobuf/api_pb2.pyc
 ${PYSITELIB}/google/protobuf/api_pb2.pyo
@@ -49,9 +46,6 @@ ${PYSITELIB}/google/protobuf/internal/__init__.py
 ${PYSITELIB}/google/protobuf/internal/__init__.pyc
 ${PYSITELIB}/google/protobuf/internal/__init__.pyo
 ${PYSITELIB}/google/protobuf/internal/_api_implementation.so
-${PYSITELIB}/google/protobuf/internal/_parameterized.py
-${PYSITELIB}/google/protobuf/internal/_parameterized.pyc
-${PYSITELIB}/google/protobuf/internal/_parameterized.pyo
 ${PYSITELIB}/google/protobuf/internal/api_implementation.py
 ${PYSITELIB}/google/protobuf/internal/api_implementation.pyc
 ${PYSITELIB}/google/protobuf/internal/api_implementation.pyo
@@ -76,9 +70,6 @@ ${PYSITELIB}/google/protobuf/internal/message_listener.pyo
 ${PYSITELIB}/google/protobuf/internal/python_message.py
 ${PYSITELIB}/google/protobuf/internal/python_message.pyc
 ${PYSITELIB}/google/protobuf/internal/python_message.pyo
-${PYSITELIB}/google/protobuf/internal/testing_refleaks.py
-${PYSITELIB}/google/protobuf/internal/testing_refleaks.pyc
-${PYSITELIB}/google/protobuf/internal/testing_refleaks.pyo
 ${PYSITELIB}/google/protobuf/internal/type_checkers.py
 ${PYSITELIB}/google/protobuf/internal/type_checkers.pyc
 ${PYSITELIB}/google/protobuf/internal/type_checkers.pyo
@@ -91,12 +82,6 @@ ${PYSITELIB}/google/protobuf/internal/wire_format.pyo
 ${PYSITELIB}/google/protobuf/json_format.py
 ${PYSITELIB}/google/protobuf/json_format.pyc
 ${PYSITELIB}/google/protobuf/json_format.pyo
-${PYSITELIB}/google/protobuf/map_proto2_unittest_pb2.py
-${PYSITELIB}/google/protobuf/map_proto2_unittest_pb2.pyc
-${PYSITELIB}/google/protobuf/map_proto2_unittest_pb2.pyo
-${PYSITELIB}/google/protobuf/map_unittest_pb2.py
-${PYSITELIB}/google/protobuf/map_unittest_pb2.pyc
-${PYSITELIB}/google/protobuf/map_unittest_pb2.pyo
 ${PYSITELIB}/google/protobuf/message.py
 ${PYSITELIB}/google/protobuf/message.pyc
 ${PYSITELIB}/google/protobuf/message.pyo
@@ -113,9 +98,6 @@ ${PYSITELIB}/google/protobuf/pyext/_message.so
 ${PYSITELIB}/google/protobuf/pyext/cpp_message.py
 ${PYSITELIB}/google/protobuf/pyext/cpp_message.pyc
 ${PYSITELIB}/google/protobuf/pyext/cpp_message.pyo
-${PYSITELIB}/google/protobuf/pyext/python_pb2.py
-${PYSITELIB}/google/protobuf/pyext/python_pb2.pyc
-${PYSITELIB}/google/protobuf/pyext/python_pb2.pyo
 ${PYSITELIB}/google/protobuf/reflection.py
 ${PYSITELIB}/google/protobuf/reflection.pyc
 ${PYSITELIB}/google/protobuf/reflection.pyo
@@ -134,12 +116,6 @@ ${PYSITELIB}/google/protobuf/struct_pb2.pyo
 ${PYSITELIB}/google/protobuf/symbol_database.py
 ${PYSITELIB}/google/protobuf/symbol_database.pyc
 ${PYSITELIB}/google/protobuf/symbol_database.pyo
-${PYSITELIB}/google/protobuf/test_messages_proto2_pb2.py
-${PYSITELIB}/google/protobuf/test_messages_proto2_pb2.pyc
-${PYSITELIB}/google/protobuf/test_messages_proto2_pb2.pyo
-${PYSITELIB}/google/protobuf/test_messages_proto3_pb2.py
-${PYSITELIB}/google/protobuf/test_messages_proto3_pb2.pyc
-${PYSITELIB}/google/protobuf/test_messages_proto3_pb2.pyo
 ${PYSITELIB}/google/protobuf/text_encoding.py
 ${PYSITELIB}/google/protobuf/text_encoding.pyc
 ${PYSITELIB}/google/protobuf/text_encoding.pyo
