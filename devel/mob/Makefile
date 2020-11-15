@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/11/13 19:26:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/15 17:56:45 schmonz Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-0.0.26
-PKGREVISION=	2
+DISTNAME=	${GITHUB_PROJECT}-0.0.27
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=remotemobprogramming/}
 GITHUB_PROJECT=	mob
