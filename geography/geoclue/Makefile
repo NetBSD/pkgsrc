@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/11/05 09:08:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2020/11/15 14:53:24 mef Exp $
 
 DISTNAME=	geoclue-2.5.6
 PKGREVISION=	1
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config msgfmt
 
 MESON_ARGS+=	-D3g-source=false
 MESON_ARGS+=	-Dcdma-source=false
@@ -34,6 +34,12 @@ CONF_FILES+=	share/examples/dbus-1/system.d/org.freedesktop.GeoClue2.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.GeoClue2.conf
 CONF_FILES+=	share/examples/geoclue/geoclue.conf \
 		${PKG_SYSCONFDIR}/geoclue.conf
+
+.include "../../mk/bsd.prefs.mk"
+# msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
