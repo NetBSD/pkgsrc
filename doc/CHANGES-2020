@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6187 2020/11/15 08:05:06 tron Exp $
+$NetBSD: CHANGES-2020,v 1.6188 2020/11/15 10:28:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9102,3 +9102,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-PDF-Table to 1.001 [wen 2020-11-15]
 	Updated devel/p5-File-HomeDir to 1.006 [wen 2020-11-15]
 	Updated mail/mutt to 2.0.1 [tron 2020-11-15]
+	Added net/opentracker version 0.0.20180526 [wiz 2020-11-15]
