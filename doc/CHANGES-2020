@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6189 2020/11/15 14:27:12 fox Exp $
+$NetBSD: CHANGES-2020,v 1.6190 2020/11/15 15:00:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9104,3 +9104,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/mutt to 2.0.1 [tron 2020-11-15]
 	Added net/opentracker version 0.0.20180526 [wiz 2020-11-15]
 	Updated chat/ircd-hybrid to 8.2.35 [fox 2020-11-15]
+	Updated net/unison-snapshot to 2.51.3.70nb3 [gdt 2020-11-15]
