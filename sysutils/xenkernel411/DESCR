@@ -12,5 +12,3 @@ domains.
 
 This package contains the 4.11 Xen kernel itself.  PCI passthrough is
 not supported.  PAE is mandatory; on i386 one must use XEN3PAE_DOM[0U].
-
-This is the recommended Xen version in pkgsrc.
