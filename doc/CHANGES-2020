@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6184 2020/11/15 06:57:08 wen Exp $
+$NetBSD: CHANGES-2020,v 1.6185 2020/11/15 07:01:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9099,3 +9099,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-protobuf to 3.14.0 [adam 2020-11-14]
 	Updated lang/rust to 1.47.0 [he 2020-11-14]
 	Updated www/p5-libwww to 6.49 [wen 2020-11-15]
+	Updated textproc/p5-PDF-Table to 1.001 [wen 2020-11-15]
