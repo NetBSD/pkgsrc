@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6191 2020/11/15 15:05:01 wen Exp $
+$NetBSD: CHANGES-2020,v 1.6192 2020/11/15 17:56:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9106,3 +9106,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/ircd-hybrid to 8.2.35 [fox 2020-11-15]
 	Updated net/unison-snapshot to 2.51.3.70nb3 [gdt 2020-11-15]
 	Updated www/moodle to 3.10 [wen 2020-11-15]
+	Updated devel/mob to 0.0.27 [schmonz 2020-11-15]
