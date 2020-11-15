@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6186 2020/11/15 07:07:47 wen Exp $
+$NetBSD: CHANGES-2020,v 1.6187 2020/11/15 08:05:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9101,3 +9101,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-libwww to 6.49 [wen 2020-11-15]
 	Updated textproc/p5-PDF-Table to 1.001 [wen 2020-11-15]
 	Updated devel/p5-File-HomeDir to 1.006 [wen 2020-11-15]
+	Updated mail/mutt to 2.0.1 [tron 2020-11-15]
