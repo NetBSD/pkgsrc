@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/15 10:28:05 wiz Exp $
+bin/opentracker

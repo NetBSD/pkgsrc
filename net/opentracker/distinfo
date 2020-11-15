@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/15 10:28:05 wiz Exp $
+
+SHA1 (opentracker-0.0.20180526.tar.gz) = f61286fecc6474556d802cdd72fe675b4ed524c5
+RMD160 (opentracker-0.0.20180526.tar.gz) = 002cd3710815edce979b100f4d638838369f5b50
+SHA512 (opentracker-0.0.20180526.tar.gz) = c1ecad1349ef4501eb8b4ab01666132ba9ddc0587cde00e2fc33518459ae2fd2ccf38ffbaf828d0af69ba8878f4b6e7416d831312ebe1dee1c0b11fb1e896ae6
+Size (opentracker-0.0.20180526.tar.gz) = 776368 bytes
