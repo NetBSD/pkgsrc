@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6190 2020/11/15 15:00:31 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.6191 2020/11/15 15:05:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9105,3 +9105,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/opentracker version 0.0.20180526 [wiz 2020-11-15]
 	Updated chat/ircd-hybrid to 8.2.35 [fox 2020-11-15]
 	Updated net/unison-snapshot to 2.51.3.70nb3 [gdt 2020-11-15]
+	Updated www/moodle to 3.10 [wen 2020-11-15]
