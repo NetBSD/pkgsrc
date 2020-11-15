@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2020/10/18 14:50:45 wiz Exp $
+# $NetBSD: Makefile,v 1.235 2020/11/15 20:27:39 leot Exp $
 
 DISTNAME=	curl-7.73.0
 CATEGORIES=	www
@@ -21,6 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-ca-path=${SSLCERTS}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--without-libpsl
 PKGCONFIG_OVERRIDE=	libcurl.pc.in
 TEST_TARGET=		check
 
