@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2020/08/14 06:56:22 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2020/11/16 12:15:02 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -16,7 +16,7 @@
 # used by databases/postgresql10-pltcl/Makefile
 # used by databases/postgresql10-server/Makefile
 
-DISTNAME=	postgresql-10.14
+DISTNAME=	postgresql-10.15
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -67,6 +67,9 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-tcl
+
+# avoid pointing to a wrapper
+CONFIGURE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt}
 
 # sys/ucred.h shouldn't be included on Solaris, causes conflicts between
 # procfs and largefile.
