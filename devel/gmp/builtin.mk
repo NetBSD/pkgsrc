@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2020/09/03 08:58:42 prlw1 Exp $
+# $NetBSD: builtin.mk,v 1.11 2020/11/16 13:12:41 wiz Exp $
 
 BUILTIN_PKG:=	gmp
 
@@ -6,11 +6,11 @@ BUILTIN_FIND_HEADERS_VAR:=	H_GMP
 BUILTIN_FIND_HEADERS.H_GMP=	gmp.h gmp/gmp.h
 
 BUILTIN_VERSION_SCRIPT.gmp=	${AWK} \
-	'/\#define[ \t]*__GNU_MP_VERSION[ \t]/ { major = $$3; } \
-	/\#define[ \t]*__GNU_MP_VERSION_MINOR[ \t]/ { minor = $$3; } \
-	/\#define[ \t]*__GNU_MP_VERSION_PATCHLEVEL[ \t]/ { patch = $$3; } \
-	END { if (major!="" && minor!="" && patch!="") \
-	print major "." minor "." patch; else print ""; }'
+				'/\#define[ \t]*__GNU_MP_VERSION[ \t]/ { major = $$3; } \
+				/\#define[ \t]*__GNU_MP_VERSION_MINOR[ \t]/ { minor = $$3; } \
+				/\#define[ \t]*__GNU_MP_VERSION_PATCHLEVEL[ \t]/ { patch = $$3; } \
+				END { if (major!="" && minor!="" && patch!="") \
+				print major "." minor "." patch; else print ""; }'
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
