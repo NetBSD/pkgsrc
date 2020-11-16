@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/11/05 09:07:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2020/11/16 12:15:04 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/12-client-/}
-PKGREVISION=	2
 COMMENT=	PostgreSQL database client programs
 
 .include "../../databases/postgresql12/Makefile.common"
@@ -14,8 +13,6 @@ CONFIGURE_ARGS+=	--with-zlib
 # Override INSTALL script to avoid unprivileged user/group
 # leaking into the binary package
 CONFIGURE_ARGS+=	INSTALL=${INSTALL:Q}\ -c
-
-MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
