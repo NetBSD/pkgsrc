@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/11/05 09:08:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2020/11/16 12:00:44 nia Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg2/}
 PKGREVISION=	4
@@ -10,7 +10,10 @@ CONFIGURE_ARGS+=	--enable-avfilter
 #CONFIGURE_ARGS+=	--enable-avfilter-lavf
 CONFIGURE_ARGS+=	--enable-postproc
 CONFIGURE_ARGS+=	--disable-ffplay
+
+# Seems to cause internal compiler errors
 CONFIGURE_ARGS+=	--disable-mmx
+CONFIGURE_ARGS+=	--disable-mmxext
 
 INSTALLATION_DIRS=	lib/ffmpeg2 share/doc/ffmpeg2 share/examples/ffmpeg2
 
