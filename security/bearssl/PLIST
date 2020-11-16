@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/21 06:59:58 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/11/16 07:43:25 schmonz Exp $
 bin/brssl
 include/bearssl.h
 include/bearssl_aead.h
 include/bearssl_block.h
 include/bearssl_ec.h
 include/bearssl_hash.h
-include/bearssl_kdf.h
 include/bearssl_hmac.h
+include/bearssl_kdf.h
 include/bearssl_pem.h
 include/bearssl_prf.h
 include/bearssl_rand.h
