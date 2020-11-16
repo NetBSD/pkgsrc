@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST.Linux,v 1.20 2020/04/10 10:10:55 nia Exp $
+@comment $NetBSD: PLIST.Linux,v 1.21 2020/11/16 12:15:28 nia Exp $
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_vdpau.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_vdpau.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_dxr3.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_dxr3.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_flac.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_flac.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_dvb.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_dvb.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcdo.a
