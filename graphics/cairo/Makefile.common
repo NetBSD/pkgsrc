@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2020/11/16 09:27:03 nia Exp $
+# $NetBSD: Makefile.common,v 1.17 2020/11/16 11:15:18 ryoon Exp $
 #
 # used by graphics/cairo/Makefile
 # used by graphics/cairo-gobject/Makefile
@@ -24,9 +24,9 @@ GNU_CONFIGURE=		yes
 # does not build against NetBSD-5's MesaLib, and is according
 # to upstream, only used by "toy applications"
 CONFIGURE_ARGS+=	--disable-gl
-# this uses libbdf, which is not exposed on a typical NetBSD system,
+# this uses libbfd, which is not exposed on a typical NetBSD system,
 # but on Linux the libraries can leak through and be detected anyway.
-# libbdf does not appear to have a stable API, so avoid breakage and
+# libbfd does not appear to have a stable API, so avoid breakage and
 # disable it outright. it's an internal debugging feature.
 CONFIGURE_ARGS+=	--disable-symbol-lookup
 CONFIGURE_ARGS+=	--enable-fc
