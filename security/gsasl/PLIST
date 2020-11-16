@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/05/30 06:52:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/11/16 13:05:07 wiz Exp $
 bin/gsasl
 include/gsasl-compat.h
 include/gsasl-mech.h
@@ -122,13 +122,18 @@ man/man3/gsasl_strerror_name.3
 man/man3/gsasl_stringprep_nfkc.3
 man/man3/gsasl_stringprep_saslprep.3
 man/man3/gsasl_stringprep_trace.3
+share/locale/da/LC_MESSAGES/gsasl.mo
+share/locale/da/LC_MESSAGES/libgsasl.mo
 share/locale/de/LC_MESSAGES/gsasl.mo
+share/locale/de/LC_MESSAGES/libgsasl.mo
 share/locale/en@boldquot/LC_MESSAGES/gsasl.mo
 share/locale/en@boldquot/LC_MESSAGES/libgsasl.mo
 share/locale/en@quot/LC_MESSAGES/gsasl.mo
 share/locale/en@quot/LC_MESSAGES/libgsasl.mo
 share/locale/eo/LC_MESSAGES/gsasl.mo
 share/locale/eo/LC_MESSAGES/libgsasl.mo
+share/locale/es/LC_MESSAGES/gsasl.mo
+share/locale/es/LC_MESSAGES/libgsasl.mo
 share/locale/eu/LC_MESSAGES/gsasl.mo
 share/locale/fi/LC_MESSAGES/gsasl.mo
 share/locale/fi/LC_MESSAGES/libgsasl.mo
@@ -136,6 +141,9 @@ share/locale/fr/LC_MESSAGES/gsasl.mo
 share/locale/fr/LC_MESSAGES/libgsasl.mo
 share/locale/ga/LC_MESSAGES/gsasl.mo
 share/locale/ga/LC_MESSAGES/libgsasl.mo
+share/locale/hr/LC_MESSAGES/gsasl.mo
+share/locale/hu/LC_MESSAGES/gsasl.mo
+share/locale/hu/LC_MESSAGES/libgsasl.mo
 share/locale/id/LC_MESSAGES/gsasl.mo
 share/locale/id/LC_MESSAGES/libgsasl.mo
 share/locale/it/LC_MESSAGES/gsasl.mo
@@ -144,6 +152,8 @@ share/locale/nl/LC_MESSAGES/gsasl.mo
 share/locale/nl/LC_MESSAGES/libgsasl.mo
 share/locale/pl/LC_MESSAGES/gsasl.mo
 share/locale/pl/LC_MESSAGES/libgsasl.mo
+share/locale/pt_BR/LC_MESSAGES/gsasl.mo
+share/locale/pt_BR/LC_MESSAGES/libgsasl.mo
 share/locale/ro/LC_MESSAGES/gsasl.mo
 share/locale/ro/LC_MESSAGES/libgsasl.mo
 share/locale/sk/LC_MESSAGES/gsasl.mo

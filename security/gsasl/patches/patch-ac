@@ -1,4 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2011/11/24 09:04:18 marino Exp $
+$NetBSD: patch-ac,v 1.2 2020/11/16 13:05:08 wiz Exp $
+
+In file included from /usr/include/gssapi.h:41,
+                 from gss-extra.h:30,
+                 from gss-extra.c:28:
+gss-extra.c:43:9: error: expected identifier or '(' before '&' token
+   43 | gss_OID GSS_C_NT_HOSTBASED_SERVICE = &tmp;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sent upstream on 2020/11/16.
 
 --- lib/gl/gss-extra.c.orig	2010-12-14 12:57:08.000000000 +0000
 +++ lib/gl/gss-extra.c
