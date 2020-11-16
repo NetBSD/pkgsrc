@@ -1,7 +1,8 @@
-$NetBSD: patch-Makefile,v 1.1 2020/01/21 21:54:25 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.2 2020/11/16 10:51:44 schmonz Exp $
 
 Use a pkgsrc-capable shell on all platforms.
 Support DESTDIR.
+Defer tests until TEST_TARGET.
 
 --- Makefile.orig	2018-10-14 00:48:50.000000000 +0000
 +++ Makefile
@@ -16,6 +17,15 @@ Support DESTDIR.
  
  installer: \
  load installer.o getln.a unix.a byte.a
+@@ -247,7 +247,7 @@ compile iopause.c taia.h tai.h uint64.h 
+ 	./compile iopause.c
+ 
+ it: \
+-rts sysdeps man
++programs sysdeps man
+ 
+ load: \
+ conf-ld print-ld.sh systype warn-auto.sh
 @@ -357,7 +357,7 @@ compile readproctitle.c error.h
  
  rts: \
