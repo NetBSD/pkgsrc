@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2019/11/25 03:12:50 taca Exp $
+$NetBSD: distinfo,v 1.57 2020/11/16 12:10:05 ryoon Exp $
 
 SHA1 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 980b9f3f2e62a7360904b5b2107a4213bd052caa
 RMD160 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 4eeb1cc0364da69920c3d101a2f1a882550721a7
@@ -13,6 +13,17 @@ SHA1 (patch-configure) = a5623b0cbb3331fd0a537b26c0ae48315d52dbe2
 SHA1 (patch-disable-filter-url) = a2b08912d81f2872bf1834fa4cefddb044c9d0f8
 SHA1 (patch-ext_gd_config.m4) = b92ab4c7fe8aceaef7787a607a7d2eac258fee19
 SHA1 (patch-ext_imap_config.m4) = 9c6ed6966366c4fe1b7cfd34b5910e2ff0e68577
+SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = f4cf2a1cc650ed9a4291924c2ed9fcbd7061e33b
+SHA1 (patch-ext_intl_collator_collator__convert.c) = 91f5b8458eebc0c2f3871f76a522f627e4cf4fbf
+SHA1 (patch-ext_intl_collator_collator__error.c) = 94a26ee166506f7f77dd762e9c789d0e803f2b3c
+SHA1 (patch-ext_intl_collator_collator__locale.c) = ab48d5fac5a80b1c4c25fef61993a889a8014e3f
+SHA1 (patch-ext_intl_collator_collator__sort.c) = f21e117180a7c8d999e13e77ff078e55c3481562
+SHA1 (patch-ext_intl_common_common__error.c) = 2afa6a5c908de7347e49030b7d4b5e8f41b6eda5
+SHA1 (patch-ext_intl_dateformat_dateformat__attr.c) = 4567753a7f6d4a6229ab8ab67f16f668aeb8bf6f
+SHA1 (patch-ext_intl_locale_locale__methods.c) = 10e946194686539178e52116303951e3a1c8397c
+SHA1 (patch-ext_intl_normalizer_normalizer__normalize.c) = 8031fa56c927781f3094d484a2cf15d365f9e1f6
+SHA1 (patch-ext_intl_timezone_timezone__class.cpp) = b76ba1df02e854b9fae27c4c3dd554fba91aadfa
+SHA1 (patch-ext_intl_timezone_timezone__methods.cpp) = fc3a99380f1c29553621cb864493d6d79b4d737a
 SHA1 (patch-ext_mssql_php__mssql.c) = c4fa9231dc539ffb027f1beb6f182f21ddb94a3c
 SHA1 (patch-ext_pcre_pcrelib_config.h) = 26588e9932ee715e32c872a1c7e2f9c640bd9cf8
 SHA1 (patch-ext_pdo__mysql_config.m4) = 9d25c673fc151e1b8ae137f2a0fc540189ef5398
