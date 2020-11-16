@@ -220,8 +220,8 @@ ffmpeg			Enable ffmpeg support.
 ffmpegthumbnailer	Enable ffmpeg thumbnailing support.
 fftw			Use the fftw library for Discrete Fourier Transforms.
 fftw-fortran		Enable Fortran support.
-filter-design		Adding filter_design capability.
 fido			Enable U2F/FIDO/FIDO2/WebAuthn support.
+filter-design		Adding filter_design capability.
 finger			Enable finger support.
 flac			Enable FLAC support.
 flambda			Enable Flambda optimisation passes
@@ -633,6 +633,8 @@ opengrok-build		Enable building of OpenGrok from source.
 openldap		Enable OpenLDAP support.
 openmpi-vampirtrace	Build VampirTrace as part of OpenMPI.
 openssl			Enable OpenSSL support.
+opentracker-ipv6-only	Enable IPv6 mode for opentracker (disables IPv4).
+opentracker-restrictions	Enable support for whitelisting and restrict statistics in opentracker.
 opus			Enable opus support.
 oracle			Enable Oracle support.
 osmesa			Enable off-screen rendering.
