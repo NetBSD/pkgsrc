@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2020/11/06 15:06:49 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/11/16 16:17:00 tsutsui Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-2.7.2
@@ -21,7 +21,7 @@ GCC_REQD+=	4.9
 .include "../../mk/bsd.prefs.mk"
 .include "../../graphics/librsvg/available.mk"
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c99 c++
 USE_TOOLS+=	pkg-config
 
 # cairo/fontconfig are only needed for command line utilities
