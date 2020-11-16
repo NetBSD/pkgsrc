@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2020/08/14 06:56:23 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2020/11/16 12:15:04 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -16,7 +16,7 @@
 # used by databases/postgresql12-pltcl/Makefile
 # used by databases/postgresql12-server/Makefile
 
-DISTNAME=	postgresql-12.4
+DISTNAME=	postgresql-12.5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -45,7 +45,7 @@ PKG_SYSCONFSUBDIR=	postgresql
 PG_TEMPLATE.SunOS=	solaris
 PG_TEMPLATE.IRIX=	irix5
 PG_TEMPLATE.MirBSD=	openbsd
-PG_TEMPLATE.DragonFly=  freebsd
+PG_TEMPLATE.DragonFly=	freebsd
 .if !defined(PG_TEMPLATE.${OPSYS})
 PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
