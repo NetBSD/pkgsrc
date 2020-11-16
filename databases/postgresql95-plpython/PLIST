@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/25 21:37:36 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/16 12:15:06 adam Exp $
 include/postgresql/server/plpy_util.h
 include/postgresql/server/plpython.h
 ${PLIST.py2x}lib/postgresql/hstore_plpython2.so
@@ -15,8 +15,8 @@ share/locale/ko/LC_MESSAGES/plpython-9.5.mo
 share/locale/pl/LC_MESSAGES/plpython-9.5.mo
 share/locale/pt_BR/LC_MESSAGES/plpython-9.5.mo
 share/locale/ru/LC_MESSAGES/plpython-9.5.mo
+share/locale/sv/LC_MESSAGES/plpython-9.5.mo
 share/locale/zh_CN/LC_MESSAGES/plpython-9.5.mo
-@comment as of 9.5.1 installation of these is not dependent on python version
 share/postgresql/extension/hstore_plpython2u--1.0.sql
 share/postgresql/extension/hstore_plpython2u.control
 share/postgresql/extension/hstore_plpython3u--1.0.sql

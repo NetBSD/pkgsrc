@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/08/10 11:56:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/11/16 12:15:06 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -804,12 +804,19 @@ share/locale/ru/LC_MESSAGES/pg_resetxlog-9.5.mo
 share/locale/ru/LC_MESSAGES/pg_rewind-9.5.mo
 share/locale/ru/LC_MESSAGES/pgscripts-9.5.mo
 share/locale/ru/LC_MESSAGES/psql-9.5.mo
+share/locale/sv/LC_MESSAGES/ecpg-9.5.mo
+share/locale/sv/LC_MESSAGES/ecpglib6-9.5.mo
 share/locale/sv/LC_MESSAGES/initdb-9.5.mo
+share/locale/sv/LC_MESSAGES/libpq5-9.5.mo
+share/locale/sv/LC_MESSAGES/pg_basebackup-9.5.mo
 share/locale/sv/LC_MESSAGES/pg_config-9.5.mo
 share/locale/sv/LC_MESSAGES/pg_controldata-9.5.mo
 share/locale/sv/LC_MESSAGES/pg_ctl-9.5.mo
+share/locale/sv/LC_MESSAGES/pg_dump-9.5.mo
 share/locale/sv/LC_MESSAGES/pg_resetxlog-9.5.mo
+share/locale/sv/LC_MESSAGES/pg_rewind-9.5.mo
 share/locale/sv/LC_MESSAGES/pgscripts-9.5.mo
+share/locale/sv/LC_MESSAGES/psql-9.5.mo
 share/locale/ta/LC_MESSAGES/pg_config-9.5.mo
 share/locale/tr/LC_MESSAGES/ecpg-9.5.mo
 share/locale/tr/LC_MESSAGES/ecpglib6-9.5.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/05/19 07:05:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/11/16 12:15:06 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -51,6 +51,8 @@ share/locale/pt_BR/LC_MESSAGES/postgres-9.5.mo
 share/locale/ro/LC_MESSAGES/plpgsql-9.5.mo
 share/locale/ru/LC_MESSAGES/plpgsql-9.5.mo
 share/locale/ru/LC_MESSAGES/postgres-9.5.mo
+share/locale/sv/LC_MESSAGES/plpgsql-9.5.mo
+share/locale/sv/LC_MESSAGES/postgres-9.5.mo
 share/locale/zh_CN/LC_MESSAGES/plpgsql-9.5.mo
 share/locale/zh_CN/LC_MESSAGES/postgres-9.5.mo
 share/locale/zh_TW/LC_MESSAGES/plpgsql-9.5.mo
