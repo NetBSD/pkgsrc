@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2020/10/25 15:45:36 wen Exp $
+$NetBSD: distinfo,v 1.22 2020/11/16 13:13:37 adam Exp $
 
-SHA1 (multidict-5.0.0.tar.gz) = 9b5326a48dfbab3a6371207285f5b173dee1b928
-RMD160 (multidict-5.0.0.tar.gz) = 63443df98ebb40ae34c2ccb609766ecef00b2419
-SHA512 (multidict-5.0.0.tar.gz) = ef02cab2ce6c64f46ecceb0368789b9c08e15ef7dfbb10e689b4a77639c8e674aa84914876947a8d0e0adc364b10fb97a07c9da69269052013616a306e8a9ff0
-Size (multidict-5.0.0.tar.gz) = 53243 bytes
+SHA1 (multidict-5.0.2.tar.gz) = 9c7c20ba23e2b18b778cf183fb93db227239c183
+RMD160 (multidict-5.0.2.tar.gz) = 4ee89c7ab7fe5f6b0b36d9294461c4ac2573061e
+SHA512 (multidict-5.0.2.tar.gz) = 447000c0ac65660060f0bc353649a025f3f15b1714fc8bf7a7157a32b582f477863e65c2d6fbae474fb3ed49d3277edaf2f84aa336d0454aa67584dd17dc93ca
+Size (multidict-5.0.2.tar.gz) = 53309 bytes
