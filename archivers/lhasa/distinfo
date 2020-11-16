@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2016/06/22 10:30:18 wiz Exp $
+$NetBSD: distinfo,v 1.9 2020/11/16 15:48:43 tsutsui Exp $
 
 SHA1 (lhasa-0.3.1.tar.gz) = 1a5d827100d1e6445b377029b69b901af3ffa240
 RMD160 (lhasa-0.3.1.tar.gz) = 4e4cef0525d99c0b4cbe58529da8edaf6b01608b
 SHA512 (lhasa-0.3.1.tar.gz) = 6e4797aaa054f2ecd25069b32b809ab0111d0179adfd9c676e0609d69efbcc968ec6dce67fbd8ce6bccc102d09ee69996805a5542882b432731e3c273f132c05
 Size (lhasa-0.3.1.tar.gz) = 2933084 bytes
+SHA1 (patch-lib_lha__file__header.c) = 5603af72663f9d154dd1bdae7839ece1ea22d54a
