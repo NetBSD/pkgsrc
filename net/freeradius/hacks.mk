@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2020/09/13 18:56:29 he Exp $
+# $NetBSD: hacks.mk,v 1.2 2020/11/16 11:57:19 nia Exp $
 
 .if !defined(FREERADIUS_HACKS_MK)
 FREERADIUS_HACKS_MK=	defined
@@ -9,6 +9,11 @@ FREERADIUS_HACKS_MK=	defined
 .if ${MACHINE_ARCH} == "powerpc"
 PKG_HACKS+=     powerpc-libatomic
 .include "../../devel/libatomic/buildlink3.mk"
+.endif
+
+.if ${MACHINE_ARCH} == "i386"
+PKG_HACKS+=	i386-atomics
+CFLAGS+=	-march=i586
 .endif
 
 .endif	# FREERADIUS_HACKS_MK
