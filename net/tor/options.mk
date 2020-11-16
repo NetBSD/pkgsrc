@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2020/11/12 22:56:00 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2020/11/16 08:25:40 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	doc # rust
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-asciidoc
 ### https://trac.torproject.org/projects/tor/wiki/RustInTor
 ### XXX:
 ### As of 0.4.4.6 I am not sure how this is supposed to work.
+### https://gitlab.torproject.org/tpo/core/tor/-/issues/40191
 .if !empty(PKG_OPTIONS:Mrust)
 CONFIGURE_ENV+=		TOR_RUST_DEPENDENCIES=${WRKDIR}/vendor
 CONFIGURE_ARGS+=	--enable-rust
