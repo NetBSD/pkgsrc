@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6198 2020/11/16 11:58:26 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.6199 2020/11/16 12:17:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9113,3 +9113,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-approvaltests to 0.2.9 [schmonz 2020-11-16]
 	Updated net/opentracker to 0.0.20180526nb1 [wiz 2020-11-16]
 	Updated x11/mlterm to 3.9.1 [tsutsui 2020-11-16]
+	Updated databases/postgresql95 to 9.5.24 [adam 2020-11-16]
+	Updated databases/postgresql96 to 9.6.20 [adam 2020-11-16]
+	Updated databases/postgresql10 to 10.15 [adam 2020-11-16]
+	Updated databases/postgresql11 to 11.10 [adam 2020-11-16]
+	Updated databases/postgresql12 to 12.5 [adam 2020-11-16]
+	Updated databases/postgresql13 to 13.1 [adam 2020-11-16]
