@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.3 2020/01/25 11:17:31 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2020/11/16 10:51:43 schmonz Exp $
 
 SHA1 (daemontools-encore-1.11.tar.gz) = 23f8dc5cf2d063c481b328fce523fc8a0349b693
 RMD160 (daemontools-encore-1.11.tar.gz) = 518f85f1502bf969ee60d5169642089752bd2d52
 SHA512 (daemontools-encore-1.11.tar.gz) = 1e1a96a948d551bfc38496740eaa85b7cae0d2469419293b133533da75ca03657fe6108129703ad7b773925c58ce84a4f242eb612133fb0c499f47ae50423a8a
 Size (daemontools-encore-1.11.tar.gz) = 94917 bytes
 SHA1 (patch-MAN) = 7c361a3365a43a992d7a0ccf938b79dc2a8691bc
-SHA1 (patch-Makefile) = b1bc2500071491280a02f158bf4d8ed4e0aa369e
+SHA1 (patch-Makefile) = 5deabb7526190b4c1e0f7092b8822a225c317751
 SHA1 (patch-rts.tests_supervise-downtime.sh) = c6415e1c0adce32e5ad57ad5457fd1be98c53958
 SHA1 (patch-rts.tests_supervise-lock.sh) = 1f2e036adb93a0f872ae2a3f2d7fd89ea0a9809a
 SHA1 (patch-sleeper.c) = cdae9837bb8a5cc268c8e86e97e03d11f8e9d32d
