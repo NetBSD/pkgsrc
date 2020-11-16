@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6197 2020/11/16 08:41:34 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6198 2020/11/16 11:58:26 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9112,3 +9112,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.40 [fox 2020-11-15]
 	Updated devel/py-approvaltests to 0.2.9 [schmonz 2020-11-16]
 	Updated net/opentracker to 0.0.20180526nb1 [wiz 2020-11-16]
+	Updated x11/mlterm to 3.9.1 [tsutsui 2020-11-16]
