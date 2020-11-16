@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/10/01 11:58:16 prlw1 Exp $
+# $NetBSD: Makefile,v 1.32 2020/11/16 12:32:52 nia Exp $
 
 DISTNAME=	libwnck-3.36.0
 PKGNAME=	${DISTNAME:S/libwnck/libwnck3/}
@@ -11,16 +11,20 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Library to write pagers and tasklists
 LICENSE=	gnu-lgpl-v2
 
-#GNU_CONFIGURE=		yes
-#USE_PKGLOCALEDIR=	yes
-#USE_TOOLS+=		gmake msgfmt pkg-config
-USE_TOOLS+=		pkg-config
-#USE_LIBTOOL=		yes
-
-PKGCONFIG_OVERRIDE=	libwnck-3.0.pc.in
+USE_TOOLS+=	pkg-config xgettext
 
 # wnckutils conflict with devel/libwnck, but also probably aren't used
 MESON_ARGS+=	-Dinstall_tools=false
+
+# Remove unsupported linker arguments.
+# Apply removals to post-wrapper transformed arguments.
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,${WRKSRC}/libwnck/libwnck-3.map
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/libwnck/libwnck-3.map
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE=		output/libwnck-3.0.pc
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
