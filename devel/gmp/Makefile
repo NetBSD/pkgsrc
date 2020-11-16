@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2020/01/20 21:25:24 adam Exp $
+# $NetBSD: Makefile,v 1.88 2020/11/16 13:12:41 wiz Exp $
 
-DISTNAME=	gmp-6.2.0
+DISTNAME=	gmp-6.2.1
 CATEGORIES=	devel math
 MASTER_SITES=	https://gmplib.org/download/gmp/
 MASTER_SITES+=	${MASTER_SITE_GNU:=gmp/}
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--enable-cxx
 PLIST.cxx=		yes
 .endif
 
-.if !empty(MACHINE_PLATFORM:MIRIX-5*) && !empty(ABI)
+.if !empty(MACHINE_PLATFORM:MIRIX-5.*) && !empty(ABI)
 ABI=			o32
 .endif
 
