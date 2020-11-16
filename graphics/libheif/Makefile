@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/10/11 23:47:31 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/16 11:05:52 ryoon Exp $
 
 DISTNAME=	libheif-1.9.1
 PKGREVISION=	1
@@ -18,6 +18,8 @@ USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-go
+
+CXXFLAGS.NetBSD+=	-Wno-error=maybe-uninitialized
 
 PKGCONFIG_OVERRIDE+=	libheif.pc.in
 
