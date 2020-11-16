@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6195 2020/11/15 23:53:08 fox Exp $
+$NetBSD: CHANGES-2020,v 1.6196 2020/11/16 07:54:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9110,3 +9110,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/skalibs to 2.9.3.0 [schmonz 2020-11-15]
 	Updated audio/din to 49.1 [fox 2020-11-15]
 	Updated audio/fasttracker2 to 1.40 [fox 2020-11-15]
+	Updated devel/py-approvaltests to 0.2.9 [schmonz 2020-11-16]
