@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6205 2020/11/17 09:02:04 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6206 2020/11/17 09:50:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9130,3 +9130,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/prometheus to 2.22.2nb1 [adam 2020-11-17]
 	Updated textproc/py-rapidjson to 0.9.4 [adam 2020-11-17]
 	Updated time/py-pytz to 2020.4 [adam 2020-11-17]
+	Updated databases/py-pypika to 0.44.0 [adam 2020-11-17]
+	Updated databases/py-tortoise-orm to 0.16.18 [adam 2020-11-17]
