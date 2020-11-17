@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2020/10/26 07:45:55 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2020/11/17 11:52:41 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-0.1.7
@@ -9,6 +9,7 @@ CARGO_CRATE_DEPENDS+=	cc-1.0.48
 CARGO_CRATE_DEPENDS+=	cfg-if-0.1.10
 CARGO_CRATE_DEPENDS+=	core-foundation-0.6.4
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.6.2
+CARGO_CRATE_DEPENDS+=	cp437-0.1.1
 CARGO_CRATE_DEPENDS+=	foreign-types-0.3.2
 CARGO_CRATE_DEPENDS+=	foreign-types-shared-0.1.1
 CARGO_CRATE_DEPENDS+=	getrandom-0.1.13
