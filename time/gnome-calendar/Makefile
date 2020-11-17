@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/17 13:49:27 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/17 15:31:51 nia Exp $
 
 DISTNAME=	gnome-calendar-3.38.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=/sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Calendar/
 COMMENT=	Calendar application for GNOME
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
