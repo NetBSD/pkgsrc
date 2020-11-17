@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2020/10/03 12:05:28 pin Exp $
+$NetBSD: distinfo,v 1.5 2020/11/17 11:52:41 pin Exp $
 
 SHA1 (atty-0.2.14.crate) = 9b4bfe6daebdd3d13a8a605bf44f64d4e831e804
 RMD160 (atty-0.2.14.crate) = 63c38cbe0fc07a4533253427a164612b456094cf
@@ -36,6 +36,10 @@ SHA1 (core-foundation-sys-0.6.2.crate) = d44fe02e27f9d2d99fc7298c2e12ace4c6810e4
 RMD160 (core-foundation-sys-0.6.2.crate) = 5a664bb615d9bd3a8d91f6ffc9757fb3b3bfc8ca
 SHA512 (core-foundation-sys-0.6.2.crate) = bfbe4e77a5e2644952c66a2afd21058a07583d3a1776c34dbfc316d159289073d92b8672eaab2f39fa46c48cd7f22d88f0354f02b3208482d700473a807ebf07
 Size (core-foundation-sys-0.6.2.crate) = 16204 bytes
+SHA1 (cp437-0.1.1.crate) = f4fd8042f40565bfe496251a4aaee02d20584fbd
+RMD160 (cp437-0.1.1.crate) = e2d8fe6cc8315379e43bae48e601ff1faf94a2f9
+SHA512 (cp437-0.1.1.crate) = ef90f4e9e5362348e30ea6829a0d9b00f3fcfd4b83f1d22bd8e0ff952348c445f9bfaea5331a7b15b4e3a0d37114b8a1a7491cfefb8adfc6124a08c830f29c3d
+Size (cp437-0.1.1.crate) = 4674 bytes
 SHA1 (foreign-types-0.3.2.crate) = c7fc0377d6ba5ffd221859af84b435700debd349
 RMD160 (foreign-types-0.3.2.crate) = a99c7ff186c330c0a433e24c0ed522b1825541f7
 SHA512 (foreign-types-0.3.2.crate) = bf27b8243ed482c202d120383374f19ff09422535e24b9c1aebccc66529bf300ca17b8bbc76d67f98ac092e614497afe3add9dc68aa69c93074df05762f91232
@@ -84,10 +88,10 @@ SHA1 (openssl-sys-0.9.53.crate) = b88bef0ae8081f9ad3d86303b73a5e7f722424ec
 RMD160 (openssl-sys-0.9.53.crate) = ecd2ba0ec31ee721899801059383b35aaaab2996
 SHA512 (openssl-sys-0.9.53.crate) = da0b34b5a58abf1b7e40dcdc1d9f4f6f0f8a4d5d8bb7b7417025a6ecf73145e80304541d2944050c162d7a9b1835434a9d7d2fb670d5cf1065055c09e35f940d
 Size (openssl-sys-0.9.53.crate) = 45434 bytes
-SHA1 (phetch-1.0.7.tar.gz) = fdb7dd9692044e8207b882d27c0d8226ae4cd1c1
-RMD160 (phetch-1.0.7.tar.gz) = bb4ae251ac833f0e1fe8e7ae857bc36999a3590f
-SHA512 (phetch-1.0.7.tar.gz) = a978074490c2a05ef93345c917ac59dde5b1bfb4c4bdf6236c3c91e7975051062d6c6c275aaffed127f2c168a81a41f488af1f72abc62342b218b7d59055223a
-Size (phetch-1.0.7.tar.gz) = 7556357 bytes
+SHA1 (phetch-1.1.0.tar.gz) = 4f760a164704ee967225657b66c0ada9fcb63846
+RMD160 (phetch-1.1.0.tar.gz) = ec58a33f7f2910662e0be2d0f08baa250106a966
+SHA512 (phetch-1.1.0.tar.gz) = b08d3dc93daa83f7c67187987096ef85680f4182248037e0f87feb038aa07f94b24f124097413a7239f17343245c2570d5897708d7fc3df552ef851cc29eb687
+Size (phetch-1.1.0.tar.gz) = 7576829 bytes
 SHA1 (pkg-config-0.3.17.crate) = 61ed3f397e181cd188a7cf9d7f80f5d9a52abc5d
 RMD160 (pkg-config-0.3.17.crate) = 4b14f27e39f76fd3018919c46552268ed018be1e
 SHA512 (pkg-config-0.3.17.crate) = 42be78556adc07dffa8933ab1436d5d6a776018898377d58dfdc9f961981f9f21397301b41536c55d8a3772bf74a38069899d1a5cddce5c24a032017137044bc
