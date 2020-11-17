@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6210 2020/11/17 12:14:57 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6211 2020/11/17 14:23:17 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9137,3 +9137,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/phetch to 1.1.0 [pin 2020-11-17]
 	Updated net/openvpn to 2.5.0 [adam 2020-11-17]
 	Updated security/easy-rsa to 3.0.8 [adam 2020-11-17]
+	Updated sysutils/nnn to 3.5 [sjmulder 2020-11-17]
