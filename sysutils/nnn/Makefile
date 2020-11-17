@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2020/08/23 22:31:29 sjmulder Exp $
+# $NetBSD: Makefile,v 1.23 2020/11/17 14:22:57 sjmulder Exp $
 
-DISTNAME=	nnn-3.4
+DISTNAME=	nnn-3.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
