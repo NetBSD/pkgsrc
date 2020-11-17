@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2020/09/25 08:51:41 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2020/11/17 12:05:01 nia Exp $
 
 SHA1 (vte-0.60.3.tar.xz) = ba1e2f241326a2e146336832c21c41b61e0e55af
 RMD160 (vte-0.60.3.tar.xz) = 2615d28eaaf9293038f305d26e62e049f503064a
@@ -9,6 +9,7 @@ SHA1 (patch-meson.build) = ac82a0168f221fb67839062cb9a832b542470616
 SHA1 (patch-src_app_app.cc) = ff76c74840342195a4d318418474f69e385f6571
 SHA1 (patch-src_decoder-cat.cc) = 438b934314a440f04ab586022fdb057b6512167b
 SHA1 (patch-src_dumpkeys.c) = 102f24d7404d46b13194f3431d0a864d480e5da7
+SHA1 (patch-src_meson.build) = a8e159688fb36e4cfac40249e279a670c9c6cda8
 SHA1 (patch-src_mev.c) = b38dc42e02a8d5fa1e579349319f0b8c8b31dbce
 SHA1 (patch-src_parser-cat.cc) = 2ee7d7113b4688a631021bcbef13ee6196f534e9
 SHA1 (patch-src_pty.cc) = a9f52d89f356eb0a34de90748a7881d34ae27f12

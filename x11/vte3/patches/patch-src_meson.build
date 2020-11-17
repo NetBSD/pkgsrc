@@ -1,0 +1,24 @@
+$NetBSD: patch-src_meson.build,v 1.1 2020/11/17 12:05:01 nia Exp $
+
+Install config files to examples.
+
+--- src/meson.build.orig	2020-05-13 09:51:07.000000000 +0000
++++ src/meson.build
+@@ -555,7 +555,7 @@ vte_csh = configure_file(
+     'libexecdir': vte_prefix / vte_libexecdir,
+   },
+   install: true,
+-  install_dir: vte_sysconfdir / 'profile.d',
++  install_dir: vte_datadir / 'examples' / 'profile.d',
+ )
+ 
+ vte_sh = configure_file(
+@@ -565,7 +565,7 @@ vte_sh = configure_file(
+     'libexecdir': vte_prefix / vte_libexecdir,
+   },
+   install: true,
+-  install_dir: vte_sysconfdir / 'profile.d',
++  install_dir: vte_datadir / 'examples' / 'profile.d',
+ )
+ 
+ # Systemd integration
