@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/10/26 07:45:55 pin Exp $
+# $NetBSD: Makefile,v 1.9 2020/11/17 11:52:41 pin Exp $
 
-DISTNAME=	phetch-1.0.7
+DISTNAME=	phetch-1.1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xvxx/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
