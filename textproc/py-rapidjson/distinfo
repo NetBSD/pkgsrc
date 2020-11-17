@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/10/27 22:30:08 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/11/17 08:52:38 adam Exp $
 
-SHA1 (python-rapidjson-0.9.3.tar.gz) = e04d22a2ce8ff02bbba310f7fe2f22a759d41816
-RMD160 (python-rapidjson-0.9.3.tar.gz) = e143e791966f2e34aba40f932b7b9d53b40109cc
-SHA512 (python-rapidjson-0.9.3.tar.gz) = 42ed96688cba0385df854331ce749c9865b1ab39753ccaf0e26a9902b0860eb9b2e43392982a0943c6ff8eda18a8b5bf75f0f36789c6910b8502c0a86ae7b467
-Size (python-rapidjson-0.9.3.tar.gz) = 201550 bytes
+SHA1 (python-rapidjson-0.9.4.tar.gz) = d7938634936e6b717cbe4ff3813483a4d38c1201
+RMD160 (python-rapidjson-0.9.4.tar.gz) = fd32f4c8b0895446756f293213999036728e462d
+SHA512 (python-rapidjson-0.9.4.tar.gz) = dd539677da79bf028d074db8798e8e36d110516ebd83750d26b0e88646bfc0838af870af8d9aab526c47713056b0ddec939f7f3fce43fb10f304c7eb706d9c16
+Size (python-rapidjson-0.9.4.tar.gz) = 201668 bytes
