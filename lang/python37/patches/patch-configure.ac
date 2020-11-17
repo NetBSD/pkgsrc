@@ -1,0 +1,64 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/11/17 19:33:26 sjmulder Exp $
+
+Support for macOS 11 and Apple Silicon (ARM). Mostly backported from:
+https://github.com/python/cpython/pull/22855
+
+--- configure.ac.orig	2020-08-15 05:20:16.000000000 +0000
++++ configure.ac
+@@ -212,7 +212,11 @@ fi
+ AC_SUBST(LIPO_32BIT_FLAGS)
+ AC_MSG_CHECKING(for --with-universal-archs)
+ AC_ARG_WITH(universal-archs,
+-    AS_HELP_STRING([--with-universal-archs=ARCH], [select architectures for universal build ("32-bit", "64-bit", "3-way", "intel", "intel-32", "intel-64", or "all")]),
++    AS_HELP_STRING([--with-universal-archs=ARCH],
++                   [specify the kind of universal binary that should be created. this option is
++                    only valid when --enable-universalsdk is set; options are:
++                    ("universal2", "32-bit", "64-bit", "3-way", "intel", "intel-32", "intel-64", or "all")
++                    see Mac/README.rst]),
+ [
+ 	UNIVERSAL_ARCHS="$withval"
+ ],
+@@ -1557,7 +1561,7 @@ AC_SUBST(BASECFLAGS)
+ AC_SUBST(CFLAGS_NODIST)
+ AC_SUBST(LDFLAGS_NODIST)
+ 
+-# The -arch flags for universal builds on OSX
++# The -arch flags for universal builds on macOS
+ UNIVERSAL_ARCH_FLAGS=
+ AC_SUBST(UNIVERSAL_ARCH_FLAGS)
+ 
+@@ -1859,6 +1863,11 @@ yes)
+                LIPO_32BIT_FLAGS="-extract ppc7400 -extract i386"
+                ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
+                ;;
++            universal2)
++               UNIVERSAL_ARCH_FLAGS="-arch arm64 -arch x86_64"
++               LIPO_32BIT_FLAGS=""
++               ARCH_RUN_32BIT="true"
++		;;
+             intel)
+                UNIVERSAL_ARCH_FLAGS="-arch i386 -arch x86_64"
+                LIPO_32BIT_FLAGS="-extract i386"
+@@ -2455,6 +2464,9 @@ case $ac_sys_system/$ac_sys_release in
+     		;;
+     	ppc)
+     		MACOSX_DEFAULT_ARCH="ppc64"
++		;;
++    	arm64)
++    		MACOSX_DEFAULT_ARCH="arm64"
+     		;;
+     	arm64)
+     		MACOSX_DEFAULT_ARCH="arm64"
+@@ -3677,6 +3689,12 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+    AC_MSG_RESULT(yes)],
+   [AC_MSG_RESULT(no)
+ ])
++AC_MSG_CHECKING(for _dyld_shared_cache_contains_path)
++AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <mach-o/dyld.h>]], [[void *x=_dyld_shared_cache_contains_path]])],
++  [AC_DEFINE(HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH, 1, Define if you have the '_dyld_shared_cache_contains_path' function.)
++   AC_MSG_RESULT(yes)],
++  [AC_MSG_RESULT(no)
++])
+ 
+ # On some systems (eg. FreeBSD 5), we would find a definition of the
+ # functions ctermid_r, setgroups in the library, but no prototype
