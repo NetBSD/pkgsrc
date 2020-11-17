@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2020/11/07 10:05:11 nia Exp $
+# $NetBSD: Makefile,v 1.34 2020/11/17 12:05:01 nia Exp $
 
 DISTNAME=	vte-0.60.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.60/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,7 +16,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 PKGCONFIG_OVERRIDE+=		output/meson-private/vte-2.91.pc
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
+USE_TOOLS+=		msgfmt pkg-config bash
 USE_LANGUAGES=		c c++17
 # for c++17
 GCC_REQD+=		7
@@ -24,6 +24,12 @@ GCC_REQD+=		7
 # Otherwise, this will fail on Linux distributions that don't
 # have libsystemd.
 MESON_ARGS+=		-D_systemd=false
+
+CONF_FILES+=		${PREFIX}/share/examples/profile.d/vte.sh \
+			${PKG_SYSCONFDIR}/profile.d/vte.sh
+
+CONF_FILES+=		${PREFIX}/share/examples/profile.d/vte.csh \
+			${PKG_SYSCONFDIR}/profile.d/vte.csh
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"

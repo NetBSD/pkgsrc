@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/20 00:10:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/11/17 12:05:01 nia Exp $
 bin/vte-2.91
-etc/profile.d/vte.csh
-etc/profile.d/vte.sh
 include/vte-2.91/vte/vte.h
 include/vte-2.91/vte/vtedeprecated.h
 include/vte-2.91/vte/vteenums.h
@@ -18,6 +16,8 @@ lib/libvte-2.91.so.0
 lib/libvte-2.91.so.0.6000.3
 lib/pkgconfig/vte-2.91.pc
 libexec/vte-urlencode-cwd
+share/examples/profile.d/vte.csh
+share/examples/profile.d/vte.sh
 share/gir-1.0/Vte-2.91.gir
 share/locale/am/LC_MESSAGES/vte-2.91.mo
 share/locale/an/LC_MESSAGES/vte-2.91.mo
