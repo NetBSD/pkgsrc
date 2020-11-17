@@ -1,8 +1,8 @@
-$NetBSD: patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp,v 1.1 2020/10/23 12:37:14 tnn Exp $
+$NetBSD: patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp,v 1.2 2020/11/17 16:11:06 ryoon Exp $
 
 NetBSD/aarch64 does not have the Linux-specific membarrier(2) syscall.
 
---- js/src/jit/arm64/vixl/MozCpu-vixl.cpp.orig	2020-10-14 17:20:19.000000000 +0000
+--- js/src/jit/arm64/vixl/MozCpu-vixl.cpp.orig	2020-11-12 18:04:48.000000000 +0000
 +++ js/src/jit/arm64/vixl/MozCpu-vixl.cpp
 @@ -42,6 +42,8 @@
  #   elif defined(__ANDROID__)
@@ -29,10 +29,10 @@ NetBSD/aarch64 does not have the Linux-specific membarrier(2) syscall.
  }
  
  bool CPU::CanFlushICacheFromBackgroundThreads() {
--#if defined(__aarch64__) && !defined(_MSC_VER) && !defined(XP_DARWIN)
+-#if defined(__aarch64__) && (defined(__linux__) || defined(__android__))
 +#if defined(__NetBSD__) && defined(__aarch64__)
 +  return false;
-+#elif defined(__aarch64__) && !defined(_MSC_VER) && !defined(XP_DARWIN)
++#elif defined(__aarch64__) && (defined(__linux__) || defined(__android__))
    // On linux, check the kernel supports membarrier(2), that is, it's a kernel
    // above Linux 4.16 included.
    //
