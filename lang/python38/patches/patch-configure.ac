@@ -1,0 +1,64 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/11/17 19:33:15 sjmulder Exp $
+
+Support for macOS 11 and Apple Silicon (ARM). Mostly backported from:
+https://github.com/python/cpython/pull/22855
+
+--- configure.ac.orig	2020-09-23 12:36:32.000000000 +0000
++++ configure.ac
+@@ -212,7 +212,11 @@ fi
+ AC_SUBST(LIPO_32BIT_FLAGS)
+ AC_MSG_CHECKING(for --with-universal-archs)
+ AC_ARG_WITH(universal-archs,
+-    AS_HELP_STRING([--with-universal-archs=ARCH], [select architectures for universal build ("32-bit", "64-bit", "3-way", "intel", "intel-32", "intel-64", or "all")]),
++    AS_HELP_STRING([--with-universal-archs=ARCH],
++                   [specify the kind of universal binary that should be created. this option is
++                    only valid when --enable-universalsdk is set; options are:
++                    ("universal2", "32-bit", "64-bit", "3-way", "intel", "intel-32", "intel-64", or "all")
++                    see Mac/README.rst]),
+ [
+ 	UNIVERSAL_ARCHS="$withval"
+ ],
+@@ -1843,6 +1847,11 @@ yes)
+                LIPO_32BIT_FLAGS="-extract ppc7400 -extract i386"
+                ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
+                ;;
++            universal2)
++               UNIVERSAL_ARCH_FLAGS="-arch arm64 -arch x86_64"
++               LIPO_32BIT_FLAGS=""
++               ARCH_RUN_32BIT="true"
++		;;
+             intel)
+                UNIVERSAL_ARCH_FLAGS="-arch i386 -arch x86_64"
+                LIPO_32BIT_FLAGS="-extract i386"
+@@ -1864,7 +1873,7 @@ yes)
+                ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
+                ;;
+             *)
+-               AC_MSG_ERROR([proper usage is --with-universal-arch=32-bit|64-bit|all|intel|3-way])
++               AC_MSG_ERROR([proper usage is --with-universal-arch=universal2|32-bit|64-bit|all|intel|3-way])
+                ;;
+             esac
+ 
+@@ -2441,6 +2450,9 @@ case $ac_sys_system/$ac_sys_release in
+     		;;
+     	ppc)
+     		MACOSX_DEFAULT_ARCH="ppc64"
++		;;
++    	arm64)
++    		MACOSX_DEFAULT_ARCH="arm64"
+     		;;
+     	*)
+     		AC_MSG_ERROR([Unexpected output of 'arch' on OSX])
+@@ -3666,6 +3678,12 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+    AC_MSG_RESULT(yes)],
+   [AC_MSG_RESULT(no)
+ ])
++AC_MSG_CHECKING(for _dyld_shared_cache_contains_path)
++AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <mach-o/dyld.h>]], [[void *x=_dyld_shared_cache_contains_path]])],
++  [AC_DEFINE(HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH, 1, Define if you have the '_dyld_shared_cache_contains_path' function.)
++   AC_MSG_RESULT(yes)],
++  [AC_MSG_RESULT(no)
++])
+ 
+ AC_MSG_CHECKING(for memfd_create)
+ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
