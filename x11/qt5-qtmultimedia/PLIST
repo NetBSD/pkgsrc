@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/07/05 01:12:14 nia Exp $
+@comment $NetBSD: PLIST,v 1.24 2020/11/17 04:46:35 mcf Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
@@ -282,6 +282,7 @@ qt5/include/QtMultimediaWidgets/qvideowidget.h
 qt5/include/QtMultimediaWidgets/qvideowidgetcontrol.h
 qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake
 qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake
+${PLIST.audioengine}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_AudioCaptureServicePlugin.cmake
 ${PLIST.gst}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
 ${PLIST.alsa}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake
 ${PLIST.gst}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake
@@ -324,6 +325,7 @@ qt5/mkspecs/modules/qt_lib_multimediawidgets.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri
 qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri
 ${PLIST.alsa}qt5/plugins/audio/libqtaudio_alsa.so
+${PLIST.audioengine}qt5/plugins/mediaservice/libqtmedia_audioengine.so
 ${PLIST.pulse}qt5/plugins/audio/libqtmedia_pulse.so
 ${PLIST.gst}qt5/plugins/mediaservice/libgstaudiodecoder.so
 ${PLIST.gst}qt5/plugins/mediaservice/libgstcamerabin.so
