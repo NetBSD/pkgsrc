@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/12 09:55:40 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/17 13:55:32 mef Exp $
 
 DISTNAME=	gnome-dictionary-3.26.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -15,6 +15,7 @@ _TOOLS_USE_PKGSRC.msgfmt=	yes
 
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
