@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6203 2020/11/16 13:27:06 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6204 2020/11/17 08:48:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9126,3 +9126,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-multidict to 5.0.2 [adam 2020-11-16]
 	Updated www/py-yarl to 1.6.3 [adam 2020-11-16]
 	Updated graphics/py-graphviz to 0.15 [adam 2020-11-16]
+	Updated graphics/libjpeg-turbo to 2.0.6 [adam 2020-11-17]
+	Updated databases/prometheus to 2.22.2nb1 [adam 2020-11-17]
