@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20192 2020/11/16 13:23:04 wiz Exp $
+$NetBSD: TODO,v 1.20193 2020/11/17 01:57:52 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -460,7 +460,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
-	o calibre-5.0
+	o calibre-5.5
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cantata-2.4.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
