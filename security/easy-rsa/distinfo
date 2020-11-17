@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2020/04/03 08:27:05 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/11/17 12:14:17 adam Exp $
 
-SHA1 (EasyRSA-3.0.7.tgz) = 0f08ae1b5fc32c9867d3623f13c2520082af6ca2
-RMD160 (EasyRSA-3.0.7.tgz) = 6c36cb7147a52eaa3878711049b27da210305fde
-SHA512 (EasyRSA-3.0.7.tgz) = 538b4dc4e4277e842849da41e77a10089cfa4652ba6e46355aff5e96a86eab78b2548ea8f81a6b2e20549cc1f2f4c426572185e998df19770cc4df94ee86e83f
-Size (EasyRSA-3.0.7.tgz) = 48215 bytes
+SHA1 (EasyRSA-3.0.8.tgz) = c8377691b15a8fba9f19c46202b4d4b4d8708953
+RMD160 (EasyRSA-3.0.8.tgz) = 328a0158fbbff426847d6828d4989328357b26d1
+SHA512 (EasyRSA-3.0.8.tgz) = fd2cde4725cffd60c6af1b6aeaff0dbf15f31f0f322c9df75c22838e2297ba9dc3bba610d956464c8227bd74b3e63840e2a3da41fbc5ee1c79c1e7f5350adc94
+Size (EasyRSA-3.0.8.tgz) = 48907 bytes
 SHA1 (patch-easyrsa) = e64deb7ca97eba9e2a3bd07688ce720ebef5331e
 SHA1 (patch-vars.example) = 31ffcf40ced1fb07a7531ec7de373ad24c04455e
