@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2019/10/15 16:55:00 adam Exp $
+$NetBSD: patch-configure,v 1.4 2020/11/17 19:33:26 sjmulder Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -15,9 +15,27 @@ detect netcan/can.h on NetBSD
 
 Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
 
---- configure.orig	2019-07-08 18:03:50.000000000 +0000
+Support for macOS 11 and Apple Silicon (ARM). Mostly backported from:
+https://github.com/python/cpython/pull/22855
+
+--- configure.orig	2020-08-15 05:20:16.000000000 +0000
 +++ configure
-@@ -2937,7 +2937,7 @@ $as_echo_n "checking for python interpre
+@@ -1488,9 +1488,11 @@ Optional Packages:
+   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
+   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
+   --with-universal-archs=ARCH
+-                          select architectures for universal build ("32-bit",
+-                          "64-bit", "3-way", "intel", "intel-32", "intel-64",
+-                          or "all")
++                          specify the kind of universal binary that should be
++                          created. this option is only valid when
++                          --enable-universalsdk is set; options are:
++                          ("universal2", "32-bit", "64-bit", "3-way", "intel",
++                          "intel-32", "intel-64", or "all") see Mac/README.rst
+   --with-framework-name=FRAMEWORK
+                           specify an alternate name of the framework built
+                           with --enable-framework
+@@ -2936,7 +2938,7 @@ $as_echo_n "checking for python interpre
  	fi
          { $as_echo "$as_me:${as_lineno-$LINENO}: result: $interp" >&5
  $as_echo "$interp" >&6; }
@@ -26,7 +44,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
      fi
  elif test "$cross_compiling" = maybe; then
      as_fn_error $? "Cross compiling required --host=HOST-TUPLE and --build=ARCH" "$LINENO" 5
-@@ -3328,7 +3328,7 @@ case $ac_sys_system/$ac_sys_release in
+@@ -3327,7 +3329,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -35,7 +53,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5924,7 +5924,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5923,7 +5925,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	      PY3LIBRARY=libpython3.so
  	  fi
            ;;
@@ -44,7 +62,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  	  LDLIBRARY='libpython$(LDVERSION).so'
  	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-@@ -6932,7 +6932,7 @@ UNIVERSAL_ARCH_FLAGS=
+@@ -6906,7 +6908,7 @@ UNIVERSAL_ARCH_FLAGS=
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -53,7 +71,28 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -8256,7 +8256,7 @@ done
+@@ -7427,6 +7429,11 @@ $as_echo "$CC" >&6; }
+                LIPO_32BIT_FLAGS="-extract ppc7400 -extract i386"
+                ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
+                ;;
++            universal2)
++               UNIVERSAL_ARCH_FLAGS="-arch arm64 -arch x86_64"
++               LIPO_32BIT_FLAGS=""
++               ARCH_RUN_32BIT="true"
++		;;
+             intel)
+                UNIVERSAL_ARCH_FLAGS="-arch i386 -arch x86_64"
+                LIPO_32BIT_FLAGS="-extract i386"
+@@ -7448,7 +7455,7 @@ $as_echo "$CC" >&6; }
+                ARCH_RUN_32BIT="/usr/bin/arch -i386 -ppc"
+                ;;
+             *)
+-               as_fn_error $? "proper usage is --with-universal-arch=32-bit|64-bit|all|intel|3-way" "$LINENO" 5
++               as_fn_error $? "proper usage is --with-universal-arch=universal2|32-bit|64-bit|all|intel|3-way" "$LINENO" 5
+                ;;
+             esac
+ 
+@@ -8230,7 +8237,7 @@ done
  
  
  # On Linux, can.h and can/raw.h require sys/socket.h
@@ -62,7 +101,24 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
-@@ -9404,8 +9404,8 @@ then
+@@ -9250,12 +9257,15 @@ fi
+     		;;
+     	ppc)
+     		MACOSX_DEFAULT_ARCH="ppc64"
++		;;
++    	arm64)
++    		MACOSX_DEFAULT_ARCH="arm64"
+     		;;
+     	arm64)
+     		MACOSX_DEFAULT_ARCH="arm64"
+     		;;
+     	*)
+-    		as_fn_error $? "Unexpected output of 'arch' on OSX" "$LINENO" 5
++    		as_fn_error $? "Unexpected output of 'arch' on macOS" "$LINENO" 5
+     		;;
+     	esac
+ 
+@@ -9381,8 +9391,8 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -73,7 +129,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -9429,9 +9429,9 @@ then
+@@ -9406,9 +9416,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -86,7 +142,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -9467,6 +9467,9 @@ then
+@@ -9444,6 +9454,9 @@ then
  				   ;;
  				esac
  		fi;;
@@ -96,7 +152,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -9510,7 +9513,7 @@ then
+@@ -9487,7 +9500,7 @@ then
  		 fi;;
  	Linux-android*) ;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
@@ -105,7 +161,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -9545,7 +9548,6 @@ then
+@@ -9522,7 +9535,6 @@ then
  		# Issue #18075: the default maximum stack size (8MBytes) is too
  		# small for the default recursion limit. Increase the stack size
  		# to ensure that tests don't crash
@@ -113,7 +169,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  
  		if test "$enable_framework"
  		then
-@@ -9555,7 +9557,7 @@ then
+@@ -9532,7 +9544,7 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -122,7 +178,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
-@@ -11263,7 +11265,6 @@ then
+@@ -11265,7 +11277,6 @@ then
  
  $as_echo "#define WITH_PYMALLOC 1" >>confdefs.h
  
@@ -130,7 +186,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $with_pymalloc" >&5
  $as_echo "$with_pymalloc" >&6; }
-@@ -11403,7 +11404,7 @@ if ${ac_cv_dtrace_link+:} false; then :
+@@ -11405,7 +11416,7 @@ if ${ac_cv_dtrace_link+:} false; then :
    $as_echo_n "(cached) " >&6
  else
                ac_cv_dtrace_link=no
@@ -139,7 +195,39 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
              "$DTRACE" -G -s conftest.d -o conftest.o > /dev/null 2>&1 && \
                  ac_cv_dtrace_link=yes
  
-@@ -15279,8 +15280,6 @@ $as_echo "$SOABI" >&6; }
+@@ -11808,6 +11819,31 @@ $as_echo "no" >&6; }
+ 
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for _dyld_shared_cache_contains_path" >&5
++$as_echo_n "checking for _dyld_shared_cache_contains_path... " >&6; }
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++#include <mach-o/dyld.h>
++int
++main ()
++{
++void *x=_dyld_shared_cache_contains_path
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++
++$as_echo "#define HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH 1" >>confdefs.h
++
++   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++else
++  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ 
+ # On some systems (eg. FreeBSD 5), we would find a definition of the
+ # functions ctermid_r, setgroups in the library, but no prototype
+@@ -15281,8 +15317,6 @@ $as_echo "$SOABI" >&6; }
  
  
  case $ac_sys_system in
@@ -148,7 +236,7 @@ Do not change ABIFLAGS for --with-pymalloc (as in Python 3.8).
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -15292,11 +15291,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
+@@ -15294,11 +15328,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
  $as_echo "$LDVERSION" >&6; }
  
  
