@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/11/07 07:17:07 mef Exp $
+$NetBSD: distinfo,v 1.3 2020/11/17 12:25:16 nia Exp $
 
 SHA1 (gcr-3.38.0.tar.xz) = ec77b51962010555445c84981f30a32f6426323e
 RMD160 (gcr-3.38.0.tar.xz) = bfe464c4e7135a1ae753c9c2c93f6b53635f4416
 SHA512 (gcr-3.38.0.tar.xz) = 24c35ac514a67a1dee6a5738e829b55921a490b060ffa597421cea0abac3ddc62695370d2c7b3504c0adfd55b1ade878ad3ca5e6cb869428b4a19f4a11563bc6
 Size (gcr-3.38.0.tar.xz) = 1029784 bytes
+SHA1 (patch-gcr_test-secure-memory.c) = e8002f64467d001e06c8af28f16b0c1ffe7211ad

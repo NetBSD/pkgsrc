@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/11/07 07:17:07 mef Exp $
+# $NetBSD: Makefile,v 1.13 2020/11/17 12:25:16 nia Exp $
 
 DISTNAME=		gcr-3.38.0
 CATEGORIES=		security
@@ -35,7 +35,7 @@ PKGCONFIG_OVERRIDE+=	gcr-3.pc.in
 TEST_TARGET=		check
 
 pre-configure:
-	cd ${WRKSRC}; \
+	cd ${WRKSRC}; NOCONFIGURE=1 \
 	./autogen.sh
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38
