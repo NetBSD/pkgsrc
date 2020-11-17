@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/10 01:56:20 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/17 13:27:00 mef Exp $
 
 DISTNAME=	mutter-3.38.1
 CATEGORIES=	wm gnome
@@ -11,6 +11,7 @@ COMMENT=	GNOME window manager
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		pkg-config
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 .include "../../graphics/MesaLib/features.mk"
 
