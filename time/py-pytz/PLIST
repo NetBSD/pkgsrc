@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2020/04/29 07:44:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2020/11/17 09:01:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -618,7 +618,6 @@ ${PYSITELIB}/pytz/zoneinfo/WET
 ${PYSITELIB}/pytz/zoneinfo/Zulu
 ${PYSITELIB}/pytz/zoneinfo/iso3166.tab
 ${PYSITELIB}/pytz/zoneinfo/leapseconds
-${PYSITELIB}/pytz/zoneinfo/posixrules
 ${PYSITELIB}/pytz/zoneinfo/tzdata.zi
 ${PYSITELIB}/pytz/zoneinfo/zone.tab
 ${PYSITELIB}/pytz/zoneinfo/zone1970.tab
