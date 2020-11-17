@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/11/06 18:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2020/11/17 11:35:19 nia Exp $
 
 DISTNAME=	gnome-desktop-3.38.1
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.1
 TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 USE_TOOLS+=		pkg-config xgettext
-USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
 
 MESON_ARGS+=		-Dsystemd=disabled
@@ -37,5 +36,4 @@ BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.2
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../devel/meson/build.mk"
-
 .include "../../mk/bsd.pkg.mk"
