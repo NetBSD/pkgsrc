@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20193 2020/11/17 01:57:52 gutteridge Exp $
+$NetBSD: TODO,v 1.20194 2020/11/17 16:12:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.10.38
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-20.2.1
