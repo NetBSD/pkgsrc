@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6213 2020/11/17 16:12:12 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6214 2020/11/17 16:12:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9140,3 +9140,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/nnn to 3.5 [sjmulder 2020-11-17]
 	Updated www/firefox to 83.0 [ryoon 2020-11-17]
 	Updated graphics/ImageMagick to 7.0.10.38 [wiz 2020-11-17]
+	Updated www/firefox-l10n to 83.0 [ryoon 2020-11-17]
