@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6208 2020/11/17 11:21:47 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6209 2020/11/17 11:53:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9134,3 +9134,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-tortoise-orm to 0.16.18 [adam 2020-11-17]
 	Updated lang/nodejs to 14.15.1 [adam 2020-11-17]
 	Updated lang/nodejs12 to 12.19.1 [adam 2020-11-17]
+	Updated net/phetch to 1.1.0 [pin 2020-11-17]
