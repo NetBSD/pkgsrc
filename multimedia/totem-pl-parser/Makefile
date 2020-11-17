@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2020/11/05 09:07:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2020/11/17 11:39:10 nia Exp $
 
 DISTNAME=	totem-pl-parser-3.26.5
 PKGREVISION=	1
@@ -23,6 +23,13 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE+=	totem-plparser-mini.pc.in
 PKGCONFIG_OVERRIDE+=	totem-plparser.pc.in
+
+# Remove unsupported linker arguments.
+# Apply removals to post-wrapper transformed arguments.
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,${WRKSRC}/plparse/plparser.map
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/plparse/plparser.map
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
