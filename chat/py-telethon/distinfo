@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/18 23:11:57 js Exp $
+
+SHA1 (Telethon-1.17.5.tar.gz) = e2df4cf8826516bb36a88f06ab951a0b474e1324
+RMD160 (Telethon-1.17.5.tar.gz) = 54bb9fcf8246120e9e1a4a5245a23dc162db00f0
+SHA512 (Telethon-1.17.5.tar.gz) = 4f66591fb24c8ed13a2b8833eed5e5c7b819a79ad9b63810b9ffc3b870f965fbc98085298a08c004452afc89093864ed94495a0aae80bca78ba286204605a1c9
+Size (Telethon-1.17.5.tar.gz) = 429717 bytes
