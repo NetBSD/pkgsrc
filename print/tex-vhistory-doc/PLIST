@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/18 12:24:30 kleink Exp $
+share/texmf-dist/doc/latex/vhistory/CHANGES
+share/texmf-dist/doc/latex/vhistory/README
+share/texmf-dist/doc/latex/vhistory/README.doc
+share/texmf-dist/doc/latex/vhistory/de_beispiel.tex
+share/texmf-dist/doc/latex/vhistory/de_einleitung.tex
+share/texmf-dist/doc/latex/vhistory/de_sets.tex
+share/texmf-dist/doc/latex/vhistory/de_vhistory.tex
+share/texmf-dist/doc/latex/vhistory/en_example.tex
+share/texmf-dist/doc/latex/vhistory/en_introduction.tex
+share/texmf-dist/doc/latex/vhistory/en_sets.tex
+share/texmf-dist/doc/latex/vhistory/en_vhistory.tex
+share/texmf-dist/doc/latex/vhistory/hyperref.cfg
+share/texmf-dist/doc/latex/vhistory/vh_set_example.pdf
+share/texmf-dist/doc/latex/vhistory/vh_set_example.tex
+share/texmf-dist/doc/latex/vhistory/vh_sets_de.pdf
+share/texmf-dist/doc/latex/vhistory/vh_sets_de.tex
+share/texmf-dist/doc/latex/vhistory/vh_sets_en.pdf
+share/texmf-dist/doc/latex/vhistory/vh_sets_en.tex
