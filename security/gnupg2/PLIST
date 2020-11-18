@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/09/05 10:25:52 js Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/11/18 13:06:44 adam Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -52,7 +52,9 @@ share/doc/gnupg/KEYSERVER
 share/doc/gnupg/OpenPGP
 share/doc/gnupg/README
 share/doc/gnupg/TRANSLATE
+share/doc/gnupg/examples/Automatic.prf
 share/doc/gnupg/examples/README
+share/doc/gnupg/examples/VS-NfD.prf
 share/doc/gnupg/examples/debug.prf
 share/doc/gnupg/examples/gpgconf.conf
 share/doc/gnupg/examples/pwpattern.list
@@ -66,7 +68,6 @@ share/doc/gnupg/examples/systemd-user/gpg-agent-ssh.socket
 share/doc/gnupg/examples/systemd-user/gpg-agent.service
 share/doc/gnupg/examples/systemd-user/gpg-agent.socket
 share/doc/gnupg/examples/trustlist.txt
-share/doc/gnupg/examples/vsnfd.prf
 share/gnupg/distsigkey.gpg
 share/gnupg/help.be.txt
 share/gnupg/help.ca.txt
