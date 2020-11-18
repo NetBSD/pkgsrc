@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/10/04 11:41:16 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/11/18 20:48:58 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,6 +55,15 @@ ${PYSITELIB}/mautrix/bridge/bridge.pyo
 ${PYSITELIB}/mautrix/bridge/commands/__init__.py
 ${PYSITELIB}/mautrix/bridge/commands/__init__.pyc
 ${PYSITELIB}/mautrix/bridge/commands/__init__.pyo
+${PYSITELIB}/mautrix/bridge/commands/admin.py
+${PYSITELIB}/mautrix/bridge/commands/admin.pyc
+${PYSITELIB}/mautrix/bridge/commands/admin.pyo
+${PYSITELIB}/mautrix/bridge/commands/clean_rooms.py
+${PYSITELIB}/mautrix/bridge/commands/clean_rooms.pyc
+${PYSITELIB}/mautrix/bridge/commands/clean_rooms.pyo
+${PYSITELIB}/mautrix/bridge/commands/crypto.py
+${PYSITELIB}/mautrix/bridge/commands/crypto.pyc
+${PYSITELIB}/mautrix/bridge/commands/crypto.pyo
 ${PYSITELIB}/mautrix/bridge/commands/handler.py
 ${PYSITELIB}/mautrix/bridge/commands/handler.pyc
 ${PYSITELIB}/mautrix/bridge/commands/handler.pyo
@@ -271,6 +280,9 @@ ${PYSITELIB}/mautrix/errors/crypto.pyo
 ${PYSITELIB}/mautrix/errors/request.py
 ${PYSITELIB}/mautrix/errors/request.pyc
 ${PYSITELIB}/mautrix/errors/request.pyo
+${PYSITELIB}/mautrix/errors/well_known.py
+${PYSITELIB}/mautrix/errors/well_known.pyc
+${PYSITELIB}/mautrix/errors/well_known.pyo
 ${PYSITELIB}/mautrix/types/__init__.py
 ${PYSITELIB}/mautrix/types/__init__.pyc
 ${PYSITELIB}/mautrix/types/__init__.pyo
@@ -430,6 +442,9 @@ ${PYSITELIB}/mautrix/util/manhole.pyo
 ${PYSITELIB}/mautrix/util/markdown.py
 ${PYSITELIB}/mautrix/util/markdown.pyc
 ${PYSITELIB}/mautrix/util/markdown.pyo
+${PYSITELIB}/mautrix/util/network_retry.py
+${PYSITELIB}/mautrix/util/network_retry.pyc
+${PYSITELIB}/mautrix/util/network_retry.pyo
 ${PYSITELIB}/mautrix/util/opt_prometheus.py
 ${PYSITELIB}/mautrix/util/opt_prometheus.pyc
 ${PYSITELIB}/mautrix/util/opt_prometheus.pyo
