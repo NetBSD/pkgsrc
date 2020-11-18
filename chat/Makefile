@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2020/11/18 23:23:30 js Exp $
+# $NetBSD: Makefile,v 1.259 2020/11/18 23:27:55 js Exp $
 #
 
 COMMENT=	Communication programs
@@ -78,6 +78,7 @@ SUBDIR+=	matrix-synapse
 SUBDIR+=	matterircd
 SUBDIR+=	maubot
 SUBDIR+=	mautrix-hangouts
+SUBDIR+=	mautrix-telegram
 SUBDIR+=	mcabber
 SUBDIR+=	meanwhile
 SUBDIR+=	miniircd
