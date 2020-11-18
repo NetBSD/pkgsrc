@@ -1,4 +1,4 @@
-$NetBSD: patch-youtube__dl_extractor_la7.py,v 1.2 2020/03/23 20:32:23 leot Exp $
+$NetBSD: patch-youtube__dl_extractor_la7.py,v 1.3 2020/11/18 17:35:15 leot Exp $
 
 [la7] Fix extraction (closes #23323)
 
@@ -14,7 +14,11 @@ tests!
 
 Closes #23323.
 
---- youtube_dl/extractor/la7.py.orig
+Shared upstream via:
+
+ https://github.com/ytdl-org/youtube-dl/pull/23641
+
+--- youtube_dl/extractor/la7.py.orig	2020-11-16 21:04:10.000000000 +0000
 +++ youtube_dl/extractor/la7.py
 @@ -3,7 +3,6 @@ from __future__ import unicode_literals
  
@@ -24,7 +28,7 @@ Closes #23323.
      smuggle_url,
  )
  
-@@ -23,21 +22,12 @@ class LA7IE(InfoExtractor):
+@@ -23,22 +22,13 @@ class LA7IE(InfoExtractor):
              'id': '0_42j6wd36',
              'ext': 'mp4',
              'title': 'Inc.Cool8',
@@ -35,7 +39,7 @@ Closes #23323.
              'timestamp': 1443814869,
              'upload_date': '20151002',
          },
--    }, {
+     }, {
 -        # 'src' is a dictionary
 -        'url': 'http://tg.la7.it/repliche-tgla7?id=189080',
 -        'md5': '6b0d8888d286e39870208dfeceaf456b',
@@ -44,9 +48,10 @@ Closes #23323.
 -            'ext': 'mp4',
 -            'title': 'TG LA7',
 -        },
-     }, {
+-    }, {
          'url': 'http://www.la7.it/omnibus/rivedila7/omnibus-news-02-07-2016-189077',
          'only_matching': True,
+     }]
 @@ -48,20 +38,19 @@ class LA7IE(InfoExtractor):
  
          webpage = self._download_webpage(url, video_id)
