@@ -1,4 +1,4 @@
-$NetBSD: patch-Modules___ctypes_callbacks.c,v 1.1 2020/11/17 19:33:26 sjmulder Exp $
+$NetBSD: patch-Modules___ctypes_callbacks.c,v 1.2 2020/11/18 11:03:31 sjmulder Exp $
 
 Support for macOS 11 and Apple Silicon (ARM). Mostly backported from:
 https://github.com/python/cpython/pull/22855
@@ -62,14 +62,14 @@ https://github.com/python/cpython/pull/22855
 +#ifdef MACOSX
 +        #pragma clang diagnostic push
 +        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
- #endif
++#endif
 +        result = ffi_prep_closure(p->pcl_write, &p->cif, closure_fcn, p);
 +
 +#ifdef MACOSX
 +        #pragma clang diagnostic pop
 +#endif
 +
-+#endif
+ #endif
 +    }
      if (result != FFI_OK) {
          PyErr_Format(PyExc_RuntimeError,

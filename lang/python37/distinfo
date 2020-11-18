@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2020/11/17 19:33:26 sjmulder Exp $
+$NetBSD: distinfo,v 1.23 2020/11/18 11:03:31 sjmulder Exp $
 
 SHA1 (Python-3.7.9.tar.xz) = e1de02779a89a94000c0ed340ec126de25825f2f
 RMD160 (Python-3.7.9.tar.xz) = 6ff3676f84b1a103b0e3161dcc7257936c914daf
@@ -22,7 +22,7 @@ SHA1 (patch-Lib_test_test__unicode.py) = 4dfccf72ae60d1e1092ff84b7c05a735865ba8a
 SHA1 (patch-Mac_BuildScript_build-installer.py) = a377ed164ee2ba72ce0f72ccf9507e775f7b7deb
 SHA1 (patch-Mac_Tools_pythonw.c) = 94f27032aac27263bc1c1bd66574121fbca1e380
 SHA1 (patch-Makefile.pre.in) = 1393dac225c5a7edcb7947eb707b4526ea884f95
-SHA1 (patch-Modules___ctypes_callbacks.c) = 98bd449f9c4bf3acbcfdd24d017f490fc0c9326e
+SHA1 (patch-Modules___ctypes_callbacks.c) = 739462325d430d2b57483738d94a3174e36e50e1
 SHA1 (patch-Modules___ctypes_callproc.c) = d0905ede69f2c61d917380d6da73c14e7e31d41f
 SHA1 (patch-Modules___ctypes_ctypes.h) = 2589d24c101771f8696b456d594e5f53305cf72c
 SHA1 (patch-Modules___ctypes_malloc__closure.c) = 780e7dfa293c57dc28e97358937ed7d148414c8e
@@ -32,7 +32,7 @@ SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
 SHA1 (patch-Modules_posixmodule.c) = cae3797179c1a4d820dd294b69ca4b9a6fa81899
 SHA1 (patch-Modules_socketmodule.c) = c0bdb256bccc176c2406feec4080cd91fcb693b2
 SHA1 (patch-Modules_socketmodule.h) = 13a3290eb72078067060d3e71b7baa08f3eb591c
-SHA1 (patch-Modules_timemodule.c) = c0fa13e7f02046b1dfde36a50898b4c46ca3792e
+SHA1 (patch-Modules_timemodule.c) = e4be632485280002eb76a8e6e524676429044c15
 SHA1 (patch-Python_bootstrap__hash.c) = c60b3987e549987a1180edaab0ad2d48fc272925
 SHA1 (patch-Python_pytime.c) = 5d782457439708f5e8e46043eed5fe7ba40f45f9
 SHA1 (patch-Python_thread__pthread.h) = fb81eaa604b4ed7c1b64c3f4731d58a8aee257be
