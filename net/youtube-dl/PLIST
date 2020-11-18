@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.99 2020/02/16 19:28:47 leot Exp $
+@comment $NetBSD: PLIST,v 1.100 2020/11/18 17:35:15 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -968,6 +968,9 @@ ${PYSITELIB}/youtube_dl/extractor/la7.pyo
 ${PYSITELIB}/youtube_dl/extractor/laola1tv.py
 ${PYSITELIB}/youtube_dl/extractor/laola1tv.pyc
 ${PYSITELIB}/youtube_dl/extractor/laola1tv.pyo
+${PYSITELIB}/youtube_dl/extractor/lbry.py
+${PYSITELIB}/youtube_dl/extractor/lbry.pyc
+${PYSITELIB}/youtube_dl/extractor/lbry.pyo
 ${PYSITELIB}/youtube_dl/extractor/lci.py
 ${PYSITELIB}/youtube_dl/extractor/lci.pyc
 ${PYSITELIB}/youtube_dl/extractor/lci.pyo
@@ -1709,9 +1712,6 @@ ${PYSITELIB}/youtube_dl/extractor/spankwire.pyo
 ${PYSITELIB}/youtube_dl/extractor/spiegel.py
 ${PYSITELIB}/youtube_dl/extractor/spiegel.pyc
 ${PYSITELIB}/youtube_dl/extractor/spiegel.pyo
-${PYSITELIB}/youtube_dl/extractor/spiegeltv.py
-${PYSITELIB}/youtube_dl/extractor/spiegeltv.pyc
-${PYSITELIB}/youtube_dl/extractor/spiegeltv.pyo
 ${PYSITELIB}/youtube_dl/extractor/spike.py
 ${PYSITELIB}/youtube_dl/extractor/spike.pyc
 ${PYSITELIB}/youtube_dl/extractor/spike.pyo
