@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/10/04 18:36:41 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/11/18 20:52:50 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,9 +16,9 @@ ${PYSITELIB}/mautrix_hangouts/commands/__init__.pyo
 ${PYSITELIB}/mautrix_hangouts/commands/auth.py
 ${PYSITELIB}/mautrix_hangouts/commands/auth.pyc
 ${PYSITELIB}/mautrix_hangouts/commands/auth.pyo
-${PYSITELIB}/mautrix_hangouts/commands/handler.py
-${PYSITELIB}/mautrix_hangouts/commands/handler.pyc
-${PYSITELIB}/mautrix_hangouts/commands/handler.pyo
+${PYSITELIB}/mautrix_hangouts/commands/typehint.py
+${PYSITELIB}/mautrix_hangouts/commands/typehint.pyc
+${PYSITELIB}/mautrix_hangouts/commands/typehint.pyo
 ${PYSITELIB}/mautrix_hangouts/config.py
 ${PYSITELIB}/mautrix_hangouts/config.pyc
 ${PYSITELIB}/mautrix_hangouts/config.pyo
@@ -82,8 +82,10 @@ ${PYSITELIB}/mautrix_hangouts/web/static/login.html
 ${PYSITELIB}/mautrix_hangouts/web/static/login.js
 share/mautrix-hangouts/alembic.ini
 share/mautrix-hangouts/alembic/env.py
+share/mautrix-hangouts/alembic/versions/33078cd14618_add_double_puppet_base_url_to_puppet_.py
 share/mautrix-hangouts/alembic/versions/41712fc6d14b_add_user_portal_puppet_mappings_to_db.py
 share/mautrix-hangouts/alembic/versions/4567a7c4de97_switch_to_mautrix_python_crypto.py
+share/mautrix-hangouts/alembic/versions/52cd44bea796_stop_using_size_limited_string_fields.py
 share/mautrix-hangouts/alembic/versions/63ea9db2aa00_add_receiver_and_index_fields_to_.py
 share/mautrix-hangouts/alembic/versions/7d9a9a4d50d7_add_timestamp_to_messages.py
 share/mautrix-hangouts/alembic/versions/ab5435bd192e_add_bridge_notice_room_column_for_users.py
@@ -91,5 +93,6 @@ share/mautrix-hangouts/alembic/versions/ba113d486f7f_store_custom_puppet_next_ba
 share/mautrix-hangouts/alembic/versions/bb5a68cd3f8e_store_encryption_state_event_in_db.py
 share/mautrix-hangouts/alembic/versions/bfb775ce2cee_initial_revision.py
 share/mautrix-hangouts/alembic/versions/c319c2ce8698_add_end_to_bridge_encryption_fields.py
+share/mautrix-hangouts/alembic/versions/fae20932d275_add_profile_set_booleans_to_puppet_table.py
 share/mautrix-hangouts/alembic/versions/fb42f7a67a6b_add_receiver_field_to_portals.py
 share/mautrix-hangouts/example-config.yaml
