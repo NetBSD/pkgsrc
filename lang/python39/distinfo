@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2020/11/12 10:58:20 sjmulder Exp $
+$NetBSD: distinfo,v 1.3 2020/11/18 12:18:29 sjmulder Exp $
 
 SHA1 (Python-3.9.0.tar.xz) = ff1fc8c37d5d4b09ec3bf0d84f3e5b97745c6704
 RMD160 (Python-3.9.0.tar.xz) = 822fd1ea11f3ca303a08317f6db61f2a1e03e5ef
@@ -25,6 +25,7 @@ SHA1 (patch-Modules___ctypes_callproc.c) = 86f27c466a67ebf72d863febece33aa8b1f9f
 SHA1 (patch-Modules___ctypes_ctypes.h) = 641c0af4d550c9140549ce2f2df6239c2c954a06
 SHA1 (patch-Modules___ctypes_malloc__closure.c) = 7e8f491ce66acb6d07e8830ee881edbf0aaac538
 SHA1 (patch-Modules___decimal_libmpdec_mpdecimal.h) = 8d302abacc5737fe7620d4738fff6c5c3ed387c7
+SHA1 (patch-Modules___zoneinfo.c) = b1df24fe935cd357670a6d9f41245ab04f2015e8
 SHA1 (patch-Modules_getpath.c) = d7114d21d7d9c7167fad259b115cb02e4153c531
 SHA1 (patch-Modules_makesetup) = a06786eebffadecedba5e3a50a9785fb47613567
 SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
