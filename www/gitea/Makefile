@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/11/13 19:26:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.47 2020/11/18 11:29:27 jperkin Exp $
 
-DISTNAME=	gitea-1.12.1
+DISTNAME=	gitea-1.12.6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
-PKGREVISION=	7
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -18,7 +17,7 @@ GO_SRCPATH=		code.gitea.io/gitea
 # The front-end files do not change every release, so only bump this when
 # necessary to avoid excessive uploads to LOCAL_PORTS.
 #
-FRONTEND=		gitea-1.12.1-frontend.tar.gz
+FRONTEND=		gitea-1.12.6-frontend.tar.gz
 SITES.${FRONTEND}=	${MASTER_SITE_LOCAL}
 DISTFILES:=		${DEFAULT_DISTFILES} ${FRONTEND}
 
@@ -112,7 +111,7 @@ post-install:
 
 .PHONY: generate-frontend
 generate-frontend: build
-	cd ${WRKSRC} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz public/css public/js
+	cd ${WRKSRC} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz public
 	@${ECHO} "Now upload ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz to LOCAL_PORTS"
 
 .include "../../lang/go/go-package.mk"
