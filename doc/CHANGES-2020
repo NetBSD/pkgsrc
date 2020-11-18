@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6232 2020/11/18 20:49:44 js Exp $
+$NetBSD: CHANGES-2020,v 1.6233 2020/11/18 21:04:54 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9158,3 +9158,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/ucspi-ipc version 0.67 [schmonz 2020-11-18]
 	Updated net/youtube-dl to 20201118 [leot 2020-11-18]
 	Updated chat/py-mautrix to 0.8.3 [js 2020-11-18]
+	Updated chat/mautrix-hangouts to 0.1.4 [js 2020-11-18]
