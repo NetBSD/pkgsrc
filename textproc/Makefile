@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1178 2020/11/04 21:44:40 nia Exp $
+# $NetBSD: Makefile,v 1.1179 2020/11/18 22:38:52 riastradh Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -779,6 +779,7 @@ SUBDIR+=	p5-YAML-LibYAML
 SUBDIR+=	p5-YAML-PP
 SUBDIR+=	p5-YAML-Syck
 SUBDIR+=	p5-YAML-Tiny
+SUBDIR+=	p5-YAML-XS
 SUBDIR+=	p5-ack
 SUBDIR+=	p5-cabocha
 SUBDIR+=	p5-highlight
