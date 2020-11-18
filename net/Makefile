@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1359 2020/11/18 14:32:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.1360 2020/11/18 15:19:08 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -930,6 +930,7 @@ SUBDIR+=	tvnjviewer
 SUBDIR+=	twittering-mode
 SUBDIR+=	u6rd
 SUBDIR+=	ucarp
+SUBDIR+=	ucspi-ipc
 SUBDIR+=	ucspi-proxy
 SUBDIR+=	ucspi-ssl
 SUBDIR+=	ucspi-tcp
