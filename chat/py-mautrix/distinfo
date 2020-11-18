@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/10/27 21:43:54 js Exp $
+$NetBSD: distinfo,v 1.6 2020/11/18 20:48:58 js Exp $
 
-SHA1 (mautrix-python-0.7.14.tar.gz) = 28e9565bf6277e9c994148ff159b8df400822be7
-RMD160 (mautrix-python-0.7.14.tar.gz) = 3bba10b383e0fc9eda60d2812632606bc22375c3
-SHA512 (mautrix-python-0.7.14.tar.gz) = 6b33071b7a27dfa44fc66633c7116a39323ed20243e1313e7274f50d2e83312b4f892471819a854988f83861cd5b6a419f5db57db6bcfc2d61e5f95e78a86eed
-Size (mautrix-python-0.7.14.tar.gz) = 138988 bytes
+SHA1 (mautrix-python-0.8.3.tar.gz) = f6115593529a36de3916933f91933024aeeb241b
+RMD160 (mautrix-python-0.8.3.tar.gz) = ebb52c665e0244a192ed4bb1b304d72d713248b9
+SHA512 (mautrix-python-0.8.3.tar.gz) = 51a3da070c8246b489c9a5286b3c1fbd25e998cf883cebeb72eb5a068f3041eecc7a0daf9d8efbd825dd3423277c910118dbb04336df8c50baa878dfe993e08f
+Size (mautrix-python-0.8.3.tar.gz) = 146517 bytes
