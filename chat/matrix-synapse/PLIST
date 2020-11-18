@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/10/27 21:52:35 js Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/11/18 21:06:08 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -511,6 +511,9 @@ ${PYSITELIB}/synapse/logging/_terse_json.pyo
 ${PYSITELIB}/synapse/logging/context.py
 ${PYSITELIB}/synapse/logging/context.pyc
 ${PYSITELIB}/synapse/logging/context.pyo
+${PYSITELIB}/synapse/logging/filter.py
+${PYSITELIB}/synapse/logging/filter.pyc
+${PYSITELIB}/synapse/logging/filter.pyo
 ${PYSITELIB}/synapse/logging/formatter.py
 ${PYSITELIB}/synapse/logging/formatter.pyc
 ${PYSITELIB}/synapse/logging/formatter.pyo
@@ -783,6 +786,9 @@ ${PYSITELIB}/synapse/rest/admin/rooms.pyo
 ${PYSITELIB}/synapse/rest/admin/server_notice_servlet.py
 ${PYSITELIB}/synapse/rest/admin/server_notice_servlet.pyc
 ${PYSITELIB}/synapse/rest/admin/server_notice_servlet.pyo
+${PYSITELIB}/synapse/rest/admin/statistics.py
+${PYSITELIB}/synapse/rest/admin/statistics.pyc
+${PYSITELIB}/synapse/rest/admin/statistics.pyo
 ${PYSITELIB}/synapse/rest/admin/users.py
 ${PYSITELIB}/synapse/rest/admin/users.pyc
 ${PYSITELIB}/synapse/rest/admin/users.pyo
@@ -1420,6 +1426,9 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/20instance_name_even
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/20user_daily_visits.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/21as_device_stream.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/21drop_device_max_stream_id.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/22puppet_token.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/22users_have_local_media.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/23e2e_cross_signing_keys_idx.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_signatures.sql
