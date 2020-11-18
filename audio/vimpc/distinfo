@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2019/12/04 11:02:33 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/11/18 11:39:50 nia Exp $
 
 SHA1 (vimpc-0.09.2.tar.gz) = 18f5b9070d00f2575414d310bd619a6faefaeb77
 RMD160 (vimpc-0.09.2.tar.gz) = 8636917ed64f95576d9d5598770401407b75f475
 SHA512 (vimpc-0.09.2.tar.gz) = 456e2d2c0510273c071b24c2dd8f90b73d40a0b02565c00ea986a78f1231cb26fb053ce5b0d1476647c813b84684e400c21948086299e445ffd651c2af46d4c9
 Size (vimpc-0.09.2.tar.gz) = 452593 bytes
+SHA1 (patch-src_window_modewindow.cpp) = a710379c0be53ef21b1e44495c935f98008b45da
+SHA1 (patch-src_window_pagerwindow.cpp) = 40a4b66827366e9e7dbfab80c808704f265f4378
