@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6227 2020/11/18 14:24:59 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6228 2020/11/18 14:32:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9153,3 +9153,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/go-hugo-bin version 0.78.2 [nikita 2020-11-18]
 	Added net/ucspi-proxy version 1.1 [schmonz 2020-11-18]
 	Updated devel/nss to 3.59 [ryoon 2020-11-18]
+	Added net/ucspi-unix version 1.0 [schmonz 2020-11-18]
