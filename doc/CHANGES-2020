@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6222 2020/11/18 12:34:09 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6223 2020/11/18 12:34:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9148,3 +9148,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-vhistory version 1.6.1 [kleink 2020-11-18]
 	Added print/tex-vhistory-doc version 1.6.1 [kleink 2020-11-18]
 	Updated www/firefox78 to 78.5.0 [nia 2020-11-18]
+	Updated www/firefox78-l10n to 78.5.0 [nia 2020-11-18]
