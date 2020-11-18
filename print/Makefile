@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.781 2020/11/18 12:22:46 kleink Exp $
+# $NetBSD: Makefile,v 1.782 2020/11/18 12:25:50 kleink Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1515,6 +1515,7 @@ SUBDIR+=	tex-version
 SUBDIR+=	tex-version-doc
 SUBDIR+=	tex-vertbars
 SUBDIR+=	tex-vhistory
+SUBDIR+=	tex-vhistory-doc
 SUBDIR+=	tex-visualfaq-doc
 SUBDIR+=	tex-vmargin
 SUBDIR+=	tex-vmargin-doc
