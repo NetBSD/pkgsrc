@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.23 2020/06/29 16:02:13 jperkin Exp $
+$NetBSD: distinfo,v 1.24 2020/11/18 11:29:27 jperkin Exp $
 
-SHA1 (gitea-1.12.1-frontend.tar.gz) = 76d203050d4a4c3e7aeb2a742457742420be7c41
-RMD160 (gitea-1.12.1-frontend.tar.gz) = b79b450f1b0b8cd3dcff194f5886bb302b5e368c
-SHA512 (gitea-1.12.1-frontend.tar.gz) = 2cae970b17dc87e7597c2be9335d4c1859c5fe03367d5dd51e60b79382f4544dea2edbab75850f14d8763fc3d2c09364aafff0fe5ac4bd9f3f96554d5fcd0840
-Size (gitea-1.12.1-frontend.tar.gz) = 3899415 bytes
-SHA1 (gitea-1.12.1.tar.gz) = b6da55635470ef621e411d3c9cc5568385d37128
-RMD160 (gitea-1.12.1.tar.gz) = 71d02f942d10aba6e4543922719cdf6cf856c4c9
-SHA512 (gitea-1.12.1.tar.gz) = e43b36c2d10094e8cd3345a6a1b730471ca5f9805a3f92a882f2c5cc39b89ef99c34f91976e67def838d14b8b9dd9fdb7b39df407c119e2f5d4ed56ce64f83b5
-Size (gitea-1.12.1.tar.gz) = 32124157 bytes
+SHA1 (gitea-1.12.6-frontend.tar.gz) = 8f5d260af8dcbaddf6b74461fbfae9c1cc68a9c9
+RMD160 (gitea-1.12.6-frontend.tar.gz) = cf31729d71777fe02aa3611a6394c77442d0077b
+SHA512 (gitea-1.12.6-frontend.tar.gz) = 2e2b3d6013c0b6489e9a18e6835800fe703bc68faae9c26d88f29f2b328eec12ef27ba804797ea2af83ba3748f0a8ff9420837171e83178ec7ffb13c9f8e4687
+Size (gitea-1.12.6-frontend.tar.gz) = 21443322 bytes
+SHA1 (gitea-1.12.6.tar.gz) = 8ad3160ebaf8148e44586700e6471686db2babf1
+RMD160 (gitea-1.12.6.tar.gz) = 60fa8f0cab440f022546c9f98a4eea3e2b0e9df1
+SHA512 (gitea-1.12.6.tar.gz) = 4e3853674779cef7f198df6c4b317d093a891f84cd4f174dde781949cf180225e5111c5eee5c3ce4c8c19370bd92128eade08cf493afe54ad43b741e2d5ea670
+Size (gitea-1.12.6.tar.gz) = 32162658 bytes
 SHA1 (patch-Makefile) = 394eb7b8d5c706cd4d2070c4d544d52cf6db5f0b
