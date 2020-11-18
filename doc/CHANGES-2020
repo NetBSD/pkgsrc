@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6220 2020/11/18 12:22:01 kleink Exp $
+$NetBSD: CHANGES-2020,v 1.6221 2020/11/18 12:25:23 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9146,3 +9146,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/gitea to 1.12.6 [jperkin 2020-11-18]
 	Updated security/tor-browser to 10.0.5 [wiz 2020-11-18]
 	Added print/tex-vhistory version 1.6.1 [kleink 2020-11-18]
+	Added print/tex-vhistory-doc version 1.6.1 [kleink 2020-11-18]
