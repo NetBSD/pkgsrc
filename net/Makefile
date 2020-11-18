@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1358 2020/11/18 14:17:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.1359 2020/11/18 14:32:05 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -934,6 +934,7 @@ SUBDIR+=	ucspi-proxy
 SUBDIR+=	ucspi-ssl
 SUBDIR+=	ucspi-tcp
 SUBDIR+=	ucspi-tcp6
+SUBDIR+=	ucspi-unix
 SUBDIR+=	udns
 SUBDIR+=	udpcast
 SUBDIR+=	udptunnel
