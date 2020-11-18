@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6237 2020/11/18 23:12:12 js Exp $
+$NetBSD: CHANGES-2020,v 1.6238 2020/11/18 23:23:52 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9163,3 +9163,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/p5-YAML-XS version 0.82 [riastradh 2020-11-18]
 	Updated finance/ledger2beancount to 2.5 [riastradh 2020-11-18]
 	Added chat/py-telethon version 1.17.5 [js 2020-11-18]
+	Added chat/py-telethon-session-sqlalchemy version 0.2.16 [js 2020-11-18]
