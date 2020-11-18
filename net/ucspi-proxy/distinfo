@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/18 14:17:11 schmonz Exp $
+
+SHA1 (ucspi-proxy-1.1.tar.gz) = 5c6fc2078e75ad64f036f8c16c6609fe4ca8597d
+RMD160 (ucspi-proxy-1.1.tar.gz) = 16ad1edb33f807b1639ec0d74eed03a8b816bde9
+SHA512 (ucspi-proxy-1.1.tar.gz) = c9e6f98a73bf6868341b0d5c1653d0b9107aa92c21e8fe96c47a9ca0ae41b247aa10bccd819d84bdcf4e8d5902c1955bfbe9e4e3256d5303578cd3337220139c
+Size (ucspi-proxy-1.1.tar.gz) = 38351 bytes

@@ -1,0 +1,8 @@
+ucspi-proxy contains a proxy program that passes data back and forth
+between two connections set up by a UCSPI server and a UCSPI client. The
+simple usage is:
+
+    UCSPIserver [address] UCSPIclient [address] ucspi-proxy
+
+Replace "UCSPIserver" with the program that will accept connections, and
+"UCSPIclient" with the program that will make connections.
