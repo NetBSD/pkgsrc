@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.119 2020/10/31 19:36:30 wiz Exp $
+$NetBSD: distinfo,v 1.120 2020/11/18 14:24:00 ryoon Exp $
 
-SHA1 (nss-3.58.tar.gz) = f0c572b72921690c77d59471fe21cfa811d8b876
-RMD160 (nss-3.58.tar.gz) = 7c6f03a8ca20ec6bcc43435538d84bb940e562f3
-SHA512 (nss-3.58.tar.gz) = 03d2ab1517ac07620ea3f02dcf680cf019e0129006ff2559b2d0a047036340c20b98c9679b17a594e5502aa30e158caf309f046901b9ec7c7adeeaa13ec50b80
-Size (nss-3.58.tar.gz) = 81846254 bytes
+SHA1 (nss-3.59.tar.gz) = 1459fb7f197c0b80e85333fbd33e723adcd28a7f
+RMD160 (nss-3.59.tar.gz) = 5e72ed96f177c7c85092027be69c697214b3ed42
+SHA512 (nss-3.59.tar.gz) = 8963e846f2ff7222457ae59f042672cf4e44f7752807226f46c215a772fd1cbd65d0ce634da4afb698eabd4eb1c1e78146cc2a089339ada11da03d259c609a38
+Size (nss-3.59.tar.gz) = 82141516 bytes
 SHA1 (patch-am) = fea682bf03bc8b645049f93ed58554ca45f47aca
 SHA1 (patch-an) = 4ab22f2a575676b5b640bc9a760b83eb05c75e69
 SHA1 (patch-md) = 8547c9414332c02221b96719dea1e09cb741f4d1
@@ -17,12 +17,9 @@ SHA1 (patch-nss_cmd_shlibsign_sign.sh) = 7948b7b502a4c148ee185836dde8a84d3aa388a
 SHA1 (patch-nss_coreconf_NetBSD.mk) = ed95aa1c245c9f2b8fda0a1769f9599223b61dbf
 SHA1 (patch-nss_coreconf_OpenBSD.mk) = 1a4c3711d5d1f7f9e8d58b36145b15d7e444d754
 SHA1 (patch-nss_coreconf_command.mk) = a7b682d367825b48f8802fa30cee83f10680bb74
-SHA1 (patch-nss_gtests_ssl__gtest_ssl__tls13compat__unittest.cc) = 85c61f09a833ae0039294f0475931474d69a913e
 SHA1 (patch-nss_lib_freebl_aes-armv8.c) = aa698f61dd3d66ba707a9b5425bc15d057244ad7
 SHA1 (patch-nss_lib_freebl_gcm-aarch64.c) = 311cfe7ca58e91285052d0ca27bd2df3f325071b
 SHA1 (patch-nss_lib_freebl_md5.c) = 5cbec40695e296f0713895fb85cd37f6df76b85b
-SHA1 (patch-nss_lib_ssl_ssl3con.c) = 04dc8ca7714bb1295ff9b470aed325cac1846950
-SHA1 (patch-nss_lib_ssl_sslimpl.h) = 91f7da0f30469bb81b416431e8f1268edbb82e5f
 SHA1 (patch-nss_lib_util_utilpars.c) = 5d3000515b01037929730a752b7d7a0f46f06deb
 SHA1 (patch-nss_tests_all.sh) = b328778b538db66f5447f962f23afd6f650f7071
 SHA1 (patch-nss_tests_merge_merge.sh) = 42a4866d226b1076740ba9a5e42c7604f2cb15a7
