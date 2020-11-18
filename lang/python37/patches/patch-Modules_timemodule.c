@@ -1,4 +1,4 @@
-$NetBSD: patch-Modules_timemodule.c,v 1.1 2020/11/17 19:33:26 sjmulder Exp $
+$NetBSD: patch-Modules_timemodule.c,v 1.2 2020/11/18 11:03:31 sjmulder Exp $
 
 Support for macOS 11 and Apple Silicon (ARM). Mostly backported from:
 https://github.com/python/cpython/pull/22855
@@ -104,24 +104,26 @@ https://github.com/python/cpython/pull/22855
      }
  #endif
  
-@@ -1327,6 +1355,16 @@ _PyTime_GetThreadTimeWithInfo(_PyTime_t 
+@@ -1327,6 +1355,18 @@ _PyTime_GetThreadTimeWithInfo(_PyTime_t
  
  #elif defined(HAVE_CLOCK_GETTIME) && defined(CLOCK_PROCESS_CPUTIME_ID)
  #define HAVE_THREAD_TIME
 +
-+#if defined(__APPLE__) && defined(__has_attribute) && __has_attribute(availability)
++#if defined(__APPLE__) && defined(__has_attribute)
++# if __has_attribute(availability)
 +static int
 +_PyTime_GetThreadTimeWithInfo(_PyTime_t *tp, _Py_clock_info_t *info) 
 +     __attribute__((availability(macos, introduced=10.12)))
 +     __attribute__((availability(ios, introduced=10.0)))
 +     __attribute__((availability(tvos, introduced=10.0)))
 +     __attribute__((availability(watchos, introduced=3.0)));
++# endif
 +#endif
 +
  static int
  _PyTime_GetThreadTimeWithInfo(_PyTime_t *tp, _Py_clock_info_t *info)
  {
-@@ -1358,6 +1396,15 @@ _PyTime_GetThreadTimeWithInfo(_PyTime_t 
+@@ -1358,6 +1398,15 @@ _PyTime_GetThreadTimeWithInfo(_PyTime_t
  #endif
  
  #ifdef HAVE_THREAD_TIME
@@ -137,7 +139,7 @@ https://github.com/python/cpython/pull/22855
  static PyObject *
  time_thread_time(PyObject *self, PyObject *unused)
  {
-@@ -1388,6 +1435,11 @@ PyDoc_STRVAR(thread_time_ns_doc,
+@@ -1388,6 +1437,11 @@ PyDoc_STRVAR(thread_time_ns_doc,
  \n\
  Thread time for profiling as nanoseconds:\n\
  sum of the kernel and user-space CPU time.");
@@ -149,7 +151,7 @@ https://github.com/python/cpython/pull/22855
  #endif
  
  
-@@ -1446,9 +1498,19 @@ time_get_clock_info(PyObject *self, PyOb
+@@ -1446,9 +1500,19 @@ time_get_clock_info(PyObject *self, PyOb
      }
  #ifdef HAVE_THREAD_TIME
      else if (strcmp(name, "thread_time") == 0) {
@@ -170,7 +172,7 @@ https://github.com/python/cpython/pull/22855
      }
  #endif
      else {
-@@ -1761,40 +1823,85 @@ PyInit_time(void)
+@@ -1761,40 +1825,85 @@ PyInit_time(void)
      if (m == NULL)
          return NULL;
  
