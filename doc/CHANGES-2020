@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6230 2020/11/18 15:19:26 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6231 2020/11/18 17:35:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9156,3 +9156,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/ucspi-unix version 1.0 [schmonz 2020-11-18]
 	Updated www/hugo to 0.78.2 [jperkin 2020-11-18]
 	Added net/ucspi-ipc version 0.67 [schmonz 2020-11-18]
+	Updated net/youtube-dl to 20201118 [leot 2020-11-18]
