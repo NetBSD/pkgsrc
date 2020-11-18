@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/18 15:18:39 schmonz Exp $
+
+SHA1 (ucspi-ipc-0.67.tar.gz) = 5f53c5fa487f4baa46eb071f40117454ee1eeef8
+RMD160 (ucspi-ipc-0.67.tar.gz) = a79b68dbfdf16cc15232f97e8339d0e874a6e1a6
+SHA512 (ucspi-ipc-0.67.tar.gz) = 4836d4e3fa7896bc218099c7b0092385a448ae6151cc277bc8bab140ab1447b155bd0673647aec147f4fd8b4d8e2c43042fd57e83df9a55fea06c0cb9cd104e4
+Size (ucspi-ipc-0.67.tar.gz) = 51281 bytes
