@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/18 14:17:11 schmonz Exp $
+bin/ucspi-proxy
+bin/ucspi-proxy-http-xlate
+bin/ucspi-proxy-imap
+bin/ucspi-proxy-log
+bin/ucspi-proxy-pop3
+man/man1/ucspi-proxy-http-xlate.1
+man/man1/ucspi-proxy.1
