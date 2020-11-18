@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/07/16 18:09:30 riastradh Exp $
+$NetBSD: distinfo,v 1.4 2020/11/18 22:39:15 riastradh Exp $
 
-SHA1 (ledger2beancount-2.0.tar.gz) = f323279e3e1e467b9f40ebc3d26b31d11799b4c0
-RMD160 (ledger2beancount-2.0.tar.gz) = f81bba80803c3b7235aff03ae6c7c05b6397d96e
-SHA512 (ledger2beancount-2.0.tar.gz) = a5a741b8af1bb26d0c01673c70e0aee49926d3acfe36b5f160e01d0038f459902beaed89c69bd6179ade09798a0c6103c960796d8bf9a23897791bdefc51e360
-Size (ledger2beancount-2.0.tar.gz) = 67729 bytes
-SHA1 (patch-tests_runtests) = fd199caeb1bff1559af5f823e9a0efd0f975588a
+SHA1 (ledger2beancount-2.5.tar.gz) = 909d1f86e2cf79e2343e51953ed27d49cb6bee55
+RMD160 (ledger2beancount-2.5.tar.gz) = 65bafe12a0f5b5eb1a95a09485fe5f0637ae797d
+SHA512 (ledger2beancount-2.5.tar.gz) = a456c5c6f0259bf633b257a7496e05d8530a73cc3ae5a5e42c8d2e0b4ae66adec090936aa1a0c5e3ef330a3569a07fa40be3295799b0477246b8f6eb5fc9697b
+Size (ledger2beancount-2.5.tar.gz) = 93260 bytes
