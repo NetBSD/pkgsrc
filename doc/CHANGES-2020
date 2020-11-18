@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6218 2020/11/18 11:43:30 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6219 2020/11/18 12:20:57 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9145,3 +9145,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/python37 to 3.7.9nb2 [sjmulder 2020-11-17]
 	Updated www/gitea to 1.12.6 [jperkin 2020-11-18]
 	Updated security/tor-browser to 10.0.5 [wiz 2020-11-18]
+	Updated print/tex-vhistory to 1.6.1 [kleink 2020-11-18]
