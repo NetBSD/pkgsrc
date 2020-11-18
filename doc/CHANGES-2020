@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6236 2020/11/18 22:40:55 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.6237 2020/11/18 23:12:12 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9162,3 +9162,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/matrix-synapse to 1.23.0 [js 2020-11-18]
 	Added textproc/p5-YAML-XS version 0.82 [riastradh 2020-11-18]
 	Updated finance/ledger2beancount to 2.5 [riastradh 2020-11-18]
+	Added chat/py-telethon version 1.17.5 [js 2020-11-18]
