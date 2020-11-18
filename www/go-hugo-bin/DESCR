@@ -1,0 +1,6 @@
+Hugo is a static website engine written in Go.
+
+Hugo flexibly works with many formats and is ideal for blogs, docs,
+portfolios and much more.
+
+This is the prebuild binary version provided by the Hugo project.
