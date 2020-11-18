@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/18 14:31:43 schmonz Exp $
+bin/unixcat
+bin/unixclient
+bin/unixserver
+man/man1/unixclient.1
+man/man1/unixserver.1

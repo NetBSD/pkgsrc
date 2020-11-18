@@ -1,0 +1,2 @@
+ucspi-unix contains a UCSPI-conformant UNIX domain socket client
+and server.
