@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1493 2020/11/02 12:32:20 nia Exp $
+# $NetBSD: Makefile,v 1.1494 2020/11/18 14:01:05 nikita Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -128,6 +128,7 @@ SUBDIR+=	go-fasthttp
 SUBDIR+=	go-ffuf
 SUBDIR+=	go-gogs-client
 SUBDIR+=	go-gohtml
+SUBDIR+=	go-hugo-bin
 SUBDIR+=	go-libsass
 SUBDIR+=	go-minify
 SUBDIR+=	go-mux
