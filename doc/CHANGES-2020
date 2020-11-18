@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6238 2020/11/18 23:23:52 js Exp $
+$NetBSD: CHANGES-2020,v 1.6239 2020/11/18 23:28:11 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9164,3 +9164,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/ledger2beancount to 2.5 [riastradh 2020-11-18]
 	Added chat/py-telethon version 1.17.5 [js 2020-11-18]
 	Added chat/py-telethon-session-sqlalchemy version 0.2.16 [js 2020-11-18]
+	Added chat/mautrix-telegram version 0.9.0 [js 2020-11-18]
