@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6216 2020/11/17 19:34:06 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.6217 2020/11/18 11:30:01 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9143,3 +9143,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox-l10n to 83.0 [ryoon 2020-11-17]
 	Updated lang/python38 to 3.8.6nb1 [sjmulder 2020-11-17]
 	Updated lang/python37 to 3.7.9nb2 [sjmulder 2020-11-17]
+	Updated www/gitea to 1.12.6 [jperkin 2020-11-18]
