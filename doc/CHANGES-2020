@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6242 2020/11/19 10:21:57 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6243 2020/11/19 10:27:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9169,3 +9169,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/qmailanalog to 0.70nb2 [schmonz 2020-11-19]
 	Updated www/py-aiohttp to 3.7.3 [adam 2020-11-19]
 	Updated devel/py-ruamel-ordereddict to 0.4.15 [adam 2020-11-19]
+	Updated devel/py-test-pylint to 0.18.0 [adam 2020-11-19]
+	Updated net/py-prometheus_client to 0.9.0 [adam 2020-11-19]
