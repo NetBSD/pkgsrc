@@ -1,9 +1,20 @@
-@comment $NetBSD: PLIST,v 1.8 2018/12/22 22:45:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/11/19 10:19:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/aiohttp/.hash/_cparser.pxd.hash
+${PYSITELIB}/aiohttp/.hash/_find_header.pxd.hash
+${PYSITELIB}/aiohttp/.hash/_frozenlist.pyx.hash
+${PYSITELIB}/aiohttp/.hash/_helpers.pyi.hash
+${PYSITELIB}/aiohttp/.hash/_helpers.pyx.hash
+${PYSITELIB}/aiohttp/.hash/_http_parser.pyx.hash
+${PYSITELIB}/aiohttp/.hash/_http_writer.pyx.hash
+${PYSITELIB}/aiohttp/.hash/_websocket.pyx.hash
+${PYSITELIB}/aiohttp/.hash/frozenlist.pyi.hash
+${PYSITELIB}/aiohttp/.hash/hdrs.py.hash
+${PYSITELIB}/aiohttp/.hash/signals.pyi.hash
 ${PYSITELIB}/aiohttp/__init__.py
 ${PYSITELIB}/aiohttp/__init__.pyc
 ${PYSITELIB}/aiohttp/__init__.pyo
