@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/06/06 13:08:27 obache Exp $
+# $NetBSD: options.mk,v 1.2 2020/11/19 20:01:40 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amule
 PKG_SUPPORTED_OPTIONS=	amule-monolithic
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	amule-monolithic amule-ed2k upnp
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	share skins alc alcc amule ed2k daemon gui cmd web cas wxcas
+PLIST_VARS+=	skins alc alcc amule ed2k daemon gui cmd web cas wxcas
 
 ###
 ### monolithic aMule app
@@ -17,7 +17,6 @@ PLIST_VARS+=	share skins alc alcc amule ed2k daemon gui cmd web cas wxcas
 .if !empty(PKG_OPTIONS:Mamule-monolithic)
 CONFIGURE_ARGS+=	--enable-monolithic
 PLIST.amule=		yes
-PLIST.share=		yes
 PLIST.skins=		yes
 .else
 CONFIGURE_ARGS+=	--disable-monolithic
@@ -60,7 +59,6 @@ CONFIGURE_ARGS+=	--disable-amulecmd
 .if !empty(PKG_OPTIONS:Mamule-webserver)
 CONFIGURE_ARGS+=	--enable-webserver
 PLIST.web=		yes
-PLIST.share=		yes
 .else
 CONFIGURE_ARGS+=	--disable-webserver
 .endif
