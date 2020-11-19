@@ -1,0 +1,4 @@
+execline is a (non-interactive) scripting language, like sh, but its syntax
+is quite different from a traditional shell syntax. The execlineb program
+is meant to be used as an interpreter for a text file; the other commands
+are essentially useful inside an execlineb script.
