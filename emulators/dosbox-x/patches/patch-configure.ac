@@ -1,0 +1,22 @@
+$NetBSD: patch-configure.ac,v 1.4 2020/11/19 17:17:15 nia Exp $
+
+Detect NetBSD/evbarm properly.
+
+--- configure.ac.orig	2020-11-01 15:36:10.000000000 +0000
++++ configure.ac
+@@ -499,13 +499,13 @@ case "$host_cpu" in
+     c_targetcpu="m68k"
+     c_unalignedmemory=yes
+     ;;
+-   armv7l)
++   armv7*)
+     AC_DEFINE(C_TARGETCPU,ARMV7LE)
+     AC_MSG_RESULT(ARMv7 Little Endian)
+     c_targetcpu="arm"
+     c_unalignedmemory=yes
+     ;;
+-   armv6l)
++   armv6*)
+     AC_DEFINE(C_TARGETCPU,ARMV4LE)
+     AC_MSG_RESULT(ARMv6 Little Endian)
+     c_targetcpu="arm"
