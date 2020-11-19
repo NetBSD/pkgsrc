@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2020/10/27 22:52:05 adam Exp $
+# $NetBSD: Makefile,v 1.47 2020/11/19 10:19:50 adam Exp $
 
-DISTNAME=	aiohttp-3.7.2
+DISTNAME=	aiohttp-3.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
