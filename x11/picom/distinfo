@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.4 2020/10/03 09:23:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/11/19 11:03:04 nia Exp $
 
-SHA1 (picom-8.1.tar.gz) = 16dc443d77f171af15b4748578327127e16eb4fc
-RMD160 (picom-8.1.tar.gz) = 420d44e3f33a2fd727ad6dd2794cf6cb82d7baf9
-SHA512 (picom-8.1.tar.gz) = d1d0428e5761db6820c775c07b966b5fec6a9e9d049ba9f555eb49721f855a018df7242ef61e29c0ea003644b20e1bb733ddf668053a8d4040240e98707fa4d3
-Size (picom-8.1.tar.gz) = 242262 bytes
-SHA1 (patch-src_backend_gl_gl__common.c) = fac2914b6a5b61a6a3c51117ce65eb632923fd83
-SHA1 (patch-src_compiler.h) = 6d659359b70528bd5e6bdd98479502ebd4881976
-SHA1 (patch-src_utils.h) = 31f422592b5f9d232d26f437808b64dc2fb4c0f2
+SHA1 (picom-8.2.tar.gz) = c07ba3f3016a1a333054a26be540262daa4ec854
+RMD160 (picom-8.2.tar.gz) = 976cc0b70cdc30e5e8a3c343694b94f67f3fbd9c
+SHA512 (picom-8.2.tar.gz) = bdc6675e73a211075ee0df2b056342cabb19ad27fd73586f5216886f503cd994536845eb866f371e07a8dc0404346c67b899a14830e9b7cbc9c01cbd782f36b1
+Size (picom-8.2.tar.gz) = 242653 bytes
+SHA1 (patch-src_c2.c) = ef49d0b02691b495b625423c832c603852045a73
+SHA1 (patch-src_config.c) = ffffb13adcf2e6767813fdaade83793d074f4cf5
+SHA1 (patch-src_dbus.c) = 191ff5f507b882bac219174a89d887fd6aaf231a
+SHA1 (patch-src_string__utils.h) = 90f8fefb9ce4cc14049e494b49041e48bd9d82d6
