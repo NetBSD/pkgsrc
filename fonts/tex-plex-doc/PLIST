@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/19 15:09:01 kleink Exp $
+share/texmf-dist/doc/fonts/plex/LICENSE.txt
+share/texmf-dist/doc/fonts/plex/README
+share/texmf-dist/doc/fonts/plex/plex-samples.pdf
+share/texmf-dist/doc/fonts/plex/plex-samples.tex
