@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6245 2020/11/19 10:41:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6246 2020/11/19 11:03:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9174,3 +9174,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/lz4 to 1.9.3 [adam 2020-11-19]
 	Updated archivers/py-lz4 to 3.1.1 [adam 2020-11-19]
 	Updated audio/faad2 to 2.10.0 [nia 2020-11-19]
+	Updated x11/picom to 8.2 [nia 2020-11-19]
