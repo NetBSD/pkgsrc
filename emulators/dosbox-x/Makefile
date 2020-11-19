@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/11/19 17:17:15 nia Exp $
+# $NetBSD: Makefile,v 1.25 2020/11/19 17:19:57 nia Exp $
 
 DISTNAME=	dosbox-x-0.83.7
 PKGREVISION=	1
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--disable-sdl2test
 CONFIGURE_ARGS+=	--disable-sdltest
 CONFIGURE_ARGS+=	--disable-sdl
 CONFIGURE_ARGS+=	--enable-sdl2
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
