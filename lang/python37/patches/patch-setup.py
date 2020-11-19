@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.2 2020/11/17 19:33:26 sjmulder Exp $
+$NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
 
 Disable certain modules, so they can be built as separate packages.
 
@@ -31,21 +31,24 @@ https://github.com/python/cpython/pull/22855
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (after any relative
-@@ -150,6 +151,13 @@ def is_macosx_sdk_path(path):
+@@ -150,6 +151,16 @@ def is_macosx_sdk_path(path):
                  or path.startswith('/System/')
                  or path.startswith('/Library/') )
  
 +def grep_headers_for(function, headers):
 +    for header in headers:
-+        with open(header, 'r') as f:
-+            if function in f.read():
-+                return True
++        try:
++            with open(header, 'r') as f:
++                if function in f.read():
++                    return True
++        except UnicodeDecodeError:
++            pass
 +    return False
 +
  def find_file(filename, std_dirs, paths):
      """Searches for the directory where a given file is located,
      and returns a possibly-empty list of additional directories, or None
-@@ -581,15 +589,15 @@ class PyBuildExt(build_ext):
+@@ -581,15 +592,15 @@ class PyBuildExt(build_ext):
              os.unlink(tmpfile)
  
      def detect_modules(self):
@@ -70,7 +73,7 @@ https://github.com/python/cpython/pull/22855
          self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
-@@ -673,6 +681,9 @@ class PyBuildExt(build_ext):
+@@ -673,6 +684,9 @@ class PyBuildExt(build_ext):
              lib_dirs += ['/usr/lib/hpux64', '/usr/lib/hpux32']
  
          if host_platform == 'darwin':
@@ -80,7 +83,7 @@ https://github.com/python/cpython/pull/22855
              # This should work on any unixy platform ;-)
              # If the user has bothered specifying additional -I and -L flags
              # in OPT and LDFLAGS we might as well use them here.
-@@ -854,8 +865,6 @@ class PyBuildExt(build_ext):
+@@ -854,8 +868,6 @@ class PyBuildExt(build_ext):
          # use the same library for the readline and curses modules.
          if 'curses' in readline_termcap_library:
              curses_library = readline_termcap_library
@@ -89,7 +92,7 @@ https://github.com/python/cpython/pull/22855
          elif self.compiler.find_library_file(lib_dirs, 'ncurses'):
              curses_library = 'ncurses'
          elif self.compiler.find_library_file(lib_dirs, 'curses'):
-@@ -1285,6 +1294,30 @@ class PyBuildExt(build_ext):
+@@ -1285,6 +1297,30 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if host_platform not in ['cygwin']:
@@ -120,7 +123,7 @@ https://github.com/python/cpython/pull/22855
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1296,7 +1329,7 @@ class PyBuildExt(build_ext):
+@@ -1296,7 +1332,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -129,7 +132,7 @@ https://github.com/python/cpython/pull/22855
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1428,8 +1461,7 @@ class PyBuildExt(build_ext):
+@@ -1428,8 +1464,7 @@ class PyBuildExt(build_ext):
              missing.append('_curses')
  
          # If the curses module is enabled, check for the panel module
@@ -139,7 +142,7 @@ https://github.com/python/cpython/pull/22855
              exts.append( Extension('_curses_panel', ['_curses_panel.c'],
                                     include_dirs=curses_includes,
                                     define_macros=curses_defines,
-@@ -1670,6 +1702,8 @@ class PyBuildExt(build_ext):
+@@ -1670,6 +1705,8 @@ class PyBuildExt(build_ext):
  
          # Build the _uuid module if possible
          uuid_incs = find_file("uuid.h", inc_dirs, ["/usr/include/uuid"])
@@ -148,7 +151,7 @@ https://github.com/python/cpython/pull/22855
          if uuid_incs is not None:
              if self.compiler.find_library_file(lib_dirs, 'uuid'):
                  uuid_libs = ['uuid']
-@@ -1936,43 +1970,15 @@ class PyBuildExt(build_ext):
+@@ -1936,43 +1973,15 @@ class PyBuildExt(build_ext):
          # *** Uncomment these for TOGL extension only:
          #       -lGL -lGLU -lXext -lXmu \
  
@@ -197,7 +200,7 @@ https://github.com/python/cpython/pull/22855
          include_dirs = []
          extra_compile_args = []
          extra_link_args = []
-@@ -1985,11 +1991,9 @@ class PyBuildExt(build_ext):
+@@ -1985,11 +1994,9 @@ class PyBuildExt(build_ext):
  
          if host_platform == 'darwin':
              sources.append('_ctypes/malloc_closure.c')
@@ -210,7 +213,7 @@ https://github.com/python/cpython/pull/22855
  
          elif host_platform == 'sunos5':
              # XXX This shouldn't be necessary; it appears that some
-@@ -2018,30 +2022,48 @@ class PyBuildExt(build_ext):
+@@ -2018,30 +2025,48 @@ class PyBuildExt(build_ext):
                       libraries=['m'])
          self.extensions.extend([ext, ext_test])
  
@@ -273,7 +276,7 @@ https://github.com/python/cpython/pull/22855
              ext.libraries.append(ffi_lib)
              self.use_system_libffi = True
  
-@@ -2059,10 +2081,7 @@ class PyBuildExt(build_ext):
+@@ -2059,10 +2084,7 @@ class PyBuildExt(build_ext):
              depends = ['_decimal/docstrings.h']
          else:
              srcdir = sysconfig.get_config_var('srcdir')
@@ -285,7 +288,7 @@ https://github.com/python/cpython/pull/22855
              libraries = ['m']
              sources = [
                '_decimal/_decimal.c',
-@@ -2398,7 +2417,7 @@ def main():
+@@ -2398,7 +2420,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
