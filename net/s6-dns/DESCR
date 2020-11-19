@@ -1,0 +1,5 @@
+s6-dns is a suite of DNS client programs and libraries for Unix systems, as
+an alternative to the BIND, djbdns or other DNS clients.
+
+s6-dns may include its own series of DNS caches and servers at some point in
+the future.
