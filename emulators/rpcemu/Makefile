@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/11/05 09:08:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/19 19:26:28 nia Exp $
 
 DISTNAME=	rpcemu-0.9.3
 PKGREVISION=	3
@@ -15,6 +15,11 @@ USE_TOOLS+=	patch
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 INSTALLATION_DIRS+=	bin
+
+CFLAGS.NetBSD+=	-Dfopen64=fopen
+CFLAGS.NetBSD+=	-Dftello64=ftello
+CFLAGS.NetBSD+=	-Dfseeko64=fseeko
+CFLAGS.NetBSD+=	-Doff64_t=off_t
 
 post-patch:
 	${RUN} cd ${WRKSRC}/src && \
