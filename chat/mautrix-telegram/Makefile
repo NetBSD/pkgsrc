@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/11/18 23:27:56 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/19 01:24:23 js Exp $
 
 DISTNAME=	mautrix-telegram-0.9.0
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,6 +21,10 @@ DEPENDS+=	${PYPKGPREFIX}-yarl>=1<2:../../www/py-yarl
 DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.8.2<0.9:../../chat/py-mautrix
 DEPENDS+=	${PYPKGPREFIX}-telethon>=1.17<18:../../chat/py-telethon
 DEPENDS+=	${PYPKGPREFIX}-telethon-session-sqlalchemy>=0.2.14<0.3:../../chat/py-telethon-session-sqlalchemy
+# webp_convert and qr_login
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=4<8:../../graphics/py-Pillow
+# qr_login
+DEPENDS+=	${PYPKGPREFIX}-qrcode>=6<7:../../graphics/py-qrcode
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
