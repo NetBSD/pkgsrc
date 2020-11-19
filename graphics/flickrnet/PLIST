@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/23 09:01:20 kefren Exp $
-lib/flickrnet/FlickrNet.dll
-lib/flickrnet/FlickrNet.dll.mdb
-lib/flickrnet/FlickrNet.xml
-lib/pkgconfig/flickrnet.pc
