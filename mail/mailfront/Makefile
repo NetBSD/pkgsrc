@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/06/25 05:42:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.31 2020/11/19 09:35:41 schmonz Exp $
 #
 
 DISTNAME=		mailfront-2.22
@@ -14,7 +14,6 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		qmail>=1.03nb8:../../mail/qmail
 
-DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
 BUILD_TARGET=		all
 DJB_CONFIG_CMDS+=	${ECHO} ${PREFIX}/include > conf-include;	\
