@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2020/09/15 12:54:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.81 2020/11/19 14:29:55 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -617,7 +617,6 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/attach-active-18.s
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/attach-disabled-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/attach-inactive-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/col-encrypted-signed.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/composeKeyStatus.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/decrypt-active-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/decrypt-inactive-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/encrypt-active-18.svg
@@ -658,9 +657,8 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/importSuccess.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/inlineNotification.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/keyDetails.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/keyWizard.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/msgReadStatus.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/ok-sign.svg
-lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/oneRecipientStatus.css
+lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/openPgpComposeStatus.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/password-error.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/sign-active-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/sign-disabled-18.svg
@@ -694,6 +692,7 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/shared/cardDialog.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/compacttheme.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/creationDialog.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/customizableui/panelUI.css
+lib/thunderbird/chrome/classic/skin/classic/messenger/shared/editContactPanel.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/feedSubscribe.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/filterDialog.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/folderMenus.css
@@ -720,9 +719,6 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/shared/searchBox.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/searchDialog.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/tabmail.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/themeableDialog.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/certFetchingStatus.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/msgCompSecurityInfo.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/smime/msgReadSecurityInfo.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/subscribe.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/tabmail.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/tagColors.css
@@ -2935,7 +2931,7 @@ ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
 ${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
-${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.proper
 lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-alarms.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-event-dialog-attendees.properties
@@ -3099,7 +3095,6 @@ lib/thunderbird/chrome/en-US/locale/en-US/messenger-smime/certFetchingStatus.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger-smime/msgCompSMIMEOverlay.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger-smime/msgCompSecurityInfo.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger-smime/msgCompSecurityInfo.properties
-lib/thunderbird/chrome/en-US/locale/en-US/messenger-smime/msgReadSMIMEOverlay.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger-smime/msgReadSMIMEOverlay.properties
 lib/thunderbird/chrome/en-US/locale/en-US/messenger-smime/msgReadSecurityInfo.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger-smime/msgSecurityInfo.properties
@@ -3381,8 +3376,6 @@ lib/thunderbird/chrome/messenger/content/messenger-smime/msgCompSecurityInfo.js
 lib/thunderbird/chrome/messenger/content/messenger-smime/msgCompSecurityInfo.xhtml
 lib/thunderbird/chrome/messenger/content/messenger-smime/msgHdrViewSMIMEOverlay.js
 lib/thunderbird/chrome/messenger/content/messenger-smime/msgReadSMIMEOverlay.js
-lib/thunderbird/chrome/messenger/content/messenger-smime/msgReadSecurityInfo.js
-lib/thunderbird/chrome/messenger/content/messenger-smime/msgReadSecurityInfo.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/AccountManager.js
 lib/thunderbird/chrome/messenger/content/messenger/AccountManager.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/AccountWizard.js
@@ -3522,7 +3515,7 @@ lib/thunderbird/chrome/messenger/content/messenger/chat/joinchat.js
 lib/thunderbird/chrome/messenger/content/messenger/chat/joinchat.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/chat/toolbarbutton-badge-button.js
 lib/thunderbird/chrome/messenger/content/messenger/child/ext-compose.js
-lib/thunderbird/chrome/messenger/content/messenger/child/ext-composeScripts.js
+lib/thunderbird/chrome/messenger/content/messenger/child/ext-extensionScripts.js
 lib/thunderbird/chrome/messenger/content/messenger/child/ext-mail.js
 lib/thunderbird/chrome/messenger/content/messenger/child/ext-menus.js
 lib/thunderbird/chrome/messenger/content/messenger/child/ext-tabs.js
@@ -3702,7 +3695,7 @@ lib/thunderbird/chrome/messenger/content/messenger/parent/ext-cloudFile.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-commands.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-compose.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-composeAction.js
-lib/thunderbird/chrome/messenger/content/messenger/parent/ext-composeScripts.js
+lib/thunderbird/chrome/messenger/content/messenger/parent/ext-extensionScripts.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-folders.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-mail.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-mailTabs.js
@@ -3783,7 +3776,7 @@ lib/thunderbird/chrome/messenger/content/messenger/schemas/cloudFile.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/commands.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/compose.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/composeAction.json
-lib/thunderbird/chrome/messenger/content/messenger/schemas/composeScripts.json
+lib/thunderbird/chrome/messenger/content/messenger/schemas/extensionScripts.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/folders.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/mailTabs.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/menus.json
@@ -4393,8 +4386,6 @@ lib/thunderbird/chrome/openpgp/content/openpgp/ui/keyDetailsDlg.js
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/keyDetailsDlg.xhtml
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/keyWizard.js
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/keyWizard.xhtml
-lib/thunderbird/chrome/openpgp/content/openpgp/ui/msgReadStatus.js
-lib/thunderbird/chrome/openpgp/content/openpgp/ui/msgReadStatus.xhtml
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/oneRecipientStatus.js
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/oneRecipientStatus.xhtml
 lib/thunderbird/chrome/pippki/content/pippki/certManager.js
