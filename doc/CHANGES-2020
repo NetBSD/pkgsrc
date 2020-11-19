@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6260 2020/11/19 20:02:13 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6261 2020/11/19 20:06:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9189,3 +9189,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/execline version 2.6.1.1 [schmonz 2020-11-19]
 	Added sysutils/s6 version 2.9.2.0 [schmonz 2020-11-19]
 	Updated net/amule to 2.3.2 [nia 2020-11-19]
+	Added net/s6-dns version 2.3.3.0 [schmonz 2020-11-19]
