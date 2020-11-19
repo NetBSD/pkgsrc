@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1361 2020/11/19 20:06:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.1362 2020/11/19 20:13:19 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -833,6 +833,7 @@ SUBDIR+=	ruby-winrm
 SUBDIR+=	ruby-winrm-fs
 SUBDIR+=	ruby-xdr
 SUBDIR+=	s6-dns
+SUBDIR+=	s6-networking
 SUBDIR+=	sacc
 SUBDIR+=	samba
 SUBDIR+=	samba4
