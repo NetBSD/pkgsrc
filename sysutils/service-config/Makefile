@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.14 2020/06/25 05:42:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/19 08:11:18 schmonz Exp $
 #
 
 DISTNAME=		service-config-0.51
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.superscript.com/service-config/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://www.superscript.com/service-config/intro.html
+HOMEPAGE=		https://web.archive.org/web/20090302170825/http://www.superscript.com/service-config/intro.html
 COMMENT=		Utility to create and configure svscan service directories
+LICENSE=		djb-nonlicense
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
-
-# Possibly inherited DJB-style distribution terms
-DJB_RESTRICTED=		YES
 
 SUBST_CLASSES+=		djberrno
 

@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.30 2020/06/25 05:42:36 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.31 2020/11/19 08:11:18 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -8,24 +8,10 @@
 # * typical values for conf-* files
 # * replace inline definitions of errno with "#include <errno.h>"
 #
-# TODO:
-# * centralize handling of third-party manpages
-# * centralize MASTER_SITES and SITES_foo
-# * centralize compiler hack for arm{,32}
-# * common install script for compatibility with default conf-home pathnames
-# * PKG_OPTIONS (default):
-#     djbware-errno-hack (off)
-#     djbware-pathname-compat (on)
-#     inet6 (off)
-#     pam (off)
-# * set RESTRICTED automatically iff patches or other mods are applied
-# * be unrestricted by default for bulk builds
-#
 
 .if !defined(DJBWARE_MK)
 DJBWARE_MK=		# defined
 
-DJB_RESTRICTED?=	YES
 DJB_MAKE_TARGETS?=	YES
 DJB_BUILD_TARGETS?=	# empty
 DJB_INSTALL_TARGETS?=	# empty
@@ -40,12 +26,11 @@ DJB_CONFIG_PREFIX?=	${PREFIX}
 DJB_CONFIG_HOME?=	conf-home
 DJB_CONFIG_CMDS?=	${DO_NADA}
 
-.if !empty(DJB_RESTRICTED:M[yY][eE][sS])
-LICENSE=		djb-nonlicense
-
-RESTRICTED=		modified source and binaries may not be distributed
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
+.if ${LICENSE} == "djb-nonlicense"
+# So-licensed packages that install totally unmodified may want to opt out
+RESTRICTED?=		modified source and binaries may not be distributed
+NO_BIN_ON_CDROM?=	${RESTRICTED}
+NO_BIN_ON_FTP?=		${RESTRICTED}
 .endif
 
 .if !empty(DJB_MAKE_TARGETS:M[yY][eE][sS])
