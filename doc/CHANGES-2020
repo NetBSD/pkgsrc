@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6248 2020/11/19 11:49:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6249 2020/11/19 12:10:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9177,3 +9177,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/picom to 8.2 [nia 2020-11-19]
 	Updated chat/weechat to 3.0 [nia 2020-11-19]
 	Updated lang/elixir to 1.11.2 [nia 2020-11-19]
+	Updated wm/herbstluftwm to 0.9.0 [nia 2020-11-19]
