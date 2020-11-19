@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6255 2020/11/19 16:53:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6256 2020/11/19 18:32:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9184,3 +9184,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added fonts/tex-plex version 4.0.1 [kleink 2020-11-19]
 	Added fonts/tex-plex-doc version 4.0.1 [kleink 2020-11-19]
 	Updated emulators/dosbox-x to 0.83.7 [nia 2020-11-19]
+	Removed graphics/flickrnet [nia 2020-11-19]
