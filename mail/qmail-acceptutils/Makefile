@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/06/25 05:42:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2020/11/19 09:35:42 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-acceptutils-${ACPATCHVERSION}
@@ -20,7 +20,6 @@ DEPENDS+=		ucspi-ssl-[0-9]*:../../net/ucspi-ssl
 
 CONFLICTS+=		qmail<=1.03nb32
 
-DJB_RESTRICTED=		no
 BUILD_TARGET=		acceptutils
 
 USE_LANGUAGES=		c c99

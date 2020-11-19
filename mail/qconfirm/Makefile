@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/06/25 05:42:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/19 09:35:42 schmonz Exp $
 
 DISTNAME=		qconfirm-0.14.3
 CATEGORIES=		mail
@@ -13,7 +13,6 @@ DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		qmail-[0-9]*:../../mail/qmail
 
 DJB_SLASHPACKAGE=	yes
-DJB_RESTRICTED=		no
 
 WRKSRC=			${WRKDIR}/mail/${DISTNAME}
 
