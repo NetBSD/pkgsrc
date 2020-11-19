@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/19 20:05:54 schmonz Exp $
+
+SHA1 (s6-dns-2.3.3.0.tar.gz) = 46cb0c1f56372dc2df0c77fb25fe775244fb706b
+RMD160 (s6-dns-2.3.3.0.tar.gz) = 27e83f7c713d3b44a29e423ce4e86f20a3e37864
+SHA512 (s6-dns-2.3.3.0.tar.gz) = f711ff3f7ea7ae2eecf46b6742f61e970aed8776fcaa4f7902da0864c97f71296bc1651c08ff6f98d6474ccb0ee904c2d7497d7a1d28d48db8df78865b2a9e79
+Size (s6-dns-2.3.3.0.tar.gz) = 83398 bytes
