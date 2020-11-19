@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2020/11/05 09:08:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2020/11/19 09:35:41 schmonz Exp $
 #
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
@@ -19,7 +19,6 @@ DEPENDS+=		qmail>=1.03:../../mail/qmail
 PLIST_SRC=		${PKGDIR}/../../mail/ezmlm/PLIST ${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST.idxcf
 
-DJB_RESTRICTED=		no
 DJB_CONFIG_CMDS+=	${ECHO} ${DESTDIR:Q} > conf-destdir;		\
 			${ECHO} ${PREFIX:Q}/libexec/cgi-bin > conf-cgibin; \
 			${ECHO} ${EGDIR:Q} > conf-egdir;		\

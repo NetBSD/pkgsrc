@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/06/25 05:42:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2020/11/19 09:35:40 schmonz Exp $
 #
 
 DISTNAME=		queue-fix-1.4
@@ -11,8 +11,6 @@ HOMEPAGE=		http://www.netmeridian.com/e-huss/
 COMMENT=		Check and repair the qmail queue structure
 
 INSTALLATION_DIRS=	bin
-
-DJB_RESTRICTED=		NO
 
 SUBST_CLASSES+=		djberrno
 
