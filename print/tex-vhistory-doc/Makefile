@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/11/18 12:24:30 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/19 14:50:37 kleink Exp $
 
 DISTNAME=	vhistory.doc
-PKGNAME=	tex-${DISTNAME}-1.6.1
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.6.1
 TEXLIVE_REV=	30080
 
 MAINTAINER=	kleink@NetBSD.org
