@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.543 2020/09/22 01:50:23 mrg Exp $
+# $NetBSD: Makefile,v 1.544 2020/11/19 20:19:37 schmonz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -337,6 +337,7 @@ SUBDIR+=	ruby-transaction-simple
 SUBDIR+=	ruby-typed-array
 SUBDIR+=	ruby-windows_error
 SUBDIR+=	rump
+SUBDIR+=	s6-portable-utils
 SUBDIR+=	sch
 SUBDIR+=	sci
 SUBDIR+=	screen
