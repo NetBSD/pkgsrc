@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.31 2020/11/19 08:11:18 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.32 2020/11/19 09:16:38 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -26,8 +26,8 @@ DJB_CONFIG_PREFIX?=	${PREFIX}
 DJB_CONFIG_HOME?=	conf-home
 DJB_CONFIG_CMDS?=	${DO_NADA}
 
-.if ${LICENSE} == "djb-nonlicense"
-# So-licensed packages that install totally unmodified may want to opt out
+.if defined(LICENSE) && ${LICENSE} == "djb-nonlicense"
+# Nonlicensed packages that install totally unmodified may want to opt out
 RESTRICTED?=		modified source and binaries may not be distributed
 NO_BIN_ON_CDROM?=	${RESTRICTED}
 NO_BIN_ON_FTP?=		${RESTRICTED}
