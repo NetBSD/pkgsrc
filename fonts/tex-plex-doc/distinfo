@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/19 15:09:01 kleink Exp $
+
+SHA1 (plex.doc.r54512.tar.xz) = cec867958b1581ab53461ff62b918c63b788a323
+RMD160 (plex.doc.r54512.tar.xz) = 63e253a86c5b440da6b46b348f2675aec5744c49
+SHA512 (plex.doc.r54512.tar.xz) = 1ea960e85e33c4739da58cc8a2157672daa06dc7257c23c3339673cb26eee549bad49809330a05867c24759fa907721aaaa48e9d43fb6118e7b465caf4532090
+Size (plex.doc.r54512.tar.xz) = 336496 bytes
