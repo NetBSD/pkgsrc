@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6259 2020/11/19 20:01:08 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6260 2020/11/19 20:02:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9188,3 +9188,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed multimedia/gmediaserver [nia 2020-11-19]
 	Added lang/execline version 2.6.1.1 [schmonz 2020-11-19]
 	Added sysutils/s6 version 2.9.2.0 [schmonz 2020-11-19]
+	Updated net/amule to 2.3.2 [nia 2020-11-19]
