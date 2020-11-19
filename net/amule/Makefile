@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2020/08/31 18:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2020/11/19 20:01:40 nia Exp $
 
-DISTNAME=	aMule-2.3.1
+DISTNAME=	aMule-2.3.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	25
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amule/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=		xmule-[0-9]*
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config perl:run
 GNU_CONFIGURE=		yes
@@ -22,6 +21,8 @@ CONFIGURE_ARGS+=	--with-wx-config=${BUILDLINK_PREFIX.wxGTK28}/bin/wx-config
 CONFIGURE_ARGS+=	--with-crypto-prefix=${BUILDLINK_PREFIX.cryptopp}
 CONFIGURE_ARGS+=	--with-language=all
 CONFIGURE_ARGS+=	--enable-xas
+
+CXXFLAGS+=		-Wno-undef
 
 .include "options.mk"
 

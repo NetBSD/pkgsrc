@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.21 2015/11/04 00:34:52 agc Exp $
+$NetBSD: distinfo,v 1.22 2020/11/19 20:01:40 nia Exp $
 
-SHA1 (aMule-2.3.1.tar.bz2) = 25bcef92b06cb34849afaf052e2cd66b4a8454c2
-RMD160 (aMule-2.3.1.tar.bz2) = 7bc5ceea196f9ba0aa0687a694cc82354a0210fc
-SHA512 (aMule-2.3.1.tar.bz2) = 3310aa6e92dde0e27df032da701bc28533c703277ddeec3766fb0e945725ed340b2d3fe54016172621a47559b6c13fb2893cba0d2469a1038ab35c3ee2d5a3c3
-Size (aMule-2.3.1.tar.bz2) = 4565232 bytes
+SHA1 (aMule-2.3.2.tar.bz2) = 65bb4197a5c2d9c95dc18bb458fa33d221035244
+RMD160 (aMule-2.3.2.tar.bz2) = 71ed96bff4e81bdd8fa97045f8589531609b1232
+SHA512 (aMule-2.3.2.tar.bz2) = 55567aa82c48c741bc9af92e9118a68a76b33b696639802f1bf627c02c1fa1f76af9e3b611bec443e68ff42eac3d508cb8522c97b83366c0a9258075f7a3fd31
+Size (aMule-2.3.2.tar.bz2) = 4950017 bytes
 SHA1 (patch-aa) = af77036649caac372890c45840d24a404ab1a7d6
+SHA1 (patch-src_ClientCreditsList.cpp) = 03bf1956dd848fcc117d5043703840a51880ee9d
 SHA1 (patch-src_OScopeCtrl.cpp) = d9ee907eeb49c3f54972b4d1cabdd64c6d4b88d5
-SHA1 (patch-src_ObservableQueue.h) = 7d6b402662a3b9b67f0324d1b6d3119623d8ea77
+SHA1 (patch-src_UPnPBase.cpp) = 6f8baa3af408632fcc0f0ff7d8e6f33a2d7ddb3d
+SHA1 (patch-src_UPnPBase.h) = 554eaa417df23918985b9a0fd16d5f77844f145a
