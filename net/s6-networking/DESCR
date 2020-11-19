@@ -1,0 +1,5 @@
+s6-networking is a suite of small networking tools for Unix systems,
+including command-line client and server management, TCP access
+control, privilege escalation across UNIX domain sockets, IDENT
+protocol management, clock synchronization, and secure connections
+using the TLS protocol.
