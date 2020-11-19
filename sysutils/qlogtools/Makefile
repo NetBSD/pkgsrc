@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/06/25 05:42:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2020/11/19 09:35:43 schmonz Exp $
 #
 
 DISTNAME=		qlogtools-3.1
@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://untroubled.org/qlogtools/
 COMMENT=		Tools useful in analyzing logs from qmail and other pkgs
 
-DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
 
 SUBST_CLASSES+=		djberrno

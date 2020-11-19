@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/06/30 13:32:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.48 2020/11/19 09:35:39 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		6
@@ -19,8 +19,6 @@ MANPAGES=		${DISTNAME}-man-20020317.tar.gz
 SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 CONFLICTS+=		ucspi-tcp6-[0-9]*
-
-DJB_RESTRICTED=		no
 
 SUBST_CLASSES+=		djberrno
 

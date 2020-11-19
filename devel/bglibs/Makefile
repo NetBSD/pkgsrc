@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/08/31 18:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/11/19 09:35:38 schmonz Exp $
 #
 
 DISTNAME=		bglibs-2.04
@@ -16,7 +16,6 @@ MAKE_ENV+=		PERL5=${TOOLS_PERL5:Q}
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
 USE_LIBTOOL=		yes
 
-DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
 TEST_TARGET=		selftests
 

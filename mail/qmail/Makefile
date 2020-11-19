@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2020/08/24 05:44:33 tnn Exp $
+# $NetBSD: Makefile,v 1.123 2020/11/19 09:35:42 schmonz Exp $
 #
 
 DISTNAME=		notqmail-1.08
@@ -35,7 +35,6 @@ DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_SEND_USER:Q}     >> conf-users;
 DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_QMAIL_GROUP:Q}    > conf-groups;
 DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_NOFILES_GROUP:Q} >> conf-groups;
 DJB_BUILD_TARGETS=	man
-DJB_RESTRICTED=		no
 
 TEST_TARGET=		test
 #.include "../../devel/check/buildlink3.mk"

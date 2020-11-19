@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/02 10:53:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/19 09:35:42 schmonz Exp $
 
 DISTNAME=		qremote-20131231
 CATEGORIES=		mail
@@ -11,8 +11,6 @@ COMMENT=		Experimental qmail-remote replacement with CurveCP support
 LICENSE=		public-domain
 
 DEPENDS+=		{ucspi-tcp6-[0-9]*,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
-
-DJB_RESTRICTED=		no
 
 USE_LANGUAGES=		c c++
 

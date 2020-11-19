@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/06/25 05:42:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2020/11/19 09:35:42 schmonz Exp $
 
 DISTNAME=	djbfft-0.76
 CATEGORIES=	math
@@ -9,7 +9,6 @@ HOMEPAGE=	https://cr.yp.to/djbfft.html
 COMMENT=	Extremely fast library for floating-point convolution
 LICENSE=	public-domain
 
-DJB_RESTRICTED=		no
 NOT_FOR_PLATFORM=	IRIX-*-*
 
 SUBST_CLASSES+=		djberrno

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/07/18 13:31:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2020/11/19 09:35:40 schmonz Exp $
 #
 
 DISTNAME=		qtools-0.56
@@ -13,7 +13,6 @@ COMMENT=		Utilities for filtering via .qmail
 DEPENDS+=		{ezmlm>=0.53,ezmlm-idx-[0-9]*}:../../mail/ezmlm
 DEPENDS+=		qmail>=1.03:../../mail/qmail
 
-DJB_RESTRICTED=		NO
 DJB_CONFIG_CMDS=	${ECHO} ${LOCALBASE:Q} > ${WRKSRC}/conf-ezmlm
 
 SUBST_CLASSES+=		djberrno

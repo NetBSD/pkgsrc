@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2020/10/08 19:18:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.74 2020/11/19 09:35:39 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		15
@@ -15,8 +15,6 @@ MANPAGES=		${DISTNAME}-man-20031023.tar.gz
 SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 CONFLICTS+=		djbdnscurve6-[0-9]*
-
-DJB_RESTRICTED=		no
 
 SUBST_CLASSES+=		djberrno
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/06/25 05:42:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2020/11/19 09:35:41 schmonz Exp $
 #
 
 DISTNAME=		ezmlm-0.53
@@ -15,7 +15,6 @@ CONFLICTS=		ezmlm-idx-[0-9]*
 
 DEPENDS+=		qmail>=1.03:../../mail/qmail
 
-DJB_RESTRICTED=		no
 DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q} > conf-destdir
 DJB_BUILD_TARGETS=	install
 INSTALL_TARGET=		setup

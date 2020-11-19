@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/11/16 10:51:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/19 09:35:43 schmonz Exp $
 
 DISTNAME=		daemontools-encore-1.11
 PKGREVISION=		2
@@ -11,8 +11,6 @@ COMMENT=		Collection of tools for managing UNIX services
 LICENSE=		mit
 
 CONFLICTS+=		daemontools-[0-9]*
-
-DJB_RESTRICTED=		no
 
 MAKE_ENV+=		PKGSRC_SHELL=${TOOLS_PLATFORM.sh}
 TEST_TARGET=		rts

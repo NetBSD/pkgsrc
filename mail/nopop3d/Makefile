@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/10/30 10:19:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/19 09:35:41 schmonz Exp $
 
 DISTNAME=		notqmail-1.08
 PKGNAME=		nopop3d-20201030
@@ -11,8 +11,6 @@ COMMENT=		POP3 server for when you don't want mail
 LICENSE=		public-domain
 
 BUILD_TARGET=		${PKGBASE}
-
-DJB_RESTRICTED=		no
 
 INSTALLATION_DIRS=	bin
 
