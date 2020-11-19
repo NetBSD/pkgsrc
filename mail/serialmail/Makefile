@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/06/25 05:42:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2020/11/19 08:11:18 schmonz Exp $
 #
 
 DISTNAME=		serialmail-0.75
@@ -9,14 +9,11 @@ MASTER_SITES=		http://cr.yp.to/software/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://cr.yp.to/serialmail.html
 COMMENT=		Tools for passing mail across serial links
+LICENSE=		djb-nonlicense
 
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
-
-# We change conf-home from the default "/usr/local" and don't
-# provide compatibility symlinks. We also apply patches.
-DJB_RESTRICTED=		YES
 
 SUBST_CLASSES+=		djberrno
 
