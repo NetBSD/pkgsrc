@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/19 20:12:54 schmonz Exp $
+
+SHA1 (s6-networking-2.3.2.0.tar.gz) = 445d001d3cad598fdd505ed7f4155f9e917e76c0
+RMD160 (s6-networking-2.3.2.0.tar.gz) = b4d6c5966309682698f46f12f9d9694756d0b94c
+SHA512 (s6-networking-2.3.2.0.tar.gz) = 876005e3060493fb22efb59dcdc3392eb746454cf9c11c9c0ebdd6b24789db18e364039096a8a4168dcd4023b98e539d8489d490a0b7a24ddccc437f7076618d
+Size (s6-networking-2.3.2.0.tar.gz) = 87949 bytes
