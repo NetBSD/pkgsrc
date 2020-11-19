@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6243 2020/11/19 10:27:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6244 2020/11/19 10:37:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9171,3 +9171,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ruamel-ordereddict to 0.4.15 [adam 2020-11-19]
 	Updated devel/py-test-pylint to 0.18.0 [adam 2020-11-19]
 	Updated net/py-prometheus_client to 0.9.0 [adam 2020-11-19]
+	Updated archivers/lz4 to 1.9.3 [adam 2020-11-19]
+	Updated archivers/py-lz4 to 3.1.1 [adam 2020-11-19]
