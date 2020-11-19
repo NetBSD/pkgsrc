@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2020/11/06 15:06:49 nia Exp $
+# $NetBSD: Makefile,v 1.345 2020/11/19 15:08:03 kleink Exp $
 #
 
 COMMENT=	Fonts
@@ -694,6 +694,7 @@ SUBDIR+=	tex-pl
 SUBDIR+=	tex-pl-doc
 SUBDIR+=	tex-playfair
 SUBDIR+=	tex-playfair-doc
+SUBDIR+=	tex-plex
 SUBDIR+=	tex-prodint
 SUBDIR+=	tex-prodint-doc
 SUBDIR+=	tex-psnfss
