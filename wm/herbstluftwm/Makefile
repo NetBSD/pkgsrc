@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/06/09 10:59:31 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/19 12:09:52 nia Exp $
 
-DISTNAME=	herbstluftwm-0.8.3
+DISTNAME=	herbstluftwm-0.9.0
 CATEGORIES=	wm
 MASTER_SITES=	https://herbstluftwm.org/tarballs/
 
@@ -22,10 +22,15 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 REPLACE_BASH+=	share/dmenu_run_hlwm
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+PYTHON_FOR_BUILD_ONLY=	tool
+
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
