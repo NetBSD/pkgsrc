@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6252 2020/11/19 14:31:25 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6253 2020/11/19 15:07:38 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9181,3 +9181,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/syncthing to 1.11.1 [nia 2020-11-19]
 	Updated mail/thunderbird to 78.5.0 [ryoon 2020-11-19]
 	Updated mail/thunderbird-l10n to 78.5.0 [ryoon 2020-11-19]
+	Added fonts/tex-plex version 4.0.1 [kleink 2020-11-19]
