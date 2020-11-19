@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2020/01/03 08:27:43 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/19 10:21:38 adam Exp $
 
-DISTNAME=	ruamel.ordereddict-0.4.14
+DISTNAME=	ruamel.ordereddict-0.4.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruamel.ordereddict/}
 
 MAINTAINER=	gde@llew.me
-HOMEPAGE=	https://bitbucket.org/ruamel/ordereddict
+HOMEPAGE=	https://sourceforge.net/projects/ruamel-ordereddict/
 COMMENT=	Version of dict that keeps keys in insertion resp. sorted order
 LICENSE=	mit
 
