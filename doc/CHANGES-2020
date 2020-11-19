@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6257 2020/11/19 18:38:37 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6258 2020/11/19 19:24:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9186,3 +9186,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/dosbox-x to 0.83.7 [nia 2020-11-19]
 	Removed graphics/flickrnet [nia 2020-11-19]
 	Removed multimedia/gmediaserver [nia 2020-11-19]
+	Added lang/execline version 2.6.1.1 [schmonz 2020-11-19]
