@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/05 09:09:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/19 18:58:16 nia Exp $
 
 DISTNAME=	fd-find-8.1.1
 PKGREVISION=	1
@@ -15,6 +15,7 @@ COMMENT=	Simple, fast und user-friendly alternative to find
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.10
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
