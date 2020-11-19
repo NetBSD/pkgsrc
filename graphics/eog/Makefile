@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2020/11/12 09:44:00 nia Exp $
+# $NetBSD: Makefile,v 1.109 2020/11/19 19:28:49 nia Exp $
 
 DISTNAME=	eog-3.38.0
 CATEGORIES=	graphics gnome
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 PREV_PKGPATH=	graphics/eog3
 
 USE_TOOLS+=	msgfmt pkg-config xgettext
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 # some linux-only packaging thing
 MESON_ARGS+=	-Dlibportal=false
