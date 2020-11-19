@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/10/03 09:23:41 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/19 11:03:04 nia Exp $
 
-DISTNAME=	picom-8.1
+DISTNAME=	picom-8.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
