@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/10/18 12:42:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/19 09:35:39 schmonz Exp $
 
 DISTNAME=		tinydyndns-0.4.2
 DJBDNS_DISTNAME=	djbdns-1.05
@@ -21,8 +21,6 @@ USE_TOOLS+=		gmake
 MAKE_FILE=		Makefile.${PKGBASE}
 BUILD_TARGET=		${PKGBASE}
 INSTALL_TARGET=		install-${PKGBASE}
-
-DJB_RESTRICTED=		no
 
 SUBST_CLASSES+=		djberrno
 
