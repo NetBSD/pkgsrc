@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/18 14:17:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/19 09:35:40 schmonz Exp $
 
 DISTNAME=	ucspi-proxy-1.1
 CATEGORIES=	net
@@ -10,7 +10,6 @@ COMMENT=	Proxy between an UCSPI client and server
 LICENSE=	gnu-gpl-v2
 
 DJB_MAKE_TARGETS=	no
-DJB_RESTRICTED=		no
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
 
 .include "../../devel/bglibs/buildlink3.mk"

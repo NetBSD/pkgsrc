@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/10/26 09:45:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2020/11/19 09:35:43 schmonz Exp $
 
 DISTNAME=		fdtools-2020.05.04
 CATEGORIES=		sysutils
@@ -9,8 +9,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://code.dogmap.org./fdtools/
 COMMENT=		Manipulate file descriptor properties from shell scripts
 LICENSE=		gnu-gpl-v2
-
-DJB_RESTRICTED=		no
 
 WRKSRC=			${WRKDIR}/misc/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/18 15:18:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/19 09:35:39 schmonz Exp $
 
 DISTNAME=		ucspi-ipc-0.67
 CATEGORIES=		net sysutils
@@ -10,7 +10,6 @@ COMMENT=		UCSPI local-domain client-server command-line tools
 
 WRKSRC=			${WRKDIR}/host/superscript.com/net/${DISTNAME}
 DJB_SLASHPACKAGE=	yes
-DJB_RESTRICTED=		no
 
 BUILD_DEFS+=		VARBASE
 

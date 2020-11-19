@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/06/26 16:37:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2020/11/19 09:35:38 schmonz Exp $
 #
 
 DISTNAME=		libtai-0.60
@@ -12,8 +12,6 @@ COMMENT=		Library for storing and manipulating dates and times
 LICENSE=		public-domain
 
 CONFLICTS=		libowfat<0.32nb1
-
-DJB_RESTRICTED=		NO
 
 EGDIR=			share/examples/${PKGBASE}
 
