@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6264 2020/11/20 08:10:07 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6265 2020/11/20 12:39:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9193,3 +9193,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/s6-networking version 2.3.2.0 [schmonz 2020-11-19]
 	Added misc/s6-portable-utils version 2.2.3.0 [schmonz 2020-11-19]
 	Updated x11/xprop to 1.2.5 [wiz 2020-11-20]
+	Updated games/easyrpg-player to 0.6.2.3 [nia 2020-11-20]
