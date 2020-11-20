@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6277 2020/11/20 17:59:27 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6278 2020/11/20 18:11:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9206,3 +9206,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/gnuplot to 5.4.0 [prlw1 2020-11-20]
 	Updated devel/libatomic to 10.2.0 [wiz 2020-11-20]
 	Updated security/polkit to 0.118 [wiz 2020-11-20]
+	Updated mail/mutt to 2.0.2 [tron 2020-11-20]
