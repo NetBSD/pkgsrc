@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 20:57:09 agc Exp $
+$NetBSD: distinfo,v 1.9 2020/11/20 15:15:24 nia Exp $
 
-SHA1 (xscorch-0.2.0.tar.gz) = b6d36e2b68e86e1f828d1312bf7789afd4085386
-RMD160 (xscorch-0.2.0.tar.gz) = 243a97eaadd6b29c354c6e0fe679055c0cdb53e2
-SHA512 (xscorch-0.2.0.tar.gz) = 5f35d4889d5deedea17544efd3263cc71821d38e278658887c38f5e83c91f1ef2b773c7b625b61b2f8a74120059d4899a1676c69f5cd643a84338b43b5255ac6
-Size (xscorch-0.2.0.tar.gz) = 818449 bytes
-SHA1 (patch-aa) = d30e33fcf5ccf8a8207524251a16b3912f6a0721
-SHA1 (patch-ac) = 812b75dda107434dd0ea38fd141560b22e8b368e
-SHA1 (patch-ad) = 9526c5cf549c431e189ff8e2d6ef275ce3045e65
+SHA1 (xscorch_0.2.1.orig.tar.gz) = 07f903e3767c1d6b7ad6fde2ea72ed58a597646a
+RMD160 (xscorch_0.2.1.orig.tar.gz) = ac8688e40162834db064c2aa18f904748ef56d0e
+SHA512 (xscorch_0.2.1.orig.tar.gz) = 69eeba82dc128221ae46c185a5d830cf4ce3a4e6371b51c3e7d1f79a6dfa389069759d872e6704ab2f60ff2963c6340525e74bddc937f2a0b0b386985c699d0e
+Size (xscorch_0.2.1.orig.tar.gz) = 849773 bytes
+SHA1 (patch-libj_jstr_str__trim.c) = a20309b8d5f3945e3256d7a2bb207bdb2dd7b6b4
+SHA1 (patch-sgtk_sgtk.h) = 4c97786f6160f452202a6c89d60c9c5ae2a4a7f7
