@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.21 2017/11/03 15:00:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/11/20 17:25:02 prlw1 Exp $
 bin/gnuplot
 ${PLIST.qt}libexec/gnuplot/${API_VERSION}/gnuplot_qt
 ${PLIST.x11}libexec/gnuplot/${API_VERSION}/gnuplot_x11
-man/man1/gnuplot-ja.1
 man/man1/gnuplot.1
 share/gnuplot/${API_VERSION}/PostScript/8859-1.ps
 share/gnuplot/${API_VERSION}/PostScript/8859-15.ps
@@ -34,6 +33,7 @@ share/gnuplot/${API_VERSION}/js/gnuplot_dashedlines.js
 share/gnuplot/${API_VERSION}/js/gnuplot_mouse.css
 share/gnuplot/${API_VERSION}/js/gnuplot_mouse.js
 share/gnuplot/${API_VERSION}/js/gnuplot_svg.js
+share/gnuplot/${API_VERSION}/js/gnuplot_svg_2018.js
 share/gnuplot/${API_VERSION}/js/grid.png
 share/gnuplot/${API_VERSION}/js/help.png
 share/gnuplot/${API_VERSION}/js/nextzoom.png
@@ -43,3 +43,7 @@ share/gnuplot/${API_VERSION}/js/textzoom.png
 share/gnuplot/${API_VERSION}/lua/gnuplot-tikz.lua
 ${PLIST.qt}share/gnuplot/${API_VERSION}/qt/qtgnuplot_fr.qm
 ${PLIST.qt}share/gnuplot/${API_VERSION}/qt/qtgnuplot_ja.qm
+${PLIST.lua}share/texmf-dist/tex/context/gnuplot/t-gnuplot-lua-tikz.tex
+${PLIST.lua}share/texmf-dist/tex/generic/gnuplot/gnuplot-lua-tikz-common.tex
+${PLIST.lua}share/texmf-dist/tex/generic/gnuplot/gnuplot-lua-tikz.tex
+${PLIST.lua}share/texmf-dist/tex/latex/gnuplot/gnuplot-lua-tikz.sty
