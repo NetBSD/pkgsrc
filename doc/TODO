@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20199 2020/11/20 18:00:48 wiz Exp $
+$NetBSD: TODO,v 1.20200 2020/11/20 18:13:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -846,7 +846,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opal-3.16.2
 	o openafs-1.8
 	o opencsg-1.4.0
-	o openexr-2.5.3
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openoffice-4.1.7
