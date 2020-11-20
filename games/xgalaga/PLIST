@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/11/20 13:50:23 nia Exp $
 bin/xgalaga
-libexec/xgalaga.sndsrv
-share/xgalaga/README
+bin/xgalaga-hyperspace
+libexec/xgal.sndsrv
+man/man6/xgalaga.6x
+share/doc/xgalaga/CREDITS
+share/doc/xgalaga/README
 share/xgalaga/levels/level1.xgl
 share/xgalaga/levels/level10.xgl
 share/xgalaga/levels/level11.xgl
@@ -17,7 +20,6 @@ share/xgalaga/levels/level6.xgl
 share/xgalaga/levels/level7.xgl
 share/xgalaga/levels/level8.xgl
 share/xgalaga/levels/level9.xgl
-share/xgalaga/scores
 share/xgalaga/sounds/ddloo.raw
 share/xgalaga/sounds/explode.raw
 share/xgalaga/sounds/explode_big.raw
@@ -26,4 +28,3 @@ share/xgalaga/sounds/shield.raw
 share/xgalaga/sounds/smart.raw
 share/xgalaga/sounds/torphit.raw
 share/xgalaga/sounds/warp.raw
-@unexec ${RM} -f %D/share/xgalaga/scores
