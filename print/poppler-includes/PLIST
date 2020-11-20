@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.22 2020/03/04 15:51:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/11/20 19:08:06 wiz Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
+include/poppler/BBoxOutputDev.h
 include/poppler/CMap.h
 include/poppler/CachedFile.h
 include/poppler/CairoFontEngine.h
@@ -32,6 +33,7 @@ include/poppler/JArithmeticDecoder.h
 include/poppler/JBIG2Stream.h
 include/poppler/JPEG2000Stream.h
 include/poppler/JPXStream.h
+include/poppler/JSInfo.h
 include/poppler/Lexer.h
 include/poppler/Linearization.h
 include/poppler/Link.h
