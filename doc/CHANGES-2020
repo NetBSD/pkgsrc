@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6281 2020/11/20 18:25:16 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6282 2020/11/20 19:08:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9210,3 +9210,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/openexr to 2.5.3 [wiz 2020-11-20]
 	Updated graphics/ilmbase to 2.5.3 [wiz 2020-11-20]
 	Updated graphics/libv4l to 1.20.0 [wiz 2020-11-20]
+	Updated print/poppler to 20.11.0 [wiz 2020-11-20]
