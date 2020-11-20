@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6274 2020/11/20 17:16:12 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6275 2020/11/20 17:29:28 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9203,3 +9203,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/xscorch to 0.2.1 [nia 2020-11-20]
 	Updated mail/neomutt to 20201120 [wiz 2020-11-20]
 	Updated net/gh to 1.2.1 [leot 2020-11-20]
+	Updated graphics/gnuplot to 5.4.0 [prlw1 2020-11-20]
