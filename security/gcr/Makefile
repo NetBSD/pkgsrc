@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/11/17 12:25:16 nia Exp $
+# $NetBSD: Makefile,v 1.14 2020/11/20 11:35:35 nia Exp $
 
 DISTNAME=		gcr-3.38.0
 CATEGORIES=		security
@@ -15,7 +15,8 @@ BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config aclocal autoconf automake
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		aclocal autoconf automake autopoint
 
 CONFIGURE_ARGS+=	--enable-vala
 CONFIGURE_ARGS+=	--enable-gtk-doc
