@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.2 2020/01/21 14:16:26 taca Exp $
+# $NetBSD: Makefile.php,v 1.3 2020/11/20 15:13:31 otis Exp $
 # used by lang/php74/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -53,7 +53,7 @@ CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 #CONFIGURE_ARGS+=	--with-pcre-regex=${BUILDLINK_PREFIX.pcre2}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 php-embed
 PKG_SUPPORTED_OPTIONS+=	disable-filter-url
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline
 
@@ -107,6 +107,20 @@ CONFIGURE_ARGS+=	--with-password-argon2=${BUILDLINK_PREFIX.argon2}
 
 .if !empty(PKG_OPTIONS:Mdisable-filter-url)
 CFLAGS+=		-DDISABLE_FILTER_URL
+.endif
+
+PLIST_VARS+=    embed
+
+.if !empty(PKG_OPTIONS:Mphp-embed)
+CONFIGURE_ARGS+=	--enable-embed
+INSTALLATION_DIRS+=	include/php/sapi/embed
+PLIST.embed=		yes
+
+.PHONY: post-install-embed
+post-install: post-install-embed
+post-install-embed:
+	${INSTALL_DATA} ${WRKSRC}/sapi/embed/php_embed.h ${DESTDIR}${PREFIX}/include/php/sapi/embed/
+	${INSTALL_LIB} ${WRKSRC}/libs/libphp7.so ${DESTDIR}${PREFIX}/lib/
 .endif
 
 DL_AUTO_VARS=		yes
