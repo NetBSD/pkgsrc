@@ -1,4 +1,4 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.2 2020/10/22 20:29:44 tnn Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.3 2020/11/20 05:55:02 riastradh Exp $
 
 Add NetBSD support -- same USB HID API as OpenBSD.
 
@@ -9,7 +9,7 @@ Add NetBSD support -- same USB HID API as OpenBSD.
  elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
  	list(APPEND FIDO_SOURCES hid_linux.c)
 +elseif(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
-+	list(APPEND FIDO_SOURCES hid_openbsd.c)
++	list(APPEND FIDO_SOURCES hid_netbsd.c)
  elseif(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
  	list(APPEND FIDO_SOURCES hid_openbsd.c)
  else()
