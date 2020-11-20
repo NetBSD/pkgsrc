@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6280 2020/11/20 18:13:40 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6281 2020/11/20 18:25:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9209,3 +9209,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/mutt to 2.0.2 [tron 2020-11-20]
 	Updated graphics/openexr to 2.5.3 [wiz 2020-11-20]
 	Updated graphics/ilmbase to 2.5.3 [wiz 2020-11-20]
+	Updated graphics/libv4l to 1.20.0 [wiz 2020-11-20]
