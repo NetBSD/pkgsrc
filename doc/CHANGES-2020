@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6275 2020/11/20 17:29:28 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.6276 2020/11/20 17:49:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9204,3 +9204,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20201120 [wiz 2020-11-20]
 	Updated net/gh to 1.2.1 [leot 2020-11-20]
 	Updated graphics/gnuplot to 5.4.0 [prlw1 2020-11-20]
+	Updated devel/libatomic to 10.2.0 [wiz 2020-11-20]
