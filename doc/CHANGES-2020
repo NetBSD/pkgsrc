@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6266 2020/11/20 13:22:22 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6267 2020/11/20 13:50:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9195,3 +9195,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xprop to 1.2.5 [wiz 2020-11-20]
 	Updated games/easyrpg-player to 0.6.2.3 [nia 2020-11-20]
 	Updated net/rclone to 1.53.3 [leot 2020-11-20]
+	Updated games/xgalaga to 2.1.1.0 [nia 2020-11-20]
