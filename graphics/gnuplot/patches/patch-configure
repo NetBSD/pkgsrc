@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.1 2017/11/03 15:00:10 adam Exp $
+$NetBSD: patch-configure,v 1.2 2020/11/20 17:25:02 prlw1 Exp $
 
 NetBSD editline keeps header files in "readline", not "editline".
 Same applies to DragonFly.
 
 Also get rid of a non-portable "test ... ==" instance.
 
---- configure.orig	2017-10-15 02:45:26.000000000 +0000
+--- configure.orig	2020-07-13 03:38:14.000000000 +0000
 +++ configure
-@@ -8891,7 +8891,7 @@ $as_echo "yes" >&6; }
+@@ -8969,7 +8969,7 @@ $as_echo "yes" >&6; }
  
  # Check whether --with-aquaterm was given.
  if test "${with_aquaterm+set}" = set; then :
@@ -16,7 +16,7 @@ Also get rid of a non-portable "test ... ==" instance.
  
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for AquaTerm framework presence" >&5
  $as_echo_n "checking for AquaTerm framework presence... " >&6; }
-@@ -10189,9 +10189,9 @@ fi
+@@ -10185,9 +10185,9 @@ fi
  
  $as_echo "#define HAVE_LIBEDITLINE 1" >>confdefs.h
  
@@ -28,7 +28,7 @@ Also get rid of a non-portable "test ... ==" instance.
  if test "x$ac_cv_header_editline_readline_h" = xyes; then :
    cat >>confdefs.h <<_ACEOF
  #define HAVE_EDITLINE_READLINE_H 1
-@@ -16679,7 +16679,7 @@ $as_echo "    tek40xx, tek410x, texdraw,
+@@ -16582,7 +16584,7 @@ $as_echo "    pict2e, pslatex, pstex, ps
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: " >&5
  $as_echo "" >&6; }
  
@@ -37,21 +37,39 @@ Also get rid of a non-portable "test ... ==" instance.
    { $as_echo "$as_me:${as_lineno-$LINENO}: result:   dot-matrix terminals: yes ( --without-bitmap-terminals to disable)" >&5
  $as_echo "  dot-matrix terminals: yes ( --without-bitmap-terminals to disable)" >&6; }
  else
-@@ -16756,7 +16756,7 @@ else
- $as_echo "  ggi terminal: no (use --with-ggi to enable, requires libggi)" >&6; }
+@@ -16596,7 +16598,7 @@ $as_echo "    hp500c, hpdj, hpljii, hppj
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: " >&5
+ $as_echo "" >&6; }
+ 
+-if test "$with_tektronix" == no; then
++if test "$with_tektronix" = no; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result:   tektronix terminal emulators: no ( --with-tektronix to enable)" >&5
+ $as_echo "  tektronix terminal emulators: no ( --with-tektronix to enable)" >&6; }
+ else
+@@ -16626,7 +16628,7 @@ else
+ $as_echo "    ggi terminal:  no   (use --with-ggi to enable, requires libggi)" >&6; }
  fi
  
 -if test "$with_gpic" == yes; then
 +if test "$with_gpic" = yes; then
-   { $as_echo "$as_me:${as_lineno-$LINENO}: result:   gpic terminal: yes" >&5
- $as_echo "  gpic terminal: yes" >&6; }
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result:     gpic terminal: yes" >&5
+ $as_echo "    gpic terminal: yes" >&6; }
  else
-@@ -16764,7 +16764,7 @@ else
- $as_echo "  gpic terminal: no   (use --with-gpic to enable)" >&6; }
+@@ -16634,7 +16636,7 @@ else
+ $as_echo "    gpic terminal: no   (use --with-gpic to enable)" >&6; }
+ fi
+ 
+-if test "$with_tgif" == yes; then
++if test "$with_tgif" = yes; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result:     tgif terminal: yes" >&5
+ $as_echo "    tgif terminal: yes" >&6; }
+ else
+@@ -16642,7 +16644,7 @@ else
+ $as_echo "    tgif terminal: no   (use --with-tgif to enable)" >&6; }
  fi
  
 -if test "$with_mif" == yes; then
 +if test "$with_mif" = yes; then
-   { $as_echo "$as_me:${as_lineno-$LINENO}: result:   mif terminal: yes" >&5
- $as_echo "  mif terminal: yes" >&6; }
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result:     mif terminal (FrameMaker 3): yes" >&5
+ $as_echo "    mif terminal (FrameMaker 3): yes" >&6; }
  else
