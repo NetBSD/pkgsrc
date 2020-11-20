@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile,v 1.1 2020/11/20 14:36:07 nia Exp $
+
+Fix "unable to infer tagged configuration" errors.
+
+--- Makefile.orig	2020-11-20 14:32:34.148457790 +0000
++++ Makefile
+@@ -26,7 +26,7 @@ RM?=		rm
+ .PHONY: all clean install
+ 
+ .c.lo:
+-	${LIBTOOL} --mode=compile ${CC} -o $@ -c ${CFLAGS} ${CPPFLAGS} $<
++	${LIBTOOL} --mode=compile --tag=CC ${CC} -o $@ -c ${CFLAGS} ${CPPFLAGS} $<
+ 
+ all: ${LIB}.la
+ 
+@@ -39,5 +39,5 @@ install:
+ 	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${LIB}.la ${DESTDIR}${LIBDIR}/${LIB}.la
+ 
+ ${LIB}.la: ${OBJS}
+-	${LIBTOOL} --mode=link ${CC} -o $@ ${CFLAGS} ${LDFLAGS} \
++	${LIBTOOL} --mode=link --tag=CC ${CC} -o $@ ${CFLAGS} ${LDFLAGS} \
+ 	    -rpath ${LIBDIR} -version-info ${LIB_VER} ${OBJS} ${LIBS}
