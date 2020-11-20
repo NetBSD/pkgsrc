@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/20 11:40:09 nia Exp $
 
 GST_PLUGINS1_NAME=	oss
 GST_PLUGINS1_DIRS=	sys/oss
@@ -15,4 +15,9 @@ SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 LIBS+=			${LIBOSSAUDIO}
 
 .include "../../mk/oss.buildlink3.mk"
+
+.if ${OSS_TYPE} == "none"
+PKG_SKIP_REASON+=	"No OSS implementation available."
+.endif
+
 .include "../../mk/bsd.pkg.mk"
