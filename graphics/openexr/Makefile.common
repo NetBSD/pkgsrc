@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2020/05/21 20:58:32 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/11/20 18:13:18 wiz Exp $
 # used by graphics/ilmbase/Makefile
 
-DISTNAME=	openexr-2.5.1
+DISTNAME=	openexr-2.5.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openexr/}
 GITHUB_PROJECT=	openexr

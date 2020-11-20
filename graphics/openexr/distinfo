@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.34 2020/05/21 20:58:32 ryoon Exp $
+$NetBSD: distinfo,v 1.35 2020/11/20 18:13:18 wiz Exp $
 
-SHA1 (openexr-2.5.1.tar.gz) = c32ffdf5a2f11e588562c268c873f96fa5ab8c1c
-RMD160 (openexr-2.5.1.tar.gz) = 5a12003fda09e145964a9235a1a56767455aab1e
-SHA512 (openexr-2.5.1.tar.gz) = d7ff156481a0b0c26282b5b839e8d88e3f19a9d11c8d16113faa38409145670b379d8c5629efa2c6bd7719e095c07fe2bcd9fc8bedd15f48da77c1ce94705714
-Size (openexr-2.5.1.tar.gz) = 27522285 bytes
+SHA1 (openexr-2.5.3.tar.gz) = 29ca69ddea74aa14a580140646adeea1e0427842
+RMD160 (openexr-2.5.3.tar.gz) = febfd4a4f840167520ec7fb4d56bd892c6b0b19c
+SHA512 (openexr-2.5.3.tar.gz) = 6da03193d4fea1e97e35008f59304ab408c521ead8495ba411cde5c172cf953be97999971f57398b813d14f1af1d722539a6b74d5ee54b9e74769ea8258d36ba
+Size (openexr-2.5.3.tar.gz) = 27534825 bytes
 SHA1 (patch-OpenEXR_IlmImf_ImfSystemSpecific.h) = a07e8ba50084e642a2f53371cdc53738b3e75995
