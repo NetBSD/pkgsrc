@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20201 2020/11/20 18:13:40 wiz Exp $
+$NetBSD: TODO,v 1.20202 2020/11/20 18:25:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -754,7 +754,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-3.2.0
 	o libtecla-1.6.3
-	o libv4l-1.20.0
 	o libvirt-2.3
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
