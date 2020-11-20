@@ -1,17 +1,10 @@
-$NetBSD: distinfo,v 1.13 2017/03/23 17:06:52 joerg Exp $
+$NetBSD: distinfo,v 1.14 2020/11/20 13:50:23 nia Exp $
 
-SHA1 (xgalaga-2.0.34.tar.gz) = 82dcb328af0d9e779c566f4225d7f072b1c17b7d
-RMD160 (xgalaga-2.0.34.tar.gz) = bf2cc91820c1cdb8e02bd35347b309cac27b3ba4
-SHA512 (xgalaga-2.0.34.tar.gz) = 90cdc8a911e7de1d15af65ab100273d39c26a15761e7c3bc977eb3d55920f1a5b962a69d0a494d5c29ea28b724f8c69856955431de420f205fc638e88c3d62b0
-Size (xgalaga-2.0.34.tar.gz) = 314189 bytes
-SHA1 (patch-aa) = 63dc49d79e33ba4eaf596e600cdfaa1d00d70bce
-SHA1 (patch-ab) = 97bd43c07f76278245730bbc9724497ab87e552d
-SHA1 (patch-ac) = ca85bafaa637fc03d1c53a527c7804a95c146fe3
-SHA1 (patch-ad) = 22b946b261c4d0969e48bf5de1ba0d55c3649bb8
-SHA1 (patch-ae) = 2e9f31a279aa5ecd14a0843dc18d151e7990aed0
-SHA1 (patch-af) = 83856e8718bcbe6f40b4c156199c4db56cdf8777
-SHA1 (patch-ag) = 0e4270a29bac33ae21e5a837feb7fe87fa650173
-SHA1 (patch-ah) = 88bb0385cc1091eae83475fa26296419095f10a6
-SHA1 (patch-ai) = 21dc08a4d6d04fca2a374034b79de8ab9c953793
-SHA1 (patch-aj) = d1577211627e280aef977ff7c1cf2b48c02f1c3f
-SHA1 (patch-ak) = ef0077094fb3814c0b83f8dd274dc620e8e34f61
+SHA1 (xgalaga-2.1.1.0.tar.gz) = ef40ad833d2434b0643d4c00202bd75ec14b94ac
+RMD160 (xgalaga-2.1.1.0.tar.gz) = b55a97187b61ffe7c072ecd784cf9a16fe568c26
+SHA512 (xgalaga-2.1.1.0.tar.gz) = 087db9e0501cedb042bb673a217f9de32640d3e4f4f529a29fd25ed682a1aece9ae1beacdc2ee77fc93ac931411a1051e2cd19873578ccffe5f03a083bffe513
+Size (xgalaga-2.1.1.0.tar.gz) = 331621 bytes
+SHA1 (patch-Makefile.in) = f8eacc067c760dd5071fc9799a4587c6ee2b0a2c
+SHA1 (patch-configure) = 695098c4ea95139496d2dfb76dcf7164943c3f64
+SHA1 (patch-main.c) = a2743012bd84882c728f90990a1ec586273724ba
+SHA1 (patch-title.c) = cd94537f8ebcedf737af4208686f80bb42da00e7
