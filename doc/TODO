@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20198 2020/11/20 17:59:27 wiz Exp $
+$NetBSD: TODO,v 1.20199 2020/11/20 18:00:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gfract-0.33
 	o ghdl-0.33
-	o git-base-2.29.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
