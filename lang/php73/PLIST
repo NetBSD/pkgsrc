@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/15 17:12:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/20 15:34:11 otis Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -259,6 +259,8 @@ include/php/main/streams/php_stream_transport.h
 include/php/main/streams/php_stream_userspace.h
 include/php/main/streams/php_streams_int.h
 include/php/sapi/cli/cli.h
+${PLIST.embed}include/php/sapi/embed/php_embed.h
+${PLIST.embed}lib/libphp7.so
 lib/php/build/Makefile.global
 lib/php/build/acinclude.m4
 lib/php/build/ax_check_compile_flag.m4
