@@ -1,0 +1,28 @@
+$NetBSD: patch-configure,v 1.1 2020/11/20 13:50:23 nia Exp $
+
+Correct installation paths.
+
+--- configure.orig	2008-03-05 21:58:16.000000000 +0000
++++ configure
+@@ -4664,10 +4664,10 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define SOUNDDIR "$prefix/sounds/"
++#define SOUNDDIR "$prefix/share/xgalaga/sounds/"
+ _ACEOF
+ 
+-CREDITSFILE="$prefix/CREDITS"
++CREDITSFILE="$prefix/share/doc/xgalaga/CREDITS"
+ cat >>confdefs.h <<_ACEOF
+ #define CREDITSFILE "$CREDITSFILE"
+ _ACEOF
+@@ -4677,7 +4677,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define LEVELDIR "$prefix/levels/"
++#define LEVELDIR "$prefix/share/xgalaga/levels/"
+ _ACEOF
+ 
+ 
