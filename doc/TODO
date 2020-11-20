@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20194 2020/11/17 16:12:12 wiz Exp $
+$NetBSD: TODO,v 1.20195 2020/11/20 14:55:02 nia Exp $
 
 Suggested new packages
 ======================
@@ -792,7 +792,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mcollective-2.3.2
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
-	o mednafen-1.26.1
 	o memached-1.5.6
 	o merkaator-0.18.3
 	o mesure-0.7.2

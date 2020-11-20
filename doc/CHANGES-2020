@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6270 2020/11/20 14:39:04 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6271 2020/11/20 14:55:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9199,3 +9199,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xdesktopwaves to 1.4 [nia 2020-11-20]
 	Updated www/webkit-gtk to 2.30.3 [leot 2020-11-20]
 	Updated news/sfeed to 0.9.20 [leot 2020-11-20]
+	Updated emulators/mednafen to 1.26.1 [nia 2020-11-20]
