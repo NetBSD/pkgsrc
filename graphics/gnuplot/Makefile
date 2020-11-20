@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.147 2020/11/05 09:08:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.148 2020/11/20 17:25:02 prlw1 Exp $
 
-DISTNAME=	gnuplot-5.2.8
-PKGREVISION=	11
+DISTNAME=	gnuplot-5.4.0
 CATEGORIES+=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gnuplot.sourceforge.net/
+HOMEPAGE=	http://gnuplot.info/
 COMMENT=	Portable interactive, function plotting utility
 #LICENSE=	gnuplot + BSD
 
@@ -18,20 +17,12 @@ USE_LANGUAGES=		c
 USE_TOOLS+=		makeinfo pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-latex
-CONFIGURE_ARGS+=	--without-tutorial
 CONFIGURE_ARGS+=	ac_cv_prog_EMACS=
 INFO_FILES=		yes
 TEST_TARGET=		check
 
 PLIST_SUBST+=		API_VERSION=${API_VERSION}
 LDFLAGS.SunOS+=		-liconv
-
-# Make this available to patch-src_variable.c so the font path can include pkgsrc fonts.
-SUBST_CLASSES+=		fontpath
-SUBST_STAGE.fontpath=	pre-configure
-SUBST_MESSAGE.fontpath=	Fixing font path.
-SUBST_FILES.fontpath=	src/variable.c
-SUBST_SED.fontpath=	-e 's,@PKGSRC_PREFIX@,"${PREFIX}",'
 
 .include "options.mk"
 
