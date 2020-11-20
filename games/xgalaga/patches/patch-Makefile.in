@@ -1,0 +1,61 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/11/20 13:50:23 nia Exp $
+
+Correct installation paths.
+
+--- Makefile.in.orig	2008-03-05 21:58:16.000000000 +0000
++++ Makefile.in
+@@ -11,12 +11,13 @@ VPATH = @srcdir@
+ .SUFFIXES: .c .o
+ 
+ prefix = @prefix@
++datadir = @datadir@/xgalaga
++docdir = @docdir@/xgalaga
+ exec_prefix = @exec_prefix@
+ bindir = $(exec_prefix)
+ libdir = $(prefix)/lib
+ infodir = $(prefix)/info
+-#mandir = @mandir@
+-mandir = /usr/share/man
++mandir = @mandir@
+ creditsfile = @CREDITSFILE@
+ distversion = 2.1.1.0
+ 
+@@ -27,11 +28,11 @@ SOUNDSRVDIR = @SOUNDSRVDIR@
+ SOUNDOBJS = xgal.sndsrv.linux.o
+ SOUNDSRCS = xgal.sndsrv.linux.c
+ 
+-SOUNDDEFS = -DSOUNDSERVER=\"$(prefix)$(SOUNDSRVDIR)/@SOUNDSERVER@\"
++SOUNDDEFS = -DSOUNDSERVER=\"$(prefix)$(SOUNDSRVDIR)/xgal.sndsrv\"
+ 
+ RM = rm -f
+ CC = @CC@
+-CFLAGS = -I. @CFLAGS@ @DEFS@ @X_CFLAGS@ -DXGALAGADIR=\"@prefix@/\" $(SOUNDDEFS)
++CFLAGS = -I. @CFLAGS@ @DEFS@ @X_CFLAGS@ -DXGALAGADIR=\"@datadir@/xgalaga/levels\" $(SOUNDDEFS)
+ LDFLAGS = @LDFLAGS@
+ LIBS = libsprite/libsprite.a @LIBS@ @X_LIBS@
+ INSTALL = @INSTALL@
+@@ -58,15 +59,16 @@ install: all
+ 	$(INSTALL) $(TARGET) $(DESTDIR)$(bindir)/$(TARGET)
+ 	$(INSTALL) $(TARGET2) $(DESTDIR)$(bindir)/$(TARGET2)
+ 	if test ! "$(SOUNDSRV)" = ""; then \
+-		$(INSTALL) $(SOUNDSRV) $(DESTDIR)$(prefix)$(SOUNDSRVDIR)/$(SOUNDSRV); \
++		$(INSTALL) $(SOUNDSRV) $(DESTDIR)$(prefix)$(SOUNDSRVDIR)/xgal.sndsrv; \
+ 	fi
+-	./mkinstalldirs $(DESTDIR)$(prefix)/sounds
+-	./mkinstalldirs $(DESTDIR)$(prefix)/levels
+-	for i in levels/*.xgl; do $(INSTALL) $$i $(DESTDIR)$(prefix)/$$i ; done
+-	for i in sounds/*.raw; do $(INSTALL) $$i $(DESTDIR)$(prefix)/$$i ; done
+-	$(INSTALL) CREDITS $(DESTDIR)$(creditsfile)
+-	$(INSTALL) xgalaga.6x.gz $(mandir)/man6/xgalaga.6x.gz
+-	chmod 644 $(mandir)/man6/xgalaga.6x.gz
++	./mkinstalldirs $(DESTDIR)$(datadir)/sounds
++	./mkinstalldirs $(DESTDIR)$(datadir)/levels
++	for i in levels/*.xgl; do $(INSTALL) $$i $(DESTDIR)$(datadir)/$$i ; done
++	for i in sounds/*.raw; do $(INSTALL) $$i $(DESTDIR)$(datadir)/$$i ; done
++	./mkinstalldirs $(DESTDIR)$(docdir)
++	$(INSTALL) CREDITS $(DESTDIR)$(docdir)/CREDITS
++	$(INSTALL) xgalaga.6x $(DESTDIR)$(mandir)/man6/xgalaga.6x
++	chmod 644 $(DESTDIR)$(mandir)/man6/xgalaga.6x
+ #	touch $(prefix)/scores
+ #	chmod 666 $(prefix)/scores
+ #       chown ${GAMEOWN}:${GAMEGRP} $(prefix)/scores
