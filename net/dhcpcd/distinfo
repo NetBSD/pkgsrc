@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.104 2020/11/01 14:27:43 roy Exp $
+$NetBSD: distinfo,v 1.105 2020/11/20 13:27:23 roy Exp $
 
-SHA1 (dhcpcd-9.3.2.tar.xz) = f892116d9c929258352a7b979d24139c626093df
-RMD160 (dhcpcd-9.3.2.tar.xz) = 0446554d525a466f04c38bf9f06daa930402ae72
-SHA512 (dhcpcd-9.3.2.tar.xz) = f7e5b060e8b5cd65e6d1660a79d444e066dd8a6c492cc44b9522577687a93d944227ad3ff840ac0f65a9aa725ca1a79a7178330d8445b808409e215ba7f042b0
-Size (dhcpcd-9.3.2.tar.xz) = 254476 bytes
+SHA1 (dhcpcd-9.3.3.tar.xz) = 38b97444f2cec79585684bf891f94be83dd5d57a
+RMD160 (dhcpcd-9.3.3.tar.xz) = d4763702b1471f0905d76b9f4a8bda7873d57b2b
+SHA512 (dhcpcd-9.3.3.tar.xz) = 1ff58107fe7e45a42c8da32ce6554244c1cac289e0c207f7dd29f5fcab1a2aadd66434604cd35e979e0aa138de9d968e9360b5339d3f233e6c1a83d7a20799c4
+Size (dhcpcd-9.3.3.tar.xz) = 254972 bytes
