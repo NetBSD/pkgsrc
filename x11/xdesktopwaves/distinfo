@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 03:28:59 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/11/20 14:26:47 nia Exp $
 
-SHA1 (xdesktopwaves-1.3.tar.gz) = 96ec1ffcc163526901987c82549683b48cff0f14
-RMD160 (xdesktopwaves-1.3.tar.gz) = 9f0756ca3cb836ed8f0505ec1214631dbf97ed09
-SHA512 (xdesktopwaves-1.3.tar.gz) = 7dd3eb4f3a9291e9afab7aab7385cc271af2754adecde85ef3a2dfbc6a0bd96bab440cdb9f34cabb9e7c6d9ee25cdc64bf57ba7edc4df03f344b5b10404cd52e
-Size (xdesktopwaves-1.3.tar.gz) = 49302 bytes
+SHA1 (xdesktopwaves-1.4.tar.gz) = f299e165560fa55fd4968c1466887324b39274c2
+RMD160 (xdesktopwaves-1.4.tar.gz) = 8e0b9846136044bac84ea0bd777b7804bb648a85
+SHA512 (xdesktopwaves-1.4.tar.gz) = 06ec5bea51737d066beccad57db63ef7e56e59c18bb7c1dcaf06f6691940ac32a32b7cd06d9e3f16ad472e3d793c391b072a753e0088ab71ae7304b20b2fa3ba
+Size (xdesktopwaves-1.4.tar.gz) = 50259 bytes
