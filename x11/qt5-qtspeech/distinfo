@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/09/14 20:08:29 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/11/21 11:22:34 adam Exp $
 
-SHA1 (qtspeech-everywhere-src-5.15.1.tar.xz) = 45b6983ec116b07857ad8fc9e65737f248af851f
-RMD160 (qtspeech-everywhere-src-5.15.1.tar.xz) = c98bf09b66b95520960b268427d16e307d2c0c55
-SHA512 (qtspeech-everywhere-src-5.15.1.tar.xz) = 0e2c82ea72b5bff5b36f3d833d80dec68b39f3b9c3ca4d9c9fa29f0419a45dfb19ac59fb105136c551f6bbe60ad32af0f4aaa6abafb5bc61bc5d85ecb94b326f
-Size (qtspeech-everywhere-src-5.15.1.tar.xz) = 101772 bytes
+SHA1 (qtspeech-everywhere-src-5.15.2.tar.xz) = bd6b1308cf4feeb0dcafc3dd1b618285c1ab98d4
+RMD160 (qtspeech-everywhere-src-5.15.2.tar.xz) = 9efc8eab42c13fcbdb424069c3861246aacb9269
+SHA512 (qtspeech-everywhere-src-5.15.2.tar.xz) = 78a13218a639276c9b253566a1df52e2363847eac76df3962ba2a7178800206beb57859d22c7c99fa1579cb3aa7ab94baed1a6319ba946d4a64cba9e3bf52b05
+Size (qtspeech-everywhere-src-5.15.2.tar.xz) = 101940 bytes

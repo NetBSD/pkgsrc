@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2020/06/02 06:41:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/11/21 11:22:31 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt5DBus.pc
@@ -2694,8 +2694,6 @@ qt5/lib/cmake/Qt5/Qt5ConfigVersion.cmake
 qt5/lib/cmake/Qt5/Qt5ModuleLocation.cmake
 qt5/lib/cmake/Qt5AccessibilitySupport/Qt5AccessibilitySupportConfig.cmake
 qt5/lib/cmake/Qt5AccessibilitySupport/Qt5AccessibilitySupportConfigVersion.cmake
-qt5/lib/cmake/Qt5Bootstrap/Qt5BootstrapConfig.cmake
-qt5/lib/cmake/Qt5Bootstrap/Qt5BootstrapConfigVersion.cmake
 qt5/lib/cmake/Qt5Concurrent/Qt5ConcurrentConfig.cmake
 qt5/lib/cmake/Qt5Concurrent/Qt5ConcurrentConfigVersion.cmake
 qt5/lib/cmake/Qt5Core/Qt5CTestMacros.cmake
