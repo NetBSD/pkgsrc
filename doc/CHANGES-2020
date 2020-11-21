@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6288 2020/11/21 09:53:44 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6289 2020/11/21 10:05:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9217,3 +9217,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed lang/mozjs60 successor lang/mozjs78 [wiz 2020-11-21]
 	Removed lang/mozjs68 successor lang/mozjs78 [wiz 2020-11-21]
 	Removed security/gnome-keyring-manager [nia 2020-11-21]
+	Removed chat/telepathy-mission-control successor chat/telepathy-mission-control5 [nia 2020-11-21]
