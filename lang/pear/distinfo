@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.39 2020/10/04 06:01:25 taca Exp $
+$NetBSD: distinfo,v 1.40 2020/11/21 01:20:58 taca Exp $
 
-SHA1 (pear20151210/Archive_Tar-1.4.10.tgz) = 02c04a395375f3ad0d04f68e9c401e0821077740
-RMD160 (pear20151210/Archive_Tar-1.4.10.tgz) = f0a45d33273811a7f8f1fe2ab3451c1aecf5f1ab
-SHA512 (pear20151210/Archive_Tar-1.4.10.tgz) = 265a00b0e71e718a0a0f1f5640b2a95c3b5f3a62235477a22ef762109cb2f6dbdaa0319f2f5aed5fdd9b4f52317bf761b3fcefd03a82c941e71e04c1a3e4d2a9
-Size (pear20151210/Archive_Tar-1.4.10.tgz) = 21481 bytes
+SHA1 (pear20151210/Archive_Tar-1.4.11.tgz) = 36064090cc7a7caa7a3febe530b5f313e2d04f02
+RMD160 (pear20151210/Archive_Tar-1.4.11.tgz) = 2d649429d51d90bed24a3fcfde3d319fd7abb033
+SHA512 (pear20151210/Archive_Tar-1.4.11.tgz) = a67ff191eb1d814094fc752b58b5d4b4d3db0fd2476fce403f8e5cac49a35fd1219167817dc84d6f957af87d326435aef000e2e0b16357a0d051ab407b76d2cc
+Size (pear20151210/Archive_Tar-1.4.11.tgz) = 21556 bytes
 SHA1 (pear20151210/Console_Getopt-1.4.3.tgz) = 88b7bfce2f71cd99b922fa5eff5247bd754a3bc1
 RMD160 (pear20151210/Console_Getopt-1.4.3.tgz) = 05dbb1aad76fc53cd25ee282df0bd2112310fbc5
 SHA512 (pear20151210/Console_Getopt-1.4.3.tgz) = 7803e063576e9dac6833064b5a1479d22ca31c2a8ef8036ae530271e4e824fedb94e54d63266be8929f90f8df745b3ada7185dc98319b331f8dc5e9cac5445a0
