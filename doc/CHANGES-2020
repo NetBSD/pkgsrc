@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6287 2020/11/21 09:47:11 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6288 2020/11/21 09:53:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9216,3 +9216,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/marco to 1.24.1nb3 [gutteridge 2020-11-21]
 	Removed lang/mozjs60 successor lang/mozjs78 [wiz 2020-11-21]
 	Removed lang/mozjs68 successor lang/mozjs78 [wiz 2020-11-21]
+	Removed security/gnome-keyring-manager [nia 2020-11-21]
