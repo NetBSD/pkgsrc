@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.15 2020/11/20 15:51:25 otis Exp $
+# $NetBSD: Makefile.php,v 1.16 2020/11/21 19:44:32 otis Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -111,6 +111,7 @@ CFLAGS+=		-DDISABLE_FILTER_URL
 
 PLIST_VARS+=    embed
 
+.if !empty(PKGNAME:Mphp-[7-9]*)
 .if !empty(PKG_OPTIONS:Mphp-embed)
 CONFIGURE_ARGS+=	--enable-embed
 INSTALLATION_DIRS+=	include/php/sapi/embed
@@ -121,6 +122,7 @@ post-install: post-install-embed
 post-install-embed:
 	${INSTALL_DATA} ${WRKSRC}/sapi/embed/php_embed.h ${DESTDIR}${PREFIX}/include/php/sapi/embed/
 	${INSTALL_LIB} ${WRKSRC}/libs/libphp7.so ${DESTDIR}${PREFIX}/lib/
+.endif
 .endif
 
 DL_AUTO_VARS=		yes
