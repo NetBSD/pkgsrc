@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6290 2020/11/21 11:31:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6291 2020/11/21 13:02:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9221,3 +9221,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/qt5 to 5.15.2 [adam 2020-11-21]
 	Updated devel/meson to 0.56.0 [adam 2020-11-21]
 	Updated devel/glib2 to 2.66.3 [adam 2020-11-21]
+	Removed sysutils/torsmo successor sysutils/conky [nia 2020-11-21]
