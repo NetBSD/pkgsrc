@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/21 02:28:13 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/21 02:42:03 gutteridge Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -15,8 +15,8 @@ WRKSRC=		${WRKDIR}/firefox-${PKGVERSION_NOREV}/js/src
 USE_TOOLS+=	autoconf213 gmake perl pkg-config
 USE_LANGUAGES=	c c++
 
-# "ERROR: Only GCC 6.1 or newer is supported"
-GCC_REQD+=	6
+# "ERROR: Only GCC 7.1 or newer is supported"
+GCC_REQD+=	7	
 
 HAS_CONFIGURE=		yes
 CONFIGURE_DIRS=		build
