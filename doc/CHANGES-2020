@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6286 2020/11/21 09:45:39 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6287 2020/11/21 09:47:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9215,3 +9215,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/pear to 1.10.12nb2 [taca 2020-11-21]
 	Updated wm/marco to 1.24.1nb3 [gutteridge 2020-11-21]
 	Removed lang/mozjs60 successor lang/mozjs78 [wiz 2020-11-21]
+	Removed lang/mozjs68 successor lang/mozjs78 [wiz 2020-11-21]
