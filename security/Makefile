@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.786 2020/11/06 18:10:41 tnn Exp $
+# $NetBSD: Makefile,v 1.787 2020/11/21 09:52:47 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -93,7 +93,6 @@ SUBDIR+=	fsh
 SUBDIR+=	fwbuilder
 SUBDIR+=	gcr
 SUBDIR+=	gnome-keyring
-SUBDIR+=	gnome-keyring-manager
 SUBDIR+=	gnu-crypto
 SUBDIR+=	gnu-pw-mgr
 SUBDIR+=	gnupg
