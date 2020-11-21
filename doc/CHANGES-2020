@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6291 2020/11/21 13:02:05 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6292 2020/11/21 13:50:15 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9222,3 +9222,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/meson to 0.56.0 [adam 2020-11-21]
 	Updated devel/glib2 to 2.66.3 [adam 2020-11-21]
 	Removed sysutils/torsmo successor sysutils/conky [nia 2020-11-21]
+	Added devel/php-psr version 1.0.1 [otis 2020-11-21]
