@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/17 15:31:10 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/21 10:41:47 mef Exp $
 
 DISTNAME=	mutter-3.38.1
 CATEGORIES=	wm gnome
@@ -35,6 +35,8 @@ MESON_ARGS+=		-Dverbose=true
 
 .if ${OPSYS} == "NetBSD"
 MESON_ARGS+=		-Dopengl_libname=libGL.so
+USE_TOOLS+=		msgfmt
+TOOLS_PLATFORM.msgfmt=
 .endif
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
