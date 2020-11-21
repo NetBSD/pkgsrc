@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2020/11/07 20:30:56 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2020/11/21 23:06:56 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.13.0
 CARGO_CRATE_DEPENDS+=	adler-0.2.3
@@ -21,7 +21,7 @@ CARGO_CRATE_DEPENDS+=	block-buffer-0.7.3
 CARGO_CRATE_DEPENDS+=	block-padding-0.1.5
 CARGO_CRATE_DEPENDS+=	bstr-0.2.13
 CARGO_CRATE_DEPENDS+=	byte-tools-0.3.1
-CARGO_CRATE_DEPENDS+=	bytecount-0.6.0
+CARGO_CRATE_DEPENDS+=	bytecount-0.6.1
 CARGO_CRATE_DEPENDS+=	bytemuck-1.4.1
 CARGO_CRATE_DEPENDS+=	byteorder-1.3.4
 CARGO_CRATE_DEPENDS+=	cc-1.0.60
@@ -73,7 +73,7 @@ CARGO_CRATE_DEPENDS+=	humansize-1.1.0
 CARGO_CRATE_DEPENDS+=	humantime-1.3.0
 CARGO_CRATE_DEPENDS+=	idna-0.2.0
 CARGO_CRATE_DEPENDS+=	ignore-0.4.16
-CARGO_CRATE_DEPENDS+=	image-0.23.11
+CARGO_CRATE_DEPENDS+=	image-0.23.12
 CARGO_CRATE_DEPENDS+=	itertools-0.9.0
 CARGO_CRATE_DEPENDS+=	itoa-0.4.6
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.21
@@ -105,7 +105,7 @@ CARGO_CRATE_DEPENDS+=	opaque-debug-0.2.3
 CARGO_CRATE_DEPENDS+=	parking_lot-0.10.2
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.7.2
 CARGO_CRATE_DEPENDS+=	parse-zoneinfo-0.3.0
-CARGO_CRATE_DEPENDS+=	paste-1.0.2
+CARGO_CRATE_DEPENDS+=	paste-1.0.3
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.1.0
 CARGO_CRATE_DEPENDS+=	pest-2.1.3
 CARGO_CRATE_DEPENDS+=	pest_derive-2.1.0
