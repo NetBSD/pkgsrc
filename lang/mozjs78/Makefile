@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/12 10:26:54 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/21 02:28:13 gutteridge Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -59,7 +59,7 @@ post-install:
 
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.34.0
+RUST_REQ=	1.41.0
 .include "../../lang/rust/rust.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
