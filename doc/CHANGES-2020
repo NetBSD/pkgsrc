@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6295 2020/11/21 22:34:21 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6296 2020/11/21 23:07:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9228,3 +9228,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/qbittorrent to 4.3.0.1 [adam 2020-11-21]
 	Updated databases/py-pymysql to 0.10.1 [adam 2020-11-21]
 	Updated devel/py-pygit2 to 1.4.0 [adam 2020-11-21]
+	Updated sysutils/onefetch to 2.7.3 [pin 2020-11-21]
