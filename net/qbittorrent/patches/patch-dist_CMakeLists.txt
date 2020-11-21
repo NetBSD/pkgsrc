@@ -1,14 +1,15 @@
-$NetBSD: patch-dist_CMakeLists.txt,v 1.1 2020/03/30 17:17:23 adam Exp $
+$NetBSD: patch-dist_CMakeLists.txt,v 1.2 2020/11/21 22:17:56 adam Exp $
 
 Treat Darwin as any other UNIX.
 
---- dist/CMakeLists.txt.orig	2020-03-30 17:02:36.000000000 +0000
+--- dist/CMakeLists.txt.orig	2020-10-18 19:41:04.000000000 +0000
 +++ dist/CMakeLists.txt
 @@ -1,6 +1,6 @@
- find_package(Qt5Widgets ${requiredQtVersion}) # to conditionally install desktop-related files
- 
--if (APPLE)
+-if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 +if (FALSE)
      add_subdirectory(mac)
- else (APPLE)
-     if (UNIX)
+-elseif (UNIX AND (NOT APPLE))
++elseif (UNIX)
+     add_subdirectory(unix)
+ elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
+     add_subdirectory(windows)
