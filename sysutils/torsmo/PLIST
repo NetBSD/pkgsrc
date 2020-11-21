@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:15 joerg Exp $
-bin/torsmo
-man/man1/torsmo.1
-share/doc/torsmo/README
-share/doc/torsmo/readme.html
-share/examples/torsmo/torsmorc.sample
