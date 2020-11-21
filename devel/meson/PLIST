@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/08/19 09:20:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/11/21 11:27:23 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mesonbuild/__init__.py
 ${PYSITELIB}/mesonbuild/__init__.pyc
 ${PYSITELIB}/mesonbuild/__init__.pyo
+${PYSITELIB}/mesonbuild/_pathlib.py
+${PYSITELIB}/mesonbuild/_pathlib.pyc
+${PYSITELIB}/mesonbuild/_pathlib.pyo
 ${PYSITELIB}/mesonbuild/arglist.py
 ${PYSITELIB}/mesonbuild/arglist.pyc
 ${PYSITELIB}/mesonbuild/arglist.pyo
@@ -78,6 +81,9 @@ ${PYSITELIB}/mesonbuild/cmake/generator.pyo
 ${PYSITELIB}/mesonbuild/cmake/interpreter.py
 ${PYSITELIB}/mesonbuild/cmake/interpreter.pyc
 ${PYSITELIB}/mesonbuild/cmake/interpreter.pyo
+${PYSITELIB}/mesonbuild/cmake/toolchain.py
+${PYSITELIB}/mesonbuild/cmake/toolchain.pyc
+${PYSITELIB}/mesonbuild/cmake/toolchain.pyo
 ${PYSITELIB}/mesonbuild/cmake/traceparser.py
 ${PYSITELIB}/mesonbuild/cmake/traceparser.pyc
 ${PYSITELIB}/mesonbuild/cmake/traceparser.pyo
@@ -129,6 +135,9 @@ ${PYSITELIB}/mesonbuild/compilers/mixins/clang.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/clike.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/clike.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/clike.pyo
+${PYSITELIB}/mesonbuild/compilers/mixins/compcert.py
+${PYSITELIB}/mesonbuild/compilers/mixins/compcert.pyc
+${PYSITELIB}/mesonbuild/compilers/mixins/compcert.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/elbrus.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/elbrus.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/elbrus.pyo
@@ -276,6 +285,9 @@ ${PYSITELIB}/mesonbuild/modules/hotdoc.pyo
 ${PYSITELIB}/mesonbuild/modules/i18n.py
 ${PYSITELIB}/mesonbuild/modules/i18n.pyc
 ${PYSITELIB}/mesonbuild/modules/i18n.pyo
+${PYSITELIB}/mesonbuild/modules/keyval.py
+${PYSITELIB}/mesonbuild/modules/keyval.pyc
+${PYSITELIB}/mesonbuild/modules/keyval.pyo
 ${PYSITELIB}/mesonbuild/modules/modtest.py
 ${PYSITELIB}/mesonbuild/modules/modtest.pyc
 ${PYSITELIB}/mesonbuild/modules/modtest.pyo
@@ -306,12 +318,12 @@ ${PYSITELIB}/mesonbuild/modules/sourceset.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_cuda.py
 ${PYSITELIB}/mesonbuild/modules/unstable_cuda.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_cuda.pyo
+${PYSITELIB}/mesonbuild/modules/unstable_external_project.py
+${PYSITELIB}/mesonbuild/modules/unstable_external_project.pyc
+${PYSITELIB}/mesonbuild/modules/unstable_external_project.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.py
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyo
-${PYSITELIB}/mesonbuild/modules/unstable_keyval.py
-${PYSITELIB}/mesonbuild/modules/unstable_keyval.pyc
-${PYSITELIB}/mesonbuild/modules/unstable_keyval.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.py
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyo
@@ -369,6 +381,9 @@ ${PYSITELIB}/mesonbuild/scripts/depfixer.pyo
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.py
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.pyc
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.pyo
+${PYSITELIB}/mesonbuild/scripts/externalproject.py
+${PYSITELIB}/mesonbuild/scripts/externalproject.pyc
+${PYSITELIB}/mesonbuild/scripts/externalproject.pyo
 ${PYSITELIB}/mesonbuild/scripts/gettext.py
 ${PYSITELIB}/mesonbuild/scripts/gettext.pyc
 ${PYSITELIB}/mesonbuild/scripts/gettext.pyo
