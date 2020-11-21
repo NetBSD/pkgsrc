@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6283 2020/11/20 20:43:02 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6284 2020/11/21 01:21:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9212,3 +9212,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libv4l to 1.20.0 [wiz 2020-11-20]
 	Updated print/poppler to 20.11.0 [wiz 2020-11-20]
 	Updated x11/libX11 to 1.7.0 [wiz 2020-11-20]
+	Updated lang/pear to 1.10.12nb2 [taca 2020-11-21]
