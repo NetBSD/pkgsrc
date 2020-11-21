@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6294 2020/11/21 22:18:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6295 2020/11/21 22:34:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9226,3 +9226,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/php-phalcon4 version 4.1.0 [otis 2020-11-21]
 	Updated net/libtorrent-rasterbar to 1.2.11 [adam 2020-11-21]
 	Updated net/qbittorrent to 4.3.0.1 [adam 2020-11-21]
+	Updated databases/py-pymysql to 0.10.1 [adam 2020-11-21]
+	Updated devel/py-pygit2 to 1.4.0 [adam 2020-11-21]
