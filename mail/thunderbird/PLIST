@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.81 2020/11/19 14:29:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.82 2020/11/21 12:28:43 wiz Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -2931,7 +2931,7 @@ ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
 ${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
-${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.proper
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-alarms.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-event-dialog-attendees.properties
