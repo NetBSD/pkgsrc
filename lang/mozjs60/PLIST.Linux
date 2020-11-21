@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2020/05/09 16:33:14 tnn Exp $
-include/mozjs-60/mozilla/LinuxSignal.h
