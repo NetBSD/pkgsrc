@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.120 2020/09/29 10:43:33 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.121 2020/11/21 11:30:49 adam Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -282,19 +282,19 @@ ${PLIST.fam}lib/gio/modules/libgiofam.so
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.6600.0
+lib/libgio-2.0.so.0.6600.3
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.6600.0
+lib/libglib-2.0.so.0.6600.3
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.6600.0
+lib/libgmodule-2.0.so.0.6600.3
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.6600.0
+lib/libgobject-2.0.so.0.6600.3
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.6600.0
+lib/libgthread-2.0.so.0.6600.3
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/glib-2.0.pc
@@ -306,8 +306,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.6600.0-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.6600.0-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.6600.3-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.6600.3-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
