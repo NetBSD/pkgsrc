@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/08/06 14:15:28 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/11/21 22:22:35 adam Exp $
 
-SHA1 (PyMySQL-0.10.0.tar.gz) = a585b7aff8cb7a26f9a000b2ac5b6569eec33d1c
-RMD160 (PyMySQL-0.10.0.tar.gz) = 75c9f19c8ac4e58eca1cd56aec8c192456f12ea5
-SHA512 (PyMySQL-0.10.0.tar.gz) = e1186c4beea31cb602a3d2297a28313c0bf4e361a04f7402b76a70feea1d24bf305a4f9ea637be250974983586cb49d82946ab478b531bbb2ca7fe370424e7fc
-Size (PyMySQL-0.10.0.tar.gz) = 76107 bytes
+SHA1 (PyMySQL-0.10.1.tar.gz) = 723f04ee8864c7b4eac41e48690fd73bf82c147c
+RMD160 (PyMySQL-0.10.1.tar.gz) = 45a38ea36ec1ace9be4626a026cf4b4c86b30030
+SHA512 (PyMySQL-0.10.1.tar.gz) = 33dba505fd937ddece7b4c52a1db64084656bccc0b3e98ecee1227732fe03f4e8c3f4bcb64bcf67db54f3407f3ce8a706a08d3f992450755267b0e6c5b123b99
+Size (PyMySQL-0.10.1.tar.gz) = 77363 bytes
