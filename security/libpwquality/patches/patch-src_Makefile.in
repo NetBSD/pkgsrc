@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2020/11/22 11:58:58 nia Exp $
+
+Install config files to examples.
+
+--- src/Makefile.in.orig	2020-10-13 07:31:04.000000000 +0000
++++ src/Makefile.in
+@@ -393,7 +393,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ CLEANFILES = *~
+ securelibdir = @SECUREDIR@
+-secureconfdir = @SCONFIGDIR@
++secureconfdir = @datadir@/examples/libpwquality/security
+ EXTRA_DIST = libpwquality.map pwquality.conf pwquality.pc
+ include_HEADERS = pwquality.h
+ noinst_HEADERS = pwqprivate.h
