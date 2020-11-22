@@ -1,15 +1,10 @@
-gnome-keyring is a program that keeps passwords and other secrets for
-users.  It is run as a damon in the session, similar to ssh-agent, and
-other applications can locate it by an environment variable.
+gnome-keyring is a program that keeps password and other secrets for
+users. It is run as a daemon in the session, similar to ssh-agent, and
+other applications locate it via an environment variable or a D-Bus.
 
 The program can manage several keyrings, each with its own master
 password, and there is also a session keyring which is never stored to
 disk, but forgotten when the session ends.
 
 The library libgnome-keyring is used by applications to integrate with
-the gnome keyring system.  However, at this point the library hasn't
-been tested and used enough to consider the API to be publically exposed.
-Therefore use of libgnome-keyring is at the moment limited to internal
-use in the gnome desktop.  However, we hope that the gnome-keyring API
-will turn out useful and good, so that later it can be made public for
-any application to use.
+the GNOME keyring system.
