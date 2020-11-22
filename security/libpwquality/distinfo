@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/11/22 11:58:58 nia Exp $
+
+SHA1 (libpwquality-1.4.4.tar.bz2) = 94e3f2eb67ccff1823e727d6770c3f39acbd954d
+RMD160 (libpwquality-1.4.4.tar.bz2) = dbcc85959af5894bf0cc3b5e29fedecc522d615c
+SHA512 (libpwquality-1.4.4.tar.bz2) = 2d49b79105361663f009f7183fde9123e6f1e63bd678dfe5418143f611e763af8dd44374b826b3c22a00e721047c539741dc44d99a2289b9ab229791768d6e76
+Size (libpwquality-1.4.4.tar.bz2) = 426923 bytes
+SHA1 (patch-src_Makefile.in) = eca8bba7156fc9c029306aeb6b422fc644ef2330
