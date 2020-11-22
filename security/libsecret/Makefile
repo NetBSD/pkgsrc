@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/04/20 06:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/11/22 11:34:32 nia Exp $
 
-DISTNAME=	libsecret-0.20.3
+DISTNAME=	libsecret-0.20.4
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsecret/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,8 +10,8 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Libsecret
 COMMENT=	GObject based library for accessing the Secret Service API
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=	yes
@@ -24,6 +24,7 @@ PKGCONFIG_OVERRIDE+=	libsecret/libsecret.pc.in
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"
