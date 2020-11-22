@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6297 2020/11/22 11:17:17 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6298 2020/11/22 11:33:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9231,3 +9231,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/onefetch to 2.7.3 [pin 2020-11-21]
 	Updated mail/postfix to 3.5.8 [adam 2020-11-22]
 	Updated devel/py-more-itertools to 8.6.0 [adam 2020-11-22]
+	Updated net/s6-networking to 2.3.2.0nb1 [schmonz 2020-11-22]
