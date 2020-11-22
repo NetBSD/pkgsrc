@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6298 2020/11/22 11:33:30 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6299 2020/11/22 11:35:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9232,3 +9232,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/postfix to 3.5.8 [adam 2020-11-22]
 	Updated devel/py-more-itertools to 8.6.0 [adam 2020-11-22]
 	Updated net/s6-networking to 2.3.2.0nb1 [schmonz 2020-11-22]
+	Updated security/libsecret to 0.20.4 [nia 2020-11-22]
