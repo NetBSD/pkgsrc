@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6304 2020/11/22 14:24:44 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6305 2020/11/22 21:27:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9238,3 +9238,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/seahorse to 3.38.0.1 [nia 2020-11-22]
 	Updated x11/xterm to 362 [pin 2020-11-22]
 	Updated x11/kitty to 0.19.2 [pin 2020-11-22]
+	Updated security/gnome-keyring to 3.36.0 [nia 2020-11-22]
