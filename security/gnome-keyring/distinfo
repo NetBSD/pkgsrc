@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.44 2015/11/04 01:17:44 agc Exp $
+$NetBSD: distinfo,v 1.45 2020/11/22 21:26:51 nia Exp $
 
-SHA1 (gnome-keyring-2.32.1.tar.bz2) = 3d0ecc3e29f426ecfcaa488ea17d3e330fe34eb6
-RMD160 (gnome-keyring-2.32.1.tar.bz2) = cb72f171f5918ff26f40feb7bba90dc7e2e120ec
-SHA512 (gnome-keyring-2.32.1.tar.bz2) = 23b91bc11be2805df228de98513a5f96386a89d6ead6434b7fdf4a3bee86b6601bb994b9de4524f8751c7d7f1ac9462c592bcd9b77c32234fc709148450e382b
-Size (gnome-keyring-2.32.1.tar.bz2) = 1619245 bytes
-SHA1 (patch-ad) = d49bc78227646b3de3c357cd0f1e90cd38862ee4
-SHA1 (patch-ae) = a4e6fabd0534a56b974ec799539ce93df6580ff1
-SHA1 (patch-af) = 38738bc4441a6db38c27198ee22c8d3a77559844
-SHA1 (patch-ag) = 56c977df4f0f43da04b5e39212551b00642ef674
-SHA1 (patch-configure) = de2997d31a79ac573e4c5e339b9817f6cb84e2f0
+SHA1 (gnome-keyring-3.36.0.tar.xz) = 10a6a1c1c9ac66baadd96cb5ef5f3d18aee86f6a
+RMD160 (gnome-keyring-3.36.0.tar.xz) = 60556a3a2785a32e87795a3599d6f0ed69622f9f
+SHA512 (gnome-keyring-3.36.0.tar.xz) = e5aed36ad109cbd2dcb534843f8565829366acc955cadc6e9bbe87ebbb6a8a907211aa3a42f7f26148ac69726af2f9238965707d1259319435bd20aa8c4859ed
+Size (gnome-keyring-3.36.0.tar.xz) = 1345360 bytes
+SHA1 (patch-Makefile.in) = 0bb5c9ff7de52fb932741fdc2246048a2392e6bb
+SHA1 (patch-egg_egg-armor.c) = 4e57b2f8d4434ad4f0e28230af0ba7e3a79d9851
+SHA1 (patch-egg_egg-unix-credentials.c) = a3d45837ec5257b6397cf839d2ac6aac890b9796
+SHA1 (patch-pam_gkr-pam-module.c) = 98d0af74ea7ba87cb1376aba4cefcaf77bfbc4f5
+SHA1 (patch-pkcs11_rpc-layer_gkm-rpc-module.c) = 0ac1939645f01eb52b7a532359555b7139aaa39e
