@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20206 2020/11/22 12:05:10 nia Exp $
+$NetBSD: TODO,v 1.20207 2020/11/22 21:27:20 nia Exp $
 
 Suggested new packages
 ======================
@@ -617,7 +617,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnome-commander-1.6.4
 	o gnome-devel-docs-2.30.0
 	o gnome-disk-utility-2.32.0
-	o gnome-keyring-3.20.1 [wip]
 	o gnome-media-3.4.0
 	o gnome-menus-3.8.0
 	o gnome-packagekit-3.2.1
