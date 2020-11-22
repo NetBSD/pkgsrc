@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.39 2017/09/09 22:48:09 joerg Exp $
+$NetBSD: distinfo,v 1.40 2020/11/22 12:04:28 nia Exp $
 
-SHA1 (seahorse-2.32.0.tar.bz2) = 1469884b67483c876cfe5b986a76495739927a99
-RMD160 (seahorse-2.32.0.tar.bz2) = 5599cf02321be038d8aa5bc96174e2cf05c62945
-SHA512 (seahorse-2.32.0.tar.bz2) = b75d94dbce8a00ecec4c230975104b0868f5b51bbcaf18a3b0a2520156c1b1336ad60a978775657fdca0bdabd0ebcd52a5e086a25ed8be1cbae9354245705879
-Size (seahorse-2.32.0.tar.bz2) = 2491230 bytes
-SHA1 (patch-ab) = 999c135e1815be5608caacb077dc9b881226dd30
-SHA1 (patch-ac) = 3df4e4950bc967c964746e55e3ca2fbffb0cddf2
-SHA1 (patch-configure) = 2fa3a4d2793dd740a41d5503797e2728e7b3934a
-SHA1 (patch-libseahorse_seahorse-notification.c) = 05d1f2bc5c0de5e6a108ecf3a582589665e26faf
+SHA1 (seahorse-3.38.0.1.tar.xz) = 84e0ac58ab5362d9a302b31fab58e9c3029e0b24
+RMD160 (seahorse-3.38.0.1.tar.xz) = 79c6f3eac8c994c0382cebff8af99010139afd36
+SHA512 (seahorse-3.38.0.1.tar.xz) = d0fdbb81d71e5e0908f732ad49db89a3cae936f98e0285f758a8861259bff976d33083783a7e19474bd6a1e95c11ec74021b6b7f5cdd3d51372e9cd93d4fd014
+Size (seahorse-3.38.0.1.tar.xz) = 1726460 bytes
