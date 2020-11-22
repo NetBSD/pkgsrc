@@ -1,37 +1,38 @@
-# $NetBSD: Makefile,v 1.97 2020/10/23 09:20:59 tnn Exp $
+# $NetBSD: Makefile,v 1.98 2020/11/22 21:26:50 nia Exp $
 
-DISTNAME=	gnome-keyring-2.32.1
-PKGREVISION=	30
+DISTNAME=	gnome-keyring-3.36.0
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 CATEGORIES=	security gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.32/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/
+HOMEPAGE=	https://wiki.gnome.org/Projects/GnomeKeyring/
 COMMENT=	GNOME password and secret manager
+LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		msgfmt msgmerge xgettext
 
-PKGCONFIG_OVERRIDE+=	gcr/gcr.pc.in
-PKGCONFIG_OVERRIDE+=	gp11/gp11.pc.in
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-CFLAGS.HPUX+=		-DMAP_ANON=MAP_ANONYMOUS
-CONFIGURE_ENV.SunOS+=	ac_cv_header_security_pam_modules_h=yes
+XDG_EGDIR=	${PREFIX}/share/examples/xdg/autostart
 
-.include "../../mk/dlopen.buildlink3.mk"
+CONF_FILES+=	${XDG_EGDIR}/gnome-keyring-pkcs11.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/gnome-keyring-pkcs11.desktop
 
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+CONF_FILES+=	${XDG_EGDIR}/gnome-keyring-secrets.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/gnome-keyring-secrets.desktop
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
+CONF_FILES+=	${XDG_EGDIR}/gnome-keyring-ssh.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/gnome-keyring-ssh.desktop
+
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../security/gcr/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
-.include "../../security/libtasn1/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
