@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/10/26 14:15:29 pin Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/11/22 14:24:22 pin Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/kittens/__init__.py
@@ -30,6 +30,8 @@ lib/kitty/kittens/key_demo/__init__.py
 lib/kitty/kittens/key_demo/main.py
 lib/kitty/kittens/panel/__init__.py
 lib/kitty/kittens/panel/main.py
+lib/kitty/kittens/query_terminal/__init__.py
+lib/kitty/kittens/query_terminal/main.py
 lib/kitty/kittens/remote_file/__init__.py
 lib/kitty/kittens/remote_file/main.py
 lib/kitty/kittens/resize_window/__init__.py
@@ -86,6 +88,7 @@ lib/kitty/kitty/glfw-wayland.so
 lib/kitty/kitty/glfw-x11.so
 lib/kitty/kitty/graphics_fragment.glsl
 lib/kitty/kitty/graphics_vertex.glsl
+lib/kitty/kitty/guess_mime_type.py
 lib/kitty/kitty/key_encoding.py
 lib/kitty/kitty/key_names.py
 lib/kitty/kitty/keys.py
@@ -187,6 +190,7 @@ share/doc/kitty/html/_sources/kittens/hints.rst.txt
 share/doc/kitty/html/_sources/kittens/hyperlinked_grep.rst.txt
 share/doc/kitty/html/_sources/kittens/icat.rst.txt
 share/doc/kitty/html/_sources/kittens/panel.rst.txt
+share/doc/kitty/html/_sources/kittens/query_terminal.rst.txt
 share/doc/kitty/html/_sources/kittens/remote_file.rst.txt
 share/doc/kitty/html/_sources/kittens/unicode-input.rst.txt
 share/doc/kitty/html/_sources/launch.rst.txt
@@ -236,6 +240,7 @@ share/doc/kitty/html/kittens/hints.html
 share/doc/kitty/html/kittens/hyperlinked_grep.html
 share/doc/kitty/html/kittens/icat.html
 share/doc/kitty/html/kittens/panel.html
+share/doc/kitty/html/kittens/query_terminal.html
 share/doc/kitty/html/kittens/remote_file.html
 share/doc/kitty/html/kittens/unicode-input.html
 share/doc/kitty/html/launch.html
