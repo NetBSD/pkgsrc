@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.787 2020/11/21 09:52:47 nia Exp $
+# $NetBSD: Makefile,v 1.788 2020/11/22 11:36:31 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -46,6 +46,7 @@ SUBDIR+=	clusterssh
 SUBDIR+=	codecrypt
 SUBDIR+=	courier-authlib
 SUBDIR+=	crack
+SUBDIR+=	cracklib
 SUBDIR+=	credns
 SUBDIR+=	crypto++
 SUBDIR+=	cvm
