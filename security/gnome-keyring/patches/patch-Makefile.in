@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/11/22 21:26:51 nia Exp $
+
+Install config files to examples.
+
+--- Makefile.in.orig	2020-03-11 04:41:34.000000000 +0000
++++ Makefile.in
+@@ -2230,7 +2230,7 @@ service_in_files = \
+ 
+ servicedir = $(DBUS_SERVICES_DIR)
+ service_DATA = $(service_in_files:.service.in=.service)
+-desktopdir = $(sysconfdir)/xdg/autostart
++desktopdir = $(datadir)/examples/xdg/autostart
+ desktop_in_in_files = \
+ 	daemon/gnome-keyring-pkcs11.desktop.in.in \
+ 	daemon/gnome-keyring-secrets.desktop.in.in \
