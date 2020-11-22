@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2020/10/26 14:15:29 pin Exp $
+$NetBSD: distinfo,v 1.7 2020/11/22 14:24:22 pin Exp $
 
-SHA1 (kitty-0.19.1.tar.xz) = c642909a67ce704da83bf11634e35af062ec7b81
-RMD160 (kitty-0.19.1.tar.xz) = 9c2c08aa52176f702bfa0f640669cd459d9b576b
-SHA512 (kitty-0.19.1.tar.xz) = 3a61d15598f32634646cbf0be596e9023420452130be1b9a718d2ce7daf3edeee6d2ba3abfe91c768758b043ed46423a2382680f9dd65fd6a6c57dbcd0fc1fd3
-Size (kitty-0.19.1.tar.xz) = 3262516 bytes
+SHA1 (kitty-0.19.2.tar.xz) = 9463470fcd7f59f523c08875a7de473e691d0d3d
+RMD160 (kitty-0.19.2.tar.xz) = 95806e8e973c2062337248beb6559725a1365926
+SHA512 (kitty-0.19.2.tar.xz) = 86b6a08c7f5282587967ff7e3509d6ac4ef556b3bbeae1a9529a584f804f204d54f5031a90dcd08af735eb16a283938fa9e49c8d767dca12e945b7493f0e76da
+Size (kitty-0.19.2.tar.xz) = 3259928 bytes
 SHA1 (patch-glfw_wl__init.c) = d3bfa4c4a4b6a524a3a5fddd234368022bcb5c95
 SHA1 (patch-kitty_threading.h) = 04886ab09ac2ab6f4925cd20e739e6b634299d55
