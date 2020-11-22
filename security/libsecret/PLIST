@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/01/21 14:04:16 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/11/22 11:34:32 nia Exp $
 bin/secret-tool
 include/libsecret-1/libsecret/secret-attributes.h
 include/libsecret-1/libsecret/secret-backend.h
@@ -89,6 +89,7 @@ share/locale/bg/LC_MESSAGES/libsecret.mo
 share/locale/bs/LC_MESSAGES/libsecret.mo
 share/locale/ca/LC_MESSAGES/libsecret.mo
 share/locale/ca@valencia/LC_MESSAGES/libsecret.mo
+share/locale/ckb/LC_MESSAGES/libsecret.mo
 share/locale/cs/LC_MESSAGES/libsecret.mo
 share/locale/da/LC_MESSAGES/libsecret.mo
 share/locale/de/LC_MESSAGES/libsecret.mo
@@ -134,3 +135,5 @@ share/locale/uk/LC_MESSAGES/libsecret.mo
 share/locale/zh_CN/LC_MESSAGES/libsecret.mo
 share/locale/zh_HK/LC_MESSAGES/libsecret.mo
 share/locale/zh_TW/LC_MESSAGES/libsecret.mo
+share/vala/vapi/libsecret-1.deps
+share/vala/vapi/libsecret-1.vapi
