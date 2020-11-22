@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6302 2020/11/22 12:05:09 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6303 2020/11/22 13:32:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9236,3 +9236,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/cracklib version 2.9.7 [nia 2020-11-22]
 	Added security/libpwquality version 1.4.4 [nia 2020-11-22]
 	Updated security/seahorse to 3.38.0.1 [nia 2020-11-22]
+	Updated x11/xterm to 362 [pin 2020-11-22]
