@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6300 2020/11/22 11:37:01 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6301 2020/11/22 11:59:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9234,3 +9234,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/s6-networking to 2.3.2.0nb1 [schmonz 2020-11-22]
 	Updated security/libsecret to 0.20.4 [nia 2020-11-22]
 	Added security/cracklib version 2.9.7 [nia 2020-11-22]
+	Added security/libpwquality version 1.4.4 [nia 2020-11-22]
