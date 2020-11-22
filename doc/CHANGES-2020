@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6303 2020/11/22 13:32:47 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6304 2020/11/22 14:24:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9237,3 +9237,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/libpwquality version 1.4.4 [nia 2020-11-22]
 	Updated security/seahorse to 3.38.0.1 [nia 2020-11-22]
 	Updated x11/xterm to 362 [pin 2020-11-22]
+	Updated x11/kitty to 0.19.2 [pin 2020-11-22]
