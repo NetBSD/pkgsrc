@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/19 20:12:54 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/22 11:33:22 schmonz Exp $
 bin/minidentd
 bin/s6-clockadd
 bin/s6-clockview
@@ -16,14 +16,14 @@ bin/s6-tcpserver4d
 bin/s6-tcpserver6
 bin/s6-tcpserver6-socketbinder
 bin/s6-tcpserver6d
-bin/s6-tlsc
-bin/s6-tlsclient
-bin/s6-tlsd
-bin/s6-tlsserver
+${PLIST.tls}bin/s6-tlsc
+${PLIST.tls}bin/s6-tlsclient
+${PLIST.tls}bin/s6-tlsd
+${PLIST.tls}bin/s6-tlsserver
 include/s6-networking/config.h
 include/s6-networking/ident.h
 include/s6-networking/s6net.h
 include/s6-networking/sbearssl.h
 include/s6-networking/stls.h
 lib/s6-networking/libs6net.a
-lib/s6-networking/libsbearssl.a
+${PLIST.tls}lib/s6-networking/libsbearssl.a
