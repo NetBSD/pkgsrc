@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.1 2015/09/07 09:47:01 fhajny Exp $
+# $NetBSD: Makefile.module,v 1.2 2020/11/22 11:14:44 adam Exp $
 # used by mail/postfix-cdb/Makefile
 # used by mail/postfix-ldap/Makefile
 # used by mail/postfix-lmdb/Makefile
@@ -17,7 +17,11 @@ CCARGS+=	-DHAS_${POSTFIX_LIB:tu}
 MAKE_ENV+=	AUXLIBS_${POSTFIX_LIB:tu}=${AUXLIBS_MODULE:Q}
 
 # Define functionality to populate dynamicmaps.cf
+.if ${OPSYS} == "Darwin"
+POSTFIX_LIBFILE=	postfix-${POSTFIX_LIB}.dylib
+.else
 POSTFIX_LIBFILE=	postfix-${POSTFIX_LIB}.so
+.endif
 .if !empty(POSTFIX_LIB_DICT:Myes)
 POSTFIX_LIB_FUNCS+=	dict_${POSTFIX_LIB}_open
 .endif

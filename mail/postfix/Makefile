@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.324 2020/11/05 09:08:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.325 2020/11/22 11:14:44 adam Exp $
 
-PKGREVISION= 2
 .include "../../mail/postfix/Makefile.common"
 
 COMMENT=	Fast, easy to administer, and secure mail transfer agent
@@ -55,8 +54,8 @@ SUBST_STAGE.paths=	pre-configure
 INSTALLATION_DIRS+=	${LIBEXECDIR} ${METADIR} ${SHLIBDIR} ${EXAMPLEDIR} ${DOCDIR}
 
 post-extract:
-	cp ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
-	rm -f ${WRKSRC}/auxiliary/MacOSX/Postfix.StartupItem/Postfix
+	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+	${RM} -f ${WRKSRC}/auxiliary/MacOSX/Postfix.StartupItem/Postfix
 
 post-build:
 .if !empty(PKG_OPTIONS:Msasl)
@@ -64,7 +63,7 @@ post-build:
 .endif
 
 do-install:
-	rm -f ${WRKSRC}/conf/*.orig
+	${RM} -f ${WRKSRC}/conf/*.orig
 .if !empty(PKG_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${DESTDIR}${EXAMPLEDIR}
 .endif
@@ -79,5 +78,19 @@ do-install:
 .for dir in ${POSTFIX_QUEUE_SUBDIR}
 	${RMDIR} ${DESTDIR}${POSTFIX_QUEUE_DIR}/${dir}
 .endfor
+.if ${OPSYS} == "Darwin"
+	for f in ${DESTDIR}${PREFIX}/lib/postfix/lib*.dylib; do \
+		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
+	done
+	for f in ${DESTDIR}${PREFIX}/libexec/postfix/* ${DESTDIR}${PREFIX}/sbin/*; do \
+		install_name_tool \
+			-change @rpath/libpostfix-dns.dylib ${PREFIX}/lib/postfix/libpostfix-dns.dylib \
+			-change @rpath/libpostfix-global.dylib ${PREFIX}/lib/postfix/libpostfix-global.dylib \
+			-change @rpath/libpostfix-master.dylib ${PREFIX}/lib/postfix/libpostfix-master.dylib \
+			-change @rpath/libpostfix-tls.dylib ${PREFIX}/lib/postfix/libpostfix-tls.dylib \
+			-change @rpath/libpostfix-util.dylib ${PREFIX}/lib/postfix/libpostfix-util.dylib \
+			$$f; \
+	done
+.endif
 
 .include "../../mk/bsd.pkg.mk"
