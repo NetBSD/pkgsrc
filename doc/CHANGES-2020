@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6306 2020/11/23 06:11:49 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.6307 2020/11/23 06:51:46 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9240,3 +9240,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/kitty to 0.19.2 [pin 2020-11-22]
 	Updated security/gnome-keyring to 3.36.0 [nia 2020-11-22]
 	Updated net/py-google-cloud-sdk to 319.0.0 [riastradh 2020-11-23]
+	Updated www/py-flask-babel to 1.0.0 [khorben 2020-11-23]
