@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.3 2018/10/03 22:27:05 nia Exp $
+$NetBSD: distinfo,v 1.4 2020/11/23 20:15:19 nia Exp $
 
-SHA1 (miniupnpc-2.1.tar.gz) = 7abef19a5460afad704814d8db0d998781799825
-RMD160 (miniupnpc-2.1.tar.gz) = 5f5eb86988f8e5ac5c9542525ac9cfa4350ad61e
-SHA512 (miniupnpc-2.1.tar.gz) = 0af5c573206e0147f8e20cd84c394164a784cf385f3978b7ca414cc2b2e530d6af40a21de5c9d8459d31db249e06667757e723767b1d4cd0a4ec5497ad239c23
-Size (miniupnpc-2.1.tar.gz) = 91914 bytes
+SHA1 (miniupnpc-2.2.0.tar.gz) = f02f49d29518b157f370b7f59188f7f0d8e77a58
+RMD160 (miniupnpc-2.2.0.tar.gz) = 69d4d46c34bf2d2608af66765a049d247f2e5eb7
+SHA512 (miniupnpc-2.2.0.tar.gz) = b5bb674f162cae3d9e0205a9cdf6acc1fb334ab8ac5330be924411a8fd46833fb916d09f947d1e40d05224df7df1ecf6d812037185690e5022287c2024eb183f
+Size (miniupnpc-2.2.0.tar.gz) = 98348 bytes
 SHA1 (patch-Makefile) = 646f3747de66e8451667411ad605877e61fd6c32
 SHA1 (patch-minissdpc.c) = 183fcebe7a94acb596db6ef03ee7663532808108
+SHA1 (patch-miniwget.c) = 6bf80bc09af904c10a9ad1dc226115070860cf11
+SHA1 (patch-upnpc.c) = 65a0f801de3ce41aa74a143c112e0dbd4a972dcb
