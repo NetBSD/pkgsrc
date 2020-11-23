@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/04/25 12:44:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/11/23 09:54:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,3 +10,4 @@ ${PYSITELIB}/xopen/__init__.pyo
 ${PYSITELIB}/xopen/_version.py
 ${PYSITELIB}/xopen/_version.pyc
 ${PYSITELIB}/xopen/_version.pyo
+${PYSITELIB}/xopen/py.typed
