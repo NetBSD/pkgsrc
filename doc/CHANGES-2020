@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6333 2020/11/23 20:11:35 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6334 2020/11/23 20:15:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9268,3 +9268,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/libwps to 0.4.12 [nia 2020-11-23]
 	Updated devel/lua-penlight to 1.9.2 [nia 2020-11-23]
 	Updated devel/memcached to 1.6.9 [nia 2020-11-23]
+	Updated net/miniupnpc to 2.2.0 [nia 2020-11-23]
