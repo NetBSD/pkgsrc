@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6313 2020/11/23 11:35:19 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6314 2020/11/23 13:11:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9248,3 +9248,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/broot to 1.0.6 [pin 2020-11-23]
 	Updated audio/amsynth to 1.12.2 [nia 2020-11-23]
 	Updated devel/cdk to 5.0.20200923 [nia 2020-11-23]
+	Updated graphics/feh to 3.5 [nia 2020-11-23]
