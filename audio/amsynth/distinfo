@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.4 2020/10/19 18:13:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/11/23 10:58:54 nia Exp $
 
-SHA1 (amsynth-1.11.0.tar.gz) = 7394b5931f55eb4b6a439921db4d650fd95d7f97
-RMD160 (amsynth-1.11.0.tar.gz) = bdaa0c91d5d724668a1a5de501e5022373255ec5
-SHA512 (amsynth-1.11.0.tar.gz) = 35f0242d70df342b30203fa2e7157b74b038fb73b514727e9b7b6b6251b43d7de0999bfc67b9ae549c13b11b0d7e949d83713da4491d5a3077f455be339b329b
-Size (amsynth-1.11.0.tar.gz) = 1542769 bytes
-SHA1 (patch-configure) = ea0917dc40e1e1be364de823c43b04a599c80655
-SHA1 (patch-configure.ac) = 4e680ce35b6500442e6689db94590915e79a3b27
+SHA1 (amsynth-1.12.2.tar.gz) = ab51cfd8752ab34673a3a1f14dcb3759f852d313
+RMD160 (amsynth-1.12.2.tar.gz) = 78db1078e30f264981a854f4f0ae0c93a6e6f104
+SHA512 (amsynth-1.12.2.tar.gz) = a1eef3d5a0d0f0ec1edb93d89b3e456ea133a8445a9be73ba338771ae651a2008aea8dd077a9bcf0cd50e6bcc97ad98ab4c44a9baefd9f3381287afdf3325e8f
+Size (amsynth-1.12.2.tar.gz) = 1607129 bytes
 SHA1 (patch-src_amsynth__lv2.cpp) = 2366430a33c3d6513b75333cbeac98513bb8384f
 SHA1 (patch-src_amsynth__lv2__ui__gtk.cpp) = 16fe111be7bf57dad76b6f3cef7f68ec8eac7ff8
 SHA1 (patch-src_amsynth__vst.cpp) = 237bc55cb257fc61bb06a037785340e9b8f91583
