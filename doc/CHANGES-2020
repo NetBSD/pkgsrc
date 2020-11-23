@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6329 2020/11/23 16:20:27 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6330 2020/11/23 16:36:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9264,3 +9264,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/tor-browser-https-everywhere to 2020.11.17 [wiz 2020-11-23]
 	Updated fonts/unifont to 13.0.04 [wiz 2020-11-23]
 	Updated lang/vala to 0.50.2 [wiz 2020-11-23]
+	Updated mail/alpine to 2.24 [bsiegert 2020-11-23]
