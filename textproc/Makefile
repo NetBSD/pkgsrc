@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1179 2020/11/18 22:38:52 riastradh Exp $
+# $NetBSD: Makefile,v 1.1180 2020/11/23 09:18:33 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1191,5 +1191,6 @@ SUBDIR+=	yelp-xsl
 SUBDIR+=	yodl
 SUBDIR+=	yq
 SUBDIR+=	zoem
+SUBDIR+=	zoxide
 
 .include "../mk/misc/category.mk"
