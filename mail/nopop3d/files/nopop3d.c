@@ -1,4 +1,4 @@
-/* $NetBSD */
+/* $NetBSD: nopop3d.c,v 1.2 2020/11/23 18:17:22 schmonz Exp $ */
 
 #include <stdlib.h>
 #include "commands.h"
