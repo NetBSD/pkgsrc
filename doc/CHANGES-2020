@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6315 2020/11/23 13:16:30 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6316 2020/11/23 13:44:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9250,3 +9250,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cdk to 5.0.20200923 [nia 2020-11-23]
 	Updated graphics/feh to 3.5 [nia 2020-11-23]
 	Updated sysutils/file to 5.39 [nia 2020-11-23]
+	Updated wm/fvwm3 to 1.0.1 [nia 2020-11-23]
