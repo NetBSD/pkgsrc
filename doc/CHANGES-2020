@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6311 2020/11/23 10:45:08 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6312 2020/11/23 10:59:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9246,3 +9246,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-xopen to 1.0.1 [adam 2020-11-23]
 	Updated www/py-google-api-python-client to 1.12.8 [adam 2020-11-23]
 	Updated sysutils/broot to 1.0.6 [pin 2020-11-23]
+	Updated audio/amsynth to 1.12.2 [nia 2020-11-23]
