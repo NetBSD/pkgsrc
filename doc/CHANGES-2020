@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6330 2020/11/23 16:36:23 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6331 2020/11/23 19:56:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9265,3 +9265,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/unifont to 13.0.04 [wiz 2020-11-23]
 	Updated lang/vala to 0.50.2 [wiz 2020-11-23]
 	Updated mail/alpine to 2.24 [bsiegert 2020-11-23]
+	Updated converters/libwps to 0.4.12 [nia 2020-11-23]
