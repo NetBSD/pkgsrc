@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.66 2020/11/05 09:07:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2020/11/23 14:09:06 nia Exp $
 
-DISTNAME=	hydrogen-1.0.0.rc1
-PKGREVISION=	3
+DISTNAME=	hydrogen-1.0.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hydrogen-music/}
 GITHUB_PROJECT=	Hydrogen
-GITHUB_TAG=	1.0.0-rc1
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	mrg@eterna.com.au
 HOMEPAGE=	http://hydrogen-music.org/
@@ -20,6 +19,8 @@ USE_TOOLS+=	pkg-config
 
 # C++14
 GCC_REQD+=	5
+
+CMAKE_ARGS+=	-DWANT_LRDF=ON
 
 .include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
@@ -42,6 +43,7 @@ PREFER.libarchive=	pkgsrc
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/liblrdf/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build
 .include "../../x11/qt5-qttools/buildlink3.mk"
