@@ -1,10 +1,10 @@
-$NetBSD: patch-imap_src_c-client_auth_gss.c,v 1.1 2012/10/10 19:45:49 markd Exp $
+$NetBSD: patch-imap_src_c-client_auth_gss.c,v 1.2 2020/11/23 16:36:03 bsiegert Exp $
 
 heimdal support from imap-uw package.
 
---- imap/src/c-client/auth_gss.c.orig	2008-06-04 18:18:34.000000000 +0000
+--- imap/src/c-client/auth_gss.c.orig	2020-10-10 16:40:43.206061523 +0000
 +++ imap/src/c-client/auth_gss.c
-@@ -26,6 +26,17 @@
+@@ -27,6 +27,17 @@
   * Last Edited:	30 August 2006
   */
  
@@ -21,8 +21,8 @@ heimdal support from imap-uw package.
 +#endif
  
  long auth_gssapi_valid (void);
- long auth_gssapi_client (authchallenge_t challenger,authrespond_t responder,
-@@ -64,15 +75,32 @@ long auth_gssapi_valid (void)
+ long auth_gssapi_client (authchallenge_t challenger,authrespond_t responder, char *base,
+@@ -65,15 +76,32 @@ long auth_gssapi_valid (void)
    OM_uint32 smn;
    gss_buffer_desc buf;
    gss_name_t name;
