@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6307 2020/11/23 06:51:46 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.6308 2020/11/23 08:41:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9241,3 +9241,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/gnome-keyring to 3.36.0 [nia 2020-11-22]
 	Updated net/py-google-cloud-sdk to 319.0.0 [riastradh 2020-11-23]
 	Updated www/py-flask-babel to 1.0.0 [khorben 2020-11-23]
+	Updated wm/frankenwm to 1.0.23 [pin 2020-11-23]
