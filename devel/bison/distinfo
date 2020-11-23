@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.55 2020/10/21 10:04:53 wiz Exp $
+$NetBSD: distinfo,v 1.56 2020/11/23 13:55:13 wiz Exp $
 
-SHA1 (bison-3.7.3.tar.xz) = 0ab4a865c4772109c50767013dcbe54e5786bb09
-RMD160 (bison-3.7.3.tar.xz) = 16086806aba3e002409bc5362d053b9fa8a863a8
-SHA512 (bison-3.7.3.tar.xz) = 34fe630749dc015f15a830ad13742c4b0b9163143a11e987c16954bee0451e819ec2fa7b43bd34c867e5ce72c758eb9070348d1d581c9435b9531a99caa46eed
-Size (bison-3.7.3.tar.xz) = 2613028 bytes
+SHA1 (bison-3.7.4.tar.xz) = 3fa6e50d9cb7145e7c2c1ad354e621c0eeb21d88
+RMD160 (bison-3.7.4.tar.xz) = 936dd31b836b4cdf52df3e900ceb6c241804a42c
+SHA512 (bison-3.7.4.tar.xz) = 3fc13ab21e28218afc9b7f1196a5607de7ff4403c4126df359848422a8057ac6c17ce4344864dd320b7c47a08d98e0f3e2929f25b06be3b1f1c867c0568f367c
+Size (bison-3.7.4.tar.xz) = 2617336 bytes
 SHA1 (patch-Makefile.in) = e50363d642f045dafb71a9b7c8b0814995029e1c
 SHA1 (patch-lib_isnan.c) = 5b44fc6e2e97e36f91cd784bf3a38ad459fccdab
