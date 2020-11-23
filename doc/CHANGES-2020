@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6326 2020/11/23 15:47:28 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6327 2020/11/23 16:02:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9261,3 +9261,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/libxkbcommon to 1.0.2 [wiz 2020-11-23]
 	Updated graphics/ImageMagick to 7.0.10.41 [wiz 2020-11-23]
 	Updated net/libcares to 1.17.1 [wiz 2020-11-23]
+	Updated security/tor-browser-https-everywhere to 2020.11.17 [wiz 2020-11-23]
