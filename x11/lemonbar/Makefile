@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/11/03 11:44:58 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/23 14:07:27 nia Exp $
 
-DISTNAME=	lemonbar-1.3
+DISTNAME=	lemonbar-1.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LemonBoy/}
 GITHUB_PROJECT=	bar
@@ -13,15 +13,12 @@ LICENSE=	mit
 
 USE_TOOLS+=	gmake pod2man
 
-AUTO_MKDIRS=	yes
+BUILD_TARGET=	all doc
 
-# generate the man page as in the lemonbar Makefile's `doc' target
-# because `all' does not call it
-post-build:
-	${TOOLS_PATH.pod2man} --section=1 --name=lemonbar \
-		--center="lemonbar manual" \
-		--release="${PKGVERSION_NOREV}" \
-		${WRKSRC}/README.pod > ${WRKSRC}/lemonbar.1
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE # memrchr
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lemonbar ${DESTDIR}${PREFIX}/bin/
