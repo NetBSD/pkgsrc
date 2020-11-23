@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6322 2020/11/23 14:15:59 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6323 2020/11/23 14:52:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9257,3 +9257,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/lemonbar to 1.4 [nia 2020-11-23]
 	Updated audio/hydrogen to 1.0.1 [nia 2020-11-23]
 	Added graphics/viu version 1.2.1 [pin 2020-11-23]
+	Updated devel/gopls to 0.5.3 [wiz 2020-11-23]
