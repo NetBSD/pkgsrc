@@ -1,0 +1,9 @@
+Small command-line application to view images from the terminal written in Rust.
+It is basically the front-end of `viuer`. It uses the Kitty graphics protocol,
+if supported. If not, lower half blocks are displayed insread.
+
+Features:
+- Animated GIF support
+- Accept media through stdin
+- Custom dimensions
+- Transparency
