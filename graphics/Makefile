@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.912 2020/11/19 18:31:58 nia Exp $
+# $NetBSD: Makefile,v 1.913 2020/11/23 14:15:24 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -789,6 +789,7 @@ SUBDIR+=	vid
 SUBDIR+=	viewfax
 SUBDIR+=	viewnior
 SUBDIR+=	vigra
+SUBDIR+=	viu
 SUBDIR+=	vnc2swf
 SUBDIR+=	vp
 SUBDIR+=	vtk
