@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2020/06/13 18:25:08 nia Exp $
+# $NetBSD: Makefile,v 1.109 2020/11/23 13:10:54 nia Exp $
 
-DISTNAME=	feh-3.4.1
+DISTNAME=	feh-3.5
 CATEGORIES=	graphics
 MASTER_SITES=	https://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +13,8 @@ LICENSE=	mit
 USE_LANGUAGES=	c99
 
 USE_TOOLS+=	gmake
+
+CFLAGS+=	-DHAVE_STRING_H=1
 
 # for alphasort(3)
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
