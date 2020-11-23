@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2020/11/13 16:12:02 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/11/23 14:00:39 nia Exp $
 #
 
-DISTNAME=	kyotocabinet-1.2.77
+DISTNAME=	kyotocabinet-1.2.78
 CATEGORIES=	databases
-MASTER_SITES=	https://fallabs.com/kyotocabinet/pkg/
+MASTER_SITES=	https://dbmx.net/kyotocabinet/pkg/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fallabs.com/kyotocabinet/
+HOMEPAGE=	https://dbmx.net/kyotocabinet/
 COMMENT=	Straightforward implementation of DBM
 LICENSE=	gnu-gpl-v3
 
