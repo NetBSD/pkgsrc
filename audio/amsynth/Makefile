@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/10/19 18:13:49 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/11/23 10:58:54 nia Exp $
 
-DISTNAME=	amsynth-1.11.0
+DISTNAME=	amsynth-1.12.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=amsynth/}
 GITHUB_PROJECT=	amsynth
@@ -49,6 +49,7 @@ SUBST_SED.sr+=		-e "s,44100,48000,g"
 .endif
 
 .include "options.mk"
+.include "../../audio/dssi/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
