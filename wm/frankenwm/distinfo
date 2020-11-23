@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/07/23 19:53:51 pin Exp $
+$NetBSD: distinfo,v 1.2 2020/11/23 08:41:27 pin Exp $
 
-SHA1 (FrankenWM-1.0.22.tar.gz) = 4fe6bf6ba9e726696ff92fe40e80d98c1dbf43a3
-RMD160 (FrankenWM-1.0.22.tar.gz) = 8574b5ec4308fde772ba0d8d8c7ab223b075dd44
-SHA512 (FrankenWM-1.0.22.tar.gz) = bea5cbc94b34f3d55c7b9721906b7599fe3e8cfb93ce5f4727fc2f699db716eaa419865d611e4a68e9a63916b2c3a41196653d660b8672149e085d4c51d1cf83
-Size (FrankenWM-1.0.22.tar.gz) = 35588 bytes
-SHA1 (patch-Makefile) = 3ce05d6fe097aa80efbd2447c62dc7ab8bc35f73
-SHA1 (patch-frankenwm.c) = 4af49a8aef3694b5b8beb20a2849617ce5d174ac
+SHA1 (FrankenWM-1.0.23.tar.gz) = b7f606fc018afd0f9061d7db5c31a15328d247cc
+RMD160 (FrankenWM-1.0.23.tar.gz) = d841bb756cdb603de66cdb9290a65c9637b8a69d
+SHA512 (FrankenWM-1.0.23.tar.gz) = d2e00a35e1ba0647962de16b80aeffd2019cd22d319d9e4ab67ae06485bee612df4416ff8220a665fb6ccca8b54b516b8c0c253005b7ccfdd95f285f150ca394
+Size (FrankenWM-1.0.23.tar.gz) = 35497 bytes
