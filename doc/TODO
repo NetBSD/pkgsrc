@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20208 2020/11/23 13:55:23 wiz Exp $
+$NetBSD: TODO,v 1.20209 2020/11/23 14:06:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -427,7 +427,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aspell-nb-2.0.10
 	o asterisk13-13.21.1
 	o autoconvert-0.3.16
-	o automake-1.16.3
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.16
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
