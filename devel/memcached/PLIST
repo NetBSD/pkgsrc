@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.15 2019/11/11 17:29:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/11/23 20:11:24 nia Exp $
 bin/memcached
 bin/memcached-tool
 include/memcached/protocol_binary.h
 man/man1/memcached.1
+share/doc/memcached/napi_ids.txt
 share/doc/memcached/new_lru.txt
 share/doc/memcached/protocol-binary-range.txt
 share/doc/memcached/protocol-binary.txt
