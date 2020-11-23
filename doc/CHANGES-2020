@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6309 2020/11/23 09:19:14 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6310 2020/11/23 09:56:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9243,3 +9243,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-flask-babel to 1.0.0 [khorben 2020-11-23]
 	Updated wm/frankenwm to 1.0.23 [pin 2020-11-23]
 	Added textproc/zoxide version 0.5.0 [pin 2020-11-23]
+	Updated devel/py-xopen to 1.0.1 [adam 2020-11-23]
+	Updated www/py-google-api-python-client to 1.12.8 [adam 2020-11-23]
