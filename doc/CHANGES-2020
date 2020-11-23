@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6331 2020/11/23 19:56:29 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6332 2020/11/23 20:06:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9266,3 +9266,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/vala to 0.50.2 [wiz 2020-11-23]
 	Updated mail/alpine to 2.24 [bsiegert 2020-11-23]
 	Updated converters/libwps to 0.4.12 [nia 2020-11-23]
+	Updated devel/lua-penlight to 1.9.2 [nia 2020-11-23]
