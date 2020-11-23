@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/23 09:17:36 pin Exp $
+bin/zoxide
+share/doc/zoxide/README.md
