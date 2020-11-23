@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2020/02/26 15:59:05 nia Exp $
+$NetBSD: distinfo,v 1.8 2020/11/23 14:00:39 nia Exp $
 
-SHA1 (kyotocabinet-1.2.77.tar.gz) = 05db90c709c352eeb0a70367ee2e1b0ab86768e1
-RMD160 (kyotocabinet-1.2.77.tar.gz) = eb7597f10ffd3207833043af16188898cc9c0c19
-SHA512 (kyotocabinet-1.2.77.tar.gz) = f38794c11faa3f4b64097a2e314307e1a6b75ddc495103647ebe52786a689336754496e7083697417ea90436e7fad681f16440975abec9ae917874aa25153e0f
-Size (kyotocabinet-1.2.77.tar.gz) = 949326 bytes
+SHA1 (kyotocabinet-1.2.78.tar.gz) = c5022c8565ae4c6536a39052695258698c577462
+RMD160 (kyotocabinet-1.2.78.tar.gz) = 100079ce8a6ba6a01292fe9e3658d887b109e5a0
+SHA512 (kyotocabinet-1.2.78.tar.gz) = 57971a231998574678d38d4b4aaffa0dafcac17416a05a42e1204d54e8d81ac1044ea703dd62f1d23c9385b5b18775918b722f428f14078451af83c29354db53
+Size (kyotocabinet-1.2.78.tar.gz) = 954490 bytes
 SHA1 (patch-configure) = 67f2a01332236f7db88a5714ced8662b1c82a467
 SHA1 (patch-kccommon.h) = 93a4c003aa6bf069cf65f2a943314f2a332790c6
 SHA1 (patch-kcthread.cc) = d09d280cd9589b10bbc10b29dc51d40ce074cc7f
