@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6317 2020/11/23 13:55:23 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6318 2020/11/23 14:00:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9252,3 +9252,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/file to 5.39 [nia 2020-11-23]
 	Updated wm/fvwm3 to 1.0.1 [nia 2020-11-23]
 	Updated devel/bison to 3.7.4 [wiz 2020-11-23]
+	Updated databases/kyotocabinet to 1.2.78 [nia 2020-11-23]
