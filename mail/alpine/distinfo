@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.24 2020/05/15 17:25:11 bsiegert Exp $
+$NetBSD: distinfo,v 1.25 2020/11/23 16:36:03 bsiegert Exp $
 
-SHA1 (alpine-2.22.tar.xz) = 16d5bdbcb8e69113e44b754627491be93a28cb8c
-RMD160 (alpine-2.22.tar.xz) = 2f9bc435cd3521ec76d5d96351bdecda66fbdcee
-SHA512 (alpine-2.22.tar.xz) = 7737dce02ac94170948df7fccb61380c6cb101190e37f5b3ba281d573f54df1db24569d177b460f49bfff381a922be2e4b0f3a0f1a213d88a64d361aedc3c4f1
-Size (alpine-2.22.tar.xz) = 6336604 bytes
-SHA1 (patch-imap_src_c-client_auth_gss.c) = 622b18f03074f87036f5469323125b4c855d9ce5
+SHA1 (alpine-2.24.tar.xz) = 42f2936935699686276bc6ab9e510eff7376a3dd
+RMD160 (alpine-2.24.tar.xz) = 1612ff9edfdd66a0ef145f338fa9db26177360e0
+SHA512 (alpine-2.24.tar.xz) = 642a51f73732ebdf7c40e2b66370aa2f48fb13b349b477871b26295c3e8b860a0cc78dec9f80efc6ea74c548a080ceff04181eb18c35a9c8cae8d8ef831178c5
+Size (alpine-2.24.tar.xz) = 7341676 bytes
+SHA1 (patch-imap_src_c-client_auth_gss.c) = e6da9ee9dbe0751872d1400237a030112eaa56c6
 SHA1 (patch-imap_src_mtest_mtest.c) = 8c5282047e165fee4b6fe74c230e41d63d3cdc69
 SHA1 (patch-imap_src_osdep_unix_Makefile.gss) = ca09bc26a139c68afe8ac1f99be54bd1fc0e77f0
 SHA1 (patch-imap_src_osdep_unix_kerb_mit.c) = c77d5ee1e8aee30811c2df0562caa375ed270c0e
