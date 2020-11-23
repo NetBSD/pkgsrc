@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6325 2020/11/23 15:45:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6326 2020/11/23 15:47:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9260,3 +9260,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/gopls to 0.5.3 [wiz 2020-11-23]
 	Updated x11/libxkbcommon to 1.0.2 [wiz 2020-11-23]
 	Updated graphics/ImageMagick to 7.0.10.41 [wiz 2020-11-23]
+	Updated net/libcares to 1.17.1 [wiz 2020-11-23]
