@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2020/01/26 17:32:09 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2020/11/23 13:16:19 nia Exp $
 
-DISTNAME=		file-5.38
+DISTNAME=		file-5.39
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://ftp.astron.com/pub/file/
+MASTER_SITES=		http://ftp.astron.com/pub/file/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.darwinsys.com/file/
