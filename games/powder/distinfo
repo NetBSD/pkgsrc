@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:57:01 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/11/24 18:10:03 nia Exp $
 
-SHA1 (powder117_src.tar.gz) = 968aed7171e48ea08abd951da679e30feb11545d
-RMD160 (powder117_src.tar.gz) = 52d8cbdc6f14e9fbaa38544c4f93307e7758e4dc
-SHA512 (powder117_src.tar.gz) = cdbf67d6d582af39c40cc0872411725d0c296326b21cf8efbe7c7ccd11cd3c831ad129e5e91fb661f938a399ac799509e5123653494f54398c55750026bc6736
-Size (powder117_src.tar.gz) = 1891043 bytes
+SHA1 (powder118_src.tar.gz) = 9e1b0fb2e59f4d05e75b10da65acd437a2ef29d7
+RMD160 (powder118_src.tar.gz) = 4273c515bde70db0e89f83c7d17e9bafbe6d8169
+SHA512 (powder118_src.tar.gz) = df2b6abd7453e7636588d13cf02a830ce1ebb8820bdb369afb3374ffd273fe5ef58e97ec35d8463cdb3d8b67e86f2b4afe0bcff7ee8ab5e2b7805a1b6209944c
+Size (powder118_src.tar.gz) = 1941412 bytes

@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/08 08:45:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/24 18:10:03 nia Exp $
 bin/powder
+man/man6/powder.6
+share/applications/powder.desktop
 share/doc/powder/CREDITS.TXT
 share/doc/powder/LICENSE.TXT
 share/doc/powder/README.TXT
+share/icons/hicolor/48x48/apps/powder.png
