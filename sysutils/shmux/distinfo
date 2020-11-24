@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:32:31 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/11/24 14:24:39 nia Exp $
 
-SHA1 (shmux-1.0.2.tgz) = 6fe39602c497331e448c4331b8cddbb2abb71b79
-RMD160 (shmux-1.0.2.tgz) = 31937f39483e8ab54848f84830489bf45dff5783
-SHA512 (shmux-1.0.2.tgz) = d114678827d4fc203f0d18b4a4e02f8b56efdf490df0aef32756a020c755b387468a88fea7266249445a862d7ed9374640432e5807fa57bca5a7d559d7e67a8a
-Size (shmux-1.0.2.tgz) = 110473 bytes
+SHA1 (shmux-1.0.3.tar.gz) = ea175fc23207ae11178b034fd0e9fec83b9ef38d
+RMD160 (shmux-1.0.3.tar.gz) = 8cff1bdfa3f9d02096e514e58802c63ad07481cd
+SHA512 (shmux-1.0.3.tar.gz) = fb1dbb9701913fb97fb82914b9ae277703aec48cafdf74bcaa4a194ba242b62aff34e004507d6931475f320f89d62ed465360c0bc5cf2ff45abe7482b3127197
+Size (shmux-1.0.3.tar.gz) = 116613 bytes
