@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/24 11:28:29 nia Exp $
 bin/wmmixer
+man/man1/wmmixer.1
+share/applications/wmmixer.desktop
