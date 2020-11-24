@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/01/31 18:40:13 wiz Exp $
+$NetBSD: distinfo,v 1.3 2020/11/24 10:28:44 nia Exp $
 
-SHA1 (xbanish-1.6.tar.gz) = 3b29733b0d0ae85489788d8144e213ebb0c8fe1c
-RMD160 (xbanish-1.6.tar.gz) = 6a6bd253c23e6d4f2fce01f95e8f524b8f993bb7
-SHA512 (xbanish-1.6.tar.gz) = a0eb7fdac94f95756636c3d3c114771b6865f26cbb7dbd4fbe10ffd29c21725dcd3570caaf0d2381fa0a32092d3348929df80ee7bb78047c7cfffe04cd29a38f
-Size (xbanish-1.6.tar.gz) = 5768 bytes
+SHA1 (xbanish-1.7.tar.gz) = 866d87d364f5fa4e85295719bb109ee83d136fe5
+RMD160 (xbanish-1.7.tar.gz) = 3a07e2e02e2c8fdd0092f04d541f9122b35676b7
+SHA512 (xbanish-1.7.tar.gz) = f790ea888812bb6b7793f0a60a900724fc407ec4485672e37d464387ffacfa4bf2dc891862f3fed06948cda31024745816b3adb58074c4578edc6a9848f2bd08
+Size (xbanish-1.7.tar.gz) = 6379 bytes
