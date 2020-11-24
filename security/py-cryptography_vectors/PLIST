@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/04/03 06:25:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/11/24 08:56:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -114,7 +114,29 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pkcs8.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/rfc8032.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/dsa-nopsw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/dsa-nopsw.key-cert.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/dsa-nopsw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/dsa-psw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/dsa-psw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-nopsw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-nopsw.key-cert.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-nopsw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-psw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-psw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-nopsw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-nopsw.key-cert.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-nopsw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-psw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-psw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/gen.sh
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-nopsw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-nopsw.key-cert.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-nopsw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-psw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-psw.key.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/README.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsa_4096.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsa_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsa_public_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsaparam.pem
@@ -556,6 +578,9 @@ ${PYSITELIB}/cryptography_vectors/pkcs12/cert-none-key-none.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/cert-rc2-key-3des.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/no-cert-key-aes256cbc.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/no-password.p12
+${PYSITELIB}/cryptography_vectors/pkcs7/amazon-roots.p7b
+${PYSITELIB}/cryptography_vectors/pkcs7/enveloped.pem
+${PYSITELIB}/cryptography_vectors/pkcs7/isrg.pem
 ${PYSITELIB}/cryptography_vectors/poly1305/rfc7539.txt
 ${PYSITELIB}/cryptography_vectors/twofactor/rfc-4226.txt
 ${PYSITELIB}/cryptography_vectors/twofactor/rfc-6238.txt
@@ -2135,6 +2160,8 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/basic_constraints_not_critical.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/bc_path_length_zero.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ca/ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ca/ca_key.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/ca/rsa_ca.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/ca/rsa_key.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_all_reasons.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_crl_issuer.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_empty_hostname.pem
@@ -2197,6 +2224,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/san_rfc822_idna.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_rfc822_names.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_uri_with_port.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_wildcard_idna.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/sia.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/two_basic_constraints.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/unsupported_extension.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/unsupported_extension_2.pem
@@ -2214,6 +2242,7 @@ ${PYSITELIB}/cryptography_vectors/x509/ed25519/server-ed25519-cert.pem
 ${PYSITELIB}/cryptography_vectors/x509/ed448/root-ed448.pem
 ${PYSITELIB}/cryptography_vectors/x509/ed448/server-ed448-cert.pem
 ${PYSITELIB}/cryptography_vectors/x509/letsencryptx3.pem
+${PYSITELIB}/cryptography_vectors/x509/ocsp/ocsp-army.deps.mil-resp.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-ext-nonce.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-invalid-hash-alg.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-multi-sha1.der
@@ -2230,6 +2259,8 @@ ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-single-extension-reason.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-unauthorized.der
 ${PYSITELIB}/cryptography_vectors/x509/rapidssl_sha256_ca_g3.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/basic_constraints.pem
+${PYSITELIB}/cryptography_vectors/x509/requests/challenge-invalid.der
+${PYSITELIB}/cryptography_vectors/x509/requests/challenge-unstructured.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/challenge.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/dsa_sha1.der
 ${PYSITELIB}/cryptography_vectors/x509/requests/dsa_sha1.pem
