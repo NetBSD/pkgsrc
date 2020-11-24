@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20220 2020/11/24 17:07:03 leot Exp $
+$NetBSD: TODO,v 1.20221 2020/11/24 17:33:42 nia Exp $
 
 Suggested new packages
 ======================
@@ -958,7 +958,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rakudo-star-2016.01
 	o rasmol-2.7.5.2
 	o rat-4.2.25
-	o ratmen-2.2.3
 	o razor-qt-0.5.2
 	o rbldnsd-0.998
 	o rdp-1.6
