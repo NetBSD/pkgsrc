@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6339 2020/11/24 09:24:47 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6340 2020/11/24 09:57:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9278,3 +9278,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-cryptography_vectors to 3.2.1 [adam 2020-11-24]
 	Updated www/py-urllib3 to 1.26.2 [adam 2020-11-24]
 	Updated www/py-uvicorn to 0.12.3 [adam 2020-11-24]
+	Updated editors/zile to 2.4.15 [nia 2020-11-24]
