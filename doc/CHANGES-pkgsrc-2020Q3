@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.10 2020/11/10 17:23:53 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.11 2020/11/24 19:33:51 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -103,4 +103,16 @@ security/tor-browser-noscript: security fix
 
 Pullup ticket #6358 - requested by wiz
 security/tor-browser: security fix
+
+Pullup ticket #6367 - requested by leot
+net/youtube-dl: updates and bugfixes
+
+Pullup ticket #6368 - requested by wiz
+graphics/ImageMagick: security fix
+
+Pullup ticket #6370 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6371 - requested by nia
+www/firefox78-l10n: dependent update
 
