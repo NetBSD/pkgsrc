@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/07/19 16:01:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/11/24 17:06:50 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -25,6 +25,9 @@ ${PYSITELIB}/mitmproxy/addons/anticache.pyo
 ${PYSITELIB}/mitmproxy/addons/anticomp.py
 ${PYSITELIB}/mitmproxy/addons/anticomp.pyc
 ${PYSITELIB}/mitmproxy/addons/anticomp.pyo
+${PYSITELIB}/mitmproxy/addons/asgiapp.py
+${PYSITELIB}/mitmproxy/addons/asgiapp.pyc
+${PYSITELIB}/mitmproxy/addons/asgiapp.pyo
 ${PYSITELIB}/mitmproxy/addons/block.py
 ${PYSITELIB}/mitmproxy/addons/block.pyc
 ${PYSITELIB}/mitmproxy/addons/block.pyo
@@ -83,17 +86,15 @@ ${PYSITELIB}/mitmproxy/addons/onboardingapp/__init__.py
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/__init__.pyc
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/__init__.pyo
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/static/bootstrap.min.css
-${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/css/font-awesome.css
-${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/css/font-awesome.min.css
-${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/fonts/FontAwesome.otf
-${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/fonts/fontawesome-webfont.eot
-${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/fonts/fontawesome-webfont.svg
-${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/fonts/fontawesome-webfont.ttf
-${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/fonts/fontawesome-webfont.woff
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/static/images/favicon.ico
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/static/images/mitmproxy-long.png
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/static/mitmproxy.css
-${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/frame.html
+${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/icons/android-brands.svg
+${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/icons/apple-brands.svg
+${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/icons/certificate-solid.svg
+${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/icons/firefox-browser-brands.svg
+${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/icons/linux-brands.svg
+${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/icons/windows-brands.svg
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/index.html
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/templates/layout.html
 ${PYSITELIB}/mitmproxy/addons/proxyauth.py
@@ -135,9 +136,6 @@ ${PYSITELIB}/mitmproxy/addons/upstream_auth.pyo
 ${PYSITELIB}/mitmproxy/addons/view.py
 ${PYSITELIB}/mitmproxy/addons/view.pyc
 ${PYSITELIB}/mitmproxy/addons/view.pyo
-${PYSITELIB}/mitmproxy/addons/wsgiapp.py
-${PYSITELIB}/mitmproxy/addons/wsgiapp.pyc
-${PYSITELIB}/mitmproxy/addons/wsgiapp.pyo
 ${PYSITELIB}/mitmproxy/certs.py
 ${PYSITELIB}/mitmproxy/certs.pyc
 ${PYSITELIB}/mitmproxy/certs.pyo
@@ -180,6 +178,9 @@ ${PYSITELIB}/mitmproxy/contentviews/javascript.pyo
 ${PYSITELIB}/mitmproxy/contentviews/json.py
 ${PYSITELIB}/mitmproxy/contentviews/json.pyc
 ${PYSITELIB}/mitmproxy/contentviews/json.pyo
+${PYSITELIB}/mitmproxy/contentviews/msgpack.py
+${PYSITELIB}/mitmproxy/contentviews/msgpack.pyc
+${PYSITELIB}/mitmproxy/contentviews/msgpack.pyo
 ${PYSITELIB}/mitmproxy/contentviews/multipart.py
 ${PYSITELIB}/mitmproxy/contentviews/multipart.pyc
 ${PYSITELIB}/mitmproxy/contentviews/multipart.pyo
@@ -237,12 +238,6 @@ ${PYSITELIB}/mitmproxy/contrib/kaitaistruct/tls_client_hello.pyo
 ${PYSITELIB}/mitmproxy/contrib/kaitaistruct/vlq_base128_le.py
 ${PYSITELIB}/mitmproxy/contrib/kaitaistruct/vlq_base128_le.pyc
 ${PYSITELIB}/mitmproxy/contrib/kaitaistruct/vlq_base128_le.pyo
-${PYSITELIB}/mitmproxy/contrib/urwid_escape.py
-${PYSITELIB}/mitmproxy/contrib/urwid_escape.pyc
-${PYSITELIB}/mitmproxy/contrib/urwid_escape.pyo
-${PYSITELIB}/mitmproxy/contrib/urwid_monkeypatch.py
-${PYSITELIB}/mitmproxy/contrib/urwid_monkeypatch.pyc
-${PYSITELIB}/mitmproxy/contrib/urwid_monkeypatch.pyo
 ${PYSITELIB}/mitmproxy/contrib/wbxml/ASCommandResponse.py
 ${PYSITELIB}/mitmproxy/contrib/wbxml/ASCommandResponse.pyc
 ${PYSITELIB}/mitmproxy/contrib/wbxml/ASCommandResponse.pyo
@@ -410,9 +405,6 @@ ${PYSITELIB}/mitmproxy/net/websockets/masker.pyo
 ${PYSITELIB}/mitmproxy/net/websockets/utils.py
 ${PYSITELIB}/mitmproxy/net/websockets/utils.pyc
 ${PYSITELIB}/mitmproxy/net/websockets/utils.pyo
-${PYSITELIB}/mitmproxy/net/wsgi.py
-${PYSITELIB}/mitmproxy/net/wsgi.pyc
-${PYSITELIB}/mitmproxy/net/wsgi.pyo
 ${PYSITELIB}/mitmproxy/options.py
 ${PYSITELIB}/mitmproxy/options.pyc
 ${PYSITELIB}/mitmproxy/options.pyo
