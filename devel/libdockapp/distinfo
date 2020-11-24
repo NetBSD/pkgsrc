@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:27:39 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/11/24 11:13:25 nia Exp $
 
-SHA1 (libdockapp-0.6.2.tar.bz2) = ca1ffdf7c5f3f02a48529bd4e816d32b900ea95a
-RMD160 (libdockapp-0.6.2.tar.bz2) = 5043c88254e79223e6d574af5352b2fcd70e7f3c
-SHA512 (libdockapp-0.6.2.tar.bz2) = 415cb905951640732e7ed1bbf9c38c201218f8a6cad995147729452cd608a30bd8086d3c8fddf5e29ddffe43465ebff25a69a4f04169684b8642ba7fa2dec1d1
-Size (libdockapp-0.6.2.tar.bz2) = 540677 bytes
-SHA1 (patch-aa) = f2985ceb620739b17b10d477d119b495e5d61cc6
+SHA1 (libdockapp-0.7.3.tar.gz) = 05eff84cb5592b3743389a8c36db72921d9b42a3
+RMD160 (libdockapp-0.7.3.tar.gz) = 2fff5109c7262d910f0abe2aa2d3f63923272922
+SHA512 (libdockapp-0.7.3.tar.gz) = 38d35599675fc8a8e9d14b0f059a0d1585106ed870210712f53f315d0442e98ad1df40a74b9f00e3f22656cb859d03fc93793b6042b9432394e572b89c58a815
+Size (libdockapp-0.7.3.tar.gz) = 387507 bytes
