@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/10/11 10:23:32 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/11/24 06:39:10 adam Exp $
 
-SHA1 (drf-nested-routers-0.91.tar.gz) = 7e0b8efa748692bc340d12ef7bfa0c5be45aea65
-RMD160 (drf-nested-routers-0.91.tar.gz) = 571f12ccaf8a54c41a53621d3ce00fd281d6fa20
-SHA512 (drf-nested-routers-0.91.tar.gz) = 87b0c1cd8604003ad3b8fc196d511d9e66e5d3497fe09f3e6a4bead9904194d963a9a417a54761ef13a6a63d766ad3eacf1da147846d1d6a4291dc2f1d045721
-Size (drf-nested-routers-0.91.tar.gz) = 15688 bytes
+SHA1 (drf-nested-routers-0.92.1.tar.gz) = 0d791aec4da6ff682bd18666941bb8f304f4f23c
+RMD160 (drf-nested-routers-0.92.1.tar.gz) = ae3ccc158f7dc70a071a0687cf784ae28493233d
+SHA512 (drf-nested-routers-0.92.1.tar.gz) = 7394b48d393f8fbbe5db5d11c5095c7110c0fc12c51bc604dec3b23592272731bfdd4947b115de75ab99092bebe74dc0e1000903a2167e9109e2b1f34970c610
+Size (drf-nested-routers-0.92.1.tar.gz) = 15728 bytes
