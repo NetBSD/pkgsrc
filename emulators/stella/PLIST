@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/06/09 11:59:58 nia Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/11/24 14:05:22 nia Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -58,8 +58,10 @@ share/doc/stella/graphics/options_gameinfo_cartridge.png
 share/doc/stella/graphics/options_gameinfo_console.png
 share/doc/stella/graphics/options_gameinfo_controller.png
 share/doc/stella/graphics/options_gameinfo_emulation.png
+share/doc/stella/graphics/options_gameinfo_quadtari.png
 share/doc/stella/graphics/options_misc.png
 share/doc/stella/graphics/options_misc_classic.png
+share/doc/stella/graphics/options_misc_dark.png
 share/doc/stella/graphics/options_misc_light.png
 share/doc/stella/graphics/options_ui.png
 share/doc/stella/graphics/options_video.png

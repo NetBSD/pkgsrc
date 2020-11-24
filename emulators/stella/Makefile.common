@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2020/06/29 14:48:49 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/11/24 14:05:22 nia Exp $
 # used by emulators/stella/Makefile
 # used by emulators/libretro-stella/Makefile
 
-DISTNAME=	stella-6.2.1-src
+DISTNAME=	stella-6.4-src
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stella-emu/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/stella/distinfo
-PATCHDIR=	${.CURDIR}/../../emulators/stella/patches
+#PATCHDIR=	${.CURDIR}/../../emulators/stella/patches
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//1}
 
