@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6357 2020/11/24 12:18:57 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6358 2020/11/24 12:24:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9296,3 +9296,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/vttest to 20200920 [nia 2020-11-24]
 	Updated sysutils/vifm to 0.11 [nia 2020-11-24]
 	Updated games/vms-empire to 1.15 [nia 2020-11-24]
+	Updated chat/unrealircd to 5.0.7 [nia 2020-11-24]
