@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/08/31 18:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/11/24 12:15:20 nia Exp $
 #
 
-DISTNAME=	vifm-0.10.1
-PKGREVISION=	2
+DISTNAME=	vifm-0.11
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vifm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +17,9 @@ USE_TOOLS+=	bash gmake perl pkg-config
 USE_CURSES=	resize_term wide
 FAKE_NCURSES=	yes
 
+# reallocarray
+CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
+
 REPLACE_PERL+=		src/vifm-convert-dircolors
 
 REPLACE_BASH+=		data/vifm-media
@@ -31,7 +33,7 @@ CONFIGURE_ARGS+=	--without-dyn-X11
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=	tool
 .endif
 
 .include "../../lang/python/application.mk"
