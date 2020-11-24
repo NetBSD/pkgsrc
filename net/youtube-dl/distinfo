@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.196 2020/09/20 09:12:28 leot Exp $
+$NetBSD: distinfo,v 1.196.2.1 2020/11/24 17:16:33 bsiegert Exp $
 
-SHA1 (youtube-dl-2020.09.20.tar.gz) = 2902fa18c30cc3851d5b7fc2932f3f986432b9ac
-RMD160 (youtube-dl-2020.09.20.tar.gz) = 107732952ec9238057a1bfc3fd7147ce4026f451
-SHA512 (youtube-dl-2020.09.20.tar.gz) = ed511016d0cfcbbee0cd651f793cb31cdb46d80243f86186de1cc54cb2a2055fae2f5cc3e16f838fc2ba47f3ff6f3b484219c8a707904fbc30193a2b28a1e30c
-Size (youtube-dl-2020.09.20.tar.gz) = 3188480 bytes
+SHA1 (youtube-dl-2020.11.12.tar.gz) = 04e72d0b0a0e85b79a6c2ac93b7c85254b95b53b
+RMD160 (youtube-dl-2020.11.12.tar.gz) = 2afd73b5c09463951086b29298489f0d203a2207
+SHA512 (youtube-dl-2020.11.12.tar.gz) = 7db373f6cc252635a3613ffe0b3b10640e262778105ebbd78b837fe019b0a2609032d2aeb81b239e000a86220aff99d2c018a9a6325adad6981a8ab64048131c
+Size (youtube-dl-2020.11.12.tar.gz) = 3188015 bytes
 SHA1 (patch-setup.py) = a67074ae7cfe5e77847c2f610337ea553eddb69b
+SHA1 (patch-youtube__dl_extractor_bandcamp.py) = 81855a3f4f8c03f61fe543eb339c0e67bf52682e
 SHA1 (patch-youtube__dl_extractor_la7.py) = e246750808305343227060acdc5a38583ef071e9
 SHA1 (patch-youtube__dl_extractor_rai.py) = 3dbad7852b38e7364a248a5c9851c50cd2ff9b38
 SHA1 (patch-youtube__dl_postprocessor_ffmpeg.py) = f96676170a448d9205d542a7def4beca615a1490
