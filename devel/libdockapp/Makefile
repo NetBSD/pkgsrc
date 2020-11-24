@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.26 2017/08/16 20:45:35 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.27 2020/11/24 11:13:25 nia Exp $
 
-DISTNAME=	libdockapp-0.6.2
+DISTNAME=	libdockapp-0.7.3
 CATEGORIES=	devel wm
-#MASTER_SITES=	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://www.dockapps.net/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://solfertje.student.utwente.nl/~dalroi/libdockapp/
+HOMEPAGE=	https://www.dockapps.net/libdockapp
 COMMENT=	Simple library to create dockapps for WindowMaker
+LICENSE=	mit
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-
-INSTALLATION_DIRS=	share/doc/libdockapp
+USE_TOOLS+=		pkg-config
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/libdockapp
+	${RM} -f ${DESTDIR}${PREFIX}/share/fonts/X11/misc/fonts.dir
+
+FONTS_DIRS.x11=		share/fonts/X11/misc
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

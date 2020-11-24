@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:24 rillig Exp $
-include/dockapp.h
+@comment $NetBSD: PLIST,v 1.6 2020/11/24 11:13:25 nia Exp $
+include/libdockapp/dockapp.h
+include/libdockapp/list.h
+include/libdockapp/misc.h
+include/libdockapp/wmgeneral.h
 lib/libdockapp.la
+lib/pkgconfig/dockapp.pc
 share/doc/libdockapp/README
-share/examples/libdockapp/basic/Imakefile
-share/examples/libdockapp/basic/README
-share/examples/libdockapp/basic/ball_red.xpm
-share/examples/libdockapp/basic/basic.c
-share/examples/libdockapp/rectangles/Imakefile
-share/examples/libdockapp/rectangles/rectangles.c
+share/doc/libdockapp/basic/Makefile
+share/doc/libdockapp/basic/README
+share/doc/libdockapp/basic/ball_red.xpm
+share/doc/libdockapp/basic/basic.c
+share/doc/libdockapp/rectangles/Makefile
+share/doc/libdockapp/rectangles/rectangles.c
+share/fonts/X11/misc/luxel-ascii-06x09.pcf.gz
+share/fonts/X11/misc/seg7-ascii-05x07.pcf.gz
