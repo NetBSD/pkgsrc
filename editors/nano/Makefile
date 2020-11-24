@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2020/08/23 23:09:01 wiedi Exp $
+# $NetBSD: Makefile,v 1.90 2020/11/24 18:21:38 nia Exp $
 
-DISTNAME=	nano-5.1
+DISTNAME=	nano-5.3
 CATEGORIES=	editors
 MASTER_SITES=	https://www.nano-editor.org/dist/v${PKGVERSION_NOREV:C/\..*$//}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,7 @@ COMMENT=	Small and friendly text editor (a free replacement for Pico)
 LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt gmake
+USE_TOOLS+=		msgfmt msgmerge xgettext gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-color
 CONFIGURE_ARGS+=	--enable-multibuffer
@@ -37,4 +37,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.nanorc ${DESTDIR}${PREFIX}/share/examples/nano/nanorc
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
