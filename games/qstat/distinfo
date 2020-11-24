@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:57:02 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/11/24 17:49:41 nia Exp $
 
-SHA1 (qstat-2.10.tar.gz) = a138d8d79c0840d4ded5d3d5c343613242e56026
-RMD160 (qstat-2.10.tar.gz) = d5f7c481ac37844f36a0791ef052c924301f0083
-SHA512 (qstat-2.10.tar.gz) = fa61fe33356dba582f1938cc2402f8a071d91b0e0afe25ef41b619a99bcd63552a3789383781036c9272a36a6215aa92beb6cee1c17777f14c48c867f7eb8362
-Size (qstat-2.10.tar.gz) = 228886 bytes
+SHA1 (qstat-2.14.tar.gz) = 6b18671939ba8a0afc9669e0e4069e4ef9d02a0e
+RMD160 (qstat-2.14.tar.gz) = e7222acd365b33c07636b9f10369ee7803b88f04
+SHA512 (qstat-2.14.tar.gz) = f2054d74399fe1773a19ca43629e10364fdd87e551459719685c11f38245a05906631b456848b1a3764b4e6843baf654af6a9b174c7b16908b6bcb97ac64c6d6
+Size (qstat-2.14.tar.gz) = 210440 bytes
+SHA1 (patch-Makefile.am) = 27ca86e6cf351e5cbe254ddf22c97375d30a9abb
