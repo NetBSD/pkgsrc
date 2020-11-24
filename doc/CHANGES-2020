@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6337 2020/11/24 06:39:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6338 2020/11/24 08:33:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9273,3 +9273,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/dmidecode to 3.3 [msaitoh 2020-11-24]
 	Updated devel/py-argcomplete to 1.12.2 [adam 2020-11-24]
 	Updated www/py-drf-nested-routers to 0.92.1 [adam 2020-11-24]
+	Updated net/s6-networking to 2.3.2.0nb2 [schmonz 2020-11-24]
