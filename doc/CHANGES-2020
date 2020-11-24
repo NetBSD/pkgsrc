@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6352 2020/11/24 11:28:49 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6353 2020/11/24 11:36:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9291,3 +9291,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libdockapp to 0.7.3 [nia 2020-11-24]
 	Updated time/wmitime to 0.5 [nia 2020-11-24]
 	Updated audio/wmmixer to 1.8 [nia 2020-11-24]
+	Updated time/wmtime to 1.4 [nia 2020-11-24]
