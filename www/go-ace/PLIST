@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:08:30 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/24 00:33:39 nikita Exp $
 bin/ace
 bin/actions
 bin/base_inner_template
@@ -87,6 +87,8 @@ gopkg/src/github.com/yosssi/ace/examples/single_template/README.md
 gopkg/src/github.com/yosssi/ace/examples/single_template/example.ace
 gopkg/src/github.com/yosssi/ace/examples/single_template/main.go
 gopkg/src/github.com/yosssi/ace/file.go
+gopkg/src/github.com/yosssi/ace/formatter.go
+gopkg/src/github.com/yosssi/ace/formatter_test.go
 gopkg/src/github.com/yosssi/ace/helper_method_conditional_comment.go
 gopkg/src/github.com/yosssi/ace/helper_method_content.go
 gopkg/src/github.com/yosssi/ace/helper_method_css.go
