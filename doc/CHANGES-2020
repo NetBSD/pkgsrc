@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6347 2020/11/24 10:43:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6348 2020/11/24 10:51:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9286,3 +9286,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/xdaliclock to 2.44 [nia 2020-11-24]
 	Updated games/xcowsay to 1.5.1 [nia 2020-11-24]
 	Updated sysutils/xfce4-xarchiver to 0.5.4.15 [nia 2020-11-24]
+	Updated time/wmmoonclock to 1.30 [nia 2020-11-24]
