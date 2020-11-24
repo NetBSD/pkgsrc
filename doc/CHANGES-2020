@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6359 2020/11/24 13:05:05 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6360 2020/11/24 13:16:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9298,3 +9298,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/vms-empire to 1.15 [nia 2020-11-24]
 	Updated chat/unrealircd to 5.0.7 [nia 2020-11-24]
 	Updated games/yquake2 to 7.45 [nia 2020-11-24]
+	Updated textproc/uncrustify to 0.72.0 [nia 2020-11-24]
