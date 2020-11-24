@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/19 10:48:39 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/11/24 17:22:00 nia Exp $
 bin/rofi
 bin/rofi-sensible-terminal
 bin/rofi-theme-selector
@@ -11,6 +11,7 @@ lib/pkgconfig/rofi.pc
 man/man1/rofi-sensible-terminal.1
 man/man1/rofi-theme-selector.1
 man/man1/rofi.1
+man/man5/rofi-script.5
 man/man5/rofi-theme.5
 share/rofi/themes/Adapta-Nokto.rasi
 share/rofi/themes/Arc-Dark.rasi
