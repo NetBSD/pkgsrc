@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6379 2020/11/24 17:22:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6380 2020/11/24 17:33:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9318,3 +9318,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/scrot to 1.4 [nia 2020-11-24]
 	Updated audio/rubberband to 1.9.0 [nia 2020-11-24]
 	Updated x11/rofi to 1.6.1 [nia 2020-11-24]
+	Updated x11/ratmen to 2.2.3 [nia 2020-11-24]
