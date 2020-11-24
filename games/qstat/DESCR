@@ -1,16 +1,5 @@
-QStat is a command-line program that gathers real-time statistics from
-Internet game servers.
-
-A summary of its features:
-
- * Supports Windows 95, NT, Linux, and most Unixes.
- * Comes with C source code and a binary for Windows.
- * Supports old Quake (NetQuake), QuakeWorld, Hexen II, HexenWorld, Quake II,
-   Unreal/UT, Turok2, Sin, Half-Life, Shogo, Tribes, Tribes 2, Quake III,
-   BFRIS, Kingpin, Heretic II servers, Soldier of Fortune, and lots more.
- * Can display all available statistics, including player info & server rules.
- * Output templates for automatic HTML generation.
- * Raw display mode for integration with custom server browsers.
- * Built-in host name cache.
- * Sort by ping time, game, or both.
- * More options than you can wiggle a mouse at.
+QStat is a command-line program that displays information about Internet
+game servers. The servers are either down, non-responsive, or running a
+game. For servers running a game, the server name, map name, current number
+of players, and response time are displayed. Server rules and player
+information may also be displayed.
