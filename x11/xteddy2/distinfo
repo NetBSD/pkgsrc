@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 03:29:12 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/11/24 10:12:48 nia Exp $
 
-SHA1 (xteddy-2.0.1.tar.gz) = 371810d7a509cbf6ffd3a4d94c87412ae68022d8
-RMD160 (xteddy-2.0.1.tar.gz) = 20d5f696e5815bf81cf9f2eba0d6ff83313181e2
-SHA512 (xteddy-2.0.1.tar.gz) = d70b41cbbe3910a80dc3e2c6bcd5664cbd4f21e044d5f84c190c63285b15db540be7546ce1183fc7d35daa261def5074ebc131c0c7ee505b3bcfd9aea07dca88
-Size (xteddy-2.0.1.tar.gz) = 348055 bytes
-SHA1 (patch-aa) = 69425a7ccae41c7852c2ccfed7d029a7b93ada6c
-SHA1 (patch-ab) = af66f8f31baf8581b7b9a115eab6f513cd0c5e5e
-SHA1 (patch-ac) = 6d09bef66d1cb78f842349afa7dcad9ed47add89
+SHA1 (xteddy-2.2.tar.gz) = 4fcf2efc6e0f2e02ce32597d2ccfbfb2bf057199
+RMD160 (xteddy-2.2.tar.gz) = 8395ce8c9a1af208ec44bd9a773fda3b5d1c6df2
+SHA512 (xteddy-2.2.tar.gz) = e48f1f616980b747b3e528a7bb3a46605986e87e05cbad1385992931098acd8857cdd9fa7c38bca94007e74d1ab13cfd567fe6e502eecf8691e24272bd98159b
+Size (xteddy-2.2.tar.gz) = 867005 bytes
+SHA1 (patch-configure) = bd6c4c09e2d127f03751c236cdc9b8ce6e37b353
+SHA1 (patch-xteddy__test) = fe4a3e022cada079365240e1f49290276f571edb
+SHA1 (patch-xtoys) = 77800782ba73498a674b2c78fdec10e3db0a4476
