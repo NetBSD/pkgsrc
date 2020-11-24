@@ -1,0 +1,17 @@
+$NetBSD: patch-xtoys,v 1.1 2020/11/24 10:12:48 nia Exp $
+
+Don't hardcode the installation prefix.
+
+--- xtoys.orig	2009-02-07 20:48:26.000000000 +0000
++++ xtoys
+@@ -5,8 +5,8 @@
+ # Thanks to Andrew Stribblehill <a.d.stribblehill@dur.ac.uk>
+ # who supported this script
+ #
+-if [ -d /usr/local/share/xteddy ] ; then
+-  images=(`ls /usr/share/xteddy` `ls /usr/local/share/xteddy 2> /dev/null`)
++if [ -d @PREFIX@/share/xteddy ] ; then
++  images=(`ls @PREFIX@/share/xteddy` `ls @PREFIX@/share/xteddy 2> /dev/null`)
+ else
+   images=(`ls /usr/share/xteddy`)
+ fi

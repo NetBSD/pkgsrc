@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/05 22:54:03 hubertf Exp $
+$NetBSD: patch-xteddy__test,v 1.1 2020/11/24 10:12:48 nia Exp $
 
---- xteddy_test.orig	Mon Mar 29 16:04:35 1999
+Don't hardcode the installation prefix.
+
+--- xteddy_test.orig	2009-02-07 20:48:26.000000000 +0000
 +++ xteddy_test
-@@ -1,15 +1,8 @@
+@@ -1,15 +1,9 @@
  #!/bin/sh
  i=0
 -if [ -d /usr/share/xteddy ] ; then
@@ -11,13 +13,13 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/05 22:54:03 hubertf Exp $
 +  for img in `ls @PREFIX@/share/xteddy` ; do
      i=`expr $i + 50`
 -    xteddy -F/usr/share/xteddy/$img -geometry +$i+$i &
-+    xteddy -F@PREFIX@/share/xteddy/$img -geometry +$i+$i &
-   done
- fi
+-  done
+-fi
 -if [ -d /usr/local/share/xteddy ] ; then
 -  for img in `ls /usr/local/share/xteddy` ; do
 -    i=`expr $i + 50`
 -    xteddy -F/usr/local/share/xteddy/$img -geometry +$i+$i &
--  done
--fi
--
++    xteddy -F@PREFIX@/share/xteddy/$img -geometry +$i+$i &
+   done
+ fi
+ 

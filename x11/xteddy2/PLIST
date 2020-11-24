@@ -1,17 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/11/24 10:12:48 nia Exp $
 bin/xteddy
 bin/xteddy_test
 bin/xtoys
-man/man1/xteddy.1
+man/man6/xteddy.6
 share/xteddy/teddy.png
 share/xteddy/xalex.png
 share/xteddy/xbobo.png
 share/xteddy/xbrummi.png
+share/xteddy/xcherubino.png
 share/xteddy/xduck.png
+share/xteddy/xhedgehog.png
 share/xteddy/xklitze.png
 share/xteddy/xnamu.png
 share/xteddy/xorca.png
 share/xteddy/xpenguin.png
+share/xteddy/xpuppy.png
 share/xteddy/xruessel.png
 share/xteddy/xteddy.png
+share/xteddy/xtrouble.png
 share/xteddy/xtuxxy.png
