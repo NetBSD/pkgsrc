@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/08/18 17:57:58 leot Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/24 14:30:31 nia Exp $
 
-DISTNAME=	sdlpop-1.20
-PKGREVISION=	2
+DISTNAME=	sdlpop-1.21
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NagyD/}
 GITHUB_PROJECT=	SDLPoP
@@ -19,7 +18,7 @@ BUILD_DIRS=	src
 
 MAKE_FLAGS=	CC=${CC:Q}
 
-CPPFLAGS+=	-DPKGSRC_DATA_PATH="\"${PREFIX}/share/sdlpop/\""
+CFLAGS+=	-DPKGSRC_DATA_PATH="\"${PREFIX}/share/sdlpop/\""
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
@@ -44,4 +43,5 @@ do-install:
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
