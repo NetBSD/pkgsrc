@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/03/26 02:26:51 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/24 10:28:44 nia Exp $
 
-DISTNAME=	xbanish-1.6
-PKGREVISION=	1
+DISTNAME=	xbanish-1.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	https://github.com/jcs/xbanish/
+HOMEPAGE=	https://github.com/jcs/xbanish
 COMMENT=	Banish the mouse cursor when typing
 LICENSE=	modified-bsd
 
