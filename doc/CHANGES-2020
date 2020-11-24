@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6343 2020/11/24 10:26:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6344 2020/11/24 10:28:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9282,3 +9282,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xteddy2 to 2.2 [nia 2020-11-24]
 	Updated x11/xbindkeys to 1.8.7 [nia 2020-11-24]
 	Updated x11/xbindkeys-tk to 1.8.7 [nia 2020-11-24]
+	Updated x11/xbanish to 1.7 [nia 2020-11-24]
