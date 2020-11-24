@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/02 23:31:46 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/11/24 11:18:21 nia Exp $
 
-SHA1 (wmitime-0.3.tar.gz) = 64bb07c5eccce5592088cfccc87836f66695e07c
-RMD160 (wmitime-0.3.tar.gz) = b2301a15ef159d2d55418ae5fbf914bedc388478
-SHA512 (wmitime-0.3.tar.gz) = 69506d7619008bdc169f64326cb185a714055d4f030cd583f39144379cb35ed07959e1a09b3a4da33483f337ed8afb4761f34b6d6a5a28a06eff98a9bf14efc7
-Size (wmitime-0.3.tar.gz) = 21442 bytes
-SHA1 (patch-.._wmgeneral_list.h) = 3833c707c4eaf8ef8297eb5b5658db14d70e24ee
-SHA1 (patch-aa) = e3dfcd4a36cb282a80f63534222d727d4a73f891
+SHA1 (wmitime-0.5.tar.gz) = 5ac2c9c16284660cf8f2f9dc313692f331bc5aa4
+RMD160 (wmitime-0.5.tar.gz) = d37bcec96e732f5c1faa57a2181330c07f289f4a
+SHA512 (wmitime-0.5.tar.gz) = 8fe05c7cf1a0ccb2172845ab74a298f01eaff3dfc536bbf363f26253a9d12d0fa3f514e24e71c5b186ff38dd5e1faf1152203443e473509ce5df243fd9623144
+Size (wmitime-0.5.tar.gz) = 15099 bytes
