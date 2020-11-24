@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6386 2020/11/24 18:27:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6387 2020/11/24 20:11:19 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9325,3 +9325,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated parallel/parallel to 20201122 [nia 2020-11-24]
 	Updated editors/nano to 5.3 [nia 2020-11-24]
 	Updated editors/nvi2 to 2.2.0 [nia 2020-11-24]
+	Updated www/nginx-devel to 1.19.5 [otis 2020-11-24]
