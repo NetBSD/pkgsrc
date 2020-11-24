@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/01 12:28:18 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/24 13:04:52 nia Exp $
 bin/q2ded
 bin/quake2
-libexec/q2ded
-libexec/quake2
+libexec/yquake2/q2ded
+libexec/yquake2/quake2
+libexec/yquake2/ref_gl1.so
+libexec/yquake2/ref_gl3.so
+libexec/yquake2/ref_soft.so
 share/applications/yquake2.desktop
 share/pixmaps/quake2.png
 share/yquake2/baseq2/game.so
-share/yquake2/ref_gl1.so
-share/yquake2/ref_gl3.so
-share/yquake2/ref_soft.so
