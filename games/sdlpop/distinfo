@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2019/11/02 14:35:37 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/11/24 14:30:31 nia Exp $
 
-SHA1 (sdlpop-1.20.tar.gz) = 851439647866c49988455086a20263efcd8ea8f5
-RMD160 (sdlpop-1.20.tar.gz) = f50e03290c8e678c2e09f79d0b8488b88a76b395
-SHA512 (sdlpop-1.20.tar.gz) = 9adb47cd22eab553dd64678de2efb2b3d568a7352a3c277acb6ea2ce9b9b02c845b84beb9706ac7bf911ccf5689df504980008f05a14382e8f1d7cae7381b1f1
-Size (sdlpop-1.20.tar.gz) = 623338 bytes
+SHA1 (sdlpop-1.21.tar.gz) = 67992d991cf0f8708a71ee30df7eca04be86057b
+RMD160 (sdlpop-1.21.tar.gz) = 651809d533f468bf33e7994c905cd2b82cb39dc0
+SHA512 (sdlpop-1.21.tar.gz) = 64aa5156122ef5363ae6d61e204141ebd2359f9d230f7411a579ec6e90de93e95a7d7836252464b6730a0b85d84ab1570a6050739ada7d9e60f2f966d92afcca
+Size (sdlpop-1.21.tar.gz) = 627853 bytes
 SHA1 (patch-options.c) = 26625a4ac6e2113d12b0169f2f69db0455912293
 SHA1 (patch-seg009.c) = 0ac07e6e004cb3fd4061c72b4bc3358456f0131c
 SHA1 (patch-src_Makefile) = 68ed7dbe90ff231a1e2e00b10fb3691b042445eb
