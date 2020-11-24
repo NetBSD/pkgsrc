@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2018/12/10 23:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/24 14:16:31 nia Exp $
 
-DISTNAME=	shine-3.1.0
+DISTNAME=	shine-3.1.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=savonet/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/savonet/shine/
+HOMEPAGE=	https://github.com/savonet/shine
 COMMENT=	Fast fixed-point mp3 encoding
 LICENSE=	gnu-lgpl-v2
 
