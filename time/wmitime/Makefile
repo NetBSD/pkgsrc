@@ -1,24 +1,27 @@
-# $NetBSD: Makefile,v 1.2 2013/11/06 00:40:15 khorben Exp $
-#
+# $NetBSD: Makefile,v 1.3 2020/11/24 11:18:21 nia Exp $
 
-DISTNAME=	wmitime-0.3
-PKGREVISION=	3
-CATEGORIES=	x11 time
-MASTER_SITES=	http://www.neotokyo.org/illusion/downloads/
+DISTNAME=	wmitime-0.5
+CATEGORIES=	time x11
+MASTER_SITES=	https://www.dockapps.net/download/
 
 MAINTAINER=	poff@sixbit.org
-HOMEPAGE=	http://www.neotokyo.org/illusion/dock_apps.html
+HOMEPAGE=	https://www.dockapps.net/wmitime
 COMMENT=	Windowmaker dockapp for time/date/itime
-
 LICENSE=	gnu-gpl-v2
 
-MAKE_FLAGS+=	PREFIX=${PREFIX}
-MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+WRKSRC=		${WRKDIR}/dockapps-26db447
 
-WRKSRC=		${WRKDIR}/wmitime/wmitime
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
+
+BUILD_TARGET=	wmitime
 
 USE_TOOLS+=	gmake
 
+BUILDLINK_API_DEPENDS.libdockapp+=	libdockapp>=0.7.0
+.include "../../devel/libdockapp/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
