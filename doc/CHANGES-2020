@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6335 2020/11/24 00:33:54 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.6336 2020/11/24 05:32:48 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9270,3 +9270,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/memcached to 1.6.9 [nia 2020-11-23]
 	Updated net/miniupnpc to 2.2.0 [nia 2020-11-23]
 	Updated www/go-ace to 0.0.5 [nikita 2020-11-24]
+	Updated sysutils/dmidecode to 3.3 [msaitoh 2020-11-24]
