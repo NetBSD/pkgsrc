@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/04/05 19:32:55 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/24 15:03:22 ryoon Exp $
 
 GITHUB_PROJECT=	exfat
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -7,7 +7,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=relan/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://alperakcan.net/projects/fuse-ext2/
+HOMEPAGE=	https://github.com/relan/exfat
 COMMENT=	FUSE file-system and utilities for exFAT file systems
 LICENSE=	gnu-gpl-v2
 
