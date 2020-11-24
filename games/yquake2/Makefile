@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/08/18 17:57:59 leot Exp $
+# $NetBSD: Makefile,v 1.11 2020/11/24 13:04:52 nia Exp $
 
-DISTNAME=	quake2-7.43
+DISTNAME=	quake2-7.45
 PKGNAME=	y${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://deponie.yamagi.org/quake2/
 EXTRACT_SUFX=	.tar.xz
@@ -12,14 +11,14 @@ HOMEPAGE=	https://www.yamagi.org/quake2/
 COMMENT=	Yamagi Quake II - alternative Quake II client
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c99 c++
+USE_TOOLS+=	gmake
+USE_LANGUAGES=	c99
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
-CMAKE_ARGS+=	-DSYSTEMWIDE_SUPPORT=ON
+MAKE_FLAGS+=	WITH_SYSTEMWIDE=yes
+MAKE_FLAGS+=	WITH_SYSTEMDIR=${PREFIX}/share/yquake2
 
-INSTALLATION_DIRS+=	bin libexec
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	libexec/yquake2
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
 INSTALLATION_DIRS+=	share/yquake2/baseq2
@@ -33,19 +32,20 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/quake2.sh \
 	    ${DESTDIR}${PREFIX}/bin/q2ded
 	${INSTALL_PROGRAM} ${WRKSRC}/release/quake2 \
-	    ${DESTDIR}${PREFIX}/libexec/quake2
+	    ${DESTDIR}${PREFIX}/libexec/yquake2/quake2
 	${INSTALL_PROGRAM} ${WRKSRC}/release/q2ded \
-	    ${DESTDIR}${PREFIX}/libexec/q2ded
+	    ${DESTDIR}${PREFIX}/libexec/yquake2/q2ded
 	${INSTALL_LIB} ${WRKSRC}/release/baseq2/game.so \
 	    ${DESTDIR}${PREFIX}/share/yquake2/baseq2
 	${INSTALL_LIB} ${WRKSRC}/release/*.so \
-	    ${DESTDIR}${PREFIX}/share/yquake2
+	    ${DESTDIR}${PREFIX}/libexec/yquake2
 	${INSTALL_DATA} ${FILESDIR}/yquake2.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/stuff/icon/Quake2.png \
 	    ${DESTDIR}${PREFIX}/share/pixmaps/quake2.png
 
 .include "../../audio/openal-soft/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
