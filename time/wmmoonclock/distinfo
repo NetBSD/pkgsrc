@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/12/12 12:45:19 pho Exp $
+$NetBSD: distinfo,v 1.10 2020/11/24 10:51:27 nia Exp $
 
-SHA1 (wmmoonclock-1.29.tar.gz) = 958a21166299f7aca6a2964a0f5b05ae1f2bfcd5
-RMD160 (wmmoonclock-1.29.tar.gz) = f2eef42b51f9ba2a3a2df32b08e5c9e1070de880
-SHA512 (wmmoonclock-1.29.tar.gz) = c36850034a0f3b7863ecfd03f73f91f9b935f645362cebeb33186873f700585d682dc5c35f3b5d67932afd3c5699fca56bf012e8f8a06615ff52c44a47ba552e
-Size (wmmoonclock-1.29.tar.gz) = 234991 bytes
+SHA1 (wmmoonclock-1.30.tar.gz) = ad6c5415c467484b77a0fdf70cfee8280067de94
+RMD160 (wmmoonclock-1.30.tar.gz) = 037d20b21820151c6c42dddb7123350700ebea8e
+SHA512 (wmmoonclock-1.30.tar.gz) = 2173586ef8dd53eae0a05368440dffe8438e57f8158df05fd0de2d4525a5726e48b62ef8e8a81403cb7707d836936957e2238f543946beb557623bd9fbd54175
+Size (wmmoonclock-1.30.tar.gz) = 238171 bytes
