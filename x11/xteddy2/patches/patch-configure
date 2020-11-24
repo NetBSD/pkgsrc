@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/11/24 10:12:48 nia Exp $
+
+Don't hardcode the installation prefix.
+
+--- configure.orig	2009-03-09 07:24:39.000000000 +0000
++++ configure
+@@ -5052,7 +5052,7 @@ echo "${ECHO_T}yes" >&6; }
+ 	:
+ fi
+ 
+-PIXMAP_PATH="/usr/share/xteddy"
++PIXMAP_PATH="@PREFIX@/share/xteddy"
+ 
+ 
+ ac_config_files="$ac_config_files Makefile html/Makefile images/Makefile"
