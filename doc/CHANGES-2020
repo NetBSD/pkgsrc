@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6355 2020/11/24 12:01:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6356 2020/11/24 12:15:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9294,3 +9294,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/wmtime to 1.4 [nia 2020-11-24]
 	Updated net/wmnd to 0.4.18 [nia 2020-11-24]
 	Updated misc/vttest to 20200920 [nia 2020-11-24]
+	Updated sysutils/vifm to 0.11 [nia 2020-11-24]
