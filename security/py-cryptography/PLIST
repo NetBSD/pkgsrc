@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/10/21 11:17:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/11/24 08:56:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -98,8 +98,6 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
-${PLIST.py3x}${PYSITELIB}/cryptography/hazmat/bindings/_constant_time.abi3.so
-${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_constant_time.so
 ${PLIST.py3x}${PYSITELIB}/cryptography/hazmat/bindings/_openssl.abi3.so
 ${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_openssl.so
 ${PLIST.py3x}${PYSITELIB}/cryptography/hazmat/bindings/_padding.abi3.so
@@ -215,6 +213,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/serialization/base.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs12.py
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs12.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs12.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs7.py
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs7.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs7.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/ssh.py
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/ssh.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization/ssh.pyo
