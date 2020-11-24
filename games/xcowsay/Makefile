@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2020/08/17 20:18:52 leot Exp $
+# $NetBSD: Makefile,v 1.28 2020/11/24 10:36:23 nia Exp $
 
-DISTNAME=	xcowsay-1.4
-PKGREVISION=	3
-CATEGORIES=	misc
+DISTNAME=	xcowsay-1.5.1
+CATEGORIES=	games
 MASTER_SITES=	https://www.nickg.me.uk/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,5 +14,5 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
 .include "options.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
