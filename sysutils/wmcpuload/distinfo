@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:32:38 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/11/24 10:57:01 nia Exp $
 
-SHA1 (wmcpuload-1.0.1.tar.bz2) = 6e767dd5acd291cfe3fc4fece5ff32eef78915e4
-RMD160 (wmcpuload-1.0.1.tar.bz2) = 1ff01f09464dc8628acd7d375adcd106ea7ce317
-SHA512 (wmcpuload-1.0.1.tar.bz2) = bf0bc0dbfc1852db4eda24d9ae785fc77ffe396030e711160b8c041683c648de58e1fd81a1ab8cf8dece0621f7e436620375e53dd641880facbb91620d941055
-Size (wmcpuload-1.0.1.tar.bz2) = 92457 bytes
+SHA1 (wmcpuload-1.1.1.tar.gz) = be6bd35f4d2b85280e9fa2a698d6f806a093b580
+RMD160 (wmcpuload-1.1.1.tar.gz) = ad1a20cac86fcc2089a11fcf5dd9634b2982940f
+SHA512 (wmcpuload-1.1.1.tar.gz) = 7271a9216d52a8bc904be9ea401f52b35f0086da4bfc16c76a8348b58818199ecfcf8fb7768fe4d5a1e5cbb986e8d89a92f81f2f1aeea59f84d564607be73b6e
+Size (wmcpuload-1.1.1.tar.gz) = 167751 bytes
 SHA1 (patch-aa) = 581eb45891beace0fae14cf77329921e9146762e
