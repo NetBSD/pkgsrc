@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2020/09/01 12:21:03 ryoon Exp $
+# $NetBSD: options.mk,v 1.21.2.1 2020/11/24 18:28:37 bsiegert Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick
 PKG_SUPPORTED_OPTIONS=		x11 jp2 djvu openexr wmf liblqr heif
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--without-wmf
 
 .if !empty(PKG_OPTIONS:Mheif)
 .include "../../graphics/libheif/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-heif
+CONFIGURE_ARGS+=	--with-heic
 .else
-CONFIGURE_ARGS+=	--without-heif
+CONFIGURE_ARGS+=	--without-heic
 .endif
