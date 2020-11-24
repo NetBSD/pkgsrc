@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6366 2020/11/24 14:05:33 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6367 2020/11/24 14:06:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9305,3 +9305,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/stunnel to 5.57 [nia 2020-11-24]
 	Updated converters/sratom to 0.6.6 [nia 2020-11-24]
 	Updated emulators/stella to 6.4 [nia 2020-11-24]
+	Updated emulators/libretro-stella to 6.4 [nia 2020-11-24]
