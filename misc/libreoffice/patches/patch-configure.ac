@@ -1,11 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.17 2020/08/11 16:07:39 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.18 2020/11/24 14:33:22 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
   to fix X11_TYPE=native build and internal pdfium's internal freetype build.
 * Fix some static links.
-* Include header files from gpgme correctly.
-* Find pkgsrc/devel/apache-ant.
+* Include header files from security/gpgme correctly.
+* Find devel/apache-ant.
 
 --- configure.ac.orig	2020-07-29 19:29:17.000000000 +0000
 +++ configure.ac
