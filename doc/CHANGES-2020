@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6363 2020/11/24 13:34:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6364 2020/11/24 13:42:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9302,3 +9302,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ugrep to 3.0.5 [nia 2020-11-24]
 	Updated net/uftp to 5.0 [nia 2020-11-24]
 	Updated devel/ucpp to 1.3.5 [nia 2020-11-24]
+	Updated security/stunnel to 5.57 [nia 2020-11-24]
