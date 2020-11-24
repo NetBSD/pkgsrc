@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/06 00:35:19 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/24 11:18:21 nia Exp $
 bin/wmitime
+man/man1/wmitime.1
+share/applications/wmitime.desktop
