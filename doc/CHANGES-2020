@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6349 2020/11/24 10:57:12 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6350 2020/11/24 11:13:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9288,3 +9288,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xfce4-xarchiver to 0.5.4.15 [nia 2020-11-24]
 	Updated time/wmmoonclock to 1.30 [nia 2020-11-24]
 	Updated sysutils/wmcpuload to 1.1.1 [nia 2020-11-24]
+	Updated devel/libdockapp to 0.7.3 [nia 2020-11-24]
