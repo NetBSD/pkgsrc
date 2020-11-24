@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2017/09/06 09:03:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/11/24 10:32:40 nia Exp $
 #
 
-DISTNAME=		xdaliclock-2.43
+DISTNAME=		xdaliclock-2.44
 CATEGORIES=		x11 time
 MASTER_SITES=		https://www.jwz.org/xdaliclock/
 
