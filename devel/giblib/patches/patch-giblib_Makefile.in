@@ -1,0 +1,36 @@
+$NetBSD: patch-giblib_Makefile.in,v 1.1 2020/11/24 17:10:44 nia Exp $
+
+libtool: compile: unable to infer tagged configuration
+libtool:   error: specify a tag with '--tag'
+
+--- giblib/Makefile.in.orig	2004-09-04 15:03:35.000000000 +0000
++++ giblib/Makefile.in
+@@ -124,9 +124,9 @@ libgiblib_la_OBJECTS =  gib_list.lo gib_
+ gib_style.lo gib_imlib.lo gib_stack.lo gib_utils.lo gib_queue.lo
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link --tag=CC $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+ DATA =  $(installed_headers_DATA)
+ 
+ DIST_COMMON =  ./stamp-h.in Makefile.am Makefile.in giblib_config.h.in
+@@ -229,13 +229,13 @@ distclean-compile:
+ maintainer-clean-compile:
+ 
+ .c.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
++	$(LIBTOOL) --mode=compile --tag=CC $(COMPILE) -c $<
+ 
+ .s.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
++	$(LIBTOOL) --mode=compile --tag=CC $(COMPILE) -c $<
+ 
+ .S.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
++	$(LIBTOOL) --mode=compile --tag=CC $(COMPILE) -c $<
+ 
+ mostlyclean-libtool:
+ 	-rm -f *.lo

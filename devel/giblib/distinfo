@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:27:28 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/11/24 17:10:43 nia Exp $
 
 SHA1 (giblib-1.2.4.tar.gz) = 342e6f7882c67d2277e1765299e1be5078329ab0
 RMD160 (giblib-1.2.4.tar.gz) = fb0cd140ff79c6e8ac34d0aa0fcc930ea7610736
 SHA512 (giblib-1.2.4.tar.gz) = 4866df223e6d219a5c9a327874bcd67260c83fba8f99862222df41ef86fb31efa0172a777bf46c853ca380dc2a64bbd41bf4fd658fcb84a924cab4e0f525dcfd
 Size (giblib-1.2.4.tar.gz) = 287653 bytes
 SHA1 (patch-aa) = 19e3d89366a6455df891fb843f6682d623023b0d
+SHA1 (patch-giblib_Makefile.in) = c2e844ea064a755ff62ca65529cd8ca581c13fc9
