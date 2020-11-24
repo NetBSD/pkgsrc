@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6.2.1 2020/10/23 15:36:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6.2.2 2020/11/24 18:29:25 bsiegert Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		78.4
+MOZ_BRANCH=		78.5
 MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
@@ -35,10 +35,6 @@ LDFLAGS.DragonFly+=	-lplc4 -lnspr4
 LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
 LDFLAGS.Linux+=		-lnspr4
 LDFLAGS.SunOS+=		-lm
-
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}-bin
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
 
 ALL_ENV+=		MOZ_APP_NAME=${MOZILLA}
 
