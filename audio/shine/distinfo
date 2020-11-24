@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:12:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/11/24 14:16:31 nia Exp $
 
-SHA1 (shine-3.1.0.tar.gz) = ad865672262cafa54e6e7c538301e28b3f15ea0c
-RMD160 (shine-3.1.0.tar.gz) = 2ee2f531b84056bc35921f543e38576d888f0bce
-SHA512 (shine-3.1.0.tar.gz) = 398f49567c707c7e0fa12024088faf81fb9942e7bceebd46e34d6b42ce496ffb925b0edd3e5b8afb9e5c3eb4c1fd0a8776cac448bf76448724fb7353aa67eb00
-Size (shine-3.1.0.tar.gz) = 1275236 bytes
+SHA1 (shine-3.1.1.tar.gz) = c1421ce3331ad91b4c1e6bd7cd7fbda41d302d18
+RMD160 (shine-3.1.1.tar.gz) = ddefb88d40c96e5566f869cd105955bdfba2d408
+SHA512 (shine-3.1.1.tar.gz) = ecd186eba299581e220fada2d3cc92ccbf69d8fe4db539b1d21ee565ef706fbbff015c013f9bb477b3326a71d06b5f6cbfed3371e1d75d62d642729245ec714d
+Size (shine-3.1.1.tar.gz) = 2144728 bytes
