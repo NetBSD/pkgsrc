@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/12 17:14:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/24 17:33:29 nia Exp $
 bin/ratmen
+man/man1/ratmen.1
