@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2015/07/27 16:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/24 14:24:39 nia Exp $
 
-DISTNAME=	shmux-1.0.2
+DISTNAME=	shmux-1.0.3
 CATEGORIES=	sysutils
-MASTER_SITES=	http://web.taranis.org/shmux/dist/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=shmux/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://web.taranis.org/shmux/
+HOMEPAGE=	https://github.com/shmux/shmux
 COMMENT=	Shell Multiplexor
 LICENSE=	modified-bsd
 
