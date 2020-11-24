@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.111 2020/07/29 11:21:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.111.2.1 2020/11/24 18:28:37 bsiegert Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -356,7 +356,6 @@ share/doc/ImageMagick-7/www/Magick++/thumbnail-sample-plain.jpg
 share/doc/ImageMagick-7/www/advanced-unix-installation.html
 share/doc/ImageMagick-7/www/advanced-windows-installation.html
 share/doc/ImageMagick-7/www/animate.html
-share/doc/ImageMagick-7/www/api.html
 share/doc/ImageMagick-7/www/api/Image++.html
 share/doc/ImageMagick-7/www/api/MagickCore/ImageMagick_8h-source.html
 share/doc/ImageMagick-7/www/api/MagickCore/ImageMagick_8h.html
@@ -1183,6 +1182,7 @@ share/doc/ImageMagick-7/www/mirror.html
 share/doc/ImageMagick-7/www/mogrify.html
 share/doc/ImageMagick-7/www/montage.html
 share/doc/ImageMagick-7/www/motion-picture.html
+share/doc/ImageMagick-7/www/news.html
 share/doc/ImageMagick-7/www/opencl.html
 share/doc/ImageMagick-7/www/openmp.html
 share/doc/ImageMagick-7/www/perl-magick.html
