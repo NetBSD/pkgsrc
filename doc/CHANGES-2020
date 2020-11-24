@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6382 2020/11/24 17:49:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6383 2020/11/24 18:10:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9321,3 +9321,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/ratmen to 2.2.3 [nia 2020-11-24]
 	Updated audio/qsynth to 0.6.3 [nia 2020-11-24]
 	Updated games/qstat to 2.14 [nia 2020-11-24]
+	Updated games/powder to 118 [nia 2020-11-24]
