@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2017/09/06 10:40:33 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2020/11/24 10:57:01 nia Exp $
 
-DISTNAME=	wmcpuload-1.0.1
-PKGREVISION=	1
+DISTNAME=	wmcpuload-1.1.1
 CATEGORIES=	sysutils
-#MASTER_SITES=	http://seiichisato.jp/dockapps/src/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://www.dockapps.net/download/
 
 MAINTAINER=	coto@core.de
-#HOMEPAGE=	http://seiichisato.jp/dockapps/
+HOMEPAGE=	https://www.dockapps.net/wmcpuload
 COMMENT=	Dockable CPU monitor
 
 GNU_CONFIGURE=	YES
