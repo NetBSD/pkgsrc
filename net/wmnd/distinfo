@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:35:45 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/11/24 11:41:23 nia Exp $
 
-SHA1 (wmnd-0.4.17/wmnd-0.4.17.tar.gz) = 6e1ff0b83ab24bbe0158fa41073c49731eab5381
-RMD160 (wmnd-0.4.17/wmnd-0.4.17.tar.gz) = fd99fb25d586a597fafa90fe95b9ae211020a877
-SHA512 (wmnd-0.4.17/wmnd-0.4.17.tar.gz) = 09ecb0d21df2ca996dbe18b8711abb327200fd6c098e57bda19b960854bc9fae5c5c4f5d5a8cb306c21393983f602f591af87a0afdf009380d9a6ae1a2e81eb2
-Size (wmnd-0.4.17/wmnd-0.4.17.tar.gz) = 191089 bytes
+SHA1 (wmnd-0.4.18/wmnd-0.4.18.tar.gz) = f2efc1b158a1ec8bf11017d86796d0e89ce4d7e9
+RMD160 (wmnd-0.4.18/wmnd-0.4.18.tar.gz) = e8a94a659d61c538890edf955c036e02eeae399e
+SHA512 (wmnd-0.4.18/wmnd-0.4.18.tar.gz) = 409c6b85bbcf4204f60288890471c2fc8860e797bde4c5d9b78d7e2e2353b4b851cf5d0670261c35ab941a5cf86e8067476d053d4e5223916cd8a0b84c7c15a4
+Size (wmnd-0.4.18/wmnd-0.4.18.tar.gz) = 177523 bytes
