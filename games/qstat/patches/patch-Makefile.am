@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2020/11/24 17:49:41 nia Exp $
+
+Install config files to examples.
+
+--- Makefile.am.orig	2014-03-01 01:49:37.000000000 +0000
++++ Makefile.am
+@@ -40,7 +40,7 @@ qstat_SOURCES = \
+ 	farmsim.c farmsim.h
+ 
+ dist_configfiles_DATA = qstat.cfg
+-configfilesdir = $(sysconfdir)
++configfilesdir = $(datadir)/examples/qstat
+ 
+ EXTRA_DIST = CHANGES.txt COMPILE.txt LICENSE.txt \
+ 	Makefile.noauto \

@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2018/01/14 15:26:48 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/11/24 17:49:41 nia Exp $
 
-DISTNAME=	qstat-2.10
+DISTNAME=	qstat-2.14
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qstat/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=multiplay/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.qstat.org/
+HOMEPAGE=	https://github.com/multiplay/qstat
 COMMENT=	Program that gathers real-time statistics from game servers
+LICENSE=	artistic-2.0
+
+USE_TOOLS+=	autoconf automake autoreconf
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
@@ -16,16 +20,7 @@ CONF_FILES=	${EGDIR}/qstat.cfg ${PKG_SYSCONFDIR}/qstat.cfg
 
 INSTALLATION_DIRS=	bin
 
-do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/template
-	${INSTALL_PROGRAM} ${WRKSRC}/qstat ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/qstatdoc.html \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/template/*.html \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/template
-	${INSTALL_DATA} ${WRKSRC}/contrib.cfg ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/qstat.cfg ${DESTDIR}${EGDIR}
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../mk/bsd.pkg.mk"
