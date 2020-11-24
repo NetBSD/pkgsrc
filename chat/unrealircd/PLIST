@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/02/20 16:12:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/11/24 12:24:44 nia Exp $
 bin/unrealircd
 lib/unrealircd/modules/account-notify.so
 lib/unrealircd/modules/account-tag.so
@@ -38,6 +38,7 @@ lib/unrealircd/modules/charsys.so
 lib/unrealircd/modules/chghost.so
 lib/unrealircd/modules/chgident.so
 lib/unrealircd/modules/chgname.so
+lib/unrealircd/modules/clienttagdeny.so
 lib/unrealircd/modules/cloak.so
 lib/unrealircd/modules/close.so
 lib/unrealircd/modules/connect.so
@@ -143,6 +144,7 @@ lib/unrealircd/modules/svssilence.so
 lib/unrealircd/modules/svssno.so
 lib/unrealircd/modules/svswatch.so
 lib/unrealircd/modules/swhois.so
+lib/unrealircd/modules/targetfloodprot.so
 lib/unrealircd/modules/time.so
 lib/unrealircd/modules/tkl.so
 lib/unrealircd/modules/tkldb.so
@@ -150,6 +152,7 @@ lib/unrealircd/modules/tls_antidos.so
 lib/unrealircd/modules/topic.so
 lib/unrealircd/modules/trace.so
 lib/unrealircd/modules/tsctl.so
+lib/unrealircd/modules/typing-indicator.so
 lib/unrealircd/modules/umode2.so
 lib/unrealircd/modules/unsqline.so
 lib/unrealircd/modules/user.so
@@ -197,8 +200,11 @@ share/examples/unrealircd/example.fr.conf
 share/examples/unrealircd/example.tr.conf
 share/examples/unrealircd/help/help.conf
 share/examples/unrealircd/help/help.de.conf
+share/examples/unrealircd/help/help.es.conf
 share/examples/unrealircd/help/help.fr.conf
 share/examples/unrealircd/help/help.it.conf
+share/examples/unrealircd/help/help.nl.conf
+share/examples/unrealircd/help/help.pl.conf
 share/examples/unrealircd/help/help.ru.conf
 share/examples/unrealircd/help/help.tr.conf
 share/examples/unrealircd/modules.default.conf
