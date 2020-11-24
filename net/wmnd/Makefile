@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:58 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/11/24 11:41:23 nia Exp $
 
-DISTNAME=	wmnd-0.4.17
+DISTNAME=	wmnd-0.4.18
 CATEGORIES=	net x11
-MASTER_SITES=	http://www.thregr.org/~wavexx/software/wmnd/releases/
+MASTER_SITES=	https://www.thregr.org/~wavexx/software/wmnd/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.thregr.org/~wavexx/software/wmnd/
 COMMENT=	Dockable network monitor
+LICENSE=	gnu-gpl-v2
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
