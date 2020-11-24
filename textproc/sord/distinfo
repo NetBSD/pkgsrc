@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/12/14 17:33:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/11/24 14:10:28 nia Exp $
 
-SHA1 (sord-0.16.4.tar.bz2) = 178ab6bcfec0d11f9242fdf87d0cc7eb581ef661
-RMD160 (sord-0.16.4.tar.bz2) = 65dc822e422be782fb854a904cd9986a91423824
-SHA512 (sord-0.16.4.tar.bz2) = 98bb102cff5ab38d999c2f966597508076ccce54583a739810b0c28b4f3d570b2ef414605fc08361ecb11ac3184d3176f2f50c7c59c06cc50c3d522e26ed5576
-Size (sord-0.16.4.tar.bz2) = 510920 bytes
+SHA1 (sord-0.16.6.tar.bz2) = dbc166131fc75afb2a1630babd3400c7a339bd15
+RMD160 (sord-0.16.6.tar.bz2) = 5f3408d75027c1a591f8c8f5bfa4c7bd271311d7
+SHA512 (sord-0.16.6.tar.bz2) = 1d3c2bf47ff7e4b533e4e737e2ece8e29bace78bb00c41a252ad5c583abdcba3baa05b189cb8651c212861a2eea3c690354c99d684fd0f343b40e74c94572f98
+Size (sord-0.16.6.tar.bz2) = 520690 bytes
