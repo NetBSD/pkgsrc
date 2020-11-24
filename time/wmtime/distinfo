@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/02 23:31:46 agc Exp $
+$NetBSD: distinfo,v 1.9 2020/11/24 11:36:31 nia Exp $
 
-SHA1 (wmtime-1.0b2.tar.gz) = 2a66762d548b9f91415603e8d6a37cfacb9340ad
-RMD160 (wmtime-1.0b2.tar.gz) = f267f75237c111ed336521ca175688a33f1e171a
-SHA512 (wmtime-1.0b2.tar.gz) = 00554043bdd7329386dbebb2947a520cada6d86b5228ca6a9e217dd4971b5ba8ab4aa6ca3a20ff29978bd98fd8c8796b7eeb7e35269d26cd262102c3908f3ba8
-Size (wmtime-1.0b2.tar.gz) = 20680 bytes
-SHA1 (patch-aa) = 8943b1da225f26110e52c00269e3e0c6a7651404
-SHA1 (patch-ab) = e1e4203a219b0a0d539fc4426ec3d5424e9c3962
-SHA1 (patch-ac) = 31d864557165692350436e18c1cba61b95027c2c
-SHA1 (patch-wmgeneral_list.h) = d403fc3ff2986c64680f494369dc343c20b6cc20
+SHA1 (wmtime-1.4.tar.gz) = 98bfef44e99d8bcc97aec957da0f6a3919ff08ba
+RMD160 (wmtime-1.4.tar.gz) = 0d6d59b4f7a3ea28a8b0f88f3c9e7789f44658d9
+SHA512 (wmtime-1.4.tar.gz) = 50d971394d54c97dbb839338b342b7907a4b83a5666f3eeb1710b22a21746d4a05fd45618537ede57fcd88605971d9d949921b926efa1eed36cdb20b012d4780
+Size (wmtime-1.4.tar.gz) = 19045 bytes
