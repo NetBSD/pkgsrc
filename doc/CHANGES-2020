@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6373 2020/11/24 14:29:19 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6374 2020/11/24 14:30:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9312,3 +9312,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/ssr to 0.4.2 [nia 2020-11-24]
 	Updated sysutils/shmux to 1.0.3 [nia 2020-11-24]
 	Updated textproc/serd to 0.30.6 [nia 2020-11-24]
+	Updated games/sdlpop to 1.21 [nia 2020-11-24]
