@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6387 2020/11/24 20:11:19 otis Exp $
+$NetBSD: CHANGES-2020,v 1.6388 2020/11/24 21:03:03 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9326,3 +9326,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/nano to 5.3 [nia 2020-11-24]
 	Updated editors/nvi2 to 2.2.0 [nia 2020-11-24]
 	Updated www/nginx-devel to 1.19.5 [otis 2020-11-24]
+	Updated games/nudoku to 2.1.0 [fcambus 2020-11-24]
