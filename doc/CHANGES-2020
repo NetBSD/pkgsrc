@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6377 2020/11/24 17:13:24 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6378 2020/11/24 17:18:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9316,3 +9316,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/putty to 0.74nb2 [ryoon 2020-11-24]
 	Updated net/mitmproxy to 5.3.0 [leot 2020-11-24]
 	Updated graphics/scrot to 1.4 [nia 2020-11-24]
+	Updated audio/rubberband to 1.9.0 [nia 2020-11-24]
