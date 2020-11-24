@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/08/17 01:08:30 gavan Exp $
+$NetBSD: distinfo,v 1.2 2020/11/24 00:33:39 nikita Exp $
 
-SHA1 (ace-0.0.4b-71afeb714739f9d5f7e1849bcd4a0a5938e1a70d.tar.gz) = d44a91474d0fe00cfd052fde649b47458a92243d
-RMD160 (ace-0.0.4b-71afeb714739f9d5f7e1849bcd4a0a5938e1a70d.tar.gz) = e54caa710f7bd14b503806d5bfb18e1560146f00
-SHA512 (ace-0.0.4b-71afeb714739f9d5f7e1849bcd4a0a5938e1a70d.tar.gz) = 1f7723b3a4e9d06268ee77f47b9b444bdd41d3f1310af2aae66ffaa2bd396bde84a69a7bbe3a44f90a99ddb669387e37c63afa53d5ddada466d610dee8a3c113
-Size (ace-0.0.4b-71afeb714739f9d5f7e1849bcd4a0a5938e1a70d.tar.gz) = 22079 bytes
+SHA1 (ace-0.0.5.tar.gz) = defb5bb4adff084f84afbf3105af695c15dd7275
+RMD160 (ace-0.0.5.tar.gz) = 9ca2f38abe507083e4d464d5dc2fa7b44e90794e
+SHA512 (ace-0.0.5.tar.gz) = 1bc93544fb64088271ffca5c2ec4bd136a18527968b4341c2108c6b7156d78292e6d0c5c50fe80cda24bcd17c2d1204af597c0c3281248c3842d1fdc4838b54f
+Size (ace-0.0.5.tar.gz) = 23277 bytes
