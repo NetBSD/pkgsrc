@@ -1,17 +1,18 @@
-# $NetBSD: Makefile.common,v 1.14 2020/01/18 23:35:58 rillig Exp $
+# $NetBSD: Makefile.common,v 1.15 2020/11/24 10:25:24 nia Exp $
 #
 # used by x11/xbindkeys-tk/Makefile
 
-DISTNAME=	xbindkeys-1.8.6
+DISTNAME=	xbindkeys-1.8.7
 CATEGORIES=	x11
 MASTER_SITES=	http://www.nongnu.org/xbindkeys/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/xbindkeys/xbindkeys.html
 COMMENT=	Launches shell commands with your keyboard or your mouse
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../x11/xbindkeys/distinfo
-#PATCHDIR=	${.CURDIR}/../../x11/xbindkeys/patches
+PATCHDIR=	${.CURDIR}/../../x11/xbindkeys/patches
 
 GNU_CONFIGURE=	yes
 
