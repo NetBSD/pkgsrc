@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:29:37 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/11/24 13:34:34 nia Exp $
 
-SHA1 (ucpp-1.3.2.tar.bz2) = ca24dec02352f8ac7261a85eb7a49f2c39c08268
-RMD160 (ucpp-1.3.2.tar.bz2) = 0658c5b730c602a0b1ee15fc717122e83a98f22d
-SHA512 (ucpp-1.3.2.tar.bz2) = a8a22162c0e26bc8281928f921f4e531108ba02658fd9c7a1760ae2fe938c910215aa4db02e5c7f0c5ea1aa66d89157bc780f2f13c57fa603de6c2d0c48cfd32
-Size (ucpp-1.3.2.tar.bz2) = 75467 bytes
-SHA1 (patch-aa) = 72daeb194597d6b8aca952fcc3808f55932a6f79
-SHA1 (patch-cpp.c) = 542158a2e37bc71bc56a458bfe23cf70e91ace1d
+SHA1 (ucpp-1.3.5.tar.xz) = 6c9f2a8d52720d8b2f04aac067df29cd387aa185
+RMD160 (ucpp-1.3.5.tar.xz) = cbfe5fcf92023aa38dd5e84f1ec6ec2133cf2bea
+SHA512 (ucpp-1.3.5.tar.xz) = 3ded8f7bc2b238adb6e7f4162aee48e039dfe7cee31b700c38e8f147634d47cd1ceaf39c343549b0d4a58358e6b9743f7e84f87b253dc19c05e543d68ade24ce
+Size (ucpp-1.3.5.tar.xz) = 289468 bytes
