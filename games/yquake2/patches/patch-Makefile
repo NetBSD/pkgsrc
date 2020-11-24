@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2020/11/24 13:04:53 nia Exp $
+
+Add support for NetBSD.
+
+--- Makefile.orig	2020-10-17 13:37:27.000000000 +0000
++++ Makefile
+@@ -286,6 +286,8 @@ ifeq ($(YQ2_OSTYPE),Linux)
+ override LDFLAGS += -lm -ldl -rdynamic
+ else ifeq ($(YQ2_OSTYPE),FreeBSD)
+ override LDFLAGS += -lm
++else ifeq ($(YQ2_OSTYPE),NetBSD)
++override LDFLAGS += -lm
+ else ifeq ($(YQ2_OSTYPE),OpenBSD)
+ override LDFLAGS += -lm
+ else ifeq ($(YQ2_OSTYPE),Windows)
+@@ -452,6 +454,11 @@ release/quake2 : CFLAGS += -DHAVE_EXECIN
+ release/quake2 : LDFLAGS += -lexecinfo
+ endif
+ 
++ifeq ($(YQ2_OSTYPE), NetBSD)
++release/quake2 : CFLAGS += -DHAVE_EXECINFO
++release/quake2 : LDFLAGS += -lexecinfo
++endif
++
+ ifeq ($(YQ2_OSTYPE), OpenBSD)
+ release/quake2 : CFLAGS += -DHAVE_EXECINFO
+ release/quake2 : LDFLAGS += -lexecinfo
