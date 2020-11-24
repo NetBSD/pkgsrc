@@ -1,3 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/24 16:23:23 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/24 13:34:34 nia Exp $
 bin/ucpp
+include/libucpp/cpp.h
+include/libucpp/hash.h
+include/libucpp/mem.h
+include/libucpp/nhash.h
+include/libucpp/tune.h
+include/libucpp/ucpp-config.h
+include/libucpp/ucppi.h
+lib/libucpp.la
+lib/pkgconfig/libucpp.pc
 man/man1/ucpp.1
