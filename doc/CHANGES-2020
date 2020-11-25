@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6400 2020/11/25 15:53:36 micha Exp $
+$NetBSD: CHANGES-2020,v 1.6401 2020/11/25 16:01:03 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9341,3 +9341,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/umefont-ttf to 0.670 [ryoon 2020-11-25]
 	Updated archivers/star to 1.6.1nb12 [micha 2020-11-25]
 	Updated shells/bosh to 20201125 [micha 2020-11-25]
+	Updated shells/pbosh to 20201125 [micha 2020-11-25]
