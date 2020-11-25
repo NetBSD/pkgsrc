@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2020/08/17 20:20:23 leot Exp $
+# $NetBSD: Makefile,v 1.27 2020/11/25 21:41:39 nia Exp $
 
-DISTNAME=	clipit-1.4.4
-PKGREVISION=	1
+DISTNAME=	clipit-1.4.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CristianHenzel/}
 GITHUB_PROJECT=	ClipIt
@@ -10,7 +9,6 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	khorben@NetBSD.org
 HOMEPAGE=	https://github.com/CristianHenzel/ClipIt
 COMMENT=	Lightweight, fully featured GTK+ clipboard manager
-
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
@@ -21,7 +19,8 @@ USE_TOOLS+=	aclocal autoconf autoreconf automake autopoint intltoolize
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFiGURE_ARGS+=	--disable-glibtest
+CONFIGURE_ARGS+=	--disable-glibtest
+CONFIGURE_ARGS+=	--with-gtk3
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
@@ -37,5 +36,5 @@ pre-configure:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
