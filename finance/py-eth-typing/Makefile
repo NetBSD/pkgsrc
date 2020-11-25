@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/10/08 19:09:05 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/25 11:09:06 nia Exp $
 
 DISTNAME=	eth-typing-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,6 +32,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-bump2version py-mypy py-twine
+# 'ascii' codec can't decode byte 0xe2
+PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
 # TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
 .include "../../lang/python/egg.mk"
