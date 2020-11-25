@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6401 2020/11/25 16:01:03 micha Exp $
+$NetBSD: CHANGES-2020,v 1.6402 2020/11/25 16:18:26 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9342,3 +9342,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/star to 1.6.1nb12 [micha 2020-11-25]
 	Updated shells/bosh to 20201125 [micha 2020-11-25]
 	Updated shells/pbosh to 20201125 [micha 2020-11-25]
+	Updated net/powerdns-recursor to 4.4.1 [otis 2020-11-25]
