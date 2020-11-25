@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/19 01:24:23 js Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/25 08:00:19 nia Exp $
 
 DISTNAME=	mautrix-telegram-0.9.0
 PKGREVISION=	1
@@ -10,6 +10,9 @@ MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/tulir/mautrix-telegram
 COMMENT=	Matrix-Telegram hybrid puppeting/relaybot bridge
 LICENSE=	gnu-agpl-v3
+
+# pytest-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.2<2:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1<2:../../databases/py-alembic
