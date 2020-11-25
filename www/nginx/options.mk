@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.64 2020/11/25 11:40:06 jperkin Exp $
+# $NetBSD: options.mk,v 1.65 2020/11/25 12:12:21 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug
+PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
 PKG_SUPPORTED_OPTIONS+=	echo encrypted-session flv form-input
 PKG_SUPPORTED_OPTIONS+=	geoip gtools gzip headers-more http2
 PKG_SUPPORTED_OPTIONS+=	image-filter luajit mail-proxy memcache
@@ -242,6 +242,15 @@ CONFIGURE_ARGS+=	--with-http_gzip_static_module
 
 .if !empty(PKG_OPTIONS:Mauth-request)
 CONFIGURE_ARGS+=	--with-http_auth_request_module
+.endif
+
+.if !empty(PKG_OPTIONS:Mcache-purge) || make(makesum) || make(mdi) || make(distclean)
+CPRG_VERSION=		2.5.1
+CPRG_DISTNAME=		ngx_cache_purge-${CPRG_VERSION}
+CPRG_DISTFILE=		${CPRG_DISTNAME}.tar.gz
+SITES.${CPRG_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx-modules/ngx_cache_purge/archive/}${CPRG_VERSION}.tar.gz
+DISTFILES+=		${CPRG_DISTFILE}
+CONFIGURE_ARGS+=	--add-module=../${CPRG_DISTNAME}
 .endif
 
 .if !empty(PKG_OPTIONS:Msecure-link)
