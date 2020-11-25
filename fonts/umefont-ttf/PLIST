@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:33 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/11/25 15:38:50 ryoon Exp $
 share/doc/umefont-ttf/license.html
+share/fonts/X11/TTF/ume-hgo4.ttf
+share/fonts/X11/TTF/ume-hgo5.ttf
 share/fonts/X11/TTF/ume-pgc4.ttf
 share/fonts/X11/TTF/ume-pgc5.ttf
 share/fonts/X11/TTF/ume-pgo4.ttf
