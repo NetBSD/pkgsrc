@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/08/25 13:45:52 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/11/25 01:01:15 gdt Exp $
 @pkgdir share/chirp/images
 bin/chirpw
 bin/rpttool
@@ -357,6 +357,9 @@ ${PYSITELIB}/chirp/drivers/th_uv3r25.pyo
 ${PYSITELIB}/chirp/drivers/th_uv8000.py
 ${PYSITELIB}/chirp/drivers/th_uv8000.pyc
 ${PYSITELIB}/chirp/drivers/th_uv8000.pyo
+${PYSITELIB}/chirp/drivers/th_uv88.py
+${PYSITELIB}/chirp/drivers/th_uv88.pyc
+${PYSITELIB}/chirp/drivers/th_uv88.pyo
 ${PYSITELIB}/chirp/drivers/th_uvf8d.py
 ${PYSITELIB}/chirp/drivers/th_uvf8d.pyc
 ${PYSITELIB}/chirp/drivers/th_uvf8d.pyo
