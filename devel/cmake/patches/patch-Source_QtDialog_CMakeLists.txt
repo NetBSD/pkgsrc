@@ -1,28 +1,26 @@
-$NetBSD: patch-Source_QtDialog_CMakeLists.txt,v 1.1 2019/11/27 22:32:27 adam Exp $
+$NetBSD: patch-Source_QtDialog_CMakeLists.txt,v 1.2 2020/11/25 10:33:28 adam Exp $
 
 Do not make app bundle on Darwin.
 
---- Source/QtDialog/CMakeLists.txt.orig	2019-11-26 14:18:07.000000000 +0000
+--- Source/QtDialog/CMakeLists.txt.orig	2020-11-24 13:50:26.000000000 +0000
 +++ Source/QtDialog/CMakeLists.txt
-@@ -154,7 +154,7 @@ set(SRCS ${SRCS} ${UI_SRCS} ${MOC_SRCS} 
+@@ -158,13 +158,13 @@ target_link_libraries(CMakeGUILib PUBLIC
+ add_library(CMakeGUIMainLib STATIC CMakeSetup.cxx)
+ target_link_libraries(CMakeGUIMainLib PUBLIC CMakeGUILib)
+ 
+-add_executable(cmake-gui WIN32 MACOSX_BUNDLE CMakeGUIExec.cxx ${MANIFEST_FILE})
++add_executable(cmake-gui WIN32 CMakeGUIExec.cxx ${MANIFEST_FILE})
+ target_link_libraries(cmake-gui CMakeGUIMainLib Qt5::Core)
+ 
  if(WIN32)
-   set(SRCS ${SRCS} CMakeSetup.rc)
+   target_sources(CMakeGUIMainLib INTERFACE $<TARGET_OBJECTS:CMakeVersion> CMakeSetup.rc)
  endif()
 -if(APPLE)
 +if(FALSE)
-   set(SRCS ${SRCS} CMakeSetup.icns)
+   target_sources(CMakeGUIMainLib INTERFACE CMakeSetup.icns)
    set(MACOSX_BUNDLE_ICON_FILE CMakeSetup.icns)
    set_source_files_properties(CMakeSetup.icns PROPERTIES
-@@ -171,7 +171,7 @@ endif()
- 
- set(CMAKE_INCLUDE_CURRENT_DIR ON)
- 
--add_executable(cmake-gui WIN32 MACOSX_BUNDLE ${SRCS} ${MANIFEST_FILE})
-+add_executable(cmake-gui WIN32 ${SRCS} ${MANIFEST_FILE})
- target_link_libraries(cmake-gui CMakeLib ${QT_QTMAIN_LIBRARY} ${CMake_QT_LIBRARIES})
- 
- if(WIN32)
-@@ -197,7 +197,7 @@ Checks: '-*,llvm-twine-local'
+@@ -194,7 +194,7 @@ Checks: '-*,llvm-twine-local'
  ...
  ")
  
@@ -31,7 +29,7 @@ Do not make app bundle on Darwin.
    file(STRINGS "${CMake_SOURCE_DIR}/Copyright.txt" copyright_line
      LIMIT_COUNT 1 REGEX "^Copyright 2000-20[0-9][0-9] Kitware")
  
-@@ -224,7 +224,7 @@ install(TARGETS cmake-gui
+@@ -221,7 +221,7 @@ install(TARGETS cmake-gui
    RUNTIME DESTINATION bin ${COMPONENT}
    ${CMAKE_INSTALL_DESTINATION_ARGS})
  
@@ -40,7 +38,7 @@ Do not make app bundle on Darwin.
    foreach (size IN ITEMS 32 128)
      install(
        FILES       "${CMAKE_CURRENT_SOURCE_DIR}/CMakeSetup${size}.png"
-@@ -243,14 +243,14 @@ if(UNIX AND NOT APPLE)
+@@ -240,14 +240,14 @@ if(UNIX AND NOT APPLE)
      ${COMPONENT})
  endif()
  
