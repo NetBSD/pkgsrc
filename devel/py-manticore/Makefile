@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/09/29 03:27:32 khorben Exp $
+# $NetBSD: Makefile,v 1.13 2020/11/25 11:13:18 nia Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -29,7 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-ptable-[0-9]*:../../textproc/py-ptable
 DEPENDS+=	${PYPKGPREFIX}-wasm-[0-9]*:../../devel/py-wasm
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_ACCEPTED=	37
 
 post-install:
 .for alternative in bin/manticore bin/manticore-verifier

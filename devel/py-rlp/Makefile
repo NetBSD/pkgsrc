@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/10/08 22:44:41 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/25 11:13:18 nia Exp $
 
 DISTNAME=	pyrlp-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -34,6 +34,7 @@ DEPENDS+=	${PYPKGPREFIX}-eth-utils-[0-9]*:../../finance/py-eth-utils
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-bump2version py-twine
+PYTHON_VERSIONS_INCOMPATIBLE+=	36 # py-eth-utils
 
 do-test:
 	cd ${WRKSRC} && tox-${PYVERSSUFFIX}
