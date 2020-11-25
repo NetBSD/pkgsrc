@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6402 2020/11/25 16:18:26 otis Exp $
+$NetBSD: CHANGES-2020,v 1.6403 2020/11/25 16:56:14 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9343,3 +9343,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/bosh to 20201125 [micha 2020-11-25]
 	Updated shells/pbosh to 20201125 [micha 2020-11-25]
 	Updated net/powerdns-recursor to 4.4.1 [otis 2020-11-25]
+	Added net/nats-server version 2.1.9 [otis 2020-11-25]
