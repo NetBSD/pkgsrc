@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
+$NetBSD: patch-ac,v 1.4 2020/11/25 14:59:24 ryoon Exp $
 
 - Use standard headers.
 - Use strerror, not sys_errlist and sys_nerr.
@@ -8,9 +8,9 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
 - Build fix for makedev() on Solaris and Interix.
 - Fix bad calls to execlp() that break on 64-bit platforms.
 
---- afio.c.orig	2012-02-05 13:25:57.000000000 +0000
+--- afio.c.orig	2018-11-30 14:25:04.000000000 +0000
 +++ afio.c
-@@ -166,7 +166,7 @@ static char *ident = "$Header: /u/buhrt/
+@@ -163,7 +163,7 @@
  #include <stdio.h>
  #include <errno.h>
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
  #include <sys/types.h>
  #include <utime.h>
  #include <signal.h>
-@@ -202,30 +202,29 @@ extern char *sys_errlist[];
+@@ -199,30 +199,29 @@ extern char *sys_errlist[];
  #include <sys/types.h>
  #include <sys/ioctl.h>
  #include <sys/stat.h>
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
  #else
  #include <sys/sysmacros.h>
  #endif
-@@ -1140,7 +1139,7 @@ savedirstamp (char *name, time_t mtime)
+@@ -1187,7 +1186,7 @@ savedirstamp (char *name, time_t mtime)
  STATIC void
  restoredirstamps (void)
  {
@@ -65,16 +65,16 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
    auto struct utimbuf tstamp;
  #else
    auto time_t tstamp[2];
-@@ -1148,7 +1147,7 @@ restoredirstamps (void)
+@@ -1196,7 +1195,7 @@ restoredirstamps (void)
    Dir *DirP_forw;
-   while(DirP!=NULL)
+   while(DirP_curr!=NULL)
    {
 -#ifdef linux_tstamp
 +#ifndef broken_utime
-     tstamp.actime = DirP->d_mtime;
-     tstamp.modtime = DirP->d_mtime;
+     tstamp.actime = DirP_curr->d_mtime;
+     tstamp.modtime = DirP_curr->d_mtime;
      /* no error code checking on purpose */
-@@ -1239,7 +1238,7 @@ readcheck (av)
+@@ -1287,7 +1286,7 @@ readcheck (av)
    auto char name[PATHSIZE];
    auto char local[PATHSIZE];
    int sel, res;
@@ -83,7 +83,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
    auto struct utimbuf tstamp;
  #else
    auto time_t tstamp[2];
-@@ -1267,7 +1266,7 @@ readcheck (av)
+@@ -1315,7 +1314,7 @@ readcheck (av)
        if(aflag && atime_sb_valid && ((sb.sb_mode & S_IFMT)==S_IFREG))
        {
  	  /* reset access time, this distroys the ctime btw. */
@@ -92,7 +92,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
  	  tstamp.actime = atime_sb.sb_atime;
  	  tstamp.modtime = atime_sb.sb_mtime;
  	  VOID utime (name, &tstamp);
-@@ -1758,7 +1757,7 @@ inentry (name, asb)
+@@ -1807,7 +1806,7 @@ inentry (name, asb)
    reg Link *linkp;
    reg int ifd;
    reg int ofd;
@@ -101,7 +101,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
    auto struct utimbuf tstamp;
  #else
    auto time_t tstamp[2];
-@@ -1794,7 +1793,7 @@ inentry (name, asb)
+@@ -1843,7 +1842,7 @@ inentry (name, asb)
    /* Cannot set utime on symlink (at least not under Linux) */
    if((asb->sb_mode & S_IFMT) != S_IFLNK)
    {
@@ -110,7 +110,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
        tstamp.actime = tstamp.modtime = mflag ? timenow : asb->sb_mtime;
        VOID utime (name, &tstamp);
  #else
-@@ -3580,7 +3579,7 @@ out (av)
+@@ -3727,7 +3726,7 @@ out (av)
      auto char name[PATHSIZE];
      auto char fsname[PATHSIZE];
      auto int compression;
@@ -119,7 +119,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
      auto struct utimbuf tstamp;
  #else
      auto time_t tstamp[2];
-@@ -3750,7 +3749,7 @@ out (av)
+@@ -3905,7 +3904,7 @@ out (av)
  	if(aflag && *fsname && ((sb.sb_mode & S_IFMT)==S_IFREG))
  	{
  	    /* reset access time, this distroys the ctime btw. */
@@ -128,7 +128,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
  	    tstamp.actime = sb.sb_atime;
  	    tstamp.modtime = sb.sb_mtime;
  	    VOID utime (fsname, &tstamp);
-@@ -4251,7 +4250,7 @@ passitem (from, asb, ifd, dir)
+@@ -4405,7 +4404,7 @@ passitem (from, asb, ifd, dir)
  {
    reg int ofd;
  
@@ -137,7 +137,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
    auto struct utimbuf tstamp;
  #else
    auto time_t tstamp[2];
-@@ -4267,7 +4266,7 @@ passitem (from, asb, ifd, dir)
+@@ -4421,7 +4420,7 @@ passitem (from, asb, ifd, dir)
  	continue;
        if (ofd > 0)
  	passdata (from, ifd, to, ofd);
@@ -146,7 +146,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
        tstamp.actime = tstamp.modtime = mflag ? timenow : asb->sb_mtime;
        VOID utime (to, &tstamp);
  #else
-@@ -4901,7 +4900,7 @@ xwait (pid, what, compstat2)
+@@ -5103,7 +5102,7 @@ xwait (pid, what, compstat2)
       char *what;
       int compstat2;
  {
@@ -155,7 +155,7 @@ $NetBSD: patch-ac,v 1.3 2015/02/15 14:45:48 ryoon Exp $
    reg Child *cp;
    reg Child **acp;
    auto char why[100];
-@@ -4918,16 +4917,16 @@ xwait (pid, what, compstat2)
+@@ -5120,16 +5119,16 @@ xwait (pid, what, compstat2)
    free ((char *) cp);
    if (status == 0)
      return (0);
