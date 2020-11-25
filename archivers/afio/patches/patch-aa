@@ -1,33 +1,30 @@
-$NetBSD: patch-aa,v 1.2 2004/04/11 23:04:50 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2020/11/25 14:59:24 ryoon Exp $
 
---- Makefile.orig	2003-12-21 04:23:51.000000000 -0600
+--- Makefile.orig	2018-11-30 14:25:04.000000000 +0000
 +++ Makefile
 @@ -28,7 +28,7 @@ SHELL=/bin/sh
  c	= -DHAVEMEMCMP
  ##  Define DEFFMTCMD to being how to format the media you use the most
- ##		This is the DEFault FoRMat CoManD. 
+ ##		This is the DEFault FoRMat CoManD.
 -d	= -DDEFFMTCMD='"fdformat /dev/fd0H1440"'
-+d	= -DDEFFMTCMD='"cdrecord dev=/dev/rcd0d -v -force blank=all"' # or '"fdformat /dev/fd0a"'
++d	= -DDEFFMTCMD='"cdrecord dev=/dev/rcd0d -v -force blank=all"'
  ##  Define LONGZFILE if you want .Z to be tagged on the end of a 14 char
  ##	file name (or longer for BSD) in the archive when the file is compressed
  #e	= -DLONGZFILE
-@@ -71,11 +71,12 @@ LARGEFILEFLAGS=-D_FILE_OFFSET_BITS=64 -D
- MW=
+@@ -74,9 +74,10 @@ MW=-Wformat -Werror=format-security -Wal
+ #code can be reviewed manually
  #MW=-Wtraditional -Wcast-qual -Wcast-align -Wconversion -pedantic -Wlong-long -Wimplicit -Wuninitialized -W -Wshadow -Wsign-compare -Wstrict-prototypes -Wmissing-declarations
  
--CFLAGS1 = -Wall -Wstrict-prototypes -s -O2 -fomit-frame-pointer ${LARGEFILEFLAGS} ${MW}
-+#CFLAGS1 = -Wall -Wstrict-prototypes -s -O2 -fomit-frame-pointer ${LARGEFILEFLAGS} ${MW}
+-CFLAGS1 = -Wall -Wstrict-prototypes -s -O2 -fomit-frame-pointer -Wno-unused-result $(LARGEFILEFLAGS) $(MW)
++#CFLAGS1 = -Wall -Wstrict-prototypes -s -O2 -fomit-frame-pointer -Wno-unused-result $(LARGEFILEFLAGS) $(MW)
 +CFLAGS1 = ${LARGEFILEFLAGS}
  
 -CC=gcc
 +#CC=gcc
  
--CFLAGS = ${CFLAGS1} $1 $2 $3 $4 $5 $6 $7 $8 $9 $a $b $c $d $e ${e2} $f $g $I
-+CFLAGS += ${CFLAGS1} $1 $2 $3 $4 $5 $6 $7 $8 $9 $a $b $c $d $e ${e2} $f $g $I
- LDFLAGS =
- 
- afio : afio.o compfile.o exten.o match.o $M
-@@ -88,8 +89,8 @@ clean:
+ # also using contents of usin CPPFLAGS, CFLAGS, LDFLAGS out of environment
+ # variables, if they exist
+@@ -95,8 +96,8 @@ clean:
  	cd regtest; /bin/sh regtest.clean
  
  install: afio
