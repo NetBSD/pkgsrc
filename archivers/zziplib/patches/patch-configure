@@ -1,8 +1,12 @@
-$NetBSD: patch-ba,v 1.6 2018/08/06 12:55:38 snj Exp $
+$NetBSD: patch-configure,v 1.1 2020/11/25 13:26:22 wiz Exp $
 
---- configure.orig	2018-08-06 05:46:47.061995747 -0700
-+++ configure	2018-08-06 05:46:54.374358963 -0700
-@@ -15430,13 +15430,14 @@ case "$host_os" in mingw*)
+Avoid unportable test operator.
+
+Use as_echo to handle quoted characters correctly (on Solaris?)
+
+--- configure.orig	2020-04-15 23:36:46.000000000 +0000
++++ configure
+@@ -15459,13 +15459,14 @@ case "$host_os" in mingw*)
  ;; *)
      if test ".$can_build_shared" != ".no" ; then
        ZZIPLIB_LDFLAGS="-export-dynamic"
@@ -18,7 +22,7 @@ $NetBSD: patch-ba,v 1.6 2018/08/06 12:55:38 snj Exp $
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ZZIPLIB_LDFLAGS $RESOLVES" >&5
  $as_echo "$ZZIPLIB_LDFLAGS $RESOLVES" >&6; }
  
-@@ -19076,24 +19077,24 @@ else
+@@ -18969,24 +18970,24 @@ else
    { $as_echo "$as_me:${as_lineno-$LINENO}: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&5
  $as_echo "$as_me: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&6;}
    if test -f $ac_prefix_conf_INP ; then
@@ -58,7 +62,7 @@ $NetBSD: patch-ba,v 1.6 2018/08/06 12:55:38 snj Exp $
      if cmp -s $ac_prefix_conf_OUT $tmp/pconfig.h 2>/dev/null; then
        { $as_echo "$as_me:${as_lineno-$LINENO}: $ac_prefix_conf_OUT is unchanged" >&5
  $as_echo "$as_me: $ac_prefix_conf_OUT is unchanged" >&6;}
-@@ -19166,24 +19167,24 @@ else
+@@ -19059,24 +19060,24 @@ else
    { $as_echo "$as_me:${as_lineno-$LINENO}: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&5
  $as_echo "$as_me: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&6;}
    if test -f $ac_prefix_conf_INP ; then
