@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/24 15:44:49 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/25 20:34:37 nia Exp $
 bin/armagetronad-dedicated
 share/armagetronad-dedicated/desktop/armagetronad.desktop
 share/armagetronad-dedicated/desktop/icons/large/armagetronad.png
@@ -40,6 +40,9 @@ share/armagetronad-dedicated/scripts/rcd_startstop
 share/armagetronad-dedicated/scripts/relocate
 share/armagetronad-dedicated/scripts/serverstarter
 share/armagetronad-dedicated/scripts/sysinstall
+share/doc/armagetronad-dedicated/COPYING.txt
+share/doc/armagetronad-dedicated/Howto-Maps.txt
+share/doc/armagetronad-dedicated/commands.txt
 share/doc/armagetronad-dedicated/html/bugs.html
 share/doc/armagetronad-dedicated/html/changelog.html
 share/doc/armagetronad-dedicated/html/commands.html
@@ -71,6 +74,12 @@ share/examples/armagetronad-server/armagetronad-dedicated/examples/death_zone.cf
 share/examples/armagetronad-server/armagetronad-dedicated/examples/fortress_soccer.cfg
 share/examples/armagetronad-server/armagetronad-dedicated/examples/single_use_turbo.cfg
 share/examples/armagetronad-server/armagetronad-dedicated/examples/teamsumo.cfg
+share/examples/armagetronad-server/armagetronad-dedicated/keys_cursor.cfg
+share/examples/armagetronad-server/armagetronad-dedicated/keys_cursor_single.cfg
+share/examples/armagetronad-server/armagetronad-dedicated/keys_twohand.cfg
+share/examples/armagetronad-server/armagetronad-dedicated/keys_wasd.cfg
+share/examples/armagetronad-server/armagetronad-dedicated/keys_x.cfg
+share/examples/armagetronad-server/armagetronad-dedicated/keys_zqsd.cfg
 share/examples/armagetronad-server/armagetronad-dedicated/master.srv
 share/examples/armagetronad-server/armagetronad-dedicated/rc.config
 share/examples/armagetronad-server/armagetronad-dedicated/settings.cfg

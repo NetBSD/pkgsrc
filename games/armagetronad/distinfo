@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/02/26 14:56:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/11/25 20:34:37 nia Exp $
 
-SHA1 (armagetronad-0.2.8.3.5.src.tar.gz) = 42379be705000a54736491ab0efeac4e211a6589
-RMD160 (armagetronad-0.2.8.3.5.src.tar.gz) = 81be89090525e8f78bb42d5e3450459b69ab3d11
-SHA512 (armagetronad-0.2.8.3.5.src.tar.gz) = ee3c1be492e3f5e35e29bdefd39a3407272acc8f392030d011162af45834a617715435b32dae1a45f9889455847b629a23f6711eaf901a1f61da84bdf2dbd7e0
-Size (armagetronad-0.2.8.3.5.src.tar.gz) = 2096771 bytes
+SHA1 (armagetronad-0.2.9.0.1.tbz) = 84c0a3e03766871bb9a5c03af7d866f8274fcd26
+RMD160 (armagetronad-0.2.9.0.1.tbz) = 4a5e79d8f7cf0fb06952244120cc3734e73e92a1
+SHA512 (armagetronad-0.2.9.0.1.tbz) = d0bf8a973aafc6dd41f2dd41e29d34cebae1829d9e050948045c68a2a408595dda7cc94eb3169ed5c470770a01eb93744760a2b83146ab7813dc513bb5b26279
+Size (armagetronad-0.2.9.0.1.tbz) = 1907392 bytes
