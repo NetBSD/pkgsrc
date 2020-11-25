@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2020/10/19 14:36:56 otis Exp $
+# $NetBSD: Makefile,v 1.40 2020/11/25 16:18:16 otis Exp $
 
-DISTNAME=	pdns-recursor-4.4.0
+DISTNAME=	pdns-recursor-4.4.1
 PKGNAME=	${DISTNAME:S/pdns/powerdns/}
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.powerdns.com/releases/
