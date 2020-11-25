@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.918 2020/11/21 13:01:22 nia Exp $
+# $NetBSD: Makefile,v 1.919 2020/11/25 11:05:07 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -854,5 +854,6 @@ SUBDIR+=	zabbix50-proxy
 SUBDIR+=	zabbix50-server
 SUBDIR+=	zidrav
 SUBDIR+=	znapzend
+SUBDIR+=	zoxide
 
 .include "../mk/misc/category.mk"
