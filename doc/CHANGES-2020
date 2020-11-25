@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6389 2020/11/24 21:19:09 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.6390 2020/11/25 01:01:22 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9328,3 +9328,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nginx-devel to 1.19.5 [otis 2020-11-24]
 	Updated games/nudoku to 2.1.0 [fcambus 2020-11-24]
 	Updated lang/yabasic to 2.87.1 [fcambus 2020-11-24]
+	Updated ham/chirp to 20201121 [gdt 2020-11-25]
