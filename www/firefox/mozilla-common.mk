@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.189 2020/11/17 18:03:00 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.190 2020/11/25 10:59:57 maya Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -128,14 +128,6 @@ PLIST.ffvpx=	yes	# see media/ffvpx/ffvpxcommon.mozbuild
 # See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing
 # support is only available when the toolkit is cairo-cocoa.
 CONFIGURE_ARGS.Darwin+=	--disable-sandbox
-
-# See ${WRKSRC}/configure.in: It tries to use MacOS X 10.6 SDK by
-# default, which is not always possible.
-.if !empty(MACHINE_PLATFORM:MDarwin-8.*-*)
-CONFIGURE_ARGS+=	--enable-macos-target=10.4
-.elif !empty(MACHINE_PLATFORM:MDarwin-9.*-*)
-CONFIGURE_ARGS+=	--enable-macos-target=10.5
-.endif
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
