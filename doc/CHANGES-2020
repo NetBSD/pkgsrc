@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6406 2020/11/25 20:49:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6407 2020/11/25 20:52:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9348,3 +9348,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/armagetronad-server to 0.2.9.0.1 [nia 2020-11-25]
 	Updated chat/bitlbee-facebook to 1.2.1 [nia 2020-11-25]
 	Updated wm/bspwm to 0.9.10 [nia 2020-11-25]
+	Updated devel/byacc to 20200910 [nia 2020-11-25]
