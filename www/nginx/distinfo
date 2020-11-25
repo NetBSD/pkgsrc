@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.80 2020/11/06 22:54:17 otis Exp $
+$NetBSD: distinfo,v 1.81 2020/11/25 12:12:21 jperkin Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -44,6 +44,10 @@ SHA1 (nginx_http_push_module-1.2.7.tar.gz) = 55b61d12f7f66176ff859d7cc9933b9912d
 RMD160 (nginx_http_push_module-1.2.7.tar.gz) = 13dcd7dba0c88f1d6c74e008f1e8c3d96b8b4e42
 SHA512 (nginx_http_push_module-1.2.7.tar.gz) = d8b0e79c2b9cf4dd0b3ba8bfeeca86795b1206ec2a468829e6fd20c2286c9a8f75ad135424590cfb3a9d9cded5cefde4f19ba9e36d63a0ff95487d7139732bd9
 Size (nginx_http_push_module-1.2.7.tar.gz) = 673406 bytes
+SHA1 (ngx_cache_purge-2.5.1.tar.gz) = 12069184d255a99a5039a7e9b1299945c6767acc
+RMD160 (ngx_cache_purge-2.5.1.tar.gz) = 35848113b920593bc99d34b1dfffd4292ce02c58
+SHA512 (ngx_cache_purge-2.5.1.tar.gz) = 3ad37b4a251fb85a9a384f87fea5ca640166e3d7173c6ed9a857b191ae5f2e93819483b5d423fcafe8a10239b571677b342cc2d2d5d62315816f1316d7d5bb76
+Size (ngx_cache_purge-2.5.1.tar.gz) = 16614 bytes
 SHA1 (ngx_devel_kit-0.3.1.tar.gz) = e15316e13a7b19a3d2502becbb26043a464a135a
 RMD160 (ngx_devel_kit-0.3.1.tar.gz) = 5c52a463544294096611aa9dec1c76e937a1aa23
 SHA512 (ngx_devel_kit-0.3.1.tar.gz) = de1e3349d8dd08e5982279b2219dc8a8006739f0409b8e0f5c50d93434beff1fbafba43e9c5ac85a5fab90afc5c0a7244a340610339c36f82f2cba7233e72de9
