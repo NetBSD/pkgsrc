@@ -1,11 +1,13 @@
-# $NetBSD: options.mk,v 1.63 2020/11/06 22:54:17 otis Exp $
+# $NetBSD: options.mk,v 1.64 2020/11/25 11:40:06 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug echo encrypted-session \
-			form-input flv geoip gtools gzip headers-more http2 \
-			image-filter luajit mail-proxy memcache naxsi njs \
-			pcre perl push realip rtmp secure-link set-misc slice \
-			ssl status stream-ssl-preread sub uwsgi
+PKG_SUPPORTED_OPTIONS=	array-var auth-request dav debug
+PKG_SUPPORTED_OPTIONS+=	echo encrypted-session flv form-input
+PKG_SUPPORTED_OPTIONS+=	geoip gtools gzip headers-more http2
+PKG_SUPPORTED_OPTIONS+=	image-filter luajit mail-proxy memcache
+PKG_SUPPORTED_OPTIONS+=	naxsi njs pcre perl push realip rtmp
+PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
+PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sub uwsgi
 PKG_SUGGESTED_OPTIONS=	pcre ssl
 
 PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
@@ -15,16 +17,14 @@ PLIST_VARS+=		naxsi perl uwsgi
 .include "../../mk/bsd.options.mk"
 
 # documentation says naxsi must be the first module
-.if !empty(PKG_OPTIONS:Mnaxsi)
-PLIST.naxsi=			yes
-CONFIGURE_ARGS+=		--add-module=../${NAXSI_DISTNAME}/naxsi_src
-.endif
-.if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi) || make(distclean)
 NAXSI_VERSION=			1.2
 NAXSI_DISTNAME=			naxsi-${NAXSI_VERSION}
 NAXSI_DISTFILE=			${NAXSI_DISTNAME}.tar.gz
-SITES.${NAXSI_DISTFILE}=	-https://github.com/nbs-system/naxsi/archive/${NAXSI_VERSION}.tar.gz
+SITES.${NAXSI_DISTFILE}=	-${MASTER_SITE_GITHUB:=nbs-system/naxsi/archive/}${NAXSI_VERSION}.tar.gz
 DISTFILES+=			${NAXSI_DISTFILE}
+PLIST.naxsi=			yes
+CONFIGURE_ARGS+=		--add-module=../${NAXSI_DISTNAME}/naxsi_src
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
@@ -55,9 +55,14 @@ CONFIGURE_ARGS+=	--without-pcre
 CONFIGURE_ARGS+=	--without-http_rewrite_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mdav)
+.if !empty(PKG_OPTIONS:Mdav) || make(makesum) || make(mdi) || make(distclean)
+DAV_VERSION=		3.0.0
+DAV_DISTNAME=		nginx-dav-ext-module-3.0.0
+DAV_DISTFILE=		${DAV_DISTNAME}.tar.gz
+SITES.${DAV_DISTFILE}=	-${MASTER_SITE_GITHUB:=arut/nginx-dav-ext-module/archive/}v${DAV_VERSION}.tar.gz
+DISTFILES+=		${DAV_DISTFILE}
 CONFIGURE_ARGS+=	--with-http_dav_module
-CONFIGURE_ARGS+=	--add-module=../${DAV_EXT_DISTNAME}
+CONFIGURE_ARGS+=	--add-module=../${DAV_DISTNAME}
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 SUBST_CLASSES+=		fix-xslt
@@ -65,13 +70,6 @@ SUBST_STAGE.fix-xslt=	pre-configure
 SUBST_FILES.fix-xslt=	auto/lib/libxslt/conf
 SUBST_SED.fix-xslt=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.libxslt},g'
 SUBST_NOOP_OK.fix-xslt=	yes
-.endif
-.if !empty(PKG_OPTIONS:Mdav) || make(makesum) || make(mdi)
-DAV_EXT_VERSION=		3.0.0
-DAV_EXT_DISTNAME=		nginx-dav-ext-module-3.0.0
-DAV_EXT_DISTFILE=		${DAV_EXT_DISTNAME}.tar.gz
-SITES.${DAV_EXT_DISTFILE}+=	-https://github.com/arut/nginx-dav-ext-module/archive/v${DAV_EXT_VERSION}.tar.gz
-DISTFILES+=			${DAV_EXT_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mflv)
@@ -114,98 +112,84 @@ CONFIGURE_ARGS+=	--with-http_realip_module
 .endif
 
 # NDK must be added once and before 3rd party modules needing it
-.for _ngx_mod in luajit set-misc array-var form-input encrypted-session
-.  if !defined(NEED_NDK) && !empty(PKG_OPTIONS:M${_ngx_mod}:O)
+.for mod in luajit set-misc array-var form-input encrypted-session
+.  if !defined(NEED_NDK) && !empty(PKG_OPTIONS:M${mod}:O)
 CONFIGURE_ARGS+=	--add-module=../${NDK_DISTNAME}
 NEED_NDK=		yes
 .  endif
 .endfor
-.if defined(NEED_NDK) || make(makesum) || make(mdi)
+.if defined(NEED_NDK) || make(makesum) || make(mdi) || make(distclean)
 NDK_VERSION=		0.3.1
 NDK_DISTNAME=		ngx_devel_kit-${NDK_VERSION}
 NDK_DISTFILE=		${NDK_DISTNAME}.tar.gz
-SITES.${NDK_DISTFILE}=	-https://github.com/simpl/ngx_devel_kit/archive/v${NDK_VERSION}.tar.gz
+SITES.${NDK_DISTFILE}=	-${MASTER_SITE_GITHUB:=simpl/ngx_devel_kit/archive/}v${NDK_VERSION}.tar.gz
 DISTFILES+=		${NDK_DISTFILE}
 .endif
 
-.if !empty(PKG_OPTIONS:Mluajit)
+.if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi) || make(distclean)
+LUA_VERSION=		0.10.19
+LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
+LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
+SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
+DISTFILES+=		${LUA_DISTFILE}
 .include "../../lang/LuaJIT2/buildlink3.mk"
 CONFIGURE_ENV+=		LUAJIT_LIB=${PREFIX}/lib
 CONFIGURE_ENV+=		LUAJIT_INC=${PREFIX}/include/luajit-2.0
 CONFIGURE_ARGS+=	--add-module=../${LUA_DISTNAME}
 .endif
-.if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi)
-LUA_VERSION=		0.10.19
-LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
-LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
-SITES.${LUA_DISTFILE}=	-https://github.com/openresty/lua-nginx-module/archive/v${LUA_VERSION}.tar.gz
-DISTFILES+=		${LUA_DISTFILE}
-.endif
 
-.if !empty(PKG_OPTIONS:Mecho)
-CONFIGURE_ARGS+=		--add-module=../${ECHOMOD_DISTNAME}
-.endif
-.if !empty(PKG_OPTIONS:Mecho) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Mecho) || make(makesum) || make(mdi) || make(distclean)
 ECHOMOD_VERSION=		0.62
 ECHOMOD_DISTNAME=		echo-nginx-module-${ECHOMOD_VERSION}
 ECHOMOD_DISTFILE=		${ECHOMOD_DISTNAME}.tar.gz
-SITES.${ECHOMOD_DISTFILE}=	-https://github.com/openresty/echo-nginx-module/archive/v${ECHOMOD_VERSION}.tar.gz
+SITES.${ECHOMOD_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/echo-nginx-module/archive/}v${ECHOMOD_VERSION}.tar.gz
 DISTFILES+=			${ECHOMOD_DISTFILE}
+CONFIGURE_ARGS+=		--add-module=../${ECHOMOD_DISTNAME}
 .endif
 
-.if !empty(PKG_OPTIONS:Mset-misc)
-CONFIGURE_ARGS+=		--add-module=../${SETMISC_DISTNAME}
-.endif
-.if !empty(PKG_OPTIONS:Mset-misc) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Mset-misc) || make(makesum) || make(mdi) || make(distclean)
 SETMISC_VERSION=		0.32
 SETMISC_DISTNAME=		set-misc-nginx-module-${SETMISC_VERSION}
 SETMISC_DISTFILE=		${SETMISC_DISTNAME}.tar.gz
-SITES.${SETMISC_DISTFILE}=	-https://github.com/openresty/set-misc-nginx-module/archive/v${SETMISC_VERSION}.tar.gz
+SITES.${SETMISC_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/set-misc-nginx-module/archive/}v${SETMISC_VERSION}.tar.gz
 DISTFILES+=			${SETMISC_DISTFILE}
+CONFIGURE_ARGS+=		--add-module=../${SETMISC_DISTNAME}
 .endif
 
-.if !empty(PKG_OPTIONS:Marray-var)
-CONFIGURE_ARGS+=		--add-module=../${ARRAYVAR_DISTNAME}
-.endif
-.if !empty(PKG_OPTIONS:Marray-var) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Marray-var) || make(makesum) || make(mdi) || make(distclean)
 ARRAYVAR_VERSION=		0.05
 ARRAYVAR_DISTNAME=		array-var-nginx-module-${ARRAYVAR_VERSION}
 ARRAYVAR_DISTFILE=		${ARRAYVAR_DISTNAME}.tar.gz
-SITES.${ARRAYVAR_DISTFILE}=	-https://github.com/openresty/array-var-nginx-module/archive/v${ARRAYVAR_VERSION}.tar.gz
+SITES.${ARRAYVAR_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/array-var-nginx-module/archive/}v${ARRAYVAR_VERSION}.tar.gz
 DISTFILES+=			${ARRAYVAR_DISTFILE}
+CONFIGURE_ARGS+=		--add-module=../${ARRAYVAR_DISTNAME}
 .endif
 
-.if !empty(PKG_OPTIONS:Mencrypted-session)
-CONFIGURE_ARGS+=		--add-module=../${ENCSESS_DISTNAME}
-.endif
-.if !empty(PKG_OPTIONS:Mencrypted-session) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Mencrypted-session) || make(makesum) || make(mdi) || make(distclean)
 ENCSESS_VERSION=		0.08
 ENCSESS_DISTNAME=		encrypted-session-nginx-module-${ENCSESS_VERSION}
 ENCSESS_DISTFILE=		${ENCSESS_DISTNAME}.tar.gz
-SITES.${ENCSESS_DISTFILE}=	-https://github.com/openresty/encrypted-session-nginx-module/archive/v${ENCSESS_VERSION}.tar.gz
+SITES.${ENCSESS_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/encrypted-session-nginx-module/archive/}v${ENCSESS_VERSION}.tar.gz
 DISTFILES+=			${ENCSESS_DISTFILE}
+CONFIGURE_ARGS+=		--add-module=../${ENCSESS_DISTNAME}
 .endif
 
-.if !empty(PKG_OPTIONS:Mform-input)
-CONFIGURE_ARGS+=		--add-module=../${FORMINPUT_DISTNAME}
-.endif
-.if !empty(PKG_OPTIONS:Mform-input) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Mform-input) || make(makesum) || make(mdi) || make(distclean)
 FORMINPUT_VERSION=		0.12
 FORMINPUT_DISTNAME=		form-input-nginx-module-${FORMINPUT_VERSION}
 FORMINPUT_DISTFILE=		${FORMINPUT_DISTNAME}.tar.gz
-SITES.${FORMINPUT_DISTFILE}=	-https://github.com/calio/form-input-nginx-module/archive/v${FORMINPUT_VERSION}.tar.gz
+SITES.${FORMINPUT_DISTFILE}=	-${MASTER_SITE_GITHUB:=calio/form-input-nginx-module/archive/}v${FORMINPUT_VERSION}.tar.gz
 DISTFILES+=			${FORMINPUT_DISTFILE}
+CONFIGURE_ARGS+=		--add-module=../${FORMINPUT_DISTNAME}
 .endif
 
-.if !empty(PKG_OPTIONS:Mheaders-more)
-CONFIGURE_ARGS+=		--add-module=../${HEADMORE_DISTNAME}
-.endif
-.if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum) || make(mdi) || make(distclean)
 HEADMORE_VERSION=		0.33
 HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
-SITES.${HEADMORE_DISTFILE}=	-https://github.com/openresty/headers-more-nginx-module/archive/v${HEADMORE_VERSION}.tar.gz
+SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
 DISTFILES+=			${HEADMORE_DISTFILE}
+CONFIGURE_ARGS+=		--add-module=../${HEADMORE_DISTNAME}
 .endif
 
 .if !empty(PKG_OPTIONS:Muwsgi)
@@ -216,15 +200,13 @@ CONFIGURE_ARGS+=	--http-uwsgi-temp-path=${NGINX_DATADIR}/uwsgi_temp
 CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mpush)
-CONFIGURE_ARGS+=	--add-module=../nchan-${PUSH_VERSION}
-.endif
-.if !empty(PKG_OPTIONS:Mpush) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Mpush) || make(makesum) || make(mdi) || make(distclean)
 PUSH_VERSION=		1.2.7
 PUSH_DISTNAME=		nginx_http_push_module-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
-SITES.${PUSH_DISTFILE}=	-https://github.com/slact/nchan/archive/v${PUSH_VERSION}.tar.gz
+SITES.${PUSH_DISTFILE}=	-${MASTER_SITE_GITHUB:=slact/nchan/archive/}v${PUSH_VERSION}.tar.gz
 DISTFILES+=		${PUSH_DISTFILE}
+CONFIGURE_ARGS+=	--add-module=../nchan-${PUSH_VERSION}
 .endif
 
 .if !empty(PKG_OPTIONS:Mimage-filter)
@@ -270,25 +252,20 @@ CONFIGURE_ARGS+=	--with-http_secure_link_module
 CONFIGURE_ARGS+=	--with-stream --with-stream_ssl_preread_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mrtmp)
-CONFIGURE_ARGS+=	--add-module=../${RTMP_DISTNAME}
-.endif
-.if !empty(PKG_OPTIONS:Mrtmp) || make(makesum) || make(mdi)
+.if !empty(PKG_OPTIONS:Mrtmp) || make(makesum) || make(mdi) || make(distclean)
 RTMP_VERSION=		1.2.1
 RTMP_DISTNAME=		nginx-rtmp-module-${RTMP_VERSION}
 RTMP_DISTFILE=		${RTMP_DISTNAME}.tar.gz
-SITES.${RTMP_DISTFILE}=	-https://github.com/arut/nginx-rtmp-module/archive/v${RTMP_VERSION}.tar.gz
+SITES.${RTMP_DISTFILE}=	-${MASTER_SITE_GITHUB:=arut/nginx-rtmp-module/archive/}v${RTMP_VERSION}.tar.gz
 DISTFILES+=		${RTMP_DISTFILE}
+CONFIGURE_ARGS+=	--add-module=../${RTMP_DISTNAME}
 .endif
 
-.if !empty(PKG_OPTIONS:Mnjs)
-CONFIGURE_ARGS+=	--add-module=../${NJS_EXT_DISTNAME}/nginx
+.if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi) || make(distclean)
+NJS_VERSION=		0.4.4
+NJS_DISTNAME=		njs-${NJS_VERSION}
+NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
+SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz
+DISTFILES+=		${NJS_DISTFILE}
+CONFIGURE_ARGS+=	--add-module=../${NJS_DISTNAME}/nginx
 .endif
-.if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi)
-NJS_EXT_VERSION=		0.4.4
-NJS_EXT_DISTNAME=		njs-${NJS_EXT_VERSION}
-NJS_EXT_DISTFILE=		${NJS_EXT_DISTNAME}.tar.gz
-SITES.${NJS_EXT_DISTFILE}+=	-https://github.com/nginx/njs/archive/${NJS_EXT_VERSION}.tar.gz
-DISTFILES+=			${NJS_EXT_DISTFILE}
-.endif
-
