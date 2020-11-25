@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.5 2020/02/26 14:56:28 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/11/25 20:34:37 nia Exp $
 #
 # used by games/armagetronad/Makefile
 # used by games/armagetronad-server/Makefile
 
-DISTNAME=	armagetronad-0.2.8.3.5.src
+DISTNAME=	armagetronad-0.2.9.0.1
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=armagetronad/}
+MASTER_SITES=	https://launchpad.net/armagetronad/0.2.9/${PKGVERSION_NOREV}/+download/
+EXTRACT_SUFX=	.tbz
 
 HOMEPAGE=	http://www.armagetronad.org/
 LICENSE=	gnu-gpl-v2
@@ -17,7 +18,7 @@ PATCHDIR=	${.CURDIR}/../../games/armagetronad/patches
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bash gmake
+USE_TOOLS+=		bash gmake pkg-config
 REPLACE_PYTHON+=	language/update.py
 
 SUBST_CLASSES+=		bash
@@ -32,6 +33,8 @@ CONFIGURE_ARGS+=	--disable-uninstall
 CONFIGURE_ARGS+=	--disable-useradd
 # This sanitizes paths
 CONFIGURE_ARGS+=	--disable-games
+
+CHECK_PORTABILITY_SKIP+=	docker/deploy/targets.sh.in
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
