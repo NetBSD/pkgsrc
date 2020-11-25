@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.178 2020/11/01 10:54:06 markd Exp $
+# $NetBSD: Makefile,v 1.179 2020/11/25 10:33:28 adam Exp $
 
-PKGREVISION=		1
 .include "Makefile.common"
 
 COMMENT=	Cross platform make
@@ -13,6 +12,8 @@ CONFIGURE_SCRIPT=	bootstrap
 BUILD_TARGET=		default_target
 
 CONFIGURE_HAS_MANDIR=	no
+CONFIGURE_ARGS+=	--bootstrap-system-libuv
+CONFIGURE_ARGS+=	--bootstrap-system-librhash
 CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
 CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS:U1}
