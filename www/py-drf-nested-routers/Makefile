@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/11/24 06:39:10 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/25 11:59:06 adam Exp $
 
-DISTNAME=	drf-nested-routers-0.92.1
+DISTNAME=	drf-nested-routers-0.92.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/drf-nested-routers/}
