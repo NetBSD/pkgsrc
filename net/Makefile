@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1362 2020/11/19 20:13:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.1363 2020/11/25 16:55:46 otis Exp $
 #
 
 COMMENT=	Networking tools
@@ -412,6 +412,7 @@ SUBDIR+=	nanotodon
 SUBDIR+=	nap
 SUBDIR+=	napshare
 SUBDIR+=	nasd
+SUBDIR+=	nats-server
 SUBDIR+=	nbtscan
 SUBDIR+=	ncdc
 SUBDIR+=	ncftp3

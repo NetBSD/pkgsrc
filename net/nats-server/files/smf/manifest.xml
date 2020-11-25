@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <create_default_instance enabled='false' />
+    <single_instance />
+    <dependency name='fs' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local' />
+    </dependency>
+    <dependency name='net' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/loopback' />
+    </dependency>
+    <dependency name='config' grouping='require_all' restart_on='none' type='path'>
+       <service_fmri value='file://@PKG_SYSCONFDIR@/nats-server.conf' />
+    </dependency>
+    <method_context working_directory='@VARBASE@/nats-server'>
+      <method_credential user='@NATS_USER@' group='@NATS_GROUP@' />
+      <method_environment>
+        <envvar name='LD_PRELOAD_32' value='/usr/lib/extendedFILE.so.1' />
+      </method_environment>
+    </method_context>
+    <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.nats-server@ start' timeout_seconds='0' />
+    <exec_method name='stop' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.nats-server@ stop' timeout_seconds='0' />
+    <stability value='Evolving' />
+    <template>
+      <common_name>
+	 <loctext xml:lang='C'>nats.io messaging server</loctext>
+      </common_name>
+      <documentation>
+        <manpage title='NATS' section='1' />
+	<doc_link name='nats.io' uri='https://nats.io/' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
