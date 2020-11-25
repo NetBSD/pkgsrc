@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6398 2020/11/25 15:39:28 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6399 2020/11/25 15:41:29 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9339,3 +9339,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/afio to 2.5.2 [ryoon 2020-11-25]
 	Updated devel/smake to 1.3nb15 [micha 2020-11-25]
 	Updated fonts/umefont-ttf to 0.670 [ryoon 2020-11-25]
+	Updated archivers/star to 1.6.1nb12 [micha 2020-11-25]
