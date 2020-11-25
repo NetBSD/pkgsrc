@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6411 2020/11/25 21:53:20 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6412 2020/11/25 22:59:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9353,3 +9353,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/clipit to 1.4.5 [nia 2020-11-25]
 	Updated security/codecrypt to 1.8 [nia 2020-11-25]
 	Updated textproc/diffstat to 1.63 [nia 2020-11-25]
+	Updated multimedia/vlc to 3.0.11.1 [nia 2020-11-25]
