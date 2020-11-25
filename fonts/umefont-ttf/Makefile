@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.61 2020/11/06 18:04:27 maya Exp $
+# $NetBSD: Makefile,v 1.62 2020/11/25 15:38:50 ryoon Exp $
 #
 
-DISTNAME=	umefont_610
+DISTNAME=	umefont_670
 PKGNAME=	${DISTNAME:S/_/-ttf-0./}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_OSDN:=ume-font/63494/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=ume-font/22212/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
