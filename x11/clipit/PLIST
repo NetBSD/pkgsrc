@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/01 10:46:59 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/11/25 21:41:39 nia Exp $
 bin/clipit
 man/man1/clipit.1
 share/applications/clipit.desktop
 share/examples/clipit/xdg/autostart/clipit-startup.desktop
+share/icons/hicolor/scalable/apps/clipit-trayicon-offline.svg
 share/icons/hicolor/scalable/apps/clipit-trayicon.svg
 share/locale/ca/LC_MESSAGES/clipit.mo
 share/locale/cs/LC_MESSAGES/clipit.mo
@@ -12,6 +13,7 @@ share/locale/es/LC_MESSAGES/clipit.mo
 share/locale/es_ES/LC_MESSAGES/clipit.mo
 share/locale/et/LC_MESSAGES/clipit.mo
 share/locale/fr/LC_MESSAGES/clipit.mo
+share/locale/hr/LC_MESSAGES/clipit.mo
 share/locale/hu/LC_MESSAGES/clipit.mo
 share/locale/it/LC_MESSAGES/clipit.mo
 share/locale/ja/LC_MESSAGES/clipit.mo
