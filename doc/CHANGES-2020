@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6396 2020/11/25 14:59:55 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6397 2020/11/25 15:26:02 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9337,3 +9337,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-drf-nested-routers to 0.92.5 [adam 2020-11-25]
 	Updated archivers/zziplib to 0.13.71 [wiz 2020-11-25]
 	Updated archivers/afio to 2.5.2 [ryoon 2020-11-25]
+	Updated devel/smake to 1.3nb15 [micha 2020-11-25]
