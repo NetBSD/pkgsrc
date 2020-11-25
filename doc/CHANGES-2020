@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6408 2020/11/25 20:59:48 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6409 2020/11/25 21:42:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9350,3 +9350,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/bspwm to 0.9.10 [nia 2020-11-25]
 	Updated devel/byacc to 20200910 [nia 2020-11-25]
 	Updated audio/cantata to 2.4.2 [wiz 2020-11-25]
+	Updated x11/clipit to 1.4.5 [nia 2020-11-25]
