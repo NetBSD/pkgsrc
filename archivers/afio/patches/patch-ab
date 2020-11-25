@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2015/02/15 14:45:48 ryoon Exp $
+$NetBSD: patch-ab,v 1.5 2020/11/25 14:59:24 ryoon Exp $
 
 - Use NAME_MAX if available rather than relying on MAXNAMLEN.
 - Fix Solaris preprocessor symbols.
 - Fix bad calls to execlp() that break on 64-bit platforms.
 
---- compfile.c.orig	2012-02-05 13:45:01.000000000 +0000
+--- compfile.c.orig	2018-11-30 14:25:04.000000000 +0000
 +++ compfile.c
 @@ -2,6 +2,7 @@
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.4 2015/02/15 14:45:48 ryoon Exp $
  #include <unistd.h>
  #include <string.h>
  
-@@ -211,7 +212,7 @@ void waitforgzip()
+@@ -224,7 +225,7 @@ void waitforgzip()
   * version;
   */
  
@@ -23,10 +23,10 @@ $NetBSD: patch-ab,v 1.4 2015/02/15 14:45:48 ryoon Exp $
  #include <dirent.h>
  #else
  #include <sys/dir.h>
-@@ -284,7 +285,9 @@ compressfile (int *fdp, char *name, reg 
-       tmpcomp++;
-     else
-       tmpcomp = name;
+@@ -299,7 +300,9 @@ compressfile (int *fdp, char *name, reg 
+ #ifdef NAME_MAX
+     if (strlen (tmpcomp) + 2 > NAME_MAX)
+ #else
 -#ifdef MAXNAMLEN	   /* BSD otherwise should be sysV (FFS on sysV?) */
 +#if defined(NAME_MAX)
 +    if (strlen (tmpcomp) + 2 > NAME_MAX)

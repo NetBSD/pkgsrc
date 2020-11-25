@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 00:56:20 agc Exp $
+$NetBSD: distinfo,v 1.10 2020/11/25 14:59:24 ryoon Exp $
 
-SHA1 (afio-2.5.1.tgz) = bff6b9a147dc5b0e6bd7f1a76f0b84e4dd9a7dc9
-RMD160 (afio-2.5.1.tgz) = 923981a9e6766781705ceedecd3d86afa5b9abae
-SHA512 (afio-2.5.1.tgz) = afa4e01cc9e7da5bff7c96d2da9a41c296e7b89c50484f58a8b011173a99a144a9e77d3ee8136622e490287b99a7ae76c6eba901a2186b5a3a6bab164a37c864
-Size (afio-2.5.1.tgz) = 191765 bytes
-SHA1 (patch-aa) = e35b47c2f10a6f80d8446e4c22a7a023dae55933
-SHA1 (patch-ab) = a93cf92b80f2b40e30987822b144c24f3a3e5c1e
-SHA1 (patch-ac) = d589b2e37d8a81373f14e4093fe8cc2b30b5489b
+SHA1 (afio-2.5.2.tar.gz) = f811295db1381212fa54f583840982f28b64eac2
+RMD160 (afio-2.5.2.tar.gz) = a0da5fafb6cee3fac054bbbb74eacc8e24cd7c7f
+SHA512 (afio-2.5.2.tar.gz) = e0fb9b2d31bb912d7f30d8dd992cffcc99a84424c7386082abb8da82a1911b852c5a80e8135f0b6266113519f582dba45dc3c87c8f3b822a2daa14a1ae1d9944
+Size (afio-2.5.2.tar.gz) = 194030 bytes
+SHA1 (patch-aa) = e7f79bd551a733d59fd3902bbadaccac28a1de79
+SHA1 (patch-ab) = e1f8e5b489f844c85d9024d713f07e223b106db3
+SHA1 (patch-ac) = 0ba88c3f22b51b0f9cb8de1ca709d6bf566169a3
