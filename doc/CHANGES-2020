@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6395 2020/11/25 13:26:31 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6396 2020/11/25 14:59:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9336,3 +9336,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-cffi to 1.14.4 [adam 2020-11-25]
 	Updated www/py-drf-nested-routers to 0.92.5 [adam 2020-11-25]
 	Updated archivers/zziplib to 0.13.71 [wiz 2020-11-25]
+	Updated archivers/afio to 2.5.2 [ryoon 2020-11-25]
