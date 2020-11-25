@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6391 2020/11/25 01:05:00 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.6392 2020/11/25 10:35:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9330,3 +9330,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/yabasic to 2.87.1 [fcambus 2020-11-24]
 	Updated ham/chirp to 20201121 [gdt 2020-11-25]
 	Updated databases/postgresql-postgis2 to 3.0.3 [gdt 2020-11-25]
+	Updated devel/cmake to 3.19.1 [adam 2020-11-25]
+	Updated devel/cmake-gui to 3.19.1 [adam 2020-11-25]
+	Updated x11/py-qt5 to 5.15.2 [adam 2020-11-25]
