@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/03/18 21:58:38 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/11/25 21:34:57 nia Exp $
 bin/cantata
 ${PLIST.notdarwin}lib/cantata/cantata-replaygain
 ${PLIST.notdarwin}lib/cantata/cantata-tags
@@ -8,6 +8,22 @@ ${PLIST.notdarwin}share/cantata/icons/soundcloud.png
 ${PLIST.notdarwin}share/cantata/icons/stream.png
 share/cantata/scripts/cantata-dynamic
 ${PLIST.notdarwin}share/cantata/scripts/cantata-remote
+share/cantata/translations/cantata_cs.qm
+share/cantata/translations/cantata_da.qm
+share/cantata/translations/cantata_de.qm
+share/cantata/translations/cantata_en_GB.qm
+share/cantata/translations/cantata_es.qm
+share/cantata/translations/cantata_fi.qm
+share/cantata/translations/cantata_fr.qm
+share/cantata/translations/cantata_hu.qm
+share/cantata/translations/cantata_it.qm
+share/cantata/translations/cantata_ja.qm
+share/cantata/translations/cantata_ko.qm
+share/cantata/translations/cantata_nl.qm
+share/cantata/translations/cantata_pl.qm
+share/cantata/translations/cantata_pt_BR.qm
+share/cantata/translations/cantata_ru.qm
+share/cantata/translations/cantata_zh_CN.qm
 ${PLIST.notdarwin}share/icons/hicolor/128x128/apps/cantata.png
 ${PLIST.notdarwin}share/icons/hicolor/16x16/apps/cantata.png
 ${PLIST.notdarwin}share/icons/hicolor/22x22/apps/cantata.png
