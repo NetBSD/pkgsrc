@@ -1,28 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2017/07/22 06:44:50 adam Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/_pycares_cffi.so
 ${PYSITELIB}/pycares/__init__.py
 ${PYSITELIB}/pycares/__init__.pyc
 ${PYSITELIB}/pycares/__init__.pyo
 ${PYSITELIB}/pycares/__main__.py
 ${PYSITELIB}/pycares/__main__.pyc
 ${PYSITELIB}/pycares/__main__.pyo
-${PYSITELIB}/pycares/_cfficore/__init__.py
-${PYSITELIB}/pycares/_cfficore/__init__.pyc
-${PYSITELIB}/pycares/_cfficore/__init__.pyo
-${PYSITELIB}/pycares/_cfficore/errno.py
-${PYSITELIB}/pycares/_cfficore/errno.pyc
-${PYSITELIB}/pycares/_cfficore/errno.pyo
-${PYSITELIB}/pycares/_cfficore/pycares_build.py
-${PYSITELIB}/pycares/_cfficore/pycares_build.pyc
-${PYSITELIB}/pycares/_cfficore/pycares_build.pyo
+${PYSITELIB}/pycares/_cares.so
 ${PYSITELIB}/pycares/_version.py
 ${PYSITELIB}/pycares/_version.pyc
 ${PYSITELIB}/pycares/_version.pyo
 ${PYSITELIB}/pycares/errno.py
 ${PYSITELIB}/pycares/errno.pyc
 ${PYSITELIB}/pycares/errno.pyo
+${PYSITELIB}/pycares/utils.py
+${PYSITELIB}/pycares/utils.pyc
+${PYSITELIB}/pycares/utils.pyo
