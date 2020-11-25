@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2020/11/22 21:26:50 nia Exp $
+# $NetBSD: Makefile,v 1.99 2020/11/25 08:12:35 nia Exp $
 
 DISTNAME=	gnome-keyring-3.36.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_TOOLS+=		msgfmt msgmerge xgettext
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 XDG_EGDIR=	${PREFIX}/share/examples/xdg/autostart
 
