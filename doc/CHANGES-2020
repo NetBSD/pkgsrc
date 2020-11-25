@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6403 2020/11/25 16:56:14 otis Exp $
+$NetBSD: CHANGES-2020,v 1.6404 2020/11/25 20:39:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9344,3 +9344,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/pbosh to 20201125 [micha 2020-11-25]
 	Updated net/powerdns-recursor to 4.4.1 [otis 2020-11-25]
 	Added net/nats-server version 2.1.9 [otis 2020-11-25]
+	Updated games/armagetronad to 0.2.9.0.1 [nia 2020-11-25]
+	Updated games/armagetronad-server to 0.2.9.0.1 [nia 2020-11-25]
