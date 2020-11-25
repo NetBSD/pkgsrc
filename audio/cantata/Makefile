@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/11/05 09:07:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2020/11/25 20:59:37 wiz Exp $
 
-DISTNAME=	cantata-2.4.1
-PKGREVISION=	1
+DISTNAME=	cantata-2.4.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CDrummond/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -36,6 +35,7 @@ PLIST.notdarwin=	yes
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.11
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
