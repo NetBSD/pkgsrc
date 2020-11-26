@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2018/01/07 13:03:55 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2020/11/26 15:51:58 nia Exp $
 
 BUILDLINK_TREE+=	libshout
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.libshout?=		../../audio/libshout
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # LIBSHOUT_BUILDLINK3_MK
 
