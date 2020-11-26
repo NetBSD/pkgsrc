@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2020/01/26 17:31:21 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/11/26 16:35:17 nia Exp $
 
-DISTNAME=	jhead-3.03
+DISTNAME=	jhead-3.04
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.sentex.net/~mwandel/jhead/
+MASTER_SITES=	https://www.sentex.net/~mwandel/jhead/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.sentex.net/~mwandel/jhead/
