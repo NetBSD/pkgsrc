@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6427 2020/11/26 15:31:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6428 2020/11/26 15:32:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9396,3 +9396,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/dos2unix to 7.4.2 [nia 2020-11-26]
 	Updated graphics/drawing to 0.6.3 [nia 2020-11-26]
 	Updated lang/libduktape to 2.6.0 [nia 2020-11-26]
+	Updated lang/duktape to 2.6.0 [nia 2020-11-26]
