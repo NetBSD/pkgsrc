@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/10/02 07:20:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/11/26 15:12:39 nia Exp $
 bin/dos2unix
 bin/mac2unix
 bin/unix2dos
@@ -75,6 +75,7 @@ share/locale/de/LC_MESSAGES/dos2unix.mo
 share/locale/eo/LC_MESSAGES/dos2unix.mo
 share/locale/es/LC_MESSAGES/dos2unix.mo
 share/locale/fr/LC_MESSAGES/dos2unix.mo
+share/locale/fur/LC_MESSAGES/dos2unix.mo
 share/locale/hu/LC_MESSAGES/dos2unix.mo
 share/locale/ja/LC_MESSAGES/dos2unix.mo
 share/locale/nb/LC_MESSAGES/dos2unix.mo
