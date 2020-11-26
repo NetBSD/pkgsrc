@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6422 2020/11/26 14:44:27 taca Exp $
+$NetBSD: CHANGES-2020,v 1.6423 2020/11/26 14:45:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9374,3 +9374,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nghttp2-tools to 1.42.0 [adam 2020-11-26]
 	Updated textproc/py-pyquery to 1.4.3 [adam 2020-11-26]
 	Updated lang/php73 to 7.3.25 [taca 2020-11-26]
+	Updated lang/php74 to 7.4.13 [taca 2020-11-26]
