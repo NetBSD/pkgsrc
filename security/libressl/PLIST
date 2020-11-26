@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/06/21 23:10:50 ryoon Exp $
-lib/pkgconfig/libcrypto.pc
-lib/pkgconfig/libssl.pc
-lib/pkgconfig/libtls.pc
-lib/pkgconfig/openssl.pc
+@comment $NetBSD: PLIST,v 1.10 2020/11/26 15:49:58 schmonz Exp $
 libressl/bin/ocspcheck
 libressl/bin/openssl
 libressl/include/openssl/aes.h
@@ -79,6 +75,10 @@ libressl/include/tls.h
 libressl/lib/libcrypto.la
 libressl/lib/libssl.la
 libressl/lib/libtls.la
+libressl/lib/pkgconfig/libcrypto.pc
+libressl/lib/pkgconfig/libssl.pc
+libressl/lib/pkgconfig/libtls.pc
+libressl/lib/pkgconfig/openssl.pc
 libressl/man/man1/openssl.1
 libressl/man/man3/ACCESS_DESCRIPTION_free.3
 libressl/man/man3/ACCESS_DESCRIPTION_new.3
@@ -2331,7 +2331,7 @@ libressl/man/man3/bn_mul_normal.3
 libressl/man/man3/bn_mul_part_recursive.3
 libressl/man/man3/bn_mul_recursive.3
 libressl/man/man3/bn_mul_words.3
-libressl/man/man3/bn_print.3
+${PLIST.man}libressl/man/man3/bn_print.3
 libressl/man/man3/bn_set_high.3
 libressl/man/man3/bn_set_low.3
 libressl/man/man3/bn_set_max.3
