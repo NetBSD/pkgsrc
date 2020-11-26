@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/10/05 11:27:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/11/26 15:51:58 nia Exp $
 
 DISTNAME=	libshout-2.4.4
 CATEGORIES=	audio
@@ -19,5 +19,6 @@ PKGCONFIG_OVERRIDE=	shout.pc.in
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
