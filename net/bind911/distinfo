@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.22 2020/09/19 13:07:00 taca Exp $
+$NetBSD: distinfo,v 1.23 2020/11/26 11:24:13 otis Exp $
 
-SHA1 (bind-9.11.23.tar.gz) = ad66e80ce0a0e5460cfd9a1c9e308fdc069dc51d
-RMD160 (bind-9.11.23.tar.gz) = c9f597d963792d179d104dba6ddb796b7c5ade71
-SHA512 (bind-9.11.23.tar.gz) = df374dcfdad5c905d5607fd3a5dcfd236f1c9ee448902db520748a738d1ff2f1761603bf62949d38932fcd3ebbf36e693737c40f0a6233af20ee91c3f9a3f462
-Size (bind-9.11.23.tar.gz) = 8257821 bytes
+SHA1 (bind-9.11.25.tar.gz) = cf51456ab314b2c7b2a409c1170b5ddaaf5af2f6
+RMD160 (bind-9.11.25.tar.gz) = ef2b5d4b71838609cdc9421c0f8c430c72ec499a
+SHA512 (bind-9.11.25.tar.gz) = 852b15b6cf2f77ab103018e6fc078d856653c62c2db0ca2ef4f8bee64a60b06ed481d9fcdf29020e5072c69b9982545f032b2ab4c94dac28848150e04b9cecf9
+Size (bind-9.11.25.tar.gz) = 8284943 bytes
 SHA1 (patch-bin_named_Makefile.in) = 3e5b98e3e0bdb701be679d3580d6d2d7609d655b
 SHA1 (patch-bin_named_server.c) = 0294d74eb3039049c4672a3de6eb371407bb382d
 SHA1 (patch-bin_pkcs11_pkcs11-keygen.c) = ca2671a5e3216a08a212cf893e070b01705ef9ee
