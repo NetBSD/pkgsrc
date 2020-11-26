@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2017/07/31 13:11:27 adam Exp $
-bin/miniterm${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2020/11/26 11:05:22 adam Exp $
+bin/pyserial-miniterm-${PYVERSSUFFIX}
+bin/pyserial-ports-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/serial/__init__.py
 ${PYSITELIB}/serial/__init__.pyc
 ${PYSITELIB}/serial/__init__.pyo
+${PYSITELIB}/serial/__main__.py
+${PYSITELIB}/serial/__main__.pyc
+${PYSITELIB}/serial/__main__.pyo
 ${PYSITELIB}/serial/rfc2217.py
 ${PYSITELIB}/serial/rfc2217.pyc
 ${PYSITELIB}/serial/rfc2217.pyo
@@ -64,6 +70,9 @@ ${PYSITELIB}/serial/urlhandler/__init__.pyo
 ${PYSITELIB}/serial/urlhandler/protocol_alt.py
 ${PYSITELIB}/serial/urlhandler/protocol_alt.pyc
 ${PYSITELIB}/serial/urlhandler/protocol_alt.pyo
+${PYSITELIB}/serial/urlhandler/protocol_cp2110.py
+${PYSITELIB}/serial/urlhandler/protocol_cp2110.pyc
+${PYSITELIB}/serial/urlhandler/protocol_cp2110.pyo
 ${PYSITELIB}/serial/urlhandler/protocol_hwgrep.py
 ${PYSITELIB}/serial/urlhandler/protocol_hwgrep.pyc
 ${PYSITELIB}/serial/urlhandler/protocol_hwgrep.pyo
@@ -73,9 +82,6 @@ ${PYSITELIB}/serial/urlhandler/protocol_loop.pyo
 ${PYSITELIB}/serial/urlhandler/protocol_rfc2217.py
 ${PYSITELIB}/serial/urlhandler/protocol_rfc2217.pyc
 ${PYSITELIB}/serial/urlhandler/protocol_rfc2217.pyo
-${PYSITELIB}/serial/urlhandler/protocol_serve-rfc2217.py
-${PYSITELIB}/serial/urlhandler/protocol_serve-rfc2217.pyc
-${PYSITELIB}/serial/urlhandler/protocol_serve-rfc2217.pyo
 ${PYSITELIB}/serial/urlhandler/protocol_socket.py
 ${PYSITELIB}/serial/urlhandler/protocol_socket.pyc
 ${PYSITELIB}/serial/urlhandler/protocol_socket.pyo
