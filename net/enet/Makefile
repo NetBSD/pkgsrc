@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/06/13 18:22:12 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/11/26 15:36:59 nia Exp $
 
-DISTNAME=	enet-1.3.15
+DISTNAME=	enet-1.3.17
 CATEGORIES=	net
 MASTER_SITES=	http://enet.bespin.org/download/
 
@@ -14,5 +14,7 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyname_r=no
 CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyaddr_r=no
+
+PKGCONFIG_OVERRIDE+=	libenet.pc.in
 
 .include "../../mk/bsd.pkg.mk"
