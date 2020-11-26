@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6420 2020/11/26 13:22:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.6421 2020/11/26 13:52:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9370,3 +9370,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-bsddb3 to 6.2.8 [adam 2020-11-26]
 	Updated print/cups-pdf to 3.0.1 [ryoon 2020-11-26]
 	Updated net/bind916 to 9.16.9 [taca 2020-11-26]
+	Updated www/nghttp2 to 1.42.0 [adam 2020-11-26]
+	Updated www/nghttp2-tools to 1.42.0 [adam 2020-11-26]
+	Updated textproc/py-pyquery to 1.4.3 [adam 2020-11-26]
