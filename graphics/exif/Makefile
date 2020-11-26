@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.28 2020/03/20 11:57:47 nia Exp $
+# $NetBSD: Makefile,v 1.29 2020/11/26 15:44:27 nia Exp $
 
-DISTNAME=	exif-0.6.21
+DISTNAME=	exif-0.6.22
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libexif/}
+GITHUB_RELEASE=	exif-${PKGVERSION_NOREV:S/./_/g}-release
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://libexif.sourceforge.net/
+HOMEPAGE=	https://libexif.github.io/
 COMMENT=	Grab Exif information from digital camera images
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt msgmerge xgettext
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
