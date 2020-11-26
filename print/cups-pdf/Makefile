@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/08/31 18:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/11/26 12:31:33 ryoon Exp $
 
 COMMENT=		PDF backend for CUPS
 
-DISTNAME=		cups-pdf-2.6.1
-PKGREVISION=		12
+DISTNAME=		cups-pdf-3.0.1
 CATEGORIES=		print
 
 HOMEPAGE=		https://www.cups-pdf.de/
@@ -27,30 +26,31 @@ SUBST_SED.fix-paths+=		-e 's,\#GhostScript /usr/bin/gs,GhostScript ${PREFIX}/bin
 CONF_FILES+=		${PREFIX}/share/examples/cups/cups-pdf.conf \
 			${PKG_SYSCONFDIR}/cups/cups-pdf.conf
 
-INSTALLATION_DIRS+=	${PREFIX}/bin \
-			${PREFIX}/libexec/cups/backend \
+INSTALLATION_DIRS+=	${PREFIX}/libexec/cups/backend \
 			${PREFIX}/share/cups/model \
 			${PREFIX}/share/examples/cups
 
 do-build:
 	cd ${WRKSRC} && \
-	${CC} ${CFLAGS} -o src/cups-pdf src/cups-pdf.c
+	${CC} ${CFLAGS} ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libcups}/lib \
+		-L${BUILDLINK_PREFIX.libcups}/lib \
+		-lcups \
+		-o src/cups-pdf src/cups-pdf.c
 
 #pre-install:
 #	${SUBST_CMD} ${WRKBUILD}/extra/cups-pdf.conf
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/cups-pdf \
+	# cups-pdf backend must be installed as 0700 permission.
+	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} \
+		-m 700 ${WRKSRC}/src/cups-pdf \
 		${DESTDIR}${PREFIX}/libexec/cups/backend/cups-pdf
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/cups-pdf-dispatch-0.1/cups-pdf-dispatch \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/extra/CUPS-PDF.ppd \
+	${INSTALL_DATA} ${WRKSRC}/extra/CUPS-PDF_noopt.ppd \
+		${DESTDIR}${PREFIX}/share/cups/model/
+	${INSTALL_DATA} ${WRKSRC}/extra/CUPS-PDF_opt.ppd \
 		${DESTDIR}${PREFIX}/share/cups/model/
 	${INSTALL_DATA} ${WRKSRC}/extra/cups-pdf.conf \
 		${DESTDIR}${PREFIX}/share/examples/cups/
-	${INSTALL_DATA} ${WRKSRC}/contrib/cups-pdf-dispatch-0.1/cups-pdf-dispatch.conf \
-		${DESTDIR}${PREFIX}/share/examples/cups/
-	${INSTALL_DATA} ${WRKSRC}/contrib/cups-pdf-dispatch-0.1/examples/cups-pdf-dispatch-ldap.conf \
-		${DESTDIR}${PREFIX}/share/examples/cups/
 
+.include "../../print/libcups/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
