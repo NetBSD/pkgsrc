@@ -1,16 +1,7 @@
-$NetBSD: patch-ad,v 1.10 2009/01/09 13:17:04 obache Exp $
+$NetBSD: patch-ad,v 1.11 2020/11/26 16:08:13 bsiegert Exp $
 
 --- Makefile.in.orig	2008-06-30 22:04:39.000000000 +0000
 +++ Makefile.in
-@@ -21,7 +21,7 @@ exec_prefix     = @exec_prefix@
- datadir         = @datarootdir@
- 
- BINDIR          = @bindir@
--MANDIR          = ${datadir}/man/man1
-+MANDIR          = @mandir@/man1
- ETCDIR          = @sysconfdir@
- GEODB           = @GEODB_LOC@
- CC              = @CC@
 @@ -102,7 +102,7 @@ install: all
  	$(INSTALL_DATA) wcmgr.1 ${DESTDIR}${MANDIR}/wcmgr.1
  	rm -f ${DESTDIR}${MANDIR}/webazolver.1
