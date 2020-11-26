@@ -1,0 +1,16 @@
+$NetBSD: patch-makefile,v 1.3 2020/11/26 16:35:17 nia Exp $
+
+Allow pkgsrc to set these flags.
+
+--- makefile.orig	2019-11-22 14:27:34.000000000 +0000
++++ makefile
+@@ -3,9 +3,6 @@
+ #--------------------------------
+ OBJ=.
+ SRC=.
+-CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+-CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+-LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+ 
+ all: jhead
+ 
