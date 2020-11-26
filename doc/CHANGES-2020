@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6425 2020/11/26 15:13:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6426 2020/11/26 15:26:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9394,3 +9394,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/claws-mail-tnef to 3.17.8 [nia 2020-11-26]
 	Updated mail/claws-mail-vcalendar to 3.17.8 [nia 2020-11-26]
 	Updated converters/dos2unix to 7.4.2 [nia 2020-11-26]
+	Updated graphics/drawing to 0.6.3 [nia 2020-11-26]
