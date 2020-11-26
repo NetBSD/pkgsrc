@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/04/26 13:14:03 maya Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/26 10:40:41 adam Exp $
 
-DISTNAME=	aiosmtpd-1.2
+DISTNAME=	aiosmtpd-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiosmtpd/}
@@ -18,7 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} aiosmtpd aiosmtpd-${PYVERSSUFFIX} || ${TRUE}
+	${MV} aiosmtpd aiosmtpd-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
