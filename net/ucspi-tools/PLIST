@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/26 15:52:58 schmonz Exp $
+bin/httppc
+bin/sockc
+bin/tlsc
+bin/tlss
+man/man1/httppc.1
+man/man1/sockc.1
+man/man1/tlsc.1
+man/man1/tlss.1

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/11/26 15:52:58 schmonz Exp $
+
+SHA1 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 9c090e9105e9211e89b033b11a804999c1de06c1
+RMD160 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 634ff34878c201bb9d8d72dca5ff544c717beb83
+SHA512 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = f9d241dc63b2c8aa3f1b51a8c9f85c9408e6f888e1d02a7504c8654eb8fa2161842319683325c0a0f74c4ca0247584dd293aa07ffbcb1e4b81c02c63058c6dec
+Size (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 21718 bytes
+SHA1 (patch-Makefile) = 229b9bf944ce88432c63e202c7c5f5898dd13a72
+SHA1 (patch-tlsc.c) = 3ae01739e614b2b8008e7bc4d5b01130edec2ff9
