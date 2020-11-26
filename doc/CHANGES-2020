@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6416 2020/11/26 11:21:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6417 2020/11/26 11:24:24 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9365,3 +9365,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated comms/py-serial to 3.5 [adam 2020-11-26]
 	Updated security/py-u2f to 0.1.5 [adam 2020-11-26]
 	Updated www/py-django-contrib-comments to 1.9.2 [adam 2020-11-26]
+	Updated net/bind911 to 9.11.25 [otis 2020-11-26]
