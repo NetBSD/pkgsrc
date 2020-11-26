@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/06 18:42:41 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/11/26 16:28:11 nia Exp $
 bin/halibut
 man/man1/halibut.1
