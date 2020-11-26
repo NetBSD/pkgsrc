@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6434 2020/11/26 16:07:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6435 2020/11/26 16:08:43 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9403,3 +9403,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/ucspi-tools version 1.6 [schmonz 2020-11-26]
 	Updated audio/faudio to 20.11 [nia 2020-11-26]
 	Updated sysutils/fdupes to 2.1.2 [nia 2020-11-26]
+	Updated www/webalizer to 2.23.8 [bsiegert 2020-11-26]
