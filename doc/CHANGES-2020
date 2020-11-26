@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6419 2020/11/26 12:32:29 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6420 2020/11/26 13:22:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9369,3 +9369,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-babel to 2.9.0 [adam 2020-11-26]
 	Updated databases/py-bsddb3 to 6.2.8 [adam 2020-11-26]
 	Updated print/cups-pdf to 3.0.1 [ryoon 2020-11-26]
+	Updated net/bind916 to 9.16.9 [taca 2020-11-26]
