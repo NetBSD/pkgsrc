@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2011/11/01 13:50:04 roy Exp $
-bin/cups-pdf-dispatch
+@comment $NetBSD: PLIST,v 1.2 2020/11/26 12:31:33 ryoon Exp $
 libexec/cups/backend/cups-pdf
-share/cups/model/CUPS-PDF.ppd
-share/examples/cups/cups-pdf-dispatch-ldap.conf
-share/examples/cups/cups-pdf-dispatch.conf
+share/cups/model/CUPS-PDF_noopt.ppd
+share/cups/model/CUPS-PDF_opt.ppd
 share/examples/cups/cups-pdf.conf
