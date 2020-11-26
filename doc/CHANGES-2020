@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6418 2020/11/26 11:45:39 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6419 2020/11/26 12:32:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9368,3 +9368,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/bind911 to 9.11.25 [otis 2020-11-26]
 	Updated devel/py-babel to 2.9.0 [adam 2020-11-26]
 	Updated databases/py-bsddb3 to 6.2.8 [adam 2020-11-26]
+	Updated print/cups-pdf to 3.0.1 [ryoon 2020-11-26]
