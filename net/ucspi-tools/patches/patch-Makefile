@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1 2020/11/26 15:52:58 schmonz Exp $
+
+Make sure libressl headers get found.
+
+--- Makefile.orig	2016-09-21 22:05:29.000000000 +0000
++++ Makefile
+@@ -6,7 +6,8 @@ TARBALL := ${DISTNAME}.tar.gz
+ DEFINES += -D_XOPEN_SOURCE=700
+ DEFINES += -D_BSD_SOURCE
+ CFLAGS_SSL=`pkg-config --cflags libssl`
+-LIBS_TLS ?= -ltls `pkg-config --libs libssl`
++CFLAGS += $(CFLAGS_SSL)
++LIBS_TLS ?= -ltls `pkg-config --libs libssl openssl`
+ LIBS_SSL = `pkg-config --libs libssl openssl`
+ 
+ .PHONY: all test clean install
