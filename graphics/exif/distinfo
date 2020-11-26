@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 21:33:56 agc Exp $
+$NetBSD: distinfo,v 1.10 2020/11/26 15:44:27 nia Exp $
 
-SHA1 (exif-0.6.21.tar.bz2) = 74652e3d04d0faf9ab856949d7463988f0394db8
-RMD160 (exif-0.6.21.tar.bz2) = cede7716029fd17a26323bc9587d27b51e11e803
-SHA512 (exif-0.6.21.tar.bz2) = 73b5b7df08462a6a084a8fb973c39197f5d64ed753a97cb2f94a4acf815fdf0313214c2c8e44a46a24a1f6304fdaa68a579b4a2e246cc095f6e9588e93368cdc
-Size (exif-0.6.21.tar.bz2) = 387531 bytes
+SHA1 (exif-0.6.22.tar.xz) = bf1a62b57d4cf1697ccae67f10ecfdc8912f2e69
+RMD160 (exif-0.6.22.tar.xz) = 191c1b18ea58af8ecb5f0d9d2bdb08401c8bbb55
+SHA512 (exif-0.6.22.tar.xz) = f1e2c56b9e72a606c90d53733c1f2b310f7be16a3929595bbf9d5d10a128ef3f6582f547554fc106f449e94d626a137a0a5e4c99391c9253d677abd5ae7fc333
+Size (exif-0.6.22.tar.xz) = 369152 bytes
