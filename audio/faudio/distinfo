@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/22 09:02:30 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/11/26 15:58:55 nia Exp $
 
-SHA1 (faudio-20.05.tar.gz) = 0b185591bf32ab0da8396850eff7ff0632270a5a
-RMD160 (faudio-20.05.tar.gz) = 59a4dcf969f5e5f36b5765c817101c0a87a06330
-SHA512 (faudio-20.05.tar.gz) = c7b706bb48b503988d767740e0076e98ca3835caf8bb9dba79ff89fd482dc69b3b8baf73c7a094b4bac85b7da3f87c2cb56c65101163b78853b71b6b04ba3e88
-Size (faudio-20.05.tar.gz) = 1130178 bytes
+SHA1 (faudio-20.11.tar.gz) = 410d0dfa247313fc111ed811619f6b1b5a1c121f
+RMD160 (faudio-20.11.tar.gz) = e7612cdb3ef7e3fd482efffccf8b9b9af942c209
+SHA512 (faudio-20.11.tar.gz) = 87c347f65fddbc05788fe1b96ab62ff855616b95ee76f86c77a6188cfd8f35f7e0d194bbd434b3383706c07fc36d41a67761c1f06641d289cbf19a75302bc7a9
+Size (faudio-20.11.tar.gz) = 1133766 bytes
