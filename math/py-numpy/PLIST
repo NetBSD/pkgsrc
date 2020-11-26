@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2020/10/02 07:44:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/11/26 10:50:44 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PLIST.py2x}bin/f2py2
 ${PLIST.py3x}bin/f2py3
@@ -445,6 +445,9 @@ ${PYSITELIB}/numpy/distutils/fcompiler/nag.pyo
 ${PYSITELIB}/numpy/distutils/fcompiler/none.py
 ${PYSITELIB}/numpy/distutils/fcompiler/none.pyc
 ${PYSITELIB}/numpy/distutils/fcompiler/none.pyo
+${PYSITELIB}/numpy/distutils/fcompiler/nv.py
+${PYSITELIB}/numpy/distutils/fcompiler/nv.pyc
+${PYSITELIB}/numpy/distutils/fcompiler/nv.pyo
 ${PYSITELIB}/numpy/distutils/fcompiler/pathf95.py
 ${PYSITELIB}/numpy/distutils/fcompiler/pathf95.pyc
 ${PYSITELIB}/numpy/distutils/fcompiler/pathf95.pyo
