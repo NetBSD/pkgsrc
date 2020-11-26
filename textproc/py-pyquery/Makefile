@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/10/26 22:55:24 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/11/26 13:44:17 adam Exp $
 
-DISTNAME=	pyquery-1.4.1
+DISTNAME=	pyquery-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyquery/}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.1:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
