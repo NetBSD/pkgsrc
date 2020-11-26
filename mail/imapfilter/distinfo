@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.26 2017/02/25 00:24:11 mef Exp $
+$NetBSD: distinfo,v 1.27 2020/11/26 20:17:56 nia Exp $
 
-SHA1 (imapfilter-2.6.10.tar.gz) = e322ad37679107d60dbbbffd292908c92adfd0a6
-RMD160 (imapfilter-2.6.10.tar.gz) = dad0fe43e299ccd7b079b6dadb08d911e48687d5
-SHA512 (imapfilter-2.6.10.tar.gz) = b01f50d22583b5c89e446c70ab4dea711ca5a2c77fad5362799bc137f48083fbf9c6fc403648502c963f0da14ea8edf652c98ed9ffac96db27b8408aec21014a
-Size (imapfilter-2.6.10.tar.gz) = 57916 bytes
-SHA1 (patch-aa) = 277593adb235b189f336804179723febd57da9ad
+SHA1 (imapfilter-2.7.4.tar.gz) = e06a0ba5dce10627aa1e86aacea76b1f1881e92a
+RMD160 (imapfilter-2.7.4.tar.gz) = 340eb44b3efd9e44af561d08c1a5da51deccc78f
+SHA512 (imapfilter-2.7.4.tar.gz) = cfc1d2371d44166d45f77eeef960083ba4da9dc0909c21bfd6f6c6920b32560a68abd928ca3a3d918e5c461a21730fc59976bf9353cfee95764a03d05318401e
+Size (imapfilter-2.7.4.tar.gz) = 59361 bytes
+SHA1 (patch-src_Makefile) = be705d5c9a52152ee41657321535dd60e19622ab
