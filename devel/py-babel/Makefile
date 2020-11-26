@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2020/01/22 21:16:36 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/11/26 11:43:33 adam Exp $
 
-DISTNAME=	Babel-2.8.0
+DISTNAME=	Babel-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Babel/}
