@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/07/06 15:38:02 fcambus Exp $
+$NetBSD: distinfo,v 1.8 2020/11/26 16:07:11 nia Exp $
 
-SHA1 (fdupes-2.1.1.tar.gz) = eb6a91eb21196ecc233f62ffb0386f024a107adc
-RMD160 (fdupes-2.1.1.tar.gz) = e94ebc697b9cdb47b8f2b75c8257ae98f0397e3a
-SHA512 (fdupes-2.1.1.tar.gz) = 41b7920b1cdf9b5c6029d8adaa37cf65c9880d88e466abf1b97e4fbdb7621ad045f1b0499dbc8b28276b2a2cbe623b910607375dafe7fddce50052b4f04598a8
-Size (fdupes-2.1.1.tar.gz) = 138132 bytes
+SHA1 (fdupes-2.1.2.tar.gz) = f28e91729b867bb28d18d05efbefad2c26df0e23
+RMD160 (fdupes-2.1.2.tar.gz) = 55e5839c7baf29c06088a3297f9d205c0a6af02c
+SHA512 (fdupes-2.1.2.tar.gz) = 9c3761e7ce34f2d9d1b5ee49ebc3bf665e3d45e4146231bc77d7416801fbfa70415e80c81c64962897766ee068d1a103609895d783f20a765c351d4cd433323d
+Size (fdupes-2.1.2.tar.gz) = 142266 bytes
