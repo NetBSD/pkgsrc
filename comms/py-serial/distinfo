@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/07/31 13:11:27 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/11/26 11:05:22 adam Exp $
 
-SHA1 (pyserial-3.4.tar.gz) = aad3668e10cfc02c9fa693e714f9c7a886366e21
-RMD160 (pyserial-3.4.tar.gz) = d599dc557b895af0b6858f918317a143b2f07c13
-SHA512 (pyserial-3.4.tar.gz) = d71dffc330704e41caac6054adf192bee2f1c119691faf2ea93fe22e8e3ba000dc4a1434293f6f80d05a5577d85b96791f656e28d5c63fb0ce6a6605467a117f
-Size (pyserial-3.4.tar.gz) = 151657 bytes
+SHA1 (pyserial-3.5.tar.gz) = 8709dd72730f6d097fc2e039bc0e264dc1c9341a
+RMD160 (pyserial-3.5.tar.gz) = 818415874d9770d6079aa23bc90988e75cc91bf1
+SHA512 (pyserial-3.5.tar.gz) = c8df5e50d952d5a6dcf1d9253a6ba953e9763c545a867da66c22c90dfa015aba0194f2a8f29a229d0a5f4dc8bfeeaaab8bcfda4066ed78a18b151bc05e6ae327
+Size (pyserial-3.5.tar.gz) = 159125 bytes
