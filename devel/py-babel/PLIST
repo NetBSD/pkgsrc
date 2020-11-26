@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/01/22 21:16:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/11/26 11:43:33 adam Exp $
 bin/pybabel-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -307,6 +307,19 @@ ${PYSITELIB}/babel/locale-data/fa.dat
 ${PYSITELIB}/babel/locale-data/fa_AF.dat
 ${PYSITELIB}/babel/locale-data/fa_IR.dat
 ${PYSITELIB}/babel/locale-data/ff.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_BF.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_CM.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_GH.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_GM.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_GN.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_GW.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_LR.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_MR.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_NE.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_NG.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_SL.dat
+${PYSITELIB}/babel/locale-data/ff_Adlm_SN.dat
 ${PYSITELIB}/babel/locale-data/ff_Latn.dat
 ${PYSITELIB}/babel/locale-data/ff_Latn_BF.dat
 ${PYSITELIB}/babel/locale-data/ff_Latn_CM.dat
@@ -469,7 +482,8 @@ ${PYSITELIB}/babel/locale-data/ko_KR.dat
 ${PYSITELIB}/babel/locale-data/kok.dat
 ${PYSITELIB}/babel/locale-data/kok_IN.dat
 ${PYSITELIB}/babel/locale-data/ks.dat
-${PYSITELIB}/babel/locale-data/ks_IN.dat
+${PYSITELIB}/babel/locale-data/ks_Arab.dat
+${PYSITELIB}/babel/locale-data/ks_Arab_IN.dat
 ${PYSITELIB}/babel/locale-data/ksb.dat
 ${PYSITELIB}/babel/locale-data/ksb_TZ.dat
 ${PYSITELIB}/babel/locale-data/ksf.dat
@@ -510,6 +524,8 @@ ${PYSITELIB}/babel/locale-data/luy.dat
 ${PYSITELIB}/babel/locale-data/luy_KE.dat
 ${PYSITELIB}/babel/locale-data/lv.dat
 ${PYSITELIB}/babel/locale-data/lv_LV.dat
+${PYSITELIB}/babel/locale-data/mai.dat
+${PYSITELIB}/babel/locale-data/mai_IN.dat
 ${PYSITELIB}/babel/locale-data/mas.dat
 ${PYSITELIB}/babel/locale-data/mas_KE.dat
 ${PYSITELIB}/babel/locale-data/mas_TZ.dat
@@ -531,10 +547,14 @@ ${PYSITELIB}/babel/locale-data/ml.dat
 ${PYSITELIB}/babel/locale-data/ml_IN.dat
 ${PYSITELIB}/babel/locale-data/mn.dat
 ${PYSITELIB}/babel/locale-data/mn_MN.dat
+${PYSITELIB}/babel/locale-data/mni.dat
+${PYSITELIB}/babel/locale-data/mni_Beng.dat
+${PYSITELIB}/babel/locale-data/mni_Beng_IN.dat
 ${PYSITELIB}/babel/locale-data/mr.dat
 ${PYSITELIB}/babel/locale-data/mr_IN.dat
 ${PYSITELIB}/babel/locale-data/ms.dat
 ${PYSITELIB}/babel/locale-data/ms_BN.dat
+${PYSITELIB}/babel/locale-data/ms_ID.dat
 ${PYSITELIB}/babel/locale-data/ms_MY.dat
 ${PYSITELIB}/babel/locale-data/ms_SG.dat
 ${PYSITELIB}/babel/locale-data/mt.dat
@@ -589,6 +609,8 @@ ${PYSITELIB}/babel/locale-data/pa_Arab.dat
 ${PYSITELIB}/babel/locale-data/pa_Arab_PK.dat
 ${PYSITELIB}/babel/locale-data/pa_Guru.dat
 ${PYSITELIB}/babel/locale-data/pa_Guru_IN.dat
+${PYSITELIB}/babel/locale-data/pcm.dat
+${PYSITELIB}/babel/locale-data/pcm_NG.dat
 ${PYSITELIB}/babel/locale-data/pl.dat
 ${PYSITELIB}/babel/locale-data/pl_PL.dat
 ${PYSITELIB}/babel/locale-data/prg.dat
@@ -638,10 +660,16 @@ ${PYSITELIB}/babel/locale-data/sah.dat
 ${PYSITELIB}/babel/locale-data/sah_RU.dat
 ${PYSITELIB}/babel/locale-data/saq.dat
 ${PYSITELIB}/babel/locale-data/saq_KE.dat
+${PYSITELIB}/babel/locale-data/sat.dat
+${PYSITELIB}/babel/locale-data/sat_Olck.dat
+${PYSITELIB}/babel/locale-data/sat_Olck_IN.dat
 ${PYSITELIB}/babel/locale-data/sbp.dat
 ${PYSITELIB}/babel/locale-data/sbp_TZ.dat
 ${PYSITELIB}/babel/locale-data/sd.dat
-${PYSITELIB}/babel/locale-data/sd_PK.dat
+${PYSITELIB}/babel/locale-data/sd_Arab.dat
+${PYSITELIB}/babel/locale-data/sd_Arab_PK.dat
+${PYSITELIB}/babel/locale-data/sd_Deva.dat
+${PYSITELIB}/babel/locale-data/sd_Deva_IN.dat
 ${PYSITELIB}/babel/locale-data/se.dat
 ${PYSITELIB}/babel/locale-data/se_FI.dat
 ${PYSITELIB}/babel/locale-data/se_NO.dat
@@ -687,6 +715,9 @@ ${PYSITELIB}/babel/locale-data/sr_Latn_BA.dat
 ${PYSITELIB}/babel/locale-data/sr_Latn_ME.dat
 ${PYSITELIB}/babel/locale-data/sr_Latn_RS.dat
 ${PYSITELIB}/babel/locale-data/sr_Latn_XK.dat
+${PYSITELIB}/babel/locale-data/su.dat
+${PYSITELIB}/babel/locale-data/su_Latn.dat
+${PYSITELIB}/babel/locale-data/su_Latn_ID.dat
 ${PYSITELIB}/babel/locale-data/sv.dat
 ${PYSITELIB}/babel/locale-data/sv_AX.dat
 ${PYSITELIB}/babel/locale-data/sv_FI.dat
