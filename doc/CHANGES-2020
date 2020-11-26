@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6413 2020/11/26 09:15:56 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6414 2020/11/26 10:54:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9355,3 +9355,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/diffstat to 1.63 [nia 2020-11-25]
 	Updated multimedia/vlc to 3.0.11.1 [nia 2020-11-25]
 	Updated net/youtube-dl to 20201126 [leot 2020-11-26]
+	Updated textproc/fmtlib to 7.1.3 [adam 2020-11-26]
+	Updated net/qbittorrent to 4.3.1 [adam 2020-11-26]
+	Updated mail/py-aiosmtpd to 1.2.2 [adam 2020-11-26]
+	Updated sysutils/py-watchdog to 0.10.4 [adam 2020-11-26]
+	Updated math/py-numpy to 1.19.4 [adam 2020-11-26]
+	Updated www/py-httpcore to 0.12.2 [adam 2020-11-26]
