@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/18 14:06:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/11/26 11:24:13 otis Exp $
 bin/arpaname
 bin/bind9-config
 bin/delv
@@ -131,6 +131,7 @@ include/isc/bind9.h
 include/isc/boolean.h
 include/isc/buffer.h
 include/isc/bufferlist.h
+include/isc/cmocka.h
 include/isc/commandline.h
 include/isc/condition.h
 include/isc/counter.h
