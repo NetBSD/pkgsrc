@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/11/05 09:08:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2020/11/26 11:24:13 otis Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -15,7 +14,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.11.23
+BIND_VERSION=	9.11.25
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,6 +32,7 @@ CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=		--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=		--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=		--with-python=no
+CONFIGURE_ARGS+=		--with-lmdb=no
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-vax)
@@ -76,5 +76,6 @@ post-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/doc/arm/*.html ${DESTDIR}${PREFIX}/${DOCDIR}/arm
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
