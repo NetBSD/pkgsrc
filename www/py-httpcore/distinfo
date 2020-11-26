@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/10/13 11:12:41 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/11/26 10:53:59 adam Exp $
 
-SHA1 (httpcore-0.12.0.tar.gz) = f8d2dea7c8b8ee15e62d5611b7910f86d5fbd3be
-RMD160 (httpcore-0.12.0.tar.gz) = 2243bd83a143ce17ed77ea02cd7df0f8ee93d0f5
-SHA512 (httpcore-0.12.0.tar.gz) = 8d986e26d1c04d84a87d8fcf367c85ad5b89f15b78393d0970567821fafb04ebca042047b87f7a36dc20c7175c506b7ab0699869802391b3b3d88164972c7d51
-Size (httpcore-0.12.0.tar.gz) = 40748 bytes
+SHA1 (httpcore-0.12.2.tar.gz) = 1717cd0057be8b1c780d5eda49320e25f0cb1105
+RMD160 (httpcore-0.12.2.tar.gz) = 108fe8d58175a52fc9767e8b7034dff33db79389
+SHA512 (httpcore-0.12.2.tar.gz) = 1096d2c219e7540956a35eed54d0d6d9884c67f6b169f536164bc7a90aaedd3a756c0b4261c68b38a126b2f9b32fcecb5816f5eca70cd10f14cea0165a0251f8
+Size (httpcore-0.12.2.tar.gz) = 42392 bytes
