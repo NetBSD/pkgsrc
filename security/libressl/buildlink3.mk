@@ -1,17 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:29 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/11/26 15:49:58 schmonz Exp $
 
 BUILDLINK_TREE+=	libressl
 
 .if !defined(LIBRESSL_BUILDLINK3_MK)
 LIBRESSL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libressl+=	libressl>=2.2.6
+BUILDLINK_API_DEPENDS.libressl+=	libressl>=2.7.4nb1
 BUILDLINK_PKGSRCDIR.libressl?=		../../security/libressl
 
-BUILDLINK_PASSTHRU_DIRS+=	${LOCALBASE}/libressl/include
-BUILDLINK_PASSTHRU_DIRS+=	${LOCALBASE}/libressl/lib
-CPPFLAGS+=			-I${PREFIX}/libressl/include
-LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/libressl/lib -L${PREFIX}/libressl/lib
+BUILDLINK_INCDIRS.libressl+=	libressl/include
+BUILDLINK_LIBDIRS.libressl+=	libressl/lib
+# XXX this overwrites all the other typical values
+_PKG_CONFIG_LIBDIR=		${PREFIX}/libressl/lib/pkgconfig
 .endif	# LIBRESSL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libressl
