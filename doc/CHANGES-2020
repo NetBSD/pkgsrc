@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6430 2020/11/26 15:45:01 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6431 2020/11/26 15:50:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9399,3 +9399,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/duktape to 2.6.0 [nia 2020-11-26]
 	Updated net/enet to 1.3.17 [nia 2020-11-26]
 	Updated graphics/exif to 0.6.22 [nia 2020-11-26]
+	Updated security/libressl to 2.7.4nb1 [schmonz 2020-11-26]
