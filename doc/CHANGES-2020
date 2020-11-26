@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6435 2020/11/26 16:08:43 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6436 2020/11/26 16:28:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9404,3 +9404,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/faudio to 20.11 [nia 2020-11-26]
 	Updated sysutils/fdupes to 2.1.2 [nia 2020-11-26]
 	Updated www/webalizer to 2.23.8 [bsiegert 2020-11-26]
+	Updated textproc/halibut to 1.2 [nia 2020-11-26]
