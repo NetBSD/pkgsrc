@@ -1,0 +1,9 @@
+Reviewing changes involves reading diffs. Sometimes, a line-oriented
+presentation of changes is not precise enough, especially when changes
+involve long lines or very similar consecutive lines.
+
+This program processes such diffs, and output them (in the console)
+with additional diff information on top of the unified diff format,
+using text attributes.
+
+It works hunk by hunk, recomputing the diff on a word-by-word basis.
