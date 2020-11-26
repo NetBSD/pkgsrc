@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/06/17 08:47:30 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/26 15:26:19 nia Exp $
 
-DISTNAME=	drawing-0.4.13
+DISTNAME=	drawing-0.6.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maoschanz/}
 
@@ -15,8 +15,12 @@ DEPENDS+=	gtk3+-[0-9]*:../../x11/gtk3
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
+.include "../../mk/bsd.prefs.mk"
+
+# XXX: msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 # Uses python3 command
 PYTHON_VERSIONS_INCOMPATIBLE=	27
