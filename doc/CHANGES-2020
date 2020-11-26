@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6431 2020/11/26 15:50:07 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6432 2020/11/26 15:53:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9400,3 +9400,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/enet to 1.3.17 [nia 2020-11-26]
 	Updated graphics/exif to 0.6.22 [nia 2020-11-26]
 	Updated security/libressl to 2.7.4nb1 [schmonz 2020-11-26]
+	Added net/ucspi-tools version 1.6 [schmonz 2020-11-26]
