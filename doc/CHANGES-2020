@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6414 2020/11/26 10:54:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6415 2020/11/26 11:05:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9361,3 +9361,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-watchdog to 0.10.4 [adam 2020-11-26]
 	Updated math/py-numpy to 1.19.4 [adam 2020-11-26]
 	Updated www/py-httpcore to 0.12.2 [adam 2020-11-26]
+	Updated math/py-uncertainties to 3.1.5 [adam 2020-11-26]
+	Updated comms/py-serial to 3.5 [adam 2020-11-26]
