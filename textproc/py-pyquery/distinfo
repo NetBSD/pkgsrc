@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/10/26 22:55:24 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/11/26 13:44:17 adam Exp $
 
-SHA1 (pyquery-1.4.1.tar.gz) = bea992a3235d836ae96841a7cff534dd29edfde8
-RMD160 (pyquery-1.4.1.tar.gz) = 7b444a0759acc8085bbf490dc45761c84b09fa9b
-SHA512 (pyquery-1.4.1.tar.gz) = e2bfbbf51f99a408e9696a2b9c15f8875813847a10b5bd93c4c7a6886ac1b3ae6c7883ec4fb64e9bccab2127617843961e181044fe927f3c80c8ac363ed86141
-Size (pyquery-1.4.1.tar.gz) = 47983 bytes
+SHA1 (pyquery-1.4.3.tar.gz) = f7472d2f02427860b3a538fe5cf91dba88a82d31
+RMD160 (pyquery-1.4.3.tar.gz) = 720d4ade091c59b76666ffe2c05f07c422d1e271
+SHA512 (pyquery-1.4.3.tar.gz) = cb61326e38f78763ca15de09e3a56dad776b3d4831b54eabf295db0f9af8bf04599642c73f5db3e3172b86d7b66ba2ef626c8cba2dfb458af6ac432d15ea7cba
+Size (pyquery-1.4.3.tar.gz) = 47448 bytes
