@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1181 2020/11/25 11:01:23 pin Exp $
+# $NetBSD: Makefile,v 1.1182 2020/11/26 21:45:14 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -184,6 +184,7 @@ SUBDIR+=	dict-mueller7
 SUBDIR+=	dict-server
 SUBDIR+=	dictem
 SUBDIR+=	diction
+SUBDIR+=	diffr
 SUBDIR+=	diffsplit
 SUBDIR+=	diffstat
 SUBDIR+=	dikt
