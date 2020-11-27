@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6450 2020/11/27 17:57:39 is Exp $
+$NetBSD: CHANGES-2020,v 1.6451 2020/11/27 19:44:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9419,3 +9419,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/php-baikal to 0.7.2 [wiz 2020-11-27]
 	Updated devel/py-hypothesis to 5.41.3 [wiz 2020-11-27]
 	Updated sysutils/mtools to 4.0.25 [is 2020-11-27]
+	Updated net/py-responses to 0.12.1 [adam 2020-11-27]
+	Updated net/py-tldextract to 3.1.0 [adam 2020-11-27]
+	Updated net/py-lexicon to 3.5.2 [adam 2020-11-27]
+	Updated www/py-django-admin-rangefilter to 0.6.3 [adam 2020-11-27]
