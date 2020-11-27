@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2020/11/27 17:55:28 is Exp $
+# $NetBSD: options.mk,v 1.4 2020/11/27 18:34:04 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mtools
 PKG_SUPPORTED_OPTIONS=		floppyd
-PKG_DEFAULT_OPTIONS+=		-floppyd 
 
 .include "../../mk/bsd.options.mk"
 
