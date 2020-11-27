@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.4 2020/11/20 17:15:59 leot Exp $
+# $NetBSD: go-modules.mk,v 1.5 2020/11/27 09:11:39 bsiegert Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -20,8 +20,8 @@ GO_MODULE_FILES+=	cloud.google.com/go/storage/@v/v1.0.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/storage/@v/v1.0.0.zip
 GO_MODULE_FILES+=	dmitri.shuralyov.com/gpu/mtl/@v/v0.0.0-20190408044501-666a987793e9.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/gpu/mtl/@v/v0.0.0-20190408044501-666a987793e9.zip
-GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.2.2.mod
-GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.2.2.zip
+GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.1.1.mod
+GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.1.1.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/xgb/@v/v0.0.0-20160522181843-27f122750802.mod
