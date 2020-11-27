@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6445 2020/11/27 11:37:11 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6446 2020/11/27 13:11:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9414,3 +9414,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gh to 1.3.0 [bsiegert 2020-11-27]
 	Added security/libretls version 3.3.0 [schmonz 2020-11-27]
 	Updated net/ucspi-tools to 1.6nb1 [schmonz 2020-11-27]
+	Added emulators/nono version 0.1.4 [ryoon 2020-11-27]
