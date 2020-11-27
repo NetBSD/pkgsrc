@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6441 2020/11/27 09:04:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6442 2020/11/27 09:12:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9411,3 +9411,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/diffr version 0.1.4 [pin 2020-11-26]
 	Updated textproc/py-lxml to 4.6.2 [adam 2020-11-27]
 	Updated databases/py-bsddb3 to 6.2.9 [adam 2020-11-27]
+	Updated net/gh to 1.3.0 [bsiegert 2020-11-27]
