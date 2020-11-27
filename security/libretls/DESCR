@@ -1,0 +1,3 @@
+libtls is a new TLS library, designed to make it easier to write
+foolproof applications. LibreTLS is a port of libtls from LibreSSL
+to OpenSSL.
