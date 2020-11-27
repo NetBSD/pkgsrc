@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6440 2020/11/26 21:45:56 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6441 2020/11/27 09:04:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9409,3 +9409,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/mk-configure to 0.35.0 [cheusov 2020-11-26]
 	Updated mail/imapfilter to 2.7.4 [nia 2020-11-26]
 	Added textproc/diffr version 0.1.4 [pin 2020-11-26]
+	Updated textproc/py-lxml to 4.6.2 [adam 2020-11-27]
+	Updated databases/py-bsddb3 to 6.2.9 [adam 2020-11-27]
