@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/18 12:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/27 10:41:36 jperkin Exp $
 
 DISTNAME=	pytest-benchmark-3.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -19,14 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-elasticsearch-[0-9]*:../../databases/py-elasticsearch
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 
 PYTHON_VERSIONED_DEPENDENCIES+=	test
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${_PYTHON_VERSION} == 27
-# Optional dependencies, not yet packaged:
-#        ':python_version < "3.4"': ['statistics' ]
-DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-pygal
 
 USE_LANGUAGES=	# none
 
