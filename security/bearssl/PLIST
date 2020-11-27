@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/11/16 07:43:25 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/11/27 19:52:11 schmonz Exp $
 bin/brssl
 include/bearssl.h
 include/bearssl_aead.h
@@ -14,4 +14,4 @@ include/bearssl_rsa.h
 include/bearssl_ssl.h
 include/bearssl_x509.h
 lib/libbearssl.a
-lib/libbearssl.so
+lib/libbearssl.${SOEXT}

@@ -1,18 +1,23 @@
-# $NetBSD: Makefile,v 1.8 2020/11/16 07:43:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2020/11/27 19:52:11 schmonz Exp $
 
-DISTNAME=	bearssl-0.6
-PKGREVISION=	1
-CATEGORIES=	security
-MASTER_SITES=	${HOMEPAGE}
+DISTNAME=		bearssl-0.6
+PKGREVISION=		1
+CATEGORIES=		security
+MASTER_SITES=		${HOMEPAGE}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bearssl.org/
-COMMENT=	Implementation of the SSL/TLS protocol (RFC 5246)
-LICENSE=	mit
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://bearssl.org/
+COMMENT=		Implementation of the SSL/TLS protocol (RFC 5246)
+LICENSE=		mit
 
 INSTALLATION_DIRS=	bin include lib
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
+LDFLAGS.SunOS+=		-lsocket -lnsl
+
+OPSYSVARS+=		SOEXT
+SOEXT.Darwin=		dylib
+SOEXT.*=		so
+PLIST_SUBST+=		SOEXT=${SOEXT}
 
 pre-build:
 	${MKDIR} ${WRKSRC}/build/obj
@@ -23,7 +28,8 @@ do-install:
 	cd ${WRKSRC}/inc && \
 		${INSTALL_DATA} *.h ${DESTDIR}${PREFIX}/include
 	cd ${WRKSRC}/build && \
-		${INSTALL_DATA} libbearssl.* ${DESTDIR}${PREFIX}/lib
+		${INSTALL_DATA} libbearssl.a ${DESTDIR}${PREFIX}/lib && \
+		${INSTALL_LIB} libbearssl.${SOEXT} ${DESTDIR}${PREFIX}/lib
 
 do-test:
 	cd ${WRKSRC} && \
