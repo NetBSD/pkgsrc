@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/11/26 15:52:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/11/27 10:25:40 schmonz Exp $
 
 DISTNAME=		ucspi-tools-1.6
+PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=younix/}
 GITHUB_PROJECT=		ucspi
@@ -17,5 +18,5 @@ WRKSRC=			${WRKDIR}/ucspi-${GITHUB_TAG}
 
 INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}
 
-.include "../../security/libressl/buildlink3.mk"
+.include "../../security/libretls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
