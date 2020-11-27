@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6448 2020/11/27 16:05:29 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6449 2020/11/27 16:08:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9417,3 +9417,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added emulators/nono version 0.1.4 [ryoon 2020-11-27]
 	Updated net/ucspi-tools to 1.6nb2 [schmonz 2020-11-27]
 	Updated net/php-baikal to 0.7.2 [wiz 2020-11-27]
+	Updated devel/py-hypothesis to 5.41.3 [wiz 2020-11-27]
