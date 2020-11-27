@@ -13,3 +13,6 @@ usable by SSL/TLS implementations.
 
 Use the 'mozilla-rootcerts install' script or mozilla-rootcerts-openssl
 package if you want to use these certificates.
+
+This package includes instructions for configuring gnupg2 to use the
+certificates.
