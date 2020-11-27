@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2020/11/27 13:09:37 ryoon Exp $
+
+SHA1 (nono-0.1.4.tar.gz) = 40409c1e156bb6306068c71b4288b40e44846f69
+RMD160 (nono-0.1.4.tar.gz) = 663fed529c5bf2541a40a4f471650b20ef176182
+SHA512 (nono-0.1.4.tar.gz) = 1d8e6b0d0ce36eea1bf241a5badc8d95a3f15e38a6283f68dbcc5a214b68f1c86e1216b14477cc67826fa0cb1c6b7bd14be16cb23d9715b7c4301ebe9a200912
+Size (nono-0.1.4.tar.gz) = 2368271 bytes
+SHA1 (patch-cli_Makefile) = a9597bc1c8c5376ea78c35415abae4bab7c086f3
+SHA1 (patch-po_Makefile) = 76a7d30858d1afd27fcfed512f00bfb4b9dd0f13
+SHA1 (patch-wx_Makefile.in) = 982a4cff11d453bdb7924d05c81173b7c43ad010
