@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/11/23 06:11:17 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/27 20:32:51 riastradh Exp $
 
 GCLOUDVER=	319.0.0
 DISTNAME=	google-cloud-sdk-${GCLOUDVER}-linux-x86
 PKGNAME=	${PYPKGPREFIX}-google-cloud-sdk-${GCLOUDVER}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/
 
@@ -16,6 +17,8 @@ WRKSRC=		${WRKDIR}/${GCSWRKSUBDIR}
 NO_BUILD=	yes
 
 USE_TOOLS+=	pax
+
+DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 
 REPLACE_PYTHON+=	bin/*
 REPLACE_PYTHON+=	bin/bootstrapping/*
