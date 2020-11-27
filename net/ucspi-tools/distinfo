@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.1 2020/11/26 15:52:58 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2020/11/27 11:34:16 schmonz Exp $
 
 SHA1 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 9c090e9105e9211e89b033b11a804999c1de06c1
 RMD160 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 634ff34878c201bb9d8d72dca5ff544c717beb83
 SHA512 (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = f9d241dc63b2c8aa3f1b51a8c9f85c9408e6f888e1d02a7504c8654eb8fa2161842319683325c0a0f74c4ca0247584dd293aa07ffbcb1e4b81c02c63058c6dec
 Size (ucspi-tools-1.6-1aa21e6bd85ec45a6bce9b570548b6f4a5b1a9ed.tar.gz) = 21718 bytes
-SHA1 (patch-Makefile) = 229b9bf944ce88432c63e202c7c5f5898dd13a72
+SHA1 (patch-Makefile) = fafc8e55a6f4a7fbe52ee027564b557c256777ec
+SHA1 (patch-fdprintf.c) = 66a4912bd6224ada3f63c0f10297bcecec74d950
+SHA1 (patch-fdprintf.h) = 68d57e66c0ce75bd0a9cdec9c5135474ff7b4cfe
+SHA1 (patch-httpc.c) = 72bb2f8e3f287bacd280e890f01c8c73fca7b24e
+SHA1 (patch-httppc.c) = 4c2c36a8b7ad4755aba2be2aaea0c9e4c045aa45
 SHA1 (patch-tlsc.c) = 3ae01739e614b2b8008e7bc4d5b01130edec2ff9
