@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/19 09:35:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/27 18:45:53 schmonz Exp $
 
 DISTNAME=	ucspi-proxy-1.1
 CATEGORIES=	net
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 DJB_MAKE_TARGETS=	no
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../devel/bglibs/buildlink3.mk"
 .include "../../mk/djbware.mk"
