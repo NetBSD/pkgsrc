@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2020/09/30 07:51:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/11/27 19:40:36 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -24,6 +24,9 @@ ${PYSITELIB}/lexicon/conftest.pyo
 ${PYSITELIB}/lexicon/discovery.py
 ${PYSITELIB}/lexicon/discovery.pyc
 ${PYSITELIB}/lexicon/discovery.pyo
+${PYSITELIB}/lexicon/exceptions.py
+${PYSITELIB}/lexicon/exceptions.pyc
+${PYSITELIB}/lexicon/exceptions.pyo
 ${PYSITELIB}/lexicon/parser.py
 ${PYSITELIB}/lexicon/parser.pyc
 ${PYSITELIB}/lexicon/parser.pyo
@@ -141,6 +144,9 @@ ${PYSITELIB}/lexicon/providers/internetbs.pyo
 ${PYSITELIB}/lexicon/providers/inwx.py
 ${PYSITELIB}/lexicon/providers/inwx.pyc
 ${PYSITELIB}/lexicon/providers/inwx.pyo
+${PYSITELIB}/lexicon/providers/joker.py
+${PYSITELIB}/lexicon/providers/joker.pyc
+${PYSITELIB}/lexicon/providers/joker.pyo
 ${PYSITELIB}/lexicon/providers/linode.py
 ${PYSITELIB}/lexicon/providers/linode.pyc
 ${PYSITELIB}/lexicon/providers/linode.pyo
@@ -351,6 +357,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_internetbs.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_inwx.py
 ${PYSITELIB}/lexicon/tests/providers/test_inwx.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_inwx.pyo
+${PYSITELIB}/lexicon/tests/providers/test_joker.py
+${PYSITELIB}/lexicon/tests/providers/test_joker.pyc
+${PYSITELIB}/lexicon/tests/providers/test_joker.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_linode.py
 ${PYSITELIB}/lexicon/tests/providers/test_linode.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_linode.pyo
