@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.789 2020/11/22 11:58:58 nia Exp $
+# $NetBSD: Makefile,v 1.790 2020/11/27 10:20:00 schmonz Exp $
 #
 
 COMMENT=	Security tools
@@ -195,6 +195,7 @@ SUBDIR+=	libpreludedb-python
 SUBDIR+=	libpreludedb-sqlite3
 SUBDIR+=	libpwquality
 SUBDIR+=	libressl
+SUBDIR+=	libretls
 SUBDIR+=	libsecp256k1
 SUBDIR+=	libsecret
 SUBDIR+=	libsodium
