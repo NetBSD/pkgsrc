@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/11/27 10:25:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/27 11:34:16 schmonz Exp $
 
 DISTNAME=		ucspi-tools-1.6
-PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=younix/}
 GITHUB_PROJECT=		ucspi
@@ -13,6 +12,7 @@ COMMENT=		SOCKS proxy and TLS support for UCSPI
 LICENSE=		isc
 
 USE_TOOLS+=		gmake pkg-config
+MAKE_FILE=		GNUmakefile
 
 WRKSRC=			${WRKDIR}/ucspi-${GITHUB_TAG}
 
