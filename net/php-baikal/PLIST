@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/28 08:56:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/11/27 16:05:19 wiz Exp $
 share/baikal/CHANGELOG.md
 share/baikal/Core/Distrib.php
 share/baikal/Core/Frameworks/Baikal/Controller/Main.php
@@ -15,9 +15,7 @@ share/baikal/Core/Frameworks/Baikal/Model/Calendar/Calendar.php
 share/baikal/Core/Frameworks/Baikal/Model/Calendar/Event.php
 share/baikal/Core/Frameworks/Baikal/Model/Config.php
 share/baikal/Core/Frameworks/Baikal/Model/Config/Database.php
-share/baikal/Core/Frameworks/Baikal/Model/Config/Distrib.php
 share/baikal/Core/Frameworks/Baikal/Model/Config/Standard.php
-share/baikal/Core/Frameworks/Baikal/Model/Config/System.php
 share/baikal/Core/Frameworks/Baikal/Model/Principal.php
 share/baikal/Core/Frameworks/Baikal/Model/User.php
 share/baikal/Core/Frameworks/Baikal/Resources/Images/logo-baikal.png
@@ -37,8 +35,8 @@ share/baikal/Core/Frameworks/BaikalAdmin/Controller/Logout.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/Navigation/Topbar.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/Navigation/Topbar/Anonymous.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/Navigation/Topbar/Install.php
+share/baikal/Core/Frameworks/BaikalAdmin/Controller/Settings/Database.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/Settings/Standard.php
-share/baikal/Core/Frameworks/BaikalAdmin/Controller/Settings/System.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/User/AddressBooks.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/User/Calendars.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/Users.php
@@ -64,16 +62,16 @@ share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/Navigation/Topbar/I
 share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/Page/baikal-text-20.png
 share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/Page/index.html
 share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/Page/style.css
+share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/Settings/Database.html
 share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/Settings/Standard.html
-share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/Settings/System.html
 share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/User/AddressBooks.html
 share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/User/Calendars.html
 share/baikal/Core/Frameworks/BaikalAdmin/Resources/Templates/Users.html
 share/baikal/Core/Frameworks/BaikalAdmin/Resources/html5.js
 share/baikal/Core/Frameworks/BaikalAdmin/Route/Dashboard.php
 share/baikal/Core/Frameworks/BaikalAdmin/Route/Logout.php
+share/baikal/Core/Frameworks/BaikalAdmin/Route/Settings/Database.php
 share/baikal/Core/Frameworks/BaikalAdmin/Route/Settings/Standard.php
-share/baikal/Core/Frameworks/BaikalAdmin/Route/Settings/System.php
 share/baikal/Core/Frameworks/BaikalAdmin/Route/User/AddressBooks.php
 share/baikal/Core/Frameworks/BaikalAdmin/Route/User/Calendars.php
 share/baikal/Core/Frameworks/BaikalAdmin/Route/Users.php
@@ -85,8 +83,8 @@ share/baikal/Core/Frameworks/BaikalAdmin/View/Login.php
 share/baikal/Core/Frameworks/BaikalAdmin/View/Navigation/Topbar.php
 share/baikal/Core/Frameworks/BaikalAdmin/View/Navigation/Topbar/Anonymous.php
 share/baikal/Core/Frameworks/BaikalAdmin/View/Navigation/Topbar/Install.php
+share/baikal/Core/Frameworks/BaikalAdmin/View/Settings/Database.php
 share/baikal/Core/Frameworks/BaikalAdmin/View/Settings/Standard.php
-share/baikal/Core/Frameworks/BaikalAdmin/View/Settings/System.php
 share/baikal/Core/Frameworks/BaikalAdmin/View/User/AddressBooks.php
 share/baikal/Core/Frameworks/BaikalAdmin/View/User/Calendars.php
 share/baikal/Core/Frameworks/BaikalAdmin/View/Users.php
@@ -177,8 +175,8 @@ share/baikal/Core/Resources/Web/BaikalAdmin/Templates/Navigation/Topbar/Install.
 share/baikal/Core/Resources/Web/BaikalAdmin/Templates/Page/baikal-text-20.png
 share/baikal/Core/Resources/Web/BaikalAdmin/Templates/Page/index.html
 share/baikal/Core/Resources/Web/BaikalAdmin/Templates/Page/style.css
+share/baikal/Core/Resources/Web/BaikalAdmin/Templates/Settings/Database.html
 share/baikal/Core/Resources/Web/BaikalAdmin/Templates/Settings/Standard.html
-share/baikal/Core/Resources/Web/BaikalAdmin/Templates/Settings/System.html
 share/baikal/Core/Resources/Web/BaikalAdmin/Templates/User/AddressBooks.html
 share/baikal/Core/Resources/Web/BaikalAdmin/Templates/User/Calendars.html
 share/baikal/Core/Resources/Web/BaikalAdmin/Templates/Users.html
@@ -227,8 +225,8 @@ share/baikal/html/res/core/BaikalAdmin/Templates/Navigation/Topbar/Install.html
 share/baikal/html/res/core/BaikalAdmin/Templates/Page/baikal-text-20.png
 share/baikal/html/res/core/BaikalAdmin/Templates/Page/index.html
 share/baikal/html/res/core/BaikalAdmin/Templates/Page/style.css
+share/baikal/html/res/core/BaikalAdmin/Templates/Settings/Database.html
 share/baikal/html/res/core/BaikalAdmin/Templates/Settings/Standard.html
-share/baikal/html/res/core/BaikalAdmin/Templates/Settings/System.html
 share/baikal/html/res/core/BaikalAdmin/Templates/User/AddressBooks.html
 share/baikal/html/res/core/BaikalAdmin/Templates/User/Calendars.html
 share/baikal/html/res/core/BaikalAdmin/Templates/Users.html
@@ -250,6 +248,7 @@ share/baikal/vendor/bin/naturalselection
 share/baikal/vendor/bin/sabredav
 share/baikal/vendor/bin/vobject
 share/baikal/vendor/composer/ClassLoader.php
+share/baikal/vendor/composer/InstalledVersions.php
 share/baikal/vendor/composer/LICENSE
 share/baikal/vendor/composer/autoload_classmap.php
 share/baikal/vendor/composer/autoload_files.php
@@ -258,6 +257,8 @@ share/baikal/vendor/composer/autoload_psr4.php
 share/baikal/vendor/composer/autoload_real.php
 share/baikal/vendor/composer/autoload_static.php
 share/baikal/vendor/composer/installed.json
+share/baikal/vendor/composer/installed.php
+share/baikal/vendor/composer/platform_check.php
 share/baikal/vendor/psr/log/LICENSE
 share/baikal/vendor/psr/log/Psr/Log/AbstractLogger.php
 share/baikal/vendor/psr/log/Psr/Log/InvalidArgumentException.php
@@ -865,7 +866,6 @@ share/baikal/vendor/sabre/http/tests/HTTP/ResponseTest.php
 share/baikal/vendor/sabre/http/tests/HTTP/SapiTest.php
 share/baikal/vendor/sabre/http/tests/HTTP/URLUtilTest.php
 share/baikal/vendor/sabre/http/tests/bootstrap.php
-share/baikal/vendor/sabre/http/tests/phpcs/ruleset.xml
 share/baikal/vendor/sabre/http/tests/phpunit.xml
 share/baikal/vendor/sabre/http/tests/www/bar.php
 share/baikal/vendor/sabre/http/tests/www/foo
