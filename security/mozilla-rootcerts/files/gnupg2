@@ -1,0 +1,11 @@
+$NetBSD: gnupg2,v 1.1 2020/11/27 16:18:35 gdt Exp $
+
+To configure the mozilla-rootcerts certificates as trusted for users
+of gnupg2, do the following (assuming default PKG_SYSCONFBASE and a
+Bourne shell):
+
+  # mkdir -p /usr/pkg/etc/gnupg
+  # cd /usr/pkg/etc/gnupg
+  # for c in /etc/openssl/certs/*.pem; do
+  > openssl x509 -in $c -noout -fingerprint|sed 's|^.*=\(.*\)|\1 S|'
+  > done > trustlist.txt
