@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6442 2020/11/27 09:12:23 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6443 2020/11/27 10:20:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9412,3 +9412,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-lxml to 4.6.2 [adam 2020-11-27]
 	Updated databases/py-bsddb3 to 6.2.9 [adam 2020-11-27]
 	Updated net/gh to 1.3.0 [bsiegert 2020-11-27]
+	Added security/libretls version 3.3.0 [schmonz 2020-11-27]
