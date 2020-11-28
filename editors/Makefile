@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2020/10/28 12:00:36 pin Exp $
+# $NetBSD: Makefile,v 1.214 2020/11/28 15:56:45 maya Exp $
 #
 
 COMMENT=	Editors
@@ -122,6 +122,7 @@ SUBDIR+=	pluma
 SUBDIR+=	poedit
 SUBDIR+=	py-editor
 SUBDIR+=	py-jedi
+SUBDIR+=	qtcreator
 SUBDIR+=	retext
 SUBDIR+=	rox-edit
 SUBDIR+=	sam
