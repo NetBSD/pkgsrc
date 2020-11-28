@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/11/01 16:48:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/28 15:22:19 wiz Exp $
 
-DISTNAME=		dMagnetic_0.27
+DISTNAME=		dMagnetic_0.28
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		games
 MASTER_SITES=		https://www.dettus.net/dMagnetic/
