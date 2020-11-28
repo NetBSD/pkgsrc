@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2020/11/27 17:55:28 is Exp $
+# $NetBSD: Makefile,v 1.60 2020/11/28 18:58:50 is Exp $
 
-DISTNAME=	mtools-4.0.25
+DISTNAME=	mtools-4.0.26
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=mtools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,11 +11,11 @@ COMMENT=	FAT (MS-DOS, Atari) disk access tools
 LICENSE=	gnu-gpl-v3 # or later
 
 SUBST_CLASSES+=		strtoi
-SUBST_STAGE.strtoi=	pre-build
-SUBST_MESSAGE.strtoi=	renaming strtoi.
-SUBST_FILES.strtoi=	config.c floppyd_io.c mformat.c mpartition.c \
+SUBST_STAGE.strtoi=	post-configure
+SUBST_FILES.strtoi=	config.h config.c floppyd_io.c mformat.c mpartition.c \
 			mtools.h strtonum.c # *.[hc]
-SUBST_SED.strtoi=	-e s/strtoi/mtools_strtoi/
+SUBST_SED.strtoi+=	-e 's/\#define HAVE_STRTOI .*/\#undef HAVE_STRTOI/'
+SUBST_SED.strtoi+=	-e s/strtoi/mtools_strtoi/
 
 
 GNU_CONFIGURE=		yes
