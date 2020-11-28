@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6460 2020/11/28 20:56:14 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6461 2020/11/28 21:17:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9432,3 +9432,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/alacritty to 0.6.0 [tnn 2020-11-28]
 	Updated geography/gama to 2.12 [gdt 2020-11-28]
 	Added textproc/stava version 0.6.2 [pin 2020-11-28]
+	Updated audio/spotify-qt to 3.2 [pin 2020-11-28]
