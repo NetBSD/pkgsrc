@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2020/10/29 23:26:24 gdt Exp $
+$NetBSD: distinfo,v 1.18 2020/11/28 19:35:45 gdt Exp $
 
-SHA1 (gama-2.11.tar.gz) = 50047142d525ed131b64780284fe5c5f5be68e90
-RMD160 (gama-2.11.tar.gz) = 89547b7e020242a0f8c7825d4bfd13a585f7c671
-SHA512 (gama-2.11.tar.gz) = 9d92ea148c4f0d1f2f9000930749003bf6976a0131990cc3686a4afcc64a7e1ee50675649935a76dec1543a7d446f7cdc2953e2d24ed43423412cb16bff30f0f
-Size (gama-2.11.tar.gz) = 14648176 bytes
+SHA1 (gama-2.12.tar.gz) = 659da8942bc8de1d2c9000e8ff41aa7e5eb803d9
+RMD160 (gama-2.12.tar.gz) = f0455b425c9ebd88576126bf33520cf4953f8e83
+SHA512 (gama-2.12.tar.gz) = c62b334ea6af52ed0107e278c3db89f48e6b4e5ca6fc25b3595f7fb3a7cf89447f96f2df31272ad2408c296e7438d3c0530d9b8fb7ed439dff77a7f2e0154ce0
+Size (gama-2.12.tar.gz) = 14686706 bytes
