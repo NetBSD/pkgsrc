@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6457 2020/11/28 18:59:38 is Exp $
+$NetBSD: CHANGES-2020,v 1.6458 2020/11/28 19:34:41 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9429,3 +9429,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/dMagnetic to 0.28 [wiz 2020-11-28]
 	Added editors/qtcreator version 4.13.2 [maya 2020-11-28]
 	Updated sysutils/mtools to 4.0.26 [is 2020-11-28]
+	Updated x11/alacritty to 0.6.0 [tnn 2020-11-28]
