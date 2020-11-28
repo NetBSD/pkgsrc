@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/11/28 10:56:02 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/11/28 11:02:15 nia Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -51,7 +51,6 @@ PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
 pre-configure:
 	cd ${WRKSRC} && autoconf-2.13 old-configure.in > old-configure \
