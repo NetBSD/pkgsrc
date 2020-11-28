@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1182 2020/11/26 21:45:14 pin Exp $
+# $NetBSD: Makefile,v 1.1183 2020/11/28 20:55:43 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1104,6 +1104,7 @@ SUBDIR+=	source-highlight
 SUBDIR+=	sphinxsearch
 SUBDIR+=	split-thai
 SUBDIR+=	stardic
+SUBDIR+=	stava
 SUBDIR+=	sub2srt
 SUBDIR+=	sublib
 SUBDIR+=	subliminal
