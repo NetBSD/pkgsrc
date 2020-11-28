@@ -1,0 +1,5 @@
+CLI tool to perform spell checking.
+Rust implementation of Peter Norvig's Spell Corrector.
+
+The default file contains ~30k unique words and is included in the crate.
+Currently stava only supports the English alphabet.
