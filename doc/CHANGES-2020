@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6456 2020/11/28 15:57:46 maya Exp $
+$NetBSD: CHANGES-2020,v 1.6457 2020/11/28 18:59:38 is Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9428,3 +9428,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dhcpcd to 9.3.4 [roy 2020-11-28]
 	Updated games/dMagnetic to 0.28 [wiz 2020-11-28]
 	Added editors/qtcreator version 4.13.2 [maya 2020-11-28]
+	Updated sysutils/mtools to 4.0.26 [is 2020-11-28]
