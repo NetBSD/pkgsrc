@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/08/16 20:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/11/28 01:20:03 gutteridge Exp $
 #
 
 DISTNAME=	ltsa2.2
@@ -28,11 +28,11 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ltsa.sh ${DESTDIR}${PREFIX}/bin/ltsa
-	cd ${WRKSRC}/lib && pax -rwpppm . ${DESTDIR}${PREFIX}/lib/ltsa
+	cd ${WRKSRC}/lib && pax -rwppm . ${DESTDIR}${PREFIX}/lib/ltsa
 	${CHMOD} -R og-w ${DESTDIR}${PREFIX}/lib/ltsa
 	${INSTALL_DATA} ${WRKSRC}/fspv2.pdf ${DESTDIR}${PREFIX}/share/doc/ltsa
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/ltsa
-	cd ${WRKSRC}/Examples && pax -rwpppm . ${DESTDIR}${PREFIX}/share/examples/ltsa
+	cd ${WRKSRC}/Examples && pax -rwppm . ${DESTDIR}${PREFIX}/share/examples/ltsa
 	${CHMOD} -R og-w ${DESTDIR}${PREFIX}/share/examples/ltsa
 
 .include "../../mk/java-vm.mk"
