@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/11/28 10:54:55 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/11/28 10:56:02 nia Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -16,7 +16,7 @@ USE_TOOLS+=	autoconf213 gmake perl pkg-config
 USE_LANGUAGES=	c c++
 
 # "ERROR: Only GCC 7.1 or newer is supported"
-GCC_REQD+=	7	
+GCC_REQD+=	7
 
 HAS_CONFIGURE=		yes
 CONFIGURE_DIRS=		build
