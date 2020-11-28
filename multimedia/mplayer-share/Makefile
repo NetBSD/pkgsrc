@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2020/08/18 17:58:10 leot Exp $
+# $NetBSD: Makefile,v 1.73 2020/11/28 01:20:03 gutteridge Exp $
 
 .include "Makefile.common"
 
@@ -20,7 +20,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${DESTDIR}${PREFIX}/share/mplayer
 	${INSTALL_DATA} ${WRKSRC}/etc/input.conf ${DESTDIR}${PREFIX}/share/mplayer
 	(set -e; cd ${WRKSRC}/DOCS && \
-		pax -rwpppm * ${DESTDIR}${PREFIX}/share/mplayer/DOCS); \
+		pax -rwppm * ${DESTDIR}${PREFIX}/share/mplayer/DOCS); \
 	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type d -print | \
 		${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type f -print | \

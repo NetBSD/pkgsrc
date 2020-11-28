@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/01/26 17:31:00 rillig Exp $
+# $NetBSD: Makefile,v 1.55 2020/11/28 01:20:03 gutteridge Exp $
 
 DISTNAME=	mantisbt-2.4.1
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
@@ -55,7 +55,7 @@ post-extract:
 
 do-install:
 	cd ${WRKSRC}/doc && \
-		pax -rwpppm en-US ${DESTDIR}${PREFIX}/share/doc/mantis
+		pax -rwppm en-US ${DESTDIR}${PREFIX}/share/doc/mantis
 
 	${MV} ${WRKSRC}/config/config_inc.php.sample \
 		${WRKSRC}/config_inc.php
@@ -66,7 +66,7 @@ do-install:
 .endfor
 
 	cd ${WRKSRC} && ${FIND} . -name .cvsignore -print | ${XARGS} ${RM} -f
-	cd ${WRKSRC} && pax -rwpppm . ${DESTDIR}${MANTIS_HOME}
+	cd ${WRKSRC} && pax -rwppm . ${DESTDIR}${MANTIS_HOME}
 
 	cd ${DESTDIR}${MANTIS_HOME} && \
 		${FIND} . -type f | ${XARGS} ${CHMOD} ${SHAREMODE}

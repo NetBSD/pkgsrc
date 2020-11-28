@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:32:18 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/11/28 01:20:03 gutteridge Exp $
 #
 
 DISTNAME=	xhtml1
@@ -23,7 +23,7 @@ XML_CATALOGS=	${PREFIX}/share/xml/xhtml/1.0/catalog
 INSTALLATION_DIRS=	share/xml/xhtml/1.0
 
 do-install:
-	cd ${WRKSRC}/DTD && pax -rwpppm . ${DESTDIR}${PREFIX}/share/xml/xhtml/1.0
+	cd ${WRKSRC}/DTD && pax -rwppm . ${DESTDIR}${PREFIX}/share/xml/xhtml/1.0
 	${INSTALL_DATA} ${FILESDIR}/catalog10 \
 	    ${DESTDIR}${PREFIX}/share/xml/xhtml/1.0/catalog
 
