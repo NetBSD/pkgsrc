@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6452 2020/11/27 23:21:49 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6453 2020/11/28 12:08:40 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9424,3 +9424,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-lexicon to 3.5.2 [adam 2020-11-27]
 	Updated www/py-django-admin-rangefilter to 0.6.3 [adam 2020-11-27]
 	Updated sysutils/broot to 1.0.7 [pin 2020-11-27]
+	Updated net/gallery-dl to 1.15.4 [leot 2020-11-28]
