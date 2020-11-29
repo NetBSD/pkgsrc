@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2020/05/03 11:41:45 wiedi Exp $
+# $NetBSD: Makefile.common,v 1.45 2020/11/29 22:32:17 dbj Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -14,6 +14,7 @@
 # used by x11/qt5-qtmultimedia/Makefile
 # used by x11/qt5-qtnetworkauth/Makefile
 # used by x11/qt5-qtquickcontrols/Makefile
+# used by x11/qt5-qtquickcontrols2/Makefile
 # used by x11/qt5-qtscript/Makefile
 # used by x11/qt5-qtscxml/Makefile
 # used by x11/qt5-qtsensors/Makefile
@@ -25,7 +26,6 @@
 # used by x11/qt5-qtvirtualkeyboard/Makefile
 # used by x11/qt5-qtwayland/Makefile
 # used by x11/qt5-qtwebchannel/Makefile
-# used by x11/qt5-qtwebkit/Makefile
 # used by x11/qt5-qtwebsockets/Makefile
 # used by x11/qt5-qtx11extras/Makefile
 # used by x11/qt5-qtxmlpatterns/Makefile
