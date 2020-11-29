@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2019/06/08 10:41:00 rillig Exp $
+# $NetBSD: options.mk,v 1.19 2020/11/29 19:52:26 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS+=		ldap canna debug
@@ -53,7 +53,9 @@ CONFIGURE_ARGS+=	--with-site-libraries=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-site-runtime-libraries=${PREFIX}/lib
 .endif
 
+PLIST_VARS+=		ldap
 .if !empty(PKG_OPTIONS:Mldap)
+PLIST.ldap=		yes
 CONFIGURE_ARGS+=	--with-ldap
 .  include "../../databases/openldap-client/buildlink3.mk"
 .else
