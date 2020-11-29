@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2018/09/23 21:09:32 wiz Exp $
+$NetBSD: distinfo,v 1.11 2020/11/29 22:03:12 dbj Exp $
 
 SHA1 (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = 245de43e34fa8cf7c06a3604cd32cfafa981f8c0
 RMD160 (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = c11b59337d7b9dd6c8136cc331ee6ade8ed4bc9e
@@ -6,3 +6,4 @@ SHA512 (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = 05a5
 Size (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = 1030982 bytes
 SHA1 (patch-Makefile) = 0001b2c1745f4ee6eae36e780d256ff584631ab9
 SHA1 (patch-librtmp_Makefile) = 90a076de219dcf7ba6840913cb6101e007f549cf
+SHA1 (patch-rtmpdump.c) = 7ab83af82e58270e46e75d0357df1f5cead248c4
