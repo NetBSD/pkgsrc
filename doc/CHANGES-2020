@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6476 2020/11/29 18:11:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6477 2020/11/29 18:36:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9448,3 +9448,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-hypothesis to 5.41.4 [wiz 2020-11-29]
 	Updated sysutils/py-setproctitle to 1.2 [wiz 2020-11-29]
 	Updated converters/utf8proc to 2.6.0 [wiz 2020-11-29]
+	Updated security/mozilla-rootcerts-openssl to 2.5 [wiz 2020-11-29]
