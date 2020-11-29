@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6479 2020/11/29 19:31:53 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6480 2020/11/29 21:58:03 dbj Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9451,3 +9451,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/mozilla-rootcerts-openssl to 2.5 [wiz 2020-11-29]
 	Added x11/unibar version 0.1.3 [pin 2020-11-29]
 	Updated shells/oksh to 6.8.1 [schmonz 2020-11-29]
+	Updated sysutils/ddrescue to 1.25 [dbj 2020-11-29]
