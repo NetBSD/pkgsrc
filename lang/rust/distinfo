@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.121 2020/11/13 20:35:58 he Exp $
+$NetBSD: distinfo,v 1.122 2020/11/29 20:15:15 he Exp $
 
 SHA1 (rust-1.46.0-aarch64-unknown-netbsd.tar.gz) = eded0c71aa6a82c76d6cfbac118894a6f7da4ec6
 RMD160 (rust-1.46.0-aarch64-unknown-netbsd.tar.gz) = 2cd29b4fbc4d0ef45b8c354143285d10544bbc99
@@ -24,10 +24,10 @@ SHA1 (rust-1.46.0-powerpc-unknown-netbsd.tar.gz) = cd9f2ead55fd0a352c49e8b8ec54d
 RMD160 (rust-1.46.0-powerpc-unknown-netbsd.tar.gz) = b7256e0585cc847ee7ce684df7eef9b2c3b33cab
 SHA512 (rust-1.46.0-powerpc-unknown-netbsd.tar.gz) = cec587e5f637e98b7e84dbb98a7909761ff542a11db4a8bba803c23c5506f3e295c978a44d58b8dc04e1922eaa84a8975e51e94d6468a389a8269b4112be734a
 Size (rust-1.46.0-powerpc-unknown-netbsd.tar.gz) = 203327311 bytes
-SHA1 (rust-1.46.0-powerpc-unknown-netbsd90.tar.gz) = ab8486f96150a4538f04aad5a9c4c88d1f795126
-RMD160 (rust-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 426542e2df8ec7ed8fc146a67b53280a1a1571f2
-SHA512 (rust-1.46.0-powerpc-unknown-netbsd90.tar.gz) = acacd26a56ef7b3fd53c86f59b32791df1aa068a182733be150a96a4c962b8452b1e0e0309a6d582459cd69dfbf63e2f4bf33e4cd427a786bcee9a6f925028cc
-Size (rust-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 203329451 bytes
+SHA1 (rust-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 351da480de1729ed2b71da77db33125bace91502
+RMD160 (rust-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 31e921ff8afa8d5fb10bde7c978db0201c2f416e
+SHA512 (rust-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 246db3de65be1f15f258a2fc0d1a8581fd7f79b9f268b3c0f4a5d2c568128015d9ee1a58764554adc391511b2456be1865bbba1ab8157ea326056d40cf21221b
+Size (rust-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 205741294 bytes
 SHA1 (rust-1.46.0-sparc64-unknown-netbsd.tar.gz) = 81496a47afde128a6e218372120d246443f4b8b6
 RMD160 (rust-1.46.0-sparc64-unknown-netbsd.tar.gz) = 1cc4cef2f9cfd870c880f968f9e1f0886c7a3005
 SHA512 (rust-1.46.0-sparc64-unknown-netbsd.tar.gz) = 13b71a650d6c654bf226d2e576e56f502bc09135db467e72bfc6a72a3487aa42a53ae5b3f8d5872cb5d984038c1331eaf2520e64fd54fa9b9342e8593f96bdda
@@ -76,10 +76,10 @@ SHA1 (rust-std-1.46.0-powerpc-unknown-netbsd.tar.gz) = 720f9223284f64c46b4a97b03
 RMD160 (rust-std-1.46.0-powerpc-unknown-netbsd.tar.gz) = 383f5d6d0b1d5400c4350f4beb330bb7c845e070
 SHA512 (rust-std-1.46.0-powerpc-unknown-netbsd.tar.gz) = 8c300cfbefe0e6d73da6db23bb29bd53f72f44f1fc141d35bf54b92253ad32f1a67b0a046a062dec748f2fe596b375d29b960de2461537bfdf2b07b2a1f5e812
 Size (rust-std-1.46.0-powerpc-unknown-netbsd.tar.gz) = 17214042 bytes
-SHA1 (rust-std-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 75195d1390ddcd37ddd164c8edab87f313b79ea1
-RMD160 (rust-std-1.46.0-powerpc-unknown-netbsd90.tar.gz) = d238c192968da2fd6d9a153264cba102ac509e68
-SHA512 (rust-std-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 3efd655b5040fbed02393b9be99175d2a33743049f37413e6374e71a59a697b24f583ec2f5ee88d2a7c7cda894c5effd559115fde298fdfe19eb6655b01f7063
-Size (rust-std-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 17214040 bytes
+SHA1 (rust-std-1.46.0-powerpc-unknown-netbsd90.tar.gz) = e8402adb09f3b6f5f1e2d946326b080b39f85273
+RMD160 (rust-std-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 5cfd6606ba4efafc24510744a2128873134c185a
+SHA512 (rust-std-1.46.0-powerpc-unknown-netbsd90.tar.gz) = fca29cc0d24214e9adbfcef066eba90d8547895d6cb11756437d2c9e546f2177270006c2920d8df2d446167ede4da77e7a44d962c9b0cdef1bce0f2c2025cb1f
+Size (rust-std-1.46.0-powerpc-unknown-netbsd90.tar.gz) = 17215928 bytes
 SHA1 (rust-std-1.46.0-sparc64-unknown-netbsd.tar.gz) = a8c7c0fc2ea161cc7b510fced1ffdd901606c72b
 RMD160 (rust-std-1.46.0-sparc64-unknown-netbsd.tar.gz) = b33198386d7bc104ec2de32391dc743bcf34c90a
 SHA512 (rust-std-1.46.0-sparc64-unknown-netbsd.tar.gz) = 5be3e09c41c30273422364e02c08152b0ad4566cdd9226c7f93b3d2ee4b6b61ff111deeb1f52c78fcdae83e70b45b3b318acb6a419053709d2fdbb976a06bb4c
@@ -113,6 +113,7 @@ SHA1 (patch-src_bootstrap_compile.rs) = 67d5ad13e13e6818535a319f55e990d511e7b83f
 SHA1 (patch-src_bootstrap_lib.rs) = 3277f2be69a269ac761a2a6ab4d5389d121e6ca6
 SHA1 (patch-src_librustc__codegen__ssa_back_linker.rs) = e7c592f78b9ee317521cf0258686173a31f1d2e0
 SHA1 (patch-src_librustc__llvm_build.rs) = 7cc2aa0568aa2cbf4eb1fdbb00922b10df0b3ff6
+SHA1 (patch-src_librustc__target_spec_netbsd__base.rs) = 841d8fd276b0f48b15e9010e1c170da93888fd9f
 SHA1 (patch-src_librustc__target_spec_solaris__base.rs) = 5ed283e5ead1ec60f0c9879fa3c8190248976dc7
 SHA1 (patch-src_librustc__target_spec_x86__64__sun__solaris.rs) = f6ad33b41906bbf83a1cbd0e2fe13a4da37266fa
 SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = d49503d19c30a64d571eb7fa79e7aad7038cd427
