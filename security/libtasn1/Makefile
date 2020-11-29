@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2020/03/26 12:00:45 nia Exp $
+# $NetBSD: Makefile,v 1.80 2020/11/29 22:01:34 dbj Exp $
 
 DISTNAME=	libtasn1-4.16.0
 CATEGORIES=	security devel
@@ -14,11 +14,6 @@ USE_TOOLS+=		bison makeinfo
 USE_LANGUAGES=		c99
 GNU_CONFIGURE=		yes
 
-# Mac OS X has no prototype for getopt_long and no declaration for
-# struct option, so ignore getopt_long() even though the test succeeds.
-CONFIGURE_ENV.Darwin+=	ac_cv_func_getopt_long=no
-
-CFLAGS.Darwin+=		-fno-common
 TEST_TARGET=		check
 INFO_FILES=		yes
 
