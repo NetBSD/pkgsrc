@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2020/08/30 20:43:46 tnn Exp $
+$NetBSD: distinfo,v 1.40 2020/11/29 22:35:47 dbj Exp $
 
 SHA1 (gnuradio-3.8.1.0.tar.gz) = d01a97bc06ac2543e393dc0b7df629f9a4fb07d4
 RMD160 (gnuradio-3.8.1.0.tar.gz) = 6b6c96a7942ae1a42aff2ac4f70fb761b735864a
@@ -8,4 +8,5 @@ SHA1 (patch-cmake_Modules_FindSphinx.cmake) = 1e42ad000962f4766810fbd322c80dad1f
 SHA1 (patch-gnuradio_runtime_include_gnuradio_high__res__timer__h) = 59ad8192e7ac76b2ce35cda68c378bc2abad20a5
 SHA1 (patch-gr-audio_lib_CMakeLists.txt) = 9adacb93a20b2be596a23985306cbfd5f93c80a8
 SHA1 (patch-gr-audio_lib_alsa_alsa__impl_h) = 565b4ada865395f19228511659bfc489a5a9583f
+SHA1 (patch-gr-digital_lib_map__bb__impl.cc) = da52d58b1c2779650670bf80a1aa91e60637e4dc
 SHA1 (patch-grc_scripts_gnuradio-companion) = 852f520670c0b9ec822b88aea331a1e052175340
