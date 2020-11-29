@@ -1,7 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2018/07/25 00:26:30 minskim Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2020/11/29 20:27:28 nia Exp $
 
 Avoid conflicts with pkgsrc's CMAKE_MODULE_PATH override.
 Disable examples as they require Linux specific headers.
+Do not try to use -march/-mtune.
 
 --- CMakeLists.txt.orig	2018-07-09 16:45:44.000000000 +0000
 +++ CMakeLists.txt
@@ -42,7 +43,58 @@ Disable examples as they require Linux specific headers.
            OUTPUT_VARIABLE BUILD_DATE
            OUTPUT_STRIP_TRAILING_WHITESPACE)
  else ()
-@@ -320,7 +319,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
+@@ -179,35 +178,6 @@ else()
+         string(REGEX REPLACE "-O[^ ]*" "" CMAKE_CXX_FLAGS_${CONFIG} "${CMAKE_CXX_FLAGS_${CONFIG}}")
+     endforeach ()
+ 
+-    if (CMAKE_COMPILER_IS_GNUCC)
+-        message(STATUS "gcc version ${CMAKE_C_COMPILER_VERSION}")
+-        # If gcc doesn't recognise the host cpu, then mtune=native becomes
+-        # generic, which isn't very good in some cases. march=native looks at
+-        # cpuid info and then chooses the best microarch it can (and replaces
+-        # the flag), so use that for tune.
+-
+-        # arg1 might exist if using ccache
+-        string (STRIP "${CMAKE_C_COMPILER_ARG1}" CC_ARG1)
+-        set (EXEC_ARGS ${CC_ARG1} -c -Q --help=target -march=native -mtune=native)
+-        execute_process(COMMAND ${CMAKE_C_COMPILER} ${EXEC_ARGS}
+-            OUTPUT_VARIABLE _GCC_OUTPUT)
+-        string(REGEX REPLACE ".*march=[ \t]*([^ \n]*)[ \n].*" "\\1"
+-            GNUCC_ARCH "${_GCC_OUTPUT}")
+-
+-        # test the parsed flag
+-        set (EXEC_ARGS ${CC_ARG1} -E - -mtune=${GNUCC_ARCH})
+-        execute_process(COMMAND ${CMAKE_C_COMPILER} ${EXEC_ARGS}
+-            OUTPUT_QUIET ERROR_QUIET
+-            INPUT_FILE /dev/null
+-            RESULT_VARIABLE GNUCC_TUNE_TEST)
+-        if (NOT GNUCC_TUNE_TEST EQUAL 0)
+-            message(SEND_ERROR "Something went wrong determining gcc tune: -mtune=${GNUCC_ARCH} not valid")
+-        endif()
+-        set(TUNE_FLAG ${GNUCC_ARCH})
+-    else ()
+-        set(TUNE_FLAG native)
+-    endif()
+-
+     # compiler version checks TODO: test more compilers
+     if (CMAKE_COMPILER_IS_GNUCXX)
+         set(GNUCXX_MINVER "4.8.1")
+@@ -246,14 +216,6 @@ else()
+         set(EXTRA_CXX_FLAGS "${EXTRA_CXX_FLAGS} -DNDEBUG")
+     endif()
+ 
+-    if (NOT CMAKE_C_FLAGS MATCHES .*march.* AND NOT CMAKE_C_FLAGS MATCHES .*mtune.*)
+-        set(ARCH_C_FLAGS "-march=native -mtune=${TUNE_FLAG}")
+-    endif()
+-
+-    if (NOT CMAKE_CXX_FLAGS MATCHES .*march.* AND NOT CMAKE_CXX_FLAGS MATCHES .*mtune.*)
+-        set(ARCH_CXX_FLAGS "-march=native -mtune=${TUNE_FLAG}")
+-    endif()
+-
+     if(CMAKE_COMPILER_IS_GNUCC)
+         # spurious warnings?
+         set(EXTRA_C_FLAGS "${EXTRA_C_FLAGS} -Wno-array-bounds -Wno-maybe-uninitialized")
+@@ -320,7 +282,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
          message (STATUS "Building the fat runtime requires the Unix Makefiles generator, or Ninja with CMake v3.0 or higher")
          set (FAT_RUNTIME_REQUISITES FALSE)
      else()
@@ -51,7 +103,7 @@ Disable examples as they require Linux specific headers.
          if (NOT HAS_C_ATTR_IFUNC)
              message(STATUS "Compiler does not support ifunc attribute, cannot build fat runtime")
              set (FAT_RUNTIME_REQUISITES FALSE)
-@@ -331,7 +330,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
+@@ -331,7 +293,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
      CMAKE_DEPENDENT_OPTION(FAT_RUNTIME "Build a library that supports multiple microarchitecures" ${RELEASE_BUILD} "FAT_RUNTIME_REQUISITES" OFF)
  endif ()
  
@@ -60,7 +112,7 @@ Disable examples as they require Linux specific headers.
  
  # testing a builtin takes a little more work
  CHECK_C_SOURCE_COMPILES("void *aa_test(void *x) { return __builtin_assume_aligned(x, 16);}\nint main(void) { return 0; }" HAVE_CC_BUILTIN_ASSUME_ALIGNED)
-@@ -454,7 +453,7 @@ if (NOT WIN32)
+@@ -454,7 +416,7 @@ if (NOT WIN32)
  set(PCRE_REQUIRED_MAJOR_VERSION 8)
  set(PCRE_REQUIRED_MINOR_VERSION 41)
  set(PCRE_REQUIRED_VERSION ${PCRE_REQUIRED_MAJOR_VERSION}.${PCRE_REQUIRED_MINOR_VERSION})
@@ -69,7 +121,7 @@ Disable examples as they require Linux specific headers.
  if (NOT CORRECT_PCRE_VERSION)
      message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} not found")
  endif()
-@@ -474,7 +473,7 @@ endif()
+@@ -474,7 +436,7 @@ endif()
  endif()
  
  # do substitutions
@@ -78,7 +130,7 @@ Disable examples as they require Linux specific headers.
  configure_file(src/hs_version.h.in ${PROJECT_BINARY_DIR}/hs_version.h)
  
  if (NOT WIN32)
-@@ -506,7 +505,7 @@ if (WIN32)
+@@ -506,7 +468,7 @@ if (WIN32)
  set(PCRE_REQUIRED_MAJOR_VERSION 8)
  set(PCRE_REQUIRED_MINOR_VERSION 41)
  set(PCRE_REQUIRED_VERSION ${PCRE_REQUIRED_MAJOR_VERSION}.${PCRE_REQUIRED_MINOR_VERSION})
@@ -87,7 +139,7 @@ Disable examples as they require Linux specific headers.
  if (NOT CORRECT_PCRE_VERSION)
      message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} not found")
  endif()
-@@ -1195,28 +1194,28 @@ else (FAT_RUNTIME)
+@@ -1195,28 +1157,28 @@ else (FAT_RUNTIME)
         list(APPEND RUNTIME_LIBS $<TARGET_OBJECTS:hs_exec_core2>)
         set_target_properties(hs_exec_core2 PROPERTIES
             COMPILE_FLAGS "-march=core2"
@@ -120,7 +172,7 @@ Disable examples as they require Linux specific headers.
                 )
         endif (BUILD_AVX512)
  
-@@ -1251,21 +1250,21 @@ else (FAT_RUNTIME)
+@@ -1251,21 +1213,21 @@ else (FAT_RUNTIME)
          set_target_properties(hs_exec_shared_core2 PROPERTIES
              COMPILE_FLAGS "-march=core2"
              POSITION_INDEPENDENT_CODE TRUE
@@ -145,7 +197,7 @@ Disable examples as they require Linux specific headers.
              )
  
          if (BUILD_AVX512)
-@@ -1274,7 +1273,7 @@ else (FAT_RUNTIME)
+@@ -1274,7 +1236,7 @@ else (FAT_RUNTIME)
              set_target_properties(hs_exec_shared_avx512 PROPERTIES
                  COMPILE_FLAGS "${SKYLAKE_FLAG}"
                  POSITION_INDEPENDENT_CODE TRUE
@@ -154,7 +206,7 @@ Disable examples as they require Linux specific headers.
                  )
          endif (BUILD_AVX512)
          add_library(hs_exec_common_shared OBJECT
-@@ -1367,8 +1366,3 @@ if (NOT BUILD_STATIC_LIBS)
+@@ -1367,8 +1329,3 @@ if (NOT BUILD_STATIC_LIBS)
      # use shared lib without having to change all the targets
      add_library(hs ALIAS hs_shared)
  endif ()
