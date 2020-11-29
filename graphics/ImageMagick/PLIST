@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.114 2020/11/23 15:45:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.115 2020/11/29 17:59:47 wiz Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -193,6 +193,7 @@ share/doc/ImageMagick-7/images/annotate.png
 share/doc/ImageMagick-7/images/arc.png
 share/doc/ImageMagick-7/images/atop.gif
 share/doc/ImageMagick-7/images/background.jpg
+share/doc/ImageMagick-7/images/bitcoin.svg
 share/doc/ImageMagick-7/images/black.png
 share/doc/ImageMagick-7/images/bluebells_clipped.jpg
 share/doc/ImageMagick-7/images/bluebells_darker.jpg
@@ -220,7 +221,6 @@ share/doc/ImageMagick-7/images/gaussian-blur.png
 share/doc/ImageMagick-7/images/granite.png
 share/doc/ImageMagick-7/images/imade_art2.jpg
 share/doc/ImageMagick-7/images/label.gif
-share/doc/ImageMagick-7/images/litecoin.png
 share/doc/ImageMagick-7/images/logo-sm-flop.png
 share/doc/ImageMagick-7/images/logo-sm-fx.png
 share/doc/ImageMagick-7/images/logo-sm.png
