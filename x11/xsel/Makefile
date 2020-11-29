@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/29 05:07:20 asau Exp $
+# $NetBSD: Makefile,v 1.3 2020/11/29 20:37:32 nia Exp $
 #
 
 DISTNAME=	xsel-1.2.0
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.vergenet.net/~conrad/software/xsel/
 COMMENT=	Manipulate the X selection
 
 GNU_CONFIGURE=	yes
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
