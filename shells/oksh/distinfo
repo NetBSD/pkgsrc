@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/10/26 10:21:47 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2020/11/29 19:31:43 schmonz Exp $
 
-SHA1 (oksh-6.7.1.tar.gz) = 0e1d0bc13baf6d7d090a019c3845edacf132bce4
-RMD160 (oksh-6.7.1.tar.gz) = ca031c17205f2036c14c8de5c993e5beebece43c
-SHA512 (oksh-6.7.1.tar.gz) = 0b756d24bca3a23cd6db5ec9a591f73335cb6801fde53d505169e1e47b3f27b5a661fa025184b89d9c43c4d462d5fed771e651cd6738dbd5e377353bb8199d52
-Size (oksh-6.7.1.tar.gz) = 303231 bytes
+SHA1 (oksh-6.8.1.tar.gz) = 8070e5b8ebd287f90a944641bf48a184b9aa6dd4
+RMD160 (oksh-6.8.1.tar.gz) = edc34451f1040217ec3b9a39eb35c3edad41d5ae
+SHA512 (oksh-6.8.1.tar.gz) = 8c008375e85daff9782eed9e1b594c02d95d1f991cefba2fc6fe45b23d0b0e7af5d5099b08770fc136adc2c7be95d4e4baf8c040c608acc4b294dc986c66e28c
+Size (oksh-6.8.1.tar.gz) = 303702 bytes
