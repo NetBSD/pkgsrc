@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6464 2020/11/29 06:18:17 dogcow Exp $
+$NetBSD: CHANGES-2020,v 1.6465 2020/11/29 10:02:03 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9436,3 +9436,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/craft to 3.5nb5 [dholland 2020-11-29]
 	Updated www/php-nextcloud to 20.0.2 [ryoon 2020-11-29]
 	Updated security/mozilla-rootcerts to 1.0.20201102 [dogcow 2020-11-29]
+	Updated net/youtube-dl to 20201129 [leot 2020-11-29]
