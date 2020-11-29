@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/06/16 13:43:36 mef Exp $
+# $NetBSD: Makefile,v 1.9 2020/11/29 21:16:36 dbj Exp $
 #
 
 DISTNAME=	predict-2.2.6
@@ -11,7 +11,6 @@ COMMENT=	Curses satellite tracking/orbital prediction program
 
 LICENSE=	gnu-gpl-v2
 
-FAKE_NCURSES=	yes
 USE_LANGUAGES=	c
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
@@ -22,7 +21,7 @@ do-configure:
 	printf "const char version[] = \"$$(cat "${WRKSRC}/.version")\";\n" >> "${WRKSRC}/predict.h"
 
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} predict.c -o predict -lm -lncurses -lpthread
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} predict.c -o predict -lm -lcurses -lpthread
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/vocalizer.sh > ${WRKSRC}/vocalizer/vocalizer.sh
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/predict/default share/predict/vocalizer
