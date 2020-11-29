@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6462 2020/11/29 03:12:15 dholland Exp $
+$NetBSD: CHANGES-2020,v 1.6463 2020/11/29 05:11:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9434,3 +9434,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/stava version 0.6.2 [pin 2020-11-28]
 	Updated audio/spotify-qt to 3.2 [pin 2020-11-28]
 	Updated games/craft to 3.5nb5 [dholland 2020-11-29]
+	Updated www/php-nextcloud to 20.0.2 [ryoon 2020-11-29]
