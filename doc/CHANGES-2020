@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6480 2020/11/29 21:58:03 dbj Exp $
+$NetBSD: CHANGES-2020,v 1.6481 2020/11/29 23:10:24 dbj Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9452,3 +9452,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/unibar version 0.1.3 [pin 2020-11-29]
 	Updated shells/oksh to 6.8.1 [schmonz 2020-11-29]
 	Updated sysutils/ddrescue to 1.25 [dbj 2020-11-29]
+	Updated ham/codec2 to 0.9.2 [dbj 2020-11-29]
