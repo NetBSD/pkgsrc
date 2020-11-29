@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2020/10/06 19:51:15 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2020/11/29 17:31:27 bsiegert Exp $
 
-DISTNAME=	dconf-editor-3.22.3
-PKGREVISION=	16
+DISTNAME=	dconf-editor-3.38.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf-editor/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,17 +10,16 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/dconf
 COMMENT=	gsettings editor
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c99
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool msgfmt
+USE_TOOLS+=	pkg-config
 
-BUILDLINK_API_DEPENDS.dconf+=	dconf>=0.25.1
 .include "../../devel/dconf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.46.0
 .include "../../devel/glib2/schemas.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/application.mk"
 BUILDLINK_DEPMETHOD.vala= build
-BUILDLINK_API_DEPENDS.vala+=	vala>=0.33.1
+BUILDLINK_API_DEPENDS.vala+=	vala>=0.40.0
 .include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22.0
