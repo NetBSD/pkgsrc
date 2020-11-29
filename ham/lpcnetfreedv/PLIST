@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/11/29 23:12:43 dbj Exp $
+bin/lpcnet_dec
+bin/lpcnet_enc
+include/lpcnet/lpcnet_freedv.h
+lib/cmake/lpcnetfreedv/lpcnetfreedv-config-noconfig.cmake
+lib/cmake/lpcnetfreedv/lpcnetfreedv-config.cmake
+lib/liblpcnetfreedv.so
