@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.912 2020/11/10 12:06:58 nia Exp $
+# $NetBSD: Makefile,v 1.913 2020/11/29 18:40:46 pin Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -436,6 +436,7 @@ SUBDIR+=	tktable
 SUBDIR+=	transset
 SUBDIR+=	tzosdclock
 SUBDIR+=	unclutter
+SUBDIR+=	unibar
 SUBDIR+=	unicode-screensaver
 SUBDIR+=	viewres
 SUBDIR+=	vte
