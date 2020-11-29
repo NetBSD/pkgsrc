@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20237 2020/11/29 21:58:03 dbj Exp $
+$NetBSD: TODO,v 1.20238 2020/11/29 23:14:20 dbj Exp $
 
 Suggested new packages
 ======================
@@ -561,7 +561,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flashplayer-0.4.13
 	o flow-tools-0.411
 	o fortunes-calvin-0.3
-	o freedv-1.2.2
 	o freenet-0.7
 	o freesci-0.6.4
 	o freeswitch-1.2.3
