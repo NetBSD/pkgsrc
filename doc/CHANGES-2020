@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6469 2020/11/29 17:31:46 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6470 2020/11/29 17:59:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9441,3 +9441,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/bat to 0.17.1 [fox 2020-11-29]
 	Updated audio/fasttracker2 to 1.41 [fox 2020-11-29]
 	Updated devel/dconf-editor to 3.38.2 [bsiegert 2020-11-29]
+	Updated graphics/ImageMagick to 7.0.10.44 [wiz 2020-11-29]
