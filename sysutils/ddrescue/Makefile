@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:35:15 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/11/29 21:58:03 dbj Exp $
 
-DISTNAME=	ddrescue-1.19
+DISTNAME=	ddrescue-1.25
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=ddrescue/}
 EXTRACT_SUFX=	.tar.lz
