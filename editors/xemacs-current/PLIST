@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/09/24 11:51:48 hauke Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/11/29 19:52:26 nia Exp $
 bin/ellcc
 bin/gnuattach
 bin/gnuclient
@@ -229,6 +229,7 @@ lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/mmencode
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.el
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.elc
 ${PLIST.canna}lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules/canna_api.ell
+${PLIST.ldap}lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules/eldap.ell
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/movemail
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/profile
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/rcs2log
