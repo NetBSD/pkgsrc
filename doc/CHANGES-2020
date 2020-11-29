@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6471 2020/11/29 18:02:26 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6472 2020/11/29 18:03:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9443,3 +9443,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/dconf-editor to 3.38.2 [bsiegert 2020-11-29]
 	Updated graphics/ImageMagick to 7.0.10.44 [wiz 2020-11-29]
 	Updated textproc/pugixml to 1.11 [wiz 2020-11-29]
+	Updated x11/libxkbcommon to 1.0.3 [wiz 2020-11-29]
