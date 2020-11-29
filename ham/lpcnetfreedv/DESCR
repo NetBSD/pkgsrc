@@ -1,0 +1,13 @@
+Experimental version of LPCNet that has been used to develop FreeDV
+2020 - a HF radio Digial Voice mode for over the air experimentation
+with Neural Net speech coding. Possibly the first use of Neural Net
+speech coding in real world operation.
+
+From https://people.xiph.org/~jm/demo/lpcnet/ :
+
+Work in progress software for researching low CPU complexity
+algorithms for speech synthesis and compression by applying Linear
+Prediction techniques to WaveRNN. High quality speech can be
+synthesised on regular CPUs (around 3 GFLOP) with SIMD support (AVX,
+AVX2/FMA, NEON currently supported). The code also supports very low
+bitrate compression at 1.6 kb/s.
