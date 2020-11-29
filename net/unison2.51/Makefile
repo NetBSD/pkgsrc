@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/11/05 09:08:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2020/11/29 22:35:11 dbj Exp $
 
 # Currently, 2.51.x is the standard approach, and thus this package
 # produces a "unison-2.51.x" package which installs a "unison" binary.
@@ -23,6 +23,7 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
+MAKE_JOBS_SAFE=	no
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
