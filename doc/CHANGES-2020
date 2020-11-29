@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6478 2020/11/29 18:41:22 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6479 2020/11/29 19:31:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9450,3 +9450,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/utf8proc to 2.6.0 [wiz 2020-11-29]
 	Updated security/mozilla-rootcerts-openssl to 2.5 [wiz 2020-11-29]
 	Added x11/unibar version 0.1.3 [pin 2020-11-29]
+	Updated shells/oksh to 6.8.1 [schmonz 2020-11-29]
