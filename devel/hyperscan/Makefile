@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:32:46 maya Exp $
+# $NetBSD: Makefile,v 1.5 2020/11/29 20:27:28 nia Exp $
 
 DISTNAME=	hyperscan-5.0.0
 PKGREVISION=	1
@@ -30,6 +30,7 @@ PKGCONFIG_OVERRIDE+=	libhs.pc.in
 CFLAGS+=	-march=core2
 .endif
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
