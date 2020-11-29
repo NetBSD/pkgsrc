@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.21 2020/07/18 13:02:53 adam Exp $
+$NetBSD: distinfo,v 1.22 2020/11/29 22:08:56 dbj Exp $
 
 SHA1 (wxWidgets-3.0.5.1.tar.bz2) = 406ac736f61d88a3a866aa501e01e408a642c6e7
 RMD160 (wxWidgets-3.0.5.1.tar.bz2) = 931ddabfbc54e20ced14c81c74e451be8073dee5
 SHA512 (wxWidgets-3.0.5.1.tar.bz2) = 0a789fc5e71d414e43f75b5c16076fe8b1bcd7671be0770e4269dcef66d830c1bc74e183f49db270b928862f13472666c283fe2aa98b9006681722e06100725d
 Size (wxWidgets-3.0.5.1.tar.bz2) = 19739206 bytes
-SHA1 (patch-configure) = 8e5a8c489cf4fcd2b638c45ca084febce398722f
+SHA1 (patch-configure) = da4e1f00cb2786a5f3190a090e5eed279e204e82
 SHA1 (patch-misc_scripts_makeosxtags.sh) = a18e1c44f1cbc0e81cb75ae9df1eedd3643446c4
 SHA1 (patch-src_unix_fswatcher__kqueue.cpp) = fe34102b241f84f8add08ed69d8c9c1c9c2df771
