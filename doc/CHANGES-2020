@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6474 2020/11/29 18:08:47 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6475 2020/11/29 18:10:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9446,3 +9446,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/libxkbcommon to 1.0.3 [wiz 2020-11-29]
 	Updated devel/ninja-build to 1.10.2 [wiz 2020-11-29]
 	Updated devel/py-hypothesis to 5.41.4 [wiz 2020-11-29]
+	Updated sysutils/py-setproctitle to 1.2 [wiz 2020-11-29]
