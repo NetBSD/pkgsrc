@@ -1,0 +1,8 @@
+This package puts symlinks to libatomic in a directory specific
+to libatomic, so that we can add that directory to the default
+link search path of rust without also automatically picking up
+other installed libraries.
+
+This is for the benefit of our powerpc ports, where recent rust
+has been changed to insist on using -latomic due to the lack of
+native 64-bit atomic operations.
