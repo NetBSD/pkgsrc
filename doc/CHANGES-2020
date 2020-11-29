@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6466 2020/11/29 13:24:45 he Exp $
+$NetBSD: CHANGES-2020,v 1.6467 2020/11/29 13:49:05 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9438,3 +9438,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/mozilla-rootcerts to 1.0.20201102 [dogcow 2020-11-29]
 	Updated net/youtube-dl to 20201129 [leot 2020-11-29]
 	Added devel/libatomic-links version 1.0 [he 2020-11-29]
+	Updated textproc/bat to 0.17.1 [fox 2020-11-29]
