@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1 2020/11/29 03:11:54 dholland Exp $
+
+Build the preprocessor front end thingy with -g instead of with -O2.
+
+With -O2 it crashes with a message about EOF inside a string constant;
+this has been happening with clang for a while and gcc recently joined
+the party. With just -O, it loops forever instead for me, which isn't
+an improvement.
+
+This should serve as a workaround until someone gets around to
+figuring out where the undefined behavior is.
+
+--- Makefile~	2020-11-29 02:36:49.745300963 +0000
++++ Makefile
+@@ -42,7 +42,7 @@ depend:
+ 	@false
+ 
+ ${HCC}: hcc/hcc.cc
+-	${CXX} ${CFLAGS} hcc/hcc.cc -o hcc/hcc
++	${CXX} ${CFLAGS:S/-O2/-g/} hcc/hcc.cc -o hcc/hcc
+ 
+ install:
+ 	[ -d ${DESTDIR} ]
