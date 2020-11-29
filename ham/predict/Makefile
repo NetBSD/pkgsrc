@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/11/29 21:16:36 dbj Exp $
+# $NetBSD: Makefile,v 1.10 2020/11/29 21:16:52 dbj Exp $
 #
 
 DISTNAME=	predict-2.2.6
@@ -21,7 +21,7 @@ do-configure:
 	printf "const char version[] = \"$$(cat "${WRKSRC}/.version")\";\n" >> "${WRKSRC}/predict.h"
 
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} predict.c -o predict -lm -lcurses -lpthread
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} ${PTHREAD_LDFLAGS} predict.c -o predict -lcurses ${PTHREAD_LIBS} -lm
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/vocalizer.sh > ${WRKSRC}/vocalizer/vocalizer.sh
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/predict/default share/predict/vocalizer
