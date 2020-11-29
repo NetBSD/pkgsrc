@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2020/11/14 21:25:32 he Exp $
+# $NetBSD: Makefile,v 1.208 2020/11/29 20:15:15 he Exp $
 
 DISTNAME=	rustc-1.47.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -507,6 +507,8 @@ DEPENDS+=	compat80>=0:../../emulators/compat80
 .if (${MACHINE_ARCH} == "powerpc")
 # LLVM needs libatomic for 64-bit atomics on powerpc
 .include "../../devel/libatomic/buildlink3.mk"
+# Make those libraries available via a unique directory:
+DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
 .if (${OPSYS} == "NetBSD") && \
