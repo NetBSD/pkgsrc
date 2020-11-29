@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2020/11/25 21:34:57 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/11/29 01:40:56 mef Exp $
 
 DISTNAME=	cantata-2.4.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CDrummond/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
+DIST_SUBDIR=	cantata-2.4.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/CDrummond/cantata
