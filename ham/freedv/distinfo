@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2016/01/19 04:03:21 dbj Exp $
+$NetBSD: distinfo,v 1.5 2020/11/29 23:14:20 dbj Exp $
 
-SHA1 (freedv-1.1.tar.xz) = ec98a60e04c4eafb112793028468345d9f8aed55
-RMD160 (freedv-1.1.tar.xz) = c2be5877a7a8865581aff8badb1bb6441f8fdc0b
-SHA512 (freedv-1.1.tar.xz) = bd149f74ceae9c63b23c37d2e6d876238b9c1759d8bd1213675d3d0d2f817863e952129306ca37da9f41297b17a9f74d57cb807689ef051b3d94a8f8b52b5727
-Size (freedv-1.1.tar.xz) = 424420 bytes
-SHA1 (patch-src_CMakeLists.txt) = 6dc34dbc89394c92afbb435d8b06bd76603cc5d2
-SHA1 (patch-src_sox__biquad.c) = b59975d6590cddacd3978759b254ce54894c1a7b
+SHA1 (freedv-1.4.2-bb9558cc496b7b253fb54bb28486b0bcd7516ae5.tar.gz) = d3248a3b32b6772bc6c072d2f01bffaae6699dd8
+RMD160 (freedv-1.4.2-bb9558cc496b7b253fb54bb28486b0bcd7516ae5.tar.gz) = 311c0e1022e28fd24361c2ef6f9276f68b5493c1
+SHA512 (freedv-1.4.2-bb9558cc496b7b253fb54bb28486b0bcd7516ae5.tar.gz) = fc7589606a208938129ad622966fa108e4c1ee84a86273a1b33705331282e811f7891bbc47528e475742a9b78f4dbc78cc1d84c13e1784b7923de9babf60171d
+Size (freedv-1.4.2-bb9558cc496b7b253fb54bb28486b0bcd7516ae5.tar.gz) = 6177996 bytes
+SHA1 (patch-cmake_FindPortaudio.cmake) = 1105012bc3287bd5044250ad6f1c4609cbf7c217
+SHA1 (patch-src_CMakeLists.txt) = 05636fb3c3f836fb8287b16147f5e99a745fb265
