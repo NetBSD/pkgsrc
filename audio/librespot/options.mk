@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/10/20 23:14:11 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2020/11/29 19:37:14 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.librespot
 PKG_OPTIONS_OPTIONAL_GROUPS=	backend
@@ -21,7 +21,7 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/li
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
-CARGO_FEATURES+=	jack-backend
+CARGO_FEATURES+=	jackaudio-backend
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.jack}/lib
 .include "../../audio/jack/buildlink3.mk"
 .endif
