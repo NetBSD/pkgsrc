@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/30 08:24:32 markd Exp $
+$NetBSD: distinfo,v 1.7 2020/11/30 21:45:21 nikita Exp $
 
-SHA1 (tex-europasscv-49703/europasscv.doc.tar.xz) = 6c3611f192634a3c60824ef3288977232b9f4a67
-RMD160 (tex-europasscv-49703/europasscv.doc.tar.xz) = 5dc77fa46762ce120320085557bc93743801c492
-SHA512 (tex-europasscv-49703/europasscv.doc.tar.xz) = 652cdd7b97187320ad46df3b382017c43c05c51db4bf1e34686d52acea0b0e1df7a4a5de07ba2e9a729cc4d8bc6c3bfbeec67ee46896b989bd13685d6966bdfa
-Size (tex-europasscv-49703/europasscv.doc.tar.xz) = 449528 bytes
+SHA1 (tex-europasscv-doc-2020-10-56829/europasscv.doc.tar.xz) = 20728b537981e14043ad134e4946ebdb3ae5e4be
+RMD160 (tex-europasscv-doc-2020-10-56829/europasscv.doc.tar.xz) = 1f79bfa206371002c0841c00a7049a9b721b3151
+SHA512 (tex-europasscv-doc-2020-10-56829/europasscv.doc.tar.xz) = 834c4266e343a8b615a45a2c4b064170bf6c9516a8631342ff02d4de7154229458818192670f3f73aac5600407c830c1be384226bb3b0923af964905a39d99b3
+Size (tex-europasscv-doc-2020-10-56829/europasscv.doc.tar.xz) = 452684 bytes
