@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6488 2020/11/30 11:34:29 micha Exp $
+$NetBSD: CHANGES-2020,v 1.6489 2020/11/30 11:59:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9459,3 +9459,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/lighttpd to 1.4.56 [schmonz 2020-11-30]
 	Updated news/canlock-hp to 3.2.1 [micha 2020-11-30]
 	Updated news/libcanlock to 3.2.1 [micha 2020-11-30]
+	Updated textproc/p5-Search-Xapian to 1.2.25.4 [schmonz 2020-11-30]
