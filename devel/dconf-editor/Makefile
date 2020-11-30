@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/11/29 17:31:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.57 2020/11/30 00:03:47 gutteridge Exp $
 
 DISTNAME=	dconf-editor-3.38.2
 CATEGORIES=	devel gnome
@@ -11,7 +11,10 @@ COMMENT=	gsettings editor
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c99
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	msgfmt pkg-config
+
+# Requires --desktop in msgfmt.
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../devel/dconf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.46.0
