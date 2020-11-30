@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/10/12 21:51:58 bacon Exp $
+# $NetBSD: Makefile,v 1.8 2020/11/30 06:11:02 gutteridge Exp $
 
-VERSION=	6.1.0
+VERSION=	6.3.0
 DISTNAME=	music21-noCorpus-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-music21-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cuthbertLab/}
 GITHUB_PROJECT=	music21
@@ -23,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-joblib-[0-9]*:../../devel/py-joblib
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-Levenshtein-[0-9]*:../../textproc/py-Levenshtein
 DEPENDS+=	${PYPKGPREFIX}-jsonpickle-[0-9]*:../../textproc/py-jsonpickle
 DEPENDS+=	${PYPKGPREFIX}-webcolors>=1.11:../../www/py-webcolors
 
