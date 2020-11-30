@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/04 01:11:31 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/11/30 06:11:02 gutteridge Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -452,6 +452,7 @@ ${PYSITELIB}/music21/midi/testPrimitive/test12.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test13.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test14.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test15.mid
+${PYSITELIB}/music21/midi/testPrimitive/test16.mid
 ${PYSITELIB}/music21/midi/translate.py
 ${PYSITELIB}/music21/midi/translate.pyc
 ${PYSITELIB}/music21/midi/translate.pyo
