@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/10/03 06:13:27 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/11/30 20:13:53 adam Exp $
 
-SHA1 (ecdsa-0.16.0.tar.gz) = 52b4b3e423662f90c4bbbbdcf0fd6bcf52fdee01
-RMD160 (ecdsa-0.16.0.tar.gz) = 4fdfc7188776539ce64f482936f6454da8ca4595
-SHA512 (ecdsa-0.16.0.tar.gz) = 94ccefe19899a5e56393bb0e6624e9af66bdc60ad370d65900a24a0465c430a3a001ed9c25970e48834cb25ca730bc9279af98d17ecd3ad66189c64c8f864b42
-Size (ecdsa-0.16.0.tar.gz) = 125851 bytes
+SHA1 (ecdsa-0.16.1.tar.gz) = ec9fa2f821e0bdf0812dc0c94b92214212541fb6
+RMD160 (ecdsa-0.16.1.tar.gz) = e3ee5219f8d8c8cd8b3eba2519cde9d70d3b0d9e
+SHA512 (ecdsa-0.16.1.tar.gz) = 935416ff25a71b1e6fe442b11e8d2c1463b1652d539274e094112a4847c2c749ff58eb9f5ed108ed5613b7363d3f2b1c07ba3d01af8cfed4e1b4bec407d3f5a6
+Size (ecdsa-0.16.1.tar.gz) = 126935 bytes
