@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.23 2020/06/30 14:45:48 nia Exp $
+# $NetBSD: options.mk,v 1.24 2020/11/30 10:28:33 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=		bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
-PKG_OPTIONS_LEGACY_OPTS+=	memcache:memcached
+PKG_SUPPORTED_OPTIONS=		brotli bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
 PKG_SUGGESTED_OPTIONS=		inet6 ssl
 
 .include "../../mk/bsd.options.mk"
@@ -10,7 +9,17 @@ PKG_SUGGESTED_OPTIONS=		inet6 ssl
 PLIST_VARS+=		gdbm geoip gssapi ldap lua memcached mysql ssl
 
 ###
-### Allow using bzip2 as a compression method in the "compress" module.
+### Allow using brotli as a compression method in the "deflate" module.
+###
+.if !empty(PKG_OPTIONS:Mbrotli)
+.  include "../../archivers/brotli/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-brotli
+.else
+CONFIGURE_ARGS+=	--without-brotli
+.endif
+
+###
+### Allow using bzip2 as a compression method in the "deflate" module.
 ###
 .if !empty(PKG_OPTIONS:Mbzip2)
 .  include "../../archivers/bzip2/buildlink3.mk"
