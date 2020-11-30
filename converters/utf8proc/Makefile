@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/11/29 18:11:13 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/11/30 10:54:03 micha Exp $
 
 DISTNAME=	utf8proc-2.6.0
 CATEGORIES=	converters
@@ -17,8 +17,8 @@ INSTALLATION_DIRS=	include lib lib/pkgconfig
 
 # Use ABI version from CMakeLists.txt to stay compatible with cmake builds
 MAJOR=	2
-MINOR=	3
-PATCH=	2
+MINOR=	4
+PATCH=	0
 
 do-configure:
 	cd ${WRKSRC} && ${SED}						\
