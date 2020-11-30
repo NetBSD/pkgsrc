@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6493 2020/11/30 15:25:48 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6494 2020/11/30 15:43:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9464,3 +9464,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/npm to 6.14.9 [ryoon 2020-11-30]
 	Updated games/woof to 3.0.0 [micha 2020-11-30]
 	Updated converters/utf8proc to 2.6.0nb1 [ryoon 2020-11-30]
+	Updated graphics/krita to 4.4.1 [ryoon 2020-11-30]
