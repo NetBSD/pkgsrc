@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/02/25 11:28:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2020/11/30 12:26:07 nia Exp $
 
 DISTNAME=	phone-2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.astron.com/pub/phone/
 DIST_SUBDIR=	phone-2.0nb1
