@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/11/26 16:28:11 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/11/30 12:31:20 nia Exp $
 
 DISTNAME=	halibut-1.2
 CATEGORIES=	textproc
@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/halibut \
 		${DESTDIR}${PREFIX}/bin/halibut
-	${INSTALL_PROGRAM} ${WRKSRC}/doc/halibut.1 \
+	${INSTALL_MAN} ${WRKSRC}/doc/halibut.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/halibut.1
 
 .include "../../mk/bsd.pkg.mk"
