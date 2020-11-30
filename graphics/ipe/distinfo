@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.2 2019/01/01 16:34:09 wiz Exp $
+$NetBSD: distinfo,v 1.3 2020/11/30 13:34:41 nia Exp $
 
 SHA1 (ipe-7.2.7-src.tar.gz) = 58410e29c04e7a7c3978bd9afe6d25a7924bd30d
 RMD160 (ipe-7.2.7-src.tar.gz) = 6d68ad7831923d04ba07086f3dde2be9830d756a
 SHA512 (ipe-7.2.7-src.tar.gz) = 01c855f77814e59c56198fd9216be61ac7b9b6de827eaa18cbd9464c6c5116ca11d2d3b64a71edee94aecafe0d731352455e476657c7d2e9a2237e0cfa1f7bf5
 Size (ipe-7.2.7-src.tar.gz) = 1561350 bytes
 SHA1 (patch-config.mak) = 29a5115e66b4e899692ecfe3c6a0438efb6d9cc2
+SHA1 (patch-ipecanvas_ipecanvas__qt.cpp) = abf7937e2860fd9ff0ba36ee92952d1a987190cd
 SHA1 (patch-ipelib_ipeplatform.cpp) = 4d94deab1dbf9dcf40777651e8437a6b0af9b397
