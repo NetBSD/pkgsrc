@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6491 2020/11/30 12:25:52 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6492 2020/11/30 12:27:19 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9462,3 +9462,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Search-Xapian to 1.2.25.4 [schmonz 2020-11-30]
 	Updated emulators/nono to 0.1.4nb1 [ryoon 2020-11-30]
 	Updated lang/npm to 6.14.9 [ryoon 2020-11-30]
+	Updated games/woof to 3.0.0 [micha 2020-11-30]
