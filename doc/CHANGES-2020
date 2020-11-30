@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6494 2020/11/30 15:43:30 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6495 2020/11/30 20:18:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9465,3 +9465,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/woof to 3.0.0 [micha 2020-11-30]
 	Updated converters/utf8proc to 2.6.0nb1 [ryoon 2020-11-30]
 	Updated graphics/krita to 4.4.1 [ryoon 2020-11-30]
+	Updated www/py-easy-thumbnails to 2.7.1 [adam 2020-11-30]
+	Updated security/py-ecdsa to 0.16.1 [adam 2020-11-30]
+	Updated print/py-reportlab to 3.5.55 [adam 2020-11-30]
+	Updated archivers/py-zipp to 3.4.0 [adam 2020-11-30]
