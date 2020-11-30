@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6489 2020/11/30 11:59:18 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6490 2020/11/30 12:25:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9460,3 +9460,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated news/canlock-hp to 3.2.1 [micha 2020-11-30]
 	Updated news/libcanlock to 3.2.1 [micha 2020-11-30]
 	Updated textproc/p5-Search-Xapian to 1.2.25.4 [schmonz 2020-11-30]
+	Updated emulators/nono to 0.1.4nb1 [ryoon 2020-11-30]
