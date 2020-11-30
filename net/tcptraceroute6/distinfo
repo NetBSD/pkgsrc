@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2020/01/07 11:08:14 kim Exp $
+$NetBSD: distinfo,v 1.5 2020/11/30 12:49:23 nia Exp $
 
 SHA1 (ndisc6-1.0.4.tar.bz2) = 08704f1bbcc12e21826abf9185fbf9f6186a9668
 RMD160 (ndisc6-1.0.4.tar.bz2) = 57b92e4085ca5b1ff2a050c33081b8770de6b68a
@@ -6,3 +6,4 @@ SHA512 (ndisc6-1.0.4.tar.bz2) = 6f6cd939fb7079518db5c1bcd11353c722237d7735d229f9
 Size (ndisc6-1.0.4.tar.bz2) = 264071 bytes
 SHA1 (patch-rdnssd_rdnssd.h) = 344dd06a3405cd4480c056e47985fd51335ed6f1
 SHA1 (patch-src_addrinfo.c) = a8882a8b7180039c4dfe97c4907fcf800b69d6e7
+SHA1 (patch-src_tcpspray.c) = 74c051395b5ac62dd66d1f07711d8e5bb04a755f
