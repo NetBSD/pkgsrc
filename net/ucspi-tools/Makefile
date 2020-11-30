@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/11/27 13:48:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2020/11/30 12:41:41 nia Exp $
 
 DISTNAME=		ucspi-tools-1.6
 PKGREVISION=		2
@@ -11,6 +11,9 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/younix/ucspi/
 COMMENT=		SOCKS proxy and TLS support for UCSPI
 LICENSE=		isc
+
+# strlcpy
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 USE_TOOLS+=		gmake pkg-config
 MAKE_FILE=		GNUmakefile
