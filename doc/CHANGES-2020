@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6495 2020/11/30 20:18:33 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6496 2020/11/30 20:32:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9469,3 +9469,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-ecdsa to 0.16.1 [adam 2020-11-30]
 	Updated print/py-reportlab to 3.5.55 [adam 2020-11-30]
 	Updated archivers/py-zipp to 3.4.0 [adam 2020-11-30]
+	Updated devel/py-hglib to 2.6.2 [adam 2020-11-30]
+	Updated sysutils/py-psutil to 5.7.3 [adam 2020-11-30]
