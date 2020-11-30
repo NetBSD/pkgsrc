@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/04/15 15:09:05 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/11/30 20:38:12 adam Exp $
 
-SHA1 (jsonrpclib-pelix-0.4.1.tar.gz) = 5581a0e6f8bc6e593b67812a9fd0918368f4c780
-RMD160 (jsonrpclib-pelix-0.4.1.tar.gz) = 0974d8c8603101e3a805a09f3ddfa4b86ad8fea3
-SHA512 (jsonrpclib-pelix-0.4.1.tar.gz) = 9cf0fb296074afb34d92436b6e0a0749c3cd34f0ede830efb840f8a5138add17f5ac3d0bfdb0a5a5b65c508ccd537c957b4ac97054aa3ee7d2ed982c7afd5ecd
-Size (jsonrpclib-pelix-0.4.1.tar.gz) = 41628 bytes
+SHA1 (jsonrpclib-pelix-0.4.2.tar.gz) = 9139105add2124b3d11d0d053d2d0f5807ff08e2
+RMD160 (jsonrpclib-pelix-0.4.2.tar.gz) = ebe4f592cabc2d544ebef62102db0bb451f4b3b4
+SHA512 (jsonrpclib-pelix-0.4.2.tar.gz) = 2767ab65c201b9cde515697f4eff369d90846711a7259d5c6908bc7b7b2a9a2be4f12dcb5362c0d8bd84b6c49cf8a7dc58e27eee2629aa3088cb1126f11aa02b
+Size (jsonrpclib-pelix-0.4.2.tar.gz) = 42262 bytes
