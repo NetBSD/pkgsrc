@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.19 2018/04/14 22:13:16 christos Exp $
+$NetBSD: distinfo,v 1.20 2020/11/30 12:20:53 nia Exp $
 
 SHA1 (i2cbd-2.0_BETA5.tar.gz) = be219c5b6fa2413681214d756dee02c3cd252843
 RMD160 (i2cbd-2.0_BETA5.tar.gz) = d48988fb175857370c2523c86e0e586decbe28ae
 SHA512 (i2cbd-2.0_BETA5.tar.gz) = 8e13e005c46dfbb8a63a1269872270db03a0f1378a0cb14a879a8572583e47893047ebabd2e7391964d94ab9e5a4c89d88a3a5c5727195904fd0f5173b8e51b3
 Size (i2cbd-2.0_BETA5.tar.gz) = 59158 bytes
 SHA1 (patch-aa) = 0cf7ee306f19da66876ec8ebf2022468ded274a8
-SHA1 (patch-ab) = 77627f5771535862530f8a497a16e64bee19075f
+SHA1 (patch-ab) = 44e06ad7364fbd7408c181a4d77353d87c5f67ab
 SHA1 (patch-ac) = ca8e6b7324a22fb9ecabf2374e34febb55196e28
 SHA1 (patch-src_Makefile) = c4fb1672fd18c4ff8701a16ed3a023032c6e1991
 SHA1 (patch-src_access.c) = adea5db5d0a5c25f6ea830909ee7843112751812

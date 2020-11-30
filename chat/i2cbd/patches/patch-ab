@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2017/12/11 07:54:42 spz Exp $
+$NetBSD: patch-ab,v 1.6 2020/11/30 12:20:53 nia Exp $
 
 pkgsrcify
 
@@ -12,12 +12,21 @@ pkgsrcify
  BINDIR		= ${PREFIX}/sbin
  MANDIR		= ${PREFIX}/man
  MAN8DIR		= ${PREFIX}/man/man8
-@@ -19,8 +18,8 @@ EXTRAWARNS	= -Wshadow -Wpointer-arith -W
+@@ -12,15 +11,15 @@ ETCDIR		= ${PREFIX}/etc/icbd
+ INSTALL		= ../install-sh
+ 
+ WARNS		= -Wall -ansi -pedantic
+-EXTRAWARNS	= -Wshadow -Wpointer-arith -Werror -Wcast-qual -Wcast-align \
++EXTRAWARNS	= -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align \
+ 		  -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations \
+ 		  -Wnested-externs
+ # We really should make it possible to build with -Wwrite-strings, as this _will_
  # affect portability to some platforms.  The others here are irrelevant.
  BADWARNS	= -Wwrite-strings -Wconversion -Waggregate-return -Wredundant-decls
- DEBUG		= -DDEBUG -DVERBOSE -g
+-DEBUG		= -DDEBUG -DVERBOSE -g
 -CFLAGS		= ${WARNS} ${EXTRAWARNS} ${DEBUG}
 -LDFLAGS		=
++#DEBUG		= -DDEBUG -DVERBOSE -g
 +CFLAGS		+= ${WARNS} ${EXTRAWARNS} ${DEBUG} -DPREFIX=\"${PREFIX}\" -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
 +#LDFLAGS		=
  LIBS		= -lutil
