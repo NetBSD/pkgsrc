@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6496 2020/11/30 20:32:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6497 2020/11/30 20:38:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9471,3 +9471,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/py-zipp to 3.4.0 [adam 2020-11-30]
 	Updated devel/py-hglib to 2.6.2 [adam 2020-11-30]
 	Updated sysutils/py-psutil to 5.7.3 [adam 2020-11-30]
+	Updated textproc/py-jsonpickle to 1.4.2 [adam 2020-11-30]
+	Updated textproc/py-jsonrpclib-pelix to 0.4.2 [adam 2020-11-30]
