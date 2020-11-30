@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6486 2020/11/30 10:28:42 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6487 2020/11/30 11:31:38 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9457,3 +9457,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated ham/freedv to 1.4.2 [dbj 2020-11-29]
 	Updated audio/py-music21 to 6.3.0 [gutteridge 2020-11-30]
 	Updated www/lighttpd to 1.4.56 [schmonz 2020-11-30]
+	Updated news/canlock-hp to 3.2.1 [micha 2020-11-30]
