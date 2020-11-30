@@ -1,6 +1,8 @@
-$NetBSD: patch-client_Makefile,v 1.4 2015/06/25 07:02:42 dholland Exp $
+$NetBSD: patch-client_Makefile,v 1.5 2020/11/30 12:26:07 nia Exp $
 
 Configure for pkgsrc.
+
+Don't build with -g or -Werror.
 
 Also, remove explicit depends on header files in /usr/include, many of
 which aren't actually used.
@@ -12,9 +14,10 @@ which aren't actually used.
  
  CC     = cc
 -CFLAGS+= -std=gnu99  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wno-sign-compare  -Wno-traditional	 -Wa,--fatal-warnings -Wreturn-type -Wswitch -Wshadow -Wcast-qual -Wwrite-strings -Wextra -Wno-unused-parameter -Wno-sign-compare -Wold-style-definition -Wsign-compare -Wformat=2   -Wno-format-zero-length  -Werror
-+CFLAGS+= -std=gnu99  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wno-sign-compare -Wa,--fatal-warnings -Wreturn-type -Wswitch -Wshadow -Wcast-qual -Wwrite-strings -Wextra -Wno-unused-parameter -Wno-sign-compare -Wold-style-definition -Wsign-compare -Wformat=2   -Wno-format-zero-length  -Werror
++CFLAGS+= -std=gnu99  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wno-sign-compare -Wa,--fatal-warnings -Wreturn-type -Wswitch -Wshadow -Wcast-qual -Wwrite-strings -Wextra -Wno-unused-parameter -Wno-sign-compare -Wold-style-definition -Wsign-compare -Wformat=2   -Wno-format-zero-length
  #CFLAGS = -O -DSERVICES -DLOCAL_ECHO
- CFLAGS += -g -DSERVICES #-DLOCAL_ECHO
+-CFLAGS += -g -DSERVICES #-DLOCAL_ECHO
++CFLAGS += -DSERVICES #-DLOCAL_ECHO
  LIBS   = -lcurses -ltermlib #-lresolv
  
  LPR    = lpr 
