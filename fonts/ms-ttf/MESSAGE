@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2014/06/01 16:35:36 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2020/11/30 12:38:20 ryoon Exp $
 
 You must configure your X server to use the new fonts. Add
-these to your /etc/X11/XF86Config. Make sure the TTF and Type1
+these to your /etc/X11/xorg.conf. Make sure the TTF and Type1
 font settings are the first FontPath lines.
 
 Section "Files"
