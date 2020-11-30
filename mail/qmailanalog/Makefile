@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/11/19 09:08:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2020/11/30 13:42:04 schmonz Exp $
 #
 
 DISTNAME=		qmailanalog-0.70
@@ -12,6 +12,11 @@ COMMENT=		Collection of tools to help analyze qmail's activity
 LICENSE=		djb-nonlicense
 
 SUBST_CLASSES+=		djberrno
+
+SUBST_CLASSES+=		pkgmandir
+SUBST_STAGE.pkgmandir=	pre-configure
+SUBST_FILES.pkgmandir=	hier.c
+SUBST_VARS.pkgmandir=	PKGMANDIR
 
 INSTALLATION_DIRS=	share/doc
 
