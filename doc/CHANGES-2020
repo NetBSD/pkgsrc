@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6499 2020/11/30 21:46:39 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.6500 2020/12/01 05:13:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9475,3 +9475,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-jsonrpclib-pelix to 0.4.2 [adam 2020-11-30]
 	Updated print/tex-europasscv-doc to 31.56829 [nikita 2020-11-30]
 	Updated print/tex-europasscv to 31.56829 [nikita 2020-11-30]
+	Updated editors/xfce4-mousepad to 0.5.0 [gutteridge 2020-12-01]
