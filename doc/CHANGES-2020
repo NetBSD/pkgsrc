@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6511 2020/12/01 15:34:15 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.6512 2020/12/01 21:03:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9487,3 +9487,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-city-lite to 2020.12 [fcambus 2020-12-01]
 	Updated net/dbip-country-lite to 2020.12 [fcambus 2020-12-01]
 	Updated audio/libopenmpt to 0.5.4 [fcambus 2020-12-01]
+	Updated x11/modular-xorg-server to 1.20.10 [wiz 2020-12-01]
