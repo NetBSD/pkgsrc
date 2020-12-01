@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2020/11/01 15:22:04 fcambus Exp $
+$NetBSD: distinfo,v 1.10 2020/12/01 15:00:40 fcambus Exp $
 
-SHA1 (dbip-country-lite-2020-11.mmdb.gz) = 547551974c3388e7ab9ba2674b638c0e0105d7a6
-RMD160 (dbip-country-lite-2020-11.mmdb.gz) = cf4e4161d799d1c77db26eb93b977d712dee9838
-SHA512 (dbip-country-lite-2020-11.mmdb.gz) = bd558403017f5ad7471dc051868c57573921ecf5fcd01470ffd48b5bb539fc56d30605e60a586d3ada46a4da70552c759a544c910e42fe9ecf0470688de53dc6
-Size (dbip-country-lite-2020-11.mmdb.gz) = 2586903 bytes
+SHA1 (dbip-country-lite-2020-12.mmdb.gz) = 52598ce0f9d14f1730ac1c215c49557c8a987678
+RMD160 (dbip-country-lite-2020-12.mmdb.gz) = 9d3539a8f0f4e6d5e6dd1efba5b6358381d1d034
+SHA512 (dbip-country-lite-2020-12.mmdb.gz) = 6865c1d32ed3a4e48e84cc984a490b0b85e11b64c33828e557c8c11a6cc3db27524b7df4abe2cc16a6b3e6c9dffd09ac41db795300d0bc67bc016969c6b03731
+Size (dbip-country-lite-2020-12.mmdb.gz) = 2524676 bytes
