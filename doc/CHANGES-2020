@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6503 2020/12/01 09:44:22 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6504 2020/12/01 11:21:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9479,3 +9479,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xnotify to 0.8.1 [pin 2020-12-01]
 	Updated graphics/gnuplot to 5.4.1 [prlw1 2020-12-01]
 	Updated www/lighttpd to 1.4.56nb1 [schmonz 2020-12-01]
+	Updated textproc/dwdiff to 2.1.3 [nia 2020-12-01]
