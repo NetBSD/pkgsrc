@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2020/11/05 09:08:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2020/12/01 13:16:25 nia Exp $
 
-PKGNAME=	minetest-5.1.1
-PKGREVISION=	5
+PKGNAME=	minetest-5.3.0
 CATEGORIES=	games
 DIST_SUBDIR=	minetest-${PKGVERSION_NOREV}
 DISTFILES+=	minetest.tar.gz
 DISTFILES+=	minetest-game.tar.gz
-SITES.minetest.tar.gz=\
+SITES.minetest.tar.gz= \
 	-https://github.com/minetest/minetest/archive/${PKGVERSION_NOREV}.tar.gz
-SITES.minetest-game.tar.gz=\
+SITES.minetest-game.tar.gz= \
 	-https://github.com/minetest/minetest_game/archive/${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,7 +19,7 @@ WRKSRC=		${WRKDIR}/minetest-${PKGVERSION_NOREV}
 
 USE_CMAKE=	yes
 USE_TOOLS+=	msgfmt
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
 # "Insufficient gcc version, found 4.8.5.  Version 4.9 or higher is required."
 GCC_REQD+=	4.9
@@ -34,7 +33,11 @@ CMAKE_ARGS+=	-DENABLE_POSTGRESQL=FALSE
 CMAKE_ARGS+=	-DENABLE_LEVELDB=FALSE
 CMAKE_ARGS+=	-DENABLE_REDIS=FALSE
 CMAKE_ARGS+=	-DENABLE_SPATIAL=FALSE
+
+.include "../../lang/LuaJIT2/platform.mk"
+.if ${PLATFORM_SUPPORTS_LUAJIT} == "no"
 CMAKE_ARGS+=	-DENABLE_LUAJIT=FALSE
+.endif
 
 CMAKE_ARGS+=	-DIRRLICHT_INCLUDE_DIR=${BUILDLINK_PREFIX.irrlicht}/include/irrlicht
 
@@ -56,6 +59,9 @@ post-extract:
 .include "../../graphics/irrlicht/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.if ${PLATFORM_SUPPORTS_LUAJIT} != "no"
+.include "../../lang/LuaJIT2/buildlink3.mk"
+.endif
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
