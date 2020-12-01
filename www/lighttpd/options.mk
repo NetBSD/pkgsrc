@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.24 2020/11/30 10:28:33 schmonz Exp $
+# $NetBSD: options.mk,v 1.25 2020/12/01 09:44:12 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=		brotli bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
+PKG_SUPPORTED_OPTIONS=		brotli bzip2 fam gdbm inet6 ldap libdbi lua mysql ssl memcached geoip gssapi webdav
 PKG_SUGGESTED_OPTIONS=		inet6 ssl
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gdbm geoip gssapi ldap lua memcached mysql ssl
+PLIST_VARS+=		gdbm geoip gssapi ldap libdbi lua memcached mysql ssl
 
 ###
 ### Allow using brotli as a compression method in the "deflate" module.
@@ -64,6 +64,17 @@ PLIST.ldap=		yes
 .endif
 
 ###
+### libdbi
+###
+.if !empty(PKG_OPTIONS:Mlibdbi)
+.  include "../../databases/libdbi/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-dbi
+PLIST.libdbi=		yes
+.else
+CONFIGURE_ARGS+=	--without-dbi
+.endif
+
+###
 ### Support enabling the Cache Meta Language module with the Lua engine.
 ###
 .if !empty(PKG_OPTIONS:Mlua)
@@ -96,6 +107,8 @@ PLIST.mysql=		yes
 ### HTTPS support
 ###
 .if !empty(PKG_OPTIONS:Mssl)
+.  include "../../security/nettle/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-nettle
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 PLIST.ssl=		yes
