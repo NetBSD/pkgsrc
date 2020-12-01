@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2020/11/27 23:21:24 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2020/12/01 21:37:28 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-0.2.3
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -195,4 +195,3 @@ CARGO_CRATE_DEPENDS+=	x11-clipboard-0.5.1
 CARGO_CRATE_DEPENDS+=	xcb-0.9.0
 CARGO_CRATE_DEPENDS+=	xml-rs-0.8.3
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.4
-
