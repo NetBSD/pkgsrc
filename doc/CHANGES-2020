@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6512 2020/12/01 21:03:29 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6513 2020/12/01 21:37:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9488,3 +9488,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-country-lite to 2020.12 [fcambus 2020-12-01]
 	Updated audio/libopenmpt to 0.5.4 [fcambus 2020-12-01]
 	Updated x11/modular-xorg-server to 1.20.10 [wiz 2020-12-01]
+	Updated sysutils/broot to 1.0.8 [pin 2020-12-01]
