@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/11/30 21:37:44 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/01 22:47:05 nikita Exp $
 
 DISTNAME=	europasscv
-PKGNAME=	tex-${DISTNAME}-2020-10-31.56829
+PKGNAME=	tex-${DISTNAME}-2020.10.31.56829
 TEXLIVE_REV=	56829
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
