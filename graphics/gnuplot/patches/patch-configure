@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.2 2020/11/20 17:25:02 prlw1 Exp $
+$NetBSD: patch-configure,v 1.3 2020/12/01 09:33:17 prlw1 Exp $
 
 NetBSD editline keeps header files in "readline", not "editline".
 Same applies to DragonFly.
 
-Also get rid of a non-portable "test ... ==" instance.
+Also get rid of a non-portable "test ... ==" instances.
 
---- configure.orig	2020-07-13 03:38:14.000000000 +0000
+--- configure.orig	2020-11-27 00:12:02.000000000 +0000
 +++ configure
-@@ -8969,7 +8969,7 @@ $as_echo "yes" >&6; }
+@@ -8977,7 +8977,7 @@ $as_echo "yes" >&6; }
  
  # Check whether --with-aquaterm was given.
  if test "${with_aquaterm+set}" = set; then :
@@ -16,7 +16,7 @@ Also get rid of a non-portable "test ... ==" instance.
  
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for AquaTerm framework presence" >&5
  $as_echo_n "checking for AquaTerm framework presence... " >&6; }
-@@ -10185,9 +10185,9 @@ fi
+@@ -10193,9 +10193,9 @@ fi
  
  $as_echo "#define HAVE_LIBEDITLINE 1" >>confdefs.h
  
@@ -28,7 +28,16 @@ Also get rid of a non-portable "test ... ==" instance.
  if test "x$ac_cv_header_editline_readline_h" = xyes; then :
    cat >>confdefs.h <<_ACEOF
  #define HAVE_EDITLINE_READLINE_H 1
-@@ -16582,7 +16584,7 @@ $as_echo "    pict2e, pslatex, pstex, ps
+@@ -10979,7 +10979,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-  if test $pkg_failed == no && test -n "$GDLIB_CONFIG"; then
++  if test $pkg_failed = no && test -n "$GDLIB_CONFIG"; then
+     libgd_CPPFLAGS=`$GDLIB_CONFIG --cflags`
+     libgd_LDFLAGS=`$GDLIB_CONFIG --ldflags`
+     libgd_LIBS=`$GDLIB_CONFIG --libs`
+@@ -16584,7 +16586,7 @@ $as_echo "    pict2e, pslatex, pstex, ps
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: " >&5
  $as_echo "" >&6; }
  
@@ -37,7 +46,7 @@ Also get rid of a non-portable "test ... ==" instance.
    { $as_echo "$as_me:${as_lineno-$LINENO}: result:   dot-matrix terminals: yes ( --without-bitmap-terminals to disable)" >&5
  $as_echo "  dot-matrix terminals: yes ( --without-bitmap-terminals to disable)" >&6; }
  else
-@@ -16596,7 +16598,7 @@ $as_echo "    hp500c, hpdj, hpljii, hppj
+@@ -16598,7 +16600,7 @@ $as_echo "    hp500c, hpdj, hpljii, hppj
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: " >&5
  $as_echo "" >&6; }
  
@@ -46,7 +55,7 @@ Also get rid of a non-portable "test ... ==" instance.
    { $as_echo "$as_me:${as_lineno-$LINENO}: result:   tektronix terminal emulators: no ( --with-tektronix to enable)" >&5
  $as_echo "  tektronix terminal emulators: no ( --with-tektronix to enable)" >&6; }
  else
-@@ -16626,7 +16628,7 @@ else
+@@ -16628,7 +16630,7 @@ else
  $as_echo "    ggi terminal:  no   (use --with-ggi to enable, requires libggi)" >&6; }
  fi
  
@@ -55,7 +64,7 @@ Also get rid of a non-portable "test ... ==" instance.
    { $as_echo "$as_me:${as_lineno-$LINENO}: result:     gpic terminal: yes" >&5
  $as_echo "    gpic terminal: yes" >&6; }
  else
-@@ -16634,7 +16636,7 @@ else
+@@ -16636,7 +16638,7 @@ else
  $as_echo "    gpic terminal: no   (use --with-gpic to enable)" >&6; }
  fi
  
@@ -64,7 +73,7 @@ Also get rid of a non-portable "test ... ==" instance.
    { $as_echo "$as_me:${as_lineno-$LINENO}: result:     tgif terminal: yes" >&5
  $as_echo "    tgif terminal: yes" >&6; }
  else
-@@ -16642,7 +16644,7 @@ else
+@@ -16644,7 +16646,7 @@ else
  $as_echo "    tgif terminal: no   (use --with-tgif to enable)" >&6; }
  fi
  
