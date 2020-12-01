@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 17:41:18 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/12/01 11:13:37 nia Exp $
 
 SHA1 (ucl-1.03.tar.gz) = 5847003d136fbbca1334dd5de10554c76c755f7c
 RMD160 (ucl-1.03.tar.gz) = d1b50127d482481c125eabff9a9c157d491c4a6a
 SHA512 (ucl-1.03.tar.gz) = 7dd1824d01b4bb41ee03bbceddc634a9f7f910d235e5cca163d783680d6743f0f3cc309bbbcc1e094d897d549d3805a555f9093b4d77805443d896dd1862aa34
 Size (ucl-1.03.tar.gz) = 534881 bytes
+SHA1 (patch-acc_acc__defs.h) = c2327d1346350e418856c5e162de2bf235f9dca7
