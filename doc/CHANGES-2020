@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6515 2020/12/01 22:47:44 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.6516 2020/12/01 22:50:48 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9491,3 +9491,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/broot to 1.0.8 [pin 2020-12-01]
 	Updated textproc/miller to 5.10.0 [fcambus 2020-12-01]
 	Updated print/tex-europasscv to 2020.10.31.56829 [nikita 2020-12-01]
+	Updated print/tex-europasscv-doc to 2020.10.31.56829 [nikita 2020-12-01]
