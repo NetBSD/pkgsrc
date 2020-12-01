@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6513 2020/12/01 21:37:52 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6514 2020/12/01 22:00:10 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9489,3 +9489,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/libopenmpt to 0.5.4 [fcambus 2020-12-01]
 	Updated x11/modular-xorg-server to 1.20.10 [wiz 2020-12-01]
 	Updated sysutils/broot to 1.0.8 [pin 2020-12-01]
+	Updated textproc/miller to 5.10.0 [fcambus 2020-12-01]
