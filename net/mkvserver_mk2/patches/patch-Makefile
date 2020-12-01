@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2020/12/01 11:48:49 nia Exp $
+
+Respect CFLAGS/LDFLAGS.
+
+--- Makefile.orig	2020-01-16 23:31:37.000000000 +0000
++++ Makefile
+@@ -9,16 +9,16 @@ all: server
+ 
+ server: segment.o buffer.o publisher.o server2.c
+ 	#$(CC) -g -Wall $(LAV_CFLAGS) $(LAV_LDFLAGS) -pthread -o server segment.o buffer.o publisher.o server2.c
+-	$(CC) -g -Wall $(LAV_CFLAGS) -pthread -o server segment.o buffer.o publisher.o server2.c $(LAV_LDFLAGS)
++	$(CC) $(LDFLAGS) -Wall $(LAV_CFLAGS) -pthread -o server segment.o buffer.o publisher.o server2.c $(LAV_LDFLAGS)
+ 
+ segment.o: segment.c segment.h
+-	$(CC) -g -Wall $(LAV_CFLAGS) -pthread -c segment.c
++	$(CC) $(CFLAGS) -Wall $(LAV_CFLAGS) -pthread -c segment.c
+ 
+ buffer.o: buffer.c buffer.h
+-	$(CC) -g -Wall $(LAV_CFLAGS) -pthread -c buffer.c
++	$(CC) $(CFLAGS) -Wall $(LAV_CFLAGS) -pthread -c buffer.c
+ 
+ publisher.o: publisher.c publisher.h
+-	$(CC) -g -Wall $(LAV_CFLAGS) -pthread -c publisher.c
++	$(CC) $(CFLAGS) -Wall $(LAV_CFLAGS) -pthread -c publisher.c
+ 
+ clean:
+ 	rm -f *.o server
