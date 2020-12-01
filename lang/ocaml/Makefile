@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2020/04/11 08:25:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.136 2020/12/01 23:44:00 he Exp $
 
 .include "Makefile.common"
 
@@ -54,11 +54,11 @@ PLIST.ocaml-prof=	yes
 # XXX This conditional is not complete.  It should match the
 # conditional in ocaml-x.y.z/configure.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || \
-    (${MACHINE_ARCH} == "aarch64")
+    (${MACHINE_ARCH} == "aarch64") || (${MACHINE_ARCH} == "powerpc")
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
-      (!empty(MACHINE_PLATFORM:MNetBSD-*-*) && empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
       !empty(MACHINE_PLATFORM:MSunOS-*-*)
 PLIST.ocaml-nat=	yes
