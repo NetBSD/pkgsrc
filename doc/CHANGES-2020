@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6502 2020/12/01 09:33:45 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.6503 2020/12/01 09:44:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9478,3 +9478,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/xfce4-mousepad to 0.5.0 [gutteridge 2020-12-01]
 	Updated x11/xnotify to 0.8.1 [pin 2020-12-01]
 	Updated graphics/gnuplot to 5.4.1 [prlw1 2020-12-01]
+	Updated www/lighttpd to 1.4.56nb1 [schmonz 2020-12-01]
