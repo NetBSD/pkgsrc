@@ -1,8 +1,9 @@
-$NetBSD: patch-src_util_string.cpp,v 1.2 2020/02/18 16:46:51 joerg Exp $
+$NetBSD: patch-src_util_string.cpp,v 1.3 2020/12/01 13:16:26 nia Exp $
 
-Work around iconv("UTF-8", "WCHAR_T") failing on NetBSD.
+NetBSD does not support iconv("UTF-8", "WCHAR_T"), so use UTF-32, as
+on Android.
 
---- src/util/string.cpp.orig	2019-10-12 13:48:58.000000000 +0000
+--- src/util/string.cpp.orig	2020-07-09 20:04:20.000000000 +0000
 +++ src/util/string.cpp
 @@ -38,9 +38,11 @@ with this program; if not, write to the 
  	#include <windows.h>
@@ -19,27 +20,44 @@ Work around iconv("UTF-8", "WCHAR_T") failing on NetBSD.
  #endif
  
  static bool parseHexColorString(const std::string &value, video::SColor &color,
-@@ -79,6 +81,12 @@ bool convert(const char *to, const char 
- 	return true;
- }
- 
-+#ifdef __NetBSD__
-+std::wstring utf8_to_wide(const std::string &input)
-+{
-+	return narrow_to_wide(input);
-+}
-+#else
- std::wstring utf8_to_wide(const std::string &input)
- {
- 	size_t inbuf_size = input.length() + 1;
-@@ -104,8 +112,9 @@ std::wstring utf8_to_wide(const std::str
- 
- 	return out;
- }
-+#endif
+@@ -82,6 +84,13 @@ bool convert(const char *to, const char 
+ #ifdef __ANDROID__
+ // Android need manual caring to support the full character set possible with wchar_t
+ const char *DEFAULT_ENCODING = "UTF-32LE";
++#elif defined(__NetBSD__)
++#include <sys/endian.h>
++#  if BYTE_ORDER == LITTLE_ENDIAN
++const char *DEFAULT_ENCODING = "UTF-32LE";
++#  else
++const char *DEFAULT_ENCODING = "UTF-32BE";
++#  endif
+ #else
+ const char *DEFAULT_ENCODING = "WCHAR_T";
+ #endif
+@@ -97,7 +106,7 @@ std::wstring utf8_to_wide(const std::str
+ 	char *outbuf = new char[outbuf_size];
+ 	memset(outbuf, 0, outbuf_size);
  
 -#ifdef __ANDROID__
 +#if defined(__ANDROID__) || defined(__NetBSD__)
- // TODO: this is an ugly fix for wide_to_utf8 somehow not working on android
- std::string wide_to_utf8(const std::wstring &input)
+ 	// Android need manual caring to support the full character set possible with wchar_t
+ 	SANITY_CHECK(sizeof(wchar_t) == 4);
+ #endif
+@@ -209,7 +218,7 @@ wchar_t *narrow_to_wide_c(const char *st
+ }
+ 
+ std::wstring narrow_to_wide(const std::string &mbs) {
+-#ifdef __ANDROID__
++#if defined(__ANDROID__) || defined(__NetBSD__)
+ 	return utf8_to_wide(mbs);
+ #else
+ 	size_t wcl = mbs.size();
+@@ -225,7 +234,7 @@ std::wstring narrow_to_wide(const std::s
+ 
+ std::string wide_to_narrow(const std::wstring &wcs)
  {
+-#ifdef __ANDROID__
++#if defined(__ANDROID__) || defined(__NetBSD__)
+ 	return wide_to_utf8(wcs);
+ #else
+ 	size_t mbl = wcs.size() * 4;
