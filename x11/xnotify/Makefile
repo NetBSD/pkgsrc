@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2020/10/29 07:47:42 pin Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/01 07:59:26 pin Exp $
 
-DISTNAME=	xnotify-0.7.3
+DISTNAME=	xnotify-0.8.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/phillbush/xnotify
