@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/24 21:00:02 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/01 11:09:18 nia Exp $
 
 DISTNAME=	nudoku-2.1.0
 CATEGORIES=	games
@@ -16,7 +16,7 @@ SUBST_MESSAGE.includes=	Fix gettext includes
 SUBST_FILES.includes+=	src/sudoku.c
 SUBST_SED.includes+=	-e 's,"gettext.h",<libintl.h>,'
 
-USE_TOOLS+=		autoreconf automake autoconf gettext
+USE_TOOLS+=		autoreconf automake autoconf autopoint gettext
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
