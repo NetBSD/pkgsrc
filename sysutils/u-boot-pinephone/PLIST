@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/01 06:52:30 riastradh Exp $
+share/u-boot/pinephone/installboot.plist
+share/u-boot/pinephone/u-boot-sunxi-with-spl.bin
