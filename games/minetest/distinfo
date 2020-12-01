@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2020/03/20 17:06:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/12/01 13:16:25 nia Exp $
 
-SHA1 (minetest-5.1.1/minetest-game.tar.gz) = ba19928812333b55128dceb0dcfe8434ef37c28e
-RMD160 (minetest-5.1.1/minetest-game.tar.gz) = 6e6e4dfbb68615a5eb9e62bccf1d073c087dcbcb
-SHA512 (minetest-5.1.1/minetest-game.tar.gz) = ad221be6b6a109d9cd4895f0c34f7fb9da88d9192de25dd56d1e8e4ecaee8704c9a052f8a0b2ee888fde9dbc25e34e3f01774d91c42c81c0a4d02305ce7cd834
-Size (minetest-5.1.1/minetest-game.tar.gz) = 1882016 bytes
-SHA1 (minetest-5.1.1/minetest.tar.gz) = 7e3142086b62c621ca04d8c81b14a9c3b48fdccd
-RMD160 (minetest-5.1.1/minetest.tar.gz) = 687020fad483e05f95d4a4544f42a310e965fdc9
-SHA512 (minetest-5.1.1/minetest.tar.gz) = 4a36a86a3e5f8f5246ff3410e9ab182631f38292bea077e7dbc25fdc1520e5a479ffbd5ec447000fb4999ab252a59bf976299e6fecda1f8cd47f40549885766b
-Size (minetest-5.1.1/minetest.tar.gz) = 9002025 bytes
+SHA1 (minetest-5.3.0/minetest-game.tar.gz) = f38130614b8571b2c422471185ff13b773dc2d08
+RMD160 (minetest-5.3.0/minetest-game.tar.gz) = 8042e143599c6066d9e14e4cff796768b0611c1f
+SHA512 (minetest-5.3.0/minetest-game.tar.gz) = 986e9ca436159b115a8d2a07c4d863e0f5b90343447864e737bfd93bdc75a6d4b9d97b9dc90486858dda69e9a76ffdf79186e163d55978196e8cb98091ff97e6
+Size (minetest-5.3.0/minetest-game.tar.gz) = 1904865 bytes
+SHA1 (minetest-5.3.0/minetest.tar.gz) = 8099bfa9122ef64d22c065f3bc5c7ea0eba23d28
+RMD160 (minetest-5.3.0/minetest.tar.gz) = a36cbe02f7bf511ecb47c6212846aa4a528a61dd
+SHA512 (minetest-5.3.0/minetest.tar.gz) = 7bb34a80107861539a9ac2417812625ef11d145bf9401afdb8e0a1b9f619adcce24e2becf5bf361b805f4610097cf9d44c76d497ab08d489a43655852ce44777
+Size (minetest-5.3.0/minetest.tar.gz) = 10828893 bytes
 SHA1 (patch-CMakeLists.txt) = 50ceef7b158a92900c8d5b6b178d1ab0570e16b1
 SHA1 (patch-src_noise.h) = 54e72bf65fb642542985b1eb5dcd45fb3da4a57f
 SHA1 (patch-src_threading_thread.cpp) = c5334a9fd1e5a65cfa0828b47ebd8e50ba1ed7d7
-SHA1 (patch-src_util_string.cpp) = 2004c4a9792586d477e8ee9c44c08b5a184a6cd3
+SHA1 (patch-src_util_string.cpp) = 30ec075a593c5af66da39fdc4e3b5a5a61e2d171
