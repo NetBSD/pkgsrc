@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2020/11/26 11:24:13 otis Exp $
+# $NetBSD: Makefile,v 1.34 2020/12/02 14:54:55 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
+DISTFILES+=	${DEFAULT_DISTFILES} bind-9.11.25-fixed-man-pages.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.isc.org/software/bind/
@@ -22,7 +24,7 @@ BUILD_DEFS+=	BIND_DIR VARBASE
 
 .include "options.mk"
 
-USE_TOOLS+=		pax perl pkg-config
+USE_TOOLS+=		pax perl pkg-config tar
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		WRKDIR=${WRKDIR} PREFIX=${PREFIX}
@@ -69,6 +71,10 @@ CONF_FILES+=		share/examples/bind9/bind.keys \
 			${PKG_SYSCONFDIR}/bind.keys
 
 INSTALLATION_DIRS+=	${DOCDIR} ${DOCDIR}/arm
+
+post-extract:
+	cd ${WRKDIR} && \
+		${TAR} -xzf ${DISTDIR}/bind-9.11.25-fixed-man-pages.tar.gz
 
 post-install:
 .for f in ${DOCS}
