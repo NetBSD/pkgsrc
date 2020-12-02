@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.43 2020/07/01 10:15:20 jperkin Exp $
+dnl $NetBSD: configure.ac,v 1.44 2020/12/02 10:22:39 wiz Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([pkg_install], [20200701], [joerg@NetBSD.org])
@@ -39,9 +39,9 @@ AC_SUBST(AUTOHEADER)
 
 dnl Set the default pkg dbdir
 AC_ARG_WITH(pkgdbdir,
-[  --with-pkgdbdir=DIR     Where to put the pkg database (/var/db/pkg)],
+[  --with-pkgdbdir=DIR     Where to put the pkg database (PREFIX/pkgdb)],
 [ pkgdbdir="$with_pkgdbdir" ],
-[ pkgdbdir="/var/db/pkg" ])
+[ pkgdbdir="${prefix}/pkgdb" ])
 AC_SUBST(pkgdbdir)
 
 AC_ARG_WITH(ssl,

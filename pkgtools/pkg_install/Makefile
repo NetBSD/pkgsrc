@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2020/08/09 21:40:42 rillig Exp $
+# $NetBSD: Makefile,v 1.232 2020/12/02 10:22:39 wiz Exp $
 
 # Notes to package maintainers:
 #
@@ -81,7 +81,7 @@ MAKE_ENV+=		OPSYS=${OPSYS}
 MAKE_ENV+=		CATMAN_SECTION_SUFFIX=${CATMAN_SECTION_SUFFIX:Q}
 MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
 
-PKG_DBDIR?=		/var/db/pkg
+PKG_DBDIR?=		${PREFIX}/pkgdb
 EGDIR=			${PREFIX}/share/examples/pkg_install
 
 PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR}
