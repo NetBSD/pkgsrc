@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2020/10/15 13:44:39 adam Exp $
+# $NetBSD: Makefile,v 1.33 2020/12/02 19:58:14 adam Exp $
 
-DISTNAME=	stripe-2.55.0
+DISTNAME=	stripe-2.55.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stripe/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://stripe.com/
+HOMEPAGE=	https://github.com/stripe/stripe-python
 COMMENT=	Stripe python bindings
 LICENSE=	mit
 
