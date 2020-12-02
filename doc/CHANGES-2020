@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6519 2020/12/02 01:40:49 jnemeth Exp $
+$NetBSD: CHANGES-2020,v 1.6520 2020/12/02 07:58:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9500,3 +9500,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/bacula-qt5-console to 9.6.6 [jnemeth 2020-12-02]
 	Updated sysutils/bacula-tray-monitor to 9.6.6 [jnemeth 2020-12-02]
 	Updated sysutils/bacula-tray-monitor-qt5 to 9.6.6 [jnemeth 2020-12-02]
+	Updated databases/sqlite3 to 3.34.0 [adam 2020-12-02]
+	Updated databases/sqlite3-docs to 3.34.0 [adam 2020-12-02]
+	Updated databases/sqlite3-tcl to 3.34.0 [adam 2020-12-02]
+	Updated devel/lemon to 1.0.3.34.0 [adam 2020-12-02]
