@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6529 2020/12/02 16:30:50 ast Exp $
+$NetBSD: CHANGES-2020,v 1.6530 2020/12/02 18:27:24 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9473,8 +9473,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-psutil to 5.7.3 [adam 2020-11-30]
 	Updated textproc/py-jsonpickle to 1.4.2 [adam 2020-11-30]
 	Updated textproc/py-jsonrpclib-pelix to 0.4.2 [adam 2020-11-30]
-	Updated print/tex-europasscv-doc to 31.56829 [nikita 2020-11-30]
-	Updated print/tex-europasscv to 31.56829 [nikita 2020-11-30]
 	Updated editors/xfce4-mousepad to 0.5.0 [gutteridge 2020-12-01]
 	Updated x11/xnotify to 0.8.1 [pin 2020-12-01]
 	Updated graphics/gnuplot to 5.4.1 [prlw1 2020-12-01]
