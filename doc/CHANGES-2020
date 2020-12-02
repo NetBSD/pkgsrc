@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6528 2020/12/02 15:35:06 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.6529 2020/12/02 16:30:50 ast Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9512,3 +9512,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nginx to 1.18.0nb7 [otis 2020-12-02]
 	Updated www/nginx-devel to 1.19.5nb1 [otis 2020-12-02]
 	Updated converters/bdf2psf to 1.199 [fcambus 2020-12-02]
+	Updated www/nostromo to 1.9.9 [ast 2020-12-02]
