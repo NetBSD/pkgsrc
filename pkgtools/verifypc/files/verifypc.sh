@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: verifypc.sh,v 1.8 2018/02/20 02:55:15 dholland Exp $
+# $NetBSD: verifypc.sh,v 1.9 2020/12/02 01:03:40 gutteridge Exp $
 #
 # verifypc - Sanity check package dependencies according to pkg-config
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -150,7 +150,7 @@ main() {
         dep=$(search_file_in_depends pkgconfig/${pcname}.pc)
         if [ -n "${dep}" -a "${pcop}" != "NOT-FOUND" ]; then
             # The package passed to pkg-config is correct, as we have it
-            # among our dependencies.  If we are requiring an specific
+            # among our dependencies.  If we are requiring a specific
             # version of it, let's check if it is correct.
             if [ ${pcop} != "(any)" ]; then
                 check_match ${dep} ${pcname} ${pcop} ${pcver}
