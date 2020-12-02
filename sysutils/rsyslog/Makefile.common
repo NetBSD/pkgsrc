@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2020/12/01 03:10:50 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.45 2020/12/02 01:30:45 gutteridge Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -26,7 +26,7 @@ COMMENT?=		Enhanced syslogd for Unix - the ${RSYSLOG_MOD} module
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/rsyslog/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/rsyslog/patches
 
-TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.15:../../textproc/py-docutils
 CONFIGURE_ARGS+=	RST2MAN=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}
 
 CONFIGURE_ARGS.SunOS+=	ac_cv_func_epoll_create=no ac_cv_func_epoll_create1=no
