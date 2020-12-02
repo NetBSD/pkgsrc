@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6525 2020/12/02 14:55:29 taca Exp $
+$NetBSD: CHANGES-2020,v 1.6526 2020/12/02 14:58:40 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9509,3 +9509,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Perl-Critic to 1.138nb2 [ast 2020-12-02]
 	Added audio/libgig version 4.2.0 [nia 2020-12-02]
 	Updated net/bind911 to 9.11.25nb1 [taca 2020-12-02]
+	Updated www/nginx to 1.18.0nb7 [otis 2020-12-02]
