@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2014/10/12 00:08:26 gdt Exp $
+# $NetBSD: options.mk,v 1.22 2020/12/02 01:36:48 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
 PKG_SUPPORTED_OPTIONS=		ssl
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}
 BACULA_DB=		postgresql
 .elif !empty(PKG_OPTIONS:Mcatalog-mysql)
 .  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${PREFIX}
+CONFIGURE_ARGS+=	--with-mysql=yes
 BACULA_DB=		mysql
 .endif
 
