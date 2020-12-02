@@ -1,5 +1,8 @@
-/*	$NetBSD: check.c,v 1.11 2020/12/02 10:22:39 wiz Exp $	*/
+/*	$NetBSD: check.c,v 1.12 2020/12/02 10:45:47 wiz Exp $	*/
 
+#ifdef HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#else
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +10,8 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: check.c,v 1.11 2020/12/02 10:22:39 wiz Exp $");
+#endif
+__RCSID("$NetBSD: check.c,v 1.12 2020/12/02 10:45:47 wiz Exp $");
 
 /*-
  * Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
