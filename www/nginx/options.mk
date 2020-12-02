@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.65 2020/11/25 12:12:21 jperkin Exp $
+# $NetBSD: options.mk,v 1.66 2020/12/02 10:34:09 otis Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -271,7 +271,7 @@ CONFIGURE_ARGS+=	--add-module=../${RTMP_DISTNAME}
 .endif
 
 .if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.4.4
+NJS_VERSION=		0.5.0
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz
