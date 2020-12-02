@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.8 2020/01/12 23:38:42 joerg Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.9 2020/12/02 10:22:39 wiz Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -16,7 +16,11 @@ USE_TOOLS+=	date
 .endif
 
 # This is the package database directory for the default view.
-PKG_DBDIR?=		/var/db/pkg
+PKG_DBDIR?=		${PREFIX}/pkgdb
+
+.if exists(/var/db/pkg) && !exists(${PKG_DBDIR})
+PKG_DBDIR_ERROR=	The default package database directory has changed. Please run: mv /var/db/pkg ${PKG_DBDIR}
+.endif
 
 # _PKG_DBDIR is the actual packages database directory where we register
 # packages.
@@ -32,11 +36,7 @@ PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
 # Latest versions of tools required for correct pkgsrc operation.
-.if !empty(USE_PKG_ADMIN_DIGEST:M[Yy][Ee][Ss])
-PKGTOOLS_REQD=		20191008
-.else
-PKGTOOLS_REQD=		20100914
-.endif
+PKGTOOLS_REQD=		20200828
 # Latest version of pkg_install required to extract packages
 PKGTOOLS_VERSION_REQD=	20091115
 
