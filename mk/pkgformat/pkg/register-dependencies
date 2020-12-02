@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: register-dependencies,v 1.1 2011/10/15 00:23:09 reed Exp $
+# $NetBSD: register-dependencies,v 1.2 2020/12/02 10:22:39 wiz Exp $
 #
 ######################################################################
 #
@@ -18,14 +18,14 @@
 # ENVIRONMENT
 #	PKG_DBDIR
 #		This is the package meta-data directory in which the
-#		packages are registered.  By default, this is /var/db/pkg.
+#		packages are registered.  By default, this is ${PREFIX}/pkgdb .
 #
 ######################################################################
 
 : ${AWK:=awk}
 : ${CP:=cp}
 : ${ECHO:=echo}
-: ${PKG_DBDIR:=/var/db/pkg}
+: ${PKG_DBDIR:=${PREFIX}/pkgdb}
 : ${RM:=rm}
 : ${TEST:=test}
 : ${TOUCH:=touch}

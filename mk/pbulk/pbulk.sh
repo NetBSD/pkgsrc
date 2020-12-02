@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pbulk.sh,v 1.8 2018/10/29 02:47:08 sevan Exp $
+# $NetBSD: pbulk.sh,v 1.9 2020/12/02 10:22:39 wiz Exp $
 set -e
 
 usage="usage: ${0##*/} [-lun] [-c mk.conf.fragment] [-d nodes]"
@@ -40,7 +40,7 @@ fi
 
 # setting pkgdb directory:
 if [ -n "$unprivileged" -o -n "${PREFIX}" ]; then
-: ${PKGDBDIR:=${PREFIX}/var/db/pkg} 
+: ${PKGDBDIR:=${PREFIX}/pkgdb} 
 fi
 
 # Do it early since adding it after it fails is problematic:
