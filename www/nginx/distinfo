@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2020/11/25 12:12:21 jperkin Exp $
+$NetBSD: distinfo,v 1.82 2020/12/02 10:34:09 otis Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -52,10 +52,10 @@ SHA1 (ngx_devel_kit-0.3.1.tar.gz) = e15316e13a7b19a3d2502becbb26043a464a135a
 RMD160 (ngx_devel_kit-0.3.1.tar.gz) = 5c52a463544294096611aa9dec1c76e937a1aa23
 SHA512 (ngx_devel_kit-0.3.1.tar.gz) = de1e3349d8dd08e5982279b2219dc8a8006739f0409b8e0f5c50d93434beff1fbafba43e9c5ac85a5fab90afc5c0a7244a340610339c36f82f2cba7233e72de9
 Size (ngx_devel_kit-0.3.1.tar.gz) = 66542 bytes
-SHA1 (njs-0.4.4.tar.gz) = a2e0406388a668c0e76952c54bae53c324625a1a
-RMD160 (njs-0.4.4.tar.gz) = fa9972d23204cfd928b25e9d156d6974726a2384
-SHA512 (njs-0.4.4.tar.gz) = 1bf88d23f99532bb32e96de79e49cc27b60d6231207eb06ea2f6a6884d725f7bbe7b426664aa4c872f7c40549f81489c04c2ae4a7ddd2d03c8cf1d66b9c62c78
-Size (njs-0.4.4.tar.gz) = 486870 bytes
+SHA1 (njs-0.5.0.tar.gz) = a9cb186dbbfad7901a83f9b267cdf9eee84af374
+RMD160 (njs-0.5.0.tar.gz) = 0cb82b7930bf500e81471b9d44d87924a6043e57
+SHA512 (njs-0.5.0.tar.gz) = 182a64ba519b1a1d29ac71ffe2c9ef8e5a6f9aaf3db9f327ac926114db73b339a424801b558068fc7ae06ae88a4dea0a601c749db4b6f2b579e427181e41d11b
+Size (njs-0.5.0.tar.gz) = 505568 bytes
 SHA1 (set-misc-nginx-module-0.32.tar.gz) = 2433bb7a138c3b13812ec2af7070cdc67435918f
 RMD160 (set-misc-nginx-module-0.32.tar.gz) = eff9be78f884f7c3e09e88af6bdf4cdd9aaea05d
 SHA512 (set-misc-nginx-module-0.32.tar.gz) = 5590526f60c99630f99a49bfa9e3455baee6d58cd2a1419eab1367a838dafb87a50f5e2607aa8ac557b90dbf633dcf61069c997b3526cddc8f2fc45820a7bc3b
