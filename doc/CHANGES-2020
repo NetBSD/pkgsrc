@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6523 2020/12/02 11:06:55 ast Exp $
+$NetBSD: CHANGES-2020,v 1.6524 2020/12/02 12:30:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9507,3 +9507,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-optint to 0.0.4 [he 2020-12-02]
 	Updated games/cgoban-java to 3.5.23 [ast 2020-12-02]
 	Updated devel/p5-Perl-Critic to 1.138nb2 [ast 2020-12-02]
+	Added audio/libgig version 4.2.0 [nia 2020-12-02]
