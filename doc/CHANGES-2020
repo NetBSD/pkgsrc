@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6516 2020/12/01 22:50:48 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.6517 2020/12/02 00:46:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9492,3 +9492,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/miller to 5.10.0 [fcambus 2020-12-01]
 	Updated print/tex-europasscv to 2020.10.31.56829 [nikita 2020-12-01]
 	Updated print/tex-europasscv-doc to 2020.10.31.56829 [nikita 2020-12-01]
+	Updated misc/xfce4-weather-plugin to 0.10.2 [gutteridge 2020-12-02]
