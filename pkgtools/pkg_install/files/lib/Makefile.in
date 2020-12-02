@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.36 2017/04/19 21:42:50 joerg Exp $
+# $NetBSD: Makefile.in,v 1.37 2020/12/02 10:22:39 wiz Exp $
 
 srcdir=		@srcdir@
 
@@ -32,6 +32,7 @@ OBJS=	automatic.o conflicts.o dewey.o fexec.o file.o \
 	str.o var.o version.o vulnerabilities-file.o xwrapper.o
 
 CPPFLAGS+=	-DSYSCONFDIR=\"$(sysconfdir)\"
+CPPFLAGS+=	-DPREFIX=\"$(prefix)\"
 
 .if !empty(BOOTSTRAP)
 CPPFLAGS+=	-DBOOTSTRAP
