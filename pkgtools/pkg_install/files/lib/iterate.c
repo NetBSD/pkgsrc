@@ -1,4 +1,4 @@
-/*	$NetBSD: iterate.c,v 1.9 2020/07/01 10:03:20 jperkin Exp $	*/
+/*	$NetBSD: iterate.c,v 1.10 2020/12/02 12:10:50 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -228,8 +228,6 @@ static int
 iterate_pkg_db_cached(int (*matchiter)(const char *, void *), void *cookie)
 {
 	DIR *dirp;
-	struct dirent *dp;
-	struct stat st;
 	struct pkg_db_iter_arg arg;
 	struct pkg_db_list *pkg;
 	const char *pkgdir;
