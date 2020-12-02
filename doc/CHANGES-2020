@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6521 2020/12/02 08:22:53 he Exp $
+$NetBSD: CHANGES-2020,v 1.6522 2020/12/02 08:50:24 ast Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9505,3 +9505,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/sqlite3-tcl to 3.34.0 [adam 2020-12-02]
 	Updated devel/lemon to 1.0.3.34.0 [adam 2020-12-02]
 	Updated devel/ocaml-optint to 0.0.4 [he 2020-12-02]
+	Updated games/cgoban-java to 3.5.23 [ast 2020-12-02]
