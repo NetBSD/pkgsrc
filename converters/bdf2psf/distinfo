@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/11/01 15:11:16 fcambus Exp $
+$NetBSD: distinfo,v 1.7 2020/12/02 15:34:49 fcambus Exp $
 
-SHA1 (console-setup_1.198.tar.xz) = e7942b679fae36f738e275c363ec74953ef9faec
-RMD160 (console-setup_1.198.tar.xz) = cef5e8afc6767fed661a02ddd01e8946bae38c84
-SHA512 (console-setup_1.198.tar.xz) = 38e6b10e6e232e49eee5de548dcec29ccc319e8b1028b4c95bc9d87ae8cc24ad635cdae87bf6c3f81fa00435bb7560a2605624ec7dd17bb3ae2ab79e22268672
-Size (console-setup_1.198.tar.xz) = 1792644 bytes
+SHA1 (console-setup_1.199.tar.xz) = 511ca36bbfb6b77a92c53978212aae103b2a3040
+RMD160 (console-setup_1.199.tar.xz) = d91a6d847f7649bfa8d2e09ac31aa78a689050f9
+SHA512 (console-setup_1.199.tar.xz) = 8d969de9e6c300c799fb8c58c5300112c1576768c41cd29a9185ecbf0d5c5205356439b54141f00ef4e76ceaf3dc2106cb5fd3e9ec430a205183c07bea341d96
+Size (console-setup_1.199.tar.xz) = 1792772 bytes
