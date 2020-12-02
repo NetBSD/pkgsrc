@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2020/02/29 22:45:33 gutteridge Exp $
+$NetBSD: distinfo,v 1.18 2020/12/02 00:46:31 gutteridge Exp $
 
-SHA1 (xfce4-weather-plugin-0.10.1.tar.bz2) = 321cb34ceb171644fde0bb02ab27e40228f5e6d5
-RMD160 (xfce4-weather-plugin-0.10.1.tar.bz2) = f5288bef84583435003e0ed5da6258e7f8213cb3
-SHA512 (xfce4-weather-plugin-0.10.1.tar.bz2) = 14fd17da60b0ac76dd0f8e1b7858e8cef57c5168b7467412e1d45ae91e44858c7619cdca2ee59e242d2888038d458faa7580bf02d1cad3371ec80acc9012f569
-Size (xfce4-weather-plugin-0.10.1.tar.bz2) = 3026945 bytes
+SHA1 (xfce4-weather-plugin-0.10.2.tar.bz2) = 4961b087601ed85baa7f45320b2ba85d90f09f56
+RMD160 (xfce4-weather-plugin-0.10.2.tar.bz2) = bb9f252d867055cb627f3bff1975fa013a0ed67e
+SHA512 (xfce4-weather-plugin-0.10.2.tar.bz2) = 77df6d10772e47fc6b3cf4db2396b8c6ad87b6b3afb59b2a256d4c52c9f69db30039ee8c6d7b3fbabd613815cad284ecdf7b267293de7ebee76faaa583d89a11
+Size (xfce4-weather-plugin-0.10.2.tar.bz2) = 3049859 bytes
 SHA1 (patch-panel-plugin_weather-parsers.c) = c07ebf8f35aaf04ce28a5fc6ca507b3b95c07ca1
