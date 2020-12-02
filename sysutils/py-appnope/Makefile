@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:20 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/02 20:00:42 adam Exp $
 
-DISTNAME=	appnope-0.1.0
+DISTNAME=	appnope-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/appnope/}
@@ -18,5 +18,5 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
