@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6530 2020/12/02 18:27:24 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.6531 2020/12/02 20:01:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9511,3 +9511,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nginx-devel to 1.19.5nb1 [otis 2020-12-02]
 	Updated converters/bdf2psf to 1.199 [fcambus 2020-12-02]
 	Updated www/nostromo to 1.9.9 [ast 2020-12-02]
+	Updated finance/py-stripe to 2.55.1 [adam 2020-12-02]
+	Updated sysutils/py-appnope to 0.1.2 [adam 2020-12-02]
