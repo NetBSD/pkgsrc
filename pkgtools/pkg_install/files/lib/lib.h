@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.70 2020/07/01 10:03:20 jperkin Exp $ */
+/* $NetBSD: lib.h,v 1.71 2020/12/02 12:10:38 wiz Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -270,7 +270,7 @@ int	some_installed_package_conflicts_with(const char *, const char *, char **, c
 
 /* Prototypes */
 /* Misc */
-void    show_version(void);
+void    show_version(void) __attribute__ ((noreturn));
 int	fexec(const char *, ...);
 int	fexec_skipempty(const char *, ...);
 int	fcexec(const char *, const char *, ...);
