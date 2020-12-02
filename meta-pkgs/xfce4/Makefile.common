@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2020/12/02 00:41:34 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.69 2020/12/02 00:43:47 gutteridge Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -75,7 +75,7 @@ XFCE4_VERSION=		4.14.0
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt perl intltool xgettext
+USE_TOOLS+=		gmake pkg-config msgfmt msgmerge perl intltool xgettext
 
 XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
