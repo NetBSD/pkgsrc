@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2020/08/17 20:20:02 leot Exp $
+# $NetBSD: Makefile,v 1.42 2020/12/02 01:36:49 jnemeth Exp $
 
 PKGNAME=	${DISTNAME:S/-/-qt-console-/}
-PKGREVISION=	2
 #PKGREVISION=	1
 COMMENT=	Qt-based console for Bacula - The Network Backup Solution
 
