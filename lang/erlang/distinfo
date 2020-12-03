@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.80 2020/03/20 16:05:34 nia Exp $
+$NetBSD: distinfo,v 1.81 2020/12/03 16:57:04 adam Exp $
 
 SHA1 (erlang-22.2.8.tar.gz) = ea13d421086ede18d7de88c871d4b0d35b89c415
 RMD160 (erlang-22.2.8.tar.gz) = 21b8f03a3076364118e24f96b257b656b081d455
@@ -9,9 +9,11 @@ SHA1 (patch-ay) = f5f1accdb11e404ba4779b056228431e3080e4cd
 SHA1 (patch-erts_aclocal.m4) = 3812a0feda06eb7c6ff02b5ac7125284ad5df2cb
 SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = e34674aea2fa5092b5215944cb5639738df647bb
 SHA1 (patch-erts_emulator_nifs_common_prim__net__nif.c) = 39a3c134f17ede852a736494f035c8ce01b0ed4b
+SHA1 (patch-erts_emulator_sys_common_erl__poll.c) = dac6a41d96b1c6b2ca8a0b2511275db4ac90689c
 SHA1 (patch-erts_emulator_sys_unix_sys__uds.c) = a165f977221acc8aba2ef30ca23d149a10af060a
 SHA1 (patch-erts_etc_unix_run__erl.c) = dbcd6819949874da19daa554335567c444d7abe2
 SHA1 (patch-erts_lib__src_common_erl__printf.c) = 31ab5c501d62f021e7570a925dcc75d38605ae41
 SHA1 (patch-lib_crypto_c__src_Makefile.in) = 0ab1db36c03999524e933d60f913ff5608b0622e
 SHA1 (patch-lib_tools_c__src_Makefile.in) = 4fa1ef2ace4fc64efdb6b3acd24decf031ae778d
+SHA1 (patch-make_configure.in) = 1eedad3b26f6070e2b0a0fba06e850c796885932
 SHA1 (patch-make_output.mk.in) = d7b3da58bfb471d52c41242e2a03d1598ce24e62
