@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6552 2020/12/03 21:44:45 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6553 2020/12/03 22:23:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9537,3 +9537,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/suil to 0.10.8 [nia 2020-12-03]
 	Updated audio/vamp-plugin-sdk to 2.10.0 [nia 2020-12-03]
 	Updated audio/lilv to 0.24.10 [nia 2020-12-03]
+	Updated multimedia/lightspark to 0.8.3 [nia 2020-12-03]
