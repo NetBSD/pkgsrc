@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2017/07/30 22:40:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/12/03 13:08:49 zafer Exp $
 
 DISTNAME=	9e
 PKGNAME=	9e-1.0
 CATEGORIES=	plan9 archivers
-MASTER_SITES=	http://distfiles.aydogan.net/archivers/
+MASTER_SITES=	https://www.aydogan.net/distfiles/archivers/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bebik.net/doku.php?id=software:9e
