@@ -1,15 +1,15 @@
-$NetBSD: patch-wscript,v 1.1 2019/12/14 18:02:51 nia Exp $
+$NetBSD: patch-wscript,v 1.2 2020/12/03 21:44:33 nia Exp $
 
 Install completions to correct location.
 
---- wscript.orig	2019-11-10 21:39:53.000000000 +0000
+--- wscript.orig	2020-09-27 12:17:51.836103000 +0000
 +++ wscript
-@@ -438,7 +438,7 @@ def build(bld):
+@@ -553,7 +553,7 @@ def build(bld):
+ 
      # Bash completion
      if bld.env.BASH_COMPLETION:
-         bld.install_as(
--            '${SYSCONFDIR}/bash_completion.d/lilv', 'utils/lilv.bash_completion')
-+            'share/bash_completion.d/lilv', 'utils/lilv.bash_completion')
+-        bld.install_as('${SYSCONFDIR}/bash_completion.d/lilv',
++        bld.install_as('share/bash_completion.d/lilv',
+                        'utils/lilv.bash_completion')
  
      bld.add_post_fun(autowaf.run_ldconfig)
- 
