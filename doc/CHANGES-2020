@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6537 2020/12/03 13:29:19 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6538 2020/12/03 13:51:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9521,3 +9521,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/gnutls to 3.7.0 [nia 2020-12-03]
 	Updated audio/speech-dispatcher to 0.10.2 [nia 2020-12-03]
 	Updated audio/ncmpc to 0.42 [nia 2020-12-03]
+	Updated security/acmesh to 2.8.8 [nia 2020-12-03]
