@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6531 2020/12/02 20:01:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6532 2020/12/03 10:47:58 ast Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9513,3 +9513,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nostromo to 1.9.9 [ast 2020-12-02]
 	Updated finance/py-stripe to 2.55.1 [adam 2020-12-02]
 	Updated sysutils/py-appnope to 0.1.2 [adam 2020-12-02]
+	Updated www/nostromo to 1.9.9nb3 [ast 2020-12-03]
