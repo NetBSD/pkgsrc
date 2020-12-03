@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2017/09/04 18:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/12/03 13:04:11 zafer Exp $
 #
 
 DISTNAME=	slurm-0.3.3
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://distfiles.aydogan.net/net/
+MASTER_SITES=	https://www.aydogan.net/distfiles/net/
 
 MAINTAINER=	mail@eckigesauge.de
 #HOMEPAGE=	http://www.raisdorf.net/projects/slurm/
