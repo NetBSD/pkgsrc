@@ -1,11 +1,11 @@
-$NetBSD: patch-src_platforms_engineutils.cpp,v 1.1 2019/07/09 16:33:30 nia Exp $
+$NetBSD: patch-src_platforms_engineutils.cpp,v 1.2 2020/12/03 22:23:33 nia Exp $
 
 These are undefined, take advantage of SDL defines instead.
 
---- src/platforms/engineutils.cpp.orig	2018-06-02 09:25:36.000000000 +0000
+--- src/platforms/engineutils.cpp.orig	2020-07-05 10:31:09.000000000 +0000
 +++ src/platforms/engineutils.cpp
-@@ -29,7 +29,7 @@
- #include "platforms/engineutils.h"
+@@ -33,7 +33,7 @@
+ #include "scripting/flash/events/flashevents.h"
  
  //The interpretation of texture data change with the endianness
 -#if __BYTE_ORDER == __BIG_ENDIAN
