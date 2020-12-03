@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2020/08/31 18:06:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/12/03 13:30:10 zafer Exp $
 #
 
 DISTNAME=		distmp3-0.1.9
 PKGREVISION=		8
 CATEGORIES=		audio
-MASTER_SITES=		http://distfiles.aydogan.net/audio/
+MASTER_SITES=		https://www.aydogan.net/distfiles/audio/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
