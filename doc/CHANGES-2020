@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6548 2020/12/03 18:15:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6549 2020/12/03 20:50:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9533,3 +9533,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-mgba to 0.8.4 [nia 2020-12-03]
 	Updated www/py-django3 to 3.1.4 [adam 2020-12-03]
 	Updated audio/py-audioread to 2.1.9 [adam 2020-12-03]
+	Updated devel/mob to 1.0.0 [schmonz 2020-12-03]
