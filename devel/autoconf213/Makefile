@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/08/31 18:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/12/03 22:56:00 gutteridge Exp $
 
 DISTNAME=	autoconf-2.13
 PKGNAME=	autoconf213-2.13
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=		gm4:run makeinfo perl:run
 
 CONFLICTS=		autoconf-devel-[0-9]*
-CONFLICTS=		autoconf<2.50
+CONFLICTS+=		autoconf<2.50
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--program-transform-name='s/$$/-2.13/'
