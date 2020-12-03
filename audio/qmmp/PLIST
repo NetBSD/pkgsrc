@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/16 18:51:46 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/12/03 22:32:41 nia Exp $
 bin/qmmp
 include/qmmp/abstractengine.h
 include/qmmp/audioconverter.h
@@ -111,6 +111,8 @@ lib/qmmp-1.4/Input/libwildmidi.so
 ${PLIST.alsa}lib/qmmp-1.4/Output/libalsa.so
 ${PLIST.jack}lib/qmmp-1.4/Output/libjack.so
 lib/qmmp-1.4/Output/libnull.so
+${PLIST.oss}lib/qmmp-1.4/Output/liboss.so
+${PLIST.oss4}lib/qmmp-1.4/Output/liboss4.so
 ${PLIST.pulse}lib/qmmp-1.4/Output/libpulseaudio.so
 lib/qmmp-1.4/Output/libqtmultimedia.so
 lib/qmmp-1.4/Output/libshout.so
