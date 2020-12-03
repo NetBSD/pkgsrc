@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.6 2020/05/19 17:11:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/12/03 21:44:33 nia Exp $
 
-SHA1 (lilv-0.24.8.tar.bz2) = 8292e3eb5a9c7a3381e22fafd879a7ef9268f1b0
-RMD160 (lilv-0.24.8.tar.bz2) = 5a95950607fae6d8619edd090dfbcb48de40b0de
-SHA512 (lilv-0.24.8.tar.bz2) = f2b2638372a8280041f6e88e2077f2109f89dad6feedb9d07a88c6b5a05c37b62112f5d03282da4335ddd0d14339cfb49ad96a3df3de310265a40c24718be192
-Size (lilv-0.24.8.tar.bz2) = 545545 bytes
-SHA1 (patch-src_util.c) = e30ab85a08b3fb15c386b26a0ea55848d27a479c
-SHA1 (patch-wscript) = 854d549c0332266778bacbe21be3325dcd5adffe
+SHA1 (lilv-0.24.10.tar.bz2) = bca0f18b150484129aa43fd8cf85ebe0df17ceaa
+RMD160 (lilv-0.24.10.tar.bz2) = 2b5c7ba20023af1c68f5f83cf631b64ae1105406
+SHA512 (lilv-0.24.10.tar.bz2) = 1dfd4fef19537686b63a4e7df45e3b1a7c4a658acc21d5646daba4d3bd5676513857b3f437b89f1a06232516433ef155772d19625c33d49d13ada37a965982cf
+Size (lilv-0.24.10.tar.bz2) = 443795 bytes
+SHA1 (patch-wscript) = 52f9095c4ea6fb9e3683a1d96e57c711577a0dd0
