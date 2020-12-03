@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/05/23 20:11:23 rillig Exp $
+$NetBSD: distinfo,v 1.5 2020/12/03 22:32:41 nia Exp $
 
-SHA1 (qmmp-1.4.0.tar.bz2) = a82bf6818eb7fe14bbbcdca24b25b814ea7418ca
-RMD160 (qmmp-1.4.0.tar.bz2) = 5749a728a1a0e00c42f796aabb5ba5a3846968c6
-SHA512 (qmmp-1.4.0.tar.bz2) = b4ae764c223e1ce28477e86493ba409429e191ff51ef11d9b7c4fa356f90e5ff7e390bc8d1dcaf7779b231d59bf668d64000ea196b4020a7255eeb009706643d
-Size (qmmp-1.4.0.tar.bz2) = 1293438 bytes
-SHA1 (patch-src_plugins_Ui_skinned_scripts_kwin_sh) = 18be957905c4a6247791673b7e40e631036c6618
-SHA1 (patch-src_plugins_Ui_skinned_symboldisplay.cpp) = d172068a4215c6dafb5b5c921bfabe71060be16f
+SHA1 (qmmp-1.4.2.tar.bz2) = c3b6c9bfe54e93b44d4f026060190a204c61cc30
+RMD160 (qmmp-1.4.2.tar.bz2) = 3eeb5ec87a3c7ef7e08c41e47dea5ebce1b045df
+SHA512 (qmmp-1.4.2.tar.bz2) = 00ed0c4bd74dc50294c9d8e717f249a577fb26f5d4eb93dbc42c6c79964188fd885ab577904dea5aec31db0d2b828d7038febca1ffdfd2f4bfe81f931bbed7ff
+Size (qmmp-1.4.2.tar.bz2) = 1295867 bytes

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/11/05 09:07:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2020/12/03 22:32:41 nia Exp $
 
-DISTNAME=	qmmp-1.4.0
-PKGREVISION=	6
+DISTNAME=	qmmp-1.4.2
 CATEGORIES=	audio
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,13 +22,19 @@ CMAKE_ARGS+=	-DUSE_MAD=OFF
 # ??? seems to break playing some files
 CMAKE_ARGS+=	-DUSE_MPLAYER=OFF
 
-# XXX broken volume control
-CMAKE_ARGS+=	-DUSE_OSS=OFF
-CMAKE_ARGS+=	-DUSE_OSS4=OFF
-
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} != "none"
+PLIST_VARS+=		oss oss4
+.  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
+PLIST.oss4=		yes
+CMAKE_ARGS+=		-DUSE_OSS=OFF
+CMAKE_ARGS+=		-DUSE_OSS4=ON
+.  else
+PLIST.oss=		yes
+CMAKE_ARGS+=		-DUSE_OSS=ON
+CMAKE_ARGS+=		-DUSE_OSS4=OFF
+.  endif
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-build
 SUBST_MESSAGE.oss=	Correcting the path to OSS device.
