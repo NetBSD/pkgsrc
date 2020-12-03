@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:30:23 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/12/03 23:01:27 gutteridge Exp $
 
 DISTNAME=	autoconf-archive-2019.01.06
 CATEGORIES=	devel
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://savannah.gnu.org/projects/autoconf-archive/
 COMMENT=	Collection of macros for GNU Autoconf
 LICENSE=	gnu-gpl-v3
+
+# The file share/aclocal/ax_check_enable_debug.m4 conflicts
+CONFLICTS=	gnome-common>=3.14.0
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
