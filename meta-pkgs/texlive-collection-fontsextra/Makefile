@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/05/10 04:13:24 markd Exp $
+# $NetBSD: Makefile,v 1.21 2020/12/03 19:33:42 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54138
@@ -250,7 +250,7 @@ DEPENDS+=	tex-phaistos-[0-9]*:../../fonts/tex-phaistos
 DEPENDS+=	tex-phonetic-[0-9]*:../../fonts/tex-phonetic
 DEPENDS+=	tex-pigpen-[0-9]*:../../fonts/tex-pigpen
 DEPENDS+=	tex-playfair-[0-9]*:../../fonts/tex-playfair
-# depend plex
+DEPENDS+=	tex-plex-[0-9]*:../../fonts/tex-plex
 # depend plex-otf
 # depend poiretone
 DEPENDS+=	tex-poltawski-[0-9]*:../../print/tex-poltawski
