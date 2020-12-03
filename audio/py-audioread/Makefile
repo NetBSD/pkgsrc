@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/06/18 14:59:45 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/12/03 18:15:35 adam Exp $
 
-DISTNAME=	audioread-2.1.8
+DISTNAME=	audioread-2.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/audioread/}
