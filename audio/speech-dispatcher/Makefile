@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/08/18 17:57:39 leot Exp $
+# $NetBSD: Makefile,v 1.16 2020/12/03 13:00:48 nia Exp $
 
-DISTNAME=	speech-dispatcher-0.9.1
-PKGREVISION=	3
+DISTNAME=	speech-dispatcher-0.10.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=brailcom/}
 GITHUB_PROJECT=	speechd
@@ -14,9 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	gmake intltool pkg-config makeinfo
 USE_TOOLS+=	msgfmt msgmerge xgettext
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 
 INFO_FILES=	yes
 
@@ -33,8 +32,12 @@ CONFIGURE_ARGS+=	--without-nas
 CONFIGURE_ARGS+=	--without-oss
 CONFIGURE_ARGS+=	--without-pulse
 
+.include "../../mk/bsd.prefs.mk"
+
 # msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
 
 PKGCONFIG_OVERRIDE+=	speech-dispatcher.pc.in
 
@@ -45,36 +48,17 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/modules
 
 CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/clients/emacs.conf \
 		${PKG_SYSCONFDIR}/clients/emacs.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/cicero.conf \
-		${PKG_SYSCONFDIR}/modules/cicero.conf
 CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/speechd.conf \
 		${PKG_SYSCONFDIR}/speechd.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/dtk-generic.conf \
-		${PKG_SYSCONFDIR}/modules/dtk-generic.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/epos-generic.conf \
-		${PKG_SYSCONFDIR}/modules/epos-generic.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/espeak-generic.conf \
-		${PKG_SYSCONFDIR}/modules/espeak-generic.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/espeak-mbrola-generic.conf \
-		${PKG_SYSCONFDIR}/modules/espeak-mbrola-generic.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/espeak.conf \
-		${PKG_SYSCONFDIR}/modules/espeak.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/festival.conf \
-		${PKG_SYSCONFDIR}/modules/festival.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/flite.conf \
-		${PKG_SYSCONFDIR}/modules/flite.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/ibmtts.conf \
-		${PKG_SYSCONFDIR}/modules/ibmtts.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/ivona.conf \
-		${PKG_SYSCONFDIR}/modules/ivona.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/llia_phon-generic.conf \
-		${PKG_SYSCONFDIR}/modules/llia_phon-generic.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/pico-generic.conf \
-		${PKG_SYSCONFDIR}/modules/pico-generic.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/swift-generic.conf \
-		${PKG_SYSCONFDIR}/modules/swift-generic.conf
-CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/speechd.conf \
-		${PKG_SYSCONFDIR}/speechd.conf
+
+.for module in baratinoo.conf cicero.conf dtk-generic.conf epos-generic.conf \
+    espeak-mbrola-generic.conf espeak-ng-mbrola-generic.conf espeak-ng.conf \
+    espeak.conf festival.conf flite.conf ibmtts.conf ivona.conf kali.conf \
+    llia_phon-generic.conf mary-generic-disabled.conf swift-generic.conf \
+    voxin.conf
+CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/${module} \
+		${PKG_SYSCONFDIR}/modules/${module}
+.endfor
 
 REPLACE_PYTHON+=	src/api/python/speechd_config/spd-conf
 
