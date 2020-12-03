@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2020/07/16 01:13:49 markd Exp $
+# $NetBSD: Makefile,v 1.55 2020/12/03 19:32:25 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2020pre4
+PKGNAME=	texlive-${DISTNAME}-2020pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	55060
@@ -1250,7 +1250,7 @@ DEPENDS+=	tex-version-[0-9]*:../../print/tex-version
 # depend versonotes
 DEPENDS+=	tex-vertbars-[0-9]*:../../print/tex-vertbars
 # depend vgrid
-# depend vhistory
+DEPENDS+=	tex-vhistory-[0-9]*:../../print/tex-vhistory
 DEPENDS+=	tex-vmargin-[0-9]*:../../print/tex-vmargin
 # depend volumes
 # depend vpe
