@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6532 2020/12/03 10:47:58 ast Exp $
+$NetBSD: CHANGES-2020,v 1.6533 2020/12/03 11:36:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9514,3 +9514,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/py-stripe to 2.55.1 [adam 2020-12-02]
 	Updated sysutils/py-appnope to 0.1.2 [adam 2020-12-02]
 	Updated www/nostromo to 1.9.9nb3 [ast 2020-12-03]
+	Updated databases/mongo-c-driver to 1.17.3 [adam 2020-12-03]
+	Updated databases/mongodb to 4.2.11 [adam 2020-12-03]
