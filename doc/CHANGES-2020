@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6545 2020/12/03 14:37:32 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6546 2020/12/03 14:47:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9529,3 +9529,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/zabbix50-proxy to 5.0.6 [otis 2020-12-03]
 	Updated sysutils/zabbix50-server to 5.0.6 [otis 2020-12-03]
 	Updated games/powder-toy to 95.0 [nia 2020-12-03]
+	Updated emulators/mgba to 0.8.4 [nia 2020-12-03]
