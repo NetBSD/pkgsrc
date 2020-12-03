@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6550 2020/12/03 21:31:15 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6551 2020/12/03 21:37:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9535,3 +9535,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/py-audioread to 2.1.9 [adam 2020-12-03]
 	Updated devel/mob to 1.0.0 [schmonz 2020-12-03]
 	Updated audio/suil to 0.10.8 [nia 2020-12-03]
+	Updated audio/vamp-plugin-sdk to 2.10.0 [nia 2020-12-03]
