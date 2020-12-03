@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6541 2020/12/03 14:18:06 otis Exp $
+$NetBSD: CHANGES-2020,v 1.6542 2020/12/03 14:18:59 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9525,3 +9525,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/dosbox-x to 0.83.8 [nia 2020-12-03]
 	Updated sysutils/zabbix50-agent to 5.0.6 [otis 2020-12-03]
 	Updated sysutils/zabbix50-frontend to 5.0.6 [otis 2020-12-03]
+	Updated sysutils/zabbix50-java to 5.0.6 [otis 2020-12-03]
