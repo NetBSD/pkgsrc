@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6547 2020/12/03 14:53:31 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6548 2020/12/03 18:15:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9531,3 +9531,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/powder-toy to 95.0 [nia 2020-12-03]
 	Updated emulators/mgba to 0.8.4 [nia 2020-12-03]
 	Updated emulators/libretro-mgba to 0.8.4 [nia 2020-12-03]
+	Updated www/py-django3 to 3.1.4 [adam 2020-12-03]
+	Updated audio/py-audioread to 2.1.9 [adam 2020-12-03]
