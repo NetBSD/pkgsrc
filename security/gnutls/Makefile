@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.217 2020/09/07 15:47:15 leot Exp $
+# $NetBSD: Makefile,v 1.218 2020/12/03 12:27:38 nia Exp $
 
-DISTNAME=	gnutls-3.6.15
+DISTNAME=	gnutls-3.7.0
 CATEGORIES=	security devel
-MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/
+MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -109,7 +109,7 @@ CHECK_BUILTIN.zlib:=yes
 #.include "../../lang/guile20/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=4.9
 .include "../../security/libtasn1/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.4.1
+BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.6
 .include "../../security/nettle/buildlink3.mk"
 BUILDLINK_API_DEPENDS.p11-kit+=	p11-kit>=0.23.1
 .include "../../security/p11-kit/buildlink3.mk"
