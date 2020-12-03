@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.28 2020/06/11 11:21:40 adam Exp $
+$NetBSD: distinfo,v 1.29 2020/12/03 11:36:26 adam Exp $
 
-SHA1 (mongodb-src-r4.2.7.tar.gz) = b120e0a8c8e1d9786724eeeafb0fa0de7813ac1a
-RMD160 (mongodb-src-r4.2.7.tar.gz) = e808fd14c1f407082c58a015bbca33bdabedf7cb
-SHA512 (mongodb-src-r4.2.7.tar.gz) = 0ffee772e43227ec4bb3e96e018e845d4de95a3427e556c6e906e952ff5691ffdbc2b0182faf96681006e5e1c58a17fc145899c3e0208875fae85af032dcc279
-Size (mongodb-src-r4.2.7.tar.gz) = 61727123 bytes
+SHA1 (mongodb-src-r4.2.11.tar.gz) = 8600bb4a4bd804a52a70febffbc889f2c7da34be
+RMD160 (mongodb-src-r4.2.11.tar.gz) = f294070220ec7ac3d97867afa8a01bb57a3b43a4
+SHA512 (mongodb-src-r4.2.11.tar.gz) = ff398a9d3a012e0eb860c2139967e163b8b0ac045c1c47f2c0c5584ba7c60a1403bb423ce8c6e8b3900fdcad1164a84c6da79276f897fd640366e3f80cf54316
+Size (mongodb-src-r4.2.11.tar.gz) = 61829417 bytes
 SHA1 (patch-SConstruct) = 027d8c9bd69256fe93ac40ae3e14e052ac367eb5
 SHA1 (patch-site__scons_mongo_platform.py) = 6a6daba04876f9779a26c579e6f6a66f55e1cbe6
 SHA1 (patch-site__scons_site__tools_libtool.py) = 2fb5947703f4292acc1306f92ca7938e8cbc62e0
