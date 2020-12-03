@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/02/06 20:20:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/12/03 11:34:39 adam Exp $
 ${PLIST.unix}bin/mongoc-stat
 include/libbson-1.0/bson.h
 include/libbson-1.0/bson/bcon.h
@@ -382,14 +382,17 @@ man/man3/mongoc_apm_server_closed_get_context.3
 man/man3/mongoc_apm_server_closed_get_host.3
 man/man3/mongoc_apm_server_closed_get_topology_id.3
 man/man3/mongoc_apm_server_closed_t.3
+man/man3/mongoc_apm_server_heartbeat_failed_get_awaited.3
 man/man3/mongoc_apm_server_heartbeat_failed_get_context.3
 man/man3/mongoc_apm_server_heartbeat_failed_get_duration.3
 man/man3/mongoc_apm_server_heartbeat_failed_get_error.3
 man/man3/mongoc_apm_server_heartbeat_failed_get_host.3
 man/man3/mongoc_apm_server_heartbeat_failed_t.3
+man/man3/mongoc_apm_server_heartbeat_started_get_awaited.3
 man/man3/mongoc_apm_server_heartbeat_started_get_context.3
 man/man3/mongoc_apm_server_heartbeat_started_get_host.3
 man/man3/mongoc_apm_server_heartbeat_started_t.3
+man/man3/mongoc_apm_server_heartbeat_succeeded_get_awaited.3
 man/man3/mongoc_apm_server_heartbeat_succeeded_get_context.3
 man/man3/mongoc_apm_server_heartbeat_succeeded_get_duration.3
 man/man3/mongoc_apm_server_heartbeat_succeeded_get_host.3
@@ -616,6 +619,7 @@ man/man3/mongoc_collection_validate.3
 man/man3/mongoc_collection_watch.3
 man/man3/mongoc_collection_write_command_with_opts.3
 man/man3/mongoc_common_task_examples.3
+man/man3/mongoc_configuring_tls.3
 man/man3/mongoc_connection_pooling.3
 man/man3/mongoc_create_indexes.3
 man/man3/mongoc_cursor_clone.3
@@ -789,11 +793,13 @@ man/man3/mongoc_read_mode_t.3
 man/man3/mongoc_read_prefs_add_tag.3
 man/man3/mongoc_read_prefs_copy.3
 man/man3/mongoc_read_prefs_destroy.3
+man/man3/mongoc_read_prefs_get_hedge.3
 man/man3/mongoc_read_prefs_get_max_staleness_seconds.3
 man/man3/mongoc_read_prefs_get_mode.3
 man/man3/mongoc_read_prefs_get_tags.3
 man/man3/mongoc_read_prefs_is_valid.3
 man/man3/mongoc_read_prefs_new.3
+man/man3/mongoc_read_prefs_set_hedge.3
 man/man3/mongoc_read_prefs_set_max_staleness_seconds.3
 man/man3/mongoc_read_prefs_set_mode.3
 man/man3/mongoc_read_prefs_set_tags.3
@@ -906,6 +912,7 @@ man/man3/mongoc_uri_get_string.3
 man/man3/mongoc_uri_get_tls.3
 man/man3/mongoc_uri_get_username.3
 man/man3/mongoc_uri_get_write_concern.3
+man/man3/mongoc_uri_has_option.3
 man/man3/mongoc_uri_new.3
 man/man3/mongoc_uri_new_for_host_port.3
 man/man3/mongoc_uri_new_with_error.3
