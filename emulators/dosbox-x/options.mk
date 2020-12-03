@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2019/09/22 23:28:55 nia Exp $
+# $NetBSD: options.mk,v 1.2 2020/12/03 14:03:19 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.dosbox-x
-PKG_SUPPORTED_OPTIONS=		alsa ffmpeg opengl x11
+PKG_SUPPORTED_OPTIONS=		alsa ffmpeg freetype opengl x11
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
-PKG_SUGGESTED_OPTIONS=		ffmpeg opengl
+PKG_SUGGESTED_OPTIONS=		ffmpeg freetype opengl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -25,6 +25,13 @@ CONFIGURE_ARGS+=	--enable-avcodec
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-avcodec
+.endif
+
+.if !empty(PKG_OPTIONS:Mfreetype)
+CONFIGURE_ARGS+=	--enable-freetype
+.include "../../graphics/freetype2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-freetype
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
