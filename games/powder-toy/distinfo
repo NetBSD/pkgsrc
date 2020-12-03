@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2020/06/20 21:05:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2020/12/03 14:37:19 nia Exp $
 
-SHA1 (powder-toy-94.1.tar.gz) = 14249c100e38971444bb96fd31ff26fd24cc2190
-RMD160 (powder-toy-94.1.tar.gz) = 88671b2007f2f1a2ecc3a079cc961d3475742f56
-SHA512 (powder-toy-94.1.tar.gz) = ecda20d206298ff605a3a361255a0766caceece4d268355e4dbf1d56ef78bd7c43e54560d1ad71f29a8c3572d66eca875d5539e1006b260e029561ab91bf34d4
-Size (powder-toy-94.1.tar.gz) = 1254309 bytes
-SHA1 (patch-SConscript) = 73cb6c1efb0bfe7db2f8e67c3b8cff6aa93da313
-SHA1 (patch-resources_powder.appdata.xml) = e687b33b50c286ec2858bdf2024e201df4b8be8e
+SHA1 (powder-toy-95.0.tar.gz) = 34b66eca7fb5c92662125f18dc7aaaaadce67c0a
+RMD160 (powder-toy-95.0.tar.gz) = 51d796142939821f1c310689899e2e82a18c118f
+SHA512 (powder-toy-95.0.tar.gz) = e2f8230631a8ee50b3cd4b9d34cf7121663266ea1fd6ffb176b37b569b2e1566fc84ff1abc434bbfd7eb6b55264eb87c11312e8ebdc28f07210efcc9db756910
+Size (powder-toy-95.0.tar.gz) = 1250743 bytes
+SHA1 (patch-SConscript) = 0eef48dccd21eb140672a8087ac05b24f0940e09
+SHA1 (patch-resources_powder.appdata.xml) = 7185f4e51c0125c0220772bed23c8ac8a119c845
 SHA1 (patch-resources_powder.desktop) = 9c77feb557afbd2e5ad4fb0b5f15be1809214555
 SHA1 (patch-src_Config.h) = 01d9cced7a87b6f33b1974bf51dd9d93949d41a2
