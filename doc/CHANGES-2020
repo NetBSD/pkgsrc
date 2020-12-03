@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6536 2020/12/03 13:02:35 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6537 2020/12/03 13:29:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9520,3 +9520,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/gnupg2 to 2.2.25 [adam 2020-12-03]
 	Updated security/gnutls to 3.7.0 [nia 2020-12-03]
 	Updated audio/speech-dispatcher to 0.10.2 [nia 2020-12-03]
+	Updated audio/ncmpc to 0.42 [nia 2020-12-03]
