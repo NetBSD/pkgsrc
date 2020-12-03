@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6534 2020/12/03 12:10:39 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6535 2020/12/03 12:28:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9518,3 +9518,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mongodb to 4.2.11 [adam 2020-12-03]
 	Updated security/libassuan2 to 2.5.4 [adam 2020-12-03]
 	Updated security/gnupg2 to 2.2.25 [adam 2020-12-03]
+	Updated security/gnutls to 3.7.0 [nia 2020-12-03]
