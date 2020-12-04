@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6560 2020/12/04 13:39:55 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6561 2020/12/04 14:17:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9547,3 +9547,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/duo-unix to 1.11.4 [jperkin 2020-12-04]
 	Updated misc/bibletime to 3.0 [nros 2020-12-04]
 	Updated pkgtools/pkgin to 20.11.0nb2 [wiz 2020-12-04]
+	Updated net/py-aio-pika to 6.7.1 [adam 2020-12-04]
+	Updated devel/py-pip to 20.3.1 [adam 2020-12-04]
