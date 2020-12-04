@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/12/04 20:45:32 nia Exp $
 
 DISTNAME=	calypso-1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net time
 MASTER_SITES=	http://keithp.com/calypso/
 

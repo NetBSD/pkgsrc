@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/08/31 23:07:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/12/04 20:45:17 nia Exp $
 
 DISTNAME=	fuse-pcachefs-0.0.20160203
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ibizaman/}
 GITHUB_PROJECT=	pcachefs

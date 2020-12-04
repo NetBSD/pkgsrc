@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/05/27 19:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/12/04 20:45:42 nia Exp $
 
 PKGNAME=	${DISTNAME:S/^M/m/}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	Manifold-0.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Manifold/}

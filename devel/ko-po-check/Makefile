@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:30:30 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/12/04 20:45:11 nia Exp $
 
 DISTNAME=	ko-po-check-0.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel korean textproc
 MASTER_SITES=	http://kldp.net/frs/download.php/3863/
 

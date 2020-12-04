@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/11/29 05:10:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2020/12/04 20:45:49 nia Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -12,6 +12,7 @@
 # update to 20.
 DISTNAME=	nextcloud-20.0.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 EXTRACT_SUFX=	.tar.bz2

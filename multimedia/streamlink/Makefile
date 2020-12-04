@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/11/05 08:31:29 maya Exp $
+# $NetBSD: Makefile,v 1.21 2020/12/04 20:45:32 nia Exp $
 
 DISTNAME=	streamlink-1.4.1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
