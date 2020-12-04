@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3280 2020/12/04 09:25:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3281 2020/12/04 23:24:56 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -2544,6 +2544,7 @@ SUBDIR+=	py-requests-futures
 SUBDIR+=	py-requests-mock
 SUBDIR+=	py-requests-toolbelt
 SUBDIR+=	py-requests-unixsocket
+SUBDIR+=	py-responses
 SUBDIR+=	py-restructuredtext_lint
 SUBDIR+=	py-retry_decorator
 SUBDIR+=	py-rlp
