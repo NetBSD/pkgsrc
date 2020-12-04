@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:40 nia Exp $
 
 DISTNAME=	xonsh-0.8.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	shells python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xonsh/}
 

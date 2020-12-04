@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/10/12 21:51:58 bacon Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/04 20:44:57 nia Exp $
 
 DISTNAME=	aeneas-1.7.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=readbeyond/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

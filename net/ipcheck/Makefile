@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2020/03/20 11:58:07 nia Exp $
+# $NetBSD: Makefile,v 1.27 2020/12/04 20:45:34 nia Exp $
 #
 
 DISTNAME=	ipcheck.233
 PKGNAME=	ipcheck-0.233
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	http://ipcheck.sourceforge.net/releases/
 

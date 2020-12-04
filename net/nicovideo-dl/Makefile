@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/06/22 00:45:46 tsutsui Exp $
+# $NetBSD: Makefile,v 1.14 2020/12/04 20:45:35 nia Exp $
 #
 
 DISTNAME=	nicovideo-dl-0.0.20190126
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_OSDN:=nicovideo-dl/70568/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:12 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/12/04 20:45:09 nia Exp $
 
 DISTNAME=	gnatpython-${SNAPSHOT}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
