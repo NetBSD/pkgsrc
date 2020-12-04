@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6562 2020/12/04 15:04:05 he Exp $
+$NetBSD: CHANGES-2020,v 1.6563 2020/12/04 15:23:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9550,3 +9550,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-aio-pika to 6.7.1 [adam 2020-12-04]
 	Updated devel/py-pip to 20.3.1 [adam 2020-12-04]
 	Updated net/unbound to 1.13.0 [he 2020-12-04]
+	Updated shells/zsh to 5.8nb1 [ryoon 2020-12-04]
