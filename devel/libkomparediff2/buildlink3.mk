@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2020/11/05 09:06:51 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2020/12/04 04:55:49 riastradh Exp $
 
 BUILDLINK_TREE+=	libkomparediff2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkomparediff2
 LIBKOMPAREDIFF2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkomparediff2+=	libkomparediff2>=19.08.3
-BUILDLINK_ABI_DEPENDS.libkomparediff2?=	libkomparediff2>=20.04.1nb3
+BUILDLINK_ABI_DEPENDS.libkomparediff2?=	libkomparediff2>=20.04.1nb4
 BUILDLINK_PKGSRCDIR.libkomparediff2?=	../../devel/libkomparediff2
 
 .include "../../devel/kio/buildlink3.mk"

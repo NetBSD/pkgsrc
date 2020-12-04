@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2020/11/05 09:08:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2020/12/04 04:55:55 riastradh Exp $
 
 DISTNAME=	ksudoku-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/ksudoku/
