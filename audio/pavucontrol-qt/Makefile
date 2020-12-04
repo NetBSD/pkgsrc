@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/11/05 09:07:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/04 04:55:42 riastradh Exp $
 
 DISTNAME=	pavucontrol-qt-0.15.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
