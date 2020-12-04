@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/12/04 23:29:32 riastradh Exp $
+
+SHA1 (flit/3.0.0.tar.gz) = 17e1143254a3127107cfa0663ae4182063bd2054
+RMD160 (flit/3.0.0.tar.gz) = f2fc536170e7a1b75b9b4691ecbc38d64556f4d2
+SHA512 (flit/3.0.0.tar.gz) = eaac412613f18e711603ee3dcf692aa0b652cd59de726e547ab91ee96368d804dbe4f312a0c169565ff96f34dd4e72e7fccf63f719910c17955afa64d2f36485
+Size (flit/3.0.0.tar.gz) = 104604 bytes
+SHA1 (patch-tests_test__find__python__executable.py) = ba687b8828f40720da7d3bbaea60b0665d781b5b
