@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.103 2020/11/05 09:08:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2020/12/04 20:45:21 nia Exp $
 
 # This is intentionally 3.10 Long Term Release.  Please do not update
 # to 3.14, and instead discuss whether/how we want multiple versions.
 DISTNAME=	qgis-3.10.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2

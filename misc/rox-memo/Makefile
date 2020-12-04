@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/03/20 11:58:03 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/12/04 20:45:31 nia Exp $
 #
 
 DISTNAME=	Memo-1.9.5
 PKGNAME=	rox-memo-1.9.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz

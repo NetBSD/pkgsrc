@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/10/13 12:16:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/04 20:45:27 nia Exp $
 
 DISTNAME=		feed2exec-0.16.0
+PKGREVISION=		1
 CATEGORIES=		mail python
 MASTER_SITES=		https://gitlab.com/anarcat/feed2exec/-/archive/${PKGVERSION_NOREV}/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/04/03 21:59:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/12/04 20:45:41 nia Exp $
 
 DISTNAME=	dupeguru-src-4.0.4_RC
 PKGNAME=	${DISTNAME:S/-src//:S/_RC/rc1/}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/arsenetar/dupeguru/releases/download/4.0.4/
 

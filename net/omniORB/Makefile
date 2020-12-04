@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/03/20 11:58:09 nia Exp $
+# $NetBSD: Makefile,v 1.24 2020/12/04 20:45:35 nia Exp $
 
 DISTNAME=		omniORB-4.1.7
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=omniorb/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/11/03 11:45:56 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/12/04 20:45:36 nia Exp $
 
 DISTNAME=	UPnP-Inspector-0.2.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 #MASTER_SITES=	http://coherence.beebits.net/download/
 

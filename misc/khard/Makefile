@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/08/24 08:08:59 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/12/04 20:45:30 nia Exp $
 
 DISTNAME=	khard-0.17.0
+PKGREVISION=	1
 CATEGORIES=	misc net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khard/}
 

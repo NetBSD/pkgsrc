@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:32:34 maya Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/04 20:44:57 nia Exp $
 
 DISTNAME=	bmap-tools-3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	ftp://ftp.infradead.org/pub/bmap-tools/
 EXTRACT_SUFX=	.tgz

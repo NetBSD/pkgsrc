@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/11/18 21:06:08 js Exp $
+# $NetBSD: Makefile,v 1.13 2020/12/04 20:45:02 nia Exp $
 
 DISTNAME=	matrix-synapse-1.23.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}

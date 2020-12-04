@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/01/26 05:26:23 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2020/12/04 20:45:08 nia Exp $
 
 DISTNAME=	diffuse-0.4.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diffuse/}
 EXTRACT_SUFX=	.tar.bz2

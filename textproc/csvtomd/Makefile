@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/04/25 07:33:23 maya Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:44 nia Exp $
 
 DISTNAME=	csvtomd-0.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mplewis/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

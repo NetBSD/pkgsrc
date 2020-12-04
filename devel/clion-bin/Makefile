@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2019/05/09 15:03:10 mef Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:07 nia Exp $
 
 
 VERSION=	2018.3.4
 DISTNAME=	CLion-${VERSION}
 PKGNAME=	clion-bin-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/cpp/
 

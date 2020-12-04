@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2020/05/22 10:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.48 2020/12/04 20:45:19 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-share-/}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Machine independent files for Freeciv
 
 .include "../../games/freeciv-share/Makefile.common"

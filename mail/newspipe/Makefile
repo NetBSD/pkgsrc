@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/10/13 12:16:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2020/12/04 20:45:27 nia Exp $
 
 DISTNAME=		newspipe.1.1.9
 PKGNAME=		${DISTNAME:S/./-/}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=newspipe/}
 EXTRACT_SUFX=		.zip

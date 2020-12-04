@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/05/02 16:32:01 leot Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:45 nia Exp $
 
 DISTNAME=	subliminal-2.1.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subliminal/}
 

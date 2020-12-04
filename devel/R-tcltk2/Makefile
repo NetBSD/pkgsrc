@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/09/26 00:54:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:05 nia Exp $
 
 R_PKGNAME=	tcltk2
 R_PKGVER=	1.2-11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
