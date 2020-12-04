@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.5 2020/02/25 04:54:35 rillig Exp $
+# $NetBSD: build.mk,v 1.6 2020/12/04 18:23:05 nia Exp $
 
 BUILD_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
@@ -29,7 +29,7 @@ meson-configure:
 do-build: meson-build
 meson-build:
 .for d in ${BUILD_DIRS}
-	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} ninja -j ${MAKE_JOBS:U1} -C output
+	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} ninja -j ${_MAKE_JOBS_N:U1} -C output
 .endfor
 
 do-install: meson-install
