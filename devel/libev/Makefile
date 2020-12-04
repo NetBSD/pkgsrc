@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/05/23 16:19:10 nia Exp $
+# $NetBSD: Makefile,v 1.24 2020/12/04 15:56:10 jperkin Exp $
 
 DISTNAME=	libev-4.33
 CATEGORIES=	devel
@@ -13,9 +13,13 @@ USE_LIBTOOL=			yes
 GNU_CONFIGURE=			yes
 GNU_CONFIGURE_LIBSUBDIR=	ev
 CONFIGURE_ARGS+=		--includedir=${PREFIX}/include/ev
+
 # Explicitly disable inotify on SunOS, assumes Linux statfs.
-CONFIGURE_ENV.SunOS+=		ac_cv_header_sys_inotify_h=no
-CONFIGURE_ENV.SunOS+=		ac_cv_header_sys_epoll_h=no
+CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
+CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_epoll_h=no
+
+# Issues seen with multithreaded programs without _REENTRANT.
+CPPFLAGS.SunOS+=	-D_REENTRANT
 
 .include "../../mk/bsd.prefs.mk"
 
