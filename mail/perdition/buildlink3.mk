@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2018/01/07 13:04:21 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2020/12/04 04:56:01 riastradh Exp $
 
 BUILDLINK_TREE+=	perdition
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	perdition
 PERDITION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.perdition+=	perdition>=1.17
-BUILDLINK_ABI_DEPENDS.perdition+=	perdition>=1.18nb1
+BUILDLINK_ABI_DEPENDS.perdition+=	perdition>=1.18nb6
 BUILDLINK_PKGSRCDIR.perdition?=		../../mail/perdition
 
 # The following are included in Makefile.common for "configure"'s sake.

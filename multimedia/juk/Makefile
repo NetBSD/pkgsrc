@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2020/11/05 09:08:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2020/12/04 04:56:07 riastradh Exp $
 
 DISTNAME=	juk-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/juk/
