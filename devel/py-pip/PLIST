@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/11/04 10:23:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/12/04 14:17:02 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -291,6 +291,9 @@ ${PYSITELIB}/pip/_internal/resolution/resolvelib/found_candidates.pyo
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/provider.py
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/provider.pyc
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/provider.pyo
+${PYSITELIB}/pip/_internal/resolution/resolvelib/reporter.py
+${PYSITELIB}/pip/_internal/resolution/resolvelib/reporter.pyc
+${PYSITELIB}/pip/_internal/resolution/resolvelib/reporter.pyo
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/requirements.py
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/requirements.pyc
 ${PYSITELIB}/pip/_internal/resolution/resolvelib/requirements.pyo
@@ -810,9 +813,6 @@ ${PYSITELIB}/pip/_vendor/msgpack/ext.pyo
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.py
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.pyc
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.pyo
-${PYSITELIB}/pip/_vendor/packaging/__about__.py
-${PYSITELIB}/pip/_vendor/packaging/__about__.pyc
-${PYSITELIB}/pip/_vendor/packaging/__about__.pyo
 ${PYSITELIB}/pip/_vendor/packaging/__init__.py
 ${PYSITELIB}/pip/_vendor/packaging/__init__.pyc
 ${PYSITELIB}/pip/_vendor/packaging/__init__.pyo
@@ -978,9 +978,6 @@ ${PYSITELIB}/pip/_vendor/six.pyo
 ${PYSITELIB}/pip/_vendor/toml/__init__.py
 ${PYSITELIB}/pip/_vendor/toml/__init__.pyc
 ${PYSITELIB}/pip/_vendor/toml/__init__.pyo
-${PYSITELIB}/pip/_vendor/toml/common.py
-${PYSITELIB}/pip/_vendor/toml/common.pyc
-${PYSITELIB}/pip/_vendor/toml/common.pyo
 ${PYSITELIB}/pip/_vendor/toml/decoder.py
 ${PYSITELIB}/pip/_vendor/toml/decoder.pyc
 ${PYSITELIB}/pip/_vendor/toml/decoder.pyo
@@ -999,6 +996,9 @@ ${PYSITELIB}/pip/_vendor/urllib3/__init__.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/_collections.py
 ${PYSITELIB}/pip/_vendor/urllib3/_collections.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/_collections.pyo
+${PYSITELIB}/pip/_vendor/urllib3/_version.py
+${PYSITELIB}/pip/_vendor/urllib3/_version.pyc
+${PYSITELIB}/pip/_vendor/urllib3/_version.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/connection.py
 ${PYSITELIB}/pip/_vendor/urllib3/connection.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/connection.pyo
@@ -1077,6 +1077,9 @@ ${PYSITELIB}/pip/_vendor/urllib3/util/__init__.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/util/connection.py
 ${PYSITELIB}/pip/_vendor/urllib3/util/connection.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/util/connection.pyo
+${PYSITELIB}/pip/_vendor/urllib3/util/proxy.py
+${PYSITELIB}/pip/_vendor/urllib3/util/proxy.pyc
+${PYSITELIB}/pip/_vendor/urllib3/util/proxy.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/util/queue.py
 ${PYSITELIB}/pip/_vendor/urllib3/util/queue.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/util/queue.pyo
@@ -1092,6 +1095,9 @@ ${PYSITELIB}/pip/_vendor/urllib3/util/retry.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/util/ssl_.py
 ${PYSITELIB}/pip/_vendor/urllib3/util/ssl_.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/util/ssl_.pyo
+${PYSITELIB}/pip/_vendor/urllib3/util/ssltransport.py
+${PYSITELIB}/pip/_vendor/urllib3/util/ssltransport.pyc
+${PYSITELIB}/pip/_vendor/urllib3/util/ssltransport.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/util/timeout.py
 ${PYSITELIB}/pip/_vendor/urllib3/util/timeout.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/util/timeout.pyo
