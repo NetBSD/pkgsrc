@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1364 2020/11/26 15:53:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.1365 2020/12/04 16:31:18 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -663,6 +663,7 @@ SUBDIR+=	py-ORBit
 SUBDIR+=	py-Socks
 SUBDIR+=	py-adns
 SUBDIR+=	py-aio-pika
+SUBDIR+=	py-aioresponses
 SUBDIR+=	py-aiormq
 SUBDIR+=	py-aiorpcX
 SUBDIR+=	py-amqp
