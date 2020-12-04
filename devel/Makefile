@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3279 2020/12/03 07:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3280 2020/12/04 09:25:33 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -445,6 +445,7 @@ SUBDIR+=	go-locker
 SUBDIR+=	go-logrus
 SUBDIR+=	go-mapstructure
 SUBDIR+=	go-mapstructure-bep
+SUBDIR+=	go-mod
 SUBDIR+=	go-mow-cli
 SUBDIR+=	go-nbreader
 SUBDIR+=	go-nitro
