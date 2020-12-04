@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/01/18 21:49:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2020/12/04 04:56:01 riastradh Exp $
 
 PERDITION_COMMENT=	main program
-PKGREVISION=		5
+PKGREVISION=		6
 
 .include "options.mk"
 

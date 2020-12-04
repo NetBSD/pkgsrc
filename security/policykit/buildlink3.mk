@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2020/03/08 16:48:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2020/12/04 04:56:12 riastradh Exp $
 
 BUILDLINK_TREE+=	policykit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	policykit
 POLICYKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.policykit+=	policykit>=0.9
-BUILDLINK_ABI_DEPENDS.policykit+=	policykit>=0.9nb23
+BUILDLINK_ABI_DEPENDS.policykit+=	policykit>=0.9nb27
 BUILDLINK_PKGSRCDIR.policykit?=		../../security/policykit
 
 .include "../../sysutils/dbus/buildlink3.mk"
