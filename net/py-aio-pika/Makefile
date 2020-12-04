@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2020/09/14 19:40:35 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/12/04 14:13:32 adam Exp $
 
-DISTNAME=	aio-pika-6.7.0
+DISTNAME=	aio-pika-6.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aio-pika/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://aio-pika.readthedocs.org/
+HOMEPAGE=	https://aio-pika.readthedocs.io/
 COMMENT=	Wrapper for the aiormq for asyncio and humans
 LICENSE=	apache-2.0
 
