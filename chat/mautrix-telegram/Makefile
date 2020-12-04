@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/11/25 08:00:19 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:02 nia Exp $
 
 DISTNAME=	mautrix-telegram-0.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/11/04 21:43:49 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:46 nia Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../textproc/xxdiff/Makefile.common"
 
 PKGNAME=	xxdiff-scripts-${XXDIFFVERSION}

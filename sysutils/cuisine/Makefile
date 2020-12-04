@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/09/02 13:20:08 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/12/04 20:45:41 nia Exp $
 
 VERSION=		0.7.13
 DISTNAME=		cuisine-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_PYPI:=c/cuisine/}
 
