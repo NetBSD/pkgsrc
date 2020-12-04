@@ -1,0 +1,22 @@
+$NetBSD: patch-Completion_BSD_Command___bsd__pkg,v 1.1 2020/12/04 15:23:02 ryoon Exp $
+
+* Use new pkgsrc database directory for NetBSD.
+
+--- Completion/BSD/Command/_bsd_pkg.orig	2019-05-06 03:42:37.000000000 +0000
++++ Completion/BSD/Command/_bsd_pkg
+@@ -31,7 +31,14 @@ _bsd_pkg_pkgfiles() {
+ 
+ (( $+functions[_bsd_pkg_pkgs] )) ||
+ _bsd_pkg_pkgs() {
+-  compadd "$@" - ${PKG_DBDIR:-/var/db/pkg}/*(/:t)
++  case $OSTYPE in
++  netbsd*)
++    compadd "$@" - ${PKG_DBDIR:-/usr/pkg/pkgdb}/*(/:t)
++    ;;
++  *)
++    compadd "$@" - ${PKG_DBDIR:-/var/db/pkg}/*(/:t)
++    ;;
++  esac
+ }
+ 
+ (( $+functions[_bsd_pkg_pkgs_and_files] )) ||
