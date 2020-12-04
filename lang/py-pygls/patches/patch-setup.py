@@ -1,19 +1,22 @@
-$NetBSD: patch-setup.py,v 1.1 2020/05/18 15:11:01 wiz Exp $
+$NetBSD: patch-setup.py,v 1.2 2020/12/04 16:46:59 adam Exp $
 
-Avoid hardcoding particular module versions.
+Do not install data files.
 
---- setup.py.orig	2020-04-20 11:29:57.000000000 +0000
+--- setup.py.orig	2020-09-29 12:26:40.000000000 +0000
 +++ setup.py
-@@ -48,9 +48,9 @@ docs_require = [
- ]
- 
- tests_require = [
--    "mock==3.0.5",
--    "pytest==4.5.0",
--    "pytest-asyncio==0.10.0"
-+    "mock",
-+    "pytest",
-+    "pytest-asyncio",
- ]
- 
- # pip install pygls
+@@ -70,15 +70,6 @@ setup(
+     license=LICENSE,
+     packages=packages,
+     include_package_data=True,
+-    data_files=[
+-        ('lib/site-packages/pygls', [
+-            './CHANGELOG.md',
+-            './LICENSE.txt',
+-            './README.md',
+-            'ThirdPartyNotices.txt',
+-            './pygls/py.typed'
+-        ])
+-    ],
+     zip_safe=False,
+     install_requires=[],
+     extras_require={
