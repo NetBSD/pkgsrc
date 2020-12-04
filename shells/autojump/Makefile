@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:17 maya Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:40 nia Exp $
 
 VERSION=	22.2.4
 DISTNAME=	autojump-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	shells
 MASTER_SITES=	-https://github.com/joelthelion/autojump/archive/release-v${VERSION}${EXTRACT_SUFX}
 

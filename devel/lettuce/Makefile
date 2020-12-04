@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/09/02 13:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/12/04 20:45:11 nia Exp $
 
 DISTNAME=	lettuce-0.2.18
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lettuce/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/12/03 13:00:48 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/12/04 20:44:59 nia Exp $
 
 DISTNAME=	speech-dispatcher-0.10.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=brailcom/}
 GITHUB_PROJECT=	speechd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/10/23 00:45:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.29 2020/12/04 20:45:26 nia Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC6_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc6-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC6_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz

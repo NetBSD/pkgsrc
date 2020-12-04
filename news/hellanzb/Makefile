@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2019/11/04 19:17:10 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/12/04 20:45:36 nia Exp $
 #
 .include "../../news/hellanzb/Makefile.version"
 
 DISTNAME=		hellanzb-${HELLANZB_VERSION}.${HELLANZB_SVN_REV}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 

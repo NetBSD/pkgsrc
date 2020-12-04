@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2020/03/20 11:57:39 nia Exp $
+# $NetBSD: Makefile,v 1.39 2020/12/04 20:45:18 nia Exp $
 
 DISTNAME=		4stAttack-2.1.4
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=forcedattack/}
 

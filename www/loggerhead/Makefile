@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/04/25 07:33:27 maya Exp $
+# $NetBSD: Makefile,v 1.23 2020/12/04 20:45:48 nia Exp $
 
 DISTNAME=	loggerhead-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www scm
 MASTER_SITES=	http://launchpad.net/loggerhead/1.18/${VER}/+download/
 VER=		1.18.1

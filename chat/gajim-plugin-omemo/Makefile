@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/04/25 13:35:01 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/04 20:45:01 nia Exp $
 
 PKGNAME=	gajim-plugin-omemo-2.6.28
+PKGREVISION=	1
 DISTNAME=	omemo_${PKGVERSION_NOREV}
 CATEGORIES=	chat security python
 MASTER_SITES=	https://ftp.gajim.org/plugins_releases/

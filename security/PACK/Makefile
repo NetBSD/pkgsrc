@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 07:33:15 maya Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:38 nia Exp $
 
 DISTNAME=	PACK-0.0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://thesprawl.org/media/projects/
 

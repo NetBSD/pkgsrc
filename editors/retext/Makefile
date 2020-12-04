@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2020/04/06 00:08:07 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:16 nia Exp $
 
 VERSION=	7.1.0
 DISTNAME=	ReText-${VERSION}
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/ReText/}
 

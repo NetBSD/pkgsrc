@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/12/20 18:36:18 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:16 nia Exp $
 
 DISTNAME=	gns3-server-2.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gns3-server/}
 

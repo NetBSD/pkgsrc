@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2019/11/04 19:17:11 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/12/04 20:45:37 nia Exp $
 
 DISTNAME=	lottanzb-0.4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	news
 MASTER_SITES=	http://www.lottanzb.org/releases/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/06/21 20:25:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/04 20:45:48 nia Exp $
 
 DISTNAME=	firefox_decrypt-0.7.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unode/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2020/08/17 20:19:34 leot Exp $
+# $NetBSD: Makefile,v 1.55 2020/12/04 20:45:30 nia Exp $
 
 DISTNAME=	orca-3.34.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/orca/3.34/}
 EXTRACT_SUFX=	.tar.xz

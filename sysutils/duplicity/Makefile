@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2020/01/18 23:35:16 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2020/12/04 20:45:41 nia Exp $
 
 DISTNAME=	duplicity-0.7.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://code.launchpad.net/duplicity/0.7-series/${PKGVERSION_NOREV}/+download/
 

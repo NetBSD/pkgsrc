@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/11/04 22:10:14 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/12/04 20:45:49 nia Exp $
 
 DISTNAME=	pygments.rb-1.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

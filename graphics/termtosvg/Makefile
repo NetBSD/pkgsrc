@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/03/10 15:20:06 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/04 20:45:23 nia Exp $
 
 DISTNAME=	termtosvg-1.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nbedos/}
 

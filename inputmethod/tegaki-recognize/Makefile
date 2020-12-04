@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/09/02 13:19:45 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/12/04 20:45:25 nia Exp $
 
 DISTNAME=	tegaki-recognize-0.3.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/0.3.1/
 

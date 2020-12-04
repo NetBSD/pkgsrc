@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 21:28:49 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/12/04 20:45:42 nia Exp $
 
 VERSION=		e518a90eade4ca538468b6640dccb651e6034b9e
 DISTNAME=		${VERSION}
 PKGNAME=		monitoring-0.9.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		https://github.com/sebastien/monitoring/archive/
 

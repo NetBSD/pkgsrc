@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/11/18 20:52:50 js Exp $
+# $NetBSD: Makefile,v 1.11 2020/12/04 20:45:02 nia Exp $
 
 DISTNAME=	mautrix-hangouts-0.1.4
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

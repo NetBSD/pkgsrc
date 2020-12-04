@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/05/20 23:32:56 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/12/04 20:45:05 nia Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	http://kldp.net/download.php/715/
 

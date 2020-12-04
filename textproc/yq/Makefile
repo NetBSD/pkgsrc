@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/11/19 21:30:15 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/04 20:45:46 nia Exp $
 
 DISTNAME=	yq-2.9.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kislyuk/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

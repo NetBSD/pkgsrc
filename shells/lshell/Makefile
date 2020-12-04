@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2019/09/02 13:19:57 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/12/04 20:45:40 nia Exp $
 
 DISTNAME=	lshell-0.9.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	shells python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lshell/}
 

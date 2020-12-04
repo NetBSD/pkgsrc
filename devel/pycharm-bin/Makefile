@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2019/05/13 17:30:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:12 nia Exp $
 
 
 VERSION=	2019.1.2
 DISTNAME=	pycharm-community-${VERSION}
 PKGNAME=	pycharm-bin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/python/
 
