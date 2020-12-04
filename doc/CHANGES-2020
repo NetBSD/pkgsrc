@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6554 2020/12/03 22:32:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6555 2020/12/04 09:25:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9539,3 +9539,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/lilv to 0.24.10 [nia 2020-12-03]
 	Updated multimedia/lightspark to 0.8.3 [nia 2020-12-03]
 	Updated audio/qmmp to 1.4.2 [nia 2020-12-03]
+	Updated devel/py-ddt to 1.4.1 [adam 2020-12-04]
+	Updated devel/py-approvaltests to 0.2.10 [adam 2020-12-04]
