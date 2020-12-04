@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/04/25 07:32:44 maya Exp $
+# $NetBSD: Makefile,v 1.16 2020/12/04 20:45:08 nia Exp $
 
 DISTNAME=	cvs-fast-export-1.44
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.catb.org/~esr/cvs-fast-export/
 

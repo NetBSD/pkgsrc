@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/10/23 00:45:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.49 2020/12/04 20:45:26 nia Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC48_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc48-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC48_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 17:32:09 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/12/04 20:45:41 nia Exp $
 
 DISTNAME=	htop-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hisham.hm/htop/releases/${PKGVERSION_NOREV}/
 

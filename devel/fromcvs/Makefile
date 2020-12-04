@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2019/04/25 07:32:45 maya Exp $
+# $NetBSD: Makefile,v 1.35 2020/12/04 20:45:09 nia Exp $
 
 DISTNAME=	fromcvs-${VERS}
 #PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel scm
 MASTER_SITES=	-https://github.com/corecode/fromcvs/archive/${REVISION}.zip
 EXTRACT_SUFX=	.zip

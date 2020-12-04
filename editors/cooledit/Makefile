@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2019/04/25 07:32:51 maya Exp $
+# $NetBSD: Makefile,v 1.37 2020/12/04 20:45:15 nia Exp $
 
 DISTNAME=	cooledit-3.17.17
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/
 

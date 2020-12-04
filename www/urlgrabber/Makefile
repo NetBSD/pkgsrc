@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2019/09/02 13:20:02 adam Exp $
+# $NetBSD: Makefile,v 1.21 2020/12/04 20:45:49 nia Exp $
 
 DISTNAME=	urlgrabber-3.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www devel
 MASTER_SITES=	http://urlgrabber.baseurl.org/download/
 

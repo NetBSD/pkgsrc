@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/05/03 16:49:32 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/12/04 20:45:23 nia Exp $
 
 DISTNAME=	cwtext-0.96
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cwtext/}
 

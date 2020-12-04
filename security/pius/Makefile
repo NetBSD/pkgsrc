@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:11:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:39 nia Exp $
 
 DISTNAME=		pius-3.0.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jaymzh/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
