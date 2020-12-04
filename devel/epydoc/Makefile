@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2020/07/13 20:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/12/04 20:45:08 nia Exp $
 
 DISTNAME=	epydoc-3.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=epydoc/}
 

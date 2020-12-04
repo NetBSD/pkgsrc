@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2019/11/03 10:39:07 rillig Exp $
+# $NetBSD: Makefile,v 1.77 2020/12/04 20:45:06 nia Exp $
 
 DISTNAME=	bzr-2.7.0
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/bzr/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2020/05/23 09:19:46 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2020/12/04 20:45:18 nia Exp $
 
 DISTNAME=	tahoe-lafs-1.12.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/source/tahoe-lafs/tarballs/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/11/04 22:09:56 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/12/04 20:45:48 nia Exp $
 
 DISTNAME=	ies4linux-2.99.0.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	http://www.tatanka.com.br/ies4linux/downloads/
 

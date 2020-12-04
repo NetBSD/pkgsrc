@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/08/17 20:18:51 leot Exp $
+# $NetBSD: Makefile,v 1.27 2020/12/04 20:45:20 nia Exp $
 #
 
 DISTNAME=		scid-3.6.1
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scid/}
 

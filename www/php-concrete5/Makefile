@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2020/01/26 17:32:22 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/12/04 20:45:48 nia Exp $
 #
 
 DISTNAME=	concrete5.7.5.13
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/concrete5/concrete5-5/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.concrete5.org/download_file/-/view/93075/
 EXTRACT_SUFX=	.zip

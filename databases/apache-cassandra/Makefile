@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2019/04/25 07:32:40 maya Exp $
+# $NetBSD: Makefile,v 1.23 2020/12/04 20:45:03 nia Exp $
 #
 
 CASSANDRA_VER=	3.11.2
-PKGREVISION=	1
+PKGREVISION=	2
 
 USE_JAVA2=	8
 

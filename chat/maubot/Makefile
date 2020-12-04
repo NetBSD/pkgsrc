@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/10/27 20:41:51 js Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:02 nia Exp $
 
 DISTNAME=	maubot-0.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maubot/}
 

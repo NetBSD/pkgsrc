@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/09/29 16:17:56 prlw1 Exp $
+# $NetBSD: Makefile,v 1.18 2020/12/04 20:45:00 nia Exp $
 
 DISTNAME=	glmark2-2020.04
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glmark2/}
 GITHUB_TAG=	c493520253fbfe3676c8b34b6f91a7c9a838fc8e

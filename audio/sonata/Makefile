@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2019/09/14 11:05:09 nia Exp $
+# $NetBSD: Makefile,v 1.60 2020/12/04 20:44:59 nia Exp $
 
 DISTNAME=	sonata-1.7b1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=multani/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

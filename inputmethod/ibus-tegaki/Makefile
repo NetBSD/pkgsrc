@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2019/11/02 22:56:53 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/12/04 20:45:24 nia Exp $
 
 DISTNAME=	ibus-tegaki-0.3.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 

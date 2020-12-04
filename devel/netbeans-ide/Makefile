@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2020/08/31 18:07:24 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/12/04 20:45:12 nia Exp $
 #
 
 DISTNAME=	netbeans-8.2-201609300101
 PKGNAME=	netbeans-ide-8.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel editors
 MASTER_SITES=	http://download.netbeans.org/netbeans/${PKGVERSION_NOREV}/final/zip/
 EXTRACT_SUFX=	.zip
