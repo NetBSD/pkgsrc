@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/11/16 07:54:13 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2020/12/04 09:25:25 adam Exp $
 
-SHA1 (approvaltests-0.2.9.tar.gz) = 8254c3c037e1bd6a91f1673d3ffe29c8316f01d6
-RMD160 (approvaltests-0.2.9.tar.gz) = ed1abc82120d7421d552ec2c98ae679e1d2a0cd2
-SHA512 (approvaltests-0.2.9.tar.gz) = 46adc30243ddf37f908c436a1f5972d97a621b82854478a97375f66e70f799f5ad5ce2f7df282c642337b6c7f84c3cdea12468ad75681246c51e5596fd14d117
-Size (approvaltests-0.2.9.tar.gz) = 12300 bytes
+SHA1 (approvaltests-0.2.10.tar.gz) = 51c411464d05aa33d751a07e82833131f8d6bd69
+RMD160 (approvaltests-0.2.10.tar.gz) = 2fd29dbdbea5aa08952472a6f288f289f589b039
+SHA512 (approvaltests-0.2.10.tar.gz) = 7b0148609a0a61aa762fb62996ed401a1fbdf3a21d1b55d161b0a957d236add9274a1d0bdacfd4dcf28700b3abc4813a8a7205cbef7ebea010b4554e1405ea68
+Size (approvaltests-0.2.10.tar.gz) = 12269 bytes
