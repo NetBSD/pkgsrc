@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/08/31 18:11:38 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/12/04 04:56:15 riastradh Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-power-manager-1.6.5
