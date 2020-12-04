@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2020/05/31 09:25:51 rillig Exp $
+# $NetBSD: Makefile,v 1.98 2020/12/04 15:23:02 ryoon Exp $
 
 DISTNAME=	zsh-5.8
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
@@ -70,6 +71,7 @@ REPLACE_FILES.zsh+=	Util/check-tmux-state Util/reporter
 .include "options.mk"
 
 pre-configure:
+	${RM} ${WRKSRC}/Completion/BSD/Command/_bsd_pkg.orig
 	cd ${WRKSRC};  autoreconf -fiv
 
 post-install:
