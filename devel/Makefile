@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3282 2020/12/04 23:29:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.3283 2020/12/04 23:30:29 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -2331,6 +2331,7 @@ SUBDIR+=	py-importlib-resources
 SUBDIR+=	py-incremental
 SUBDIR+=	py-iniconfig
 SUBDIR+=	py-inquirer
+SUBDIR+=	py-intelhex
 SUBDIR+=	py-intervaltree
 SUBDIR+=	py-iowait
 SUBDIR+=	py-ipaddr
