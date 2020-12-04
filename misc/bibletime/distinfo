@@ -1,6 +1,26 @@
-$NetBSD: distinfo,v 1.3 2019/10/27 17:11:04 kamil Exp $
+$NetBSD: distinfo,v 1.4 2020/12/04 12:17:58 nros Exp $
 
-SHA1 (bibletime-2.11.2.tar.xz) = 75b0a3be9f392b568bbf974d8cf59db128fa7b20
-RMD160 (bibletime-2.11.2.tar.xz) = b4df2eb0bc581f4d0a9f0e3accebaeb955dba905
-SHA512 (bibletime-2.11.2.tar.xz) = 99e2500e07797549e32ac28238c90a4db1cd98f74ea20f0161db7675127f42363006f20d859504be958bfdecf80a18a96229a1bbc105d332af97644fafc92d31
-Size (bibletime-2.11.2.tar.xz) = 2533472 bytes
+SHA1 (bibletime-3.0.tar.xz) = 848bc1679767d767e35c2e8798ae23833edb9e34
+RMD160 (bibletime-3.0.tar.xz) = 9d838bd20fbcb7ca850fba4837cc66096b6f073e
+SHA512 (bibletime-3.0.tar.xz) = 85afc2781807345ea8fdefea6d179955fa76085c0a9c97e47321ea37ef9ea05367678c54bacfc10cf1d6085d46ba6fbd1c7d448044ffdfe3c96007ee8d7e5c00
+Size (bibletime-3.0.tar.xz) = 1568732 bytes
+SHA1 (patch-cmake_BTApplication.cmake) = 4183272811c95ca540b5eb8c807a94d02e7d685a
+SHA1 (patch-src_backend_bookshelfmodel_btbookshelftreemodel.cpp) = c003c229770594e283787ec5c2f7d698a56dc2be
+SHA1 (patch-src_backend_managers_clanguagemgr.h) = 41c63c71e2fcb48e2a8d56841bb60b8f00783505
+SHA1 (patch-src_frontend_bibletime.cpp) = a38d26bccc47b4bfc13129c6be1d753377e2af89
+SHA1 (patch-src_frontend_bibletime.h) = 365310bdfcb5f4771aa4f6b7e588e523d6fb63e5
+SHA1 (patch-src_frontend_bookshelfwizard_btbookshelfwizard.h) = 6463a56969d0cfd3183bd512deff678a8b1ab562
+SHA1 (patch-src_frontend_btaboutmoduledialog.h) = 7d6c1ab72192cce3e8cacbd93738c5b499a5debb
+SHA1 (patch-src_frontend_btbookshelfdockwidget.h) = 6a1247696dda5631cf80c27f796add7eeaa81e9e
+SHA1 (patch-src_frontend_btbookshelfwidget.h) = 9fba4f108b2c8f8d42189ed2137d29dda07a8138
+SHA1 (patch-src_frontend_btmodulechooserdialog.h) = 76f36c4d08db9f4b5b7998ac31f40c99e721f893
+SHA1 (patch-src_frontend_cmdiarea.h) = 4502ed7bdc49151ec647f773f297a67d6dabf452
+SHA1 (patch-src_frontend_display_modelview_btquickwidget.cpp) = b3d9d951c7a9faccf7c06d0bcbbe54eeffe97920
+SHA1 (patch-src_frontend_displaywindow_creadwindow.cpp) = ea94b0ab713ea26c76cb20699e9e143bbaeabeeb
+SHA1 (patch-src_frontend_edittextwizard_btedittextwizard.h) = 0cf50c1fbb6f890d783fd930588b2a81bfce342d
+SHA1 (patch-src_frontend_keychooser_cbookkeychooser.cpp) = b0d05e8d8ab1b7c8cf9d5c22c3ba6c05aaf7da6d
+SHA1 (patch-src_frontend_keychooser_ckeychooserwidget.cpp) = 749f7af4f11173f726092a1e58d1231eacdb5687
+SHA1 (patch-src_frontend_keychooser_cscrollerwidgetset.cpp) = 9826fbf4d0b6cc1594a9aa657e48c45aec3412b9
+SHA1 (patch-src_frontend_keychooser_versekeychooser_btdropdownchooserbutton.cpp) = 171c04ade434617809970abfc1c9feabeee81bde
+SHA1 (patch-src_frontend_searchdialog_btsearchmodulechooserdialog.h) = 27d86c92713cdd795093b7538b1caea06451964d
+SHA1 (patch-src_frontend_settingsdialogs_btconfigdialog.h) = ab3c000becf4b4c361741013998d76982e2f48ee
