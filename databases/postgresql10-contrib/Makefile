@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/11/16 12:15:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/12/04 04:55:42 riastradh Exp $
 
 PKGNAME=	${DISTNAME:S/-/10-contrib-/}
+PKGREVISION=	1
 COMMENT=	Contrib subtree of tools and plug-ins
 
 .include "../../databases/postgresql10/Makefile.common"
