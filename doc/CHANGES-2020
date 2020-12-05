@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6571 2020/12/05 13:14:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6572 2020/12/05 13:15:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9560,4 +9560,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added databases/postgresql-wal2json version 2.3 [otis 2020-12-05]
 	Updated editors/texmaker to 5.0.4 [nros 2020-12-05]
 	Updated mail/mutt to 2.0.3 [tron 2020-12-05]
-	Updated wm/berry to 0.1.7 [nia 2020-12-05]
+	Added wm/berry version 0.1.7 [nia 2020-12-05]
