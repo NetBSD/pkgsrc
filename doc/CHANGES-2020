@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6566 2020/12/05 03:22:34 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.6567 2020/12/05 08:52:42 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9556,3 +9556,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-flit_core version 3.0.0 [riastradh 2020-12-04]
 	Added devel/py-flit version 3.0.0 [riastradh 2020-12-04]
 	Added devel/py-intelhex version 2.3.0 [riastradh 2020-12-04]
+	Updated games/gnuchess to 6.2.7 [schwarz 2020-12-05]
