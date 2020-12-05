@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.14 2020/12/05 15:16:40 nia Exp $
+# $NetBSD: NEWS,v 1.15 2020/12/05 15:50:32 wiz Exp $
 
 PKGSRC NEWS
 ===========
@@ -8,7 +8,7 @@ PKGSRC NEWS
   tracking pkgsrc-current.
 
 Python 3.8 default [nia 2020-12-04]
-	The default Python verison was switched to 3.8.
+	The default Python version was switched to 3.8.
 
 Default database location changed for NetBSD [wiz 2020-12-02]
 	The database of installed packages now defaults to ${PREFIX}/pkgdb
