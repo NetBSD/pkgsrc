@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.295 2020/10/28 16:52:43 maya Exp $
+# $NetBSD: bootstrap,v 1.296 2020/12/05 16:50:52 js Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1081,7 +1081,10 @@ Linux)
 	# like yum or apt that can leak into pkgsrc and cause issues as they
 	# age, undergo ABI changes, or get added/removed behind our backs.
 	# Let pkgsrc maintain all dependencies to avoid these problems.
-	if [ -z "$prefer_pkgsrc" ] && [ "$prefer_native" != "yes" ]; then
+	# The exception here is Elbrus 2000, for which a lot of patches have
+	# not been upstreamed, so that it is better to use native.
+	if [ -z "$prefer_pkgsrc" ] && [ "$prefer_native" != "yes" ] && \
+	    [ "$machine_arch" != "e2k" ]; then
 		prefer_pkgsrc="yes"
 	fi
 	;;
