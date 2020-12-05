@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/07/22 06:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/12/05 10:06:39 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.16.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,7 +31,8 @@ USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	share/examples/${PKGBASE} ${PKGMANDIR}/man1
 PLIST_SUBST+=		PKGBASE=${PKGBASE}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported any longer
+PYTHON_VERSIONS_INCOMPATIBLE+=	27 # not supported any longer
+PYTHON_VERSIONS_INCOMPATIBLE+=	39 # does not work as of 0.16.8
 
 USE_TOOLS+=	gmake
 
