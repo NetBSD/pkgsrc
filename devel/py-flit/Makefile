@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/04 23:29:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/05 03:22:34 riastradh Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	devel
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-${PKGVERSION_NOREV}:../../devel/py-flit_
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pep517>=0:../../devel/py-pep517
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pip>=0:../../devel/py-pip
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0:../../devel/py-responses
+TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0:../../net/py-responses
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-testpath>=0:../../devel/py-testpath
 
