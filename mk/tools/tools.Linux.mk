@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.64 2020/05/28 14:47:36 nia Exp $
+# $NetBSD: tools.Linux.mk,v 1.65 2020/12/05 13:15:58 js Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -99,7 +99,11 @@ TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.gfgrep?=		/usr/bin/fgrep
 .endif
 TOOLS_PLATFORM.file?=		/usr/bin/file
+.if exists(/bin/find)
+TOOLS_PLATFORM.find?=		/bin/find
+.else
 TOOLS_PLATFORM.find?=		/usr/bin/find
+.endif
 .if exists(/etc/debian_version)
 .  if exists(/usr/bin/gawk)
 TOOLS_PLATFORM.gawk?=		/usr/bin/gawk
