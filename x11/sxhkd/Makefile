@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/05/10 13:35:07 leot Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/05 14:56:33 nia Exp $
 
-DISTNAME=		sxhkd-0.5.9
+DISTNAME=		sxhkd-0.6.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=baskerville/}
 GITHUB_TAG=		${PKGVERSION}
