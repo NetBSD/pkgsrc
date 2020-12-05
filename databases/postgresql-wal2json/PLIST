@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/05 09:04:58 otis Exp $
+lib/postgresql/wal2json.so
