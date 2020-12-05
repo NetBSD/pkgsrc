@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6572 2020/12/05 13:15:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6573 2020/12/05 13:16:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9561,3 +9561,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/texmaker to 5.0.4 [nros 2020-12-05]
 	Updated mail/mutt to 2.0.3 [tron 2020-12-05]
 	Added wm/berry version 0.1.7 [nia 2020-12-05]
+	Updated emulators/ucon64 to 2.2.1 [wiz 2020-12-05]
