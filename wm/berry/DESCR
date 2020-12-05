@@ -1,1 +1,11 @@
-A healthy, bite-sized window manager written in C over the XLib library.
+berry is a healthy, bite-sized window manager written in C for unix systems.
+
+Its main features include:
+
+* Controlled via a powerful command-line client, allowing users to control
+windows via a hotkey daemon such as sxhkd or expand functionality via shell
+scripts.
+* Small, hackable source code.
+* Extensible themeing options with double borders, title bars, and window text.
+* Intuitively place new windows in unoccupied spaces.
+* Virtual desktops.
