@@ -1,10 +1,10 @@
-$NetBSD: patch-vm_JSONPrinter.h,v 1.1 2020/11/10 11:27:10 nia Exp $
+$NetBSD: patch-js_src_vm_JSONPrinter.h,v 1.1 2020/12/05 12:03:26 nia Exp $
 
 For NetBSD/arm, size_t is unsigned long, which is neither
 uint32_t (= unsigned int) nor uint64_t (= unsigned long long).
 
---- vm/JSONPrinter.h.orig	2020-09-25 09:22:59.000000000 +0000
-+++ vm/JSONPrinter.h
+--- js/src/vm/JSONPrinter.h.orig	2020-11-04 10:52:03.000000000 +0000
++++ js/src/vm/JSONPrinter.h
 @@ -51,7 +51,8 @@ class JSONPrinter {
    void property(const char* name, uint32_t value);
    void property(const char* name, int64_t value);
