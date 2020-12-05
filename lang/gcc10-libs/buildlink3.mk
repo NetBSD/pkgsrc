@@ -1,30 +1,30 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/09/02 16:14:03 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/12/05 09:22:54 wiz Exp $
 
-BUILDLINK_TREE+=	gcc8-libs
+BUILDLINK_TREE+=	gcc10-libs
 
-.if !defined(GCC8_LIBS_BUILDLINK3_MK)
-GCC8_LIBS_BUILDLINK3_MK:=
+.if !defined(GCC10_LIBS_BUILDLINK3_MK)
+GCC10_LIBS_BUILDLINK3_MK:=
 
 .if !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
-BUILDLINK_API_DEPENDS.gcc8-libs+=	gcc8-libs>=8.3.0
+BUILDLINK_API_DEPENDS.gcc10-libs+=	gcc10-libs>=10.2.0
 .else
-BUILDLINK_API_DEPENDS.gcc8-libs+=	{gcc8,gcc8-libs}>=8.3.0
+BUILDLINK_API_DEPENDS.gcc10-libs+=	{gcc10,gcc10-libs}>=10.2.0
 .endif
-BUILDLINK_PKGSRCDIR.gcc8-libs=		../../lang/gcc8-libs
-BUILDLINK_DEPMETHOD.gcc8-libs?=		full
+BUILDLINK_PKGSRCDIR.gcc10-libs=		../../lang/gcc10-libs
+BUILDLINK_DEPMETHOD.gcc10-libs?=		full
 
-BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc8-libs}/gcc8
+BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc10-libs}/gcc10
 
-BUILDLINK_FILES.gcc8-libs=	#empty
-BUILDLINK_AUTO_VARS.gcc8-libs=	no
+BUILDLINK_FILES.gcc10-libs=	#empty
+BUILDLINK_AUTO_VARS.gcc10-libs=	no
 
 .if !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 # Use custom specs file to ensure we link against pkgsrc libraries.
 SPECS_LIBGCC=		${WRAPPER_DIR}/specs.libgcc
 WRAPPER_TARGETS+=	${SPECS_LIBGCC}
 
-LIBGCC_SUBPREFIX=	gcc8
-LIBGCC_PREFIX=		${BUILDLINK_PREFIX.gcc8-libs}/${LIBGCC_SUBPREFIX}
+LIBGCC_SUBPREFIX=	gcc10
+LIBGCC_PREFIX=		${BUILDLINK_PREFIX.gcc10-libs}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
 ${SPECS_LIBGCC}:
@@ -41,6 +41,6 @@ CWRAPPERS_APPEND.f77+=	-specs=${SPECS_LIBGCC}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.endif # GCC8_LIBS_BUILDLINK3_MK
+.endif # GCC10_LIBS_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-gcc8-libs
+BUILDLINK_TREE+=	-gcc10-libs
