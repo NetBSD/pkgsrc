@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6569 2020/12/05 11:13:06 nros Exp $
+$NetBSD: CHANGES-2020,v 1.6570 2020/12/05 11:53:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9559,3 +9559,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/gnuchess to 6.2.7 [schwarz 2020-12-05]
 	Added databases/postgresql-wal2json version 2.3 [otis 2020-12-05]
 	Updated editors/texmaker to 5.0.4 [nros 2020-12-05]
+	Updated mail/mutt to 2.0.3 [tron 2020-12-05]
