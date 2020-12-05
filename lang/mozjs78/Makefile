@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/11/29 00:28:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2020/12/05 12:03:25 nia Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -11,15 +11,17 @@ HOMEPAGE=	https://packages.debian.org/bullseye/libmozjs-78-0
 COMMENT=	SpiderMonkey JavaScript library (78.x branch)
 LICENSE=	mpl-1.1
 
-WRKSRC=		${WRKDIR}/firefox-${PKGVERSION_NOREV}/js/src
+WRKSRC=		${WRKDIR}/firefox-${PKGVERSION_NOREV}
 USE_TOOLS+=	autoconf213 gmake perl pkg-config
 USE_LANGUAGES=	c c++
 
 # "ERROR: Only GCC 7.1 or newer is supported"
 GCC_REQD+=	7
 
+CONFIGURE_DIRS=	js/src/build
+BUILD_DIRS=	js/src/build
+
 HAS_CONFIGURE=		yes
-CONFIGURE_DIRS=		build
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-debug
@@ -47,17 +49,24 @@ CXXFLAGS+=		-march=i586
 .include "../../devel/libatomic/buildlink3.mk"
 .endif
 
-PKGCONFIG_OVERRIDE+=	build/js.pc.in
-PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_MESSAGE.conf=	Set variables in configuration file.
+SUBST_FILES.conf+=	js/moz.configure
+SUBST_VARS.conf=	PREFIX
+
+PKGCONFIG_OVERRIDE+=	js/src/build/js.pc.in
+PKGCONFIG_OVERRIDE+=	js/src/ctypes/libffi/libffi.pc.in
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 pre-configure:
-	cd ${WRKSRC} && autoconf-2.13 old-configure.in > old-configure \
-		&& autoconf-2.13
-	mkdir ${WRKSRC}/build && touch ${WRKSRC}/build/old-configure.vars
+	cd ${WRKSRC}/js/src && \
+	    autoconf-2.13 old-configure.in > old-configure && autoconf-2.13
+	${MKDIR} ${WRKSRC}/js/src/build && \
+	    ${TOUCH} ${WRKSRC}/js/src/build/old-configure.vars
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib && \

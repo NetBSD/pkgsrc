@@ -1,9 +1,9 @@
-$NetBSD: patch-jit_AtomicOperations.h,v 1.1 2020/11/28 10:54:55 nia Exp $
+$NetBSD: patch-js_src_jit_AtomicOperations.h,v 1.1 2020/12/05 12:03:26 nia Exp $
 
 C++ on NetBSD/powerpc doesn't predefine __ppc__, only __powerpc__.  Compensate.
 
---- jit/AtomicOperations.h.orig	2020-11-04 10:51:58.000000000 +0000
-+++ jit/AtomicOperations.h
+--- js/src/jit/AtomicOperations.h.orig	2020-11-04 10:51:58.000000000 +0000
++++ js/src/jit/AtomicOperations.h
 @@ -391,7 +391,8 @@ inline bool AtomicOperations::isLockfree
  #elif defined(__ppc__) || defined(__PPC__) || defined(__sparc__) ||     \
      defined(__ppc64__) || defined(__PPC64__) || defined(__ppc64le__) || \
