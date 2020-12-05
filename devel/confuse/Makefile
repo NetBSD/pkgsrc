@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2020/08/24 08:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/12/05 12:35:25 nia Exp $
 
 DISTNAME=	confuse-3.3
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=martinh/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libconfuse/}
 GITHUB_PROJECT=	libconfuse
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	https://github.org/martinh/libconfuse/
+HOMEPAGE=	https://github.com/libconfuse/libconfuse
 COMMENT=	Configuration file parser library
 LICENSE=	isc
 
