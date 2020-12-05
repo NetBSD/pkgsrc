@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/12/05 12:03:25 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/12/05 12:08:55 nia Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -37,12 +37,12 @@ CONFIGURE_ARGS+=	--with-intl-api
 CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 
+.include "../../mk/bsd.prefs.mk"
+
 .if ${MACHINE_ARCH} == "i386"
 # 64 bit atomics
 CXXFLAGS+=		-march=i586
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 # 64 bit atomics
