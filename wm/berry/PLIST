@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/05 13:13:42 nia Exp $
+bin/berry
+bin/berryc
+man/man1/berry.1
+man/man1/berryc.1
