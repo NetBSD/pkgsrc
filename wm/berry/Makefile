@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2020/12/05 13:13:42 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/05 14:49:46 nia Exp $
 
 DISTNAME=	berry-0.1.7
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JLErvin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/JLErvin/berry
+HOMEPAGE=	https://berrywm.org/
 COMMENT=	Healthy, byte-sized window manager
 LICENSE=	mit
 
