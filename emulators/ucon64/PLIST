@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/07 22:47:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/12/05 13:16:36 wiz Exp $
 bin/ucon64
 lib/discmage.so
 share/doc/ucon64/changes.html
@@ -9,7 +9,6 @@ share/doc/ucon64/images/bg.jpg
 share/doc/ucon64/images/cameralink.png
 share/doc/ucon64/images/cd64.png
 share/doc/ucon64/images/cd_rw.png
-share/doc/ucon64/images/dexdrive.png
 share/doc/ucon64/images/f2a.png
 share/doc/ucon64/images/fal.png
 share/doc/ucon64/images/fig.png
