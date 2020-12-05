@@ -1,4 +1,4 @@
-$NetBSD: patch-color.c,v 1.1 2020/11/08 17:42:45 tron Exp $
+$NetBSD: patch-color.c,v 1.2 2020/12/05 13:02:03 tonio Exp $
 
 Fix build under NetBSD
 
@@ -9,7 +9,7 @@ Fix build under NetBSD
  #define COLOR_QUOTE_INIT	8
  
 -#ifdef NCURSES_VERSION
-+#if defined(NCURSES_VERSION) || defined(__NetBSD__)
++#if defined(NCURSES_VERSION) || (defined(__NetBSD__) && !defined(USE_SLANG_CURSES))
  #define ATTR_MASK (A_ATTRIBUTES ^ A_COLOR)
  #elif defined (USE_SLANG_CURSES)
  #define ATTR_MASK (~(unsigned int)A_NORMAL ^ (A_CHARTEXT | A_UNUSED | A_COLOR))
