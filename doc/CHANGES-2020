@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6573 2020/12/05 13:16:46 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6574 2020/12/05 14:56:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9562,3 +9562,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/mutt to 2.0.3 [tron 2020-12-05]
 	Added wm/berry version 0.1.7 [nia 2020-12-05]
 	Updated emulators/ucon64 to 2.2.1 [wiz 2020-12-05]
+	Updated x11/sxhkd to 0.6.2 [nia 2020-12-05]
