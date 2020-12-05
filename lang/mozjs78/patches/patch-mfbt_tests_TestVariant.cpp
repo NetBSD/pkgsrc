@@ -1,9 +1,9 @@
-$NetBSD: patch-.._.._mfbt_tests_TestVariant.cpp,v 1.1 2020/11/25 00:40:16 gutteridge Exp $
+$NetBSD: patch-mfbt_tests_TestVariant.cpp,v 1.1 2020/12/05 12:03:26 nia Exp $
 
 Disable assertion that fails on 32-bit architectures.
 
---- ../../mfbt/tests/TestVariant.cpp.orig	2020-11-04 10:52:03.000000000 +0000
-+++ ../../mfbt/tests/TestVariant.cpp
+--- mfbt/tests/TestVariant.cpp.orig	2020-11-04 10:52:03.000000000 +0000
++++ mfbt/tests/TestVariant.cpp
 @@ -567,7 +567,7 @@ static void testMatchingLambdaWithIndex(
    // would be no way to distinguish how each lambda is actually invoked because
    // there is only one choice of call operator in each overload set.
