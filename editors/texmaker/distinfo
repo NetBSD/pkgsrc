@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2020/12/05 11:09:49 nros Exp $
+$NetBSD: distinfo,v 1.17 2020/12/05 11:12:02 nros Exp $
 
 SHA1 (texmaker-5.0.4.tar.bz2) = 2bdf4d801ec2adb7b691e601974048ea8c8c5df8
 RMD160 (texmaker-5.0.4.tar.bz2) = 24d99a7e15f6a084bf67c117a823ae59e28532a5
@@ -16,4 +16,3 @@ SHA1 (patch-pdfium_xfa_fgas_font_fgas__stdfontmgr.cpp) = aae2d9aeccb631f429c38c6
 SHA1 (patch-spellerdialog.h) = f98ca3305e8dd8ba1c65bb32e21d965f536094ed
 SHA1 (patch-texmaker.h) = b418f9b515acbe3960e78bf984ca9c7f8549359a
 SHA1 (patch-texmaker.pro) = 7f20deec767057ad4d3e6a0cda6fab483b6656c0
-SHA1 (patch-versiondialog.cpp) = 0f6fbea229f688bbac27a406652466a171ce6738
