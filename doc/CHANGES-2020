@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6565 2020/12/04 23:32:59 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.6566 2020/12/05 03:22:34 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9553,7 +9553,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/zsh to 5.8nb1 [ryoon 2020-12-04]
 	Added net/py-aioresponses version 0.7.1 [adam 2020-12-04]
 	Updated lang/py-pygls to 0.9.1 [adam 2020-12-04]
-	Added devel/py-responses version 0.12.1 [riastradh 2020-12-04]
 	Added devel/py-flit_core version 3.0.0 [riastradh 2020-12-04]
 	Added devel/py-flit version 3.0.0 [riastradh 2020-12-04]
 	Added devel/py-intelhex version 2.3.0 [riastradh 2020-12-04]
