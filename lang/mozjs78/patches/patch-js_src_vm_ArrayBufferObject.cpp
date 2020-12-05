@@ -1,9 +1,9 @@
-$NetBSD: patch-vm_ArrayBufferObject.cpp,v 1.1 2020/11/10 11:27:10 nia Exp $
+$NetBSD: patch-js_src_vm_ArrayBufferObject.cpp,v 1.1 2020/12/05 12:03:26 nia Exp $
 
-MPROTECT fix
+PaX MPROTECT safety for NetBSD
 
---- vm/ArrayBufferObject.cpp.orig	2020-09-25 09:22:59.000000000 +0000
-+++ vm/ArrayBufferObject.cpp
+--- js/src/vm/ArrayBufferObject.cpp.orig	2020-11-04 10:52:03.000000000 +0000
++++ js/src/vm/ArrayBufferObject.cpp
 @@ -164,9 +164,17 @@ void* js::MapBufferMemory(size_t mappedS
      return nullptr;
    }
