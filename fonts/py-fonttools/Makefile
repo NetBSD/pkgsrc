@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2020/09/10 10:28:12 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/12/06 09:58:49 wiz Exp $
 
-DISTNAME=	fonttools-4.14.0
+DISTNAME=	fonttools-4.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-fs-[0-9]*:../../filesystems/py-fs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
+# as of 4.17.1:
+# 3 failed, 3456 passed, 143 skipped, 2 xfailed, 23 warnings, 6 errors
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 4.0.0

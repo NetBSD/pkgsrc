@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.31 2020/08/04 19:06:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2020/12/06 09:58:49 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -95,6 +89,9 @@ ${PYSITELIB}/fontTools/feaLib/lexer.pyo
 ${PYSITELIB}/fontTools/feaLib/location.py
 ${PYSITELIB}/fontTools/feaLib/location.pyc
 ${PYSITELIB}/fontTools/feaLib/location.pyo
+${PYSITELIB}/fontTools/feaLib/lookupDebugInfo.py
+${PYSITELIB}/fontTools/feaLib/lookupDebugInfo.pyc
+${PYSITELIB}/fontTools/feaLib/lookupDebugInfo.pyo
 ${PYSITELIB}/fontTools/feaLib/parser.py
 ${PYSITELIB}/fontTools/feaLib/parser.pyc
 ${PYSITELIB}/fontTools/feaLib/parser.pyo
@@ -155,9 +152,10 @@ ${PYSITELIB}/fontTools/misc/macCreatorType.pyo
 ${PYSITELIB}/fontTools/misc/macRes.py
 ${PYSITELIB}/fontTools/misc/macRes.pyc
 ${PYSITELIB}/fontTools/misc/macRes.pyo
-${PYSITELIB}/fontTools/misc/plistlib.py
-${PYSITELIB}/fontTools/misc/plistlib.pyc
-${PYSITELIB}/fontTools/misc/plistlib.pyo
+${PYSITELIB}/fontTools/misc/plistlib/__init__.py
+${PYSITELIB}/fontTools/misc/plistlib/__init__.pyc
+${PYSITELIB}/fontTools/misc/plistlib/__init__.pyo
+${PYSITELIB}/fontTools/misc/plistlib/py.typed
 ${PYSITELIB}/fontTools/misc/psCharStrings.py
 ${PYSITELIB}/fontTools/misc/psCharStrings.pyc
 ${PYSITELIB}/fontTools/misc/psCharStrings.pyo
@@ -233,6 +231,9 @@ ${PYSITELIB}/fontTools/pens/cu2quPen.pyo
 ${PYSITELIB}/fontTools/pens/filterPen.py
 ${PYSITELIB}/fontTools/pens/filterPen.pyc
 ${PYSITELIB}/fontTools/pens/filterPen.pyo
+${PYSITELIB}/fontTools/pens/hashPointPen.py
+${PYSITELIB}/fontTools/pens/hashPointPen.pyc
+${PYSITELIB}/fontTools/pens/hashPointPen.pyo
 ${PYSITELIB}/fontTools/pens/momentsPen.py
 ${PYSITELIB}/fontTools/pens/momentsPen.pyc
 ${PYSITELIB}/fontTools/pens/momentsPen.pyo
@@ -314,6 +315,9 @@ ${PYSITELIB}/fontTools/ttLib/__init__.pyo
 ${PYSITELIB}/fontTools/ttLib/macUtils.py
 ${PYSITELIB}/fontTools/ttLib/macUtils.pyc
 ${PYSITELIB}/fontTools/ttLib/macUtils.pyo
+${PYSITELIB}/fontTools/ttLib/removeOverlaps.py
+${PYSITELIB}/fontTools/ttLib/removeOverlaps.pyc
+${PYSITELIB}/fontTools/ttLib/removeOverlaps.pyo
 ${PYSITELIB}/fontTools/ttLib/sfnt.py
 ${PYSITELIB}/fontTools/ttLib/sfnt.pyc
 ${PYSITELIB}/fontTools/ttLib/sfnt.pyo
@@ -347,6 +351,9 @@ ${PYSITELIB}/fontTools/ttLib/tables/C_P_A_L_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/D_S_I_G_.py
 ${PYSITELIB}/fontTools/ttLib/tables/D_S_I_G_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/D_S_I_G_.pyo
+${PYSITELIB}/fontTools/ttLib/tables/D__e_b_g.py
+${PYSITELIB}/fontTools/ttLib/tables/D__e_b_g.pyc
+${PYSITELIB}/fontTools/ttLib/tables/D__e_b_g.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/DefaultTable.py
 ${PYSITELIB}/fontTools/ttLib/tables/DefaultTable.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/DefaultTable.pyo
@@ -732,4 +739,10 @@ ${PYSITELIB}/fontTools/voltLib/lexer.pyo
 ${PYSITELIB}/fontTools/voltLib/parser.py
 ${PYSITELIB}/fontTools/voltLib/parser.pyc
 ${PYSITELIB}/fontTools/voltLib/parser.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
