@@ -1,14 +1,26 @@
-$NetBSD: patch-gold_Makefile.in,v 1.4 2020/02/05 06:18:34 rillig Exp $
+$NetBSD: patch-gold_Makefile.in,v 1.5 2020/12/06 18:07:53 fcambus Exp $
 
  Don't bail out on the deprecation warnings for <ext/hash_map>
 
  Don't use hard-coded -ldl.
 
---- gold/Makefile.in.orig	2020-01-18 14:04:33.000000000 +0000
-+++ gold/Makefile.in	2020-02-05 05:05:43.822117256 +0000
-@@ -593,1 +593,1 @@
+--- gold/Makefile.in.orig	2020-07-24 09:23:45.000000000 +0000
++++ gold/Makefile.in
+@@ -590,7 +590,7 @@ USE_NLS = @USE_NLS@
+ VERSION = @VERSION@
+ WARN_CFLAGS = @WARN_CFLAGS@
+ WARN_CFLAGS_FOR_BUILD = @WARN_CFLAGS_FOR_BUILD@
 -WARN_CXXFLAGS = @WARN_CXXFLAGS@
 +WARN_CXXFLAGS = @WARN_CXXFLAGS@ -Wno-deprecated
-@@ -680,1 +680,1 @@
+ WARN_WRITE_STRINGS = @WARN_WRITE_STRINGS@
+ XGETTEXT = @XGETTEXT@
+ YACC = @YACC@
+@@ -677,7 +677,7 @@ AM_CPPFLAGS = \
+ 	-DTOOLLIBDIR="\"$(tooldir)/lib\"" @INCINTL@
+ 
+ LIBIBERTY = ../libiberty/libiberty.a
 -@PLUGINS_TRUE@LIBDL = @DLOPEN_LIBS@
 +@PLUGINS_TRUE@LIBDL = ${DL_LDFLAGS}
+ AM_YFLAGS = -d
+ 
+ # Automake 1.10+ disables lex and yacc output file regeneration if
