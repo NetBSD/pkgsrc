@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2020/11/29 22:33:21 dbj Exp $
+# $NetBSD: Makefile.common,v 1.47 2020/12/06 11:18:40 nia Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -30,6 +30,9 @@
 # used by x11/qt5-qtx11extras/Makefile
 # used by x11/qt5-qtxmlpatterns/Makefile
 
+# https://doc.qt.io/qt-5/supported-platforms.html
+GCC_REQD+=	5
+
 .include "../../x11/qt5/Makefile.common"
 
 .include "../../mk/dlopen.buildlink3.mk"
@@ -37,9 +40,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 USE_LANGUAGES=		c gnu++11
 USE_TOOLS+=		gmake perl:build pkg-config
-
-# https://doc.qt.io/qt-5/supported-platforms.html
-GCC_REQD+=		5
 
 # Avoid failures to due 'register' usage in X11 headers.
 CFLAGS+=		-Wno-register
