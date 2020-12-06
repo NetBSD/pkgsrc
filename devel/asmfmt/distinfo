@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/12/06 16:14:07 bsiegert Exp $
+
+SHA1 (asmfmt-1.2.1.tar.gz) = 9a802ce284fa9a118671ee27202d1fe204f44554
+RMD160 (asmfmt-1.2.1.tar.gz) = 501665de6d967d95bdf8f821c42b0a768d9fd8ed
+SHA512 (asmfmt-1.2.1.tar.gz) = e85dc0a9204a9243276ee0ebea07254b5d5ba930484ef96212dfcca83be6e3b3923b0f5c9e184e639ce8759bde74a5e9035ad5a28537cb3bb2f3eaa4c6d939c0
+Size (asmfmt-1.2.1.tar.gz) = 159411 bytes
