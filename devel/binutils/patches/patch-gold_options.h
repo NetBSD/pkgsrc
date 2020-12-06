@@ -1,12 +1,12 @@
-$NetBSD: patch-gold_options.h,v 1.3 2020/02/05 06:18:34 rillig Exp $
+$NetBSD: patch-gold_options.h,v 1.4 2020/12/06 18:07:53 fcambus Exp $
 
  The NetBSD and OpenBSD real-time linkers do not understand DT_RUNPATH
  or DT_INIT_ARRAY.  The current gold defaults are not suitable for them.
  The last couple of DragonFly and FreeBSD releases do support these tags.
 
---- gold/options.h.orig
+--- gold/options.h.orig	2020-07-24 09:12:20.000000000 +0000
 +++ gold/options.h
-@@ -772,7 +772,11 @@
+@@ -772,7 +772,11 @@ class General_options
  	      N_("Output cross reference table"),
  	      N_("Do not output cross reference table"));
  
@@ -18,7 +18,7 @@ $NetBSD: patch-gold_options.h,v 1.3 2020/02/05 06:18:34 rillig Exp $
  	      N_("Use DT_INIT_ARRAY for all constructors"),
  	      N_("Handle constructors as directed by compiler"));
  
-@@ -830,7 +834,11 @@
+@@ -834,7 +838,11 @@ class General_options
  	      N_("Do not create exception frame header"));
  
    // Alphabetized under 'e' because the option is spelled --enable-new-dtags.
