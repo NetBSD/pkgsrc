@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6578 2020/12/06 09:58:59 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6579 2020/12/06 10:22:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9567,3 +9567,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-composer to 2.0.8 [tpaul 2020-12-05]
 	Updated textproc/pugixml to 1.11.1 [wiz 2020-12-06]
 	Updated fonts/py-fonttools to 4.17.1 [wiz 2020-12-06]
+	Updated graphics/geeqie to 1.6 [wiz 2020-12-06]
