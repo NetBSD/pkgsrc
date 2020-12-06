@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/06 19:50:14 bsiegert Exp $
+bin/fillstruct
+bin/fillswitch
+bin/fixplurals
