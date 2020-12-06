@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2020/11/29 22:07:22 dbj Exp $
+# $NetBSD: Makefile,v 1.123 2020/12/06 00:22:04 dbj Exp $
 
 DISTNAME=	fldigi-4.1.01
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fldigi/}
 
@@ -40,6 +40,30 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_header_execinfo_h=no
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-Wno-error=c++11-narrowing
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	FLDIGI_VERSION=${PKGVERSION_NOREV}
+PLIST_SUBST+=	FLARQ_VERSION="4.3.7"
+
+post-build:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} appbundle
+	for f in ${WRKSRC}/src/${DISTNAME}/*.app; do \
+		/usr/libexec/PlistBuddy \
+			-c 'Add :NSMicrophoneUsageDescription string "Allow for using Sound input devices"' \
+			$${f}/Contents/Info.plist; \
+	done
+
+INSTALLATION_DIRS+=	Applications
+USE_TOOLS+=	pax
+post-install:
+	cd ${WRKSRC}/src/${DISTNAME} && \
+		pax -rw -pp -pm *.app ${DESTDIR}${PREFIX}/Applications
+
+CHECK_SHLIBS_SKIP+=	Applications/*/Contents/Frameworks/*.dylib
+CHECK_WRKREF_SKIP+=	Applications/*/Contents/MacOS/*
 .endif
 
 .include "../../audio/libsamplerate/buildlink3.mk"
