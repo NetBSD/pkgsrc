@@ -1,10 +1,10 @@
-$NetBSD: patch-src_haproxy.c,v 1.2 2018/07/25 13:51:18 jperkin Exp $
+$NetBSD: patch-src_haproxy.c,v 1.3 2020/12/06 17:42:28 otis Exp $
 
 Special handling for XPG4_2 on SunOS.
 
---- src/haproxy.c.orig	2018-06-27 14:27:32.000000000 +0000
+--- src/haproxy.c.orig	2020-11-28 15:51:33.000000000 +0000
 +++ src/haproxy.c
-@@ -26,6 +26,13 @@
+@@ -26,6 +26,14 @@
   */
  
  #define _GNU_SOURCE
@@ -14,6 +14,7 @@ Special handling for XPG4_2 on SunOS.
 +#  else
 +#define _XOPEN_SOURCE 600
 +#  endif
++#define _XOPEN_SOURCE_EXTENDED 1
 +#endif
  #include <stdio.h>
  #include <stdlib.h>

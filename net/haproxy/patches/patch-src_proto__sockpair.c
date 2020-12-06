@@ -1,4 +1,6 @@
-$NetBSD: patch-src_proto__sockpair.c,v 1.1 2019/08/11 09:09:41 maya Exp $
+$NetBSD: patch-src_proto__sockpair.c,v 1.2 2020/12/06 17:42:28 otis Exp $
+
+Special handling for XPG4_2 on SunOS.
 
 --- src/proto_sockpair.c.orig	2019-07-23 13:21:26.000000000 +0000
 +++ src/proto_sockpair.c
