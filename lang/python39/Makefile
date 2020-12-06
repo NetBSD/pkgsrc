@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/06 11:11:32 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/06 11:35:31 nia Exp $
 
 .include "dist.mk"
 
@@ -33,6 +33,7 @@ CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 # If the build sandbox doesn't have /dev/shm mounted, don't produce
 # broken packages.
 CONFIGURE_ENV.Linux+=	ac_cv_posix_semaphores_enabled=yes
+CONFIGURE_ENV.Linux+=	ac_cv_broken_sem_getvalue=no
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
 
 PTHREAD_OPTS+=	require
