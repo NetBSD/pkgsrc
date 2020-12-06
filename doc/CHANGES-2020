@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6581 2020/12/06 10:37:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6582 2020/12/06 10:38:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9570,3 +9570,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/geeqie to 1.6 [wiz 2020-12-06]
 	Updated graphics/ImageMagick to 7.0.10.46 [wiz 2020-12-06]
 	Updated devel/pcre2 to 10.36 [wiz 2020-12-06]
+	Updated sysutils/py-setproctitle to 1.2.1 [wiz 2020-12-06]
