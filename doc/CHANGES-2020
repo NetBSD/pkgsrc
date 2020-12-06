@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6596 2020/12/06 19:50:38 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6597 2020/12/06 23:37:34 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9592,3 +9592,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkg_install to 20201206 [wiz 2020-12-06]
 	Updated devel/binutils to 2.35.1 [fcambus 2020-12-06]
 	Added devel/reftools version 0.0.20201119 [bsiegert 2020-12-06]
+	Updated devel/libosip to 5.2.0 [schwarz 2020-12-06]
