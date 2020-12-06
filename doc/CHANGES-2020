@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6590 2020/12/06 11:39:11 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6591 2020/12/06 11:42:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9585,3 +9585,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-whisper to 1.1.7 [adam 2020-12-06]
 	Updated devel/py-pkginfo to 1.6.1 [adam 2020-12-06]
 	Updated devel/py-mercurial to 5.6.1 [wiz 2020-12-06]
+	Updated textproc/py-natsort to 7.1.0 [adam 2020-12-06]
+	Updated print/py-reportlab to 3.5.56 [adam 2020-12-06]
