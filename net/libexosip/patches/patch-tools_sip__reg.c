@@ -1,12 +1,12 @@
-$NetBSD: patch-tools_sip__reg.c,v 1.1 2020/03/06 13:01:47 nia Exp $
+$NetBSD: patch-tools_sip__reg.c,v 1.2 2020/12/06 23:40:21 schwarz Exp $
 
 Pull in NetBSD compatibility headers for use with other headers.
 
---- tools/sip_reg.c.orig	2020-01-16 21:29:27.000000000 +0000
-+++ tools/sip_reg.c
-@@ -60,8 +60,14 @@
+--- tools/sip_reg.c.orig	2020-08-19 14:51:31.000000000 +0200
++++ tools/sip_reg.c	2020-12-07 00:02:10.000000000 +0100
+@@ -48,8 +48,14 @@
  
- #if !defined(WIN32) && !defined(_WIN32_WCE) && !defined(__arc__)
+ #if !defined(WIN32)
  #define _GNU_SOURCE
 +#if defined(HAVE_NBCOMPAT_H)
 +#include <nbcompat/config.h>	/* needed for the other headers */
@@ -17,5 +17,5 @@ Pull in NetBSD compatibility headers for use with other headers.
  #endif
 +#endif
  
- #define PROG_NAME "sipreg"
- #define PROG_VER  "1.0"
+ #define PROG_NAME "sip_reg"
+ #define SYSLOG_FACILITY LOG_DAEMON

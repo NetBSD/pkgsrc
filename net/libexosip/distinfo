@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2020/03/06 13:01:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/12/06 23:40:21 schwarz Exp $
 
-SHA1 (libexosip2-5.1.1.tar.gz) = df8f43e138d1e1c6e7574fe97243318c2fdfb446
-RMD160 (libexosip2-5.1.1.tar.gz) = 5a4e28f9e4ce321d223747f92ff878dd6997efd5
-SHA512 (libexosip2-5.1.1.tar.gz) = cec5931484aa1a5e4a0679cc715da163df9429016ad74841a518c52c2bea6d9038a312b252802607d9a836bd2e598e2f3a4a24a9f63b34a0fb8c737f32329b96
-Size (libexosip2-5.1.1.tar.gz) = 630264 bytes
-SHA1 (patch-src_eXutils.c) = d4ad34fdb94c5f7b0bb6259521450efe459cc650
-SHA1 (patch-tools_sip__reg.c) = b2b5d03ef89207d748c35e36802f4193b103ea56
+SHA1 (libexosip2-5.2.0.tar.gz) = 761c25ea344ed4b1449401ad975553cef3c1021f
+RMD160 (libexosip2-5.2.0.tar.gz) = f5ba3544bc437e325f3c44dd7ea2f67711d14409
+SHA512 (libexosip2-5.2.0.tar.gz) = 0abfa695d466a10e67eb89ea5228578e42b713c0aab556e53a76919f7b96069338c3edc151f44566834894244a51cbacda1958612ae58dd2040caa654094d9af
+Size (libexosip2-5.2.0.tar.gz) = 641925 bytes
+SHA1 (patch-src_eXutils.c) = 4e60454423360f82799f2194308123b332d5ca5b
+SHA1 (patch-tools_sip__reg.c) = 297c4467010e8ea3e41806fc3f9777a3ce73e095

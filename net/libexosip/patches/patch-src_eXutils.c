@@ -1,10 +1,10 @@
-$NetBSD: patch-src_eXutils.c,v 1.1 2020/03/06 13:01:47 nia Exp $
+$NetBSD: patch-src_eXutils.c,v 1.2 2020/12/06 23:40:21 schwarz Exp $
 
 Defines INADDR_NONE, which is needed on Solaris.
 
---- src/eXutils.c.orig	2020-01-17 12:52:50.000000000 +0000
-+++ src/eXutils.c
-@@ -84,6 +84,10 @@
+--- src/eXutils.c.orig	2020-12-07 00:12:50.000000000 +0100
++++ src/eXutils.c	2020-12-07 00:14:34.000000000 +0100
+@@ -79,6 +79,10 @@
  #include <unistd.h>
  #endif
  
@@ -12,6 +12,6 @@ Defines INADDR_NONE, which is needed on Solaris.
 +#define INADDR_NONE	((unsigned long) -1)	/* needed on Solaris */
 +#endif
 +
- int
- _eXosip_closesocket (SOCKET_TYPE sock)
- {
+ int _eXosip_closesocket(SOCKET_TYPE sock) {
+ #if !defined(HAVE_WINSOCK2_H)
+   return close(sock);
