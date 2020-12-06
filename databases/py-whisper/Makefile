@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 18:08:01 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/06 11:21:02 adam Exp $
 
-DISTNAME=	whisper-1.1.5
+DISTNAME=	whisper-1.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whisper/}
@@ -25,5 +25,5 @@ post-install:
 	${MV} ${bin}.py ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

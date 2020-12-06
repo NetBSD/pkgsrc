@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/08/11 18:08:01 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/12/06 11:21:02 adam Exp $
 
-SHA1 (whisper-1.1.5.tar.gz) = 8fa3658f5ae134b08ac4e872e2bfe0a4013c08e2
-RMD160 (whisper-1.1.5.tar.gz) = 4619530d9edd2419e395679fdf787116e8dd5da3
-SHA512 (whisper-1.1.5.tar.gz) = 4aa7cd37cbc45b57643f57bcbd29ad726bb28026201419e28945be4a1e2201ba2f32a4d6ee263fdfed2f7d3cd099556f4c48813992041c5f8b4973c667152bd4
-Size (whisper-1.1.5.tar.gz) = 31660 bytes
+SHA1 (whisper-1.1.7.tar.gz) = c7b9024af2117555c5f35e2a34ffd5451f529004
+RMD160 (whisper-1.1.7.tar.gz) = d12ab9bc561243287677c64cbf58dd650df906d0
+SHA512 (whisper-1.1.7.tar.gz) = 602c39345abb1d6e3e41ab0eaff9baa374ba513beba31878c9e65b863ee148dd7df55bfb66b0b86d7d94cdbf49672b46e6dfa3d48f7d8e770dee7f39fd52fdc6
+Size (whisper-1.1.7.tar.gz) = 37376 bytes
