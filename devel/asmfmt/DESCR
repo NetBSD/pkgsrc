@@ -1,0 +1,6 @@
+asmfmt will format your assembler code in a similar way that gofmt formats your
+Go code. The main goals where:
+
+-   It should provide predictable formatting.
+-   Be as un-intrusive as possible.
+-   Tab setting should not affect alignment.
