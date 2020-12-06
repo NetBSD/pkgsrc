@@ -1,8 +1,8 @@
-$NetBSD: patch-gold_system.h,v 1.4 2016/02/03 19:56:34 jperkin Exp $
+$NetBSD: patch-gold_system.h,v 1.5 2020/12/06 18:07:53 fcambus Exp $
 
---- gold/system.h.orig	2015-11-13 08:27:42.000000000 +0000
+--- gold/system.h.orig	2020-07-24 09:12:20.000000000 +0000
 +++ gold/system.h
-@@ -118,7 +118,7 @@ struct hash<std::string>
+@@ -124,7 +124,7 @@ struct hash<std::string>
  {
    size_t
    operator()(std::string s) const

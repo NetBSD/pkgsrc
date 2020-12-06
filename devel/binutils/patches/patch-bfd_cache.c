@@ -1,11 +1,11 @@
-$NetBSD: patch-bfd_cache.c,v 1.4 2016/01/30 22:15:11 ryoon Exp $
+$NetBSD: patch-bfd_cache.c,v 1.5 2020/12/06 18:07:53 fcambus Exp $
 
 Fix sign-compare on SunOS.
 Handle 256 file descriptor limit in 32-bit SunOS environment.
 
---- bfd/cache.c.orig	2016-01-25 08:51:06.000000000 +0000
+--- bfd/cache.c.orig	2020-07-24 09:12:19.000000000 +0000
 +++ bfd/cache.c
-@@ -50,6 +50,10 @@ SUBSECTION
+@@ -49,6 +49,10 @@ SUBSECTION
  #include <sys/mman.h>
  #endif
  
