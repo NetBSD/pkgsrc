@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2020/12/06 11:11:31 nia Exp $
+# $NetBSD: Makefile,v 1.92 2020/12/06 11:35:31 nia Exp $
 
 .include "dist.mk"
 
@@ -26,6 +26,7 @@ CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 # If the build sandbox doesn't have /dev/shm mounted, don't produce
 # broken packages.
 CONFIGURE_ENV.Linux+=	ac_cv_posix_semaphores_enabled=yes
+CONFIGURE_ENV.Linux+=	ac_cv_broken_sem_getvalue=no
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
 LDFLAGS+=		-L${WRKSRC}
