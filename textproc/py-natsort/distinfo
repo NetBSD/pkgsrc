@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/04/29 13:53:31 adam Exp $
+$NetBSD: distinfo,v 1.16 2020/12/06 11:40:27 adam Exp $
 
-SHA1 (natsort-7.0.1.tar.gz) = 212e3d0a8c750102a055adbeeffbf2ba77150c66
-RMD160 (natsort-7.0.1.tar.gz) = 12dbd8191dab402be86a7181a6822ecba1d67a80
-SHA512 (natsort-7.0.1.tar.gz) = 48bfda8a42b951287d984e38c474b71233d56a578d8bec12e657413b3cdb71dd27103acda8dca359d87efd761e775deff0775a81d8dfa18df24c364921028c2b
-Size (natsort-7.0.1.tar.gz) = 139272 bytes
+SHA1 (natsort-7.1.0.tar.gz) = 0a6617470578dd5bd5e801f45f05c5f9504afff8
+RMD160 (natsort-7.1.0.tar.gz) = 14615ff3aa7259adce38632efbbb34885bb54916
+SHA512 (natsort-7.1.0.tar.gz) = 41293d70c3dc2214f9dc1c123f31cd7886341ae25c6342ac49f3d53d06ba15ecd8d666f1763fe790848c93668940a81b7e7f1fe896f0b91f180ca557dd922ac3
+Size (natsort-7.1.0.tar.gz) = 143534 bytes
