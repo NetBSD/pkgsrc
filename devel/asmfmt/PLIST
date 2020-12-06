@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/06 16:14:07 bsiegert Exp $
+bin/asmfmt
