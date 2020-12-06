@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6586 2020/12/06 10:51:55 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6587 2020/12/06 10:58:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9575,3 +9575,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ugrep to 3.0.6 [wiz 2020-12-06]
 	Updated net/grpc to 1.34.0 [wiz 2020-12-06]
 	Updated devel/py-hypothesis to 5.41.5 [wiz 2020-12-06]
+	Updated devel/gopls to 0.5.5 [wiz 2020-12-06]
