@@ -1,4 +1,4 @@
-$NetBSD: patch-gold_resolve.cc,v 1.2 2016/01/30 22:15:11 ryoon Exp $
+$NetBSD: patch-gold_resolve.cc,v 1.3 2020/12/06 18:07:53 fcambus Exp $
 
  The gold linker is overly pedantic for dynamic references to symbols
  with hidden visibility.  It will spew error messages about weak symbols
@@ -8,9 +8,9 @@ $NetBSD: patch-gold_resolve.cc,v 1.2 2016/01/30 22:15:11 ryoon Exp $
 
  https://sourceware.org/bugzilla/show_bug.cgi?id=15574
 
---- gold/resolve.cc.orig	2015-11-13 08:27:42.000000000 +0000
+--- gold/resolve.cc.orig	2020-07-24 09:12:20.000000000 +0000
 +++ gold/resolve.cc
-@@ -284,8 +284,7 @@ Symbol_table::resolve(Sized_symbol<size>
+@@ -295,8 +295,7 @@ Symbol_table::resolve(Sized_symbol<size>
        to->set_in_reg();
      }
    else if (st_shndx == elfcpp::SHN_UNDEF

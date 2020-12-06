@@ -1,15 +1,13 @@
-$NetBSD: distinfo,v 1.33 2020/12/03 16:02:05 fcambus Exp $
+$NetBSD: distinfo,v 1.34 2020/12/06 18:07:53 fcambus Exp $
 
-SHA1 (binutils-2.34.tar.bz2) = 361566c9ab5e90bd847d06f46fb9f18ec6c3ecf0
-RMD160 (binutils-2.34.tar.bz2) = e99f517407503cec1042a2e824b7c1f8f0fca4b8
-SHA512 (binutils-2.34.tar.bz2) = f47e7304e102c7bbc97958a08093e27796b9051d1567ce4fbb723d39ef3e29efa325ee14a1bdcc462a925a7f9bbbc9aee28294c6dc23850f371030f3835a8067
-Size (binutils-2.34.tar.bz2) = 32430470 bytes
-SHA1 (patch-bfd_cache.c) = 20988e84ff2a1d7ff83b5adb04e4f117953205b8
-SHA1 (patch-binutils_Makefile.in) = a24f0e6a8df05f7241198793124a0eaf9fe676d2
-SHA1 (patch-configure) = 3e518bda9d3ef169f9ebd35061b1c6374f12b406
-SHA1 (patch-gold_Makefile.in) = be0ec82e1d16c6eae50153d339c8eb29aaca42d0
-SHA1 (patch-gold_options.h) = ea98204c747b2d568e0f5ab7f64cc77c4341a744
-SHA1 (patch-gold_resolve.cc) = d93ce96cf97289f8947707f4ff3f5a837d8cb4de
-SHA1 (patch-gold_system.h) = 9151878fe25dfee33f839cd63e465d30481dda7a
-SHA1 (patch-include_safe-ctype.h) = d0fcfb2830f0c90816f63906f618a1d6df010a9f
-SHA1 (patch-libiberty_Makefile.in) = 59c479e6fe491e17837d421f5b4b25a81dc5e7c9
+SHA1 (binutils-2.35.1.tar.bz2) = df4eb943bf65df4bbbd0a001efcc98113423c5dd
+RMD160 (binutils-2.35.1.tar.bz2) = ed8ad923db716388b83b0234d41abc6beb01c9d6
+SHA512 (binutils-2.35.1.tar.bz2) = 2828cca9664ae172d6be5f1869f4c7cd39b63a4340c9a5d7c18f30fa06d4ff391394704720872f32f786053f14b27dcafd63c46db7984a8f6ec822f266bb2541
+Size (binutils-2.35.1.tar.bz2) = 32892584 bytes
+SHA1 (patch-bfd_cache.c) = e2d96bad350552eacdffa83532f9dc9e15ee9be9
+SHA1 (patch-gold_Makefile.in) = e01d973f9625a1653851f796c123efec37102fbd
+SHA1 (patch-gold_options.h) = cdb27cb5c967a873535ce5c63026c6ace3538fd6
+SHA1 (patch-gold_resolve.cc) = ab64091fa2bd727993dd0428f117b658cd4dd3e3
+SHA1 (patch-gold_system.h) = 9b4130b5315763daa66e0a91a8be6d1df0d10344
+SHA1 (patch-include_safe-ctype.h) = 66e636f8200ff5e9b4bfa0a5aee13cd072a23887
+SHA1 (patch-libiberty_Makefile.in) = bca8d36e3813412d0c075eab4c194c0bc9f504f5
