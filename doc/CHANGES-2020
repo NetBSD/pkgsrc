@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6589 2020/12/06 11:29:33 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6590 2020/12/06 11:39:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9584,3 +9584,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/haproxy to 2.3.2 [adam 2020-12-06]
 	Updated databases/py-whisper to 1.1.7 [adam 2020-12-06]
 	Updated devel/py-pkginfo to 1.6.1 [adam 2020-12-06]
+	Updated devel/py-mercurial to 5.6.1 [wiz 2020-12-06]
