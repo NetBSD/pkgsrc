@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2020/11/09 14:59:10 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2020/12/06 11:37:33 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mercurial
-# 5.6 needs some "*-pre" crates that are not available
+# 5.6.1 needs some "*-pre" crates that are not available
 # then it fails with a missing Cargo.toml file error
-PKG_SUPPORTED_OPTIONS=		# rust
-PKG_SUGGESTED_OPTIONS=		# rust
+PKG_SUPPORTED_OPTIONS=		#rust
+PKG_SUGGESTED_OPTIONS=		#rust
 
 .include "../../mk/bsd.options.mk"
 
