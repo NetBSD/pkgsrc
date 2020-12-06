@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6593 2020/12/06 16:46:28 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.6594 2020/12/06 17:33:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9589,3 +9589,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/py-reportlab to 3.5.56 [adam 2020-12-06]
 	Added devel/asmfmt version 1.2.1 [bsiegert 2020-12-06]
 	Added devel/errcheck version 1.4.0 [bsiegert 2020-12-06]
+	Updated pkgtools/pkg_install to 20201206 [wiz 2020-12-06]
