@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2020/12/04 20:45:31 nia Exp $
+# $NetBSD: Makefile,v 1.24 2020/12/06 10:40:33 wiz Exp $
 
-DISTNAME=		todoman-3.8.0
-PKGREVISION=		1
+DISTNAME=		todoman-3.9.0
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_PYPI:=t/todoman/}
 #MASTER_SITES=		${MASTER_SITE_GITHUB:=pimutils/}
