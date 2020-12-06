@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/03/06 13:01:47 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/12/06 23:40:21 schwarz Exp $
 
-DISTNAME=	libexosip2-5.1.1
+DISTNAME=	libexosip2-5.2.0
 PKGNAME=	${DISTNAME:S/exosip/eXosip/1}
 CATEGORIES=	net devel
 MASTER_SITES=	https://download.savannah.nongnu.org/releases/exosip/
