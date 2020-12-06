@@ -1,11 +1,11 @@
-$NetBSD: patch-config_policy.xml,v 1.6 2020/11/17 16:12:02 wiz Exp $
+$NetBSD: patch-config_policy.xml,v 1.7 2020/12/06 10:33:39 wiz Exp $
 
 Disable ghostscript coders by default to workaround VU#332928:
 <https://www.kb.cert.org/vuls/id/332928>
 
---- config/policy.xml.orig	2020-11-14 14:52:59.000000000 +0000
+--- config/policy.xml.orig	2020-12-05 21:20:02.000000000 +0000
 +++ config/policy.xml
-@@ -72,6 +72,18 @@
+@@ -76,6 +76,18 @@
    <!-- <policy domain="cache" name="synchronize" value="True"/> -->
    <!-- <policy domain="cache" name="shared-secret" value="passphrase" stealth="true"/> -->
    <!-- <policy domain="system" name="max-memory-request" value="256MiB"/> -->
@@ -23,4 +23,4 @@ Disable ghostscript coders by default to workaround VU#332928:
 +
    <!-- <policy domain="system" name="shred" value="2"/> -->
    <!-- <policy domain="system" name="precision" value="6"/> -->
- </policymap>
+   <!-- <policy domain="system" name="font" value="/path/to/font.ttf"/> -->
