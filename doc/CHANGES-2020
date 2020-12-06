@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6588 2020/12/06 11:05:52 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6589 2020/12/06 11:29:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9580,3 +9580,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-pypika to 0.44.1 [adam 2020-12-06]
 	Updated archivers/py-zstandard to 0.14.1 [adam 2020-12-06]
 	Updated devel/py-wheel to 0.36.1 [adam 2020-12-06]
+	Updated databases/slony1 to 2.2.9 [adam 2020-12-06]
+	Updated net/haproxy to 2.3.2 [adam 2020-12-06]
+	Updated databases/py-whisper to 1.1.7 [adam 2020-12-06]
+	Updated devel/py-pkginfo to 1.6.1 [adam 2020-12-06]
