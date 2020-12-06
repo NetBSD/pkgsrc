@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2020/12/06 00:22:04 dbj Exp $
+# $NetBSD: Makefile,v 1.124 2020/12/06 20:40:59 dbj Exp $
 
 DISTNAME=	fldigi-4.1.01
 PKGREVISION=	12
@@ -45,8 +45,9 @@ CXXFLAGS+=	-Wno-error=c++11-narrowing
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-PLIST_SUBST+=	FLDIGI_VERSION=${PKGVERSION_NOREV}
-PLIST_SUBST+=	FLARQ_VERSION="4.3.7"
+
+FLDIGI_VERSION=	${PKGVERSION_NOREV}
+FLARQ_VERSION=	4.3.7
 
 post-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} appbundle
@@ -62,8 +63,16 @@ post-install:
 	cd ${WRKSRC}/src/${DISTNAME} && \
 		pax -rw -pp -pm *.app ${DESTDIR}${PREFIX}/Applications
 
-CHECK_SHLIBS_SKIP+=	Applications/*/Contents/Frameworks/*.dylib
-CHECK_WRKREF_SKIP+=	Applications/*/Contents/MacOS/*
+PLIST_SUBST+=	FLDIGI_VERSION=${FLDIGI_VERSION}
+PLIST_SUBST+=	FLARQ_VERSION=${FLARQ_VERSION}
+GENERATE_PLIST+= (cd ${DESTDIR}${PREFIX} && ${LS} \
+		Applications/flarq-${FLARQ_VERSION}.app/Contents/Frameworks/lib*.dylib \
+		Applications/fldigi-${FLDIGI_VERSION}.app/Contents/Frameworks/lib*.dylib);
+
+CHECK_SHLIBS_SKIP+=	Applications/flarq-${FLARQ_VERSION}.app/Contents/Frameworks/lib*.dylib
+CHECK_SHLIBS_SKIP+=	Applications/fldigi-${FLDIGI_VERSION}.app/Contents/Frameworks/lib*.dylib
+CHECK_WRKREF_SKIP+=	Applications/flarq-${FLARQ_VERSION}.app/Contents/MacOS/flarq
+CHECK_WRKREF_SKIP+=	Applications/fldigi-${FLDIGI_VERSION}.app/Contents/MacOS/fldigi
 .endif
 
 .include "../../audio/libsamplerate/buildlink3.mk"
