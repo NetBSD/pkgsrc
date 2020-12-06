@@ -1,0 +1,9 @@
+This module provides a case preserving but case insensitive hash.
+This means that
+ 
+    $cphash{KEY}    $cphash{key}
+    $cphash{Key}    $cphash{keY}
+ 
+all refer to the same entry.  Also, the hash remembers which form of
+the key was last used to store the entry.  The `keys' and `each'
+functions will return the key that was used to set the value.
