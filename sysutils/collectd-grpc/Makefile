@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/10/24 22:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/06 10:50:51 wiz Exp $
 
+PKGREVISION=		1
 COLLECTD_PACKAGE=	grpc
 
 COMMENT=		Statistics collection daemon - grpc plugin
