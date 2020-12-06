@@ -1,0 +1,6 @@
+errcheck is a program for checking for unchecked errors in go programs.
+
+
+For basic usage, just give the package path of interest as the first argument:
+
+    errcheck github.com/kisielk/errcheck/testdata
