@@ -1,0 +1,5 @@
+reftools is a collection of refactoring tools for Go.
+
+fixplurals: remove redundant parameter and result types from function signatures
+fillstruct: fills a struct literal with default values
+fillswitch: fills a (type) switch statement with case statements
