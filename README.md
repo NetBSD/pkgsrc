@@ -68,7 +68,7 @@ Additional links
 
 - [pkgsrc guide](https://www.netbsd.org/docs/pkgsrc/) - the authoritative document on pkgsrc, also available as `doc/pkgsrc.txt`
 - [pkgsrc in the NetBSD Wiki](https://wiki.netbsd.org/pkgsrc/) - miscellaneous articles and tutorials
-- [pkgsrc.se](http://pkgsrc.se/) - a searchable web index of pkgsrc
+- [pkgsrc.se](https://pkgsrc.se/) - a searchable web index of pkgsrc
 - [pkgsrc-wip](https://pkgsrc.org/wip/) - a project to get more people actively involved with creating packages for pkgsrc
 - [pkgsrc on Twitter](https://twitter.com/pkgsrc) - announcements to the world
 - [pkgsrcCon](https://pkgsrc.org/pkgsrcCon) - we get together
