@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/06/01 11:36:49 pin Exp $
+$NetBSD: distinfo,v 1.3 2020/12/07 11:54:11 pin Exp $
 
-SHA1 (lxqt-themes-0.15.0.tar.xz) = 5f48b1ecf113f991e157101efdb02fb96e20ff56
-RMD160 (lxqt-themes-0.15.0.tar.xz) = 07e9871eead74b4ee29a5931fdb0e1750feb0984
-SHA512 (lxqt-themes-0.15.0.tar.xz) = 7ef0c5af9945ef450d78e4991e482781728867e7d4f6793832c822135a47288b0c08d883d207ee7f275585fa7ae17f2e6bdbdaf01295ae2810e01c43330f2f9d
-Size (lxqt-themes-0.15.0.tar.xz) = 3203876 bytes
+SHA1 (lxqt-themes-0.16.0.tar.xz) = b9cd11260ec0a32f1deca233004ace03b3200066
+RMD160 (lxqt-themes-0.16.0.tar.xz) = 20f599ba8a8d5c420034f9942e9fea7d4c480322
+SHA512 (lxqt-themes-0.16.0.tar.xz) = fce067e621df4e3cad62a73f552c06ecf413e83ee2d67643424c4bdc0752c2c0acd1095c92714294ecc3ef96d137a2685860e360e09b81880fadf69b2c041258
+Size (lxqt-themes-0.16.0.tar.xz) = 3220864 bytes
