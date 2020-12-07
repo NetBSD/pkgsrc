@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:56:14 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/07 11:50:42 pin Exp $
 bin/qterminal
 share/appdata/qterminal.appdata.xml
 share/applications/qterminal.desktop
@@ -20,6 +20,7 @@ share/qterminal/translations/qterminal_fi.qm
 share/qterminal/translations/qterminal_fr.qm
 share/qterminal/translations/qterminal_gl.qm
 share/qterminal/translations/qterminal_he.qm
+share/qterminal/translations/qterminal_hr.qm
 share/qterminal/translations/qterminal_hu.qm
 share/qterminal/translations/qterminal_id.qm
 share/qterminal/translations/qterminal_it.qm
