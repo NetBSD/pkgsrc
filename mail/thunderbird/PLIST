@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2020/11/21 12:28:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.83 2020/12/07 12:30:56 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -617,6 +617,7 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/attach-active-18.s
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/attach-disabled-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/attach-inactive-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/col-encrypted-signed.png
+lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/confirmPubkeyImport.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/decrypt-active-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/decrypt-inactive-18.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/openpgp/encrypt-active-18.svg
@@ -4369,6 +4370,8 @@ lib/thunderbird/chrome/openpgp/content/openpgp/ui/changeExpiryDlg.xhtml
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/commonWorkflows.js
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/composeKeyStatus.js
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/composeKeyStatus.xhtml
+lib/thunderbird/chrome/openpgp/content/openpgp/ui/confirmPubkeyImport.js
+lib/thunderbird/chrome/openpgp/content/openpgp/ui/confirmPubkeyImport.xhtml
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/enigmailCommon.js
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/enigmailKeyImportInfo.js
 lib/thunderbird/chrome/openpgp/content/openpgp/ui/enigmailKeyImportInfo.xhtml
