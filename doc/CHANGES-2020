@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6598 2020/12/06 23:40:21 schwarz Exp $
+$NetBSD: CHANGES-2020,v 1.6599 2020/12/07 00:03:58 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9594,3 +9594,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/reftools version 0.0.20201119 [bsiegert 2020-12-06]
 	Updated devel/libosip to 5.2.0 [schwarz 2020-12-06]
 	Updated net/libexosip to 5.2.0 [schwarz 2020-12-06]
+	Updated editors/nano to 5.4 [schwarz 2020-12-07]
