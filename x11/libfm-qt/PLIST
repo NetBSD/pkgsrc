@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:38:55 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/07 11:34:52 pin Exp $
 include/libfm-qt/appchoosercombobox.h
 include/libfm-qt/appchooserdialog.h
 include/libfm-qt/applaunchcontext.h
@@ -60,6 +60,7 @@ include/libfm-qt/dnddest.h
 include/libfm-qt/editbookmarksdialog.h
 include/libfm-qt/execfiledialog_p.h
 include/libfm-qt/filedialog.h
+include/libfm-qt/filedialog_p.h
 include/libfm-qt/filedialoghelper.h
 include/libfm-qt/filelauncher.h
 include/libfm-qt/filemenu.h
@@ -97,8 +98,8 @@ include/libfm-qt/utilities.h
 include/libfm-qt/utilities_p.h
 include/libfm-qt/xdndworkaround.h
 lib/libfm-qt.so
-lib/libfm-qt.so.7
-lib/libfm-qt.so.7.0.0
+lib/libfm-qt.so.8
+lib/libfm-qt.so.8.0.0
 lib/pkgconfig/libfm-qt.pc
 share/cmake/fm-qt/fm-qt-config-version.cmake
 share/cmake/fm-qt/fm-qt-config.cmake
@@ -120,10 +121,12 @@ share/libfm-qt/translations/libfm-qt_es.qm
 share/libfm-qt/translations/libfm-qt_fr.qm
 share/libfm-qt/translations/libfm-qt_gl.qm
 share/libfm-qt/translations/libfm-qt_he.qm
+share/libfm-qt/translations/libfm-qt_hr.qm
 share/libfm-qt/translations/libfm-qt_hu.qm
 share/libfm-qt/translations/libfm-qt_id.qm
 share/libfm-qt/translations/libfm-qt_it.qm
 share/libfm-qt/translations/libfm-qt_ja.qm
+share/libfm-qt/translations/libfm-qt_ko.qm
 share/libfm-qt/translations/libfm-qt_lt.qm
 share/libfm-qt/translations/libfm-qt_nb_NO.qm
 share/libfm-qt/translations/libfm-qt_nl.qm
