@@ -1,0 +1,14 @@
+$NetBSD: patch-autostart_CMakeLists.txt,v 1.1 2020/12/07 12:55:28 pin Exp $
+
+Install config file to proper location
+
+--- autostart/CMakeLists.txt.orig	2020-11-05 16:09:19.000000000 +0000
++++ autostart/CMakeLists.txt
+@@ -10,6 +10,6 @@ add_custom_target(lxqt_panel_autostart_d
+ 
+ install(FILES
+     ${DESKTOP_FILES}
+-    DESTINATION "${LXQT_ETC_XDG_DIR}/autostart"
++    DESTINATION "share/examples/autostart"
+     COMPONENT Runtime
+ )
