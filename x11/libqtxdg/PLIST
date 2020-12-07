@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:25:53 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/07 11:29:28 pin Exp $
 bin/qtxdg-mat
 include/qt5xdg/XdgAction
 include/qt5xdg/XdgAutoStart
+include/qt5xdg/XdgDefaultApps
 include/qt5xdg/XdgDesktopFile
 include/qt5xdg/XdgDirs
 include/qt5xdg/XdgIcon
@@ -12,6 +13,7 @@ include/qt5xdg/XdgMimeType
 include/qt5xdg/XmlHelper
 include/qt5xdg/xdgaction.h
 include/qt5xdg/xdgautostart.h
+include/qt5xdg/xdgdefaultapps.h
 include/qt5xdg/xdgdesktopfile.h
 include/qt5xdg/xdgdirs.h
 include/qt5xdg/xdgicon.h
