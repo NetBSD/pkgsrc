@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2020/06/01 12:17:53 pin Exp $
+$NetBSD: distinfo,v 1.3 2020/12/07 12:42:45 pin Exp $
 
-SHA1 (lxqt-config-0.15.0.tar.xz) = f6f7541a1f5be26d379c063024ae08ef7fdd82e9
-RMD160 (lxqt-config-0.15.0.tar.xz) = 005e6f0918b26f080d621baa8be9415dbdafc810
-SHA512 (lxqt-config-0.15.0.tar.xz) = 68dc8ecc38033a7a93167fb0afbe45b3e14eb1132c3faf3395ebed1fc96b5836e8db003ecffde0417dfaf9e73b70fcc69a06523319f1f858cd2020eb61113a0d
-Size (lxqt-config-0.15.0.tar.xz) = 312468 bytes
+SHA1 (lxqt-config-0.16.1.tar.xz) = 43b8da02b797cbbe5612465f05e633322144f515
+RMD160 (lxqt-config-0.16.1.tar.xz) = cf14c054c87f9bcf0dbcdea64a6949a5d38549da
+SHA512 (lxqt-config-0.16.1.tar.xz) = 3322611b74a945b2c4aa60a179fc1edabd09e474502f44e7a0319478a09762ff7a11fbb7603aa26ec8ea593514bbcdfc98fb475009d0dfa4d387963fcdef7e03
+Size (lxqt-config-0.16.1.tar.xz) = 327652 bytes
 SHA1 (patch-lxqt-config-input_keyboardlayoutconfig.h) = ba7ce5b75579f4478fe14a96dd852027f3570a79
+SHA1 (patch-src_CMakeLists.txt) = fb7d169572213d86dc79ed97921387cc401acb70
