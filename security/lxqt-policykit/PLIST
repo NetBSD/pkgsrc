@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 11:48:49 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/07 12:10:22 pin Exp $
 bin/lxqt-policykit-agent
 man/man1/lxqt-policykit-agent.1
-share/examples/lxqt/xdg/autostart/lxqt-policykit-agent.desktop
+share/examples/autostart/lxqt-policykit-agent.desktop
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ar.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_arn.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ast.qm
@@ -15,6 +15,7 @@ share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_es.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_fr.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_gl.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_he.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_hr.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_hu.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_id.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_it.qm
