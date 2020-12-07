@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/01 11:10:44 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/12/07 11:59:16 pin Exp $
 bin/lxqt-archiver
 libexec/lxqt-archiver/isoinfo.sh
-libexec/lxqt-archiver/rpm2cpio
 share/applications/lxqt-archiver.desktop
 share/icons/hicolor/scalable/apps/lxqt-archiver.svg
 share/lxqt-archiver/translations/lxqt-archiver_ar.qm
@@ -16,6 +15,7 @@ share/lxqt-archiver/translations/lxqt-archiver_en_GB.qm
 share/lxqt-archiver/translations/lxqt-archiver_es.qm
 share/lxqt-archiver/translations/lxqt-archiver_gl.qm
 share/lxqt-archiver/translations/lxqt-archiver_he.qm
+share/lxqt-archiver/translations/lxqt-archiver_hr.qm
 share/lxqt-archiver/translations/lxqt-archiver_hu.qm
 share/lxqt-archiver/translations/lxqt-archiver_id.qm
 share/lxqt-archiver/translations/lxqt-archiver_it.qm
