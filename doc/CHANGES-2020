@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6613 2020/12/07 12:01:44 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6614 2020/12/07 12:03:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9613,3 +9613,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/screengrab to 2.1.0 [pin 2020-12-07]
 	Updated archivers/lxqt-archiver to 0.3.0 [pin 2020-12-07]
 	Updated wm/obconf-qt to 0.16.0 [pin 2020-12-07]
+	Updated audio/pavucontrol-qt to 0.16.0 [pin 2020-12-07]
