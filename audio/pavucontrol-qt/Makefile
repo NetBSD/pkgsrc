@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/12/04 04:55:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.10 2020/12/07 12:03:03 pin Exp $
 
-DISTNAME=	pavucontrol-qt-0.15.0
-PKGREVISION=	5
+DISTNAME=	pavucontrol-qt-0.16.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,7 +21,7 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
