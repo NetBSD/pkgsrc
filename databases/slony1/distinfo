@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.23 2020/12/06 11:08:09 adam Exp $
+$NetBSD: distinfo,v 1.24 2020/12/07 15:51:38 adam Exp $
 
-SHA1 (slony1-2.2.9.tar.bz2) = 296c4b1e071c077203e8145c95b55d109dee1559
-RMD160 (slony1-2.2.9.tar.bz2) = f035feed58572e4fa040624c260f9b35a5cfa67b
-SHA512 (slony1-2.2.9.tar.bz2) = c42d7604ae2eda9b83bfa608ca13a4a25b2a4b77301a591b9308eda964d263490a02acdfd5b1a7e7751c24b2a7cb5d9410c58deaf82bdb3c422456af65c2b3f5
-Size (slony1-2.2.9.tar.bz2) = 1464548 bytes
+SHA1 (slony1-2.2.10.tar.bz2) = 407253c734b7a4ae12440555a4cfde1d534c1ae2
+RMD160 (slony1-2.2.10.tar.bz2) = 70c4df9b27bc344334ec7af0ddcbf1355600291a
+SHA512 (slony1-2.2.10.tar.bz2) = 1b41addb7a0be0a130c2efcab1b241e3158d10a5a6e203d83f28353e303dd524e224ab9c04a7e37a0f89cd944237b90feeb8910eb35f717926aa3ad28dbe2d0f
+Size (slony1-2.2.10.tar.bz2) = 1464652 bytes
 SHA1 (patch-config.h.in) = 7348475c942c06d8d668f8b1a5d4fc4a03189017
 SHA1 (patch-configure) = 67eba0a1a45ef1f68a5a62627deb9e68f967b012
 SHA1 (patch-src_slonik_slonik.c) = 301e6a401b9f0158e3c6f471d294dbd910f8897b
