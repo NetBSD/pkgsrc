@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6621 2020/12/07 12:30:12 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6622 2020/12/07 12:31:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9621,3 +9621,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/lxqt-openssh-askpass to 0.16.0 [pin 2020-12-07]
 	Updated x11/lxqt-globalkeys to 0.16.0 [pin 2020-12-07]
 	Updated x11/lxqt-qtplugin to 0.16.0 [pin 2020-12-07]
+	Updated mail/thunderbird to 78.5.1 [ryoon 2020-12-07]
