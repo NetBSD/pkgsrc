@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 20:57:01 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/12/07 20:02:00 kamil Exp $
 
-SHA1 (pioneers-0.11.3.tar.gz) = 9a1131dd291e12367a870335a1e8c78da101d1ad
-RMD160 (pioneers-0.11.3.tar.gz) = a72e4ae0b4489bf944dc30ab89039aabe04f8d7c
-SHA512 (pioneers-0.11.3.tar.gz) = 4c4f830b8254015788195ca0b0cc0999a22e155184bb1a420f8a8c2625fa285f9e270ec726e793ec0870565518678ec2c2125d09f0cdc15b646c538b38cfd93e
-Size (pioneers-0.11.3.tar.gz) = 2834584 bytes
+SHA1 (pioneers-15.6.tar.gz) = d38522d7814cbef3e2f6cada44c1b92c7c2ed203
+RMD160 (pioneers-15.6.tar.gz) = cbef5e5c3bc240c522e532c8539f1e41d0fa0335
+SHA512 (pioneers-15.6.tar.gz) = 683ba851d4dc85244edea7f9b183d6c9b7ef93cdc948f3375f8434f2f455ac0a3688a6a914ab8ad8a86d5067bba8f563c181ef8c8ccf00df6a985e801dc1c213
+Size (pioneers-15.6.tar.gz) = 5054353 bytes
