@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 10:53:09 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/07 11:48:54 pin Exp $
 include/qtermwidget5/Emulation.h
 include/qtermwidget5/Filter.h
+include/qtermwidget5/KeyboardTranslator.h
 include/qtermwidget5/qtermwidget.h
 include/qtermwidget5/qtermwidget_export.h
 include/qtermwidget5/qtermwidget_version.h
@@ -57,7 +58,9 @@ share/qtermwidget5/translations/qtermwidget_es.qm
 share/qtermwidget5/translations/qtermwidget_fr.qm
 share/qtermwidget5/translations/qtermwidget_gl.qm
 share/qtermwidget5/translations/qtermwidget_he.qm
+share/qtermwidget5/translations/qtermwidget_hr.qm
 share/qtermwidget5/translations/qtermwidget_hu.qm
+share/qtermwidget5/translations/qtermwidget_it.qm
 share/qtermwidget5/translations/qtermwidget_ja.qm
 share/qtermwidget5/translations/qtermwidget_lt.qm
 share/qtermwidget5/translations/qtermwidget_nb_NO.qm
