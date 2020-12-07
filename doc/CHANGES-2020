@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6609 2020/12/07 11:51:06 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6610 2020/12/07 11:54:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9609,3 +9609,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/pcmanfm-qt to 0.16.0 [pin 2020-12-07]
 	Updated x11/qtermwidget to 0.16.1 [pin 2020-12-07]
 	Updated x11/qterminal to 0.16.1 [pin 2020-12-07]
+	Updated graphics/lxqt-themes to 0.16.0 [pin 2020-12-07]
