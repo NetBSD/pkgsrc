@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:08 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/07 15:41:07 adam Exp $
 TRYTON_MODULE_NAME=	trytond_stock_package_shipping_dpd
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
@@ -19,6 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/application.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-zeep
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
