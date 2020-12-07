@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/12/04 04:56:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/07 12:20:46 pin Exp $
 
-DISTNAME=	lxqt-openssh-askpass-0.15.0
-PKGREVISION=	4
+DISTNAME=	lxqt-openssh-askpass-0.16.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,7 +21,7 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	openssh-[0-9]*:../../security/openssh
 
