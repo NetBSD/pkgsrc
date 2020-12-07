@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 12:17:53 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/07 12:42:45 pin Exp $
 bin/lxqt-config
 bin/lxqt-config-appearance
 bin/lxqt-config-brightness
@@ -15,7 +15,9 @@ share/applications/lxqt-config-file-associations.desktop
 share/applications/lxqt-config-locale.desktop
 share/applications/lxqt-config-monitor.desktop
 share/applications/lxqt-config.desktop
-share/examples/lxqt/xdg/menus/lxqt-config.menu
+share/desktop-directories/lxqt-settings-lxqt.directory
+share/desktop-directories/lxqt-settings-system.directory
+share/examples/menus/lxqt-config.menu
 share/icons/hicolor/48x48/apps/brightnesssettings.svg
 share/lxqt/icons/monitor.svg
 share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_ar.qm
@@ -37,6 +39,7 @@ share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_fi.qm
 share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_fr.qm
 share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_gl.qm
 share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_he.qm
+share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_hr.qm
 share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_hu.qm
 share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_ia.qm
 share/lxqt/translations/lxqt-config-appearance/lxqt-config-appearance_id.qm
@@ -77,6 +80,7 @@ share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_es.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_fr.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_gl.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_he.qm
+share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_hr.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_hu.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_id.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_it.qm
@@ -111,6 +115,7 @@ share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_fi.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_fr.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_gl.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_he.qm
+share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_hr.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_hu.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_id.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_it.qm
@@ -146,6 +151,7 @@ share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associati
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_fr.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_gl.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_he.qm
+share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_hr.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_hu.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_id.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_it.qm
@@ -175,6 +181,7 @@ share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_es.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_fr.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_gl.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_he.qm
+share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_hr.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_hu.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_id.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_it.qm
@@ -206,6 +213,7 @@ share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_es.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_fr.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_gl.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_he.qm
+share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_hr.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_hu.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_id.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_it.qm
@@ -241,6 +249,7 @@ share/lxqt/translations/lxqt-config/lxqt-config_fi.qm
 share/lxqt/translations/lxqt-config/lxqt-config_fr.qm
 share/lxqt/translations/lxqt-config/lxqt-config_gl.qm
 share/lxqt/translations/lxqt-config/lxqt-config_he.qm
+share/lxqt/translations/lxqt-config/lxqt-config_hr.qm
 share/lxqt/translations/lxqt-config/lxqt-config_hu.qm
 share/lxqt/translations/lxqt-config/lxqt-config_id.qm
 share/lxqt/translations/lxqt-config/lxqt-config_it.qm
