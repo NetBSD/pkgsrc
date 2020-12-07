@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.28 2020/11/26 15:06:35 nia Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/12/07 11:27:33 nia Exp $
 bin/claws-mail
-bin/claws-mail-shred
 include/claws-mail/account.h
 include/claws-mail/action.h
 include/claws-mail/adbookbase.h
