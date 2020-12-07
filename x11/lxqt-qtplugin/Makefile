@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2020/11/05 09:09:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2020/12/07 12:29:41 pin Exp $
 
-DISTNAME=	lxqt-qtplugin-0.15.1
-PKGREVISION=	3
+DISTNAME=	lxqt-qtplugin-0.16.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
-GITHUB_RELEASE= ${PKGVERSION_NOREV}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,13 +22,13 @@ SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	src/lxqtplatformtheme.cpp
-SUBST_SED.prefix=	-e 's,/usr/local/share,${PREFIX}/share/examples/lxqt/xdg,g'
+SUBST_SED.prefix=	-e 's,/usr/local/share,${PREFIX}/share,g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
