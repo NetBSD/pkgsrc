@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/11/05 09:09:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2020/12/07 12:01:13 pin Exp $
 
-DISTNAME=	obconf-qt-0.15.0
-PKGREVISION=	3
+DISTNAME=	obconf-qt-0.16.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -24,7 +23,7 @@ CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt5
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
