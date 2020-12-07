@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6634 2020/12/07 15:51:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6635 2020/12/07 20:05:45 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9636,3 +9636,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/py-l18n to 2020.6.1 [adam 2020-12-07]
 	Updated databases/py-multidict to 5.1.0 [adam 2020-12-07]
 	Updated databases/slony1 to 2.2.10 [adam 2020-12-07]
+	Updated games/pioneers to 15.6 [kamil 2020-12-07]
