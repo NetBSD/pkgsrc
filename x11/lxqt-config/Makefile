@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/12/04 04:56:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2020/12/07 12:42:45 pin Exp $
 
-DISTNAME=	lxqt-config-0.15.0
-PKGREVISION=	4
+DISTNAME=	lxqt-config-0.16.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -18,6 +17,13 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
+
+MENUS_CONF=		share/examples/menus
+PKG_SYSCONFSUBDIR=	xdg
+MAKE_DIRS=		${PKG_SYSCONFDIR}/menus
+
+CONF_FILES+=	${MENUS_CONF}/lxqt-config.menu \
+		${PKG_SYSCONFDIR}/menus/lxqt-config.menu
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Linux"
@@ -44,7 +50,7 @@ SUBST_VARS.prefix+=	XKBSUB
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
 
