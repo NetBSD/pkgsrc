@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6627 2020/12/07 12:41:34 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6628 2020/12/07 12:43:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9627,3 +9627,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/mksandbox to 1.9 [jperkin 2020-12-07]
 	Updated x11/lxqt-notificationd to 0.16.0 [pin 2020-12-07]
 	Updated lang/nim to 1.4.2 [ryoon 2020-12-07]
+	Updated x11/lxqt-config to 0.16.1 [pin 2020-12-07]
