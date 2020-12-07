@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6633 2020/12/07 15:44:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6634 2020/12/07 15:51:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9634,3 +9634,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/lxqt to 0.16.0 [pin 2020-12-07]
 	Updated net/py-zeep to 4.0.0 [adam 2020-12-07]
 	Updated time/py-l18n to 2020.6.1 [adam 2020-12-07]
+	Updated databases/py-multidict to 5.1.0 [adam 2020-12-07]
+	Updated databases/slony1 to 2.2.10 [adam 2020-12-07]
