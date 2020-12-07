@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6618 2020/12/07 12:17:42 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6619 2020/12/07 12:21:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9618,3 +9618,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/lxqt-about to 0.16.0 [pin 2020-12-07]
 	Updated x11/lxqt-admin to 0.16.0 [pin 2020-12-07]
 	Updated security/lxqt-sudo to 0.16.0 [pin 2020-12-07]
+	Updated security/lxqt-openssh-askpass to 0.16.0 [pin 2020-12-07]
