@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6629 2020/12/07 12:49:45 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6630 2020/12/07 12:56:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9629,3 +9629,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nim to 1.4.2 [ryoon 2020-12-07]
 	Updated x11/lxqt-config to 0.16.1 [pin 2020-12-07]
 	Updated x11/lxqt-runner to 0.16.0 [pin 2020-12-07]
+	Updated x11/lxqt-panel to 0.16.1 [pin 2020-12-07]
