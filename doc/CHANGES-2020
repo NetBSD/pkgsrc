@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6625 2020/12/07 12:36:04 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.6626 2020/12/07 12:39:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9625,3 +9625,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird-l10n to 78.5.1 [ryoon 2020-12-07]
 	Updated sysutils/lxqt-powermanagement to 0.16.0 [pin 2020-12-07]
 	Updated pkgtools/mksandbox to 1.9 [jperkin 2020-12-07]
+	Updated x11/lxqt-notificationd to 0.16.0 [pin 2020-12-07]
