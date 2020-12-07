@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/07/07 05:24:40 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/12/07 09:24:57 adam Exp $
 
-SHA1 (Wand-0.6.2.tar.gz) = b830deafc4b57bbd8365bec2760a6b201f1ae0fb
-RMD160 (Wand-0.6.2.tar.gz) = 29a08b5b2b19d3e06792af44451ff51eb82e4d2b
-SHA512 (Wand-0.6.2.tar.gz) = 906490a0a75a4fc315b592fec12dea21cd40102c461381a79d5215c70ab6fb9c8a1e888fc478ea2ad006db6549dfdd2b7b1e01879cc2aba34dcc0cdd6ae2d128
-Size (Wand-0.6.2.tar.gz) = 10503865 bytes
-SHA1 (patch-setup.py) = c4aa3386573378aba14c4388141cbfb353eeb2dd
+SHA1 (Wand-0.6.5.tar.gz) = ef5bdd454160c3ee4bb65037b52e2bfffdee997b
+RMD160 (Wand-0.6.5.tar.gz) = 44f311c2506c623a6028c6db199b63095f2e6a0c
+SHA512 (Wand-0.6.5.tar.gz) = 7355888da6ea604759d4af8548d4c2e08d529c88d2720400bbfc6a19bdb03049f3faa5abcd5f3a9c69b705754e86ad4f511a76a0a310d5dece5c2774d74e543b
+Size (Wand-0.6.5.tar.gz) = 11477141 bytes
