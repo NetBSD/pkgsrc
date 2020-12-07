@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/12/04 04:56:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2020/12/07 12:34:35 pin Exp $
 
-DISTNAME=	lxqt-powermanagement-0.15.0
-PKGREVISION=	4
+DISTNAME=	lxqt-powermanagement-0.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -19,17 +18,28 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+AUTOSTART_CONF=		share/examples/autostart
+PKG_SYSCONFSUBDIR=	xdg
+MAKE_DIRS=		${PKG_SYSCONFDIR}/autostart
+
+CONF_FILES+=	${AUTOSTART_CONF}/lxqt-powermanagement.desktop \
+		${PKG_SYSCONFDIR}/autostart/lxqt-powermanagement.desktop
+
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+# The dbus option of qt5-qtbase must be enabled for this package to
+# build, it's a hard dependency.
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/liblxqt/buildlink3.mk"
 .include "../../devel/kidletime/buildlink3.mk"
 .include "../../sysutils/upower/buildlink3.mk"
 .include "../../sysutils/solid/buildlink3.mk"
+.include "../../x11/lxqt-globalkeys/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
