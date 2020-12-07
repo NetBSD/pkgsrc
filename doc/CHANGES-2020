@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6601 2020/12/07 09:25:17 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6602 2020/12/07 11:27:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9601,3 +9601,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/abseil to 20200923.2 [adam 2020-12-07]
 	Updated devel/py-lazy-object-proxy to 1.5.2 [adam 2020-12-07]
 	Updated graphics/py-wand to 0.6.5 [adam 2020-12-07]
+	Updated devel/lxqt-build-tools to 0.8.0 [pin 2020-12-07]
