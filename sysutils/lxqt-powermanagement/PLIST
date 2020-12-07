@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/01 12:12:38 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/07 12:34:35 pin Exp $
 bin/lxqt-config-powermanagement
 bin/lxqt-powermanagement
 share/applications/lxqt-config-powermanagement.desktop
-share/examples/lxqt/xdg/autostart/lxqt-powermanagement.desktop
+share/examples/autostart/lxqt-powermanagement.desktop
 share/icons/hicolor/scalable/devices/laptop-lid.svg
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ar.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_arn.qm
@@ -17,6 +17,7 @@ share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_fr.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_gl.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_he.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_hr.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_hu.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_id.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_it.qm
