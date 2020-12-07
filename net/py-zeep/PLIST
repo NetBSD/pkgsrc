@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2019/05/03 10:54:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/12/07 15:38:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/zeep/__init__.py
@@ -12,15 +11,6 @@ ${PYSITELIB}/zeep/__init__.pyo
 ${PYSITELIB}/zeep/__main__.py
 ${PYSITELIB}/zeep/__main__.pyc
 ${PYSITELIB}/zeep/__main__.pyo
-${PYSITELIB}/zeep/asyncio/__init__.py
-${PYSITELIB}/zeep/asyncio/__init__.pyc
-${PYSITELIB}/zeep/asyncio/__init__.pyo
-${PYSITELIB}/zeep/asyncio/bindings.py
-${PLIST.py3x}${PYSITELIB}/zeep/asyncio/bindings.pyc
-${PLIST.py3x}${PYSITELIB}/zeep/asyncio/bindings.pyo
-${PYSITELIB}/zeep/asyncio/transport.py
-${PLIST.py3x}${PYSITELIB}/zeep/asyncio/transport.pyc
-${PLIST.py3x}${PYSITELIB}/zeep/asyncio/transport.pyo
 ${PYSITELIB}/zeep/cache.py
 ${PYSITELIB}/zeep/cache.pyc
 ${PYSITELIB}/zeep/cache.pyo
@@ -45,18 +35,10 @@ ${PYSITELIB}/zeep/plugins.pyo
 ${PYSITELIB}/zeep/proxy.py
 ${PYSITELIB}/zeep/proxy.pyc
 ${PYSITELIB}/zeep/proxy.pyo
+${PYSITELIB}/zeep/py.typed
 ${PYSITELIB}/zeep/settings.py
 ${PYSITELIB}/zeep/settings.pyc
 ${PYSITELIB}/zeep/settings.pyo
-${PYSITELIB}/zeep/tornado/__init__.py
-${PYSITELIB}/zeep/tornado/__init__.pyc
-${PYSITELIB}/zeep/tornado/__init__.pyo
-${PYSITELIB}/zeep/tornado/bindings.py
-${PYSITELIB}/zeep/tornado/bindings.pyc
-${PYSITELIB}/zeep/tornado/bindings.pyo
-${PYSITELIB}/zeep/tornado/transport.py
-${PYSITELIB}/zeep/tornado/transport.pyc
-${PYSITELIB}/zeep/tornado/transport.pyo
 ${PYSITELIB}/zeep/transports.py
 ${PYSITELIB}/zeep/transports.pyc
 ${PYSITELIB}/zeep/transports.pyo
