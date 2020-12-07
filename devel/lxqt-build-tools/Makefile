@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/11/05 09:07:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2020/12/07 11:26:45 pin Exp $
 
-DISTNAME=	lxqt-build-tools-0.7.0
-PKGREVISION=	3
+DISTNAME=	lxqt-build-tools-0.8.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -19,7 +18,8 @@ USE_LANGUAGES=	c c++ # Needed to satisfy cmake
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PREFIX}/share/examples/lxqt/xdg
+PKG_SYSCONFSUBDIR=	xdg
+CMAKE_ARGS+=		-DLXQT_ETC_XDG_DIR=${PKG_SYSCONFDIR}
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
