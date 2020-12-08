@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6637 2020/12/08 08:55:33 he Exp $
+$NetBSD: CHANGES-2020,v 1.6638 2020/12/08 11:16:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9640,3 +9640,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/pioneers to 15.6 [kamil 2020-12-07]
 	Updated sysutils/fd-find to 8.2.1 [pin 2020-12-08]
 	Updated lang/ocaml to 4.09.1nb1 [he 2020-12-08]
+	Updated misc/9menu to 1.10 [nia 2020-12-08]
