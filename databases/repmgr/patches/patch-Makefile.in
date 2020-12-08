@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/12/08 16:38:26 adam Exp $
+
+Link against libintl.
+
+--- Makefile.in.orig	2020-12-07 08:54:14.000000000 +0000
++++ Makefile.in
+@@ -40,7 +40,7 @@ all: \
+ 
+ # When in development add -Werror
+ PG_CPPFLAGS = -std=gnu89 -I$(includedir_internal) -I$(libpq_srcdir) -Wall -Wmissing-prototypes -Wmissing-declarations $(EXTRA_CFLAGS)
+-SHLIB_LINK = $(libpq)
++SHLIB_LINK = $(libpq) -lintl
+ 
+ 
+ 
+@@ -76,10 +76,10 @@ configfile-scan.c: configfile-scan.l
+ $(REPMGR_CLIENT_OBJS): repmgr-client.h repmgr_version.h
+ 
+ repmgr: $(REPMGR_CLIENT_OBJS)
+-	$(CC) $(CFLAGS) $(REPMGR_CLIENT_OBJS) $(libpq_pgport) $(LDFLAGS) $(LDFLAGS_EX) -o $@$(X)
++	$(CC) $(CFLAGS) $(REPMGR_CLIENT_OBJS) $(libpq_pgport) -lintl $(LDFLAGS) $(LDFLAGS_EX) -o $@$(X)
+ 
+ repmgrd: $(REPMGRD_OBJS)
+-	$(CC) $(CFLAGS) $(REPMGRD_OBJS) $(libpq_pgport) $(LDFLAGS) $(LDFLAGS_EX) -o $@$(X)
++	$(CC) $(CFLAGS) $(REPMGRD_OBJS) $(libpq_pgport) -lintl $(LDFLAGS) $(LDFLAGS_EX) -o $@$(X)
+ 
+ $(REPMGR_CLIENT_OBJS): $(HEADERS)
+ $(REPMGRD_OBJS): $(HEADERS)
