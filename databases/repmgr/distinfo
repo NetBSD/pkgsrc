@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2020/10/30 09:55:13 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/12/08 16:38:26 adam Exp $
 
-SHA1 (repmgr-5.2.0.tar.gz) = b51474d70f2f0636377f48e9506b54f34e1d555a
-RMD160 (repmgr-5.2.0.tar.gz) = a123452de6e9d0490024fd71ad56ec603821b35c
-SHA512 (repmgr-5.2.0.tar.gz) = 4e9fbbba42025226d9b0e13f180f4f8b2ffbafd2b84a4ec9ffe36a804d40f3fc0d8b599bb859b4bdb0ca739d974d014a96e31868e5a48e34df2666c98a314553
-Size (repmgr-5.2.0.tar.gz) = 446137 bytes
-SHA1 (patch-repmgr.c) = e83bdddf1722e4cb5d1861baa33ab8c6930db693
+SHA1 (repmgr-5.2.1.tar.gz) = 2368a114934e78e5b316bed535b2794f4a3e81e9
+RMD160 (repmgr-5.2.1.tar.gz) = 055261e39aab9a157a7ebe857e95baf3c5da39b0
+SHA512 (repmgr-5.2.1.tar.gz) = 609ca27322087a042ede3a54565e425e9f39d74df510cbc103390cf60a31b35ce311cd942d5efd062bec2026864bd45466dbaf323963060d3ce89ce167c2a0b1
+Size (repmgr-5.2.1.tar.gz) = 448164 bytes
+SHA1 (patch-Makefile.in) = 9f9a41e4366bc8f7246eaef707ff33127659c777

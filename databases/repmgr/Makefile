@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/11/05 09:07:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2020/12/08 16:38:26 adam Exp $
 
-DISTNAME=	repmgr-5.2.0
+DISTNAME=	repmgr-5.2.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://repmgr.org/download/
 
@@ -42,6 +41,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/repmgr.conf.sample \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
-.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
