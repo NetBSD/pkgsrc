@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2018/02/21 15:12:00 triaxx Exp $
+$NetBSD: patch-Makefile.noimake,v 1.1 2020/12/08 11:15:57 nia Exp $
 
-Adjust compilation and linking flags to pkgsrc.
+Respect CFLAGS and LDFLAGS.
 
---- Makefile.noimake	2003/06/04 08:23:07	1.1
-+++ Makefile.noimake	2003/06/04 08:37:56
+--- Makefile.noimake.orig	2020-04-16 18:08:32.000000000 +0000
++++ Makefile.noimake
 @@ -5,9 +5,8 @@
  # Arnold Robbins
  # arnold@skeeve.atl.ga.us
