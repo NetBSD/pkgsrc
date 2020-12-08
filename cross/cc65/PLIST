@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/03/14 11:15:03 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/12/08 11:32:00 nia Exp $
 bin/ar65
 bin/ca65
 bin/cc65
@@ -37,6 +37,9 @@ share/cc65/asminc/cbm_kernal.inc
 share/cc65/asminc/cpu.mac
 share/cc65/asminc/creativision.inc
 share/cc65/asminc/ctype.inc
+share/cc65/asminc/ctype_common.inc
+share/cc65/asminc/ctypetable.inc
+share/cc65/asminc/cx16.inc
 share/cc65/asminc/em-error.inc
 share/cc65/asminc/em-kernel.inc
 share/cc65/asminc/errno.inc
@@ -106,6 +109,9 @@ share/cc65/cfg/c64.cfg
 share/cc65/cfg/cbm510.cfg
 share/cc65/cfg/cbm610.cfg
 share/cc65/cfg/creativision.cfg
+share/cc65/cfg/cx16-asm.cfg
+share/cc65/cfg/cx16-bank.cfg
+share/cc65/cfg/cx16.cfg
 share/cc65/cfg/gamate.cfg
 share/cc65/cfg/geos-apple.cfg
 share/cc65/cfg/geos-cbm.cfg
@@ -157,6 +163,7 @@ share/cc65/include/accelerator.h
 share/cc65/include/apple2.h
 share/cc65/include/apple2_filetype.h
 share/cc65/include/apple2enh.h
+share/cc65/include/ascii_charmap.h
 share/cc65/include/assert.h
 share/cc65/include/atari.h
 share/cc65/include/atari2600.h
@@ -178,6 +185,7 @@ share/cc65/include/cc65.h
 share/cc65/include/conio.h
 share/cc65/include/creativision.h
 share/cc65/include/ctype.h
+share/cc65/include/cx16.h
 share/cc65/include/dbg.h
 share/cc65/include/device.h
 share/cc65/include/dio.h
@@ -262,6 +270,7 @@ share/cc65/lib/c64.lib
 share/cc65/lib/cbm510.lib
 share/cc65/lib/cbm610.lib
 share/cc65/lib/creativision.lib
+share/cc65/lib/cx16.lib
 share/cc65/lib/gamate.lib
 share/cc65/lib/geos-apple.lib
 share/cc65/lib/geos-cbm.lib
@@ -321,6 +330,7 @@ share/cc65/samples/nachtm.c
 share/cc65/samples/overlaydemo.c
 share/cc65/samples/plasma.c
 share/cc65/samples/sieve.c
+share/cc65/samples/supervisionhello.c
 share/cc65/samples/tgidemo.c
 share/cc65/samples/tutorial/hello.c
 share/cc65/samples/tutorial/text.s
@@ -441,6 +451,8 @@ share/cc65/target/cbm510/drv/ser/cbm510-std.ser
 share/cc65/target/cbm610/drv/emd/cbm610-ram.emd
 share/cc65/target/cbm610/drv/ser/cbm610-std.ser
 share/cc65/target/creativision/drv/joy/creativision-stdjoy.joy
+share/cc65/target/cx16/drv/joy/cx16-std.joy
+share/cc65/target/cx16/drv/mou/cx16-std.mou
 share/cc65/target/gamate/drv/joy/gamate-stdjoy.joy
 share/cc65/target/geos-apple/util/convert.system
 share/cc65/target/geos-cbm/drv/emd/geos-vdc.emd
@@ -457,6 +469,7 @@ share/cc65/target/pet/drv/joy/pet-stdjoy.joy
 share/cc65/target/plus4/drv/joy/plus4-stdjoy.joy
 share/cc65/target/plus4/drv/ser/plus4-stdser.ser
 share/cc65/target/supervision/drv/joy/supervision-stdjoy.joy
+share/cc65/target/telestrat/drv/joy/telestrat.joy
 share/cc65/target/telestrat/drv/tgi/telestrat-228-200-3.tgi
 share/cc65/target/telestrat/drv/tgi/telestrat-240-200-2.tgi
 share/cc65/target/vic20/drv/emd/vic20-georam.emd
