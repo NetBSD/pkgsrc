@@ -1,16 +1,14 @@
-$NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
+$NetBSD: patch-setup.py,v 1.4 2020/12/08 14:30:40 adam Exp $
 
- - Disable certain modules, so they can be built as separate packages.
- - Do not look for ncursesw.
- - Assume panel_library is correct; this is a fix for ncurses' gnupanel
-   which will get transformed to panel in buildlink.
- - Also look for uuid/uuid.h.
- - Support for macOS 11 and Apple Silicon (ARM). Backported from:
-   https://github.com/python/cpython/pull/22855
+Disable certain modules, so they can be built as separate packages.
+Do not look for ncursesw.
+Assume panel_library is correct; this is a fix for ncurses' gnupanel
+which will get transformed to panel in buildlink.
+Also look for uuid/uuid.h.
 
---- setup.py.orig	2020-10-05 15:07:58.000000000 +0000
+--- setup.py.orig	2020-12-07 14:02:38.000000000 +0000
 +++ setup.py
-@@ -29,7 +29,7 @@ except ImportError:
+@@ -30,7 +30,7 @@ except ImportError:
      SUBPROCESS_BOOTSTRAP = True
  
  
@@ -19,7 +17,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
  from distutils.command.build_ext import build_ext
  from distutils.command.build_scripts import build_scripts
  from distutils.command.install import install
-@@ -43,7 +43,7 @@ from distutils.spawn import find_executa
+@@ -44,7 +44,7 @@ from distutils.spawn import find_executa
  TEST_EXTENSIONS = True
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -28,9 +26,9 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
  
  
  def get_platform():
-@@ -239,6 +239,16 @@ def is_macosx_sdk_path(path):
-                 or path.startswith('/Library/') )
- 
+@@ -224,6 +224,16 @@ def grep_headers_for(function, headers):
+                 return True
+     return False
  
 +def grep_headers_for(function, headers):
 +    for header in headers:
@@ -45,7 +43,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
  def find_file(filename, std_dirs, paths):
      """Searches for the directory where a given file is located,
      and returns a possibly-empty list of additional directories, or None
-@@ -740,15 +750,15 @@ class PyBuildExt(build_ext):
+@@ -725,15 +735,15 @@ class PyBuildExt(build_ext):
                          add_dir_to_list(dir_list, directory)
  
      def configure_compiler(self):
@@ -70,7 +68,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
          self.add_multiarch_paths()
          self.add_ldflags_cppflags()
  
-@@ -796,6 +806,9 @@ class PyBuildExt(build_ext):
+@@ -781,6 +791,9 @@ class PyBuildExt(build_ext):
              self.lib_dirs += ['/usr/lib/hpux64', '/usr/lib/hpux32']
  
          if MACOS:
@@ -80,7 +78,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
              # This should work on any unixy platform ;-)
              # If the user has bothered specifying additional -I and -L flags
              # in OPT and LDFLAGS we might as well use them here.
-@@ -1013,8 +1026,6 @@ class PyBuildExt(build_ext):
+@@ -998,8 +1011,6 @@ class PyBuildExt(build_ext):
          # use the same library for the readline and curses modules.
          if 'curses' in readline_termcap_library:
              curses_library = readline_termcap_library
@@ -89,7 +87,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
          # Issue 36210: OSS provided ncurses does not link on AIX
          # Use IBM supplied 'curses' for successful build of _curses
          elif AIX and self.compiler.find_library_file(self.lib_dirs, 'curses'):
-@@ -1116,8 +1127,7 @@ class PyBuildExt(build_ext):
+@@ -1101,8 +1112,7 @@ class PyBuildExt(build_ext):
          # If the curses module is enabled, check for the panel module
          # _curses_panel needs some form of ncurses
          skip_curses_panel = True if AIX else False
@@ -99,7 +97,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
              self.add(Extension('_curses_panel', ['_curses_panel.c'],
                             include_dirs=curses_includes,
                             define_macros=curses_defines,
-@@ -1368,6 +1378,31 @@ class PyBuildExt(build_ext):
+@@ -1353,6 +1363,31 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if not CYGWIN:
@@ -131,7 +129,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1379,7 +1414,7 @@ class PyBuildExt(build_ext):
+@@ -1364,7 +1399,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -140,7 +138,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(self.lib_dirs,
-@@ -1779,6 +1814,8 @@ class PyBuildExt(build_ext):
+@@ -1764,6 +1799,8 @@ class PyBuildExt(build_ext):
      def detect_uuid(self):
          # Build the _uuid module if possible
          uuid_incs = find_file("uuid.h", self.inc_dirs, ["/usr/include/uuid"])
@@ -149,133 +147,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
          if uuid_incs is not None:
              if self.compiler.find_library_file(self.lib_dirs, 'uuid'):
                  uuid_libs = ['uuid']
-@@ -2101,43 +2138,17 @@ class PyBuildExt(build_ext):
-                            library_dirs=added_lib_dirs))
-         return True
- 
--    def configure_ctypes_darwin(self, ext):
--        # Darwin (OS X) uses preconfigured files, in
--        # the Modules/_ctypes/libffi_osx directory.
--        ffi_srcdir = os.path.abspath(os.path.join(self.srcdir, 'Modules',
--                                                  '_ctypes', 'libffi_osx'))
--        sources = [os.path.join(ffi_srcdir, p)
--                   for p in ['ffi.c',
--                             'x86/darwin64.S',
--                             'x86/x86-darwin.S',
--                             'x86/x86-ffi_darwin.c',
--                             'x86/x86-ffi64.c',
--                             'powerpc/ppc-darwin.S',
--                             'powerpc/ppc-darwin_closure.S',
--                             'powerpc/ppc-ffi_darwin.c',
--                             'powerpc/ppc64-darwin_closure.S',
--                             ]]
--
--        # Add .S (preprocessed assembly) to C compiler source extensions.
--        self.compiler.src_extensions.append('.S')
--
--        include_dirs = [os.path.join(ffi_srcdir, 'include'),
--                        os.path.join(ffi_srcdir, 'powerpc')]
--        ext.include_dirs.extend(include_dirs)
--        ext.sources.extend(sources)
--        return True
--
-     def configure_ctypes(self, ext):
--        if not self.use_system_libffi:
--            if MACOS:
--                return self.configure_ctypes_darwin(ext)
--            print('INFO: Could not locate ffi libs and/or headers')
--            return False
-         return True
- 
-     def detect_ctypes(self):
-         # Thomas Heller's _ctypes module
--        self.use_system_libffi = False
-+
-+        if (not sysconfig.get_config_var("LIBFFI_INCLUDEDIR") and MACOS):
-+            self.use_system_libffi = True
-+        else:
-+            self.use_system_libffi = '--with-system-ffi' in sysconfig.get_config_var("CONFIG_ARGS")
-+
-         include_dirs = []
-         extra_compile_args = ['-DPy_BUILD_CORE_MODULE']
-         extra_link_args = []
-@@ -2150,11 +2161,9 @@ class PyBuildExt(build_ext):
- 
-         if MACOS:
-             sources.append('_ctypes/malloc_closure.c')
--            sources.append('_ctypes/darwin/dlfcn_simple.c')
-+            extra_compile_args.append('-DUSING_MALLOC_CLOSURE_DOT_C=1')
-             extra_compile_args.append('-DMACOSX')
-             include_dirs.append('_ctypes/darwin')
--            # XXX Is this still needed?
--            # extra_link_args.extend(['-read_only_relocs', 'warning'])
- 
-         elif HOST_PLATFORM == 'sunos5':
-             # XXX This shouldn't be necessary; it appears that some
-@@ -2184,31 +2193,48 @@ class PyBuildExt(build_ext):
-                                sources=['_ctypes/_ctypes_test.c'],
-                                libraries=['m']))
- 
-+        ffi_inc = sysconfig.get_config_var("LIBFFI_INCLUDEDIR")
-+        ffi_lib = None
-+
-         ffi_inc_dirs = self.inc_dirs.copy()
-         if MACOS:
--            if '--with-system-ffi' not in sysconfig.get_config_var("CONFIG_ARGS"):
--                return
--            # OS X 10.5 comes with libffi.dylib; the include files are
--            # in /usr/include/ffi
--            ffi_inc_dirs.append('/usr/include/ffi')
--
--        ffi_inc = [sysconfig.get_config_var("LIBFFI_INCLUDEDIR")]
--        if not ffi_inc or ffi_inc[0] == '':
--            ffi_inc = find_file('ffi.h', [], ffi_inc_dirs)
--        if ffi_inc is not None:
--            ffi_h = ffi_inc[0] + '/ffi.h'
-+            ffi_in_sdk = os.path.join(macosx_sdk_root(), "usr/include/ffi")
-+
-+            if not ffi_inc:
-+                if os.path.exists(ffi_in_sdk):
-+                    ext.extra_compile_args.append("-DUSING_APPLE_OS_LIBFFI=1")
-+                    ffi_inc = ffi_in_sdk
-+                    ffi_lib = 'ffi'
-+                else:
-+                    # OS X 10.5 comes with libffi.dylib; the include files are
-+                    # in /usr/include/ffi
-+                    ffi_inc_dirs.append('/usr/include/ffi')
-+
-+        if not ffi_inc:
-+            found = find_file('ffi.h', [], ffi_inc_dirs)
-+            if found:
-+                ffi_inc = found[0]
-+        if ffi_inc:
-+            ffi_h = ffi_inc + '/ffi.h'
-             if not os.path.exists(ffi_h):
-                 ffi_inc = None
-                 print('Header file {} does not exist'.format(ffi_h))
--        ffi_lib = None
--        if ffi_inc is not None:
-+        if ffi_lib is None and ffi_inc:
-             for lib_name in ('ffi', 'ffi_pic'):
-                 if (self.compiler.find_library_file(self.lib_dirs, lib_name)):
-                     ffi_lib = lib_name
-                     break
- 
-         if ffi_inc and ffi_lib:
--            ext.include_dirs.extend(ffi_inc)
-+            ffi_headers = glob(os.path.join(ffi_inc, '*.h'))
-+            if grep_headers_for('ffi_prep_cif_var', ffi_headers):
-+                ext.extra_compile_args.append("-DHAVE_FFI_PREP_CIF_VAR=1")
-+            if grep_headers_for('ffi_prep_closure_loc', ffi_headers):
-+                ext.extra_compile_args.append("-DHAVE_FFI_PREP_CLOSURE_LOC=1")
-+            if grep_headers_for('ffi_closure_alloc', ffi_headers):
-+                ext.extra_compile_args.append("-DHAVE_FFI_CLOSURE_ALLOC=1")
-+
-+            ext.include_dirs.append(ffi_inc)
-             ext.libraries.append(ffi_lib)
-             self.use_system_libffi = True
- 
-@@ -2226,10 +2252,7 @@ class PyBuildExt(build_ext):
+@@ -2200,10 +2237,7 @@ class PyBuildExt(build_ext):
              sources = ['_decimal/_decimal.c']
              depends = ['_decimal/docstrings.h']
          else:
@@ -287,7 +159,7 @@ $NetBSD: patch-setup.py,v 1.3 2020/11/19 16:29:42 bsiegert Exp $
              libraries = ['m']
              sources = [
                '_decimal/_decimal.c',
-@@ -2609,7 +2632,7 @@ def main():
+@@ -2583,7 +2617,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
