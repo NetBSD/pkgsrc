@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6644 2020/12/08 15:04:44 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6645 2020/12/08 16:38:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9649,3 +9649,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/ircd-hybrid to 8.2.36 [fox 2020-12-08]
 	Updated graphics/jasper to 2.0.23 [adam 2020-12-08]
 	Updated textproc/py-pybtex to 0.23.0 [adam 2020-12-08]
+	Updated databases/repmgr to 5.2.1 [adam 2020-12-08]
