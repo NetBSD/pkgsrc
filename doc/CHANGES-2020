@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6636 2020/12/08 07:15:08 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6637 2020/12/08 08:55:33 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9566,6 +9566,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkg_install to 20201205 [wiz 2020-12-05]
 	Updated devel/php-composer to 2.0.8 [tpaul 2020-12-05]
 	Updated textproc/pugixml to 1.11.1 [wiz 2020-12-06]
+	Added devel/p5-Tie-CPHash version 2.000 [he 2020-12-06]
 	Updated fonts/py-fonttools to 4.17.1 [wiz 2020-12-06]
 	Updated graphics/geeqie to 1.6 [wiz 2020-12-06]
 	Updated graphics/ImageMagick to 7.0.10.46 [wiz 2020-12-06]
@@ -9638,3 +9639,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/slony1 to 2.2.10 [adam 2020-12-07]
 	Updated games/pioneers to 15.6 [kamil 2020-12-07]
 	Updated sysutils/fd-find to 8.2.1 [pin 2020-12-08]
+	Updated lang/ocaml to 4.09.1nb1 [he 2020-12-08]
