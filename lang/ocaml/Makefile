@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.136 2020/12/01 23:44:00 he Exp $
+# $NetBSD: Makefile,v 1.137 2020/12/08 08:53:16 he Exp $
 
 .include "Makefile.common"
 
 #CONFIGURE_ENV+=		disable_x11=yes
+
+PKGREVISION=		1
 
 BUILD_TARGET=		world
 MAKE_JOBS_SAFE=		no
