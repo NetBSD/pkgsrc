@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/10/22 06:37:36 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/08 15:03:58 adam Exp $
 
-DISTNAME=	pybtex-0.22.2
+DISTNAME=	pybtex-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex/}
