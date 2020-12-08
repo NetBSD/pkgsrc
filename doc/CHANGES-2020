@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6646 2020/12/08 17:05:44 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.6647 2020/12/08 18:54:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9651,3 +9651,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-pybtex to 0.23.0 [adam 2020-12-08]
 	Updated databases/repmgr to 5.2.1 [adam 2020-12-08]
 	Updated sysutils/psftools to 1.0.14 [fcambus 2020-12-08]
+	Updated security/openssl to 1.1.1i [wiz 2020-12-08]
