@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2020/04/30 14:57:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/12/08 12:08:20 nia Exp $
 
-SHA1 (cataclysm-dda-0.E.tar.gz) = 8c648c51a50519177bc5e65f094089f05d6bf13a
-RMD160 (cataclysm-dda-0.E.tar.gz) = 427fae20b8c8a26482075c87985df713bbdfc581
-SHA512 (cataclysm-dda-0.E.tar.gz) = f725e2bb75d62b5bbac3d4fbc00f1d1efe31afcb10186677f7f6f7810ae3819296c4090a90b1b730c0b758ffabca9d2e546999cfc2f7de26a38bf98426674c83
-Size (cataclysm-dda-0.E.tar.gz) = 69933302 bytes
+SHA1 (cataclysm-dda-0.E.2.tar.gz) = 51ac04f4ed420ebaa6f3dcdfd423fdb9e481c72e
+RMD160 (cataclysm-dda-0.E.2.tar.gz) = 0201e3c38372931fdf488f3d550fcf95016ec0d6
+SHA512 (cataclysm-dda-0.E.2.tar.gz) = a8560ef087cb189a750beba7d5bc6d98fd9431923eafde40f772e19d5811a8e7041364faa4fd3db7d24d37af0777b48a74706764116276df447fbf9b05a96c2b
+Size (cataclysm-dda-0.E.2.tar.gz) = 70144350 bytes
 SHA1 (patch-lang_compile__mo.sh) = d62c0cd564ed67d0401eba3f571db546748b6b3d
 SHA1 (patch-src_translations.cpp) = 6d7650746dbe661f7442409beacbf93cd94dddf8
 SHA1 (patch-src_translations.h) = 13bbd0d1fd5ce1ec9588fbf89f63ff8ed2894e9e
