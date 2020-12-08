@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/11/08 13:54:04 fox Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/12/08 14:44:05 fox Exp $
 bin/ircd
 bin/ircd-hybrid-mkpasswd
 lib/ircd-hybrid/modules/autoload/m_accept.la
@@ -28,6 +28,7 @@ lib/ircd-hybrid/modules/autoload/m_lusers.la
 lib/ircd-hybrid/modules/autoload/m_map.la
 lib/ircd-hybrid/modules/autoload/m_metadata.la
 lib/ircd-hybrid/modules/autoload/m_module.la
+lib/ircd-hybrid/modules/autoload/m_monitor.la
 lib/ircd-hybrid/modules/autoload/m_motd.la
 lib/ircd-hybrid/modules/autoload/m_names.la
 lib/ircd-hybrid/modules/autoload/m_oper.la
@@ -61,7 +62,6 @@ lib/ircd-hybrid/modules/autoload/m_user.la
 lib/ircd-hybrid/modules/autoload/m_userhost.la
 lib/ircd-hybrid/modules/autoload/m_version.la
 lib/ircd-hybrid/modules/autoload/m_wallops.la
-lib/ircd-hybrid/modules/autoload/m_watch.la
 lib/ircd-hybrid/modules/autoload/m_webirc.la
 lib/ircd-hybrid/modules/autoload/m_who.la
 lib/ircd-hybrid/modules/autoload/m_whois.la
