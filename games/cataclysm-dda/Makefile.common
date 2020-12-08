@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.3 2020/05/23 10:21:02 rillig Exp $
+# $NetBSD: Makefile.common,v 1.4 2020/12/08 12:08:20 nia Exp $
 # used by games/cataclysm-dda/Makefile
 # used by games/cataclysm-dda-sdl/Makefile
 
-DISTNAME=	cataclysm-dda-0.E
+DISTNAME=	cataclysm-dda-0.E.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CleverRaven/}
 GITHUB_PROJECT=	Cataclysm-DDA
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	0.E-2
 
 HOMEPAGE=	https://cataclysmdda.org/
 LICENSE=	cc-by-sa-v3.0
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake msgfmt pkg-config
 USE_TOOLS+=	pax
 
