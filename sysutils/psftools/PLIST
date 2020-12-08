@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/17 12:35:41 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/12/08 17:05:31 fcambus Exp $
+bin/ams2psf
 bin/bbc2psf
 bin/cpi2psf
 bin/cpicomp
@@ -8,6 +9,7 @@ bin/fnts2fon
 bin/fon2fnts
 bin/mda2psf
 bin/page2cp2
+bin/psf2ams
 bin/psf2bbc
 bin/psf2bdf
 bin/psf2bsd
@@ -34,6 +36,7 @@ bin/zx2psf
 include/psflib.h
 include/psfutils.h
 lib/libpsf.la
+man/man1/ams2psf.1
 man/man1/cpi2psf.1
 man/man1/cpicomp.1
 man/man1/cpidcomp.1
@@ -41,6 +44,7 @@ man/man1/fnt2psf.1
 man/man1/fnts2fon.1
 man/man1/fon2fnts.1
 man/man1/mda2psf.1
+man/man1/psf2ams.1
 man/man1/psf2bdf.1
 man/man1/psf2bsd.1
 man/man1/psf2fnt.1
