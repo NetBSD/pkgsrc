@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/10/10 20:19:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/12/08 14:30:40 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1419,7 +1419,6 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-20.2.1-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-20.2.3-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-49.2.1-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
@@ -3281,6 +3280,9 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_events.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures.pyo
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures2.py
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures2.pyc
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures2.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_locks.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_locks.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_locks.pyo
