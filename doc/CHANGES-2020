@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6639 2020/12/08 11:32:39 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6640 2020/12/08 12:08:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9642,3 +9642,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/ocaml to 4.09.1nb1 [he 2020-12-08]
 	Updated misc/9menu to 1.10 [nia 2020-12-08]
 	Updated cross/cc65 to 2.19 [nia 2020-12-08]
+	Updated games/cataclysm-dda to 0.E.2 [nia 2020-12-08]
