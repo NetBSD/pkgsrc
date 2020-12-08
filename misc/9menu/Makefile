@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2018/02/21 15:12:00 triaxx Exp $
+# $NetBSD: Makefile,v 1.25 2020/12/08 11:15:57 nia Exp $
 
-DISTNAME=		9menu-1.9
+DISTNAME=		9menu-1.10
 CATEGORIES=		misc plan9
-GITHUB_TAG=		${PKGBASE}-release-${PKGVERSION_NOREV}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=arnoldrobbins/}
-LICENSE=		9menu-license
+GITHUB_TAG=		${PKGBASE}-release-${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		Simple menu patterned after the plan9 user interface
+HOMEPAGE=		https://github.com/arnoldrobbins/9menu
+COMMENT=		Simple menu patterned after the Plan9 user interface
+LICENSE=		9menu-license
 
 MAKE_FILE=		Makefile.noimake
 BUILD_TARGET=		9menu
