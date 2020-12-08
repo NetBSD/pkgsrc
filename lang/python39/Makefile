@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/12/07 13:14:39 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/08 14:30:40 adam Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python39-${PY_DISTVERSION}
-PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -65,17 +64,10 @@ PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
-# ossaudiodev is only available on x86 for the following platforms
-PLIST_VARS+=	oss
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-    (${PY_PLATNAME} == "linux" || ${OPSYS} == "FreeBSD")
-PLIST.oss=	yes
-.endif
-
 # For Xcode 5 and up, we need to search the SDK path for headers, otherwise
 # certain modules will not be built.
 .if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH:Q}/usr/include)
-CFLAGS+=		-I${OSX_SDK_PATH:Q}/usr/include
+CFLAGS+=	-I${OSX_SDK_PATH:Q}/usr/include
 .endif
 
 PLIST_VARS+=	nis
