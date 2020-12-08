@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/03/13 20:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/12/08 10:56:13 jperkin Exp $
 #
 DISTNAME=	# empty
 PKGNAME=	${PYPKGPREFIX}-tryton-platform-${TRYTON_BASEVER}
@@ -113,7 +113,7 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-stock-lot>=${TRYTON_BASEVER}:../../misc/py-tryt
 DEPENDS+=	${PYPKGPREFIX}-trytond-stock-lot-sled>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-lot-sled
 DEPENDS+=	${PYPKGPREFIX}-trytond-stock-package>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-package
 DEPENDS+=	${PYPKGPREFIX}-trytond-stock-package-shipping>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-package-shipping
-DEPENDS+=	${PYPKGPREFIX}-trytond-stock-package-shipping-dpd>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-package-shipping-dpd
+#DEPENDS+=	${PYPKGPREFIX}-trytond-stock-package-shipping-dpd>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-package-shipping-dpd
 DEPENDS+=	${PYPKGPREFIX}-trytond-stock-package-shipping-ups>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-package-shipping-ups
 DEPENDS+=	${PYPKGPREFIX}-trytond-stock-product-location>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-product-location
 DEPENDS+=	${PYPKGPREFIX}-trytond-stock-split>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-split
