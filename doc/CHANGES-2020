@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6641 2020/12/08 12:10:20 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6642 2020/12/08 14:31:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9644,3 +9644,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated cross/cc65 to 2.19 [nia 2020-12-08]
 	Updated games/cataclysm-dda to 0.E.2 [nia 2020-12-08]
 	Updated games/cataclysm-dda-sdl to 0.E.2 [nia 2020-12-08]
+	Updated lang/python39 to 3.9.1 [adam 2020-12-08]
+	Updated lang/py39-html-docs to 3.9.1 [adam 2020-12-08]
