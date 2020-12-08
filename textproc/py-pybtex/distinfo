@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2019/10/22 06:37:36 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/12/08 15:03:58 adam Exp $
 
-SHA1 (pybtex-0.22.2.tar.gz) = d6b7ef53377cc7fe01bb9a9c80a0ed78f794ee6b
-RMD160 (pybtex-0.22.2.tar.gz) = b4ae9fa536ae35dc6813f5706a01276a10306f5c
-SHA512 (pybtex-0.22.2.tar.gz) = afabae8c47008651fa9c4c6546bf87f4a2c74d3184f1d0c1b4c2bd68ad8110ea37054026b5934312b86d97354a592bae5c0b6d384003b4e56f0157f6520b77a1
-Size (pybtex-0.22.2.tar.gz) = 363094 bytes
-SHA1 (patch-setup.py) = 10bec6f1a6eace5baea5633425db1b7c4dabe2eb
+SHA1 (pybtex-0.23.0.tar.gz) = 0901ed8adce1addac8ae9131a2b48ece2c429a6a
+RMD160 (pybtex-0.23.0.tar.gz) = 74288f8e34f3db2d71d6dcb168fe8b13f33fa356
+SHA512 (pybtex-0.23.0.tar.gz) = 11b4c8141f237a25c320726b18fb254df077f4b644ac26fa2bf9f3d85c4301ab839f3544a3c1849243e75bbcbf194b25642b0ef11d354e3711578a4e19565bde
+Size (pybtex-0.23.0.tar.gz) = 400649 bytes
+SHA1 (patch-setup.py) = 5a0649e4ad5ca646fc87b906e6d78329e64628db
