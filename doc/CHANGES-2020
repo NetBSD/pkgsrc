@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6638 2020/12/08 11:16:17 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6639 2020/12/08 11:32:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9641,3 +9641,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/fd-find to 8.2.1 [pin 2020-12-08]
 	Updated lang/ocaml to 4.09.1nb1 [he 2020-12-08]
 	Updated misc/9menu to 1.10 [nia 2020-12-08]
+	Updated cross/cc65 to 2.19 [nia 2020-12-08]
