@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2016/01/31 07:27:04 ryoon Exp $
-bin/djview4
+@comment $NetBSD: PLIST,v 1.6 2020/12/09 15:08:29 ryoon Exp $
+bin/djview
 lib/mozilla/plugins/nsdejavu.la
-man/man1/djview4.1
+man/man1/djview.1
 man/man1/nsdejavu.1
 share/applications/djvulibre-djview4.desktop
 share/djvu/djview4/djview_cs.qm
