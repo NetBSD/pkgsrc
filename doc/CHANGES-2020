@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6650 2020/12/09 10:34:30 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6651 2020/12/09 10:36:18 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9657,3 +9657,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-uvicorn to 0.13.0 [adam 2020-12-09]
 	Updated databases/py-mongo to 3.11.2 [adam 2020-12-09]
 	Updated lang/ocaml to 4.11.1 [jaapb 2020-12-09]
+	Updated misc/ocaml-opam-file-format to 2.1.0 [jaapb 2020-12-09]
