@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/11/18 21:06:08 js Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/12/09 20:40:20 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -430,6 +430,9 @@ ${PYSITELIB}/synapse/handlers/search.pyo
 ${PYSITELIB}/synapse/handlers/set_password.py
 ${PYSITELIB}/synapse/handlers/set_password.pyc
 ${PYSITELIB}/synapse/handlers/set_password.pyo
+${PYSITELIB}/synapse/handlers/sso.py
+${PYSITELIB}/synapse/handlers/sso.pyc
+${PYSITELIB}/synapse/handlers/sso.pyo
 ${PYSITELIB}/synapse/handlers/state_deltas.py
 ${PYSITELIB}/synapse/handlers/state_deltas.pyc
 ${PYSITELIB}/synapse/handlers/state_deltas.pyo
@@ -1429,6 +1432,7 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/21drop_device_max_st
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/22puppet_token.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/22users_have_local_media.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/23e2e_cross_signing_keys_idx.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/24drop_event_json_index.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_signatures.sql
