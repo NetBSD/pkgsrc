@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6668 2020/12/09 12:29:07 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6669 2020/12/09 12:29:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9673,3 +9673,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/sane-airscan version 0.99.21 [ryoon 2020-12-09]
 	Updated devel/py-tortoisehg to 5.6nb1 [wiz 2020-12-09]
 	Updated games/stone-soup to 0.25.1 [nia 2020-12-09]
+	Updated games/stone-soup-sdl to 0.25.1 [nia 2020-12-09]
