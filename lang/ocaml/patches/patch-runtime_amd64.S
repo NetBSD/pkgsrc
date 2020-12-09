@@ -1,4 +1,4 @@
-$NetBSD: patch-asmrun_amd64.S,v 1.3 2020/01/14 19:53:35 jaapb Exp $
+$NetBSD: patch-runtime_amd64.S,v 1.1 2020/12/09 10:33:04 jaapb Exp $
 
 Fix attributes and entry size for the .rodata mergable constant section
 

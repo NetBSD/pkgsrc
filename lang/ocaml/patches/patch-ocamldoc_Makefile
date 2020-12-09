@@ -1,13 +1,13 @@
-$NetBSD: patch-ocamldoc_Makefile,v 1.8 2020/01/14 19:53:35 jaapb Exp $
+$NetBSD: patch-ocamldoc_Makefile,v 1.9 2020/12/09 10:33:04 jaapb Exp $
 
 Honor LDFLAGS.
 
---- ocamldoc/Makefile.orig	2019-03-01 15:13:46.000000000 +0000
+--- ocamldoc/Makefile.orig	2020-01-10 16:10:46.000000000 +0000
 +++ ocamldoc/Makefile
-@@ -104,7 +104,7 @@ DEPINCLUDES=$(INCLUDES_DEP)
- INCLUDES=$(INCLUDES_DEP) $(INCLUDES_NODEP)
+@@ -121,7 +121,7 @@ INCLUDES=$(INCLUDES_DEP) $(INCLUDES_NODE
+ COMPFLAGS=$(INCLUDES) -absname -w +a-4-9-41-42-44-45-48 -warn-error A \
+   -safe-string -strict-sequence -strict-formats -bin-annot -principal
  
- COMPFLAGS=$(INCLUDES) -absname -w +a-4-9-41-42-44-45-48 -warn-error A -safe-string -strict-sequence -strict-formats -bin-annot
 -LINKFLAGS=$(INCLUDES) -nostdlib
 +LINKFLAGS=$(INCLUDES) -nostdlib -cclib "$(LDFLAGS)"
  
