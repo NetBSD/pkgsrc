@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/28 12:24:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/09 12:28:40 nia Exp $
 bin/crawl
 share/applications/crawl.desktop
 share/icons/hicolor/48x48/apps/crawl.png
@@ -37,6 +37,7 @@ share/stone-soup/dat/defaults/messages.txt
 share/stone-soup/dat/defaults/misc.txt
 share/stone-soup/dat/defaults/runrest_messages.txt
 share/stone-soup/dat/defaults/standard_colours.txt
+share/stone-soup/dat/des/00init.des
 share/stone-soup/dat/des/altar/altar.des
 share/stone-soup/dat/des/altar/ashenzari_visionary.des
 share/stone-soup/dat/des/altar/kiku_cage.des
@@ -574,6 +575,7 @@ share/stone-soup/dat/tiles/title_froggy_jiyva_felid.png
 share/stone-soup/dat/tiles/title_froggy_natasha_and_boris.png
 share/stone-soup/dat/tiles/title_froggy_rune_and_run_failed_on_dis.png
 share/stone-soup/dat/tiles/title_froggy_thunder_fist_nikola.png
+share/stone-soup/dat/tiles/title_nibiki_octopode.png
 share/stone-soup/dat/tiles/title_omndra_zot_demon.png
 share/stone-soup/dat/tiles/title_peileppe_bloax_eye.png
 share/stone-soup/dat/tiles/title_ploomutoo_ijyb.png
@@ -592,6 +594,7 @@ share/stone-soup/docs/changelog.txt
 share/stone-soup/docs/crawl_manual.txt
 share/stone-soup/docs/develop/IRC.txt
 share/stone-soup/docs/develop/android.txt
+share/stone-soup/docs/develop/arena.txt
 share/stone-soup/docs/develop/background_creation.txt
 share/stone-soup/docs/develop/coding_conventions.txt
 share/stone-soup/docs/develop/ctags.txt
@@ -609,7 +612,7 @@ share/stone-soup/docs/develop/mutation_creation.txt
 share/stone-soup/docs/develop/patch_guide.txt
 share/stone-soup/docs/develop/save_compatibility.txt
 share/stone-soup/docs/develop/spells.txt
-share/stone-soup/docs/develop/testing.txt
+share/stone-soup/docs/develop/test_plug_and_play_cc.txt
 share/stone-soup/docs/develop/tiles_creation.txt
 share/stone-soup/docs/develop/translation.txt
 share/stone-soup/docs/fight_simulator.txt
