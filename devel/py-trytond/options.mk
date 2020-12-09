@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2019/10/21 21:45:40 adam Exp $
+# $NetBSD: options.mk,v 1.17 2020/12/09 01:46:07 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-trytond
 PKG_SUPPORTED_OPTIONS=	cdecimal mysql pydot psycopg pytz simplejson sphinx
@@ -6,8 +6,7 @@ PKG_SUGGESTED_OPTIONS+=	psycopg pytz simplejson sphinx
 
 .include "../../mk/bsd.options.mk"
 
-# XXX: Supports unoconv http://dag.wieers.com/home-made/unoconv/) option and
-# XXX: python-Levenshtein (http://github.com/miohtama/python-Levenshtein) option
+# XXX Also supports converters/unoconv and textproc/py-Levenshtein options.
 
 .if !empty(PKG_OPTIONS:Mcdecimal)
 PYTHON_VERSIONS_ACCEPTED=	27 # py-cdecimal is obsolete for that version and thus not available
