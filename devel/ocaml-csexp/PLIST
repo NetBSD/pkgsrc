@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/09 11:10:47 jaapb Exp $
+${OCAML_SITELIB}/csexp/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/csexp/csexp.a
+${OCAML_SITELIB}/csexp/csexp.cma
+${OCAML_SITELIB}/csexp/csexp.cmi
+${OCAML_SITELIB}/csexp/csexp.cmt
+${OCAML_SITELIB}/csexp/csexp.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/csexp/csexp.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/csexp/csexp.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/csexp/csexp.cmxs
+${OCAML_SITELIB}/csexp/csexp.ml
+${OCAML_SITELIB}/csexp/csexp.mli
+${OCAML_SITELIB}/csexp/dune-package
+${OCAML_SITELIB}/csexp/opam
+share/doc/csexp/CHANGES.md
+share/doc/csexp/LICENSE.md
+share/doc/csexp/README.md
