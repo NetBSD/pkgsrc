@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2020/04/03 09:14:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2020/12/09 11:28:57 jaapb Exp $
 
-VERSION=	5.3.0
+VERSION=	5.4.0
 GITHUB_PROJECT=	ppx_tools_versioned
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=let-def/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-ppx/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	https://github.com/let-def/ppx_tools_versioned/
+HOMEPAGE=	https://github.com/ocaml-ppx/ppx_tools_versioned/
 COMMENT=	Tools for authors of ppx rewriters
 LICENSE=	x11
 
