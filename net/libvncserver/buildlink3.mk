@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2020/05/22 10:55:48 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2020/12/09 09:40:15 nia Exp $
 
 BUILDLINK_TREE+=	libVNCServer
 
@@ -17,16 +17,20 @@ BUILDLINK_PKGSRCDIR.libVNCServer?=	../../net/libvncserver
 pkgbase := libVNCServer
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libVNCServer:Mgnutls)
+.if ${PKG_BUILD_OPTIONS.libVNCServer:Mgnutls}
 .include "../../security/gnutls/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.libVNCServer:Mlibgcrypt)
+.if ${PKG_BUILD_OPTIONS.libVNCServer:Mlibgcrypt}
 .include "../../security/libgcrypt/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.libVNCServer:Mopenssl)
+.if ${PKG_BUILD_OPTIONS.libVNCServer:Mopenssl}
 .include "../../security/openssl/buildlink3.mk"
+.endif
+
+.if  ${PKG_BUILD_OPTIONS.libVNCServer:Msasl}
+.include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
 .endif # LIBVNCSERVER_BUILDLINK3_MK
