@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/29 00:29:41 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/09 09:32:33 nia Exp $
 
 DISTNAME=	crytic-compile-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/crytic/crytic-compile/
 COMMENT=	Abstraction layer for smart contract build systems
 LICENSE=	gnu-agpl-v3
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/crytic-compile \
