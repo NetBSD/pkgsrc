@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/10/18 18:45:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/12/09 12:31:35 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -42,9 +42,6 @@ ${PYSITELIB}/certbot/_internal/cli/paths_parser.pyo
 ${PYSITELIB}/certbot/_internal/cli/plugins_parsing.py
 ${PYSITELIB}/certbot/_internal/cli/plugins_parsing.pyc
 ${PYSITELIB}/certbot/_internal/cli/plugins_parsing.pyo
-${PYSITELIB}/certbot/_internal/cli/report_config_interaction.py
-${PYSITELIB}/certbot/_internal/cli/report_config_interaction.pyc
-${PYSITELIB}/certbot/_internal/cli/report_config_interaction.pyo
 ${PYSITELIB}/certbot/_internal/cli/subparsers.py
 ${PYSITELIB}/certbot/_internal/cli/subparsers.pyc
 ${PYSITELIB}/certbot/_internal/cli/subparsers.pyo
@@ -223,6 +220,9 @@ ${PYSITELIB}/certbot/tests/testdata/csr-nosans_nistp256.pem
 ${PYSITELIB}/certbot/tests/testdata/csr-san_512.pem
 ${PYSITELIB}/certbot/tests/testdata/csr_512.der
 ${PYSITELIB}/certbot/tests/testdata/csr_512.pem
+${PYSITELIB}/certbot/tests/testdata/ec_prime256v1_key.pem
+${PYSITELIB}/certbot/tests/testdata/ec_secp384r1_key.pem
+${PYSITELIB}/certbot/tests/testdata/ec_secp521r1_key.pem
 ${PYSITELIB}/certbot/tests/testdata/nistp256_key.pem
 ${PYSITELIB}/certbot/tests/testdata/ocsp_certificate.pem
 ${PYSITELIB}/certbot/tests/testdata/ocsp_issuer_certificate.pem
@@ -231,11 +231,16 @@ ${PYSITELIB}/certbot/tests/testdata/os-release
 ${PYSITELIB}/certbot/tests/testdata/rsa2048_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa256_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa512_key.pem
+${PYSITELIB}/certbot/tests/testdata/sample-archive-ec/cert1.pem
+${PYSITELIB}/certbot/tests/testdata/sample-archive-ec/chain1.pem
+${PYSITELIB}/certbot/tests/testdata/sample-archive-ec/fullchain1.pem
+${PYSITELIB}/certbot/tests/testdata/sample-archive-ec/privkey1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive/cert1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive/chain1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive/fullchain1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive/privkey1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal-ancient.conf
+${PYSITELIB}/certbot/tests/testdata/sample-renewal-ec.conf
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal.conf
 ${PYSITELIB}/certbot/tests/testdata/webrootconftest.ini
 ${PYSITELIB}/certbot/tests/util.py
