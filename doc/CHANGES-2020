@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6665 2020/12/09 11:35:57 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6666 2020/12/09 12:06:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9670,3 +9670,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/libbsd version 0.10.0 [cheusov 2020-12-09]
 	Updated devel/ocaml-ppx_tools_versioned to 5.4.0 [jaapb 2020-12-09]
 	Updated devel/ocaml-ppx_tools to 6.3 [jaapb 2020-12-09]
+	Added graphics/sane-airscan version 0.99.21 [ryoon 2020-12-09]
