@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6663 2020/12/09 11:26:58 cheusov Exp $
+$NetBSD: CHANGES-2020,v 1.6664 2020/12/09 11:29:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9668,3 +9668,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-base to 0.13.2 [jaapb 2020-12-09]
 	Updated devel/ocaml-migrate-parsetree to 1.8.0 [jaapb 2020-12-09]
 	Added devel/libbsd version 0.10.0 [cheusov 2020-12-09]
+	Updated devel/ocaml-ppx_tools_versioned to 5.4.0 [jaapb 2020-12-09]
