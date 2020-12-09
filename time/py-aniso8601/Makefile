@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/11/15 14:02:20 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/09 12:37:29 adam Exp $
 
-DISTNAME=	aniso8601-8.0.0
+DISTNAME=	aniso8601-8.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aniso8601/}
