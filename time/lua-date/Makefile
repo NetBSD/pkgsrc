@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/07/08 16:36:04 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/09 11:05:58 nia Exp $
 
-DISTNAME=	lua-date-2.1.2
+DISTNAME=	lua-date-2.1.3
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
 CATEGORIES=	time lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Tieske/}
@@ -13,6 +13,7 @@ COMMENT=	Date and Time module for Lua 5.x
 LICENSE=	mit
 
 TEST_DEPENDS+=	${LUA_PKGPREFIX}-busted-[0-9]*:../../devel/lua-busted
+TEST_DEPENDS+=	${LUA_PKGPREFIX}-cov-[0-9]*:../../devel/lua-cov
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_LANGUAGES=	# none
@@ -21,7 +22,7 @@ NO_BUILD=	yes
 INSTALLATION_DIRS+=	${LUA_LDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/date.lua \
+	${INSTALL_DATA} ${WRKSRC}/src/date.lua \
 		${DESTDIR}${PREFIX}/${LUA_LDIR}/date.lua
 
 do-test:
