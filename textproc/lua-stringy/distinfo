@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2020/07/08 11:54:53 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/12/09 11:12:47 nia Exp $
 
-SHA1 (lua-stringy-0.6.1.tar.gz) = 25ed808267eb8e09993ecc7b067ad5f0362bcb61
-RMD160 (lua-stringy-0.6.1.tar.gz) = bd2b7d55ca4b53d2258a4c3ed685a51b2540c944
-SHA512 (lua-stringy-0.6.1.tar.gz) = 2c2e07bc0c9981a58da350e13a2c956a250fd3a270aa8c165a8ad4609c6bd1a3c308df89352827f5a936c50d942b5348a4accb68776d628d9bcb66e9afd1ec2a
-Size (lua-stringy-0.6.1.tar.gz) = 5826 bytes
+SHA1 (lua-stringy-0.7.0.tar.gz) = 1aad5694ac3b5662b6b02165700e79f51832d18e
+RMD160 (lua-stringy-0.7.0.tar.gz) = 8996c17b8fb6147cfc693e96d657e41bbfe43a8b
+SHA512 (lua-stringy-0.7.0.tar.gz) = e23ea0f04bd4c1db8fe3fdda2d8fb4a18e78b82aadc12edf1114b29b18b68d981f7d304ccd1823711e7cc6dc586694f0d902faba41a91387319a1ceefc29e116
+Size (lua-stringy-0.7.0.tar.gz) = 6213 bytes
 SHA1 (patch-stringy_Makefile) = de1abbb4e5c5a4b805caea58bd88b1ed4eeff0ae
+SHA1 (patch-stringy_stringy.c) = a984b24ec331fc0188b95a119c923f443e08b8a3
