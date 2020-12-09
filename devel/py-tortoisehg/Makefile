@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2020/12/09 09:49:35 nia Exp $
+# $NetBSD: Makefile,v 1.69 2020/12/09 12:20:01 wiz Exp $
 
 DISTNAME=		tortoisehg-5.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		https://www.mercurial-scm.org/release/tortoisehg/targz/
 
@@ -12,7 +13,7 @@ LICENSE=		gnu-gpl-v2
 
 REPLACE_PYTHON+=	thg
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.3.4nb1:../../textproc/py-sphinx1
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.3.4nb1<2:../../textproc/py-sphinx1
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.0.0:../../devel/py-mercurial
@@ -27,13 +28,13 @@ SUBST_SED.df=		-e 's:thg_logo:${PREFIX}${thg_icon}:1'
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/doc/tortoisehg
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_SELF_CONFLICT=	yes
 
 pre-build:
 	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build-${PYVERSSUFFIX} html
 	${RUN} rm ${WRKSRC}/doc/build/html/.buildinfo
 	# conflicts with mercurial
-	# https://bitbucket.org/tortoisehg/thg/issues/4629/tortoisehg-file-name-conflict-with
+	# https://foss.heptapod.net/mercurial/tortoisehg/thg/-/issues/4629
 	${RM} ${WRKSRC}/hgext3rd/__init__.py
 
 post-install:
