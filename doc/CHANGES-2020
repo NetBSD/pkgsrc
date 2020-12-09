@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6675 2020/12/09 16:56:39 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6676 2020/12/09 21:34:36 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9697,3 +9697,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/djview4 to 4.12 [ryoon 2020-12-09]
 	Updated net/py-scp to 0.13.3 [adam 2020-12-09]
 	Updated math/py-networkx to 2.5 [adam 2020-12-09]
+	Updated www/apache-tomcat9 to 9.0.41 [otis 2020-12-09]
