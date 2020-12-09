@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2015/11/03 21:34:18 agc Exp $
+$NetBSD: distinfo,v 1.19 2020/12/09 10:48:24 nia Exp $
 
 SHA1 (rad3R6P1.tar.gz) = 71f46abd1c30be282a93237fa0c162d3bf0b1f99
 RMD160 (rad3R6P1.tar.gz) = 3bcf40518a57cdb5455264c83a3e206b67b3d1fa
@@ -32,7 +32,9 @@ SHA1 (patch-au) = 35660480163fb7444ebbdb1fee4ad1cebf866ef4
 SHA1 (patch-av) = 0bfd2ec0fb16f3c106a285b49f1cf48a29274fbb
 SHA1 (patch-aw) = 6b57d85e4c4ef4a3501f4a0263ef8a47fbac8958
 SHA1 (patch-src_common_readmesh.c) = 1e5b2a0abd5f50c69ccccb5db28688e914c3cc0a
+SHA1 (patch-src_meta_mgvars.c) = 5493db60499a87bec7232871e4f185c05e8a5329
 SHA1 (patch-src_meta_plot.h) = b6959e2d349dc25abbde816f4b128a2fb0218200
+SHA1 (patch-src_meta_plotin.c) = 236a63b5d0791c29349b068837e30048f2872bdc
 SHA1 (patch-src_meta_xmeta.c) = 360c282bd9adf376ea86140d6c63af523114618d
 SHA1 (patch-src_ot_writemesh.c) = 109266d289720ed6760f430ab7a7637312ac9c3d
 SHA1 (patch-src_ot_writeoct.c) = b6f6426ef6abf731cd5c9735e6012c07f5e9ff35
