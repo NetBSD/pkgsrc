@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.913 2020/11/23 14:15:24 pin Exp $
+# $NetBSD: Makefile,v 1.914 2020/12/09 12:07:24 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -541,6 +541,7 @@ SUBDIR+=	ruby-opengl
 SUBDIR+=	ruby-rsvg2
 SUBDIR+=	ruby-screengif
 SUBDIR+=	s10sh
+SUBDIR+=	sane-airscan
 SUBDIR+=	sane-backends
 SUBDIR+=	sane-frontends
 SUBDIR+=	scidavis
