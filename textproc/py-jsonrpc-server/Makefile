@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/11/07 18:56:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/09 09:30:56 nia Exp $
 
 DISTNAME=	python-jsonrpc-server-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
 DEPENDS+=	${PYPKGPREFIX}-ujson>=3:../../textproc/py-ujson
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # textproc/py-ujson
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
