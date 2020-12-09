@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.42 2020/12/01 23:16:44 he Exp $
+$NetBSD: patch-configure,v 1.43 2020/12/09 10:33:04 jaapb Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
@@ -7,18 +7,40 @@ Add SunOS -lnsl -lsocket
 Recognise SunOS/amd64 as amd64
 Recognise SunOS as having shared libraries
 
---- configure.orig	2019-09-11 14:40:30.000000000 +0000
+--- configure.orig	2020-09-01 12:47:58.000000000 +0000
 +++ configure
-@@ -13306,7 +13306,7 @@ sharedlib_cflags=''
+@@ -13476,7 +13476,7 @@ sharedlib_cflags=''
  mksharedlib='shared-libs-not-available'
  rpath=''
  mksharedlibrpath=''
 -natdynlinkopts=""
-+natdynlinkopts="-L/usr/lib -R/usr/lib -R/usr/pkg/lib"
++natdynlinkopts="-L/usr/lib -R/usr/lib -R${PREFIX}/lib"
  
  if test x"$enable_shared" != "xno"; then :
    case $host in #(
-@@ -13392,6 +13392,8 @@ if test x"$enable_shared" != "xno"; then
+@@ -13513,6 +13513,12 @@ esac ;; #(
+       mksharedlibrpath="-Wl,-rpath,"
+       natdynlinkopts="-Wl,-E"
+       shared_libraries_supported=true ;; #(
++  *-*-solaris*)
++    sharedlib_cflags="-fPIC"
++    mksharedlib="$CC -shared"
++    rpath="-Wl,-rpath,"
++    mksharedlibrpath="-Wl,rpath,"
++    shared_libraries_supported=true ;;
+   *) :
+      ;;
+ esac
+@@ -13534,6 +13540,8 @@ if test x"$enable_shared" != "xno"; then
+     natdynlink=true ;; #(
+   *-pc-windows) :
+     natdynlink=true ;; #(
++  *-*-solaris*) :
++    natdynlink=true ;; #(
+   i[3456]86-*-linux*) :
+     natdynlink=true ;; #(
+   i[3456]86-*-gnu*) :
+@@ -13562,6 +13570,8 @@ if test x"$enable_shared" != "xno"; then
      natdynlink=true ;; #(
    i[3456]86-*-netbsd*) :
      natdynlink=true ;; #(
@@ -27,16 +49,24 @@ Recognise SunOS as having shared libraries
    x86_64-*-netbsd*) :
      natdynlink=true ;; #(
    i386-*-gnu0.3) :
-@@ -13408,6 +13410,8 @@ if test x"$enable_shared" != "xno"; then
+@@ -13572,12 +13582,16 @@ if test x"$enable_shared" != "xno"; then
+     natdynlink=true ;; #(
+   arm*-*-freebsd*) :
+     natdynlink=true ;; #(
++  arm*-*-netbsd*) :
++    natdynlink=true ;; #(
+   earm*-*-netbsd*) :
+     natdynlink=true ;; #(
+   aarch64-*-linux*) :
      natdynlink=true ;; #(
    aarch64-*-freebsd*) :
      natdynlink=true ;; #(
 +  aarch64-*-netbsd*) :
 +    natdynlink=true ;; #(
+   riscv*-*-linux*) :
+     natdynlink=true ;; #(
    *) :
-      ;;
- esac
-@@ -13459,6 +13463,8 @@ case $host in #(
+@@ -13649,6 +13663,8 @@ case $host in #(
      arch=i386; system=beos ;; #(
    i[3456]86-*-cygwin) :
      arch=i386; system=cygwin ;; #(
@@ -45,7 +75,7 @@ Recognise SunOS as having shared libraries
    i[3456]86-*-gnu*) :
      arch=i386; system=gnu ;; #(
    i[3456]86-*-mingw32) :
-@@ -13475,6 +13481,8 @@ case $host in #(
+@@ -13665,6 +13681,8 @@ case $host in #(
  else
    model=ppc
  fi; system=elf ;; #(
@@ -54,7 +84,7 @@ Recognise SunOS as having shared libraries
    s390x*-*-linux*) :
      arch=s390x; model=z10; system=elf ;; #(
    armv6*-*-linux-gnueabihf) :
-@@ -13493,6 +13501,10 @@ fi; system=elf ;; #(
+@@ -13683,6 +13701,10 @@ fi; system=elf ;; #(
      arch=arm; model=armv6; system=linux_eabi ;; #(
    armv6*-*-freebsd*) :
      arch=arm; model=armv6; system=freebsd ;; #(
@@ -65,26 +95,39 @@ Recognise SunOS as having shared libraries
    earmv6*-*-netbsd*) :
      arch=arm; model=armv6; system=netbsd ;; #(
    earmv7*-*-netbsd*) :
-@@ -13529,6 +13541,8 @@ fi; system=elf ;; #(
+@@ -13719,8 +13741,12 @@ fi; system=elf ;; #(
      arch=arm64; system=linux ;; #(
    aarch64-*-freebsd*) :
      arch=arm64; system=freebsd ;; #(
 +  aarch64-*-netbsd*) :
 +    arch=arm64; system=netbsd ;; #(
    x86_64-*-cygwin*) :
-     arch=amd64; system=cygwin
+     arch=amd64; system=cygwin ;; #(
++  x86_64-*-solaris*) :
++    arch=amd64; system=solaris ;; #(
+   riscv64-*-linux*) :
+     arch=riscv; model=riscv64; system=linux
   ;; #(
-@@ -13730,6 +13744,9 @@ esac ;; #(
+@@ -13851,8 +13877,6 @@ if test -z "$PARTIALLD"; then :
+   case "$arch,$CC,$system,$model" in #(
+   amd64,gcc*,macosx,*) :
+     PACKLD='ld -r -arch x86_64 -o $(EMPTY)' ;; #(
+-  amd64,gcc*,solaris,*) :
+-    PACKLD='ld -r -m elf_x86_64 -o $(EMPTY)' ;; #(
+   power,gcc*,elf,ppc) :
+     PACKLD='ld -r -m elf32ppclinux -o $(EMPTY)' ;; #(
+   power,gcc*,elf,ppc64) :
+@@ -13947,6 +13971,9 @@ esac ;; #(
    *) :
       ;;
  esac ;; #(
-+  power,netbsd) :
++  power,netbsd):
 +    default_as="${toolpref}as -mppc"
 +    default_aspp="${toolpref}gcc -c" ;; #(
    s390x,elf) :
      default_as="${toolpref}as -m 64 -march=$model"
      default_aspp="${toolpref}gcc -c -Wa,-march=$model" ;; #(
-@@ -13813,7 +13830,7 @@ fi
+@@ -14028,7 +14055,7 @@ fi
  # for the moment, to be backward-compatible
  
  case $host in #(
@@ -93,3 +136,13 @@ Recognise SunOS as having shared libraries
       ;; #(
    *) :
      has_c99_float_ops=true
+@@ -14317,6 +14344,9 @@ case $host in #(
+   *-*-mingw32|*-pc-windows) :
+     cclibs="$cclibs -lws2_32"
+     sockets=true ;; #(
++  *-*-solaris*) :
++    cclibs="$cclibs -lnsl -lsocket"
++    sockets=true ;; #(
+   *-*-haiku) :
+     cclibs="$cclibs -lnetwork"
+     sockets=true ;; #(

@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.53 2020/04/15 09:50:54 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.54 2020/12/09 10:33:04 jaapb Exp $
 bin/ocaml
-${PLIST.instrumented_runtime}bin/ocaml-instr-graph
-${PLIST.instrumented_runtime}bin/ocaml-instr-report
+@comment ${PLIST.instrumented_runtime}bin/ocaml-instr-graph
+@comment ${PLIST.instrumented_runtime}bin/ocaml-instr-report
 bin/ocamlc
 bin/ocamlc.byte
 ${PLIST.ocaml-opt}bin/ocamlc.opt
@@ -30,9 +30,9 @@ ${PLIST.ocaml-opt}bin/ocamlobjinfo.opt
 ${PLIST.ocaml-opt}bin/ocamlopt
 ${PLIST.ocaml-opt}bin/ocamlopt.byte
 ${PLIST.ocaml-opt}bin/ocamlopt.opt
-@comment 4.09 bin/ocamloptp
-@comment 4.09 bin/ocamloptp.byte
-@comment 4.09 ${PLIST.ocaml-opt}bin/ocamloptp.opt
+${PLIST.ocaml-opt}bin/ocamloptp
+${PLIST.ocaml-opt}bin/ocamloptp.byte
+${PLIST.ocaml-opt}bin/ocamloptp.opt
 bin/ocamlprof
 bin/ocamlprof.byte
 ${PLIST.ocaml-opt}bin/ocamlprof.opt
@@ -79,7 +79,11 @@ lib/ocaml/caml/compatibility.h
 lib/ocaml/caml/config.h
 lib/ocaml/caml/custom.h
 lib/ocaml/caml/debugger.h
+lib/ocaml/caml/domain.h
+lib/ocaml/caml/domain_state.h
+lib/ocaml/caml/domain_state.tbl
 lib/ocaml/caml/dynlink.h
+lib/ocaml/caml/eventlog.h
 lib/ocaml/caml/exec.h
 lib/ocaml/caml/fail.h
 lib/ocaml/caml/finalise.h
@@ -103,6 +107,7 @@ lib/ocaml/caml/m.h
 lib/ocaml/caml/major_gc.h
 lib/ocaml/caml/md5.h
 lib/ocaml/caml/memory.h
+lib/ocaml/caml/memprof.h
 lib/ocaml/caml/minor_gc.h
 lib/ocaml/caml/misc.h
 lib/ocaml/caml/mlvalues.h
@@ -376,6 +381,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_id.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_id.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_id.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_id.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.cmx
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_offsets.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_offsets.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_offsets.cmti
@@ -396,6 +406,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.cmx
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmmgen.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmmgen.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmmgen.cmti
@@ -409,6 +424,9 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmmgen_state.mli
 lib/ocaml/compiler-libs/cmo_format.cmi
 lib/ocaml/compiler-libs/cmo_format.cmti
 lib/ocaml/compiler-libs/cmo_format.mli
+lib/ocaml/compiler-libs/cmt2annot.cmi
+lib/ocaml/compiler-libs/cmt2annot.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmt2annot.cmx
 lib/ocaml/compiler-libs/cmt_format.cmi
 lib/ocaml/compiler-libs/cmt_format.cmt
 lib/ocaml/compiler-libs/cmt_format.cmti
@@ -538,6 +556,11 @@ lib/ocaml/compiler-libs/docstrings.cmt
 lib/ocaml/compiler-libs/docstrings.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/docstrings.cmx
 lib/ocaml/compiler-libs/docstrings.mli
+lib/ocaml/compiler-libs/domainstate.cmi
+lib/ocaml/compiler-libs/domainstate.cmt
+lib/ocaml/compiler-libs/domainstate.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/domainstate.cmx
+lib/ocaml/compiler-libs/domainstate.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/effect_analysis.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/effect_analysis.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/effect_analysis.cmti
@@ -777,6 +800,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.cmx
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linearize.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linearize.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linearize.cmti
@@ -871,7 +899,7 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlcommon.a
 lib/ocaml/compiler-libs/ocamlcommon.cma
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlcommon.cmxa
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlmiddleend.a
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlmiddleend.cma
+lib/ocaml/compiler-libs/ocamlmiddleend.cma
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlmiddleend.cmxa
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.a
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.cma
@@ -1305,6 +1333,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/traverse_for_exported_symbols.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/traverse_for_exported_symbols.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/traverse_for_exported_symbols.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/traverse_for_exported_symbols.mli
+lib/ocaml/compiler-libs/type_immediacy.cmi
+lib/ocaml/compiler-libs/type_immediacy.cmt
+lib/ocaml/compiler-libs/type_immediacy.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/type_immediacy.cmx
+lib/ocaml/compiler-libs/type_immediacy.mli
 lib/ocaml/compiler-libs/typeclass.cmi
 lib/ocaml/compiler-libs/typeclass.cmt
 lib/ocaml/compiler-libs/typeclass.cmti
@@ -1330,6 +1363,11 @@ lib/ocaml/compiler-libs/typedecl_properties.cmt
 lib/ocaml/compiler-libs/typedecl_properties.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/typedecl_properties.cmx
 lib/ocaml/compiler-libs/typedecl_properties.mli
+lib/ocaml/compiler-libs/typedecl_separability.cmi
+lib/ocaml/compiler-libs/typedecl_separability.cmt
+lib/ocaml/compiler-libs/typedecl_separability.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/typedecl_separability.cmx
+lib/ocaml/compiler-libs/typedecl_separability.mli
 lib/ocaml/compiler-libs/typedecl_unboxed.cmi
 lib/ocaml/compiler-libs/typedecl_unboxed.cmt
 lib/ocaml/compiler-libs/typedecl_unboxed.cmti
@@ -1445,6 +1483,7 @@ ${PLIST.ocaml-nat}${PLIST.ocaml-opt}lib/ocaml/dynlink_platform_intf.cmx
 ${PLIST.ocaml-nat}${PLIST.ocaml-opt}lib/ocaml/dynlink_types.cmx
 lib/ocaml/ephemeron.ml
 lib/ocaml/ephemeron.mli
+lib/ocaml/eventlog_metadata
 lib/ocaml/expunge
 lib/ocaml/extract_crc
 lib/ocaml/filename.ml
@@ -2183,6 +2222,7 @@ man/man3/Depend.String.3
 man/man3/Digest.3
 man/man3/Docstrings.3
 man/man3/Docstrings.WithMenhir.3
+man/man3/Domainstate.3
 man/man3/Dynlink.3
 man/man3/Ephemeron.3
 man/man3/Ephemeron.GenHashTable.3
@@ -2206,6 +2246,7 @@ man/man3/Float.ArrayLabels.3
 man/man3/Format.3
 man/man3/Fun.3
 man/man3/Gc.3
+man/man3/Gc.Memprof.3
 man/man3/Genlex.3
 man/man3/Hashtbl.3
 man/man3/Hashtbl.HashedType.3
@@ -2253,6 +2294,7 @@ man/man3/Misc.EnvLazy.3
 man/man3/Misc.Error_style.3
 man/man3/Misc.Int_literal_converter.3
 man/man3/Misc.LongString.3
+man/man3/Misc.Magic_number.3
 man/man3/Misc.Stdlib.3
 man/man3/Misc.Stdlib.Array.3
 man/man3/Misc.Stdlib.List.3
@@ -2296,8 +2338,6 @@ man/man3/Parser.Incremental.3
 man/man3/Parser.MenhirInterpreter.3
 man/man3/Parsetree.3
 man/man3/Parsing.3
-man/man3/Pervasives.3
-man/man3/Pervasives.LargeFile.3
 man/man3/Pparse.3
 man/man3/Pprintast.3
 man/man3/Printast.3
@@ -2391,6 +2431,10 @@ man/man3/Strongly_connected_components.S.3
 man/man3/Strongly_connected_components.S.Id.3
 man/man3/Syntaxerr.3
 man/man3/Sys.3
+man/man3/Sys.Immediate64.3
+man/man3/Sys.Immediate64.Immediate.3
+man/man3/Sys.Immediate64.Make.3
+man/man3/Sys.Immediate64.Non_immediate.3
 man/man3/Targetint.3
 man/man3/Terminfo.3
 man/man3/Thread.3

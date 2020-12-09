@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.137 2020/12/08 08:53:16 he Exp $
+# $NetBSD: Makefile,v 1.138 2020/12/09 10:33:04 jaapb Exp $
 
 .include "Makefile.common"
 
 #CONFIGURE_ENV+=		disable_x11=yes
 
-PKGREVISION=		1
-
 BUILD_TARGET=		world
+TEST_PROGRAM=		ocamltest
 MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
 
@@ -14,11 +13,6 @@ USE_TOOLS+=		bash
 USE_LANGUAGES+=		c
 USE_LIBTOOL=		yes
 USE_GNU_CONFIGURE_HOST=	no
-
-# This actually works fine, but requires some patches that the maintainer
-# insists on removing every time the package is updated, so we unfortunately
-# have to mark it broken to stop wasting people's valuable time investigating.
-BROKEN_ON_PLATFORM=	SunOS-*-*
 
 #USE_GCC_RUNTIME=	yes
 
@@ -45,6 +39,7 @@ PLIST.ocaml-stub=	yes
     !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
     (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=		opt opt.opt
+TEST_PROGRAM+=		ocamltest.opt
 PLIST.ocaml-opt=	yes
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
@@ -56,11 +51,11 @@ PLIST.ocaml-prof=	yes
 # XXX This conditional is not complete.  It should match the
 # conditional in ocaml-x.y.z/configure.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || \
-    (${MACHINE_ARCH} == "aarch64") || (${MACHINE_ARCH} == "powerpc")
+    (${MACHINE_ARCH} == "aarch64")
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-*-*) || \
+      (!empty(MACHINE_PLATFORM:MNetBSD-*-*) && empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)) || \
       !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
       !empty(MACHINE_PLATFORM:MSunOS-*-*)
 PLIST.ocaml-nat=	yes
@@ -104,6 +99,7 @@ REPLACE_AWK+=		tools/ocaml-instr-report
 .endif
 
 do-test:
+	cd ${WRKSRC} && ${MAKE_PROGRAM} ${TEST_PROGRAM}
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
 
 .if ${OPSYS} == "Darwin"
@@ -111,8 +107,8 @@ do-test:
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
 	for f in ${DESTDIR}${PREFIX}/lib/ocaml/*.so \
-	       ${DESTDIR}${PREFIX}/lib/ocaml/stublibs/*.so; do \
-	       install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
+		${DESTDIR}${PREFIX}/lib/ocaml/stublibs/*.so; do \
+		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 	done
 .endif
 
