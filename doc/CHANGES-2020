@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6647 2020/12/08 18:54:28 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6648 2020/12/09 09:16:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9652,3 +9652,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/repmgr to 5.2.1 [adam 2020-12-08]
 	Updated sysutils/psftools to 1.0.14 [fcambus 2020-12-08]
 	Updated security/openssl to 1.1.1i [wiz 2020-12-08]
+	Updated www/curl to 7.74.0 [adam 2020-12-09]
+	Updated devel/py-hypothesis to 5.42.3 [adam 2020-12-09]
