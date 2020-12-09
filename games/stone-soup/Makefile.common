@@ -1,11 +1,13 @@
-# $NetBSD: Makefile.common,v 1.4 2020/05/31 09:15:03 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/12/09 12:28:39 nia Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
-DISTNAME=	stone_soup-0.24.0
-PKGNAME=	${DISTNAME:S/_/-/}
+DISTNAME=	stone_soup-0.25.1-nodeps
+PKGNAME=	${DISTNAME:S/_/-/:S/-nodeps//1}
 CATEGORIES=	games
-MASTER_SITES=	https://crawl.develz.org/release/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=crawl/}
+GITHUB_PROJECT=	crawl
+GITHUB_RELEASE=	0.25.1
 EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://crawl.develz.org/
@@ -17,7 +19,7 @@ PATCHDIR=	${.CURDIR}/../../games/stone-soup/patches
 WRKSRC=		${WRKDIR}/stone_soup-${PKGVERSION_NOREV}
 BUILD_DIRS=	source
 USE_TOOLS+=	pkg-config gmake perl
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 USE_CURSES=	wide
