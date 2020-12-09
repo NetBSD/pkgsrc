@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6670 2020/12/09 12:32:30 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6671 2020/12/09 12:38:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9690,3 +9690,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-dns-route53 to 1.10.1 [adam 2020-12-09]
 	Updated security/py-certbot-dns-sakuracloud to 1.10.1 [adam 2020-12-09]
 	Updated security/py-certbot-nginx to 1.10.1 [adam 2020-12-09]
+	Updated time/py-aniso8601 to 8.1.0 [adam 2020-12-09]
+	Updated net/py-smb to 1.2.6 [adam 2020-12-09]
