@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/12/09 10:12:14 nia Exp $
+
+Do not use -Werror.
+
+--- configure.orig	2020-04-19 10:56:08.000000000 +0000
++++ configure
+@@ -4476,7 +4476,7 @@ done
+ 
+ 
+ if test "${ac_cv_c_compiler_gnu}" = "yes"; then
+-  CFLAGS="${CFLAGS} -Wall -Wno-stringop-truncation -Wno-unused-but-set-variable -Werror"
++  CFLAGS="${CFLAGS} -Wall -Wno-stringop-truncation -Wno-unused-but-set-variable"
+ fi
+ 
+ 
