@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/28 12:24:06 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/09 12:28:39 nia Exp $
 bin/crawl
 share/stone-soup/dat/clua/autofight.lua
 share/stone-soup/dat/clua/automagic.lua
@@ -35,6 +35,7 @@ share/stone-soup/dat/defaults/messages.txt
 share/stone-soup/dat/defaults/misc.txt
 share/stone-soup/dat/defaults/runrest_messages.txt
 share/stone-soup/dat/defaults/standard_colours.txt
+share/stone-soup/dat/des/00init.des
 share/stone-soup/dat/des/altar/altar.des
 share/stone-soup/dat/des/altar/ashenzari_visionary.des
 share/stone-soup/dat/des/altar/kiku_cage.des
@@ -551,6 +552,7 @@ share/stone-soup/docs/changelog.txt
 share/stone-soup/docs/crawl_manual.txt
 share/stone-soup/docs/develop/IRC.txt
 share/stone-soup/docs/develop/android.txt
+share/stone-soup/docs/develop/arena.txt
 share/stone-soup/docs/develop/background_creation.txt
 share/stone-soup/docs/develop/coding_conventions.txt
 share/stone-soup/docs/develop/ctags.txt
@@ -568,7 +570,7 @@ share/stone-soup/docs/develop/mutation_creation.txt
 share/stone-soup/docs/develop/patch_guide.txt
 share/stone-soup/docs/develop/save_compatibility.txt
 share/stone-soup/docs/develop/spells.txt
-share/stone-soup/docs/develop/testing.txt
+share/stone-soup/docs/develop/test_plug_and_play_cc.txt
 share/stone-soup/docs/develop/tiles_creation.txt
 share/stone-soup/docs/develop/translation.txt
 share/stone-soup/docs/fight_simulator.txt
