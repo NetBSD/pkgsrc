@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/29 13:08:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/12/09 09:46:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -78,6 +78,9 @@ ${PYSITELIB}/pymongo/aggregation.pyo
 ${PYSITELIB}/pymongo/auth.py
 ${PYSITELIB}/pymongo/auth.pyc
 ${PYSITELIB}/pymongo/auth.pyo
+${PYSITELIB}/pymongo/auth_aws.py
+${PYSITELIB}/pymongo/auth_aws.pyc
+${PYSITELIB}/pymongo/auth_aws.pyo
 ${PYSITELIB}/pymongo/bulk.py
 ${PYSITELIB}/pymongo/bulk.pyc
 ${PYSITELIB}/pymongo/bulk.pyo
@@ -129,6 +132,9 @@ ${PYSITELIB}/pymongo/encryption_options.pyo
 ${PYSITELIB}/pymongo/errors.py
 ${PYSITELIB}/pymongo/errors.pyc
 ${PYSITELIB}/pymongo/errors.pyo
+${PYSITELIB}/pymongo/event_loggers.py
+${PYSITELIB}/pymongo/event_loggers.pyc
+${PYSITELIB}/pymongo/event_loggers.pyo
 ${PYSITELIB}/pymongo/helpers.py
 ${PYSITELIB}/pymongo/helpers.pyc
 ${PYSITELIB}/pymongo/helpers.pyo
@@ -159,6 +165,12 @@ ${PYSITELIB}/pymongo/monotonic.pyo
 ${PYSITELIB}/pymongo/network.py
 ${PYSITELIB}/pymongo/network.pyc
 ${PYSITELIB}/pymongo/network.pyo
+${PYSITELIB}/pymongo/ocsp_cache.py
+${PYSITELIB}/pymongo/ocsp_cache.pyc
+${PYSITELIB}/pymongo/ocsp_cache.pyo
+${PYSITELIB}/pymongo/ocsp_support.py
+${PYSITELIB}/pymongo/ocsp_support.pyc
+${PYSITELIB}/pymongo/ocsp_support.pyo
 ${PYSITELIB}/pymongo/operations.py
 ${PYSITELIB}/pymongo/operations.pyc
 ${PYSITELIB}/pymongo/operations.pyo
@@ -168,6 +180,9 @@ ${PYSITELIB}/pymongo/periodic_executor.pyo
 ${PYSITELIB}/pymongo/pool.py
 ${PYSITELIB}/pymongo/pool.pyc
 ${PYSITELIB}/pymongo/pool.pyo
+${PYSITELIB}/pymongo/pyopenssl_context.py
+${PYSITELIB}/pymongo/pyopenssl_context.pyc
+${PYSITELIB}/pymongo/pyopenssl_context.pyo
 ${PYSITELIB}/pymongo/read_concern.py
 ${PYSITELIB}/pymongo/read_concern.pyc
 ${PYSITELIB}/pymongo/read_concern.pyo
@@ -198,6 +213,9 @@ ${PYSITELIB}/pymongo/server_type.pyo
 ${PYSITELIB}/pymongo/settings.py
 ${PYSITELIB}/pymongo/settings.pyc
 ${PYSITELIB}/pymongo/settings.pyo
+${PYSITELIB}/pymongo/socket_checker.py
+${PYSITELIB}/pymongo/socket_checker.pyc
+${PYSITELIB}/pymongo/socket_checker.pyo
 ${PYSITELIB}/pymongo/son_manipulator.py
 ${PYSITELIB}/pymongo/son_manipulator.pyc
 ${PYSITELIB}/pymongo/son_manipulator.pyo
