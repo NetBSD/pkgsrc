@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/04/11 07:45:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/12/09 16:56:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -314,9 +314,15 @@ ${PYSITELIB}/networkx/algorithms/centrality/tests/test_second_order_centrality.p
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_subgraph.py
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_subgraph.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_subgraph.pyo
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_trophic.py
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_trophic.pyc
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_trophic.pyo
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_voterank.py
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_voterank.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_voterank.pyo
+${PYSITELIB}/networkx/algorithms/centrality/trophic.py
+${PYSITELIB}/networkx/algorithms/centrality/trophic.pyc
+${PYSITELIB}/networkx/algorithms/centrality/trophic.pyo
 ${PYSITELIB}/networkx/algorithms/centrality/voterank_alg.py
 ${PYSITELIB}/networkx/algorithms/centrality/voterank_alg.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/voterank_alg.pyo
@@ -374,6 +380,9 @@ ${PYSITELIB}/networkx/algorithms/community/kernighan_lin.pyo
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.py
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.pyc
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.pyo
+${PYSITELIB}/networkx/algorithms/community/lukes.py
+${PYSITELIB}/networkx/algorithms/community/lukes.pyc
+${PYSITELIB}/networkx/algorithms/community/lukes.pyo
 ${PYSITELIB}/networkx/algorithms/community/modularity_max.py
 ${PYSITELIB}/networkx/algorithms/community/modularity_max.pyc
 ${PYSITELIB}/networkx/algorithms/community/modularity_max.pyo
@@ -398,6 +407,9 @@ ${PYSITELIB}/networkx/algorithms/community/tests/test_kernighan_lin.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.pyo
+${PYSITELIB}/networkx/algorithms/community/tests/test_lukes.py
+${PYSITELIB}/networkx/algorithms/community/tests/test_lukes.pyc
+${PYSITELIB}/networkx/algorithms/community/tests/test_lukes.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_modularity_max.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_modularity_max.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_modularity_max.pyo
@@ -518,6 +530,9 @@ ${PYSITELIB}/networkx/algorithms/cuts.pyo
 ${PYSITELIB}/networkx/algorithms/cycles.py
 ${PYSITELIB}/networkx/algorithms/cycles.pyc
 ${PYSITELIB}/networkx/algorithms/cycles.pyo
+${PYSITELIB}/networkx/algorithms/d_separation.py
+${PYSITELIB}/networkx/algorithms/d_separation.pyc
+${PYSITELIB}/networkx/algorithms/d_separation.pyo
 ${PYSITELIB}/networkx/algorithms/dag.py
 ${PYSITELIB}/networkx/algorithms/dag.pyc
 ${PYSITELIB}/networkx/algorithms/dag.pyo
@@ -594,6 +609,9 @@ ${PYSITELIB}/networkx/algorithms/flow/tests/wlm3.gpickle.bz2
 ${PYSITELIB}/networkx/algorithms/flow/utils.py
 ${PYSITELIB}/networkx/algorithms/flow/utils.pyc
 ${PYSITELIB}/networkx/algorithms/flow/utils.pyo
+${PYSITELIB}/networkx/algorithms/graph_hashing.py
+${PYSITELIB}/networkx/algorithms/graph_hashing.pyc
+${PYSITELIB}/networkx/algorithms/graph_hashing.pyo
 ${PYSITELIB}/networkx/algorithms/graphical.py
 ${PYSITELIB}/networkx/algorithms/graphical.pyc
 ${PYSITELIB}/networkx/algorithms/graphical.pyo
@@ -646,9 +664,15 @@ ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_match_helpers.pyo
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_temporalisomorphvf2.py
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_temporalisomorphvf2.pyc
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_temporalisomorphvf2.pyo
+${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_tree_isomorphism.py
+${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_tree_isomorphism.pyc
+${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_tree_isomorphism.pyo
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_vf2userfunc.py
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_vf2userfunc.pyc
 ${PYSITELIB}/networkx/algorithms/isomorphism/tests/test_vf2userfunc.pyo
+${PYSITELIB}/networkx/algorithms/isomorphism/tree_isomorphism.py
+${PYSITELIB}/networkx/algorithms/isomorphism/tree_isomorphism.pyc
+${PYSITELIB}/networkx/algorithms/isomorphism/tree_isomorphism.pyo
 ${PYSITELIB}/networkx/algorithms/isomorphism/vf2userfunc.py
 ${PYSITELIB}/networkx/algorithms/isomorphism/vf2userfunc.pyc
 ${PYSITELIB}/networkx/algorithms/isomorphism/vf2userfunc.pyo
@@ -751,6 +775,9 @@ ${PYSITELIB}/networkx/algorithms/planarity.pyo
 ${PYSITELIB}/networkx/algorithms/reciprocity.py
 ${PYSITELIB}/networkx/algorithms/reciprocity.pyc
 ${PYSITELIB}/networkx/algorithms/reciprocity.pyo
+${PYSITELIB}/networkx/algorithms/regular.py
+${PYSITELIB}/networkx/algorithms/regular.pyc
+${PYSITELIB}/networkx/algorithms/regular.pyo
 ${PYSITELIB}/networkx/algorithms/richclub.py
 ${PYSITELIB}/networkx/algorithms/richclub.pyc
 ${PYSITELIB}/networkx/algorithms/richclub.pyo
@@ -853,6 +880,9 @@ ${PYSITELIB}/networkx/algorithms/tests/test_cuts.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_cycles.py
 ${PYSITELIB}/networkx/algorithms/tests/test_cycles.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_cycles.pyo
+${PYSITELIB}/networkx/algorithms/tests/test_d_separation.py
+${PYSITELIB}/networkx/algorithms/tests/test_d_separation.pyc
+${PYSITELIB}/networkx/algorithms/tests/test_d_separation.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_dag.py
 ${PYSITELIB}/networkx/algorithms/tests/test_dag.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_dag.pyo
@@ -874,6 +904,9 @@ ${PYSITELIB}/networkx/algorithms/tests/test_efficiency.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_euler.py
 ${PYSITELIB}/networkx/algorithms/tests/test_euler.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_euler.pyo
+${PYSITELIB}/networkx/algorithms/tests/test_graph_hashing.py
+${PYSITELIB}/networkx/algorithms/tests/test_graph_hashing.pyc
+${PYSITELIB}/networkx/algorithms/tests/test_graph_hashing.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_graphical.py
 ${PYSITELIB}/networkx/algorithms/tests/test_graphical.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_graphical.pyo
@@ -895,6 +928,9 @@ ${PYSITELIB}/networkx/algorithms/tests/test_lowest_common_ancestors.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_matching.py
 ${PYSITELIB}/networkx/algorithms/tests/test_matching.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_matching.pyo
+${PYSITELIB}/networkx/algorithms/tests/test_max_weight_clique.py
+${PYSITELIB}/networkx/algorithms/tests/test_max_weight_clique.pyc
+${PYSITELIB}/networkx/algorithms/tests/test_max_weight_clique.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_minors.py
 ${PYSITELIB}/networkx/algorithms/tests/test_minors.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_minors.pyo
@@ -916,6 +952,9 @@ ${PYSITELIB}/networkx/algorithms/tests/test_planarity.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_reciprocity.py
 ${PYSITELIB}/networkx/algorithms/tests/test_reciprocity.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_reciprocity.pyo
+${PYSITELIB}/networkx/algorithms/tests/test_regular.py
+${PYSITELIB}/networkx/algorithms/tests/test_regular.pyc
+${PYSITELIB}/networkx/algorithms/tests/test_regular.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_richclub.py
 ${PYSITELIB}/networkx/algorithms/tests/test_richclub.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_richclub.pyo
@@ -1009,6 +1048,9 @@ ${PYSITELIB}/networkx/algorithms/tree/branchings.pyo
 ${PYSITELIB}/networkx/algorithms/tree/coding.py
 ${PYSITELIB}/networkx/algorithms/tree/coding.pyc
 ${PYSITELIB}/networkx/algorithms/tree/coding.pyo
+${PYSITELIB}/networkx/algorithms/tree/decomposition.py
+${PYSITELIB}/networkx/algorithms/tree/decomposition.pyc
+${PYSITELIB}/networkx/algorithms/tree/decomposition.pyo
 ${PYSITELIB}/networkx/algorithms/tree/mst.py
 ${PYSITELIB}/networkx/algorithms/tree/mst.pyc
 ${PYSITELIB}/networkx/algorithms/tree/mst.pyo
@@ -1027,6 +1069,9 @@ ${PYSITELIB}/networkx/algorithms/tree/tests/test_branchings.pyo
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_coding.py
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_coding.pyc
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_coding.pyo
+${PYSITELIB}/networkx/algorithms/tree/tests/test_decomposition.py
+${PYSITELIB}/networkx/algorithms/tree/tests/test_decomposition.pyc
+${PYSITELIB}/networkx/algorithms/tree/tests/test_decomposition.pyo
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_mst.py
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_mst.pyc
 ${PYSITELIB}/networkx/algorithms/tree/tests/test_mst.pyo
@@ -1129,6 +1174,9 @@ ${PYSITELIB}/networkx/classes/tests/test_special.pyo
 ${PYSITELIB}/networkx/classes/tests/test_subgraphviews.py
 ${PYSITELIB}/networkx/classes/tests/test_subgraphviews.pyc
 ${PYSITELIB}/networkx/classes/tests/test_subgraphviews.pyo
+${PYSITELIB}/networkx/conftest.py
+${PYSITELIB}/networkx/conftest.pyc
+${PYSITELIB}/networkx/conftest.pyo
 ${PYSITELIB}/networkx/convert.py
 ${PYSITELIB}/networkx/convert.pyc
 ${PYSITELIB}/networkx/convert.pyo
@@ -1211,6 +1259,9 @@ ${PYSITELIB}/networkx/generators/internet_as_graphs.pyo
 ${PYSITELIB}/networkx/generators/intersection.py
 ${PYSITELIB}/networkx/generators/intersection.pyc
 ${PYSITELIB}/networkx/generators/intersection.pyo
+${PYSITELIB}/networkx/generators/interval_graph.py
+${PYSITELIB}/networkx/generators/interval_graph.pyc
+${PYSITELIB}/networkx/generators/interval_graph.pyo
 ${PYSITELIB}/networkx/generators/joint_degree_seq.py
 ${PYSITELIB}/networkx/generators/joint_degree_seq.pyc
 ${PYSITELIB}/networkx/generators/joint_degree_seq.pyo
@@ -1244,6 +1295,9 @@ ${PYSITELIB}/networkx/generators/spectral_graph_forge.pyo
 ${PYSITELIB}/networkx/generators/stochastic.py
 ${PYSITELIB}/networkx/generators/stochastic.pyc
 ${PYSITELIB}/networkx/generators/stochastic.pyo
+${PYSITELIB}/networkx/generators/sudoku.py
+${PYSITELIB}/networkx/generators/sudoku.pyc
+${PYSITELIB}/networkx/generators/sudoku.pyo
 ${PYSITELIB}/networkx/generators/tests/__init__.py
 ${PYSITELIB}/networkx/generators/tests/__init__.pyc
 ${PYSITELIB}/networkx/generators/tests/__init__.pyo
@@ -1286,6 +1340,9 @@ ${PYSITELIB}/networkx/generators/tests/test_internet_as_graphs.pyo
 ${PYSITELIB}/networkx/generators/tests/test_intersection.py
 ${PYSITELIB}/networkx/generators/tests/test_intersection.pyc
 ${PYSITELIB}/networkx/generators/tests/test_intersection.pyo
+${PYSITELIB}/networkx/generators/tests/test_interval_graph.py
+${PYSITELIB}/networkx/generators/tests/test_interval_graph.pyc
+${PYSITELIB}/networkx/generators/tests/test_interval_graph.pyo
 ${PYSITELIB}/networkx/generators/tests/test_joint_degree_seq.py
 ${PYSITELIB}/networkx/generators/tests/test_joint_degree_seq.pyc
 ${PYSITELIB}/networkx/generators/tests/test_joint_degree_seq.pyo
@@ -1316,6 +1373,9 @@ ${PYSITELIB}/networkx/generators/tests/test_spectral_graph_forge.pyo
 ${PYSITELIB}/networkx/generators/tests/test_stochastic.py
 ${PYSITELIB}/networkx/generators/tests/test_stochastic.pyc
 ${PYSITELIB}/networkx/generators/tests/test_stochastic.pyo
+${PYSITELIB}/networkx/generators/tests/test_sudoku.py
+${PYSITELIB}/networkx/generators/tests/test_sudoku.pyc
+${PYSITELIB}/networkx/generators/tests/test_sudoku.pyo
 ${PYSITELIB}/networkx/generators/tests/test_trees.py
 ${PYSITELIB}/networkx/generators/tests/test_trees.pyc
 ${PYSITELIB}/networkx/generators/tests/test_trees.pyo
@@ -1358,6 +1418,9 @@ ${PYSITELIB}/networkx/linalg/tests/__init__.pyo
 ${PYSITELIB}/networkx/linalg/tests/test_algebraic_connectivity.py
 ${PYSITELIB}/networkx/linalg/tests/test_algebraic_connectivity.pyc
 ${PYSITELIB}/networkx/linalg/tests/test_algebraic_connectivity.pyo
+${PYSITELIB}/networkx/linalg/tests/test_attrmatrix.py
+${PYSITELIB}/networkx/linalg/tests/test_attrmatrix.pyc
+${PYSITELIB}/networkx/linalg/tests/test_attrmatrix.pyo
 ${PYSITELIB}/networkx/linalg/tests/test_bethehessian.py
 ${PYSITELIB}/networkx/linalg/tests/test_bethehessian.pyc
 ${PYSITELIB}/networkx/linalg/tests/test_bethehessian.pyo
