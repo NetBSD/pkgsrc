@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/11/07 18:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/09 09:30:56 nia Exp $
 
 DISTNAME=	ujson-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
