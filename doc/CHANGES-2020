@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6656 2020/12/09 11:07:35 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6657 2020/12/09 11:11:04 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9663,3 +9663,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/lua-lyaml to 6.2.7 [nia 2020-12-09]
 	Updated time/lua-date to 2.1.3 [nia 2020-12-09]
 	Updated devel/ocaml-result to 1.5 [jaapb 2020-12-09]
+	Added devel/ocaml-csexp version 1.3.2 [jaapb 2020-12-09]
