@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/04/03 10:53:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2020/12/09 11:13:56 jaapb Exp $
 
 GITHUB_PROJECT=	base
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.13.1
+DISTNAME=	${GITHUB_PROJECT}-0.13.2
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
@@ -16,5 +16,6 @@ LICENSE=	apache-2.0
 OCAML_USE_DUNE=	yes
 
 .include "../../mk/ocaml.mk"
+.include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../devel/ocaml-sexplib0/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
