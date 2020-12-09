@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6651 2020/12/09 10:36:18 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6652 2020/12/09 10:48:43 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9658,3 +9658,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-mongo to 3.11.2 [adam 2020-12-09]
 	Updated lang/ocaml to 4.11.1 [jaapb 2020-12-09]
 	Updated misc/ocaml-opam-file-format to 2.1.0 [jaapb 2020-12-09]
+	Updated devel/ocaml-dune to 2.7.1 [jaapb 2020-12-09]
