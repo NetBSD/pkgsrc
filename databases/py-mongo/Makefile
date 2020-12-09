@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/01/29 13:08:35 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/12/09 09:46:11 adam Exp $
 
-DISTNAME=	pymongo-3.10.1
+DISTNAME=	pymongo-3.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymongo/}
