@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6653 2020/12/09 10:52:35 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6654 2020/12/09 11:04:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9660,3 +9660,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ocaml-opam-file-format to 2.1.0 [jaapb 2020-12-09]
 	Updated devel/ocaml-dune to 2.7.1 [jaapb 2020-12-09]
 	Added devel/ocaml-dune-configurator version 2.7.1 [jaapb 2020-12-09]
+	Updated textproc/lua-lyaml to 6.2.7 [nia 2020-12-09]
