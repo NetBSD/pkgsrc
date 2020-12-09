@@ -1,22 +1,24 @@
-$NetBSD: distinfo,v 1.137 2020/12/01 23:16:44 he Exp $
+$NetBSD: distinfo,v 1.138 2020/12/09 10:33:04 jaapb Exp $
 
-SHA1 (ocaml-4.09.1.tar.gz) = b4e7140e977c0fae5182074dd93b3c1b74f49ee7
-RMD160 (ocaml-4.09.1.tar.gz) = 377e956327bac18a37f9e77b2558e9474fd07481
-SHA512 (ocaml-4.09.1.tar.gz) = 2313181aeac7922a868fbcd43b0f43ba2b08dd1f113abbcea8e4896caeb5fe26a1aee0c95a815dfa94675cc2eca510d03f230cda7f9361be26419ed02a42aac1
-Size (ocaml-4.09.1.tar.gz) = 4835466 bytes
-SHA1 (patch-Makefile) = 132a1cf1187dc05ec5338b496757d89047e91130
-SHA1 (patch-Makefile.common.in) = fbf3dc0614073ed5ac9b220211a837f69a4ffcaf
+SHA1 (ocaml-4.11.1.tar.gz) = a3f3d74a43a3d0054f0d0162522499f7d8958560
+RMD160 (ocaml-4.11.1.tar.gz) = 6bdd83aeab8a074cfeffa475fe2db72cbca2d6cf
+SHA512 (ocaml-4.11.1.tar.gz) = 7adc40ab1c4086861619ce7280c75d0d200c398f8a7c2c89b0569a34b4deac8c6857b645340a525f656523cb92c4f73c1329e757b6ed41ea080e9cd540e6cb7b
+Size (ocaml-4.11.1.tar.gz) = 5062453 bytes
+SHA1 (patch-Makefile) = bd0451b5240b087c98747d13f9884d30722a91a8
+SHA1 (patch-Makefile.common.in) = 37d880f7125040fd4a125ff0e24615811ce9c827
 SHA1 (patch-asmcomp_amd64_emit.mlp) = c2b90f50bc3c4bf9817916bdd455a8bfc03cb69b
-SHA1 (patch-asmrun_amd64.S) = d4c33cb14c107ed03bf6a3704bbfe7c2799a048e
 SHA1 (patch-check-linker-version_sh) = c90242556207242ac58499d7f42519a10aedcca4
-SHA1 (patch-configure) = dafa708f7ad063612cb93fa1089d49a6059d1e9f
-SHA1 (patch-lex_Makefile) = 18d1b8272ffb3e3a58c26d8a2494aaae6942426a
+SHA1 (patch-configure) = 5791eba70a6d06fe79f6268a3d4e40a1dc636fd1
+SHA1 (patch-lex_Makefile) = 7f1ad4d5852a9a38b9c33ca33728236cc457fa09
 SHA1 (patch-man_Makefile) = b780c026aef5f7e6b22b142fce3ec87ef9d2ab22
-SHA1 (patch-ocamldoc_Makefile) = ca4997636f7a6a382bbcb7be365526e94be4534a
+SHA1 (patch-ocamldoc_Makefile) = 0a3c536d1cd9f811a1ef1d7155036b8ddbcf4f4f
 SHA1 (patch-ocamldoc_odoc__messages.ml) = 77f650a5f34f40b9648a8d5091e9aa31efb5734b
-SHA1 (patch-otherlibs_Makefile.otherlibs.common) = 98211e0a220d360560c2b3f8d7e1fad4c83f2726
-SHA1 (patch-otherlibs_systhreads_Makefile) = a713371cf16e79ee3e5d0f9f8d128476d4c9bee9
+SHA1 (patch-otherlibs_Makefile.otherlibs.common) = 05f14ad2635bfd2ded98ef38ac6e7578b5cfc08e
+SHA1 (patch-otherlibs_systhreads_Makefile) = ff2cf90527bda37474097bb576bccbf7329c4f1d
+SHA1 (patch-otherlibs_systhreads_st__stubs.c) = 3c0aa73f0e128646c01ed3855ee9c5645d5fa3f1
 SHA1 (patch-runtime_Makefile) = 6c70b68791e4c074179aa27dfafb398646b59dcb
-SHA1 (patch-tools_Makefile) = 871d40893d0300d80b9322631321803348a154cf
-SHA1 (patch-tools_ocamlmklib) = 9a9c0e3b473f7ba4127fe120cf6dbbdbb3c957f2
-SHA1 (patch-yacc_Makefile) = c416081421f5e09273ea8b04062402cbfeba7497
+SHA1 (patch-runtime_amd64.S) = d4c33cb14c107ed03bf6a3704bbfe7c2799a048e
+SHA1 (patch-testsuite_tests_lib-systhreads_testyield.ml) = 0f6d35e030de168c6f4aeb126055065ed47878aa
+SHA1 (patch-tools_Makefile) = 69f92a8615ed6f9b33f27546c6a25a1f24995e55
+SHA1 (patch-tools_ocamlmklib.ml) = 9a9c0e3b473f7ba4127fe120cf6dbbdbb3c957f2
+SHA1 (patch-yacc_Makefile) = 3d8962a2d447aa7e88e59151d66e2080f7fad1fb

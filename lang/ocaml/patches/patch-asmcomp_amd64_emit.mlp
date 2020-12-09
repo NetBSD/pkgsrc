@@ -1,4 +1,4 @@
-$NetBSD: patch-asmcomp_amd64_emit.mlp,v 1.5 2020/01/14 19:53:35 jaapb Exp $
+$NetBSD: patch-asmcomp_amd64_emit.mlp,v 1.6 2020/12/09 10:33:04 jaapb Exp $
 
 Fix attributes and entry size or the .rodata mergable constant section
 
