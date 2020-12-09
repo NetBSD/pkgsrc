@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6648 2020/12/09 09:16:26 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6649 2020/12/09 09:46:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9654,3 +9654,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/openssl to 1.1.1i [wiz 2020-12-08]
 	Updated www/curl to 7.74.0 [adam 2020-12-09]
 	Updated devel/py-hypothesis to 5.42.3 [adam 2020-12-09]
+	Updated www/py-uvicorn to 0.13.0 [adam 2020-12-09]
+	Updated databases/py-mongo to 3.11.2 [adam 2020-12-09]
