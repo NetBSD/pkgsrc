@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.common.in,v 1.2 2020/01/14 19:53:35 jaapb Exp $
+$NetBSD: patch-Makefile.common.in,v 1.3 2020/12/09 10:33:04 jaapb Exp $
 
 Use BSD_INSTALL_*
 
---- Makefile.common.in.orig	2019-03-01 15:13:45.000000000 +0000
+--- Makefile.common.in.orig	2020-01-10 16:10:46.000000000 +0000
 +++ Makefile.common.in
-@@ -16,9 +16,9 @@
- # This makefile contains common definitions shared by other Makefiles
+@@ -19,9 +19,9 @@
+ # other Makefiles
  # We assume that Makefile.config has already been included
  
 -INSTALL ?= @INSTALL@
