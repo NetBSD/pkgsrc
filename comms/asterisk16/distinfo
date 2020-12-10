@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.36 2020/08/13 09:24:25 ryoon Exp $
+$NetBSD: distinfo,v 1.37 2020/12/10 13:52:30 gdt Exp $
 
-SHA1 (asterisk-16.12.0/asterisk-16.12.0.tar.gz) = 85f67fbba2401f45ace3d47eff6affa36521682c
-RMD160 (asterisk-16.12.0/asterisk-16.12.0.tar.gz) = 99779e3f6e977752c1e2a851ee5360c9b0215d04
-SHA512 (asterisk-16.12.0/asterisk-16.12.0.tar.gz) = 1fc41b92d070efd4a7ea5db1a36c83bdb6dbbe7d9b5087b0a887ba3d6875e81ba1b71a79b216138b242f0349a176baf6745480ff6fb7ed47c62dda4b09b6a891
-Size (asterisk-16.12.0/asterisk-16.12.0.tar.gz) = 27727347 bytes
-SHA1 (asterisk-16.12.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 0207e289404704c42941759db9660269599044f9
-RMD160 (asterisk-16.12.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 5d660e7664a56086bd60ad49196e1b622a60f106
-SHA512 (asterisk-16.12.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
-Size (asterisk-16.12.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
-SHA1 (asterisk-16.12.0/pjproject-2.10.md5) = 1f91cf11ef1df14344817905e165cc1908668d18
-RMD160 (asterisk-16.12.0/pjproject-2.10.md5) = c33bbef404923860a41e34520871c0fa7533a01d
-SHA512 (asterisk-16.12.0/pjproject-2.10.md5) = bd24048c9c2fdaf06468e44bceca92bd02848d759ef98285d20b50174f865b1aec2928f1ce6c092862397ba83dd1a74da4a7e479eca881df1e9f9d1c211a7054
-Size (asterisk-16.12.0/pjproject-2.10.md5) = 110 bytes
-SHA1 (asterisk-16.12.0/pjproject-2.10.tar.bz2) = 0c691fa3562d4daad4b4374df61e8325ac15cc55
-RMD160 (asterisk-16.12.0/pjproject-2.10.tar.bz2) = 9ffe871976a67e4d29d45fdb2c1fc26b2925ef86
-SHA512 (asterisk-16.12.0/pjproject-2.10.tar.bz2) = fe29edccc63a8e72323e1b6f955a8c3475e26aba9cb8f5125546da4409fecc19a09a7950eee6b8e4a3c908943bc043d95130f878ad52958c5eccc617e3bcfb4e
-Size (asterisk-16.12.0/pjproject-2.10.tar.bz2) = 7339188 bytes
+SHA1 (asterisk-16.15.0/asterisk-16.15.0.tar.gz) = a2499cc75ad181a39c2a16c4a1999aafd2d984a8
+RMD160 (asterisk-16.15.0/asterisk-16.15.0.tar.gz) = 8fcd344bf2ee36b0fc2b8bc9634cfca3c45f5be7
+SHA512 (asterisk-16.15.0/asterisk-16.15.0.tar.gz) = 42e3ac65a9e21f1769e52978619567874c612a37739a00f62d52d921c98ea0c3fe7e5b00029916dc6b840670772d47765f0f3f6aaab97fcafd5e574517968313
+Size (asterisk-16.15.0/asterisk-16.15.0.tar.gz) = 27807885 bytes
+SHA1 (asterisk-16.15.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 0207e289404704c42941759db9660269599044f9
+RMD160 (asterisk-16.15.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 5d660e7664a56086bd60ad49196e1b622a60f106
+SHA512 (asterisk-16.15.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
+Size (asterisk-16.15.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
+SHA1 (asterisk-16.15.0/pjproject-2.10.md5) = 1f91cf11ef1df14344817905e165cc1908668d18
+RMD160 (asterisk-16.15.0/pjproject-2.10.md5) = c33bbef404923860a41e34520871c0fa7533a01d
+SHA512 (asterisk-16.15.0/pjproject-2.10.md5) = bd24048c9c2fdaf06468e44bceca92bd02848d759ef98285d20b50174f865b1aec2928f1ce6c092862397ba83dd1a74da4a7e479eca881df1e9f9d1c211a7054
+Size (asterisk-16.15.0/pjproject-2.10.md5) = 110 bytes
+SHA1 (asterisk-16.15.0/pjproject-2.10.tar.bz2) = 0c691fa3562d4daad4b4374df61e8325ac15cc55
+RMD160 (asterisk-16.15.0/pjproject-2.10.tar.bz2) = 9ffe871976a67e4d29d45fdb2c1fc26b2925ef86
+SHA512 (asterisk-16.15.0/pjproject-2.10.tar.bz2) = fe29edccc63a8e72323e1b6f955a8c3475e26aba9cb8f5125546da4409fecc19a09a7950eee6b8e4a3c908943bc043d95130f878ad52958c5eccc617e3bcfb4e
+Size (asterisk-16.15.0/pjproject-2.10.tar.bz2) = 7339188 bytes
 SHA1 (patch-Makefile) = f7630acc724e1beb422226318611d5f3f79be82b
 SHA1 (patch-build__tools_mkpkgconfig) = 7fab8fcf46d9f8a3b98455674fec6307ec472b23
 SHA1 (patch-channels_Makefile) = b32bb8439ae07ed361ab7cb811b4766a27f09ec9
@@ -30,7 +30,7 @@ SHA1 (patch-main_pbx__builtins.c) = 7c1d518f05afc1523b247f50b0363e25832c8636
 SHA1 (patch-main_stdtime_localtime.c) = d530bea8f93667a07b707e6fb01c6744aa264d40
 SHA1 (patch-main_utils.c) = ab85be3687dd7f39b742bd5e4036f9e297f3e272
 SHA1 (patch-pbx_pbx__dundi.c) = d2a50650a19463304c81fc19c460565b94f91b72
-SHA1 (patch-res_res__rtp__asterisk.c) = ea63841700ca31653c7ddcc8d296348b9ee68964
+SHA1 (patch-res_res__rtp__asterisk.c) = feb320521a545be615133777374825e17e428c93
 SHA1 (patch-sounds_Makefile) = acc15088ae2545f2822246466bfe783b5215fc54
 SHA1 (patch-tests_test__locale.c) = f3f1edc86356f2a7b4d3493433c772e164c77f66
 SHA1 (patch-utils_Makefile) = 4b4be483c20768d640efae5c18fc6f6770eb8c0c
