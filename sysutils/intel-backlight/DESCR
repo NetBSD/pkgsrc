@@ -1,0 +1,5 @@
+This package contains the intel_backlight program from intel-gpu-tools,
+which allows controlling the backlight level on certain Intel(R) GPUs,
+including i915.
+
+Since it performs direct PCI access, it must be run as root.
