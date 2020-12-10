@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/19 18:36:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2020/12/10 12:31:16 adam Exp $
 
-SHA1 (factory_boy-2.12.0.tar.gz) = 29b59501719a2ef52025129bacfb66f86a796405
-RMD160 (factory_boy-2.12.0.tar.gz) = 7d4f1e2b18abade51262651b2db6c60adfc1e83e
-SHA512 (factory_boy-2.12.0.tar.gz) = f87963fb650df9b6e2e5bd7bea5fdc6c35d352839edfea7ff79f3ff236e85098879a506d132d63a47c3290d5beee925ab19943eb4ecdb522f33f8ffff69dc742
-Size (factory_boy-2.12.0.tar.gz) = 153557 bytes
+SHA1 (factory_boy-3.1.0.tar.gz) = 698f7afb6d5eaec2acdf6c5dda11c0ee6c479568
+RMD160 (factory_boy-3.1.0.tar.gz) = a6127aaf99ebb814699981f529b2b472d04b13da
+SHA512 (factory_boy-3.1.0.tar.gz) = eaeb620a6f427912908dd8bbf977956b9722685b475e099323cd614a0d08042f82695be09bfb86d31e213327f512307543d096344d58e59ad2f1ae01e6edbe64
+Size (factory_boy-3.1.0.tar.gz) = 156554 bytes
