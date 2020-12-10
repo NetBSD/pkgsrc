@@ -1,4 +1,6 @@
-$NetBSD: patch-zebra_kernel__socket.c,v 1.2 2017/10/08 15:25:45 gdt Exp $
+$NetBSD: patch-zebra_kernel__socket.c,v 1.3 2020/12/10 17:08:17 kardel Exp $
+
+	RTM_RESOLVE needs to be conditional
 
 --- zebra/kernel_socket.c.orig	2017-10-03 14:57:10.000000000 +0000
 +++ zebra/kernel_socket.c
