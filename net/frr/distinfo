@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2020/12/10 16:43:24 kardel Exp $
+
+SHA1 (frr-7.5.tar.gz) = 266129c3de20d5ffbe1ae9751fbbf88184405617
+RMD160 (frr-7.5.tar.gz) = 368fae09311e2b4210cf793f09a33238c19f5441
+SHA512 (frr-7.5.tar.gz) = d0d3c0bc0d30e2ebb93e20906768a996d21db23b23118c8e3c50d238e7bfdee7a789b4a90c9d7dbdc842d857f60bd44f0922b01b0c2c8b289ac860f008a430a9
+Size (frr-7.5.tar.gz) = 6730659 bytes
+SHA1 (patch-pkgsrc_zebra.sh.in) = d458e74a1f3319f6e075d3d3a81414bc7d7022f2
+SHA1 (patch-zebra_ioctl.c) = 99b7606564f4dc620df997889156b5c09f7fb396
+SHA1 (patch-zebra_kernel__socket.c) = 9bf24d86923715e3e15cad073df1210bc0608e89
