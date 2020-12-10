@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/10 16:25:19 kardel Exp $
+bin/yanglint
+bin/yangre
+include/libyang/dict.h
+include/libyang/extensions.h
+include/libyang/libyang.h
+include/libyang/tree_data.h
+include/libyang/tree_schema.h
+include/libyang/user_types.h
+include/libyang/xml.h
+lib/libyang.so
+lib/libyang.so.1
+lib/libyang.so.1.9.2
+lib/libyang1/extensions/metadata.so
+lib/libyang1/extensions/nacm.so
+lib/libyang1/extensions/yangdata.so
+lib/libyang1/user_types/user_inet_types.so
+lib/libyang1/user_types/user_yang_types.so
+lib/pkgconfig/libyang.pc
+man/man1/yanglint.1
+man/man1/yangre.1
