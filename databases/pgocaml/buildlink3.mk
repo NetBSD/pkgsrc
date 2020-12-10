@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/01/14 20:29:07 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2020/12/10 09:47:57 jaapb Exp $
 
 BUILDLINK_TREE+=	pgocaml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pgocaml
 PGOCAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pgocaml+=	pgocaml>=4.0
-BUILDLINK_ABI_DEPENDS.pgocaml+=	pgocaml>=4.2
+BUILDLINK_ABI_DEPENDS.pgocaml+=	pgocaml>=4.2.2
 BUILDLINK_PKGSRCDIR.pgocaml?=	../../databases/pgocaml
 
 .include "../../devel/ocaml-re/buildlink3.mk"
