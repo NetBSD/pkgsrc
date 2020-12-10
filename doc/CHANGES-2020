@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6689 2020/12/10 13:37:26 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6690 2020/12/10 13:52:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9714,3 +9714,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-factory_boy to 3.1.0 [adam 2020-12-10]
 	Updated devel/py-distorm3 to 3.5.1 [adam 2020-12-10]
 	Updated audio/milkytracker to 1.03.00 [nia 2020-12-10]
+	Updated comms/asterisk16 to 16.15.0 [gdt 2020-12-10]
