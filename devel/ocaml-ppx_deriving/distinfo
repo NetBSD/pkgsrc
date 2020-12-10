@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/04/08 08:58:09 jaapb Exp $
+$NetBSD: distinfo,v 1.9 2020/12/10 09:15:57 jaapb Exp $
 
-SHA1 (ppx_deriving-4.4.1.tar.gz) = d8b3bbe8fb834b3a703d206e2f3e1877fcc69036
-RMD160 (ppx_deriving-4.4.1.tar.gz) = 6804bc45c11538b8eafa4e27270eaae40a76f5bf
-SHA512 (ppx_deriving-4.4.1.tar.gz) = 37adf71532a3984913abff35a2837b3bb06cab327d7632791f9b804916b55646226e8c26a9599d405a6f9e1d1f5d5d298acb6b83aa27d700d2150c0e7191572c
-Size (ppx_deriving-4.4.1.tar.gz) = 45397 bytes
+SHA1 (ppx_deriving-4.5.tar.gz) = 9c3b6cf30f808339b7d5161c092c10513e9087a3
+RMD160 (ppx_deriving-4.5.tar.gz) = aa41de0c8599054805e3e10e15c02e68f83b8d33
+SHA512 (ppx_deriving-4.5.tar.gz) = f79153c5231ba1e03a3491fde95ca82ecb62fe05b60a649a374d2fbc5ea5dd9242126de7dfbe917c22fd7077c026c940e18c6b36c5ce0ec4bb6e07f11d2b710b
+Size (ppx_deriving-4.5.tar.gz) = 45886 bytes
