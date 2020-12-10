@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6696 2020/12/10 18:09:47 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.6697 2020/12/10 23:17:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9721,3 +9721,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/frr version 7.5 [kardel 2020-12-10]
 	Updated emulators/hatari to 2.3.0 [fcambus 2020-12-10]
 	Updated lang/gnucobol to 3.1.1 [fcambus 2020-12-10]
+	Updated devel/MoarVM to 2020.11 [mef 2020-12-10]
