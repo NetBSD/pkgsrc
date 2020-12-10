@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6683 2020/12/10 09:16:06 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6684 2020/12/10 09:20:08 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9705,3 +9705,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-stdlib-shims to 0.2.0nb1 [jaapb 2020-12-10]
 	Updated devel/ocaml-ppxlib to 0.15.0 [jaapb 2020-12-10]
 	Updated devel/ocaml-ppx_deriving to 4.5 [jaapb 2020-12-10]
+	Updated textproc/lowdown to 0.7.5 [fcambus 2020-12-10]
