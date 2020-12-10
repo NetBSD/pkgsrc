@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6692 2020/12/10 16:35:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6693 2020/12/10 16:45:07 kardel Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9715,6 +9715,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-distorm3 to 3.5.1 [adam 2020-12-10]
 	Updated audio/milkytracker to 1.03.00 [nia 2020-12-10]
 	Updated comms/asterisk16 to 16.15.0 [gdt 2020-12-10]
+<<<<<<< CHANGES-2020
+	Added devel/libyang version 1.0.184 [kardel 2020-12-10]
+=======
 	Added devel/libyang version 1.0.184 [root 2020-12-10]
 	Updated games/rocksndiamonds to 4.2.0.5 [adam 2020-12-10]
 	Updated databases/prometheus to 2.23.0 [adam 2020-12-10]
+>>>>>>> 1.6692
+	Added net/frr version 7.5 [kardel 2020-12-10]
