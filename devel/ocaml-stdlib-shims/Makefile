@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/04/21 10:53:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/10 08:55:22 jaapb Exp $
 
 GITHUB_PROJECT=	stdlib-shims
 DISTNAME=	${GITHUB_PROJECT}-0.2.0
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 

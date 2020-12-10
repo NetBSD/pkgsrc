@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/21 10:53:10 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/12/10 08:55:22 jaapb Exp $
 ${OCAML_SITELIB}/stdlib-shims/META
 ${OCAML_SITELIB}/stdlib-shims/dune-package
 ${OCAML_SITELIB}/stdlib-shims/opam
-${OCAML_SITELIB}/stdlib-shims/pervasives.cmi
-${OCAML_SITELIB}/stdlib-shims/pervasives.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/stdlib-shims/pervasives.cmx
-${OCAML_SITELIB}/stdlib-shims/pervasives.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/stdlib-shims/stdlib_shims.a
 ${OCAML_SITELIB}/stdlib-shims/stdlib_shims.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/stdlib-shims/stdlib_shims.cmxa
