@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6685 2020/12/10 09:48:08 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6686 2020/12/10 10:26:02 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9707,3 +9707,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_deriving to 4.5 [jaapb 2020-12-10]
 	Updated textproc/lowdown to 0.7.5 [fcambus 2020-12-10]
 	Updated databases/pgocaml to 4.2.2 [jaapb 2020-12-10]
+	Updated www/ruby-rouge to 3.26.0 [fcambus 2020-12-10]
