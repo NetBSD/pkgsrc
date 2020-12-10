@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6691 2020/12/10 16:28:59 kardel Exp $
+$NetBSD: CHANGES-2020,v 1.6692 2020/12/10 16:35:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9716,3 +9716,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/milkytracker to 1.03.00 [nia 2020-12-10]
 	Updated comms/asterisk16 to 16.15.0 [gdt 2020-12-10]
 	Added devel/libyang version 1.0.184 [root 2020-12-10]
+	Updated games/rocksndiamonds to 4.2.0.5 [adam 2020-12-10]
+	Updated databases/prometheus to 2.23.0 [adam 2020-12-10]
