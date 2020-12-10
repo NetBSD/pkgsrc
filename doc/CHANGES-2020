@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6681 2020/12/10 08:55:32 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6682 2020/12/10 08:57:29 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9703,3 +9703,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/intel-backlight version 20200418 [nia 2020-12-10]
 	Updated devel/ocaml-ppxfind to 1.4 [jaapb 2020-12-10]
 	Updated devel/ocaml-stdlib-shims to 0.2.0nb1 [jaapb 2020-12-10]
+	Updated devel/ocaml-ppxlib to 0.15.0 [jaapb 2020-12-10]
