@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3291 2020/12/10 03:03:21 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3292 2020/12/10 12:15:48 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2355,6 +2355,7 @@ SUBDIR+=	py-jaraco.itertools
 SUBDIR+=	py-jaraco_util
 SUBDIR+=	py-jersey
 SUBDIR+=	py-joblib
+SUBDIR+=	py-jupyter-console
 SUBDIR+=	py-jupyter_client
 SUBDIR+=	py-jupyter_core
 SUBDIR+=	py-kafka-python
