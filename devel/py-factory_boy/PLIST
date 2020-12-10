@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/19 18:36:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/12/10 12:31:16 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/factory/__init__.py
 ${PYSITELIB}/factory/__init__.pyc
 ${PYSITELIB}/factory/__init__.pyo
@@ -11,9 +17,6 @@ ${PYSITELIB}/factory/base.pyo
 ${PYSITELIB}/factory/builder.py
 ${PYSITELIB}/factory/builder.pyc
 ${PYSITELIB}/factory/builder.pyo
-${PYSITELIB}/factory/compat.py
-${PYSITELIB}/factory/compat.pyc
-${PYSITELIB}/factory/compat.pyo
 ${PYSITELIB}/factory/declarations.py
 ${PYSITELIB}/factory/declarations.pyc
 ${PYSITELIB}/factory/declarations.pyo
@@ -47,9 +50,3 @@ ${PYSITELIB}/factory/random.pyo
 ${PYSITELIB}/factory/utils.py
 ${PYSITELIB}/factory/utils.pyc
 ${PYSITELIB}/factory/utils.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
