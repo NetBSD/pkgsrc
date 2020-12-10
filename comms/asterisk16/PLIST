@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/05/01 07:57:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/12/10 13:52:30 gdt Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -60,7 +60,6 @@ include/asterisk/datastore.h
 include/asterisk/devicestate.h
 include/asterisk/dial.h
 include/asterisk/dlinkedlists.h
-include/asterisk/dns_txt.h
 include/asterisk/dns.h
 include/asterisk/dns_core.h
 include/asterisk/dns_internal.h
@@ -71,6 +70,7 @@ include/asterisk/dns_resolver.h
 include/asterisk/dns_srv.h
 include/asterisk/dns_test.h
 include/asterisk/dns_tlsa.h
+include/asterisk/dns_txt.h
 include/asterisk/dnsmgr.h
 include/asterisk/doxygen/architecture.h
 include/asterisk/doxygen/licensing.h
@@ -111,6 +111,7 @@ include/asterisk/linkedlists.h
 include/asterisk/localtime.h
 include/asterisk/lock.h
 include/asterisk/logger.h
+include/asterisk/logger_category.h
 include/asterisk/manager.h
 include/asterisk/max_forwards.h
 include/asterisk/md5.h
@@ -155,6 +156,7 @@ include/asterisk/res_pjsip_presence_xml.h
 include/asterisk/res_pjsip_pubsub.h
 include/asterisk/res_pjsip_session.h
 include/asterisk/res_srtp.h
+include/asterisk/res_stir_shaken.h
 include/asterisk/rtp_engine.h
 include/asterisk/say.h
 include/asterisk/sched.h
@@ -213,6 +215,7 @@ include/asterisk/udptl.h
 include/asterisk/ulaw.h
 include/asterisk/unaligned.h
 include/asterisk/uri.h
+include/asterisk/utf8.h
 include/asterisk/utils.h
 include/asterisk/uuid.h
 include/asterisk/vector.h
@@ -499,6 +502,7 @@ lib/asterisk/modules/res_pjsip_sdp_rtp.so
 lib/asterisk/modules/res_pjsip_send_to_voicemail.so
 lib/asterisk/modules/res_pjsip_session.so
 lib/asterisk/modules/res_pjsip_sips_contact.so
+lib/asterisk/modules/res_pjsip_stir_shaken.so
 lib/asterisk/modules/res_pjsip_t38.so
 lib/asterisk/modules/res_pjsip_transport_websocket.so
 lib/asterisk/modules/res_pjsip_xpidf_body_generator.so
@@ -524,6 +528,7 @@ lib/asterisk/modules/res_stasis_playback.so
 lib/asterisk/modules/res_stasis_recording.so
 lib/asterisk/modules/res_stasis_snoop.so
 lib/asterisk/modules/res_statsd.so
+lib/asterisk/modules/res_stir_shaken.so
 lib/asterisk/modules/res_stun_monitor.so
 ${PLIST.kqueue}lib/asterisk/modules/res_timing_kqueue.so
 lib/asterisk/modules/res_timing_pthread.so
@@ -2636,6 +2641,7 @@ share/examples/asterisk/sorcery.conf
 share/examples/asterisk/ss7.timers
 share/examples/asterisk/stasis.conf
 share/examples/asterisk/statsd.conf
+share/examples/asterisk/stir_shaken.conf
 share/examples/asterisk/telcordia-1.adsi
 share/examples/asterisk/test_sorcery.conf
 share/examples/asterisk/udptl.conf
