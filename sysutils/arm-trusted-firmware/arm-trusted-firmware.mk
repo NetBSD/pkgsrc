@@ -1,9 +1,10 @@
-# $NetBSD: arm-trusted-firmware.mk,v 1.1 2020/06/30 14:33:14 thorpej Exp $
+# $NetBSD: arm-trusted-firmware.mk,v 1.2 2020/12/10 20:23:12 js Exp $
 
 .include "../../sysutils/arm-trusted-firmware/arm-trusted-firmware-dist.mk"
 
 PKGNAME?=	${GITHUB_PROJECT}-${PLATFORM}-${VERSION}
 
+RELRO_SUPPORTED=	no
 MAKE_FLAGS+=	CROSS_COMPILE=${PREFIX}/cross-aarch64-none-elf/bin/aarch64-none-elf-
 .if !empty(ATF_CORTEX_M0:Myes)
 MAKE_FLAGS+=	M0_CROSS_COMPILE=${PREFIX}/cross-arm-none-eabi/bin/arm-none-eabi-
