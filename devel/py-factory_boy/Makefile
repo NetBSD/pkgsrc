@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2020/05/20 07:04:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/10 12:31:16 adam Exp $
 
-DISTNAME=	factory_boy-2.12.0
+DISTNAME=	factory_boy-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/factory_boy/}
 
-MAINTAINER=	kethzer.dr@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/FactoryBoy/factory_boy
 COMMENT=	Versatile test fixtures replacement
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-faker>=0.7.0:../../devel/py-faker
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-faker
 
