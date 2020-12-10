@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2020/12/10 17:03:56 fcambus Exp $
+# $NetBSD: Makefile,v 1.88 2020/12/10 22:26:49 fcambus Exp $
 
 DISTNAME=	binutils-2.35.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -76,7 +77,8 @@ PLIST.CTF=	yes
 .if ${OPSYS} == DragonFly \
 	|| (${OPSYS} == FreeBSD && empty(OS_VERSION:M[12345678].*)) \
 	|| (${OPSYS} == OpenBSD && empty(OS_VERSION:M[1234].*)) \
-	|| (${OPSYS} == NetBSD && empty(OS_VERSION:M[12345].*))
+	|| (${OPSYS} == NetBSD && empty(OS_VERSION:M[12345].*)) \
+	|| ${OPSYS} == Linux
 BUILD_GOLD=		yes
 PLIST.gold=		yes
 USE_TOOLS+=		bison
