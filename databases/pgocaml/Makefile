@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/01/14 20:29:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2020/12/10 09:47:57 jaapb Exp $
 
 GITHUB_PROJECT=	pgocaml
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-4.2
+DISTNAME=	${GITHUB_PROJECT}-4.2.2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darioteixeira/}
 
