@@ -1,0 +1,15 @@
+$NetBSD: patch-otherlibs_unix_Makefile,v 1.1 2020/12/10 21:37:07 wiz Exp $
+
+Honor LDFLAGS to fix RELRO build.
+
+--- otherlibs/unix/Makefile.orig	2020-09-01 12:47:58.000000000 +0000
++++ otherlibs/unix/Makefile
+@@ -20,7 +20,7 @@ LIBNAME=unix
+ EXTRACAMLFLAGS=-nolabels
+ 
+ # dllunix.so particularly requires libm for modf symbols
+-LDOPTS=$(NATIVECCLIBS)
++LDOPTS=$(NATIVECCLIBS) "$(LDFLAGS)"
+ 
+ COBJS=accept.o access.o addrofstr.o alarm.o bind.o channels.o chdir.o \
+   chmod.o chown.o chroot.o close.o fsync.o closedir.o connect.o cst2constr.o \
