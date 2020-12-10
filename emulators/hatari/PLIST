@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/07/10 19:33:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/12/10 17:45:32 fcambus Exp $
 bin/atari-convert-dir
 bin/atari-hd-image
 bin/gst2ascii
@@ -22,6 +22,7 @@ share/applications/hatari.desktop
 share/applications/hatariui.desktop
 share/doc/hatari/authors.txt
 share/doc/hatari/compatibility.html
+share/doc/hatari/debugger.html
 share/doc/hatari/emutos.txt
 share/doc/hatari/images/callgraph.png
 share/doc/hatari/images/callgraph.svg
@@ -42,10 +43,12 @@ share/doc/hatari/images/sound.png
 share/doc/hatari/images/system.png
 share/doc/hatari/images/tos.png
 share/doc/hatari/keymap-sample.txt
+share/doc/hatari/manual.css
 share/doc/hatari/manual.html
 share/doc/hatari/memory-usage.txt
 share/doc/hatari/midi-linux.txt
 share/doc/hatari/release-notes.txt
+share/doc/hatari/toc.js
 share/doc/hatari/todo.txt
 share/hatari/hatari-icon.bmp
 share/hatari/hatariui/README
