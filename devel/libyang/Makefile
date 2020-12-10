@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/10 16:25:19 kardel Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/10 20:35:45 kardel Exp $
 
 GITHUB_PROJECT=	libyang
 GITHUB_TAG=	v1.0.184
@@ -11,7 +11,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 MAINTAINER=	kardel@NetBSD.org
 HOMEPAGE=	https://github.com/CESNET/libyang/
 COMMENT=	YANG data modeling language library
-LICENSE=	cesnet-libyang
+LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/libyang-1.0.184
 USE_CMAKE=	yes
