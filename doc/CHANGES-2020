@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6687 2020/12/10 12:14:17 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6688 2020/12/10 12:34:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9709,3 +9709,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/pgocaml to 4.2.2 [jaapb 2020-12-10]
 	Updated www/ruby-rouge to 3.26.0 [fcambus 2020-12-10]
 	Added devel/py-jupyter-console version 6.2.0 [ryoon 2020-12-10]
+	Updated net/wireshark to 3.4.1 [adam 2020-12-10]
+	Updated devel/py-faker to 5.0.1 [adam 2020-12-10]
+	Updated devel/py-factory_boy to 3.1.0 [adam 2020-12-10]
+	Updated devel/py-distorm3 to 3.5.1 [adam 2020-12-10]
