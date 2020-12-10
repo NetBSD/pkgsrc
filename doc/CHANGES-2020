@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6678 2020/12/09 23:10:11 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6679 2020/12/10 06:13:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9700,3 +9700,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/apache-tomcat9 to 9.0.41 [otis 2020-12-09]
 	Updated www/apache-tomcat85 to 8.5.61 [otis 2020-12-09]
 	Updated mail/neomutt to 20201127 [wiz 2020-12-09]
+	Added sysutils/intel-backlight version 20200418 [nia 2020-12-10]
