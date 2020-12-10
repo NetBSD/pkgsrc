@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6694 2020/12/10 16:47:59 kardel Exp $
+$NetBSD: CHANGES-2020,v 1.6695 2020/12/10 17:45:47 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9719,3 +9719,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/rocksndiamonds to 4.2.0.5 [adam 2020-12-10]
 	Updated databases/prometheus to 2.23.0 [adam 2020-12-10]
 	Added net/frr version 7.5 [kardel 2020-12-10]
+	Updated emulators/hatari to 2.3.0 [fcambus 2020-12-10]
