@@ -1,0 +1,22 @@
+$NetBSD: patch-compat_compat.h.in,v 1.1 2020/12/10 16:25:19 kardel Exp $
+
+	NetBSD already defines bswap64.
+
+--- compat/compat.h.in.orig	2020-10-10 06:19:45.124141482 +0000
++++ compat/compat.h.in
+@@ -44,6 +44,7 @@
+ #cmakedefine HAVE_GETLINE
+ #cmakedefine HAVE_GET_CURRENT_DIR_NAME
+ 
++#ifndef __NetBSD__
+ #define bswap64(val) \
+     ( (((val) >> 56) & 0x00000000000000FF) | (((val) >> 40) & 0x000000000000FF00) | \
+     (((val) >> 24) & 0x0000000000FF0000) | (((val) >>  8) & 0x00000000FF000000) | \
+@@ -62,6 +63,7 @@
+ # define le64toh(x) (x)
+ # define htole64(x) (x)
+ #endif
++#endif
+ 
+ #ifndef MAP_ANONYMOUS
+ #define MAP_ANONYMOUS MAP_ANON
