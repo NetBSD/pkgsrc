@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1496 2020/11/24 00:19:28 nikita Exp $
+# $NetBSD: Makefile,v 1.1497 2020/12/11 14:43:57 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -997,6 +997,7 @@ SUBDIR+=	tinyproxy
 SUBDIR+=	trac
 SUBDIR+=	trafficserver
 SUBDIR+=	tscrape
+SUBDIR+=	tuir
 SUBDIR+=	typo3_62
 SUBDIR+=	uhttpmock
 SUBDIR+=	urlget
