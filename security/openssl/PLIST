@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/07/13 11:35:54 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2020/12/11 08:50:56 bsiegert Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -1028,6 +1028,7 @@ man/man3/EC_GROUP_set_seed.3
 man/man3/EC_KEY_check_key.3
 man/man3/EC_KEY_clear_flags.3
 man/man3/EC_KEY_copy.3
+man/man3/EC_KEY_decoded_from_explicit_params.3
 man/man3/EC_KEY_dup.3
 man/man3/EC_KEY_free.3
 man/man3/EC_KEY_generate_key.3
@@ -3183,6 +3184,7 @@ man/man3/X509V3_EXT_i2d.3
 man/man3/X509V3_add1_i2d.3
 man/man3/X509V3_get_d2i.3
 man/man3/X509_ALGOR_cmp.3
+man/man3/X509_ALGOR_copy.3
 man/man3/X509_ALGOR_dup.3
 man/man3/X509_ALGOR_free.3
 man/man3/X509_ALGOR_get0.3
@@ -3341,6 +3343,8 @@ man/man3/X509_REQ_get_signature_nid.3
 man/man3/X509_REQ_get_subject_name.3
 man/man3/X509_REQ_get_version.3
 man/man3/X509_REQ_new.3
+man/man3/X509_REQ_set0_signature.3
+man/man3/X509_REQ_set1_signature_algo.3
 man/man3/X509_REQ_set_pubkey.3
 man/man3/X509_REQ_set_subject_name.3
 man/man3/X509_REQ_set_version.3
