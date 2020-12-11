@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.12 2020/12/10 19:56:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.13 2020/12/11 10:02:51 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -118,3 +118,16 @@ www/firefox78-l10n: dependent update
 
 Pullup ticket #6369 - requested by riastradh
 www/firefox78: build fix
+
+Pullup ticket #6378 - requested by riastradh
+www/gitea: build fix, security fix
+
+Pullup ticket #6372 - requested by wiz
+mail/neomutt: security fix
+
+Pullup ticket #6373 - requested by wiz
+graphics/ImageMagick: security fix
+
+Pullup ticket #6384 - requested by wiz
+security/openssl: security fix
+
