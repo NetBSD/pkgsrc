@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6711 2020/12/11 09:42:50 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6712 2020/12/11 09:49:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9737,3 +9737,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_stable to 0.14.1 [jaapb 2020-12-11]
 	Updated devel/ocaml-ppx_typerep_conv to 0.14.1 [jaapb 2020-12-11]
 	Updated devel/ocaml-async_unix to 0.13.1 [jaapb 2020-12-11]
+	Updated www/ocsigen-start to 2.21.1 [jaapb 2020-12-11]
