@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.921 2020/12/10 06:13:14 nia Exp $
+# $NetBSD: Makefile,v 1.922 2020/12/11 13:38:57 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -846,6 +846,7 @@ SUBDIR+=	xnc
 SUBDIR+=	xosview
 SUBDIR+=	xps
 SUBDIR+=	xuvmstat
+SUBDIR+=	yank
 SUBDIR+=	ytree
 SUBDIR+=	zabbix
 SUBDIR+=	zabbix-frontend
