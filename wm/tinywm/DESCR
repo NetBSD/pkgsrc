@@ -1,0 +1,10 @@
+TinyWM is a tiny window manager created as an exercise in minimalism. It is
+also maybe helpful in learning some of the very basics of creating a window
+manager. It is only around 50 lines of C.
+
+It lets you do four basic things:
+
+- Move windows interactively with Alt+Button1 drag
+- Resize windows interactively with Alt+Button3 drag
+- Raise windows with Alt+F1
+- Focus windows with the mouse pointer
