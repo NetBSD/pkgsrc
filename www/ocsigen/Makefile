@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2020/04/21 11:51:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.40 2020/12/11 08:27:21 jaapb Exp $
 #
 
-VERSION=	2.16.0
+VERSION=	2.16.1
 GITHUB_PROJECT=	ocsigenserver
 PKGNAME=	ocsigen-${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
