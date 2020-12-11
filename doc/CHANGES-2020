@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6704 2020/12/11 08:11:31 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6705 2020/12/11 08:13:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9729,3 +9729,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_fields_conv to 0.14.2 [jaapb 2020-12-11]
 	Updated devel/ocaml-ppx_inline_test to 0.14.1 [jaapb 2020-12-11]
 	Updated devel/ocaml-ppx_variants_conv to 0.14.1 [jaapb 2020-12-11]
+	Updated devel/py-ipykernel to 5.4.0 [adam 2020-12-11]
+	Updated lang/py-parso to 0.8.1 [adam 2020-12-11]
