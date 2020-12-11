@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6713 2020/12/11 10:07:02 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.6714 2020/12/11 10:13:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9739,3 +9739,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-async_unix to 0.13.1 [jaapb 2020-12-11]
 	Updated www/ocsigen-start to 2.21.1 [jaapb 2020-12-11]
 	Updated pkgtools/pkg_install to 20201211 [jperkin 2020-12-11]
+	Added audio/ncmpcpp version 0.8.2 [nia 2020-12-11]
