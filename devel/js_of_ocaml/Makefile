@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2020/01/26 17:30:58 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/12/11 07:53:44 jaapb Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
-DISTNAME=	${GITHUB_PROJECT}-3.5.2
+DISTNAME=	${GITHUB_PROJECT}-3.8.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -24,8 +24,10 @@ DUNE_BUILD_PACKAGES=	js_of_ocaml-compiler js_of_ocaml js_of_ocaml-ocamlbuild \
 			js_of_ocaml-lwt
 
 .include "options.mk"
+.include "../../devel/menhir/buildlink3.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../devel/ocaml-cppo/buildlink3.mk"
+.include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../devel/ocaml-lwt/buildlink3.mk"
 .include "../../devel/ocaml-lwt_log/buildlink3.mk"
 .include "../../devel/ocaml-migrate-parsetree/buildlink3.mk"
