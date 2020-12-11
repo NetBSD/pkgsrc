@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2020/12/04 13:39:45 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2020/12/11 15:56:15 wiz Exp $
 
 DISTNAME=		pkgin-20.11.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetBSDfr/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -46,7 +46,7 @@ SUBST_SED.osrel=	-e "s|@OSREL@|${OS_VERSION:C/_.*//}|"
 
 CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
 
-#DEPENDS+=		pkg_install>=20200701:../../pkgtools/pkg_install
+DEPENDS+=		pkg_install>=20200701:../../pkgtools/pkg_install
 
 # those have official repositories
 .if !empty(PKGIN_REPOSITORY_URL)
