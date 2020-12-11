@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6716 2020/12/11 12:08:10 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6717 2020/12/11 12:11:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9742,3 +9742,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added audio/ncmpcpp version 0.8.2 [nia 2020-12-11]
 	Updated www/ocsigen-i18n to 3.7.0 [jaapb 2020-12-11]
 	Updated mail/qmail-acceptutils to 20201211 [schmonz 2020-12-11]
+	Updated mail/qmail-run to 20201211 [schmonz 2020-12-11]
