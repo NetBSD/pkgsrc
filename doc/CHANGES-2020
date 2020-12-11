@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6718 2020/12/11 13:39:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6719 2020/12/11 13:49:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9744,3 +9744,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/qmail-acceptutils to 20201211 [schmonz 2020-12-11]
 	Updated mail/qmail-run to 20201211 [schmonz 2020-12-11]
 	Added sysutils/yank version 1.2.0 [nia 2020-12-11]
+	Added time/tty-clock version 2.3 [nia 2020-12-11]
