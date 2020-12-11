@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2020/11/01 14:53:00 morr Exp $
+@comment $NetBSD: PLIST,v 1.54 2020/12/11 18:06:25 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -165,6 +165,7 @@ share/vim/${VIM_SUBDIR}/compiler/xbuild.vim
 share/vim/${VIM_SUBDIR}/compiler/xmllint.vim
 share/vim/${VIM_SUBDIR}/compiler/xmlwf.vim
 share/vim/${VIM_SUBDIR}/compiler/xo.vim
+share/vim/${VIM_SUBDIR}/compiler/zsh.vim
 share/vim/${VIM_SUBDIR}/defaults.vim
 share/vim/${VIM_SUBDIR}/delmenu.vim
 share/vim/${VIM_SUBDIR}/doc/arabic.txt
@@ -459,6 +460,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/occam.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pamconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pascal.vim
 share/vim/${VIM_SUBDIR}/ftplugin/passwd.vim
+share/vim/${VIM_SUBDIR}/ftplugin/pbtxt.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pdf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/perl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/perl6.vim
@@ -844,6 +846,8 @@ share/vim/${VIM_SUBDIR}/syntax/bzl.vim
 share/vim/${VIM_SUBDIR}/syntax/bzr.vim
 share/vim/${VIM_SUBDIR}/syntax/c.vim
 share/vim/${VIM_SUBDIR}/syntax/cabal.vim
+share/vim/${VIM_SUBDIR}/syntax/cabalconfig.vim
+share/vim/${VIM_SUBDIR}/syntax/cabalproject.vim
 share/vim/${VIM_SUBDIR}/syntax/calendar.vim
 share/vim/${VIM_SUBDIR}/syntax/catalog.vim
 share/vim/${VIM_SUBDIR}/syntax/cdl.vim
@@ -1153,6 +1157,7 @@ share/vim/${VIM_SUBDIR}/syntax/pamenv.vim
 share/vim/${VIM_SUBDIR}/syntax/papp.vim
 share/vim/${VIM_SUBDIR}/syntax/pascal.vim
 share/vim/${VIM_SUBDIR}/syntax/passwd.vim
+share/vim/${VIM_SUBDIR}/syntax/pbtxt.vim
 share/vim/${VIM_SUBDIR}/syntax/pcap.vim
 share/vim/${VIM_SUBDIR}/syntax/pccts.vim
 share/vim/${VIM_SUBDIR}/syntax/pdf.vim
