@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.115 2020/12/11 10:06:53 jperkin Exp $	*/
+/*	$NetBSD: perform.c,v 1.116 2020/12/11 15:55:35 wiz Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.115 2020/12/11 10:06:53 jperkin Exp $");
+__RCSID("$NetBSD: perform.c,v 1.116 2020/12/11 15:55:35 wiz Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1238,7 +1238,9 @@ preserve_meta_data_file(struct pkg_task *pkg, const char *name)
 static int
 start_replacing(struct pkg_task *pkg)
 {
-	if (preserve_meta_data_file(pkg, REQUIRED_BY_FNAME))
+	int result = -1;
+
+        if (preserve_meta_data_file(pkg, REQUIRED_BY_FNAME))
 		return -1;
 
 	if (preserve_meta_data_file(pkg, PRESERVE_FNAME))
@@ -1254,14 +1256,19 @@ start_replacing(struct pkg_task *pkg)
 			Destdir ? " -P ": "", Destdir ? Destdir : "",
 			pkg->other_version);
 	}
-	if (!Fake)
-		fexec_skipempty(BINDIR "/pkg_delete", "-K", pkgdb_get_dir(),
+	if (!Fake) {
+		result = fexec_skipempty(BINDIR "/pkg_delete", "-K", pkgdb_get_dir(),
 		    "-p", pkg->prefix,
 		    Destdir ? "-P": "", Destdir ? Destdir : "",
 		    pkg->other_version, NULL);
+		if (result != 0) {
+			warnx("command failed: %s/pkg_delete -K %s -p %s %s%s%s",
+			      BINDIR, pkgdb_get_dir(), pkg->prefix, Destdir ? "-P" : " ",
+			      Destdir ? Destdir : "", pkg->other_version);
+		}
+	}
 
-	/* XXX Check return value and do what? */
-	return 0;
+	return result;
 }
 
 static int check_input(const char *line, size_t len)
