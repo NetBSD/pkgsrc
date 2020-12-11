@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/11 15:12:35 nia Exp $
+bin/tinywm
