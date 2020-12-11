@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/06/20 16:43:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/12/11 08:09:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -107,8 +107,6 @@ ${PYSITELIB}/ipykernel/kernelspec.py
 ${PYSITELIB}/ipykernel/kernelspec.pyc
 ${PYSITELIB}/ipykernel/kernelspec.pyo
 ${PYSITELIB}/ipykernel/log.py
-${PYSITELIB}/ipykernel/log.pyc
-${PYSITELIB}/ipykernel/log.pyo
 ${PYSITELIB}/ipykernel/parentpoller.py
 ${PYSITELIB}/ipykernel/parentpoller.pyc
 ${PYSITELIB}/ipykernel/parentpoller.pyo
