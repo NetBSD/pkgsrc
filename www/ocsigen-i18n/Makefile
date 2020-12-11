@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/04/21 13:02:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2020/12/11 10:58:20 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-i18n
-DISTNAME=	${GITHUB_PROJECT}-3.5.0
+DISTNAME=	${GITHUB_PROJECT}-3.7.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=besport/}
 
