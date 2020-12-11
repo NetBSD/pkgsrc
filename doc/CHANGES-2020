@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6707 2020/12/11 08:47:44 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6708 2020/12/11 08:53:28 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9733,3 +9733,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py-parso to 0.8.1 [adam 2020-12-11]
 	Updated www/ocsigen to 2.16.1 [jaapb 2020-12-11]
 	Updated www/eliom to 6.12.4 [jaapb 2020-12-11]
+	Updated www/ocsigen-toolkit to 2.8.0 [jaapb 2020-12-11]
