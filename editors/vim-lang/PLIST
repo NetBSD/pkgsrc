@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/09/18 23:58:29 morr Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/12/11 18:06:25 morr Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -191,6 +191,8 @@ share/vim/${VIM_SUBDIR}/keymap/hebrewp_iso-8859-8.vim
 share/vim/${VIM_SUBDIR}/keymap/hebrewp_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/kana.vim
 share/vim/${VIM_SUBDIR}/keymap/kazakh-jcuken.vim
+share/vim/${VIM_SUBDIR}/keymap/korean-dubeolsik_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/korean.vim
 share/vim/${VIM_SUBDIR}/keymap/lithuanian-baltic.vim
 share/vim/${VIM_SUBDIR}/keymap/magyar_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/mongolian_utf-8.vim
