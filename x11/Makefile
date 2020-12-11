@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.913 2020/11/29 18:40:46 pin Exp $
+# $NetBSD: Makefile,v 1.914 2020/12/11 17:43:18 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -342,7 +342,6 @@ SUBDIR+=	py-wxWidgets
 SUBDIR+=	py-xcbgen
 SUBDIR+=	qqc2-desktop-style
 SUBDIR+=	qt4
-SUBDIR+=	qt4-creator
 SUBDIR+=	qt4-docs
 SUBDIR+=	qt4-libs
 SUBDIR+=	qt4-mng
