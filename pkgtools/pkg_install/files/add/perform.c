@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.114 2020/12/06 17:23:09 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.115 2020/12/11 10:06:53 jperkin Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.114 2020/12/06 17:23:09 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.115 2020/12/11 10:06:53 jperkin Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -150,6 +150,15 @@ static int
 compatible_platform(const char *opsys, const char *host, const char *package)
 {
     int i = 0;
+
+    /*
+     * If the user has set the CHECK_OS_VERSION variable to "no" then skip any
+     * uname version checks and assume they know what they are doing.  This can
+     * be useful on OS where the kernel version is not a good indicator of
+     * userland compatibility, or differs but retains ABI compatibility.
+     */
+    if (strcasecmp(check_os_version, "no") == 0)
+	return 1;
 
     /* returns 1 if host and package operating system match */
     if (strcmp(host, package) == 0)
