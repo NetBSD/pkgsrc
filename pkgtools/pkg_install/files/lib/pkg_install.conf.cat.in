@@ -60,6 +60,11 @@ DDEESSCCRRIIPPTTIIOONN
              During vulnerability checks, consider packages that have reached
              end-of-life as vulnerable.  This option is enabled by default.
 
+     CHECK_OS_VERSION
+             If "no", pkg_add will not warn if the host OS version does not
+             exactly match the OS version the package was built on.  The
+             default is "yes".
+
      CHECK_OSABI
              If "no", osabi package does not check OS version.  The default is
              "yes".
