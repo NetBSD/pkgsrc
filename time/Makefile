@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2020/11/10 02:19:23 nia Exp $
+# $NetBSD: Makefile,v 1.217 2020/12/11 13:48:48 nia Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -235,6 +235,7 @@ SUBDIR+=	tex-datetime2-usorbian
 SUBDIR+=	tex-datetime2-welsh
 SUBDIR+=	titrax
 SUBDIR+=	todotxt
+SUBDIR+=	tty-clock
 SUBDIR+=	vixie-cron
 SUBDIR+=	wmCalClock
 SUBDIR+=	wmclockmon
