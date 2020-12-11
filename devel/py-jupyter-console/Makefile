@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/10 12:13:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/11 08:10:02 adam Exp $
 
 DISTNAME=	jupyter_console-6.2.0
 PKGNAME=	${PYPKGPREFIX}-jupyter-console-6.2.0
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=1.0.15:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.3.1:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36	# py-ipykernel
 
 post-install:
 .for name in console
