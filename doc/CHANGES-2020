@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6708 2020/12/11 08:53:28 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.6709 2020/12/11 09:11:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9734,3 +9734,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ocsigen to 2.16.1 [jaapb 2020-12-11]
 	Updated www/eliom to 6.12.4 [jaapb 2020-12-11]
 	Updated www/ocsigen-toolkit to 2.8.0 [jaapb 2020-12-11]
+	Updated devel/ocaml-ppx_stable to 0.14.1 [jaapb 2020-12-11]
