@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/29 13:23:40 he Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/12 01:39:37 gutteridge Exp $
 
 PKGNAME=		libatomic-links-1.0
 CATEGORIES=		devel
@@ -6,6 +6,8 @@ CATEGORIES=		devel
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Make libatomic available from a unique directory
 LICENSE=		2-clause-bsd
+
+ONLY_FOR_PLATFORM=	NetBSD-*-powerpc
 
 DEPENDS+=		libatomic-[0-9]*:../../devel/libatomic
 
