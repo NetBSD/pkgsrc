@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.117 2020/12/12 01:44:17 gutteridge Exp $	*/
+/*	$NetBSD: perform.c,v 1.118 2020/12/12 04:12:47 gutteridge Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.117 2020/12/12 01:44:17 gutteridge Exp $");
+__RCSID("$NetBSD: perform.c,v 1.118 2020/12/12 04:12:47 gutteridge Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1190,7 +1190,7 @@ check_dependencies(struct pkg_task *pkg)
 		best_installed = find_best_matching_installed_pkg(p->name, 0);
 		if (best_installed == NULL) {
 			warnx("Expected dependency %s still missing", p->name);
-				return -1;
+			return -1;
 		}
 
 		for (i = 0; i < pkg->dep_length; ++i) {
