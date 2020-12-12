@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2020/11/28 15:56:45 maya Exp $
+# $NetBSD: Makefile,v 1.215 2020/12/12 13:32:51 nia Exp $
 #
 
 COMMENT=	Editors
@@ -59,6 +59,7 @@ SUBDIR+=	gummi
 SUBDIR+=	heme
 SUBDIR+=	hexcurse
 SUBDIR+=	hexedit
+SUBDIR+=	hexer
 SUBDIR+=	hnb
 SUBDIR+=	javascript-mode
 SUBDIR+=	jde
