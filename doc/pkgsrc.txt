@@ -4520,7 +4520,7 @@ checking for gtk-config... /home/roland/pkg/bin/gtk-config
 checking for GTK - version >= 1.2.0... no
 *** Could not run GTK test program, checking why...
 *** The test program failed to compile or link. See the file config.log for the
-*** exact error that occured. This usually means GTK was incorrectly installed
+*** exact error that occurred. This usually means GTK was incorrectly installed
 *** or that you have moved GTK since it was installed. In the latter case, you
 *** may want to edit the gtk-config script: /home/roland/pkg/bin/gtk-config
 configure: error: Test for GTK failed.
@@ -5561,7 +5561,7 @@ ${PLIST.foo}share/bar/foo.data
 
 An artificial space has been added between NetBSD and $, this is a workaround
 here to prevent CVS expanding to the filename of the guide. When adding the RCS
-ID the space should be ommited.
+ID the space should be omitted.
 
 19.5. Man page compression
 
@@ -7003,7 +7003,7 @@ handling perl modules.
 21.4.4. Packages containing shell scripts
 
 REPLACE_SH, REPLACE_BASH, REPLACE_CSH, and REPLACE_KSH can be used to replace
-shell hash bangs in files. Please use the appropriate one, prefering REPLACE_SH
+shell hash bangs in files. Please use the appropriate one, preferring REPLACE_SH
 in case this shell is sufficient. Each should contain a list of scripts,
 relative to WRKSRC, that you want adjusted. Every occurrence of the matching
 shell in a she-bang line will be replaced with the full path to the shell
