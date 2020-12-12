@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.101 2020/11/26 09:15:38 leot Exp $
+@comment $NetBSD: PLIST,v 1.102 2020/12/12 21:16:03 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -194,9 +194,6 @@ ${PYSITELIB}/youtube_dl/extractor/bandcamp.pyo
 ${PYSITELIB}/youtube_dl/extractor/bbc.py
 ${PYSITELIB}/youtube_dl/extractor/bbc.pyc
 ${PYSITELIB}/youtube_dl/extractor/bbc.pyo
-${PYSITELIB}/youtube_dl/extractor/beampro.py
-${PYSITELIB}/youtube_dl/extractor/beampro.pyc
-${PYSITELIB}/youtube_dl/extractor/beampro.pyo
 ${PYSITELIB}/youtube_dl/extractor/beatport.py
 ${PYSITELIB}/youtube_dl/extractor/beatport.pyc
 ${PYSITELIB}/youtube_dl/extractor/beatport.pyo
@@ -698,6 +695,9 @@ ${PYSITELIB}/youtube_dl/extractor/freshlive.pyo
 ${PYSITELIB}/youtube_dl/extractor/frontendmasters.py
 ${PYSITELIB}/youtube_dl/extractor/frontendmasters.pyc
 ${PYSITELIB}/youtube_dl/extractor/frontendmasters.pyo
+${PYSITELIB}/youtube_dl/extractor/fujitv.py
+${PYSITELIB}/youtube_dl/extractor/fujitv.pyc
+${PYSITELIB}/youtube_dl/extractor/fujitv.pyo
 ${PYSITELIB}/youtube_dl/extractor/funimation.py
 ${PYSITELIB}/youtube_dl/extractor/funimation.pyc
 ${PYSITELIB}/youtube_dl/extractor/funimation.pyo
@@ -1700,9 +1700,6 @@ ${PYSITELIB}/youtube_dl/extractor/slideslive.pyo
 ${PYSITELIB}/youtube_dl/extractor/slutload.py
 ${PYSITELIB}/youtube_dl/extractor/slutload.pyc
 ${PYSITELIB}/youtube_dl/extractor/slutload.pyo
-${PYSITELIB}/youtube_dl/extractor/smotri.py
-${PYSITELIB}/youtube_dl/extractor/smotri.pyc
-${PYSITELIB}/youtube_dl/extractor/smotri.pyo
 ${PYSITELIB}/youtube_dl/extractor/snotr.py
 ${PYSITELIB}/youtube_dl/extractor/snotr.pyc
 ${PYSITELIB}/youtube_dl/extractor/snotr.pyo
@@ -1997,6 +1994,9 @@ ${PYSITELIB}/youtube_dl/extractor/tvanouvelles.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvc.py
 ${PYSITELIB}/youtube_dl/extractor/tvc.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvc.pyo
+${PYSITELIB}/youtube_dl/extractor/tver.py
+${PYSITELIB}/youtube_dl/extractor/tver.pyc
+${PYSITELIB}/youtube_dl/extractor/tver.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvigle.py
 ${PYSITELIB}/youtube_dl/extractor/tvigle.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvigle.pyo
