@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.15 2020/12/05 15:50:32 wiz Exp $
+# $NetBSD: NEWS,v 1.16 2020/12/12 10:42:47 fcambus Exp $
 
 PKGSRC NEWS
 ===========
@@ -86,7 +86,7 @@ Check for stripped/unstripped binaries [rillig 20080213]
 
 OpenSSL update [tnn 20080118]
 	OpenSSL in pkgsrc switched from the 0.9.7 to the 0.9.8 branch. To
-	accomodate for this, 596 packages dependent on openssl had their
+	accommodate for this, 596 packages dependent on openssl had their
 	revisions bumped.
 
 pkgsrc-2007Q4 released [agc 20080105]
