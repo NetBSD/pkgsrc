@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6726 2020/12/12 13:22:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6727 2020/12/12 13:33:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9752,3 +9752,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/vim-share to 8.2.2127 [morr 2020-12-11]
 	Updated www/wordpress to 5.6 [morr 2020-12-11]
 	Added sysutils/daemonize version 1.7.8 [nia 2020-12-12]
+	Added editors/hexer version 1.0.6 [nia 2020-12-12]
