@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.28 2020/06/10 16:07:18 leot Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.29 2020/12/12 21:45:41 fcambus Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -172,7 +172,7 @@ ${PLIST.foo}share/bar/foo.data
 
      <para>An artificial space has been added between NetBSD and $, this is a
 workaround here to prevent CVS expanding to the filename of the guide. When
-adding the RCS ID the space should be ommited.</para>
+adding the RCS ID the space should be omitted.</para>
 
   </sect1>
 

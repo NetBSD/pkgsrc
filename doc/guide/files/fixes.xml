@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.159 2020/08/11 20:32:58 bacon Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.160 2020/12/12 21:45:41 fcambus Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1439,7 +1439,7 @@ pre-configure:
     <para><varname>REPLACE_SH</varname>,
     <varname>REPLACE_BASH</varname>, <varname>REPLACE_CSH</varname>,
     and <varname>REPLACE_KSH</varname> can be used to replace shell
-    hash bangs in files. Please use the appropriate one, prefering
+    hash bangs in files. Please use the appropriate one, preferring
     <varname>REPLACE_SH</varname> in case this shell is sufficient.
     Each should contain a list of scripts, relative to
     <varname>WRKSRC</varname>, that you want adjusted. Every
