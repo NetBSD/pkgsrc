@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6728 2020/12/12 21:16:14 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6729 2020/12/12 22:40:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9754,3 +9754,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/daemonize version 1.7.8 [nia 2020-12-12]
 	Added editors/hexer version 1.0.6 [nia 2020-12-12]
 	Updated net/youtube-dl to 20201212 [leot 2020-12-12]
+	Updated net/gallery-dl to 1.16.0 [leot 2020-12-12]
