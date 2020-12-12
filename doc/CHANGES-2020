@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6727 2020/12/12 13:33:12 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6728 2020/12/12 21:16:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9753,3 +9753,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/wordpress to 5.6 [morr 2020-12-11]
 	Added sysutils/daemonize version 1.7.8 [nia 2020-12-12]
 	Added editors/hexer version 1.0.6 [nia 2020-12-12]
+	Updated net/youtube-dl to 20201212 [leot 2020-12-12]
