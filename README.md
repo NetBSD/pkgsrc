@@ -8,7 +8,7 @@ It produces binary packages, which can be managed with tools such as
 [pkgin](http://pkgin.net/). pkgsrc is highly configurable, supporting
 building packages for an arbitrary installation prefix (the default is
 `/usr/pkg`), allowing multiple branches to coexist on one machine, a
-build options framework, and a compiler trasformation framework, among
+build options framework, and a compiler transformation framework, among
 other advanced features. Unprivileged use and installation is also supported.
 
 pkgsrc is the default package manager for [NetBSD](https://www.NetBSD.org)
