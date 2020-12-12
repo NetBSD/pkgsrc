@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2020/12/11 10:02:16 fcambus Exp $
+# $NetBSD: Makefile,v 1.90 2020/12/12 16:41:13 fcambus Exp $
 
 DISTNAME=	binutils-2.35.1
 PKGREVISION=	2
@@ -84,8 +84,6 @@ PLIST.gold=		yes
 USE_TOOLS+=		bison
 CONFIGURE_ARGS+=	--enable-gold --enable-plugins
 .endif
-
-CFLAGS.OpenBSD+=	-Wno-bounded
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
