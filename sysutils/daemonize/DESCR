@@ -1,0 +1,5 @@
+daemonize is a command-line utility that runs a command as a Unix
+daemon in the background.
+
+FreeBSD 5.0 introduced a daemon(1) command that is similar to, but
+less functional, than daemonize.
