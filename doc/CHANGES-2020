@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6729 2020/12/12 22:40:05 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6730 2020/12/12 23:53:47 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9755,3 +9755,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Added editors/hexer version 1.0.6 [nia 2020-12-12]
 	Updated net/youtube-dl to 20201212 [leot 2020-12-12]
 	Updated net/gallery-dl to 1.16.0 [leot 2020-12-12]
+	Updated sysutils/bacula to 9.6.7 [jnemeth 2020-12-12]
+	Updated sysutils/bacula-clientonly to 9.6.7 [jnemeth 2020-12-12]
+	Updated sysutils/bacula-qt-console to 9.6.7 [jnemeth 2020-12-12]
+	Updated sysutils/bacula-qt5-console to 9.6.7 [jnemeth 2020-12-12]
+	Updated sysutils/bacula-tray-monitor to 9.6.7 [jnemeth 2020-12-12]
+	Updated sysutils/bacula-tray-monitor-qt5 to 9.6.7 [jnemeth 2020-12-12]
