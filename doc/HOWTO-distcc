@@ -1,4 +1,4 @@
-$NetBSD: HOWTO-distcc,v 1.2 2013/05/10 00:00:46 riastradh Exp $
+$NetBSD: HOWTO-distcc,v 1.3 2020/12/12 10:42:47 fcambus Exp $
 
 Crosscompiling with distcc HOWTO
 ================================
@@ -71,7 +71,7 @@ crosscompilation tools.
 	distccd -a 192.168.0.137/24  --listen 192.168.0.137 -p 3632
 	-----------
 this will start the `distcc' daemon to listen on the 192.168.0/24 network 
-and listen on 192.168.0.137 specificly and on port 3632 (why doesn't it do 
+and listen on 192.168.0.137 specifically and on port 3632 (why doesn't it do 
 this on default?)
 
 
