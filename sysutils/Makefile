@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.922 2020/12/11 13:38:57 nia Exp $
+# $NetBSD: Makefile,v 1.923 2020/12/12 13:22:23 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -136,6 +136,7 @@ SUBDIR+=	crashme
 SUBDIR+=	cuisine
 SUBDIR+=	cvsreport
 SUBDIR+=	daemond
+SUBDIR+=	daemonize
 SUBDIR+=	daemontools
 SUBDIR+=	daemontools-encore
 SUBDIR+=	daemontools-run
