@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/04/21 11:29:59 jaapb Exp $
+# $NetBSD: Makefile,v 1.43 2020/12/13 13:41:59 mef Exp $
 #
 
 .include "Makefile.common"
@@ -21,6 +21,7 @@ MAKE_ENV+=	LWT_DISCOVER_ARGUMENTS="--use-pthread true --use-libev true --verbose
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/ocaml-cppo/buildlink3.mk"
+.include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../devel/ocaml-migrate-parsetree/buildlink3.mk"
 .include "../../devel/ocaml-mmap/buildlink3.mk"
