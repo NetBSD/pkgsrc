@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/09/12 23:56:44 gdt Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/12/13 00:31:10 gdt Exp $
 bin/qgis
 bin/qgis_bench
 include/qgis/Bezier3D.h
@@ -1325,6 +1325,7 @@ share/qgis/i18n/qgis_pt_BR.qm
 share/qgis/i18n/qgis_pt_PT.qm
 share/qgis/i18n/qgis_ro.qm
 share/qgis/i18n/qgis_ru.qm
+share/qgis/i18n/qgis_sc.qm
 share/qgis/i18n/qgis_sl.qm
 share/qgis/i18n/qgis_sv.qm
 share/qgis/i18n/qgis_tr.qm
