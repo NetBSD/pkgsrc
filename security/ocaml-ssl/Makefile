@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/01/18 21:48:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2020/12/13 13:46:15 mef Exp $
 #
 
 DISTNAME=	ocaml-ssl-0.5.9
@@ -17,5 +17,6 @@ OCAML_USE_DUNE=		yes
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/ocaml.mk"
+.include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
