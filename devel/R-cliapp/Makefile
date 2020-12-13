@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 14:02:18 mef Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/13 23:24:45 mef Exp $
 
 R_PKGNAME=	cliapp
-R_PKGVER=	0.1.0
+R_PKGVER=	0.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
