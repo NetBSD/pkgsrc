@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/13 01:42:50 mef Exp $
+$NetBSD: distinfo,v 1.2 2020/12/13 23:24:45 mef Exp $
 
-SHA1 (R/cliapp_0.1.0.tar.gz) = d6c731dabfb8ef6a6d168138223cc4c1cca3641e
-RMD160 (R/cliapp_0.1.0.tar.gz) = f5ab4963ec4a4a86380f0a16fb2c42b9a11ad4b5
-SHA512 (R/cliapp_0.1.0.tar.gz) = 0597defd0310fc2e8de7d6ea9ae16bb62fac3d0ebb13659e6d3dd3ee9a54182ea10dece629543c82ee205de0c5d0e840a39f47799c4b38713b6e0b2f4f7b9af9
-Size (R/cliapp_0.1.0.tar.gz) = 110795 bytes
+SHA1 (R/cliapp_0.1.1.tar.gz) = 76b849df40234925371bd1dfffb6debc9baeb223
+RMD160 (R/cliapp_0.1.1.tar.gz) = 5b291d28fa7874f0904d50c62d19da11b69aa7fc
+SHA512 (R/cliapp_0.1.1.tar.gz) = a3434b2fec2e221b36ce72e36f67733412cccf11f3c8a39b309566da5b53e897c10a5542e3b5aefbf02ad1d309c5b95c1ddc4365c3de3c0e52eed8a13c51c0aa
+Size (R/cliapp_0.1.1.tar.gz) = 111040 bytes
