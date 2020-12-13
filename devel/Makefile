@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3295 2020/12/11 14:42:01 nia Exp $
+# $NetBSD: Makefile,v 1.3296 2020/12/13 16:22:32 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -484,6 +484,7 @@ SUBDIR+=	go-xerrors
 SUBDIR+=	go-yaml
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
+SUBDIR+=	golangci-lint
 SUBDIR+=	golint
 SUBDIR+=	google-api-go-client
 SUBDIR+=	google-glog
