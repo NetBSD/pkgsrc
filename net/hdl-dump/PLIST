@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/13 15:47:18 nia Exp $
+bin/hdl_dump
