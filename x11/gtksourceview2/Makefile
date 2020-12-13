@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2020/11/05 09:07:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2020/12/13 15:39:40 rillig Exp $
 
 DISTNAME=	gtksourceview-2.10.5
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -16,7 +16,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-build-tests
 
 PKGCONFIG_OVERRIDE=	gtksourceview-2.0.pc.in
 
