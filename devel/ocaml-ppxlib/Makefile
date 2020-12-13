@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/12/10 08:57:18 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2020/12/13 13:18:57 mef Exp $
 
 GITHUB_PROJECT=	ppxlib
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -26,6 +26,7 @@ SUPERSEDES=	ocaml-ppx_ast-[0-9]* \
 .include "../../devel/ocaml-compiler-libs/buildlink3.mk"
 .include "../../devel/ocaml-migrate-parsetree/buildlink3.mk"
 .include "../../devel/ocaml-ppx_derivers/buildlink3.mk"
+.include "../../devel/ocaml-sexplib0/buildlink3.mk"
 .include "../../devel/ocaml-stdlib-shims/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
