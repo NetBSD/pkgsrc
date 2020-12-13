@@ -1,0 +1,4 @@
+cue2pops is a tool for converting PlayStation 1 backups in .CUE/.BIN format to
+.VCD, the format supported by the PlayStation 2's POPS emulator.
+
+The original cue2pops is Windows-only, this is the cue2pops-linux fork.
