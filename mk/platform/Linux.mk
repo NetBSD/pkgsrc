@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.83 2020/01/28 08:38:47 rillig Exp $
+# $NetBSD: Linux.mk,v 1.84 2020/12/13 16:26:12 nia Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -95,6 +95,10 @@ _OPSYS_PREFER.iconv?=		native
 _OPSYS_PREFER.libexecinfo?=	native
 _OPSYS_PREFER.libinotify?=	native
 _OPSYS_PREFER.sysexits?=	native
+
+# We probably want the native library for these
+_OPSYS_PREFER.dl?=		native
+_OPSYS_PREFER.pthread?=		native
 
 .if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
