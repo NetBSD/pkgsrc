@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/01/01 13:19:40 wen Exp $
+$NetBSD: distinfo,v 1.2 2020/12/13 23:51:10 mef Exp $
 
-SHA1 (R/magrittr_1.5.tar.gz) = 174f9188eb2c87702c3ad28f19cf6250cda021f5
-RMD160 (R/magrittr_1.5.tar.gz) = 6e188859e85d5a1af583430af7655fc71f541f2c
-SHA512 (R/magrittr_1.5.tar.gz) = d1e66bab279a08f85405fedee0efea0dc4af058e76d8c0151c620825e01a8cf766bf89eaf24a64c67cadbad05c18f780006837ae0e9ded32c2637ed4df984279
-Size (R/magrittr_1.5.tar.gz) = 200504 bytes
+SHA1 (R/magrittr_2.0.1.tar.gz) = 6f4bc79eec4f1120b0a18bd198480f44be20b625
+RMD160 (R/magrittr_2.0.1.tar.gz) = 3b6784d141d2dbde2d307bab14481d979d076a0b
+SHA512 (R/magrittr_2.0.1.tar.gz) = aa27f64ba09494a5afbe0263ec379c4a73110de45f43c6265437192c01c33a0df6dce98bd0ace021b2f380be84c040c7177b00c396842b3415d137e9e01896d2
+Size (R/magrittr_2.0.1.tar.gz) = 265580 bytes
