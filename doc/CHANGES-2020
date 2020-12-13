@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6738 2020/12/13 22:24:30 mef Exp $
+$NetBSD: CHANGES-2020,v 1.6739 2020/12/13 23:12:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9769,3 +9769,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/hdl-dump version 20200727 [nia 2020-12-13]
 	Added devel/golangci-lint version 1.33.0 [bsiegert 2020-12-13]
 	Updated sysutils/R-processx to 3.4.5 [mef 2020-12-13]
+	Updated devel/R-callr to 3.5.1 [mef 2020-12-13]
