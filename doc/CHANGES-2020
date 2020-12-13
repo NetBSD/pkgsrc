@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6733 2020/12/13 07:22:18 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.6734 2020/12/13 09:13:19 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9764,3 +9764,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/qgis to 3.10.12 [gdt 2020-12-13]
 	Updated devel/p5-Test-BDD-Cucumber to 0.74 [schmonz 2020-12-13]
 	Updated security/py-solo to 0.0.26 [riastradh 2020-12-13]
+	Updated pkgtools/pkgin to 20.12.0 [jperkin 2020-12-13]
