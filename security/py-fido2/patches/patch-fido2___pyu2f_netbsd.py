@@ -1,10 +1,10 @@
-$NetBSD: patch-fido2___pyu2f_netbsd.py,v 1.1 2020/08/17 07:01:34 riastradh Exp $
+$NetBSD: patch-fido2___pyu2f_netbsd.py,v 1.2 2020/12/13 07:20:57 riastradh Exp $
 
 Add NetBSD support.
 
---- fido2/_pyu2f/netbsd.py.orig	2020-08-17 06:25:22.347087325 +0000
+--- fido2/_pyu2f/netbsd.py.orig	2020-12-13 07:06:29.870329750 +0000
 +++ fido2/_pyu2f/netbsd.py
-@@ -0,0 +1,114 @@
+@@ -0,0 +1,151 @@
 +# Copyright 2016 Google Inc. All Rights Reserved.
 +#
 +# Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,28 +27,63 @@ Add NetBSD support.
 +import os
 +import select
 +import struct
-+import sys
 +
++from ctypes import Structure
++from ctypes import c_char
++from ctypes import c_int
++from ctypes import c_ubyte
++from ctypes import c_uint16
++from ctypes import c_uint32
++from ctypes import c_uint8
++from ctypes import sizeof
 +from fcntl import ioctl
 +
 +from . import base
 +from . import linux
 +
 +
-+# struct usb_ctl_report_desc {
-+# 	int		ucrd_size;
-+# 	unsigned char	ucrd_data[1024];
-+# };
++USB_MAX_DEVNAMELEN = 16
++USB_MAX_DEVNAMES = 4
++USB_MAX_STRING_LEN = 128
++USB_MAX_ENCODED_STRING_LEN = USB_MAX_STRING_LEN * 3
 +
-+SIZEOF_USB_CTL_REPORT_DESC = 4 + 1024
-+USB_GET_REPORT_DESC = 0x44045515 # _IOR('U', 21, struct usb_ctl_report_desc)
 +
-+SIZEOF_USB_DEVICE_INFO = 1268
-+USB_DEVICE_INFO_PRODUCT = 1168
-+USB_DEVICE_INFO_VENDOR = 1170
-+USB_GET_DEVICE_INFO = 0x44f45570 # _IOR('U', 112, struct usb_device_info)
++class usb_ctl_report_desc(Structure):
++    _fields_ = [
++        ('ucrd_size', c_int),
++        ('ucrd_data', c_ubyte * 1024),
++    ]
 +
-+USB_HID_SET_RAW = 0x80046802 # _IOW('h', 2, int)
++
++class usb_device_info(Structure):
++    _fields_ = [
++        ('udi_bus', c_uint8),
++        ('udi_addr', c_uint8),
++        ('udi_pad0', c_uint8 * 2),
++        ('udi_cookie', c_uint32),
++        ('udi_product', c_char * USB_MAX_ENCODED_STRING_LEN),
++        ('udi_vendor', c_char * USB_MAX_ENCODED_STRING_LEN),
++        ('udi_release', c_char * 8),
++        ('udi_serial', c_char * USB_MAX_ENCODED_STRING_LEN),
++        ('udi_productNo', c_uint16),
++        ('udi_vendorNo', c_uint16),
++        ('udi_releaseNo', c_uint16),
++        ('udi_class', c_uint8),
++        ('udi_subclass', c_uint8),
++        ('udi_protocol', c_uint8),
++        ('udi_config', c_uint8),
++        ('udi_speed', c_uint8),
++        ('udi_pad1', c_uint8),
++        ('udi_power', c_int),
++        ('udi_nports', c_int),
++        ('udi_devnames', c_char * USB_MAX_DEVNAMES * USB_MAX_DEVNAMELEN),
++        ('udi_ports', c_uint8 * 16),
++    ]
++
++
++USB_GET_DEVICE_INFO = 0x44f45570  # _IOR('U', 112, struct usb_device_info)
++USB_GET_REPORT_DESC = 0x44045515  # _IOR('U', 21, struct usb_ctl_report_desc)
++USB_HID_SET_RAW = 0x80046802      # _IOW('h', 2, int)
 +
 +
 +FIDO_USAGE_PAGE = 0xf1d0
@@ -61,25 +96,27 @@ Add NetBSD support.
 +
 +    @classmethod
 +    def _setup(cls, fd, path):
-+        devinfo = bytearray([0] * SIZEOF_USB_DEVICE_INFO)
-+        ioctl(fd, USB_GET_DEVICE_INFO, devinfo, True)
-+        vendor = devinfo[USB_DEVICE_INFO_VENDOR:USB_DEVICE_INFO_VENDOR + 2]
-+        product = devinfo[USB_DEVICE_INFO_PRODUCT:USB_DEVICE_INFO_PRODUCT + 2]
-+        descbuf = bytearray([0] * SIZEOF_USB_CTL_REPORT_DESC)
-+        ioctl(fd, USB_GET_REPORT_DESC, descbuf, True)
-+        descsize = struct.unpack('@i', descbuf[0:4])[0]
-+        descdata = descbuf[4:4 + descsize]
++        devinfobuf = bytearray(sizeof(usb_device_info))
++        ioctl(fd, USB_GET_DEVICE_INFO, devinfobuf, True)
++        devinfo = usb_device_info.from_buffer(devinfobuf)
++        ucrdbuf = bytearray(sizeof(usb_ctl_report_desc))
++        ioctl(fd, USB_GET_REPORT_DESC, ucrdbuf, True)
++        ucrd = usb_ctl_report_desc.from_buffer(ucrdbuf)
++        descdata = bytearray(ucrd.ucrd_data[:ucrd.ucrd_size])
 +        desc = base.DeviceDescriptor()
 +        desc.path = path
-+        desc.vendor_id = struct.unpack('@H', vendor)[0]
-+        desc.product_id = struct.unpack('@H', product)[0]
++        desc.vendor_id = devinfo.udi_vendorNo
++        desc.vendor_string = devinfo.udi_vendor.decode('utf-8')
++        desc.product_id = devinfo.udi_productNo
++        desc.product_string = devinfo.udi_product.decode('utf-8')
++        desc.serial_number = devinfo.udi_serial.decode('utf-8')
 +        linux.ParseReportDescriptor(descdata, desc)
 +        if desc.usage_page != FIDO_USAGE_PAGE:
 +            raise Exception('usage page != fido')
 +        if desc.usage != FIDO_USAGE_U2FHID:
 +            raise Exception('fido usage != u2fhid')
 +        ioctl(fd, USB_HID_SET_RAW, struct.pack('@i', 1))
-+        ping = bytearray([0] * 64)
++        ping = bytearray(64)
 +        ping[0:7] = bytearray([0xff,0xff,0xff,0xff,0x81,0,1])
 +        for i in range(10):
 +            os.write(fd, ping)
