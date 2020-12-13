@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6732 2020/12/13 06:41:19 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6733 2020/12/13 07:22:18 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9763,3 +9763,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/bacula-tray-monitor-qt5 to 9.6.7 [jnemeth 2020-12-12]
 	Updated geography/qgis to 3.10.12 [gdt 2020-12-13]
 	Updated devel/p5-Test-BDD-Cucumber to 0.74 [schmonz 2020-12-13]
+	Updated security/py-solo to 0.0.26 [riastradh 2020-12-13]
