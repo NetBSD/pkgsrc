@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.790 2020/11/27 10:20:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.791 2020/12/13 07:21:29 riastradh Exp $
 #
 
 COMMENT=	Security tools
@@ -501,6 +501,7 @@ SUBDIR+=	py-signedjson
 SUBDIR+=	py-simplesha3
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smbpasswd
+SUBDIR+=	py-solo
 SUBDIR+=	py-stix
 SUBDIR+=	py-tlslite
 SUBDIR+=	py-trustme
