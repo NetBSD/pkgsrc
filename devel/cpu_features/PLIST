@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/14 15:07:49 tnn Exp $
+bin/list_cpu_features
+include/cpu_features/cpu_features_cache_info.h
+include/cpu_features/cpu_features_macros.h
+include/cpu_features/cpuinfo_${CPU_FEATURES_ARCH}.h
+lib/cmake/CpuFeatures/CpuFeaturesConfig.cmake
+lib/cmake/CpuFeatures/CpuFeaturesConfigVersion.cmake
+lib/cmake/CpuFeatures/CpuFeaturesTargets-release.cmake
+lib/cmake/CpuFeatures/CpuFeaturesTargets.cmake
+lib/libcpu_features.a
