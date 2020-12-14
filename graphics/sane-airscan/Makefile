@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/09 12:05:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/14 09:11:02 nia Exp $
 
 GITHUB_PROJECT=	sane-airscan
 GITHUB_TAG=	0.99.21
@@ -12,6 +12,7 @@ COMMENT=	SANE backend for Apple AirScan (eSCL) and WSD
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -22,6 +23,7 @@ SUBST_VARS.prefix=	PREFIX
 EGDIR=			${PREFIX}/share/examples/
 CONF_FILES=		${EGDIR}/airscan.conf ${PREFIX}/etc/sane.d/airscan.conf
 
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
