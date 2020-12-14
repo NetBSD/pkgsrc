@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2020/12/14 08:46:08 dbj Exp $
+# $NetBSD: Makefile,v 1.90 2020/12/14 08:46:56 dbj Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -21,8 +21,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
-CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib${LIBABISUFFIX:Q}
 CONFIGURE_ENV+=		LIB_RUNTIME_DIR=${PREFIX}/lib
 
 PKGCONFIG_OVERRIDE+=	unix/tk.pc.in
