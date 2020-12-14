@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6751 2020/12/14 11:59:54 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6752 2020/12/14 13:22:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4755,6 +4755,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/stella to 6.1.2 [nia 2020-05-18]
 	Updated emulators/libretro-stella to 6.1.2 [nia 2020-05-18]
 	Added devel/py-lint version 2.5.2 [wiz 2020-05-18]
+	Removed devel/py-lint [wiz 2020-05-18]
 	Added devel/py-test-benchmark version 3.2.3 [wiz 2020-05-18]
 	Updated games/srb2 to 2.2.4 [nia 2020-05-18]
 	Added textproc/py-jsonrpc-server version 0.3.4 [wiz 2020-05-18]
@@ -8467,6 +8468,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/p5-Linux-Inotify2 to 2.2 [mcf 2020-10-08]
 	Added www/gumbo-parser version 0.10.1 [leot 2020-10-08]
 	Updated print/mupdf to 1.18.0 [leot 2020-10-08]
+	Removed devel/py-bumpversion [khorben 2020-10-08]
 	Updated x11/xcb-proto to 1.14.1 [wiz 2020-10-09]
 	Updated x11/py-xcbgen to 1.14.1 [wiz 2020-10-09]
 	Updated games/easyrpg-player to 0.6.2.2 [nia 2020-10-09]
@@ -9269,6 +9271,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/lua-penlight to 1.9.2 [nia 2020-11-23]
 	Updated devel/memcached to 1.6.9 [nia 2020-11-23]
 	Updated net/miniupnpc to 2.2.0 [nia 2020-11-23]
+	Removed www/go-hugo-bin [nikita 2020-11-24]
 	Updated www/go-ace to 0.0.5 [nikita 2020-11-24]
 	Updated sysutils/dmidecode to 3.3 [msaitoh 2020-11-24]
 	Updated devel/py-argcomplete to 1.12.2 [adam 2020-11-24]
