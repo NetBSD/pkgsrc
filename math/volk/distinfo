@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2020/08/01 04:35:09 tnn Exp $
+$NetBSD: distinfo,v 1.2 2020/12/14 19:04:40 tnn Exp $
 
-SHA1 (volk-2.3.0.tar.gz) = c9824143bc8835ca2e9ebb2204dcb8a4836e8958
-RMD160 (volk-2.3.0.tar.gz) = 9cf2d79cdf98ac8b9e935694601f3b33a5852b8d
-SHA512 (volk-2.3.0.tar.gz) = 9e3b405b7be46b4f5ff61a4d42fa9013fc55169bc18c9cf9253e446fe23fd12dc0356adb9aa176e33dfa4cc478e4b9226bee906a2d89ef83bac3b28f52816382
-Size (volk-2.3.0.tar.gz) = 344763 bytes
+SHA1 (volk-2.4.0.tar.gz) = b646d1d52208045b37fc40ffbd9f07c0b04e9ce8
+RMD160 (volk-2.4.0.tar.gz) = 16de9065941f1f0948f1b019542833caa3f968f4
+SHA512 (volk-2.4.0.tar.gz) = 571974e10d664870ff949ca0e79b62905acf5baacbedc951764388dfeeeecd649eccbe60944369cfb49be1f8c67a9ebdac81e2dbeca70eabf513c6c2d32f859e
+Size (volk-2.4.0.tar.gz) = 346354 bytes
+SHA1 (patch-CMakeLists.txt) = fe0571495a1183579dda1a265819f3eb76fe9edf
 SHA1 (patch-include_volk_volk__common.h) = 53e7aa38deaa9cdf68ca12fff6c176be471cf162
 SHA1 (patch-include_volk_volk__complex.h) = 248bf10c03364f7338f03cbaa4ddc8047da9c775
+SHA1 (patch-lib_CMakeLists.txt) = 9cf79e37227c3de1e76610ab01ff43aa9439fcf7

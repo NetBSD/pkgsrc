@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/08/01 04:35:09 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/12/14 19:04:40 tnn Exp $
 
 BUILDLINK_TREE+=	volk
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	volk
 VOLK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.volk+=	volk>=2.3.0
+BUILDLINK_ABI_DEPENDS.volk+=	volk>=2.4.0
 BUILDLINK_PKGSRCDIR.volk?=	../../math/volk
 
 .include "../../devel/orc/buildlink3.mk"

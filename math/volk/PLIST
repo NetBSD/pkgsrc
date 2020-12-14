@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/01 04:35:09 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/12/14 19:04:40 tnn Exp $
 bin/volk-config-info
 bin/volk_modtool
 bin/volk_profile
@@ -158,7 +158,7 @@ lib/cmake/volk/VolkConfigVersion.cmake
 lib/cmake/volk/VolkTargets-release.cmake
 lib/cmake/volk/VolkTargets.cmake
 lib/libvolk.so
-lib/libvolk.so.2.3
+lib/libvolk.so.2.4
 lib/pkgconfig/volk.pc
 ${PYSITELIB}/volk_modtool/__init__.py
 ${PYSITELIB}/volk_modtool/__init__.pyc
