@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/10/22 09:45:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/12/14 06:21:38 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -135,6 +135,9 @@ ${PYSITELIB}/_pytest/py.typed
 ${PYSITELIB}/_pytest/pytester.py
 ${PYSITELIB}/_pytest/pytester.pyc
 ${PYSITELIB}/_pytest/pytester.pyo
+${PYSITELIB}/_pytest/pytester_assertions.py
+${PYSITELIB}/_pytest/pytester_assertions.pyc
+${PYSITELIB}/_pytest/pytester_assertions.pyo
 ${PYSITELIB}/_pytest/python.py
 ${PYSITELIB}/_pytest/python.pyc
 ${PYSITELIB}/_pytest/python.pyo
@@ -168,6 +171,9 @@ ${PYSITELIB}/_pytest/store.pyo
 ${PYSITELIB}/_pytest/terminal.py
 ${PYSITELIB}/_pytest/terminal.pyc
 ${PYSITELIB}/_pytest/terminal.pyo
+${PYSITELIB}/_pytest/threadexception.py
+${PYSITELIB}/_pytest/threadexception.pyc
+${PYSITELIB}/_pytest/threadexception.pyo
 ${PYSITELIB}/_pytest/timing.py
 ${PYSITELIB}/_pytest/timing.pyc
 ${PYSITELIB}/_pytest/timing.pyo
@@ -177,6 +183,9 @@ ${PYSITELIB}/_pytest/tmpdir.pyo
 ${PYSITELIB}/_pytest/unittest.py
 ${PYSITELIB}/_pytest/unittest.pyc
 ${PYSITELIB}/_pytest/unittest.pyo
+${PYSITELIB}/_pytest/unraisableexception.py
+${PYSITELIB}/_pytest/unraisableexception.pyc
+${PYSITELIB}/_pytest/unraisableexception.pyo
 ${PYSITELIB}/_pytest/warning_types.py
 ${PYSITELIB}/_pytest/warning_types.pyc
 ${PYSITELIB}/_pytest/warning_types.pyo
