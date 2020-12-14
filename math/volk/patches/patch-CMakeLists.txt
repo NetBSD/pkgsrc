@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/12/14 19:04:41 tnn Exp $
+
+Use devel/cpu_features from pkgsrc since the volk release tarball doesn't
+bundle it and we need to patch cpu_features anyway.
+
+--- CMakeLists.txt.orig	2020-11-22 16:33:01.000000000 +0000
++++ CMakeLists.txt
+@@ -115,13 +115,7 @@ endif(MSVC)
+ ########################################################################
+ 
+ # cpu_features
+-set(BUILD_PIC ON CACHE BOOL
+-    "Build cpu_features with Position Independent Code (PIC)."
+-    FORCE)
+-set(BUILD_SHARED_LIBS_SAVED "${BUILD_SHARED_LIBS}")
+-set(BUILD_SHARED_LIBS OFF)
+-add_subdirectory(cpu_features)
+-set(BUILD_SHARED_LIBS "${BUILD_SHARED_LIBS_SAVED}")
++find_package(CpuFeatures)
+ 
+ # Python
+ include(VolkPython) #sets PYTHON_EXECUTABLE and PYTHON_DASH_B
