@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2020/08/17 20:18:01 leot Exp $
+# $NetBSD: Makefile,v 1.89 2020/12/14 08:46:08 dbj Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib${LIBABISUFFIX:Q}
 CONFIGURE_ENV+=		LIB_RUNTIME_DIR=${PREFIX}/lib
-PTHREAD_OPTS+=		require
 
 PKGCONFIG_OVERRIDE+=	unix/tk.pc.in
 
@@ -46,5 +45,4 @@ PLIST_SUBST+=		SONUM=${TK_SONUM}
 PLIST_SUBST+=		BASEVER=${TK_BASEVER}
 
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
