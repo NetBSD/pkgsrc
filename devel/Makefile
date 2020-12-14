@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3297 2020/12/14 03:35:23 mef Exp $
+# $NetBSD: Makefile,v 1.3298 2020/12/14 15:17:11 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -33,8 +33,8 @@ SUBDIR+=	R-covr
 SUBDIR+=	R-crayon
 SUBDIR+=	R-cyclocomp
 SUBDIR+=	R-desc
-SUBDIR+=	R-diffobj
 SUBDIR+=	R-devtools
+SUBDIR+=	R-diffobj
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-fansi
 SUBDIR+=	R-fs
@@ -230,6 +230,7 @@ SUBDIR+=	cppcheck
 SUBDIR+=	cppunit
 SUBDIR+=	cpputest
 SUBDIR+=	cproto
+SUBDIR+=	cpu_features
 SUBDIR+=	cpuflags
 SUBDIR+=	cqual
 SUBDIR+=	cre2
