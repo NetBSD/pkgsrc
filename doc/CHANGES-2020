@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6748 2020/12/14 07:31:47 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6749 2020/12/14 11:18:34 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9792,3 +9792,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-msgpack to 1.0.1 [adam 2020-12-14]
 	Updated security/py-cryptography to 3.3.1 [adam 2020-12-14]
 	Updated security/py-cryptography_vectors to 3.3.1 [adam 2020-12-14]
+	Updated net/powerdns-recursor to 4.4.2 [otis 2020-12-14]
