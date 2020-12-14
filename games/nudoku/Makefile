@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/12/01 11:09:18 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/14 09:19:40 nia Exp $
 
 DISTNAME=	nudoku-2.1.0
 CATEGORIES=	games
@@ -8,6 +8,8 @@ MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://jubalh.github.io/nudoku/
 COMMENT=	Ncurses based sudoku game
 LICENSE=	gnu-gpl-v3
+
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 # Fix gettext includes
 SUBST_CLASSES+=		includes
