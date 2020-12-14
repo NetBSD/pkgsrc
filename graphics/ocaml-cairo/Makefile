@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/11/05 09:08:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/14 04:01:17 mef Exp $
 
 GITHUB_PROJECT=	ocaml-cairo
 DISTNAME=	${GITHUB_PROJECT}-0.6.1
@@ -20,5 +20,6 @@ DUNE_BUILD_PACKAGES=	${OCAML_FINDLIB_DIRS}
 
 .include "../../mk/ocaml.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../x11/ocaml-lablgtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
