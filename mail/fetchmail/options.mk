@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2020/10/02 08:20:27 triaxx Exp $
+# $NetBSD: options.mk,v 1.21 2020/12/14 00:41:03 dbj Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=		kerberos4 kerberos gssapi ssl
@@ -13,7 +13,13 @@ PKG_SUGGESTED_OPTIONS=	ssl
 ### Authentication via GSSAPI (currently only over Kerberos V) support.
 ###
 .if !empty(PKG_OPTIONS:Mgssapi)
+.  if ${OPSYS} == "Darwin"
+# Darwin doesn't have include files in ${KRB5BASE}/include
+# so let configure use krb5-config to find kerberos
+CONFIGURE_ARGS+=	--with-gssapi=yes
+.  else
 CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE:Q}
+.  endif
 .else
 CONFIGURE_ARGS+=	--with-gssapi=no
 .endif
@@ -34,7 +40,13 @@ CONFIGURE_ARGS+=	--with-kerberos=no
 .if !empty(PKG_OPTIONS:Mkerberos) || !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
 PKG_USE_KERBEROS=	yes
+.  if ${OPSYS} == "Darwin"
+# Darwin doesn't have include files in ${KRB5BASE}/include
+# so let configure use krb5-config to find kerberos
+CONFIGURE_ARGS+=        --with-kerberos5=yes
+.  else
 CONFIGURE_ARGS+=        --with-kerberos5=${KRB5BASE:Q}
+.  endif
 .else
 CONFIGURE_ARGS+=        --with-kerberos5=no
 .endif
