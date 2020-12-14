@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/12/09 12:28:40 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/12/14 09:08:56 nia Exp $
 
 .include "../../games/stone-soup/Makefile.common"
 
@@ -10,6 +10,7 @@ COMMENT=	Dungeon Crawl Stone Soup - roguelike adventure (tileset version)
 CONFLICTS+=	stone-soup-[0-9]*
 
 TOOL_DEPENDS+=	pngcrush-[0-9]*:../../graphics/pngcrush
+BUILD_DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 MAKE_FLAGS+=	TILES=YesPlease
 MAKE_FLAGS+=	SOUND=YesPlease
