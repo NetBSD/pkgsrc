@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6742 2020/12/13 23:51:20 mef Exp $
+$NetBSD: CHANGES-2020,v 1.6743 2020/12/14 03:35:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9773,3 +9773,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-cliapp to 0.1.1 [mef 2020-12-13]
 	Updated devel/R-clipr to 0.7.1 [mef 2020-12-13]
 	Updated devel/R-magrittr to 2.0.1 [mef 2020-12-13]
+	Updated devel/R-rprojroot to 2.0.2 [mef 2020-12-14]
+	Added devel/R-waldo version 0.2.3 [mef 2020-12-14]
+	Added devel/R-diffobj version 0.3.2 [mef 2020-12-14]
+	Added devel/R-brio version 1.1.0 [mef 2020-12-14]
+	Added www/R-diffviewer version 0.1.0 [mef 2020-12-14]
+	Updated sysutils/R-ps to 1.5.0 [mef 2020-12-14]
