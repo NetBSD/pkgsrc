@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.121 2020/07/29 21:42:30 rjs Exp $
+# $NetBSD: java-vm.mk,v 1.122 2020/12/14 16:51:16 abs Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -73,7 +73,12 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JDKs that may be used.
 #
+# adoptopenjdk11-bin and openjdk-bin do not provide native NetBSD binaries
+.if ${OPSYS} == "NetBSD"
+_PKG_JVMS.9=		openjdk11 adoptopenjdk11-bin openjdk-bin
+.else
 _PKG_JVMS.9=		adoptopenjdk11-bin openjdk-bin openjdk11
+.endif
 _PKG_JVMS.8=		${_PKG_JVMS.9} openjdk8 oracle-jdk8
 _PKG_JVMS.7=		${_PKG_JVMS.8} sun-jdk7
 _PKG_JVMS.6=		${_PKG_JVMS.7} jdk16
