@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/01/04 22:56:59 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/14 14:23:46 adam Exp $
 
-DISTNAME=	intervaltree-3.0.2
+DISTNAME=	intervaltree-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/intervaltree/}
