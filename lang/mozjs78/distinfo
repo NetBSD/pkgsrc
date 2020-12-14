@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2020/12/06 10:50:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/12/14 22:45:10 gutteridge Exp $
 
 SHA1 (mozjs78_78.4.0.orig.tar.xz) = b2c1c241f70310d545f8a3c05b9c8c11676e56a8
 RMD160 (mozjs78_78.4.0.orig.tar.xz) = cef93b6116eff9f04beeaf3dda0a42cd811d0b18
@@ -10,6 +10,7 @@ SHA1 (patch-js_moz.configure) = f3d762b293761e359ac7c389059aa228949a6f0b
 SHA1 (patch-js_src_jit_AtomicOperations.h) = 19eba50673f8138bbb09c0eaca63923cadbadd26
 SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = 84d629df0e7963755aa38ff9a1e29d60ed3adb4c
 SHA1 (patch-js_src_jsfriendapi.h) = f342a88182c1be0d3c0027c91ae94e1d4eac2542
+SHA1 (patch-js_src_tests_jstests.py) = f5387b5ee5f8f898e678494befbc00e21fbb7ebb
 SHA1 (patch-js_src_threading_posix_PosixThread.cpp) = f734abbd005d0353d4adfe865c215c2b86389bf6
 SHA1 (patch-js_src_util_NativeStack.cpp) = 3354064c4168711aa7f83d88336a902345239649
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 155f042eee3a8ff903622860e0a99af1ed776ad5
