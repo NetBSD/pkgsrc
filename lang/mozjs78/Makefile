@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/12/12 02:25:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.13 2020/12/14 22:45:10 gutteridge Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -63,6 +63,10 @@ PKGCONFIG_OVERRIDE+=	js/src/ctypes/libffi/libffi.pc.in
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+TEST_DEPENDS+=			${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+TEST_TARGET=			check-jstests
 
 pre-configure:
 	cd ${WRKSRC}/js/src && \
