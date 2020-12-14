@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/06/20 16:38:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/14 13:58:18 adam Exp $
 
-DISTNAME=	restructuredtext_lint-1.3.1
+DISTNAME=	restructuredtext_lint-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/restructuredtext_lint/}
