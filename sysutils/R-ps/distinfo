@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/08/09 18:38:12 brook Exp $
+$NetBSD: distinfo,v 1.2 2020/12/14 03:26:20 mef Exp $
 
-SHA1 (R/ps_1.3.0.tar.gz) = f4a5a8abf3e5337b5372f4bb300e15b5ef1e58dd
-RMD160 (R/ps_1.3.0.tar.gz) = 9ddd67bb333db97e54192a6db2fd2ecd145dd732
-SHA512 (R/ps_1.3.0.tar.gz) = dedc24076f78b780c370031d3ddf22e64b8f5b11f9248525fc8405c796eafe1028155c42b52c7773d71ce4167f6de9745d21069bab45c3748219eded4829c7bb
-Size (R/ps_1.3.0.tar.gz) = 261887 bytes
+SHA1 (R/ps_1.5.0.tar.gz) = 887fb5723c73598fd67b8209669e3463150f4207
+RMD160 (R/ps_1.5.0.tar.gz) = 076fc7d3b388eb5755d66472182f615a7af1a7d6
+SHA512 (R/ps_1.5.0.tar.gz) = fa916a21aeec64ce3716efe30a6fae5d74d4e3f06b0676a937fd2587bca8f4954a4267da4d2588729dd2b6d15b0060cab793ebce9cfaf400addcbd8351845ff0
+Size (R/ps_1.5.0.tar.gz) = 115131 bytes
