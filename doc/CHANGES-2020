@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6752 2020/12/14 13:22:53 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6753 2020/12/14 13:58:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9798,3 +9798,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/powerdns-recursor to 4.4.2 [otis 2020-12-14]
 	Updated mail/qmail-acceptutils to 20201214 [schmonz 2020-12-14]
 	Updated mail/qmail-run to 20201214 [schmonz 2020-12-14]
+	Updated textproc/py-elementpath to 2.0.5 [adam 2020-12-14]
+	Updated devel/py-restructuredtext_lint to 1.3.2 [adam 2020-12-14]
