@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6747 2020/12/14 06:40:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6748 2020/12/14 07:31:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9790,3 +9790,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test to 6.2.0 [adam 2020-12-14]
 	Updated net/py-zeroconf to 0.28.7 [adam 2020-12-14]
 	Updated devel/py-msgpack to 1.0.1 [adam 2020-12-14]
+	Updated security/py-cryptography to 3.3.1 [adam 2020-12-14]
+	Updated security/py-cryptography_vectors to 3.3.1 [adam 2020-12-14]
