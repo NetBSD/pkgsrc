@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2020/12/14 00:41:03 dbj Exp $
+
+krb5-config errors out unless you give it a library to look for
+
+--- configure.orig	2020-09-04 08:19:51.000000000 +0000
++++ configure
+@@ -10797,7 +10797,7 @@ $as_echo "#define KERBEROS_V5 1" >>confd
+ 
+   CFLAGS="$CFLAGS -I/usr/include/kerberosV"
+   LIBS="$LIBS -lasn1 -lkrb5 -lcom_err -lkafs"
+-elif krb5-config 2> /dev/null >/dev/null ; then
++elif krb5-config krb5 2> /dev/null >/dev/null ; then
+   krb5_prefix=`krb5-config --prefix krb5`
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: krb5-config points to kerberosV under $krb5_prefix" >&5
+ $as_echo "krb5-config points to kerberosV under $krb5_prefix" >&6; }
+@@ -11145,7 +11145,7 @@ $as_echo "krb4-config points to kerberos
+   CFLAGS="$CFLAGS `krb4-config --cflags`"
+   LIBS="$LIBS `krb4-config --libs`"
+   KERBEROS_V4=1
+-elif krb5-config 2> /dev/null >/dev/null ; then
++elif krb5-config krb4 2> /dev/null >/dev/null ; then
+   krb4_prefix=`krb5-config --prefix krb4`
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: krb5-config points to kerberosIV under $krb4_prefix" >&5
+ $as_echo "krb5-config points to kerberosIV under $krb4_prefix" >&6; }
