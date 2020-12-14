@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3296 2020/12/13 16:22:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3297 2020/12/14 03:35:23 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -22,6 +22,7 @@ SUBDIR+=	R-bindr
 SUBDIR+=	R-bit
 SUBDIR+=	R-bit64
 SUBDIR+=	R-blob
+SUBDIR+=	R-brio
 SUBDIR+=	R-caTools
 SUBDIR+=	R-callr
 SUBDIR+=	R-checkmate
@@ -32,6 +33,7 @@ SUBDIR+=	R-covr
 SUBDIR+=	R-crayon
 SUBDIR+=	R-cyclocomp
 SUBDIR+=	R-desc
+SUBDIR+=	R-diffobj
 SUBDIR+=	R-devtools
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-fansi
@@ -73,6 +75,7 @@ SUBDIR+=	R-tidyselect
 SUBDIR+=	R-tinytest
 SUBDIR+=	R-usethis
 SUBDIR+=	R-uuid
+SUBDIR+=	R-waldo
 SUBDIR+=	R-whisker
 SUBDIR+=	R-withr
 SUBDIR+=	R-xfun
