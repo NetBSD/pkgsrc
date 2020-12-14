@@ -1,0 +1,2 @@
+A cross-platform C library to retrieve CPU features
+(such as available instructions) at runtime.
