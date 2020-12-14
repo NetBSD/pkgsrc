@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6756 2020/12/14 16:50:31 abs Exp $
+$NetBSD: CHANGES-2020,v 1.6757 2020/12/14 19:06:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9804,3 +9804,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-intervaltree to 3.1.0 [adam 2020-12-14]
 	Added devel/cpu_features version 0.6.0 [tnn 2020-12-14]
 	Updated net/syncthing to 1.12.0 [abs 2020-12-14]
+	Updated math/volk to 2.4.0 [tnn 2020-12-14]
