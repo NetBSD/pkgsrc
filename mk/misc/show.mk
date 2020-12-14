@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.26 2020/09/12 21:27:15 rillig Exp $
+# $NetBSD: show.mk,v 1.27 2020/12/14 00:14:48 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -92,12 +92,25 @@ show-build-defs: .PHONY
 #	For each of these groups, a specialized target show-all-${group}
 #	is defined, e.g. "show-all-extract" for the "extract" group.
 #
-#	CAVEAT: Some few variable values that are shown here may be
-#	misleading. For example, make(1)'s := operator leaves references
-#	to undefined variables as-is, so they may be resolved later. So
-#	if you want to take a snapshot of the exact value of a variable,
-#	you have to use "snapshot!=printf %s ''${var:q}" instead of
-#	"snapshot:=${var}".
+#	CAVEAT: There are a few extreme edge cases in which the variable
+#	values that are shown here are not 100% correct. The closest you
+#	can get are the following:
+#
+#		* To see the unexpanded definition of a variable while the
+#		  Makefile or an included file is parsed, run "bmake -dcpv",
+#		  which adds a lot of debug logging.
+#		* To see the unexpanded definition of a variable at the end
+#		  of parsing the Makefile, run "bmake -V VARNAME".
+#		* To see the expanded value of a variable while the Makefile
+#		  or an included file is parsed, add a line of the form
+#		  ".info ${VARNAME}" to that makefile.
+#		* To see the expanded value of a variable at the end of
+#		  parsing the Makefile, run "bmake -v VARNAME".
+#
+#	In some cases, the actual value of a variable depends on the targets
+#	that are given on the command line, or whether bmake is run
+#	recursively, or whether a directory inside WRKSRC already exists.
+#	There is nothing the pkgsrc infrastructure can do about this.
 #
 # Keywords: debug show _vargroups
 #
