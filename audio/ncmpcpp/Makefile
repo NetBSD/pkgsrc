@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/11 10:12:42 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/14 09:03:39 nia Exp $
 
 DISTNAME=	ncmpcpp-0.8.2
 CATEGORIES=	audio
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 FAKE_NCURSES=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-USE_CURSES=	wide
+USE_CURSES=	wide getmouse
 
 .include "../../mk/curses.buildlink3.mk"
 
