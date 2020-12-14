@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/11/24 08:56:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/12/14 07:31:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -49,6 +49,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DH/KASValidityTest_FFCStatic_NOKC_Z
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/KASValidityTest_FFCStatic_NOKC_ZZOnly_resp.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/RFC5114.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/bad_exchange.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/DH/dh_key_256.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhkey.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhkey.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhkey.txt
