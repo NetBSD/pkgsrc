@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.60 2020/03/22 21:17:30 joerg Exp $
+# $NetBSD: NetBSD.mk,v 1.61 2020/12/14 21:45:43 js Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -136,13 +136,15 @@ _OPSYS_SUPPORTS_FORTIFY=yes
 
 # Register support for PIE on supported architectures (with GCC)
 .if (${MACHINE_ARCH} == "i386") || \
-    (${MACHINE_ARCH} == "x86_64")
+    (${MACHINE_ARCH} == "x86_64") || \
+    (${MACHINE_ARCH} == "aarch64")
 _OPSYS_SUPPORTS_MKPIE=	yes
 .endif
 
 # Register support for RELRO on supported architectures
 .if (${MACHINE_ARCH} == "i386") || \
-    (${MACHINE_ARCH} == "x86_64")
+    (${MACHINE_ARCH} == "x86_64") || \
+    (${MACHINE_ARCH} == "aarch64")
 _OPSYS_SUPPORTS_RELRO=	yes
 .endif
 
