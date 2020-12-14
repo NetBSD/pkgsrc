@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.55 2020/10/02 08:20:27 triaxx Exp $
+$NetBSD: distinfo,v 1.56 2020/12/14 00:41:03 dbj Exp $
 
 SHA1 (fetchmail-6.4.12.tar.xz) = e8705405ae944ac976f3972722158a7cf11735ad
 RMD160 (fetchmail-6.4.12.tar.xz) = 343bc036a10b0a4bdb0fe090c9cac0db387d029d
 SHA512 (fetchmail-6.4.12.tar.xz) = 277c324bab528a036f2896909b63baaa68d986b79baa24e2ee5cd8ca1d86082d4cd41ca371114fc8ae150eb0f97af50fd5238e88485ad5c701699b69964fe256
 Size (fetchmail-6.4.12.tar.xz) = 1303532 bytes
 SHA1 (patch-Makefile.in) = 9cd2053a7c8bbbf6f71fcee03e33c0d29d235c4e
+SHA1 (patch-configure) = f5db59db380755d8b9fc8f75e723fd729ca06c30
+SHA1 (patch-configure.ac) = 9ff885f7d40a749f628d35a8408b1860f8017362
