@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2020/03/26 22:02:29 joerg Exp $
+# $NetBSD: options.mk,v 1.8 2020/12/14 08:46:08 dbj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tk
 PKG_SUPPORTED_OPTIONS=	threads debug xft2
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--enable-symbols
 
 .if !empty(PKG_OPTIONS:Mthreads)
 CONFIGURE_ARGS+=	--enable-threads
+PTHREAD_OPTS+=		require
 .include "../../mk/pthread.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-threads
