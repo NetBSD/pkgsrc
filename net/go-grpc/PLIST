@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/11 20:03:27 minskim Exp $
-bin/client
+@comment $NetBSD: PLIST,v 1.4 2020/12/15 20:08:12 bsiegert Exp $
 bin/go_vet
 bin/http2
 bin/metrics_client
-bin/server
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/channelz/grpc_channelz_v1.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/channelz/service.a
@@ -93,7 +91,6 @@ gopkg/src/google.golang.org/grpc/benchmark/benchmark.go
 gopkg/src/google.golang.org/grpc/benchmark/benchmark16_test.go
 gopkg/src/google.golang.org/grpc/benchmark/benchmark17_test.go
 gopkg/src/google.golang.org/grpc/benchmark/benchresult/main.go
-gopkg/src/google.golang.org/grpc/benchmark/client/main.go
 gopkg/src/google.golang.org/grpc/benchmark/grpc_testing/control.pb.go
 gopkg/src/google.golang.org/grpc/benchmark/grpc_testing/control.proto
 gopkg/src/google.golang.org/grpc/benchmark/grpc_testing/messages.pb.go
@@ -110,7 +107,6 @@ gopkg/src/google.golang.org/grpc/benchmark/primitives/code_string_test.go
 gopkg/src/google.golang.org/grpc/benchmark/primitives/context_test.go
 gopkg/src/google.golang.org/grpc/benchmark/primitives/primitives_test.go
 gopkg/src/google.golang.org/grpc/benchmark/run_bench.sh
-gopkg/src/google.golang.org/grpc/benchmark/server/main.go
 gopkg/src/google.golang.org/grpc/benchmark/stats/histogram.go
 gopkg/src/google.golang.org/grpc/benchmark/stats/stats.go
 gopkg/src/google.golang.org/grpc/benchmark/stats/util.go
@@ -187,18 +183,12 @@ gopkg/src/google.golang.org/grpc/examples/helloworld/helloworld/helloworld.pb.go
 gopkg/src/google.golang.org/grpc/examples/helloworld/helloworld/helloworld.proto
 gopkg/src/google.golang.org/grpc/examples/helloworld/mock_helloworld/hw_mock.go
 gopkg/src/google.golang.org/grpc/examples/helloworld/mock_helloworld/hw_mock_test.go
-gopkg/src/google.golang.org/grpc/examples/oauth/client/main.go
-gopkg/src/google.golang.org/grpc/examples/oauth/server/main.go
 gopkg/src/google.golang.org/grpc/examples/route_guide/README.md
-gopkg/src/google.golang.org/grpc/examples/route_guide/client/client.go
 gopkg/src/google.golang.org/grpc/examples/route_guide/mock_routeguide/rg_mock.go
 gopkg/src/google.golang.org/grpc/examples/route_guide/mock_routeguide/rg_mock_test.go
 gopkg/src/google.golang.org/grpc/examples/route_guide/routeguide/route_guide.pb.go
 gopkg/src/google.golang.org/grpc/examples/route_guide/routeguide/route_guide.proto
-gopkg/src/google.golang.org/grpc/examples/route_guide/server/server.go
 gopkg/src/google.golang.org/grpc/examples/route_guide/testdata/route_guide_db.json
-gopkg/src/google.golang.org/grpc/examples/rpc_errors/client/main.go
-gopkg/src/google.golang.org/grpc/examples/rpc_errors/server/main.go
 gopkg/src/google.golang.org/grpc/go.mod
 gopkg/src/google.golang.org/grpc/go.sum
 gopkg/src/google.golang.org/grpc/go16.go
@@ -247,13 +237,9 @@ gopkg/src/google.golang.org/grpc/internal/transport/http_util_test.go
 gopkg/src/google.golang.org/grpc/internal/transport/log.go
 gopkg/src/google.golang.org/grpc/internal/transport/transport.go
 gopkg/src/google.golang.org/grpc/internal/transport/transport_test.go
-gopkg/src/google.golang.org/grpc/interop/alts/client/client.go
-gopkg/src/google.golang.org/grpc/interop/alts/server/server.go
-gopkg/src/google.golang.org/grpc/interop/client/client.go
 gopkg/src/google.golang.org/grpc/interop/grpc_testing/test.pb.go
 gopkg/src/google.golang.org/grpc/interop/grpc_testing/test.proto
 gopkg/src/google.golang.org/grpc/interop/http2/negative_http2_client.go
-gopkg/src/google.golang.org/grpc/interop/server/server.go
 gopkg/src/google.golang.org/grpc/interop/test_utils.go
 gopkg/src/google.golang.org/grpc/keepalive/keepalive.go
 gopkg/src/google.golang.org/grpc/metadata/metadata.go
@@ -315,7 +301,6 @@ gopkg/src/google.golang.org/grpc/status/go17_test.go
 gopkg/src/google.golang.org/grpc/status/status.go
 gopkg/src/google.golang.org/grpc/status/status_test.go
 gopkg/src/google.golang.org/grpc/stream.go
-gopkg/src/google.golang.org/grpc/stress/client/main.go
 gopkg/src/google.golang.org/grpc/stress/grpc_testing/metrics.pb.go
 gopkg/src/google.golang.org/grpc/stress/grpc_testing/metrics.proto
 gopkg/src/google.golang.org/grpc/stress/metrics_client/main.go
@@ -342,3 +327,6 @@ gopkg/src/google.golang.org/grpc/testdata/testdata.go
 gopkg/src/google.golang.org/grpc/trace.go
 gopkg/src/google.golang.org/grpc/version.go
 gopkg/src/google.golang.org/grpc/vet.sh
+@pkgdir gopkg/src/google.golang.org/grpc/interop/alts
+@pkgdir gopkg/src/google.golang.org/grpc/examples/rpc_errors
+@pkgdir gopkg/src/google.golang.org/grpc/examples/oauth
