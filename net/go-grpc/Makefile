@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/11/13 19:26:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.35 2020/12/15 20:08:12 bsiegert Exp $
 
 DISTNAME=		go-grpc-1.15.0
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_PROJECT=		grpc-go
@@ -32,6 +32,10 @@ REPLACE_SH+=	credentials/alts/internal/regenerate.sh
 REPLACE_SH+=	health/regenerate.sh
 REPLACE_SH+=	install_gae.sh
 REPLACE_SH+=	vet.sh
+
+pre-patch:
+	find ${WRKSRC} -type d -name server | xargs ${RM} -rf
+	find ${WRKSRC} -type d -name client | xargs ${RM} -rf
 
 .include "../../devel/go-glog/buildlink3.mk"
 .include "../../devel/go-protobuf/buildlink3.mk"
