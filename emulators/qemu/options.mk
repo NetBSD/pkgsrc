@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2020/09/27 21:27:27 jakllsch Exp $
+# $NetBSD: options.mk,v 1.13 2020/12/15 16:50:08 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi sdl spice
-PKG_SUGGESTED_OPTIONS+=	iscsi
+PKG_SUGGESTED_OPTIONS+=	iscsi spice
 
 .include "../../mk/bsd.fast.prefs.mk"
 
