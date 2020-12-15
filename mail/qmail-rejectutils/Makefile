@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/11/19 09:35:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2020/12/15 10:28:49 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-rejectutils-${RJPATCHVERSION}
-PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://netqmail.org/
 
@@ -11,7 +10,7 @@ HOMEPAGE=		https://schmonz.com/qmail/rejectutils/
 COMMENT=		Reject messages at SMTP according to multiple criteria
 LICENSE=		public-domain
 
-RJPATCHVERSION=		20181230
+RJPATCHVERSION=		20201215
 RJPATCH=		${DISTNAME}-rejectutils-${RJPATCHVERSION}.patch
 PATCHFILES+=		${RJPATCH}
 SITES.${RJPATCH}=	${HOMEPAGE}
