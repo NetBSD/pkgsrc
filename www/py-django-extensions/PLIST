@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2020/04/27 10:20:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/12/15 11:59:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/django_extensions/__init__.py
 ${PYSITELIB}/django_extensions/__init__.pyc
@@ -16,6 +15,9 @@ ${PYSITELIB}/django_extensions/admin/filter.pyo
 ${PYSITELIB}/django_extensions/admin/widgets.py
 ${PYSITELIB}/django_extensions/admin/widgets.pyc
 ${PYSITELIB}/django_extensions/admin/widgets.pyo
+${PYSITELIB}/django_extensions/apps.py
+${PYSITELIB}/django_extensions/apps.pyc
+${PYSITELIB}/django_extensions/apps.pyo
 ${PYSITELIB}/django_extensions/auth/__init__.py
 ${PYSITELIB}/django_extensions/auth/__init__.pyc
 ${PYSITELIB}/django_extensions/auth/__init__.pyo
@@ -52,9 +54,6 @@ ${PYSITELIB}/django_extensions/db/__init__.pyo
 ${PYSITELIB}/django_extensions/db/fields/__init__.py
 ${PYSITELIB}/django_extensions/db/fields/__init__.pyc
 ${PYSITELIB}/django_extensions/db/fields/__init__.pyo
-${PYSITELIB}/django_extensions/db/fields/encrypted.py
-${PYSITELIB}/django_extensions/db/fields/encrypted.pyc
-${PYSITELIB}/django_extensions/db/fields/encrypted.pyo
 ${PYSITELIB}/django_extensions/db/fields/json.py
 ${PYSITELIB}/django_extensions/db/fields/json.pyc
 ${PYSITELIB}/django_extensions/db/fields/json.pyo
@@ -105,6 +104,8 @@ ${PYSITELIB}/django_extensions/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/hu/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/hu/LC_MESSAGES/django.po
+${PYSITELIB}/django_extensions/locale/id/LC_MESSAGES/django.mo
+${PYSITELIB}/django_extensions/locale/id/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/ja/LC_MESSAGES/django.mo
@@ -185,6 +186,12 @@ ${PYSITELIB}/django_extensions/management/commands/generate_secret_key.pyo
 ${PYSITELIB}/django_extensions/management/commands/graph_models.py
 ${PYSITELIB}/django_extensions/management/commands/graph_models.pyc
 ${PYSITELIB}/django_extensions/management/commands/graph_models.pyo
+${PYSITELIB}/django_extensions/management/commands/list_model_info.py
+${PYSITELIB}/django_extensions/management/commands/list_model_info.pyc
+${PYSITELIB}/django_extensions/management/commands/list_model_info.pyo
+${PYSITELIB}/django_extensions/management/commands/list_signals.py
+${PYSITELIB}/django_extensions/management/commands/list_signals.pyc
+${PYSITELIB}/django_extensions/management/commands/list_signals.pyo
 ${PYSITELIB}/django_extensions/management/commands/mail_debug.py
 ${PYSITELIB}/django_extensions/management/commands/mail_debug.pyc
 ${PYSITELIB}/django_extensions/management/commands/mail_debug.pyo
@@ -194,9 +201,6 @@ ${PYSITELIB}/django_extensions/management/commands/merge_model_instances.pyo
 ${PYSITELIB}/django_extensions/management/commands/notes.py
 ${PYSITELIB}/django_extensions/management/commands/notes.pyc
 ${PYSITELIB}/django_extensions/management/commands/notes.pyo
-${PYSITELIB}/django_extensions/management/commands/passwd.py
-${PYSITELIB}/django_extensions/management/commands/passwd.pyc
-${PYSITELIB}/django_extensions/management/commands/passwd.pyo
 ${PYSITELIB}/django_extensions/management/commands/pipchecker.py
 ${PYSITELIB}/django_extensions/management/commands/pipchecker.pyc
 ${PYSITELIB}/django_extensions/management/commands/pipchecker.pyo
@@ -242,9 +246,6 @@ ${PYSITELIB}/django_extensions/management/commands/shell_plus.pyo
 ${PYSITELIB}/django_extensions/management/commands/show_template_tags.py
 ${PYSITELIB}/django_extensions/management/commands/show_template_tags.pyc
 ${PYSITELIB}/django_extensions/management/commands/show_template_tags.pyo
-${PYSITELIB}/django_extensions/management/commands/show_templatetags.py
-${PYSITELIB}/django_extensions/management/commands/show_templatetags.pyc
-${PYSITELIB}/django_extensions/management/commands/show_templatetags.pyo
 ${PYSITELIB}/django_extensions/management/commands/show_urls.py
 ${PYSITELIB}/django_extensions/management/commands/show_urls.pyc
 ${PYSITELIB}/django_extensions/management/commands/show_urls.pyo
@@ -311,9 +312,6 @@ ${PYSITELIB}/django_extensions/mongodb/__init__.pyo
 ${PYSITELIB}/django_extensions/mongodb/fields/__init__.py
 ${PYSITELIB}/django_extensions/mongodb/fields/__init__.pyc
 ${PYSITELIB}/django_extensions/mongodb/fields/__init__.pyo
-${PYSITELIB}/django_extensions/mongodb/fields/encrypted.py
-${PYSITELIB}/django_extensions/mongodb/fields/encrypted.pyc
-${PYSITELIB}/django_extensions/mongodb/fields/encrypted.pyo
 ${PYSITELIB}/django_extensions/mongodb/fields/json.py
 ${PYSITELIB}/django_extensions/mongodb/fields/json.pyc
 ${PYSITELIB}/django_extensions/mongodb/fields/json.pyo
@@ -350,9 +348,6 @@ ${PYSITELIB}/django_extensions/templatetags/indent_text.pyo
 ${PYSITELIB}/django_extensions/templatetags/syntax_color.py
 ${PYSITELIB}/django_extensions/templatetags/syntax_color.pyc
 ${PYSITELIB}/django_extensions/templatetags/syntax_color.pyo
-${PYSITELIB}/django_extensions/templatetags/truncate_letters.py
-${PYSITELIB}/django_extensions/templatetags/truncate_letters.pyc
-${PYSITELIB}/django_extensions/templatetags/truncate_letters.pyo
 ${PYSITELIB}/django_extensions/templatetags/widont.py
 ${PYSITELIB}/django_extensions/templatetags/widont.pyc
 ${PYSITELIB}/django_extensions/templatetags/widont.pyo
@@ -365,6 +360,9 @@ ${PYSITELIB}/django_extensions/utils/deprecation.pyo
 ${PYSITELIB}/django_extensions/utils/dia2django.py
 ${PYSITELIB}/django_extensions/utils/dia2django.pyc
 ${PYSITELIB}/django_extensions/utils/dia2django.pyo
+${PYSITELIB}/django_extensions/utils/internal_ips.py
+${PYSITELIB}/django_extensions/utils/internal_ips.pyc
+${PYSITELIB}/django_extensions/utils/internal_ips.pyo
 ${PYSITELIB}/django_extensions/validators.py
 ${PYSITELIB}/django_extensions/validators.pyc
 ${PYSITELIB}/django_extensions/validators.pyo
