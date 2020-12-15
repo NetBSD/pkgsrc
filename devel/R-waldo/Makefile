@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/14 03:17:45 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/15 05:12:18 mef Exp $
 
 R_PKGNAME=	waldo
 R_PKGVER=	0.2.3
@@ -9,13 +9,13 @@ COMMENT=	Find Differences Between R Objects
 LICENSE=	mit	# + file LICENSE
 
 DEPENDS+=	R-cli>=2.0.2:../../devel/R-cli
+DEPENDS+=	R-diffobj-[0-9]*:../../devel/R-diffobj
 DEPENDS+=	R-fansi>=0.4.0:../../devel/R-fansi
 DEPENDS+=	R-glue>=1.4.1:../../devel/R-glue
 DEPENDS+=	R-rematch2>=2.1.2:../../devel/R-rematch2
 DEPENDS+=	R-rlang>=0.4.7:../../devel/R-rlang
 DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
 
-TEST_DEPENDS+=	R-diffobj-[0-9]*:../../devel/R-diffobj
 TEST_DEPENDS+=	R-rematch2-[0-9]*:../../devel/R-rematch2
 
 USE_LANGUAGES=	# none
