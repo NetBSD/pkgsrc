@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6758 2020/12/15 08:57:52 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6759 2020/12/15 09:07:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9807,3 +9807,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/volk to 2.4.0 [tnn 2020-12-14]
 	Updated devel/py-google-api-core to 1.24.0 [adam 2020-12-15]
 	Updated textproc/py-regex to 2020.11.13 [adam 2020-12-15]
+	Updated textproc/py-rapidjson to 1.0 [adam 2020-12-15]
+	Updated www/py-landslide to 1.1.8 [adam 2020-12-15]
