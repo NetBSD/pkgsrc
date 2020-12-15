@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6761 2020/12/15 12:05:17 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6762 2020/12/15 13:02:30 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9812,3 +9812,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/qmail-rejectutils to 20201215 [schmonz 2020-12-15]
 	Updated www/py-django-extensions to 3.1.0 [adam 2020-12-15]
 	Updated security/py-certifi to 2020.12.5 [adam 2020-12-15]
+	Updated emulators/PC6001VX to 3.6.0 [tsutsui 2020-12-15]
