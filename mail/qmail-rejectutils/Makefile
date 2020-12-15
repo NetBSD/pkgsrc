@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/12/15 10:28:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2020/12/15 11:00:24 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-rejectutils-${RJPATCHVERSION}
@@ -18,6 +18,8 @@ SITES.${RJPATCH}=	${HOMEPAGE}
 CONFLICTS+=		qmail<=1.03nb32
 
 BUILD_TARGET=		rejectutils
+
+CPPFLAGS+=		-DQMAIL_QUEUE_CUSTOM_ERROR=1
 
 REJECTUTILS=		qmail-qfilter-queue		\
 			qmail-qfilter-viruscan		\
