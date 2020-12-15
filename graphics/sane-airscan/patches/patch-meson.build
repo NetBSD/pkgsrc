@@ -1,15 +1,17 @@
-$NetBSD: patch-meson.build,v 1.1 2020/12/09 12:05:58 ryoon Exp $
+$NetBSD: patch-meson.build,v 1.2 2020/12/15 09:32:23 nia Exp $
 
 * Install configuration file under share/examples for pkgsrc.
 
 --- meson.build.orig	2020-11-23 19:47:02.000000000 +0000
 +++ meson.build
-@@ -91,7 +91,7 @@ endforeach
+@@ -91,8 +91,8 @@ endforeach
  install_man('sane-airscan.5')
  install_man('airscan-discover.1')
  install_data('airscan.conf',
 -  install_dir: join_paths(get_option('sysconfdir'),  'sane.d')
-+  install_dir: '@PREFIX@/share/examples'
++  install_dir: join_paths(get_option('prefix'), 'share', 'examples', 'sane.d')
  )
  install_data(dll_file,
-   install_dir: join_paths(get_option('sysconfdir'),  'sane.d', 'dll.d')
+-  install_dir: join_paths(get_option('sysconfdir'),  'sane.d', 'dll.d')
++  install_dir: join_paths(get_option('prefix'), 'share', 'examples', 'sane.d', 'dll.d')
+ )
