@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.16 2020/12/12 10:42:47 fcambus Exp $
+# $NetBSD: NEWS,v 1.17 2020/12/15 08:36:02 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -16,14 +16,9 @@ Default database location changed for NetBSD [wiz 2020-12-02]
 	other operating systems and cases where a non-default bootstrap
 	is used.
 
-	To deal with this change, run the following commands:
+	To deal with this change, see this blog post:
 
-	cd /usr/pkgsrc/pkgtools/pkg_install
-	make USE_CWRAPPERS=no install
-	cd /usr/pkg/sbin
-	install -c pkg_add pkg_admin pkg_create pkg_delete pkg_info /usr/sbin/
-	mv /var/db/pkg /usr/pkg/pkgdb
-	mv /var/db/pkg.refcount /usr/pkg/pkgdb.refcount
+	https://pkgsrc.org/news/pkgdb-change/
 
 	Since this change affects the packaging tools only, there is no change
 	to binary packages and they do not need to be rebuilt.
