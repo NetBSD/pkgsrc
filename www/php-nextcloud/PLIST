@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2020/11/29 05:10:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.37 2020/12/16 13:53:43 ryoon Exp $
 share/nextcloud/.htaccess
 share/nextcloud/.user.ini
 share/nextcloud/3rdparty/.github/workflows/composer.yml
@@ -2056,9 +2056,6 @@ share/nextcloud/3rdparty/icewind/streams/src/SeekableWrapper.php
 share/nextcloud/3rdparty/icewind/streams/src/Url.php
 share/nextcloud/3rdparty/icewind/streams/src/UrlCallBack.php
 share/nextcloud/3rdparty/icewind/streams/src/Wrapper.php
-share/nextcloud/3rdparty/interfasys/lognormalizer/AUTHORS.md
-share/nextcloud/3rdparty/interfasys/lognormalizer/COPYING
-share/nextcloud/3rdparty/interfasys/lognormalizer/src/Normalizer.php
 share/nextcloud/3rdparty/jeremeamia/SuperClosure/LICENSE.md
 share/nextcloud/3rdparty/jeremeamia/SuperClosure/composer.json
 share/nextcloud/3rdparty/jeremeamia/SuperClosure/src/Analyzer/AstAnalyzer.php
@@ -2371,6 +2368,8 @@ share/nextcloud/3rdparty/mtdowling/jmespath.php/src/SyntaxErrorException.php
 share/nextcloud/3rdparty/mtdowling/jmespath.php/src/TreeCompiler.php
 share/nextcloud/3rdparty/mtdowling/jmespath.php/src/TreeInterpreter.php
 share/nextcloud/3rdparty/mtdowling/jmespath.php/src/Utils.php
+share/nextcloud/3rdparty/nextcloud/lognormalizer/COPYING
+share/nextcloud/3rdparty/nextcloud/lognormalizer/src/Normalizer.php
 share/nextcloud/3rdparty/nikic/php-parser/.gitattributes
 share/nextcloud/3rdparty/nikic/php-parser/LICENSE
 share/nextcloud/3rdparty/nikic/php-parser/grammar/README.md
@@ -5203,6 +5202,7 @@ share/nextcloud/apps/activity/lib/Migration/Version2011Date20201006132544.php
 share/nextcloud/apps/activity/lib/Migration/Version2011Date20201006132545.php
 share/nextcloud/apps/activity/lib/Migration/Version2011Date20201006132546.php
 share/nextcloud/apps/activity/lib/Migration/Version2011Date20201006132547.php
+share/nextcloud/apps/activity/lib/Migration/Version2011Date20201207091915.php
 share/nextcloud/apps/activity/lib/Navigation.php
 share/nextcloud/apps/activity/lib/NotificationGenerator.php
 share/nextcloud/apps/activity/lib/Settings/Admin.php
@@ -5238,6 +5238,8 @@ share/nextcloud/apps/admin_audit/l10n/de.js
 share/nextcloud/apps/admin_audit/l10n/de.json
 share/nextcloud/apps/admin_audit/l10n/de_DE.js
 share/nextcloud/apps/admin_audit/l10n/de_DE.json
+share/nextcloud/apps/admin_audit/l10n/en_GB.js
+share/nextcloud/apps/admin_audit/l10n/en_GB.json
 share/nextcloud/apps/admin_audit/l10n/es.js
 share/nextcloud/apps/admin_audit/l10n/es.json
 share/nextcloud/apps/admin_audit/l10n/es_CO.js
@@ -5250,6 +5252,8 @@ share/nextcloud/apps/admin_audit/l10n/fr.js
 share/nextcloud/apps/admin_audit/l10n/fr.json
 share/nextcloud/apps/admin_audit/l10n/gl.js
 share/nextcloud/apps/admin_audit/l10n/gl.json
+share/nextcloud/apps/admin_audit/l10n/hr.js
+share/nextcloud/apps/admin_audit/l10n/hr.json
 share/nextcloud/apps/admin_audit/l10n/hu.js
 share/nextcloud/apps/admin_audit/l10n/hu.json
 share/nextcloud/apps/admin_audit/l10n/id.js
@@ -5258,6 +5262,8 @@ share/nextcloud/apps/admin_audit/l10n/it.js
 share/nextcloud/apps/admin_audit/l10n/it.json
 share/nextcloud/apps/admin_audit/l10n/ja.js
 share/nextcloud/apps/admin_audit/l10n/ja.json
+share/nextcloud/apps/admin_audit/l10n/ko.js
+share/nextcloud/apps/admin_audit/l10n/ko.json
 share/nextcloud/apps/admin_audit/l10n/nb.js
 share/nextcloud/apps/admin_audit/l10n/nb.json
 share/nextcloud/apps/admin_audit/l10n/nl.js
@@ -5278,6 +5284,8 @@ share/nextcloud/apps/admin_audit/l10n/tr.js
 share/nextcloud/apps/admin_audit/l10n/tr.json
 share/nextcloud/apps/admin_audit/l10n/zh_CN.js
 share/nextcloud/apps/admin_audit/l10n/zh_CN.json
+share/nextcloud/apps/admin_audit/l10n/zh_TW.js
+share/nextcloud/apps/admin_audit/l10n/zh_TW.json
 share/nextcloud/apps/admin_audit/lib/Actions/Action.php
 share/nextcloud/apps/admin_audit/lib/Actions/AppManagement.php
 share/nextcloud/apps/admin_audit/lib/Actions/Auth.php
@@ -5314,22 +5322,30 @@ share/nextcloud/apps/cloud_federation_api/l10n/de_DE.js
 share/nextcloud/apps/cloud_federation_api/l10n/de_DE.json
 share/nextcloud/apps/cloud_federation_api/l10n/el.js
 share/nextcloud/apps/cloud_federation_api/l10n/el.json
+share/nextcloud/apps/cloud_federation_api/l10n/en_GB.js
+share/nextcloud/apps/cloud_federation_api/l10n/en_GB.json
 share/nextcloud/apps/cloud_federation_api/l10n/es.js
 share/nextcloud/apps/cloud_federation_api/l10n/es.json
 share/nextcloud/apps/cloud_federation_api/l10n/fr.js
 share/nextcloud/apps/cloud_federation_api/l10n/fr.json
 share/nextcloud/apps/cloud_federation_api/l10n/gl.js
 share/nextcloud/apps/cloud_federation_api/l10n/gl.json
+share/nextcloud/apps/cloud_federation_api/l10n/hr.js
+share/nextcloud/apps/cloud_federation_api/l10n/hr.json
 share/nextcloud/apps/cloud_federation_api/l10n/is.js
 share/nextcloud/apps/cloud_federation_api/l10n/is.json
 share/nextcloud/apps/cloud_federation_api/l10n/it.js
 share/nextcloud/apps/cloud_federation_api/l10n/it.json
 share/nextcloud/apps/cloud_federation_api/l10n/mk.js
 share/nextcloud/apps/cloud_federation_api/l10n/mk.json
+share/nextcloud/apps/cloud_federation_api/l10n/nl.js
+share/nextcloud/apps/cloud_federation_api/l10n/nl.json
 share/nextcloud/apps/cloud_federation_api/l10n/pl.js
 share/nextcloud/apps/cloud_federation_api/l10n/pl.json
 share/nextcloud/apps/cloud_federation_api/l10n/pt_BR.js
 share/nextcloud/apps/cloud_federation_api/l10n/pt_BR.json
+share/nextcloud/apps/cloud_federation_api/l10n/ru.js
+share/nextcloud/apps/cloud_federation_api/l10n/ru.json
 share/nextcloud/apps/cloud_federation_api/l10n/sk.js
 share/nextcloud/apps/cloud_federation_api/l10n/sk.json
 share/nextcloud/apps/cloud_federation_api/l10n/sl.js
@@ -5606,6 +5622,8 @@ share/nextcloud/apps/contactsinteraction/l10n/de_DE.js
 share/nextcloud/apps/contactsinteraction/l10n/de_DE.json
 share/nextcloud/apps/contactsinteraction/l10n/el.js
 share/nextcloud/apps/contactsinteraction/l10n/el.json
+share/nextcloud/apps/contactsinteraction/l10n/en_GB.js
+share/nextcloud/apps/contactsinteraction/l10n/en_GB.json
 share/nextcloud/apps/contactsinteraction/l10n/es.js
 share/nextcloud/apps/contactsinteraction/l10n/es.json
 share/nextcloud/apps/contactsinteraction/l10n/eu.js
@@ -5616,10 +5634,16 @@ share/nextcloud/apps/contactsinteraction/l10n/fr.js
 share/nextcloud/apps/contactsinteraction/l10n/fr.json
 share/nextcloud/apps/contactsinteraction/l10n/gl.js
 share/nextcloud/apps/contactsinteraction/l10n/gl.json
+share/nextcloud/apps/contactsinteraction/l10n/hr.js
+share/nextcloud/apps/contactsinteraction/l10n/hr.json
 share/nextcloud/apps/contactsinteraction/l10n/it.js
 share/nextcloud/apps/contactsinteraction/l10n/it.json
+share/nextcloud/apps/contactsinteraction/l10n/lt_LT.js
+share/nextcloud/apps/contactsinteraction/l10n/lt_LT.json
 share/nextcloud/apps/contactsinteraction/l10n/mk.js
 share/nextcloud/apps/contactsinteraction/l10n/mk.json
+share/nextcloud/apps/contactsinteraction/l10n/nl.js
+share/nextcloud/apps/contactsinteraction/l10n/nl.json
 share/nextcloud/apps/contactsinteraction/l10n/pl.js
 share/nextcloud/apps/contactsinteraction/l10n/pl.json
 share/nextcloud/apps/contactsinteraction/l10n/pt_BR.js
@@ -5729,6 +5753,8 @@ share/nextcloud/apps/dashboard/l10n/tr.js
 share/nextcloud/apps/dashboard/l10n/tr.json
 share/nextcloud/apps/dashboard/l10n/zh_CN.js
 share/nextcloud/apps/dashboard/l10n/zh_CN.json
+share/nextcloud/apps/dashboard/l10n/zh_TW.js
+share/nextcloud/apps/dashboard/l10n/zh_TW.json
 share/nextcloud/apps/dashboard/lib/Controller/DashboardController.php
 share/nextcloud/apps/dashboard/lib/Controller/LayoutApiController.php
 share/nextcloud/apps/dashboard/lib/Service/BackgroundService.php
@@ -6539,6 +6565,7 @@ share/nextcloud/apps/federatedfilesharing/lib/Events/FederatedShareAddedEvent.ph
 share/nextcloud/apps/federatedfilesharing/lib/FederatedShareProvider.php
 share/nextcloud/apps/federatedfilesharing/lib/Listeners/LoadAdditionalScriptsListener.php
 share/nextcloud/apps/federatedfilesharing/lib/Migration/Version1010Date20200630191755.php
+share/nextcloud/apps/federatedfilesharing/lib/Migration/Version1011Date20201120125158.php
 share/nextcloud/apps/federatedfilesharing/lib/Notifications.php
 share/nextcloud/apps/federatedfilesharing/lib/Notifier.php
 share/nextcloud/apps/federatedfilesharing/lib/OCM/CloudFederationProviderFiles.php
@@ -8148,7 +8175,6 @@ share/nextcloud/apps/files_rightclick/screenshots/file.png
 share/nextcloud/apps/files_rightclick/screenshots/folder.png
 share/nextcloud/apps/files_rightclick/screenshots/picture.png
 share/nextcloud/apps/files_sharing/appinfo/app.php
-share/nextcloud/apps/files_sharing/appinfo/database.xml
 share/nextcloud/apps/files_sharing/appinfo/info.xml
 share/nextcloud/apps/files_sharing/appinfo/routes.php
 share/nextcloud/apps/files_sharing/appinfo/signature.json
@@ -8453,6 +8479,7 @@ share/nextcloud/apps/files_sharing/lib/Middleware/SharingCheckMiddleware.php
 share/nextcloud/apps/files_sharing/lib/Migration/OwncloudGuestShareType.php
 share/nextcloud/apps/files_sharing/lib/Migration/SetAcceptedStatus.php
 share/nextcloud/apps/files_sharing/lib/Migration/SetPasswordColumn.php
+share/nextcloud/apps/files_sharing/lib/Migration/Version11300Date20201120141438.php
 share/nextcloud/apps/files_sharing/lib/MountProvider.php
 share/nextcloud/apps/files_sharing/lib/Notification/Listener.php
 share/nextcloud/apps/files_sharing/lib/Notification/Notifier.php
@@ -9434,12 +9461,16 @@ share/nextcloud/apps/lookup_server_connector/l10n/de.js
 share/nextcloud/apps/lookup_server_connector/l10n/de.json
 share/nextcloud/apps/lookup_server_connector/l10n/de_DE.js
 share/nextcloud/apps/lookup_server_connector/l10n/de_DE.json
+share/nextcloud/apps/lookup_server_connector/l10n/en_GB.js
+share/nextcloud/apps/lookup_server_connector/l10n/en_GB.json
 share/nextcloud/apps/lookup_server_connector/l10n/es.js
 share/nextcloud/apps/lookup_server_connector/l10n/es.json
 share/nextcloud/apps/lookup_server_connector/l10n/fr.js
 share/nextcloud/apps/lookup_server_connector/l10n/fr.json
 share/nextcloud/apps/lookup_server_connector/l10n/gl.js
 share/nextcloud/apps/lookup_server_connector/l10n/gl.json
+share/nextcloud/apps/lookup_server_connector/l10n/hr.js
+share/nextcloud/apps/lookup_server_connector/l10n/hr.json
 share/nextcloud/apps/lookup_server_connector/l10n/it.js
 share/nextcloud/apps/lookup_server_connector/l10n/it.json
 share/nextcloud/apps/lookup_server_connector/l10n/nl.js
@@ -10203,12 +10234,10 @@ share/nextcloud/apps/photos/js/photos-0.js
 share/nextcloud/apps/photos/js/photos-0.js.map
 share/nextcloud/apps/photos/js/photos-1.js
 share/nextcloud/apps/photos/js/photos-1.js.map
-share/nextcloud/apps/photos/js/photos-11.js
-share/nextcloud/apps/photos/js/photos-11.js.map
+share/nextcloud/apps/photos/js/photos-10.js
+share/nextcloud/apps/photos/js/photos-10.js.map
 share/nextcloud/apps/photos/js/photos-2.js
 share/nextcloud/apps/photos/js/photos-2.js.map
-share/nextcloud/apps/photos/js/photos-3.js
-share/nextcloud/apps/photos/js/photos-3.js.map
 share/nextcloud/apps/photos/js/photos-4.js
 share/nextcloud/apps/photos/js/photos-4.js.map
 share/nextcloud/apps/photos/js/photos-5.js
@@ -10223,6 +10252,7 @@ share/nextcloud/apps/photos/js/photos-9.js
 share/nextcloud/apps/photos/js/photos-9.js.map
 share/nextcloud/apps/photos/js/photos-main.js
 share/nextcloud/apps/photos/js/photos-main.js.map
+share/nextcloud/apps/photos/js/photos-service-worker.js
 share/nextcloud/apps/photos/l10n/af.js
 share/nextcloud/apps/photos/l10n/af.json
 share/nextcloud/apps/photos/l10n/ar.js
@@ -10405,6 +10435,7 @@ share/nextcloud/apps/photos/l10n/zh_TW.js
 share/nextcloud/apps/photos/l10n/zh_TW.json
 share/nextcloud/apps/photos/lib/AppInfo/Application.php
 share/nextcloud/apps/photos/lib/Controller/AlbumsController.php
+share/nextcloud/apps/photos/lib/Controller/ApiController.php
 share/nextcloud/apps/photos/lib/Controller/PageController.php
 share/nextcloud/apps/photos/postcss.config.js
 share/nextcloud/apps/photos/screenshots/screenshot1.png
@@ -10605,6 +10636,8 @@ share/nextcloud/apps/provisioning_api/l10n/fr.js
 share/nextcloud/apps/provisioning_api/l10n/fr.json
 share/nextcloud/apps/provisioning_api/l10n/gl.js
 share/nextcloud/apps/provisioning_api/l10n/gl.json
+share/nextcloud/apps/provisioning_api/l10n/hr.js
+share/nextcloud/apps/provisioning_api/l10n/hr.json
 share/nextcloud/apps/provisioning_api/l10n/it.js
 share/nextcloud/apps/provisioning_api/l10n/it.json
 share/nextcloud/apps/provisioning_api/l10n/nl.js
@@ -10984,8 +11017,6 @@ share/nextcloud/apps/settings/js/vue-settings-admin-security.js
 share/nextcloud/apps/settings/js/vue-settings-admin-security.js.map
 share/nextcloud/apps/settings/js/vue-settings-apps-489d5f46c67b4e8fbf67.js
 share/nextcloud/apps/settings/js/vue-settings-apps-489d5f46c67b4e8fbf67.js.map
-share/nextcloud/apps/settings/js/vue-settings-apps-819bd91780a5b5e34199.js
-share/nextcloud/apps/settings/js/vue-settings-apps-819bd91780a5b5e34199.js.map
 share/nextcloud/apps/settings/js/vue-settings-apps-users-management.js
 share/nextcloud/apps/settings/js/vue-settings-apps-users-management.js.map
 share/nextcloud/apps/settings/js/vue-settings-nextcloud-pdf.js
@@ -10998,8 +11029,6 @@ share/nextcloud/apps/settings/js/vue-settings-users-949e04a80c66e7d41667.js
 share/nextcloud/apps/settings/js/vue-settings-users-949e04a80c66e7d41667.js.map
 share/nextcloud/apps/settings/js/vue-vendors-settings-apps-0e3130278180acc1bb58.js
 share/nextcloud/apps/settings/js/vue-vendors-settings-apps-0e3130278180acc1bb58.js.map
-share/nextcloud/apps/settings/js/vue-vendors-settings-apps-9cccd48110cd039530d3.js
-share/nextcloud/apps/settings/js/vue-vendors-settings-apps-9cccd48110cd039530d3.js.map
 share/nextcloud/apps/settings/js/vue-vendors-settings-apps-settings-users-f077c891fa908a10fb34.js
 share/nextcloud/apps/settings/js/vue-vendors-settings-apps-settings-users-f077c891fa908a10fb34.js.map
 share/nextcloud/apps/settings/js/vue-vendors-settings-users-3a6581e78bc592eedd33.js
@@ -13360,10 +13389,14 @@ share/nextcloud/apps/user_status/l10n/fr.js
 share/nextcloud/apps/user_status/l10n/fr.json
 share/nextcloud/apps/user_status/l10n/gl.js
 share/nextcloud/apps/user_status/l10n/gl.json
+share/nextcloud/apps/user_status/l10n/hr.js
+share/nextcloud/apps/user_status/l10n/hr.json
 share/nextcloud/apps/user_status/l10n/is.js
 share/nextcloud/apps/user_status/l10n/is.json
 share/nextcloud/apps/user_status/l10n/it.js
 share/nextcloud/apps/user_status/l10n/it.json
+share/nextcloud/apps/user_status/l10n/ko.js
+share/nextcloud/apps/user_status/l10n/ko.json
 share/nextcloud/apps/user_status/l10n/lt_LT.js
 share/nextcloud/apps/user_status/l10n/lt_LT.json
 share/nextcloud/apps/user_status/l10n/mk.js
@@ -13655,6 +13688,8 @@ share/nextcloud/apps/weather_status/l10n/fr.js
 share/nextcloud/apps/weather_status/l10n/fr.json
 share/nextcloud/apps/weather_status/l10n/gl.js
 share/nextcloud/apps/weather_status/l10n/gl.json
+share/nextcloud/apps/weather_status/l10n/hr.js
+share/nextcloud/apps/weather_status/l10n/hr.json
 share/nextcloud/apps/weather_status/l10n/hu.js
 share/nextcloud/apps/weather_status/l10n/hu.json
 share/nextcloud/apps/weather_status/l10n/is.js
@@ -14029,7 +14064,8 @@ share/nextcloud/core/Migrations/Version20000Date20201109081915.php
 share/nextcloud/core/Migrations/Version20000Date20201109081918.php
 share/nextcloud/core/Migrations/Version20000Date20201109081919.php
 share/nextcloud/core/Migrations/Version20000Date20201111081915.php
-share/nextcloud/core/Notification/RemoveLinkSharesNotifier.php
+share/nextcloud/core/Migrations/Version21000Date20201120141228.php
+share/nextcloud/core/Notification/CoreNotifier.php
 share/nextcloud/core/Service/LoginFlowV2Service.php
 share/nextcloud/core/ajax/update.php
 share/nextcloud/core/css/apps.scss
@@ -14093,6 +14129,7 @@ share/nextcloud/core/doc/admin/_images/external-sites-2.png
 share/nextcloud/core/doc/admin/_images/external-sites-3.png
 share/nextcloud/core/doc/admin/_images/external-sites-4.png
 share/nextcloud/core/doc/admin/_images/external-sites-5.png
+share/nextcloud/core/doc/admin/_images/externalStorages_variables.png
 share/nextcloud/core/doc/admin/_images/federation-0.png
 share/nextcloud/core/doc/admin/_images/federation-1.png
 share/nextcloud/core/doc/admin/_images/federation-2.png
@@ -14489,6 +14526,7 @@ share/nextcloud/core/doc/user/_images/contact_picture_options.png
 share/nextcloud/core/doc/user/_images/contact_picture_set.png
 share/nextcloud/core/doc/user/_images/contact_uploadbutton.png
 share/nextcloud/core/doc/user/_images/contacts_empty.png
+share/nextcloud/core/doc/user/_images/contacts_link.png
 share/nextcloud/core/doc/user/_images/contacts_menu.png
 share/nextcloud/core/doc/user/_images/contacts_popup.png
 share/nextcloud/core/doc/user/_images/create_public_share-6.png
@@ -15892,8 +15930,14 @@ share/nextcloud/lib/private/Repair/NC20/EncryptionLegacyCipher.php
 share/nextcloud/lib/private/Repair/NC20/EncryptionMigration.php
 share/nextcloud/lib/private/Repair/NC20/ShippedDashboardEnable.php
 share/nextcloud/lib/private/Repair/OldGroupMembershipShares.php
+share/nextcloud/lib/private/Repair/Owncloud/CleanPreviews.php
+share/nextcloud/lib/private/Repair/Owncloud/CleanPreviewsBackgroundJob.php
 share/nextcloud/lib/private/Repair/Owncloud/DropAccountTermsTable.php
+share/nextcloud/lib/private/Repair/Owncloud/InstallCoreBundle.php
+share/nextcloud/lib/private/Repair/Owncloud/MoveAvatars.php
+share/nextcloud/lib/private/Repair/Owncloud/MoveAvatarsBackgroundJob.php
 share/nextcloud/lib/private/Repair/Owncloud/SaveAccountsTableData.php
+share/nextcloud/lib/private/Repair/Owncloud/UpdateLanguageCodes.php
 share/nextcloud/lib/private/Repair/RemoveLinkShares.php
 share/nextcloud/lib/private/Repair/RepairInvalidShares.php
 share/nextcloud/lib/private/Repair/RepairMimeTypes.php
