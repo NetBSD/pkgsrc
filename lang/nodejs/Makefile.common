@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2020/10/02 12:26:34 adam Exp $
+# $NetBSD: Makefile.common,v 1.40 2020/12/16 07:24:06 adam Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs8/Makefile
 # used by lang/nodejs10/Makefile
@@ -22,7 +22,7 @@ PYTHON_FOR_BUILD_ONLY=		yes
 # Do not remove this unless you are absolutely certain that every python script
 # in every nodejs that we support is python3 ready.
 #
-PYTHON_VERSIONS_ACCEPTED=	27
+#PYTHON_VERSIONS_ACCEPTED=	27
 
 GCC_REQD+=		4.9.4
 
