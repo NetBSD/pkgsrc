@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6764 2020/12/15 17:59:11 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6765 2020/12/16 07:43:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9815,3 +9815,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/PC6001VX to 3.6.0 [tsutsui 2020-12-15]
 	Updated emulators/qemu to 5.1.0nb11 [maya 2020-12-15]
 	Updated www/webkit-gtk to 2.30.4 [leot 2020-12-15]
+	Updated lang/nodejs12 to 12.20.0 [adam 2020-12-16]
+	Updated lang/nodejs to 14.15.2 [adam 2020-12-16]
