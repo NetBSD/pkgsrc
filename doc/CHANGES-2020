@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6770 2020/12/16 20:32:23 otis Exp $
+$NetBSD: CHANGES-2020,v 1.6771 2020/12/16 20:34:08 otis Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9824,3 +9824,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xentools413 to 4.13.2nb2 [bouyer 2020-12-16]
 	Updated mail/getmail to 5.15 [schmonz 2020-12-16]
 	Updated www/nginx to 1.18.0nb8 [otis 2020-12-16]
+	Updated www/nginx-devel to 1.19.6 [otis 2020-12-16]
