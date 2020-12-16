@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6766 2020/12/16 13:17:14 adam Exp $
+$NetBSD: CHANGES-2020,v 1.6767 2020/12/16 13:54:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9819,3 +9819,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 14.15.2 [adam 2020-12-16]
 	Updated devel/py-test to 6.2.1 [adam 2020-12-16]
 	Updated devel/py-faker to 5.0.2 [adam 2020-12-16]
+	Updated www/php-nextcloud to 20.0.4 [ryoon 2020-12-16]
