@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.66 2020/12/02 10:34:09 otis Exp $
+# $NetBSD: options.mk,v 1.67 2020/12/16 20:32:01 otis Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -18,7 +18,7 @@ PLIST_VARS+=		naxsi perl uwsgi
 
 # documentation says naxsi must be the first module
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi) || make(distclean)
-NAXSI_VERSION=			1.2
+NAXSI_VERSION=			1.3
 NAXSI_DISTNAME=			naxsi-${NAXSI_VERSION}
 NAXSI_DISTFILE=			${NAXSI_DISTNAME}.tar.gz
 SITES.${NAXSI_DISTFILE}=	-${MASTER_SITE_GITHUB:=nbs-system/naxsi/archive/}${NAXSI_VERSION}.tar.gz
