@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2020/12/16 07:24:06 adam Exp $
+# $NetBSD: Makefile,v 1.203 2020/12/16 11:39:00 adam Exp $
 
 DISTNAME=	node-v14.15.2
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +12,8 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 
 CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 CHECK_PORTABILITY_SKIP+=	tools/macos-installer/pkgbuild/npm/scripts/preinstall
 
