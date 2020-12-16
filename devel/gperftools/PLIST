@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/12/16 17:28:00 otis Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/12/16 19:22:18 otis Exp $
 bin/pprof
 bin/pprof-symbolize
 include/google/heap-checker.h
@@ -17,9 +17,12 @@ include/gperftools/malloc_extension_c.h
 include/gperftools/malloc_hook.h
 include/gperftools/malloc_hook_c.h
 include/gperftools/nallocx.h
+include/gperftools/profiler.h
 include/gperftools/stacktrace.h
 include/gperftools/tcmalloc.h
+lib/libprofiler.la
 lib/libtcmalloc.la
+lib/libtcmalloc_and_profiler.la
 lib/libtcmalloc_debug.la
 lib/libtcmalloc_minimal.la
 lib/libtcmalloc_minimal_debug.la
@@ -38,6 +41,8 @@ share/doc/gperftools/NEWS
 share/doc/gperftools/README
 share/doc/gperftools/README_windows.txt
 share/doc/gperftools/TODO
+share/doc/gperftools/cpuprofile-fileformat.html
+share/doc/gperftools/cpuprofile.html
 share/doc/gperftools/designstyle.css
 share/doc/gperftools/heap-example1.png
 share/doc/gperftools/heap_checker.html
@@ -47,6 +52,10 @@ share/doc/gperftools/overview.dot
 share/doc/gperftools/overview.gif
 share/doc/gperftools/pageheap.dot
 share/doc/gperftools/pageheap.gif
+share/doc/gperftools/pprof-test-big.gif
+share/doc/gperftools/pprof-test.gif
+share/doc/gperftools/pprof-vsnprintf-big.gif
+share/doc/gperftools/pprof-vsnprintf.gif
 share/doc/gperftools/pprof_remote_servers.html
 share/doc/gperftools/spanmap.dot
 share/doc/gperftools/spanmap.gif
