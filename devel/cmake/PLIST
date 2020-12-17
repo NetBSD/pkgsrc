@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2020/11/25 10:33:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.64 2020/12/17 12:14:35 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -156,6 +156,7 @@ share/cmake-${CMAKE_API}/Help/envvar/ASM_DIALECTFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CC.rst
 share/cmake-${CMAKE_API}/Help/envvar/CCMAKE_COLORS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CFLAGS.rst
+share/cmake-${CMAKE_API}/Help/envvar/CMAKE_APPLE_SILICON_PROCESSOR.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_BUILD_PARALLEL_LEVEL.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_CONFIG_TYPE.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_EXPORT_COMPILE_COMMANDS.rst
@@ -963,6 +964,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/INTERPROCEDURAL_OPTIMIZATION.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERPROCEDURAL_OPTIMIZATION_CONFIG.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/IOS_INSTALL_COMBINED.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/ISPC_HEADER_DIRECTORY.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/ISPC_HEADER_SUFFIX.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/ISPC_INSTRUCTION_SETS.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/JOB_POOL_COMPILE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/JOB_POOL_LINK.rst
@@ -1188,6 +1190,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_SKIP_ANT_STEP.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_STANDALONE_TOOLCHAIN.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_STL_TYPE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_APPBUNDLE_PATH.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_APPLE_SILICON_PROCESSOR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_AR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ARCHIVE_OUTPUT_DIRECTORY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ARCHIVE_OUTPUT_DIRECTORY_CONFIG.rst
@@ -1379,6 +1382,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_INTERPROCEDURAL_OPTIMIZATION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INTERPROCEDURAL_OPTIMIZATION_CONFIG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_IOS_INSTALL_COMBINED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ISPC_HEADER_DIRECTORY.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_ISPC_HEADER_SUFFIX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ISPC_INSTRUCTION_SETS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_JOB_POOLS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_JOB_POOL_COMPILE.rst
@@ -2071,8 +2075,6 @@ share/cmake-${CMAKE_API}/Modules/Compiler/Intel-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-ISPC.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/IntelClang-DetermineCompiler.cmake
-share/cmake-${CMAKE_API}/Modules/Compiler/IntelDPCPP-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-C-FeatureTests.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/MSVC-C.cmake
@@ -2371,7 +2373,7 @@ share/cmake-${CMAKE_API}/Modules/InstallRequiredSystemLibraries.cmake
 share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/CMakeLists.txt
 share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/detect.cmake
 share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/hello.f
-share/cmake-${CMAKE_API}/Modules/Internal/CMakeCheckCompilerFlag.cmake
+share/cmake-${CMAKE_API}/Modules/Internal/CMakeTryCompilerOrLinkerFlag.cmake
 share/cmake-${CMAKE_API}/Modules/Internal/CPack/CPack.DS_Store.in
 share/cmake-${CMAKE_API}/Modules/Internal/CPack/CPack.Description.plist.in
 share/cmake-${CMAKE_API}/Modules/Internal/CPack/CPack.Info.plist.in
