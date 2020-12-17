@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.18 2020/09/16 02:03:57 gutteridge Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.19 2020/12/17 16:08:44 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -131,7 +131,7 @@ sub main() {
 
 	# list the installed packages and the directory they live in
 	foreach my $pkgname (sort @pkgs)
- 	    {	
+ 	    {
 	    if ($pkgname =~ /^([^*?[]+)-([\d*?[].*)/)
 	        {
 		foreach my $pkgver ($pkglist->pkgver($1))
@@ -146,7 +146,7 @@ sub main() {
 	# distfiles belonging to the currently installed packages
 	foreach my $pkgver (sort @installed)
 	    {
-	    if (open(DISTINFO, "$pkgsrcdir/" .$pkgver->var('dir'). "/distinfo")) 
+	    if (open(DISTINFO, "$pkgsrcdir/" .$pkgver->var('dir'). "/distinfo"))
 		{
 		while( <DISTINFO> )
 		    {
@@ -169,7 +169,7 @@ sub main() {
 		close(DISTINFO);
 		}
 	    }
-	
+
 	# distfiles downloaded on the current system
 	@tmpdistfiles = listdir("$pkgdistdir");
 	foreach my $tmppkg (@tmpdistfiles)
@@ -195,8 +195,8 @@ sub main() {
 		        { $found = 1; }
 		    }
 		    if ($found != 1)
-		        { 
-			push (@orphan, $dldf); 
+		        {
+			push (@orphan, $dldf);
 		        print "Orphaned file: $dldf\n";
 			}
 	            $found = 0;
@@ -224,8 +224,8 @@ sub main() {
 			{ $found = 1; }
 		    }
 		    if ($found == 1)
-			{ 
-			push (@parent, $pkgdf); 
+			{
+			push (@parent, $pkgdf);
 		        print "Parented file: $pkgdf\n";
 			}
 		    $found = 0;
