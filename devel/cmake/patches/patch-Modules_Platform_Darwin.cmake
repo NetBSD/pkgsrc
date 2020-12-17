@@ -1,8 +1,8 @@
-$NetBSD: patch-Modules_Platform_Darwin.cmake,v 1.1 2020/07/31 16:03:13 adam Exp $
+$NetBSD: patch-Modules_Platform_Darwin.cmake,v 1.2 2020/12/17 12:14:35 adam Exp $
 
 Prefer pkgsrc over system provided libraries.
 
---- Modules/Platform/Darwin.cmake.orig	2020-07-30 16:34:59.000000000 +0000
+--- Modules/Platform/Darwin.cmake.orig	2020-12-16 12:35:29.000000000 +0000
 +++ Modules/Platform/Darwin.cmake
 @@ -159,10 +159,10 @@ if(_CMAKE_OSX_SYSROOT_PATH)
    endforeach()
@@ -17,8 +17,8 @@ Prefer pkgsrc over system provided libraries.
    endif()
  endif()
  if (OSX_DEVELOPER_ROOT AND EXISTS "${OSX_DEVELOPER_ROOT}/Library/Frameworks")
-@@ -218,13 +218,13 @@ unset(_apps_paths)
- include(Platform/UnixPaths)
+@@ -225,13 +225,13 @@ endif()
+ 
  if(_CMAKE_OSX_SYSROOT_PATH)
    if(EXISTS ${_CMAKE_OSX_SYSROOT_PATH}/usr/include)
 -    list(INSERT CMAKE_SYSTEM_PREFIX_PATH 0 ${_CMAKE_OSX_SYSROOT_PATH}/usr)
