@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/06/13 17:50:40 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/17 22:01:04 mcf Exp $
 
-DISTNAME=	samurai-1.1
+DISTNAME=	samurai-1.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
