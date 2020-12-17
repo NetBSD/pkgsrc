@@ -1,0 +1,34 @@
+# $NetBSD: Makefile,v 1.1 2020/12/17 22:12:06 mef Exp $
+
+DISTNAME=	erfa-1.7.1
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_GITHUB:=liberfa/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	kinoshita@astro.ncu.edu.tw
+HOMEPAGE=	https://github.com/liberfa/
+COMMENT=	Essential Routines for Fundamental Astronomy
+LICENSE=	modified-bsd
+
+USE_TOOLS+=	pkg-config
+
+PKGCONFIG_OVERRIDE+=	erfa.pc.in
+
+USE_LIBTOOL=	yes
+
+GNU_CONFIGURE=	yes
+
+AUTOCONF_REQD=	2.50
+AUTOMAKE_REQD=	1.7.1
+USE_TOOLS+=	aclocal
+USE_TOOLS+=	autoconf
+USE_TOOLS+=	autoheader
+USE_TOOLS+=	automake
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	./bootstrap.sh; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
