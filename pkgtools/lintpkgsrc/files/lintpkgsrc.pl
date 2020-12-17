@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.19 2020/12/17 16:08:44 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.20 2020/12/17 16:17:45 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -996,7 +996,10 @@ sub parse_makefile_pkgsrc($) {
         if ( defined $vars->{PKGREVISION}
             and not $vars->{PKGREVISION} =~ /^\s*$/ )
         {
-            if ( $vars->{PKGREVISION} =~ /\D/ ) {
+            if ( $vars->{PKGREVISION} =~ /^\$\{(_(CVS|GIT|HG|SVN)_PKGVERSION):.*\}$/ ) {
+                # See wip/mk/*-package.mk.
+            }
+            elsif ( $vars->{PKGREVISION} =~ /\D/ ) {
                 print
                   "\nBogus: PKGREVISION $vars->{PKGREVISION} (from $file)\n";
 
