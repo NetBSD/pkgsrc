@@ -1,15 +1,15 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.12 2019/07/11 11:32:40 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.13 2020/12/17 09:53:15 ryoon Exp $
 
 Make NetBSD/sparc64 use the same xptcall bindings as all other sparc64 ports
 
---- xpcom/reflect/xptcall/md/unix/moz.build.orig	2019-07-06 01:49:01.000000000 +0000
+--- xpcom/reflect/xptcall/md/unix/moz.build.orig	2020-12-03 23:14:25.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/moz.build
-@@ -217,7 +217,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD' and CO
-         'xptcstubs_sparc_openbsd.cpp',
+@@ -225,7 +225,7 @@ if CONFIG["OS_ARCH"] == "OpenBSD" and CO
      ]
  
--if CONFIG['OS_ARCH'] in ('OpenBSD', 'FreeBSD', 'Linux', 'SunOS') and CONFIG['CPU_ARCH'] == 'sparc64':
-+if CONFIG['OS_ARCH'] in ('OpenBSD', 'FreeBSD', 'NetBSD', 'Linux', 'SunOS') and CONFIG['CPU_ARCH'] == 'sparc64':
+ if (
+-    CONFIG["OS_ARCH"] in ("OpenBSD", "FreeBSD", "Linux", "SunOS")
++    CONFIG["OS_ARCH"] in ("OpenBSD", "FreeBSD", "NetBSD", "Linux", "SunOS")
+     and CONFIG["CPU_ARCH"] == "sparc64"
+ ):
      SOURCES += [
-         'xptcinvoke_asm_sparc64_openbsd.s',
-         'xptcinvoke_sparc64_openbsd.cpp',
