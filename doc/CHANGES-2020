@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6781 2020/12/17 16:01:26 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.6782 2020/12/17 16:17:55 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9836,3 +9836,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox78 to 78.6.0 [nia 2020-12-17]
 	Updated www/firefox78-l10n to 78.6.0 [nia 2020-12-17]
 	Added sysutils/auto-admin version 0.6.9 [bacon 2020-12-17]
+	Updated pkgtools/lintpkgsrc to 4.96 [rillig 2020-12-17]
