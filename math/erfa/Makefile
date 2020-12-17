@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2020/12/17 22:12:06 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/17 22:18:18 mef Exp $
 
 DISTNAME=	erfa-1.7.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liberfa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/liberfa/
 COMMENT=	Essential Routines for Fundamental Astronomy
 LICENSE=	modified-bsd
