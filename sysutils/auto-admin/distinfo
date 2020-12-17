@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/12/17 15:59:35 bacon Exp $
+
+SHA1 (auto-admin-0.6.9.tar.gz) = 3da6cdbf43b3274ad30fa0b0eefe1750085ee7e7
+RMD160 (auto-admin-0.6.9.tar.gz) = 7e3d6b19b96d6085e0ab06635cead8a5c7eb21c7
+SHA512 (auto-admin-0.6.9.tar.gz) = dd394611cc723a00d54315f6c11dc8c5411ca1223353b58be9108622754bbacb5b8eb845c6b5167677f94369478b498acf68ed966b3366c87e67aa82ff3a628a
+Size (auto-admin-0.6.9.tar.gz) = 95799 bytes
