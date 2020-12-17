@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2019/04/07 18:23:52 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/12/17 09:14:00 triaxx Exp $
 
-SHA1 (mp4v2-4.1.0.0.tar.gz) = 52a8db96ddcdd215fd5f324e2cd8f1be3138f842
-RMD160 (mp4v2-4.1.0.0.tar.gz) = 2d7e2845c6c4d7bfd3fb6a44bf6a2fbdde973922
-SHA512 (mp4v2-4.1.0.0.tar.gz) = 7991fb0ed521a0fe9c17d96e6f2e00516841e80c101757cf094a4ec62a816e60e406c5e7c15ed020a15eec9732ebd4d30f2076bbc61b95cae0d45820a982a305
-Size (mp4v2-4.1.0.0.tar.gz) = 2755640 bytes
+SHA1 (mp4v2-4.1.5.tar.gz) = a57fb90b4d14b240f90431ba06c450283e0f9d28
+RMD160 (mp4v2-4.1.5.tar.gz) = 58b1b4de372499505447e6854cfe1214881bf813
+SHA512 (mp4v2-4.1.5.tar.gz) = 593071e3e2d48a7bc704d4b32b28de300363d797236cf8904b3c403758fa08fcd9c0a1ebafc462f69d3964493515eeb391e23d5e27366e06c8d65f68c936b65a
+Size (mp4v2-4.1.5.tar.gz) = 2681905 bytes
+SHA1 (patch-src_rtphint.cpp) = 7ccbacb6873a410b6e8b0d376a2ae7ada1c022d5
