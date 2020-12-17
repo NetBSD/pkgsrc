@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6779 2020/12/17 13:24:44 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6780 2020/12/17 13:26:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9834,3 +9834,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cmake to 3.19.2 [adam 2020-12-17]
 	Updated net/samba4 to 4.13.3 [adam 2020-12-17]
 	Updated www/firefox78 to 78.6.0 [nia 2020-12-17]
+	Updated www/firefox78-l10n to 78.6.0 [nia 2020-12-17]
