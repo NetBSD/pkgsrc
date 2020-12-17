@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6773 2020/12/17 09:43:43 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6774 2020/12/17 09:52:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9827,3 +9827,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nginx-devel to 1.19.6 [otis 2020-12-16]
 	Updated multimedia/mp4v2 to 4.1.5 [triaxx 2020-12-17]
 	Updated audio/pulseaudio to 13.0nb9 [ryoon 2020-12-17]
+	Updated devel/nss to 3.60 [ryoon 2020-12-17]
