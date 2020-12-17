@@ -1,17 +1,17 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.11 2018/05/10 20:01:53 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.12 2020/12/17 09:53:15 ryoon Exp $
 
 * skia part: support bigendian architectures
 
---- toolkit/moz.configure.orig	2018-05-03 16:58:41.000000000 +0000
+--- toolkit/moz.configure.orig	2020-12-03 23:14:21.000000000 +0000
 +++ toolkit/moz.configure
-@@ -932,11 +932,11 @@ include('nss.configure')
- # ==============================================================
- option('--disable-skia', help='Disable use of Skia')
+@@ -927,11 +927,11 @@ set_config("MOZ_IPDL_TESTS", depends_if(
+ option("--disable-skia", help="Disable use of Skia")
  
--@depends('--disable-skia')
+ 
+-@depends("--disable-skia")
 -def skia(value):
 -    if not value:
--        die('--disable-skia is not supported anymore')
+-        die("--disable-skia is not supported anymore")
 -    else:
 +@depends('--disable-skia', target)
 +def skia(value, target):
@@ -20,4 +20,4 @@ $NetBSD: patch-toolkit_moz.configure,v 1.11 2018/05/10 20:01:53 ryoon Exp $
 +    if value:
          return True
  
- set_config('MOZ_ENABLE_SKIA', skia)
+ 
