@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.483 2020/11/05 16:56:01 bacon Exp $
+# $NetBSD: Makefile,v 1.484 2020/12/17 22:14:54 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -158,6 +158,7 @@ SUBDIR+=	double-conversion
 SUBDIR+=	eigen2
 SUBDIR+=	eigen3
 SUBDIR+=	eispack
+SUBDIR+=	erfa
 SUBDIR+=	ess
 SUBDIR+=	eukleides
 SUBDIR+=	eukleides10

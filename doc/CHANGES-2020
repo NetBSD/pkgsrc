@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6784 2020/12/17 22:01:52 mcf Exp $
+$NetBSD: CHANGES-2020,v 1.6785 2020/12/17 22:14:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9841,3 +9841,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xentools411 to 4.11.4nb2 [bouyer 2020-12-17]
 	Updated devel/samurai to 1.2 [mcf 2020-12-17]
 	Updated devel/samurai to 1.2 [mcf 2020-12-17]
+	Added math/erfa version 1.7.1 [mef 2020-12-17]
