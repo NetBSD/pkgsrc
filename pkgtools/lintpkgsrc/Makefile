@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/08/31 18:10:58 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/12/17 16:17:44 rillig Exp $
 
-PKGNAME=	lintpkgsrc-4.95
-PKGREVISION=	1
+PKGNAME=	lintpkgsrc-4.96
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
