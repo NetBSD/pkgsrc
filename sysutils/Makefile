@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.923 2020/12/12 13:22:23 nia Exp $
+# $NetBSD: Makefile,v 1.924 2020/12/17 16:00:07 bacon Exp $
 #
 
 COMMENT=	System utilities
@@ -37,6 +37,7 @@ SUBDIR+=	asapm
 SUBDIR+=	atitvout
 SUBDIR+=	attr
 SUBDIR+=	augeas
+SUBDIR+=	auto-admin
 SUBDIR+=	b2sum
 SUBDIR+=	backuppc
 SUBDIR+=	bacula
