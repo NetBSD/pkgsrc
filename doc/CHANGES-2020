@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6780 2020/12/17 13:26:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6781 2020/12/17 16:01:26 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9835,3 +9835,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/samba4 to 4.13.3 [adam 2020-12-17]
 	Updated www/firefox78 to 78.6.0 [nia 2020-12-17]
 	Updated www/firefox78-l10n to 78.6.0 [nia 2020-12-17]
+	Added sysutils/auto-admin version 0.6.9 [bacon 2020-12-17]
