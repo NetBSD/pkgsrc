@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2020/08/24 10:33:27 bouyer Exp $
+$NetBSD: distinfo,v 1.15 2020/12/17 16:48:12 bouyer Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -12,6 +12,16 @@ SHA1 (patch-.._ipxe_src_core_settings.c) = 1eab2fbd8b22dde2b8aa830ae7701603486f7
 SHA1 (patch-.._ipxe_src_net_fcels.c) = eda41b25c3d5f5bef33caa9a6af28c40cb91e66b
 SHA1 (patch-Config.mk) = c41005a60de2f94a72b0206030eb021c137653d3
 SHA1 (patch-Makefile) = 2f3a5eafc5039b149c98dd5e59c39a3197fd9264
+SHA1 (patch-XSA115-c) = 7e3216a23c522fc73f47fa6deef8918c4dce7fae
+SHA1 (patch-XSA115-o) = 6dc292060441c388b9a05e31ddc37835568a3e86
+SHA1 (patch-XSA322-c) = c48a10eeab29775b9c97a36848556120741a9c9d
+SHA1 (patch-XSA322-o) = 943e2aee69ac278871925223478b11f6dfabc9d7
+SHA1 (patch-XSA323) = 98055b0c05ed0d0f5ebbe23d429a68a71d92f20f
+SHA1 (patch-XSA324) = a1cdb872a79fd7d9234030ec2765d0a474f72fbb
+SHA1 (patch-XSA325) = 59c7fba006588db4accee1068072612777620ac3
+SHA1 (patch-XSA330) = 03b4f1d9c14e11eaee5b863276d32cee0544e604
+SHA1 (patch-XSA352) = 7c4479c029d9bbbf6578ee148cb926bb2d849789
+SHA1 (patch-XSA353) = 6983aa18399dcf0ac1471ffdf7c27c1bc041f49c
 SHA1 (patch-always_inline) = 23201b2b63072e040630525416a0b61280492f93
 SHA1 (patch-docs_man_xl-disk-configuration.pod.5) = 03ff4c22dde1e1b60ab8750c8971ea057e479151
 SHA1 (patch-docs_man_xl.cfg.pod.5.in) = 951915037a9975b76cc5c41a0e1abe0a202a3696
@@ -56,7 +66,7 @@ SHA1 (patch-tools_ocaml_common.make) = 4b845bdf3a013852109749ee18dfe28e3440d951
 SHA1 (patch-tools_ocaml_libs_xentoollog_xentoollog__stubs.c) = adee03d87168e735cb0d42ce06d0c31a14315b8d
 SHA1 (patch-tools_ocaml_libs_xl__xenlight_stubs.c) = cc612908524670f650a294af133a5912f955f39e
 SHA1 (patch-tools_ocaml_xenstored_Makefile) = b267702cf4090c7b45bba530e60327fced24e3e5
-SHA1 (patch-tools_ocaml_xenstored_utils.ml) = fd951de732d6c31cae89bd4b58c5650108578d79
+SHA1 (patch-tools_ocaml_xenstored_utils.ml) = 96b69dd3b5adb10692d7646c1dbeb20d27e0e1a8
 SHA1 (patch-tools_qemu-xen-traditional_Makefile) = 5fbb55bf84f9856043be301d5d06530190fe9a60
 SHA1 (patch-tools_qemu-xen-traditional_block-raw-posix.c) = eb3efea4b0c7fd744f627f1926fca737ba826b99
 SHA1 (patch-tools_qemu-xen-traditional_configure) = 6a42dcac010f90439a347c0f6e886b07185cb19a
@@ -81,5 +91,4 @@ SHA1 (patch-tools_xenstore_xs_lib.c) = e3a8f6e3b149c3ab0f4ec8dcfa455983f94e6c16
 SHA1 (patch-tools_xentrace_xentrace.c) = f964c7555f454358a39f28a2e75db8ee100a4243
 SHA1 (patch-tools_xl_Makefile) = dd4fa8cc66c74eea8b022cd6129aa2831776f2a8
 SHA1 (patch-xen_Rules.mk) = c743dc63f51fc280d529a7d9e08650292c171dac
-SHA1 (patch-xen_common_lz4_dexompress.c) = 521a247c2d36980b3433c4be92c77308a2d3f3b9
 SHA1 (patch-xen_tools_symbols.c) = 67b5a38312095029631e00457abc0e4bb633aaf8
