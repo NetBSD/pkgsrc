@@ -1,4 +1,4 @@
-# $NetBSD: readline.builtin.mk,v 1.4 2013/11/23 09:10:14 obache Exp $
+# $NetBSD: readline.builtin.mk,v 1.5 2020/12/17 09:44:24 ryoon Exp $
 #
 
 BUILTIN_PKG:=	editlinereadline
@@ -45,7 +45,7 @@ CHECK_BUILTIN.editlinereadline=	no
 .    if !empty(_READLINE_TYPE:Meditline)
 .      include "../../devel/editline/builtin.mk"
 IS_BUILTIN.editlinereadline=	${USE_BUILTIN.editline}
-.    else if !empty(_READLINE_TYPE:Mreadline)
+.    elif !empty(_READLINE_TYPE:Mreadline)
 .      include "../../devel/readline/builtin.mk"
 IS_BUILTIN.editlinereadline=	${USE_BUILTIN.readline}
 .    endif
