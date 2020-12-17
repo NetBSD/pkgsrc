@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6783 2020/12/17 16:49:35 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.6784 2020/12/17 22:01:52 mcf Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9839,3 +9839,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/lintpkgsrc to 4.96 [rillig 2020-12-17]
 	Updated sysutils/xenkernel411 to 4.11.4nb5 [bouyer 2020-12-17]
 	Updated sysutils/xentools411 to 4.11.4nb2 [bouyer 2020-12-17]
+	Updated devel/samurai to 1.2 [mcf 2020-12-17]
+	Updated devel/samurai to 1.2 [mcf 2020-12-17]
