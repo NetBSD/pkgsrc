@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6775 2020/12/17 09:53:45 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6776 2020/12/17 09:54:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9829,3 +9829,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/pulseaudio to 13.0nb9 [ryoon 2020-12-17]
 	Updated devel/nss to 3.60 [ryoon 2020-12-17]
 	Updated www/firefox to 84.0 [ryoon 2020-12-17]
+	Updated www/firefox-l10n to 84.0 [ryoon 2020-12-17]
