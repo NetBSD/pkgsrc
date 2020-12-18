@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2020/11/29 20:33:53 nia Exp $
+$NetBSD: distinfo,v 1.19 2020/12/18 23:25:59 nia Exp $
 
-SHA1 (libvncserver-LibVNCServer-0.9.12.tar.gz) = f2111a7d7e96d7101e7ff3834abd5b0c71c1ed5f
-RMD160 (libvncserver-LibVNCServer-0.9.12.tar.gz) = 62e65f56221e7274a4fb1b7f42cca00f7c5f2926
-SHA512 (libvncserver-LibVNCServer-0.9.12.tar.gz) = 60ff1cc93a937d6f8f97449bc58b763095846207112f7b1b3c43eb2d74448b595d6da949903a764bd484ee54e38ff6277e882adbe965dd6d26ba15ef6ff6fcb8
-Size (libvncserver-LibVNCServer-0.9.12.tar.gz) = 2237447 bytes
+SHA1 (libvncserver-LibVNCServer-0.9.13.tar.gz) = 55d79e6c4305cd67cd487c601298349c17ca05c1
+RMD160 (libvncserver-LibVNCServer-0.9.13.tar.gz) = 3fb7d82b4cbf77ee2eb5e1c55d7aeb535d17506b
+SHA512 (libvncserver-LibVNCServer-0.9.13.tar.gz) = 18b0a1698d32bbdbfe6f65f76130b2a95860e3cc76e8adb904269663698c7c0ae982f451fda1f25e5461f096045d40a89d9014258f439366d5b4feaa4999d643
+Size (libvncserver-LibVNCServer-0.9.13.tar.gz) = 567491 bytes
 SHA1 (patch-libvncclient_tls__openssl.c) = 6986fdc3b65cac0b8e1f152c314ad2575ff55351
 SHA1 (patch-libvncserver_websockets.c) = eb4e50f8fcb8442dae54d1360e6950e2ebd4778b
 SHA1 (patch-rfb_rfbproto.h) = 6dcc68a90d444f88ab696616b1aee3eb66708877

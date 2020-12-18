@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2020/05/22 10:55:48 adam Exp $
+# $NetBSD: Makefile,v 1.34 2020/12/18 23:25:59 nia Exp $
 #
 
-DISTNAME=		libvncserver-LibVNCServer-0.9.12
-PKGNAME=		libVNCServer-0.9.12
-PKGREVISION=		4
+DISTNAME=		libvncserver-LibVNCServer-0.9.13
+PKGNAME=		libVNCServer-0.9.13
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=LibVNC/}
 GITHUB_PROJECT=		libvncserver
@@ -23,6 +22,7 @@ PKGCONFIG_OVERRIDE+=	libvncserver.pc.cmakein
 PKGCONFIG_OVERRIDE+=	libvncclient.pc.cmakein
 
 CMAKE_ARGS+=		-DWITH_FFMPEG=OFF
+CMAKE_ARGS+=		-DWITH_GTK=OFF
 CMAKE_ARGS+=		-DWITH_SDL=OFF
 CMAKE_ARGS+=		-DWITH_SYSTEMD=OFF
 
@@ -42,6 +42,7 @@ LDFLAGS.SunOS+=		-lsocket
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
