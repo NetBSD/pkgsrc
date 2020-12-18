@@ -1,10 +1,10 @@
-$NetBSD: patch-src_core_platform__fs.cpp,v 1.3 2019/08/28 14:38:42 schmonz Exp $
+$NetBSD: patch-src_core_platform__fs.cpp,v 1.4 2020/12/18 18:45:08 schmonz Exp $
 
 Fix build on (at least) SmartOS.
 
---- src/core/platform_fs.cpp.orig	2019-07-31 21:48:56.000000000 +0000
+--- src/core/platform_fs.cpp.orig	2020-11-13 20:00:38.000000000 +0000
 +++ src/core/platform_fs.cpp
-@@ -91,13 +91,13 @@ std::string getTempFilePath(){
+@@ -95,12 +95,12 @@ std::string getTempFilePath(){
  
  const char pathSeparator = '/';
  
@@ -14,20 +14,19 @@ Fix build on (at least) SmartOS.
      return "";
  }
  
- 
 -std::string getHomePath()
 +::std::string getHomePath()
  {
      struct passwd *pw = getpwuid(getuid());
-     return string(pw->pw_dir);
-@@ -127,8 +127,8 @@ int isColorEscCapable() {
-     return 0;
+     return pw != NULL ? string(pw->pw_dir) : "";
+@@ -140,8 +140,8 @@ int isDarkTerminal() {
+     return 1;
  }
  
 -std::string getTempFilePath(){
 -    std::string path("/tmp");
 +::std::string getTempFilePath(){
 +    ::std::string path("/tmp");
-     
+ 
      char* tempOption=getenv("TEMP");
      if (tempOption) path=string(tempOption);
