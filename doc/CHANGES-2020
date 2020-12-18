@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6800 2020/12/18 23:19:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6801 2020/12/18 23:26:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9859,3 +9859,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/neatvi to 08 [nia 2020-12-18]
 	Updated devel/libusb1 to 1.0.24 [nia 2020-12-18]
 	Updated devel/rgbds to 0.4.2 [nia 2020-12-18]
+	Updated net/libvncserver to 0.9.13 [nia 2020-12-18]
