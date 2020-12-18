@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2020/11/16 12:15:28 nia Exp $
-
-PKGREVISION=	7
+# $NetBSD: Makefile,v 1.168 2020/12/18 23:33:06 nia Exp $
 
 .include "Makefile.common"
 
@@ -17,6 +15,15 @@ CONFIGURE_ARGS+=	--disable-vaapi
 CONFIGURE_ARGS+=	--disable-vidix
 CONFIGURE_ARGS+=	--disable-w32dll
 CONFIGURE_ARGS+=	--disable-xvmc
+
+.include "../../multimedia/libvdpau/available.mk"
+
+PLIST_VARS+=		vdpau
+.if ${VDPAU_AVAILABLE} == "yes"
+PLIST.vdpau=		yes
+CONFIGURE_ARGS+=	--enable-vdpau
+.  include "../../multimedia/libvdpau/buildlink3.mk"
+.endif
 
 CONFIGURE_ARGS+=	--without-dav1d
 CONFIGURE_ARGS+=	--without-esound
