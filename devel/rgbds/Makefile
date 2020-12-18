@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2020/08/08 19:17:45 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/18 23:19:16 nia Exp $
 
-DISTNAME=	rgbds-0.4.1
+DISTNAME=	rgbds-0.4.2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rednex/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gbdev/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://rednex.github.io/rgbds/
+HOMEPAGE=	https://rgbds.gbdev.io/
 COMMENT=	Assembler/linker package for the Game Boy and Game Boy Color
 LICENSE=	mit
 
