@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6802 2020/12/18 23:34:30 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6803 2020/12/18 23:48:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9865,3 +9865,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/xine-v4l2 to 1.2.11 [nia 2020-12-18]
 	Updated audio/xine-alsa to 1.2.11 [nia 2020-12-18]
 	Updated audio/xine-pulse to 1.2.11 [nia 2020-12-18]
+	Updated graphics/feh to 3.6.1 [nia 2020-12-18]
