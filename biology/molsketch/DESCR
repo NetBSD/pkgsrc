@@ -1,0 +1,11 @@
+Molsketch is a 2D molecular editing tool. Its goal is to help you draw
+molecules quick and easily. Of course you're creation can be exported
+afterwards in high quality in a number of vector and bitmap formats.
+
+Features:
+
+ * open, save and import in all formats supported by the OpenBabel(tm)
+   library
+ * export to Scalable Vector Graphics (SVG) and a number of common used
+   bitmap formats
+ * print and export your document to PDF
