@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/01/10 21:11:14 joerg Exp $
+$NetBSD: distinfo,v 1.13 2020/12/18 23:59:29 nia Exp $
 
-SHA1 (exempi-2.5.0.tar.bz2) = 2461c1149187350c1b174e23b188e7884a32ec66
-RMD160 (exempi-2.5.0.tar.bz2) = e4e1fd4e12f6b1ced36e085f524884be45575aa6
-SHA512 (exempi-2.5.0.tar.bz2) = 1d042ffe3c3daadf937c4938e7892d52c4835275065e159f7991ddc9f533424fb6cd7d607600c3381440020db9dfa06af5ae15168d7a8012358fa5c8ac453bba
-Size (exempi-2.5.0.tar.bz2) = 3658187 bytes
-SHA1 (patch-XMPFiles_source_PluginHandler_ModuleUtils.h) = 5147d13838836e0a604bea525a5c0e6b036b3547
-SHA1 (patch-XMPFiles_source_PluginHandler_OS__Utils__Linux.cpp) = e78f1360c1619b7a595eeefcb87255556e6f036a
+SHA1 (exempi-2.5.2.tar.bz2) = cc96364015a7810c833f586824c0db015ca12889
+RMD160 (exempi-2.5.2.tar.bz2) = 17219342d5b71aed30bda82d81401539383e8d6d
+SHA512 (exempi-2.5.2.tar.bz2) = 3a11453a776a379750e8731b802349405966b0b9fd9974e506ff2cf9adfcc9826a9f87f34ad861873431d2d674e437db8e96673c542583aefde8f7a88d11becc
+Size (exempi-2.5.2.tar.bz2) = 3658606 bytes
