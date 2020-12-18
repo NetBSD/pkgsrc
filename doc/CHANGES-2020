@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6794 2020/12/18 18:51:50 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6795 2020/12/18 19:22:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9853,3 +9853,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libhighlight to 3.59 [schmonz 2020-12-18]
 	Updated textproc/highlight to 3.59 [schmonz 2020-12-18]
 	Updated textproc/p5-highlight to 3.59 [schmonz 2020-12-18]
+	Updated lang/janet to 1.13.1 [nia 2020-12-18]
