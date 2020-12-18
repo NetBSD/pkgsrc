@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/08/11 18:44:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/12/18 09:01:03 adam Exp $
 bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/tqdm/__init__.pyo
 ${PYSITELIB}/tqdm/__main__.py
 ${PYSITELIB}/tqdm/__main__.pyc
 ${PYSITELIB}/tqdm/__main__.pyo
+${PYSITELIB}/tqdm/_dist_ver.py
+${PYSITELIB}/tqdm/_dist_ver.pyc
+${PYSITELIB}/tqdm/_dist_ver.pyo
 ${PYSITELIB}/tqdm/_main.py
 ${PYSITELIB}/tqdm/_main.pyc
 ${PYSITELIB}/tqdm/_main.pyo
@@ -33,9 +36,6 @@ ${PYSITELIB}/tqdm/_tqdm_pandas.pyo
 ${PYSITELIB}/tqdm/_utils.py
 ${PYSITELIB}/tqdm/_utils.pyc
 ${PYSITELIB}/tqdm/_utils.pyo
-${PYSITELIB}/tqdm/_version.py
-${PYSITELIB}/tqdm/_version.pyc
-${PYSITELIB}/tqdm/_version.pyo
 ${PYSITELIB}/tqdm/asyncio.py
 ${PYSITELIB}/tqdm/asyncio.pyc
 ${PYSITELIB}/tqdm/asyncio.pyo
@@ -85,4 +85,7 @@ ${PYSITELIB}/tqdm/std.pyo
 ${PYSITELIB}/tqdm/utils.py
 ${PYSITELIB}/tqdm/utils.pyc
 ${PYSITELIB}/tqdm/utils.pyo
+${PYSITELIB}/tqdm/version.py
+${PYSITELIB}/tqdm/version.pyc
+${PYSITELIB}/tqdm/version.pyo
 man/man1/tqdm-${PYVERSSUFFIX}.1
