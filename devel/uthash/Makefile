@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:30:43 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/18 09:55:36 fcambus Exp $
 
-DISTNAME=	uthash-2.1.0
+DISTNAME=	uthash-2.2.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=troydhanson/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
