@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.10 2020/12/03 10:04:48 wiz Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.11 2020/12/18 17:14:58 maya Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -17,10 +17,6 @@ USE_TOOLS+=	date
 
 # This is the package database directory for the default view.
 PKG_DBDIR?=		${LOCALBASE}/pkgdb
-
-.if exists(/var/db/pkg) && !exists(${PKG_DBDIR})
-PKG_DBDIR_ERROR=	The default package database directory has changed. Please run: mv /var/db/pkg ${PKG_DBDIR}
-.endif
 
 # _PKG_DBDIR is the actual packages database directory where we register
 # packages.
