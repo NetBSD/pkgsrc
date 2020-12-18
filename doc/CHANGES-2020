@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6791 2020/12/18 13:10:35 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6792 2020/12/18 13:12:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9848,3 +9848,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pip to 20.3.3 [adam 2020-12-18]
 	Updated devel/uthash to 2.2.0 [fcambus 2020-12-18]
 	Updated graphics/viu to 1.3.0 [pin 2020-12-18]
+	Updated sysutils/onefetch to 2.8.0 [pin 2020-12-18]
