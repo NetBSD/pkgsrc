@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/09/17 21:06:20 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/12/18 18:45:08 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
@@ -248,11 +248,13 @@ share/highlight/langDefs/qml.lang
 share/highlight/langDefs/qu.lang
 share/highlight/langDefs/r.lang
 share/highlight/langDefs/rebol.lang
+share/highlight/langDefs/rego.lang
 share/highlight/langDefs/rexx.lang
 share/highlight/langDefs/rnc.lang
 share/highlight/langDefs/rpg.lang
 share/highlight/langDefs/rpl.lang
 share/highlight/langDefs/rs.lang
+share/highlight/langDefs/rst.lang
 share/highlight/langDefs/ruby.lang
 share/highlight/langDefs/s.lang
 share/highlight/langDefs/sam.lang
@@ -329,6 +331,7 @@ share/highlight/plugins/outhtml_add_line.lua
 share/highlight/plugins/outhtml_add_shadow.lua
 share/highlight/plugins/outhtml_ansi_esc.lua
 share/highlight/plugins/outhtml_codefold.lua
+share/highlight/plugins/outhtml_copy_clipboard.lua
 share/highlight/plugins/outhtml_curly_brackets_matcher.lua
 share/highlight/plugins/outhtml_ie7_webctrl.lua
 share/highlight/plugins/outhtml_keyword_matcher.lua
