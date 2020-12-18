@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6798 2020/12/18 23:03:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6799 2020/12/18 23:06:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9857,3 +9857,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/lua54 to 5.4.2 [nia 2020-12-18]
 	Added biology/molsketch version 0.7.0 [pin 2020-12-18]
 	Updated editors/neatvi to 08 [nia 2020-12-18]
+	Updated devel/libusb1 to 1.0.24 [nia 2020-12-18]
