@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6789 2020/12/18 09:15:41 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6790 2020/12/18 09:55:49 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9846,3 +9846,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/nsd to 4.3.4 [nia 2020-12-18]
 	Updated misc/py-tqdm to 4.54.1 [adam 2020-12-18]
 	Updated devel/py-pip to 20.3.3 [adam 2020-12-18]
+	Updated devel/uthash to 2.2.0 [fcambus 2020-12-18]
