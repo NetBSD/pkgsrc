@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.27 2020/08/31 18:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/12/18 23:33:06 nia Exp $
 
-PKGREVISION= 2
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/v4l2/}
