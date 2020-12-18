@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6797 2020/12/18 22:31:13 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6798 2020/12/18 23:03:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9856,3 +9856,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/janet to 1.13.1 [nia 2020-12-18]
 	Updated lang/lua54 to 5.4.2 [nia 2020-12-18]
 	Added biology/molsketch version 0.7.0 [pin 2020-12-18]
+	Updated editors/neatvi to 08 [nia 2020-12-18]
