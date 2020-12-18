@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/12/04 14:17:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/12/18 09:03:43 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -813,6 +813,9 @@ ${PYSITELIB}/pip/_vendor/msgpack/ext.pyo
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.py
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.pyc
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.pyo
+${PYSITELIB}/pip/_vendor/packaging/__about__.py
+${PYSITELIB}/pip/_vendor/packaging/__about__.pyc
+${PYSITELIB}/pip/_vendor/packaging/__about__.pyo
 ${PYSITELIB}/pip/_vendor/packaging/__init__.py
 ${PYSITELIB}/pip/_vendor/packaging/__init__.pyc
 ${PYSITELIB}/pip/_vendor/packaging/__init__.pyo
