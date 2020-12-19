@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2020/05/02 20:07:31 tnn Exp $
+$NetBSD: distinfo,v 1.2 2020/12/19 14:27:18 bsiegert Exp $
 
 SHA1 (go1.14.2.darwin-amd64.tar.gz) = f7e5201a2e2928c6da2df231bd0776f5bbd6bd36
 RMD160 (go1.14.2.darwin-amd64.tar.gz) = 58e46896bb087e0193d3dd7a93d6e5f6dd7c551f
@@ -24,3 +24,7 @@ SHA1 (go1.14.2.netbsd-arm64.tar.gz) = 806421eb16a4b02a640da45f7209c47b6cba3daa
 RMD160 (go1.14.2.netbsd-arm64.tar.gz) = 9f8b1c91f906db09f1031a5008d50cf4fedf5a3f
 SHA512 (go1.14.2.netbsd-arm64.tar.gz) = d3750a3092118e05aa9b4a0a59ae2d49950d0c259a92b54c230d98e239725acd240556643ce7019a5d1ea3ecd1ccc37fc6bcc4e8b7a9a0f32d347f4daa4dccbf
 Size (go1.14.2.netbsd-arm64.tar.gz) = 123662640 bytes
+SHA1 (go1.16beta1.darwin-arm64.tar.gz) = e3ada457bfe3aa26466721ab8a1a511050b45cfd
+RMD160 (go1.16beta1.darwin-arm64.tar.gz) = e52a589b00650f86e765c7b107686e07df2b18c0
+SHA512 (go1.16beta1.darwin-arm64.tar.gz) = 9cc0def8c852e8f2550e8bd5ba0cdbba8892b3ecd8c855fb1e19603ec7fa2e0572d74bce47f62bfb3039024f65c8ff17fca777cef7fd5e25f2dd77ecb66c05d6
+Size (go1.16beta1.darwin-arm64.tar.gz) = 127918903 bytes
