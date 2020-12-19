@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.42 2020/05/02 17:03:11 taca Exp $
+# $NetBSD: gem.mk,v 1.43 2020/12/19 14:41:16 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -326,6 +326,9 @@ _gem-build-cleanbuild:
 		fi;							\
 	done
 .  endif
+	@${RMDIR} ${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_BUILDINFO_DIR} \
+		${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_EXTSBASE} \
+			>/dev/null 2>&1 || true
 .  if !empty(GEM_EXTSDIR) && !empty(GEM_CLEANBUILD_EXTENSIONS)
 	${RUN} \
 	if test ! -d ${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_EXTSDIR}; then \
