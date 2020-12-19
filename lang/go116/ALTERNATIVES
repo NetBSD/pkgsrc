@@ -1,0 +1,2 @@
+bin/go @PREFIX@/go116/bin/go
+bin/gofmt @PREFIX@/go116/bin/gofmt
