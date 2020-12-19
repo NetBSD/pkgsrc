@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2020/05/17 19:34:12 adam Exp $
+# $NetBSD: Makefile,v 1.57 2020/12/19 11:52:26 leot Exp $
 
-DISTNAME=	pyOpenSSL-19.1.0
+DISTNAME=	pyOpenSSL-20.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyOpenSSL/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://pyopenssl.org/
 COMMENT=	Python interface to the OpenSSL library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.8:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.2:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
