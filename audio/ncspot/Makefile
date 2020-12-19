@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/12/18 13:13:20 pin Exp $
+# $NetBSD: Makefile,v 1.12 2020/12/19 14:49:34 tnn Exp $
 
 DISTNAME=	ncspot-0.2.6
 CATEGORIES=	audio
@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES+=			c c++	# rust, but needs a toolchain to link
 USE_TOOLS+=			pkg-config
-PYTHON_VERSIONS_ACCEPTED=	37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 INSTALLATION_DIRS=	bin
