@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.10 2020/06/05 03:52:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/12/19 11:27:51 leot Exp $
 bin/mpv
 include/mpv/client.h
 include/mpv/opengl_cb.h
-include/mpv/qthelper.hpp
 include/mpv/render.h
 include/mpv/render_gl.h
 include/mpv/stream_cb.h
 lib/libmpv.so
 lib/libmpv.so.1
-lib/libmpv.so.1.107.0
+lib/libmpv.so.1.109.0
 lib/pkgconfig/mpv.pc
 man/man1/mpv.1
 share/applications/mpv.desktop
@@ -18,6 +17,7 @@ share/doc/mpv/mplayer-input.conf
 share/doc/mpv/mpv.conf
 share/doc/mpv/restore-old-bindings.conf
 share/examples/mpv/encoding-profiles.conf
+share/icons/hicolor/128x128/apps/mpv.png
 share/icons/hicolor/16x16/apps/mpv.png
 share/icons/hicolor/32x32/apps/mpv.png
 share/icons/hicolor/64x64/apps/mpv.png
