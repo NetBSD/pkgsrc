@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1183 2020/11/28 20:55:43 pin Exp $
+# $NetBSD: Makefile,v 1.1184 2020/12/19 10:22:45 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -437,6 +437,7 @@ SUBDIR+=	latex2html
 SUBDIR+=	libclucene
 SUBDIR+=	libcroco
 SUBDIR+=	libcsv
+SUBDIR+=	libcue
 SUBDIR+=	libexttextcat
 SUBDIR+=	libfastjson
 SUBDIR+=	libhighlight
