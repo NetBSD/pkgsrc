@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/08/31 18:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/19 14:27:18 bsiegert Exp $
 
 PKGNAME=	go-bin-1.14.2
 PKGREVISION=	1
@@ -33,6 +33,16 @@ DIST.darwin-amd64=		go${PKGVERSION_NOREV}.darwin-amd64.tar.gz
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo)
 DISTFILES+=			${DIST.darwin-amd64}
 EXTRACT_ONLY+=			${DIST.darwin-amd64}
+.endif
+
+ONLY_FOR_PLATFORM+=		Darwin-*-aarch64
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+PKGNAME=			go-1.16.beta1
+.endif
+DIST.darwin-arm64=		go1.16beta1.darwin-arm64.tar.gz
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo)
+DISTFILES+=			${DIST.darwin-arm64}
+EXTRACT_ONLY+=			${DIST.darwin-arm64}
 .endif
 
 ONLY_FOR_PLATFORM+=		Linux-*-i386
