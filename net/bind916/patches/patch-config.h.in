@@ -1,18 +1,18 @@
-$NetBSD: patch-config.h.in,v 1.2 2020/08/30 19:26:45 christos Exp $
+$NetBSD: patch-config.h.in,v 1.3 2020/12/19 16:41:36 taca Exp $
 
-* Take from NetBSD base, adding support for blacklistd.
+* Based on NetBSD, add support for blocklist(blacklist).
 
---- config.h.in.orig	2020-07-03 06:44:14.000000000 -0400
-+++ config.h.in	2020-08-30 15:04:46.317494639 -0400
+--- config.h.in.orig	2020-12-07 08:16:53.000000000 +0000
++++ config.h.in
 @@ -45,6 +45,12 @@
  /* define if the ARM yield instruction is available */
  #undef HAVE_ARM_YIELD
  
 +/* Define to 1 if blacklist is supported. */
-+#undef HAVE_BLACKLIST
++#undef HAVE_BLACKLIST_H
 +
 +/* Define to 1 if blocklist is supported. */
-+#undef HAVE_BLOCKLIST
++#undef HAVE_BLOCKLIST_H
 +
  /* Define to 1 if the compiler supports __builtin_clz. */
  #undef HAVE_BUILTIN_CLZ
