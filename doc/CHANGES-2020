@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6825 2020/12/19 16:41:58 taca Exp $
+$NetBSD: CHANGES-2020,v 1.6826 2020/12/19 16:44:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9898,3 +9898,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/py-zfec to 1.5.4 [gdt 2020-12-19]
 	Updated math/py-scikit-image to 0.18.0 [mef 2020-12-19]
 	Updated net/bind916 to 9.16.10 [taca 2020-12-19]
+	Updated www/drupal7 to 7.75 [taca 2020-12-19]
