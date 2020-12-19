@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2019/06/10 13:44:35 nia Exp $
+# $NetBSD: Makefile,v 1.37 2020/12/19 11:07:10 nia Exp $
 
-DISTNAME=	dropbear-2019.78
+DISTNAME=	dropbear-2020.81
 CATEGORIES=	security
 MASTER_SITES=	https://matt.ucc.asn.au/dropbear/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -48,12 +48,10 @@ CPPFLAGS+=		-DXAUTH_COMMAND="\"${XAUTHBASE}/bin/xauth\""
 CFLAGS.NetBSD+=		-DHAVE_NETINET_IN_SYSTM_H
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-INSTALLATION_DIRS=	share/doc/dropbear ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
-
 BUILD_TARGET=		all scp
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/scp ${DESTDIR}/${PREFIX}/bin/dbscp
+	${INSTALL_PROGRAM} ${WRKSRC}/scp ${DESTDIR}${PREFIX}/bin/dbscp
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/ltm/buildlink3.mk"
