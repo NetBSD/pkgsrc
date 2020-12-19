@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.133 2020/12/04 20:43:43 nia Exp $
+# $NetBSD: pyversion.mk,v 1.134 2020/12/19 13:12:00 nia Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -136,7 +136,9 @@ PKG_FAIL_REASON+=	"No valid Python version"
 # Additional CONFLICTS
 .if ${PYTHON_SELF_CONFLICT:U:tl} == "yes"
 .  for i in ${PYTHON_VERSIONS_ACCEPTED:N${_PYTHON_VERSION}}
+.    if empty(PYTHON_VERSIONS_INCOMPATIBLE:M${i})
 CONFLICTS+=	${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}
+.    endif
 .  endfor
 .endif # PYCONFLICTS
 
