@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/19 14:27:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/19 14:28:56 bsiegert Exp $
 
 PKGNAME=	go-bin-1.14.2
 PKGREVISION=	1
@@ -37,7 +37,7 @@ EXTRACT_ONLY+=			${DIST.darwin-amd64}
 
 ONLY_FOR_PLATFORM+=		Darwin-*-aarch64
 .if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
-PKGNAME=			go-1.16.beta1
+PKGNAME=			go-bin-1.16.beta1
 .endif
 DIST.darwin-arm64=		go1.16beta1.darwin-arm64.tar.gz
 .if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo)
