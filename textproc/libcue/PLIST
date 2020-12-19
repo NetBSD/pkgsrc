@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/12/19 10:22:45 nia Exp $
+include/libcue.h
+include/libcue/libcue.h
+lib/libcue.so
+lib/libcue.so.2
+lib/libcue.so.${PKGVERSION}
+lib/pkgconfig/libcue.pc
