@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6818 2020/12/19 14:18:37 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.6819 2020/12/19 14:44:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9881,3 +9881,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/mitmproxy to 6.0.2 [leot 2020-12-19]
 	Updated print/xpdf4 to 4.02nb9 [rhialto 2020-12-19]
 	Updated databases/postgresql-postgis2 to 3.1.0nb1 [gdt 2020-12-19]
+	Updated net/bind911 to 9.11.26 [taca 2020-12-19]
