@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2019/11/18 10:51:31 adam Exp $
+$NetBSD: distinfo,v 1.23 2020/12/19 11:52:26 leot Exp $
 
-SHA1 (pyOpenSSL-19.1.0.tar.gz) = 0b8a66d0f14e641f23ab26e3a49ce9f0e0661bf2
-RMD160 (pyOpenSSL-19.1.0.tar.gz) = 4ad025efdcfeb53f6dd108d0ddbe6a299e645170
-SHA512 (pyOpenSSL-19.1.0.tar.gz) = 4acd96f287d72eb11bd812697d28cd6eb6a96a4653248b65f967187830a6b17cc1254775a18a3405469f3d45abdae6f02d165f2f35f035f3174c2826fba82916
-Size (pyOpenSSL-19.1.0.tar.gz) = 160510 bytes
-SHA1 (patch-tests_memdbg.py) = 0cca9c930a8f6065205ed28ec6d2551b45f4d606
+SHA1 (pyOpenSSL-20.0.1.tar.gz) = 97a98f017ac5f0384ae725035c6138bac458b903
+RMD160 (pyOpenSSL-20.0.1.tar.gz) = cbf2b0434544dc9ddc239694fd20ef63920d73cb
+SHA512 (pyOpenSSL-20.0.1.tar.gz) = e81e0870398b882d77453b02e972559c0be82dbfe87bd8a48a65e8943acc3ea07dc8c3150b88e299c237496043443d1a5832219c337e4436f99ef419b36dd23f
+Size (pyOpenSSL-20.0.1.tar.gz) = 173736 bytes
+SHA1 (patch-tests_memdbg.py) = a2d2395a0fe1dd1934a50b065fe68f47907f0b87
