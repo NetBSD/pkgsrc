@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_ns_pfilter.c,v 1.2 2020/08/30 19:26:45 christos Exp $
+$NetBSD: patch-lib_ns_pfilter.c,v 1.3 2020/12/19 16:41:36 taca Exp $
 
-* Take from NetBSD base.
+* Based on NetBSD, add support for blocklist(blacklist).
 
---- lib/ns/pfilter.c.orig	2020-08-30 14:56:09.038428676 -0400
-+++ lib/ns/pfilter.c	2020-08-30 15:07:25.182798415 -0400
-@@ -0,0 +1,55 @@
+--- lib/ns/pfilter.c.orig	2020-12-17 07:42:44.024890144 +0000
++++ lib/ns/pfilter.c
+@@ -0,0 +1,59 @@
 +
 +#include "config.h"
 +
@@ -13,16 +13,18 @@ $NetBSD: patch-lib_ns_pfilter.c,v 1.2 2020/08/30 19:26:45 christos Exp $
 +#include <ns/types.h>
 +#include <ns/client.h>
 +
-+#ifdef HAVE_BLACKLIST
++#ifdef HAVE_BLACKLIST_H
 +#include <blacklist.h>
 +#define blocklist blacklist
 +#define blocklist_open blacklist_open
 +#define blocklist_sa_r blacklist_sa_r
 +#endif
 +
-+#ifdef HAVE_BLOCKLIST
++#ifdef HAVE_BLOCKLIST_H
 +#include <blocklist.h>
 +#endif
++
++#if defined(HAVE_BLACKLIST_H) || defined(HAVE_BLOCKLIST_H)
 +
 +#include <ns/pfilter.h>
 +
@@ -60,3 +62,5 @@ $NetBSD: patch-lib_ns_pfilter.c,v 1.2 2020/08/30 19:26:45 christos Exp $
 +	    res != ISC_R_SUCCESS, fd,
 +	    &client->peeraddr.type.sa, client->peeraddr.length, msg);
 +}
++
++#endif

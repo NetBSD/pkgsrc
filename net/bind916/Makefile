@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/11/26 13:21:51 taca Exp $
+# $NetBSD: Makefile,v 1.7 2020/12/19 16:41:36 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -15,15 +15,13 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.16.9
-
-.include "../../mk/bsd.prefs.mk"
+BIND_VERSION=	9.16.10
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
 .include "options.mk"
 
-USE_TOOLS+=		pax perl pkg-config
+USE_TOOLS+=		autoconf pax perl pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CHECK_FILES_SKIP=	bin/tests/system/system-test-driver.sh
@@ -74,6 +72,9 @@ CONF_FILES+=		share/examples/bind9/bind.keys \
 			${PKG_SYSCONFDIR}/bind.keys
 
 INSTALLATION_DIRS+=	${DOCDIR}
+
+pre-configure:
+	cd ${WRKSRC} && autoconf -f
 
 post-install:
 .for f in ${DOCS}
