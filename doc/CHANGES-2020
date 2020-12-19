@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6809 2020/12/19 11:07:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6810 2020/12/19 11:14:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9872,3 +9872,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/cataclysm-dda-sdl to 0.E.3 [nia 2020-12-19]
 	Updated devel/texttest to 4.0.5 [schmonz 2020-12-19]
 	Updated security/dropbear to 2020.81 [nia 2020-12-19]
+	Updated www/links to 2.21 [nia 2020-12-19]
