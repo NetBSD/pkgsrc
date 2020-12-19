@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/14 19:07:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/12/19 11:03:48 schmonz Exp $
 bin/filter_fpdiff.py
 bin/filter_rundependent.py
 bin/interpretcore
@@ -235,7 +235,7 @@ ${PYSITELIB}/texttestlib/doc/MigrationNotes_from_3.3
 ${PYSITELIB}/texttestlib/doc/MigrationNotes_from_3.4
 ${PYSITELIB}/texttestlib/doc/MigrationNotes_from_3.5
 ${PYSITELIB}/texttestlib/doc/MigrationNotes_from_3.6
-${PYSITELIB}/texttestlib/doc/MigrationNotes_from_${PYVERSSUFFIX}
+${PYSITELIB}/texttestlib/doc/MigrationNotes_from_3.7
 ${PYSITELIB}/texttestlib/doc/MigrationNotes_from_3.8
 ${PYSITELIB}/texttestlib/doc/MigrationNotes_from_3.9
 ${PYSITELIB}/texttestlib/doc/quick_start.txt
