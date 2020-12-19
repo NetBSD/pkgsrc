@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/11/05 09:09:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2020/12/19 13:42:59 rhialto Exp $
 
 DISTNAME=	xpdf-4.02
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	print
 MASTER_SITES=	https://xpdfreader-dl.s3.amazonaws.com/
 
@@ -20,6 +20,15 @@ INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/256x256/apps
 
+EGDIR=			${PREFIX}/share/examples/xpdf
+CONF_FILES=		${EGDIR}/xpdfrc ${PKG_SYSCONFDIR}/xpdfrc
+INSTALLATION_DIRS+=	${EGDIR}
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths+=	doc/sample-xpdfrc xpdf/GlobalParams.cc
+SUBST_VARS.paths=	PREFIX
+SUBST_STAGE.paths=	pre-configure
+
 post-build:
 	cd ${WRKSRC} && ${PREFIX}/bin/icotool -w 256 -h 256 -x -o xpdf-icon.png xpdf-qt/xpdf-icon.ico
 
@@ -32,6 +41,8 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/xpdf.svg
 	${INSTALL_DATA} ${WRKSRC}/xpdf-icon.png \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/256x256/apps/xpdf.png
+	${INSTALL_DATA} ${WRKSRC}/doc/sample-xpdfrc \
+	    ${DESTDIR}${EGDIR}/xpdfrc
 
 .include "options.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
