@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6826 2020/12/19 16:44:55 taca Exp $
+$NetBSD: CHANGES-2020,v 1.6827 2020/12/19 16:57:55 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9899,3 +9899,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-scikit-image to 0.18.0 [mef 2020-12-19]
 	Updated net/bind916 to 9.16.10 [taca 2020-12-19]
 	Updated www/drupal7 to 7.75 [taca 2020-12-19]
+	Updated x11/py-Xlib to 0.29 [prlw1 2020-12-19]
