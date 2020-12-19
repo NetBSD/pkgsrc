@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/12/02 14:54:55 taca Exp $
+# $NetBSD: Makefile,v 1.35 2020/12/19 14:44:15 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 DISTFILES+=	${DEFAULT_DISTFILES} bind-9.11.25-fixed-man-pages.tar.gz
@@ -16,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.11.25
+BIND_VERSION=	9.11.26
 
 .include "../../mk/bsd.prefs.mk"
 

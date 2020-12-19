@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.24 2020/12/02 14:54:55 taca Exp $
+$NetBSD: distinfo,v 1.25 2020/12/19 14:44:15 taca Exp $
 
 SHA1 (bind-9.11.25-fixed-man-pages.tar.gz) = e6cb1366d1f66f0ca61510ad6158890edb748f55
 RMD160 (bind-9.11.25-fixed-man-pages.tar.gz) = 7f818a65ddbfe7f532fc85245ccead18dee2dc20
 SHA512 (bind-9.11.25-fixed-man-pages.tar.gz) = 8c425ba42a1844abfea8f5c7050d23ea419ce04c221766193ba880693e30221997e1fb898e2b9519c035db89d547df6d39e4c749c1f9b6ef0edef3b815483cba
 Size (bind-9.11.25-fixed-man-pages.tar.gz) = 84725 bytes
-SHA1 (bind-9.11.25.tar.gz) = cf51456ab314b2c7b2a409c1170b5ddaaf5af2f6
-RMD160 (bind-9.11.25.tar.gz) = ef2b5d4b71838609cdc9421c0f8c430c72ec499a
-SHA512 (bind-9.11.25.tar.gz) = 852b15b6cf2f77ab103018e6fc078d856653c62c2db0ca2ef4f8bee64a60b06ed481d9fcdf29020e5072c69b9982545f032b2ab4c94dac28848150e04b9cecf9
-Size (bind-9.11.25.tar.gz) = 8284943 bytes
+SHA1 (bind-9.11.26.tar.gz) = 14064c865920842e48f444be2bda9dc91770e439
+RMD160 (bind-9.11.26.tar.gz) = 801726934bc31ca8292fc8358e6a813186283365
+SHA512 (bind-9.11.26.tar.gz) = 7ec32ca50b7f552d6a0b16ec1e168a24ecbf33420b8df123f74c7b9f615b8267e3e6e973a72f3ce3912eb60e94ebfacbacb4ae3945ac587c73f7cf695b46ce00
+Size (bind-9.11.26.tar.gz) = 8286586 bytes
 SHA1 (patch-bin_named_Makefile.in) = 3e5b98e3e0bdb701be679d3580d6d2d7609d655b
 SHA1 (patch-bin_named_server.c) = 0294d74eb3039049c4672a3de6eb371407bb382d
 SHA1 (patch-bin_pkcs11_pkcs11-keygen.c) = ca2671a5e3216a08a212cf893e070b01705ef9ee
