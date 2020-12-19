@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2020/11/25 01:04:53 gdt Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/12/19 14:18:24 gdt Exp $
 bin/pgsql2shp
 bin/raster2pgsql
 bin/shp2pgsql
@@ -10,13 +10,11 @@ share/postgresql/contrib/postgis-${MAJOR}/legacy_gist.sql
 share/postgresql/contrib/postgis-${MAJOR}/legacy_minimal.sql
 share/postgresql/contrib/postgis-${MAJOR}/postgis.sql
 share/postgresql/contrib/postgis-${MAJOR}/postgis_comments.sql
-share/postgresql/contrib/postgis-${MAJOR}/postgis_proc_set_search_path.sql
 share/postgresql/contrib/postgis-${MAJOR}/postgis_restore.pl
 share/postgresql/contrib/postgis-${MAJOR}/postgis_upgrade.sql
 share/postgresql/contrib/postgis-${MAJOR}/raster_comments.sql
 share/postgresql/contrib/postgis-${MAJOR}/rtpostgis.sql
 share/postgresql/contrib/postgis-${MAJOR}/rtpostgis_legacy.sql
-share/postgresql/contrib/postgis-${MAJOR}/rtpostgis_proc_set_search_path.sql
 share/postgresql/contrib/postgis-${MAJOR}/rtpostgis_upgrade.sql
 share/postgresql/contrib/postgis-${MAJOR}/sfcgal_comments.sql
 share/postgresql/contrib/postgis-${MAJOR}/spatial_ref_sys.sql
@@ -85,11 +83,16 @@ share/postgresql/extension/postgis--2.5.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis--3.0.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis--3.0.1--${PKGVERSION}.sql
 share/postgresql/extension/postgis--3.0.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis--3.0.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis--3.0.3--${PKGVERSION}.sql
+share/postgresql/extension/postgis--${PKGVERSION}--${PKGVERSION}.sql
 share/postgresql/extension/postgis--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis--${PKGVERSION}.sql
+share/postgresql/extension/postgis--${PKGVERSION}dev--${PKGVERSION}.sql
 share/postgresql/extension/postgis--${PKGVERSION}next--${PKGVERSION}.sql
 share/postgresql/extension/postgis--ANY--${PKGVERSION}.sql
 share/postgresql/extension/postgis--unpackaged--${PKGVERSION}.sql
+share/postgresql/extension/postgis--unpackaged.sql
 share/postgresql/extension/postgis.control
 share/postgresql/extension/postgis_raster--2.0.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--2.0.1--${PKGVERSION}.sql
@@ -149,11 +152,15 @@ share/postgresql/extension/postgis_raster--2.5.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--3.0.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--3.0.1--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--3.0.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_raster--3.0.3--${PKGVERSION}.sql
+share/postgresql/extension/postgis_raster--${PKGVERSION}--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis_raster--${PKGVERSION}.sql
+share/postgresql/extension/postgis_raster--${PKGVERSION}dev--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--${PKGVERSION}next--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--ANY--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--unpackaged--${PKGVERSION}.sql
+share/postgresql/extension/postgis_raster--unpackaged.sql
 share/postgresql/extension/postgis_raster.control
 share/postgresql/extension/postgis_tiger_geocoder--2.0.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--2.0.1--${PKGVERSION}.sql
@@ -213,8 +220,11 @@ share/postgresql/extension/postgis_tiger_geocoder--2.5.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.0.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.0.1--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.0.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_tiger_geocoder--3.0.3--${PKGVERSION}.sql
+share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}.sql
+share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}dev--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}next--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--ANY--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--unpackaged--${PKGVERSION}.sql
@@ -277,9 +287,13 @@ share/postgresql/extension/postgis_topology--2.5.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--3.0.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--3.0.1--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--3.0.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--3.0.3--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--${PKGVERSION}--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--${PKGVERSION}dev--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}next--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--ANY--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--unpackaged--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--unpackaged.sql
 share/postgresql/extension/postgis_topology.control
