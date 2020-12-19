@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/11/24 17:06:50 leot Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/12/19 11:54:42 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -351,15 +351,9 @@ ${PYSITELIB}/mitmproxy/net/http/http1/assemble.pyo
 ${PYSITELIB}/mitmproxy/net/http/http1/read.py
 ${PYSITELIB}/mitmproxy/net/http/http1/read.pyc
 ${PYSITELIB}/mitmproxy/net/http/http1/read.pyo
-${PYSITELIB}/mitmproxy/net/http/http2/__init__.py
-${PYSITELIB}/mitmproxy/net/http/http2/__init__.pyc
-${PYSITELIB}/mitmproxy/net/http/http2/__init__.pyo
-${PYSITELIB}/mitmproxy/net/http/http2/framereader.py
-${PYSITELIB}/mitmproxy/net/http/http2/framereader.pyc
-${PYSITELIB}/mitmproxy/net/http/http2/framereader.pyo
-${PYSITELIB}/mitmproxy/net/http/http2/utils.py
-${PYSITELIB}/mitmproxy/net/http/http2/utils.pyc
-${PYSITELIB}/mitmproxy/net/http/http2/utils.pyo
+${PYSITELIB}/mitmproxy/net/http/http2.py
+${PYSITELIB}/mitmproxy/net/http/http2.pyc
+${PYSITELIB}/mitmproxy/net/http/http2.pyo
 ${PYSITELIB}/mitmproxy/net/http/message.py
 ${PYSITELIB}/mitmproxy/net/http/message.pyc
 ${PYSITELIB}/mitmproxy/net/http/message.pyo
@@ -393,18 +387,9 @@ ${PYSITELIB}/mitmproxy/net/tcp.pyo
 ${PYSITELIB}/mitmproxy/net/tls.py
 ${PYSITELIB}/mitmproxy/net/tls.pyc
 ${PYSITELIB}/mitmproxy/net/tls.pyo
-${PYSITELIB}/mitmproxy/net/websockets/__init__.py
-${PYSITELIB}/mitmproxy/net/websockets/__init__.pyc
-${PYSITELIB}/mitmproxy/net/websockets/__init__.pyo
-${PYSITELIB}/mitmproxy/net/websockets/frame.py
-${PYSITELIB}/mitmproxy/net/websockets/frame.pyc
-${PYSITELIB}/mitmproxy/net/websockets/frame.pyo
-${PYSITELIB}/mitmproxy/net/websockets/masker.py
-${PYSITELIB}/mitmproxy/net/websockets/masker.pyc
-${PYSITELIB}/mitmproxy/net/websockets/masker.pyo
-${PYSITELIB}/mitmproxy/net/websockets/utils.py
-${PYSITELIB}/mitmproxy/net/websockets/utils.pyc
-${PYSITELIB}/mitmproxy/net/websockets/utils.pyo
+${PYSITELIB}/mitmproxy/net/websocket.py
+${PYSITELIB}/mitmproxy/net/websocket.pyc
+${PYSITELIB}/mitmproxy/net/websocket.pyo
 ${PYSITELIB}/mitmproxy/options.py
 ${PYSITELIB}/mitmproxy/options.pyc
 ${PYSITELIB}/mitmproxy/options.pyo
@@ -505,9 +490,6 @@ ${PYSITELIB}/mitmproxy/test/tutils.pyo
 ${PYSITELIB}/mitmproxy/tools/__init__.py
 ${PYSITELIB}/mitmproxy/tools/__init__.pyc
 ${PYSITELIB}/mitmproxy/tools/__init__.pyo
-${PYSITELIB}/mitmproxy/tools/_main.py
-${PYSITELIB}/mitmproxy/tools/_main.pyc
-${PYSITELIB}/mitmproxy/tools/_main.pyo
 ${PYSITELIB}/mitmproxy/tools/cmdline.py
 ${PYSITELIB}/mitmproxy/tools/cmdline.pyc
 ${PYSITELIB}/mitmproxy/tools/cmdline.pyo
@@ -659,9 +641,15 @@ ${PYSITELIB}/mitmproxy/utils/__init__.pyo
 ${PYSITELIB}/mitmproxy/utils/arg_check.py
 ${PYSITELIB}/mitmproxy/utils/arg_check.pyc
 ${PYSITELIB}/mitmproxy/utils/arg_check.pyo
+${PYSITELIB}/mitmproxy/utils/asyncio_utils.py
+${PYSITELIB}/mitmproxy/utils/asyncio_utils.pyc
+${PYSITELIB}/mitmproxy/utils/asyncio_utils.pyo
 ${PYSITELIB}/mitmproxy/utils/bits.py
 ${PYSITELIB}/mitmproxy/utils/bits.pyc
 ${PYSITELIB}/mitmproxy/utils/bits.pyo
+${PYSITELIB}/mitmproxy/utils/compat.py
+${PYSITELIB}/mitmproxy/utils/compat.pyc
+${PYSITELIB}/mitmproxy/utils/compat.pyo
 ${PYSITELIB}/mitmproxy/utils/data.py
 ${PYSITELIB}/mitmproxy/utils/data.pyc
 ${PYSITELIB}/mitmproxy/utils/data.pyo
@@ -719,6 +707,9 @@ ${PYSITELIB}/pathod/language/message.pyo
 ${PYSITELIB}/pathod/language/websockets.py
 ${PYSITELIB}/pathod/language/websockets.pyc
 ${PYSITELIB}/pathod/language/websockets.pyo
+${PYSITELIB}/pathod/language/websockets_frame.py
+${PYSITELIB}/pathod/language/websockets_frame.pyc
+${PYSITELIB}/pathod/language/websockets_frame.pyo
 ${PYSITELIB}/pathod/language/writer.py
 ${PYSITELIB}/pathod/language/writer.pyc
 ${PYSITELIB}/pathod/language/writer.pyo
