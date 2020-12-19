@@ -1,34 +1,30 @@
-# $NetBSD: Makefile,v 1.41 2019/11/02 22:54:26 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2020/12/19 15:03:14 rhialto Exp $
 
-DISTNAME=	lha-114i
-PKGNAME=	lha-114.9
-PKGREVISION=	4
+DISTNAME=	lha-1.14i-ac20081023
+PKGNAME=	lha-114.9.20081023
+PKGREVISION=	20201213
 CATEGORIES=	archivers
-MASTER_SITES=	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jca02266/}
+GITHUB_PROJECT=	lha
+GITHUB_TAG=	dc524ca3c90ae701d939f23fdc672a90199e9d22
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www2m.biglobe.ne.jp/~dolphin/lha/lha-unix.htm
-COMMENT=	Archive files using LZW compression (.lzh files)
+HOMEPAGE=	https://github.com/jca02266/lha
+COMMENT=	Archive files using LZW compression (.lzh, .lha files)
 LICENSE=	lha-license
 
-RESTRICTED=		Other than for-free distribution of the unmodified source \
-		over a network, redistribution terms are complex.
+CONFIGURE_ARGS+=	--disable-multibyte-filename
+
+RESTRICTED=		Other than for-free distribution of the unmodified \
+			source over a network, redistribution terms are complex.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-MAKE_FLAGS+=	MAKE=${MAKE_PROGRAM:Q}
+USE_TOOLS+=	autoconf automake autoreconf gmake
+GNU_CONFIGURE=	yes
 
-OPSYSVARS+=		LHA_CPPFLAGS
-LHA_CPPFLAGS=		-DSYSTIME_HAS_NO_TM -DMKTIME -DUSESTRCASECMP -DSYSV_SYSTEM_DIR
-LHA_CPPFLAGS.Darwin+=	-DHAVE_NO_LCHOWN
-MAKE_FLAGS+=		MACHINE=${LHA_CPPFLAGS:Q}
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/ja_JP.EUC/man1
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/lha.n \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1/lha.1
+pre-configure:
+	cd ${WRKSRC} && autoreconf --install --symlink
 
 .include "../../mk/bsd.pkg.mk"
