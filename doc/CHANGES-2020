@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6820 2020/12/19 15:03:50 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.6821 2020/12/19 15:18:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9879,7 +9879,18 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-wsproto to 1.0.0 [leot 2020-12-19]
 	Updated security/py-OpenSSL to 20.0.1 [leot 2020-12-19]
 	Updated net/mitmproxy to 6.0.2 [leot 2020-12-19]
+	Added math/py-asdf version 2.7.1 [mef 2020-12-19]
 	Updated print/xpdf4 to 4.02nb9 [rhialto 2020-12-19]
+	Added devel/py-extension-helpers version 0.1 [mef 2020-12-19]
+	Added math/py-astropy version 4.2 [mef 2020-12-19]
 	Updated databases/postgresql-postgis2 to 3.1.0nb1 [gdt 2020-12-19]
+	Added math/py-jplephem version 2.15 [mef 2020-12-19]
+	Added math/py-pyerfa version 1.7.1.1 [mef 2020-12-19]
+	Added math/py-pyvo version 1.1 [mef 2020-12-19]
+	Added math/py-astroquery version 0.3.9 [mef 2020-12-19]
+	Added math/py-astroML version 1.0 [mef 2020-12-19]
 	Updated net/bind911 to 9.11.26 [taca 2020-12-19]
+	Added math/py-gwcs version 0.15.0 [mef 2020-12-19]
+	Added math/py-photutils version 1.0.1 [mef 2020-12-19]
+	Added math/py-astroplan version 0.7 [mef 2020-12-19]
 	Updated archivers/lha to 114.9.20081023nb20201213 [rhialto 2020-12-19]
