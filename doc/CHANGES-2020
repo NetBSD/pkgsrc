@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6822 2020/12/19 15:21:57 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.6823 2020/12/19 15:28:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9895,3 +9895,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/py-astroplan version 0.7 [mef 2020-12-19]
 	Updated archivers/lha to 114.9.20081023nb20201213 [rhialto 2020-12-19]
 	Updated databases/guile-pg to 0.49 [gdt 2020-12-19]
+	Updated converters/py-zfec to 1.5.4 [gdt 2020-12-19]
