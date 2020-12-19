@@ -1,16 +1,10 @@
-$NetBSD: distinfo,v 1.67 2020/04/16 04:17:54 nia Exp $
+$NetBSD: distinfo,v 1.68 2020/12/19 11:27:51 leot Exp $
 
-SHA1 (mpv-0.32.0.tar.gz) = 5b69ea34dd5f8d209acd5266415c7bc00ab83341
-RMD160 (mpv-0.32.0.tar.gz) = d1e399fce8985a0399fe627248b87d8537cfefd7
-SHA512 (mpv-0.32.0.tar.gz) = f6426c0254ec0bf2f120e2196904f1e15fe17032b06764abca1d5e074f0cabb452eaf1cd09f8fd9b25b591accee7b881bfc3b06c19d5c98980305c4712486bd6
-Size (mpv-0.32.0.tar.gz) = 3148730 bytes
-SHA1 (patch-DOCS_man_ao.rst) = 5940fe1ad4d4328c03b9e6e5265c517762cfe2d0
-SHA1 (patch-audio_out_ao.c) = 1527c818d0f50801485ad3b90c5d86b30b2ca6f1
+SHA1 (mpv-0.33.0.tar.gz) = 62ba4778773624546aeb039bb39c33b7a21579f9
+RMD160 (mpv-0.33.0.tar.gz) = 4b5201454365d1fa2dc0c1b3350f227b056d0758
+SHA512 (mpv-0.33.0.tar.gz) = 5a4af74ba2c9656c6b61adcf944c734923c7b4527a49cd79ec63a0617911629438a138d887dfbd4b6c0c9c53e2c68c18839d98d9765179e52cc5675d0682e077
+Size (mpv-0.33.0.tar.gz) = 3259387 bytes
 SHA1 (patch-audio_out_ao__alsa.c) = c4661d0d22550d6e4eb2b7a42dd04dbcc58123b0
-SHA1 (patch-audio_out_ao__netbsd.c) = 94549be09bec15afc08dbe132880334b3140d4a1
-SHA1 (patch-options_options.c) = c75fb27140ad21e0a11c6ded976116c544661f56
-SHA1 (patch-player_main.c) = 7d1d62091c327fca698844004ddb9a7871e15fce
-SHA1 (patch-video_out_drm__common.c) = a545a8aec29f1b3c44d26aacbc59b86d3333a0b9
-SHA1 (patch-video_out_wayland__common.c) = d3e72c4ff5426bd8349c15679a47d446c35666b1
-SHA1 (patch-wscript) = cc3f24fcd10a23fef81bad149bfb88bf7d2a117c
-SHA1 (patch-wscript__build.py) = bbb391be46f6e5c02d1946a07bb5d8bbb442fd5a
+SHA1 (patch-video_out_drm__common.c) = 70eb8884f63e9456c0ffe592289cfd81e208955b
+SHA1 (patch-video_out_wayland__common.c) = 6a8d1d9b4109f941847f7eef47e3fbc7b3cc0535
+SHA1 (patch-wscript) = f9b3f85c696d70ca4becb5f554320f754779c0de
