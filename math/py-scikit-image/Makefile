@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/10/12 21:52:04 bacon Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/19 15:42:07 mef Exp $
 
-DISTNAME=	scikit-image-0.15.0
+DISTNAME=	scikit-image-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
 
@@ -11,9 +10,13 @@ HOMEPAGE=	https://scikit-image.org/
 COMMENT=	Image processing routines for SciPy
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.21:../../devel/py-cython
+DEPENDS+=	${PYPKGPREFIX}-numpy>=0.19.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.0.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.2.2:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.3.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-imageio>=2.0.1:../../graphics/py-imageio
-DEPENDS+=	${PYPKGPREFIX}-pywavelets>=0.5.2:../../math/py-pywavelets
+DEPENDS+=	${PYPKGPREFIX}-imageio>=2.3.0:../../graphics/py-imageio
+DEPENDS+=	${PYPKGPREFIX}-pywavelets>=1.1.1:../../math/py-pywavelets
 DEPENDS+=	${PYPKGPREFIX}-networkx>=2.0:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
