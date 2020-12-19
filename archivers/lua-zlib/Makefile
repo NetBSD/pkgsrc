@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/07/11 15:14:29 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/12/19 09:17:45 nia Exp $
 
 DISTNAME=	lua-zlib-1.2
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -23,6 +23,8 @@ INSTALLATION_DIRS+=	${LUA_CDIR}
 
 # Links against unversioned base Lua on NetBSD...
 BUILDLINK_TRANSFORM+=	rm:-llua
+
+BUILDLINK_TRANSFORM.Darwin+=	rm:-bundle
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/zlib.so ${DESTDIR}${PREFIX}/${LUA_CDIR}
