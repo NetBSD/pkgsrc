@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/06 21:06:08 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/12/19 19:16:22 gdt Exp $
+bin/xmpp-message
 ${PYSITELIB}/xmpp/__init__.py
 ${PYSITELIB}/xmpp/__init__.pyc
 ${PYSITELIB}/xmpp/__init__.pyo
@@ -8,6 +9,9 @@ ${PYSITELIB}/xmpp/auth.pyo
 ${PYSITELIB}/xmpp/browser.py
 ${PYSITELIB}/xmpp/browser.pyc
 ${PYSITELIB}/xmpp/browser.pyo
+${PYSITELIB}/xmpp/cli.py
+${PYSITELIB}/xmpp/cli.pyc
+${PYSITELIB}/xmpp/cli.pyo
 ${PYSITELIB}/xmpp/client.py
 ${PYSITELIB}/xmpp/client.pyc
 ${PYSITELIB}/xmpp/client.pyo
@@ -26,9 +30,6 @@ ${PYSITELIB}/xmpp/features.pyo
 ${PYSITELIB}/xmpp/filetransfer.py
 ${PYSITELIB}/xmpp/filetransfer.pyc
 ${PYSITELIB}/xmpp/filetransfer.pyo
-${PYSITELIB}/xmpp/jep0106.py
-${PYSITELIB}/xmpp/jep0106.pyc
-${PYSITELIB}/xmpp/jep0106.pyo
 ${PYSITELIB}/xmpp/protocol.py
 ${PYSITELIB}/xmpp/protocol.pyc
 ${PYSITELIB}/xmpp/protocol.pyo
@@ -44,18 +45,24 @@ ${PYSITELIB}/xmpp/simplexml.pyo
 ${PYSITELIB}/xmpp/transports.py
 ${PYSITELIB}/xmpp/transports.pyc
 ${PYSITELIB}/xmpp/transports.pyo
+${PYSITELIB}/xmpp/xep0106.py
+${PYSITELIB}/xmpp/xep0106.pyc
+${PYSITELIB}/xmpp/xep0106.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 share/doc/py-xmpppy/advanced.html
 share/doc/py-xmpppy/basic.html
 share/doc/py-xmpppy/index.html
 share/doc/py-xmpppy/xmpppy.css
 share/doc/py-xmpppy/xmpppy_title.png
-share/examples/py-xmpppy/README.py
+share/examples/py-xmpppy/basic.py
+share/examples/py-xmpppy/bosh.py
 share/examples/py-xmpppy/bot.py
 share/examples/py-xmpppy/commandsbot.py
+share/examples/py-xmpppy/demo.py
 share/examples/py-xmpppy/logger.py
 share/examples/py-xmpppy/xsend.py
 share/examples/py-xmpppy/xtalk.py
