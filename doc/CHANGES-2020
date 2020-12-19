@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6827 2020/12/19 16:57:55 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.6828 2020/12/19 17:59:09 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9900,3 +9900,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/bind916 to 9.16.10 [taca 2020-12-19]
 	Updated www/drupal7 to 7.75 [taca 2020-12-19]
 	Updated x11/py-Xlib to 0.29 [prlw1 2020-12-19]
+	Added lang/go116 version 1.16.beta1 [bsiegert 2020-12-19]
