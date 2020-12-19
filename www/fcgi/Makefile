@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/06/28 13:55:59 nia Exp $
+# $NetBSD: Makefile,v 1.22 2020/12/19 10:48:13 nia Exp $
 
 DISTNAME=		fcgi-2.4.0
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		www devel
 #MASTER_SITES=		http://fastcgi.com/dist/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://fastcgi.com/
+HOMEPAGE=		https://fastcgi-archives.github.io/
 COMMENT=		FastCGI application development kit
 
 MAKE_JOBS_SAFE=		no
