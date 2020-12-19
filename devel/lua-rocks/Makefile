@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/07/02 20:53:10 nia Exp $
+# $NetBSD: Makefile,v 1.16 2020/12/19 11:30:24 nia Exp $
 
-DISTNAME=	luarocks-3.3.1
+DISTNAME=	luarocks-3.5.0
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
-PKGREVISION=	1
 CATEGORIES=	devel lua
 MASTER_SITES=	https://luarocks.org/releases/
 
@@ -20,7 +19,9 @@ MAKE_FILE=	GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
 
-PREFER.unzip=	pkgsrc
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.unzip=	# it seems to not like netbsd unzip(1)
+.endif
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
