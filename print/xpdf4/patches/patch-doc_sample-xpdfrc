@@ -1,0 +1,50 @@
+$NetBSD: patch-doc_sample-xpdfrc,v 1.1 2020/12/19 13:42:59 rhialto Exp $
+
+Adjust to path names that actually exist (in the fonts/urw-fonts pkg).
+
+--- doc/sample-xpdfrc.orig	2020-12-19 13:11:54.156414314 +0000
++++ doc/sample-xpdfrc
+@@ -29,20 +29,20 @@
+ # installed in a "standard" location, xpdf will find them
+ # automatically.)
+ 
+-#fontFile Times-Roman		/usr/local/share/ghostscript/fonts/n021003l.pfb
+-#fontFile Times-Italic		/usr/local/share/ghostscript/fonts/n021023l.pfb
+-#fontFile Times-Bold		/usr/local/share/ghostscript/fonts/n021004l.pfb
+-#fontFile Times-BoldItalic	/usr/local/share/ghostscript/fonts/n021024l.pfb
+-#fontFile Helvetica		/usr/local/share/ghostscript/fonts/n019003l.pfb
+-#fontFile Helvetica-Oblique	/usr/local/share/ghostscript/fonts/n019023l.pfb
+-#fontFile Helvetica-Bold		/usr/local/share/ghostscript/fonts/n019004l.pfb
+-#fontFile Helvetica-BoldOblique	/usr/local/share/ghostscript/fonts/n019024l.pfb
+-#fontFile Courier		/usr/local/share/ghostscript/fonts/n022003l.pfb
+-#fontFile Courier-Oblique	/usr/local/share/ghostscript/fonts/n022023l.pfb
+-#fontFile Courier-Bold		/usr/local/share/ghostscript/fonts/n022004l.pfb
+-#fontFile Courier-BoldOblique	/usr/local/share/ghostscript/fonts/n022024l.pfb
+-#fontFile Symbol			/usr/local/share/ghostscript/fonts/s050000l.pfb
+-#fontFile ZapfDingbats		/usr/local/share/ghostscript/fonts/d050000l.pfb
++#fontFile Times-Roman		@PREFIX@/share/fonts/urw/n021003l.pfb
++#fontFile Times-Italic		@PREFIX@/share/fonts/urw/n021023l.pfb
++#fontFile Times-Bold		@PREFIX@/share/fonts/urw/n021004l.pfb
++#fontFile Times-BoldItalic	@PREFIX@/share/fonts/urw/n021024l.pfb
++#fontFile Helvetica		@PREFIX@/share/fonts/urw/n019003l.pfb
++#fontFile Helvetica-Oblique	@PREFIX@/share/fonts/urw/n019023l.pfb
++#fontFile Helvetica-Bold	@PREFIX@/share/fonts/urw/n019004l.pfb
++#fontFile Helvetica-BoldOblique	@PREFIX@/share/fonts/urw/n019024l.pfb
++#fontFile Courier		@PREFIX@/share/fonts/urw/n022003l.pfb
++#fontFile Courier-Oblique	@PREFIX@/share/fonts/urw/n022023l.pfb
++#fontFile Courier-Bold		@PREFIX@/share/fonts/urw/n022004l.pfb
++#fontFile Courier-BoldOblique	@PREFIX@/share/fonts/urw/n022024l.pfb
++#fontFile Symbol		@PREFIX@/share/fonts/urw/s050000l.pfb
++#fontFile ZapfDingbats		@PREFIX@/share/fonts/urw/d050000l.pfb
+ 
+ # If you need to display PDF files that refer to non-embedded fonts,
+ # you should add one or more fontDir options to point to the
+@@ -50,7 +50,7 @@
+ # .pfb, .ttf, and .ttc files in those directories (other files will
+ # simply be ignored).
+ 
+-#fontDir		/usr/local/fonts/bakoma
++#fontDir		@PREFIX@/fonts/bakoma
+ 
+ #----- PostScript output control
+ 
