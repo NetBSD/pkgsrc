@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.4 2020/12/08 12:08:20 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/12/19 10:54:28 nia Exp $
 # used by games/cataclysm-dda/Makefile
 # used by games/cataclysm-dda-sdl/Makefile
 
-DISTNAME=	cataclysm-dda-0.E.2
+DISTNAME=	cataclysm-dda-0.E.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CleverRaven/}
 GITHUB_PROJECT=	Cataclysm-DDA
-GITHUB_TAG=	0.E-2
+GITHUB_TAG=	0.E-3
 
 HOMEPAGE=	https://cataclysmdda.org/
 LICENSE=	cc-by-sa-v3.0
