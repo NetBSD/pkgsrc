@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6829 2020/12/19 18:02:29 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.6830 2020/12/19 19:16:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9902,3 +9902,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/py-Xlib to 0.29 [prlw1 2020-12-19]
 	Added lang/go116 version 1.16.beta1 [bsiegert 2020-12-19]
 	Updated archivers/lha to 114.9.20201220 [rhialto 2020-12-19]
+	Updated chat/py-xmpppy to 0.6.2 [gdt 2020-12-19]
