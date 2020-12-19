@@ -1,0 +1,42 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/12/19 16:41:36 taca Exp $
+
+Add support for blocklist(blacklist).
+
+--- configure.ac.orig	2020-12-07 08:16:53.000000000 +0000
++++ configure.ac
+@@ -695,6 +695,16 @@ AC_CHECK_FUNCS([pthread_setaffinity_np c
+ AC_CHECK_FUNCS([pthread_setname_np pthread_set_name_np])
+ AC_CHECK_HEADERS([pthread_np.h], [], [], [#include <pthread.h>])
+ 
++# libblocklist(libblacklist)
++AC_MSG_CHECKING(for libblocklist)
++AC_CHECK_HEADER([blocklist.h],
++  [AC_DEFINE([HAVE_BLOCKLIST_H], [1])
++   AC_CHECK_LIB(blocklist, blocklist)],
++  [AC_MSG_CHECKING(for libblacklist)
++   AC_CHECK_HEADER([blacklist.h],
++   [AC_DEFINE([HAVE_BLACKLIST_H], [1])
++    AC_CHECK_LIB(blacklist, blacklist)])])
++
+ # libuv
+ AC_MSG_CHECKING(for libuv)
+ PKG_CHECK_MODULES([LIBUV], [libuv >= 1.0.0], [],
+@@ -1342,6 +1352,18 @@ AS_CASE([$with_libxml2],
+ 				 [AC_DEFINE([HAVE_LIBXML2], [1], [Use libxml2 library])])],
+ 	[AC_MSG_ERROR([Specifying libxml2 installation path is not supported, adjust PKG_CONFIG_PATH instead])])
+ 
++# blocklist
++AC_ARG_WITH([blocklist],
++	    [AS_HELP_STRING([--with-blocklist],
++		[enable blocklist support [yes|no|detect] (default is detect)])],
++		[], [with_blocklist="$with_blocklist"])
++
++# blacklist
++AC_ARG_WITH([blacklist],
++	    [AS_HELP_STRING([--with-blacklist],
++		[enable blacklist support [yes|no|detect] (default is detect)])],
++		[], [with_blacklist="$with_blacklist"])
++
+ #
+ # DEPRECATED
+ #
