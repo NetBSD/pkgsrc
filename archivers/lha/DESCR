@@ -1,11 +1,11 @@
-    LHa for UNIX version 1.14c Mar. 7 1996 by Tsugio Okamoto
+    LHa for UNIX version 1.14i-ac20081023 Dec. 13 2020 by Koji Arai
 
      This unofficial version of lha is based on Version 1.00.  This
 version supports extraction & archiving using -lh5- as well as
 extraction using -lh6- algorithm.
 
-     All the bug reports on this version should be directed to Tsuguo
-Okamoto <GBA02146@NIFTYSERVE.OR.JP>.
+     All the bug reports on this version should be directed to
+https://github.com/jca02266/lha/issues
 
 
      If this software is included in medium that may be obtained by
