@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6819 2020/12/19 14:44:38 taca Exp $
+$NetBSD: CHANGES-2020,v 1.6820 2020/12/19 15:03:50 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9882,3 +9882,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/xpdf4 to 4.02nb9 [rhialto 2020-12-19]
 	Updated databases/postgresql-postgis2 to 3.1.0nb1 [gdt 2020-12-19]
 	Updated net/bind911 to 9.11.26 [taca 2020-12-19]
+	Updated archivers/lha to 114.9.20081023nb20201213 [rhialto 2020-12-19]
