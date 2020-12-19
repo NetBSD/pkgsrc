@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6806 2020/12/19 10:55:46 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6807 2020/12/19 10:56:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9869,3 +9869,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/exempi to 2.5.2 [nia 2020-12-18]
 	Added textproc/libcue version 2.2.1 [nia 2020-12-19]
 	Updated games/cataclysm-dda to 0.E.3 [nia 2020-12-19]
+	Updated games/cataclysm-dda-sdl to 0.E.3 [nia 2020-12-19]
