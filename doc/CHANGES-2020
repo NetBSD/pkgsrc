@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6813 2020/12/19 11:30:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6814 2020/12/19 11:50:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9876,3 +9876,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/links-gui to 2.21 [nia 2020-12-19]
 	Updated multimedia/mpv to 0.33.0 [leot 2020-12-19]
 	Updated devel/lua-rocks to 3.5.0 [nia 2020-12-19]
+	Updated www/py-wsproto to 1.0.0 [leot 2020-12-19]
