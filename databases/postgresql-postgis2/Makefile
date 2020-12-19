@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.85 2020/12/04 04:55:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.86 2020/12/19 14:18:24 gdt Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia, until there is a good basis to be sure
 # no other changes will be needed.
-MAJOR=		3.0
-DISTNAME=	postgis-${MAJOR}.3
+MAJOR=		3.1
+DISTNAME=	postgis-${MAJOR}.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	databases geography
@@ -16,7 +16,9 @@ COMMENT=	Spatial database capabilities for PostgreSQL
 
 LICENSE=	gnu-gpl-v2
 
+PGSQL_VERSIONS_ACCEPTED?=	13 12 11 10 96
 DEPENDS+=		postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
+
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS=		postgis-[0-9]*
