@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6815 2020/12/19 11:52:39 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6816 2020/12/19 11:54:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9878,3 +9878,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/lua-rocks to 3.5.0 [nia 2020-12-19]
 	Updated www/py-wsproto to 1.0.0 [leot 2020-12-19]
 	Updated security/py-OpenSSL to 20.0.1 [leot 2020-12-19]
+	Updated net/mitmproxy to 6.0.2 [leot 2020-12-19]
