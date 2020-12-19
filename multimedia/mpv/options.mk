@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2020/12/19 11:27:51 leot Exp $
+# $NetBSD: options.mk,v 1.27 2020/12/19 12:17:29 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -9,7 +9,7 @@ PKG_OPTIONS_GROUP.gl=		opengl rpi
 # audio outputs
 PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
 # video outputs
-PKG_SUPPORTED_OPTIONS+=		caca libdrm wayland x11
+PKG_SUPPORTED_OPTIONS+=		caca libdrm x11
 # audio/video outputs
 PKG_SUPPORTED_OPTIONS+=		sdl2
 # misc
@@ -38,9 +38,8 @@ PKG_SUPPORTED_OPTIONS+=		vdpau
 PKG_SUGGESTED_OPTIONS+=		vdpau
 .endif
 
-.include "../../devel/wayland/platform.mk"
-
-.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+.if ${OPSYS} == "Linux"
+PKG_SUPPORTED_OPTIONS+=		wayland
 PKG_SUGGESTED_OPTIONS+=		wayland
 .endif
 
