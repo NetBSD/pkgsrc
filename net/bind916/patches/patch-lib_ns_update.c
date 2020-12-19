@@ -1,14 +1,14 @@
-$NetBSD: patch-lib_ns_update.c,v 1.1 2020/08/09 15:20:22 taca Exp $
+$NetBSD: patch-lib_ns_update.c,v 1.2 2020/12/19 16:41:36 taca Exp $
 
-* Take from NetBSD base.
+* Based on NetBSD, add support for blocklist(blacklist).
 
---- lib/ns/update.c.orig	2020-05-06 09:59:35.000000000 +0000
+--- lib/ns/update.c.orig	2020-12-07 08:16:53.000000000 +0000
 +++ lib/ns/update.c
 @@ -52,6 +52,10 @@
  #include <ns/stats.h>
  #include <ns/update.h>
  
-+#ifdef HAVE_BLACKLIST
++#if defined(HAVE_BLACKLIST_H) || defined(HAVE_BLOCKLIST_H)
 +#include <ns/pfilter.h>
 +#endif
 +
@@ -19,7 +19,7 @@ $NetBSD: patch-lib_ns_update.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  
  	result = ns_client_checkaclsilent(client, NULL, queryacl, true);
  	if (result != ISC_R_SUCCESS) {
-+#ifdef HAVE_BLACKLIST
++#if defined(HAVE_BLACKLIST_H) || defined(HAVE_BLOCKLIST_H)
 +		pfilter_notify(result, client, "queryacl");
 +#endif
  		dns_name_format(zonename, namebuf, sizeof(namebuf));
@@ -29,7 +29,7 @@ $NetBSD: patch-lib_ns_update.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  			      "update '%s/%s' denied due to allow-query",
  			      namebuf, classbuf);
  	} else if (updateacl == NULL && ssutable == NULL) {
-+#ifdef HAVE_BLACKLIST
++#if defined(HAVE_BLACKLIST_H) || defined(HAVE_BLOCKLIST_H)
 +		pfilter_notify(result, client, "updateacl");
 +#endif
  		dns_name_format(zonename, namebuf, sizeof(namebuf));
@@ -39,7 +39,7 @@ $NetBSD: patch-lib_ns_update.c,v 1.1 2020/08/09 15:20:22 taca Exp $
  		msg = "disabled";
  	} else {
  		result = ns_client_checkaclsilent(client, NULL, acl, false);
-+#ifdef HAVE_BLACKLIST
++#if defined(HAVE_BLACKLIST_H) || defined(HAVE_BLOCKLIST_H)
 +		pfilter_notify(result, client, "updateacl");
 +#endif
  		if (result == ISC_R_SUCCESS) {

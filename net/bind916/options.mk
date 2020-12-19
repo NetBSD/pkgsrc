@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2020/09/03 20:35:17 otis Exp $
+# $NetBSD: options.mk,v 1.4 2020/12/19 16:41:36 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind916
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
 PKG_SUPPORTED_OPTIONS+=	bind-json-statistics-server blacklist blocklist
 PKG_SUPPORTED_OPTIONS+=	threads readline lmdb mysql pgsql ldap dlz-filesystem
-PKG_SUPPORTED_OPTIONS+=	geoip tuning dnstap # pkcs11
+PKG_SUPPORTED_OPTIONS+=	geoip tuning dnstap pkcs11
 PKG_SUGGESTED_OPTIONS+=	readline
 
 PLIST_VARS+=	dnstap lmdb pkcs11
@@ -23,9 +23,9 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .endif
 
 .if ${OPSYS} == "NetBSD"
-.   if exists(/usr/include/blacklist.h)
+.  if exists(/usr/include/blacklist.h)
 PKG_SUGGESTED_OPTIONS+=	blacklist
-.   elif exists(/usr/include/blocklist.h)
+.  elif exists(/usr/include/blocklist.h)
 PKG_SUGGESTED_OPTIONS+=	blocklist
 .  endif
 .endif
@@ -87,12 +87,12 @@ LDFLAGS+=		-lGeoIP
 .include "../../net/GeoIP/buildlink3.mk"
 .endif
 
-#.if !empty(PKG_OPTIONS:Mpkcs11)
-#CONFIGURE_ARGS+=	--enable-native-pkcs11
-#PLIST.pkcs11=		yes
-#.else
-#CONFIGURE_ARGS+=	--disable-native-pkcs11
-#.endif
+.if !empty(PKG_OPTIONS:Mpkcs11)
+CONFIGURE_ARGS+=	--enable-native-pkcs11
+PLIST.pkcs11=		yes
+.else
+CONFIGURE_ARGS+=	--disable-native-pkcs11
+.endif
 
 .if !empty(PKG_OPTIONS:Mtuning)
 CONFIGURE_ARGS+=	--with-tuning=large
