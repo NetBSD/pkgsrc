@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.13 2020/12/11 10:02:51 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q3,v 1.1.2.14 2020/12/19 20:39:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q3 branch:
 
@@ -130,4 +130,10 @@ graphics/ImageMagick: security fix
 
 Pullup ticket #6384 - requested by wiz
 security/openssl: security fix
+
+Pullup ticket #6385 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6386 - requested by nia
+www/firefox78-l10n: dependent update
 
