@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/12/17 09:14:00 triaxx Exp $
+# $NetBSD: Makefile,v 1.8 2020/12/20 13:07:58 nia Exp $
 
 DISTNAME=	mp4v2-4.1.5
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TechSmith/}
 GITHUB_TAG=	Release-ThirdParty-MP4v2-${PKGVERSION_NOREV}
