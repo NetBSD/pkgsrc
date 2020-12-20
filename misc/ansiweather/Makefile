@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/06/16 09:21:57 fcambus Exp $
+# $NetBSD: Makefile,v 1.15 2020/12/20 12:41:27 nia Exp $
 
 DISTNAME=	ansiweather-1.17.0
 CATEGORIES=	misc
@@ -20,8 +20,6 @@ DEPENDS+=	jq-[0-9]*:../../devel/jq
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-INSTALL_UNSTRIPPED=	yes
-
 DOCDIR=		share/doc/ansiweather
 EGDIR=		share/examples/ansiweather
 
@@ -36,7 +34,7 @@ AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 do-install:
-	${RUN}${INSTALL_PROGRAM} ${WRKSRC}/ansiweather ${DESTDIR}${PREFIX}/bin
+	${RUN}${INSTALL_SCRIPT} ${WRKSRC}/ansiweather ${DESTDIR}${PREFIX}/bin
 .for f in AUTHORS ChangeLog README.md ansiweather.plugin.zsh
 	${RUN}${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
 .endfor
