@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6833 2020/12/20 11:24:45 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6834 2020/12/20 13:05:26 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9906,3 +9906,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/glib2 to 2.66.4 [prlw1 2020-12-20]
 	Updated news/sfeed_curses to 0.9.6 [leot 2020-12-20]
 	Updated net/youtube-dl to 20201214 [leot 2020-12-20]
+	Updated devel/patchutils to 0.4.2 [rhialto 2020-12-20]
