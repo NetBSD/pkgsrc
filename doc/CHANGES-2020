@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6834 2020/12/20 13:05:26 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.6835 2020/12/20 16:44:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9907,3 +9907,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated news/sfeed_curses to 0.9.6 [leot 2020-12-20]
 	Updated net/youtube-dl to 20201214 [leot 2020-12-20]
 	Updated devel/patchutils to 0.4.2 [rhialto 2020-12-20]
+	Updated sysutils/broot to 1.0.9 [pin 2020-12-20]
