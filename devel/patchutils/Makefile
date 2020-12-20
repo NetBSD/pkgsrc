@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2020/08/31 18:09:19 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/12/20 13:05:00 rhialto Exp $
 
-DISTNAME=		patchutils-0.3.4
-PKGREVISION=		3
+DISTNAME=		patchutils-0.4.2
 CATEGORIES=		devel
 MASTER_SITES=		http://cyberelk.net/tim/data/patchutils/stable/
 EXTRACT_SUFX=		.tar.xz
@@ -20,8 +19,11 @@ USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/gpatch
 
+REPLACE_PYTHON+=	patchview/gitdiff
+
 CHECK_PORTABILITY_SKIP+= tests/rediff2/run-test
 REPLACE_BASH+=		scripts/editdiff.in scripts/espdiff.in
 USE_TOOLS+=		bash:run
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
