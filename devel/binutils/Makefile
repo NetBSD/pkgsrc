@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/12/20 19:07:05 fcambus Exp $
+# $NetBSD: Makefile,v 1.93 2020/12/20 22:41:31 fcambus Exp $
 
 DISTNAME=	binutils-2.35.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/binutils/
 COMMENT=	GNU binary utilities
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
