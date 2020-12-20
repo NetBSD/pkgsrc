@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/12/05 13:16:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/12/20 15:15:01 fcambus Exp $
 
 DISTNAME=		ucon64-2.2.1-src
 PKGNAME=		${DISTNAME:S/-src//}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ucon64/}
 
