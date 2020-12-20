@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6831 2020/12/20 11:07:08 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.6832 2020/12/20 11:12:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9904,3 +9904,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/lha to 114.9.20201220 [rhialto 2020-12-19]
 	Updated chat/py-xmpppy to 0.6.2 [gdt 2020-12-19]
 	Updated devel/glib2 to 2.66.4 [prlw1 2020-12-20]
+	Updated news/sfeed_curses to 0.9.6 [leot 2020-12-20]
