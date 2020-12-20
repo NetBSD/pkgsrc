@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6835 2020/12/20 16:44:23 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6836 2020/12/20 20:04:24 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9908,3 +9908,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20201214 [leot 2020-12-20]
 	Updated devel/patchutils to 0.4.2 [rhialto 2020-12-20]
 	Updated sysutils/broot to 1.0.9 [pin 2020-12-20]
+	Updated devel/gopls to 0.6.1 [bsiegert 2020-12-20]
