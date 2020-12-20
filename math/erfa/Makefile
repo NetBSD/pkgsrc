@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/12/17 22:18:18 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/20 01:21:47 mef Exp $
 
 DISTNAME=	erfa-1.7.1
 CATEGORIES=	math
@@ -30,5 +30,4 @@ pre-configure:
 	./bootstrap.sh; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
