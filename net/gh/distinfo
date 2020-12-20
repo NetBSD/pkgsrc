@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2020/11/27 09:11:39 bsiegert Exp $
+$NetBSD: distinfo,v 1.8 2020/12/20 20:12:44 bsiegert Exp $
 
 SHA1 (cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
@@ -80,18 +80,18 @@ SHA1 (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.zip) = 
 RMD160 (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.zip) = 2ac41a0dfc955576512c0c9d63707dea1a89005b
 SHA512 (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.zip) = 4206fa50ea8f056656804388954562efcc78a14ed8f249801c601ccd399f70ea101e5299e07bd9b86e6e137a3cd2103209ef186193a1129e108b224ee5497432
 Size (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.zip) = 33828 bytes
-SHA1 (gh-1.3.0.tar.gz) = 902a28270b3608124e2409780cfd75784e6f61cd
-RMD160 (gh-1.3.0.tar.gz) = 0cf87707919a4e89cbf918b390aff3961a1d725c
-SHA512 (gh-1.3.0.tar.gz) = 4240c2a4b044b9ce2e1f383ba45c74f4aaee0aa1cb6370f05169a2ab324da191ed01e8ccbf01ae227796f222507739c2f3df5be1d9df10a8b6bdf8ffbdefa04b
-Size (gh-1.3.0.tar.gz) = 368747 bytes
-SHA1 (github.com__alec_aivazis_survey_v2_@v_v2.1.1.mod) = b7b6364db177e511b0edcab137f99d8d3d9254fb
-RMD160 (github.com__alec_aivazis_survey_v2_@v_v2.1.1.mod) = 04ab59509ba6da5c616d50740610a5ccd8bce39e
-SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.1.1.mod) = 11355981fa0cc2c28a274175a123c7a3ac5dab596ea08faa429da137611bcfacfa15b38110943b520a99565776039f2c48c5474eade25aa64b8eb5a3fdb3f098
-Size (github.com__alec_aivazis_survey_v2_@v_v2.1.1.mod) = 719 bytes
-SHA1 (github.com__alec_aivazis_survey_v2_@v_v2.1.1.zip) = 3f0f098690ced2034262ad96e12b218bcba8fe9b
-RMD160 (github.com__alec_aivazis_survey_v2_@v_v2.1.1.zip) = 27ad24f9b0ac84535c6e72c9f17ef95eecef9ed7
-SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.1.1.zip) = 37e1f668ff036df4352f8d612975d050bb8e70be2b02b3fbcb44301c26d48951aad6ca7857fae36e418edd68bcab4d3a56b2ff195dc396e890993b1d73454303
-Size (github.com__alec_aivazis_survey_v2_@v_v2.1.1.zip) = 151157 bytes
+SHA1 (gh-1.4.0.tar.gz) = af385f0c5066f28e7720adc376f159a64da90602
+RMD160 (gh-1.4.0.tar.gz) = 3e1c76c88e52937d4381fd8d31209e59e2ce55af
+SHA512 (gh-1.4.0.tar.gz) = cac1675bef1bcf749c87cb1d196fe687e32b304d73e16d4fc21dc4f429d18d4c04aa00be713a6b76e1261df565ecb589b8cf2ad322e4f7d49ea102369c5bf644
+Size (gh-1.4.0.tar.gz) = 386950 bytes
+SHA1 (github.com__alec_aivazis_survey_v2_@v_v2.2.3.mod) = b7b6364db177e511b0edcab137f99d8d3d9254fb
+RMD160 (github.com__alec_aivazis_survey_v2_@v_v2.2.3.mod) = 04ab59509ba6da5c616d50740610a5ccd8bce39e
+SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.2.3.mod) = 11355981fa0cc2c28a274175a123c7a3ac5dab596ea08faa429da137611bcfacfa15b38110943b520a99565776039f2c48c5474eade25aa64b8eb5a3fdb3f098
+Size (github.com__alec_aivazis_survey_v2_@v_v2.2.3.mod) = 719 bytes
+SHA1 (github.com__alec_aivazis_survey_v2_@v_v2.2.3.zip) = 6de671285f9517e7f991d2def3420139e93e27a3
+RMD160 (github.com__alec_aivazis_survey_v2_@v_v2.2.3.zip) = 14c4abb7321b7ad377a0fc024e3cf271fc4ab448
+SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.2.3.zip) = 765d4137f91984faf60380e9a67726cc679c26dcf421445b932aa18db9f2b29ef9c58d69c3cdbb97c3f1703fb880152d53c6eeafb639392a35218afc6491d8aa
+Size (github.com__alec_aivazis_survey_v2_@v_v2.2.3.zip) = 154742 bytes
 SHA1 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 0937ac1d493b480c07bf48073bffe60c2ba902f1
 RMD160 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 722a12078a5d845bfcf238c63a7b7d3a563b48be
 SHA512 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 320941bc3b7fb8bc595e6135cbc513a7583d129f0cd92508055291e141191066303cf75148e25198c21f6c6c539a790ea3210f3ecf5de6a2a03b70c753091146
