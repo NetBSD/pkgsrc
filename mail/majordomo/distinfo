@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2017/11/26 09:11:03 spz Exp $
+$NetBSD: distinfo,v 1.21 2020/12/20 12:50:44 spz Exp $
 
 SHA1 (majordomo-1.94.5.tgz) = 44b18c7b9133f2cd992f6e718551d613d9d45c00
 RMD160 (majordomo-1.94.5.tgz) = 7f6b48fb5cc5b23948133658b055588d0d6608c4
@@ -12,7 +12,7 @@ SHA1 (patch-ae) = 99285559c0fe86084fedbaad5a482062187b404d
 SHA1 (patch-af) = 1626b7580f3d4f00b3b8c0ed567bad7da84a30b2
 SHA1 (patch-ag) = 759a32dacb26221d83de97b463b2131b0f52a914
 SHA1 (patch-ah) = ac08fa5d2fa321afe7fdf72783f8f2c887073bcd
-SHA1 (patch-ai) = b890754ba3b0b1311f82745ecc8949b127fe0ee2
+SHA1 (patch-ai) = ed36da4ae9aced322dd5c9c2119becf54f12a6aa
 SHA1 (patch-aj) = e423f61f6b493ae6ae30dda8b0de3ffa10caeefe
 SHA1 (patch-ak) = ea8a6b5e7ae563dd91fcb727d8c2634bdc65de02
 SHA1 (patch-al) = 776088c5916b1b0516e8abaecd69870ba57f4a76
