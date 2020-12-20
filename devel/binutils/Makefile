@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2020/12/15 09:18:14 fcambus Exp $
+# $NetBSD: Makefile,v 1.92 2020/12/20 19:07:05 fcambus Exp $
 
 DISTNAME=	binutils-2.35.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
