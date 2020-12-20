@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/12/18 09:01:03 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/12/20 11:26:28 nia Exp $
 
 DISTNAME=	tqdm-4.54.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 # Uses async
 PYTHON_VERSIONS_INCOMPATIBLE=	27
