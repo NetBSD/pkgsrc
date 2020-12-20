@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2020/12/04 20:45:09 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/20 11:06:40 prlw1 Exp $
 
-PKGREVISION= 1
 .include "../../devel/glib2/Makefile.common"
 
 PKGNAME:=	${PKGNAME:S/glib2/glib2-tools/}
