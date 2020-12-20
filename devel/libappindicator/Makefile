@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/12/04 20:45:11 nia Exp $
+# $NetBSD: Makefile,v 1.25 2020/12/20 11:38:34 nia Exp $
 
 DISTNAME=	libappindicator-12.10.0
 PKGREVISION=	8
@@ -26,14 +26,19 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 CONFIGURE_ARGS+=	--with-gtk=3
 
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
+
+# When building with GTK3 support, the Python bindings are not ever generated.
+# However, the configure script still refuses to work if a Python 2
+# interpreter is not available... This might be fixed in version control
+# snapshots beyond 12.10.0.
+PYTHON_FOR_BUILD_ONLY=		yes
 
 .include "../../devel/libindicator/buildlink3.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+BUILDLINK_DEPMETHOD.pygtk2=	build
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
