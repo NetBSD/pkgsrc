@@ -1,6 +1,8 @@
-$NetBSD: patch-ai,v 1.5 2011/10/28 06:16:12 spz Exp $
+$NetBSD: patch-ai,v 1.6 2020/12/20 12:50:44 spz Exp $
 
-Quite messages from perl 5.14.1, this is very old code.
+Quiet messages from perl 5.14.1, this is very old code.
+Be RFC2919 compliant (List-Id)
+Add Mail-Reply-To and Mail-Followup-To headers
 
 --- resend.orig	2000-01-07 15:32:39.000000000 +0000
 +++ resend
@@ -47,7 +49,7 @@ Quite messages from perl 5.14.1, this is very old code.
  
      # add new header fields
      print OUT "Sender: $sender\n";
-+    print OUT "List-Id: ".$opt_l.".".$whereami."\n";
++    print OUT "List-Id: <".$opt_l.".".$whereami.">\n";
 +
      if (defined($opt_p)) {
  	print OUT "Precedence: $opt_p\n";
