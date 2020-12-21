@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/07/02 10:21:09 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/12/21 09:25:31 adam Exp $
 
-SHA1 (Unidecode-1.1.1.tar.gz) = 20eea40de171ef9853174ce799dc06e624fb4996
-RMD160 (Unidecode-1.1.1.tar.gz) = 26193ceec061fe94a79d4dcaf8aeb55ce90b53b0
-SHA512 (Unidecode-1.1.1.tar.gz) = 5474f04be843ed94ddceb1a7e5f1ca986ee5f2e88ee35bd9347784c7a11b51e1d94d61e1a2a10dd2e71b3587c5b7b76717756f6cf4e2446d83222178c2360696
-Size (Unidecode-1.1.1.tar.gz) = 212151 bytes
+SHA1 (Unidecode-1.1.2.tar.gz) = 1df8737149204b2b46a33e8a39eaabad71d3310c
+RMD160 (Unidecode-1.1.2.tar.gz) = 8dbaa540870b5cbd79ddd6df9840506b0772e04a
+SHA512 (Unidecode-1.1.2.tar.gz) = 8ee45ae05064612638ecbaa4eb74759580e5ea5cba9f3116b8e63db4af13affc266c7a07aaefbbd70b50ead7e483a72d7676c64e20b5bee2a6ba831aaccd6748
+Size (Unidecode-1.1.2.tar.gz) = 213644 bytes

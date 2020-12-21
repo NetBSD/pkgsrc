@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/07/02 10:21:09 adam Exp $
+# $NetBSD: Makefile,v 1.11 2020/12/21 09:25:31 adam Exp $
 
-DISTNAME=	Unidecode-1.1.1
+DISTNAME=	Unidecode-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=U/Unidecode/}
