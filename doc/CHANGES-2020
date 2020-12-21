@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6843 2020/12/21 12:40:01 pin Exp $
+$NetBSD: CHANGES-2020,v 1.6844 2020/12/21 14:40:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9916,6 +9916,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-coverage to 5.3.1 [adam 2020-12-21]
 	Updated www/py-uvicorn to 0.13.2 [adam 2020-12-21]
 	Updated lang/nodejs to 14.15.3 [adam 2020-12-21]
+	Updated archivers/R-zip to 2.1.1 [mef 2020-12-21]
 	Updated security/R-openssl to 1.4.3 [makoto 2020-12-21]
 	Added graphics/pastel version 0.8.0 [pin 2020-12-21]
 	Updated x11/kitty to 0.19.3 [pin 2020-12-21]
