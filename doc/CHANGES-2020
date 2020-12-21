@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6839 2020/12/21 00:28:33 otis Exp $
+$NetBSD: CHANGES-2020,v 1.6840 2020/12/21 09:41:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9912,3 +9912,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gh to 1.4.0 [bsiegert 2020-12-20]
 	Updated devel/gobject-introspection to 1.66.1 [prlw1 2020-12-20]
 	Updated net/powerdns to 4.4.0 [otis 2020-12-21]
+	Updated textproc/py-Unidecode to 1.1.2 [adam 2020-12-21]
+	Updated devel/py-coverage to 5.3.1 [adam 2020-12-21]
+	Updated www/py-uvicorn to 0.13.2 [adam 2020-12-21]
+	Updated lang/nodejs to 14.15.3 [adam 2020-12-21]
