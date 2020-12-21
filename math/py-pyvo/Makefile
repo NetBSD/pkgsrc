@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/19 14:29:33 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/21 09:02:04 mef Exp $
 
 DISTNAME=	pyvo-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../math/py-astropy4
+DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 .include "../../lang/python/egg.mk"
