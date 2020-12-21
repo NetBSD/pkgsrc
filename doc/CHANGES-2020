@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6844 2020/12/21 14:40:52 mef Exp $
+$NetBSD: CHANGES-2020,v 1.6845 2020/12/21 14:48:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9920,3 +9920,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/R-openssl to 1.4.3 [makoto 2020-12-21]
 	Added graphics/pastel version 0.8.0 [pin 2020-12-21]
 	Updated x11/kitty to 0.19.3 [pin 2020-12-21]
+	Added security/R-credentials version 1.3.0 [makoto 2020-12-21]
