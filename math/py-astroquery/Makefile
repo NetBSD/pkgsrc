@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/19 14:32:57 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/22 22:03:56 mef Exp $
 
 DISTNAME=	astroquery-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	36
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-keyring>=21.2.1:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../math/py-astropy4
+DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-pyvo>=1.0:../../math/py-pyvo
 
 .include "../../lang/python/distutils.mk"
