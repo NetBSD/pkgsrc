@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.29 2020/09/10 00:34:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.30 2020/12/22 00:28:13 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	0.6.2
 DISTNAME=	xfce4-notifyd-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-notifyd/${VERSION:R}/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfce4-notifyd
-COMMENT=	XFCE Notify daemon
+COMMENT=	Xfce Notify daemon
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
@@ -17,16 +18,6 @@ EGDIR=		share/examples/xfce4-notifyd
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 CONF_FILES+=	${EGDIR}/${DESKTOP_FILE} \
 		${PKG_SYSCONFDIR}/xdg/autostart/${DESKTOP_FILE}
-
-INSTALLATION_DIRS+=	${EGDIR}
-
-post-build:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/${DESKTOP_FILE} \
-	    > ${WRKSRC}/${DESKTOP_FILE}
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/${DESKTOP_FILE} \
-	    ${DESTDIR}${PREFIX}/${EGDIR}/${DESKTOP_FILE}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
