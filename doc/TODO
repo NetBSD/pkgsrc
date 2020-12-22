@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20258 2020/12/19 11:28:06 leot Exp $
+$NetBSD: TODO,v 1.20259 2020/12/22 14:51:43 taca Exp $
 
 Suggested new packages
 ======================
@@ -879,7 +879,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pgbuildfarm-4.17
 	o phoronix-9.2.1
 	o phoronix-test-suite-9.0.1
-	o php-8.0
+	o php-8.0.0
 	o php-basercms-4.0.0
 	o php-concrete5-8.3.2
 	o php-gearman-2.0.6
@@ -1049,7 +1049,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o sudo-1.9.3p1
+	o sudo-1.9.4p1
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o swapd-1.0.5
 	o swift-4.0.2
