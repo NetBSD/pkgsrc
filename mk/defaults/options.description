@@ -67,6 +67,7 @@ bind-xml-statistics-server	Enable building in the statistics server with XML out
 bittorrent		Enable bittorrent support.
 blacklist		Enable blacklist support.
 blender-exppython	Enable the Experimental Python support.
+blocklist		Enable blocklist support.
 bluray			Enable libbluray support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
