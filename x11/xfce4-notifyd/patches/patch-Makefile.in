@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/12/22 00:28:13 gutteridge Exp $
+
+Adjust to pkgsrc norms for placing configuration files.
+
+--- Makefile.in.orig	2020-08-31 22:01:43.000000000 +0000
++++ Makefile.in
+@@ -662,7 +662,7 @@ dist_autostart = \
+ @USE_DBUS_START_DAEMON_TRUE@systemd_userdir = $(prefix)/lib/systemd/user
+ @USE_DBUS_START_DAEMON_TRUE@systemd_user_DATA = $(systemd_user_in_files:.service.in=.service)
+ @USE_DBUS_START_DAEMON_TRUE@distclean_service = $(service_DATA) $(systemd_user_DATA)
+-@USE_DBUS_START_DAEMON_FALSE@autostartdir = $(sysconfdir)/xdg/autostart
++@USE_DBUS_START_DAEMON_FALSE@autostartdir = $(datadir)/examples/xfce4-notifyd
+ @USE_DBUS_START_DAEMON_FALSE@autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ @USE_DBUS_START_DAEMON_FALSE@distclean_autostart = $(autostart_DATA)
+ dist_man1_MANS = \
