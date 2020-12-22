@@ -13,4 +13,4 @@ Features
 * sophisticated graph generation: modular design, pluggable axes, axes
   partitioning based on rational number arithmetics, flexible graph styles, etc.
 
-  This package contains the last version that works with Python 2.x.
+This package contains the last version that works with Python 2.x.
