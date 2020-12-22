@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.10 2020/11/12 10:03:24 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.11 2020/12/22 14:34:11 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -136,6 +136,9 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 PREFER.bzip2?=	pkgsrc
 .endif
 
+PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_FOR_BUILD_ONLY=		tool
+
 .include "../../archivers/bzip2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
@@ -149,6 +152,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.12
 .include "../../graphics/MesaLib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
