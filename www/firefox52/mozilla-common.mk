@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.11 2020/12/22 14:34:11 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.12 2020/12/23 08:20:04 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -138,6 +138,7 @@ PREFER.bzip2?=	pkgsrc
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
+TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "../../archivers/bzip2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
