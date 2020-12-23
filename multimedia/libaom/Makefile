@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:10:29 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/23 13:37:58 gdt Exp $
 
 PKGNAME=	libaom-1.0.0
 PKGREVISION=	3
@@ -38,7 +38,8 @@ CMAKE_ARGS+=	-DENABLE_WERROR:BOOL=OFF
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) \
-  || !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)
+  || !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64 \
+  || !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
 CMAKE_ARGS+=	-DCONFIG_RUNTIME_CPU_DETECT=0
 .endif
 
