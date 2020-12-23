@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.5 2020/12/22 13:34:25 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.6 2020/12/23 08:19:30 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -17,6 +17,7 @@ GCC_REQD+=		4.9
 # Python 2.7 and Python 3.6 or later are required simultaneously.
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
+TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .if !empty(PYTHON_VERSION_DEFAULT:M3[6789])
 TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
