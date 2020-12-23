@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/17 04:54:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/12/23 15:44:16 mlelstv Exp $
 bin/cob-config
 bin/cobc
 bin/cobcrun
 include/libcob.h
 include/libcob/cobgetopt.h
 include/libcob/common.h
+include/libcob/exception-io.def
 include/libcob/exception.def
 info/gnucobol.info
 lib/gnucobol/CBL_OC_DUMP.so
 lib/libcob.la
+man/man1/cob-config.1
 man/man1/cobc.1
 man/man1/cobcrun.1
 share/gnucobol/config/acu-strict.conf
@@ -34,6 +36,9 @@ share/gnucobol/config/mf.words
 share/gnucobol/config/mvs-strict.conf
 share/gnucobol/config/mvs.conf
 share/gnucobol/config/mvs.words
+share/gnucobol/config/realia-strict.conf
+share/gnucobol/config/realia.conf
+share/gnucobol/config/realia.words
 share/gnucobol/config/rm-strict.conf
 share/gnucobol/config/rm.conf
 share/gnucobol/config/rm.words
@@ -43,11 +48,16 @@ share/gnucobol/config/xopen.conf
 share/gnucobol/copy/screenio.cpy
 share/gnucobol/copy/sqlca.cpy
 share/gnucobol/copy/sqlda.cpy
+share/gnucobol/copy/xfhfcd.cpy
+share/gnucobol/copy/xfhfcd3.cpy
 share/locale/de/LC_MESSAGES/gnucobol.mo
 share/locale/en@boldquot/LC_MESSAGES/gnucobol.mo
 share/locale/en@quot/LC_MESSAGES/gnucobol.mo
 share/locale/es/LC_MESSAGES/gnucobol.mo
+share/locale/fr/LC_MESSAGES/gnucobol.mo
 share/locale/it/LC_MESSAGES/gnucobol.mo
 share/locale/ja/LC_MESSAGES/gnucobol.mo
 share/locale/nl/LC_MESSAGES/gnucobol.mo
 share/locale/pt/LC_MESSAGES/gnucobol.mo
+share/locale/sr/LC_MESSAGES/gnucobol.mo
+share/locale/sv/LC_MESSAGES/gnucobol.mo
