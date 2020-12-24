@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2020/12/19 11:27:51 leot Exp $
+# $NetBSD: Makefile,v 1.119 2020/12/24 09:28:14 nia Exp $
 
 DISTNAME=	mpv-0.33.0
 CATEGORIES=	multimedia
@@ -57,6 +57,17 @@ BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/usr/lib/swift/macosx
 .  elif exists(${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx)
 BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx
 .  endif
+.endif
+
+# 64-bit atomic operations
+# https://mail-index.netbsd.org/pkgsrc-users/2020/12/23/msg032927.html
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=	-march=i586
+CXXFLAGS+=	-march=i586
+.endif
+
+.if ${MACHINE_ARCH} == "powerpc"
+.include "../../devel/libatomic/buildlink3.mk"
 .endif
 
 post-install:
