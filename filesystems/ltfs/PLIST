@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/02/25 01:00:39 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/12/24 12:01:25 mef Exp $
 bin/ltfs
 bin/ltfsck
 bin/mkltfs
@@ -41,8 +41,8 @@ lib/pkgconfig/ltfs.pc
 man/man8/ltfs-sde.8
 man/man8/ltfsck.8
 man/man8/mkltfs.8
-share/ltfs/ltfs
 share/examples/ltfs/ltfs.conf
 share/examples/ltfs/ltfs.conf.local
+share/ltfs/ltfs
 share/snmp/LTFS-MIB.txt
 share/snmp/LtfsSnmpTrapDef.txt
