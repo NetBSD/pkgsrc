@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/12/04 20:45:20 nia Exp $
+# $NetBSD: Makefile,v 1.30 2020/12/24 12:44:15 mef Exp $
 
 DISTNAME=	PySolFC-2.6.4
 PKGNAME=	${DISTNAME:tl}
@@ -31,6 +31,8 @@ SUBST_SED.datadir=	-e 's,@DATADIR@,${PREFIX}/share/PySolFC,'
 INSTALLATION_DIRS+=	${PKGMANDIR}/man6
 
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.CS
+PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/pysol.6 \
