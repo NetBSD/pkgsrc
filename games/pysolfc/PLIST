@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2019/06/06 21:53:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/12/24 12:44:15 mef Exp $
 bin/pysol.py
-${PYSITELIB}/PySolFC-2.6.4-py3.7.egg-info
+${PYSITELIB}/PySolFC-2.6.4-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/pysollib/__init__.py
 ${PYSITELIB}/pysollib/__init__.pyc
 ${PYSITELIB}/pysollib/__init__.pyo
