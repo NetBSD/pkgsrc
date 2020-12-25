@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6849 2020/12/24 01:10:22 manu Exp $
+$NetBSD: CHANGES-2020,v 1.6850 2020/12/25 21:48:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9924,3 +9924,4 @@ Changes to the packages collection and infrastructure in 2020:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2020Q4 branch [gdt 2020-12-21]
 	Updated x11/xfce4-notifyd to 0.6.2nb1 [gutteridge 2020-12-22]
 	Updated mail/opendmarc to 1.4.0beta1 [manu 2020-12-24]
+	Updated shells/zsh to 5.8nb2 [ryoon 2020-12-25]
