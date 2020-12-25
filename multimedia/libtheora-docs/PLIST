@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/12/22 22:27:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/12/25 22:21:35 nia Exp $
 share/doc/${SUBDIR}/color.html
 share/doc/${SUBDIR}/doxygen-build.stamp
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.txt
@@ -10,9 +10,12 @@ share/doc/${SUBDIR}/html/classes.html
 share/doc/${SUBDIR}/html/closed.png
 share/doc/${SUBDIR}/html/codec_8h.html
 share/doc/${SUBDIR}/html/codec_8h_source.html
+share/doc/${SUBDIR}/html/dir_000000.html
+share/doc/${SUBDIR}/html/dir_000001.html
 share/doc/${SUBDIR}/html/doc.png
 share/doc/${SUBDIR}/html/doxygen.css
 share/doc/${SUBDIR}/html/doxygen.png
+share/doc/${SUBDIR}/html/doxygen.svg
 share/doc/${SUBDIR}/html/dynsections.js
 share/doc/${SUBDIR}/html/files.html
 share/doc/${SUBDIR}/html/folderclosed.png
@@ -70,6 +73,8 @@ share/doc/${SUBDIR}/html/theoraenc_8h_source.html
 share/doc/${SUBDIR}/latex/Makefile
 share/doc/${SUBDIR}/latex/annotated.tex
 share/doc/${SUBDIR}/latex/codec_8h.tex
+share/doc/${SUBDIR}/latex/dir_000000.tex
+share/doc/${SUBDIR}/latex/dir_000001.tex
 share/doc/${SUBDIR}/latex/doxygen.sty
 share/doc/${SUBDIR}/latex/files.tex
 share/doc/${SUBDIR}/latex/group__basefuncs.tex
