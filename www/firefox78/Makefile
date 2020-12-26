@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/12/17 13:24:30 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/12/26 10:35:16 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		78.6
@@ -97,9 +97,6 @@ SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
 .for from to in ${CKSUMS}
 SUBST_SED.cksum+=	-e 's,${from},${to},g'
 .endfor
-
-post-extract:
-	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
