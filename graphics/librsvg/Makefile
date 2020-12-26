@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2020/11/05 09:06:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.126 2020/12/26 23:39:30 nia Exp $
 
 DISTNAME=	librsvg-2.48.3
 PKGREVISION=	3
@@ -13,6 +13,14 @@ LICENSE=	gnu-lgpl-v2.1
 
 MAKE_JOBS_SAFE=	NO
 MAKE_FLAGS+=	CARGO_MAKE_JOBS=-j${_MAKE_JOBS_N}
+
+.include "available.mk"
+
+# FIXME: librsvg-c should have a different PKGBASE so that the newer rust
+# version doesn't get mistakenly used in bulk build environments.
+.if ${LIBRSVG_TYPE:tl} == "c"
+NOT_FOR_BULK_PLATFORM=	*-*-*
+.endif
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake aclocal autoconf automake
