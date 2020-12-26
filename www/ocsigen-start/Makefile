@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/12/11 09:49:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2020/12/26 08:46:33 mef Exp $
 
 GITHUB_PROJECT=	ocsigen-start
 DISTNAME=	${GITHUB_PROJECT}-2.21.1
@@ -47,6 +47,7 @@ pre-configure:
 .include "../../databases/pgocaml/buildlink3.mk"
 .include "../../devel/ocaml-lwt_log/buildlink3.mk"
 .include "../../devel/ocaml-resource-pooling/buildlink3.mk"
+.include "../../devel/ocaml-rresult/buildlink3.mk"
 .include "../../devel/ocaml-yojson/buildlink3.mk"
 .include "../../security/ocaml-safepass/buildlink3.mk"
 .include "../../www/ocaml-cohttp/buildlink3.mk"
