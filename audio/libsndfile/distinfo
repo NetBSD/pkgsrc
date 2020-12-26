@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.47 2020/12/26 00:40:33 nat Exp $
+$NetBSD: distinfo,v 1.48 2020/12/26 06:57:12 maya Exp $
 
-SHA1 (libsndfile-1.0.30.tar.bz2) = d9911fee50e7d2c9307708e23713aa9b4092ac2b
-RMD160 (libsndfile-1.0.30.tar.bz2) = 354ffd0a02077b73858263d44f38acce6a879c92
-SHA512 (libsndfile-1.0.30.tar.bz2) = c4be4bc57df880da81570889a80256ba4567f2c7d6bdfb38f3803c55f616278160e962544bfac32e53b613b8fdf2a2644d8da9ee778747c32cb681a0fd5aab00
-Size (libsndfile-1.0.30.tar.bz2) = 852320 bytes
+SHA1 (libsndfile-1.0.30/libsndfile-1.0.30.tar.bz2) = d9911fee50e7d2c9307708e23713aa9b4092ac2b
+RMD160 (libsndfile-1.0.30/libsndfile-1.0.30.tar.bz2) = 354ffd0a02077b73858263d44f38acce6a879c92
+SHA512 (libsndfile-1.0.30/libsndfile-1.0.30.tar.bz2) = c4be4bc57df880da81570889a80256ba4567f2c7d6bdfb38f3803c55f616278160e962544bfac32e53b613b8fdf2a2644d8da9ee778747c32cb681a0fd5aab00
+Size (libsndfile-1.0.30/libsndfile-1.0.30.tar.bz2) = 852320 bytes
