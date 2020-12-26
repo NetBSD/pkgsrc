@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2020/11/26 15:51:58 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/12/26 08:16:37 kim Exp $
 
 DISTNAME=	libshout-2.4.4
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/libshout/
 
-MAINTAINER=	kim@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://directory.fsf.org/audio/ogg/libshout.html
 COMMENT=	Connects and sends data to icecast servers
 LICENSE=	gnu-gpl-v2
