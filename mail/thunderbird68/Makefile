@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/03 20:22:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/26 10:35:16 nia Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird68-${TB_VER}
@@ -39,8 +39,6 @@ CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/chrome/messenger/content/messenger/build
 
 post-extract:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
-	mv ${WRKSRC}${MOZILLA_DIR}/gfx/ycbcr/yuv_row_arm.s \
-		${WRKSRC}${MOZILLA_DIR}/gfx/ycbcr/yuv_row_arm.S
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
