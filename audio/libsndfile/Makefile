@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2020/10/12 21:51:58 bacon Exp $
+# $NetBSD: Makefile,v 1.85 2020/12/26 06:57:12 maya Exp $
 
 DISTNAME=	libsndfile-1.0.30
 PKGREVISION=	1
@@ -7,6 +7,10 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=erikd/}
 GITHUB_PROJECT=	libsndfile
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
+
+# Remove when updating past libsndfile-1.0.30.
+# Handling re-rolled release.
+DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/libsndfile/
