@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20260 2020/12/26 08:24:47 nia Exp $
+$NetBSD: TODO,v 1.20261 2020/12/26 14:37:45 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -685,6 +685,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ices-mp3-2.0.2
 	o icewm-1.7.0
 	o icinga-base-2.11.2
+	o icu-68.2
 	o ike-2.0.1 [pkg/37032]
 	o imapsync-1.678
 	o imp-6.2.12
