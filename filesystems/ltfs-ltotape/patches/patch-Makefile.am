@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.am,v 1.2 2019/03/16 00:44:22 manu Exp $
+$NetBSD: patch-Makefile.am,v 1.3 2020/12/26 05:23:12 mef Exp $
 
 Make sure config.h is not copied at install time, we do not need it.
 
---- Makefile.am.orig	2019-03-15 05:24:46.000000000 +0100
-+++ Makefile.am	2019-03-15 09:59:08.473037879 +0100
-@@ -1,7 +1,7 @@
+--- Makefile.am.orig	2019-03-15 04:24:46.000000000 +0000
++++ Makefile.am
+@@ -1,6 +1,6 @@
  ACLOCAL_AMFLAGS = -I m4
  
 -nobase_pkginclude_HEADERS = config.h
@@ -12,4 +12,3 @@ Make sure config.h is not copied at install time, we do not need it.
  
  GEN_DRV =
  PLAT_DRV =
- 
