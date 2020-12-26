@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2020/07/20 06:42:31 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.35 2020/12/26 11:04:48 nia Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -13,6 +13,7 @@ info/xmaxima.info
 ${PLIST.clisp}lib/maxima/${PKGVERSION}/binary-clisp/lisp.run
 ${PLIST.clisp}lib/maxima/${PKGVERSION}/binary-clisp/maxima.mem
 ${PLIST.ecl}lib/maxima/${PKGVERSION}/binary-ecl/maxima
+${PLIST.sbcl}lib/maxima/${PKGVERSION}/binary-sbcl/maxima.core
 libexec/maxima/${PKGVERSION}/mgnuplot
 man/de/man1/maxima.1
 man/man1/maxima.1
