@@ -1,25 +1,22 @@
-# $NetBSD: buildlink3.mk,v 1.60 2020/11/05 09:06:55 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2020/12/27 02:33:27 joerg Exp $
 
 BUILDLINK_TREE+=	librsvg
 
 .if !defined(LIBRSVG_BUILDLINK3_MK)
 LIBRSVG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.12.6nb1
-
 .include "../../mk/bsd.fast.prefs.mk"
 
 .include "../../graphics/librsvg/available.mk"
 
 .if ${LIBRSVG_TYPE} == "rust"
-BUILDLINK_ABI_DEPENDS.librsvg?=	librsvg>=2.48.3nb3
 BUILDLINK_PKGSRCDIR.librsvg?=	../../graphics/librsvg
+BUILDLINK_ABI_DEPENDS.librsvg+=	librsvg>=2.48.3nb3
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.41
-BUILDLINK_ABI_DEPENDS.librsvg+=	librsvg>=2.48.0
 .elif ${LIBRSVG_TYPE} == "c"
 BUILDLINK_PKGSRCDIR.librsvg?=	../../graphics/librsvg-c
-BUILDLINK_API_DEPENDS.librsvg+=	librsvg<2.41
-BUILDLINK_ABI_DEPENDS.librsvg+=	librsvg>=2.40.20nb4
+BUILDLINK_ABI_DEPENDS.librsvg+=	librsvg>=2.40.20nb4<2.41
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6nb1<2.41
 
 .include "../../textproc/libcroco/buildlink3.mk"
 .else
