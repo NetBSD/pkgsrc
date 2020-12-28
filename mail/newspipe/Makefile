@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/12/04 20:45:27 nia Exp $
+# $NetBSD: Makefile,v 1.22 2020/12/28 21:27:58 wiz Exp $
 
 DISTNAME=		newspipe.1.1.9
 PKGNAME=		${DISTNAME:S/./-/}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=newspipe/}
 EXTRACT_SUFX=		.zip
@@ -17,6 +17,7 @@ DEPENDS+=		${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 WRKSRC=			${WRKDIR}
 
 PYTHON_VERSIONED_DEPENDENCIES=	html2text
+PYTHON_VERSIONS_ACCEPTED=	27
 
 NO_BUILD=	yes
 REPLACE_PYTHON=	*.py
