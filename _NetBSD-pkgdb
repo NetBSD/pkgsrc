@@ -1,0 +1,327 @@
+#!/bin/sh
+# $NetBSD: _NetBSD-pkgdb,v 1.1 2020/12/28 01:18:27 gdt Exp $
+# Copyright The NetBSD Foundation 2020
+
+# This script is for NetBSD only.
+
+# This script is intended to help with the process of migration of
+# PKG_DBDIR from /var/db/pkg to /usr/pkg/pkgdb on NetBSD.  It can:
+#
+#   "check" the system, changing nothing
+#
+#   "fix" the system, leaving PKG_DBDIR as is and setting config files
+#   to point to it.  Thus, one can easily postpone migration.
+#
+#   "migrate" the system, moving the contents of PKG_DBDIR to the new
+#   location, and then setting pointers.
+#
+# In all cases, the script attempts to check assumptions it makes, and
+# avoid trouble if those assumptions are not true.
+
+# Note that PKG_DBDIR can be set in multiple places:
+#   /etc/pkg_install.conf (base tools)
+#   /usr/pkg/etc/pkg_install.conf (pkg tools)
+#   /etc/mk.conf (variable when buidling)
+#   /usr/pkgsrc/mk/ (default value of variable)
+
+# This script takes the position that the PKG_DBDIR should be
+# explicitly configured in pkg_install.conf in all cases, even if this
+# is provably not necessary.  The theory is that a bit of explicit
+# config is much less work than mysterious debugging.  If you don't
+# like this, you are welcome to undo it, only use "check", or do the
+# migration (or not) by hand.
+
+# This script is aimed at the common case where the database was in
+# /var/db/pkg and is moving to /usr/pkg/pkgdb, and sources are in
+# /usr/pkgsrc (or a place that /usr/pkgsrc is symlinked to).
+
+# This script should work to fix/migrate even on systems with older
+# pkgsrc, e.g. if one wanted to stay on 2020Q3 on a system where the
+# base system tools were updated.  "Fix" will set variables so
+# everything should work correctly.
+
+# The script is designed to do incremental fixes, so if you migrate by
+# hand but do not patch up the refcount directory, or set variables,
+# it should (NB: This is UNTESTED!) do those steps when run.
+
+# The script is intentionally written to be easy to understand (as
+# long as one is comfortable with shell functions), rather than
+# compact, avoid repeated code, or elegant.
+
+# This script assumes:
+#   NetBSD 8 or newer
+#   pkgsrc after about 2020-12-20 (including 2020Q4)
+#   pkgsrc PREFIX as /usr/pkg
+#   old PKG_DBDIR as /var/db/pkg
+#   new/future PKG_DBDIR as /usr/pkg
+#   no symlinks in old or new PKG_DBDIR location
+#   base pkg_install may be old, or may be after the 2020-12 commit/pullups
+#   pkgsrc sources, if they exist, are in /usr/pkgsrc (perhaps a symlink)
+
+# Set pathnames.  Do not expect to set these differently without
+# significant testing and thought.
+OLDDB=/var/db/pkg
+NEWDB=/usr/pkg/pkgdb
+CONF_BASE=/etc/pkg_install.conf
+CONF_PKG=/usr/pkg/etc/pkg_install.conf
+PKGSRC=/usr/pkgsrc
+
+# Shell functions to print messages of varying severity.  (We choose
+# to avoid fancy formatting entirely in this script.)
+msg () {
+    echo "$*" >&2
+}
+
+warn () {
+    echo "WARNING: $*" >&2
+}
+
+fatal () {
+    echo "FATAL: $*" >&2
+    exit 1
+}
+
+usage () {
+    msg "_NetBSD-pkgdb: Usage:"
+    msg "    check     Check pkgdb status and explain it."
+    msg "    fix       Point config files at pkgdb location (don't move it)."
+    msg "    migrate   Check if migration can be done automatically, and if so do it."
+    exit 1
+}
+
+# Count problems.  (Be sure not to use subshells when calling this.)
+problems=0
+problem_pp () {
+    problems=`expr $problems + 1`
+
+}
+problem_count () {
+    echo $problems
+}
+
+dir_exists () {
+    if [ ! -h "$1" -a -d "$1" ]; then
+	echo true
+    else
+	echo false
+    fi
+}
+
+# require_match string bool1 bool2
+require_match () {
+    if [ "$2" != "$3" ]; then
+	fatal "mismatch $1"
+	problem_pp
+    fi
+}
+
+# Read pkg_install.conf PKG_DBDIR.  One arg: config file
+get_pkg_install_conf_DBDIR () {
+    CONF=$1
+    if [ "${CONF}" = "" ]; then
+	fatal "missing argument"
+	# dead code, left in case error is removed
+	echo ""
+    elif [ ! -f ${CONF} ]; then
+	warn "${CONF} does not exist"
+	echo ""
+    else
+	line=`egrep "^PKG_DBDIR.*=" ${CONF}`
+	if [ "$line" = "" ]; then
+	    warn "${CONF} does not set PKG_DBDIR"
+	    echo ""
+	else
+	    value=`echo $line | awk -F= '{print $2}'`
+	    echo $value
+	fi
+    fi
+}
+
+# Ensure prerequisites.
+do_prereq () {
+    if [ `uname` != "NetBSD" ];then
+	fatal "OS is not NetBSD"
+    fi
+
+    # Check a subdir, in case /usr/pkg is a symlink.
+    if [ ! -d /usr/pkg/bin ]; then
+	fatal "/usr/pkg/bin is not a directory"
+    fi
+}
+
+# Check and maybe fix or migrate, depending on if fix=true or
+# migrate=true.   migrate=true and fix=false is not allowed.
+do_steps () {
+    ## STEP 0: Check if it is ok to operate at all.
+    do_prereq
+
+    ## STEP 1: Sanity check database and figure out where it is.
+    # See if old or new exists, and check that they are in pairs.
+    OLD_DB1=`dir_exists ${OLDDB}`
+    OLD_DB2=`dir_exists ${OLDDB}.refcount`
+    require_match "$OLDDB directory pair" $OLD_DB1 $OLD_DB2
+    NEW_DB1=`dir_exists ${NEWDB}`
+    NEW_DB2=`dir_exists ${NEWDB}.refcount`
+    require_match "$NEWDB directory pair" $NEW_DB1 $NEW_DB2
+
+    # Check that we have one PKG_DBDIR, not zero and not two
+    if [ "$OLD_DB1" = false -a "$NEW_DB1" = false ]; then
+	fatal "No PKG_DBDIR found"
+	problem_pp
+    fi
+    if [ "$OLD_DB1" = true -a "$NEW_DB1" = true ]; then
+	fatal "TWO copies of PKG_DBDIR found"
+	problem_pp
+    fi
+
+    # Set a variable to the DBDIR we should be using, and the one we aren't.
+    if [ "$OLD_DB1" = true ]; then
+	PKG_DBDIR=$OLDDB
+	PKG_DBDIR_NOT=$NEWDB
+    elif [ "$NEW_DB1" = true ]; then
+	PKG_DBDIR=$NEWDB
+	PKG_DBDIR_NOT=$OLDDB
+    else
+	fatal "LOGIC ERROR IN SCRIPT 001"
+	exit 1
+    fi
+    unset OLD_DB1
+    unset OLD_DB2
+    unset NEW_DB1
+    unset OLD_DB2
+    echo "Found PKG_DBDIR as $PKG_DBDIR."
+
+    ## Step 2a: check migrate/fix prereqs
+    if [ "$fix" = true ]; then
+	warn "THIS SCRIPT IS NOT YET ADEQUATELY TESTED."
+	warn "Hit ^C NOW if you do not have a good backup."
+	warn "Proceeding in 10 seconds..."
+	sleep 10
+
+	if [ `id -u` != 0 ]; then
+	    fatal "Not root: will not be able to fix or migrate"
+	fi
+    fi
+
+    ## Step 2: migrate if requested
+    if [ "$migrate" = true ]; then
+	if [ "$fix" != true ]; then
+	    fatal "LOGIC ERROR IN SCRIPT 002"
+	fi
+	
+	if [ "$PKG_DBDIR" = "${NEWDB}" ]; then
+	    warn "migrate requested when already done"
+	    # This is not really an error.
+	else
+	    msg "Doing migration..."
+	    msg "NB: refcount will have many fixups; this is normal."
+
+	    # Actual migration is easy.
+	    mv $OLDDB $NEWDB
+	    mv $OLDDB.refcount $NEWDB.refcount
+
+	    # Change our tracking variables so that later fixups do
+	    # the right thing.
+	    PKG_DBDIR=$NEWDB
+	    PKG_DBDIR_NOT=$OLDDB
+
+	    msg "Migration done, except for refcount fixups."
+	fi
+    fi
+
+    ## Step 3: Check/fix refcount
+    if [ "$fix" = true ]; then
+	# Check all files, even though only some have paths.
+	find ${PKG_DBDIR}.refcount -type f | while read file; do
+	    if egrep $PKG_DBDIR_NOT $file > /dev/null; then
+		echo WRONG PATH $file
+		sed -i -e "s,${PKG_DBDIR_NOT},${PKG_DBDIR}," $file
+		problem_pp
+	    fi
+	done
+    fi
+    
+    ## Step 4: Check PKG_DBDIR variables and fix if requested.
+    # Check that both pkg_install configs point to the actual PKG_DBDIR.
+    conf_base_DBDIR=`get_pkg_install_conf_DBDIR $CONF_BASE`
+    if [ "$conf_base_DBDIR" != "${PKG_DBDIR}" ]; then
+	warn "$CONF_BASE does not set PKG_DBDIR to ${PKG_DBDIR}"
+	if [ "$fix" = true ]; then
+	    [ -f ${CONF_BASE} ] && cp -p ${CONF_BASE} ${CONF_BASE}.pre-migration
+	    sed -i -e '/^PKG_DBDIR=/d' ${CONF_BASE}
+	    echo "PKG_DBDIR=${PKG_DBDIR}" >> ${CONF_BASE}
+	fi
+	problem_pp
+    fi
+    conf_pkg_DBDIR=`get_pkg_install_conf_DBDIR $CONF_PKG`
+    if [ "$conf_pkg_DBDIR" != "${PKG_DBDIR}" ]; then
+	warn "$CONF_PKG does not set PKG_DBDIR to ${PKG_DBDIR}"
+	if [ "$fix" = true ]; then
+	    [ -f ${CONF_PKG} ] && cp -p ${CONF_PKG} ${CONF_PKG}.pre-migration
+	    sed -i -e '/^PKG_DBDIR=/d' ${CONF_PKG}
+	    echo "PKG_DBDIR=${PKG_DBDIR}" >> ${CONF_PKG}
+	fi
+	problem_pp
+    fi
+
+    # Check mk.conf via pkgsrc.  Really, check that the variable is
+    # set when running in an example package, because it is relatively
+    # normal to use .include and we decline to re-implement make.
+    if [ -d ${PKGSRC}/mk ]; then
+	# Avoid a subshell so problem_pp works.
+	SAVE=`pwd`
+	cd $PKGSRC
+	PKGSRC_DBDIR=`cd devel/m4 && make show-var VARNAME=PKG_DBDIR`
+	if [ "$PKGSRC_DBDIR" != "${PKG_DBDIR}" ]; then
+	    warn "$PKG_DBDIR via pkgsrc/mk does not set PKG_DBDIR to ${PKG_DBDIR}"
+	    # This may have failed for other reasons, but if so running again won't
+	    # fix it.
+	    if [ "$fix" = true ]; then
+		sed -i -e '/^PKG_DBDIR=/d' /etc/mk.conf
+		echo "PKG_DBDIR=${PKG_DBDIR}" >> /etc/mk.conf
+	    fi
+	    problem_pp
+	fi
+	cd $SAVE
+	unset SAVE
+    else
+	msg "NB: Did not find ${PKGSRC} -- did not check mk.conf"
+	msg "    If your system does not have sources, this is ok.  If it does, symlink"
+	msg "    ${PKGSRC} to the sources and rerun the check."
+    fi
+}
+    
+main() {
+    if [ "$#" != 1 ]; then
+	usage
+    fi
+    
+    case "$1" in
+	check)
+	    do_steps
+	    ;;
+	fix)
+	    fix=true;
+	    do_steps
+	    ;;
+	migrate)
+	    fix=true
+	    migrate=true;
+	    do_steps
+	    ;;
+	*)
+	    warn Unknown option $1
+	    usage
+	    ;;
+    esac
+
+    count=`problem_count`
+    if [ "$count" = 0 ]; then
+	msg "No problems found."
+    else
+	msg "TOTAL PROBLEMS FOUND: $count"
+	msg "Re-run script until there are no problems!"
+    fi
+}
+
+main $*
