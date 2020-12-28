@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6855 2020/12/28 16:41:28 fox Exp $
+$NetBSD: CHANGES-2020,v 1.6856 2020/12/28 21:28:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9933,3 +9933,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/roundcube-plugin-zipdownload to 1.4.10 [taca 2020-12-28]
 	Updated www/lighttpd to 1.4.58 [schmonz 2020-12-28]
 	Updated security/wolfssl to 4.6.0 [fox 2020-12-28]
+	Updated mail/newspipe to 1.1.9nb10 [wiz 2020-12-28]
