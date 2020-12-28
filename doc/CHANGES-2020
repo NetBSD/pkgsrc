@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6850 2020/12/25 21:48:18 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.6851 2020/12/28 01:45:00 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9925,3 +9925,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-notifyd to 0.6.2nb1 [gutteridge 2020-12-22]
 	Updated mail/opendmarc to 1.4.0beta1 [manu 2020-12-24]
 	Updated shells/zsh to 5.8nb2 [ryoon 2020-12-25]
+	Updated pkgtools/pkglint to 20.4.0 [rillig 2020-12-28]
