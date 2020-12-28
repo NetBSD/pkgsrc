@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2020/12/04 20:45:28 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/12/28 08:59:53 taca Exp $
 
 PLUGIN=		enigma
 
 MAINTAINER=	taca@NetBSD.org
 COMMENT=	Enigma Plugin for Roundcube
-PKGREVISION=	1
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Crypt_GPG>=1.4.3:../../security/pear-Crypt_GPG
