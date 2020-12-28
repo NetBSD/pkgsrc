@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/08/22 01:27:48 fox Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/28 16:40:54 fox Exp $
 
-DISTNAME=	wolfssl-4.5.0
+DISTNAME=	wolfssl-4.6.0
 CATEGORIES=	security
 MASTER_SITES=	https://www.wolfssl.com/
 EXTRACT_SUFX=	.zip
@@ -27,10 +27,6 @@ CONFIGURE_ARGS+=	--enable-ssh
 CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ARGS+=	--enable-tls13
 CONFIGURE_ARGS+=	--enable-tls13-draft18
-CONFIGURE_ARGS+=	--enable-tls13-draft22
-CONFIGURE_ARGS+=	--enable-tls13-draft23
-CONFIGURE_ARGS+=	--enable-tls13-draft26
-CONFIGURE_ARGS+=	--enable-tls13-draft28
 
 PKGCONFIG_OVERRIDE+=	support/wolfssl.pc.in
 
