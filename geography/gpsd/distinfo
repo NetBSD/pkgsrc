@@ -4,3 +4,6 @@ SHA1 (gpsd-3.21.tar.gz) = f32d7b18c7be98c4a1385af789b61be55a64c433
 RMD160 (gpsd-3.21.tar.gz) = 3c521009854e2ae19bcd4f7fb0f0c33c334bcbc5
 SHA512 (gpsd-3.21.tar.gz) = 7fbff3698a44ef24ce4631f1d0c5192b70c2e47f28e61372d8d0c437a6b4aeee459b08dcd69d9dc02bbda7b56949fd01ac57460fb922b5f807455f4ab3e91f2d
 Size (gpsd-3.21.tar.gz) = 3984157 bytes
+SHA1 (patch-serial.c) = 2f947976a7df43789c9d06d2f6b3f6c652f36aa0
+SHA1 (patch-gpsd.h) = 140862d581fa1c605254063011bca13861910af4
+SHA1 (patch-gpspipe.c) = 59b897d1642365612833924a74bf82c251beeadf
