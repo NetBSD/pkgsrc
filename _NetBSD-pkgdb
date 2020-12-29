@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: _NetBSD-pkgdb,v 1.1 2020/12/28 01:18:27 gdt Exp $
+# $NetBSD: _NetBSD-pkgdb,v 1.2 2020/12/29 17:56:14 gdt Exp $
 # Copyright The NetBSD Foundation 2020
 
 # This script is for NetBSD only.
@@ -69,15 +69,15 @@ PKGSRC=/usr/pkgsrc
 # Shell functions to print messages of varying severity.  (We choose
 # to avoid fancy formatting entirely in this script.)
 msg () {
-    echo "$*" >&2
+    echo "$@" >&2
 }
 
 warn () {
-    echo "WARNING: $*" >&2
+    echo "WARNING: $@" >&2
 }
 
 fatal () {
-    echo "FATAL: $*" >&2
+    echo "FATAL: $@" >&2
     exit 1
 }
 
@@ -324,4 +324,4 @@ main() {
     fi
 }
 
-main $*
+main "$@"
