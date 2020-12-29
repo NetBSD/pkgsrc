@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6856 2020/12/28 21:28:07 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6857 2020/12/29 11:28:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9934,3 +9934,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/lighttpd to 1.4.58 [schmonz 2020-12-28]
 	Updated security/wolfssl to 4.6.0 [fox 2020-12-28]
 	Updated mail/newspipe to 1.1.9nb10 [wiz 2020-12-28]
+	Updated devel/p5-Test-BDD-Cucumber to 0.75 [schmonz 2020-12-29]
