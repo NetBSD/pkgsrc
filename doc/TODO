@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20263 2020/12/28 08:22:01 taca Exp $
+$NetBSD: TODO,v 1.20264 2020/12/29 09:05:10 nia Exp $
 
 Suggested new packages
 ======================
@@ -652,7 +652,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gstreamer1-1.18.1 [wip]
 	o gstreamer1-1.18.2
 	o gthumb-3.4.0
-	o gtk4-4.0 [wip]
+	o gtk2+-2.24.33
+	o gtk4+-4.0 [wip]
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
 	o gtkmagnetic-23
