@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2020/12/14 00:41:56 dbj Exp $
+# $NetBSD: Makefile.common,v 1.29 2020/12/30 09:26:52 nia Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -53,7 +53,9 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DISTINFO_FILE=		${.CURDIR}/../../ham/gnuradio-core/distinfo
 PATCHDIR=		${.CURDIR}/../../ham/gnuradio-core/patches
 
-PYTHON_VERSIONS_ACCEPTED= 37 38
+# see CMakeLists.txt GR_PYTHON_MIN_VERSION
+PYTHON_VERSIONS_INCOMPATIBLE= 27
+
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PY_PATCHPLIST=	yes
