@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2020/12/29 02:04:47 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2020/12/30 06:10:37 gutteridge Exp $
 
 SHA1 (mozjs78_78.4.0.orig.tar.xz) = b2c1c241f70310d545f8a3c05b9c8c11676e56a8
 RMD160 (mozjs78_78.4.0.orig.tar.xz) = cef93b6116eff9f04beeaf3dda0a42cd811d0b18
@@ -17,4 +17,5 @@ SHA1 (patch-js_src_util_NativeStack.cpp) = 3354064c4168711aa7f83d88336a902345239
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 155f042eee3a8ff903622860e0a99af1ed776ad5
 SHA1 (patch-js_src_vm_JSONPrinter.cpp) = ff89dfe4e73223dda3d5d33e90e8c7bb3ffa3e0e
 SHA1 (patch-js_src_vm_JSONPrinter.h) = b9f67b29b16d7163aecc0ce9b6939c1308878a44
+SHA1 (patch-js_src_wasm_WasmSignalHandlers.cpp) = 3517e5da142355f1cbe89facaad47953f1985800
 SHA1 (patch-mfbt_tests_TestVariant.cpp) = 586fb67335b497ccadd3960025c44f8630f5476a
