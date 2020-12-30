@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6858 2020/12/30 09:21:36 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.6859 2020/12/30 14:16:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9936,3 +9936,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/newspipe to 1.1.9nb10 [wiz 2020-12-28]
 	Updated devel/p5-Test-BDD-Cucumber to 0.75 [schmonz 2020-12-29]
 	Updated pkgtools/pkgin to 20.12.1 [jperkin 2020-12-30]
+	Updated lang/ruby to 2.6.6nb1 [taca 2020-12-30]
