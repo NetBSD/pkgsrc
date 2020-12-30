@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/29 03:01:16 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/30 12:26:02 nia Exp $
 
 PKGREVISION=	1
 
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-progressbar2-[0-9]*:../../devel/py-progressbar2
 DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../net/py-rpyc
 DEPENDS+=	${PYPKGPREFIX}-z3solver-[0-9]*:../../math/py-z3solver
 
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
