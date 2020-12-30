@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/12/14 00:41:57 dbj Exp $
+# $NetBSD: Makefile,v 1.30 2020/12/30 12:34:24 nia Exp $
 
 DISTNAME=		gr-osmosdr-0.2.2
 CATEGORIES=		ham
@@ -26,7 +26,7 @@ CMAKE_ARGS+=	-DENABLE_DOXYGEN=OFF
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
-PYTHON_VERSIONS_ACCEPTED=	37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
 .include	"../../devel/boost-headers/buildlink3.mk"
