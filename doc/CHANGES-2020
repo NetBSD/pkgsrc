@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6857 2020/12/29 11:28:14 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.6858 2020/12/30 09:21:36 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9935,3 +9935,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/wolfssl to 4.6.0 [fox 2020-12-28]
 	Updated mail/newspipe to 1.1.9nb10 [wiz 2020-12-28]
 	Updated devel/p5-Test-BDD-Cucumber to 0.75 [schmonz 2020-12-29]
+	Updated pkgtools/pkgin to 20.12.1 [jperkin 2020-12-30]
