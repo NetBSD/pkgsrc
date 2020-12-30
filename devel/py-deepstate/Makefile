@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/09/29 03:12:44 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/30 12:29:24 nia Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
@@ -12,7 +12,7 @@ DEPENDS+=	deepstate-afl>=${VERSION}:../../devel/deepstate-afl
 #DEPENDS+=	deepstate-honggfuzz>=${VERSION}:../../devel/deepstate-honggfuzz
 DEPENDS+=	deepstate-libfuzzer>=${VERSION}:../../devel/deepstate-libfuzzer
 
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
