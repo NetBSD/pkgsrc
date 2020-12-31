@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6864 2020/12/31 17:10:49 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6865 2020/12/31 17:30:13 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9942,3 +9942,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed security/ipsec-tools successor security/racoon2 [nia 2020-12-31]
 	Removed security/jessie [nia 2020-12-31]
 	Removed security/isakmpd [nia 2020-12-31]
+	Updated net/youtube-dl to 20201231 [leot 2020-12-31]
