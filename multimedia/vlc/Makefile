@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2020/11/25 22:58:54 nia Exp $
+# $NetBSD: Makefile,v 1.243 2020/12/31 09:59:34 nia Exp $
 
 DISTNAME=		vlc-3.0.11.1
 CATEGORIES=		multimedia
@@ -105,6 +105,14 @@ CONFIGURE_ARGS+=	--enable-mmx \
 .if ${MACHINE_ARCH} == "powerpc"
 PLIST.altivec=		yes
 CONFIGURE_ARGS+=	--enable-altivec
+.endif
+
+PLIST_VARS+=		neon
+.if ${MACHINE_ARCH} == "earmv7hf"
+PLIST.neon=		yes
+CONFIGURE_ARGS+=	--enable-neon
+.else
+CONFIGURE_ARGS+=	--disable-neon
 .endif
 
 # SunOS cdio interface is unsupported
