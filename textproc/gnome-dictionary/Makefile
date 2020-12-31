@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/17 13:55:32 mef Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/31 05:04:08 gutteridge Exp $
 
 DISTNAME=	gnome-dictionary-3.26.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -20,6 +20,8 @@ TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
 PYTHON_FOR_BUILD_ONLY=	tool
+
+LDFLAGS.SunOS+=	-lnsl
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
