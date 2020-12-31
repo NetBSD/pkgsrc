@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/12/10 17:45:32 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/12/31 19:44:09 fcambus Exp $
 bin/atari-convert-dir
 bin/atari-hd-image
 bin/gst2ascii
@@ -27,6 +27,7 @@ share/doc/hatari/emutos.txt
 share/doc/hatari/images/callgraph.png
 share/doc/hatari/images/callgraph.svg
 share/doc/hatari/images/cpu.png
+share/doc/hatari/images/devices-portmidi.png
 share/doc/hatari/images/devices.png
 share/doc/hatari/images/fileselector.png
 share/doc/hatari/images/floppydisks.png
