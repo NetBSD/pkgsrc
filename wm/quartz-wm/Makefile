@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/03/07 11:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/12/31 09:51:56 schmonz Exp $
 
 DISTNAME=	quartz-wm-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	http://xquartz.macosforge.org/downloads/src/
 EXTRACT_SUFX=	.tar.xz
@@ -14,6 +14,7 @@ LICENSE=	apple-public-source-license
 USE_TOOLS=	pkg-config gmake
 USE_LANGUAGES=	c objc
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--enable-xplugin-dock-support
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
