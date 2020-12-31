@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2020/12/24 09:28:14 nia Exp $
+# $NetBSD: Makefile,v 1.120 2020/12/31 20:04:12 nia Exp $
 
 DISTNAME=	mpv-0.33.0
 CATEGORIES=	multimedia
@@ -59,22 +59,10 @@ BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/l
 .  endif
 .endif
 
-# 64-bit atomic operations
-# https://mail-index.netbsd.org/pkgsrc-users/2020/12/23/msg032927.html
-.if ${MACHINE_ARCH} == "i386"
-CFLAGS+=	-march=i586
-CXXFLAGS+=	-march=i586
-.endif
-
-.if ${MACHINE_ARCH} == "powerpc"
-.include "../../devel/libatomic/buildlink3.mk"
-.endif
-
 post-install:
 	cd ${DESTDIR}${PREFIX} && ${MV} etc/mpv/encoding-profiles.conf share/examples/mpv
 
 .include "options.mk"
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/waf/waf.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -86,4 +74,5 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

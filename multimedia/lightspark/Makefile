@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/12/03 22:23:33 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/12/31 20:04:12 nia Exp $
 
 DISTNAME=	lightspark-0.8.3
 CATEGORIES=	multimedia
@@ -24,12 +24,6 @@ GCC_REQD+=	4.6
 CONF_FILES+=	${PREFIX}/share/examples/lightspark/xdg/lightspark.conf \
 		${PKG_SYSCONFDIR}/xdg/lightspark.conf
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "powerpc"
-.include "../../devel/libatomic/buildlink3.mk"
-.endif
-
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -48,4 +42,5 @@ CONF_FILES+=	${PREFIX}/share/examples/lightspark/xdg/lightspark.conf \
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

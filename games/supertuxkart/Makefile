@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/05/22 10:56:10 adam Exp $
+# $NetBSD: Makefile,v 1.38 2020/12/31 20:04:12 nia Exp $
 
 DISTNAME=	supertuxkart-1.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -22,20 +22,6 @@ CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
 # Needs linux joystick support.
 CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-# 64 bit atomic ops are required
-CXXFLAGS+=	-march=i586
-.endif
-
-# lib/mcpp/eval.c: In function 'eval_if':
-# lib/mcpp/eval.c:361:44: error: array subscript has type 'char' [-Werror=char-subscripts]
-#                  , opname[ op], prec, opname[ opp->op], opp->prec, opp->skip);
-#                                             ^
-# Maybe fix this later.
-BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
@@ -56,4 +42,5 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 .endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

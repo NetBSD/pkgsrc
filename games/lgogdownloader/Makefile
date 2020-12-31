@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/05/22 10:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.51 2020/12/31 20:04:11 nia Exp $
 
 DISTNAME=	lgogdownloader-3.7
 PKGREVISION=	1
@@ -17,13 +17,6 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-# 64 bit atomic ops are required
-CXXFLAGS+=	-march=i586
-.endif
-
 CMAKE_ARGS+=	-DJSONCPP_INCLUDE_DIR=${BUILDLINK_DIR}/include/json
 
 .include "../../devel/boost-libs/buildlink3.mk"
@@ -32,4 +25,5 @@ CMAKE_ARGS+=	-DJSONCPP_INCLUDE_DIR=${BUILDLINK_DIR}/include/json
 .include "../../www/curl/buildlink3.mk"
 .include "../../misc/rhash/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

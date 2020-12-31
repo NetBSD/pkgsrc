@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/10 16:43:24 kardel Exp $
+# $NetBSD: Makefile,v 1.2 2020/12/31 20:04:13 nia Exp $
 
 GITHUB_PROJECT=	frr
 VERSION=	7.5
@@ -23,11 +23,6 @@ BUILD_DEFS=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-# to pick up the atomic implementation on i386
-.if ${MACHINE_ARCH} == "i386"
-CPPFLAGS+=		-march=i586
-.endif
 
 FRR_GROUP?=	_frr
 FRR_VTY_GROUP?=	frrvty
@@ -98,7 +93,7 @@ pre-configure:
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/readline/buildlink3.mk"
-
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # needs to be here to have ${EGREP} defined

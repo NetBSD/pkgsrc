@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.12 2020/12/23 08:20:04 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.13 2020/12/31 20:04:13 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -33,8 +33,6 @@ TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
 .if ${MACHINE_ARCH} == "i386"
-# Fix for PR pkg/48152.
-CXXFLAGS+=		-march=i586
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
 .endif
@@ -140,6 +138,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
+.include "../../mk/atomic64.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"

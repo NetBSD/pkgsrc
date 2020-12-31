@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.6 2020/12/23 08:19:30 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.7 2020/12/31 20:04:14 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -54,8 +54,6 @@ TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
 .if ${MACHINE_ARCH} == "i386"
-# Fix for PR pkg/48152.
-CXXFLAGS+=		-march=i586
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
 .endif
@@ -200,6 +198,7 @@ PLIST_SUBST+=	DLL_SUFFIX=".dylib"
 PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
+.include "../../mk/atomic64.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"

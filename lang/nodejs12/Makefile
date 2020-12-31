@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/12/16 07:42:39 adam Exp $
+# $NetBSD: Makefile,v 1.27 2020/12/31 20:04:12 nia Exp $
 
 DISTNAME=	node-v12.20.0
 
@@ -18,8 +18,6 @@ CHECK_PORTABILITY_SKIP+=	deps/openssl/openssl/.travis-create-release.sh
 CHECK_PORTABILITY_SKIP+=	tools/macos-installer/*
 
 .if ${MACHINE_ARCH} == "i386"
-# 64 bit atomic ops are required
-CXXFLAGS+=	-march=i586
 # required for SSE2 code under i386.
 CXXFLAGS+=	-mstackrealign
 .endif
@@ -31,4 +29,5 @@ CXXFLAGS+=	-mstackrealign
 # Requires nghttp2_option_set_max_settings
 BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.41.0
 .include "../../www/nghttp2/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2020/10/21 13:34:50 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2020/12/31 20:04:11 nia Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
@@ -75,12 +75,6 @@ CMAKE_ARGS+=	-DDEFAULT_CHARSET=${MYSQL_CHARSET}
 CMAKE_ARGS+=	-DDEFAULT_COLLATION=${MYSQL_COLLATION}
 CMAKE_ARGS+=	-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET}
 
-# we need atomic builtins
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
-GNU_ARCH.i386=		i586
-CFLAGS+=		-march=i586
-.endif
-
 CPPFLAGS+=		-Dunix
 CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
 #CFLAGS+=		-D__STDC_FORMAT_MACROS=1 # always defined too late
@@ -132,3 +126,4 @@ CHECK_PORTABILITY_SKIP+=	packaging/deb-in/mysql-packagesource-server.config.in
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/atomic64.mk"

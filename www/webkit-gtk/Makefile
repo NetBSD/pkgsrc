@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2020/12/15 17:59:00 leot Exp $
+# $NetBSD: Makefile,v 1.200 2020/12/31 20:04:14 nia Exp $
 
 DISTNAME=	webkitgtk-2.30.4
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -155,4 +155,5 @@ BUILDLINK_API_DEPENDS.libsoup+= libsoup>=2.42.2nb3
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

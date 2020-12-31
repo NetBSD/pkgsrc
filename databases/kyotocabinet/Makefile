@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/11/23 14:00:39 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/12/31 20:04:11 nia Exp $
 #
 
 DISTNAME=	kyotocabinet-1.2.78
@@ -23,17 +23,5 @@ TEST_TARGET=	check
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/compiler.mk"
-# using GCC atomic functions only available with i586 in kcthread.cc
-.if !empty(CC_VERSION:Mgcc-*) && !empty(MACHINE_ARCH:Mi[34]86)
-GNU_ARCH.i386=		i586
-CFLAGS+=		-march=i586
-.endif
-
-.if ${MACHINE_ARCH} == "powerpc"
-.include "../../devel/libatomic/buildlink3.mk"
-.endif
-
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

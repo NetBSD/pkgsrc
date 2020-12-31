@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/10/27 10:22:34 adam Exp $
+# $NetBSD: Makefile,v 1.63 2020/12/31 20:04:11 nia Exp $
 
 DISTNAME=	redis-6.0.9
 CATEGORIES=	databases
@@ -60,11 +60,6 @@ CHECK_PORTABILITY_SKIP+=	deps/jemalloc/configure
 post-extract:
 	${CHMOD} -R g-w ${WRKSRC}
 
-.if ${MACHINE_ARCH} == "i386"
-# Need 8 byte atomics.
-CFLAGS+=		-march=i586
-.endif
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/redis.conf ${DESTDIR}${EGDIR}/redis.conf.example
 .for file in ${DOCFILES}
@@ -75,4 +70,5 @@ do-test:
 	cd ${WRKSRC} && ${SH} runtest
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
