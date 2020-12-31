@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6866 2020/12/31 17:33:23 leot Exp $
+$NetBSD: CHANGES-2020,v 1.6867 2020/12/31 17:44:22 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9944,3 +9944,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed security/isakmpd [nia 2020-12-31]
 	Updated net/youtube-dl to 20201231 [leot 2020-12-31]
 	Updated net/gallery-dl to 1.16.1 [leot 2020-12-31]
+	Updated fonts/unifont to 13.0.05 [fcambus 2020-12-31]
