@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2020/12/04 20:45:30 nia Exp $
+# $NetBSD: Makefile,v 1.248 2020/12/31 20:04:12 nia Exp $
 
 VERREL=		7.0.3
 VERRC=		1
@@ -262,11 +262,6 @@ BUILD_MAKE_FLAGS+=	VERBOSE=true
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
-.if ${MACHINE_ARCH} == "i386"
-# For 64 bit atomic ops (PR/54826)
-CXXFLAGS+=		-march=i586
-.endif
-
 INSTALLATION_DIRS=	bin share/applications
 
 .PHONY: debugrun
@@ -419,5 +414,5 @@ BUILDLINK_API_DEPENDS.libodfgen+=       libodfgen>=0.1.4
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

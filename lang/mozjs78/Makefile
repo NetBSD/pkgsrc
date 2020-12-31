@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/12/30 06:10:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.16 2020/12/31 20:04:12 nia Exp $
 
 DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -38,20 +38,6 @@ CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-# 64 bit atomics
-CXXFLAGS+=		-march=i586
-.endif
-
-# XXX This does not work entirely correctly at present. There are
-# 26 atomic type test failures on powerpc, where these pass on i386.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
-# 64 bit atomics
-.include "../../devel/libatomic/buildlink3.mk"
-.endif
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
@@ -93,4 +79,7 @@ RUST_REQ=	1.41.0
 .include "../../lang/python/tool.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
+# XXX This does not work entirely correctly at present. There are
+# 26 atomic type test failures on powerpc, where these pass on i386.
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

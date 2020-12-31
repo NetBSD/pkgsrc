@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/05/22 10:56:40 adam Exp $
+# $NetBSD: Makefile,v 1.27 2020/12/31 20:04:13 nia Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -30,11 +30,6 @@ RSYSLOG_SYSMOD=		imsolaris
 CONFIGURE_ARGS+=	--disable-imsolaris --enable-klog
 PLIST.klog=		yes
 RSYSLOG_SYSMOD=		imklog
-.endif
-
-# needs to be able to do compare-and-swap on time_t (cmpxchg8b)
-.if ${MACHINE_ARCH} == "i386"
-CFLAGS+=		-march=i586
 .endif
 
 BUILDLINK_TRANSFORM.Darwin+=	rm:-luuid
@@ -70,4 +65,5 @@ post-install:
 
 BUILDLINK_API_DEPENDS.liblognorm+=	liblognorm>=2.0.3
 .include "../../sysutils/liblognorm/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.191 2020/12/17 09:53:15 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.192 2020/12/31 20:04:13 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -48,9 +48,8 @@ test:
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
+
 .if ${MACHINE_ARCH} == "i386"
-# Fix for PR pkg/48152.
-CXXFLAGS+=		-march=i586
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
 .endif
@@ -155,11 +154,7 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 # In unspecified case, clock_gettime(CLOCK_MONOTONIC, ...) fails.
 CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 
-# PR pkg/55456
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
-.include "../../devel/libatomic/buildlink3.mk"
-CONFIGURE_ENV.NetBSD+=	ac_cv_needs_atomic=yes
-.endif
+.include "../../mk/atomic64.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
