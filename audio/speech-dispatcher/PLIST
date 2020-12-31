@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/12/03 13:00:48 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/12/31 00:34:36 js Exp $
 bin/spd-conf
 bin/spd-say
 bin/spdsend
@@ -38,7 +38,7 @@ ${PYSITELIB}/speechd_config/paths.pyo
 lib/speech-dispatcher-modules/sd_baratinoo
 lib/speech-dispatcher-modules/sd_cicero
 lib/speech-dispatcher-modules/sd_dummy
-lib/speech-dispatcher-modules/sd_espeak
+${PLIST.espeak}lib/speech-dispatcher-modules/sd_espeak
 lib/speech-dispatcher-modules/sd_festival
 lib/speech-dispatcher-modules/sd_flite
 lib/speech-dispatcher-modules/sd_generic
