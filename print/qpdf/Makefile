@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/10/30 15:13:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2020/12/31 20:04:13 nia Exp $
 
 DISTNAME=	qpdf-10.0.2
 CATEGORIES=	print
@@ -18,4 +18,5 @@ PKGCONFIG_OVERRIDE+=	libqpdf.pc.in
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
