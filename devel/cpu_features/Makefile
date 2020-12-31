@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/14 17:23:49 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2020/12/31 10:56:27 nia Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	cpu_features-0.6.0
@@ -15,6 +15,18 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBUILD_PIC=ON
 
-PLIST_SUBST+=	CPU_FEATURES_ARCH=${MACHINE_ARCH:S/i386/x86/:S/x86_64/x86/}
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PLIST_SUBST+=		CPU_FEATURES_ARCH=x86
+.elif !empty(MACHINE_ARCH:M*aarch64*)
+PLIST_SUBST+=		CPU_FEATURES_ARCH=aarch64
+.elif !empty(MACHINE_ARCH:M*powerpc*)
+PLIST_SUBST+=		CPU_FEATURES_ARCH=ppc
+.elif !empty(MACHINE_ARCH:M*arm*)
+PLIST_SUBST+=		CPU_FEATURES_ARCH=arm
+.elif !empty(MACHINE_ARCH:M*mips*)
+PLIST_SUBST+=		CPU_FEATURES_ARCH=mips
+.else
+PKG_FAIL_REASON+=	"${MACHINE_ARCH} unsupported, see CMakeLists.txt"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
