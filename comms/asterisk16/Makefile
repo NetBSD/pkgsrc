@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.72 2020/12/10 13:52:30 gdt Exp $
+# $NetBSD: Makefile,v 1.73 2020/12/31 11:07:01 nia Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
 DISTNAME=	asterisk-16.15.0
+PKGREVISION=	1
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -111,7 +112,8 @@ MAKE_FLAGS+=		WRKSRC=${WRKSRC}
 MAKE_FLAGS+=		LDOPTS=${LDFLAGS:M*:Q}
 MAKE_FLAGS+=		HTTP_DOCSDIR=${PREFIX}/share/httpd/htdocs
 MAKE_FLAGS+=		HTTP_CGIDIR=${PREFIX}/libexec/cgi-bin
-MAKE_FLAGS+=		OPTIMIZE=-O3
+MAKE_FLAGS+=		OPTIMIZE=
+MAKE_FLAGS+=		DEBUG=
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386)
 BUILDLINK_TRANSFORM+=	rm:-march=i386
