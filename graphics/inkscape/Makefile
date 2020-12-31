@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2020/12/26 17:02:37 nia Exp $
+# $NetBSD: Makefile,v 1.223 2020/12/31 20:04:12 nia Exp $
 
 DISTNAME=	inkscape-1.0.1
 PKGREVISION=	3
@@ -75,15 +75,6 @@ MANCOMPRESSED=	yes
 CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 .endif
 
-.if ${MACHINE_ARCH} == "i386"
-CFLAGS+=	-march=i586
-CXXFLAGS+=	-march=i586
-.endif
-
-.if ${MACHINE_ARCH} == "powerpc"
-.  include "../../devel/libatomic/buildlink3.mk"
-.endif
-
 # There exists some race condition in create_default_templates.py that
 # makes default.es_MX.svg sometimes not get installed.
 # (gettext translation file dependency not correctly expressed in cmake?)
@@ -121,4 +112,5 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
