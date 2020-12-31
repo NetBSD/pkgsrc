@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2020/12/12 22:39:54 leot Exp $
+@comment $NetBSD: PLIST,v 1.48 2020/12/31 17:33:08 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -228,9 +228,6 @@ ${PYSITELIB}/gallery_dl/extractor/mangahere.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangakakalot.py
 ${PYSITELIB}/gallery_dl/extractor/mangakakalot.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangakakalot.pyo
-${PYSITELIB}/gallery_dl/extractor/mangapanda.py
-${PYSITELIB}/gallery_dl/extractor/mangapanda.pyc
-${PYSITELIB}/gallery_dl/extractor/mangapanda.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangapark.py
 ${PYSITELIB}/gallery_dl/extractor/mangapark.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangapark.pyo
