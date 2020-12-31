@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/12/04 20:44:59 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/12/31 00:34:36 js Exp $
 
 DISTNAME=	speech-dispatcher-0.10.2
 PKGREVISION=	1
@@ -52,18 +52,30 @@ CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/clients/emacs.conf \
 CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/speechd.conf \
 		${PKG_SYSCONFDIR}/speechd.conf
 
-.for module in baratinoo.conf cicero.conf dtk-generic.conf epos-generic.conf \
-    espeak-mbrola-generic.conf espeak-ng-mbrola-generic.conf espeak-ng.conf \
-    espeak.conf festival.conf flite.conf ibmtts.conf ivona.conf kali.conf \
-    llia_phon-generic.conf mary-generic-disabled.conf swift-generic.conf \
-    voxin.conf
+PLIST_VARS+=	espeak
+
+MODULES=	baratinoo.conf cicero.conf dtk-generic.conf epos-generic.conf \
+		festival.conf flite.conf ibmtts.conf ivona.conf kali.conf \
+		llia_phon-generic.conf mary-generic-disabled.conf \
+		swift-generic.conf voxin.conf
+.if ${OPSYS} != "Darwin"
+# espeak officially says it does not support macOS:
+# https://github.com/rhdunn/espeak/issues/78
+MODULES+=	espeak-mbrola-generic.conf espeak-ng-mbrola-generic.conf \
+		espeak-ng.conf espeak.conf
+PLIST.espeak=	yes
+.endif
+
+.for module in ${MODULES}
 CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/${module} \
 		${PKG_SYSCONFDIR}/modules/${module}
 .endfor
 
 REPLACE_PYTHON+=	src/api/python/speechd_config/spd-conf
 
+.if ${OPSYS} != "Darwin"
 .include "../../audio/espeak/buildlink3.mk"
+.endif
 .include "../../audio/flite/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
