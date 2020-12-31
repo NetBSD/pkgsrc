@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6862 2020/12/31 17:03:25 nia Exp $
+$NetBSD: CHANGES-2020,v 1.6863 2020/12/31 17:06:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9940,3 +9940,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/quartz-wm to 1.3.1nb2 [schmonz 2020-12-31]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2020Q4 branch [gdt 2020-12-31]
 	Removed security/ipsec-tools successor security/racoon2 [nia 2020-12-31]
+	Removed security/jessie [nia 2020-12-31]
