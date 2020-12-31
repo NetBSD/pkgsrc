@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/08/21 20:31:35 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/12/31 00:13:48 mef Exp $
 
 DISTNAME=	llvmlite-0.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,8 @@ MAKE_ENV+=	LLVMLITE_SKIP_LLVM_VERSION_CHECK=1
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-configure:
-	${LN} -f ${WRKSRC}/ffi/Makefile.freebsd ${WRKSRC}/ffi/Makefile.netbsd
+#	${LN} -f ${WRKSRC}/ffi/Makefile.freebsd ${WRKSRC}/ffi/Makefile.netbsd
+	${SED} -e 's/ -stdlib=libc++//'   ${WRKSRC}/ffi/Makefile.freebsd > ${WRKSRC}/ffi/Makefile.netbsd
 
 .include "../../mk/bsd.prefs.mk"
 post-install:
