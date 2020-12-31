@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:12 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/12/31 22:40:17 fcambus Exp $
 
-DISTNAME=	t1utils-1.41
+DISTNAME=	t1utils-1.42
 CATEGORIES=	fonts converters
-MASTER_SITES=	http://www.lcdf.org/~eddietwo/type/
+MASTER_SITES=	https://www.lcdf.org/~eddietwo/type/
 
 MAINTAINER=	jonb@NetBSD.org
 HOMEPAGE=	https://www.lcdf.org/~eddietwo/type/
