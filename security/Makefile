@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.793 2020/12/31 17:01:25 nia Exp $
+# $NetBSD: Makefile,v 1.794 2020/12/31 17:06:03 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -142,7 +142,6 @@ SUBDIR+=	hydra
 SUBDIR+=	ike-scan
 SUBDIR+=	ipv6-toolkit
 SUBDIR+=	isakmpd
-SUBDIR+=	jessie
 SUBDIR+=	john
 SUBDIR+=	kauth
 SUBDIR+=	kdesu
