@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6868 2020/12/31 19:44:25 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.6869 2020/12/31 22:16:27 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9946,3 +9946,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.16.1 [leot 2020-12-31]
 	Updated fonts/unifont to 13.0.05 [fcambus 2020-12-31]
 	Updated emulators/hatari to 2.3.1 [fcambus 2020-12-31]
+	Updated lang/gnucobol to 3.1.2 [fcambus 2020-12-31]
