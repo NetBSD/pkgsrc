@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/12/31 10:56:27 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/12/31 10:57:03 nia Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	cpu_features-0.6.0
@@ -14,6 +14,8 @@ LICENSE=	apache-2.0
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBUILD_PIC=ON
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PLIST_SUBST+=		CPU_FEATURES_ARCH=x86
