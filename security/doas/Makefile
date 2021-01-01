@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/10/26 09:00:35 pin Exp $
+# $NetBSD: Makefile,v 1.14 2021/01/01 14:21:23 pin Exp $
 
 DISTNAME=	doas-6.3p2
 PKGREVISION=	1
@@ -9,6 +9,8 @@ MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/slicer69/doas/
 COMMENT=	Execute commands as another user
 LICENSE=	2-clause-bsd AND isc AND modified-bsd
+
+CONFLICTS=	opendoas-[0-9]*
 
 USE_TOOLS+=	gmake yacc
 
