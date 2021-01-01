@@ -1,0 +1,4 @@
+An interactive cheatsheet tool for the command-line and application launchers.
+navi allows you to browse through cheatsheets (that you may write yourself or
+download from maintainers) and execute commands.
+Suggested values for arguments are dynamically displayed in a list.
