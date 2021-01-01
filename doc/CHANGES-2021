@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.39 2021/01/01 16:10:55 nia Exp $
+$NetBSD: CHANGES-2021,v 1.40 2021/01/01 16:35:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -52,3 +52,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/mame to 0.227 [wiz 2021-01-01]
 	Updated sysutils/consolekit to 1.2.2 [nia 2021-01-01]
 	Updated x11/gtk2 to 2.24.33 [nia 2021-01-01]
+	Added net/nicotine-plus version 2.2.2 [nia 2021-01-01]
