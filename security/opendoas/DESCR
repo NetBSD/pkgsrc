@@ -1,0 +1,5 @@
+An unofficial, portable fork of the OpenBSD doas command.
+
+doas is a minimal replacement for the venerable sudo. It was
+initially written by Ted Unangst of the OpenBSD project to provide
+95% of the features of sudo with a fraction of the codebase.
