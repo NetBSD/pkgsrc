@@ -1,0 +1,15 @@
+$NetBSD: patch-library_backtrace_crates_backtrace-sys_src_libbacktrace_configure,v 1.1 2021/01/01 20:44:48 he Exp $
+
+Use pkgsrc libtool.
+
+--- library/backtrace/crates/backtrace-sys/src/libbacktrace/configure.orig	2020-10-07 08:04:03.000000000 +0000
++++ library/backtrace/crates/backtrace-sys/src/libbacktrace/configure
+@@ -7916,7 +7916,7 @@ fi
+ LIBTOOL_DEPS="$ltmain"
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++LIBTOOL='libtool'
+ 
+ 
+ 
