@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.46 2020/12/04 04:56:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.47 2021/01/01 15:33:51 nia Exp $
 
-CONSOLEKIT_VER=	1.2.1
-PKGREVISION=	6
+CONSOLEKIT_VER=	1.2.2
 DISTNAME=	ConsoleKit2-${CONSOLEKIT_VER}
 PKGNAME=	consolekit-${CONSOLEKIT_VER}
 CATEGORIES=	sysutils
-GITHUB_RELEASE=	${CONSOLEKIT_VER}
+GITHUB_TAG=	${CONSOLEKIT_VER}
 GITHUB_PROJECT=	ConsoleKit2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ConsoleKit2/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://github.com/ConsoleKit2/ConsoleKit2/
+HOMEPAGE=	https://github.com/ConsoleKit2/ConsoleKit2
 COMMENT=	Framework for defining and tracking users, login sessions, and seats
 LICENSE=	gnu-gpl-v2
 
@@ -42,7 +40,8 @@ CONF_FILES+=	${EGDIR}/ConsoleKit/seats.d/00-primary.seat		\
 		${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d/90-consolekit
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake intltool msgfmt perl pkg-config automake
+USE_TOOLS+=	gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=	autoconf automake autoreconf
 USE_LIBTOOL=	YES
 
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFBASE}			\
@@ -63,6 +62,9 @@ post-install:
 	${DESTDIR}${RULESDIR}/50-shutdown.rules
 
 TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+
+pre-configure:
+	cd ${WRKSRC} && NOCONFIGURE=1 ${SH} autogen.sh
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"

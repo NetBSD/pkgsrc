@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/05/16 11:30:36 youri Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/01/01 15:33:51 nia Exp $
 bin/ck-history
 bin/ck-launch-session
 bin/ck-list-sessions
@@ -33,22 +33,6 @@ share/examples/consolekit/ConsoleKit/seats.d/00-primary.seat
 share/examples/consolekit/X11/xinit/xinitrc.d/90-consolekit
 share/examples/consolekit/dbus-1/system.d/ConsoleKit.conf
 share/examples/consolekit/logrotate.d/consolekit
-share/gtk-doc/html/libconsolekit-1.0/annotation-glossary.html
-share/gtk-doc/html/libconsolekit-1.0/api-index-1.0.html
-share/gtk-doc/html/libconsolekit-1.0/api-index-deprecated.html
-share/gtk-doc/html/libconsolekit-1.0/api-index-full.html
-share/gtk-doc/html/libconsolekit-1.0/ch01.html
-share/gtk-doc/html/libconsolekit-1.0/home.png
-share/gtk-doc/html/libconsolekit-1.0/index.html
-share/gtk-doc/html/libconsolekit-1.0/left-insensitive.png
-share/gtk-doc/html/libconsolekit-1.0/left.png
-share/gtk-doc/html/libconsolekit-1.0/libconsolekit-1.0.devhelp2
-share/gtk-doc/html/libconsolekit-1.0/libconsolekit-libconsolekit.html
-share/gtk-doc/html/libconsolekit-1.0/right-insensitive.png
-share/gtk-doc/html/libconsolekit-1.0/right.png
-share/gtk-doc/html/libconsolekit-1.0/style.css
-share/gtk-doc/html/libconsolekit-1.0/up-insensitive.png
-share/gtk-doc/html/libconsolekit-1.0/up.png
 share/locale/bg/LC_MESSAGES/ConsoleKit2.mo
 share/locale/es/LC_MESSAGES/ConsoleKit2.mo
 share/locale/es_419/LC_MESSAGES/ConsoleKit2.mo
