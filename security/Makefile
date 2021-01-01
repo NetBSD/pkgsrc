@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.795 2020/12/31 17:10:20 nia Exp $
+# $NetBSD: Makefile,v 1.796 2021/01/01 14:29:55 pin Exp $
 #
 
 COMMENT=	Security tools
@@ -250,6 +250,7 @@ SUBDIR+=	opencdk
 SUBDIR+=	openct
 SUBDIR+=	opendnssec
 SUBDIR+=	opendnssec2
+SUBDIR+=	opendoas
 SUBDIR+=	openpam
 SUBDIR+=	opensaml
 SUBDIR+=	opensc
