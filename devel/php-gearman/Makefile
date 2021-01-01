@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2020/05/22 10:56:04 adam Exp $
+# $NetBSD: Makefile,v 1.19 2021/01/01 08:24:41 ryoon Exp $
 
 MODNAME=	gearman
 PECL_VERSION=	2.0.5
 DISTNAME=	gearman-${PECL_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wcgallego/}
 GITHUB_PROJECT=	pecl-gearman
