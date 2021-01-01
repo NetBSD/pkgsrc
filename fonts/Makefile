@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.346 2020/11/19 15:10:07 kleink Exp $
+# $NetBSD: Makefile,v 1.347 2021/01/01 22:28:56 uwe Exp $
 #
 
 COMMENT=	Fonts
@@ -138,6 +138,7 @@ SUBDIR+=	jisx0208fonts
 SUBDIR+=	jisx0212fonts
 SUBDIR+=	jisx0213fonts
 SUBDIR+=	jmk-fonts
+SUBDIR+=	jomolhari-ttf
 SUBDIR+=	jsMath-fonts
 SUBDIR+=	junicode
 SUBDIR+=	kanjistrokeorders-ttf
