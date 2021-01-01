@@ -1,41 +1,38 @@
-$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.5 2020/08/11 16:07:39 ryoon Exp $
+$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.6 2021/01/01 13:17:44 ryoon Exp $
 
 * Support NetBSD
 * Add pkgsrc font path
 
---- external/pdfium/pkgsrc.patch.1.orig	2020-08-10 05:34:43.437539481 +0000
+--- external/pdfium/pkgsrc.patch.1.orig	2020-12-18 15:40:32.141745268 +0000
 +++ external/pdfium/pkgsrc.patch.1
-@@ -0,0 +1,33 @@
-+--- pdfioum/core/fxcrt/cfx_fileaccess_posix.h.orig	2019-11-07 01:11:27.000000000 +0000
-++++ pdfium/core/fxcrt/cfx_fileaccess_posix.h
-+@@ -12,7 +12,7 @@
+@@ -0,0 +1,30 @@
++--- pdfium/core/fxcrt/cfx_datetime.cpp.orig	2020-10-26 18:26:04.000000000 +0000
+++++ pdfium/core/fxcrt/cfx_datetime.cpp
++@@ -10,7 +10,7 @@
 + #include "core/fxcrt/fx_system.h"
 + 
-+ #if _FX_PLATFORM_ != _FX_PLATFORM_LINUX_ && !defined(OS_MACOSX) && \
-+-    !defined(OS_ANDROID)
-++    !defined(OS_ANDROID) && !defined(OS_NETBSD)
++ #if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || \
++-    defined(OS_APPLE) || defined(OS_ASMJS)
+++    defined(OS_APPLE) || defined(OS_ASMJS) || defined(OS_NETBSD)
++ #include <sys/time.h>
++ #include <time.h>
++ #endif
++--- pdfium/core/fxge/fx_ge_linux.cpp.orig	2020-10-26 18:26:04.000000000 +0000
+++++ pdfium/core/fxge/fx_ge_linux.cpp
++@@ -16,7 +16,7 @@
++ #include "core/fxge/systemfontinfo_iface.h"
++ #include "third_party/base/stl_util.h"
++ 
++-#if !defined(OS_LINUX) && !defined(OS_CHROMEOS) && !defined(OS_ASMJS)
+++#if !defined(OS_LINUX) && !defined(OS_CHROMEOS) && !defined(OS_ASMJS) && !defined(OS_NETBSD)
 + #error "Included on the wrong platform"
 + #endif
 + 
-+   /**************************************************************************
-+--- pdfium/core/fxcrt/fx_system.h.orig	2019-11-07 01:11:27.000000000 +0000
-++++ pdfium/core/fxcrt/fx_system.h
-+@@ -26,7 +26,7 @@
-+ #define _FX_PLATFORM_ _FX_PLATFORM_WINDOWS_
-+ #elif defined(_WIN64)
-+ #define _FX_PLATFORM_ _FX_PLATFORM_WINDOWS_
-+-#elif defined(__linux__)
-++#elif defined(__linux__) || defined(__NetBSD__)
-+ #define _FX_PLATFORM_ _FX_PLATFORM_LINUX_
-+ #elif defined(__APPLE__)
-+ #define _FX_PLATFORM_ _FX_PLATFORM_APPLE_
-+--- pdfium/core/fxge/fx_ge_linux.cpp.orig	2019-11-07 01:11:27.000000000 +0000
-++++ pdfium/core/fxge/fx_ge_linux.cpp
-+@@ -155,6 +155,7 @@ std::unique_ptr<SystemFontInfoIface> Sys
-+     pInfo->AddPath("/usr/share/X11/fonts/Type1");
-+     pInfo->AddPath("/usr/share/X11/fonts/TTF");
-+     pInfo->AddPath("/usr/local/share/fonts");
-++    pInfo->AddPath("@X11BASE@/share/fonts");
++@@ -169,6 +169,7 @@ class CLinuxPlatform : public CFX_GEModu
++       pInfo->AddPath("/usr/share/X11/fonts/Type1");
++       pInfo->AddPath("/usr/share/X11/fonts/TTF");
++       pInfo->AddPath("/usr/local/share/fonts");
+++      pInfo->AddPath("@X11BASE@/share/fonts");
++     }
++     return pInfo;
 +   }
-+   return std::move(pInfo);
-+ }
