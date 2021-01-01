@@ -1,20 +1,20 @@
-$NetBSD: patch-src_Makefile.am,v 1.2 2018/07/06 14:10:15 ryoon Exp $
+$NetBSD: patch-src_Makefile.am,v 1.3 2021/01/01 09:50:40 ryoon Exp $
 
 Install files into pkgsrc example paths; will be correctly
 installed by pkgsrc configuration file framework.
 
---- src/Makefile.am.orig	2018-06-18 13:33:47.000000000 +0000
+--- src/Makefile.am.orig	2020-11-11 02:07:46.000000000 +0000
 +++ src/Makefile.am
 @@ -25,14 +25,14 @@ pulseincludedir=$(includedir)/pulse
  pulsecoreincludedir=$(includedir)/pulsecore
  pulselibexecdir=$(libexecdir)/pulse
  if HAVE_X11
 -xdgautostartdir=$(sysconfdir)/xdg/autostart
-+xdgautostartdir= ${EGDIR}
++xdgautostartdir=${EGDIR}
  endif
  if HAVE_ALSA
- alsaprofilesetsdir=$(datadir)/pulseaudio/alsa-mixer/profile-sets
- alsapathsdir=$(datadir)/pulseaudio/alsa-mixer/paths
+ alsaprofilesetsdir=$(alsadatadir)/profile-sets
+ alsapathsdir=$(alsadatadir)/paths
  endif
  if HAVE_DBUS
 -dbuspolicydir=$(sysconfdir)/dbus-1/system.d
