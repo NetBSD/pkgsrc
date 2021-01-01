@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/11/19 09:35:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.31 2021/01/01 15:07:59 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -24,19 +24,21 @@ SUBST_SED.paths+=	-e 's|/var/qmail|${QMAILDIR}|g'
 SUBST_MESSAGE.paths=	Fixing paths.
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/qmail-qfilter
-INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
 BUILD_DEFS+=		QMAILDIR
 
 DJB_MAKE_TARGETS=	NO
 
 .include "../../mk/bsd.prefs.mk"
 
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/qmail-qfilter			\
+		${DESTDIR}${PREFIX}/bin
 	for i in ${REPLACE_PERL}; do					\
 		${INSTALL_SCRIPT} ${WRKSRC}/$${i}			\
 			${DESTDIR}${PREFIX}/share/examples/qmail-qfilter; \
 	done
+	${INSTALL_MAN} ${WRKSRC}/qmail-qfilter.1			\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../devel/bglibs/buildlink3.mk"
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
