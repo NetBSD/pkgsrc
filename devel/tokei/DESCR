@@ -1,0 +1,15 @@
+Tokei is a program that displays statistics about your code. It will
+show number of files, total lines within those files and code,
+comments, and blanks grouped by language. Some of Tokei's features
+are:
+
+- Tokei is fast
+- Tokei is accurate, it correctly handles multi line comments,
+  nested comments, and not counting comments that are in
+  strings. Providing an accurate code statistics.
+- It supports a huge range of languages, supporting over 150
+  languages, and their various extensions.
+- It can output in multiple formats(CBOR, JSON, TOML, YAML)
+  allowing Tokei's output to be easily stored, and reused. These can
+  also be reused in Tokei combining a previous run's statistics with
+  another set.
