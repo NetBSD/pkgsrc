@@ -6,3 +6,4 @@
 	Added lang/R-cpp11 version 0.2.4 [mef 2021-01-01]
 	Updated devel/R-pkgbuild to 1.2.0 [mef 2021-01-01]
 	Added devel/R-gert version 1.0.2 [mef 2021-01-01]
+	Added devel/R-rappdirs version 0.3.1 [mef 2021-01-01]
