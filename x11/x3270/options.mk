@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/01/01 13:05:22 rhialto Exp $
+# $NetBSD: options.mk,v 1.2 2021/01/01 15:37:54 rhialto Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x3270
 PKG_SUPPORTED_OPTIONS=	curses x11 tcl
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--disable-c3270
 CONFIGURE_ARGS+=	--enable-x3270
 CONFIGURE_ARGS+=	--enable-x3270if
 PLIST.x11=		yes
+REPLACE_BASH+=		x3270/x3270a.in
 .else
 CONFIGURE_ARGS+=	--disable-x3270
 CONFIGURE_ARGS+=	--disable-x3270if
