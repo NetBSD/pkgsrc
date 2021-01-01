@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2020/10/28 16:56:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2021/01/01 15:18:27 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -213,6 +213,7 @@ share/mame/hash/dragon_flex.xml
 share/mame/hash/dragon_flop.xml
 share/mame/hash/dragon_os9.xml
 share/mame/hash/e01_flop.xml
+share/mame/hash/easy_karaoke_cart.xml
 share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
 share/mame/hash/ekara_japan.xml
@@ -348,9 +349,12 @@ share/mame/hash/lantutor.xml
 share/mame/hash/laser2001_cart.xml
 share/mame/hash/laser2001_flop.xml
 share/mame/hash/leapfrog_didj_cart.xml
+share/mame/hash/leapfrog_iquest_cart.xml
 share/mame/hash/leapfrog_leappad_cart.xml
 share/mame/hash/leapfrog_ltleappad_cart.xml
 share/mame/hash/leapfrog_mfleappad_cart.xml
+share/mame/hash/leapfrog_turboextreme_cart.xml
+share/mame/hash/leapfrog_turbotwistbrainquest_cart.xml
 share/mame/hash/leapster.xml
 share/mame/hash/lisa.xml
 share/mame/hash/lisa2.xml
@@ -437,6 +441,8 @@ share/mame/hash/nes_datach.xml
 share/mame/hash/nes_kstudio.xml
 share/mame/hash/nes_ntbrom.xml
 share/mame/hash/next.xml
+share/mame/hash/next_cdrom.xml
+share/mame/hash/next_hdd.xml
 share/mame/hash/ngp.xml
 share/mame/hash/ngpc.xml
 share/mame/hash/nimbus.xml
@@ -659,12 +665,15 @@ share/mame/hash/vsmile_cart.xml
 share/mame/hash/vsmile_cd.xml
 share/mame/hash/vsmileb_cart.xml
 share/mame/hash/vsmilem_cart.xml
+share/mame/hash/vtech_innotab_cart.xml
+share/mame/hash/vtech_innotv_innotabmax_cart.xml
 share/mame/hash/vtech_storio_cart.xml
 share/mame/hash/vz_cass.xml
 share/mame/hash/vz_snap.xml
 share/mame/hash/wangpc.xml
 share/mame/hash/waveterm.xml
 share/mame/hash/wicat.xml
+share/mame/hash/wizard_cart.xml
 share/mame/hash/wmbullet.xml
 share/mame/hash/wscolor.xml
 share/mame/hash/wswan.xml
