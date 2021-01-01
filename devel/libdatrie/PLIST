@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/23 15:02:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/01 21:49:39 scole Exp $
 bin/trietool
 bin/trietool-0.2
 include/datrie/alpha-map.h
@@ -9,4 +9,3 @@ lib/libdatrie.la
 lib/pkgconfig/datrie-0.2.pc
 man/man1/trietool-0.2.1
 man/man1/trietool.1
-share/doc/libdatrie/README.migration
