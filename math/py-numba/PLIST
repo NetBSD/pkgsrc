@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/08/21 20:33:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/01/01 13:29:16 mef Exp $
 bin/numba-${PYVERSSUFFIX}
 bin/pycc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -1076,6 +1076,7 @@ ${PYSITELIB}/numba/np/ufunc/deviceufunc.pyo
 ${PYSITELIB}/numba/np/ufunc/dufunc.py
 ${PYSITELIB}/numba/np/ufunc/dufunc.pyc
 ${PYSITELIB}/numba/np/ufunc/dufunc.pyo
+${PYSITELIB}/numba/np/ufunc/omppool.so
 ${PYSITELIB}/numba/np/ufunc/parallel.py
 ${PYSITELIB}/numba/np/ufunc/parallel.pyc
 ${PYSITELIB}/numba/np/ufunc/parallel.pyo
