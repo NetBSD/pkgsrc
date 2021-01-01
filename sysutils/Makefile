@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.924 2020/12/17 16:00:07 bacon Exp $
+# $NetBSD: Makefile,v 1.925 2021/01/01 14:54:05 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -420,6 +420,7 @@ SUBDIR+=	munin-common
 SUBDIR+=	munin-master
 SUBDIR+=	munin-node
 SUBDIR+=	nautilus
+SUBDIR+=	navi
 SUBDIR+=	nbase
 SUBDIR+=	ncdu
 SUBDIR+=	ndesk-dbus
