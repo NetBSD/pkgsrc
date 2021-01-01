@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/12/18 18:45:08 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/01/01 19:41:37 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
@@ -217,6 +217,7 @@ share/highlight/langDefs/objc.lang
 share/highlight/langDefs/ocaml.lang
 share/highlight/langDefs/octave.lang
 share/highlight/langDefs/oorexx.lang
+share/highlight/langDefs/org.lang
 share/highlight/langDefs/os.lang
 share/highlight/langDefs/oz.lang
 share/highlight/langDefs/paradox.lang
@@ -336,6 +337,7 @@ share/highlight/plugins/outhtml_curly_brackets_matcher.lua
 share/highlight/plugins/outhtml_ie7_webctrl.lua
 share/highlight/plugins/outhtml_keyword_matcher.lua
 share/highlight/plugins/outhtml_ligature_fonts.lua
+share/highlight/plugins/outhtml_lsp_clangd.lua
 share/highlight/plugins/outhtml_modern_fonts.lua
 share/highlight/plugins/outhtml_parantheses_matcher.lua
 share/highlight/plugins/outhtml_tooltips.lua
