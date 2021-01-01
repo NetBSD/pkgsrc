@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/12 10:10:04 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/01/01 08:19:01 ryoon Exp $
 
 BOOST_PACKAGE=		jam
 BOOST_COMMENT=		(Boost.Jam utility)
@@ -7,12 +7,6 @@ BOOST_CONFIG=		no
 CONFLICTS+=		boost-build<=1.33.1
 
 .include "../../meta-pkgs/boost/Makefile.common"
-
-SUBST_CLASSES+=		bb
-SUBST_MESSAGE.bb=	Fixing path to Boost.Build files.
-SUBST_STAGE.bb=		pre-build
-SUBST_FILES.bb=		tools/build/src/engine/Jambase
-SUBST_SED.bb=		-e 's,/usr/share/boost-build,${PREFIX}/share/boost-build,g'
 
 SUBST_CLASSES+=		opt
 SUBST_MESSAGE.opt=	Removing -O3 flag.
