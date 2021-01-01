@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2020/05/06 13:33:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2021/01/01 08:19:01 ryoon Exp $
 share/boost-build/__init__.py
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
@@ -90,6 +90,7 @@ share/boost-build/tools/doxygen-config.jam
 share/boost-build/tools/doxygen.jam
 share/boost-build/tools/doxygen/windows-paths-check.doxyfile
 share/boost-build/tools/doxygen/windows-paths-check.hpp
+share/boost-build/tools/embarcadero.jam
 share/boost-build/tools/emscripten.jam
 share/boost-build/tools/features/__init_features__.jam
 share/boost-build/tools/features/address-model-feature.jam
@@ -114,6 +115,7 @@ share/boost-build/tools/features/fflags-feature.jam
 share/boost-build/tools/features/file-feature.jam
 share/boost-build/tools/features/find-lib-feature.jam
 share/boost-build/tools/features/flags-feature.jam
+share/boost-build/tools/features/force-include-feature.jam
 share/boost-build/tools/features/include-feature.jam
 share/boost-build/tools/features/instruction-set-feature.jam
 share/boost-build/tools/features/internal-feature.jam
@@ -140,6 +142,7 @@ share/boost-build/tools/features/tag-feature.jam
 share/boost-build/tools/features/threadapi-feature.jam
 share/boost-build/tools/features/threading-feature.jam
 share/boost-build/tools/features/toolset-feature.jam
+share/boost-build/tools/features/translate-path-feature.jam
 share/boost-build/tools/features/user-interface-feature.jam
 share/boost-build/tools/features/variant-feature.jam
 share/boost-build/tools/features/version-feature.jam
