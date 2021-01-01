@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.83 2020/12/07 12:30:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.84 2021/01/01 12:58:32 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -429,7 +429,6 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/icons/center-align.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/cert-error.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/chat.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/checkbox.svg
-lib/thunderbird/chrome/classic/skin/classic/messenger/icons/close-button.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/compact.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/connecting.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/connection-insecure.svg
@@ -707,7 +706,6 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/shared/messenger.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/messengercompose.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/newInstall.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/newInstallPage.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/shared/newmailalert.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/preferences/applications.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/preferences/calendar.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/preferences/chat.svg
