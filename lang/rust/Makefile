@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.208 2020/11/29 20:15:15 he Exp $
+# $NetBSD: Makefile,v 1.209 2021/01/01 20:44:48 he Exp $
 
-DISTNAME=	rustc-1.47.0-src
+DISTNAME=	rustc-1.48.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -44,12 +44,18 @@ CONFIGURE_ARGS+=		--disable-ninja
 # XXX: to be enabled in the future
 #CONFIGURE_ARGS+=		--jemalloc-root=${BUILDLINK_PREFIX.jemalloc}/lib
 
-# Use "dist" build target for cross compile of bootstrap
-#BUILD_TARGET=		dist
-BUILD_TARGET=		build
-
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
+
+.if !empty(TARGET)
+# Use "dist" build target for cross compile of bootstrap
+BUILD_TARGET=		dist
+.else
+BUILD_TARGET=		build
+.endif
+
+# More diag when failing
+#MAKE_ENV+=		RUST_BACKTRACE=1
 
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
@@ -154,7 +160,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 DISTFILES:=		${DEFAULT_DISTFILES}
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH:=		x86_64-apple-darwin
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -162,7 +168,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH:=		i686-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -170,7 +176,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH:=		x86_64-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -187,7 +193,7 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH:=		i686-unknown-freebsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -195,7 +201,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH:=		x86_64-unknown-freebsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -203,7 +209,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -220,7 +226,7 @@ pre-build-fix:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/rustc
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -228,7 +234,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH=		powerpc-unknown-netbsd
 
 # Cross-built against NetBSD 9.0
@@ -252,7 +258,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH=		aarch64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -262,7 +268,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_ARCH=		sparc64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -273,7 +279,7 @@ pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		armv7-unknown-netbsd-eabihf
-RUST_STAGE0_VER=	1.46.0
+RUST_STAGE0_VER=	1.47.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -282,7 +288,8 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 pre-build-fix:
 .endif
 
-# You may override RUST_BOOTSTRAP_PATH and RUST_ARCH in mk.conf if you have a local bootstrap compiler.
+# You may override RUST_BOOTSTRAP_PATH and RUST_ARCH in mk.conf
+# if you have a local bootstrap compiler.
 .if !defined(RUST_ARCH) && !defined(RUST_BOOTSTRAP_PATH)
 NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
 .else
@@ -299,8 +306,9 @@ TOOLS_PLATFORM.gzcat=	${PREFIX}/bin/gzip -cd
 
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
-SUBST_FILES.rpath+=	src/librustc_codegen_ssa/back/linker.rs
+SUBST_FILES.rpath+=	compiler/rustc_codegen_ssa/src/back/linker.rs
 SUBST_FILES.rpath+=	src/bootstrap/builder.rs
+SUBST_FILES.rpath+=	src/bootstrap/compile.rs
 SUBST_VARS.rpath=	PREFIX
 
 #
@@ -310,16 +318,25 @@ SUBST_VARS.rpath=	PREFIX
 # updating and verification.
 #
 CKSUM_CRATES+=	vendor/libc
-CKSUMS+=	9f96e346d87296e2b0b87b9fe375d67fb66cd88ce61ea2905466c8c5891d3108
-CKSUMS+=	ebcb0709586e6ed1e8b4538368201638006e26042d464bbc1151bef9eb158f8c
+CKSUMS+=	a9e46c0eee970cb5b4bd910924141d223fad4aa45380d3df1ce4b25992a13037
+CKSUMS+=	41394431697e352653c37188233bd44776881eb704132203b1a232271d1afd92
 
 CKSUM_CRATES+=	vendor/lzma-sys
 CKSUMS+=	6fd5e9245db34c6f557b8bfcaf03db82fc88c3b06dbfbb5f03b2bcd138983ef9
 CKSUMS+=	5e252578b5d266f6a4c8dc9f71ca7a91536ccb8c5c7d7753b82f12ec886459ef
 
 CKSUM_CRATES+=	vendor/stacker
-CKSUMS+=	37ef9666d048191eeca23d8f7d99cf912b953cc489bf860107aec306b95b2d99
-CKSUMS+=	410f22f5e95860530be1abaaf2e279d2f4226e5c17c2cee302661d8079246b3a
+CKSUMS+=	cee329550bad2ed1182abb71db9c24558a91b12e1eab8d9a48e23b997bb8f04e
+CKSUMS+=	79915b243d02df1dc698f5c2de3a9356c6c296d2dedb06d9035dbcc2f8972cf4
+
+CKSUM_CRATES+=	vendor/net2
+CKSUMS+=	03836f768aaf8c7bc9a351f3c10ce47d1f27f162133e99941850f84bb0e9dbc5
+CKSUMS+=	bc857fca2bb7a6c999b19911339dff54a882ef096ad424f21dcec9e13600b871
+
+CKSUM_CRATES+=	vendor/openssl-src
+CKSUMS+=	29499e62a2cde2fda48d21df58812ee5c198ef744522992bde8faae76747ac08
+CKSUMS+=	e34f9921c6531d043f3516821442aaeda86c7912d40cbddaf79bba6b08c37952
+
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
@@ -329,6 +346,17 @@ SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
 .for from to in ${CKSUMS}
 SUBST_SED.cksum+=	-e 's,${from},${to},g'
 .endfor
+
+# Patchelf appears to create unrecognized binaries...
+#.if ${OPSYS} == "NetBSD"
+#TOOL_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
+#PATCHELF=	${PREFIX}/bin/patchelf
+#FORCE_RPATH=	--force-rpath
+#.endif
+
+#TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
+#PATCHELF=		${PREFIX}/bin/patchelf
+#FORCE_RPATH=		--force-rpath
 
 post-extract:
 	set -e;									\
@@ -351,6 +379,12 @@ post-extract:
 	${LN} -s gcc-wrap c++-wrap; \
 	${LN} -s gcc-wrap clang++-wrap; \
 	${LN} -s gcc-wrap clang-wrap
+	# Fixup cargo rpath to pick up libcurl.so
+#	RPATH='${PREFIX}/lib:/lib:/usr/lib:$$ORIGIN/../lib'; \
+#	for f in bin/cargo; do \
+#		f=${RUST_BOOTSTRAP_PATH:Q}/$$f; \
+#		${PATCHELF} ${FORCE_RPATH} --set-rpath $${RPATH} $$f; \
+#	done
 .endif
 
 .if ${OPSYS} == "FreeBSD"
@@ -439,7 +473,11 @@ stage0-bootstrap: install
 	${ECHO} "$${RUST_STD_FILE}"; \
 	)
 .endif
+
 .if ${OS_VARIANT} == "SmartOS"
+stage0-bootstrap: install
+	${RM} -rf ${BOOTSTRAP_TMPDIR}
+	${MKDIR} ${BOOTSTRAP_TMPDIR}
 	${CP} -R ${DESTDIR}/${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
 	${CP} -R ${DESTDIR}/${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
 	${MKDIR} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc
@@ -447,12 +485,12 @@ stage0-bootstrap: install
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	# direct dependencies
+	: direct dependencies
 	for lib in libLLVM-10.so libcrypto.so.1.1 libcurl.so.4 \
 		   libssl.so.1.1 libz.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	# libcurl dependencies
+	: libcurl dependencies
 	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber-2.4.so.2 \
 		   libldap-2.4.so.2 libnghttp2.so.14 libsasl2.so.3 \
 		   libssh2.so.1 libunistring.so.2; do \
@@ -527,9 +565,13 @@ DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 DEPENDS+=	openssl>=1.1:../../security/openssl
 .endif
 
+# This is for when we build natively:
+.if ((${OPSYS} == "NetBSD") && \
+	((${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "i386")))
+# For 8-byte atomics, required by LLVM
+.include "../../devel/libatomic/buildlink3.mk"
+.endif
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../security/openssl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.curl+= curl>=7.67.0
-.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

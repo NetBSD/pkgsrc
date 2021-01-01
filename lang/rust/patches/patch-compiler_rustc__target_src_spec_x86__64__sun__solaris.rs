@@ -1,9 +1,9 @@
-$NetBSD: patch-src_librustc__target_spec_x86__64__sun__solaris.rs,v 1.1 2019/05/31 14:11:23 jperkin Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_x86__64__sun__solaris.rs,v 1.1 2021/01/01 20:44:48 he Exp $
 
 Enable stack probes on SunOS.
 
---- src/librustc_target/spec/x86_64_sun_solaris.rs.orig	2019-01-16 09:30:27.000000000 +0000
-+++ src/librustc_target/spec/x86_64_sun_solaris.rs
+--- compiler/rustc_target/src/spec/x86_64_sun_solaris.rs.orig	2019-01-16 09:30:27.000000000 +0000
++++ compiler/rustc_target/src/spec/x86_64_sun_solaris.rs
 @@ -15,7 +15,7 @@ pub fn target() -> TargetResult {
      base.pre_link_args.insert(LinkerFlavor::Gcc, vec!["-m64".to_string()]);
      base.cpu = "x86-64".to_string();
