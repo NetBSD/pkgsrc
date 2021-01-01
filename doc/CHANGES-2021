@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.46 2021/01/01 21:53:34 scole Exp $
+$NetBSD: CHANGES-2021,v 1.47 2021/01/01 23:04:16 uwe Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -60,3 +60,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-highlight to 3.60 [schmonz 2021-01-01]
 	Updated lang/rust to 1.48.0 [he 2021-01-01]
 	Updated devel/libdatrie to 0.2.12nb2 [scole 2021-01-01]
+	Updated fonts/jomolhari-ttf to 0.3 [uwe 2021-01-01]
