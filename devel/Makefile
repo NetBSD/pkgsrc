@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3299 2020/12/19 15:18:50 mef Exp $
+# $NetBSD: Makefile,v 1.3300 2021/01/01 06:25:43 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -38,6 +38,7 @@ SUBDIR+=	R-diffobj
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-fansi
 SUBDIR+=	R-fs
+SUBDIR+=	R-gert
 SUBDIR+=	R-git2r
 SUBDIR+=	R-glue
 SUBDIR+=	R-ini
