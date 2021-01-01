@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20270 2021/01/01 12:46:38 rhialto Exp $
+$NetBSD: TODO,v 1.20271 2021/01/01 12:48:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -503,6 +503,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.12.0
+	o darktable-3.4
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o dega-1.12
@@ -600,7 +601,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o genius-1.0.25
 	o gens-2.15.5
 	o gfract-0.33
+	o ghc-9.0
 	o ghdl-0.33
+	o git-2.30
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -634,6 +637,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
+	o gnucash-4.4
 	o gobby-0.5.0
 	o gok-2.30.1
 	o golem-0.0.6
