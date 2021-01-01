@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2020/12/04 20:45:31 nia Exp $
+# $NetBSD: Makefile,v 1.63 2021/01/01 08:24:51 ryoon Exp $
 
 DISTNAME=	superkaramba-15.08.3
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	misc
 COMMENT=	KDE desktop widgets
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}

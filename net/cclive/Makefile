@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2020/05/22 10:56:25 adam Exp $
+# $NetBSD: Makefile,v 1.31 2021/01/01 08:24:53 ryoon Exp $
 
 DISTNAME=		cclive-0.7.16
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		net multimedia www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cclive/}
 EXTRACT_SUFX=		.tar.xz
