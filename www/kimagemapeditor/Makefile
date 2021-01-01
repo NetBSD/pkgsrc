@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/12/04 04:56:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.24 2021/01/01 09:52:43 ryoon Exp $
 
 DISTNAME=	kimagemapeditor-${KAPPSVER}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	www
 
 HOMEPAGE=	https://www.kde.org/
