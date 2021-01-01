@@ -38,3 +38,4 @@
 	Updated misc/libreoffice to 7.0.4.2 [ryoon 2021-01-01]
 	Updated x11/xterm to 363 [pin 2021-01-01]
 	Updated sysutils/broot to 1.1.10 [pin 2021-01-01]
+	Added textproc/nanogrep version 1.2.1 [pin 2021-01-01]
