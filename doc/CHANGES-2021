@@ -37,3 +37,4 @@
 	Updated x11/x3270 to 4.0ga13 [rhialto 2021-01-01]
 	Updated misc/libreoffice to 7.0.4.2 [ryoon 2021-01-01]
 	Updated x11/xterm to 363 [pin 2021-01-01]
+	Updated sysutils/broot to 1.1.10 [pin 2021-01-01]
