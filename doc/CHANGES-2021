@@ -15,3 +15,5 @@
 	Updated devel/boost-mpi to 1.75.0 [ryoon 2021-01-01]
 	Updated devel/py-boost to 1.75.0 [ryoon 2021-01-01]
 	Updated meta-pkgs/boost to 1.75.0 [ryoon 2021-01-01]
+	Updated fonts/harfbuzz to 2.7.4 [ryoon 2021-01-01]
+	Updated fonts/harfbuzz-icu to 2.7.4 [ryoon 2021-01-01]
