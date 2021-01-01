@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.153 2021/01/01 12:46:03 rhialto Exp $
+# $NetBSD: Makefile,v 1.154 2021/01/01 16:23:44 rhialto Exp $
 
 DISTNAME=	vice-3.5
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -41,6 +42,8 @@ INFO_FILES=		yes
 REQD_DIRS+=		${PREFIX}/share/vice
 
 BUILD_DEPENDS+=		xa65-[0-9]*:../../devel/xa65
+
+REPLACE_BASH+=		src/arch/gtk3/data/unix/mkdesktopfile.sh
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
