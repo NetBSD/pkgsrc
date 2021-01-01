@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2020/09/07 14:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2021/01/01 08:24:57 ryoon Exp $
 
 DISTNAME=	Syntax-SourceHighlight-2.1.2
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MATLIB/}
 
