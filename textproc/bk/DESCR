@@ -1,0 +1,8 @@
+bk is a WIP terminal EPUB reader, written in Rust.
+Features:
+-Cross platform - Linux, macOS and Windows support
+-Single binary, instant startup
+-EPUB 2/3 support
+-Vim bindings
+-Incremental search
+-Bookmarks
