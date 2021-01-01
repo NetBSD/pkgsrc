@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2020/08/17 20:20:12 leot Exp $
+# $NetBSD: Makefile,v 1.59 2021/01/01 08:24:57 ryoon Exp $
 
 DISTNAME=	FlightCrew-0.7.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	textproc
 MASTER_SITES=	http://flightcrew.googlecode.com/files/
 EXTRACT_SUFX=	.zip

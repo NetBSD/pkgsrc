@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/12/04 04:56:06 riastradh Exp $
+# $NetBSD: Makefile,v 1.47 2021/01/01 08:24:52 ryoon Exp $
 
 DISTNAME=	audiocd-kio-16.08.0
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	multimedia
 COMMENT=	Kioslave for accessing audio CDs
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
