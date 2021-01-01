@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/05/06 14:04:28 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/01/01 08:24:40 ryoon Exp $
 
 DISTNAME=	mdds-1.3.1
 PKGNAME=	${DISTNAME:S/mdds/mdds1.2/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	http://kohei.us/files/mdds/src/
 EXTRACT_SUFX=	.tar.bz2
