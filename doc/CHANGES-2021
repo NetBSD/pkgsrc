@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.43 2021/01/01 19:41:45 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.44 2021/01/01 19:46:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -56,3 +56,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/nicotine successor net/nicotine-plus [nia 2021-01-01]
 	Added graphics/stitchy version 0.1.3 [pin 2021-01-01]
 	Updated textproc/libhighlight to 3.60 [schmonz 2021-01-01]
+	Updated textproc/highlight to 3.60 [schmonz 2021-01-01]
+	Updated textproc/p5-highlight to 3.60 [schmonz 2021-01-01]
