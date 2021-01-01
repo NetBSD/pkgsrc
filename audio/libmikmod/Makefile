@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2020/08/18 17:57:37 leot Exp $
+# $NetBSD: Makefile,v 1.68 2021/01/01 09:52:16 ryoon Exp $
 
 DISTNAME=	libmikmod-3.3.11.1
-PKGREVISION=	3
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mikmod/}
 
