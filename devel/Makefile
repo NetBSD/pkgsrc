@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3303 2021/01/01 10:33:51 mef Exp $
+# $NetBSD: Makefile,v 1.3304 2021/01/01 11:46:39 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -51,6 +51,7 @@ SUBDIR+=	R-lpSolve
 SUBDIR+=	R-magrittr
 SUBDIR+=	R-memoise
 SUBDIR+=	R-mockery
+SUBDIR+=	R-pak
 SUBDIR+=	R-pkgKitten
 SUBDIR+=	R-pkgbuild
 SUBDIR+=	R-pkgbcache
