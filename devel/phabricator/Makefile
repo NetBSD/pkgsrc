@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/12/09 14:20:55 taca Exp $
+# $NetBSD: Makefile,v 1.16 2021/01/01 09:05:07 taca Exp $
 
 DISTNAME=		phabricator-20170609
 PKGREVISION=		1
@@ -12,8 +12,6 @@ MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://phabricator.com/
 COMMENT=		Open software engineering platform
 LICENSE=		apache-2.0
-
-PHP_VERSIONS_INCOMPATIBLE=	70
 
 USE_TOOLS+=		pax bash:run
 EXTRACT_USING=		bsdtar
