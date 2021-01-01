@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/04/24 11:56:55 nia Exp $
+# $NetBSD: Makefile,v 1.17 2021/01/01 12:34:49 he Exp $
 
-VERSION=	1.6.17
+VERSION=	1.7.1
 DISTNAME=	ldns-${VERSION}
 PKGNAME=	drill-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
@@ -12,16 +11,14 @@ MAINTAINER=	he@NetBSD.org
 COMMENT=	DNSSEC debugging tool a'la dig
 LICENSE=	modified-bsd
 
-BROKEN=		"Fails to build with OpenSSL 1.1"
-
 USE_TOOLS+=	gmake
 
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-ldns=${BUILDLINK_PREFIX.ldns}
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/drill
+BUILD_TARGET=	all drill
+INSTALL_TARGET=	install-drill
 
 BUILDLINK_API_DEPENDS.ldns+=	ldns>=${VERSION}
 
