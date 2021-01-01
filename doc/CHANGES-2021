@@ -21,3 +21,4 @@
 	Updated mail/mutt to 2.0.4 [tron 2021-01-01]
 	Updated audio/pulseaudio to 14.0 [ryoon 2021-01-01]
 	Updated devel/R-usethis to 2.0.0 [mef 2021-01-01]
+	Added devel/R-pkgcache version 1.1.1 [mef 2021-01-01]
