@@ -44,3 +44,4 @@
 	Added security/opendoas version 6.8 [pin 2021-01-01]
 	Added devel/tokei version 12.1.1 [pin 2021-01-01]
 	Added sysutils/navi version 2.13.1 [pin 2021-01-01]
+	Updated mail/qmail-qfilter to 2.1nb6 [schmonz 2021-01-01]
