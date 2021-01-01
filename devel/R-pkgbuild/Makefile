@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/09/22 08:37:54 mef Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/01 05:41:47 mef Exp $
 
 R_PKGNAME=	pkgbuild
-R_PKGVER=	1.1.0
+R_PKGVER=	1.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Find tools needed to build R packages
-LICENSE=	gnu-gpl-v3
+LICENSE=	mit
 
 DEPENDS+=	R-callr>=3.2.0:../../devel/R-callr
 DEPENDS+=	R-cli>=1.1.0:../../devel/R-cli
@@ -17,6 +17,7 @@ DEPENDS+=	R-withr>=2.1.2:../../devel/R-withr
 DEPENDS+=	R-prettyunits>=1.0.2:../../math/R-prettyunits
 
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-cpp11-[0-9]*:../../lang/R-cpp11
 
 # need for make test
 USE_LANGUAGES=	c
