@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2020/12/04 04:55:50 riastradh Exp $
+# $NetBSD: Makefile,v 1.62 2021/01/01 09:52:22 ryoon Exp $
 
 DISTNAME=	kate-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 
 HOMEPAGE=	https://www.kde.org/applications/utilities/kate/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2020/11/05 09:07:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2021/01/01 09:52:17 ryoon Exp $
 #
 
 DISTNAME=	paman-0.9.4
-PKGREVISION=	51
+PKGREVISION=	53
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/paman/
 
