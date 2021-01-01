@@ -41,3 +41,4 @@
 	Added textproc/nanogrep version 1.2.1 [pin 2021-01-01]
 	Added textproc/bk version 0.5.1 [pin 2021-01-01]
 	Added time/heliocron version 0.5.0 [pin 2021-01-01]
+	Added security/opendoas version 6.8 [pin 2021-01-01]
