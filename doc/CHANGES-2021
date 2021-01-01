@@ -29,3 +29,4 @@
 	Added devel/R-pak version 0.1.2.1 [mef 2021-01-01]
 	Updated net/drill to 1.7.1 [he 2021-01-01]
 	Updated emulators/vice to 3.5 [rhialto 2021-01-01]
+	Updated devel/cbindgen to 0.16.0 [ryoon 2021-01-01]
