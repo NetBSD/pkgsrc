@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/10/03 13:38:52 mef Exp $
+$NetBSD: distinfo,v 1.4 2021/01/01 09:55:15 mef Exp $
 
-SHA1 (R/usethis_1.6.3.tar.gz) = 588fc30bec027c4b273cdafbcab05d4c8c006fb5
-RMD160 (R/usethis_1.6.3.tar.gz) = fc311708cea39eb6888b0677161c975d6f1faef0
-SHA512 (R/usethis_1.6.3.tar.gz) = eeba12d6cf60574f052202b593507af546024244cac3535ad600844c195074b8f341fb054d29cc70de09947009d43c6d07169c5251854c6ec75d98cbba43974a
-Size (R/usethis_1.6.3.tar.gz) = 254833 bytes
+SHA1 (R/usethis_2.0.0.tar.gz) = 52b7ca378eb2ec262766cf24ae07981ec4c9578c
+RMD160 (R/usethis_2.0.0.tar.gz) = 7f6ae0a7dbefb76d791c458223f6a60fafb4a73d
+SHA512 (R/usethis_2.0.0.tar.gz) = 13a90a0baee0f55c3b927871938d5c75e660f399916a569617c9d7a8483e7fa0e7bfdf88a3e6a9c8062e58799af293318837d6662c6f6bcc67d8adf81f2b14c9
+Size (R/usethis_2.0.0.tar.gz) = 556740 bytes
