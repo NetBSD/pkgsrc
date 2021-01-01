@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2020/11/05 09:07:20 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2021/01/01 09:52:14 ryoon Exp $
 
 BUILDLINK_TREE+=	qt5-qtmultimedia
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtmultimedia
 QT5_QTMULTIMEDIA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtmultimedia+=	qt5-qtmultimedia>=5.9.1
-BUILDLINK_ABI_DEPENDS.qt5-qtmultimedia+=	qt5-qtmultimedia>=5.15.1nb1
+BUILDLINK_ABI_DEPENDS.qt5-qtmultimedia+=	qt5-qtmultimedia>=5.15.2nb2
 BUILDLINK_PKGSRCDIR.qt5-qtmultimedia?=		../../x11/qt5-qtmultimedia
 
 BUILDLINK_INCDIRS.qt5-qtmultimedia+=	qt5/include
