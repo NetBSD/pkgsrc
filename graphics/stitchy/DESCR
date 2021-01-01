@@ -1,0 +1,8 @@
+Joins multiple existing image files into a single output.
+Supports various flags for arranging the output or scaling down to desirable
+dimensions.
+
+Images of the same size will stitch together neatly:
+
+If the images are more irregular in shape, the tool will attempt to arrange them
+as neatly as possible, and scale some images in the process.
