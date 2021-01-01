@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/01 14:28:56 pin Exp $
+bin/doas
+man/man1/doas.1
+man/man5/doas.conf.5
+${PLIST.pam-conf}@pkgdir share/examples/opendoas
+${PLIST.pam-conf}share/examples/opendoas/doas

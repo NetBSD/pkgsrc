@@ -1,0 +1,25 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2021/01/01 14:28:57 pin Exp $
+
+- Allow build as an unpriviliged user.
+- Install configuration files in EGDIR.
+
+--- GNUmakefile.orig	2020-11-14 15:44:04.000000000 +0000
++++ GNUmakefile
+@@ -16,15 +16,9 @@ ${PROG}: ${OBJS}
+ 	${CC} ${CFLAGS} $^ -o $@ ${LDFLAGS} ${LDLIBS}
+ 
+ install: ${PROG} ${PAM_DOAS} ${MAN}
+-	mkdir -p -m 0755 ${DESTDIR}${BINDIR}
+-	[ -n "${PAM_DOAS}" ] && mkdir -p -m 0755 ${DESTDIR}${PAMDIR} || true
+-	mkdir -p -m 0755 ${DESTDIR}${MANDIR}/man1
+-	mkdir -p -m 0755 ${DESTDIR}${MANDIR}/man5
+ 	cp -f ${PROG} ${DESTDIR}${BINDIR}
+-	chown ${BINOWN}:${BINGRP} ${DESTDIR}${BINDIR}/${PROG}
+-	chmod ${BINMODE} ${DESTDIR}${BINDIR}/${PROG}
+-	[ -n "${PAM_DOAS}" ] && cp ${PAM_DOAS} ${DESTDIR}${PAMDIR}/doas || true
+-	[ -n "${PAM_DOAS}" ] && chmod 0644 ${DESTDIR}${PAMDIR}/doas || true
++	[ -n "${PAM_DOAS}" ] && cp ${PAM_DOAS} ${DESTDIR}${SHAREDIR}/doas || true
++	[ -n "${PAM_DOAS}" ] && chmod 0644 ${DESTDIR}${SHAREDIR}/doas || true
+ 	cp -f doas.1 ${DESTDIR}${MANDIR}/man1
+ 	cp -f doas.conf.5 ${DESTDIR}${MANDIR}/man5
+ 
