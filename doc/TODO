@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20266 2021/01/01 08:20:36 ryoon Exp $
+$NetBSD: TODO,v 1.20267 2021/01/01 08:59:02 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o halfempty-0.40
 	o hamster-applet-2.32.1
 	o hanzim-3.5
-	o harfbuzz-2.7.4
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hdf-4.2.14
