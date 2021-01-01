@@ -1,3 +1,7 @@
+$NetBSD: CHANGES-2021,v 1.39 2021/01/01 16:10:55 nia Exp $
+
+Changes to the packages collection and infrastructure in 2021:
+
 	Updated devel/R-git2r to 0.27.1 [mef 2021-01-01]
 	Updated devel/R-rlang to 0.4.9 [mef 2021-01-01]
 	Updated devel/R-cli to 2.2.0 [mef 2021-01-01]
