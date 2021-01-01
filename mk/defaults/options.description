@@ -879,6 +879,7 @@ via-padlock		Enable support for the VIA PadLock Security Engine.
 vice-cpuhistory		Enable the 65xx cpu history feature.
 vice-ethernet		Enable Ethernet cartridge support.
 vice-fullscreen		Enable full-screen support.
+vice-headless		Choose the headless (no GUI) build.
 vice-hwscaling		Enable hardware-assisted screen scaling.
 vice-x64		Enable building of the old x64 emulator.
 vidix			Enable VIDIX (Video Interface for *niX support).
