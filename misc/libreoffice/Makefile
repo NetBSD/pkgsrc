@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.249 2021/01/01 08:24:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.250 2021/01/01 13:17:44 ryoon Exp $
 
-VERREL=		7.0.3
-VERRC=		1
+VERREL=		7.0.4
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -115,7 +114,7 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-0.111.zip \
 	ReemKufi-0.7.zip \
-	pdfium-4137.tar.bz2 \
+	pdfium-4306.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m85-e684c6daef6bfb774a325a069eda1f76ca6ac26c.tar.xz
 
