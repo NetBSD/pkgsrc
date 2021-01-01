@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.152 2020/08/31 18:09:29 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2021/01/01 12:46:03 rhialto Exp $
 
-DISTNAME=	vice-3.4
-PKGREVISION=	8
+DISTNAME=	vice-3.5
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -18,14 +17,25 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		bash gmake pkg-config perl flex
+USE_TOOLS+=		bash gmake pkg-config perl flex yacc tar
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
+CONFIGURE_ARGS+=	--enable-lame
+CONFIGURE_ARGS+=	--with-flac
+CONFIGURE_ARGS+=	--with-gif
+CONFIGURE_ARGS+=	--with-jpeg
+CONFIGURE_ARGS+=	--with-mpg123
+CONFIGURE_ARGS+=	--with-png
+CONFIGURE_ARGS+=	--with-vorbis
+CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS.NetBSD+=	--with-sun
 CONFIGURE_ARGS.NetBSD+=	--without-oss
 
-# Avoid PLIST mismatch if these programs are installed
-CONFIGURE_ENV+=		ac_cv_prog_TEXI2DVI=no
-CONFIGURE_ENV+=		ac_cv_prog_PDFTEX=no
+# Avoid build changes if these programs are installed
+CONFIGURE_ENV+=		ac_cv_prog_SVN=no
+CONFIGURE_ENV+=		ac_cv_prog_SVNVERSION=no
+CONFIGURE_ARGS+=	--disable-pdf-docs
+CONFIGURE_ARGS+=	--enable-html-docs
 
 INFO_FILES=		yes
 REQD_DIRS+=		${PREFIX}/share/vice
@@ -34,12 +44,13 @@ BUILD_DEPENDS+=		xa65-[0-9]*:../../devel/xa65
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
-SUBST_FILES.prefix=	man/vice.1
-SUBST_FILES.prefix+=	doc/html/index.html
-SUBST_FILES.prefix+=	doc/html/darwin.html
-SUBST_FILES.prefix+=	doc/vice.info-1
-SUBST_FILES.prefix+=	doc/vice.txt
+SUBST_FILES.prefix+=	doc/vice.texi
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
+
+# Mess created by xdg-utils; clean it up.
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/applications/mimeinfo.cache
+	cd ${DESTDIR}${PREFIX} && ${MV} etc/xdg/menus/applications-merged/vice-org-vice-org.menu share/vice/ || :
 
 .include "options.mk"
 .include "../../audio/flac/buildlink3.mk"

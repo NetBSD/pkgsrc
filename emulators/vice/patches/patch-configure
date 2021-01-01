@@ -1,14 +1,11 @@
-$NetBSD: patch-configure,v 1.4 2019/12/31 14:42:22 rhialto Exp $
+$NetBSD: patch-configure,v 1.5 2021/01/01 12:46:03 rhialto Exp $
 
-1. Use the NetBSD configuration for every OS since the PLIST is
-   hardcoded for that.  Should fix every non-NetBSD platform.
-
-2. Ignore the option --enable-option-checking instead of erroring,
+1. Ignore the option --enable-option-checking instead of erroring,
    it's the default anyway.
 
---- configure.orig	2019-12-23 21:29:35.000000000 +0000
+--- configure.orig	2020-12-23 12:58:34.000000000 +0000
 +++ configure
-@@ -3301,6 +3301,8 @@ for argcheck in $@
+@@ -4173,6 +4173,8 @@ for argcheck in $@
  do
    argvalid=yes
    case $argcheck in #(
@@ -17,103 +14,3 @@ $NetBSD: patch-configure,v 1.4 2019/12/31 14:42:22 rhialto Exp $
    --enable-arch=*) :
      argvalid=yes ;; #(
    --enable-make-command*) :
-@@ -10009,9 +10011,6 @@ else
-   HAVE_BSD_FREE_FALSE=
- fi
- 
--    VICE_CPPFLAGS="$VICE_CPPFLAGS -I/usr/local/include"
--    fbsdrtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/local/lib"`
--    VICE_LDFLAGS="$VICE_LDFLAGS $fbsdrtp -L/usr/local/lib"
-     ;;
-   netbsd*)
-      if true; then
-@@ -10022,18 +10021,6 @@ else
-   HAVE_BSD_FALSE=
- fi
- 
--    CPPFLAGS="$CPPFLAGS -I/usr/pkg/include -I/usr/include"
--    nbsdrtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/pkg/lib"`
--    LDFLAGS="$LDFLAGS $nbsdrtp -L/usr/pkg/lib"
--    if test -d "/usr/X11R7/lib"; then
--      rtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/X11R7/lib"`
--      LDFLAGS="$LDFLAGS $rtp"
--    else
--      if test -d "/usr/X11R6/lib"; then
--        rtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/X11R6/lib"`
--        LDFLAGS="$LDFLAGS $rtp"
--      fi
--    fi
-     ;;
-   dragonfly*)
-      if true; then
-@@ -10044,9 +10031,6 @@ else
-   HAVE_BSD_FALSE=
- fi
- 
--    CPPFLAGS="$CPPFLAGS -I/usr/local/include"
--    dfbsdrtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/local/lib"`
--    LDFLAGS="$LDFLAGS $dfbsdrtp -L/usr/local/lib"
-     ;;
-   *)
-     ;;
-@@ -21204,7 +21188,7 @@ _ACEOF
- 
- 
- case "$host_os" in
--  netbsd*)
-+  *)
-     VICEDIR="$PREFIX/share/vice"
-      if true; then
-   ALTERNATE_DOCDIR_TRUE=
-@@ -21215,51 +21199,6 @@ else
- fi
- 
-     ;;
--  freebsd*)
--    VICEDIR="$PREFIX/lib/vice"
--     if true; then
--  ALTERNATE_DOCDIR_TRUE=
--  ALTERNATE_DOCDIR_FALSE='#'
--else
--  ALTERNATE_DOCDIR_TRUE='#'
--  ALTERNATE_DOCDIR_FALSE=
--fi
--
--    ;;
--  linux*)
--    if test x"$host_cpu" = "xx86_64"; then
--      VICEDIR="$PREFIX/lib64/vice"
--       if false; then
--  ALTERNATE_DOCDIR_TRUE=
--  ALTERNATE_DOCDIR_FALSE='#'
--else
--  ALTERNATE_DOCDIR_TRUE='#'
--  ALTERNATE_DOCDIR_FALSE=
--fi
--
--    else
--      VICEDIR="$PREFIX/lib/vice"
--       if false; then
--  ALTERNATE_DOCDIR_TRUE=
--  ALTERNATE_DOCDIR_FALSE='#'
--else
--  ALTERNATE_DOCDIR_TRUE='#'
--  ALTERNATE_DOCDIR_FALSE=
--fi
--
--    fi
--    ;;
--  *)
--    VICEDIR="$PREFIX/lib/vice"
--     if false; then
--  ALTERNATE_DOCDIR_TRUE=
--  ALTERNATE_DOCDIR_FALSE='#'
--else
--  ALTERNATE_DOCDIR_TRUE='#'
--  ALTERNATE_DOCDIR_FALSE=
--fi
--
--    ;;
- esac
- 
- 
