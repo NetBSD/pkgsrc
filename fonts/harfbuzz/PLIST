@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2020/11/06 15:06:49 nia Exp $
+@comment $NetBSD: PLIST,v 1.46 2021/01/01 08:58:00 ryoon Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -42,13 +42,13 @@ lib/cmake/harfbuzz/harfbuzz-config.cmake
 ${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 lib/libharfbuzz-gobject.so
 lib/libharfbuzz-gobject.so.0
-lib/libharfbuzz-gobject.so.0.20702.0
+lib/libharfbuzz-gobject.so.0.20704.0
 lib/libharfbuzz-subset.so
 lib/libharfbuzz-subset.so.0
-lib/libharfbuzz-subset.so.0.20702.0
+lib/libharfbuzz-subset.so.0.20704.0
 lib/libharfbuzz.so
 lib/libharfbuzz.so.0
-lib/libharfbuzz.so.0.20702.0
+lib/libharfbuzz.so.0.20704.0
 lib/pkgconfig/harfbuzz-gobject.pc
 lib/pkgconfig/harfbuzz-subset.pc
 lib/pkgconfig/harfbuzz.pc
@@ -84,9 +84,11 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-buffer.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-common.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-coretext.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-deprecated.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-directwrite.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-face.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-font.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ft.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-gdi.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-glib.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-gobject.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-graphite2.html
@@ -96,6 +98,8 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-color.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-font.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-layout.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-math.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-meta.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-metrics.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-name.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-shape.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ot-var.html
