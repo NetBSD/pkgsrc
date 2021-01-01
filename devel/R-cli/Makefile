@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/09/23 05:23:06 mef Exp $
+# $NetBSD: Makefile,v 1.9 2021/01/01 04:15:16 mef Exp $
 
 R_PKGNAME=	cli
-R_PKGVER=	2.0.2
+R_PKGVER=	2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -18,6 +18,7 @@ TEST_DEPENDS+=	R-prettycode-[0-9]*:../../devel/R-prettycode
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 
 USE_LANGUAGES=	# none
 
