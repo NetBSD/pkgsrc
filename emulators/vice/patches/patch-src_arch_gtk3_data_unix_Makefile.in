@@ -1,0 +1,22 @@
+$NetBSD: patch-src_arch_gtk3_data_unix_Makefile.in,v 1.1 2021/01/01 12:46:03 rhialto Exp $
+
+Install .desktop files in the system location instead of
+the (fake) home directory.
+
+--- src/arch/gtk3/data/unix/Makefile.in.orig	2020-12-25 17:59:47.574456497 +0000
++++ src/arch/gtk3/data/unix/Makefile.in
+@@ -737,12 +737,12 @@ uninstall-am:
+ @INSTALL_DESKTOP_FILES_TRUE@@UNIX_COMPILE_TRUE@@UNIX_MACOSX_COMPILE_FALSE@		"SID_1024.svg"
+ 
+ @INSTALL_DESKTOP_FILES_TRUE@@UNIX_COMPILE_TRUE@@UNIX_MACOSX_COMPILE_FALSE@install-data-hook: $(VICE_DIR_FILE) $(VICE_DESKTOP_FILES)
+-@INSTALL_DESKTOP_FILES_TRUE@@UNIX_COMPILE_TRUE@@UNIX_MACOSX_COMPILE_FALSE@	$(XDG_DESKTOP_MENU) install "$(VICE_DIR_FILE)" $(VICE_DESKTOP_FILES)
++@INSTALL_DESKTOP_FILES_TRUE@@UNIX_COMPILE_TRUE@@UNIX_MACOSX_COMPILE_FALSE@	$(XDG_DESKTOP_MENU) install --mode system "$(VICE_DIR_FILE)" $(VICE_DESKTOP_FILES)
+ 
+ # Seems GNU disapproves of this, but it works to uninstall the .desktop/.directory
+ # files.
+ @INSTALL_DESKTOP_FILES_TRUE@@UNIX_COMPILE_TRUE@@UNIX_MACOSX_COMPILE_FALSE@uninstall-hook:
+-@INSTALL_DESKTOP_FILES_TRUE@@UNIX_COMPILE_TRUE@@UNIX_MACOSX_COMPILE_FALSE@	$(XDG_DESKTOP_MENU) uninstall "$(VICE_DIR_FILE)" $(VICE_DESKTOP_FILES)
++@INSTALL_DESKTOP_FILES_TRUE@@UNIX_COMPILE_TRUE@@UNIX_MACOSX_COMPILE_FALSE@	$(XDG_DESKTOP_MENU) uninstall --mode system "$(VICE_DIR_FILE)" $(VICE_DESKTOP_FILES)
+ 
+ # if INSTALL_DESKTOP_FILES
+ # if !UNIX_MACOSX_COMPILE
