@@ -19,3 +19,4 @@
 	Updated fonts/harfbuzz-icu to 2.7.4 [ryoon 2021-01-01]
 	Updated textproc/icu to 68.2 [ryoon 2021-01-01]
 	Updated mail/mutt to 2.0.4 [tron 2021-01-01]
+	Updated audio/pulseaudio to 14.0 [ryoon 2021-01-01]
