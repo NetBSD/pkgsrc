@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.48 2021/01/02 00:06:38 uwe Exp $
+$NetBSD: CHANGES-2021,v 1.49 2021/01/02 02:45:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -62,3 +62,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libdatrie to 0.2.12nb2 [scole 2021-01-01]
 	Updated fonts/jomolhari-ttf to 0.3 [uwe 2021-01-01]
 	Updated fonts/babelstone-tibetan-ttf to 10.5 [uwe 2021-01-02]
+	Updated devel/p5-Date-Manip to 6.83 [wen 2021-01-02]
