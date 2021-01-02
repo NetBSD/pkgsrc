@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.56 2021/01/02 11:22:57 mef Exp $
+$NetBSD: CHANGES-2021,v 1.57 2021/01/02 11:26:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -71,3 +71,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py38-html-docs to 3.8.7 [adam 2021-01-02]
 	Updated geography/py-obspy to 1.2.2 [mef 2021-01-02]
 	Updated math/R-Rcmdr to 2.7.1 [mef 2021-01-02]
+	Added devel/R-filelock version 1.0.2 [mef 2021-01-02]
