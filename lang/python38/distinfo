@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2020/11/19 16:29:42 bsiegert Exp $
+$NetBSD: distinfo,v 1.16 2021/01/02 09:51:48 adam Exp $
 
-SHA1 (Python-3.8.6.tar.xz) = 6ee446eaacf901a3305565bd6569e2de135168e3
-RMD160 (Python-3.8.6.tar.xz) = 89c134d2d1bc02975cf959cc4a7ee63dba5c5388
-SHA512 (Python-3.8.6.tar.xz) = 22faec84f6e172e1ac7c6bd6fd37e9b6ae4afc91cf5136aa8cac8ebbed8d18793f9196e8749b8ccc43447cb6c41cb450f65ea72dd363c06dfaeb14e0455f5560
-Size (Python-3.8.6.tar.xz) = 18233864 bytes
+SHA1 (Python-3.8.7.tar.xz) = 1b1525811ea4bcf237622e5f1751a4dfc429e3a3
+RMD160 (Python-3.8.7.tar.xz) = 13b0ff22ed547e6979e846775c222278f856899f
+SHA512 (Python-3.8.7.tar.xz) = 6a27d8eab3076930df46b0cf127f9b664f8d4147349b2b98132f464deb7f69d87e0167e8ee8e6c64249125ad73760d965ecbc81c252b63a1e7aac95594c62b74
+Size (Python-3.8.7.tar.xz) = 18261096 bytes
 SHA1 (patch-Lib___osx__support.py) = 95c729132e5bdbda72789f02b37ed111d0d9d11e
 SHA1 (patch-Lib_ctypes_macholib_dyld.py) = 3acfa836e06bb1ca994357bc4b687af1ce1641e0
 SHA1 (patch-Lib_ctypes_test_test__macholib.py) = db352894c47cbb4bed4905b4a7dde272577c65d8
@@ -35,7 +35,6 @@ SHA1 (patch-Modules_timemodule.c) = 10dc2769432bbfd4360f90fedfa6504d8b6f6347
 SHA1 (patch-Python_bootstrap__hash.c) = 2e7d24ded1369624b2983b15784988517a9697a5
 SHA1 (patch-Python_pytime.c) = 41981f821e0b420abcb0334312148deb9a9fed5e
 SHA1 (patch-Python_thread__pthread.h) = fb81eaa604b4ed7c1b64c3f4731d58a8aee257be
-SHA1 (patch-configure) = c63ae7364c69fed98d366fd2b6a727a71b10defc
-SHA1 (patch-configure.ac) = 2b341061350671d820d696a659176a35a93d800d
+SHA1 (patch-configure) = 35f0a5f94837ce84eee30756f349ea39c6b5ef8b
 SHA1 (patch-pyconfig.h.in) = 6e24f401286768641c7d69dd75cfe18f1d8df1e7
 SHA1 (patch-setup.py) = f5cd4ec25c8a5725a39970a097ddfb7068370db8
