@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/09/28 19:31:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/01/02 09:51:48 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1403,7 +1403,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-20.2.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-20.2.3-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-49.2.1-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
@@ -3236,6 +3236,9 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/echo3.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.pyo
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.py
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.pyc
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.pyo
@@ -3251,6 +3254,9 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_events.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures.pyo
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures2.py
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures2.pyc
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_futures2.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_locks.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_locks.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_locks.pyo
@@ -5200,6 +5206,9 @@ lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_loadtk.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_misc.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_misc.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_misc.pyo
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_simpledialog.py
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_simpledialog.pyc
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_simpledialog.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_text.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_text.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_text.pyo
