@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.132 2020/12/04 20:45:37 nia Exp $
+# $NetBSD: Makefile,v 1.133 2021/01/02 14:18:22 spz Exp $
 
-DISTNAME=		inn-2.6.1
-PKGREVISION=		6
+DISTNAME=		inn-2.6.3
+#PKGREVISION=		0
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -75,34 +75,42 @@ PKG_HOME.${INN_USER}=	${INN_DATA_DIR}
 PKG_SHELL.${INN_USER}=	${SH}
 
 EXAMPLEDIR=		${PREFIX}/share/examples/inn
-INN_DATADIRS=		log log/OLD run tmp db spool http
+INN_DATADIRS=		log log/OLD tmp db spool http
 INN_SPOOLDIRS=		archive articles overview incoming incoming/bad	\
 			outgoing uniover innfeed
+
+INSTALL_ENV+=		CHOWNPROG="echo chmod"
+INSTALL_ENV+=		CHGRPPROG="echo chgrp"
 
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${EXAMPLEDIR}
 INSTALLATION_DIRS+=	${EXAMPLEDIR}/filter
 
-MAKE_DIRS+=		${PREFIX}/bin
-MAKE_DIRS+=		${PREFIX}/sbin
-MAKE_DIRS+=		${PREFIX}/lib
-
 INN_DIRS+=		${PKG_SYSCONFDIR}
 INN_DIRS+=		${INN_DATA_DIR}
 
-OWN_DIRS+=		${PREFIX}/${INN_PATHBIN}
-OWN_DIRS+=		${PREFIX}/${INN_PATHBIN}/filter
-OWN_DIRS+=		${EXAMPLEDIR}
+MAKE_DIRS+=	${PREFIX}/${INN_PATHBIN}
+MAKE_DIRS+=	${PREFIX}/${INN_PATHBIN}/auth
+MAKE_DIRS+=	${PREFIX}/${INN_PATHBIN}/auth/resolv
+MAKE_DIRS+=	${PREFIX}/${INN_PATHBIN}/auth/passwd
+MAKE_DIRS+=	${PREFIX}/${INN_PATHBIN}/control
+MAKE_DIRS+=	${PREFIX}/${INN_PATHBIN}/filter
+MAKE_DIRS+=	${PREFIX}/${INN_PATHBIN}/rnews.libexec
+MAKE_DIRS+=	${EXAMPLEDIR}
 
 .for dir in ${INN_DIRS}
 OWN_DIRS_PERMS+=	${dir}	${INN_USER} ${INN_GROUP} 0775
 .endfor
+
 .for dir in ${INN_DATADIRS}
-MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/${dir}	${INN_USER} ${INN_GROUP} 0775
+OWN_DIRS_PERMS+=	${INN_DATA_DIR}/${dir}	${INN_USER} ${INN_GROUP} 0775
 .endfor
+
+OWN_DIRS_PERMS+=	${INN_DATA_DIR}/run	${INN_USER} ${INN_GROUP} 0770
+
 .for dir in ${INN_SPOOLDIRS}
-MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/spool/${dir} \
+OWN_DIRS_PERMS+=	${INN_DATA_DIR}/spool/${dir} \
 						${INN_USER} ${INN_GROUP} 0775
 .endfor
 
@@ -148,9 +156,22 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/filter/${file} ${INN_PATHBIN}/filter/${file} \
 			${INN_USER} ${INN_GROUP} 0664
 .endfor
 
-RCD_SCRIPTS=		innd
+SPECIAL_PERMS+=		${PREFIX}/${INN_PATHBIN}/innbind ${REAL_ROOT_USER} ${INN_GROUP} 4555
+SPECIAL_PERMS+=		${PREFIX}/${INN_PATHBIN}/inews ${INN_USER} ${INN_GROUP} 2555
+SPECIAL_PERMS+=		${PREFIX}/${INN_PATHBIN}/rnews ${INN_USER} ${UUCP_GROUP} 2555
 
-PKG_DESTDIR_SUPPORT=	destdir
+NEWSONLYBINS+=		buffindexed_d cnfsheadconf ctlinnd expire expireover
+NEWSONLYBINS+=		expirerm imapfeed inncheck innd innfeed innstat
+NEWSONLYBINS+=		innupgrade innwatch makedbz makehistory mod-active
+NEWSONLYBINS+=		news.daily ovdb_init ovdb_monitor ovdb_server ovdb_stat
+NEWSONLYBINS+=		overchan procbatch prunehistory rc.news scanlogs
+NEWSONLYBINS+=		tally.control tdx-util writelog 
+.for file in ${NEWSONLYBINS}
+SPECIAL_PERMS+=		${PREFIX}/${INN_PATHBIN}/${file} ${INN_USER} ${INN_GROUP} 0550
+.endfor
+
+
+RCD_SCRIPTS=		innd
 
 .include "../../mk/bsd.prefs.mk"
 

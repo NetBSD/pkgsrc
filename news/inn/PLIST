@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2017/05/20 06:53:05 spz Exp $
+@comment $NetBSD: PLIST,v 1.27 2021/01/02 14:18:22 spz Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
@@ -233,6 +233,7 @@ man/man8/innwatch.8
 man/man8/innxbatch.8
 man/man8/innxmit.8
 man/man8/inpaths.8
+${PLIST.kerberos}man/man8/auth_krb5.8
 man/man8/mailpost.8
 man/man8/makedbz.8
 man/man8/makehistory.8
