@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.59 2021/01/02 13:26:34 nia Exp $
+$NetBSD: CHANGES-2021,v 1.60 2021/01/02 14:14:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/R-filelock version 1.0.2 [mef 2021-01-02]
 	Updated lang/rust-bin to 1.48.0 [nia 2021-01-02]
 	Updated lang/camlp5 to 7.13 [nia 2021-01-02]
+	Updated audio/spotify-qt to 3.3 [pin 2021-01-02]
