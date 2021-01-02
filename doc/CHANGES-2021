@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.50 2021/01/02 02:49:14 wen Exp $
+$NetBSD: CHANGES-2021,v 1.51 2021/01/02 02:59:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -64,3 +64,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/babelstone-tibetan-ttf to 10.5 [uwe 2021-01-02]
 	Updated devel/p5-Date-Manip to 6.83 [wen 2021-01-02]
 	Updated devel/p5-Devel-PatchPerl to 2.06 [wen 2021-01-02]
+	Updated devel/p5-File-Listing to 6.14 [wen 2021-01-02]
