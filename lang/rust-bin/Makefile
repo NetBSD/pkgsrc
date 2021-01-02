@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2020/10/22 18:15:41 nia Exp $
+# $NetBSD: Makefile,v 1.16 2021/01/02 12:43:20 nia Exp $
 
-DISTNAME=	rust-1.47.0
+DISTNAME=	rust-1.48.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
@@ -83,7 +84,7 @@ do-install:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-.  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
+.  for bin in clippy-driver rls rustc rustdoc
 	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
@@ -128,7 +129,7 @@ FORCE_RPATH=		--force-rpath
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
-.  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
+.  for bin in clippy-driver rls rustc rustdoc
 	${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
 		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
 .  endfor
