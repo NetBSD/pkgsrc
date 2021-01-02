@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20275 2021/01/02 14:52:21 ryoon Exp $
+$NetBSD: TODO,v 1.20276 2021/01/02 15:14:05 nia Exp $
 
 Suggested new packages
 ======================
@@ -822,7 +822,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
 	o mono-nat-1.1.0
-	o mono-xsp-4.2
 	o mono6-6.12.0.107
 	o mopher-0.6.0
 	o moserial-2.30.0
