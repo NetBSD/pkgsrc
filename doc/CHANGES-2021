@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.65 2021/01/02 15:25:16 nia Exp $
+$NetBSD: CHANGES-2021,v 1.66 2021/01/02 15:54:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -80,3 +80,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ap-mono to 3.13 [nia 2021-01-02]
 	Updated www/mono-xsp to 4.7.1 [nia 2021-01-02]
 	Updated wm/herbstluftwm to 0.9.1 [nia 2021-01-02]
+	Updated devel/SDL2 to 2.0.14 [nia 2021-01-02]
