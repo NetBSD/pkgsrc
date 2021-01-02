@@ -1,8 +1,8 @@
-$NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Exp $
+$NetBSD: patch-main_stdtime_localtime.c,v 1.2 2021/01/02 22:45:43 jnemeth Exp $
 
---- main/stdtime/localtime.c.orig	2015-10-09 21:48:48.000000000 +0000
+--- main/stdtime/localtime.c.orig	2018-05-01 20:12:26.000000000 +0000
 +++ main/stdtime/localtime.c
-@@ -67,6 +67,10 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
+@@ -65,6 +65,10 @@
  #include <sys/stat.h>
  #include <fcntl.h>
  #endif
@@ -13,7 +13,24 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Ex
  
  #include "private.h"
  #include "tzfile.h"
-@@ -733,7 +737,7 @@ static void *notify_daemon(void *data)
+@@ -74,6 +78,7 @@
+ #include "asterisk/localtime.h"
+ #include "asterisk/strings.h"
+ #include "asterisk/linkedlists.h"
++#include "asterisk/autoconfig.h"
+ #include "asterisk/utils.h"
+ #include "asterisk/test.h"
+ 
+@@ -310,7 +315,7 @@ static struct state *	sstate_alloc(void)
+ static void		sstate_free(struct state *p);
+ 
+ static AST_LIST_HEAD_STATIC(zonelist, state);
+-#if defined(HAVE_NEWLOCALE) && defined(HAVE_USELOCALE)
++#if defined(HAVE_NEWLOCALE) && (defined(HAVE_USELOCALE) || HAVE_STRFTIME_L || HAVE_STRPTIME_L)
+ static AST_LIST_HEAD_STATIC(localelist, locale_entry);
+ #endif
+ 
+@@ -731,7 +736,7 @@ static void *notify_daemon(void *data)
  			if (st.st_mtime > cur->mtime[0] || lst.st_mtime > cur->mtime[1]) {
  #ifdef TEST_FRAMEWORK
  				if (test) {
@@ -22,7 +39,25 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Ex
  				} else
  #endif
  				{
-@@ -2417,6 +2421,23 @@ static struct locale_entry *find_by_name
+@@ -2362,7 +2367,8 @@ struct timeval ast_mktime(struct ast_tm 
+ 	return time1(tmp, localsub, 0L, sp);
+ }
+ 
+-#if defined(HAVE_NEWLOCALE) && defined(HAVE_USELOCALE)
++#if defined(HAVE_NEWLOCALE) && (defined(HAVE_USELOCALE) || HAVE_STRFTIME_L || HAVE_STRPTIME_L)
++#if defined HAVE_USELOCALE
+ static struct locale_entry *find_by_locale(locale_t locale)
+ {
+ 	struct locale_entry *cur;
+@@ -2373,6 +2379,7 @@ static struct locale_entry *find_by_loca
+ 	}
+ 	return NULL;
+ }
++#endif
+ 
+ static struct locale_entry *find_by_name(const char *name)
+ {
+@@ -2385,6 +2392,23 @@ static struct locale_entry *find_by_name
  	return NULL;
  }
  
@@ -46,7 +81,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Ex
  static const char *store_by_locale(locale_t prevlocale)
  {
  	struct locale_entry *cur;
-@@ -2474,6 +2495,7 @@ const char *ast_setlocale(const char *lo
+@@ -2442,6 +2466,7 @@ const char *ast_setlocale(const char *lo
  	AST_LIST_UNLOCK(&localelist);
  	return store_by_locale(prevlocale);
  }
@@ -54,7 +89,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Ex
  #else
  const char *ast_setlocale(const char *unused)
  {
-@@ -2487,7 +2509,9 @@ int ast_strftime_locale(char *buf, size_
+@@ -2455,7 +2480,9 @@ int ast_strftime_locale(char *buf, size_
  	char *format = ast_calloc(1, fmtlen), *fptr = format, *newfmt;
  	int decimals = -1, i, res;
  	long fraction;
@@ -64,7 +99,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Ex
  
  	buf[0] = '\0';/* Ensure the buffer is initialized. */
  	if (!format) {
-@@ -2542,6 +2566,14 @@ defcase:	*fptr++ = *tmp;
+@@ -2510,6 +2537,14 @@ defcase:	*fptr++ = *tmp;
  	}
  	*fptr = '\0';
  #undef strftime
@@ -79,7 +114,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Ex
  	if (locale) {
  		prevlocale = ast_setlocale(locale);
  	}
-@@ -2549,6 +2581,7 @@ defcase:	*fptr++ = *tmp;
+@@ -2517,6 +2552,7 @@ defcase:	*fptr++ = *tmp;
  	if (locale) {
  		ast_setlocale(prevlocale);
  	}
@@ -87,7 +122,7 @@ $NetBSD: patch-main_stdtime_localtime.c,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Ex
  	ast_free(format);
  	return res;
  }
-@@ -2562,11 +2595,22 @@ char *ast_strptime_locale(const char *s,
+@@ -2530,11 +2566,22 @@ char *ast_strptime_locale(const char *s,
  {
  	struct tm tm2 = { 0, };
  	char *res;
