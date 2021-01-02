@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/11/05 09:09:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2021/01/02 15:00:23 nia Exp $
 
-DISTNAME=	mod_mono-3.12
+DISTNAME=	mod_mono-3.13
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
-PKGREVISION=	13
 CATEGORIES=	www
 MASTER_SITES=	https://download.mono-project.com/sources/mod_mono/
 
@@ -22,6 +21,5 @@ USE_LIBTOOL=		yes
 MAKE_JOBS_SAFE=		no
 
 .include "../../lang/mono/buildlink3.mk"
-.include "../../www/mono-xsp/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
