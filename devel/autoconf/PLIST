@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/04/26 20:40:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/01/02 20:38:56 js Exp $
 bin/autoconf
 bin/autoheader
 bin/autom4te
@@ -14,12 +14,11 @@ man/man1/autom4te.1
 man/man1/autoreconf.1
 man/man1/autoscan.1
 man/man1/autoupdate.1
-man/man1/config.guess.1
-man/man1/config.sub.1
 man/man1/ifnames.1
 share/autoconf/Autom4te/C4che.pm
 share/autoconf/Autom4te/ChannelDefs.pm
 share/autoconf/Autom4te/Channels.pm
+share/autoconf/Autom4te/Config.pm
 share/autoconf/Autom4te/Configure_ac.pm
 share/autoconf/Autom4te/FileUtils.pm
 share/autoconf/Autom4te/General.pm
@@ -46,6 +45,7 @@ share/autoconf/autoconf/oldnames.m4
 share/autoconf/autoconf/programs.m4
 share/autoconf/autoconf/specific.m4
 share/autoconf/autoconf/status.m4
+share/autoconf/autoconf/trailer.m4
 share/autoconf/autoconf/types.m4
 share/autoconf/autom4te.cfg
 share/autoconf/autoscan/autoscan.list
@@ -53,6 +53,9 @@ share/autoconf/autotest/autotest.m4
 share/autoconf/autotest/autotest.m4f
 share/autoconf/autotest/general.m4
 share/autoconf/autotest/specific.m4
+share/autoconf/build-aux/config.guess
+share/autoconf/build-aux/config.sub
+share/autoconf/build-aux/install-sh
 share/autoconf/m4sugar/foreach.m4
 share/autoconf/m4sugar/m4sh.m4
 share/autoconf/m4sugar/m4sh.m4f
