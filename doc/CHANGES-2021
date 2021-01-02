@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.58 2021/01/02 12:43:31 nia Exp $
+$NetBSD: CHANGES-2021,v 1.59 2021/01/02 13:26:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -73,3 +73,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-Rcmdr to 2.7.1 [mef 2021-01-02]
 	Added devel/R-filelock version 1.0.2 [mef 2021-01-02]
 	Updated lang/rust-bin to 1.48.0 [nia 2021-01-02]
+	Updated lang/camlp5 to 7.13 [nia 2021-01-02]
