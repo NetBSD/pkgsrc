@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.54 2021/01/02 09:52:34 adam Exp $
+$NetBSD: CHANGES-2021,v 1.55 2021/01/02 10:06:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -69,3 +69,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-File-MimeInfo to 0.30 [wen 2021-01-02]
 	Updated lang/python38 to 3.8.7 [adam 2021-01-02]
 	Updated lang/py38-html-docs to 3.8.7 [adam 2021-01-02]
+	Updated geography/py-obspy to 1.2.2 [mef 2021-01-02]
