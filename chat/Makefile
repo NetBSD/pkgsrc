@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2020/11/21 10:04:30 nia Exp $
+# $NetBSD: Makefile,v 1.261 2021/01/02 20:30:23 js Exp $
 #
 
 COMMENT=	Communication programs
@@ -24,6 +24,7 @@ SUBDIR+=	dino
 SUBDIR+=	eggdrop
 SUBDIR+=	ejabberd
 SUBDIR+=	ekg
+SUBDIR+=	element-web
 SUBDIR+=	emacs-jabber
 SUBDIR+=	emech
 SUBDIR+=	epic4
