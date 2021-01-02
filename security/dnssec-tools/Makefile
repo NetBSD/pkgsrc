@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.34 2020/08/31 18:11:07 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2021/01/02 21:39:05 nia Exp $
 
-DISTNAME=	dnssec-tools-2.1
-PKGREVISION=	7
+DISTNAME=	dnssec-tools-2.2.3
 CATEGORIES=	security
-MASTER_SITES=	https://www.dnssec-tools.org/download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=DNSSEC-Tools/}
+GITHUB_PROJECT=	DNSSEC-Tools
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://www.dnssec-tools.org/
 COMMENT=	Toolkit to ease the deployment of DNSSEC related technologies
 LICENSE=	modified-bsd
 
-BROKEN=		"Fails to build with OpenSSL 1.1"
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}/dnssec-tools
 
 DEPENDS+=	p5-Net-DNS-SEC-[0-9]*:../../security/p5-Net-DNS-SEC
 DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 
 CONFLICTS=	gethost-[0-9]*
 
