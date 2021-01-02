@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.65 2020/11/05 09:07:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2021/01/02 22:45:43 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
-DISTNAME=	asterisk-13.19.0
-PKGREVISION=	28
+DISTNAME=	asterisk-13.38.1
+#PKGREVISION=	28
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -29,7 +29,7 @@ CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=			bison gmake perl:run pkg-config tar bash:run
+USE_TOOLS+=			bison gmake perl:run pkg-config tar bash:run pax
 USE_LANGUAGES=			c c++
 REPLACE_BASH+=			contrib/scripts/ast_coredumper
 REPLACE_BASH+=			contrib/scripts/ast_logescalator
@@ -135,7 +135,7 @@ PLIST.mgcp=	yes
 .include "options.mk"
 
 # check sounds/Makefile for current version when upgrading package
-DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.1.tar.gz
+DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.2.tar.gz
 
 # Override default paths in config files
 SUBST_CLASSES+=		configs
@@ -244,9 +244,9 @@ post-patch:
 
 post-install:
 # check sounds directory for current versions when upgrading package
-	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.6.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.6.1.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
-	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.1.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
@@ -255,13 +255,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE-1.2.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE-1.4.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE-1.6.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE-1.8.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE-10.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE-11.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE-12.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/Zaptel-to-DAHDI.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/Asterisk-13-Reference.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
@@ -269,8 +262,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/README.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/doc/api-1.6.2-changes.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	cp -r ${WRKSRC}/doc/Asterisk-Admin-Guide ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/Asterisk-Admin-Guide
+	cd ${WRKSRC}/doc/Asterisk-Admin-Guide && ${PAX} -wr * ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/Asterisk-Admin-Guide
 
 .if ${OPSYS} != "Darwin" && ${PKGSRC_COMPILER} == "clang"
 .include "../../lang/libBlocksRuntime/buildlink3.mk"

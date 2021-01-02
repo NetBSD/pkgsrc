@@ -1,8 +1,8 @@
-$NetBSD: patch-main_sched.c,v 1.2 2016/02/07 09:13:34 jnemeth Exp $
+$NetBSD: patch-main_sched.c,v 1.3 2021/01/02 22:45:43 jnemeth Exp $
 
---- main/sched.c.orig	2016-02-05 20:32:40.000000000 +0000
+--- main/sched.c.orig	2018-07-12 16:19:01.000000000 +0000
 +++ main/sched.c
-@@ -468,7 +468,7 @@ static int sched_settime(struct timeval 
+@@ -500,7 +500,7 @@ static int sched_settime(struct timeval 
  		ast_assert(0);
  	}
  
@@ -11,12 +11,12 @@ $NetBSD: patch-main_sched.c,v 1.2 2016/02/07 09:13:34 jnemeth Exp $
  	if (ast_tvzero(*t))	/* not supplied, default to now */
  		*t = now;
  	*t = ast_tvadd(*t, ast_samp2tv(when, 1000));
-@@ -696,11 +696,11 @@ void ast_sched_dump(struct ast_sched_con
+@@ -734,11 +734,11 @@ void ast_sched_dump(struct ast_sched_con
  		struct timeval delta;
  		q = ast_heap_peek(con->sched_heap, x);
  		delta = ast_tvsub(q->when, when);
--		ast_debug(1, "|%.4d | %-15p | %-15p | %.6ld : %.6ld |\n",
-+		ast_debug(1, "|%.4d | %-15p | %-15p | %.6jd : %.6ld |\n",
+-		ast_log(LOG_DEBUG, "|%.4d | %-15p | %-15p | %.6ld : %.6ld |\n",
++		ast_log(LOG_DEBUG, "|%.4d | %-15p | %-15p | %.6jd : %.6ld |\n",
  			q->sched_id->id,
  			q->callback,
  			q->data,
