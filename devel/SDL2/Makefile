@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2021/01/01 09:52:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2021/01/02 15:54:03 nia Exp $
 
-DISTNAME=	SDL2-2.0.12
-PKGREVISION=	6
+DISTNAME=	SDL2-2.0.14
 CATEGORIES=	devel
 MASTER_SITES=	https://www.libsdl.org/release/
 
@@ -15,14 +14,17 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ENV+=	SDL_RLD_FLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib \
-		${COMPILER_RPATH_FLAG}${X11BASE}/lib"
+# Let pkgsrc handle the rpath.
+CONFIGURE_ARGS+=	--disable-rpath
 
+# Explicitly link against libraries.
 CONFIGURE_ARGS+=	--disable-alsa-shared
 CONFIGURE_ARGS+=	--disable-jack-shared
 CONFIGURE_ARGS+=	--disable-libsamplerate-shared
 CONFIGURE_ARGS+=	--disable-wayland-shared
 CONFIGURE_ARGS+=	--disable-x11-shared
+
+# Deprecated, removed from pkgsrc.
 CONFIGURE_ARGS+=	--disable-esd
 
 # SDL has native audio(4) support, avoid building ossaudio(4) support.

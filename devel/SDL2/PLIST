@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/03/17 12:49:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/01/02 15:54:03 nia Exp $
 bin/sdl2-config
 include/SDL2/SDL.h
 include/SDL2/SDL_assert.h
@@ -22,10 +22,12 @@ include/SDL2/SDL_joystick.h
 include/SDL2/SDL_keyboard.h
 include/SDL2/SDL_keycode.h
 include/SDL2/SDL_loadso.h
+include/SDL2/SDL_locale.h
 include/SDL2/SDL_log.h
 include/SDL2/SDL_main.h
 include/SDL2/SDL_messagebox.h
 include/SDL2/SDL_metal.h
+include/SDL2/SDL_misc.h
 include/SDL2/SDL_mouse.h
 include/SDL2/SDL_mutex.h
 include/SDL2/SDL_name.h

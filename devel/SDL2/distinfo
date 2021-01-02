@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.43 2020/05/22 23:18:09 adam Exp $
+$NetBSD: distinfo,v 1.44 2021/01/02 15:54:03 nia Exp $
 
-SHA1 (SDL2-2.0.12.tar.gz) = e8ba91bf5eb438dbcf1fedf0530a1bcbe30d3bb6
-RMD160 (SDL2-2.0.12.tar.gz) = 0f2c979da6151b622a6445e7fc8d4e3ea8987105
-SHA512 (SDL2-2.0.12.tar.gz) = 3f1f04af0f3d9dda9c84a2e9274ae8d83ea0da3fc367970a820036cc4dc1dbf990cfc37e4975ae05f0b45a4ffa739c6c19e470c00bf3f2bce9b8b63717b8b317
-Size (SDL2-2.0.12.tar.gz) = 5720162 bytes
-SHA1 (patch-configure) = 3038dc62450f6b64197ee4aa42d8ec9518a608bd
-SHA1 (patch-sdl2-config.cmake.in) = c0f07237a70614d85708e8ca368797894b45ce36
-SHA1 (patch-src_audio_netbsd_SDL__netbsdaudio.c) = 4daf296544ff1df802f835be0370f80d62fac716
-SHA1 (patch-src_video_wayland_SDL__waylandevents.c) = 57e42371e072048e5b377aeb58bb1ffce72784f0
-SHA1 (patch-src_video_wayland_SDL__waylandevents__c.h) = 3a723a81f05052bd50e8cb1592ba747b5f59ea1a
-SHA1 (patch-src_video_wayland_SDL__waylandvideo.c) = 823e434710f8b946b13ea7a6751cf1c30ec48600
-SHA1 (patch-src_video_x11_SDL__x11opengl.c) = b3256a29a24ca286916464d210196dde6d6e922c
+SHA1 (SDL2-2.0.14.tar.gz) = 212b17d988c417a1a905ab09c50d1845cc48ddb7
+RMD160 (SDL2-2.0.14.tar.gz) = 24ddf4bab53fae92fb0c96c7d3e6ceecca91c5df
+SHA512 (SDL2-2.0.14.tar.gz) = ebc482585bd565bf3003fbcedd91058b2183e333b9ea566d2f386da0298ff970645d9d25c1aa4459c7c96e9ea839fd1c5f2da0242a56892865b2e456cdd027ee
+Size (SDL2-2.0.14.tar.gz) = 6089974 bytes
