@@ -1,4 +1,4 @@
-# $NetBSD: find-headers.mk,v 1.3 2018/08/22 20:48:36 maya Exp $
+# $NetBSD: find-headers.mk,v 1.4 2021/01/02 12:08:03 mef Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,7 +62,7 @@
 # BUILTIN_FIND_HEADERS.FOO=	header1.h header2.h
 # BUILTIN_FIND_GREP.FOO=	\#define.*FOO
 #
-# BUILTIN_FIND_HEADERS.BAR=	header3.h heaer/4.h
+# BUILTIN_FIND_HEADERS.BAR=	header3.h header4.h
 # .include "../../mk/buildlink3/builtin-files.mk"
 #
 
