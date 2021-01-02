@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/01/02 15:00:23 nia Exp $
+# $NetBSD: Makefile,v 1.48 2021/01/02 15:08:00 nia Exp $
 
 DISTNAME=	mod_mono-3.13
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -8,6 +8,7 @@ MASTER_SITES=	https://download.mono-project.com/sources/mod_mono/
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	https://www.mono-project.com/Mod_mono
 COMMENT=	Apache module that provides ASP.NET support
+LICENSE=	apache-2.0
 
 APACHE_MODULE=		yes
 
