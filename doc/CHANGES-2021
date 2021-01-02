@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.60 2021/01/02 14:14:18 pin Exp $
+$NetBSD: CHANGES-2021,v 1.61 2021/01/02 14:21:22 spz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -75,3 +75,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/rust-bin to 1.48.0 [nia 2021-01-02]
 	Updated lang/camlp5 to 7.13 [nia 2021-01-02]
 	Updated audio/spotify-qt to 3.3 [pin 2021-01-02]
+	Updated news/inn to 2.6.3 [spz 2021-01-02]
