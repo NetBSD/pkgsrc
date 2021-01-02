@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/01/23 08:26:08 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/01/02 22:45:43 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -111,6 +111,7 @@ include/asterisk/module.h
 include/asterisk/monitor.h
 include/asterisk/multicast_rtp.h
 include/asterisk/musiconhold.h
+include/asterisk/mwi.h
 include/asterisk/named_locks.h
 include/asterisk/netsock.h
 include/asterisk/netsock2.h
@@ -151,6 +152,7 @@ include/asterisk/security_events.h
 include/asterisk/security_events_defs.h
 include/asterisk/select.h
 include/asterisk/sem.h
+include/asterisk/serializer.h
 include/asterisk/sha1.h
 include/asterisk/silk.h
 include/asterisk/sip_api.h
@@ -199,6 +201,7 @@ include/asterisk/udptl.h
 include/asterisk/ulaw.h
 include/asterisk/unaligned.h
 include/asterisk/uri.h
+include/asterisk/utf8.h
 include/asterisk/utils.h
 include/asterisk/uuid.h
 include/asterisk/vector.h
@@ -210,7 +213,9 @@ lib/asterisk/modules/app_adsiprog.so
 lib/asterisk/modules/app_agent_pool.so
 lib/asterisk/modules/app_alarmreceiver.so
 lib/asterisk/modules/app_amd.so
+lib/asterisk/modules/app_attended_transfer.so
 lib/asterisk/modules/app_authenticate.so
+lib/asterisk/modules/app_blind_transfer.so
 lib/asterisk/modules/app_bridgewait.so
 lib/asterisk/modules/app_cdr.so
 lib/asterisk/modules/app_celgenuserevent.so
@@ -328,7 +333,6 @@ lib/asterisk/modules/format_vox.so
 lib/asterisk/modules/format_wav.so
 lib/asterisk/modules/format_wav_gsm.so
 lib/asterisk/modules/func_aes.so
-lib/asterisk/modules/func_audiohookinherit.so
 lib/asterisk/modules/func_base64.so
 lib/asterisk/modules/func_blacklist.so
 lib/asterisk/modules/func_callcompletion.so
@@ -429,6 +433,7 @@ lib/asterisk/modules/res_manager_presencestate.so
 lib/asterisk/modules/res_monitor.so
 lib/asterisk/modules/res_musiconhold.so
 lib/asterisk/modules/res_mutestream.so
+lib/asterisk/modules/res_mwi_devstate.so
 ${PLIST.unixodbc}lib/asterisk/modules/res_odbc.so
 ${PLIST.unixodbc}lib/asterisk/modules/res_odbc_transaction.so
 lib/asterisk/modules/res_parking.so
@@ -497,15 +502,15 @@ libdata/asterisk/scripts/ast_coredumper
 libdata/asterisk/scripts/ast_logescalator
 libdata/asterisk/scripts/ast_loggrabber
 libdata/asterisk/scripts/refcounter.py
-libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.6
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.6.1
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.6
-libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.5.1
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.6
-libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.5.1
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.6
-libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.5.1
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.6.1
+libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.5.2
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.6.1
+libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.5.2
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.6.1
+libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.5.2
 libdata/asterisk/sounds/en/OfficeSpace.gsm
 libdata/asterisk/sounds/en/Randulo-allison.gsm
 libdata/asterisk/sounds/en/SIP_Test_Failure.gsm
@@ -3222,16 +3227,8 @@ share/doc/asterisk/LICENSE
 share/doc/asterisk/README-SERIOUSLY.bestpractices.md
 share/doc/asterisk/README.md
 share/doc/asterisk/README.txt
-share/doc/asterisk/UPGRADE-1.2.txt
-share/doc/asterisk/UPGRADE-1.4.txt
-share/doc/asterisk/UPGRADE-1.6.txt
-share/doc/asterisk/UPGRADE-1.8.txt
-share/doc/asterisk/UPGRADE-10.txt
-share/doc/asterisk/UPGRADE-11.txt
-share/doc/asterisk/UPGRADE-12.txt
 share/doc/asterisk/UPGRADE.txt
 share/doc/asterisk/Zaptel-to-DAHDI.txt
-share/doc/asterisk/api-1.6.2-changes.txt
 share/examples/asterisk/acl.conf
 share/examples/asterisk/adsi.conf
 share/examples/asterisk/agents.conf
