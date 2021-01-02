@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.62 2021/01/02 14:52:21 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.63 2021/01/02 15:00:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -77,3 +77,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/spotify-qt to 3.3 [pin 2021-01-02]
 	Updated news/inn to 2.6.3 [spz 2021-01-02]
 	Updated mail/notmuch to 0.31.3 [ryoon 2021-01-02]
+	Updated www/ap-mono to 3.13 [nia 2021-01-02]
