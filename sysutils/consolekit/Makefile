@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/01/01 15:33:51 nia Exp $
+# $NetBSD: Makefile,v 1.48 2021/01/02 15:48:39 wiz Exp $
 
 CONSOLEKIT_VER=	1.2.2
 DISTNAME=	ConsoleKit2-${CONSOLEKIT_VER}
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 MESSAGE_SUBST+=	PREFIX=${PREFIX}
 
-BUILD_DEFS+=	VARBASE 	\
+BUILD_DEFS+=	VARBASE \
 		PKG_SYSCONFBASE
 
 EGDIR=			${PREFIX}/share/examples/consolekit
@@ -41,14 +41,14 @@ CONF_FILES+=	${EGDIR}/ConsoleKit/seats.d/00-primary.seat		\
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake intltool msgfmt perl pkg-config
-USE_TOOLS+=	autoconf automake autoreconf
+USE_TOOLS+=	autoconf automake autoreconf autopoint
 USE_LIBTOOL=	YES
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFBASE}			\
-		--localstatedir=${VARBASE}			\
-		--disable-pam-module
-		#--enable-pam-module				\
-		#--with-pam-module-dir=${PREFIX}/lib/security	\
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}			\
+			--localstatedir=${VARBASE}			\
+			--disable-pam-module
+		#--enable-pam-module
+		#--with-pam-module-dir=${PREFIX}/lib/security
 
 CONFIGURE_ARGS.SunOS+=	--enable-rbac-shutdown=solaris.system.shutdown
 
