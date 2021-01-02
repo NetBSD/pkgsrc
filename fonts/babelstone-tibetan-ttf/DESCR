@@ -1,0 +1,19 @@
+BabelStone Tibetan is a Unicode Tibetan font.  It is a modification
+and extension of the Jomolhari font.  Jomolhari is a Bhutanese style
+calligraphic uchen Tibetan script font.
+
+BabelStone Tibetan is based on Jomolhari Version alpha 0.003c 2006,
+which is quite old, and so does not include sixteen characters added
+to the Tibetan block in Unicode versions 5.1 (2008), 5.2 (2009) and
+6.0 (2010).  BabelStone Tibetan adds support for these sixteen
+characters, and also extends the font to cover many additional stack
+clusters, including non-standard clusters that are used for writing
+Tibetan shorthand contractions and some unusual clusters that were
+used for transcribing Tangut.
+
+BabelStone Tibetan has an extremely large line height in order to
+allow for very high and deep stacks found in some religious texts.
+BabelStone Tibetan Slim is almost exactly the same as BabelStone
+Tibetan, but has a small line height; it is suitable for ordinary
+modern Tibetan text, but some stacks for Sanskrit may be cropped at
+the top and/or bottom.

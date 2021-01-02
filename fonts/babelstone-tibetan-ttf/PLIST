@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/02 00:05:03 uwe Exp $
+share/fonts/X11/TTF/BabelStoneTibetan.ttf
+share/fonts/X11/TTF/BabelStoneTibetanSlim.ttf
