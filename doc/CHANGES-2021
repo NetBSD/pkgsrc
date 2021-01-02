@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.68 2021/01/02 20:30:43 js Exp $
+$NetBSD: CHANGES-2021,v 1.69 2021/01/02 21:39:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -83,3 +83,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/SDL2 to 2.0.14 [nia 2021-01-02]
 	Updated devel/lmdbg to 1.3.0 [cheusov 2021-01-02]
 	Added chat/element-web version 1.7.16 [js 2021-01-02]
+	Updated security/dnssec-tools to 2.2.3 [nia 2021-01-02]
