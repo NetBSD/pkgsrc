@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/03 11:00:01 adam Exp $
+
+SHA1 (respx-0.16.3.tar.gz) = ca09552ff2d1e278a63a20d3a7c88f034b6be924
+RMD160 (respx-0.16.3.tar.gz) = ee1e54bfb9d9a92fadb00084d7e59931dee94ed7
+SHA512 (respx-0.16.3.tar.gz) = 3279999bd5e5b4843e280f2b0154fd94e17eba903b11bb581a75b26ca2218ccce654e639b03aba4387aa27bec53d48404f5a550f09eae8c8f497386d08e4f815
+Size (respx-0.16.3.tar.gz) = 21300 bytes
