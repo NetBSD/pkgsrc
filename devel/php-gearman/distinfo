@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/08/23 08:37:06 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2021/01/03 06:55:47 taca Exp $
 
-SHA1 (pecl-gearman/gearman-2.0.5.tar.gz) = ae9df19633d78f8fe8863ea40be77cef1208e6d3
-RMD160 (pecl-gearman/gearman-2.0.5.tar.gz) = dcb9c7c03430faa631129712504229808c9d177f
-SHA512 (pecl-gearman/gearman-2.0.5.tar.gz) = f8b8f8291423a37263a0d3bf7a702d0bb9c8f3d18922388af71ac710db7dcd1755c9d143364c1427b584a3852dfccba254468c9df9cadbc1249c9c7e52510353
-Size (pecl-gearman/gearman-2.0.5.tar.gz) = 42007 bytes
+SHA1 (pecl-networking-gearman/gearman-2.0.6.tar.gz) = 2164adf9d2e30db4dfa069849ccaf2499d212721
+RMD160 (pecl-networking-gearman/gearman-2.0.6.tar.gz) = 2c5467dff96d5ddfabf89050478b982201bd2f4d
+SHA512 (pecl-networking-gearman/gearman-2.0.6.tar.gz) = 8a5cde2adf667319a51456a120afecb9f20a8a4bcff8621787e4fa884dd49b785f1e5b12aced05808cbbc239be6b935cdff306f36710e454c0997b693d1eb2c4
+Size (pecl-networking-gearman/gearman-2.0.6.tar.gz) = 42065 bytes
