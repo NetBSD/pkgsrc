@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.111 2021/01/03 18:24:21 adam Exp $
+$NetBSD: CHANGES-2021,v 1.112 2021/01/03 18:54:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -135,3 +135,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed lang/php72 [taca 2021-01-03]
 	Updated net/wireshark to 3.4.2 [adam 2021-01-03]
 	Updated misc/stellarium to 0.20.4 [adam 2021-01-03]
+	Updated graphics/luminance-hdr to 2.6.0 [adam 2021-01-03]
+	Updated audio/timidity to 2.15.0 [adam 2021-01-03]
