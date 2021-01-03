@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/12/19 10:07:41 jdolecek Exp $
+$NetBSD: distinfo,v 1.5 2021/01/03 07:38:19 taca Exp $
 
-SHA1 (php-ssh2/ssh2-1.1.2.tgz) = ffd8aa2324d8c9448f6cfbea31579e08d99f38e4
-RMD160 (php-ssh2/ssh2-1.1.2.tgz) = d3af94cd3eff499d6db7ff5ad1c901aa781e0820
-SHA512 (php-ssh2/ssh2-1.1.2.tgz) = 36793191448745b8a9b3cc628fe9fb431480792c7a2ff0bf2eccd58cda1cf944933be1d301c455d4a6f3dabf7e04ffef248bc402a8ff99bfafcba0deddb25c36
-Size (php-ssh2/ssh2-1.1.2.tgz) = 32057 bytes
+SHA1 (php-ssh2/ssh2-1.2.tgz) = 652effe3e4305023998a155920753669e8d58255
+RMD160 (php-ssh2/ssh2-1.2.tgz) = 61e02ee11cfa2d00c5fee1a73c14857898bc0d67
+SHA512 (php-ssh2/ssh2-1.2.tgz) = 7b7d311cd5f88835e124d70a0295468f75d0fa6936a58808c936d1a185bb630b9e02c21f49b4bd777194a7b104aa3ff85c4fbf480f43d5906787e532ba2d3e04
+Size (php-ssh2/ssh2-1.2.tgz) = 32447 bytes
