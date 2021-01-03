@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.124 2021/01/03 08:53:11 jperkin Exp $
+$NetBSD: distinfo,v 1.125 2021/01/03 18:23:14 he Exp $
 
 SHA1 (rust-1.47.0-aarch64-unknown-netbsd.tar.gz) = f0b42fe4c567ffb0d83b523854bca4fa67d4167e
 RMD160 (rust-1.47.0-aarch64-unknown-netbsd.tar.gz) = e5d079b0920aa02b16b4a9804867e6d1118833eb
@@ -106,7 +106,7 @@ SHA512 (rustc-1.48.0-src.tar.gz) = e28e5f0813cfd94fb92399a2d64aa19bdf0933b5fc768
 Size (rustc-1.48.0-src.tar.gz) = 154487032 bytes
 SHA1 (patch-compiler_rustc__codegen__ssa_src_back_linker.rs) = 72746bbf0fa5e72fe151c95e3876b9eb1e70ae39
 SHA1 (patch-compiler_rustc__llvm_build.rs) = 42ff9f15004426e9e6d134bf1364df997f78964d
-SHA1 (patch-compiler_rustc__target_src_spec_netbsd__base.rs) = 61d2a0d0d7947a7e272c97a5bb773b6e2d6d3a81
+SHA1 (patch-compiler_rustc__target_src_spec_netbsd__base.rs) = c3a7ad7c218c405f5408562f720186cbfd4c665b
 SHA1 (patch-compiler_rustc__target_src_spec_solaris__base.rs) = 362534c5af4d59d33e049fb771df0fc9f8d8505b
 SHA1 (patch-compiler_rustc__target_src_spec_x86__64__sun__solaris.rs) = ba9216104891f8d2c239c9dd8d62e2c0c444360c
 SHA1 (patch-library_backtrace_crates_backtrace-sys_src_libbacktrace_configure) = 5dc1cfc843894156b513c86453db5032917a5529
