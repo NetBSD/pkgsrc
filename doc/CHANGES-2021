@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.90 2021/01/03 08:23:11 taca Exp $
+$NetBSD: CHANGES-2021,v 1.91 2021/01/03 08:41:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -107,3 +107,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/ruby-tzinfo1 to 1.2.9 [taca 2021-01-03]
 	Updated time/ruby-tzinfo to 2.0.4 [taca 2021-01-03]
 	Updated time/ruby-tzinfo-data to 1.2020.6 [taca 2021-01-03]
+	Updated www/php-ja-wordpress to 5.6 [taca 2021-01-03]
