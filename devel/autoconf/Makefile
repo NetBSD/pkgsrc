@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2021/01/02 20:38:56 js Exp $
+# $NetBSD: Makefile,v 1.99 2021/01/03 11:15:21 js Exp $
 #
-# When updating this package, please update mk/gnu-config/config.guess,
-# mk/gnu-config/config.sub, and mk/gnu-config/missing as well.
+# When updating this package, please update mk/gnu-config/config.guess and
+# mk/gnu-config/config.sub as well.
 
 DISTNAME=		autoconf-2.70
 CATEGORIES=		devel
