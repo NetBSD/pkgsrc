@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/01/03 15:26:11 taca Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/03 16:06:57 taca Exp $
 
 MODNAME=	psr
 PECL_VERSION=	1.0.1
@@ -9,7 +9,7 @@ HOMEPAGE=	https://pecl.php.net/package/psr
 COMMENT=	Provide the accepted PSR interfaces for other extensions
 LICENSE=	2-clause-bsd
 
-PHP_VERSIONS_ACCEPTED=	73 74
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 USE_LANGUAGES=	c c++
 
