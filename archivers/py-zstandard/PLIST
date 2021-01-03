@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/26 06:42:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/01/03 14:57:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/_zstd_cffi.so
 ${PYSITELIB}/zstandard/__init__.py
 ${PYSITELIB}/zstandard/__init__.pyc
+${PYSITELIB}/zstandard/__init__.pyi
 ${PYSITELIB}/zstandard/__init__.pyo
-${PYSITELIB}/zstandard/cffi.py
-${PYSITELIB}/zstandard/cffi.pyc
-${PYSITELIB}/zstandard/cffi.pyo
-${PYSITELIB}/zstd.so
+${PYSITELIB}/zstandard/_cffi.so
+${PYSITELIB}/zstandard/backend_c.so
+${PYSITELIB}/zstandard/backend_cffi.py
+${PYSITELIB}/zstandard/backend_cffi.pyc
+${PYSITELIB}/zstandard/backend_cffi.pyo
+${PYSITELIB}/zstandard/py.typed
