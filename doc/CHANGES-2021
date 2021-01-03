@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.97 2021/01/03 10:08:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.98 2021/01/03 10:43:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -116,3 +116,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-RcppEigen to 0.3.3.9.1 [mef 2021-01-03]
 	Updated textproc/py-xmlschema to 1.4.1 [adam 2021-01-03]
 	Updated www/py-uvicorn to 0.13.3 [adam 2021-01-03]
+	Updated security/py-gssapi to 1.6.12 [adam 2021-01-03]
+	Updated security/py-asyncssh to 2.5.0 [adam 2021-01-03]
