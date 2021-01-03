@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.115 2021/01/03 21:43:41 adam Exp $
+$NetBSD: CHANGES-2021,v 1.116 2021/01/03 21:52:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -141,3 +141,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/tor-browser-noscript to 11.1.7 [wiz 2021-01-03]
 	Updated databases/py-apsw to 3.34.0 [adam 2021-01-03]
 	Updated devel/py-ZopeInterface to 5.2.0 [adam 2021-01-03]
+	Updated comms/py-colorama to 0.4.4 [adam 2021-01-03]
+	Updated net/py-IP to 1.01 [adam 2021-01-03]
