@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2020/11/23 14:06:46 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2021/01/03 11:22:09 wiz Exp $
 #
 # for major version updates, don't forget adding new links in
 # mk/tools/automake.mk
@@ -14,9 +14,8 @@ HOMEPAGE=	https://www.gnu.org/software/automake/automake.html
 COMMENT=	GNU Standards-compliant Makefile generator
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	autoconf>=2.62:../../devel/autoconf
-
-USE_TOOLS+=	gm4:run perl:run
+AUTOCONF_REQD=	2.62
+USE_TOOLS+=	autoconf gm4:run perl:run
 
 PLIST_SUBST+=		PKG_DIR_VERSION=1.16
 GNU_CONFIGURE=		YES
