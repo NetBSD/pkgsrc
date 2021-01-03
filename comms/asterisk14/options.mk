@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/05/23 19:22:56 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2021/01/03 09:05:26 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
@@ -72,6 +72,7 @@ post-configure:
 	${ECHO} "MENUSELECT_CHANNELS=-chan_mgcp" >> ${WRKSRC}/pkgsrc.makeopts
 .endif
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
+	${ECHO} "MENUSELECT_CFLAGS=-BUILD_NATIVE" >> ${WRKSRC}/pkgsrc.makeopts
 	# this is a hack to work around a bug in menuselect
 	cd ${WRKSRC} && make menuselect.makeopts
 
