@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.93 2021/01/03 09:05:35 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.94 2021/01/03 09:44:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -110,3 +110,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/php-ja-wordpress to 5.6 [taca 2021-01-03]
 	Updated comms/asterisk13 to 13.38.1nb1 [jnemeth 2021-01-03]
 	Updated comms/asterisk14 to 14.7.8nb7 [jnemeth 2021-01-03]
+	Updated www/libmicrohttpd to 0.9.72 [wiz 2021-01-03]
