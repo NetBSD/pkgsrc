@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20283 2021/01/03 07:32:42 taca Exp $
+$NetBSD: TODO,v 1.20284 2021/01/03 08:17:48 taca Exp $
 
 Suggested new packages
 ======================
@@ -895,15 +895,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-basercms-4.4.2
 	o php-concrete5-8.5.4
 	o php-excel-1.8.2 [PHPSpreadsheet is sucessor]
-	o php-gearman-2.0.6
 	o php-glpi-9.5.3
 	o php-igbinary-3.0.1
 	o php-jpgraph-4.3.4
-	o php-mailparse-3.1.1
-	o php-memcache-3.0.8
-	o php-memcached-3.1.4
+	o php-memcache-4.0.5.2
+	o php-memcached-3.1.5
 	o php-mongo-1.6.16
-	o php-mongodb-1.9.0
 	o php-mrbs-1.9.2
 	o php-orangehrm-4.0
 	o php-phrasea2-4.1.2
@@ -911,13 +908,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-pthreads-3.1.6
 	o php-raphf2-2.0.1
 	o php-rrd-2.0.0
-	o php-ssdeep-1.1.0
-	o php-ssh2-1.2
 	o php-soycms-1.18.2a
 	o php-tiki6-21.2
 	o php-tt-rss-17.4
 	o php-tt-rss-fever-plugin-1.4.7
-	o php-uploadprogress-1.1.3
 	o phpldapadmin-1.2.5
 	o phpmyadmin-5.0.1
 	o phppgadmin-7.12.0
