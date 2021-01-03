@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.19 2021/01/01 08:24:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2021/01/03 06:55:47 taca Exp $
 
 MODNAME=	gearman
-PECL_VERSION=	2.0.5
+PECL_VERSION=	2.0.6
 DISTNAME=	gearman-${PECL_VERSION}
-PKGREVISION=	10
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wcgallego/}
-GITHUB_PROJECT=	pecl-gearman
+MASTER_SITES=	${MASTER_SITE_GITHUB:=php/}
+GITHUB_PROJECT=	pecl-networking-gearman
 GITHUB_TAG=	${DISTNAME}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/wcgallego/pecl-gearman
+HOMEPAGE=	https://github.com/php/pecl-networking-gearman
 COMMENT=	PHP extension for Gearman
 LICENSE=	php
 
-WRKSRC=	${WRKDIR}/pecl-gearman-gearman-${PECL_VERSION}
+WRKSRC=	${WRKDIR}/pecl-networking-gearman-gearman-${PECL_VERSION}
 
-PHP_VERSIONS_ACCEPTED=	72
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 CONFIGURE_ARGS+=	--with-gearman=shared,${BUILDLINK_PREFIX.gearmand}
 
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/gearmand/buildlink3.mk"
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
