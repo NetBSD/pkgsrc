@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2019/05/15 11:46:39 adam Exp $
+# $NetBSD: Makefile,v 1.24 2021/01/03 21:52:16 adam Exp $
 
-DISTNAME=	IPy-1.00
+DISTNAME=	IPy-1.01
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/IPy/IP/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=I/IPy/}
