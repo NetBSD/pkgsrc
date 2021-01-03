@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20279 2021/01/02 23:00:50 js Exp $
+$NetBSD: TODO,v 1.20280 2021/01/03 07:18:49 taca Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o admesh-0.98.2
 	o adms-2.3.6
 	o adocman-0.13
-	o adodb-5.20.15 [security]
+	o adodb-5.20.19 [security]
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
@@ -401,7 +401,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o alsa-plugins-1.1.0
 	o amarok-2.9.0
 	o amavis-perl-0.3.12 [called just amavis]
-	o ampache-3.8.2
+	o ampache-4.2.5
 	o ansifilter-2.9
 	o ant-contrib-1.0b3
 	o antiright-8.6
@@ -457,6 +457,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bzr-svn-1.2.2
 	o bzrtools-2.6.0
 	o c4-1.10
+	o cacti-1.2.16
 	o cacti-spine-1.2.7
 	o cal3d-0.11.0
 	o calc-2.11.10.1
@@ -481,6 +482,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o classpath-gui-0.99
 	o clawsker-0.7.13
 	o clusterssh-4.05
+	o collectd-CGP-1
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compiz-0.8.10
@@ -582,7 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fuse-mp3fs-0.91 [needs fixes to work on NetBSD; started in wip]
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
-	o gallery3-3.0.2
+	o gallery3-3.0.9
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
@@ -593,7 +595,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gdbm-1.19
 	o gdm-2.32.2
 	o gdm-3.0.3
-	o geeklog-2.2.0
+	o geeklog-2.2.1sr1
 	o genius-1.0.25
 	o gens-2.15.5
 	o gfract-0.33
@@ -688,7 +690,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
 	o icewm-2.0.0
-	o icinga-base-2.11.2
+	o icinga-base-2.12.3
 	o ike-2.0.1 [pkg/37032]
 	o imapsync-1.678
 	o imp-6.2.12
@@ -783,8 +785,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lzma-9.18
 	o mDNSResponder-878.30.4
 	o mDNSResponder-nss-576.30.4
+	o matcha-sns-1.3.8
 	o maelstrom-x11-2.0.7
-	o magento-2.3.3
+	o magento-2.4.1
 	o magic-8.1.89
 	o magit-2.5
 	o mailman-3.0.3
@@ -830,7 +833,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mysql-connector-c++-8.0.17
 	o mysql-server-8.0.20
 	o mysql-workbench-6.3
-	o nagios-base-4.4.5
+	o nagios-base-4.4.6
+	o nagios-nrpe-4.0.3
+	o nagios-ncsa-2.10.0
+	o nagios-plugins-2.3.3
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
@@ -879,35 +885,45 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pcc-1.1.0
 	o pcc-current-20160305
 	o pdmenu-1.2.87
+	o pear-SOAP-0.14.0
 	o pessulus-2.30.3
 	o pgadmin4-1.0
 	o pgbuildfarm-4.17
 	o phoronix-9.2.1
-	o phoronix-test-suite-9.0.1
+	o phoronix-test-suite-10.0.1
 	o php-8.0.0
-	o php-basercms-4.0.0
-	o php-concrete5-8.3.2
+	o php-basercms-4.4.2
+	o php-concrete5-8.5.4
+	o php-excel-1.8.2 [PHPSpreadsheet is sucessor]
 	o php-gearman-2.0.6
+	o php-glpi-9.5.3
 	o php-igbinary-3.0.1
-	o php-jpgraph-3.5.0b1
+	o php-jpgraph-4.3.4
+	o php-mailparse-3.1.1
 	o php-memcache-3.0.8
 	o php-memcached-3.1.4
-	o php-mrbs-1.7.4
-	o php-orangehrm-3.3.1
+	o php-mongo-1.6.16
+	o php-mongodb-1.9.0
+	o php-mrbs-1.9.2
+	o php-orangehrm-4.0
+	o php-pdflib-4.1.4
 	o php-phrasea2-3.8.6 (php-phrasea-3.8.6?)
-	o php-piwigo-2.10.1
+	o php-piwigo-2.10.2
 	o php-pthreads-3.1.6
 	o php-raphf2-2.0.1
 	o php-rrd-2.0.0
-	o php-soycms-3.0.2
-	o php-tiki6-6.14
-	o php-tt-rss-1.15.3
+	o php-ssdeep-1.1.0
+	o php-ssh2-1.2
+	o php-soycms-1.18.2a
+	o php-tiki6-21.2
+	o php-tt-rss-17.4
 	o php-tt-rss-fever-plugin-1.4.7
+	o php-uploadprogress-1.1.3
 	o php-xdebug-2.8.1
 	o phpldapadmin-1.2.5
 	o phpmyadmin-5.0.1
 	o phppgadmin-7.12.0
-	o phraseanet-3.8.6
+	o phraseanet-4.1.2
 	o phraseanet-indexer-3.8.6
 	o picocom-3.0
 	o picp-0.6.8
@@ -996,6 +1012,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o root-tail-1.2
 	o rosegarden-14.12
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o roundcube-plugin-carddav-4.0.4
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
@@ -1135,7 +1152,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o wcalc-2.4
-	o websvn-2.3.3
+	o websvn-2.6.0
 	o weewm-0.01
 	o whowatch-1.8.5
 	o windowlab-1.40
@@ -1192,14 +1209,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yodl-2.14.3
 	o yorick-2.1.05
 	o yudit-2.9.6
-	o z-push-2.5.1
+	o z-push-2.6.1
 	o z26-2.14
 	o zabbix-4.4.4
 	o zabbix-frontend-4.4.4
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zig-0.7.1
 	o zim-0.65
-	o zoneminder-1.32.3
+	o zoneminder-1.34.21
 	o zopeedit-0.8
 
 Licenses of packages
