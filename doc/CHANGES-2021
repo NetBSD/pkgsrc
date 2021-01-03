@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.112 2021/01/03 18:54:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.113 2021/01/03 19:00:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -137,3 +137,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/stellarium to 0.20.4 [adam 2021-01-03]
 	Updated graphics/luminance-hdr to 2.6.0 [adam 2021-01-03]
 	Updated audio/timidity to 2.15.0 [adam 2021-01-03]
+	Updated security/tor-browser to 10.0.7 [wiz 2021-01-03]
