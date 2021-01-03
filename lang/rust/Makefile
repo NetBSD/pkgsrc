@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2021/01/03 08:41:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.212 2021/01/03 08:53:11 jperkin Exp $
 
 DISTNAME=	rustc-1.48.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -183,13 +183,23 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
+#
+# The SunOS target defaults to illumos as that's what the current bootstraps
+# are built on.  If you wish to target Oracle Solaris you'll need to create an
+# x86_64-sun-solaris bootstrap and comment out the overrides.
+#
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
-RUST_ARCH:=		x86_64-sun-solaris
+RUST_STAGE0_VER=	1.48.0
+RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
 RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
+# Override default "x86_64-sun-solaris" selection
+CONFIGURE_ARGS+=	--set=target.${RUST_ARCH}.llvm-config=${LLVM_CONFIG_PATH}
+CONFIGURE_ARGS+=	--build=${RUST_ARCH}
+CONFIGURE_ARGS+=	--host=${RUST_ARCH}
+CONFIGURE_ARGS+=	--target=${RUST_ARCH}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
