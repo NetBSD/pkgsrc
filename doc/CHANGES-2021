@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.72 2021/01/03 01:22:00 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.73 2021/01/03 01:27:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -87,3 +87,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/autoconf to 2.70 [js 2021-01-02]
 	Updated devel/cscope to 15.9 [wiz 2021-01-03]
 	Updated comms/asterisk15 to 15.4.1nb24 [gdt 2021-01-03]
+	Updated geography/geos to 3.9.0 [gdt 2021-01-03]
