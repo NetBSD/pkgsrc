@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2018/10/22 15:28:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/01/03 14:55:50 adam Exp $
 bin/unzstd
 bin/zstd
 bin/zstdcat
 bin/zstdgrep
 bin/zstdless
 bin/zstdmt
-include/zbuff.h
 include/zdict.h
 include/zstd.h
 include/zstd_errors.h
