@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.123 2021/01/01 20:44:48 he Exp $
+$NetBSD: distinfo,v 1.124 2021/01/03 08:53:11 jperkin Exp $
 
-SHA1 (rust-1.46.0-x86_64-sun-solaris.tar.gz) = 081ed2fab901b7b4fbf5035b731abe7793e927b8
-RMD160 (rust-1.46.0-x86_64-sun-solaris.tar.gz) = fdac437710f87a228d4c56b569fc831784f193c5
-SHA512 (rust-1.46.0-x86_64-sun-solaris.tar.gz) = cbb5be647b1ee0f2f2074d1e3138e6b1ec69e500e4411342255128b1625cb78797af15e0bc895601d62f43ce50049401b2f88edb7c951a405ee7aa645e4b67cf
-Size (rust-1.46.0-x86_64-sun-solaris.tar.gz) = 174780795 bytes
 SHA1 (rust-1.47.0-aarch64-unknown-netbsd.tar.gz) = f0b42fe4c567ffb0d83b523854bca4fa67d4167e
 RMD160 (rust-1.47.0-aarch64-unknown-netbsd.tar.gz) = e5d079b0920aa02b16b4a9804867e6d1118833eb
 SHA512 (rust-1.47.0-aarch64-unknown-netbsd.tar.gz) = 169ec96ffaa4acf11a788df32645e2a05eec51577bb9fa1dc6d92138e7b192cfd9cc5cf7233888fc2f92faea9b01e825c6ad12bce22e90cdb3547d921b716072
@@ -100,6 +96,10 @@ SHA1 (rust-std-1.47.0-x86_64-unknown-netbsd.tar.gz) = c5cfef99946d0868031bcadd19
 RMD160 (rust-std-1.47.0-x86_64-unknown-netbsd.tar.gz) = b463eff178c6ba0bb8f375e079c0e09a6bd00834
 SHA512 (rust-std-1.47.0-x86_64-unknown-netbsd.tar.gz) = 5696d3ad8db20e250dc4d93130160b61b7e359623b0838edd8a836cc126264dcdccddba7f50c968d98c02472880ebffe2057f48b2ab2c8cab7be54eb708ad3ef
 Size (rust-std-1.47.0-x86_64-unknown-netbsd.tar.gz) = 30938962 bytes
+SHA1 (rust-1.48.0-x86_64-unknown-illumos.tar.gz) = 23afcbc003c01940277978553b4afd75ec5d333d
+RMD160 (rust-1.48.0-x86_64-unknown-illumos.tar.gz) = 6510186be6f216e47cb1971500dbf1fd27f96e09
+SHA512 (rust-1.48.0-x86_64-unknown-illumos.tar.gz) = e0153c7c400eea2f3b59c9f63c0ee0dbaf3f8ccf645c1ad4c66f90727d41894dcb49ddacf622fc8572ab45734472e59970de64939bec0f6d6f94f5797ce05fb4
+Size (rust-1.48.0-x86_64-unknown-illumos.tar.gz) = 189960423 bytes
 SHA1 (rustc-1.48.0-src.tar.gz) = a26f089d27c9cc283a7305fc8ece6b4674a036fd
 RMD160 (rustc-1.48.0-src.tar.gz) = 28b6c2319a29c8f4282bf15da2c97d8c43bb27e1
 SHA512 (rustc-1.48.0-src.tar.gz) = e28e5f0813cfd94fb92399a2d64aa19bdf0933b5fc768ea10da2a5b787c94bac6a5efb98b2c3702da3d1c46c6766b157df3727e5845b4b83a237b44ec45b27ba
