@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/10/04 06:17:10 taca Exp $
+$NetBSD: distinfo,v 1.4 2021/01/03 07:26:53 taca Exp $
 
-SHA1 (php-zip/zip-1.19.1.tgz) = 1edcc5ee7cb547e28943ad989fb97d72152ccbae
-RMD160 (php-zip/zip-1.19.1.tgz) = 80830e61036b17c059782c2efedd08fec9b4213f
-SHA512 (php-zip/zip-1.19.1.tgz) = 3bcc581385a46e389907acc194728621b307d1240d771ec8124dc3c19392eb4a43a8674ad6a320559c86d030672b29fb2e5ae129a2c32a0b7707a00a5e6fb4ca
-Size (php-zip/zip-1.19.1.tgz) = 325579 bytes
+SHA1 (php-zip/zip-1.19.2.tgz) = c912f7eae400d5f23f20b28cdc9c4337140219e0
+RMD160 (php-zip/zip-1.19.2.tgz) = 66c22bc0a645f382ebdc733d554f5d615eeb585f
+SHA512 (php-zip/zip-1.19.2.tgz) = ef0971da57cd1b92a2b458e978d539e82851a65c811c4dd3ead7827db84a3c995d065bb6390ecd617273b92e47236e22c9696a4f98bc263617a2637fa30dd0bd
+Size (php-zip/zip-1.19.2.tgz) = 325915 bytes
