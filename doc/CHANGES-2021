@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.105 2021/01/03 11:30:55 mef Exp $
+$NetBSD: CHANGES-2021,v 1.106 2021/01/03 11:33:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -125,3 +125,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R-XML to 3.99.0.5 [mef 2021-01-03]
 	Updated math/R-akima to 0.6.2.1 [mef 2021-01-03]
 	Updated math/R-backports to 1.2.1 [mef 2021-01-03]
+	Updated math/R-chron to 2.3.56 [mef 2021-01-03]
