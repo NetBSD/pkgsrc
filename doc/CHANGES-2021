@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.85 2021/01/03 07:38:59 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.86 2021/01/03 07:40:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -100,3 +100,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/php-ssdeep to 1.1.0 [taca 2021-01-03]
 	Updated security/php-ssh2 to 1.2 [taca 2021-01-03]
 	Updated devel/mob to 1.1.0 [schmonz 2021-01-03]
+	Updated www/php-apcu to 5.1.19 [taca 2021-01-03]
