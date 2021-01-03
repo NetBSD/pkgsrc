@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.94 2021/01/03 09:44:39 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.95 2021/01/03 09:58:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -111,3 +111,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/asterisk13 to 13.38.1nb1 [jnemeth 2021-01-03]
 	Updated comms/asterisk14 to 14.7.8nb7 [jnemeth 2021-01-03]
 	Updated www/libmicrohttpd to 0.9.72 [wiz 2021-01-03]
+	Updated time/py-pytz to 2020.5 [adam 2021-01-03]
+	Updated databases/py-tortoise-orm to 0.16.19 [adam 2021-01-03]
