@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.108 2021/01/03 15:07:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.109 2021/01/03 15:16:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -131,3 +131,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/py-zstandard to 0.15.1 [adam 2021-01-03]
 	Updated audio/mpg123 to 1.26.4 [adam 2021-01-03]
 	Updated games/wesnoth to 1.14.15 [adam 2021-01-03]
+	Removed meta-pkgs/php72-extensions [taca 2021-01-03]
