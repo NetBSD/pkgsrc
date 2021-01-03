@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.110 2021/01/03 15:19:55 taca Exp $
+$NetBSD: CHANGES-2021,v 1.111 2021/01/03 18:24:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -133,3 +133,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/wesnoth to 1.14.15 [adam 2021-01-03]
 	Removed meta-pkgs/php72-extensions [taca 2021-01-03]
 	Removed lang/php72 [taca 2021-01-03]
+	Updated net/wireshark to 3.4.2 [adam 2021-01-03]
+	Updated misc/stellarium to 0.20.4 [adam 2021-01-03]
