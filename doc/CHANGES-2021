@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.78 2021/01/03 07:00:25 taca Exp $
+$NetBSD: CHANGES-2021,v 1.79 2021/01/03 07:27:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -93,3 +93,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/php-oauth to 2.0.7 [taca 2021-01-03]
 	Updated devel/php-gearman to 2.0.6 [taca 2021-01-03]
 	Updated www/php-http3 to 3.2.3 [taca 2021-01-03]
+	Updated archivers/php-pecl-zip to 1.19.2 [taca 2021-01-03]
