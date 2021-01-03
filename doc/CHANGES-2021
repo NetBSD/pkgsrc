@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.101 2021/01/03 10:51:31 mef Exp $
+$NetBSD: CHANGES-2021,v 1.102 2021/01/03 11:00:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -120,3 +120,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-gssapi to 1.6.12 [adam 2021-01-03]
 	Updated security/py-asyncssh to 2.5.0 [adam 2021-01-03]
 	Updated math/R-SparseM to 1.78 [mef 2021-01-03]
+	Updated devel/py-typed-ast to 1.4.2 [adam 2021-01-03]
+	Added www/py-respx version 0.16.3 [adam 2021-01-03]
