@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2021/01/02 05:17:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.211 2021/01/03 08:41:18 jperkin Exp $
 
 DISTNAME=	rustc-1.48.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -473,11 +473,7 @@ stage0-bootstrap: install
 	${ECHO} "$${RUST_STD_FILE}"; \
 	)
 .endif
-
 .if ${OS_VARIANT} == "SmartOS"
-stage0-bootstrap: install
-	${RM} -rf ${BOOTSTRAP_TMPDIR}
-	${MKDIR} ${BOOTSTRAP_TMPDIR}
 	${CP} -R ${DESTDIR}/${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
 	${CP} -R ${DESTDIR}/${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
 	${MKDIR} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc
