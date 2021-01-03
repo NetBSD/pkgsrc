@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.83 2021/01/03 07:37:07 taca Exp $
+$NetBSD: CHANGES-2021,v 1.84 2021/01/03 07:38:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -98,3 +98,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/php-pdflib to 4.1.4 [taca 2021-01-03]
 	Updated security/php-pecl-mcrypt to 1.0.4 [taca 2021-01-03]
 	Updated security/php-ssdeep to 1.1.0 [taca 2021-01-03]
+	Updated security/php-ssh2 to 1.2 [taca 2021-01-03]
