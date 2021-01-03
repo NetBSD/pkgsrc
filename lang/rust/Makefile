@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2021/01/03 16:46:18 he Exp $
+# $NetBSD: Makefile,v 1.214 2021/01/03 18:23:14 he Exp $
 
 DISTNAME=	rustc-1.48.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -37,7 +37,6 @@ CONFIGURE_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=		--python=${PYTHONBIN}
 CONFIGURE_ARGS+=		--release-channel=stable
-#CONFIGURE_ARGS+=		--enable-local-rust
 CONFIGURE_ARGS+=		--local-rust-root=${RUST_BOOTSTRAP_PATH}
 CONFIGURE_ARGS+=		--enable-extended	# Build and install cargo too.
 CONFIGURE_ARGS+=		--enable-rpath
@@ -45,8 +44,6 @@ CONFIGURE_ARGS+=		--disable-codegen-tests
 CONFIGURE_ARGS+=		--disable-dist-src
 CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=		--disable-ninja
-# XXX: to be enabled in the future
-#CONFIGURE_ARGS+=		--jemalloc-root=${BUILDLINK_PREFIX.jemalloc}/lib
 
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
@@ -57,9 +54,6 @@ BUILD_TARGET=		dist
 .else
 BUILD_TARGET=		build
 .endif
-
-# More diag when failing
-#MAKE_ENV+=		RUST_BACKTRACE=1
 
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
@@ -321,6 +315,7 @@ TOOLS_PLATFORM.gzcat=	${PREFIX}/bin/gzip -cd
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
 SUBST_FILES.rpath+=	compiler/rustc_codegen_ssa/src/back/linker.rs
+SUBST_FILES.rpath+=	compiler/rustc_target/src/spec/netbsd_base.rs
 SUBST_FILES.rpath+=	src/bootstrap/builder.rs
 SUBST_FILES.rpath+=	src/bootstrap/compile.rs
 SUBST_VARS.rpath=	PREFIX
