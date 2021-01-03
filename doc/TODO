@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20282 2021/01/03 07:30:09 taca Exp $
+$NetBSD: TODO,v 1.20283 2021/01/03 07:32:42 taca Exp $
 
 Suggested new packages
 ======================
@@ -906,7 +906,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-mongodb-1.9.0
 	o php-mrbs-1.9.2
 	o php-orangehrm-4.0
-	o php-pdflib-4.1.4
 	o php-phrasea2-4.1.2
 	o php-piwigo-2.10.2
 	o php-pthreads-3.1.6
