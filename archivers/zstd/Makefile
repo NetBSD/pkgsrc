@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2020/10/01 07:25:06 mcf Exp $
+# $NetBSD: Makefile,v 1.32 2021/01/03 14:55:50 adam Exp $
 
-DISTNAME=	zstd-1.4.5
-PKGREVISION=	1
+DISTNAME=	zstd-1.4.8
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +13,7 @@ LICENSE=	modified-bsd OR gnu-gpl-v2
 CHECK_PORTABILITY_SKIP+=	tests/playTests.sh
 
 # 1.4.5: ../lib/libzstd.so: file not recognized: file format not recognized
-MAKE_JOBS_SAFE=		no
+#MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		ggrep gmake pkg-config
