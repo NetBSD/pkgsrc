@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.99 2021/01/03 10:45:58 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.100 2021/01/03 10:49:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -123,3 +123,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-asyncssh to 2.5.0 [adam 2021-01-03]
 >>>>>>> 1.98
 	Updated converters/bdf2psf to 1.200 [fcambus 2021-01-03]
+	Updated math/R-SparseM to 1.78 [mef 2021-01-03]
