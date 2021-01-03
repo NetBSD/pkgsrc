@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.114 2021/01/03 19:03:00 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.115 2021/01/03 21:43:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -139,3 +139,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/timidity to 2.15.0 [adam 2021-01-03]
 	Updated security/tor-browser to 10.0.7 [wiz 2021-01-03]
 	Updated security/tor-browser-noscript to 11.1.7 [wiz 2021-01-03]
+	Updated databases/py-apsw to 3.34.0 [adam 2021-01-03]
+	Updated devel/py-ZopeInterface to 5.2.0 [adam 2021-01-03]
