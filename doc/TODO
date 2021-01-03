@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20286 2021/01/03 11:24:56 mef Exp $
+$NetBSD: TODO,v 1.20287 2021/01/03 18:24:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -1155,7 +1155,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o windowlab-1.40
 	o wine-5.0
 	o wine-devel-3.7
-	o wireshark-3.4.2
 	o wkhtmltopdf-0.12.5
 	o wmi-11
 	o worker-3.12.0
