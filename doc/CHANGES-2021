@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.95 2021/01/03 09:58:05 adam Exp $
+$NetBSD: CHANGES-2021,v 1.96 2021/01/03 10:05:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -113,3 +113,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/libmicrohttpd to 0.9.72 [wiz 2021-01-03]
 	Updated time/py-pytz to 2020.5 [adam 2021-01-03]
 	Updated databases/py-tortoise-orm to 0.16.19 [adam 2021-01-03]
+	Updated math/R-RcppEigen to 0.3.3.9.1 [mef 2021-01-03]
