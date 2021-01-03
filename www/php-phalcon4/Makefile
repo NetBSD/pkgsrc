@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/21 14:54:14 otis Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/03 15:26:12 taca Exp $
 #
 
 MODNAME=		phalcon
@@ -14,7 +14,7 @@ LICENSE=		php
 
 CONFLICTS=		php-phalcon-[0-9]*
 
-PHP_VERSIONS_ACCEPTED=  72 73 74
+PHP_VERSIONS_ACCEPTED=  73 74
 
 GITHUB_PROJECT=		cphalcon
 GITHUB_TAG=		v${PKGVERSION_NOREV}
