@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.315 2020/11/26 14:45:15 taca Exp $
+# $NetBSD: phpversion.mk,v 1.316 2021/01/03 15:21:04 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -10,7 +10,7 @@
 #	The PHP version to choose when more than one is acceptable to
 #	the package.
 #
-#	Possible: 56 72 73 74
+#	Possible: 56 73 74
 #	Default: 73
 #
 # === Infrastructure variables ===
@@ -27,18 +27,18 @@
 # PHP_VERSIONS_ACCEPTED
 #	The PHP versions that are accepted by the package.
 #
-#	Possible: 56 72 73 74
-#	Default: 73 56 72 74
+#	Possible: 56 73 74
+#	Default: 73 56 74
 #
 # PHP_VERSIONS_INCOMPATIBLE
 #	The PHP versions that are not supported by the package.
 #
-#	Possible: 56 72 73 74
+#	Possible: 56 73 74
 #	Default: (empty)
 #
 # PHP_CHECK_INSTALLED
 #	Check installed version of PHP.  Should be used by lang/php56,
-#	lang/php72, lang/php73 or lang/php74 only.
+#	lang/php73 or lang/php74 only.
 #
 #	Possible: Yes No
 #	Default: Yes
@@ -48,7 +48,7 @@
 # PKG_PHP_VERSION
 #	The selected PHP version.
 #
-#	Possible: 56 72 73 74
+#	Possible: 56 73 74
 #	Default: ${PHP_VERSION_DEFAULT}
 #
 # PHP_BASE_VERS
@@ -72,7 +72,7 @@
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
 #
-#	Example: php56 php72 php73 php74
+#	Example: php56 php73 php74
 #
 # PHP_EXTENSION_DIR
 #	Relative path to ${PREFIX} for PHP's extensions.  It is derived from
@@ -88,13 +88,11 @@ PHPVERSION_MK=	defined
 
 # Define each PHP's version.
 PHP56_VERSION=	5.6.40
-PHP72_VERSION=	7.2.34
 PHP73_VERSION=	7.3.25
 PHP74_VERSION=	7.4.13
 
 # Define initial release of major version.
 PHP56_RELDATE=	20140828
-PHP72_RELDATE=	20170718
 PHP73_RELDATE=	20181200
 PHP74_RELDATE=	20191128
 
@@ -107,7 +105,7 @@ _SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
 .include "../../mk/bsd.prefs.mk"
 
 PHP_VERSION_DEFAULT?=		73
-PHP_VERSIONS_ACCEPTED?=		73 56 72 74
+PHP_VERSIONS_ACCEPTED?=		73 74 56
 .for pv in ${PHP_VERSIONS_ACCEPTED}
 .  if empty(PHP_VERSIONS_INCOMPATIBLE:M${pv})
 _PHP_VERSIONS_ACCEPTED+=	${pv}
@@ -125,9 +123,6 @@ _PHP_VERSION_74_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .elif exists(${LOCALBASE}/lib/php/${PHP73_RELDATE})
 _PHP_VERSION_73_INSTALLED=	yes
-_PHP_INSTALLED=			yes
-.elif exists(${LOCALBASE}/lib/php/${PHP72_RELDATE})
-_PHP_VERSION_72_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .elif exists(${LOCALBASE}/lib/php/${PHP56_RELDATE})
 _PHP_VERSION_56_INSTALLED=	yes
@@ -204,9 +199,6 @@ PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
 PHP_VERSION=		${PHP56_VERSION}
 PHP_INITIAL_TEENY=	3
 PHP_EXTENSION_DIR=	lib/php/${PHP56_RELDATE}
-.elif ${_PHP_VERSION} == "72"
-PHP_VERSION=		${PHP72_VERSION}
-PHP_EXTENSION_DIR=	lib/php/${PHP72_RELDATE}
 .elif ${_PHP_VERSION} == "73"
 PHP_VERSION=		${PHP73_VERSION}
 PHP_EXTENSION_DIR=	lib/php/${PHP73_RELDATE}
