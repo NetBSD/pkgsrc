@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.89 2021/01/03 08:08:15 taca Exp $
+$NetBSD: CHANGES-2021,v 1.90 2021/01/03 08:23:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -104,3 +104,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/php-uploadprogress to 1.1.3 [taca 2021-01-03]
 	Updated mail/php-mailparse to 3.1.1 [taca 2021-01-03]
 	Updated databases/php-mongodb to 1.9.0 [taca 2021-01-03]
+	Updated time/ruby-tzinfo1 to 1.2.9 [taca 2021-01-03]
+	Updated time/ruby-tzinfo to 2.0.4 [taca 2021-01-03]
+	Updated time/ruby-tzinfo-data to 1.2020.6 [taca 2021-01-03]
