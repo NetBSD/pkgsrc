@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.80 2021/01/03 07:29:31 taca Exp $
+$NetBSD: CHANGES-2021,v 1.81 2021/01/03 07:31:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -95,3 +95,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/php-http3 to 3.2.3 [taca 2021-01-03]
 	Updated archivers/php-pecl-zip to 1.19.2 [taca 2021-01-03]
 	Updated devel/php-xdebug to 3.0.1 [taca 2021-01-03]
+	Updated print/php-pdflib to 4.1.4 [taca 2021-01-03]
