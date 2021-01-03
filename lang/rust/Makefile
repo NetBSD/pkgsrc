@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2021/01/03 21:23:43 he Exp $
+# $NetBSD: Makefile,v 1.216 2021/01/03 21:54:09 he Exp $
 
 DISTNAME=	rustc-1.48.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -344,7 +344,6 @@ CKSUM_CRATES+=	vendor/openssl-src
 CKSUMS+=	29499e62a2cde2fda48d21df58812ee5c198ef744522992bde8faae76747ac08
 CKSUMS+=	e34f9921c6531d043f3516821442aaeda86c7912d40cbddaf79bba6b08c37952
 
-
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
 .for crate in ${CKSUM_CRATES}
@@ -408,17 +407,35 @@ pre-build: pre-build-fix
 	cp ${FILESDIR}/libgcc_s.so.1 ${RUST_BOOTSTRAP_PATH}/lib/.
 .endif
 
+#
+# These are essentially copies of the "all", "test", and "install" Makefile
+# targets, but are duplicated here so that we can specify -j.
+#
 do-build:
-	cd ${WRKSRC} \
-	&& ${_ULIMIT_CMD} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
-	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then \
-			unset DESTDIR; \
-		fi; \
-		${PYTHONBIN} ./x.py -v ${BUILD_TARGET} -j ${_MAKE_JOBS_N}"
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WRKSRC} &&							\
+	${SETENV} ${MAKE_ENV}						\
+	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then		\
+		unset DESTDIR;						\
+		${PYTHONBIN} ./x.py -v					\
+		    ${BUILD_TARGET} -j ${_MAKE_JOBS_N};			\
+	else								\
+		${PYTHONBIN} ./x.py -v					\
+		    ${BUILD_TARGET} --stage 2 -j ${_MAKE_JOBS_N} &&	\
+		${PYTHONBIN} ./x.py -v					\
+		    doc --stage 2 -j ${_MAKE_JOBS_N};			\
+	fi"
+
+do-test:
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WRKSRC} &&							\
+	${SETENV} ${MAKE_ENV}						\
+		${PYTHONBIN} ./x.py -v test -j ${_MAKE_JOBS_N}
 
 do-install:
-	cd ${WRKSRC} \
-	&& ${_ULIMIT_CMD} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WRKSRC} &&							\
+	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
 		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
 
 .if ${OPSYS} == "Darwin"
@@ -438,7 +455,11 @@ GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 # Create a relocatable stage2 bootstrap from the bits we just built that can be
 # used to build the next version of rust.  Currently only tested on SmartOS.
 #
-BOOTSTRAP_TMPDIR=	${WRKDIR}/${PKGNAME_NOREV}-${RUST_ARCH}
+# Use the alternate BOOTSTRAP_NAME when creating a nightly release.
+#
+#BOOTSTRAP_NAME=	${PKGNAME_NOREV:C/rust/rust-nightly/}-${RUST_ARCH}
+BOOTSTRAP_NAME=		${PKGNAME_NOREV}-${RUST_ARCH}
+BOOTSTRAP_TMPDIR=	${WRKDIR}/${BOOTSTRAP_NAME}
 USE_TOOLS+=		gtar
 
 # The NetBSD part is so far untested, because I could not convince
@@ -488,12 +509,12 @@ stage0-bootstrap: install
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	: direct dependencies
+	# direct dependencies
 	for lib in libLLVM-10.so libcrypto.so.1.1 libcurl.so.4 \
 		   libssl.so.1.1 libz.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	: libcurl dependencies
+	# libcurl dependencies
 	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber-2.4.so.2 \
 		   libldap-2.4.so.2 libnghttp2.so.14 libsasl2.so.3 \
 		   libssh2.so.1 libunistring.so.2; do \
@@ -513,7 +534,7 @@ stage0-bootstrap: install
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
 	done
 	(cd ${WRKDIR}; \
-	 ${GTAR} -zcf ${PKGNAME_NOREV}-${RUST_ARCH}.tar.gz ${PKGNAME_NOREV}-${RUST_ARCH})
+	 ${GTAR} -zcf ${BOOTSTRAP_NAME}.tar.gz ${BOOTSTRAP_NAME})
 .endif
 
 .include "options.mk"
@@ -545,13 +566,6 @@ stage0-bootstrap: install
 DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
 
-.if (${MACHINE_ARCH} == "powerpc")
-# LLVM needs libatomic for 64-bit atomics on powerpc
-.include "../../devel/libatomic/buildlink3.mk"
-# Make those libraries available via a unique directory:
-DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
-.endif
-
 .if (${OPSYS} == "NetBSD") && \
 		((${MACHINE_ARCH} == "i386")) \
 	&& (empty(OS_VERSION:M[012345678].*) || \
@@ -570,9 +584,11 @@ DEPENDS+=	openssl>=1.1:../../security/openssl
 
 # This is for when we build natively:
 .if ((${OPSYS} == "NetBSD") && \
-	((${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "i386")))
-# For 8-byte atomics, required by LLVM
+    ((${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "i386")))
+# LLVM needs libatomic for 64-bit atomics on powerpc and i386
 .include "../../devel/libatomic/buildlink3.mk"
+# Make those libraries available via a unique directory:
+DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
