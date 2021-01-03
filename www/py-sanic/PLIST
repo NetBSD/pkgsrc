@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/10/01 06:53:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/01/03 22:41:44 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -60,6 +60,7 @@ ${PYSITELIB}/sanic/helpers.pyo
 ${PYSITELIB}/sanic/log.py
 ${PYSITELIB}/sanic/log.pyc
 ${PYSITELIB}/sanic/log.pyo
+${PYSITELIB}/sanic/py.typed
 ${PYSITELIB}/sanic/reloader_helpers.py
 ${PYSITELIB}/sanic/reloader_helpers.pyc
 ${PYSITELIB}/sanic/reloader_helpers.pyo
