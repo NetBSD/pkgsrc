@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/12/12 01:39:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/03 18:28:05 he Exp $
 
 PKGNAME=		libatomic-links-1.0
 CATEGORIES=		devel
@@ -7,7 +7,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Make libatomic available from a unique directory
 LICENSE=		2-clause-bsd
 
-ONLY_FOR_PLATFORM=	NetBSD-*-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-*-i386
 
 DEPENDS+=		libatomic-[0-9]*:../../devel/libatomic
 
@@ -31,7 +32,6 @@ INSTALLATION_DIRS+=	lib/libatomic
 do-patch:
 	@${DO_NADA}
 
-.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc")
 # Only needed here so far; need stems from rust which wants -latomic
 # but rust most probably should not always search /usr/pkg/lib
 do-install:
@@ -39,6 +39,5 @@ do-install:
 		b=$$(basename $$f); \
 		${LN} -s -f $$f ${DESTDIR}${PREFIX}/lib/libatomic/$$b; \
 	done
-.endif
 
 .include "../../mk/bsd.pkg.mk"
