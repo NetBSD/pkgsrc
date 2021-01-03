@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/12/04 20:45:20 nia Exp $
+# $NetBSD: Makefile,v 1.69 2021/01/03 08:22:39 mef Exp $
 
 DISTNAME=	kajongg-${KAPPSVER}
 PKGREVISION=	4
@@ -21,6 +21,8 @@ CONFIGURE_ENV+=	DESTDIR=${DESTDIR}
 
 REPLACE_PYTHON+=        src/kajongg.py
 REPLACE_PYTHON+=        src/kajonggserver.py
+
+PLIST_SUBST+=	PYPKGVER=${PYPKGPREFIX:S/py//}
 
 .include "../../games/libkmahjongg/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
