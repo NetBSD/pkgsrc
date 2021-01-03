@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2021/01/03 18:23:14 he Exp $
+# $NetBSD: Makefile,v 1.215 2021/01/03 21:23:43 he Exp $
 
 DISTNAME=	rustc-1.48.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -138,8 +138,6 @@ MAKE_JOBS_SAFE=	no
 # Broken package with PREFIX not /usr/pkg:
 #   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54453
 #
-# NetBSD 8.1 earmv7hf: unknown configure option
-#   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54621
 
 .endif
 
