@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2021/01/01 09:52:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2021/01/03 18:52:31 adam Exp $
 
-DISTNAME=	luminance-hdr-2.4.0
-PKGREVISION=	46
+DISTNAME=	luminance-hdr-2.6.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qtpfsgui/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,9 +10,11 @@ HOMEPAGE=	http://qtpfsgui.sourceforge.net/
 COMMENT=	GUI application that aims to provide a workflow for HDR imaging
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cfitsio/buildlink3.mk"
@@ -22,8 +23,10 @@ USE_CMAKE=	yes
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
