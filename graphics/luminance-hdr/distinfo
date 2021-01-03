@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/12/22 22:26:31 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/01/03 18:52:31 adam Exp $
 
-SHA1 (luminance-hdr-2.4.0.tar.bz2) = 58e711531bd20be80b4761137c9c684b4b67000f
-RMD160 (luminance-hdr-2.4.0.tar.bz2) = 41fbd29ececa8f8de89dccabd6b48a66cc870307
-SHA512 (luminance-hdr-2.4.0.tar.bz2) = aa14a13d12ba382f5f8dcb79a57aa68864678db62f036ac2d8b8959da76f20b938481932a6fff3861eb6dbc5a1d4f06bc1f3e3ca9a6ce4f7a27a9db736aa8702
-Size (luminance-hdr-2.4.0.tar.bz2) = 10507522 bytes
-SHA1 (patch-CMakeLists.txt) = 786aa34e8ddbb8a313c915839d400231488a2ee6
-SHA1 (patch-src_Exif_ExifOperations.cpp) = ab616e59609b9e03ae7b2eee4e2257d8a72aab9e
-SHA1 (patch-src_HelpBrowser_CMakeLists.txt) = 57277fd03e6c201fb6fadc3df169276c358460fa
-SHA1 (patch-src_MainCli_commandline.cpp) = bbbe118f6712381e9324629d921d934d73e48da8
-SHA1 (patch-src_TransplantExif_TransplantExifDialog.cpp) = 8eab50ef39ca5328cd3f1f333b3992e8e5250867
+SHA1 (luminance-hdr-2.6.0.tar.bz2) = 18333410173cbc3680d3b7313a6b0a2cf68e043d
+RMD160 (luminance-hdr-2.6.0.tar.bz2) = b1ad15d37434524c5793685e035692c5fff579d6
+SHA512 (luminance-hdr-2.6.0.tar.bz2) = 6cfb21b1ddc9cac612e3d176323e34c5181333f1b52953c02ad5aec28cc86bf519ecede248847082085879c5c2fd2c5570b05f5d3bffa96ba3781ff8cd1967d1
+Size (luminance-hdr-2.6.0.tar.bz2) = 11556372 bytes
