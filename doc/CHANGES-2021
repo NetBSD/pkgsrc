@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.75 2021/01/03 06:48:51 taca Exp $
+$NetBSD: CHANGES-2021,v 1.76 2021/01/03 06:54:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -90,3 +90,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/geos to 3.9.0 [gdt 2021-01-03]
 	Updated comms/asterisk13 to 13.38.1 [jnemeth 2021-01-03]
 	Updated www/php-propro2 to 2.1.0 [taca 2021-01-03]
+	Updated security/php-oauth to 2.0.7 [taca 2021-01-03]
