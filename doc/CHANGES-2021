@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.70 2021/01/02 23:00:50 js Exp $
+$NetBSD: CHANGES-2021,v 1.71 2021/01/03 00:43:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -85,3 +85,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added chat/element-web version 1.7.16 [js 2021-01-02]
 	Updated security/dnssec-tools to 2.2.3 [nia 2021-01-02]
 	Updated devel/autoconf to 2.70 [js 2021-01-02]
+	Updated devel/cscope to 15.9 [wiz 2021-01-03]
