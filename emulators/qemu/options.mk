@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2021/01/03 21:42:29 roy Exp $
+# $NetBSD: options.mk,v 1.15 2021/01/03 22:47:23 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi sdl spice
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	--enable-sdl
 CONFIGURE_ARGS+=	--disable-sdl
 .endif
 
-# On Darwin, qemu uses Coca
+# On Darwin, qemu uses Cocoa
 .if ${OPSYS} != "Darwin"
 .if !empty(PKG_OPTIONS:Mgtk3) || \
     !empty(PKG_OPTIONS:Mopengl) || !empty(PKG_OPTIONS:Msdl)
