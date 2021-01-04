@@ -1,18 +1,18 @@
-$NetBSD: patch-variables.c,v 1.5 2019/01/08 16:24:42 ryoon Exp $
+$NetBSD: patch-variables.c,v 1.6 2021/01/04 10:39:23 wiz Exp $
 
 Only read functions from environment if flag is set.
 
---- variables.c.orig	2018-12-18 16:07:21.000000000 +0000
+--- variables.c.orig	2020-09-07 20:41:51.000000000 +0000
 +++ variables.c
-@@ -95,6 +95,7 @@
- #define FV_SKIPINVISIBLE	0x02
+@@ -97,6 +97,7 @@
+ #define FV_NODYNAMIC		0x04
  
  extern char **environ;
 +extern int import_functions;
  
  /* Variables used here and defined in other files. */
  extern time_t shell_start_time;
-@@ -368,7 +369,7 @@ initialize_shell_variables (env, privmod
+@@ -377,7 +378,7 @@ initialize_shell_variables (env, privmod
  #if defined (FUNCTION_IMPORT)
        /* If exported function, define it now.  Don't import functions from
  	 the environment in privileged mode. */
