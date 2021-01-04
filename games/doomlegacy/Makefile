@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/10/21 11:43:31 micha Exp $
+# $NetBSD: Makefile,v 1.11 2021/01/04 16:40:59 micha Exp $
 
-VERS=			1.48.6
+VERS=			1.48.8
 PKGNAME=		doomlegacy-${VERS}
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
@@ -60,6 +60,8 @@ SUBST_FILES.makeopt=	make_options
 SUBST_SED.makeopt=	-e 's,\#[ ]*COMP_ENVIRONMENT,COMP_ENVIRONMENT,'
 SUBST_SED.makeopt+=	-e 's,HAVE_LIBZIP,\# HAVE_LIBZIP,'
 SUBST_SED.makeopt+=	-e 's,HAVE_DLOPEN,\# HAVE_DLOPEN,'
+SUBST_SED.makeopt+=	-e 's,\# ARCH=-march=native,ARCH=-march=native,'
+SUBST_SED.makeopt+=	-e 's,ARCH=-march=i686,\# ARCH=-march=native,'
 
 # Configure defaults for LEGACYWADDIR and DOOMWADDIR
 SUBST_CLASSES+=		doomdef

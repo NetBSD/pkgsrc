@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.8 2020/10/21 11:43:31 micha Exp $
+$NetBSD: distinfo,v 1.9 2021/01/04 16:40:59 micha Exp $
 
-SHA1 (doomlegacy_1.48.6_common.zip) = 24662975b4f4d5fa0e4e09747029014159dcfe81
-RMD160 (doomlegacy_1.48.6_common.zip) = d5c0e8edc763d92e84494766f14c3ff995a60965
-SHA512 (doomlegacy_1.48.6_common.zip) = 92ab453df6c48397f1228e922e04d5426f445c87683265f6ee5543662631eeaf1696d2681c1d3015b2821a644241c1c691d1a6c7ba6abacf07eb4fce050e020f
-Size (doomlegacy_1.48.6_common.zip) = 1007223 bytes
-SHA1 (doomlegacy_1.48.6_source.tar.bz2) = e9bd0502bce476126cf43d8634119fa57b4c355b
-RMD160 (doomlegacy_1.48.6_source.tar.bz2) = 0885b29ad5c31bcb1b528feb3c227e6f63b495c3
-SHA512 (doomlegacy_1.48.6_source.tar.bz2) = af9bcc4ff188286c7551ca676e8195b8f51c47b27496bee43968cf37cfa731b137f1f9b136f1eb447da614919ab76df1faa61b9bb06d3d80144a683c2458e392
-Size (doomlegacy_1.48.6_source.tar.bz2) = 2434127 bytes
+SHA1 (doomlegacy_1.48.8_common.zip) = 536f387824d50208e7494547afd21a92a6ef877d
+RMD160 (doomlegacy_1.48.8_common.zip) = 7fa66010f384411972f052ecf3676ce22d43f267
+SHA512 (doomlegacy_1.48.8_common.zip) = 4b93aed03bcfd9eb0dd22f0b9231e93e63ee2cc0eee6a3a9854def384c4c290dbdb586eb8d888392c53d8a5d549718eb7b4f55cecb1c4924c03b18125876b292
+Size (doomlegacy_1.48.8_common.zip) = 1011350 bytes
+SHA1 (doomlegacy_1.48.8_source.tar.bz2) = d75a65b62ae30de21f22e112b3a87bb8035597ad
+RMD160 (doomlegacy_1.48.8_source.tar.bz2) = e5db4a6ea05ecd7678c70bcf57843bb9edc69526
+SHA512 (doomlegacy_1.48.8_source.tar.bz2) = 10dfe5ac20715b3c8ca2305f28d28bd5eada42a13a3aadad23bbf9b691e988561f26b61267816867b69e2854f86cc5c4ec876a4cb10fda157f971a4014db55ec
+Size (doomlegacy_1.48.8_source.tar.bz2) = 2451682 bytes
 SHA1 (patch-src_Makefile) = 34c323bdd96787cb6afe0be5dc99b129ab8f1552
 SHA1 (patch-src_am__map.c) = 14b3c8b70c63778ad043827ab2f0b6f4fe07bcde
 SHA1 (patch-src_doomdata.h) = 8c3186dafbf11a8a75262a06755dd9807cb58612
 SHA1 (patch-src_dstrings.c) = 16e50ac649f76d415b820a0e5093d15af3180e6d
-SHA1 (patch-src_p__local.h) = e429f2ce5d60dd538bc5e796847b53ae72604b33
-SHA1 (patch-src_p__setup.c) = e8a7c77f29bcf0e73f08864e932dd021e6652a3a
+SHA1 (patch-src_p__local.h) = ad6c770b95e87fb06e34ec7643e98f59d41e71f4
+SHA1 (patch-src_p__setup.c) = f478975acbc64627d4b2727fa77d1b1252ffc719
 SHA1 (patch-src_r__defs.h) = 91e6543674e3474c9afdb0ba19d6869b658d0543
