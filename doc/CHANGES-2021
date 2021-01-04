@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.122 2021/01/04 10:27:48 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.123 2021/01/04 10:27:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -150,3 +150,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ImageMagick to 7.0.10.54 [wiz 2021-01-04]
 	Updated textproc/enchant2 to 2.2.15 [wiz 2021-01-04]
 	Updated math/fftw to 3.3.9nb3 [wiz 2021-01-04]
+	Updated math/fftwf to 3.3.9 [wiz 2021-01-04]
