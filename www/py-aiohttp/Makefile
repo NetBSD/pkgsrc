@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2020/11/19 10:19:50 adam Exp $
+# $NetBSD: Makefile,v 1.48 2021/01/04 18:57:47 wiz Exp $
 
 DISTNAME=	aiohttp-3.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
 
@@ -12,7 +13,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=3.0:../../devel/py-async-timeout
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-chardet>=2.0<4.0:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-chardet>=2.0:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.5<7.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.0<2.0:../../www/py-yarl
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.5:../../devel/py-typing-extensions
