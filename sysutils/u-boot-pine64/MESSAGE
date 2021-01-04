@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/01/04 16:29:08 js Exp $
+
+Example command to install U-Boot to an SD card:
+
+# dd if=${LOCALBASE}/share/u-boot/pine64/u-boot-sunxi-with-spl.bin bs=1024 seek=8 of=/dev/rld1d
+
+===========================================================================
