@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20312 2021/01/04 17:58:03 wiz Exp $
+$NetBSD: TODO,v 1.20313 2021/01/04 18:05:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1072,7 +1072,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o telepathy-mission-control5-5.16.3
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
-	o tiff-4.2.0
 	o tig-2.2
 	o tigervnc-1.10.1 [quite unstable]
 	o tigervnc-1.11.0
