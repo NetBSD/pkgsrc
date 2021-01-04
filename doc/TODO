@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20309 2021/01/04 12:27:51 wiz Exp $
+$NetBSD: TODO,v 1.20310 2021/01/04 12:38:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -684,7 +684,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icewm-2.0.0
 	o icinga-base-2.12.3
 	o ike-2.0.1 [pkg/37032]
-	o ilmbase-2.5.4
 	o imapsync-1.678
 	o imp-6.2.12
 	o include-what-you-use-0.15
