@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.145 2021/01/04 12:24:21 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.146 2021/01/04 12:27:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -173,3 +173,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/utf8proc to 2.6.1 [wiz 2021-01-04]
 	Updated x11/xscreensaver to 5.45 [wiz 2021-01-04]
 	Updated x11/xscreensaver-demo to 5.45 [wiz 2021-01-04]
+	Updated net/wget to 1.21 [wiz 2021-01-04]
