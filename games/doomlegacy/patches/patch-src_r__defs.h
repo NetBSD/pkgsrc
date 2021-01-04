@@ -1,4 +1,4 @@
-$NetBSD: patch-src_r__defs.h,v 1.2 2020/10/21 11:43:31 micha Exp $
+$NetBSD: patch-src_r__defs.h,v 1.3 2021/01/04 16:40:59 micha Exp $
 
 Refer to segments and subsectors with 32-Bit values.
 
