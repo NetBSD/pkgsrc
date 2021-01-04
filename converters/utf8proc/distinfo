@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/11/29 18:11:13 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/01/04 12:16:30 wiz Exp $
 
-SHA1 (utf8proc-2.6.0.tar.gz) = e875747aefea56f98c1107c7527ae4537b360f54
-RMD160 (utf8proc-2.6.0.tar.gz) = 6e84c02275b87926006ca0bd4f9ce321cf7f1913
-SHA512 (utf8proc-2.6.0.tar.gz) = 1092347dfa0e0d7127bb5e5858ea901a5fe8725fb17d2f04c10f07e5a27230318b13fdce91273dd9d606c75bcc29d1c51b27c6a0f35b564c8905a6e6eb065346
-Size (utf8proc-2.6.0.tar.gz) = 182808 bytes
+SHA1 (utf8proc-2.6.1.tar.gz) = f21b3263081adfcbe102cfea8cd4cb02e71f0efc
+RMD160 (utf8proc-2.6.1.tar.gz) = 88640cf0405250a57497fbbc095e5b30d16f67bd
+SHA512 (utf8proc-2.6.1.tar.gz) = 9a09fe58a63c8c7983b8968b9b2c82f3d188724ed125097ea0de6a18d87569c678e226dc5de183108e47b3f068117e6bb352da1c3d24ebfd8018fb0b2346592e
+Size (utf8proc-2.6.1.tar.gz) = 182903 bytes
