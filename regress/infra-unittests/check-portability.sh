@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: check-portability.sh,v 1.5 2020/05/11 19:13:10 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.6 2021/01/04 21:07:31 rillig Exp $
 #
 # Test cases for mk/check/check-portability.*.
 #
@@ -8,7 +8,7 @@ set -eu
 
 . "./test.subr"
 
-# Runs the shell program for the given file.
+# Runs the shell program for all files in the current directory.
 check_portability_sh() {
 	env	PATCHDIR='patches' \
 		PREFIX='/nonexistent' \
@@ -242,6 +242,53 @@ if test_case_begin 'no experimental by default'; then
 
 	assert_that "$tmpdir/out" --file-is-empty
 	assert_that $exitcode --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin 'always skip tilde files'; then
+
+
+	# Projects that use GNU autoconf 2.70 are reported to include
+	# backup files like 'configure~' in their distribution, for
+	# whatever reason.  Since these files are not used by pkgsrc,
+	# they should be ignored.
+	#
+	# Since the filename is not one of the well-known ones, the file
+	# must start with a '#!' line to be actually recognized as a shell
+	# program.
+	create_file_lines 'configure~' \
+		'#! /bin/sh' \
+		'test a == b'
+
+	check_portability_sh \
+		'CHECK_PORTABILITY_EXPERIMENTAL=no'
+
+	create_file 'expected' <<'EOF'
+ERROR: [check-portability.awk] => Found test ... == ...:
+ERROR: [check-portability.awk] configure~:2: test a == b
+
+Explanation:
+===========================================================================
+The "test" command, as well as the "[" command, are not required to know
+the "==" operator. Only a few implementations like bash and some
+versions of ksh support it.
+
+When you run "test foo == foo" on a platform that does not support the
+"==" operator, the result will be "false" instead of "true". This can
+lead to unexpected behavior.
+
+There are two ways to fix this error message. If the file that contains
+the "test ==" is needed for building the package, you should create a
+patch for it, replacing the "==" operator with "=". If the file is not
+needed, add its name to the CHECK_PORTABILITY_SKIP variable in the
+package Makefile.
+===========================================================================
+
+EOF
+	assert_that "$tmpdir/out" --file-equals 'expected'
+	assert_that $exitcode --equals 1
 
 	test_case_end
 fi
