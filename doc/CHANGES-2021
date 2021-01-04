@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.117 2021/01/03 22:43:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.118 2021/01/04 08:07:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -145,3 +145,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-IP to 1.01 [adam 2021-01-03]
 	Updated www/py-sanic to 20.12.0 [adam 2021-01-03]
 	Updated devel/py-google-api-core to 1.24.1 [adam 2021-01-03]
+	Updated databases/prometheus to 2.23.0nb1 [adam 2021-01-04]
