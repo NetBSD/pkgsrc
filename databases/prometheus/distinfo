@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.22 2020/12/10 16:35:24 adam Exp $
+$NetBSD: distinfo,v 1.23 2021/01/04 09:57:18 adam Exp $
 
+SHA1 (prometheus-2.23.0-react-ui.tar.gz) = df5b9f951a570098db4bc9594838cce0b1ff15d9
+RMD160 (prometheus-2.23.0-react-ui.tar.gz) = ea464302d486bf00c1052f6997e5280dd6b7318a
+SHA512 (prometheus-2.23.0-react-ui.tar.gz) = 4a8a31aef5c4cdf9bf6603d986322938fdc9285d04a8d7e68fe22df0d6a9e03485bff3842b56496f277ff57fa09b7428981f5752ad70969d5c7be8e3b032a3c4
+Size (prometheus-2.23.0-react-ui.tar.gz) = 1682235 bytes
 SHA1 (prometheus-2.23.0.tar.gz) = c3b38b45f0496fe7b44d6b45c51586d977fbb24c
 RMD160 (prometheus-2.23.0.tar.gz) = 1839944d9607f3b046eee995381e1dee64220747
 SHA512 (prometheus-2.23.0.tar.gz) = cac78a69db38efc112bf6415623ba6b59c259d4e77c29f4e3d98df3d0aebf701f245a08f327b1ca3336fb72a1da3ef4c86c322831de2f095c342d67b111f7d6d
