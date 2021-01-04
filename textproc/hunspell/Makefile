@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/08/31 18:11:42 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/01/04 14:46:26 ryoon Exp $
 
 DISTNAME=	hunspell-1.7.0
 PKGREVISION=	3
@@ -35,7 +35,7 @@ PLIST_SUBST+=		DISTNAME=${DISTNAME}
 REPLACE_PERL=	src/tools/ispellaff2myspell
 
 post-patch:
-	cd ${WRKSRC} && ${TOOLS_PATH.autoreconf} -v -i
+	cd ${WRKSRC} && ${TOOLS_PATH.autoreconf} -v -i --force
 	
 
 .include "options.mk"
