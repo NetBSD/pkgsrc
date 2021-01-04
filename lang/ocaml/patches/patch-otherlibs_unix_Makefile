@@ -1,4 +1,4 @@
-$NetBSD: patch-otherlibs_unix_Makefile,v 1.1 2020/12/10 21:37:07 wiz Exp $
+$NetBSD: patch-otherlibs_unix_Makefile,v 1.2 2021/01/04 07:58:55 jperkin Exp $
 
 Honor LDFLAGS to fix RELRO build.
 
@@ -9,7 +9,7 @@ Honor LDFLAGS to fix RELRO build.
  
  # dllunix.so particularly requires libm for modf symbols
 -LDOPTS=$(NATIVECCLIBS)
-+LDOPTS=$(NATIVECCLIBS) "$(LDFLAGS)"
++LDOPTS=$(NATIVECCLIBS) $(LDFLAGS)
  
  COBJS=accept.o access.o addrofstr.o alarm.o bind.o channels.o chdir.o \
    chmod.o chown.o chroot.o close.o fsync.o closedir.o connect.o cst2constr.o \
