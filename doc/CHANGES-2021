@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.135 2021/01/04 11:50:10 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.136 2021/01/04 11:53:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -163,3 +163,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/p11-kit to 0.23.22 [wiz 2021-01-04]
 	Updated textproc/pugixml to 1.11.4 [wiz 2021-01-04]
 	Updated sysutils/py-borgbackup to 1.1.15 [wiz 2021-01-04]
+	Updated converters/py-chardet to 4.0.0 [wiz 2021-01-04]
