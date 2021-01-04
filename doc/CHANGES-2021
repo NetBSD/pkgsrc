@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.139 2021/01/04 12:01:53 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.140 2021/01/04 12:03:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -167,3 +167,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hypothesis to 5.46.0 [wiz 2021-01-04]
 	Updated devel/py-packaging to 20.8 [wiz 2021-01-04]
 	Updated devel/readline to 8.1 [wiz 2021-01-04]
+	Updated devel/spdlog to 1.8.2 [wiz 2021-01-04]
