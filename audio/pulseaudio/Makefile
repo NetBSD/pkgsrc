@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2021/01/03 14:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2021/01/04 22:34:54 wiz Exp $
 
 DISTNAME=	pulseaudio-14.0
 CATEGORIES=	audio
@@ -37,9 +37,6 @@ TOOL_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
 REPLACE_BASH=	src/utils/pa-info
-
-# backup file has "=="
-CHECK_PORTABILITY_SKIP+=	configure~
 
 .include "../../mk/bsd.prefs.mk"
 
