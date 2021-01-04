@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.123 2021/01/04 10:27:55 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.124 2021/01/04 10:39:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -151,3 +151,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/enchant2 to 2.2.15 [wiz 2021-01-04]
 	Updated math/fftw to 3.3.9nb3 [wiz 2021-01-04]
 	Updated math/fftwf to 3.3.9 [wiz 2021-01-04]
+	Updated shells/bash to 5.1.4 [wiz 2021-01-04]
