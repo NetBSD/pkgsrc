@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/10/24 11:52:30 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/01/04 10:39:23 wiz Exp $
 bin/bash
 bin/bashbug
 include/bash/alias.h
@@ -61,7 +61,10 @@ include/bash/xmalloc.h
 include/bash/y.tab.h
 info/bash.info
 lib/bash/Makefile.inc
+lib/bash/accept
 lib/bash/basename
+lib/bash/csv
+lib/bash/cut
 lib/bash/dirname
 lib/bash/fdflags
 lib/bash/finfo
@@ -71,12 +74,15 @@ lib/bash/ln
 lib/bash/loadables.h
 lib/bash/logname
 lib/bash/mkdir
+lib/bash/mkfifo
+lib/bash/mktemp
 lib/bash/mypid
 lib/bash/pathchk
 lib/bash/print
 lib/bash/printenv
 lib/bash/push
 lib/bash/realpath
+lib/bash/rm
 lib/bash/rmdir
 lib/bash/seq
 lib/bash/setpgid
@@ -123,6 +129,7 @@ ${PLIST.nls}share/locale/hu/LC_MESSAGES/bash.mo
 ${PLIST.nls}share/locale/id/LC_MESSAGES/bash.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/bash.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/bash.mo
+${PLIST.nls}share/locale/ko/LC_MESSAGES/bash.mo
 ${PLIST.nls}share/locale/lt/LC_MESSAGES/bash.mo
 ${PLIST.nls}share/locale/nb/LC_MESSAGES/bash.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/bash.mo
