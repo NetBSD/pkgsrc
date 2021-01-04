@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2019/05/24 15:56:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/01/04 10:27:37 wiz Exp $
 # used by math/fftw/Makefile
 # used by math/fftwf/Makefile
 
-DISTNAME=	fftw-3.3.8
+DISTNAME=	fftw-3.3.9
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/
 MASTER_SITES+=	http://www.fftw.org/
