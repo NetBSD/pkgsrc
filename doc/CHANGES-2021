@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.119 2021/01/04 09:58:05 adam Exp $
+$NetBSD: CHANGES-2021,v 1.120 2021/01/04 10:20:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -147,3 +147,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-google-api-core to 1.24.1 [adam 2021-01-03]
 	Updated databases/prometheus to 2.23.0nb1 [adam 2021-01-04]
 	Updated databases/prometheus to 2.23.0nb2 [adam 2021-01-04]
+	Updated graphics/ImageMagick to 7.0.10.54 [wiz 2021-01-04]
