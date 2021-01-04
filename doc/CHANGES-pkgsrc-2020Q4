@@ -1,3 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.1 2020/12/31 15:33:43 gdt Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.2 2021/01/04 17:40:25 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
+
+Pullup ticket #6388 - requested by wiz
+security/tor-browser: security fix
+
+Pullup ticket #6389 - requested by wiz
+security/tor-browser-noscript: dependent update
+
+Pullup ticket #6390 - requested by wiz
+security/p11-kit: security fix
+
+Pullup ticket #6391 - requested by taca
+mail/dovecot2: security fix
+
+Pullup ticket #6392 - requested by taca
+mail/dovecot2-pigeonhole: dependent update
+
