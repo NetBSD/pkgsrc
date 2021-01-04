@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.143 2021/01/04 12:16:38 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.144 2021/01/04 12:23:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -171,3 +171,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/strawberry to 0.8.5 [wiz 2021-01-04]
 	Updated textproc/ugrep to 3.1.1 [wiz 2021-01-04]
 	Updated converters/utf8proc to 2.6.1 [wiz 2021-01-04]
+	Updated x11/xscreensaver to 5.45 [wiz 2021-01-04]
