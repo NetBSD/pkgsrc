@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: check-portability.sh,v 1.6 2021/01/04 21:07:31 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.7 2021/01/04 21:10:01 rillig Exp $
 #
 # Test cases for mk/check/check-portability.*.
 #
@@ -265,30 +265,8 @@ if test_case_begin 'always skip tilde files'; then
 	check_portability_sh \
 		'CHECK_PORTABILITY_EXPERIMENTAL=no'
 
-	create_file 'expected' <<'EOF'
-ERROR: [check-portability.awk] => Found test ... == ...:
-ERROR: [check-portability.awk] configure~:2: test a == b
-
-Explanation:
-===========================================================================
-The "test" command, as well as the "[" command, are not required to know
-the "==" operator. Only a few implementations like bash and some
-versions of ksh support it.
-
-When you run "test foo == foo" on a platform that does not support the
-"==" operator, the result will be "false" instead of "true". This can
-lead to unexpected behavior.
-
-There are two ways to fix this error message. If the file that contains
-the "test ==" is needed for building the package, you should create a
-patch for it, replacing the "==" operator with "=". If the file is not
-needed, add its name to the CHECK_PORTABILITY_SKIP variable in the
-package Makefile.
-===========================================================================
-
-EOF
-	assert_that "$tmpdir/out" --file-equals 'expected'
-	assert_that $exitcode --equals 1
+	assert_that "$tmpdir/out" --file-is-empty
+	assert_that $exitcode --equals 0
 
 	test_case_end
 fi
