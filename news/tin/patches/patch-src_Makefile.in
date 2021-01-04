@@ -1,20 +1,10 @@
-$NetBSD: patch-src_Makefile.in,v 1.2 2019/01/15 15:48:17 wiz Exp $
+$NetBSD: patch-src_Makefile.in,v 1.3 2021/01/04 15:30:46 micha Exp $
 
-Do not link internal static libcanlock.
 Do not install mbox manpage.
 
---- src/Makefile.in.orig
+--- src/Makefile.in.orig	2020-12-01 10:52:35.000000000 +0000
 +++ src/Makefile.in
-@@ -208,7 +208,7 @@ EXTRAOBJS = @EXTRAOBJS@
- EXTRA_INTLLIBS = @INTLDIR_MAKE@ @INTLLIBS@
- EXTRA_PCREHDRS = @PCREDIR_MAKE@ ../pcre/pcre.h
- EXTRA_PCRELIBS = @PCREDIR_MAKE@ ../pcre/$(PRELIB)pcre.a
--EXTRA_CANLIBS = @CANDIR_MAKE@ ../libcanlock/$(PRELIB)canlock.a
-+#EXTRA_CANLIBS = @CANDIR_MAKE@ ../libcanlock/$(PRELIB)canlock.a
- EXTRALIBS = $(EXTRA_INTLLIBS) $(EXTRA_PCRELIBS) $(EXTRA_CANLIBS)
- 
- OFILES	= @ALLOCA@ $(EXTRAOBJS) \
-@@ -340,7 +340,6 @@ install_manpage : $(DESTDIR)$(INS_MANUAL
+@@ -345,7 +345,6 @@ install_manpage : $(DESTDIR)$(INS_MANUAL
  	@-$(RM) -f $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
  	@$(ECHO) ".so $(INS_MANUAL_DIR)5/$(PROJECT).5" > $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
  	@$(CHMOD) 444 $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
