@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.24 2020/10/27 09:29:11 jperkin Exp $
+$NetBSD: distinfo,v 1.25 2021/01/04 14:32:17 prlw1 Exp $
 
-SHA1 (cups-2.3.3-source.tar.gz) = 7a01c9fba5d784eb61eda03fd40e513fd2a1b5b8
-RMD160 (cups-2.3.3-source.tar.gz) = e08afd09666e79d0416f46e14fb8c6b0a6beebd7
-SHA512 (cups-2.3.3-source.tar.gz) = 7d6f4a01794c5599cc71525778ea785fd17271c31ac146a56e8fc374a88f99e4035d018dae48e37e541455e9cc93b302e892b2e93ec558c1b4bfc46dad68c92d
-Size (cups-2.3.3-source.tar.gz) = 8140741 bytes
+SHA1 (cups-2.3.3op1-source.tar.gz) = a4cdab174881d4e6899fbbef637508bed10c5dc9
+RMD160 (cups-2.3.3op1-source.tar.gz) = 6dab18506dfac295c16e4341eb6257f3c01d951e
+SHA512 (cups-2.3.3op1-source.tar.gz) = 89949b4190288d5464f425cbff6b854e9da96ba3071e4e0d595ad581797b2db4724f49d884f3ea43e372ed4d0faec72839b0b7182cdde13b96f2824d619a4843
+Size (cups-2.3.3op1-source.tar.gz) = 7989156 bytes
 SHA1 (patch-ae) = b81d7a2ce457f0d6994d6a084c63aa0a870bb881
-SHA1 (patch-af) = 7f32b1ddaa18d1e58670e5214b954e3b8476a22b
 SHA1 (patch-ai) = d4aa1b59c77fa2cbf614eb661d9a791311b399c2
 SHA1 (patch-airprint-conf_mime.convs.in) = e0813b7e1da2337191bc6bfc2a6888f4173b8717
 SHA1 (patch-airprint-scheduler_conf.c) = 504e752c1699049cdbe11d8b04814670ddda81d4
@@ -16,11 +15,9 @@ SHA1 (patch-conf-cups-files.conf.in) = b2eccf54e108d8c9e70094acfd9618a66779a84a
 SHA1 (patch-conf_Makefile) = ba1c6f9e5c1bb8074038f65f4d17bf55e556738e
 SHA1 (patch-config-scripts_cups-compiler.m4) = 71c706121fdf7db699a9b9365ac63779e3c23f67
 SHA1 (patch-config-scripts_cups-directories.m4) = 68ff0c9ed333d5b00d11694fca7875c83bf9197d
-SHA1 (patch-config-scripts_cups-dnssd.m4) = 7dd3b0d754e92f3b3f53732163a8001e5fb430c5
 SHA1 (patch-config-scripts_cups-gssapi.m4) = 965e54194de9f34f0f252f4993dcf8a8db935003
 SHA1 (patch-config-scripts_cups-libtool.m4) = d255bda2b740a04167e20be1662e3b9c242ed8f2
 SHA1 (patch-cups-tls.c) = b02bc528b6d551283373f271529d6f1956e1c7df
-SHA1 (patch-cups_getifaddrs-internal.h) = 2e251db9e4d1b01403f3ff8c61a2238a506c12d8
 SHA1 (patch-cups_http-addrlist.c) = aa2524ee1c11450cfa3a46b1aa34c12417322241
 SHA1 (patch-cups_thread.c) = 7ffb9a5835f345b29ad0cc9e253bb1d7ead9a399
 SHA1 (patch-doc-help-man-cups-files.conf.html) = c26754104788eb619e69e49d6d51bf84ab047876
