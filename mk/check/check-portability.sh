@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.22 2020/05/05 05:55:26 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.23 2021/01/04 21:10:01 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -55,10 +55,11 @@ find ./* -type f -print 2>/dev/null \
 
 		skip=no
 		eval "case \"\$fname\" in $SKIP_FILTER *.orig) skip=yes;; esac"
-		case "$fname" in *.in)
-			case ",$patched_files," in *,"${fname%.in}",*)
+		case "$fname" in
+		*.in)	case ",$patched_files," in *,"${fname%.in}",*)
 				skip=yes
-			esac
+			esac;;
+		*~)	skip=yes;;
 		esac
 		[ $skip = no ] || continue
 
