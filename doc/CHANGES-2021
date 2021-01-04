@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.156 2021/01/04 16:42:35 micha Exp $
+$NetBSD: CHANGES-2021,v 1.157 2021/01/04 17:58:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/py-jedi to 0.18.0 [adam 2021-01-04]
 	Updated devel/py-msgpack to 1.0.2 [adam 2021-01-04]
 	Updated games/doomlegacy to 1.48.8 [micha 2021-01-04]
+	Updated print/poppler to 21.01.0 [wiz 2021-01-04]
