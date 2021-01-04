@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST.opengl,v 1.7 2020/04/05 17:30:36 gutteridge Exp $
+@comment $NetBSD: PLIST.opengl,v 1.8 2021/01/04 12:23:32 wiz Exp $
 bin/xscreensaver-gl-helper
 libexec/xscreensaver/antinspect
 libexec/xscreensaver/antmaze
 libexec/xscreensaver/antspotlight
 libexec/xscreensaver/atlantis
 libexec/xscreensaver/atunnel
+libexec/xscreensaver/beats
 libexec/xscreensaver/blinkbox
 libexec/xscreensaver/blocktube
 libexec/xscreensaver/boing
@@ -21,6 +22,7 @@ libexec/xscreensaver/config/antmaze.xml
 libexec/xscreensaver/config/antspotlight.xml
 libexec/xscreensaver/config/atlantis.xml
 libexec/xscreensaver/config/atunnel.xml
+libexec/xscreensaver/config/beats.xml
 libexec/xscreensaver/config/blinkbox.xml
 libexec/xscreensaver/config/blocktube.xml
 libexec/xscreensaver/config/boing.xml
@@ -32,6 +34,7 @@ libexec/xscreensaver/config/carousel.xml
 libexec/xscreensaver/config/circuit.xml
 libexec/xscreensaver/config/cityflow.xml
 libexec/xscreensaver/config/companioncube.xml
+libexec/xscreensaver/config/covid19.xml
 libexec/xscreensaver/config/crackberg.xml
 libexec/xscreensaver/config/crumbler.xml
 libexec/xscreensaver/config/cube21.xml
@@ -73,6 +76,7 @@ libexec/xscreensaver/config/glsnake.xml
 libexec/xscreensaver/config/gltext.xml
 libexec/xscreensaver/config/gravitywell.xml
 libexec/xscreensaver/config/handsy.xml
+libexec/xscreensaver/config/headroom.xml
 libexec/xscreensaver/config/hexstrut.xml
 libexec/xscreensaver/config/hilbert.xml
 libexec/xscreensaver/config/hydrostat.xml
@@ -114,6 +118,7 @@ libexec/xscreensaver/config/sballs.xml
 libexec/xscreensaver/config/sierpinski3d.xml
 libexec/xscreensaver/config/skytentacles.xml
 libexec/xscreensaver/config/sonar.xml
+libexec/xscreensaver/config/sphereeversion.xml
 libexec/xscreensaver/config/spheremonics.xml
 libexec/xscreensaver/config/splitflap.xml
 libexec/xscreensaver/config/splodesic.xml
@@ -132,6 +137,7 @@ libexec/xscreensaver/config/unknownpleasures.xml
 libexec/xscreensaver/config/vigilance.xml
 libexec/xscreensaver/config/voronoi.xml
 libexec/xscreensaver/config/winduprobot.xml
+libexec/xscreensaver/covid19
 libexec/xscreensaver/crackberg
 libexec/xscreensaver/crumbler
 libexec/xscreensaver/cube21
@@ -173,6 +179,7 @@ libexec/xscreensaver/glsnake
 libexec/xscreensaver/gltext
 libexec/xscreensaver/gravitywell
 libexec/xscreensaver/handsy
+libexec/xscreensaver/headroom
 libexec/xscreensaver/hexstrut
 libexec/xscreensaver/hilbert
 libexec/xscreensaver/hydrostat
@@ -214,6 +221,7 @@ libexec/xscreensaver/sballs
 libexec/xscreensaver/sierpinski3d
 libexec/xscreensaver/skytentacles
 libexec/xscreensaver/sonar
+libexec/xscreensaver/sphereeversion
 libexec/xscreensaver/spheremonics
 libexec/xscreensaver/splitflap
 libexec/xscreensaver/splodesic
@@ -237,6 +245,7 @@ man/man6/antmaze.6
 man/man6/antspotlight.6
 man/man6/atlantis.6
 man/man6/atunnel.6
+man/man6/beats.6
 man/man6/blinkbox.6
 man/man6/blocktube.6
 man/man6/boing.6
@@ -248,6 +257,7 @@ man/man6/carousel.6
 man/man6/circuit.6
 man/man6/cityflow.6
 man/man6/companioncube.6
+man/man6/covid19.6
 man/man6/crackberg.6
 man/man6/crumbler.6
 man/man6/cube21.6
@@ -289,6 +299,7 @@ man/man6/glsnake.6
 man/man6/gltext.6
 man/man6/gravitywell.6
 man/man6/handsy.6
+man/man6/headroom.6
 man/man6/hexstrut.6
 man/man6/hilbert.6
 man/man6/hydrostat.6
@@ -330,6 +341,7 @@ man/man6/sballs.6
 man/man6/sierpinski3d.6
 man/man6/skytentacles.6
 man/man6/sonar.6
+man/man6/sphereeversion.6
 man/man6/spheremonics.6
 man/man6/splitflap.6
 man/man6/splodesic.6

@@ -1,12 +1,12 @@
-$NetBSD: patch-hacks_images_Makefile.in,v 1.1 2020/01/18 23:59:51 tnn Exp $
+$NetBSD: patch-hacks_images_Makefile.in,v 1.2 2021/01/04 12:23:32 wiz Exp $
 
---- hacks/images/Makefile.in.orig	2020-01-09 22:14:28.085388682 +0000
+--- hacks/images/Makefile.in.orig	2020-12-03 22:13:45.000000000 +0000
 +++ hacks/images/Makefile.in
 @@ -33,6 +33,7 @@ gen:
  # %.png dependency below works because VPATH contains subdirs
  # of 'images' dir not only 'images' itself
  gen/%_png.h: %.png
 +	mkdir -p gen
- 	echo $(UTILS_SRC)/bin2c "$<" "$@"
  	$(UTILS_SRC)/bin2c "$<" "$@"
  
+ clean:
