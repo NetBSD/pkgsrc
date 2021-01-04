@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.16 2020/06/07 05:53:53 rillig Exp $
+# $NetBSD: test.subr,v 1.17 2021/01/04 21:11:43 rillig Exp $
 #
 # This file defines utilities for testing Makefile fragments and shell
 # programs from the pkgsrc infrastructure. While testing one part of the
@@ -15,7 +15,7 @@
 # These functions form the structure for a test. To define a test, use the
 # following pattern:
 #
-# 	if test_case_begin "description of the test"; then
+# 	if test_case_begin 'description of the test'; then
 #		...
 #		test_case_end
 #	fi
@@ -47,9 +47,9 @@
 #	Example:
 #
 #	hello=$(mock_cmd mock-hello \
-#		--when-args "" --then-output "Hello, world!" \
-#		--when-args "-t" --then-output "hello, world" \
-#		--when-args "-?" --then-exit 1
+#		--when-args '' --then-output 'Hello, world!' \
+#		--when-args '-t' --then-output 'hello, world' \
+#		--when-args '-?' --then-exit 1
 #	)
 #
 # create_file $filename <<EOF ... EOF
@@ -70,7 +70,7 @@
 #
 #	Example:
 #
-#	create_pkgsrc_file "mk/pkg-build-options.mk" <<EOF
+#	create_pkgsrc_file 'mk/pkg-build-options.mk' <<EOF
 #	# nothing
 #	EOF
 #
@@ -135,7 +135,7 @@ while getopts 'kvf:' opt; do
 	esac
 done
 
-pkgsrcdir=""
+pkgsrcdir=''
 for relative_pkgsrcdir in . .. ../.. ../../..; do
 	if [ -f "$relative_pkgsrcdir/mk/bsd.pkg.mk" ]; then
 		pkgsrcdir="$PWD/$relative_pkgsrcdir"
@@ -151,7 +151,7 @@ verbose_printf() {
 	$if_verbose printf "$@"
 }
 
-test_case_name="unknown test"
+test_case_name='unknown test'
 test_case_begun=0
 test_case_ended=0
 
@@ -189,7 +189,7 @@ test_case_end() {
 	|| assert_fail 'unbalanced test_case_begin (%d) and test_case_end (%d)\n' \
 		"$test_case_begun" "$test_case_ended"
 
-	test_case_name="unknown test"
+	test_case_name='unknown test'
 }
 
 test_subr_cleanup() {
@@ -199,7 +199,7 @@ test_subr_cleanup() {
 		exit $exit_status
 	fi
 
-	[ "$cleanup" = "yes" ] && rm -rf "$tmpdir"
+	[ "$cleanup" = 'yes' ] && rm -rf "$tmpdir"
 
 	verbose_printf '%s%d assertions succeeded, %d failed\n' \
 		"$assert_fail_sep" "$assert_succeeded" "$assert_failed"
@@ -208,7 +208,7 @@ test_subr_cleanup() {
 		exit 1
 	fi
 }
-trap "test_subr_cleanup" EXIT
+trap 'test_subr_cleanup' EXIT
 
 mock_cmd() {
 	cmdname="$1"
@@ -343,12 +343,12 @@ assert_that() {
 		;;
 
 	(--file-is-empty)
-		if files_equal "/dev/null" "$1"; then
+		if files_equal '/dev/null' "$1"; then
 			assert_succeed
 			return 0
 		fi
 		assert_fail 'file "%s" is not empty:\n' "$1"
-		diff_without_timestamps "/dev/null" "$1"
+		diff_without_timestamps '/dev/null' "$1"
 		;;
 
 	(--file-is-lines)
