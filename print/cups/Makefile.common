@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.12 2020/05/26 08:37:49 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.13 2021/01/04 14:32:17 prlw1 Exp $
 #
 # used by print/cups/Makefile
 # used by print/cups-base/Makefile
 # used by print/libcups/Makefile
 
-CUPS_VERS=	2.3.3
+CUPS_VERS=	2.3.3op1
 DISTNAME=	cups-${CUPS_VERS}-source
 CATEGORIES=	print
 
-HOMEPAGE=	https://www.cups.org/
+HOMEPAGE=	https://openprinting.github.io/projects/00-cups/
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
