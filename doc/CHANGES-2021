@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.125 2021/01/04 10:41:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.126 2021/01/04 10:41:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -153,3 +153,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/fftwf to 3.3.9 [wiz 2021-01-04]
 	Updated shells/bash to 5.1.4 [wiz 2021-01-04]
 	Updated databases/gdbm to 1.19 [wiz 2021-01-04]
+	Updated databases/gdbm_compat to 1.19 [wiz 2021-01-04]
