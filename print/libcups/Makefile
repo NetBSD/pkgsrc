@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/01/04 13:08:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/01/04 14:32:17 prlw1 Exp $
 
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	libcups-${CUPS_VERS}
-PKGREVISION=	5
-MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenPrinting/}
 
 MAINTAINER=	sbd@NetBSD.org
 COMMENT=	Common UNIX Printing System library
