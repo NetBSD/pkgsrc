@@ -1,0 +1,15 @@
+$NetBSD: patch-hacks_Makefile.in,v 1.3 2021/01/04 23:51:41 gutteridge Exp $
+
+Fix !opengl packaging.
+
+--- hacks/Makefile.in.orig	2020-12-08 17:53:16.000000000 +0000
++++ hacks/Makefile.in
+@@ -130,7 +130,7 @@ SCRIPTS		= vidwhacker webcollage ljlates
+ # but that are not shipped with xscreensaver itself.
+ #
+ EXTERNALS	= cosmos electricsheep fireflies goban \
+-		  sphereeversion ssystem xaos xdaliclock xearth xfishtank \
++		  ssystem xaos xdaliclock xearth xfishtank \
+ 		  xmountains xplanet xsnow
+ 
+ OBJS		= attraction.o blitspin.o bouboule.o braid.o bubbles.o \
