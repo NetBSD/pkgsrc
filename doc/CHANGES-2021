@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.127 2021/01/04 10:50:43 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.128 2021/01/04 10:54:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/gdbm to 1.19 [wiz 2021-01-04]
 	Updated databases/gdbm_compat to 1.19 [wiz 2021-01-04]
 	Updated finance/gnucash to 4.4 [wiz 2021-01-04]
+	Updated finance/gnucash-docs to 4.4 [wiz 2021-01-04]
