@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/01/04 14:32:17 prlw1 Exp $
+#$NetBSD: Makefile,v 1.9 2021/01/04 22:33:48 wiz Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -37,8 +37,6 @@ CONFIGURE_ARGS+=	--disable-cdsassl
 CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
-
-CHECK_PORTABILITY_SKIP+=	configure~
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
