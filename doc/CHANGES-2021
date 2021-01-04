@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.137 2021/01/04 11:55:11 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.138 2021/01/04 12:00:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -165,3 +165,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-borgbackup to 1.1.15 [wiz 2021-01-04]
 	Updated converters/py-chardet to 4.0.0 [wiz 2021-01-04]
 	Updated devel/py-hypothesis to 5.46.0 [wiz 2021-01-04]
+	Updated devel/py-packaging to 20.8 [wiz 2021-01-04]
