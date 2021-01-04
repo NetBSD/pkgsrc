@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.130 2020/04/03 20:49:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.131 2021/01/04 12:23:32 wiz Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
 
-DISTNAME=		xscreensaver-5.44
+DISTNAME=		xscreensaver-5.45
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 DIST_SUBDIR=		xscreensaver
