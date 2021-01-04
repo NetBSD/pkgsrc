@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2021/01/01 20:44:48 he Exp $
+# $NetBSD: options.mk,v 1.9 2021/01/04 10:12:42 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
-PKG_SUPPORTED_OPTIONS=	# empty
+PKG_SUPPORTED_OPTIONS+=	rust-cargo-static
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -14,8 +14,9 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 .  endif
 .endif
 
-PKG_SUPPORTED_OPTIONS+=	rust-cargo-static
+.if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
+.endif
 
 .include "../../mk/bsd.options.mk"
 
