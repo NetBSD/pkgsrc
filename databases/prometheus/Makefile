@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2020/12/10 16:35:24 adam Exp $
+# $NetBSD: Makefile,v 1.42 2021/01/04 08:06:51 adam Exp $
+
+# Important: UI has to be manually built. See pre-configure below.
 
 DISTNAME=	prometheus-2.23.0
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -43,6 +46,16 @@ INSTALLATION_DIRS+=	bin ${EXAMPLE_DIR} ${WEBUI_DIR}
 .for f in ${EXAMPLE_FILES}
 CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+# Requirement: devel/yarn
+# cd ${WRKSRC}/web/ui/react-app
+# yarn
+# env PUBLIC_URL=. yarn build
+# rm -r ${FILESDIR}/react
+# mv build ${FILESDIR}/react
+pre-configure:
+	cd ${FILESDIR} && \
+	${PAX} -rw -s '|.*/CVS/.*||' react ${WRKSRC}/web/ui/static/
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml \
