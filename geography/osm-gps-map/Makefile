@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2020/11/05 09:08:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2021/01/04 11:31:18 ryoon Exp $
 
-DISTNAME=	osm-gps-map-1.0.2
-PKGREVISION=	27
+DISTNAME=	osm-gps-map-1.1.0
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nzjrs/}
-GITHUB_RELEASE=	1.0.2
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nzjrs/osm-gps-map/
@@ -16,8 +15,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	osmgpsmap-1.0.pc.in
-
-CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
