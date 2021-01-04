@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/08/24 07:59:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/01/04 10:41:13 wiz Exp $
 bin/gdbm_dump
 bin/gdbm_load
 bin/gdbmtool
@@ -18,6 +18,7 @@ share/locale/fr/LC_MESSAGES/gdbm.mo
 share/locale/ja/LC_MESSAGES/gdbm.mo
 share/locale/pl/LC_MESSAGES/gdbm.mo
 share/locale/pt_BR/LC_MESSAGES/gdbm.mo
+share/locale/ru/LC_MESSAGES/gdbm.mo
 share/locale/sr/LC_MESSAGES/gdbm.mo
 share/locale/sv/LC_MESSAGES/gdbm.mo
 share/locale/uk/LC_MESSAGES/gdbm.mo
