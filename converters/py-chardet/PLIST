@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/04/19 17:24:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/01/04 11:53:14 wiz Exp $
 bin/chardetect-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -80,9 +80,6 @@ ${PYSITELIB}/chardet/jpcntx.pyo
 ${PYSITELIB}/chardet/langbulgarianmodel.py
 ${PYSITELIB}/chardet/langbulgarianmodel.pyc
 ${PYSITELIB}/chardet/langbulgarianmodel.pyo
-${PYSITELIB}/chardet/langcyrillicmodel.py
-${PYSITELIB}/chardet/langcyrillicmodel.pyc
-${PYSITELIB}/chardet/langcyrillicmodel.pyo
 ${PYSITELIB}/chardet/langgreekmodel.py
 ${PYSITELIB}/chardet/langgreekmodel.pyc
 ${PYSITELIB}/chardet/langgreekmodel.pyo
@@ -92,6 +89,9 @@ ${PYSITELIB}/chardet/langhebrewmodel.pyo
 ${PYSITELIB}/chardet/langhungarianmodel.py
 ${PYSITELIB}/chardet/langhungarianmodel.pyc
 ${PYSITELIB}/chardet/langhungarianmodel.pyo
+${PYSITELIB}/chardet/langrussianmodel.py
+${PYSITELIB}/chardet/langrussianmodel.pyc
+${PYSITELIB}/chardet/langrussianmodel.pyo
 ${PYSITELIB}/chardet/langthaimodel.py
 ${PYSITELIB}/chardet/langthaimodel.pyc
 ${PYSITELIB}/chardet/langthaimodel.pyo
@@ -110,6 +110,12 @@ ${PYSITELIB}/chardet/mbcsgroupprober.pyo
 ${PYSITELIB}/chardet/mbcssm.py
 ${PYSITELIB}/chardet/mbcssm.pyc
 ${PYSITELIB}/chardet/mbcssm.pyo
+${PYSITELIB}/chardet/metadata/__init__.py
+${PYSITELIB}/chardet/metadata/__init__.pyc
+${PYSITELIB}/chardet/metadata/__init__.pyo
+${PYSITELIB}/chardet/metadata/languages.py
+${PYSITELIB}/chardet/metadata/languages.pyc
+${PYSITELIB}/chardet/metadata/languages.pyo
 ${PYSITELIB}/chardet/sbcharsetprober.py
 ${PYSITELIB}/chardet/sbcharsetprober.pyc
 ${PYSITELIB}/chardet/sbcharsetprober.pyo

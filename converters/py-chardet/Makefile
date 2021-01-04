@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2020/10/06 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/01/04 11:53:14 wiz Exp $
 
-DISTNAME=	chardet-3.0.4
+DISTNAME=	chardet-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chardet/}
