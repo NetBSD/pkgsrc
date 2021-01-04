@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.130 2021/01/04 11:09:41 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.131 2021/01/04 11:31:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -158,3 +158,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/gnucash-docs to 4.4 [wiz 2021-01-04]
 	Updated graphics/libheif to 1.10.0 [wiz 2021-01-04]
 	Updated audio/libshout to 2.4.5 [wiz 2021-01-04]
+	Updated geography/osm-gps-map to 1.1.0 [ryoon 2021-01-04]
