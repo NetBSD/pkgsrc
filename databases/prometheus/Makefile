@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2021/01/04 08:06:51 adam Exp $
+# $NetBSD: Makefile,v 1.43 2021/01/04 09:57:18 adam Exp $
 
-# Important: UI has to be manually built. See pre-configure below.
+# Important: UI has to be manually built. See instructions below.
 
 DISTNAME=	prometheus-2.23.0
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://prometheus.io/
 COMMENT=	The Prometheus monitoring system and time series database
 LICENSE=	apache-2.0
+
+# To generate UI distfile, install devel/yarn, and:
+# tar zxf ${DISTNAME}${EXTRACT_SUFX}
+# cd web/ui/react-app
+# yarn --frozen-lockfile
+# env PUBLIC_URL=. yarn build
+# chmod -x build/favicon.ico build/manifest.json
+# mv build ../static/react
+# cd ../../../..
+# tar zcf ${DISTNAME}-react-ui.tar.gz ${DISTNAME}/web/ui/static/react
+REACT_UI_DIST=		${DISTNAME}-react-ui.tar.gz
+SITES.${REACT_UI_DIST}=	${MASTER_SITE_LOCAL}
+DISTFILES=		${DEFAULT_DISTFILES} ${REACT_UI_DIST}
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/prometheus/prometheus
@@ -46,16 +59,6 @@ INSTALLATION_DIRS+=	bin ${EXAMPLE_DIR} ${WEBUI_DIR}
 .for f in ${EXAMPLE_FILES}
 CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-
-# Requirement: devel/yarn
-# cd ${WRKSRC}/web/ui/react-app
-# yarn
-# env PUBLIC_URL=. yarn build
-# rm -r ${FILESDIR}/react
-# mv build ${FILESDIR}/react
-pre-configure:
-	cd ${FILESDIR} && \
-	${PAX} -rw -s '|.*/CVS/.*||' react ${WRKSRC}/web/ui/static/
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml \
