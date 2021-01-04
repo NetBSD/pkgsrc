@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2020/10/06 10:52:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/01/04 11:55:03 wiz Exp $
 bin/hypothesis
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -43,6 +43,9 @@ ${PYSITELIB}/hypothesis/extra/__init__.pyo
 ${PYSITELIB}/hypothesis/extra/cli.py
 ${PYSITELIB}/hypothesis/extra/cli.pyc
 ${PYSITELIB}/hypothesis/extra/cli.pyo
+${PYSITELIB}/hypothesis/extra/codemods.py
+${PYSITELIB}/hypothesis/extra/codemods.pyc
+${PYSITELIB}/hypothesis/extra/codemods.pyo
 ${PYSITELIB}/hypothesis/extra/dateutil.py
 ${PYSITELIB}/hypothesis/extra/dateutil.pyc
 ${PYSITELIB}/hypothesis/extra/dateutil.pyo
