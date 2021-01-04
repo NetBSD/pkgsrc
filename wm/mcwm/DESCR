@@ -1,0 +1,6 @@
+mcwm is a minimalist window manager for the X Window System written from
+scratch in C directly on top of XCB. It is a traditional floating window
+manager with a lot of features but without the bloat.
+
+In mcwm all functions, including move and resize, are available from the
+keyboard but a pointing device can be used for move, resize and raise/lower.
