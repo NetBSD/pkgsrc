@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.152 2021/01/04 14:59:41 taca Exp $
+$NetBSD: CHANGES-2021,v 1.153 2021/01/04 15:33:20 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/dovecot2-pgsql to 2.3.13 [taca 2021-01-04]
 	Updated mail/dovecot2-sqlite to 2.3.13 [taca 2021-01-04]
 	Updated mail/dovecot2-pigeonhole to 0.5.13 [taca 2021-01-04]
+	Updated news/tin to 2.4.5 [micha 2021-01-04]
