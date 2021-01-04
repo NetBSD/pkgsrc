@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.149 2021/01/04 14:32:42 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.150 2021/01/04 14:39:23 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -177,3 +177,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ilmbase to 2.5.4 [wiz 2021-01-04]
 	Updated graphics/openexr to 2.5.4 [wiz 2021-01-04]
 	Updated print/cups to 2.3.3op1 [prlw1 2021-01-04]
+	Updated print/cups-filters to 1.28.6 [prlw1 2021-01-04]
