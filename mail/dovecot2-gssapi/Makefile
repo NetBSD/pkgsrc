@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/12/03 19:30:01 markd Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2021/01/04 17:34:04 bsiegert Exp $
 
 .include "../../mail/dovecot2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dovecot/dovecot-gssapi/}
-PKGREVISION=	1
 COMMENT+=	(GSSAPI plugin)
 
 CONFIGURE_ARGS+=	--with-gssapi=plugin
