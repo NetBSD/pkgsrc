@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/11/04 21:53:18 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/01/04 08:06:51 adam Exp $
 bin/prometheus
 bin/promtool
 share/examples/prometheus/console_libraries/menu.lib
@@ -26,6 +26,23 @@ share/prometheus/static/js/graph/graph_template.handlebar
 share/prometheus/static/js/graph/index.js
 share/prometheus/static/js/prom_console.js
 share/prometheus/static/js/targets.js
+share/prometheus/static/react/asset-manifest.json
+share/prometheus/static/react/favicon.ico
+share/prometheus/static/react/index.html
+share/prometheus/static/react/manifest.json
+share/prometheus/static/react/precache-manifest.600e18226bdf38566b4336cf73cd409f.js
+share/prometheus/static/react/service-worker.js
+share/prometheus/static/react/static/css/2.3cee880a.chunk.css
+share/prometheus/static/react/static/css/2.3cee880a.chunk.css.map
+share/prometheus/static/react/static/css/main.1087ae1e.chunk.css
+share/prometheus/static/react/static/css/main.1087ae1e.chunk.css.map
+share/prometheus/static/react/static/js/2.57113e20.chunk.js
+share/prometheus/static/react/static/js/2.57113e20.chunk.js.LICENSE.txt
+share/prometheus/static/react/static/js/2.57113e20.chunk.js.map
+share/prometheus/static/react/static/js/main.ca4ac742.chunk.js
+share/prometheus/static/react/static/js/main.ca4ac742.chunk.js.map
+share/prometheus/static/react/static/js/runtime-main.7e00e584.js
+share/prometheus/static/react/static/js/runtime-main.7e00e584.js.map
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.css
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.css.map
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.min.css
