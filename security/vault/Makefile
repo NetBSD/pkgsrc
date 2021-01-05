@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2020/11/13 19:26:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.60 2021/01/05 11:02:51 he Exp $
 
-DISTNAME=	vault-1.5.3
-PKGREVISION=	3
+DISTNAME=	vault-1.6.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -11,9 +10,12 @@ COMMENT=	Tool for managing secrets
 LICENSE=	mpl-2.0
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+WORKSRC=	${PKGNAME}
 
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/hashicorp/vault
+GO_DIST_BASE=		${DISTNAME}
+GO_SRCPATH=		github.com/hashicorp/vault
+# no "..." suffix here, triggered upstream ticket #10330 and #10638
+GO_BUILD_PATTERN=	${GO_SRCPATH}/
 
 USE_TOOLS+=		bash gmake
 
