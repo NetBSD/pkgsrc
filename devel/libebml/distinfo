@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2020/06/29 15:08:26 adam Exp $
+$NetBSD: distinfo,v 1.37 2021/01/05 12:39:10 adam Exp $
 
-SHA1 (libebml-1.4.0.tar.xz) = a81f64c87942e6d474cc0660d3f73e98c2fd9c66
-RMD160 (libebml-1.4.0.tar.xz) = 80d14ac3b9029de489d034879ee0a2fb45e5cd46
-SHA512 (libebml-1.4.0.tar.xz) = db78ee560a44b90b4df12ba23a00f8ccb0d3626f44296af6b79a492a00126690582764c6be6c9e9851302a0d0d70edfbe000cc217c5532abe862a821624af230
-Size (libebml-1.4.0.tar.xz) = 69944 bytes
+SHA1 (libebml-1.4.1.tar.xz) = b4d709a53e836e0d887660eade4f291fcd7441ba
+RMD160 (libebml-1.4.1.tar.xz) = 598fb36b85f5806f2fc0e455ab7276ec4db2956f
+SHA512 (libebml-1.4.1.tar.xz) = ddde4975546ba4214cd22db37992c2b5130a731da1b34e171cca8d7f39d981b9643a193d06be1a1e156b316e51419d1eb4c1cfe40511a52b245152e69a507e4b
+Size (libebml-1.4.1.tar.xz) = 70096 bytes
