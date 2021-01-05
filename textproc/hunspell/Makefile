@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/01/04 14:46:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2021/01/05 07:40:13 wiz Exp $
 
 DISTNAME=	hunspell-1.7.0
 PKGREVISION=	3
@@ -13,7 +13,7 @@ LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake
+USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake autopoint
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++03
 
