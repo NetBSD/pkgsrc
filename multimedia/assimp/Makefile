@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/01/02 07:35:44 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/05 04:50:53 gutteridge Exp $
 
 DISTNAME=	assimp-5.0.1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=assimp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
