@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.166 2021/01/05 17:05:50 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.167 2021/01/05 18:48:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -205,3 +205,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/mkvtoolnix to 52.0.0 [adam 2021-01-05]
 	Updated net/unison-snapshot to 2.51.3.70nb4 [gdt 2021-01-05]
 	Updated devel/netcdf to 4.6.1nb11 [wiz 2021-01-05]
+	Updated emulators/nono to 0.1.5 [ryoon 2021-01-05]
