@@ -1,0 +1,2 @@
+Project heavily inspired by colorls but with some little differences.
+lsd is written in rust and not in ruby which makes it much faster.
