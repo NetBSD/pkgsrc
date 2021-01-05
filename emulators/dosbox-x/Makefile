@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/12/03 14:03:19 nia Exp $
+# $NetBSD: Makefile,v 1.27 2021/01/05 11:01:49 nia Exp $
 
 DISTNAME=	dosbox-x-0.83.8
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
 GITHUB_TAG=	dosbox-x-v${PKGVERSION_NOREV}
@@ -55,6 +56,10 @@ INSTALLATION_DIRS+=	share/pixmaps
 
 CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/androidbuildlibs.sh
 CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/iosbuild.sh
+CHECK_PORTABILITY_SKIP+=	make-flatpak-sdl2.sh
+CHECK_PORTABILITY_SKIP+=	make-flatpak.sh
+# [[ is used in an developer target that isn't useful for us
+CHECK_PORTABILITY_SKIP+=	Makefile.in Makefile.am
 
 BUILDLINK_TRANSFORM+=	rm:-Wno-int-to-void-pointer-cast
 BUILDLINK_TRANSFORM+=	rm:-Wno-address-of-packed-member
@@ -78,6 +83,7 @@ do-install:
 .include "options.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../net/SDL2_net/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
