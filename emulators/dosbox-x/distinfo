@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2020/12/03 14:03:19 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/01/05 11:01:49 nia Exp $
 
 SHA1 (dosbox-x-0.83.8.tar.gz) = 25084d9903544ffe954bde2d3ad0d649e8f2eaa0
 RMD160 (dosbox-x-0.83.8.tar.gz) = 067fb76cefde0e30dd049f04c4a2d0baf4fd54bd
 SHA512 (dosbox-x-0.83.8.tar.gz) = 61c75460ac71bb41a654354eb4965dc576c29456db3fd5fa41032e4071f90dce68b4f1b88a314dbb56e9c3850bd6975850d6e20efbdcffc2b14701cfd0127ec0
 Size (dosbox-x-0.83.8.tar.gz) = 47950712 bytes
 SHA1 (patch-configure.ac) = 915ebe5a4e1f85458e93beeeeb343fcb7ddb89bd
-SHA1 (patch-include_dosbox.h) = 69f5fc59e419b46df65991de7469480807ac009d
+SHA1 (patch-include_dosbox.h) = 6f7397b4a611511fc1782b1603c9f5cd51b74eb9
 SHA1 (patch-src_dos_dos__programs.cpp) = 99e49762c6812b518917daf21d27d1fb8d2b1681
