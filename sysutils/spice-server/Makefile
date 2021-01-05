@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/11/01 19:36:37 maya Exp $
+# $NetBSD: Makefile,v 1.5 2021/01/05 15:14:38 jperkin Exp $
 
 DISTNAME=	spice-0.14.3
 PKGNAME=	${DISTNAME:S/spice/spice-server/}
@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	spice-server.pc.in
+
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
