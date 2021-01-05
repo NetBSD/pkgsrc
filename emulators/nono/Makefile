@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/11/30 12:22:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/05 18:47:24 ryoon Exp $
 
-DISTNAME=	nono-0.1.4
-PKGREVISION=	1
+DISTNAME=	nono-0.1.5
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.pastel-flower.jp/~isaki/nono/archive/
 
@@ -14,6 +13,9 @@ LICENSE=	nono-license
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	CXXFLAGS=${CXXFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS="${LDFLAGS} -pthread"
+
+MAKE_FLAGS+=	BINOWN=${BINOWN}
+MAKE_FLAGS+=	BINGRP=${BINGRP}
 
 RESTRICTED=	License disallows binary redistribution
 
