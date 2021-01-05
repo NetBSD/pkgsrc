@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.167 2021/01/05 18:48:00 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.168 2021/01/05 22:26:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/unison-snapshot to 2.51.3.70nb4 [gdt 2021-01-05]
 	Updated devel/netcdf to 4.6.1nb11 [wiz 2021-01-05]
 	Updated emulators/nono to 0.1.5 [ryoon 2021-01-05]
+	Updated graphics/kvantum to 0.18.0 [pin 2021-01-05]
