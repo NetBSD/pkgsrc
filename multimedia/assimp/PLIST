@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/02 07:35:44 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/05 04:50:53 gutteridge Exp $
 bin/assimp
 include/assimp/BaseImporter.h
 include/assimp/Bitmap.h
@@ -88,7 +88,7 @@ lib/cmake/assimp-5.0/assimp-config-version.cmake
 lib/cmake/assimp-5.0/assimp-config.cmake
 lib/cmake/assimp-5.0/assimpTargets-release.cmake
 lib/cmake/assimp-5.0/assimpTargets.cmake
-lib/libIrrXML.a
+lib/libIrrXML.so
 lib/libassimp.so
 lib/libassimp.so.5
 lib/libassimp.so.5.0.0
