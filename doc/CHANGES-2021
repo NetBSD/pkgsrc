@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.164 2021/01/05 13:28:54 adam Exp $
+$NetBSD: CHANGES-2021,v 1.165 2021/01/05 13:29:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -203,3 +203,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/lsd version 0.19.0 [pin 2021-01-05]
 	Updated devel/libebml to 1.4.1 [adam 2021-01-05]
 	Updated multimedia/mkvtoolnix to 52.0.0 [adam 2021-01-05]
+	Updated net/unison-snapshot to 2.51.3.70nb4 [gdt 2021-01-05]
