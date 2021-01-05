@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.159 2021/01/05 04:51:04 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.160 2021/01/05 08:36:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -194,3 +194,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/poppler to 21.01.0 [wiz 2021-01-04]
 	Updated graphics/tiff to 4.2.0 [wiz 2021-01-04]
 	Updated multimedia/assimp to 5.0.1nb1 [gutteridge 2021-01-05]
+	Updated lang/npm to 6.14.10 [adam 2021-01-05]
+	Updated lang/nodejs to 14.15.4 [adam 2021-01-05]
+	Updated lang/nodejs12 to 12.20.1 [adam 2021-01-05]
+	Updated lang/nodejs10 to 10.23.1 [adam 2021-01-05]
