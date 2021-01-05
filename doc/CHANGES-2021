@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.163 2021/01/05 13:00:20 pin Exp $
+$NetBSD: CHANGES-2021,v 1.164 2021/01/05 13:28:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -201,3 +201,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/bk to 0.5.2 [pin 2021-01-05]
 	Updated security/vault to 1.6.1 [he 2021-01-05]
 	Added sysutils/lsd version 0.19.0 [pin 2021-01-05]
+	Updated devel/libebml to 1.4.1 [adam 2021-01-05]
+	Updated multimedia/mkvtoolnix to 52.0.0 [adam 2021-01-05]
