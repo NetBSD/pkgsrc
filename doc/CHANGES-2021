@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.160 2021/01/05 08:36:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.161 2021/01/05 09:52:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -198,3 +198,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs to 14.15.4 [adam 2021-01-05]
 	Updated lang/nodejs12 to 12.20.1 [adam 2021-01-05]
 	Updated lang/nodejs10 to 10.23.1 [adam 2021-01-05]
+	Updated textproc/bk to 0.5.2 [pin 2021-01-05]
