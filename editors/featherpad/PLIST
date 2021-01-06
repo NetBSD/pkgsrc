@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/11/02 20:17:52 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/06 19:22:04 pin Exp $
 bin/featherpad
 bin/fpad
 share/applications/featherpad.desktop
@@ -6,6 +6,7 @@ share/featherpad/help
 share/featherpad/help_ja
 share/featherpad/help_pt_BR
 share/featherpad/translations/featherpad_ar_DZ.qm
+share/featherpad/translations/featherpad_bg.qm
 share/featherpad/translations/featherpad_cs.qm
 share/featherpad/translations/featherpad_cy.qm
 share/featherpad/translations/featherpad_da.qm
@@ -14,6 +15,7 @@ share/featherpad/translations/featherpad_el.qm
 share/featherpad/translations/featherpad_eo.qm
 share/featherpad/translations/featherpad_es.qm
 share/featherpad/translations/featherpad_fa.qm
+share/featherpad/translations/featherpad_fi.qm
 share/featherpad/translations/featherpad_fr.qm
 share/featherpad/translations/featherpad_he.qm
 share/featherpad/translations/featherpad_hu.qm
@@ -25,8 +27,8 @@ share/featherpad/translations/featherpad_lt.qm
 share/featherpad/translations/featherpad_nb_NO.qm
 share/featherpad/translations/featherpad_nl.qm
 share/featherpad/translations/featherpad_pl.qm
+share/featherpad/translations/featherpad_pt.qm
 share/featherpad/translations/featherpad_pt_BR.qm
-share/featherpad/translations/featherpad_pt_PT.qm
 share/featherpad/translations/featherpad_ru.qm
 share/featherpad/translations/featherpad_sk_SK.qm
 share/featherpad/translations/featherpad_tr.qm
