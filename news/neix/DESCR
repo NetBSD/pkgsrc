@@ -1,7 +1,7 @@
 neix is a simple, work in progress terminal feed reader for all common RSS/Atom
 feeds on the web out there.
-So you can read your news without advertisments or other annoying stuff.
-Just the informations you need. You can import your existing collection of feeds
+So you can read your news without advertisements or other annoying stuff.
+Just the information you need. You can import your existing collection of feeds
 from an OPML file or just configure them manually.
 You also have the ability to render the text with w3m, elinks or which program
 you want.
