@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/06 18:08:53 pin Exp $
+
+SHA1 (neix-0.1.3.tar.gz) = 8f6902fa54b178d8b3c4fa5f99afe072fa3a91a7
+RMD160 (neix-0.1.3.tar.gz) = 17d60fac3f5ae8846433095448b44a78d2278a06
+SHA512 (neix-0.1.3.tar.gz) = 34bbb32ace34a32785a1f6ad9524532a5a98bf2f33b0ce2aaec3e2e5389a4171050100c47fbef7ee83ba044d163e7f39498e6fe32bc343d4772833b195a55cd3
+Size (neix-0.1.3.tar.gz) = 20161083 bytes
