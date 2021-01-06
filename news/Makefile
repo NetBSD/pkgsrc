@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/08/06 12:51:40 fcambus Exp $
+# $NetBSD: Makefile,v 1.46 2021/01/06 18:09:44 pin Exp $
 #
 
 COMMENT=	Network news
@@ -19,6 +19,7 @@ SUBDIR+=	newsbeuter
 SUBDIR+=	newsfetch
 SUBDIR+=	newsx
 SUBDIR+=	nget
+SUBDIR+=	neix
 SUBDIR+=	nn
 SUBDIR+=	nntpcache
 SUBDIR+=	nntpclnt
