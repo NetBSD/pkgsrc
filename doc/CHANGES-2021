@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.180 2021/01/06 14:36:09 leot Exp $
+$NetBSD: CHANGES-2021,v 1.181 2021/01/06 14:47:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -224,3 +224,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/libtorrent-rasterbar to 1.2.12 [adam 2021-01-06]
 	Updated net/qbittorrent to 4.3.2 [adam 2021-01-06]
 	Updated news/sfeed_curses to 0.9.7 [leot 2021-01-06]
+	Updated security/sqlmap to 1.5 [leot 2021-01-06]
