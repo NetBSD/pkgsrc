@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/06 00:52:22 js Exp $
+
+SHA1 (pt2-clone-1.28.tar.gz) = 733f828c13fa350f06b1596b2f8968294fab58a7
+RMD160 (pt2-clone-1.28.tar.gz) = 2e24278071c38c8ca1d5eeb23cb598c519a5f72b
+SHA512 (pt2-clone-1.28.tar.gz) = ce257c7a70d3ba02a7283328a2d71be55c9821b871e1d3279952b80cc6708ae34bba5823686931e6900b8cc10523975f61efeab5008ab5c3bf2976545f6cdfd6
+Size (pt2-clone-1.28.tar.gz) = 7496376 bytes
