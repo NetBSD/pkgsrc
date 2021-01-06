@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/06 00:52:22 js Exp $
+bin/pt2-clone
+share/examples/pt2-clone/protracker.ini
