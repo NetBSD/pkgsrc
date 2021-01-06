@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/10/09 15:29:32 leot Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/06 14:26:03 leot Exp $
 
-DISTNAME=	sacc-1.02
+DISTNAME=	sacc-1.03
 CATEGORIES=	net
 MASTER_SITES=	ftp://bitreich.org/releases/sacc/
 EXTRACT_SUFX=	.tgz
