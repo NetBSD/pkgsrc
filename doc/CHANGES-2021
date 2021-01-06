@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.171 2021/01/06 01:22:09 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.172 2021/01/06 11:22:15 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/pt2-clone version 1.28 [js 2021-01-06]
 	Updated audio/py-music21 to 6.5.0 [gutteridge 2021-01-06]
 	Updated editors/xfce4-mousepad to 0.5.1 [gutteridge 2021-01-06]
+	Updated www/firefox to 84.0.1nb1 [triaxx 2021-01-06]
