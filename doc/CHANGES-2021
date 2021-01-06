@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.176 2021/01/06 14:26:15 leot Exp $
+$NetBSD: CHANGES-2021,v 1.177 2021/01/06 14:30:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -219,3 +219,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/jasper to 2.0.24 [adam 2021-01-06]
 	Updated graphics/openjpeg to 2.4.0 [adam 2021-01-06]
 	Updated net/sacc to 1.03 [leot 2021-01-06]
+	Updated misc/less to 563 [leot 2021-01-06]
