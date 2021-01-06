@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.188 2021/01/06 18:57:32 nia Exp $
+$NetBSD: CHANGES-2021,v 1.189 2021/01/06 19:22:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -232,3 +232,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added news/neix version 0.1.3 [pin 2021-01-06]
 	Updated www/py-flask-cors to 3.0.10 [kleink 2021-01-06]
 	Updated wm/fvwm3 to 1.0.2 [nia 2021-01-06]
+	Updated editors/featherpad to 0.17.1 [pin 2021-01-06]
