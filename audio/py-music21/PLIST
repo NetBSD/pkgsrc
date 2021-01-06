@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/11/30 06:11:02 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/01/06 01:17:50 gutteridge Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -453,6 +453,7 @@ ${PYSITELIB}/music21/midi/testPrimitive/test13.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test14.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test15.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test16.mid
+${PYSITELIB}/music21/midi/testPrimitive/test17.mid
 ${PYSITELIB}/music21/midi/translate.py
 ${PYSITELIB}/music21/midi/translate.pyc
 ${PYSITELIB}/music21/midi/translate.pyo
@@ -485,6 +486,9 @@ ${PYSITELIB}/music21/musicxml/__init__.pyo
 ${PYSITELIB}/music21/musicxml/archiveTools.py
 ${PYSITELIB}/music21/musicxml/archiveTools.pyc
 ${PYSITELIB}/music21/musicxml/archiveTools.pyo
+${PYSITELIB}/music21/musicxml/helpers.py
+${PYSITELIB}/music21/musicxml/helpers.pyc
+${PYSITELIB}/music21/musicxml/helpers.pyo
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/01a-Pitches-Pitches.xml
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/01b-Pitches-Intervals.xml
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/01c-Pitches-NoVoiceElement.xml
@@ -610,6 +614,7 @@ ${PYSITELIB}/music21/musicxml/lilypondTestSuite/61h-Lyrics-BeamsMelismata.xml
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/61i-Lyrics-Chords.xml
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/61j-Lyrics-Elisions.xml
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/61k-Lyrics-SpannersExtenders.xml
+${PYSITELIB}/music21/musicxml/lilypondTestSuite/61l-Lyrics-Elisions-Syllables.xml
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/71a-Chordnames.xml
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/71c-ChordsFrets.xml
 ${PYSITELIB}/music21/musicxml/lilypondTestSuite/71d-ChordsFrets-Multistaff.xml
@@ -633,6 +638,9 @@ ${PYSITELIB}/music21/musicxml/lilypondTestSuite/__init__.pyo
 ${PYSITELIB}/music21/musicxml/m21ToXml.py
 ${PYSITELIB}/music21/musicxml/m21ToXml.pyc
 ${PYSITELIB}/music21/musicxml/m21ToXml.pyo
+${PYSITELIB}/music21/musicxml/partStaffExporter.py
+${PYSITELIB}/music21/musicxml/partStaffExporter.pyc
+${PYSITELIB}/music21/musicxml/partStaffExporter.pyo
 ${PYSITELIB}/music21/musicxml/testChordOffset.xml
 ${PYSITELIB}/music21/musicxml/testFiles.py
 ${PYSITELIB}/music21/musicxml/testFiles.pyc
@@ -718,6 +726,9 @@ ${PYSITELIB}/music21/romanText/translate.pyo
 ${PYSITELIB}/music21/romanText/tsvConverter.py
 ${PYSITELIB}/music21/romanText/tsvConverter.pyc
 ${PYSITELIB}/music21/romanText/tsvConverter.pyo
+${PYSITELIB}/music21/romanText/writeRoman.py
+${PYSITELIB}/music21/romanText/writeRoman.pyc
+${PYSITELIB}/music21/romanText/writeRoman.pyo
 ${PYSITELIB}/music21/scale/__init__.py
 ${PYSITELIB}/music21/scale/__init__.pyc
 ${PYSITELIB}/music21/scale/__init__.pyo
@@ -4699,6 +4710,9 @@ ${PYSITELIB}/music21/stream/__init__.pyo
 ${PYSITELIB}/music21/stream/core.py
 ${PYSITELIB}/music21/stream/core.pyc
 ${PYSITELIB}/music21/stream/core.pyo
+${PYSITELIB}/music21/stream/enums.py
+${PYSITELIB}/music21/stream/enums.pyc
+${PYSITELIB}/music21/stream/enums.pyo
 ${PYSITELIB}/music21/stream/filters.py
 ${PYSITELIB}/music21/stream/filters.pyc
 ${PYSITELIB}/music21/stream/filters.pyo
