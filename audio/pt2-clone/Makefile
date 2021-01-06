@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/06 00:52:22 js Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/06 01:19:20 js Exp $
 
 DISTNAME=	pt2-clone-1.28
 CATEGORIES=	audio
@@ -10,8 +10,6 @@ MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/8bitbubsy/pt2-clone/
 COMMENT=	ProTracker 2 clone for Windows/macOS/Linux
 LICENSE=	modified-bsd
-
-WRKSRC=		${WRKDIR}/pt2-clone-1.28
 
 INSTALLATION_DIRS+=	bin share/examples/pt2-clone
 
