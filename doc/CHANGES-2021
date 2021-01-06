@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.184 2021/01/06 15:58:32 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.185 2021/01/06 16:11:27 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -228,3 +228,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/socat to 1.7.4.0 [leot 2021-01-06]
 	Updated graphics/MesaLib to 20.0.6nb1 [triaxx 2021-01-06]
 	Updated sysutils/ytree to 2.03 [fcambus 2021-01-06]
+	Updated geography/libmaxminddb to 1.5.0 [fcambus 2021-01-06]
