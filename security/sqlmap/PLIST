@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/10/09 15:39:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/01/06 14:47:36 leot Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -182,6 +182,7 @@ ${PYSITELIB}/sqlmap/extra/shutils/precommit-hook.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pycodestyle.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pydiatra.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pyflakes.sh
+${PYSITELIB}/sqlmap/extra/shutils/pylint.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pypi.sh
 ${PYSITELIB}/sqlmap/extra/shutils/recloak.sh
 ${PYSITELIB}/sqlmap/extra/shutils/strip.sh
