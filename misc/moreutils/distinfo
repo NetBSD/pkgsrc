@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2020/10/09 15:46:56 leot Exp $
+$NetBSD: distinfo,v 1.7 2021/01/06 14:31:44 leot Exp $
 
-SHA1 (moreutils-0.64.tar.gz) = 2cbfc4e70e0cb996a6f8e5f854145acc85d0fd23
-RMD160 (moreutils-0.64.tar.gz) = 1e11ebc5d4d9621f85507ee8fb6a86a64c822b31
-SHA512 (moreutils-0.64.tar.gz) = 94f131b9b02a8c1139dfe34abacab022687f51413c529288f57fa876676c028e200324ed855b910a7dbfb4290eb8b38b3dc182eda49988f521a550162b0a0eec
-Size (moreutils-0.64.tar.gz) = 92741 bytes
+SHA1 (moreutils-0.65.tar.gz) = f5fd0145cc023cdeb9fa46ccfae94014c5d4fb39
+RMD160 (moreutils-0.65.tar.gz) = 19864d86e9dbcdf13daf04e39bb54cdb09d920ca
+SHA512 (moreutils-0.65.tar.gz) = dcad2a3b6d9621da6d2f860f39acb04c80d42cc2123e12a6ec84524f6a1fc7f5ae4bd5d00e698fe14d4c5e7d491d790970ce4370c9abd1f63318d1c512f596b9
+Size (moreutils-0.65.tar.gz) = 93180 bytes
 SHA1 (patch-Makefile) = 80fb38e584db12f344ed66da76c8bee0127d17cc
 SHA1 (patch-ifdata.c) = 5c0d9737657354ad1877f2efc6ff08e76ca7bc62
 SHA1 (patch-pee.c) = 0c2cf167e7038fadd818ea3262686a1b4ed5aa7e
