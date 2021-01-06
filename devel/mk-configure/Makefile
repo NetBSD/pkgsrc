@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2020/11/26 19:47:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.36 2021/01/06 13:05:50 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.35.0
+DISTNAME=	mk-configure-0.36.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/}
 
