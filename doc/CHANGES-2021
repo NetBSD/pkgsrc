@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.172 2021/01/06 11:22:15 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.173 2021/01/06 12:18:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -211,3 +211,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/py-music21 to 6.5.0 [gutteridge 2021-01-06]
 	Updated editors/xfce4-mousepad to 0.5.1 [gutteridge 2021-01-06]
 	Updated www/firefox to 84.0.1nb1 [triaxx 2021-01-06]
+	Updated www/py-sanic to 20.12.1 [adam 2021-01-06]
+	Updated textproc/py-elementpath to 2.1.0 [adam 2021-01-06]
+	Updated www/py-django3 to 3.1.5 [adam 2021-01-06]
+	Updated devel/py-gitpython to 3.1.12 [adam 2021-01-06]
