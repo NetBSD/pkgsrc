@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.173 2021/01/06 12:18:28 adam Exp $
+$NetBSD: CHANGES-2021,v 1.174 2021/01/06 12:19:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -215,3 +215,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.1.0 [adam 2021-01-06]
 	Updated www/py-django3 to 3.1.5 [adam 2021-01-06]
 	Updated devel/py-gitpython to 3.1.12 [adam 2021-01-06]
+	Updated net/knot to 3.0.3 [ryoon 2021-01-06]
