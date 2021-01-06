@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/29 12:22:35 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/06 18:57:17 nia Exp $
+bin/FvwmCommand
 bin/fvwm-config
 bin/fvwm-convert-2.6
 bin/fvwm-menu-desktop
@@ -9,7 +10,6 @@ bin/fvwm-root
 bin/fvwm3
 bin/xpmroot
 libexec/fvwm3/${PKGVERSION}/FvwmAnimate
-libexec/fvwm3/${PKGVERSION}/FvwmAudio
 libexec/fvwm3/${PKGVERSION}/FvwmAuto
 libexec/fvwm3/${PKGVERSION}/FvwmBacker
 libexec/fvwm3/${PKGVERSION}/FvwmButtons
@@ -41,17 +41,17 @@ man/man1/FvwmIdent.1
 man/man1/FvwmMFL.1
 man/man1/FvwmPager.1
 man/man1/FvwmPerl.1
+man/man1/FvwmPrompt.1
 man/man1/FvwmRearrange.1
 man/man1/FvwmScript.1
+man/man1/fvwm-config-2.6.1
 man/man1/fvwm-config.1
-man/man1/fvwm-convert-2.6.1
 man/man1/fvwm-menu-desktop.1
 man/man1/fvwm-menu-directory.1
 man/man1/fvwm-menu-xlock.1
 man/man1/fvwm-perllib.1
 man/man1/fvwm-root.1
 man/man1/fvwm3.1
-man/man1/xpmroot.1
 share/fvwm3/ConfigFvwmBacker
 share/fvwm3/ConfigFvwmButtons
 share/fvwm3/ConfigFvwmDefaults

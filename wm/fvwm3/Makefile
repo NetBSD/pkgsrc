@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/11/23 13:43:52 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/06 18:57:17 nia Exp $
 
-DISTNAME=	fvwm3-1.0.1
+DISTNAME=	fvwm3-1.0.2
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -14,13 +14,15 @@ GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	pkg-config perl:run
 USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	gmake # needed for manpages installation
 
-# xsltproc
-TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+# asciidoctor
+TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
 # otherwise we get installed scripts that point to the tools directory.
 CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
 CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL5}
+CONFIGURE_ENV+=	ac_cv_prog_ASCIIDOC=${PREFIX}/bin/asciidoctor${RUBY_VER}
 
 CONFIGURE_ARGS+=	--enable-mandoc
 
@@ -34,6 +36,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../lang/ruby/rubyversion.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
