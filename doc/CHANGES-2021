@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.168 2021/01/05 22:26:41 pin Exp $
+$NetBSD: CHANGES-2021,v 1.169 2021/01/06 00:53:09 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/netcdf to 4.6.1nb11 [wiz 2021-01-05]
 	Updated emulators/nono to 0.1.5 [ryoon 2021-01-05]
 	Updated graphics/kvantum to 0.18.0 [pin 2021-01-05]
+	Added audio/pt2-clone version 1.28 [js 2021-01-06]
