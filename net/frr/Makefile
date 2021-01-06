@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/01/06 10:45:49 kardel Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/06 11:53:52 kardel Exp $
 
 GITHUB_PROJECT=	frr
 VERSION=	7.5
@@ -20,11 +20,10 @@ USE_TOOLS+=		gmake perl bash pkg-config autoconf automake autoreconf bison
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		yes
 BUILD_DEFS=		VARBASE
+BISON_REQD=		3.3
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-TOOL_DEPENDS+=		bison>=3.3:../../devel/bison
 
 FRR_GROUP?=	_frr
 FRR_VTY_GROUP?=	frrvty
