@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.182 2021/01/06 15:12:43 leot Exp $
+$NetBSD: CHANGES-2021,v 1.183 2021/01/06 15:50:23 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -226,3 +226,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/sfeed_curses to 0.9.7 [leot 2021-01-06]
 	Updated security/sqlmap to 1.5 [leot 2021-01-06]
 	Updated net/socat to 1.7.4.0 [leot 2021-01-06]
+	Updated graphics/MesaLib to 20.0.6nb1 [triaxx 2021-01-06]
