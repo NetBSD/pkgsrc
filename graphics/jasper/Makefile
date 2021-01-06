@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2020/12/08 14:36:51 adam Exp $
+# $NetBSD: Makefile,v 1.60 2021/01/06 12:22:52 adam Exp $
 
-DISTNAME=	jasper-2.0.23
+DISTNAME=	jasper-2.0.24
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jasper-software/}
 GITHUB_TAG=	version-${PKGVERSION_NOREV}
