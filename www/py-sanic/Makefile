@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2021/01/03 22:41:44 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/01/06 12:11:57 adam Exp $
 
-DISTNAME=	sanic-20.12.0
+DISTNAME=	sanic-20.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/channelcat/sanic
+HOMEPAGE=	https://github.com/sanic-org/sanic
 COMMENT=	Microframework based on uvloop, httptools, and learnings of flask
 LICENSE=	mit AND apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.3.0:../../devel/py-aiofiles
+DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.6.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.15.4:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0.0:../../databases/py-multidict
