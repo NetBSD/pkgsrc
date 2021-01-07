@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.191 2021/01/07 11:28:36 maya Exp $
+$NetBSD: CHANGES-2021,v 1.192 2021/01/07 13:36:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -236,3 +236,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/meson to 0.56.1 [adam 2021-01-07]
 	Updated x11/gtk3 to 3.24.24 [adam 2021-01-07]
 	Updated games/dMagnetic to 0.29 [maya 2021-01-07]
+	Updated lang/php73 to 7.3.26 [taca 2021-01-07]
