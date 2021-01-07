@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.19 2020/11/16 13:05:07 wiz Exp $
+$NetBSD: distinfo,v 1.20 2021/01/07 22:09:52 wiz Exp $
 
-SHA1 (gsasl-1.8.1.tar.gz) = 82ba0079da6918784a8170d4a13ee133d9df1d7a
-RMD160 (gsasl-1.8.1.tar.gz) = 8cf11ab86e608f36c74593e4b37ebdb000df4292
-SHA512 (gsasl-1.8.1.tar.gz) = 8973f5af12cc17aae76a4a2ea887d17e74e48b1ce896dfd62fde8cb874ed965d77c62d671ff86ce3217158e58a7a521b7fde9ea606f73c3a912a8973f1b204cb
-Size (gsasl-1.8.1.tar.gz) = 5774550 bytes
-SHA1 (patch-ac) = 8a51c8a8bc046a0efe6572c244cd0c886e7ab7b4
+SHA1 (gsasl-1.10.0.tar.gz) = ec3def1bdc4a0b6284f0d1e2901495218c87587e
+RMD160 (gsasl-1.10.0.tar.gz) = 0b7b66702493527f295ba35c4f2a409600839946
+SHA512 (gsasl-1.10.0.tar.gz) = 8b1dc87e85dbfd0255b3b43c4b7f9c2e896cb03efe4cd4af86393b62fd193665aae4ce59e66db736722e32babfcea6d4f6ddd3c5f069dcc4210f7e9531043e4a
+Size (gsasl-1.10.0.tar.gz) = 5946076 bytes
