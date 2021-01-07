@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/11/16 13:05:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/01/07 22:09:52 wiz Exp $
 bin/gsasl
 include/gsasl-compat.h
 include/gsasl-mech.h
@@ -59,6 +59,9 @@ man/man3/gsasl_encode.3
 man/man3/gsasl_encode_inline.3
 man/man3/gsasl_finish.3
 man/man3/gsasl_free.3
+man/man3/gsasl_hash_length.3
+man/man3/gsasl_hex_from.3
+man/man3/gsasl_hex_to.3
 man/man3/gsasl_hmac_md5.3
 man/man3/gsasl_hmac_sha1.3
 man/man3/gsasl_init.3
@@ -74,6 +77,8 @@ man/man3/gsasl_random.3
 man/man3/gsasl_randomize.3
 man/man3/gsasl_register.3
 man/man3/gsasl_saslprep.3
+man/man3/gsasl_scram_secrets_from_password.3
+man/man3/gsasl_scram_secrets_from_salted_password.3
 man/man3/gsasl_server_application_data_get.3
 man/man3/gsasl_server_application_data_set.3
 man/man3/gsasl_server_callback_anonymous_get.3
