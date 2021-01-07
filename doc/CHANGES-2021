@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.190 2021/01/07 10:02:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.191 2021/01/07 11:28:36 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -235,3 +235,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/featherpad to 0.17.1 [pin 2021-01-06]
 	Updated devel/meson to 0.56.1 [adam 2021-01-07]
 	Updated x11/gtk3 to 3.24.24 [adam 2021-01-07]
+	Updated games/dMagnetic to 0.29 [maya 2021-01-07]
