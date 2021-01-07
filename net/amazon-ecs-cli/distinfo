@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2020/09/12 14:53:39 leot Exp $
+$NetBSD: distinfo,v 1.2 2021/01/07 17:14:02 leot Exp $
 
-SHA1 (amazon-ecs-cli-1.20.0.tar.gz) = 12706027f1f2e9b5a1819475c114a179a479eea7
-RMD160 (amazon-ecs-cli-1.20.0.tar.gz) = 902747ea321e342a8b30890e49435c61badf3bcd
-SHA512 (amazon-ecs-cli-1.20.0.tar.gz) = f14de7e3b8efe96c57fb3cd03f83e4ab65625c1ecd1067521fa7b22f93053ebe0316f520b89331672c35035b9dacbbc532d16c5b56d4ec0ba13103f9a9b86e79
-Size (amazon-ecs-cli-1.20.0.tar.gz) = 3660509 bytes
+SHA1 (amazon-ecs-cli-1.21.0.tar.gz) = 4e75a9660340ae2c50821b6e1a4c395aa340c934
+RMD160 (amazon-ecs-cli-1.21.0.tar.gz) = a416e9df94e1422635ffd291d3196220498258ca
+SHA512 (amazon-ecs-cli-1.21.0.tar.gz) = 988d82c57ab7cb442b468712de8e9fe4108d9bbdceb464dd2ae662d94f316a8da7b3e1a9491d68c0c989ef7a6a10e47d02b3fa514e0f25cf2a46698a4c04d25f
+Size (amazon-ecs-cli-1.21.0.tar.gz) = 3662703 bytes
 SHA1 (patch-ecs-cli_vendor_github.com_docker_docker_client_client__unix.go) = c9ec73a3272dee60a37308500d0c9d0dd999d0f2
 SHA1 (patch-ecs-cli_vendor_github.com_docker_docker_pkg_system_stat__netbsd.go) = 45f6953e7b4b29d83df858fcc3c9c1fdd1a1bc0e
 SHA1 (patch-ecs-cli_vendor_github.com_docker_docker_pkg_term_termios__bsd.go) = fac4918e21d829ad6aefc259b16bebc84a1568de
