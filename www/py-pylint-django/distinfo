@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.27 2020/08/27 12:25:00 joerg Exp $
+$NetBSD: distinfo,v 1.28 2021/01/07 22:03:13 adam Exp $
 
-SHA1 (pylint-django-2.3.0.tar.gz) = f2f475ada50992015eb23c1475c8434745ecaa0f
-RMD160 (pylint-django-2.3.0.tar.gz) = ee4da89b7f08297bb8f6c8cf07d8831669dca78c
-SHA512 (pylint-django-2.3.0.tar.gz) = 09ef4cd33b56d88f193fe2ec449a8c8a368cd8f0b1ef6f84e1e4b393de511f53dcbaec92e0f4e5ffdc3e22a77cbca08d43decedfcb8f8d701fccdb3e0f4f3328
-Size (pylint-django-2.3.0.tar.gz) = 55673 bytes
+SHA1 (pylint-django-2.4.0.tar.gz) = a6bb400640d8ab934de483e7532f4d00c210cf4b
+RMD160 (pylint-django-2.4.0.tar.gz) = baa321a80caa99894c6059ed57cec9e76253a819
+SHA512 (pylint-django-2.4.0.tar.gz) = 658dfc11d49d2806d443b1600d383cc978604b25b6f242909b6a263f1f7930f4e26e6e0b4d6dcdb98217d0bd347f355969ce9ba10d9e7d7a513a7a3981406302
+Size (pylint-django-2.4.0.tar.gz) = 60054 bytes
 SHA1 (patch-setup.py) = d03071292db59f9f0f9e0e1500d76e90aef29b84
