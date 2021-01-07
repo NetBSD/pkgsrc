@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Uniminin/}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Uniminin/nanogrep/
-COMMENT=	Custom Implementation of minigrep with additional functionality
+COMMENT=	Custom simplified implementation of minigrep with additional features
 LICENSE=	mit
 
 .include "cargo-depends.mk"
