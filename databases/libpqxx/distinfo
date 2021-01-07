@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/10/24 11:35:37 prlw1 Exp $
+$NetBSD: distinfo,v 1.13 2021/01/07 16:29:30 prlw1 Exp $
 
-SHA1 (libpqxx-7.2.0.tar.gz) = 09a788f8e2dfd5b69dfee43cd32767c5c6638b83
-RMD160 (libpqxx-7.2.0.tar.gz) = b5a0dcb0b7ac4774fcccf1bc8e0a2e5e133d79d0
-SHA512 (libpqxx-7.2.0.tar.gz) = 6bc6646fb5c344138fb98f6fc120e09d1ce49e6e54938a571dd16243b5c68e6bd0592f3e4dc9023c6ce52757d61a2261db1e3ec9134f3b55665451218f3bd0c2
-Size (libpqxx-7.2.0.tar.gz) = 707225 bytes
+SHA1 (libpqxx-7.3.0.tar.gz) = b58680935eb59e365f39295e4bd5f0c6da15043f
+RMD160 (libpqxx-7.3.0.tar.gz) = 8c86a6b6152f6d9a42e8d848f26db606afdc5d9c
+SHA512 (libpqxx-7.3.0.tar.gz) = 897af8e1c0ab12df745116e5387d3c31fb8800b6c599f49413ddcc67df7968fb1922c96896c818ce3f34d9649fb6c1d2ea59784f8765fb765481b156be44eaa2
+Size (libpqxx-7.3.0.tar.gz) = 694012 bytes
