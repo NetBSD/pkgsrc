@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.189 2021/01/06 19:22:28 pin Exp $
+$NetBSD: CHANGES-2021,v 1.190 2021/01/07 10:02:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -233,3 +233,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-flask-cors to 3.0.10 [kleink 2021-01-06]
 	Updated wm/fvwm3 to 1.0.2 [nia 2021-01-06]
 	Updated editors/featherpad to 0.17.1 [pin 2021-01-06]
+	Updated devel/meson to 0.56.1 [adam 2021-01-07]
+	Updated x11/gtk3 to 3.24.24 [adam 2021-01-07]
