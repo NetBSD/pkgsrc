@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2021/01/08 08:47:29 otis Exp $
+
+Add define for newly added check.
+
+--- config.h.in.orig	2021-01-03 18:23:22.000000000 +0000
++++ config.h.in
+@@ -309,6 +309,9 @@
+ /* Define if you have the <sys/stropts.h> header file. (stream opts on SunOS)*/
+ #undef HAVE_SYS_STROPTS_H
+ 
++/* Define if you have the <stropts.h> header file. (stream opts on SunOS)*/
++#undef HAVE_STROPTS_H
++
+ /* Define if you have the <regex.h> header file. */
+ #undef HAVE_REGEX_H
+ 
