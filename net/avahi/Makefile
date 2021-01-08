@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2021/01/08 14:08:35 nia Exp $
+# $NetBSD: Makefile,v 1.100 2021/01/08 23:47:54 nia Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		3
+PKGREVISION=		4
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Facilitate service discovery on a local network
