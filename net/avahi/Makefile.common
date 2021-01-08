@@ -1,0 +1,85 @@
+# $NetBSD: Makefile.common,v 1.1 2021/01/08 14:08:35 nia Exp $
+# used by net/avahi/Makefile
+# used by net/avahi-ui/Makefile
+
+DISTNAME=		avahi-0.8
+CATEGORIES=		net
+MASTER_SITES=		${MASTER_SITE_GITHUB:=lathiat/avahi/releases/download/v${PKGVERSION_NOREV}/}
+
+HOMEPAGE=		https://avahi.org/
+LICENSE=		gnu-lgpl-v2.1
+
+PATCHDIR=		${.CURDIR}/../../net/avahi/patches
+DISTINFO_FILE=		${.CURDIR}/../../net/avahi/distinfo
+
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+USE_PKGINSTALL=		YES
+USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		pkg-config gmake msgfmt xgettext msgmerge
+
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+# Requires --desktop in msgfmt.
+TOOLS_PLATFORM.msgfmt=
+.endif
+
+PKGCONFIG_OVERRIDE+=	avahi-client.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-compat-howl.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-compat-libdns_sd.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-core.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-glib.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-gobject.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-libevent.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-qt3.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-qt4.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-qt5.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-ui-gtk3.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-ui-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-ui.pc.in
+
+AVAHI_USER?=		avahi
+AVAHI_GROUP?=		avahi
+BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
+PLIST_SRC=		${PKGDIR}/PLIST
+PKG_SYSCONFSUBDIR=	avahi
+USE_LANGUAGES=		c99 c++
+
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
+# Not yet reported upstream.
+CPPFLAGS.Darwin+=	-D__APPLE_USE_RFC_3542
+
+CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER}
+CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP}
+CONFIGURE_ARGS+=	--with-avahi_priv_access_group=${REAL_ROOT_GROUP}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-dbus-system-socket=${VARBASE}/run/dbus/system_bus_socket
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--disable-doxygen-doc
+CONFIGURE_ARGS+=	--disable-doxygen-dot
+CONFIGURE_ARGS+=	--disable-doxygen-html --disable-doxygen-xml
+CONFIGURE_ARGS+=	--disable-xmltoman
+CONFIGURE_ARGS+=	--disable-autoipd
+CONFIGURE_ARGS+=	--disable-libevent
+CONFIGURE_ARGS+=	--disable-qt3
+CONFIGURE_ARGS+=	--disable-qt4
+CONFIGURE_ARGS+=	--disable-qt5
+CONFIGURE_ARGS+=	--disable-gtk
+CONFIGURE_ARGS+=	--disable-mono
+CONFIGURE_ARGS+=	--disable-pygobject
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--with-distro=none
+
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
+INSTALL_MAKE_FLAGS+=	dbusservicedir=${PREFIX}/share/examples/avahi
+
+.include "../../databases/gdbm/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libdaemon+=	libdaemon>=0.14
+.include "../../devel/libdaemon/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"

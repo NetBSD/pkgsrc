@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/08 14:08:35 nia Exp $
+bin/bshell
+bin/bssh
+bin/bvnc
+include/avahi-ui/avahi-ui.h
+lib/libavahi-ui-gtk3.la
+lib/pkgconfig/avahi-ui-gtk3.pc
+share/applications/bssh.desktop
+share/applications/bvnc.desktop
