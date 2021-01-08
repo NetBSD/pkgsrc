@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.31 2020/02/16 04:11:05 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/01/08 17:09:41 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/nokogiri/nokogiri.${RUBY_DLEXT}
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE-DEPENDENCIES.md
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
@@ -22,6 +23,7 @@ ${GEM_LIBDIR}/ext/nokogiri/html_sax_push_parser.c
 ${GEM_LIBDIR}/ext/nokogiri/html_sax_push_parser.h
 ${GEM_LIBDIR}/ext/nokogiri/nokogiri.c
 ${GEM_LIBDIR}/ext/nokogiri/nokogiri.h
+${GEM_LIBDIR}/ext/nokogiri/test_global_handlers.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_attr.c
 ${GEM_LIBDIR}/ext/nokogiri/xml_attr.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_attribute_decl.c
@@ -99,9 +101,12 @@ ${GEM_LIBDIR}/lib/nokogiri/html/entity_lookup.rb
 ${GEM_LIBDIR}/lib/nokogiri/html/sax/parser.rb
 ${GEM_LIBDIR}/lib/nokogiri/html/sax/parser_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/html/sax/push_parser.rb
+${GEM_LIBDIR}/lib/nokogiri/jruby/dependencies.rb
 ${GEM_LIBDIR}/lib/nokogiri/nokogiri.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/nokogiri/syntax_error.rb
 ${GEM_LIBDIR}/lib/nokogiri/version.rb
+${GEM_LIBDIR}/lib/nokogiri/version/constant.rb
+${GEM_LIBDIR}/lib/nokogiri/version/info.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/attr.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/attribute_decl.rb
@@ -147,4 +152,8 @@ ${GEM_LIBDIR}/patches/libxml2/0002-Remove-script-macro-support.patch
 ${GEM_LIBDIR}/patches/libxml2/0003-Update-entities-to-remove-handling-of-ssi.patch
 ${GEM_LIBDIR}/patches/libxml2/0004-libxml2.la-is-in-top_builddir.patch
 ${GEM_LIBDIR}/patches/libxml2/0005-Fix-infinite-loop-in-xmlStringLenDecodeEntities.patch
+${GEM_LIBDIR}/patches/libxml2/0006-htmlParseComment-treat-as-if-it-closed-the-comment.patch
+${GEM_LIBDIR}/patches/libxml2/0007-use-new-htmlParseLookupCommentEnd-to-find-comment-en.patch
+${GEM_LIBDIR}/patches/libxml2/0008-use-glibc-strlen.patch
+${GEM_LIBDIR}/patches/libxml2/0009-avoid-isnan-isinf.patch
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
