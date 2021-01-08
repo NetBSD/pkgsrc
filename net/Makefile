@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1369 2021/01/01 16:36:41 nia Exp $
+# $NetBSD: Makefile,v 1.1370 2021/01/08 14:08:35 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -35,6 +35,7 @@ SUBDIR+=	arping
 SUBDIR+=	arpwatch
 SUBDIR+=	autonet
 SUBDIR+=	avahi
+SUBDIR+=	avahi-ui
 SUBDIR+=	awhois
 SUBDIR+=	aws-sdk-go
 SUBDIR+=	balance
