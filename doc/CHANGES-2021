@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.198 2021/01/08 07:56:45 pin Exp $
+$NetBSD: CHANGES-2021,v 1.199 2021/01/08 08:32:54 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -244,3 +244,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-pylint-django to 2.4.0 [adam 2021-01-07]
 	Updated security/gsasl to 1.10.0 [wiz 2021-01-07]
 	Updated sysutils/broot to 1.1.11 [pin 2021-01-08]
+	Updated sysutils/beats to 6.8.13 [he 2021-01-08]
