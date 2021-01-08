@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.62 2021/01/04 12:30:37 wiz Exp $
+$NetBSD: distinfo,v 1.63 2021/01/08 16:14:55 schmonz Exp $
 
 SHA1 (wget-1.21.tar.lz) = 07fc9a34a76c91d377a2594dbb61ba83cebab9ad
 RMD160 (wget-1.21.tar.lz) = e1c7267984c1f4d4cc3ad7bcce414405c0ff1d70
 SHA512 (wget-1.21.tar.lz) = 10f32e153511a13397933d24e57002ee6477aea87e1e6811262268e0f43c5cfd8ab298921857d70a6f567be34b5a4fe9898ce4e7488e66294f3e85f011283838
 Size (wget-1.21.tar.lz) = 2354273 bytes
 SHA1 (patch-configure) = d72ecfae0a156bf42046759daeb6ad284b9213e1
+SHA1 (patch-lib_utime.c) = 7a35aca95cf790f8750ffbdf407b2693585125cd
