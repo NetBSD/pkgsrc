@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.python,v 1.7 2020/09/29 10:56:56 prlw1 Exp $
-${PYSITELIB}/avahi/__init__.py
-${PYSITELIB}/avahi/__init__.pyc
-${PYSITELIB}/avahi/__init__.pyo
-bin/avahi-bookmarks
-man/man1/avahi-bookmarks.1

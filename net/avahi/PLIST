@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.19 2020/09/29 10:56:56 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/01/08 14:08:35 nia Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
-${PLIST.ui}bin/avahi-discover-standalone
 bin/avahi-publish
 bin/avahi-publish-address
 bin/avahi-publish-service
@@ -9,9 +8,6 @@ bin/avahi-resolve
 bin/avahi-resolve-address
 bin/avahi-resolve-host-name
 bin/avahi-set-host-name
-${PLIST.ui}bin/bshell
-${PLIST.ui}bin/bssh
-${PLIST.ui}bin/bvnc
 include/avahi-client/client.h
 include/avahi-client/lookup.h
 include/avahi-client/publish.h
@@ -44,30 +40,15 @@ include/avahi-gobject/ga-error.h
 include/avahi-gobject/ga-record-browser.h
 include/avahi-gobject/ga-service-browser.h
 include/avahi-gobject/ga-service-resolver.h
-${PLIST.ui}include/avahi-ui/avahi-ui.h
-${PLIST.introspection}lib/girepository-1.0/Avahi-0.6.typelib
-${PLIST.introspection}lib/girepository-1.0/AvahiCore-0.6.typelib
 lib/libavahi-client.la
 lib/libavahi-common.la
 lib/libavahi-core.la
 lib/libavahi-glib.la
 lib/libavahi-gobject.la
-${PLIST.gtk3}lib/libavahi-ui-gtk3.la
-${PLIST.mono}lib/mono/avahi-sharp/avahi-sharp.dll
-${PLIST.mono}lib/mono/avahi-ui-sharp/avahi-ui-sharp.dll
-${PLIST.mono}lib/mono/gac/avahi-sharp/1.0.0.0__4d116c78973743f5/avahi-sharp.dll
-${PLIST.mono}lib/mono/gac/avahi-sharp/1.0.0.0__4d116c78973743f5/avahi-sharp.dll.config
-${PLIST.mono}lib/mono/gac/avahi-sharp/1.0.0.0__4d116c78973743f5/avahi-sharp.dll.mdb
-${PLIST.mono}lib/mono/gac/avahi-ui-sharp/0.0.0.0__4d116c78973743f5/avahi-ui-sharp.dll
-${PLIST.mono}lib/mono/gac/avahi-ui-sharp/0.0.0.0__4d116c78973743f5/avahi-ui-sharp.dll.config
-${PLIST.mono}lib/mono/gac/avahi-ui-sharp/0.0.0.0__4d116c78973743f5/avahi-ui-sharp.dll.mdb
 lib/pkgconfig/avahi-client.pc
 lib/pkgconfig/avahi-core.pc
 lib/pkgconfig/avahi-glib.pc
 lib/pkgconfig/avahi-gobject.pc
-${PLIST.mono}lib/pkgconfig/avahi-sharp.pc
-${PLIST.gtk3}lib/pkgconfig/avahi-ui-gtk3.pc
-${PLIST.mono}lib/pkgconfig/avahi-ui-sharp.pc
 man/man1/avahi-browse-domains.1
 man/man1/avahi-browse.1
 man/man1/avahi-publish-address.1
@@ -85,10 +66,7 @@ man/man8/avahi-dnsconfd.8
 man/man8/avahi-dnsconfd.action.8
 sbin/avahi-daemon
 sbin/avahi-dnsconfd
-${PLIST.ui}share/applications/bssh.desktop
-${PLIST.ui}share/applications/bvnc.desktop
 share/avahi/avahi-service.dtd
-${PLIST.ui}share/avahi/interfaces/avahi-discover.ui
 share/dbus-1/interfaces/org.freedesktop.Avahi.AddressResolver.xml
 share/dbus-1/interfaces/org.freedesktop.Avahi.DomainBrowser.xml
 share/dbus-1/interfaces/org.freedesktop.Avahi.EntryGroup.xml
@@ -109,8 +87,6 @@ share/examples/avahi/avahi-dnsconfd.action
 share/examples/avahi/hosts
 share/examples/avahi/services/sftp-ssh.service
 share/examples/avahi/services/ssh.service
-${PLIST.introspection}share/gir-1.0/Avahi-0.6.gir
-${PLIST.introspection}share/gir-1.0/AvahiCore-0.6.gir
 share/locale/ach/LC_MESSAGES/avahi.mo
 share/locale/ar/LC_MESSAGES/avahi.mo
 share/locale/bg/LC_MESSAGES/avahi.mo
