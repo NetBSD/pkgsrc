@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.209 2021/01/08 21:09:25 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.210 2021/01/08 21:39:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -258,3 +258,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox78-l10n to 78.6.1 [ryoon 2021-01-08]
 	Updated print/qpdf to 10.1.0 [ryoon 2021-01-08]
 	Updated security/p11-kit to 0.23.22nb1 [triaxx 2021-01-08]
+	Updated emulators/ucon64 to 2.2.1nb2 [wiz 2021-01-08]
