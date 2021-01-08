@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/12/04 04:56:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.93 2021/01/08 11:50:20 mef Exp $
 
 DISTNAME=		hal-0.5.14
 PKGREVISION=		25
@@ -136,3 +136,4 @@ pre-configure:
 .include "../../sysutils/hal-info/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
