@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.197 2021/01/07 22:10:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.198 2021/01/08 07:56:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -243,3 +243,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/rhash to 1.4.1 [adam 2021-01-07]
 	Updated www/py-pylint-django to 2.4.0 [adam 2021-01-07]
 	Updated security/gsasl to 1.10.0 [wiz 2021-01-07]
+	Updated sysutils/broot to 1.1.11 [pin 2021-01-08]
