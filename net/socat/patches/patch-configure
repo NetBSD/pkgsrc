@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.4 2021/01/08 08:47:29 otis Exp $
+
+Check for stropts.h for usage on SunOS
+
+--- configure.orig	2021-01-03 18:23:22.000000000 +0000
++++ configure
+@@ -4034,7 +4034,7 @@ fi
+ 
+ done
+ 
+-for ac_header in util.h bsd/libutil.h libutil.h sys/stropts.h regex.h
++for ac_header in util.h bsd/libutil.h libutil.h stropts.h sys/stropts.h regex.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
