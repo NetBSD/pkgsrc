@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.202 2021/01/08 11:22:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.203 2021/01/08 14:08:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -251,3 +251,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-botocore to 1.19.51 [adam 2021-01-08]
 	Updated net/py-boto3 to 1.16.51 [adam 2021-01-08]
 	Updated net/py-awscli to 1.18.211 [adam 2021-01-08]
+	Added net/avahi-ui version 0.8 [nia 2021-01-08]
