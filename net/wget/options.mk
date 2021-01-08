@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2019/11/03 11:45:58 rillig Exp $
+# $NetBSD: options.mk,v 1.14 2021/01/08 18:18:58 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wget
 PKG_SUPPORTED_OPTIONS=		idn inet6 psl
-PKG_OPTIONS_REQUIRED_GROUPS=	ssl
+PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 PKG_SUGGESTED_OPTIONS=		idn inet6 openssl psl
 
@@ -34,9 +34,11 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Mgnutls)
 .  include "../../security/gnutls/buildlink3.mk"
 CONFIGURE_ARGS+=--with-ssl=gnutls
-.else
+.elif !empty(PKG_OPTIONS:Mopenssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=--with-ssl=openssl
+.else
+CONFIGURE_ARGS+=--with-ssl=no
 .endif
 
 ###
