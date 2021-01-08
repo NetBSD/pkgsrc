@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2021/01/08 11:50:20 mef Exp $
+# $NetBSD: Makefile,v 1.94 2021/01/08 11:51:45 mef Exp $
 
 DISTNAME=		hal-0.5.14
 PKGREVISION=		25
@@ -128,6 +128,7 @@ post-extract:
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vi ${AUTORECONF_ARGS}
 
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
@@ -136,4 +137,3 @@ pre-configure:
 .include "../../sysutils/hal-info/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
