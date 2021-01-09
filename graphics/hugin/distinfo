@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.23 2020/01/03 18:15:21 adam Exp $
+$NetBSD: distinfo,v 1.24 2021/01/09 21:17:37 adam Exp $
 
-SHA1 (hugin-2019.2.0.tar.bz2) = e91bfbb286d0d5f40cd93ecb961eb55a37f3f5bb
-RMD160 (hugin-2019.2.0.tar.bz2) = d16c364779a48451b3b222a0dd0efa46535e6ddc
-SHA512 (hugin-2019.2.0.tar.bz2) = 2ddfe7468a474c385ef66a88c3a5a2491183765ae431e5044f504d2e95ec3cb99c0b97b98dda282ba7950f6f2001f46b2f2ea39b9025718c2a329dea967685c1
-Size (hugin-2019.2.0.tar.bz2) = 10335030 bytes
-SHA1 (patch-CMakeLists.txt) = b5c72651a150e4c3c095f670eaaeabcb4b4c5749
+SHA1 (hugin-2020.0.0.tar.bz2) = 20e39ab82e1d8208a7eee2f216ab1271c95f583f
+RMD160 (hugin-2020.0.0.tar.bz2) = 499c24bf2dd0eb0b1e223183004dd00f9ced61c2
+SHA512 (hugin-2020.0.0.tar.bz2) = 4c55767c630ea03faf359bda606e5e9e7709a47ab41e821772da8c6da0cf658b1d31d7d8e96ea1c41ec61bdeb2da8c86c92b5d6964a9301732a13137178ec04e
+Size (hugin-2020.0.0.tar.bz2) = 10371301 bytes
+SHA1 (patch-CMakeLists.txt) = 94e087f3eeab899a6dad701cc4d8a95414a980df
 SHA1 (patch-CMakeModules_FindPNG.cmake) = 811fd3cf6f819b31129e1560cd8acd1f7ee6defc
 SHA1 (patch-doc_deghosting_mask.pod) = fe5462b10966420b0cf3fab004854d9dab3bfb4f
 SHA1 (patch-src_hugin1_base__wx_wxPanoCommand.cpp) = d5bf8f747ae86338e728c472d3dc04bf4c84f182
 SHA1 (patch-src_hugin1_calibrate__lens_LensCalFrame.cpp) = 9b815a681317cb19880e7bb6ef170bc14d01b28b
 SHA1 (patch-src_hugin1_hugin_CPEditorPanel.cpp) = d373c00d4783b3edc1bad5a67339163a0c23d8c5
-SHA1 (patch-src_hugin1_hugin_GLPreviewFrame.cpp) = fda8db4abf3ab10332d4309c90f0ef4f845c76a6
+SHA1 (patch-src_hugin1_hugin_GLPreviewFrame.cpp) = 0b1396f4a45a5ab6529c0b8c64ff291a021226c4
 SHA1 (patch-src_hugin1_ptbatcher_BatchFrame.cpp) = 51ce24f1eb99cc5c0151758299eb1ecc34128171
 SHA1 (patch-src_hugin__script__interface_hsi.i) = b11a52579fd12fdf7c51fef63049d285cb2b52e1
 SHA1 (patch-src_tools_align_image_stack.cpp) = fc2759f0722365d4c5339c5c8bc1eda1a6bf7a71
