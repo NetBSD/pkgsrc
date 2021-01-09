@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.220 2021/01/09 19:15:17 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.221 2021/01/09 19:42:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -273,3 +273,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/PC6001VX to 3.6.1 [tsutsui 2021-01-09]
 	Updated net/gallery-dl to 1.16.2 [leot 2021-01-09]
 	Updated pkgtools/pkg_rolling-replace to 0.24.9 [rhialto 2021-01-09]
+	Updated geography/gpsd to 3.22 [gdt 2021-01-09]
