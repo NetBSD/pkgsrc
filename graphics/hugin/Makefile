@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2021/01/01 08:24:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.110 2021/01/09 21:17:37 adam Exp $
 
-DISTNAME=	hugin-2019.2.0
-PKGREVISION=	11
+DISTNAME=	hugin-2020.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +18,8 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config
 CONFIGURE_ENV+=		MANDIR=${PKGMANDIR}
+CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
 
 CMAKE_ARGS+=		-DBUILD_HSI=ON
 
@@ -36,6 +37,9 @@ SUBST_FILES.apple+=	src/hugin1/icpfind/CMakeLists.txt
 SUBST_FILES.apple+=	src/hugin1/ptbatcher/CMakeLists.txt
 SUBST_FILES.apple+=	src/hugin1/stitch_project/CMakeLists.txt
 SUBST_SED.apple=	-e 's,(APPLE),(ELPPA),g'
+
+post-extract:
+	${MKDIR} ${WRKDIR}/build
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,19 +1,19 @@
-$NetBSD: patch-src_hugin1_hugin_GLPreviewFrame.cpp,v 1.2 2016/11/06 16:08:00 adam Exp $
+$NetBSD: patch-src_hugin1_hugin_GLPreviewFrame.cpp,v 1.3 2021/01/09 21:17:37 adam Exp $
 
 Re-order includes to fix building.
 
---- src/hugin1/hugin/GLPreviewFrame.cpp.orig	2016-02-28 08:18:00.000000000 +0000
+--- src/hugin1/hugin/GLPreviewFrame.cpp.orig	2020-10-27 17:24:30.000000000 +0000
 +++ src/hugin1/hugin/GLPreviewFrame.cpp
-@@ -41,6 +41,8 @@
- #include "panoinc_WX.h"
+@@ -35,6 +35,8 @@
  #include "panoinc.h"
+ #include <wx/msgdlg.h>
  
 +#include "vigra_ext/InterestPoints.h"
 +#include "vigra_ext/Correlation.h"
  #include "base_wx/platform.h"
  #include "base_wx/wxPlatform.h"
  #include "base_wx/LensTools.h"
-@@ -65,8 +67,6 @@
+@@ -59,8 +61,6 @@
  #include "hugin/PanoOperation.h"
  #include "hugin/PanoOutputDialog.h"
  #include "base_wx/PTWXDlg.h"
