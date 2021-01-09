@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1370 2021/01/08 14:08:35 nia Exp $
+# $NetBSD: Makefile,v 1.1371 2021/01/09 21:33:56 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -1008,6 +1008,7 @@ SUBDIR+=	xymon
 SUBDIR+=	xymonclient
 SUBDIR+=	yafc
 SUBDIR+=	yale-tftpd
+SUBDIR+=	yaydl
 SUBDIR+=	yaz
 SUBDIR+=	youtube-dl
 SUBDIR+=	ytalk
