@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2020/10/12 21:51:58 bacon Exp $
+# $NetBSD: Makefile,v 1.220 2021/01/09 02:14:06 mef Exp $
 
 DISTNAME=	R-4.0.3
 PKGREVISION=	1
@@ -140,7 +140,7 @@ CTF_FILES_SKIP+=	lib/R/library/mgcv/libs/mgcv.so
 CHECK_WRKREF_SKIP+=	lib/R/etc/Makeconf
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && autoreconf -fvi
+	${RUN} cd ${WRKSRC} && autoreconf -fvi || echo Ignore the warnings from autoreconf
 
 # Fix library names.  Relies on build system using -headerpad_max_install_names.
 .if ${OPSYS} == "Darwin"
