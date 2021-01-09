@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.216 2021/01/09 11:32:46 leot Exp $
+$NetBSD: CHANGES-2021,v 1.217 2021/01/09 13:47:49 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -269,3 +269,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-numpy to 1.19.5 [adam 2021-01-09]
 	Updated time/py-icalendar to 4.0.7 [adam 2021-01-09]
 	Updated net/youtube-dl to 20210108 [leot 2021-01-09]
+	Updated misc/tmate to 2.4.0 [rxg 2021-01-09]
