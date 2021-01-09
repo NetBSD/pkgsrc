@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.222 2021/01/09 21:18:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.223 2021/01/09 21:34:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -276,3 +276,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/gpsd to 3.22 [gdt 2021-01-09]
 	Updated devel/tclap to 1.2.3 [adam 2021-01-09]
 	Updated graphics/hugin to 2020.0.0 [adam 2021-01-09]
+	Added net/yaydl version 0.3.0 [pin 2021-01-09]
