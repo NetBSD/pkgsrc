@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.40 2019/08/27 19:30:36 gdt Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.41 2021/01/09 19:12:46 rhialto Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -108,12 +108,12 @@ usage()
         -n         Don't actually do make replace
         -r         Just replace, don't create binary packages
         -s         Replace even if the ABIs are still compatible ("strict")
-        -u         Update outdated packages
+        -u         Update mismatched packages
         -v         Verbose
 	-D VAR=VAL Passes given variables and values to make
         -L <path>  Log to path (<path>/pkgdir/pkg)
         -X <pkg>   exclude <pkg> from being rebuilt
-        -x <pkg>   exclude <pkg> from outdated check
+        -x <pkg>   exclude <pkg> from mismatch check
 
 pkg_rolling-replace does 'make replace' on one package at a time,
 tsorting the packages being replaced according to their
@@ -126,14 +126,14 @@ pkg_rolling-replace can be used in one of two ways:
       'pkg_rolling-replace' (no arguments) to rebuild them against the
       new version.
 
-    - 'pkg_chk -u' will delete all your mismatched (outdated)
-      packages, then reinstall them one at a time, leaving you without
-      those packages in the meantime.  'pkg_rolling-replace -u' will
-      instead upgrade them in place, allowing you to keep using your
-      system in the meantime (maybe...if you're lucky...because
-      pkg_rolling-replace replaces the \"deepest\" dependency first,
-      things could still break if that happens to be a fundamental
-      library whose ABI has changed).
+    - 'pkg_chk -u' will delete all your mismatched packages (where the
+      package version does not match the pkgsrc version), then reinstall
+      them one at a time, leaving you without those packages in the
+      meantime.  'pkg_rolling-replace -u' will instead upgrade them in
+      place, allowing you to keep using your system in the meantime
+      (maybe...if you're lucky...because pkg_rolling-replace replaces
+      the \"deepest\" dependency first, things could still break if that
+      happens to be a fundamental library whose ABI has changed).
 "
     exit 1
 }
@@ -158,6 +158,9 @@ check_packages_mismatched()
 	# than category/pkg and remove the version.
         for word in $line; do
             if [ "$(echo $word | egrep '^[^/]+-[0-9][^-/]*$')" ]; then
+		if [ -z "$opt_F" ]; then
+		    pkg_admin set mismatch=YES "$word" 1>&2
+		fi
                 echo $word | sed 's/-[0-9][^-]*$//'
                 break  #done with this line
             fi
@@ -374,13 +377,17 @@ SUCCEEDED=""
 FAILED=""
 
 MISMATCH_TODO=
-if [ -n "$opt_u" -o -n "$opt_F" ]; then
+if [ -n "$opt_u" ]; then
     echo "${OPI} Checking for mismatched installed packages using pkg_chk"
     MISMATCH_TODO=$(check_packages_mismatched)
-    echo "${OPI} Excluding the following mismatched packages:"
-    echo "${OPC} EXCLUDE=[$EXCLUDE]"
-    MISMATCH_TODO=$(exclude $EXCLUDE --from $MISMATCH_TODO)
+else
+    echo "${OPI} Checking for mismatched installed packages (mismatch=YES)"
+    MISMATCH_TODO=$(check_packages_w_flag 'mismatch')
 fi
+
+echo "${OPI} Excluding the following mismatched packages:"
+echo "${OPC} EXCLUDE=[$EXCLUDE]"
+MISMATCH_TODO=$(exclude $EXCLUDE --from $MISMATCH_TODO)
 
 if [ -z "$opt_F" ]; then
     echo "${OPI} Checking for rebuild-requested installed packages (rebuild=YES)"
@@ -549,6 +556,8 @@ while [ -n "$REPLACE_TODO" ]; do
 	    abort "package $pkg still has unsafe_depends."
 	[ -z "$(${PKG_INFO} -Q rebuild $pkg)" ] || \
 	    abort "package $pkg is still requested to be rebuilt."
+	[ -z "$(${PKG_INFO} -Q mismatch $pkg)" ] || \
+	    abort "package $pkg is still a mismatched version."
     fi
     # If -r not given, make a binary package.
     if [ -z "$opt_r" -a -z "$fail" -a -z "$opt_F" ]; then
