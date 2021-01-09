@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.51 2021/01/01 09:52:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2021/01/09 17:43:10 tsutsui Exp $
 
-VERSION=		3.6.0
+VERSION=		3.6.1
 DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
-PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		http://eighttails.up.seesaa.net/image/
+MASTER_SITES=		http://eighttails.up.seesaa.net/bin/
 
 MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		http://eighttails.seesaa.net/
