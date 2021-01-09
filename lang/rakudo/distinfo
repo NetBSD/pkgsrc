@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/10/31 12:32:17 mef Exp $
+$NetBSD: distinfo,v 1.8 2021/01/09 07:31:56 mef Exp $
 
-SHA1 (rakudo-2020.10.tar.gz) = a3a03b5bad8119ea86d753d571b4c79f4892f00c
-RMD160 (rakudo-2020.10.tar.gz) = 4b57208ae0079b460d72e04f2e80724bc5d9bf4c
-SHA512 (rakudo-2020.10.tar.gz) = fcd00ac782ca28243ca2c6ceb45ff99322952086749aea01ccdfb5ae8c525cb6304fe5d20e7905a9808b1b7a1a96d7c4406847b10c0e4ea8b5fd7d053870f46a
-Size (rakudo-2020.10.tar.gz) = 4755030 bytes
+SHA1 (rakudo-2020.12.tar.gz) = 1692ca97540bdfb206f71dfe66e0301a4d609cfb
+RMD160 (rakudo-2020.12.tar.gz) = 4a710f326304b594364bc949fdde260bad0abd5d
+SHA512 (rakudo-2020.12.tar.gz) = dfb94d1c8f75ec16e0149a37b57a9d9fc80ddaf256526edd3d3a23c0435881a187efbe88fd95a2174a9e9d93820987e561bb77745c7492e7ac50eb72879b4ab8
+Size (rakudo-2020.12.tar.gz) = 5690849 bytes
