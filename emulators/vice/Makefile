@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2021/01/01 16:23:44 rhialto Exp $
+# $NetBSD: Makefile,v 1.155 2021/01/09 05:20:58 mef Exp $
 
 DISTNAME=	vice-3.5
 PKGREVISION=	1
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--enable-html-docs
 INFO_FILES=		yes
 REQD_DIRS+=		${PREFIX}/share/vice
 
+DEPENDS+=		dos2unix-[0-9]*:../../converters/dos2unix
 BUILD_DEPENDS+=		xa65-[0-9]*:../../devel/xa65
 
 REPLACE_BASH+=		src/arch/gtk3/data/unix/mkdesktopfile.sh
