@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.214 2021/01/09 08:36:43 adam Exp $
+$NetBSD: CHANGES-2021,v 1.215 2021/01/09 09:30:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -266,3 +266,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nqp to 2020.12 [mef 2021-01-09]
 	Updated security/py-kerberos to 1.3.1 [adam 2021-01-09]
 	Updated devel/py-test-flake8 to 1.0.7 [adam 2021-01-09]
+	Updated math/py-numpy to 1.19.5 [adam 2021-01-09]
+	Updated time/py-icalendar to 4.0.7 [adam 2021-01-09]
