@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.3 2019/12/19 22:21:01 joerg Exp $
+$NetBSD: distinfo,v 1.4 2021/01/09 12:53:45 rxg Exp $
 
-SHA1 (tmate-2.2.1.tar.gz) = 8ef6999f7bf2511738650421e40b6a639e782d36
-RMD160 (tmate-2.2.1.tar.gz) = fd72920b91041905a218f59ba25eb1d58d4bfc6c
-SHA512 (tmate-2.2.1.tar.gz) = 3d4ce7510cd8da39bc4fe63f2a64179846a813bb3560ca811d9e1e2a28b06d95a9033047a900d76bda069c249d7ebbe1143daa082b23212c5d32a50bf1819d2d
-Size (tmate-2.2.1.tar.gz) = 610745 bytes
-SHA1 (patch-configure.ac) = dba0fdd160797e3884533d99686efdf9b0af9e7a
-SHA1 (patch-tmate-session.c) = 9a3b31787dd86f4eb9528a4cb0e6708da31e75e9
-SHA1 (patch-tmate-ssh-client.c) = d797fb9d770999447859ce4f204fa853a2f63cb9
+SHA1 (tmate-2.4.0.tar.gz) = 27c08f321e75716dfe0f037d18fa907b9dfe1319
+RMD160 (tmate-2.4.0.tar.gz) = b377abc68071506ac5b05a067fc5c13985cfd7ab
+SHA512 (tmate-2.4.0.tar.gz) = 92d2ca354b295678bfc2747ca83a45ebafeaec40ebac94bd94c4926af4f820b3f3a087f365147f41c80d1c8ad032f52c697a2421839c39315d84f98f7eccada6
+Size (tmate-2.4.0.tar.gz) = 614179 bytes
+SHA1 (patch-Makefile.am) = 34eeac2f32d09bbde1ae5eda6158881891feb2f2
 SHA1 (patch-tmux.h) = 8c26d6ca70b1a8d51e7c920ea54f59d2023968fe
