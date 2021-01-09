@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.103 2020/12/31 17:30:03 leot Exp $
+@comment $NetBSD: PLIST,v 1.104 2021/01/09 11:32:36 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -140,12 +140,18 @@ ${PYSITELIB}/youtube_dl/extractor/aparat.pyo
 ${PYSITELIB}/youtube_dl/extractor/appleconnect.py
 ${PYSITELIB}/youtube_dl/extractor/appleconnect.pyc
 ${PYSITELIB}/youtube_dl/extractor/appleconnect.pyo
+${PYSITELIB}/youtube_dl/extractor/applepodcasts.py
+${PYSITELIB}/youtube_dl/extractor/applepodcasts.pyc
+${PYSITELIB}/youtube_dl/extractor/applepodcasts.pyo
 ${PYSITELIB}/youtube_dl/extractor/appletrailers.py
 ${PYSITELIB}/youtube_dl/extractor/appletrailers.pyc
 ${PYSITELIB}/youtube_dl/extractor/appletrailers.pyo
 ${PYSITELIB}/youtube_dl/extractor/archiveorg.py
 ${PYSITELIB}/youtube_dl/extractor/archiveorg.pyc
 ${PYSITELIB}/youtube_dl/extractor/archiveorg.pyo
+${PYSITELIB}/youtube_dl/extractor/arcpublishing.py
+${PYSITELIB}/youtube_dl/extractor/arcpublishing.pyc
+${PYSITELIB}/youtube_dl/extractor/arcpublishing.pyo
 ${PYSITELIB}/youtube_dl/extractor/ard.py
 ${PYSITELIB}/youtube_dl/extractor/ard.pyc
 ${PYSITELIB}/youtube_dl/extractor/ard.pyo
@@ -212,6 +218,12 @@ ${PYSITELIB}/youtube_dl/extractor/bet.pyo
 ${PYSITELIB}/youtube_dl/extractor/bfi.py
 ${PYSITELIB}/youtube_dl/extractor/bfi.pyc
 ${PYSITELIB}/youtube_dl/extractor/bfi.pyo
+${PYSITELIB}/youtube_dl/extractor/bfmtv.py
+${PYSITELIB}/youtube_dl/extractor/bfmtv.pyc
+${PYSITELIB}/youtube_dl/extractor/bfmtv.pyo
+${PYSITELIB}/youtube_dl/extractor/bibeltv.py
+${PYSITELIB}/youtube_dl/extractor/bibeltv.pyc
+${PYSITELIB}/youtube_dl/extractor/bibeltv.pyo
 ${PYSITELIB}/youtube_dl/extractor/bigflix.py
 ${PYSITELIB}/youtube_dl/extractor/bigflix.pyc
 ${PYSITELIB}/youtube_dl/extractor/bigflix.pyo
@@ -764,9 +776,9 @@ ${PYSITELIB}/youtube_dl/extractor/golem.pyo
 ${PYSITELIB}/youtube_dl/extractor/googledrive.py
 ${PYSITELIB}/youtube_dl/extractor/googledrive.pyc
 ${PYSITELIB}/youtube_dl/extractor/googledrive.pyo
-${PYSITELIB}/youtube_dl/extractor/googleplus.py
-${PYSITELIB}/youtube_dl/extractor/googleplus.pyc
-${PYSITELIB}/youtube_dl/extractor/googleplus.pyo
+${PYSITELIB}/youtube_dl/extractor/googlepodcasts.py
+${PYSITELIB}/youtube_dl/extractor/googlepodcasts.pyc
+${PYSITELIB}/youtube_dl/extractor/googlepodcasts.pyo
 ${PYSITELIB}/youtube_dl/extractor/googlesearch.py
 ${PYSITELIB}/youtube_dl/extractor/googlesearch.pyc
 ${PYSITELIB}/youtube_dl/extractor/googlesearch.pyo
@@ -848,6 +860,9 @@ ${PYSITELIB}/youtube_dl/extractor/hypem.pyo
 ${PYSITELIB}/youtube_dl/extractor/ign.py
 ${PYSITELIB}/youtube_dl/extractor/ign.pyc
 ${PYSITELIB}/youtube_dl/extractor/ign.pyo
+${PYSITELIB}/youtube_dl/extractor/iheart.py
+${PYSITELIB}/youtube_dl/extractor/iheart.pyc
+${PYSITELIB}/youtube_dl/extractor/iheart.pyo
 ${PYSITELIB}/youtube_dl/extractor/imdb.py
 ${PYSITELIB}/youtube_dl/extractor/imdb.pyc
 ${PYSITELIB}/youtube_dl/extractor/imdb.pyo
