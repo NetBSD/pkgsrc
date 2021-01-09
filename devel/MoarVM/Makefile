@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/01/09 06:46:17 mef Exp $
+# $NetBSD: Makefile,v 1.25 2021/01/09 07:27:56 mef Exp $
 
 DISTNAME=	MoarVM-2020.12
 CATEGORIES=	devel perl6
@@ -24,6 +24,7 @@ CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--has-libuv \
 			--has-libtommath
 
+# skip portability check for release target
 # The [[ is only used for producing a release.
 CHECK_PORTABILITY_SKIP+=	build/Makefile.in
 
