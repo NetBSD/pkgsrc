@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/04 14:52:58 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/09 05:25:45 mef Exp $
 
 DISTNAME=	mcwm-20130209-2
 PKGNAME=	mcwm-20130209.2
@@ -18,7 +18,7 @@ do-install:
 .for prog in mcwm hidden
 	${INSTALL_PROGRAM} ${WRKSRC}/${prog} \
 	    ${DESTDIR}${PREFIX}/bin/${prog}
-	${INSTALL_PROGRAM} ${WRKSRC}/${prog}.man \
+	${INSTALL_DATA} ${WRKSRC}/${prog}.man \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${prog}.1
 .endfor
 
