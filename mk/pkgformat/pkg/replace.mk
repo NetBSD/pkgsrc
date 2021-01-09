@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.6 2019/01/22 14:29:44 roy Exp $
+# $NetBSD: replace.mk,v 1.7 2021/01/09 19:10:05 rhialto Exp $
 #
 
 # _pkgformat-destdir-replace:
@@ -163,7 +163,7 @@ replace-fixup-required-by: .PHONY
 	done;								\
 	${MV} ${_REQUIRED_BY_FILE} ${_PKG_DBDIR}/$$newname/+REQUIRED_BY
 
-# Removes unsafe_depends* and rebuild tags from this package.
+# Removes unsafe_depends*, rebuild and mismatch tags from this package.
 #
 # XXX: pkg_admin should not complain on unset with no +INSTALLED_INFO.
 #
@@ -172,7 +172,7 @@ replace-fixup-installed-info: .PHONY
 	${RUN} ${_REPLACE_NEWNAME_CMD};					\
 	[ ! -f ${_INSTALLED_INFO_FILE} ] ||			\
 	${MV} ${_INSTALLED_INFO_FILE} ${_PKG_DBDIR}/$$newname/+INSTALLED_INFO; \
-	for var in unsafe_depends unsafe_depends_strict rebuild; do	\
+	for var in unsafe_depends unsafe_depends_strict rebuild mismatch; do  \
 		${TEST} ! -f ${_PKG_DBDIR}/$$newname/+INSTALLED_INFO || \
 		${PKG_ADMIN} unset $$var $$newname;			\
 	done
