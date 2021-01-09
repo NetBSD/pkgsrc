@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/01/03 18:15:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/01/09 21:17:37 adam Exp $
 bin/PTBatcherGUI
 bin/align_image_stack
 bin/autooptimiser
@@ -55,6 +55,7 @@ man/man1/hugin.1
 man/man1/hugin_executor.1
 man/man1/hugin_hdrmerge.1
 man/man1/hugin_lensdb.1
+man/man1/hugin_stacker.1
 man/man1/hugin_stitch_project.1
 man/man1/icpfind.1
 man/man1/linefind.1
@@ -71,9 +72,6 @@ man/man1/pto_var.1
 man/man1/tca_correct.1
 man/man1/verdandi.1
 man/man1/vig_optimize.1
-share/appdata/PTBatcherGUI.appdata.xml
-share/appdata/calibrate_lens_gui.appdata.xml
-share/appdata/hugin.appdata.xml
 share/applications/PTBatcherGUI.desktop
 share/applications/calibrate_lens_gui.desktop
 share/applications/hugin.desktop
@@ -565,7 +563,7 @@ share/hugin/xrc/pano_panel.xrc
 share/hugin/xrc/pref_dialog.xrc
 share/hugin/xrc/preview_frame.xrc
 share/hugin/xrc/reset_dialog.xrc
-share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-ptoptimizer-script.png
+share/icons/gnome/48x48/mimetypes/application-x-ptoptimizer-script.png
 share/icons/hicolor/128x128/apps/hugin.png
 share/icons/hicolor/128x128/apps/ptbatcher.png
 share/icons/hicolor/16x16/apps/hugin.png
@@ -600,4 +598,7 @@ share/locale/sk/LC_MESSAGES/hugin.mo
 share/locale/sv/LC_MESSAGES/hugin.mo
 share/locale/zh_CN/LC_MESSAGES/hugin.mo
 share/locale/zh_TW/LC_MESSAGES/hugin.mo
+share/metainfo/PTBatcherGUI.appdata.xml
+share/metainfo/calibrate_lens_gui.appdata.xml
+share/metainfo/hugin.appdata.xml
 share/mime/packages/hugin.xml
