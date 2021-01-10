@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 15:08:08 taca Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/10 14:12:20 taca Exp $
 
-DISTNAME=	arel-helpers-2.11.0
-PKGREVISION=	1
+DISTNAME=	arel-helpers-2.12.0
 CATEGORIES=	databases
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,7 +12,7 @@ DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
 USE_LANGUAGES=	# none
 
-RUBY_RAILS_ACCEPTED=	# defined
+RUBY_RAILS_ACCEPTED=	# empty
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
