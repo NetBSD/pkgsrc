@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.231 2021/01/10 14:12:47 taca Exp $
+$NetBSD: CHANGES-2021,v 1.232 2021/01/10 14:15:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -285,3 +285,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/ruby-unf_ext to 0.0.7.7 [taca 2021-01-10]
 	Updated databases/ruby-activeldap to 6.1.0 [taca 2021-01-10]
 	Updated databases/ruby-arel-helpers to 2.12.0 [taca 2021-01-10]
+	Updated databases/ruby-awesome_nested_set to 3.3.1 [taca 2021-01-10]
