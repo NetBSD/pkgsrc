@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.252 2021/01/10 16:07:57 taca Exp $
+$NetBSD: CHANGES-2021,v 1.253 2021/01/10 16:11:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -306,3 +306,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-racc to 1.5.2 [taca 2021-01-10]
 	Updated devel/ruby-rbtree to 0.4.4 [taca 2021-01-10]
 	Added devel/ruby-scanf version 1.0.0 [taca 2021-01-10]
+	Added devel/ruby-semverse version 3.0.0 [taca 2021-01-10]
