@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.256 2021/01/10 17:25:27 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.257 2021/01/10 20:37:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -310,3 +310,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-stream to 0.5.3 [taca 2021-01-10]
 	Updated devel/ruby-rgl to 0.5.7 [taca 2021-01-10]
 	Updated x11/xfce4-terminal to 0.8.10 [gutteridge 2021-01-10]
+	Updated graphics/py-matplotlib to 3.3.3 [adam 2021-01-10]
+	Updated net/py-lexicon to 3.5.3 [adam 2021-01-10]
