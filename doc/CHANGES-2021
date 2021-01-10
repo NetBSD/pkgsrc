@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.229 2021/01/10 14:06:18 taca Exp $
+$NetBSD: CHANGES-2021,v 1.230 2021/01/10 14:07:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -283,3 +283,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/ruby-termios to 1.1.0 [taca 2021-01-10]
 	Updated converters/ruby-Ascii85 to 1.1.0 [taca 2021-01-10]
 	Updated converters/ruby-unf_ext to 0.0.7.7 [taca 2021-01-10]
+	Updated databases/ruby-activeldap to 6.1.0 [taca 2021-01-10]
