@@ -7,7 +7,10 @@ Necromancer provides independent type conversion component for [TTY]
 
 ## Motivation
 
-Conversion between Ruby core types frequently comes up in projects but is solved by half-baked solutions. This library aims to provide an independent and extensible API to support a robust and generic way to convert between core Ruby types.
+Conversion between Ruby core types frequently comes up in projects but is
+solved by half-baked solutions.  This library aims to provide an independent
+and extensible API to support a robust and generic way to convert between
+core Ruby types.
 
 ## Features
 
