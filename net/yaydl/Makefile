@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/09 21:33:04 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/10 07:34:13 pin Exp $
 
 DISTNAME=	yaydl-0.3.0
 CATEGORIES=	net
@@ -20,8 +20,6 @@ INSTALLATION_DIRS=	bin
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
-
-CARGO_NO_DEFAULT_FEATURES=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/yaydl ${DESTDIR}${PREFIX}/bin
