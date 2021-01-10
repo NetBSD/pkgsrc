@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.223 2021/01/09 21:34:25 pin Exp $
+$NetBSD: CHANGES-2021,v 1.224 2021/01/10 05:44:31 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/tclap to 1.2.3 [adam 2021-01-09]
 	Updated graphics/hugin to 2020.0.0 [adam 2021-01-09]
 	Added net/yaydl version 0.3.0 [pin 2021-01-09]
+	Updated sysutils/xfce4-xkb-plugin to 0.8.2 [gutteridge 2021-01-10]
