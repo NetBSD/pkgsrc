@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/08/09 15:05:22 taca Exp $
+# $NetBSD: Makefile,v 1.16 2021/01/10 14:15:29 taca Exp $
 
-DISTNAME=	awesome_nested_set-3.2.1
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	databases ruby
+DISTNAME=	awesome_nested_set-3.3.1
+CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/collectiveidea/awesome_nested_set
@@ -11,10 +10,8 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
-USE_LANGUAGES=	# none
-
-RUBY_RAILS_ACCEPTED=	# defined
 USE_LANGUAGES=		# none
+RUBY_RAILS_ACCEPTED=	# empty
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
