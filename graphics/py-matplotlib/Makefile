@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2020/10/12 21:52:01 bacon Exp $
+# $NetBSD: Makefile,v 1.61 2021/01/10 20:27:33 adam Exp $
 
-DISTNAME=	matplotlib-3.2.2
+DISTNAME=	matplotlib-3.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://matplotlib.org/
 COMMENT=	Matlab-style plotting package for Python
 # LICENSE=	see ${WRKSRC}/LICENSE/LICENSE
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=3.4:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.2.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-cycler>=0.10:../../graphics/py-cycler
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
