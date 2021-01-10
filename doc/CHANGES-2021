@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.226 2021/01/10 09:08:18 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.227 2021/01/10 14:01:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -280,3 +280,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xfce4-xkb-plugin to 0.8.2 [gutteridge 2021-01-10]
 	Updated devel/mk-configure to 0.36.0 [cheusov 2021-01-10]
 	Updated time/p5-DateTime-TimeZone to 2.46 [gutteridge 2021-01-10]
+	Updated comms/ruby-termios to 1.1.0 [taca 2021-01-10]
