@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/11/14 15:25:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16.10.1 2021/01/10 19:24:11 bsiegert Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -126,7 +126,7 @@ include/gstreamer-1.0/gst/net/net-prelude.h
 include/gstreamer-1.0/gst/net/net.h
 ${PLIST.introspection}lib/girepository-1.0/Gst-1.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/GstBase-1.0.typelib
-${PLIST.gstcheck}lib/girepository-1.0/GstCheck-1.0.typelib
+${PLIST.gstcheck}${PLIST.introspection}lib/girepository-1.0/GstCheck-1.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/GstController-1.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/GstNet-1.0.typelib
 lib/gstreamer-1.0/libgstcoreelements.la
@@ -154,7 +154,7 @@ share/bash-completion/completions/gst-launch-1.0
 share/bash-completion/helpers/gst
 ${PLIST.introspection}share/gir-1.0/Gst-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstBase-1.0.gir
-${PLIST.gstcheck}share/gir-1.0/GstCheck-1.0.gir
+${PLIST.gstcheck}${PLIST.introspection}share/gir-1.0/GstCheck-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstController-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstNet-1.0.gir
 share/gtk-doc/html/gstreamer-1.0/GstAllocator.html
