@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/07 06:40:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/01/10 14:47:38 taca Exp $
 ${GEM_HOME}/cache/facade-${PKGVERSION}.gem
-${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/MANIFEST
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/MANIFEST.md
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/certs/djberg96_pub.pem
 ${GEM_LIBDIR}/facade.gemspec
 ${GEM_LIBDIR}/lib/facade.rb
-${GEM_LIBDIR}/test/test_facade.rb
+${GEM_LIBDIR}/spec/facade_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
