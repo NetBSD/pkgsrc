@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.224 2021/01/10 05:44:31 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.225 2021/01/10 08:42:36 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -278,3 +278,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/hugin to 2020.0.0 [adam 2021-01-09]
 	Added net/yaydl version 0.3.0 [pin 2021-01-09]
 	Updated sysutils/xfce4-xkb-plugin to 0.8.2 [gutteridge 2021-01-10]
+	Updated devel/mk-configure to 0.36.0 [cheusov 2021-01-10]
