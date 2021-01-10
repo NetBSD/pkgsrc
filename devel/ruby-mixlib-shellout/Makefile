@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/09/14 16:22:14 taca Exp $
+# $NetBSD: Makefile,v 1.12 2021/01/10 15:12:14 taca Exp $
 
-DISTNAME=	mixlib-shellout-3.1.6
+DISTNAME=	mixlib-shellout-3.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
