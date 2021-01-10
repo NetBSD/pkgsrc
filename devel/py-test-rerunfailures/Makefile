@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/05/16 16:45:20 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/10 21:49:59 adam Exp $
 
-DISTNAME=	pytest-rerunfailures-9.0
+DISTNAME=	pytest-rerunfailures-9.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-rerunfailures/}
