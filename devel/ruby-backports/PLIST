@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/09/13 15:16:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/01/10 14:31:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -407,6 +407,7 @@ ${GEM_LIBDIR}/lib/backports/2.3.0/hash/to_proc.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/numeric.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/numeric/negative.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/numeric/positive.rb
+${GEM_LIBDIR}/lib/backports/2.3.0/queue/close.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/string.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/string/uminus.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/string/uplus.rb
@@ -414,6 +415,8 @@ ${GEM_LIBDIR}/lib/backports/2.3.0/struct.rb
 ${GEM_LIBDIR}/lib/backports/2.3.0/struct/dig.rb
 ${GEM_LIBDIR}/lib/backports/2.3.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0.rb
+${GEM_LIBDIR}/lib/backports/2.4.0/bignum.rb
+${GEM_LIBDIR}/lib/backports/2.4.0/bignum/dup.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0/comparable.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0/comparable/clamp.rb
 ${GEM_LIBDIR}/lib/backports/2.4.0/enumerable.rb
@@ -511,6 +514,16 @@ ${GEM_LIBDIR}/lib/backports/2.7.0/enumerator/produce.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/time/ceil.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/time/floor.rb
 ${GEM_LIBDIR}/lib/backports/2.7.rb
+${GEM_LIBDIR}/lib/backports/3.0.0.rb
+${GEM_LIBDIR}/lib/backports/3.0.0/env.rb
+${GEM_LIBDIR}/lib/backports/3.0.0/env/except.rb
+${GEM_LIBDIR}/lib/backports/3.0.0/hash.rb
+${GEM_LIBDIR}/lib/backports/3.0.0/hash/except.rb
+${GEM_LIBDIR}/lib/backports/3.0.0/hash/transform_keys.rb
+${GEM_LIBDIR}/lib/backports/3.0.0/ractor.rb
+${GEM_LIBDIR}/lib/backports/3.0.0/symbol.rb
+${GEM_LIBDIR}/lib/backports/3.0.0/symbol/name.rb
+${GEM_LIBDIR}/lib/backports/3.0.rb
 ${GEM_LIBDIR}/lib/backports/basic_object.rb
 ${GEM_LIBDIR}/lib/backports/force/array_map.rb
 ${GEM_LIBDIR}/lib/backports/force/enumerable_map.rb
@@ -518,6 +531,11 @@ ${GEM_LIBDIR}/lib/backports/force/hash_select.rb
 ${GEM_LIBDIR}/lib/backports/force/string_length.rb
 ${GEM_LIBDIR}/lib/backports/force/string_size.rb
 ${GEM_LIBDIR}/lib/backports/latest.rb
+${GEM_LIBDIR}/lib/backports/ractor/cloner.rb
+${GEM_LIBDIR}/lib/backports/ractor/errors.rb
+${GEM_LIBDIR}/lib/backports/ractor/queues.rb
+${GEM_LIBDIR}/lib/backports/ractor/ractor.rb
+${GEM_LIBDIR}/lib/backports/ractor/sharing.rb
 ${GEM_LIBDIR}/lib/backports/rails.rb
 ${GEM_LIBDIR}/lib/backports/rails/array.rb
 ${GEM_LIBDIR}/lib/backports/rails/enumerable.rb
@@ -536,6 +554,7 @@ ${GEM_LIBDIR}/lib/backports/tools/alias_method_chain.rb
 ${GEM_LIBDIR}/lib/backports/tools/arguments.rb
 ${GEM_LIBDIR}/lib/backports/tools/deprecation.rb
 ${GEM_LIBDIR}/lib/backports/tools/extreme_object.rb
+${GEM_LIBDIR}/lib/backports/tools/filtered_queue.rb
 ${GEM_LIBDIR}/lib/backports/tools/float_integer_conversion.rb
 ${GEM_LIBDIR}/lib/backports/tools/io.rb
 ${GEM_LIBDIR}/lib/backports/tools/make_block_optional.rb
