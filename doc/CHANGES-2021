@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.255 2021/01/10 16:21:15 taca Exp $
+$NetBSD: CHANGES-2021,v 1.256 2021/01/10 17:25:27 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -309,3 +309,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/ruby-semverse version 3.0.0 [taca 2021-01-10]
 	Updated devel/ruby-stream to 0.5.3 [taca 2021-01-10]
 	Updated devel/ruby-rgl to 0.5.7 [taca 2021-01-10]
+	Updated x11/xfce4-terminal to 0.8.10 [gutteridge 2021-01-10]
