@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.239 2021/01/10 14:47:56 taca Exp $
+$NetBSD: CHANGES-2021,v 1.240 2021/01/10 14:50:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -293,3 +293,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-curses to 1.4.0 [taca 2021-01-10]
 	Updated devel/ruby-docile to 1.3.4 [taca 2021-01-10]
 	Updated devel/ruby-facade to 1.2.1 [taca 2021-01-10]
+	Updated devel/ruby-ffi to 1.14.2 [taca 2021-01-10]
