@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/10 16:10:14 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/lib/semverse.rb
+${GEM_LIBDIR}/lib/semverse/constraint.rb
+${GEM_LIBDIR}/lib/semverse/errors.rb
+${GEM_LIBDIR}/lib/semverse/gem_version.rb
+${GEM_LIBDIR}/lib/semverse/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
