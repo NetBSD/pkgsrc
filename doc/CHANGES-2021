@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.246 2021/01/10 15:21:56 taca Exp $
+$NetBSD: CHANGES-2021,v 1.247 2021/01/10 15:27:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -300,3 +300,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-mixlib-shellout to 3.2.2 [taca 2021-01-10]
 	Updated devel/ruby-mocha to 1.12.0 [taca 2021-01-10]
 	Updated devel/ruby-necromancer to 0.7.0 [taca 2021-01-10]
+	Updated devel/ruby-octokit to 4.20.0 [taca 2021-01-10]
