@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/10 15:00:36 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rvmrc
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/generator.gemspec
+${GEM_LIBDIR}/lib/generator.rb
+${GEM_LIBDIR}/lib/generator/generator.rb
+${GEM_LIBDIR}/spec/generator_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
