@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/09/13 15:07:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/01/10 14:27:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -316,7 +316,6 @@ ${GEM_LIBDIR}/spec/rack/moneta_cookies_spec.rb
 ${GEM_LIBDIR}/spec/rack/moneta_store_spec.rb
 ${GEM_LIBDIR}/spec/rack/session_moneta_spec.rb
 ${GEM_LIBDIR}/spec/restserver.rb
-${GEM_LIBDIR}/spec/support/mongo_helper.rb
 ${GEM_LIBDIR}/test/action_dispatch/fixtures/session_autoload_test/foo.rb
 ${GEM_LIBDIR}/test/action_dispatch/session_moneta_store_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
