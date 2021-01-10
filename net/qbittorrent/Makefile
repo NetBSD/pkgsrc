@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/01/10 11:11:57 nia Exp $
+# $NetBSD: Makefile,v 1.26 2021/01/10 12:38:30 nia Exp $
 
 DISTNAME=	qbittorrent-4.3.2
 CATEGORIES=	net
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c gnu++14
 USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
 GCC_REQD+=	6 # c++14
 
 LDFLAGS.NetBSD+=	-ljemalloc
@@ -29,9 +31,9 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../net/libtorrent-rasterbar/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .if ${OPSYS} == "Darwin"
 .  include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .endif
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
