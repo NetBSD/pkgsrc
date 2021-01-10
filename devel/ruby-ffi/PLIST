@@ -1,13 +1,7 @@
-@comment $NetBSD: PLIST,v 1.20 2020/06/07 06:48:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/01/10 14:49:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/.appveyor.yml
-${GEM_LIBDIR}/.github/workflows/ci.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.gitmodules
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
@@ -166,6 +160,9 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/src/closures.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/cris/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/cris/ffitarget.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/cris/sysv.S
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/csky/ffi.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/csky/ffitarget.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/csky/sysv.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/debug.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/dlmalloc.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/frv/eabi.S
@@ -176,6 +173,10 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/src/ia64/ffitarget.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/ia64/ia64_flags.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/ia64/unix.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/java_raw_api.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/kvx/asm.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/kvx/ffi.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/kvx/ffitarget.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/kvx/sysv.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/m32r/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/m32r/ffitarget.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/m32r/sysv.S
@@ -480,10 +481,9 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.go/go.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.go/static-chain.h
 ${GEM_LIBDIR}/ext/ffi_c/rbffi.h
 ${GEM_LIBDIR}/ext/ffi_c/rbffi_endian.h
-${GEM_LIBDIR}/ext/ffi_c/win32/stdbool.h
-${GEM_LIBDIR}/ext/ffi_c/win32/stdint.h
 ${GEM_LIBDIR}/ffi.gemspec
 ${GEM_LIBDIR}/lib/ffi.rb
+${GEM_LIBDIR}/lib/ffi/abstract_memory.rb
 ${GEM_LIBDIR}/lib/ffi/autopointer.rb
 ${GEM_LIBDIR}/lib/ffi/buffer.rb
 ${GEM_LIBDIR}/lib/ffi/callback.rb
@@ -496,9 +496,11 @@ ${GEM_LIBDIR}/lib/ffi/library.rb
 ${GEM_LIBDIR}/lib/ffi/managedstruct.rb
 ${GEM_LIBDIR}/lib/ffi/memorypointer.rb
 ${GEM_LIBDIR}/lib/ffi/platform.rb
+${GEM_LIBDIR}/lib/ffi/platform/aarch64-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/aarch64-freebsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/aarch64-freebsd12/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/aarch64-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/aarch64-openbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/arm-freebsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/arm-freebsd12/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/arm-linux/types.conf
@@ -538,7 +540,9 @@ ${GEM_LIBDIR}/lib/ffi/platform/x86_64-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-dragonflybsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-freebsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-freebsd12/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-haiku/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-msys/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-netbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-openbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-solaris/types.conf
