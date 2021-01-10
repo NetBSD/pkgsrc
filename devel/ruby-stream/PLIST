@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/20 14:05:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/10 16:19:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/examples.rb
 ${GEM_LIBDIR}/examples/streamtester.rb
-${GEM_LIBDIR}/lib/generator2stream.rb
 ${GEM_LIBDIR}/lib/stream.rb
-${GEM_LIBDIR}/test/bm.rb
 ${GEM_LIBDIR}/test/test_helper.rb
-${GEM_LIBDIR}/test/testgenerator.rb
 ${GEM_LIBDIR}/test/teststream.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
