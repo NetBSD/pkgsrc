@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.254 2021/01/10 16:19:25 taca Exp $
+$NetBSD: CHANGES-2021,v 1.255 2021/01/10 16:21:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -308,3 +308,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/ruby-scanf version 1.0.0 [taca 2021-01-10]
 	Added devel/ruby-semverse version 3.0.0 [taca 2021-01-10]
 	Updated devel/ruby-stream to 0.5.3 [taca 2021-01-10]
+	Updated devel/ruby-rgl to 0.5.7 [taca 2021-01-10]
