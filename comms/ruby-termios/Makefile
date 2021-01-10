@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2016/07/17 14:25:00 taca Exp $
+# $NetBSD: Makefile,v 1.30 2021/01/10 14:00:41 taca Exp $
 
-DISTNAME=	ruby-termios-1.0.2
+DISTNAME=	ruby-termios-1.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	comms
 
