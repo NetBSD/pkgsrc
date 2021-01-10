@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.235 2021/01/10 14:31:49 taca Exp $
+$NetBSD: CHANGES-2021,v 1.236 2021/01/10 14:39:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -289,3 +289,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/ruby-moneta to 1.4.1 [taca 2021-01-10]
 	Updated databases/ruby-sequel to 5.40.0 [taca 2021-01-10]
 	Updated devel/ruby-backports to 3.20.1 [taca 2021-01-10]
+	Updated devel/ruby-celluloid to 0.18.0 [taca 2021-01-10]
