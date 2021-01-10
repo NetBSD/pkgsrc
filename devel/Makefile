@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3309 2021/01/08 17:13:18 maya Exp $
+# $NetBSD: Makefile,v 1.3310 2021/01/10 15:01:20 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2792,6 +2792,7 @@ SUBDIR+=	ruby-filesize
 SUBDIR+=	ruby-flexmock
 SUBDIR+=	ruby-forwardable-extended
 SUBDIR+=	ruby-gemcutter
+SUBDIR+=	ruby-generator
 SUBDIR+=	ruby-getopt
 SUBDIR+=	ruby-gettext
 SUBDIR+=	ruby-gettext-activerecord
