@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2019/01/20 14:05:57 taca Exp $
+# $NetBSD: Makefile,v 1.9 2021/01/10 16:19:07 taca Exp $
 
-DISTNAME=	stream-0.5.2
+DISTNAME=	stream-0.5.3
 CATEGORIES=	devel
-DIST_SUBDIR=	stream-20130704
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/monora/stream
 COMMENT=	Interface for external iterators
-LICENSE=	gnu-gpl-v2 # OR ruby-license
+LICENSE=	ruby-license
+
+DEPENDS+=	${RUBY_PKGPREFIX}-generator>=0:../../devel/ruby-generator
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
