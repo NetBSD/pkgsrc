@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/01/06 14:27:45 adam Exp $
+# $NetBSD: Makefile,v 1.24 2021/01/10 11:10:17 nia Exp $
 
 DISTNAME=	qbittorrent-4.3.2
 CATEGORIES=	net
@@ -30,6 +30,7 @@ CXXFLAGS+=		-march=i586
 LDFLAGS.NetBSD+=	-ljemalloc
 
 .include "../../devel/boost-libs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/libtorrent-rasterbar/buildlink3.mk"
