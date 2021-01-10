@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2020/10/19 15:10:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.83 2021/01/10 14:28:46 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -14,6 +14,7 @@ ${GEM_LIBDIR}/doc/core_extensions.rdoc
 ${GEM_LIBDIR}/doc/dataset_basics.rdoc
 ${GEM_LIBDIR}/doc/dataset_filtering.rdoc
 ${GEM_LIBDIR}/doc/extensions.rdoc
+${GEM_LIBDIR}/doc/fork_safety.rdoc
 ${GEM_LIBDIR}/doc/mass_assignment.rdoc
 ${GEM_LIBDIR}/doc/migration.rdoc
 ${GEM_LIBDIR}/doc/model_dataset_method_design.rdoc
@@ -58,7 +59,10 @@ ${GEM_LIBDIR}/doc/release_notes/5.34.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.35.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.36.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.37.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.38.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.39.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.40.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
