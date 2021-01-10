@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/01/10 11:10:17 nia Exp $
+# $NetBSD: Makefile,v 1.25 2021/01/10 11:11:57 nia Exp $
 
 DISTNAME=	qbittorrent-4.3.2
 CATEGORIES=	net
@@ -20,13 +20,6 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 GCC_REQD+=	6 # c++14
 
-.include "../../mk/bsd.prefs.mk"
-
-# 64 bit atomic ops are required
-.if ${MACHINE_ARCH} == "i386"
-CXXFLAGS+=		-march=i586
-.endif
-
 LDFLAGS.NetBSD+=	-ljemalloc
 
 .include "../../devel/boost-libs/buildlink3.mk"
@@ -40,4 +33,5 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .  include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
