@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.241 2021/01/10 15:01:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.242 2021/01/10 15:08:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -295,3 +295,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-facade to 1.2.1 [taca 2021-01-10]
 	Updated devel/ruby-ffi to 1.14.2 [taca 2021-01-10]
 	Added devel/ruby-generator version 0.0.1 [taca 2021-01-10]
+	Updated devel/ruby-i18n to 1.8.7 [taca 2021-01-10]
