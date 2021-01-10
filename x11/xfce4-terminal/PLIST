@@ -1,9 +1,21 @@
-@comment $NetBSD: PLIST,v 1.10 2019/08/08 20:23:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/01/10 17:24:55 gutteridge Exp $
 bin/xfce4-terminal
 man/man1/xfce4-terminal.1
 share/applications/xfce4-terminal-settings.desktop
 share/applications/xfce4-terminal.desktop
 share/gnome-control-center/default-apps/xfce4-terminal-default-apps.xml
+share/icons/hicolor/128x128/apps/org.xfce.terminal-settings.png
+share/icons/hicolor/128x128/apps/org.xfce.terminal.png
+share/icons/hicolor/16x16/apps/org.xfce.terminal-settings.png
+share/icons/hicolor/16x16/apps/org.xfce.terminal.png
+share/icons/hicolor/24x24/apps/org.xfce.terminal-settings.png
+share/icons/hicolor/24x24/apps/org.xfce.terminal.png
+share/icons/hicolor/32x32/apps/org.xfce.terminal-settings.png
+share/icons/hicolor/32x32/apps/org.xfce.terminal.png
+share/icons/hicolor/48x48/apps/org.xfce.terminal-settings.png
+share/icons/hicolor/48x48/apps/org.xfce.terminal.png
+share/icons/hicolor/scalable/apps/org.xfce.terminal-settings.svg
+share/icons/hicolor/scalable/apps/org.xfce.terminal.svg
 share/locale/ar/LC_MESSAGES/xfce4-terminal.mo
 share/locale/ast/LC_MESSAGES/xfce4-terminal.mo
 share/locale/be/LC_MESSAGES/xfce4-terminal.mo
@@ -26,6 +38,7 @@ share/locale/he/LC_MESSAGES/xfce4-terminal.mo
 share/locale/hr/LC_MESSAGES/xfce4-terminal.mo
 share/locale/hu/LC_MESSAGES/xfce4-terminal.mo
 share/locale/hy_AM/LC_MESSAGES/xfce4-terminal.mo
+share/locale/hye/LC_MESSAGES/xfce4-terminal.mo
 share/locale/id/LC_MESSAGES/xfce4-terminal.mo
 share/locale/ie/LC_MESSAGES/xfce4-terminal.mo
 share/locale/is/LC_MESSAGES/xfce4-terminal.mo
@@ -69,4 +82,3 @@ share/xfce4/terminal/colorschemes/solarized-light.theme
 share/xfce4/terminal/colorschemes/tango.theme
 share/xfce4/terminal/colorschemes/white-on-black.theme
 share/xfce4/terminal/colorschemes/xterm.theme
-share/xfce4/terminal/terminal-preferences.ui
