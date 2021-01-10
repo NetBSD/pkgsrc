@@ -1,11 +1,22 @@
-$NetBSD: patch-build_moz.configure_rust.configure,v 1.1 2020/12/05 12:03:26 nia Exp $
+$NetBSD: patch-build_moz.configure_rust.configure,v 1.2 2021/01/10 14:12:15 jperkin Exp $
 
+* Return x86_64-unknown-illumos on SunOS to fix autoconf match.
 * Do not match rumprun toolchain for NetBSD,
   narrowed should be one not two.
 
 --- build/moz.configure/rust.configure.orig	2020-11-04 10:51:54.000000000 +0000
 +++ build/moz.configure/rust.configure
-@@ -337,7 +337,8 @@ def rust_triple_alias(host_or_target, ho
+@@ -257,6 +257,9 @@ def rust_triple_alias(host_or_target, ho
+             elif not candidates:
+                 return None
+ 
++            if host_or_target.kernel == 'SunOS':
++                return "x86_64-unknown-illumos"
++
+             # We have multiple candidates. There are two cases where we can try to
+             # narrow further down using extra information from the build system.
+             # - For windows targets, correlate with the C compiler type
+@@ -337,7 +340,8 @@ def rust_triple_alias(host_or_target, ho
              narrowed = [
                  c for c in candidates
                  if c.target.raw_os == host_or_target.raw_os and
