@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/05/16 09:15:09 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/10 21:45:41 adam Exp $
 
-DISTNAME=	pytest-assume-2.2.1
+DISTNAME=	pytest-assume-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-assume/}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://github.com/astraw38/pytest-assume
 COMMENT=	Py.test plugin that allows multiple failures per test
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES=	test
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONED_DEPENDENCIES=	test
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
