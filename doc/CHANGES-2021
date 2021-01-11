@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.307 2021/01/11 22:29:30 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.308 2021/01/11 22:32:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -369,3 +369,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/fdtools to 2020.05.04nb1 [schmonz 2021-01-11]
 	Updated textproc/align to 1.1.1 [sjmulder 2021-01-11]
 	Updated audio/fluidsynth to 2.1.6 [wiz 2021-01-11]
+	Updated graphics/ImageMagick to 7.0.10.57 [wiz 2021-01-11]
