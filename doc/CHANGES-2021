@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.303 2021/01/11 18:31:17 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.304 2021/01/11 19:15:33 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -365,3 +365,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/s6-portable-utils to 2.2.3.1 [schmonz 2021-01-11]
 	Updated net/s6-dns to 2.3.4.0 [schmonz 2021-01-11]
 	Updated net/s6-networking to 2.4.0.0 [schmonz 2021-01-11]
+	Updated devel/gobject-introspection to 1.66.1nb1 [jperkin 2021-01-11]
