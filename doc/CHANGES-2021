@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.306 2021/01/11 22:23:10 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.307 2021/01/11 22:29:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -368,3 +368,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gobject-introspection to 1.66.1nb1 [jperkin 2021-01-11]
 	Updated sysutils/fdtools to 2020.05.04nb1 [schmonz 2021-01-11]
 	Updated textproc/align to 1.1.1 [sjmulder 2021-01-11]
+	Updated audio/fluidsynth to 2.1.6 [wiz 2021-01-11]
