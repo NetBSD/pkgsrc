@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.262 2021/01/11 09:02:17 taca Exp $
+$NetBSD: CHANGES-2021,v 1.263 2021/01/11 09:43:49 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -321,3 +321,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-pylint-django to 2.4.2 [adam 2021-01-11]
 	Updated security/py-rsa to 4.7 [adam 2021-01-11]
 	Updated print/ruby-pdf-reader to 2.4.1nb1 [taca 2021-01-11]
+	Updated devel/pango to 1.48.0 [prlw1 2021-01-11]
