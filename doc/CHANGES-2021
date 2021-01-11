@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.293 2021/01/11 14:13:22 taca Exp $
+$NetBSD: CHANGES-2021,v 1.294 2021/01/11 14:42:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -355,3 +355,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-progressbar to 1.11.0 [taca 2021-01-11]
 	Updated net/ruby-dnsruby to 1.61.5 [taca 2021-01-11]
 	Updated net/ruby-net-ldap to 0.17.0 [taca 2021-01-11]
+	Updated net/ruby-recog to 2.3.18 [taca 2021-01-11]
