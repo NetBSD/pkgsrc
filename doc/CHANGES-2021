@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.289 2021/01/11 14:04:15 taca Exp $
+$NetBSD: CHANGES-2021,v 1.290 2021/01/11 14:07:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -350,3 +350,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-graphviz to 0.16 [adam 2021-01-11]
 	Updated graphics/py-objgraph to 3.5.0 [adam 2021-01-11]
 	Updated misc/ruby-bundler to 2.2.4 [taca 2021-01-11]
+	Updated devel/py-atpublic to 2.1.2 [adam 2021-01-11]
+	Updated devel/py-mixbox to 1.0.5 [adam 2021-01-11]
