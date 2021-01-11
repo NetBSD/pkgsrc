@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.18 2020/11/25 13:26:21 wiz Exp $
+$NetBSD: distinfo,v 1.19 2021/01/11 22:41:56 wiz Exp $
 
-SHA1 (zziplib-0.13.71.tar.gz) = c03f539c8a6fe5f1b39db4b5d4646d869f78bdd6
-RMD160 (zziplib-0.13.71.tar.gz) = e6418c792911ad5b19771e02cc28f441a1844cea
-SHA512 (zziplib-0.13.71.tar.gz) = e035d0ac26dca78335ae3defc652543ff7b353a1a95d76ed1beeb21a08e16f287a62d488f528cfbb77d5b558581b68d439aa0823577524e9aa61a3cf5f208cb5
-Size (zziplib-0.13.71.tar.gz) = 1150654 bytes
-SHA1 (patch-aa) = 0dd9535effc69940bfc0853b85685e7ba5f4fb30
-SHA1 (patch-bb) = aeedbec78e30e7d28c02509c934947e6f0d50693
-SHA1 (patch-bc) = b9f364ab66c218dafd176c0c5c33e74c208a634e
-SHA1 (patch-configure) = 55cc2214eb8dd3f0ad82464cb51afc0a5cddd0a5
+SHA1 (zziplib-0.13.72.tar.gz) = 330cab1c477196d2d26d30d5f4cb031647fd4597
+RMD160 (zziplib-0.13.72.tar.gz) = d1bcdbf0df1e1eb222c31b8d4c659bb1a45744f4
+SHA512 (zziplib-0.13.72.tar.gz) = 4bb089e74813c6fac9657cd96e44e4a6469bf86aba3980d885c4573e8db45e74fd07bbdfcec9f36297c72227c8c0b2c37dab1bc4326cef8529960e482fe501c8
+Size (zziplib-0.13.72.tar.gz) = 1162175 bytes
