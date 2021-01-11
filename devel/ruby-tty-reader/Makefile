@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/09/14 00:14:42 taca Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/11 13:26:44 taca Exp $
 
-DISTNAME=	tty-reader-0.8.0
+DISTNAME=	tty-reader-0.9.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://piotrmurach.github.io/tty
+HOMEPAGE=	https://ttytoolkit.org/
 COMMENT=	Set of methods for processing keyboard input
 LICENSE=	mit
 
