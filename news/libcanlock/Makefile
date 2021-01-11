@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/11/30 11:33:38 micha Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/11 12:16:36 micha Exp $
 
-DISTNAME=	libcanlock-3.2.1
+DISTNAME=	libcanlock-3.2.2
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,9 +16,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 TEST_TARGET=	test
-
-# Recent NetBSD has a namespace clash with its implementation defined extensions
-CFLAGS+=	-D_POSIX_C_SOURCE=200112L
 
 CONFIGURE_ARGS+=	--disable-legacy-api
 CONFIGURE_ARGS+=	--enable-pc-files
