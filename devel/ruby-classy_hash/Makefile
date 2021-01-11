@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/28 15:45:32 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/11 13:41:12 taca Exp $
 
-DISTNAME=	classy_hash-0.2.1
+DISTNAME=	classy_hash-1.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
