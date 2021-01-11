@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.266 2021/01/11 12:24:24 micha Exp $
+$NetBSD: CHANGES-2021,v 1.267 2021/01/11 13:04:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -326,3 +326,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-pypiserver to 1.4.2 [adam 2021-01-11]
 	Updated news/libcanlock to 3.2.2 [micha 2021-01-11]
 	Updated news/canlock-hp to 3.2.2 [micha 2021-01-11]
+	Updated devel/ruby-rspec-support to 3.10.1 [taca 2021-01-11]
