@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2020/09/14 00:13:21 taca Exp $
+# $NetBSD: Makefile,v 1.5 2021/01/11 13:22:09 taca Exp $
 
 DISTNAME=	tty-screen-0.8.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://piotrmurach.github.io/tty/
+HOMEPAGE=	https://ttytoolkit.org/
 COMMENT=	Terminal screen size detection
 LICENSE=	mit
 
