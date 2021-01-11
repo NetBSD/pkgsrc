@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3312 2021/01/10 16:10:47 taca Exp $
+# $NetBSD: Makefile,v 1.3313 2021/01/11 13:31:21 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2941,6 +2941,7 @@ SUBDIR+=	ruby-tty-cursor
 SUBDIR+=	ruby-tty-prompt
 SUBDIR+=	ruby-tty-reader
 SUBDIR+=	ruby-tty-screen
+SUBDIR+=	ruby-tty-table
 SUBDIR+=	ruby-turn
 SUBDIR+=	ruby-uglifier
 SUBDIR+=	ruby-uuidtools
