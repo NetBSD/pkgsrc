@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/09/14 13:47:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/01/11 14:47:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -44,6 +44,13 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/bind.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/bind_ack.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/error.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/ndr.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_password_set2_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_password_set2_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_req_challenge_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_req_challenge_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/p_syntax_id_t.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/pdu_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/ptypes.rb
@@ -277,6 +284,12 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/crypto_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/bind_ack_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/bind_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/ndr_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_password_set2_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_password_set2_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_req_challenge_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_req_challenge_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/p_syntax_id_t_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/pdu_header_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/request_spec.rb
