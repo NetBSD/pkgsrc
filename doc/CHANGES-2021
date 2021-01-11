@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.270 2021/01/11 13:08:22 taca Exp $
+$NetBSD: CHANGES-2021,v 1.271 2021/01/11 13:09:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-rspec-core to 3.10.1 [taca 2021-01-11]
 	Updated devel/ruby-rspec-expectations to 3.10.1 [taca 2021-01-11]
 	Updated devel/ruby-rspec-mocks to 3.10.1 [taca 2021-01-11]
+	Updated devel/ruby-rspec to 3.10.0 [taca 2021-01-11]
