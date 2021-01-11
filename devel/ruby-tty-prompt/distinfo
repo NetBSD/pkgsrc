@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/09/14 00:16:20 taca Exp $
+$NetBSD: distinfo,v 1.4 2021/01/11 13:28:12 taca Exp $
 
-SHA1 (tty-prompt-0.22.0.gem) = 9dddea829057a76eff9b4845b0135fe75f1e3be6
-RMD160 (tty-prompt-0.22.0.gem) = f0998c061855e5faa9df583922807b14b5a6fa94
-SHA512 (tty-prompt-0.22.0.gem) = d55b0b36486899380f50ed27cce245db72e48b3623ee60c5298b1be976d9358de8a59baa716f55b983af94edf03096e6dfa9b3210a7aac06e522cacbd1ef60c8
-Size (tty-prompt-0.22.0.gem) = 48640 bytes
+SHA1 (tty-prompt-0.23.0.gem) = 822935b84a6f79975364a61d4ed2d4e8f9df169c
+RMD160 (tty-prompt-0.23.0.gem) = 4d8c5231e19920875dfe826003d75f71b9c9a6e3
+SHA512 (tty-prompt-0.23.0.gem) = da635d579f7939d31b69d17c3a0e80c3780b7dc874eda2a05680a91d6444e6a49d827aca03f845d5b1ee3e72fd1337d574f5a302243833c413cb2c5832fcb63e
+Size (tty-prompt-0.23.0.gem) = 49664 bytes
