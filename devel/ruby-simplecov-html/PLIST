@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/03/08 15:21:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/01/11 13:12:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -24,7 +24,7 @@ ${GEM_LIBDIR}/assets/stylesheets/plugins/highlight.css
 ${GEM_LIBDIR}/assets/stylesheets/plugins/jquery-ui-1.8.4.custom.css
 ${GEM_LIBDIR}/assets/stylesheets/plugins/jquery.colorbox.css
 ${GEM_LIBDIR}/assets/stylesheets/reset.css
-${GEM_LIBDIR}/assets/stylesheets/screen.css.sass
+${GEM_LIBDIR}/assets/stylesheets/screen.css
 ${GEM_LIBDIR}/lib/simplecov-html.rb
 ${GEM_LIBDIR}/lib/simplecov-html/version.rb
 ${GEM_LIBDIR}/public/DataTables-1.10.20/images/sort_asc.png
