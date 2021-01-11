@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2020/09/14 13:06:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/01/11 13:14:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/CODE_OF_CONDUCT.md
-${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/ISSUE_TEMPLATE.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/doc/alternate-formatters.md
@@ -19,6 +16,7 @@ ${GEM_LIBDIR}/lib/simplecov/combine/results_combiner.rb
 ${GEM_LIBDIR}/lib/simplecov/command_guesser.rb
 ${GEM_LIBDIR}/lib/simplecov/configuration.rb
 ${GEM_LIBDIR}/lib/simplecov/coverage_statistics.rb
+${GEM_LIBDIR}/lib/simplecov/default_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/defaults.rb
 ${GEM_LIBDIR}/lib/simplecov/exit_codes.rb
 ${GEM_LIBDIR}/lib/simplecov/exit_codes/exit_code_handling.rb
