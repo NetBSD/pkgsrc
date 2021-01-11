@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/10/03 10:26:06 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/01/11 22:29:22 wiz Exp $
 bin/fluidsynth
 include/fluidsynth.h
 include/fluidsynth/audio.h
@@ -20,6 +20,6 @@ include/fluidsynth/version.h
 include/fluidsynth/voice.h
 lib/libfluidsynth.so
 lib/libfluidsynth.so.2
-lib/libfluidsynth.so.2.3.5
+lib/libfluidsynth.so.2.3.6
 lib/pkgconfig/fluidsynth.pc
 man/man1/fluidsynth.1
