@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2020/10/31 21:10:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/01/11 10:20:16 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -78,6 +78,7 @@ libexec/git-core/git-fetch-pack
 libexec/git-core/git-filter-branch
 libexec/git-core/git-fmt-merge-msg
 libexec/git-core/git-for-each-ref
+libexec/git-core/git-for-each-repo
 libexec/git-core/git-format-patch
 libexec/git-core/git-fsck
 libexec/git-core/git-fsck-objects
@@ -101,6 +102,7 @@ libexec/git-core/git-ls-remote
 libexec/git-core/git-ls-tree
 libexec/git-core/git-mailinfo
 libexec/git-core/git-mailsplit
+libexec/git-core/git-maintenance
 libexec/git-core/git-merge
 libexec/git-core/git-merge-base
 libexec/git-core/git-merge-file
@@ -123,7 +125,6 @@ libexec/git-core/git-notes
 libexec/git-core/git-pack-objects
 libexec/git-core/git-pack-redundant
 libexec/git-core/git-pack-refs
-libexec/git-core/git-parse-remote
 libexec/git-core/git-patch-id
 libexec/git-core/git-prune
 libexec/git-core/git-prune-packed
@@ -227,6 +228,7 @@ share/examples/git/templates/hooks/pre-push.sample
 share/examples/git/templates/hooks/pre-rebase.sample
 share/examples/git/templates/hooks/pre-receive.sample
 share/examples/git/templates/hooks/prepare-commit-msg.sample
+share/examples/git/templates/hooks/push-to-checkout.sample
 share/examples/git/templates/hooks/update.sample
 share/examples/git/templates/info/exclude
 share/locale/bg/LC_MESSAGES/git.mo
@@ -238,6 +240,7 @@ share/locale/fr/LC_MESSAGES/git.mo
 share/locale/is/LC_MESSAGES/git.mo
 share/locale/it/LC_MESSAGES/git.mo
 share/locale/ko/LC_MESSAGES/git.mo
+share/locale/pl/LC_MESSAGES/git.mo
 share/locale/pt_PT/LC_MESSAGES/git.mo
 share/locale/ru/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo
