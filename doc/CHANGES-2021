@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.296 2021/01/11 15:28:56 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.297 2021/01/11 16:52:13 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -358,3 +358,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ruby-recog to 2.3.18 [taca 2021-01-11]
 	Updated net/ruby-ruby_smb to 2.0.7 [taca 2021-01-11]
 	Updated devel/py-approvaltests to 0.3.0 [schmonz 2021-01-11]
+	Updated games/woof to 3.1.0 [micha 2021-01-11]
