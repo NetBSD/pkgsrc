@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.11 2017/09/26 09:40:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/01/11 05:49:29 jnemeth Exp $
 bin/myodbc-installer
 lib/libmyodbc5a.so
 lib/libmyodbc5w.so
-share/doc/mysql-connector-odbc/COPYING
 share/doc/mysql-connector-odbc/ChangeLog
-share/doc/mysql-connector-odbc/INSTALL
-share/doc/mysql-connector-odbc/Licenses_for_Third-Party_Components.txt
-share/doc/mysql-connector-odbc/README
-share/doc/mysql-connector-odbc/README.debug
+share/doc/mysql-connector-odbc/LICENSE.txt
+share/doc/mysql-connector-odbc/README.txt
 share/mysql-connector-odbc/test/CTestTestfile.cmake
+share/mysql-connector-odbc/test/my_auth
 share/mysql-connector-odbc/test/my_basics
 share/mysql-connector-odbc/test/my_blob
 share/mysql-connector-odbc/test/my_bug13766
@@ -18,13 +16,13 @@ share/mysql-connector-odbc/test/my_catalog2
 share/mysql-connector-odbc/test/my_crash
 share/mysql-connector-odbc/test/my_curext
 share/mysql-connector-odbc/test/my_cursor
+share/mysql-connector-odbc/test/my_data
 share/mysql-connector-odbc/test/my_datetime
 share/mysql-connector-odbc/test/my_desc
 share/mysql-connector-odbc/test/my_dyn_cursor
 share/mysql-connector-odbc/test/my_error
 share/mysql-connector-odbc/test/my_info
 share/mysql-connector-odbc/test/my_keys
-share/mysql-connector-odbc/test/my_nodma
 share/mysql-connector-odbc/test/my_param
 share/mysql-connector-odbc/test/my_pooling
 share/mysql-connector-odbc/test/my_prepare
