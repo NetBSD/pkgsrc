@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.7 2020/12/20 20:04:09 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.8 2021/01/11 22:46:19 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.zip
@@ -10,6 +10,10 @@ GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.1.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.1.zip
 GO_MODULE_FILES+=	github.com/google/renameio/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/google/renameio/@v/v0.1.0.zip
+GO_MODULE_FILES+=	github.com/google/safehtml/@v/v0.0.2.mod
+GO_MODULE_FILES+=	github.com/google/safehtml/@v/v0.0.2.zip
+GO_MODULE_FILES+=	github.com/jba/templatecheck/@v/v0.5.0.mod
+GO_MODULE_FILES+=	github.com/jba/templatecheck/@v/v0.5.0.zip
 GO_MODULE_FILES+=	github.com/kisielk/gotool/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/kisielk/gotool/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.1.0.mod
@@ -68,8 +72,8 @@ GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20191119224855-298f0cb1881e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20200410194907-79a7a3126eef.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20200731060945-b5fad4ed8dd6.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20201217163546-c88dec5c6b05.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20201217163546-c88dec5c6b05.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20201230224654-641242d23425.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20201230224654-641242d23425.zip
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20190717185122-a985d3407aa7.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191011141410-1b5146add898.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod
