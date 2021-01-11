@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.290 2021/01/11 14:07:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.291 2021/01/11 14:08:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -352,3 +352,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-bundler to 2.2.4 [taca 2021-01-11]
 	Updated devel/py-atpublic to 2.1.2 [adam 2021-01-11]
 	Updated devel/py-mixbox to 1.0.5 [adam 2021-01-11]
+	Updated misc/ruby-progressbar to 1.11.0 [taca 2021-01-11]
