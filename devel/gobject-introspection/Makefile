@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2020/12/20 22:00:43 prlw1 Exp $
+# $NetBSD: Makefile,v 1.75 2021/01/11 19:15:24 jperkin Exp $
 
 DISTNAME=	gobject-introspection-1.66.1
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -35,6 +36,11 @@ SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,gint64,g'
 SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_LONG,g'
 SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
 .endif
+
+SUBST_CLASSES+=		libdirs
+SUBST_STAGE.libdirs=	pre-configure
+SUBST_FILES.libdirs=	giscanner/ccompiler.py
+SUBST_VARS.libdirs=	_OPSYS_LIB_DIRS
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/girepository
 
