@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/10/31 21:10:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/01/11 10:20:16 adam Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -49,6 +49,7 @@ man/man1/git-fetch.1
 man/man1/git-filter-branch.1
 man/man1/git-fmt-merge-msg.1
 man/man1/git-for-each-ref.1
+man/man1/git-for-each-repo.1
 man/man1/git-format-patch.1
 man/man1/git-fsck-objects.1
 man/man1/git-fsck.1
@@ -92,7 +93,6 @@ man/man1/git-p4.1
 man/man1/git-pack-objects.1
 man/man1/git-pack-redundant.1
 man/man1/git-pack-refs.1
-man/man1/git-parse-remote.1
 man/man1/git-patch-id.1
 man/man1/git-prune-packed.1
 man/man1/git-prune.1
