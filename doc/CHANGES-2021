@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.273 2021/01/11 13:12:42 taca Exp $
+$NetBSD: CHANGES-2021,v 1.274 2021/01/11 13:14:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -333,3 +333,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-rspec to 3.10.0 [taca 2021-01-11]
 	Updated devel/ruby-rspec-rails to 4.0.2 [taca 2021-01-11]
 	Updated devel/ruby-simplecov-html to 0.12.3 [taca 2021-01-11]
+	Updated devel/ruby-simplecov to 0.21.2 [taca 2021-01-11]
