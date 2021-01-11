@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/10/01 20:23:09 sjmulder Exp $
+$NetBSD: distinfo,v 1.4 2021/01/11 23:53:46 sjmulder Exp $
 
 SHA1 (github.com_blang_semver_@v_v3.5.1+incompatible.mod) = 6add48513e4859dff424c6558113fde7901e946d
 RMD160 (github.com_blang_semver_@v_v3.5.1+incompatible.mod) = 4b12a937cf428ea2e0acf2a38ce381fd62e3d9e1
@@ -240,14 +240,14 @@ SHA1 (github.com_zyedidia_pty_@v_v2.0.0+incompatible.zip) = 9d7b08b23d80ea0ba88f
 RMD160 (github.com_zyedidia_pty_@v_v2.0.0+incompatible.zip) = 47559efe755ab95a314022cd4ed95d278b9cb34e
 SHA512 (github.com_zyedidia_pty_@v_v2.0.0+incompatible.zip) = a51787e01adcedd20ddbba543351904bdde3c25f44f9621cfe0ffa73ed28d0b21327aadbe529a73374ffbd315b91b4d0d0d7f2c9fcc033d67f21158ce486e2f1
 Size (github.com_zyedidia_pty_@v_v2.0.0+incompatible.zip) = 15796 bytes
-SHA1 (github.com_zyedidia_tcell_v2_@v_v2.0.2.mod) = 91013ce92431f258aa6e7828bcafc5350bb95485
-RMD160 (github.com_zyedidia_tcell_v2_@v_v2.0.2.mod) = 3aca6667c2db6e782d5d4d0485ff901f682f0909
-SHA512 (github.com_zyedidia_tcell_v2_@v_v2.0.2.mod) = b3db94f2a7c44d7350d89acb9a118c6f8d3c39530a1af23c5e1aa9f9fa842a06ec5e7f5af4e87901cb08c841e7f953b3f83a3ae6488f9f3d14d4ee063b53ffcb
-Size (github.com_zyedidia_tcell_v2_@v_v2.0.2.mod) = 348 bytes
-SHA1 (github.com_zyedidia_tcell_v2_@v_v2.0.2.zip) = f6131806dd74cee231aa82a8e7ea5cdd4bf2142d
-RMD160 (github.com_zyedidia_tcell_v2_@v_v2.0.2.zip) = 924c280c542912cc60c4f6bfa4a12bd6988c5f26
-SHA512 (github.com_zyedidia_tcell_v2_@v_v2.0.2.zip) = e05c43c5cb4d6168f20dd414f7641bba1be5b7627d4dcc716e4d96c8fcd3f199c87974c700180fa12e18e27a6e8eb97886182182d40ef5e64b01a3a34548e256
-Size (github.com_zyedidia_tcell_v2_@v_v2.0.2.zip) = 186946 bytes
+SHA1 (github.com_zyedidia_tcell_v2_@v_v2.0.6.mod) = 91013ce92431f258aa6e7828bcafc5350bb95485
+RMD160 (github.com_zyedidia_tcell_v2_@v_v2.0.6.mod) = 3aca6667c2db6e782d5d4d0485ff901f682f0909
+SHA512 (github.com_zyedidia_tcell_v2_@v_v2.0.6.mod) = b3db94f2a7c44d7350d89acb9a118c6f8d3c39530a1af23c5e1aa9f9fa842a06ec5e7f5af4e87901cb08c841e7f953b3f83a3ae6488f9f3d14d4ee063b53ffcb
+Size (github.com_zyedidia_tcell_v2_@v_v2.0.6.mod) = 348 bytes
+SHA1 (github.com_zyedidia_tcell_v2_@v_v2.0.6.zip) = 3f711c4aa9f0660be0be86334bcff69967abfa76
+RMD160 (github.com_zyedidia_tcell_v2_@v_v2.0.6.zip) = 6ea846197dc1e3b93891fe9e8159940ce4676370
+SHA512 (github.com_zyedidia_tcell_v2_@v_v2.0.6.zip) = 85c0d085eccf722bc9bf0b1fa077e1d639523c97ffe0445d3b2bd5025520be9a4250db2f897dfaf65b4aa8db41901bd214d0c85da51f76e9c0be6d8361d561ec
+Size (github.com_zyedidia_tcell_v2_@v_v2.0.6.zip) = 187590 bytes
 SHA1 (github.com_zyedidia_terminal_@v_v0.0.0-20180726154117-533c623e2415.mod) = 940bb87ee42150f8ad295dc6082599d60e976516
 RMD160 (github.com_zyedidia_terminal_@v_v0.0.0-20180726154117-533c623e2415.mod) = 11e9c689c5f5f6da4ca19b168141423501f0e8b1
 SHA512 (github.com_zyedidia_terminal_@v_v0.0.0-20180726154117-533c623e2415.mod) = 84a84f76d05e19cd18dc80abc820fc4209c9a85eef25444a9afcb90a7bb9cfbf15aa233d8ce9592681e78083dbd1b6311b3043884fa0260c03490a6e0318ac73
@@ -336,7 +336,7 @@ SHA1 (layeh.com_gopher-luar_@v_v1.0.7.zip) = 4cfb3398577e0b2966bf8da645d89070d75
 RMD160 (layeh.com_gopher-luar_@v_v1.0.7.zip) = ca356155b2985565ada9abad0766faf8096e0c07
 SHA512 (layeh.com_gopher-luar_@v_v1.0.7.zip) = 94b70a83a31acde7232223ca82d6588716b39d6463baf5f15d921a5bc24a7d9b98307b8d44d3bbc9a5a82f6e4111b2b9ba1c15ee313a3784a30d63fe5d198bd3
 Size (layeh.com_gopher-luar_@v_v1.0.7.zip) = 36857 bytes
-SHA1 (micro-2.0.7.tar.gz) = 3136ccaaf4c453de6786e9f1a0d91557ac7b91c9
-RMD160 (micro-2.0.7.tar.gz) = f8f6b43be24cc17e35de2768b9e9cc7b63d204f4
-SHA512 (micro-2.0.7.tar.gz) = e71d7c6a5da3600d738f6e115ea3f354f05cf9061a90d6a6e94be2aea13117fba457e6a4c71d3c72739a7dfdf8e81df1b039d3203e2213eca0715ae97fe3d190
-Size (micro-2.0.7.tar.gz) = 797975 bytes
+SHA1 (micro-2.0.8.tar.gz) = 16e25c9b75d0387bc4477d2e2547ecc36e0af51d
+RMD160 (micro-2.0.8.tar.gz) = c0d932dfcc72f72ea3a91de439fdae3fdea423eb
+SHA512 (micro-2.0.8.tar.gz) = c24ebdd8ea9d0af310c401157f4189ea00167d867aadd613b4be77c898c136ff9b4f5c44a1f84403deb9bc86a77f430386767849824da72ff21d2af890397c94
+Size (micro-2.0.8.tar.gz) = 802731 bytes
