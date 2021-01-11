@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/19 20:00:05 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/11 18:17:12 schmonz Exp $
 bin/s6-accessrules-cdb-from-fs
 bin/s6-accessrules-fs-from-cdb
 bin/s6-applyuidgid
@@ -45,12 +45,14 @@ bin/s6-svdt-clear
 bin/s6-svlisten
 bin/s6-svlisten1
 bin/s6-svok
+bin/s6-svperms
 bin/s6-svscan
 bin/s6-svscanctl
 bin/s6-svstat
 bin/s6-svwait
 bin/s6-tai64n
 bin/s6-tai64nlocal
+bin/s6-usertree-maker
 bin/s6lockd
 bin/ucspilogd
 include/s6/accessrules.h
