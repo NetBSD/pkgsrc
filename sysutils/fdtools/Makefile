@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/11/19 09:35:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2021/01/11 20:20:28 schmonz Exp $
 
 DISTNAME=		fdtools-2020.05.04
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +14,9 @@ LICENSE=		gnu-gpl-v2
 WRKSRC=			${WRKDIR}/misc/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
 
-CPPFLAGS+=		-I ${PREFIX:Q}/include
+CPPFLAGS+=		-I ${PREFIX:Q}/include \
+			-Dpathexec=mexec -Dpathexec0=mexec0 \
+			-Dpathexec_run=exec_ae -Dpathexec_env=env_mexec
 LDFLAGS+=		-L ${PREFIX:Q}/lib/skalibs
 LDFLAGS.SunOS+=		-lsocket
 
