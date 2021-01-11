@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.265 2021/01/11 12:18:13 micha Exp $
+$NetBSD: CHANGES-2021,v 1.266 2021/01/11 12:24:24 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -325,3 +325,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/git to 2.30.0 [adam 2021-01-11]
 	Updated net/py-pypiserver to 1.4.2 [adam 2021-01-11]
 	Updated news/libcanlock to 3.2.2 [micha 2021-01-11]
+	Updated news/canlock-hp to 3.2.2 [micha 2021-01-11]
