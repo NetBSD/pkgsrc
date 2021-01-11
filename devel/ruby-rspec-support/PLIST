@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/05/05 13:04:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/01/11 13:04:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.md
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/rspec/support/source/node.rb
 ${GEM_LIBDIR}/lib/rspec/support/source/token.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/deprecation_helpers.rb
+${GEM_LIBDIR}/lib/rspec/support/spec/diff_helpers.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/formatting_support.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/in_sub_process.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/library_wide_checks.rb
