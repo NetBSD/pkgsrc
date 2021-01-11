@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/11/29 18:36:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/01/11 22:50:37 wiz Exp $
 ${MYETCDIR}/openssl/certs/02265526.0
 ${MYETCDIR}/openssl/certs/03179a64.0
 ${MYETCDIR}/openssl/certs/062cdee6.0
@@ -28,8 +28,6 @@ ${MYETCDIR}/openssl/certs/26312675.0
 ${MYETCDIR}/openssl/certs/2923b3f9.0
 ${MYETCDIR}/openssl/certs/2ae6433e.0
 ${MYETCDIR}/openssl/certs/2b349938.0
-${MYETCDIR}/openssl/certs/2c543cd1.0
-${MYETCDIR}/openssl/certs/2e4eed3c.0
 ${MYETCDIR}/openssl/certs/2e5ac55d.0
 ${MYETCDIR}/openssl/certs/32888f65.0
 ${MYETCDIR}/openssl/certs/349f2832.0
@@ -37,13 +35,13 @@ ${MYETCDIR}/openssl/certs/3513523f.0
 ${MYETCDIR}/openssl/certs/3bde41ac.0
 ${MYETCDIR}/openssl/certs/3e44d2f7.0
 ${MYETCDIR}/openssl/certs/3e45d192.0
+${MYETCDIR}/openssl/certs/3fb36b73.0
 ${MYETCDIR}/openssl/certs/40193066.0
 ${MYETCDIR}/openssl/certs/4042bcee.0
 ${MYETCDIR}/openssl/certs/40547a79.0
 ${MYETCDIR}/openssl/certs/406c9bb1.0
 ${MYETCDIR}/openssl/certs/4304c5e5.0
 ${MYETCDIR}/openssl/certs/442adcac.0
-${MYETCDIR}/openssl/certs/480720ec.0
 ${MYETCDIR}/openssl/certs/48bec511.0
 ${MYETCDIR}/openssl/certs/4a6481c9.0
 ${MYETCDIR}/openssl/certs/4b718d9b.0
@@ -75,10 +73,8 @@ ${MYETCDIR}/openssl/certs/76faf6c0.0
 ${MYETCDIR}/openssl/certs/7719f463.0
 ${MYETCDIR}/openssl/certs/773e07ad.0
 ${MYETCDIR}/openssl/certs/7aaf71c0.0
-${MYETCDIR}/openssl/certs/7d0b38bd.0
 ${MYETCDIR}/openssl/certs/7f3d5d1d.0
 ${MYETCDIR}/openssl/certs/8160b96c.0
-${MYETCDIR}/openssl/certs/8867006a.0
 ${MYETCDIR}/openssl/certs/8cb5ee0f.0
 ${MYETCDIR}/openssl/certs/8d86cdd1.0
 ${MYETCDIR}/openssl/certs/8d89cda1.0
@@ -92,20 +88,16 @@ ${MYETCDIR}/openssl/certs/9d04f354.0
 ${MYETCDIR}/openssl/certs/a3418fda.0
 ${MYETCDIR}/openssl/certs/a8dee976.0
 ${MYETCDIR}/openssl/certs/a94d09e5.0
-${MYETCDIR}/openssl/certs/ad088e1d.0
 ${MYETCDIR}/openssl/certs/aee5f10d.0
 ${MYETCDIR}/openssl/certs/b0e59380.0
 ${MYETCDIR}/openssl/certs/b1159c4c.0
 ${MYETCDIR}/openssl/certs/b1b8a7f3.0
-${MYETCDIR}/openssl/certs/b204d74a.0
 ${MYETCDIR}/openssl/certs/b66938e9.0
 ${MYETCDIR}/openssl/certs/b727005e.0
 ${MYETCDIR}/openssl/certs/b7a5b843.0
-${MYETCDIR}/openssl/certs/ba89ed3b.0
 ${MYETCDIR}/openssl/certs/bf53fb88.0
 ${MYETCDIR}/openssl/certs/c01cdfa2.0
 ${MYETCDIR}/openssl/certs/c01eb047.0
-${MYETCDIR}/openssl/certs/c089bbbd.0
 ${MYETCDIR}/openssl/certs/c28a8a30.0
 ${MYETCDIR}/openssl/certs/c47d9980.0
 ${MYETCDIR}/openssl/certs/ca-certificates.crt
@@ -127,7 +119,6 @@ ${MYETCDIR}/openssl/certs/dd8e9d41.0
 ${MYETCDIR}/openssl/certs/de6d66f3.0
 ${MYETCDIR}/openssl/certs/e113c810.0
 ${MYETCDIR}/openssl/certs/e18bfb83.0
-${MYETCDIR}/openssl/certs/e2799e36.0
 ${MYETCDIR}/openssl/certs/e36a6752.0
 ${MYETCDIR}/openssl/certs/e73d606e.0
 ${MYETCDIR}/openssl/certs/e868b802.0
@@ -196,15 +187,6 @@ ${MYETCDIR}/openssl/certs/mozilla-rootcert-138.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-139.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-14.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-140.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-141.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-142.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-143.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-144.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-145.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-146.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-147.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-148.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-149.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-15.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-16.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-17.pem
@@ -250,8 +232,6 @@ ${MYETCDIR}/openssl/certs/mozilla-rootcert-52.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-53.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-54.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-55.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-56.pem
-${MYETCDIR}/openssl/certs/mozilla-rootcert-57.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-58.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-59.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-6.pem
@@ -261,6 +241,8 @@ ${MYETCDIR}/openssl/certs/mozilla-rootcert-62.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-63.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-64.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-65.pem
+${MYETCDIR}/openssl/certs/mozilla-rootcert-66.pem
+${MYETCDIR}/openssl/certs/mozilla-rootcert-67.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-68.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-69.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-7.pem
