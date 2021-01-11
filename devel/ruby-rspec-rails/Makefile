@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2020/05/25 13:51:32 taca Exp $
+# $NetBSD: Makefile,v 1.38 2021/01/11 13:10:33 taca Exp $
 
-DISTNAME=	rspec-rails-4.0.1
+DISTNAME=	rspec-rails-4.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +16,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rspec-core>=3.9<4:../../devel/ruby-rspec-core
 DEPENDS+=	${RUBY_PKGPREFIX}-rspec-expectations>=3.9<4:../../devel/ruby-rspec-expectations
 DEPENDS+=	${RUBY_PKGPREFIX}-rspec-mocks>=3.9<4:../../devel/ruby-rspec-mocks
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	# empty
 
 RUBY_RAILS_ACCEPTED=	# defined
 
