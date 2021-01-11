@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.260 2021/01/11 05:49:48 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.261 2021/01/11 07:35:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -316,3 +316,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test-rerunfailures to 9.1.1 [adam 2021-01-10]
 	Updated print/ruby-pdf-reader to 2.4.1 [taca 2021-01-11]
 	Updated databases/myodbc to 5.3.14 [jnemeth 2021-01-11]
+	Updated devel/py-xdis to 5.0.7 [adam 2021-01-11]
+	Updated devel/meson to 0.56.2 [adam 2021-01-11]
+	Updated www/py-pylint-django to 2.4.2 [adam 2021-01-11]
+	Updated security/py-rsa to 4.7 [adam 2021-01-11]
