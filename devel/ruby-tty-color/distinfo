@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/09/14 00:10:26 taca Exp $
+$NetBSD: distinfo,v 1.4 2021/01/11 13:24:55 taca Exp $
 
-SHA1 (tty-color-0.5.2.gem) = 6932826a2eb7a175b98a9a07b23df3f47b5ad415
-RMD160 (tty-color-0.5.2.gem) = 98f76313a6ca94c788f9f3cbc59f0f72d93f6616
-SHA512 (tty-color-0.5.2.gem) = 5adad1e9e367bdc98591d1e50dbe4a20b236761498478b640d9a8d7ab0eb2aadeae4199fcf91e7fa753d36ebe2a7f8f11305a2ffb78aa9e3e997b1cef55fd38d
-Size (tty-color-0.5.2.gem) = 9216 bytes
+SHA1 (tty-color-0.6.0.gem) = ce41b4934eb9c58704a17771c8d5d7e27f241b2b
+RMD160 (tty-color-0.6.0.gem) = 18aaa0b7e2f8fce2abbaa62956eccbd97ff12bff
+SHA512 (tty-color-0.6.0.gem) = f8de7ebf32d4807945f5bdddf521be9b89ab1b908a34ca393a4c2e49b9904ee454358d5b3023d956bbd055fcc90b1f855e993361a1fa90d0e70a9c1f2bc2c030
+Size (tty-color-0.6.0.gem) = 9728 bytes
