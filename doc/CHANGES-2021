@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.311 2021/01/11 22:50:46 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.312 2021/01/11 22:50:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -373,3 +373,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/zziplib to 0.13.72 [wiz 2021-01-11]
 	Updated devel/gopls to 0.6.2 [wiz 2021-01-11]
 	Updated security/mozilla-rootcerts to 1.0.20201204 [wiz 2021-01-11]
+	Updated security/mozilla-rootcerts-openssl to 2.6 [wiz 2021-01-11]
