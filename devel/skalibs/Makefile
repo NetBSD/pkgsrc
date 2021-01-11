@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/11/15 19:08:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2021/01/11 18:11:32 schmonz Exp $
 
-DISTNAME=		skalibs-2.9.3.0
+DISTNAME=		skalibs-2.10.0.0
 CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 
@@ -19,6 +19,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 INSTALLATION_DIRS=	include/skalibs lib/skalibs/sysdeps
 
 post-install:
-	${LN} -s ../libskarnet.a ${DESTDIR}${PREFIX}/lib/skalibs/libskarnet.a
+	${LN} -sf ../libskarnet.a ${DESTDIR}${PREFIX}/lib/skalibs/libskarnet.a
 
 .include "../../mk/bsd.pkg.mk"
