@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2020/09/14 13:06:11 taca Exp $
+# $NetBSD: Makefile,v 1.27 2021/01/11 13:14:29 taca Exp $
 
-DISTNAME=	simplecov-0.19.0
+DISTNAME=	simplecov-0.21.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-simplecov-html>=0.11.0<1:../../devel/ruby-simplecov-html
 DEPENDS+=	${RUBY_PKGPREFIX}-docile>=1.1.0<2:../../devel/ruby-docile
+DEPENDS+=	${RUBY_PKGPREFIX}-simplecov_json_formatter>=0.1<1:../../textproc/ruby-simplecov_json_formatter
 
 USE_LANGUAGES=	# none
 
