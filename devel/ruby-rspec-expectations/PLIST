@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/06/05 14:05:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/01/11 13:06:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -28,6 +28,7 @@ ${GEM_LIBDIR}/lib/rspec/matchers/built_in/be_within.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/change.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/compound.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/contain_exactly.rb
+${GEM_LIBDIR}/lib/rspec/matchers/built_in/count_expectation.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/cover.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/eq.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/eql.rb
