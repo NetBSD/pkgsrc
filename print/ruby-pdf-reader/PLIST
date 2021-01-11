@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/03/24 15:40:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/01/11 01:06:21 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
@@ -32,6 +32,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/afm/Helvetica-Bold.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Helvetica-BoldOblique.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Helvetica-Oblique.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Helvetica.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/MustRead.html
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Symbol.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Times-Bold.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Times-BoldItalic.afm
