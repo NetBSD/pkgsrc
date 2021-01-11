@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.258 2021/01/10 21:51:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.259 2021/01/11 01:06:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -314,3 +314,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-lexicon to 3.5.3 [adam 2021-01-10]
 	Updated devel/py-test-assume to 2.4.2 [adam 2021-01-10]
 	Updated devel/py-test-rerunfailures to 9.1.1 [adam 2021-01-10]
+	Updated print/ruby-pdf-reader to 2.4.1 [taca 2021-01-11]
