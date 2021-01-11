@@ -1,7 +1,14 @@
-# $NetBSD: gem.mk,v 1.43 2020/12/19 14:41:16 taca Exp $
+# $NetBSD: gem.mk,v 1.44 2021/01/11 06:51:27 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
+#
+# === User-settable variables ===
+#
+# RUBYGEM_VERBOSE
+#	Execute gem with verbose option.
+#		Possible values: Yes No
+#		Default: No
 #
 # Package-settable variables:
 #
@@ -270,6 +277,9 @@ _RUBYGEM_OPTIONS+=	--install-dir ${PREFIX}/${GEM_HOME}
 _RUBYGEM_OPTIONS+=	${RUBYGEM_INSTALL_ROOT_OPTION}
 _RUBYGEM_OPTIONS+=	--ignore-dependencies
 _RUBYGEM_OPTIONS+=	--local ${WRKSRC}/${GEM_NAME}.gem
+.if !empty(RUBYGEM_VERBOSE:M[Yy][Ee][Ss])
+_RUBYGEM_OPTIONS+=	-V
+.endif
 .if !empty(RUBY_BUILD_DOCUMENT:M[nN][oO])
 _RUBYGEM_OPTIONS+=	--no-document
 .endif
