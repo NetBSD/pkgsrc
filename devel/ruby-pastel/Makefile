@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2020/09/13 15:56:58 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/11 13:22:09 taca Exp $
 
 DISTNAME=	pastel-0.8.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://piotrmurach.github.io/tty/
+HOMEPAGE=	https://ttytoolkit.org/
 COMMENT=	Terminal strings styling with intuitive and clean API
 LICENSE=	mit
 
