@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.287 2021/01/11 13:53:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.288 2021/01/11 13:59:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -347,3 +347,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-classy_hash to 1.0.0 [taca 2021-01-11]
 	Updated graphics/ruby-mini-magick to 4.11.0 [taca 2021-01-11]
 	Updated mail/ruby-mime-types-data to 3.2020.1104 [taca 2021-01-11]
+	Updated graphics/py-graphviz to 0.16 [adam 2021-01-11]
+	Updated graphics/py-objgraph to 3.5.0 [adam 2021-01-11]
