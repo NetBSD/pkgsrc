@@ -190,6 +190,7 @@ epub			Enable epub support.
 erlang-hipe		Enable HiPE support.
 eucjp			Support EUC-JP, a character encoding for Japanese.
 evolution-data-server	Enable support for evolution-data-server.
+execline		Enable command execution with the execline language.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
 exim-content-scan	Call virus and spam scanning direct from ACLs.
 exim-lookup-cdb		Support mail account lookup via a Constant Data Base.
