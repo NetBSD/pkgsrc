@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.268 2021/01/11 13:06:05 taca Exp $
+$NetBSD: CHANGES-2021,v 1.269 2021/01/11 13:07:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -328,3 +328,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/canlock-hp to 3.2.2 [micha 2021-01-11]
 	Updated devel/ruby-rspec-support to 3.10.1 [taca 2021-01-11]
 	Updated devel/ruby-rspec-core to 3.10.1 [taca 2021-01-11]
+	Updated devel/ruby-rspec-expectations to 3.10.1 [taca 2021-01-11]
