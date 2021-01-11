@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2020/09/04 11:14:08 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.75 2021/01/11 09:43:21 prlw1 Exp $
 bin/pango-list
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -45,16 +45,16 @@ lib/girepository-1.0/PangoOT-1.0.typelib
 ${PLIST.x11}lib/girepository-1.0/PangoXft-1.0.typelib
 lib/libpango-1.0.so
 lib/libpango-1.0.so.0
-lib/libpango-1.0.so.0.4600.1
+lib/libpango-1.0.so.0.4800.0
 lib/libpangocairo-1.0.so
 lib/libpangocairo-1.0.so.0
-lib/libpangocairo-1.0.so.0.4600.1
+lib/libpangocairo-1.0.so.0.4800.0
 lib/libpangoft2-1.0.so
 lib/libpangoft2-1.0.so.0
-lib/libpangoft2-1.0.so.0.4600.1
+lib/libpangoft2-1.0.so.0.4800.0
 ${PLIST.x11}lib/libpangoxft-1.0.so
 ${PLIST.x11}lib/libpangoxft-1.0.so.0
-${PLIST.x11}lib/libpangoxft-1.0.so.0.4600.1
+${PLIST.x11}lib/libpangoxft-1.0.so.0.4800.0
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangofc.pc
