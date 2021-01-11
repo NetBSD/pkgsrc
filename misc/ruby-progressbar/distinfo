@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/03/23 17:15:57 taca Exp $
+$NetBSD: distinfo,v 1.9 2021/01/11 14:07:32 taca Exp $
 
-SHA1 (ruby-progressbar-1.10.1.gem) = 5ff77c2bf2b7c066318440237ad8d1ff41a2bcd2
-RMD160 (ruby-progressbar-1.10.1.gem) = 74d5e12385ed0a55308da9caf9289757576f084b
-SHA512 (ruby-progressbar-1.10.1.gem) = 1a474e697d1e9849cc67842a756bad605aa8341fe8451a984f115f1c64754f522b4496d09ef8b47d16135fc165f4d02ea8944f99767573c699ca694ec3205f52
-Size (ruby-progressbar-1.10.1.gem) = 17920 bytes
+SHA1 (ruby-progressbar-1.11.0.gem) = fe0b78c4718bc1b5eb4765c6309947eacb0ebb6f
+RMD160 (ruby-progressbar-1.11.0.gem) = 7c1bbc96d1610a84f4515a224ae399866e4ebe60
+SHA512 (ruby-progressbar-1.11.0.gem) = 4c1b20c1a7a982a8da9cd85ba53f043dd72aa7c4d98d47013d311d305d30461d760300ae0d60cdd2767c73d99c55fe07607b7086803f90ebf261549111524f27
+Size (ruby-progressbar-1.11.0.gem) = 18432 bytes
