@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.14 2018/12/02 06:37:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/01/11 13:16:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/GPL
-${GEM_LIBDIR}/LGPL
 ${GEM_LIBDIR}/PSFL
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
