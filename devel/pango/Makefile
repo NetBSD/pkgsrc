@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.236 2020/09/15 10:45:41 prlw1 Exp $
+# $NetBSD: Makefile,v 1.237 2021/01/11 09:43:21 prlw1 Exp $
 
-DISTNAME=	pango-1.46.1
+DISTNAME=	pango-1.48.0
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +20,10 @@ SUBST_CLASSES+=		wrksrc
 SUBST_STAGE.wrksrc=	pre-configure
 SUBST_FILES.wrksrc=	output/utils/pango-view.sh
 SUBST_VARS.wrksrc=	WRKSRC
+
+MESON_ARGS+=		-Dcairo=enabled
+MESON_ARGS+=		-Dfontconfig=enabled
+MESON_ARGS+=		-Dintrospection=enabled
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/pango.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/pangocairo.pc
