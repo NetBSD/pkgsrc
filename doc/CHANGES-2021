@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.264 2021/01/11 10:32:17 adam Exp $
+$NetBSD: CHANGES-2021,v 1.265 2021/01/11 12:18:13 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -324,3 +324,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/pango to 1.48.0 [prlw1 2021-01-11]
 	Updated devel/git to 2.30.0 [adam 2021-01-11]
 	Updated net/py-pypiserver to 1.4.2 [adam 2021-01-11]
+	Updated news/libcanlock to 3.2.2 [micha 2021-01-11]
