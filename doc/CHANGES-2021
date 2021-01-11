@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.283 2021/01/11 13:35:03 taca Exp $
+$NetBSD: CHANGES-2021,v 1.284 2021/01/11 13:38:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -343,3 +343,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/ruby-tty-table version 0.12.0 [taca 2021-01-11]
 	Updated devel/ruby-zeitwerk to 2.4.2 [taca 2021-01-11]
 	Updated fonts/ruby-ttfunk to 1.7.0 [taca 2021-01-11]
+	Updated games/ruby-squib to 0.16.0 [taca 2021-01-11]
