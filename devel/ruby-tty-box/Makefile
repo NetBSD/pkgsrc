@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/09/14 00:11:53 taca Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/11 13:23:41 taca Exp $
 
-DISTNAME=	tty-box-0.6.0
+DISTNAME=	tty-box-0.7.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://piotrmurach.github.io/tty
+HOMEPAGE=	https://ttytoolkit.org/
 COMMENT=	Draw various frames and boxes in terminal interface
 LICENSE=	mit
 
