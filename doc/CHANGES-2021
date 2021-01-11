@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.313 2021/01/11 23:49:38 mef Exp $
+$NetBSD: CHANGES-2021,v 1.314 2021/01/11 23:54:02 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -375,3 +375,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/mozilla-rootcerts to 1.0.20201204 [wiz 2021-01-11]
 	Updated security/mozilla-rootcerts-openssl to 2.6 [wiz 2021-01-11]
 	Updated inputmethod/scim to 1.4.17 [mef 2021-01-11]
+	Updated editors/micro to 2.0.8 [sjmulder 2021-01-11]
