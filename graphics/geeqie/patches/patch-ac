@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2015/09/10 19:06:57 gdt Exp $
+$NetBSD: patch-ac,v 1.6 2021/01/11 18:18:58 gdt Exp $
+
+* first hunk
 
 Comment from 2009/07/24:
 
@@ -7,9 +9,14 @@ Comment from 2009/07/24:
 
 This is not known to be reported upstream.
 
---- src/main.c.orig	2015-05-23 12:20:43.000000000 +0000
+* second hunk
+
+Avoid clutter crash.  Cherrypicked from upstream:
+  https://github.com/BestImageViewer/geeqie/commit/f34ea0700048c27319a2256408171adda32a7580
+
+--- src/main.c.orig	2020-11-20 21:36:33.000000000 +0000
 +++ src/main.c
-@@ -709,6 +709,7 @@ void exit_program(void)
+@@ -873,6 +873,7 @@ void exit_program(void)
   */
  /* FIXME: this probably needs some better ifdefs. Please report any compilation problems */
  
@@ -17,7 +24,7 @@ This is not known to be reported upstream.
  #if defined(SIGBUS) && defined(SA_SIGINFO)
  static void sigbus_handler_cb(int signum, siginfo_t *info, void *context)
  {
-@@ -717,9 +718,11 @@ static void sigbus_handler_cb(int signum
+@@ -881,9 +882,11 @@ static void sigbus_handler_cb(int signum
  	mmap((void *)(((unsigned long)info->si_addr / pagesize) * pagesize), pagesize, PROT_READ | PROT_WRITE, MAP_FIXED | MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
  }
  #endif
@@ -29,7 +36,7 @@ This is not known to be reported upstream.
  #if defined(SIGBUS) && defined(SA_SIGINFO)
  	struct sigaction sigbus_action;
  	sigfillset(&sigbus_action.sa_mask);
-@@ -728,6 +731,7 @@ static void setup_sigbus_handler(void)
+@@ -892,6 +895,7 @@ static void setup_sigbus_handler(void)
  
  	sigaction(SIGBUS, &sigbus_action, NULL);
  #endif
@@ -37,3 +44,15 @@ This is not known to be reported upstream.
  }
  
  gint main(gint argc, gchar *argv[])
+@@ -905,11 +909,6 @@ gint main(gint argc, gchar *argv[])
+ #if !GLIB_CHECK_VERSION(2,32,0)
+ 	g_thread_init(NULL);
+ #endif
+-#ifdef HAVE_CLUTTER
+-/* FIXME: see below */
+-	putenv("LIBGL_ALWAYS_INDIRECT=1");
+-	XInitThreads();
+-#endif
+ 	gdk_threads_init();
+ 	gdk_threads_enter();
+ 
