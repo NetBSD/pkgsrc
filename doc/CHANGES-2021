@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.278 2021/01/11 13:25:13 taca Exp $
+$NetBSD: CHANGES-2021,v 1.279 2021/01/11 13:27:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -338,3 +338,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-tins to 1.26.0 [taca 2021-01-11]
 	Updated devel/ruby-tty-box to 0.7.0 [taca 2021-01-11]
 	Updated devel/ruby-tty-color to 0.6.0 [taca 2021-01-11]
+	Updated devel/ruby-tty-reader to 0.9.0 [taca 2021-01-11]
