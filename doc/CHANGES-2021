@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.308 2021/01/11 22:32:33 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.309 2021/01/11 22:42:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -370,3 +370,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/align to 1.1.1 [sjmulder 2021-01-11]
 	Updated audio/fluidsynth to 2.1.6 [wiz 2021-01-11]
 	Updated graphics/ImageMagick to 7.0.10.57 [wiz 2021-01-11]
+	Updated archivers/zziplib to 0.13.72 [wiz 2021-01-11]
