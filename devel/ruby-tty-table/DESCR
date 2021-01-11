@@ -1,0 +1,12 @@
+TTY::Table
+
+TTY::Table provides independent table formatting component for TTY toolkit
+(https://github.com/piotrmurach/tty).
+
+## Features
+
+* Table behaves like an array with familiar API
+* Create table once and render using custom view renderers
+* Rendering provides many display options
+* Easy custom border creation
+* Supports multibyte character encodings
