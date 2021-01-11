@@ -1,10 +1,12 @@
-# $NetBSD: gem-vars.mk,v 1.10 2020/12/19 14:41:16 taca Exp $
+# $NetBSD: gem-vars.mk,v 1.11 2021/01/11 06:51:27 taca Exp $
 #
 # This Makefile fragment defines various make(1) variables for Ruby gems
 # support.
 #
 .if !defined(_RUBYGEM_VARS_MK)
 _RUBYGEM_VARS_MK=	# defined
+
+RUBYGEM_VERBOSE?=	No
 
 # Specify GEM_PATH
 GEM_PATH?=	${PREFIX}/${GEM_HOME}
