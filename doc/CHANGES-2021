@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.263 2021/01/11 09:43:49 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.264 2021/01/11 10:32:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -322,3 +322,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-rsa to 4.7 [adam 2021-01-11]
 	Updated print/ruby-pdf-reader to 2.4.1nb1 [taca 2021-01-11]
 	Updated devel/pango to 1.48.0 [prlw1 2021-01-11]
+	Updated devel/git to 2.30.0 [adam 2021-01-11]
+	Updated net/py-pypiserver to 1.4.2 [adam 2021-01-11]
