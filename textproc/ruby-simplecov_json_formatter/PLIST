@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/12 01:19:15 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/simplecov_json_formatter.rb
+${GEM_LIBDIR}/lib/simplecov_json_formatter/result_exporter.rb
+${GEM_LIBDIR}/lib/simplecov_json_formatter/result_hash_formatter.rb
+${GEM_LIBDIR}/lib/simplecov_json_formatter/source_file_formatter.rb
+${GEM_LIBDIR}/lib/simplecov_json_formatter/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
