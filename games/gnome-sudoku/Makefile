@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2020/10/06 19:51:16 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/01/12 11:20:53 prlw1 Exp $
 
-DISTNAME=	gnome-sudoku-3.24.0
-PKGREVISION=	16
+DISTNAME=	gnome-sudoku-3.38.0
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-sudoku/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,21 +10,23 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Sudoku
 COMMENT=	Number grid logic puzzle
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 
 # Requires --desktop in msgfmt.
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 
+post-extract:
+	cd ${WRKSRC}/help/C && ${CHMOD} 0644 *.page legal.xml figures/*.png
 
-BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+REPLACE_PYTHON+=	build-aux/post_install.py
+BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libgee/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.qqwing+=	qqwing>=1.3.4
 .include "../../games/qqwing/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
