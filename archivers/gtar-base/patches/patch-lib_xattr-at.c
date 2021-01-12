@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_xattr-at.c,v 1.1 2014/08/21 20:44:16 wiz Exp $
+$NetBSD: patch-lib_xattr-at.c,v 1.2 2021/01/12 12:10:27 ryoon Exp $
 
 * Make GNU tar 1.28 detect the presence of the GNU/Linux xattrs
   interface it expects.
@@ -11,8 +11,8 @@ $NetBSD: patch-lib_xattr-at.c,v 1.1 2014/08/21 20:44:16 wiz Exp $
 
     Do not build when HAVE_XATTRS is not defined.
 
---- lib/xattr-at.c.orig	2014-02-10 11:42:45.000000000 -0600
-+++ lib/xattr-at.c	2014-08-19 09:40:54.000000000 -0500
+--- lib/xattr-at.c.orig	2021-01-06 15:52:09.000000000 +0000
++++ lib/xattr-at.c
 @@ -18,6 +18,11 @@
  
  #include <config.h>
@@ -25,9 +25,10 @@ $NetBSD: patch-lib_xattr-at.c,v 1.1 2014/08/21 20:44:16 wiz Exp $
  #include "xattr-at.h"
  #include "openat.h"
  
-@@ -108,3 +113,5 @@
- #undef AT_FUNC_RESULT
+@@ -111,4 +116,6 @@
  #undef AT_FUNC_POST_FILE_PARAM_DECLS
  #undef AT_FUNC_POST_FILE_ARGS
-+
+ 
 +#endif
++
+ #endif /* HAVE_XATTRS */
