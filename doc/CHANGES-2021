@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.324 2021/01/12 13:45:39 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.325 2021/01/12 16:18:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -389,3 +389,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/gtar to 1.33 [ryoon 2021-01-12]
 	Updated textproc/po4a to 0.62 [ryoon 2021-01-12]
 	Updated print/cups-filters to 1.28.7 [prlw1 2021-01-12]
+	Updated multimedia/obs-studio to 26.1.2 [ryoon 2021-01-12]
