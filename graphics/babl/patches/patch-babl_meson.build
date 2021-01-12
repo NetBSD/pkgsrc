@@ -1,0 +1,17 @@
+$NetBSD: patch-babl_meson.build,v 1.4 2021/01/12 18:06:58 jperkin Exp $
+
+Not having --version-script is not an error.
+
+--- babl/meson.build.orig	2020-10-04 16:37:23.504518000 +0000
++++ babl/meson.build
+@@ -46,9 +46,7 @@ elif cc.get_id() == 'clang'
+     babl_link_args = []
+   endif
+ else
+-  error(
+-    'Linker doesn\'t support --version-script or -exported_symbols_list'
+-  )
++  babl_link_args = []
+ endif
+ if platform_win32
+   babl_link_args += no_undefined
