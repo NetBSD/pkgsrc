@@ -1,32 +1,37 @@
-$NetBSD: patch-libobs_obs-nix.c,v 1.2 2019/10/03 20:33:15 nia Exp $
+$NetBSD: patch-libobs_obs-nix.c,v 1.3 2021/01/12 16:17:47 ryoon Exp $
 
 Support NetBSD.
 
---- libobs/obs-nix.c.orig	2019-09-20 15:14:16.000000000 +0000
+--- libobs/obs-nix.c.orig	2021-01-04 15:02:53.000000000 +0000
 +++ libobs/obs-nix.c
-@@ -26,7 +26,9 @@
- #if defined(__FreeBSD__)
+@@ -23,10 +23,10 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <unistd.h>
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
  #include <sys/sysctl.h>
  #endif
-+#ifndef __NetBSD__
+-#if !defined(__OpenBSD__)
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
  #include <sys/sysinfo.h>
-+#endif
+ #endif
  #include <sys/utsname.h>
- #include <xcb/xcb.h>
- #if USE_XINPUT
-@@ -216,6 +218,7 @@ static void log_processor_info(void)
+@@ -157,7 +157,7 @@ static void log_processor_info(void)
+ 	dstr_free(&proc_speed);
+ 	free(line);
+ }
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ static void log_processor_speed(void)
+ {
+ #ifndef __OpenBSD__
+@@ -222,7 +222,7 @@ static void log_processor_info(void)
  
  static void log_memory_info(void)
  {
-+#ifndef __NetBSD__
- 	struct sysinfo info;
- 	if (sysinfo(&info) < 0)
- 		return;
-@@ -225,6 +228,7 @@ static void log_memory_info(void)
- 	     (uint64_t)info.totalram * info.mem_unit / 1024 / 1024,
- 	     ((uint64_t)info.freeram + (uint64_t)info.bufferram) *
- 		     info.mem_unit / 1024 / 1024);
-+#endif
- }
- 
- static void log_kernel_version(void)
+-#if defined(__OpenBSD__)
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ 	int mib[2];
+ 	size_t len;
+ 	int64_t mem;
