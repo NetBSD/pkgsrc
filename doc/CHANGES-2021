@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.316 2021/01/12 01:20:31 taca Exp $
+$NetBSD: CHANGES-2021,v 1.317 2021/01/12 08:34:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -378,3 +378,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/micro to 2.0.8 [sjmulder 2021-01-11]
 	Updated textproc/libxls to 1.6.2 [sjmulder 2021-01-12]
 	Added textproc/ruby-simplecov_json_formatter version 0.1.2 [taca 2021-01-12]
+	Updated editors/featherpad to 0.17.2 [pin 2021-01-12]
