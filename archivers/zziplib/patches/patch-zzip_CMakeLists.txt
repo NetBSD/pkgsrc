@@ -1,0 +1,78 @@
+$NetBSD: patch-zzip_CMakeLists.txt,v 1.1 2021/01/12 21:06:20 otis Exp $
+
+Use portable ln switches
+
+--- zzip/CMakeLists.txt.orig	2021-01-04 23:05:08.000000000 +0000
++++ zzip/CMakeLists.txt
+@@ -294,13 +294,13 @@ if(ZZIP_COMPAT)
+         fi
+         [ -f ${lib}${libname}${librelease}${dll}.${libversion} ] || exit 0
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.10
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.10
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.11
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.11
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.12
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.12
+         \")")
+   endif()
+ endif()
+@@ -321,13 +321,13 @@ if(ZZIP_LIBTOOL)
+         fi
+         [ -f ${lib}${libname}${librelease}${dll}.${libversion} ] || exit 0
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${dll}
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${dll}
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.10
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.10
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.11
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.11
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.12
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.12
+         \")")
+     if(ZZIPFSEEKO)
+     get_target_property(libname libzzipfseeko OUTPUT_NAME)
+@@ -341,13 +341,13 @@ if(ZZIP_LIBTOOL)
+         fi
+         [ -f ${lib}${libname}${librelease}${dll}.${libversion} ] || exit 0
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${dll}
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${dll}
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.10
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.10
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.11
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.11
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.12
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.12
+         \")")
+     endif(ZZIPFSEEKO)
+     if(ZZIPMMAPPED)
+@@ -362,13 +362,13 @@ if(ZZIP_LIBTOOL)
+         fi
+         [ -f ${lib}${libname}${librelease}${dll}.${libversion} ] || exit 0
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${dll}
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${dll}
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.10
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.10
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.11
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.11
+         echo -n .. Installing: `pwd`
+-        ln -svf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.12
++        ln -sf ${lib}${libname}${librelease}${dll}.${libversion} ${lib}${libname}${librelease}${dll}.12
+         \")")
+     endif(ZZIPMMAPPED)
+   endif(CMAKE_SHARED_LIBRARY_SONAME_C_FLAG)
