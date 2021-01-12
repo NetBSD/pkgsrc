@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.23 2020/10/20 19:03:07 tnn Exp $
+# $NetBSD: cargo.mk,v 1.24 2021/01/12 15:37:32 jperkin Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -20,6 +20,8 @@
 # See also www/geckodriver for a full example.
 
 MASTER_SITES?=	-${MASTER_SITE_CRATESIO}${PKGBASE}/${PKGVERSION_NOREV}/download
+
+CHECK_SSP_SUPPORTED=	no
 
 .include "../../lang/rust/rust.mk"
 
