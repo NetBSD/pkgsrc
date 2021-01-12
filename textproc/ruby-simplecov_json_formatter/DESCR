@@ -1,0 +1,5 @@
+JSON formatter for SimpleCov
+
+Generates a formatted JSON report of your SimpleCov ruby code coverage
+results on ruby 2.4+.  Originally intended to add simplecov's results
+reading capacity to CI tools.
