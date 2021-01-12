@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/10/08 11:16:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2021/01/12 18:06:58 jperkin Exp $
 
 DISTNAME=	babl-0.1.82
 CATEGORIES=	graphics
@@ -25,10 +25,10 @@ PYTHON_FOR_BUILD_ONLY=	tool
 PLIST_VARS+=		Darwin not_Darwin
 .if ${OPSYS} == "Darwin"
 PLIST.Darwin=		yes
-PLIST_SUBST+=  		SOEXT="dylib"
+PLIST_SUBST+=		SOEXT="dylib"
 .else
 PLIST.not_Darwin=	yes
-PLIST_SUBST+=  		SOEXT="so"
+PLIST_SUBST+=		SOEXT="so"
 .endif
 
 # Apply removals to post-wrapper transformed arguments.
