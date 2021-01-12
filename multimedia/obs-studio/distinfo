@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2020/10/01 14:01:00 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2021/01/12 16:17:47 ryoon Exp $
 
-SHA1 (obs-studio-26.0.0.tar.gz) = 27d582618354de90f2c151e039c76a24dd5f4794
-RMD160 (obs-studio-26.0.0.tar.gz) = 7961a471916789357ca65f5900fcad5efaa475b4
-SHA512 (obs-studio-26.0.0.tar.gz) = 54a8eadf7ded1d309987a5f677ea7513b96cf95b071fd2321c3e712097d872a5f724edf9aba7cfa9452884b79d230fd65d512647c8583ca71691894277ca89b1
-Size (obs-studio-26.0.0.tar.gz) = 10326769 bytes
-SHA1 (patch-UI_obs-app.cpp) = 6f9fc9e1882bbc5fcf263876f7b5624586f636c7
+SHA1 (obs-studio-26.1.2.tar.gz) = 8e4c60f10439ca856fc75f2be590dd1a4ea2ac31
+RMD160 (obs-studio-26.1.2.tar.gz) = e8a4fef8843e351a9d6cd98e00a8b720b027763e
+SHA512 (obs-studio-26.1.2.tar.gz) = cd95fbf587f7edfe415cae75299d65c1d771bb118649fb839ae43d77145d87725c23df3360aa7b8c35ab8b62e5ec7983a8b02f8b102caa78f768eb58b4263417
+Size (obs-studio-26.1.2.tar.gz) = 16624899 bytes
+SHA1 (patch-UI_obs-app.cpp) = 262db99099ec044857d5c7080affbbc7ad07bf9f
 SHA1 (patch-libobs_graphics_graphics.h) = a6e403a03574f7628ac1f8b191b57f9d573c63f0
-SHA1 (patch-libobs_obs-nix.c) = 424721707087e3ddc27cabe6f67832c2bb324814
-SHA1 (patch-plugins_CMakeLists.txt) = cfb9b298823a78adae31feaf0cf9324c30914857
+SHA1 (patch-libobs_obs-nix.c) = 467faaa65062d2e6b0740c5e177ec67b0748ab45
+SHA1 (patch-plugins_CMakeLists.txt) = aa2bfe532b9214e46dc371fa295b6cddb9356b1f
 SHA1 (patch-plugins_obs-outputs_net-if.h) = 0f23d809d0616c8a9df77520b9e5ee0a3938778e
