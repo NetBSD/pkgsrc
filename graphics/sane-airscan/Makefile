@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/15 09:32:23 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/12 01:14:38 mef Exp $
 
 GITHUB_PROJECT=	sane-airscan
 GITHUB_TAG=	0.99.21
@@ -24,6 +24,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
