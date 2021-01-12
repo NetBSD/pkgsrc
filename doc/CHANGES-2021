@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.318 2021/01/12 11:21:14 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.319 2021/01/12 11:50:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -380,3 +380,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/ruby-simplecov_json_formatter version 0.1.2 [taca 2021-01-12]
 	Updated editors/featherpad to 0.17.2 [pin 2021-01-12]
 	Updated games/gnome-sudoku to 3.38.0 [prlw1 2021-01-12]
+	Updated security/libgpg-error to 1.41 [adam 2021-01-12]
+	Updated security/gnupg2 to 2.2.27 [adam 2021-01-12]
