@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.8 2020/11/29 22:08:56 dbj Exp $
+$NetBSD: patch-configure,v 1.9 2021/01/12 15:58:31 jperkin Exp $
 
 Remove install program overrides on Darwin
 Tweak SEARCH_LIB.
@@ -51,3 +51,13 @@ Avoid -Werror.
  
                          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
+@@ -39056,7 +39044,8 @@ fi
+       *-*-solaris2* )
+         SONAME_FLAG="-h "
+         USE_SOVERSION=1
+-        USE_SOVERSOLARIS=1
++        USE_SOVERLINUX=1
++        USE_SOTWOSYMLINKS=1
+       ;;
+ 
+       *-*-darwin* )
