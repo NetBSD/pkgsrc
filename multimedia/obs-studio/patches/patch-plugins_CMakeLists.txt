@@ -1,19 +1,19 @@
-$NetBSD: patch-plugins_CMakeLists.txt,v 1.5 2020/10/01 14:01:00 ryoon Exp $
+$NetBSD: patch-plugins_CMakeLists.txt,v 1.6 2021/01/12 16:17:47 ryoon Exp $
 
 Support NetBSD.
 
---- plugins/CMakeLists.txt.orig	2020-09-28 11:41:22.000000000 +0000
+--- plugins/CMakeLists.txt.orig	2021-01-04 15:02:53.000000000 +0000
 +++ plugins/CMakeLists.txt
-@@ -49,6 +49,12 @@ elseif("${CMAKE_SYSTEM_NAME}" MATCHES "F
- 	add_subdirectory(linux-alsa)
- 	add_subdirectory(vlc-video)
- 	add_subdirectory(oss-audio)
+@@ -55,6 +55,12 @@ elseif("${CMAKE_SYSTEM_NAME}" MATCHES "F
+ elseif("${CMAKE_SYSTEM_NAME}" MATCHES "OpenBSD")
+ 	add_subdirectory(linux-capture)
+ 	add_subdirectory(sndio)
 +elseif("${CMAKE_SYSTEM_NAME}" MATCHES "NetBSD")
-+       add_subdirectory(linux-capture)
-+       add_subdirectory(linux-pulseaudio)
-+       add_subdirectory(linux-jack)
-+       add_subdirectory(linux-alsa)
-+       add_subdirectory(vlc-video)
++	add_subdirectory(linux-capture)
++	add_subdirectory(linux-pulseaudio)
++	add_subdirectory(linux-jack)
++	add_subdirectory(linux-alsa)
++	add_subdirectory(vlc-video)
  endif()
  
  option(BUILD_BROWSER "Build browser plugin" OFF)
