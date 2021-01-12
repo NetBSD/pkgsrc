@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.44 2019/05/02 20:27:42 wiedi Exp $
+$NetBSD: distinfo,v 1.45 2021/01/12 12:10:27 ryoon Exp $
 
-SHA1 (tar-1.32.tar.bz2) = d0b0259689062d7700480f74c547f62f18e7412d
-RMD160 (tar-1.32.tar.bz2) = b83c063c4eea4f36bf70c6be67a1c7fc74e5e82f
-SHA512 (tar-1.32.tar.bz2) = 3139e87112123269ee0600243b3ea081687cc93667bef5832bfe3c785c1be622f520f00fcfbdf44ad1d3247866d0ecfe347a85bbfec38eb38fa1014baef566f6
-Size (tar-1.32.tar.bz2) = 2947264 bytes
+SHA1 (tar-1.33.tar.bz2) = 485c8e68aed41cd0424ae16ebef6bb15f864ed14
+RMD160 (tar-1.33.tar.bz2) = 1511ecc9d65a3f3b7a4d91e0b1887aa13af36081
+SHA512 (tar-1.33.tar.bz2) = 158dc1af1137567b90781fdf81198222b02bbdd11058bc00b53b58993d0ef51b8b0b4115e99cff76eef31c8ec0445837b25600c3dc9685b9390d90bd689edf11
+Size (tar-1.33.tar.bz2) = 3013300 bytes
 SHA1 (patch-Makefile.in) = 78cc142b9370317c52215c106ea1e7217e71f9b5
-SHA1 (patch-gnu_readlinkat.c) = ce9869bfcd75005bb4ddac4e3223df01a26a2b29
-SHA1 (patch-gnu_sys-limits.h) = b644d4f7915cac5757cb197966ec5f37553f3237
-SHA1 (patch-lib_xattr-at.c) = c69631c118558c0c056feb5b55188b2b4c92cc19
+SHA1 (patch-gnu_readlinkat.c) = 49127fa6533ecf67b2da704da321da0d46b0ddeb
+SHA1 (patch-lib_xattr-at.c) = 03a62c67a8c107a8eb929e87d19560c1a1270766
 SHA1 (patch-src_system.c) = cd9f7358fa93ed0ba4a1b3fffdae5d7f84ef4791
