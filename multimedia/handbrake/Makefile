@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.67 2020/11/05 09:08:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2021/01/12 12:00:43 ryoon Exp $
 #
 
-DISTNAME=	HandBrake-1.3.1-source
+DISTNAME=	HandBrake-1.3.3-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
-PKGREVISION=	8
 CATEGORIES=	multimedia
-MASTER_SITES=	https://download.handbrake.fr/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=HandBrake/}
 EXTRACT_SUFX=	.tar.bz2
+GITHUB_PROJECT=	HandBrake
+GITHUB_RELEASE=	1.3.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://handbrake.fr/
@@ -16,7 +17,7 @@ LICENSE=	gnu-gpl-v2
 DIST_SUBDIR=	handbrake
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-CDISTFILES=	ffmpeg-4.2.2.tar.bz2 \
+CDISTFILES=	ffmpeg-4.2.3.tar.bz2 \
 		libbluray-1.1.2.tar.bz2 \
 		libdvdnav-6.0.1.tar.bz2 \
 		libdvdread-6.0.2.tar.bz2 \
@@ -28,8 +29,10 @@ DISTFILES+=	${CDISTFILES}
 DISTFILES+=	${MESON_DISTFILE}
 
 .for f in ${CDISTFILES}
-SITES.${f}=	https://download.handbrake.fr/contrib/
+SITES.${f}=	https://download.handbrake.fr/handbrake/contrib/
 .endfor
+# handbrake.fr does not have ffmpeg-4.2.3.tar.bz2 as of 2021-01-10.
+SITES.ffmpeg-4.2.3.tar.bz2=	http://www.ffmpeg.org/releases/
 
 SITES.${MESON_DISTFILE}=	${MASTER_SITE_PYPI:=m/meson/}
 
