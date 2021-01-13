@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.926 2021/01/05 12:59:46 pin Exp $
+# $NetBSD: Makefile,v 1.927 2021/01/13 16:41:53 jperkin Exp $
 #
 
 COMMENT=	System utilities
@@ -159,6 +159,7 @@ SUBDIR+=	detox
 SUBDIR+=	devkitd
 SUBDIR+=	dfc
 SUBDIR+=	di
+SUBDIR+=	direnv
 SUBDIR+=	direvent
 SUBDIR+=	dirsize
 SUBDIR+=	dirvish
