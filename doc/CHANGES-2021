@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.335 2021/01/13 11:34:28 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.336 2021/01/13 11:50:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -401,3 +401,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/redis to 6.0.10 [adam 2021-01-13]
 	Updated textproc/py-jsbeautifier to 1.13.4 [adam 2021-01-13]
 	Updated archivers/lzip to 1.22 [wiz 2021-01-13]
+	Updated devel/py-hypothesis to 6.0.1 [wiz 2021-01-13]
