@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/12/09 20:40:20 js Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/01/13 17:45:36 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -130,6 +130,9 @@ ${PYSITELIB}/synapse/config/api.pyo
 ${PYSITELIB}/synapse/config/appservice.py
 ${PYSITELIB}/synapse/config/appservice.pyc
 ${PYSITELIB}/synapse/config/appservice.pyo
+${PYSITELIB}/synapse/config/auth.py
+${PYSITELIB}/synapse/config/auth.pyc
+${PYSITELIB}/synapse/config/auth.pyo
 ${PYSITELIB}/synapse/config/cache.py
 ${PYSITELIB}/synapse/config/cache.pyc
 ${PYSITELIB}/synapse/config/cache.pyo
@@ -172,9 +175,6 @@ ${PYSITELIB}/synapse/config/metrics.pyo
 ${PYSITELIB}/synapse/config/oidc_config.py
 ${PYSITELIB}/synapse/config/oidc_config.pyc
 ${PYSITELIB}/synapse/config/oidc_config.pyo
-${PYSITELIB}/synapse/config/password.py
-${PYSITELIB}/synapse/config/password.pyc
-${PYSITELIB}/synapse/config/password.pyo
 ${PYSITELIB}/synapse/config/password_auth_providers.py
 ${PYSITELIB}/synapse/config/password_auth_providers.pyc
 ${PYSITELIB}/synapse/config/password_auth_providers.pyo
@@ -759,6 +759,9 @@ ${PYSITELIB}/synapse/res/templates/sso_auth_success.html
 ${PYSITELIB}/synapse/res/templates/sso_error.html
 ${PYSITELIB}/synapse/res/templates/sso_redirect_confirm.html
 ${PYSITELIB}/synapse/res/templates/terms.html
+${PYSITELIB}/synapse/res/username_picker/index.html
+${PYSITELIB}/synapse/res/username_picker/script.js
+${PYSITELIB}/synapse/res/username_picker/style.css
 ${PYSITELIB}/synapse/rest/__init__.py
 ${PYSITELIB}/synapse/rest/__init__.pyc
 ${PYSITELIB}/synapse/rest/__init__.pyo
@@ -1008,6 +1011,9 @@ ${PYSITELIB}/synapse/rest/synapse/client/__init__.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/password_reset.py
 ${PYSITELIB}/synapse/rest/synapse/client/password_reset.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/password_reset.pyo
+${PYSITELIB}/synapse/rest/synapse/client/pick_username.py
+${PYSITELIB}/synapse/rest/synapse/client/pick_username.pyc
+${PYSITELIB}/synapse/rest/synapse/client/pick_username.pyo
 ${PYSITELIB}/synapse/rest/well_known.py
 ${PYSITELIB}/synapse/rest/well_known.pyc
 ${PYSITELIB}/synapse/rest/well_known.pyo
@@ -1433,6 +1439,9 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/22puppet_token.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/22users_have_local_media.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/23e2e_cross_signing_keys_idx.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/24drop_event_json_index.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/25user_external_ids_user_id_idx.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/26access_token_last_validated.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/27local_invites.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_signatures.sql
