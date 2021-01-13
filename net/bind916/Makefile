@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/12/19 16:41:36 taca Exp $
+# $NetBSD: Makefile,v 1.8 2021/01/13 09:34:30 nia Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -38,7 +38,8 @@ CONFIGURE_ARGS+=		--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=		--with-python=no
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-vax)
+    !empty(MACHINE_PLATFORM:MNetBSD-*-vax) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 CONFIGURE_ARGS+=		--disable-atomic
 .endif
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
