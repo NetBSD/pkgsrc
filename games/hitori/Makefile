@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/08/17 20:18:45 leot Exp $
+# $NetBSD: Makefile,v 1.22 2021/01/13 11:07:50 prlw1 Exp $
 
-DISTNAME=	hitori-3.22.3
-PKGREVISION=	9
+DISTNAME=	hitori-3.38.0
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hitori/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,18 +10,17 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Hitori
 COMMENT=	Logic game similar to Sudoku
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt
-USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=			msgfmt msgmerge pkg-config xgettext
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 BUILDLINK_DEPMETHOD.gettext-lib=	build
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
+.include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.15.0
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
