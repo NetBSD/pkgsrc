@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2021/01/03 18:24:00 adam Exp $
+# $NetBSD: Makefile,v 1.120 2021/01/13 16:06:41 jperkin Exp $
 
 DISTNAME=	stellarium-0.20.4
 CATEGORIES=	misc
@@ -15,6 +15,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt perl pod2man
 
 CMAKE_ARGS+=	-DENABLE_GPS=OFF
+
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 PLIST_VARS+=		desktop
 
