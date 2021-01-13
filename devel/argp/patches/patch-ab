@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2007/12/22 01:40:22 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2021/01/13 09:16:44 nia Exp $
 
---- testsuite/Makefile.in.orig	2007-12-22 02:17:56.000000000 +0100
+libtoolize.
+
+--- testsuite/Makefile.in.orig	2004-02-23 18:22:09.000000000 +0000
 +++ testsuite/Makefile.in
 @@ -53,24 +53,24 @@ PROGRAMS = $(noinst_PROGRAMS)
  ex1_SOURCES = ex1.c
@@ -24,11 +26,11 @@ $NetBSD: patch-ab,v 1.1 2007/12/22 01:40:22 joerg Exp $
  @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/ex1.Po ./$(DEPDIR)/ex3.Po \
  @AMDEP_TRUE@	./$(DEPDIR)/ex4.Po
 -COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
-+COMPILE = libtool --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
++COMPILE = libtool --mode=compile --tag=CC $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
 -LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-+LINK = libtool --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++LINK = libtool --mode=link --tag=CC $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
  SOURCES = ex1.c ex3.c ex4.c
  DIST_SOURCES = ex1.c ex3.c ex4.c
  ETAGS = etags
