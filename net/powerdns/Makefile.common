@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2020/12/21 00:26:51 otis Exp $
+# $NetBSD: Makefile.common,v 1.33 2021/01/13 09:03:23 nia Exp $
 
 PDNS_VERSION=	4.4.0
 DISTNAME=	pdns-${PDNS_VERSION}
@@ -26,3 +26,4 @@ CONFIGURE_ARGS+=	--with-lua=lua-${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
