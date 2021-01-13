@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.333 2021/01/13 11:17:22 pin Exp $
+$NetBSD: CHANGES-2021,v 1.334 2021/01/13 11:32:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -398,3 +398,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/tokei to 12.1.2 [pin 2021-01-13]
 	Updated games/hitori to 3.38.0 [prlw1 2021-01-13]
 	Added math/kalk version 0.3.12 [pin 2021-01-13]
+	Updated databases/redis to 6.0.10 [adam 2021-01-13]
+	Updated textproc/py-jsbeautifier to 1.13.4 [adam 2021-01-13]
