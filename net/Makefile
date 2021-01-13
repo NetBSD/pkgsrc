@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1371 2021/01/09 21:33:56 pin Exp $
+# $NetBSD: Makefile,v 1.1372 2021/01/13 09:08:06 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -166,7 +166,6 @@ SUBDIR+=	freeradius-rest
 SUBDIR+=	freeradius-sqlite3
 SUBDIR+=	freeradius-unixodbc
 SUBDIR+=	freeradius-yubikey
-SUBDIR+=	freeradius2
 SUBDIR+=	freerdp
 SUBDIR+=	freerdp2
 SUBDIR+=	frr
