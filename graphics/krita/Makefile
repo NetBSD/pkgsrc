@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2021/01/01 09:52:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.62 2021/01/13 08:56:06 nia Exp $
 
 DISTNAME=		krita-4.4.1
 PKGREVISION=		4
@@ -52,6 +52,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 BUILDLINK_API_DEPENDS.boost-header+=	boost-headers>=1.73.0nb1
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/libatomic/buildlink3.mk"
 .include "../../devel/ki18n/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../devel/kconfig/buildlink3.mk"
