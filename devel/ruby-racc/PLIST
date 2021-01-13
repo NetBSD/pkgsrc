@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.17 2020/04/27 06:53:18 taca Exp $
-bin/racc${RUBY_SUFFIX}
+@comment $NetBSD: PLIST,v 1.18 2021/01/13 14:33:44 taca Exp $
+${PLIST.racc_command}bin/racc${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/racc/cparse.${RUBY_DLEXT}
