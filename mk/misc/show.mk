@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.27 2020/12/14 00:14:48 rillig Exp $
+# $NetBSD: show.mk,v 1.28 2021/01/13 18:01:49 gdt Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -72,9 +72,9 @@ show-build-defs: .PHONY
 .    endif
 .  endfor
 	@${ECHO} ""
-	@${ECHO} "You may want to abort the process now with CTRL-C and change their value"
-	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after"
-	@${ECHO} "the changes."
+	@${ECHO} "You may want to abort the process now with CTRL-C and change the value"
+	@${ECHO} "of variables in the first group before continuing.  Be sure to run"
+	@${ECHO} "\`${MAKE} clean' after the changes."
 	@${ECHO} "=========================================================================="
 .endif
 
