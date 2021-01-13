@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.341 2021/01/13 14:30:39 taca Exp $
+$NetBSD: CHANGES-2021,v 1.342 2021/01/13 14:34:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -407,3 +407,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-parser to 3.15.1 [taca 2021-01-13]
 	Updated devel/ruby-semantic_puppet to 1.0.3 [taca 2021-01-13]
 	Updated devel/ruby-sexp-processor to 4.15.2 [taca 2021-01-13]
+	Updated devel/ruby-racc to 1.5.2nb1 [taca 2021-01-13]
