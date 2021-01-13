@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.331 2021/01/13 09:37:07 pin Exp $
+$NetBSD: CHANGES-2021,v 1.332 2021/01/13 11:08:14 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -396,3 +396,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/freeradius2 successor net/freeradius [nia 2021-01-13]
 	Updated net/s6-networking to 2.4.0.0nb1 [schmonz 2021-01-13]
 	Updated devel/tokei to 12.1.2 [pin 2021-01-13]
+	Updated games/hitori to 3.38.0 [prlw1 2021-01-13]
