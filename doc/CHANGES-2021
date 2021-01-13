@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.354 2021/01/13 17:45:46 js Exp $
+$NetBSD: CHANGES-2021,v 1.355 2021/01/13 22:00:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -420,3 +420,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-thor to 1.0.1nb1 [taca 2021-01-13]
 	Added sysutils/direnv version 2.27.0 [jperkin 2021-01-13]
 	Updated chat/matrix-synapse to 1.25.0 [js 2021-01-13]
+	Updated editors/xournalpp to 1.0.20 [mef 2021-01-13]
