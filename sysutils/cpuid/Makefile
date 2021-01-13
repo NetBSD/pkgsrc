@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/06/24 10:59:41 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/01/13 08:00:21 wiz Exp $
 
 DISTNAME=	cpuid-3.3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ka9q.net/code/cpuid/
 
@@ -14,7 +15,7 @@ ONLY_FOR_PLATFORM+=	*-*-x86_64
 INSTALLATION_DIRS=	bin
 
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} cpuid.c -o cpuid
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} cpuid.c -o cpuid
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cpuid ${DESTDIR}${PREFIX}/bin
