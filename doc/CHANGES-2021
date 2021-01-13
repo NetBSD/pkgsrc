@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.349 2021/01/13 14:57:49 taca Exp $
+$NetBSD: CHANGES-2021,v 1.350 2021/01/13 15:00:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -415,3 +415,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ruby-train-winrm to 0.2.11 [taca 2021-01-13]
 	Updated net/ruby-winrm to 2.3.5 [taca 2021-01-13]
 	Updated print/ruby-pdf-core to 0.9.0 [taca 2021-01-13]
+	Updated print/ruby-prawn to 2.4.0 [taca 2021-01-13]
