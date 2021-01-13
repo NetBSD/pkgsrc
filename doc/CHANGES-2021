@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.337 2021/01/13 12:07:12 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.338 2021/01/13 14:27:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -403,3 +403,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/lzip to 1.22 [wiz 2021-01-13]
 	Updated devel/py-hypothesis to 6.0.1 [wiz 2021-01-13]
 	Updated sysutils/psftools to 1.1.0 [fcambus 2021-01-13]
+	Updated devel/hoe to 3.22.3 [taca 2021-01-13]
