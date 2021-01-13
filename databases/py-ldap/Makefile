@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2020/07/07 05:29:04 adam Exp $
+# $NetBSD: Makefile,v 1.88 2021/01/13 09:55:42 nia Exp $
 
 DISTNAME=	python-ldap-3.3.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -17,6 +17,7 @@ TEST_ENV+=	BIN=${PREFIX}/bin
 TEST_ENV+=	SBIN=${PREFIX}/sbin
 TEST_ENV+=	SLAPD=${PREFIX}/libexec/slapd
 
+BUILDLINK_API_DEPENDS.openldap-client+=	openldap-client>=2.4.48
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
