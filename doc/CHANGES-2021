@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.343 2021/01/13 14:36:44 taca Exp $
+$NetBSD: CHANGES-2021,v 1.344 2021/01/13 14:39:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -409,3 +409,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-sexp-processor to 4.15.2 [taca 2021-01-13]
 	Updated devel/ruby-racc to 1.5.2nb1 [taca 2021-01-13]
 	Updated devel/ruby-shoulda-matchers to 4.5.0 [taca 2021-01-13]
+	Updated devel/ruby-tins to 1.28.0 [taca 2021-01-13]
