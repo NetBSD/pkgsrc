@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/13 16:41:16 jperkin Exp $
+bin/direnv
+man/man1/direnv-fetchurl.1
+man/man1/direnv-stdlib.1
+man/man1/direnv.1
+man/man1/direnv.toml.1
