@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.2 2013/11/29 12:54:24 joerg Exp $
+$NetBSD: patch-Makefile,v 1.3 2021/01/13 09:11:16 nia Exp $
 
 * Libtoolized
 * Add install targets
@@ -21,7 +21,7 @@ $NetBSD: patch-Makefile,v 1.2 2013/11/29 12:54:24 joerg Exp $
  SUFFIXES = .o .c .h .a .so .sl
  
 -COMPILE.c=$(CC) $(CFLAGS) -c
-+COMPILE.c=${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -c
++COMPILE.c=${LIBTOOL} --mode=compile --tag=CC $(CC) $(CFLAGS) -c
  .c.o:
  	@(echo "compiling $< ...")
  	@($(COMPILE.c) -o $@ $<)
@@ -40,7 +40,7 @@ $NetBSD: patch-Makefile,v 1.2 2013/11/29 12:54:24 joerg Exp $
 -	@$(SHLD) $(LDSHFLAGS) -o $@.0 $(OBJS) $(LDFLAGS) \
 -		-Wl,-soname=`basename $@`.0
 -
-+	@(${LIBTOOL} --mode=link \
++	@(${LIBTOOL} --mode=link --tag=CC \
 +		${CC} -o ${.TARGET:.a=.la} \
 +		${LDSHFLAGS} \
 +		${OBJS:.o=.lo} \
