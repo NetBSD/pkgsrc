@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.345 2021/01/13 14:41:44 taca Exp $
+$NetBSD: CHANGES-2021,v 1.346 2021/01/13 14:45:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -411,3 +411,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-shoulda-matchers to 4.5.0 [taca 2021-01-13]
 	Updated devel/ruby-tins to 1.28.0 [taca 2021-01-13]
 	Updated misc/ruby-bundler to 2.2.5 [taca 2021-01-13]
+	Updated net/ruby-train-core to 3.4.7 [taca 2021-01-13]
