@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeScripts_Pod2man.cmake,v 1.3 2020/05/06 01:42:28 ryoon Exp $
+$NetBSD: patch-CMakeScripts_Pod2man.cmake,v 1.4 2021/01/13 11:43:34 jperkin Exp $
 
 Fix man installation path.
 
---- CMakeScripts/Pod2man.cmake.orig	2020-05-01 13:17:41.000000000 +0000
+--- CMakeScripts/Pod2man.cmake.orig	2020-09-07 08:57:40.000000000 +0000
 +++ CMakeScripts/Pod2man.cmake
 @@ -34,13 +34,13 @@ macro(pod2man PODFILE_FULL RELEASE SECTI
              set(MANFILE_TEMP "${CMAKE_CURRENT_BINARY_DIR}/${NAME}.${LANG}.tmp")
@@ -20,3 +20,12 @@ Fix man installation path.
          endif()
          add_custom_command(
              OUTPUT ${MANFILE_TEMP}
+@@ -56,7 +56,7 @@ macro(pod2man PODFILE_FULL RELEASE SECTI
+         if(GZIP AND WITH_MANPAGE_COMPRESSION)
+             add_custom_command(
+                 OUTPUT ${MANFILE_FULL_GZ}
+-	        COMMAND ${GZIP} -f -k --best -n "${MANFILE_FULL}"
++	        COMMAND ${GZIP} -f --best -n "${MANFILE_FULL}"
+ 	        DEPENDS ${MANFILE_FULL}
+             )
+             add_custom_target(${MANPAGE_TARGET} ALL
