@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.332 2021/01/13 11:08:14 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.333 2021/01/13 11:17:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -397,3 +397,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/s6-networking to 2.4.0.0nb1 [schmonz 2021-01-13]
 	Updated devel/tokei to 12.1.2 [pin 2021-01-13]
 	Updated games/hitori to 3.38.0 [prlw1 2021-01-13]
+	Added math/kalk version 0.3.12 [pin 2021-01-13]
