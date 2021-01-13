@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2017/07/12 11:05:59 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2021/01/13 09:16:44 nia Exp $
 
---- Makefile.in.orig	2004-02-23 19:22:09.000000000 +0100
+libtoolize.
+
+--- Makefile.in.orig	2004-02-23 18:22:09.000000000 +0000
 +++ Makefile.in
 @@ -88,7 +88,7 @@ libargp_a_OBJECTS = $(am_libargp_a_OBJEC
  PROGRAMS = $(noinst_PROGRAMS)
@@ -16,11 +18,11 @@ $NetBSD: patch-aa,v 1.2 2017/07/12 11:05:59 wiz Exp $
  @AMDEP_TRUE@	./$(DEPDIR)/argp-pv.Po ./$(DEPDIR)/argp-pvh.Po \
  @AMDEP_TRUE@	./$(DEPDIR)/argp-test.Po
 -COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
-+COMPILE = libtool --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
++COMPILE = libtool --mode=compile --tag=CC $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
 -LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-+LINK = libtool --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++LINK = libtool --mode=link --tag=CC $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
  SOURCES = $(libargp_a_SOURCES) argp-test.c
  DIST_SOURCES = $(libargp_a_SOURCES) argp-test.c
  RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
@@ -51,7 +53,7 @@ $NetBSD: patch-aa,v 1.2 2017/07/12 11:05:59 wiz Exp $
 -	$(libargp_a_AR) libargp.a $(libargp_a_OBJECTS) $(libargp_a_LIBADD)
 -	$(RANLIB) libargp.a
 +libargp.la: $(libargp_a_OBJECTS) $(libargp_a_DEPENDENCIES) 
-+	libtool --mode=link ${CC} ${LDFLAGS} -o $@ -rpath ${libdir} $(LIBOBJS:C/.o$/.lo/) $(libargp_a_OBJECTS:C/.o$/.lo/)
++	libtool --mode=link --tag=CC ${CC} ${LDFLAGS} -o $@ -rpath ${libdir} $(LIBOBJS:C/.o$/.lo/) $(libargp_a_OBJECTS:C/.o$/.lo/)
  
  clean-noinstPROGRAMS:
  	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
