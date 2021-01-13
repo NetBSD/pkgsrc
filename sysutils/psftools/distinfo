@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/12/08 17:05:31 fcambus Exp $
+$NetBSD: distinfo,v 1.8 2021/01/13 12:06:39 fcambus Exp $
 
-SHA1 (psftools-1.0.14.tar.gz) = cd4a01856f49c6c8f07c9affcfc72ee2142f0e11
-RMD160 (psftools-1.0.14.tar.gz) = 78441e9161d9ed37c399b28fcad7202f23a66cf8
-SHA512 (psftools-1.0.14.tar.gz) = 82384977045e301404357d7861ea38dd276b005d4a258e406267c7c745946c1be25cbdf237563de1945ea0bdae4bfe5d14154ff7650298256e2d7a10f8e6f464
-Size (psftools-1.0.14.tar.gz) = 776662 bytes
+SHA1 (psftools-1.1.0.tar.gz) = 089a15538761e1e0079a337975f740572349ceb6
+RMD160 (psftools-1.1.0.tar.gz) = dbfce1244eb04ea194719df6195d908f6c663f73
+SHA512 (psftools-1.1.0.tar.gz) = cc56c1b63f6fd89d0ceca628aa938eca0103a2510b72449961bee18b79c142a743c9f4546ba6c59e9b226d0142e85af8fafed0b444fb8036bca5548e4da08aaf
+Size (psftools-1.1.0.tar.gz) = 805322 bytes
