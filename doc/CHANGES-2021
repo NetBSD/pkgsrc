@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.334 2021/01/13 11:32:16 adam Exp $
+$NetBSD: CHANGES-2021,v 1.335 2021/01/13 11:34:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -400,3 +400,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added math/kalk version 0.3.12 [pin 2021-01-13]
 	Updated databases/redis to 6.0.10 [adam 2021-01-13]
 	Updated textproc/py-jsbeautifier to 1.13.4 [adam 2021-01-13]
+	Updated archivers/lzip to 1.22 [wiz 2021-01-13]
