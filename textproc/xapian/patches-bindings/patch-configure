@@ -1,30 +1,14 @@
-$NetBSD: patch-configure,v 1.4 2020/11/30 14:05:48 schmonz Exp $
+$NetBSD: patch-configure,v 1.5 2021/01/14 18:18:11 schmonz Exp $
 
 - Remove hackaround for old OpenBSD bugs that break builds with other
   STL implementations.
 - Link directly with static-only libtclstub.a (fixes build on NetBSD).
-- Remove workaround for old macOS to fix Big Sur build.
 - Remove broken cross-compile check (builds a bundle, complains it can't
   run as executable) to fix lua-xapian on Big Sur.
 
---- configure.orig	2020-08-21 03:38:47.000000000 +0000
+--- configure.orig	2021-01-14 00:45:37.000000000 +0000
 +++ configure
-@@ -3309,14 +3309,6 @@ case $host in
- *86*-darwin8*|*-darwin[91]*)
-       ;;
- *-darwin*)
--  case $MACOSX_DEPLOYMENT_TARGET in
--  "")
--    OVERRIDE_MACOSX_DEPLOYMENT_TARGET=10.3 ;;
--  10.[012])
--    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Overriding MACOSX_DEPLOYMENT_TARGET from $MACOSX_DEPLOYMENT_TARGET to 10.3" >&5
--$as_echo "$as_me: WARNING: Overriding MACOSX_DEPLOYMENT_TARGET from $MACOSX_DEPLOYMENT_TARGET to 10.3" >&2;}
--    OVERRIDE_MACOSX_DEPLOYMENT_TARGET=10.3 ;;
--  esac
-   ;;
- esac
-  if test -n "$OVERRIDE_MACOSX_DEPLOYMENT_TARGET"; then
-@@ -3971,51 +3963,6 @@ FILE *f = fopen ("conftest.out", "w");
+@@ -3971,51 +3971,6 @@ FILE *f = fopen ("conftest.out", "w");
    return 0;
  }
  _ACEOF
@@ -76,7 +60,7 @@ $NetBSD: patch-configure,v 1.4 2020/11/30 14:05:48 schmonz Exp $
  ac_clean_files=$ac_clean_files_save
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for suffix of object files" >&5
  $as_echo_n "checking for suffix of object files... " >&6; }
-@@ -18048,7 +17995,7 @@ fi
+@@ -18048,7 +18003,7 @@ fi
  	    for x in "/tcl$tcl_version" "" ; do
  	      TCLCONFIG_SH=$tcl_libdir_runtime$x/tclConfig.sh
  	      if test -r "$TCLCONFIG_SH" ; then
@@ -85,7 +69,7 @@ $NetBSD: patch-configure,v 1.4 2020/11/30 14:05:48 schmonz Exp $
  		break
  	      fi
  	    done
-@@ -19524,9 +19471,6 @@ SWIG_CXXFLAGS=
+@@ -19524,9 +19479,6 @@ SWIG_CXXFLAGS=
  if test yes = "$GXX" ; then
                      SWIG_CXXFLAGS="-fno-strict-aliasing"
  
