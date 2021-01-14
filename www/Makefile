@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1500 2021/01/13 08:58:44 nia Exp $
+# $NetBSD: Makefile,v 1.1501 2021/01/14 15:09:03 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -971,6 +971,7 @@ SUBDIR+=	siege
 SUBDIR+=	sitecopy
 SUBDIR+=	snarf
 SUBDIR+=	snownews
+SUBDIR+=	so
 SUBDIR+=	spawn-fcgi
 SUBDIR+=	spdylay
 SUBDIR+=	sqtop
