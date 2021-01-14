@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.20 2019/07/30 08:08:22 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/01/14 02:47:39 nat Exp $
 
 SHA1 (BasiliskII-20190405-01052ca89d22882c870b84c5498cd0ee9a843b6b.tar.gz) = b83f76e9b37318b6bc4e43e73db0d2ed00fc2981
 RMD160 (BasiliskII-20190405-01052ca89d22882c870b84c5498cd0ee9a843b6b.tar.gz) = 1c16c477fd1e2980ceb4e172d896fb2da4d9580b
 SHA512 (BasiliskII-20190405-01052ca89d22882c870b84c5498cd0ee9a843b6b.tar.gz) = 82a7720c369489d8a27f175550973a72fa77c76553e38734fb2efef6ecf29a2a1c195797d4d487b1e6cca0f21f778a640d69c2686af6ae1687e3e8234dbf7245
 Size (BasiliskII-20190405-01052ca89d22882c870b84c5498cd0ee9a843b6b.tar.gz) = 2198906 bytes
 SHA1 (patch-ad) = 1d8bc61f6386855c6d83ff4e5a13f55d5e22325a
+SHA1 (patch-src_CrossPlatform_vm__alloc.cpp) = 78482a371a7fbbd4d20b800a361688c4f44d78df
+SHA1 (patch-src_Unix_prefs__unix.cpp) = a47e0889b23a2a574a0a90f23b6e4b2016f4fc90
+SHA1 (patch-src_Unix_sysdeps.h) = ea1e175ee81b1fd4f67163e9008088568de263f5
