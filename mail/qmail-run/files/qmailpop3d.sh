@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.33 2019/03/21 15:33:06 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.34 2021/01/14 15:42:36 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -30,8 +30,7 @@ name="qmailpop3d"
 : ${qmailpop3d_tls:="auto"}
 : ${qmailpop3d_tls_dhparams:="@PKG_SYSCONFDIR@/control/dh2048.pem"}
 : ${qmailpop3d_tls_cert:="@PKG_SYSCONFDIR@/control/servercert.pem"}
-: ${qmailpop3d_tls_key:=""}
-: ${qmailpop3d_tls_ciphers:=""}
+: ${qmailpop3d_tls_key:="@PKG_SYSCONFDIR@/control/serverkey.pem"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -54,7 +53,7 @@ reload_cmd=${cdb_cmd}
 
 qmailpop3d_configure_tls() {
 	if [ "auto" = "${qmailpop3d_tls}" ]; then
-		if [ -f "${qmailpop3d_tls_dhparams}" ] && [ -f "${qmailpop3d_tls_cert}" ]; then
+		if [ -f "${qmailpop3d_tls_cert}" ]; then
 			qmailpop3d_enable_tls
 		else
 			qmailpop3d_disable_tls
@@ -71,16 +70,16 @@ qmailpop3d_disable_tls() {
 }
 
 qmailpop3d_enable_tls() {
+	qmailpop3d_postenv="CADIR=@SSLDIR@/certs ${qmailpop3d_postenv}"
 	qmailpop3d_postenv="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) ${qmailpop3d_postenv}"
 	qmailpop3d_postenv="SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) ${qmailpop3d_postenv}"
 	qmailpop3d_postenv="DHFILE=${qmailpop3d_tls_dhparams} ${qmailpop3d_postenv}"
 	qmailpop3d_postenv="CERTFILE=${qmailpop3d_tls_cert} ${qmailpop3d_postenv}"
-	if [ -f "${qmailpop3d_tls_key}" ]; then
-		qmailpop3d_postenv="KEYFILE=${qmailpop3d_tls_key} ${qmailpop3d_postenv}"
+	if [ -n "${qmailpop3d_tls_key}" -a ! -f "${qmailpop3d_tls_key}" ]; then
+		openssl rsa -in ${qmailpop3d_tls_cert} -out ${qmailpop3d_tls_key}
+		@CHMOD@ 640 ${qmailpop3d_tls_key}
 	fi
-	if [ -n "${qmailpop3d_tls_ciphers}" ]; then
-		qmailpop3d_postenv="CIPHERS=${qmailpop3d_tls_ciphers} ${qmailpop3d_postenv}"
-	fi
+	qmailpop3d_postenv="KEYFILE=${qmailpop3d_tls_key} ${qmailpop3d_postenv}"
 }
 
 qmailpop3d_precmd() {
