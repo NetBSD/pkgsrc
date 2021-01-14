@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.69 2020/05/23 20:50:02 schmonz Exp $
+# $NetBSD: options.mk,v 1.70 2021/01/14 15:25:22 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
@@ -98,8 +98,8 @@ SUBST_SED.tmprsadh=		-e 's|^export PATH=.*||'
 SUBST_SED.tmprsadh+=		-e 's|^openssl |${OPENSSL} |'
 READMES+=			README.tls
 SUBST_VARS.paths+=		OPENSSL QMAIL_DAEMON_USER QMAIL_QMAIL_GROUP
-SUBST_VARS.paths+=		OPENSSL SERVERCERT CLIENTCERT
 SUBST_SED.paths+=		-e 's|@SERVERCERT@|${PKG_SYSCONFDIR:Q}/control/servercert.pem|g'
+SUBST_SED.paths+=		-e 's|@SERVERKEY@|${PKG_SYSCONFDIR:Q}/control/serverkey.pem|g'
 SUBST_SED.paths+=		-e 's|@CLIENTCERT@|${PKG_SYSCONFDIR:Q}/control/clientcert.pem|g'
 DEPENDS+=			ucspi-ssl>=0.999.10.11nb2:../../net/ucspi-ssl
 .else
