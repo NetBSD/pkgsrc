@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2021/01/10 20:27:33 adam Exp $
+# $NetBSD: Makefile,v 1.62 2021/01/14 12:14:06 mef Exp $
 
 DISTNAME=	matplotlib-3.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-cycler>=0.10:../../graphics/py-cycler
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.0:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	c c++
