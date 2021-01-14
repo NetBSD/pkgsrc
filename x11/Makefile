@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.915 2021/01/14 17:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.916 2021/01/14 17:46:48 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -53,7 +53,6 @@ SUBDIR+=	enlightenment
 SUBDIR+=	eterm
 SUBDIR+=	fbdesk
 SUBDIR+=	filerunner
-SUBDIR+=	fixesproto4
 SUBDIR+=	fltk
 SUBDIR+=	fltk13
 SUBDIR+=	fox
