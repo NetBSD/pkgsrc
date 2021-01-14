@@ -1,2 +1,2 @@
-127.:allow,RELAYCLIENT=""
+127.:allow,RELAYCLIENT="",QMAILQUEUE="/opt/pkg/bin/qmail-qfilter-queue",QMAILQUEUEFILTERS="control/localfilters"
 :allow,UCSPITLS="",GREETDELAY="2",SPP_SPF_DONT_ALLOW_RANDOM_IP_PASS="1",SPP_SPF_RESULT_PASS="SGL_WHITELISTED=1",GL_DATABASE="@PKG_SYSCONFDIR@/control/greylist/database",GL_VERBOSE="1",QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-queue",QMAILQUEUEFILTERS="control/smtpfilters"

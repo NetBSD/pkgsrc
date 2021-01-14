@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.30 2019/03/21 15:33:06 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.31 2021/01/14 15:42:36 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -29,8 +29,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_tls:="auto"}
 : ${qmailsmtpd_tls_dhparams:="@PKG_SYSCONFDIR@/control/dh2048.pem"}
 : ${qmailsmtpd_tls_cert:="@PKG_SYSCONFDIR@/control/servercert.pem"}
-: ${qmailsmtpd_tls_key:=""}
-: ${qmailsmtpd_tls_ciphers:=""}
+: ${qmailsmtpd_tls_key:="@PKG_SYSCONFDIR@/control/serverkey.pem"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -53,7 +52,7 @@ reload_cmd=${cdb_cmd}
 
 qmailsmtpd_configure_tls() {
 	if [ "auto" = "${qmailsmtpd_tls}" ]; then
-		if [ -f "${qmailsmtpd_tls_dhparams}" ] && [ -f "${qmailsmtpd_tls_cert}" ]; then
+		if [ -f "${qmailsmtpd_tls_cert}" ]; then
 			qmailsmtpd_enable_tls
 		else
 			qmailsmtpd_disable_tls
@@ -70,16 +69,16 @@ qmailsmtpd_disable_tls() {
 }
 
 qmailsmtpd_enable_tls() {
+	qmailsmtpd_postenv="CADIR=@SSLDIR@/certs ${qmailsmtpd_postenv}"
 	qmailsmtpd_postenv="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) ${qmailsmtpd_postenv}"
 	qmailsmtpd_postenv="SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) ${qmailsmtpd_postenv}"
 	qmailsmtpd_postenv="DHFILE=${qmailsmtpd_tls_dhparams} ${qmailsmtpd_postenv}"
 	qmailsmtpd_postenv="CERTFILE=${qmailsmtpd_tls_cert} ${qmailsmtpd_postenv}"
-	if [ -f "${qmailsmtpd_tls_key}" ]; then
-		qmailsmtpd_postenv="KEYFILE=${qmailsmtpd_tls_key} ${qmailsmtpd_postenv}"
+	if [ -n "${qmailsmtpd_tls_key}" -a ! -f "${qmailsmtpd_tls_key}" ]; then
+		openssl rsa -in ${qmailsmtpd_tls_cert} -out ${qmailsmtpd_tls_key}
+		@CHMOD@ 640 ${qmailsmtpd_tls_key}
 	fi
-	if [ -n "${qmailsmtpd_tls_ciphers}" ]; then
-		qmailsmtpd_postenv="CIPHERS=${qmailsmtpd_tls_ciphers} ${qmailsmtpd_postenv}"
-	fi
+	qmailsmtpd_postenv="KEYFILE=${qmailsmtpd_tls_key} ${qmailsmtpd_postenv}"
 }
 
 qmailsmtpd_precmd() {
