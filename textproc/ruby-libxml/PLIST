@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/05/25 15:25:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/01/14 14:46:16 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -166,6 +166,7 @@ ${GEM_LIBDIR}/test/model/shiporder.xml
 ${GEM_LIBDIR}/test/model/shiporder.xsd
 ${GEM_LIBDIR}/test/model/soap.xml
 ${GEM_LIBDIR}/test/model/xinclude.xml
+${GEM_LIBDIR}/test/test.xml
 ${GEM_LIBDIR}/test/test_attr.rb
 ${GEM_LIBDIR}/test/test_attr_decl.rb
 ${GEM_LIBDIR}/test/test_attributes.rb
