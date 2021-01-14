@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.370 2021/01/14 14:39:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.371 2021/01/14 14:41:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -457,3 +457,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-specinfra to 2.82.23 [taca 2021-01-14]
 	Updated textproc/ruby-asciidoctor to 2.0.12 [taca 2021-01-14]
 	Updated textproc/ruby-csv to 3.1.9 [taca 2021-01-14]
+	Updated textproc/ruby-erubi to 1.10.0 [taca 2021-01-14]
