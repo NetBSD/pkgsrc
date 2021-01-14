@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.366 2021/01/14 14:23:34 adam Exp $
+$NetBSD: CHANGES-2021,v 1.367 2021/01/14 14:28:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -453,3 +453,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-route53 to 1.11.0 [adam 2021-01-14]
 	Updated security/py-certbot-dns-sakuracloud to 1.11.0 [adam 2021-01-14]
 	Updated security/py-certbot-nginx to 1.11.0 [adam 2021-01-14]
+	Updated sysutils/ruby-listen to 3.4.0 [taca 2021-01-14]
