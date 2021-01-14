@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2020/09/11 20:44:17 js Exp $
+$NetBSD: distinfo,v 1.3 2021/01/14 12:50:25 nia Exp $
 
 SHA1 (profanity-0.9.5.tar.gz) = 88f3bcb483f25710cb35ab3e3f227f11b5d1225a
 RMD160 (profanity-0.9.5.tar.gz) = 39c0a1b7f50e5000bfc649a0461d7f2d45230b16
 SHA512 (profanity-0.9.5.tar.gz) = 79305ee488d3a9b87bb422d6525bfaae62c4969d466b968c86941ed5bf0c0080e349758f2e1ead144693513b5d19a635372e73aa1fe9e362836b9245e1d2b898
 Size (profanity-0.9.5.tar.gz) = 830966 bytes
-SHA1 (patch-configure.ac) = 7f3ec4182d82cb6836d4e0ecb0b023e56ce3b91d
+SHA1 (patch-configure.ac) = d7d07f7c62755bc46e318df216932d7273a0c34c
 SHA1 (patch-src_ui_inputwin.c) = ccdfc1b1fe932ba09eafaf54ed10af453b1a6c80
 SHA1 (patch-src_ui_rosterwin.c) = 1e31cbd7dc0bdaebe9e3fcddbecceeb60b70faf2
 SHA1 (patch-src_ui_window.c) = 5844f276517260beb2ea767523f44c46d6b562d2
