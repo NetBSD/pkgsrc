@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/03/24 16:40:19 taca Exp $
+# $NetBSD: Makefile,v 1.17 2021/01/14 14:28:27 taca Exp $
 
-DISTNAME=	listen-3.2.1
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	listen-3.4.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +10,8 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rb-fsevent>=0.10.3:../../devel/ruby-rb-fsevent
 DEPENDS+=	${RUBY_PKGPREFIX}-rb-inotify>=0.9.10:../../devel/ruby-rb-inotify
+
+USE_LANGUAGES=	# none
 
 RUBYGEM_OPTIONS+=	--format-executable
 

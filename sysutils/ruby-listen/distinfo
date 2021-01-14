@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/03/24 16:40:19 taca Exp $
+$NetBSD: distinfo,v 1.12 2021/01/14 14:28:27 taca Exp $
 
-SHA1 (listen-3.2.1.gem) = 089b7d1ad1d502c0db94ac37776d5713d8b53dce
-RMD160 (listen-3.2.1.gem) = 1b2cdb16f511cd89f88c0cb86345a4c4a2ca6b65
-SHA512 (listen-3.2.1.gem) = b15ddcf9783f8c22e79bfe2615b8d2ecaa4ed0410000a0ba8e790a400ba3e7744b58c264cbc36e0235dbc60546d94d9d9548719370f9d5e1e959ea28b241d661
-Size (listen-3.2.1.gem) = 28160 bytes
+SHA1 (listen-3.4.0.gem) = ac9fdcc751b51608d67a3729758cd2c1057444ef
+RMD160 (listen-3.4.0.gem) = 50ff7d32777c287354d350af6f809ed2e711b78b
+SHA512 (listen-3.4.0.gem) = 71ee97d956f57be4e5ae61ce946fc9c436fd1b098d17e626bb23f8fc00ef14792a24ea3e1e5c2e020c590b06f16d4291e62c0353778defc0168d15ded2891650
+Size (listen-3.4.0.gem) = 30208 bytes
