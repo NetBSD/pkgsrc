@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/06/10 17:54:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/01/14 18:17:09 schmonz Exp $
 bin/copydatabase
 bin/quest
 bin/simpleexpand
@@ -349,7 +349,6 @@ share/doc/xapian-core/apidoc/html/dir_f63502d618711192f85ccb772536c6ae.html
 share/doc/xapian-core/apidoc/html/doc.png
 share/doc/xapian-core/apidoc/html/document_8h.html
 share/doc/xapian-core/apidoc/html/doxygen.css
-share/doc/xapian-core/apidoc/html/doxygen.png
 share/doc/xapian-core/apidoc/html/dynsections.js
 share/doc/xapian-core/apidoc/html/enquire_8h.html
 share/doc/xapian-core/apidoc/html/error_8h.html
