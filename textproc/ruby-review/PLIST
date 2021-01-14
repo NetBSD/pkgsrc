@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/09/14 15:10:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/01/14 15:03:01 taca Exp $
 bin/review-catalog-converter${RUBY_SUFFIX}
 bin/review-check${RUBY_SUFFIX}
 bin/review-checkdep${RUBY_SUFFIX}
@@ -21,7 +21,6 @@ ${GEM_LIBDIR}/.github/workflows/ruby-win.yml
 ${GEM_LIBDIR}/.github/workflows/ruby.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.rubocop_todo.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Dockerfile
@@ -96,8 +95,9 @@ ${GEM_LIBDIR}/lib/lineinput.rb
 ${GEM_LIBDIR}/lib/review.rb
 ${GEM_LIBDIR}/lib/review/book.rb
 ${GEM_LIBDIR}/lib/review/book/base.rb
+${GEM_LIBDIR}/lib/review/book/bib.rb
+${GEM_LIBDIR}/lib/review/book/book_unit.rb
 ${GEM_LIBDIR}/lib/review/book/chapter.rb
-${GEM_LIBDIR}/lib/review/book/compilable.rb
 ${GEM_LIBDIR}/lib/review/book/image_finder.rb
 ${GEM_LIBDIR}/lib/review/book/index.rb
 ${GEM_LIBDIR}/lib/review/book/index/item.rb
@@ -125,6 +125,7 @@ ${GEM_LIBDIR}/lib/review/i18n.rb
 ${GEM_LIBDIR}/lib/review/i18n.yml
 ${GEM_LIBDIR}/lib/review/idgxmlbuilder.rb
 ${GEM_LIBDIR}/lib/review/idgxmlmaker.rb
+${GEM_LIBDIR}/lib/review/index_builder.rb
 ${GEM_LIBDIR}/lib/review/init-web/finish.html
 ${GEM_LIBDIR}/lib/review/init-web/index.html
 ${GEM_LIBDIR}/lib/review/init-web/review-layout-design.js
@@ -270,6 +271,7 @@ ${GEM_LIBDIR}/test/test_idgxmlbuilder.rb
 ${GEM_LIBDIR}/test/test_idgxmlmaker_cmd.rb
 ${GEM_LIBDIR}/test/test_image_finder.rb
 ${GEM_LIBDIR}/test/test_index.rb
+${GEM_LIBDIR}/test/test_indexbuilder.rb
 ${GEM_LIBDIR}/test/test_latexbuilder.rb
 ${GEM_LIBDIR}/test/test_latexbuilder_v2.rb
 ${GEM_LIBDIR}/test/test_lineinput.rb
@@ -284,6 +286,7 @@ ${GEM_LIBDIR}/test/test_plaintextbuilder.rb
 ${GEM_LIBDIR}/test/test_preprocessor.rb
 ${GEM_LIBDIR}/test/test_review_ext.rb
 ${GEM_LIBDIR}/test/test_rstbuilder.rb
+${GEM_LIBDIR}/test/test_sec_counter.rb
 ${GEM_LIBDIR}/test/test_template.rb
 ${GEM_LIBDIR}/test/test_textmaker_cmd.rb
 ${GEM_LIBDIR}/test/test_textutils.rb
@@ -318,6 +321,8 @@ ${GEM_LIBDIR}/vendor/gentombow/tests/bounddvi-05-geodvips.tex
 ${GEM_LIBDIR}/vendor/gentombow/tests/bounddvi-05a-geodvips.tex
 ${GEM_LIBDIR}/vendor/gentombow/tests/bounddvi-06-geodvipdfmx.tex
 ${GEM_LIBDIR}/vendor/gentombow/tests/bounddvi-06a-geodvipdfmx.tex
+${GEM_LIBDIR}/vendor/gentombow/tests/gentombow-01-pdfx.tex
+${GEM_LIBDIR}/vendor/gentombow/tests/gentombow-02-pdfx.tex
 ${GEM_LIBDIR}/vendor/gentombow/tests/pxgentombow-01-usage.tex
 ${GEM_LIBDIR}/vendor/gentombow/tests/pxgentombow-02-js.tex
 ${GEM_LIBDIR}/vendor/gentombow/tests/pxgentombow-02a-js-error.tex
@@ -376,6 +381,7 @@ ${GEM_LIBDIR}/vendor/jsclasses/okuverb.dtx
 ${GEM_LIBDIR}/vendor/jsclasses/okuverb.ins
 ${GEM_LIBDIR}/vendor/jsclasses/okuverb.pdf
 ${GEM_LIBDIR}/vendor/jsclasses/okuverb.sty
+${GEM_LIBDIR}/vendor/jsclasses/tests/relfont.tex
 ${GEM_LIBDIR}/vendor/jsclasses/winjis.sty
 ${GEM_LIBDIR}/vendor/jumoline/README
 ${GEM_LIBDIR}/vendor/jumoline/jumoline.dtx
