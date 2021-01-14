@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.486 2021/01/13 11:16:55 pin Exp $
+# $NetBSD: Makefile,v 1.487 2021/01/14 04:06:43 jnemeth Exp $
 
 COMMENT=	Mathematics
 
@@ -216,8 +216,8 @@ SUBDIR+=	hs-semigroups
 SUBDIR+=	ipopt
 SUBDIR+=	isl
 SUBDIR+=	itpp
-SUBDIR+=	kalk
 SUBDIR+=	kalgebra
+SUBDIR+=	kalk
 SUBDIR+=	kcalc
 SUBDIR+=	lapack
 SUBDIR+=	libffm
