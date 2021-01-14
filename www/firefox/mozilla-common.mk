@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.193 2021/01/06 11:21:40 triaxx Exp $
+# $NetBSD: mozilla-common.mk,v 1.194 2021/01/14 12:07:52 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -143,6 +143,7 @@ fix-clang-wrapper:
 # Firefox requires Clang during the build, even when building with GCC.
 # XXX: When using GCC, pkgsrc provides 'clang' wrappers that are actually gcc.
 # This breaks the build.
+# PR pkg/55647 https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=55647
 	${LN} -sf ${PREFIX}/bin/clang ${WRKDIR}/.cwrapper/bin/clang
 	${LN} -sf ${PREFIX}/bin/clang++ ${WRKDIR}/.cwrapper/bin/clang++
 	${LN} -sf ${PREFIX}/bin/clang-cpp ${WRKDIR}/.cwrapper/bin/clang-cpp
