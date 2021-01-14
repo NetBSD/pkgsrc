@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.383 2021/01/14 17:44:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.384 2021/01/14 17:46:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -470,3 +470,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/libmicrohttpd to 0.9.72nb1 [wiz 2021-01-14]
 	Updated www/libmicrohttpd to 0.9.72nb2 [wiz 2021-01-14]
 	Removed x11/Xfixes successor x11/libXfixes [wiz 2021-01-14]
+	Removed x11/fixesproto4 successor x11/xorgproto [wiz 2021-01-14]
