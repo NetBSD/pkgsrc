@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.372 2021/01/14 14:45:07 taca Exp $
+$NetBSD: CHANGES-2021,v 1.373 2021/01/14 14:46:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -459,3 +459,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-csv to 3.1.9 [taca 2021-01-14]
 	Updated textproc/ruby-erubi to 1.10.0 [taca 2021-01-14]
 	Updated textproc/ruby-haml to 5.2.1 [taca 2021-01-14]
+	Updated textproc/ruby-libxml to 3.2.1 [taca 2021-01-14]
