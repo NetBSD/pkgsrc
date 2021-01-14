@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.380 2021/01/14 15:42:44 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.381 2021/01/14 16:11:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -467,3 +467,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/so version 0.4.3 [pin 2021-01-14]
 	Updated mail/qmail to 1.03nb50 [schmonz 2021-01-14]
 	Updated mail/qmail-run to 20210114 [schmonz 2021-01-14]
+	Updated www/libmicrohttpd to 0.9.72nb1 [wiz 2021-01-14]
