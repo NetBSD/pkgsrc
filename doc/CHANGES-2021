@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.361 2021/01/14 14:03:36 taca Exp $
+$NetBSD: CHANGES-2021,v 1.362 2021/01/14 14:11:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -433,3 +433,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-awscli to 1.18.214 [adam 2021-01-14]
 	Removed games/quake successor games/tyrquake [nia 2021-01-14]
 	Updated devel/ruby-docile to 1.3.5 [taca 2021-01-14]
+	Updated security/ruby-bcrypt_pbkdf to 1.1.0 [taca 2021-01-14]
