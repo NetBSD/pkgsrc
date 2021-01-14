@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:10:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/14 20:55:45 fcambus Exp $
 
 DISTNAME=	MaxMind-DB-Writer-0.300003
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MAXMIND/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/MaxMind-DB-Writer
 COMMENT=	Create MaxMind DB database files
 LICENSE=	${PERL5_LICENSE}
