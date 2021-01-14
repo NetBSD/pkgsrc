@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/09/14 14:53:08 taca Exp $
+# $NetBSD: Makefile,v 1.10 2021/01/14 14:32:18 taca Exp $
 
-DISTNAME=	specinfra-2.82.19
+DISTNAME=	specinfra-2.82.23
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,8 +11,6 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=0:../../security/ruby-net-scp
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/ruby/rubyversion.mk"
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
