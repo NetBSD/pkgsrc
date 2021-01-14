@@ -1,10 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.2 2020/09/11 20:44:17 js Exp $
+$NetBSD: patch-configure.ac,v 1.3 2021/01/14 12:50:25 nia Exp $
 
 - Add NetBSD as a non-libdl platform.
 - Fix == usage.
 - Remove hardcoded homebrew path on macOS.
+- Add NetBSD as a libnotify platform.
 
---- configure.ac.orig	2020-07-01 16:49:19.000000000 +0000
+--- configure.ac.orig	2020-09-19 01:06:20.595094431 +0000
 +++ configure.ac
 @@ -22,6 +22,7 @@ AC_CANONICAL_HOST
  PLATFORM="unknown"
@@ -49,3 +50,12 @@ $NetBSD: patch-configure.ac,v 1.2 2020/09/11 20:44:17 js Exp $
        [AC_CHECK_FILE([/usr/local/include/ereadline],
            [LIBS="-lereadline $LIBS"
                AM_CPPFLAGS="-I/usr/local/include/ereadline $AM_CPPFLAGS"
+@@ -246,7 +239,7 @@ AS_IF([test "x$PLATFORM" = xosx],
+                     [AC_MSG_ERROR([terminal-notifier not found, required for desktop notifications.])],
+                     [AC_MSG_NOTICE([Desktop notifications not supported.])])],
+                 [AC_DEFINE([HAVE_OSXNOTIFY], [1], [terminal notifier])])])],
+-    [test "x$PLATFORM" = xnix -o "x$PLATFORM" = xfreebsd],
++    [test "x$PLATFORM" = xnix -o "x$PLATFORM" = xfreebsd -o "x$PLATFORM" = xnetbsd],
+         [AS_IF([test "x$enable_notifications" != xno],
+             [PKG_CHECK_MODULES([libnotify], [libnotify],
+                 [AC_DEFINE([HAVE_LIBNOTIFY], [1], [libnotify module])],
