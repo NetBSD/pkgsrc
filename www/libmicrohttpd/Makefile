@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2021/01/14 16:10:57 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2021/01/14 17:17:30 wiz Exp $
 
 DISTNAME=	libmicrohttpd-0.9.72
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=libmicrohttpd/}
 
@@ -24,5 +24,6 @@ CONFIGURE_ARGS+=	--enable-https
 
 .include "../../security/gnutls/buildlink3.mk"
 # This is actually only needed for tests, but linked
+BUILDLINK_DEPMETHOD.curl=	build
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
