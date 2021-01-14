@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.386 2021/01/14 18:20:46 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.387 2021/01/14 18:21:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -479,3 +479,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Xapian to 1.4.18 [schmonz 2021-01-14]
 	Updated textproc/ruby-xapian to 1.4.18 [schmonz 2021-01-14]
 	Updated textproc/tcl-xapian to 1.4.18 [schmonz 2021-01-14]
+	Updated textproc/xapian-omega to 1.4.18 [schmonz 2021-01-14]
