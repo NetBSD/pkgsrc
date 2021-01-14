@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.494 2020/09/30 08:07:56 nia Exp $
+# $NetBSD: Makefile,v 1.495 2021/01/14 13:23:25 nia Exp $
 #
 
 COMMENT=	Games
@@ -339,7 +339,6 @@ SUBDIR+=	qonk
 SUBDIR+=	qqwing
 SUBDIR+=	qstat
 SUBDIR+=	quadrupleback
-SUBDIR+=	quake
 SUBDIR+=	quake2forge
 SUBDIR+=	quake6
 SUBDIR+=	quakedata
