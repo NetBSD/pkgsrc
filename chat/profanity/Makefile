@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:01 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/14 12:50:25 nia Exp $
 
 DISTNAME=	profanity-0.9.5
 PKGREVISION=	2
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--enable-c-plugins
 CONFIGURE_ARGS+=	--enable-python-plugins
 CONFIGURE_ARGS+=	--enable-omemo
+
+.include "options.mk"
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
