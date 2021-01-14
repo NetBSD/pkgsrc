@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2021/01/03 09:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2021/01/14 16:10:57 wiz Exp $
 
 DISTNAME=	libmicrohttpd-0.9.72
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=libmicrohttpd/}
 
@@ -19,10 +20,9 @@ INFO_FILES=		yes
 TEST_TARGET=		check
 
 PKGCONFIG_OVERRIDE+=	libmicrohttpd.pc.in
-CONFIGURE_ARGS+=	--enable-nls
+CONFIGURE_ARGS+=	--enable-https
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+# This is actually only needed for tests, but linked
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
