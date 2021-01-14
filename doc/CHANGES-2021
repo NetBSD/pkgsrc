@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.359 2021/01/14 13:09:08 adam Exp $
+$NetBSD: CHANGES-2021,v 1.360 2021/01/14 13:24:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -431,3 +431,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-s3transfer to 0.3.4 [adam 2021-01-14]
 	Updated net/py-boto3 to 1.16.54 [adam 2021-01-14]
 	Updated net/py-awscli to 1.18.214 [adam 2021-01-14]
+	Removed games/quake successor games/tyrquake [nia 2021-01-14]
