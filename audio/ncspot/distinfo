@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2020/12/18 13:13:20 pin Exp $
+$NetBSD: distinfo,v 1.8 2021/01/14 12:18:08 pin Exp $
 
 SHA1 (addr2line-0.14.0.crate) = f11eb95d2e51bc7c5ca3abb73f007650366292bc
 RMD160 (addr2line-0.14.0.crate) = 7fb87783a936f85f6298f9ae0bda0bbcc49ae1ad
@@ -756,10 +756,10 @@ SHA1 (native-tls-0.2.6.crate) = 20086638c31b965d4551ec71ae2688b980797837
 RMD160 (native-tls-0.2.6.crate) = b2c858a80c4ced12a530ac22e27237681afc8799
 SHA512 (native-tls-0.2.6.crate) = 9e20f126f680215904d4e4cd7ebb1800b941608b454562173b04d206c894dbae3019e5b296a3fa64ed6f3826230aaef01b0ccc509cc6ff2aec8c271e0fe7daa3
 Size (native-tls-0.2.6.crate) = 31552 bytes
-SHA1 (ncspot-0.2.6.tar.gz) = 7bfd026c1937d2952aad7028c04259298906072e
-RMD160 (ncspot-0.2.6.tar.gz) = e4e8257f9430500eb9631aeab7b49868bc673255
-SHA512 (ncspot-0.2.6.tar.gz) = c20af033d9d7fe987865ce9ce0e3e7797c36b202e7f7a00e6490a2e7c4b2b89fd06f17fac6b53f8fccd288864966b59b1b30f1da4a0ef0b3e198b2bf4ca5c48b
-Size (ncspot-0.2.6.tar.gz) = 179789 bytes
+SHA1 (ncspot-0.3.0.tar.gz) = e5d47182e7e88f4f2b436eef543b0a15219b9f17
+RMD160 (ncspot-0.3.0.tar.gz) = e7da8cc08c4b6197c4cfe81bb1203c117f48886f
+SHA512 (ncspot-0.3.0.tar.gz) = cf6e8074b56a453c8dfc6925a8f37485966a749dd16c32f3af1a19247cdf4fbee0d145b0094fb7c4836e0f19c389e17c5c875a9f6076df30404a0f8c0523b51e
+Size (ncspot-0.3.0.tar.gz) = 181187 bytes
 SHA1 (ncurses-5.99.0.crate) = 226d3c22101740035a31c714b254e1c474ad7e31
 RMD160 (ncurses-5.99.0.crate) = c839d3745ef22d980995e1cd29d09d8b9b6c7406
 SHA512 (ncurses-5.99.0.crate) = 131231dfa45d9ca585c76a615956939fd5e1122cbb0cf3c900404f9a76211d9db096e037a73524afb5c2427d450af40aa4f782f5d6dd8febdbc8a91d312809f0
