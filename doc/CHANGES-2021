@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.375 2021/01/14 14:57:57 taca Exp $
+$NetBSD: CHANGES-2021,v 1.376 2021/01/14 15:03:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -462,3 +462,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-libxml to 3.2.1 [taca 2021-01-14]
 	Updated textproc/ruby-plist to 3.6.0 [taca 2021-01-14]
 	Updated textproc/ruby-redcarpet to 3.5.1 [taca 2021-01-14]
+	Updated textproc/ruby-review to 5.0.0 [taca 2021-01-14]
