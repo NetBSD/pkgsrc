@@ -12,7 +12,7 @@ Otherwise, run this command as root:
  Getting help
  ============
 
-You've installed an automated and customized qmail package. If
+You've installed an automated and customized notqmail package. If
 you're having trouble with it, ask the package's maintainer:
 
 <URL:mailto:schmonz-pkgsrc-qmail@schmonz.com>
@@ -29,7 +29,7 @@ mention:
 
 * that you installed @PKGNAME@ from pkgsrc,
 * the output of "@PKG_INFO@ -B @PKGNAME@ | @GREP@ ^QMAIL", and
-* how you're running (or trying to run) the qmail daemons.
+* how you're running (or trying to run) the notqmail daemons.
 
 If you can first reproduce your problem on a manual LWQ-style
 installation, your request for help is likely to be better received.
