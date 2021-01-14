@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2021/01/13 09:38:02 nia Exp $
+# $NetBSD: Makefile,v 1.64 2021/01/14 09:38:51 nia Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg3/}
-PKGREVISION=	5
+PKGREVISION=	6
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ffmpeg.org/
 COMMENT=	Decoding, encoding and streaming software (v3.x)
@@ -53,7 +53,6 @@ CONFIGURE_ARGS+=	--disable-asm
 .  elif !empty(CC_VERSION:Mgcc-[456].*)
 CFLAGS+=		-mstackrealign -mpreferred-stack-boundary=4
 .  endif
-NOT_PAX_MPROTECT_SAFE+=	bin/ffmpeg3
 .endif
 
 # configure script uses uname -m to detect arch, as opposed to uname -p in
