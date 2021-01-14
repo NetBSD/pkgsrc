@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2019/11/03 09:14:19 rillig Exp $
+# $NetBSD: builtin.mk,v 1.17 2021/01/14 17:40:30 wiz Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -41,7 +41,7 @@ MAKEVARS+=		BUILTIN_PKG.xcursor
 ### Determine whether we should use the built-in implementation if it
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
-.if defined(USE_BUILTIN.Xfixes) && !empty(USE_BUILTIN.Xfixes:M[nN][oO])
+.if defined(USE_BUILTIN.libXfixes) && !empty(USE_BUILTIN.libXfixes:M[nN][oO])
 USE_BUILTIN.xcursor=	no
 .endif
 .if defined(USE_BUILTIN.Xrender) && !empty(USE_BUILTIN.Xrender:M[nN][oO])
@@ -85,7 +85,7 @@ CHECK_BUILTIN.xcursor?=	no
 BUILDLINK_API_DEPENDS.xcursor+=	xcursor>=1.1.1
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .    for _mkfile_ in buildlink3.mk builtin.mk
-.      sinclude "../../x11/Xfixes/${_mkfile_}"
+.      sinclude "../../x11/libXfixes/${_mkfile_}"
 .    endfor
 .  endif
 
