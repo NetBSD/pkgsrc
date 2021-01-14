@@ -1,0 +1,3 @@
+A terminal interface for the StackExchange network written in Rust.
+One thing that differentiates it from similar tools (how2 and howdoi) is that it
+can simultaneously search any number of sites in the StackExchange network.
