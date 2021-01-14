@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/12/07 11:29:28 pin Exp $
+# $NetBSD: Makefile,v 1.12 2021/01/14 10:04:14 jperkin Exp $
 
 DISTNAME=	libqtxdg-3.6.0
 CATEGORIES=	x11
@@ -26,6 +26,10 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	src/qtxdg/xdgdirs.cpp
 SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic-functions
+BUILDLINK_TRANSFORM.SunOS+=	rm:-fuse-linker-plugin
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
