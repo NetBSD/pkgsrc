@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/14 15:08:16 pin Exp $
+bin/so
