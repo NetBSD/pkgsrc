@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.385 2021/01/14 18:17:18 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.386 2021/01/14 18:20:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -472,3 +472,10 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed x11/Xfixes successor x11/libXfixes [wiz 2021-01-14]
 	Removed x11/fixesproto4 successor x11/xorgproto [wiz 2021-01-14]
 	Updated textproc/xapian to 1.4.18 [schmonz 2021-01-14]
+	Updated textproc/csharp-xapian to 1.4.18 [schmonz 2021-01-14]
+	Updated textproc/lua-xapian to 1.4.18 [schmonz 2021-01-14]
+	Updated textproc/php-xapian to 1.4.18 [schmonz 2021-01-14]
+	Updated textproc/py-xapian to 1.4.18 [schmonz 2021-01-14]
+	Updated textproc/p5-Xapian to 1.4.18 [schmonz 2021-01-14]
+	Updated textproc/ruby-xapian to 1.4.18 [schmonz 2021-01-14]
+	Updated textproc/tcl-xapian to 1.4.18 [schmonz 2021-01-14]
