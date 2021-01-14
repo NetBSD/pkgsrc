@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2020/11/05 09:09:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2021/01/14 14:46:16 taca Exp $
 
-DISTNAME=	libxml-ruby-3.2.0
+DISTNAME=	libxml-ruby-3.2.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:C/ruby-//}
-PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
