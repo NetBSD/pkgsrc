@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/11/03 05:05:12 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/01/14 14:36:28 taca Exp $
 
-SHA1 (asciidoctor-2.0.11.gem) = 9595b4ba5cd59b18ac514e77f4263885a004fea1
-RMD160 (asciidoctor-2.0.11.gem) = 76ff18eea8505b50a950c2ed2f01c69732fb2c91
-SHA512 (asciidoctor-2.0.11.gem) = 4c44fe1c2e3c86c4a29684bb71ce7ba93644dd0482e7375d73bc51a17b8b04a4a32eff01862046a7bad845840ecc0c6d4bf9036d6cf0d51d9a2245862c65acd1
-Size (asciidoctor-2.0.11.gem) = 273408 bytes
+SHA1 (asciidoctor-2.0.12.gem) = be44111f874ff1ccbcf6c18db7130359148b5ec5
+RMD160 (asciidoctor-2.0.12.gem) = 6965832f43f3b500d59e17104bde0f64122faeb0
+SHA512 (asciidoctor-2.0.12.gem) = a927d052e4a2934524d8222700e83fbc746fa2b4880a810e39a579c1dff02054c83284a1c9e0af176709c0ab129677fcfcaa14c038ec124fb394852f38294db5
+Size (asciidoctor-2.0.12.gem) = 272896 bytes
