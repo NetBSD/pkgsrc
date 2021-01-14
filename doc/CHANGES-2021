@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.377 2021/01/14 15:06:09 taca Exp $
+$NetBSD: CHANGES-2021,v 1.378 2021/01/14 15:09:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -464,3 +464,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-redcarpet to 3.5.1 [taca 2021-01-14]
 	Updated textproc/ruby-review to 5.0.0 [taca 2021-01-14]
 	Updated textproc/ruby-yard to 0.9.26 [taca 2021-01-14]
+	Added www/so version 0.4.3 [pin 2021-01-14]
