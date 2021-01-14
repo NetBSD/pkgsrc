@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/03/24 16:58:52 taca Exp $
+# $NetBSD: Makefile,v 1.8 2021/01/14 14:49:30 taca Exp $
 
-DISTNAME=	plist-3.5.0
+DISTNAME=	plist-3.6.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
