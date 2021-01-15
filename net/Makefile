@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1373 2021/01/15 00:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.1374 2021/01/15 23:27:25 triaxx Exp $
 #
 
 COMMENT=	Networking tools
@@ -131,6 +131,7 @@ SUBDIR+=	edonkey2k
 SUBDIR+=	enet
 SUBDIR+=	entropy
 SUBDIR+=	erlang-esip
+SUBDIR+=	erlang-idna
 SUBDIR+=	erlang-stun
 SUBDIR+=	erlang-xmpp
 SUBDIR+=	ether2dns
