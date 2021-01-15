@@ -1,0 +1,18 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/01/15 00:37:17 wiz Exp $
+
+Define BOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT
+
+Upstream Issue #8185, Pull Request #8192, commit 34942a35112438a91ef25ffa5f0c6c18f1999303
+
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -172,6 +172,9 @@ add_definitions(-DBOOST_COROUTINES_NO_DEPRECATION_WARNING)
+ 
+ add_definitions(-DBOOST_FILESYSTEM_NO_DEPRECATED)
+ 
++# Required for Boost v1.74+
++add_definitions(-DBOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT)
++
+ link_directories(${Boost_LIBRARY_DIRS})
+ include_directories(${Boost_INCLUDE_DIRS})
+ 
