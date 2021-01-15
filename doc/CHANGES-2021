@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.392 2021/01/15 10:02:53 adam Exp $
+$NetBSD: CHANGES-2021,v 1.393 2021/01/15 10:59:32 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -486,3 +486,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/nanogrep to 2.1.0 [pin 2021-01-15]
 	Updated net/py-zeroconf to 0.28.8 [adam 2021-01-15]
 	Updated devel/py-zope.testing to 4.9 [adam 2021-01-15]
+	Updated pkgtools/pkg_rolling-replace to 0.24.10 [tnn 2021-01-15]
