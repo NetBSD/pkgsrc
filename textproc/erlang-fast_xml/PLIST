@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/01/03 17:48:52 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/01/15 23:51:26 triaxx Exp $
 lib/erlang/lib/fast_xml
 lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fast_xml.app
 lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fast_xml.beam
@@ -9,6 +9,7 @@ lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxml_stream.beam
 lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxml_sup.beam
 lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxmlrpc.beam
 lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxmlrpc_codec.beam
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxmlrpc_codec_external.beam
 lib/erlang/lib/fast_xml-${PKGVERSION}/include/fxml.hrl
 lib/erlang/lib/fast_xml-${PKGVERSION}/include/fxml_gen.hrl
 lib/erlang/lib/fast_xml-${PKGVERSION}/priv/lib/.keepme
