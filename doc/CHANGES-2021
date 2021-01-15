@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.395 2021/01/15 12:35:53 adam Exp $
+$NetBSD: CHANGES-2021,v 1.396 2021/01/15 13:02:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -491,3 +491,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/rabbitmq to 3.8.9 [adam 2021-01-15]
 	Updated devel/py-mako to 1.1.4 [adam 2021-01-15]
 	Updated multimedia/py-m3u8 to 0.8.0 [adam 2021-01-15]
+	Updated databases/py-pypika to 0.47.3 [adam 2021-01-15]
+	Updated www/py-h11 to 0.12.0 [adam 2021-01-15]
