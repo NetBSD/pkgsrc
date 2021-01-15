@@ -1,20 +1,21 @@
-$NetBSD: patch-configure,v 1.1 2020/05/14 19:04:51 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2021/01/15 14:33:52 mef Exp $
 
 Let's not force C++20 when the libxml++ dependency can't deal with it.
 
---- configure.orig	2018-10-15 11:35:17.000000000 +0000
-+++ configure
-@@ -18472,14 +18472,14 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
+--- configure.orig	2021-01-15 23:14:58.236623702 +0900
++++ configure	2021-01-15 23:22:01.601329062 +0900
+@@ -19482,15 +19482,15 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
  ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
  ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++20" >&5
--$as_echo_n "checking whether C++ compiler accepts -std=c++20... " >&6; }
-+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++14" >&5
-+$as_echo_n "checking whether C++ compiler accepts -std=c++14... " >&6; }
- if ${ax_cv_check_cxxflags___std_cpp20+:} false; then :
-   $as_echo_n "(cached) " >&6
- else
+-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++20" >&5
+-printf %s "checking whether C++ compiler accepts -std=c++20... " >&6; }
++{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++14" >&5
++printf %s "checking whether C++ compiler accepts -std=c++14... " >&6; }
+ if test ${ax_cv_check_cxxflags___std_cpp20+y}
+ then :
+   printf %s "(cached) " >&6
+ else $as_nop
  
    ax_check_save_flags=$CXXFLAGS
 -  CXXFLAGS="$CXXFLAGS  -std=c++20"
@@ -22,26 +23,27 @@ Let's not force C++20 when the libxml++ dependency can't deal with it.
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18502,7 +18502,7 @@ fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ax_cv_check_cxxflags___std_cpp20" >&5
- $as_echo "$ax_cv_check_cxxflags___std_cpp20" >&6; }
- if test x"$ax_cv_check_cxxflags___std_cpp20" = xyes; then :
+@@ -19515,7 +19515,7 @@ fi
+ printf "%s\n" "$ax_cv_check_cxxflags___std_cpp20" >&6; }
+ if test x"$ax_cv_check_cxxflags___std_cpp20" = xyes
+ then :
 -  CXXFLAGS="$CXXFLAGS -std=c++20"
 +  CXXFLAGS="$CXXFLAGS -std=c++14"
- else
+ else $as_nop
  
-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++2a" >&5
-@@ -18538,14 +18538,14 @@ if test x"$ax_cv_check_cxxflags___std_cp
+  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++2a" >&5
+@@ -19554,15 +19554,15 @@ then :
    CXXFLAGS="$CXXFLAGS -std=c++2a"
- else
+ else $as_nop
  
--  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++17" >&5
--$as_echo_n "checking whether C++ compiler accepts -std=c++17... " >&6; }
-+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++14" >&5
-+$as_echo_n "checking whether C++ compiler accepts -std=c++14... " >&6; }
- if ${ax_cv_check_cxxflags___std_cpp17+:} false; then :
-   $as_echo_n "(cached) " >&6
- else
+-  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++17" >&5
+-printf %s "checking whether C++ compiler accepts -std=c++17... " >&6; }
++  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++14" >&5
++printf %s "checking whether C++ compiler accepts -std=c++14... " >&6; }
+ if test ${ax_cv_check_cxxflags___std_cpp17+y}
+ then :
+   printf %s "(cached) " >&6
+ else $as_nop
  
    ax_check_save_flags=$CXXFLAGS
 -  CXXFLAGS="$CXXFLAGS  -std=c++17"
@@ -49,34 +51,21 @@ Let's not force C++20 when the libxml++ dependency can't deal with it.
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -18568,17 +18568,17 @@ fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ax_cv_check_cxxflags___std_cpp17" >&5
- $as_echo "$ax_cv_check_cxxflags___std_cpp17" >&6; }
- if test x"$ax_cv_check_cxxflags___std_cpp17" = xyes; then :
+@@ -19587,7 +19587,7 @@ fi
+ printf "%s\n" "$ax_cv_check_cxxflags___std_cpp17" >&6; }
+ if test x"$ax_cv_check_cxxflags___std_cpp17" = xyes
+ then :
 -  CXXFLAGS="$CXXFLAGS -std=c++17"
 +  CXXFLAGS="$CXXFLAGS -std=c++14"
- else
+ else $as_nop
  
--   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++1z" >&5
--$as_echo_n "checking whether C++ compiler accepts -std=c++1z... " >&6; }
-+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++14" >&5
-+$as_echo_n "checking whether C++ compiler accepts -std=c++14... " >&6; }
- if ${ax_cv_check_cxxflags___std_cpp1z+:} false; then :
-   $as_echo_n "(cached) " >&6
- else
- 
-   ax_check_save_flags=$CXXFLAGS
--  CXXFLAGS="$CXXFLAGS  -std=c++1z"
-+  CXXFLAGS="$CXXFLAGS  -std=c++14"
-   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- 
-@@ -18601,7 +18601,7 @@ fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ax_cv_check_cxxflags___std_cpp1z" >&5
- $as_echo "$ax_cv_check_cxxflags___std_cpp1z" >&6; }
- if test x"$ax_cv_check_cxxflags___std_cpp1z" = xyes; then :
+    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++1z" >&5
+@@ -19623,7 +19623,7 @@ fi
+ printf "%s\n" "$ax_cv_check_cxxflags___std_cpp1z" >&6; }
+ if test x"$ax_cv_check_cxxflags___std_cpp1z" = xyes
+ then :
 -  CXXFLAGS="$CXXFLAGS -std=c++1z"
 +  CXXFLAGS="$CXXFLAGS -std=c++14"
- else
+ else $as_nop
  
-     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++14" >&5
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts -std=c++14" >&5
