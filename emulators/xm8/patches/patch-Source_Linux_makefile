@@ -1,0 +1,36 @@
+$NetBSD: patch-Source_Linux_makefile,v 1.1 2021/01/15 11:40:13 nia Exp $
+
+- Honor CXX/CXXFLAGS/LDFLAGS.
+- Do not strip as part of the link process.
+  Let pkgsrc take care of it.
+
+--- Source/Linux/makefile.orig	2015-07-23 04:28:24.000000000 +0000
++++ Source/Linux/makefile
+@@ -12,8 +12,6 @@
+ # tool chain
+ #
+ 
+-CXX = g++
+-
+ STRIP = strip
+ 
+ #
+@@ -28,7 +26,7 @@ SDL_LDFLAGS := $(shell sdl2-config --lib
+ # compile options
+ #
+ 
+-CXXFLAGS = -DSDL -D_PC8801MA -c -O2 -Wall
++CXXFLAGS += -DSDL -D_PC8801MA -c -Wall
+ 
+ #
+ # include directories
+@@ -100,8 +98,7 @@ OBJS = $(SRCS:%.cpp=%.o)
+ all: $(TARGET)
+ 
+ $(TARGET): $(OBJS)
+-	$(CXX) -o $(TARGET) $(OBJS) $(SDL_LDFLAGS)
+-	$(STRIP) $(TARGET) 
++	$(CXX) $(LDFLAGS) -o $(TARGET) $(OBJS) $(SDL_LDFLAGS)
+ 
+ #
+ # make clean:
