@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/01/15 15:37:59 mef Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/15 15:40:17 mef Exp $
 
 DISTNAME=	mod_auth_ofba-0.6
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
@@ -27,7 +27,7 @@ INSTALLATION_DIRS+=	sbin ${DOC_DIR}
 # ofba_session is not build by just make
 post-build:
 	cd ${WRKSRC} && ${GMAKE}
-	
+
 post-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} ofba_session ${DESTDIR}${PREFIX}/sbin
 	cd ${WRKSRC} && ${INSTALL_DATA} README ${DESTDIR}${PREFIX}/${DOC_DIR}/
