@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/01/01 13:49:56 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/15 08:52:39 pin Exp $
 
-DISTNAME=	nanogrep-1.2.1
+DISTNAME=	nanogrep-2.1.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Uniminin/}
 
