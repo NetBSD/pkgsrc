@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1 2019/09/07 00:36:34 tsutsui Exp $
+$NetBSD: distinfo,v 1.2 2021/01/15 11:40:13 nia Exp $
 
 SHA1 (xm8_170.zip) = 2992590d22f20007fcc5c739be071e39eef5e342
 RMD160 (xm8_170.zip) = 0860b40bdb74bb53ad84b600edaa58b1c994d391
 SHA512 (xm8_170.zip) = c1e49aefec3c4d08cc21f284960d63af2c126883bfc0119d7cf6babe5e14405fae91ea1123eabaaeb41bce8f6ec2e80257b7db8645ce762487ce5ebc94d0d65b
 Size (xm8_170.zip) = 6186595 bytes
+SHA1 (patch-Source_Linux_makefile) = 201f8caaa618ec4bfd3345798d973353a1e7e16d
 SHA1 (patch-Source_UI_app.cpp) = ca4de2687454c483a153a83d03c5c4b1f1d9b7a7
 SHA1 (patch-Source_UI_emu.cpp) = 9c7c8357ebdaa41a317319d46e24fbcabe283418
 SHA1 (patch-Source_UI_emu__sdl.cpp) = 2fee35253b04ef95375d91258faffdf92386ebba
