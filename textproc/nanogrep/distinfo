@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/01/01 13:49:56 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/01/15 08:52:39 pin Exp $
 
 SHA1 (atty-0.2.14.crate) = 9b4bfe6daebdd3d13a8a605bf44f64d4e831e804
 RMD160 (atty-0.2.14.crate) = 63c38cbe0fc07a4533253427a164612b456094cf
@@ -16,14 +16,14 @@ SHA1 (lazy_static-1.4.0.crate) = 3e8852a6967dc257753fe75a13112a04bc03dfc0
 RMD160 (lazy_static-1.4.0.crate) = 6c74661c140113ff3b1d660bba095259398bbb55
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
 Size (lazy_static-1.4.0.crate) = 10443 bytes
-SHA1 (libc-0.2.81.crate) = 8d6f5d89abfb190dd125cb1b5115a3a11b56fb69
-RMD160 (libc-0.2.81.crate) = fb89b9a4c7c2ae750bd27a473942f20602f5e09d
-SHA512 (libc-0.2.81.crate) = 8e121e0dcbd8218e02c2c6536ef6398cd002a92406d433c39bf84576e9b881c5b8a66fee826da6a6189f44b825f3a9d959075eeb0501d7f604bf9cc1a8b8d437
-Size (libc-0.2.81.crate) = 513105 bytes
-SHA1 (nanogrep-1.2.1.tar.gz) = f3084e7a54fbaf937a8b00043716a6c51382d418
-RMD160 (nanogrep-1.2.1.tar.gz) = ba1685fe16123b12425b32026d61bafffeb532cc
-SHA512 (nanogrep-1.2.1.tar.gz) = e3d8974eb251a5e22b715f98b9e3f5355edee62813f78aed3d8bdb01011032064e9e1a62a938fdf3d98fccb6080c0d04e63df2d9d142aef278d19bfd06ff295c
-Size (nanogrep-1.2.1.tar.gz) = 56608 bytes
+SHA1 (libc-0.2.82.crate) = 7ef6df07f7d9e7fea2205cb3fc2697c0b8de2328
+RMD160 (libc-0.2.82.crate) = cf5217369a209d91844af3c7fa1674bb115de994
+SHA512 (libc-0.2.82.crate) = 25eaf390acb409d329b9e32008078824eed4ca3a10af851f5097b653793db316419a395910c23dff293dfe2bac051a51871281a6bf2487937121b403286630c1
+Size (libc-0.2.82.crate) = 515967 bytes
+SHA1 (nanogrep-2.1.0.tar.gz) = 5451d64ed75996aa95c4a4a54f1fbce75b1d6e75
+RMD160 (nanogrep-2.1.0.tar.gz) = d63162016677c8a29d1437b6053407cee541622e
+SHA512 (nanogrep-2.1.0.tar.gz) = d49c0fd1d5e75e8cab8494d13ef19d129f05ad219f4338f97575bd180d9c75a0d7d594b84fb0e7e2a5042062e65caa07b92eea1429740138b82a76a46ee6beae
+Size (nanogrep-2.1.0.tar.gz) = 57236 bytes
 SHA1 (winapi-0.3.9.crate) = 25c427fe8e3df07658e2552d2585d2f167ba3125
 RMD160 (winapi-0.3.9.crate) = 37e72db32b20588d61821e9bc5e72fb31b1ed089
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
