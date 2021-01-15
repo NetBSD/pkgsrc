@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2020/08/18 17:57:48 leot Exp $
+# $NetBSD: Makefile,v 1.5 2021/01/15 11:40:13 nia Exp $
 
 VERSION=		1.70
 DISTNAME=		xm8_${VERSION:S/.//}
 PKGNAME=		xm8-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 #PKGREVISION=		
 CATEGORIES=		emulators
 MASTER_SITES=		http://retropc.net/pi/
@@ -21,13 +21,13 @@ USE_TOOLS+=		gmake unzip
 USE_LANGUAGES=		c c++03
 NO_CONFIGURE=		YES
 
+BUILD_DIRS=		Source/Linux
+MAKE_FILE=		makefile
+
 INSTALLATION_DIRS+=	bin share/doc/xm8
 
 post-extract:
 	(cd ${WRKSRC}/Source && ${UNZIP_CMD} Source.zip)
-
-do-build:
-	(cd ${WRKSRC}/Source/Linux && ${GMAKE} -f makefile)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Source/Linux/xm8 \
