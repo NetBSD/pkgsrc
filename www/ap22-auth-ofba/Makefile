@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/25 05:55:14 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2021/01/15 15:37:59 mef Exp $
 
 DISTNAME=	mod_auth_ofba-0.6
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
@@ -11,7 +11,7 @@ COMMENT=	MS-OFBA authentication
 LICENSE=	original-bsd
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 USE_APR=		yes
 GNU_CONFIGURE_APXS2=	no
@@ -24,8 +24,12 @@ MODULE_EXT=		la
 DOC_DIR=		share/doc/mod_auth_ofba
 INSTALLATION_DIRS+=	sbin ${DOC_DIR}
 
-do-install:
-	cd ${WRKSRC} && ${MAKE} install DESTDIR=${DESTDIR}
+# ofba_session is not build by just make
+post-build:
+	cd ${WRKSRC} && ${GMAKE}
+	
+post-install:
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} ofba_session ${DESTDIR}${PREFIX}/sbin
 	cd ${WRKSRC} && ${INSTALL_DATA} README ${DESTDIR}${PREFIX}/${DOC_DIR}/
 
 .include "../../mk/apache.module.mk"
