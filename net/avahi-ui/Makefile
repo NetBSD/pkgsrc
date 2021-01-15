@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/08 14:08:35 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/15 12:24:17 nia Exp $
 
 .include "../../net/avahi/Makefile.common"
 
@@ -24,6 +24,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/avahi-ui-gtk3.pc \
 	    ${DESTDIR}${PREFIX}/lib/pkgconfig
 
+.include "../../net/avahi/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
