@@ -327,6 +327,12 @@ http2			Add support for HTTP/2.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
 ibus			Enable Intelligent Input Bus support.
+icinga2-checker		Build the checker module
+icinga2-compat		Build the compat module
+icinga2-livestatus	Build the Livestatus module
+icinga2-notification	Build the notification module
+icinga2-perfdata	Build the perfdata module
+icingadb		Build the IcingaDB module
 iconv			Use iconv for character encoding conversion.
 icu			Enable icu support.
 id3			Enable id3 tagging support.
