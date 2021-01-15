@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.393 2021/01/15 10:59:32 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.394 2021/01/15 12:13:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -487,3 +487,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-zeroconf to 0.28.8 [adam 2021-01-15]
 	Updated devel/py-zope.testing to 4.9 [adam 2021-01-15]
 	Updated pkgtools/pkg_rolling-replace to 0.24.10 [tnn 2021-01-15]
+	Updated lang/elixir to 1.11.3 [adam 2021-01-15]
+	Updated net/rabbitmq to 3.8.9 [adam 2021-01-15]
