@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1372 2021/01/13 09:08:06 nia Exp $
+# $NetBSD: Makefile,v 1.1373 2021/01/15 00:38:58 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -256,6 +256,7 @@ SUBDIR+=	httptunnel
 SUBDIR+=	hub
 SUBDIR+=	iana-etc
 SUBDIR+=	icinga-base
+SUBDIR+=	icinga2
 SUBDIR+=	icsi-finger
 SUBDIR+=	iftop
 SUBDIR+=	inadyn
