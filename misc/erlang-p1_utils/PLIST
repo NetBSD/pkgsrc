@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/07/07 09:30:13 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/01/15 23:31:58 triaxx Exp $
 lib/erlang/lib/p1_utils
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_edoc_layout.beam
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_file_queue.beam
@@ -6,8 +6,11 @@ lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_fsm.beam
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_http.beam
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_nif_utils.beam
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_options.beam
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_prof.beam
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_queue.beam
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_rand.beam
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_server.beam
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_shaper.beam
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_time_compat.beam
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_utils.app
 lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_utils.beam
