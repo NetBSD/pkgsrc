@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.402 2021/01/15 23:38:43 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.403 2021/01/15 23:40:13 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/erlang-p1_utils to 1.0.21 [triaxx 2021-01-15]
 	Updated converters/erlang-iconv to 1.0.12 [triaxx 2021-01-15]
 	Updated devel/erlang-cache_tab to 1.0.26 [triaxx 2021-01-15]
+	Updated devel/erlang-ezlib to 1.0.9 [triaxx 2021-01-15]
