@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/03/23 18:17:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/01/15 23:41:34 triaxx Exp $
 
-SHA1 (epam-1.0.7.tar.gz) = 7141b2cc766d355db58b4c8838b4fa6ef7c977d3
-RMD160 (epam-1.0.7.tar.gz) = a1feecb35f540f5a75058cd7235626232c4f2975
-SHA512 (epam-1.0.7.tar.gz) = ddfcb6a0ef955e6ef0fba2c98e25fbc8532c829b80c4150d0545bb9b5114773184af0adba49921cf6e2363a0224dedccd7bf81b5da292dda74f8966a8e73e1b2
-Size (epam-1.0.7.tar.gz) = 47506 bytes
+SHA1 (epam-1.0.10.tar.gz) = 66559214428fe867122239061a33d56536771f05
+RMD160 (epam-1.0.10.tar.gz) = 798ff85b725ca0dfe33984c7c39e57968ebd3abd
+SHA512 (epam-1.0.10.tar.gz) = a659011a9ee8fdf59bd4950c78dcd0f001bf3c4512dfae156d6d66908b918968c80f836bc9801c98f0c3bb90d7bb2df6a36f2066086d623c74c96647d3637054
+Size (epam-1.0.10.tar.gz) = 47727 bytes
