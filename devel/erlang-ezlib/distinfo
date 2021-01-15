@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/03/23 18:09:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/01/15 23:40:00 triaxx Exp $
 
-SHA1 (ezlib-1.0.7.tar.gz) = 7d5c027b6ff1423548bf1fd740510d7ed8a7d6b4
-RMD160 (ezlib-1.0.7.tar.gz) = dcdd0a00f7bdc2b5051b5365e86baa322508c75d
-SHA512 (ezlib-1.0.7.tar.gz) = 25fdc429c8d1216756b9c048058c711176a3292670dcd9ee156038362b49b7d5f4be325a3f67da5f24e462f188429d2247e42eca12da806748298a9966494382
-Size (ezlib-1.0.7.tar.gz) = 49143 bytes
+SHA1 (ezlib-1.0.9.tar.gz) = 358d951b6558ba6bea8eca4a87314b2d467fc00f
+RMD160 (ezlib-1.0.9.tar.gz) = 6764e6c4b22b6dc53719ae5cc852f1d861e92d37
+SHA512 (ezlib-1.0.9.tar.gz) = b1358f4c86f0cdffce544c782e56b332378e991cebc945f0c6d75f25fdae5f011f154ec731c73eadb533087cc4a673c596523aa2300761f1033eb48af3f0e203
+Size (ezlib-1.0.9.tar.gz) = 49395 bytes
