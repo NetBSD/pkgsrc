@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.41 2021/01/09 19:12:46 rhialto Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.42 2021/01/15 10:56:52 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -92,6 +92,7 @@ if [ -z "$PKGSRCDIR" ] ; then
 fi
 test -z "$PKGSRCDIR" && echo >&2 "Please set PKGSRCDIR" && exit 1
 test -z "$PKG_CHK" && PKG_CHK="@PKG_CHK@"
+test -z "$PKG_ADMIN" && PKG_ADMIN="@PKG_ADMIN_CMD@"
 test -z "$PKG_INFO" && PKG_INFO="@PKG_INFO_CMD@"
 
 export PKGSRCDIR
@@ -159,7 +160,7 @@ check_packages_mismatched()
         for word in $line; do
             if [ "$(echo $word | egrep '^[^/]+-[0-9][^-/]*$')" ]; then
 		if [ -z "$opt_F" ]; then
-		    pkg_admin set mismatch=YES "$word" 1>&2
+		    ${PKG_ADMIN} set mismatch=YES "$word" 1>&2
 		fi
                 echo $word | sed 's/-[0-9][^-]*$//'
                 break  #done with this line
