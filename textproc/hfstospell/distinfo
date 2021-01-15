@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/10/15 19:22:23 bsiegert Exp $
+$NetBSD: distinfo,v 1.4 2021/01/15 14:33:52 mef Exp $
 
 SHA1 (hfstospell-0.5.2.tar.gz) = 658813a5a8fc6eff8e9c143c104dec725dc5e891
 RMD160 (hfstospell-0.5.2.tar.gz) = eb1ffe240f9c11aa09453d2dff48e316a087d208
 SHA512 (hfstospell-0.5.2.tar.gz) = 307aff3aec91ac6ffed3ebabdc2baa1a6e913431f57a80a0d0254be57fbd72e28d7592c35e0d72e5979f7e0b4c585f11b8eb91183b0877f9670a9cd5206c0140
 Size (hfstospell-0.5.2.tar.gz) = 152115 bytes
-SHA1 (patch-configure) = 5424cfe46d254db820da8cc1a05e443125623572
+SHA1 (patch-configure) = a6a4aa1180ba97808014bfff2760375b5f077c89
