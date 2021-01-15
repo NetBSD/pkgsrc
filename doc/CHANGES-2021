@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.405 2021/01/15 23:44:28 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.406 2021/01/15 23:47:16 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -502,3 +502,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/erlang-ezlib to 1.0.9 [triaxx 2021-01-15]
 	Updated security/erlang-epam to 1.0.10 [triaxx 2021-01-15]
 	Updated security/erlang-fast_tls to 1.1.10 [triaxx 2021-01-15]
+	Updated security/erlang-jose to 1.11.1 [triaxx 2021-01-15]
