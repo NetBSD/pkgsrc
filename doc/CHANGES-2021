@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.399 2021/01/15 23:28:38 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.400 2021/01/15 23:32:16 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -496,3 +496,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/erlang to 23.2.2 [nia 2021-01-15]
 	Added mail/bincimap version 1.2.13 [schmonz 2021-01-15]
 	Added net/erlang-idna version 6.1.1 [triaxx 2021-01-15]
+	Updated misc/erlang-p1_utils to 1.0.21 [triaxx 2021-01-15]
