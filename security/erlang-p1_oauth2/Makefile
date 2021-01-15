@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/05/17 13:30:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2021/01/15 23:49:10 triaxx Exp $
 
-DISTNAME=	p1_oauth2-0.6.3
+DISTNAME=	p1_oauth2-0.6.8
 PKGNAME=	erlang-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
