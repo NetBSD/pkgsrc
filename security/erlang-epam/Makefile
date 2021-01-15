@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/03/23 18:17:27 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/15 23:41:34 triaxx Exp $
 
-DISTNAME=	epam-1.0.7
+DISTNAME=	epam-1.0.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	epam
