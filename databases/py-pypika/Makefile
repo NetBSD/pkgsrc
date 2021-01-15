@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/12/06 10:47:40 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/01/15 12:57:46 adam Exp $
 
-DISTNAME=	pypika-0.44.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	PyPika-0.47.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyPika/}
 
@@ -9,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kayak/pypika
 COMMENT=	SQL query builder API for Python
 LICENSE=	apache-2.0
-
-WRKSRC=		${WRKDIR}/PyPika-${PKGVERSION_NOREV}
-EGG_NAME=	PyPika-${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	# none
 
