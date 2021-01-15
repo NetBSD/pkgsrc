@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.394 2021/01/15 12:13:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.395 2021/01/15 12:35:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -489,3 +489,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated pkgtools/pkg_rolling-replace to 0.24.10 [tnn 2021-01-15]
 	Updated lang/elixir to 1.11.3 [adam 2021-01-15]
 	Updated net/rabbitmq to 3.8.9 [adam 2021-01-15]
+	Updated devel/py-mako to 1.1.4 [adam 2021-01-15]
+	Updated multimedia/py-m3u8 to 0.8.0 [adam 2021-01-15]
