@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2021/01/08 07:56:23 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2021/01/15 08:51:10 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-0.2.3
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -51,7 +51,7 @@ CARGO_CRATE_DEPENDS+=	csv-1.1.5
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	custom_error-1.8.0
 CARGO_CRATE_DEPENDS+=	deflate-0.8.6
-CARGO_CRATE_DEPENDS+=	deser-hjson-0.1.6
+CARGO_CRATE_DEPENDS+=	deser-hjson-0.1.7
 CARGO_CRATE_DEPENDS+=	directories-2.0.2
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.5
 CARGO_CRATE_DEPENDS+=	either-1.6.1
