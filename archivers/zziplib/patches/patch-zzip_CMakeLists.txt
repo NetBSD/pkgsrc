@@ -1,10 +1,15 @@
-$NetBSD: patch-zzip_CMakeLists.txt,v 1.1 2021/01/12 21:06:20 otis Exp $
+$NetBSD: patch-zzip_CMakeLists.txt,v 1.2 2021/01/15 07:15:12 schmonz Exp $
 
 Use portable ln switches
 
 --- zzip/CMakeLists.txt.orig	2021-01-04 23:05:08.000000000 +0000
 +++ zzip/CMakeLists.txt
-@@ -294,13 +294,13 @@ if(ZZIP_COMPAT)
+@@ -290,17 +290,17 @@ if(ZZIP_COMPAT)
+         cd $DESTDIR/${libdir}
+         if [ -f ${lib}${libname}${librelease}.${libversion}${dll} ]; then
+           # Fix for APPLE where dylib goes in the end
+-          ln -s ${lib}${libname}${librelease}.${libversion}${dll} ${lib}${libname}${librelease}${dll}.${libversion}
++          ln -sf ${lib}${libname}${librelease}.${libversion}${dll} ${lib}${libname}${librelease}${dll}.${libversion}
          fi
          [ -f ${lib}${libname}${librelease}${dll}.${libversion} ] || exit 0
          echo -n .. Installing: `pwd`
@@ -22,7 +27,12 @@ Use portable ln switches
          \")")
    endif()
  endif()
-@@ -321,13 +321,13 @@ if(ZZIP_LIBTOOL)
+@@ -317,17 +317,17 @@ if(ZZIP_LIBTOOL)
+         cd $DESTDIR/${libdir}
+         if [ -f ${lib}${libname}${librelease}.${libversion}${dll} ]; then
+           # Fix for APPLE where dylib goes in the end
+-          ln -s ${lib}${libname}${librelease}.${libversion}${dll} ${lib}${libname}${librelease}${dll}.${libversion}
++          ln -sf ${lib}${libname}${librelease}.${libversion}${dll} ${lib}${libname}${librelease}${dll}.${libversion}
          fi
          [ -f ${lib}${libname}${librelease}${dll}.${libversion} ] || exit 0
          echo -n .. Installing: `pwd`
@@ -40,7 +50,12 @@ Use portable ln switches
          \")")
      if(ZZIPFSEEKO)
      get_target_property(libname libzzipfseeko OUTPUT_NAME)
-@@ -341,13 +341,13 @@ if(ZZIP_LIBTOOL)
+@@ -337,17 +337,17 @@ if(ZZIP_LIBTOOL)
+         cd $DESTDIR/${libdir}
+         if [ -f ${lib}${libname}${librelease}.${libversion}${dll} ]; then
+           # Fix for APPLE where dylib goes in the end
+-          ln -s ${lib}${libname}${librelease}.${libversion}${dll} ${lib}${libname}${librelease}${dll}.${libversion}
++          ln -sf ${lib}${libname}${librelease}.${libversion}${dll} ${lib}${libname}${librelease}${dll}.${libversion}
          fi
          [ -f ${lib}${libname}${librelease}${dll}.${libversion} ] || exit 0
          echo -n .. Installing: `pwd`
@@ -58,7 +73,12 @@ Use portable ln switches
          \")")
      endif(ZZIPFSEEKO)
      if(ZZIPMMAPPED)
-@@ -362,13 +362,13 @@ if(ZZIP_LIBTOOL)
+@@ -358,17 +358,17 @@ if(ZZIP_LIBTOOL)
+         cd $DESTDIR/${libdir}
+         if [ -f ${lib}${libname}${librelease}.${libversion}${dll} ]; then
+           # Fix for APPLE where dylib goes in the end
+-          ln -s ${lib}${libname}${librelease}.${libversion}${dll} ${lib}${libname}${librelease}${dll}.${libversion}
++          ln -sf ${lib}${libname}${librelease}.${libversion}${dll} ${lib}${libname}${librelease}${dll}.${libversion}
          fi
          [ -f ${lib}${libname}${librelease}${dll}.${libversion} ] || exit 0
          echo -n .. Installing: `pwd`
