@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.18 2020/11/19 11:49:17 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/01/15 12:10:33 adam Exp $
 
-SHA1 (elixir-1.11.2.tar.gz) = 8e845de34e930a10e4c2c41e3f99be4df730c605
-RMD160 (elixir-1.11.2.tar.gz) = 4e12b0db7e08d97ea2b346596de9c5317a91f03a
-SHA512 (elixir-1.11.2.tar.gz) = 472a531353d5f393b0223008ac95ae67b0dc6708143df59a4dd359fdb631329f8a8bded886f53be232e076d194e14a76325fab51a59ec2451706f4f35836bc70
-Size (elixir-1.11.2.tar.gz) = 2391833 bytes
+SHA1 (elixir-1.11.3.tar.gz) = c89ee0daff9391c4a0633303213cfaca9900117a
+RMD160 (elixir-1.11.3.tar.gz) = 26868b07e473727148c8fbe00108721ad24d0360
+SHA512 (elixir-1.11.3.tar.gz) = 4962bb9fcf5f4190a8da22a3e42df5b4e521d73771f6a067edb482b911b0f9fbd2883841d06d94ae4ad6b1db2f61f691e5de4c118c722a16f95830c67ce3e45b
+Size (elixir-1.11.3.tar.gz) = 2394406 bytes
 SHA1 (patch-Makefile) = 00a68538bae40effba33fc3bc5019fdbf38a91f3
-SHA1 (patch-lib_mix_lib_mix_tasks_deps.compile.ex) = 7c153d68f5b936e55b17a139c4a133b87c8d799a
