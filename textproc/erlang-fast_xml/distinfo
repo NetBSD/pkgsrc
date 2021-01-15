@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2018/07/20 09:04:35 fhajny Exp $
+$NetBSD: distinfo,v 1.14 2021/01/15 23:51:26 triaxx Exp $
 
-SHA1 (fast_xml-1.1.32.tar.gz) = 0233a130c75710a39633037e4bf7271838e5b5ff
-RMD160 (fast_xml-1.1.32.tar.gz) = cca9e986b7f2bedef645ab24170ec80fa83344fc
-SHA512 (fast_xml-1.1.32.tar.gz) = 4068dd83e7575f8d2fcc738d2475fcbe7c9ac46deed78594793a2f6aa0746fdb71a527cb9103e5921d1b91ada9efe0ae31bf3c7dacae97feb6b049279fc29a61
-Size (fast_xml-1.1.32.tar.gz) = 93486 bytes
+SHA1 (fast_xml-1.1.45.tar.gz) = 947cf5e74a09abb7e2edb636577442f8be8c4432
+RMD160 (fast_xml-1.1.45.tar.gz) = 0c353c533f4c38b62166c3bbb41a5763325fb6b4
+SHA512 (fast_xml-1.1.45.tar.gz) = a4c1b5ecbb80e0e2325ecede1ad426c09e35db35c16dfd6dfaef6ba7b6e9627879c6cc43a955d0bfe91abfced48717db07d28132b7c4dac8adca7af1e21c0734
+Size (fast_xml-1.1.45.tar.gz) = 107006 bytes
