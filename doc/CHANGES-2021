@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.398 2021/01/15 19:57:48 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.399 2021/01/15 23:28:38 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -495,3 +495,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-h11 to 0.12.0 [adam 2021-01-15]
 	Updated lang/erlang to 23.2.2 [nia 2021-01-15]
 	Added mail/bincimap version 1.2.13 [schmonz 2021-01-15]
+	Added net/erlang-idna version 6.1.1 [triaxx 2021-01-15]
