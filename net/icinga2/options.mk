@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2021/01/15 00:37:17 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2021/01/15 12:05:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.icinga2
 PKG_SUPPORTED_OPTIONS=	debug
 PKG_SUPPORTED_OPTIONS+=	mysql pgsql
-PKG_SUPPORTED_OPTIONS+=	icingadb icinga2-studio
+PKG_SUPPORTED_OPTIONS+=	icingadb
 PKG_SUPPORTED_OPTIONS+=	icinga2-checker icinga2-compat
 PKG_SUPPORTED_OPTIONS+=	icinga2-livestatus icinga2-notification icinga2-perfdata
 PKG_SUGGESTED_OPTIONS=	icinga2-checker icinga2-compat
@@ -45,7 +45,3 @@ PLIST.${option}=	yes
 CMAKE_ARGS+=		-DICINGA2_WITH_${option:tu}=OFF
 .  endif
 .endfor
-
-.if !empty(PKG_OPTIONS:Micinga2-studio)
-.include "../../x11/wxGTK30/buildlink3.mk"
-.endif
