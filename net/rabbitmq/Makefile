@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/12/04 20:45:35 nia Exp $
+# $NetBSD: Makefile,v 1.47 2021/01/15 12:13:11 adam Exp $
 
-DISTNAME=	rabbitmq-server-3.8.2
+DISTNAME=	rabbitmq-server-3.8.9
 PKGNAME=	${DISTNAME:S/-server//}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
 EXTRACT_SUFX=	.tar.xz
@@ -81,6 +80,8 @@ REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-plugins
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-queues
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-server
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-upgrade
+
+CHECK_PORTABILITY_SKIP+=	scripts/rabbitmq-server-ha.ocf
 
 # Too much effort to replace the shebang on generated files
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-diagnostics
