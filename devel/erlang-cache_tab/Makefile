@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2018/07/20 08:59:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.13 2021/01/15 23:38:27 triaxx Exp $
 
-DISTNAME=	cache_tab-1.0.14
+DISTNAME=	cache_tab-1.0.26
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/processone/cache_tab/
 COMMENT=	In-memory cache Erlang libraries
 LICENSE=	apache-2.0
 
-DEPENDS+=	erlang-p1_utils>=1.0.12:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.21:../../misc/erlang-p1_utils
 
 GITHUB_PROJECT=	cache_tab
 
