@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.563 2020/11/02 10:25:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.564 2021/01/15 19:57:27 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -17,6 +17,7 @@ SUBDIR+=	autorespond
 SUBDIR+=	avenger
 SUBDIR+=	balsa
 SUBDIR+=	bbmail
+SUBDIR+=	bincimap
 SUBDIR+=	bmf
 SUBDIR+=	bogofilter
 SUBDIR+=	bulk_mailer
