@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.396 2021/01/15 13:02:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.397 2021/01/15 13:40:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -493,3 +493,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/py-m3u8 to 0.8.0 [adam 2021-01-15]
 	Updated databases/py-pypika to 0.47.3 [adam 2021-01-15]
 	Updated www/py-h11 to 0.12.0 [adam 2021-01-15]
+	Updated lang/erlang to 23.2.2 [nia 2021-01-15]
