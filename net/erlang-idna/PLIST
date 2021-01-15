@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/15 23:20:36 triaxx Exp $
+lib/erlang/lib/idna-${PKGVERSION}/ebin/idna.app
+lib/erlang/lib/idna-${PKGVERSION}/ebin/idna.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_bidi.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_context.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_data.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_mapping.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_table.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/idna_ucs.beam
+lib/erlang/lib/idna-${PKGVERSION}/ebin/punycode.beam
