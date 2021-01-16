@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.428 2021/01/16 12:43:02 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.429 2021/01/16 12:45:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -546,3 +546,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/x16-emulator to 35nb4 [nia 2021-01-16]
 	Updated www/ruby-capybara to 3.34.0 [taca 2021-01-16]
 	Updated net/erlang-xmpp to 1.5.1 [triaxx 2021-01-16]
+	Updated www/ruby-em-websocket to 0.5.2 [taca 2021-01-16]
