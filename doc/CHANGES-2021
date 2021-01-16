@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.438 2021/01/16 13:16:17 taca Exp $
+$NetBSD: CHANGES-2021,v 1.439 2021/01/16 13:18:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -556,3 +556,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-pygments.rb to 2.0.0 [taca 2021-01-16]
 	Updated www/ruby-rack-contrib to 2.3.0 [taca 2021-01-16]
 	Updated www/ruby-unicorn to 5.8.0 [taca 2021-01-16]
+	Updated www/ruby-websocket to 1.2.9 [taca 2021-01-16]
