@@ -1,0 +1,5 @@
+mqtree is an Erlang NIF implementation of N-ary tree to keep MQTT topic filters
+for efficient matching.
+
+This library was written for ejabberd which still uses it. It was split off
+into its own project to follow Erlang/OTP guidelines.
