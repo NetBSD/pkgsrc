@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/05/17 16:05:52 taca Exp $
+$NetBSD: distinfo,v 1.15 2021/01/16 12:59:46 taca Exp $
 
-SHA1 (net-http-persistent-4.0.0.gem) = 0dca29e73cb4318e6687d8636623b629de4e7e49
-RMD160 (net-http-persistent-4.0.0.gem) = b42023e05f8a54d51108446ee394ad32f06b84f3
-SHA512 (net-http-persistent-4.0.0.gem) = eccc6cacfdd1dfb99bd0dcb7fe1c13cb1c21eae0104357156888bd0a5b2ee0b0d8ed5687860670c2dc54ccc1cfc7a090592bee160458427f44c255c1b99938d2
-Size (net-http-persistent-4.0.0.gem) = 30720 bytes
+SHA1 (net-http-persistent-4.0.1.gem) = 1dfd87bfc8645e2f63c88b510ff5cc092c745006
+RMD160 (net-http-persistent-4.0.1.gem) = 4dbf57ec07b7cf9a9fc4e6cfbe56320a42689c12
+SHA512 (net-http-persistent-4.0.1.gem) = d3c86c9c58affac8cde1513dd899527406c0baafd3a620b80011e3babf51a4bfd6fb2bd8998fd9c4696d49aad2d014bdf666b9626e06fe4413cb4010f94e5e91
+Size (net-http-persistent-4.0.1.gem) = 27136 bytes
