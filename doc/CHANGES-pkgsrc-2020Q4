@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.5 2021/01/16 21:06:07 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.6 2021/01/16 21:50:11 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -37,4 +37,10 @@ databases/py-ldap: NetBSD build fix
 
 Pullup ticket #6395 - requested by bouyer
 sysutils/xentools413: build fix
+
+Pullup ticket #6396 - requested by nia
+www/firefox78: security fix
+
+Pullup ticket #6397 - requested by nia
+www/firefox78-l10n: dependent update
 
