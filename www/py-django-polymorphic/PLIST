@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/06/19 11:55:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/16 09:27:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -58,9 +58,6 @@ ${PYSITELIB}/polymorphic/formsets/models.pyo
 ${PYSITELIB}/polymorphic/formsets/utils.py
 ${PYSITELIB}/polymorphic/formsets/utils.pyc
 ${PYSITELIB}/polymorphic/formsets/utils.pyo
-${PYSITELIB}/polymorphic/locale/en/LC_MESSAGES/django.po
-${PYSITELIB}/polymorphic/locale/es/LC_MESSAGES/django.po
-${PYSITELIB}/polymorphic/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/polymorphic/managers.py
 ${PYSITELIB}/polymorphic/managers.pyc
 ${PYSITELIB}/polymorphic/managers.pyo
@@ -92,30 +89,12 @@ ${PYSITELIB}/polymorphic/templatetags/polymorphic_admin_tags.pyo
 ${PYSITELIB}/polymorphic/templatetags/polymorphic_formset_tags.py
 ${PYSITELIB}/polymorphic/templatetags/polymorphic_formset_tags.pyc
 ${PYSITELIB}/polymorphic/templatetags/polymorphic_formset_tags.pyo
-${PYSITELIB}/polymorphic/tests/__init__.py
-${PYSITELIB}/polymorphic/tests/__init__.pyc
-${PYSITELIB}/polymorphic/tests/__init__.pyo
 ${PYSITELIB}/polymorphic/tests/migrations/0001_initial.py
 ${PYSITELIB}/polymorphic/tests/migrations/0001_initial.pyc
 ${PYSITELIB}/polymorphic/tests/migrations/0001_initial.pyo
 ${PYSITELIB}/polymorphic/tests/migrations/__init__.py
 ${PYSITELIB}/polymorphic/tests/migrations/__init__.pyc
 ${PYSITELIB}/polymorphic/tests/migrations/__init__.pyo
-${PYSITELIB}/polymorphic/tests/test_admin.py
-${PYSITELIB}/polymorphic/tests/test_admin.pyc
-${PYSITELIB}/polymorphic/tests/test_admin.pyo
-${PYSITELIB}/polymorphic/tests/test_multidb.py
-${PYSITELIB}/polymorphic/tests/test_multidb.pyc
-${PYSITELIB}/polymorphic/tests/test_multidb.pyo
-${PYSITELIB}/polymorphic/tests/test_orm.py
-${PYSITELIB}/polymorphic/tests/test_orm.pyc
-${PYSITELIB}/polymorphic/tests/test_orm.pyo
-${PYSITELIB}/polymorphic/tests/test_regression.py
-${PYSITELIB}/polymorphic/tests/test_regression.pyc
-${PYSITELIB}/polymorphic/tests/test_regression.pyo
-${PYSITELIB}/polymorphic/tests/test_utils.py
-${PYSITELIB}/polymorphic/tests/test_utils.pyc
-${PYSITELIB}/polymorphic/tests/test_utils.pyo
 ${PYSITELIB}/polymorphic/utils.py
 ${PYSITELIB}/polymorphic/utils.pyc
 ${PYSITELIB}/polymorphic/utils.pyo
