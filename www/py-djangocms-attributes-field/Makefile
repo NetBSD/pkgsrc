@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/02/19 09:52:38 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/01/16 09:26:26 adam Exp $
 
-DISTNAME=	djangocms-attributes-field-1.2.0
+DISTNAME=	djangocms-attributes-field-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-attributes-field/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/divio/djangocms-attributes-field
 COMMENT=	Implementation of JSONField for arbitrary HTML element attributes
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.4.5:../../www/py-django-cms
+DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.7:../../www/py-django-cms
 
 USE_LANGUAGES=	# none
 
