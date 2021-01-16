@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.12 2018/08/06 11:12:27 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2021/01/16 14:44:50 nia Exp $
 
-SHA1 (osg-3.4.1.tar.gz) = 6fc56846f5790d85dd8139aecb958701f4f4e630
-RMD160 (osg-3.4.1.tar.gz) = 299ab7131433e7f36f0da10eb102014bce26ec83
-SHA512 (osg-3.4.1.tar.gz) = 4a65625e208d24256b5564bbe9d6f557758b51fae0acf85d1f71968a237fec299088536830fc862d25e02039de9ea13176b298a68aaa644eac958acbe1f4e143
-Size (osg-3.4.1.tar.gz) = 5686385 bytes
+SHA1 (osg-3.6.5.tar.gz) = aef898a4e48dc235d8f1a5fd3f753fd2cb7b7861
+RMD160 (osg-3.6.5.tar.gz) = 1b9e1fd9250f5c3de85966d94edf5be393fa3928
+SHA512 (osg-3.6.5.tar.gz) = 7002fa30a3bcf6551d2e1050b4ca75a3736013fd190e4f50953717406864da1952deb09f530bc8c5ddf6e4b90204baec7dbc283f497829846d46d561f66feb4b
+Size (osg-3.6.5.tar.gz) = 5780762 bytes
 SHA1 (patch-CMakeModules_FindFFmpeg.cmake) = cb533fdfa7cc569b6e226e1ab422ef36d5d31c3a
 SHA1 (patch-ab) = 0bb683599daae3b2718693f9df8077b0333a410b
-SHA1 (patch-ad) = 909075cabe15541b182794b4fdf5baa038f07ed3
-SHA1 (patch-ae) = ca2f8a6cd509a914f9b643429e8384faf476f2c8
 SHA1 (patch-applications_present3D_Cluster.cpp) = 017b1d9b42760cad8deb77d7330b04f75aa0e814
 SHA1 (patch-src_osgPlugins_osc_ip_posix_NetworkingUtils.cpp) = 5748636ed17d23a0a595d38b2b392e773840a102
 SHA1 (patch-src_osgPlugins_osc_osc_OscHostEndianness.h) = 4202df06c8ab49fa5f3787cc1c59e9f247d1a21b
