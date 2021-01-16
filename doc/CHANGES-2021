@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.446 2021/01/16 16:51:08 skrll Exp $
+$NetBSD: CHANGES-2021,v 1.447 2021/01/16 18:19:36 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added converters/erlang-base64url version 1.0.1 [triaxx 2021-01-16]
 	Added devel/erlang-mqtree version 1.0.11 [triaxx 2021-01-16]
 	Updated emulators/gxemul to 0.6.2nb2 [nick 2021-01-16]
+	Added textproc/erlang-yconf version 1.0.9 [triaxx 2021-01-16]
