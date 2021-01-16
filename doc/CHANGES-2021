@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.453 2021/01/16 20:24:50 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.454 2021/01/16 20:27:50 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -571,3 +571,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/erlang-p1_acme version 1.0.10 [triaxx 2021-01-16]
 	Added security/erlang-pkix version 1.0.7 [triaxx 2021-01-16]
 	Updated chat/ejabberd to 20.12 [triaxx 2021-01-16]
+	Updated devel/py-hg-git to 0.9.0nb1 [maya 2021-01-16]
