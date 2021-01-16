@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/03/17 16:26:30 mef Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/01/16 08:15:01 maya Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Attachment/PatchReader.pm
@@ -449,6 +449,24 @@ share/bugzilla/show_activity.cgi
 share/bugzilla/show_bug.cgi
 share/bugzilla/showdependencygraph.cgi
 share/bugzilla/showdependencytree.cgi
+share/bugzilla/skins/README
+share/bugzilla/skins/contrib/Dusk/buglist.css
+share/bugzilla/skins/contrib/Dusk/global.css
+share/bugzilla/skins/standard/admin.css
+share/bugzilla/skins/standard/bug.css
+share/bugzilla/skins/standard/buglist.css
+share/bugzilla/skins/standard/dependency-tree/bug-item.png
+share/bugzilla/skins/standard/dependency-tree/tree-closed.png
+share/bugzilla/skins/standard/dependency-tree/tree-open.png
+share/bugzilla/skins/standard/dependency-tree/tree.png
+share/bugzilla/skins/standard/global.css
+share/bugzilla/skins/standard/global/body-back.gif
+share/bugzilla/skins/standard/global/calendar.png
+share/bugzilla/skins/standard/global/header.png
+share/bugzilla/skins/standard/index/file-a-bug.png
+share/bugzilla/skins/standard/index/help.png
+share/bugzilla/skins/standard/index/new-account.png
+share/bugzilla/skins/standard/index/search.png
 share/bugzilla/summarize_time.cgi
 share/bugzilla/template/en/default/account/auth/login-small.html.tmpl
 share/bugzilla/template/en/default/account/auth/login.html.tmpl
@@ -748,3 +766,11 @@ share/bugzilla/xmlrpc.cgi
 share/doc/bugzilla/README
 share/examples/bugzilla/bugzilla.conf
 share/examples/bugzilla/localconfig
+@pkgdir share/doc/bugzilla/en
+@pkgdir share/bugzilla/xt
+@pkgdir share/bugzilla/t
+@pkgdir share/bugzilla/lib
+@pkgdir share/bugzilla/graphs
+@pkgdir share/bugzilla/docs/en/html/api/Bugzilla
+@pkgdir share/bugzilla/data
+@pkgdir share/bugzilla/contrib
