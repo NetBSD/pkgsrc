@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2020/09/04 11:09:01 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2021/01/16 08:15:01 maya Exp $
 
-DISTNAME=	bugzilla-5.0.3
-PKGREVISION=	7
+DISTNAME=	bugzilla-5.0.6
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
@@ -108,11 +107,11 @@ SUBST_SED.diff=		-e "s|\$$diffpath = .*|\$$diffpath = \'${DIFF:C,/[^/]+$,,}\';|"
 SUBST_NOOP_OK.diff=	yes
 
 INSTALLATION_DIRS+=	${DOCDIR} ${DOCDIR}/en ${EGDIR} ${BZDIR} ${BZDIR}/Bugzilla
-INSTALLATION_DIRS+=	${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins
+INSTALLATION_DIRS+=	${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins/standard
 INSTALLATION_DIRS+=	${BZDIR}/docs ${BZDIR}/docs/en ${BZDIR}/docs/en/html
 INSTALLATION_DIRS+=	${BZDIR}/images ${BZDIR}/docs/en/html/api
 INSTALLATION_DIRS+=	${BZDIR}/docs/en/html/api/Bugzilla
-.for i in data contrib t xt template lib graphs skins
+.for i in data contrib t xt template lib graphs
 INSTALLATION_DIRS+=	${BZDIR}/${i}
 .endfor
 
@@ -132,7 +131,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${i}
 .endfor
 	(cd ${WRKSRC}					    ;\
-	pax -rw -pmp docs		${DESTDIR}${BZDIR} ;\
+	pax -rw -pmp docs		${DESTDIR}${BZDIR}  ;\
 	${INSTALL_SCRIPT} *.cgi *.pl	${DESTDIR}${BZDIR}  ;\
 	${INSTALL_SCRIPT} robots.txt	${DESTDIR}${BZDIR}  ;\
 	${INSTALL_DATA} Bugzilla.pm	${DESTDIR}${BZDIR}  ;\
@@ -141,11 +140,11 @@ do-install:
 	${INSTALL_DATA} bugzilla.conf	${DESTDIR}${EGDIR}  ;\
 	${INSTALL_DATA} images/*.png	${DESTDIR}${BZDIR}/images  ;\
 	${INSTALL_DATA} images/favicon.ico	${DESTDIR}${BZDIR} ;\
+	pax -rw -pmp skins		${DESTDIR}${BZDIR}  ;\
 	pax -rw -pmp Bugzilla		${DESTDIR}${BZDIR}  ;\
 	pax -rw -pmp js			${DESTDIR}${BZDIR}  ;\
-	pax -rw -pmp template		${DESTDIR}${BZDIR} ;\
+	pax -rw -pmp template		${DESTDIR}${BZDIR}  ;\
 	)
-	${RM} ${DESTDIR}${BZDIR}/Bugzilla/Install/Filesystem.pm.orig
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
