@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/16 16:00:28 triaxx Exp $
+lib/erlang/lib/mqtree-${PKGVERSION}/ebin/mqtree.app
+lib/erlang/lib/mqtree-${PKGVERSION}/ebin/mqtree.beam
+lib/erlang/lib/mqtree-${PKGVERSION}/priv/lib/mqtree.so
