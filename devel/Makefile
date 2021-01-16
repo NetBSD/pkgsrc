@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3313 2021/01/11 13:31:21 taca Exp $
+# $NetBSD: Makefile,v 1.3314 2021/01/16 16:01:16 triaxx Exp $
 #
 
 COMMENT=	Development utilities
@@ -327,6 +327,7 @@ SUBDIR+=	erlang-base64url
 SUBDIR+=	erlang-cache_tab
 SUBDIR+=	erlang-ezlib
 SUBDIR+=	erlang-fs
+SUBDIR+=	erlang-mqtree
 SUBDIR+=	errcheck
 SUBDIR+=	error
 SUBDIR+=	etrace
