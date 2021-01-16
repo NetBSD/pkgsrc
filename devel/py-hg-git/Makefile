@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2021/01/16 20:21:40 maya Exp $
+# $NetBSD: Makefile,v 1.17 2021/01/16 20:26:56 maya Exp $
 
-PKGVERSION=	0.9.0
-DISTNAME=	hg-git-${PKGVERSION}
+VERS=		0.9.0
+PKGREVISION=	1
+DISTNAME=	hg-git-${VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
-MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-git/-/archive/${PKGVERSION}/
+MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-git/-/archive/${VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.9.7:../../devel/py-dulwich
 
 USE_LANGUAGES=	# none
 
+# py-dulwich
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EGG_NAME=	hg_git-${DISTNAME}
