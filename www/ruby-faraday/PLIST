@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/06/14 16:20:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/01/16 12:50:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.md
@@ -14,7 +14,6 @@ ${GEM_LIBDIR}/lib/faraday/adapter/em_synchrony.rb
 ${GEM_LIBDIR}/lib/faraday/adapter/em_synchrony/parallel_manager.rb
 ${GEM_LIBDIR}/lib/faraday/adapter/excon.rb
 ${GEM_LIBDIR}/lib/faraday/adapter/httpclient.rb
-${GEM_LIBDIR}/lib/faraday/adapter/net_http.rb
 ${GEM_LIBDIR}/lib/faraday/adapter/net_http_persistent.rb
 ${GEM_LIBDIR}/lib/faraday/adapter/patron.rb
 ${GEM_LIBDIR}/lib/faraday/adapter/rack.rb
@@ -29,6 +28,7 @@ ${GEM_LIBDIR}/lib/faraday/encoders/nested_params_encoder.rb
 ${GEM_LIBDIR}/lib/faraday/error.rb
 ${GEM_LIBDIR}/lib/faraday/file_part.rb
 ${GEM_LIBDIR}/lib/faraday/logging/formatter.rb
+${GEM_LIBDIR}/lib/faraday/methods.rb
 ${GEM_LIBDIR}/lib/faraday/middleware.rb
 ${GEM_LIBDIR}/lib/faraday/middleware_registry.rb
 ${GEM_LIBDIR}/lib/faraday/options.rb
@@ -54,6 +54,7 @@ ${GEM_LIBDIR}/lib/faraday/response/raise_error.rb
 ${GEM_LIBDIR}/lib/faraday/utils.rb
 ${GEM_LIBDIR}/lib/faraday/utils/headers.rb
 ${GEM_LIBDIR}/lib/faraday/utils/params_hash.rb
+${GEM_LIBDIR}/lib/faraday/version.rb
 ${GEM_LIBDIR}/spec/external_adapters/faraday_specs_setup.rb
 ${GEM_LIBDIR}/spec/faraday/adapter/em_http_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter/em_synchrony_spec.rb
@@ -63,6 +64,7 @@ ${GEM_LIBDIR}/spec/faraday/adapter/net_http_persistent_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter/net_http_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter/patron_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter/rack_spec.rb
+${GEM_LIBDIR}/spec/faraday/adapter/test_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter/typhoeus_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter_registry_spec.rb
 ${GEM_LIBDIR}/spec/faraday/adapter_spec.rb
