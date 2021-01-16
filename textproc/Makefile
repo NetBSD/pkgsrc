@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1188 2021/01/16 18:20:06 triaxx Exp $
+# $NetBSD: Makefile,v 1.1189 2021/01/16 19:11:45 riastradh Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -981,6 +981,7 @@ SUBDIR+=	py-xlrd
 SUBDIR+=	py-xlsxwriter
 SUBDIR+=	py-xlwt
 SUBDIR+=	py-xml
+SUBDIR+=	py-xml2rfc
 SUBDIR+=	py-xmlschema
 SUBDIR+=	py-xmltodict
 SUBDIR+=	py-yamcha
