@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.458 2021/01/16 21:19:34 adam Exp $
+$NetBSD: CHANGES-2021,v 1.459 2021/01/16 21:19:50 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -577,3 +577,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/portaudio to version portaudio-190600.20161030nb7 [reinoud 2021-01-16]
 	Updated devel/py-joblib to 1.0.0 [adam 2021-01-16]
 	Updated devel/py-pyelftools to 0.27 [adam 2021-01-16]
+	Updated chat/ejabberd to 20.12nb1 [triaxx 2021-01-16]
