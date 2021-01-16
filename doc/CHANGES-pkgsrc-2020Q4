@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.2 2021/01/04 17:40:25 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.3 2021/01/16 15:01:50 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -16,4 +16,10 @@ mail/dovecot2: security fix
 
 Pullup ticket #6392 - requested by taca
 mail/dovecot2-pigeonhole: dependent update
+
+Pullup ticket #6393 - requested by prlw1
+multimedia/gstreamer1: build fix
+
+Pullup ticket #6394 - requested by nia
+audio/musicpd: NetBSD/earm build fix
 
