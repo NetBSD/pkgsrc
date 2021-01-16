@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2013/10/11 13:32:25 fhajny Exp $
+$NetBSD: patch-configure,v 1.2 2021/01/16 20:24:33 triaxx Exp $
 
 Portability.
+
 --- configure.orig	2013-10-10 10:59:33.747311941 +0000
 +++ configure
 @@ -2548,7 +2548,7 @@ EOF
