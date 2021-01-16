@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/01/16 15:15:30 maya Exp $
+# $NetBSD: Makefile,v 1.16 2021/01/16 20:21:40 maya Exp $
 
 PKGVERSION=	0.9.0
 DISTNAME=	hg-git-${PKGVERSION}
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.9.7:../../devel/py-dulwich
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EGG_NAME=	hg_git-${DISTNAME}
 
