@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.436 2021/01/16 13:08:59 taca Exp $
+$NetBSD: CHANGES-2021,v 1.437 2021/01/16 13:12:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -554,3 +554,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/erlang-esip to 1.0.39 [triaxx 2021-01-16]
 	Updated www/ruby-puma to 5.1.1 [taca 2021-01-16]
 	Updated www/ruby-pygments.rb to 2.0.0 [taca 2021-01-16]
+	Updated www/ruby-rack-contrib to 2.3.0 [taca 2021-01-16]
