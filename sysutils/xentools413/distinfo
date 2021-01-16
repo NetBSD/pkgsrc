@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2020/12/16 17:17:08 bouyer Exp $
+$NetBSD: distinfo,v 1.6.2.1 2021/01/16 16:35:04 spz Exp $
 
 SHA1 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = b78d21457bc07b4c4d3e770109c169ddafdacdf5
 RMD160 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = 846dbcc0f56e87fca8c87b00ca2ed031471d4246
@@ -70,7 +70,8 @@ SHA1 (patch-tools_libxl_libxl_event.c) = 8147122d03102eccc45c48a7d6ca1aa5d628604
 SHA1 (patch-tools_libxl_libxl_internal.h) = 31da26f2121fe2a1928d75f719554ed9389c187b
 SHA1 (patch-tools_libxl_libxl_netbsd.c) = e2289fabc37bbb0fa078ce9a7256229f998c5982
 SHA1 (patch-tools_libxl_libxl_uuid.c) = 1eb8c027dbeb7e67df7475ee6e4d87220140c65b
-SHA1 (patch-tools_ocaml_common.make) = 4b845bdf3a013852109749ee18dfe28e3440d951
+SHA1 (patch-tools_ocaml_Makefile.rules) = 2198396f896999adb8ea05f100a0a5ec36733b1a
+SHA1 (patch-tools_ocaml_common.make) = 0e243aff97d8e8c6349f548dbbab878f3ca1acb6
 SHA1 (patch-tools_ocaml_libs_eventchn_xeneventchn_stubs.c) = 371e45af87b4432aedeaba1871aa94a4f492e011
 SHA1 (patch-tools_ocaml_xenstored_Makefile) = b267702cf4090c7b45bba530e60327fced24e3e5
 SHA1 (patch-tools_ocaml_xenstored_utils.ml) = 5e85a0039d668c9b533e8deaa65fcdab9a5ad4c7
