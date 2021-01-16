@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2021/01/16 00:10:51 triaxx Exp $
+
+Use pkgsrc rebar.
+
+--- Makefile.orig	2020-08-28 17:41:26.000000000 +0000
++++ Makefile
+@@ -4,16 +4,16 @@
+ all: deps compile
+ 
+ compile: deps
+-	./rebar compile
++	@REBAR@ compile
+ 
+ deps:
+-	test -d deps || ./rebar get-deps
++	test -d deps || @REBAR@ get-deps
+ 
+ clean:
+-	./rebar clean
++	@REBAR@ clean
+ 
+ distclean: clean
+-	./rebar delete-deps
++	@REBAR@ delete-deps
+ 
+ DIALYZER_APPS = kernel stdlib erts sasl eunit syntax_tools compiler crypto \
+ 				common_test
