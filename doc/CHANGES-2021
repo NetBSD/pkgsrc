@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.426 2021/01/16 12:20:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.427 2021/01/16 12:42:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -544,3 +544,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/py-tqdm to 4.56.0 [adam 2021-01-16]
 	Updated devel/cmake to 3.19.3 [adam 2021-01-16]
 	Updated emulators/x16-emulator to 35nb4 [nia 2021-01-16]
+	Updated www/ruby-capybara to 3.34.0 [taca 2021-01-16]
