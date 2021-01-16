@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/11/26 11:19:33 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/01/16 10:15:22 adam Exp $
 
-SHA1 (django-contrib-comments-1.9.2.tar.gz) = d36608f468b37a8bebbc7831cadb25b95bbccdfd
-RMD160 (django-contrib-comments-1.9.2.tar.gz) = e3873f1832586eb71fd36f7d2458f327721bc727
-SHA512 (django-contrib-comments-1.9.2.tar.gz) = 70e9bd496d0419f0c6578db201ac5d4263e27ea2466ff7888cab037eabde1f87e1fddbc6a690e814cf6220188f5f9fe9728900f5358634768787f0a47618bf58
-Size (django-contrib-comments-1.9.2.tar.gz) = 848588 bytes
+SHA1 (django-contrib-comments-2.0.0.tar.gz) = d10c0cf041e05a29206e425e67d029329562094c
+RMD160 (django-contrib-comments-2.0.0.tar.gz) = 2265b78e228bc0cee4004ee53c18f728d327107f
+SHA512 (django-contrib-comments-2.0.0.tar.gz) = 43d71a3fdf630b2ec708634eeac808bf4d8f9b534c37458a5523de3a8e67625767894c42c791c4326eed50c0ecd4ffd7f75a0f25f0eaae6e3da74cc071ec6007
+Size (django-contrib-comments-2.0.0.tar.gz) = 848477 bytes
