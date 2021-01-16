@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/07/20 09:21:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2021/01/16 12:42:47 triaxx Exp $
 
-DISTNAME=	xmpp-1.2.2
+DISTNAME=	xmpp-1.5.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -9,19 +9,16 @@ HOMEPAGE=	https://github.com/processone/xmpp/
 COMMENT=	XMPP parsing and serialization library on top of Fast XML
 LICENSE=	apache-2.0
 
-DEPENDS+=	erlang-fast_xml>=1.1.32:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-stringprep>=1.0.12:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-p1_utils>=1.0.12:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.21:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-fast_xml>=1.1.45:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_tls>=1.1.10:../../security/erlang-fast_tls
+DEPENDS+=	erlang-ezlib>=1.0.9:../../devel/erlang-ezlib
+DEPENDS+=	erlang-idna>=6.0.0:../../net/erlang-idna
+DEPENDS+=	erlang-stringprep>=1.0.24:../../textproc/erlang-stringprep
 
 GITHUB_PROJECT=	xmpp
 
 BUILD_TARGET=	src
-
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	rebar.config
-SUBST_MESSAGE.path=	Fixing include path
-SUBST_VARS.path=	LOCALBASE
 
 # Leave a non-versioned symlink in place for net/erlang-esip to find
 post-install:
