@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/01 08:17:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/01/16 21:18:55 adam Exp $
 bin/readelf-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -103,6 +103,21 @@ ${PYSITELIB}/elftools/dwarf/ranges.pyo
 ${PYSITELIB}/elftools/dwarf/structs.py
 ${PYSITELIB}/elftools/dwarf/structs.pyc
 ${PYSITELIB}/elftools/dwarf/structs.pyo
+${PYSITELIB}/elftools/ehabi/__init__.py
+${PYSITELIB}/elftools/ehabi/__init__.pyc
+${PYSITELIB}/elftools/ehabi/__init__.pyo
+${PYSITELIB}/elftools/ehabi/constants.py
+${PYSITELIB}/elftools/ehabi/constants.pyc
+${PYSITELIB}/elftools/ehabi/constants.pyo
+${PYSITELIB}/elftools/ehabi/decoder.py
+${PYSITELIB}/elftools/ehabi/decoder.pyc
+${PYSITELIB}/elftools/ehabi/decoder.pyo
+${PYSITELIB}/elftools/ehabi/ehabiinfo.py
+${PYSITELIB}/elftools/ehabi/ehabiinfo.pyc
+${PYSITELIB}/elftools/ehabi/ehabiinfo.pyo
+${PYSITELIB}/elftools/ehabi/structs.py
+${PYSITELIB}/elftools/ehabi/structs.pyc
+${PYSITELIB}/elftools/ehabi/structs.pyo
 ${PYSITELIB}/elftools/elf/__init__.py
 ${PYSITELIB}/elftools/elf/__init__.pyc
 ${PYSITELIB}/elftools/elf/__init__.pyo
