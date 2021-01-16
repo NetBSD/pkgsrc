@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.412 2021/01/16 00:01:10 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.413 2021/01/16 00:06:24 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -509,3 +509,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/erlang-jiffy to 1.0.8 [triaxx 2021-01-15]
 	Updated textproc/erlang-stringprep to 1.0.24 [triaxx 2021-01-15]
 	Updated graphics/erlang-eimp to 1.0.18 [triaxx 2021-01-16]
+	Updated devel/rebar3 to 3.14.3 [triaxx 2021-01-16]
