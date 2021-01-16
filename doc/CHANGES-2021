@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.418 2021/01/16 08:46:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.419 2021/01/16 09:00:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -520,3 +520,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.1.1 [adam 2021-01-16]
 	Updated www/py-hyperlink to 21.0.0 [adam 2021-01-16]
 	Updated devel/py-prompt_toolkit2 to 3.0.10 [adam 2021-01-16]
+	Updated security/mit-krb5 to 1.18.3 [jperkin 2021-01-16]
