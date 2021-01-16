@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2021/01/16 20:24:33 triaxx Exp $
+# $NetBSD: Makefile,v 1.90 2021/01/16 21:19:32 triaxx Exp $
 
 DISTNAME=	ejabberd-20.12
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/downloads-action.php?file=/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
