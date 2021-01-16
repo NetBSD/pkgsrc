@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2017/03/17 16:26:30 mef Exp $
+$NetBSD: MESSAGE,v 1.6 2021/01/16 08:15:01 maya Exp $
 
 To complete the setup you will need to read the Bugzilla-Guide.txt in order
 to setup Database counter-part properly.  In particular secion 2.2.2 of the
@@ -11,9 +11,12 @@ privilege,
 	./checksetup.pl
 
 You will need to make Bugzilla accessible through your HTTP server.
-If you are running Apache then you may add the following lines to httpd.conf:
+If you are running Apache then you will need to add the following lines to
+httpd.conf:
 
 	Include ${PKG_SYSCONFDIR}/bugzilla.conf
+
+And possibly enable mod_cgid or another CGI provider.
 
 to make Bugzilla accessible through:
 
