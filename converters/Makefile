@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2021/01/16 15:33:05 triaxx Exp $
+# $NetBSD: Makefile,v 1.185 2021/01/16 16:04:00 triaxx Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -26,7 +26,6 @@ SUBDIR+=	dos2unix
 SUBDIR+=	dsk2rom
 SUBDIR+=	dvi2tty
 SUBDIR+=	enriched2html
-SUBDIR+=	erlang-base64url
 SUBDIR+=	erlang-iconv
 SUBDIR+=	fondu
 SUBDIR+=	fribidi
