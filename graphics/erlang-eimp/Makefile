@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/08/17 20:18:57 leot Exp $
+# $NetBSD: Makefile,v 1.11 2021/01/16 00:00:48 triaxx Exp $
 
-DISTNAME=	eimp-1.0.6
+DISTNAME=	eimp-1.0.18
 PKGNAME=	erlang-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -13,7 +12,7 @@ LICENSE=	apache-2.0
 
 GITHUB_PROJECT=	eimp
 
-DEPENDS+=	erlang-p1_utils>=1.0.12:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.21:../../misc/erlang-p1_utils
 
 GNU_CONFIGURE=	yes
 
