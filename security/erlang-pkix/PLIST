@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/16 19:58:30 triaxx Exp $
+lib/erlang/lib/pkix-${PKGVERSION}/ebin/pkix.app
+lib/erlang/lib/pkix-${PKGVERSION}/ebin/pkix.beam
+lib/erlang/lib/pkix-${PKGVERSION}/ebin/pkix_app.beam
+lib/erlang/lib/pkix-${PKGVERSION}/ebin/pkix_sup.beam
+lib/erlang/lib/pkix-${PKGVERSION}/priv/cacert.pem

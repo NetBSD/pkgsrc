@@ -1,0 +1,18 @@
+The idea of the library is to simplify certificates configuration in Erlang
+programs. Typically an Erlang program which needs certificates (for HTTPS/
+MQTT/XMPP/etc) provides a bunch of options such as certfile, chainfile,
+privkey, etc. The situation becomes even more complicated when a server
+supports so called virtual domains because a program is typically required to
+match a virtual domain with its certificate. If a user has plenty of virtual
+domains it's quickly becoming a nightmare for them to configure all this. The
+complexity also leads to errors: a single configuration mistake and a program
+generates obscure log messages, unreadable Erlang tracebacks or, even worse,
+just silently ignores the errors. Fortunately, the large part of certificates
+configuration can be automated, reducing a user configuration to something as
+simple as:
+
+certfiles:
+
+  - /etc/letsencrypt/live/*/*.pem
+
+The purpose of this library is to do this dirty job under the hood.
