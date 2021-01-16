@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2018/07/20 09:21:56 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/01/16 12:42:47 triaxx Exp $
 lib/erlang/lib/xmpp
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/XmppAddr.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/captcha_form.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/flex_offline.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/http_upload.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/jid.beam
@@ -19,6 +21,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/push_summary.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/rfc3921.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/rfc6120.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/rfc6121.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/scram.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xdata_codec.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0004.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0012.beam
@@ -30,6 +33,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0030.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0033.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0039.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0045.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0047.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0048.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0049.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0050.beam
@@ -50,6 +54,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0131.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0138.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0153.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0158.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0166.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0172.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0184.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0191.beam
@@ -57,15 +62,22 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0198.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0199.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0202.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0203.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0215.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0220.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0221.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0231.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0234.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0249.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0260.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0261.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0264.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0279.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0280.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0297.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0300.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0313.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0319.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0328.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0334.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0352.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0355.beam
@@ -75,15 +87,31 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0359.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0363.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0369.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0377.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0405.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0417.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp.app
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_codec.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_codec_external.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_config.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_lang.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sasl.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sasl_anonymous.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sasl_digest.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sasl_oauth.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sasl_plain.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sasl_scram.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_socket.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_stream.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_stream_in.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_stream_out.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_stream_pkix.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sup.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_tr.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_uri.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_util.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/include/XmppAddr.hrl
+lib/erlang/lib/xmpp-${PKGVERSION}/include/captcha_form.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/flex_offline.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/http_upload.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/jid.hrl
@@ -100,6 +128,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_publish_options.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_subscribe_authorization.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_subscribe_options.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/push_summary.hrl
+lib/erlang/lib/xmpp-${PKGVERSION}/include/scram.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/xmpp.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/xmpp_codec.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/priv/lib/jid.so
