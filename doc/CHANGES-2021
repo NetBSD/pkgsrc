@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.415 2021/01/16 08:15:16 adam Exp $
+$NetBSD: CHANGES-2021,v 1.416 2021/01/16 08:25:16 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -511,7 +511,12 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/erlang-eimp to 1.0.18 [triaxx 2021-01-16]
 	Updated devel/rebar3 to 3.14.3 [triaxx 2021-01-16]
 	Updated graphics/dia to 0.97.3nb21 [gutteridge 2021-01-16]
+<<<<<<< CHANGES-2021
+	Updated devel/bugzilla to 5.0.6 [maya 2021-01-16]
+=======
 	Updated sysutils/py-psutil to 5.8.0 [adam 2021-01-16]
 	Updated security/py-authlib to 0.15.3 [adam 2021-01-16]
 	Updated lang/npm to 6.14.11 [adam 2021-01-16]
 	Updated archivers/py-lz4 to 3.1.2 [adam 2021-01-16]
+>>>>>>> 1.415
+	Updated devel/bugzilla to 5.0.6 [maya 2021-01-16]
