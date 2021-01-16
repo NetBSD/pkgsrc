@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.444 2021/01/16 15:32:13 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.445 2021/01/16 16:00:46 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -562,3 +562,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-dulwich to 0.20.15 [maya 2021-01-16]
 	Updated devel/py-hg-git to 0.9.0 [maya 2021-01-16]
 	Added converters/erlang-base64url version 1.0.1 [triaxx 2021-01-16]
+	Added devel/erlang-mqtree version 1.0.11 [triaxx 2021-01-16]
