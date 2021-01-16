@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.4 2021/01/16 19:55:42 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.5 2021/01/16 21:06:07 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -34,4 +34,7 @@ multimedia/ffmpeg3: build fix
 
 Pullup ticket #6402 - requested by nia
 databases/py-ldap: NetBSD build fix
+
+Pullup ticket #6395 - requested by bouyer
+sysutils/xentools413: build fix
 
