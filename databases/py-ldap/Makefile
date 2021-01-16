@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2020/07/07 05:29:04 adam Exp $
+# $NetBSD: Makefile,v 1.87.4.1 2021/01/16 19:53:04 bsiegert Exp $
 
 DISTNAME=	python-ldap-3.3.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -9,6 +9,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.python-ldap.org/
 COMMENT=	LDAP client API for Python
 LICENSE=	python-software-foundation
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[56789].*) && \
+    empty(MACHINE_PLATFORM:MNetBSD-9.99.*)
+# Needs openldap>=2.4.48 for openldap.h.
+# Unfortunately, version detection on the native version fails.
+PREFER.openldap-client=	pkgsrc
+.endif
 
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.3.7:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.1.5:../../security/py-asn1-modules
