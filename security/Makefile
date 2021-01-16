@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.796 2021/01/01 14:29:55 pin Exp $
+# $NetBSD: Makefile,v 1.797 2021/01/16 19:48:40 triaxx Exp $
 #
 
 COMMENT=	Security tools
@@ -86,6 +86,7 @@ SUBDIR+=	ent
 SUBDIR+=	erlang-epam
 SUBDIR+=	erlang-fast_tls
 SUBDIR+=	erlang-jose
+SUBDIR+=	erlang-p1_acme
 SUBDIR+=	erlang-p1_oauth2
 SUBDIR+=	fail2ban
 SUBDIR+=	flawfinder
