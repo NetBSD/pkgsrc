@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2020/10/08 19:52:36 gdt Exp $
+# $NetBSD: Makefile,v 1.111 2021/01/16 09:00:23 jperkin Exp $
 
 BRANCHNAME=	1.18
-DISTNAME=	krb5-${BRANCHNAME}.2
+DISTNAME=	krb5-${BRANCHNAME}.3
 PKGNAME=	mit-${DISTNAME}
 CATEGORIES=	security
 # It is not clear how stable this URL scheme is.
@@ -33,12 +33,7 @@ CONFLICTS+=	kth-krb4-[0-9]*
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf gzip m4 msgfmt perl
-.if ${OPSYS} == "SunOS"
-USE_TOOLS+=		bison
-.else
-USE_TOOLS+=		yacc
-.endif
+USE_TOOLS+=		autoconf bison gzip m4 msgfmt perl
 
 # The actual KDC databases are stored in ${MIT_KRB5_STATEDIR}/krb5kdc.
 MIT_KRB5_STATEDIR?=	${VARBASE}
@@ -59,6 +54,7 @@ CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ENV+=		BUILDLINK_PREFIX_OPENSSL=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ENV+=		DEFKTNAME=FILE:${PKG_SYSCONFDIR}/krb5.keytab
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
+MAKE_ENV+=		YFLAGS="-Wnone"
 LIBS.SunOS=		-lrt
 
 OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
