@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/12/18 09:01:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/01/16 11:15:13 adam Exp $
 bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -79,9 +79,15 @@ ${PYSITELIB}/tqdm/keras.pyo
 ${PYSITELIB}/tqdm/notebook.py
 ${PYSITELIB}/tqdm/notebook.pyc
 ${PYSITELIB}/tqdm/notebook.pyo
+${PYSITELIB}/tqdm/rich.py
+${PYSITELIB}/tqdm/rich.pyc
+${PYSITELIB}/tqdm/rich.pyo
 ${PYSITELIB}/tqdm/std.py
 ${PYSITELIB}/tqdm/std.pyc
 ${PYSITELIB}/tqdm/std.pyo
+${PYSITELIB}/tqdm/tk.py
+${PYSITELIB}/tqdm/tk.pyc
+${PYSITELIB}/tqdm/tk.pyo
 ${PYSITELIB}/tqdm/utils.py
 ${PYSITELIB}/tqdm/utils.pyc
 ${PYSITELIB}/tqdm/utils.pyo
