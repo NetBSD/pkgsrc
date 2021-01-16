@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2018/03/17 16:09:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/01/16 13:17:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.codeclimate.yml
+${GEM_LIBDIR}/.github/workflows/publish.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
