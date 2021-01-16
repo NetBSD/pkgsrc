@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.58 2018/07/20 09:58:26 fhajny Exp $
+$NetBSD: distinfo,v 1.59 2021/01/16 20:24:33 triaxx Exp $
 
-SHA1 (ejabberd-18.06.tgz) = 18c3ab25c904f7898717171d5e4ee568b8fcd68f
-RMD160 (ejabberd-18.06.tgz) = d5b00602ccded838df81bb766e0aaefc639c02f6
-SHA512 (ejabberd-18.06.tgz) = ccf3cb8d5edce255604abc7c3b0c77d237203fd673d425a7676a1c35f2d24a27bcfd605a941cd8e7149f111a134bca2aa1d488642e4d0decb273f757c6be8d60
-Size (ejabberd-18.06.tgz) = 1848145 bytes
-SHA1 (patch-aa) = b36ab8e2a189e07dc09186fdea0599d99294e0e5
-SHA1 (patch-ad) = de437722779c823a68f576ec587f5bc3a05e6fbc
-SHA1 (patch-ae) = d8d1ca7072f35a5652673cf461860e0f585ecd5b
-SHA1 (patch-configure) = 8cf03f571ef13ed825b445e0f1664d387895b8fe
+SHA1 (ejabberd-20.12.tgz) = 33851f33a68ce7dd45a28d4f63b40f7cbb8c9dbc
+RMD160 (ejabberd-20.12.tgz) = 155a461097ac70dfeb603a0c23b7bf948de9aa81
+SHA512 (ejabberd-20.12.tgz) = 7e7cb2f6e298db9f85c2f9abb6082ebed7afc42e32b11a3a953b0c4721b0b6ea2924e6d3f78cfb5bdb209ddea2abfb040d310b422f3951b104a5461cec5875a8
+Size (ejabberd-20.12.tgz) = 2030495 bytes
+SHA1 (patch-aa) = 8a1aac6e3ee13bc5251d4994fc8d1927b876e372
+SHA1 (patch-ae) = cec3df9f6f02585c869c96aea1d12bd91e61d523
+SHA1 (patch-configure) = 2c92f408fa49ae9595173613157d55a585ec1cb3
 SHA1 (patch-tools_ejabberdctl.bc) = 3c7bc0ad14d5b266a192b29e4d075e8f93103569
