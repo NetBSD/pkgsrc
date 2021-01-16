@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/03/21 14:14:49 taca Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/16 12:45:31 taca Exp $
 
-DISTNAME=	em-websocket-0.5.1
-PKGREVISION=	1
+DISTNAME=	em-websocket-0.5.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
