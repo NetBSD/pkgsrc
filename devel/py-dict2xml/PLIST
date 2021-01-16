@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/16 19:11:04 riastradh Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/dict2xml/__init__.py
+${PYSITELIB}/dict2xml/__init__.pyc
+${PYSITELIB}/dict2xml/__init__.pyo
+${PYSITELIB}/dict2xml/logic.py
+${PYSITELIB}/dict2xml/logic.pyc
+${PYSITELIB}/dict2xml/logic.pyo
