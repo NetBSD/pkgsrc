@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/12/08 14:44:05 fox Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/01/16 19:22:08 fox Exp $
 bin/ircd
 bin/ircd-hybrid-mkpasswd
 lib/ircd-hybrid/modules/autoload/m_accept.la
@@ -92,10 +92,10 @@ share/doc/ircd-hybrid/doc/index.txt
 share/doc/ircd-hybrid/doc/kline.txt
 share/doc/ircd-hybrid/doc/modeg.txt
 share/doc/ircd-hybrid/doc/modes.txt
+share/doc/ircd-hybrid/doc/monitor.txt
 share/doc/ircd-hybrid/doc/reference.conf
 share/doc/ircd-hybrid/doc/resv.txt
 share/doc/ircd-hybrid/doc/serverhide.txt
-share/doc/ircd-hybrid/doc/technical/draft-mitchell-irc-capabilities-01.txt
 share/doc/ircd-hybrid/doc/technical/rfc1459.txt
 share/doc/ircd-hybrid/doc/technical/rfc2812.txt
 share/doc/ircd-hybrid/doc/technical/rfc2813.txt
@@ -129,6 +129,7 @@ share/ircd-hybrid/help/locops
 share/ircd-hybrid/help/lusers
 share/ircd-hybrid/help/map
 share/ircd-hybrid/help/module
+share/ircd-hybrid/help/monitor
 share/ircd-hybrid/help/motd
 share/ircd-hybrid/help/names
 share/ircd-hybrid/help/nick
