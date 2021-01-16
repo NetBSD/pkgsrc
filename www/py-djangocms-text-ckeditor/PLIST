@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/02/19 12:00:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/01/16 10:13:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -210,6 +210,7 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plu
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/de.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/el.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/en.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js
@@ -265,12 +266,14 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plu
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/about/dialogs/about.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/about/dialogs/logo_ckeditor.png
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/clipboard/dialogs/paste.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/colordialog/dialogs/colordialog.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/colordialog/dialogs/colordialog.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/copyformatting/cursors/cursor.svg
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/dialog/dialogDefinition.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/dialog/styles/dialog.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/div/dialogs/div.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/find/dialogs/find.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/flash/dialogs/flash.js
@@ -301,7 +304,11 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plu
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/magicline/images/icon.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/pagebreak/images/pagebreak.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/pastefromword/filter/default.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/pastetools/filter/common.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/pastetools/filter/image.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/preview/images/pagebreak.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/preview/preview.html
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/preview/styles/screen.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/scayt/CHANGELOG.md
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/scayt/LICENSE.md
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/scayt/README.md
@@ -336,6 +343,8 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plu
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/embaressed_smile.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/embarrassed_smile.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/embarrassed_smile.png
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/envelope.gif
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/envelope.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/heart.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/heart.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/smiley/images/kiss.gif
@@ -407,11 +416,14 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plu
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pl.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pt.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ro.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ru.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/si.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sk.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sl.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sq.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sr-latn.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sr.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sv.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/th.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/plugins/specialchar/dialogs/lang/tr.js
@@ -444,6 +456,7 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/sam
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/img/header-bg.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/img/header-separator.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/img/logo.png
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/img/logo.svg
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/img/navigation-tip.png
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/index.html
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/js/sample.js
@@ -526,15 +539,16 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/ski
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/skins/moono-lisa/images/spinner.gif
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/skins/moono-lisa/readme.md
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/styles.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/vendor/promise.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plugins/.editorconfig
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plugins/cmsdialog/plugin.js
-${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plugins/cmsplugins/icons/cmsplugins.png
-${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plugins/cmsplugins/icons/cmsplugins.psd
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plugins/cmsplugins/icons/cmsplugins.svg
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plugins/cmsplugins/plugin.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plugins/cmsresize/plugin.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plugins/cmswidget/plugin.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/css/cms.ckeditor.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/cms.ckeditor.js
-${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/dist/bundle-45a646fecc.cms.ckeditor.min.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/dist/bundle-bb31a8b837.cms.ckeditor.min.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/post.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/pre.js
 ${PYSITELIB}/djangocms_text_ckeditor/templates/cms/plugins/render_plugin_preview.html
