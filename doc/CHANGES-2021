@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.417 2021/01/16 08:27:02 maya Exp $
+$NetBSD: CHANGES-2021,v 1.418 2021/01/16 08:46:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -516,3 +516,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/npm to 6.14.11 [adam 2021-01-16]
 	Updated archivers/py-lz4 to 3.1.2 [adam 2021-01-16]
 	Updated devel/bugzilla to 5.0.6 [maya 2021-01-16]
+	Updated net/haproxy to 2.3.4 [adam 2021-01-16]
+	Updated textproc/py-elementpath to 2.1.1 [adam 2021-01-16]
+	Updated www/py-hyperlink to 21.0.0 [adam 2021-01-16]
+	Updated devel/py-prompt_toolkit2 to 3.0.10 [adam 2021-01-16]
