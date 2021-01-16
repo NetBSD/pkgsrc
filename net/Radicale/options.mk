@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2019/11/03 11:45:29 rillig Exp $
+# $NetBSD: options.mk,v 1.11 2021/01/16 20:21:40 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.Radicale
 PKG_SUPPORTED_OPTIONS=	git ldap
@@ -6,10 +6,10 @@ PKG_SUPPORTED_OPTIONS=	git ldap
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgit)
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-dulwich-[0-9]*:../../devel/py-dulwich
 .endif
 
 .if !empty(PKG_OPTIONS:Mldap)
-PYTHON_VERSIONS_ACCEPTED= 27 # py-ldap
 DEPENDS+=	${PYPKGPREFIX}-ldap-[0-9]*:../../databases/py-ldap
 .endif
