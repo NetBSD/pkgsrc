@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/08/18 17:57:25 leot Exp $
+# $NetBSD: Makefile,v 1.32 2021/01/16 21:06:52 reinoud Exp $
 
 DISTNAME=	pa_stable_v190600_20161030
 PKGNAME=	${DISTNAME:S/^pa_stable_v/portaudio-/1:S/_/./g}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://www.portaudio.com/archives/
 EXTRACT_SUFX=	.tgz
