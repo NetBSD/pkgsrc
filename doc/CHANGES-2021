@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.457 2021/01/16 21:08:58 reinoud Exp $
+$NetBSD: CHANGES-2021,v 1.458 2021/01/16 21:19:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -575,3 +575,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/Radicale to 1.1.4nb3 [maya 2021-01-16]
 	Added print/py-octoprint-filecheck version 2020.08.07 [khorben 2021-01-16]
 	Updated audio/portaudio to version portaudio-190600.20161030nb7 [reinoud 2021-01-16]
+	Updated devel/py-joblib to 1.0.0 [adam 2021-01-16]
+	Updated devel/py-pyelftools to 0.27 [adam 2021-01-16]
