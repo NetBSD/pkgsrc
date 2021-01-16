@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.421 2021/01/16 09:27:39 adam Exp $
+$NetBSD: CHANGES-2021,v 1.422 2021/01/16 09:44:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -529,3 +529,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-django-cms to 3.8.0 [adam 2021-01-16]
 	Updated www/py-djangocms-attributes-field to 2.0.0 [adam 2021-01-16]
 	Updated www/py-django-polymorphic to 3.0.0 [adam 2021-01-16]
+	Updated www/py-django-filer to 2.0.2 [adam 2021-01-16]
+	Updated www/py-djangocms-column to 1.11.0 [adam 2021-01-16]
+	Updated www/py-djangocms-file to 3.0.0 [adam 2021-01-16]
+	Updated www/py-djangocms-audio to 2.0.0 [adam 2021-01-16]
