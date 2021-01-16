@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2018/03/28 21:51:09 fhajny Exp $
+$NetBSD: patch-aa,v 1.16 2021/01/16 20:24:33 triaxx Exp $
 
 Fix locations; don't mess with ownership.
 
---- Makefile.in.orig	2018-03-23 13:48:17.000000000 +0000
+--- Makefile.in.orig	2020-12-15 14:40:16.000000000 +0000
 +++ Makefile.in
 @@ -9,7 +9,7 @@ exec_prefix = @exec_prefix@
  DESTDIR =
@@ -22,8 +22,8 @@ Fix locations; don't mess with ownership.
  
  # /share/doc/ejabberd
  PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -59,37 +59,24 @@ JSDIR = $(PRIVDIR)/js
- SQLDIR = $(PRIVDIR)/sql
+@@ -65,37 +65,24 @@ SQLDIR = $(PRIVDIR)/sql
+ LUADIR = $(PRIVDIR)/lua
  
  # /var/lib/ejabberd/
 -SPOOLDIR = $(DESTDIR)@localstatedir@/lib/ejabberd
@@ -61,5 +61,5 @@ Fix locations; don't mess with ownership.
 -  G_USER=-g $(INSTALLGROUP)
 -endif
  
- all: deps src
+ IS_REBAR3:=$(shell expr `$(REBAR) --version | awk -F '[ .]' '/rebar / {print $$2}'` '>=' 3)
  
