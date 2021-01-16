@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.3 2021/01/16 15:01:50 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.4 2021/01/16 19:55:42 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -22,4 +22,16 @@ multimedia/gstreamer1: build fix
 
 Pullup ticket #6394 - requested by nia
 audio/musicpd: NetBSD/earm build fix
+
+Pullup ticket #6398 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6399 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6400 - requested by nia
+multimedia/ffmpeg3: build fix
+
+Pullup ticket #6402 - requested by nia
+databases/py-ldap: NetBSD build fix
 
