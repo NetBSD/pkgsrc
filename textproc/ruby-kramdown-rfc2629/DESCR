@@ -1,0 +1,6 @@
+kramdown is a markdown parser by Thomas Leitner, which has a number of
+backends for generating HTML, Latex, and markdown again.
+
+kramdown-rfc2629 is an additional backend to that: It allows the
+generation of XML2RFC XML markup (originally known as RFC 2629
+compliant markup, now documented in RFC 7749).
