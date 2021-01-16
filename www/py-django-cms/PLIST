@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2020/02/03 20:36:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/01/16 09:25:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -271,6 +271,10 @@ ${PYSITELIB}/cms/locale/ku_IQ/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/ku_IQ/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/ku_IQ/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/ku_IQ/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/ky/LC_MESSAGES/django.mo
+${PYSITELIB}/cms/locale/ky/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/ky/LC_MESSAGES/djangojs.mo
+${PYSITELIB}/cms/locale/ky/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/lt/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/lt/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/lt/LC_MESSAGES/djangojs.mo
@@ -1421,9 +1425,6 @@ ${PYSITELIB}/cms/tests/test_static_analysis.pyo
 ${PYSITELIB}/cms/tests/test_static_placeholder.py
 ${PYSITELIB}/cms/tests/test_static_placeholder.pyc
 ${PYSITELIB}/cms/tests/test_static_placeholder.pyo
-${PYSITELIB}/cms/tests/test_staticfiles.py
-${PYSITELIB}/cms/tests/test_staticfiles.pyc
-${PYSITELIB}/cms/tests/test_staticfiles.pyo
 ${PYSITELIB}/cms/tests/test_templates.py
 ${PYSITELIB}/cms/tests/test_templates.pyc
 ${PYSITELIB}/cms/tests/test_templates.pyo
@@ -1490,9 +1491,6 @@ ${PYSITELIB}/cms/utils/compat/dj.pyo
 ${PYSITELIB}/cms/utils/compat/forms.py
 ${PYSITELIB}/cms/utils/compat/forms.pyc
 ${PYSITELIB}/cms/utils/compat/forms.pyo
-${PYSITELIB}/cms/utils/compat/tests.py
-${PYSITELIB}/cms/utils/compat/tests.pyc
-${PYSITELIB}/cms/utils/compat/tests.pyo
 ${PYSITELIB}/cms/utils/conf.py
 ${PYSITELIB}/cms/utils/conf.pyc
 ${PYSITELIB}/cms/utils/conf.pyo
