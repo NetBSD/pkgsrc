@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/06/19 11:55:27 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/01/16 09:27:05 adam Exp $
 
-SHA1 (django-polymorphic-2.1.2.tar.gz) = 48f0f7f35ec1b519ddf47c8088692c23f926b86f
-RMD160 (django-polymorphic-2.1.2.tar.gz) = 3adb9dd8ce70f877b7b26fc4b5750b4728631683
-SHA512 (django-polymorphic-2.1.2.tar.gz) = 1bdc45b0521b402a45329e9b50386a2e0e9d1ff6a1d55af577ca0acffb630f8a74ca1407113bddf9bce2c1367a793110b634b8f974ea3c815fdf05f159f676e6
-Size (django-polymorphic-2.1.2.tar.gz) = 100589 bytes
+SHA1 (django-polymorphic-3.0.0.tar.gz) = 40e20c0b35722e46273f670d34e90c38d58648e9
+RMD160 (django-polymorphic-3.0.0.tar.gz) = 1cbd6f85f2a55737d0b011056efd3b61962f7d43
+SHA512 (django-polymorphic-3.0.0.tar.gz) = 31470ebd2ff86479d07ee6063a9e67a606369e31c62ba6b16a92464eb2fffd9e92eefe7a86636f4a7f82e1373b4ffceebc03bbcf99060bfa20be3d09a725f733
+Size (django-polymorphic-3.0.0.tar.gz) = 51140 bytes
