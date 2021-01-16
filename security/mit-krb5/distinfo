@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.73 2020/10/08 00:23:14 gdt Exp $
+$NetBSD: distinfo,v 1.74 2021/01/16 09:00:23 jperkin Exp $
 
-SHA1 (krb5-1.18.2.tar.gz) = 547c4e4afa06dd39c888a9ee89397ec3c3425c90
-RMD160 (krb5-1.18.2.tar.gz) = 5943e2bb26477a6251a9b2fa5f5fecd1ffe276c3
-SHA512 (krb5-1.18.2.tar.gz) = 7cbb1b28e677fea3e0794e93951f3caaa2c49bb1175dd187951e72a466cc69d96c3b833d838000fe911c1a437d96a558e550f27c53a8b332fb9dfc7cbb7ec44c
-Size (krb5-1.18.2.tar.gz) = 8713927 bytes
+SHA1 (krb5-1.18.3.tar.gz) = fdbb31fab5bdea24fc464d09bdbc245740648f1a
+RMD160 (krb5-1.18.3.tar.gz) = b8a3c3542433442e18984456773b0a2749fc6282
+SHA512 (krb5-1.18.3.tar.gz) = cf0bf6cf8f622fa085954e6da998d952cf64dc7ccc319972ed81ea0542089cabf2d0e8243df84da01ad6f40584768ca2f02d108630c6741fa7b3d7d98c887c01
+Size (krb5-1.18.3.tar.gz) = 8715312 bytes
 SHA1 (patch-Makefile.in) = 24f915d7a4340b9a4a454b9b67c94147fdc49c34
 SHA1 (patch-aclocal.m4) = 07b5d9ae38c74eaea6ba62aed9062dca1bf7f3fb
 SHA1 (patch-build-tools_krb5-config.in) = 4ab922df1d86d86f9ef043f2c5cdf048c0477d3a
@@ -15,6 +15,7 @@ SHA1 (patch-config_libpriv.in) = 78342f649f8e9d3a3b5a4f83e65b6c46f589586b
 SHA1 (patch-config_pre.in) = 255973132db9327190211214c3e33b4551bd283b
 SHA1 (patch-config_shlib.conf) = c47a647307e7d883e7c22528b7b0f5ad038cbcb3
 SHA1 (patch-include_osconf.hin) = d31a8164f417bc31a787c8e16d1bd24f27b7140d
+SHA1 (patch-kadmin_cli_getdate.y) = 81fda2911fabdcfe88085dae69ff44ea0b0608a1
 SHA1 (patch-kadmin_cli_ss_wrapper.c) = e32e6180f8d508cb2eb18489ce2fef0a1ad0f51d
 SHA1 (patch-kprop_kproplog.c) = 9b751de7eb70d026b54e15275bb878bdb0ce52eb
 SHA1 (patch-lib_apputils_Makefile.in) = 085004041a2bb8c4bb3074c2e71e71f22f4f06d7
@@ -26,6 +27,7 @@ SHA1 (patch-lib_kdb_kdb__log.c) = dc759fae6099e7586686bcf14d7cd775854e0360
 SHA1 (patch-lib_krb5_ccache_Makefile.in) = 330ae21ec3b290ae16478c2c49a138acac5bf2fd
 SHA1 (patch-plugins_kdb_db2_Makefile.in) = f374fc5915b735075fbb751ef736f4ce54abc289
 SHA1 (patch-plugins_kdb_db2_libdb2_Makefile.in) = b4b7e8e4192b5e5318f1e42c49315789619f3ae9
+SHA1 (patch-plugins_kdb_ldap_ldap__util_Makefile.in) = 7aa0f44cc02c523c837e7e3e1766624d2323deb9
 SHA1 (patch-plugins_preauth_otp_Makefile.in) = 8c779e3b37cab4138f300f4a09325387092c79f8
 SHA1 (patch-plugins_preauth_pkinit_Makefile.in) = c778366d5bd1cae85424643a582013101fc9632d
 SHA1 (patch-util_k5ev_verto-k5ev.c) = 8f074ddccbaaa03576f0302437aed3aaad1b738d
