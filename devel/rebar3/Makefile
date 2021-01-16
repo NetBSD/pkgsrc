@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 10:39:29 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/16 00:06:09 triaxx Exp $
 
-DISTNAME=	rebar3-3.6.1
+DISTNAME=	rebar3-3.14.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
 DIST_SUBDIR=	rebar3
@@ -12,16 +12,17 @@ LICENSE=	apache-2.0
 
 USE_TOOLS+=	tar
 
-REBAR_DEPS=	bbmustache-1.5.0 \
-		certifi-2.0.0 \
-		cf-0.2.2 \
-		cth_readable-1.4.2 \
-		erlware_commons-1.2.0 \
-		eunit_formatters-0.5.0 \
+REBAR_DEPS=	erlware_commons-1.3.1 \
+		ssl_verify_fun-1.1.6 \
+		certifi-2.5.2 \
+		parse_trans-3.3.0 \
+		providers-1.8.1 \
 		getopt-1.0.1 \
-		providers-1.7.0 \
-		relx-3.26.0 \
-		ssl_verify_fun-1.1.3
+		bbmustache-1.10.0 \
+		relx-4.2.0 \
+		cf-0.3.1 \
+		cth_readable-1.4.9 \
+		eunit_formatters-0.5.0
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
@@ -30,9 +31,6 @@ DISTFILES+=		${dep}.tar
 SITES.${dep}.tar=	https://repo.hex.pm/tarballs/
 EXTRACT_DIR.${dep}.tar=	${WRKSRC}/_build/default/lib/${dep:C/-.*//}
 .endfor
-
-DISTFILES+=				${DISTNAME:S/-/-cache-/}.tar.gz
-SITES.${DISTNAME:S/-/-cache-/}.tar.gz=	https://ftp.netbsd.org/pub/NetBSD/misc/fhajny/
 
 SUBST_CLASSES+=		escript
 SUBST_STAGE.escript=	pre-configure
