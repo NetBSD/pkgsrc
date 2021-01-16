@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2017/10/24 06:46:15 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2021/01/16 00:10:50 triaxx Exp $
 
-SHA1 (lager-3.5.2.tar.gz) = 2441e3aaad770e219ed1c0ca17250c3e4beb3839
-RMD160 (lager-3.5.2.tar.gz) = 0a21de3c4c25f0dc2e094352af8aeffbd8337bd6
-SHA512 (lager-3.5.2.tar.gz) = d207e5b3b937b75601fd9ed75fd3b33ef9fc83966c3e6032d4e03cbf66c05bf03f67de177380d57a0a89298dd9172ded3954cabcee3e24ad5f6a70afbc035ecb
-Size (lager-3.5.2.tar.gz) = 258789 bytes
+SHA1 (lager-3.8.1.tar.gz) = 840912f8ba56a057e45c63fa4957a7599e3fda5e
+RMD160 (lager-3.8.1.tar.gz) = 0ed5a7b289dfad92fb2ac8bbf628935902b7a8f2
+SHA512 (lager-3.8.1.tar.gz) = 5838b7676aef4b289116a8fd66e475a6e35b9b0a1947310168a73014f3f641e447df3d311a430c6920df3ebeafbab90fd101dbbeaebfd7b05aac9c89d85841eb
+Size (lager-3.8.1.tar.gz) = 273594 bytes
+SHA1 (patch-Makefile) = 8c71466df8a7ea55e4eef9f99ab6de05d32b428f
 SHA1 (patch-rebar.config) = cc8c5503c026a5610b982773f52a38ee26385a27
