@@ -1,10 +1,10 @@
-$NetBSD: patch-src_hostapi_sun_pa__unix__sun.c,v 1.2 2020/04/25 10:18:09 nia Exp $
+$NetBSD: patch-src_hostapi_sun_pa__unix__sun.c,v 1.3 2021/01/16 21:06:52 reinoud Exp $
 
 Sun/NetBSD audio support.
 
---- src/hostapi/sun/pa_unix_sun.c.orig	2020-04-25 09:39:40.448044879 +0000
+--- src/hostapi/sun/pa_unix_sun.c.orig	2021-01-16 19:57:35.080979704 +0000
 +++ src/hostapi/sun/pa_unix_sun.c
-@@ -0,0 +1,1138 @@
+@@ -0,0 +1,1140 @@
 +/*
 + * $Id"
 + * PortAudio Portable Real-Time Audio Library
@@ -201,9 +201,11 @@ Sun/NetBSD audio support.
 +        else
 +            (void)snprintf(path, sizeof(path), SUN_DEV_DEFAULT);
 +
-+        if( (fd = open(path, O_WRONLY | O_NONBLOCK)) < 0 ||
-+            (fd = open(path, O_RDONLY | O_NONBLOCK)) < 0 )
-+            continue;
++        fd = open(path, O_WRONLY | O_NONBLOCK);
++	if (fd < 0)
++		fd = open(path, O_RDONLY | O_NONBLOCK);
++	if (fd < 0)
++		continue;
 +
 +        PA_UNLESS(dev = PaUtil_GroupAllocateMemory(sunHostApi->allocations, sizeof(PaDeviceInfo)), paInsufficientMemory);
 +
