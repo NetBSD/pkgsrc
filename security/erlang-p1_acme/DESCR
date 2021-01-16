@@ -1,0 +1,3 @@
+This Erlang library provides an ACME client implementing RFC 8555. It was
+written for ejabberd which still uses it. It was split off into its own project
+to follow Erlang/OTP guidelines.
