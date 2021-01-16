@@ -1,4 +1,0 @@
-Base64Url is a standalone, URL-safe and base64-compatible codec for Erlang. It
-supports URL-safe base64 en- and decoding. Some systems in the wild use base64
-URL encoding, but keep the padding for MIME compatibility (base64
-Content-Transfer-Encoding). Base64Url allows one to interact with such systems.

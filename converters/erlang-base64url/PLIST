@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/16 15:31:53 triaxx Exp $
-lib/erlang/lib/base64url-${PKGVERSION}/ebin/base64url.app
-lib/erlang/lib/base64url-${PKGVERSION}/ebin/base64url.beam
