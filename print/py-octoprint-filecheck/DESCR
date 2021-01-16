@@ -1,0 +1,3 @@
+The File Check plugin tries to detect common issues in uploaded files that are
+known to cause issues while printing and which in the past have caused support
+requests on OctoPrint's Community Forums.
