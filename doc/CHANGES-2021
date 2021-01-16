@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.448 2021/01/16 18:57:05 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.449 2021/01/16 19:08:17 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -566,3 +566,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/gxemul to 0.6.2nb2 [nick 2021-01-16]
 	Added textproc/erlang-yconf version 1.0.9 [triaxx 2021-01-16]
 	Added print/py-octoprint-firmwarecheck version 2020.09.23 [khorben 2021-01-16]
+	Updated audio/fasttracker2 to 1.43 [fox 2021-01-16]
