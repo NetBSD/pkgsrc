@@ -1,0 +1,19 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/01/16 02:25:48 mef Exp $
+
+gtk-doc.make:302: error: HAVE_GTK_DOC does not appear in AM_CONDITIONAL
+docs/reference/Makefile.am:85:   'gtk-doc.make' included from here
+
+--- configure.ac.orig	2010-06-20 22:23:27.000000000 +0900
++++ configure.ac	2021-01-09 10:07:29.919590505 +0900
+@@ -59,7 +59,11 @@ AC_CHECK_HEADER([expat.h], [],
+   [AC_MSG_ERROR([cannot find expat.h header])])
+ 
+ # check for gtk-doc
++m4_ifdef([GTK_DOC_CHECK], [
+ GTK_DOC_CHECK(1.12)
++],[
++AM_CONDITIONAL([HAVE_GTK_DOC], false)
++])
+ 
+ # check for gobject-introspection
+ GOBJECT_INTROSPECTION_CHECK([0.6.7])
