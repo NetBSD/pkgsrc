@@ -1,0 +1,4 @@
+The Firmware Check plugin tries to identify printers or rather printer firmware
+with known safety issues, such as disabled thermal runaway protection, or other
+kinds of severe issues, like known communication crippling bugs, and displays a
+warning box to logged in users on identification of such a firmware.
