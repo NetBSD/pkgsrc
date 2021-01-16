@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/15 23:20:36 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/16 00:02:07 triaxx Exp $
 
 DISTNAME=	idna-6.1.1
 CATEGORIES=	net
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/benoitc/erlang-idna/
 COMMENT=	Pure Erlang IDNA implementation following the RFC5891
 LICENSE=	mit
+
+BUILD_DEPENDS+=	rebar3-[0-9]*:../../devel/rebar3
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
