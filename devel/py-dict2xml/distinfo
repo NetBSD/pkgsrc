@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/16 19:11:04 riastradh Exp $
+
+SHA1 (dict2xml-1.7.0.tar.gz) = abc8c67a608998231475e2403ab6c866db076678
+RMD160 (dict2xml-1.7.0.tar.gz) = cfe8337737df59aeba2faf3d8c8f5efe8341a6ff
+SHA512 (dict2xml-1.7.0.tar.gz) = 7ed2af3facc81d70b1ccb1a1ffacdd7f72a38b7435048f170f657e8b48f3f9a144238df93e577ea8d3bfae019edfbbe35da7b2e7cd82fbb8f59cd3f646ac6a6e
+Size (dict2xml-1.7.0.tar.gz) = 6432 bytes
