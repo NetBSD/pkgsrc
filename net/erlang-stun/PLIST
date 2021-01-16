@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/25 14:52:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/16 13:00:27 triaxx Exp $
 lib/erlang/lib/stun
 lib/erlang/lib/stun-${PKGVERSION}/ebin/stun.app
 lib/erlang/lib/stun-${PKGVERSION}/ebin/stun.beam
 lib/erlang/lib/stun-${PKGVERSION}/ebin/stun_app.beam
 lib/erlang/lib/stun-${PKGVERSION}/ebin/stun_codec.beam
 lib/erlang/lib/stun-${PKGVERSION}/ebin/stun_listener.beam
+lib/erlang/lib/stun-${PKGVERSION}/ebin/stun_logger.beam
 lib/erlang/lib/stun-${PKGVERSION}/ebin/stun_shaper.beam
 lib/erlang/lib/stun-${PKGVERSION}/ebin/stun_sup.beam
 lib/erlang/lib/stun-${PKGVERSION}/ebin/stun_test.beam
@@ -13,3 +14,4 @@ lib/erlang/lib/stun-${PKGVERSION}/ebin/turn.beam
 lib/erlang/lib/stun-${PKGVERSION}/ebin/turn_sm.beam
 lib/erlang/lib/stun-${PKGVERSION}/ebin/turn_tmp_sup.beam
 lib/erlang/lib/stun-${PKGVERSION}/include/stun.hrl
+lib/erlang/lib/stun-${PKGVERSION}/include/stun_logger.hrl
