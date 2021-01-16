@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/05/01 08:17:43 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/01/16 21:18:55 adam Exp $
 
-SHA1 (pyelftools-0.26.tar.gz) = 64352f4e0e8878b764b2bb2156aabf10f5ba6fc8
-RMD160 (pyelftools-0.26.tar.gz) = c2258dbe3fb2b17341ffc96aed2091cfe8fa8808
-SHA512 (pyelftools-0.26.tar.gz) = ba77d8f21fa680648884c3a38f4ec69dad1bc2e828551c5a77e487388bd0c2a28bc4c3f4702e63b39fd763611cc4d018c7715c141bb30ca908c1dbdcd7b149e8
-Size (pyelftools-0.26.tar.gz) = 535651 bytes
+SHA1 (pyelftools-0.27.tar.gz) = 8509a716f9f936526f64fb23f313c5a9baf2f123
+RMD160 (pyelftools-0.27.tar.gz) = ce86de5efba5e9dd60b13d52259ab2bbe7a08410
+SHA512 (pyelftools-0.27.tar.gz) = 87fc8d7f5534126c61fb2d89ce5f2465709f03cd45c10a2b39427415e7d36b1216e7d3d8dff6a359a5cab595bf1de90b01fa1d24c6f4196feef81381e34d2bce
+Size (pyelftools-0.27.tar.gz) = 2636011 bytes
