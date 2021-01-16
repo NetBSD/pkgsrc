@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/16 19:47:57 triaxx Exp $
+lib/erlang/lib/p1_acme-${PKGVERSION}/ebin/p1_acme.app
+lib/erlang/lib/p1_acme-${PKGVERSION}/ebin/p1_acme.beam
+lib/erlang/lib/p1_acme-${PKGVERSION}/ebin/p1_acme_codec.beam

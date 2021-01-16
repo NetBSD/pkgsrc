@@ -1,0 +1,15 @@
+$NetBSD: patch-rebar.config.script,v 1.1 2021/01/16 19:47:57 triaxx Exp $
+
+Use pkgsrc dependencies.
+
+--- rebar.config.script.orig	2020-12-08 13:55:42.000000000 +0000
++++ rebar.config.script
+@@ -62,7 +62,7 @@ Cfg2 = case IsRebar3 of
+                [{plugin_dir, filename:join([filename:dirname(SCRIPT),"plugins"])},
+                 {plugins, [override_deps_versions]}] ++
+                 ModCfg(CONFIG, [deps], fun(V) ->
+-                   V ++ [{base64url, ".*", {git, "git://github.com/dvv/base64url.git", {tag, "v1.0"}}}]
++                   V
+                 end, [])
+        end,
+ 
