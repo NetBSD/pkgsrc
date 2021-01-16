@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/16 20:50:04 riastradh Exp $
+bin/doilit
+bin/kdrfc
+bin/kramdown-rfc-extract-markdown
+bin/kramdown-rfc2629
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bin/doilit
+${GEM_LIBDIR}/bin/kdrfc
+${GEM_LIBDIR}/bin/kramdown-rfc-extract-markdown
+${GEM_LIBDIR}/bin/kramdown-rfc2629
+${GEM_LIBDIR}/data/encoding-fallbacks.txt
+${GEM_LIBDIR}/data/kramdown-rfc2629.erb
+${GEM_LIBDIR}/data/math.json
+${GEM_LIBDIR}/kramdown-rfc2629.gemspec
+${GEM_LIBDIR}/lib/kramdown-rfc/gzip-clone.rb
+${GEM_LIBDIR}/lib/kramdown-rfc/parameterset.rb
+${GEM_LIBDIR}/lib/kramdown-rfc/refxml.rb
+${GEM_LIBDIR}/lib/kramdown-rfc2629.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
