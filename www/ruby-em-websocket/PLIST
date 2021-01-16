@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/13 16:12:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/16 12:45:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENCE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/em-websocket.gemspec
