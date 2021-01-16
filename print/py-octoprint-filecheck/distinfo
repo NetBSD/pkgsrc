@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/16 20:40:05 khorben Exp $
+
+SHA1 (OctoPrint-FileCheck-2020.08.07.tar.gz) = d71b61c291e3504675ac3f851fa0a6acfaa60509
+RMD160 (OctoPrint-FileCheck-2020.08.07.tar.gz) = 4b1a6ca93d09c7170e699e21ea55baa02db5e4d6
+SHA512 (OctoPrint-FileCheck-2020.08.07.tar.gz) = 58adc73f831d6f3dcf10b9fedac834daab0331850c2d98383fee9bd3734ee0c1eb15d3ec171a1896db92900bc0e5587de82de643535eb2898a7592424e21bcba
+Size (OctoPrint-FileCheck-2020.08.07.tar.gz) = 45071 bytes
