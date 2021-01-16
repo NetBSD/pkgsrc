@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.433 2021/01/16 13:00:44 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.434 2021/01/16 13:04:58 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -551,3 +551,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-http-parser to 1.2.3 [taca 2021-01-16]
 	Updated www/ruby-net-http-persistent to 4.0.1 [taca 2021-01-16]
 	Updated net/erlang-stun to 1.0.40 [triaxx 2021-01-16]
+	Updated net/erlang-esip to 1.0.39 [triaxx 2021-01-16]
