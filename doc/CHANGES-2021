@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.440 2021/01/16 13:44:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.441 2021/01/16 14:45:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -558,3 +558,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-unicorn to 5.8.0 [taca 2021-01-16]
 	Updated www/ruby-websocket to 1.2.9 [taca 2021-01-16]
 	Updated www/thin to 1.8.0 [taca 2021-01-16]
+	Updated graphics/osg to 3.6.5 [nia 2021-01-16]
