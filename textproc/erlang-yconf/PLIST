@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/16 18:19:17 triaxx Exp $
+lib/erlang/lib/yconf-${PKGVERSION}/ebin/yconf.app
+lib/erlang/lib/yconf-${PKGVERSION}/ebin/yconf.beam
