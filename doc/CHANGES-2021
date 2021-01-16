@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.420 2021/01/16 09:04:25 adam Exp $
+$NetBSD: CHANGES-2021,v 1.421 2021/01/16 09:27:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -525,3 +525,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-django-classy-tags to 2.0.0 [adam 2021-01-16]
 	Updated www/py-django-treebeard to 4.4 [adam 2021-01-16]
 	Updated www/py-django-sekizai to 2.0.0 [adam 2021-01-16]
+	Updated www/py-djangocms-admin-style to 2.0.2 [adam 2021-01-16]
+	Updated www/py-django-cms to 3.8.0 [adam 2021-01-16]
+	Updated www/py-djangocms-attributes-field to 2.0.0 [adam 2021-01-16]
+	Updated www/py-django-polymorphic to 3.0.0 [adam 2021-01-16]
