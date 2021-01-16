@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/01/08 19:10:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/01/16 09:01:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -75,12 +75,6 @@ ${PYSITELIB}/treebeard/tests/admin.pyo
 ${PYSITELIB}/treebeard/tests/conftest.py
 ${PYSITELIB}/treebeard/tests/conftest.pyc
 ${PYSITELIB}/treebeard/tests/conftest.pyo
-${PYSITELIB}/treebeard/tests/jenkins/rm_workspace_coverage.py
-${PYSITELIB}/treebeard/tests/jenkins/rm_workspace_coverage.pyc
-${PYSITELIB}/treebeard/tests/jenkins/rm_workspace_coverage.pyo
-${PYSITELIB}/treebeard/tests/jenkins/toxhelper.py
-${PYSITELIB}/treebeard/tests/jenkins/toxhelper.pyc
-${PYSITELIB}/treebeard/tests/jenkins/toxhelper.pyo
 ${PYSITELIB}/treebeard/tests/models.py
 ${PYSITELIB}/treebeard/tests/models.pyc
 ${PYSITELIB}/treebeard/tests/models.pyo
