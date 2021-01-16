@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/19 08:49:21 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/01/16 12:58:10 taca Exp $
 
-SHA1 (http-parser-1.2.1.gem) = 833f0ac6e0164cb3200561fa1247b7a0dd12eb37
-RMD160 (http-parser-1.2.1.gem) = f22a321e5963e5646868f68cdc572b25da5495e0
-SHA512 (http-parser-1.2.1.gem) = 0666b9ca9e03a2ec4237ec47fc203a9a5bfb4ac93dac78aacfed9b39ef00be63fd413e70f8b26d087f376c8475830c42a235c912eb84a4988952e0fc2adbfd4a
-Size (http-parser-1.2.1.gem) = 31232 bytes
+SHA1 (http-parser-1.2.3.gem) = ab81408588e3a8a926bced771fa44ceb265de6e0
+RMD160 (http-parser-1.2.3.gem) = d37e1cca320c78576e0c8c25305b1bb945bff59c
+SHA512 (http-parser-1.2.3.gem) = 03c34c3e8174d9010440483af34800b74a7bbddd5daa63607e6aa2254d9c91cf36d90854ea65827b32680432de278aeeb7b8878f788f124c150f163409fa5107
+Size (http-parser-1.2.3.gem) = 31232 bytes
