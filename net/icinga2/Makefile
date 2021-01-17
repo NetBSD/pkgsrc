@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/15 00:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/17 13:22:26 wiz Exp $
 
 DISTNAME=	icinga2-2.12.3
 CATEGORIES=	net sysutils
@@ -138,6 +138,12 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFBASE} # not PKG_SYSCONFDIR!
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LOCALSTATEDIR=${VARBASE}
 # For ICINGA2_WITH_XXX see options.mk
 CMAKE_ARGS+=	-DICINGA2_WITH_TESTS=OFF
+
+# Avoid a name clash with Boost header on case-insensitive file systems.
+# Remove outdated GNUInstallDirs.cmake.
+post-extract:
+	${MV} ${WRKSRC}/VERSION ${WRKSRC}/ICINGA2_VERSION
+	${RM} ${WRKSRC}/third-party/cmake/GNUInstallDirs.cmake
 
 # The configuration files are installed in etc/icinga2.  You can't tell CMAKE
 # to put them elsewhere because the program and the config files contain
