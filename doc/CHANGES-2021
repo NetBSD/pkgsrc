@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.465 2021/01/17 15:45:25 taca Exp $
+$NetBSD: CHANGES-2021,v 1.466 2021/01/17 15:50:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -586,3 +586,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/hal to 0.5.14nb26 [wiz 2021-01-17]
 	Updated comms/asterisk15 to 15.7.4 [jnemeth 2021-01-17]
 	Updated mail/pear-Mail_Mime to 1.10.10 [taca 2021-01-17]
+	Updated devel/php-gearman to 2.1.0 [taca 2021-01-17]
