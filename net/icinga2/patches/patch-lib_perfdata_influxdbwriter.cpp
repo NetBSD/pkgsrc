@@ -1,7 +1,6 @@
-$NetBSD: patch-lib_perfdata_influxdbwriter.cpp,v 1.1 2021/01/15 00:37:17 wiz Exp $
+$NetBSD: patch-lib_perfdata_influxdbwriter.cpp,v 1.2 2021/01/17 13:22:26 wiz Exp $
 
 Support Boost 1.74 when setting HTTP headers
-
 Upstream Issue #8185, Pull Request #8575, commit 339b37a985b5f67ce5f0d2e02211d2c5b98a5d45
 
 --- lib/perfdata/influxdbwriter.cpp.orig	2020-08-03 15:43:47.000000000 +0200
