@@ -1,7 +1,6 @@
-$NetBSD: patch-lib_base_utility.cpp,v 1.1 2021/01/15 00:37:17 wiz Exp $
+$NetBSD: patch-lib_base_utility.cpp,v 1.2 2021/01/17 13:22:26 wiz Exp $
 
 Fix 'fs::copy_option' has not been declared with boost 1.74.0
-
 Upstream Issue #8185, Pull Request #8184, commit c30bae2994f1e5f33f6da51eb96d423e9bf0f75c
 
 --- lib/base/utility.cpp.orig
