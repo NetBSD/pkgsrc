@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:15 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/01/17 08:14:12 wiz Exp $
 bin/hal-device
 bin/hal-disable-polling
 bin/hal-find-by-capability
@@ -62,33 +62,6 @@ share/PolicyKit/policy/org.freedesktop.hal.power-management.policy
 share/PolicyKit/policy/org.freedesktop.hal.storage.policy
 share/PolicyKit/policy/org.freedesktop.hal.wol.policy
 share/examples/hal/hal.conf
-share/gtk-doc/html/libhal-storage/home.png
-share/gtk-doc/html/libhal-storage/index.html
-share/gtk-doc/html/libhal-storage/index.sgml
-share/gtk-doc/html/libhal-storage/ix01.html
-share/gtk-doc/html/libhal-storage/left.png
-share/gtk-doc/html/libhal-storage/libhal-storage-libhal-storage.html
-share/gtk-doc/html/libhal-storage/libhal-storage.devhelp
-share/gtk-doc/html/libhal-storage/libhal-storage.devhelp2
-share/gtk-doc/html/libhal-storage/license.html
-share/gtk-doc/html/libhal-storage/right.png
-share/gtk-doc/html/libhal-storage/rn01.html
-share/gtk-doc/html/libhal-storage/style.css
-share/gtk-doc/html/libhal-storage/up.png
-share/gtk-doc/html/libhal-storage/version.xml
-share/gtk-doc/html/libhal/home.png
-share/gtk-doc/html/libhal/index.html
-share/gtk-doc/html/libhal/index.sgml
-share/gtk-doc/html/libhal/ix01.html
-share/gtk-doc/html/libhal/left.png
-share/gtk-doc/html/libhal/libhal-libhal.html
-share/gtk-doc/html/libhal/libhal.devhelp
-share/gtk-doc/html/libhal/libhal.devhelp2
-share/gtk-doc/html/libhal/license.html
-share/gtk-doc/html/libhal/right.png
-share/gtk-doc/html/libhal/rn01.html
-share/gtk-doc/html/libhal/style.css
-share/gtk-doc/html/libhal/up.png
 share/hal/fdi/fdi.dtd
 share/hal/fdi/policy/10osvendor/10-dockstation.fdi
 share/hal/fdi/policy/10osvendor/10-input-policy.fdi
