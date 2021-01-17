@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2021/01/09 19:42:42 gdt Exp $
+# $NetBSD: Makefile,v 1.55 2021/01/17 15:55:34 gdt Exp $
 
 DISTNAME=	gpsd-3.22
 CATEGORIES=	geography
@@ -27,6 +27,7 @@ USE_CURSES=	syncok
 
 # Documentation depends
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+= docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # \todo Decide if buildlink3 is more appropriate.
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
