@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.467 2021/01/17 19:33:17 pin Exp $
+$NetBSD: CHANGES-2021,v 1.468 2021/01/17 23:01:53 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -588,3 +588,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/pear-Mail_Mime to 1.10.10 [taca 2021-01-17]
 	Updated devel/php-gearman to 2.1.0 [taca 2021-01-17]
 	Added sysutils/dust version 0.5.4 [pin 2021-01-17]
+	Updated lang/sbcl to 2.1.0 [rjs 2021-01-17]
