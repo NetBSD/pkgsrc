@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/10/26 09:27:09 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/01/17 08:11:20 adam Exp $
 
 DISTNAME=	Mezzanine-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -26,6 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flakes>=0.6.1:../../devel/py-flakes
 TEST_DEPENDS+=	${PYPKGPREFIX}-pep8>=1.4.1:../../devel/py-pep8
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-django-contrib-comments
 
 REPLACE_PYTHON=	mezzanine/project_template/manage.py
 
