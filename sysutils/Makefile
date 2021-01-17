@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.927 2021/01/13 16:41:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.928 2021/01/17 19:32:45 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -183,6 +183,7 @@ SUBDIR+=	dtc
 SUBDIR+=	dtpstree
 SUBDIR+=	dupeguru
 SUBDIR+=	duplicity
+SUBDIR+=	dust
 SUBDIR+=	dvd+rw-tools
 SUBDIR+=	dvdisaster
 SUBDIR+=	dvdrecord
