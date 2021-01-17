@@ -1,16 +1,17 @@
-$NetBSD: patch-res_res__pjsip_config__domain__aliases.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-res_res__pjsip_config__domain__aliases.c,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- res/res_pjsip/config_domain_aliases.c.orig	2018-06-20 15:08:56.215815643 +0000
+--- res/res_pjsip/config_domain_aliases.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ res/res_pjsip/config_domain_aliases.c
-@@ -18,12 +18,13 @@
+@@ -17,14 +17,14 @@
+  */
  
  #include "asterisk.h"
- 
 +#include "asterisk/logger.h"
 +#include "asterisk/sorcery.h"
-+
- #include "pjsip.h"
- #include "pjlib.h"
+ 
+ #include <pjsip.h>
+ #include <pjlib.h>
+ 
  #include "asterisk/res_pjsip.h"
  #include "include/res_pjsip_private.h"
 -#include "asterisk/logger.h"
