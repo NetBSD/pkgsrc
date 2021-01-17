@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/01/14 12:14:06 mef Exp $
+# $NetBSD: Makefile,v 1.63 2021/01/17 05:19:33 mef Exp $
 
 DISTNAME=	matplotlib-3.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,4 +31,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../math/qhull/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
