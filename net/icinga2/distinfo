@@ -1,17 +1,19 @@
-$NetBSD: distinfo,v 1.1 2021/01/15 00:37:17 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/01/17 13:22:26 wiz Exp $
 
 SHA1 (icinga2-2.12.3.tar.gz) = 2cbcb9e1dd85613c8452235bdacd0eac347b0f69
 RMD160 (icinga2-2.12.3.tar.gz) = 21d907c8441503fcfda975756ccc76fb2a04f5b4
 SHA512 (icinga2-2.12.3.tar.gz) = 28b87e03a8ffeb7a1d19ddf9555151b826f7bf1fd33b0139c2fc8abe7c89d66d96089d5b32d0aaccc3876040514b2bfbde9970416d5ec4ea3b023b17c0fb1799
 Size (icinga2-2.12.3.tar.gz) = 7534454 bytes
-SHA1 (patch-CMakeLists.txt) = ef1bf5f3c7a787e2e1aba0ca241c605de21737c6
-SHA1 (patch-lib_base_string.cpp) = 8af8d9e7270664d9386f2dc2b0a3cc664f800610
-SHA1 (patch-lib_base_string.hpp) = f6c978a9fc1df45977ae02e35b59ff447630590b
-SHA1 (patch-lib_base_utility.cpp) = 85abaca2e84a0053247084b7f5f6baf70f50141c
-SHA1 (patch-lib_perfdata_elasticsearchwriter.cpp) = 8a98e1dfd0c273adebf842d6083c5f192c91bf0c
-SHA1 (patch-lib_perfdata_influxdbwriter.cpp) = 47df0dc5949e3812beb4d0d5168bc126f15d953c
-SHA1 (patch-lib_remote_configfileshandler.cpp) = 0b8ae9509a99df500502f163201bf0d1aeb8282d
-SHA1 (patch-lib_remote_httpserverconnection.cpp) = ce67da2feba7e262045478e933c4800d62d5591b
-SHA1 (patch-lib_remote_httputility.cpp) = 1da86b1be9566b977c7da03e17e206957f1bc0d7
-SHA1 (patch-lib_remote_infohandler.cpp) = 8f0767ced2be04953cfd6132a865de31da92e89e
+SHA1 (patch-CMakeLists.txt) = 052745f5725a90bdc1a113352f21eac590a2cb31
+SHA1 (patch-RELEASE.md) = 94f2651853010185415c653e89ec8f5c96e37fa2
+SHA1 (patch-doc_21-development.md) = 05afac552f1558a2dbf556d7c707c3d5625fba56
+SHA1 (patch-lib_base_string.cpp) = 8ee9a1fa7a34355a855df7c29614fab2ff98323e
+SHA1 (patch-lib_base_string.hpp) = 6e407f77f607a58bd726cebe6468469bc96b030f
+SHA1 (patch-lib_base_utility.cpp) = 78f269ba2bd3e29d24876c66e56e36267baed346
+SHA1 (patch-lib_perfdata_elasticsearchwriter.cpp) = b0a71a92be7c150088148cf4b3f33d9969027ca7
+SHA1 (patch-lib_perfdata_influxdbwriter.cpp) = c47de3528b648fbb53dd4d1b81a39cfe35e172f9
+SHA1 (patch-lib_remote_configfileshandler.cpp) = 34cc8f1a6b127a98efcf6ee7835367998ea202a0
+SHA1 (patch-lib_remote_httpserverconnection.cpp) = 6aa6a7a7dd8fce3f54c8a7b6496286074a4fc434
+SHA1 (patch-lib_remote_httputility.cpp) = a04578f7c9f2abdd9f9ed27bcd8cdc8a0cf3dd85
+SHA1 (patch-lib_remote_infohandler.cpp) = 2a91f1d38cad0234bbc5f8b6b2032baac71db91e
 SHA1 (patch-third-party_cmake_FindMySQL.cmake) = a33567c30db47c4fab379f1b7c358174dd85fdd3
