@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.217 2020/12/05 09:24:00 wiz Exp $
+# $NetBSD: gcc.mk,v 1.218 2021/01/17 15:32:00 maya Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -95,8 +95,8 @@ _DEF_VARS.gcc=	\
 	_LANGUAGES.gcc \
 	_LINKER_RPATH_FLAG \
 	_NEED_GCC2 _NEED_GCC3 _NEED_GCC34 _NEED_GCC44 \
-	_NEED_GCC48 _NEED_GCC49 _NEED_GCC5 _NEED_GCC6 \
-	_NEED_GCC7 _NEED_GCC8 _NEED_GCC9 _NEED_GCC10 \
+	_NEED_GCC6 \ _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
+	_NEED_GCC10 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
 	_PKGSRC_GCC_VERSION \
 	_USE_GCC_SHLIB _USE_PKGSRC_GCC \
@@ -171,17 +171,8 @@ _GCC34_PATTERNS= 3.[4-9] 3.[4-9].* 3.[1-9][0-9]*
 # _GCC44_PATTERNS matches N s.t. 4.0 <= N < 4.5.
 _GCC44_PATTERNS= 4.[0-4] 4.[0-4].*
 
-# _GCC48_PATTERNS matches N s.t. 4.5 <= N < 4.9.
-_GCC48_PATTERNS= 4.[5-8] 4.[5-8].*
-
-# _GCC49_PATTERNS matches N s.t. 4.9 <= N < 4.10.
-_GCC49_PATTERNS= 4.9 4.9.*
-
-# _GCC5_PATTERNS matches N s.t. 5.0 <= N < 6.
-_GCC5_PATTERNS= 5 5.*
-
-# _GCC6_PATTERNS matches N s.t. 6.0 <= N < 7.
-_GCC6_PATTERNS= 6 6.*
+# _GCC6_PATTERNS matches N s.t. 4.5 <= N < 7.
+_GCC6_PATTERNS= 4.[5-9] 4.[5-9]* 5 5.* 6 6.*
 
 # _GCC7_PATTERNS matches N s.t. 7.0 <= N < 8.
 _GCC7_PATTERNS= 7 7.*
@@ -320,24 +311,6 @@ _NEED_GCC44?=	no
 .for _pattern_ in ${_GCC44_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
 _NEED_GCC44=	yes
-.  endif
-.endfor
-_NEED_GCC48?=	no
-.for _pattern_ in ${_GCC48_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC48=	yes
-.  endif
-.endfor
-_NEED_GCC49?=	no
-.for _pattern_ in ${_GCC49_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC49=	yes
-.  endif
-.endfor
-_NEED_GCC5?=	no
-.for _pattern_ in ${_GCC5_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC5=	yes
 .  endif
 .endfor
 _NEED_GCC6?=	no
