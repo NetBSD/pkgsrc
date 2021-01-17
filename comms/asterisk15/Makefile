@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2020/11/05 09:07:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2021/01/17 08:32:40 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
+#       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-15.4.1
-PKGREVISION=	24
+DISTNAME=	asterisk-15.7.4
+#PKGREVISION=	24
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -148,7 +149,7 @@ PLIST.unbound=	yes
 DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.2.tar.gz
 
 # pjproject
-PJPROJ_VERSION=	2.7.2
+PJPROJ_VERSION=	2.8
 SITES.pjproject-${PJPROJ_VERSION}.tar.bz2= \
 	-https://raw.githubusercontent.com/asterisk/third-party/master/pjproject/${PJPROJ_VERSION}/pjproject-${PJPROJ_VERSION}.tar.bz2
 SITES.pjproject-${PJPROJ_VERSION}.md5= \
@@ -290,7 +291,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/README.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
-.if ${OPSYS} != "Darwin" && ${PKGSRC_COMPILER} == "clang"
+.if ${OPSYS} != "Darwin" && ${PKGSRC_COMPILER:Mclang}
 .include "../../lang/libBlocksRuntime/buildlink3.mk"
 LDFLAGS+= -L${PREFIX}/lib
 .endif

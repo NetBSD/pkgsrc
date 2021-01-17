@@ -1,6 +1,6 @@
-$NetBSD: patch-channels_chan__pjsip.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-channels_chan__pjsip.c,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- channels/chan_pjsip.c.orig	2018-06-20 14:36:49.919764716 +0000
+--- channels/chan_pjsip.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ channels/chan_pjsip.c
 @@ -34,10 +34,6 @@
  
@@ -13,9 +13,9 @@ $NetBSD: patch-channels_chan__pjsip.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  #include "asterisk/lock.h"
  #include "asterisk/channel.h"
  #include "asterisk/module.h"
-@@ -62,10 +58,14 @@
- #include "asterisk/pickup.h"
+@@ -63,10 +59,14 @@
  #include "asterisk/test.h"
+ #include "asterisk/message.h"
  
 -#include "asterisk/res_pjsip.h"
 -#include "asterisk/res_pjsip_session.h"

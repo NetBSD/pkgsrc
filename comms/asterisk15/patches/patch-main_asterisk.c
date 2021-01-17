@@ -1,16 +1,7 @@
-$NetBSD: patch-main_asterisk.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-main_asterisk.c,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- main/asterisk.c.orig	2018-05-01 20:12:26.000000000 +0000
+--- main/asterisk.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ main/asterisk.c
-@@ -170,7 +170,7 @@
- #include <sys/param.h>
- #include <sys/sysctl.h>
- #include <sys/vmmeter.h>
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
- #include <vm/vm_param.h>
- #endif
- #if defined(HAVE_SWAPCTL)
 @@ -852,7 +852,7 @@ int64_t ast_mark(int i, int startstop)
  #define DEFINE_PROFILE_MIN_MAX_VALUES min = 0; \
  	max = prof_data->entries;\

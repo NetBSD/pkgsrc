@@ -1,8 +1,8 @@
-$NetBSD: patch-res_res__pjsip_pjsip__options.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-res_res__pjsip_pjsip__options.c,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- res/res_pjsip/pjsip_options.c.orig	2018-06-20 15:12:53.179204973 +0000
+--- res/res_pjsip/pjsip_options.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ res/res_pjsip/pjsip_options.c
-@@ -18,11 +18,6 @@
+@@ -19,11 +19,6 @@
  
  #include "asterisk.h"
  
@@ -14,12 +14,13 @@ $NetBSD: patch-res_res__pjsip_pjsip__options.c,v 1.1 2018/07/16 21:53:05 joerg E
  #include "asterisk/channel.h"
  #include "asterisk/pbx.h"
  #include "asterisk/astobj2.h"
-@@ -30,9 +25,15 @@
+@@ -31,10 +26,16 @@
  #include "asterisk/time.h"
  #include "asterisk/test.h"
  #include "asterisk/statsd.h"
 -#include "include/res_pjsip_private.h"
  #include "asterisk/taskprocessor.h"
+ #include "asterisk/threadpool.h"
  
 +#include <pjsip.h>
 +#include <pjsip_ua.h>
@@ -28,6 +29,6 @@ $NetBSD: patch-res_res__pjsip_pjsip__options.c,v 1.1 2018/07/16 21:53:05 joerg E
 +#include "asterisk/res_pjsip.h"
 +#include "include/res_pjsip_private.h"
 +
- #define DEFAULT_LANGUAGE "en"
- #define DEFAULT_ENCODING "text/plain"
- #define QUALIFIED_BUCKETS 211
+ /*
+  * This implementation for OPTIONS support is based around the idea
+  * that realistically an AOR generally has very few contacts and is

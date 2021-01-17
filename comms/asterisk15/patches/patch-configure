@@ -1,36 +1,23 @@
-$NetBSD: patch-configure,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- configure.orig	2018-05-01 20:12:26.000000000 +0000
+--- configure.orig	2019-09-05 13:09:20.000000000 +0000
 +++ configure
-@@ -9089,12 +9089,12 @@ else
+@@ -9127,12 +9127,12 @@ else
  
  			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for clang -fblocks" >&5
  $as_echo_n "checking for clang -fblocks... " >&6; }
--			if test "`echo "int main(){return ^{return 42;}();}" | ${CC} -o /dev/null -fblocks -x c - 2>&1`" = ""; then
-+			if test "`echo "int main(){return ^{return 42;}();}" | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c - 2>&1`" = ""; then
+-			if test "`echo 'int main(){return ^{return 42;}();}' | ${CC} -o /dev/null -fblocks -x c - 2>&1`" = ""; then
++			if test "`echo 'int main(){return ^{return 42;}();}' | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c - 2>&1`" = ""; then
  				AST_CLANG_BLOCKS_LIBS=""
  				AST_CLANG_BLOCKS="-Wno-unknown-warning-option -fblocks"
  				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
--			elif test "`echo "int main(){return ^{return 42;}();}" | ${CC} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
-+			elif test "`echo "int main(){return ^{return 42;}();}" | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
+-			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
++			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
  				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
  				AST_CLANG_BLOCKS="-fblocks"
  				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -9230,10 +9230,10 @@ $as_echo "configuring" >&6; }
- 
- 	this_host=$(./config.sub $(./config.guess))
- 	if test "$build" != "$this_host" ; then
--		PJPROJECT_CONFIGURE_OPTS+=" --build=$build"
-+		PJPROJECT_CONFIGURE_OPTS="${PJPROJECT_CONFIGURE_OPTS} --build=$build"
- 	fi
- 	if test "$host" != "$this_host" ; then
--		PJPROJECT_CONFIGURE_OPTS+=" --host=$host"
-+		PJPROJECT_CONFIGURE_OPTS="${PJPROJECT_CONFIGURE_OPTS} --host=$host"
- 	fi
- 
- 	export TAR PATCH SED NM EXTERNALS_CACHE_DIR AST_DOWNLOAD_CACHE DOWNLOAD_TO_STDOUT DOWNLOAD_TIMEOUT DOWNLOAD MD5 CAT CUT GREP
-@@ -15006,7 +15006,7 @@ fi
+@@ -15352,7 +15352,7 @@ fi
  done
  
  
@@ -39,7 +26,7 @@ $NetBSD: patch-configure,v 1.1 2018/07/16 21:53:05 joerg Exp $
  if test "x$ac_cv_header_sys_poll_h" = xyes; then :
  
  else
-@@ -17021,7 +17021,7 @@ fi
+@@ -17367,7 +17367,7 @@ fi
  done
  
  
@@ -48,7 +35,7 @@ $NetBSD: patch-configure,v 1.1 2018/07/16 21:53:05 joerg Exp $
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -17256,7 +17256,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -17602,7 +17602,7 @@ rm -f core conftest.err conftest.$ac_obj
  LDFLAGS=${old_LDFLAGS}
  rm -f conftest.dynamics
  
@@ -57,7 +44,7 @@ $NetBSD: patch-configure,v 1.1 2018/07/16 21:53:05 joerg Exp $
  if test "x$ac_cv_header_sys_poll_h" = xyes; then :
    HAS_POLL=1
  
-@@ -19454,6 +19454,148 @@ fi
+@@ -19813,6 +19813,148 @@ fi
  
  
  
@@ -206,7 +193,7 @@ $NetBSD: patch-configure,v 1.1 2018/07/16 21:53:05 joerg Exp $
  # The cast to long int works around a bug in the HP C Compiler
  # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
  # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -20680,6 +20822,8 @@ $as_echo_n "checking for getifaddrs() su
+@@ -20917,6 +21059,8 @@ $as_echo_n "checking for getifaddrs() su
  
  	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */

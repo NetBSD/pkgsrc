@@ -1,8 +1,8 @@
-$NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-apps_app__queue.c,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- apps/app_queue.c.orig	2018-05-01 20:12:26.000000000 +0000
+--- apps/app_queue.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ apps/app_queue.c
-@@ -2307,7 +2307,7 @@ static int get_member_status(struct call
+@@ -2308,7 +2308,7 @@ static int get_member_status(struct call
  				ast_debug(4, "%s is unavailable because he is paused'\n", member->membername);
  				break;
  			} else if ((conditions & QUEUE_EMPTY_WRAPUP) && member->lastcall && q->wrapuptime && (time(NULL) - q->wrapuptime < member->lastcall)) {
@@ -11,7 +11,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  				break;
  			} else {
  				ao2_ref(member, -1);
-@@ -5549,7 +5549,7 @@ static int wait_our_turn(struct queue_en
+@@ -5550,7 +5550,7 @@ static int wait_our_turn(struct queue_en
  
  			if ((status = get_member_status(qe->parent, qe->max_penalty, qe->min_penalty, qe->raise_penalty, qe->parent->leavewhenempty, 0))) {
  				*reason = QUEUE_LEAVEEMPTY;
@@ -20,7 +20,18 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  				res = -1;
  				qe->handled = -1;
  				break;
-@@ -6934,8 +6934,8 @@ static int try_calling(struct queue_ent 
+@@ -5810,8 +5810,8 @@ static void queue_agent_cb(void *userdat
+ 	} else if (ast_channel_agent_logoff_type() == stasis_message_type(msg)) {
+ 		ast_queue_log("NONE", agent_blob->snapshot->uniqueid,
+ 			ast_json_string_get(ast_json_object_get(agent_blob->blob, "agent")),
+-			"AGENTLOGOFF", "%s|%ld", agent_blob->snapshot->name,
+-			(long) ast_json_integer_get(ast_json_object_get(agent_blob->blob, "logintime")));
++			"AGENTLOGOFF", "%s|%jd", agent_blob->snapshot->name,
++			(intmax_t) ast_json_integer_get(ast_json_object_get(agent_blob->blob, "logintime")));
+ 	}
+ }
+ 
+@@ -6938,8 +6938,8 @@ static int try_calling(struct queue_ent 
  		/* if setinterfacevar is defined, make member variables available to the channel */
  		/* use  pbx_builtin_setvar to set a load of variables with one call */
  		if (qe->parent->setinterfacevar && interfacevar) {
@@ -31,7 +42,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  			pbx_builtin_setvar_multiple(qe->chan, ast_str_buffer(interfacevar));
  			pbx_builtin_setvar_multiple(peer, ast_str_buffer(interfacevar));
  		}
-@@ -6943,8 +6943,8 @@ static int try_calling(struct queue_ent 
+@@ -6947,8 +6947,8 @@ static int try_calling(struct queue_ent 
  		/* if setqueueentryvar is defined, make queue entry (i.e. the caller) variables available to the channel */
  		/* use  pbx_builtin_setvar to set a load of variables with one call */
  		if (qe->parent->setqueueentryvar && interfacevar) {
@@ -42,7 +53,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  			pbx_builtin_setvar_multiple(qe->chan, ast_str_buffer(interfacevar));
  			pbx_builtin_setvar_multiple(peer, ast_str_buffer(interfacevar));
  		}
-@@ -8205,8 +8205,8 @@ static int queue_exec(struct ast_channel
+@@ -8209,8 +8209,8 @@ static int queue_exec(struct ast_channel
  		}
  	}
  
@@ -53,7 +64,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  
  	qe.chan = chan;
  	qe.prio = prio;
-@@ -8257,8 +8257,8 @@ check_turns:
+@@ -8261,8 +8261,8 @@ check_turns:
  			record_abandoned(&qe);
  			reason = QUEUE_TIMEOUT;
  			res = 0;
@@ -64,7 +75,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  			break;
  		}
  
-@@ -8328,7 +8328,7 @@ check_turns:
+@@ -8332,7 +8332,7 @@ check_turns:
  			record_abandoned(&qe);
  			reason = QUEUE_TIMEOUT;
  			res = 0;
@@ -73,18 +84,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  			break;
  		}
  
-@@ -8356,8 +8356,8 @@ stop:
- 			if (!qe.handled) {
- 				record_abandoned(&qe);
- 				ast_queue_log(args.queuename, ast_channel_uniqueid(chan), "NONE", "ABANDON",
--					"%d|%d|%ld", qe.pos, qe.opos,
--					(long) (time(NULL) - qe.start));
-+					"%d|%d|%jd", qe.pos, qe.opos,
-+					(intmax_t) (time(NULL) - qe.start));
- 				res = -1;
- 			} else if (qcontinue) {
- 				reason = QUEUE_CONTINUE;
-@@ -8368,7 +8368,7 @@ stop:
+@@ -8373,7 +8373,7 @@ stop:
  			}
  		} else if (qe.valid_digits) {
  			ast_queue_log(args.queuename, ast_channel_uniqueid(chan), "NONE", "EXITWITHKEY",
@@ -93,7 +93,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  		}
  	}
  
-@@ -9631,9 +9631,9 @@ static char *__queues_show(struct manses
+@@ -9636,9 +9636,9 @@ static char *__queues_show(struct manses
  
  			do_print(s, fd, "   Callers: ");
  			for (qe = q->head; qe; qe = qe->next) {
@@ -106,7 +106,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  				do_print(s, fd, ast_str_buffer(out));
  			}
  		}
-@@ -9672,7 +9672,7 @@ static int word_in_list(const char *list
+@@ -9677,7 +9677,7 @@ static int word_in_list(const char *list
  	const char *find, *end_find, *end_list;
  
  	/* strip whitespace from front */
@@ -115,7 +115,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  		list++;
  	}
  
-@@ -9681,11 +9681,11 @@ static int word_in_list(const char *list
+@@ -9686,11 +9686,11 @@ static int word_in_list(const char *list
  		if (find != list && *(find - 1) != ' ') {
  			list = find;
  			/* strip word from front */
@@ -129,7 +129,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  				list++;
  			}
  			continue;
-@@ -9698,11 +9698,11 @@ static int word_in_list(const char *list
+@@ -9703,11 +9703,11 @@ static int word_in_list(const char *list
  		if (end_find == end_list || *end_find != ' ') {
  			list = find;
  			/* strip word from front */
@@ -143,7 +143,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  				list++;
  			}
  			continue;
-@@ -9994,7 +9994,7 @@ static int manager_queues_status(struct 
+@@ -9999,7 +9999,7 @@ static int manager_queues_status(struct 
  					"CallerIDName: %s\r\n"
  					"ConnectedLineNum: %s\r\n"
  					"ConnectedLineName: %s\r\n"
@@ -152,7 +152,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  					"Priority: %d\r\n"
  					"%s"
  					"\r\n",
-@@ -10003,7 +10003,7 @@ static int manager_queues_status(struct 
+@@ -10008,7 +10008,7 @@ static int manager_queues_status(struct 
  					S_COR(ast_channel_caller(qe->chan)->id.name.valid, ast_channel_caller(qe->chan)->id.name.str, "unknown"),
  					S_COR(ast_channel_connected(qe->chan)->id.number.valid, ast_channel_connected(qe->chan)->id.number.str, "unknown"),
  					S_COR(ast_channel_connected(qe->chan)->id.name.valid, ast_channel_connected(qe->chan)->id.name.str, "unknown"),
