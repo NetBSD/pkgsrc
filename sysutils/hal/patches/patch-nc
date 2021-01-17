@@ -1,7 +1,8 @@
-$NetBSD: patch-nc,v 1.2 2016/09/17 15:33:59 richard Exp $
+$NetBSD: patch-nc,v 1.3 2021/01/17 08:14:13 wiz Exp $
 
 key event codes have migrated from linux/input.h to linux/input-event-codes .h
 so update to support generating gperf hash from either.
+
 --- tools/Makefile.am.orig	2009-11-09 15:33:53.000000000 +0000
 +++ tools/Makefile.am
 @@ -8,8 +8,11 @@ endif
