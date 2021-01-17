@@ -1,15 +1,15 @@
-$NetBSD: patch-res_res__pjproject.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-res_res__pjproject.c,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- res/res_pjproject.c.orig	2018-06-20 14:49:55.032949063 +0000
+--- res/res_pjproject.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ res/res_pjproject.c
-@@ -99,18 +99,19 @@
+@@ -99,20 +99,22 @@
  #include "asterisk.h"
  
  #include <stdarg.h>
 -#include <pjlib.h>
 -#include <pjsip.h>
 -#include <pj/log.h>
--
+ 
  #include "asterisk/options.h"
  #include "asterisk/logger.h"
  #include "asterisk/module.h"
@@ -17,6 +17,8 @@ $NetBSD: patch-res_res__pjproject.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
 -#include "asterisk/res_pjproject.h"
  #include "asterisk/vector.h"
  #include "asterisk/sorcery.h"
+ #include "asterisk/test.h"
+ #include "asterisk/netsock2.h"
  
 +#include <pjlib.h>
 +#include <pjsip.h>

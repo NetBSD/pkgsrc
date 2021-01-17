@@ -1,9 +1,9 @@
-$NetBSD: patch-res_res__rtp__asterisk.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-res_res__rtp__asterisk.c,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- res/res_rtp_asterisk.c.orig	2018-06-20 15:19:48.478113854 +0000
+--- res/res_rtp_asterisk.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ res/res_rtp_asterisk.c
-@@ -46,13 +46,6 @@
- #include <openssl/bio.h>
+@@ -56,13 +56,6 @@
+ #endif
  #endif
  
 -#ifdef HAVE_PJPROJECT
@@ -16,7 +16,7 @@ $NetBSD: patch-res_res__rtp__asterisk.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  #include "asterisk/options.h"
  #include "asterisk/stun.h"
  #include "asterisk/pbx.h"
-@@ -72,7 +65,16 @@
+@@ -82,7 +75,16 @@
  #include "asterisk/uuid.h"
  #include "asterisk/test.h"
  #include "asterisk/data_buffer.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-res_res__rtp__asterisk.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
  #include "asterisk/res_pjproject.h"
  #endif
  
-@@ -3254,7 +3256,7 @@ static void rtp_add_candidates_to_ice(st
+@@ -3297,7 +3299,7 @@ static void rtp_add_candidates_to_ice(st
  	}
  
  	/* If configured to use a STUN server to get our external mapped address do so */

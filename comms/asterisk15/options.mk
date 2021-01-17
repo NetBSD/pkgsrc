@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2020/05/21 14:25:59 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2021/01/17 08:32:40 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		x11 unixodbc ilbc webvmail ldap spandsp
 PKG_SUPPORTED_OPTIONS+=		jabber speex snmp pgsql asterisk-config
 PKG_OPTIONS_LEGACY_OPTS+=	gtk:x11
-PKG_SUGGESTED_OPTIONS=		ldap jabber speex asterisk-config unixodbc ilbc webvmail spandsp  snmp pgsql
+PKG_SUGGESTED_OPTIONS=		ldap jabber speex asterisk-config
 
 .include "../../mk/bsd.options.mk"
 
@@ -70,6 +70,7 @@ post-configure:
 	${ECHO} "MENUSELECT_CHANNELS=-chan_mgcp" >> ${WRKSRC}/pkgsrc.makeopts
 .endif
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
+	${ECHO} "MENUSELECT_CFLAGS=-BUILD_NATIVE" >> ${WRKSRC}/pkgsrc.makeopts
 	# this is a hack to work around a bug in menuselect
 	cd ${WRKSRC} && make menuselect.makeopts
 

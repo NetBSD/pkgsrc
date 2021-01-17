@@ -1,16 +1,7 @@
-$NetBSD: patch-funcs_func__env.c,v 1.1 2018/07/16 21:53:05 joerg Exp $
+$NetBSD: patch-funcs_func__env.c,v 1.2 2021/01/17 08:32:40 jnemeth Exp $
 
---- funcs/func_env.c.orig	2018-05-01 20:12:26.000000000 +0000
+--- funcs/func_env.c.orig	2019-09-05 13:09:20.000000000 +0000
 +++ funcs/func_env.c
-@@ -307,7 +307,7 @@ static int stat_read(struct ast_channel 
- 			snprintf(buf, len, "%d", (int) s.st_ctime);
- 			break;
- 		case 'm':
--			snprintf(buf, len, "%o", s.st_mode);
-+			snprintf(buf, len, "%o", (unsigned int) s.st_mode);
- 			break;
- 		}
- 	}
 @@ -408,11 +408,11 @@ static int file_count_line(struct ast_ch
  
  	AST_STANDARD_APP_ARGS(args, data);
