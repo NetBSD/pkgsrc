@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2021/01/15 07:15:12 schmonz Exp $
+$NetBSD: distinfo,v 1.22 2021/01/17 09:36:45 otis Exp $
 
 SHA1 (zziplib-0.13.72.tar.gz) = 330cab1c477196d2d26d30d5f4cb031647fd4597
 RMD160 (zziplib-0.13.72.tar.gz) = d1bcdbf0df1e1eb222c31b8d4c659bb1a45744f4
 SHA512 (zziplib-0.13.72.tar.gz) = 4bb089e74813c6fac9657cd96e44e4a6469bf86aba3980d885c4573e8db45e74fd07bbdfcec9f36297c72227c8c0b2c37dab1bc4326cef8529960e482fe501c8
 Size (zziplib-0.13.72.tar.gz) = 1162175 bytes
-SHA1 (patch-zzip_CMakeLists.txt) = 736f28d1617825d3c14a338ff3e022f53a746190
-SHA1 (patch-zzipwrap_CMakeLists.txt) = 01df91186ccea06fec2a085f440e2151086700df
+SHA1 (patch-zzip_CMakeLists.txt) = 3ffad6de6dcb48189880d972052d917653f138aa
+SHA1 (patch-zzipwrap_CMakeLists.txt) = be632707cecafcdae76a7633d60cac6261f720d8
