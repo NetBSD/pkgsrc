@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.218 2021/01/17 15:32:00 maya Exp $
+# $NetBSD: gcc.mk,v 1.219 2021/01/17 16:05:48 maya Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -127,9 +127,8 @@ _USE_VARS.gcc=	\
 	_OPSYS_INCLUDE_DIRS _OPSYS_LIB_DIRS
 _IGN_VARS.gcc=	\
 	_GCC2_PATTERNS _GCC3_PATTERNS _GCC34_PATTERNS _GCC44_PATTERNS \
-	_GCC48_PATTERNS _GCC49_PATTERNS _GCC5_PATTERNS _GCC6_PATTERNS \
-	_GCC7_PATTERNS _GCC8_PATTERNS _GCC9_PATTERNS _GCC10_PATTERNS \
-	_GCC_AUX_PATTERNS
+	_GCC6_PATTERNS _GCC7_PATTERNS _GCC8_PATTERNS _GCC9_PATTERNS \
+	_GCC10_PATTERNS _GCC_AUX_PATTERNS
 _LISTED_VARS.gcc= \
 	MAKEFLAGS IMAKEOPTS LDFLAGS PREPEND_PATH
 .include "../../mk/bsd.prefs.mk"
@@ -352,10 +351,9 @@ _NEED_NEWER_GCC=NO
 .endfor
 .if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
     !empty(_NEED_GCC34:M[nN][oO]) && !empty(_NEED_GCC44:M[nN][oO]) && \
-    !empty(_NEED_GCC48:M[nN][oO]) && !empty(_NEED_GCC49:M[nN][oO]) && \
-    !empty(_NEED_GCC5:M[nN][oO]) && !empty(_NEED_GCC6:M[nN][oO]) && \
-    !empty(_NEED_GCC7:M[nN][oO]) && !empty(_NEED_GCC8:M[nN][oO]) && \
-    !empty(_NEED_GCC9:M[nN][oO]) && !empty(_NEED_GCC10:M[nN][oO]) && \
+    !empty(_NEED_GCC6:M[nN][oO]) && !empty(_NEED_GCC7:M[nN][oO]) && \
+    !empty(_NEED_GCC8:M[nN][oO]) && !empty(_NEED_GCC9:M[nN][oO]) && \
+    !empty(_NEED_GCC10:M[nN][oO]) && \
     !empty(_NEED_GCC_AUX:M[nN][oO])
 _NEED_GCC8=	yes
 .endif
@@ -370,12 +368,6 @@ LANGUAGES.gcc=	c c++ fortran77 java objc
 LANGUAGES.gcc=	c c++ fortran77 objc
 .elif !empty(_NEED_GCC44:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 java objc
-.elif !empty(_NEED_GCC48:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
-.elif !empty(_NEED_GCC49:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
-.elif !empty(_NEED_GCC5:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC6:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC7:M[yY][eE][sS])
@@ -534,69 +526,6 @@ _GCC_DEPENDENCY=	gcc44>=${_GCC_REQD}:../../lang/gcc44
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
         !empty(_LANGUAGES.gcc:Mobjc)
-_USE_GCC_SHLIB?=	yes
-.    endif
-.  endif
-.elif !empty(_NEED_GCC48:M[yY][eE][sS])
-#
-# We require gcc-4.8.x in the lang/gcc48 directory.
-#
-_GCC_PKGBASE=		gcc48
-.  if ${PKGPATH} == lang/gcc48
-_IGNORE_GCC=		yes
-MAKEFLAGS+=		_IGNORE_GCC=yes
-.  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc48
-_GCC_DEPENDENCY=	gcc48>=${_GCC_REQD}:../../lang/gcc48
-.    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran) || \
-        !empty(_LANGUAGES.gcc:Mfortran77) || \
-        !empty(_LANGUAGES.gcc:Mgo) || \
-        !empty(_LANGUAGES.gcc:Mobjc) || \
-        !empty(_LANGUAGES.gcc:Mobj-c++)
-_USE_GCC_SHLIB?=	yes
-.    endif
-.  endif
-.elif !empty(_NEED_GCC49:M[yY][eE][sS])
-#
-# We require gcc-4.9.x in the lang/gcc49-* directory.
-#
-_GCC_PKGBASE=		gcc49
-.  if ${PKGPATH} == lang/gcc49
-_IGNORE_GCC=		yes
-MAKEFLAGS+=		_IGNORE_GCC=yes
-.  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc49
-_GCC_DEPENDENCY=	gcc49>=${_GCC_REQD}:../../lang/gcc49
-.    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran) || \
-        !empty(_LANGUAGES.gcc:Mfortran77) || \
-        !empty(_LANGUAGES.gcc:Mgo) || \
-        !empty(_LANGUAGES.gcc:Mobjc) || \
-        !empty(_LANGUAGES.gcc:Mobj-c++)
-_USE_GCC_SHLIB?=	yes
-.    endif
-.  endif
-.elif !empty(_NEED_GCC5:M[yY][eE][sS])
-#
-# We require gcc-5.x in the lang/gcc5-* directory.
-#
-_GCC_PKGBASE=		gcc5
-.  if ${PKGPATH} == lang/gcc5
-_IGNORE_GCC=		yes
-MAKEFLAGS+=		_IGNORE_GCC=yes
-.  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc5
-_GCC_DEPENDENCY=	gcc5>=${_GCC_REQD}:../../lang/gcc5
-.    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran) || \
-        !empty(_LANGUAGES.gcc:Mfortran77) || \
-        !empty(_LANGUAGES.gcc:Mgo) || \
-        !empty(_LANGUAGES.gcc:Mobjc) || \
-        !empty(_LANGUAGES.gcc:Mobj-c++)
 _USE_GCC_SHLIB?=	yes
 .    endif
 .  endif
