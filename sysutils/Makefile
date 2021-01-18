@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.929 2021/01/18 15:10:50 taca Exp $
+# $NetBSD: Makefile,v 1.930 2021/01/18 15:13:26 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -584,6 +584,7 @@ SUBDIR+=	ruby-childprocess
 SUBDIR+=	ruby-directory-watcher
 SUBDIR+=	ruby-facter
 SUBDIR+=	ruby-fssm
+SUBDIR+=	ruby-inspec-core
 SUBDIR+=	ruby-listen
 SUBDIR+=	ruby-notify
 SUBDIR+=	ruby-puppet-resource_api
