@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/15 15:37:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/18 15:04:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/chef-utils.gemspec
 ${GEM_LIBDIR}/lib/chef-utils.rb
+${GEM_LIBDIR}/lib/chef-utils/dist.rb
 ${GEM_LIBDIR}/lib/chef-utils/dsl/architecture.rb
 ${GEM_LIBDIR}/lib/chef-utils/dsl/cloud.rb
+${GEM_LIBDIR}/lib/chef-utils/dsl/default_paths.rb
 ${GEM_LIBDIR}/lib/chef-utils/dsl/introspection.rb
 ${GEM_LIBDIR}/lib/chef-utils/dsl/os.rb
 ${GEM_LIBDIR}/lib/chef-utils/dsl/path_sanity.rb
