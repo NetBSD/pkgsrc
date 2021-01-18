@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2020/10/21 19:46:14 nia Exp $
+# $NetBSD: Makefile.common,v 1.18 2021/01/18 10:19:47 nia Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--disable-smtp
 CONFIGURE_ARGS+=	--disable-sql
 CONFIGURE_ARGS+=	--disable-stomp
 CONFIGURE_ARGS+=	--disable-sun-streams
+CONFIGURE_ARGS+=	--disable-systemd
 CONFIGURE_ARGS+=	--disable-tcp-wrapper
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
