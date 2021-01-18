@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.495 2021/01/18 16:04:55 adam Exp $
+$NetBSD: CHANGES-2021,v 1.496 2021/01/18 20:20:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-loofah to 2.9.0 [taca 2021-01-18]
 	Updated devel/py-setuptools to 51.3.3 [adam 2021-01-18]
 	Updated devel/py-setuptools_scm to 5.0.1 [adam 2021-01-18]
+	Updated net/youtube-dl to 20210116 [leot 2021-01-18]
