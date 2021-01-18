@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/18 15:18:43 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/sslshake.rb
+${GEM_LIBDIR}/lib/sslshake/ciphers.rb
+${GEM_LIBDIR}/lib/sslshake/common.rb
+${GEM_LIBDIR}/lib/sslshake/sslv2.rb
+${GEM_LIBDIR}/lib/sslshake/tls.rb
+${GEM_LIBDIR}/lib/sslshake/version.rb
+${GEM_LIBDIR}/sslshake.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
