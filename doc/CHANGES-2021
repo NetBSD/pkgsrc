@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.484 2021/01/18 15:14:59 taca Exp $
+$NetBSD: CHANGES-2021,v 1.485 2021/01/18 15:16:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -606,3 +606,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/ruby-chef-telemetry version 1.0.14 [taca 2021-01-18]
 	Added sysutils/ruby-inspec-core version 4.24.32 [taca 2021-01-18]
 	Updated sysutils/ruby-chef to 16.9.20 [taca 2021-01-18]
+	Updated sysutils/ruby-chef-zero to 15.0.4 [taca 2021-01-18]
