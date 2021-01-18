@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3316 2021/01/16 19:11:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.3317 2021/01/18 12:01:10 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -2722,6 +2722,7 @@ SUBDIR+=	reftools
 SUBDIR+=	remake
 SUBDIR+=	reposurgeon
 SUBDIR+=	rgbds
+SUBDIR+=	robin-map
 SUBDIR+=	ropper
 SUBDIR+=	roundup
 SUBDIR+=	rox-lib
