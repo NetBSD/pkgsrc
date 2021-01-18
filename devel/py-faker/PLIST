@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2020/12/10 12:30:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2021/01/18 10:19:00 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -50,6 +50,9 @@ ${PYSITELIB}/faker/providers/address/__init__.pyo
 ${PYSITELIB}/faker/providers/address/cs_CZ/__init__.py
 ${PYSITELIB}/faker/providers/address/cs_CZ/__init__.pyc
 ${PYSITELIB}/faker/providers/address/cs_CZ/__init__.pyo
+${PYSITELIB}/faker/providers/address/da_DK/__init__.py
+${PYSITELIB}/faker/providers/address/da_DK/__init__.pyc
+${PYSITELIB}/faker/providers/address/da_DK/__init__.pyo
 ${PYSITELIB}/faker/providers/address/de/__init__.py
 ${PYSITELIB}/faker/providers/address/de/__init__.pyc
 ${PYSITELIB}/faker/providers/address/de/__init__.pyo
@@ -74,6 +77,12 @@ ${PYSITELIB}/faker/providers/address/en_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/address/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/address/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/address/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/address/en_IE/__init__.py
+${PYSITELIB}/faker/providers/address/en_IE/__init__.pyc
+${PYSITELIB}/faker/providers/address/en_IE/__init__.pyo
+${PYSITELIB}/faker/providers/address/en_IN/__init__.py
+${PYSITELIB}/faker/providers/address/en_IN/__init__.pyc
+${PYSITELIB}/faker/providers/address/en_IN/__init__.pyo
 ${PYSITELIB}/faker/providers/address/en_NZ/__init__.py
 ${PYSITELIB}/faker/providers/address/en_NZ/__init__.pyc
 ${PYSITELIB}/faker/providers/address/en_NZ/__init__.pyo
@@ -278,6 +287,9 @@ ${PYSITELIB}/faker/providers/bank/de_DE/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/bank/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/bank/en_IE/__init__.py
+${PYSITELIB}/faker/providers/bank/en_IE/__init__.pyc
+${PYSITELIB}/faker/providers/bank/en_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/en_PH/__init__.py
 ${PYSITELIB}/faker/providers/bank/en_PH/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/en_PH/__init__.pyo
@@ -614,6 +626,9 @@ ${PYSITELIB}/faker/providers/geo/de_AT/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/el_GR/__init__.py
 ${PYSITELIB}/faker/providers/geo/el_GR/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/el_GR/__init__.pyo
+${PYSITELIB}/faker/providers/geo/en_IE/__init__.py
+${PYSITELIB}/faker/providers/geo/en_IE/__init__.pyc
+${PYSITELIB}/faker/providers/geo/en_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.py
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.pyo
@@ -926,6 +941,12 @@ ${PYSITELIB}/faker/providers/person/en/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/person/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/person/en_IE/__init__.py
+${PYSITELIB}/faker/providers/person/en_IE/__init__.pyc
+${PYSITELIB}/faker/providers/person/en_IE/__init__.pyo
+${PYSITELIB}/faker/providers/person/en_IN/__init__.py
+${PYSITELIB}/faker/providers/person/en_IN/__init__.pyc
+${PYSITELIB}/faker/providers/person/en_IN/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.py
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.pyo
@@ -962,6 +983,9 @@ ${PYSITELIB}/faker/providers/person/fr_FR/__init__.pyo
 ${PYSITELIB}/faker/providers/person/fr_QC/__init__.py
 ${PYSITELIB}/faker/providers/person/fr_QC/__init__.pyc
 ${PYSITELIB}/faker/providers/person/fr_QC/__init__.pyo
+${PYSITELIB}/faker/providers/person/ga_IE/__init__.py
+${PYSITELIB}/faker/providers/person/ga_IE/__init__.pyc
+${PYSITELIB}/faker/providers/person/ga_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.py
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.pyc
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.pyo
@@ -1088,6 +1112,9 @@ ${PYSITELIB}/faker/providers/phone_number/en_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/phone_number/en_IN/__init__.py
+${PYSITELIB}/faker/providers/phone_number/en_IN/__init__.pyc
+${PYSITELIB}/faker/providers/phone_number/en_IN/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/en_NZ/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/en_NZ/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/en_NZ/__init__.pyo
