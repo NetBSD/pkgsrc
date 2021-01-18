@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
+$NetBSD: patch-configure,v 1.4 2021/01/18 14:32:24 taca Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.orig	2020-06-12 13:15:11.000000000 +0000
+--- configure.orig	2021-01-09 20:12:16.000000000 +0000
 +++ configure
-@@ -870,6 +870,7 @@ with_libpath
+@@ -892,6 +892,7 @@ with_libpath
  with_libraries
  with_efence
  with_csops
@@ -17,7 +17,7 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
  with_passwd
  with_skey
  with_opie
-@@ -1592,7 +1593,7 @@ Fine tuning of the installation director
+@@ -1621,7 +1622,7 @@ Fine tuning of the installation director
    --bindir=DIR            user executables [EPREFIX/bin]
    --sbindir=DIR           system admin executables [EPREFIX/sbin]
    --libexecdir=DIR        program executables [EPREFIX/libexec]
@@ -26,7 +26,7 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
    --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
    --runstatedir=DIR       modifiable per-process data [LOCALSTATEDIR/run]
-@@ -1706,6 +1707,7 @@ Optional Packages:
+@@ -1737,6 +1738,7 @@ Optional Packages:
    --with-libraries        additional libraries to link with
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -34,7 +34,7 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey[=DIR]       enable S/Key support
    --with-opie[=DIR]       enable OPIE support
-@@ -4809,6 +4811,23 @@ fi
+@@ -4863,6 +4865,23 @@ fi
  
  
  
@@ -58,7 +58,7 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
  # Check whether --with-passwd was given.
  if test "${with_passwd+set}" = set; then :
    withval=$with_passwd; case $with_passwd in
-@@ -15937,7 +15956,7 @@ fi
+@@ -15765,7 +15784,7 @@ fi
  		: ${mansectsu='1m'}
  		: ${mansectform='4'}
  		;;
@@ -67,7 +67,7 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
  		shadow_funcs="getspnam"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		# Check for SECCOMP_SET_MODE_FILTER in linux/seccomp.h
-@@ -18175,7 +18194,7 @@ if test "x$ac_cv_header_login_cap_h" = x
+@@ -18026,7 +18045,7 @@ if test "x$ac_cv_header_login_cap_h" = x
  _ACEOF
   LOGINCAP_USAGE='[-c class] '; LCMAN=1
  	case "$OS" in
@@ -76,7 +76,7 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
  		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		SUDOERS_LIBS="${SUDOERS_LIBS} -lutil"
  		;;
-@@ -23018,10 +23037,9 @@ if test ${with_pam-"no"} != "no"; then
+@@ -23965,10 +23984,9 @@ if test ${with_pam-"no"} != "no"; then
      # Check for pam_start() in libpam first, then for pam_appl.h.
      #
      found_pam_lib=no
@@ -89,7 +89,7 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -23045,18 +23063,17 @@ return pam_start ();
+@@ -23992,18 +24010,17 @@ return pam_start ();
  }
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
@@ -113,7 +113,7 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
    found_pam_lib=yes
  fi
  
-@@ -23791,6 +23808,8 @@ fi
+@@ -24738,6 +24755,8 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  	AUTH_OBJS="$AUTH_OBJS kerb5.lo"
      fi
@@ -122,11 +122,11 @@ $NetBSD: patch-configure,v 1.3 2020/09/19 14:04:29 taca Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
      for ac_func in krb5_verify_user krb5_init_secure_context
-@@ -27051,7 +27070,6 @@ test "$datarootdir" = '${prefix}/share' 
- test "$docdir" = '${datarootdir}/doc/${PACKAGE_TARNAME}' && docdir='$(datarootdir)/doc/$(PACKAGE_TARNAME)'
+@@ -28297,7 +28316,6 @@ test "$docdir" = '${datarootdir}/doc/${P
  test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
  test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
+ test "$runstatedir" = '${localstatedir}/run' && runstatedir='$(localstatedir)/run'
 -test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
  
  if test X"$INIT_SCRIPT" != X""; then
-     ac_config_files="$ac_config_files init.d/$INIT_SCRIPT"
+     ac_config_files="$ac_config_files etc/init.d/$INIT_SCRIPT"
