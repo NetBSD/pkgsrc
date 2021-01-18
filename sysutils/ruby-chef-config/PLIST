@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/24 18:03:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/18 15:05:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/chef-config.gemspec
 ${GEM_LIBDIR}/lib/chef-config.rb
 ${GEM_LIBDIR}/lib/chef-config/config.rb
-${GEM_LIBDIR}/lib/chef-config/dist.rb
 ${GEM_LIBDIR}/lib/chef-config/exceptions.rb
 ${GEM_LIBDIR}/lib/chef-config/fips.rb
 ${GEM_LIBDIR}/lib/chef-config/logger.rb
 ${GEM_LIBDIR}/lib/chef-config/mixin/credentials.rb
 ${GEM_LIBDIR}/lib/chef-config/mixin/dot_d.rb
 ${GEM_LIBDIR}/lib/chef-config/mixin/fuzzy_hostname_matcher.rb
+${GEM_LIBDIR}/lib/chef-config/mixin/train_transport.rb
 ${GEM_LIBDIR}/lib/chef-config/path_helper.rb
 ${GEM_LIBDIR}/lib/chef-config/version.rb
 ${GEM_LIBDIR}/lib/chef-config/windows.rb
