@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/18 15:18:43 taca Exp $
+
+SHA1 (sslshake-1.3.1.gem) = f0f05bf3c8fbc5d134d7b7996781c644027951fe
+RMD160 (sslshake-1.3.1.gem) = 3b92c3ddfbe6e8a4a12f1609f3845cba8db6d3f0
+SHA512 (sslshake-1.3.1.gem) = 58fc7eaa5fa92c3ca427b8f510608c8bdae87e1468a5067c647a34086509a824ca70fd402ce68db64fd3e35f44307c2cc8894a208477e22ebbbc8f5f41d6dd28
+Size (sslshake-1.3.1.gem) = 13312 bytes
