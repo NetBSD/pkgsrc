@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.180 2020/09/19 14:04:29 taca Exp $
+# $NetBSD: Makefile,v 1.181 2021/01/18 14:32:23 taca Exp $
 
-DISTNAME=	sudo-1.8.31p2
+DISTNAME=	sudo-1.9.5p1
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
@@ -54,7 +54,12 @@ BUILD_DEFS+=		VARBASE
 
 DOCDIR=			share/doc/${PKGBASE}
 EGDIR=			share/examples/${PKGBASE}
-CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers \
+CONF_FILES_PERMS=	${EGDIR}/sudo.conf ${PKG_SYSCONFDIR}/sudo.conf \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0440
+CONF_FILES_PERMS+=	${EGDIR}/sudo_logsrvd.conf \
+			${PKG_SYSCONFDIR}/sudo_logsrvd.conf \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0440
+CONF_FILES_PERMS+=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0440
 OWN_DIRS+=		${PKG_SYSCONFDIR}/sudoers.d
 SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
