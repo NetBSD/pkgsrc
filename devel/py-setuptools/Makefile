@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.182 2020/10/27 18:10:49 adam Exp $
+# $NetBSD: Makefile,v 1.183 2021/01/18 16:02:31 adam Exp $
 
 # 48.0.0 and newer are broken on NetBSD
 # https://github.com/pypa/setuptools/issues/2364
-DISTNAME=	setuptools-50.3.2
+DISTNAME=	setuptools-51.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://github.com/pypa/setuptools
@@ -20,6 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fix
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-virtualenv-[0-9]*:../../devel/py-test-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+#TEST_DEPENDS+=	not packaged: jaraco.envs
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
