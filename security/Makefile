@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.798 2021/01/16 19:59:13 triaxx Exp $
+# $NetBSD: Makefile,v 1.799 2021/01/18 15:19:33 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -587,6 +587,7 @@ SUBDIR+=	ruby-shadow
 SUBDIR+=	ruby-simple_oauth
 SUBDIR+=	ruby-sshkey
 SUBDIR+=	ruby-sshkit
+SUBDIR+=	ruby-sslshake
 SUBDIR+=	ruby-tcpwrap
 SUBDIR+=	ruby-twitter_oauth
 SUBDIR+=	rvault
