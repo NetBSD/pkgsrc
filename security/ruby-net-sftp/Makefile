@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2015/09/26 23:37:45 taca Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/18 15:23:50 taca Exp $
 
-DISTNAME=	net-sftp-2.1.2
-CATEGORIES=	net security
+DISTNAME=	net-sftp-3.0.0
+CATEGORIES=	security net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/net-ssh/net-sftp
 COMMENT=	Secure FTP for Ruby
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.6.5:../../security/ruby-net-ssh
+DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=5.0.0:../../security/ruby-net-ssh
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
