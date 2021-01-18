@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.476 2021/01/18 14:55:37 taca Exp $
+$NetBSD: CHANGES-2021,v 1.477 2021/01/18 14:58:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -598,3 +598,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-terminal-table to 2.0.0 [taca 2021-01-18]
 	Updated www/ruby-jekyll to 4.2.0 [taca 2021-01-18]
 	Updated www/ruby-jekyll-feed to 0.15.1 [taca 2021-01-18]
+	Updated www/ruby-jekyll-seo-tag to 2.7.1 [taca 2021-01-18]
