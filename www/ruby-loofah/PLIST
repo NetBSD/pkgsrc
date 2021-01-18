@@ -1,16 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2020/05/17 15:59:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/01/18 16:02:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/MIT-LICENSE.txt
-${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SECURITY.md
-${GEM_LIBDIR}/benchmark/benchmark.rb
-${GEM_LIBDIR}/benchmark/fragment.html
-${GEM_LIBDIR}/benchmark/helper.rb
-${GEM_LIBDIR}/benchmark/www.slashdot.com.html
 ${GEM_LIBDIR}/lib/loofah.rb
 ${GEM_LIBDIR}/lib/loofah/elements.rb
 ${GEM_LIBDIR}/lib/loofah/helpers.rb
@@ -23,6 +16,7 @@ ${GEM_LIBDIR}/lib/loofah/instance_methods.rb
 ${GEM_LIBDIR}/lib/loofah/metahelpers.rb
 ${GEM_LIBDIR}/lib/loofah/scrubber.rb
 ${GEM_LIBDIR}/lib/loofah/scrubbers.rb
+${GEM_LIBDIR}/lib/loofah/version.rb
 ${GEM_LIBDIR}/lib/loofah/xml/document.rb
 ${GEM_LIBDIR}/lib/loofah/xml/document_fragment.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
