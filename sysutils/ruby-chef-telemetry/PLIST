@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/18 15:10:14 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/lib/chef/telemeter.rb
+${GEM_LIBDIR}/lib/chef/telemeter/sender.rb
+${GEM_LIBDIR}/lib/chef/telemetry.rb
+${GEM_LIBDIR}/lib/chef/telemetry/client.rb
+${GEM_LIBDIR}/lib/chef/telemetry/decision.rb
+${GEM_LIBDIR}/lib/chef/telemetry/event.rb
+${GEM_LIBDIR}/lib/chef/telemetry/session.rb
+${GEM_LIBDIR}/lib/chef/telemetry/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
