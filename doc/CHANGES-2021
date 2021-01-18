@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.491 2021/01/18 15:36:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.492 2021/01/18 15:42:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -613,3 +613,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-facter to 4.0.49 [taca 2021-01-18]
 	Updated sysutils/ruby-listen to 3.4.1 [taca 2021-01-18]
 	Updated sysutils/puppet to 7.1.0 [taca 2021-01-18]
+	Added www/ruby-webrick version 1.7.0 [taca 2021-01-18]
