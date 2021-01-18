@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/11 02:07:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/18 15:23:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.txt
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/gem-public_cert.pem
 ${GEM_LIBDIR}/lib/net/sftp.rb
 ${GEM_LIBDIR}/lib/net/sftp/constants.rb
 ${GEM_LIBDIR}/lib/net/sftp/errors.rb
@@ -32,30 +34,7 @@ ${GEM_LIBDIR}/lib/net/sftp/request.rb
 ${GEM_LIBDIR}/lib/net/sftp/response.rb
 ${GEM_LIBDIR}/lib/net/sftp/session.rb
 ${GEM_LIBDIR}/lib/net/sftp/version.rb
+${GEM_LIBDIR}/net-sftp-public_cert.pem
 ${GEM_LIBDIR}/net-sftp.gemspec
 ${GEM_LIBDIR}/setup.rb
-${GEM_LIBDIR}/test/common.rb
-${GEM_LIBDIR}/test/protocol/01/test_attributes.rb
-${GEM_LIBDIR}/test/protocol/01/test_base.rb
-${GEM_LIBDIR}/test/protocol/01/test_name.rb
-${GEM_LIBDIR}/test/protocol/02/test_base.rb
-${GEM_LIBDIR}/test/protocol/03/test_base.rb
-${GEM_LIBDIR}/test/protocol/04/test_attributes.rb
-${GEM_LIBDIR}/test/protocol/04/test_base.rb
-${GEM_LIBDIR}/test/protocol/04/test_name.rb
-${GEM_LIBDIR}/test/protocol/05/test_base.rb
-${GEM_LIBDIR}/test/protocol/06/test_attributes.rb
-${GEM_LIBDIR}/test/protocol/06/test_base.rb
-${GEM_LIBDIR}/test/protocol/test_base.rb
-${GEM_LIBDIR}/test/test_all.rb
-${GEM_LIBDIR}/test/test_dir.rb
-${GEM_LIBDIR}/test/test_download.rb
-${GEM_LIBDIR}/test/test_file.rb
-${GEM_LIBDIR}/test/test_file_factory.rb
-${GEM_LIBDIR}/test/test_packet.rb
-${GEM_LIBDIR}/test/test_protocol.rb
-${GEM_LIBDIR}/test/test_request.rb
-${GEM_LIBDIR}/test/test_response.rb
-${GEM_LIBDIR}/test/test_session.rb
-${GEM_LIBDIR}/test/test_upload.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
