@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2020/08/24 08:38:39 wiz Exp $
+$NetBSD: distinfo,v 1.23 2021/01/18 16:03:32 adam Exp $
 
-SHA1 (setuptools_scm-4.1.2.tar.gz) = 464fcfa8c35f0f1e6dcfe79c0d66cfe6f8e4b5ec
-RMD160 (setuptools_scm-4.1.2.tar.gz) = f6a08b5e4f69bec0afee23a74deeaf001cd51d8e
-SHA512 (setuptools_scm-4.1.2.tar.gz) = 3d9d1e0479f00f6159b57f9e5b24e34df035d2009ec50d3779c77b1246aabc6d816f2a2d3e6651791316009e39dfcc8a1b84b779077c39501b9de5740abe6af6
-Size (setuptools_scm-4.1.2.tar.gz) = 48784 bytes
+SHA1 (setuptools_scm-5.0.1.tar.gz) = af08a257a725dbdde9795859249ddf79caf4fc22
+RMD160 (setuptools_scm-5.0.1.tar.gz) = 8676ba323e763f1ad3298a1191fa8acc3c162eb5
+SHA512 (setuptools_scm-5.0.1.tar.gz) = 055403539a26caeb119f3d6623e7b32ef52ccc11a39757fdd9b265ba191265346be5a062a5926a381ba47bbd1a666ffa632653ee6055050689cc38fe0f90cd0f
+Size (setuptools_scm-5.0.1.tar.gz) = 51679 bytes
