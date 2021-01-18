@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/01/18 12:13:14 mef Exp $
+# $NetBSD: Makefile,v 1.11 2021/01/18 12:17:00 mef Exp $
 
 DISTNAME=	memphis-0.2.3
 PKGNAME=	libmemphis02-0.2.3
@@ -18,13 +18,14 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	aclocal autoconf autoheader automake gmake pkg-config
 
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--enable-gtk-doc
 
 PKGCONFIG_OVERRIDE+=	memphis.pc.in
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	libtoolize --copy; aclocal -I m4; \
+	gtkdocize --copy; autoheader; \
 	automake -a --foreign -i --add-missing; autoconf
 
 .include "../../devel/glib2/buildlink3.mk"
