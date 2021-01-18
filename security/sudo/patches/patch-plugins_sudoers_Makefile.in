@@ -1,10 +1,26 @@
-$NetBSD: patch-plugins_sudoers_Makefile.in,v 1.3 2019/12/28 20:43:56 kim Exp $
+$NetBSD: patch-plugins_sudoers_Makefile.in,v 1.4 2021/01/18 14:32:24 taca Exp $
 
-Do not install the sudoers file to etc.
+* Do not install the sudoers file.
+* link with @LIBS@ for PKG_OPTIONS nls enabled case.
 
---- plugins/sudoers/Makefile.in.orig	2019-12-25 21:21:05.000000000 +0200
-+++ plugins/sudoers/Makefile.in	2019-12-28 22:01:00.540953438 +0200
-@@ -396,7 +396,7 @@
+--- plugins/sudoers/Makefile.in.orig	2021-01-09 20:12:16.000000000 +0000
++++ plugins/sudoers/Makefile.in
+@@ -62,10 +62,10 @@ LIBUTIL = $(top_builddir)/lib/util/libsu
+ LIBS = $(LIBUTIL)
+ NET_LIBS = @NET_LIBS@
+ SUDOERS_LIBS = @SUDOERS_LIBS@ @AFS_LIBS@ @GETGROUPS_LIB@ @LIBTLS@ $(NET_LIBS) $(LIBIOLOG) $(LIBEVENTLOG) $(LIBLOGSRV)
+-REPLAY_LIBS = @REPLAY_LIBS@ $(LIBEVENTLOG) $(LIBIOLOG)
+-VISUDO_LIBS = $(NET_LIBS)
+-CVTSUDOERS_LIBS = $(NET_LIBS)
+-TESTSUDOERS_LIBS = $(NET_LIBS)
++REPLAY_LIBS = @REPLAY_LIBS@ $(LIBEVENTLOG) $(LIBIOLOG) @LIBS@
++VISUDO_LIBS = $(NET_LIBS) @LIBS@
++CVTSUDOERS_LIBS = $(NET_LIBS) @LIBS@
++TESTSUDOERS_LIBS = $(NET_LIBS) @LIBS@
+ 
+ # C preprocessor defines
+ CPPDEFS = -DLIBDIR=\"$(libdir)\" -DLOCALEDIR=\"$(localedir)\" \
+@@ -390,7 +390,7 @@ pre-install:
  	    fi; \
  	fi
  
@@ -12,4 +28,4 @@ Do not install the sudoers file to etc.
 +install: install-plugin install-binaries install-doc
  
  install-dirs:
- 	$(SHELL) $(top_srcdir)/mkinstalldirs $(DESTDIR)$(plugindir) \
+ 	$(SHELL) $(scriptdir)/mkinstalldirs $(DESTDIR)$(plugindir) \
