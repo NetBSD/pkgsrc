@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.472 2021/01/18 14:32:44 taca Exp $
+$NetBSD: CHANGES-2021,v 1.473 2021/01/18 14:38:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -594,3 +594,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-faker to 5.6.1 [adam 2021-01-18]
 	Added devel/robin-map version 0.6.3 [nia 2021-01-18]
 	Updated security/sudo to 1.9.5p1 [taca 2021-01-18]
+	Updated devel/ruby-gettext to 3.3.7 [taca 2021-01-18]
