@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1501 2021/01/14 15:09:03 pin Exp $
+# $NetBSD: Makefile,v 1.1502 2021/01/18 15:41:58 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -956,6 +956,7 @@ SUBDIR+=	ruby-unicorn
 SUBDIR+=	ruby-url_mount
 SUBDIR+=	ruby-webkit-gtk
 SUBDIR+=	ruby-webkit-gtk2
+SUBDIR+=	ruby-webrick
 SUBDIR+=	ruby-webrobots
 SUBDIR+=	ruby-websocket
 SUBDIR+=	ruby-websocket-driver
