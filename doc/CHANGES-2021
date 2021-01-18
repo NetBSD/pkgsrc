@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.468 2021/01/17 23:01:53 rjs Exp $
+$NetBSD: CHANGES-2021,v 1.469 2021/01/18 09:43:31 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-gearman to 2.1.0 [taca 2021-01-17]
 	Added sysutils/dust version 0.5.4 [pin 2021-01-17]
 	Updated lang/sbcl to 2.1.0 [rjs 2021-01-17]
+	Updated games/doomlegacy to 1.48.8nb1 [micha 2021-01-18]
