@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/06/21 14:54:51 taca Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/18 14:52:59 taca Exp $
 
-DISTNAME=	terminal-table-1.8.0
+DISTNAME=	terminal-table-2.0.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
