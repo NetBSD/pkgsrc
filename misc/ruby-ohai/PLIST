@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/06/24 03:01:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/01/18 15:08:18 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -17,6 +17,7 @@ ${GEM_LIBDIR}/lib/ohai/loader.rb
 ${GEM_LIBDIR}/lib/ohai/log.rb
 ${GEM_LIBDIR}/lib/ohai/mash.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/azure_metadata.rb
+${GEM_LIBDIR}/lib/ohai/mixin/chef_utils_wiring.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/command.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/constant_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/dmi_decode.rb
@@ -28,8 +29,11 @@ ${GEM_LIBDIR}/lib/ohai/mixin/network_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/os.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/scaleway_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/seconds_to_human.rb
+${GEM_LIBDIR}/lib/ohai/mixin/shell_out.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/softlayer_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/string.rb
+${GEM_LIBDIR}/lib/ohai/mixin/train_helpers.rb
+${GEM_LIBDIR}/lib/ohai/mixin/which.rb
 ${GEM_LIBDIR}/lib/ohai/plugin_config.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/kernel.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/memory.rb
@@ -67,11 +71,11 @@ ${GEM_LIBDIR}/lib/ohai/plugins/freebsd/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/gce.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/go.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/groovy.rb
+${GEM_LIBDIR}/lib/ohai/plugins/grub2.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/haskell.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/hostname.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/init_package.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/java.rb
-${GEM_LIBDIR}/lib/ohai/plugins/joyent.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/kernel.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/keys.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/languages.rb
@@ -88,6 +92,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/linux/mdadm.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/platform.rb
+${GEM_LIBDIR}/lib/ohai/plugins/linux/selinux.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/sessions.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/sysctl.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/systemd_paths.rb
@@ -132,6 +137,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/solaris2/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ssh_host_key.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/sysconf.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/timezone.rb
+${GEM_LIBDIR}/lib/ohai/plugins/train.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/uptime.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/virtualbox.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/vmware.rb
@@ -146,6 +152,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/zpools.rb
 ${GEM_LIBDIR}/lib/ohai/provides_map.rb
 ${GEM_LIBDIR}/lib/ohai/runner.rb
 ${GEM_LIBDIR}/lib/ohai/system.rb
+${GEM_LIBDIR}/lib/ohai/train_transport.rb
 ${GEM_LIBDIR}/lib/ohai/util/file_helper.rb
 ${GEM_LIBDIR}/lib/ohai/util/ip_helper.rb
 ${GEM_LIBDIR}/lib/ohai/util/win32.rb
