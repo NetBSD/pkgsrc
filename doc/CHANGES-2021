@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.478 2021/01/18 15:02:42 fox Exp $
+$NetBSD: CHANGES-2021,v 1.479 2021/01/18 15:05:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -600,3 +600,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-jekyll-feed to 0.15.1 [taca 2021-01-18]
 	Updated www/ruby-jekyll-seo-tag to 2.7.1 [taca 2021-01-18]
 	Updated chat/ircd-hybrid to 8.2.38 [fox 2021-01-18]
+	Updated sysutils/ruby-chef-utils to 16.9.20 [taca 2021-01-18]
