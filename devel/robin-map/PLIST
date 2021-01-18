@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/18 12:01:10 nia Exp $
+include/tsl/robin_growth_policy.h
+include/tsl/robin_hash.h
+include/tsl/robin_map.h
+include/tsl/robin_set.h
+share/cmake/tsl-robin-map/tsl-robin-mapConfig.cmake
+share/cmake/tsl-robin-map/tsl-robin-mapConfigVersion.cmake
+share/cmake/tsl-robin-map/tsl-robin-mapTargets.cmake
