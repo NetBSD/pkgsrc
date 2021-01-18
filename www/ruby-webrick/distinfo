@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2021/01/18 15:41:09 taca Exp $
+
+SHA1 (webrick-1.7.0.gem) = 10ba51035928541b7713415f1f2e3a41114972fc
+RMD160 (webrick-1.7.0.gem) = e3f1f0c6e0484efabb963aefc3136fe3964e48b7
+SHA512 (webrick-1.7.0.gem) = 5f242b50300046fe7c22ecd1640a73e5815e05a72bedfebe6bc39c24c92bd61abdd180860de0d194c0eebbc640b507b6892de181d3b577c5372ace0ca6faf2a3
+Size (webrick-1.7.0.gem) = 59392 bytes
