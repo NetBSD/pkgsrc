@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.489 2021/01/18 15:30:13 taca Exp $
+$NetBSD: CHANGES-2021,v 1.490 2021/01/18 15:31:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -611,3 +611,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-sshkit to 1.21.1 [taca 2021-01-18]
 	Updated security/ruby-net-sftp to 3.0.0 [taca 2021-01-18]
 	Updated sysutils/ruby-facter to 4.0.49 [taca 2021-01-18]
+	Updated sysutils/ruby-listen to 3.4.1 [taca 2021-01-18]
