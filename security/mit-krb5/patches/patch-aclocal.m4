@@ -1,28 +1,11 @@
-$NetBSD: patch-aclocal.m4,v 1.3 2021/01/19 16:18:03 brook Exp $
+$NetBSD: patch-aclocal.m4,v 1.4 2021/01/19 16:51:30 brook Exp $
 
 Don't make sunpro warnings into errors (warnings are seen in gcc too)
 Add --enable-pkgsrc-libtool option
 
-Mainline autoconf generates no shell code for AC_CONFIG_AUX_DIR().
-Call it unconditionally to avoid a syntax error.  See
-https://github.com/krb5/krb5/commit/f78edbe30816f049e1360cb6e203fabfdf7b98df.
-
---- aclocal.m4.orig	2020-05-22 00:21:40.000000000 +0000
+--- aclocal.m4.orig	2018-05-03 14:34:47.000000000 +0000
 +++ aclocal.m4
-@@ -13,11 +13,7 @@ fi
- ac_topdir=$srcdir/$ac_reltopdir
- ac_config_fragdir=$ac_reltopdir/config
- # echo "Looking for $srcdir/$ac_config_fragdir"
--if test -d "$srcdir/$ac_config_fragdir"; then
--  AC_CONFIG_AUX_DIR(K5_TOPDIR/config)
--else
--  AC_MSG_ERROR([can not find config/ directory in $ac_reltopdir])
--fi
-+AC_CONFIG_AUX_DIR(K5_TOPDIR/config)
- ])dnl
- dnl
- dnl Version info.
-@@ -631,7 +627,7 @@ else
+@@ -633,7 +633,7 @@ else
      if test "x$krb5_ac_warn_cflags_set" = xset ; then
        AC_MSG_NOTICE(not adding extra warning flags because WARN_CFLAGS was set)
      else
@@ -31,7 +14,7 @@ https://github.com/krb5/krb5/commit/f78edbe30816f049e1360cb6e203fabfdf7b98df.
      fi
      if test "x$krb5_ac_warn_cxxflags_set" = xset ; then
        AC_MSG_NOTICE(not adding extra warning flags because WARN_CXXFLAGS was set)
-@@ -1066,6 +1062,9 @@ AC_SUBST(SHLIBVEXT)
+@@ -1068,6 +1068,9 @@ AC_SUBST(SHLIBVEXT)
  AC_SUBST(SHLIBSEXT)
  AC_SUBST(DEPLIBEXT)
  AC_SUBST(PFLIBEXT)
@@ -41,7 +24,7 @@ https://github.com/krb5/krb5/commit/f78edbe30816f049e1360cb6e203fabfdf7b98df.
  AC_SUBST(LIBINSTLIST)
  AC_SUBST(DYNOBJEXT)
  AC_SUBST(MAKE_DYNOBJ_COMMAND)
-@@ -1083,6 +1082,7 @@ AC_SUBST(OBJLISTS)
+@@ -1085,6 +1088,7 @@ AC_SUBST(OBJLISTS)
  AC_SUBST(STOBJEXT)
  AC_SUBST(SHOBJEXT)
  AC_SUBST(PFOBJEXT)
@@ -49,7 +32,7 @@ https://github.com/krb5/krb5/commit/f78edbe30816f049e1360cb6e203fabfdf7b98df.
  AC_SUBST(PICFLAGS)
  AC_SUBST(PROFFLAGS)])
  
-@@ -1197,11 +1197,42 @@ else
+@@ -1199,11 +1203,42 @@ else
  	KDB5_PLUGIN_DEPLIBS=
  	KDB5_PLUGIN_LIBS=
  fi
