@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/01/18 15:38:05 taca Exp $
+# $NetBSD: Makefile,v 1.45 2021/01/19 00:03:52 taca Exp $
 
 DISTNAME=		puppet-7.1.0
 CATEGORIES=		sysutils
@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.10<2:../../textproc/ruby-multi_json
 DEPENDS+=	${RUBY_PKGPREFIX}-puppet-resource_api>=1.5<2:../../sysutils/ruby-puppet-resource_api
 DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.0<2:../../devel/ruby-concurrent-ruby
 DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
-DEPENDS+=	${RUBY_PKGPREFIX}-scanf>1.0.0:../../devel/ruby-scanf
+DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0:../../devel/ruby-scanf
 
 RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	fast_gettext>=1.1
