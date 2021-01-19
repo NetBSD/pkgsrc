@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.501 2021/01/19 08:14:05 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.502 2021/01/19 10:18:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -624,3 +624,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/xfce4-wm to 4.14.6 [gutteridge 2021-01-19]
 	Updated sysutils/navi to 2.14.0 [pin 2021-01-19]
 	Added net/icingaweb2 version 2.8.2 [wiz 2021-01-19]
+	Updated finance/bitcoin to 0.21.0 [adam 2021-01-19]
+	Updated audio/wavpack to 5.4.0 [adam 2021-01-19]
