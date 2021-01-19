@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.60 2020/10/10 09:31:50 jperkin Exp $
+# $NetBSD: tools.Darwin.mk,v 1.61 2021/01/19 11:42:18 jperkin Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -49,13 +49,19 @@ TOOLS_PLATFORM.gerep?=		/usr/bin/egrep
 TOOLS_PLATFORM.gfrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
 #
-# Big Sur does not support running XCode programs through a symlink, which
-# breaks the .tools/bin directory.
+# Avoid using the native gnumake and gm4.  On systems up to and including Big
+# Sur, the version of GNU m4 is from 2006 and unable to build autoconf 2.70.
 #
-.if ${OS_VERSION:R} > 9 && ${OS_VERSION:R} < 20
-TOOLS_PLATFORM.gmake?=		/usr/bin/gnumake
-TOOLS_PLATFORM.gm4?=		/usr/bin/gm4
-.endif
+# While this could be more cleanly handled with a GM4_REQD set to a recent
+# version, there is a larger problem that Big Sur does not support running
+# these XCode programs through a symlink, causing the links in the .tools/bin
+# directory to fail.
+#
+# Avoiding them completely at this time is much simpler.
+#
+#TOOLS_PLATFORM.gmake?=		/usr/bin/gnumake
+#TOOLS_PLATFORM.gm4?=		/usr/bin/gm4
+#
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 .if exists(/usr/bin/groff)
 TOOLS_PLATFORM.groff?=/usr/bin/groff
