@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/12/04 04:56:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.31 2021/01/19 22:36:19 nia Exp $
 
 DISTNAME=	polkit-0.118
 PKGREVISION=	1
@@ -22,8 +22,8 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt perl
 
-# C++14
-GCC_REQD+=	5
+# configure: error: *** A compiler with support for C++17 language features is required.
+GCC_REQD+=	7
 
 PKGCONFIG_OVERRIDE+=	data/polkit-gobject-1.pc.in
 PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
