@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/11/13 09:41:46 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/01/19 22:44:26 nia Exp $
 
 DISTNAME=	dino-0.2.0
 CATEGORIES=	chat
@@ -20,6 +20,7 @@ MAKE_JOBS_SAFE=		no
 
 .include "../../chat/libsignal-protocol-c/buildlink3.mk"
 .include "../../converters/qrencode/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.24
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
