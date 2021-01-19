@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2016/09/01 16:16:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/01/19 21:01:37 adam Exp $
 bin/rdiff
-include/librsync-config.h
 include/librsync.h
+include/librsync_export.h
 lib/librsync.so
+lib/librsync.so.${PKGVERSION}
 lib/librsync.so.2
-lib/librsync.so.2.0.0
+man/man1/rdiff.1
+man/man3/librsync.3
