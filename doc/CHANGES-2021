@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.505 2021/01/19 14:35:34 pin Exp $
+$NetBSD: CHANGES-2021,v 1.506 2021/01/19 15:37:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -630,3 +630,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-google-api-core to 1.25.0 [adam 2021-01-19]
 	Updated games/openmw to 0.46.0 [nia 2021-01-19]
 	Updated editors/kiro-editor to 0.4.1 [pin 2021-01-19]
+	Updated www/php-nextcloud to 20.0.5 [ryoon 2021-01-19]
