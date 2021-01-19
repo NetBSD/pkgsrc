@@ -1,61 +1,74 @@
-# $NetBSD: Makefile,v 1.72 2021/01/01 08:24:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2021/01/19 16:02:25 nia Exp $
 
-OIIOVER=	1.8.15
-DISTNAME=	oiio-Release-${OIIOVER}
-PKGNAME=	${DISTNAME:S/oiio-Release/openimageio/}
-PKGREVISION=	21
+DISTNAME=	oiio-2.2.10.1
+PKGNAME=	${DISTNAME:S/oiio/openimageio/}
 CATEGORIES=	graphics
-MASTER_SITES=	-https://github.com/OpenImageIO/oiio/archive/Release-${OIIOVER}.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenImageIO/}
+GITHUB_PROJECT=	oiio
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/openimageio/
-COMMENT=	OpenImageIO is a library for reading and writing images
+COMMENT=	C++ library for reading and writing images
 LICENSE=	modified-bsd
 
 UNLIMIT_RESOURCES=	datasize virtualsize
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c gnu++11
-BUILDLINK_TRANSFORM+=	rm:-std=c++11 # for alloca(3)
-USE_TOOLS+=		gmake
+USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c++
+
+CMAKE_ARGS+=		-DSTOP_ON_WARNING=OFF # Disable -Werror
+CMAKE_ARGS+=		-DBUILD_MISSING_FMT=OFF
+CMAKE_ARGS+=		-DBUILD_MISSING_ROBINMAP=OFF
+CMAKE_ARGS+=		-DUSE_EXTERNAL_PUGIXML=OFF
+CMAKE_ARGS+=		-DUSE_PYTHON:BOOL=OFF
+CMAKE_ARGS+=		-DROBINMAP_INCLUDE_DIR=${BUILDLINK_PREFIX.robin-map}/include
+CMAKE_ARGS+=		-DOpenJpeg_ROOT=${BUILDLINK_PREFIX.openjpeg}
+CMAKE_ARGS+=		-DIlmbase_ROOT=${BUILDLINK_PREFIX.ilmbase}
+CMAKE_ARGS+=		-DOpenEXR_ROOT=${BUILDLINK_PREFIX.openexr}
+
+# none of these are available in pkgsrc yet
+CMAKE_ARGS+=		-DUSE_DCMTK=OFF
+CMAKE_ARGS+=		-DUSE_Libsquish=OFF
+CMAKE_ARGS+=		-DUSE_Nuke=OFF
+CMAKE_ARGS+=		-DUSE_OpenVDB=OFF
+CMAKE_ARGS+=		-DUSE_PTex=OFF
+CMAKE_ARGS+=		-DUSE_Field3D=OFF
+
+# only used for the image viewer test application
+CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Qt5=ON
+
+# disabled by default in arch linux, freebsd...
+CMAKE_ARGS+=		-DUSE_HDF5=OFF
+CMAKE_ARGS+=		-DUSE_FFmpeg=OFF
+CMAKE_ARGS+=		-DUSE_OpenCV=OFF
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CMAKE_ARG_PATH=		${WRKSRC}
 
-CXXFLAGS.Linux+=	-pthread
-
-CMAKE_ARGS+=		-DILMBASE_HOME:STRING=${BUILDLINK_PREFIX.ilmbase}
-CMAKE_ARGS+=		-DOPENJPEG_HOME:STRING=${BUILDLINK_PREFIX.openjpeg}
-CMAKE_ARGS+=		-DOPENEXR_HOME:STRING=${BUILDLINK_PREFIX.openexr}
-CMAKE_ARGS+=		-DINSTALL_DOCS:BOOL=OFF
-CMAKE_ARGS+=		-DUSE_LIBRAW:BOOL=OFF
-CMAKE_ARGS+=		-DUSE_OCIO:BOOL=OFF
-CMAKE_ARGS+=		-DUSE_PYTHON:BOOL=OFF
-
-# For redefinition of _rotl macro.
-BUILDLINK_TRANSFORM+=	rm:-Werror
-
-.include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/hdf5/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/glew/buildlink3.mk"
-.include "../../graphics/ilmbase/buildlink3.mk"
-.include "../../graphics/libwebp/buildlink3.mk"
-.include "../../graphics/opencv/buildlink3.mk"
-.include "../../graphics/openjpeg/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/giflib/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-Wno-deprecated-register
-.endif
+# We're using cmake...
+CHECK_PORTABILITY_SKIP+=	Makefile
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/build
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/robin-map/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/ilmbase/buildlink3.mk"
+.include "../../graphics/libheif/buildlink3.mk"
+.include "../../graphics/libraw/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../graphics/opencolorio/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
+.include "../../parallel/threadingbuildingblocks/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
