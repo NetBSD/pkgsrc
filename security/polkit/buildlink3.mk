@@ -1,9 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2020/12/04 04:56:13 riastradh Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2021/01/19 22:36:19 nia Exp $
 #
 
 BUILDLINK_TREE+=	polkit
 
 .if !defined(POLKIT_BUILDLINK3_MK)
+# configure: error: *** A compiler with support for C++17 language features is required.
+GCC_REQD+=	7
+
 POLKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.polkit+=	polkit>=0.103
