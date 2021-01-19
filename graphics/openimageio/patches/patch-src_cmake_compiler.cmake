@@ -1,11 +1,16 @@
-$NetBSD: patch-src_cmake_install.cmake,v 1.1 2018/10/07 23:38:45 ryoon Exp $
+$NetBSD: patch-src_cmake_compiler.cmake,v 1.1 2021/01/19 16:02:25 nia Exp $
 
---- src/cmake/install.cmake.orig	2018-10-01 21:26:14.000000000 +0000
-+++ src/cmake/install.cmake
-@@ -10,20 +10,3 @@ set (INSTALL_FONTS ON CACHE BOOL "Instal
+Disable custom rpath handling that conflicts with pkgsrc.
+
+--- src/cmake/compiler.cmake.orig	2021-01-08 07:41:40.000000000 +0000
++++ src/cmake/compiler.cmake
+@@ -542,32 +542,6 @@ endif ()
+ 
+ 
  ###########################################################################
- # Rpath handling at the install step
- set (MACOSX_RPATH ON)
+-# Rpath handling at the install step
+-#
+-set (MACOSX_RPATH ON)
 -if (CMAKE_SKIP_RPATH)
 -    # We need to disallow the user from truly setting CMAKE_SKIP_RPATH, since
 -    # we want to run the generated executables from the build tree in order to
@@ -15,7 +20,9 @@ $NetBSD: patch-src_cmake_install.cmake,v 1.1 2018/10/07 23:38:45 ryoon Exp $
 -    set (CMAKE_SKIP_RPATH FALSE)
 -    unset (CMAKE_INSTALL_RPATH)
 -else ()
--    set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_FULL_LIBDIR}")
+-    if (NOT CMAKE_INSTALL_RPATH)
+-        set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_FULL_LIBDIR}")
+-    endif ()
 -    # add the automatically determined parts of the RPATH that
 -    # point to directories outside the build tree to the install RPATH
 -    set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
@@ -23,3 +30,10 @@ $NetBSD: patch-src_cmake_install.cmake,v 1.1 2018/10/07 23:38:45 ryoon Exp $
 -        message (STATUS "CMAKE_INSTALL_RPATH = ${CMAKE_INSTALL_RPATH}")
 -    endif ()
 -endif ()
+-
+-
+-
+-###########################################################################
+ # Macro to install targets to the appropriate locations.  Use this instead
+ # of the install(TARGETS ...) signature. Note that it adds it to the
+ # export targets list for when we generate config files.
