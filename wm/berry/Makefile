@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/12/05 14:49:46 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/19 22:48:41 nia Exp $
 
 DISTNAME=	berry-0.1.7
 CATEGORIES=	wm x11
@@ -17,6 +17,9 @@ MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	X11INC=${X11BASE}/include
 MAKE_FLAGS+=	X11LIB=${X11BASE}/lib
 MAKE_FLAGS+=	FREETYPEINC=${BUILDLINK_PREFIX.freetype2}/include
+
+# needed for ceil()
+LDFLAGS+=	-lm
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
