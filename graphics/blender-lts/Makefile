@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/01/01 08:24:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/19 19:00:02 nia Exp $
 
 DISTNAME=	blender-2.83.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -81,5 +81,6 @@ pre-configure:
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/pugixml/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
