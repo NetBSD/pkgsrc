@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.9 2020/08/03 15:01:16 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/01/19 10:17:00 adam Exp $
 
-SHA1 (bitcoin-0.20.1.tar.gz) = 82781d8293ad84f383173e6565a7ac97682900e9
-RMD160 (bitcoin-0.20.1.tar.gz) = 9dd3d6455b6c70e2c9b60802c07a40d3d69097c8
-SHA512 (bitcoin-0.20.1.tar.gz) = ce5a06aa57475c7d8d94a60f2487ef9646406f7c96f68ab845f085121507455b495f9460a25d5ab2348d326117b25115b0f86015d939089829e68d6d7e0e2b13
-Size (bitcoin-0.20.1.tar.gz) = 6981793 bytes
+SHA1 (bitcoin-0.21.0.tar.gz) = 7b4238971148b39d45c988238f92b9f45478087b
+RMD160 (bitcoin-0.21.0.tar.gz) = 8f114015d5eab2f24cced9399d44c2b245e3ace1
+SHA512 (bitcoin-0.21.0.tar.gz) = 80337bd6eec42ac74313a415bf9ffa4d47d8bbffe7dc0ce717750accef59e80cf6053ebd8a6cd2588b634cd2f514f6bcd8b0bf3b462a80ca77a1239fd81a65ae
+Size (bitcoin-0.21.0.tar.gz) = 7531395 bytes
 SHA1 (patch-src_netbase.cpp) = 901c8928181ba351658562477115dc92640d3886
-SHA1 (patch-src_qt_trafficgraphwidget.cpp) = 99b5ce11aa4d23c2cb50208b04c691e329bbce50
-SHA1 (patch-src_wallet_walletutil.cpp) = 27fc38ad137a842c568f9208fb23818748aa1ef8
+SHA1 (patch-src_wallet_walletutil.cpp) = 21b7208901c8403bbe839fa601f44e7417beea4e
