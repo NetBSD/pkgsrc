@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.1 2015/12/02 18:22:10 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.2 2021/01/19 21:05:22 adam Exp $
 
-PYMODULENAME=		ply
-PYMODULEVER=		3.8
-DISTNAME=		${PYMODULENAME}-${PYMODULEVER}
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		devel
-MASTER_SITES=		http://www.dabeaz.com/ply/
+DISTNAME=	ply-3.11
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/ply/}
 
-MAINTAINER=		ura@jp.NetBSD.org
-HOMEPAGE=		http://www.dabeaz.com/ply/
-COMMENT=		Lex an yacc parsing tools for Python
-LICENSE=		gnu-lgpl-v2.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.dabeaz.com/ply/
+COMMENT=	Lex an yacc parsing tools for Python
+LICENSE=	modified-bsd
+
+USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC}/test; \
-	${SETENV} PYTHONPATH=${WRKSRC} ${PYTHONBIN} testlex.py; \
+	cd ${WRKSRC}/test && \
+	${SETENV} PYTHONPATH=${WRKSRC} ${PYTHONBIN} testlex.py
+	cd ${WRKSRC}/test && \
 	${SETENV} PYTHONPATH=${WRKSRC} ${PYTHONBIN} testyacc.py
 
 .include "../../lang/python/egg.mk"
