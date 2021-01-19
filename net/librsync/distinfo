@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/09/20 08:26:50 wiz Exp $
+$NetBSD: distinfo,v 1.6 2021/01/19 21:01:37 adam Exp $
 
-SHA1 (librsync-2.0.0.tar.gz) = c24a623bba5f9eae48bd3b6cb99ee43d2a40b8c6
-RMD160 (librsync-2.0.0.tar.gz) = f44284c0d33b9fb6a9b8c107169549cf2d121273
-SHA512 (librsync-2.0.0.tar.gz) = 1a88dcc3aa60949e058c57eb0df3e0086823c493de40fed927246f5aada6274db57202074456a0ce5d9aa8b81b41836b0d6221ded6a75d43829572584177e8c0
-Size (librsync-2.0.0.tar.gz) = 155049 bytes
-SHA1 (patch-src_search.c) = 8da2885849e39999f36f9d7ce3824bc177033a53
+SHA1 (librsync-2.3.1.tar.gz) = 5127c8fa462b741f4943ece679bf83615cc47c17
+RMD160 (librsync-2.3.1.tar.gz) = 0df16b7027dfa1123e391aaa66cf62d8b8ad6397
+SHA512 (librsync-2.3.1.tar.gz) = 89e5b5ad960b8036acce41df09f5e50601d7eb57d48a2bd21c4ee54a3a375f62ee514036b9a562277b5656735b84cadf6f54cbf48c364bbf0c04f2d95ae3b5a6
+Size (librsync-2.3.1.tar.gz) = 194573 bytes
