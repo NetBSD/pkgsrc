@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.507 2021/01/19 15:47:41 nia Exp $
+$NetBSD: CHANGES-2021,v 1.508 2021/01/19 16:03:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -632,3 +632,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/kiro-editor to 0.4.1 [pin 2021-01-19]
 	Updated www/php-nextcloud to 20.0.5 [ryoon 2021-01-19]
 	Updated databases/erlang-sqlite3 to 1.1.9 [nia 2021-01-19]
+	Updated graphics/openimageio to 2.2.10.1 [nia 2021-01-19]
