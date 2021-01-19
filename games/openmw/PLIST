@@ -1,18 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/09 16:26:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/19 12:45:56 nia Exp $
 bin/bsatool
 bin/esmtool
+bin/niftest
 bin/openmw
-bin/openmw-cs
+${PLIST.gui}bin/openmw-cs
 bin/openmw-essimporter
 bin/openmw-iniimporter
-bin/openmw-launcher
-bin/openmw-wizard
-share/applications/openmw-cs.desktop
-share/applications/openmw.desktop
+${PLIST.gui}bin/openmw-launcher
+${PLIST.gui}bin/openmw-wizard
+${PLIST.gui}share/applications/org.openmw.cs.desktop
+share/applications/org.openmw.launcher.desktop
 share/examples/openmw/gamecontrollerdb.txt
-share/examples/openmw/gamecontrollerdb_204.txt
-share/examples/openmw/gamecontrollerdb_205.txt
-share/examples/openmw/openmw-cs.cfg
+${PLIST.gui}share/examples/openmw/openmw-cs.cfg
 share/examples/openmw/openmw.cfg
 share/examples/openmw/settings-default.cfg
 share/examples/openmw/version
@@ -109,14 +108,24 @@ share/games/openmw/resources/shaders/objects_vertex.glsl
 share/games/openmw/resources/shaders/parallax.glsl
 share/games/openmw/resources/shaders/s360_fragment.glsl
 share/games/openmw/resources/shaders/s360_vertex.glsl
+share/games/openmw/resources/shaders/shadowcasting_fragment.glsl
+share/games/openmw/resources/shaders/shadowcasting_vertex.glsl
+share/games/openmw/resources/shaders/shadows_fragment.glsl
+share/games/openmw/resources/shaders/shadows_vertex.glsl
 share/games/openmw/resources/shaders/terrain_fragment.glsl
 share/games/openmw/resources/shaders/terrain_vertex.glsl
 share/games/openmw/resources/shaders/water_fragment.glsl
 share/games/openmw/resources/shaders/water_nm.png
 share/games/openmw/resources/shaders/water_vertex.glsl
 share/games/openmw/resources/version
+share/games/openmw/resources/vfs/textures/omw_menu_scroll_center_h.dds
+share/games/openmw/resources/vfs/textures/omw_menu_scroll_center_v.dds
+share/games/openmw/resources/vfs/textures/omw_menu_scroll_down.dds
+share/games/openmw/resources/vfs/textures/omw_menu_scroll_left.dds
+share/games/openmw/resources/vfs/textures/omw_menu_scroll_right.dds
+share/games/openmw/resources/vfs/textures/omw_menu_scroll_up.dds
 share/licenses/openmw/DejaVu Font License.txt
 share/metainfo/openmw.appdata.xml
-share/pixmaps/openmw-cs.png
+${PLIST.gui}share/pixmaps/openmw-cs.png
 share/pixmaps/openmw.png
 @pkgdir share/games/openmw/data
