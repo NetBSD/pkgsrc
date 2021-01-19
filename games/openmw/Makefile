@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/01/16 14:46:37 nia Exp $
+# $NetBSD: Makefile,v 1.23 2021/01/19 12:45:56 nia Exp $
 
-DISTNAME=	openmw-0.45.0
-PKGREVISION=	21
+DISTNAME=	openmw-0.46.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenMW/}
 GITHUB_TAG=	openmw-${PKGVERSION_NOREV}
@@ -12,7 +11,7 @@ COMMENT=	Recreation of The Elder Scrolls III: Morrowind game engine
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 # C++11
@@ -26,9 +25,6 @@ EGDIR=		${PREFIX}/share/examples/openmw
 PKG_SYSCONFSUBDIR=	openmw
 
 CONF_FILES+=	${EGDIR}/gamecontrollerdb.txt ${PKG_SYSCONFDIR}/gamecontrollerdb.txt
-CONF_FILES+=	${EGDIR}/gamecontrollerdb_204.txt ${PKG_SYSCONFDIR}/gamecontrollerdb_204.txt
-CONF_FILES+=	${EGDIR}/gamecontrollerdb_205.txt ${PKG_SYSCONFDIR}/gamecontrollerdb_205.txt
-CONF_FILES+=	${EGDIR}/openmw-cs.cfg ${PKG_SYSCONFDIR}/openmw-cs.cfg
 CONF_FILES+=	${EGDIR}/openmw.cfg ${PKG_SYSCONFDIR}/openmw.cfg
 CONF_FILES+=	${EGDIR}/settings-default.cfg ${PKG_SYSCONFDIR}/settings-default.cfg
 CONF_FILES+=	${EGDIR}/version ${PKG_SYSCONFDIR}/version
@@ -44,4 +40,5 @@ CONF_FILES+=	${EGDIR}/version ${PKG_SYSCONFDIR}/version
 .include "../../graphics/osg/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
