@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.508 2021/01/19 16:03:08 nia Exp $
+$NetBSD: CHANGES-2021,v 1.509 2021/01/19 21:05:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -633,3 +633,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/php-nextcloud to 20.0.5 [ryoon 2021-01-19]
 	Updated databases/erlang-sqlite3 to 1.1.9 [nia 2021-01-19]
 	Updated graphics/openimageio to 2.2.10.1 [nia 2021-01-19]
+	Updated net/librsync to 2.3.1 [adam 2021-01-19]
+	Updated devel/py-ply to 3.11 [adam 2021-01-19]
