@@ -1,0 +1,246 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/20 15:57:17 bacon Exp $
+bin/fastqc
+share/doc/fastqc/Help/1 Introduction/.svn/entries
+share/doc/fastqc/Help/1 Introduction/.svn/text-base/1.1 What is FastQC.html.svn-base
+share/doc/fastqc/Help/1 Introduction/1.1 What is FastQC.html
+share/doc/fastqc/Help/2 Basic Operations/.svn/entries
+share/doc/fastqc/Help/2 Basic Operations/.svn/text-base/2.1 Opening a sequence file.html.svn-base
+share/doc/fastqc/Help/2 Basic Operations/.svn/text-base/2.2 Evaluating Results.html.svn-base
+share/doc/fastqc/Help/2 Basic Operations/.svn/text-base/2.3 Saving a Report.html.svn-base
+share/doc/fastqc/Help/2 Basic Operations/2.1 Opening a sequence file.html
+share/doc/fastqc/Help/2 Basic Operations/2.2 Evaluating Results.html
+share/doc/fastqc/Help/2 Basic Operations/2.3 Saving a Report.html
+share/doc/fastqc/Help/3 Analysis Modules/.svn/entries
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/duplication_levels.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/kmer_profiles.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/per_base_gc_content.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/per_base_n_content.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/per_base_quality.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/per_base_sequence_content.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/per_sequence_gc_content.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/per_sequence_quality.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/per_tile_quality.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/prop-base/sequence_length_distribution.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/1 Basic Statistics.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/10 Adapter Content.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/11 Kmer Content.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/12 Per Tile Sequence Quality.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/2 Per Base Sequence Quality.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/3 Per Sequence Quality Scores.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/4 Per Base Sequence Content.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/5 Per Sequence GC Content.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/6 Per Base N Content.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/7 Sequence Length Distribution.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/8 Duplicate Sequences.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/9 Overrepresented Sequences.html.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/duplication_levels.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/kmer_profiles.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/per_base_gc_content.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/per_base_n_content.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/per_base_quality.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/per_base_sequence_content.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/per_sequence_gc_content.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/per_sequence_quality.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/per_tile_quality.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/.svn/text-base/sequence_length_distribution.png.svn-base
+share/doc/fastqc/Help/3 Analysis Modules/1 Basic Statistics.html
+share/doc/fastqc/Help/3 Analysis Modules/10 Adapter Content.html
+share/doc/fastqc/Help/3 Analysis Modules/11 Kmer Content.html
+share/doc/fastqc/Help/3 Analysis Modules/12 Per Tile Sequence Quality.html
+share/doc/fastqc/Help/3 Analysis Modules/2 Per Base Sequence Quality.html
+share/doc/fastqc/Help/3 Analysis Modules/3 Per Sequence Quality Scores.html
+share/doc/fastqc/Help/3 Analysis Modules/4 Per Base Sequence Content.html
+share/doc/fastqc/Help/3 Analysis Modules/5 Per Sequence GC Content.html
+share/doc/fastqc/Help/3 Analysis Modules/6 Per Base N Content.html
+share/doc/fastqc/Help/3 Analysis Modules/7 Sequence Length Distribution.html
+share/doc/fastqc/Help/3 Analysis Modules/8 Duplicate Sequences.html
+share/doc/fastqc/Help/3 Analysis Modules/9 Overrepresented Sequences.html
+share/doc/fastqc/Help/3 Analysis Modules/duplication_levels.png
+share/doc/fastqc/Help/3 Analysis Modules/kmer_profiles.png
+share/doc/fastqc/Help/3 Analysis Modules/per_base_gc_content.png
+share/doc/fastqc/Help/3 Analysis Modules/per_base_n_content.png
+share/doc/fastqc/Help/3 Analysis Modules/per_base_quality.png
+share/doc/fastqc/Help/3 Analysis Modules/per_base_sequence_content.png
+share/doc/fastqc/Help/3 Analysis Modules/per_sequence_gc_content.png
+share/doc/fastqc/Help/3 Analysis Modules/per_sequence_quality.png
+share/doc/fastqc/Help/3 Analysis Modules/per_tile_quality.png
+share/doc/fastqc/Help/3 Analysis Modules/sequence_length_distribution.png
+share/fastqc/Configuration/adapter_list.txt
+share/fastqc/Configuration/contaminant_list.txt
+share/fastqc/Configuration/limits.txt
+share/fastqc/Templates/Icons/error.png
+share/fastqc/Templates/Icons/fastqc_icon.png
+share/fastqc/Templates/Icons/tick.png
+share/fastqc/Templates/Icons/warning.png
+share/fastqc/Templates/fastqc2fo.xsl
+share/fastqc/Templates/header_template.html
+share/java/classes/fastqc/cisd-jhdf5.jar
+share/java/classes/fastqc/jbzip2-0.9.jar
+share/java/classes/fastqc/net/sourceforge/iharder/base64/Base64$1.class
+share/java/classes/fastqc/net/sourceforge/iharder/base64/Base64$InputStream.class
+share/java/classes/fastqc/net/sourceforge/iharder/base64/Base64$OutputStream.class
+share/java/classes/fastqc/net/sourceforge/iharder/base64/Base64.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/UnivariateFunction.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/solvers/AbstractUnivariateSolver.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/solvers/AllowedSolution.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/solvers/BaseAbstractUnivariateSolver.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/solvers/BaseUnivariateSolver.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/solvers/BracketedUnivariateSolver.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/solvers/BrentSolver.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/solvers/UnivariateSolver.class
+share/java/classes/fastqc/org/apache/commons/math3/analysis/solvers/UnivariateSolverUtils.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/AbstractIntegerDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/AbstractRealDistribution$1.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/AbstractRealDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/BetaDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/BinomialDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/CauchyDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/ChiSquaredDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/FDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/GammaDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/HypergeometricDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/IntegerDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/NormalDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/PascalDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/PoissonDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/RealDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/SaddlePointExpansion.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/TDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/WeibullDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/distribution/ZipfDistribution.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/ConvergenceException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/DimensionMismatchException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/MathArithmeticException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/MathIllegalArgumentException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/MathIllegalNumberException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/MathIllegalStateException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/MathInternalError.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/MaxCountExceededException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/NoBracketingException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/NotFiniteNumberException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/NotPositiveException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/NotStrictlyPositiveException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/NullArgumentException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/NumberIsTooLargeException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/NumberIsTooSmallException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/OutOfRangeException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/TooManyEvaluationsException.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/util/ArgUtils.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/util/ExceptionContext.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/util/ExceptionContextProvider.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/util/Localizable.class
+share/java/classes/fastqc/org/apache/commons/math3/exception/util/LocalizedFormats.class
+share/java/classes/fastqc/org/apache/commons/math3/random/AbstractWell.class
+share/java/classes/fastqc/org/apache/commons/math3/random/BitsStreamGenerator.class
+share/java/classes/fastqc/org/apache/commons/math3/random/RandomData.class
+share/java/classes/fastqc/org/apache/commons/math3/random/RandomDataImpl.class
+share/java/classes/fastqc/org/apache/commons/math3/random/RandomGenerator.class
+share/java/classes/fastqc/org/apache/commons/math3/random/Well19937c.class
+share/java/classes/fastqc/org/apache/commons/math3/special/Beta$1.class
+share/java/classes/fastqc/org/apache/commons/math3/special/Beta.class
+share/java/classes/fastqc/org/apache/commons/math3/special/Erf.class
+share/java/classes/fastqc/org/apache/commons/math3/special/Gamma$1.class
+share/java/classes/fastqc/org/apache/commons/math3/special/Gamma.class
+share/java/classes/fastqc/org/apache/commons/math3/util/ArithmeticUtils.class
+share/java/classes/fastqc/org/apache/commons/math3/util/ContinuedFraction.class
+share/java/classes/fastqc/org/apache/commons/math3/util/DoubleArray.class
+share/java/classes/fastqc/org/apache/commons/math3/util/FastMath$ExpFracTable.class
+share/java/classes/fastqc/org/apache/commons/math3/util/FastMath$ExpIntTable.class
+share/java/classes/fastqc/org/apache/commons/math3/util/FastMath$lnMant.class
+share/java/classes/fastqc/org/apache/commons/math3/util/FastMath.class
+share/java/classes/fastqc/org/apache/commons/math3/util/FastMathCalc.class
+share/java/classes/fastqc/org/apache/commons/math3/util/FastMathLiteralArrays.class
+share/java/classes/fastqc/org/apache/commons/math3/util/Incrementor$1.class
+share/java/classes/fastqc/org/apache/commons/math3/util/Incrementor$MaxCountExceededCallback.class
+share/java/classes/fastqc/org/apache/commons/math3/util/Incrementor.class
+share/java/classes/fastqc/org/apache/commons/math3/util/MathUtils.class
+share/java/classes/fastqc/org/apache/commons/math3/util/Precision.class
+share/java/classes/fastqc/org/apache/commons/math3/util/ResizableDoubleArray.class
+share/java/classes/fastqc/sam-1.103.jar
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Analysis/AnalysisListener.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Analysis/AnalysisQueue.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Analysis/AnalysisRunner.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Analysis/OfflineRunner.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Dialogs/AboutDialog$1.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Dialogs/AboutDialog.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Dialogs/FastQCTitlePanel$SmoothJLabel.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Dialogs/FastQCTitlePanel.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Dialogs/WelcomePanel.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FastQCApplication$1.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FastQCApplication.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FastQCConfig.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FastQCMenuBar.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FileFilters/BAMFileFilter.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FileFilters/CasavaFastQFileFilter.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FileFilters/FastQFileFilter.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FileFilters/GobyFileFilter.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FileFilters/MappedBAMFileFilter.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/FileFilters/SequenceFileFilter.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Graphs/BaseGroup.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Graphs/LineGraph.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Graphs/QualityBoxPlot.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Graphs/TileGraph.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Help/HelpDialog.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Help/HelpIndexRoot$FileSorter.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Help/HelpIndexRoot.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Help/HelpPage.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Help/HelpPageDisplay$HelpEditor.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Help/HelpPageDisplay.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Help/HelpSearchPanel.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/AbstractQCModule.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/AdapterContent$Adapter.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/AdapterContent$ResultsTable.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/AdapterContent.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/BasicStats$ResultsTable.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/BasicStats.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/DuplicationLevel.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/GCModel/GCModel.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/GCModel/GCModelValue.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/KmerContent$Kmer.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/KmerContent$ResultsTable.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/KmerContent.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/ModuleConfig.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/ModuleFactory.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/NContent.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/OverRepresentedSeqs$OverrepresentedSeq.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/OverRepresentedSeqs$ResultsTable.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/OverRepresentedSeqs.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/PerBaseQualityScores.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/PerBaseSequenceContent.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/PerSequenceGCContent.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/PerSequenceQualityScores.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/PerTileQualityScores.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/QCModule.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Modules/SequenceLengthDistribution.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Report/HTMLReportArchive.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Report/stylesheet.txt
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Resources/error.png
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Resources/fastqc_icon.png
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Resources/fastqc_icon.svg
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Resources/fastqc_icon_100.png
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Resources/tick.png
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Resources/warning.png
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Results/ResultsPanel$ModuleRenderer.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Results/ResultsPanel.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/BAMFile.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/Contaminant/Contaminant.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/Contaminant/ContaminantHit.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/Contaminant/ContaminentFinder.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/Fast5File.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/FastQFile.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/QualityEncoding/PhredEncoding.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/Sequence.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/SequenceFactory.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/SequenceFile.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/SequenceFileGroup.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Sequence/SequenceFormatException.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Statistics/NormalDistribution.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Statistics/PearsonCorrelation.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Utilities/CasavaBasename.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Utilities/HotColdColourGradient.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Utilities/ImageToBase64.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Utilities/MultiMemberGZIPInputStream.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Utilities/NameFormatException.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Utilities/NanoporeBasename.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Utilities/QualityCount.class
+share/java/classes/fastqc/uk/ac/babraham/FastQC/Utilities/RGB.class
