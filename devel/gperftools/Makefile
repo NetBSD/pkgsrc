@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/10/03 06:49:48 adam Exp $
+# $NetBSD: Makefile,v 1.19 2021/01/20 15:12:56 adam Exp $
 
-DISTNAME=	gperftools-2.8
+DISTNAME=	gperftools-2.8.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gperftools/}
 GITHUB_PROJECT=	gperftools
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 # on some platforms heap checker is not build by default
 CONFIGURE_ARGS+=	--enable-heap-checker
+TEST_TARGET=		check
 
 # for backtrace()
 .include "../../mk/bsd.prefs.mk"
@@ -33,7 +34,5 @@ PKGCONFIG_OVERRIDE+=		libtcmalloc_minimal_debug.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 REPLACE_PERL=		src/pprof
-
-TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
