@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/20 11:37:22 nia Exp $
+include/divsufsort.h
+lib/libdivsufsort.so
+lib/libdivsufsort.so.3
+lib/libdivsufsort.so.3.0.0
+lib/pkgconfig/libdivsufsort.pc

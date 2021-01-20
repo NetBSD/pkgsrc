@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/20 11:37:22 nia Exp $
+
+SHA1 (libdivsufsort-2.0.1.tar.gz) = 4d0d0c153ec74ce3584d393440a3d344342581ad
+RMD160 (libdivsufsort-2.0.1.tar.gz) = 332e6a62641cbaf7a3388dcf52d9d4960e7b21a2
+SHA512 (libdivsufsort-2.0.1.tar.gz) = c82299adbd49995145872cd67e03b1c8762de99043acca48964b16c66a39347fb6211b17c9b5f6e12878983ea7cafa65991179f67e3a4cb5e5e14bb57775487e
+Size (libdivsufsort-2.0.1.tar.gz) = 31290 bytes
