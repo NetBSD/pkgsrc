@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 11:45:50 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/01/20 21:06:30 adam Exp $
 
-DISTNAME=	dropbox-python-sdk-2.2.0
-PKGNAME=	${PYPKGPREFIX}-dropbox-2.2.0
-PKGREVISION=	1
-CATEGORIES=	net
-MASTER_SITES=	https://www.dropbox.com/developers/downloads/sdks/core/python/
-EXTRACT_SUFX=	.zip
+DISTNAME=	dropbox-11.0.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	net python
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dropbox/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.dropbox.com/developers/core/sdks/python
+HOMEPAGE=	https://www.dropbox.com/developers
 COMMENT=	Dropbox Python API
-LICENSE=	2-clause-bsd
+LICENSE=	mit
 
-EGG_NAME=	${DISTNAME:S/python-sdk-//}
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.16.2:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-stone>=2.0:../../net/py-stone
 
 USE_LANGUAGES=	# none
-REPLACE_PYTHON=	tests/test_client.py
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
