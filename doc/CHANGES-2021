@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.511 2021/01/20 09:10:03 adam Exp $
+$NetBSD: CHANGES-2021,v 1.512 2021/01/20 11:04:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -638,3 +638,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/link-grammar to 5.8.1 [gutteridge 2021-01-20]
 	Updated net/py-impacket to 0.9.22 [adam 2021-01-20]
 	Updated textproc/py-Levenshtein to 0.12.1 [adam 2021-01-20]
+	Updated www/py-djangorestframework to 3.12.2 [adam 2021-01-20]
+	Updated converters/py-emoji to 0.6.0 [adam 2021-01-20]
