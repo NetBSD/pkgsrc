@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.30 2020/09/01 03:58:08 wiz Exp $
+# $NetBSD: egg.mk,v 1.31 2021/01/20 23:56:51 gdt Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -50,7 +50,7 @@ do-build: ensurepip
 ensurepip:
 	${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m ensurepip --user
 .else
-.  if ${PYVERSSUFFIX} == "2.7"
+.  if "${PYVERSSUFFIX}" == "2.7"
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools44
 .  else
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
