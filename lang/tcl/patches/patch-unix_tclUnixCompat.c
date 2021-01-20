@@ -1,9 +1,9 @@
-$NetBSD: patch-unix_tclUnixCompat.c,v 1.1 2012/12/29 13:49:12 bsiegert Exp $
+$NetBSD: patch-unix_tclUnixCompat.c,v 1.2 2021/01/20 20:38:49 adam Exp $
 
 This is needed on MirBSD, which does not have the required sysconf
 constants.
 
---- unix/tclUnixCompat.c.orig	Thu Dec 13 16:53:10 2012
+--- unix/tclUnixCompat.c.orig	2020-12-11 17:46:23.000000000 +0000
 +++ unix/tclUnixCompat.c
 @@ -197,10 +197,14 @@ TclpGetPwNam(
       */
@@ -17,7 +17,7 @@ constants.
 +#ifdef _SC_GETPW_R_SIZE_MAX
  	}
 +#endif
- 	tsdPtr->pbuf = ckalloc(tsdPtr->pbuflen);
+ 	tsdPtr->pbuf = (char *)ckalloc(tsdPtr->pbuflen);
  	Tcl_CreateThreadExitHandler(FreePwBuf, NULL);
      }
 @@ -277,10 +281,14 @@ TclpGetPwUid(
@@ -32,10 +32,10 @@ constants.
 +#ifdef _SC_GETPW_R_SIZE_MAX
  	}
 +#endif
- 	tsdPtr->pbuf = ckalloc(tsdPtr->pbuflen);
+ 	tsdPtr->pbuf = (char *)ckalloc(tsdPtr->pbuflen);
  	Tcl_CreateThreadExitHandler(FreePwBuf, NULL);
      }
-@@ -380,10 +388,14 @@ TclpGetGrNam(
+@@ -381,10 +389,14 @@ TclpGetGrNam(
       */
  
      if (tsdPtr->gbuf == NULL) {
@@ -47,10 +47,10 @@ constants.
 +#ifdef _SC_GETGR_R_SIZE_MAX
  	}
 +#endif
- 	tsdPtr->gbuf = ckalloc(tsdPtr->gbuflen);
+ 	tsdPtr->gbuf = (char *)ckalloc(tsdPtr->gbuflen);
  	Tcl_CreateThreadExitHandler(FreeGrBuf, NULL);
      }
-@@ -460,10 +472,14 @@ TclpGetGrGid(
+@@ -461,10 +473,14 @@ TclpGetGrGid(
       */
  
      if (tsdPtr->gbuf == NULL) {
@@ -62,6 +62,6 @@ constants.
 +#ifdef _SC_GETGR_R_SIZE_MAX
  	}
 +#endif
- 	tsdPtr->gbuf = ckalloc(tsdPtr->gbuflen);
+ 	tsdPtr->gbuf = (char *)ckalloc(tsdPtr->gbuflen);
  	Tcl_CreateThreadExitHandler(FreeGrBuf, NULL);
      }
