@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/12/27 15:04:42 joerg Exp $
+$NetBSD: distinfo,v 1.5 2021/01/20 21:06:30 adam Exp $
 
-SHA1 (dropbox-python-sdk-2.2.0.zip) = 16fc4f2c9e37f49a00cc23d1df4aea9c29ed83c0
-RMD160 (dropbox-python-sdk-2.2.0.zip) = 84abbcc17b16ec0d2707e2ad45d94d9f80daf570
-SHA512 (dropbox-python-sdk-2.2.0.zip) = 1b30d53c69cd2a79abbdca81956ddd90eae5180b98a4b62cf97590f3201e0b5a0a721909060578831809cdbfa2e31794229d530718ff55067c6545cde09f343e
-Size (dropbox-python-sdk-2.2.0.zip) = 691948 bytes
-SHA1 (patch-dropbox_datastore.py) = 005aa34cfb446b1df2bcc7e45efaa7e0de906f24
-SHA1 (patch-tests_test__datastore.py) = 6f31e4312a7f5c9c0dc80abb4cbf21e7ea81112e
+SHA1 (dropbox-11.0.0.tar.gz) = 844a0732718fc414157ee01dffe1dddb458d4859
+RMD160 (dropbox-11.0.0.tar.gz) = f20faffd61d3f176ffb29ab965bbb2d3f15a658d
+SHA512 (dropbox-11.0.0.tar.gz) = 912859ed2d369ee3ffb09286131068b17356fdb0a4e382605545e0c1fea11e897c0476681fe876855606b3cccebccf56d88d8f1d86cf4ebbd4c693aee64eb90e
+Size (dropbox-11.0.0.tar.gz) = 548156 bytes
