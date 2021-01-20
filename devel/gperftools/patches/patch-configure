@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2015/04/14 14:40:02 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2021/01/20 15:12:56 adam Exp $
+
+Add support for NetBSD arm.
 
 --- configure.orig	2015-01-10 20:20:33.000000000 +0000
 +++ configure
