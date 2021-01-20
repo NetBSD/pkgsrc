@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2020/11/20 20:42:53 wiz Exp $
+$NetBSD: distinfo,v 1.36 2021/01/20 09:42:55 nia Exp $
 
 SHA1 (libX11-1.7.0.tar.bz2) = 48fd27a11572a7d3c1014368e1dc9f40a7b23e7d
 RMD160 (libX11-1.7.0.tar.bz2) = a3df61054babc200de47e0d5dc416461f64f8981
@@ -7,3 +7,4 @@ Size (libX11-1.7.0.tar.bz2) = 2409144 bytes
 SHA1 (patch-Makefile.in) = a38502ac45908a4a8d57de42e301894a2e9f8a15
 SHA1 (patch-aa) = 4f502264e7200fd2f9409d8684c53de3bc6f0649
 SHA1 (patch-ac) = 565aa2a636b5c50f67cbd11e7c2adcac8d55418e
+SHA1 (patch-src_xkb_XKBBind.c) = 3ad94bd3265c3c4a85bcf3e2da0782c16fd461d1
