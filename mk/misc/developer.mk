@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.24 2017/09/13 09:06:34 wiz Exp $
+# $NetBSD: developer.mk,v 1.25 2021/01/20 01:35:33 gutteridge Exp $
 #
 # Public targets for developers:
 #
@@ -54,9 +54,9 @@
 #	Like changes-entry, plus the CHANGES and TODO files are committed.
 #
 # upload-distfiles:
-# 	Upload files that wish to provide distfiles that others may fetch.
-#	It only upload distfiles that are freely re-distributable by setting
-# 	NO_SKIP (see mk/fetch/bsd.fetch-vars.mk).
+#	Upload distribution files to a project archive so that others may fetch
+#	them from there. It only uploads distfiles that are freely
+#	re-distributable by setting NO_SKIP (see mk/fetch/bsd.fetch-vars.mk).
 #
 # Keywords: commit update add rename changes upload
 #
