@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2019/10/11 09:27:15 jperkin Exp $
+$NetBSD: distinfo,v 1.24 2021/01/20 03:09:03 brook Exp $
 
 SHA1 (cvs-1.12.13.tar.bz2) = 93a8dacc6ff0e723a130835713235863f1f5ada9
 RMD160 (cvs-1.12.13.tar.bz2) = ba3048e3e2d99ae78f6a759889b615acf65dd487
@@ -29,6 +29,8 @@ SHA1 (patch-bb) = 153dc447751f3d52bca5033f33a95f408c5775db
 SHA1 (patch-lib_mktime.c) = 526a0e24c6399d527ae6a463ea91e993f9f7e920
 SHA1 (patch-lib_vasnprintf.c) = fbba4d923d3c61ebcf79e82779919dc1f8a570c0
 SHA1 (patch-m4_fpending.m4) = 6b7c96d8f092e179d2cfdf036bcbfd3855292e0f
+SHA1 (patch-m4_gettext.m4) = 3b58f75d1dde872aad23ceca12a363badaa4e0b3
+SHA1 (patch-m4_po.m4) = 43a11b3840f3369d3f9be2ca0a55045e11ff83a4
 SHA1 (patch-rsh-client.c) = 448811f5df402501c7070677fc8c2d1873764306
 SHA1 (patch-src_error.c) = 60aba581be95aebbb6fb16c888fd384d855fe56e
 SHA1 (patch-src_ignore.c) = 90ac25311c83bb5713b83b9cfb6b2c03790ee787
