@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.22 2020/04/16 17:07:07 adam Exp $
+# $NetBSD: Makefile.version,v 1.23 2021/01/20 20:40:28 adam Exp $
 # used by cad/xcircuit/Makefile
 # used by devel/tcl-tclcl/Makefile
 # used by lang/tcl/Makefile
@@ -7,4 +7,4 @@
 
 TK_SONUM=	86
 TK_BASEVER=	8.6
-TK_VERSION=	8.6.10
+TK_VERSION=	8.6.11

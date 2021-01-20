@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/04/16 17:07:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/01/20 20:40:28 adam Exp $
 bin/wish
 bin/wish${BASEVER}
 ${PLIST.aqua}include/X11/DECkeysym.h
@@ -363,6 +363,7 @@ man/man3/Tk_GetHINSTANCE.3
 man/man3/Tk_GetHWND.3
 man/man3/Tk_GetImage.3
 man/man3/Tk_GetImageMasterData.3
+man/man3/Tk_GetImageModelData.3
 man/man3/Tk_GetItemTypes.3
 man/man3/Tk_GetJoinStyle.3
 man/man3/Tk_GetJustify.3

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2020/08/17 20:18:01 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2021/01/20 20:40:28 adam Exp $
 
 BUILDLINK_TREE+=	tk
 
@@ -30,9 +30,9 @@ pkgbase := tk
 .  include "../../x11/libXft/buildlink3.mk"
 .endif
 .if empty(PKG_BUILD_OPTIONS.tk:Maqua)
-. include "../../x11/libX11/buildlink3.mk"
-. include "../../x11/libXext/buildlink3.mk"
-. include "../../x11/libXScrnSaver/buildlink3.mk"
+.  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXext/buildlink3.mk"
+.  include "../../x11/libXScrnSaver/buildlink3.mk"
 .endif
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
