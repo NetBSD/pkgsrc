@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.11 2020/04/17 01:43:41 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2021/01/20 00:55:58 gutteridge Exp $
 
-SHA1 (link-grammar-5.8.0.tar.gz) = 8a874ea7214cf635d2edb064bdaf368577c08efa
-RMD160 (link-grammar-5.8.0.tar.gz) = ef8b6eca527754afc12991f84f04f8f966e575bc
-SHA512 (link-grammar-5.8.0.tar.gz) = 1262e2faf1de6f05a62f9d622f43c02253b4c241342df9b443a70ae04bd328d1fc49cd2f91c881e694f67215005833fec8b1fa9d395b1e547985b376c7415d2e
-Size (link-grammar-5.8.0.tar.gz) = 3782125 bytes
+SHA1 (link-grammar-5.8.1.tar.gz) = 115376fe13fe63245d49efc69171668aa2f4bce5
+RMD160 (link-grammar-5.8.1.tar.gz) = 968e0ab2cf20aeef9332bce5e17f94ec0dc9c1f7
+SHA512 (link-grammar-5.8.1.tar.gz) = 0ef99d3ccb3d922a946f1f73b8b81cee9ece156886dab3367837e1e9f79944967da1391daf7f96ea5a95a0abdd346b642111a7939eb9aa079557c10b3efe8022
+Size (link-grammar-5.8.1.tar.gz) = 3791847 bytes
 SHA1 (patch-aa) = 3be918c26b639442b56efab2e9416974f31969c5
 SHA1 (patch-configure) = 0131e74f9f51bb380ab91d1cfdba2600fcee131a
-SHA1 (patch-link-grammar_link-grammar.def) = 1df6fefa9828c969d71277202158b2aebc5760f7
-SHA1 (patch-link-grammar_utilities.c) = b470d05227b6718747ef713e7099f0c2833894e6
