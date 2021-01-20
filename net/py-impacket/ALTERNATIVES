@@ -6,13 +6,13 @@ bin/atexec.py @PREFIX@/bin/atexec-@PYVERSSUFFIX@.py
 bin/dcomexec.py @PREFIX@/bin/dcomexec-@PYVERSSUFFIX@.py
 bin/dpapi.py @PREFIX@/bin/dpapi-@PYVERSSUFFIX@.py
 bin/esentutl.py @PREFIX@/bin/esentutl-@PYVERSSUFFIX@.py
+bin/exchanger.py @PREFIX@/bin/exchanger-@PYVERSSUFFIX@.py
 bin/findDelegation.py @PREFIX@/bin/findDelegation-@PYVERSSUFFIX@.py
 bin/getArch.py @PREFIX@/bin/getArch-@PYVERSSUFFIX@.py
 bin/getPac.py @PREFIX@/bin/getPac-@PYVERSSUFFIX@.py
 bin/getST.py @PREFIX@/bin/getST-@PYVERSSUFFIX@.py
 bin/getTGT.py @PREFIX@/bin/getTGT-@PYVERSSUFFIX@.py
 bin/goldenPac.py @PREFIX@/bin/goldenPac-@PYVERSSUFFIX@.py
-bin/ifmap.py @PREFIX@/bin/ifmap-@PYVERSSUFFIX@.py
 bin/karmaSMB.py @PREFIX@/bin/karmaSMB-@PYVERSSUFFIX@.py
 bin/kintercept.py @PREFIX@/bin/kintercept-@PYVERSSUFFIX@.py
 bin/lookupsid.py @PREFIX@/bin/lookupsid-@PYVERSSUFFIX@.py
@@ -24,7 +24,6 @@ bin/netview.py @PREFIX@/bin/netview-@PYVERSSUFFIX@.py
 bin/nmapAnswerMachine.py @PREFIX@/bin/nmapAnswerMachine-@PYVERSSUFFIX@.py
 bin/ntfs-read.py @PREFIX@/bin/ntfs-read-@PYVERSSUFFIX@.py
 bin/ntlmrelayx.py @PREFIX@/bin/ntlmrelayx-@PYVERSSUFFIX@.py
-bin/opdump.py @PREFIX@/bin/opdump-@PYVERSSUFFIX@.py
 bin/ping.py @PREFIX@/bin/ping-@PYVERSSUFFIX@.py
 bin/ping6.py @PREFIX@/bin/ping6-@PYVERSSUFFIX@.py
 bin/psexec.py @PREFIX@/bin/psexec-@PYVERSSUFFIX@.py
