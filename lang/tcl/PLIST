@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/04/19 23:34:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/01/20 20:38:48 adam Exp $
 bin/sqlite3_analyzer
 bin/tclsh
 bin/tclsh${BASEVER}
@@ -296,12 +296,12 @@ lib/tcl${BASEVER}/tcltest2.5/pkgIndex.tcl
 lib/tcl${BASEVER}/tcltest2.5/tcltest.tcl
 lib/tcl${BASEVER}/tm.tcl
 lib/tcl${BASEVER}/word.tcl
-lib/tcl8/8.4/platform-1.0.14.tm
+lib/tcl8/${BASEVER}/http-2.9.5.tm
+lib/tcl8/${BASEVER}/tdbc/sqlite3-${TDBC_VERSION}.tm
+lib/tcl8/8.4/platform-1.0.15.tm
 lib/tcl8/8.4/platform/shell-1.1.4.tm
 lib/tcl8/8.5/msgcat-1.6.1.tm
-lib/tcl8/8.5/tcltest-2.5.1.tm
-lib/tcl8/8.6/http-2.9.1.tm
-lib/tcl8/8.6/tdbc/sqlite3-${TDBC_VERSION}.tm
+lib/tcl8/8.5/tcltest-2.5.3.tm
 lib/tclConfig.sh
 lib/tclooConfig.sh
 lib/tdbc${TDBC_VERSION}/libtdbc${TDBC_VERSION}.so
@@ -404,6 +404,7 @@ man/man3/Tcl_CreateAlias.3
 man/man3/Tcl_CreateAliasObj.3
 man/man3/Tcl_CreateChannel.3
 man/man3/Tcl_CreateChannelHandler.3
+man/man3/Tcl_CreateChild.3
 man/man3/Tcl_CreateCloseHandler.3
 man/man3/Tcl_CreateCommand.3
 man/man3/Tcl_CreateEncoding.3
@@ -579,6 +580,7 @@ man/man3/Tcl_GetChannelOption.3
 man/man3/Tcl_GetChannelThread.3
 man/man3/Tcl_GetChannelType.3
 man/man3/Tcl_GetCharLength.3
+man/man3/Tcl_GetChild.3
 man/man3/Tcl_GetClassAsObject.3
 man/man3/Tcl_GetCommandFromObj.3
 man/man3/Tcl_GetCommandFullName.3
@@ -634,6 +636,7 @@ man/man3/Tcl_GetObjectFromObj.3
 man/man3/Tcl_GetObjectName.3
 man/man3/Tcl_GetObjectNamespace.3
 man/man3/Tcl_GetOpenFile.3
+man/man3/Tcl_GetParent.3
 man/man3/Tcl_GetPathType.3
 man/man3/Tcl_GetRange.3
 man/man3/Tcl_GetRegExpFromObj.3
