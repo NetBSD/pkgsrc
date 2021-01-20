@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/20 21:02:13 adam Exp $
+
+SHA1 (stone-3.2.1.tar.gz) = d3e93ef0d4b94bd4282b422ba1dd75eb3375ecf4
+RMD160 (stone-3.2.1.tar.gz) = 6d47b31cb85e89e473bf4e15d2e84cc0575fca2e
+SHA512 (stone-3.2.1.tar.gz) = 6cfae8ee63c2e47f3faf561959d48457440f6cf63996efb9da92306b45021c5b55c975444e6907b9b5ea076b431cbc4cfc228d155ebc190eaf32c918f44ab8c5
+Size (stone-3.2.1.tar.gz) = 189351 bytes
