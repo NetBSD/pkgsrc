@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/05/26 22:30:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/20 09:08:46 adam Exp $
 
-DISTNAME=	impacket-0.9.21
-PKGREVISION=	2
+DISTNAME=	impacket-0.9.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/impacket/}
@@ -55,9 +54,9 @@ SUBST_SED.crypto=	-e 's,Cryptodome,Crypto,'
 
 post-install:
 .for bin in GetADUsers GetNPUsers GetUserSPNs addcomputer atexec dcomexec dpapi \
-esentutl findDelegation getArch getPac getST getTGT goldenPac ifmap karmaSMB \
+esentutl exchanger findDelegation getArch getPac getST getTGT goldenPac karmaSMB \
 kintercept lookupsid mimikatz mqtt_check mssqlclient mssqlinstance netview \
-nmapAnswerMachine ntfs-read ntlmrelayx opdump ping ping6 psexec raiseChild \
+nmapAnswerMachine ntfs-read ntlmrelayx ping ping6 psexec raiseChild \
 rdp_check reg registry-read rpcdump sambaPipe samrdump secretsdump services \
 smbclient smbexec smbrelayx smbserver sniff sniffer split ticketConverter \
 ticketer wmiexec wmipersist wmiquery

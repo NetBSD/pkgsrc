@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/26 22:30:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/20 09:08:46 adam Exp $
 bin/GetADUsers-${PYVERSSUFFIX}.py
 bin/GetNPUsers-${PYVERSSUFFIX}.py
 bin/GetUserSPNs-${PYVERSSUFFIX}.py
@@ -7,13 +7,13 @@ bin/atexec-${PYVERSSUFFIX}.py
 bin/dcomexec-${PYVERSSUFFIX}.py
 bin/dpapi-${PYVERSSUFFIX}.py
 bin/esentutl-${PYVERSSUFFIX}.py
+bin/exchanger-${PYVERSSUFFIX}.py
 bin/findDelegation-${PYVERSSUFFIX}.py
 bin/getArch-${PYVERSSUFFIX}.py
 bin/getPac-${PYVERSSUFFIX}.py
 bin/getST-${PYVERSSUFFIX}.py
 bin/getTGT-${PYVERSSUFFIX}.py
 bin/goldenPac-${PYVERSSUFFIX}.py
-bin/ifmap-${PYVERSSUFFIX}.py
 bin/karmaSMB-${PYVERSSUFFIX}.py
 bin/kintercept-${PYVERSSUFFIX}.py
 bin/lookupsid-${PYVERSSUFFIX}.py
@@ -25,7 +25,6 @@ bin/netview-${PYVERSSUFFIX}.py
 bin/nmapAnswerMachine-${PYVERSSUFFIX}.py
 bin/ntfs-read-${PYVERSSUFFIX}.py
 bin/ntlmrelayx-${PYVERSSUFFIX}.py
-bin/opdump-${PYVERSSUFFIX}.py
 bin/ping-${PYVERSSUFFIX}.py
 bin/ping6-${PYVERSSUFFIX}.py
 bin/psexec-${PYVERSSUFFIX}.py
@@ -34,6 +33,7 @@ bin/rdp_check-${PYVERSSUFFIX}.py
 bin/reg-${PYVERSSUFFIX}.py
 bin/registry-read-${PYVERSSUFFIX}.py
 bin/rpcdump-${PYVERSSUFFIX}.py
+bin/rpcmap.py
 bin/sambaPipe-${PYVERSSUFFIX}.py
 bin/samrdump-${PYVERSSUFFIX}.py
 bin/secretsdump-${PYVERSSUFFIX}.py
@@ -163,6 +163,15 @@ ${PYSITELIB}/impacket/dcerpc/v5/ndr.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/nrpc.py
 ${PYSITELIB}/impacket/dcerpc/v5/nrpc.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/nrpc.pyo
+${PYSITELIB}/impacket/dcerpc/v5/nspi.py
+${PYSITELIB}/impacket/dcerpc/v5/nspi.pyc
+${PYSITELIB}/impacket/dcerpc/v5/nspi.pyo
+${PYSITELIB}/impacket/dcerpc/v5/oxabref.py
+${PYSITELIB}/impacket/dcerpc/v5/oxabref.pyc
+${PYSITELIB}/impacket/dcerpc/v5/oxabref.pyo
+${PYSITELIB}/impacket/dcerpc/v5/rpch.py
+${PYSITELIB}/impacket/dcerpc/v5/rpch.pyc
+${PYSITELIB}/impacket/dcerpc/v5/rpch.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/rpcrt.py
 ${PYSITELIB}/impacket/dcerpc/v5/rpcrt.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/rpcrt.pyo
@@ -226,6 +235,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/__init__.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/__init__.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/__init__.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/__init__.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/dcsyncattack.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/dcsyncattack.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/dcsyncattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattack.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattack.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattack.pyo
@@ -238,12 +250,18 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/ldapattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/mssqlattack.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/mssqlattack.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/mssqlattack.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/rpcattack.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/rpcattack.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/rpcattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/smbattack.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/smbattack.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/smbattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/__init__.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/__init__.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/__init__.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/dcsyncclient.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/dcsyncclient.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/dcsyncclient.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/httprelayclient.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/httprelayclient.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/httprelayclient.pyo
@@ -256,6 +274,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/ldaprelayclient.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/mssqlrelayclient.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/mssqlrelayclient.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/mssqlrelayclient.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/rpcrelayclient.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/rpcrelayclient.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/clients/rpcrelayclient.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/smbrelayclient.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/smbrelayclient.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/clients/smbrelayclient.pyo
@@ -298,6 +319,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksplugins/smtp.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/socksserver.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/wcfrelayserver.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/wcfrelayserver.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/wcfrelayserver.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/__init__.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/__init__.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/__init__.pyo
@@ -322,6 +346,9 @@ ${PYSITELIB}/impacket/examples/os_ident.pyo
 ${PYSITELIB}/impacket/examples/remcomsvc.py
 ${PYSITELIB}/impacket/examples/remcomsvc.pyc
 ${PYSITELIB}/impacket/examples/remcomsvc.pyo
+${PYSITELIB}/impacket/examples/rpcdatabase.py
+${PYSITELIB}/impacket/examples/rpcdatabase.pyc
+${PYSITELIB}/impacket/examples/rpcdatabase.pyo
 ${PYSITELIB}/impacket/examples/secretsdump.py
 ${PYSITELIB}/impacket/examples/secretsdump.pyc
 ${PYSITELIB}/impacket/examples/secretsdump.pyo
@@ -337,6 +364,9 @@ ${PYSITELIB}/impacket/helper.pyo
 ${PYSITELIB}/impacket/hresult_errors.py
 ${PYSITELIB}/impacket/hresult_errors.pyc
 ${PYSITELIB}/impacket/hresult_errors.pyo
+${PYSITELIB}/impacket/http.py
+${PYSITELIB}/impacket/http.pyc
+${PYSITELIB}/impacket/http.pyo
 ${PYSITELIB}/impacket/krb5/__init__.py
 ${PYSITELIB}/impacket/krb5/__init__.pyc
 ${PYSITELIB}/impacket/krb5/__init__.pyo
@@ -379,6 +409,9 @@ ${PYSITELIB}/impacket/ldap/ldapasn1.pyo
 ${PYSITELIB}/impacket/ldap/ldaptypes.py
 ${PYSITELIB}/impacket/ldap/ldaptypes.pyc
 ${PYSITELIB}/impacket/ldap/ldaptypes.pyo
+${PYSITELIB}/impacket/mapi_constants.py
+${PYSITELIB}/impacket/mapi_constants.pyc
+${PYSITELIB}/impacket/mapi_constants.pyo
 ${PYSITELIB}/impacket/mqtt.py
 ${PYSITELIB}/impacket/mqtt.pyc
 ${PYSITELIB}/impacket/mqtt.pyo
