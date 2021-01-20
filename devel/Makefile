@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3317 2021/01/18 12:01:10 nia Exp $
+# $NetBSD: Makefile,v 1.3318 2021/01/20 11:37:22 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -744,6 +744,7 @@ SUBDIR+=	libdbusmenu-qt
 SUBDIR+=	libdbusmenu-qt5
 SUBDIR+=	libdbusmenu-tools
 SUBDIR+=	libdevq
+SUBDIR+=	libdivsufsort
 SUBDIR+=	libdnsres
 SUBDIR+=	libdockapp
 SUBDIR+=	libdshconfig
