@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.514 2021/01/20 15:13:19 adam Exp $
+$NetBSD: CHANGES-2021,v 1.515 2021/01/20 15:59:16 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -643,3 +643,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/libdivsufsort version 2.0.1 [nia 2021-01-20]
 	Updated net/qbittorrent to 4.3.3 [adam 2021-01-20]
 	Updated devel/gperftools to 2.8.1 [adam 2021-01-20]
+	Added biology/fastqc version 0.11.9 [bacon 2021-01-20]
