@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/20 15:57:17 bacon Exp $
+
+SHA1 (fastqc_v0.11.9.zip) = 077003dcef8933c4b43ac5b6945fdc31b53f746c
+RMD160 (fastqc_v0.11.9.zip) = 9c06aff0044e0f8b4866ae9c731543017e71b9e0
+SHA512 (fastqc_v0.11.9.zip) = f9ed1546d08e941abcca8ff507d2cf2d455831fcb3d36def7d9881f4f23c4d7874b62d28c5f9901149e1b5bc7ca5fe746c5a522785b7fe72bc9e96330b568bed
+Size (fastqc_v0.11.9.zip) = 10249221 bytes
