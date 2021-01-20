@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.513 2021/01/20 11:38:56 nia Exp $
+$NetBSD: CHANGES-2021,v 1.514 2021/01/20 15:13:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -641,3 +641,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-djangorestframework to 3.12.2 [adam 2021-01-20]
 	Updated converters/py-emoji to 0.6.0 [adam 2021-01-20]
 	Added devel/libdivsufsort version 2.0.1 [nia 2021-01-20]
+	Updated net/qbittorrent to 4.3.3 [adam 2021-01-20]
+	Updated devel/gperftools to 2.8.1 [adam 2021-01-20]
