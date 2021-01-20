@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/20 11:37:22 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/20 11:39:32 nia Exp $
 
 DISTNAME=	libdivsufsort-2.0.1
 CATEGORIES=	devel
@@ -10,6 +10,9 @@ COMMENT=	Lightweight suffix array construction algorithm library
 LICENSE=	mit
 
 USE_CMAKE=	yes
+
+# Examples do not get installed.
+CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/libdivsufsort.pc.cmake
 
