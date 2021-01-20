@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/09/18 14:30:17 leot Exp $
+$NetBSD: distinfo,v 1.9 2021/01/20 18:31:22 leot Exp $
 
-SHA1 (rlwrap-0.43.tar.gz) = 0c0a3a6012a003d4ae3a44e9f82f9090b4ac4650
-RMD160 (rlwrap-0.43.tar.gz) = 8c122eb2acb8963132be744aae0f6d416169877e
-SHA512 (rlwrap-0.43.tar.gz) = 4a1440b2eef3a1664c6381eb09c19f4030de2c0ef4f1f3509f7d6e130d3c5e9c3ceb00fc6ea6052b22bbe1f6b162f72e0b47564df34ccecc5220f195c22e86a1
-Size (rlwrap-0.43.tar.gz) = 313139 bytes
-SHA1 (patch-configure.ac) = e5eee74d13030454f6453721f7d6292765fd4aac
+SHA1 (rlwrap-0.44.tar.gz) = b093d353cc5aa77794da9f33a197392f42c3b73d
+RMD160 (rlwrap-0.44.tar.gz) = 95a0eaff7a90348e12120c56b7a400c2c03bb955
+SHA512 (rlwrap-0.44.tar.gz) = b7bbec5a04ae3588d467d985c0bd7d4a6a91014c7f3a9fca8eb184f9d699e2463fc334c9eb336690427efce3ad62cd2a5b59b892790643a7a3260b6218e4a145
+Size (rlwrap-0.44.tar.gz) = 321590 bytes
