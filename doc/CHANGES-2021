@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.522 2021/01/21 16:53:48 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.523 2021/01/21 17:28:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -658,3 +658,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test-cov to 2.11.1 [adam 2021-01-21]
 	Updated mail/postfix to 3.5.9 [triaxx 2021-01-21]
 	Updated mail/rspamd to 2.7 [triaxx 2021-01-21]
+	Updated devel/abseil to 20200923.3 [adam 2021-01-21]
+	Updated net/grpc to 1.35.0 [adam 2021-01-21]
+	Updated net/py-grpcio to 1.35.0 [adam 2021-01-21]
+	Updated net/py-grpcio-testing to 1.35.0 [adam 2021-01-21]
+	Updated net/py-grpcio-tools to 1.35.0 [adam 2021-01-21]
