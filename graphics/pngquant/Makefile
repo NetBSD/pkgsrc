@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:22 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/21 20:00:50 adam Exp $
 
-DISTNAME=	pngquant-2.12.5-src
+DISTNAME=	pngquant-2.13.1-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pngquant.org/
