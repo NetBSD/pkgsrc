@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.519 2021/01/21 02:32:17 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.520 2021/01/21 15:39:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -654,3 +654,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/py-stone version 3.2.1 [adam 2021-01-20]
 	Updated net/py-dropbox to 11.0.0 [adam 2021-01-20]
 	Updated sysutils/xfce4-xarchiver to 0.5.4.16 [gutteridge 2021-01-21]
+	Updated textproc/py-pybtex to 0.24.0 [adam 2021-01-21]
+	Updated devel/py-test-cov to 2.11.1 [adam 2021-01-21]
