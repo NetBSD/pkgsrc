@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2020/11/05 09:08:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2021/01/21 16:53:30 triaxx Exp $
 
-DISTNAME=	rspamd-2.6
-PKGREVISION=	1
+DISTNAME=	rspamd-2.7
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
