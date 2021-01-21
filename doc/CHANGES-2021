@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.525 2021/01/21 18:10:20 nia Exp $
+$NetBSD: CHANGES-2021,v 1.526 2021/01/21 19:54:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -665,3 +665,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-tools to 1.35.0 [adam 2021-01-21]
 	Added biology/bowtie2 version 2.4.2 [bacon 2021-01-21]
 	Updated net/bandcamp-dl to 0.0.10 [nia 2021-01-21]
+	Updated devel/py-xopen to 1.1.0 [adam 2021-01-21]
+	Updated devel/py-faker to 5.6.5 [adam 2021-01-21]
