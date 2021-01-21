@@ -1,9 +1,10 @@
-$NetBSD: patch-configure,v 1.9 2019/08/09 12:59:02 adam Exp $
+$NetBSD: patch-configure,v 1.10 2021/01/21 19:58:47 adam Exp $
 
 Remove unwanted compiler flags.
 Avoid leaving scratch files in /tmp.
+Do not look for Xcode.
 
---- configure.orig	2019-07-27 12:50:23.000000000 +0000
+--- configure.orig	2020-11-22 13:18:54.000000000 +0000
 +++ configure
 @@ -5,7 +5,7 @@ PREFIX="/usr/local"
  LIBDIR="$PREFIX/lib"
@@ -39,24 +40,14 @@ Avoid leaving scratch files in /tmp.
  else
      # silence warnings about omp pragmas
      cflags "-Wno-unknown-pragmas"
-@@ -211,20 +205,9 @@ else
-     status "OpenMP" "no"
- fi
- 
--# Cocoa
--if [[ "$OSTYPE" =~ "darwin" ]]; then
--    cflags "-mmacosx-version-min=10.7"
--    lflags "-mmacosx-version-min=10.7"
--fi
--
- if [[ "$OSTYPE" =~ "darwin" ]]; then
+@@ -223,10 +217,6 @@ if [[ "$OSTYPE" =~ "darwin" ]]; then
      SOLIBSUFFIX=dylib
  
--    # Search Developer SDK paths, since Apple seems to have dropped the standard Unixy ones
+     # Search Developer SDK paths, since Apple seems to have dropped the standard Unixy ones
 -    XCODE_CMD="xcode-select"
 -    XCODE_PATH=$($XCODE_CMD -p)
--    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib")
--    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib")
+-    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib")
+-    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib")
  elif [[ "$OSTYPE" =~ "msys" ]]; then
      SOLIBSUFFIX=dll
  else
