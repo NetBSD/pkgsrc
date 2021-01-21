@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.520 2021/01/21 15:39:33 adam Exp $
+$NetBSD: CHANGES-2021,v 1.521 2021/01/21 16:38:17 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -656,3 +656,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xfce4-xarchiver to 0.5.4.16 [gutteridge 2021-01-21]
 	Updated textproc/py-pybtex to 0.24.0 [adam 2021-01-21]
 	Updated devel/py-test-cov to 2.11.1 [adam 2021-01-21]
+	Updated mail/postfix to 3.5.9 [triaxx 2021-01-21]
