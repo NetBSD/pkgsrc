@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.526 2021/01/21 19:54:48 adam Exp $
+$NetBSD: CHANGES-2021,v 1.527 2021/01/21 20:01:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -667,3 +667,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bandcamp-dl to 0.0.10 [nia 2021-01-21]
 	Updated devel/py-xopen to 1.1.0 [adam 2021-01-21]
 	Updated devel/py-faker to 5.6.5 [adam 2021-01-21]
+	Updated graphics/libimagequant to 2.13.1 [adam 2021-01-21]
+	Updated graphics/pngquant to 2.13.1 [adam 2021-01-21]
