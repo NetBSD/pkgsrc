@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/11/24 10:43:25 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/01/21 02:32:05 gutteridge Exp $
 
-SHA1 (xarchiver-0.5.4.15.tar.gz) = 093b6e4c14dddcd45c328c8af91efb66f2e2a590
-RMD160 (xarchiver-0.5.4.15.tar.gz) = 5fbb6772cffa186669354d5b85490e09d9d33471
-SHA512 (xarchiver-0.5.4.15.tar.gz) = e5174241dd45dd6186d91b15a15b207a8b356480d9ce1a7b9ac2da167878cdb14316a3e7abf3f2aac8d41a02777df2131e205c7d5971a376ff7dd0ca70fbc82f
-Size (xarchiver-0.5.4.15.tar.gz) = 1072943 bytes
+SHA1 (xarchiver-0.5.4.16.tar.gz) = e8d1033032aba56a9fd6ea0d3d81dd8c2554fa2f
+RMD160 (xarchiver-0.5.4.16.tar.gz) = 1a71a9e720ee38a5e4fd3c7d060ec8d0a7826d7e
+SHA512 (xarchiver-0.5.4.16.tar.gz) = 794027cbbc33371008fa259c07c5821ffa63a110a130c2ee6d5fbc40177823af25777d07a0522cd809feb4122b1b741f24f6108dffdda330e54f6402ef97ae4a
+Size (xarchiver-0.5.4.16.tar.gz) = 1071484 bytes
