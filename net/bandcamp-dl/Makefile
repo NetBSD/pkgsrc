@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/12/04 20:45:32 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/21 18:10:05 nia Exp $
 
-DISTNAME=	bandcamp-downloader-0.0.8.post12
-PKGNAME=	${DISTNAME:S/-downloader/-dl/1:S/.post/./1}
-PKGREVISION=	1
+DISTNAME=	bandcamp-downloader-0.0.10
+PKGNAME=	${DISTNAME:S/-downloader/-dl/1}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bandcamp-downloader/}
 
