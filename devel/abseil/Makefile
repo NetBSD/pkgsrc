@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/12/07 08:01:52 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/21 17:25:35 adam Exp $
 
-DISTNAME=	abseil-20200923.2
+DISTNAME=	abseil-20200923.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=abseil/}
 GITHUB_PROJECT=	abseil-cpp
