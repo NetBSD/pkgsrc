@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/01 17:55:05 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/01/21 18:10:05 nia Exp $
 
-SHA1 (bandcamp-downloader-0.0.8.post12.tar.gz) = f8bee0516a2ec9671d2c83bcfb626a6741d54b3e
-RMD160 (bandcamp-downloader-0.0.8.post12.tar.gz) = c3e6c93bf7b46ffa65b8751f0d6de313b594230d
-SHA512 (bandcamp-downloader-0.0.8.post12.tar.gz) = 9c32783e6482ad2f435b3aeb0fc90fd9b9db3a0a89502b5c258a5b7cd0ec1bb4490d88be92f9a8b651a70a0e9591231fd2d2c69a656136632fc0949b00c2ba49
-Size (bandcamp-downloader-0.0.8.post12.tar.gz) = 13341 bytes
+SHA1 (bandcamp-downloader-0.0.10.tar.gz) = 11e94b3bdeccf1c364aad56c5fc4bb3e69e47c2f
+RMD160 (bandcamp-downloader-0.0.10.tar.gz) = 1984d5879b25a43674bc498cbed47c7fa4c069fc
+SHA512 (bandcamp-downloader-0.0.10.tar.gz) = c4d42453a9710f4a02ea2f33482e00745cf081da89533950b9b01b6c9e9336d08ef1fa9972abc93ee89802a804e43d163c3ad1ca39fce86f479c105d317dccef
+Size (bandcamp-downloader-0.0.10.tar.gz) = 18724 bytes
