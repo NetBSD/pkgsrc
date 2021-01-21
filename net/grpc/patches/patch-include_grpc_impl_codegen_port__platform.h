@@ -1,10 +1,10 @@
-$NetBSD: patch-include_grpc_impl_codegen_port__platform.h,v 1.3 2019/04/19 07:15:36 adam Exp $
+$NetBSD: patch-include_grpc_impl_codegen_port__platform.h,v 1.4 2021/01/21 17:27:07 adam Exp $
 
 Add NetBSD support.
 
---- include/grpc/impl/codegen/port_platform.h.orig	2019-04-15 22:38:24.000000000 +0000
+--- include/grpc/impl/codegen/port_platform.h.orig	2021-01-19 18:07:57.000000000 +0000
 +++ include/grpc/impl/codegen/port_platform.h
-@@ -331,6 +331,29 @@
+@@ -335,6 +335,30 @@
  #else /* _LP64 */
  #define GPR_ARCH_32 1
  #endif /* _LP64 */
@@ -20,6 +20,7 @@ Add NetBSD support.
 +#define GPR_POSIX_LOG 1
 +#define GPR_POSIX_ENV 1
 +#define GPR_POSIX_TMPFILE 1
++#define GPR_POSIX_STAT 1
 +#define GPR_POSIX_STRING 1
 +#define GPR_POSIX_SUBPROCESS 1
 +#define GPR_POSIX_SYNC 1
