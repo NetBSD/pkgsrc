@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1 2021/01/21 17:30:12 bacon Exp $
+
+# Respect PREFIX and CXXFLAGS
+
+--- Makefile.orig	2020-10-06 03:46:41.000000000 +0000
++++ Makefile
+@@ -21,7 +21,7 @@
+ # Makefile for bowtie, bowtie2-build, bowtie2-inspect
+ #
+ 
+-PREFIX := /usr/local
++PREFIX ?= /usr/local
+ bindir := $(PREFIX)/bin
+ 
+ ARCH := $(shell uname -m)
+@@ -234,7 +234,7 @@ ifeq (32,$(BITS))
+ endif
+ 
+ DEBUG_FLAGS    := -O0 -g3 $(SSE_FLAG)
+-RELEASE_FLAGS  := -O3 $(SSE_FLAG) -funroll-loops -g3
++# RELEASE_FLAGS  := -O3 $(SSE_FLAG) -funroll-loops -g3
+ NOASSERT_FLAGS := -DNDEBUG
+ FILE_FLAGS     := -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE
+ DEBUG_DEFS     = -DCOMPILER_OPTIONS="\"$(DEBUG_FLAGS) $(CXXFLAGS)\""
