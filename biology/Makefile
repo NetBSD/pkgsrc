@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2021/01/21 17:30:59 bacon Exp $
+# $NetBSD: Makefile,v 1.62 2021/01/22 17:09:00 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -7,6 +7,7 @@ SUBDIR+=	R-popbio
 SUBDIR+=	arka
 SUBDIR+=	azara
 SUBDIR+=	bcftools
+SUBDIR+=	bedtools
 SUBDIR+=	bioperl
 SUBDIR+=	bodr
 SUBDIR+=	bowtie2
