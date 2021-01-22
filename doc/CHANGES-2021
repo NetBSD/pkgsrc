@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.528 2021/01/21 20:20:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.529 2021/01/22 01:24:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -671,3 +671,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/pngquant to 2.13.1 [adam 2021-01-21]
 	Updated devel/py-memory-profiler to 0.58.0 [adam 2021-01-21]
 	Updated devel/py-test-xprocess to 0.17.0 [adam 2021-01-21]
+	Updated devel/java-jna to 5.2.0nb2 [gutteridge 2021-01-22]
