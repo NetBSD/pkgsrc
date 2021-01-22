@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/01/13 09:21:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/22 16:09:32 schmonz Exp $
 
 DISTNAME=	s6-networking-2.4.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 
