@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/11/13 18:27:35 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/01/22 20:08:32 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go114/AUTHORS
@@ -791,6 +791,7 @@ go114/pkg/${GO_PLATFORM}/index/suffixarray.a
 go114/pkg/${GO_PLATFORM}/internal/bytealg.a
 go114/pkg/${GO_PLATFORM}/internal/cfg.a
 go114/pkg/${GO_PLATFORM}/internal/cpu.a
+go114/pkg/${GO_PLATFORM}/internal/execabs.a
 go114/pkg/${GO_PLATFORM}/internal/fmtsort.a
 go114/pkg/${GO_PLATFORM}/internal/goroot.a
 go114/pkg/${GO_PLATFORM}/internal/goversion.a
@@ -1923,6 +1924,7 @@ go114/src/cmd/go/testdata/script/build_trimpath.txt
 go114/src/cmd/go/testdata/script/cache_unix.txt
 go114/src/cmd/go/testdata/script/cache_vet.txt
 go114/src/cmd/go/testdata/script/cgo_asm_error.txt
+go114/src/cmd/go/testdata/script/cgo_path.txt
 go114/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
 go114/src/cmd/go/testdata/script/clean_testcache.txt
 go114/src/cmd/go/testdata/script/cmd_import_error.txt
@@ -1968,6 +1970,7 @@ go114/src/cmd/go/testdata/script/install_cmd_gobin.txt
 go114/src/cmd/go/testdata/script/install_cross_gobin.txt
 go114/src/cmd/go/testdata/script/install_rebuild_gopath.txt
 go114/src/cmd/go/testdata/script/install_rebuild_removed.txt
+go114/src/cmd/go/testdata/script/ldflag.txt
 go114/src/cmd/go/testdata/script/link_syso_issue33139.txt
 go114/src/cmd/go/testdata/script/linkname.txt
 go114/src/cmd/go/testdata/script/list_ambiguous_path.txt
@@ -4527,6 +4530,8 @@ go114/src/internal/cpu/cpu_x86.go
 go114/src/internal/cpu/cpu_x86.s
 go114/src/internal/cpu/cpu_x86_test.go
 go114/src/internal/cpu/export_test.go
+go114/src/internal/execabs/execabs.go
+go114/src/internal/execabs/execabs_test.go
 go114/src/internal/fmtsort/export_test.go
 go114/src/internal/fmtsort/sort.go
 go114/src/internal/fmtsort/sort_test.go
@@ -6312,6 +6317,7 @@ go114/src/runtime/testdata/testprogcgo/exec.go
 go114/src/runtime/testdata/testprogcgo/lockosthread.c
 go114/src/runtime/testdata/testprogcgo/lockosthread.go
 go114/src/runtime/testdata/testprogcgo/main.go
+go114/src/runtime/testdata/testprogcgo/needmdeadlock.go
 go114/src/runtime/testdata/testprogcgo/numgoroutine.go
 go114/src/runtime/testdata/testprogcgo/pprof.go
 go114/src/runtime/testdata/testprogcgo/raceprof.go
@@ -8636,6 +8642,7 @@ go114/test/fixedbugs/issue4252.dir/a.go
 go114/test/fixedbugs/issue4252.dir/main.go
 go114/test/fixedbugs/issue4252.go
 go114/test/fixedbugs/issue4264.go
+go114/test/fixedbugs/issue42753.go
 go114/test/fixedbugs/issue4283.go
 go114/test/fixedbugs/issue4313.go
 go114/test/fixedbugs/issue4316.go
