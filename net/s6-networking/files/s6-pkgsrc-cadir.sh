@@ -1,3 +1,3 @@
 #!@SH@
 
-exec @SETENV@ CADIR=@SSLDIR@/certs "$@"
+exec @SETENV@ CADIR=@SSLCERTS@ "$@"
