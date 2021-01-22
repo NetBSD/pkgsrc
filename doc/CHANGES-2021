@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.534 2021/01/22 16:11:48 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.535 2021/01/22 16:16:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -680,3 +680,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/execline to 2.7.0.0nb1 [schmonz 2021-01-22]
 	Updated sysutils/s6 to 2.10.0.0nb1 [schmonz 2021-01-22]
 	Updated sysutils/fdtools to 2020.05.04nb2 [schmonz 2021-01-22]
+	Updated lang/janet to 1.14.1 [nia 2021-01-22]
