@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/01/11 18:13:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/22 16:10:35 schmonz Exp $
 
 DISTNAME=	execline-2.7.0.0
+PKGREVISION=	1
 CATEGORIES=	lang shells
 MASTER_SITES=	${HOMEPAGE}
 
