@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/06/26 10:26:08 yyamano Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/22 01:22:46 gutteridge Exp $
 
 DISTNAME=	jna-5.2.0
 PKGNAME=	java-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=java-native-access/}
 GITHUB_PROJECT=	jna
@@ -77,6 +77,12 @@ ANT_ARGS+=	-Dbuild-native=true
 ANT_ARGS+=	-Dcflags_extra.native=""
 ANT_ARGS+=	-DCC=${CC}
 ANT_TARGET=	jar contrib-jars javadoc
+
+# Needed with recent GCC versions, e.g., 9.3.
+BUILDLINK_TRANSFORM+=	rm:-Werror
+.if empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Wno-unknown-warning-option
+.endif
 
 do-build:
 	cd ${WRKSRC} && \
