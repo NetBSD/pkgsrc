@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.530 2021/01/22 12:00:00 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.531 2021/01/22 16:08:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -673,3 +673,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test-xprocess to 0.17.0 [adam 2021-01-21]
 	Updated devel/java-jna to 5.2.0nb2 [gutteridge 2021-01-22]
 	Updated pkgtools/mksandbox to 1.10 [jperkin 2021-01-22]
+	Updated devel/skalibs to 2.10.0.1 [schmonz 2021-01-22]
