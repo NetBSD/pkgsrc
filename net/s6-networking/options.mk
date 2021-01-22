@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2021/01/22 16:20:38 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2021/01/22 17:16:45 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.s6-networking
 PKG_SUPPORTED_OPTIONS+=	execline tls
@@ -26,7 +26,7 @@ PKG_USERS+=		${UCSPI_SSL_USER}:${UCSPI_SSL_GROUP}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	s6-pkgsrc-cadir
-SUBST_VARS.paths=	SH SETENV SSLDIR
+SUBST_VARS.paths=	SH SETENV SSLCERTS
 
 post-extract:
 	for f in s6-pkgsrc-cadir; do \
