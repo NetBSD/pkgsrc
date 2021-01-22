@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.17 2020/12/07 13:05:12 jperkin Exp $
+# $NetBSD: mksandbox,v 1.18 2021/01/22 11:59:52 jperkin Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -136,7 +136,7 @@ Linux)
 	paxprog=""
 	sedprog=/bin/sed
 	sandboxMountDirs="$sandboxMountDirs /lib64 /usr/lib64 /usr/kerberos"
-	sandboxWriteDirs="$sandboxWriteDirs /dev/shm /proc"
+	sandboxWriteDirs="$sandboxWriteDirs /proc"
 	;;
 NetBSD)
 	bmakeprog=make
@@ -289,6 +289,7 @@ SunOS)
 	;;
 Linux)
 	$mountprog $mountflags /dev $sandbox/dev
+	$mountprog -t tmpfs tmpfs $sandbox/dev/shm
 	;;
 *)
 	$cpprog /dev/MAKEDEV* $sandbox/dev
@@ -438,6 +439,7 @@ xmount)
 		;;
 	Linux)
 		$mountprog $mountflags /dev \$sandbox/dev
+		$mountprog -t tmpfs tmpfs \$sandbox/dev/shm
 		;;
 	SunOS)
 		$mountprog -F lofs -r /dev \$sandbox/dev
@@ -455,7 +457,11 @@ xumount)
 		umount \$sandbox/\$mntpoint
 	done
 	case \$opsys in
-	Darwin|DragonFly|FreeBSD|Linux)
+	Linux)
+		umount \$sandbox/dev/shm
+		umount \$sandbox/dev
+		;;
+	Darwin|DragonFly|FreeBSD)
 		umount \$sandbox/dev
 		;;
 	SunOS)
