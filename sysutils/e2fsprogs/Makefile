@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/03/20 11:58:21 nia Exp $
+# $NetBSD: Makefile,v 1.31 2021/01/22 11:46:34 nia Exp $
 
 DISTNAME=	e2fsprogs-1.43.7
 PKGREVISION=	1
@@ -19,6 +19,13 @@ GNU_CONFIGURE=		yes
 # Use external libraries
 CONFIGURE_ARGS+=	--disable-libblkid
 CONFIGURE_ARGS+=	--disable-libuuid
+# This does not build on NetBSD due to missing FUSE_MAKE_VERSION in fuse.h,
+# but will be automatically built on certain systems when libfuse can be found
+# by the configure script without fuse.buildlink3.mk being included, resulting
+# in PLIST conflicts.
+#
+# I'm unsure whether this is better or more useful than filesystems/fuse-ext2.
+CONFIGURE_ARGS+=	--disable-fuse2fs
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 INFO_FILES=		yes
 INSTALL_TARGET=		install install-libs
