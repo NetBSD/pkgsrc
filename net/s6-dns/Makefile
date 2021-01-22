@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/01/11 18:20:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/22 16:09:00 schmonz Exp $
 
-DISTNAME=	s6-dns-2.3.4.0
+DISTNAME=	s6-dns-2.3.5.0
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 
@@ -16,5 +16,6 @@ CONFIGURE_ARGS+=	--with-sysdeps=${PREFIX}/lib/skalibs/sysdeps
 CONFIGURE_ARGS+=	--with-lib=${PREFIX}/lib/skalibs
 CONFIGURE_ARGS+=	--with-include=${PREFIX}/include
 
+BUILDLINK_API_DEPENDS.skalibs+=	skalibs>=2.10.0.1
 .include "../../devel/skalibs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
