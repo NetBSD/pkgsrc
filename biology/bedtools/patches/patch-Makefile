@@ -1,0 +1,45 @@
+$NetBSD: patch-Makefile,v 1.1 2021/01/22 17:07:50 bacon Exp $
+
+# Respect pkgsrc env, drop bash dep
+
+--- Makefile.orig	2019-12-17 20:12:15.000000000 +0000
++++ Makefile
+@@ -4,7 +4,7 @@
+ # (c) 2009 Aaron Quinlan
+ # ==========================
+ 
+-SHELL := /bin/bash -e
++SHELL := /bin/sh -e
+ 
+ VERSION_FILE=./src/utils/version/version_git.h
+ RELEASED_VERSION_FILE=./src/utils/version/version_release.txt
+@@ -21,7 +21,7 @@ OBJ_DIR	= obj
+ BIN_DIR	= bin
+ SRC_DIR	= src
+ 
+-CXX     = g++
++CXX     ?= g++
+ 
+ ifeq ($(DEBUG),1)
+ BT_CPPFLAGS = -DDEBUG -D_DEBUG -D_FILE_OFFSET_BITS=64 -DWITH_HTS_CB_API $(INCLUDES)
+@@ -41,7 +41,7 @@ endif
+ BT_LDFLAGS =
+ BT_LIBS    = -lz -lm -lbz2 -llzma -lpthread
+ 
+-prefix ?= /usr/local
++PREFIX ?= /usr/local
+ 
+ SUBDIRS = $(SRC_DIR)/annotateBed \
+ 		  $(SRC_DIR)/bamToBed \
+@@ -191,9 +191,9 @@ $(BIN_DIR)/intersectBed: | $(BIN_DIR)
+ .PHONY: all
+ 
+ install: all
+-	mkdir -p $(DESTDIR)$(prefix)/bin
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
+ 	for file in bin/* ; do \
+-		cp -f $$file $(DESTDIR)$(prefix)/bin; \
++		cp -f $$file $(DESTDIR)$(PREFIX)/bin; \
+ 	done
+ 
+ print_banner:
