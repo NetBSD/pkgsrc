@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.538 2021/01/22 17:10:00 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.539 2021/01/22 17:27:58 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -684,3 +684,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/feh to 3.6.2 [nia 2021-01-22]
 	Updated net/dnscrypt-proxy2 to 2.0.45 [nia 2021-01-22]
 	Added biology/bedtools version 2.29.2 [bacon 2021-01-22]
+	Updated devel/py-xdg to 0.27 [triaxx 2021-01-22]
