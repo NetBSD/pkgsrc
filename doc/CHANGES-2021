@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.533 2021/01/22 16:09:39 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.534 2021/01/22 16:11:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -676,3 +676,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/skalibs to 2.10.0.1 [schmonz 2021-01-22]
 	Updated net/s6-dns to 2.3.5.0 [schmonz 2021-01-22]
 	Updated net/s6-networking to 2.4.0.0nb2 [schmonz 2021-01-22]
+	Updated misc/s6-portable-utils to 2.2.3.1nb1 [schmonz 2021-01-22]
+	Updated lang/execline to 2.7.0.0nb1 [schmonz 2021-01-22]
+	Updated sysutils/s6 to 2.10.0.0nb1 [schmonz 2021-01-22]
+	Updated sysutils/fdtools to 2020.05.04nb2 [schmonz 2021-01-22]
