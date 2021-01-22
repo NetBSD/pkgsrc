@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2020/12/18 19:21:35 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/01/22 16:16:11 nia Exp $
 bin/janet
 bin/jpm
 include/janet/janet.h
 lib/libjanet.a
 lib/libjanet.so
-lib/libjanet.so.1.13
+lib/libjanet.so.1.14
 lib/libjanet.so.${PKGVERSION}
 lib/pkgconfig/janet.pc
 man/man1/janet.1
