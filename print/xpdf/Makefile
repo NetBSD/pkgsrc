@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2020/01/26 17:32:01 rillig Exp $
+# $NetBSD: Makefile,v 1.90 2021/01/22 16:27:21 nros Exp $
 
 DISTNAME=	xpdf-3.04
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
-MASTER_SITES+=	${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/xpdf/}
+MASTER_SITES=	https://dl.xpdfreader.com/old/
 PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
