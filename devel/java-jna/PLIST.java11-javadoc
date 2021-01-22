@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java11-javadoc,v 1.1 2020/06/26 10:26:08 yyamano Exp $
+@comment $NetBSD: PLIST.java11-javadoc,v 1.2 2021/01/22 01:22:46 gutteridge Exp $
 share/doc/java-jna/doc/javadoc/allclasses-index.html
 share/doc/java-jna/doc/javadoc/allclasses.html
 share/doc/java-jna/doc/javadoc/allpackages-index.html
@@ -1184,8 +1184,7 @@ share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_2e83ff_256x240.png
 share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_454545_256x240.png
 share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_888888_256x240.png
 share/doc/java-jna/doc/javadoc/jquery/images/ui-icons_cd0a0a_256x240.png
-share/doc/java-jna/doc/javadoc/jquery/jquery-3.3.1.js
-share/doc/java-jna/doc/javadoc/jquery/jquery-migrate-3.0.1.js
+share/doc/java-jna/doc/javadoc/jquery/jquery-3.5.1.js
 share/doc/java-jna/doc/javadoc/jquery/jquery-ui.css
 share/doc/java-jna/doc/javadoc/jquery/jquery-ui.js
 share/doc/java-jna/doc/javadoc/jquery/jquery-ui.min.css
