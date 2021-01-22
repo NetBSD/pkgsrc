@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/01/11 18:31:10 schmonz Exp $
+# $NetBSD: options.mk,v 1.3 2021/01/22 16:20:38 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.s6-networking
 PKG_SUPPORTED_OPTIONS+=	execline tls
@@ -15,8 +15,8 @@ CONFIGURE_ARGS+=	--disable-execline
 PLIST_VARS=		tls
 .if !empty(PKG_OPTIONS:Mtls)
 PLIST.tls=		yes
-.  include "../../security/libretls/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-ssl=libressl
+.  include "../../security/bearssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-ssl=bearssl
 
 PKG_USERS_VARS+=	UCSPI_SSL_USER
 PKG_GROUPS_VARS+=	UCSPI_SSL_GROUP
