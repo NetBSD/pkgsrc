@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/01/14 12:50:25 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/23 11:43:40 nia Exp $
 
 DISTNAME=	profanity-0.9.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	https://profanity-im.github.io/
 
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://profanity-im.github.io/
 COMMENT=	Console based XMPP client inspired by irssi
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 USE_TOOLS+=	autoconf pkg-config
 
@@ -25,6 +27,12 @@ SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	configure.ac
 SUBST_SED.python=	-e 's,python-config,python${PYVERSSUFFIX}-config,g'
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Fixing absolute paths.
+SUBST_FILES.paths=	src/config/preferences.c
+SUBST_VARS.paths=	PREFIX
 
 CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--enable-c-plugins
