@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.38 2021/01/03 18:24:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2021/01/23 08:58:11 adam Exp $
 bin/stellarium
 man/man1/stellarium.1
-${PLIST.desktop}share/applications/stellarium.desktop
+${PLIST.desktop}share/applications/org.stellarium.Stellarium.desktop
 ${PLIST.desktop}share/icons/hicolor/128x128/apps/stellarium.png
 ${PLIST.desktop}share/icons/hicolor/16x16/apps/stellarium.png
 ${PLIST.desktop}share/icons/hicolor/256x256/apps/stellarium.png
@@ -9,9 +9,8 @@ ${PLIST.desktop}share/icons/hicolor/32x32/apps/stellarium.png
 ${PLIST.desktop}share/icons/hicolor/48x48/apps/stellarium.png
 ${PLIST.desktop}share/icons/hicolor/512x512/apps/stellarium.png
 ${PLIST.desktop}share/icons/hicolor/64x64/apps/stellarium.png
-${PLIST.desktop}share/metainfo/stellarium.appdata.xml
+${PLIST.desktop}share/metainfo/org.stellarium.Stellarium.appdata.xml
 ${PLIST.desktop}share/mime/packages/stellarium.xml
-${PLIST.desktop}share/pixmaps/stellarium.xpm
 share/stellarium/data/DejaVuSans.ttf
 share/stellarium/data/DejaVuSansMono.ttf
 share/stellarium/data/base_locations.bin.gz
