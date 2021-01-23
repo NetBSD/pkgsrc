@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.546 2021/01/23 15:36:02 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.547 2021/01/23 19:40:20 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -692,3 +692,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go114 to 1.14.14 [bsiegert 2021-01-23]
 	Updated lang/go115 to 1.15.7 [bsiegert 2021-01-23]
 	Updated www/kore to 4.1.0 [fcambus 2021-01-23]
+	Updated net/gh to 1.5.0 [bsiegert 2021-01-23]
