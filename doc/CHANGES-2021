@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.550 2021/01/23 20:37:33 js Exp $
+$NetBSD: CHANGES-2021,v 1.551 2021/01/23 20:54:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -694,3 +694,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/kore to 4.1.0 [fcambus 2021-01-23]
 	Updated net/gh to 1.5.0 [bsiegert 2021-01-23]
 	Updated geography/qgis to 3.10.14 [gdt 2021-01-23]
+	Updated net/gallery-dl to 1.16.4 [leot 2021-01-23]
