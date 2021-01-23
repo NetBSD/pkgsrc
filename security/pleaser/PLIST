@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/23 10:58:51 pin Exp $
+bin/please
+bin/pleaseedit
+man/man1/please.1
+man/man5/please.ini.5
