@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/09/09 09:19:34 fcambus Exp $
+# $NetBSD: Makefile,v 1.10 2021/01/23 15:35:43 fcambus Exp $
 
-DISTNAME=	kore-4.0.1
+DISTNAME=	kore-4.1.0
 CATEGORIES=	www
 MASTER_SITES=	https://kore.io/releases/
 
