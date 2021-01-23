@@ -1,4 +1,4 @@
-$NetBSD: patch-src_config_preferences.c,v 1.1 2021/01/23 11:43:40 nia Exp $
+$NetBSD: patch-src_config_preferences.c,v 1.2 2021/01/23 13:08:11 nia Exp $
 
 Set paths for security/mozilla-rootcerts.
 
@@ -22,8 +22,8 @@ Set paths for security/mozilla-rootcerts.
 -        }
 -        if (g_file_test("/system/etc/security/cacerts",  G_FILE_TEST_IS_DIR)) {
 -            return strdup("/system/etc/security/cacerts");
-+        if (g_file_test("@PREFIX@/share/mozilla-rootcerts",  G_FILE_TEST_IS_DIR)) {
-+            return strdup("@PREFIX@/share/mozilla-rootcerts");
++        if (g_file_test("@SSLCERTS@",  G_FILE_TEST_IS_DIR)) {
++            return strdup("@SSLCERTS@");
          }
  
          return NULL;
