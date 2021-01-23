@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2021/01/09 17:47:39 leot Exp $
+@comment $NetBSD: PLIST,v 1.50 2021/01/23 20:54:24 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -204,6 +204,9 @@ ${PYSITELIB}/gallery_dl/extractor/kabeuchi.pyo
 ${PYSITELIB}/gallery_dl/extractor/keenspot.py
 ${PYSITELIB}/gallery_dl/extractor/keenspot.pyc
 ${PYSITELIB}/gallery_dl/extractor/keenspot.pyo
+${PYSITELIB}/gallery_dl/extractor/kemonoparty.py
+${PYSITELIB}/gallery_dl/extractor/kemonoparty.pyc
+${PYSITELIB}/gallery_dl/extractor/kemonoparty.pyo
 ${PYSITELIB}/gallery_dl/extractor/khinsider.py
 ${PYSITELIB}/gallery_dl/extractor/khinsider.pyc
 ${PYSITELIB}/gallery_dl/extractor/khinsider.pyo
@@ -291,6 +294,9 @@ ${PYSITELIB}/gallery_dl/extractor/patreon.pyo
 ${PYSITELIB}/gallery_dl/extractor/photobucket.py
 ${PYSITELIB}/gallery_dl/extractor/photobucket.pyc
 ${PYSITELIB}/gallery_dl/extractor/photobucket.pyo
+${PYSITELIB}/gallery_dl/extractor/photovogue.py
+${PYSITELIB}/gallery_dl/extractor/photovogue.pyc
+${PYSITELIB}/gallery_dl/extractor/photovogue.pyo
 ${PYSITELIB}/gallery_dl/extractor/piczel.py
 ${PYSITELIB}/gallery_dl/extractor/piczel.pyc
 ${PYSITELIB}/gallery_dl/extractor/piczel.pyo
@@ -375,6 +381,9 @@ ${PYSITELIB}/gallery_dl/extractor/tumblr.pyo
 ${PYSITELIB}/gallery_dl/extractor/twitter.py
 ${PYSITELIB}/gallery_dl/extractor/twitter.pyc
 ${PYSITELIB}/gallery_dl/extractor/twitter.pyo
+${PYSITELIB}/gallery_dl/extractor/unsplash.py
+${PYSITELIB}/gallery_dl/extractor/unsplash.pyc
+${PYSITELIB}/gallery_dl/extractor/unsplash.pyo
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.py
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.pyc
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.pyo
