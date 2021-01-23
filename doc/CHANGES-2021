@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.552 2021/01/23 22:09:08 leot Exp $
+$NetBSD: CHANGES-2021,v 1.553 2021/01/23 23:19:22 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -696,3 +696,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/qgis to 3.10.14 [gdt 2021-01-23]
 	Updated net/gallery-dl to 1.16.4 [leot 2021-01-23]
 	Updated net/rclone to 1.53.4 [leot 2021-01-23]
+	Updated math/qhull to 2020.2 [gdt 2021-01-23]
