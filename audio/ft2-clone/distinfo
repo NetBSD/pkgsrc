@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2021/01/23 20:16:11 js Exp $
-
-SHA1 (ft2-clone-1.43.tar.gz) = 34a8be674e44169aa07c87190cbe296ce7b3481b
-RMD160 (ft2-clone-1.43.tar.gz) = 50bd6c2224fcfee21f6617253d4d1f2fdf211517
-SHA512 (ft2-clone-1.43.tar.gz) = 767cd178b459bc6365c6c7368a505b9abb69d2a0507d045eb964f01ec6deda36834438c39cade323ec55bcbd29683dc30fc2b8986a1f9e2d5134ec685aaad4b5
-Size (ft2-clone-1.43.tar.gz) = 5097977 bytes
