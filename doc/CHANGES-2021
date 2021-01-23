@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.545 2021/01/23 14:08:02 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.546 2021/01/23 15:36:02 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -691,3 +691,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/pleaser version 0.3.19 [pin 2021-01-23]
 	Updated lang/go114 to 1.14.14 [bsiegert 2021-01-23]
 	Updated lang/go115 to 1.15.7 [bsiegert 2021-01-23]
+	Updated www/kore to 4.1.0 [fcambus 2021-01-23]
