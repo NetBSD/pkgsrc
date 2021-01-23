@@ -1,0 +1,4 @@
+Please(r), a sudo clone with regex support.
+The aim is to allow admins to delegate accurate least privilege access with
+ease. There are times when what is intended to be executed can be expressed
+easily with a regex to expose only what is needed and nothing more.
