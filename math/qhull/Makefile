@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2020/04/12 21:15:01 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/23 23:19:16 gdt Exp $
 
-DISTNAME=	qhull-2019-src-7.3.2
-PKGNAME=	qhull-2019.1
+
+
+DISTNAME=	qhull-2020-src-8.0.2
+PKGNAME=	qhull-2020.2
 CATEGORIES=	math
 MASTER_SITES=	http://www.qhull.org/download/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +13,11 @@ HOMEPAGE=	http://www.qhull.org/
 COMMENT=	Computing the convex hull
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
+# Remove non-portable file not used in build or test.
+post-extract:
+	rm -f ${WRKSRC}/eg/q_benchmark ${WRKSRC}/eg/qhull-zip.sh
+
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
