@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.50 2020/05/31 15:43:17 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2021/01/23 09:08:07 wiz Exp $
 
 DISTNAME=	loudmouth-1.5.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	https://mcabber.com/files/loudmouth/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.loudmouth-project.org/
+HOMEPAGE=	https://github.com/mcabber/loudmouth
 COMMENT=	Lightweight Jabber client library
 LICENSE=	gnu-lgpl-v2.1
 
