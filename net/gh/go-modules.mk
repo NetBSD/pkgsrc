@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2020/12/20 20:12:44 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.7 2021/01/23 19:40:00 bsiegert Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -20,8 +20,8 @@ GO_MODULE_FILES+=	cloud.google.com/go/storage/@v/v1.0.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/storage/@v/v1.0.0.zip
 GO_MODULE_FILES+=	dmitri.shuralyov.com/gpu/mtl/@v/v0.0.0-20190408044501-666a987793e9.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/gpu/mtl/@v/v0.0.0-20190408044501-666a987793e9.zip
-GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.2.3.mod
-GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.2.3.zip
+GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.2.7.mod
+GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.2.7.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/xgb/@v/v0.0.0-20160522181843-27f122750802.mod
@@ -65,6 +65,10 @@ GO_MODULE_FILES+=	github.com/cespare/xxhash/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/cespare/xxhash/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/glamour/@v/v0.2.1-0.20200724174618-1246d13c1684.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/glamour/@v/v0.2.1-0.20200724174618-1246d13c1684.zip
+GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.0.0.mod
+GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.0.0.zip
+GO_MODULE_FILES+=	github.com/cli/oauth/@v/v0.8.0.mod
+GO_MODULE_FILES+=	github.com/cli/oauth/@v/v0.8.0.zip
 GO_MODULE_FILES+=	github.com/cli/safeexec/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/cli/safeexec/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/cli/shurcoo!l-graphql/@v/v0.0.0-20200707151639-0f7232a2bf7e.mod
