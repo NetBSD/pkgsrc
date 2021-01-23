@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2021/01/23 09:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/01/23 19:44:05 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/sqlrelay/sqlrelay-nodejs/}
 PKGREVISION=		15
 COMMENT=		node.js API for SQL Relay
-
-BROKEN=			"Wants to install nodejs<=8 and current nodejs via npm"
 
 .include "../../databases/sqlrelay/Makefile.common"
 
