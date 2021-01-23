@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/11/29 22:39:10 dbj Exp $
+$NetBSD: distinfo,v 1.7 2021/01/23 23:19:16 gdt Exp $
 
-SHA1 (qhull-2019-src-7.3.2.tgz) = c7165fb7ec1af92bf448370c3a3b554766168f18
-RMD160 (qhull-2019-src-7.3.2.tgz) = cb7de690c87a050eb073e24458334d4da6e157d9
-SHA512 (qhull-2019-src-7.3.2.tgz) = efcaf2af45f3c401f5f677cac8e3ffc056f870bf62f852982ca880282c428920fad13071017b8d8b7b6fc416380c6f3fe6973aa0b37a2322c234774325b14f1c
-Size (qhull-2019-src-7.3.2.tgz) = 1236686 bytes
-SHA1 (patch-CMakeLists.txt) = 06df209a7186bb953b195a251efd436fc95b4582
+SHA1 (qhull-2020-src-8.0.2.tgz) = 2dbc240919560ac008a92363984754a70677b353
+RMD160 (qhull-2020-src-8.0.2.tgz) = c407ff5f09edefe093d69349fe4476a62ca7a982
+SHA512 (qhull-2020-src-8.0.2.tgz) = 63d42442f1444ddb09a09680bfdb4d4ffd54295add31f19ec977c1a5bd02a74665f57fdb8503c882720a317cf741c8511b458dcc1ae0930cabe08069ba1496fd
+Size (qhull-2020-src-8.0.2.tgz) = 1298874 bytes
