@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2020/11/20 13:22:09 leot Exp $
+# $NetBSD: go-modules.mk,v 1.2 2021/01/23 22:08:57 leot Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20200407214033-5883e5a4b512.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20200407214033-5883e5a4b512.zip
