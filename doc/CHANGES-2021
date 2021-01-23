@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.541 2021/01/23 09:45:26 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.542 2021/01/23 09:51:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -687,3 +687,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-xdg to 0.27 [triaxx 2021-01-22]
 	Updated chat/loudmouth to 1.5.3nb3 [wiz 2021-01-23]
 	Removed devel/svk [wiz 2021-01-23]
+	Updated mail/mutt to 2.0.5 [tron 2021-01-23]
