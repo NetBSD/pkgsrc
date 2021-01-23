@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2021/01/07 09:47:47 fcambus Exp $
+# $NetBSD: Makefile,v 1.95 2021/01/23 08:48:57 fcambus Exp $
 
 DISTNAME=	binutils-2.35.1
 PKGREVISION=	4
@@ -59,11 +59,11 @@ PLIST_VARS+=	gprof ld gold SunOS CTF
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "IRIX" && ${OPSYS} != "AIX"
+.if ${OPSYS} != "IRIX" && ${OPSYS} != "AIX" && ${OPSYS} != "Darwin"
 PLIST.gprof=	yes
 .endif
 
-.if ${OPSYS} != SunOS
+.if ${OPSYS} != SunOS && ${OPSYS} != "Darwin"
 PLIST.ld=	yes
 .endif
 
