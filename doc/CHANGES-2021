@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.539 2021/01/22 17:27:58 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.540 2021/01/23 09:08:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -685,3 +685,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dnscrypt-proxy2 to 2.0.45 [nia 2021-01-22]
 	Added biology/bedtools version 2.29.2 [bacon 2021-01-22]
 	Updated devel/py-xdg to 0.27 [triaxx 2021-01-22]
+	Updated chat/loudmouth to 1.5.3nb3 [wiz 2021-01-23]
