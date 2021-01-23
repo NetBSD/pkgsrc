@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3320 2021/01/23 23:46:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3321 2021/01/23 23:49:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2035,7 +2035,6 @@ SUBDIR+=	p5-UNIVERSAL-isa
 SUBDIR+=	p5-UNIVERSAL-moniker
 SUBDIR+=	p5-UNIVERSAL-require
 SUBDIR+=	p5-UUID-Tiny
-SUBDIR+=	p5-VCP
 SUBDIR+=	p5-Variable-Magic
 SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
