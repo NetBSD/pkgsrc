@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.554 2021/01/23 23:46:45 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.555 2021/01/23 23:49:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/rclone to 1.53.4 [leot 2021-01-23]
 	Updated math/qhull to 2020.2 [gdt 2021-01-23]
 	Removed devel/p5-VCP-Dest-svk [wiz 2021-01-23]
+	Removed devel/p5-VCP [wiz 2021-01-23]
