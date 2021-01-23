@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/11/13 19:26:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.35 2021/01/23 14:23:06 bsiegert Exp $
 
 COMMENT=	Go generated proto packages
-PKGREVISION=	22
+PKGREVISION=	23
 
 DEPENDS+=	go-genproto-googleapis-rpc-[0-9]*:../../misc/go-genproto-googleapis-rpc
 
