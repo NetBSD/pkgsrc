@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2020/09/09 09:19:34 fcambus Exp $
+$NetBSD: distinfo,v 1.5 2021/01/23 15:35:43 fcambus Exp $
 
-SHA1 (kore-4.0.1.tar.gz) = 0842720f19199ea20c16b37c86df6afd276bd59e
-RMD160 (kore-4.0.1.tar.gz) = 537f1da0b5b409f81319f65201c799644bbca923
-SHA512 (kore-4.0.1.tar.gz) = 61c977bed18ddacd8ad5cc842047483c19d064d3c1ba9f5dafd732410c7acbd6e5c0bdf071ffa8d26da924f710e5a11c05ec3d9370134604995bf7f8351129b9
-Size (kore-4.0.1.tar.gz) = 1063050 bytes
+SHA1 (kore-4.1.0.tar.gz) = d538fa2c01c9a6b6f1cc3359230024c9a4242d27
+RMD160 (kore-4.1.0.tar.gz) = 784bd99e89771414fec8e9b22253ec586d7bd5ef
+SHA512 (kore-4.1.0.tar.gz) = 1d63339d31997afc0be7e13a52414da6ad2603d94cfe8473d08bcaa1541a358af8ee3f6dffe24e892616c1a57f04227c45743eec3c1ecb55f2dbef17bf18a004
+Size (kore-4.1.0.tar.gz) = 1068382 bytes
 SHA1 (patch-Makefile) = 83da2bb0dde7f33c53ad16710abcc7c906709e7a
 SHA1 (patch-kodev_Makefile) = c8006dd903e424826453cd6f980e4d3ca455a6ec
