@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/01/22 01:22:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/23 01:18:48 gutteridge Exp $
 
 DISTNAME=	jna-5.2.0
 PKGNAME=	java-${DISTNAME}
@@ -40,7 +40,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 USE_LANGUAGES=	c
 USE_JAVA=	yes
 USE_JAVA2=	yes
-USE_TOOLS+=	autoreconf automake autoconf gmake pkg-config pax
+USE_TOOLS+=	autoreconf automake autoconf ggrep gmake pkg-config pax
 USE_LIBTOOL=	yes
 
 OPSYSVARS+=	JNIPFX JNISFX
@@ -62,7 +62,7 @@ DEPENDS+=	openjdk8>=1.8.202:../../lang/openjdk8
 # JDK 11 or later doesn't generate frames
 PLIST_SRC=	PLIST
 .if ${PKG_JVM} == "sun-jdk7" || ${PKG_JVM} == "oracle-jdk8" || ${PKG_JVM} == "openjdk8"
-PLIST_SRC+=	PLIST.java8-javadoc	
+PLIST_SRC+=	PLIST.java8-javadoc
 .else
 PLIST_SRC+=	PLIST.java11-javadoc
 .endif
@@ -86,7 +86,9 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unknown-warning-option
 
 do-build:
 	cd ${WRKSRC} && \
-	    ${_ULIMIT_CMD}${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
+	    ${_ULIMIT_CMD}${SETENV} ${MAKE_ENV} \
+	    -Dgrep=grep -Dmake=make -Dmake.PATH=PATH=${PATH:Q} \
+	    ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/build/native-*/${JNIPFX}jnidispatch.${JNISFX} \
