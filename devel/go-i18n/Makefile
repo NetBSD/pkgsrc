@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/11/13 19:26:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.30 2021/01/23 14:22:58 bsiegert Exp $
 
 DISTNAME=	go-i18n-1.10.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nicksnyder/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 

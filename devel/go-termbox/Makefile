@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2020/12/04 20:45:10 nia Exp $
+# $NetBSD: Makefile,v 1.33 2021/01/23 14:23:03 bsiegert Exp $
 #
 
 DISTNAME=		go-termbox-20160808
-PKGREVISION=		31
+PKGREVISION=		32
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=nsf/}
 GITHUB_PROJECT=		termbox-go
