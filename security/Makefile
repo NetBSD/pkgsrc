@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.799 2021/01/18 15:19:33 taca Exp $
+# $NetBSD: Makefile,v 1.800 2021/01/23 10:59:55 pin Exp $
 #
 
 COMMENT=	Security tools
@@ -404,6 +404,7 @@ SUBDIR+=	pinepgp
 SUBDIR+=	pius
 SUBDIR+=	pkcs11-helper
 SUBDIR+=	pks
+SUBDIR+=	pleaser
 SUBDIR+=	policykit
 SUBDIR+=	policykit-gnome
 SUBDIR+=	polkit
