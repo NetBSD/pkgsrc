@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.558 2021/01/24 14:50:49 nia Exp $
+$NetBSD: CHANGES-2021,v 1.559 2021/01/24 14:52:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -702,3 +702,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/py-terminator to 2.1.0 [kamil 2021-01-24]
 	Updated net/youtube-dl to 20210124.1 [leot 2021-01-24]
 	Updated audio/libsndfile to 1.0.31 [nia 2021-01-24]
+	Updated geography/gama to 2.13 [gdt 2021-01-24]
