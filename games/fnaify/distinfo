@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/01/24 19:13:06 maya Exp $
+
+SHA1 (fnaify/3.0.tar.gz) = 0eb8bdabcd6efb15006c9d9ca66a319c5e45b3fc
+RMD160 (fnaify/3.0.tar.gz) = 08edbd04fa242e3850c0f3c0e4f914c213efff84
+SHA512 (fnaify/3.0.tar.gz) = 7e6ad8db68140d177b91b83882ff44abfa259b3462a9c6c9a9e8b8c27b3a0eb5cb6b1626457ba8dc118c825f6840c70b77d766055f074df95146820d108e1f15
+Size (fnaify/3.0.tar.gz) = 34088 bytes
+SHA1 (patch-Makefile) = 9272e508af7f696daedaa14230b8b1cdf4926122
