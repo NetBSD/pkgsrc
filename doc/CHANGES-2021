@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.566 2021/01/24 16:17:58 nia Exp $
+$NetBSD: CHANGES-2021,v 1.567 2021/01/24 16:20:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -710,3 +710,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/libXt to 1.2.1 [wiz 2021-01-24]
 	Updated audio/libsndfile to 1.0.31 [nia 2021-01-24]
 	Updated textproc/serd to 0.30.10 [nia 2021-01-24]
+	Updated audio/lilv to 0.24.12 [nia 2021-01-24]
