@@ -1,19 +1,14 @@
-# $NetBSD: Makefile,v 1.85 2020/12/26 06:57:12 maya Exp $
+# $NetBSD: Makefile,v 1.86 2021/01/24 14:50:25 nia Exp $
 
-DISTNAME=	libsndfile-1.0.30
-PKGREVISION=	1
+DISTNAME=	libsndfile-1.0.31
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_GITHUB:=erikd/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libsndfile/}
 GITHUB_PROJECT=	libsndfile
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-# Remove when updating past libsndfile-1.0.30.
-# Handling re-rolled release.
-DIST_SUBDIR=	${DISTNAME}
-
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mega-nerd.com/libsndfile/
+HOMEPAGE=	https://libsndfile.github.io/libsndfile/
 COMMENT=	Library for reading and writing audio files
 LICENSE=	gnu-lgpl-v2.1
 
