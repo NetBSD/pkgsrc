@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/11/24 14:10:28 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/01/24 16:27:35 nia Exp $
 
-DISTNAME=	sord-0.16.6
+DISTNAME=	sord-0.16.8
 CATEGORIES=	textproc
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
