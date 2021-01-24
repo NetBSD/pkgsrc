@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.571 2021/01/24 16:31:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.572 2021/01/24 16:45:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -715,3 +715,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/suil to 0.10.10 [nia 2021-01-24]
 	Updated textproc/sord to 0.16.8 [nia 2021-01-24]
 	Updated www/lua-curl to 0.3.12 [nia 2021-01-24]
+	Updated sysutils/mc to 4.8.26 [nia 2021-01-24]
