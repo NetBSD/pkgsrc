@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/01/24 18:57:46 maya Exp $
+
+* don't install pkgsrc generated files
+
+--- CMakeLists.txt.orig	2019-12-02 18:11:46.793667657 +0000
++++ CMakeLists.txt
+@@ -45,8 +45,8 @@ add_library(Vulkan-Registry INTERFACE)
+ target_include_directories(Vulkan-Registry INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/registry")
+ add_library(Vulkan::Registry ALIAS Vulkan-Registry)
+ 
+-install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/vulkan" DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+-install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/registry" DESTINATION ${CMAKE_INSTALL_DATADIR}/vulkan)
++install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/vulkan" DESTINATION ${CMAKE_INSTALL_INCLUDEDIR} PATTERN "*.orig" EXCLUDE)
++install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/registry" DESTINATION ${CMAKE_INSTALL_DATADIR}/vulkan PATTERN "*.orig" EXCLUDE)
+ 
+ # uninstall target
+ if(NOT TARGET uninstall)
