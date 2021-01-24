@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.584 2021/01/24 20:10:55 adam Exp $
+$NetBSD: CHANGES-2021,v 1.585 2021/01/24 20:29:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -729,3 +729,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/fnaify version 3.0 [maya 2021-01-24]
 	Updated databases/py-aiosqlite to 0.16.1 [adam 2021-01-24]
 	Updated databases/py-tortoise-orm to 0.16.20 [adam 2021-01-24]
+	Updated filesystems/py-fs to 2.4.12 [adam 2021-01-24]
+	Updated fonts/py-fonttools to 4.18.2 [adam 2021-01-24]
