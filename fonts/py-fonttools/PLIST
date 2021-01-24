@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.32 2020/12/06 09:58:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2021/01/24 20:29:04 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -249,6 +255,9 @@ ${PYSITELIB}/fontTools/pens/pointPen.pyo
 ${PYSITELIB}/fontTools/pens/qtPen.py
 ${PYSITELIB}/fontTools/pens/qtPen.pyc
 ${PYSITELIB}/fontTools/pens/qtPen.pyo
+${PYSITELIB}/fontTools/pens/quartzPen.py
+${PYSITELIB}/fontTools/pens/quartzPen.pyc
+${PYSITELIB}/fontTools/pens/quartzPen.pyo
 ${PYSITELIB}/fontTools/pens/recordingPen.py
 ${PYSITELIB}/fontTools/pens/recordingPen.pyc
 ${PYSITELIB}/fontTools/pens/recordingPen.pyo
@@ -739,10 +748,4 @@ ${PYSITELIB}/fontTools/voltLib/lexer.pyo
 ${PYSITELIB}/fontTools/voltLib/parser.py
 ${PYSITELIB}/fontTools/voltLib/parser.pyc
 ${PYSITELIB}/fontTools/voltLib/parser.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
