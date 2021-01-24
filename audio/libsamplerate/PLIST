@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.6 2012/07/04 08:58:09 adam Exp $
-bin/sndfile-resample
+@comment $NetBSD: PLIST,v 1.7 2021/01/24 16:12:51 nia Exp $
 include/samplerate.h
 lib/libsamplerate.la
 lib/pkgconfig/samplerate.pc
-share/doc/libsamplerate0-dev/html/SRC.css
-share/doc/libsamplerate0-dev/html/SRC.png
-share/doc/libsamplerate0-dev/html/api.html
-share/doc/libsamplerate0-dev/html/api_callback.html
-share/doc/libsamplerate0-dev/html/api_full.html
-share/doc/libsamplerate0-dev/html/api_misc.html
-share/doc/libsamplerate0-dev/html/api_simple.html
-share/doc/libsamplerate0-dev/html/download.html
-share/doc/libsamplerate0-dev/html/faq.html
-share/doc/libsamplerate0-dev/html/history.html
-share/doc/libsamplerate0-dev/html/index.html
-share/doc/libsamplerate0-dev/html/license.html
-share/doc/libsamplerate0-dev/html/lists.html
-share/doc/libsamplerate0-dev/html/quality.html
-share/doc/libsamplerate0-dev/html/win32.html
+share/doc/libsamplerate/SRC.css
+share/doc/libsamplerate/SRC.png
+share/doc/libsamplerate/api.md
+share/doc/libsamplerate/api_callback.md
+share/doc/libsamplerate/api_full.md
+share/doc/libsamplerate/api_misc.md
+share/doc/libsamplerate/api_simple.md
+share/doc/libsamplerate/bugs.md
+share/doc/libsamplerate/download.md
+share/doc/libsamplerate/faq.md
+share/doc/libsamplerate/history.md
+share/doc/libsamplerate/index.md
+share/doc/libsamplerate/license.md
+share/doc/libsamplerate/lists.md
+share/doc/libsamplerate/quality.md
+share/doc/libsamplerate/win32.md
