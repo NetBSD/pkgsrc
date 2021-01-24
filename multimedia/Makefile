@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2021/01/02 07:36:43 pin Exp $
+# $NetBSD: Makefile,v 1.308 2021/01/24 18:22:25 maya Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -132,6 +132,7 @@ SUBDIR+=	libogg
 SUBDIR+=	liboggz
 SUBDIR+=	libtheora
 SUBDIR+=	libtheora-docs
+SUBDIR+=	libtheoraplay
 SUBDIR+=	libva
 SUBDIR+=	libva-driver-vdpau
 SUBDIR+=	libva-utils
