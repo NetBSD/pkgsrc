@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2021/01/24 19:03:47 maya Exp $
+
+SHA1 (FNA3D/21.01.tar.gz) = 0553df59ef236835c62aa0642f9ca1abfb6f618d
+RMD160 (FNA3D/21.01.tar.gz) = 783541a575568906c9ecb23c4563f11f0900eab1
+SHA512 (FNA3D/21.01.tar.gz) = ae99280d2b160cbadf19df60aa2e81eb3ae4da4267613f97aa8e132b0b743068091460d8f3097d47adbd6a7b7292a7640088ae7104e2a3a783e0050b72ca497a
+Size (FNA3D/21.01.tar.gz) = 315856 bytes
+SHA1 (patch-CMakeLists.txt) = 27ebc2e42a5819b6298b6faa8488234e8f3ecbb1
+SHA1 (patch-src_FNA3D__Driver__Vulkan.c) = b9eb107f3d0430ab9536f709871c5d1af1d1e06a
