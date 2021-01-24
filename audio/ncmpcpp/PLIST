@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/11 10:12:42 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/24 23:36:36 nia Exp $
 bin/ncmpcpp
 man/man1/ncmpcpp.1
 share/doc/ncmpcpp/AUTHORS
+share/doc/ncmpcpp/CHANGELOG.md
 share/doc/ncmpcpp/COPYING
-share/doc/ncmpcpp/NEWS
 share/doc/ncmpcpp/bindings
 share/doc/ncmpcpp/config
