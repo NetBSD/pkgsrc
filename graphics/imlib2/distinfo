@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.42 2020/08/17 02:52:52 gutteridge Exp $
+$NetBSD: distinfo,v 1.43 2021/01/24 15:15:46 nia Exp $
 
-SHA1 (imlib2-1.7.0.tar.bz2) = 27e380e739c3c1a7c9a71a31143c2dd98da99abb
-RMD160 (imlib2-1.7.0.tar.bz2) = ebf78f4c3341452c5b8617f3e5716360c809ad72
-SHA512 (imlib2-1.7.0.tar.bz2) = 078126269565b55f4b167608ee65d558711e37c34283fb6193752b27f7fc59c738cbd38839b17203273defee20c2ffc41a495e44364089deebffbd39c67e6d72
-Size (imlib2-1.7.0.tar.bz2) = 893015 bytes
+SHA1 (imlib2-1.7.1.tar.bz2) = 092c66ae0180798a4036e68c68d7f316de192e36
+RMD160 (imlib2-1.7.1.tar.bz2) = 2eda85a415e9911c34df23a9a689bdebbbba9e24
+SHA512 (imlib2-1.7.1.tar.bz2) = 36e457855da0f129c7e7ba3dfcb44162b6624b1d56df5f84448495a96fe9ad1ce3e6c628222630be7274476722c4feaa8e1648d1e463439ca758e66ce9645970
+Size (imlib2-1.7.1.tar.bz2) = 893631 bytes
 SHA1 (patch-imlib2-config.in) = 22bd429a029e1071f1920ed2261cb94fd66b1146
 SHA1 (patch-src_bin_imlib2__view.c) = 53a7bdb2e1f8687db095b796b46945ee5a72f552
 SHA1 (patch-src_lib_amd64__blend.S) = 09e89c6b1d6fb622b3ee88f6c3a5e9b6f3ab3fad
 SHA1 (patch-src_lib_amd64__blend__cmod.S) = d533eeacd4b196086f1854c657d3e0773596790b
-SHA1 (patch-src_modules_loaders_loader__argb.c) = 11eda7493583f3338a0d72d52d68543290f40e05
