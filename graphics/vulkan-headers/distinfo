@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2021/01/24 18:57:46 maya Exp $
+
+SHA1 (Vulkan-Headers/sdk-1.1.126.0.tar.gz) = a68e99a5eb1f6c4de97877718dba0fbeeccb07ff
+RMD160 (Vulkan-Headers/sdk-1.1.126.0.tar.gz) = 9656c621304750488da54a1dd8ebc4953d35023c
+SHA512 (Vulkan-Headers/sdk-1.1.126.0.tar.gz) = b050e0d17ad7b143c59a401a4a75ef97afdbc94f1cbfd4571ce1b83380927879cb05b7b62b81c7da8b501ebe0fbe70dc3acacaab3656da465b4bc06559266d3f
+Size (Vulkan-Headers/sdk-1.1.126.0.tar.gz) = 665900 bytes
+SHA1 (patch-CMakeLists.txt) = f7364dcc20799db2e9a5b3f7b14ecea2c1bceea5
+SHA1 (patch-include_vulkan_vulkan.hpp) = 3ba0c40361b4358a63036174373b787ec86cc9e7
