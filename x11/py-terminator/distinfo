@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2019/06/11 23:50:13 kamil Exp $
+$NetBSD: distinfo,v 1.7 2021/01/24 11:15:07 kamil Exp $
 
-SHA1 (terminator-0.98.tar.gz) = a35561ef4fec3d2f34e909bb7284f0b770a4e607
-RMD160 (terminator-0.98.tar.gz) = cddb24240b74fba3eb6694d9d4aaff11329a14b6
-SHA512 (terminator-0.98.tar.gz) = c40ac1929bb446239f769d33f37a6d49ee79ea10755dda4bbbd228763f13661f0ef7efd950a592462150237e516077311318e2a19c9f08adac76a418cf633573
-Size (terminator-0.98.tar.gz) = 6007243 bytes
-SHA1 (patch-setup.py) = a94be7d3c4fa03ec36250c408646229b768fc81d
+SHA1 (terminator-2.1.0.tar.gz) = 3bee5a467ddc6f6591b81fae3fbb33a9cd70a9c7
+RMD160 (terminator-2.1.0.tar.gz) = 59d810ca9ecc450313126070d9c45aca261f71ed
+SHA512 (terminator-2.1.0.tar.gz) = 0406b0542d5b4498084968b4e49a5ae3ff10db394907930923ad76ac5edf459c976a0a5b8617fd3a14dcde464b563ae137beb33e04b5b82ae856c497abf3fd04
+Size (terminator-2.1.0.tar.gz) = 1030864 bytes
+SHA1 (patch-setup.py) = a9b78f6e8aa34422a38e4994cd3fe6c16e1f5134
