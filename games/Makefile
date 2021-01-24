@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.495 2021/01/14 13:23:25 nia Exp $
+# $NetBSD: Makefile,v 1.496 2021/01/24 19:07:21 maya Exp $
 #
 
 COMMENT=	Games
@@ -130,6 +130,7 @@ SUBDIR+=	flare-game
 SUBDIR+=	flightgear
 SUBDIR+=	flightgear-data
 SUBDIR+=	fltk-sudoku
+SUBDIR+=	fna
 SUBDIR+=	foobillardplus
 SUBDIR+=	fortune
 SUBDIR+=	fortune-strfile
