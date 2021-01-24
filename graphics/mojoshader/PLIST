@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/24 18:59:47 maya Exp $
+include/mojoshader.h
+include/mojoshader_effects.h
+include/mojoshader_internal.h
+include/mojoshader_parser_hlsl.h
+include/mojoshader_version.h
+include/mojoshader_vulkan_vkfuncs.h
+lib/libmojoshader.so
