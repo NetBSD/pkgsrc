@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.555 2021/01/23 23:49:36 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.556 2021/01/24 11:15:22 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -699,3 +699,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/qhull to 2020.2 [gdt 2021-01-23]
 	Removed devel/p5-VCP-Dest-svk [wiz 2021-01-23]
 	Removed devel/p5-VCP [wiz 2021-01-23]
+	Updated x11/py-terminator to 2.1.0 [kamil 2021-01-24]
