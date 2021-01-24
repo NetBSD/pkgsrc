@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.104 2021/01/09 11:32:36 leot Exp $
+@comment $NetBSD: PLIST,v 1.105 2021/01/24 12:30:09 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1133,6 +1133,9 @@ ${PYSITELIB}/youtube_dl/extractor/miaopai.pyo
 ${PYSITELIB}/youtube_dl/extractor/microsoftvirtualacademy.py
 ${PYSITELIB}/youtube_dl/extractor/microsoftvirtualacademy.pyc
 ${PYSITELIB}/youtube_dl/extractor/microsoftvirtualacademy.pyo
+${PYSITELIB}/youtube_dl/extractor/minds.py
+${PYSITELIB}/youtube_dl/extractor/minds.pyc
+${PYSITELIB}/youtube_dl/extractor/minds.pyo
 ${PYSITELIB}/youtube_dl/extractor/ministrygrid.py
 ${PYSITELIB}/youtube_dl/extractor/ministrygrid.pyc
 ${PYSITELIB}/youtube_dl/extractor/ministrygrid.pyo
@@ -1748,6 +1751,9 @@ ${PYSITELIB}/youtube_dl/extractor/sportbox.pyo
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.py
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyc
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyo
+${PYSITELIB}/youtube_dl/extractor/spotify.py
+${PYSITELIB}/youtube_dl/extractor/spotify.pyc
+${PYSITELIB}/youtube_dl/extractor/spotify.pyo
 ${PYSITELIB}/youtube_dl/extractor/spreaker.py
 ${PYSITELIB}/youtube_dl/extractor/spreaker.pyc
 ${PYSITELIB}/youtube_dl/extractor/spreaker.pyo
@@ -1946,6 +1952,9 @@ ${PYSITELIB}/youtube_dl/extractor/traileraddict.pyo
 ${PYSITELIB}/youtube_dl/extractor/trilulilu.py
 ${PYSITELIB}/youtube_dl/extractor/trilulilu.pyc
 ${PYSITELIB}/youtube_dl/extractor/trilulilu.pyo
+${PYSITELIB}/youtube_dl/extractor/trovo.py
+${PYSITELIB}/youtube_dl/extractor/trovo.pyc
+${PYSITELIB}/youtube_dl/extractor/trovo.pyo
 ${PYSITELIB}/youtube_dl/extractor/trunews.py
 ${PYSITELIB}/youtube_dl/extractor/trunews.pyc
 ${PYSITELIB}/youtube_dl/extractor/trunews.pyo
