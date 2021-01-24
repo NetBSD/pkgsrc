@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.19 2021/01/24 14:52:25 gdt Exp $
+$NetBSD: distinfo,v 1.20 2021/01/24 15:05:04 gdt Exp $
 
 SHA1 (gama-2.13.tar.gz) = cdf41c511d10bb4e6253828b1f9809ce4dcbc8e3
 RMD160 (gama-2.13.tar.gz) = 37921c03ac243f9b0d5e51402bc238b9d34d7957
 SHA512 (gama-2.13.tar.gz) = 431221c8a6316ab38e10f09ff9764165b25ee63da3f1f3ca68d2189a84c4cb38343d7085c43d683e31b4aaaf320787292cb5c36f6c1b8c5ebab713f01ce40604
 Size (gama-2.13.tar.gz) = 14697638 bytes
+SHA1 (patch-lib_gnu__gama_g3_g3__model.cpp) = c6ad931ca118fa0b0ab9dc4f101fc66effe9120b
