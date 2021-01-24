@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.583 2021/01/24 19:13:17 maya Exp $
+$NetBSD: CHANGES-2021,v 1.584 2021/01/24 20:10:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -727,3 +727,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/fna version 21.01 [maya 2021-01-24]
 	Added devel/libstubborn version 0.1 [maya 2021-01-24]
 	Added games/fnaify version 3.0 [maya 2021-01-24]
+	Updated databases/py-aiosqlite to 0.16.1 [adam 2021-01-24]
+	Updated databases/py-tortoise-orm to 0.16.20 [adam 2021-01-24]
