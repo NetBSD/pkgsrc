@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3321 2021/01/23 23:49:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3322 2021/01/24 19:09:21 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -841,6 +841,7 @@ SUBDIR+=	libstash
 SUBDIR+=	libstatgrab
 SUBDIR+=	libstree
 SUBDIR+=	libstroke
+SUBDIR+=	libstubborn
 SUBDIR+=	libtai
 SUBDIR+=	libtar
 SUBDIR+=	libtecla

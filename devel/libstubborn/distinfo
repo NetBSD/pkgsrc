@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/24 19:09:21 maya Exp $
+
+SHA1 (libstubborn/0.1.tar.gz) = 5650f1976bcb6b6d92a4d66afdc8fdc002f73423
+RMD160 (libstubborn/0.1.tar.gz) = 53eb1785a03e72e8fa0d0e44221b5df09853d52a
+SHA512 (libstubborn/0.1.tar.gz) = 6d69581340bb91bc3906cacc953e74b460ad5e6eabdabe4a8b0b3043d5717c36bb91ad1418f546f3b4e5df97b730a5410ed5d15045c6cfb7daea99f0cc0a4033
+Size (libstubborn/0.1.tar.gz) = 1462 bytes
