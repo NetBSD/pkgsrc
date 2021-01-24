@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.586 2021/01/24 21:42:45 pin Exp $
+$NetBSD: CHANGES-2021,v 1.587 2021/01/24 23:36:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -732,3 +732,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated filesystems/py-fs to 2.4.12 [adam 2021-01-24]
 	Updated fonts/py-fonttools to 4.18.2 [adam 2021-01-24]
 	Updated security/pleaser to 0.3.20 [pin 2021-01-24]
+	Updated audio/ncmpcpp to 0.9.1 [nia 2021-01-24]
