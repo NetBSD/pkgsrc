@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.582 2021/01/24 19:09:32 maya Exp $
+$NetBSD: CHANGES-2021,v 1.583 2021/01/24 19:13:17 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -726,3 +726,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ccid to 1.4.34 [gdt 2021-01-24]
 	Added games/fna version 21.01 [maya 2021-01-24]
 	Added devel/libstubborn version 0.1 [maya 2021-01-24]
+	Added games/fnaify version 3.0 [maya 2021-01-24]
