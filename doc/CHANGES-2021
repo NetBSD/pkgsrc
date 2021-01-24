@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.574 2021/01/24 16:58:39 nia Exp $
+$NetBSD: CHANGES-2021,v 1.575 2021/01/24 17:14:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -718,3 +718,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/mc to 4.8.26 [nia 2021-01-24]
 	Updated chat/mcabber to 1.1.2 [nia 2021-01-24]
 	Updated net/miniupnpc to 2.2.1 [nia 2021-01-24]
+	Updated editors/nano to 5.5 [nia 2021-01-24]
