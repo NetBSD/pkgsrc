@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/02/26 15:19:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.30 2021/01/24 15:29:26 nia Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -41,6 +41,7 @@ include/GraphicsMagick/magick/describe.h
 include/GraphicsMagick/magick/draw.h
 include/GraphicsMagick/magick/effect.h
 include/GraphicsMagick/magick/enhance.h
+include/GraphicsMagick/magick/enum_strings.h
 include/GraphicsMagick/magick/error.h
 include/GraphicsMagick/magick/forward.h
 include/GraphicsMagick/magick/fx.h
@@ -94,7 +95,6 @@ lib/${PKGNAME}/modules-Q8/coders/art.la
 lib/${PKGNAME}/modules-Q8/coders/avs.la
 lib/${PKGNAME}/modules-Q8/coders/bmp.la
 lib/${PKGNAME}/modules-Q8/coders/braille.la
-lib/${PKGNAME}/modules-Q8/coders/braille.so
 lib/${PKGNAME}/modules-Q8/coders/cals.la
 lib/${PKGNAME}/modules-Q8/coders/caption.la
 lib/${PKGNAME}/modules-Q8/coders/cineon.la
@@ -312,6 +312,7 @@ share/doc/GraphicsMagick/www/api/hclut.html
 share/doc/GraphicsMagick/www/api/image.html
 share/doc/GraphicsMagick/www/api/import.html
 share/doc/GraphicsMagick/www/api/list.html
+share/doc/GraphicsMagick/www/api/log.html
 share/doc/GraphicsMagick/www/api/magick.html
 share/doc/GraphicsMagick/www/api/memory.html
 share/doc/GraphicsMagick/www/api/monitor.html
