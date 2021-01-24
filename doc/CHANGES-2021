@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.576 2021/01/24 18:23:05 maya Exp $
+$NetBSD: CHANGES-2021,v 1.577 2021/01/24 18:58:07 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -720,3 +720,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/miniupnpc to 2.2.1 [nia 2021-01-24]
 	Updated editors/nano to 5.5 [nia 2021-01-24]
 	Added multimedia/libtheoraplay version 0.0.20190909 [maya 2021-01-24]
+	Added graphics/vulkan-headers version 1.1.126.0 [maya 2021-01-24]
