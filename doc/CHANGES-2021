@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.580 2021/01/24 19:06:19 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.581 2021/01/24 19:07:33 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -724,3 +724,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/mojoshader version 0.0.20210110 [maya 2021-01-24]
 	Added graphics/fna3d version 21.01 [maya 2021-01-24]
 	Updated security/ccid to 1.4.34 [gdt 2021-01-24]
+	Added games/fna version 21.01 [maya 2021-01-24]
