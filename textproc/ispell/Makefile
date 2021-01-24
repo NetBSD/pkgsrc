@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2019/11/04 21:43:37 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2021/01/24 15:53:02 nia Exp $
 #
 
-DISTNAME=	ispell-3.4.00
+DISTNAME=	ispell-3.4.02
 CATEGORIES=	textproc
-MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
+MASTER_SITES=	https://www.cs.hmc.edu/~geoff/tars/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
+HOMEPAGE=	https://www.cs.hmc.edu/~geoff/ispell.html
 COMMENT=	Interactive spelling checker
 
 CONFLICTS+=		ispell-base-[0-9]*
