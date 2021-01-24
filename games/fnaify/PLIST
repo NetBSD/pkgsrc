@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/24 19:13:06 maya Exp $
+bin/fnaify
+man/man1/fnaify.1
+share/fnaify/fnaify.dllmap.config
