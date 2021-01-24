@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.560 2021/01/24 15:16:14 nia Exp $
+$NetBSD: CHANGES-2021,v 1.561 2021/01/24 15:30:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -704,3 +704,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libsndfile to 1.0.31 [nia 2021-01-24]
 	Updated geography/gama to 2.13 [gdt 2021-01-24]
 	Updated graphics/imlib2 to 1.7.1 [nia 2021-01-24]
+	Updated graphics/GraphicsMagick to 1.3.36 [nia 2021-01-24]
