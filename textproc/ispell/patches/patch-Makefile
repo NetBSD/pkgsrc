@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile,v 1.1 2021/01/24 15:53:02 nia Exp $
+
+Avoid installing sq and unsq man pages since we don't install
+those programs.
+
+--- Makefile.orig	2018-01-19 06:50:11.287688653 +0000
++++ Makefile
+@@ -402,13 +402,10 @@ install-dictbuild:
+ 	    rm -f fixispell-a$$MAN1EXT
+ 	@. ./config.sh; \
+ 	  set -x; \
+-	  $$INSTALL sq.1 $(DESTDIR)$$MAN1DIR/sq$$MAN1EXT; \
+ 	  for m in buildhash munchlist findaffix tryaffix; do \
+ 	    echo ".so `basename $$MAN1DIR`/ispell$$MAN1EXT" \
+ 	      > $(DESTDIR)$$MAN1DIR/$$m$$MAN1EXT; \
+ 	  done; \
+-	  echo ".so `basename $$MAN1DIR`/sq$$MAN1EXT" \
+-	    > $(DESTDIR)$$MAN1DIR/unsq$$MAN1EXT 
+ 	@. ./config.sh; \
+ 	  set -x; \
+ 	  cd $(DESTDIR)$$MAN1DIR; \
