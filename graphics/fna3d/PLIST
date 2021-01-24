@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/24 19:03:46 maya Exp $
+include/FNA3D.h
+include/FNA3D_Image.h
+lib/libFNA3D.so
+lib/libFNA3D.so.0
+lib/libFNA3D.so.0.${PKGVERSION}

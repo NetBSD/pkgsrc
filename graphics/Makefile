@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.918 2021/01/24 18:59:47 maya Exp $
+# $NetBSD: Makefile,v 1.919 2021/01/24 19:03:46 maya Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -130,6 +130,7 @@ SUBDIR+=	faba-icon-theme
 SUBDIR+=	fbm
 SUBDIR+=	feh
 SUBDIR+=	fly
+SUBDIR+=	fna3d
 SUBDIR+=	fnlib
 SUBDIR+=	fotoxx
 SUBDIR+=	frameworks
