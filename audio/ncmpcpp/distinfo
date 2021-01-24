@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/12/11 10:12:42 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/01/24 23:36:36 nia Exp $
 
-SHA1 (ncmpcpp-0.8.2.tar.bz2) = bb604fe6c42f0f5f9547d5dc4d7d52d293399f42
-RMD160 (ncmpcpp-0.8.2.tar.bz2) = ff4f9c7ca7e34f20ac8518fca578f92dd16c5d3c
-SHA512 (ncmpcpp-0.8.2.tar.bz2) = 9384edd162f40af23e4f26f437356520f117e4e2ab513ed3de132d2f11e597082d1cb7f0dd3696660d0c9bb85ad03e31fb921c97a11c7b28b32c5907fdbb8e8f
-Size (ncmpcpp-0.8.2.tar.bz2) = 465713 bytes
+SHA1 (ncmpcpp-0.9.1.tar.bz2) = 901a83dfd4f8781ba9b952d99288da23e39cce71
+RMD160 (ncmpcpp-0.9.1.tar.bz2) = 8c464f92ee778736eeb46b414511a895c42419a9
+SHA512 (ncmpcpp-0.9.1.tar.bz2) = 8fa9f512ac09c144eab4e4721a9c54f3f411593fe13c26db12fbaa3ccf6b08d7cd54923e1e4148b2db45dc69431280611b2be2d153513c0d38eaf92af8ceb9fb
+Size (ncmpcpp-0.9.1.tar.bz2) = 474436 bytes
