@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2020/08/19 15:05:50 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/01/24 19:06:10 gdt Exp $
 bin/RSA_SecurID_getpasswd
+lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/${OPSYS}/libccid.so
+lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/Info.plist
 man/man1/RSA_SecurID_getpasswd.1
 man/man8/Kobil_mIDentity_switch.8
-lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/Info.plist
-lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/${OPSYS}/libccid.so
 sbin/Kobil_mIDentity_switch
-share/doc/ccid/README_Kobil_mIDentity_switch.txt
 share/doc/ccid/README.md
+share/doc/ccid/README_Kobil_mIDentity_switch.txt
