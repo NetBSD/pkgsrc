@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/24 18:22:25 maya Exp $
+include/theoraplay.h
+include/theoraplay_cvtrgb.h
+lib/libtheoraplay.so
