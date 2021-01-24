@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2020/09/20 08:30:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/01/24 14:50:25 nia Exp $
 bin/sndfile-cmp
 bin/sndfile-concat
 bin/sndfile-convert
@@ -23,19 +23,19 @@ man/man1/sndfile-metadata-get.1
 man/man1/sndfile-metadata-set.1
 man/man1/sndfile-play.1
 man/man1/sndfile-salvage.1
-share/doc/libsndfile/FAQ.html
-share/doc/libsndfile/api.html
-share/doc/libsndfile/bugs.html
-share/doc/libsndfile/command.html
-share/doc/libsndfile/embedded_files.html
-share/doc/libsndfile/formats.html
-share/doc/libsndfile/index.html
+share/doc/libsndfile/FAQ.md
+share/doc/libsndfile/api.md
+share/doc/libsndfile/bugs.md
+share/doc/libsndfile/command.md
+share/doc/libsndfile/embedded_files.md
+share/doc/libsndfile/formats.md
+share/doc/libsndfile/index.md
 share/doc/libsndfile/libsndfile.css
 share/doc/libsndfile/libsndfile.jpg
-share/doc/libsndfile/lists.html
-share/doc/libsndfile/new_file_type.HOWTO
-share/doc/libsndfile/octave.html
+share/doc/libsndfile/lists.md
+share/doc/libsndfile/new_file_type_howto.md
+share/doc/libsndfile/octave.md
 share/doc/libsndfile/print.css
-share/doc/libsndfile/sndfile_info.html
-share/doc/libsndfile/tutorial.html
-share/doc/libsndfile/win32.html
+share/doc/libsndfile/sndfile_info.md
+share/doc/libsndfile/tutorial.md
+share/doc/libsndfile/win32.md
