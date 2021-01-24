@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.6 2017/07/07 11:28:36 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/01/24 15:53:02 nia Exp $
 
-SHA1 (ispell-3.4.00.tar.gz) = 6138ab935f0261be8162e3cdc07c127d53555837
-RMD160 (ispell-3.4.00.tar.gz) = c6a2a6d6dd65782d7c3fdf90968e61a5091b616c
-SHA512 (ispell-3.4.00.tar.gz) = 790475e7e296554221679b59856f256889a7193ab39e7314174f92364eaf4b658cc7e6b4f4b7892fa8f3cf0c022d933fc0c995c5e414987cbdcde27723e3da31
-Size (ispell-3.4.00.tar.gz) = 638770 bytes
-SHA1 (patch-aa) = 7617574ae1c53aa7b9389f0e75ddcab99dbeb07c
-SHA1 (patch-ab) = 842cd5946716f57fc263b7c941d32b50f79515e5
+SHA1 (ispell-3.4.02.tar.gz) = 128e5e938cda41eee749008ad3799bdd5e6fd97f
+RMD160 (ispell-3.4.02.tar.gz) = af9fb4eeb9f1b7ff2ec7b63b4e7721b6c7ac5c1f
+SHA512 (ispell-3.4.02.tar.gz) = 4392c00d8bcc66a9cc521ef0ba6b06ada896925f7260b7712a65529719b331dab54de5298058c5d130ee52bd088d38ba5fcf7797f265a0f68514765574b966d4
+Size (ispell-3.4.02.tar.gz) = 670270 bytes
+SHA1 (patch-Makefile) = e77f0502e3c4cda4f55e16f91030175f192844bb
 SHA1 (patch-ac) = 4faa82bdd628500aa35d94b2d4a1860919097b72
 SHA1 (patch-ad) = c47a406acf52244868e7a561ab7f1c9d394d4034
 SHA1 (patch-ae) = adc803bd66f62236a2b879713f326b4c7ac7199f
@@ -13,3 +12,4 @@ SHA1 (patch-ai) = 1fbf9385818e0a0fcd4049d0407212b1456d2744
 SHA1 (patch-al) = ea63fc7dbc2200794157d9be781210cd8a4e671f
 SHA1 (patch-ar) = c5082129f55fb232db34e0796423e60fcd4ed5c2
 SHA1 (patch-deformatters_Makefile) = a66a43f679491df718149c0b6db36ed0f9962535
+SHA1 (patch-languages_english_english.2) = ae4d249890746a979787282c2e48aad3921ac77c
