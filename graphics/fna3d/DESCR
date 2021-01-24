@@ -1,0 +1,10 @@
+This is FNA3D, the 3D graphics library for FNA.
+
+FNA3D was written to be used for FNA's Graphics namespace. It carries the same
+API design as XNA 4.0, with various implementations available at runtime
+(including Vulkan, OpenGL, Metal, and Direct3D). For shaders, we support
+Direct3D 9 Effect Framework binaries via MojoShader.
+
+Note that while FNA is the main consumer of FNA3D, we do NOT provide separate C#
+bindings. If you want to use FNA3D in C#, simply use FNA instead; it's the same
+API and can be used entirely by itself without dragging in other dependencies.

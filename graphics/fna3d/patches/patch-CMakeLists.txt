@@ -1,0 +1,65 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/01/24 19:03:47 maya Exp $
+
+set correct library version
+disable bundled mojoshader in favor of the one from pkgsrc
+
+--- CMakeLists.txt.orig	2021-01-01 16:22:56.000000000 +0000
++++ CMakeLists.txt
+@@ -3,6 +3,9 @@
+ cmake_minimum_required(VERSION 2.8.12)
+ project(FNA3D C)
+ 
++include_directories("${PREFIX}/include"
++			"${X11BASE}/include")
++
+ # Options
+ option(BUILD_SHARED_LIBS "Build shared library" ON)
+ option(DISABLE_D3D11 "Disable D3D11 backend")
+@@ -105,28 +108,11 @@ add_library(FNA3D
+ 	src/FNA3D_Image.c
+ 	src/FNA3D_PipelineCache.c
+ )
+-add_library(mojoshader STATIC
+-	MojoShader/mojoshader.c
+-	MojoShader/mojoshader_effects.c
+-	MojoShader/mojoshader_common.c
+-	MojoShader/mojoshader_d3d11.c
+-	MojoShader/mojoshader_opengl.c
+-	MojoShader/mojoshader_metal.c
+-	MojoShader/mojoshader_vulkan.c
+-	MojoShader/profiles/mojoshader_profile_common.c
+-	MojoShader/profiles/mojoshader_profile_glsl.c
+-	MojoShader/profiles/mojoshader_profile_hlsl.c
+-	MojoShader/profiles/mojoshader_profile_metal.c
+-	MojoShader/profiles/mojoshader_profile_spirv.c
+-)
+ 
+ # Build flags
+ if(NOT MSVC)
+ 	set_property(TARGET FNA3D PROPERTY COMPILE_FLAGS "-std=gnu99 -Wall -Wno-strict-aliasing -pedantic")
+ endif()
+-if(BUILD_SHARED_LIBS)
+-	set_property(TARGET mojoshader PROPERTY POSITION_INDEPENDENT_CODE ON)
+-endif()
+ 
+ # FNA3D folders as includes, for other targets to consume
+ target_include_directories(FNA3D PUBLIC
+@@ -134,10 +120,6 @@ target_include_directories(FNA3D PUBLIC
+ 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+ 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Headers/include>
+ )
+-target_include_directories(mojoshader PUBLIC
+-	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/MojoShader>
+-	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Headers/include>
+-)
+ 
+ # MinGW builds should statically link libgcc
+ if(MINGW)
+@@ -165,7 +147,6 @@ else()
+ 	if (TARGET SDL2::SDL2)
+ 		message(STATUS "using TARGET SDL2::SDL2")
+ 		target_link_libraries(FNA3D PUBLIC SDL2::SDL2)
+-		target_link_libraries(mojoshader PUBLIC SDL2::SDL2)
+ 	elseif (TARGET SDL2)
+ 		message(STATUS "using TARGET SDL2")
+ 		target_link_libraries(FNA3D PUBLIC SDL2)
