@@ -1,10 +1,10 @@
-$NetBSD: patch-build_Linux+BSD_portable_portable-utils.in,v 1.1 2020/03/13 07:46:11 wiz Exp $
+$NetBSD: patch-build_Linux+BSD_portable_portable-utils.in,v 1.2 2021/01/25 02:42:44 gutteridge Exp $
 
 Fix unportable test(1) operator.
 
---- build/Linux+BSD/portable/portable-utils.in.orig	2020-02-06 21:10:58.000000000 +0000
+--- build/Linux+BSD/portable/portable-utils.in.orig	2021-01-15 12:36:02.000000000 +0000
 +++ build/Linux+BSD/portable/portable-utils.in
-@@ -51,7 +51,7 @@ EOF
+@@ -55,7 +55,7 @@ EOF
  function printVersion() {
    local pretty=$(sed -rn "s|^Name=([^#]*)|\1|p" "${APPDIR}/mscore@MSCORE_INSTALL_SUFFIX@.desktop")
    local long=$("${APPDIR}/bin/mscore@MSCORE_INSTALL_SUFFIX@" --long-version 2>&1 | tail -n 1)
@@ -13,7 +13,7 @@ Fix unportable test(1) operator.
      printf "%*s\n" "$(((${#pretty}+80)/2))" "$pretty"
      printf "%*s\n" "$(((${#long}+80)/2))" "$long"
      return
-@@ -62,7 +62,7 @@ function printVersion() {
+@@ -66,7 +66,7 @@ function printVersion() {
  
  function readYes() {
    read -s -n 1 answer
@@ -22,7 +22,7 @@ Fix unportable test(1) operator.
      echo " N"
      return 1
    fi
-@@ -72,9 +72,9 @@ function readYes() {
+@@ -76,9 +76,9 @@ function readYes() {
  
  function installResources() {
    local interactive=""
@@ -34,7 +34,7 @@ Fix unportable test(1) operator.
      interactive=true
      shift
    fi
-@@ -85,7 +85,7 @@ function installResources() {
+@@ -89,7 +89,7 @@ function installResources() {
      local bin_str="PREFIX/bin"
      local question="The default location might be better. Proceed anyway [Y/n]?"
      local cancelled="Cancelled: rerun without a PREFIX to use the default."
@@ -43,7 +43,20 @@ Fix unportable test(1) operator.
      # Running as root (sudo)
      local prefix="/usr/local"
      local bin="$prefix/bin"
-@@ -198,12 +198,12 @@ EOF
+@@ -210,10 +210,10 @@ EOF
+ 
+ function update() {
+   local interactive="" install=true
+-  if [ "$1" == "-i" ]; then
++  if [ "$1" = "-i" ]; then
+     interactive="$1"
+     prefix="$2"
+-  elif [ "$2" == "-i" ]; then
++  elif [ "$2" = "-i" ]; then
+     interactive="$2"
+     prefix="$1"
+   fi
+@@ -265,12 +265,12 @@ function doUpdate() {
  }
  
  function removeResources() {
@@ -52,13 +65,13 @@ Fix unportable test(1) operator.
    if [ "$1" != "" ]; then
      # User specified a directory
      prefix="$1"
-     echo -n "Remove resources from ${prefix} [Y/n]?"
+     echo -n "Remove MuseScore resources from ${prefix} [Y/n]?"
 -  elif [ "${EUID}" == "0" ]; then
 +  elif [ "${EUID}" = "0" ]; then
      prefix=/usr/local
      echo -n "Running as root. Remove MuseScore resources from '$prefix' for all users [Y/n]?"
    else
-@@ -235,7 +235,7 @@ function checkDependencies() {
+@@ -303,7 +303,7 @@ function checkDependencies() {
  
    echo "AppImage contains ${num_exes} executables and ${num_libs} libraries." >&2
  
@@ -67,7 +80,7 @@ Fix unportable test(1) operator.
      echo "Checking dependencies for executables..." >&2
      include_libs=""
      num_includes="${num_exes}"
-@@ -317,7 +317,7 @@ $1. Things to check:
+@@ -392,7 +392,7 @@ $1. Things to check:
    - do the files and/or directories exist?
    - do you have the right privileges?
  EOF
