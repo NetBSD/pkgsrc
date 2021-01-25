@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.28 2020/11/24 12:24:44 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/01/25 11:17:36 nia Exp $
 
-SHA1 (unrealircd-5.0.7.tar.gz) = a50cb53c5dbdc0d106e0197f90cae2ccf841286f
-RMD160 (unrealircd-5.0.7.tar.gz) = 43375299d65ab0cd1bd743afc7813c08ea8c1236
-SHA512 (unrealircd-5.0.7.tar.gz) = 0b851af26da2ea5d3a04d2ef324d7bd3d3fc820f24d7dfd7e975d6bf1f3954884eb98dc348d291a118d98a214922d3ca1132800381e6f025264856aa06498779
-Size (unrealircd-5.0.7.tar.gz) = 4995220 bytes
+SHA1 (unrealircd-5.0.8.tar.gz) = a254e3794bca1f330609be7effd6709709dd091a
+RMD160 (unrealircd-5.0.8.tar.gz) = 5180e40f4b6dac30e81a2bf883863eafcf863117
+SHA512 (unrealircd-5.0.8.tar.gz) = 45fc0758a870dbb9c3ff55fc7029d1ecff9dcf65680f31ff331f012efbf9c9bffa60a6fe27b9bab69302d26b8293a1089cfaf1c550a3f2802a549f25e4644770
+Size (unrealircd-5.0.8.tar.gz) = 5013231 bytes
 SHA1 (patch-include_h.h) = 3fa85b08f1d9e317a45cb8f54a61e0560617e72d
