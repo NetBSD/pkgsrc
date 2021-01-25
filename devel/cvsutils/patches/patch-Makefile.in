@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/09/11 05:01:08 bjs Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2021/01/25 09:23:07 fcambus Exp $
 
---- Makefile.in.orig	2005-03-28 23:24:38.000000000 -0500
+--- Makefile.in.orig	2013-05-31 14:20:57.000000000 +0000
 +++ Makefile.in
-@@ -137,11 +137,9 @@ noinst_DATA = cvsutils.spec
+@@ -207,11 +207,9 @@ noinst_DATA = cvsutils.spec
  
  # The idea of the scripts below in taken from Autoconf
  editsh = sed \
