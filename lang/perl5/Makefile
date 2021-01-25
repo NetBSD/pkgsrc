@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.267 2020/09/04 14:07:51 wiz Exp $
+# $NetBSD: Makefile,v 1.268 2021/01/25 09:33:19 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
-
-PKGREVISION=	1
 
 COMMENT=	Practical Extraction and Report Language
 
