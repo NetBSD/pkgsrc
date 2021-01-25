@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/12/16 17:17:08 bouyer Exp $
+# $NetBSD: Makefile,v 1.15 2021/01/25 10:50:40 wiz Exp $
 #
 VERSION=	4.13.2
 
@@ -73,7 +73,6 @@ MAKE_ENV+=		V=YES
 MAKE_ENV+=		NO_WERROR=1
 
 PY_PATCHPLIST=		yes
-REPLACE_PYTHON+=	tools/misc/xen-bugtool tools/misc/xen-ringwatch
 REPLACE_PYTHON+=	tools/misc/xencons
 REPLACE_PYTHON+=	tools/misc/xenpvnetboot tools/misc/xensymoops
 REPLACE_PYTHON+=	tools/python/scripts/convert-legacy-stream
