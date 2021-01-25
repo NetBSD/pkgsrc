@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.609 2021/01/25 10:56:16 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.610 2021/01/25 11:10:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -755,3 +755,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/vala to 0.50.3 [wiz 2021-01-25]
 	Updated devel/patchelf to 0.12 [fcambus 2021-01-25]
 	Updated devel/py-codespell to 2.0.0 [fcambus 2021-01-25]
+	Updated www/otter-browser to 1.0.02 [nia 2021-01-25]
