@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2021/01/23 09:08:07 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2021/01/25 23:10:00 wiz Exp $
 
-DISTNAME=	loudmouth-1.5.3
-PKGREVISION=	3
+DISTNAME=	loudmouth-1.5.4
 CATEGORIES=	chat
 MASTER_SITES=	https://mcabber.com/files/loudmouth/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +18,9 @@ CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-ssl=openssl
 
 PKGCONFIG_OVERRIDE+=	loudmouth-1.0.pc.in
+
+# https://github.com/mcabber/loudmouth/issues/42
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
