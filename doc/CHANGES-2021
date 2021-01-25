@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.605 2021/01/25 10:14:45 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.606 2021/01/25 10:16:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -751,3 +751,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hypothesis to 6.0.3 [wiz 2021-01-25]
 	Updated sysutils/py-setproctitle to 1.2.2 [wiz 2021-01-25]
 	Updated lang/yabasic to 2.89.0 [fcambus 2021-01-25]
+	Updated textproc/ugrep to 3.1.4 [wiz 2021-01-25]
