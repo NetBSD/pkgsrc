@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.608 2021/01/25 10:39:33 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.609 2021/01/25 10:56:16 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -754,3 +754,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ugrep to 3.1.4 [wiz 2021-01-25]
 	Updated lang/vala to 0.50.3 [wiz 2021-01-25]
 	Updated devel/patchelf to 0.12 [fcambus 2021-01-25]
+	Updated devel/py-codespell to 2.0.0 [fcambus 2021-01-25]
