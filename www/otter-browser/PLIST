@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/16 23:22:14 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/25 11:09:03 nia Exp $
 bin/otter-browser
 man/man1/otter-browser.1
 share/applications/otter-browser.desktop
@@ -24,6 +24,7 @@ share/otter-browser/locale/otter-browser_fi.qm
 share/otter-browser/locale/otter-browser_fr.qm
 share/otter-browser/locale/otter-browser_gl.qm
 share/otter-browser/locale/otter-browser_he.qm
+share/otter-browser/locale/otter-browser_hi_IN.qm
 share/otter-browser/locale/otter-browser_hr.qm
 share/otter-browser/locale/otter-browser_hu.qm
 share/otter-browser/locale/otter-browser_id.qm
