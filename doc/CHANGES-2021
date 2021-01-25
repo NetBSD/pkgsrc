@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.590 2021/01/25 08:00:04 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.591 2021/01/25 08:48:20 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -736,3 +736,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/musescore to 3.6 [gutteridge 2021-01-25]
 	Updated devel/acr to 1.9.4 [fcambus 2021-01-25]
 	Updated devel/cloc to 1.88 [fcambus 2021-01-25]
+	Updated devel/cvsgraph to 1.7.1 [fcambus 2021-01-25]
