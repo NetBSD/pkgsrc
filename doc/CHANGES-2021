@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.611 2021/01/25 11:17:54 nia Exp $
+$NetBSD: CHANGES-2021,v 1.612 2021/01/25 11:19:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -757,3 +757,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-codespell to 2.0.0 [fcambus 2021-01-25]
 	Updated www/otter-browser to 1.0.02 [nia 2021-01-25]
 	Updated chat/unrealircd to 5.0.8 [nia 2021-01-25]
+	Updated net/tnftpd to 20200704 [nia 2021-01-25]
