@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/11/24 12:24:44 nia Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/01/25 11:17:36 nia Exp $
 bin/unrealircd
 lib/unrealircd/modules/account-notify.so
 lib/unrealircd/modules/account-tag.so
@@ -58,6 +58,7 @@ lib/unrealircd/modules/extbans/operclass.so
 lib/unrealircd/modules/extbans/partmsg.so
 lib/unrealircd/modules/extbans/quiet.so
 lib/unrealircd/modules/extbans/realname.so
+lib/unrealircd/modules/extbans/securitygroup.so
 lib/unrealircd/modules/extbans/textban.so
 lib/unrealircd/modules/extbans/timedban.so
 lib/unrealircd/modules/globops.so
