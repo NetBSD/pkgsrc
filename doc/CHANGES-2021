@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.596 2021/01/25 09:46:32 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.597 2021/01/25 09:48:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -742,3 +742,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/p5-gdbm to 5.32.1 [wiz 2021-01-25]
 	Updated graphics/ImageMagick to 7.0.10.58 [wiz 2021-01-25]
 	Updated devel/gopls to 0.6.4 [wiz 2021-01-25]
+	Updated converters/help2man to 1.47.17 [wiz 2021-01-25]
