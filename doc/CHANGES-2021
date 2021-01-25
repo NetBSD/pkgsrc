@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.612 2021/01/25 11:19:01 nia Exp $
+$NetBSD: CHANGES-2021,v 1.613 2021/01/25 12:52:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -758,3 +758,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/otter-browser to 1.0.02 [nia 2021-01-25]
 	Updated chat/unrealircd to 5.0.8 [nia 2021-01-25]
 	Updated net/tnftpd to 20200704 [nia 2021-01-25]
+	Updated databases/openldap to 2.4.57 [adam 2021-01-25]
