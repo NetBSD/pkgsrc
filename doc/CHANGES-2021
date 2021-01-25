@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.604 2021/01/25 10:09:56 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.605 2021/01/25 10:14:45 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -750,3 +750,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/musicpd to 0.22.4 [wiz 2021-01-25]
 	Updated devel/py-hypothesis to 6.0.3 [wiz 2021-01-25]
 	Updated sysutils/py-setproctitle to 1.2.2 [wiz 2021-01-25]
+	Updated lang/yabasic to 2.89.0 [fcambus 2021-01-25]
