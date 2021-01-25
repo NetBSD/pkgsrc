@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.617 2021/01/25 17:07:11 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.618 2021/01/25 21:33:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -764,3 +764,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/ruby-tzinfo-data to 1.2021.1 [taca 2021-01-25]
 	Updated lang/execline to 2.7.0.1 [schmonz 2021-01-25]
 	Updated sysutils/s6 to 2.10.0.1 [schmonz 2021-01-25]
+	Added sysutils/sfm version 0.1.2 [pin 2021-01-25]
