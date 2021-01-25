@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/12/09 09:30:56 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/01/25 14:23:59 adam Exp $
 
-DISTNAME=	ujson-4.0.1
+DISTNAME=	ujson-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/ujson/}
