@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.618 2021/01/25 21:33:35 pin Exp $
+$NetBSD: CHANGES-2021,v 1.619 2021/01/25 23:10:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -765,3 +765,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/execline to 2.7.0.1 [schmonz 2021-01-25]
 	Updated sysutils/s6 to 2.10.0.1 [schmonz 2021-01-25]
 	Added sysutils/sfm version 0.1.2 [pin 2021-01-25]
+	Updated chat/loudmouth to 1.5.4 [wiz 2021-01-25]
