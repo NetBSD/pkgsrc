@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.598 2021/01/25 09:50:05 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.599 2021/01/25 09:55:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -744,3 +744,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gopls to 0.6.4 [wiz 2021-01-25]
 	Updated converters/help2man to 1.47.17 [wiz 2021-01-25]
 	Updated textproc/lowdown to 0.7.9 [fcambus 2021-01-25]
+	Updated security/keepassxc to 2.6.3 [wiz 2021-01-25]
