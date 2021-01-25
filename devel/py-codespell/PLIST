@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/10 14:54:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/01/25 10:56:05 fcambus Exp $
 bin/codespell-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/codespell_lib/__init__.py
 ${PYSITELIB}/codespell_lib/__init__.pyc
 ${PYSITELIB}/codespell_lib/__init__.pyo
+${PYSITELIB}/codespell_lib/__main__.py
+${PYSITELIB}/codespell_lib/__main__.pyc
+${PYSITELIB}/codespell_lib/__main__.pyo
 ${PYSITELIB}/codespell_lib/_codespell.py
 ${PYSITELIB}/codespell_lib/_codespell.pyc
 ${PYSITELIB}/codespell_lib/_codespell.pyo
@@ -21,13 +25,5 @@ ${PYSITELIB}/codespell_lib/data/dictionary_en-GB_to_en-US.txt
 ${PYSITELIB}/codespell_lib/data/dictionary_informal.txt
 ${PYSITELIB}/codespell_lib/data/dictionary_names.txt
 ${PYSITELIB}/codespell_lib/data/dictionary_rare.txt
+${PYSITELIB}/codespell_lib/data/dictionary_usage.txt
 ${PYSITELIB}/codespell_lib/data/linux-kernel.exclude
-${PYSITELIB}/codespell_lib/tests/__init__.py
-${PYSITELIB}/codespell_lib/tests/__init__.pyc
-${PYSITELIB}/codespell_lib/tests/__init__.pyo
-${PYSITELIB}/codespell_lib/tests/test_basic.py
-${PYSITELIB}/codespell_lib/tests/test_basic.pyc
-${PYSITELIB}/codespell_lib/tests/test_basic.pyo
-${PYSITELIB}/codespell_lib/tests/test_dictionary.py
-${PYSITELIB}/codespell_lib/tests/test_dictionary.pyc
-${PYSITELIB}/codespell_lib/tests/test_dictionary.pyo
