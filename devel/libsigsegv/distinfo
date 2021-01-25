@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2018/01/28 15:59:40 wiz Exp $
+$NetBSD: distinfo,v 1.14 2021/01/25 10:01:14 wiz Exp $
 
-SHA1 (libsigsegv-2.12.tar.gz) = df167811328b050d2b746bec3d88423edc5a8cbf
-RMD160 (libsigsegv-2.12.tar.gz) = 23b9c2e0a01df06c77ad81aa441c4a3b08a52d21
-SHA512 (libsigsegv-2.12.tar.gz) = 27986e8aaf4357ed131032aa7c281a5a28c5759530c62bb76f034aea33959547dcaae805e06347a1f532f0488b72fbbbdac4400f74e8d3f2128511526e8a5913
-Size (libsigsegv-2.12.tar.gz) = 451408 bytes
+SHA1 (libsigsegv-2.13.tar.gz) = c371743afe08c2ec817bd6d37f32d40cb28ea5a9
+RMD160 (libsigsegv-2.13.tar.gz) = d62dabed3d85a7a66c4ce25887b335f805e45b27
+SHA512 (libsigsegv-2.13.tar.gz) = 9c0cf01ee2a39f77f2e42eb06a2aa60644e10fe2cd39089de58f6206baf7fe7d61fe0ec6bf187276fcfccf61585154ce904fe374b474b7ba9fa050a61a2f3918
+Size (libsigsegv-2.13.tar.gz) = 460736 bytes
