@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/06/06 01:52:00 gutteridge Exp $
+$NetBSD: distinfo,v 1.7 2021/01/25 11:09:03 nia Exp $
 
-SHA1 (otter-browser-1.0.01.tar.gz) = 10f0bd2bc2626df442d91837496a6625b8786df5
-RMD160 (otter-browser-1.0.01.tar.gz) = 99a057bf836d1f9e98d82750bd22ad6becab2727
-SHA512 (otter-browser-1.0.01.tar.gz) = 594bbdcbbc3b5fea903cc0beb749cf76be402cb1c2766706750bdbd6aad84f3d9f48687e1b12945f30e40b3876b9fbf511f41915fd276473b259d7311e33f19d
-Size (otter-browser-1.0.01.tar.gz) = 4866820 bytes
-SHA1 (patch-cmake_FindHunspell.cmake) = 74556f29213a1d75f1c81ea0005779503bd17439
-SHA1 (patch-src_modules_backends_web_qtwebkit_QtWebKitPluginWidget.cpp) = f91b1faed86723a41e04d5647881046be46aa862
-SHA1 (patch-src_modules_windows_web_StartPageWidget.cpp) = b0e8d4b8222a1bd94b076372d5b4aaf79c84b3d6
+SHA1 (otter-browser-1.0.02.tar.gz) = 3ab9068b6032efa469c0952b0a18c9e60dfa2a9f
+RMD160 (otter-browser-1.0.02.tar.gz) = 9022d884091c2607f2db9aef251fae42ce5670e6
+SHA512 (otter-browser-1.0.02.tar.gz) = 5b142486298f2ef1f0613363c7a4de3340544ecd82406efc64225e78eb958337ea4045c0c44553fe3b29a0836bd5f6cdab37d615ebf98756108f9aa5473360a1
+Size (otter-browser-1.0.02.tar.gz) = 4940331 bytes
