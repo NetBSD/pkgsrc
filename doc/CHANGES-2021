@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.614 2021/01/25 14:26:08 adam Exp $
+$NetBSD: CHANGES-2021,v 1.615 2021/01/25 15:11:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -761,3 +761,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/openldap to 2.4.57 [adam 2021-01-25]
 	Updated textproc/py-ujson to 4.0.2 [adam 2021-01-25]
 	Updated textproc/py-elementpath to 2.1.2 [adam 2021-01-25]
+	Updated time/ruby-tzinfo-data to 1.2021.1 [taca 2021-01-25]
