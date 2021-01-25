@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.930 2021/01/18 15:13:26 taca Exp $
+# $NetBSD: Makefile,v 1.931 2021/01/25 21:33:01 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -607,6 +607,7 @@ SUBDIR+=	screentest
 SUBDIR+=	scsiinfo
 SUBDIR+=	service-config
 SUBDIR+=	setquota
+SUBDIR+=	sfm
 SUBDIR+=	sformat
 SUBDIR+=	shc
 SUBDIR+=	shelldap
