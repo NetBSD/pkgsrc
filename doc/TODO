@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20329 2021/01/24 08:31:42 wiz Exp $
+$NetBSD: TODO,v 1.20330 2021/01/25 00:54:43 taca Exp $
 
 Suggested new packages
 ======================
@@ -827,6 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o musescore-3.6
 	o musicpd-0.22.4
 	o mysql-connector-c++-8.0.23
+	o mysql-server-5.6.51
 	o mysql-server-5.7.33
 	o mysql-server-8.0.23
 	o mysql-workbench-8.0.23
@@ -860,6 +861,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
+	o openldap-2.4.57
 	o openoffice-4.1.7
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
