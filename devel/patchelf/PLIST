@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/22 07:52:49 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/25 10:39:22 fcambus Exp $
 bin/patchelf
 man/man1/patchelf.1
-share/doc/patchelf/README
+share/doc/patchelf/README.md
