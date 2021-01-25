@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.616 2021/01/25 17:06:44 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.617 2021/01/25 17:07:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -763,3 +763,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.1.2 [adam 2021-01-25]
 	Updated time/ruby-tzinfo-data to 1.2021.1 [taca 2021-01-25]
 	Updated lang/execline to 2.7.0.1 [schmonz 2021-01-25]
+	Updated sysutils/s6 to 2.10.0.1 [schmonz 2021-01-25]
