@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20340 2021/01/25 10:09:06 wiz Exp $
+$NetBSD: TODO,v 1.20341 2021/01/25 10:09:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -953,7 +953,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
-	o py-setproctitle-1.2.2
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-sympy-1.7
