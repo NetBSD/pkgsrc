@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/11/24 21:16:17 fcambus Exp $
+# $NetBSD: Makefile,v 1.35 2021/01/25 10:14:31 fcambus Exp $
 
-DISTNAME=		yabasic-2.87.1
+DISTNAME=		yabasic-2.89.0
 CATEGORIES=		lang
 MASTER_SITES=		http://www.yabasic.de/download/
 
