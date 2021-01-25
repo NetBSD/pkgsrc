@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.591 2021/01/25 08:48:20 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.592 2021/01/25 09:23:18 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -737,3 +737,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/acr to 1.9.4 [fcambus 2021-01-25]
 	Updated devel/cloc to 1.88 [fcambus 2021-01-25]
 	Updated devel/cvsgraph to 1.7.1 [fcambus 2021-01-25]
+	Updated devel/cvsutils to 0.2.6 [fcambus 2021-01-25]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20331 2021/01/25 02:42:57 gutteridge Exp $
+$NetBSD: TODO,v 1.20332 2021/01/25 09:23:18 fcambus Exp $
 
 Suggested new packages
 ======================
@@ -493,7 +493,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cpmtools-2.20
 	o crafty-25.0.1
 	o cross-h8300-hms-binutils-2.17
-	o cvsutils-0.2.6
 	o cxref-1.6e
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-2.5.4
