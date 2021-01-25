@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/12/06 10:38:36 wiz Exp $
+$NetBSD: distinfo,v 1.7 2021/01/25 10:09:48 wiz Exp $
 
-SHA1 (setproctitle-1.2.1.tar.gz) = 507b5527b529c3d6d530a59e17ccc957a816982a
-RMD160 (setproctitle-1.2.1.tar.gz) = bc3675811dfc15bcfb9ae1e28edfff9d6e39ff60
-SHA512 (setproctitle-1.2.1.tar.gz) = c11f756a61501c4126e6bba5d931a3fb26294d2a55255c717f0e3c3b72184841452195ddf04fb6e8b686d26caa36cb5e13fbd66c66c151c54981a9edc620da1e
-Size (setproctitle-1.2.1.tar.gz) = 23628 bytes
+SHA1 (setproctitle-1.2.2.tar.gz) = bdcd4b65f16fe6f53f58ee32cea0532d6839c103
+RMD160 (setproctitle-1.2.2.tar.gz) = 502e9b7ec141d29faa959db8a07330f51acafc9f
+SHA512 (setproctitle-1.2.2.tar.gz) = e89651e4879a33681f2862cbd6b430520fe7e5b56331ff2804ad4d8d4bd0230c4270488b132497efcafbc105f575ed2b66caf667130978c899ebfdcb9949b4ba
+Size (setproctitle-1.2.2.tar.gz) = 23960 bytes
