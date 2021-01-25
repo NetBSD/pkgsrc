@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/04/02 09:35:22 nia Exp $
+# $NetBSD: Makefile,v 1.28 2021/01/25 11:18:45 nia Exp $
 
-DISTNAME=		tnftpd-20190602
+DISTNAME=		tnftpd-20200704
 CATEGORIES=		net
-MASTER_SITES=		https://cdn.netbsd.org/pub/NetBSD/misc/tnftp/
+MASTER_SITES=		https://cdn.NetBSD.org/pub/NetBSD/misc/tnftp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		The NetBSD FTP Daemon
@@ -11,7 +11,7 @@ LICENSE=		2-clause-bsd
 CONFLICTS=		wu-ftpd-[0-9]*
 CONFLICTS+=		kth-krb4-[0-9]*
 CONFLICTS+=		lukemftpd-[0-9]*
-CONFLICTS=		man-pages-[0-9]*
+CONFLICTS+=		man-pages-[0-9]*
 
 GNU_CONFIGURE=		YES
 MANCOMPRESSED_IF_MANZ=	YES
