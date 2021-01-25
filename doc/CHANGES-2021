@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.588 2021/01/25 02:42:57 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.589 2021/01/25 07:59:02 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -734,3 +734,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/pleaser to 0.3.20 [pin 2021-01-24]
 	Updated audio/ncmpcpp to 0.9.1 [nia 2021-01-24]
 	Updated audio/musescore to 3.6 [gutteridge 2021-01-25]
+	Updated devel/acr to 1.9.4 [fcambus 2021-01-25]
