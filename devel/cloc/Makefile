@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:07:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2021/01/25 07:59:53 fcambus Exp $
 
-DISTNAME=	cloc-1.86
-PKGREVISION=	1
+DISTNAME=	cloc-1.88
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AlDanial/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://github.com/AlDanial/cloc
 COMMENT=	Count lines of code
 LICENSE=	gnu-gpl-v2
