@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/08/31 18:13:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2021/01/25 11:34:51 nia Exp $
 
 DISTNAME=	squid-4.13
 PKGREVISION=	1
@@ -89,4 +89,5 @@ post-install:
 .endfor
 
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
