@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.640 2021/01/26 15:33:26 taca Exp $
+$NetBSD: CHANGES-2021,v 1.641 2021/01/26 15:35:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -792,3 +792,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-ruby2_keywords to 0.0.4 [taca 2021-01-26]
 	Updated devel/ruby-shoulda-matchers to 4.5.1 [taca 2021-01-26]
 	Updated devel/ruby-thor to 1.1.0 [taca 2021-01-26]
+	Updated math/ruby-spreadsheet to 1.2.7 [taca 2021-01-26]
