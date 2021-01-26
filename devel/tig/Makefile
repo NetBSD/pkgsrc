@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.15 2017/01/04 18:16:32 roy Exp $
+# $NetBSD: Makefile,v 1.16 2021/01/26 14:11:02 fcambus Exp $
 
-DISTNAME=	tig-1.2.1
-PKGREVISION=	3
+DISTNAME=	tig-2.5.1
 CATEGORIES=	devel scm
-MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jonas/}
+GITHUB_RELEASE=	${DISTNAME}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jonas.nitro.dk/tig/
+MAINTAINER=	fcambus@NetBSD.org
+HOMEPAGE=	https://jonas.github.io/tig/
 COMMENT=	Ncurses-based GIT repository tool
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-FAKE_NCURSES=	yes
+USE_NCURSES=	yes	# Display issues with NetBSD curses(3)
 
 CONF_FILES=	${EGDIR}/tigrc ${PKG_SYSCONFDIR}/tigrc
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
@@ -39,12 +39,13 @@ CFLAGS+=	-D_BSD_SOURCE
 
 BUILD_TARGET=	all doc
 INSTALL_TARGET=	install install-doc
+TEST_TARGET=	test
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR} && \
-	${INSTALL_DATA} ${WRKSRC}/contrib/tigrc ${DESTDIR}/${EGDIR}
-
-.include "options.mk"
+	${INSTALL_DATA} ${WRKSRC}/tigrc ${DESTDIR}/${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
