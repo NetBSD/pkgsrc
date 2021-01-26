@@ -1,0 +1,7 @@
+Cross-platform alternative to ls, specifically designed for programmers.
+Features:
+- License type detection
+- Colored files by extension
+- Collapsed build directories
+- Git integration
+- No external dependencies
