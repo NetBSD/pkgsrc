@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.10 2019/08/04 14:30:13 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2021/01/26 14:25:00 kamil Exp $
 
-SHA1 (radare2-3.6.0.tar.gz) = caaf1119e241b68286977f1a8d51f2508260e3fa
-RMD160 (radare2-3.6.0.tar.gz) = 80d97131b4294db15580d9e68609b73b76d41725
-SHA512 (radare2-3.6.0.tar.gz) = 41f55611a419e32392e0a32d25c7126539bed52f1e5d5b636e792b270445aafb21e9ff44942d09397c74e7ad5244673cdd99f67e324bf3d759963881b96ca90c
-Size (radare2-3.6.0.tar.gz) = 14132547 bytes
-SHA1 (patch-libr_anal_p_wasm.mk) = 6762d40e5dbd0e4274615b20f64df1947b57a41c
-SHA1 (patch-libr_debug_Makefile) = 8652c47471ad98c937fa4dc54d54e00bb636b85a
-SHA1 (patch-libr_socket_run.c) = 048fda3209a67626faf94b198a2ac9f4ff9372d5
-SHA1 (patch-sys_docker__build__alpine__image.sh) = e454a53ea1a4e1f6a4b0bca75fd9f11a207ae8cd
+SHA1 (radare2-5.1.0.tar.gz) = b40c2fad2cf3030e517cba56b71cdac319ffa79d
+RMD160 (radare2-5.1.0.tar.gz) = 5e244dd387ff4c48c7a9c3b57193aad48cc9be66
+SHA512 (radare2-5.1.0.tar.gz) = f973aeeb4d3a1e9eaf889a14bba4d54568dc2527d1160c7d999a7b2c870270cec7dc11a0eed12ae8f1d0aeacf63f14a92c7ca99f44e38573a6ce2276a08180f1
+Size (radare2-5.1.0.tar.gz) = 7908690 bytes
+SHA1 (patch-libr_anal_p_pyc.mk) = d3e590ca6debf89971e915f081592d906a685d49
+SHA1 (patch-libr_anal_p_wasm.mk) = 65e88fe77213602888f4b8ee9bf7750feae5f93f
+SHA1 (patch-libr_debug_Makefile) = 8e903f00bf2678392bcea47ecceaa5ec0d019966
 SHA1 (patch-sys_ios-sdk.sh) = 3f50b49e75dea1ac02f6d2ce8c556c77276e51d6
