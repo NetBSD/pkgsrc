@@ -1,19 +1,13 @@
-@comment $NetBSD: PLIST,v 1.19 2019/12/28 02:14:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/01/26 15:34:57 taca Exp $
 bin/xlsopcodes${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/Excel97-2007BinaryFileFormatSpecification.pdf
-${GEM_LIBDIR}/GUIDE.md
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
-${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/bundler
+${GEM_LIBDIR}/bin/oletool
+${GEM_LIBDIR}/bin/rake
+${GEM_LIBDIR}/bin/sow
 ${GEM_LIBDIR}/bin/xlsopcodes
-${GEM_LIBDIR}/excelfileformat.pdf
 ${GEM_LIBDIR}/lib/parseexcel.rb
 ${GEM_LIBDIR}/lib/parseexcel/parseexcel.rb
 ${GEM_LIBDIR}/lib/parseexcel/parser.rb
@@ -56,11 +50,12 @@ ${GEM_LIBDIR}/lib/spreadsheet/version.rb
 ${GEM_LIBDIR}/lib/spreadsheet/workbook.rb
 ${GEM_LIBDIR}/lib/spreadsheet/worksheet.rb
 ${GEM_LIBDIR}/lib/spreadsheet/writer.rb
-${GEM_LIBDIR}/spreadsheet.gemspec
 ${GEM_LIBDIR}/test/data/test_adding_data_to_existing_file.xls
 ${GEM_LIBDIR}/test/data/test_borders.xls
 ${GEM_LIBDIR}/test/data/test_changes.xls
 ${GEM_LIBDIR}/test/data/test_comment.xls
+${GEM_LIBDIR}/test/data/test_compact_format_date.xls
+${GEM_LIBDIR}/test/data/test_compact_many_rows.xls
 ${GEM_LIBDIR}/test/data/test_copy.xls
 ${GEM_LIBDIR}/test/data/test_datetime.xls
 ${GEM_LIBDIR}/test/data/test_empty.xls
@@ -69,8 +64,10 @@ ${GEM_LIBDIR}/test/data/test_long_sst_record.xls
 ${GEM_LIBDIR}/test/data/test_margin.xls
 ${GEM_LIBDIR}/test/data/test_merged_and_protected.xls
 ${GEM_LIBDIR}/test/data/test_merged_cells.xls
+${GEM_LIBDIR}/test/data/test_missing_format.xls
 ${GEM_LIBDIR}/test/data/test_missing_row.xls
 ${GEM_LIBDIR}/test/data/test_pagesetup.xls
+${GEM_LIBDIR}/test/data/test_sizes.xls
 ${GEM_LIBDIR}/test/data/test_text_drawing.xls
 ${GEM_LIBDIR}/test/data/test_version_excel5.xls
 ${GEM_LIBDIR}/test/data/test_version_excel95.xls
