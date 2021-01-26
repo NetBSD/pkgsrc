@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/08/02 09:08:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/26 14:44:49 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ansi/__init__.py
 ${PYSITELIB}/ansi/__init__.pyc
@@ -30,6 +30,12 @@ ${PYSITELIB}/ansi/colour/rgb.pyo
 ${PYSITELIB}/ansi/cursor.py
 ${PYSITELIB}/ansi/cursor.pyc
 ${PYSITELIB}/ansi/cursor.pyo
+${PYSITELIB}/ansi/iterm.py
+${PYSITELIB}/ansi/iterm.pyc
+${PYSITELIB}/ansi/iterm.pyo
+${PYSITELIB}/ansi/osc.py
+${PYSITELIB}/ansi/osc.pyc
+${PYSITELIB}/ansi/osc.pyo
 ${PYSITELIB}/ansi/sequence.py
 ${PYSITELIB}/ansi/sequence.pyc
 ${PYSITELIB}/ansi/sequence.pyo
