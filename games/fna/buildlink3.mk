@@ -1,4 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/01/24 19:07:21 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/01/26 00:34:10 gutteridge Exp $
+
 BUILDLINK_TREE+=	fna
 
 .if !defined(FNA_BUILDLINK3_MK)
