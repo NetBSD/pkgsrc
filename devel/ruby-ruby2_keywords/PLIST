@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/16 15:50:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/26 15:26:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/ruby2_keywords.rb
-${GEM_LIBDIR}/ruby2_keywords.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
