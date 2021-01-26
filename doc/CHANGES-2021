@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.644 2021/01/26 22:10:14 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.645 2021/01/26 22:12:26 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-bundler to 2.2.6 [taca 2021-01-26]
 	Updated security/sudo to 1.9.5p2 [jperkin 2021-01-26]
 	Updated emulators/mame to 0.228 [wiz 2021-01-26]
+	Updated games/dopewars to 1.6.1 [fcambus 2021-01-26]
