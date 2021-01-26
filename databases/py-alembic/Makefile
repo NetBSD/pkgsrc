@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2020/10/15 13:53:46 adam Exp $
+# $NetBSD: Makefile,v 1.27 2021/01/26 11:20:07 adam Exp $
 
-DISTNAME=	alembic-1.4.3
+DISTNAME=	alembic-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alembic/}
@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-editor>=0.3:../../editors/py-editor
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.8:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.3.0:../../databases/py-sqlalchemy
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 USE_LANGUAGES=	# none
