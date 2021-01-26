@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/09/13 15:22:32 taca Exp $
+# $NetBSD: Makefile,v 1.6 2021/01/26 14:53:05 taca Exp $
 
-DISTNAME=	concurrent-ruby-1.1.7
+DISTNAME=	concurrent-ruby-1.1.8
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
