@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/01/16 12:42:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/01/26 15:02:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/History.md
@@ -259,6 +259,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/views/with_hover1.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_html.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_html5_svg.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_html_entities.erb
+${GEM_LIBDIR}/lib/capybara/spec/views/with_jquery_animation.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_js.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_jstree.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_namespace.erb
