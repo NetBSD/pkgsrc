@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.636 2021/01/26 15:11:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.637 2021/01/26 15:21:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -788,3 +788,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox-l10n to 85.0 [ryoon 2021-01-26]
 	Updated lang/openjdk11 to 1.11.0.9.11nb1 [ryoon 2021-01-26]
 	Updated devel/ruby-regexp_parser to 2.0.3 [taca 2021-01-26]
+	Updated devel/ruby-power_assert to 2.0.0 [taca 2021-01-26]
