@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2020/04/10 21:25:03 schwarz Exp $
+# $NetBSD: Makefile,v 1.30 2021/01/26 11:22:13 jperkin Exp $
 
 DISTNAME=	arping-2.21
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.habets.pp.se/synscan/files/
 
@@ -11,6 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 
-.include "../../devel/libnet11/buildlink3.mk"
+.include "../../devel/libnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
