@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.642 2021/01/26 15:37:47 taca Exp $
+$NetBSD: CHANGES-2021,v 1.643 2021/01/26 20:18:51 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -794,3 +794,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-thor to 1.1.0 [taca 2021-01-26]
 	Updated math/ruby-spreadsheet to 1.2.7 [taca 2021-01-26]
 	Updated misc/ruby-bundler to 2.2.6 [taca 2021-01-26]
+	Updated security/sudo to 1.9.5p2 [jperkin 2021-01-26]
