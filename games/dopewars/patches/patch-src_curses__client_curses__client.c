@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2003/07/12 10:07:35 wiz Exp $
+$NetBSD: patch-src_curses__client_curses__client.c,v 1.1 2021/01/26 22:12:08 fcambus Exp $
 
---- src/curses_client/curses_client.c.orig	Fri Jun  6 21:13:04 2003
+--- src/curses_client/curses_client.c.orig	2021-01-03 12:38:52.113243136 +0000
 +++ src/curses_client/curses_client.c
 @@ -45,7 +45,6 @@
  #include "tstring.h"
@@ -10,12 +10,12 @@ $NetBSD: patch-ac,v 1.4 2003/07/12 10:07:35 wiz Exp $
  
  #define PromptAttr   (COLOR_PAIR(1))
  #define TextAttr     (COLOR_PAIR(2))
-@@ -112,7 +111,7 @@ static gboolean QuitRequest, WantColour 
+@@ -113,7 +112,7 @@ static gboolean QuitRequest, WantColor =
   */
  static void start_curses(void)
  {
 -  cur_screen = newterm(NULL, stdout, stdin);
 +  initscr();
-   if (WantColour) {
+   if (WantColor) {
      start_color();
      init_pair(1, COLOR_MAGENTA, COLOR_WHITE);
