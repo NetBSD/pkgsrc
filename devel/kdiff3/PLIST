@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/06 10:53:14 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/01/26 00:03:17 gutteridge Exp $
 bin/kdiff3
 lib/plugins/kf5/kfileitemaction/kdiff3fileitemaction.so
 lib/plugins/kf5/parts/kdiff3part.so
@@ -13,7 +13,6 @@ man/uk/man1/kdiff3.1
 share/applications/org.kde.kdiff3.desktop
 share/doc/HTML/ca/kdiff3/index.cache.bz2
 share/doc/HTML/ca/kdiff3/index.docbook
-share/doc/HTML/ca/kdiff3/letter_by_letter.png
 share/doc/HTML/ca/kdiff3/open_dialog.png
 share/doc/HTML/de/kdiff3/index.cache.bz2
 share/doc/HTML/de/kdiff3/index.docbook
@@ -71,6 +70,7 @@ share/locale/da/LC_MESSAGES/kdiff3fileitemactionplugin.mo
 share/locale/de/LC_MESSAGES/diff_ext.mo
 share/locale/de/LC_MESSAGES/kdiff3.mo
 share/locale/de/LC_MESSAGES/kdiff3fileitemactionplugin.mo
+share/locale/el/LC_MESSAGES/diff_ext.mo
 share/locale/el/LC_MESSAGES/kdiff3.mo
 share/locale/el/LC_MESSAGES/kdiff3fileitemactionplugin.mo
 share/locale/en_GB/LC_MESSAGES/diff_ext.mo
@@ -80,6 +80,7 @@ share/locale/eo/LC_MESSAGES/kdiff3.mo
 share/locale/es/LC_MESSAGES/diff_ext.mo
 share/locale/es/LC_MESSAGES/kdiff3.mo
 share/locale/es/LC_MESSAGES/kdiff3fileitemactionplugin.mo
+share/locale/et/LC_MESSAGES/diff_ext.mo
 share/locale/et/LC_MESSAGES/kdiff3.mo
 share/locale/et/LC_MESSAGES/kdiff3fileitemactionplugin.mo
 share/locale/eu/LC_MESSAGES/diff_ext.mo
