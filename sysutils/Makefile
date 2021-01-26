@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.931 2021/01/25 21:33:01 pin Exp $
+# $NetBSD: Makefile,v 1.932 2021/01/26 13:31:54 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -384,6 +384,7 @@ SUBDIR+=	logrider
 SUBDIR+=	logrot
 SUBDIR+=	logrotate
 SUBDIR+=	lsd
+SUBDIR+=	lsfp
 SUBDIR+=	lsof
 SUBDIR+=	lvm2
 SUBDIR+=	lxmenu-data
