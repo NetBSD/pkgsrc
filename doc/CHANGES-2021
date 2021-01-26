@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.632 2021/01/26 15:02:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.633 2021/01/26 15:03:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -784,3 +784,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-concurrent-ruby to 1.1.8 [taca 2021-01-26]
 	Updated devel/ruby-pathname2 to 1.8.4 [taca 2021-01-26]
 	Updated www/ruby-capybara to 3.35.0 [taca 2021-01-26]
+	Updated www/firefox to 85.0 [ryoon 2021-01-26]
