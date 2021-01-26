@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.27 2020/08/31 18:09:20 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2021/01/26 14:25:00 kamil Exp $
 
-DISTNAME=	radare2-3.6.0
-PKGREVISION=	5
+DISTNAME=	radare2-5.1.0
 CATEGORIES=	devel
-MASTER_SITES=	http://radare.mikelloc.com/get/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.radare.org/
 COMMENT=	Reverse engineering framework
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
@@ -20,6 +19,9 @@ USE_TOOLS+=		gmake patch pkg-config perl
 
 # node
 CHECK_INTERPRETER_SKIP+=	share/radare2/${PKGVERSION_NOREV}/www/m/fonts/iconjar-map.js
+
+#PLIST_SUBST+=	R2VERSION=${PKGVERSION_NOREV}-git # trunk revision
+PLIST_SUBST+=	R2VERSION=${PKGVERSION_NOREV} # release revision
 
 .include "options.mk"
 
