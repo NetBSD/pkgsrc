@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.7 2021/01/26 11:20:17 jperkin Exp $
+bin/libnet-config
+include/libnet.h
+include/libnet/libnet-asn1.h
+include/libnet/libnet-functions.h
+include/libnet/libnet-headers.h
+include/libnet/libnet-macros.h
+include/libnet/libnet-structures.h
+include/libnet/libnet-types.h
+lib/libnet.la
+lib/pkgconfig/libnet.pc
+share/doc/libnet/ChangeLog.md
+share/doc/libnet/LICENSE
+share/doc/libnet/README.md
