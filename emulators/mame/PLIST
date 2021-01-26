@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2021/01/01 15:18:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.50 2021/01/26 22:10:05 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -73,7 +73,7 @@ share/mame/hash/a7800.xml
 share/mame/hash/a800.xml
 share/mame/hash/a800_cass.xml
 share/mame/hash/a800_flop.xml
-share/mame/hash/abc1600.xml
+share/mame/hash/abc1600_flop.xml
 share/mame/hash/abc800.xml
 share/mame/hash/abc800_hdd.xml
 share/mame/hash/abc806.xml
@@ -90,6 +90,7 @@ share/mame/hash/aim65_cart.xml
 share/mame/hash/aleste.xml
 share/mame/hash/alice32.xml
 share/mame/hash/alice90.xml
+share/mame/hash/alphasmart_kapps.xml
 share/mame/hash/alphatro_cart.xml
 share/mame/hash/alphatro_flop.xml
 share/mame/hash/altos5.xml
@@ -184,6 +185,7 @@ share/mame/hash/cgenie_cass.xml
 share/mame/hash/cgenie_flop_rom.xml
 share/mame/hash/channelf.xml
 share/mame/hash/chessmstdm.xml
+share/mame/hash/chip8_quik.xml
 share/mame/hash/clickstart_cart.xml
 share/mame/hash/clipper_flop.xml
 share/mame/hash/coco_cart.xml
@@ -535,7 +537,8 @@ share/mame/hash/radio86_cart.xml
 share/mame/hash/radio86_cass.xml
 share/mame/hash/rainbow.xml
 share/mame/hash/rwtrntcs.xml
-share/mame/hash/rx78.xml
+share/mame/hash/rx78_cart.xml
+share/mame/hash/rx78_cass.xml
 share/mame/hash/sage2.xml
 share/mame/hash/saitek_egr.xml
 share/mame/hash/saitek_kso.xml
