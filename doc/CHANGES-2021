@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.622 2021/01/26 11:20:57 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.623 2021/01/26 11:22:24 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -772,3 +772,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-google-api-core to 1.25.1 [adam 2021-01-26]
 	Updated finance/py-braintree to 4.6.0 [adam 2021-01-26]
 	Added devel/libnet version 1.2 [jperkin 2021-01-26]
+	Updated net/arping to 2.21nb1 [jperkin 2021-01-26]
