@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/04/04 21:00:24 ryoon Exp $
-bin/test-graph
+@comment $NetBSD: PLIST,v 1.6 2021/01/26 14:11:02 fcambus Exp $
 bin/tig
 man/man1/tig.1
 man/man5/tigrc.5
