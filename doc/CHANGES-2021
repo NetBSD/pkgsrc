@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.638 2021/01/26 15:27:12 taca Exp $
+$NetBSD: CHANGES-2021,v 1.639 2021/01/26 15:28:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -790,3 +790,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-regexp_parser to 2.0.3 [taca 2021-01-26]
 	Updated devel/ruby-power_assert to 2.0.0 [taca 2021-01-26]
 	Updated devel/ruby-ruby2_keywords to 0.0.4 [taca 2021-01-26]
+	Updated devel/ruby-shoulda-matchers to 4.5.1 [taca 2021-01-26]
