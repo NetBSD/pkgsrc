@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/01/26 22:12:08 fcambus Exp $
+
+Fix target for Pkgsrc.
+
+--- Makefile.in.orig	2021-01-26 20:49:46.188727756 +0000
++++ Makefile.in
+@@ -400,7 +400,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = src doc po sounds
+-DESKTOPDIR = ${DESTDIR}${datadir}/gnome/apps/Games
++DESKTOPDIR = ${DESTDIR}${datadir}/applications
+ DESKTOP = dopewars.desktop
+ SCOREDIR = ${DESTDIR}${localstatedir}
+ SCORE = ${SCOREDIR}/dopewars.sco
