@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.77 2020/08/17 20:18:43 leot Exp $
+# $NetBSD: Makefile,v 1.78 2021/01/26 22:12:08 fcambus Exp $
 
-DISTNAME=	dopewars-1.5.12
-PKGREVISION=	34
+DISTNAME=	dopewars-1.6.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dopewars/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dopewars.sourceforge.io/
 COMMENT=	Make a fortune dealing drugs on the streets of New York
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -24,4 +24,6 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

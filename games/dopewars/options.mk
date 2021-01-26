@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/10/17 09:44:57 roy Exp $
+# $NetBSD: options.mk,v 1.3 2021/01/26 22:12:08 fcambus Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dopewars
 PKG_SUPPORTED_OPTIONS=	curses gtk
@@ -18,6 +18,5 @@ CONFIGURE_ARGS+=	--enable-gui-server
 .  include "../../x11/gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gui-client
-CONFIGURE_ARGS+=	--disable-glib2
-.  include "../../devel/glib/buildlink3.mk"
+.  include "../../devel/glib2/buildlink3.mk"
 .endif

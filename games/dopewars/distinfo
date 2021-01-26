@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 20:56:47 agc Exp $
+$NetBSD: distinfo,v 1.16 2021/01/26 22:12:08 fcambus Exp $
 
-SHA1 (dopewars-1.5.12.tar.gz) = ad46a38e225680e591b078eeec563d47b96684bc
-RMD160 (dopewars-1.5.12.tar.gz) = 66c86bceb67657a9fb2ef7944b1a069dafab8ae0
-SHA512 (dopewars-1.5.12.tar.gz) = cfabaf9326c847aed6210a852ace64c697df5845a66b3179b8dc8dea7b99a11e1f91358d4ee54929a56c70d5f3a76f9f7bb4079fdef765601f165b4cd06cba5a
-Size (dopewars-1.5.12.tar.gz) = 1419725 bytes
-SHA1 (patch-aa) = df0e51ad4da9ce3963682ba246de9c4f1496a6ec
-SHA1 (patch-ac) = 529cf6e5b9f28a7fa547f81841c5199a1f8f84ae
+SHA1 (dopewars-1.6.1.tar.gz) = 4598bfb838ece6d3e87d5c0014cc0f85204ce023
+RMD160 (dopewars-1.6.1.tar.gz) = 77c8f598dc240d93950dd13720b5536be925796c
+SHA512 (dopewars-1.6.1.tar.gz) = c4b33879be499a732e42a7a8829ff56a1807c5943eae4d39bc14ef16e06cf22b6c5792e7cefa8ad76846498be8bbf3f9c00f8f6664f14b5ce4d45604e42e8175
+Size (dopewars-1.6.1.tar.gz) = 1459612 bytes
+SHA1 (patch-Makefile.in) = e0ccd415a7154a08f0bddcf10949439fe4719c9e
 SHA1 (patch-ad) = 471c30b8b8e75d687e7891037f2427cb8ee51c14
-SHA1 (patch-ae) = 2e4f715e02f4d9ff3827e22a98b87bf593742845
-SHA1 (patch-af) = a25c54a74aacf58b85af879df70fe4ba78c3a49c
+SHA1 (patch-src_curses__client_curses__client.c) = 95c871ec0faebe0de65e81504e9d71021c3478ec
