@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/09/20 15:42:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/01/26 15:10:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -85,8 +85,6 @@ ${GEM_LIBDIR}/spec/expression/methods/strfregexp_spec.rb
 ${GEM_LIBDIR}/spec/expression/methods/tests_spec.rb
 ${GEM_LIBDIR}/spec/expression/methods/traverse_spec.rb
 ${GEM_LIBDIR}/spec/expression/options_spec.rb
-${GEM_LIBDIR}/spec/expression/root_spec.rb
-${GEM_LIBDIR}/spec/expression/sequence_spec.rb
 ${GEM_LIBDIR}/spec/expression/subexpression_spec.rb
 ${GEM_LIBDIR}/spec/expression/to_h_spec.rb
 ${GEM_LIBDIR}/spec/expression/to_s_spec.rb
