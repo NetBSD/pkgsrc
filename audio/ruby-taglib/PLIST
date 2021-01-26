@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/04/25 15:49:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/01/26 14:47:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/taglib_aiff.${RUBY_DLEXT}
@@ -108,6 +108,7 @@ ${GEM_LIBDIR}/test/data/aiff-sample.aiff
 ${GEM_LIBDIR}/test/data/crash.mp3
 ${GEM_LIBDIR}/test/data/flac-create.cpp
 ${GEM_LIBDIR}/test/data/flac.flac
+${GEM_LIBDIR}/test/data/flac_nopic.flac
 ${GEM_LIBDIR}/test/data/get_picture_data.cpp
 ${GEM_LIBDIR}/test/data/globe_east_540.jpg
 ${GEM_LIBDIR}/test/data/globe_east_90.jpg
@@ -129,6 +130,7 @@ ${GEM_LIBDIR}/test/fileref_properties_test.rb
 ${GEM_LIBDIR}/test/fileref_write_test.rb
 ${GEM_LIBDIR}/test/flac_file_test.rb
 ${GEM_LIBDIR}/test/flac_file_write_test.rb
+${GEM_LIBDIR}/test/flac_picture_memory_test.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/id3v1_genres_test.rb
 ${GEM_LIBDIR}/test/id3v1_tag_test.rb
