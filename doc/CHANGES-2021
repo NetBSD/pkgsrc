@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.625 2021/01/26 13:32:25 pin Exp $
+$NetBSD: CHANGES-2021,v 1.626 2021/01/26 14:11:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -776,3 +776,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-alembic to 1.5.2 [adam 2021-01-26]
 	Updated net/rabbitmq to 3.8.11 [adam 2021-01-26]
 	Added sysutils/lsfp version 0.4.2 [pin 2021-01-26]
+	Updated devel/tig to 2.5.1 [fcambus 2021-01-26]
