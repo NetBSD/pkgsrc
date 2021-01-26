@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.627 2021/01/26 14:25:13 kamil Exp $
+$NetBSD: CHANGES-2021,v 1.628 2021/01/26 14:45:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -778,3 +778,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/lsfp version 0.4.2 [pin 2021-01-26]
 	Updated devel/tig to 2.5.1 [fcambus 2021-01-26]
 	Updated devel/radare2 to 5.1.0 [kamil 2021-01-26]
+	Updated misc/py-ansi to 0.2.0 [adam 2021-01-26]
+	Updated textproc/py-xmlschema to 1.4.2 [adam 2021-01-26]
