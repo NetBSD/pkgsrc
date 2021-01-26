@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/26 13:31:08 pin Exp $
+
+SHA1 (lsfp-0.4.2.tar.gz) = b36eee40c659c82a6f1573f202c51c5be41e5b13
+RMD160 (lsfp-0.4.2.tar.gz) = 2bc0421c5a0af401708ef3a4a3dac10ecd8b035d
+SHA512 (lsfp-0.4.2.tar.gz) = fb9ce6c750dded26b1cfcce1d5e60a3c8c47aeea73fadb43ee7c640a2e2422babe5c3b3d13407215c1c05b173285b67ec69c4f75dd4b0fa450ac9dfd7327bbb9
+Size (lsfp-0.4.2.tar.gz) = 10016 bytes
