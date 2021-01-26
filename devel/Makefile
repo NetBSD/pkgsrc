@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3322 2021/01/24 19:09:21 maya Exp $
+# $NetBSD: Makefile,v 1.3323 2021/01/26 11:20:42 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -808,6 +808,7 @@ SUBDIR+=	libmimedir
 SUBDIR+=	libmm
 SUBDIR+=	libmowgli
 SUBDIR+=	libmtp
+SUBDIR+=	libnet
 SUBDIR+=	libnet10
 SUBDIR+=	libnet11
 SUBDIR+=	libnfc
