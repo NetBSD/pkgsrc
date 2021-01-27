@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2020/11/05 09:08:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2021/01/27 12:13:43 triaxx Exp $
 
-DISTNAME=	warmux-11.01
-PKGREVISION=	34
+DISTNAME=	warmux-11.04.1
 CATEGORIES=	games
-MASTER_SITES=	http://download.gna.org/warmux/
+MASTER_SITES=	http://ftp.nluug.nl/ibiblio/distributions/slitaz/sources/packages-cooking/w/ \
+	http://mirror.clarkson.edu/slitaz/sources/packages/w/ \
+	http://ftp.ec-m.fr/pub/OpenBSD/distfiles/ \
+	https://ftp.uni-erlangen.de/gentoo/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +19,7 @@ USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fribidi
 CONFIGURE_ARGS+=	--enable-servers
+WRKSRC=			${WRKDIR}/warmux-11.04
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
 
