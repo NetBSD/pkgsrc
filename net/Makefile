@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1376 2021/01/20 21:02:13 adam Exp $
+# $NetBSD: Makefile,v 1.1377 2021/01/27 23:35:05 tpaul Exp $
 #
 
 COMMENT=	Networking tools
@@ -911,6 +911,7 @@ SUBDIR+=	terraform-provider-kubernetes
 SUBDIR+=	terraform-provider-local
 SUBDIR+=	terraform-provider-null
 SUBDIR+=	terraform-provider-random
+SUBDIR+=	terraform-provider-vultr
 SUBDIR+=	tigervnc
 SUBDIR+=	tightvnc
 SUBDIR+=	tightvncviewer
