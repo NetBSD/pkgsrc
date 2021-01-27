@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.668 2021/01/27 23:05:38 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.669 2021/01/27 23:35:35 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/sfeed_curses to 0.9.8 [leot 2021-01-27]
 	Updated chat/ejabberd to 20.12nb2 [triaxx 2021-01-27]
 	Updated audio/musescore to 3.6.1 [gutteridge 2021-01-27]
+	Added net/terraform-provider-vultr version 2.1.2 [tpaul 2021-01-27]
