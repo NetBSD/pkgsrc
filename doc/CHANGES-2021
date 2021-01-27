@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.660 2021/01/27 16:17:52 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.661 2021/01/27 16:20:31 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -814,3 +814,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/binutils to 2.36 [fcambus 2021-01-27]
 	Added lang/erlang21 version 21.3.6 [jperkin 2021-01-27]
 	Added devel/rebar21 version 2.6.4 [jperkin 2021-01-27]
+	Updated databases/couchdb to 2.3.1nb10 [jperkin 2021-01-27]
