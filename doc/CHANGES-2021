@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.651 2021/01/27 11:27:33 nia Exp $
+$NetBSD: CHANGES-2021,v 1.652 2021/01/27 11:31:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -805,3 +805,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-urllib3 to 1.26.3 [adam 2021-01-27]
 	Updated www/py-bleach to 3.2.3 [adam 2021-01-27]
 	Added editors/dit version 0.6 [nia 2021-01-27]
+	Updated editors/dit to 0.7 [nia 2021-01-27]
