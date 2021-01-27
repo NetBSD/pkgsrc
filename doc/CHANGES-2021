@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.648 2021/01/27 06:17:37 adam Exp $
+$NetBSD: CHANGES-2021,v 1.649 2021/01/27 08:17:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -801,3 +801,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox78 to 78.7.0 [nia 2021-01-27]
 	Updated devel/talloc to 2.3.2 [adam 2021-01-27]
 	Updated net/samba4 to 4.13.4 [adam 2021-01-27]
+	Updated www/goaccess to 1.4 [schmonz 2021-01-27]
