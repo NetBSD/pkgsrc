@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/27 11:27:16 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/27 11:31:18 nia Exp $
 
-DISTNAME=	dit-0.6
+DISTNAME=	dit-0.7
 CATEGORIES=	editors
-MASTER_SITES=	https://hisham.hm/dit/releases/0.6/
+MASTER_SITES=	https://hisham.hm/dit/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://hisham.hm/dit/home.html
