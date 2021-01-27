@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2020/11/24 09:21:27 adam Exp $
+$NetBSD: distinfo,v 1.24 2021/01/27 09:38:34 adam Exp $
 
-SHA1 (urllib3-1.26.2.tar.gz) = e3d05e2e4291940a6a90efad418dbcd31945a3bf
-RMD160 (urllib3-1.26.2.tar.gz) = fe4637e0038bde7ce950793dbcd11c90e7553ee0
-SHA512 (urllib3-1.26.2.tar.gz) = 4de7cf844ed0deb83c4129e1b1742eafefe95035dd7ffbeaeaaccabca8bd361de9fa240882ea4dec16a7f0b5c5684416656f0d58bea15e7aefd4132024a25c9e
-Size (urllib3-1.26.2.tar.gz) = 286877 bytes
+SHA1 (urllib3-1.26.3.tar.gz) = 0d481c9fbfcb41f47f55b029f8a0c4cde09e3565
+RMD160 (urllib3-1.26.3.tar.gz) = 0a9f7d1ceef9d98833c62af89860a1c4765c5da0
+SHA512 (urllib3-1.26.3.tar.gz) = d0dde67880212dc134add3e16e0aa391170963ed26b9a7eb65399235251131ce25488268df7b2f933afc71c9a94e55e08404f9326c0bf5142869dac912d3ee01
+Size (urllib3-1.26.3.tar.gz) = 292598 bytes
