@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/27 23:33:42 tpaul Exp $
+bin/terraform-provider-vultr
