@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.645 2021/01/26 22:12:26 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.646 2021/01/27 05:30:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -797,3 +797,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/sudo to 1.9.5p2 [jperkin 2021-01-26]
 	Updated emulators/mame to 0.228 [wiz 2021-01-26]
 	Updated games/dopewars to 1.6.1 [fcambus 2021-01-26]
+	Updated www/firefox78-l10n to 78.7.0 [nia 2021-01-27]
