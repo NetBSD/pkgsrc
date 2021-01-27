@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2021/01/27 16:13:51 jperkin Exp $
+lib/erlang21/lib/os_mon-${VERSION.os_mon}/priv/bin/ferrule
+lib/erlang21/lib/os_mon-${VERSION.os_mon}/priv/bin/mod_syslog
+lib/erlang21/lib/os_mon-${VERSION.os_mon}/src/ferrule.c
+lib/erlang21/lib/os_mon-${VERSION.os_mon}/src/mod_syslog.c
