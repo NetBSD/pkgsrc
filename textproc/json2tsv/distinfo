@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/02/23 20:44:25 leot Exp $
+$NetBSD: distinfo,v 1.5 2021/01/27 16:52:28 leot Exp $
 
-SHA1 (json2tsv-0.5.tar.gz) = 99a7dbb71266f2b72597d20c955e73ae69c562fd
-RMD160 (json2tsv-0.5.tar.gz) = e395a535733ac67b064cd14e693176b9999b63b4
-SHA512 (json2tsv-0.5.tar.gz) = 6ffd6d11bc30d4159402ab5d13007e1c705c4deb9b21d5abdb7407f427e05a7c3f3c4d79b2bb50b39a5532c216eb0232ac67ff038a57154d4792e79eb5404b69
-Size (json2tsv-0.5.tar.gz) = 6136 bytes
+SHA1 (json2tsv-0.6.tar.gz) = 6e4502c2c40001453c65c28d2aa4e725702773f0
+RMD160 (json2tsv-0.6.tar.gz) = 5c8cf0224f79cab8c65348690dcb90434aece909
+SHA512 (json2tsv-0.6.tar.gz) = 63e1f4f7dfc4e11704bc6aa5d5726f35ace6f232ee96573d666d2ca1cd48833d8f253e281651bae5d44de00a7124a358c73a207cb4854445cfbbe03cd26d9012
+Size (json2tsv-0.6.tar.gz) = 6165 bytes
