@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/27 11:52:21 nia Exp $
+${LUA_DOCDIR}/LICENSE
+${LUA_DOCDIR}/README.md
+${LUA_LDIR}/safer.lua
