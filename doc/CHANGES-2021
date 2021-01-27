@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.658 2021/01/27 15:21:34 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.659 2021/01/27 16:17:36 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -812,3 +812,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/fetchmail to 6.4.15 [triaxx 2021-01-27]
 	Updated mail/fetchmailconf to 6.4.15nb1 [triaxx 2021-01-27]
 	Updated devel/binutils to 2.36 [fcambus 2021-01-27]
+	Added lang/erlang21 version 21.3.6 [jperkin 2021-01-27]
