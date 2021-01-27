@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2021/01/03 15:17:40 taca Exp $
+# $NetBSD: Makefile,v 1.588 2021/01/27 16:14:16 jperkin Exp $
 #
 
 COMMENT=	Programming languages
@@ -52,6 +52,7 @@ SUBDIR+=	erlang
 SUBDIR+=	erlang-doc
 SUBDIR+=	erlang-luerl
 SUBDIR+=	erlang-man
+SUBDIR+=	erlang21
 SUBDIR+=	execline
 SUBDIR+=	f2c
 SUBDIR+=	ficl
