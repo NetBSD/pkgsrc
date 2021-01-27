@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:57:06 agc Exp $
+$NetBSD: distinfo,v 1.6 2021/01/27 12:13:43 triaxx Exp $
 
-SHA1 (warmux-11.01.tar.bz2) = 18e5d5bf144f069405c75ff8fe51296d9a7871a5
-RMD160 (warmux-11.01.tar.bz2) = 85a7bbfed5ca2ccbd793a12d7ea548948a747a88
-SHA512 (warmux-11.01.tar.bz2) = df74abd2f90836780b1e9c60a57a446e9d74f631089e4ac71d387fdfe79573673059f6315c346e5724ce1f46fa54ff086b3cde0de078dc9061453cfbe40222d8
-Size (warmux-11.01.tar.bz2) = 110379327 bytes
+SHA1 (warmux-11.04.1.tar.bz2) = 375dbeb43a56a047daa4fcea49a9802f4b308795
+RMD160 (warmux-11.04.1.tar.bz2) = badd055d0e10e364cfa140a76f39ec0956c674c0
+SHA512 (warmux-11.04.1.tar.bz2) = 99501ea186e091b55a6e45935de83440be02ae4fc12ee6def5ec24e213c829230b4f6017043be6afbc7188e442b0e1128cfd27c290fbe0e49b6597f927fd1e2d
+Size (warmux-11.04.1.tar.bz2) = 110083622 bytes
 SHA1 (patch-aa) = 163449e2cc6fadede8ce1a77bee08fcda59a0f0f
 SHA1 (patch-ab) = 48893791c36ae88b3fc5f565a39d3de786bc88d4
 SHA1 (patch-ac) = 24179b2ccdc2dc2dc6c95c33f12b7e55bb6f5a6e
-SHA1 (patch-lib_fixedpoint_fixed__class.h) = 7c13bb8e5b9377ddc91bb9d2aabdefb907901593
-SHA1 (patch-lib_warmux_action_action.cpp) = 8a1138902c4fb8fbff4fddac4975fe352b532eca
+SHA1 (patch-lib_warmux_action_action.cpp) = da8b2164a6fda5e890c5297a16235b5e29f47dc2
 SHA1 (patch-lib_warmux_base_i18n.cpp) = 130fa3617f5549e9c47dcd907c33a54f0b19fcda
 SHA1 (patch-tools_list__games_main.cpp) = 0577d2e2cc073ba7d8efdce567138eb43bc535f4
