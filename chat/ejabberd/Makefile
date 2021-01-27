@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2021/01/16 21:19:32 triaxx Exp $
+# $NetBSD: Makefile,v 1.91 2021/01/27 19:47:04 triaxx Exp $
 
 DISTNAME=	ejabberd-20.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/downloads-action.php?file=/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -55,6 +55,7 @@ CONFIGURE_ARGS+=	--enable-zlib
 CONFIGURE_ARGS+=	--enable-user=${EJABBERD_USER}
 CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 MAKE_ENV+=		USE_GLOBAL_DEPS=true
 
