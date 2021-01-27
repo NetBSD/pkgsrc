@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/11/02 14:45:57 adam Exp $
+$NetBSD: distinfo,v 1.16 2021/01/27 09:43:43 adam Exp $
 
-SHA1 (bleach-3.2.1.tar.gz) = fe9e3c773c0fd6681352c17619c5748932cb481e
-RMD160 (bleach-3.2.1.tar.gz) = 006a74b01be71aa1b8a418c96c37ca6c736a1ce8
-SHA512 (bleach-3.2.1.tar.gz) = 61710f48f00333b38d251360736e19078063433ca4d7aada210a986f7d79b08c79c64b412686c67f360e4b2e8420c40c4b515eb175ab92bd546f88e2ba0e5835
-Size (bleach-3.2.1.tar.gz) = 179763 bytes
+SHA1 (bleach-3.2.3.tar.gz) = 0dae6d3359193a22afbfa2a1f41cfa8335674602
+RMD160 (bleach-3.2.3.tar.gz) = a7c991dad5ad0981a74e76c91bf2fcc0e18ea5c5
+SHA512 (bleach-3.2.3.tar.gz) = 0bee6415ed0d6349311e92b68c4897b830a9ae8c0b1399a35da8ebb76af7b989b67c3e90c24cc34fd8afb903ee5f8de1062a0fa0e34a75328a281cf1706193a0
+Size (bleach-3.2.3.tar.gz) = 180414 bytes
