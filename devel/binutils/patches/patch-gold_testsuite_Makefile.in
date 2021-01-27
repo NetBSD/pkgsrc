@@ -1,10 +1,10 @@
-$NetBSD: patch-gold_testsuite_Makefile.in,v 1.1 2020/12/14 16:19:59 fcambus Exp $
+$NetBSD: patch-gold_testsuite_Makefile.in,v 1.2 2021/01/27 15:21:21 fcambus Exp $
 
 Don't use hard-coded -ldl.
 
---- gold/testsuite/Makefile.in.orig	2020-07-24 09:23:46.000000000 +0000
+--- gold/testsuite/Makefile.in.orig	2021-01-09 10:59:18.000000000 +0000
 +++ gold/testsuite/Makefile.in
-@@ -2794,7 +2794,7 @@ TEST_STRIP = $(top_builddir)/../binutils
+@@ -2810,7 +2810,7 @@ TEST_STRIP = $(top_builddir)/../binutils
  TEST_AR = $(top_builddir)/../binutils/ar
  TEST_NM = $(top_builddir)/../binutils/nm-new
  TEST_AS = $(top_builddir)/../gas/as-new
