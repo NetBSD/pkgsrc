@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile.am,v 1.4 2019/08/23 01:48:00 schmonz Exp $
+$NetBSD: patch-Makefile.am,v 1.5 2021/01/27 08:17:31 schmonz Exp $
 
 Deploy example config in the correct place.
 
---- Makefile.am.orig	2018-11-23 05:35:46.000000000 +0000
+--- Makefile.am.orig	2020-05-17 12:34:51.000000000 +0000
 +++ Makefile.am
-@@ -108,7 +108,7 @@ else
- 	./bin2c resources/js/app.js src/appjs.h app_js
+@@ -114,7 +114,7 @@ if DEBUG
+ 	./bin2c $(srcdir)/resources/js/app.js src/appjs.h app_js
  endif
  
 -confdir = $(sysconfdir)/goaccess
 +confdir = $(PREFIX)/share/examples/goaccess
  dist_conf_DATA = config/goaccess.conf
  dist_conf_DATA += config/browsers.list
- 
+ dist_conf_DATA += config/podcast.list
