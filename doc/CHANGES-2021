@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.666 2021/01/27 17:34:18 leot Exp $
+$NetBSD: CHANGES-2021,v 1.667 2021/01/27 19:47:19 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -820,3 +820,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/sfeed to 0.9.21 [leot 2021-01-27]
 	Updated emulators/mame to 0.228nb1 [wiz 2021-01-27]
 	Updated news/sfeed_curses to 0.9.8 [leot 2021-01-27]
+	Updated chat/ejabberd to 20.12nb2 [triaxx 2021-01-27]
