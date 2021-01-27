@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.101 2021/01/26 22:10:05 wiz Exp $
+$NetBSD: distinfo,v 1.102 2021/01/27 17:06:06 wiz Exp $
 
 SHA1 (mame-0.228.tar.gz) = 96d46a78152d15a5e444a48c5f6531ef2ef70241
 RMD160 (mame-0.228.tar.gz) = 2564296e3d99ab8fe3129e3fa931f80f311e7637
@@ -10,3 +10,4 @@ SHA1 (patch-3rdparty_bgfx_examples_common_font_font__manager.cpp) = 3b52b49bc9bb
 SHA1 (patch-3rdparty_genie_build_gmake.darwin_genie.make) = bb2e8c06d4b5f5869fb48e06390d5ca94a190056
 SHA1 (patch-makefile) = 343fac4d165438a26e2e8077216db1c6c46a5d1e
 SHA1 (patch-scripts_genie.lua) = 6c72b76c9a9ea952a787bf3994680f8711c8b64a
+SHA1 (patch-src_osd_modules_lib_osdlib__unix.cpp) = abc52d25f3d2fa65586c25154bb286ac733ce507
