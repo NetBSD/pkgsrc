@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/27 11:27:16 nia Exp $
+
+SHA1 (dit-0.6.tar.gz) = cd21ee6eebcb9b6daa32b897d169eab10bc3d3b6
+RMD160 (dit-0.6.tar.gz) = 43b2f4c3aa693bd93a25aa204cde13201b12d996
+SHA512 (dit-0.6.tar.gz) = 7cba2fb9b9f4cb412aa0ec89275120114c6945aa845268fc85027f43b8205d212f083b7696dfc301f3fe05b63b867d3a43a061357ba244ed06af81003b5b7767
+Size (dit-0.6.tar.gz) = 563644 bytes
