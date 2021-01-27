@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/27 18:00:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/27 12:13:43 triaxx Exp $
 bin/warmux
 bin/warmux-index-server
 bin/warmux-list-games
 bin/warmux-server
 man/man6/warmux.6
 share/applications/warmux.desktop
+share/applications/warmux_files.desktop
 share/locale/bg/LC_MESSAGES/warmux.mo
 share/locale/bs/LC_MESSAGES/warmux.mo
 share/locale/ca/LC_MESSAGES/warmux.mo
@@ -38,7 +39,7 @@ share/locale/sk/LC_MESSAGES/warmux.mo
 share/locale/sl/LC_MESSAGES/warmux.mo
 share/locale/sv/LC_MESSAGES/warmux.mo
 share/locale/tr/LC_MESSAGES/warmux.mo
-share/locale/ua/LC_MESSAGES/warmux.mo
+share/locale/uk/LC_MESSAGES/warmux.mo
 share/locale/zh_CN/LC_MESSAGES/warmux.mo
 share/locale/zh_TW/LC_MESSAGES/warmux.mo
 share/pixmaps/warmux_128x128.png
@@ -833,6 +834,7 @@ share/warmux/icon/uninstall_32x32.png
 share/warmux/icon/uninstall_64x64.png
 share/warmux/icon/warmux.icns
 share/warmux/icon/warmux.ico
+share/warmux/icon/warmux.mbm
 share/warmux/icon/warmux.mif
 share/warmux/icon/warmux.svg
 share/warmux/icon/warmux.xpm
@@ -845,6 +847,7 @@ share/warmux/icon/warmux_64x64.png
 share/warmux/interface/not_skin/background_control_interface.png
 share/warmux/interface/not_skin/background_help.png
 share/warmux/interface/not_skin/background_interface.png
+share/warmux/interface/not_skin/background_replay.png
 share/warmux/interface/not_skin/readme.txt
 share/warmux/interface/not_skin/small_background_interface.png
 share/warmux/interface/whitetheme/arrow_jump.png
@@ -980,11 +983,11 @@ share/warmux/map/frog/config.xml
 share/warmux/map/frog/map.png
 share/warmux/map/frog/preview.jpg
 share/warmux/map/frog/sky.jpg
-share/warmux/map/funkyisland/clouds.png
-share/warmux/map/funkyisland/config.xml
-share/warmux/map/funkyisland/island.png
-share/warmux/map/funkyisland/island_bg.jpg
-share/warmux/map/funkyisland/preview.jpg
+share/warmux/map/funky_island/clouds.png
+share/warmux/map/funky_island/config.xml
+share/warmux/map/funky_island/island.png
+share/warmux/map/funky_island/island_bg.jpg
+share/warmux/map/funky_island/preview.jpg
 share/warmux/map/goodandevil/config.xml
 share/warmux/map/goodandevil/goodandevil.png
 share/warmux/map/goodandevil/preview.jpg
@@ -1171,6 +1174,7 @@ share/warmux/menu/help_game_mode.jpg
 share/warmux/menu/help_ingame.jpg
 share/warmux/menu/help_interface.png
 share/warmux/menu/help_minimap.png
+share/warmux/menu/help_replay.png
 share/warmux/menu/help_shortkeys.png
 share/warmux/menu/help_team_selection.jpg
 share/warmux/menu/help_touch_interface.png
@@ -1182,6 +1186,7 @@ share/warmux/menu/i_network.png
 share/warmux/menu/i_options.png
 share/warmux/menu/i_play.png
 share/warmux/menu/i_quit.png
+share/warmux/menu/i_replay.png
 share/warmux/menu/i_update.png
 share/warmux/menu/ico_maps.png
 share/warmux/menu/ico_network.png
@@ -1209,6 +1214,7 @@ share/warmux/menu/quit.png
 share/warmux/menu/refresh.png
 share/warmux/menu/resolution.png
 share/warmux/menu/right.png
+share/warmux/menu/save.png
 share/warmux/menu/scroll_on_border.png
 share/warmux/menu/send_txt.png
 share/warmux/menu/sound_effects_enable.png

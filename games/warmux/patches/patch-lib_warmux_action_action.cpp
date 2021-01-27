@@ -1,27 +1,15 @@
-$NetBSD: patch-lib_warmux_action_action.cpp,v 1.1 2012/04/01 14:41:17 wiz Exp $
+$NetBSD: patch-lib_warmux_action_action.cpp,v 1.2 2021/01/27 12:13:43 triaxx Exp $
 
 Cast away some constness for clang-3.1.
 
---- lib/warmux/action/action.cpp.orig	2011-01-20 15:53:53.000000000 +0000
+--- lib/warmux/action/action.cpp.orig	2011-04-28 19:03:14.000000000 +0000
 +++ lib/warmux/action/action.cpp
-@@ -73,16 +73,16 @@ Action::Action(const char *buffer, Dista
+@@ -85,7 +85,7 @@ Action::Action(const char *buffer, Dista
+ {
+   m_creator = _creator;
  
-   var.clear();
-   buffer += 4; // skip the buffer len
--  m_type = (Action_t)SDLNet_Read32(buffer);
-+  m_type = (Action_t)SDLNet_Read32((char*)buffer);
+-  m_header.len = SDLNet_Read32(buffer);
++  m_header.len = SDLNet_Read32((char*)buffer);
+   ASSERT(m_header.len >= sizeof(Header));
    buffer += 4;
--  m_timestamp = (uint)SDLNet_Read32(buffer);
-+  m_timestamp = (uint)SDLNet_Read32((char*)buffer);
-   buffer += 4;
--  int m_length = SDLNet_Read32(buffer);
-+  int m_length = SDLNet_Read32((char*)buffer);
-   buffer += 4;
- 
-   for(int i=0; i < m_length; i++)
-   {
--    uint32_t val = SDLNet_Read32(buffer);
-+    uint32_t val = SDLNet_Read32((char*)buffer);
-     var.push_back(val);
-     buffer += 4;
-   }
+   // All of the following could be skipped for the actions we now,
