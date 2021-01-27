@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/27 16:16:44 jperkin Exp $
+bin/rebar
