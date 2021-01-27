@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.versions,v 1.1 2021/01/27 16:13:51 jperkin Exp $
+
+DIST_VERSION_MAJOR=		21
+DIST_VERSION_MINOR=		3
+# Only set when sources for patch level releases are published on erlang.org
+DIST_VERSION_PATCH=		6
+
+.include "versions.mk"
+
+PLIST_SUBST+=	VERSION=${DIST_VERSION_MAJOR}
+
+.for name version in ${_VERSIONS}
+VERSION.${name}=	${version}
+PLIST_SUBST+=		VERSION.${name}=${version}
+.endfor
+
+# Generate PLIST
+.for pkg version in ${_VERSIONS}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/${pkg}-${version}\//) {sub(/\/${pkg}-${version}\//,"/${pkg}-$${VERSION.${pkg}}/", $$0);}}
+# documentation:
+PRINT_PLIST_AWK+=	{gsub(/\/${pkg}-${version}\.pdf/,"/${pkg}-$${VERSION.${pkg}}.pdf", $$0);}
+.endfor
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/releases\/${DIST_VERSION_MAJOR}\//) {sub(/\/releases\/${DIST_VERSION_MAJOR}\//,"/releases/$${VERSION}/", $$0);}}
+# documentation:
+PRINT_PLIST_AWK+=	{gsub(/\/otp-system-documentation-${VERSION.erts}\.pdf/,"/otp-system-documentation-$${VERSION.erts}.pdf", $$0);}
