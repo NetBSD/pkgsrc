@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2020/04/25 20:02:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2021/01/27 08:17:31 schmonz Exp $
 
-DISTNAME=	goaccess-1.3
-PKGREVISION=	6
+DISTNAME=	goaccess-1.4
 CATEGORIES=	www
 MASTER_SITES=	http://tar.goaccess.io/
 
 MAINTAINER=	wiedi@frubar.net
-HOMEPAGE=	http://goaccess.prosoftcorp.com/
-COMMENT=	Real-time web log analyzer
+HOMEPAGE=	https://goaccess.io/
+COMMENT=	Real-time web log analyzer and viewer
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
