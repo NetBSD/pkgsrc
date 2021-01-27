@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/01/25 02:42:44 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2021/01/27 23:04:22 gutteridge Exp $
 
-SHA1 (musescore-3.6.tar.gz) = 51889db0ca0418362490be1982d880384207e991
-RMD160 (musescore-3.6.tar.gz) = 14a7740804f72a955f590ffad6ad282946f0129f
-SHA512 (musescore-3.6.tar.gz) = 7c2ee80239bb42581cabd92e47ac8654c65542297a58659a65543350784aed22ee90231ebd0f9c43140f67427690ade2e71fa4b6391d5fc9bb1fb14ba8790d19
-Size (musescore-3.6.tar.gz) = 67835667 bytes
+SHA1 (musescore-3.6.1.tar.gz) = a4787e1265509fb2d193a41f2e09221daaee89f9
+RMD160 (musescore-3.6.1.tar.gz) = 0f7f810a6a79bcaf4bea1e36f37d5441a6cb64b9
+SHA512 (musescore-3.6.1.tar.gz) = 8e486ea08f8ad6b8238ca400475b9108955ff200221c9ba694e42e20e373c43f7dfd89933ca3887de26cefa547d0e1d792922c685a9d16eaefc9293f72a6fe2d
+Size (musescore-3.6.1.tar.gz) = 68754499 bytes
 SHA1 (patch-CMakeLists.txt) = 6685df7bb24d994ddc41c677b981f6abc44c8db1
-SHA1 (patch-build_FindQt5.cmake) = f764df0ce15eb0772ff671b2bef49fabee309be6
 SHA1 (patch-build_Linux+BSD_portable_portable-utils.in) = e608e0fb055671f863e24906ffffbe75a29948c4
-SHA1 (patch-libmscore_measure.cpp) = 86d3316ebd2a2c1001ed820a96ae8fcf2a306cab
