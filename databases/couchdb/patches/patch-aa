@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2019/09/06 09:10:48 jperkin Exp $
+$NetBSD: patch-aa,v 1.12 2021/01/27 16:20:20 jperkin Exp $
 
 Set pkgsrc standard paths. Portability.
 
@@ -22,11 +22,11 @@ Set pkgsrc standard paths. Portability.
 -{view_index_dir, "./data"}.
 -{log_file, "$LOG_FILE"}.
 -{fauxton_root, "./share/www"}.
-+{prefix, "/opt/local/couchdb"}.
-+{data_dir, "/var/db/couchdb"}.
-+{view_index_dir, "/var/db/couchdb"}.
-+{log_file, "/var/log/couchdb/couch.log"}.
-+{fauxton_root, "/opt/local/couchdb/share/www"}.
++{prefix, "@PREFIX@/couchdb"}.
++{data_dir, "@COUCH_DBDIR@"}.
++{view_index_dir, "@COUCH_DBDIR@"}.
++{log_file, "@COUCH_LOGDIR@/couch.log"}.
++{fauxton_root, "@PREFIX@/couchdb/share/www"}.
  {user, "$COUCHDB_USER"}.
  {node_name, "-name couchdb@127.0.0.1"}.
  {cluster_port, 5984}.
