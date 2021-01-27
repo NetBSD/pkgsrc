@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3324 2021/01/27 11:52:21 nia Exp $
+# $NetBSD: Makefile,v 1.3325 2021/01/27 16:17:20 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -2718,6 +2718,7 @@ SUBDIR+=	re2
 SUBDIR+=	re2c
 SUBDIR+=	readline
 SUBDIR+=	rebar
+SUBDIR+=	rebar21
 SUBDIR+=	rebar3
 SUBDIR+=	refinecvs
 SUBDIR+=	reftools
