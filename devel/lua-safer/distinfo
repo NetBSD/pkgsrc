@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/27 11:52:21 nia Exp $
+
+SHA1 (safer-0.2.tar.gz) = 5c5c5ac7a5f563db9c9b49fe32b5a72e923b4b9f
+RMD160 (safer-0.2.tar.gz) = 32e88223c318fbd9aae18aad710b6a073e709cde
+SHA512 (safer-0.2.tar.gz) = 23258f3b0d2cf40ec1753db45436c6b8f2e242a1deb501d75cf5fc515f2bd1a35adb9e43eea27de758289194a55d2ecb175f67a4936f78e2491bc4836f17d306
+Size (safer-0.2.tar.gz) = 2573 bytes
