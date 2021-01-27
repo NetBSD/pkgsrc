@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.665 2021/01/27 17:06:15 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.666 2021/01/27 17:34:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -819,3 +819,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/json2tsv to 0.6 [leot 2021-01-27]
 	Updated news/sfeed to 0.9.21 [leot 2021-01-27]
 	Updated emulators/mame to 0.228nb1 [wiz 2021-01-27]
+	Updated news/sfeed_curses to 0.9.8 [leot 2021-01-27]
