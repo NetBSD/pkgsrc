@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_crypto_c__src_Makefile.in,v 1.1 2021/01/27 16:13:51 jperkin Exp $
+
+Compile via CC wrapper to ensure correct flags.
+
+--- lib/crypto/c_src/Makefile.in.orig	2017-06-20 18:56:09.000000000 +0000
++++ lib/crypto/c_src/Makefile.in
+@@ -156,7 +156,7 @@ $(LIBDIR)/crypto$(TYPEMARKER).dll: $(CRY
+ ifeq ($(DYNAMIC_CRYPTO_LIB),yes)
+ $(LIBDIR)/crypto_callback$(TYPEMARKER).so: $(CALLBACK_OBJS)
+ 	$(INSTALL_DIR) $(LIBDIR)
+-	$(LD) $(LDFLAGS) -o $@ $^ $(LDLIBS)
++	$(V_CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ $(LIBDIR)/crypto_callback$(TYPEMARKER).dll: $(CALLBACK_OBJS)
+ 	$(INSTALL_DIR) $(LIBDIR)
