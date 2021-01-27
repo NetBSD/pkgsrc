@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/01/27 16:13:51 jperkin Exp $
+
+Use versioned layout.
+
+--- Makefile.in.orig	2019-04-17 14:14:50.000000000 +0000
++++ Makefile.in
+@@ -60,7 +60,7 @@ bindir		= @bindir@
+ libdir		= @libdir@
+ 
+ # Where Erlang/OTP is located
+-libdir_suffix	= /erlang
++libdir_suffix	= /erlang21
+ erlang_libdir	= $(libdir)$(libdir_suffix)
+ erlang_bindir	= $(erlang_libdir)/bin
+ 
+@@ -1037,7 +1037,7 @@ $(TEST_DIRS):
+ #
+ # Order is important here, don't change it!
+ #
+-INST_DEP += install.dirs install.emulator install.libs install.Install install.otp_version install.bin
++INST_DEP += install.dirs install.emulator install.libs install.Install install.otp_version
+ 
+ install: $(INST_DEP)
+ 
