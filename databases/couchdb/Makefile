@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2020/11/05 09:07:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.72 2021/01/27 16:20:20 jperkin Exp $
 
 DISTNAME=		apache-couchdb-2.3.1
 PKGNAME=		${DISTNAME:S/apache-//}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_APACHE:=couchdb/source/${PKGVERSION_NOREV}/}
 
@@ -18,7 +18,9 @@ USE_LIBTOOL=		yes
 BUILD_DEFS+=		VARBASE
 
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
-BUILD_DEPENDS+=		rebar>=2.6.0<3:../../devel/rebar
+BUILD_DEPENDS+=		rebar21>=2.6.0<3:../../devel/rebar21
+
+MAKE_ENV+=		REBAR=${PREFIX}/bin/rebar
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -97,7 +99,7 @@ PRINT_PLIST_AWK+=	/^couchdb\/erts-/ { next; }
 PRINT_PLIST_AWK+=	/^couchdb\/lib\// { next; }
 
 # We need to know the version of erts and subst it inside the SMF manifest
-.include "../../lang/erlang/Makefile.versions"
+.include "../../lang/erlang21/Makefile.versions"
 
 do-install:
 	cd ${WRKSRC}/rel/couchdb &&						\
@@ -117,7 +119,7 @@ do-install:
 # The erlang VM gets embedded, but it may still need the curses lib
 BUILDLINK_DEPMETHOD.erlang=	build
 .include "../../mk/termcap.buildlink3.mk"
-.include "../../lang/erlang/buildlink3.mk"
+.include "../../lang/erlang21/buildlink3.mk"
 .include "../../lang/spidermonkey185/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
