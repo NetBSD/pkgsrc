@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/27 11:27:16 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/27 11:31:18 nia Exp $
 bin/dit
 share/apps/konsole/dit.keytab
 share/dit/bindings/default
@@ -12,8 +12,10 @@ share/dit/highlight/diff.dithl
 share/dit/highlight/diff.dithlinc
 share/dit/highlight/dithl.dithl
 share/dit/highlight/etlua.dithl
+share/dit/highlight/fun.dithl
 share/dit/highlight/gitcommit.dithl
 share/dit/highlight/gitconflict.dithlinc
+share/dit/highlight/go.dithl
 share/dit/highlight/haskell.dithl
 share/dit/highlight/haskell.dithlinc
 share/dit/highlight/html.dithl
@@ -21,11 +23,13 @@ share/dit/highlight/html.dithlinc
 share/dit/highlight/java.dithl
 share/dit/highlight/javascript.dithl
 share/dit/highlight/javascript.dithlinc
+share/dit/highlight/json.dithl
 share/dit/highlight/latex.dithl
 share/dit/highlight/latex.dithlinc
 share/dit/highlight/ldoc.dithlinc
 share/dit/highlight/lex.dithl
 share/dit/highlight/lhs.dithl
+share/dit/highlight/lp.dithl
 share/dit/highlight/lpeg_re.dithlinc
 share/dit/highlight/ltp.dithl
 share/dit/highlight/lua.dithl
@@ -33,6 +37,7 @@ share/dit/highlight/lua.dithlinc
 share/dit/highlight/make.dithl
 share/dit/highlight/markdown.dithl
 share/dit/highlight/markdown.dithlinc
+share/dit/highlight/moonscript.dithl
 share/dit/highlight/nestedm4.dithlinc
 share/dit/highlight/perl.dithl
 share/dit/highlight/php.dithl
@@ -41,18 +46,28 @@ share/dit/highlight/ruby.dithl
 share/dit/highlight/shell.dithl
 share/dit/highlight/shell.dithlinc
 share/dit/highlight/shellbacktick.dithlinc
+share/dit/highlight/t.dithl
+share/dit/highlight/teal.dithl
+share/dit/highlight/titan.dithl
 share/dit/highlight/xml.dithl
 share/dit/highlight/yacc.dithl
+share/dit/highlight/yaml.dithl
 share/dit/highlight/yats.dithl
 share/dit/scripts/c.lua
 share/dit/scripts/cmd.lua
+share/dit/scripts/compat53.lua
+share/dit/scripts/compat53/init.lua
+share/dit/scripts/compat53/module.lua
 share/dit/scripts/cscope.lua
 share/dit/scripts/dit/code.lua
 share/dit/scripts/dit/global.lua
 share/dit/scripts/dit/line_commit.lua
+share/dit/scripts/dit/lua/mobdebug.lua
 share/dit/scripts/dit/tab_complete.lua
+share/dit/scripts/go.lua
 share/dit/scripts/haskell.lua
 share/dit/scripts/java.lua
+share/dit/scripts/json.lua
 share/dit/scripts/latex.lua
 share/dit/scripts/lua.lua
 share/dit/scripts/luacheck/analyze.lua
@@ -83,6 +98,7 @@ share/dit/scripts/luacheck/utils.lua
 share/dit/scripts/luacheck/version.lua
 share/dit/scripts/luacheck/whitespace.lua
 share/dit/scripts/shell.lua
+share/dit/scripts/teal.lua
 share/dit/scripts/tmux.lua
 share/dit/terminals/konsole
 share/dit/terminals/linux
