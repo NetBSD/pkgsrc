@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/27 23:33:42 tpaul Exp $
+
+SHA1 (terraform-provider-vultr-2.1.2.tar.gz) = 67ddeca9faa31f844cf1346e9a3f281d1bd9938c
+RMD160 (terraform-provider-vultr-2.1.2.tar.gz) = 38ca0abc4db1a0dc011950cfbb7601154f1bbbaf
+SHA512 (terraform-provider-vultr-2.1.2.tar.gz) = 63a946de5f03c5913cee1cf20cefa62238365e8e4c4ff3b84ad9cf69e6b8772c4e6d5ce12b5bcbd096528969e44de8fdfbf5a5fdc37516526070d53b55b65957
+Size (terraform-provider-vultr-2.1.2.tar.gz) = 5030433 bytes
