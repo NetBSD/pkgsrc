@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/23 01:48:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/01/27 08:17:31 schmonz Exp $
 bin/goaccess
 man/man1/goaccess.1
 share/examples/goaccess/browsers.list
 share/examples/goaccess/goaccess.conf
+share/examples/goaccess/podcast.list
+share/locale/de/LC_MESSAGES/goaccess.mo
 share/locale/es/LC_MESSAGES/goaccess.mo
 share/locale/fr/LC_MESSAGES/goaccess.mo
 share/locale/ja/LC_MESSAGES/goaccess.mo
+share/locale/pt_BR/LC_MESSAGES/goaccess.mo
+share/locale/sv/LC_MESSAGES/goaccess.mo
 share/locale/zh_CN/LC_MESSAGES/goaccess.mo
