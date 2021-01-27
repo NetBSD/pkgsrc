@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2013/04/06 12:04:00 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.19 2021/01/27 09:30:05 wiz Exp $
 
 DISTNAME=	part01
 PKGNAME=	unidiff-1.0
 PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.landfield.com/software/comp.sources.misc/archive-name/volume25/unidiff/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
