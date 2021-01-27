@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.653 2021/01/27 11:53:07 nia Exp $
+$NetBSD: CHANGES-2021,v 1.654 2021/01/27 12:14:01 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -807,3 +807,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added editors/dit version 0.6 [nia 2021-01-27]
 	Updated editors/dit to 0.7 [nia 2021-01-27]
 	Added devel/lua-safer version 0.2 [nia 2021-01-27]
+	Updated games/warmux to 11.04.1 [triaxx 2021-01-27]
