@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2021/01/23 14:23:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.16 2021/01/27 13:35:58 leot Exp $
 
-DISTNAME=	terraform-0.12.29
-PKGREVISION=	7
+DISTNAME=	terraform-0.12.30
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
-GITHUB_PROJECT=	${PKGBASE}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +11,7 @@ COMMENT=	Infrastructure orchestration tool
 LICENSE=	mpl-2.0
 
 GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	github.com/hashicorp/${GITHUB_PROJECT}
+GO_SRCPATH=	github.com/hashicorp/terraform
 
 GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
