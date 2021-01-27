@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/07/30 08:09:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/27 05:24:11 nia Exp $
 bin/firefox78
 lib/firefox78/actors/AboutHttpsOnlyErrorChild.jsm
 lib/firefox78/actors/AboutHttpsOnlyErrorParent.jsm
@@ -691,7 +691,7 @@ lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/f
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/allegro-pl.ico
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/amazon.ico
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/avito-ru.ico
-lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/baidu-com.ico
+lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/baidu-com.png
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/bbc-uk.ico
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/bing-com.ico
 lib/firefox78/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/ctrip-com.ico
