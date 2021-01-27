@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.662 2021/01/27 16:29:10 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.663 2021/01/27 16:52:40 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/rebar21 version 2.6.4 [jperkin 2021-01-27]
 	Updated databases/couchdb to 2.3.1nb10 [jperkin 2021-01-27]
 	Updated devel/nss to 3.61 [ryoon 2021-01-27]
+	Updated textproc/json2tsv to 0.6 [leot 2021-01-27]
