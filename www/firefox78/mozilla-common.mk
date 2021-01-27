@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.8 2021/01/19 22:40:26 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.9 2021/01/27 05:24:11 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -56,6 +56,7 @@ USE_TOOLS+=		bsdtar
 CXXFLAGS+=		-mstackrealign
 .endif
 
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/python/glean_parser/Makefile
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/tests/update-test262.sh
