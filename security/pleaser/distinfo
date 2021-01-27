@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/01/24 21:42:21 pin Exp $
+$NetBSD: distinfo,v 1.3 2021/01/27 13:48:06 pin Exp $
 
 SHA1 (addr2line-0.14.1.crate) = 5e02a34c470fcb872eee8ee11037f0dce619404a
 RMD160 (addr2line-0.14.1.crate) = a152b28f56c4bcf8fcbb9575764b2d85fe0d6256
@@ -84,10 +84,10 @@ SHA1 (object-0.23.0.crate) = cd917a9907728b27267f588ed93a98aec7f16af8
 RMD160 (object-0.23.0.crate) = f7921a8caf1f82631e759fb7f34d6d628ece868e
 SHA512 (object-0.23.0.crate) = 6352624a9071bef53e4b7209b3f8cd5168d54174962565d76f8eb9201dc84dc3b26f08c81ac954bc9d4c55032a022abb35d160817bb434ef27f76949290bc7ef
 Size (object-0.23.0.crate) = 203889 bytes
-SHA1 (once_cell-1.5.1.crate) = 1e03876741291e3b6a62563b0cfe3755b1aa319a
-RMD160 (once_cell-1.5.1.crate) = 9784f512bcac5cc9512fe43d02a66e9cc3f86910
-SHA512 (once_cell-1.5.1.crate) = 4b967e308a79afff922b0563194622650240d4fdc598eb63a3ef4be1687a984b5f82a42aaff59ac098e9ba7bca4a57ade0ac1f84ef0bc32dc49544028fdb7d3e
-Size (once_cell-1.5.1.crate) = 27345 bytes
+SHA1 (once_cell-1.5.2.crate) = ccf93f1917cb52b01c4cf81ebb82f5b19eb52759
+RMD160 (once_cell-1.5.2.crate) = dd94b30b2967bda2527ef0123be9858da1fc0944
+SHA512 (once_cell-1.5.2.crate) = 63e7977e10a8b1eeab4c758bc03dfe7c78cfdd38f12667fc1d4842c657b8a4a2c0e46c21d7201a0fd5ed613055bedb8351e13bd2a4fe906d7fee0d51d67097ba
+Size (once_cell-1.5.2.crate) = 27660 bytes
 SHA1 (pam-0.7.0.crate) = edab890749ee226908eb7631d9ef11e557888a6d
 RMD160 (pam-0.7.0.crate) = 126777b9980e45618066998bd7cb7ab4a2dc31bd
 SHA512 (pam-0.7.0.crate) = 6f1b646d0de5d53fc105d7bc60c91bef7c9c26d38e507bfaf0281efcd767b667d9465a0f338ddd5edf364331d2b4266db58ed16bcde3b81232ebd47c8bc9c4ba
