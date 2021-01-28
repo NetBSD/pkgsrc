@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/20 23:09:27 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/28 19:46:23 triaxx Exp $
 bin/mosquitto_passwd
 bin/mosquitto_pub
 bin/mosquitto_rr
@@ -7,6 +7,7 @@ include/mosquitto.h
 include/mosquitto_broker.h
 include/mosquitto_plugin.h
 include/mosquittopp.h
+include/mqtt_protocol.h
 lib/libmosquitto.so
 lib/libmosquitto.so.1
 lib/libmosquitto.so.${PKGVERSION}
@@ -15,6 +16,8 @@ lib/libmosquittopp.so.1
 lib/libmosquittopp.so.${PKGVERSION}
 lib/pkgconfig/libmosquitto.pc
 lib/pkgconfig/libmosquittopp.pc
+man/man1/mosquitto_ctrl.1
+man/man1/mosquitto_ctrl_dynsec.1
 man/man1/mosquitto_passwd.1
 man/man1/mosquitto_pub.1
 man/man1/mosquitto_rr.1

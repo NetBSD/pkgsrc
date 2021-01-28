@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2020/09/28 18:56:03 tm Exp $
+# $NetBSD: Makefile,v 1.14 2021/01/28 19:46:23 triaxx Exp $
 
-VERSION=	1.6.12
-PKGREVISION=	1
-DISTNAME=	mosquitto-${VERSION}
+DISTNAME=	mosquitto-2.0.5
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
 
-#MAINTAINER=	amoibos@gmail.com
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://mosquitto.org/
 COMMENT=	Open Source MQTT broker
@@ -28,8 +25,6 @@ MOSQUITTO_GROUP=	mosquitto
 PKG_USERS=	${MOSQUITTO_USER}:${MOSQUITTO_GROUP}
 PKG_GROUPS=	${MOSQUITTO_GROUP}
 
-# \todo The example file is vast and arguably should not be installed.
-# However, we need to set a few things to make automatic startup work.
 CONF_FILES=	${PREFIX}/share/examples/mosquitto/mosquitto.conf \
 		${PKG_SYSCONFDIR}/mosquitto.conf
 
