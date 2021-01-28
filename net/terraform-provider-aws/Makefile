@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/01/23 14:23:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2021/01/28 18:00:30 tpaul Exp $
 
 DISTNAME=	terraform-provider-aws-2.70.0
 PKGREVISION=	7
@@ -23,6 +23,8 @@ GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/*.sh
+
+CHECK_RELRO_SKIP+=	bin/terraform-provider-aws
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
