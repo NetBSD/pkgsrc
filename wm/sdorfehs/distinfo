@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/01/28 22:18:57 pin Exp $
+
+SHA1 (sdorfehs-1.1.tar.gz) = e222f0c9f28257c7d6d576a61854e28cb39437c2
+RMD160 (sdorfehs-1.1.tar.gz) = b9606f24633ac224df4e270efe8185df15033d28
+SHA512 (sdorfehs-1.1.tar.gz) = 6b61a28c1da26e01e5e0cb9b6cdd42c48a1fc22679b06abce9bc6d37bd5fcd10a3ce0756d625787756ae5c6fc60e6971dd48a2fefc27de22245f9dbbbd153f0c
+Size (sdorfehs-1.1.tar.gz) = 123660 bytes
+SHA1 (patch-Makefile) = d8e18bb85595776540647e3477cec6c7c94c4432
