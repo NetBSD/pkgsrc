@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2020/11/12 06:37:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2021/01/28 13:17:16 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -719,7 +719,6 @@ lib/samba/private/libshares-samba4.so
 lib/samba/private/libsmb-transport-samba4.so
 lib/samba/private/libsmbclient-raw-samba4.so
 lib/samba/private/libsmbd-base-samba4.so
-lib/samba/private/libsmbd-conn-samba4.so
 lib/samba/private/libsmbd-shim-samba4.so
 ${PLIST.ldap}lib/samba/private/libsmbldaphelper-samba4.so
 lib/samba/private/libsmbpasswdparser-samba4.so
