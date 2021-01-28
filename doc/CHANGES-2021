@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.682 2021/01/28 19:46:42 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.683 2021/01/28 21:17:52 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -837,3 +837,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/thunderbird-l10n to 78.7.0 [ryoon 2021-01-28]
 	Updated textproc/nanogrep to 2.2.0 [pin 2021-01-28]
 	Updated net/mosquitto to 2.0.5 [triaxx 2021-01-28]
+	Added devel/py-tubes version 0.2.0 [maya 2021-01-28]
