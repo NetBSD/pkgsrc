@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/28 21:23:30 maya Exp $
+
+SHA1 (buildbot-badges-2.6.0.tar.gz) = 058266e9370e6cfad66aa0799fd004d57eab0b9f
+RMD160 (buildbot-badges-2.6.0.tar.gz) = 3a125e76d17be642d651fd22e402a4f6e542956b
+SHA512 (buildbot-badges-2.6.0.tar.gz) = 38718a33393494db90cf0b28931d6e6523f9b34bc938143c1e83d15edb9a264a248ea9fdc9928e19d06bc1625a4a9986bfe208333c69ff390b64b6dbe5e6f485
+Size (buildbot-badges-2.6.0.tar.gz) = 3885 bytes

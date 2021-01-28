@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/28 21:23:30 maya Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/buildbot_badges/VERSION
+${PYSITELIB}/buildbot_badges/__init__.py
+${PYSITELIB}/buildbot_badges/__init__.pyc
+${PYSITELIB}/buildbot_badges/__init__.pyo
+${PYSITELIB}/buildbot_badges/static/.placeholder
+${PYSITELIB}/buildbot_badges/templates/flat-square.svg.j2
+${PYSITELIB}/buildbot_badges/templates/flat.svg.j2
+${PYSITELIB}/buildbot_badges/templates/plastic.svg.j2
