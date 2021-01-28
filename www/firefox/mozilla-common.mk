@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.196 2021/01/19 22:40:26 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.197 2021/01/28 00:58:23 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -165,7 +165,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.26
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.59.1
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.60
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -189,7 +189,7 @@ CWRAPPERS_PREPEND.cxx+= \
 	-stdlib++-isystem \
 	${BUILDLINK_PREFIX.gcc8}/gcc8/include/c++/backward
 .endif
-RUST_REQ=	1.43.0
+RUST_REQ=	1.47.0
 .include "../../lang/rust/rust.mk"
 # webrtc option requires internal libvpx
 #BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
