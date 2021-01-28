@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/04/19 13:50:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2021/01/28 22:35:12 gutteridge Exp $
 #
 
-DISTNAME=	ispell-3.4.00
+DISTNAME=	ispell-3.4.02
 PKGNAME=	${DISTNAME:S/-/-${DICT_LANG}-/1}
 CATEGORIES=	textproc
 MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
