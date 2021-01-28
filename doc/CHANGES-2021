@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.680 2021/01/28 12:56:57 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.681 2021/01/28 15:21:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -835,3 +835,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/ezmlm-idx to 7.2.2nb14 [schmonz 2021-01-28]
 	Updated mail/thunderbird to 78.7.0 [ryoon 2021-01-28]
 	Updated mail/thunderbird-l10n to 78.7.0 [ryoon 2021-01-28]
+	Updated textproc/nanogrep to 2.2.0 [pin 2021-01-28]
