@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/28 21:17:37 maya Exp $
+
+SHA1 (tubes/v0.2.0.tar.gz) = 57d5ae83c5e0cb550c515cc8e630839dfc52dc4c
+RMD160 (tubes/v0.2.0.tar.gz) = 0b3430b62d28ad5e8c6aa682b40336825404321b
+SHA512 (tubes/v0.2.0.tar.gz) = 6039a3059b61f8a0c84d4e10bb47d9f2bb95505b0353cb0f1eefb6942f0ad0d88c9b02ff0d48ed0300d615d3e3203c5e884990cd6d006c2f1dbd18b88fcb2e9e
+Size (tubes/v0.2.0.tar.gz) = 64284 bytes
