@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.7 2021/01/28 08:03:03 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.8 2021/01/28 08:10:01 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -62,4 +62,7 @@ lang/mozjs78: GNU/Linux build fix
 
 Pullup ticket #6410 - requested by kardel
 net/frr: build fix
+
+Pullup ticket #6415 - requested by spz
+security/sudo: security fix
 
