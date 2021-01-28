@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.683 2021/01/28 21:17:52 maya Exp $
+$NetBSD: CHANGES-2021,v 1.684 2021/01/28 21:24:06 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -838,3 +838,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/nanogrep to 2.2.0 [pin 2021-01-28]
 	Updated net/mosquitto to 2.0.5 [triaxx 2021-01-28]
 	Added devel/py-tubes version 0.2.0 [maya 2021-01-28]
+	Added www/py-klein version 20.6.0 [maya 2021-01-28]
