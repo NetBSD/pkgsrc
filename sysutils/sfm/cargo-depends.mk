@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/01/25 21:31:40 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/01/28 05:12:34 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.6
 CARGO_CRATE_DEPENDS+=	arrayvec-0.5.2
