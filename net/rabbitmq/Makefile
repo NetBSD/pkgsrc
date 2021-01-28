@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2021/01/26 11:29:54 adam Exp $
+# $NetBSD: Makefile,v 1.49 2021/01/28 13:18:15 adam Exp $
 
 DISTNAME=	rabbitmq-server-3.8.11
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-server//}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
@@ -72,6 +73,12 @@ SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
 SUBST_SED.paths+=	-e 's|/var/log|${VARBASE}/log|g'
 SUBST_SED.paths+=	-e 's|erl|${PREFIX}/bin/erl|g'
 SUBST_SED.paths+=	-e 's|@RABBITMQ_HOME@|${PREFIX}/${RABBITMQ_HOME}|g'
+
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Setting prefix path
+SUBST_STAGE.prefix=	pre-build
+SUBST_FILES.prefix=	deps/rabbit_common/src/rabbit_env.erl
+SUBST_VARS.prefix=	PREFIX
 
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmqctl
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-defaults
