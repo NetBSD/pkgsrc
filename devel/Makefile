@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3326 2021/01/28 21:17:37 maya Exp $
+# $NetBSD: Makefile,v 1.3327 2021/01/28 21:23:30 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -2209,6 +2209,7 @@ SUBDIR+=	py-boltons
 SUBDIR+=	py-boost
 SUBDIR+=	py-bugzilla
 SUBDIR+=	py-buildbot
+SUBDIR+=	py-buildbot-badges
 SUBDIR+=	py-buildbot-console-view
 SUBDIR+=	py-buildbot-grid-view
 SUBDIR+=	py-buildbot-pkg
