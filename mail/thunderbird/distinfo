@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.239 2021/01/01 12:58:32 ryoon Exp $
+$NetBSD: distinfo,v 1.240 2021/01/28 12:55:43 ryoon Exp $
 
-SHA1 (thunderbird-78.6.0.source.tar.xz) = 12bb1be74b705104e42afc84bbf1cbf0f21539a8
-RMD160 (thunderbird-78.6.0.source.tar.xz) = a96708b07686ff03739a4a02e52b732dd1e2f156
-SHA512 (thunderbird-78.6.0.source.tar.xz) = 36194e8bf58117d8accbd6d8dc52a6241d8c572c023db1b271db3b73098652a608da28134865099792fbeb0a2f0d3705d98093447b64fa19eab7efb3e3bdd421
-Size (thunderbird-78.6.0.source.tar.xz) = 353496712 bytes
+SHA1 (thunderbird-78.7.0.source.tar.xz) = 88e36ea3ae7cb0e18da49edc103e2d3451c9fdec
+RMD160 (thunderbird-78.7.0.source.tar.xz) = 98113bd64eebcd80327956d07118028d1aa75981
+SHA512 (thunderbird-78.7.0.source.tar.xz) = feee821eaf1f18e48f9b6f88dfa0ccf1fdb9b7087d5a0a1a284e4c8b931fdf765f9b34d80fa26fdc0f4f3b8a8d7ff0eb66ff093defa18999ff8b7082bba5c85d
+Size (thunderbird-78.7.0.source.tar.xz) = 353095828 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = d53fae5544563888d030af7483f00283a712235c
 SHA1 (patch-build_moz.configure_rust.configure) = c9cd5e74aaeef4b42ef86db9e3814868a27847fd
 SHA1 (patch-comm_third__party_botan_configure.py) = 262f560c514d221d0df15a1906100b5e716bfdab
@@ -12,7 +12,6 @@ SHA1 (patch-config_makefiles_rust.mk) = 127f70d36b7784e5b3ba7637e3ccbca76ddd7894
 SHA1 (patch-configure.in) = 92f1603733320d96c424465ac62f9aa22543150e
 SHA1 (patch-dom_base_nsAttrName.h) = 4e2326542d4dbba1ac2af5b33505267ee177b094
 SHA1 (patch-dom_media_CubebUtils.cpp) = 7af2f852bba53dcb313ee6353cd111fb1b1ef735
-SHA1 (patch-dom_webgpu_ipc_WebGPUParent.cpp) = 236743c74610812bb7bdd577112092401dc1e587
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = d08f170629dda585dc3e11706688527fe3dc0e78
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 434ba731268ad3e5a9f20ef3a44c9057b61aba74
 SHA1 (patch-gfx_cairo_cairo_src_cairo-type1-subset.c) = 92287c76edfecf2de6aebdd401d77c26f69b2e81
