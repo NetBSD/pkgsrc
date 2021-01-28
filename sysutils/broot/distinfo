@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/01/15 08:51:10 pin Exp $
+$NetBSD: distinfo,v 1.10 2021/01/28 05:13:51 pin Exp $
 
 SHA1 (adler-0.2.3.crate) = ae30cb68d1f00d7a099ad4edfd4092e16b3a2342
 RMD160 (adler-0.2.3.crate) = 61a93e93ee0eb717ccb04763b23e17c89bba51ca
@@ -60,10 +60,10 @@ SHA1 (blake2b_simd-0.5.11.crate) = 36fcc9b2e8f835d59dc07b62254fe0c9aa9e196a
 RMD160 (blake2b_simd-0.5.11.crate) = 3e9927056214cd283dbb880b2c9e49c9fcf09578
 SHA512 (blake2b_simd-0.5.11.crate) = 4a7657db637869465637cb9a65cb82e7a119c554bd4d532aaf84f9cc77a494fda07d07db89c73e92e5bf4844bb1be53062fc61120e839e414e938e487e7f2257
 Size (blake2b_simd-0.5.11.crate) = 34096 bytes
-SHA1 (broot-1.2.0.tar.gz) = e0a0a557977be082d46707911cfb757eed58ebd4
-RMD160 (broot-1.2.0.tar.gz) = ea8b984e031f87c2b25ca86f7c657f67f8fecaca
-SHA512 (broot-1.2.0.tar.gz) = 0d849fb4df2ff62764d030c2e5d35f5f74bb678c552261ca543318b6a32c8ed7af5dc40a269f60abcaed796a342182d758e804d335a8a771cf17d5bb5d559774
-Size (broot-1.2.0.tar.gz) = 6255425 bytes
+SHA1 (broot-1.2.1.tar.gz) = e93618ffa313f65c83e7b440b7aa73933e38084f
+RMD160 (broot-1.2.1.tar.gz) = a4be4cbef539499b13c6d1674a5551a3cde9bc41
+SHA512 (broot-1.2.1.tar.gz) = 9fb85311e3963389eacafa3c5bf8ab968c04acb87b3209fc0c30cfdbb2c5c9d834c4d25d931cac05cab08636ef3e4b32316544569f99f24a49a47673c6d9da91
+Size (broot-1.2.1.tar.gz) = 6255181 bytes
 SHA1 (bstr-0.2.14.crate) = aa6f94445a44d32b6aca98f5057627de2f138e67
 RMD160 (bstr-0.2.14.crate) = 9522f0438ccc4812866f8f4ecbe62820543fbe49
 SHA512 (bstr-0.2.14.crate) = de62c0f31ad672f90a8038fa163c7cdaf474b35ec24592aee5549af7c76d43e6ed00f8d7237e15ab27576c27a7232033a217955de6a0a3b40c83661b3a7e1e8a
