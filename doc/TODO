@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20350 2021/01/28 07:42:22 triaxx Exp $
+$NetBSD: TODO,v 1.20351 2021/01/28 07:48:12 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o alevt-1.6.2
 	o alsa-lib-1.2.4
 	o alsa-plugins-1.1.0
-	o amarok-2.9.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o ampache-4.2.5
 	o ansifilter-2.9
