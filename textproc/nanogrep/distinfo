@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/01/15 08:52:39 pin Exp $
+$NetBSD: distinfo,v 1.3 2021/01/28 15:20:58 pin Exp $
 
 SHA1 (atty-0.2.14.crate) = 9b4bfe6daebdd3d13a8a605bf44f64d4e831e804
 RMD160 (atty-0.2.14.crate) = 63c38cbe0fc07a4533253427a164612b456094cf
@@ -8,22 +8,22 @@ SHA1 (colored-2.0.0.crate) = 4a1a38a4ee78f4d6b24f572ef57020264d537079
 RMD160 (colored-2.0.0.crate) = f451ffbcfa2c1fab334781c073eb6ab26aebadbb
 SHA512 (colored-2.0.0.crate) = c9ee830c1e8a32372ab8c7ce569701deaa6533fa369fc1b4c04bed57b1e686ed775fc76c3d9815ad21ee69cfc7c30d645abcbacad39081c7e37ff83ebb6d9e8a
 Size (colored-2.0.0.crate) = 21619 bytes
-SHA1 (hermit-abi-0.1.17.crate) = dac07f2f3e119da4e237e8a45ee9985900607981
-RMD160 (hermit-abi-0.1.17.crate) = 4c7979c8827da2635a513ecb62672444103dad37
-SHA512 (hermit-abi-0.1.17.crate) = 1ed4688f2cc1f1d5ba2f7637e2a9dc230712ce8907e1fa3d95ae374cd4b67a325138a98f2a524cb03f99625775057aa0370f480a73ab20485f0456e2f108baf2
-Size (hermit-abi-0.1.17.crate) = 10065 bytes
+SHA1 (hermit-abi-0.1.18.crate) = ee6677332b5c19c10d8e19b8da73c3265a3efd6c
+RMD160 (hermit-abi-0.1.18.crate) = 3bccd7ee4d6d12fec60d64949db05811ed7e7fea
+SHA512 (hermit-abi-0.1.18.crate) = 54f060c6c1c80d41f40cec7102345147efb535aff9fa5cc0ed4ccd7f010bfdb6daaf40626fd5069af60ceb42058452803b59d4bbcfbed4c5546c79b57ae0f914
+Size (hermit-abi-0.1.18.crate) = 9936 bytes
 SHA1 (lazy_static-1.4.0.crate) = 3e8852a6967dc257753fe75a13112a04bc03dfc0
 RMD160 (lazy_static-1.4.0.crate) = 6c74661c140113ff3b1d660bba095259398bbb55
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
 Size (lazy_static-1.4.0.crate) = 10443 bytes
-SHA1 (libc-0.2.82.crate) = 7ef6df07f7d9e7fea2205cb3fc2697c0b8de2328
-RMD160 (libc-0.2.82.crate) = cf5217369a209d91844af3c7fa1674bb115de994
-SHA512 (libc-0.2.82.crate) = 25eaf390acb409d329b9e32008078824eed4ca3a10af851f5097b653793db316419a395910c23dff293dfe2bac051a51871281a6bf2487937121b403286630c1
-Size (libc-0.2.82.crate) = 515967 bytes
-SHA1 (nanogrep-2.1.0.tar.gz) = 5451d64ed75996aa95c4a4a54f1fbce75b1d6e75
-RMD160 (nanogrep-2.1.0.tar.gz) = d63162016677c8a29d1437b6053407cee541622e
-SHA512 (nanogrep-2.1.0.tar.gz) = d49c0fd1d5e75e8cab8494d13ef19d129f05ad219f4338f97575bd180d9c75a0d7d594b84fb0e7e2a5042062e65caa07b92eea1429740138b82a76a46ee6beae
-Size (nanogrep-2.1.0.tar.gz) = 57236 bytes
+SHA1 (libc-0.2.83.crate) = a0f8e13c83f097fe8e166637e4e2e8c2e9b1deb9
+RMD160 (libc-0.2.83.crate) = 8d9eb216d52baa0638fb33e072c28483073d1fad
+SHA512 (libc-0.2.83.crate) = 985ece6244df72c4ab130f9eae246ff0548db2a0b79241ae9bc08464ee72d17057269b75bd08a2809ed6b1995627fbbe31d6a890eb888abfee510dc5656c9a9c
+Size (libc-0.2.83.crate) = 516762 bytes
+SHA1 (nanogrep-2.2.0.tar.gz) = 68a8c6292f8b8d23d892d1c3fb18d13ec4d594a2
+RMD160 (nanogrep-2.2.0.tar.gz) = 7e21884129fd5b127871042c4509c709c48d137c
+SHA512 (nanogrep-2.2.0.tar.gz) = 7afe112094e4f75b90f1cdf9ea9f6254d08c6d77bfd33ed4fdb27832d35f59f17bb514755eedeb06bc4ce5be5336f87673d77e59c2d1c91e614459be240796cc
+Size (nanogrep-2.2.0.tar.gz) = 46067 bytes
 SHA1 (winapi-0.3.9.crate) = 25c427fe8e3df07658e2552d2585d2f167ba3125
 RMD160 (winapi-0.3.9.crate) = 37e72db32b20588d61821e9bc5e72fb31b1ed089
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
