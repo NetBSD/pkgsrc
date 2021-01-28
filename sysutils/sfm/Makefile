@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2021/01/25 21:31:40 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/28 05:12:34 pin Exp $
 
-DISTNAME=	sfm-0.1.2
+DISTNAME=	sfm-0.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Harunx9/}
-GITHUB_PROJECT=	sfm
-GITHUB_TAG=	f19686ff7e35c496d0caad5ce35005854c7d04ae
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Harunx9/sfm/
