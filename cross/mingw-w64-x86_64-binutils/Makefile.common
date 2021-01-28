@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2020/10/02 16:49:36 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.9 2021/01/28 12:31:10 ryoon Exp $
 #
 # used by cross/mingw-w64-x86_64-binutils/Makefile
 # used by cross/mingw-w64-i686-binutils/Makefile
 
-DISTNAME=	binutils-2.35.1
+DISTNAME=	binutils-2.36
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
