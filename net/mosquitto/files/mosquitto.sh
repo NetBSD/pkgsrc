@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mosquitto.sh,v 1.2 2021/01/28 19:46:24 triaxx Exp $
+# $NetBSD: mosquitto.sh,v 1.3 2021/01/28 19:49:29 triaxx Exp $
 #
 # PROVIDE: mosquitto
 # REQUIRE: DAEMON
@@ -10,7 +10,7 @@
 name="mosquitto"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
 config="@PKG_SYSCONFDIR@/${name}.conf"
 
 command_args="-d -c $config"
