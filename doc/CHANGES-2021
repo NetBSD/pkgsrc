@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.685 2021/01/28 21:24:20 maya Exp $
+$NetBSD: CHANGES-2021,v 1.686 2021/01/28 22:20:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -840,3 +840,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-tubes version 0.2.0 [maya 2021-01-28]
 	Added www/py-klein version 20.6.0 [maya 2021-01-28]
 	Added devel/py-buildbot-badges version 2.6.0 [maya 2021-01-28]
+	Added wm/sdorfehs version 1.1 [pin 2021-01-28]
