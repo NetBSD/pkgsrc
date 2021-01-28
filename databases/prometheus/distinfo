@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2021/01/04 09:57:18 adam Exp $
+$NetBSD: distinfo,v 1.24 2021/01/28 21:45:26 jperkin Exp $
 
 SHA1 (prometheus-2.23.0-react-ui.tar.gz) = df5b9f951a570098db4bc9594838cce0b1ff15d9
 RMD160 (prometheus-2.23.0-react-ui.tar.gz) = ea464302d486bf00c1052f6997e5280dd6b7318a
@@ -9,4 +9,5 @@ RMD160 (prometheus-2.23.0.tar.gz) = 1839944d9607f3b046eee995381e1dee64220747
 SHA512 (prometheus-2.23.0.tar.gz) = cac78a69db38efc112bf6415623ba6b59c259d4e77c29f4e3d98df3d0aebf701f245a08f327b1ca3336fb72a1da3ef4c86c322831de2f095c342d67b111f7d6d
 Size (prometheus-2.23.0.tar.gz) = 14470328 bytes
 SHA1 (patch-cmd_prometheus_main.go) = b3f3f8872ad19f823424009090fdf4705e7af257
+SHA1 (patch-vendor_github.com_docker_docker_client_client__unix.go) = 2723e14a254f858526a254880630826b4ee93d33
 SHA1 (patch-web_ui_ui.go) = 900fd75a9b9e7bbb8aa18a3e06d9c237b94708cf
