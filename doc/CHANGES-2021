@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.678 2021/01/28 12:47:15 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.679 2021/01/28 12:56:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -833,3 +833,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cross/mingw-w64-x86_64-binutils to 2.36 [ryoon 2021-01-28]
 	Updated cross/mingw-w64-i686-binutils to 2.36 [ryoon 2021-01-28]
 	Updated mail/ezmlm-idx to 7.2.2nb14 [schmonz 2021-01-28]
+	Updated mail/thunderbird to 78.7.0 [ryoon 2021-01-28]
