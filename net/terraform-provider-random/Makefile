@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/01/23 14:23:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2021/01/28 18:04:51 tpaul Exp $
 
 DISTNAME=	terraform-provider-random-2.3.0
 PKGREVISION=	7
@@ -22,6 +22,8 @@ GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/*.sh
+
+CHECK_RELRO_SKIP+=	bin/terraform-provider-random
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
