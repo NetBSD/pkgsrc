@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20347 2021/01/28 07:30:24 triaxx Exp $
+$NetBSD: TODO,v 1.20348 2021/01/28 07:33:48 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -852,7 +852,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
-	o openoffice-4.1.7
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
 	o openvas-libraries-8.0.8
