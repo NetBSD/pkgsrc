@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.686 2021/01/28 22:20:39 pin Exp $
+$NetBSD: CHANGES-2021,v 1.687 2021/01/28 22:36:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -841,3 +841,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/py-klein version 20.6.0 [maya 2021-01-28]
 	Added devel/py-buildbot-badges version 2.6.0 [maya 2021-01-28]
 	Added wm/sdorfehs version 1.1 [pin 2021-01-28]
+	Updated textproc/ispell-en_GB to 3.4.02 [gutteridge 2021-01-28]
