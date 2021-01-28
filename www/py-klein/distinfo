@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/01/28 21:22:04 maya Exp $
+
+SHA1 (klein-20.6.0.tar.gz) = cd1cf107fa9e59c66df30416c6c2a6464c5e3935
+RMD160 (klein-20.6.0.tar.gz) = 0d086a7f9b6caa94b7739b1901127e7fbf782617
+SHA512 (klein-20.6.0.tar.gz) = 128b180c51c4457d3ffcd088e127d671d8260c3d62a80129bafbf6e3a2e47945290cd5ec695a64a1795465199e14c8f367445f8d90649f6384fd8338a53bb48e
+Size (klein-20.6.0.tar.gz) = 125676 bytes
