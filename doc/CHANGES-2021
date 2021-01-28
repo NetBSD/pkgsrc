@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.684 2021/01/28 21:24:06 maya Exp $
+$NetBSD: CHANGES-2021,v 1.685 2021/01/28 21:24:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/mosquitto to 2.0.5 [triaxx 2021-01-28]
 	Added devel/py-tubes version 0.2.0 [maya 2021-01-28]
 	Added www/py-klein version 20.6.0 [maya 2021-01-28]
+	Added devel/py-buildbot-badges version 2.6.0 [maya 2021-01-28]
