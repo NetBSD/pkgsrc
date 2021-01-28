@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.6 2021/01/16 21:50:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.7 2021/01/28 08:03:03 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -43,4 +43,23 @@ www/firefox78: security fix
 
 Pullup ticket #6397 - requested by nia
 www/firefox78-l10n: dependent update
+
+Pullup ticket #6403 - requested by taca
+textproc/ruby-redcarpet: security fix
+
+Pullup ticket #6404 - requested by gutteridge
+graphics/dia: security fix
+
+Pullup ticket #6406 - requested by nia
+security/polkit: build fix
+
+Pullup ticket #6407 - requested by nia
+www/firefox: build fix
+www/firefox78: build fix
+
+Pullup ticket #6408 - requested by nia
+lang/mozjs78: GNU/Linux build fix
+
+Pullup ticket #6410 - requested by kardel
+net/frr: build fix
 
