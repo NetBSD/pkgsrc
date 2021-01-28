@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.670 2021/01/28 00:02:28 tpaul Exp $
+$NetBSD: CHANGES-2021,v 1.671 2021/01/28 05:12:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -824,3 +824,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/musescore to 3.6.1 [gutteridge 2021-01-27]
 	Added net/terraform-provider-vultr version 2.1.2 [tpaul 2021-01-27]
 	Updated devel/php-composer to 2.0.9 [tpaul 2021-01-28]
+	Updated sysutils/sfm to 0.1.3 [pin 2021-01-28]
