@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2021/01/28 22:18:57 pin Exp $
+
+Add support for DESTDIR.
+
+--- Makefile.orig	2021-01-28 21:40:15.668959679 +0000
++++ Makefile
+@@ -16,8 +16,8 @@ LDFLAGS+=	`pkg-config --libs ${PKGLIBS}`
+ # and this for input-specific debugging
+ #CFLAGS+=	-DINPUT_DEBUG=1
+ 
+-BINDIR=		$(PREFIX)/bin
+-MANDIR=		$(PREFIX)/man/man1
++BINDIR=		${DESTDIR}$(PREFIX)/bin
++MANDIR=		${DESTDIR}$(PREFIX)/man/man1
+ 
+ SRC!=		ls *.c
+ OBJ=		${SRC:.c=.o}
