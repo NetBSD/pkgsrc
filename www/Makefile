@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1502 2021/01/18 15:41:58 taca Exp $
+# $NetBSD: Makefile,v 1.1503 2021/01/28 21:22:04 maya Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -773,6 +773,7 @@ SUBDIR+=	py-idna
 SUBDIR+=	py-idna_ssl
 SUBDIR+=	py-ipywidgets
 SUBDIR+=	py-jonpy
+SUBDIR+=	py-klein
 SUBDIR+=	py-landslide
 SUBDIR+=	py-livereload
 SUBDIR+=	py-mechanize
