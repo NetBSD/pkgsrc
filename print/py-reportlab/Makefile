@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2020/12/06 11:42:33 adam Exp $
+# $NetBSD: Makefile,v 1.79 2021/01/28 08:28:22 adam Exp $
 
-DISTNAME=	reportlab-3.5.56
+DISTNAME=	reportlab-3.5.60
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reportlab/}
