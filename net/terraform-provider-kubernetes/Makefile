@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/01/23 14:23:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2021/01/28 18:01:44 tpaul Exp $
 
 DISTNAME=	terraform-provider-kubernetes-1.11.4
 PKGREVISION=	6
@@ -21,6 +21,8 @@ GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/*.sh
+
+CHECK_RELRO_SKIP+=	bin/terraform-provider-kubernetes
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
