@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/01/13 09:34:30 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/01/29 16:17:15 otis Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -15,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.16.10
+BIND_VERSION=	9.16.11
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
@@ -82,6 +82,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
 .endfor
 
+.include "../../mk/atomic64.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
