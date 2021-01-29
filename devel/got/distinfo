@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2021/01/29 20:35:11 ryoon Exp $
+
+SHA1 (got-0.48.tar.gz) = a5524ef970650c749e85dca15e755edec06494df
+RMD160 (got-0.48.tar.gz) = 798c0e6d6c40c9ff90bfd30d11880387adc16fee
+SHA512 (got-0.48.tar.gz) = 55ea20ee6f7c34610ef37c8f93b2ed3c71547711358bb7d88e187fd5e5d820e6ce352bfe54d35342d6e5eb1bd4c7e741bf232b1c3405d5dbcc99ca9a87226984
+Size (got-0.48.tar.gz) = 483588 bytes
+SHA1 (patch-Makefile) = b6787de1a7b505b44f29cbc697201511f521cd78
+SHA1 (patch-Makefile.inc) = 28ab688bf6ddfaf51bcf92a933864f8e89c548ff
+SHA1 (patch-got_Makefile) = e61bc61a1cbe9055e755ec42ac04d3246190da7d
+SHA1 (patch-libexec_Makefile.inc) = c56eb1aea447f65f42682a07225e81d187dc2072
+SHA1 (patch-regress_Makefile) = bc19146d5b4bb56baf849a0b38313c13c843675b
+SHA1 (patch-regress_cmdline_Makefile) = 79a6727cb0963b6ac12f1efe7c0873436f291bbc
+SHA1 (patch-regress_cmdline_common.sh) = df6011b7811e70600ad03701f4304f4b8978a077
+SHA1 (patch-regress_cmdline_histedit.sh) = 7fd4f2cdd13456fd14a2ec19630bb0db693d2616
+SHA1 (patch-regress_delta_Makefile) = 7b71d20428468de65313dda4fcfe1dba44cbbbff
+SHA1 (patch-regress_fetch_Makefile) = 33dafea0b53ce9fc096b57acb10541ae95c48561
+SHA1 (patch-regress_idset_Makefile) = 18639cc0c3a59a0da1775ea84cc7e47b1ee5b464
+SHA1 (patch-regress_path_Makefile) = 958100601458203cef4b387f63035826d9a449e8
+SHA1 (patch-tog_Makefile) = ca149a6c1d92e0ea9960e035eb761098e6e8255f
+SHA1 (patch-tog_tog.c) = f3b4d76b9fa0f706584575f96d90ead4439ba669
