@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/06/28 15:14:52 nia Exp $
+# $NetBSD: Makefile,v 1.12 2021/01/29 09:17:27 nia Exp $
 
 DISTNAME=	libretro-picodrive-20200527
 PKGREVISION=	2
@@ -52,4 +52,5 @@ MAKE_FLAGS+=	use_sh2drc=0
 LIBRETRO_CORE=	picodrive
 
 .include "../../emulators/retroarch/core.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
