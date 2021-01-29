@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/01/28 15:20:58 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/01/29 22:06:45 pin Exp $
 
 SHA1 (atty-0.2.14.crate) = 9b4bfe6daebdd3d13a8a605bf44f64d4e831e804
 RMD160 (atty-0.2.14.crate) = 63c38cbe0fc07a4533253427a164612b456094cf
@@ -20,10 +20,10 @@ SHA1 (libc-0.2.83.crate) = a0f8e13c83f097fe8e166637e4e2e8c2e9b1deb9
 RMD160 (libc-0.2.83.crate) = 8d9eb216d52baa0638fb33e072c28483073d1fad
 SHA512 (libc-0.2.83.crate) = 985ece6244df72c4ab130f9eae246ff0548db2a0b79241ae9bc08464ee72d17057269b75bd08a2809ed6b1995627fbbe31d6a890eb888abfee510dc5656c9a9c
 Size (libc-0.2.83.crate) = 516762 bytes
-SHA1 (nanogrep-2.2.0.tar.gz) = 68a8c6292f8b8d23d892d1c3fb18d13ec4d594a2
-RMD160 (nanogrep-2.2.0.tar.gz) = 7e21884129fd5b127871042c4509c709c48d137c
-SHA512 (nanogrep-2.2.0.tar.gz) = 7afe112094e4f75b90f1cdf9ea9f6254d08c6d77bfd33ed4fdb27832d35f59f17bb514755eedeb06bc4ce5be5336f87673d77e59c2d1c91e614459be240796cc
-Size (nanogrep-2.2.0.tar.gz) = 46067 bytes
+SHA1 (nanogrep-2.2.1.tar.gz) = 046ade6e214a2c66e5d4e1b89cfc081449878fa0
+RMD160 (nanogrep-2.2.1.tar.gz) = ee84800bb3b9c5e51a9ea8b686b669afc5d38dd6
+SHA512 (nanogrep-2.2.1.tar.gz) = 49b277a18529b6d7dbe6489b7bead37cdfd4d3578c4b33f8e3cbe7784947c93685c3b2cde595ec2f5df7a068769c35192a92eb7011894c80ee6b84c4d0fc1c8f
+Size (nanogrep-2.2.1.tar.gz) = 46067 bytes
 SHA1 (winapi-0.3.9.crate) = 25c427fe8e3df07658e2552d2585d2f167ba3125
 RMD160 (winapi-0.3.9.crate) = 37e72db32b20588d61821e9bc5e72fb31b1ed089
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
