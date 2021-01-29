@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.25 2020/12/19 14:44:15 taca Exp $
+$NetBSD: distinfo,v 1.26 2021/01/29 18:00:20 otis Exp $
 
-SHA1 (bind-9.11.25-fixed-man-pages.tar.gz) = e6cb1366d1f66f0ca61510ad6158890edb748f55
-RMD160 (bind-9.11.25-fixed-man-pages.tar.gz) = 7f818a65ddbfe7f532fc85245ccead18dee2dc20
-SHA512 (bind-9.11.25-fixed-man-pages.tar.gz) = 8c425ba42a1844abfea8f5c7050d23ea419ce04c221766193ba880693e30221997e1fb898e2b9519c035db89d547df6d39e4c749c1f9b6ef0edef3b815483cba
-Size (bind-9.11.25-fixed-man-pages.tar.gz) = 84725 bytes
 SHA1 (bind-9.11.26.tar.gz) = 14064c865920842e48f444be2bda9dc91770e439
 RMD160 (bind-9.11.26.tar.gz) = 801726934bc31ca8292fc8358e6a813186283365
 SHA512 (bind-9.11.26.tar.gz) = 7ec32ca50b7f552d6a0b16ec1e168a24ecbf33420b8df123f74c7b9f615b8267e3e6e973a72f3ce3912eb60e94ebfacbacb4ae3945ac587c73f7cf695b46ce00
