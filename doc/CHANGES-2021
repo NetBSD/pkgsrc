@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.698 2021/01/29 18:07:09 maya Exp $
+$NetBSD: CHANGES-2021,v 1.699 2021/01/29 18:08:46 otis Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -853,3 +853,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/mosquitto to 2.0.6 [gdt 2021-01-29]
 	Updated lang/go116 to 1.16rc1 [bsiegert 2021-01-29]
 	Updated devel/py-buildbot to 2.6.0nb1 [maya 2021-01-29]
+	Updated net/bind916 to 9.16.11 [otis 2021-01-29]
