@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/29 11:39:38 pin Exp $
+bin/oxipng
