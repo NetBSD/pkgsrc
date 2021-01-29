@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/06/13 11:56:23 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2021/01/29 09:14:06 nia Exp $
 
 # used by emulators/libretro-beetle-psx-hw/Makefile
 # used by emulators/libretro-beetle-psx/Makefile
@@ -17,6 +17,9 @@ MESSAGE_SRC=	${.CURDIR}/../../emulators/libretro-beetle-psx/MESSAGE
 
 USE_LANGUAGES=	c c++03
 USE_TOOLS+=	pkg-config
+
+# gcc-4.9 for <stdatomic.h>
+GCC_REQD+=	4.9
 
 MAKE_FLAGS+=	SYSTEM_ZLIB=1
 
