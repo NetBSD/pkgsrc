@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2021/01/27 15:21:21 fcambus Exp $
+# $NetBSD: Makefile,v 1.97 2021/01/29 13:10:34 jperkin Exp $
 
 DISTNAME=	binutils-2.36
 CATEGORIES=	devel
@@ -18,14 +18,6 @@ REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-
-# PR pkg/48504, ksh is sufficient for NetBSD 5.2 and NetBSD 6.1
-.include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*) && \
-	empty(MACHINE_PLATFORM:MNetBSD-6.99.*-*)
-USE_TOOLS+=		ksh
-CONFIG_SHELL=		ksh
-.endif
 
 TOOLS_BROKEN+=		perl
 GNU_CONFIGURE=		yes
@@ -52,27 +44,37 @@ TEST_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 
 INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
-# gprof (XXX: and others?) cannot be built on all platforms
 #
-PLIST_VARS+=	gprof ld gold SunOS CTF
+# Supported utils and libraries differ quite a bit across platforms.
+#
+PLIST_VARS+=	ctf gas gold gprof ld
 
 .include "../../mk/bsd.prefs.mk"
+
+#
+# libctf does not build on thes platforms at present.
+#
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--disable-libctf
+.else
+PLIST.ctf=		yes
+.endif
+
+.if ${OPSYS} != "Darwin"
+PLIST.gas=	yes
+.endif
 
 .if ${OPSYS} != "IRIX" && ${OPSYS} != "AIX" && ${OPSYS} != "Darwin"
 PLIST.gprof=	yes
 .endif
 
+#
+# The PLIST.ld variable controls whether we install "ld -> gld" symlinks.  They
+# are excluded on SunOS to avoid accidentally using the wrong "ld", and on
+# Darwin as ld/gas are not built.
+#
 .if ${OPSYS} != SunOS && ${OPSYS} != "Darwin"
 PLIST.ld=	yes
-.endif
-
-.if ${OPSYS} == SunOS
-PLIST.SunOS=	yes
-.endif
-
-# Temporary: libctf should be mature on Linux in the near future
-.if ${OPSYS} != Linux
-PLIST.CTF=	yes
 .endif
 
 .if ${OPSYS} == DragonFly \
@@ -80,7 +82,6 @@ PLIST.CTF=	yes
 	|| (${OPSYS} == OpenBSD && empty(OS_VERSION:M[1234].*)) \
 	|| (${OPSYS} == NetBSD && empty(OS_VERSION:M[12345].*)) \
 	|| ${OPSYS} == Linux
-BUILD_GOLD=		yes
 PLIST.gold=		yes
 USE_TOOLS+=		bison
 CONFIGURE_ARGS+=	--enable-gold --enable-plugins
@@ -94,18 +95,12 @@ CFLAGS+=	-Wno-unused-value -Wno-format-security \
 		-Wno-error=unused-const-variable
 .endif
 
-SYMLINK_FILES=	addr2line ar as c++filt dlltool elfedit ld.bfd		\
-		nlmconv nm objcopy objdump ranlib readelf size strings	\
-		strip windmc windres
-.if defined(PLIST.gprof)
-SYMLINK_FILES+=	gprof
-.endif
-.if defined(PLIST.ld)
-SYMLINK_FILES+=	ld
-.endif
-.if defined(BUILD_GOLD)
-SYMLINK_FILES+=	ld.gold dwp
-.endif
+.include "options.mk"
+
+SYMLINK_FILES=	addr2line ar ${PLIST.gas:Das} c++filt dlltool elfedit \
+		${PLIST.gprof:Dgprof} ${PLIST.ld:Dld} ${PLIST.gld:Dld.bfd} \
+		${PLIST.gold:Dld.gold dwp} nlmconv nm objcopy objdump \
+		ranlib readelf size strings strip windmc windres
 
 post-install:
 	cd ${DESTDIR}${PREFIX} &&					\
