@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/01/10 11:31:32 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/29 09:11:40 nia Exp $
 
 DISTNAME=	pt2-clone-1.28
 CATEGORIES=	audio
@@ -12,7 +12,9 @@ COMMENT=	ProTracker 2 clone for Windows/macOS/Linux
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99 c++
 
 INSTALLATION_DIRS+=	share/examples/pt2-clone
 
