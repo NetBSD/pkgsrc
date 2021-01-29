@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.695 2021/01/29 12:10:13 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.696 2021/01/29 13:58:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -850,3 +850,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-HTTP-Entity-Parser to 0.25 [wen 2021-01-29]
 	Updated www/p5-Plack to 1.0048 [wen 2021-01-29]
 	Updated security/libgcrypt to 1.9.1 [wiz 2021-01-29]
+	Updated net/mosquitto to 2.0.6 [gdt 2021-01-29]
