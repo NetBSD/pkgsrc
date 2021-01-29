@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/01/29 18:00:20 otis Exp $
+# $NetBSD: Makefile,v 1.38 2021/01/29 18:25:33 otis Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -14,7 +14,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.11.26
+BIND_VERSION=	9.11.27
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -77,6 +77,7 @@ post-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/doc/arm/*.html ${DESTDIR}${PREFIX}/${DOCDIR}/arm
 
+.include "../../mk/atomic64.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
