@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2020/12/31 09:59:34 nia Exp $
+@comment $NetBSD: PLIST,v 1.69 2021/01/29 10:25:52 nia Exp $
 @pkgdir share/vlc/http/dialogs
 @pkgdir share/vlc/http/images
 @pkgdir share/vlc/http/js
@@ -180,6 +180,7 @@ lib/vlc/plugins/access/libidummy_plugin.la
 lib/vlc/plugins/access/libimem_plugin.la
 lib/vlc/plugins/access/liblibbluray_plugin.la
 ${PLIST.pulseaudio}lib/vlc/plugins/access/libpulsesrc_plugin.la
+lib/vlc/plugins/access/librist_plugin.la
 lib/vlc/plugins/access/librtp_plugin.la
 lib/vlc/plugins/access/libsatip_plugin.la
 lib/vlc/plugins/access/libsdp_plugin.la
@@ -194,6 +195,7 @@ lib/vlc/plugins/access_output/libaccess_output_dummy_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_file_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_http_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_livehttp_plugin.la
+lib/vlc/plugins/access_output/libaccess_output_rist_plugin.la
 ${PLIST.qt5}lib/vlc/plugins/access_output/libaccess_output_shout_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_udp_plugin.la
 ${PLIST.neon}lib/vlc/plugins/arm_neon/libchroma_yuv_neon_plugin.la
