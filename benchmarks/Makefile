@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2020/10/08 02:53:31 jnemeth Exp $
+# $NetBSD: Makefile,v 1.58 2021/01/29 09:16:20 pin Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -25,6 +25,7 @@ SUBDIR+=	hbench
 SUBDIR+=	heapsort
 SUBDIR+=	hint
 SUBDIR+=	httperf
+SUBDIR+=	hyperfine
 SUBDIR+=	iozone
 SUBDIR+=	kttcp
 SUBDIR+=	libmicro
