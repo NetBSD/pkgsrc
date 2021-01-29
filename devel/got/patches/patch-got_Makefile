@@ -1,0 +1,15 @@
+$NetBSD: patch-got_Makefile,v 1.1 2021/01/29 20:35:11 ryoon Exp $
+
+--- got/Makefile.orig	2020-11-10 22:54:37 UTC
++++ got/Makefile
+@@ -29,10 +29,6 @@ DPADD = ${LIBZ} ${LIBUTIL}
+ NOMAN = Yes
+ .endif
+ 
+-realinstall:
+-	${INSTALL} ${INSTALL_COPY} -o ${BINOWN} -g ${BINGRP} \
+-	-m ${BINMODE} ${PROG} ${BINDIR}/${PROG}
+-
+ dist:
+ 	mkdir ../got-${GOT_VERSION}/got
+ 	cp ${SRCS} ${MAN} ../got-${GOT_VERSION}/got
