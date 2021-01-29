@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.694 2021/01/29 12:07:55 wen Exp $
+$NetBSD: CHANGES-2021,v 1.695 2021/01/29 12:10:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -849,3 +849,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/oxipng version 4.0.3 [pin 2021-01-29]
 	Updated www/p5-HTTP-Entity-Parser to 0.25 [wen 2021-01-29]
 	Updated www/p5-Plack to 1.0048 [wen 2021-01-29]
+	Updated security/libgcrypt to 1.9.1 [wiz 2021-01-29]
