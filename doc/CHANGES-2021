@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.693 2021/01/29 11:57:04 wen Exp $
+$NetBSD: CHANGES-2021,v 1.694 2021/01/29 12:07:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -848,3 +848,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/vlc to 3.0.12 [nia 2021-01-29]
 	Added graphics/oxipng version 4.0.3 [pin 2021-01-29]
 	Updated www/p5-HTTP-Entity-Parser to 0.25 [wen 2021-01-29]
+	Updated www/p5-Plack to 1.0048 [wen 2021-01-29]
