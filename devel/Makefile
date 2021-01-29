@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3327 2021/01/28 21:23:30 maya Exp $
+# $NetBSD: Makefile,v 1.3328 2021/01/29 20:37:02 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -502,6 +502,7 @@ SUBDIR+=	google-api-go-client
 SUBDIR+=	google-glog
 SUBDIR+=	googletest
 SUBDIR+=	gopls
+SUBDIR+=	got
 SUBDIR+=	gperf
 SUBDIR+=	gperftools
 SUBDIR+=	gprbuild-aux
