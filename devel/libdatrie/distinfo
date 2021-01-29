@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/01/01 21:49:39 scole Exp $
+$NetBSD: distinfo,v 1.14 2021/01/29 18:33:09 scole Exp $
 
-SHA1 (libdatrie-0.2.12-f1479aaab1b877f305297bdb12fadc280a48cdd6.tar.gz) = a262c74d234933c6d0606fe63289becc70fba39b
-RMD160 (libdatrie-0.2.12-f1479aaab1b877f305297bdb12fadc280a48cdd6.tar.gz) = bb97e91bf811e918298f9a31e9d142dee3501a1d
-SHA512 (libdatrie-0.2.12-f1479aaab1b877f305297bdb12fadc280a48cdd6.tar.gz) = 777f49fd0bb3f7a0f1dc3ef8b4eb311bd812cc86ec0f2283027e4e5709063643dc8bbbca19d315a2d64742116d6186c51483e6d6b706bcc3ed5776774710e564
-Size (libdatrie-0.2.12-f1479aaab1b877f305297bdb12fadc280a48cdd6.tar.gz) = 106144 bytes
-SHA1 (patch-configure.ac) = 1c2d874a5206c0546960d5003bee04705e7ad0f3
+SHA1 (libdatrie-0.2.13.tar.xz) = ff3d30605fdc9a226e7acde8de3752125b3a8791
+RMD160 (libdatrie-0.2.13.tar.xz) = ecc5608111427f537e0f1b825275a191f3080eca
+SHA512 (libdatrie-0.2.13.tar.xz) = db3c879d825ead5871c12ef3a06bb093cb1708a6e7e20775eaf82356af9dd6ad54c6b5cabbe1773f2494d3dfa2426528fdd49441038b6294b70ccb1a3d90099a
+Size (libdatrie-0.2.13.tar.xz) = 314072 bytes
