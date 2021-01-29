@@ -1,16 +1,14 @@
-$NetBSD: distinfo,v 1.80 2020/11/25 22:58:54 nia Exp $
+$NetBSD: distinfo,v 1.81 2021/01/29 10:25:52 nia Exp $
 
-SHA1 (vlc-3.0.11.1.tar.xz) = c6e3137666cbb884bccacc385227567290ef4e9d
-RMD160 (vlc-3.0.11.1.tar.xz) = a19eb43a0ea6307f0923efe28acae1b803df6a69
-SHA512 (vlc-3.0.11.1.tar.xz) = 8ce1e2f11aabf847dc5c55cf21ce6d7c0419a1051b5f4795e36cd060eab82d5056e44b4c070b80af56744e6aa841ef538386d08bc3b397a444e7258b2ba3f76b
-Size (vlc-3.0.11.1.tar.xz) = 25886644 bytes
+SHA1 (vlc-3.0.12.tar.xz) = 39ef414a07202ec6569acda4c5d91e8576d453bf
+RMD160 (vlc-3.0.12.tar.xz) = 5975ce21a183893ae2541ac38d5131329e539fbd
+SHA512 (vlc-3.0.12.tar.xz) = ebec92bf732540be117551e94613747c53514ade7e280167c08400375738df9a01ee0e5d7c7733aca151a4f80f1c7163fd41318f2cc80b04a3201f0ba697e5df
+Size (vlc-3.0.12.tar.xz) = 25997468 bytes
 SHA1 (patch-compat_Makefile.am) = 1c3e0a7c4610c55c3ec9ba80d66b9959661139b3
 SHA1 (patch-configure.ac) = 99e975954323b4e94daeb75ce2ae439b49c51b0f
 SHA1 (patch-lib_core.c) = 8ec5557424e6ddc05cc365aacd1ec847d9a94605
 SHA1 (patch-lib_video.c) = 362aaf7977c264bb70a79e98cf18da923ae62e39
 SHA1 (patch-m4_dolt.m4) = a1aac0c1021001a489f9b515e218904e065ed659
 SHA1 (patch-modules_access_http_Makefile.am) = d91904c6cba1a75a6872d042e4fe87ed9ce65a22
-SHA1 (patch-modules_gui_qt_components_playlist_views.cpp) = b4f4ee5de10db5cb74769866036181e2cd481e92
 SHA1 (patch-modules_gui_qt_dialogs_plugins.cpp) = b5cffc0bd54fd07e77f891f6bca58132d333afdd
-SHA1 (patch-modules_gui_qt_util_timetooltip.hpp) = 01344f4b5df0d1f2520839143324b22f94887918
 SHA1 (patch-share_Makefile.am) = 4f126948c73159d06aef323b47a702442b5981e8
