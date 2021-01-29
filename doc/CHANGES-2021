@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.701 2021/01/29 18:34:52 scole Exp $
+$NetBSD: CHANGES-2021,v 1.702 2021/01/29 20:35:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -856,3 +856,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.11 [otis 2021-01-29]
 	Updated net/bind911 to 9.11.27 [otis 2021-01-29]
 	Updated devel/libdatrie to 0.2.13 [scole 2021-01-29]
+	Added devel/got version 0.48 [ryoon 2021-01-29]
