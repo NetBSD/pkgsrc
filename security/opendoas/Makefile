@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/01/01 14:28:56 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/01/29 07:53:38 jperkin Exp $
 
 DISTNAME=	opendoas-6.8
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
