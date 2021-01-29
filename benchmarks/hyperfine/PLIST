@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/01/29 09:15:40 pin Exp $
+bin/hyperfine
+man/man1/hyperfine.1
