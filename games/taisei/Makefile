@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/08/18 17:57:58 leot Exp $
+# $NetBSD: Makefile,v 1.9 2021/01/29 09:12:22 nia Exp $
 
 DISTNAME=	taisei-v1.3.1
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -14,6 +14,9 @@ COMMENT=	Open source Touhou Project fan game
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+
+# C++14
+GCC_REQD+=	5
 
 MESON_ARGS+=	-Db_pch=false
 MESON_ARGS+=	-Db_lto=false
