@@ -134,6 +134,7 @@ debug-info		Enable debug info in generated binaries (e.g. for crash analysis), b
 deliver-suid		Install deliver executable setuid root.
 disable-compile-inits	Disable compile time implicit initialization.
 disable-filter-url	Disable php://filter URL feature.
+disable-ld		Disable building GNU ld in binutils.
 djbdns-cachestats	Patch to add stats for cache hits/misses.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-listenmultiple	Patches to specify more than one listening IP.
