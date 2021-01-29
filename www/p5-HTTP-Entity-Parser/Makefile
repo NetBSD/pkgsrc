@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/09/07 20:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/01/29 11:55:33 wen Exp $
 
-DISTNAME=	HTTP-Entity-Parser-0.24
+DISTNAME=	HTTP-Entity-Parser-0.25
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
