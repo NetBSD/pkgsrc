@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.692 2021/01/29 11:40:49 pin Exp $
+$NetBSD: CHANGES-2021,v 1.693 2021/01/29 11:57:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -847,3 +847,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added benchmarks/hyperfine version 1.11.0 [pin 2021-01-29]
 	Updated multimedia/vlc to 3.0.12 [nia 2021-01-29]
 	Added graphics/oxipng version 4.0.3 [pin 2021-01-29]
+	Updated www/p5-HTTP-Entity-Parser to 0.25 [wen 2021-01-29]
