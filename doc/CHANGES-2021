@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.691 2021/01/29 10:27:31 nia Exp $
+$NetBSD: CHANGES-2021,v 1.692 2021/01/29 11:40:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/opendoas to 6.8nb1 [jperkin 2021-01-29]
 	Added benchmarks/hyperfine version 1.11.0 [pin 2021-01-29]
 	Updated multimedia/vlc to 3.0.12 [nia 2021-01-29]
+	Added graphics/oxipng version 4.0.3 [pin 2021-01-29]
