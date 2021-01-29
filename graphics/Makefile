@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.919 2021/01/24 19:03:46 maya Exp $
+# $NetBSD: Makefile,v 1.920 2021/01/29 11:40:24 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -393,6 +393,7 @@ SUBDIR+=	openimageio
 SUBDIR+=	openjpeg
 SUBDIR+=	optipng
 SUBDIR+=	osg
+SUBDIR+=	oxipng
 SUBDIR+=	oxygen-icons
 SUBDIR+=	p5-Barcode-Code128
 SUBDIR+=	p5-Chart
