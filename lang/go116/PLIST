@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/19 17:58:07 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/29 17:22:30 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go116/AUTHORS
@@ -788,6 +788,7 @@ go116/pkg/${GO_PLATFORM}/flag.a
 go116/pkg/${GO_PLATFORM}/fmt.a
 go116/pkg/${GO_PLATFORM}/go/ast.a
 go116/pkg/${GO_PLATFORM}/go/build.a
+go116/pkg/${GO_PLATFORM}/go/build/constraint.a
 go116/pkg/${GO_PLATFORM}/go/constant.a
 go116/pkg/${GO_PLATFORM}/go/doc.a
 go116/pkg/${GO_PLATFORM}/go/format.a
@@ -820,6 +821,7 @@ go116/pkg/${GO_PLATFORM}/index/suffixarray.a
 go116/pkg/${GO_PLATFORM}/internal/bytealg.a
 go116/pkg/${GO_PLATFORM}/internal/cfg.a
 go116/pkg/${GO_PLATFORM}/internal/cpu.a
+go116/pkg/${GO_PLATFORM}/internal/execabs.a
 go116/pkg/${GO_PLATFORM}/internal/fmtsort.a
 go116/pkg/${GO_PLATFORM}/internal/goroot.a
 go116/pkg/${GO_PLATFORM}/internal/goversion.a
@@ -2018,6 +2020,7 @@ go116/src/cmd/go/testdata/script/build_cache_output.txt
 go116/src/cmd/go/testdata/script/build_cache_trimpath.txt
 go116/src/cmd/go/testdata/script/build_cd_gopath_different.txt
 go116/src/cmd/go/testdata/script/build_cgo_consistent_results.txt
+go116/src/cmd/go/testdata/script/build_darwin_cc_arch.txt
 go116/src/cmd/go/testdata/script/build_dash_n_cgo.txt
 go116/src/cmd/go/testdata/script/build_dash_o_dev_null.txt
 go116/src/cmd/go/testdata/script/build_dash_x.txt
@@ -2056,6 +2059,8 @@ go116/src/cmd/go/testdata/script/cgo_asm_error.txt
 go116/src/cmd/go/testdata/script/cgo_bad_directives.txt
 go116/src/cmd/go/testdata/script/cgo_depends_on_syscall.txt
 go116/src/cmd/go/testdata/script/cgo_flag_contains_space.txt
+go116/src/cmd/go/testdata/script/cgo_path.txt
+go116/src/cmd/go/testdata/script/cgo_path_space.txt
 go116/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
 go116/src/cmd/go/testdata/script/clean_binary.txt
 go116/src/cmd/go/testdata/script/clean_cache_n.txt
@@ -2085,6 +2090,7 @@ go116/src/cmd/go/testdata/script/cpu_profile_twice.txt
 go116/src/cmd/go/testdata/script/devnull.txt
 go116/src/cmd/go/testdata/script/doc.txt
 go116/src/cmd/go/testdata/script/embed.txt
+go116/src/cmd/go/testdata/script/embed_fmt.txt
 go116/src/cmd/go/testdata/script/env_write.txt
 go116/src/cmd/go/testdata/script/fileline.txt
 go116/src/cmd/go/testdata/script/fmt_load_errors.txt
@@ -2258,6 +2264,7 @@ go116/src/cmd/go/testdata/script/mod_get_patchmod.txt
 go116/src/cmd/go/testdata/script/mod_get_patterns.txt
 go116/src/cmd/go/testdata/script/mod_get_prefer_incompatible.txt
 go116/src/cmd/go/testdata/script/mod_get_private_vcs.txt
+go116/src/cmd/go/testdata/script/mod_get_promote_implicit.txt
 go116/src/cmd/go/testdata/script/mod_get_pseudo.txt
 go116/src/cmd/go/testdata/script/mod_get_pseudo_other_branch.txt
 go116/src/cmd/go/testdata/script/mod_get_pseudo_prefix.txt
@@ -2398,6 +2405,7 @@ go116/src/cmd/go/testdata/script/mod_vcs_missing.txt
 go116/src/cmd/go/testdata/script/mod_vendor.txt
 go116/src/cmd/go/testdata/script/mod_vendor_auto.txt
 go116/src/cmd/go/testdata/script/mod_vendor_build.txt
+go116/src/cmd/go/testdata/script/mod_vendor_embed.txt
 go116/src/cmd/go/testdata/script/mod_vendor_nodeps.txt
 go116/src/cmd/go/testdata/script/mod_vendor_replace.txt
 go116/src/cmd/go/testdata/script/mod_vendor_trimpath.txt
@@ -2624,7 +2632,8 @@ go116/src/cmd/internal/obj/arm64/a.out.go
 go116/src/cmd/internal/obj/arm64/anames.go
 go116/src/cmd/internal/obj/arm64/anames7.go
 go116/src/cmd/internal/obj/arm64/asm7.go
-go116/src/cmd/internal/obj/arm64/asm_test.go
+go116/src/cmd/internal/obj/arm64/asm_arm64_test.go
+go116/src/cmd/internal/obj/arm64/asm_arm64_test.s
 go116/src/cmd/internal/obj/arm64/doc.go
 go116/src/cmd/internal/obj/arm64/list7.go
 go116/src/cmd/internal/obj/arm64/obj7.go
@@ -2880,6 +2889,8 @@ go116/src/cmd/link/testdata/testHashedSyms/p.go
 go116/src/cmd/link/testdata/testIndexMismatch/a.go
 go116/src/cmd/link/testdata/testIndexMismatch/b.go
 go116/src/cmd/link/testdata/testIndexMismatch/main.go
+go116/src/cmd/link/testdata/testPErsrc-complex/main.go
+go116/src/cmd/link/testdata/testPErsrc-complex/rsrc.syso
 go116/src/cmd/link/testdata/testPErsrc/main.go
 go116/src/cmd/link/testdata/testPErsrc/rsrc.syso
 go116/src/cmd/link/testdata/testRO/x.go
@@ -4209,6 +4220,8 @@ go116/src/go/ast/scope.go
 go116/src/go/ast/walk.go
 go116/src/go/build/build.go
 go116/src/go/build/build_test.go
+go116/src/go/build/constraint/expr.go
+go116/src/go/build/constraint/expr_test.go
 go116/src/go/build/deps_test.go
 go116/src/go/build/doc.go
 go116/src/go/build/gc.go
@@ -4882,6 +4895,8 @@ go116/src/internal/cpu/cpu_x86.go
 go116/src/internal/cpu/cpu_x86.s
 go116/src/internal/cpu/cpu_x86_test.go
 go116/src/internal/cpu/export_test.go
+go116/src/internal/execabs/execabs.go
+go116/src/internal/execabs/execabs_test.go
 go116/src/internal/fmtsort/export_test.go
 go116/src/internal/fmtsort/sort.go
 go116/src/internal/fmtsort/sort_test.go
@@ -5792,6 +5807,7 @@ go116/src/os/signal/internal/pty/pty.go
 go116/src/os/signal/sig.s
 go116/src/os/signal/signal.go
 go116/src/os/signal/signal_cgo_test.go
+go116/src/os/signal/signal_linux_test.go
 go116/src/os/signal/signal_plan9.go
 go116/src/os/signal/signal_plan9_test.go
 go116/src/os/signal/signal_test.go
@@ -5825,6 +5841,9 @@ go116/src/os/sys_unix.go
 go116/src/os/sys_windows.go
 go116/src/os/tempfile.go
 go116/src/os/tempfile_test.go
+go116/src/os/testdata/dirfs/a
+go116/src/os/testdata/dirfs/b
+go116/src/os/testdata/dirfs/dir/x
 go116/src/os/testdata/hello
 go116/src/os/testdata/issue37161/a
 go116/src/os/testdata/issue37161/b
@@ -6332,6 +6351,7 @@ go116/src/runtime/metrics.go
 go116/src/runtime/metrics/description.go
 go116/src/runtime/metrics/description_test.go
 go116/src/runtime/metrics/doc.go
+go116/src/runtime/metrics/example_test.go
 go116/src/runtime/metrics/histogram.go
 go116/src/runtime/metrics/sample.go
 go116/src/runtime/metrics/value.go
@@ -6433,7 +6453,11 @@ go116/src/runtime/os_only_solaris.go
 go116/src/runtime/os_openbsd.go
 go116/src/runtime/os_openbsd_arm.go
 go116/src/runtime/os_openbsd_arm64.go
+go116/src/runtime/os_openbsd_libc.go
 go116/src/runtime/os_openbsd_mips64.go
+go116/src/runtime/os_openbsd_syscall.go
+go116/src/runtime/os_openbsd_syscall1.go
+go116/src/runtime/os_openbsd_syscall2.go
 go116/src/runtime/os_plan9.go
 go116/src/runtime/os_plan9_arm.go
 go116/src/runtime/os_solaris.go
@@ -6679,6 +6703,7 @@ go116/src/runtime/sys_freebsd_386.s
 go116/src/runtime/sys_freebsd_amd64.s
 go116/src/runtime/sys_freebsd_arm.s
 go116/src/runtime/sys_freebsd_arm64.s
+go116/src/runtime/sys_libc.go
 go116/src/runtime/sys_linux_386.s
 go116/src/runtime/sys_linux_amd64.s
 go116/src/runtime/sys_linux_arm.s
@@ -6695,6 +6720,10 @@ go116/src/runtime/sys_netbsd_amd64.s
 go116/src/runtime/sys_netbsd_arm.s
 go116/src/runtime/sys_netbsd_arm64.s
 go116/src/runtime/sys_nonppc64x.go
+go116/src/runtime/sys_openbsd.go
+go116/src/runtime/sys_openbsd1.go
+go116/src/runtime/sys_openbsd2.go
+go116/src/runtime/sys_openbsd3.go
 go116/src/runtime/sys_openbsd_386.s
 go116/src/runtime/sys_openbsd_amd64.s
 go116/src/runtime/sys_openbsd_arm.s
@@ -6787,6 +6816,7 @@ go116/src/runtime/testdata/testwinlib/main.c
 go116/src/runtime/testdata/testwinlib/main.go
 go116/src/runtime/testdata/testwinlibsignal/dummy.go
 go116/src/runtime/testdata/testwinlibsignal/main.c
+go116/src/runtime/testdata/testwinsignal/main.go
 go116/src/runtime/textflag.h
 go116/src/runtime/time.go
 go116/src/runtime/time_fake.go
@@ -6947,6 +6977,7 @@ go116/src/syscall/asm_linux_riscv64.s
 go116/src/syscall/asm_linux_s390x.s
 go116/src/syscall/asm_netbsd_arm.s
 go116/src/syscall/asm_netbsd_arm64.s
+go116/src/syscall/asm_openbsd_amd64.s
 go116/src/syscall/asm_openbsd_arm.s
 go116/src/syscall/asm_openbsd_arm64.s
 go116/src/syscall/asm_openbsd_mips64.s
@@ -6972,8 +7003,8 @@ go116/src/syscall/env_windows.go
 go116/src/syscall/errors_plan9.go
 go116/src/syscall/exec_aix_test.go
 go116/src/syscall/exec_bsd.go
-go116/src/syscall/exec_darwin.go
 go116/src/syscall/exec_libc.go
+go116/src/syscall/exec_libc2.go
 go116/src/syscall/exec_linux.go
 go116/src/syscall/exec_linux_test.go
 go116/src/syscall/exec_plan9.go
@@ -7002,7 +7033,7 @@ go116/src/syscall/js/js_js.s
 go116/src/syscall/js/js_test.go
 go116/src/syscall/lsf_linux.go
 go116/src/syscall/mkall.sh
-go116/src/syscall/mkasm_darwin.go
+go116/src/syscall/mkasm.go
 go116/src/syscall/mkerrors.sh
 go116/src/syscall/mkpost.go
 go116/src/syscall/mksyscall.pl
@@ -7021,6 +7052,8 @@ go116/src/syscall/msan0.go
 go116/src/syscall/net.go
 go116/src/syscall/net_js.go
 go116/src/syscall/netlink_linux.go
+go116/src/syscall/ptrace_darwin.go
+go116/src/syscall/ptrace_ios.go
 go116/src/syscall/pwd_plan9.go
 go116/src/syscall/route_bsd.go
 go116/src/syscall/route_darwin.go
@@ -7076,10 +7109,12 @@ go116/src/syscall/syscall_netbsd_amd64.go
 go116/src/syscall/syscall_netbsd_arm.go
 go116/src/syscall/syscall_netbsd_arm64.go
 go116/src/syscall/syscall_openbsd.go
+go116/src/syscall/syscall_openbsd1.go
 go116/src/syscall/syscall_openbsd_386.go
 go116/src/syscall/syscall_openbsd_amd64.go
 go116/src/syscall/syscall_openbsd_arm.go
 go116/src/syscall/syscall_openbsd_arm64.go
+go116/src/syscall/syscall_openbsd_libc.go
 go116/src/syscall/syscall_openbsd_mips64.go
 go116/src/syscall/syscall_plan9.go
 go116/src/syscall/syscall_plan9_test.go
@@ -7171,6 +7206,7 @@ go116/src/syscall/zsyscall_netbsd_arm.go
 go116/src/syscall/zsyscall_netbsd_arm64.go
 go116/src/syscall/zsyscall_openbsd_386.go
 go116/src/syscall/zsyscall_openbsd_amd64.go
+go116/src/syscall/zsyscall_openbsd_amd64.s
 go116/src/syscall/zsyscall_openbsd_arm.go
 go116/src/syscall/zsyscall_openbsd_arm64.go
 go116/src/syscall/zsyscall_openbsd_mips64.go
@@ -7723,6 +7759,8 @@ go116/test/dwarf/dwarf.dir/z8.go
 go116/test/dwarf/dwarf.dir/z9.go
 go116/test/dwarf/dwarf.go
 go116/test/dwarf/linedirectives.go
+go116/test/embedfunc.go
+go116/test/embedvers.go
 go116/test/empty.go
 go116/test/env.go
 go116/test/eof.go
@@ -9228,14 +9266,21 @@ go116/test/fixedbugs/issue4326.dir/q1.go
 go116/test/fixedbugs/issue4326.dir/q2.go
 go116/test/fixedbugs/issue4326.dir/z.go
 go116/test/fixedbugs/issue4326.go
+go116/test/fixedbugs/issue43292.go
 go116/test/fixedbugs/issue4348.go
 go116/test/fixedbugs/issue4353.go
+go116/test/fixedbugs/issue43551.dir/a.go
+go116/test/fixedbugs/issue43551.dir/b.go
+go116/test/fixedbugs/issue43551.go
+go116/test/fixedbugs/issue43570.go
 go116/test/fixedbugs/issue4359.go
+go116/test/fixedbugs/issue43619.go
 go116/test/fixedbugs/issue4365.go
 go116/test/fixedbugs/issue4370.dir/p1.go
 go116/test/fixedbugs/issue4370.dir/p2.go
 go116/test/fixedbugs/issue4370.dir/p3.go
 go116/test/fixedbugs/issue4370.go
+go116/test/fixedbugs/issue43835.go
 go116/test/fixedbugs/issue4396a.go
 go116/test/fixedbugs/issue4396b.go
 go116/test/fixedbugs/issue4399.go
@@ -9578,6 +9623,7 @@ go116/test/init.go
 go116/test/init1.go
 go116/test/initcomma.go
 go116/test/initempty.go
+go116/test/initexp.go
 go116/test/initialize.go
 go116/test/initializerr.go
 go116/test/initloop.go
