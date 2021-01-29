@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.689 2021/01/29 07:53:47 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.690 2021/01/29 09:16:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -844,3 +844,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ispell-en_GB to 3.4.02 [gutteridge 2021-01-28]
 	Updated security/pleaser to 0.3.21 [pin 2021-01-29]
 	Updated security/opendoas to 6.8nb1 [jperkin 2021-01-29]
+	Added benchmarks/hyperfine version 1.11.0 [pin 2021-01-29]
