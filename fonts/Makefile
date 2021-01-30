@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2021/01/30 14:23:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.350 2021/01/30 14:25:14 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -133,6 +133,7 @@ SUBDIR+=	ja-elisat
 SUBDIR+=	ja-elisau
 SUBDIR+=	ja-kaname
 SUBDIR+=	ja-kappa20
+SUBDIR+=	ja-klee-ttf
 SUBDIR+=	ja-naga10
 SUBDIR+=	ja-sazanami-ttf
 SUBDIR+=	ja-shinonome
