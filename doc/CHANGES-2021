@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.720 2021/01/30 21:55:52 pin Exp $
+$NetBSD: CHANGES-2021,v 1.721 2021/01/30 22:21:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -875,3 +875,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/zabbix50-java to 5.0.8 [otis 2021-01-30]
 	Updated sysutils/zabbix50-proxy to 5.0.8 [otis 2021-01-30]
 	Updated sysutils/lsfp to 0.4.3 [pin 2021-01-30]
+	Updated math/kalk to 0.3.13 [pin 2021-01-30]
