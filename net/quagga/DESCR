@@ -5,4 +5,5 @@ Quagga is a fork of GNU Zebra which was developed by Kunihiro
 Ishiguro. The Quagga tree aims to build a more involved community
 around Quagga than the current centralised model of GNU Zebra.
 
-This package provides a development snapshot of quagga.
+Note that quagga is no longer actively maintained.
+
