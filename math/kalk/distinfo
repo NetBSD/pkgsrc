@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/01/13 11:15:55 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/01/30 22:21:27 pin Exp $
 
 SHA1 (aho-corasick-0.7.15.crate) = f5054e1316a7f59bc37b647faa72a8e800fc17af
 RMD160 (aho-corasick-0.7.15.crate) = 003b3030dbd9c452279e3f01802edff67d4c14d5
@@ -60,10 +60,10 @@ SHA1 (js-sys-0.3.46.crate) = c17e1c20dc08332affdbd4216a9d6914e38b95b9
 RMD160 (js-sys-0.3.46.crate) = f859bef53d3a153e81b8e5a59f9bf5c2df3d9901
 SHA512 (js-sys-0.3.46.crate) = 504048b9a2efb42315e351d3a972cbb7474cda1374281e25b26a62c5811a3b34606489b95bfd417b41316569aa33ebbd02af2aa359b576198f3123bf7e9e4d28
 Size (js-sys-0.3.46.crate) = 67064 bytes
-SHA1 (kalk-0.3.12.tar.gz) = 52e7a5b3ecd10353a3272ef604bf3ae7a7acf14c
-RMD160 (kalk-0.3.12.tar.gz) = 4ebd8f6aadd2393fdc6393f94385edb36dbfa2d2
-SHA512 (kalk-0.3.12.tar.gz) = 999dd1480fde7fcb5b8e3904d4f9f0082d407288efc52f0176337bbaac1c05f9ca3e7b6e76aeadc1856abd1f5cfabb9b4a3694d1a18c525164e66cc50d34c9a3
-Size (kalk-0.3.12.tar.gz) = 349735 bytes
+SHA1 (kalk-0.3.13.tar.gz) = e69e83944cbb50ad5c0efc25299e0cc27d23c07d
+RMD160 (kalk-0.3.13.tar.gz) = c6cd960282288d909e2af0400fab38606ed36008
+SHA512 (kalk-0.3.13.tar.gz) = ed550845c27cc258424bdf2618a78d5a32af6fff9f2c4cbd9e9d17924f1da7df4cb2f46bd476d5070c7fcc15f61e784c25fa6642769ffdae9b0bcdf40fefc327
+Size (kalk-0.3.13.tar.gz) = 692903 bytes
 SHA1 (lazy_static-1.4.0.crate) = 3e8852a6967dc257753fe75a13112a04bc03dfc0
 RMD160 (lazy_static-1.4.0.crate) = 6c74661c140113ff3b1d660bba095259398bbb55
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
