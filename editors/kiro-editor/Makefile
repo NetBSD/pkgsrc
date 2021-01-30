@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/01/19 14:35:13 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/30 22:22:41 pin Exp $
 
-DISTNAME=	kiro-editor-0.4.1
+DISTNAME=	kiro-editor-0.4.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhysd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
