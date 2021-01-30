@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/12/19 14:44:15 taca Exp $
+# $NetBSD: Makefile,v 1.35.2.1 2021/01/30 07:43:16 spz Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -36,7 +36,8 @@ CONFIGURE_ARGS+=		--with-python=no
 CONFIGURE_ARGS+=		--with-lmdb=no
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-vax)
+    !empty(MACHINE_PLATFORM:MNetBSD-*-vax) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 CONFIGURE_ARGS+=		--disable-atomic
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
