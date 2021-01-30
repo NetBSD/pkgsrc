@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.8 2021/01/28 08:10:01 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.9 2021/01/30 06:23:35 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -65,4 +65,16 @@ net/frr: build fix
 
 Pullup ticket #6415 - requested by spz
 security/sudo: security fix
+
+Pullup ticket #6411 - requested by tron
+mail/mutt: security update
+
+Pullup ticket #6412 - requested by nia
+www/firefox78: security update
+
+Pullup ticket #6413 - requested by nia
+www/firefox78-l10n: dependency update
+
+Pullup ticket #6414 - requested by sborrill
+security/p11-kit: build fix for FreeBSD
 
