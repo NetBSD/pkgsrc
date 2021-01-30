@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.354 2021/01/30 14:31:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.355 2021/01/30 14:33:22 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -141,6 +141,7 @@ SUBDIR+=	ja-rocknroll-ttf
 SUBDIR+=	ja-sazanami-ttf
 SUBDIR+=	ja-shinonome
 SUBDIR+=	ja-stick-ttf
+SUBDIR+=	ja-train-ttf
 SUBDIR+=	jisx0208fonts
 SUBDIR+=	jisx0212fonts
 SUBDIR+=	jisx0213fonts
