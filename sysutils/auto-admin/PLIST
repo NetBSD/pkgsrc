@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/17 15:59:35 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/30 23:29:50 bacon Exp $
 sbin/auto-ad-adduser
 sbin/auto-add-fdesc-mount
 sbin/auto-add-group
+sbin/auto-add-hosts-entry
 sbin/auto-add-proc-mount
 sbin/auto-add-to-group
 sbin/auto-adduser
 sbin/auto-admin
+sbin/auto-admin-banner
 sbin/auto-amend-fstab
 sbin/auto-append-line
 sbin/auto-ask
@@ -44,8 +46,13 @@ sbin/auto-fastest-mirror
 sbin/auto-fetch-install-media
 sbin/auto-file-secure
 sbin/auto-firewall-setup
+sbin/auto-fix-date
 sbin/auto-freebsd-wip-checkout
 sbin/auto-fusefs-install
+sbin/auto-get-ip
+sbin/auto-get-netmask
+sbin/auto-get-netmask-bits
+sbin/auto-get-network
 sbin/auto-gpu-setup
 sbin/auto-group-check
 sbin/auto-harden
@@ -69,6 +76,7 @@ sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
 sbin/auto-lock-local-pw
 sbin/auto-lock-user
+sbin/auto-mark-install-from-source
 sbin/auto-mark-package-critical
 sbin/auto-media-format
 sbin/auto-mount-any
@@ -90,6 +98,7 @@ sbin/auto-pkgsrc-dir
 sbin/auto-pkgsrc-prefix
 sbin/auto-pkgsrc-remote-x11
 sbin/auto-pkgsrc-setup
+sbin/auto-pkgsrc-wip-checkout
 sbin/auto-ports-branch
 sbin/auto-ports-checkout
 sbin/auto-ports-setup
@@ -112,6 +121,7 @@ sbin/auto-set-lid-switch-mode
 sbin/auto-set-memory-limits
 sbin/auto-set-sysctl
 sbin/auto-set-umask
+sbin/auto-software-manager
 sbin/auto-sound-driver-setup
 sbin/auto-ssh-authorize
 sbin/auto-ssh-reverse-authorize
@@ -124,7 +134,6 @@ sbin/auto-update-system
 sbin/auto-user-admin
 sbin/auto-useradd
 sbin/auto-using-pkgsrc
-sbin/auto-wheel-check
 sbin/auto-wifi-failover
 sbin/auto-write-cache-toggle
 sbin/auto-xdm-toggle
