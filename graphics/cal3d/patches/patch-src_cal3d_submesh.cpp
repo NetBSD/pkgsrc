@@ -1,12 +1,12 @@
-$NetBSD: patch-src_cal3d_submesh.cpp,v 1.1 2011/11/25 21:56:18 joerg Exp $
+$NetBSD: patch-src_cal3d_submesh.cpp,v 1.2 2021/01/30 08:57:02 mef Exp $
 
---- src/cal3d/submesh.cpp.orig	2011-11-25 16:04:52.000000000 +0000
-+++ src/cal3d/submesh.cpp
-@@ -19,6 +19,7 @@
+--- src/cal3d/submesh.cpp.orig	2004-12-02 07:42:18.000000000 +0900
++++ src/cal3d/submesh.cpp	2021-01-30 17:34:34.617413157 +0900
+@@ -15,6 +15,7 @@
  #include "cal3d/submesh.h"
  #include "cal3d/error.h"
  #include "cal3d/coresubmesh.h"
 +#include <cstring>
  
-  /*****************************************************************************/
- /** Constructs the submesh instance.
+ 
+ CalSubmesh::CalSubmesh(CalCoreSubmesh* coreSubmesh)
