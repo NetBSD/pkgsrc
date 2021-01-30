@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.722 2021/01/30 22:23:01 pin Exp $
+$NetBSD: CHANGES-2021,v 1.723 2021/01/30 23:30:19 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -877,3 +877,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/lsfp to 0.4.3 [pin 2021-01-30]
 	Updated math/kalk to 0.3.13 [pin 2021-01-30]
 	Updated editors/kiro-editor to 0.4.2 [pin 2021-01-30]
+	Updated sysutils/auto-admin to 0.6.12 [bacon 2021-01-30]
