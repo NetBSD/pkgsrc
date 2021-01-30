@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/03 14:19:28 otis Exp $
+# $NetBSD: Makefile,v 1.4 2021/01/30 17:24:02 otis Exp $
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
@@ -42,7 +42,7 @@ SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 SUBST_CLASSES+=			fix-pkgbase
 SUBST_STAGE.fix-pkgbase=	pre-configure
 SUBST_MESSAGE.fix-pkgbase=	Fixing PKGBASE.
-SUBST_FILES.fix-pkgbase=	src/zabbix_proxy/Makefile.am
+SUBST_FILES.fix-pkgbase=	src/zabbix_proxy/Makefile.*
 SUBST_SED.fix-pkgbase=		-e 's,%%PKGBASE%%,${PKGBASE},g'
 
 PLIST_SUBST+=			PKGBASE=${PKGBASE}
