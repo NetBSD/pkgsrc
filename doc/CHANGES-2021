@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.704 2021/01/29 22:07:06 pin Exp $
+$NetBSD: CHANGES-2021,v 1.705 2021/01/30 00:41:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/got version 0.48 [ryoon 2021-01-29]
 	Updated net/terraform-provider-aws to 3.26.0 [leot 2021-01-29]
 	Updated textproc/nanogrep to 2.2.1 [pin 2021-01-29]
+	Updated databases/postgresql-postgis2 to 3.1.1 [gdt 2021-01-30]
