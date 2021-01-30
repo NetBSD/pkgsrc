@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.708 2021/01/30 14:22:57 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.709 2021/01/30 14:24:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/cal3d to 0.11.0 [mef 2021-01-30]
 	Updated www/w3m to 0.5.3.0.20210102 [mef 2021-01-30]
 	Added fonts/ja-dotgothic16-ttf version 20201216 [ryoon 2021-01-30]
+	Added fonts/ja-klee-ttf version 20201216 [ryoon 2021-01-30]
