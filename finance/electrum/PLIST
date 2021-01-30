@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/11/04 20:45:46 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/01/30 23:44:41 js Exp $
 bin/electrum
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -108,6 +108,7 @@ ${PYSITELIB}/electrum/gui/icons/key.png
 ${PYSITELIB}/electrum/gui/icons/ledger.png
 ${PYSITELIB}/electrum/gui/icons/ledger_unpaired.png
 ${PYSITELIB}/electrum/gui/icons/lightning.png
+${PYSITELIB}/electrum/gui/icons/lightning_disconnected.png
 ${PYSITELIB}/electrum/gui/icons/lock.png
 ${PYSITELIB}/electrum/gui/icons/lock.svg
 ${PYSITELIB}/electrum/gui/icons/microphone.png
@@ -306,6 +307,9 @@ ${PYSITELIB}/electrum/lnonion.pyo
 ${PYSITELIB}/electrum/lnpeer.py
 ${PYSITELIB}/electrum/lnpeer.pyc
 ${PYSITELIB}/electrum/lnpeer.pyo
+${PYSITELIB}/electrum/lnrater.py
+${PYSITELIB}/electrum/lnrater.pyc
+${PYSITELIB}/electrum/lnrater.pyo
 ${PYSITELIB}/electrum/lnrouter.py
 ${PYSITELIB}/electrum/lnrouter.pyc
 ${PYSITELIB}/electrum/lnrouter.pyo
