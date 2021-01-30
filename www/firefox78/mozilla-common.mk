@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.6.2.1 2021/01/22 18:12:00 bsiegert Exp $
+# $NetBSD: mozilla-common.mk,v 1.6.2.2 2021/01/30 06:21:26 spz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -58,6 +58,7 @@ CXXFLAGS+=		-march=i586
 CXXFLAGS+=		-mstackrealign
 .endif
 
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/python/glean_parser/Makefile
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/tests/update-test262.sh
