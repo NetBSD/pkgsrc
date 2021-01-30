@@ -1,4 +1,6 @@
-$NetBSD: patch-src_cal3d_hardwaremodel.cpp,v 1.1 2021/01/30 08:57:02 mef Exp $
+$NetBSD: patch-src_cal3d_hardwaremodel.cpp,v 1.2 2021/01/30 09:00:57 mef Exp $
+
+string function is not defined
 
 
 --- src/cal3d/hardwaremodel.cpp.orig	2021-01-30 17:39:48.235293991 +0900

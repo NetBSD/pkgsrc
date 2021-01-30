@@ -1,4 +1,6 @@
-$NetBSD: patch-src_cal3d_renderer.cpp,v 1.1 2011/11/25 21:56:18 joerg Exp $
+$NetBSD: patch-src_cal3d_renderer.cpp,v 1.2 2021/01/30 09:00:57 mef Exp $
+
+string function not defined
 
 --- src/cal3d/renderer.cpp.orig	2011-11-25 16:04:28.000000000 +0000
 +++ src/cal3d/renderer.cpp

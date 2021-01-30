@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/01/30 08:57:02 mef Exp $
+$NetBSD: distinfo,v 1.10 2021/01/30 09:00:57 mef Exp $
 
 SHA1 (cal3d-0.11.0.tar.gz) = 9579ef107a21091ce7e421d8779e9bf8bcd3333f
 RMD160 (cal3d-0.11.0.tar.gz) = 309ee70ff378f679f87934c29308284c435fba79
@@ -6,8 +6,8 @@ SHA512 (cal3d-0.11.0.tar.gz) = 4dc4b36b8f18760bfe6f8c80cbd941c14e2ebe596d0cd514f
 Size (cal3d-0.11.0.tar.gz) = 568532 bytes
 SHA1 (patch-aa) = f3b889454d71aafdff014b17d33681b8f17980cb
 SHA1 (patch-af) = 302a17aebb80a09b35395fc37d3254f0c5a00cb9
-SHA1 (patch-src_cal3d_converter.cpp) = b1030fe8f0ae6a9ec5b1219d33e72c55596eb319
-SHA1 (patch-src_cal3d_hardwaremodel.cpp) = 60b52cd2b4e50dc911fcd5d6b6f41ebfb54f821c
-SHA1 (patch-src_cal3d_platform.cpp) = 1d664fcc9b62124f089f202e98c74bc8ae99b8ee
-SHA1 (patch-src_cal3d_renderer.cpp) = 6c8ce2adbb1e58ed6ca22abbd0d3ed2672b11901
-SHA1 (patch-src_cal3d_submesh.cpp) = 5b34f59784fa727cf7839c652b75f917567ca1c8
+SHA1 (patch-src_cal3d_converter.cpp) = 04efef77ddbf8df1eca6fc9b705ad79f08bde4e4
+SHA1 (patch-src_cal3d_hardwaremodel.cpp) = b45d25f87d381ab476428d45bdd489a2204f4efa
+SHA1 (patch-src_cal3d_platform.cpp) = 5fa50b1914a9df2078617078da432dad87505ac7
+SHA1 (patch-src_cal3d_renderer.cpp) = eb9b34ec9d9b24e7bdffe40df731c1759e506d64
+SHA1 (patch-src_cal3d_submesh.cpp) = 7d34d548309f078e18ad7b80344c83c3cc0ba8d7
