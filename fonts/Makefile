@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2021/01/02 00:05:03 uwe Exp $
+# $NetBSD: Makefile,v 1.349 2021/01/30 14:23:38 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -128,6 +128,7 @@ SUBDIR+=	inconsolata-ttf
 SUBDIR+=	intlfonts
 SUBDIR+=	ipaexfont
 SUBDIR+=	ipafont
+SUBDIR+=	ja-dotgothic16-ttf
 SUBDIR+=	ja-elisat
 SUBDIR+=	ja-elisau
 SUBDIR+=	ja-kaname
