@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2021/01/18 14:32:24 taca Exp $
+$NetBSD: patch-configure,v 1.5 2021/01/30 11:06:45 spz Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -7,8 +7,8 @@ $NetBSD: patch-configure,v 1.4 2021/01/18 14:32:24 taca Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.orig	2021-01-09 20:12:16.000000000 +0000
-+++ configure
+--- configure.orig	2021-01-23 16:45:11.000000000 +0100
++++ configure	2021-01-30 12:31:20.802349535 +0100
 @@ -892,6 +892,7 @@ with_libpath
  with_libraries
  with_efence
@@ -30,7 +30,7 @@ $NetBSD: patch-configure,v 1.4 2021/01/18 14:32:24 taca Exp $
    --with-libraries        additional libraries to link with
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
-+  --with-nbsdops          add NetBSD standard opt ions
++  --with-nbsdops          add NetBSD standard options
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey[=DIR]       enable S/Key support
    --with-opie[=DIR]       enable OPIE support
@@ -72,7 +72,7 @@ $NetBSD: patch-configure,v 1.4 2021/01/18 14:32:24 taca Exp $
   LOGINCAP_USAGE='[-c class] '; LCMAN=1
  	case "$OS" in
 -	    freebsd|netbsd)
-+	    dragonfly*|freebsd|netbsd)
++	    dragonfly*|freebsd|netbsd*)
  		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		SUDOERS_LIBS="${SUDOERS_LIBS} -lutil"
  		;;
@@ -122,6 +122,15 @@ $NetBSD: patch-configure,v 1.4 2021/01/18 14:32:24 taca Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
      for ac_func in krb5_verify_user krb5_init_secure_context
+@@ -27120,7 +27139,7 @@ fi
+ fi
+ 
+ case "$OS" in
+-    netbsd)
++    netbsd*)
+ 	;;
+     *)
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the linker accepts -Wl,--enable-new-dtags" >&5
 @@ -28297,7 +28316,6 @@ test "$docdir" = '${datarootdir}/doc/${P
  test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
  test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
