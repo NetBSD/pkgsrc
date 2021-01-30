@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.716 2021/01/30 17:24:32 otis Exp $
+$NetBSD: CHANGES-2021,v 1.717 2021/01/30 17:24:43 otis Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -871,3 +871,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added fonts/ja-train-ttf version 20201216 [ryoon 2021-01-30]
 	Updated sysutils/zabbix50-server to 5.0.8 [otis 2021-01-30]
 	Updated sysutils/zabbix50-agent to 5.0.8 [otis 2021-01-30]
+	Updated sysutils/zabbix50-frontend to 5.0.8 [otis 2021-01-30]
