@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2018/01/14 17:34:02 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2021/01/30 18:42:47 rillig Exp $
 #
 
 DISTNAME=	xpipeman-1.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/strategy/}
 
