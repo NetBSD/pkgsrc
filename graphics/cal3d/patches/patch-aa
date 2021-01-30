@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/10 09:14:34 garbled Exp $
---- src/cal3d/Makefile.am.orig	Sat Nov 29 15:22:35 2003
-+++ src/cal3d/Makefile.am	Thu Feb  5 13:53:40 2004
-@@ -14,6 +14,7 @@
+$NetBSD: patch-aa,v 1.2 2021/01/30 08:57:02 mef Exp $
+
+
+--- src/cal3d/Makefile.am.orig	2006-06-23 01:18:08.000000000 +0900
++++ src/cal3d/Makefile.am	2021-01-30 17:30:26.080111365 +0900
+@@ -91,6 +91,7 @@ libcal3d_la_SOURCES = \
+ 	coremorphanimation.cpp
  
- all_libraries = @all_libraries@
- LDFLAGS = @LDFLAGS@
+ libcal3d_la_LDFLAGS = -no-undefined -version-info $(VERSION_INFO) 
 +AM_LDFLAGS = @AM_LDFLAGS@
  
- EXTRA_DIST = cal3d.rc cal3d.dsp SConscript
- 
+ pkginclude_HEADERS = \
+ 	animation.h \
