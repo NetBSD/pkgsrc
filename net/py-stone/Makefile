@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/01/30 06:28:13 mef Exp $
+# $NetBSD: Makefile,v 1.3 2021/01/30 10:15:15 wiz Exp $
 
 DISTNAME=	stone-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,9 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
 DEPENDS+=	${PYPKGPREFIX}-six>=1.3.0:../../lang/py-six
-# Following dependency is not described at https://pypi.org/project/stone/
-# and not intensively checked either BUILD_DEPENDS or DEPENDS.
-DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
