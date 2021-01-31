@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 16:17:21 ng0 Exp $
+$NetBSD: distinfo,v 1.2 2021/01/31 15:44:47 rhialto Exp $
 
-SHA1 (recursive-beta_1_030--statics.zip) = d773eff38e2e25ddc9b26ed517db85c558a969c9
-RMD160 (recursive-beta_1_030--statics.zip) = 167126f134e80f6637ea1fc71043c5fecabec7e7
-SHA512 (recursive-beta_1_030--statics.zip) = cb2b5e717e1b95439a2fddbb14286bfe5f99b676055bd7505b0b3033e0486026c4fcbd96ec3b7ec105da249fcb162a4d3edc419a403fba7d9b92750de754b22a
-Size (recursive-beta_1_030--statics.zip) = 7198295 bytes
+SHA1 (ArrowType-Recursive-1.072.zip) = 99caede61cde3dca44aa2f0b8c03cb3784c6ed41
+RMD160 (ArrowType-Recursive-1.072.zip) = f01048046e5e445337f9918bbe90e0f327579039
+SHA512 (ArrowType-Recursive-1.072.zip) = 628a64f186d61759a5d70102e3acb343e25e768920133967eb71824c3d724fc38785ef4d992063b37fc01ebc8a83c155375c3bb6b02fd5fc6dd8a63660a8f870
+Size (ArrowType-Recursive-1.072.zip) = 45443265 bytes
