@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.729 2021/01/31 14:26:26 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.730 2021/01/31 14:52:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -886,3 +886,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gpgme to 1.15.1 [adam 2021-01-31]
 	Updated net/wireshark to 3.4.3 [adam 2021-01-31]
 	Updated games/dMagnetic to 0.30 [wiz 2021-01-31]
+	Updated net/yaydl to 0.3.1 [pin 2021-01-31]
