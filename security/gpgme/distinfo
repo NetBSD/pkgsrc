@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.46 2020/08/25 08:54:52 schmonz Exp $
+$NetBSD: distinfo,v 1.47 2021/01/31 13:03:07 adam Exp $
 
-SHA1 (gpgme-1.14.0.tar.bz2) = 90a1b678703b0cabdb953035a4bee012e5685dce
-RMD160 (gpgme-1.14.0.tar.bz2) = 1889520e54ca69b06386b7b53f5dc82c6f8d036a
-SHA512 (gpgme-1.14.0.tar.bz2) = b7ffa30a046c75215e1c73e2f34e5e65532e4dcf6bea55796adc6f82fd38dafe264bcd4332b2001155d6f9476d6fd82a77112dad31c1bb29db9ddefc532ae668
-Size (gpgme-1.14.0.tar.bz2) = 1678910 bytes
+SHA1 (gpgme-1.15.1.tar.bz2) = 5ae07a303fcf9cec490dabdfbc6e0f3b8f6dd5a0
+RMD160 (gpgme-1.15.1.tar.bz2) = 16eb8809be0482f3f52c591d3235f0c169be8de0
+SHA512 (gpgme-1.15.1.tar.bz2) = 1d75a848cce6389f7cb8896b57a28dfe1dc5a447bfb4f128b0994a43e04134343400a3be063e971f03dfd595474cfd558519741d5d56afb3e84853ad4f2a45c2
+Size (gpgme-1.15.1.tar.bz2) = 1699349 bytes
 SHA1 (patch-Makefile.in) = 3277143d4aca64067249e03f584c9f7381c9037e
 SHA1 (patch-aa) = 6b81bc9b6b17f14329e0dbf1917d1352c142c072
-SHA1 (patch-lang_cpp_src_editinteractor.cpp) = f6e7234c31956ce81353d012b52011a72713e45d
