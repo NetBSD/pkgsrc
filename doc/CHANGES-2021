@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.726 2021/01/31 11:42:31 adam Exp $
+$NetBSD: CHANGES-2021,v 1.727 2021/01/31 13:03:04 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -882,3 +882,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-Glances to 3.1.6.1 [fox 2021-01-31]
 	Updated devel/cmake to 3.19.4 [adam 2021-01-31]
 	Updated multimedia/mkvtoolnix to 53.0.0 [adam 2021-01-31]
+	Updated devel/abseil to 20200923.3nb1 [he 2021-01-31]
