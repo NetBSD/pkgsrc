@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20355 2021/01/31 14:26:26 wiz Exp $
+$NetBSD: TODO,v 1.20356 2021/01/31 14:36:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,6 +367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.10.61
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-20.3.1
@@ -419,10 +420,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aribas-1.64
 	o arirang-1.70
 	o asapm-3.1
+	o asciidoc-9.0.5
 	o asn1c-0.9.27
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
 	o asterisk13-13.21.1
+	o autoconf-2.71
 	o autoconvert-0.3.16
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.16
@@ -439,6 +442,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bin86-0.16.21
 	o binkd-1.04
 	o bird6-1.5.0
+	o bison-3.7.5
 	o blender-2.91
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -559,6 +563,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flow-tools-0.411
+	o fluidsynth-2.1.7
 	o fortunes-calvin-0.3
 	o freenet-0.7
 	o freesci-0.6.4
@@ -638,6 +643,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.18.2 [wip]
+	o gstreamer1-1.18.3
 	o gthumb-3.4.0
 	o gtk4+-4.0 [wip]
 	o gtkglarea-2.1.0
@@ -745,6 +751,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libmcs-0.7.2
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
+	o libmysofa-1.2
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
@@ -931,6 +938,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o psmisc-22.20
 	o pspp-0.10.1
 	o ptlib-2.16.2
+	o pulseaudio-14.2
 	o pvs-6.0
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
@@ -939,12 +947,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
 	o py-hgview-1.9.0
+	o py-hypothesis-6.1.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-markdown-3.2.2 [drops python-2.x support]
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
+	o py-packaging-20.9
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
 	o py-simpletal-5.1
@@ -1079,6 +1089,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
+	o tor-browser-https-everywhere-2021.1.27
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ts-0.7.5
@@ -1088,6 +1099,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ucview-0.33
 	o udpcast-20120424
 	o ufoai-2.3.1
+	o ugrep-3.1.6
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
 	o units-2.12
@@ -1112,6 +1124,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vnstat-1.15
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-2.0.22
 	o wap-utils-1.4.1
 	o wcalc-2.4
 	o websvn-2.6.0
