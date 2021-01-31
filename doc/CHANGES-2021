@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.727 2021/01/31 13:03:04 he Exp $
+$NetBSD: CHANGES-2021,v 1.728 2021/01/31 13:28:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -883,3 +883,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cmake to 3.19.4 [adam 2021-01-31]
 	Updated multimedia/mkvtoolnix to 53.0.0 [adam 2021-01-31]
 	Updated devel/abseil to 20200923.3nb1 [he 2021-01-31]
+	Updated security/gpgme to 1.15.1 [adam 2021-01-31]
+	Updated net/wireshark to 3.4.3 [adam 2021-01-31]
