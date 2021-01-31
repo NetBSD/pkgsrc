@@ -1,13 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/21 22:07:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/01/31 16:50:43 bsiegert Exp $
 bin/goreturns
-gopkg/pkg/${GO_PLATFORM}/github.com/sqs/goreturns/returns.a
-gopkg/src/github.com/sqs/goreturns/LICENSE
-gopkg/src/github.com/sqs/goreturns/README.md
-gopkg/src/github.com/sqs/goreturns/_samples/a.go
-gopkg/src/github.com/sqs/goreturns/_samples/b.go
-gopkg/src/github.com/sqs/goreturns/goreturns.go
-gopkg/src/github.com/sqs/goreturns/returns/fix.go
-gopkg/src/github.com/sqs/goreturns/returns/fix_test.go
-gopkg/src/github.com/sqs/goreturns/returns/index.go
-gopkg/src/github.com/sqs/goreturns/returns/returns.go
-gopkg/src/github.com/sqs/goreturns/screencast.gif

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2021/01/23 14:22:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2021/01/31 16:50:43 bsiegert Exp $
 
 DISTNAME=	goreturns-0.0.20180301
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sqs/}
 GITHUB_PROJECT=	goreturns
@@ -13,9 +13,12 @@ HOMEPAGE=	https://github.com/sqs/goreturns
 COMMENT=	Formatting tool filling in return statements with zero values
 LICENSE=	modified-bsd
 
-GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
-GO_SRCPATH=	github.com/sqs/${GITHUB_PROJECT}
+GO_BUILD_PATTERN=	.
 
-.include "../../devel/go-tools/buildlink3.mk"
-.include "../../lang/go/go-package.mk"
+pre-patch:
+	cp ${FILESDIR}/go.* ${WRKSRC}
+
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
