@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.732 2021/01/31 15:58:25 pin Exp $
+$NetBSD: CHANGES-2021,v 1.733 2021/01/31 19:23:38 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -889,3 +889,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/yaydl to 0.3.1 [pin 2021-01-31]
 	Updated fonts/recursive-ttf to 1.072 [rhialto 2021-01-31]
 	Added textproc/sd version 0.7.6 [pin 2021-01-31]
+	Updated chat/matrix-synapse to 1.26.0 [js 2021-01-31]
