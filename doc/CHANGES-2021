@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.724 2021/01/30 23:44:53 js Exp $
+$NetBSD: CHANGES-2021,v 1.725 2021/01/31 05:13:56 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -879,3 +879,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/kiro-editor to 0.4.2 [pin 2021-01-30]
 	Updated sysutils/auto-admin to 0.6.12 [bacon 2021-01-30]
 	Updated finance/electrum to 4.0.9 [js 2021-01-30]
+	Updated sysutils/py-Glances to 3.1.6.1 [fox 2021-01-31]
