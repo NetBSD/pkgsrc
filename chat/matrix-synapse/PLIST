@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/13 17:45:36 js Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/01/31 19:23:28 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -466,9 +466,6 @@ ${PYSITELIB}/synapse/http/client.pyo
 ${PYSITELIB}/synapse/http/connectproxyclient.py
 ${PYSITELIB}/synapse/http/connectproxyclient.pyc
 ${PYSITELIB}/synapse/http/connectproxyclient.pyo
-${PYSITELIB}/synapse/http/endpoint.py
-${PYSITELIB}/synapse/http/endpoint.pyc
-${PYSITELIB}/synapse/http/endpoint.pyo
 ${PYSITELIB}/synapse/http/federation/__init__.py
 ${PYSITELIB}/synapse/http/federation/__init__.pyc
 ${PYSITELIB}/synapse/http/federation/__init__.pyo
@@ -601,6 +598,9 @@ ${PYSITELIB}/synapse/replication/http/__init__.pyo
 ${PYSITELIB}/synapse/replication/http/_base.py
 ${PYSITELIB}/synapse/replication/http/_base.pyc
 ${PYSITELIB}/synapse/replication/http/_base.pyo
+${PYSITELIB}/synapse/replication/http/account_data.py
+${PYSITELIB}/synapse/replication/http/account_data.pyc
+${PYSITELIB}/synapse/replication/http/account_data.pyo
 ${PYSITELIB}/synapse/replication/http/devices.py
 ${PYSITELIB}/synapse/replication/http/devices.pyc
 ${PYSITELIB}/synapse/replication/http/devices.pyo
@@ -754,9 +754,11 @@ ${PYSITELIB}/synapse/res/templates/registration_success.html
 ${PYSITELIB}/synapse/res/templates/room.html
 ${PYSITELIB}/synapse/res/templates/room.txt
 ${PYSITELIB}/synapse/res/templates/sso_account_deactivated.html
+${PYSITELIB}/synapse/res/templates/sso_auth_bad_user.html
 ${PYSITELIB}/synapse/res/templates/sso_auth_confirm.html
 ${PYSITELIB}/synapse/res/templates/sso_auth_success.html
 ${PYSITELIB}/synapse/res/templates/sso_error.html
+${PYSITELIB}/synapse/res/templates/sso_login_idp_picker.html
 ${PYSITELIB}/synapse/res/templates/sso_redirect_confirm.html
 ${PYSITELIB}/synapse/res/templates/terms.html
 ${PYSITELIB}/synapse/res/username_picker/index.html
@@ -1011,6 +1013,9 @@ ${PYSITELIB}/synapse/rest/synapse/client/__init__.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/password_reset.py
 ${PYSITELIB}/synapse/rest/synapse/client/password_reset.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/password_reset.pyo
+${PYSITELIB}/synapse/rest/synapse/client/pick_idp.py
+${PYSITELIB}/synapse/rest/synapse/client/pick_idp.pyc
+${PYSITELIB}/synapse/rest/synapse/client/pick_idp.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/pick_username.py
 ${PYSITELIB}/synapse/rest/synapse/client/pick_username.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/pick_username.pyo
@@ -1442,6 +1447,22 @@ ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/24drop_event_json_in
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/25user_external_ids_user_id_idx.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/26access_token_last_validated.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/27local_invites.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/28drop_last_used_column.sql.postgres
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/28drop_last_used_column.sql.sqlite
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/58/28rejected_events_metadata.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/01ignored_user.py
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/01ignored_user.pyc
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/01ignored_user.pyo
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/02shard_send_to_device.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/03shard_send_to_device_sequence.sql.postgres
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/04_event_auth_chains.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/04_event_auth_chains.sql.postgres
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/04drop_account_data.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/05cache_invalidation.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/06chain_cover_index.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/06shard_account_data.sql
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/06shard_account_data.sql.postgres
+${PYSITELIB}/synapse/storage/databases/main/schema/delta/59/07shard_account_data_fix.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/databases/main/schema/full_schemas/16/event_signatures.sql
