@@ -1,0 +1,12 @@
+sd, s[earch] & d[isplace] is an intuitive find & replace CLI.
+sd uses regex syntax that you already know from JavaScript and Python.
+Forget about dealing with quirks of sed or awk and get productive immediately.
+
+Non-regex find & replace. No more backslashes or remembering which characters
+are special and need to be escaped.
+
+Find & replace expressions are split up, which makes them easy to read and
+write. No more messing with unclosed and escaped slashes.
+
+While sed does a whole lot more, sd focuses on doing just one thing and doing
+it well.
