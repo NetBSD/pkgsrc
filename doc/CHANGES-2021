@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.728 2021/01/31 13:28:05 adam Exp $
+$NetBSD: CHANGES-2021,v 1.729 2021/01/31 14:26:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -885,3 +885,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/abseil to 20200923.3nb1 [he 2021-01-31]
 	Updated security/gpgme to 1.15.1 [adam 2021-01-31]
 	Updated net/wireshark to 3.4.3 [adam 2021-01-31]
+	Updated games/dMagnetic to 0.30 [wiz 2021-01-31]
