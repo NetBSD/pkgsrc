@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.932 2021/01/26 13:31:54 pin Exp $
+# $NetBSD: Makefile,v 1.933 2021/01/31 19:52:07 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -552,6 +552,7 @@ SUBDIR+=	rdfind
 SUBDIR+=	rdiff-backup
 SUBDIR+=	rename
 SUBDIR+=	renameutils
+SUBDIR+=	restic
 SUBDIR+=	rfstool
 SUBDIR+=	riemann-client
 SUBDIR+=	rkdeveloptool
