@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2020/07/28 06:36:29 kardel Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/02/01 09:08:43 kardel Exp $
 # used by sysutils/bareos-clientonly/Makefile
 
 GITHUB_PROJECT=	bareos
-VERSION=	19.2.8
+VERSION=	20.0.0
 GITHUB_TAG=	Release/${VERSION}
 
 DISTNAME=	bareos-${VERSION}
@@ -22,15 +22,14 @@ USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	core/_build
-# needs to be able to do compare-and-swap on time_t (cmpxchg8b)
-.if ${MACHINE_ARCH} == "i386"
-CXXFLAGS+=	-march=i586
-.endif
+
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
+
+REPLACE_PERL+=		core/src/cats/make_catalog_backup.pl.in
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing absolute paths.
-SUBST_FILES.paths=	core/CMakeLists.txt
 SUBST_FILES.paths+=	core/src/cats/make_catalog_backup.pl.in
 SUBST_SED.paths=	-e 's,"/usr/local,"${PREFIX},g'
 SUBST_SED.paths+=	-e 's,"/var/log,"${VARBASE}/log,g'
@@ -43,8 +42,8 @@ BUILD_DEFS+=		VARBASE
 
 # file locations
 PKG_SYSCONFSUBDIR?=	bareos
-BAREOS_PIDDIR?=		${VARBASE}/run
-BAREOS_LOGDIR?=		${VARBASE}/log
+BAREOS_PIDDIR?=		${VARBASE}/run/${PKG_SYSCONFSUBDIR}
+BAREOS_LOGDIR?=		${VARBASE}/log/${PKG_SYSCONFSUBDIR}
 BAREOS_LIBDIR?=		${PREFIX}/lib
 BAREOS_WORKINGDIR?=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}
 
@@ -76,12 +75,15 @@ FILES_SUBST+=		BAREOS_GROUP=${BAREOS_GROUP}
 FILES_SUBST+=		BAREOS_DIR_USER=${BAREOS_DIR_USER}
 FILES_SUBST+=		BAREOS_SD_USER=${BAREOS_SD_USER}
 
+# additional CXX parameters - document pkgsrc origin
+CXXFLAGS+=	-DBAREOS_BINARY_INFO=\\\"pkgsrc-compiled\\\"
+CXXFLAGS+=	-DBAREOS_JOBLOG_MESSAGE=\\\"'pkgsrc '"${DISTNAME}"\\\"
+CXXFLAGS+=	-DBAREOS_SERVICES_MESSAGE=\\\"'pkgsrc-compiled binaries are UNSUPPORTED by bareos.com (https://www.bareos.com).\\n'\\\"
+
 # cmake arguments
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 CMAKE_ARGS+=	-DCMAKE_STAGING_PREFIX=${BUILDLINK_DIR}
-# reduce job log noise: CXXFLAGS+=-DNO_ADV=1
 CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS="${CXXFLAGS}"
-CMAKE_ARGS+=	-DSKIP_GTEST=1
 CMAKE_ARGS+=	-Dconfigtemplatedir=${PREFIX}/${CONFIG_TEMPLATE_PATH}
 CMAKE_ARGS+=	-Dworkingdir=${VARBASE}/db/${PKG_SYSCONFSUBDIR}/working
 CMAKE_ARGS+=	-Dsubsysdir=${VARBASE}/db/${PKG_SYSCONFSUBDIR}
@@ -94,15 +96,18 @@ CMAKE_ARGS+=	-Ddir-user=${BAREOS_DIR_USER}
 CMAKE_ARGS+=	-Ddir-group=${BAREOS_GROUP}
 CMAKE_ARGS+=	-Dsd-user=${BAREOS_SD_USER}
 CMAKE_ARGS+=	-Dsd-group=${BAREOS_GROUP}
-CMAKE_ARGS+=	-Dfd-user=root
+CMAKE_ARGS+=	-Dfd-user=${REAL_ROOT_USER}
 CMAKE_ARGS+=	-Dfd-group=${BAREOS_GROUP}
 
 .include "../../mk/bsd.prefs.mk"
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 # dependencies
+.include "../../mk/atomic64.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python27/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

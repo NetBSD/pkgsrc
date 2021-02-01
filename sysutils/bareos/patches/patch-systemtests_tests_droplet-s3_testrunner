@@ -1,0 +1,15 @@
+$NetBSD: patch-systemtests_tests_droplet-s3_testrunner,v 1.1 2021/02/01 09:08:44 kardel Exp $
+
+	portability fix
+
+--- systemtests/tests/droplet-s3/testrunner.orig	2021-01-21 10:17:53.629198675 +0000
++++ systemtests/tests/droplet-s3/testrunner
+@@ -31,7 +31,7 @@ BackupDirectory="${tmp}/data"
+ # Data will be placed at "${tmp}/data/".
+ setup_data "$@"
+ 
+-if [ "$1" == "init" ]; then
++if [ "$1" = "init" ]; then
+   exit 0
+ fi
+ 

@@ -1,17 +1,24 @@
-$NetBSD: patch-core_cmake_BareosFindAllLibraries.cmake,v 1.1 2020/07/28 06:36:29 kardel Exp $
+$NetBSD: patch-core_cmake_BareosFindAllLibraries.cmake,v 1.2 2021/02/01 09:08:43 kardel Exp $
 
-provide a way to disable googletest which may be found by
-cmake but it is not in buildlink. can be optionalized
-later.
+	cmake build gets confused when both versions of python 2 and 3 are
+	availabe. as python 2.7 is eol prefer python 3 in this case.
 
---- core/cmake/BareosFindAllLibraries.cmake.orig	2020-06-23 13:14:52.254196443 +0000
+--- core/cmake/BareosFindAllLibraries.cmake.orig	2020-12-16 07:46:16.000000000 +0000
 +++ core/cmake/BareosFindAllLibraries.cmake
-@@ -82,7 +82,7 @@ bareosfindlibrary("util")
- bareosfindlibrary("dl")
- bareosfindlibrary("acl")
- # BareosFindLibrary("wrap")
--if (NOT ${CMAKE_CXX_COMPILER_ID} MATCHES SunPro)
-+if (NOT ${CMAKE_CXX_COMPILER_ID} MATCHES SunPro AND NOT SKIP_GTEST)
-   bareosfindlibrary("gtest")
-   bareosfindlibrary("gtest_main")
-   bareosfindlibrary("gmock")
+@@ -44,7 +44,7 @@ else()
+     set(HAVE_PYTHON 1)
+   endif()
+ 
+-  if(${Python2_FOUND})
++  if(${Python2_FOUND} AND NOT ${Python3_FOUND})
+     set(PYTHON_EXECUTABLE
+         ${Python2_EXECUTABLE}
+         PARENT_SCOPE
+@@ -62,6 +62,7 @@ else()
+   endif()
+ 
+   if(${Python3_FOUND})
++    set(Python2_FOUND 0)
+     set(PYTHON_EXECUTABLE
+         ${Python3_EXECUTABLE}
+         PARENT_SCOPE
