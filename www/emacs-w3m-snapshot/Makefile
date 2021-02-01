@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/10/31 22:41:44 mef Exp $
+# $NetBSD: Makefile,v 1.17 2021/02/01 11:19:16 mef Exp $
 
 VERSION=	1.4.632
-DATE_TIME=	20190920.1116
-HASH=		c9cdb7e
+DATE_TIME=	20210106.2144
+HASH=		f29aada
 DISTNAME=	w3m-el-snapshot_${VERSION}+0.${DATE_TIME}.${HASH}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}emacs-${DISTNAME:S/-el-snapshot_/-/:S/+0//:S/.${HASH}//}
 CATEGORIES=	www
