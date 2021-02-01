@@ -1,12 +1,12 @@
-$NetBSD: patch-core_CMakeLists.txt,v 1.1 2020/07/28 06:36:29 kardel Exp $
+$NetBSD: patch-core_CMakeLists.txt,v 1.2 2021/02/01 09:08:43 kardel Exp $
 
 	Setup NetBSD parameters
 	Due to current lack of XDR quad marshalling NDMP
 	needs to be disabled.
 
---- core/CMakeLists.txt.orig	2020-04-16 08:31:41.000000000 +0000
+--- core/CMakeLists.txt.orig	2020-12-16 07:46:16.000000000 +0000
 +++ core/CMakeLists.txt
-@@ -264,6 +264,15 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD
+@@ -259,10 +259,19 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD
    link_libraries(intl)
  endif()
  
@@ -14,15 +14,20 @@ $NetBSD: patch-core_CMakeLists.txt,v 1.1 2020/07/28 06:36:29 kardel Exp $
 +   set(HAVE_NETBSD_OS 1)
 +   set(ndmp 0)
 +   set(PSCMD "ps -ax -o pid,command")
-+   include_directories(@PREFIX@/include)
-+   link_directories(@PREFIX@/lib)
++   include_directories(${PREFIX}/include)
++   link_directories(${PREFIX}/lib)
 +   link_libraries(intl)
 +endif()
 +
  if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
    set(HAVE_DARWIN_OS 1)
    # set(CMAKE_INCLUDE_PATH  "${OPENSSL_INCLUDE_DIR}:${CMAKE_INCLUDE_PATH}")
-@@ -652,6 +661,7 @@ try_compile(
+-  set(CMAKE_INCLUDE_PATH "/usr/local/opt/:${CMAKE_INCLUDE_PATH}")
++  set(CMAKE_INCLUDE_PATH "${PREFIX}/opt/:${CMAKE_INCLUDE_PATH}")
+   link_directories(/usr/local/lib)
+ 
+   include_directories(/usr/local/opt/gettext/include)
+@@ -648,6 +657,7 @@ try_compile(
    ${PROJECT_SOURCE_DIR}/src/compile_tests/trivially_copyable.cc
  )
  
@@ -30,7 +35,7 @@ $NetBSD: patch-core_CMakeLists.txt,v 1.1 2020/07/28 06:36:29 kardel Exp $
  set(ndmp "${ndmp}")
  set(lmdb "${lmdb}")
  set(build_client_only "${client-only}")
-@@ -666,7 +676,8 @@ if(${acl})
+@@ -662,7 +672,8 @@ if(${acl})
        set(HAVE_ACL 1)
        message(STATUS "acl found, libs: ${ACL_LIBS}")
      else()

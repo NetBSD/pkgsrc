@@ -1,10 +1,10 @@
-$NetBSD: patch-core_scripts_CMakeLists.txt,v 1.1 2020/07/28 06:36:29 kardel Exp $
+$NetBSD: patch-core_scripts_CMakeLists.txt,v 1.2 2021/02/01 09:08:43 kardel Exp $
 
 suppress mtx-changer installation if not found
 
---- core/scripts/CMakeLists.txt.orig	2020-07-09 17:39:20.000000000 +0000
+--- core/scripts/CMakeLists.txt.orig	2020-12-16 07:46:16.000000000 +0000
 +++ core/scripts/CMakeLists.txt
-@@ -35,25 +35,37 @@ install(
+@@ -36,25 +36,37 @@ install(
  install(
    FILES bareos btraceback.gdb btraceback.dbx btraceback.mdb bareos-config
          bareos-config-lib.sh bareos-ctl-funcs

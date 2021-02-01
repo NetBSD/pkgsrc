@@ -1,18 +1,18 @@
-$NetBSD: patch-core_src_lib_scsi__lli.cc,v 1.1 2020/07/28 06:36:29 kardel Exp $
+$NetBSD: patch-core_src_lib_scsi__lli.cc,v 1.2 2021/02/01 09:08:43 kardel Exp $
 
-	Fix coding - was probably never tested with scsi-crypto flag
+	fix coding - was probably never tested with scsi-crypto flag
 
---- core/src/lib/scsi_lli.cc.orig	2020-04-16 08:31:41.000000000 +0000
+--- core/src/lib/scsi_lli.cc.orig	2020-12-16 07:46:16.000000000 +0000
 +++ core/src/lib/scsi_lli.cc
-@@ -410,6 +410,7 @@ bool CheckScsiAtEod(int fd) { return fal
- #elif defined(HAVE_NETBSD_OS) || defined(HAVE_OPENBSD_OS)
+@@ -411,6 +411,7 @@ bool CheckScsiAtEod(int fd) { return fal
+ #  elif defined(HAVE_NETBSD_OS) || defined(HAVE_OPENBSD_OS)
  
- #if defined(HAVE_NETBSD_OS)
-+#include <sys/scsiio.h>
- #include <dev/scsipi/scsipi_all.h>
- #else
- #include <scsi/uscsi_all.h>
-@@ -432,7 +433,7 @@ static inline bool do_scsi_cmd_page(int 
+ #    if defined(HAVE_NETBSD_OS)
++#      include <sys/scsiio.h>
+ #      include <dev/scsipi/scsipi_all.h>
+ #    else
+ #      include <scsi/uscsi_all.h>
+@@ -433,7 +434,7 @@ static inline bool do_scsi_cmd_page(int 
  {
    int rc;
    scsireq_t req;
@@ -21,7 +21,7 @@ $NetBSD: patch-core_src_lib_scsi__lli.cc,v 1.1 2020/07/28 06:36:29 kardel Exp $
    bool opened_device = false;
    bool retval = false;
  
-@@ -476,20 +477,18 @@ static inline bool do_scsi_cmd_page(int 
+@@ -477,20 +478,18 @@ static inline bool do_scsi_cmd_page(int 
        retval = true;
        break;
      case SCCMD_SENSE:
