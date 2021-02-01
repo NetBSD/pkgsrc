@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/01/27 13:35:58 leot Exp $
+# $NetBSD: Makefile,v 1.17 2021/02/01 16:54:00 tpaul Exp $
 
 DISTNAME=	terraform-0.12.30
 CATEGORIES=	net
@@ -21,8 +21,6 @@ REPLACE_BASH+=	command/e2etest/make-archive.sh
 REPLACE_BASH+=	scripts/debug-terraform
 REPLACE_BASH+=	scripts/*.sh
 REPLACE_BASH+=	scripts/*/*.sh
-
-CHECK_RELRO_SKIP+=	bin/terraform
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
