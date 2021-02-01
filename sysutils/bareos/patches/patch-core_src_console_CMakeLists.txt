@@ -1,0 +1,24 @@
+$NetBSD: patch-core_src_console_CMakeLists.txt,v 1.1 2021/02/01 09:08:43 kardel Exp $
+
+	install config file with proper permissions
+
+--- core/src/console/CMakeLists.txt.orig	2021-01-22 17:06:22.267142097 +0000
++++ core/src/console/CMakeLists.txt
+@@ -62,11 +62,15 @@ install(
+   set(DESTDIR \$ENV{DESTDIR})
+   if(NOT EXISTS \$ENV{DESTDIR}${configtemplatedir}/bconsole.conf)
+     message(STATUS \"Installing: \$ENV{DESTDIR}${configtemplatedir}/bconsole.conf\")
+-    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/bconsole.conf DESTINATION \$ENV{DESTDIR}${configtemplatedir})
++    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/bconsole.conf DESTINATION \$ENV{DESTDIR}${configtemplatedir}
++	 FILE_PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ
++    )
+   else()
+     message(STATUS \"Installing: \$ENV{DESTDIR}${configtemplatedir}/bconsole.conf.new\")
+     file(RENAME ${CMAKE_CURRENT_SOURCE_DIR}/bconsole.conf ${CMAKE_CURRENT_SOURCE_DIR}/bconsole.conf.new)
+-    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/bconsole.conf.new DESTINATION \$ENV{DESTDIR}${configtemplatedir})
++    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/bconsole.conf.new DESTINATION \$ENV{DESTDIR}${configtemplatedir}
++	 FILE_PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ
++    )
+     file(RENAME ${CMAKE_CURRENT_SOURCE_DIR}/bconsole.conf.new ${CMAKE_CURRENT_SOURCE_DIR}/bconsole.conf)
+   endif()
+ "

@@ -1,10 +1,10 @@
-$NetBSD: patch-core_src_cats_postgresql__queries.inc,v 1.1 2020/07/28 06:36:29 kardel Exp $
+$NetBSD: patch-core_src_cats_postgresql__queries.inc,v 1.2 2021/02/01 09:08:43 kardel Exp $
 
-	Disambuguate reference columns
+	disambiguate reference columns
 
---- core/src/cats/postgresql_queries.inc.orig	2019-01-31 11:53:07.846130361 +0000
+--- core/src/cats/postgresql_queries.inc.orig	2020-12-16 07:46:16.000000000 +0000
 +++ core/src/cats/postgresql_queries.inc
-@@ -170,7 +170,7 @@ const char *BareosDbPostgresql::query_de
+@@ -171,7 +171,7 @@ const char *BareosDbPostgresql::query_de
  ,
  
  /* 0016_uar_list_jobs */
@@ -13,7 +13,7 @@ $NetBSD: patch-core_src_cats_postgresql__queries.inc,v 1.1 2020/07/28 06:36:29 k
    "FROM Client, Job "
   "WHERE Client.ClientId = Job.ClientId "
     "AND JobStatus IN ('T','W') "
-@@ -179,7 +179,7 @@ const char *BareosDbPostgresql::query_de
+@@ -180,7 +180,7 @@ const char *BareosDbPostgresql::query_de
  ,
  
  /* 0017_uar_print_jobs */
