@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/01/18 10:05:39 adam Exp $
+$NetBSD: distinfo,v 1.9 2021/02/01 10:48:26 fcambus Exp $
 
-SHA1 (lziprecover-1.21.tar.gz) = 455c33b1dba19f3557b08580244eb0f62eaa46d4
-RMD160 (lziprecover-1.21.tar.gz) = 547836793926214b490961bfc4c354c1c892fb50
-SHA512 (lziprecover-1.21.tar.gz) = 4afd3ce319bacdd1870512af5568179c0d472f354b1e1562a54c527a37903ce3f0f0044abf273ecb113a555cc7a33ac343f5dbfb26fa29df9b24ecc9768e4ed5
-Size (lziprecover-1.21.tar.gz) = 112895 bytes
+SHA1 (lziprecover-1.22.tar.gz) = df82a3553a087d8afe93cf0b8da50ce2bc5bdfa5
+RMD160 (lziprecover-1.22.tar.gz) = ed0f2abb129d62262ddd1b16bce5c68cd176fb31
+SHA512 (lziprecover-1.22.tar.gz) = 5fa209f6a80314ba7db45effc2546be660b6a31133570abf2e37a4d570910757fc4241e2496e63a95fadb66cffbca59976a8568659f4e8562baeb16517599e96
+Size (lziprecover-1.22.tar.gz) = 152840 bytes
