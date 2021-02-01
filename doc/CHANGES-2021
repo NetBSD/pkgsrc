@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.745 2021/02/01 10:49:44 he Exp $
+$NetBSD: CHANGES-2021,v 1.746 2021/02/01 10:59:23 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/jimtcl to 0.80 [fcambus 2021-02-01]
 	Updated archivers/lziprecover to 1.22 [fcambus 2021-02-01]
 	Updated security/vault to 1.6.2 [he 2021-02-01]
+	Updated textproc/sub2srt to 0.5.5 [fcambus 2021-02-01]
