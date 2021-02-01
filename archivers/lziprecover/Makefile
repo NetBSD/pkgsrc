@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:29:56 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2021/02/01 10:48:26 fcambus Exp $
 
-DISTNAME=	lziprecover-1.21
+DISTNAME=	lziprecover-1.22
 CATEGORIES=	archivers
-MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/lziprecover/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/lziprecover/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/lzip/lziprecover.html
