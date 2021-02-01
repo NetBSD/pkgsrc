@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.750 2021/02/01 15:52:26 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.751 2021/02/01 17:13:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -911,3 +911,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/byacc to 20210109 [fcambus 2021-02-01]
 	Updated lang/adoptopenjdk11-bin to 11.0.10.9 [ryoon 2021-02-01]
 	Updated lang/openjdk11 to 1.11.0.10.9 [ryoon 2021-02-01]
+	Updated devel/mob to 1.2.0 [schmonz 2021-02-01]
