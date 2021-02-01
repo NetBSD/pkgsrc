@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.734 2021/01/31 19:52:36 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.735 2021/02/01 08:06:32 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -891,3 +891,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/sd version 0.7.6 [pin 2021-01-31]
 	Updated chat/matrix-synapse to 1.26.0 [js 2021-01-31]
 	Added sysutils/restic version 0.11.0 [bsiegert 2021-01-31]
+	Updated net/dbip-asn-lite to 2021.02 [fcambus 2021-02-01]
