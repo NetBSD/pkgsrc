@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/01/29 21:34:25 leot Exp $
+# $NetBSD: Makefile,v 1.23 2021/02/01 16:54:00 tpaul Exp $
 
 DISTNAME=	terraform-provider-aws-3.26.0
 CATEGORIES=	net
@@ -20,8 +20,6 @@ INSTALLATION_DIRS+=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/terraform-provider-aws ${DESTDIR}${PREFIX}/bin
-
-CHECK_RELRO_SKIP+=	bin/terraform-provider-aws
 
 .include "go-modules.mk"
 
