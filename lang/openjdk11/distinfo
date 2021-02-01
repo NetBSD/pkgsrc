@@ -1,21 +1,13 @@
-$NetBSD: distinfo,v 1.20 2020/10/26 22:46:04 tnn Exp $
+$NetBSD: distinfo,v 1.21 2021/02/01 15:51:55 ryoon Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
 SHA512 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = 6e61996f7e3c3492b0c878644db30d72021dc4096639992e53b4440d4e2e18cd92e5630ecd4600d1917a1e63a7c814b63f74f811a40588febfe19ad8d3208a9d
 Size (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = 105760636 bytes
-SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz) = 0ab80546e192cff461dfadf85ca8dc42d11a2710
-RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz) = ec41da372ab1f927295a207a65a2a5f940760339
-SHA512 (bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz) = 1bf5336e9bfeea9ecbcd347f2ea8dd3c9633df42cab13a09c7afaae94faa95b92d862dd97caf380a7037825c3324377240d5d0639b2e0b31a2d7a6316ed56359
-Size (bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz) = 96662264 bytes
-SHA1 (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = a1339a72f399c154104fcf46766b4c259ac24783
-RMD160 (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = edf0054b7c2fa2eff641b2c385a4f9de07eb0247
-SHA512 (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = 735f47d7398a48f0963c5d629c6c319dfe22d84bacd45f84a34f4784433c8cf6bfe6b356363a4591f035bec4a32e2e38d0a9c6be361aa57e5f0170ad4e16a1ad
-Size (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = 99673444 bytes
-SHA1 (openjdk-jdk11u-jdk-11.0.9-11-1.tar.gz) = 055d70cd953b54e7b685d6dc77507d1e59392310
-RMD160 (openjdk-jdk11u-jdk-11.0.9-11-1.tar.gz) = 5b1777ce5a2f7d67653ca3befe497a09d89edfc3
-SHA512 (openjdk-jdk11u-jdk-11.0.9-11-1.tar.gz) = aed2d82dc3a0834699ccbe62b241d78e59dd6c101438f1b97e17a556109ff7d6c9410719be49bbf89f132f187d954475390aa81640fc176b066f9bf0689183eb
-Size (openjdk-jdk11u-jdk-11.0.9-11-1.tar.gz) = 118255644 bytes
+SHA1 (openjdk-jdk11u-jdk-11.0.10-9-1.tar.gz) = 793f282501163f717b7df4305cceae3e283c6896
+RMD160 (openjdk-jdk11u-jdk-11.0.10-9-1.tar.gz) = 1ee3361c24ff183ee580c82e446680da14506bf1
+SHA512 (openjdk-jdk11u-jdk-11.0.10-9-1.tar.gz) = b8d684dad251a7625d2a98286eb85b984a6e0d860e98de845e1adda22ce53e7dba7fce12160ed1fc6a6a0c9bab1d43531174d141e2d7e1e5467b38e06a723bfb
+Size (openjdk-jdk11u-jdk-11.0.10-9-1.tar.gz) = 122486444 bytes
 SHA1 (patch-make_autoconf_basics.m4) = 5a8d3cd229f73eef34fb3860dfae1a813ec39ab5
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 7ec010eb62a1e4f057b7886caf0d0efaae4b6b63
 SHA1 (patch-make_autoconf_jdk-options.m4) = d0d9fbaf29cc521fa4b62b1ea2616dc8f3b07618
@@ -38,5 +30,5 @@ SHA1 (patch-src_java.base_bsd_native_libjava_ProcessHandleImpl__bsd.c) = fbc0aa6
 SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.c) = 39c7afb3c36fa9557d2a660c4b4068b5684c552f
 SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.h) = 121357cb76b4a96c06cc2bf670579e0b27f66fc1
 SHA1 (patch-src_java.base_unix_native_libjsig_jsig.c) = 82e3a8bad9ca18478cad85ada8544712ff117459
-SHA1 (patch-src_java.desktop_share_native_libfontmanager_harfbuzz_hb-blob.cc) = 0a78e7e8db513ddc06a75f6e504f8ce6132b97ec
+SHA1 (patch-src_java.desktop_share_native_libfontmanager_harfbuzz_hb-blob.cc) = 6635bba71373f65107f5324f68de41d1320bcad8
 SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = c27a058dbcc836fa5a9f979f193284a706a7c50b
