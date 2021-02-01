@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.746 2021/02/01 10:59:23 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.747 2021/02/01 11:19:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -907,3 +907,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/lziprecover to 1.22 [fcambus 2021-02-01]
 	Updated security/vault to 1.6.2 [he 2021-02-01]
 	Updated textproc/sub2srt to 0.5.5 [fcambus 2021-02-01]
+	Updated www/emacs-w3m-snapshot to 1.4.632.20210106.2144 [mef 2021-02-01]
