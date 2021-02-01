@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.743 2021/02/01 10:38:43 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.744 2021/02/01 10:48:37 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -904,3 +904,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/bareos-clientonly to 20.0.0 [kardel 2021-02-01]
 	Updated lang/yabasic to 2.89.1 [fcambus 2021-02-01]
 	Updated lang/jimtcl to 0.80 [fcambus 2021-02-01]
+	Updated archivers/lziprecover to 1.22 [fcambus 2021-02-01]
