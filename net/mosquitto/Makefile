@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/01/30 10:17:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/02/01 20:50:01 triaxx Exp $
 
 DISTNAME=	mosquitto-2.0.6
 CATEGORIES=	net
@@ -41,6 +41,7 @@ SMF_METHODS=	mosquitto
 FILES_SUBST+=	MOSQUITTO_USER=${MOSQUITTO_USER}
 FILES_SUBST+=	MOSQUITTO_GROUP=${MOSQUITTO_GROUP}
 FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+FILES_SUBST+= VARBASE=${VARBASE}
 
 # mosquitto's build system is very troubled, and the tests do not
 # currently work.
