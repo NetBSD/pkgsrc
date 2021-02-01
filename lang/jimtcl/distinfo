@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/10/31 01:15:12 kamil Exp $
+$NetBSD: distinfo,v 1.5 2021/02/01 10:38:24 fcambus Exp $
 
-SHA1 (jimtcl-0.77.tar.gz) = 12f921997c140593b2dc82885fb15c2dad8012f0
-RMD160 (jimtcl-0.77.tar.gz) = d6004a841d8032b23a81d72b849c37ff3682a1e8
-SHA512 (jimtcl-0.77.tar.gz) = 47c50abcb06917ec85c19c3ff553bfc635c9fcc4e9ec707d8454adffade071e1f0051ee24b9a9d1dc7b83f5794229629b2de4eb37d0e3e8d6a1ba6bd72564901
-Size (jimtcl-0.77.tar.gz) = 2925776 bytes
-SHA1 (patch-auto.def) = 80ceb87a43873cd159486a04256efa60757bca85
-SHA1 (patch-autosetup_cc.tcl) = 690c50dc850d09655f002fa72f0a2299a560fa65
+SHA1 (jimtcl-0.80.tar.gz) = 3ac6f9ab9c2a6b1203dcfc14e7840b9f6c839226
+RMD160 (jimtcl-0.80.tar.gz) = 5348b1849e3244b670dd392c64b5116ffef50101
+SHA512 (jimtcl-0.80.tar.gz) = 37f14263f2101caaa632acf5e426dd7f1d6f75143875359c1daed59a039a9c64bbdf7941ce12b76bf9b209521b3967fd2b1d94a6afde7b2a8dd173d160858225
+Size (jimtcl-0.80.tar.gz) = 3130592 bytes
