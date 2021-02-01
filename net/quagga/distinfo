@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.33 2020/12/10 17:08:17 kardel Exp $
+$NetBSD: distinfo,v 1.34 2021/02/01 20:51:24 gdt Exp $
 
 SHA1 (quagga-1.2.4.tar.gz) = 8e1471624f5baf54b53be6636e451824d3ef15f6
 RMD160 (quagga-1.2.4.tar.gz) = 9d4b807ce150db9d3cec1f6bf9a3f836d4973428
 SHA512 (quagga-1.2.4.tar.gz) = 3e72440bcccfd3c1a449a62b7ff8623441256399a2bee0a39fa0a19694a5a78ac909c5c2128a24735bc034ea8b0811827293b480a2584a3a4c8ae36be9cf1fcd
 Size (quagga-1.2.4.tar.gz) = 2925847 bytes
-SHA1 (patch-configure) = d3289b94f9aa871678398ccd78f655944277f03f
+SHA1 (patch-configure) = 928aff3c22d9c8d63276d6e787dc503fadcc048a
 SHA1 (patch-lib_thread.c) = 8e3cf21225a1ec5e94ac526b0b5a4e9e66ca4c93
 SHA1 (patch-lib_thread.h) = 1afcc4c4a30dfa2f0e182310568b5e31acec21fb
 SHA1 (patch-solaris_quagga.init.in) = 47569aaffe2713809e21ebbb76164cf50b7f983f

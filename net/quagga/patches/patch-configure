@@ -1,4 +1,5 @@
-$NetBSD: patch-configure,v 1.7 2018/03/01 00:48:04 maya Exp $
+$NetBSD: patch-configure,v 1.8 2021/02/01 20:51:24 gdt Exp $
+
 HAVE_BSD_STRUCT_IP_MREQ_HACK does not work on SunOS
 Results in: can't setsockopt IP_MULTICAST_IF(...): No route to host
 
