@@ -1,4 +1,4 @@
-$NetBSD: patch-src_java.desktop_share_native_libfontmanager_harfbuzz_hb-blob.cc,v 1.1 2020/01/05 13:01:55 rhialto Exp $
+$NetBSD: patch-src_java.desktop_share_native_libfontmanager_harfbuzz_hb-blob.cc,v 1.2 2021/02/01 15:51:55 ryoon Exp $
 
 Completely remove _POSIX_C_SOURCE; with g++7 it causes errors about undeclared
 symbols such as
@@ -17,8 +17,8 @@ Filed upstream report to harfbuzz to patch this the same way:
 https://github.com/harfbuzz/harfbuzz/issues/2084
 
 
---- src/java.desktop/share/native/libfontmanager/harfbuzz/hb-blob.cc.orig	2019-10-16 18:31:09.000000000 +0000
-+++ src/java.desktop/share/native/libfontmanager/harfbuzz/hb-blob.cc
+--- src/java.desktop/share/native/libharfbuzz/hb-blob.cc.orig	2019-10-16 18:31:09.000000000 +0000
++++ src/java.desktop/share/native/libharfbuzz/hb-blob.cc
 @@ -30,12 +30,6 @@
   * http://www.gnu.org/software/libc/manual/html_node/Feature-Test-Macros.html
   * https://www.oracle.com/technetwork/articles/servers-storage-dev/standardheaderfiles-453865.html

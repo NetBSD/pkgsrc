@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/10/26 15:16:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/02/01 15:51:55 ryoon Exp $
 bin/openjdk11-jar
 bin/openjdk11-java
 bin/openjdk11-javac
@@ -563,6 +563,8 @@ java/openjdk11/lib/libextnet${DBGEXT}
 java/openjdk11/lib/libextnet.so
 java/openjdk11/lib/libfontmanager${DBGEXT}
 java/openjdk11/lib/libfontmanager.so
+java/openjdk11/lib/libharfbuzz${DBGEXT}
+java/openjdk11/lib/libharfbuzz.so
 java/openjdk11/lib/libinstrument${DBGEXT}
 java/openjdk11/lib/libinstrument.so
 java/openjdk11/lib/libj2gss${DBGEXT}
