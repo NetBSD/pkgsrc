@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/01/27 23:33:42 tpaul Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/01 16:53:59 tpaul Exp $
 
 DISTNAME=	terraform-provider-vultr-2.1.2
 CATEGORIES=	net
@@ -12,8 +12,6 @@ COMMENT=	Terraform provider for Vultr
 LICENSE=	mpl-2.0
 
 DEPENDS+=	terraform-[0-9]*:../../net/terraform
-
-CHECK_RELRO_SKIP=	bin/terraform-provider-vultr
 
 UNLIMIT_RESOURCES=	datasize virtualsize
 
