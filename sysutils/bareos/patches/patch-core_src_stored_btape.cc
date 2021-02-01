@@ -1,10 +1,10 @@
-$NetBSD: patch-core_src_stored_btape.cc,v 1.1 2020/07/28 06:36:29 kardel Exp $
+$NetBSD: patch-core_src_stored_btape.cc,v 1.2 2021/02/01 09:08:44 kardel Exp $
 
-	Add missing free*() calls to keep smartalloc happy
+	add missing free*() calls
 
---- core/src/stored/btape.cc.orig	2020-04-16 08:31:41.000000000 +0000
+--- core/src/stored/btape.cc.orig	2020-12-16 07:46:16.000000000 +0000
 +++ core/src/stored/btape.cc
-@@ -331,6 +331,7 @@ int main(int margc, char* margv[])
+@@ -327,6 +327,7 @@ int main(int margc, char* margv[])
  
  static void TerminateBtape(int status)
  {
@@ -12,7 +12,7 @@ $NetBSD: patch-core_src_stored_btape.cc,v 1.1 2020/07/28 06:36:29 kardel Exp $
    FreeJcr(jcr);
    jcr = NULL;
  
-@@ -369,6 +370,8 @@ static void TerminateBtape(int status)
+@@ -365,6 +366,8 @@ static void TerminateBtape(int status)
    }
  
    StopWatchdog();
@@ -21,7 +21,7 @@ $NetBSD: patch-core_src_stored_btape.cc,v 1.1 2020/07/28 06:36:29 kardel Exp $
    TermMsg();
    RecentJobResultsList::Cleanup();
    CleanupJcrChain();
-@@ -377,7 +380,6 @@ static void TerminateBtape(int status)
+@@ -373,7 +376,6 @@ static void TerminateBtape(int status)
    exit(status);
  }
  
