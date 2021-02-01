@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.2 2020/04/16 15:03:42 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2021/02/01 14:58:52 ryoon Exp $
 
-SHA1 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz) = 5627bcceee613c4764c120e941c8d24b3e5a6e33
-RMD160 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz) = edb5bf55203fbaed96d6550e893a5b2f329300c8
-SHA512 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz) = fa19880289ce8fa4a72fddd5633cf86a33d9f81346a5a7e51c06d7fc48f1953da01f020d15151d74a624ecc22a9f8f2c8ee4f996a4b3ac2ec79f0fb5207a40f8
-Size (OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz) = 193346198 bytes
+SHA1 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.10_9.tar.gz) = 9b38b341f1f9331afa4bffc848c41d06b7fda67a
+RMD160 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.10_9.tar.gz) = 2cf65d05c2b1cb3c1a8df414621fd23e7aa4e76a
+SHA512 (OpenJDK11U-jdk_x64_linux_hotspot_11.0.10_9.tar.gz) = 993881259ba470030c589f272d239aa185b1b460c4d505a266cb99f7107de2aa646b3cb8bb8d38fa454d226228c6d3dd8245301c8535c7f6b3bec766cc555bf9
+Size (OpenJDK11U-jdk_x64_linux_hotspot_11.0.10_9.tar.gz) = 194069769 bytes
+SHA1 (OpenJDK11U-jdk_x64_mac_hotspot_11.0.10_9.tar.gz) = aa3c18af6f5b0b46e1c8e7f3fea81efc9512f82c
+RMD160 (OpenJDK11U-jdk_x64_mac_hotspot_11.0.10_9.tar.gz) = 3c1f62a95095aee9f0ee3d02ba4a4a67f5425ba1
+SHA512 (OpenJDK11U-jdk_x64_mac_hotspot_11.0.10_9.tar.gz) = cd115893162a9db3e7e5763028a0040eb83773ae82cd056fdb9400ae3a2b720e7e1bee24a0251ea29eb01923400a1c459d3fbca08bf563d15f7434f5a4d6c69f
+Size (OpenJDK11U-jdk_x64_mac_hotspot_11.0.10_9.tar.gz) = 186160219 bytes
