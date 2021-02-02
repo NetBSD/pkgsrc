@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/09/19 13:25:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/02/02 15:33:41 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -3769,6 +3769,7 @@ share/drupal/core/modules/comment/tests/src/Kernel/CommentHostnameTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentIntegrationTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentItemTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentLegacyTest.php
+share/drupal/core/modules/comment/tests/src/Kernel/CommentOrphanTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentStringIdEntitiesTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentUninstallTest.php
 share/drupal/core/modules/comment/tests/src/Kernel/CommentValidationTest.php
@@ -5772,6 +5773,7 @@ share/drupal/core/modules/image/tests/src/Functional/Update/ScaleAndCropAddAncho
 share/drupal/core/modules/image/tests/src/FunctionalJavascript/ImageAdminStylesTest.php
 share/drupal/core/modules/image/tests/src/FunctionalJavascript/ImageFieldTestBase.php
 share/drupal/core/modules/image/tests/src/FunctionalJavascript/ImageFieldValidateTest.php
+share/drupal/core/modules/image/tests/src/FunctionalJavascript/ImageFieldWidgetMultipleTest.php
 share/drupal/core/modules/image/tests/src/FunctionalJavascript/QuickEditImageEditorTestTrait.php
 share/drupal/core/modules/image/tests/src/FunctionalJavascript/QuickEditImageTest.php
 share/drupal/core/modules/image/tests/src/Kernel/ImageFieldCreationTrait.php
@@ -6910,6 +6912,9 @@ share/drupal/core/modules/media_library/tests/fixtures/update/drupal-8.8.x-media
 share/drupal/core/modules/media_library/tests/fixtures/update/drupal-8.media_library-update-form-view-displays-2988433.php
 share/drupal/core/modules/media_library/tests/fixtures/update/drupal-8.media_library-update-view-table-display-2981044.php
 share/drupal/core/modules/media_library/tests/fixtures/update/drupal-8.media_library-update-widget-view-3020716.php
+share/drupal/core/modules/media_library/tests/modules/media_library_form_overwrite_test/media_library_form_overwrite_test.info.yml
+share/drupal/core/modules/media_library/tests/modules/media_library_form_overwrite_test/media_library_form_overwrite_test.module
+share/drupal/core/modules/media_library/tests/modules/media_library_form_overwrite_test/src/Form/TestAddForm.php
 share/drupal/core/modules/media_library/tests/modules/media_library_test/config/install/core.entity_form_display.media.type_five.default.yml
 share/drupal/core/modules/media_library/tests/modules/media_library_test/config/install/core.entity_form_display.media.type_five.media_library.yml
 share/drupal/core/modules/media_library/tests/modules/media_library_test/config/install/core.entity_form_display.media.type_four.default.yml
@@ -6990,6 +6995,7 @@ share/drupal/core/modules/media_library/tests/src/FunctionalJavascript/WidgetWit
 share/drupal/core/modules/media_library/tests/src/Kernel/MediaLibraryAccessTest.php
 share/drupal/core/modules/media_library/tests/src/Kernel/MediaLibraryAddFormTest.php
 share/drupal/core/modules/media_library/tests/src/Kernel/MediaLibraryStateTest.php
+share/drupal/core/modules/media_library/tests/src/Kernel/MediaLibraryWidgetTest.php
 share/drupal/core/modules/menu_link_content/menu_link_content.info.yml
 share/drupal/core/modules/menu_link_content/menu_link_content.install
 share/drupal/core/modules/menu_link_content/menu_link_content.links.menu.yml
@@ -7497,6 +7503,7 @@ share/drupal/core/modules/migrate_drupal_ui/tests/modules/migration_provider_tes
 share/drupal/core/modules/migrate_drupal_ui/tests/modules/migration_provider_test/migrations/migration_provider_no_annotation.yml
 share/drupal/core/modules/migrate_drupal_ui/tests/modules/migration_provider_test/src/Plugin/migrate/source/NoSourceModule.php
 share/drupal/core/modules/migrate_drupal_ui/tests/src/Functional/MigrateAccessTest.php
+share/drupal/core/modules/migrate_drupal_ui/tests/src/Functional/MigrateControllerTest.php
 share/drupal/core/modules/migrate_drupal_ui/tests/src/Functional/MigrateUpgradeExecuteTestBase.php
 share/drupal/core/modules/migrate_drupal_ui/tests/src/Functional/MigrateUpgradeFormStepsTest.php
 share/drupal/core/modules/migrate_drupal_ui/tests/src/Functional/MigrateUpgradeTestBase.php
@@ -7585,6 +7592,7 @@ share/drupal/core/modules/node/node.preview.js
 share/drupal/core/modules/node/node.routing.yml
 share/drupal/core/modules/node/node.services.yml
 share/drupal/core/modules/node/node.tokens.inc
+share/drupal/core/modules/node/node.views.inc
 share/drupal/core/modules/node/node.views_execution.inc
 share/drupal/core/modules/node/src/Access/NodeAddAccessCheck.php
 share/drupal/core/modules/node/src/Access/NodePreviewAccessCheck.php
@@ -7727,6 +7735,7 @@ share/drupal/core/modules/node/tests/modules/node_test_views/test_views/views.vi
 share/drupal/core/modules/node/tests/modules/node_test_views/test_views/views.view.test_node_row_plugin.yml
 share/drupal/core/modules/node/tests/modules/node_test_views/test_views/views.view.test_node_tokens.yml
 share/drupal/core/modules/node/tests/modules/node_test_views/test_views/views.view.test_node_view.yml
+share/drupal/core/modules/node/tests/modules/node_test_views/test_views/views.view.test_node_views_analyze.yml
 share/drupal/core/modules/node/tests/modules/node_test_views/test_views/views.view.test_status_extra.yml
 share/drupal/core/modules/node/tests/node_access_test_auto_bubbling/node_access_test_auto_bubbling.info.yml
 share/drupal/core/modules/node/tests/node_access_test_auto_bubbling/node_access_test_auto_bubbling.routing.yml
@@ -7811,6 +7820,7 @@ share/drupal/core/modules/node/tests/src/Functional/Views/NodeIntegrationTest.ph
 share/drupal/core/modules/node/tests/src/Functional/Views/NodeLanguageTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/NodeRevisionWizardTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/NodeTestBase.php
+share/drupal/core/modules/node/tests/src/Functional/Views/NodeViewsAnalyzeTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/PathPluginTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/RevisionLinkTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/RowPluginTest.php
@@ -9150,14 +9160,12 @@ share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.install
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.make
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.module
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.module.bak
-share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.module.orig
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.module.save
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.module.swo
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.module.swp
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.module~
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.php-info.txt
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.php.bak
-share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.php.orig
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.php.save
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.php.swo
 share/drupal/core/modules/system/tests/fixtures/HtaccessTest/access_test.php.swp
@@ -9452,6 +9460,7 @@ share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTest
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestMultiValueBasefield.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestNew.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestNoBundle.php
+share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestNoBundleWithLabel.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestNoId.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestNoLabel.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestNoUuid.php
@@ -10980,6 +10989,7 @@ share/drupal/core/modules/update/tests/fixtures/release-history/drupal.1.1-beta1
 share/drupal/core/modules/update/tests/fixtures/release-history/drupal.1.1-core_compatibility.xml
 share/drupal/core/modules/update/tests/fixtures/release-history/drupal.1.1.xml
 share/drupal/core/modules/update/tests/fixtures/release-history/drupal.9.xml
+share/drupal/core/modules/update/tests/fixtures/release-history/drupal.broken.xml
 share/drupal/core/modules/update/tests/fixtures/release-history/drupal.dev.xml
 share/drupal/core/modules/update/tests/fixtures/release-history/drupal.sec.0.1_0.2.xml
 share/drupal/core/modules/update/tests/fixtures/release-history/drupal.sec.0.2-rc2-b.xml
@@ -13254,6 +13264,7 @@ share/drupal/core/scripts/css/log.js
 share/drupal/core/scripts/css/postcss-build.js
 share/drupal/core/scripts/css/postcss-watch.js
 share/drupal/core/scripts/db-tools.php
+share/drupal/core/scripts/dev/commit-code-check.sh
 share/drupal/core/scripts/drupal
 share/drupal/core/scripts/drupal.sh
 share/drupal/core/scripts/dump-database-d6.sh
@@ -13680,6 +13691,7 @@ share/drupal/core/tests/Drupal/KernelTests/Core/Field/FieldAccessTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Field/FieldItemTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Field/FieldMissingTypeTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Field/FieldSettingsTest.php
+share/drupal/core/tests/Drupal/KernelTests/Core/Field/MapBaseFieldTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/File/DirectoryTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/File/FileCopyTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/File/FileDeleteRecursiveTest.php
@@ -14619,6 +14631,8 @@ share/drupal/core/tests/fixtures/files/sql-1.txt
 share/drupal/core/tests/fixtures/files/sql-2.sql
 share/drupal/core/tests/fixtures/files/translations/drupal-8.0.0-beta2.hu.po
 share/drupal/core/tests/fixtures/files/translations/drupal-8.0.0.de.po
+share/drupal/core/tests/fixtures/files/translations/drupal-8.0.0.fr____CA.po
+share/drupal/core/tests/fixtures/files/translations/drupal-8.0.x.fr-CA.po
 share/drupal/core/tests/fixtures/test_stable/test_stable.info.yml
 share/drupal/core/tests/fixtures/test_stable/test_stable.theme
 share/drupal/core/themes/bartik/README.txt
@@ -16079,8 +16093,12 @@ share/drupal/vendor/composer/autoload_real.php
 share/drupal/vendor/composer/autoload_static.php
 share/drupal/vendor/composer/include_paths.php
 share/drupal/vendor/composer/installed.json
+share/drupal/vendor/composer/installers/.github/workflows/continuous-integration.yml
+share/drupal/vendor/composer/installers/.github/workflows/lint.yml
+share/drupal/vendor/composer/installers/.github/workflows/phpstan.yml
 share/drupal/vendor/composer/installers/LICENSE
 share/drupal/vendor/composer/installers/composer.json
+share/drupal/vendor/composer/installers/phpstan.neon.dist
 share/drupal/vendor/composer/installers/src/Composer/Installers/AglInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/AimeosInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/AnnotateCmsInstaller.php
@@ -16149,6 +16167,7 @@ share/drupal/vendor/composer/installers/src/Composer/Installers/PlentymarketsIns
 share/drupal/vendor/composer/installers/src/Composer/Installers/Plugin.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/PortoInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/PrestashopInstaller.php
+share/drupal/vendor/composer/installers/src/Composer/Installers/ProcessWireInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/PuppetInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/PxcmsInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/RadPHPInstaller.php
@@ -16160,6 +16179,7 @@ share/drupal/vendor/composer/installers/src/Composer/Installers/SMFInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/ShopwareInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/SilverStripeInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/SiteDirectInstaller.php
+share/drupal/vendor/composer/installers/src/Composer/Installers/StarbugInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/SyDESInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/SyliusInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/Symfony1Installer.php
@@ -16901,6 +16921,9 @@ share/drupal/vendor/paragonie/random_compat/lib/random.php
 share/drupal/vendor/paragonie/random_compat/other/build_phar.php
 share/drupal/vendor/paragonie/random_compat/psalm-autoload.php
 share/drupal/vendor/paragonie/random_compat/psalm.xml
+share/drupal/vendor/pear/archive_tar/.github/FUNDING.yml
+share/drupal/vendor/pear/archive_tar/.github/dependabot.yml
+share/drupal/vendor/pear/archive_tar/.github/workflows/build.yml
 share/drupal/vendor/pear/archive_tar/.gitignore
 share/drupal/vendor/pear/archive_tar/.travis.yml
 share/drupal/vendor/pear/archive_tar/Archive/Tar.php
