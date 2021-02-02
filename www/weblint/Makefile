@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2020/08/31 18:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2021/02/02 09:13:36 wiz Exp $
 
 DISTNAME=	weblint-1.020
 PKGREVISION=	9
 CATEGORIES=	www
-MASTER_SITES=	http://www.perl.com/CPAN/authors/id/NEILB/
+MASTER_SITES=	http://www.perl.org/CPAN/authors/id/NEILB/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.weblint.org/
