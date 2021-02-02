@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/01/23 01:18:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.8 2021/02/02 01:18:24 gutteridge Exp $
 
 DISTNAME=	jna-5.2.0
 PKGNAME=	java-${DISTNAME}
@@ -76,6 +76,9 @@ ANT_ARGS+=	-Ddynlink.native=true
 ANT_ARGS+=	-Dbuild-native=true
 ANT_ARGS+=	-Dcflags_extra.native=""
 ANT_ARGS+=	-DCC=${CC}
+ANT_ARGS+=	-Dgrep=grep
+ANT_ARGS+=	-Dmake=make
+ANT_ARGS+=	-Dmake.PATH=PATH=${PATH:Q}
 ANT_TARGET=	jar contrib-jars javadoc
 
 # Needed with recent GCC versions, e.g., 9.3.
@@ -86,9 +89,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unknown-warning-option
 
 do-build:
 	cd ${WRKSRC} && \
-	    ${_ULIMIT_CMD}${SETENV} ${MAKE_ENV} \
-	    -Dgrep=grep -Dmake=make -Dmake.PATH=PATH=${PATH:Q} \
-	    ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
+	    ${_ULIMIT_CMD}${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/build/native-*/${JNIPFX}jnidispatch.${JNISFX} \
