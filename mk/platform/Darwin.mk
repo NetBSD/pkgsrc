@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.101 2020/10/30 17:28:25 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.102 2021/02/02 15:47:54 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -105,7 +105,15 @@ MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 .elif exists(/usr/bin/xcrun)
 .  if !defined(OSX_SDK_PATH)
-OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${OSX_VERSION} --show-sdk-path 2>/dev/null || echo /nonexistent
+#
+# Apple do not always keep the SDK version in step with the OS version.  When
+# that happens add a mapping below, but only within the same OS release major.
+#
+OSX_SDK_MAP.11.2=	11.1
+#
+OSX_SDK_PATH!=	/usr/bin/xcrun \
+		    --sdk macosx${OSX_SDK_MAP.${OSX_VERSION}:U${OSX_VERSION}} \
+		    --show-sdk-path 2>/dev/null || echo /nonexistent
 OSX_TOLERATE_SDK_SKEW?=	no
 .    if ${OSX_SDK_PATH} == "/nonexistent" && !empty(OSX_TOLERATE_SDK_SKEW:M[Yy][Ee][Ss])
 OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx --show-sdk-path 2>/dev/null || echo /nonexistent
