@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2020/09/19 13:25:40 taca Exp $
+# $NetBSD: Makefile,v 1.36 2021/02/02 15:33:41 taca Exp $
 
-DISTNAME=	drupal-8.9.6
+DISTNAME=	drupal-8.9.13
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
@@ -23,7 +23,7 @@ PKG_GROUPS_VARS+=	WWW_GROUP
 PKG_USERS_VARS+=	WWW_USER
 
 BUILD_DEFS+=		WWW_USER WWW_GROUP
-USE_TOOLS+=		pax
+USE_TOOLS+=		bash:run pax
 
 OWN_DIRS_PERMS+=	${DRUPAL}/sites/default \
 			${WWW_USER} ${WWW_GROUP} 0750
@@ -49,6 +49,8 @@ REPLACE_SH+=		core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/scripts/
 REPLACE_SH+=		vendor/paragonie/random_compat/build-phar.sh
 REPLACE_SH+=		vendor/twig/twig/drupal_test.sh
 
+REPLACE_BASH+=		core/scripts/dev/commit-code-check.sh
+
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	drupal.conf
@@ -63,9 +65,10 @@ INSTALLATION_DIRS+=	${DRUPAL}/${i}
 
 .include "options.mk"
 
-post-extract:
+pre-configure:
 	${CP} ${FILESDIR}/drupal.conf ${WRKSRC}
 	${CHMOD} 0644 ${WRKSRC}/core/scripts/run-tests.sh
+	${FIND} ${WRKSRC} -type f -name '*.orig' -exec ${RM} -f {} \;
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${DRUPAL}
