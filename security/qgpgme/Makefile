@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/11/05 09:07:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2021/02/02 12:05:48 ryoon Exp $
 
 DISTNAME=	gpgme-1.10.0
 PKGNAME=	qgpgme-1.10.0
@@ -17,8 +17,6 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
 BUILD_DIRS=	lang/qt/src
-
-CONFIGURE_ENV+=	MOC=${QTDIR}/bin/moc
 
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
