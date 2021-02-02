@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2020/11/05 09:07:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2021/02/02 12:00:13 ryoon Exp $
 
 BUILDLINK_TREE+=	qt5-qtbase
 
@@ -18,6 +18,9 @@ CMAKE_PREFIX_PATH+=	${QTDIR}
 
 CONFIGURE_ENV+=	QTDIR=${QTDIR}
 MAKE_ENV+=	QTDIR=${QTDIR}
+
+CONFIGURE_ENV+=	MOC="${QTDIR}/bin/moc"
+MAKE_ENV+=	MOC="${QTDIR}/bin/moc"
 
 PTHREAD_OPTS+=	require
 
