@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.756 2021/02/02 15:34:04 taca Exp $
+$NetBSD: CHANGES-2021,v 1.757 2021/02/02 15:36:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -917,3 +917,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-xdebug to 3.0.2 [taca 2021-02-02]
 	Updated www/drupal7 to 7.78 [taca 2021-02-02]
 	Updated www/drupal8 to 8.9.13 [taca 2021-02-02]
+	Updated databases/ruby-sequel to 5.41.0 [taca 2021-02-02]
