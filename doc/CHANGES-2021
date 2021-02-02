@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.752 2021/02/01 20:38:20 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.753 2021/02/02 10:17:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/openjdk11 to 1.11.0.10.9 [ryoon 2021-02-01]
 	Updated devel/mob to 1.2.0 [schmonz 2021-02-01]
 	Updated devel/py-approvaltests to 0.3.1 [schmonz 2021-02-01]
+	Added sysutils/krusader to 2.7.2 [markd 2021-02-02]
