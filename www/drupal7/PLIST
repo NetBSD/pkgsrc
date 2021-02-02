@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/06/18 14:08:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.27 2021/02/02 15:19:42 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -984,6 +984,8 @@ share/drupal/modules/update/update.module
 share/drupal/modules/update/update.report.inc
 share/drupal/modules/update/update.settings.inc
 share/drupal/modules/update/update.test
+share/drupal/modules/user/tests/user_flood_test.info
+share/drupal/modules/user/tests/user_flood_test.module
 share/drupal/modules/user/tests/user_form_test.info
 share/drupal/modules/user/tests/user_form_test.module
 share/drupal/modules/user/tests/user_session_test.info
