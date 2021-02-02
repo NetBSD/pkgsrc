@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.753 2021/02/02 10:17:33 markd Exp $
+$NetBSD: CHANGES-2021,v 1.754 2021/02/02 15:03:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -914,3 +914,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mob to 1.2.0 [schmonz 2021-02-01]
 	Updated devel/py-approvaltests to 0.3.1 [schmonz 2021-02-01]
 	Added sysutils/krusader to 2.7.2 [markd 2021-02-02]
+	Updated devel/php-xdebug to 3.0.2 [taca 2021-02-02]
