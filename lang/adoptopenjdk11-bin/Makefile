@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2021/02/01 14:58:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2021/02/02 11:57:40 ryoon Exp $
 
-DISTNAME=	OpenJDK11U-jdk_x64_${EMUL_OPSYS:tl}_hotspot_11.0.10_9
 PKGNAME=	adoptopenjdk11-bin-${GITHUB_RELEASE:S/jdk-//:S/+/./}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdoptOpenJDK/}
@@ -45,7 +44,7 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jmap jps jstack \
 		keytool orbd policytool rmid rmiregistry servertool tnameserv
 
 do-install:
-	cd ${WRKSRC} && pax -rwp ma . ${DESTDIR}${JAVA_HOME}
+	cd ${WRKSRC} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
 
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
