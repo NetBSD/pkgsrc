@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2020/06/25 12:25:19 nia Exp $
+# $NetBSD: options.mk,v 1.17 2021/02/02 12:05:48 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
@@ -108,7 +108,6 @@ CONFIGURE_ARGS+=	--disable-pulse
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 # error: "You must build your code with position independent code if Qt was built with -reduce-relocations."
 CFLAGS+=		-fPIC
-CONFIGURE_ENV+=		MOC=${QTDIR}/bin/moc
 CONFIGURE_ARGS+=	--enable-qt
 .else
 CONFIGURE_ARGS+=	--disable-qt
