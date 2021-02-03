@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.790 2021/02/03 15:05:20 taca Exp $
+$NetBSD: CHANGES-2021,v 1.791 2021/02/03 15:07:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.6 [taca 2021-02-03]
 	Updated security/ruby-rubyntlm to 0.6.3 [taca 2021-02-03]
 	Updated security/ruby-oauth to 0.5.5 [taca 2021-02-03]
+	Updated security/ruby-sshkit to 1.21.2 [taca 2021-02-03]
