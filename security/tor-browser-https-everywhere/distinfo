@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/11/23 16:02:22 wiz Exp $
+$NetBSD: distinfo,v 1.5 2021/02/03 20:20:33 wiz Exp $
 
-SHA1 (https-everywhere-2020.11.17-eff.xpi) = a17ecfc4930de5ba922e7930892bec9387dfed4a
-RMD160 (https-everywhere-2020.11.17-eff.xpi) = 473b7f19d8775851e84f031c5a5e153aa1c9b0c5
-SHA512 (https-everywhere-2020.11.17-eff.xpi) = 38f469ee9f5bf45c9ab7c10135a77ba9566dad69c3b0da2ae4c288fd8f2eb24445cdc8ec00cf7c80cfdca08204b639564ea7a3dae8a9a9fd6a7ce4f836b86b09
-Size (https-everywhere-2020.11.17-eff.xpi) = 1739720 bytes
+SHA1 (https-everywhere-2021.1.27-eff.xpi) = eb3d4e665281573ca4c55f0a8bfbcc1c250a24b6
+RMD160 (https-everywhere-2021.1.27-eff.xpi) = 841d6c1edf6c404c732c0454fdc68b25b8029075
+SHA512 (https-everywhere-2021.1.27-eff.xpi) = cb8f7578e611783c40804f66210228a508e25b4e432d0a26fd6d453b897472b4dc9729128c4baa3b99ababf1a6a292d25923e195afe77a4b6c7c042b6bd47255
+Size (https-everywhere-2021.1.27-eff.xpi) = 1742613 bytes
