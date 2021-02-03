@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/01/11 14:03:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/02/03 14:25:36 taca Exp $
 bin/bundle2-${RUBY_SUFFIX}
 bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -179,6 +179,7 @@ ${GEM_LIBDIR}/lib/bundler/templates/Executable.bundler
 ${GEM_LIBDIR}/lib/bundler/templates/Executable.standalone
 ${GEM_LIBDIR}/lib/bundler/templates/Gemfile
 ${GEM_LIBDIR}/lib/bundler/templates/gems.rb
+${GEM_LIBDIR}/lib/bundler/templates/newgem/CHANGELOG.md.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/CODE_OF_CONDUCT.md.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/Gemfile.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/LICENSE.txt.tt
