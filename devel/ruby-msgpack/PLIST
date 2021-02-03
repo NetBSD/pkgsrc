@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/10/30 15:14:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/02/03 14:10:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
@@ -8,7 +8,7 @@ ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/bench/pack.rb
