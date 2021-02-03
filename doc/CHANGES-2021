@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.762 2021/02/03 09:35:41 jaapb Exp $
+$NetBSD: CHANGES-2021,v 1.763 2021/02/03 09:37:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -923,3 +923,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-Levenshtein to 0.12.2 [gutteridge 2021-02-03]
 	Updated www/lighttpd to 1.4.59 [schmonz 2021-02-03]
 	Updated devel/ocaml-optint to 0.0.4nb1 [jaapb 2021-02-03]
+	Updated textproc/aspell-en to 2020.12.07.0 [nia 2021-02-03]
