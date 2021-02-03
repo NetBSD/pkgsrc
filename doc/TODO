@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20356 2021/01/31 14:36:23 wiz Exp $
+$NetBSD: TODO,v 1.20357 2021/02/03 20:00:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
 	o asterisk13-13.21.1
-	o autoconf-2.71
 	o autoconvert-0.3.16
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.16

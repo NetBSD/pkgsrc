@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.805 2021/02/03 19:55:36 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.806 2021/02/03 20:00:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -968,3 +968,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-mongo to 3.11.3 [adam 2021-02-03]
 	Updated devel/py-lru-dict to 1.1.7 [adam 2021-02-03]
 	Updated net/tor to 0.4.4.7 [wiz 2021-02-03]
+	Updated devel/autoconf to 2.71 [wiz 2021-02-03]
