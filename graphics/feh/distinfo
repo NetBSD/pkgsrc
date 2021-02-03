@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.58 2021/01/22 16:23:30 nia Exp $
+$NetBSD: distinfo,v 1.59 2021/02/03 09:51:55 nia Exp $
 
-SHA1 (feh-3.6.2.tar.bz2) = 0da3f10c61a6223a32ac6b8cfaf57eec40cf213c
-RMD160 (feh-3.6.2.tar.bz2) = 430732d5a5a9a427f8cb411bd9883532000df5a6
-SHA512 (feh-3.6.2.tar.bz2) = d3a14d7880387575a224bc5cdf1b63bfc5bd793c52fdc07620ddd80e1309a6b9a0c93f3f66ad08a0221f04eabb226372fcb14849a8682c4a2b4691981bb80c40
-Size (feh-3.6.2.tar.bz2) = 2116515 bytes
+SHA1 (feh-3.6.3.tar.bz2) = 16a06ec89a3f65247f0d4d5e8cfd5b7be691e358
+RMD160 (feh-3.6.3.tar.bz2) = f513fa97df87e2137733d9514af77171a09bebb6
+SHA512 (feh-3.6.3.tar.bz2) = 53e9e1903f256fee9d49af2f8ce4bf153317e7d5de6b396448f16fd54ae1a13217edb44566cd0433e25675a25175cc412a726f058856136f19629661e2f62ce2
+Size (feh-3.6.3.tar.bz2) = 2116771 bytes
 SHA1 (patch-config.mk) = af7990e42c4c0a351c0d40eeb8221cd619ef72fb
 SHA1 (patch-src_getopt.c) = 1a91896a7bed8670fc44798308341633f818ebdc
 SHA1 (patch-src_gib__imlib.c) = 4f231e1bd8698e0bff796fab6b553649c31e1650
