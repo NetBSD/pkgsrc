@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/12/09 09:46:11 adam Exp $
+$NetBSD: distinfo,v 1.8 2021/02/03 18:35:36 adam Exp $
 
-SHA1 (pymongo-3.11.2.tar.gz) = d673cefa65902268a230b50b5a953ca3a94f14e5
-RMD160 (pymongo-3.11.2.tar.gz) = b9044cd2e2248caa1ae934a4c997e5e7a988b881
-SHA512 (pymongo-3.11.2.tar.gz) = 07f8dd60427d17a23ea264e594c3b2d62ccc4b966238191a5f2d24f2e4558afdf6faad355bfc546790cab173222ccd76afa6d803bbff2a04279c46f06db36572
-Size (pymongo-3.11.2.tar.gz) = 770595 bytes
+SHA1 (pymongo-3.11.3.tar.gz) = 6f25f6e482c60d36e68267161afad0ec2aa73565
+RMD160 (pymongo-3.11.3.tar.gz) = 969e107d0d8816b5c1677d38a862b24b86b4d172
+SHA512 (pymongo-3.11.3.tar.gz) = c4e2aa290a65f47feb62c7931469b2648c1e13f1f294ebcda42b735b076422745e59ef9595a04def1f368fe4bd073e1396a4e0baecf72e9942d3df06d0f3e7f7
+Size (pymongo-3.11.3.tar.gz) = 777381 bytes
