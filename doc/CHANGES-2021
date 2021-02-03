@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.812 2021/02/03 20:20:42 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.813 2021/02/03 22:32:19 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -975,3 +975,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ImageMagick to 7.0.10.61 [wiz 2021-02-03]
 	Updated devel/py-packaging to 20.9 [wiz 2021-02-03]
 	Updated security/tor-browser-https-everywhere to 2021.1.27 [wiz 2021-02-03]
+	Updated sysutils/xenkernel413 to 4.13.2nb5 [bouyer 2021-02-03]
+	Updated sysutils/xentools413 to 4.13.2nb3 [bouyer 2021-02-03]
