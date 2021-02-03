@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2021/01/24 19:13:06 maya Exp $
+# $NetBSD: Makefile,v 1.498 2021/02/03 16:09:25 nia Exp $
 #
 
 COMMENT=	Games
@@ -317,6 +317,7 @@ SUBDIR+=	oshu
 SUBDIR+=	pag
 SUBDIR+=	palapeli
 SUBDIR+=	picmi
+SUBDIR+=	pinball
 SUBDIR+=	pingus
 SUBDIR+=	pioneers
 SUBDIR+=	plib
