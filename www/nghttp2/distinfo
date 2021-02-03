@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.45 2020/11/26 13:51:51 adam Exp $
+$NetBSD: distinfo,v 1.46 2021/02/03 13:16:19 adam Exp $
 
-SHA1 (nghttp2-1.42.0.tar.xz) = 14dd521c8f88c18dbc91561b11832a6f59428296
-RMD160 (nghttp2-1.42.0.tar.xz) = 621df8daf88dcf017c5b426be09d99ab5dd1857d
-SHA512 (nghttp2-1.42.0.tar.xz) = 1d93e6262c5538e26fbf36567230b4a239dbdfee26198b1e1d5862bf4459ae435679674c047407f5c604ddff91d7717d8515532e00bcdb2aa75f27ff97dce60c
-Size (nghttp2-1.42.0.tar.xz) = 3973284 bytes
+SHA1 (nghttp2-1.43.0.tar.xz) = b9d846e53af53fc5814015c9d3d6c0d2c684c046
+RMD160 (nghttp2-1.43.0.tar.xz) = 180e966e128d9ca097f9c469508168bc0ac5beee
+SHA512 (nghttp2-1.43.0.tar.xz) = eac69ba356870a1cba420a06771082897be8dd40a68f4e04223f41f3d22626e4f5b3766d3dbcc496dd212be01f64c3ac280a2ebddd31dd88f7350c20f56e5d39
+Size (nghttp2-1.43.0.tar.xz) = 3973500 bytes
