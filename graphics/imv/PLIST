@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/11 15:18:46 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/03 10:43:42 nia Exp $
 bin/imv
 bin/imv-msg
 ${PLIST.all}bin/imv-wayland
@@ -7,3 +7,4 @@ man/man1/imv-msg.1
 man/man1/imv.1
 man/man5/imv.5
 share/applications/imv.desktop
+share/examples/imv/imv_config
