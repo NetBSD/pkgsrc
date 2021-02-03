@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.800 2021/02/03 15:45:11 taca Exp $
+$NetBSD: CHANGES-2021,v 1.801 2021/02/03 15:48:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -962,3 +962,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-capybara to 3.35.3 [taca 2021-02-03]
 	Updated www/ruby-css-parser to 1.8.0 [taca 2021-02-03]
 	Updated www/ruby-mechanize to 2.7.7 [taca 2021-02-03]
+	Updated www/ruby-puma to 5.2.0 [taca 2021-02-03]
