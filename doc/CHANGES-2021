@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.808 2021/02/03 20:05:10 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.809 2021/02/03 20:13:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -971,3 +971,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/autoconf to 2.71 [wiz 2021-02-03]
 	Updated devel/bison to 3.7.5 [wiz 2021-02-03]
 	Updated audio/fluidsynth to 2.1.7 [wiz 2021-02-03]
+	Updated audio/libmysofa to 1.2 [wiz 2021-02-03]
