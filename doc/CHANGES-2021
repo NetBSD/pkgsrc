@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.784 2021/02/03 14:38:54 taca Exp $
+$NetBSD: CHANGES-2021,v 1.785 2021/02/03 14:43:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -945,3 +945,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/ruby-winrm-elevated version 1.2.3 [taca 2021-02-03]
 	Updated net/ruby-winrm to 2.3.6 [taca 2021-02-03]
 	Updated print/ruby-pdf-reader to 2.4.2 [taca 2021-02-03]
+	Updated security/ruby-metasploit-concern to 3.0.1 [taca 2021-02-03]
