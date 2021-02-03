@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/01/20 09:09:41 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/02/03 01:09:31 gutteridge Exp $
 
-SHA1 (python-Levenshtein-0.12.1.tar.gz) = 54a5ca861ec021d76c113a4e490993f8bcad50da
-RMD160 (python-Levenshtein-0.12.1.tar.gz) = 6f341d2446d03d713591a62b4ce05fce1274ed87
-SHA512 (python-Levenshtein-0.12.1.tar.gz) = e5b9dfda4ebe1f1111e2ac86219be5659a763368759d13393bd32c6c5d78d9b183c757c7e8ff1bd8a2f73450f0a255cc78664f03d899e1e5af2e58d871843722
-Size (python-Levenshtein-0.12.1.tar.gz) = 50567 bytes
+SHA1 (python-Levenshtein-0.12.2.tar.gz) = b8e9f27cbf0db19c1722eb1cfedad0723c151f51
+RMD160 (python-Levenshtein-0.12.2.tar.gz) = 931756275747d8762f6082bddba447dfc710f81c
+SHA512 (python-Levenshtein-0.12.2.tar.gz) = 97eac9d19121758af7620ad3963846e48434ceabb5376a83f28452015adf1a620620bfb53edb1c4f60b0fc8ec2b0faf35a105d7e2a0fc5df7a45fce81ba0dcdb
+Size (python-Levenshtein-0.12.2.tar.gz) = 50502 bytes
