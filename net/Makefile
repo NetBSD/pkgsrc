@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1377 2021/01/27 23:35:05 tpaul Exp $
+# $NetBSD: Makefile,v 1.1378 2021/02/03 14:33:17 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -838,6 +838,7 @@ SUBDIR+=	ruby-twitter-stream
 SUBDIR+=	ruby-twitter-text
 SUBDIR+=	ruby-twitter-text-simpleidn
 SUBDIR+=	ruby-winrm
+SUBDIR+=	ruby-winrm-elevated
 SUBDIR+=	ruby-winrm-fs
 SUBDIR+=	ruby-xdr
 SUBDIR+=	s6-dns
