@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2021/01/02 20:38:56 js Exp $
+$NetBSD: distinfo,v 1.31 2021/02/03 20:00:38 wiz Exp $
 
-SHA1 (autoconf-2.70.tar.gz) = 890559932abf6181677eff03674fd7ad157dbc8f
-RMD160 (autoconf-2.70.tar.gz) = c2fa2477310d3290f3a4f4b90acb34b21c23601d
-SHA512 (autoconf-2.70.tar.gz) = 39bc9340d4c5fcf3d6c3842ac04ed90bf06216092023208fc29cf9fd491d43cd127873982eeb2a37cec8606b0b1ea4f7ab1b76350b334195f2120b064c620cc8
-Size (autoconf-2.70.tar.gz) = 2079248 bytes
+SHA1 (autoconf-2.71.tar.gz) = abe5a4bcf06ebd1bbbf81007159df346f5c1db8b
+RMD160 (autoconf-2.71.tar.gz) = d043f9408869e0fdb4b9d797f385ada78b1a28fb
+SHA512 (autoconf-2.71.tar.gz) = 2bc5331f9807da8754b2ee623a30299cc0d103d6f98068a4c22263aab67ff148b7ad3a1646bd274e604bc08a8ef0ac2601e6422e641ad0cfab2222d60a58c5a8
+Size (autoconf-2.71.tar.gz) = 2003781 bytes
 SHA1 (patch-lib_autoconf_fortran.m4) = 4ac5fd71faf537b9839734a17da8d9890522252e
