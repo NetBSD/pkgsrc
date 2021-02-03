@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/01/11 09:01:51 taca Exp $
+# $NetBSD: Makefile,v 1.23 2021/02/03 14:38:31 taca Exp $
 
-DISTNAME=	pdf-reader-2.4.1
-PKGREVISION=	1
+DISTNAME=	pdf-reader-2.4.2
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,7 +17,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-ttfunk>=0:../../fonts/ruby-ttfunk
 USE_LANGUAGES=	# none
 
 RUBYGEM_OPTIONS+=	--format-executable
-OVERRIDE_GEMSPEC+=	Ascii85>=1.0.0
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
