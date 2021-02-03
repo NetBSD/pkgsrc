@@ -1,12 +1,12 @@
-$NetBSD: patch-op_sun.c,v 1.1 2019/02/11 10:07:37 nia Exp $
+$NetBSD: patch-op_sun.c,v 1.2 2021/02/03 09:46:08 nia Exp $
 
 Fix build on SunOS.
 
---- op/sun.c.orig	2011-11-30 09:57:20.000000000 +0100
-+++ op/sun.c	2012-02-15 21:12:09.658462551 +0100
-@@ -32,6 +32,26 @@
- #include "sf.h"
- #include "xmalloc.h"
+--- op/sun.c.orig	2021-01-22 19:34:38.000000000 +0000
++++ op/sun.c
+@@ -31,6 +31,26 @@
+ #include "../sf.h"
+ #include "../xmalloc.h"
  
 +/* Compatibility defines, for old *BSD or SunOS systems */
 +#ifndef AUDIO_ENCODING_SLINEAR_LE
@@ -31,7 +31,7 @@ Fix build on SunOS.
  static sample_format_t sun_sf;
  static int sun_fd = -1;
  
-@@ -39,7 +59,11 @@ static char *sun_audio_device = NULL;
+@@ -38,7 +58,11 @@ static char *sun_audio_device = NULL;
  
  static int sun_reset(void)
  {
@@ -43,7 +43,7 @@ Fix build on SunOS.
  		return -1;
  
  	return 0;
-@@ -57,7 +81,13 @@ static int sun_set_sf(sample_format_t sf
+@@ -56,7 +80,13 @@ static int sun_set_sf(sample_format_t sf
  	ainf.play.channels = sf_get_channels(sun_sf);
  	ainf.play.sample_rate = sf_get_rate(sun_sf);
  	ainf.play.pause = 0;
