@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.775 2021/02/03 14:16:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.776 2021/02/03 14:17:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -936,3 +936,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-msgpack to 1.4.2 [taca 2021-02-03]
 	Added devel/ruby-red-colors version 0.1.1 [taca 2021-02-03]
 	Updated devel/ruby-rspec-support to 3.10.2 [taca 2021-02-03]
+	Updated devel/ruby-rspec-mocks to 3.10.2 [taca 2021-02-03]
