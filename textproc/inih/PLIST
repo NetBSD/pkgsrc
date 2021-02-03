@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/03 10:28:41 nia Exp $
+include/INIReader.h
+include/ini.h
+lib/libINIReader.so
+lib/libINIReader.so.0
+lib/libinih.so
+lib/libinih.so.0
+lib/pkgconfig/INIReader.pc
+lib/pkgconfig/inih.pc
