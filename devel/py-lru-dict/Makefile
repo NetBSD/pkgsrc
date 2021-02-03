@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/11/27 23:28:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/03 18:38:02 adam Exp $
 
-DISTNAME=	lru-dict-1.1.6
+DISTNAME=	lru-dict-1.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lru-dict/}
@@ -9,8 +9,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/amitdev/lru-dict
 COMMENT=	Dict-like LRU container
 LICENSE=	mit
-
-USE_LANGUAGES=	c
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
