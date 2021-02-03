@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.773 2021/02/03 14:11:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.774 2021/02/03 14:14:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -934,3 +934,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/ncspot to 0.4.0 [pin 2021-02-03]
 	Updated devel/ruby-i18n to 1.8.8 [taca 2021-02-03]
 	Updated devel/ruby-msgpack to 1.4.2 [taca 2021-02-03]
+	Added devel/ruby-red-colors version 0.1.1 [taca 2021-02-03]
