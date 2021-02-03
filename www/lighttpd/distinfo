@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.60 2020/12/28 09:35:04 schmonz Exp $
+$NetBSD: distinfo,v 1.61 2021/02/03 08:49:49 schmonz Exp $
 
-SHA1 (lighttpd-1.4.58.tar.xz) = b7415dde6a3ef4d99a48f61bef78625c79838891
-RMD160 (lighttpd-1.4.58.tar.xz) = f5e9b92aa2bcc9f173d53e7e2a5e1881011ba87f
-SHA512 (lighttpd-1.4.58.tar.xz) = b7f18223e46bf78f866eb22f44a7702df07424271e085da9f0d03e626198c30e87a3959536d02e3588aa47ba4bc7db7c432307175fb3b25a2984f9cf692c0ca4
-Size (lighttpd-1.4.58.tar.xz) = 956828 bytes
+SHA1 (lighttpd-1.4.59.tar.xz) = f954a4a2513c97e55e4f39a7648f23c7b28a15d9
+RMD160 (lighttpd-1.4.59.tar.xz) = e7191e39e555549e2e932998fed9396acc18accb
+SHA512 (lighttpd-1.4.59.tar.xz) = 94d312f6ac65c32057018b749c4865220b43b3e4b7fe9396848aa403ea7fdc2ccbf3f4f91daf281b754cf272a52a8bcdc689502773ea33cae36eead2785daa0f
+Size (lighttpd-1.4.59.tar.xz) = 968352 bytes
 SHA1 (patch-doc_config_lighttpd.conf) = 32a4b6bd32f88d05dd75f65de6ec57b203c37d8b
 SHA1 (patch-doc_lighttpd.8) = e08ac362784aebaca566d0f65380b70a829d6b4e
