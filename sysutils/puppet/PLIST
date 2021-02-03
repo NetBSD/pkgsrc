@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2021/01/18 15:36:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/02/03 15:15:18 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -943,6 +943,7 @@ ${GEM_LIBDIR}/lib/puppet/scheduler/scheduler.rb
 ${GEM_LIBDIR}/lib/puppet/scheduler/splay_job.rb
 ${GEM_LIBDIR}/lib/puppet/scheduler/timer.rb
 ${GEM_LIBDIR}/lib/puppet/settings.rb
+${GEM_LIBDIR}/lib/puppet/settings/alias_setting.rb
 ${GEM_LIBDIR}/lib/puppet/settings/array_setting.rb
 ${GEM_LIBDIR}/lib/puppet/settings/autosign_setting.rb
 ${GEM_LIBDIR}/lib/puppet/settings/base_setting.rb
@@ -1186,6 +1187,7 @@ ${GEM_LIBDIR}/man/man8/puppet-ssl.8
 ${GEM_LIBDIR}/man/man8/puppet.8
 ${GEM_LIBDIR}/spec/fixtures/faulty_face/puppet/face/syntax.rb
 ${GEM_LIBDIR}/spec/fixtures/hiera.yaml
+${GEM_LIBDIR}/spec/fixtures/integration/application/agent/cached_deferred_catalog.json
 ${GEM_LIBDIR}/spec/fixtures/integration/application/apply/environments/spec/modules/amod/lib/puppet/provider/applytest/applytest.rb
 ${GEM_LIBDIR}/spec/fixtures/integration/application/apply/environments/spec/modules/amod/lib/puppet/type/applytest.rb
 ${GEM_LIBDIR}/spec/fixtures/integration/node/environment/sitedir/00_a.pp
@@ -2041,6 +2043,7 @@ ${GEM_LIBDIR}/spec/unit/pops/evaluator/basic_expressions_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/evaluator/collections_ops_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/evaluator/comparison_ops_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/evaluator/conditionals_spec.rb
+${GEM_LIBDIR}/spec/unit/pops/evaluator/deferred_resolver_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/evaluator/evaluating_parser_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/evaluator/evaluator_rspec_helper.rb
 ${GEM_LIBDIR}/spec/unit/pops/evaluator/json_strict_literal_evaluator_spec.rb
