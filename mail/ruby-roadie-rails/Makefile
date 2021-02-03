@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/05/25 14:09:08 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/03 14:22:12 taca Exp $
 
-DISTNAME=	roadie-rails-2.1.1
+DISTNAME=	roadie-rails-2.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rails/rails${RUBY_RAILS}/}
 CATEGORIES=	mail
 
