@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/24 11:09:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/03 14:55:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -48,11 +48,11 @@ ${GEM_LIBDIR}/app/models/metasploit/model/search/operator/null.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/search/operator/single.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/search/query.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/visitation/visitor.rb
+${GEM_LIBDIR}/app/validators/address_format_validator.rb
 ${GEM_LIBDIR}/app/validators/ip_format_validator.rb
 ${GEM_LIBDIR}/app/validators/nil_validator.rb
 ${GEM_LIBDIR}/app/validators/parameters_validator.rb
 ${GEM_LIBDIR}/app/validators/password_is_strong_validator.rb
-${GEM_LIBDIR}/bin/rails
 ${GEM_LIBDIR}/config/locales/en.yml
 ${GEM_LIBDIR}/lib/metasploit/model.rb
 ${GEM_LIBDIR}/lib/metasploit/model/association.rb
@@ -122,6 +122,7 @@ ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operator/null_spec.rb
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operator/single_spec.rb
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/query_spec.rb
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/visitation/visitor_spec.rb
+${GEM_LIBDIR}/spec/app/validators/address_format_validator_spec.rb
 ${GEM_LIBDIR}/spec/app/validators/ip_format_validator_spec.rb
 ${GEM_LIBDIR}/spec/app/validators/nil_validator_spec.rb
 ${GEM_LIBDIR}/spec/app/validators/parameters_validator_spec.rb
