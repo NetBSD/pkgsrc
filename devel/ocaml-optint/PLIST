@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/12 17:47:09 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/03 09:35:31 jaapb Exp $
 ${OCAML_SITELIB}/optint/META
 ${OCAML_SITELIB}/optint/dune-package
-${OCAML_SITELIB}/optint/int_x64_backend.ml
-${OCAML_SITELIB}/optint/int_x86_backend.ml
 ${OCAML_SITELIB}/optint/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/optint/optint.a
 ${OCAML_SITELIB}/optint/optint.cma
@@ -14,16 +12,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/optint/optint.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/optint/optint.cmxs
 ${OCAML_SITELIB}/optint/optint.ml
 ${OCAML_SITELIB}/optint/optint.mli
-${OCAML_SITELIB}/optint/optint__.cmi
-${OCAML_SITELIB}/optint/optint__.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/optint/optint__.cmx
-${OCAML_SITELIB}/optint/optint__.ml
-${OCAML_SITELIB}/optint/optint__Int_x64_backend.cmi
-${OCAML_SITELIB}/optint/optint__Int_x64_backend.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/optint/optint__Int_x64_backend.cmx
-${OCAML_SITELIB}/optint/optint__Int_x86_backend.cmi
-${OCAML_SITELIB}/optint/optint__Int_x86_backend.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/optint/optint__Int_x86_backend.cmx
 share/doc/optint/CHANGES.md
 share/doc/optint/LICENSE.md
 share/doc/optint/README.md
