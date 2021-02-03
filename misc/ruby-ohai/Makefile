@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2021/01/18 15:08:18 taca Exp $
+# $NetBSD: Makefile,v 1.30 2021/02/03 15:23:40 taca Exp $
 
-DISTNAME=	ohai-16.8.1
+DISTNAME=	ohai-16.10.6
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,6 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-train-core>=0:../../net/ruby-train-core
 DEPENDS+=	${RUBY_PKGPREFIX}-wmi-lite>=1.0<2:../../devel/ruby-wmi-lite
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi>=1.9<2:../../devel/ruby-ffi
 DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=12.8:../../sysutils/ruby-chef-config
+#DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=16.10:../../sysutils/ruby-chef-utils
 
 USE_LANGUAGES=	# none
 
