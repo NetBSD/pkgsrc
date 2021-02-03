@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/01/11 16:24:11 nia Exp $
+# $NetBSD: options.mk,v 1.3 2021/02/03 10:43:42 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.imv
 PKG_SUPPORTED_OPTIONS=		svg
@@ -17,19 +17,19 @@ PKG_SUGGESTED_OPTIONS=	svg x11
 
 .if !empty(PKG_OPTIONS:Msvg)
 .  include "../../graphics/librsvg/buildlink3.mk"
-MAKE_FLAGS+=		BACKEND_LIBRSVG="yes"
+MESON_ARGS+=		-Dlibrsvg=enabled
 .else
-MAKE_FLAGS+=		BACKEND_LIBRSVG="no"
+MESON_ARGS+=		-Dlibrsvg=disabled
 .endif
 
 PLIST_VARS+=		all
 .if !empty(PKG_OPTIONS:Mwayland) && !empty(PKG_OPTIONS:Mx11)
 PLIST.all=		yes
-MAKE_FLAGS+=		WINDOWS="all"
+MESON_ARGS+=		-Dwindows=all
 .elif !empty(PKG_OPTIONS:Mwayland)
-MAKE_FLAGS+=		WINDOWS="wayland"
+MESON_ARGS+=		-Dwindows=wayland
 .elif !empty(PKG_OPTIONS:Mx11)
-MAKE_FLAGS+=		WINDOWS="x11"
+MESON_ARGS+=		-Dwindows=x11
 .endif
 
 .if !empty(PKG_OPTIONS:Mwayland)
