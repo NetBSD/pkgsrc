@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.767 2021/02/03 10:28:52 nia Exp $
+$NetBSD: CHANGES-2021,v 1.768 2021/02/03 10:31:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -927,4 +927,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/cmus to 2.9.1 [nia 2021-02-03]
 	Updated fonts/terminus-font to 4.49.1 [nia 2021-02-03]
 	Updated graphics/feh to 3.6.3 [nia 2021-02-03]
-	Updated textproc/inih to 52 [nia 2021-02-03]
+	Added textproc/inih version 52 [nia 2021-02-03]
