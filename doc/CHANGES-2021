@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.803 2021/02/03 16:09:40 nia Exp $
+$NetBSD: CHANGES-2021,v 1.804 2021/02/03 18:38:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -965,3 +965,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-puma to 5.2.0 [taca 2021-02-03]
 	Updated x11/ruby-tk to 0.3.0 [taca 2021-02-03]
 	Added games/pinball version 0.3.20201218 [nia 2021-02-03]
+	Updated databases/py-mongo to 3.11.3 [adam 2021-02-03]
+	Updated devel/py-lru-dict to 1.1.7 [adam 2021-02-03]
