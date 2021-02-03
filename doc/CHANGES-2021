@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.795 2021/02/03 15:24:09 taca Exp $
+$NetBSD: CHANGES-2021,v 1.796 2021/02/03 15:26:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -957,3 +957,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-chef-config to 16.9.32 [taca 2021-02-03]
 	Updated sysutils/ruby-chef to 16.9.32 [taca 2021-02-03]
 	Updated misc/ruby-ohai to 16.10.6 [taca 2021-02-03]
+	Updated sysutils/ruby-inspec-core to 4.26.4 [taca 2021-02-03]
