@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.806 2021/02/03 20:00:47 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.807 2021/02/03 20:02:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -969,3 +969,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-lru-dict to 1.1.7 [adam 2021-02-03]
 	Updated net/tor to 0.4.4.7 [wiz 2021-02-03]
 	Updated devel/autoconf to 2.71 [wiz 2021-02-03]
+	Updated devel/bison to 3.7.5 [wiz 2021-02-03]
