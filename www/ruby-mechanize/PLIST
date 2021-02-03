@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2016/10/18 15:50:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/02/03 15:44:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.github/workflows/ci-test.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/EXAMPLES.rdoc
 ${GEM_LIBDIR}/GUIDE.rdoc
