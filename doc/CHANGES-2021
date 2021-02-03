@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.797 2021/02/03 15:30:17 taca Exp $
+$NetBSD: CHANGES-2021,v 1.798 2021/02/03 15:33:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -959,3 +959,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-ohai to 16.10.6 [taca 2021-02-03]
 	Updated sysutils/ruby-inspec-core to 4.26.4 [taca 2021-02-03]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.3.25 [taca 2021-02-03]
+	Updated www/ruby-capybara to 3.35.3 [taca 2021-02-03]
