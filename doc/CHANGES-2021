@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.811 2021/02/03 20:18:52 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.812 2021/02/03 20:20:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -974,3 +974,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libmysofa to 1.2 [wiz 2021-02-03]
 	Updated graphics/ImageMagick to 7.0.10.61 [wiz 2021-02-03]
 	Updated devel/py-packaging to 20.9 [wiz 2021-02-03]
+	Updated security/tor-browser-https-everywhere to 2021.1.27 [wiz 2021-02-03]
