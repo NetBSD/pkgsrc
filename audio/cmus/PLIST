@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2019/07/02 06:23:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/02/03 09:46:08 nia Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.faad}lib/cmus/ip/aac.so
@@ -24,6 +24,7 @@ ${PLIST.sunaudio}lib/cmus/op/sun.so
 man/man1/cmus-remote.1
 man/man1/cmus.1
 man/man7/cmus-tutorial.7
+share/cmus/amazon.theme
 share/cmus/cyan.theme
 share/cmus/default.theme
 share/cmus/dracula.theme
@@ -31,6 +32,7 @@ share/cmus/gray-88.theme
 share/cmus/green-mono-88.theme
 share/cmus/green.theme
 share/cmus/gruvbox-alt.theme
+share/cmus/gruvbox-warm.theme
 share/cmus/gruvbox.theme
 share/cmus/jellybeans.theme
 share/cmus/night.theme
