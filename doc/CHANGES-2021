@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.791 2021/02/03 15:07:19 taca Exp $
+$NetBSD: CHANGES-2021,v 1.792 2021/02/03 15:15:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -952,3 +952,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-rubyntlm to 0.6.3 [taca 2021-02-03]
 	Updated security/ruby-oauth to 0.5.5 [taca 2021-02-03]
 	Updated security/ruby-sshkit to 1.21.2 [taca 2021-02-03]
+	Updated sysutils/puppet to 7.3.0 [taca 2021-02-03]
