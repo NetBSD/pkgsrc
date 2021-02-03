@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.802 2021/02/03 15:50:50 taca Exp $
+$NetBSD: CHANGES-2021,v 1.803 2021/02/03 16:09:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -964,3 +964,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-mechanize to 2.7.7 [taca 2021-02-03]
 	Updated www/ruby-puma to 5.2.0 [taca 2021-02-03]
 	Updated x11/ruby-tk to 0.3.0 [taca 2021-02-03]
+	Added games/pinball version 0.3.20201218 [nia 2021-02-03]
