@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/03 14:13:26 taca Exp $
+
+SHA1 (red-colors-0.1.1.gem) = 2391439f239cdaf9df511aa7dde22105202863b3
+RMD160 (red-colors-0.1.1.gem) = a60e2b508e78b7676cf29a1fb63867b2634a39f5
+SHA512 (red-colors-0.1.1.gem) = a935feec2e6ae25f009bcd913b37b0daa180c42dd7056cd42aac3af3f8b9f50bfa8304f7e3919e3cae9e7d83c5a3778fc06934042efe7de3561c24241cba708b
+Size (red-colors-0.1.1.gem) = 28160 bytes
