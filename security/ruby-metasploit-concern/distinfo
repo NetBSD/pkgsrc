@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/03/24 15:55:25 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/02/03 14:43:02 taca Exp $
 
-SHA1 (metasploit-concern-3.0.0.gem) = 3a39aa2d287945893daf482bab00e4fb7d0eb2e9
-RMD160 (metasploit-concern-3.0.0.gem) = 8189ef1e2da947450cbeb56da00fd0959a80d1ce
-SHA512 (metasploit-concern-3.0.0.gem) = 0de97f7131e1d92a34b4f091aadd5779cf75037445c9d4c3460810747c65b64f872757414fedd13d9aef7b978efc9d0dd0fc3d24e286e0d4ab628d6187a68483
-Size (metasploit-concern-3.0.0.gem) = 18944 bytes
+SHA1 (metasploit-concern-3.0.1.gem) = bbb11ce73ef964be593abf27b4271e3f5f3131d5
+RMD160 (metasploit-concern-3.0.1.gem) = 1baf4d7f5c90869560346ac410e1833eaf8d8487
+SHA512 (metasploit-concern-3.0.1.gem) = 146b64ee51139dc61ee1460ce3813514a683cafc67e7553c4474be8a1a19ffef25f02db239dadc14a6ac296b3f8d704df1c10da361a1f15629dcbd6ed034c082
+Size (metasploit-concern-3.0.1.gem) = 18944 bytes
