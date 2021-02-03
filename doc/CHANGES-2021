@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.760 2021/02/03 01:09:44 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.761 2021/02/03 08:49:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -921,3 +921,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/arqiver to 0.7.0 [pin 2021-02-02]
 	Updated sysutils/sfm to 0.2.0 [pin 2021-02-02]
 	Updated textproc/py-Levenshtein to 0.12.2 [gutteridge 2021-02-03]
+	Updated www/lighttpd to 1.4.59 [schmonz 2021-02-03]
