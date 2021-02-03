@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2020/12/01 09:44:12 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.23 2021/02/03 08:49:49 schmonz Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
@@ -8,6 +8,7 @@ lib/lighttpd/mod_authn_file.la
 ${PLIST.gssapi}lib/lighttpd/mod_authn_gssapi.la
 ${PLIST.ldap}lib/lighttpd/mod_authn_ldap.la
 ${PLIST.mysql}lib/lighttpd/mod_authn_mysql.la
+lib/lighttpd/mod_ajp13.la
 lib/lighttpd/mod_cgi.la
 ${PLIST.lua}lib/lighttpd/mod_cml.la
 lib/lighttpd/mod_deflate.la
