@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.759 2021/02/02 18:47:02 pin Exp $
+$NetBSD: CHANGES-2021,v 1.760 2021/02/03 01:09:44 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -920,3 +920,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/ruby-sequel to 5.41.0 [taca 2021-02-02]
 	Updated archivers/arqiver to 0.7.0 [pin 2021-02-02]
 	Updated sysutils/sfm to 0.2.0 [pin 2021-02-02]
+	Updated textproc/py-Levenshtein to 0.12.2 [gutteridge 2021-02-03]
