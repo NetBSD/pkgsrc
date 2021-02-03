@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.769 2021/02/03 10:44:00 nia Exp $
+$NetBSD: CHANGES-2021,v 1.770 2021/02/03 13:17:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -929,3 +929,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/feh to 3.6.3 [nia 2021-02-03]
 	Added textproc/inih version 52 [nia 2021-02-03]
 	Updated graphics/imv to 4.2.0 [nia 2021-02-03]
+	Updated www/nghttp2 to 1.43.0 [adam 2021-02-03]
+	Updated www/curl to 7.75.0 [adam 2021-02-03]
