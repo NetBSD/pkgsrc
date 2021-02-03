@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/03/24 15:55:25 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/03 14:43:02 taca Exp $
 
-DISTNAME=	metasploit-concern-3.0.0
+DISTNAME=	metasploit-concern-3.0.1
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
