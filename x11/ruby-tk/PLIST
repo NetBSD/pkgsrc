@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/03/15 16:54:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/02/03 15:50:27 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -7,7 +7,6 @@ ${GEM_EXTSDIR}/tkutil.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/BSDL
-${GEM_LIBDIR}/ChangeLog.tkextlib
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/MANUAL_tcltklib.eng
@@ -374,11 +373,9 @@ ${GEM_LIBDIR}/lib/tktext.rb
 ${GEM_LIBDIR}/lib/tkutil.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/tkvirtevent.rb
 ${GEM_LIBDIR}/lib/tkwinpkg.rb
-${GEM_LIBDIR}/old-README.tcltklib.ja
 ${GEM_LIBDIR}/sample/24hr_clock.rb
 ${GEM_LIBDIR}/sample/binding_sample.rb
 ${GEM_LIBDIR}/sample/bindtag_sample.rb
-${GEM_LIBDIR}/sample/binstr_usage.rb
 ${GEM_LIBDIR}/sample/btn_with_frame.rb
 ${GEM_LIBDIR}/sample/cd_timer.rb
 ${GEM_LIBDIR}/sample/cmd_res_test.rb
@@ -614,10 +611,8 @@ ${GEM_LIBDIR}/sample/multi-ip_sample2.rb
 ${GEM_LIBDIR}/sample/optobj_sample.rb
 ${GEM_LIBDIR}/sample/propagate.rb
 ${GEM_LIBDIR}/sample/remote-ip_sample.rb
-${GEM_LIBDIR}/sample/remote-ip_sample2.rb
 ${GEM_LIBDIR}/sample/resource.en
 ${GEM_LIBDIR}/sample/resource.ja
-${GEM_LIBDIR}/sample/safe-tk.rb
 ${GEM_LIBDIR}/sample/scrollframe.rb
 ${GEM_LIBDIR}/sample/tcltklib/batsu.gif
 ${GEM_LIBDIR}/sample/tcltklib/lines0.tcl
@@ -1051,7 +1046,6 @@ ${GEM_LIBDIR}/sample/tkmsgcat-load_tk.rb
 ${GEM_LIBDIR}/sample/tkmulticolumnlist.rb
 ${GEM_LIBDIR}/sample/tkmultilistbox.rb
 ${GEM_LIBDIR}/sample/tkmultilistframe.rb
-${GEM_LIBDIR}/sample/tkoptdb-safeTk.rb
 ${GEM_LIBDIR}/sample/tkoptdb.rb
 ${GEM_LIBDIR}/sample/tkrttimer.rb
 ${GEM_LIBDIR}/sample/tksleep_sample.rb
@@ -1060,8 +1054,6 @@ ${GEM_LIBDIR}/sample/tktextio.rb
 ${GEM_LIBDIR}/sample/tktimer.rb
 ${GEM_LIBDIR}/sample/tktimer2.rb
 ${GEM_LIBDIR}/sample/tktimer3.rb
-${GEM_LIBDIR}/sample/tktree.rb
-${GEM_LIBDIR}/sample/tktree.tcl
 ${GEM_LIBDIR}/sample/ttk_wrapper.rb
 ${GEM_LIBDIR}/tk.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
