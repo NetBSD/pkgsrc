@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/01/16 13:05:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/02/03 15:47:55 taca Exp $
 bin/puma${RUBY_SUFFIX}
 bin/pumactl${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -21,10 +21,12 @@ ${GEM_LIBDIR}/docs/jungle/README.md
 ${GEM_LIBDIR}/docs/jungle/rc.d/README.md
 ${GEM_LIBDIR}/docs/jungle/rc.d/puma
 ${GEM_LIBDIR}/docs/jungle/rc.d/puma.conf
+${GEM_LIBDIR}/docs/kubernetes.md
 ${GEM_LIBDIR}/docs/nginx.md
 ${GEM_LIBDIR}/docs/plugins.md
 ${GEM_LIBDIR}/docs/restart.md
 ${GEM_LIBDIR}/docs/signals.md
+${GEM_LIBDIR}/docs/stats.md
 ${GEM_LIBDIR}/docs/systemd.md
 ${GEM_LIBDIR}/ext/puma_http11/PumaHttp11Service.java
 ${GEM_LIBDIR}/ext/puma_http11/ext_help.h
