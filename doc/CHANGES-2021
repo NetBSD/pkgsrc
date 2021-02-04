@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.820 2021/02/04 11:23:03 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.821 2021/02/04 11:47:07 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -984,3 +984,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hypothesis to 6.1.1 [wiz 2021-02-04]
 	Updated devel/waf to 2.0.22 [wiz 2021-02-04]
 	Updated textproc/ugrep to 3.1.7 [wiz 2021-02-04]
+	Updated sysutils/xenkernel411 to 4.11.4nb6 [bouyer 2021-02-04]
+	Updated sysutils/xentools411 to 4.11.4nb3 [bouyer 2021-02-04]
