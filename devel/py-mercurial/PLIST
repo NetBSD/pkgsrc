@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.31 2020/11/09 14:42:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/02/04 23:15:33 wiz Exp $
 bin/hg
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
 ${PYSITELIB}/hgdemandimport/__init__.pyo
@@ -463,7 +464,6 @@ ${PYSITELIB}/hgext/zeroconf/__init__.pyo
 ${PYSITELIB}/hgext3rd/__init__.py
 ${PYSITELIB}/hgext3rd/__init__.pyc
 ${PYSITELIB}/hgext3rd/__init__.pyo
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
@@ -488,6 +488,9 @@ ${PYSITELIB}/mercurial/branchmap.pyo
 ${PYSITELIB}/mercurial/bundle2.py
 ${PYSITELIB}/mercurial/bundle2.pyc
 ${PYSITELIB}/mercurial/bundle2.pyo
+${PYSITELIB}/mercurial/bundlecaches.py
+${PYSITELIB}/mercurial/bundlecaches.pyc
+${PYSITELIB}/mercurial/bundlecaches.pyo
 ${PYSITELIB}/mercurial/bundlerepo.py
 ${PYSITELIB}/mercurial/bundlerepo.pyc
 ${PYSITELIB}/mercurial/bundlerepo.pyo
@@ -991,6 +994,9 @@ ${PYSITELIB}/mercurial/store.pyo
 ${PYSITELIB}/mercurial/streamclone.py
 ${PYSITELIB}/mercurial/streamclone.pyc
 ${PYSITELIB}/mercurial/streamclone.pyo
+${PYSITELIB}/mercurial/strip.py
+${PYSITELIB}/mercurial/strip.pyc
+${PYSITELIB}/mercurial/strip.pyo
 ${PYSITELIB}/mercurial/subrepo.py
 ${PYSITELIB}/mercurial/subrepo.pyc
 ${PYSITELIB}/mercurial/subrepo.pyo
@@ -1332,6 +1338,15 @@ ${PYSITELIB}/mercurial/unionrepo.pyo
 ${PYSITELIB}/mercurial/upgrade.py
 ${PYSITELIB}/mercurial/upgrade.pyc
 ${PYSITELIB}/mercurial/upgrade.pyo
+${PYSITELIB}/mercurial/upgrade_utils/__init__.py
+${PYSITELIB}/mercurial/upgrade_utils/__init__.pyc
+${PYSITELIB}/mercurial/upgrade_utils/__init__.pyo
+${PYSITELIB}/mercurial/upgrade_utils/actions.py
+${PYSITELIB}/mercurial/upgrade_utils/actions.pyc
+${PYSITELIB}/mercurial/upgrade_utils/actions.pyo
+${PYSITELIB}/mercurial/upgrade_utils/engine.py
+${PYSITELIB}/mercurial/upgrade_utils/engine.pyc
+${PYSITELIB}/mercurial/upgrade_utils/engine.pyo
 ${PYSITELIB}/mercurial/url.py
 ${PYSITELIB}/mercurial/url.pyc
 ${PYSITELIB}/mercurial/url.pyo
@@ -1356,6 +1371,9 @@ ${PYSITELIB}/mercurial/utils/dateutil.pyo
 ${PYSITELIB}/mercurial/utils/hashutil.py
 ${PYSITELIB}/mercurial/utils/hashutil.pyc
 ${PYSITELIB}/mercurial/utils/hashutil.pyo
+${PYSITELIB}/mercurial/utils/memorytop.py
+${PYSITELIB}/mercurial/utils/memorytop.pyc
+${PYSITELIB}/mercurial/utils/memorytop.pyo
 ${PYSITELIB}/mercurial/utils/procutil.py
 ${PYSITELIB}/mercurial/utils/procutil.pyc
 ${PYSITELIB}/mercurial/utils/procutil.pyo
