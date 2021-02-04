@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2021/01/22 17:16:45 schmonz Exp $
+# $NetBSD: options.mk,v 1.5 2021/02/04 09:16:45 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.s6-networking
 PKG_SUPPORTED_OPTIONS+=	execline tls
@@ -28,11 +28,14 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	s6-pkgsrc-cadir
 SUBST_VARS.paths=	SH SETENV SSLCERTS
 
-post-extract:
+.PHONY: do-extract-cadir do-install-cadir
+post-extract: do-extract-cadir
+do-extract-cadir:
 	for f in s6-pkgsrc-cadir; do \
 		${CP} ${FILESDIR}/$$f.sh ${WRKSRC}/$$f; \
 	done
-post-install:
+post-install: do-install-cadir
+do-install-cadir:
 	for f in s6-pkgsrc-cadir; do \
 		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/bin/$$f; \
 	done
