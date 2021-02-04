@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2021/02/04 20:02:14 gdt Exp $
+# $NetBSD: Makefile,v 1.95 2021/02/04 20:15:31 gdt Exp $
 #
 
 DISTNAME=	xlog-2.0.20
@@ -16,9 +16,6 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 
-# Fails with gcc 5.5.0 (netbsd-8) and clang.
-BUILDLINK_TRANSFORM+=	rm:-Wno-stringop-truncation
-
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
@@ -32,6 +29,11 @@ _WRAP_EXTRA_ARGS.CC+=	-Wno-error=parentheses-equality
 CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality
 _WRAP_EXTRA_ARGS.CC+=	-Wno-uninitialized
 CWRAPPERS_APPEND.cc+=	-Wno-uninitialized
+.endif
+
+.if !empty(PKGSRC_COMPILER:Mgcc)
+# Fails with gcc 5.5.0 (netbsd-8).
+BUILDLINK_TRANSFORM+=	rm:-Wno-stringop-truncation
 .endif
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
