@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.816 2021/02/04 09:16:53 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.817 2021/02/04 11:13:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -980,3 +980,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/findcrcs version 0.3 [wiz 2021-02-04]
 	Updated textproc/lowdown to 0.8.0 [fcambus 2021-02-04]
 	Updated net/s6-networking to 2.4.0.0nb3 [schmonz 2021-02-04]
+	Updated textproc/asciidoc to 9.0.5 [wiz 2021-02-04]
