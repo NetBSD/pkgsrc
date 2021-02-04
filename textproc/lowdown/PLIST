@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/12/10 09:19:35 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/02/04 09:09:42 fcambus Exp $
 bin/lowdown
 bin/lowdown-diff
 include/lowdown.h
@@ -26,13 +26,12 @@ man/man3/lowdown_latex_free.3
 man/man3/lowdown_latex_new.3
 man/man3/lowdown_latex_rndr.3
 man/man3/lowdown_metaq_free.3
+man/man3/lowdown_node_free.3
 man/man3/lowdown_nroff_free.3
 man/man3/lowdown_nroff_new.3
 man/man3/lowdown_nroff_rndr.3
 man/man3/lowdown_term_free.3
 man/man3/lowdown_term_new.3
 man/man3/lowdown_term_rndr.3
-man/man3/lowdown_tree_free.3
-man/man3/lowdown_tree_new.3
 man/man3/lowdown_tree_rndr.3
 man/man5/lowdown.5
