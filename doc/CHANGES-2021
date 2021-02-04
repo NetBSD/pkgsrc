@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.827 2021/02/04 20:26:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.828 2021/02/04 23:15:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -993,3 +993,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-FindBin-libs to 2.20.2 [schmonz 2021-02-04]
 	Updated databases/mysql57-client to 5.7.33 [adam 2021-02-04]
 	Updated databases/mysql57-server to 5.7.33 [adam 2021-02-04]
+	Updated devel/py-mercurial to 5.7 [wiz 2021-02-04]
