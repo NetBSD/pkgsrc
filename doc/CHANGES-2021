@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.825 2021/02/04 17:45:09 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.826 2021/02/04 18:13:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -990,3 +990,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/xlog to 2.0.20 [gdt 2021-02-04]
 	Updated www/privoxy to 3.0.29 [wiz 2021-02-04]
 	Updated net/mosquitto to 2.0.7 [gdt 2021-02-04]
+	Updated devel/p5-FindBin-libs to 2.20.2 [schmonz 2021-02-04]
