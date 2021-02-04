@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2021/02/04 14:10:07 gdt Exp $
+# $NetBSD: Makefile,v 1.93 2021/02/04 19:21:48 gdt Exp $
 #
 
 DISTNAME=	xlog-2.0.20
@@ -19,8 +19,8 @@ USE_TOOLS+=		gmake pkg-config
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare -Wno-unknown-warning-option -Wno-deprecated-declarations
-CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare -Wno-unknown-warning-option -Wno-deprecated-declarations
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare -Wno-unknown-warning-option -Wno-deprecated-declarations -Wno-uninitialized
+CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare -Wno-unknown-warning-option -Wno-deprecated-declarations -Wno-uninitialized
 .endif
 
 # Problematic with 5.5.0 on netbsd-8.
