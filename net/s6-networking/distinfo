@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.3 2021/01/13 09:21:22 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2021/02/04 09:16:45 schmonz Exp $
 
 SHA1 (s6-networking-2.4.0.0.tar.gz) = 7b013b0181d5873555bbaead902533429db207ae
 RMD160 (s6-networking-2.4.0.0.tar.gz) = 21fd26cff9868096d297b415f74e799da3db10ab
 SHA512 (s6-networking-2.4.0.0.tar.gz) = e8646bbfe965db0a736b1624e3533151182fd0d0337c08ab6af52f6872af1e8c82e3afa85fd146fec3f0640360173aa57182065982e1f3d60ec16862f449115b
 Size (s6-networking-2.4.0.0.tar.gz) = 102302 bytes
+SHA1 (v2.4.0.0.1.tar.gz) = 7049c4cde484ae97f167c07f0bb0de3cfb20e6c8
+RMD160 (v2.4.0.0.1.tar.gz) = 19d8f4f5d7e1b6d55860222e416b66fa46b09534
+SHA512 (v2.4.0.0.1.tar.gz) = 96ffb8e5c593c3e47b7663a5c0bd6a793286f60b169f069bf0d688466cea699320687dbc99fb12b265deafc1b213251b1fdb8ab178013b6b4b75e89e4a5eff8e
+Size (v2.4.0.0.1.tar.gz) = 23878 bytes
 SHA1 (patch-src_stls_stls__client__init__and__handshake.c) = 5ba7652cca7fc864cfff31939fa196086d4336f6

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/01/22 16:20:38 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/02/04 09:16:45 schmonz Exp $
 bin/minidentd
 bin/s6-clockadd
 bin/s6-clockview
@@ -32,3 +32,29 @@ include/s6-networking/sbearssl.h
 include/s6-networking/stls.h
 lib/s6-networking/libs6net.a
 ${PLIST.tls}lib/s6-networking/libsbearssl.a
+man/man1/minidentd.1
+man/man1/s6-clockadd.1
+man/man1/s6-clockview.1
+man/man1/s6-getservbyname.1
+man/man1/s6-ident-client.1
+man/man1/s6-sntpclock.1
+man/man1/s6-taiclock.1
+man/man1/s6-taiclockd.1
+man/man1/s6-tcpclient.1
+man/man1/s6-tcpserver-access.1
+man/man1/s6-tcpserver.1
+man/man1/s6-tcpserver4-socketbinder.1
+man/man1/s6-tcpserver4.1
+man/man1/s6-tcpserver4d.1
+man/man1/s6-tcpserver6-socketbinder.1
+man/man1/s6-tcpserver6.1
+man/man1/s6-tcpserver6d.1
+man/man1/s6-tlsc-io.1
+man/man1/s6-tlsc.1
+man/man1/s6-tlsclient.1
+man/man1/s6-tlsd-io.1
+man/man1/s6-tlsd.1
+man/man1/s6-tlsserver.1
+man/man1/s6-ucspitlsc.1
+man/man1/s6-ucspitlsd.1
+man/man7/s6-tls.7
