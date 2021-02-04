@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.826 2021/02/04 18:13:47 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.827 2021/02/04 20:26:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -991,3 +991,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/privoxy to 3.0.29 [wiz 2021-02-04]
 	Updated net/mosquitto to 2.0.7 [gdt 2021-02-04]
 	Updated devel/p5-FindBin-libs to 2.20.2 [schmonz 2021-02-04]
+	Updated databases/mysql57-client to 5.7.33 [adam 2021-02-04]
+	Updated databases/mysql57-server to 5.7.33 [adam 2021-02-04]
