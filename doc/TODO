@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20366 2021/02/04 11:16:53 wiz Exp $
+$NetBSD: TODO,v 1.20367 2021/02/04 11:23:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1090,7 +1090,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ucview-0.33
 	o udpcast-20120424
 	o ufoai-2.3.1
-	o ugrep-3.1.6
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
 	o units-2.12
