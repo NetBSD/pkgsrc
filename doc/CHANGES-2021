@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.813 2021/02/03 22:32:19 bouyer Exp $
+$NetBSD: CHANGES-2021,v 1.814 2021/02/04 08:34:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -977,3 +977,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/tor-browser-https-everywhere to 2021.1.27 [wiz 2021-02-03]
 	Updated sysutils/xenkernel413 to 4.13.2nb5 [bouyer 2021-02-03]
 	Updated sysutils/xentools413 to 4.13.2nb3 [bouyer 2021-02-03]
+	Added sysutils/findcrcs version 0.3 [wiz 2021-02-04]
