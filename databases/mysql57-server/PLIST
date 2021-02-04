@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/10/21 13:34:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/02/04 20:26:10 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -1598,6 +1598,7 @@ share/mysql/test/r/mysqldump-max.result
 share/mysql/test/r/mysqldump-no-binlog.result
 share/mysql/test/r/mysqldump.result
 share/mysql/test/r/mysqldump_bug29998457.result
+share/mysql/test/r/mysqldump_bugs.result
 share/mysql/test/r/mysqldump_restore.result
 share/mysql/test/r/mysqldumpslow.result
 share/mysql/test/r/mysqlimport.result
@@ -9890,6 +9891,8 @@ share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order_config_error.re
 share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order_deadlock_error.result
 share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order_error.result
+share/mysql/test/suite/rpl/r/rpl_mts_spco_deadlock_hang_on_non_temp_error.result
+share/mysql/test/suite/rpl/r/rpl_mts_spco_deadlock_slave_trans_retries_hang.result
 share/mysql/test/suite/rpl/r/rpl_mts_stop_slave.result
 share/mysql/test/suite/rpl/r/rpl_mts_stop_slave_report_pos.result
 share/mysql/test/suite/rpl/r/rpl_mts_submode_switch.result
@@ -10118,8 +10121,11 @@ share/mysql/test/suite/rpl/r/rpl_semi_sync_group_commit_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_group_commit_deadlock_ssl.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_install_at_start_server.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_non_group_commit_deadlock.result
+share/mysql/test/suite/rpl/r/rpl_semi_sync_optimize_for_static_plugin_config.result
+share/mysql/test/suite/rpl/r/rpl_semi_sync_sender_observe_commit_only.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_shutdown_hang.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_slave_compressed_protocol.result
+share/mysql/test/suite/rpl/r/rpl_semi_sync_turn_on_off_optimize_for_static_plugin_config.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_uninstall_plugin.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_wait_slave_count.result
 share/mysql/test/suite/rpl/r/rpl_sequential.result
@@ -10702,6 +10708,8 @@ share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_deadlock_error-
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_deadlock_error.test
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_error-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_error.test
+share/mysql/test/suite/rpl/t/rpl_mts_spco_deadlock_hang_on_non_temp_error.test
+share/mysql/test/suite/rpl/t/rpl_mts_spco_deadlock_slave_trans_retries_hang.test
 share/mysql/test/suite/rpl/t/rpl_mts_stop_slave-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_stop_slave.test
 share/mysql/test/suite/rpl/t/rpl_mts_stop_slave_report_pos-slave.opt
@@ -11069,12 +11077,22 @@ share/mysql/test/suite/rpl/t/rpl_semi_sync_install_at_start_server.test
 share/mysql/test/suite/rpl/t/rpl_semi_sync_non_group_commit_deadlock-master.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_non_group_commit_deadlock-slave.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_non_group_commit_deadlock.test
+share/mysql/test/suite/rpl/t/rpl_semi_sync_optimize_for_static_plugin_config-master.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_optimize_for_static_plugin_config-slave.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_optimize_for_static_plugin_config.test
+share/mysql/test/suite/rpl/t/rpl_semi_sync_sender_observe_commit_only-master.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_sender_observe_commit_only-slave.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_sender_observe_commit_only.test
 share/mysql/test/suite/rpl/t/rpl_semi_sync_shutdown_hang-master.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_shutdown_hang-slave.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_shutdown_hang.test
 share/mysql/test/suite/rpl/t/rpl_semi_sync_slave_compressed_protocol-master.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_slave_compressed_protocol-slave.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_slave_compressed_protocol.test
+share/mysql/test/suite/rpl/t/rpl_semi_sync_turn_on_off_optimize_for_static_plugin_config-master.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_turn_on_off_optimize_for_static_plugin_config-slave.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_turn_on_off_optimize_for_static_plugin_config.cnf
+share/mysql/test/suite/rpl/t/rpl_semi_sync_turn_on_off_optimize_for_static_plugin_config.test
 share/mysql/test/suite/rpl/t/rpl_semi_sync_uninstall_plugin-master.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_uninstall_plugin-slave.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_uninstall_plugin.test
@@ -11923,6 +11941,8 @@ share/mysql/test/suite/sys_vars/r/relay_log_info_repository_basic.result
 share/mysql/test/suite/sys_vars/r/relay_log_purge_basic.result
 share/mysql/test/suite/sys_vars/r/relay_log_recovery_basic.result
 share/mysql/test/suite/sys_vars/r/relay_log_space_limit_basic.result
+share/mysql/test/suite/sys_vars/r/replication_optimize_for_static_plugin_config.result
+share/mysql/test/suite/sys_vars/r/replication_sender_observe_commit_only.result
 share/mysql/test/suite/sys_vars/r/report_host_basic.result
 share/mysql/test/suite/sys_vars/r/report_password_basic.result
 share/mysql/test/suite/sys_vars/r/report_port_basic.result
@@ -12685,6 +12705,9 @@ share/mysql/test/suite/sys_vars/t/relay_log_info_repository_basic.test
 share/mysql/test/suite/sys_vars/t/relay_log_purge_basic.test
 share/mysql/test/suite/sys_vars/t/relay_log_recovery_basic.test
 share/mysql/test/suite/sys_vars/t/relay_log_space_limit_basic.test
+share/mysql/test/suite/sys_vars/t/replication_optimize_for_static_plugin_config-master.opt
+share/mysql/test/suite/sys_vars/t/replication_optimize_for_static_plugin_config.test
+share/mysql/test/suite/sys_vars/t/replication_sender_observe_commit_only.test
 share/mysql/test/suite/sys_vars/t/report_host_basic.test
 share/mysql/test/suite/sys_vars/t/report_password_basic.test
 share/mysql/test/suite/sys_vars/t/report_port_basic.test
@@ -14138,6 +14161,7 @@ share/mysql/test/t/mysqldump-no-binlog-master.opt
 share/mysql/test/t/mysqldump-no-binlog.test
 share/mysql/test/t/mysqldump.test
 share/mysql/test/t/mysqldump_bug29998457.test
+share/mysql/test/t/mysqldump_bugs.test
 share/mysql/test/t/mysqldump_restore.test
 share/mysql/test/t/mysqldumpslow.test
 share/mysql/test/t/mysqlimport.test
