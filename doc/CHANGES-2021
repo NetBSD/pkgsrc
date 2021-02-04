@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.824 2021/02/04 16:29:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.825 2021/02/04 17:45:09 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -989,3 +989,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/tor-browser to 10.0.10 [wiz 2021-02-04]
 	Updated ham/xlog to 2.0.20 [gdt 2021-02-04]
 	Updated www/privoxy to 3.0.29 [wiz 2021-02-04]
+	Updated net/mosquitto to 2.0.7 [gdt 2021-02-04]
