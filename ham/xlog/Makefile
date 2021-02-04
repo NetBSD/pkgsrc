@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2021/02/04 19:21:48 gdt Exp $
+# $NetBSD: Makefile,v 1.94 2021/02/04 20:02:14 gdt Exp $
 #
 
 DISTNAME=	xlog-2.0.20
@@ -16,16 +16,22 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 
+# Fails with gcc 5.5.0 (netbsd-8) and clang.
+BUILDLINK_TRANSFORM+=	rm:-Wno-stringop-truncation
+
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare -Wno-unknown-warning-option -Wno-deprecated-declarations -Wno-uninitialized
-CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare -Wno-unknown-warning-option -Wno-deprecated-declarations -Wno-uninitialized
-.endif
-
-# Problematic with 5.5.0 on netbsd-8.
-.if !empty(PKGSRC_COMPILER:Mgcc)
-BUILDLINK_TRANSFORM+=	rm:-Wno-stringop-truncation
+# xlog has things like: #pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+# https://savannah.nongnu.org/bugs/index.php?60003
+_WRAP_EXTRA_ARGS.CC+=	-Wno-unknown-warning-option
+CWRAPPERS_APPEND.cc+=	-Wno-unknown-warning-option
+# xlog has code that triggers clang warnings
+# https://savannah.nongnu.org/bugs/index.php?60004
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=parentheses-equality
+CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality
+_WRAP_EXTRA_ARGS.CC+=	-Wno-uninitialized
+CWRAPPERS_APPEND.cc+=	-Wno-uninitialized
 .endif
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
