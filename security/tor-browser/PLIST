@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/10/31 00:55:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/02/04 13:34:16 wiz Exp $
 bin/tor-browser
 lib/tor-browser/actors/AboutHttpsOnlyErrorChild.jsm
 lib/tor-browser/actors/AboutHttpsOnlyErrorParent.jsm
@@ -718,7 +718,7 @@ lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/allegro-pl.ico
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/amazon.ico
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/avito-ru.ico
-lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/baidu-com.ico
+lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/baidu-com.png
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/bbc-uk.ico
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/bing-com.ico
 lib/tor-browser/browser/chrome/browser/res/activity-stream/data/content/tippytop/favicons/ctrip-com.ico
@@ -5305,16 +5305,11 @@ lib/tor-browser/chrome/torbutton/modules/utils.js
 lib/tor-browser/chrome/torbutton/skin/about-wordmark.png
 lib/tor-browser/chrome/torbutton/skin/aboutDialog.css
 lib/tor-browser/chrome/torbutton/skin/aboutTor.css
-lib/tor-browser/chrome/torbutton/skin/aboutTorFonts.css
 lib/tor-browser/chrome/torbutton/skin/forwardArrow.png
 lib/tor-browser/chrome/torbutton/skin/icon-newsletter.png
-lib/tor-browser/chrome/torbutton/skin/illo-purple.svg
-lib/tor-browser/chrome/torbutton/skin/illo.svg
 lib/tor-browser/chrome/torbutton/skin/preferences-mobile.css
 lib/tor-browser/chrome/torbutton/skin/preferences.css
 lib/tor-browser/chrome/torbutton/skin/searchLogo.png
-lib/tor-browser/chrome/torbutton/skin/tape-purple.svg
-lib/tor-browser/chrome/torbutton/skin/tape.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-display.css
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-first.svg
 lib/tor-browser/chrome/torbutton/skin/tor-circuit-line-last.svg
