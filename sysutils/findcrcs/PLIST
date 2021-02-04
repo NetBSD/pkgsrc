@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/04 08:34:23 wiz Exp $
+bin/findcrcs
+share/doc/findcrcs/README
