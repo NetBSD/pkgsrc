@@ -1,6 +1,7 @@
-$NetBSD: patch-findcrcs.cc,v 1.1 2021/02/04 08:34:23 wiz Exp $
+$NetBSD: patch-findcrcs.cc,v 1.2 2021/02/04 08:42:11 wiz Exp $
 
 Add missing include for errno.
+https://github.com/claunia/findcrcs/pull/2
 
 --- findcrcs.cc.orig	2015-05-24 22:26:34.000000000 +0000
 +++ findcrcs.cc
