@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.91 2020/08/17 20:19:14 leot Exp $
+# $NetBSD: Makefile,v 1.92 2021/02/04 14:10:07 gdt Exp $
 #
 
-DISTNAME=	xlog-2.0.19
-PKGREVISION=	1
+DISTNAME=	xlog-2.0.20
 CATEGORIES=	ham
 MASTER_SITES=	http://download.savannah.gnu.org/releases/xlog/
 LICENSE=	gnu-gpl-v3
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/xlog/
 COMMENT=	Amateur Radio logging program
 
@@ -28,10 +27,6 @@ CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality -Wno-error=tautological-co
 .if !empty(PKGSRC_COMPILER:Mgcc)
 BUILDLINK_TRANSFORM+=	rm:-Wno-stringop-truncation
 .endif
-
-# Work around https://savannah.nongnu.org/bugs/index.php?57920
-_WRAP_EXTRA_ARGS.CC+=	-Wno-deprecated-declarations
-CWRAPPERS_APPEND.cc+=	-Wno-deprecated-declarations
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"

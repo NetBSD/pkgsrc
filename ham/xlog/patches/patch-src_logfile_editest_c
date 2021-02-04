@@ -1,4 +1,4 @@
-$NetBSD: patch-src_logfile_edittest_c,v 1.1 2014/12/15 08:36:40 mef Exp $
+$NetBSD: patch-src_logfile_editest_c,v 1.1 2021/02/04 14:10:07 gdt Exp $
 
 error: array subscript has type 'char' [-Werror=char-subscripts]
 
