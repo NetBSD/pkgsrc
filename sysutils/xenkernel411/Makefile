@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/12/17 16:47:30 bouyer Exp $
+# $NetBSD: Makefile,v 1.20 2021/02/04 11:41:38 bouyer Exp $
 
 VERSION=	4.11.4
 #keep >= 1 if we have security patches
-PKGREVISION=	5
+PKGREVISION=	6
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel411-${VERSION}
 CATEGORIES=	sysutils
