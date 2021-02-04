@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.822 2021/02/04 13:34:27 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.823 2021/02/04 14:10:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -987,3 +987,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xenkernel411 to 4.11.4nb6 [bouyer 2021-02-04]
 	Updated sysutils/xentools411 to 4.11.4nb3 [bouyer 2021-02-04]
 	Updated security/tor-browser to 10.0.10 [wiz 2021-02-04]
+	Updated ham/xlog to 2.0.20 [gdt 2021-02-04]
