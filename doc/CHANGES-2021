@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.817 2021/02/04 11:13:45 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.818 2021/02/04 11:15:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -981,3 +981,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/lowdown to 0.8.0 [fcambus 2021-02-04]
 	Updated net/s6-networking to 2.4.0.0nb3 [schmonz 2021-02-04]
 	Updated textproc/asciidoc to 9.0.5 [wiz 2021-02-04]
+	Updated devel/py-hypothesis to 6.1.1 [wiz 2021-02-04]
