@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2021/02/04 20:15:31 gdt Exp $
+# $NetBSD: Makefile,v 1.96 2021/02/04 21:47:30 gdt Exp $
 #
 
 DISTNAME=	xlog-2.0.20
@@ -31,8 +31,9 @@ _WRAP_EXTRA_ARGS.CC+=	-Wno-uninitialized
 CWRAPPERS_APPEND.cc+=	-Wno-uninitialized
 .endif
 
-.if !empty(PKGSRC_COMPILER:Mgcc)
-# Fails with gcc 5.5.0 (netbsd-8).
+# Fails with gcc 5.5.0 (netbsd-8), and presumably earlier.
+# OK with gcc 7.4.0, and OK with at least recent clang.
+.if !empty(CC_VERSION:Mgcc-[45].*) 
 BUILDLINK_TRANSFORM+=	rm:-Wno-stringop-truncation
 .endif
 
