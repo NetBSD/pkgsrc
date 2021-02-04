@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.10 2021/01/30 07:51:21 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.11 2021/02/04 17:38:57 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -80,4 +80,16 @@ security/p11-kit: build fix for FreeBSD
 
 Pullup ticket #6401 - requested by nia
 net/bind911: build fix for i386
+
+Pullup ticket #6416 - requested by spz
+security/sudo: NetBSD build fix
+
+Pullup ticket #6417 - requested by wiz
+security/tor-browser-https-everywhere: bugfix
+
+Pullup ticket #6418 - requested by wiz
+net/tor: security fix
+
+Pullup ticket #6419 - requested by wiz
+security/tor-browser: security fix
 
