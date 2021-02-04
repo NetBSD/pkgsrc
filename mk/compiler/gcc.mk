@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.219 2021/01/17 16:05:48 maya Exp $
+# $NetBSD: gcc.mk,v 1.220 2021/02/04 21:45:13 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -95,7 +95,7 @@ _DEF_VARS.gcc=	\
 	_LANGUAGES.gcc \
 	_LINKER_RPATH_FLAG \
 	_NEED_GCC2 _NEED_GCC3 _NEED_GCC34 _NEED_GCC44 \
-	_NEED_GCC6 \ _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
+	_NEED_GCC6 _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
 	_NEED_GCC10 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
 	_PKGSRC_GCC_VERSION \
