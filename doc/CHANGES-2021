@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.836 2021/02/05 14:41:45 mef Exp $
+$NetBSD: CHANGES-2021,v 1.837 2021/02/05 14:44:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1006,3 +1006,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/lv2 to 1.18.2 [nia 2021-02-05]
 	Updated lang/janet to 1.14.2 [nia 2021-02-05]
 	Added www/R-webshot version 0.5.2 [mef 2021-02-05]
+	Added math/p5-Statistics-Basic version 1.6611 [schmonz 2021-02-05]
