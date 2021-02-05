@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1503 2021/01/28 21:22:04 maya Exp $
+# $NetBSD: Makefile,v 1.1504 2021/02/05 14:41:45 mef Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -14,6 +14,7 @@ SUBDIR+=	R-miniUI
 SUBDIR+=	R-rvest
 SUBDIR+=	R-shiny
 SUBDIR+=	R-shinyjs
+SUBDIR+=	R-webshot
 SUBDIR+=	SOGo
 SUBDIR+=	SOGo4
 SUBDIR+=	SpeedyCGI
