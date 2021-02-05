@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.838 2021/02/05 14:45:44 taca Exp $
+$NetBSD: CHANGES-2021,v 1.839 2021/02/05 14:47:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1008,3 +1008,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/R-webshot version 0.5.2 [mef 2021-02-05]
 	Added math/p5-Statistics-Basic version 1.6611 [schmonz 2021-02-05]
 	Updated lang/php74 to 7.4.15 [taca 2021-02-05]
+	Updated lang/php73 to 7.3.27 [taca 2021-02-05]
