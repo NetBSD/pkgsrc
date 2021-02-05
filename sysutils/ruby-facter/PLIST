@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2021/01/18 15:29:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.33 2021/02/05 15:54:35 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/facter
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/lib/facter/custom_facts/core/aggregate.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/directed_graph.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/execution.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/execution/base.rb
+${GEM_LIBDIR}/lib/facter/custom_facts/core/execution/popen3.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/execution/posix.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/execution/windows.rb
 ${GEM_LIBDIR}/lib/facter/custom_facts/core/file_loader.rb
@@ -112,6 +113,8 @@ ${GEM_LIBDIR}/lib/facter/facts/aix/system_uptime/hours.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/system_uptime/seconds.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/system_uptime/uptime.rb
 ${GEM_LIBDIR}/lib/facter/facts/aix/timezone.rb
+${GEM_LIBDIR}/lib/facter/facts/alpine/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/amzn/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/bsd/kernelmajversion.rb
 ${GEM_LIBDIR}/lib/facter/facts/bsd/kernelversion.rb
 ${GEM_LIBDIR}/lib/facter/facts/bsd/load_averages.rb
@@ -128,6 +131,8 @@ ${GEM_LIBDIR}/lib/facter/facts/debian/os/distro/description.rb
 ${GEM_LIBDIR}/lib/facter/facts/debian/os/distro/id.rb
 ${GEM_LIBDIR}/lib/facter/facts/debian/os/distro/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/debian/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/devuan/os/distro/release.rb
+${GEM_LIBDIR}/lib/facter/facts/devuan/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/augeas/version.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/disks.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/dmi/bios/release_date.rb
@@ -208,6 +213,7 @@ ${GEM_LIBDIR}/lib/facter/facts/freebsd/zfs_version.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/zpool_featureflags.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/zpool_featurenumbers.rb
 ${GEM_LIBDIR}/lib/facter/facts/freebsd/zpool_version.rb
+${GEM_LIBDIR}/lib/facter/facts/gentoo/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/aio_agent_version.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/augeas/version.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/cloud.rb
@@ -330,6 +336,8 @@ ${GEM_LIBDIR}/lib/facter/facts/linux/system_uptime/uptime.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/timezone.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/virtual.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/xen.rb
+${GEM_LIBDIR}/lib/facter/facts/linuxmint/os/name.rb
+${GEM_LIBDIR}/lib/facter/facts/linuxmint/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/aio_agent_version.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/augeas/version.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/dhcp_servers.rb
@@ -435,6 +443,13 @@ ${GEM_LIBDIR}/lib/facter/facts/macosx/system_uptime/seconds.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/system_uptime/uptime.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/timezone.rb
 ${GEM_LIBDIR}/lib/facter/facts/macosx/virtual.rb
+${GEM_LIBDIR}/lib/facter/facts/mageia/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/meego/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/oel/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/ol/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/openwrt/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/ovs/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/photon/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/rhel/os/distro/codename.rb
 ${GEM_LIBDIR}/lib/facter/facts/rhel/os/distro/description.rb
 ${GEM_LIBDIR}/lib/facter/facts/rhel/os/distro/id.rb
@@ -442,6 +457,7 @@ ${GEM_LIBDIR}/lib/facter/facts/rhel/os/distro/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/rhel/os/family.rb
 ${GEM_LIBDIR}/lib/facter/facts/rhel/os/name.rb
 ${GEM_LIBDIR}/lib/facter/facts/rhel/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/slackware/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/sles/os/distro/codename.rb
 ${GEM_LIBDIR}/lib/facter/facts/sles/os/distro/description.rb
 ${GEM_LIBDIR}/lib/facter/facts/sles/os/distro/id.rb
@@ -673,7 +689,9 @@ ${GEM_LIBDIR}/lib/facter/patches/sysfilesystem/sys/statvfs.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aio_agent_version.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aix/architecture.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aix/disks.rb
+${GEM_LIBDIR}/lib/facter/resolvers/aix/ffi/ffi.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aix/ffi/ffi_helper.rb
+${GEM_LIBDIR}/lib/facter/resolvers/aix/ffi/structs.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aix/filesystem.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aix/hardware.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aix/load_averages.rb
@@ -735,6 +753,7 @@ ${GEM_LIBDIR}/lib/facter/resolvers/partitions.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/path.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/processors.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/redhat_release.rb
+${GEM_LIBDIR}/lib/facter/resolvers/release_from_first_line.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/ruby.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/selinux.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/solaris/disks.rb
@@ -753,6 +772,7 @@ ${GEM_LIBDIR}/lib/facter/resolvers/solaris/os_release.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/solaris/processors.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/solaris/zone.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/solaris/zone_name.rb
+${GEM_LIBDIR}/lib/facter/resolvers/specific_release_file.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/ssh.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/suse_release.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/sw_vers.rb
