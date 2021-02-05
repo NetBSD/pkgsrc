@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/12/18 12:44:39 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/05 02:25:48 mef Exp $
 
 R_PKGNAME=	httpuv
 R_PKGVER=	1.5.1
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 DEPENDS+=	R-BH>=1.69.0.1:../../devel/R-BH
 DEPENDS+=	R-R6>=2.4.0:../../devel/R-R6
 DEPENDS+=	R-promises>=1.0.1:../../parallel/R-promises
+
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
