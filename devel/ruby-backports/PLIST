@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/01/10 14:31:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/02/05 16:04:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -533,6 +533,7 @@ ${GEM_LIBDIR}/lib/backports/force/string_size.rb
 ${GEM_LIBDIR}/lib/backports/latest.rb
 ${GEM_LIBDIR}/lib/backports/ractor/cloner.rb
 ${GEM_LIBDIR}/lib/backports/ractor/errors.rb
+${GEM_LIBDIR}/lib/backports/ractor/filtered_queue.rb
 ${GEM_LIBDIR}/lib/backports/ractor/queues.rb
 ${GEM_LIBDIR}/lib/backports/ractor/ractor.rb
 ${GEM_LIBDIR}/lib/backports/ractor/sharing.rb
@@ -554,7 +555,6 @@ ${GEM_LIBDIR}/lib/backports/tools/alias_method_chain.rb
 ${GEM_LIBDIR}/lib/backports/tools/arguments.rb
 ${GEM_LIBDIR}/lib/backports/tools/deprecation.rb
 ${GEM_LIBDIR}/lib/backports/tools/extreme_object.rb
-${GEM_LIBDIR}/lib/backports/tools/filtered_queue.rb
 ${GEM_LIBDIR}/lib/backports/tools/float_integer_conversion.rb
 ${GEM_LIBDIR}/lib/backports/tools/io.rb
 ${GEM_LIBDIR}/lib/backports/tools/make_block_optional.rb
