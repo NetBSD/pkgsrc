@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.868 2021/02/05 17:26:06 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.869 2021/02/05 19:38:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1040,3 +1040,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-cucumber-messages to 13.2.1 [taca 2021-02-05]
 	Updated archivers/ruby-bz2 to 0.2.2nb2 [taca 2021-02-05]
 	Updated editors/nano to 5.5nb1 [triaxx 2021-02-05]
+	Updated textproc/py-xmlschema to 1.5.0 [adam 2021-02-05]
+	Updated time/py-iso8601 to 0.1.14 [adam 2021-02-05]
+	Updated textproc/py-Unidecode to 1.2.0 [adam 2021-02-05]
+	Updated time/py-pytz to 2021.1 [adam 2021-02-05]
