@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.873 2021/02/05 22:06:55 adam Exp $
+$NetBSD: CHANGES-2021,v 1.874 2021/02/05 22:22:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1052,3 +1052,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-factory_boy to 3.2.0 [adam 2021-02-05]
 	Updated devel/py-smmap to 4.0.0 [adam 2021-02-05]
 	Updated graphics/py-pygraphviz to 1.7 [adam 2021-02-05]
+	Updated net/py-pika to 1.2.0 [adam 2021-02-05]
+	Updated textproc/py-jsbeautifier to 1.13.5 [adam 2021-02-05]
