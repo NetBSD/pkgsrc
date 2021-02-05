@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.867 2021/02/05 16:47:14 taca Exp $
+$NetBSD: CHANGES-2021,v 1.868 2021/02/05 17:26:06 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1039,3 +1039,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/ruby-braintree to 3.2.0 [taca 2021-02-05]
 	Updated devel/ruby-cucumber-messages to 13.2.1 [taca 2021-02-05]
 	Updated archivers/ruby-bz2 to 0.2.2nb2 [taca 2021-02-05]
+	Updated editors/nano to 5.5nb1 [triaxx 2021-02-05]
