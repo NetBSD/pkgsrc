@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/05 14:43:32 schmonz Exp $
+
+SHA1 (Statistics-Basic-1.6611.tar.gz) = 0d060fb36f00f3f4a57685c27c8e4c5eef09f8ac
+RMD160 (Statistics-Basic-1.6611.tar.gz) = 07d1bff50b9a50385f4c556f43e24d49900d663f
+SHA512 (Statistics-Basic-1.6611.tar.gz) = 10d726f9ace2a78753ec6cd91bd2c7cc7958eac11de762c3f4deff1a90e0837269484b7adc2ba22f3de128c3bf3a626cb70a9fd752a3eff5fd60db52cb7a7d68
+Size (Statistics-Basic-1.6611.tar.gz) = 30630 bytes
