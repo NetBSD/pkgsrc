@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/13 16:29:07 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/02/05 15:17:20 taca Exp $
 
-SHA1 (rex-ole-0.1.6.gem) = f602ea4796f27d4405123b5ec6bbbae23e1332de
-RMD160 (rex-ole-0.1.6.gem) = ece061a7b16d6715eaad0adeb1d947357846ff0d
-SHA512 (rex-ole-0.1.6.gem) = 5fae70ec85058e3dca08fdedd595fb27b46de263aa727fd291606d4f8f226bc0d9a2f135bf4673a8e389d6a2e932e7514eb97954f765c1ce9401233ac2cd7da1
-Size (rex-ole-0.1.6.gem) = 26112 bytes
+SHA1 (rex-ole-0.1.7.gem) = c7e0b33ebf9234e300e31ce2d31ee2bc8f5fee33
+RMD160 (rex-ole-0.1.7.gem) = 9e049f143db18ba03e3085e7ea839a35ae10ab1c
+SHA512 (rex-ole-0.1.7.gem) = 3cc5c708a08a3901128b2b3f86f912f1e630dc5a07d00013592895b1d293b2ef6eb39d06b35d3ff0ec820508c4fe602660fa4fe4375c06c949d2216a582589d2
+Size (rex-ole-0.1.7.gem) = 26112 bytes
