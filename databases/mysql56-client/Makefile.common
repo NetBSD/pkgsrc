@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.59 2020/10/25 22:38:58 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.60 2021/02/05 09:28:07 adam Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
 
-DISTNAME=	mysql-5.6.50
+DISTNAME=	mysql-5.6.51
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.6/}
 
@@ -63,6 +63,7 @@ CMAKE_ARGS+=	-DINSTALL_SQLBENCHDIR="share/mysql/sql-bench"
 CMAKE_ARGS+=	-DINSTALL_SUPPORTFILESDIR="share/mysql"
 CMAKE_ARGS+=	-DMYSQL_DATADIR=${MYSQL_DATADIR}
 
+CMAKE_ARGS+=	-DWITH_EDITLINE="system"
 CMAKE_ARGS+=	-DWITH_ZLIB="system"
 CMAKE_ARGS+=	-DDEFAULT_CHARSET=${MYSQL_CHARSET}
 CMAKE_ARGS+=	-DDEFAULT_COLLATION=${MYSQL_COLLATION}
@@ -136,12 +137,7 @@ SUBST_NOOP_OK.fixpaths=	yes # not needed for mysql-client-5.6.47 on NetBSD
 USE_BUILTIN.editline=	no
 .endif
 
-.include "../../mk/readline.buildlink3.mk"
-.if ${READLINE_TYPE} == "readline"
-CMAKE_ARGS+=		-DWITH_READLINE="system"
-.else
-CMAKE_ARGS+=		-DWITH_EDITLINE="system"
-.endif
-
+.include "../../devel/editline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
