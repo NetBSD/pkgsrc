@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/03/20 11:57:27 nia Exp $
+# $NetBSD: Makefile,v 1.19 2021/02/05 08:08:59 schmonz Exp $
 #
 
 DISTNAME=	ft${PKGNAME_NOREV}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 #MASTER_SITES=	ftp://ftp.perforce.com/pub/jam/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	schmonz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freetype.sourceforge.net/jam/index.html
 #HOMEPAGE=	http://www.perforce.com/jam/jam.html
 COMMENT=	Program construction tool, like make(1)
