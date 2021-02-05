@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2021/02/05 09:21:00 wiz Exp $
+
+Install openvpn(8).
+
+--- doc/Makefile.in.orig	2020-10-28 07:25:32.000000000 +0000
++++ doc/Makefile.in
+@@ -468,7 +468,7 @@ dist_noinst_DATA = README.plugins intera
+ @HAVE_PYDOCUTILS_TRUE@CLEANFILES = \
+ @HAVE_PYDOCUTILS_TRUE@	 openvpn.8 openvpn.8.html
+ 
+-@HAVE_PYDOCUTILS_TRUE@@WIN32_FALSE@dist_man_MANS = openvpn.8
++@WIN32_FALSE@dist_man_MANS = openvpn.8
+ all: all-recursive
+ 
+ .SUFFIXES:
