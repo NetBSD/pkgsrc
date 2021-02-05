@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/10 00:28:03 rillig Exp $
-@comment See the platform-specific files for the actual file lists.
-@comment After collecting these lists for several platforms, the
-@comment common parts may be extracted into common files.
