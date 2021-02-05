@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.831 2021/02/05 09:29:10 adam Exp $
+$NetBSD: CHANGES-2021,v 1.832 2021/02/05 09:30:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1001,3 +1001,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/feed2exec to 0.17.1 [schmonz 2021-02-05]
 	Updated databases/mysql56-client to 5.6.51 [adam 2021-02-05]
 	Updated databases/mysql56-server to 5.6.51 [adam 2021-02-05]
+	Updated net/openvpn to 2.5.0nb1 [wiz 2021-02-05]
