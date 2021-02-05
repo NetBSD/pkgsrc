@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.865 2021/02/05 16:16:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.866 2021/02/05 16:21:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1037,3 +1037,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-backports to 3.20.2 [taca 2021-02-05]
 	Updated finance/ruby-activemerchant to 1.118.0 [taca 2021-02-05]
 	Updated finance/ruby-braintree to 3.2.0 [taca 2021-02-05]
+	Updated devel/ruby-cucumber-messages to 13.2.1 [taca 2021-02-05]
