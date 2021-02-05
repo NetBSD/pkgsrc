@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2020/10/25 22:38:58 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.40 2021/02/05 09:28:07 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -593,6 +593,7 @@ share/mysql/test/include/mrr_innodb_tests.inc
 share/mysql/test/include/mrr_tests.inc
 share/mysql/test/include/mtr_check.sql
 share/mysql/test/include/mtr_warnings.sql
+share/mysql/test/include/mysql_have_debug.inc
 share/mysql/test/include/mysql_upgrade_preparation.inc
 share/mysql/test/include/mysqlbinlog_have_debug.inc
 share/mysql/test/include/mysqlbinlog_raw_mode.inc
