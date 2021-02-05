@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:55 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2021/02/05 13:18:48 nia Exp $
 #
 
 DISTNAME=	priv-1.0-beta2
 PKGNAME=	priv-1.0beta2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.thistledown.com.au/pub/simonb/
 
 MAINTAINER=	simonb@NetBSD.org
 COMMENT=	Execute commands as a different user
+LICENSE=	original-bsd
 
 GNU_CONFIGURE=	YES
 
