@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/10 14:59:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/05 21:38:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,9 +10,6 @@ ${PYSITELIB}/smmap/__init__.pyo
 ${PYSITELIB}/smmap/buf.py
 ${PYSITELIB}/smmap/buf.pyc
 ${PYSITELIB}/smmap/buf.pyo
-${PYSITELIB}/smmap/exc.py
-${PYSITELIB}/smmap/exc.pyc
-${PYSITELIB}/smmap/exc.pyo
 ${PYSITELIB}/smmap/mman.py
 ${PYSITELIB}/smmap/mman.pyc
 ${PYSITELIB}/smmap/mman.pyo
