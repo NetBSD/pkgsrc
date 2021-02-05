@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/05 14:39:08 mef Exp $
+
+SHA1 (R/webshot_0.5.2.tar.gz) = 46009d1fafcda1fdf058e239fe5304d96535dd0d
+RMD160 (R/webshot_0.5.2.tar.gz) = 50afc73d48414efd6c1eea77299b2482cef009b3
+SHA512 (R/webshot_0.5.2.tar.gz) = fc378cfb53895f4eb1dc063c5b7aac2c213920738fc83af3fe8e474f4a6940f6888b86e09a03a4f00bc4be8d8171f9a0e9f2a1c7951a460337b1fedf9f8e18bb
+Size (R/webshot_0.5.2.tar.gz) = 157837 bytes
