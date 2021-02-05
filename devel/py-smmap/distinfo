@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/09/10 14:59:20 taca Exp $
+$NetBSD: distinfo,v 1.2 2021/02/05 21:38:11 adam Exp $
 
-SHA1 (smmap-3.0.4.tar.gz) = 71d810b0fcee862c07f3febcddd76e941249df2d
-RMD160 (smmap-3.0.4.tar.gz) = 57a390b6b35fb4e42f671d8968025898f9ec166a
-SHA512 (smmap-3.0.4.tar.gz) = da7e5c0257f29b487eb5ee18f29656340f7f6999dd625d93560444d526df8036a8fc4452242a2d01203907798709d82a0015709e097bc22acd3d0a8b976ef9fe
-Size (smmap-3.0.4.tar.gz) = 22459 bytes
+SHA1 (smmap-4.0.0.tar.gz) = 9266bd65190f65c306f89affc1711b74b4ee1011
+RMD160 (smmap-4.0.0.tar.gz) = 53cc34189d062a18da5caedb8e391f5506317695
+SHA512 (smmap-4.0.0.tar.gz) = fae59fd4e8ccc95cbc07be3ece208e862948c2b537850376b169acc15b9f0b1d94d412fde88647c245dda117dbbdab4db6426e1d95f3f9779bdd40c2d9c7d2cd
+Size (smmap-4.0.0.tar.gz) = 22524 bytes
