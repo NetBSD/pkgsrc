@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.840 2021/02/05 14:56:20 taca Exp $
+$NetBSD: CHANGES-2021,v 1.841 2021/02/05 14:58:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1010,3 +1010,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php74 to 7.4.15 [taca 2021-02-05]
 	Updated lang/php73 to 7.3.27 [taca 2021-02-05]
 	Updated devel/ruby-pkg-config to 1.4.5 [taca 2021-02-05]
+	Updated net/ruby-recog to 2.3.19 [taca 2021-02-05]
