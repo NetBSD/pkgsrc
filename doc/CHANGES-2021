@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.843 2021/02/05 15:05:14 taca Exp $
+$NetBSD: CHANGES-2021,v 1.844 2021/02/05 15:07:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1013,3 +1013,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ruby-recog to 2.3.19 [taca 2021-02-05]
 	Updated security/ruby-rex-arch to 0.1.14 [taca 2021-02-05]
 	Updated security/ruby-rex-core to 0.1.15 [taca 2021-02-05]
+	Updated security/ruby-rex-encoder to 0.1.5 [taca 2021-02-05]
