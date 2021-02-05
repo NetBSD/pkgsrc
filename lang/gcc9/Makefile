@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/12/04 20:45:26 nia Exp $
+# $NetBSD: Makefile,v 1.26 2021/02/05 10:28:40 maya Exp $
 
 GCC_PKGNAME=	gcc9
 .include "version.mk"
@@ -41,16 +41,6 @@ UNLIMIT_RESOURCES=	datasize stacksize
 CHECK_PORTABILITY_SKIP+=	contrib/* # not needed during the build
 
 .include "../../mk/bsd.prefs.mk"
-
-# Prevent compilation error on RedHat EL 7:
-#
-# compute_powtab.c: In function 'mpn_compute_powtab_mul':
-# compute_powtab.c:142:3: error: 'for' loop initial declarations are only allowed in C99 mode
-#    for (long pi = start_idx; pi >= 0; pi--)
-#
-# I know that -std is not a preprocessor flag, but gcc9 ignores the CFLAGS,
-# for whatever reason.
-CPPFLAGS.Linux+=	-std=gnu99
 
 # Even though the build and target host is x86_64-sun-solaris2.11,
 # it fails to compile some seemingly linux-specific code.
@@ -199,12 +189,9 @@ post-install:
 	${TEST} -f ${DESTDIR}${GCC9_PREFIX}/bin/cc \
 	|| (cd ${DESTDIR}${GCC9_PREFIX}/bin && ${LN} -f gcc cc)
 
-PLIST_VARS+=		fixed-malloc
-.if ${MACHINE_PLATFORM:MNetBSD-9.*-*}
-PLIST.fixed-malloc=	yes
-.endif
-
-PRINT_PLIST_AWK+=	{ gsub("${MACHINE_GNU_PLATFORM}", "$${MACHINE_GNU_PLATFORM}"); }
+GENERATE_PLIST+= \
+        cd ${DESTDIR}${PREFIX} && \
+        ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT};
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
