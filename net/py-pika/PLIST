@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/13 18:34:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/05 22:19:25 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/pika/adapters/base_connection.pyo
 ${PYSITELIB}/pika/adapters/blocking_connection.py
 ${PYSITELIB}/pika/adapters/blocking_connection.pyc
 ${PYSITELIB}/pika/adapters/blocking_connection.pyo
+${PYSITELIB}/pika/adapters/gevent_connection.py
+${PYSITELIB}/pika/adapters/gevent_connection.pyc
+${PYSITELIB}/pika/adapters/gevent_connection.pyo
 ${PYSITELIB}/pika/adapters/select_connection.py
 ${PYSITELIB}/pika/adapters/select_connection.pyc
 ${PYSITELIB}/pika/adapters/select_connection.pyo
@@ -71,6 +74,9 @@ ${PYSITELIB}/pika/diagnostic_utils.pyo
 ${PYSITELIB}/pika/exceptions.py
 ${PYSITELIB}/pika/exceptions.pyc
 ${PYSITELIB}/pika/exceptions.pyo
+${PYSITELIB}/pika/exchange_type.py
+${PYSITELIB}/pika/exchange_type.pyc
+${PYSITELIB}/pika/exchange_type.pyo
 ${PYSITELIB}/pika/frame.py
 ${PYSITELIB}/pika/frame.pyc
 ${PYSITELIB}/pika/frame.pyo
