@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.828 2021/02/04 23:15:43 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.829 2021/02/05 07:57:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -994,3 +994,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mysql57-client to 5.7.33 [adam 2021-02-04]
 	Updated databases/mysql57-server to 5.7.33 [adam 2021-02-04]
 	Updated devel/py-mercurial to 5.7 [wiz 2021-02-04]
+	Updated databases/py-tortoise-orm to 0.16.21 [adam 2021-02-05]
+	Updated www/py-django2 to 2.2.18 [adam 2021-02-05]
+	Updated www/py-django3 to 3.1.6 [adam 2021-02-05]
+	Updated www/py-django-reversion to 3.0.9 [adam 2021-02-05]
