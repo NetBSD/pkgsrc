@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/03/21 13:26:45 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/02/05 15:04:49 taca Exp $
 
-SHA1 (rex-core-0.1.13.gem) = 91765d07f38f418d95acbde6059a006efce4cbc6
-RMD160 (rex-core-0.1.13.gem) = 9f30f0846f7ded9eb9ba8f857e7bcded5b57ef43
-SHA512 (rex-core-0.1.13.gem) = d7a402f732620a7ce25d3401fea9c97b4dbac8d37fc8d9183d621bfc16004e2f7171e0346b05fcb64a9c2af8b2b17e32d6ae11268a5300cc31111ab83dabfa9a
-Size (rex-core-0.1.13.gem) = 30208 bytes
+SHA1 (rex-core-0.1.15.gem) = 165bc791c16c01e97c14aa63f01f2543151f65cd
+RMD160 (rex-core-0.1.15.gem) = 53076aea25244613a439f700a6915f578c9e52ba
+SHA512 (rex-core-0.1.15.gem) = 857faac20843698333cae35e595021c31035c375e08313fe749bf7b540c70d5dc7811a2124a068eeffb2827a4cd4a7d4c0f3e93b14504a64ef55992046991d28
+Size (rex-core-0.1.15.gem) = 30720 bytes
