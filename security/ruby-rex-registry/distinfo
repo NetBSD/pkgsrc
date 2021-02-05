@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/13 17:48:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/02/05 15:25:58 taca Exp $
 
-SHA1 (rex-registry-0.1.3.gem) = 8637a792c83ec054f317c57d6adc45e821edaa00
-RMD160 (rex-registry-0.1.3.gem) = bd0576a6b613bb0370d749a9e0b3d6784c74f286
-SHA512 (rex-registry-0.1.3.gem) = cde5350945e8aa7cfa0dc01c78e7a375d1aa7174c2954b658ffeba39c81d638b1d614866cbd0f8f8f417f1831281cd43126cde158944903e36c8dc5ce79773e6
-Size (rex-registry-0.1.3.gem) = 16384 bytes
+SHA1 (rex-registry-0.1.4.gem) = 9c19a4a090be4f89762162fa901af9669be91779
+RMD160 (rex-registry-0.1.4.gem) = b028e21a120683fbc0ba7c7f4979d20c37b1d28c
+SHA512 (rex-registry-0.1.4.gem) = bd500ac65ba0fac6e64b845a303760593171fd47ccd7f5f4bbcc67d5edfc9f3342e38ca029bc9c5e2d949aaf2c58691c761cd813b42696b5461fdeee51df8a37
+Size (rex-registry-0.1.4.gem) = 16384 bytes
