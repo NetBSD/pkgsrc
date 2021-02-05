@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2020/10/07 19:46:53 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2021/02/05 09:06:28 schmonz Exp $
 
-SHA1 (feed2exec-0.16.0.tar.gz) = 764340ac55564f0534e5d6416bad610f220f4d68
-RMD160 (feed2exec-0.16.0.tar.gz) = e30b1b4b427eb579d22f130808b9a831183952a9
-SHA512 (feed2exec-0.16.0.tar.gz) = 02d3ad6ebc3d7bbebd41c51cc6190adaa2ab68e9e689352a04e860262e551d6c1a1f9c5caada230d87910613c8188177a146274f9305cf068892266d8955b120
-Size (feed2exec-0.16.0.tar.gz) = 396779 bytes
+SHA1 (feed2exec-0.17.1.tar.gz) = 65c529482768c23d714b9877e18373c5246f0e3c
+RMD160 (feed2exec-0.17.1.tar.gz) = 749f796132524177c8b53c9412c93afce0d1e94d
+SHA512 (feed2exec-0.17.1.tar.gz) = e7d00cefb9ee40010a912eff3cc49c5f1388fa74adfc8f5084ac379697a8164e05083ef4b1c712ac4616a08c142181b5393cbe59a76594bfaf3ac33b41d99afa
+Size (feed2exec-0.17.1.tar.gz) = 397334 bytes
 SHA1 (patch-feed2exec_____init____.py) = 6381dc9198cb257dce82a96106b21b53af282f6f
 SHA1 (patch-setup.py) = 2bac00a185bff16f419a314b0347d3e70ce7e60c
