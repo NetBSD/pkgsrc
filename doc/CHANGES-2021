@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.848 2021/02/05 15:16:12 taca Exp $
+$NetBSD: CHANGES-2021,v 1.849 2021/02/05 15:17:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1018,3 +1018,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-rex-java to 0.1.6 [taca 2021-02-05]
 	Updated security/ruby-rex-mime to 0.1.6 [taca 2021-02-05]
 	Updated security/ruby-rex-nop to 0.1.2 [taca 2021-02-05]
+	Updated security/ruby-rex-ole to 0.1.7 [taca 2021-02-05]
