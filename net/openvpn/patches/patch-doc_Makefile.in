@@ -1,6 +1,7 @@
-$NetBSD: patch-doc_Makefile.in,v 1.1 2021/02/05 09:21:00 wiz Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.2 2021/02/05 09:29:36 wiz Exp $
 
 Install openvpn(8).
+https://community.openvpn.net/openvpn/ticket/1382
 
 --- doc/Makefile.in.orig	2020-10-28 07:25:32.000000000 +0000
 +++ doc/Makefile.in
