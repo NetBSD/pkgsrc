@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/13 17:42:09 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/02/05 15:41:10 taca Exp $
 
-SHA1 (rex-zip-0.1.3.gem) = dd6a4104542307a097e72293e18e83d4ff77dc08
-RMD160 (rex-zip-0.1.3.gem) = bef9cf464c33b21e4a0e6d8a919482c5663968cb
-SHA512 (rex-zip-0.1.3.gem) = f92d64779ddf943ca4855c5b9c567a0d995ebb6ace93ac8da12a7f1dc3ea350d492d3d229d3950ffec32bbba29fcd226c27a5be81e3f45d6f0edaa35ebc70047
-Size (rex-zip-0.1.3.gem) = 23040 bytes
+SHA1 (rex-zip-0.1.4.gem) = 35bcf4a7ff76bb357a52d4d02df3142a49ad795b
+RMD160 (rex-zip-0.1.4.gem) = 8f1ca137f7d6c1cfe8cf1389f4d8e2fc027094aa
+SHA512 (rex-zip-0.1.4.gem) = 168d9a9fa97a88f84d8fdf9c9f6268d8f9d73feba17a05806b7eb8a360b3270b6f57004e1d8fef71e83e2f70dacbbe07b320b5e272409548ac70ba8b99999295
+Size (rex-zip-0.1.4.gem) = 23040 bytes
