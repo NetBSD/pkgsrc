@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/03/24 16:15:21 taca Exp $
+$NetBSD: distinfo,v 1.3 2021/02/05 15:32:33 taca Exp $
 
-SHA1 (rex-struct2-0.1.2.gem) = 1b034d4afe0fdb43e851b0ecb2c3ee44e5c9e878
-RMD160 (rex-struct2-0.1.2.gem) = 3b91ee7e918fea439235445ee03c4ede8f27b4f1
-SHA512 (rex-struct2-0.1.2.gem) = c8b549c89e5b884a6ec6ef9a04dd2a3400bfeb885b742f1bc256a200387bcbd8ba848ad1e69a4c0c349516a62c04067a8bbffff04cb5c581f51d0ff91a142e6b
-Size (rex-struct2-0.1.2.gem) = 18432 bytes
+SHA1 (rex-struct2-0.1.3.gem) = eb94f06488035c07646f9023cb2e81d4fb6dc14e
+RMD160 (rex-struct2-0.1.3.gem) = dc44dfe94b8314c8fe74b05b4123e785b0a066d2
+SHA512 (rex-struct2-0.1.3.gem) = 84732489d8701901450707d40bb9a09c17b9beb250829d4e6752607fab1537648613cb039b126e973752383632b143fde3f6acfaf7d19c56306973f5750b373a
+Size (rex-struct2-0.1.3.gem) = 18432 bytes
