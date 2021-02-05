@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.853 2021/02/05 15:28:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.854 2021/02/05 15:31:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-rex-random_identifier to 0.1.5 [taca 2021-02-05]
 	Updated security/ruby-rex-registry to 0.1.4 [taca 2021-02-05]
 	Updated security/ruby-rex-rop_builder to 0.1.4 [taca 2021-02-05]
+	Updated security/ruby-rex-socket to 0.1.24 [taca 2021-02-05]
