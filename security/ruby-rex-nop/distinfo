@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/13 17:59:11 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/02/05 15:15:44 taca Exp $
 
-SHA1 (rex-nop-0.1.1.gem) = 467b691f7e3d464c1339fd26f992ef0157ddcee5
-RMD160 (rex-nop-0.1.1.gem) = 312b4482848efef8a0249ec67f81fb6f669ab6e8
-SHA512 (rex-nop-0.1.1.gem) = f0a80f948189eb3c775739e7a492882ed7a647f9a79d1cfe3658f8905b8316a386dd0c89da5158eaab351f6122bf5bbb0c8270424617940fe48a1270cb363da5
-Size (rex-nop-0.1.1.gem) = 27648 bytes
+SHA1 (rex-nop-0.1.2.gem) = 9c483c82f789773aa5a51b2d3521be24aa9182f0
+RMD160 (rex-nop-0.1.2.gem) = 09d45fccbf30371d96efe731276265f0c44dafe7
+SHA512 (rex-nop-0.1.2.gem) = 897f9f7ef5722078d2532eff281013cee5ed7987afaa457602bdeaccdd0a20abaac828d89951627ef728288e1a1adef244dfc85ffe27efcd84b6882d0c6e7d13
+Size (rex-nop-0.1.2.gem) = 27648 bytes
