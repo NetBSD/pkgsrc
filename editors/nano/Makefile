@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2021/01/24 17:13:42 nia Exp $
+# $NetBSD: Makefile,v 1.93 2021/02/05 17:25:52 triaxx Exp $
 
 DISTNAME=	nano-5.5
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://www.nano-editor.org/dist/v${PKGVERSION_NOREV:C/\..*$//}/
 EXTRACT_SUFX=	.tar.xz
@@ -32,6 +33,12 @@ INFO_FILES=		yes
 
 INSTALLATION_DIRS+=	share/examples/nano
 CONF_FILES+=		share/examples/nano/nanorc ${PKG_SYSCONFDIR}/nanorc
+
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fixing paths in manpages.
+SUBST_FILES.man=	doc/nano.1 doc/nanorc.5
+SUBST_VARS.man=		PKG_SYSCONFDIR PREFIX
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.nanorc ${DESTDIR}${PREFIX}/share/examples/nano/nanorc
