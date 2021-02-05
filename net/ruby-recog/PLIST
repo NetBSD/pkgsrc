@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/01/11 14:42:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/02/05 14:58:26 taca Exp $
 bin/recog_cleanup${RUBY_SUFFIX}
 bin/recog_export${RUBY_SUFFIX}
 bin/recog_match${RUBY_SUFFIX}
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/feature_request.md
 ${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/fingerprint_request.md
 ${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE
 ${GEM_LIBDIR}/.github/SECURITY.md
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.ruby-gemset
@@ -133,6 +134,7 @@ ${GEM_LIBDIR}/xml/snmp_sysdescr.xml
 ${GEM_LIBDIR}/xml/snmp_sysobjid.xml
 ${GEM_LIBDIR}/xml/ssh_banners.xml
 ${GEM_LIBDIR}/xml/telnet_banners.xml
+${GEM_LIBDIR}/xml/tls_jarm.xml
 ${GEM_LIBDIR}/xml/x11_banners.xml
 ${GEM_LIBDIR}/xml/x509_issuers.xml
 ${GEM_LIBDIR}/xml/x509_subjects.xml
