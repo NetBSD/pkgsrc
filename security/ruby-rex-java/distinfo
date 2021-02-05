@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/13 16:14:05 minskim Exp $
+$NetBSD: distinfo,v 1.2 2021/02/05 15:12:42 taca Exp $
 
-SHA1 (rex-java-0.1.5.gem) = 2a1dafbc569f29381cd527e5617112fb48b20c85
-RMD160 (rex-java-0.1.5.gem) = 34f7056daa99b52bdd7b15fe77a2d9c9761f3fc4
-SHA512 (rex-java-0.1.5.gem) = 990f989a19cdb5c6f87ac5b57e500fa1bd7031dd867e43c6b451f538c1b581b57ee9908b40d8a37727c45883ba17f466272e739913ccc2406b69c1e818de5c7b
-Size (rex-java-0.1.5.gem) = 23040 bytes
+SHA1 (rex-java-0.1.6.gem) = bf10be10efef65f20630aa3d9f14ec6693b6d653
+RMD160 (rex-java-0.1.6.gem) = 92b4a66babf34d4a5c4db9d5cc694397a2606a2a
+SHA512 (rex-java-0.1.6.gem) = e9c21b391dcb7b5a774453ab1e0deb1f6c544c3b869d84d4fdb8a9052856f98b798fefd130050628efb4e095057a84a5266523b0b0dab594e004b39a59e0461f
+Size (rex-java-0.1.6.gem) = 22528 bytes
