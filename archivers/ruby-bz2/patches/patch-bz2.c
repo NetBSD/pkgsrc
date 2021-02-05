@@ -1,6 +1,6 @@
-$NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
+$NetBSD: patch-bz2.c,v 1.3 2021/02/05 16:46:25 taca Exp $
 
-* for ruby-1.9 and later.
+* Update API for newer versions of Ruby.
 
 --- bz2.c.orig	2004-12-04 14:36:59.000000000 +0000
 +++ bz2.c
@@ -46,19 +46,16 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  	Data_Get_Struct(elem, struct bz_iv, bziv);
  	if (bziv->bz2) {
  	    RDATA(bziv->bz2)->dfree = ruby_xfree;
-@@ -249,7 +257,11 @@ bz_writer_close(obj)
+@@ -249,7 +257,7 @@ bz_writer_close(obj)
      Get_BZ2(obj, bzf);
      res = bz_writer_internal_close(bzf);
      if (!NIL_P(res) && (bzf->flags & BZ2_RB_INTERNAL)) {
-+#if RUBY_API_VERSION_MAJOR >=2 && RUBY_API_VERSION_MINOR >= 1
+-	RBASIC(res)->klass = rb_cString;
 +	rb_obj_reveal(res, rb_cString);
-+#else
- 	RBASIC(res)->klass = rb_cString;
-+#endif
      }
      return res;
  }
-@@ -301,7 +313,8 @@ bz_io_data_finalize(ptr)
+@@ -301,7 +309,8 @@ bz_io_data_finalize(ptr)
  	    (*bziv->finalize)(ptr);
  	}
  	else if (TYPE(bzf->io) == T_FILE) {
@@ -68,7 +65,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  	    if (file->f) {
  		fclose(file->f);
  		file->f = 0;
-@@ -310,6 +323,16 @@ bz_io_data_finalize(ptr)
+@@ -310,6 +319,16 @@ bz_io_data_finalize(ptr)
  		fclose(file->f2);
  		file->f2 = 0;
  	    }
@@ -85,7 +82,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  	}
      }
  }
-@@ -396,8 +419,8 @@ bz_str_write(obj, str)
+@@ -396,8 +415,8 @@ bz_str_write(obj, str)
      if (TYPE(str) != T_STRING) {
  	rb_raise(rb_eArgError, "expected a String");
      }
@@ -96,7 +93,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
      }
      return str;
  }
-@@ -436,7 +459,7 @@ bz_writer_init(argc, argv, obj)
+@@ -436,7 +455,7 @@ bz_writer_init(argc, argv, obj)
      else {
  	VALUE iv;
  	struct bz_iv *bziv;
@@ -105,7 +102,16 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  
  	rb_io_taint_check(a);
  	if (!rb_respond_to(a, id_write)) {
-@@ -507,8 +530,8 @@ bz_writer_write(obj, a)
+@@ -460,7 +479,7 @@ bz_writer_init(argc, argv, obj)
+ 	    bziv->bz2 = obj;
+ 	}
+ 	else {
+-	    iv = Data_Make_Struct(rb_cData, struct bz_iv, 0, free, bziv);
++	    iv = Data_Make_Struct(rb_cObject, struct bz_iv, 0, free, bziv);
+ 	    bziv->io = a;
+ 	    bziv->bz2 = obj;
+ 	    rb_ary_push(bz_internal_ary, iv);
+@@ -507,8 +526,8 @@ bz_writer_write(obj, a)
  	bzf->buflen = BZ_RB_BLOCKSIZE;
  	bzf->buf[0] = bzf->buf[bzf->buflen] = '\0';
      }
@@ -116,7 +122,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
      while (bzf->bzs.avail_in) {
  	bzf->bzs.next_out = bzf->buf;
  	bzf->bzs.avail_out = bzf->buflen;
-@@ -523,7 +546,7 @@ bz_writer_write(obj, a)
+@@ -523,7 +542,7 @@ bz_writer_write(obj, a)
  	    rb_funcall(bzf->io, id_write, 1, rb_str_new(bzf->buf, n));
  	}
      }
@@ -125,7 +131,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  }
  
  static VALUE
-@@ -614,7 +637,7 @@ bz_reader_init(argc, argv, obj)
+@@ -614,7 +633,7 @@ bz_reader_init(argc, argv, obj)
      }
      if (rb_respond_to(a, id_read)) {
  	if (TYPE(a) == T_FILE) {
@@ -134,7 +140,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  
  	    GetOpenFile(a, fptr);
  	    rb_io_check_readable(fptr);
-@@ -691,14 +714,14 @@ bz_next_available(bzf, in)
+@@ -691,14 +710,14 @@ bz_next_available(bzf, in)
      }
      if (!bzf->bzs.avail_in) {
  	bzf->in = rb_funcall(bzf->io, id_read, 1, INT2FIX(1024));
@@ -152,7 +158,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
      }
      if ((bzf->buflen - in) < (BZ_RB_BLOCKSIZE / 2)) {
  	bzf->buf = REALLOC_N(bzf->buf, char, bzf->buflen+BZ_RB_BLOCKSIZE+1);
-@@ -780,7 +803,7 @@ bz_read_until(bzf, str, len, td1)
+@@ -780,7 +799,7 @@ bz_read_until(bzf, str, len, td1)
  	    if (nex) {
  		res = rb_str_cat(res, bzf->buf, nex);
  	    }
@@ -161,7 +167,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  		return res;
  	    }
  	    return Qnil;
-@@ -845,8 +868,8 @@ bz_reader_read(argc, argv, obj)
+@@ -845,8 +864,8 @@ bz_reader_read(argc, argv, obj)
      }
      while (1) {
  	total = bzf->bzs.avail_out;
@@ -172,7 +178,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  	    res = rb_str_cat(res, bzf->bzs.next_out, n);
  	    bzf->bzs.next_out += n;
  	    bzf->bzs.avail_out -= n;
-@@ -868,10 +891,10 @@ bz_getc(obj)
+@@ -868,10 +887,10 @@ bz_getc(obj)
  {
      VALUE length = INT2FIX(1);
      VALUE res = bz_reader_read(1, &length, obj);
@@ -185,7 +191,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  }
  
  static VALUE
-@@ -911,15 +934,15 @@ bz_reader_ungets(obj, a)
+@@ -911,15 +930,15 @@ bz_reader_ungets(obj, a)
      if (!bzf->buf) {
  	bz_raise(BZ_SEQUENCE_ERROR);
      }
@@ -208,7 +214,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  	bzf->buf[bzf->buflen] = '\0';
  	bzf->bzs.next_out = bzf->buf;
  	bzf->bzs.avail_out = bzf->buflen;
-@@ -966,8 +989,8 @@ bz_reader_gets_internal(argc, argv, obj,
+@@ -966,8 +985,8 @@ bz_reader_gets_internal(argc, argv, obj,
      if (NIL_P(rs)) {
  	return bz_reader_read(1, &rs, obj);
      }
@@ -219,7 +225,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  	return bz_reader_gets(obj);
      }
  
-@@ -977,7 +1000,7 @@ bz_reader_gets_internal(argc, argv, obj,
+@@ -977,7 +996,7 @@ bz_reader_gets_internal(argc, argv, obj,
  	rspara = 1;
      }
      else {
@@ -228,7 +234,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  	rspara = 0;
      }
  
-@@ -1024,13 +1047,13 @@ bz_reader_set_unused(obj, a)
+@@ -1024,13 +1043,13 @@ bz_reader_set_unused(obj, a)
      Check_Type(a, T_STRING);
      Get_BZ2(obj, bzf);
      if (!bzf->in) {
@@ -246,7 +252,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
      return Qnil;
  }
  
-@@ -1042,10 +1065,10 @@ bz_reader_getc(obj)
+@@ -1042,10 +1061,10 @@ bz_reader_getc(obj)
      VALUE len = INT2FIX(1);
  
      str = bz_reader_read(1, &len, obj);
@@ -259,7 +265,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  }
  
  static void
-@@ -1319,7 +1342,7 @@ bz_reader_s_foreach(argc, argv, obj)
+@@ -1319,7 +1338,7 @@ bz_reader_s_foreach(argc, argv, obj)
  	rb_raise(rb_eArgError, "call out of a block");
      }
      rb_scan_args(argc, argv, "11", &fname, &sep);
@@ -268,7 +274,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
      arg.argc = argc - 1;
      arg.sep = sep;
      arg.obj = rb_funcall2(rb_mKernel, id_open, 1, &fname);
-@@ -1357,7 +1380,7 @@ bz_reader_s_readlines(argc, argv, obj)
+@@ -1357,7 +1376,7 @@ bz_reader_s_readlines(argc, argv, obj)
      struct bz_file *bzf;
  
      rb_scan_args(argc, argv, "11", &fname, &sep);
@@ -277,7 +283,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
      arg.argc = argc - 1;
      arg.sep = sep;
      arg.obj = rb_funcall2(rb_mKernel, id_open, 1, &fname);
-@@ -1411,7 +1434,7 @@ bz_str_read(argc, argv, obj)
+@@ -1411,7 +1430,7 @@ bz_str_read(argc, argv, obj)
      Data_Get_Struct(obj, struct bz_str, bzs);
      rb_scan_args(argc, argv, "01", &len);
      if (NIL_P(len)) {
@@ -286,7 +292,7 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
      }
      else {
  	count = NUM2INT(len);
-@@ -1422,13 +1445,13 @@ bz_str_read(argc, argv, obj)
+@@ -1422,13 +1441,13 @@ bz_str_read(argc, argv, obj)
      if (!count || bzs->pos == -1) {
  	return Qnil;
      }
@@ -304,3 +310,39 @@ $NetBSD: patch-bz2.c,v 1.2 2014/03/16 07:24:22 taca Exp $
  	bzs->pos += count;
      }
      return res;
+@@ -1464,7 +1483,7 @@ bz_proc_new(func, val)
+     VALUE (*func)(ANYARGS);
+     VALUE val;
+ {
+-    VALUE tmp = Data_Wrap_Struct(rb_cData, 0, 0, 0);
++    VALUE tmp = Data_Wrap_Struct(rb_cObject, 0, 0, 0);
+     rb_define_singleton_method(tmp, "tmp_proc", func, 1);
+     return rb_funcall2(rb_funcall(tmp, rb_intern("method"), 1, 
+                                   ID2SYM(rb_intern("tmp_proc"))),
+@@ -1507,7 +1526,7 @@ void Init_bz2()
+     /*
+       Writer
+     */
+-    bz_cWriter = rb_define_class_under(bz_mBZ2, "Writer", rb_cData);
++    bz_cWriter = rb_define_class_under(bz_mBZ2, "Writer", rb_cObject);
+ #if HAVE_RB_DEFINE_ALLOC_FUNC
+     rb_define_alloc_func(bz_cWriter, bz_writer_s_alloc);
+ #else
+@@ -1530,7 +1549,7 @@ void Init_bz2()
+     /*
+       Reader
+     */
+-    bz_cReader = rb_define_class_under(bz_mBZ2, "Reader", rb_cData);
++    bz_cReader = rb_define_class_under(bz_mBZ2, "Reader", rb_cObject);
+     rb_include_module(bz_cReader, rb_mEnumerable);
+ #if HAVE_RB_DEFINE_ALLOC_FUNC
+     rb_define_alloc_func(bz_cReader, bz_reader_s_alloc);
+@@ -1570,7 +1589,7 @@ void Init_bz2()
+     /*
+       Internal
+     */
+-    bz_cInternal = rb_define_class_under(bz_mBZ2, "InternalStr", rb_cData);
++    bz_cInternal = rb_define_class_under(bz_mBZ2, "InternalStr", rb_cObject);
+ #if HAVE_RB_DEFINE_ALLOC_FUNC
+     rb_undef_alloc_func(bz_cInternal);
+ #else
