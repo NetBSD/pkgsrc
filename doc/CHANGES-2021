@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.890 2021/02/06 10:27:17 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.891 2021/02/06 10:37:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1073,3 +1073,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed security/pinentry-qt4 [wiz 2021-02-06]
 	Added security/pinentry-qt5 version 1.1.1 [wiz 2021-02-06]
 	Updated security/pinentry to 1.1.1 [wiz 2021-02-06]
+	Added sysutils/refi version 3.0.0 [pin 2021-02-06]
