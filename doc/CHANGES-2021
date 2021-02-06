@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.889 2021/02/06 09:52:10 pin Exp $
+$NetBSD: CHANGES-2021,v 1.890 2021/02/06 10:27:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1070,3 +1070,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.2.2 [pin 2021-02-06]
 	Updated devel/py-tortoisehg to 5.6.1 [wiz 2021-02-06]
 	Updated sysutils/broot to 1.2.3 [pin 2021-02-06]
+	Removed security/pinentry-qt4 [wiz 2021-02-06]
+	Added security/pinentry-qt5 version 1.1.1 [wiz 2021-02-06]
+	Updated security/pinentry to 1.1.1 [wiz 2021-02-06]
