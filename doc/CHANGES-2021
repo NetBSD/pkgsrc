@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.888 2021/02/06 08:23:46 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.889 2021/02/06 09:52:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1069,3 +1069,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hg-evolve to 10.2.0.1 [wiz 2021-02-06]
 	Updated sysutils/broot to 1.2.2 [pin 2021-02-06]
 	Updated devel/py-tortoisehg to 5.6.1 [wiz 2021-02-06]
+	Updated sysutils/broot to 1.2.3 [pin 2021-02-06]
