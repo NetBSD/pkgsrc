@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/01/24 16:19:59 nia Exp $
+# $NetBSD: Makefile,v 1.27 2021/02/06 15:40:47 dbj Exp $
 
 DISTNAME=	lilv-0.24.12
 CATEGORIES=	audio
@@ -19,7 +19,7 @@ WAF_ARGS+=	--no-bindings
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	lv2bench
-.if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
+.if (${OPSYS} != "Darwin" || ${OS_VERSION:R:R} >= 16) && ${OPSYS} != "SunOS"
 # Darwin doesn't have CLOCK_GETTIME so it doesn't compile this
 PLIST.lv2bench=	yes
 .endif
