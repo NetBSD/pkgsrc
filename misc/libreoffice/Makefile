@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.250 2021/01/01 13:17:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.251 2021/02/06 06:47:24 ryoon Exp $
 
-VERREL=		7.0.4
-VERRC=		2
+VERREL=		7.1.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -116,15 +116,15 @@ MORE_DISTFILES= \
 	ReemKufi-0.7.zip \
 	pdfium-4306.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m85-e684c6daef6bfb774a325a069eda1f76ca6ac26c.tar.xz
+	skia-m88-59bafeeaa7de9eb753e3778c414e01dcf013dcd8.tar.xz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
 SITES.${md}=		https://dev-www.libreoffice.org/src/
 .endfor
 
-MORE_DISTFILES2+=		884ed41809687c3e168fc7c19b16585149ff058eca79acbf3ee784f6630704cc-opens___.ttf
-SITES.884ed41809687c3e168fc7c19b16585149ff058eca79acbf3ee784f6630704cc-opens___.ttf=	https://dev-www.libreoffice.org/extern/
+MORE_DISTFILES2+=	f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-opens___.ttf
+SITES.f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-opens___.ttf=	https://dev-www.libreoffice.org/extern/
 
 .include "../../graphics/librsvg/available.mk"
 .if ${LIBRSVG_TYPE} == "c" || make(distinfo) || make(mdi)
@@ -345,6 +345,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 #BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.4.2
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../fonts/harfbuzz-icu/buildlink3.mk"
+.include "../../graphics/box2d/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
 # Requires JCS_EXT_BGRA
