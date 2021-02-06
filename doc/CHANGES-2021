@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.895 2021/02/06 11:22:23 kleink Exp $
+$NetBSD: CHANGES-2021,v 1.896 2021/02/06 13:51:48 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1078,3 +1078,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-verse-doc version 2.4b [leot 2021-02-06]
 	Added graphics/R-manipulateWidget version 0.10.1 [mef 2021-02-06]
 	Updated games/py-ranking to 0.3.2 [kleink 2021-02-06]
+	Updated games/love07 to 0.7.2nb3 [maya 2021-02-06]
+	Updated games/love08 to 0.8.0nb4 [maya 2021-02-06]
+	Updated games/love09 to 0.9.2nb5 [maya 2021-02-06]
+	Updated games/love010 to 0.10.2nb5 [maya 2021-02-06]
+	Updated games/love11 to 11.3nb3 [maya 2021-02-06]
