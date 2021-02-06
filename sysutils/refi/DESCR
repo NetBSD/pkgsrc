@@ -1,0 +1,3 @@
+refi is program to help you rename files in numberic order, written in Rust.
+It was previously named as img-renamer.
+All versions >= 3.0.0 are for refi, below 3.0.0 are for img-renamer.
