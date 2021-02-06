@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.897 2021/02/06 14:41:46 mef Exp $
+$NetBSD: CHANGES-2021,v 1.898 2021/02/06 19:23:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1084,3 +1084,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/love010 to 0.10.2nb5 [maya 2021-02-06]
 	Updated games/love11 to 11.3nb3 [maya 2021-02-06]
 	Updated devel/R-Rcpp to 1.0.6 [mef 2021-02-06]
+	Updated audio/pulseaudio to 14.2 [wiz 2021-02-06]
