@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/07 12:50:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/02/06 15:25:17 dbj Exp $
 include/KF5/KWindowSystem/KKeyServer
-include/KF5/KWindowSystem/KSelectionOwner
-include/KF5/KWindowSystem/KSelectionWatcher
+${PLIST.x11}include/KF5/KWindowSystem/KSelectionOwner
+${PLIST.x11}include/KF5/KWindowSystem/KSelectionWatcher
 include/KF5/KWindowSystem/KStartupInfo
 include/KF5/KWindowSystem/KUserTimestamp
 include/KF5/KWindowSystem/KWindowEffects
@@ -9,15 +9,16 @@ include/KF5/KWindowSystem/KWindowInfo
 include/KF5/KWindowSystem/KWindowShadow
 include/KF5/KWindowSystem/KWindowShadowTile
 include/KF5/KWindowSystem/KWindowSystem
-include/KF5/KWindowSystem/KXMessages
-include/KF5/KWindowSystem/NETWM
+${PLIST.x11}include/KF5/KWindowSystem/KXMessages
+${PLIST.x11}include/KF5/KWindowSystem/NETWM
 include/KF5/KWindowSystem/config-kwindowsystem.h
-include/KF5/KWindowSystem/fixx11h.h
+${PLIST.x11}include/KF5/KWindowSystem/fixx11h.h
 include/KF5/KWindowSystem/kkeyserver.h
-include/KF5/KWindowSystem/kkeyserver_x11.h
-include/KF5/KWindowSystem/kmanagerselection.h
-include/KF5/KWindowSystem/kselectionowner.h
-include/KF5/KWindowSystem/kselectionwatcher.h
+${PLIST.mac}include/KF5/KWindowSystem/kkeyserver_mac.h
+${PLIST.x11}include/KF5/KWindowSystem/kkeyserver_x11.h
+${PLIST.x11}include/KF5/KWindowSystem/kmanagerselection.h
+${PLIST.x11}include/KF5/KWindowSystem/kselectionowner.h
+${PLIST.x11}include/KF5/KWindowSystem/kselectionwatcher.h
 include/KF5/KWindowSystem/kstartupinfo.h
 include/KF5/KWindowSystem/kusertimestamp.h
 include/KF5/KWindowSystem/kwindoweffects.h
@@ -25,8 +26,8 @@ include/KF5/KWindowSystem/kwindowinfo.h
 include/KF5/KWindowSystem/kwindowshadow.h
 include/KF5/KWindowSystem/kwindowsystem.h
 include/KF5/KWindowSystem/kwindowsystem_export.h
-include/KF5/KWindowSystem/kxmessages.h
-include/KF5/KWindowSystem/netwm.h
+${PLIST.x11}include/KF5/KWindowSystem/kxmessages.h
+${PLIST.x11}include/KF5/KWindowSystem/netwm.h
 include/KF5/KWindowSystem/netwm_def.h
 include/KF5/KWindowSystem/private/kwindoweffects_p.h
 include/KF5/KWindowSystem/private/kwindowinfo_p.h
@@ -43,7 +44,7 @@ lib/libKF5WindowSystem.so.5
 lib/libKF5WindowSystem.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KWindowSystem.pri
 qt5/plugins/kf5/org.kde.kwindowsystem.platforms/KF5WindowSystemWaylandPlugin.so
-qt5/plugins/kf5/org.kde.kwindowsystem.platforms/KF5WindowSystemX11Plugin.so
+${PLIST.x11}qt5/plugins/kf5/org.kde.kwindowsystem.platforms/KF5WindowSystemX11Plugin.so
 share/locale/af/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/ar/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/as/LC_MESSAGES/kwindowsystem5_qt.qm
