@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/02/06 10:26:54 wiz Exp $
+
+SHA1 (pinentry-1.1.1.tar.bz2) = b8b88cab4fd844e3616d55aeba8f084f2b98fb0f
+RMD160 (pinentry-1.1.1.tar.bz2) = 1b1a42245564b57c0fc0695d1c3c2d68e1cbf3ba
+SHA512 (pinentry-1.1.1.tar.bz2) = d6ab5af8ac2f3c9c05e09703e95d8e2676f9b2b7ceb97f6a31d101d0e9da7a1e106a6d3eabe86cab1bb35a4b119a7cba1380ac64bf13c61af0b3c48803116c12
+Size (pinentry-1.1.1.tar.bz2) = 515723 bytes
+SHA1 (patch-m4_qt.m4) = 70e9386c86e96e97ad2fd12312bd167005eeda65
