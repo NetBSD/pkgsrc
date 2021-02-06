@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.874 2021/02/05 22:22:35 adam Exp $
+$NetBSD: CHANGES-2021,v 1.875 2021/02/06 04:52:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-pygraphviz to 1.7 [adam 2021-02-05]
 	Updated net/py-pika to 1.2.0 [adam 2021-02-05]
 	Updated textproc/py-jsbeautifier to 1.13.5 [adam 2021-02-05]
+	Updated www/firefox78 to 78.7.1 [ryoon 2021-02-06]
