@@ -1,0 +1,4 @@
+A micro-package for reading "passwords", i.e.  reading user input with
+masking, so that the input is not displayed as it is typed.  Currently
+we have support for 'RStudio', the command line (every OS), and any
+platform where 'tcltk' is present.
