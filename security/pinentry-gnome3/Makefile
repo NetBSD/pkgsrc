@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/08/30 23:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/06 10:26:53 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/pinentry-/pinentry-gnome3-/}
 COMMENT=		Applications for entering PINs or Passphrases, GNOME 3 enabled
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--disable-pinentry-emacs
 #CONFIGURE_ARGS+=	--disable-fallback-curses
 CONFIGURE_ARGS+=	--enable-pinentry-gnome3
 CONFIGURE_ARGS+=	--disable-pinentry-fltk
+CONFIGURE_ARGS+=	--disable-pinentry-efl
 CONFIGURE_ARGS+=	--disable-libsecret
 
 INSTALL_DIRS=		gnome3
