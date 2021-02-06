@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.920 2021/01/29 11:40:24 pin Exp $
+# $NetBSD: Makefile,v 1.921 2021/02/06 06:42:49 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -60,6 +60,7 @@ SUBDIR+=	blender
 SUBDIR+=	blender-lts
 SUBDIR+=	blinkenthemes
 SUBDIR+=	blinkentools
+SUBDIR+=	box2d
 SUBDIR+=	breeze-icons
 SUBDIR+=	cairo
 SUBDIR+=	cairo-gobject
