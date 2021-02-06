@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/06 10:42:41 leot Exp $
+share/texmf-dist/doc/latex/verse/README
+share/texmf-dist/doc/latex/verse/verse.pdf
