@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/30 19:10:10 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/06 11:18:25 maya Exp $
+bin/love0.7
 love0.7/bin/love

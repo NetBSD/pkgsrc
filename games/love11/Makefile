@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/11/06 12:15:54 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/06 11:18:26 maya Exp $
 
 DISTNAME=	love-11.3-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love11/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=love2d/}
 GITHUB_PROJECT=	love
@@ -27,6 +27,10 @@ GNU_CONFIGURE_PREFIX=		${PREFIX}/love11
 GNU_CONFIGURE_MANDIR=		${PREFIX}/love11/${PKGMANDIR}/
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/love11/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/love11/lib
+
+INSTALLATION_DIRS+=	bin
+post-install:
+	${LN} -sf ../love11/bin/love ${DESTDIR}${PREFIX}/bin/love11
 
 .include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

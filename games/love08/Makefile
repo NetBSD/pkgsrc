@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/07/02 10:16:02 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/02/06 11:18:26 maya Exp $
 
 DISTNAME=	love-0.8.0-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love08/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games lua
 MASTER_SITES=	https://bitbucket.org/rude/love/downloads/
 
@@ -25,6 +25,10 @@ SUBST_FILES.lua=	configure
 SUBST_SED.lua=		-e 's,lua lua5.1,lua5.1,g'
 
 GNU_CONFIGURE_PREFIX=		${PREFIX}/love0.8
+
+INSTALLATION_DIRS+=	bin
+post-install:
+	${LN} -sf ../love0.8/bin/love ${DESTDIR}${PREFIX}/bin/love0.8
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
