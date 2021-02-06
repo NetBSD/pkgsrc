@@ -1,0 +1,4 @@
+Like package 'manipulate' does for static graphics, this package helps
+to easily add controls like sliders, pickers, checkboxes, etc. that
+can be used to modify the input data or the parameters of an
+interactive chart created with package 'htmlwidgets'.
