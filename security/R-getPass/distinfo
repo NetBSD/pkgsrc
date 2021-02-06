@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/06 23:07:00 mef Exp $
+
+SHA1 (R/getPass_0.2-2.tar.gz) = f01231d15da609ee8ac63fa1460ecf138a9c4b8c
+RMD160 (R/getPass_0.2-2.tar.gz) = 4f445d261ad404d054d550d2639f321efa70e090
+SHA512 (R/getPass_0.2-2.tar.gz) = c71b6a1a7d9d5b08a2712c34fcdd15b5811f47dc2feddfe09d6a92429260af72cc5ccd77c975bc95e1d95dfcef8b047c286dc1402c1c74df29058486e700424c
+Size (R/getPass_0.2-2.tar.gz) = 252439 bytes
