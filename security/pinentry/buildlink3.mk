@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:30 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2021/02/06 10:26:53 wiz Exp $
 
 BUILDLINK_TREE+=	pinentry
 

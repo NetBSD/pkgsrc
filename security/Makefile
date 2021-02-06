@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.800 2021/01/23 10:59:55 pin Exp $
+# $NetBSD: Makefile,v 1.801 2021/02/06 10:26:53 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -399,7 +399,7 @@ SUBDIR+=	pinentry-fltk
 SUBDIR+=	pinentry-gnome3
 SUBDIR+=	pinentry-gtk2
 SUBDIR+=	pinentry-mac
-SUBDIR+=	pinentry-qt4
+SUBDIR+=	pinentry-qt5
 SUBDIR+=	pinepgp
 SUBDIR+=	pius
 SUBDIR+=	pkcs11-helper
