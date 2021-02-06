@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2020/08/18 17:57:25 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2021/02/06 19:22:55 wiz Exp $
 
 BUILDLINK_TREE+=	pulseaudio
 
@@ -25,7 +25,7 @@ pkgbase:= pulseaudio
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.pulseaudio:Mx11)
+.if ${PKG_BUILD_OPTIONS.pulseaudio:Mx11}
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
