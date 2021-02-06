@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.784 2021/01/16 20:40:44 khorben Exp $
+# $NetBSD: Makefile,v 1.785 2021/02/06 10:41:17 leot Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1513,6 +1513,7 @@ SUBDIR+=	tex-verbatimbox
 SUBDIR+=	tex-verbatimbox-doc
 SUBDIR+=	tex-verbdef
 SUBDIR+=	tex-verbdef-doc
+SUBDIR+=	tex-verse
 SUBDIR+=	tex-version
 SUBDIR+=	tex-version-doc
 SUBDIR+=	tex-vertbars
