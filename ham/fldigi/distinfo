@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.68 2020/12/06 00:27:51 dbj Exp $
+$NetBSD: distinfo,v 1.69 2021/02/06 15:15:08 dbj Exp $
 
 SHA1 (fldigi-4.1.01.tar.gz) = 79bd6fbd28d7dd63de450e63de993dd230fabae2
 RMD160 (fldigi-4.1.01.tar.gz) = 598158a8367a821265893812cec496f0d1fdefaa
 SHA512 (fldigi-4.1.01.tar.gz) = f0fa33714b56d396dea59511083546765a34c645aa03875d0c6bb38af89ff79ecad6b5556895a6615d18b6340d50d94beb69e92c4a488fed346863fa1e378633
 Size (fldigi-4.1.01.tar.gz) = 3916445 bytes
-SHA1 (patch-doc_Makefile.am) = 956c440c30c0fbca6df3cb50f4aa5efe2ad28063
-SHA1 (patch-doc_Makefile.in) = cf1e4cb4041e4cf63bfdea55d17b2fd42d03442e
 SHA1 (patch-scripts_mkappbundle.sh) = e5029f71ce2474b2781c891faffd74c572d3f3eb
 SHA1 (patch-src_misc_configuration.cxx) = 6eb188f479f2586d5aee9f919832703a9d6fa86a
 SHA1 (patch-src_misc_newinstall.cxx) = 2c215e9423d27dd4f4657221b17cf4ed3f12355c
