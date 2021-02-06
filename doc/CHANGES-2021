@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.886 2021/02/06 07:55:18 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.887 2021/02/06 08:20:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1067,3 +1067,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/box2d version 2.4.1 [ryoon 2021-02-06]
 	Updated misc/libreoffice to 7.1.0.3 [ryoon 2021-02-06]
 	Updated devel/py-hg-evolve to 10.2.0.1 [wiz 2021-02-06]
+	Updated sysutils/broot to 1.2.2 [pin 2021-02-06]
