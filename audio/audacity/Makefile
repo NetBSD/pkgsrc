@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2020/12/31 20:04:11 nia Exp $
+# $NetBSD: Makefile,v 1.139 2021/02/06 23:21:13 dbj Exp $
 
 DISTNAME=	audacity-2.4.1
 PKGREVISION=	2
@@ -25,8 +25,6 @@ USE_LANGUAGES=	c c++
 
 # configure: error: Audacity requires at least GCC 4.9
 GCC_REQD+=	4.9
-
-CFLAGS+=	-DHAVE_VISIBILITY=1 # ???
 
 WRAPPER_SHELL=	${BASH}
 CONFIG_SHELL=	${BASH}
