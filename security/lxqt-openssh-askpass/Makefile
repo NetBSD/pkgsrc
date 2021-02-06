@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/12/07 12:20:46 pin Exp $
+# $NetBSD: Makefile,v 1.10 2021/02/06 08:33:36 pin Exp $
 
 DISTNAME=	lxqt-openssh-askpass-0.16.0
 CATEGORIES=	security
@@ -23,7 +23,6 @@ pre-configure:
 
 TOOL_DEPENDS+=	lxqt-build-tools>=0.8:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-DEPENDS+=	openssh-[0-9]*:../../security/openssh
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/liblxqt/buildlink3.mk"
