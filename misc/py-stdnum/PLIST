@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/08/10 06:55:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/02/07 12:38:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -530,6 +530,12 @@ ${PYSITELIB}/stdnum/kr/rrn.pyo
 ${PYSITELIB}/stdnum/lei.py
 ${PYSITELIB}/stdnum/lei.pyc
 ${PYSITELIB}/stdnum/lei.pyo
+${PYSITELIB}/stdnum/li/__init__.py
+${PYSITELIB}/stdnum/li/__init__.pyc
+${PYSITELIB}/stdnum/li/__init__.pyo
+${PYSITELIB}/stdnum/li/peid.py
+${PYSITELIB}/stdnum/li/peid.pyc
+${PYSITELIB}/stdnum/li/peid.pyo
 ${PYSITELIB}/stdnum/lt/__init__.py
 ${PYSITELIB}/stdnum/lt/__init__.pyc
 ${PYSITELIB}/stdnum/lt/__init__.pyo
@@ -698,6 +704,9 @@ ${PYSITELIB}/stdnum/ro/cf.pyo
 ${PYSITELIB}/stdnum/ro/cnp.py
 ${PYSITELIB}/stdnum/ro/cnp.pyc
 ${PYSITELIB}/stdnum/ro/cnp.pyo
+${PYSITELIB}/stdnum/ro/cui.py
+${PYSITELIB}/stdnum/ro/cui.pyc
+${PYSITELIB}/stdnum/ro/cui.pyo
 ${PYSITELIB}/stdnum/ro/onrc.py
 ${PYSITELIB}/stdnum/ro/onrc.pyc
 ${PYSITELIB}/stdnum/ro/onrc.pyo
@@ -773,6 +782,15 @@ ${PYSITELIB}/stdnum/tw/__init__.pyo
 ${PYSITELIB}/stdnum/tw/ubn.py
 ${PYSITELIB}/stdnum/tw/ubn.pyc
 ${PYSITELIB}/stdnum/tw/ubn.pyo
+${PYSITELIB}/stdnum/ua/__init__.py
+${PYSITELIB}/stdnum/ua/__init__.pyc
+${PYSITELIB}/stdnum/ua/__init__.pyo
+${PYSITELIB}/stdnum/ua/edrpou.py
+${PYSITELIB}/stdnum/ua/edrpou.pyc
+${PYSITELIB}/stdnum/ua/edrpou.pyo
+${PYSITELIB}/stdnum/ua/rntrc.py
+${PYSITELIB}/stdnum/ua/rntrc.pyc
+${PYSITELIB}/stdnum/ua/rntrc.pyo
 ${PYSITELIB}/stdnum/us/__init__.py
 ${PYSITELIB}/stdnum/us/__init__.pyc
 ${PYSITELIB}/stdnum/us/__init__.pyo
