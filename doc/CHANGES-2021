@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.912 2021/02/07 20:16:49 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.913 2021/02/07 21:06:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1104,3 +1104,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/py-parsimonious version 0.8.1 [adam 2021-02-07]
 	Added finance/py-eth-abi version 2.1.1 [adam 2021-02-07]
 	Updated devel/p5-Test-BDD-Cucumber to 0.76 [schmonz 2021-02-07]
+	Updated net/terraform-provider-aws to 3.27.0 [leot 2021-02-07]
