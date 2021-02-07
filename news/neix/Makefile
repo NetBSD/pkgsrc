@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/01/06 18:08:53 pin Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/07 05:06:12 gutteridge Exp $
 
 DISTNAME=	neix-0.1.3
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tomschwarz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
