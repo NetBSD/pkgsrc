@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.910 2021/02/07 20:01:53 adam Exp $
+$NetBSD: CHANGES-2021,v 1.911 2021/02/07 20:14:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1101,3 +1101,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/spotify-qt to 3.4 [pin 2021-02-07]
 	Updated finance/py-eth-hash to 0.3.1 [adam 2021-02-07]
 	Updated finance/py-eth-utils to 1.10.0 [adam 2021-02-07]
+	Added textproc/py-parsimonious version 0.8.1 [adam 2021-02-07]
+	Added finance/py-eth-abi version 2.1.1 [adam 2021-02-07]
