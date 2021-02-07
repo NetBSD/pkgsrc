@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2021/02/06 15:25:17 dbj Exp $
+# $NetBSD: Makefile,v 1.45 2021/02/07 06:30:42 ryoon Exp $
 
 DISTNAME=	kwindowsystem-${KF5VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
