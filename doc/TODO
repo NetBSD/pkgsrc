@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20372 2021/02/06 19:23:04 wiz Exp $
+$NetBSD: TODO,v 1.20373 2021/02/07 10:58:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -627,6 +627,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.6.5
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
@@ -637,8 +638,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gromacs-5.1.2
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
-	o gstreamer1-1.18.2 [wip]
-	o gstreamer1-1.18.3
+	o gstreamer1-1.18.3 [wip]
 	o gthumb-3.4.0
 	o gtk4+-4.0 [wip]
 	o gtkglarea-2.1.0
@@ -660,6 +660,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o haskell-mode-13.20
 	o hdf-4.2.14
 	o heimdal-7.7.0
+	o help2man-1.48.1
 	o hesiod-3.2.1
 	o hevea-2.28
 	o heyu-2.9.0
@@ -715,6 +716,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevelop-5.6
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
+	o keepassxc-2.6.4
 	o keybinder-0.3.1
 	o kipi-plugins-4.14.0
 	o kismet-2011.03r2 [pkg/45692]
@@ -734,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libbpg-0.9.6
 	o libcarddav-14.0.4
 	o libdrm-2.4.102
+	o libebur128-1.2.5
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
@@ -746,6 +749,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libmcs-0.7.2
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
+	o libnumbertext-1.0.7
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
@@ -915,6 +919,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
+	o poppler-21.02.0
 	o postal-0.72
 	o pound-3.0d
 	o povray-3.7.0.0
