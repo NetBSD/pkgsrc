@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.41 2021/01/24 07:39:36 ryoon Exp $
+$NetBSD: distinfo,v 1.42 2021/02/07 15:31:44 adam Exp $
 
-SHA1 (matplotlib-3.3.3.tar.gz) = 80e933178fd722863a9b6fea0388a578696c2e8a
-RMD160 (matplotlib-3.3.3.tar.gz) = 7f1ed8f08766f60f1809c964c486536e3ef49683
-SHA512 (matplotlib-3.3.3.tar.gz) = 36b482a6c36ee08c47f3c02c160289bbdec8746d4d246084723bd3e1fd632c6383f6db58c950a9773a6993d10f24dacd870a91faafc34864616288cd05b6232c
-Size (matplotlib-3.3.3.tar.gz) = 37944403 bytes
+SHA1 (matplotlib-3.3.4.tar.gz) = a26c32c19f39d88ad6ae67e774b677c075a36eac
+RMD160 (matplotlib-3.3.4.tar.gz) = 3d579c5c5f8734d7199be8880dfac4eec4248e89
+SHA512 (matplotlib-3.3.4.tar.gz) = aadfe3db4edde9940b9e15daf1b6c5f237d3a6f38610956ceee994f919d711fce818ea12be4db18aa2a8638c4e8f434d79541fecaa7233e233bf4c73792bc4c4
+Size (matplotlib-3.3.4.tar.gz) = 37941665 bytes
 SHA1 (patch-setup.cfg) = 11dd8b9dd84005c8b195d86f0ccd5ff58502edf4
 SHA1 (patch-setupext.py) = eec84046e5cb4d9eebb838eb53d9fecd8485f443
