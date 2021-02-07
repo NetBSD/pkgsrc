@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/08/22 12:04:33 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/07 19:23:29 adam Exp $
 
-DISTNAME=	toolz-0.10.0
+DISTNAME=	toolz-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toolz/}
@@ -11,6 +11,8 @@ COMMENT=	List processing tools and functional utilities
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
