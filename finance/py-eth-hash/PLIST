@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/28 23:40:35 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/07 19:59:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/eth_hash/__init__.py
 ${PYSITELIB}/eth_hash/__init__.pyc
 ${PYSITELIB}/eth_hash/__init__.pyo
+${PYSITELIB}/eth_hash/abc.py
+${PYSITELIB}/eth_hash/abc.pyc
+${PYSITELIB}/eth_hash/abc.pyo
 ${PYSITELIB}/eth_hash/auto.py
 ${PYSITELIB}/eth_hash/auto.pyc
 ${PYSITELIB}/eth_hash/auto.pyo
@@ -26,9 +29,6 @@ ${PYSITELIB}/eth_hash/backends/pysha3.pyo
 ${PYSITELIB}/eth_hash/main.py
 ${PYSITELIB}/eth_hash/main.pyc
 ${PYSITELIB}/eth_hash/main.pyo
-${PYSITELIB}/eth_hash/preimage.py
-${PYSITELIB}/eth_hash/preimage.pyc
-${PYSITELIB}/eth_hash/preimage.pyo
 ${PYSITELIB}/eth_hash/utils.py
 ${PYSITELIB}/eth_hash/utils.pyc
 ${PYSITELIB}/eth_hash/utils.pyo
