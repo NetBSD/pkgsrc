@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2021/01/29 21:34:25 leot Exp $
+# $NetBSD: go-modules.mk,v 1.2 2021/02/07 21:06:32 leot Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -69,8 +69,8 @@ GO_MODULE_FILES+=	github.com/armon/go-socks5/@v/v0.0.0-20160902184237-e75332964e
 GO_MODULE_FILES+=	github.com/aws/aws-sdk-go/@v/v1.15.78.mod
 GO_MODULE_FILES+=	github.com/aws/aws-sdk-go/@v/v1.25.3.mod
 GO_MODULE_FILES+=	github.com/aws/aws-sdk-go/@v/v1.31.9.mod
-GO_MODULE_FILES+=	github.com/aws/aws-sdk-go/@v/v1.37.0.mod
-GO_MODULE_FILES+=	github.com/aws/aws-sdk-go/@v/v1.37.0.zip
+GO_MODULE_FILES+=	github.com/aws/aws-sdk-go/@v/v1.37.4.mod
+GO_MODULE_FILES+=	github.com/aws/aws-sdk-go/@v/v1.37.4.zip
 GO_MODULE_FILES+=	github.com/beevik/etree/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/beevik/etree/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/bgentry/go-netrc/@v/v0.0.0-20140422174119-9fd32a8b3d3d.mod
@@ -233,8 +233,8 @@ GO_MODULE_FILES+=	github.com/hashicorp/terraform-json/@v/v0.8.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/terraform-json/@v/v0.8.0.zip
 GO_MODULE_FILES+=	github.com/hashicorp/terraform-plugin-go/@v/v0.2.1.mod
 GO_MODULE_FILES+=	github.com/hashicorp/terraform-plugin-go/@v/v0.2.1.zip
-GO_MODULE_FILES+=	github.com/hashicorp/terraform-plugin-sdk/v2/@v/v2.4.1.mod
-GO_MODULE_FILES+=	github.com/hashicorp/terraform-plugin-sdk/v2/@v/v2.4.1.zip
+GO_MODULE_FILES+=	github.com/hashicorp/terraform-plugin-sdk/v2/@v/v2.4.2.mod
+GO_MODULE_FILES+=	github.com/hashicorp/terraform-plugin-sdk/v2/@v/v2.4.2.zip
 GO_MODULE_FILES+=	github.com/hashicorp/yamux/@v/v0.0.0-20180604194846-3520598351bb.mod
 GO_MODULE_FILES+=	github.com/hashicorp/yamux/@v/v0.0.0-20181012175058-2f1d1f20f75d.mod
 GO_MODULE_FILES+=	github.com/hashicorp/yamux/@v/v0.0.0-20181012175058-2f1d1f20f75d.zip
