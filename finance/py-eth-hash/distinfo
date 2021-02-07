@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/09/28 23:40:35 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/02/07 19:59:48 adam Exp $
 
-SHA1 (eth-hash-0.2.0.tar.gz) = 330eb3b14bfc138715dc1ed0a61fdb8f6b6a4d9b
-RMD160 (eth-hash-0.2.0.tar.gz) = 257e5d7c48d90b130a3b9059c6f9c51ab2a40b83
-SHA512 (eth-hash-0.2.0.tar.gz) = 6ab1a2b91934ac20ca54da6cd572f97cae911ccbd729c0b11b42cf0b4cdb178bd6524e2b7908a6608d8da6692c0bb56b20aeec288fa2c3a7507b08868d967ff4
-Size (eth-hash-0.2.0.tar.gz) = 16446 bytes
+SHA1 (eth-hash-0.3.1.tar.gz) = b1e90d8d74ae1b5a85b74ac922232876734eda4e
+RMD160 (eth-hash-0.3.1.tar.gz) = 57c7e5b67d80d181e3a03b5149f80efe827bae6c
+SHA512 (eth-hash-0.3.1.tar.gz) = 083aea8d1f6b0119bbdb4e52238ae614b8705794446a030eb1a0b60f6811c158b9613bf977c7f26151d4b00920941fa836e28ca7260505bda54e4f5da8f6b382
+Size (eth-hash-0.3.1.tar.gz) = 5289683 bytes
