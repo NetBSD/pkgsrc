@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2021/01/23 14:23:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.40 2021/02/07 17:32:47 triaxx Exp $
 
-DISTNAME=	grafana-7.3.1
-PKGREVISION=	3
+DISTNAME=	grafana-7.4.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,9 +18,6 @@ FE_DISTNAME=			${DISTNAME}.linux-amd64.tar.gz
 DISTFILES+=			${FE_DISTNAME}
 SITES.${FE_DISTNAME}=		https://dl.grafana.com/oss/release/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
-
-GO_DIST_BASE=		${DISTNAME}
-GO_SRCPATH=		github.com/grafana/grafana
 
 CHECK_PORTABILITY_SKIP=		packaging/* devenv/*
 CHECK_PORTABILITY_SKIP+=	packages/grafana-toolkit/docker/*
