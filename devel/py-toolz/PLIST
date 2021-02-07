@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/24 16:15:02 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/07 19:23:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,6 +16,9 @@ ${PYSITELIB}/toolz/__init__.pyo
 ${PYSITELIB}/toolz/_signatures.py
 ${PYSITELIB}/toolz/_signatures.pyc
 ${PYSITELIB}/toolz/_signatures.pyo
+${PYSITELIB}/toolz/_version.py
+${PYSITELIB}/toolz/_version.pyc
+${PYSITELIB}/toolz/_version.pyo
 ${PYSITELIB}/toolz/compatibility.py
 ${PYSITELIB}/toolz/compatibility.pyc
 ${PYSITELIB}/toolz/compatibility.pyo
