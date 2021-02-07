@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/07 20:13:09 adam Exp $
+
+SHA1 (eth_abi-2.1.1.tar.gz) = c104c5ce11ad6ac42e9406c6c5f8e0986c96c2d7
+RMD160 (eth_abi-2.1.1.tar.gz) = f193d16bc1076aa88b90d322ea43e31b97ed34ed
+SHA512 (eth_abi-2.1.1.tar.gz) = dd104616c3fbc9d30b1ed0ae2e283ae1b5c3274fa3c8549573bce1988566f7315cc98fe0807675426da44c37568982be4f1369e6659ad5682bb5cf4ddf676159
+Size (eth_abi-2.1.1.tar.gz) = 966047 bytes
