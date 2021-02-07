@@ -6,3 +6,7 @@ these services as well as custom services that they write themselves. Twisted
 also includes a user authentication system that controls access to services
 and provides services with user context information to implement their own
 security models.
+
+Note that while this package provides most of Twisted, Twisted Conch
+(SSH client/server) only functions if security/py-amkCrypto is also
+installed.
