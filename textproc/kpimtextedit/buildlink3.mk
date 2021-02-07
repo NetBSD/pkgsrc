@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2021/01/01 09:52:12 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2021/02/07 06:30:10 ryoon Exp $
 
 BUILDLINK_TREE+=	kpimtextedit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kpimtextedit
 KPIMTEXTEDIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kpimtextedit+=	kpimtextedit>=17.12.1
-BUILDLINK_ABI_DEPENDS.kpimtextedit?=	kpimtextedit>=20.04.1nb5
+BUILDLINK_ABI_DEPENDS.kpimtextedit?=	kpimtextedit>=20.04.1nb6
 BUILDLINK_PKGSRCDIR.kpimtextedit?=	../../textproc/kpimtextedit
 
 .include "../../devel/grantlee-qt5/buildlink3.mk"
