@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.906 2021/02/07 15:43:08 adam Exp $
+$NetBSD: CHANGES-2021,v 1.907 2021/02/07 17:33:40 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1095,3 +1095,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/fossil to 2.14 [js 2021-02-07]
 	Updated graphics/py-matplotlib to 3.3.4 [adam 2021-02-07]
 	Updated sysutils/py-structlog to 20.2.0 [adam 2021-02-07]
+	Updated www/grafana to 7.4.0 [triaxx 2021-02-07]
