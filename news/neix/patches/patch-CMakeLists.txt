@@ -1,0 +1,43 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/02/07 05:06:12 gutteridge Exp $
+
+Don't install configuration files in $HOME during the build.
+Don't hard-code the build environment's $HOME as the basis for the default
+user configuration path.
+
+--- CMakeLists.txt.orig	2020-09-07 19:55:08.000000000 +0000
++++ CMakeLists.txt
+@@ -22,19 +22,6 @@ SET(CURSES_NEED_NCURSES TRUE)
+ find_package(Curses REQUIRED)
+ include_directories(${CURSES_INCLUDE_DIRS})
+ 
+-# Prepare filesystem for installation
+-file(MAKE_DIRECTORY $ENV{HOME}/.config/neix/)
+-
+-# Check for main config file
+-if(NOT EXISTS "$ENV{HOME}/.config/neix/neix.conf")
+-    configure_file(./config/neix.conf $ENV{HOME}/.config/neix/neix.conf)
+-endif()
+-
+-# Check for feed config file
+-if(NOT EXISTS "$ENV{HOME}/.config/neix/feeds.conf")
+-    configure_file(./config/feeds.conf $ENV{HOME}/.config/neix/feeds.conf)
+-endif()
+-
+ # Version
+ set(neixVersion "0.1.3")
+ add_compile_definitions(VERSION="v${neixVersion}")
+@@ -47,14 +34,6 @@ add_compile_definitions(NEIX_USER_AGENT=
+ add_compile_definitions(DEFAULT_MAIN_CONFIG="${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_DATAROOTDIR}/neix/neix.conf")
+ add_compile_definitions(DEFAULT_FEEDS_CONFIG="${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_DATAROOTDIR}/neix/feeds.conf")
+ 
+-# Path for main neix config file
+-set(MainConfigPath "$ENV{HOME}/.config/neix/neix.conf")
+-add_compile_definitions(MAIN_CONFIG_PATH="${MainConfigPath}")
+-
+-# Path for feed config file
+-set(FeedConfigPath "$ENV{HOME}/.config/neix/feeds.conf")
+-add_compile_definitions(FEED_CONFIG_PATH="${FeedConfigPath}")
+-
+ set(CMAKE_CXX_STANDARD 11)
+ set(CMAKE_CXX_EXTENSIONS OFF)
+ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
