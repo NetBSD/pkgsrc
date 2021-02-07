@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.905 2021/02/07 13:55:34 js Exp $
+$NetBSD: CHANGES-2021,v 1.906 2021/02/07 15:43:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1093,3 +1093,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/py-stdnum to 1.16 [adam 2021-02-07]
 	Updated finance/py-stripe to 2.55.2 [adam 2021-02-07]
 	Updated devel/fossil to 2.14 [js 2021-02-07]
+	Updated graphics/py-matplotlib to 3.3.4 [adam 2021-02-07]
+	Updated sysutils/py-structlog to 20.2.0 [adam 2021-02-07]
