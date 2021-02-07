@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/01/01 02:50:52 mef Exp $
+$NetBSD: distinfo,v 1.3 2021/02/07 01:21:16 mef Exp $
 
-SHA1 (R/git2r_0.27.1.tar.gz) = 56fb591056edff794f340919d1f395bc40a69f73
-RMD160 (R/git2r_0.27.1.tar.gz) = 54ff1ec16a0b0dbf5bd7aa15fb8025e5f76782e0
-SHA512 (R/git2r_0.27.1.tar.gz) = c580283aaf458bb247fccbe2448527d71c9d4df534477ba4ec8c697a81a5cf43de4049867fcfc5f0cc60b17220001467a9863b4d0cf2056a60f9179e5d631439
-Size (R/git2r_0.27.1.tar.gz) = 1221472 bytes
+SHA1 (R/git2r_0.28.0.tar.gz) = 4ad2e9789285480b0edc80cc3892ad13ace4f3ee
+RMD160 (R/git2r_0.28.0.tar.gz) = ae746569d3346aea612ad0d08091fd3f55fc9db6
+SHA512 (R/git2r_0.28.0.tar.gz) = c1ecc067c9a85f96e0631f97db279d1bdb47e067f0484a7d57ab90052a0575778305ab7e3396621a84cee892f157ee2bae0a5fe7b8e9c68d08e66eae8106c5bc
+Size (R/git2r_0.28.0.tar.gz) = 1221117 bytes
