@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.903 2021/02/07 06:26:00 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.904 2021/02/07 12:40:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1090,3 +1090,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/R-git2r to 0.28.0 [mef 2021-02-07]
 	Updated news/neix to 0.1.3nb1 [gutteridge 2021-02-07]
 	Updated audio/pulseaudio to 14.2nb1 [ryoon 2021-02-07]
+	Updated misc/py-stdnum to 1.16 [adam 2021-02-07]
+	Updated finance/py-stripe to 2.55.2 [adam 2021-02-07]
