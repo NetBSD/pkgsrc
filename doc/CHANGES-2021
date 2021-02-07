@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.909 2021/02/07 19:40:44 pin Exp $
+$NetBSD: CHANGES-2021,v 1.910 2021/02/07 20:01:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1099,3 +1099,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-toolz to 0.11.1 [adam 2021-02-07]
 	Updated devel/py-cytoolz to 0.11.0 [adam 2021-02-07]
 	Updated audio/spotify-qt to 3.4 [pin 2021-02-07]
+	Updated finance/py-eth-hash to 0.3.1 [adam 2021-02-07]
+	Updated finance/py-eth-utils to 1.10.0 [adam 2021-02-07]
