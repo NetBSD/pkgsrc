@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.904 2021/02/07 12:40:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.905 2021/02/07 13:55:34 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1092,3 +1092,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/pulseaudio to 14.2nb1 [ryoon 2021-02-07]
 	Updated misc/py-stdnum to 1.16 [adam 2021-02-07]
 	Updated finance/py-stripe to 2.55.2 [adam 2021-02-07]
+	Updated devel/fossil to 2.14 [js 2021-02-07]
