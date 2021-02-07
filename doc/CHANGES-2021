@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.900 2021/02/06 23:10:09 mef Exp $
+$NetBSD: CHANGES-2021,v 1.901 2021/02/07 01:21:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1087,3 +1087,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/pulseaudio to 14.2 [wiz 2021-02-06]
 	Updated www/py-MechanicalSoup to 1.0.0 [leot 2021-02-06]
 	Added security/R-getPass version 0.2.2 [mef 2021-02-06]
+	Updated devel/R-git2r to 0.28.0 [mef 2021-02-07]
