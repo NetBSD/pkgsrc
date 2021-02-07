@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/09/30 07:01:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/07 15:42:49 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,12 @@ ${PYSITELIB}/structlog/_frames.pyo
 ${PYSITELIB}/structlog/_generic.py
 ${PYSITELIB}/structlog/_generic.pyc
 ${PYSITELIB}/structlog/_generic.pyo
+${PYSITELIB}/structlog/_greenlets.py
+${PYSITELIB}/structlog/_greenlets.pyc
+${PYSITELIB}/structlog/_greenlets.pyo
+${PYSITELIB}/structlog/_log_levels.py
+${PYSITELIB}/structlog/_log_levels.pyc
+${PYSITELIB}/structlog/_log_levels.pyo
 ${PYSITELIB}/structlog/_loggers.py
 ${PYSITELIB}/structlog/_loggers.pyc
 ${PYSITELIB}/structlog/_loggers.pyo
@@ -38,6 +44,7 @@ ${PYSITELIB}/structlog/exceptions.pyo
 ${PYSITELIB}/structlog/processors.py
 ${PYSITELIB}/structlog/processors.pyc
 ${PYSITELIB}/structlog/processors.pyo
+${PYSITELIB}/structlog/py.typed
 ${PYSITELIB}/structlog/stdlib.py
 ${PYSITELIB}/structlog/stdlib.pyc
 ${PYSITELIB}/structlog/stdlib.pyo
@@ -50,3 +57,6 @@ ${PYSITELIB}/structlog/threadlocal.pyo
 ${PYSITELIB}/structlog/twisted.py
 ${PYSITELIB}/structlog/twisted.pyc
 ${PYSITELIB}/structlog/twisted.pyo
+${PYSITELIB}/structlog/types.py
+${PYSITELIB}/structlog/types.pyc
+${PYSITELIB}/structlog/types.pyo
