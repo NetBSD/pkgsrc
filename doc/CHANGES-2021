@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.908 2021/02/07 19:28:11 adam Exp $
+$NetBSD: CHANGES-2021,v 1.909 2021/02/07 19:40:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/grafana to 7.4.0 [triaxx 2021-02-07]
 	Updated devel/py-toolz to 0.11.1 [adam 2021-02-07]
 	Updated devel/py-cytoolz to 0.11.0 [adam 2021-02-07]
+	Updated audio/spotify-qt to 3.4 [pin 2021-02-07]
