@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/07 20:10:18 adam Exp $
+
+SHA1 (parsimonious-0.8.1.tar.gz) = 52eb0c338858d787f38931dd0951a1a87edcba76
+RMD160 (parsimonious-0.8.1.tar.gz) = c85c0e415f63596948ab0dd511678224739b306a
+SHA512 (parsimonious-0.8.1.tar.gz) = 8eb3959090dcbc7ea16ff72bbe1a5b695ea07de09865c5ca5832c7db2405fa609844e19ebafd0d156bd8e9efe1b9025caae22e7bff7d94b520691e86f00fcfdd
+Size (parsimonious-0.8.1.tar.gz) = 45057 bytes
