@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.564 2021/01/15 19:57:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.565 2021/02/08 07:15:48 triaxx Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -94,7 +94,6 @@ SUBDIR+=	fdm
 SUBDIR+=	feed2exec
 SUBDIR+=	fetchmail
 SUBDIR+=	fetchmailconf
-SUBDIR+=	fetchyahoo
 SUBDIR+=	fix-mime-charset
 SUBDIR+=	fml
 SUBDIR+=	fml4
