@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3331 2021/02/08 06:57:04 adam Exp $
+# $NetBSD: Makefile,v 1.3332 2021/02/08 08:26:33 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2346,6 +2346,7 @@ SUBDIR+=	py-guppy3
 SUBDIR+=	py-h5py
 SUBDIR+=	py-hamcrest
 SUBDIR+=	py-hash
+SUBDIR+=	py-hexbytes
 SUBDIR+=	py-hg-evolve
 SUBDIR+=	py-hg-fastimport
 SUBDIR+=	py-hg-git
