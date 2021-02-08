@@ -1,8 +1,8 @@
-$NetBSD: patch-src_utils_htslib_Makefile,v 1.1 2021/01/22 17:07:50 bacon Exp $
+$NetBSD: patch-src_utils_htslib_Makefile,v 1.2 2021/02/08 01:49:25 bacon Exp $
 
 # Respect pkgsrc env
 
---- src/utils/htslib/Makefile.orig	2021-01-21 22:49:18.823750624 +0000
+--- src/utils/htslib/Makefile.orig	2021-01-23 19:33:26.000000000 +0000
 +++ src/utils/htslib/Makefile
 @@ -22,7 +22,7 @@
  # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
