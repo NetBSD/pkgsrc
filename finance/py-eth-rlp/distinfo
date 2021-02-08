@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/08 08:28:04 adam Exp $
+
+SHA1 (eth-rlp-0.2.1.tar.gz) = cffbfe42396c244c90cad352165c2b6d3ee4f98b
+RMD160 (eth-rlp-0.2.1.tar.gz) = 326dd47543fb71acbe1f935ef38b2e2add604e7e
+SHA512 (eth-rlp-0.2.1.tar.gz) = b00c12ec6a740205fad40f1e60fe7c621ac22e8d2c0e50c76aad76895cc4007b27a4d940e5eee3547be640d3b4dc8de7840bf4fbccd2df112651855f22ba415f
+Size (eth-rlp-0.2.1.tar.gz) = 5830 bytes
