@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_netwerk_srtp_src_crypto_hash_hmac.c,v 1.1 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_srtp_src_crypto_hash_hmac.c,v 1.2 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/netwerk/srtp/src/crypto/hash/hmac.c.orig	2020-02-17 23:38:00.000000000 +0000
-+++ mozilla/netwerk/srtp/src/crypto/hash/hmac.c
+--- netwerk/srtp/src/crypto/hash/hmac.c.orig	2020-02-17 23:38:00.000000000 +0000
++++ netwerk/srtp/src/crypto/hash/hmac.c
 @@ -55,7 +55,7 @@ debug_module_t mod_hmac = {
  
  err_status_t

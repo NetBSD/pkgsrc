@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_message__pump__libevent.cc,v 1.5 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_message__pump__libevent.cc,v 1.6 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/message_pump_libevent.cc.orig	2020-04-01 11:01:50.000000000 +0000
-+++ mozilla/ipc/chromium/src/base/message_pump_libevent.cc
+--- ipc/chromium/src/base/message_pump_libevent.cc.orig	2020-04-01 11:01:50.000000000 +0000
++++ ipc/chromium/src/base/message_pump_libevent.cc
 @@ -22,6 +22,7 @@
  
  // This macro checks that the _EVENT_SIZEOF_* constants defined in

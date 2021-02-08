@@ -1,9 +1,9 @@
-$NetBSD: patch-suite_installer_Makefile.in,v 1.6 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-suite_installer_Makefile.in,v 1.7 2021/02/08 12:26:20 ryoon Exp $
 
---- suite/installer/Makefile.in.orig	2020-02-17 23:36:20.000000000 +0000
-+++ suite/installer/Makefile.in
+--- comm/suite/installer/Makefile.in.orig	2020-12-22 11:42:59.000000000 +0000
++++ comm/suite/installer/Makefile.in
 @@ -11,7 +11,7 @@ MOZ_PKG_REMOVALS = $(srcdir)/removed-fil
- MOZ_PKG_MANIFEST_P = $(srcdir)/package-manifest.in
+ MOZ_PKG_MANIFEST = $(srcdir)/package-manifest.in
  # Be fatal, except when building with XULRunner which already bundles some files.
  ifndef SYSTEM_LIBXUL
 -MOZ_PKG_FATAL_WARNINGS = 1
