@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.919 2021/02/08 07:05:03 adam Exp $
+$NetBSD: CHANGES-2021,v 1.920 2021/02/08 07:20:12 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1117,3 +1117,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-bitarray version 1.6.3 [adam 2021-02-08]
 	Added finance/py-eth-keys version 0.3.3 [adam 2021-02-08]
 	Added finance/py-eth-keyfile version 0.5.1 [adam 2021-02-08]
+	Removed mail/fetchyahoo [triaxx 2021-02-08]
