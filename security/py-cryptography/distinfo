@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.65 2020/12/14 07:31:18 adam Exp $
+$NetBSD: distinfo,v 1.66 2021/02/08 06:08:02 adam Exp $
 
-SHA1 (cryptography-3.3.1.tar.gz) = f63b7bbf6ae3b6f4c178d1e8c1f89aac9507ba38
-RMD160 (cryptography-3.3.1.tar.gz) = 2c2f9ad13d298bf5cbdf1375f9d7737da9714639
-SHA512 (cryptography-3.3.1.tar.gz) = 62192fe0fd3bb8844ccc0056ab72a42b038db2a4ecb0928543c520b85e1de93066dab0d604acf23d37395d68172b9618f81c6022a59ec49725bc1862096d15d1
-Size (cryptography-3.3.1.tar.gz) = 539756 bytes
+SHA1 (cryptography-3.3.2.tar.gz) = eb8be696115458f9368432525e9cae11d0f6bebf
+RMD160 (cryptography-3.3.2.tar.gz) = 6eda77c15ea0801bbfee5af9b990d414096d8563
+SHA512 (cryptography-3.3.2.tar.gz) = 55f6ee13342b3209b1fcb310f4c4d33d22856ee785cb2347e6ad36c34e9b42f6e0d5bece8e458b09663a5b78e34c4567fe7a211b51ca71f55ccc93e3f62dc5e4
+Size (cryptography-3.3.2.tar.gz) = 539883 bytes
