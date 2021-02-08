@@ -1,9 +1,9 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb.c,v 1.6 2020/05/07 19:36:53 nia Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb.c,v 1.7 2021/02/08 12:26:20 ryoon Exp $
 
 - Sun Audio support.
 
---- mozilla/media/libcubeb/src/cubeb.c.orig	2020-02-17 23:37:58.000000000 +0000
-+++ mozilla/media/libcubeb/src/cubeb.c
+--- media/libcubeb/src/cubeb.c.orig	2020-02-17 23:37:58.000000000 +0000
++++ media/libcubeb/src/cubeb.c
 @@ -46,6 +46,9 @@ int wasapi_init(cubeb ** context, char c
  #if defined(USE_SNDIO)
  int sndio_init(cubeb ** context, char const * context_name);

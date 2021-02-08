@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_platform__thread__posix.cc,v 1.6 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_platform__thread__posix.cc,v 1.7 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/platform_thread_posix.cc.orig	2020-02-17 23:37:52.000000000 +0000
-+++ mozilla/ipc/chromium/src/base/platform_thread_posix.cc
+--- ipc/chromium/src/base/platform_thread_posix.cc.orig	2020-02-17 23:37:52.000000000 +0000
++++ ipc/chromium/src/base/platform_thread_posix.cc
 @@ -12,7 +12,9 @@
  #if defined(OS_MACOSX)
  #include <mach/mach.h>
