@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/02/08 07:00:56 adam Exp $
+
+SHA1 (eth-keys-0.3.3.tar.gz) = 57c3ad9ef813d66941f397c38feca5262ccc10d3
+RMD160 (eth-keys-0.3.3.tar.gz) = b602875fbab09a362c0f4130a7394c698279892c
+SHA512 (eth-keys-0.3.3.tar.gz) = b074878a631c3ae026ddeb1376433fe468bd47445a00c354ea3d5c43bbe9ea5eb1627d07be7ff5b13e54095d99a3da6d2030baf7ac92fad9e6414ea38579f42a
+Size (eth-keys-0.3.3.tar.gz) = 17286 bytes
+SHA1 (patch-setup.py) = c4644da231e74ca7f114fb6911c11719f2516846
