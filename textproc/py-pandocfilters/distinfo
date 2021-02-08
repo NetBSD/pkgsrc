@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/09/27 20:14:44 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/02/08 12:17:46 adam Exp $
 
-SHA1 (pandocfilters-1.4.2.tar.gz) = 46695990e2a2fedbab0d24b0f49fae8f1850d95a
-RMD160 (pandocfilters-1.4.2.tar.gz) = e44318002b3a89fd1f56795e7269de85a2e136a2
-SHA512 (pandocfilters-1.4.2.tar.gz) = 5e5c0fb18f163430e87750b88d38a5f0fa618b90c84bf08e6f295df3ddd46c1bbf35ec51514af8d6699c7dfc9f0b3ee9edd0484deeb05e5efb3b26e650b5ee1b
-Size (pandocfilters-1.4.2.tar.gz) = 14229 bytes
+SHA1 (pandocfilters-1.4.3.tar.gz) = d53e1b78070d9c065a0fe581baa525470c739808
+RMD160 (pandocfilters-1.4.3.tar.gz) = a228d28b0eab3ed65b483f475fdcd7aa3fec20b0
+SHA512 (pandocfilters-1.4.3.tar.gz) = 9c7ae1329c103ff2baae3488edfcbfaba183bc94146b29e413e7e83ba2ff2dee69823138bf213f5c81a8b0097c2d9329bd05620b10c646662a9617aae7a528a9
+Size (pandocfilters-1.4.3.tar.gz) = 16586 bytes
