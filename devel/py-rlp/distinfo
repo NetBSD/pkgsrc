@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/09/29 00:18:53 khorben Exp $
+$NetBSD: distinfo,v 1.2 2021/02/08 06:58:44 adam Exp $
 
-SHA1 (pyrlp-1.2.0.tar.gz) = bebc1163631e21b30b529c0058838b741fca5047
-RMD160 (pyrlp-1.2.0.tar.gz) = 50abca33a77eedb2d7095fef6ab67de66b0485a9
-SHA512 (pyrlp-1.2.0.tar.gz) = 19fe6ce84ad43111f74807f6d4dfdde6dfe58eec0a36cce111083cd03ae2766494a66d3b211cd3593783b5f03bf7471961ae346beb8bdd917539b83fff435abe
-Size (pyrlp-1.2.0.tar.gz) = 38972 bytes
+SHA1 (rlp-2.0.1.tar.gz) = 7d7bb9580026bbe360f715e26209767e1ba2c40c
+RMD160 (rlp-2.0.1.tar.gz) = d8b27f0722b186ecf495eae125eb4f4208bdc890
+SHA512 (rlp-2.0.1.tar.gz) = 5082cb8458964a458d039da8ca565fc1bb9e9f2926afe63af47417622f86d392b64ed68a884909a9008d59dfc27b4d606c7e7a6c0e0abd5494370de05a3e9212
+Size (rlp-2.0.1.tar.gz) = 39928 bytes
+SHA1 (patch-setup.py) = 796c53a1aa5108d0c926b4b8d371fd2b67b8e4f7
