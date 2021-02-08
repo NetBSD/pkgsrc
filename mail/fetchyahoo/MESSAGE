@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/01/13 15:38:52 obache Exp $
-
-	To use fetchyahoo, copy
-	${PREFIX}/share/examples/fetchyahoo/fetchyahoorc to
-        ~/.fetchyahoorc and edit the config file or just run
-	fetchyahoo from the commandline.
-
-===========================================================================
