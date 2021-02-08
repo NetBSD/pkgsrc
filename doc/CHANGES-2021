@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.920 2021/02/08 07:20:12 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.921 2021/02/08 07:52:00 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1118,3 +1118,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added finance/py-eth-keys version 0.3.3 [adam 2021-02-08]
 	Added finance/py-eth-keyfile version 0.5.1 [adam 2021-02-08]
 	Removed mail/fetchyahoo [triaxx 2021-02-08]
+	Updated chat/ejabberd to 21.01 [triaxx 2021-02-08]
