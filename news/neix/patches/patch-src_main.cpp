@@ -1,7 +1,8 @@
-$NetBSD: patch-src_main.cpp,v 1.1 2021/02/07 05:06:12 gutteridge Exp $
+$NetBSD: patch-src_main.cpp,v 1.2 2021/02/08 02:56:19 gutteridge Exp $
 
 Consistently determine the user's configuration path at runtime, don't use a
 hard-coded value that was defined as the build environment's $HOME.
+https://github.com/tomschwarz/neix/pull/19
 
 --- src/main.cpp.orig	2020-09-07 19:55:08.000000000 +0000
 +++ src/main.cpp
