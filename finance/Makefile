@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2021/02/08 07:02:26 adam Exp $
+# $NetBSD: Makefile,v 1.85 2021/02/08 08:28:04 adam Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -44,6 +44,7 @@ SUBDIR+=	py-eth-abi
 SUBDIR+=	py-eth-hash
 SUBDIR+=	py-eth-keyfile
 SUBDIR+=	py-eth-keys
+SUBDIR+=	py-eth-rlp
 SUBDIR+=	py-eth-typing
 SUBDIR+=	py-eth-utils
 SUBDIR+=	py-fecon235
