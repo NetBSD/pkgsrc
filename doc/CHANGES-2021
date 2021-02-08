@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.932 2021/02/08 13:32:11 otis Exp $
+$NetBSD: CHANGES-2021,v 1.933 2021/02/08 14:36:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1134,3 +1134,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/py-cpuinfo to 7.0.0 [adam 2021-02-08]
 	Updated textproc/py-pandocfilters to 1.4.3 [adam 2021-02-08]
 	Updated net/powerdns to 4.4.1 [otis 2021-02-08]
+	Updated time/py-goocalendar to 0.7.1 [adam 2021-02-08]
+	Updated devel/py-autopep8 to 1.5.5 [adam 2021-02-08]
