@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.7 2020/12/31 20:04:14 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.8 2021/02/08 12:26:20 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -70,7 +70,6 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
 CONFIGURE_ARGS+=	--enable-pie
 .endif
 CONFIGURE_ARGS+=	--disable-tests
-CONFIGURE_ARGS+=	--with-pthreads
 # Mozilla Bug 1432751
 #CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
@@ -85,7 +84,7 @@ CONFIGURE_ARGS+=	--with-system-nspr
 #CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
-CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
+#CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
@@ -122,7 +121,7 @@ ALL_ENV+=		SHELL=${CONFIG_SHELL:Q}
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
-OBJDIR=			../build
+OBJDIR=			${WRKDIR}/build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
