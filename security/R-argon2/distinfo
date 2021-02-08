@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/08 11:16:26 mef Exp $
+
+SHA1 (R/argon2_0.2-0.tar.gz) = 19454face070dbc1a8cd20f959a1263f9ac5e25c
+RMD160 (R/argon2_0.2-0.tar.gz) = 1aadba08233521f394ffd0d358feca1b4b93b97e
+SHA512 (R/argon2_0.2-0.tar.gz) = 2889b2a60c7d067fce712618bc9355f759fd00003c6c9d4ce99deb9fe63607a383502ddf3905fe24754234cc978aed7274e6aa2b3ff2930e4b75a40931be601d
+Size (R/argon2_0.2-0.tar.gz) = 47719 bytes
