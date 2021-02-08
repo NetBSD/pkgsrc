@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.915 2021/02/08 01:53:30 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.916 2021/02/08 01:56:42 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1107,3 +1107,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/terraform-provider-aws to 3.27.0 [leot 2021-02-07]
 	Updated biology/bedtools to 2.30.0 [bacon 2021-02-08]
 	Added biology/py-dnaio version 0.5.0 [bacon 2021-02-08]
+	Added biology/py-cutadapt version 3.2 [bacon 2021-02-08]
