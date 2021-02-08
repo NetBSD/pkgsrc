@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.926 2021/02/08 11:18:09 mef Exp $
+$NetBSD: CHANGES-2021,v 1.927 2021/02/08 12:06:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1127,3 +1127,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/keepassxc to 2.6.4 [ryoon 2021-02-08]
 	Updated editors/zim to 0.73.5 [triaxx 2021-02-08]
 	Added security/R-argon2 version 0.2.0 [mef 2021-02-08]
+	Updated devel/R-withr to 2.4.1 [mef 2021-02-08]
