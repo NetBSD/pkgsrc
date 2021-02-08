@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.versions,v 1.50 2021/01/15 13:40:13 nia Exp $
+# $NetBSD: Makefile.versions,v 1.51 2021/02/08 07:00:29 triaxx Exp $
 
 DIST_VERSION_MAJOR=		23
 DIST_VERSION_MINOR=		2
-DIST_VERSION_PATCH=		2
+DIST_VERSION_PATCH=		4
 
 .include "versions.mk"
 
