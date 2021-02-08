@@ -1,7 +1,0 @@
-FetchYahoo is a Perl script that downloads mail from a Yahoo! account
-to a local mail spool. It is meant to replace fetchmail for people
-using Yahoo! mail since Yahoo!'s POP service no longer free. It
-downloads messages to a local mail spool, including all parts and
-attachments. It then deletes messages unless requested not to. It can
-also optionally forward messages to a specified e-mail address and
-repeat with a given interval.
