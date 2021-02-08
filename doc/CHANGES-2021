@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.917 2021/02/08 06:19:16 adam Exp $
+$NetBSD: CHANGES-2021,v 1.918 2021/02/08 07:00:50 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1112,3 +1112,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-cryptography_vectors to 3.3.2 [adam 2021-02-08]
 	Updated databases/py-peewee to 3.14.1 [adam 2021-02-08]
 	Updated devel/py-more-itertools to 8.7.0 [adam 2021-02-08]
+	Updated lang/erlang to 23.2.4 [triaxx 2021-02-08]
