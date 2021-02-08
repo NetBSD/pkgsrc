@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.931 2021/02/08 12:32:03 adam Exp $
+$NetBSD: CHANGES-2021,v 1.932 2021/02/08 13:32:11 otis Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1133,3 +1133,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/seamonkey-l10n to 2.53.6 [ryoon 2021-02-08]
 	Updated sysutils/py-cpuinfo to 7.0.0 [adam 2021-02-08]
 	Updated textproc/py-pandocfilters to 1.4.3 [adam 2021-02-08]
+	Updated net/powerdns to 4.4.1 [otis 2021-02-08]
