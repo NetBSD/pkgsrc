@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/01/22 17:07:50 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/08 01:49:25 bacon Exp $
 
-DISTNAME=	bedtools-2.29.2
+DISTNAME=	bedtools-2.30.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arq5x/}
 GITHUB_PROJECT=	bedtools2
@@ -12,7 +12,7 @@ COMMENT=	Swiss army knife for genome arithmetic
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	bash:test gmake
 REPLACE_SH+=	scripts/vcfsort.sh
 REPLACE_PYTHON=	scripts/makeBashScripts.py
 
@@ -21,10 +21,8 @@ SUBST_STAGE.pybin=	pre-configure
 SUBST_SED.pybin=	-e 's|python|${PYTHONBIN}|g'
 SUBST_FILES.pybin=	Makefile
 
-# Avoid conflict with C++20 <version> by adding .txt suffix
-post-extract:
-	${MV} ${WRKSRC}/src/utils/gzstream/version \
-		${WRKSRC}/src/utils/gzstream/version.txt
+do-test:
+	cd ${WRKSRC}/test && bash test.sh
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
