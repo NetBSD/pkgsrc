@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2021/01/16 20:24:33 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.56 2021/02/08 07:51:42 triaxx Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -73,6 +73,7 @@ lib/${PKGNAME}/ebin/ejabberd_sql_sup.beam
 lib/${PKGNAME}/ebin/ejabberd_stun.beam
 lib/${PKGNAME}/ebin/ejabberd_sup.beam
 lib/${PKGNAME}/ebin/ejabberd_system_monitor.beam
+lib/${PKGNAME}/ebin/ejabberd_systemd.beam
 lib/${PKGNAME}/ebin/ejabberd_tmp_sup.beam
 lib/${PKGNAME}/ebin/ejabberd_update.beam
 lib/${PKGNAME}/ebin/ejabberd_web.beam
@@ -353,6 +354,7 @@ lib/${PKGNAME}/priv/sql/lite.new.sql
 lib/${PKGNAME}/priv/sql/lite.sql
 lib/${PKGNAME}/priv/sql/mssql.sql
 lib/${PKGNAME}/priv/sql/mysql.new.sql
+lib/${PKGNAME}/priv/sql/mysql.old-to-new.sql
 lib/${PKGNAME}/priv/sql/mysql.sql
 lib/${PKGNAME}/priv/sql/pg.new.sql
 lib/${PKGNAME}/priv/sql/pg.sql
