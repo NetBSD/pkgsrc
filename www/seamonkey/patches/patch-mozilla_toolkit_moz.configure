@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_toolkit_moz.configure,v 1.4 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_moz.configure,v 1.5 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/toolkit/moz.configure.orig	2020-02-17 23:39:43.000000000 +0000
-+++ mozilla/toolkit/moz.configure
+--- toolkit/moz.configure.orig	2020-02-17 23:39:43.000000000 +0000
++++ toolkit/moz.configure
 @@ -961,11 +961,11 @@ include('nss.configure')
  # ==============================================================
  option('--disable-skia', help='Disable use of Skia')

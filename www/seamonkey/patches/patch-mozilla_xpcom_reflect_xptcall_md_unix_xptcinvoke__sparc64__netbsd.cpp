@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp,v 1.2 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp,v 1.3 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/md/unix/xptcinvoke_sparc64_netbsd.cpp.orig	2020-05-06 05:38:39.777410609 +0000
-+++ mozilla/xpcom/reflect/xptcall/md/unix/xptcinvoke_sparc64_netbsd.cpp
+--- xpcom/reflect/xptcall/md/unix/xptcinvoke_sparc64_netbsd.cpp.orig	2020-05-06 05:38:39.777410609 +0000
++++ xpcom/reflect/xptcall/md/unix/xptcinvoke_sparc64_netbsd.cpp
 @@ -0,0 +1,84 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 4 -*-
 + *

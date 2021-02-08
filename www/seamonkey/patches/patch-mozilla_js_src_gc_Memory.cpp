@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_js_src_gc_Memory.cpp,v 1.6 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_gc_Memory.cpp,v 1.7 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/js/src/gc/Memory.cpp.orig	2020-02-17 23:37:52.000000000 +0000
-+++ mozilla/js/src/gc/Memory.cpp
+--- js/src/gc/Memory.cpp.orig	2020-02-17 23:37:52.000000000 +0000
++++ js/src/gc/Memory.cpp
 @@ -504,6 +504,7 @@ MapMemoryAt(void* desired, size_t length
  {
  

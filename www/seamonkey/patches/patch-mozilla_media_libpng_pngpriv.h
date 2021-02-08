@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_media_libpng_pngpriv.h,v 1.4 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_media_libpng_pngpriv.h,v 1.5 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/media/libpng/pngpriv.h.orig	2020-02-17 23:37:58.000000000 +0000
-+++ mozilla/media/libpng/pngpriv.h
+--- media/libpng/pngpriv.h.orig	2020-02-17 23:37:58.000000000 +0000
++++ media/libpng/pngpriv.h
 @@ -36,8 +36,10 @@
   * still required (as of 2011-05-02.)
   */
