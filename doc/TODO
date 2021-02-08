@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20375 2021/02/08 08:01:39 triaxx Exp $
+$NetBSD: TODO,v 1.20376 2021/02/08 11:21:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -716,7 +716,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevelop-5.6
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
-	o keepassxc-2.6.4
 	o keybinder-0.3.1
 	o kipi-plugins-4.14.0
 	o kismet-2011.03r2 [pkg/45692]
