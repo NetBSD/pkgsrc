@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.925 2021/02/08 10:56:15 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.926 2021/02/08 11:18:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1126,3 +1126,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-asteval to 0.9.21 [adam 2021-02-08]
 	Updated security/keepassxc to 2.6.4 [ryoon 2021-02-08]
 	Updated editors/zim to 0.73.5 [triaxx 2021-02-08]
+	Added security/R-argon2 version 0.2.0 [mef 2021-02-08]
