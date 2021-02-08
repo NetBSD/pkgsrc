@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_netwerk_srtp_src_crypto_kernel_crypto__kernel.c,v 1.1 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_srtp_src_crypto_kernel_crypto__kernel.c,v 1.2 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/netwerk/srtp/src/crypto/kernel/crypto_kernel.c.orig	2020-02-17 23:38:00.000000000 +0000
-+++ mozilla/netwerk/srtp/src/crypto/kernel/crypto_kernel.c
+--- netwerk/srtp/src/crypto/kernel/crypto_kernel.c.orig	2020-02-17 23:38:00.000000000 +0000
++++ netwerk/srtp/src/crypto/kernel/crypto_kernel.c
 @@ -77,7 +77,7 @@ extern cipher_type_t aes_cbc;
   */
  

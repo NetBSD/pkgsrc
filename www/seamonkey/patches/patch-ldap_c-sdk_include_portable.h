@@ -1,7 +1,7 @@
-$NetBSD: patch-ldap_c-sdk_include_portable.h,v 1.2 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-ldap_c-sdk_include_portable.h,v 1.3 2021/02/08 12:26:20 ryoon Exp $
 
---- ldap/c-sdk/include/portable.h.orig	2020-02-17 23:36:19.000000000 +0000
-+++ ldap/c-sdk/include/portable.h
+--- comm/ldap/c-sdk/include/portable.h.orig	2020-02-17 23:36:19.000000000 +0000
++++ comm/ldap/c-sdk/include/portable.h
 @@ -122,7 +122,7 @@
   * some systems don't have the BSD re_comp and re_exec routines
   */

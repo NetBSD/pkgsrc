@@ -1,7 +1,7 @@
-$NetBSD: patch-mozilla_xpcom_build_BinaryPath.h,v 1.1 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_build_BinaryPath.h,v 1.2 2021/02/08 12:26:20 ryoon Exp $
 
---- mozilla/xpcom/build/BinaryPath.h.orig	2020-02-17 23:39:45.000000000 +0000
-+++ mozilla/xpcom/build/BinaryPath.h
+--- xpcom/build/BinaryPath.h.orig	2020-02-17 23:39:45.000000000 +0000
++++ xpcom/build/BinaryPath.h
 @@ -22,7 +22,8 @@
      defined(__OpenBSD__)
  #include <sys/sysctl.h>

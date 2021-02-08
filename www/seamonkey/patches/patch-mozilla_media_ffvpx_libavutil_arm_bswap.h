@@ -1,9 +1,9 @@
-$NetBSD: patch-mozilla_media_ffvpx_libavutil_arm_bswap.h,v 1.1 2020/06/26 11:40:28 nia Exp $
+$NetBSD: patch-mozilla_media_ffvpx_libavutil_arm_bswap.h,v 1.2 2021/02/08 12:26:20 ryoon Exp $
 
 Fix NetBSD aarch64 build.
 
---- mozilla/media/ffvpx/libavutil/arm/bswap.h.orig	2020-02-17 23:37:58.000000000 +0000
-+++ mozilla/media/ffvpx/libavutil/arm/bswap.h
+--- media/ffvpx/libavutil/arm/bswap.h.orig	2020-02-17 23:37:58.000000000 +0000
++++ media/ffvpx/libavutil/arm/bswap.h
 @@ -23,6 +23,8 @@
  #include "config.h"
  #include "libavutil/attributes.h"
