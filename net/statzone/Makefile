@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/10/19 16:03:21 fcambus Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/08 20:38:23 fcambus Exp $
 
-DISTNAME=	statzone-1.0.4
+DISTNAME=	statzone-1.0.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
