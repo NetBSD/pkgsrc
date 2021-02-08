@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2020/10/14 10:45:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.66 2021/02/08 12:26:20 ryoon Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -2178,7 +2178,6 @@ lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/cs_nav_prefs_navigator
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/cs_priv_prefs_popup.xhtml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/customize_help.xhtml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/developer_tools.xhtml
-lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/forieusers.xhtml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/glossary.xhtml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/help-glossary.rdf
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/help/help-index1.rdf
@@ -2327,6 +2326,7 @@ lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/startp
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/wikipedia.ico
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/images/yahoo.ico
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/list.json
+lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/startpage.xml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/wikipedia.xml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/searchplugins/yahoo.xml
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/setDesktopBackground.dtd
@@ -2759,6 +2759,9 @@ lib/seamonkey/chrome/icons/default/addressbookWindow48.png
 lib/seamonkey/chrome/icons/default/bookmarkproperties.png
 lib/seamonkey/chrome/icons/default/bookmarkproperties16.png
 lib/seamonkey/chrome/icons/default/bookmarkproperties48.png
+lib/seamonkey/chrome/icons/default/chatzilla-window.png
+lib/seamonkey/chrome/icons/default/chatzilla-window16.png
+lib/seamonkey/chrome/icons/default/chatzilla-window48.png
 lib/seamonkey/chrome/icons/default/default.png
 lib/seamonkey/chrome/icons/default/default128.png
 lib/seamonkey/chrome/icons/default/default16.png
@@ -2791,17 +2794,17 @@ lib/seamonkey/chrome/icons/default/msgcomposeWindow48.png
 lib/seamonkey/chrome/icons/default/places.png
 lib/seamonkey/chrome/icons/default/places16.png
 lib/seamonkey/chrome/icons/default/places48.png
+lib/seamonkey/chrome/icons/default/winInspectorMain.png
+lib/seamonkey/chrome/icons/default/winInspectorMain16.png
+lib/seamonkey/chrome/icons/default/winInspectorMain48.png
 lib/seamonkey/chrome/messenger/content/messagebody/addressbook/print.css
 lib/seamonkey/chrome/messenger/content/messenger-smime/certFetchingStatus.js
 lib/seamonkey/chrome/messenger/content/messenger-smime/certFetchingStatus.xul
 lib/seamonkey/chrome/messenger/content/messenger-smime/msgCompSMIMEOverlay.js
-lib/seamonkey/chrome/messenger/content/messenger-smime/msgCompSMIMEOverlay.xul
 lib/seamonkey/chrome/messenger/content/messenger-smime/msgCompSecurityInfo.js
 lib/seamonkey/chrome/messenger/content/messenger-smime/msgCompSecurityInfo.xul
 lib/seamonkey/chrome/messenger/content/messenger-smime/msgHdrViewSMIMEOverlay.js
-lib/seamonkey/chrome/messenger/content/messenger-smime/msgHdrViewSMIMEOverlay.xul
 lib/seamonkey/chrome/messenger/content/messenger-smime/msgReadSMIMEOverlay.js
-lib/seamonkey/chrome/messenger/content/messenger-smime/msgReadSMIMEOverlay.xul
 lib/seamonkey/chrome/messenger/content/messenger-smime/msgReadSecurityInfo.js
 lib/seamonkey/chrome/messenger/content/messenger-smime/msgReadSecurityInfo.xul
 lib/seamonkey/chrome/messenger/content/messenger/ABSearchDialog.js
@@ -2968,7 +2971,8 @@ lib/seamonkey/chrome/messenger/content/messenger/msgHdrViewOverlay.xul
 lib/seamonkey/chrome/messenger/content/messenger/msgMail3PaneWindow.js
 lib/seamonkey/chrome/messenger/content/messenger/msgPrintEngine.js
 lib/seamonkey/chrome/messenger/content/messenger/msgPrintEngine.xul
-lib/seamonkey/chrome/messenger/content/messenger/msgSelectOffline.xul
+lib/seamonkey/chrome/messenger/content/messenger/msgSelectOfflineFolders.js
+lib/seamonkey/chrome/messenger/content/messenger/msgSelectOfflineFolders.xul
 lib/seamonkey/chrome/messenger/content/messenger/msgSynchronize.js
 lib/seamonkey/chrome/messenger/content/messenger/msgSynchronize.xul
 lib/seamonkey/chrome/messenger/content/messenger/msgViewNavigation.js
@@ -3020,8 +3024,8 @@ lib/seamonkey/chrome/messenger/content/messenger/threadPane.js
 lib/seamonkey/chrome/messenger/content/messenger/threadPane.xul
 lib/seamonkey/chrome/messenger/content/messenger/viewLog.js
 lib/seamonkey/chrome/messenger/content/messenger/viewLog.xul
-lib/seamonkey/chrome/messenger/content/messenger/virtualFolderListDialog.js
-lib/seamonkey/chrome/messenger/content/messenger/virtualFolderListDialog.xul
+lib/seamonkey/chrome/messenger/content/messenger/virtualFolderListEdit.js
+lib/seamonkey/chrome/messenger/content/messenger/virtualFolderListEdit.xul
 lib/seamonkey/chrome/messenger/content/messenger/virtualFolderProperties.js
 lib/seamonkey/chrome/messenger/content/messenger/virtualFolderProperties.xul
 lib/seamonkey/chrome/messenger/content/messenger/widgetglue.js
@@ -3852,8 +3856,8 @@ lib/seamonkey/isp/rss.rdf
 lib/seamonkey/libldap60.so
 lib/seamonkey/libldif60.so
 lib/seamonkey/liblgpllibs.so
-${PLIST.avx86}lib/seamonkey/libmozavcodec.so
-${PLIST.avx86}lib/seamonkey/libmozavutil.so
+lib/seamonkey/libmozavcodec.so
+lib/seamonkey/libmozavutil.so
 lib/seamonkey/libmozgtk.so
 lib/seamonkey/libmozsqlite3.so
 lib/seamonkey/libprldap60.so

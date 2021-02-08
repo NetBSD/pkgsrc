@@ -1,11 +1,10 @@
-# $NetBSD: options.mk,v 1.45 2020/05/07 19:36:52 nia Exp $
+# $NetBSD: options.mk,v 1.46 2021/02/08 12:26:20 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
-PKG_SUPPORTED_OPTIONS+=	widevinecdm
 PLIST_VARS+=		jemalloc debug
 
 .if ${OPSYS} == "Linux"
@@ -94,9 +93,4 @@ CONFIGURE_ARGS+=	--enable-webrtc
 PLIST.webrtc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
-.endif
-
-# Enable Google widevine CDM. This requires external libwidevinecdm.so.
-.if !empty(PKG_OPTIONS:Mwidevinecdm)
-CONFIGURE_ARGS+=	--enable-eme=widevine
 .endif
