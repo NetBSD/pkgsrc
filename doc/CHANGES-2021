@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.934 2021/02/08 20:38:36 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.935 2021/02/08 21:04:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1137,3 +1137,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/py-goocalendar to 0.7.1 [adam 2021-02-08]
 	Updated devel/py-autopep8 to 1.5.5 [adam 2021-02-08]
 	Updated net/statzone to 1.0.5 [fcambus 2021-02-08]
+	Updated x11/xterm to 365 [pin 2021-02-08]
