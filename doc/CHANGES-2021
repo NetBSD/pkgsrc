@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.922 2021/02/08 07:57:16 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.923 2021/02/08 08:35:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1120,3 +1120,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed mail/fetchyahoo [triaxx 2021-02-08]
 	Updated chat/ejabberd to 21.01 [triaxx 2021-02-08]
 	Updated editors/le to 1.16.8 [fcambus 2021-02-08]
+	Added devel/py-hexbytes version 0.2.1 [adam 2021-02-08]
+	Added finance/py-eth-rlp version 0.2.1 [adam 2021-02-08]
+	Added finance/py-eth-account version 0.5.4 [adam 2021-02-08]
+	Updated math/py-asteval to 0.9.21 [adam 2021-02-08]
