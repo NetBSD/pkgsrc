@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2021/02/08 08:28:04 adam Exp $
+# $NetBSD: Makefile,v 1.86 2021/02/08 08:31:06 adam Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -41,6 +41,7 @@ SUBDIR+=	py-braintree
 SUBDIR+=	py-crytic-compile
 SUBDIR+=	py-empyrical
 SUBDIR+=	py-eth-abi
+SUBDIR+=	py-eth-account
 SUBDIR+=	py-eth-hash
 SUBDIR+=	py-eth-keyfile
 SUBDIR+=	py-eth-keys
