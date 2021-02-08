@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/01/01 11:58:53 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/02/08 12:20:48 mef Exp $
 
-SHA1 (R/xfun_0.19.tar.gz) = b09e38d51844b914563241254eb5d93bb0449c62
-RMD160 (R/xfun_0.19.tar.gz) = 2c3e371b846a3599a301293ccc8ee5cdaca48568
-SHA512 (R/xfun_0.19.tar.gz) = 2bd355cce8f9b0aec202eb88ed42c2f75b7bec7417e85cdc288c52da1baccc732a2e128ad69f25cced8b6530fcb109ab63f60da5e95204920d312d41264331ca
-Size (R/xfun_0.19.tar.gz) = 97366 bytes
+SHA1 (R/xfun_0.20.tar.gz) = 88b6e98c36422f139649195a6a554bde367a6f13
+RMD160 (R/xfun_0.20.tar.gz) = bf24b7050f1f82220a3fe3fcc8cdebbde16caa22
+SHA512 (R/xfun_0.20.tar.gz) = a3ceb72d455ecb7f140c6f570d3dbaa9a5211fef011830584390ebbc0e5cb3a647af2058e99056bfb8597302913e2485ebb1c1f2bcb7c7c1f21d7721d5c8a7d5
+Size (R/xfun_0.20.tar.gz) = 99897 bytes
