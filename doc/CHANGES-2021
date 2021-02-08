@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.916 2021/02/08 01:56:42 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.917 2021/02/08 06:19:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1108,3 +1108,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/bedtools to 2.30.0 [bacon 2021-02-08]
 	Added biology/py-dnaio version 0.5.0 [bacon 2021-02-08]
 	Added biology/py-cutadapt version 3.2 [bacon 2021-02-08]
+	Updated security/py-cryptography to 3.3.2 [adam 2021-02-08]
+	Updated security/py-cryptography_vectors to 3.3.2 [adam 2021-02-08]
+	Updated databases/py-peewee to 3.14.1 [adam 2021-02-08]
+	Updated devel/py-more-itertools to 8.7.0 [adam 2021-02-08]
