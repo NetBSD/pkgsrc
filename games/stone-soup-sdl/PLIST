@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/12/09 12:28:40 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/09 21:11:49 nia Exp $
 bin/crawl
 share/applications/crawl.desktop
 share/icons/hicolor/48x48/apps/crawl.png
@@ -30,7 +30,6 @@ share/stone-soup/dat/database/randname.txt
 share/stone-soup/dat/database/shout.txt
 share/stone-soup/dat/database/wpnnoise.txt
 share/stone-soup/dat/defaults/autopickup_exceptions.txt
-share/stone-soup/dat/defaults/food_colouring.txt
 share/stone-soup/dat/defaults/glyph_colours.txt
 share/stone-soup/dat/defaults/menu_colours.txt
 share/stone-soup/dat/defaults/messages.txt
@@ -45,7 +44,6 @@ share/stone-soup/dat/des/altar/lugonu_bribe.des
 share/stone-soup/dat/des/altar/nemelex_the_gamble.des
 share/stone-soup/dat/des/altar/okawaru_arena.des
 share/stone-soup/dat/des/altar/overflow.des
-share/stone-soup/dat/des/altar/pakellas_experiments.des
 share/stone-soup/dat/des/altar/trog_burn_book.des
 share/stone-soup/dat/des/altar/trog_wizard.des
 share/stone-soup/dat/des/altar/vehumet_trees.des
@@ -174,6 +172,7 @@ share/stone-soup/dat/des/variable/mini_monsters.des
 share/stone-soup/dat/des/variable/polyominoes.des
 share/stone-soup/dat/des/variable/the_bubble.des
 share/stone-soup/dat/des/variable/the_grid.des
+share/stone-soup/dat/des/variable/winding_woodlands.des
 share/stone-soup/dat/descript/ability.txt
 share/stone-soup/dat/descript/backgrounds.txt
 share/stone-soup/dat/descript/branches.txt
@@ -625,6 +624,7 @@ share/stone-soup/docs/license/pcre_license.txt
 share/stone-soup/docs/license/worley.txt
 share/stone-soup/docs/macros_guide.txt
 share/stone-soup/docs/options_guide.txt
+share/stone-soup/docs/quickstart.md
 share/stone-soup/docs/quickstart.txt
 share/stone-soup/docs/ssh_guide.txt
 share/stone-soup/docs/tiles_help.txt
