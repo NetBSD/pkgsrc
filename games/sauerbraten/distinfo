@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/06/30 21:41:46 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/02/09 22:33:23 nia Exp $
 
-SHA1 (sauerbraten_2013_04_04_collect_edition_linux.tar.bz2) = 95a35e40060afc247d2857c0052eee2ebd76a4fb
-RMD160 (sauerbraten_2013_04_04_collect_edition_linux.tar.bz2) = 73f8a6be6fb037977699bb76ad7128e561577b63
-SHA512 (sauerbraten_2013_04_04_collect_edition_linux.tar.bz2) = e1ee397a3846ec1aad9113e1a5490a883496d8bd4eb81e0d9bd1b8a440fd4d1f0f9411a86abf22478a7edf25908712adbaacfe95b6eaeefe339778d45e77cda7
-Size (sauerbraten_2013_04_04_collect_edition_linux.tar.bz2) = 589959852 bytes
-SHA1 (patch-src_Makefile) = f7a0366479e4474664a0bb36d2af807bd1efd9da
+SHA1 (sauerbraten_2020_12_27_linux.tar.bz2) = 0f55e7228cd30a6e88db82088b42936cd13678a6
+RMD160 (sauerbraten_2020_12_27_linux.tar.bz2) = 712fefeecc4efb2eefb296cc2de01c8ae5c1abc4
+SHA512 (sauerbraten_2020_12_27_linux.tar.bz2) = 60487e0493478b9dd8940a9239834d8f3f6b6ca529f3c5b718f91caf5116073942ca6908d7fff26ab37b7ec590114ab07f24cdcea5c355288d3c2706d626ea28
+Size (sauerbraten_2020_12_27_linux.tar.bz2) = 985815649 bytes
+SHA1 (patch-src_Makefile) = 44cf41997f1759aaad8b21c23ca3d11c8e8d5f6b
