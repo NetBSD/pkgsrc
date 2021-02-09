@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.937 2021/02/09 06:49:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.938 2021/02/09 06:59:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1144,3 +1144,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/roundcube-plugin-zipdownload to 1.4.11 [taca 2021-02-09]
 	Updated devel/git to 2.30.1 [adam 2021-02-09]
 	Updated devel/py-ipykernel to 5.4.3 [adam 2021-02-09]
+	Updated security/py-josepy to 1.6.0 [adam 2021-02-09]
+	Updated time/py-aniso8601 to 8.1.1 [adam 2021-02-09]
