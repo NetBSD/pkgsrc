@@ -1,0 +1,7 @@
+The package defines a tabular*-like environment, tabulary,
+taking a 'total width' argument as well as the column
+specifications. The environment uses column types L, C, R and J
+for variable width columns (\raggedright', \centering,
+\raggedleft, and normally justified). In contrast to tabularx's
+X columns, the width of each column is weighted according to
+the natural width of the widest cell in the column.
