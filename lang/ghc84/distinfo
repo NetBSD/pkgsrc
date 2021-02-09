@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/02/17 17:24:06 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2021/02/09 12:41:32 ryoon Exp $
 
 SHA1 (ghc-8.0.2-boot-x86_64-unknown-solaris2.tar.xz) = 517ea9435af0c8b4f32899ae3bd26ff8da34f180
 RMD160 (ghc-8.0.2-boot-x86_64-unknown-solaris2.tar.xz) = c88b0958085ce9a6e1b175280d536986e4c712b1
@@ -24,7 +24,7 @@ SHA1 (ghc-8.4.4-src.tar.xz) = bf8f807348c8a64469e42ecf9c4b71108f185c2c
 RMD160 (ghc-8.4.4-src.tar.xz) = d2be33c4b38ee0660fe081e625ad5242c819392c
 SHA512 (ghc-8.4.4-src.tar.xz) = 685e102eee8cf8b6a377afd7871998c8c368a5da288469367e3fb804aa6109e6f59be5945b8cd3d1e36c851190ea9a7f74c576528589589313d237b721d86da5
 Size (ghc-8.4.4-src.tar.xz) = 11319500 bytes
-SHA1 (patch-aclocal.m4) = 848cf4e1fdc8ccd066f5edca1eeef27182d13312
+SHA1 (patch-aclocal.m4) = cb444acc956f46657070f9f6dc343008b35594bd
 SHA1 (patch-configure.ac) = dae98e76c51fdc2f70a77adf7d206c3d79c6bca6
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
 SHA1 (patch-libraries_base_System_CPUTime_Posix_Times.hsc) = 2bfb779d534d12073287274ce5e90b99e457a860
