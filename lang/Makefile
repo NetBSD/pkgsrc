@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.589 2021/02/09 13:18:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.590 2021/02/09 13:20:09 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -98,6 +98,7 @@ SUBDIR+=	ghc80
 SUBDIR+=	ghc810
 SUBDIR+=	ghc84
 SUBDIR+=	ghc88
+SUBDIR+=	ghc90
 SUBDIR+=	gjs
 SUBDIR+=	gnat_util
 SUBDIR+=	gnucobol
