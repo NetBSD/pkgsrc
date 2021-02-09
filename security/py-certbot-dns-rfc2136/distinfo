@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/01/16 06:29:24 mef Exp $
+$NetBSD: distinfo,v 1.24 2021/02/09 10:06:43 adam Exp $
 
-SHA1 (certbot-dns-rfc2136-1.11.0.tar.gz) = 146e007bae955770bac6ae4fcd0a42c00ada6ce0
-RMD160 (certbot-dns-rfc2136-1.11.0.tar.gz) = d013ed4acd3211b02bac22c5cf7d01df5ea16dd1
-SHA512 (certbot-dns-rfc2136-1.11.0.tar.gz) = d96a1839faa0f19487f252326947bd4af8d6270e50a817a0f186521cc7f6373f2db6f1b6a440e7be64dd2ae06c6e0084687c362937d94fb18a807349da1e8b31
-Size (certbot-dns-rfc2136-1.11.0.tar.gz) = 15588 bytes
+SHA1 (certbot-dns-rfc2136-1.12.0.tar.gz) = 02997615d0e37b85e24e439493051f856370d8aa
+RMD160 (certbot-dns-rfc2136-1.12.0.tar.gz) = 044fbecf9c65dd8203c26ab0e7c01d247312bd90
+SHA512 (certbot-dns-rfc2136-1.12.0.tar.gz) = b2a9ba3f61491fee2f6b2ddb08d9a76da329ebee46144ca1148eecf93e6624daac888e5b893403704698d43806d8fe08f1b54206f4560e71b29df29af8e04e30
+Size (certbot-dns-rfc2136-1.12.0.tar.gz) = 15226 bytes
