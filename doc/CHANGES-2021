@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.944 2021/02/09 10:28:45 adam Exp $
+$NetBSD: CHANGES-2021,v 1.945 2021/02/09 12:29:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1171,3 +1171,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-nginx to 1.12.0 [adam 2021-02-09]
 	Updated net/haproxy to 2.3.5 [adam 2021-02-09]
 	Updated textproc/py-snowballstemmer to 2.1.0 [adam 2021-02-09]
+	Updated www/hugo to 0.80.0 [ryoon 2021-02-09]
