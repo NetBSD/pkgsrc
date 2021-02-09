@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/01/20 21:06:30 adam Exp $
+$NetBSD: distinfo,v 1.6 2021/02/09 08:53:49 adam Exp $
 
-SHA1 (dropbox-11.0.0.tar.gz) = 844a0732718fc414157ee01dffe1dddb458d4859
-RMD160 (dropbox-11.0.0.tar.gz) = f20faffd61d3f176ffb29ab965bbb2d3f15a658d
-SHA512 (dropbox-11.0.0.tar.gz) = 912859ed2d369ee3ffb09286131068b17356fdb0a4e382605545e0c1fea11e897c0476681fe876855606b3cccebccf56d88d8f1d86cf4ebbd4c693aee64eb90e
-Size (dropbox-11.0.0.tar.gz) = 548156 bytes
+SHA1 (dropbox-11.1.0.tar.gz) = e71ac69ca58a216108cdee2d67f7d2f4c549e562
+RMD160 (dropbox-11.1.0.tar.gz) = 1db4e3b2734bb8399c990df908f862876a956698
+SHA512 (dropbox-11.1.0.tar.gz) = ec3a97e7fa7556eeafac92ca66742730a5cfbcd28f87ffeeb5e601e106d8404728755a3e8a9e4d4526c46fd4ecbe0b1d161959a942a21e33e41c2795755b7bc1
+Size (dropbox-11.1.0.tar.gz) = 544273 bytes
