@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.65 2021/01/16 08:33:26 adam Exp $
+$NetBSD: distinfo,v 1.66 2021/02/09 10:23:53 adam Exp $
 
-SHA1 (haproxy-2.3.4.tar.gz) = 8bb2371a91a7874810c5b5374c24232292697cde
-RMD160 (haproxy-2.3.4.tar.gz) = a22f6a3dced9433fae52c59faa58c347198038c0
-SHA512 (haproxy-2.3.4.tar.gz) = b6db7f6c573f700ce5e2f533c6b60c5e5cb15fbc31057f3e98c03144c52b87612420e962e5e8ba63176eb1b7459a956c80a0403e9189cb3fde1dcef5bfa64ac5
-Size (haproxy-2.3.4.tar.gz) = 2909672 bytes
+SHA1 (haproxy-2.3.5.tar.gz) = 78714ae7e24163eabd1ddf4035cd14df408da5c8
+RMD160 (haproxy-2.3.5.tar.gz) = 567c116b6822e452d6f479ff53362b82653a1d53
+SHA512 (haproxy-2.3.5.tar.gz) = 1d7d191b72157b9b504fd5b58a50225c737491b03b1ed52de4eb61e0cc7898abae298a1fee1c3a576a7de88dd6df5f0630906001046d26c0dfa3c4bf0cd0de50
+Size (haproxy-2.3.5.tar.gz) = 2915064 bytes
 SHA1 (patch-Makefile) = fcb2de85189526ae42ccf0b789789ee9b834f375
 SHA1 (patch-src_cli.c) = 4bc5cf0116df121ac4c3c38b8f962c3a62d536e5
 SHA1 (patch-src_haproxy.c) = a466acb853b5018b70571d0a03b9d28ed9245d06
