@@ -1,0 +1,29 @@
+$NetBSD: distinfo,v 1.1 2021/02/09 13:18:36 ryoon Exp $
+
+SHA1 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 3ff01d768393b3866e7a7543f9f55646aaffce7a
+RMD160 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 39bf10b13054a6316c8477609fb98abe4277fa6c
+SHA512 (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 730347bb5eaac4efac8ec487fafd2da6fe2932db45f59e324c83698eb0b0e8a6a4b4fd513de17fb9c152ccee328660cfe1638cad631ce5e35b2dbfddda0d8850
+Size (ghc-8.10.4-boot-x86_64-unknown-netbsd.tar.xz) = 49500236 bytes
+SHA1 (ghc-9.0.1-src.tar.xz) = adaec1c05cd03d6af02716d59ab5f597434b700b
+RMD160 (ghc-9.0.1-src.tar.xz) = 2bed45072ccb838418ae0405f5cfe64a237315e3
+SHA512 (ghc-9.0.1-src.tar.xz) = bee7950a5118be8d8cefe0db5070139a5a93ca21c5bc6f8bf453429831f0c44f5e0fb5ee569865d6b8b92749044ee4123be06920928ac7a1ec9cffa9404a3e53
+Size (ghc-9.0.1-src.tar.xz) = 20782336 bytes
+SHA1 (netbsd-9.0-amd64-libterminfo.tar.gz) = db6b385b8676efc135c08b06e3dd6fd11b926999
+RMD160 (netbsd-9.0-amd64-libterminfo.tar.gz) = 5a246633c90ee85f71efcc02d8280bd0c50ab5a7
+SHA512 (netbsd-9.0-amd64-libterminfo.tar.gz) = 79288d44b84df8848afc2cdfee628cc4fd1ec0334159403ef8ba994d617bc56a7114af3031198afb5f3b8f45c0463a848099431e32bc6725042908576b6f95b8
+Size (netbsd-9.0-amd64-libterminfo.tar.gz) = 27744 bytes
+SHA1 (patch-aclocal.m4) = d178edd5d193ac8f772955bbe451686c5f6cccdc
+SHA1 (patch-configure.ac) = 0905a0e5358d8c3f3f8366b597a59dd824f294d8
+SHA1 (patch-libraries_Cabal_Cabal_Distribution_Simple_GHC.hs) = a4c82b1282c0580a7945be8c3b9d38bc760db99f
+SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
+SHA1 (patch-libraries_base_System_CPUTime_Posix_Times.hsc) = 2bfb779d534d12073287274ce5e90b99e457a860
+SHA1 (patch-libraries_base_System_Environment.hs) = 7d79a91f295915b4408d5f41d5405739d7189215
+SHA1 (patch-libraries_base_configure) = f06a961a6507f635aafe50dab3ff4396c012bdec
+SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimespec.hsc) = 588270767f8a9cbde0648fc99807891fef65d721
+SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimeval.hs) = b2811ec4a845e6b2b44414e940b6108178b597c5
+SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = e94936c139ca15d45cac4a7feb74a601567913ab
+SHA1 (patch-libraries_unix_System_Posix_Env_ByteString.hsc) = 3f675fc5d6bf5cc59a2d5ccffeb9ccd51521645a
+SHA1 (patch-libraries_unix_System_Posix_Files_Common.hsc) = 6efef280832d376915a8987e4e8aac283408f607
+SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = 49215dce493a6bbc440f91a3959e592f86fc779b
+SHA1 (patch-libraries_unix_include_execvpe.h) = 67dd9720a71a6a55bbe2b50e61621ca60187ef00
+SHA1 (patch-rts_ProfHeap.c) = 32182bbde0453b60745663d3ae2a3cd54fab85c1
