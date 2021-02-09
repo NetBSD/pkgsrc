@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/12/30 21:17:29 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/09 07:24:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/digitalocean/Account.pyo
 ${PYSITELIB}/digitalocean/Action.py
 ${PYSITELIB}/digitalocean/Action.pyc
 ${PYSITELIB}/digitalocean/Action.pyo
+${PYSITELIB}/digitalocean/Balance.py
+${PYSITELIB}/digitalocean/Balance.pyc
+${PYSITELIB}/digitalocean/Balance.pyo
 ${PYSITELIB}/digitalocean/Certificate.py
 ${PYSITELIB}/digitalocean/Certificate.pyc
 ${PYSITELIB}/digitalocean/Certificate.pyo
@@ -40,6 +43,9 @@ ${PYSITELIB}/digitalocean/Manager.pyo
 ${PYSITELIB}/digitalocean/Metadata.py
 ${PYSITELIB}/digitalocean/Metadata.pyc
 ${PYSITELIB}/digitalocean/Metadata.pyo
+${PYSITELIB}/digitalocean/Project.py
+${PYSITELIB}/digitalocean/Project.pyc
+${PYSITELIB}/digitalocean/Project.pyo
 ${PYSITELIB}/digitalocean/Record.py
 ${PYSITELIB}/digitalocean/Record.pyc
 ${PYSITELIB}/digitalocean/Record.pyo
@@ -58,6 +64,9 @@ ${PYSITELIB}/digitalocean/Snapshot.pyo
 ${PYSITELIB}/digitalocean/Tag.py
 ${PYSITELIB}/digitalocean/Tag.pyc
 ${PYSITELIB}/digitalocean/Tag.pyo
+${PYSITELIB}/digitalocean/VPC.py
+${PYSITELIB}/digitalocean/VPC.pyc
+${PYSITELIB}/digitalocean/VPC.pyo
 ${PYSITELIB}/digitalocean/Volume.py
 ${PYSITELIB}/digitalocean/Volume.pyc
 ${PYSITELIB}/digitalocean/Volume.pyo
