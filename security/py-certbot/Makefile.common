@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2021/01/14 14:21:51 adam Exp $
+# $NetBSD: Makefile.common,v 1.51 2021/02/09 10:06:41 adam Exp $
 # used by security/py-acme/Makefile
 # used by security/py-certbot/Makefile
 # used by security/py-certbot-apache/Makefile
@@ -16,7 +16,7 @@
 # used by security/py-certbot-dns-sakuracloud/Makefile
 # used by security/py-certbot-nginx/Makefile
 
-CERTBOT_VERSION=	1.11.0
+CERTBOT_VERSION=	1.12.0
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES?=	security python
@@ -28,3 +28,6 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-lexicon
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/12/09 12:31:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/02/09 10:06:41 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -240,6 +240,7 @@ ${PYSITELIB}/certbot/tests/testdata/sample-archive/chain1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive/fullchain1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive/privkey1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal-ancient.conf
+${PYSITELIB}/certbot/tests/testdata/sample-renewal-deprecated-option.conf
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal-ec.conf
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal.conf
 ${PYSITELIB}/certbot/tests/testdata/webrootconftest.ini
