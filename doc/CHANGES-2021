@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.936 2021/02/09 00:48:24 taca Exp $
+$NetBSD: CHANGES-2021,v 1.937 2021/02/09 06:49:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1142,3 +1142,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/roundcube-plugin-enigma to 1.4.11 [taca 2021-02-09]
 	Updated mail/roundcube-plugin-password to 1.4.11 [taca 2021-02-09]
 	Updated mail/roundcube-plugin-zipdownload to 1.4.11 [taca 2021-02-09]
+	Updated devel/git to 2.30.1 [adam 2021-02-09]
+	Updated devel/py-ipykernel to 5.4.3 [adam 2021-02-09]
