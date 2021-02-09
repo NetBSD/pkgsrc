@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/09/29 18:43:47 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/02/09 07:24:38 adam Exp $
 
-SHA1 (python-digitalocean-1.15.0.tar.gz) = a100014f293d1c9495d23295d887b3bf2bbbb8f8
-RMD160 (python-digitalocean-1.15.0.tar.gz) = 9c1cf19d11f73f566ab133ffe2b2c4bc671fed71
-SHA512 (python-digitalocean-1.15.0.tar.gz) = 3e00bed364fcd3ef9f12ea2fe1089c547f91a9700c1130007c38319837d9a58330059ab56cd48b511b2b8bfd56d9d6c4fdc7921c86c947b2de33212f7a926fc6
-Size (python-digitalocean-1.15.0.tar.gz) = 27038 bytes
+SHA1 (python-digitalocean-1.16.0.tar.gz) = bbf82b7e807cc0a1a674d3a800a43c528ad10d68
+RMD160 (python-digitalocean-1.16.0.tar.gz) = 3dc76744d3b4e482fe061ad6b0877468a5302739
+SHA512 (python-digitalocean-1.16.0.tar.gz) = 4de5b0cd2792d3e832343e445d6f1bd3adeffb9fe51796cf3146ad3ea62bd7e19c115dbdd9c12e8da2033f3e0888f9800871a51a4a6671ee55fb6a579d7dd2df
+Size (python-digitalocean-1.16.0.tar.gz) = 30506 bytes
