@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/06/08 13:24:35 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/02/09 07:26:29 adam Exp $
 
-SHA1 (zope.schema-6.0.0.tar.gz) = bda8e40da9afcf1931420a9d156741b77ad623b5
-RMD160 (zope.schema-6.0.0.tar.gz) = fef30d030fd9fa4172591b9d4e8559eb820d6e94
-SHA512 (zope.schema-6.0.0.tar.gz) = 3258e6b2bf97485b9496f19319ef5af9a1e908b6c2661c27f45cfd64057597cfd514acbe79d86ddda1b80e66be45a10680fc3d9e662513b360d5f047917735d8
-Size (zope.schema-6.0.0.tar.gz) = 110343 bytes
+SHA1 (zope.schema-6.0.1.tar.gz) = 52a0f1f7db5bd8abecabe651785dbedbe4e27a4f
+RMD160 (zope.schema-6.0.1.tar.gz) = 4c0b7d58ef56ef2701a829b2902570d12100804d
+SHA512 (zope.schema-6.0.1.tar.gz) = c8b9182975b1f2834827877c725a8d0c800bf3cbed9dce2625bb3e1715c0fb7d346b8206f47a96994fa79240a0cb30c4aa38cea56f9ecb79351fd97e0bc021ba
+Size (zope.schema-6.0.1.tar.gz) = 108325 bytes
