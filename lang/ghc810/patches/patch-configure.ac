@@ -1,0 +1,25 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/02/09 13:16:24 ryoon Exp $
+
+Don't use non-portable operator ==:
+https://gitlab.haskell.org/ghc/ghc/merge_requests/2497
+
+--- configure.ac.orig	2021-02-04 05:28:14.000000000 +0000
++++ configure.ac
+@@ -848,7 +848,7 @@ if test "x$EnableDtrace" = "xyes"; then
+   if test -n "$DtraceCmd"; then
+     if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple" \
+       -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xfreebsd-portbld" \
+-      -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xsolaris2-unknown"; then
++      ; then
+       HaveDtrace=YES
+     fi
+   fi
+@@ -967,7 +967,7 @@ FP_CHECK_SIZEOF_AND_ALIGNMENT(uint64_t)
+ 
+ dnl for use in settings file
+ TargetWordSize=$ac_cv_sizeof_void_p
+-if test "x$TargetWordSize" == 8; then
++if test "x$TargetWordSize" = 8; then
+   AC_SUBST([Cabal64bit],[True])
+ else
+   AC_SUBST([Cabal64bit],[False])
