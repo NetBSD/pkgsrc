@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.950 2021/02/09 18:34:19 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.951 2021/02/09 20:26:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1177,3 +1177,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added lang/ghc810 version 8.10.4 [ryoon 2021-02-09]
 	Added lang/ghc90 version 9.0.1 [ryoon 2021-02-09]
 	Updated textproc/lowdown to 0.8.1 [fcambus 2021-02-09]
+	Updated audio/vorbis-tools to 1.4.2 [nia 2021-02-09]
