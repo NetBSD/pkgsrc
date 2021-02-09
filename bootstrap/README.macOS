@@ -1,4 +1,4 @@
-$NetBSD: README.macOS,v 1.2 2021/02/09 12:05:32 cjep Exp $
+$NetBSD: README.macOS,v 1.3 2021/02/09 12:31:58 cjep Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
@@ -119,7 +119,7 @@ Therefore, pkgsrc uses nbsed on 10.9.
 
 ** XCode
 
-This section applies to 10.6 through 10.13.
+This section applies to 10.6 through 11.
 
 If you haven't already, you will need to install the macOS
 Developer Tools package (XCode) to obtain a compiler, etc.  The
@@ -161,7 +161,6 @@ hardware fails, many machines cannot be upgraded to recent versions of
 macOS, creating a greater than usual desire to support old systems.
 Because of the particular history of deprecation, most systems tend to
 run relatively recent versions or specific older versions.
-10.5).
 
 The stance of pkgsrc is generally to avoid breaking older systems
 unless keeping support would cause difficulty, and to accept clean
