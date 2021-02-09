@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/02/05 10:28:40 maya Exp $
+# $NetBSD: Makefile,v 1.27 2021/02/09 10:37:18 wiz Exp $
 
 GCC_PKGNAME=	gcc9
 .include "version.mk"
@@ -190,8 +190,8 @@ post-install:
 	|| (cd ${DESTDIR}${GCC9_PREFIX}/bin && ${LN} -f gcc cc)
 
 GENERATE_PLIST+= \
-        cd ${DESTDIR}${PREFIX} && \
-        ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT};
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} ${GCC9_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT};
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
