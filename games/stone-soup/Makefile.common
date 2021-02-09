@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.6 2020/12/30 12:24:27 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2021/02/09 21:11:49 nia Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
-DISTNAME=	stone_soup-0.25.1-nodeps
+DISTNAME=	stone_soup-0.26.1-nodeps
 PKGNAME=	${DISTNAME:S/_/-/:S/-nodeps//1}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crawl/}
 GITHUB_PROJECT=	crawl
-GITHUB_RELEASE=	0.25.1
+GITHUB_RELEASE=	0.26.1
 EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://crawl.develz.org/
