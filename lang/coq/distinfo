@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.35 2020/01/24 15:54:48 jaapb Exp $
+$NetBSD: distinfo,v 1.36 2021/02/09 22:37:43 dholland Exp $
 
-SHA1 (coq-8.10.2.tar.gz) = ecdb79a8b4cd76912b39e037ef52545406e63799
-RMD160 (coq-8.10.2.tar.gz) = a3686508b97a98b668c91a513e73f88dff02af89
-SHA512 (coq-8.10.2.tar.gz) = 80df91b64efc9907480388ec479362ee21067c64436da720989d6d1645ffc2f2230ae5c13069c55842da3baa7facbd143c2190d1d64d8c87935802000a02156f
-Size (coq-8.10.2.tar.gz) = 6222940 bytes
-SHA1 (patch-Makefile.common) = 85bcb271103f87f1e1573d3856740319ee0344cd
+SHA1 (coq-8.12.2.tar.gz) = 70ba8f50fb54049fe00c5ce2c29be1c829b5297d
+RMD160 (coq-8.12.2.tar.gz) = d691b0fc0e0b9824f15a8a26d013f8578eb095ce
+SHA512 (coq-8.12.2.tar.gz) = 6b524edbceb5795f04bbd2b52f191bfcf10b611f7a2fa0450c30b72c944f88418d261729476b64603faacfe2be5f7992a2997541e54e6f8691d4dc8b4969198d
+Size (coq-8.12.2.tar.gz) = 6855860 bytes
+SHA1 (patch-Makefile.common) = f53c41884e12bfafa825a8f27c940ab40bd9b9fe
+SHA1 (patch-Makefile.make) = d12827bb28e0f993908d202bfd06497cc3033699
