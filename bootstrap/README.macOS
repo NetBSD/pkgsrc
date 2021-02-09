@@ -1,4 +1,4 @@
-$NetBSD: README.macOS,v 1.1 2020/08/14 07:35:26 schmonz Exp $
+$NetBSD: README.macOS,v 1.2 2021/02/09 12:05:32 cjep Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
@@ -160,7 +160,7 @@ Because Apple drops support for previous hardware faster than the
 hardware fails, many machines cannot be upgraded to recent versions of
 macOS, creating a greater than usual desire to support old systems.
 Because of the particular history of deprecation, most systems tend to
-run relatively recent versions or specific older versions (10.6 and
+run relatively recent versions or specific older versions.
 10.5).
 
 The stance of pkgsrc is generally to avoid breaking older systems
@@ -173,15 +173,21 @@ old systems.
 pkgsrc PRs about 10.5 or older that do not contain fixes may be closed
 without fixing.
 
-macOS 10.14 is either new or current.
+macOS 11 is new & current; hardware before 2013 cannot be upgraded to this
+version. Also this version introduces support for Apple M1 silicon.
 
-macOS 10.13 is current; significant amounts of hardware cannot be
-upgraded beyond this version.
+macOS 10.15 is current and supports the same hardware as 10.14.
 
-macOS 10.12 is current; Joyent has an active bulk build.
+macOS 10.14 is current, but removes support for hardware before 2012
+and Macbooks before 2015.
 
-OS X 10.11 is semi-current; significant amounts of hardware cannot
-be upgraded beyond this version.
+macOS 10.13 is old and no longer supported by Apple; significant 
+amounts of hardware cannot be upgraded beyond this version.
+
+macOS 10.12 is old; Joyent has an active bulk build.
+
+OS X 10.11 is old; significant amounts of hardware cannot be upgraded 
+beyond this version.
 
 OS X 10.10 is old.
 
@@ -221,8 +227,12 @@ Sevan Janiyan <Sevan@NetBSD.org> provides a bulk build for the -current branch
   See
   https://mail-index.netbsd.org/pkgsrc-bulk/2015/11/07/msg012171.html
 
-** 10.12, --abi=64 x86-64, clang
+** 10.14, --abi=64 x86-64, clang
+** 11, --abi=64 x86-64, clang
 
-Joyent provide a bulk build for 10.12/x86_64, and therefore clang, at:
+Joyent provide a bulk build for both 10.14/x86_64 and 11/x86_64:
   http://pkgsrc.joyent.com/install-on-osx/
+
+They hold archives for 64-bit Sierra (10.12), Mavericks (10.9) and Snow
+Leopard (10.6), but these are no longer updated.
 
