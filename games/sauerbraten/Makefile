@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2020/09/30 07:30:22 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/09 22:33:23 nia Exp $
 
-DISTNAME=	sauerbraten_2013_04_04_collect_edition_linux
-PKGNAME=	sauerbraten-2013_04_04
+DISTNAME=	sauerbraten_2020_12_27_linux
+PKGNAME=	sauerbraten-2020_12_27
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sauerbraten/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	http://sauerbraten.org/
 COMMENT=	First-person shooter game based on Cube 2
 LICENSE=	zlib AND cc-by-nc-sa-v3.0-license
@@ -23,11 +23,10 @@ LDFLAGS.NetBSD+=	-lrt
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
 INSTALLATION_DIRS+=	share/applications
-INSTALLATION_DIRS+=	share/icons/hicolor/16x16/apps
-INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
 INSTALLATION_DIRS+=	share/doc/sauerbraten
 INSTALLATION_DIRS+=	share/sauerbraten/data
 INSTALLATION_DIRS+=	share/sauerbraten/packages
+INSTALLATION_DIRS+=	share/pixmaps
 
 pre-configure:
 .for prog in client master server
@@ -45,19 +44,17 @@ do-install:
 .endfor
 	${INSTALL_DATA} ${FILESDIR}/sauerbraten.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/src/xcode/help/sauer16.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/16x16/apps/sauerbraten.png
-	${INSTALL_DATA} ${WRKSRC}/src/xcode/help/sauer32.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/32x32/apps/sauerbraten.png
+	${INSTALL_DATA} ${WRKSRC}/data/cube.png \
+	    ${DESTDIR}${PREFIX}/share/pixmaps/sauerbraten.png
 	cd ${WRKSRC}/docs && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/doc/sauerbraten
 	cd ${WRKSRC}/data && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/sauerbraten/data
 	cd ${WRKSRC}/packages && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/sauerbraten/packages
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
