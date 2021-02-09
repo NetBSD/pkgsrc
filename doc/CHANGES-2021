@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.954 2021/02/09 21:12:45 nia Exp $
+$NetBSD: CHANGES-2021,v 1.955 2021/02/09 22:33:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1181,3 +1181,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/xpdf4 to 4.03 [nia 2021-02-09]
 	Updated games/stone-soup to 0.26.1 [nia 2021-02-09]
 	Updated games/stone-soup-sdl to 0.26.1 [nia 2021-02-09]
+	Updated games/sauerbraten to 2020_12_27 [nia 2021-02-09]
