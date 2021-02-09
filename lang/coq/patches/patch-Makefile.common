@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.common,v 1.6 2020/01/24 15:54:48 jaapb Exp $
+$NetBSD: patch-Makefile.common,v 1.7 2021/02/09 22:37:43 dholland Exp $
 
 Use BSD_INSTALL_*
 
---- Makefile.common.orig	2018-10-31 12:53:51.000000000 +0000
+--- Makefile.common.orig	2020-12-11 08:46:08.000000000 +0000
 +++ Makefile.common
-@@ -83,8 +83,8 @@ DYNOBJ:=.cmo
+@@ -90,8 +90,8 @@ DYNOBJ:=.cmo
  DYNLIB:=.cma
  endif
  

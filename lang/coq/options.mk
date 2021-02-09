@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2020/03/01 05:25:13 dholland Exp $
+# $NetBSD: options.mk,v 1.11 2021/02/09 22:37:43 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	doc coqide
@@ -7,15 +7,24 @@ PKG_SUGGESTED_OPTIONS=	coqide
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdoc)
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 CONFIGURE_ARGS+=		-with-doc yes
 PLIST.doc=			yes
-BUILD_DEPENDS+=			tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+
 BUILD_DEPENDS+=			hevea>=1.10:../../textproc/hevea
-BUILD_DEPENDS+=			tex-moreverb-[0-9]*:../../print/tex-moreverb
-BUILD_DEPENDS+=			tex-preprint-[0-9]*:../../print/tex-preprint
-BUILD_DEPENDS+=			tex-ucs-[0-9]*:../../print/tex-ucs
-BUILD_DEPENDS+=			py[0-9]*-sphinx-[0-9]*:../../textproc/py-sphinx
+
+#
+# python
+#
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
+.include "../../lang/python/tool.mk"
+SUBST_CLASSES+=			sphinx-build
+SUBST_STAGE.sphinx-build=	pre-configure
+SUBST_MESSAGE.sphinx-build=	Fix hardcoded sphinx-build
+SUBST_FILES.sphinx-build+=	Makefile.doc configure.ml doc/dune
+SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
+
 BUILD_DEPENDS+=			py[0-9]*-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 BUILD_DEPENDS+=			py[0-9]*-sphinxcontrib-bibtex-[0-9]*:../../textproc/py-sphinxcontrib-bibtex
 BUILD_DEPENDS+=			py[0-9]*-pybtex-[0-9]*:../../textproc/py-pybtex
@@ -23,7 +32,16 @@ BUILD_DEPENDS+=			py[0-9]*-pybtex-docutils-[0-9]*:../../textproc/py-pybtex-docut
 BUILD_DEPENDS+=			py[0-9]*-pexpect-[0-9]*:../../devel/py-pexpect
 BUILD_DEPENDS+=			py[0-9]*-antlr4-[0-9]*:../../textproc/py-antlr4
 BUILD_DEPENDS+=			py[0-9]*-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+
+#
+# tex
+#
+
 BUILD_DEPENDS+=			latexmk-[0-9]*:../../print/latexmk
+BUILD_DEPENDS+=			tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+BUILD_DEPENDS+=			tex-moreverb-[0-9]*:../../print/tex-moreverb
+BUILD_DEPENDS+=			tex-preprint-[0-9]*:../../print/tex-preprint
+BUILD_DEPENDS+=			tex-ucs-[0-9]*:../../print/tex-ucs
 BUILD_DEPENDS+=			tex-xetex-[0-9]*:../../print/tex-xetex
 BUILD_DEPENDS+=			tex-polyglossia-[0-9]*:../../print/tex-polyglossia
 BUILD_DEPENDS+=			tex-fncychap-[0-9]*:../../print/tex-fncychap
@@ -45,6 +63,7 @@ BUILD_DEPENDS+=			tex-framed-[0-9]*:../../print/tex-framed
 BUILD_DEPENDS+=			tex-float-[0-9]*:../../print/tex-float
 BUILD_DEPENDS+=			tex-wrapfig-[0-9]*:../../print/tex-wrapfig
 BUILD_DEPENDS+=			tex-lm-math-[0-9]*:../../fonts/tex-lm-math
+BUILD_DEPENDS+=			tex-gnu-freefont-[0-9]*:../../fonts/tex-gnu-freefont
 BUILD_DEPENDS+=			dvipsk-[0-9]*:../../print/dvipsk
 .else
 CONFIGURE_ARGS+=		-with-doc no
