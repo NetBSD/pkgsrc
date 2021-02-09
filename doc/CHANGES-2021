@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.941 2021/02/09 08:54:13 adam Exp $
+$NetBSD: CHANGES-2021,v 1.942 2021/02/09 09:03:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1151,3 +1151,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/unbound to 1.13.1 [he 2021-02-09]
 	Updated www/py-httplib2 to 0.19.0 [adam 2021-02-09]
 	Updated net/py-dropbox to 11.1.0 [adam 2021-02-09]
+	Updated devel/py-google-api-core to 1.26.0 [adam 2021-02-09]
+	Updated devel/py-execnet to 1.8.0 [adam 2021-02-09]
