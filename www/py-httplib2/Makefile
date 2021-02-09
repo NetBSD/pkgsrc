@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/05/21 06:19:59 adam Exp $
+# $NetBSD: Makefile,v 1.26 2021/02/09 08:51:03 adam Exp $
 
-DISTNAME=	httplib2-0.18.1
+DISTNAME=	httplib2-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httplib2/}
@@ -9,6 +9,8 @@ MAINTAINER=	mj@mjturner.net
 HOMEPAGE=	https://github.com/httplib2/httplib2
 COMMENT=	Comprehensive http client library for Python
 LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.4.2:../../devel/py-pyparsing
 
 USE_LANGUAGES=	# none
 
