@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2021/02/09 22:37:43 dholland Exp $
+# $NetBSD: Makefile,v 1.138 2021/02/09 22:38:30 dholland Exp $
 #
 
 DISTNAME=	coq-8.12.2
@@ -6,7 +6,7 @@ CATEGORIES=	lang math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coq/}
 GITHUB_TAG=	V${PKGVERSION_NOREV:S/_/+/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	https://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
 LICENSE=	gnu-lgpl-v2.1
