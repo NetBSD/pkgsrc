@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/15 14:02:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/09 06:58:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -48,6 +48,9 @@ ${PYSITELIB}/aniso8601/tests/__init__.pyo
 ${PYSITELIB}/aniso8601/tests/compat.py
 ${PYSITELIB}/aniso8601/tests/compat.pyc
 ${PYSITELIB}/aniso8601/tests/compat.pyo
+${PYSITELIB}/aniso8601/tests/test_compat.py
+${PYSITELIB}/aniso8601/tests/test_compat.pyc
+${PYSITELIB}/aniso8601/tests/test_compat.pyo
 ${PYSITELIB}/aniso8601/tests/test_date.py
 ${PYSITELIB}/aniso8601/tests/test_date.pyc
 ${PYSITELIB}/aniso8601/tests/test_date.pyo
