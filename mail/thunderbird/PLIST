@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2021/01/01 12:58:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.85 2021/02/09 12:34:26 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -688,6 +688,7 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/shared/accountCreation.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/accountManage.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/accountProvisioner.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/addressbook.css
+lib/thunderbird/chrome/classic/skin/classic/messenger/shared/cardDAV.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/cardDialog.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/compacttheme.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/creationDialog.css
@@ -3420,9 +3421,10 @@ lib/thunderbird/chrome/messenger/content/messenger/activity.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/addressbook/abAddressBookNameDialog.js
 lib/thunderbird/chrome/messenger/content/messenger/addressbook/abAddressBookNameDialog.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/addressbook/abCard.js
-lib/thunderbird/chrome/messenger/content/messenger/addressbook/abCardDAVDialog.css
 lib/thunderbird/chrome/messenger/content/messenger/addressbook/abCardDAVDialog.js
 lib/thunderbird/chrome/messenger/content/messenger/addressbook/abCardDAVDialog.xhtml
+lib/thunderbird/chrome/messenger/content/messenger/addressbook/abCardDAVProperties.js
+lib/thunderbird/chrome/messenger/content/messenger/addressbook/abCardDAVProperties.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/addressbook/abCardView.js
 lib/thunderbird/chrome/messenger/content/messenger/addressbook/abCommon.js
 lib/thunderbird/chrome/messenger/content/messenger/addressbook/abContactsPanel.js
@@ -3704,6 +3706,7 @@ lib/thunderbird/chrome/messenger/content/messenger/parent/ext-messageDisplayActi
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-messages.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-pkcs11.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-tabs.js
+lib/thunderbird/chrome/messenger/content/messenger/parent/ext-theme.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-windows.js
 lib/thunderbird/chrome/messenger/content/messenger/phishingDetector.js
 lib/thunderbird/chrome/messenger/content/messenger/policies/aboutPolicies.css
@@ -3785,6 +3788,7 @@ lib/thunderbird/chrome/messenger/content/messenger/schemas/messageDisplayAction.
 lib/thunderbird/chrome/messenger/content/messenger/schemas/messages.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/pkcs11.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/tabs.json
+lib/thunderbird/chrome/messenger/content/messenger/schemas/theme.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/windows.json
 lib/thunderbird/chrome/messenger/content/messenger/searchBar.js
 lib/thunderbird/chrome/messenger/content/messenger/searchTerm.js
@@ -5114,6 +5118,7 @@ lib/thunderbird/localization/en-US/messenger/aboutRights.ftl
 lib/thunderbird/localization/en-US/messenger/aboutSupportMail.ftl
 lib/thunderbird/localization/en-US/messenger/accountCentral.ftl
 lib/thunderbird/localization/en-US/messenger/addressbook/abCardDAVDialog.ftl
+lib/thunderbird/localization/en-US/messenger/addressbook/abCardDAVProperties.ftl
 lib/thunderbird/localization/en-US/messenger/menubar.ftl
 lib/thunderbird/localization/en-US/messenger/messenger.ftl
 lib/thunderbird/localization/en-US/messenger/messengercompose/messengercompose.ftl
