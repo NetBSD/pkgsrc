@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/02/04 09:09:42 fcambus Exp $
+$NetBSD: distinfo,v 1.15 2021/02/09 18:34:07 fcambus Exp $
 
-SHA1 (lowdown-0.8.0.tar.gz) = 08cb4bbe000849350adf1b9f625446167bcacff6
-RMD160 (lowdown-0.8.0.tar.gz) = 8fe662a10b35448ac86b4a3f36e796bfc6eed1c1
-SHA512 (lowdown-0.8.0.tar.gz) = 53d59e1a82274fdbeb6b0c1ae7bb7abbd74475181ee3f3fed302f1990c8e2fd9e1cce114536151cf605ef47d1d0a3604ee9dafdef097218938d0cfa38d42c04f
-Size (lowdown-0.8.0.tar.gz) = 193798 bytes
+SHA1 (lowdown-0.8.1.tar.gz) = de1a68874d56d046ebdf52768f6e364f7d6a0d95
+RMD160 (lowdown-0.8.1.tar.gz) = c988acae5f0147eb7bdbe79c7f1d841c8d6785ec
+SHA512 (lowdown-0.8.1.tar.gz) = 51f472a66de075cd21a7f451c990ff6529bc242b4cc18732f08a6c6117dea7d9e5933cd851f6228b291b282a84f7976d23351d67f2eec10c84322a1d05483e91
+Size (lowdown-0.8.1.tar.gz) = 196068 bytes
