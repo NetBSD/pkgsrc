@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.940 2021/02/09 08:33:05 he Exp $
+$NetBSD: CHANGES-2021,v 1.941 2021/02/09 08:54:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1149,3 +1149,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-digitalocean to 1.16.0 [adam 2021-02-09]
 	Updated devel/py-ZopeSchema to 6.0.1 [adam 2021-02-09]
 	Updated net/unbound to 1.13.1 [he 2021-02-09]
+	Updated www/py-httplib2 to 0.19.0 [adam 2021-02-09]
+	Updated net/py-dropbox to 11.1.0 [adam 2021-02-09]
