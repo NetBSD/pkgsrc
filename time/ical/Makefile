@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.39 2020/08/17 20:20:14 leot Exp $
+# $NetBSD: Makefile,v 1.40 2021/02/10 09:58:56 nia Exp $
 
-DISTNAME=	ical-3.0.3
-PKGREVISION=	1
+DISTNAME=	ical-3.0.4
 CATEGORIES=	time
 MASTER_SITES=	https://launchpad.net/ical-tcl/3.x/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/ical-tcl/
 COMMENT=	Calendar application
+LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/ical-tcl
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
@@ -23,11 +25,12 @@ USE_TOOLS+=	gmake gsed
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION_NOREV}
 
 post-configure:
-	${TOUCH} ${WRKDIR}/${DISTNAME}/Makefile \
-	         ${WRKDIR}/${DISTNAME}/calendar/Makefile \
-	         ${WRKDIR}/${DISTNAME}/time/Makefile
+	${TOUCH} ${WRKSRC}/Makefile \
+	         ${WRKSRC}/calendar/Makefile \
+	         ${WRKSRC}/time/Makefile
 
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
