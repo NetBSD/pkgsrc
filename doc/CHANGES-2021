@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.973 2021/02/10 15:07:16 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.974 2021/02/10 15:27:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1206,3 +1206,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox to 85.0.2 [ryoon 2021-02-10]
 	Updated www/firefox-l10n to 85.0.2 [ryoon 2021-02-10]
 	Added net/nagios-plugin-snmp_environment version 0.7nb1 [wiz 2021-02-10]
+	Added net/nagios-plugin-printer version 0.0.363nb1 [wiz 2021-02-10]
