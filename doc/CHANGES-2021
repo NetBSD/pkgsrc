@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.956 2021/02/09 22:41:00 dholland Exp $
+$NetBSD: CHANGES-2021,v 1.957 2021/02/10 08:26:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1184,3 +1184,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-tabulary version 0.10 [dholland 2021-02-09]
 	Updated lang/coq to 8.12.2 [dholland 2021-02-09]
 	Updated games/sauerbraten to 2020_12_27 [nia 2021-02-09]
+	Updated devel/py-uvloop to 0.15.0 [adam 2021-02-10]
+	Updated textproc/py-elementpath to 2.1.4 [adam 2021-02-10]
+	Updated devel/py-joblib to 1.0.1 [adam 2021-02-10]
+	Updated databases/py-asyncpg to 0.22.0 [adam 2021-02-10]
