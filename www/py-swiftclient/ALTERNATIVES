@@ -1,1 +1,1 @@
-bin/swift @PREFIX@/bin/swift@PYVERSSUFFIX@
+bin/swift @PREFIX@/bin/swift-@PYVERSSUFFIX@
