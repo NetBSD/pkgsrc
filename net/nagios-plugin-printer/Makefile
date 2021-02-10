@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2021/02/10 15:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/10 15:28:07 wiz Exp $
 
 DISTNAME=	check_printer
 REVISION=	363
 PKGREVISION=	1
 PKGNAME=	nagios-plugin-printer-0.0.${REVISION}
-CATEGORIES=	sysutils net
+CATEGORIES=	net sysutils
 # Can this be converted to GITHUB_*?
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bzed/pkg-nagios-plugins-contrib/raw/debian/25.20191015+1/check_printer/}
 EXTRACT_SUFX=	# empty
