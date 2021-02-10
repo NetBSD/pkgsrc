@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.9 2021/02/10 09:00:57 cjep Exp $
+$NetBSD: README.OpenBSD,v 1.10 2021/02/10 14:23:47 cjep Exp $
 
 Please read the general README file as well.
 
@@ -23,5 +23,6 @@ example, to use OpenSSL, you can use:
 Or after a bootstrap, you can add the following line to $prefix/etc/mk.conf:
 	PREFER.openssl=pkgsrc
 
-The bootstrap has been tested on OpenBSD 6.8 (amd64, sparc64). It has also 
-been used successfully on 5.5 (sparc64), 5.6 (amd64, sparc64) and 3.0.
+The bootstrap has been tested on OpenBSD 6.8 (amd64, sparc64, i386). 
+It has also been used successfully on 5.5 (sparc64), 5.6 (amd64, sparc64) 
+and 3.0.
