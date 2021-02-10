@@ -1,7 +1,10 @@
-$NetBSD: patch-ae,v 1.2 2005/12/05 20:50:58 rillig Exp $
+$NetBSD
 
---- src/config.parse.c.orig	1994-07-20 18:03:26.000000000 -0700
-+++ src/config.parse.c
+strcpy used on overlapping strings. Place in a string to avoid this.
+Fixes package on Darwin. 
+
+--- src/config.parse.c.orig	1994-07-21 02:03:26.000000000 +0100
++++ src/config.parse.c	2021-02-09 14:24:32.000000000 +0000
 @@ -55,7 +55,6 @@
  #endif
  
@@ -10,7 +13,15 @@ $NetBSD: patch-ae,v 1.2 2005/12/05 20:50:58 rillig Exp $
  static void configfile_descend();
  
  #ifndef L_tmpnam
-@@ -90,6 +89,7 @@ configfile_read(pp_list, pp_entry_list)
+@@ -83,6 +82,7 @@
+ {
+     FILE 	*fpin, *fpout = (FILE *) NULL;
+     char	filename[MAXPATHLEN+512];
++    char	cpfilename[MAXPATHLEN+512];
+     char	ignorestring[1024];
+     char	s[MAXPATHLEN+1024];
+     char	configfile[MAXPATHLEN+512];
+@@ -90,6 +90,7 @@
      char	number[128];
      int		entrynum = 0;
      int		err;
@@ -18,7 +29,7 @@ $NetBSD: patch-ae,v 1.2 2005/12/05 20:50:58 rillig Exp $
  
      /* to make code semi-reentrant */
      list_reset(&prune_list);
-@@ -105,8 +105,9 @@ configfile_read(pp_list, pp_entry_list)
+@@ -105,8 +106,9 @@
      };
      (void) strcpy(tmpfilename, TEMPFILE_TEMPLATE);
  
@@ -30,7 +41,7 @@ $NetBSD: patch-ae,v 1.2 2005/12/05 20:50:58 rillig Exp $
  	exit(1);
      }
  
-@@ -149,7 +150,7 @@ configfile_read(pp_list, pp_entry_list)
+@@ -149,7 +151,7 @@
  
      err = umask(077);  /* to protect the tempfile */
  
@@ -39,3 +50,33 @@ $NetBSD: patch-ae,v 1.2 2005/12/05 20:50:58 rillig Exp $
  	sprintf(s, "tripwire: Couldn't open config file '%s'", configfile);
  	perror(s);
  	exit(1);
+@@ -221,11 +223,17 @@
+ 	switch (*filename) {
+       	case '!':
+ 	    prune_mode = PRUNE_ALL;
+-	    (void) strcpy(filename, filename+1);	/* adjust name */
++	    /* overlapping strings - undefined behaviour, at least
++	     * on Darwin 
++	     * (void) strcpy(filename, filename+1);	
++	     */
++	    (void) strcpy(cpfilename, filename+1);	/* adjust name */
++	    (void) strcpy(filename, cpfilename);	/* adjust name */
+   	    break;
+         case '=':
+ 	    prune_mode = PRUNE_ONE;
+-	    (void) strcpy(filename, filename+1);	/* adjust name */
++	    (void) strcpy(cpfilename, filename+1);	/* adjust name */
++	    (void) strcpy(filename, cpfilename);	/* adjust name */
+ 	    break;
+         default:
+ 	  continue; /* nothing */
+@@ -295,7 +303,8 @@
+ 
+ 	/* check for leading '=', prune after one recursion */
+ 	else if (*filename == '=') {
+-	    (void) strcpy(filename, filename+1);
++	    (void) strcpy(cpfilename, filename+1);	/* adjust name */
++	    (void) strcpy(filename, cpfilename);	/* adjust name */
+ 	    prunedir++;
+ 	}
+ 
