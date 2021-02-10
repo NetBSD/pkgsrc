@@ -1,0 +1,1 @@
+bin/base58 @PREFIX@/bin/base58-@PYVERSSUFFIX@
