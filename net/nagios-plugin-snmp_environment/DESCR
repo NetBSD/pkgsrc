@@ -16,6 +16,6 @@ extremeSW Extreme Networks: Slot, power-supply, fan, temperature
 juniper	  Juniper Networks: Component status check
 procurve  HP ProCurve: Fan, power-supply, temperature
 netscreen NetScreen: Slot, fan, power-supply
-citrix	  Citrix NetScaler: Fan, voltage, temperture, HA state, SSL engine
+citrix	  Citrix NetScaler: Fan, voltage, temperature, HA state, SSL engine
 transmode Transmode Systems: Check alarm table that is not deactivated and
 	   not acknowledged
