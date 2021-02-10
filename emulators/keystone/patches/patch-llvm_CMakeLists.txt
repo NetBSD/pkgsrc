@@ -1,0 +1,15 @@
+$NetBSD: patch-llvm_CMakeLists.txt,v 1.1 2021/02/10 10:35:13 adam Exp $
+
+On Darwin, use correct install_name.
+
+--- llvm/CMakeLists.txt.orig	2021-02-09 13:03:37.000000000 +0000
++++ llvm/CMakeLists.txt
+@@ -455,8 +455,6 @@ set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${LL
+ 
+ set(CMAKE_BUILD_WITH_INSTALL_RPATH ON)
+ if (APPLE)
+-  set(CMAKE_INSTALL_NAME_DIR "@rpath")
+-  set(CMAKE_INSTALL_RPATH "@executable_path/../lib")
+ else(UNIX)
+   if(NOT DEFINED CMAKE_INSTALL_RPATH)
+     set(CMAKE_INSTALL_RPATH "\$ORIGIN/../lib${LLVM_LIBDIR_SUFFIX}")

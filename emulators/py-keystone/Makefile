@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/02/19 00:52:28 kamil Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/10 10:35:13 adam Exp $
 
 .include "../../emulators/keystone/Makefile.common"
 
@@ -11,8 +11,8 @@ LICENSE=	modified-bsd
 
 PYSETUPSUBDIR=	bindings/python
 
-EGG_NAME=	${DISTNAME:R}
+EGG_NAME=	keystone_engine-${PKGVERSION_NOREV}
 
 .include "../../emulators/keystone/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
