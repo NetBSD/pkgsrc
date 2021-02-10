@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.8 2021/02/10 11:55:22 nia Exp $
+
+Shell portability.
+
+--- configure.orig	2021-01-24 13:41:01.000000000 +0000
++++ configure
+@@ -804,7 +804,7 @@ case $_host_os in
+ 			DEFINES="$DEFINES -DBSPF_UNIX -DMACOS_KEYS"
+ 			MODULES="$MODULES $SRC/unix"
+ 			INCLUDES="$INCLUDES -I$SRC/unix"
+-			if test "$have_clang" == yes; then
++			if test "$have_clang" = yes; then
+ 				CXXFLAGS="$CXXFLAGS -Wno-poison-system-directories"
+ 			fi
+ 			;;
