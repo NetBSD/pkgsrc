@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/02/10 15:26:46 wiz Exp $
+
+SHA1 (check_printer-363/check_printer) = d2b7d0f7ca09d2813aca9d0904f069337bb6fe53
+RMD160 (check_printer-363/check_printer) = 203afd4e7dab9dc76075ee8d75dcd3b50c21637e
+SHA512 (check_printer-363/check_printer) = 6f041eb8fdc24eb37fdeed731faa5f65d12abb6e420fb32eb428249eb40462a1ac31d72523315af4e16f1381d7fce647c2c973f737631aed9afd6de0cbd02ee3
+Size (check_printer-363/check_printer) = 10325 bytes
+SHA1 (patch-aa) = 53e44cdc5f4ad8b7815a7ca6188c0b0b34b237f4
