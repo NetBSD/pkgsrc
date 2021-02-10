@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2021/02/07 20:16:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.50 2021/02/10 20:55:39 schmonz Exp $
 
-DISTNAME=		Test-BDD-Cucumber-0.76
+DISTNAME=		Test-BDD-Cucumber-0.77
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
@@ -19,7 +19,7 @@ DEPENDS+=		p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=		p5-Sub-Quote-[0-9]*:../../devel/p5-Sub-Quote
 DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 DEPENDS+=		p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
-DEPENDS+=		p5-YAML-[0-9]*:../../textproc/p5-YAML
+DEPENDS+=		p5-YAML>=1.15:../../textproc/p5-YAML
 DEPENDS+=		p5-strictures-[0-9]*:../../devel/p5-strictures
 
 #BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
