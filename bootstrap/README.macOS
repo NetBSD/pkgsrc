@@ -1,4 +1,4 @@
-$NetBSD: README.macOS,v 1.3 2021/02/09 12:31:58 cjep Exp $
+$NetBSD: README.macOS,v 1.4 2021/02/10 14:55:36 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
@@ -169,32 +169,31 @@ section is partly to document what versions tend to be used and why,
 and partly to enable cleaning up bug reports without fixes for very
 old systems.
 
-pkgsrc PRs about 10.5 or older that do not contain fixes may be closed
+pkgsrc PRs about 10.12 or older that do not contain fixes may be closed
 without fixing.
 
-macOS 11 is new & current; hardware before 2013 cannot be upgraded to this
-version. Also this version introduces support for Apple M1 silicon.
+macOS 11.0 is the current version; hardware before 2013 cannot be upgraded to
+this version. Also this version introduces support for Apple M1
+processors, using the aarch64 instruction set.
 
-macOS 10.15 is current and supports the same hardware as 10.14.
+macOS 10.15 is maintained and supports the same hardware as 10.14.
 
-macOS 10.14 is current, but removes support for hardware before 2012
-and Macbooks before 2015.
+macOS 10.14 is somewhat old but still maintained.  It cannot be run on
+hardware before 2012 and Macbooks before 2015.
 
-macOS 10.13 is old and no longer supported by Apple; significant 
-amounts of hardware cannot be upgraded beyond this version.
-
-macOS 10.12 is old; Joyent has an active bulk build.
-
-OS X 10.11 is old; significant amounts of hardware cannot be upgraded 
+macOS 10.13 is old; Apple ended support in January of 2021.
+Significant amounts of entirely functional hardware cannot be upgraded
 beyond this version.
 
-OS X 10.10 is old.
+macOS 10.12 is very old.  There is no known reason to run it, as all
+(most?) hardware that runs 10.12 can run 10.13.
 
-OS X 10.9 (Darwin 13.4.0) is old.  (From this point on, this list is
-more of a history lesson than useful for running pkgsrc.)
+OS X 10.11 is very old; some hardware cannot be upgraded beyond this
+version, but most of it is old and slow, dating from approximately
+2010 or earlier.
 
-OS X 10.8 is old, and there are no no known reasons to it instead of a
-newer version.
+OS X 10.10, 10.9 and 10.8 are extremely old; most hardware that can
+run them can probably run 10.11.
 
 OS X 10.7 is the last version that works on a few Intel Macs, e.g. the
 Mac Pro 1.1 and 2.1 and some Mac Minis.
@@ -227,11 +226,10 @@ Sevan Janiyan <Sevan@NetBSD.org> provides a bulk build for the -current branch
   https://mail-index.netbsd.org/pkgsrc-bulk/2015/11/07/msg012171.html
 
 ** 10.14, --abi=64 x86-64, clang
-** 11, --abi=64 x86-64, clang
+** 11.0, --abi=64 x86-64, clang
 
-Joyent provide a bulk build for both 10.14/x86_64 and 11/x86_64:
+Joyent provide a bulk build for both 10.14/x86_64 and 11.0/x86_64:
   http://pkgsrc.joyent.com/install-on-osx/
 
 They hold archives for 64-bit Sierra (10.12), Mavericks (10.9) and Snow
 Leopard (10.6), but these are no longer updated.
-
