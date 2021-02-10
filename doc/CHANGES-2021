@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.960 2021/02/10 10:01:47 nia Exp $
+$NetBSD: CHANGES-2021,v 1.961 2021/02/10 10:15:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1191,3 +1191,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cdk to 5.0.20210109 [nia 2021-02-10]
 	Updated time/ical to 3.0.4 [nia 2021-02-10]
 	Updated graphics/jasper to 2.0.25 [nia 2021-02-10]
+	Updated audio/libebur128 to 1.2.5 [nia 2021-02-10]
