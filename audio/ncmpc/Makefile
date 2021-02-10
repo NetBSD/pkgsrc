@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2020/12/03 13:29:08 nia Exp $
+# $NetBSD: Makefile,v 1.42 2021/02/10 10:51:22 nia Exp $
 
-DISTNAME=	ncmpc-0.42
+DISTNAME=	ncmpc-0.44
 CATEGORIES=	audio
 MASTER_SITES=	https://musicpd.org/download/ncmpc/0/
 EXTRACT_SUFX=	.tar.xz
