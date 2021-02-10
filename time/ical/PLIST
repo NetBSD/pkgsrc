@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/01/09 17:22:14 is Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/10 09:58:56 nia Exp $
 bin/ical
 lib/ical/v${PKGVERSION}/actions.tcl
 lib/ical/v${PKGVERSION}/alarm.tcl
@@ -22,6 +22,7 @@ lib/ical/v${PKGVERSION}/contrib/ical2calendar
 lib/ical/v${PKGVERSION}/contrib/ical2html
 lib/ical/v${PKGVERSION}/contrib/ical2ics
 lib/ical/v${PKGVERSION}/contrib/ical2zsh
+lib/ical/v${PKGVERSION}/contrib/ical_icon.png
 lib/ical/v${PKGVERSION}/contrib/icaladd
 lib/ical/v${PKGVERSION}/contrib/icaladdlines
 lib/ical/v${PKGVERSION}/contrib/icalexpire
@@ -82,3 +83,4 @@ lib/ical/v${PKGVERSION}/tcllib/textwin.tcl
 lib/ical/v${PKGVERSION}/timerange.tcl
 lib/ical/v${PKGVERSION}/trigger.tcl
 man/man1/ical.1
+share/applications/ical.desktop
