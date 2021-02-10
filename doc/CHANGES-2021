@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.957 2021/02/10 08:26:53 adam Exp $
+$NetBSD: CHANGES-2021,v 1.958 2021/02/10 09:49:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1188,3 +1188,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.1.4 [adam 2021-02-10]
 	Updated devel/py-joblib to 1.0.1 [adam 2021-02-10]
 	Updated databases/py-asyncpg to 0.22.0 [adam 2021-02-10]
+	Updated devel/cdk to 5.0.20210109 [nia 2021-02-10]
