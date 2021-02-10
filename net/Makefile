@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1379 2021/02/10 15:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.1380 2021/02/10 15:27:01 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -403,6 +403,7 @@ SUBDIR+=	nagios-plugin-milter
 SUBDIR+=	nagios-plugin-mysql
 SUBDIR+=	nagios-plugin-mysqlslave
 SUBDIR+=	nagios-plugin-pgsql
+SUBDIR+=	nagios-plugin-printer
 SUBDIR+=	nagios-plugin-radius
 SUBDIR+=	nagios-plugin-raidctl
 SUBDIR+=	nagios-plugin-snmp
