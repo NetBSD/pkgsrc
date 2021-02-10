@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/11/24 14:05:22 nia Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/02/10 11:55:22 nia Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -9,10 +9,13 @@ share/doc/stella/README-SDL.txt
 share/doc/stella/Readme.txt
 share/doc/stella/Todo.txt
 share/doc/stella/debugger.html
+share/doc/stella/graphics/Stella_icon.png
+share/doc/stella/graphics/basic_settings.png
 share/doc/stella/graphics/cheat.png
 share/doc/stella/graphics/chucky_cheese.png
 share/doc/stella/graphics/circuit.png
 share/doc/stella/graphics/commandmenu.png
+share/doc/stella/graphics/commandsmenu_r77.png
 share/doc/stella/graphics/console.png
 share/doc/stella/graphics/debugger_audiotab.png
 share/doc/stella/graphics/debugger_bankcomplex.png
@@ -40,6 +43,7 @@ share/doc/stella/graphics/eventmapping_combo.png
 share/doc/stella/graphics/eventmapping_devsports.png
 share/doc/stella/graphics/eventmapping_mouse.png
 share/doc/stella/graphics/eventmapping_remap.png
+share/doc/stella/graphics/highscores.png
 share/doc/stella/graphics/jr_pacman.png
 share/doc/stella/graphics/launcher.png
 share/doc/stella/graphics/launcher_options_snapshots.png
@@ -58,6 +62,7 @@ share/doc/stella/graphics/options_gameinfo_cartridge.png
 share/doc/stella/graphics/options_gameinfo_console.png
 share/doc/stella/graphics/options_gameinfo_controller.png
 share/doc/stella/graphics/options_gameinfo_emulation.png
+share/doc/stella/graphics/options_gameinfo_highscores.png
 share/doc/stella/graphics/options_gameinfo_quadtari.png
 share/doc/stella/graphics/options_misc.png
 share/doc/stella/graphics/options_misc_classic.png
