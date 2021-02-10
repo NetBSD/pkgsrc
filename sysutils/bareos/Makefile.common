@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2021/02/01 09:08:43 kardel Exp $
+# $NetBSD: Makefile.common,v 1.3 2021/02/10 11:27:19 kardel Exp $
 # used by sysutils/bareos-clientonly/Makefile
 
 GITHUB_PROJECT=	bareos
@@ -52,18 +52,7 @@ BUILD_DEFS+=		BAREOS_PIDDIR BAREOS_WORKINGDIR
 # user/group information
 BAREOS_GROUP?=		bareos
 
-BAREOS_SD_USER?=		bareossd
-PKG_GECOS.${BAREOS_SD_USER}=	Bareos Storage User
-PKG_HOME.${BAREOS_SD_USER}=	${BAREOS_WORKINGDIR}
-PKG_SHELL.${BAREOS_SD_USER}=	/bin/sh
-
-BAREOS_DIR_USER?=		bareosdir
-PKG_GECOS.${BAREOS_DIR_USER}=	Bareos Director User
-PKG_HOME.${BAREOS_DIR_USER}=	${BAREOS_WORKINGDIR}
-PKG_SHELL.${BAREOS_DIR_USER}=	/bin/sh
-
 PKG_GROUPS=		${BAREOS_GROUP}
-PKG_USERS=		${BAREOS_DIR_USER}:${BAREOS_GROUP} ${BAREOS_SD_USER}:${BAREOS_GROUP}
 
 CONFIG_TEMPLATE_PATH=	share/examples/${PKG_SYSCONFSUBDIR}/configtemplates
 

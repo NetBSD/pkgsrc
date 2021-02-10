@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/01 09:08:44 kardel Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/10 11:27:19 kardel Exp $
 
 COMMENT=		Backup Archiving REcovery Open Sourced - client
 
@@ -21,11 +21,6 @@ DISTINFO_FILE=		${.CURDIR}/../../sysutils/bareos/distinfo
 .include "../../mk/bsd.pkg.mk"
 
 CONFIG_TEMPLATES!=	${EGREP} "^"${CONFIG_TEMPLATE_PATH:Q} PLIST 2>/dev/null | sed -e 's/ /\\ /g'
-CONF_FILES?=
-
-.for l in ${CONFIG_TEMPLATES}
-CONF_FILES+=	${l} ${PKG_SYSCONFDIR}${l:S/^${CONFIG_TEMPLATE_PATH}//}
-.endfor
 
 BUILD_DEFS+=	VARBASE # to keep pkglint happy
 
