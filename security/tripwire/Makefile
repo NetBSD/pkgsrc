@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2015/07/12 07:22:08 dholland Exp $
+# $NetBSD: Makefile,v 1.37 2021/02/10 13:00:05 cjep Exp $
 #
 
 DISTNAME=	tripwire-1.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
@@ -13,7 +13,7 @@ COMMENT=	File and directory integrity checker
 USE_TOOLS+=	pax lex yacc
 MAKE_JOBS_SAFE=	NO
 
-BROKEN_EXCEPT_ON_PLATFORM=	NetBSD-*-* FreeBSD-*-* SunOS-*-*
+BROKEN_EXCEPT_ON_PLATFORM=	NetBSD-*-* FreeBSD-*-* SunOS-*-* Darwin-*-*
 
 PKG_SYSCONFSUBDIR=	tripwire
 OWN_DIRS=		${PKG_SYSCONFDIR}/databases
