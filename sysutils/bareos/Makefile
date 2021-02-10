@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/02/01 09:08:43 kardel Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/10 11:27:19 kardel Exp $
 
 CONFLICTS=		bareos-clientonly-[0-9]* bacula-clientonly-[0-9]* bacula-[0-9]*
 
@@ -10,6 +10,18 @@ RCD_SCRIPTS=		bareos bareos-dir bareos-sd bareos-fd
 USE_TOOLS+=		perl:run
 # strange: pkglint complains about VARBASE not defined in BUILD_DEFS, but it is defined in Makefile.common
 BUILD_DEFS+=		VARBASE
+
+BAREOS_SD_USER?=		bareossd
+PKG_GECOS.${BAREOS_SD_USER}=	Bareos Storage User
+PKG_HOME.${BAREOS_SD_USER}=	${BAREOS_WORKINGDIR}
+PKG_SHELL.${BAREOS_SD_USER}=	/bin/sh
+
+BAREOS_DIR_USER?=		bareosdir
+PKG_GECOS.${BAREOS_DIR_USER}=	Bareos Director User
+PKG_HOME.${BAREOS_DIR_USER}=	${BAREOS_WORKINGDIR}
+PKG_SHELL.${BAREOS_DIR_USER}=	/bin/sh
+
+PKG_USERS=		${BAREOS_DIR_USER}:${BAREOS_GROUP} ${BAREOS_SD_USER}:${BAREOS_GROUP}
 
 .include "options.mk"
 .include "Makefile.common"
