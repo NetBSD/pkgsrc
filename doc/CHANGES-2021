@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.968 2021/02/10 11:55:56 nia Exp $
+$NetBSD: CHANGES-2021,v 1.969 2021/02/10 12:01:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1201,3 +1201,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/ncmpc to 0.44 [nia 2021-02-10]
 	Updated graphics/scrot to 1.5 [nia 2021-02-10]
 	Updated emulators/stella to 6.5.1 [nia 2021-02-10]
+	Updated emulators/libretro-stella to 6.5.1 [nia 2021-02-10]
