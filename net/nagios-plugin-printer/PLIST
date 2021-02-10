@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/10 15:26:46 wiz Exp $
+${PLUGINDIR}/check_printer

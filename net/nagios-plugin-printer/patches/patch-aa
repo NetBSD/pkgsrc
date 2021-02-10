@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2021/02/10 15:26:46 wiz Exp $
+
+Replace 'use lib' logic by something that can be SUBST'd
+Make snmpwalk paths absolute
+
+--- check_printer.orig	2016-10-12 15:53:09.000000000 +0200
++++ check_printer	2016-10-12 16:00:37.000000000 +0200
+@@ -33,12 +33,7 @@
+ use strict;
+ use warnings;
+ 
+-my $OS = `uname`;
+-if ($OS =~ m/^\wBSD/){
+-	use lib "/usr/local/libexec/nagios";
+-} elsif ($OS =~ m/Linux/){
+-	use lib "/usr/local/nagios/libexec";
+-}
++use lib "@LIBDIR@";
+ 
+ use Data::Dumper;
+ use Getopt::Long;
+@@ -80,10 +75,10 @@
+ 
+ my $comm = $ARGV[1];
+ 
+-my @vars = ("snmpwalk -On -v 1 -c $community $host $base_oid.$name_oid",
+-	   "snmpwalk -On -v 1 -c $community $host $base_oid.$uom_oid",
+-	   "snmpwalk -On -v 1 -c $community $host $base_oid.$max_oid",
+-	   "snmpwalk -On -v 1 -c $community $host $base_oid.$curr_oid");
++my @vars = ("@PREFIX@/bin/snmpwalk -On -v 1 -c $community $host $base_oid.$name_oid",
++	   "@PREFIX@/bin/snmpwalk -On -v 1 -c $community $host $base_oid.$uom_oid",
++	   "@PREFIX@/bin/snmpwalk -On -v 1 -c $community $host $base_oid.$max_oid",
++	   "@PREFIX@/bin/snmpwalk -On -v 1 -c $community $host $base_oid.$curr_oid");
+ 
+ my(@values, @names, @max, @min);
+ 
