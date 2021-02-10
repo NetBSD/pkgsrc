@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.962 2021/02/10 10:20:22 nia Exp $
+$NetBSD: CHANGES-2021,v 1.963 2021/02/10 10:35:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1193,3 +1193,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/jasper to 2.0.25 [nia 2021-02-10]
 	Updated audio/libebur128 to 1.2.5 [nia 2021-02-10]
 	Updated security/lua-sec to 1.0 [nia 2021-02-10]
+	Updated emulators/keystone to 0.9.2 [adam 2021-02-10]
+	Updated emulators/py-keystone to 0.9.2 [adam 2021-02-10]
