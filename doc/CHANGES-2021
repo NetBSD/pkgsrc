@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.964 2021/02/10 10:36:43 nia Exp $
+$NetBSD: CHANGES-2021,v 1.965 2021/02/10 10:51:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1196,3 +1196,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/keystone to 0.9.2 [adam 2021-02-10]
 	Updated emulators/py-keystone to 0.9.2 [adam 2021-02-10]
 	Updated audio/ncmpcpp to 0.9.2 [nia 2021-02-10]
+	Added converters/py-base58 version 2.1.0 [adam 2021-02-10]
+	Updated www/py-swiftclient to 3.11.0 [adam 2021-02-10]
