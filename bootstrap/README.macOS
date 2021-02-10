@@ -1,4 +1,4 @@
-$NetBSD: README.macOS,v 1.4 2021/02/10 14:55:36 gdt Exp $
+$NetBSD: README.macOS,v 1.5 2021/02/10 17:30:20 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
@@ -172,9 +172,10 @@ old systems.
 pkgsrc PRs about 10.12 or older that do not contain fixes may be closed
 without fixing.
 
-macOS 11.0 is the current version; hardware before 2013 cannot be upgraded to
-this version. Also this version introduces support for Apple M1
-processors, using the aarch64 instruction set.
+macOS 11 (major versions are now just digits) is the current version;
+hardware before 2013 cannot be upgraded to this version. Also this
+version introduces support for Apple M1 processors, using the aarch64
+instruction set.
 
 macOS 10.15 is maintained and supports the same hardware as 10.14.
 
@@ -226,9 +227,9 @@ Sevan Janiyan <Sevan@NetBSD.org> provides a bulk build for the -current branch
   https://mail-index.netbsd.org/pkgsrc-bulk/2015/11/07/msg012171.html
 
 ** 10.14, --abi=64 x86-64, clang
-** 11.0, --abi=64 x86-64, clang
+** 11, --abi=64 x86-64, clang
 
-Joyent provide a bulk build for both 10.14/x86_64 and 11.0/x86_64:
+Joyent provide a bulk build for both 10.14/x86_64 and 11/x86_64:
   http://pkgsrc.joyent.com/install-on-osx/
 
 They hold archives for 64-bit Sierra (10.12), Mavericks (10.9) and Snow
