@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/10 10:41:36 adam Exp $
+
+SHA1 (base58-2.1.0.tar.gz) = f01a2e47a99bf36ca923ee5228791e8c454451fb
+RMD160 (base58-2.1.0.tar.gz) = 4f994206f68e1c0cd897f17a221b7a1c92871431
+SHA512 (base58-2.1.0.tar.gz) = 1912d01eed30d923fecef72f643f1a1e9954c80505805ef5d673e361eb8ee73d5cbb7cdb48599cfa3b28969b79fb4fd9994aea21dc7a9779a1bb21d729dc058c
+Size (base58-2.1.0.tar.gz) = 6351 bytes
