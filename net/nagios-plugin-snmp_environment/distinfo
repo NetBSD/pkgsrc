@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/02/10 15:06:04 wiz Exp $
+
+SHA1 (check_snmp_environment-0.7/check_snmp_environment.pl) = b73ce7ea9b4170aa3aba74571ca1745d1c385936
+RMD160 (check_snmp_environment-0.7/check_snmp_environment.pl) = 256eedb5c6241cdfe1d579a24665815a58f5081d
+SHA512 (check_snmp_environment-0.7/check_snmp_environment.pl) = dbb128a5820c15d27076094d39c04ca52ec527beb44289a8261833d7cbe7ee2079f70cbff9210e3043f3e0df05c7b142c9fc0be2b46eee468bfc327953b0079a
+Size (check_snmp_environment-0.7/check_snmp_environment.pl) = 97676 bytes
+SHA1 (patch-aa) = 880a70b25a6b3c6e9b39c108d8261d4f4de7d1c5
