@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.17 2019/10/06 14:44:35 jakllsch Exp $
+# $NetBSD: Makefile,v 1.18 2021/02/10 12:12:39 nia Exp $
 
-DISTNAME=	xbomb-2.2
-PKGREVISION=	1
+DISTNAME=	xbomb-2.2b
 CATEGORIES=	games x11
-MASTER_SITES=	http://www.gedanken.demon.co.uk/download-xbomb/
+MASTER_SITES=	https://www.gedanken.org.uk/software/xbomb/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.gedanken.demon.co.uk/xbomb/
+HOMEPAGE=	https://www.gedanken.org.uk/software/xbomb/
 COMMENT=	Square, hexagonal, and triangual minesweeper clone
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 BUILD_TARGET=		xbomb
 MAKE_ENV+=		SCORE_PATH=${SCORE_PATH:Q}
 INSTALL_MAKE_FLAGS+=	INSTDIR=${DESTDIR}${PREFIX}
+
+OWN_DIRS_PERMS+=	${VARBASE}/games/xbomb \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 
 SETGIDGAME=	yes
 SCORE_PATH=	${VARBASE}/games/xbomb
