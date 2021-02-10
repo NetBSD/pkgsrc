@@ -1,23 +1,16 @@
-# $NetBSD: Makefile,v 1.40 2020/11/25 13:48:41 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2021/02/10 11:23:13 nia Exp $
 
-DISTNAME=	scrot-1.4
+DISTNAME=	scrot-1.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=resurrecting-open-source-projects/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/resurrecting-open-source-projects/scrot
-COMMENT=	Commandline screen capture util like "import", but using imlib2
+COMMENT=	Command line screen capture util like "import", but using imlib2
 LICENSE=	mit
 
-TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
-
-USE_TOOLS+=	autoreconf automake m4
-
 GNU_CONFIGURE=	yes
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -i
 
 .include "../../devel/giblib/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
