@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2019/10/06 14:41:07 jakllsch Exp $
+$NetBSD: distinfo,v 1.7 2021/02/10 12:12:39 nia Exp $
 
-SHA1 (xbomb-2.2.tgz) = 065d9283c92ff0dca844b637f237a381b1ad72c0
-RMD160 (xbomb-2.2.tgz) = 51a212d8cbe62d765e75751ae7b3d341ce6a3ada
-SHA512 (xbomb-2.2.tgz) = fd3c77c4c5e13a880a95cd2e478ea0778ef1a3c68416ecce17e57354822f11c5493e67f6d144deb40bf6402801aa64bc3347d1a72b926d3cb7b8251fc952877b
-Size (xbomb-2.2.tgz) = 24872 bytes
+SHA1 (xbomb-2.2b.tgz) = 1aae92bbc686b4fa4b8940289fb5beced0e535d8
+RMD160 (xbomb-2.2b.tgz) = 7ba64ecd6ccefd4734567503e071dfc7f60bf005
+SHA512 (xbomb-2.2b.tgz) = 7315cc08bff1ef14cc376ea3ad4913c4286e2e33e92ca1d924e4703fba2f58e5aa9df0db760cd0d9a83f2f1730cc65281403f5b198f32a30d0c5e736add8c2e1
+Size (xbomb-2.2b.tgz) = 24774 bytes
 SHA1 (patch-aa) = e25b71c414b67d8d7d588cabbd8da7e667678835
 SHA1 (patch-ab) = 94ba453322e35eb07a81f223e36563dceac04bdc
-SHA1 (patch-xwindow.c) = e0e216c48214c1b976f8d18359ef97e4f9438f71
+SHA1 (patch-xwindow.c) = 33bc57b4ecde2dd7f629d701bf07e7602b72e386
