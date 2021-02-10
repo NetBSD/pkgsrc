@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.965 2021/02/10 10:51:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.966 2021/02/10 10:51:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1198,3 +1198,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/ncmpcpp to 0.9.2 [nia 2021-02-10]
 	Added converters/py-base58 version 2.1.0 [adam 2021-02-10]
 	Updated www/py-swiftclient to 3.11.0 [adam 2021-02-10]
+	Updated audio/ncmpc to 0.44 [nia 2021-02-10]
