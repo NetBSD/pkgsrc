@@ -1,0 +1,21 @@
+Nagios plugin to check various hardware environmental sensors, like power
+supply's, fans, cards, modules etc. Cisco, Nokia, BlueCoat, IronPort, Foundry,
+Linux, Extreme, Juniper, HP ProCurve, NetScreen, Citrix and Transmode.
+
+Supported Checks:
+cisco	  Cisco Systems: Fan, power-supply, voltage, temperature
+ciscoSW	  Cisco Systems: Card and module status check
+ciscoNEW  Cisco Systems: Sensor check for devices that have the
+	   CISCO-ENTITY-SENSOR-MIB
+nokia	  Nokia IP: Fan, power-supply
+bc	  Blue Coat Systems: Fan, power-supply, voltage, disk
+iron	  IronPort: Fan, power-supply, temperature
+foundry	  Foundry Network: power supply, temperature
+linux	  lm-sensors: Fan, voltage, temperature, misc
+extremeSW Extreme Networks: Slot, power-supply, fan, temperature
+juniper	  Juniper Networks: Component status check
+procurve  HP ProCurve: Fan, power-supply, temperature
+netscreen NetScreen: Slot, fan, power-supply
+citrix	  Citrix NetScaler: Fan, voltage, temperture, HA state, SSL engine
+transmode Transmode Systems: Check alarm table that is not deactivated and
+	   not acknowledged
