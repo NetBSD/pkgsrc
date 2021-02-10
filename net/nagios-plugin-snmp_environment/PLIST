@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/10 15:06:04 wiz Exp $
+${PLUGINDIR}/check_snmp_environment
