@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/18 16:52:03 fox Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/10 11:23:13 nia Exp $
 bin/scrot
 man/man1/scrot.1
+share/doc/scrot/AUTHORS
+share/doc/scrot/ChangeLog
+share/doc/scrot/README.md
+share/doc/scrot/scrot.png
