@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1010 2021/02/11 19:56:47 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1011 2021/02/11 20:45:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1267,3 +1267,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/goffice0.10 to 0.10.48 [nia 2021-02-11]
 	Updated math/gnumeric112 to 1.12.48 [nia 2021-02-11]
 	Added net/kdsoap version 1.9.1 [markd 2021-02-11]
+	Added devel/kio-extras version 20.04.1 [markd 2021-02-11]
