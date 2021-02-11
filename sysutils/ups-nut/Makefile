@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2020/08/31 18:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2021/02/11 10:05:13 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 COMMENT=		Network UPS Tools
 
 # Don't regenerate any files in tools/.
