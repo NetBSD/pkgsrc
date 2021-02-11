@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.993 2021/02/11 10:45:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.994 2021/02/11 11:11:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1227,3 +1227,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ups-nut to 2.7.4nb3 [wiz 2021-02-11]
 	Updated sysutils/duplicity to 0.8.18 [adam 2021-02-11]
 	Updated devel/py-gitpython to 3.1.13 [adam 2021-02-11]
+	Added geography/echomap version 0.6.0 [pin 2021-02-11]
