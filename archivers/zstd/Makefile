@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/01/05 07:38:22 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2021/02/11 09:29:50 nia Exp $
 
 DISTNAME=	zstd-1.4.8
 CATEGORIES=	archivers
@@ -24,7 +24,12 @@ MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "Linux"
+# see HASH in lib/Makefile
+.if ${OPSYS} == "NetBSD"
+MAKE_ENV+=		HASH=md5
+.elif ${OPSYS} != "Linux" && \
+    ${OPSYS} != "Darwin" && \
+    ${OPSYS} != "OpenBSD"
 TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
 MAKE_ENV+=		HASH=gmd5sum
 .endif
