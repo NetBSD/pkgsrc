@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.997 2021/02/11 12:47:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.998 2021/02/11 13:15:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1232,3 +1232,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/adns to 1.6.0 [nia 2021-02-11]
 	Updated devel/py-prompt_toolkit2 to 3.0.15 [adam 2021-02-11]
 	Updated devel/py-ipython to 7.20.0 [adam 2021-02-11]
+	Updated x11/alacritty to 0.7.1 [pin 2021-02-11]
