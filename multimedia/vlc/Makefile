@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.246 2021/02/07 06:30:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.247 2021/02/11 14:50:38 ryoon Exp $
 
 DISTNAME=		vlc-3.0.12
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		multimedia
 MASTER_SITES=		https://download.videolan.org/pub/videolan/vlc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tar.xz
@@ -41,7 +41,6 @@ CONFIGURE_ARGS+=	--disable-aribsub
 CONFIGURE_ARGS+=	--disable-aribb25
 CONFIGURE_ARGS+=	--disable-caca
 CONFIGURE_ARGS+=	--disable-chromaprint
-CONFIGURE_ARGS+=	--disable-chromecast
 CONFIGURE_ARGS+=	--disable-dav1d
 CONFIGURE_ARGS+=	--disable-dc1394
 CONFIGURE_ARGS+=	--disable-dv1394
@@ -57,7 +56,6 @@ CONFIGURE_ARGS+=	--disable-libmpeg2
 CONFIGURE_ARGS+=	--disable-live555
 CONFIGURE_ARGS+=	--disable-mad
 CONFIGURE_ARGS+=	--disable-mfx
-CONFIGURE_ARGS+=	--disable-microdns
 CONFIGURE_ARGS+=	--disable-mmal
 CONFIGURE_ARGS+=	--disable-ncurses
 CONFIGURE_ARGS+=	--disable-nfs
@@ -200,6 +198,7 @@ pre-configure:
 .include "../../devel/libebml/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
@@ -221,6 +220,7 @@ pre-configure:
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/schroedinger/buildlink3.mk"
+.include "../../net/libmicrodns/buildlink3.mk"
 .include "../../net/libupnp/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
