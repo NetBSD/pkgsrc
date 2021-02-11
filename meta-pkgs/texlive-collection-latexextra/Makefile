@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2020/12/03 19:32:25 markd Exp $
+# $NetBSD: Makefile,v 1.56 2021/02/11 22:10:54 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2020pre5
+PKGNAME=	texlive-${DISTNAME}-2020pre6
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	55060
@@ -1144,7 +1144,7 @@ DEPENDS+=	tex-tabu-[0-9]*:../../print/tex-tabu
 # depend tabularborder
 # depend tabularcalc
 # depend tabularew
-# depend tabulary
+DEPENDS+=	tex-tabulary-[0-9]*:../../print/tex-tabulary
 # depend tagging
 # depend tagpair
 # depend tagpdf
