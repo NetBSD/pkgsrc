@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.983 2021/02/11 01:12:06 wen Exp $
+$NetBSD: CHANGES-2021,v 1.984 2021/02/11 02:20:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1216,3 +1216,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Class-C3 to 0.35 [wen 2021-02-11]
 	Updated devel/p5-Class-Singleton to 1.6 [wen 2021-02-11]
 	Updated www/p5-WWW-Mechanize to 2.03 [wen 2021-02-11]
+	Updated comms/asterisk16 to 16.16.0 [ryoon 2021-02-11]
