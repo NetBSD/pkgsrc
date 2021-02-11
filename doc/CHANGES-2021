@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.976 2021/02/11 00:05:30 wen Exp $
+$NetBSD: CHANGES-2021,v 1.977 2021/02/11 00:16:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1209,3 +1209,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/nagios-plugin-printer version 0.0.363nb1 [wiz 2021-02-10]
 	Updated devel/p5-Test-BDD-Cucumber to 0.77 [schmonz 2021-02-10]
 	Updated databases/p5-DBD-CSV to 0.58 [wen 2021-02-11]
+	Updated databases/p5-SQL-Abstract to 2.000001 [wen 2021-02-11]
