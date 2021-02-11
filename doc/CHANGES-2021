@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.979 2021/02/11 00:32:49 wen Exp $
+$NetBSD: CHANGES-2021,v 1.980 2021/02/11 00:35:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/p5-SQL-Abstract to 2.000001 [wen 2021-02-11]
 	Updated databases/p5-SQL-Statement to 1.414 [wen 2021-02-11]
 	Updated devel/p5-Algorithm-C3 to 0.11 [wen 2021-02-11]
+	Updated devel/p5-Algorithm-CheckDigits to 1.3.5 [wen 2021-02-11]
