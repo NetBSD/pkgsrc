@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/02/11 21:38:08 markd Exp $
+
+dont build dolphin
+
+--- CMakeLists.txt.orig	2015-12-08 07:04:21.000000000 +0000
++++ CMakeLists.txt
+@@ -37,7 +37,7 @@ if ( KActivities_FOUND )
+ endif ( KActivities_FOUND )
+ 
+ add_subdirectory( lib )
+-add_subdirectory( dolphin )
++#add_subdirectory( dolphin )
+ add_subdirectory( kdialog )
+ add_subdirectory( keditbookmarks )
+ add_subdirectory( konqueror )
