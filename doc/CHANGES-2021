@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.990 2021/02/11 09:03:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.991 2021/02/11 09:27:03 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1223,3 +1223,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/retext to 7.2.0 [gutteridge 2021-02-11]
 	Updated audio/musescore to 3.6.2 [gutteridge 2021-02-11]
 	Updated x11/xterm to 366 [wiz 2021-02-11]
+	Updated devel/binutils to 2.36.1 [fcambus 2021-02-11]
