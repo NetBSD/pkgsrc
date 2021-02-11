@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1000 2021/02/11 13:53:00 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1001 2021/02/11 13:55:05 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1235,3 +1235,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/alacritty to 0.7.1 [pin 2021-02-11]
 	Updated www/webkit-gtk to 2.30.5 [leot 2021-02-11]
 	Updated geography/geos to 3.9.1 [gdt 2021-02-11]
+	Added databases/mysqld_exporter version 0.12.1 [jperkin 2021-02-11]
