@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2021/01/28 21:22:04 maya Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/11 09:56:15 adam Exp $
 
 DISTNAME=	klein-20.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://files.pythonhosted.org/packages/83/b4/3642700d37b513ef1574e18f89aa545a9dca8986ab5d137e743623e24797/
+MASTER_SITES=	${MASTER_SITE_PYPI:=k/klein/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://klein.readthedocs.io/en/latest/
