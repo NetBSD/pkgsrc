@@ -1,0 +1,1 @@
+bin/cutadapt @PREFIX@/bin/cutadapt-@PYVERSSUFFIX@
