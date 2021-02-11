@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1006 2021/02/11 15:07:18 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1007 2021/02/11 15:15:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1263,3 +1263,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/libmicrodns version 0.2.0 [ryoon 2021-02-11]
 	Updated multimedia/vlc to 3.0.12nb2 [ryoon 2021-02-11]
 	Updated fonts/comic-neue to 2.51 [nia 2021-02-11]
+	Updated graphics/gexiv2 to 0.12.1 [nia 2021-02-11]
