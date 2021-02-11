@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.989 2021/02/11 06:55:18 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.990 2021/02/11 09:03:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1222,3 +1222,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-markups to 3.1.0 [gutteridge 2021-02-11]
 	Updated editors/retext to 7.2.0 [gutteridge 2021-02-11]
 	Updated audio/musescore to 3.6.2 [gutteridge 2021-02-11]
+	Updated x11/xterm to 366 [wiz 2021-02-11]
