@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.995 2021/02/11 11:17:51 pin Exp $
+$NetBSD: CHANGES-2021,v 1.996 2021/02/11 11:26:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1229,3 +1229,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-gitpython to 3.1.13 [adam 2021-02-11]
 	Added geography/echomap version 0.6.0 [pin 2021-02-11]
 	Added www/ddgr version 1.9 [pin 2021-02-11]
+	Updated net/adns to 1.6.0 [nia 2021-02-11]
