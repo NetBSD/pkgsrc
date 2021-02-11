@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2021/01/29 10:25:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.70 2021/02/11 14:50:38 ryoon Exp $
 @pkgdir share/vlc/http/dialogs
 @pkgdir share/vlc/http/images
 @pkgdir share/vlc/http/js
@@ -295,6 +295,7 @@ lib/vlc/plugins/demux/libavformat_plugin.la
 lib/vlc/plugins/demux/libavi_plugin.la
 lib/vlc/plugins/demux/libcaf_plugin.la
 lib/vlc/plugins/demux/libdemux_cdg_plugin.la
+lib/vlc/plugins/demux/libdemux_chromecast_plugin.la
 lib/vlc/plugins/demux/libdemux_stl_plugin.la
 lib/vlc/plugins/demux/libdemuxdump_plugin.la
 lib/vlc/plugins/demux/libdiracsys_plugin.la
@@ -378,6 +379,7 @@ lib/vlc/plugins/packetizer/libpacketizer_mpegvideo_plugin.la
 lib/vlc/plugins/packetizer/libpacketizer_vc1_plugin.la
 lib/vlc/plugins/plugins.dat
 lib/vlc/plugins/services_discovery/libmediadirs_plugin.la
+lib/vlc/plugins/services_discovery/libmicrodns_plugin.la
 lib/vlc/plugins/services_discovery/libmtp_plugin.la
 lib/vlc/plugins/services_discovery/libpodcast_plugin.la
 ${PLIST.pulseaudio}lib/vlc/plugins/services_discovery/libpulselist_plugin.la
@@ -403,6 +405,7 @@ lib/vlc/plugins/stream_filter/librecord_plugin.la
 lib/vlc/plugins/stream_filter/libskiptags_plugin.la
 lib/vlc/plugins/stream_out/libstream_out_autodel_plugin.la
 lib/vlc/plugins/stream_out/libstream_out_bridge_plugin.la
+lib/vlc/plugins/stream_out/libstream_out_chromecast_plugin.la
 lib/vlc/plugins/stream_out/libstream_out_cycle_plugin.la
 lib/vlc/plugins/stream_out/libstream_out_delay_plugin.la
 lib/vlc/plugins/stream_out/libstream_out_description_plugin.la
