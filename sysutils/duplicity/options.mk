@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2018/01/26 14:53:05 triaxx Exp $
+# $NetBSD: options.mk,v 1.5 2021/02/11 10:40:35 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.duplicity
 PKG_SUPPORTED_OPTIONS=	gnupg2
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	gnupg2
 
 .include "../../mk/bsd.options.mk"
 
