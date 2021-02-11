@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2020/12/15 17:59:00 leot Exp $
+@comment $NetBSD: PLIST,v 1.68 2021/02/11 13:38:44 leot Exp $
 bin/WebKitWebDriver
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
@@ -218,16 +218,17 @@ ${PLIST.introspection}lib/girepository-1.0/WebKit2-4.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.17.12
+lib/libjavascriptcoregtk-4.0.so.18.17.13
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.49.8
+lib/libwebkit2gtk-4.0.so.37.49.9
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
 lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
 libexec/webkit2gtk-4.0/MiniBrowser
 libexec/webkit2gtk-4.0/WebKitNetworkProcess
+libexec/webkit2gtk-4.0/WebKitPluginProcess
 libexec/webkit2gtk-4.0/WebKitWebProcess
 libexec/webkit2gtk-4.0/jsc
 ${PLIST.introspection}share/gir-1.0/JavaScriptCore-4.0.gir
