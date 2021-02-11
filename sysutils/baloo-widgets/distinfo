@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/02/11 20:57:44 markd Exp $
 
-SHA1 (baloo-widgets-4.14.3.tar.xz) = f710e430879cbee44bda393f0feca53ec1b4ab3a
-RMD160 (baloo-widgets-4.14.3.tar.xz) = 3fb0dbae5e44a437a3be354008ba94e43e44ae4f
-SHA512 (baloo-widgets-4.14.3.tar.xz) = 0b1f96cea0bef461323777868f3817f0d4bccf6bd0ea0b266861fa4bc4b60f33eae23743900fef8348a1e0989ce4f6bb2811d3593e66842adee299c00eeda56a
-Size (baloo-widgets-4.14.3.tar.xz) = 37212 bytes
+SHA1 (baloo-widgets-20.04.1.tar.xz) = e8518300172357f89a853062e9cc4de137c45aaa
+RMD160 (baloo-widgets-20.04.1.tar.xz) = 57b6d4d8b0c802040c76307ba68e6e8b17cb448c
+SHA512 (baloo-widgets-20.04.1.tar.xz) = f38671acb7e892af0b6d4136e98d6bdb8f42cda937c8dc04de284fd892998c0201b3d48b7d6b313f9dbd214999ec8203fa64e138fb709e81cc8c6877635d93cf
+Size (baloo-widgets-20.04.1.tar.xz) = 261524 bytes
