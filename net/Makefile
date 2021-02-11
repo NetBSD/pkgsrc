@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1381 2021/02/11 14:44:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.1382 2021/02/11 19:55:22 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -288,6 +288,7 @@ SUBDIR+=	jwhois
 SUBDIR+=	kdenetwork-filesharing
 SUBDIR+=	kdenetwork-strigi-analyzers
 SUBDIR+=	kdnssd
+SUBDIR+=	kdsoap
 SUBDIR+=	kget
 SUBDIR+=	kismet
 SUBDIR+=	kmldonkey
