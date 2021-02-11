@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.105 2021/01/24 12:30:09 leot Exp $
+@comment $NetBSD: PLIST,v 1.106 2021/02/11 21:07:13 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -2165,9 +2165,6 @@ ${PYSITELIB}/youtube_dl/extractor/vidlii.pyo
 ${PYSITELIB}/youtube_dl/extractor/vidme.py
 ${PYSITELIB}/youtube_dl/extractor/vidme.pyc
 ${PYSITELIB}/youtube_dl/extractor/vidme.pyo
-${PYSITELIB}/youtube_dl/extractor/vidzi.py
-${PYSITELIB}/youtube_dl/extractor/vidzi.pyc
-${PYSITELIB}/youtube_dl/extractor/vidzi.pyo
 ${PYSITELIB}/youtube_dl/extractor/vier.py
 ${PYSITELIB}/youtube_dl/extractor/vier.pyc
 ${PYSITELIB}/youtube_dl/extractor/vier.pyo
@@ -2231,6 +2228,9 @@ ${PYSITELIB}/youtube_dl/extractor/vrv.pyo
 ${PYSITELIB}/youtube_dl/extractor/vshare.py
 ${PYSITELIB}/youtube_dl/extractor/vshare.pyc
 ${PYSITELIB}/youtube_dl/extractor/vshare.pyo
+${PYSITELIB}/youtube_dl/extractor/vtm.py
+${PYSITELIB}/youtube_dl/extractor/vtm.pyc
+${PYSITELIB}/youtube_dl/extractor/vtm.pyo
 ${PYSITELIB}/youtube_dl/extractor/vube.py
 ${PYSITELIB}/youtube_dl/extractor/vube.pyc
 ${PYSITELIB}/youtube_dl/extractor/vube.pyo
