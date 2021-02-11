@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/02/11 10:15:51 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2021/02/11 10:36:22 nia Exp $
 
 DISTNAME=	zstd-1.4.8
 CATEGORIES=	archivers
@@ -26,6 +26,7 @@ MAKE_JOBS_SAFE=		no
 
 # see HASH in lib/Makefile
 .if ${OPSYS} == "NetBSD"
+# https://github.com/facebook/zstd/pull/2492
 MAKE_ENV+=		HASH="md5 -n"
 .elif ${OPSYS} != "Linux" && \
     ${OPSYS} != "Darwin" && \
