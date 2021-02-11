@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.998 2021/02/11 13:15:43 pin Exp $
+$NetBSD: CHANGES-2021,v 1.999 2021/02/11 13:38:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1233,3 +1233,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-prompt_toolkit2 to 3.0.15 [adam 2021-02-11]
 	Updated devel/py-ipython to 7.20.0 [adam 2021-02-11]
 	Updated x11/alacritty to 0.7.1 [pin 2021-02-11]
+	Updated www/webkit-gtk to 2.30.5 [leot 2021-02-11]
