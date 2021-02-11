@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1001 2021/02/11 13:55:05 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.1002 2021/02/11 14:27:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1236,3 +1236,14 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/webkit-gtk to 2.30.5 [leot 2021-02-11]
 	Updated geography/geos to 3.9.1 [gdt 2021-02-11]
 	Added databases/mysqld_exporter version 0.12.1 [jperkin 2021-02-11]
+	Updated devel/ruby-activesupport52 to 5.2.4.5 [taca 2021-02-11]
+	Updated devel/ruby-activemodel52 to 5.2.4.5 [taca 2021-02-11]
+	Updated devel/ruby-activejob52 to 5.2.4.5 [taca 2021-02-11]
+	Updated www/ruby-actionview52 to 5.2.4.5 [taca 2021-02-11]
+	Updated www/ruby-actionpack52 to 5.2.4.5 [taca 2021-02-11]
+	Updated www/ruby-actioncable52 to 5.2.4.5 [taca 2021-02-11]
+	Updated databases/ruby-activerecord52 to 5.2.4.5 [taca 2021-02-11]
+	Updated devel/ruby-activestorage52 to 5.2.4.5 [taca 2021-02-11]
+	Updated mail/ruby-actionmailer52 to 5.2.4.5 [taca 2021-02-11]
+	Updated devel/ruby-railties52 to 5.2.4.5 [taca 2021-02-11]
+	Updated www/ruby-rails52 to 5.2.4.5 [taca 2021-02-11]
