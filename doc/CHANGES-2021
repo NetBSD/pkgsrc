@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.977 2021/02/11 00:16:34 wen Exp $
+$NetBSD: CHANGES-2021,v 1.978 2021/02/11 00:27:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1210,3 +1210,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Test-BDD-Cucumber to 0.77 [schmonz 2021-02-10]
 	Updated databases/p5-DBD-CSV to 0.58 [wen 2021-02-11]
 	Updated databases/p5-SQL-Abstract to 2.000001 [wen 2021-02-11]
+	Updated databases/p5-SQL-Statement to 1.414 [wen 2021-02-11]
