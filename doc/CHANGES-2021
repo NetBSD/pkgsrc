@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1014 2021/02/11 22:02:29 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1015 2021/02/11 22:31:36 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1273,3 +1273,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/dolphin version 20.04.1 [markd 2021-02-11]
 	Updated devel/dolphin-extras to 20.04.1 [markd 2021-02-11]
 	Updated net/rclone to 1.54.0 [leot 2021-02-11]
+	Added print/tex-tabulary-doc version 0.10 [markd 2021-02-11]
