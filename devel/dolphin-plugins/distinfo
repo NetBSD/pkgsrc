@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:23 agc Exp $
+$NetBSD: distinfo,v 1.5 2021/02/11 21:16:12 markd Exp $
 
-SHA1 (dolphin-plugins-4.14.3.tar.xz) = 067c96204575bcfdaaafa8a7b030faf3ba10ef2c
-RMD160 (dolphin-plugins-4.14.3.tar.xz) = f9fccf666d06cd6b65781c88f77d6ff07f8d99f8
-SHA512 (dolphin-plugins-4.14.3.tar.xz) = ffa624ef70de11575e56529a635044fa7f489198b5f12654c448aa370f8369296d251043f8d68453ad85e144c786df2ffae307be8e5265b63adfb4339887da24
-Size (dolphin-plugins-4.14.3.tar.xz) = 58052 bytes
+SHA1 (dolphin-plugins-20.04.1.tar.xz) = 25c24bbd8adf65ead6c659b00c0276a6405123f2
+RMD160 (dolphin-plugins-20.04.1.tar.xz) = f92359bffd83f35ff0ed86bc57e65fa1d9ea1a32
+SHA512 (dolphin-plugins-20.04.1.tar.xz) = 5dab9c10f3ed93dab83a401c4317dc5f0d4252016d5157a0bb69ff82b2f3f8d4f78a0c65941203b5aaf92d7de8ed8efc903841cffc0024513b8e0e106edc32e3
+Size (dolphin-plugins-20.04.1.tar.xz) = 210668 bytes
