@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/11 11:10:28 pin Exp $
+bin/echomap
