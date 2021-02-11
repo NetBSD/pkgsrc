@@ -1,23 +1,18 @@
-# $NetBSD: Makefile,v 1.29 2021/01/01 08:24:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2021/02/11 20:57:44 markd Exp $
 
-DISTNAME=	baloo-widgets-${_KDE_VERSION}
-PKGREVISION=	27
+DISTNAME=	baloo-widgets-${KAPPSVER}
 CATEGORIES=	sysutils
-COMMENT=	The BalooWidgets library
-LICENSE=	gnu-gpl-v3
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+HOMEPAGE=	https://community.kde.org/Baloo
+COMMENT=	Widgets for Baloo
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-#USE_TOOLS+=	gmake
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
-#.include "../../devel/qjson/buildlink3.mk"
-#.include "../../mail/akonadi/buildlink3.mk"
-#.include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../sysutils/libbaloo4/buildlink3.mk"
-.include "../../sysutils/kfilemetadata/buildlink3.mk"
-.include "../../textproc/xapian/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
+USE_TOOLS+=	msgmerge
 
+.include "../../sysutils/baloo5/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
