@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.936 2021/02/06 10:36:34 pin Exp $
+# $NetBSD: Makefile,v 1.937 2021/02/11 21:11:10 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -172,6 +172,7 @@ SUBDIR+=	dmg2img
 SUBDIR+=	dmidecode
 SUBDIR+=	dmsdos
 SUBDIR+=	dog
+SUBDIR+=	dolphin
 SUBDIR+=	dosfstools
 SUBDIR+=	dptutil
 SUBDIR+=	dtb-arm-exynos5422
