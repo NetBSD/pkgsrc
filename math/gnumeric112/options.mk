@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/05/20 16:48:41 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2021/02/11 16:08:51 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnumeric
 PKG_SUPPORTED_OPTIONS=	psiconv python
@@ -13,6 +13,5 @@ CONFIGURE_ARGS+=	--without-psiconv
 
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=               --with-python
-PYTHON_VERSIONS_ACCEPTED=      27 # not yet ported as of 1.12.47
 PLIST_SRC+=		PLIST PLIST.python
 .endif
