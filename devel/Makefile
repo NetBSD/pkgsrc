@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3332 2021/02/08 08:26:33 adam Exp $
+# $NetBSD: Makefile,v 1.3333 2021/02/11 20:35:57 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -688,6 +688,7 @@ SUBDIR+=	kdoctools
 SUBDIR+=	ki18n
 SUBDIR+=	kidletime
 SUBDIR+=	kio
+SUBDIR+=	kio-extras
 SUBDIR+=	kitemmodels
 SUBDIR+=	knotifications
 SUBDIR+=	knotifyconfig
