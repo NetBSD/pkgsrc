@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/11/06 18:04:25 maya Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/11 15:06:49 nia Exp $
 
-DISTNAME=	comic-neue-2.3
+DISTNAME=	comic-neue-2.51
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.comicneue.com/
 EXTRACT_SUFX=	.zip
