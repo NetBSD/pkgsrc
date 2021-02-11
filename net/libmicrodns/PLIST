@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/11 14:43:32 ryoon Exp $
+include/microdns/microdns.h
+include/microdns/rr.h
+lib/libmicrodns.so
+lib/libmicrodns.so.1
+lib/libmicrodns.so.1.0.0
+lib/pkgconfig/microdns.pc
