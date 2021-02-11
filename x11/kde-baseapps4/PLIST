@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/01/10 19:03:55 markd Exp $
-bin/dolphin4
+@comment $NetBSD: PLIST,v 1.10 2021/02/11 21:38:08 markd Exp $
 bin/fsview
 bin/kbookmarkmerger
 bin/kdepasswd
@@ -10,8 +9,6 @@ bin/kfmclient
 bin/konqueror
 bin/nspluginscan
 bin/nspluginviewer
-bin/servicemenudeinstallation
-bin/servicemenuinstallation
 include/knewmenu.h
 include/konq_dndpopupmenuplugin.h
 include/konq_events.h
@@ -33,13 +30,8 @@ lib/kde4/akregatorkonqfeedicon.so
 lib/kde4/autorefresh.so
 lib/kde4/babelfishplugin.so
 lib/kde4/dirfilterplugin.so
-lib/kde4/dolphinpart.so
 lib/kde4/domtreeviewerplugin.so
 lib/kde4/fsviewpart.so
-lib/kde4/kcm_dolphingeneral.so
-lib/kde4/kcm_dolphinnavigation.so
-lib/kde4/kcm_dolphinservices.so
-lib/kde4/kcm_dolphinviewmodes.so
 lib/kde4/kcm_history.so
 lib/kde4/kcm_kio.so
 lib/kde4/kcm_konq.so
@@ -52,7 +44,6 @@ lib/kde4/kded_konqy_preloader.so
 lib/kde4/khtmlkttsdplugin.so
 lib/kde4/khtmlsettingsplugin.so
 lib/kde4/kimgallery.so
-lib/kde4/kio_filenamesearch.so
 lib/kde4/konq_aboutpage.so
 lib/kde4/konq_shellcmdplugin.so
 lib/kde4/konq_sidebar.so
@@ -73,13 +64,9 @@ lib/kde4/uachangerplugin.so
 lib/kde4/validatorsplugin.so
 lib/kde4/webarchiverplugin.so
 lib/kde4/webarchivethumbnail.so
-lib/libdolphinprivate4.so
-lib/libdolphinprivate4.so.4
-lib/libdolphinprivate4.so.${KDELIBSVER}
 lib/libkbookmarkmodel_private.so
 lib/libkbookmarkmodel_private.so.4
 lib/libkbookmarkmodel_private.so.${KDELIBSVER}
-lib/libkdeinit4_dolphin4.so
 lib/libkdeinit4_keditbookmarks.so
 lib/libkdeinit4_kfmclient.so
 lib/libkdeinit4_konqueror.so
@@ -96,7 +83,6 @@ man/man1/kfind.1
 share/appdata/kfind.appdata.xml
 share/appdata/konqueror.appdata.xml
 share/applications/kde4/Home.desktop
-share/applications/kde4/dolphin.desktop
 share/applications/kde4/kdepasswd.desktop
 share/applications/kde4/keditbookmarks.desktop
 share/applications/kde4/kfind.desktop
@@ -177,8 +163,6 @@ share/icons/oxygen/64x64/actions/validators.png
 share/icons/oxygen/scalable/actions/htmlvalidator.svgz
 share/icons/oxygen/scalable/actions/validators.svgz
 share/kde/apps/akregator/pics/feed.png
-share/kde/apps/dolphin/dolphinui.rc
-share/kde/apps/dolphinpart/dolphinpart.rc
 share/kde/apps/dolphinpart/kpartplugins/dirfilterplugin.desktop
 share/kde/apps/dolphinpart/kpartplugins/dirfilterplugin.rc
 share/kde/apps/dolphinpart/kpartplugins/kimgalleryplugin.desktop
@@ -296,19 +280,12 @@ share/kde/apps/kwebkitpart/kpartplugins/uachangerplugin.desktop
 share/kde/apps/kwebkitpart/kpartplugins/uachangerplugin.rc
 share/kde/apps/nsplugin/nspluginpart.rc
 share/kde/autostart/konqy_preload.desktop
-share/kde/config.kcfg/dolphin_compactmodesettings.kcfg
-share/kde/config.kcfg/dolphin_detailsmodesettings.kcfg
-share/kde/config.kcfg/dolphin_directoryviewpropertysettings.kcfg
-share/kde/config.kcfg/dolphin_generalsettings.kcfg
-share/kde/config.kcfg/dolphin_iconsmodesettings.kcfg
-share/kde/config.kcfg/dolphin_versioncontrolsettings.kcfg
 share/kde/config.kcfg/kcm_useraccount.kcfg
 share/kde/config.kcfg/kcm_useraccount_pass.kcfg
 share/kde/config.kcfg/keditbookmarks.kcfg
 share/kde/config.kcfg/konqueror.kcfg
 share/kde/config.kcfg/validators.kcfg
 share/kde/config/konqsidebartngrc
-share/kde/config/servicemenu.knsrc
 share/kde/config/translaterc
 share/kde/templates/.source/CAMERA-Device.desktop
 share/kde/templates/.source/CDROM-Device.desktop
@@ -342,16 +319,10 @@ share/kde4/services/ServiceMenus/imageconverter.desktop
 share/kde4/services/bookmarks.desktop
 share/kde4/services/cache.desktop
 share/kde4/services/cookies.desktop
-share/kde4/services/dolphinpart.desktop
 share/kde4/services/ebrowsing.desktop
 share/kde4/services/filebehavior.desktop
-share/kde4/services/filenamesearch.protocol
 share/kde4/services/fsview_part.desktop
 share/kde4/services/kcm_useraccount.desktop
-share/kde4/services/kcmdolphingeneral.desktop
-share/kde4/services/kcmdolphinnavigation.desktop
-share/kde4/services/kcmdolphinservices.desktop
-share/kde4/services/kcmdolphinviewmodes.desktop
 share/kde4/services/kcmhistory.desktop
 share/kde4/services/kcmkonqyperformance.desktop
 share/kde4/services/kcmperformance.desktop
@@ -412,7 +383,6 @@ share/kde4/services/useragentstrings/safari60.desktop
 share/kde4/services/useragentstrings/w3moncurrent.desktop
 share/kde4/services/useragentstrings/wgetoncurrent.desktop
 share/kde4/services/webarchivethumbnail.desktop
-share/kde4/servicetypes/fileviewversioncontrolplugin.desktop
 share/kde4/servicetypes/konqaboutpage.desktop
 share/kde4/servicetypes/konqdndpopupmenuplugin.desktop
 share/kde4/servicetypes/konqpopupmenuplugin.desktop
