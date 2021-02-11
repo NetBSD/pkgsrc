@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1380 2021/02/10 15:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.1381 2021/02/11 14:44:51 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -325,6 +325,7 @@ SUBDIR+=	libgdata0.6
 SUBDIR+=	libiscsi
 SUBDIR+=	libktorrent
 SUBDIR+=	liblive
+SUBDIR+=	libmicrodns
 SUBDIR+=	libmms
 SUBDIR+=	libnice
 SUBDIR+=	libnids
