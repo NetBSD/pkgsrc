@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/06 00:08:07 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/11 03:42:44 gutteridge Exp $
 bin/retext
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -95,6 +95,7 @@ share/retext/icons/system-file-manager.png
 share/retext/icons/text-html.png
 share/retext/icons/view-fullscreen.png
 share/retext/icons/x-office-document.png
+share/retext/locale/retext_ar.qm
 share/retext/locale/retext_ca.qm
 share/retext/locale/retext_cs.qm
 share/retext/locale/retext_cy.qm
@@ -104,6 +105,7 @@ share/retext/locale/retext_es.qm
 share/retext/locale/retext_es_CO.qm
 share/retext/locale/retext_et.qm
 share/retext/locale/retext_eu.qm
+share/retext/locale/retext_fa.qm
 share/retext/locale/retext_fi.qm
 share/retext/locale/retext_fr.qm
 share/retext/locale/retext_hr.qm
