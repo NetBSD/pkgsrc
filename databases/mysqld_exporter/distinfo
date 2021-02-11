@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/11 13:54:29 jperkin Exp $
+
+SHA1 (mysqld_exporter-0.12.1.tar.gz) = 5a12a0aa6c4f18028281569d34adf3c1d9899c7b
+RMD160 (mysqld_exporter-0.12.1.tar.gz) = 77caebfc31a4ab79e16f5c36b648e90c5b1265b1
+SHA512 (mysqld_exporter-0.12.1.tar.gz) = a655a9ad4b5bc6e7840df68bee934d55485d3a04a7dc8186c8f9d224eb33b0e1d98de3db78a0c7d92f9b3d6ca06ead2d609cf2cfa99e584635f0339984e60629
+Size (mysqld_exporter-0.12.1.tar.gz) = 1910780 bytes

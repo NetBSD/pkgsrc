@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.smf,v 1.1 2021/02/11 13:54:29 jperkin Exp $
+
+To configure mysqld_exporter adjust the environment variables in:
+
+	${PKG_SYSCONFDIR}/env.conf
+
+Ensure this file retains appropriately secure permissions.
+===========================================================================
