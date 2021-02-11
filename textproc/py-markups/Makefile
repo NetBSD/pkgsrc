@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/09/12 12:22:01 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/11 03:31:37 gutteridge Exp $
 
-VERSION=	3.0.0
+VERSION=	3.1.0
 DISTNAME=	Markups-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
