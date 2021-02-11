@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.40 2021/01/27 15:21:21 fcambus Exp $
+$NetBSD: distinfo,v 1.41 2021/02/11 09:26:51 fcambus Exp $
 
-SHA1 (binutils-2.36.tar.bz2) = 40d6c5937b65c6f992a4a1fe57a0d3a59a4b3d5e
-RMD160 (binutils-2.36.tar.bz2) = 9b9fcd212a2e346e241b69055f52674ace572eed
-SHA512 (binutils-2.36.tar.bz2) = 84f1a5ed8c95dc8d2b065da8139e8208f82a2382fe9272013b45606db9a005e030a4a035b0150cae8c8533883d60615beb8ba1d1e72193a77f7dae9bcc4eb503
-Size (binutils-2.36.tar.bz2) = 33688521 bytes
+SHA1 (binutils-2.36.1.tar.bz2) = 968cddc17354142ab7d60b93d7f169ec8373a9f4
+RMD160 (binutils-2.36.1.tar.bz2) = 7315baac14d63366319fd30b7892771d913194aa
+SHA512 (binutils-2.36.1.tar.bz2) = 5c40cfe05b922492627db71990dd2ba6030fd2de4bdba3f53a3f274543ff161fb56e2f6bdac107e0ffdcfd095e499c54e1157ee1865723baefa67b5b4d3da201
+Size (binutils-2.36.1.tar.bz2) = 33689928 bytes
 SHA1 (patch-bfd_cache.c) = e2d96bad350552eacdffa83532f9dc9e15ee9be9
+SHA1 (patch-binutils_objcopy.c) = 3a9cea4cdf49e16853399f5beb5628984d9ca7a6
 SHA1 (patch-gold_Makefile.in) = e01d973f9625a1653851f796c123efec37102fbd
 SHA1 (patch-gold_options.h) = 65a4cdb67cb4bef6a1891ca66a5fc80c5493c24e
 SHA1 (patch-gold_system.h) = 9b4130b5315763daa66e0a91a8be6d1df0d10344
