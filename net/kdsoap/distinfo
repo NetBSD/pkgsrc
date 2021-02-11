@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/11 19:54:07 markd Exp $
+
+SHA1 (kdsoap-1.9.1.tar.gz) = 752d05aff8f22685fabfabc383de41f05e0cf4c8
+RMD160 (kdsoap-1.9.1.tar.gz) = 761bf3c4621028bc9753393d84737335a2416653
+SHA512 (kdsoap-1.9.1.tar.gz) = 55803cc220b99d84e95dce10cd9a57a591ac1d3e25194ec4bdcd17a51546759b6abe454e675640362442628de24b52eb91ec4c89615c1ca16c1e089ca4bedd7c
+Size (kdsoap-1.9.1.tar.gz) = 1389570 bytes
