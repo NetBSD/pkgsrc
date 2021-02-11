@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2021/02/11 02:20:18 ryoon Exp $
+$NetBSD: distinfo,v 1.40 2021/02/11 11:53:19 ryoon Exp $
 
 SHA1 (asterisk-16.16.0/asterisk-16.16.0.tar.gz) = e98a42dbd5f1ff18da2626cd00f9193230164b97
 RMD160 (asterisk-16.16.0/asterisk-16.16.0.tar.gz) = 234e4424505031fc3e7df3c4ad8e7daf1b4b243b
@@ -26,11 +26,14 @@ SHA1 (patch-include_asterisk_autoconfig.h.in) = 2f8a986bd3b35ebb384280f0dbf81c32
 SHA1 (patch-include_asterisk_sha1.h) = 9b233ef82b50b8d94177616e1382991656ce1ebf
 SHA1 (patch-main_Makefile) = d8b2cdd76dbf4dfa3ae082ce39cc0f8396b368aa
 SHA1 (patch-main_acl.c) = 06a9d247b19d648e9ff54ac2a234dc8ac8c023bb
+SHA1 (patch-main_bridge__channel.c) = 1ea5f8d0d1ad353c63904a80a67d8e53c8672b46
 SHA1 (patch-main_pbx__builtins.c) = 7c1d518f05afc1523b247f50b0363e25832c8636
 SHA1 (patch-main_stdtime_localtime.c) = d530bea8f93667a07b707e6fb01c6744aa264d40
+SHA1 (patch-main_taskprocessor.c) = f90805bd78fd4096beb9ee1cf9c794c50b87481a
 SHA1 (patch-main_utils.c) = ab85be3687dd7f39b742bd5e4036f9e297f3e272
 SHA1 (patch-pbx_pbx__dundi.c) = d2a50650a19463304c81fc19c460565b94f91b72
 SHA1 (patch-res_res__rtp__asterisk.c) = feb320521a545be615133777374825e17e428c93
+SHA1 (patch-res_res__xmpp.c) = 8e8951b8a57eac168e9bf4429392ddfe808ef590
 SHA1 (patch-sounds_Makefile) = acc15088ae2545f2822246466bfe783b5215fc54
 SHA1 (patch-tests_test__locale.c) = f3f1edc86356f2a7b4d3493433c772e164c77f66
 SHA1 (patch-utils_Makefile) = 4b4be483c20768d640efae5c18fc6f6770eb8c0c
