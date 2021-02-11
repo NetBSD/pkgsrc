@@ -1,0 +1,11 @@
+Command-line utility to search DuckDuckGo from the terminal. While googler is
+extremely popular among command line users, in many forums the need of a similar
+utility for privacy-aware DuckDuckGo came up. So here's `ddgr` for you!
+
+Unlike the web interface, you can specify the number of search results you would
+like to see per page. It's more convenient than skimming through 30-odd search
+results per page.
+The default interface is carefully designed to use minimum space without
+sacrificing readability.
+
+A big advantage of ddgr over googler is DuckDuckGo works over the Tor network.
