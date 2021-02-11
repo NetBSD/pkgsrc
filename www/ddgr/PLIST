@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/11 11:16:37 pin Exp $
+bin/ddgr
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ddgr.py
+${PYSITELIB}/ddgr.pyc
+${PYSITELIB}/ddgr.pyo
+man/man1/ddgr.1
+share/examples/ddgr/auto-completion/_ddgr
+share/examples/ddgr/auto-completion/ddgr-completion.bash
+share/examples/ddgr/auto-completion/ddgr.fish

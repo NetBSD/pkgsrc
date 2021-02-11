@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/11 11:16:37 pin Exp $
+
+SHA1 (ddgr-1.9.tar.gz) = 7c1cf38e9cc64b6d55ef9ed6eb6494476f1e44a3
+RMD160 (ddgr-1.9.tar.gz) = 2aecec42c48ce2c4fc873438ff30e83020beab68
+SHA512 (ddgr-1.9.tar.gz) = 25fb995d32cf19ed1d4493ec463f60db39f4728ffe052dabccb49b721e65250e444bb4cc54f5f41dd1d6365d4e8bd1139277c44a9bd1d39394dec998ccb93b7c
+Size (ddgr-1.9.tar.gz) = 44181 bytes
