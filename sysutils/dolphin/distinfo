@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/11 21:09:49 markd Exp $
+
+SHA1 (dolphin-20.04.1.tar.xz) = 0ba1cbf308f19ccfea2c215f2634314c076fd3c6
+RMD160 (dolphin-20.04.1.tar.xz) = 3359c2caf27c411233ec676c53bbdb119b0079f7
+SHA512 (dolphin-20.04.1.tar.xz) = 41aa8c95f6159bdfe24ab6adc7a2aa774cc67ddbd074662deb4f459b93d43d7a3c96e958c88d0f437cc52ece37ed1409696eea2bddf0ee2b9bcb8920ad97d5c8
+Size (dolphin-20.04.1.tar.xz) = 4799472 bytes
