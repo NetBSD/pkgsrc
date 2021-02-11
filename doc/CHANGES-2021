@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1008 2021/02/11 15:45:53 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1009 2021/02/11 16:09:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1265,3 +1265,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/comic-neue to 2.51 [nia 2021-02-11]
 	Updated graphics/gexiv2 to 0.12.1 [nia 2021-02-11]
 	Updated misc/goffice0.10 to 0.10.48 [nia 2021-02-11]
+	Updated math/gnumeric112 to 1.12.48 [nia 2021-02-11]
