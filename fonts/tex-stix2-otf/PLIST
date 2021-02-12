@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 03:30:02 markd Exp $
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoMath-Regular.otf
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoText-Bold.otf
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoText-BoldItalic.otf
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoText-Italic.otf
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoText-Medium.otf
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoText-MediumItalic.otf
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoText-Regular.otf
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoText-SemiBold.otf
+share/texmf-dist/fonts/opentype/public/stix2-otf/STIXTwoText-SemiBoldItalic.otf

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/12 03:30:02 markd Exp $
+
+SHA1 (stix2-otf.r57427.tar.xz) = 45106ec89247ce51ccebd4cbf8c74f0c6bb28751
+RMD160 (stix2-otf.r57427.tar.xz) = 92ade444ae0a89850449df7186d4b60f4ebb843b
+SHA512 (stix2-otf.r57427.tar.xz) = 3bd27d08e0112039d35e37e3e026e1f88e0d2fb8c02955447bf68ac379767dce82d3c68415489afb606c753a5ddee5df4cdba905d178ba23f7d3bcc961f6aa20
+Size (stix2-otf.r57427.tar.xz) = 1383744 bytes
