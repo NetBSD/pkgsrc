@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 02:52:06 markd Exp $
+share/texmf-dist/tex/latex/qrcode/qrcode.sty
