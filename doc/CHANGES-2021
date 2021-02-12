@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1019 2021/02/12 07:21:09 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1020 2021/02/12 07:21:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added fonts/tex-stix2-otf-doc version 2.11 [mark 2021-02-12]
 	Added math/funst version 0.1.1 [pin 2021-02-12]
 	Updated archivers/unrar to 6.0.3 [nia 2021-02-12]
+	Updated archivers/libunrar to 6.0.3 [nia 2021-02-12]
