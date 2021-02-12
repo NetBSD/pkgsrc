@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/02/29 16:19:50 mef Exp $
+$NetBSD: distinfo,v 1.7 2021/02/12 07:27:48 nia Exp $
 
-SHA1 (zutils-1.8.tar.lz) = 6c37963877addfc266f93af587ecf66258288be2
-RMD160 (zutils-1.8.tar.lz) = 5187bdc7da5527d7ad9afc17449360fe128aa67a
-SHA512 (zutils-1.8.tar.lz) = e066a1675a02405ff5ae2dab1b66aab8deeb8665f35af6606ebd6e70992988caf8092714568ac3f3982b9c45db346131fd9fc5fa59acbb50ca83246eea8c9ec9
-Size (zutils-1.8.tar.lz) = 53285 bytes
+SHA1 (zutils-1.10.tar.lz) = 77f64d47bb9bec06d2eb2eb1d5d0d7dafa079f1c
+RMD160 (zutils-1.10.tar.lz) = 31d1fc2af9f70bb5862fa6c35a81dda6b280245d
+SHA512 (zutils-1.10.tar.lz) = 9ee2dd8dbfcaff2129c5d78fe0ec7c71c601dd298fa84448c1e3835db06a017809384dcdba537c9016b05e448f8cc9ab21332616dee5bb680de151bdffb815f3
+Size (zutils-1.10.tar.lz) = 55080 bytes
