@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.8 2021/02/12 13:00:05 cjep Exp $
+$NetBSD: README.Linux,v 1.9 2021/02/12 13:00:48 cjep Exp $
 
 Please read the general README file as well.
 
@@ -7,7 +7,8 @@ Please read the general README file as well.
 For Debian and derivatives such as Ubuntu the following packages should be
 installed prior to attempting bootstrap
 
-apt-get install cvs libncurses5 libncurses5-dev gcc g++ zlib1g-dev zlib1g libssl-dev libudev-dev
+apt-get install cvs libncurses5 libncurses5-dev gcc g++ zlib1g-dev \
+			zlib1g libssl-dev libudev-dev
 
 ==========================================================================
 
