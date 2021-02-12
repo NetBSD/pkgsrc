@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 02:15:02 markd Exp $
+bin/jfmutil
+share/texmf-dist/scripts/jfmutil/jfmutil.pl

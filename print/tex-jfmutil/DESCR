@@ -1,0 +1,9 @@
+This program provides functionality to process data files (JFM
+and VF) that form logical fonts used in (u)pTeX. The functions
+currently available include: The mutual conversion between
+Japanese virtual fonts (pairs of VF and JFM) and files in the
+"ZVP format", which is an original text format representing
+data in virtual fonts. This function can be seen as a
+counterpart to the vftovp/vptovf programs. The mutual
+conversion between VF files alone and files in the "ZVP0
+format", which is a subset of the ZVP format.
