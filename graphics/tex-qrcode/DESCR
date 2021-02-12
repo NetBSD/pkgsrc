@@ -1,0 +1,2 @@
+The package generates QR (Quick Response) codes in LaTeX,
+without the need for PSTricks or any other graphical package.
