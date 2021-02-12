@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1020 2021/02/12 07:21:41 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1021 2021/02/12 07:28:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1292,3 +1292,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added math/funst version 0.1.1 [pin 2021-02-12]
 	Updated archivers/unrar to 6.0.3 [nia 2021-02-12]
 	Updated archivers/libunrar to 6.0.3 [nia 2021-02-12]
+	Updated archivers/zutils to 1.10 [nia 2021-02-12]
