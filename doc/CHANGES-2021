@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1017 2021/02/12 03:34:45 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1018 2021/02/12 06:51:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1289,3 +1289,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added math/tex-lualatex-math-doc version 1.9 [mark 2021-02-12]
 	Added fonts/tex-stix2-otf version 2.11 [mark 2021-02-12]
 	Added fonts/tex-stix2-otf-doc version 2.11 [mark 2021-02-12]
+	Added math/funst version 0.1.1 [pin 2021-02-12]
