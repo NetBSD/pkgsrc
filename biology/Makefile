@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2021/02/08 01:56:18 bacon Exp $
+# $NetBSD: Makefile,v 1.65 2021/02/12 00:24:35 gutteridge Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -19,8 +19,6 @@ SUBDIR+=	chemtool
 SUBDIR+=	clustalw
 SUBDIR+=	coalesce
 SUBDIR+=	coordgenlibs
-SUBDIR+=	py-cutadapt
-SUBDIR+=	py-dnaio
 SUBDIR+=	fastDNAml
 SUBDIR+=	fastp
 SUBDIR+=	fastqc
@@ -53,6 +51,8 @@ SUBDIR+=	primer3
 SUBDIR+=	profit
 SUBDIR+=	puzzle
 SUBDIR+=	py-biopython
+SUBDIR+=	py-cutadapt
+SUBDIR+=	py-dnaio
 SUBDIR+=	py-mol
 SUBDIR+=	py-pydicom
 SUBDIR+=	rasmol
