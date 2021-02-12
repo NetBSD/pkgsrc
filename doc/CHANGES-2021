@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1026 2021/02/12 11:08:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1027 2021/02/12 13:43:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-pypika to 0.47.4 [adam 2021-02-12]
 	Moved www/py-socks to net/py-python-socks [adam 2021-02-12]
 	Updated lang/nodejs to 14.15.5 [adam 2021-02-12]
+	Added sysutils/ddiff version 0.1.0 [pin 2021-02-12]
