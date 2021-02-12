@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/12 03:18:12 markd Exp $
+
+SHA1 (lualatex-math.doc.r56541.tar.xz) = e1ce0b8d99c7d1f2bdb8705e8da52e79e78d9563
+RMD160 (lualatex-math.doc.r56541.tar.xz) = e78770061392f19380238d17f899afd3b35b0d50
+SHA512 (lualatex-math.doc.r56541.tar.xz) = 41f38f8e1bafbb63b7a83f3087bf8aa0bfd7d946206d07bba2dc93d99049ca101869c575d3f2c8b732f9beda719bdd08127a047700052ed915bffc88001299f9
+Size (lualatex-math.doc.r56541.tar.xz) = 198344 bytes

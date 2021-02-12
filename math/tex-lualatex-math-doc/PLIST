@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 03:18:12 markd Exp $
+share/texmf-dist/doc/lualatex/lualatex-math/MANIFEST
+share/texmf-dist/doc/lualatex/lualatex-math/README
+share/texmf-dist/doc/lualatex/lualatex-math/lualatex-math.pdf
