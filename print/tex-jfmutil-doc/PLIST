@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 02:15:02 markd Exp $
+share/texmf-dist/doc/fonts/jfmutil/LICENSE
+share/texmf-dist/doc/fonts/jfmutil/README-ja.md
+share/texmf-dist/doc/fonts/jfmutil/README.md
