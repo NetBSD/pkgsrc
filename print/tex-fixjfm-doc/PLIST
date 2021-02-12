@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 02:12:42 markd Exp $
+share/texmf-dist/doc/generic/fixjfm/README
+share/texmf-dist/doc/generic/fixjfm/fixjfm-doc.pdf
+share/texmf-dist/doc/generic/fixjfm/fixjfm-doc.tex

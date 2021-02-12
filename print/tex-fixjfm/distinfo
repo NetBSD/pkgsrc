@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/12 02:12:42 markd Exp $
+
+SHA1 (fixjfm.r47113.tar.xz) = db266cb1c0c0520fdaad5f97a5e8a6a5b8cee230
+RMD160 (fixjfm.r47113.tar.xz) = 2c5e61d583fa94a847758286e4cfd623f988263e
+SHA512 (fixjfm.r47113.tar.xz) = 5ed8db53c1757c4ab6f14e763f9e58a76e5f8c594c30c1d1fd4d7c9a49d65da90d72650c88375806997d0f268b1a75215bf6969f45e45ef3a2127c422415bf16
+Size (fixjfm.r47113.tar.xz) = 2400 bytes
