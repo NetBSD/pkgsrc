@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:13:25 markd Exp $
+# $NetBSD: Makefile,v 1.13 2021/02/12 02:30:56 markd Exp $
 
 DISTNAME=	collection-langcjk
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2020
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54191
@@ -20,10 +20,10 @@ DEPENDS+=	tex-cjkpunct-[0-9]*:../../print/tex-cjkpunct
 DEPENDS+=	tex-cjkutils-[0-9]*:../../print/tex-cjkutils
 DEPENDS+=	tex-dnp-[0-9]*:../../print/tex-dnp
 DEPENDS+=	tex-garuda-c90-[0-9]*:../../fonts/tex-garuda-c90
-# depend fixjfm
-# depend jfmutil
+DEPENDS+=	tex-fixjfm-[0-9]*:../../print/tex-fixjfm
+DEPENDS+=	tex-jfmutil-[0-9]*:../../print/tex-jfmutil
 DEPENDS+=	tex-norasi-c90-[0-9]*:../../fonts/tex-norasi-c90
-# depend pxtatescale
+DEPENDS+=	tex-pxtatescale-[0-9]*:../../print/tex-pxtatescale
 DEPENDS+=	tex-xcjk2uni-[0-9]*:../../print/tex-xcjk2uni
 DEPENDS+=	tex-zxjafont-[0-9]*:../../print/tex-zxjafont
 
