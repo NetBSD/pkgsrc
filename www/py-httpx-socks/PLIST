@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 08:19:59 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/httpx_socks/__init__.py
+${PYSITELIB}/httpx_socks/__init__.pyc
+${PYSITELIB}/httpx_socks/__init__.pyo
+${PYSITELIB}/httpx_socks/_async_transport.py
+${PYSITELIB}/httpx_socks/_async_transport.pyc
+${PYSITELIB}/httpx_socks/_async_transport.pyo
+${PYSITELIB}/httpx_socks/_sync_transport.py
+${PYSITELIB}/httpx_socks/_sync_transport.pyc
+${PYSITELIB}/httpx_socks/_sync_transport.pyo
