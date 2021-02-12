@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.788 2021/02/11 22:30:07 markd Exp $
+# $NetBSD: Makefile,v 1.789 2021/02/12 02:27:47 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -665,6 +665,8 @@ SUBDIR+=	tex-filehook-doc
 SUBDIR+=	tex-first-latex-doc-doc
 SUBDIR+=	tex-fix2col
 SUBDIR+=	tex-fix2col-doc
+SUBDIR+=	tex-fixjfm
+SUBDIR+=	tex-fixjfm-doc
 SUBDIR+=	tex-fixme
 SUBDIR+=	tex-fixme-doc
 SUBDIR+=	tex-fixmetodonotes
@@ -866,6 +868,8 @@ SUBDIR+=	tex-intcalc-doc
 SUBDIR+=	tex-intro-scientific-doc
 SUBDIR+=	tex-jadetex
 SUBDIR+=	tex-jadetex-doc
+SUBDIR+=	tex-jfmutil
+SUBDIR+=	tex-jfmutil-doc
 SUBDIR+=	tex-jknapltx
 SUBDIR+=	tex-js-misc
 SUBDIR+=	tex-js-misc-doc
@@ -1217,6 +1221,8 @@ SUBDIR+=	tex-ptex
 SUBDIR+=	tex-ptex-base
 SUBDIR+=	tex-ptex-base-doc
 SUBDIR+=	tex-ptex-doc
+SUBDIR+=	tex-pxtatescale
+SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qtree
 SUBDIR+=	tex-quoting
 SUBDIR+=	tex-quoting-doc
