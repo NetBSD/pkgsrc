@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/10/23 00:39:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.34 2021/02/12 00:34:22 gutteridge Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC48_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc48 package so that with the dependence pattern
 ## '{gcc48,gcc48-libs}>=4.8.*' pkg_all will choose gcc48-libs over gcc48.
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
