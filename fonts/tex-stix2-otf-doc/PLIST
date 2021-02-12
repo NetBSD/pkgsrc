@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 03:30:02 markd Exp $
+share/texmf-dist/doc/fonts/stix2-otf/AUTHORS.txt
+share/texmf-dist/doc/fonts/stix2-otf/CONTRIBUTORS.txt
+share/texmf-dist/doc/fonts/stix2-otf/FONTLOG.txt
+share/texmf-dist/doc/fonts/stix2-otf/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/stix2-otf/OFL.txt
+share/texmf-dist/doc/fonts/stix2-otf/README.md
+share/texmf-dist/doc/fonts/stix2-otf/STIXTwoMath-Regular.pdf
+share/texmf-dist/doc/fonts/stix2-otf/STIXTwoText-Regular.pdf
