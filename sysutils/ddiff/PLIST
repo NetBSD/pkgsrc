@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/12 13:42:12 pin Exp $
+bin/ddiff
