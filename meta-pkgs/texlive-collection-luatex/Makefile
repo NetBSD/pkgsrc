@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/05/10 04:13:27 markd Exp $
+# $NetBSD: Makefile,v 1.14 2021/02/12 03:21:59 markd Exp $
 
 DISTNAME=	collection-luatex
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54741
@@ -37,7 +37,7 @@ DEPENDS+=	tex-luacolor-[0-9]*:../../print/tex-luacolor
 # depend luainputenc
 # depend luaintro
 # depend lualatex-doc
-# depend lualatex-math
+DEPENDS+=	tex-lualatex-math-[0-9]*:../../math/tex-lualatex-math
 # depend lualatex-truncate
 DEPENDS+=	tex-lualibs-[0-9]*:../../devel/tex-lualibs
 # depend luamplib
