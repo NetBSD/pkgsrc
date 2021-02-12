@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.489 2021/02/12 03:19:28 markd Exp $
+# $NetBSD: Makefile,v 1.490 2021/02/12 06:51:16 pin Exp $
 
 COMMENT=	Mathematics
 
@@ -172,6 +172,7 @@ SUBDIR+=	fgmp
 SUBDIR+=	fityk
 SUBDIR+=	fplll
 SUBDIR+=	fricas
+SUBDIR+=	funst
 SUBDIR+=	galculator
 SUBDIR+=	gap
 SUBDIR+=	gappa
