@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/12 08:19:59 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/12 09:33:20 adam Exp $
 
 DISTNAME=	httpx-socks-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Proxy (HTTP, SOCKS) transports for httpx
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.15.4:../../www/py-httpx
-DEPENDS+=	${PYPKGPREFIX}-socks>=1.1.0:../../www/py-socks
+DEPENDS+=	${PYPKGPREFIX}-python-socks>=1.1.0:../../net/py-python-socks
 
 USE_LANGUAGES=	# none
 
