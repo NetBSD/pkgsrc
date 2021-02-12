@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/05/01 00:15:11 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/02/12 01:40:56 markd Exp $
 
-SHA1 (cjk-gs-integrate.doc.r54155.tar.xz) = 4f77cabbed17c2a7d60c91f237219d1363e6d74e
-RMD160 (cjk-gs-integrate.doc.r54155.tar.xz) = 115179809bddd037e22bfd5311d309129c9bb334
-SHA512 (cjk-gs-integrate.doc.r54155.tar.xz) = 7e4196ecac219d6d6b5520490b3b4691329cabd16fedb62b8f4e2d70e5ddef19c4c5da64092d9cd708beb7954f819b9167cfcf773bee708e1df5bc46f9c815a8
-Size (cjk-gs-integrate.doc.r54155.tar.xz) = 12720 bytes
+SHA1 (cjk-gs-integrate.doc.r57081.tar.xz) = eb5ee6969ebe50340f0ceb90f1ef8a000fbc7d91
+RMD160 (cjk-gs-integrate.doc.r57081.tar.xz) = fc82a04e108b1dfc644edd6a1b1e083598573a18
+SHA512 (cjk-gs-integrate.doc.r57081.tar.xz) = 80f8054e0841bc5605faf0abd3b17ddd16919d0228d520af00c4117f884e1105e6b818d6ec92f312b38246f591f0e6743a76ff02ac05a9e93624e8f4bfaa31f4
+Size (cjk-gs-integrate.doc.r57081.tar.xz) = 13232 bytes
