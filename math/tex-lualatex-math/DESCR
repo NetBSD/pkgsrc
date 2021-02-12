@@ -1,0 +1,7 @@
+The package patches a few commands of the LaTeX2e kernel and
+the amsmath and mathtools packages to be more compatible with
+the LuaTeX engine. It is only meaningful for LuaLaTeX documents
+containing mathematical formulas, and does not exhibit any new
+functionality. The fixes are mostly moved from the unicode-math
+package to this package since they are not directly related to
+Unicode mathematics typesetting.
