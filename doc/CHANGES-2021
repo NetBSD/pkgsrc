@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1023 2021/02/12 08:25:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1024 2021/02/12 09:32:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1271,7 +1271,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/youtube-dl to 20210210 [leot 2021-02-11]
 	Updated sysutils/baloo-widgets to 20.04.1 [markd 2021-02-11]
 	Added sysutils/dolphin version 20.04.1 [markd 2021-02-11]
-	Updated devel/dolphin-extras to 20.04.1 [markd 2021-02-11]
+	Updated devel/dolphin-plugins to 20.04.1 [markd 2021-02-11]
 	Updated net/rclone to 1.54.0 [leot 2021-02-11]
 	Added print/tex-tabulary-doc version 0.10 [markd 2021-02-11]
 	Updated print/tex-cjk-gs-integrate to 20201206.0 [mark 2021-02-12]
