@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1025 2021/02/12 09:36:26 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1026 2021/02/12 11:08:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1299,3 +1299,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-aiohttp-socks to 0.5.5 [adam 2021-02-12]
 	Updated databases/py-pypika to 0.47.4 [adam 2021-02-12]
 	Moved www/py-socks to net/py-python-socks [adam 2021-02-12]
+	Updated lang/nodejs to 14.15.5 [adam 2021-02-12]
