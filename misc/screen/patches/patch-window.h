@@ -1,6 +1,6 @@
-# $NetBSD: patch-window.h,v 1.1 2021/02/12 22:28:03 cjep Exp $
+$NetBSD: patch-window.h,v 1.2 2021/02/12 22:29:37 cjep Exp $
 
-# OpenBSD grumbles without the socket definitions
+OpenBSD grumbles without the socket definitions
 
 --- window.h.orig	Wed Feb  5 20:09:38 2020
 +++ window.h	Thu Feb 11 21:01:43 2021
