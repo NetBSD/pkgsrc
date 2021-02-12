@@ -1,0 +1,7 @@
+Command line tool, that is used to quickly calculate the number of lines of
+various language codes in a project.
+
+Features:
+-Quickly calculate data
+-Support multiple languages
+-Support multiple output formats, ASCII, HTML, Markdown
