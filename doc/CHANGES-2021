@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1015 2021/02/11 22:31:36 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1016 2021/02/12 02:38:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1274,3 +1274,12 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/dolphin-extras to 20.04.1 [markd 2021-02-11]
 	Updated net/rclone to 1.54.0 [leot 2021-02-11]
 	Added print/tex-tabulary-doc version 0.10 [markd 2021-02-11]
+	Updated print/tex-cjk-gs-integrate to 20201206.0 [mark 2021-02-12]
+	Updated print/tex-cjk-gs-integrate-doc to 20201206.0 [mark 2021-02-12]
+	Added print/tex-fixjfm version 0.8 [mark 2021-02-12]
+	Added print/tex-fixjfm-doc version 0.8 [mark 2021-02-12]
+	Added print/tex-jfmutil version 1.3.1 [mark 2021-02-12]
+	Added print/tex-jfmutil-doc version 1.3.1 [mark 2021-02-12]
+	Added print/tex-pxtatescale version 0.4 [mark 2021-02-12]
+	Added print/tex-pxtatescale-doc version 0.4 [mark 2021-02-12]
+	Updated meta-pkgs/texlive-collection-langcjk to 2020 [mark 2021-02-12]
