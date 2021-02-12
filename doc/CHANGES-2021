@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1022 2021/02/12 08:17:03 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1023 2021/02/12 08:25:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1294,3 +1294,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/libunrar to 6.0.3 [nia 2021-02-12]
 	Updated archivers/zutils to 1.10 [nia 2021-02-12]
 	Added textproc/lok version 0.1.2 [pin 2021-02-12]
+	Added www/py-socks version 1.2.0 [adam 2021-02-12]
+	Added www/py-httpx-socks version 0.3.1 [adam 2021-02-12]
+	Updated www/py-aiohttp-socks to 0.5.5 [adam 2021-02-12]
+	Updated databases/py-pypika to 0.47.4 [adam 2021-02-12]
