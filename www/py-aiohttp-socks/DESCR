@@ -1,1 +1,3 @@
-SOCKS proxy connector for aiohttp. SOCKS4(a) and SOCKS5 are supported.
+The aiohttp-socks package provides a proxy connector for aiohttp. Supports
+SOCKS4(a), SOCKS5, HTTP (tunneling) as well as Proxy chains. It uses
+python-socks for core proxy functionality.
