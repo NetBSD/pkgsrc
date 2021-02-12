@@ -1,0 +1,2 @@
+Patch for graphics driver 'dvipdfmx' to support correct scaling
+in vertical direction of Japanese pTeX/upTeX.
