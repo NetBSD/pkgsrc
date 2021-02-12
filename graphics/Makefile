@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.922 2021/02/06 11:07:52 mef Exp $
+# $NetBSD: Makefile,v 1.923 2021/02/12 02:53:40 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -730,6 +730,8 @@ SUBDIR+=	tex-pstricks
 SUBDIR+=	tex-pstricks-add
 SUBDIR+=	tex-pstricks-add-doc
 SUBDIR+=	tex-pstricks-doc
+SUBDIR+=	tex-qrcode
+SUBDIR+=	tex-qrcode-doc
 SUBDIR+=	tex-repere
 SUBDIR+=	tex-repere-doc
 SUBDIR+=	tex-roex
