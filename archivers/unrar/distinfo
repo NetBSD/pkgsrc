@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.81 2020/07/01 07:54:38 adam Exp $
+$NetBSD: distinfo,v 1.82 2021/02/12 07:20:38 nia Exp $
 
-SHA1 (unrarsrc-5.9.4.tar.gz) = 7c907ede1aded10449bb5a766d268d909ea51845
-RMD160 (unrarsrc-5.9.4.tar.gz) = e643be6a704c84523d9bec98379250bf6b0ef08d
-SHA512 (unrarsrc-5.9.4.tar.gz) = 4c026bc12c38314c7df6e1b2f296be681fffa4ba525e378809063519cb5d51889fe8d3cbce16e802023354f02b45b1bcc672b79a6fa81b4baa13a374ce22c8f1
-Size (unrarsrc-5.9.4.tar.gz) = 229921 bytes
+SHA1 (unrarsrc-6.0.3.tar.gz) = 681885d95063ce335c988c4b3847b48713b59a1e
+RMD160 (unrarsrc-6.0.3.tar.gz) = 9230c63a6ea083c1bac4ff271833b9f37d237750
+SHA512 (unrarsrc-6.0.3.tar.gz) = 1ec20e7a122cb7f48936c691a8c3dc96b4dd989aa8416e6a96332733a0839490996baa22f709af3eb07be17e5987d871f995b5dbc36284cb951bed8047bdfb7c
+Size (unrarsrc-6.0.3.tar.gz) = 232331 bytes
