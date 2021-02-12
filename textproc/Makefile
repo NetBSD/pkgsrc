@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1193 2021/02/07 20:10:18 adam Exp $
+# $NetBSD: Makefile,v 1.1194 2021/02/12 08:16:35 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -464,6 +464,7 @@ SUBDIR+=	libyaml
 SUBDIR+=	link-grammar
 SUBDIR+=	lit2epub
 SUBDIR+=	log4cpp
+SUBDIR+=	lok
 SUBDIR+=	lout
 SUBDIR+=	lowdown
 SUBDIR+=	lq-sp
