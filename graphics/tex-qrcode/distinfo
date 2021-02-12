@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/12 02:52:06 markd Exp $
+
+SHA1 (qrcode.r36065.tar.xz) = f01bec045549a30d6a9b62acabaa1bd920c3718c
+RMD160 (qrcode.r36065.tar.xz) = 13ec7e910ec67d44e7359fe910c58b7bf3457d7e
+SHA512 (qrcode.r36065.tar.xz) = 65ecc00d46d06f8a36cb1f170c12692cf7ef8c0cf9e68bbdc6a7da6b0a7f5fcda6a2e065b8a474609556518ab07c2d12f19a9fdaa0b6339aba94cf35184e26f9
+Size (qrcode.r36065.tar.xz) = 19636 bytes
