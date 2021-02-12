@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.937 2021/02/11 21:11:10 markd Exp $
+# $NetBSD: Makefile,v 1.938 2021/02/12 13:43:14 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -147,6 +147,7 @@ SUBDIR+=	dbus-python-common
 SUBDIR+=	dbus-sharp
 SUBDIR+=	dbus-sharp-glib
 SUBDIR+=	dc-tools
+SUBDIR+=	ddiff
 SUBDIR+=	dd_rescue
 SUBDIR+=	dd_rhelp
 SUBDIR+=	ddrescue
