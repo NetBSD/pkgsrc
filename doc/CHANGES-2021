@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1021 2021/02/12 07:28:30 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1022 2021/02/12 08:17:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1293,3 +1293,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/unrar to 6.0.3 [nia 2021-02-12]
 	Updated archivers/libunrar to 6.0.3 [nia 2021-02-12]
 	Updated archivers/zutils to 1.10 [nia 2021-02-12]
+	Added textproc/lok version 0.1.2 [pin 2021-02-12]
