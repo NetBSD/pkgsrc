@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/12 02:15:02 markd Exp $
+
+SHA1 (jfmutil.r55044.tar.xz) = a1e32392574fc1557c81501de86978d8106a9d98
+RMD160 (jfmutil.r55044.tar.xz) = e37145ba9eb6bd0d91f61d52b5d38c66b6d994b2
+SHA512 (jfmutil.r55044.tar.xz) = ba0c853d1624ef00407e9eb4c6051fa9f71f505e0e55ea2a698d4a9f7fee241c1339d46e873d77573252c781ccacb05b9d447b80aa43887ad76da667977c666b
+Size (jfmutil.r55044.tar.xz) = 25772 bytes
