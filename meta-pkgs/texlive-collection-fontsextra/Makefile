@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/12/03 19:33:42 markd Exp $
+# $NetBSD: Makefile,v 1.22 2021/02/12 03:33:47 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2020pre2
+PKGNAME=	texlive-${DISTNAME}-2020pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54138
@@ -284,7 +284,7 @@ DEPENDS+=	tex-staves-[0-9]*:../../fonts/tex-staves
 # depend step
 # depend stickstoo
 DEPENDS+=	tex-stix-[0-9]*:../../fonts/tex-stix
-# depend stix2-otf
+DEPENDS+=	tex-stix2-otf-[0-9]*:../../fonts/tex-stix2-otf
 # depend stix2-type1
 DEPENDS+=	tex-superiors-[0-9]*:../../fonts/tex-superiors
 # depend svrsymbols
