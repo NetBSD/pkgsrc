@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2021/02/12 22:28:03 cjep Exp $
+# $NetBSD: Makefile,v 1.118 2021/02/12 22:53:14 cjep Exp $
 
 DISTNAME=	screen-4.8.0
 PKGREVISION=	3
@@ -44,10 +44,6 @@ SUBST_STAGE.paths=	pre-configure
 PLIST_VARS+=		terminfo
 
 .include "../../mk/compiler.mk"
-
-.if ${OPSYS} == "OpenBSD"
-CFLAGS+=	-D_OpenBSD_
-.endif
 
 .if ${OPSYS} == "SunOS"
 .  if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
