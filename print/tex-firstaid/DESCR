@@ -1,0 +1,6 @@
+This package contains some first aid for LaTeX packages or
+classes that require updates because of internal changes to the
+LaTeX kernel that are not yet reflected in the package's or
+class's code. The file latex2e-first-aid-for-external-files.ltx
+provided by this package is meant to be loaded during format
+generation and not by the user.
