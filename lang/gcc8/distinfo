@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2020/09/17 22:04:15 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2021/02/13 15:56:16 maya Exp $
 
 SHA1 (gcc-8.4.0.tar.xz) = 00ddb177b04caffd40f7af0175d5b3c8e5442545
 RMD160 (gcc-8.4.0.tar.xz) = 4b3890e8865fae1d2b91166fb98e1097f5401d4a
@@ -13,13 +13,14 @@ SHA1 (patch-fixincludes_fixincl.x) = f4d3504db0480f8a3443a684e0132a521a06b026
 SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
 SHA1 (patch-gcc_Makefile.in) = d96a57a098e49a2c5ea6478dd5d22aba584fc1bc
 SHA1 (patch-gcc_config.gcc) = 4a971d1df7f05cfaefdf462d1b7c6dea1e838713
-SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = b10ef4b9ad39e605fc4e2a0c8dffdae677842e94
+SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = 2ca1343216902252fab1fbc28b6bdfbf1b7f110b
 SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = bf45de53dfbf2cf5298cc8836996e19e2fd67274
 SHA1 (patch-gcc_config_aarch64_aarch64.h) = 64e7a12701f14fea94693908ab0581677d1b9606
 SHA1 (patch-gcc_config_aarch64_t-aarch64-netbsd) = 29de4fe018f7cecf740bc596d8205f8980de5bfa
 SHA1 (patch-gcc_config_arm_arm.h) = b668b6753e375e57bc4fbc3e5726f60f4808906e
 SHA1 (patch-gcc_config_netbsd-elf.h) = e392918cce01627d64d4153329775c7ad03b4a45
 SHA1 (patch-gcc_config_netbsd-protos.h) = 54641de17fa2c9459497f57fd7fc1e23372b284c
+SHA1 (patch-gcc_config_sparc_sparc.c) = 45e792fdef8de3d37577660c59fcbe0e05f9a494
 SHA1 (patch-gcc_config_t-netbsd) = 208a90f7127ad0a6a3573670b441af56716c1b1b
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
