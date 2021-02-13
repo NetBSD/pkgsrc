@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/05/01 02:30:51 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/02/13 04:54:40 markd Exp $
 
-SHA1 (graphics-def.doc.r54522.tar.xz) = 41892ed200d035998af1db26ca5d7c969bb05b29
-RMD160 (graphics-def.doc.r54522.tar.xz) = ae0ac64375f62791b0adfac052b28dff7b75790e
-SHA512 (graphics-def.doc.r54522.tar.xz) = b6797d38a58e51a205bbd00c6c05719c16bd96d9924e9ac8b5f44fae32dd88c109f3ca8432b1ae84874144707f6afb082c40a7988c31007f03457e3c28aef095
-Size (graphics-def.doc.r54522.tar.xz) = 2676 bytes
+SHA1 (graphics-def.doc.r56555.tar.xz) = de7190e0d008da20895b23694a72cb96eb5c2bb6
+RMD160 (graphics-def.doc.r56555.tar.xz) = e28de2df564c77bed2c0a1e08882088050e4ad2b
+SHA512 (graphics-def.doc.r56555.tar.xz) = e5a194dcb7df54be76fe48cd560da60b1a53c6674b0fc1e6fe49abd75bbeea5df3db55d3b1ddd3984d50eb2ea99cc364580e5451a43ec4cd16ed8debfdba8268
+Size (graphics-def.doc.r56555.tar.xz) = 600 bytes
