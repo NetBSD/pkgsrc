@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.6 2020/09/17 12:26:38 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2021/02/13 15:56:17 maya Exp $
 
 SHA1 (gcc-9.3.0.tar.xz) = b746688bf045a316fc92c3528138ad10d0822b6b
 RMD160 (gcc-9.3.0.tar.xz) = e0ade31726b8fbb1eb308e2b1383a79633aef996
 SHA512 (gcc-9.3.0.tar.xz) = 4b9e3639eef6e623747a22c37a904b4750c93b6da77cf3958d5047e9b5ebddb7eebe091cc16ca0a227c0ecbd2bf3b984b221130f269a97ee4cc18f9cf6c444de
 Size (gcc-9.3.0.tar.xz) = 70533868 bytes
 SHA1 (patch-gcc_Makefile.in) = d96a57a098e49a2c5ea6478dd5d22aba584fc1bc
+SHA1 (patch-gcc_config_sparc_sparc.c) = a415d1b23d6bf0c9c3c492787274929a291b78f2
 SHA1 (patch-gcc_gimplify.c) = f933a033d4a6c11fa82c8c9c6785842ba7993862
 SHA1 (patch-libgfortran_io_format.c) = 9bbc5e4f6277bdec785b3690fd08259939a2aa1a
 SHA1 (patch-libgfortran_io_list__read.c) = 589cdb8dcd180b781ededc086e8775224fca5779
