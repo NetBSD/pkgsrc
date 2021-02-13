@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/11/01 20:54:11 joerg Exp $
+$NetBSD: distinfo,v 1.2 2021/02/13 21:46:26 adam Exp $
 
-SHA1 (IMAPClient-2.1.0.tar.gz) = 73f5b01aeb48ecc1b96bd5625778eb42ab3e40df
-RMD160 (IMAPClient-2.1.0.tar.gz) = b4bd5962eeed982f07e3f40539125f906c283a4d
-SHA512 (IMAPClient-2.1.0.tar.gz) = 57e5824504f2667cf41ac4983130e16a5ea73ea37f29cdb16295eb725b56eda55db26a12e380acb579ef6b8540d38ae6badac5dd5b644d4419cbe9151f634e70
-Size (IMAPClient-2.1.0.tar.gz) = 85925 bytes
+SHA1 (IMAPClient-2.2.0.zip) = 0021e48abea48c3a200269e67c9b0eabb76e12a3
+RMD160 (IMAPClient-2.2.0.zip) = b60d423d0d3bc82b300a6f035f503f5a899a9687
+SHA512 (IMAPClient-2.2.0.zip) = f295cd1ab3cd9d0d2db695cdd97cfb8e5b2320888d09c4d641feabbe64fb7f59ee18cb8709f784546233a721a0b9fa5329a58990483bc6263ee7fdf1dd959d32
+Size (IMAPClient-2.2.0.zip) = 257570 bytes
