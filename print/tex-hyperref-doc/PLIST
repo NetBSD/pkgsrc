@@ -1,20 +1,18 @@
-@comment $NetBSD: PLIST,v 1.6 2020/05/03 11:57:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/02/13 05:15:43 markd Exp $
 share/texmf-dist/doc/latex/hyperref/ChangeLog.txt
 share/texmf-dist/doc/latex/hyperref/README.md
 share/texmf-dist/doc/latex/hyperref/backref.pdf
-share/texmf-dist/doc/latex/hyperref/cmmi10-22.gif
-share/texmf-dist/doc/latex/hyperref/cmsy10-21.gif
+share/texmf-dist/doc/latex/hyperref/hyperref-doc.css
+share/texmf-dist/doc/latex/hyperref/hyperref-doc.html
+share/texmf-dist/doc/latex/hyperref/hyperref-doc.pdf
+share/texmf-dist/doc/latex/hyperref/hyperref-doc2.html
+share/texmf-dist/doc/latex/hyperref/hyperref-doc3.html
+share/texmf-dist/doc/latex/hyperref/hyperref-doc4.html
+share/texmf-dist/doc/latex/hyperref/hyperref-doc5.html
+share/texmf-dist/doc/latex/hyperref/hyperref-doc6.html
+share/texmf-dist/doc/latex/hyperref/hyperref-doc7.html
 share/texmf-dist/doc/latex/hyperref/hyperref.pdf
 share/texmf-dist/doc/latex/hyperref/manifest.txt
-share/texmf-dist/doc/latex/hyperref/manual.css
-share/texmf-dist/doc/latex/hyperref/manual.html
-share/texmf-dist/doc/latex/hyperref/manual.pdf
-share/texmf-dist/doc/latex/hyperref/manual2.html
-share/texmf-dist/doc/latex/hyperref/manual3.html
-share/texmf-dist/doc/latex/hyperref/manual4.html
-share/texmf-dist/doc/latex/hyperref/manual5.html
-share/texmf-dist/doc/latex/hyperref/manual6.html
-share/texmf-dist/doc/latex/hyperref/manual7.html
 share/texmf-dist/doc/latex/hyperref/nameref.pdf
 share/texmf-dist/doc/latex/hyperref/paper.pdf
 share/texmf-dist/doc/latex/hyperref/slides.pdf
