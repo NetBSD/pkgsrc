@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/06 21:06:00 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/02/13 04:38:40 markd Exp $
 
-SHA1 (tex-fancyhdr-49886/fancyhdr.doc.tar.xz) = c1b50d4813869c3d561405191bc63437aeb100f2
-RMD160 (tex-fancyhdr-49886/fancyhdr.doc.tar.xz) = 7eda1058cc02b4c48d36a2b9c99428914941d65b
-SHA512 (tex-fancyhdr-49886/fancyhdr.doc.tar.xz) = 08f1f88c884eefd829c641d37e1efd8ac01578fca4c69aaa43436ac33239ca310ce00858cfe42c7b2a12b8ab3e0f8fb03f30c94071deceeeac52d663e2944f48
-Size (tex-fancyhdr-49886/fancyhdr.doc.tar.xz) = 717752 bytes
+SHA1 (fancyhdr.doc.r57672.tar.xz) = b75bb877c1b4557c3b77f84c9708997b9e8c85b3
+RMD160 (fancyhdr.doc.r57672.tar.xz) = b0cea40d984a6907fe620049729fe165555784d4
+SHA512 (fancyhdr.doc.r57672.tar.xz) = 6b054701df4a35a4422f0248f6fed134f3321e8fc194b7095f5b0824f6a1d325db23cbe34e973dee061c5a571b76b61618d482f3fa2219911c34c981ac51a1ea
+Size (fancyhdr.doc.r57672.tar.xz) = 784500 bytes
