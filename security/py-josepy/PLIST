@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/22 11:45:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/13 21:24:06 adam Exp $
 bin/jws-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -75,6 +75,9 @@ ${PYSITELIB}/josepy/testdata/csr-san.pem
 ${PYSITELIB}/josepy/testdata/csr.der
 ${PYSITELIB}/josepy/testdata/csr.pem
 ${PYSITELIB}/josepy/testdata/dsa512_key.pem
+${PYSITELIB}/josepy/testdata/ec_p256_key.pem
+${PYSITELIB}/josepy/testdata/ec_p384_key.pem
+${PYSITELIB}/josepy/testdata/ec_p521_key.pem
 ${PYSITELIB}/josepy/testdata/rsa1024_key.pem
 ${PYSITELIB}/josepy/testdata/rsa2048_cert.pem
 ${PYSITELIB}/josepy/testdata/rsa2048_key.pem
