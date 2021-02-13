@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/23 23:13:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/13 10:56:29 markd Exp $
+share/texmf-dist/tex/latex/filehook/filehook-2019.sty
+share/texmf-dist/tex/latex/filehook/filehook-2020.sty
 share/texmf-dist/tex/latex/filehook/filehook-fink.sty
 share/texmf-dist/tex/latex/filehook/filehook-listings.sty
 share/texmf-dist/tex/latex/filehook/filehook-memoir.sty
