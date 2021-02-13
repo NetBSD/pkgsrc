@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/05/10 23:27:32 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/02/13 10:22:28 markd Exp $
 
-SHA1 (beamer.r55046.tar.xz) = 18a9872b1fa8b10c0c0c294e5193444c56a996cb
-RMD160 (beamer.r55046.tar.xz) = d4993c8cce3d5132da4591028e4ba54814353be9
-SHA512 (beamer.r55046.tar.xz) = 0485dcb99a1bdde0941a1fe2e6dcbac27034cbd3bacf1668a9d7b34d0c0c2648bd18a8a66a2f507d0c283dae95b9b6a9240b1e1cd8f6329ef99e9acf8c33459f
-Size (beamer.r55046.tar.xz) = 165324 bytes
+SHA1 (beamer.r57701.tar.xz) = ba66cc60202363523c0da3c36b4444864716e34c
+RMD160 (beamer.r57701.tar.xz) = 008eadf64628b3cba15ad068b7a7574079a47042
+SHA512 (beamer.r57701.tar.xz) = 7ec6eaeb005abc876bd10dfe622727c06702538bbb3eb0bc933187ffcacdb47f70e1184f1cb199f4b96989d82a717dbbad9138bb0857078e037415db7e8a27ae
+Size (beamer.r57701.tar.xz) = 165776 bytes
