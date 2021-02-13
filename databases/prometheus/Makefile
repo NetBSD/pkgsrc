@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2021/01/23 14:22:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45 2021/02/13 19:20:55 adam Exp $
 
 # Important: UI has to be manually built. See instructions below.
 
-DISTNAME=	prometheus-2.23.0
-PKGREVISION=	3
+DISTNAME=	prometheus-2.24.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ LICENSE=	apache-2.0
 
 # To generate UI distfile, install devel/yarn, and:
 # tar zxf ${DISTNAME}${EXTRACT_SUFX}
-# cd web/ui/react-app
+# cd ${DISTNAME}/web/ui/react-app
 # yarn --frozen-lockfile
 # env PUBLIC_URL=. yarn build
 # chmod -x build/favicon.ico build/manifest.json
