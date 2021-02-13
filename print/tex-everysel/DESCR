@@ -1,0 +1,8 @@
+The package provided hooks whose arguments are executed just
+after LaTeX has loaded a new font by means of \selectfont. It
+has become obsolete with LaTeX versions 2021/01/05 or newer,
+since LaTeX now provides its own hooks to fulfill this task.
+For newer versions of LaTeX everysel only provides macros using
+LaTeX's hook management due to compatibility reasons. See
+lthooks-doc.pdf for instructions how to use lthooks instead of
+everysel.
