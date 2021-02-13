@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:33:32 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2021/02/13 04:11:52 markd Exp $
 
 DISTNAME=	amscls
-PKGNAME=	tex-${DISTNAME}-2018	# actually 2.20.4
-TEXLIVE_REV=	46099
+PKGNAME=	tex-${DISTNAME}-2020	# actually 2.20.6
+TEXLIVE_REV=	55378
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/amscls
@@ -14,6 +14,5 @@ DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-url>=3.2:../../print/tex-url
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
