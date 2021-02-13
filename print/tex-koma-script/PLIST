@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/05/10 03:56:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/02/13 11:02:09 markd Exp $
 share/texmf-dist/doc/latex/koma-script/INSTALL.txt
 share/texmf-dist/doc/latex/koma-script/INSTALLD.txt
 share/texmf-dist/doc/latex/koma-script/README
@@ -31,7 +31,6 @@ share/texmf-dist/doc/latex/koma-script/scrreprt.html
 share/texmf-dist/doc/latex/koma-script/scrtime.html
 share/texmf-dist/doc/latex/koma-script/scrwfile.html
 share/texmf-dist/doc/latex/koma-script/tocbasic.html
-share/texmf-dist/doc/latex/koma-script/tocstyle.pdf
 share/texmf-dist/doc/latex/koma-script/typearea.html
 share/texmf-dist/source/latex/koma-script/Makefile
 share/texmf-dist/source/latex/koma-script/Makefile.baseinit
@@ -204,6 +203,8 @@ share/texmf-dist/source/latex/koma-script/scrlayer-fancyhdr.dtx
 share/texmf-dist/source/latex/koma-script/scrlayer-notecolumn.dtx
 share/texmf-dist/source/latex/koma-script/scrlayer-scrpage.dtx
 share/texmf-dist/source/latex/koma-script/scrlayer.dtx
+share/texmf-dist/source/latex/koma-script/scrlfile-hook.dtx
+share/texmf-dist/source/latex/koma-script/scrlfile-patcholdlatex.dtx
 share/texmf-dist/source/latex/koma-script/scrlfile.dtx
 share/texmf-dist/source/latex/koma-script/scrlogo.dtx
 share/texmf-dist/source/latex/koma-script/scrmain.ins
@@ -213,7 +214,6 @@ share/texmf-dist/source/latex/koma-script/scrstrop.inc
 share/texmf-dist/source/latex/koma-script/scrtime.dtx
 share/texmf-dist/source/latex/koma-script/scrwfile.dtx
 share/texmf-dist/source/latex/koma-script/tocbasic.dtx
-share/texmf-dist/source/latex/koma-script/tocstyle.dtx
 share/texmf-dist/tex/latex/koma-script/DIN.lco
 share/texmf-dist/tex/latex/koma-script/DIN5008A.lco
 share/texmf-dist/tex/latex/koma-script/DIN5008B.lco
@@ -254,7 +254,10 @@ share/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
 share/texmf-dist/tex/latex/koma-script/scrlayer.sty
 share/texmf-dist/tex/latex/koma-script/scrletter.cls
 share/texmf-dist/tex/latex/koma-script/scrletter.sty
+share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+share/texmf-dist/tex/latex/koma-script/scrlfile-patcholdlatex.sty
 share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+share/texmf-dist/tex/latex/koma-script/scrlogo.sty
 share/texmf-dist/tex/latex/koma-script/scrlttr2.cls
 share/texmf-dist/tex/latex/koma-script/scrreport.cls
 share/texmf-dist/tex/latex/koma-script/scrreprt.cls
@@ -266,6 +269,5 @@ share/texmf-dist/tex/latex/koma-script/scrwfile.sty
 share/texmf-dist/tex/latex/koma-script/setspace.hak
 share/texmf-dist/tex/latex/koma-script/standardsections.hak
 share/texmf-dist/tex/latex/koma-script/tocbasic.sty
-share/texmf-dist/tex/latex/koma-script/tocstyle.sty
 share/texmf-dist/tex/latex/koma-script/typearea.sty
 share/texmf-dist/tex/latex/koma-script/visualize.lco
