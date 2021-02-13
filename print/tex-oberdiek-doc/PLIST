@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2020/05/03 05:30:42 markd Exp $
-share/texmf-dist/doc/latex/oberdiek/README.txt
+@comment $NetBSD: PLIST,v 1.9 2021/02/13 05:31:12 markd Exp $
+share/texmf-dist/doc/latex/oberdiek/README.md
 share/texmf-dist/doc/latex/oberdiek/aliascnt.pdf
 share/texmf-dist/doc/latex/oberdiek/bmpsize.pdf
 share/texmf-dist/doc/latex/oberdiek/centernot.pdf
@@ -20,7 +20,6 @@ share/texmf-dist/doc/latex/oberdiek/holtxdoc.pdf
 share/texmf-dist/doc/latex/oberdiek/hopatch.pdf
 share/texmf-dist/doc/latex/oberdiek/hypbmsec.pdf
 share/texmf-dist/doc/latex/oberdiek/hypcap.pdf
-share/texmf-dist/doc/latex/oberdiek/hypdestopt.pdf
 share/texmf-dist/doc/latex/oberdiek/hypdoc.pdf
 share/texmf-dist/doc/latex/oberdiek/hypgotoe-example.tex
 share/texmf-dist/doc/latex/oberdiek/hypgotoe.pdf
@@ -29,7 +28,6 @@ share/texmf-dist/doc/latex/oberdiek/ifdraft.pdf
 share/texmf-dist/doc/latex/oberdiek/iflang.pdf
 share/texmf-dist/doc/latex/oberdiek/oberdiek.pdf
 share/texmf-dist/doc/latex/oberdiek/pagegrid.pdf
-share/texmf-dist/doc/latex/oberdiek/pagesel.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcol.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcolfoot.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcolparallel.pdf
