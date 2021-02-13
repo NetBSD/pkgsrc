@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.792 2021/02/13 05:06:50 markd Exp $
+# $NetBSD: Makefile,v 1.793 2021/02/13 05:36:16 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1129,6 +1129,8 @@ SUBDIR+=	tex-outline-doc
 SUBDIR+=	tex-overpic
 SUBDIR+=	tex-pagenote
 SUBDIR+=	tex-pagenote-doc
+SUBDIR+=	tex-pagesel
+SUBDIR+=	tex-pagesel-doc
 SUBDIR+=	tex-pageslts
 SUBDIR+=	tex-paralist
 SUBDIR+=	tex-paralist-doc
