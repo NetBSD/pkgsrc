@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2020/10/25 08:14:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2021/02/13 11:41:17 markd Exp $
 
 DISTNAME=	collection-latexrecommended
-PKGNAME=	texlive-${DISTNAME}-2020
+PKGNAME=	texlive-${DISTNAME}-2020.57472
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54074
+TEXLIVE_REV=	57472
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -27,9 +27,11 @@ DEPENDS+=	tex-cmap-[0-9]*:../../print/tex-cmap
 DEPENDS+=	tex-crop-[0-9]*:../../print/tex-crop
 DEPENDS+=	tex-ctable-[0-9]*:../../print/tex-ctable
 DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
+DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-euenc-[0-9]*:../../fonts/tex-euenc
 DEPENDS+=	tex-euler-[0-9]*:../../print/tex-euler
-DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
+DEPENDS+=	tex-everysel-[0-9]*:../../print/tex-everysel
+DEPENDS+=	tex-everyshi-[0-9]*:../../print/tex-everyshi
 DEPENDS+=	tex-extsizes-[0-9]*:../../print/tex-extsizes
 DEPENDS+=	tex-fancybox-[0-9]*:../../print/tex-fancybox
 DEPENDS+=	tex-fancyref-[0-9]*:../../print/tex-fancyref
@@ -46,7 +48,6 @@ DEPENDS+=	tex-infwarerr-[0-9]*:../../print/tex-infwarerr
 DEPENDS+=	tex-jknapltx-[0-9]*:../../print/tex-jknapltx
 DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 DEPENDS+=	tex-l3experimental-[0-9]*:../../devel/tex-l3experimental
-DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latexbug-[0-9]*:../../devel/tex-latexbug
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
