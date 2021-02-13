@@ -1,5 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/25 05:28:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/13 11:40:09 markd Exp $
 share/texmf-dist/doc/latex/xkeyval/README
 share/texmf-dist/doc/latex/xkeyval/xkeyval.bib
 share/texmf-dist/doc/latex/xkeyval/xkeyval.pdf
+share/texmf-dist/doc/latex/xkeyval/xkveca.cls
+share/texmf-dist/doc/latex/xkeyval/xkvecb.cls
+share/texmf-dist/doc/latex/xkeyval/xkvesa.sty
+share/texmf-dist/doc/latex/xkeyval/xkvesb.sty
+share/texmf-dist/doc/latex/xkeyval/xkvesc.sty
+share/texmf-dist/doc/latex/xkeyval/xkvex1.tex
+share/texmf-dist/doc/latex/xkeyval/xkvex2.tex
+share/texmf-dist/doc/latex/xkeyval/xkvex3.tex
+share/texmf-dist/doc/latex/xkeyval/xkvex4.tex
 share/texmf-dist/doc/latex/xkeyval/xkvpream.ble
