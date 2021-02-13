@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/08/10 06:12:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/02/13 19:23:25 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -37,6 +37,9 @@ ${PYSITELIB}/ldap3/core/exceptions.pyo
 ${PYSITELIB}/ldap3/core/pooling.py
 ${PYSITELIB}/ldap3/core/pooling.pyc
 ${PYSITELIB}/ldap3/core/pooling.pyo
+${PYSITELIB}/ldap3/core/rdns.py
+${PYSITELIB}/ldap3/core/rdns.pyc
+${PYSITELIB}/ldap3/core/rdns.pyo
 ${PYSITELIB}/ldap3/core/results.py
 ${PYSITELIB}/ldap3/core/results.pyc
 ${PYSITELIB}/ldap3/core/results.pyo
@@ -67,6 +70,9 @@ ${PYSITELIB}/ldap3/extend/microsoft/dirSync.pyo
 ${PYSITELIB}/ldap3/extend/microsoft/modifyPassword.py
 ${PYSITELIB}/ldap3/extend/microsoft/modifyPassword.pyc
 ${PYSITELIB}/ldap3/extend/microsoft/modifyPassword.pyo
+${PYSITELIB}/ldap3/extend/microsoft/persistentSearch.py
+${PYSITELIB}/ldap3/extend/microsoft/persistentSearch.pyc
+${PYSITELIB}/ldap3/extend/microsoft/persistentSearch.pyo
 ${PYSITELIB}/ldap3/extend/microsoft/removeMembersFromGroups.py
 ${PYSITELIB}/ldap3/extend/microsoft/removeMembersFromGroups.pyc
 ${PYSITELIB}/ldap3/extend/microsoft/removeMembersFromGroups.pyo
@@ -277,6 +283,9 @@ ${PYSITELIB}/ldap3/strategy/restartable.pyo
 ${PYSITELIB}/ldap3/strategy/reusable.py
 ${PYSITELIB}/ldap3/strategy/reusable.pyc
 ${PYSITELIB}/ldap3/strategy/reusable.pyo
+${PYSITELIB}/ldap3/strategy/safeRestartable.py
+${PYSITELIB}/ldap3/strategy/safeRestartable.pyc
+${PYSITELIB}/ldap3/strategy/safeRestartable.pyo
 ${PYSITELIB}/ldap3/strategy/safeSync.py
 ${PYSITELIB}/ldap3/strategy/safeSync.pyc
 ${PYSITELIB}/ldap3/strategy/safeSync.pyo
