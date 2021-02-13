@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1029 2021/02/13 01:02:35 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1030 2021/02/13 08:02:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1303,3 +1303,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/ddiff version 0.1.0 [pin 2021-02-12]
 	Updated emulators/PC6001VX to 3.7.0 [tsutsui 2021-02-12]
 	Updated ham/hamlib to 4.1nb3 [gdt 2021-02-13]
+	Updated converters/bdf2sfd to 1.1.6 [fcambus 2021-02-13]
