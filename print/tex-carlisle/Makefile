@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:33:44 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2021/02/13 04:34:24 markd Exp $
 
 DISTNAME=	carlisle
-PKGNAME=	tex-${DISTNAME}-2018
-TEXLIVE_REV=	47876
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	56753
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/carlisle
@@ -14,6 +14,5 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
