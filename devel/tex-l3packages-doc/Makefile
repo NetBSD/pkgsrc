@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/04/27 03:26:39 markd Exp $
+# $NetBSD: Makefile,v 1.15 2021/02/13 05:52:46 markd Exp $
 
 DISTNAME=	l3packages.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020
-TEXLIVE_REV=	54131
+PKGNAME=	tex-${DISTNAME:S/./-/}-2020.57600
+TEXLIVE_REV=	57600
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/l3packages
