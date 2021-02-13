@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/10/20 13:03:58 fcambus Exp $
+# $NetBSD: Makefile,v 1.7 2021/02/13 08:02:02 fcambus Exp $
 
-DISTNAME=	bdf2sfd-1.1.5
+DISTNAME=	bdf2sfd-1.1.6
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
