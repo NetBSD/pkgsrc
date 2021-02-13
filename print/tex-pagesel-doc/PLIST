@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/13 05:35:21 markd Exp $
+share/texmf-dist/doc/latex/pagesel/README.md
+share/texmf-dist/doc/latex/pagesel/pagesel.pdf
