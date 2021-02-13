@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/05/10 03:56:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/02/13 05:22:01 markd Exp $
 share/texmf-dist/doc/latex/base/README.md
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
@@ -36,7 +36,16 @@ share/texmf-dist/doc/latex/base/lgc2.pdf
 share/texmf-dist/doc/latex/base/lppl-1-0.txt
 share/texmf-dist/doc/latex/base/lppl-1-1.txt
 share/texmf-dist/doc/latex/base/lppl-1-2.txt
+share/texmf-dist/doc/latex/base/lppl.pdf
 share/texmf-dist/doc/latex/base/lppl.txt
+share/texmf-dist/doc/latex/base/ltfilehook-code.pdf
+share/texmf-dist/doc/latex/base/ltfilehook-code.tex
+share/texmf-dist/doc/latex/base/ltfilehook-doc.pdf
+share/texmf-dist/doc/latex/base/ltfilehook-doc.tex
+share/texmf-dist/doc/latex/base/lthooks-code.pdf
+share/texmf-dist/doc/latex/base/lthooks-code.tex
+share/texmf-dist/doc/latex/base/lthooks-doc.pdf
+share/texmf-dist/doc/latex/base/lthooks-doc.tex
 share/texmf-dist/doc/latex/base/ltluatex.pdf
 share/texmf-dist/doc/latex/base/ltnews.pdf
 share/texmf-dist/doc/latex/base/ltnews.tex
@@ -102,6 +111,12 @@ share/texmf-dist/doc/latex/base/ltnews30.pdf
 share/texmf-dist/doc/latex/base/ltnews30.tex
 share/texmf-dist/doc/latex/base/ltnews31.pdf
 share/texmf-dist/doc/latex/base/ltnews31.tex
+share/texmf-dist/doc/latex/base/ltnews32.pdf
+share/texmf-dist/doc/latex/base/ltnews32.tex
+share/texmf-dist/doc/latex/base/ltshipout-code.pdf
+share/texmf-dist/doc/latex/base/ltshipout-code.tex
+share/texmf-dist/doc/latex/base/ltshipout-doc.pdf
+share/texmf-dist/doc/latex/base/ltshipout-doc.tex
 share/texmf-dist/doc/latex/base/ltx3info.pdf
 share/texmf-dist/doc/latex/base/ltx3info.tex
 share/texmf-dist/doc/latex/base/ltxdoc.pdf
@@ -125,6 +140,8 @@ share/texmf-dist/doc/latex/base/tlc2.pdf
 share/texmf-dist/doc/latex/base/tulm.pdf
 share/texmf-dist/doc/latex/base/usrguide.pdf
 share/texmf-dist/doc/latex/base/usrguide.tex
+share/texmf-dist/doc/latex/base/usrguide3.pdf
+share/texmf-dist/doc/latex/base/usrguide3.tex
 share/texmf-dist/doc/latex/base/utf8ienc.pdf
 share/texmf-dist/doc/latex/base/webcomp.err
 share/texmf-dist/doc/latex/base/webcomp.pdf
