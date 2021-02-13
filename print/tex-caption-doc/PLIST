@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/01 00:15:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/13 10:27:35 markd Exp $
 share/texmf-dist/doc/latex/caption/CHANGELOG
 share/texmf-dist/doc/latex/caption/README
 share/texmf-dist/doc/latex/caption/SUMMARY
 share/texmf-dist/doc/latex/caption/bicaption.pdf
 share/texmf-dist/doc/latex/caption/caption-deu.pdf
 share/texmf-dist/doc/latex/caption/caption-eng.pdf
+share/texmf-dist/doc/latex/caption/caption-light.pdf
 share/texmf-dist/doc/latex/caption/caption-rus.pdf
 share/texmf-dist/doc/latex/caption/ltcaption.pdf
 share/texmf-dist/doc/latex/caption/subcaption.pdf
-share/texmf-dist/doc/latex/caption/totalcount.pdf
