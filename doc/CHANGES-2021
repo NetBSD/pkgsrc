@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1049 2021/02/13 18:08:31 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1050 2021/02/13 18:09:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1421,3 +1421,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/gcc7 to 7.5.0nb4 [maya 2021-02-13]
 	Updated lang/gcc6 to 6.5.0nb6 [maya 2021-02-13]
 	Updated devel/tig to 2.5.2 [fcambus 2021-02-13]
+	Updated sysutils/sfm to 0.3.0 [pin 2021-02-13]
