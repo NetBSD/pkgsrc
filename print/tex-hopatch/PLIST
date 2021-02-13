@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/13 05:00:42 markd Exp $
+share/texmf-dist/tex/latex/hopatch/hopatch-2016-05-16.sty
+share/texmf-dist/tex/latex/hopatch/hopatch.sty
