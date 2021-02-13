@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.791 2021/02/13 05:01:33 markd Exp $
+# $NetBSD: Makefile,v 1.792 2021/02/13 05:06:50 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -771,6 +771,8 @@ SUBDIR+=	tex-hopatch
 SUBDIR+=	tex-hopatch-doc
 SUBDIR+=	tex-hycolor
 SUBDIR+=	tex-hycolor-doc
+SUBDIR+=	tex-hypdestopt
+SUBDIR+=	tex-hypdestopt-doc
 SUBDIR+=	tex-hyper
 SUBDIR+=	tex-hyper-doc
 SUBDIR+=	tex-hypernat
