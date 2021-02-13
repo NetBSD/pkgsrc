@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/03/27 06:07:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/02/13 13:58:03 taca Exp $
 bin/pry${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -117,7 +117,6 @@ ${GEM_LIBDIR}/lib/pry/method/weird_method_locator.rb
 ${GEM_LIBDIR}/lib/pry/object_path.rb
 ${GEM_LIBDIR}/lib/pry/output.rb
 ${GEM_LIBDIR}/lib/pry/pager.rb
-${GEM_LIBDIR}/lib/pry/plugins.rb
 ${GEM_LIBDIR}/lib/pry/prompt.rb
 ${GEM_LIBDIR}/lib/pry/pry_class.rb
 ${GEM_LIBDIR}/lib/pry/pry_instance.rb
