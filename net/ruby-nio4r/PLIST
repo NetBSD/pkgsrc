@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/19 12:54:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/13 13:59:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/nio4r_ext.${RUBY_DLEXT}
@@ -17,6 +17,7 @@ ${GEM_LIBDIR}/ext/libev/README
 ${GEM_LIBDIR}/ext/libev/ev.c
 ${GEM_LIBDIR}/ext/libev/ev.h
 ${GEM_LIBDIR}/ext/libev/ev_epoll.c
+${GEM_LIBDIR}/ext/libev/ev_iouring.c
 ${GEM_LIBDIR}/ext/libev/ev_kqueue.c
 ${GEM_LIBDIR}/ext/libev/ev_linuxaio.c
 ${GEM_LIBDIR}/ext/libev/ev_poll.c
