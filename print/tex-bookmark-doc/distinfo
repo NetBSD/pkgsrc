@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/03 05:30:36 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/13 04:31:18 markd Exp $
 
-SHA1 (bookmark.doc.r53026.tar.xz) = a21d7ed21154f7a61914040c9a5c6701bafa43e5
-RMD160 (bookmark.doc.r53026.tar.xz) = 1bf3d7a0d0e933a5bd033e3a23080bc5153b957f
-SHA512 (bookmark.doc.r53026.tar.xz) = 39ff86ed5dace26339bf93b83e9d41a8d89cf17ba6abbf07be9f9ec72232dd27e88e88291d54c09b2bc1ff8b88bcc40a04c75767ba2f9b35a192dfbb8b6b9100
-Size (bookmark.doc.r53026.tar.xz) = 465408 bytes
+SHA1 (bookmark.doc.r56885.tar.xz) = 5a1d330a18f0fe2a847020c280468f821876af81
+RMD160 (bookmark.doc.r56885.tar.xz) = 48a4776175772c8452e7b2bdd93e743c325b0f86
+SHA512 (bookmark.doc.r56885.tar.xz) = 44491b3165eb356327345f6f7c5b690db6435369e1c58571146982285ef849425935ad03ef1c9bb0e306af740bb6b886b21226093fd083e838da29d09bb005bc
+Size (bookmark.doc.r56885.tar.xz) = 469024 bytes
