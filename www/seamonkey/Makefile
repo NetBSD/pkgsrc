@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2021/02/13 07:07:08 mef Exp $
+# $NetBSD: Makefile,v 1.231 2021/02/13 07:09:29 mef Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.seamonkey-project.org/
 COMMENT=	All-in-one Internet application suite
 LICENSE=	mpl-2.0
 
-DEPENDS+=	nasm>=2.13:../../devel/nasm
+BUILD_DEPENDS+=	nasm>=2.13:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
 MOZILLA_DIR=	
