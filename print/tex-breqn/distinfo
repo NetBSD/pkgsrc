@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/04/27 22:35:39 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/02/13 10:24:11 markd Exp $
 
-SHA1 (breqn.r54801.tar.xz) = b42de19a42fa9113d5da5e5313dccbf7c449ca2e
-RMD160 (breqn.r54801.tar.xz) = 9ea327ecfef9d4f9383f23b7fcaf013cff19b801
-SHA512 (breqn.r54801.tar.xz) = 34227942cd36241395aa91236d1b867817ab99bfa6d2ad367566a93626d05b82ffac93eb343ea287c2f3b62a50373afdd6e00277acb550983f14e2e60213adf9
-Size (breqn.r54801.tar.xz) = 24416 bytes
+SHA1 (breqn.r56422.tar.xz) = c08d098b3e18cab0fb3c586ae425914d002dbdca
+RMD160 (breqn.r56422.tar.xz) = 843ebe71209cac48808f39e6eac8e7ace90a4cf8
+SHA512 (breqn.r56422.tar.xz) = ea1df2ebb14d755225368fafac24e2068b317b56c4a42fb10011f1fb9f233a7d40bd83b0063271ac8efcac67725f32e12e0ef63467cb045bd460abe5f84638f7
+Size (breqn.r56422.tar.xz) = 24368 bytes
