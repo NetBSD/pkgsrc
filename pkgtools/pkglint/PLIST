@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/06/14 11:35:54 rillig Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/02/13 15:30:23 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -140,5 +140,6 @@ gopkg/src/netbsd.org/pkglint/vartype.go
 gopkg/src/netbsd.org/pkglint/vartype_test.go
 gopkg/src/netbsd.org/pkglint/vartypecheck.go
 gopkg/src/netbsd.org/pkglint/vartypecheck_test.go
-man/man1/pkglint.1
-@pkgdir man/cat1
+${PLIST.catinstall0}man/cat1/pkglint.0
+${PLIST.catinstall}man/cat1/pkglint.1
+${PLIST.maninstall}man/man1/pkglint.1
