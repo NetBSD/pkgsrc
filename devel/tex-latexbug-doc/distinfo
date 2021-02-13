@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/04/27 03:26:39 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/02/13 11:04:37 markd Exp $
 
-SHA1 (latexbug.doc.r52414.tar.xz) = c9e6c209070045c2b173b12f72d5e739549791d9
-RMD160 (latexbug.doc.r52414.tar.xz) = d28ac46f6efe8d4dd8cfb5f5f160e0a99894fadb
-SHA512 (latexbug.doc.r52414.tar.xz) = 5e86be0719138bf111b6d655b2aed620be6a490f772906fa676038f2a5f13875d3ebffea2094f8c9001d2e70334002498d8eaf5ef96f14cf8458ea0b03bf8723
-Size (latexbug.doc.r52414.tar.xz) = 186804 bytes
+SHA1 (latexbug.doc.r57299.tar.xz) = 14146aab72180e66d086c60b24944befb983b2ef
+RMD160 (latexbug.doc.r57299.tar.xz) = 1a6a60fdcb64ccee5e9c24567d1c9058ef9fb6a3
+SHA512 (latexbug.doc.r57299.tar.xz) = 48f63935627b204baf755c380cec4e9e1e44ae1f041d7c84849a477e19f836958020c792d81034a1c466aa7ca2dc91ec7bb3dcd4745882efbd37e17a9a24af44
+Size (latexbug.doc.r57299.tar.xz) = 185892 bytes
