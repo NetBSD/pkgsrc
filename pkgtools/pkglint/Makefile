@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.677 2021/01/23 14:23:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.678 2021/02/13 15:30:23 rillig Exp $
 
 PKGNAME=	pkglint-20.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools
 DISTNAME=	tools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
@@ -62,17 +62,24 @@ WRKSRC=		${WRKDIR}/src	# Is set unconditionally by go-package.mk
 
 .include "../../mk/bsd.prefs.mk"
 
-do-install-man: .PHONY
+PLIST_VARS+=		catinstall0 catinstall maninstall
 .if ${MANINSTALL:Mcatinstall}
+INSTALLATION_DIRS+=	man/cat1
 .  if ${CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss]}
-	${INSTALL_MAN} ${WRKSRC.pkglint}/pkglint.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/pkglint.1
+PLIST.catinstall=	yes
 .  else
-	${INSTALL_MAN} ${WRKSRC.pkglint}/pkglint.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
+PLIST.catinstall0=	yes
 .  endif
 .endif
 .if ${MANINSTALL:Mmaninstall}
-	${INSTALL_MAN} ${WRKSRC.pkglint}/pkglint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	man/man1
+PLIST.maninstall=	yes
 .endif
+
+do-install-man: .PHONY
+	${PLIST.catinstall:D:U\:} ${INSTALL_MAN} ${WRKSRC.pkglint}/pkglint.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/pkglint.1
+	${PLIST.catinstall0:D:U\:} ${INSTALL_MAN} ${WRKSRC.pkglint}/pkglint.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/
+	${PLIST.maninstall:D:U\:} ${INSTALL_MAN} ${WRKSRC.pkglint}/pkglint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../devel/go-check/buildlink3.mk"
 .include "../../security/go-crypto/buildlink3.mk"
