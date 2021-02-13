@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2021/02/03 14:25:36 taca Exp $
+$NetBSD: distinfo,v 1.38 2021/02/13 13:56:04 taca Exp $
 
-SHA1 (bundler-2.2.8.gem) = 6703c9681e687e80383db7012d74048284960ada
-RMD160 (bundler-2.2.8.gem) = 82c5990ce02dbbd383aca74bb910d3add271c576
-SHA512 (bundler-2.2.8.gem) = 09e671d09041acebf81b4d00e2d86ad6f267cb80a712875387f6ce56b1776906dbd462015ca0a5a243d850bc2165eb46d5255dee08ef9e11e2ba032bb01b1e35
-Size (bundler-2.2.8.gem) = 387584 bytes
+SHA1 (bundler-2.2.9.gem) = 7fc7fe27a83457d5932ebe3358e638fc7aa87907
+RMD160 (bundler-2.2.9.gem) = 325dec09224d602dae6eaf3f685ad4f5b4e74c2d
+SHA512 (bundler-2.2.9.gem) = cf9ce8aa0b9573f808e8f2cb1fc3159f68433dc415c2766cd143fb080a78bc9ad94595ea539344cd1cc7bdb030033df2bfb97f5117a6c558265547acfcb4434e
+Size (bundler-2.2.9.gem) = 388096 bytes
