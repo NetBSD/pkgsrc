@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1045 2021/02/13 14:05:40 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1046 2021/02/13 14:18:04 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1413,3 +1413,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ruby-nio4r to 2.5.5 [taca 2021-02-13]
 	Updated security/ruby-metasploit-payloads to 2.0.32 [taca 2021-02-13]
 	Updated security/ruby-rex-core to 0.1.16 [taca 2021-02-13]
+	Updated databases/libzdb to 3.2.2 [tnn 2021-02-13]
