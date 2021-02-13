@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1036 2021/02/13 10:23:21 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1037 2021/02/13 11:41:19 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1310,3 +1310,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/ruby-mixlib-archive to 1.1.4 [taca 2021-02-13]
 	Updated devel/ruby-i18n to 1.8.9 [taca 2021-02-13]
 	Updated finance/ruby-activemerchant to 1.119.0 [taca 2021-02-13]
+	Updated databases/postgresql-timescaledb to 2.0.1 [tnn 2021-02-13]
+	Updated databases/promscale to 0.2.0 [tnn 2021-02-13]
