@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1042 2021/02/13 13:58:24 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1043 2021/02/13 14:00:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/ruby-mime-types-data to 3.2021.0212 [taca 2021-02-13]
 	Updated misc/ruby-bundler to 2.2.9 [taca 2021-02-13]
 	Updated misc/ruby-pry to 0.14.0 [taca 2021-02-13]
+	Updated net/ruby-nio4r to 2.5.5 [taca 2021-02-13]
