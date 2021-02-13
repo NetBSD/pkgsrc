@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/05/11 06:37:52 markd Exp $
+# $NetBSD: Makefile,v 1.10 2021/02/13 10:53:23 markd Exp $
 
 DISTNAME=	fancyvrb.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.6
-TEXLIVE_REV=	55018
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.7
+TEXLIVE_REV=	57488
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fancyvrb

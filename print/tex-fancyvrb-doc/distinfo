@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/05/11 06:37:52 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/02/13 10:53:23 markd Exp $
 
-SHA1 (fancyvrb.doc.r55018.tar.xz) = 3f919af188a3da846201c1db8a2b07aff1f8cd6f
-RMD160 (fancyvrb.doc.r55018.tar.xz) = 5e4976f332002a65f56256e3ea2e6c8790a917cd
-SHA512 (fancyvrb.doc.r55018.tar.xz) = d9e27573f13e763bbab1be5235ccb125ce3d0e0f22519c74f40cc0691fb9571c3d8a36d88382270092801b36ac49620f50e62bc8d243bf21ae7406119de7b186
-Size (fancyvrb.doc.r55018.tar.xz) = 134544 bytes
+SHA1 (fancyvrb.doc.r57488.tar.xz) = 6e934c01d09365d2fd8df83aeb23606169462662
+RMD160 (fancyvrb.doc.r57488.tar.xz) = b991f22e377af7f86941add639089eba553752b4
+SHA512 (fancyvrb.doc.r57488.tar.xz) = 1de32c07f17b316e0ad8704f3c800d75ecab9a6e3cf80ce8c725c126e77353ed9685a1d8e9dcd61295f80b975814ea8c67c11b62fe5bfae71cc2ebeffb440d3e
+Size (fancyvrb.doc.r57488.tar.xz) = 132784 bytes
