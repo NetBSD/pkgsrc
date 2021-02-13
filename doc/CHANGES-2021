@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1046 2021/02/13 14:18:04 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.1047 2021/02/13 15:30:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1414,3 +1414,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-metasploit-payloads to 2.0.32 [taca 2021-02-13]
 	Updated security/ruby-rex-core to 0.1.16 [taca 2021-02-13]
 	Updated databases/libzdb to 3.2.2 [tnn 2021-02-13]
+	Updated ham/chirp to 20210212 [gdt 2021-02-13]
