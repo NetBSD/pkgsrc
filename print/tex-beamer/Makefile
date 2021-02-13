@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2020/05/10 23:27:32 markd Exp $
+# $NetBSD: Makefile,v 1.16 2021/02/13 10:22:28 markd Exp $
 
 DISTNAME=	beamer
-PKGNAME=	tex-${DISTNAME}-3.58
-TEXLIVE_REV=	55046
+PKGNAME=	tex-${DISTNAME}-3.61
+TEXLIVE_REV=	57701
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/beamer
@@ -10,6 +10,8 @@ COMMENT=	LaTeX class for producing presentations and slides
 LICENSE=	lppl-1.3c AND gnu-gpl-v2 AND gnu-fdl-v1.3
 
 DEPENDS+=	tex-amscls-[0-9]*:../../print/tex-amscls
+DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
+DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-atbegshi-[0-9]*:../../print/tex-atbegshi
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
