@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/05/05 12:01:05 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/02/13 05:41:37 markd Exp $
 
-SHA1 (tools.r53640.tar.xz) = 83a5f11de55b10a8375fd799d9b62495d536c6d6
-RMD160 (tools.r53640.tar.xz) = 45fdcd0936bc59052d5b5fde79356b858ad99cdd
-SHA512 (tools.r53640.tar.xz) = 1d3386bd098381e0ede5ff0c6cb107867719a54a8109208a1de448881e172265a000d91c6e7d0607af62de0504913e4698f5ee00a710b5dc32a8157faed094d5
-Size (tools.r53640.tar.xz) = 41220 bytes
+SHA1 (tools.r56514.tar.xz) = 6fd715ffeba4d27795006058659261be3c8fac81
+RMD160 (tools.r56514.tar.xz) = cdf502ff3eaa340e7e2cbbbd883779939bd960e0
+SHA512 (tools.r56514.tar.xz) = 2598798421318513c028a6bcd9be4eea18b7cf8fcf20444d860b2954d81895cfbe9e8700fa3cd052fcb50353cb1bd926a047026d8fb07e48aced5d8338a6e464
+Size (tools.r56514.tar.xz) = 41916 bytes
