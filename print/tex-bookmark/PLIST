@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/13 04:31:18 markd Exp $
+share/texmf-dist/tex/latex/bookmark/bkm-dvipdfm-2019-12-03.def
 share/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
+share/texmf-dist/tex/latex/bookmark/bkm-dvips-2019-12-03.def
 share/texmf-dist/tex/latex/bookmark/bkm-dvips.def
-share/texmf-dist/tex/latex/bookmark/bkm-dvipsone.def
+share/texmf-dist/tex/latex/bookmark/bkm-pdftex-2019-12-03.def
 share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
-share/texmf-dist/tex/latex/bookmark/bkm-textures.def
+share/texmf-dist/tex/latex/bookmark/bkm-vtex-2019-12-03.def
 share/texmf-dist/tex/latex/bookmark/bkm-vtex.def
 share/texmf-dist/tex/latex/bookmark/bookmark.sty
