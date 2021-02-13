@@ -1,0 +1,3 @@
+This package supports hyperref's pdfTeX driver. It removes
+unnecessary destinations and shortens the destination names or
+uses numbered destinations to get smaller PDF files.
