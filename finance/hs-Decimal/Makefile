@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 16:44:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/13 08:00:59 mef Exp $
 
 DISTNAME=	Decimal-0.5.1
 CATEGORIES=	finance
@@ -11,5 +11,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
+BUILDLINK_API_DEPENDS.ghc+=	ghc<9.0
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
