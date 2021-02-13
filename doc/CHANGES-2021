@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1034 2021/02/13 10:19:22 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1035 2021/02/13 10:21:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1308,3 +1308,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/ruby-timers to 4.3.3 [taca 2021-02-13]
 	Updated archivers/ruby-ffi-libarchive to 1.0.17 [taca 2021-02-13]
 	Updated archivers/ruby-mixlib-archive to 1.1.4 [taca 2021-02-13]
+	Updated devel/ruby-i18n to 1.8.9 [taca 2021-02-13]
