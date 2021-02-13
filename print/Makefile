@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.793 2021/02/13 05:36:16 markd Exp $
+# $NetBSD: Makefile,v 1.794 2021/02/13 10:47:05 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -640,6 +640,8 @@ SUBDIR+=	tex-europecv
 SUBDIR+=	tex-europecv-doc
 SUBDIR+=	tex-everypage
 SUBDIR+=	tex-everypage-doc
+SUBDIR+=	tex-everysel
+SUBDIR+=	tex-everysel-doc
 SUBDIR+=	tex-exam
 SUBDIR+=	tex-exam-doc
 SUBDIR+=	tex-excludeonly
