@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1039 2021/02/13 13:51:53 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1040 2021/02/13 13:53:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1407,3 +1407,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-xkeyval-doc to 2.8 [mark 2021-02-13]
 	Updated meta-pkgs/texlive-collection-latexrecommended to 2020.57472 [mark 2021-02-13]
 	Updated graphics/ruby-RMagick to 4.2.1 [taca 2021-02-13]
+	Updated mail/ruby-mime-types-data to 3.2021.0212 [taca 2021-02-13]
