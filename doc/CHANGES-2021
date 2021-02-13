@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1028 2021/02/12 22:56:27 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.1029 2021/02/13 01:02:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1302,3 +1302,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs to 14.15.5 [adam 2021-02-12]
 	Added sysutils/ddiff version 0.1.0 [pin 2021-02-12]
 	Updated emulators/PC6001VX to 3.7.0 [tsutsui 2021-02-12]
+	Updated ham/hamlib to 4.1nb3 [gdt 2021-02-13]
