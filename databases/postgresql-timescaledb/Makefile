@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/02/13 11:32:35 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/13 15:16:04 gdt Exp $
 
 DISTNAME=	timescaledb-2.0.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -10,6 +10,12 @@ MAINTAINER=	otis@NetBSD.org
 HOMEPAGE=	https://github.com/timescale/timescaledb
 COMMENT=	The timescaledb extension for PostgreSQL
 LICENSE=	apache-2.0 AND timescale-license
+
+RESTRICTED=		No clear permission granted to distribute
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
