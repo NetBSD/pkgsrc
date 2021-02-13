@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2010/05/17 05:25:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/13 04:34:24 markd Exp $
 share/texmf-dist/tex/latex/carlisle/dotlessj.sty
 share/texmf-dist/tex/latex/carlisle/ltxtable.sty
-share/texmf-dist/tex/latex/carlisle/mylatex.ltx
 share/texmf-dist/tex/latex/carlisle/plain.sty
 share/texmf-dist/tex/latex/carlisle/remreset.sty
 share/texmf-dist/tex/latex/carlisle/scalefnt.sty
