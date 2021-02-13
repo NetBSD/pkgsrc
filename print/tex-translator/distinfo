@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/08/05 10:42:04 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/02/13 11:37:34 markd Exp $
 
-SHA1 (tex-translator-51279/translator.tar.xz) = a6e5b332eeda17d3f40a5858651d5182baf021d0
-RMD160 (tex-translator-51279/translator.tar.xz) = 9dc9ca04fbe81d9812d84a81342791c04585d47b
-SHA512 (tex-translator-51279/translator.tar.xz) = 6105a57724bb880dd4b2166c052aa58abac70fe9cda70db2941195cbb0fd2fd874c8ca1f1b658bcd52f3f00ade88683d2f0f86baca8ed68702caa18c5e2d5e57
-Size (tex-translator-51279/translator.tar.xz) = 25400 bytes
+SHA1 (translator.r56052.tar.xz) = 967362b1592c3bd65efdbd423520c261b14140ef
+RMD160 (translator.r56052.tar.xz) = ae8e7827aaa5f5050e195b66a663563ededaa4bd
+SHA512 (translator.r56052.tar.xz) = 87eb30409270c63236f5933a52d7815b529a4aca0d7ecc2cb7cb69199d0597684cd48e25b2f00be80024f734d2f4067650adf457ef942aa8477359a6be20d886
+Size (translator.r56052.tar.xz) = 25580 bytes
