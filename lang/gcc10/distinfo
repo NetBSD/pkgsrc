@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/10/20 18:37:36 tnn Exp $
+$NetBSD: distinfo,v 1.6 2021/02/13 15:56:17 maya Exp $
 
 SHA1 (gcc-10.2.0.tar.xz) = 8de0aecd3a52bb92b43082df8a9256356d1f03be
 RMD160 (gcc-10.2.0.tar.xz) = 73f182e7d40e5c2988b2b8cd80cfca601f20e9fc
@@ -12,7 +12,8 @@ SHA1 (patch-contrib_download__prerequisites) = 9cdcde21ab174052911447d20762ddfd4
 SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
 SHA1 (patch-gcc_config.host) = 8920ce841f6088b365c9b590e3ea9535bd880b40
-SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = f4d8ab855d0755dfe533053cedde6940cb837ce0
+SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = 87185f5c2e2dbe4195cb19fe6213d2d616d5519b
+SHA1 (patch-gcc_config_sparc_sparc.c) = e9cb956f3769642bcd0ba4a477d16c73dea46014
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
 SHA1 (patch-gcc_ggc-common.c) = 3e325767922ab7d2079fdb9a3d6b6aa531a2fea5
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
