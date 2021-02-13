@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:08:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/13 04:26:35 markd Exp $
 share/texmf-dist/bibtex/bst/babelbib/bababbr3-fl.bst
 share/texmf-dist/bibtex/bst/babelbib/bababbr3-lf.bst
 share/texmf-dist/bibtex/bst/babelbib/bababbr3.bst
@@ -41,3 +41,4 @@ share/texmf-dist/tex/latex/babelbib/russian.bdf
 share/texmf-dist/tex/latex/babelbib/serbian.bdf
 share/texmf-dist/tex/latex/babelbib/spanish.bdf
 share/texmf-dist/tex/latex/babelbib/swedish.bdf
+share/texmf-dist/tex/latex/babelbib/turkish.bdf
