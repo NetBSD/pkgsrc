@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/27 22:35:40 markd Exp $
-share/texmf-dist/doc/latex/pdftexcmds/README.md
-share/texmf-dist/doc/latex/pdftexcmds/pdftexcmds.pdf
+@comment $NetBSD: PLIST,v 1.2 2021/02/13 11:29:44 markd Exp $
+share/texmf-dist/doc/generic/pdftexcmds/README.md
+share/texmf-dist/doc/generic/pdftexcmds/pdftexcmds.bib
+share/texmf-dist/doc/generic/pdftexcmds/pdftexcmds.pdf
