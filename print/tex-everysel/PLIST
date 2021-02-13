@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/13 10:46:04 markd Exp $
+share/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty
+share/texmf-dist/tex/latex/everysel/everysel.sty
