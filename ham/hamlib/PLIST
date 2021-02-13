@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.18 2018/08/21 16:31:34 gdt Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/02/13 01:02:18 gdt Exp $
+bin/ampctl
+bin/ampctld
 bin/rigctl
+bin/rigctlcom
 bin/rigctld
 bin/rigmem
 bin/rigsmtr
 bin/rigswr
 bin/rotctl
 bin/rotctld
+include/hamlib/ampclass.h
+include/hamlib/amplifier.h
+include/hamlib/amplist.h
 include/hamlib/rig.h
 include/hamlib/rig_dll.h
 include/hamlib/rigclass.h
@@ -13,11 +19,13 @@ include/hamlib/riglist.h
 include/hamlib/rotator.h
 include/hamlib/rotclass.h
 include/hamlib/rotlist.h
-info/hamlib.info
 lib/libhamlib++.la
 lib/libhamlib.la
 lib/pkgconfig/hamlib.pc
+man/man1/ampctl.1
+man/man1/ampctld.1
 man/man1/rigctl.1
+man/man1/rigctlcom.1
 man/man1/rigctld.1
 man/man1/rigmem.1
 man/man1/rigsmtr.1
@@ -35,5 +43,3 @@ share/doc/hamlib/LICENSE
 share/doc/hamlib/README
 share/doc/hamlib/README.betatester
 share/doc/hamlib/README.developer
-share/doc/hamlib/html/Hamlib_design.png
-share/doc/hamlib/html/hamlib.html
