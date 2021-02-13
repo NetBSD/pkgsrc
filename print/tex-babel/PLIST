@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/27 22:35:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/02/13 04:21:00 markd Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/UKenglish.sty
@@ -110,8 +110,13 @@ share/texmf-dist/tex/generic/babel/locale/cgg/babel-cgg.ini
 share/texmf-dist/tex/generic/babel/locale/cgg/babel-chiga.tex
 share/texmf-dist/tex/generic/babel/locale/chr/babel-cherokee.tex
 share/texmf-dist/tex/generic/babel/locale/chr/babel-chr.ini
+share/texmf-dist/tex/generic/babel/locale/ckb/babel-centralkurdish-latin.tex
+share/texmf-dist/tex/generic/babel/locale/ckb/babel-centralkurdish-latn.tex
 share/texmf-dist/tex/generic/babel/locale/ckb/babel-centralkurdish.tex
+share/texmf-dist/tex/generic/babel/locale/ckb/babel-ckb-Arab.ini
+share/texmf-dist/tex/generic/babel/locale/ckb/babel-ckb-Latn.ini
 share/texmf-dist/tex/generic/babel/locale/ckb/babel-ckb.ini
+share/texmf-dist/tex/generic/babel/locale/ckb/babel-sorani.tex
 share/texmf-dist/tex/generic/babel/locale/cop/babel-cop.ini
 share/texmf-dist/tex/generic/babel/locale/cop/babel-coptic.tex
 share/texmf-dist/tex/generic/babel/locale/cs/babel-cs.ini
@@ -319,9 +324,19 @@ share/texmf-dist/tex/generic/babel/locale/kln/babel-kalenjin.tex
 share/texmf-dist/tex/generic/babel/locale/kln/babel-kln.ini
 share/texmf-dist/tex/generic/babel/locale/km/babel-khmer.tex
 share/texmf-dist/tex/generic/babel/locale/km/babel-km.ini
+share/texmf-dist/tex/generic/babel/locale/kmr/babel-kmr-Arab.ini
+share/texmf-dist/tex/generic/babel/locale/kmr/babel-kmr-Latn.ini
+share/texmf-dist/tex/generic/babel/locale/kmr/babel-kmr.ini
+share/texmf-dist/tex/generic/babel/locale/kmr/babel-kurmanji.tex
+share/texmf-dist/tex/generic/babel/locale/kmr/babel-northernkurdish-arab.tex
+share/texmf-dist/tex/generic/babel/locale/kmr/babel-northernkurdish-arabic.tex
+share/texmf-dist/tex/generic/babel/locale/kmr/babel-northernkurdish.tex
 share/texmf-dist/tex/generic/babel/locale/kn/babel-kannada.tex
 share/texmf-dist/tex/generic/babel/locale/kn/babel-kn.ini
+share/texmf-dist/tex/generic/babel/locale/ko/babel-ko-Hani.ini
 share/texmf-dist/tex/generic/babel/locale/ko/babel-ko.ini
+share/texmf-dist/tex/generic/babel/locale/ko/babel-korean-han.tex
+share/texmf-dist/tex/generic/babel/locale/ko/babel-korean-hani.tex
 share/texmf-dist/tex/generic/babel/locale/ko/babel-korean.tex
 share/texmf-dist/tex/generic/babel/locale/kok/babel-kok.ini
 share/texmf-dist/tex/generic/babel/locale/kok/babel-konkani.tex
