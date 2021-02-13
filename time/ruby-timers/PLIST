@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/14 15:19:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/13 10:08:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/timers.rb
 ${GEM_LIBDIR}/lib/timers/events.rb
 ${GEM_LIBDIR}/lib/timers/group.rb
 ${GEM_LIBDIR}/lib/timers/interval.rb
+${GEM_LIBDIR}/lib/timers/priority_heap.rb
 ${GEM_LIBDIR}/lib/timers/timer.rb
 ${GEM_LIBDIR}/lib/timers/version.rb
 ${GEM_LIBDIR}/lib/timers/wait.rb
