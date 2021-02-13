@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/08/13 20:42:39 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/02/13 11:19:04 markd Exp $
 
-SHA1 (tex-ms-51784/ms.tar.xz) = 75a60c8a9e7d3d0a7a9fdc00fbb3b0217fd1455e
-RMD160 (tex-ms-51784/ms.tar.xz) = 2dafc29ac1bdf56a5bbaa77000ec5dff75450577
-SHA512 (tex-ms-51784/ms.tar.xz) = 883832298e0135980808249f5af0b28e3dad7941f401e3ac031cd558b9c6b895bde1f5dc459de9f4c5f6ae41d6a6aac08137be09f9a91b26761399868ac7457a
-Size (tex-ms-51784/ms.tar.xz) = 4576 bytes
+SHA1 (ms.r57473.tar.xz) = 48ca7bbaba32bcd74c22771a8ec0ff840bc3ce2c
+RMD160 (ms.r57473.tar.xz) = 22ee79a174d86ced9a4ab8059183aff16887450b
+SHA512 (ms.r57473.tar.xz) = 73d46ed7ba85773f4ba7c261ff0ea8f2e751e53659fc19686bddd9523b160dba5e367c8fcb30a20678e4a3df26c0812a6b771736eef8616e112cbac3a25e7b48
+Size (ms.r57473.tar.xz) = 3064 bytes
