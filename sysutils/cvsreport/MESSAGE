@@ -1,0 +1,10 @@
+===========================================================================
+
+$NetBSD: MESSAGE,v 1.1 2021/02/14 20:55:22 cjep Exp $
+
+Note that cvsreport uses the /proc filesystem. For complete functionality
+please make sure that /proc is mounted if your system supports it.
+
+NetBSD supports the /proc filesystem in the default installation.
+
+===========================================================================
