@@ -1,0 +1,3 @@
+The package provides support for use of babel in documents
+written in Ukrainian. The support is adapted for use under
+legacy TeX engines as well as XeTeX and LuaTeX.
