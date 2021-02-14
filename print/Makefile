@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.795 2021/02/13 10:50:37 markd Exp $
+# $NetBSD: Makefile,v 1.796 2021/02/14 20:49:01 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -254,6 +254,7 @@ SUBDIR+=	tex-auxhook-doc
 SUBDIR+=	tex-babel
 SUBDIR+=	tex-babel-albanian
 SUBDIR+=	tex-babel-basque
+SUBDIR+=	tex-babel-belarusian
 SUBDIR+=	tex-babel-bosnian
 SUBDIR+=	tex-babel-breton
 SUBDIR+=	tex-babel-bulgarian
@@ -278,6 +279,7 @@ SUBDIR+=	tex-babel-icelandic
 SUBDIR+=	tex-babel-interlingua
 SUBDIR+=	tex-babel-irish
 SUBDIR+=	tex-babel-italian
+SUBDIR+=	tex-babel-japanese
 SUBDIR+=	tex-babel-kurmanji
 SUBDIR+=	tex-babel-latin
 SUBDIR+=	tex-babel-latvian
@@ -299,6 +301,7 @@ SUBDIR+=	tex-babel-spanish
 SUBDIR+=	tex-babel-swedish
 SUBDIR+=	tex-babel-thai
 SUBDIR+=	tex-babel-turkish
+SUBDIR+=	tex-babel-ukrainian
 SUBDIR+=	tex-babel-vietnamese
 SUBDIR+=	tex-babel-welsh
 SUBDIR+=	tex-babelbib
