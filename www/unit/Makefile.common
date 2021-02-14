@@ -1,0 +1,60 @@
+# $NetBSD: Makefile.common,v 1.1 2021/02/14 11:56:57 otis Exp $
+#
+# used by www/libunit/Makefile
+# used by www/unit/Makefile
+# used by www/unit-perl/Makefile
+# used by www/unit-php/Makefile
+# used by www/unit-python/Makefile
+# used by www/unit-ruby/Makefile
+
+# Do *not* add any version-specific data here
+
+CATEGORIES=	www
+MASTER_SITES=	https://unit.nginx.org/download/
+
+HOMEPAGE=	https://unit.nginx.org/
+LICENSE=	apache-2.0
+
+.include "../../mk/bsd.prefs.mk"
+
+UNIT_USER?=		unit
+UNIT_GROUP?=		unit
+UNIT_DATADIR?=		${VARBASE}/db/unit
+UNIT_LOGDIR?=		${VARBASE}/log/unit
+UNIT_RUNDIR?=		${VARBASE}/run/unit
+UNIT_PIDDIR?=		${VARBASE}/run
+UNIT_TMPDIR?=		${VARBASE}/tmp
+
+BUILD_DEFS+=		UNIT_DATADIR UNIT_LOGDIR UNIT_PIDDIR VARBASE
+
+PKG_USERS_VARS+=	UNIT_USER
+PKG_GROUPS_VARS+=	UNIT_GROUP
+PKG_GROUPS=		${UNIT_GROUP}
+PKG_USERS=		${UNIT_USER}:${UNIT_GROUP}
+
+PKG_GECOS.${UNIT_USER}=	NGINX Unit server user
+PKG_HOME.${UNIT_USER}=	${UNIT_DATADIR}
+PKG_SHELL.${UNIT_USER}=	${NOLOGIN}
+
+USE_PKGLOCALEDIR=	yes
+HAS_CONFIGURE=		yes
+CONFIGURE_ENV+=		PATH=${PATH}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--ld-opt="-L${PREFIX}/lib -R${PREFIX}/lib"
+CONFIGURE_ARGS+=	--log=${UNIT_LOGDIR}/unit.log
+CONFIGURE_ARGS+=	--modules=${UNIT_EXTENSION_DIR}
+CONFIGURE_ARGS+=	--pid=${UNIT_PIDDIR}/unit.pid
+CONFIGURE_ARGS+=	--state=${UNIT_DATADIR}
+CONFIGURE_ARGS+=	--control=unix:${UNIT_RUNDIR}/control.unit.sock
+CONFIGURE_ARGS+=	--tmp=${UNIT_TMPDIR}
+CONFIGURE_ARGS+=	--user=${UNIT_USER}
+CONFIGURE_ARGS+=	--group=${UNIT_GROUP}
+
+.include "../../wip/unit/options.mk"
+
+INSTALLATION_DIRS+=	sbin ${UNIT_EXTENSION_DIR}
+MAKE_DIRS+=		${UNIT_PIDDIR} ${UNIT_DATADIR} ${UNIT_RUNDIR}
+OWN_DIRS=		${UNIT_LOGDIR} ${UNIT_RUNDIR}
+OWN_DIRS_PERMS+=	${UNIT_DATADIR} ${UNIT_USER} ${UNIT_GROUP} 0700
+
+USE_LANGUAGES=	c

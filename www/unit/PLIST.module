@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.module,v 1.1 2021/02/14 11:56:57 otis Exp $
+${UNIT_EXTENSION_DIR}/${PKGMODNAME}.${SHLIB_SUFFIX}
