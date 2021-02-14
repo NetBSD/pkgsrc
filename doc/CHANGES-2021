@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1066 2021/02/14 11:59:37 otis Exp $
+$NetBSD: CHANGES-2021,v 1.1067 2021/02/14 12:04:45 otis Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1459,3 +1459,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/unit-php version 1.22.0 [otis 2021-02-14]
 	Added www/unit-python version 1.22.0 [otis 2021-02-14]
 	Added www/unit-ruby version 1.22.0 [otis 2021-02-14]
+	Added devel/libunit version 1.22.0 [otis 2021-02-14]
