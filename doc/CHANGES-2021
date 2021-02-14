@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1062 2021/02/14 11:58:06 otis Exp $
+$NetBSD: CHANGES-2021,v 1.1063 2021/02/14 11:58:55 otis Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1455,3 +1455,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/authelia to 4.26.1 [tnn 2021-02-14]
 	Added graphics/charls version 2.2.0 [nros 2021-02-14]
 	Added www/unit version 1.22.0 [otis 2021-02-14]
+	Added www/unit-perl version 1.22.0 [otis 2021-02-14]
