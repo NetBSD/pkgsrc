@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:45 markd Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/14 03:04:33 markd Exp $
 
 DISTNAME=	jadetex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.13
-TEXLIVE_REV=	18835
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.13.57186
+TEXLIVE_REV=	57186
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/jadetex
 COMMENT=	Documentation for tex-jadetex
-
-CONFLICTS=	tex-jadetex<=3.13nb7
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-dist
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
