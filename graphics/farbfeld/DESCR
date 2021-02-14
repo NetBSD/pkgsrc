@@ -1,0 +1,2 @@
+Farbfeld is a lossless image-format designed to be parsed and piped easily.
+It can be compressed easily and beats PNG's filesize in many cases.
