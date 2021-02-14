@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3333 2021/02/11 20:35:57 markd Exp $
+# $NetBSD: Makefile,v 1.3334 2021/02/14 12:05:02 otis Exp $
 #
 
 COMMENT=	Development utilities
@@ -856,6 +856,7 @@ SUBDIR+=	libtool-base
 SUBDIR+=	libtool-fortran
 SUBDIR+=	libtool-info
 SUBDIR+=	libts
+SUBDIR+=	libunit
 SUBDIR+=	libusb
 SUBDIR+=	libusb-compat
 SUBDIR+=	libusb1
