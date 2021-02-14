@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1510 2021/02/14 14:05:16 taca Exp $
+# $NetBSD: Makefile,v 1.1511 2021/02/14 14:10:44 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -941,6 +941,7 @@ SUBDIR+=	ruby-rack16
 SUBDIR+=	ruby-rails-html-sanitizer
 SUBDIR+=	ruby-rails52
 SUBDIR+=	ruby-rails60
+SUBDIR+=	ruby-rails61
 SUBDIR+=	ruby-raindrops
 SUBDIR+=	ruby-request_store
 SUBDIR+=	ruby-rest-client
