@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1054 2021/02/14 00:55:53 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1055 2021/02/14 02:20:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1438,3 +1438,10 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-unicode-data to 1.14 [mark 2021-02-14]
 	Updated print/tex-unicode-data-doc to 1.14 [mark 2021-02-14]
 	Updated meta-pkgs/texlive-collection-basic to 2020.56569 [mark 2021-02-14]
+	Updated fonts/tex-fontools to 2020.57171 [mark 2021-02-14]
+	Updated fonts/tex-fontools-doc to 2020.57171 [mark 2021-02-14]
+	Updated fonts/tex-mf2pt1 to 2.6 [mark 2021-02-14]
+	Updated fonts/tex-mf2pt1-doc to 2.6 [mark 2021-02-14]
+	Added fonts/tex-albatross version 0.3.0 [mark 2021-02-14]
+	Added fonts/tex-albatross-doc version 0.3.0 [mark 2021-02-14]
+	Updated meta-pkgs/texlive-collection-fontutils to 2020.57089 [mark 2021-02-14]
