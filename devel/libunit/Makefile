@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 12:04:30 otis Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/14 13:44:34 otis Exp $
 
 PKGNAME=	libunit-${UNIT_VERSION}
 DISTNAME=	unit-${UNIT_VERSION}
@@ -18,7 +18,7 @@ do-build:
 do-install:
 	${MAKE} -C ${WRKSRC} libunit-install DESTDIR=${DESTDIR}
 
-.include "../../wip/unit/version.mk"
-.include "../../wip/unit/Makefile.common"
+.include "../../www/unit/version.mk"
+.include "../../www/unit/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
