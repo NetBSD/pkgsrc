@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1081 2021/02/14 15:33:25 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1082 2021/02/14 18:59:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1493,3 +1493,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xmlschema to 1.5.1 [adam 2021-02-14]
 	Updated sysutils/puppet to 7.4.0 [taca 2021-02-14]
 	Updated mail/milter-manager to 2.1.5 [taca 2021-02-14]
+	Updated devel/msgpack to 3.3.0 [adam 2021-02-14]
+	Updated textproc/py-phonenumbers to 8.12.18 [adam 2021-02-14]
