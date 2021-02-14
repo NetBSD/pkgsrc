@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/01/27 00:31:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/02/14 21:25:52 markd Exp $
 share/texmf-dist/doc/latex/biblatex/CHANGES.md
 share/texmf-dist/doc/latex/biblatex/README
 share/texmf-dist/doc/latex/biblatex/biber/bltxml/biblatex-examples.bltxml
@@ -36,18 +36,15 @@ share/texmf-dist/doc/latex/biblatex/examples/15-references-by-type-bibtex.pdf
 share/texmf-dist/doc/latex/biblatex/examples/15-references-by-type.tex
 share/texmf-dist/doc/latex/biblatex/examples/16-numeric-prefixed-1-biber.pdf
 share/texmf-dist/doc/latex/biblatex/examples/16-numeric-prefixed-1-bibtex.pdf
-share/texmf-dist/doc/latex/biblatex/examples/16-numeric-prefixed-1-bibtex.tex
 share/texmf-dist/doc/latex/biblatex/examples/16-numeric-prefixed-1.tex
 share/texmf-dist/doc/latex/biblatex/examples/17-numeric-prefixed-2-biber.pdf
 share/texmf-dist/doc/latex/biblatex/examples/17-numeric-prefixed-2-bibtex.pdf
-share/texmf-dist/doc/latex/biblatex/examples/17-numeric-prefixed-2-bibtex.tex
 share/texmf-dist/doc/latex/biblatex/examples/17-numeric-prefixed-2.tex
 share/texmf-dist/doc/latex/biblatex/examples/18-numeric-hybrid-biber.pdf
 share/texmf-dist/doc/latex/biblatex/examples/18-numeric-hybrid-bibtex.pdf
 share/texmf-dist/doc/latex/biblatex/examples/18-numeric-hybrid.tex
 share/texmf-dist/doc/latex/biblatex/examples/19-alphabetic-prefixed-biber.pdf
 share/texmf-dist/doc/latex/biblatex/examples/19-alphabetic-prefixed-bibtex.pdf
-share/texmf-dist/doc/latex/biblatex/examples/19-alphabetic-prefixed-bibtex.tex
 share/texmf-dist/doc/latex/biblatex/examples/19-alphabetic-prefixed.tex
 share/texmf-dist/doc/latex/biblatex/examples/20-indexing-single-biber.pdf
 share/texmf-dist/doc/latex/biblatex/examples/20-indexing-single-bibtex.pdf
