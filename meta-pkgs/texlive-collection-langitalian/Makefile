@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2020/05/10 04:13:26 markd Exp $
+# $NetBSD: Makefile,v 1.11 2021/02/14 22:44:23 markd Exp $
 
 DISTNAME=	collection-langitalian
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54074
+TEXLIVE_REV=	55129
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -15,6 +15,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # amsldoc-it is documentation only
 # amsmath-it is documentation only
 # amsthdoc-it is documentation only
+# depend antanilipsum
 DEPENDS+=	tex-babel-italian-[0-9]*:../../print/tex-babel-italian
 # depend codicefiscaleitaliano
 # fancyhdr-it is documentation only
