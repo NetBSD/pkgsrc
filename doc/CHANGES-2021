@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1068 2021/02/14 13:25:07 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1069 2021/02/14 13:37:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1461,3 +1461,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/unit-ruby version 1.22.0 [otis 2021-02-14]
 	Added devel/libunit version 1.22.0 [otis 2021-02-14]
 	Updated security/ruby-rex-exploitation to 0.1.27 [taca 2021-02-14]
+	Updated devel/ruby-mixlib-shellout to 3.2.5 [taca 2021-02-14]
