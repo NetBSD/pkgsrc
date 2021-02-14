@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/05/10 04:13:25 markd Exp $
+# $NetBSD: Makefile,v 1.15 2021/02/14 20:39:18 markd Exp $
 
 DISTNAME=	collection-langcyrillic
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54074
@@ -13,12 +13,12 @@ COMMENT=	Cyrillic TeX packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
 
-# depend babel-belarusian
+DEPENDS+=	tex-babel-belarusian-[0-9]*:../../print/tex-babel-belarusian
 DEPENDS+=	tex-babel-bulgarian-[0-9]*:../../print/tex-babel-bulgarian
 DEPENDS+=	tex-babel-russian-[0-9]*:../../print/tex-babel-russian
 DEPENDS+=	tex-babel-serbian-[0-9]*:../../print/tex-babel-serbian
 DEPENDS+=	tex-babel-serbianc-[0-9]*:../../print/tex-babel-serbianc
-# depend babel-ukrainian
+DEPENDS+=	tex-babel-ukrainian-[0-9]*:../../print/tex-babel-ukrainian
 # depend churchslavonic
 DEPENDS+=	tex-cmcyr-[0-9]*:../../fonts/tex-cmcyr
 DEPENDS+=	tex-cyrillic-[0-9]*:../../print/tex-cyrillic
