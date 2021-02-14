@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1087 2021/02/14 21:38:36 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1088 2021/02/14 21:42:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1519,3 +1519,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-biblatex-ieee-doc to 1.3d [mark 2021-02-14]
 	Updated print/tex-biblatex-nature to 1.3d [mark 2021-02-14]
 	Updated print/tex-biblatex-nature-doc to 1.3d [mark 2021-02-14]
+	Updated security/pleaser to 0.3.22 [pin 2021-02-14]
