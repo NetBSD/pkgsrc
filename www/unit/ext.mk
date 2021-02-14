@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.1 2021/02/14 11:56:57 otis Exp $
+# $NetBSD: ext.mk,v 1.2 2021/02/14 13:43:39 otis Exp $
 #
 # NGINX Unit extension package framework, for bundled extensions.
 #
@@ -6,18 +6,18 @@
 # add dependencies, and add the appropriate --with-configure-arg, then include
 # bsd.pkg.mk.
 #
-# used by wip/unit-perl/Makefile
-# used by wip/unit-php/Makefile
-# used by wip/unit-python/Makefile
-# used by wip/unit-ruby/Makefile
+# used by www/unit-perl/Makefile
+# used by www/unit-php/Makefile
+# used by www/unit-python/Makefile
+# used by www/unit-ruby/Makefile
 
 .if !defined(UNITEXT_MK)
 UNITEXT_MK=	defined
 
-.include "../../wip/unit/version.mk"
+.include "../../www/unit/version.mk"
 
-DISTINFO_FILE=	${.CURDIR}/../../wip/unit/distinfo
-PATCHDIR=	${.CURDIR}/../../wip/unit/patches
+DISTINFO_FILE=	${.CURDIR}/../../www/unit/distinfo
+PATCHDIR=	${.CURDIR}/../../www/unit/patches
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,7 +31,7 @@ PLIST_SUBST+=	PKGMODNAME=${MODNAME}.unit
 PLIST_SUBST+=	SHLIB_SUFFIX=${SHLIB_SUFFIX}
 PLIST_SUBST+=	UNIT_EXTENSION_DIR=${UNIT_EXTENSION_DIR}
 
-PLIST_SRC+=	${.CURDIR}/../../wip/unit/PLIST.module
+PLIST_SRC+=	${.CURDIR}/../../www/unit/PLIST.module
 
 INSTALLATION_DIRS+=	${UNIT_EXTENSION_DIR}
 
@@ -50,4 +50,4 @@ do-install:
 
 .endif  # UNITEXT_MK
 
-.include "${.CURDIR}/../../wip/unit/common.mk"
+.include "${.CURDIR}/../../www/unit/common.mk"
