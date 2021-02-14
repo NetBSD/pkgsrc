@@ -1,19 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 11:51:57 nros Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/14 12:55:18 wiz Exp $
 
-GITHUB_PROJECT=	charls
-GITHUB_TAG=	2.2.0
-DISTNAME=	2.2.0
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	charls-2.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=team-charls/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/team-charls/charls/
 COMMENT=	Jpeg-ls codec library
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/charls-2.2.0
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
