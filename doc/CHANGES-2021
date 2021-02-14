@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1071 2021/02/14 13:47:45 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1072 2021/02/14 14:11:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1464,3 +1464,16 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-mixlib-shellout to 3.2.5 [taca 2021-02-14]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.3.31 [taca 2021-02-14]
 	Updated www/ruby-puma to 5.2.1 [taca 2021-02-14]
+	Added devel/ruby-activesupport61 version 6.1.2.1 [taca 2021-02-14]
+	Added devel/ruby-activemodel61 version 6.1.2.1 [taca 2021-02-14]
+	Added devel/ruby-activejob61 version 6.1.2.1 [taca 2021-02-14]
+	Added www/ruby-actionview61 version 6.1.2.1 [taca 2021-02-14]
+	Added www/ruby-actionpack61 version 6.1.2.1 [taca 2021-02-14]
+	Added databases/ruby-activerecord61 version 6.1.2.1 [taca 2021-02-14]
+	Added mail/ruby-actionmailer61 version 6.1.2.1 [taca 2021-02-14]
+	Added mail/ruby-actionmailbox61 version 6.1.2.1 [taca 2021-02-14]
+	Added www/ruby-actioncable61 version 6.1.2.1 [taca 2021-02-14]
+	Added devel/ruby-railties61 version 6.1.2.1 [taca 2021-02-14]
+	Added devel/ruby-activestorage61 version 6.1.2.1 [taca 2021-02-14]
+	Added textproc/ruby-actiontext61 version 6.1.2.1 [taca 2021-02-14]
+	Added www/ruby-rails61 version 6.1.2.1 [taca 2021-02-14]
