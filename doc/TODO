@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20384 2021/02/14 08:25:35 he Exp $
+$NetBSD: TODO,v 1.20385 2021/02/14 09:37:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,6 +367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.11.0
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-20.3.1
@@ -418,6 +419,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aribas-1.64
 	o arirang-1.70
 	o asapm-3.1
+	o asciidoc-9.1.0
 	o asn1c-0.9.27
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
@@ -458,6 +460,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calibre-5.5
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o cascadia-ttf-2102.03
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o cddbd-1.5.2
@@ -636,6 +639,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.18.3 [wip]
+	o gtar-base-1.34
 	o gthumb-3.4.0
 	o gtk4+-4.0 [wip]
 	o gtkglarea-2.1.0
@@ -675,6 +679,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icewm-2.0.0
 	o icinga-base-2.12.3
 	o ike-2.0.1 [pkg/37032]
+	o ilmbase-2.5.5
 	o imapsync-1.678
 	o imp-6.2.12
 	o include-what-you-use-0.15
@@ -754,6 +759,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libressl-3.2.0
 	o libstemmer-2.1.0
 	o libtecla-1.6.3
+	o libuv-1.41.0
 	o libvirt-2.3
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
@@ -845,6 +851,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opal-3.16.2
 	o openafs-1.8
 	o opencsg-1.4.0
+	o openexr-2.5.5
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openslp-2.0.0
@@ -936,6 +943,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
 	o py-hgview-1.9.0
+	o py-hypothesis-6.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-markdown-3.2.2 [drops python-2.x support]
@@ -1040,6 +1048,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
+	o subversion-base-1.14.1
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o swapd-1.0.5
 	o swift-4.0.2
@@ -1087,6 +1096,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ufoai-2.3.1
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
+	o unifont-13.0.06
 	o units-2.12
 	o urlgrabber-3.10.1
 	o userppp-030706
