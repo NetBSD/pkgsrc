@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/05/05 12:01:06 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/02/14 00:50:00 markd Exp $
 
-SHA1 (unicode-data.doc.r54758.tar.xz) = cf24c233f14124b1df1be536974e67d9e0327c38
-RMD160 (unicode-data.doc.r54758.tar.xz) = b37020d2e35733e206eaca2717ea96401aeae578
-SHA512 (unicode-data.doc.r54758.tar.xz) = 42511daaa2e1f7f9aa5cbcd12091dabbf8d6d4a030ec6808d06dd43d6c9c1b74684207f99ed6e87a5f279c73d3d76d5c65a150b0e7a4aa252e8118f512ddc3eb
-Size (unicode-data.doc.r54758.tar.xz) = 3808 bytes
+SHA1 (unicode-data.doc.r56768.tar.xz) = baac8c74743ff6b9a6871d1bf7739b00c9a6bc48
+RMD160 (unicode-data.doc.r56768.tar.xz) = 97f20b918f143c70367fbd232ba14cbfd724bbc1
+SHA512 (unicode-data.doc.r56768.tar.xz) = 1093c6e78d8f8716cec8ed34444d5e95628c2d0be4b61cb3dae72563b2e3acfc1596b5e25dd8c101dbc8ffe15b7483a198c30f459eb76418381be3dc6caadbef
+Size (unicode-data.doc.r56768.tar.xz) = 3820 bytes
