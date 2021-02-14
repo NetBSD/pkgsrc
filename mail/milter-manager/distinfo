@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2015/11/03 23:27:10 agc Exp $
+$NetBSD: distinfo,v 1.28 2021/02/14 15:33:02 taca Exp $
 
-SHA1 (milter-manager-2.0.5.tar.gz) = 47982e63d3515c1df3599c5e70b3aed9fd4662f6
-RMD160 (milter-manager-2.0.5.tar.gz) = c0d64c5001c42d49954f0bafdbc2c6d241ed3e70
-SHA512 (milter-manager-2.0.5.tar.gz) = c78254de0129406cf6c9d747b00e5331d48b7f206718106ba6a4a40265d48d30d0b35b62cea12b1bf0a7a2cfa67d50b713ddbe72ad50f87013439956d8aa05c8
-Size (milter-manager-2.0.5.tar.gz) = 5873997 bytes
+SHA1 (milter-manager-2.1.5.tar.gz) = 26f084ac36a7b0a0c2e30af2afb9bb41fe82184c
+RMD160 (milter-manager-2.1.5.tar.gz) = cf95f4d24f8ee3c680436b30b81810c7d50a96bd
+SHA512 (milter-manager-2.1.5.tar.gz) = a2f01deb6c8cece24d3686e87cd401e460fcc7d8e4f1a41481815864525cfa37828f0f75533f0eb8d7f8d5c8395d5a77dac177b79b7c15cab49e604ea8ae2668
+Size (milter-manager-2.1.5.tar.gz) = 6583279 bytes
 SHA1 (patch-configure) = ee1f31e83354c4c6b38ae1c0d4fda40f28ad92b6
-SHA1 (patch-libev-4.15_ev.c) = 8393cc727fda6a812931e42507e5db2fdf370c33
+SHA1 (patch-module_configuration_ruby_milter-manager-ruby-configuration.c) = 50722053e3db2404d792900f92323ab886ba607a
