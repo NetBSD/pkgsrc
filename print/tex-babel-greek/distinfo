@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/04/27 22:35:37 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/02/14 20:19:45 markd Exp $
 
-SHA1 (babel-greek.r54512.tar.xz) = 49f754292afc5d699e8aee554078f9a6348595a7
-RMD160 (babel-greek.r54512.tar.xz) = dbd1e75fc86154d39ef517a756ed481b02bca4c0
-SHA512 (babel-greek.r54512.tar.xz) = 38db98876386d56f4c9bb96099ee63ca9f54938e3be615d5dd56f31d168d0b9ab1af3b8cea5b806d23da9c5c95cb29edf1cbb8650723ed23c9d16049f847913d
-Size (babel-greek.r54512.tar.xz) = 5748 bytes
+SHA1 (babel-greek.r56904.tar.xz) = 2f599ce4964257818ac78716eb0598b81ab2b232
+RMD160 (babel-greek.r56904.tar.xz) = 1946e7efa9d5c493854fbd7c9c577464594e7f6e
+SHA512 (babel-greek.r56904.tar.xz) = 6b0ab839f2e8a9562c8292fe8f7661a73148754ed816088be25d06537a58ba95ac34d9440bc4f3f35c3b720188b261b432887f9867ff94b51261076f9d8e0160
+Size (babel-greek.r56904.tar.xz) = 5996 bytes
