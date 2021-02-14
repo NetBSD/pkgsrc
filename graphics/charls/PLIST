@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/14 11:51:57 nros Exp $
+include/charls/annotations.h
+include/charls/api_abi.h
+include/charls/charls.h
+include/charls/charls_jpegls_decoder.h
+include/charls/charls_jpegls_encoder.h
+include/charls/jpegls_error.h
+include/charls/public_types.h
+include/charls/version.h
+lib/cmake/charls/charlsConfig-release.cmake
+lib/cmake/charls/charlsConfig.cmake
+lib/libcharls.so
+lib/libcharls.so.2
+lib/libcharls.so.${PKGVERSION}
+lib/pkgconfig/charls.pc
