@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.1 2020/03/15 15:26:22 taca Exp $
+# $NetBSD: hacks.mk,v 1.2 2021/02/14 15:31:23 taca Exp $
 
-.if !defined(RUBY24_BASE_HACKS_MK)
-RUBY24_BASE_HACKS_MK=	defined
+.if !defined(RUBY27_BASE_HACKS_MK)
+RUBY27_BASE_HACKS_MK=	defined
 
 .include "../../mk/compiler.mk"
 
@@ -41,4 +41,4 @@ PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
 .endif
 
-.endif	# RUBY24_BASE_HACKS_MK
+.endif	# RUBY27_BASE_HACKS_MK
