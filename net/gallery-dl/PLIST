@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2021/01/23 20:54:24 leot Exp $
+@comment $NetBSD: PLIST,v 1.51 2021/02/14 20:19:57 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -105,6 +105,9 @@ ${PYSITELIB}/gallery_dl/extractor/dynastyscans.pyo
 ${PYSITELIB}/gallery_dl/extractor/e621.py
 ${PYSITELIB}/gallery_dl/extractor/e621.pyc
 ${PYSITELIB}/gallery_dl/extractor/e621.pyo
+${PYSITELIB}/gallery_dl/extractor/erome.py
+${PYSITELIB}/gallery_dl/extractor/erome.pyc
+${PYSITELIB}/gallery_dl/extractor/erome.pyo
 ${PYSITELIB}/gallery_dl/extractor/exhentai.py
 ${PYSITELIB}/gallery_dl/extractor/exhentai.pyc
 ${PYSITELIB}/gallery_dl/extractor/exhentai.pyo
@@ -300,6 +303,9 @@ ${PYSITELIB}/gallery_dl/extractor/photovogue.pyo
 ${PYSITELIB}/gallery_dl/extractor/piczel.py
 ${PYSITELIB}/gallery_dl/extractor/piczel.pyc
 ${PYSITELIB}/gallery_dl/extractor/piczel.pyo
+${PYSITELIB}/gallery_dl/extractor/pillowfort.py
+${PYSITELIB}/gallery_dl/extractor/pillowfort.pyc
+${PYSITELIB}/gallery_dl/extractor/pillowfort.pyo
 ${PYSITELIB}/gallery_dl/extractor/pinterest.py
 ${PYSITELIB}/gallery_dl/extractor/pinterest.pyc
 ${PYSITELIB}/gallery_dl/extractor/pinterest.pyo
