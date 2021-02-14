@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/14 17:04:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/14 14:57:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -13,4 +13,5 @@ ${GEM_LIBDIR}/lib/rubygems_plugin.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/webhook_command_test.rb
 ${GEM_LIBDIR}/test/yank_command_test.rb
+${PLIST.ruby_plugins}${GEM_PLUGINSDIR}/gemcutter_plugin.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
