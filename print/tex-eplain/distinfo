@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/05/01 02:30:48 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/02/14 03:00:49 markd Exp $
 
-SHA1 (eplain.r54498.tar.xz) = 985f480a097c01df6ef6e6a0e748d871a2628e18
-RMD160 (eplain.r54498.tar.xz) = 062db5a00b57969a3d906d99e53a2e679c45fa89
-SHA512 (eplain.r54498.tar.xz) = d0efa4ed7107a05cdf604af143a3a531733370a2b79e0ed9000cd0d0a2c805a4774dc282f202bf7a431a46bac4982a5f6320444a50666ac96c5996cf1a582e73
-Size (eplain.r54498.tar.xz) = 42168 bytes
+SHA1 (eplain.r57186.tar.xz) = 7c9ea57c13f0dc2feab84f1e9ddfe1e6233baf88
+RMD160 (eplain.r57186.tar.xz) = 1aeaa6a2d6765a230cd7b90c0ba0502f6703cb20
+SHA512 (eplain.r57186.tar.xz) = a5b93a081e9b2201a65bf7e7fb01381480f5c1f31aafaa78c5785981d895a384f1f8db1d474db845c06cd0850cf70ec4bec0e3935b67fe506b8b07512ee97479
+Size (eplain.r57186.tar.xz) = 42280 bytes
