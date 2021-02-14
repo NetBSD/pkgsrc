@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/09/23 15:55:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/14 15:09:30 taca Exp $
 
 DISTNAME=	pcaprub-0.13.0
 CATEGORIES=	net
@@ -9,6 +9,8 @@ COMMENT=	Ruby libpcap bindings
 LICENSE=	gnu-lgpl-v2.1
 
 MAKE_ENV.SunOS+=	cppflags="-Du_int32_t=uint32_t"
+
+RUBY_VERSIONS_INCOMPATIBLE=	30
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../lang/ruby/gem.mk"
