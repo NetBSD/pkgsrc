@@ -1,0 +1,4 @@
+This package provides a japanese option for the babel package.
+It defines all the language definition macros in Japanese.
+Currently this package works with pLaTeX, upLaTeX, XeLaTeX and
+LuaLaTeX.
