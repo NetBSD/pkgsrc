@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1507 2021/02/12 09:33:19 adam Exp $
+# $NetBSD: Makefile,v 1.1508 2021/02/14 11:57:45 otis Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1007,6 +1007,11 @@ SUBDIR+=	tscrape
 SUBDIR+=	tuir
 SUBDIR+=	typo3_62
 SUBDIR+=	uhttpmock
+SUBDIR+=	unit
+SUBDIR+=	unit-perl
+SUBDIR+=	unit-php
+SUBDIR+=	unit-python
+SUBDIR+=	unit-ruby
 SUBDIR+=	urlget
 SUBDIR+=	urlgrabber
 SUBDIR+=	varnish
