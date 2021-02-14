@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:34:01 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2021/02/14 00:40:25 markd Exp $
 
 DISTNAME=	dvipdfmx
-PKGNAME=	tex-${DISTNAME}-2016.41623
-TEXLIVE_REV=	41623
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	56557
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/dvipdfmx
@@ -15,6 +15,5 @@ DEPENDS+=	tex-graphics-def-[0-9]*:../../print/tex-graphics-def
 TEXLIVE_IGNORE_PATTERNS=	texmf-dist/dvipdfmx
 TEXLIVE_IGNORE_PATTERNS+=	tlpkg/tlpostcode
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
