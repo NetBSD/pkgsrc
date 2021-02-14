@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2021/02/11 21:16:12 markd Exp $
+# $NetBSD: Makefile,v 1.35 2021/02/14 11:42:29 wiz Exp $
 
 DISTNAME=	dolphin-plugins-${KAPPSVER}
-CATEGORIES=	sysutils
+CATEGORIES=	devel sysutils
 
 HOMEPAGE=	https://kde.org/applications/system/dolphin/
 COMMENT=	Extra Dolphin plugins
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../wip/dolphin5/buildlink3.mk"
+.include "../../sysutils/dolphin/buildlink3.mk"
 .include "../../devel/ktexteditor/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
