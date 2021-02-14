@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1085 2021/02/14 20:57:17 pin Exp $
+$NetBSD: CHANGES-2021,v 1.1086 2021/02/14 21:01:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1509,3 +1509,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added print/tex-babel-japanese version 2020 [mark 2021-02-14]
 	Added print/tex-babel-ukrainian version 1.4e [mark 2021-02-14]
 	Updated sysutils/broot to 1.2.4 [pin 2021-02-14]
+	Added net/ncgopher version 0.2.0 [pin 2021-02-14]
