@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/08/07 10:32:05 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/02/14 00:40:25 markd Exp $
 
-SHA1 (tex-dvipdfmx-41623/dvipdfmx.doc.tar.xz) = cae27b3c1bbde008aa5e25d8ce4e536568e94f89
-RMD160 (tex-dvipdfmx-41623/dvipdfmx.doc.tar.xz) = 5f9c3dc9bba7cd0c514e9612ef3d3294fb2c938d
-SHA512 (tex-dvipdfmx-41623/dvipdfmx.doc.tar.xz) = 922049a443365e22598484c63e3698d3246c2eba4f9da838c8e27524c72643926e94f5d182ca5224cb38b92dd7f24c93325dcb17d82a5bd02696cccf862744d5
-Size (tex-dvipdfmx-41623/dvipdfmx.doc.tar.xz) = 365464 bytes
+SHA1 (dvipdfmx.doc.r56557.tar.xz) = b0d46a3194289f52f4718b7ee5fd52e96497ffb2
+RMD160 (dvipdfmx.doc.r56557.tar.xz) = 2160b719b4e9de2bc264eb51005dc1be9df719f8
+SHA512 (dvipdfmx.doc.r56557.tar.xz) = e271a9bd90fe83846ab557aeefc43e132b1fc4ee28790206a6e71813ece9509ef12bbe66b0fa90eb1e22ecff99c674d9336d9a14bf8c787ab9ea4b2e89c59d38
+Size (dvipdfmx.doc.r56557.tar.xz) = 3127356 bytes
