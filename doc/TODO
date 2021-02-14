@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20386 2021/02/14 14:43:08 taca Exp $
+$NetBSD: TODO,v 1.20387 2021/02/14 15:16:24 adam Exp $
 
 Suggested new packages
 ======================
@@ -759,7 +759,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libressl-3.2.0
 	o libstemmer-2.1.0
 	o libtecla-1.6.3
-	o libuv-1.41.0
 	o libvirt-2.3
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
@@ -1047,7 +1046,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o subversion-base-1.14.1
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o swapd-1.0.5
 	o swift-4.0.2
