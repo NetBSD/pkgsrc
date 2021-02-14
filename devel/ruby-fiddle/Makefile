@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/12/28 08:20:47 taca Exp $
+# $NetBSD: Makefile,v 1.23 2021/02/14 14:34:54 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -17,7 +17,12 @@ EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/fiddle ${RUBY_DISTNAME}/include \
 WRKSRC=			${RUBY_WRKSRC}/ext/fiddle
 MAKE_ENV+=		top_srcdir=../..
 
+PLIST_VARS+=	fiddle
+
 .include "../../lang/ruby/modules.mk"
+.if ${RUBY_FIDDLE_VERSION} != "1.0.0"
+PLIST.fiddle=	yes
+.endif
 .include "../../lang/ruby/Makefile.common"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
