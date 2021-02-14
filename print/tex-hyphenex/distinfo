@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/29 11:03:58 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/14 00:42:44 markd Exp $
 
-SHA1 (tex-hyphenex-37354/hyphenex.tar.xz) = 9f46aaec744969957aa57f57dfc4fafc24e88767
-RMD160 (tex-hyphenex-37354/hyphenex.tar.xz) = f17467dd0d3745b994e3e3a9496bd7db8f389019
-SHA512 (tex-hyphenex-37354/hyphenex.tar.xz) = dfa1f625e736c2c4125209552f084fbd5d64109db5dd5b8f37b5add3fce90984bfa5db855b581396ffad20b1f5a3461cae01e031c086f7db5dc98203bb7bf8d9
-Size (tex-hyphenex-37354/hyphenex.tar.xz) = 7512 bytes
+SHA1 (hyphenex.r57387.tar.xz) = 7f2dc34a62304307170767f45367853b5f5a9b45
+RMD160 (hyphenex.r57387.tar.xz) = fcbf70c8166293dfa4c0c60331595698998d56da
+SHA512 (hyphenex.r57387.tar.xz) = 77ad574e0786d7cd8e7d731fa7666a6a531b29a914759ecbb9b5d6e5f62e9ec9027aae7e3b9ffd62bd918bb0354c41e865779b044381bc1b7256528eddb34754
+Size (hyphenex.r57387.tar.xz) = 8700 bytes
