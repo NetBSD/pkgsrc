@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2021/02/14 11:56:57 otis Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/02/14 13:43:39 otis Exp $
 #
 # used by www/libunit/Makefile
 # used by www/unit/Makefile
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--tmp=${UNIT_TMPDIR}
 CONFIGURE_ARGS+=	--user=${UNIT_USER}
 CONFIGURE_ARGS+=	--group=${UNIT_GROUP}
 
-.include "../../wip/unit/options.mk"
+.include "../../www/unit/options.mk"
 
 INSTALLATION_DIRS+=	sbin ${UNIT_EXTENSION_DIR}
 MAKE_DIRS+=		${UNIT_PIDDIR} ${UNIT_DATADIR} ${UNIT_RUNDIR}

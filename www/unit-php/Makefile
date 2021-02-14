@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 11:56:57 otis Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/14 13:43:40 otis Exp $
 
 PKGNAME=	unit-${LANG}${PHP_VERSION:R:S|.||g}-${UNIT_VERSION}
 COMMENT=	PHP module for NGINX Unit
@@ -24,6 +24,6 @@ post-configure:
 				--module=${MODNAME}
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
-.include "../../wip/unit/ext.mk"
-.include "../../wip/unit/Makefile.common"
+.include "../../www/unit/ext.mk"
+.include "../../www/unit/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
