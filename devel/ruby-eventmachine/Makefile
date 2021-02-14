@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/18 21:49:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2021/02/14 15:27:51 taca Exp $
 
 DISTNAME=	eventmachine-1.2.7
 PKGREVISION=	1
@@ -9,7 +9,7 @@ HOMEPAGE=	http://rubyeventmachine.com/
 COMMENT=	Ruby event-driven I/O using the Reactor pattern
 LICENSE=	ruby-license
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++11
 
 .include "../../lang/ruby/gem.mk"
 .include "../../security/openssl/buildlink3.mk"
