@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2020/05/10 04:13:25 markd Exp $
+# $NetBSD: Makefile,v 1.11 2021/02/14 22:16:22 markd Exp $
 
 DISTNAME=	collection-langeuropean
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54568
+TEXLIVE_REV=	56895
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -75,6 +75,7 @@ DEPENDS+=	tex-hyphen-welsh-[0-9]*:../../print/tex-hyphen-welsh
 # lshort-slovenian is documentation only
 # lshort-turkish is documentation only
 # depend nevelok
+# depend rojud
 # depend swebib
 # depend turkmen
 
