@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/14 12:04:30 otis Exp $
+include/nxt_auto_config.h
+include/nxt_unit.h
+include/nxt_unit_field.h
+include/nxt_unit_request.h
+include/nxt_unit_response.h
+include/nxt_unit_sptr.h
+include/nxt_unit_typedefs.h
+include/nxt_unit_websocket.h
+include/nxt_version.h
+include/nxt_websocket_header.h
+lib/libunit.a
