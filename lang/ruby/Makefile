@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/12/30 14:15:02 taca Exp $
+# $NetBSD: Makefile,v 1.67 2021/02/14 14:41:18 taca Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION}
@@ -26,6 +26,8 @@ RUBY_COMMANDS=	erb gem irb rake rdoc ri ruby
 RUBY_COMMANDS=	bundle bundler erb gem irb rake rdoc ri ruby
 .elif ${RUBY_VER} == "27"
 RUBY_COMMANDS=	bundle bundler erb gem irb racc rake racc2y rdoc ri ruby y2racc
+.elif ${RUBY_VER} == "30"
+RUBY_COMMANDS=	bundle bundler erb gem irb racc rake rbs rdoc ri ruby typeprof
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
