@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2020/07/27 20:11:44 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/14 15:02:11 adam Exp $
 
-DISTNAME=	py3c-1.2
+DISTNAME=	py3c-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
-# PyPI version does not have anything useful as of 1.2
+# PyPI version does not have anything useful as of 1.3
 #MASTER_SITES=	${MASTER_SITE_PYPI:=p/py3c/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=encukou/}
 GITHUB_PROJECT=	py3c
