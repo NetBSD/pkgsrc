@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:33:38 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/02/14 20:24:16 markd Exp $
 
 DISTNAME=	babel-russian
-PKGNAME=	tex-${DISTNAME}-1.3j
-TEXLIVE_REV=	45007
+PKGNAME=	tex-${DISTNAME}-1.3m
+TEXLIVE_REV=	57376
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-russian
@@ -11,6 +11,5 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-babel>=3.9l:../../print/tex-babel
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
