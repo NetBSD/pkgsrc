@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/08/31 18:09:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2021/02/14 02:10:57 markd Exp $
 
 DISTNAME=	mf2pt1
-PKGNAME=	tex-${DISTNAME}-2.5a
-PKGREVISION=	5
-TEXLIVE_REV=	33802
+PKGNAME=	tex-${DISTNAME}-2.6
+TEXLIVE_REV=	57018
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mf2pt1
@@ -15,7 +14,6 @@ REPLACE_PERL=	bin/mf2pt1
 
 INSTALLATION_DIRS+=	bin
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:
