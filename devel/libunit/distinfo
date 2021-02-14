@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/14 12:04:30 otis Exp $
+
+SHA1 (unit-1.21.0.tar.gz) = 19278761d3104ff8509422f55207b1daa45a4d14
+RMD160 (unit-1.21.0.tar.gz) = 91c24ed9e8eac402a170c8b02b5633cd892fb017
+SHA512 (unit-1.21.0.tar.gz) = 12e9e8b221ffe8014931fe46c7faa9398de6ad08bbc07e5f8e50f086e4a22419960522d33bece493e17ae544b499acb4ba29cb6cb731c0bb7fbdc6cdc44bf210
+Size (unit-1.21.0.tar.gz) = 802826 bytes
