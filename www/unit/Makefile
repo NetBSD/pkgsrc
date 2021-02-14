@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 11:56:57 otis Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/14 13:43:39 otis Exp $
 
-.include "../../wip/unit/version.mk"
+.include "../../www/unit/version.mk"
 
 DISTNAME=	unit-${UNIT_VERSION}
 
@@ -10,5 +10,5 @@ MAINTAINER=	osa@FreeBSD.org
 
 RCD_SCRIPTS=	unit
 
-.include "../../wip/unit/Makefile.common"
+.include "../../www/unit/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
