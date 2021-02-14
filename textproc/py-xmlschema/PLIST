@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/02/05 18:58:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/02/14 15:11:36 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -26,9 +26,6 @@ ${PYSITELIB}/xmlschema/converters/badgerfish.pyo
 ${PYSITELIB}/xmlschema/converters/columnar.py
 ${PYSITELIB}/xmlschema/converters/columnar.pyc
 ${PYSITELIB}/xmlschema/converters/columnar.pyo
-${PYSITELIB}/xmlschema/converters/dataelement.py
-${PYSITELIB}/xmlschema/converters/dataelement.pyc
-${PYSITELIB}/xmlschema/converters/dataelement.pyo
 ${PYSITELIB}/xmlschema/converters/default.py
 ${PYSITELIB}/xmlschema/converters/default.pyc
 ${PYSITELIB}/xmlschema/converters/default.pyo
@@ -59,6 +56,8 @@ ${PYSITELIB}/xmlschema/extras/__init__.pyo
 ${PYSITELIB}/xmlschema/extras/codegen.py
 ${PYSITELIB}/xmlschema/extras/codegen.pyc
 ${PYSITELIB}/xmlschema/extras/codegen.pyo
+${PYSITELIB}/xmlschema/extras/templates/python/bindings.py.jinja
+${PYSITELIB}/xmlschema/extras/templates/python/sample.py.jinja
 ${PYSITELIB}/xmlschema/extras/wsdl.py
 ${PYSITELIB}/xmlschema/extras/wsdl.pyc
 ${PYSITELIB}/xmlschema/extras/wsdl.pyo
