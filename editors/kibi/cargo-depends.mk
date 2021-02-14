@@ -1,32 +1,34 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2020/10/28 11:59:39 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/02/14 14:23:36 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
 CARGO_CRATE_DEPENDS+=	cfg-if-0.1.10
+CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	cloudabi-0.0.3
-CARGO_CRATE_DEPENDS+=	getrandom-0.1.14
+CARGO_CRATE_DEPENDS+=	getrandom-0.2.1
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
-CARGO_CRATE_DEPENDS+=	libc-0.2.79
+CARGO_CRATE_DEPENDS+=	libc-0.2.86
 CARGO_CRATE_DEPENDS+=	lock_api-0.3.4
 CARGO_CRATE_DEPENDS+=	parking_lot-0.10.2
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.7.2
-CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.6
+CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.10
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.12
 CARGO_CRATE_DEPENDS+=	quote-1.0.4
-CARGO_CRATE_DEPENDS+=	rand-0.7.3
-CARGO_CRATE_DEPENDS+=	rand_chacha-0.2.2
-CARGO_CRATE_DEPENDS+=	rand_core-0.5.1
-CARGO_CRATE_DEPENDS+=	rand_hc-0.2.0
+CARGO_CRATE_DEPENDS+=	rand-0.8.2
+CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.0
+CARGO_CRATE_DEPENDS+=	rand_core-0.6.1
+CARGO_CRATE_DEPENDS+=	rand_hc-0.3.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.56
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.4
 CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.2
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
-CARGO_CRATE_DEPENDS+=	serial_test-0.5.0
-CARGO_CRATE_DEPENDS+=	serial_test_derive-0.5.0
+CARGO_CRATE_DEPENDS+=	serial_test-0.5.1
+CARGO_CRATE_DEPENDS+=	serial_test_derive-0.5.1
 CARGO_CRATE_DEPENDS+=	smallvec-1.4.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.18
-CARGO_CRATE_DEPENDS+=	tempfile-3.1.0
+CARGO_CRATE_DEPENDS+=	tempfile-3.2.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.8
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.0
-CARGO_CRATE_DEPENDS+=	wasi-0.9.0+wasi-snapshot-preview1
+CARGO_CRATE_DEPENDS+=	wasi-0.10.1+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
