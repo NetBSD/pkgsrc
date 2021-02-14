@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2020/05/10 04:13:25 markd Exp $
+# $NetBSD: Makefile,v 1.10 2021/02/14 21:47:27 markd Exp $
 
 DISTNAME=	collection-games
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54074
+TEXLIVE_REV=	56623
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -31,11 +31,13 @@ DEPENDS+=	tex-go-[0-9]*:../../print/tex-go
 # depend labyrinth
 # depend logicpuzzle
 # depend musikui
+# depend nimsticks
 # depend onedown
 # depend othello
 # depend othelloboard
 # depend pas-crosswords
 DEPENDS+=	tex-psgo-[0-9]*:../../graphics/tex-psgo
+# depend realtranspose
 # depend reverxii
 # depend rubik
 DEPENDS+=	tex-schwalbe-chess-[0-9]*:../../print/tex-schwalbe-chess
