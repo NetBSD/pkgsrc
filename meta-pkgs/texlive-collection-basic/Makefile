@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2020/05/10 11:25:00 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2021/02/14 00:54:49 markd Exp $
 
 DISTNAME=	collection-basic
-PKGNAME=	texlive-${DISTNAME}-2020
+PKGNAME=	texlive-${DISTNAME}-2020.56569
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51558
+TEXLIVE_REV=	56569
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
 COMMENT=	Essential programs and files for TeX
 
-DEPENDS+=	tex-texlive.infra>=2013:../../print/tex-texlive.infra
 DEPENDS+=	tex-amsfonts>=3.04:../../fonts/tex-amsfonts
 DEPENDS+=	tex-bibtex>=0.99dnb1:../../print/tex-bibtex
 DEPENDS+=	tex-cm>=2013:../../fonts/tex-cm
@@ -46,9 +45,9 @@ DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 # texlive-docindex is doc only
 # texlive-msg-translations is not needed in pkgsrc.
 DEPENDS+=	tex-texlive-scripts>=2013:../../print/tex-texlive-scripts
+DEPENDS+=	tex-texlive.infra>=2013:../../print/tex-texlive.infra
 DEPENDS+=	tex-tlshell-[0-9]*:../../devel/tex-tlshell
 DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
-DEPENDS+=	tex-updmap-map-[0-9]*:../../print/tex-updmap-map
 DEPENDS+=	tex-xdvi>=22.87:../../print/tex-xdvi
 
 META_PACKAGE=	yes
