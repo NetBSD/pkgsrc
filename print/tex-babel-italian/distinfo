@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/04/27 22:35:38 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/02/14 20:21:51 markd Exp $
 
-SHA1 (babel-italian.r53019.tar.xz) = 627dd9b004bf7606c134980cb41b11bf7e38ce26
-RMD160 (babel-italian.r53019.tar.xz) = bdde5f92a58eeeff5e7fd2af5b6682b1b70db711
-SHA512 (babel-italian.r53019.tar.xz) = 9dd2d58f0d730be0cc5319eea1400b8644ba107c81f9d4905842e5c5a4bfb20402e2d67ede0a1c1337e166c63f8c1e90574e11b18275596cf24764de671b3a16
-Size (babel-italian.r53019.tar.xz) = 3756 bytes
+SHA1 (babel-italian.r55232.tar.xz) = 405b4e7d3c775d7a9c7557c6178e45084b77314a
+RMD160 (babel-italian.r55232.tar.xz) = 81ee62b890464c1442975719ab1e3a59fb4cb1f7
+SHA512 (babel-italian.r55232.tar.xz) = 647a87e3e516f4723bd991b973417302c6f369438e6b76c5ef1d795bdc138f31516433af5b93471f0a2692ace29096d6cf8aa49edfadc2e48d1d40c4344dbfd0
+Size (babel-italian.r55232.tar.xz) = 3808 bytes
