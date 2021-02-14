@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:13:25 markd Exp $
+# $NetBSD: Makefile,v 1.13 2021/02/14 22:08:27 markd Exp $
 
 DISTNAME=	collection-langarabic
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54405
+TEXLIVE_REV=	56215
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -23,6 +23,7 @@ DEPENDS+=	tex-arabtex-[0-9]*:../../print/tex-arabtex
 # depend bidihl
 # depend dad
 # depend ghab
+# depend hvarabic
 DEPENDS+=	tex-hyphen-arabic-[0-9]*:../../print/tex-hyphen-arabic
 DEPENDS+=	tex-hyphen-farsi-[0-9]*:../../print/tex-hyphen-farsi
 # depend imsproc
@@ -31,8 +32,10 @@ DEPENDS+=	tex-hyphen-farsi-[0-9]*:../../print/tex-hyphen-farsi
 # depend luabidi
 # depend na-box
 # depend persian-bib
+# depend quran
 # depend sexam
 # depend simurgh
+# depend texnegar
 # depend tram
 # depend xepersian
 # depend xepersian-hm
