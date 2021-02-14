@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/05/11 06:29:51 markd Exp $
+$NetBSD: distinfo,v 1.13 2021/02/14 02:08:09 markd Exp $
 
-SHA1 (fontools.r54926.tar.xz) = 1c60a78c76f21d90676acf77f47b8c6433deddd9
-RMD160 (fontools.r54926.tar.xz) = 3a8154462951d6a4e1d2728c0f6cb7d53946a435
-SHA512 (fontools.r54926.tar.xz) = 6d8e97affea3d11ed6f5777018b529db6192254e37be3d25b2be17f70b3ba95bc0e87bc701978f9f5c7f7cde64916f6e219311f9e84e86142e398035d86ef939
-Size (fontools.r54926.tar.xz) = 44004 bytes
+SHA1 (fontools.r57171.tar.xz) = f66172441093e7cb5f1f83870106474c6edbc3f0
+RMD160 (fontools.r57171.tar.xz) = 7c07433aad14d09374eb5479b1b0dcbc41057fd5
+SHA512 (fontools.r57171.tar.xz) = e7ad742fdd462f7281d1af2964fd09de98cd7d4014442f63963f3fd6bad8c63e1f9e8a7209b8c372090da7a8494ef6dc6e23f745ce032bdb6d27d64e81ec1a6a
+Size (fontools.r57171.tar.xz) = 50068 bytes
