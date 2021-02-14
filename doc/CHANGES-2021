@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1056 2021/02/14 03:05:54 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1057 2021/02/14 08:25:59 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1449,3 +1449,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-eplain-doc to 3.11 [mark 2021-02-14]
 	Updated print/tex-jadetex to 3.13.57186 [mark 2021-02-14]
 	Updated print/tex-jadetex-doc to 3.13.57186 [mark 2021-02-14]
+	Updated lang/rust to 1.49.0 [he 2021-02-14]
