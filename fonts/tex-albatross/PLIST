@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/14 02:14:00 markd Exp $
+bin/albatross
+share/texmf-dist/scripts/albatross/albatross.jar
+share/texmf-dist/scripts/albatross/albatross.sh

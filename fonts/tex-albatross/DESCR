@@ -1,0 +1,2 @@
+This is a command line tool for finding fonts that contain a
+given (Unicode) glyph. It relies on Fontconfig.
