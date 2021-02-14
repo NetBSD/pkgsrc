@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1053 2021/02/13 21:46:44 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1054 2021/02/14 00:55:53 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1428,3 +1428,13 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/py-tqdm to 4.56.2 [adam 2021-02-13]
 	Updated devel/py-fasteners to 0.16 [adam 2021-02-13]
 	Updated mail/py-imapclient to 2.2.0 [adam 2021-02-13]
+	Updated print/tex-dvipdfmx to 2020 [mark 2021-02-14]
+	Updated print/tex-dvipdfmx-doc to 2020 [mark 2021-02-14]
+	Updated print/tex-hyphenex to 20210110 [mark 2021-02-14]
+	Updated fonts/tex-modes to 4.2 [mark 2021-02-14]
+	Updated fonts/tex-modes-doc to 4.2 [mark 2021-02-14]
+	Updated devel/tex-tlshell to 2020.57712 [mark 2021-02-14]
+	Updated devel/tex-tlshell-doc to 2020.57712 [mark 2021-02-14]
+	Updated print/tex-unicode-data to 1.14 [mark 2021-02-14]
+	Updated print/tex-unicode-data-doc to 1.14 [mark 2021-02-14]
+	Updated meta-pkgs/texlive-collection-basic to 2020.56569 [mark 2021-02-14]
