@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/05/30 15:12:46 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/02/14 11:43:34 wiz Exp $
 
 .include "../../emulators/stella/Makefile.common"
+GITHUB_PROJECT=	stella
 
 PKGNAME=	libretro-${DISTNAME:S/-src//1}
 
