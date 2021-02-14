@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1082 2021/02/14 18:59:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1083 2021/02/14 20:20:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/milter-manager to 2.1.5 [taca 2021-02-14]
 	Updated devel/msgpack to 3.3.0 [adam 2021-02-14]
 	Updated textproc/py-phonenumbers to 8.12.18 [adam 2021-02-14]
+	Updated net/gallery-dl to 1.16.5 [leot 2021-02-14]
