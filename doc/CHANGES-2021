@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1077 2021/02/14 15:07:02 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1078 2021/02/14 15:10:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1486,3 +1486,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added lang/ruby version 3.0.0nb1 [taca 2021-02-14]
 	Added textproc/ruby-rexml version 3.2.4 [taca 2021-02-14]
 	Updated textproc/ruby-ferret to 0.11.8.7nb1 [taca 2021-02-14]
+	Updated sysutils/ruby-facter to 4.0.51 [taca 2021-02-14]
