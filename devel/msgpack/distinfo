@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2020/04/11 13:39:29 adam Exp $
+$NetBSD: distinfo,v 1.14 2021/02/14 18:56:11 adam Exp $
 
-SHA1 (msgpack-3.2.1.tar.gz) = e7e38025198148dfb69ef7ddc776dc046ac77717
-RMD160 (msgpack-3.2.1.tar.gz) = 83e0ca6f2d1b76c436a88a5366b7fb8e0f582edc
-SHA512 (msgpack-3.2.1.tar.gz) = 68d06b05a1f00a3d9d7d39313a9e11f42828606c39d9d4c07673a48c9b88028a6316f2a964881cc8e4d185616a037711f02a7d3cd6029eadbacf52145603538b
-Size (msgpack-3.2.1.tar.gz) = 1234733 bytes
+SHA1 (msgpack-3.3.0.tar.gz) = d0b6146582768bae05c168c979889bb1e2cd69e5
+RMD160 (msgpack-3.3.0.tar.gz) = 8e27d7af14df746589a6ddbea7953da1cc6f4a4e
+SHA512 (msgpack-3.3.0.tar.gz) = ad3e32edc8c6afd70282b3d4b493c2ffe74a697c41bd1f39030c5b4752cccefaa965bc049d4c2e63103a210bf714dc3bddd474691bc067d1475ae017593f55e6
+Size (msgpack-3.3.0.tar.gz) = 508001 bytes
 SHA1 (patch-include_msgpack_v1_vrefbuffer.hpp) = 339ce944dacff1416e27b4c570d5d4c22cf99d28
 SHA1 (patch-include_msgpack_vrefbuffer.h) = 566782b87492c4b96e3e3c80d14a9f37ebcb9451
