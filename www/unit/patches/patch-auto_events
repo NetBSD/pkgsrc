@@ -1,0 +1,128 @@
+$NetBSD: patch-auto_events,v 1.1 2021/02/14 11:56:57 otis Exp $
+
+Prefer eventports on SunOS
+
+--- auto/events.orig	2021-02-04 15:22:33.000000000 +0000
++++ auto/events
+@@ -5,69 +5,70 @@
+ 
+ # Linux epoll.
+ 
+-nxt_feature="Linux epoll"
+-nxt_feature_name=NXT_HAVE_EPOLL
+-nxt_feature_run=
+-nxt_feature_incs=
+-nxt_feature_libs=
+-nxt_feature_test="#include <sys/epoll.h>
+-                  #include <unistd.h>
+-
+-                  int main() {
+-                      int  n;
+-
+-                      n = epoll_create(1);
+-                      close(n);
+-                      return 0;
+-                  }"
+-. auto/feature
+-
+-if [ $nxt_found = yes ]; then
+-    NXT_HAVE_EPOLL=YES
+-
+-    nxt_feature="Linux signalfd()"
+-    nxt_feature_name=NXT_HAVE_SIGNALFD
++# Do not use epoll on SunOS/illumos/Smartos
++# as eventports are preferred there.
++NXT_HAVE_EPOLL=NO
++if [ $NXT_SYSTEM != "SunOS" ]; then
++    nxt_feature="Linux epoll"
++    nxt_feature_name=NXT_HAVE_EPOLL
+     nxt_feature_run=
+     nxt_feature_incs=
+     nxt_feature_libs=
+-    nxt_feature_test="#include <signal.h>
+-                      #include <sys/signalfd.h>
++    nxt_feature_test="#include <sys/epoll.h>
+                       #include <unistd.h>
+-
+-                      int main() {
+-                          int       n;
+-                          sigset_t  mask;
+-
+-                          sigemptyset(&mask);
+-                          n = signalfd(-1, &mask, 0);
+-                          close(n);
+-                          return 0;
+-                      }"
+-    . auto/feature
+-
+-
+-    nxt_feature="Linux eventfd()"
+-    nxt_feature_name=NXT_HAVE_EVENTFD
+-    nxt_feature_run=
+-    nxt_feature_incs=
+-    nxt_feature_libs=
+-    nxt_feature_test="#include <sys/eventfd.h>
+-                      #include <unistd.h>
+-
++    
+                       int main() {
+                           int  n;
+-
+-                          n = eventfd(0, 0);
++    
++                          n = epoll_create(1);
+                           close(n);
+                           return 0;
+                       }"
+     . auto/feature
+-
+-else
+-    NXT_HAVE_EPOLL=NO
++    
++    if [ $nxt_found = yes ]; then
++        NXT_HAVE_EPOLL=YES
++    
++        nxt_feature="Linux signalfd()"
++        nxt_feature_name=NXT_HAVE_SIGNALFD
++        nxt_feature_run=
++        nxt_feature_incs=
++        nxt_feature_libs=
++        nxt_feature_test="#include <signal.h>
++                          #include <sys/signalfd.h>
++                          #include <unistd.h>
++    
++                          int main() {
++                              int       n;
++                              sigset_t  mask;
++    
++                              sigemptyset(&mask);
++                              n = signalfd(-1, &mask, 0);
++                              close(n);
++                              return 0;
++                          }"
++        . auto/feature
++    
++    
++        nxt_feature="Linux eventfd()"
++        nxt_feature_name=NXT_HAVE_EVENTFD
++        nxt_feature_run=
++        nxt_feature_incs=
++        nxt_feature_libs=
++        nxt_feature_test="#include <sys/eventfd.h>
++                          #include <unistd.h>
++    
++                          int main() {
++                              int  n;
++    
++                              n = eventfd(0, 0);
++                              close(n);
++                              return 0;
++                          }"
++        . auto/feature
++    fi
+ fi
+ 
+-
+ # FreeBSD, MacOSX, NetBSD, OpenBSD kqueue.
+ 
+ nxt_feature="kqueue"

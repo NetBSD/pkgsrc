@@ -1,0 +1,16 @@
+$NetBSD: patch-auto_os_conf,v 1.1 2021/02/14 11:56:57 otis Exp $
+
+Move _XOPEN_SOURCE to CFLAGS
+
+--- auto/os/conf.orig	2020-11-19 18:12:30.000000000 +0000
++++ auto/os/conf
+@@ -98,6 +98,9 @@ case "$NXT_SYSTEM" in
+         NXT_LIBM="-lm"
+         NXT_LIBS="-lsocket $NXT_LIBSENDFILE"
+         NXT_LIBS="$NXT_LIBS $NXT_LIBRT $NXT_LIBDL $NXT_PTHREAD"
++
++	NXT_CFLAGS="$NXT_CFLAGS -D_XOPEN_SOURCE"
++	NXT_CFLAGS="$NXT_CFLAGS -D_XOPEN_SOURCE_EXTENDED=1 -D__EXTENSIONS__"
+     ;;
+ 
+     Darwin)
