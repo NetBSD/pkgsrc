@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/02/06 09:51:50 pin Exp $
+$NetBSD: distinfo,v 1.13 2021/02/14 20:56:55 pin Exp $
 
 SHA1 (adler-0.2.3.crate) = ae30cb68d1f00d7a099ad4edfd4092e16b3a2342
 RMD160 (adler-0.2.3.crate) = 61a93e93ee0eb717ccb04763b23e17c89bba51ca
@@ -56,10 +56,10 @@ SHA1 (blake2b_simd-0.5.11.crate) = 36fcc9b2e8f835d59dc07b62254fe0c9aa9e196a
 RMD160 (blake2b_simd-0.5.11.crate) = 3e9927056214cd283dbb880b2c9e49c9fcf09578
 SHA512 (blake2b_simd-0.5.11.crate) = 4a7657db637869465637cb9a65cb82e7a119c554bd4d532aaf84f9cc77a494fda07d07db89c73e92e5bf4844bb1be53062fc61120e839e414e938e487e7f2257
 Size (blake2b_simd-0.5.11.crate) = 34096 bytes
-SHA1 (broot-1.2.3.tar.gz) = aaf38cb7bc1087ffe338d257b6f2adf6c0790ec7
-RMD160 (broot-1.2.3.tar.gz) = 6a47f6be7eb5a515168aafc947f9fbd82ba4208d
-SHA512 (broot-1.2.3.tar.gz) = 55af8ea9b3cd7f303fb9ae9aa04a3a0ee24ee79b48341a2ac2b647e35ec2e4002c709bea136fa95224d2d8081fffe2ac8dd5fa2a77eac26f9009bb1b243654b5
-Size (broot-1.2.3.tar.gz) = 6413378 bytes
+SHA1 (broot-1.2.4.tar.gz) = 25255506df98b16d17865808906a4345ce088397
+RMD160 (broot-1.2.4.tar.gz) = cedacecad69035d3015ac555d59bda3f84a53fb9
+SHA512 (broot-1.2.4.tar.gz) = 5a64c3f779f6f9bb9b94d62148a103a07e8c9c4050446d8847588713f1eed341268f2c25dbb01549eeda340ecbf892384163b422bb6a807fdd4ac9dbafae412c
+Size (broot-1.2.4.tar.gz) = 6414396 bytes
 SHA1 (bstr-0.2.14.crate) = aa6f94445a44d32b6aca98f5057627de2f138e67
 RMD160 (bstr-0.2.14.crate) = 9522f0438ccc4812866f8f4ecbe62820543fbe49
 SHA512 (bstr-0.2.14.crate) = de62c0f31ad672f90a8038fa163c7cdaf474b35ec24592aee5549af7c76d43e6ed00f8d7237e15ab27576c27a7232033a217955de6a0a3b40c83661b3a7e1e8a
@@ -188,10 +188,10 @@ SHA1 (deflate-0.8.6.crate) = 88d5f13d8aac24c8f15c71617103bf2baf9effda
 RMD160 (deflate-0.8.6.crate) = 5575018ccbdcd33711dea343154372c5e66f02ee
 SHA512 (deflate-0.8.6.crate) = 7e2e23205c56cc4c834ade2a6a22b056253c32e29346907558117714a18d8433882a712711413addb15da79f9f59e089a06dfd680b756ab2725b500a49dc16b2
 Size (deflate-0.8.6.crate) = 62365 bytes
-SHA1 (deser-hjson-0.1.8.crate) = df6f2f7e8e3c183678deb41cc5e2169ebf985c65
-RMD160 (deser-hjson-0.1.8.crate) = 169ef192aaed54ac41bc0305cb131f81733fc94f
-SHA512 (deser-hjson-0.1.8.crate) = 2d9624a6b092088d8079d0422ca072cec1a8fd55142969405fa1e3e289b320db10720cfda64f37dacb6fdb87cbd63caa3e056a5b2b9b0bcc51edb54a7bb3d5a4
-Size (deser-hjson-0.1.8.crate) = 11457 bytes
+SHA1 (deser-hjson-0.1.12.crate) = 73045ffd5071857fe6f48b02d644581ef3bb2c6d
+RMD160 (deser-hjson-0.1.12.crate) = 62e7f3bb88085ef32f44c672220ff6b466df6116
+SHA512 (deser-hjson-0.1.12.crate) = f94db138b85f077ed3f1e2a794dcab009006c0c08b03358ba2fcaea3427a8a049dab5abab79ce8f1af2911570d75a7659576db6103e0cd4d5bbe4978099c03ac
+Size (deser-hjson-0.1.12.crate) = 13413 bytes
 SHA1 (directories-2.0.2.crate) = 0c8edddc66f7f05820047cb465aeb504394c7288
 RMD160 (directories-2.0.2.crate) = 6ec1526f15c52ed7df8a33dbe82560f6447b9126
 SHA512 (directories-2.0.2.crate) = d42ec9308b131c33fc779684ce067faae03135ad45064ed653dc1ee68a7f0ffc739ef82c0b54b869a3951d4d58210208975d5e564b7dad8f0570e7ad0cf1cce2
