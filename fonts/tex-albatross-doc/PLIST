@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/14 02:14:00 markd Exp $
+man/man1/albatross.1
+share/texmf-dist/doc/support/albatross/README.md
+share/texmf-dist/doc/support/albatross/albatross-manual.pdf
+share/texmf-dist/doc/support/albatross/albatross-manual.tex
+share/texmf-dist/doc/support/albatross/version.tex
