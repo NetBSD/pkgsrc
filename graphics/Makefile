@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.923 2021/02/12 02:53:40 markd Exp $
+# $NetBSD: Makefile,v 1.924 2021/02/14 11:33:41 leot Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -129,6 +129,7 @@ SUBDIR+=	exiftags
 SUBDIR+=	exiv2
 SUBDIR+=	extrema
 SUBDIR+=	faba-icon-theme
+SUBDIR+=	farbfeld
 SUBDIR+=	fbm
 SUBDIR+=	feh
 SUBDIR+=	fly
