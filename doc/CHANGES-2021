@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1058 2021/02/14 10:21:11 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1059 2021/02/14 11:34:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1451,3 +1451,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-jadetex-doc to 3.13.57186 [mark 2021-02-14]
 	Updated lang/rust to 1.49.0 [he 2021-02-14]
 	Updated audio/libopenmpt to 0.5.5 [fcambus 2021-02-14]
+	Added graphics/farbfeld version 4 [leot 2021-02-14]
