@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1383 2021/02/12 09:33:19 adam Exp $
+# $NetBSD: Makefile,v 1.1384 2021/02/14 21:01:17 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -425,6 +425,7 @@ SUBDIR+=	nats-server
 SUBDIR+=	nbtscan
 SUBDIR+=	ncdc
 SUBDIR+=	ncftp3
+SUBDIR+=	ncgopher
 SUBDIR+=	ndiff
 SUBDIR+=	ndpi
 SUBDIR+=	nemesis
