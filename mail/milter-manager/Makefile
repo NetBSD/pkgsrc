@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.48 2020/03/20 11:57:58 nia Exp $
+# $NetBSD: Makefile,v 1.49 2021/02/14 15:33:02 taca Exp $
 #
 
-DISTNAME=	milter-manager-2.0.5
-PKGREVISION=	4
+DISTNAME=	milter-manager-${VERSION}
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=milter-manager/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=milter-manager/}
+GITHUB_RELEASE=	${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://milter-manager.sourceforge.net/
 COMMENT=	Milter to use milters effectively
+
+VERSION=	2.1.5
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool msgfmt
@@ -31,7 +33,7 @@ SUBST_CLASSES+=			libev_inc
 SUBST_STAGE.libev_inc=		pre-configure
 SUBST_MESSAGE.libev_inc=	Adjust include path for libevent from pkgsrc.
 SUBST_FILES.libev_inc=		configure
-SUBST_SED.libev_inc=		's,/include/ev.h,/include/ev/ev.h,g'
+SUBST_SED.libev_inc=		-e 's,/include/ev.h,/include/ev/ev.h,g'
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
@@ -67,6 +69,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/milter-manager \
 
 .for conf in milter-manager.conf \
 	applicable-conditions/authentication.conf \
+	applicable-conditions/dnsbl.conf \
 	applicable-conditions/remote-network.conf \
 	applicable-conditions/restrict-accounts.conf \
 	applicable-conditions/s25r.conf \
