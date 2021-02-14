@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1059 2021/02/14 11:34:00 leot Exp $
+$NetBSD: CHANGES-2021,v 1.1060 2021/02/14 11:51:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1452,3 +1452,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/rust to 1.49.0 [he 2021-02-14]
 	Updated audio/libopenmpt to 0.5.5 [fcambus 2021-02-14]
 	Added graphics/farbfeld version 4 [leot 2021-02-14]
+	Updated security/authelia to 4.26.1 [tnn 2021-02-14]
