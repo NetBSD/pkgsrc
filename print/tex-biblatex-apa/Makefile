@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/11 00:44:20 markd Exp $
+# $NetBSD: Makefile,v 1.7 2021/02/14 21:32:09 markd Exp $
 
 DISTNAME=	biblatex-apa
-PKGNAME=	tex-${DISTNAME}-9.12
-TEXLIVE_REV=	55032
+PKGNAME=	tex-${DISTNAME}-9.14
+TEXLIVE_REV=	56208
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/biblatex-apa
