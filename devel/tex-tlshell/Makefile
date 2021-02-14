@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/04/30 12:47:28 markd Exp $
+# $NetBSD: Makefile,v 1.7 2021/02/14 00:47:35 markd Exp $
 
 DISTNAME=	tlshell
-PKGNAME=	tex-${DISTNAME}-2020.54921
-TEXLIVE_REV=	54921
+PKGNAME=	tex-${DISTNAME}-2020.57712
+TEXLIVE_REV=	57712
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GUI frontend (tcl/tk-based) for tlmgr
