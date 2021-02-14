@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 11:56:57 otis Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/14 13:43:40 otis Exp $
 
 PKGNAME=	unit-${LANG}-${UNIT_VERSION}
 COMMENT=	Perl module for NGINX Unit
@@ -16,6 +16,6 @@ post-configure:
 			${LANG} --module=${MODNAME}
 
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../wip/unit/ext.mk"
-.include "../../wip/unit/Makefile.common"
+.include "../../www/unit/ext.mk"
+.include "../../www/unit/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
