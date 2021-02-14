@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1072 2021/02/14 14:11:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.1073 2021/02/14 14:23:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/ruby-activestorage61 version 6.1.2.1 [taca 2021-02-14]
 	Added textproc/ruby-actiontext61 version 6.1.2.1 [taca 2021-02-14]
 	Added www/ruby-rails61 version 6.1.2.1 [taca 2021-02-14]
+	Updated editors/kibi to 0.2.2 [pin 2021-02-14]
