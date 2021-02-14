@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2021/02/05 15:54:35 taca Exp $
+# $NetBSD: Makefile,v 1.39 2021/02/14 15:10:32 taca Exp $
 
-DISTNAME=	facter-4.0.50
+DISTNAME=	facter-4.0.51
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +10,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${RUBY_PKGPREFIX}-hocon>=1.3<2:../../devel/ruby-hocon
 DEPENDS+=	${RUBY_PKGPREFIX}-thor>=1.0.1:../../devel/ruby-thor
+
+RUBY_VERSIONS_INCOMPATIBLE=	30
 
 RUBYGEM_OPTIONS+=	--format-executable
 
