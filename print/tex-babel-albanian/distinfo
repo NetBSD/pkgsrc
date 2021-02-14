@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:46 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/02/14 20:11:37 markd Exp $
 
-SHA1 (tex-babel-albanian-30254/babel-albanian.tar.xz) = d5cd3b221af281733a24a0e0002b596b622ea17d
-RMD160 (tex-babel-albanian-30254/babel-albanian.tar.xz) = 22eed59484460a6d9c34004d5d3d727a4179fdbb
-SHA512 (tex-babel-albanian-30254/babel-albanian.tar.xz) = 58f218f8971e77119c48665293f8007338c7e0334afd17063d19222dd73dea9fd497bbb55d595354f20893b955aba519544f29674d218fd081f6ecea5664d73d
-Size (tex-babel-albanian-30254/babel-albanian.tar.xz) = 2464 bytes
+SHA1 (babel-albanian.r57005.tar.xz) = 61a8cea81947c5881736eb57a5e3d6df02c3cd27
+RMD160 (babel-albanian.r57005.tar.xz) = 4d7dcfda626dc688d07e2e6c2628760f6160e1af
+SHA512 (babel-albanian.r57005.tar.xz) = 8a98ba1dc08bc2bdbba0793bda2a07a6c248543fdee56cbb047229d1cfe77cdf616c0ef023b0a74f877d9863768065f0e256ba35a1071e0dd3f2bbf2b47b7ebe
+Size (babel-albanian.r57005.tar.xz) = 2264 bytes
