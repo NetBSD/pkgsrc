@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/26 11:17:23 markd Exp $
+$NetBSD: distinfo,v 1.3 2021/02/14 21:37:09 markd Exp $
 
-SHA1 (tex-biblatex-nature-48940/biblatex-nature.tar.xz) = ebf36eb13fbd1a15b0016341f6148d340fab6b2b
-RMD160 (tex-biblatex-nature-48940/biblatex-nature.tar.xz) = 33fe682e7a43560737e66c791137fd157b23480f
-SHA512 (tex-biblatex-nature-48940/biblatex-nature.tar.xz) = b570b8a6d1608b67ed014e7095f197ca73345b5b7d5f818e74937bec9d73aa3e0f8f5e06565e8a7118899e478df655dfeb2566b473e644079b4711af0255889a
-Size (tex-biblatex-nature-48940/biblatex-nature.tar.xz) = 3268 bytes
+SHA1 (biblatex-nature.r57262.tar.xz) = 9986d73306fa00a62b884c8a99e5b2e0439070da
+RMD160 (biblatex-nature.r57262.tar.xz) = 1606521d5e4bd88df4b46762e70f5cee91d1d265
+SHA512 (biblatex-nature.r57262.tar.xz) = b4b12abe904d96c9489dbdf248042ed1f1af1474921e0835027220059492f2441aace661260fa3632a65bb2c1ec0ab4e521014e63a14f7fb835293fd8191c2fe
+Size (biblatex-nature.r57262.tar.xz) = 3256 bytes
