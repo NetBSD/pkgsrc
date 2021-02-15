@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1099 2021/02/15 12:07:02 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1100 2021/02/15 12:50:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1582,3 +1582,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/tex-pstricks to 3.01 [mark 2021-02-15]
 	Updated graphics/tex-pstricks-doc to 3.01 [mark 2021-02-15]
 	Updated www/logswan to 2.1.9 [fcambus 2021-02-15]
+	Updated www/php-nextcloud to 20.0.7 [ryoon 2021-02-15]
