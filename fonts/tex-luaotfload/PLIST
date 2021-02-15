@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2020/05/11 11:02:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/02/15 00:30:10 markd Exp $
 share/texmf-dist/scripts/luaotfload/luaotfload-tool.lua
-share/texmf-dist/tex/luatex/luaotfload/fontloader-2020-05-06.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-2021-01-07.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-chr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-gen.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-nod.lua
@@ -32,6 +32,7 @@ share/texmf-dist/tex/luatex/luaotfload/fontloader-font-otr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-ots.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-ott.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-oup.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-font-shp.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-ttf.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-vfc.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-fonts-def.lua
@@ -57,12 +58,16 @@ share/texmf-dist/tex/luatex/luaotfload/fontloader-util-fil.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-util-str.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-auxiliary.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-blacklist.cnf
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-case-el.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-case.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-characters.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-colors.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-configuration.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-database.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-diagnostics.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-dvi.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-embolden.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-fakesc.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-fallback.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-features.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-filelist.lua
@@ -84,4 +89,5 @@ share/texmf-dist/tex/luatex/luaotfload/luaotfload-suppress.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-szss.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-tounicode.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-unicode.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload.sty
