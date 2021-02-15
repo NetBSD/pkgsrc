@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1106 2021/02/15 18:21:03 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1107 2021/02/15 19:01:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1593,3 +1593,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gyp to 0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6 [ryoon 2021-02-15]
 	Added x11/xcb-imdkit version 1.0.2 [ryoon 2021-02-15]
 	Updated math/bc-gh to 3.2.7 [gdt 2021-02-15]
+	Updated databases/postgresql95 to 9.5.25 [adam 2021-02-15]
+	Updated databases/postgresql96 to 9.6.21 [adam 2021-02-15]
+	Updated databases/postgresql10 to 10.16 [adam 2021-02-15]
+	Updated databases/postgresql11 to 11.11 [adam 2021-02-15]
+	Updated databases/postgresql12 to 12.6 [adam 2021-02-15]
+	Updated databases/postgresql13 to 13.2 [adam 2021-02-15]
