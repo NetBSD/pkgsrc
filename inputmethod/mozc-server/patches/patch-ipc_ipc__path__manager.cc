@@ -1,11 +1,11 @@
-$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
+$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.6 2021/02/15 14:50:23 ryoon Exp $
 
 * NetBSD support
 
---- ipc/ipc_path_manager.cc.orig	2014-01-06 07:10:26.000000000 +0000
+--- ipc/ipc_path_manager.cc.orig	2021-02-15 03:48:53.000000000 +0000
 +++ ipc/ipc_path_manager.cc
-@@ -44,6 +44,11 @@
- #endif  // OS_MACOSX
+@@ -53,6 +53,11 @@
+ #endif  // __APPLE__
  #endif  // OS_WIN
  
 +#if defined(OS_NETBSD)
@@ -16,7 +16,7 @@ $NetBSD: patch-ipc_ipc__path__manager.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
  #include <cstdlib>
  #include <map>
  #ifdef OS_WIN
-@@ -407,6 +412,23 @@ bool IPCPathManager::IsValidServer(uint3
+@@ -425,6 +430,23 @@ bool IPCPathManager::IsValidServer(uint3
      return true;
    }
  

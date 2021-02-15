@@ -1,19 +1,19 @@
-$NetBSD: patch-ipc_unix__ipc.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
+$NetBSD: patch-ipc_unix__ipc.cc,v 1.6 2021/02/15 14:50:23 ryoon Exp $
 
 * NetBSD support
 
---- ipc/unix_ipc.cc.orig	2016-05-15 08:11:11.000000000 +0000
+--- ipc/unix_ipc.cc.orig	2021-02-15 03:48:53.000000000 +0000
 +++ ipc/unix_ipc.cc
 @@ -28,7 +28,7 @@
  // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  
- // OS_LINUX only. Note that OS_ANDROID/OS_NACL don't reach here.
+ // OS_LINUX only. Note that OS_ANDROID/OS_WASM don't reach here.
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_NETBSD)
  
- #include "ipc/ipc.h"
- 
-@@ -127,7 +127,7 @@ bool IsPeerValid(int socket, pid_t *pid)
+ #include <arpa/inet.h>
+ #include <fcntl.h>
+@@ -125,7 +125,7 @@ bool IsPeerValid(int socket, pid_t *pid)
    // sometimes doesn't support the getsockopt(sock, SOL_SOCKET, SO_PEERCRED)
    // system call.
    // TODO(yusukes): Add implementation for ARM Linux.
@@ -22,7 +22,7 @@ $NetBSD: patch-ipc_unix__ipc.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
    struct ucred peer_cred;
    int peer_cred_len = sizeof(peer_cred);
    if (getsockopt(socket, SOL_SOCKET, SO_PEERCRED,
-@@ -143,7 +143,23 @@ bool IsPeerValid(int socket, pid_t *pid)
+@@ -141,7 +141,23 @@ bool IsPeerValid(int socket, pid_t *pid)
    }
  
    *pid = peer_cred.pid;
@@ -47,3 +47,9 @@ $NetBSD: patch-ipc_unix__ipc.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
  
    return true;
  }
+@@ -468,4 +484,4 @@ void IPCServer::Terminate() { server_thr
+ 
+ }  // namespace mozc
+ 
+-#endif  // OS_LINUX
++#endif  // OS_LINUX || OS_NETBSD
