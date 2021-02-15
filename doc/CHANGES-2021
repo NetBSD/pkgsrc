@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1094 2021/02/15 04:26:33 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1095 2021/02/15 07:42:06 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-context-letter-doc to 2020.56073 [mark 2021-02-15]
 	Updated print/tex-context-vim to 2020.56356 [mark 2021-02-15]
 	Updated print/tex-context-vim-doc to 2020.56356 [mark 2021-02-15]
+	Updated sysutils/psftools to 1.1.1 [fcambus 2021-02-15]
