@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/05/18 10:50:04 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/02/15 21:17:36 adam Exp $
 
-SHA1 (immutables-0.14.tar.gz) = 0e22ddf7fbcbf8ccdfae3e7dc6305efb1650d383
-RMD160 (immutables-0.14.tar.gz) = e49b1a366e66d74be6f8b3377ec61279da12a344
-SHA512 (immutables-0.14.tar.gz) = 499adbecdb6a24232794d13fead4ae1fc79b884d5702b1db0c48af56613aa6d6cf8b9fc626b9bf2ada1a13c9c18b5bcc28b404aca348ed6a4dd36a61719f054c
-Size (immutables-0.14.tar.gz) = 42983 bytes
+SHA1 (immutables-0.15.tar.gz) = 7e9d1cc695e6f9f94d485fa00f510dbe327ff803
+RMD160 (immutables-0.15.tar.gz) = b3c8e8b5d415399e3f282eb49dff3c6b3f729346
+SHA512 (immutables-0.15.tar.gz) = d1ea74aef5ea0fe1c4d097f278909c6c3adad5d5dfc322e44b609d65506b3c6e74c8cfc83a2d08dbec5af64ae53ed2912a326d11bda907ae8947a8d291604404
+Size (immutables-0.15.tar.gz) = 44913 bytes
