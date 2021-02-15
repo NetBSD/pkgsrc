@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1089 2021/02/14 21:56:15 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1090 2021/02/15 00:40:22 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1522,3 +1522,17 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/pleaser to 0.3.22 [pin 2021-02-14]
 	Updated print/tex-chessboard to 1.9 [mark 2021-02-14]
 	Updated print/tex-chessboard-doc to 1.9 [mark 2021-02-14]
+	Updated print/tex-elsarticle to 3.3 [mark 2021-02-15]
+	Updated print/tex-elsarticle-doc to 3.3 [mark 2021-02-15]
+	Updated print/tex-hausarbeit-jura to 2.1.0 [mark 2021-02-15]
+	Updated print/tex-hausarbeit-jura-doc to 2.1.0 [mark 2021-02-15]
+	Updated devel/tex-lualibs to 2.73 [mark 2021-02-15]
+	Updated devel/tex-lualibs-doc to 2.73 [mark 2021-02-15]
+	Updated fonts/tex-luaotfload to 3.17 [mark 2021-02-15]
+	Updated fonts/tex-luaotfload-doc to 3.17 [mark 2021-02-15]
+	Updated print/tex-revtex to 4.2e [mark 2021-02-15]
+	Updated print/tex-revtex-doc to 4.2e [mark 2021-02-15]
+	Updated print/tex-revtex4 to 4.0a [mark 2021-02-15]
+	Updated print/tex-revtex4-doc to 4.0a [mark 2021-02-15]
+	Updated print/tex-toptesi to 6.4.06 [mark 2021-02-15]
+	Updated print/tex-toptesi-doc to 6.4.06 [mark 2021-02-15]
