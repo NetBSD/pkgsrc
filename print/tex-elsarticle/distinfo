@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/05/12 03:48:43 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/02/15 00:18:04 markd Exp $
 
-SHA1 (tex-elsarticle-50786/elsarticle.tar.xz) = e9385d06e819c891b2495e4b6e9265022e9c5851
-RMD160 (tex-elsarticle-50786/elsarticle.tar.xz) = 79157dc4d947c89ba7b3cce072fd96ccfa7b98e5
-SHA512 (tex-elsarticle-50786/elsarticle.tar.xz) = 17770bd130aa601a8208e996c1bcf192459d6c6ffd4ca170a303c3a548c7481e7e3a136c64865999ab7ab38ab56b09fc2021555fab60e344a7fa23d8cd62943f
-Size (tex-elsarticle-50786/elsarticle.tar.xz) = 17320 bytes
+SHA1 (elsarticle.r56999.tar.xz) = 78f5cc664b5abf3c4617ffa5b053e4b4b9d1dc23
+RMD160 (elsarticle.r56999.tar.xz) = ec7d497766b10c7a7ce4824d371415a8b17f593d
+SHA512 (elsarticle.r56999.tar.xz) = 5a0a7c98a8e255e55468f9b01a43c33d757a38faa1b3130b1c3613648dfcbd0fbedfc69db99727c4406ddc0601249b2d021c680f83edd34bc3d64dcd4a7af64a
+Size (elsarticle.r56999.tar.xz) = 18868 bytes
