@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/02/13 21:42:51 adam Exp $
+$NetBSD: distinfo,v 1.4 2021/02/15 14:18:35 mef Exp $
 
 SHA1 (fasteners-0.16.tar.gz) = 0215ae39130d3b6d2c27a0539e440fb455dfb9f5
 RMD160 (fasteners-0.16.tar.gz) = b82b88a005e9a628b40664f2c3c3df0a62a0cb61
 SHA512 (fasteners-0.16.tar.gz) = aac91be8f732bcda238c40317359c7faaad632b26473eff940fef0c6c2c227cd83942122c0ec26da236ca8c19d3024798590244ec761c2d2700ffdc7142533da
 Size (fasteners-0.16.tar.gz) = 24824 bytes
+SHA1 (patch-setup.py) = 51d2b614b571194c8c695cb64960aa5900bf08a8
