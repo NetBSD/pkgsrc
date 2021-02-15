@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/15 15:05:55 ryoon Exp $
+
+SHA1 (xcb-imdkit-1.0.2.tar.xz) = af5e28c850e5192221cfd655fd0835b7ce1b3050
+RMD160 (xcb-imdkit-1.0.2.tar.xz) = 9c1b98e5b4e34ea6145a5e5d3c3b79086b1bde05
+SHA512 (xcb-imdkit-1.0.2.tar.xz) = fc34c4d021fe1e3afb0fd140849c102c2c3d3040429dfef2ffe6032c3e87b7212abcc87224a0a638bff7e5ce17c2a1e770e2e501bca7c336af16aa4f31c530b3
+Size (xcb-imdkit-1.0.2.tar.xz) = 345972 bytes
