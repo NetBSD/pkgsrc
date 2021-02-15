@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1090 2021/02/15 00:40:22 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1091 2021/02/15 01:27:42 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1536,3 +1536,10 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-revtex4-doc to 4.0a [mark 2021-02-15]
 	Updated print/tex-toptesi to 6.4.06 [mark 2021-02-15]
 	Updated print/tex-toptesi-doc to 6.4.06 [mark 2021-02-15]
+	Updated graphics/tex-graphics-pln to 2020.56823 [mark 2021-02-15]
+	Updated graphics/tex-graphics-pln-doc to 2020.56823 [mark 2021-02-15]
+	Updated print/tex-tex4ht to 2020.57704 [mark 2021-02-15]
+	Updated print/tex-tex4ht-doc to 2020.57704 [mark 2021-02-15]
+	Updated print/tex-texinfo to 5.1.57466 [mark 2021-02-15]
+	Updated print/tex-tracklang to 1.5 [mark 2021-02-15]
+	Updated print/tex-tracklang-doc to 1.5 [mark 2021-02-15]
