@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/05/02 02:27:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/02/15 03:51:10 markd Exp $
 bin/make4ht
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-aeneas.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-booktabs.lua
@@ -38,6 +38,7 @@ share/texmf-dist/scripts/make4ht/filters/make4ht-staticsite.lua
 share/texmf-dist/scripts/make4ht/filters/make4ht-svg-height.lua
 share/texmf-dist/scripts/make4ht/formats/make4ht-docbook.lua
 share/texmf-dist/scripts/make4ht/formats/make4ht-html5.lua
+share/texmf-dist/scripts/make4ht/formats/make4ht-jats.lua
 share/texmf-dist/scripts/make4ht/formats/make4ht-odt.lua
 share/texmf-dist/scripts/make4ht/formats/make4ht-tei.lua
 share/texmf-dist/scripts/make4ht/formats/make4ht-xhtml.lua
@@ -52,7 +53,6 @@ share/texmf-dist/scripts/make4ht/make4ht-htlatex.lua
 share/texmf-dist/scripts/make4ht/make4ht-indexing.lua
 share/texmf-dist/scripts/make4ht/make4ht-lib.lua
 share/texmf-dist/scripts/make4ht/make4ht-logging.lua
-share/texmf-dist/scripts/make4ht/make4ht-odtfilter.lua
 share/texmf-dist/scripts/make4ht/make4ht-xtpipes.lua
 share/texmf-dist/scripts/make4ht/mkparams.lua
 share/texmf-dist/scripts/make4ht/mkutils.lua
