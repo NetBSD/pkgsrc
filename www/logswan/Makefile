@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2020/10/20 13:08:13 fcambus Exp $
+# $NetBSD: Makefile,v 1.22 2021/02/15 12:06:50 fcambus Exp $
 
-DISTNAME=	logswan-2.1.8
+DISTNAME=	logswan-2.1.9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
