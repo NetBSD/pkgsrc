@@ -1,61 +1,87 @@
-$NetBSD: patch-base_system__util.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
+$NetBSD: patch-base_system__util.cc,v 1.6 2021/02/15 14:50:23 ryoon Exp $
 
-* NetBSD support
-
---- base/system_util.cc.orig	2017-11-02 13:32:45.000000000 +0000
+--- base/system_util.cc.orig	2021-02-15 05:04:33.000000000 +0000
 +++ base/system_util.cc
-@@ -372,7 +372,7 @@ string SystemUtil::GetServerDirectory() 
- #elif defined(OS_MACOSX)
+@@ -275,7 +275,7 @@ std::string UserProfileDirectoryImpl::Ge
+ # endif  //  GOOGLE_JAPANESE_INPUT_BUILD
+ 
+ 
+-#elif defined(OS_LINUX)
++#elif defined(OS_LINUX) || defined(OS_NETBSD)
+   // 1. If "$HOME/.mozc" already exists,
+   //    use "$HOME/.mozc" for backward compatibility.
+   // 2. If $XDG_CONFIG_HOME is defined
+@@ -422,7 +422,7 @@ std::string SystemUtil::GetServerDirecto
    return MacUtil::GetServerDirectory();
+ #endif  // __APPLE__
  
--#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
-+#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
- #if defined(MOZC_SERVER_DIRECTORY)
+-#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM) || defined(OS_NETBSD)
+ # if defined(MOZC_SERVER_DIRECTORY)
    return MOZC_SERVER_DIRECTORY;
- #else
-@@ -450,7 +450,7 @@ string SystemUtil::GetUserNameAsString()
+ # else
+@@ -499,12 +499,12 @@ std::string SystemUtil::GetUserNameAsStr
    return ppw->pw_name;
+ #endif  // OS_ANDROID
  
- #else  // OS_ANDROID
--  // OS_MACOSX, OS_LINUX or OS_NACL
-+  // OS_MACOSX, OS_LINUX, OS_NACL or OS_NETBSD
+-#if defined(__APPLE__) || defined(OS_LINUX) || defined(OS_WASM)
++#if defined(__APPLE__) || defined(OS_LINUX) || defined(OS_WASM) || defined(OS_NETBSD)
    struct passwd pw, *ppw;
    char buf[1024];
    CHECK_EQ(0, getpwuid_r(geteuid(), &pw, buf, sizeof(buf), &ppw));
-@@ -610,7 +610,7 @@ string GetSessionIdString() {
+   return pw.pw_name;
+-#endif  // __APPLE__ || OS_LINUX || OS_WASM
++#endif  // __APPLE__ || OS_LINUX || OS_WASM || OS_NETBSD
+ 
+   // If none of the above platforms is specified, the compiler raises an error
+   // because of no return value.
+@@ -662,13 +662,13 @@ string GetSessionIdString() {
  #endif  // OS_WIN
  
- string SystemUtil::GetDesktopNameAsString() {
--#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
-   const char *display = getenv("DISPLAY");
-   if (display == NULL) {
+ std::string SystemUtil::GetDesktopNameAsString() {
+-#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM) || defined(OS_NETBSD)
+   const char *display = Environ::GetEnv("DISPLAY");
+   if (display == nullptr) {
      return "";
-@@ -812,6 +812,9 @@ string SystemUtil::GetOSVersionString() 
- #elif defined(OS_LINUX) || defined(OS_NACL)
-   const string ret = "Linux";
+   }
+   return display;
+-#endif  // OS_LINUX || OS_ANDROID || OS_WASM
++#endif  // OS_LINUX || OS_ANDROID || OS_WASM || OS_NETBSD
+ 
+ #if defined(__APPLE__)
+   return "";
+@@ -862,10 +862,13 @@ std::string SystemUtil::GetOSVersionStri
+ #elif defined(OS_LINUX)
+   const std::string ret = "Linux";
    return ret;
+-#else   // !OS_WIN && !__APPLE__ && !OS_LINUX
 +#elif defined(OS_NETBSD)
-+  const string ret = "NetBSD";
++  const std::string ret = "NetBSD";
 +  return ret;
- #else  // !OS_WIN && !OS_MACOSX && !OS_LINUX
++#else   // !OS_WIN && !__APPLE__ && !OS_LINUX && !OS_NETBSD
    const string ret = "Unknown";
    return ret;
-@@ -847,7 +850,7 @@ uint64 SystemUtil::GetTotalPhysicalMemor
-     return 0;
-   }
-   return total_memory;
--#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
-+#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
- #if defined(_SC_PAGESIZE) && defined(_SC_PHYS_PAGES)
-   const long page_size = sysconf(_SC_PAGESIZE);
-   const long number_of_phyisical_pages = sysconf(_SC_PHYS_PAGES);
-@@ -862,7 +865,7 @@ uint64 SystemUtil::GetTotalPhysicalMemor
- #endif  // defined(_SC_PAGESIZE) && defined(_SC_PHYS_PAGES)
- #else  // !(defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX))
- #error "unknown platform"
--#endif  // OS_WIN, OS_MACOSX, OS_LINUX
-+#endif  // OS_WIN, OS_MACOSX, OS_LINUX, OS_NETBSD
+-#endif  // OS_WIN, __APPLE__, OS_LINUX
++#endif  // OS_WIN, __APPLE__, OS_LINUX, OS_NETBSD
  }
  
- }  // namespace mozc
+ void SystemUtil::DisableIME() {
+@@ -901,7 +904,7 @@ uint64 SystemUtil::GetTotalPhysicalMemor
+   return total_memory;
+ #endif  // __APPLE__
+ 
+-#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM) || defined(OS_NETBSD)
+ # if defined(_SC_PAGESIZE) && defined(_SC_PHYS_PAGES)
+   const int32 page_size = sysconf(_SC_PAGESIZE);
+   const int32 number_of_phyisical_pages = sysconf(_SC_PHYS_PAGES);
+@@ -914,7 +917,7 @@ uint64 SystemUtil::GetTotalPhysicalMemor
+ # else   // defined(_SC_PAGESIZE) && defined(_SC_PHYS_PAGES)
+   return 0;
+ # endif  // defined(_SC_PAGESIZE) && defined(_SC_PHYS_PAGES)
+-#endif   // OS_LINUX || OS_ANDROID || OS_WASM
++#endif   // OS_LINUX || OS_ANDROID || OS_WASM || OS_NETBSD
+ 
+   // If none of the above platforms is specified, the compiler raises an error
+   // because of no return value.
