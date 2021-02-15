@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/05/01 00:15:12 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/02/15 03:43:41 markd Exp $
 
-SHA1 (cweb.r54276.tar.xz) = c2e18a628a67c528708c62ba89dfa8cd2a22bae2
-RMD160 (cweb.r54276.tar.xz) = 181f6b9b5106c712889f2cd67ee1115a9b8c84db
-SHA512 (cweb.r54276.tar.xz) = 5dc3e96bc38d85e6f8de67a9d36cf511c8a6ea5d8e0d7a1800f855884ddfa4d3a38fdcc5a7e22da39bbd69269ab7e0418cec6c3500091983b1e45ae3ddd41788
-Size (cweb.r54276.tar.xz) = 21836 bytes
+SHA1 (cweb.r57710.tar.xz) = b667af32052af3ac622ce22fb226369369e95c40
+RMD160 (cweb.r57710.tar.xz) = 1e260b053e7fd37cf1c1fdcc8b638e2743595c79
+SHA512 (cweb.r57710.tar.xz) = 8ec74678fb50e34b0fd27b4eae0f552f9e34d01b41e67dad1966e20cd609b3a7080d1c5923acd08f985106e209c820c7d29178ce1a01a44805f94eaa925c47f6
+Size (cweb.r57710.tar.xz) = 23496 bytes
