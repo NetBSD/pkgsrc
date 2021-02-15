@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1093 2021/02/15 04:04:49 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1094 2021/02/15 04:26:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1561,3 +1561,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-texdoc-doc to 3.2.2 [mark 2021-02-15]
 	Updated textproc/tex-xindy to 2.5.1.55330 [mark 2021-02-15]
 	Updated textproc/tex-xindy-doc to 2.5.1.55330 [mark 2021-02-15]
+	Updated print/tex-context-filter to 2020.55718 [mark 2021-02-15]
+	Updated print/tex-context-filter-doc to 2020.55718 [mark 2021-02-15]
+	Updated print/tex-context-letter to 2020.56073 [mark 2021-02-15]
+	Updated print/tex-context-letter-doc to 2020.56073 [mark 2021-02-15]
+	Updated print/tex-context-vim to 2020.56356 [mark 2021-02-15]
+	Updated print/tex-context-vim-doc to 2020.56356 [mark 2021-02-15]
