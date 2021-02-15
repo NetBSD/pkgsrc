@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/05/10 21:35:51 markd Exp $
+$NetBSD: distinfo,v 1.15 2021/02/15 01:23:35 markd Exp $
 
-SHA1 (texinfo.r55066.tar.xz) = 0837781778ce7ae9171dd5d939f37be66de6f83a
-RMD160 (texinfo.r55066.tar.xz) = ba7ad918e98622e751fd9ff1df35c62e31638c06
-SHA512 (texinfo.r55066.tar.xz) = d0cb3f2be6678d89e86382d22f7a929c6a7462ef87969cdb60a03796baf048155490849c74a4e1a39ee2d6eda41fafcadfa1c125017ac3f000d551f2a7d91513
-Size (texinfo.r55066.tar.xz) = 98056 bytes
+SHA1 (texinfo.r57466.tar.xz) = a6aa7d1b73ea825be5e9dd5f4ccd7b118ccf60fe
+RMD160 (texinfo.r57466.tar.xz) = 7b84e85f612d4382852be5d17fc18c8fc17c1ed2
+SHA512 (texinfo.r57466.tar.xz) = ab35f09ee6b33f412bb08be54a304751c104e2079798cc9f287f18e8d5e2fb0b0603b71eac8225f3bf2ec516fc593ee53f2c196126e7ab33d198221bd2e1bca2
+Size (texinfo.r57466.tar.xz) = 98684 bytes
