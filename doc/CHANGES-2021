@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1110 2021/02/15 21:18:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1111 2021/02/15 22:44:07 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1604,3 +1604,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-uvloop to 0.15.1 [adam 2021-02-15]
 	Updated misc/py-immutables to 0.15 [adam 2021-02-15]
 	Updated graphics/libwebp to 1.2.0 [adam 2021-02-15]
+	Updated emulators/qemu to 5.1.0nb12 [reinoud 2021-02-15]
