@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2020/05/10 04:13:27 markd Exp $
+# $NetBSD: Makefile,v 1.14 2021/02/15 01:38:18 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54754
+TEXLIVE_REV=	57535
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -22,6 +22,7 @@ DEPENDS+=	tex-accents-[0-9]*:../../print/tex-accents
 DEPENDS+=	tex-algorithm2e-[0-9]*:../../print/tex-algorithm2e
 DEPENDS+=	tex-algorithmicx-[0-9]*:../../print/tex-algorithmicx
 DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
+# depend algpseudocodex
 # depend algxpar
 # depend aligned-overset
 # depend amscdx
@@ -44,6 +45,7 @@ DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
 # depend bytefield
 # depend calculation
 # depend cascade
+# depend causets
 DEPENDS+=	tex-ccfonts-[0-9]*:../../fonts/tex-ccfonts
 # depend ccool
 DEPENDS+=	tex-chemarrow-[0-9]*:../../print/tex-chemarrow
@@ -62,6 +64,7 @@ DEPENDS+=	tex-clrscode-[0-9]*:../../print/tex-clrscode
 # depend clrscode3e
 # depend codeanatomy
 # depend commath
+# depend commutative-diagrams
 # depend complexity
 # depend computational-complexity
 DEPENDS+=	tex-concmath-[0-9]*:../../fonts/tex-concmath
@@ -69,6 +72,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend conteq
 # depend correctmathalign
 # depend cryptocode
+# depend decision-table
 # depend delim
 # depend delimseasy
 # depend delimset
@@ -104,6 +108,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend gotoh
 # depend grundgesetze
 # depend gu
+# depend helmholtz-ellis-ji-notation
 # depend hep
 # depend hepnames
 # depend hepparticles
@@ -114,6 +119,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend ionumbers
 # depend isomath
 # depend jkmath
+# depend jupynotex
 # depend karnaugh
 # depend karnaugh-map
 # depend karnaughmap
@@ -134,6 +140,7 @@ DEPENDS+=	tex-mathpartir-[0-9]*:../../math/tex-mathpartir
 # depend matlab-prettifier
 # depend matrix-skeleton
 # depend mattens
+# depend membranecomputing
 # depend memorygraphs
 # depend mgltex
 DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
@@ -158,6 +165,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend pm-isomath
 # depend polexpr
 # depend prftree
+# depend principia
 # depend proba
 # depend proof-at-the-end
 # depend prooftrees
@@ -171,6 +179,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend revquantum
 # depend ribbonproofs
 # depend rmathbr
+# depend sankey
 # depend sasnrdisplay
 # depend sciposter
 # depend sclang-prettifier
