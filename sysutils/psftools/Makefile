@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2021/01/13 12:06:39 fcambus Exp $
+# $NetBSD: Makefile,v 1.11 2021/02/15 07:41:52 fcambus Exp $
 #
 
-DISTNAME=	psftools-1.1.0
+DISTNAME=	psftools-1.1.1
 CATEGORIES=	sysutils fonts
 MASTER_SITES=	https://www.seasip.info/Unix/PSF/
 
