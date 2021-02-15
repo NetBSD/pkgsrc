@@ -1,16 +1,12 @@
-$NetBSD: distinfo,v 1.10 2017/01/11 14:47:51 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/02/15 14:52:23 ryoon Exp $
 
-SHA1 (gyp-0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95.tar.gz) = 2787473128d98a88d717b6b19c0ae03f0673f48a
-RMD160 (gyp-0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95.tar.gz) = e58419e50f6c6c1da1ca994f359394b9f2adcce5
-SHA512 (gyp-0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95.tar.gz) = 8fcfc28d30990cf3e14cd107225f38e4b691a15c7966101b21d080a4bacadb1bf123045421de509dc053dea60c27427cf3649acdf63a25a2c637f140a770e492
-Size (gyp-0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95.tar.gz) = 12195156 bytes
+SHA1 (gyp-0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6.tar.xz) = 58307d706708ac3baaad464a81b68f11562c06c8
+RMD160 (gyp-0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6.tar.xz) = e6654151c1365dda85843c0d5c1c11546a103c0b
+SHA512 (gyp-0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6.tar.xz) = 0ddb20e699ab6a544353e759411c349a40078834ccc6e040dbd080f94b6e6319d0223ff2c7fc776e9fc61c2a7e9ab7f1c35a24e3a3e00535306544a33cbc4974
+Size (gyp-0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6.tar.xz) = 447608 bytes
 SHA1 (patch-gyptest.py) = e33b65b31390fc5d4989e75f72f35b13055e3b41
 SHA1 (patch-pylib_gyp_common.py) = 8cad1bb72f23a7536cddf9fc2452c5623f4165cc
 SHA1 (patch-pylib_gyp_generator_make.py) = 1feb43b650a4dd8514e74e0c2bda41bde2243e03
-SHA1 (patch-test_lib_TestGyp.py) = e9a21bfc843b258de27f1eaa3628dbf9aff8fc45
 SHA1 (patch-test_library__dirs_subdir_test.gyp) = 9eb3b39f0bdbf54df6b45a3c613d83e9dfb68d8f
 SHA1 (patch-test_module_src_module.gyp) = 8016db83cce1244f17295d3dfd725f75ff78cb28
 SHA1 (patch-test_module_src_program.c) = ab55d357d9855f79f6fdfb151767f0521a217871
-SHA1 (patch-test_variables_commands_commands-repeated.gyp.stdout) = e42490b86b4adf4aca7df1dae9be9d6aa1583bd2
-SHA1 (patch-test_variables_commands_commands.gyp.ignore-env.stdout) = 3eb017f6fac704cb7e7ed179b8b30fb8353ec64e
-SHA1 (patch-test_variables_commands_commands.gyp.stdout) = 6d5f73d70e723de278ba0f2563f7c05ae788a4dd
