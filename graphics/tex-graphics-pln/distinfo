@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/04/27 02:08:13 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/02/15 01:19:06 markd Exp $
 
-SHA1 (graphics-pln.r54080.tar.xz) = 2af598ce63bca5c8f1e0f79afd84c9c280c9087a
-RMD160 (graphics-pln.r54080.tar.xz) = fab794adfe4ed118a03182a2f25da61128ea7bfe
-SHA512 (graphics-pln.r54080.tar.xz) = 1afe8fe48cc2ad5af553629554fb83ba07c54d5f45d54ae1cb3f3f2a46235b5587ba93af191666a11f4b9d82b5eac3fbdd70b45918c754c5127636cb3005b5c7
-Size (graphics-pln.r54080.tar.xz) = 8720 bytes
+SHA1 (graphics-pln.r56823.tar.xz) = 1a01daf86e202616373a7d79a2c0aa57e51b46cb
+RMD160 (graphics-pln.r56823.tar.xz) = 36d53bec0a4ad1d1ab2cd79659544168a5acdc74
+SHA512 (graphics-pln.r56823.tar.xz) = cbb87e4d040c6844cb2e677d352f9fdf9dca7848a894225944f52abf4b1ab9c03d6ea2881074b30bb618eee647ebfb70d8baeb2a82c3446bef40a47487e6b9c0
+Size (graphics-pln.r56823.tar.xz) = 8740 bytes
