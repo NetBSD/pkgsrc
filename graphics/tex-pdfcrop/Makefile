@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2020/08/31 18:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/02/15 03:53:47 markd Exp $
 
 DISTNAME=	pdfcrop
-PKGNAME=	tex-${DISTNAME}-1.37
-PKGREVISION=	5
-TEXLIVE_REV=	29348
+PKGNAME=	tex-${DISTNAME}-1.40
+TEXLIVE_REV=	55435
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/pdfcrop
 COMMENT=	Crop PDF graphics
 LICENSE=	lppl-1.3c
 
@@ -21,7 +21,6 @@ SUBST_SED.paths+=	-e 's,@GHOSTSCRIPT@,${TOOLS_PATH.gs},g'
 
 TEX_TEXMF_DIRS=	# empty
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:
