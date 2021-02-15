@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/05/21 10:21:50 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/02/15 04:21:10 markd Exp $
 
-SHA1 (context-filter.r54912.tar.xz) = 514bcaadfb2585dcde73fde7c5cbe094ded21e3b
-RMD160 (context-filter.r54912.tar.xz) = c76e3a52639c34892a49f79fbbfa954f2cd0e93a
-SHA512 (context-filter.r54912.tar.xz) = defdfcfffd81637c45b2537dc8d7c931c582bb65d40092300606a1994f4e547c925c4de227406bacb3a5f282321c7c4693759b34c0885d8a1cf06e96e647fe38
-Size (context-filter.r54912.tar.xz) = 6484 bytes
+SHA1 (context-filter.r55718.tar.xz) = e7a1466d1a501c9bb2d7b607e7f9a22aa4172967
+RMD160 (context-filter.r55718.tar.xz) = 4af6c129a43bb88df2c394ee8a592c96712a16d5
+SHA512 (context-filter.r55718.tar.xz) = cfd8b7f1276464a8593dce148e170105c2da3d20a755a4d197999b2c00610a3ee0227a8820e5eb34c09ac3537381c8cc984a67efba2c3fe8b85f7c57cb13c720
+Size (context-filter.r55718.tar.xz) = 6564 bytes
