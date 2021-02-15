@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/07/06 02:33:34 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/15 04:03:20 markd Exp $
 
-SHA1 (tex-xindy-43948/xindy.tar.xz) = ab83a9879e13866500091c5c8d872c947d3d5656
-RMD160 (tex-xindy-43948/xindy.tar.xz) = 114ed7ab3ea3866cd18271fe477bd91515daece4
-SHA512 (tex-xindy-43948/xindy.tar.xz) = 0caec7677fa78816a427a0eb1fb7f89570711df0904da308ef1455ac044e61dca9bac89320aa453dce1a027d34e6bd95b5314e6a0ce20726c8ced6c2e26e2e74
-Size (tex-xindy-43948/xindy.tar.xz) = 140668 bytes
+SHA1 (xindy.r55330.tar.xz) = 586d00274ff660b95cf7268a0ecd5b358a78e722
+RMD160 (xindy.r55330.tar.xz) = b6a7540d42e402c5c0a70527e4d3ab4f1675c1e1
+SHA512 (xindy.r55330.tar.xz) = 8a2db7333ee39936892ad83eed0d31de25cdc48533dbbcb297e3a8714fefa6d7973b9e9eb7767a50f11be89afa7eb944bb56064a14b71d23bf8161f7fddf8d7c
+Size (xindy.r55330.tar.xz) = 140664 bytes
