@@ -1,12 +1,12 @@
-$NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.6 2017/12/17 14:15:43 tsutsui Exp $
+$NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.7 2021/02/15 14:50:23 ryoon Exp $
 
 * NetBSD support
 
---- gui/config_dialog/config_dialog.cc.orig	2016-05-15 08:11:11.000000000 +0000
+--- gui/config_dialog/config_dialog.cc.orig	2021-02-15 03:48:53.000000000 +0000
 +++ gui/config_dialog/config_dialog.cc
-@@ -100,21 +100,21 @@ ConfigDialog::ConfigDialog()
-   setWindowTitle(tr("Mozc Preferences"));
- #endif  // OS_MACOSX
+@@ -104,21 +104,21 @@ ConfigDialog::ConfigDialog()
+   setWindowTitle(tr("%1 Preferences").arg(GuiUtil::ProductName()));
+ #endif  // __APPLE__
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_NETBSD)
@@ -16,7 +16,7 @@ $NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.6 2017/12/17 14:15:43 ts
 -#endif  // OS_LINUX
 +#endif  // OS_LINUX || OS_NETBSD
  
- #ifdef NO_LOGGING
+ #ifdef MOZC_NO_LOGGING
    // disable logging options
    miscLoggingWidget->setVisible(false);
  
@@ -27,10 +27,10 @@ $NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.6 2017/12/17 14:15:43 ts
    configDialogTabWidget->removeTab(kMiscTabIndex);
 -#endif  // OS_LINUX
 +#endif  // OS_LINUX || OS_NETBSD
- #endif  // NO_LOGGING
+ #endif  // MOZC_NO_LOGGING
  
- #ifndef ENABLE_CLOUD_HANDWRITING
-@@ -324,7 +324,7 @@ ConfigDialog::ConfigDialog()
+   suggestionsSizeSpinBox->setRange(1, 9);
+@@ -280,7 +280,7 @@ ConfigDialog::ConfigDialog()
    dictionaryPreloadingAndUACLabel->setVisible(false);
  #endif  // OS_WIN
  
@@ -39,12 +39,12 @@ $NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.6 2017/12/17 14:15:43 ts
    // On Linux, disable all fields for UsageStats
    usageStatsLabel->setEnabled(false);
    usageStatsLabel->setVisible(false);
-@@ -334,7 +334,7 @@ ConfigDialog::ConfigDialog()
+@@ -290,7 +290,7 @@ ConfigDialog::ConfigDialog()
    usageStatsMessage->setVisible(false);
    usageStatsCheckBox->setEnabled(false);
    usageStatsCheckBox->setVisible(false);
 -#endif  // OS_LINUX
 +#endif  // OS_LINUX || OS_NETBSD
  
-   Reload();
+   GuiUtil::ReplaceWidgetLabels(this);
  

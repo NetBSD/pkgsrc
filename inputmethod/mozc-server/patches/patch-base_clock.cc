@@ -1,24 +1,24 @@
-$NetBSD: patch-base_clock.cc,v 1.2 2017/12/17 14:15:43 tsutsui Exp $
+$NetBSD: patch-base_clock.cc,v 1.3 2021/02/15 14:50:23 ryoon Exp $
 
 * NetBSD support
 
---- base/clock.cc.orig	2016-05-15 08:11:10.000000000 +0000
+--- base/clock.cc.orig	2021-02-15 03:48:53.000000000 +0000
 +++ base/clock.cc
-@@ -124,7 +124,7 @@ class ClockImpl : public ClockInterface 
+@@ -116,7 +116,7 @@ class ClockImpl : public ClockInterface 
      mach_timebase_info(&timebase_info);
-     return static_cast<uint64>(
-         1.0e9 * timebase_info.denom / timebase_info.numer);
--#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
-+#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
+     return static_cast<uint64>(1.0e9 * timebase_info.denom /
+                                timebase_info.numer);
+-#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM)
++#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM) || defined(OS_NETBSD)
      return 1000000uLL;
- #else  // platforms (OS_WIN, OS_MACOSX, OS_LINUX, ...)
+ #else  // platforms (OS_WIN, __APPLE__, OS_LINUX, ...)
  #error "Not supported platform"
-@@ -141,7 +141,7 @@ class ClockImpl : public ClockInterface 
+@@ -133,7 +133,7 @@ class ClockImpl : public ClockInterface 
      return static_cast<uint64>(timestamp.QuadPart);
- #elif defined(OS_MACOSX)
+ #elif defined(__APPLE__)
      return static_cast<uint64>(mach_absolute_time());
--#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
-+#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
+-#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM)
++#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM) || defined(OS_NETBSD)
      uint64 sec;
      uint32 usec;
      GetTimeOfDay(&sec, &usec);
