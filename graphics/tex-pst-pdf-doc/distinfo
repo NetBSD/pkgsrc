@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/04/27 02:08:14 markd Exp $
+$NetBSD: distinfo,v 1.7 2021/02/15 11:03:11 markd Exp $
 
-SHA1 (pst-pdf.doc.r52819.tar.xz) = 1b3ab4d293210e2f228ff8e4fbb9f28f6de149e3
-RMD160 (pst-pdf.doc.r52819.tar.xz) = 4b6048874fbc9698b5132f8e08a86ef172c629f8
-SHA512 (pst-pdf.doc.r52819.tar.xz) = d16ca8328cdc79dc6c3488a68a537ace21d2f124604b69c79be6860d9913c8eac3d3093b9fcf03a17dbfe184a73c168a13d2e5a54056fe076e0e01941740f4a7
-Size (pst-pdf.doc.r52819.tar.xz) = 967780 bytes
+SHA1 (pst-pdf.doc.r56622.tar.xz) = f35351bf00e2af1ad2985bbc9adccaa26b86c437
+RMD160 (pst-pdf.doc.r56622.tar.xz) = 3442c49b902ec7b7f8a1e5c0696c6093d61f5f18
+SHA512 (pst-pdf.doc.r56622.tar.xz) = eb5013040f3774e81d019c0010e8fb507d22cb2fb9c74e75f2c14aa0e4edd20245ddaaa3744fec7204c607b5f6329425f8f2b6e09bd153e6df6a3ae39d1e1625
+Size (pst-pdf.doc.r56622.tar.xz) = 964004 bytes
