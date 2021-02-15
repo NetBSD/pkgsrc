@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2019/08/12 11:21:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/02/15 00:39:21 markd Exp $
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati1.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati2.pdf
 share/texmf-dist/doc/latex/toptesi/Frontespizio-sss.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespizioLandscape.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespizioScudo.pdf
+share/texmf-dist/doc/latex/toptesi/FrontespizioScudo.tex
 share/texmf-dist/doc/latex/toptesi/GuITlogo.pdf
 share/texmf-dist/doc/latex/toptesi/MPlogo.pdf
 share/texmf-dist/doc/latex/toptesi/README.txt
@@ -16,6 +17,7 @@ share/texmf-dist/doc/latex/toptesi/Toptesi-example-topfront.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-example-topfront.tex
 share/texmf-dist/doc/latex/toptesi/VeraPDFiniziale.jpg
 share/texmf-dist/doc/latex/toptesi/logodue.pdf
+share/texmf-dist/doc/latex/toptesi/logoguittondo.pdf
 share/texmf-dist/doc/latex/toptesi/logoquattro.pdf
 share/texmf-dist/doc/latex/toptesi/logotre.pdf
 share/texmf-dist/doc/latex/toptesi/logouno.pdf
@@ -45,3 +47,4 @@ share/texmf-dist/doc/latex/toptesi/toptesi-scudo-example.zip
 share/texmf-dist/doc/latex/toptesi/toptesi.pdf
 share/texmf-dist/doc/latex/toptesi/veraPDFconformance.jpg
 share/texmf-dist/doc/latex/toptesi/veraPDFnoconformance.jpg
+share/texmf-dist/doc/latex/toptesi/veraPDFnoconformance.pdf
