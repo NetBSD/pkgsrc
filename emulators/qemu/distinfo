@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.167 2020/11/02 17:17:15 martin Exp $
+$NetBSD: distinfo,v 1.168 2021/02/15 22:15:12 reinoud Exp $
 
 SHA1 (palcode-clipper) = e25ae10a10e0801e47b62b9ee2d10c8ccb4ee940
 RMD160 (palcode-clipper) = a637f1cc38dabfdff36e3f02b6dd02d7c63cb8db
@@ -16,6 +16,8 @@ SHA1 (patch-capstone_Makefile) = f59870031de8c4385a591362749ec82f57fd4c27
 SHA1 (patch-configure) = 2f5689b83b58066865598a83d53be2de6b42e303
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
+SHA1 (patch-hw-mips-Kconfig) = c7199ad26ac45116ab4d38252db4234ae93bdf9a
+SHA1 (patch-hw-mips-mipssim.c) = 30f31c90306e73b6adb3afad4934c91ce5141e86
 SHA1 (patch-hw_alpha_alpha_sys.h) = 5908698208937ff9eb0bf1c504e1144af3d1bcc4
 SHA1 (patch-hw_alpha_dp264.c) = 856304784f098863728ecac3d0a9287aa22190d7
 SHA1 (patch-hw_alpha_typhoon.c) = 1bed5cd6f355c4163585c5331356ebf38c5c3a16
