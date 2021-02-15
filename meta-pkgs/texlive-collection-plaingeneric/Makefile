@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2020/05/21 11:51:20 markd Exp $
+# $NetBSD: Makefile,v 1.16 2021/02/15 00:48:58 markd Exp $
 
 DISTNAME=	collection-plaingeneric
 PKGNAME=	texlive-${DISTNAME}-2020pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54723
+TEXLIVE_REV=	56496
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -37,6 +37,7 @@ DEPENDS+=	tex-epsf-dvipdfmx-[0-9]*:../../print/tex-epsf-dvipdfmx
 # depend expkv
 # depend expkv-cs
 # depend expkv-def
+# depend expkv-opt
 # depend fenixpar
 DEPENDS+=	tex-figflow-[0-9]*:../../print/tex-figflow
 DEPENDS+=	tex-fixpdfmag-[0-9]*:../../print/tex-fixpdfmag
@@ -62,12 +63,14 @@ DEPENDS+=	tex-lambda-lists-[0-9]*:../../print/tex-lambda-lists
 DEPENDS+=	tex-letterspacing-[0-9]*:../../print/tex-letterspacing
 # depend librarian
 DEPENDS+=	tex-listofitems-[0-9]*:../../print/tex-listofitems
+# depend localloc
 DEPENDS+=	tex-mathdots-[0-9]*:../../print/tex-mathdots
 # depend metatex
 # depend midnight
 DEPENDS+=	tex-mkpattern-[0-9]*:../../print/tex-mkpattern
 # depend modulus
 DEPENDS+=	tex-multido>=1.42:../../devel/tex-multido
+# depend namedef
 # depend navigator
 DEPENDS+=	tex-newsletr-[0-9]*:../../print/tex-newsletr
 DEPENDS+=	tex-nth-[0-9]*:../../print/tex-nth
@@ -84,6 +87,7 @@ DEPENDS+=	tex-plnfss-[0-9]*:../../print/tex-plnfss
 DEPENDS+=	tex-plstmary-[0-9]*:../../print/tex-plstmary
 # depend poormanlog
 DEPENDS+=	tex-present-[0-9]*:../../print/tex-present
+# depend pwebmac
 DEPENDS+=	tex-random-[0-9]*:../../print/tex-random
 # depend randomlist
 DEPENDS+=	tex-resumemac-[0-9]*:../../print/tex-resumemac
@@ -91,6 +95,7 @@ DEPENDS+=	tex-ruler-[0-9]*:../../print/tex-ruler
 # depend schemata
 # depend shade
 # depend simplekv
+# depend soul
 DEPENDS+=	tex-swrule-[0-9]*:../../print/tex-swrule
 # depend systeme
 # depend tabto-generic
@@ -112,6 +117,7 @@ DEPENDS+=	tex-varisize-[0-9]*:../../print/tex-varisize
 #DEPENDS+=	tex-xii-[0-9]*:../../print/tex-xii
 # depend xlop
 # depend yax
+# depend zztex
 
 META_PACKAGE=	yes
 
