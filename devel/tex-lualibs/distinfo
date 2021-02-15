@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/05/11 10:52:57 markd Exp $
+$NetBSD: distinfo,v 1.11 2021/02/15 00:25:23 markd Exp $
 
-SHA1 (lualibs.r54994.tar.xz) = cc59e030668b7b39af34409f5e169a75ce6925ca
-RMD160 (lualibs.r54994.tar.xz) = 148e71f729a71605b9a3e3c2cf86ad250fccea36
-SHA512 (lualibs.r54994.tar.xz) = 1a7bed1db0c971d092739e8afee1c890786426242ba5235e6666fd50dbc3bf051d1683545206a321b283c12148bb2251cdb5c7af11225b38128bdc4501fbf0ba
-Size (lualibs.r54994.tar.xz) = 121648 bytes
+SHA1 (lualibs.r57277.tar.xz) = 89ab3f523f549e60b11438cb691878bff033e18c
+RMD160 (lualibs.r57277.tar.xz) = 48aae2cf6929a4162933f4fcc34c02fad18d491d
+SHA512 (lualibs.r57277.tar.xz) = ccdbde1b5b9abd3478e3912ff20b1639c3504f06433eb10cb174a3a413642629ad9eb0ecb3fc7dfe3ee1e7e2dac2e552dd86de98bd89e3a65bc6736bedf181af
+Size (lualibs.r57277.tar.xz) = 121836 bytes
