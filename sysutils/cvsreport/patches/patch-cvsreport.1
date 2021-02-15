@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2021/02/15 14:29:41 cjep Exp $
+$NetBSD: patch-cvsreport.1,v 1.1 2021/02/15 14:49:41 cjep Exp $
 
-Add a note on the /proc filesystem requirement.
+Add a note about the /proc filesystem requirement.
 
 --- cvsreport.1.orig	2003-11-29 17:48:30.000000000 +0000
 +++ cvsreport.1
-@@ -354,6 +354,8 @@ Set the access method for an external cv
- .IP CVSREPORT_DEBUG
+@@ -355,6 +355,10 @@ Set the access method for an external cv
  When set, equivalent to the \fB--debug\fP option.
+ 
  
 +.SH NOTES
 +\fBcvsreport\fP expects the proc filesystem to be mounted.
- 
++
++
  .SH BUGS
  Working on remote repositories is \fBawfully\fP slow (blame CVS).
+ .br
