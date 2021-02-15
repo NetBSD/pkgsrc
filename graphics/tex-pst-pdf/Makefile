@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/04/27 02:08:14 markd Exp $
+# $NetBSD: Makefile,v 1.12 2021/02/15 11:03:11 markd Exp $
 
 DISTNAME=	pst-pdf
-PKGNAME=	tex-${DISTNAME}-1.2e
-TEXLIVE_REV=	52819
+PKGNAME=	tex-${DISTNAME}-1.2f
+TEXLIVE_REV=	56622
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pst-pdf
