@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2020/05/25 05:30:31 rillig Exp $
+# $NetBSD: Makefile.common,v 1.29 2021/02/15 14:50:23 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -7,7 +7,7 @@
 # used by inputmethod/uim-mozc/Makefile
 #
 
-DISTNAME=	mozc-2.20.2673.102
+DISTNAME=	mozc-2.26.4282.100
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
@@ -28,9 +28,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/mozc-server/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
 
-PYTHON_VERSIONS_ACCEPTED=	27 # gyp
-
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
+BUILD_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 USE_LANGUAGES=	c c++
@@ -46,9 +45,9 @@ OPENSSL_LIBS=		-lssl -lcrypto
 SUBST_CLASSES+=		gyp
 SUBST_STAGE.gyp=	pre-configure
 SUBST_MESSAGE.gyp=	Fix gyp defaults
+SUBST_FILES.gyp+=	config.bzl
 SUBST_FILES.gyp+=	base/process.cc
 SUBST_FILES.gyp+=	gyp/directories.gypi
-SUBST_FILES.gyp+=	handwriting/zinnia_handwriting.cc
 SUBST_FILES.gyp+=	unix/ibus/ibus.gyp
 SUBST_FILES.gyp+=	unix/ibus/path_util.cc
 SUBST_VARS.gyp+=	OPENSSL_CFLAGS OPENSSL_INC OPENSSL_LDFLAGS OPENSSL_LIBS
@@ -64,6 +63,7 @@ OSDEST.Linux=	linux
 OSDEST.NetBSD=	bsd
 
 MOZC_BUILD_MODE=	Release # or Debug
+MOZC_BUILD_MODE=	Debug
 
 # In file included from src/dictionary/system/system_dictionary.h:43:0,
 #                  from ../../dictionary/system/system_dictionary.cc:47:
@@ -75,13 +75,12 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		GYP_DEFINES="use_libprotobuf=1" \
 		${PYTHONBIN} build_mozc.py \
 		gyp \
 		--gypdir=${LOCALBASE}/bin
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/protobuf/buildlink3.mk"
+#.include "../../devel/protobuf/buildlink3.mk"
 # gmock is not used yet...
 #.include "../../devel/gmock/buildlink3.mk"
 .include "../../inputmethod/zinnia/buildlink3.mk"

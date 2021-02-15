@@ -1,28 +1,19 @@
-$NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.5 2020/06/19 05:45:30 taca Exp $
+$NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.6 2021/02/15 14:50:23 ryoon Exp $
 
 * NetBSD support
 * Fix from https://github.com/google/mozc/issues/460
 
---- gui/word_register_dialog/word_register_dialog.cc.orig	2017-11-02 13:32:47.000000000 +0000
+--- gui/word_register_dialog/word_register_dialog.cc.orig	2021-02-15 03:48:53.000000000 +0000
 +++ gui/word_register_dialog/word_register_dialog.cc
-@@ -90,9 +90,9 @@ QString GetEnv(const char *envname) {
+@@ -97,9 +97,9 @@ QString GetEnv(const char *envname) {
    }
-   return "";
+   return QLatin1String("");
  #endif  // OS_WIN
--#if defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_NETBSD)
-   return ::getenv(envname);
--#endif  // OS_MACOSX or OS_LINUX
-+#endif  // OS_MACOSX, OS_LINUX or OS_NETBSD
+-#if defined(__APPLE__) || defined(OS_LINUX)
++#if defined(__APPLE__) || defined(OS_LINUX) || defined(OS_NETBSD)
+   return QString::fromUtf8(::getenv(envname));
+-#endif  // __APPLE__ or OS_LINUX
++#endif  // __APPLE__ or OS_LINUX or OS_NETBSD
    // TODO(team): Support other platforms.
-   return "";
+   return QLatin1String("");
  }
-@@ -301,7 +301,7 @@ WordRegisterDialog::ErrorCode WordRegist
-   }
- 
-   UserDictionary *dic =
--      session_->mutable_storage()->mutable_dictionaries(index);
-+      session_->mutable_storage()->user_dictionary_storage_base.mutable_dictionaries(index);
-   CHECK(dic);
- 
-   if (dic->name() != DictionarycomboBox->currentText().toStdString()) {
