@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/08/31 18:12:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2021/02/15 03:46:44 markd Exp $
 
 DISTNAME=	latexdiff.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.0
-PKGREVISION=	2
-TEXLIVE_REV=	48926
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.1.1
+TEXLIVE_REV=	55540
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latexdiff
@@ -15,6 +14,5 @@ REPLACE_PERL+=	texmf-dist/doc/support/latexdiff/latexdiff
 REPLACE_PERL+=	texmf-dist/doc/support/latexdiff/latexdiff-fast
 REPLACE_BASH+=	texmf-dist/doc/support/latexdiff/contrib/latexdiff-wrap
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
