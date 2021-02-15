@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/18 10:50:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/15 21:17:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/immutables/__init__.py
 ${PYSITELIB}/immutables/__init__.pyc
@@ -20,3 +21,4 @@ ${PYSITELIB}/immutables/map.py
 ${PYSITELIB}/immutables/map.pyc
 ${PYSITELIB}/immutables/map.pyo
 ${PYSITELIB}/immutables/py.typed
+${PYSITELIB}/immutables/pythoncapi_compat.h
