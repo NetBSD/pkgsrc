@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/04/27 02:08:12 markd Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/15 10:53:25 markd Exp $
 
 DISTNAME=	auto-pst-pdf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.6.52849
-TEXLIVE_REV=	52849
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.7
+TEXLIVE_REV=	56596
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/auto-pst-pdf
