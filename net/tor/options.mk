@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.15 2021/02/03 19:55:27 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2021/02/15 19:01:31 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
-PKG_SUPPORTED_OPTIONS=	doc # rust
-PKG_SUGGESTED_OPTIONS+=	doc
+PKG_SUPPORTED_OPTIONS=	doc lzma nss zstd # rust
+PKG_SUGGESTED_OPTIONS+=	doc zstd
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		doc
+PLIST_VARS+=		gencert
 
 ###
 ### This enables the build of manual pages. It requires asciidoc
@@ -50,3 +51,25 @@ CONFIGURE_ARGS+=	--disable-asciidoc
 #.else
 CONFIGURE_ARGS+=	--disable-rust
 #.endif
+
+.if !empty(PKG_OPTIONS:Mlzma)
+CONFIGURE_ARGS+=	--enable-lzma
+.include "../../archivers/lzmalib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-lzma
+.endif
+
+.if !empty(PKG_OPTIONS:Mnss)
+CONFIGURE_ARGS+=	--enable-nss
+.include "../../devel/nss/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-nss
+PLIST.gencert=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mzstd)
+CONFIGURE_ARGS+=	--enable-zstd
+.include "../../archivers/zstd/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-zstd
+.endif
