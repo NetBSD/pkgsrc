@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.916 2021/01/14 17:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.917 2021/02/15 15:07:08 ryoon Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -466,6 +466,7 @@ SUBDIR+=	xbitmaps
 SUBDIR+=	xcalc
 SUBDIR+=	xcalib
 SUBDIR+=	xcb
+SUBDIR+=	xcb-imdkit
 SUBDIR+=	xcb-proto
 SUBDIR+=	xcb-util
 SUBDIR+=	xcb-util-cursor
