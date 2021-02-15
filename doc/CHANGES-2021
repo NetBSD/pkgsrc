@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1098 2021/02/15 11:08:27 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1099 2021/02/15 12:07:02 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/tex-pst-pdf-doc to 1.2f [mark 2021-02-15]
 	Updated graphics/tex-pstricks to 3.01 [mark 2021-02-15]
 	Updated graphics/tex-pstricks-doc to 3.01 [mark 2021-02-15]
+	Updated www/logswan to 2.1.9 [fcambus 2021-02-15]
