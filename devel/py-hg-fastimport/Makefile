@@ -1,33 +1,19 @@
-# $NetBSD: Makefile,v 1.14 2021/02/06 08:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/02/15 14:39:15 roy Exp $
 
-DISTNAME=	danielj7-hg-fastimport-d41a42894dfa
-PKGNAME=	${PYPKGPREFIX}-hg-fastimport-20170211
-PKGREVISION=	2
+DISTNAME=	hg-fastimport-0.1.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	-https://bitbucket.org/danielj7/hg-fastimport/get/v20170211.tar.bz2
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://roy.marples.name/downloads/hg-fastimport/
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mercurial-scm.org/wiki/FastImportExtension
+MAINTAINER=	roy@NetBSD.org
+HOMEPAGE=	https://mercurial.selenic.com/wiki/FastImportExtension
 COMMENT=	Mercurial extension for importing from a git fast-import stream
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-fastimport>=0.9.6nb1:../../devel/py-fastimport
-DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
+DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.1:../../devel/py-mercurial
 
-USE_LANGUAGES=	# none
-
-INSTALLATION_DIRS+=	${PYSITELIB}/hgfastimport share/doc/py-hg-fastimport
-
-PYTHON_VERSIONS_ACCEPTED=	27
 PY_PATCHPLIST=			yes
 
-do-build:
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/hgfastimport/*.py ${DESTDIR}${PREFIX}/${PYSITELIB}/hgfastimport
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/py-hg-fastimport
-	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/hgfastimport
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
