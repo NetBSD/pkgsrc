@@ -1,14 +1,14 @@
-$NetBSD: patch-build__tools_mozc__version.py,v 1.3 2017/12/17 14:15:43 tsutsui Exp $
+$NetBSD: patch-build__tools_mozc__version.py,v 1.4 2021/02/15 14:50:23 ryoon Exp $
 
 * NetBSD support
 
---- build_tools/mozc_version.py.orig	2014-01-06 07:10:26.000000000 +0000
+--- build_tools/mozc_version.py.orig	2021-02-15 03:48:53.000000000 +0000
 +++ build_tools/mozc_version.py
-@@ -64,6 +64,7 @@ TARGET_PLATFORM_TO_DIGIT = {
-     'Linux': '2',
-     'Android': '3',
-     'NaCl': '4',
-+    'NetBSD': '5',
-     }
+@@ -69,6 +69,7 @@ TARGET_PLATFORM_TO_DIGIT = {
+     'iOS': '6',
+     'iOS_sim': '6',
+     'Wasm': '7',
++    'NetBSD': '8',
+ }
  
  VERSION_PROPERTIES = [
