@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/12/04 20:45:05 nia Exp $
+# $NetBSD: Makefile,v 1.12 2021/02/15 18:58:39 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/12-plpython-/}
-PKGREVISION=	2
 COMMENT=	PL/Python procedural language for the PostgreSQL backend
 
 DEPENDS+=	postgresql12-server>=${PKGVERSION_NOREV}:../../databases/postgresql12-server
