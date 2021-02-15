@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:34:45 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/02/15 00:33:09 markd Exp $
 
 DISTNAME=	revtex
-PKGNAME=	tex-${DISTNAME}-4.2c
-TEXLIVE_REV=	49751
+PKGNAME=	tex-${DISTNAME}-4.2e
+TEXLIVE_REV=	56591
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/revtex
@@ -14,6 +14,5 @@ DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-textcase-[0-9]*:../../print/tex-textcase
 DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
