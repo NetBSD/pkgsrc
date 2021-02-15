@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/05/22 21:08:47 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/15 02:02:15 markd Exp $
 
-SHA1 (tex-ebproof-44392/ebproof.doc.tar.xz) = 1b89eeafc9ff4d2fc5ae1d7b8fe686d3e0128235
-RMD160 (tex-ebproof-44392/ebproof.doc.tar.xz) = 29968f12f6a31c5d6211684aa85d2f8f1a7c727d
-SHA512 (tex-ebproof-44392/ebproof.doc.tar.xz) = 6f46a6b296a44ba92106630ecdaf066cfe8537e1ea6066525e84a7a97fca5fbaca4602b8d0140b631eec18ffed2e32c49ce19238e2099cf7580ae00d274150ef
-Size (tex-ebproof-44392/ebproof.doc.tar.xz) = 234552 bytes
+SHA1 (ebproof.doc.r57544.tar.xz) = dd846070c5f7d6520f06f30d5ef759b41868bf65
+RMD160 (ebproof.doc.r57544.tar.xz) = 78862a2a355ff1c27913da284078468d8f484ff0
+SHA512 (ebproof.doc.r57544.tar.xz) = d5a1b900c73969c590921f3fea138e1ece49d9c9c4f1ccf7d3c1c877f501196a08d8099afde9913b83e653f4a8937e91878640975233f5482b6538d262a6139f
+Size (ebproof.doc.r57544.tar.xz) = 496192 bytes
