@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/22 21:11:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/15 01:26:44 markd Exp $
 share/texmf-dist/doc/generic/tracklang/CHANGES
 share/texmf-dist/doc/generic/tracklang/README
 share/texmf-dist/doc/generic/tracklang/samples/animals/animals-en-GB.ldf
@@ -19,6 +19,7 @@ share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-de.pdf
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-de.tex
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-poly.pdf
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-poly.tex
+share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-sr-poly.pdf
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals.pdf
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals.tex
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals2-de.pdf
