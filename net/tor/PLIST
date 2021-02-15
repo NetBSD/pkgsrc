@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.14 2019/01/08 08:39:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2021/02/15 19:01:31 wiz Exp $
 bin/tor
-bin/tor-gencert
+${PLIST.gencert}bin/tor-gencert
 bin/tor-print-ed-signing-cert
 bin/tor-resolve
 bin/torify
