@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1096 2021/02/15 07:50:04 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1097 2021/02/15 10:22:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1569,3 +1569,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-context-vim-doc to 2020.56356 [mark 2021-02-15]
 	Updated sysutils/psftools to 1.1.1 [fcambus 2021-02-15]
 	Updated graphics/ansilove to 4.1.5 [fcambus 2021-02-15]
+	Updated lang/nodejs10 to 10.23.3 [adam 2021-02-15]
+	Updated lang/nodejs12 to 12.20.2 [adam 2021-02-15]
