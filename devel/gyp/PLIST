@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/01/11 14:47:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/15 14:52:23 ryoon Exp $
 bin/gyp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -104,9 +104,6 @@ ${PYSITELIB}/gyp/msvs_emulation.pyo
 ${PYSITELIB}/gyp/ninja_syntax.py
 ${PYSITELIB}/gyp/ninja_syntax.pyc
 ${PYSITELIB}/gyp/ninja_syntax.pyo
-${PYSITELIB}/gyp/ordered_dict.py
-${PYSITELIB}/gyp/ordered_dict.pyc
-${PYSITELIB}/gyp/ordered_dict.pyo
 ${PYSITELIB}/gyp/simple_copy.py
 ${PYSITELIB}/gyp/simple_copy.pyc
 ${PYSITELIB}/gyp/simple_copy.pyo
