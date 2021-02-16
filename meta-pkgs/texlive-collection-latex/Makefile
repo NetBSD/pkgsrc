@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/02/13 05:59:23 markd Exp $
+# $NetBSD: Makefile,v 1.14 2021/02/16 00:50:14 gutteridge Exp $
 
 DISTNAME=	collection-latex
 PKGNAME=	texlive-${DISTNAME}-2020.57048
@@ -59,7 +59,7 @@ DEPENDS+=	tex-natbib>=8.31b:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek>=2009nb2:../../print/tex-oberdiek
 DEPENDS+=	tex-pagesel-[0-9]*:../../print/tex-pagesel
 DEPENDS+=	tex-pdfescape-[0-9]*:../../print/tex-pdfescape
-DEPENDS+=	tex-pslatex>=2009:../../print/tex-pslatex
+DEPENDS+=	tex-pslatex>=1.3:../../print/tex-pslatex
 DEPENDS+=	tex-psnfss>=9.2anb1:../../fonts/tex-psnfss
 DEPENDS+=	tex-pspicture>=2009:../../print/tex-pspicture
 DEPENDS+=	tex-refcount-[0-9]*:../../print/tex-refcount
