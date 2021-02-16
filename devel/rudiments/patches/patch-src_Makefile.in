@@ -1,0 +1,17 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2021/02/16 13:10:19 adam Exp $
+
+Fix infinite dependency.
+
+--- src/Makefile.in.orig	2021-02-14 19:48:47.000000000 +0000
++++ src/Makefile.in
+@@ -19,9 +19,7 @@ APACHELOBJS = @APACHELOBJS@
+ .cpp.obj:
+ 	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(COMPILE) $<
+ 
+-all:
+-	$(MAKE) librudiments.$(LIBEXT)
+-	$(MAKE) @LIBRUDIMENTSAPACHE@
++all: librudiments.$(LIBEXT)
+ 
+ clean:
+ 	$(LTCLEAN) $(RM) *.lo *.o *.obj *.$(LIBEXT) *.lib *.exp *.idb *.pdb *.manifest *.ii
