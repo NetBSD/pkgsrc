@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/01/11 07:35:34 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/02/16 18:46:18 adam Exp $
 
-DISTNAME=	rsa-4.7
+DISTNAME=	rsa-4.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rsa/}
@@ -19,13 +19,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_LANGUAGES=	# none
 
 post-install:
+.for bin in decrypt encrypt keygen priv2pub sign verify
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} pyrsa-decrypt pyrsa-decrypt-${PYVERSSUFFIX} && \
-		${MV} pyrsa-encrypt pyrsa-encrypt-${PYVERSSUFFIX} && \
-		${MV} pyrsa-keygen pyrsa-keygen-${PYVERSSUFFIX} && \
-		${MV} pyrsa-priv2pub pyrsa-priv2pub-${PYVERSSUFFIX} && \
-		${MV} pyrsa-sign pyrsa-sign-${PYVERSSUFFIX} && \
-		${MV} pyrsa-verify pyrsa-verify-${PYVERSSUFFIX} || ${TRUE}
+	${MV} pyrsa-${bin} pyrsa-${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
