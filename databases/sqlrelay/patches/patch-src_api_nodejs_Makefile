@@ -1,15 +1,15 @@
-$NetBSD: patch-src_api_nodejs_Makefile,v 1.1 2018/05/04 14:26:42 fhajny Exp $
+$NetBSD: patch-src_api_nodejs_Makefile,v 1.2 2021/02/16 13:12:39 adam Exp $
 
 Reuse existing nodejs headers, do not fetch.
 
---- src/api/nodejs/Makefile.orig	2016-12-20 08:40:41.000000000 +0000
+--- src/api/nodejs/Makefile.orig	2020-08-26 04:30:04.000000000 +0000
 +++ src/api/nodejs/Makefile
-@@ -12,7 +12,7 @@ clean:
+@@ -13,7 +13,7 @@ clean:
  	$(RM) temp1.gyp temp2.gyp
  
  build/Release/sqlrelay.node: binding.gyp sqlrelay.cpp package.json
--	$(NODEGYP) -v configure build
-+	$(NODEGYP) -v --nodedir $(PREFIX) configure build
+-	$(NODEGYP) $(NODEGYPPYTHON) -v configure build
++	$(NODEGYP) $(NODEGYPPYTHON) -v --nodedir $(PREFIX) configure build
  
  binding.gyp: binding_in.gyp
  	$(REPLACE) @NODEJSINCLUDEDIRS@ "$(NODEJSINCLUDEDIRS)" binding_in.gyp > temp1.gyp
