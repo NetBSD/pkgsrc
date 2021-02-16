@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2020/12/17 16:48:12 bouyer Exp $
+$NetBSD: distinfo,v 1.15.2.1 2021/02/16 08:30:47 bsiegert Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -62,7 +62,8 @@ SHA1 (patch-tools_libxl_libxl_dom.c) = 0c4a96523d13de65aaa71ef705c3579ee8d641f3
 SHA1 (patch-tools_libxl_libxl_event.c) = 8147122d03102eccc45c48a7d6ca1aa5d6286040
 SHA1 (patch-tools_libxl_libxl_internal.h) = 613edc0fa055b23f5dc2a2448456d3d6005337fe
 SHA1 (patch-tools_libxl_libxl_uuid.c) = 1eb8c027dbeb7e67df7475ee6e4d87220140c65b
-SHA1 (patch-tools_ocaml_common.make) = 4b845bdf3a013852109749ee18dfe28e3440d951
+SHA1 (patch-tools_ocaml_Makefile.rules) = 2198396f896999adb8ea05f100a0a5ec36733b1a
+SHA1 (patch-tools_ocaml_common.make) = 731744c8acd9ec4d04ef585c31348d498ac861b0
 SHA1 (patch-tools_ocaml_libs_xentoollog_xentoollog__stubs.c) = adee03d87168e735cb0d42ce06d0c31a14315b8d
 SHA1 (patch-tools_ocaml_libs_xl__xenlight_stubs.c) = cc612908524670f650a294af133a5912f955f39e
 SHA1 (patch-tools_ocaml_xenstored_Makefile) = b267702cf4090c7b45bba530e60327fced24e3e5
@@ -87,6 +88,7 @@ SHA1 (patch-tools_qemu-xen_qemu-doc.texi) = e72d480ec29829055f01226eaf020d4cbd10
 SHA1 (patch-tools_xenpaging_xenpaging.c) = 0a154b97f1f452a5f80f7c9a835a1f216f12f7e1
 SHA1 (patch-tools_xenpmd_xenpmd.c) = 851ce7a295e2f41ffcd966850d8003c82670c751
 SHA1 (patch-tools_xenstore_xc.c) = cf49b65cba064667e13bb041d1f0099c76ab6a40
+SHA1 (patch-tools_xenstore_xenstored_core.c) = f3d3011cb945772f298404b3505ca032a8bc06ea
 SHA1 (patch-tools_xenstore_xs_lib.c) = e3a8f6e3b149c3ab0f4ec8dcfa455983f94e6c16
 SHA1 (patch-tools_xentrace_xentrace.c) = f964c7555f454358a39f28a2e75db8ee100a4243
 SHA1 (patch-tools_xl_Makefile) = dd4fa8cc66c74eea8b022cd6129aa2831776f2a8
