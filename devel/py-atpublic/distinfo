@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/01/11 14:02:57 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/02/16 18:48:37 adam Exp $
 
-SHA1 (atpublic-2.1.2.tar.gz) = 3ac092cd0bbe62dc69b267b705dcdf0040eca17b
-RMD160 (atpublic-2.1.2.tar.gz) = 0a176323f1c2eb5de81359ef898456a8af9f6ade
-SHA512 (atpublic-2.1.2.tar.gz) = cfde028756f56c7ca83b91e7d8653cee4575fb581669ee02c56a08c92ae2a6c1e51db76b6def1959354d3e931418a4dd09b78236268170d8c79620477836fe08
-Size (atpublic-2.1.2.tar.gz) = 16298 bytes
+SHA1 (atpublic-2.1.3.tar.gz) = 80ec7aa5dcc9fcde9417e411dc058dc671fa26a0
+RMD160 (atpublic-2.1.3.tar.gz) = 64a60b7892f60a1e3b702aadc075c5a0e67194ca
+SHA512 (atpublic-2.1.3.tar.gz) = deba5654471330454b6327e0911f71426e31f78128b8c5607e4dfca292f017da2c2326a6a59e76097ed30560e3404a47a0c0e034bc053c8348c20f40c002ec9f
+Size (atpublic-2.1.3.tar.gz) = 16373 bytes
