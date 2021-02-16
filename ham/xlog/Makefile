@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2021/02/04 21:47:30 gdt Exp $
+# $NetBSD: Makefile,v 1.97 2021/02/16 20:10:22 gdt Exp $
 #
 
 DISTNAME=	xlog-2.0.20
@@ -6,7 +6,11 @@ CATEGORIES=	ham
 MASTER_SITES=	http://download.savannah.gnu.org/releases/xlog/
 LICENSE=	gnu-gpl-v3
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@netbsd.org
+# Beware that the author is opposed to anyone else building from the
+# repo, instead of distfiles, and objects to bug reports.
+# Beware that the upstream homepage will lead you to the wrong repo.
+# https://savannah.nongnu.org/bugs/?60068
 HOMEPAGE=	https://www.nongnu.org/xlog/
 COMMENT=	Amateur Radio logging program
 
