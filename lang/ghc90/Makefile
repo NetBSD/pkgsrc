@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/09 13:18:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/16 15:41:36 ryoon Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.haskell.org/ghc/
-COMMENT=	Compiler for the functional language Haskell - 8.8 Release Series
+COMMENT=	Compiler for the functional language Haskell - 9.0 Release Series
 LICENSE=	modified-bsd
 
 UNLIMIT_RESOURCES=	datasize virtualsize
