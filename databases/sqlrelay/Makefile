@@ -1,18 +1,29 @@
-# $NetBSD: Makefile,v 1.69 2020/08/31 18:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2021/02/16 13:12:39 adam Exp $
 
-COMMENT=		Database connection pooling middleware and API
-PKGREVISION=		17
+COMMENT=	Database connection pooling middleware and API
 
 .include "../../databases/sqlrelay/Makefile.common"
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--disable-db2 --disable-erlang --disable-firebird	\
-			--disable-freetds --disable-java --disable-mdbtools	\
-			--disable-mysql --disable-odbc --disable-oracle		\
-			--disable-perl --disable-php --disable-postgresql	\
-			--disable-python --disable-ruby --disable-sqlite	\
-			--disable-sap --disable-tcl --disable-nodejs
+CONFIGURE_ARGS+=	--disable-db2
+CONFIGURE_ARGS+=	--disable-erlang
+CONFIGURE_ARGS+=	--disable-firebird
+CONFIGURE_ARGS+=	--disable-freetds
+CONFIGURE_ARGS+=	--disable-java
+CONFIGURE_ARGS+=	--disable-mdbtools
+CONFIGURE_ARGS+=	--disable-mysql
+CONFIGURE_ARGS+=	--disable-nodejs
+CONFIGURE_ARGS+=	--disable-odbc
+CONFIGURE_ARGS+=	--disable-oracle
+CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--disable-php
+CONFIGURE_ARGS+=	--disable-postgresql
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-ruby
+CONFIGURE_ARGS+=	--disable-sqlite
+CONFIGURE_ARGS+=	--disable-sap
+CONFIGURE_ARGS+=	--disable-tcl
 
 INSTALL_MAKE_FLAGS+=	EXAMPLEDIR=${DESTDIR}${EGDIR}
 
@@ -34,15 +45,6 @@ OWN_DIRS_PERMS+=	${SQLR_DATA}/tmp/ipc ${SQLR_USER} ${SQLR_GROUP} 0775
 OWN_DIRS_PERMS+=	${SQLR_DATA}/tmp/pids ${SQLR_USER} ${SQLR_GROUP} 0775
 OWN_DIRS_PERMS+=	${SQLR_DATA}/tmp/sockets ${SQLR_USER} ${SQLR_GROUP} 0775
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/sqlrelay.conf.d
-
-SUBST_CLASSES+=		user
-SUBST_STAGE.user=	pre-configure
-SUBST_MESSAGE.user=	Fixing default nonprivileged user
-SUBST_FILES.user=	etc/sqlrelay.* src/common/defaults.h
-SUBST_SED.user=		-e '/runasuser/s/nobody/${SQLR_USER}/'
-SUBST_SED.user+=	-e '/runasgroup/s/nobody/${SQLR_GROUP}/'
-SUBST_SED.user+=	-e '/RUNASUSER/s/nobody/${SQLR_USER}/'
-SUBST_SED.user+=	-e '/RUNASGROUP/s/nobody/${SQLR_GROUP}/'
 
 OPSYSVARS+=		SOEXT
 SOEXT.Darwin=		bundle
