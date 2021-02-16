@@ -1,0 +1,23 @@
+$NetBSD: patch-configure.in,v 1.1 2021/02/16 09:42:06 kim Exp $
+
+Check for setusercontext(3), which is needed for per-user tmp to work.
+
+--- configure.in.orig	1997-07-08 06:19:05.000000000 +0000
++++ configure.in
+@@ -40,13 +40,14 @@ AC_DEFINE_UNQUOTED(PATH_SU, "$SU_PROG")
+ 
+ dnl Checks for libraries
+ dnl ====================
++AC_SEARCH_LIBS(setusercontext, util)
+ 
+ dnl Checks for header files
+ dnl =======================
+ AC_HEADER_STDC
+ AC_HEADER_TIME
+-AC_CHECK_HEADERS(limits.h stdarg.h stdlib.h string.h stringlist.h syslog.h \
+-	unistd.h sys/syslog.h)
++AC_CHECK_HEADERS(err.h limits.h login_cap.h stdarg.h stdlib.h string.h \
++	stringlist.h syslog.h unistd.h sys/syslog.h)
+ 
+ dnl Checks for typedefs, structures, and compiler characteristics
+ dnl =============================================================
