@@ -1,11 +1,6 @@
-$NetBSD: patch-tools_ocaml_common.make,v 1.1 2018/07/24 13:40:11 bouyer Exp $
-
-Handle ocaml-findlib 1.7.3 already appending destdir
-Add -unsafe-string to fix build with ocaml-4.06.0 and later
-
---- tools/ocaml/common.make.orig	2018-01-23 13:49:58.000000000 +0000
-+++ tools/ocaml/common.make
-@@ -3,7 +3,7 @@ include $(XEN_ROOT)/tools/Rules.mk
+--- tools/ocaml/common.make.orig	2020-04-17 13:58:20.000000000 +0200
++++ tools/ocaml/common.make	2021-02-04 11:25:02.393221932 +0100
+@@ -3,7 +3,7 @@
  CC ?= gcc
  OCAMLOPT ?= ocamlopt
  OCAMLC ?= ocamlc
@@ -14,14 +9,7 @@ Add -unsafe-string to fix build with ocaml-4.06.0 and later
  OCAMLDEP ?= ocamldep
  OCAMLLEX ?= ocamllex
  OCAMLYACC ?= ocamlyacc
-@@ -12,11 +12,11 @@ OCAMLFIND ?= ocamlfind
- CFLAGS += -fPIC -Werror -I$(shell ocamlc -where)
- 
- OCAMLOPTFLAG_G := $(shell $(OCAMLOPT) -h 2>&1 | sed -n 's/^  *\(-g\) .*/\1/p')
--OCAMLOPTFLAGS = $(OCAMLOPTFLAG_G) -ccopt "$(LDFLAGS)" -dtypes $(OCAMLINCLUDE) -cc $(CC) -w F -warn-error F
--OCAMLCFLAGS += -g $(OCAMLINCLUDE) -w F -warn-error F
-+OCAMLOPTFLAGS = $(OCAMLOPTFLAG_G) -unsafe-string -ccopt "$(LDFLAGS)" -dtypes $(OCAMLINCLUDE) -cc $(CC) -w F -warn-error F
-+OCAMLCFLAGS += -unsafe-string -g $(OCAMLINCLUDE) -w F -warn-error F
+@@ -17,6 +17,6 @@
  
  VERSION := 4.1
  
