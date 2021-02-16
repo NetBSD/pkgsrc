@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/01/25 17:07:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/16 14:07:21 schmonz Exp $
 
-DISTNAME=	s6-2.10.0.1
+DISTNAME=	s6-2.10.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
@@ -17,7 +17,8 @@ CONFIGURE_ARGS+=	--with-lib=${PREFIX}/lib/execline
 CONFIGURE_ARGS+=	--with-lib=${PREFIX}/lib/skalibs
 CONFIGURE_ARGS+=	--with-include=${PREFIX}/include
 
-BUILDLINK_API_DEPENDS.skalibs+=		skalibs>=2.10.0.1
+BUILDLINK_API_DEPENDS.skalibs+=		skalibs>=2.10.0.2
 .include "../../devel/skalibs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.execline+=	execline>=2.7.0.1
 .include "../../lang/execline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
