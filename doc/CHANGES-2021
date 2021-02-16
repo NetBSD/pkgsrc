@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1112 2021/02/16 09:54:33 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1113 2021/02/16 10:13:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1606,3 +1606,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/libwebp to 1.2.0 [adam 2021-02-15]
 	Updated emulators/qemu to 5.1.0nb12 [reinoud 2021-02-15]
 	Updated chat/bitlbee-facebook to 1.2.2 [nia 2021-02-16]
+	Updated net/get_iplayer to 3.27 [nia 2021-02-16]
