@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1122 2021/02/16 18:59:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1123 2021/02/16 19:03:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1621,3 +1621,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-atpublic to 2.1.3 [adam 2021-02-16]
 	Updated www/py-sanic to 20.12.2 [adam 2021-02-16]
 	Updated security/py-google-auth to 1.26.1 [adam 2021-02-16]
+	Updated security/pcsc-lite to 1.9.1 [gdt 2021-02-16]
