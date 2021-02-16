@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2017/01/16 13:09:05 fhajny Exp $
+$NetBSD: distinfo,v 1.24 2021/02/16 13:10:18 adam Exp $
 
-SHA1 (rudiments-1.0.2.tar.gz) = d8e8ef2284b816552b4b39415e0e33a6b08a6d57
-RMD160 (rudiments-1.0.2.tar.gz) = 54e85e357db8a51947b22447177d52f73ac1ab23
-SHA512 (rudiments-1.0.2.tar.gz) = b63b3194191caec6f0d6694017135844d1531aaf6af17c71ff4b5391be4ddecd3a39c7b1d195414623ceab53e69689caa67c93f2b2d698c26335a4d35d48097d
-Size (rudiments-1.0.2.tar.gz) = 2226447 bytes
+SHA1 (rudiments-1.3.1.tar.gz) = c5021f85fc81c1caf147fa469a61d03ed2135815
+RMD160 (rudiments-1.3.1.tar.gz) = 2c24d1d1d169b4a11cfa8472eaafc51f83f65292
+SHA512 (rudiments-1.3.1.tar.gz) = 4a6aff9007737c6951e4867087ae4ca50e1540f04fc8d6deecbf51b7398fcbcd7a487d8ed8823d473f58ea4c0b253224152b9fe5083c7e68869d734378c93d0f
+Size (rudiments-1.3.1.tar.gz) = 2738593 bytes
 SHA1 (patch-configure) = ce847ba4528576f63a7c0dbfb4934c112c28895b
-SHA1 (patch-include_rudiments_private_socketclient.h) = 3789e86ee89aaeddc5a0995c2abfbb7a46dcd4b8
-SHA1 (patch-src_listener.cpp) = 474a45e2c88479c1390e002a363d2399d38fbdf0
-SHA1 (patch-src_xmldomnode.cpp) = 660ef2557f45c8fe21a4d062c1e0749dcdd06b43
+SHA1 (patch-include_rudiments_private_socketclient.h) = f1ac8fc292f092c9082b41806fc380af0e7930e9
+SHA1 (patch-src_Makefile.in) = 091e14b34aba4092695093a36fce31dfd8dcb695
+SHA1 (patch-src_listener.cpp) = ad4fb17dfdbe325a73236bc9b37c84d7bf7f90c7
