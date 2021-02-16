@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/11/25 20:44:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/02/16 09:53:37 nia Exp $
 
-SHA1 (bitlbee-facebook-1.2.1.tar.gz) = 9df3467c3d60f0a1bda6471663823cccf90c78f0
-RMD160 (bitlbee-facebook-1.2.1.tar.gz) = 0eb930fd5d29bdd97d707a422b5cd9edb37d029b
-SHA512 (bitlbee-facebook-1.2.1.tar.gz) = 2df709c6caf9ef55807e3d5ff11e6960c75e5bf4788824221a250c75048b77cb1cf57bb3462c2815f34d704c130e3435ba8463177ab2dc5af401cbaef7e5a077
-Size (bitlbee-facebook-1.2.1.tar.gz) = 409828 bytes
-SHA1 (patch-configure) = 7305159d7eba81f5cade26e307833f27b972d3b6
+SHA1 (bitlbee-facebook-1.2.2.tar.gz) = 1c7377f9ae688ea5df9e3d8bc6bfb2f52fec6a64
+RMD160 (bitlbee-facebook-1.2.2.tar.gz) = 5fd0cd468ef75a5baebb36f2e32f454f386d9b61
+SHA512 (bitlbee-facebook-1.2.2.tar.gz) = 801524a4a092175d995c5b14c3687fb0ac0d3b2dbaa6b7140bc026fdbb1232831f095204b3ce9810f0c48e5ade931f5cd6125ddc7c0d58990179fb94779d2b2a
+Size (bitlbee-facebook-1.2.2.tar.gz) = 416290 bytes
