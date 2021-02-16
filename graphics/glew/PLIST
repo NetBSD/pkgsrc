@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/05/29 17:36:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/02/16 10:25:01 nia Exp $
 bin/glewinfo
 bin/visualinfo
 include/GL/glew.h
@@ -7,5 +7,5 @@ include/GL/wglew.h
 lib/libGLEW.a
 lib/libGLEW.so
 lib/libGLEW.so.${PKGVERSION}
-lib/libGLEW.so.2.1
+lib/libGLEW.so.2.2
 lib/pkgconfig/glew.pc
