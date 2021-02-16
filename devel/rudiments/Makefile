@@ -1,33 +1,22 @@
-# $NetBSD: Makefile,v 1.62 2020/05/22 10:55:45 adam Exp $
-#
+# $NetBSD: Makefile,v 1.63 2021/02/16 13:10:18 adam Exp $
 
-DISTNAME=		rudiments-1.0.2
-PKGREVISION=		14
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rudiments/}
+DISTNAME=	rudiments-1.3.1
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rudiments/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://rudiments.sourceforge.net/
-COMMENT=		C++ class library for client/server/daemon applications
-LICENSE=		gnu-lgpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://rudiments.sourceforge.net/
+COMMENT=	C++ class library for client/server/daemon applications
+LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
-PTHREAD_AUTO_VARS=	YES
-
-BUILDLINK_TRANSFORM+=	rm:-Werror
-BUILDLINK_TRANSFORM+=	rm:-Wno-long-double
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CXX+=	-Wno-error=unused-private-field
-CWRAPPERS_APPEND.cxx+=	-Wno-error=unused-private-field
-# Avoid deprecation errors on Darwin for GSS.framework
-CWRAPPERS_APPEND.cxx+=	-Wno-error=deprecated-declarations
-.endif
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-apache2
+CONFIGURE_ARGS+=	--disable-werror
+PTHREAD_AUTO_VARS=	yes
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
