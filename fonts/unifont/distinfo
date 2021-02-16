@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2020/12/31 17:44:08 fcambus Exp $
+$NetBSD: distinfo,v 1.21 2021/02/16 18:33:42 fcambus Exp $
 
-SHA1 (unifont-13.0.05.tar.gz) = b8da3e7818cfe53e0994a4154bd837a12f502260
-RMD160 (unifont-13.0.05.tar.gz) = c10a202071365c0a71310aa6a4a043dc66ade37f
-SHA512 (unifont-13.0.05.tar.gz) = d15f4cd8224ecf0dc2d453f0c3f7dbabf5b9e6ce8f713e1eb94bf5d1ad1b22a0e07861919546ec29cdb5b824343208da80d368955775b4c0e20057345407d0f5
-Size (unifont-13.0.05.tar.gz) = 23114951 bytes
+SHA1 (unifont-13.0.06.tar.gz) = fe8b05fa5db76f6a8b44e4d4c2557adf837ca9ac
+RMD160 (unifont-13.0.06.tar.gz) = ed1a902bd6e995e38ea0fedc1e91f861660e456d
+SHA512 (unifont-13.0.06.tar.gz) = c5a3d3a4ca339161f444d59c6733ceaa3c6d64bb4be728c61b99912f94d8fece53a6cf6f7a2796e412250da22307495bf4bc94fcba6404e27d9fe8dc1131df70
+Size (unifont-13.0.06.tar.gz) = 23507273 bytes
 SHA1 (patch-man_Makefile) = 3d4274578270fc8df1e713ffacaecabfa356383a
