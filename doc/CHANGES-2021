@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1120 2021/02/16 16:57:35 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1121 2021/02/16 18:33:54 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1616,3 +1616,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/s6 to 2.10.0.2 [schmonz 2021-02-16]
 	Updated net/s6-networking to 2.4.1.0 [schmonz 2021-02-16]
 	Added devel/wabt version 1.0.20 [fcambus 2021-02-16]
+	Updated fonts/unifont to 13.0.06 [fcambus 2021-02-16]
