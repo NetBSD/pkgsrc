@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1119 2021/02/16 14:08:00 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1120 2021/02/16 16:57:35 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1615,3 +1615,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/execline to 2.8.0.0 [schmonz 2021-02-16]
 	Updated sysutils/s6 to 2.10.0.2 [schmonz 2021-02-16]
 	Updated net/s6-networking to 2.4.1.0 [schmonz 2021-02-16]
+	Added devel/wabt version 1.0.20 [fcambus 2021-02-16]
