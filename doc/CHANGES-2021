@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1111 2021/02/15 22:44:07 reinoud Exp $
+$NetBSD: CHANGES-2021,v 1.1112 2021/02/16 09:54:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1605,3 +1605,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/py-immutables to 0.15 [adam 2021-02-15]
 	Updated graphics/libwebp to 1.2.0 [adam 2021-02-15]
 	Updated emulators/qemu to 5.1.0nb12 [reinoud 2021-02-15]
+	Updated chat/bitlbee-facebook to 1.2.2 [nia 2021-02-16]
