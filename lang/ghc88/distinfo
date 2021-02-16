@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/02/09 12:42:08 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2021/02/16 21:13:52 wiz Exp $
 
 SHA1 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = 04981802730423aa12999e59679be198d540222a
 RMD160 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = f617e67f2c2f07c7211cb391a4bc2e7b304045e2
@@ -24,6 +24,10 @@ SHA1 (ghc-8.8.4-src.tar.xz) = 94dfb44d8f6b812a7023309ec909e2288f0e7724
 RMD160 (ghc-8.8.4-src.tar.xz) = 2201ffb27231d9fce293b77830e6fae09f48f163
 SHA512 (ghc-8.8.4-src.tar.xz) = efd23bd819f7429486696a3a929a040471db7ea8a2d1f1d832e4cf0825b9e1e0c5e6ecad0ab8376f58b74e9c28c1d2f773bd126596d6d853c9e57d57e5ceb090
 Size (ghc-8.8.4-src.tar.xz) = 19395252 bytes
+SHA1 (netbsd-9.0-amd64-libterminfo.tar.gz) = db6b385b8676efc135c08b06e3dd6fd11b926999
+RMD160 (netbsd-9.0-amd64-libterminfo.tar.gz) = 5a246633c90ee85f71efcc02d8280bd0c50ab5a7
+SHA512 (netbsd-9.0-amd64-libterminfo.tar.gz) = 79288d44b84df8848afc2cdfee628cc4fd1ec0334159403ef8ba994d617bc56a7114af3031198afb5f3b8f45c0463a848099431e32bc6725042908576b6f95b8
+Size (netbsd-9.0-amd64-libterminfo.tar.gz) = 27744 bytes
 SHA1 (patch-aclocal.m4) = 16ac8899a7d87cf93a6139edba9e5222eb4c5c66
 SHA1 (patch-compiler_main_DynFlags.hs) = 07bb2a5afdd087f4d2da5c035feecc13273aec70
 SHA1 (patch-configure.ac) = 6e5cec26e440ccd71343a1981b415459813f88be
