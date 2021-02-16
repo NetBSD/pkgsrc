@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3336 2021/02/14 14:07:53 taca Exp $
+# $NetBSD: Makefile,v 1.3337 2021/02/16 16:56:37 fcambus Exp $
 #
 
 COMMENT=	Development utilities
@@ -3093,6 +3093,7 @@ SUBDIR+=	vera++
 SUBDIR+=	verifast
 SUBDIR+=	visualvm
 SUBDIR+=	vtcl
+SUBDIR+=	wabt
 SUBDIR+=	waf
 SUBDIR+=	wayland
 SUBDIR+=	wayland-protocols
