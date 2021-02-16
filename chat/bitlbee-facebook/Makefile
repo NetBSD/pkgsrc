@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/11/25 20:44:17 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/02/16 09:53:37 nia Exp $
 
-DISTNAME=	bitlbee-facebook-1.2.1
+DISTNAME=	bitlbee-facebook-1.2.2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bitlbee/}
 GITHUB_PROJECT=	bitlbee-facebook
