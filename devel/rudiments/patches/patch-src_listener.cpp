@@ -1,7 +1,8 @@
-$NetBSD: patch-src_listener.cpp,v 1.2 2016/07/01 16:02:12 fhajny Exp $
+$NetBSD: patch-src_listener.cpp,v 1.3 2021/02/16 13:10:19 adam Exp $
 
 Recent Illumos (SunOS) platforms come with a basic epoll implementation
 which is detected, but isn't good enough for rudiments.
+
 --- src/listener.cpp.orig	2016-02-12 21:45:11.000000000 +0000
 +++ src/listener.cpp
 @@ -8,6 +8,10 @@
