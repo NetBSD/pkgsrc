@@ -1,0 +1,11 @@
+WABT (we pronounce it "wabbit") is a suite of tools for WebAssembly.
+
+These tools are intended for use in (or for development of) toolchains
+or other systems that want to manipulate WebAssembly files. Unlike
+the WebAssembly spec interpreter (which is written to be as simple,
+declarative and "speccy" as possible), they are written in C/C++
+and designed for easier integration into other systems. Unlike
+Binaryen these tools do not aim to provide an optimization platform
+or a higher-level compiler target; instead they aim for full fidelity
+and compliance with the spec (e.g. 1:1 round-trips with no changes
+to instructions).
