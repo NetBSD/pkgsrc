@@ -1,0 +1,31 @@
+$NetBSD: patch-.._scripts_install__fcitx5,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+
+--- ../scripts/install_fcitx5.orig	2021-02-17 12:18:42.000000000 +0000
++++ ../scripts/install_fcitx5
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ 
+ _bldtype="${_bldtype:-Debug}"
+-PREFIX="${PREFIX:-/usr}"
++PREFIX="${DESTDIR}${PREFIX:-/usr}"
+ 
+ for pofile in unix/fcitx5/po/*.po
+ do
+@@ -9,13 +9,13 @@ do
+     lang=${filename/.po/}
+     mofile=${pofile/.po/.mo}
+     msgfmt $pofile -o $mofile
+-    install -D -m 644 "$mofile" "${PREFIX}/share/locale/$lang/LC_MESSAGES/fcitx5-mozc.mo"
++    install -m 644 "$mofile" "${PREFIX}/share/locale/$lang/LC_MESSAGES/fcitx5-mozc.mo"
+     rm -f $mofile
+ done
+ 
+-install -D -m 755 "out_linux/${_bldtype}/fcitx5-mozc.so" "${PREFIX}/lib/fcitx5/fcitx5-mozc.so"
+-install -D -m 644 unix/fcitx5/mozc-addon.conf "${PREFIX}/share/fcitx5/addon/mozc.conf"
+-install -D -m 644 unix/fcitx5/mozc.conf "${PREFIX}/share/fcitx5/inputmethod/mozc.conf"
++install -m 755 "out_${OSDEST}/${_bldtype}/fcitx5-mozc.so" "${PREFIX}/lib/fcitx5/fcitx5-mozc.so"
++install -m 644 unix/fcitx5/mozc-addon.conf "${PREFIX}/share/fcitx5/addon/mozc.conf"
++install -m 644 unix/fcitx5/mozc.conf "${PREFIX}/share/fcitx5/inputmethod/mozc.conf"
+ 
+ PREFIX="${PREFIX}" ../scripts/install_fcitx5_icons
+ 
