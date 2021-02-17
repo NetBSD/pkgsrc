@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/17 14:08:51 fcambus Exp $
+bin/tio
+man/man1/tio.1
+share/bash-completion/completions/tio
