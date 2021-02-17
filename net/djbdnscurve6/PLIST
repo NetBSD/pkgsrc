@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/05 06:20:19 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/17 19:52:22 schmonz Exp $
 bin/axfr-get
 bin/axfrdns
 bin/axfrdns-conf
@@ -47,6 +47,7 @@ man/man8/rbldns.8
 man/man8/tinydns-conf.8
 man/man8/tinydns-data.8
 man/man8/tinydns-edit.8
+man/man8/tinydns-get.8
 man/man8/tinydns.8
 man/man8/walldns-conf.8
 man/man8/walldns.8

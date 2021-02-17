@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/11/19 09:35:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2021/02/17 19:52:22 schmonz Exp $
 
-DISTNAME=		djbdnscurve6-36c
+DISTNAME=		djbdnscurve6-37
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/djbdnscurve6/
 EXTRACT_SUFX=		.tgz
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://www.fehcom.de/ipnet/djbdnscurve6.html
 COMMENT=		Fork of djbdns with IPv6 and DNSCurve support
-#LICENSE=		# TODO: (see mk/license.mk)
+LICENSE=		public-domain
 
 CONFLICTS+=		djbdns-[0-9]*
 
