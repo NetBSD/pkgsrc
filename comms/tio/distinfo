@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/17 14:08:51 fcambus Exp $
+
+SHA1 (tio-1.32.tar.xz) = a46922e46fcbd78941b08f039700d40fb15bebd4
+RMD160 (tio-1.32.tar.xz) = 0c8391e2ecc8b31ae359c92c1e39555c45f9ced4
+SHA512 (tio-1.32.tar.xz) = 6ec216ea8e60fe8fb09e3bc378d8178f0d27789ba876e5a763c1eeef7de064831143270e644e64658d3b9acaf3c1b406f1e3331acc4c8bee91fd56851b99941f
+Size (tio-1.32.tar.xz) = 88976 bytes
