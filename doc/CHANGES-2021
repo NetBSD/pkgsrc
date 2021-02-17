@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1143 2021/02/17 19:52:31 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1144 2021/02/17 21:36:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1653,3 +1653,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/bc-gh to 3.3.0 [gdt 2021-02-17]
 	Updated sysutils/s6 to 2.10.0.2nb1 [schmonz 2021-02-17]
 	Updated net/djbdnscurve6 to 37 [schmonz 2021-02-17]
+	Updated net/bind916 to 9.16.12 [wiz 2021-02-17]
