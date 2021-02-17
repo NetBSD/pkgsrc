@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1512 2021/02/17 10:03:23 adam Exp $
+# $NetBSD: Makefile,v 1.1513 2021/02/17 10:14:24 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -750,7 +750,6 @@ SUBDIR+=	py-flask-webpack
 SUBDIR+=	py-flask-wtf
 SUBDIR+=	py-flup
 SUBDIR+=	py-furl
-SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
 SUBDIR+=	py-google-api-python-client
 SUBDIR+=	py-google-apitools
