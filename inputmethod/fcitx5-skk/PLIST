@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/17 15:26:00 ryoon Exp $
+lib/fcitx5/qt5/libfcitx5-skk-config.so
+lib/fcitx5/skk.so
+share/fcitx5/addon/skk.conf
+share/fcitx5/inputmethod/skk.conf
+share/fcitx5/skk/dictionary_list
+share/icons/hicolor/64x64/apps/fcitx-skk.png
+share/icons/hicolor/64x64/apps/org.fcitx.Fcitx5.fcitx-skk.png
+share/locale/ca/LC_MESSAGES/fcitx5-skk.mo
+share/locale/da/LC_MESSAGES/fcitx5-skk.mo
+share/locale/de/LC_MESSAGES/fcitx5-skk.mo
+share/locale/ja/LC_MESSAGES/fcitx5-skk.mo
+share/locale/ko/LC_MESSAGES/fcitx5-skk.mo
+share/locale/ru/LC_MESSAGES/fcitx5-skk.mo
+share/locale/tr/LC_MESSAGES/fcitx5-skk.mo
+share/locale/vi/LC_MESSAGES/fcitx5-skk.mo
+share/locale/zh_CN/LC_MESSAGES/fcitx5-skk.mo
+share/locale/zh_TW/LC_MESSAGES/fcitx5-skk.mo
+share/metainfo/org.fcitx.Fcitx5.Addon.Skk.metainfo.xml
