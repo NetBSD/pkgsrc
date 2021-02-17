@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.261 2021/02/15 22:15:12 reinoud Exp $
+# $NetBSD: Makefile,v 1.262 2021/02/17 17:16:00 reinoud Exp $
 
 DISTNAME=	qemu-5.1.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -144,6 +144,7 @@ TEST_TARGET=		check
 
 post-extract:
 	cp ${WRKDIR}/palcode-clipper ${WRKSRC}/pc-bios/palcode-clipper
+	cp ${FILESDIR}/hw-mips-mipssim_virtio.c ${WRKSRC}/hw/mips/mipssim_virtio.c
 
 # Some dependencies aren't correct and this tries to be re-made on install,
 # failing due to configure bugs.
