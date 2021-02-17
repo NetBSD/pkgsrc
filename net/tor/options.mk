@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.16 2021/02/15 19:01:31 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2021/02/17 22:53:52 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	doc lzma nss zstd # rust
-PKG_SUGGESTED_OPTIONS+=	doc zstd
+PKG_SUGGESTED_OPTIONS+=	doc lzma zstd
 
 .include "../../mk/bsd.options.mk"
 
