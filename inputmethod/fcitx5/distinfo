@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2021/02/17 15:16:25 ryoon Exp $
+
+SHA1 (en_dict-20121020.tar.gz) = 3d6b85cbede261b3703b916e6a1a3303f6cba9a6
+RMD160 (en_dict-20121020.tar.gz) = ae6a1fcf214b9ba1b9d300edeec4d61ad62caf18
+SHA512 (en_dict-20121020.tar.gz) = 8418bd02492bfd786c0fab93be4400ef027ec8e9fac02220cc1f653f5eb67f54573a6a84a15baba19bb34ab892745c87df16499d6304ea75009131e2ab3b97f2
+Size (en_dict-20121020.tar.gz) = 630491 bytes
+SHA1 (fcitx5-5.0.4.tar.xz) = f3c26dca1937803100991a0e4a3664cd7730d74e
+RMD160 (fcitx5-5.0.4.tar.xz) = cc71fb544275c1b2faa317c36778fae9b84bcbb3
+SHA512 (fcitx5-5.0.4.tar.xz) = 88a3ce133b7e07b8fc4b2dc32004a67cb9c6aa09cd80a709c1f8a05cccf40865e5446b8d4e7f6f1c6f613083b0da52e1be131c2243f155e3a59002929fc122f1
+Size (fcitx5-5.0.4.tar.xz) = 1291856 bytes
+SHA1 (patch-src_lib_fcitx-utils_misc.cpp) = 3f7b13bea6fba8d59935465b3ede3732b1571c26
+SHA1 (patch-src_modules_spell_dict_CMakeLists.txt) = 3bbb67be4209af3d0cc50687c1f1be2ab8757c66
