@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1140 2021/02/17 16:04:22 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1141 2021/02/17 16:51:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1650,3 +1650,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added inputmethod/fcitx5-mozc version 2.26.4276.100 [ryoon 2021-02-17]
 	Updated security/py-cryptodome to 3.10.1 [adam 2021-02-17]
 	Updated www/py-django-extensions to 3.1.1 [adam 2021-02-17]
+	Updated math/bc-gh to 3.3.0 [gdt 2021-02-17]
