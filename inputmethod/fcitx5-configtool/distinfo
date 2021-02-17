@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/17 15:18:12 ryoon Exp $
+
+SHA1 (fcitx5-configtool-5.0.2.tar.xz) = 479ea9a81146378f59816d200f1c5fe2cf33aa50
+RMD160 (fcitx5-configtool-5.0.2.tar.xz) = 99bafadad416970902b0e492e0d3b71363d12ba9
+SHA512 (fcitx5-configtool-5.0.2.tar.xz) = 15ed22788112ccdccd10e7de0db21ed9fd5dcdc050f467a801a053570674e3dc0d4ee0b081b8e0f470dafac1310d884114e4a1b8bde638371c275f1610dac486
+Size (fcitx5-configtool-5.0.2.tar.xz) = 98716 bytes
