@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.337 2020/11/27 13:10:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.338 2021/02/17 09:22:52 nia Exp $
 #
 
-COMMENT=	Emulators for other operating systems
+COMMENT=	Emulators for other machines and systems
 
 SUBDIR+=	8086tiny
 SUBDIR+=	BasiliskII
