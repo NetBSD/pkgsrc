@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1130 2021/02/17 14:10:07 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.1131 2021/02/17 14:17:31 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1639,3 +1639,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/py-cherrypy17 [adam 2021-02-17]
 	Removed www/py-gdata [adam 2021-02-17]
 	Added comms/tio version 1.32 [fcambus 2021-02-17]
+	Added devel/binaryen version 99 [fcambus 2021-02-17]
