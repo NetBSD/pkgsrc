@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2020/03/22 21:25:05 tnn Exp $
+# $NetBSD: Makefile,v 1.119 2021/02/17 14:09:42 fcambus Exp $
 #
 
 COMMENT=	Communication utilities
@@ -83,6 +83,7 @@ SUBDIR+=	synce-libsynce
 SUBDIR+=	synce-rra
 SUBDIR+=	synce-serial
 SUBDIR+=	tilp2
+SUBDIR+=	tio
 SUBDIR+=	tkhylafax
 SUBDIR+=	tn3270
 SUBDIR+=	xfce4-modemlights-plugin
