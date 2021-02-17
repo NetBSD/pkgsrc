@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3337 2021/02/16 16:56:37 fcambus Exp $
+# $NetBSD: Makefile,v 1.3338 2021/02/17 14:16:57 fcambus Exp $
 #
 
 COMMENT=	Development utilities
@@ -160,6 +160,7 @@ SUBDIR+=	bcc
 SUBDIR+=	bfg
 SUBDIR+=	bglibs
 SUBDIR+=	bin86
+SUBDIR+=	binaryen
 SUBDIR+=	binutils
 SUBDIR+=	bison
 SUBDIR+=	blame
