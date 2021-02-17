@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/17 15:23:49 ryoon Exp $
+
+SHA1 (fcitx5-qt-5.0.2.tar.xz) = 812fe12c07ceaed3ba0781601a994ad5eadc04c2
+RMD160 (fcitx5-qt-5.0.2.tar.xz) = 28e8af9cc39712f7daaa89ea033e07a205c38e35
+SHA512 (fcitx5-qt-5.0.2.tar.xz) = 7fc5be56987fe37fd2141e6026c5db55180e4c4dcd394943e702649839cb0c87434d7d4a33c6c925eea24f2837329c816f996e4b72395a74db3f944aeb246936
+Size (fcitx5-qt-5.0.2.tar.xz) = 72532 bytes
