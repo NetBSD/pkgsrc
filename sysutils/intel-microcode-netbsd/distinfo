@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2020/11/19 01:12:39 msaitoh Exp $
+$NetBSD: distinfo,v 1.36 2021/02/17 04:19:47 msaitoh Exp $
 
-SHA1 (microcode-20201118.tar.gz) = 4b6522297fd207326dcfd2229c019af7eddc708b
-RMD160 (microcode-20201118.tar.gz) = 83dfdacb4e016572a00e47c6270f4f37d5bd35ea
-SHA512 (microcode-20201118.tar.gz) = 5c54c45c799e3989fce08f69d918c90cdf5f977cc3d30301d177e545bae1a4f385b282c7fc2c43f7464f0fa9426840ee0bc9b248684e66302bbb27c77d5e1d33
-Size (microcode-20201118.tar.gz) = 3503960 bytes
+SHA1 (microcode-20210216.tar.gz) = 26608161d98c3d0c965fc41856520434b14c000d
+RMD160 (microcode-20210216.tar.gz) = aed075d6158ef5ae3b754213e1e98992300c334f
+SHA512 (microcode-20210216.tar.gz) = 211ed90a248c891224bb8c569e24c04410d3f67ecc6daee41dc025042bd51c257baaba0da1ac5327df76352d2b53d812e81f06cc8726e43b95ea2f8898bc00bf
+Size (microcode-20210216.tar.gz) = 3506111 bytes
