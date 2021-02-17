@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2020/05/15 09:46:24 nia Exp $
+# $NetBSD: Makefile,v 1.79 2021/02/17 15:20:08 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -17,6 +17,7 @@ SUBDIR+=	fcitx
 SUBDIR+=	fcitx-configtool
 SUBDIR+=	fcitx-qt5
 SUBDIR+=	fcitx-skk
+SUBDIR+=	fcitx5
 SUBDIR+=	gcin
 SUBDIR+=	gtk-im-libthai
 SUBDIR+=	ibus
