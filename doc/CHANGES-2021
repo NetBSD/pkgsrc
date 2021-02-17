@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1132 2021/02/17 14:20:46 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1133 2021/02/17 15:10:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added comms/tio version 1.32 [fcambus 2021-02-17]
 	Added devel/binaryen version 99 [fcambus 2021-02-17]
 	Updated graphics/glew to 2.2.0nb1 [wiz 2021-02-17]
+	Updated mail/isync to 1.4.0 [ryoon 2021-02-17]
