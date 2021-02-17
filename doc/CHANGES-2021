@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1141 2021/02/17 16:51:30 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.1142 2021/02/17 19:31:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1651,3 +1651,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-cryptodome to 3.10.1 [adam 2021-02-17]
 	Updated www/py-django-extensions to 3.1.1 [adam 2021-02-17]
 	Updated math/bc-gh to 3.3.0 [gdt 2021-02-17]
+	Updated sysutils/s6 to 2.10.0.2nb1 [schmonz 2021-02-17]
