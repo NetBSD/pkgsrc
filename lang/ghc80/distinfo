@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2020/02/17 17:22:43 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2021/02/17 08:44:33 wiz Exp $
 
 SHA1 (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = 8ad1116768112bd6f2cf9a9ad2ed6b5052bedd4b
 RMD160 (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = c9ef4fa2f83b77b964a08b3f3b6d9916a490506f
@@ -20,6 +20,10 @@ SHA1 (ghc-8.0.2-src.tar.xz) = 0e0ae6d5ba119c10f3c7b807d35166e7c06b9b35
 RMD160 (ghc-8.0.2-src.tar.xz) = 56b74f65e17bcab2ff9d5b8dbced3f9694d531cc
 SHA512 (ghc-8.0.2-src.tar.xz) = 58ea3853cd93b556ecdc4abd0be079b2621171b8491f59004ea4e036a4cba4470aaafe6591b942e0a50a64bdc47540e01fe6900212a1ef7087850112d9bfc5ef
 Size (ghc-8.0.2-src.tar.xz) = 10687760 bytes
+SHA1 (netbsd-9.0-amd64-libterminfo.tar.gz) = db6b385b8676efc135c08b06e3dd6fd11b926999
+RMD160 (netbsd-9.0-amd64-libterminfo.tar.gz) = 5a246633c90ee85f71efcc02d8280bd0c50ab5a7
+SHA512 (netbsd-9.0-amd64-libterminfo.tar.gz) = 79288d44b84df8848afc2cdfee628cc4fd1ec0334159403ef8ba994d617bc56a7114af3031198afb5f3b8f45c0463a848099431e32bc6725042908576b6f95b8
+Size (netbsd-9.0-amd64-libterminfo.tar.gz) = 27744 bytes
 SHA1 (patch-compiler_main_DynFlags.hs) = c9671ca255b06dfbb732f3c56e3cbe9bfed1c075
 SHA1 (patch-configure.ac) = 2323f76a41f1dd65054f4d408629d7b1840b89a4
 SHA1 (patch-iserv_ghc.mk) = 6d1d79100b4a7b5d8b0c6f25318eaa8b4e20e43d
