@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2021/02/15 16:35:08 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.33 2021/02/17 00:14:25 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -65,7 +65,6 @@ OSDEST.Linux=	linux
 OSDEST.NetBSD=	bsd
 
 MOZC_BUILD_MODE=	Release # or Debug
-MOZC_BUILD_MODE=	Debug
 
 # In file included from src/dictionary/system/system_dictionary.h:43:0,
 #                  from ../../dictionary/system/system_dictionary.cc:47:
