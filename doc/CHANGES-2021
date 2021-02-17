@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1126 2021/02/17 04:21:55 msaitoh Exp $
+$NetBSD: CHANGES-2021,v 1.1127 2021/02/17 08:07:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1631,3 +1631,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-txaio to 20.12.1 [adam 2021-02-16]
 	Updated textproc/py-dominate to 2.6.0 [adam 2021-02-16]
 	Updated sysutils/intel-microcode-netbsd to 20210216 [msaitoh 2021-02-17]
+	Updated lang/go116 to 1.16 [bsiegert 2021-02-17]
