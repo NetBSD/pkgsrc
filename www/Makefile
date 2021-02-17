@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1511 2021/02/14 14:10:44 taca Exp $
+# $NetBSD: Makefile,v 1.1512 2021/02/17 10:03:23 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -648,7 +648,6 @@ SUBDIR+=	py-cfscrape
 SUBDIR+=	py-channels
 SUBDIR+=	py-cheroot
 SUBDIR+=	py-cherrypy
-SUBDIR+=	py-cherrypy17
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-cloudfiles
 SUBDIR+=	py-cookies
