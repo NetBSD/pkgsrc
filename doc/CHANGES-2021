@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1145 2021/02/17 21:45:29 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1146 2021/02/17 22:54:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1655,3 +1655,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/djbdnscurve6 to 37 [schmonz 2021-02-17]
 	Updated net/bind916 to 9.16.12 [wiz 2021-02-17]
 	Updated net/bind911 to 9.11.28 [wiz 2021-02-17]
+	Updated net/tor to 0.4.5.6nb1 [wiz 2021-02-17]
