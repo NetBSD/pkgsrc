@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1128 2021/02/17 08:57:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1129 2021/02/17 10:15:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1634,3 +1634,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go116 to 1.16 [bsiegert 2021-02-17]
 	Updated devel/py-dulwich to 0.20.19 [adam 2021-02-17]
 	Updated net/py-dropbox to 11.2.0 [adam 2021-02-17]
+	Removed security/py-ezPyCrypto [adam 2021-02-17]
+	Removed databases/py-elixir [adam 2021-02-17]
+	Removed www/py-cherrypy17 [adam 2021-02-17]
+	Removed www/py-gdata [adam 2021-02-17]
