@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/01/29 16:17:15 otis Exp $
+$NetBSD: distinfo,v 1.10 2021/02/17 21:36:03 wiz Exp $
 
-SHA1 (bind-9.16.11.tar.xz) = 1bfb5725c85fd9dffe868d8e826a1f8c0de509cc
-RMD160 (bind-9.16.11.tar.xz) = 65d5e1c21f0e1b97cc785ffc6790ebc76d88741f
-SHA512 (bind-9.16.11.tar.xz) = 5ed632df7c74f5e6693db9b378450ea3073b8002e9924df1d0465f8b8edb933df3a853d3965a290a0477a67ca2bfa79f679d7e344db08a65462860c58d04dc1b
-Size (bind-9.16.11.tar.xz) = 5007520 bytes
+SHA1 (bind-9.16.12.tar.xz) = 4e75a4c9ffb905d7eaa389464f0f3418c94cb2e7
+RMD160 (bind-9.16.12.tar.xz) = 7b180be178a847af1f47f06fbfec4bf79326df68
+SHA512 (bind-9.16.12.tar.xz) = 001613bd3c8bfc73d60bf3c053b233233a981132206e1ae5847820c5416ba0d65b0e026817ea3a718c7d3745c28a8de8dd9fb4355344955bead7bc2e1433e074
+Size (bind-9.16.12.tar.xz) = 5017756 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb
@@ -50,7 +50,7 @@ SHA1 (patch-lib_isc_unix_net.c) = c654f60a1feefdba9bf980dcfa46ce37f46918aa
 SHA1 (patch-lib_isc_unix_socket.c) = a034eebc922a3266fdf5acc5fe849709eccbb6ca
 SHA1 (patch-lib_isc_unix_time.c) = fac9e66754e099f53ba8c499f5f179825a0b0fbd
 SHA1 (patch-lib_ns_Makefile.in) = 5d3ecf4d6673cf227635c03779e9969e6eeb8227
-SHA1 (patch-lib_ns_client.c) = e0453a7483a4f899023e0c5ab970cda241976b90
+SHA1 (patch-lib_ns_client.c) = c5d9e41f58027bdfa6a1cb43cd2cd35b44e85227
 SHA1 (patch-lib_ns_include_ns_client.h) = 56009c601d54491ffd16f6438d55206705a5aa23
 SHA1 (patch-lib_ns_include_ns_pfilter.h) = cc86752971b4f9f7492283c4ad3ff29bc1bae237
 SHA1 (patch-lib_ns_interfacemgr.c) = fc31720734b02155acd7fa9b370a6ebb82022532
