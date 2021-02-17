@@ -1,0 +1,33 @@
+$NetBSD: patch-.._scripts_install__fcitx5__icons,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+
+--- ../scripts/install_fcitx5_icons.orig	2021-02-17 12:18:42.000000000 +0000
++++ ../scripts/install_fcitx5_icons
+@@ -2,17 +2,17 @@
+ 
+ PREFIX="${PREFIX:-/usr}"
+ 
+-install -D -m 644 data/images/product_icon_32bpp-128.png "${PREFIX}/share/icons/hicolor/128x128/apps/org.fcitx.Fcitx5.fcitx-mozc.png"
+-install -D -m 644 data/images/unix/ime_product_icon_opensource-32.png "${PREFIX}/share/icons/hicolor/32x32/apps/org.fcitx.Fcitx5.fcitx-mozc.png"
+-install -D -m 644 ../scripts/icons/ui-alpha_full.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-alpha-full.png"
+-install -D -m 644 ../scripts/icons/ui-alpha_half.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-alpha-half.png"
+-install -D -m 644 ../scripts/icons/ui-direct.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-direct.png"
+-install -D -m 644 ../scripts/icons/ui-hiragana.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-hiragana.png"
+-install -D -m 644 ../scripts/icons/ui-katakana_full.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-katakana-full.png"
+-install -D -m 644 ../scripts/icons/ui-katakana_half.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-katakana-half.png"
+-install -D -m 644 ../scripts/icons/ui-dictionary.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-dictionary.png"
+-install -D -m 644 ../scripts/icons/ui-properties.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-properties.png"
+-install -D -m 644 ../scripts/icons/ui-tool.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-tool.png"
++install -m 644 data/images/product_icon_32bpp-128.png "${PREFIX}/share/icons/hicolor/128x128/apps/org.fcitx.Fcitx5.fcitx-mozc.png"
++install -m 644 data/images/unix/ime_product_icon_opensource-32.png "${PREFIX}/share/icons/hicolor/32x32/apps/org.fcitx.Fcitx5.fcitx-mozc.png"
++install -m 644 ../scripts/icons/ui-alpha_full.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-alpha-full.png"
++install -m 644 ../scripts/icons/ui-alpha_half.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-alpha-half.png"
++install -m 644 ../scripts/icons/ui-direct.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-direct.png"
++install -m 644 ../scripts/icons/ui-hiragana.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-hiragana.png"
++install -m 644 ../scripts/icons/ui-katakana_full.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-katakana-full.png"
++install -m 644 ../scripts/icons/ui-katakana_half.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-katakana-half.png"
++install -m 644 ../scripts/icons/ui-dictionary.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-dictionary.png"
++install -m 644 ../scripts/icons/ui-properties.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-properties.png"
++install -m 644 ../scripts/icons/ui-tool.png "${PREFIX}/share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-mozc-tool.png"
+ 
+ ln -sf org.fcitx.Fcitx5.fcitx-mozc.png "${PREFIX}/share/icons/hicolor/128x128/apps/fcitx-mozc.png"
+ ln -sf org.fcitx.Fcitx5.fcitx-mozc.png "${PREFIX}/share/icons/hicolor/32x32/apps/fcitx-mozc.png"
