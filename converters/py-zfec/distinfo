@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2020/12/19 15:28:05 gdt Exp $
+$NetBSD: distinfo,v 1.9 2021/02/18 12:33:31 adam Exp $
 
-SHA1 (zfec-1.5.4.tar.gz) = 5568b26b852c4432bb9d97d2dd5c255fbbdc974a
-RMD160 (zfec-1.5.4.tar.gz) = e29ea5ca25af477d9abf9c0e855daa9559dc0a11
-SHA512 (zfec-1.5.4.tar.gz) = 947bbb68f6e63f3d290e60dc2aef47922e40a47856025bd1ce918af916707cf6965948b8ebd1db1e6d15c628ddfd85d303b30b37c855498242223a72a3e3f742
-Size (zfec-1.5.4.tar.gz) = 80283 bytes
+SHA1 (zfec-1.5.5.tar.gz) = a99913b08d771c4a38dc4cc084f3a076f9bddec9
+RMD160 (zfec-1.5.5.tar.gz) = a1c8fc1f2532ae4ed3e005e704258c423c8ea90e
+SHA512 (zfec-1.5.5.tar.gz) = 35fe828b1c18cd3abc8c44f882ade83719d764d0fa62c9d16e9a667d7a096dd6e6a25d55887a2d08e554a5554fc00296dae4c275883d030c854483b26ab3a63b
+Size (zfec-1.5.5.tar.gz) = 80368 bytes
 SHA1 (patch-setup.py) = bbaba4326845d3cdc84dbdfbaf2d8624a366bf2d
