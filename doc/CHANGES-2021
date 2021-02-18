@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1155 2021/02/18 10:34:30 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1156 2021/02/18 10:59:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1665,3 +1665,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/libstemmer to 2.1.0 [wiz 2021-02-18]
 	Updated devel/py-hypothesis to 6.2.0 [wiz 2021-02-18]
 	Updated archivers/gtar to 1.34 [wiz 2021-02-18]
+	Updated security/libgcrypt to 1.9.2 [adam 2021-02-18]
+	Updated security/nettle to 3.7.1 [adam 2021-02-18]
