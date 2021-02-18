@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.12 2021/02/05 21:45:58 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q4,v 1.1.2.13 2021/02/18 05:26:58 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q4 branch:
 
@@ -96,3 +96,5 @@ security/tor-browser: security fix
 Pullup ticket #6420 - requested by wiz
 www/privoxy: security fix
 
+Pullup ticket #6423 - requested by bouyer
+sysutils/xentools413: security patch
