@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/11/06 18:04:24 maya Exp $
+# $NetBSD: Makefile,v 1.6 2021/02/18 10:16:53 wiz Exp $
 
-DISTNAME=	CascadiaCode-2009.22
+DISTNAME=	CascadiaCode-2102.03
 PKGNAME=	${DISTNAME:S/CascadiaCode/cascadia-ttf/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=microsoft/}
