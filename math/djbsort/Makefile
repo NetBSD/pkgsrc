@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/12/04 20:45:29 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/02/18 10:08:31 schmonz Exp $
 
-DISTNAME=		djbsort-20180729
-PKGREVISION=		3
+DISTNAME=		djbsort-20190516
 CATEGORIES=		math
 MASTER_SITES=		${HOMEPAGE}
 
@@ -10,18 +9,12 @@ HOMEPAGE=		https://sorting.cr.yp.to/
 COMMENT=		Library for sorting arrays of integers
 LICENSE=		public-domain
 
-DEPENDS+=		python27-[0-9]*:../../lang/python27
-
 USE_TOOLS+=		pax
 
-REPLACE_INTERPRETER+=	python27
-REPLACE.python27.old=	.*python2\{0,1\}[^ ]*
-REPLACE.python27.new=	${LOCALBASE}/bin/python2.7
-REPLACE_FILES.python27=	verif/decompose verif/minmax verif/unroll
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# so a python3 will be auto-selected
-
-REPLACE_PYTHON=		build test upgrade verif/tryinput
+REPLACE_PYTHON=		build test upgrade verif/decompose \
+			verif/minmax verif/tryinput verif/unroll
 SUBST_CLASSES+=		python3
 SUBST_STAGE.python3=	do-configure
 SUBST_FILES.python3=	verif/verifymany
@@ -43,12 +36,12 @@ pre-configure:
 do-build:
 	cd ${WRKSRC} && ./build
 
-pre-install:
+post-build:
 	${CP} pseudo-PLIST ${WRKSRC}
 	cd ${WRKSRC} && ${FIND} . -type f | ${SORT} | ${SED} -e 's|^\.|${SHAREDIR}|g' > ${WRKDIR}/PLIST_DYNAMIC
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pe -v . ${DESTDIR}${PREFIX}/${SHAREDIR}
+	cd ${WRKSRC} && pax -rw -pp -v . ${DESTDIR}${PREFIX}/${SHAREDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
