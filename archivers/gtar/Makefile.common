@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.8 2021/01/12 12:10:27 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.9 2021/02/18 10:33:54 wiz Exp $
 #
 # used by archivers/gtar-base/Makefile
 # used by archivers/gtar-info/Makefile
 # used by archivers/gtar/Makefile
 
-DISTNAME=	tar-1.33
+DISTNAME=	tar-1.34
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
 EXTRACT_SUFX=	.tar.bz2
