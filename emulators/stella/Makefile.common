@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2021/02/10 11:55:22 nia Exp $
+# $NetBSD: Makefile.common,v 1.9 2021/02/18 19:40:24 wiz Exp $
 # used by emulators/stella/Makefile
 # used by emulators/libretro-stella/Makefile
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/stella/distinfo
-#PATCHDIR=	${.CURDIR}/../../emulators/stella/patches
+PATCHDIR=	${.CURDIR}/../../emulators/stella/patches
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//1}
 
