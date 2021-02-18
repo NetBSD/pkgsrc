@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1159 2021/02/18 17:09:51 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1160 2021/02/18 17:21:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1673,3 +1673,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-python-socks to 1.2.1 [adam 2021-02-18]
 	Updated sysutils/u-boot-pico-pi-imx7d to 2018.11 [martin 2021-02-18]
 	Updated net/dhcpcd to 9.4.0 [nia 2021-02-18]
+	Updated graphics/drawing to 0.6.5 [nia 2021-02-18]
