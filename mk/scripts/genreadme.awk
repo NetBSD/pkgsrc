@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.39 2020/05/10 07:48:10 rillig Exp $
+# $NetBSD: genreadme.awk,v 1.40 2021/02/18 10:39:50 nia Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -349,10 +349,9 @@ END {
 					    PKG_ADMIN, entry[1], pkgdir2name[toppkg]);
 					status_cmd | getline status
 					close(status_cmd)
-					if (status == "open")
-						status = "an <STRONG>OPEN</STRONG>";
-					else
-						status = "a " status;
+					if (status == "fixed")
+						continue
+					status = "a " status;
 					vul =  sprintf("%s<LI>%s <a href=\"%s\">%s</a> vulnerability</LI>\n",
 					  vul, status, entry[3], entry[2]);
 				}
