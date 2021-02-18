@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/02/11 21:09:49 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/18 00:15:46 gutteridge Exp $
 
 DISTNAME=	dolphin-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://kde.org/applications/system/dolphin/
@@ -11,6 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kio-extras>=${KAPPSVER}:../../devel/kio-extras
+DEPENDS+=	kinit>=5.70.0nb6:../../x11/kinit
 
 REPLACE_RUBY+=	src/settings/services/servicemenuinstallation
 REPLACE_RUBY+=	src/settings/services/servicemenudeinstallation
