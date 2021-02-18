@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/03 10:28:41 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/02/18 17:27:15 nia Exp $
 
-SHA1 (inih-r52.tar.gz) = 98bd05451d50bf7ec17022bf684262bf18249b78
-RMD160 (inih-r52.tar.gz) = d042a5a483d2c68deff560cd7ae869675429594f
-SHA512 (inih-r52.tar.gz) = 14c0d0dbd78efc99bec8df12067107d130eef8b124e0616f7d83dc4e14530b57f0c8fcf0b8862d425b5a0b84d6c6a6bff7b3c852c9b2e2364ef56c8f64a1f339
-Size (inih-r52.tar.gz) = 16808 bytes
+SHA1 (inih-r53.tar.gz) = 9924ce7fba763f4faa7e63fc11f84a655b73020b
+RMD160 (inih-r53.tar.gz) = fa5ffdfb78389f5890af3cd3e57b2295f9cd22b8
+SHA512 (inih-r53.tar.gz) = 99bc40c294b521e9973184bfb30d60c129735991f33b387b3d023827a34672b0489eadf91e38895ea725168dbc7b27bb02c1975debe7573b4b209d0e947b2100
+Size (inih-r53.tar.gz) = 16984 bytes
