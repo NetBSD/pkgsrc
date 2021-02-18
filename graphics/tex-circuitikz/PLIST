@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/27 02:08:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/18 19:42:07 markd Exp $
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-0.8.3.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-0.9.3.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-0.9.6.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-1.0.tex
+share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-1.1.2.tex
+share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-1.2.7.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz.tex
 share/texmf-dist/tex/generic/circuitikz/ctikzstyle-example.tex
 share/texmf-dist/tex/generic/circuitikz/ctikzstyle-legacy.tex
@@ -27,4 +29,6 @@ share/texmf-dist/tex/latex/circuitikz/circuitikz-0.8.3.sty
 share/texmf-dist/tex/latex/circuitikz/circuitikz-0.9.3.sty
 share/texmf-dist/tex/latex/circuitikz/circuitikz-0.9.6.sty
 share/texmf-dist/tex/latex/circuitikz/circuitikz-1.0.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-1.1.2.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-1.2.7.sty
 share/texmf-dist/tex/latex/circuitikz/circuitikz.sty
