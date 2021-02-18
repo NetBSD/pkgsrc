@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.9 2021/01/25 09:46:22 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.10 2021/02/18 09:57:14 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.zip
@@ -70,8 +70,8 @@ GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20191119224855-298f0cb1881e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20200410194907-79a7a3126eef.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20210101214203-2dba1e4ea05c.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.1-0.20210119222907-0a1a9685734a.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.1-0.20210119222907-0a1a9685734a.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.1-0.20210201201750-4d4ee958a9b7.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.1-0.20210201201750-4d4ee958a9b7.zip
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20190717185122-a985d3407aa7.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191011141410-1b5146add898.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod
