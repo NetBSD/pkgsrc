@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/05/03 11:57:34 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/02/18 19:56:20 markd Exp $
 
-SHA1 (pict2e.r51918.tar.xz) = ef2628389cb816dd95ac11894ffd5454a9542c57
-RMD160 (pict2e.r51918.tar.xz) = 6e9c3019677a5312e7b508c8438996b5f9900e87
-SHA512 (pict2e.r51918.tar.xz) = 9f8fc3acbfb19b9e45579c2e2b0013dc84b9c670404e71f94b70c1e8a91569731a3b6b44e17e3d80bce5a099c3f16d6d74b7788daedeb48262971ad001d38472
-Size (pict2e.r51918.tar.xz) = 7676 bytes
+SHA1 (pict2e.r56504.tar.xz) = bda28b73c1809a1d2417c4c4a7b9be206b521bdd
+RMD160 (pict2e.r56504.tar.xz) = 6b397fa372515678b74e58a67148351176aede23
+SHA512 (pict2e.r56504.tar.xz) = 04c4fc0ea9647c0a434be2ba709f539392685233adc92da262fee4d081b6d31bfe88d8c537c19a102bc7200e2adffac4f7a4cbb3a7a47ca47c26e93e96772e6e
+Size (pict2e.r56504.tar.xz) = 7804 bytes
