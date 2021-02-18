@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1153 2021/02/18 10:27:05 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1154 2021/02/18 10:31:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1663,3 +1663,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/cascadia-ttf to 2102.03 [wiz 2021-02-18]
 	Updated math/libnumbertext to 1.0.7 [wiz 2021-02-18]
 	Updated textproc/libstemmer to 2.1.0 [wiz 2021-02-18]
+	Updated devel/py-hypothesis to 6.2.0 [wiz 2021-02-18]
