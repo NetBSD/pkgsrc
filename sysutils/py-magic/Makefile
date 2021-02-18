@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/10/04 18:15:43 js Exp $
+# $NetBSD: Makefile,v 1.10 2021/02/18 12:29:54 adam Exp $
 
-DISTNAME=	python-magic-0.4.18
-PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/1}
-PKGREVISION=	1
+DISTNAME=	python-magic-0.4.22
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-magic/}
 
