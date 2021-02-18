@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2019/04/27 21:25:56 markd Exp $
+# $NetBSD: Makefile.common,v 1.4 2021/02/18 00:20:11 gutteridge Exp $
 #
 # used by meta-pkgs/kde/applications.mk
 # used by meta-pkgs/kde/kf5.mk
@@ -24,8 +24,6 @@ pre-configure: mk-kde-dir
 
 mk-kde-dir:
 	${MKDIR} ${WRKSRC}/_KDE_build
-
-BUILDLINK_ABI_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.10.1nb2
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "NetBSD"
