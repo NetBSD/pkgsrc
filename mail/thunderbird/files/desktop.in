@@ -8,4 +8,5 @@ Icon=@MOZILLA_ICON@
 StartupNotify=false
 Terminal=false
 Type=Application
-Categories=Application;Network;
+Categories=Application;Network;Email;
+MimeType=x-scheme-handler/mailto;
