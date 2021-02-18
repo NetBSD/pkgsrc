@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1163 2021/02/18 18:03:24 nia Exp $
+$NetBSD: CHANGES-2021,v 1.1164 2021/02/18 18:05:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1677,3 +1677,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/inih to 53 [nia 2021-02-18]
 	Updated lang/janet to 1.15.2 [nia 2021-02-18]
 	Updated databases/kyotocabinet to 1.2.79 [nia 2021-02-18]
+	Updated audio/exaile to 4.1.0 [nia 2021-02-18]
