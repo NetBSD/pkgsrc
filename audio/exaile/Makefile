@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2020/04/28 12:52:02 nia Exp $
+# $NetBSD: Makefile,v 1.71 2021/02/18 18:04:27 nia Exp $
 
-DISTNAME=	exaile-4.0.2
-PKGREVISION=	2
+DISTNAME=	exaile-4.1.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=exaile/}
 GITHUB_PROJECT=	exaile
@@ -12,10 +11,17 @@ HOMEPAGE=	https://www.exaile.org/
 COMMENT=	Music Player for GTK+
 LICENSE=	gnu-gpl-v2 # or later
 
+PY_PATCHPLIST=	yes
+
 USE_TOOLS+=	pkg-config gmake
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
-MAKE_FLAGS+=	PYTHON2_CMD=${PYTHONBIN}
+MAKE_FLAGS+=	PYTHON3_CMD=${PYTHONBIN}
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	EXAILEMANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	XDGCONFDIR=${EGDIR}
+
+MANCOMPRESSED=	yes
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
@@ -39,15 +45,12 @@ DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
 
 TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
-EGDIR=		${PREFIX}/share/examples/xdg/exaile
+EGDIR=		${PREFIX}/share/examples/xdg
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/exaile
-CONF_FILES+=	${EGDIR}/settings.ini ${PKG_SYSCONFDIR}/xdg/exaile/settings.ini
+CONF_FILES+=	${EGDIR}/exaile/settings.ini ${PKG_SYSCONFDIR}/xdg/exaile/settings.ini
 
-# https://github.com/exaile/exaile/issues/246
-PYTHON_VERSIONS_ACCEPTED=	27
-
-.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 
 SUBST_CLASSES+=		py
 SUBST_STAGE.py=		pre-configure
@@ -58,5 +61,5 @@ SUBST_VARS.py+=		PYTHONBIN
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
-.include "../../textproc/py-elementtree/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
