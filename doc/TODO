@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20396 2021/02/18 10:31:37 wiz Exp $
+$NetBSD: TODO,v 1.20397 2021/02/18 10:34:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -635,7 +635,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.18.3 [wip]
-	o gtar-base-1.34
 	o gthumb-3.4.0
 	o gtk4+-4.0 [wip]
 	o gtkglarea-2.1.0
