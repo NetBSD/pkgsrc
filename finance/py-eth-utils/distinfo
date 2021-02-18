@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2021/02/07 20:01:35 adam Exp $
+$NetBSD: distinfo,v 1.3 2021/02/18 12:35:02 mef Exp $
 
 SHA1 (eth-utils-1.10.0.tar.gz) = e359f87592cb64639abca695e7c7cb7a9e9b3ad9
 RMD160 (eth-utils-1.10.0.tar.gz) = b03c1cebbf2392fb0ebd691e6fb5a07ecda3d446
 SHA512 (eth-utils-1.10.0.tar.gz) = 910f6d1e89c17415141e0d67c9ae915272c1709b6b691a7c5661d308d0a854c84d7d5644f4d968e7c3fba8ff38101fd8ce63134b16f845e640874de1201717f4
 Size (eth-utils-1.10.0.tar.gz) = 4602591 bytes
+SHA1 (patch-setup.py) = 6a7906a300f7d7023bbee0dbc983626c888b06e8
