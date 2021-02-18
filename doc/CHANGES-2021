@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1157 2021/02/18 12:35:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1158 2021/02/18 14:55:50 martin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1671,3 +1671,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-xandikos to 0.2.4 [adam 2021-02-18]
 	Updated converters/py-zfec to 1.5.5 [adam 2021-02-18]
 	Updated net/py-python-socks to 1.2.1 [adam 2021-02-18]
+	Updated sysutils/u-boot-pico-pi-imx7d to 2018.11 [martin 2021-02-18]
