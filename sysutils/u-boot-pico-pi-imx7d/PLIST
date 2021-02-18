@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/18 14:55:33 martin Exp $
+share/u-boot/pico-pi-imx7d/u-boot.img
+share/u-boot/pico-pi-imx7d/SPL
+

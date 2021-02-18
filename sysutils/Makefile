@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.939 2021/02/18 03:50:31 gutteridge Exp $
+# $NetBSD: Makefile,v 1.940 2021/02/18 14:55:32 martin Exp $
 #
 
 COMMENT=	System utilities
@@ -727,6 +727,7 @@ SUBDIR+=	u-boot-orangepi-plus2e
 SUBDIR+=	u-boot-orangepi-zero
 SUBDIR+=	u-boot-orangepi-zero-plus
 SUBDIR+=	u-boot-pandaboard
+SUBDIR+=	u-boot-pico-pi-imx7d
 SUBDIR+=	u-boot-pine-h64
 SUBDIR+=	u-boot-pine64
 SUBDIR+=	u-boot-pinebook
