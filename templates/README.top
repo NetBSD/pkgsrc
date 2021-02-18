@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.16 2021/02/18 11:07:17 nia Exp $ -->
+<!-- $NetBSD: README.top,v 1.17 2021/02/18 11:14:56 nia Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection</title>
@@ -34,8 +34,7 @@ is also available:
 
 Prebuilt binary packages can be installed using
 <a href="pkgtools/pkgin/README.html">pkgin</a> or pkg_add(8).
-For more information on how to build any of the packages from
-the pkgsrc, see the
+For more information on how to build packages from pkgsrc, see the
 <a href="doc/pkgsrc.html">doc/pkgsrc.html</a> document.
 
 pkgsrc and binary packages for NetBSD are available on
