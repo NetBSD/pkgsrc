@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/13 02:16:09 brook Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/18 19:38:52 markd Exp $
 share/texmf-dist/doc/generic/chemfig/README
 share/texmf-dist/doc/generic/chemfig/chemfig-en.pdf
 share/texmf-dist/doc/generic/chemfig/chemfig-en.tex
 share/texmf-dist/doc/generic/chemfig/chemfig-fr.pdf
 share/texmf-dist/doc/generic/chemfig/chemfig-fr.tex
-share/texmf-dist/doc/generic/chemfig/chemfigold.tex
