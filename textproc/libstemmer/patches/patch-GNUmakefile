@@ -1,10 +1,10 @@
-$NetBSD: patch-GNUmakefile,v 1.1 2020/04/14 14:07:50 ryoon Exp $
+$NetBSD: patch-GNUmakefile,v 1.2 2021/02/18 10:26:56 wiz Exp $
 
 * Build dynamic library, from archlinux.
 
---- GNUmakefile.orig	2019-10-02 03:27:17.000000000 +0000
+--- GNUmakefile.orig	2021-01-21 04:50:09.000000000 +0000
 +++ GNUmakefile
-@@ -151,10 +151,10 @@ C_OTHER_OBJECTS = $(C_OTHER_SOURCES:.c=.
+@@ -162,10 +162,10 @@ C_OTHER_OBJECTS = $(C_OTHER_SOURCES:.c=.
  JAVA_CLASSES = $(JAVA_SOURCES:.java=.class)
  JAVA_RUNTIME_CLASSES=$(JAVARUNTIME_SOURCES:.java=.class)
  
@@ -18,16 +18,7 @@ $NetBSD: patch-GNUmakefile,v 1.1 2020/04/14 14:07:50 ryoon Exp $
  
  clean:
  	rm -f $(COMPILER_OBJECTS) $(RUNTIME_OBJECTS) \
-@@ -179,7 +179,7 @@ clean:
- 	-rmdir $(js_output_dir)
- 
- snowball: $(COMPILER_OBJECTS)
--	$(CC) $(CFLAGS) -o $@ $^
-+	$(CC) $(CFLAGS) ${LDFLAGS} -o $@ $^
- 
- $(COMPILER_OBJECTS): $(COMPILER_HEADERS)
- 
-@@ -200,8 +200,11 @@ libstemmer/libstemmer.o: libstemmer/modu
+@@ -212,6 +212,9 @@ libstemmer/libstemmer.o: libstemmer/modu
  libstemmer.o: libstemmer/libstemmer.o $(RUNTIME_OBJECTS) $(C_LIB_OBJECTS)
  	$(AR) -cru $@ $^
  
@@ -35,8 +26,5 @@ $NetBSD: patch-GNUmakefile,v 1.1 2020/04/14 14:07:50 ryoon Exp $
 +	$(CC) $(CFLAGS) -shared $(LDFLAGS) -Wl,-soname,libstemmer.so.0,-version-script,libstemmer/symbol.map -o $@.0.0.0 $^
 +
  stemwords: $(STEMWORDS_OBJECTS) libstemmer.o
--	$(CC) $(CFLAGS) -o $@ $^
-+	$(CC) $(CFLAGS) ${LDFLAGS} -o $@ $^
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
  
- csharp_stemwords: $(CSHARP_STEMWORDS_SOURCES) $(CSHARP_RUNTIME_SOURCES) $(CSHARP_SOURCES)
- 	$(MCS) -unsafe -target:exe -out:$@ $(CSHARP_STEMWORDS_SOURCES) $(CSHARP_RUNTIME_SOURCES) $(CSHARP_SOURCES)
