@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2020/01/19 12:00:29 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/02/18 18:04:27 nia Exp $
 
-SHA1 (exaile-4.0.2.tar.gz) = c37993438cbcf30da5403b4e9049464e155421ab
-RMD160 (exaile-4.0.2.tar.gz) = 3a703bbf4900942d7a7d2e952e5366a6b986b01b
-SHA512 (exaile-4.0.2.tar.gz) = 4b0629d68d426493b8ba9295c755919c9d9919ee916952339b06206b8e1eb86145e5c5975cc21ecd8b9ab6b266eaaff0855e9a5154beb951033564a6dcf0ca37
-Size (exaile-4.0.2.tar.gz) = 3635296 bytes
-SHA1 (patch-Makefile) = 7572ada85a326a032286e01a98af163d872480f5
-SHA1 (patch-exaile) = 588ec4e9a5c7bf5eae04928c03ac33a5c6a39d5f
+SHA1 (exaile-4.1.0.tar.gz) = 1ce4fc498dea737588594630f32535aa29b6f84a
+RMD160 (exaile-4.1.0.tar.gz) = 0988bb1321f3a0d8c482723b8d781cf501c8880d
+SHA512 (exaile-4.1.0.tar.gz) = f9dab228c51f0de4984c5bbe54a80b1607c05374539e9ee57ab1cc6671641c10f09fb7da1798f02fc651c1769509969dc797a3186fc9508d0f7e4ac238188dc4
+Size (exaile-4.1.0.tar.gz) = 3684351 bytes
+SHA1 (patch-exaile) = 738848e3f57ff4cf202478be6d1fe30bc3a93533
