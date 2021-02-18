@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2020/01/26 17:31:25 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2021/02/18 17:06:56 ryoon Exp $
 # used by inputmethod/anthy/Makefile
 # used by inputmethod/anthy-elisp/Makefile
 
@@ -12,3 +12,4 @@ DISTINFO_FILE=	${.CURDIR}/../../inputmethod/anthy/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/anthy/patches
 
 HOMEPAGE=	https://anthy.osdn.jp/
+LICENSE=	gnu-gpl-v2
