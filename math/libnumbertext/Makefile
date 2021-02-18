@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2020/09/05 11:25:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/18 10:20:30 wiz Exp $
 
-DISTNAME=	libnumbertext-1.0.6
+DISTNAME=	libnumbertext-1.0.7
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Numbertext/}
-EXTRACT_SUFX=	.tar.xz
-GITHUB_PROJECT=	libnumbertext
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://numbertext.github.io/
@@ -17,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
 
-GCC_REQD+=	5.0
+GCC_REQD+=	5
 
 CONFIGURE_ARGS+=	--disable-werror
 
