@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1148 2021/02/18 10:08:40 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.1149 2021/02/18 10:08:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1658,3 +1658,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/tor to 0.4.5.6nb1 [wiz 2021-02-17]
 	Updated devel/gopls to 0.6.5 [wiz 2021-02-18]
 	Updated math/djbsort to 20190516 [schmonz 2021-02-18]
+	Updated graphics/ImageMagick to 7.0.11.0 [wiz 2021-02-18]
