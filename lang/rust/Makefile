@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2021/02/14 08:24:30 he Exp $
+# $NetBSD: Makefile,v 1.218 2021/02/18 15:41:03 wiz Exp $
 
 DISTNAME=	rustc-1.49.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -443,7 +443,7 @@ GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 #BOOTSTRAP_NAME=	${PKGNAME_NOREV:C/rust/rust-nightly/}-${RUST_ARCH}
 BOOTSTRAP_NAME=		${PKGNAME_NOREV}-${RUST_ARCH}
 BOOTSTRAP_TMPDIR=	${WRKDIR}/${BOOTSTRAP_NAME}
-USE_TOOLS+=		gtar
+#USE_TOOLS+=		bsdtar
 
 # The NetBSD part is so far untested, because I could not convince
 # the rust build to use the gcc wrapper when building natively,
