@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2021/02/18 15:23:13 mef Exp $
+
+ERROR: [check-portability.awk] configure:807: 	if test "$have_clang" == yes; then
+
+--- configure.orig	2021-01-24 22:41:01.000000000 +0900
++++ configure	2021-02-19 00:20:20.216352533 +0900
+@@ -804,7 +804,7 @@ case $_host_os in
+ 			DEFINES="$DEFINES -DBSPF_UNIX -DMACOS_KEYS"
+ 			MODULES="$MODULES $SRC/unix"
+ 			INCLUDES="$INCLUDES -I$SRC/unix"
+-			if test "$have_clang" == yes; then
++			if test "$have_clang" = yes; then
+ 				CXXFLAGS="$CXXFLAGS -Wno-poison-system-directories"
+ 			fi
+ 			;;
