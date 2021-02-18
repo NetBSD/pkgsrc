@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/02/12 09:33:19 adam Exp $
+$NetBSD: distinfo,v 1.2 2021/02/18 12:34:44 adam Exp $
 
-SHA1 (python-socks-1.2.0.tar.gz) = b184e858e95a07dd84ef2a2282d9f335c624f502
-RMD160 (python-socks-1.2.0.tar.gz) = 5e2a4921231f7fc52a19d8155efd746598c6d300
-SHA512 (python-socks-1.2.0.tar.gz) = 36459956ca608ab4464deda67f0debfcf334208a9fc050517f10143b519bcf9f33f2dd317d68849fadef1eff21d53dd390775acdc5a2e2a2baf141bbe026d794
-Size (python-socks-1.2.0.tar.gz) = 20400 bytes
+SHA1 (python-socks-1.2.1.tar.gz) = a8d9ccfbb63ea7ced054ad6e2ef5735047ade5fa
+RMD160 (python-socks-1.2.1.tar.gz) = 677215d2b6ce6fc30a11055ed1861e7da73bbde7
+SHA512 (python-socks-1.2.1.tar.gz) = c59b645494c4ffcf9057257cdf871ef6bc9bb15ba686403dacaa667352ec1dce6ba254940f91c03dbeb986141f917d2e5d96d4be9a81811f4ad887974d37fa2a
+Size (python-socks-1.2.1.tar.gz) = 20422 bytes
