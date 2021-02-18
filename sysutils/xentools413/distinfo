@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6.2.1 2021/01/16 16:35:04 spz Exp $
+$NetBSD: distinfo,v 1.6.2.2 2021/02/18 05:21:21 spz Exp $
 
 SHA1 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = b78d21457bc07b4c4d3e770109c169ddafdacdf5
 RMD160 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = 846dbcc0f56e87fca8c87b00ca2ed031471d4246
@@ -24,6 +24,7 @@ SHA1 (patch-XSA325) = 59c7fba006588db4accee1068072612777620ac3
 SHA1 (patch-XSA330) = dd745d8ae212f139ed32fcf8c99618fc42642d9e
 SHA1 (patch-XSA352) = 7c4479c029d9bbbf6578ee148cb926bb2d849789
 SHA1 (patch-XSA353) = 6983aa18399dcf0ac1471ffdf7c27c1bc041f49c
+SHA1 (patch-XSA355) = 73ca5dff042a4a54b06af36e6ace7d09673c05f0
 SHA1 (patch-docs_man_xl-disk-configuration.5.pod) = 9261cc5035dba3414e32955da80707baab042476
 SHA1 (patch-docs_man_xl.1.pod.in) = ac3525478471a43fd30fa40c7e89d4b5cb164038
 SHA1 (patch-docs_man_xl.cfg.5.pod.in) = 5970961552f29c4536a884161a208a27a20dccf4
@@ -98,6 +99,7 @@ SHA1 (patch-tools_xenpaging_xenpaging.c) = 0a154b97f1f452a5f80f7c9a835a1f216f12f
 SHA1 (patch-tools_xenpmd_xenpmd.c) = 851ce7a295e2f41ffcd966850d8003c82670c751
 SHA1 (patch-tools_xenstat_libxenstat_src_xenstat_netbsd.c) = e0f52d2a6ce9c92780209ed5b6f6f2ad1c175221
 SHA1 (patch-tools_xenstore_xc.c) = cf49b65cba064667e13bb041d1f0099c76ab6a40
+SHA1 (patch-tools_xenstore_xenstored_core.c) = f3d3011cb945772f298404b3505ca032a8bc06ea
 SHA1 (patch-tools_xenstore_xs_lib.c) = e3a8f6e3b149c3ab0f4ec8dcfa455983f94e6c16
 SHA1 (patch-tools_xentrace_xentrace.c) = f964c7555f454358a39f28a2e75db8ee100a4243
 SHA1 (patch-tools_xl_Makefile) = dd4fa8cc66c74eea8b022cd6129aa2831776f2a8
