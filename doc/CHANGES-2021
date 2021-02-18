@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1151 2021/02/18 10:17:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.1152 2021/02/18 10:20:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1661,3 +1661,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ImageMagick to 7.0.11.0 [wiz 2021-02-18]
 	Updated textproc/asciidoc to 9.1.0 [wiz 2021-02-18]
 	Updated fonts/cascadia-ttf to 2102.03 [wiz 2021-02-18]
+	Updated math/libnumbertext to 1.0.7 [wiz 2021-02-18]
