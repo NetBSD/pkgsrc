@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/12/31 20:04:11 nia Exp $
+# $NetBSD: Makefile,v 1.10 2021/02/18 18:02:46 nia Exp $
 #
 
-DISTNAME=	kyotocabinet-1.2.78
+DISTNAME=	kyotocabinet-1.2.79
 CATEGORIES=	databases
 MASTER_SITES=	https://dbmx.net/kyotocabinet/pkg/
 
