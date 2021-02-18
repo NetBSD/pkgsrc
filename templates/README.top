@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.15 2007/10/09 19:19:15 martti Exp $ -->
+<!-- $NetBSD: README.top,v 1.16 2021/02/18 11:07:17 nia Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection</title>
@@ -32,12 +32,14 @@ is also available:
 </table>
 <hr noshade>
 
+Prebuilt binary packages can be installed using
+<a href="pkgtools/pkgin/README.html">pkgin</a> or pkg_add(8).
 For more information on how to build any of the packages from
-the NetBSD Packages Collection, see the
-<A HREF="doc/pkgsrc.html">doc/pkgsrc.html</A> document.
+the pkgsrc, see the
+<a href="doc/pkgsrc.html">doc/pkgsrc.html</a> document.
 
-The most up-to-date version of the Packages Collection is available from
-<A HREF="ftp://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/">the NetBSD ftp server</A>.
+pkgsrc and binary packages for NetBSD are available on
+<a href="https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/">the NetBSD mirrors</a>.
 
 </body>
 </html>
