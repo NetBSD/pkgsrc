@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/01/04 11:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2021/02/18 16:35:37 wiz Exp $
 
 DISTNAME=	mono-6.12.0.107
 CATEGORIES=	lang
@@ -17,11 +17,11 @@ CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR} PLATFORM=
 ALL_ENV+=	PAXCTL=${PAXCTL}
 
-USE_TOOLS+=	bash:run cmake gmake gtar msgfmt perl:run pkg-config
+USE_TOOLS+=	bash:run cmake gmake msgfmt perl:run pkg-config
 USE_TOOLS+=	bison autoconf automake
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c99 c++
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
