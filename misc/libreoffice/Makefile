@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2021/02/06 06:47:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.252 2021/02/18 12:52:20 wiz Exp $
 
 VERREL=		7.1.0
 VERRC=		3
@@ -139,7 +139,7 @@ DISTFILES+=		${md2}
 .include "options.mk"
 
 # tar: Invalid header, starting valid header search.
-EXTRACT_USING=		gtar
+EXTRACT_USING=		bsdtar
 
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
