@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.938 2021/02/12 13:43:14 pin Exp $
+# $NetBSD: Makefile,v 1.939 2021/02/18 03:50:31 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -147,9 +147,9 @@ SUBDIR+=	dbus-python-common
 SUBDIR+=	dbus-sharp
 SUBDIR+=	dbus-sharp-glib
 SUBDIR+=	dc-tools
-SUBDIR+=	ddiff
 SUBDIR+=	dd_rescue
 SUBDIR+=	dd_rhelp
+SUBDIR+=	ddiff
 SUBDIR+=	ddrescue
 SUBDIR+=	decode-dimms
 SUBDIR+=	deforaos-browser
