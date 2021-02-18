@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/11/26 15:26:19 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/02/18 17:20:59 nia Exp $
 bin/drawing
 share/applications/com.github.maoschanz.drawing.desktop
 share/drawing/drawing.gresource
@@ -26,6 +26,7 @@ share/drawing/drawing/optionsbar_scale.py
 share/drawing/drawing/optionsbar_selection.py
 share/drawing/drawing/optionsbar_skew.py
 share/drawing/drawing/preferences.py
+share/drawing/drawing/printing_manager.py
 share/drawing/drawing/properties.py
 share/drawing/drawing/saving_manager.py
 share/drawing/drawing/select_color.py
@@ -80,6 +81,7 @@ share/icons/hicolor/48x48/apps/com.github.maoschanz.drawing.png
 share/icons/hicolor/512x512/apps/com.github.maoschanz.drawing.png
 share/icons/hicolor/scalable/apps/com.github.maoschanz.drawing-symbolic.svg
 share/icons/hicolor/scalable/apps/com.github.maoschanz.drawing.svg
+share/locale/cs/LC_MESSAGES/drawing.mo
 share/locale/da/LC_MESSAGES/drawing.mo
 share/locale/de_DE/LC_MESSAGES/drawing.mo
 share/locale/es/LC_MESSAGES/drawing.mo
