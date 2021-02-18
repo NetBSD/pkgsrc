@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/05/22 08:01:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/02/18 10:59:09 adam Exp $
 bin/nettle-hash
 bin/nettle-lfib-stream
 bin/nettle-pbkdf2
@@ -64,6 +64,7 @@ include/nettle/sha1.h
 include/nettle/sha2.h
 include/nettle/sha3.h
 include/nettle/siv-cmac.h
+include/nettle/streebog.h
 include/nettle/twofish.h
 include/nettle/umac.h
 include/nettle/version.h
