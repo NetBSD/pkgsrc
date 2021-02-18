@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2021/02/04 11:13:37 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2021/02/18 10:14:27 wiz Exp $
 
-DISTNAME=	asciidoc-py3-9.0.5
-PKGNAME=	${DISTNAME:S/-py3//}
+DISTNAME=	asciidoc-9.1.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=asciidoc/}
 GITHUB_PROJECT=	asciidoc-py3
@@ -13,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=	getopt-[0-9]*:../../misc/getopt
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-py-/}
 
 USE_TOOLS+=		pax
 
