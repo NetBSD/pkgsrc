@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1168 2021/02/19 05:52:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.1169 2021/02/19 06:04:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1691,3 +1691,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-pict2e-doc to 0.4b [mark 2021-02-18]
 	Updated devel/py-uvloop to 0.15.2 [adam 2021-02-19]
 	Updated devel/py-pkgconfig to 1.5.2 [adam 2021-02-19]
+	Updated devel/protobuf to 3.15.0 [adam 2021-02-19]
+	Updated devel/py-protobuf to 3.15.0 [adam 2021-02-19]
