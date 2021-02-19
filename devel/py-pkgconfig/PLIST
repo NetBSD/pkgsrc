@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2019/04/04 09:30:05 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.6 2021/02/19 05:51:51 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pkgconfig/__init__.py
 ${PYSITELIB}/pkgconfig/__init__.pyc
 ${PYSITELIB}/pkgconfig/__init__.pyo
