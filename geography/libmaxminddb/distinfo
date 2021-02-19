@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/01/06 16:11:17 fcambus Exp $
+$NetBSD: distinfo,v 1.5 2021/02/19 08:16:37 fcambus Exp $
 
-SHA1 (libmaxminddb-1.5.0.tar.gz) = a4435311cd7f0bdab2a31b0d12e0bf17d8332dcd
-RMD160 (libmaxminddb-1.5.0.tar.gz) = 756290801fdf0553544ee728466456ffc7a53b4c
-SHA512 (libmaxminddb-1.5.0.tar.gz) = 68c769f247156869b84a8ad0f9deec3cb79d39c0a6b8f1458461c223b9cf9967dd9d697ff4e92ac28216ef9e9f5a94908e03f76a5f70ab17636b163c17d2d432
-Size (libmaxminddb-1.5.0.tar.gz) = 603923 bytes
+SHA1 (libmaxminddb-1.5.2.tar.gz) = 9e00fef11ceb8df1dc56ce3276bf2193c5baa5c8
+RMD160 (libmaxminddb-1.5.2.tar.gz) = 183c003b20dbfbebd6815e45660157f852fa0c70
+SHA512 (libmaxminddb-1.5.2.tar.gz) = 074ef6b62a74cede7be332eaeff5aa7442f43de92d39ea65b38430f0e1b65a5515f4343894ca5c28a7d50181eaec44e8db7083461b9e12e7014d2d1e0ff033b8
+Size (libmaxminddb-1.5.2.tar.gz) = 604683 bytes
 SHA1 (patch-t_libtap_tap.c) = 85cefd897f2eade00a0c9e9b2cf5e0ca7c7c9337
