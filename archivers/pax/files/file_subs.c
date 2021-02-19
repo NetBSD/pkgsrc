@@ -1,4 +1,4 @@
-/*	$NetBSD: file_subs.c,v 1.14 2008/10/26 12:48:48 joerg Exp $	*/
+/*	$NetBSD: file_subs.c,v 1.15 2021/02/19 13:23:08 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)file_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: file_subs.c,v 1.14 2008/10/26 12:48:48 joerg Exp $");
+__RCSID("$NetBSD: file_subs.c,v 1.15 2021/02/19 13:23:08 joerg Exp $");
 #endif
 #endif /* not lint */
 
@@ -883,7 +883,7 @@ void
 set_pmode(char *fnm, mode_t mode)
 {
 	mode &= A_BITS;
-	if (lchmod(fnm, mode)) {
+	if (lchmod(fnm, mode) && errno != EOPNOTSUPP) {
 		(void)fflush(listf);
 		syswarn(1, errno, "Cannot set permissions on %s", fnm);
 	}
