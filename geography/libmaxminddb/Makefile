@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/01/06 16:11:17 fcambus Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/19 08:16:37 fcambus Exp $
 
-DISTNAME=	libmaxminddb-1.5.0
+DISTNAME=	libmaxminddb-1.5.2
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maxmind/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
