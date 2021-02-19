@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2020/11/14 14:08:16 adam Exp $
+$NetBSD: distinfo,v 1.31 2021/02/19 06:04:01 adam Exp $
 
-SHA1 (protobuf-3.14.0.tar.gz) = 03454f5b219fd78f9a90f7dcafa2d60db4ca6ba3
-RMD160 (protobuf-3.14.0.tar.gz) = e2d58ddaf915693110e0c4c2f3fb245d3ae04088
-SHA512 (protobuf-3.14.0.tar.gz) = 21789f17d71edaadaa3b116d6463be0b020f575561fadb01c3c2a3c0423625b1ba55300ad6a61d745ff781803e96d941bea28a4551a9d1969658f651e6e30f33
-Size (protobuf-3.14.0.tar.gz) = 227492 bytes
+SHA1 (protobuf-3.15.0.tar.gz) = 68094162b9bfc0f3d63d7cb4245cc896dbb07865
+RMD160 (protobuf-3.15.0.tar.gz) = e07e811a2087cee0b057c53eba6b733a1289da13
+SHA512 (protobuf-3.15.0.tar.gz) = 502453d7c9f45a87862f5f9bf0025b7622b96026973e953af8143b615f098d525a0a212a1c74bc4f4d0e7337bab2e089fc51c8fde9680a53ce66bd1a94a74725
+Size (protobuf-3.15.0.tar.gz) = 228752 bytes
