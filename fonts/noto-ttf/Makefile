@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:12 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/02/19 15:24:31 ryoon Exp $
 
 DISTNAME=	Noto-hinted
 PKGNAME=	noto-ttf-20170410
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.google.com/get/noto/
 COMMENT=	Noto fonts for all languages
 LICENSE=	ofl-v1.1
 
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+DISTFILES=	${DEFAULT_DISTFILES} \
 		NotoSansCJKjp-hinted${EXTRACT_SUFX} \
 		NotoSansCJKkr-hinted${EXTRACT_SUFX} \
 		NotoSansCJKsc-hinted${EXTRACT_SUFX} \
