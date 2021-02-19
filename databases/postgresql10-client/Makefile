@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/02/15 18:58:36 adam Exp $
+# $NetBSD: Makefile,v 1.16 2021/02/19 13:47:03 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/-/10-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -39,12 +39,13 @@ CONFIGURE_ARGS+=	--enable-thread-safety
 CONFIGURE_ARGS+=	--disable-thread-safety
 .endif
 
+BUILD_DIRS+=	src/fe_utils
 INSTALL_DIRS=	src/include
 INSTALL_DIRS+=	src/common
 INSTALL_DIRS+=	src/interfaces
 INSTALL_DIRS+=	src/bin
 INSTALL_DIRS+=	src/port
-BUILD_DIRS=	${INSTALL_DIRS}
+BUILD_DIRS+=	${INSTALL_DIRS}
 # Without this, the Darwin build fails (related to -bundle_loader).
 BUILD_DIRS+=	src/backend
 
