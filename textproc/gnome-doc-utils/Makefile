@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2021/02/19 10:42:54 nia Exp $
+# $NetBSD: Makefile,v 1.77 2021/02/19 10:47:12 nia Exp $
 
 DISTNAME=	gnome-doc-utils-0.20.10
 PKGREVISION=	8
@@ -30,7 +30,7 @@ PKGCONFIG_OVERRIDE+=	xml2po/xml2po.pc.in
 SUBST_CLASSES+=		getopt
 SUBST_STAGE.getopt=	pre-configure
 SUBST_FILES.getopt=	tools/gnome-doc-tool.in
-SUBST_SED.getopt=	"s|@GETOPT@|${LOCALBASE}/bin/getopt|g"
+SUBST_SED.getopt=	-e "s|@GETOPT@|${PREFIX}/bin/getopt|g"
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 
