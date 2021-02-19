@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.17 2021/02/18 11:14:56 nia Exp $ -->
+<!-- $NetBSD: README.top,v 1.18 2021/02/19 17:49:06 nia Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection</title>
@@ -21,9 +21,7 @@ The packages collection is divided into categories of packages.
 
 <p>Here are the one-line descriptions for each of the categories,
 a <a href="README-all.html">complete list of all packages</a>
-and one with all
-<a href="README-IPv6.html">IPv6 enabled packages</a>
-is also available:
+is also available.
 </p>
 
 <hr noshade>
