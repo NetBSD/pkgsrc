@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.31 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: mkreadme,v 1.32 2021/02/19 17:49:06 nia Exp $
 #
 # Script for README.html generation
 #
@@ -451,49 +451,6 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
 if [ $? != 0 ]; then
     echo "Error:  genreadme.awk failed to create README.html files"
     clean_and_exit
-fi
-
-######################################################################
-#
-#  Generate the README-IPv6.html file
-#
-######################################################################
-
-echo " "
-echo "Generating the README-IPv6.html file"
-echo " "
-cd ${PKGSRCDIR}
-ipv6=${TMPDIR}/ipv6pkgs
-ipv6_entries=${TMPDIR}/ipv6_entries
-
-echo -n "" > $ipv6
-cats=`${BMAKE} show-subdir-var VARNAME=SUBDIR`
-for c in ${cats} ; do
-    if [ -d ${c} ]; then
-	${GREP} -l -e '^BUILD_DEFS.*=.*IPV6_READY' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' -e '^USE_FEATURES.*=.*inet6' ${c}/*/Makefile | ${SED} -e 's;Makefile;;g' >> $ipv6
-	arethereoptions=`ls ${c}/*/options.mk 2>/dev/null`
-	if [ ! -z "$arethereoptions" ]; then
-	    ${GREP} -l -e '^BUILD_DEFS.*=.*IPV6_READY' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' -e '^USE_FEATURES.*=.*inet6' ${c}/*/options.mk | ${SED} -e 's;options.mk;;g' >> $ipv6
-	fi
-
-    fi
-done
-${FGREP} -f $ipv6 README-all.html | sort -t/ +1 > $ipv6_entries
-${SED} \
-    -e "/%%TRS%%/r${ipv6_entries}" \
-    -e '/%%TRS%%/d' \
-    templates/README.ipv6 > ${TMPDIR}/README-IPv6.html
-if [ $? != 0 ]; then
-    echo "Error:  README-IPv6.html generation failed (on sed script)"
-    clean_and_exit
-fi
-
-if [ ! -f README-IPv6.html ]; then
-	mv -f ${TMPDIR}/README-IPv6.html README-IPv6.html
-elif cmp -s ${TMPDIR}/README-IPv6.html README-IPv6.html ; then
-	echo "README-IPv6.html is unchanged (no changes were needed)"
-else
-	mv -f ${TMPDIR}/README-IPv6.html README-IPv6.html
 fi
 
 ######################################################################
