@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2021/01/24 18:22:25 maya Exp $
+# $NetBSD: Makefile,v 1.309 2021/02/19 18:01:39 nros Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -14,6 +14,7 @@ SUBDIR+=	bsdav
 SUBDIR+=	ccxstream
 SUBDIR+=	cfourcc
 SUBDIR+=	clutter-gst
+SUBDIR+=	dav1d
 SUBDIR+=	deforaos-player
 SUBDIR+=	dirac
 SUBDIR+=	divxplayer
