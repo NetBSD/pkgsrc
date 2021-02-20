@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/02/15 02:06:30 markd Exp $
+# $NetBSD: Makefile,v 1.18 2021/02/20 11:55:43 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2020pre3
+PKGNAME=	texlive-${DISTNAME}-2020pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	56496
@@ -63,7 +63,7 @@ DEPENDS+=	tex-lambda-lists-[0-9]*:../../print/tex-lambda-lists
 DEPENDS+=	tex-letterspacing-[0-9]*:../../print/tex-letterspacing
 # depend librarian
 DEPENDS+=	tex-listofitems-[0-9]*:../../print/tex-listofitems
-# depend localloc
+DEPENDS+=	tex-localloc-[0-9]*:../../print/tex-localloc
 DEPENDS+=	tex-mathdots-[0-9]*:../../print/tex-mathdots
 # depend metatex
 # depend midnight
@@ -95,7 +95,6 @@ DEPENDS+=	tex-ruler-[0-9]*:../../print/tex-ruler
 # depend schemata
 # depend shade
 # depend simplekv
-# depend soul
 DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
 DEPENDS+=	tex-swrule-[0-9]*:../../print/tex-swrule
 # depend systeme
