@@ -1,28 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/26 12:21:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/02/20 00:33:24 markd Exp $
 share/texmf-dist/doc/fonts/oldstandard/FONTLOG.txt
-share/texmf-dist/doc/fonts/oldstandard/NewComputerModern.fontspec
-share/texmf-dist/doc/fonts/oldstandard/NewComputerModernMono.fontspec
-share/texmf-dist/doc/fonts/oldstandard/NewComputerModernSans.fontspec
 share/texmf-dist/doc/fonts/oldstandard/OFL-FAQ.txt
 share/texmf-dist/doc/fonts/oldstandard/OFL.txt
+share/texmf-dist/doc/fonts/oldstandard/OldStandard.fontspec
 share/texmf-dist/doc/fonts/oldstandard/README
-share/texmf-dist/doc/fonts/oldstandard/didot-de.png
-share/texmf-dist/doc/fonts/oldstandard/didot-fr.png
+share/texmf-dist/doc/fonts/oldstandard/README.md
 share/texmf-dist/doc/fonts/oldstandard/fonttable.lua
 share/texmf-dist/doc/fonts/oldstandard/fonttable.pdf
 share/texmf-dist/doc/fonts/oldstandard/fonttable.tex
-share/texmf-dist/doc/fonts/oldstandard/gendocs.sh
-share/texmf-dist/doc/fonts/oldstandard/greek-contextual.png
-share/texmf-dist/doc/fonts/oldstandard/oldstand-manual.pdf
-share/texmf-dist/doc/fonts/oldstandard/oldstand-manual.tex
 share/texmf-dist/doc/fonts/oldstandard/oldstandard-samples.pdf
 share/texmf-dist/doc/fonts/oldstandard/oldstandard-samples.tex
 share/texmf-dist/doc/fonts/oldstandard/oldstandard.pdf
 share/texmf-dist/doc/fonts/oldstandard/oldstandard.tex
-share/texmf-dist/doc/fonts/oldstandard/opentype.png
-share/texmf-dist/doc/fonts/oldstandard/serbian.png
-share/texmf-dist/doc/fonts/oldstandard/spadmin-add.png
-share/texmf-dist/doc/fonts/oldstandard/spadmin.png
-share/texmf-dist/doc/fonts/oldstandard/stand-su.png
-share/texmf-dist/doc/fonts/oldstandard/teubner.png
-share/texmf-dist/doc/fonts/oldstandard/truetype.png
