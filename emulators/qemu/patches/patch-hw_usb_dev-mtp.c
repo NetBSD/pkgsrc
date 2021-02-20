@@ -1,12 +1,10 @@
-$NetBSD: patch-hw_usb_dev-mtp.c,v 1.4 2019/06/28 17:11:14 jperkin Exp $
+$NetBSD: patch-hw_usb_dev-mtp.c,v 1.5 2021/02/20 22:59:29 ryoon Exp $
 
-Support NAME_MAX and compat for O_DIRECTORY.
-
---- hw/usb/dev-mtp.c.orig	2019-04-23 18:14:46.000000000 +0000
+--- hw/usb/dev-mtp.c.orig	2020-12-08 16:59:44.000000000 +0000
 +++ hw/usb/dev-mtp.c
-@@ -26,6 +26,10 @@
- #include "desc.h"
+@@ -30,6 +30,10 @@
  #include "qemu/units.h"
+ #include "qom/object.h"
  
 +#ifndef NAME_MAX
 +#define NAME_MAX 255
@@ -15,7 +13,7 @@ Support NAME_MAX and compat for O_DIRECTORY.
  /* ----------------------------------------------------------------------- */
  
  enum mtp_container_type {
-@@ -614,6 +618,9 @@ static void usb_mtp_object_readdir(MTPSt
+@@ -618,6 +622,9 @@ static void usb_mtp_object_readdir(MTPSt
      }
      o->have_children = true;
  

@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.1 2021/02/20 22:59:29 ryoon Exp $
+
+* Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
+  to fix qemu-system-aarch64 link.
+
+--- meson.build.orig	2020-12-08 16:59:44.000000000 +0000
++++ meson.build
+@@ -535,7 +535,7 @@ if have_system and not get_option('curse
+     endif
+   endif
+   if not get_option('iconv').disabled()
+-    foreach link_args : [ ['-liconv'], [] ]
++    foreach link_args : [ [], ['-liconv'] ]
+       # Programs will be linked with glib and this will bring in libiconv on FreeBSD.
+       # We need to use libiconv if available because mixing libiconv's headers with
+       # the system libc does not work.
