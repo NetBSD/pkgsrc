@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/10 04:31:52 markd Exp $
+# $NetBSD: Makefile,v 1.6 2021/02/20 00:38:29 markd Exp $
 
 DISTNAME=	playfair
-PKGNAME=	tex-${DISTNAME}-2020
-PKGREVISION=	1
-TEXLIVE_REV=	54512
+PKGNAME=	tex-${DISTNAME}-2020.56005
+TEXLIVE_REV=	56005
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/playfair
