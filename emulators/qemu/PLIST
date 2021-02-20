@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2020/08/14 06:08:11 tnn Exp $
+@comment $NetBSD: PLIST,v 1.70 2021/02/20 22:59:29 ryoon Exp $
 bin/elf2dmp
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
@@ -47,7 +47,6 @@ bin/qemu-system-avr
 bin/qemu-system-cris
 bin/qemu-system-hppa
 bin/qemu-system-i386
-bin/qemu-system-lm32
 bin/qemu-system-m68k
 bin/qemu-system-microblaze
 bin/qemu-system-microblazeel
@@ -69,7 +68,6 @@ bin/qemu-system-sh4eb
 bin/qemu-system-sparc
 bin/qemu-system-sparc64
 bin/qemu-system-tricore
-bin/qemu-system-unicore32
 bin/qemu-system-x86_64
 bin/qemu-system-xtensa
 bin/qemu-system-xtensaeb
@@ -89,6 +87,7 @@ man/man7/qemu-ga-ref.7
 man/man7/qemu-qmp-ref.7
 man/man8/qemu-ga.8
 man/man8/qemu-nbd.8
+man/man8/qemu-pr-helper.8
 share/applications/qemu.desktop
 share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/index.html
@@ -116,10 +115,8 @@ share/doc/qemu/interop/live-block-operations.html
 share/doc/qemu/interop/objects.inv
 share/doc/qemu/interop/pr-helper.html
 share/doc/qemu/interop/qemu-ga-ref.html
-share/doc/qemu/interop/qemu-ga-ref.txt
 share/doc/qemu/interop/qemu-ga.html
 share/doc/qemu/interop/qemu-qmp-ref.html
-share/doc/qemu/interop/qemu-qmp-ref.txt
 share/doc/qemu/interop/search.html
 share/doc/qemu/interop/searchindex.js
 share/doc/qemu/interop/vhost-user-gpu.html
@@ -145,6 +142,7 @@ share/doc/qemu/specs/acpi_hw_reduced_hotplug.html
 share/doc/qemu/specs/genindex.html
 share/doc/qemu/specs/index.html
 share/doc/qemu/specs/objects.inv
+share/doc/qemu/specs/ppc-spapr-numa.html
 share/doc/qemu/specs/ppc-spapr-xive.html
 share/doc/qemu/specs/ppc-xive.html
 share/doc/qemu/specs/search.html
@@ -176,19 +174,26 @@ share/doc/qemu/system/arm/mps2.html
 share/doc/qemu/system/arm/musca.html
 share/doc/qemu/system/arm/musicpal.html
 share/doc/qemu/system/arm/nseries.html
+share/doc/qemu/system/arm/nuvoton.html
 share/doc/qemu/system/arm/orangepi.html
 share/doc/qemu/system/arm/palm.html
+share/doc/qemu/system/arm/raspi.html
 share/doc/qemu/system/arm/realview.html
+share/doc/qemu/system/arm/sbsa.html
 share/doc/qemu/system/arm/stellaris.html
 share/doc/qemu/system/arm/sx1.html
 share/doc/qemu/system/arm/versatile.html
 share/doc/qemu/system/arm/vexpress.html
 share/doc/qemu/system/arm/virt.html
+share/doc/qemu/system/arm/xlnx-versal-virt.html
 share/doc/qemu/system/arm/xscale.html
 share/doc/qemu/system/build-platforms.html
+share/doc/qemu/system/cpu-hotplug.html
 share/doc/qemu/system/deprecated.html
 share/doc/qemu/system/gdb.html
 share/doc/qemu/system/genindex.html
+share/doc/qemu/system/i386/microvm.html
+share/doc/qemu/system/i386/pc.html
 share/doc/qemu/system/images.html
 share/doc/qemu/system/index.html
 share/doc/qemu/system/invocation.html
@@ -201,11 +206,13 @@ share/doc/qemu/system/monitor.html
 share/doc/qemu/system/mux-chardev.html
 share/doc/qemu/system/net.html
 share/doc/qemu/system/objects.inv
+share/doc/qemu/system/pr-manager.html
 share/doc/qemu/system/qemu-block-drivers.html
 share/doc/qemu/system/qemu-cpu-models.html
 share/doc/qemu/system/qemu-manpage.html
 share/doc/qemu/system/quickstart.html
 share/doc/qemu/system/s390x/3270.html
+share/doc/qemu/system/s390x/bootdevices.html
 share/doc/qemu/system/s390x/css.html
 share/doc/qemu/system/s390x/protvirt.html
 share/doc/qemu/system/s390x/vfio-ap.html
@@ -227,6 +234,8 @@ share/doc/qemu/system/target-xtensa.html
 share/doc/qemu/system/targets.html
 share/doc/qemu/system/tls.html
 share/doc/qemu/system/usb.html
+share/doc/qemu/system/virtio-net-failover.html
+share/doc/qemu/system/virtio-pmem.html
 share/doc/qemu/system/vnc-security.html
 share/doc/qemu/tools/.buildinfo
 share/doc/qemu/tools/_static/alabaster.css
@@ -249,6 +258,7 @@ share/doc/qemu/tools/index.html
 share/doc/qemu/tools/objects.inv
 share/doc/qemu/tools/qemu-img.html
 share/doc/qemu/tools/qemu-nbd.html
+share/doc/qemu/tools/qemu-pr-helper.html
 share/doc/qemu/tools/qemu-trace-stap.html
 share/doc/qemu/tools/search.html
 share/doc/qemu/tools/searchindex.js
@@ -363,13 +373,14 @@ share/qemu/kvmvapic.bin
 share/qemu/linuxboot.bin
 share/qemu/linuxboot_dma.bin
 share/qemu/multiboot.bin
+share/qemu/npcm7xx_bootrom.bin
 share/qemu/openbios-ppc
 share/qemu/openbios-sparc32
 share/qemu/openbios-sparc64
-share/qemu/opensbi-riscv32-sifive_u-fw_jump.bin
-share/qemu/opensbi-riscv32-virt-fw_jump.bin
-share/qemu/opensbi-riscv64-sifive_u-fw_jump.bin
-share/qemu/opensbi-riscv64-virt-fw_jump.bin
+share/qemu/opensbi-riscv32-generic-fw_dynamic.bin
+share/qemu/opensbi-riscv32-generic-fw_dynamic.elf
+share/qemu/opensbi-riscv64-generic-fw_dynamic.bin
+share/qemu/opensbi-riscv64-generic-fw_dynamic.elf
 share/qemu/palcode-clipper
 share/qemu/petalogix-ml605.dtb
 share/qemu/petalogix-s3adsp1800.dtb
@@ -380,6 +391,7 @@ share/qemu/pxe-ne2k_pci.rom
 share/qemu/pxe-pcnet.rom
 share/qemu/pxe-rtl8139.rom
 share/qemu/pxe-virtio.rom
+share/qemu/qboot.rom
 share/qemu/qemu-nsis.bmp
 share/qemu/qemu_vga.ndrv
 share/qemu/s390-ccw.img
@@ -399,5 +411,3 @@ share/qemu/vgabios-stdvga.bin
 share/qemu/vgabios-virtio.bin
 share/qemu/vgabios-vmware.bin
 share/qemu/vgabios.bin
-@pkgdir var/run
-@pkgdir include
