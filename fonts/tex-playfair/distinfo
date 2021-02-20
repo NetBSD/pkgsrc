@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/04/26 12:21:18 markd Exp $
+$NetBSD: distinfo,v 1.4 2021/02/20 00:38:29 markd Exp $
 
-SHA1 (playfair.r54512.tar.xz) = e039dfb0250c3c8e99bf427ff2b3bef60f6ddd55
-RMD160 (playfair.r54512.tar.xz) = 128fa56bf4292827433e12176ebababd911ad453
-SHA512 (playfair.r54512.tar.xz) = b2aca959c8ed644d9a70c7d7e58bf9f7bc220b9d1b9ac30cfeeb84a6f36197a5a676c435fca16cbde140caf2a88b50004abcffe442a983a28f1c328c07fdfd48
-Size (playfair.r54512.tar.xz) = 1939660 bytes
+SHA1 (playfair.r56005.tar.xz) = 095ffc650c5cd22ad873de5e292bbe70eb76915f
+RMD160 (playfair.r56005.tar.xz) = 1e466da4675f22c6d6076e13c861199a019e74e3
+SHA512 (playfair.r56005.tar.xz) = bd9c88074757e0b34fc569e3f383c6b8045216ffe5da4ec897d0c28365063d7a66511ae190017c24dbea92782be05735f62a0684909ca76731a30f6d9855fe5b
+Size (playfair.r56005.tar.xz) = 1679544 bytes
