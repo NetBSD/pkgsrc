@@ -1,2 +1,6 @@
 This package includes a thin wrapper library of LZMA SDK written
 by Igor Pavlov.
+
+See also archivers/xz, for a library with the same name that is more
+often used.
+
