@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.1 2021/02/20 20:58:57 ryoon Exp $
+#
+# used by inputmethod/rime-prelude/Makefile
+# used by inputmethod/rime-bopomofo/Makefile
+# used by inputmethod/rime-cangjie/Makefile
+# used by inputmethod/rime-terra-pinyin/Makefile
+
+CATEGORIES=	inputmethod chinese
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	https://rime.im/
+
+DEPENDS+=	librime-[0-9]*:../../inputmethod/librime
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+INSTALLATION_DIRS=	share/rime-data
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/*.yaml ${DESTDIR}${PREFIX}/share/rime-data
