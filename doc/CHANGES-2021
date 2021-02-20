@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1197 2021/02/20 21:22:28 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1198 2021/02/20 21:25:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1830,3 +1830,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added inputmethod/fcitx5-rime version 5.0.4 [ryoon 2021-02-20]
 	Added inputmethod/fcitx5-anthy version 5.0.2 [ryoon 2021-02-20]
 	Updated inputmethod/libchewing to 0.5.1 [ryoon 2021-02-20]
+	Updated inputmethod/ibus-chewing to 1.5.1 [ryoon 2021-02-20]
