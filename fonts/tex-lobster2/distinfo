@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:08 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/02/20 00:19:56 markd Exp $
 
-SHA1 (tex-lobster2-32617/lobster2.tar.xz) = 41c646bb1bf83d02a89abc4a83f9a050df296062
-RMD160 (tex-lobster2-32617/lobster2.tar.xz) = 1493465e30fe4ec82620fbea14af0e1de15352b9
-SHA512 (tex-lobster2-32617/lobster2.tar.xz) = f84dea9860d329919e57cfa272cbb80890327184fc67f325a8c2b0d3f8a34a0950f24eeb309ad3c46ffa9a1f8033a8f80465e2d78e3b1f6dfc9d517290a2aa16
-Size (tex-lobster2-32617/lobster2.tar.xz) = 777824 bytes
+SHA1 (lobster2.r56019.tar.xz) = e63d1e166b43f227eaf314c86d95101c16be9c77
+RMD160 (lobster2.r56019.tar.xz) = ec2a5df4dc15ad431b29f21af0a56b1d1eb06c0b
+SHA512 (lobster2.r56019.tar.xz) = d104589256496cab2cd55625f9ea252d21971eb2bb97ec91a9515ea8fd8d749ad02d1234c16bc3bd378f2a509df510951fc2764a73d839d982b630505ef44041
+Size (lobster2.r56019.tar.xz) = 514092 bytes
