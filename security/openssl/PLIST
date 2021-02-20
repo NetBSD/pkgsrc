@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/09/30 09:25:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/02/20 08:53:23 wiz Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -803,6 +803,7 @@ man/man3/DH_check_params_ex.3
 man/man3/DH_check_pub_key_ex.3
 man/man3/DH_clear_flags.3
 man/man3/DH_compute_key.3
+man/man3/DH_compute_key_padded.3
 man/man3/DH_free.3
 man/man3/DH_generate_key.3
 man/man3/DH_generate_parameters.3
@@ -1917,6 +1918,7 @@ man/man3/OCSP_REQUEST_free.3
 man/man3/OCSP_REQUEST_new.3
 man/man3/OCSP_REQ_CTX_add1_header.3
 man/man3/OCSP_REQ_CTX_free.3
+man/man3/OCSP_REQ_CTX_i2d.3
 man/man3/OCSP_REQ_CTX_set1_req.3
 man/man3/OCSP_RESPBYTES_free.3
 man/man3/OCSP_RESPBYTES_new.3
