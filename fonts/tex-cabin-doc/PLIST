@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2020/04/26 12:21:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/20 00:06:06 markd Exp $
+share/texmf-dist/doc/fonts/cabin/AUTHORS.txt
+share/texmf-dist/doc/fonts/cabin/CONTRIBUTORS.txt
+share/texmf-dist/doc/fonts/cabin/DESCRIPTION.en_us.html
+share/texmf-dist/doc/fonts/cabin/FONTLOG.txt
 share/texmf-dist/doc/fonts/cabin/OFL.txt
 share/texmf-dist/doc/fonts/cabin/README
+share/texmf-dist/doc/fonts/cabin/TRADEMARKS.md
 share/texmf-dist/doc/fonts/cabin/cabin-samples.pdf
 share/texmf-dist/doc/fonts/cabin/cabin-samples.tex
+share/texmf-dist/doc/fonts/cabin/requirements.txt
