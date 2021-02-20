@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/05/02 02:27:45 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/02/20 10:34:47 markd Exp $
 
-SHA1 (nomencl.doc.r54080.tar.xz) = 35d0f9ba80f91b4e4e770f9a7d7731d65640803d
-RMD160 (nomencl.doc.r54080.tar.xz) = f73c18931764fb686f3145e9f79496ae88703b3a
-SHA512 (nomencl.doc.r54080.tar.xz) = 17ff56c02b4bc66cbbad73cdd05e254fafc4b44dbd45bb7e749c0e9f25a8dc3c6f4a4e82690a5dc13558b52f1dd679235cf78b15aac22825db1c7a2cf9308c48
-Size (nomencl.doc.r54080.tar.xz) = 530908 bytes
+SHA1 (nomencl.doc.r57263.tar.xz) = d9dd06d36d67242a3367edb8e0477fa7a3923697
+RMD160 (nomencl.doc.r57263.tar.xz) = 41233ede75648a65270f75a0dfc265c3c7b715e2
+SHA512 (nomencl.doc.r57263.tar.xz) = cf29a353af0a32e41d18087d3ae9c8447d52cb0f95dabfbde01150d15637022d53a8576c362bd7489e8110cdc5dc1892159652d67e61f165f25a78b64d8e095c
+Size (nomencl.doc.r57263.tar.xz) = 531236 bytes
