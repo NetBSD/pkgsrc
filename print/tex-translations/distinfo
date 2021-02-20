@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/22 03:27:50 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/20 11:04:57 markd Exp $
 
-SHA1 (translations.r54929.tar.xz) = 9bdde65ae8e9c8926597545562109b5f1620cf93
-RMD160 (translations.r54929.tar.xz) = a55416cea38a67b4ae5250de107ad472e7e3468e
-SHA512 (translations.r54929.tar.xz) = 266840c17d98e67173b6d30c33ad5a8f281198f214174e63a741e53f0b52a92ff91e577dbe4075125dec5373dfaf95d8bd583fa20992d3d971f4e37f90928574
-Size (translations.r54929.tar.xz) = 12256 bytes
+SHA1 (translations.r57461.tar.xz) = 6e62e01cd966d47f1cd40d6d25dc89e6daaae756
+RMD160 (translations.r57461.tar.xz) = e82d52efbd61ab6377aef2b2cbf54f2b10084901
+SHA512 (translations.r57461.tar.xz) = bc85fb20313e9e1e6eca3373eb1fa58f0dd3971c04039ead0cdff9479f9d8a2f7ace407bfef0b7a5caa9194573911e3cd0dafda51243db34e922d39af42b0f1e
+Size (translations.r57461.tar.xz) = 12820 bytes
