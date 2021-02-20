@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1174 2021/02/20 05:10:24 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1175 2021/02/20 08:17:47 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1737,3 +1737,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/tex-xits to 1.302 [mark 2021-02-20]
 	Updated fonts/tex-xits-doc to 1.302 [mark 2021-02-20]
 	Updated pkgtools/texlive2pkg to 1.9 [mark 2021-02-20]
+	Updated converters/bdf2psf to 1.201 [fcambus 2021-02-20]
