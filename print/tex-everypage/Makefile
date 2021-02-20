@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:33 markd Exp $
+# $NetBSD: Makefile,v 1.7 2021/02/20 10:15:22 markd Exp $
 
 DISTNAME=	everypage
-PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-2.0b
+TEXLIVE_REV=	56694
 
 MAINTAINER=	reed@reedmedia.net
+HOMEPAGE=	https://ctan.org/pkg/everypage
 COMMENT=	LaTeX package for hooks to run on every page
 LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
