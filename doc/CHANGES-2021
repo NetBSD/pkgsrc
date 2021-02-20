@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1173 2021/02/20 00:53:37 markd Exp $
+$NetBSD: CHANGES-2021,v 1.1174 2021/02/20 05:10:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1736,3 +1736,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/tex-xcharter-doc to 1.213 [mark 2021-02-20]
 	Updated fonts/tex-xits to 1.302 [mark 2021-02-20]
 	Updated fonts/tex-xits-doc to 1.302 [mark 2021-02-20]
+	Updated pkgtools/texlive2pkg to 1.9 [mark 2021-02-20]
