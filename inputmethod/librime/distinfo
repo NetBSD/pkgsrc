@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.6 2020/05/22 13:45:28 joerg Exp $
+$NetBSD: distinfo,v 1.7 2021/02/20 20:53:01 ryoon Exp $
 
-SHA1 (librime-1.0.tar.gz) = 5fd6db95b039e08dadfe547e3e63962aeaa97d8c
-RMD160 (librime-1.0.tar.gz) = 0e5972bfcf179d464a8e58f9ddce3bf55708865b
-SHA512 (librime-1.0.tar.gz) = 79f51174043e0ff524f8af090fd1d0a21301b4e5e530c772648ff59894d39135d15c53c0f4d197895c301defca2e084635eb222464dd20859ab3bdbc6ae8fb2c
-Size (librime-1.0.tar.gz) = 2576401 bytes
-SHA1 (patch-CMakeLists.txt) = dd02c2b1945657ad0374dec539aa62babe3abbac
-SHA1 (patch-src_dict_mapped__file.cc) = b5b181ef102b47aad837d52703bba4c807bf6483
-SHA1 (patch-src_dict_table.cc) = d8c952bd5b897d8d05b86b6c515daa3d19b2ba6d
-SHA1 (patch-src_lever_deployment__tasks.cc) = c65375a6473649e747962882fb77e008368d0962
+SHA1 (librime-1.7.2.tar.gz) = 1b252ca0367310b560fd189c359b194cf23a6007
+RMD160 (librime-1.7.2.tar.gz) = 1350ac1b2fc8d93740e3b1402dce2952d0fdd8d6
+SHA512 (librime-1.7.2.tar.gz) = 213f14b2f3e09fd93dffe2b6ce0d4a2651f1759c3df2929885ec6a3e036f343f1d07127a82a22378bd95677a5a45395d6bb7d884e12d40a3a160d0e9ef24a6ba
+Size (librime-1.7.2.tar.gz) = 2859403 bytes
+SHA1 (patch-CMakeLists.txt) = 7f2b03ae0451a14fa587cf8089a5021b1149ea14
+SHA1 (patch-plugins_CMakeLists.txt) = ab0b528c0a9219c52d0a8ca596209799db9de14a
+SHA1 (patch-src_rime_gear_memory.cc) = aba74cf976cb934362d5fcb8eea53751878f2d9f
