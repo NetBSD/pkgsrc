@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/05/22 03:23:02 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/20 10:10:30 markd Exp $
 
-SHA1 (enotez.doc.r54512.tar.xz) = 7e354888dae64237bf6f332d663157f7cacd4244
-RMD160 (enotez.doc.r54512.tar.xz) = b53704a16eb68debd3b888383ee79fee8056e93e
-SHA512 (enotez.doc.r54512.tar.xz) = 1e345218dc64ccb561e8cab2d8dcbebe2502d25eeb79473f1432dfd3d05d041c0bb728d6c8b75cecf88fd57ecb5907997bdbffe1b7327208b3e300910b82b3be
-Size (enotez.doc.r54512.tar.xz) = 457120 bytes
+SHA1 (enotez.doc.r57130.tar.xz) = 3f851af41f4b114dca5141fa09334b72ff363ddc
+RMD160 (enotez.doc.r57130.tar.xz) = a3e945f2ba867e787c910acbf05a6963b781b658
+SHA512 (enotez.doc.r57130.tar.xz) = a04cad229111ae30cb51aad4c843488661a3e59287280c9335bd82d5a5172429ebcbd31e1d7f6e2c7ec5d9a3f068bf00c88e7dc67f3e39a794f32107bc705f3a
+Size (enotez.doc.r57130.tar.xz) = 458308 bytes
