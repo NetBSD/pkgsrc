@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/22 01:51:01 markd Exp $
+# $NetBSD: Makefile,v 1.2 2021/02/20 09:59:07 markd Exp $
 
 DISTNAME=	datetime2-romanian
-PKGNAME=	tex-${DISTNAME}-1.01
-TEXLIVE_REV=	43743
+PKGNAME=	tex-${DISTNAME}-1.02
+TEXLIVE_REV=	56394
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/datetime2-romanian
