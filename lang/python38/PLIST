@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/01/02 09:51:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/02/20 19:29:06 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1784,6 +1784,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_window.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zoomheight.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zoomheight.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zoomheight.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_zzdummy.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/iomenu.py
 lib/python${PY_VER_SUFFIX}/idlelib/iomenu.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/iomenu.pyo
@@ -5191,6 +5194,9 @@ lib/python${PY_VER_SUFFIX}/tkinter/test/support.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__init__.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__init__.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__init__.pyo
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_colorchooser.py
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_colorchooser.pyc
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_colorchooser.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_font.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_font.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_font.pyo
