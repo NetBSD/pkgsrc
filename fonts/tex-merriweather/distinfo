@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/04/26 12:21:17 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/02/20 00:22:05 markd Exp $
 
-SHA1 (merriweather.r52380.tar.xz) = 0a45701a2a92839008f11e65addaea5f46fa46e0
-RMD160 (merriweather.r52380.tar.xz) = 20facde7d7fed7b27e3ad6ac4b1dfb51dd48e0d8
-SHA512 (merriweather.r52380.tar.xz) = 58f56dded4abe3724411d3c46e338fd5f7fc2c8ef9788939077981503383783b005a7e691478621437b158738129a7dcedaae45b397e1605805beff04437ebbb
-Size (merriweather.r52380.tar.xz) = 2272240 bytes
+SHA1 (merriweather.r56365.tar.xz) = 5bfe6e7b354680293f80a188854ad540850daaf2
+RMD160 (merriweather.r56365.tar.xz) = 7825a05b74e36b4cfb12a521b0ca0797c29565aa
+SHA512 (merriweather.r56365.tar.xz) = 72f7dd8c8a8055a4ef953e459188bf2385e6e63943d425bbb69b128e3c0a5277362bb3ebddf38225c20e480ab2a6d8d7b413a0db1d4ad7003f855ee6430266e4
+Size (merriweather.r56365.tar.xz) = 5423704 bytes
