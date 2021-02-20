@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/12/08 14:30:40 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/02/20 19:30:38 adam Exp $
 
-VERS=		3.9.1
+VERS=		3.9.2
 DISTNAME=	python-${VERS}-docs-html
 PKGNAME=	py39-html-docs-${VERS}
 CATEGORIES=	lang python
