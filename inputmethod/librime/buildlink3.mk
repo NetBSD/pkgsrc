@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.15 2021/01/01 08:24:49 ryoon Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.16 2021/02/20 20:53:01 ryoon Exp $
 
 BUILDLINK_TREE+=	librime
 
 .if !defined(LIBRIME_BUILDLINK3_MK)
 LIBRIME_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.librime+=	librime>=1.0
-BUILDLINK_ABI_DEPENDS.librime?=	librime>=1.0nb17
+BUILDLINK_API_DEPENDS.librime+=	librime>=1.7.2
 BUILDLINK_PKGSRCDIR.librime?=	../../inputmethod/librime
 
-.include "../../converters/opencc/buildlink3.mk"
-.include "../../databases/kyotocabinet/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/google-glog/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../textproc/yaml-cpp/buildlink3.mk"
 .endif	# LIBRIME_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-librime

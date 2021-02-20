@@ -1,30 +1,32 @@
-# $NetBSD: Makefile,v 1.23 2021/01/01 08:24:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2021/02/20 20:53:01 ryoon Exp $
 
-DISTNAME=	librime-1.0
-PKGREVISION=	17
+GITHUB_PROJECT=	librime
+GITHUB_TAG=	${PKGVERSION_NOREV}
+DISTNAME=	librime-1.7.2
 CATEGORIES=	inputmethod chinese
-MASTER_SITES=	http://rimeime.googlecode.com/files/
-#MASTER_SITES=	http://dl.bintray.com/lotem/rime/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rime.im/
 COMMENT=	Rime input method engine
-LICENSE=	gnu-gpl-v3
+LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/librime
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+LDFLAGS+=	-lsnappy
 
 PKGCONFIG_OVERRIDE+=	rime.pc.in
 
 .include "options.mk"
 
 .include "../../converters/opencc/buildlink3.mk"
-.include "../../databases/kyotocabinet/buildlink3.mk"
+.include "../../databases/leveldb/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/capnproto/buildlink3.mk"
 .include "../../devel/google-glog/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/snappy/buildlink3.mk"
+.include "../../textproc/marisa/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
-.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
