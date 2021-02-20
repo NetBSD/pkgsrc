@@ -1,4 +1,4 @@
-$NetBSD: patch-src_modules_module-detect.c,v 1.6 2020/12/17 09:42:59 ryoon Exp $
+$NetBSD: patch-src_modules_module-detect.c,v 1.7 2021/02/20 22:10:39 ryoon Exp $
 
 Hack to set proper sound device on NetBSD.
 
@@ -17,12 +17,12 @@ Hack to set proper sound device on NetBSD.
 + */
 +    char args[64];
  
-+    pa_snprintf(args, sizeof(args), "mmap=0 device=/dev/audio");
++    pa_snprintf(args, sizeof(args), "mmap=0 device=@DEVOSSAUDIO@");
 +    if (pa_module_load(&m, c, "module-oss", args) < 0)
 +      return 0;
 +
 +    for (int i = 0; i < 4; i++) {
-+      pa_snprintf(args, sizeof(args), "mmap=0 device=/dev/audio%d", i);
++      pa_snprintf(args, sizeof(args), "mmap=0 device=@DEVOSSAUDIO@%d", i);
 +      if (pa_module_load(&m, c, "module-oss", args) < 0)
 +        return i + 1;
 +    }
