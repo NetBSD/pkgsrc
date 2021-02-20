@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/01 13:25:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/20 13:39:46 ryoon Exp $
 bin/gen_binary_files
 bin/gen_unigram
 bin/import_interpolation
 include/${PKGNAME}/novel_types.h
 include/${PKGNAME}/pinyin.h
 include/${PKGNAME}/pinyin_custom2.h
+include/${PKGNAME}/zhuyin.h
+include/${PKGNAME}/zhuyin_custom2.h
 lib/libpinyin.la
+lib/libpinyin/data/addon_phrase_index.bin
+lib/libpinyin/data/addon_pinyin_index.bin
 lib/libpinyin/data/art.bin
 lib/libpinyin/data/bigram.db
 lib/libpinyin/data/culture.bin
@@ -17,14 +21,16 @@ lib/libpinyin/data/history.bin
 lib/libpinyin/data/life.bin
 lib/libpinyin/data/merged.bin
 lib/libpinyin/data/nature.bin
+lib/libpinyin/data/opengram.bin
+lib/libpinyin/data/people.bin
 lib/libpinyin/data/phrase_index.bin
 lib/libpinyin/data/pinyin_index.bin
-lib/libpinyin/data/scitech.bin
+lib/libpinyin/data/science.bin
 lib/libpinyin/data/society.bin
 lib/libpinyin/data/sport.bin
 lib/libpinyin/data/table.conf
+lib/libpinyin/data/technology.bin
+lib/libzhuyin.la
 lib/pkgconfig/libpinyin.pc
-man/man1/gen_binary_files.1
-man/man1/gen_unigram.1
-man/man1/import_interpolation.1
+lib/pkgconfig/libzhuyin.pc
 man/man1/libpinyin.1
