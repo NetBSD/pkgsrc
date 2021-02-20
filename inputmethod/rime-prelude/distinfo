@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/20 21:01:14 ryoon Exp $
+
+SHA1 (rime-prelude-0.0.0.20210208-bc9ec4cad9fcaf3e300be9bbf2313104e75b5f25.tar.gz) = ab0e5922b270244fee157d3fc8e4a253377dc335
+RMD160 (rime-prelude-0.0.0.20210208-bc9ec4cad9fcaf3e300be9bbf2313104e75b5f25.tar.gz) = 8aa4deeff3e57160d0e2476c22b4579e675e3833
+SHA512 (rime-prelude-0.0.0.20210208-bc9ec4cad9fcaf3e300be9bbf2313104e75b5f25.tar.gz) = 171f12a63da7025e6f165fe818657914940d3282b4372d3ca982b3ecc850c2ad19c54225fbaea0d2f148d7603e29ed80eba1fd2fb0d1cb1ef405d198a42eb424
+Size (rime-prelude-0.0.0.20210208-bc9ec4cad9fcaf3e300be9bbf2313104e75b5f25.tar.gz) = 18283 bytes
