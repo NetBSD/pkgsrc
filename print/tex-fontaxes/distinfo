@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/20 21:43:59 markd Exp $
+$NetBSD: distinfo,v 1.2 2021/02/20 10:17:23 markd Exp $
 
-SHA1 (tex-fontaxes-33276/fontaxes.tar.xz) = ee8beae7d5f352e96a3672f8ef0b6ad79b3179fa
-RMD160 (tex-fontaxes-33276/fontaxes.tar.xz) = 2ae4ebe525b43a3ef5b94efe2e42b292b177259c
-SHA512 (tex-fontaxes-33276/fontaxes.tar.xz) = e4117402735609d4e42c3c6904fdfa5db86c3e00454478ed552ee1102b34c066760ce9c7c67bc75ef092e5e8a8cb8a4029e7aef8f66d418e60ded454f9e517e5
-Size (tex-fontaxes-33276/fontaxes.tar.xz) = 3360 bytes
+SHA1 (fontaxes.r55920.tar.xz) = b5ab2a0e60243872507119b7371847e4a0453ef6
+RMD160 (fontaxes.r55920.tar.xz) = 8ab51df370d6a16376293ae81f41ded7781c6a3f
+SHA512 (fontaxes.r55920.tar.xz) = 49a2a2a3cc34370fc8db7c08446b2d12cb7b8a9ce6913568d7588c051683e24b859af23c440df1c815ab1b65f5b5de32242df344dad8102eba7ec1383b02c112
+Size (fontaxes.r55920.tar.xz) = 3344 bytes
