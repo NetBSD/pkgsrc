@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2020/04/26 12:21:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/02/20 00:27:36 markd Exp $
 share/texmf-dist/fonts/afm/public/newpx/NewPXBMI.afm
 share/texmf-dist/fonts/afm/public/newpx/NewPXBMI_gnu.afm
 share/texmf-dist/fonts/afm/public/newpx/NewPXMI.afm
 share/texmf-dist/fonts/afm/public/newpx/NewPXMI_gnu.afm
+share/texmf-dist/fonts/afm/public/newpx/TeXGyrePagella-Regular.afm
+share/texmf-dist/fonts/afm/public/newpx/TeXGyrePagellaX-Bold.afm
+share/texmf-dist/fonts/afm/public/newpx/TeXGyrePagellaX-BoldItalic.afm
+share/texmf-dist/fonts/afm/public/newpx/TeXGyrePagellaX-Italic.afm
+share/texmf-dist/fonts/afm/public/newpx/TeXGyrePagellaX-Regular.afm
 share/texmf-dist/fonts/afm/public/newpx/npxsups-Bold.afm
 share/texmf-dist/fonts/afm/public/newpx/npxsups-BoldItalic.afm
 share/texmf-dist/fonts/afm/public/newpx/npxsups-Italic.afm
