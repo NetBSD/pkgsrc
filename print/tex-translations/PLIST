@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/22 03:27:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/02/20 11:04:57 markd Exp $
+share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 share/texmf-dist/tex/latex/translations/translations-basic-dictionary-catalan.trsl
 share/texmf-dist/tex/latex/translations/translations-basic-dictionary-dutch.trsl
 share/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
