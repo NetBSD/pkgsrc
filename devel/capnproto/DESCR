@@ -1,0 +1,4 @@
+Cap'n Proto is an insanely fast data interchange format and
+capability-based RPC system. Think JSON, except binary. Or think
+of Google's Protocol Buffers, except faster. In fact, in benchmarks,
+Cap'n Proto is INFINITY TIMES faster than Protocol Buffers.
