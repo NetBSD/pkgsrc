@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1206 2021/02/20 21:43:47 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1207 2021/02/20 21:45:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1839,3 +1839,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added inputmethod/fcitx5-libthai version 5.0.2 [ryoon 2021-02-20]
 	Added inputmethod/fcitx5-m17n version 5.0.3 [ryoon 2021-02-20]
 	Added inputmethod/fcitx5-sayura version 5.0.2 [ryoon 2021-02-20]
+	Added inputmethod/fcitx5-table-extra version 5.0.2 [ryoon 2021-02-20]
