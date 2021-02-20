@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2021/02/20 21:38:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2021/02/20 21:39:57 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -23,6 +23,7 @@ SUBDIR+=	fcitx5-chinese-addons
 SUBDIR+=	fcitx5-configtool
 SUBDIR+=	fcitx5-gtk
 SUBDIR+=	fcitx5-hangul
+SUBDIR+=	fcitx5-libthai
 SUBDIR+=	fcitx5-lua
 SUBDIR+=	fcitx5-mozc
 SUBDIR+=	fcitx5-qt
