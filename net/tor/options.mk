@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2021/02/17 22:53:52 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2021/02/20 09:08:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	doc lzma nss zstd # rust
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--disable-rust
 
 .if !empty(PKG_OPTIONS:Mlzma)
 CONFIGURE_ARGS+=	--enable-lzma
-.include "../../archivers/lzmalib/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-lzma
 .endif
