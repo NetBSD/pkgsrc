@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/11/29 09:31:49 obache Exp $
+# $NetBSD: options.mk,v 1.2 2021/02/20 20:53:01 ryoon Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.librime
@@ -11,4 +11,6 @@ PKG_SUPPORTED_OPTIONS=		tests
 CMAKE_ARGS+=	-DBUILD_TEST=ON
 TEST_TARGET=	test
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
+.else
+CMAKE_ARGS+=	-DBUILD_TEST=OFF
 .endif
