@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/04/26 12:21:18 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/02/20 00:33:24 markd Exp $
 
-SHA1 (oldstandard.doc.r54512.tar.xz) = bab4fc9611a47354aa3d01b4f1060e48f61f2dae
-RMD160 (oldstandard.doc.r54512.tar.xz) = 1a8bc500c120470d4af1fe657bb720a87a94620e
-SHA512 (oldstandard.doc.r54512.tar.xz) = 47e55e3e470f562d59c6242e077d285207cc7acaf0cde4feac45336f95b36c2a531b1087f894e07599fc1b2b2216c361beb6e29aae5410e96f5f2177cf2ac60a
-Size (oldstandard.doc.r54512.tar.xz) = 1455908 bytes
+SHA1 (oldstandard.doc.r57213.tar.xz) = 83210fb4bc9f8ba94bb9aa2411a59e20e8149fc0
+RMD160 (oldstandard.doc.r57213.tar.xz) = 72fc777b890dfebad61fc6bf6a824df38aeace27
+SHA512 (oldstandard.doc.r57213.tar.xz) = 13d73f373b75de8be6e013595eb257ad4f2cb601f56ce5ee57a16cb427068ae597f3fb802b781f9c60e5e1e502f253b09ec3d2740355929ccb236a1d55ae1933
+Size (oldstandard.doc.r57213.tar.xz) = 301996 bytes
