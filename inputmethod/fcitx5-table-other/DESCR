@@ -1,0 +1,4 @@
+Fcitx5-table-other provides some other tables for Fcitx5, fork from
+ibus-table-others, scim-tables.
+Most of the table in this package is non-Chinese table. They are
+listed under /tables by language.
