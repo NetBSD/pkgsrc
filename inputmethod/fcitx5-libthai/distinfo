@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/20 21:38:43 ryoon Exp $
+
+SHA1 (fcitx5-libthai-5.0.2.tar.xz) = 3c74318e4701944e67d0aa6b49dfd5daa9fc6b2e
+RMD160 (fcitx5-libthai-5.0.2.tar.xz) = ec4f4b51350e8637544777bd23b9a9e40d70dcc6
+SHA512 (fcitx5-libthai-5.0.2.tar.xz) = 660ba7ec3142cc0d568a1af2d77659778ea83c0b3f1a9fd9ca5fe40969f9f2e41fd7cf66f9932cc6479c25d511f2553f6aedfff64950da7bfc06b92bb5100e63
+Size (fcitx5-libthai-5.0.2.tar.xz) = 14556 bytes

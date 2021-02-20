@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2021/02/20 21:38:43 ryoon Exp $
+lib/fcitx5/libthai.so
+share/fcitx5/addon/libthai.conf
+share/fcitx5/inputmethod/libthai.conf
+share/locale/da/LC_MESSAGES/fcitx5-libthai.mo
+share/locale/ja/LC_MESSAGES/fcitx5-libthai.mo
+share/locale/ko/LC_MESSAGES/fcitx5-libthai.mo
+share/locale/zh_CN/LC_MESSAGES/fcitx5-libthai.mo
+share/metainfo/org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml
