@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2019/12/30 03:50:07 gutteridge Exp $
+$NetBSD: patch-ac,v 1.2 2021/02/20 18:59:54 gutteridge Exp $
 
 Apply pkgsrc-specific paths.
 
@@ -10,7 +10,7 @@ Apply pkgsrc-specific paths.
  # Likely  prefixes
 -$Prefixes = "/usr/local:/usr:/opt:/opt/kde:$ENV{'KDEDIR'}";
 -$Prefixes = "$Prefixes:/opt/kde3:/opt/gnome";	# SUSE
-+$Prefixes = "@LOCALBASE@:@X11BASE@:/usr:$ENV{'KDEDIR'}";
++$Prefixes = "@PREFIX@:@X11BASE@:/usr:$ENV{'KDEDIR'}";
  $Prefixes = "$Prefixes:$ENV{'HOME'}/.local";
  $Prefixes = RemoveDuplcates($Prefixes);
  
