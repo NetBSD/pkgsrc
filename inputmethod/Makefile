@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2021/02/17 15:31:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2021/02/20 21:02:28 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -75,6 +75,7 @@ SUBDIR+=	novel-pinyin
 SUBDIR+=	p5-zinnia
 SUBDIR+=	py-input-pad
 SUBDIR+=	py-zinnia
+SUBDIR+=	rime-prelude
 SUBDIR+=	ruby-zinnia
 SUBDIR+=	scim
 SUBDIR+=	scim-anthy
