@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/05/01 00:15:10 markd Exp $
+$NetBSD: distinfo,v 1.6 2021/02/20 09:50:52 markd Exp $
 
-SHA1 (changes.doc.r52838.tar.xz) = 4eb2193221928f2730c765298d5de9cadbf81348
-RMD160 (changes.doc.r52838.tar.xz) = 5cb52fe3f996b50f4846434c2f670a0eb0cd27d8
-SHA512 (changes.doc.r52838.tar.xz) = 8d293b2c22d49f39264535c899746118308640f489a6649b25547723bfb42160064a63ca785e25b939cb0488ec20ee5f4047ed6662c62bfbe1367c191df96003
-Size (changes.doc.r52838.tar.xz) = 499116 bytes
+SHA1 (changes.doc.r57756.tar.xz) = c6fb8cbded99008f1817e87394396dbb93cfdac2
+RMD160 (changes.doc.r57756.tar.xz) = 0e3191daedf94bfda6e7a406720c893cc32655a0
+SHA512 (changes.doc.r57756.tar.xz) = a49a0256955ca438d07bc52660206b0788c4ea21fdaff092b37a56f840b46459855d121aa4e26400964bd404d527063781c2e03987f2d99aad8d6c0b1a38a83f
+Size (changes.doc.r57756.tar.xz) = 2437164 bytes
