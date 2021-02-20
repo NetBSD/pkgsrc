@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/05/03 11:57:36 markd Exp $
+$NetBSD: distinfo,v 1.5 2021/02/20 10:48:19 markd Exp $
 
-SHA1 (subfiles.r53782.tar.xz) = 24ff78f4d95d96dbe5582b759f4d0958b58b3a4f
-RMD160 (subfiles.r53782.tar.xz) = f84d818d42b5f53df4f33366a0212da9742a2258
-SHA512 (subfiles.r53782.tar.xz) = 558a8e29ac5fcb4fba04a75fd02826824690bba8f8b6118ae15f856c0e5cb34a63a507bdaf90a7d2786fe3da34637f76d62d24d061df76dcb95bc324224002a4
-Size (subfiles.r53782.tar.xz) = 1816 bytes
+SHA1 (subfiles.r56977.tar.xz) = 9737e3efa0863965b93ce551329067cee062abc5
+RMD160 (subfiles.r56977.tar.xz) = 4c4bd0cd4b11c17e621dadc57e01e09628d14d6a
+SHA512 (subfiles.r56977.tar.xz) = 8f842b0debcae3110f0a4b2f59047cd55c2726d128bf3e159f2745a4b8a645c3f8471fe218ca34c32f2b35d42d1c5023a25f09fc3bf0c1a4f0c33197776b1cec
+Size (subfiles.r56977.tar.xz) = 2284 bytes

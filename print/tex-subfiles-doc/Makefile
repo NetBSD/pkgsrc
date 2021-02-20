@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/03 11:57:36 markd Exp $
+# $NetBSD: Makefile,v 1.6 2021/02/20 10:48:20 markd Exp $
 
 DISTNAME=	subfiles.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.6
-TEXLIVE_REV=	53782
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.2
+TEXLIVE_REV=	56977
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/subfiles
