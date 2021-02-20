@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/05/03 08:38:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2021/02/20 20:46:13 ryoon Exp $
 
-DISTNAME=	glog-0.3.4
+DISTNAME=	glog-0.4.0
 PKGNAME=	google-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	automake pkg-config
 USE_LANGUAGES=	c c++11
 
 PKGCONFIG_OVERRIDE+=	libglog.pc.in
@@ -24,6 +24,9 @@ PKGCONFIG_OVERRIDE+=	libglog.pc.in
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
 LIBS+=		-lexecinfo
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
