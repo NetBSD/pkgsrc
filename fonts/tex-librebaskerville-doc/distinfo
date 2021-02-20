@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:07 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/02/20 00:15:43 markd Exp $
 
-SHA1 (tex-librebaskerville-31741/librebaskerville.doc.tar.xz) = e6e87fc3ec79b8eddbc0f00db725c980a46bcee7
-RMD160 (tex-librebaskerville-31741/librebaskerville.doc.tar.xz) = 8bca281ae4212ef32fe15fb98f1e526ee37e0b3f
-SHA512 (tex-librebaskerville-31741/librebaskerville.doc.tar.xz) = 8efcff9578896d44cea0768c9a6e62de93ab4e05cce6053877880114f63d9201d3f0ea9023dcd2c05b38058cc50ac209827fc73d2ce2c7ffbc1ac4d909997709
-Size (tex-librebaskerville-31741/librebaskerville.doc.tar.xz) = 35468 bytes
+SHA1 (librebaskerville.doc.r56018.tar.xz) = 308458e10666bddf544d0ad22d0d8eafd93b33a8
+RMD160 (librebaskerville.doc.r56018.tar.xz) = aa1fba33c3ab7ca546c266441417eb09e257dd40
+SHA512 (librebaskerville.doc.r56018.tar.xz) = f90a5f6d2de21b15d53dc047771412fcd7ca7b5332a667efe1bab6c59eec59c474b5b6042fd1d81e70df86b3a571f3fd64799fd5e7ccac9362a9fe0b65da63ca
+Size (librebaskerville.doc.r56018.tar.xz) = 33176 bytes
