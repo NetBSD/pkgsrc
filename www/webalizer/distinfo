@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2020/11/26 16:08:13 bsiegert Exp $
+$NetBSD: distinfo,v 1.18 2021/02/20 14:37:23 bsiegert Exp $
 
 SHA1 (webalizer-2.23-08-src.tar.bz2) = 601d5b6557c9916a050544592f5bf9c2ad540f59
 RMD160 (webalizer-2.23-08-src.tar.bz2) = 6f1d2ca90d9a891c878e5edb220684869f9fd32c
@@ -11,3 +11,4 @@ SHA1 (patch-ba) = eadf9f9d22c89d441debd90b993846529fc872fd
 SHA1 (patch-bb) = d8a5f6f60f53d6de8fc24d3b1844a052be0ad69a
 SHA1 (patch-bc) = 98d263cfb585477798f620a6f3690680ce2759b6
 SHA1 (patch-bd) = 21f074725a85de5d9d865b84cc88dc04919226d4
+SHA1 (patch-preserve.c) = 5fc85459af088b773073f161a29160a2cff73ba8
