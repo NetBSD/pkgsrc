@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 2010/11/13 03:16:09 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/02/20 10:15:22 markd Exp $
+share/texmf-dist/tex/latex/everypage/everypage-1x.sty
 share/texmf-dist/tex/latex/everypage/everypage.sty
