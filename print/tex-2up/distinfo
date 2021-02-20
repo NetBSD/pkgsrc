@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2021/02/20 09:37:44 markd Exp $
 
-SHA1 (tex-2up-18310/2up.tar.xz) = f47a7cb731e027be5ea4901034294c389b12f32b
-RMD160 (tex-2up-18310/2up.tar.xz) = 30b579793d9815907e48ba049971254869f234ab
-SHA512 (tex-2up-18310/2up.tar.xz) = a7b033523f70a27b9b1e0b490c45629950c2fc1cc6fcde3b21bccb1b207594ff9ff19587fc25d107d1a6f7e7b62f2fc3263fadad54465ba5c56a80b06740851f
-Size (tex-2up-18310/2up.tar.xz) = 4036 bytes
+SHA1 (2up.r55076.tar.xz) = ae75cd11a321c6c6d3feede98c45c1e1af1099f8
+RMD160 (2up.r55076.tar.xz) = dd158779ede03c52663191b75a80e3b4697f898c
+SHA512 (2up.r55076.tar.xz) = 6408d1d99a97df71640bcdde4133edc2e5861bbcdc8c5e1be98d5704f7ecf9c043c5538ea19ac4952d811e3677ee0698bdd477eadbd1068725bdb210787d9dbc
+Size (2up.r55076.tar.xz) = 4200 bytes
