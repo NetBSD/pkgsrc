@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/05/03 11:57:36 markd Exp $
+# $NetBSD: Makefile,v 1.5 2021/02/20 10:42:15 markd Exp $
 
 DISTNAME=	snapshot
-PKGNAME=	tex-${DISTNAME}-2.13
-TEXLIVE_REV=	52115
+PKGNAME=	tex-${DISTNAME}-2.14
+TEXLIVE_REV=	56735
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/snapshot
