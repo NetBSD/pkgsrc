@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3338 2021/02/17 14:16:57 fcambus Exp $
+# $NetBSD: Makefile,v 1.3339 2021/02/20 22:25:50 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -190,6 +190,7 @@ SUBDIR+=	bzr-svn
 SUBDIR+=	bzrtools
 SUBDIR+=	c++gsl
 SUBDIR+=	calltree-perl
+SUBDIR+=	capnproto
 SUBDIR+=	capstone
 SUBDIR+=	catch
 SUBDIR+=	catch2
