@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/02/20 21:47:19 ryoon Exp $
+
+SHA1 (fcitx5-table-other-5.0.3.tar.xz) = 05196cf6dd39f88cc10d1921e4414a48a1eefdfd
+RMD160 (fcitx5-table-other-5.0.3.tar.xz) = 9d9cfd4e2459e0b7692bf84897649a79ead5beec
+SHA512 (fcitx5-table-other-5.0.3.tar.xz) = 1a15dbc5a50eefc108f96c718c608c2fc96314a2ca53e9950d7e9b26884f6661cf38810572249d0e82a2fda42c5e28ed8cf24ef4c75b45fb607e5835ff99a588
+Size (fcitx5-table-other-5.0.3.tar.xz) = 237232 bytes
