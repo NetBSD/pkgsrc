@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/05/12 11:57:31 markd Exp $
+$NetBSD: distinfo,v 1.8 2021/02/20 00:31:32 markd Exp $
 
-SHA1 (newtxsf.doc.r55014.tar.xz) = 132c6962d88a994038123d99595ef5317a10cf25
-RMD160 (newtxsf.doc.r55014.tar.xz) = e5c454be1c3499a25aa4a4a7b088eb658b5e4b94
-SHA512 (newtxsf.doc.r55014.tar.xz) = 60d8a0949ab6f619d26bdffe4f78c4b99bd7e4bfeb258cff7dba977803da35b8da07ee595d0ba6e4051aeb54ea4575c1100ed2505407ec33057470837e2871c2
-Size (newtxsf.doc.r55014.tar.xz) = 332260 bytes
+SHA1 (newtxsf.doc.r56527.tar.xz) = f0793c3ca5255c0b1416231ca840116e3555d59b
+RMD160 (newtxsf.doc.r56527.tar.xz) = 3efd0b6a2080efc0fde165e344ac5887f242a8d5
+SHA512 (newtxsf.doc.r56527.tar.xz) = bf4ac517cb79ef6b1e541b2a3eb8b5ebdbfb5e3638234438453f79ce0bb1d87f815d20c761dccf2822e581222cca0439c189e02b307d8c0044fd194aa1d2016d
+Size (newtxsf.doc.r56527.tar.xz) = 332352 bytes
