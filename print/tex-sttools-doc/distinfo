@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/06/21 13:25:33 markd Exp $
+$NetBSD: distinfo,v 1.9 2021/02/20 10:45:42 markd Exp $
 
-SHA1 (tex-sttools-43684/sttools.doc.tar.xz) = a3929655640a0a080d07f736a5ff8565c09d707e
-RMD160 (tex-sttools-43684/sttools.doc.tar.xz) = 4f9f04de810943cd3d5a654332d83cf3da8fa0f7
-SHA512 (tex-sttools-43684/sttools.doc.tar.xz) = 7526c2d3de8c9ba2f00585b7b560872d661a071b98ee4e7b45da137c0805cf8f84a4123e8f24c2985ba467064744ba0440bc83a8928807e10182da25d05befc1
-Size (tex-sttools-43684/sttools.doc.tar.xz) = 806104 bytes
+SHA1 (sttools.doc.r56774.tar.xz) = ca3aaadb86434d6b063d6b05d01689130537afe0
+RMD160 (sttools.doc.r56774.tar.xz) = 62bae23e7a0cb76e27d337a21ec2123063565a83
+SHA512 (sttools.doc.r56774.tar.xz) = b32bd4fa10599b3ace5bc8e1b2dae79750aace26a98806de275fdd358554b6f26fde48c9e7b0fbb108de0a771728a68f6c09fa9c568a5e2fce7b9aaa1fb1f58f
+Size (sttools.doc.r56774.tar.xz) = 764344 bytes
