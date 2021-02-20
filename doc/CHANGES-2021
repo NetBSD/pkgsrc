@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.1181 2021/02/20 13:46:07 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.1182 2021/02/20 13:56:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -1810,3 +1810,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-zref-doc to 2.32 [markd 2021-02-20]
 	Updated textproc/libpinyin to 2.6.0 [ryoon 2021-02-20]
 	Updated databases/leveldb to 1.22nb1 [ryoon 2021-02-20]
+	Updated converters/opencc to 1.1.1 [ryoon 2021-02-20]
