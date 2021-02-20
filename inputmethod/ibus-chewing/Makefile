@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.68 2020/11/05 09:08:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2021/02/20 21:24:48 ryoon Exp $
 #
 
-DISTNAME=	ibus-chewing-1.4.12-Source
+GITHUB_PROJECT=	ibus-chewing
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+DISTNAME=	ibus-chewing-1.5.1-Source
 PKGNAME=	${DISTNAME:S/-Source//}
-PKGREVISION=	26
 CATEGORIES=	inputmethod chinese
-MASTER_SITES=	https://github.com/definite/ibus-chewing/releases/download/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=definite/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ibus/ibus/wiki
@@ -21,11 +22,6 @@ USE_TOOLS+=		msgfmt pkg-config
 TOOLS_NOOP+=		msgmerge xgettext
 
 BUILD_TARGET=	all translations
-
-SUBST_CLASSES+=		libexecdir
-SUBST_STAGE.libexecdir=	post-configure
-SUBST_FILES.libexecdir=	data/ibus-setup-chewing.desktop
-SUBST_SED.libexecdir=	-e 's,/usr/libexec/,${PREFIX}/libexec/,g'
 
 TEST_TARGET=	test
 
